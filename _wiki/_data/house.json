@@ -1,0 +1,532 @@
+{
+ "asof": "2026-06-25",
+ "note": "House (Capstone) model figures scraped from each page's 'Capstone estimates (house model)' table. rev/fcf in the page's stated unit (usually $bn); eps absolute; gm/opm in %.",
+ "companies": {
+  "AAPL": {
+   "years": {
+    "2024": {
+     "rev": 391.0,
+     "eps": 6.82
+    },
+    "2025": {
+     "rev": 416.0,
+     "eps": 8.35
+    },
+    "2026": {
+     "rev": 480.0,
+     "eps": 10.12
+    },
+    "2027": {
+     "rev": 539.0,
+     "eps": 11.11
+    },
+    "2028": {
+     "rev": 585.0,
+     "eps": 12.55
+    }
+   },
+   "raw_header": [
+    "",
+    "2024",
+    "2025E",
+    "2026E",
+    "2027E",
+    "2028E"
+   ],
+   "raw_rows": [
+    [
+     "Revenue ($bn)",
+     "391",
+     "416",
+     "480",
+     "539",
+     "585"
+    ],
+    [
+     "EPS — adj ($)",
+     "6.82",
+     "8.35",
+     "10.12",
+     "11.11",
+     "12.55"
+    ],
+    [
+     "iPhone units (M)",
+     "—",
+     "240",
+     "267",
+     "280",
+     "286"
+    ],
+    [
+     "iPhone ASP ($)",
+     "—",
+     "874",
+     "946",
+     "1,021",
+     "—"
+    ],
+    [
+     "Services ($bn)",
+     "96",
+     "109",
+     "126",
+     "145",
+     "164"
+    ]
+   ],
+   "source": "Capstone official model (`Modelo Apple Felipe 2Q26 - WIP.xlsm`, 2026-06-16)."
+  },
+  "AVGO": {
+   "years": {
+    "2024": {
+     "eps": 5.36
+    },
+    "2025": {
+     "eps": 7.18
+    },
+    "2026": {
+     "eps": 12.89
+    },
+    "2027": {
+     "eps": 21.07
+    },
+    "2028": {
+     "eps": 35.96
+    }
+   },
+   "raw_header": [
+    "",
+    "2024",
+    "2025E",
+    "2026E",
+    "2027E",
+    "2028E"
+   ],
+   "raw_rows": [
+    [
+     "Total revenue ($bn)",
+     "54.5",
+     "68",
+     "115",
+     "190",
+     "315"
+    ],
+    [
+     "&nbsp;&nbsp;— AI semis",
+     "14",
+     "24",
+     "63",
+     "132",
+     "251"
+    ],
+    [
+     "EPS — pro forma ($)",
+     "5.36",
+     "7.18",
+     "12.89",
+     "21.07",
+     "35.96"
+    ]
+   ],
+   "source": "Capstone official model (`Modelo Avgo pós 2Q26.xlsx`, 2026-06-10)."
+  },
+  "COHR": {
+   "years": {
+    "2024": {
+     "rev": 5.3,
+     "eps": 2.76,
+     "gm": 37.0
+    },
+    "2025": {
+     "rev": 6.3,
+     "eps": 4.35,
+     "gm": 39.0
+    }
+   },
+   "raw_header": [
+    "",
+    "CY24",
+    "CY25",
+    "CY26E",
+    "CY27E",
+    "CY28E"
+   ],
+   "raw_rows": [
+    [
+     "Revenue ($bn)",
+     "5.3",
+     "6.3",
+     "9.1",
+     "16.6",
+     "19.6"
+    ],
+    [
+     "EPS — pro forma ($)",
+     "2.76",
+     "4.35",
+     "8.27",
+     "19.21",
+     "23.60"
+    ],
+    [
+     "Gross margin",
+     "~37%",
+     "~39%",
+     "~40%",
+     "~41%",
+     "~41%"
+    ]
+   ],
+   "source": "Capstone official model (`Modelo COHR.xlsx`, 2026-05-26). Built on Jefferies/Blayne Curtis."
+  },
+  "GOOG": {
+   "years": {
+    "2025": {
+     "rev": 403.0,
+     "eps": 8.41,
+     "opm": 32.0,
+     "fcf": 33.0
+    },
+    "2026": {
+     "rev": 505.0,
+     "eps": 11.8,
+     "opm": 36.0,
+     "fcf": 3.0
+    },
+    "2027": {
+     "rev": 641.0,
+     "eps": 16.2,
+     "opm": 37.0,
+     "fcf": 55.0
+    }
+   },
+   "raw_header": [
+    "",
+    "2025",
+    "2026E",
+    "2027E"
+   ],
+   "raw_rows": [
+    [
+     "Revenue ($bn)",
+     "403",
+     "505",
+     "641"
+    ],
+    [
+     "&nbsp;&nbsp;— y/y",
+     "—",
+     "+25%",
+     "+27%"
+    ],
+    [
+     "EPS — diluted ($)",
+     "8.41",
+     "11.80",
+     "16.20"
+    ],
+    [
+     "Operating margin",
+     "~32%",
+     "~36%",
+     "~37%"
+    ],
+    [
+     "Capex ($bn)",
+     "91",
+     "183",
+     "310"
+    ],
+    [
+     "FCF ($bn)",
+     "33",
+     "-3",
+     "-55"
+    ],
+    [
+     "**GW (TPU/compute)**",
+     "—",
+     "**~4.6**",
+     "**~7.75**"
+    ]
+   ],
+   "source": "Capstone official model (`Google Modelo oficial.xlsx`, 2026-06-05). Model years 2025/26/27 (≈CY)."
+  },
+  "LITE": {
+   "years": {
+    "2024": {
+     "rev": 1.4,
+     "eps": 0.94,
+     "opm": 4.0
+    },
+    "2025": {
+     "rev": 2.1,
+     "eps": 4.13,
+     "opm": 18.0
+    },
+    "2026": {
+     "rev": 4.2,
+     "eps": 12.81,
+     "opm": 32.0
+    },
+    "2027": {
+     "rev": 8.1,
+     "eps": 30.02,
+     "opm": 43.0
+    }
+   },
+   "raw_header": [
+    "",
+    "2024",
+    "2025E",
+    "2026E",
+    "2027E"
+   ],
+   "raw_rows": [
+    [
+     "Revenue ($bn)",
+     "1.4",
+     "2.1",
+     "4.2",
+     "8.1"
+    ],
+    [
+     "EPS — adj ($)",
+     "0.94",
+     "4.13",
+     "12.81",
+     "30.02"
+    ],
+    [
+     "Operating margin",
+     "~4%",
+     "~18%",
+     "~32%",
+     "~43%"
+    ]
+   ],
+   "source": "Capstone official model (`Modelo consolidado incl. LITE .xlsx` — consolidated optics, 2026-06-16)."
+  },
+  "META": {
+   "years": {
+    "2025": {
+     "rev": 201.0,
+     "eps": 29.06,
+     "fcf": 22.0
+    },
+    "2026": {
+     "rev": 257.0,
+     "eps": 32.72,
+     "fcf": 17.0
+    },
+    "2027": {
+     "rev": 313.0,
+     "eps": 38.24,
+     "fcf": 23.0
+    }
+   },
+   "raw_header": [
+    "",
+    "2025E",
+    "2026E",
+    "2027E"
+   ],
+   "raw_rows": [
+    [
+     "Revenue ($bn)",
+     "201",
+     "257",
+     "313"
+    ],
+    [
+     "&nbsp;&nbsp;— y/y",
+     "—",
+     "+28%",
+     "+22%"
+    ],
+    [
+     "EPS ($)",
+     "29.06",
+     "32.72",
+     "38.24"
+    ],
+    [
+     "EBIT margin",
+     "~42%",
+     "~37%",
+     "~35%"
+    ],
+    [
+     "Capex ($bn)",
+     "70",
+     "131",
+     "170"
+    ],
+    [
+     "FCF ($bn)",
+     "22",
+     "-17",
+     "-23"
+    ]
+   ],
+   "source": "Capstone official model (`Modelo Meta pós 2Q26.xlsm`, 2026-06-11)."
+  },
+  "NVDA": {
+   "years": {
+    "2025": {
+     "rev": 216.0,
+     "eps": 4.9,
+     "gm": 71.0,
+     "opm": 89.0
+    },
+    "2026": {
+     "rev": 407.0,
+     "eps": 9.26,
+     "gm": 75.0,
+     "opm": 92.0
+    },
+    "2027": {
+     "rev": 661.0,
+     "eps": 15.44,
+     "gm": 74.0,
+     "opm": 94.0
+    }
+   },
+   "raw_header": [
+    "",
+    "2025",
+    "2026E",
+    "2027E"
+   ],
+   "raw_rows": [
+    [
+     "Revenue ($bn)",
+     "216",
+     "407",
+     "661"
+    ],
+    [
+     "&nbsp;&nbsp;— y/y",
+     "—",
+     "+89%",
+     "+62%"
+    ],
+    [
+     "&nbsp;&nbsp;— Data Center",
+     "194",
+     "379",
+     "629"
+    ],
+    [
+     "&nbsp;&nbsp;— Compute / Networking",
+     "162 / 31",
+     "313 / 67",
+     "518 / 111"
+    ],
+    [
+     "EPS — GAAP / non-GAAP ($)",
+     "4.90 / 4.55",
+     "9.26 / 9.30",
+     "15.44 / 15.49"
+    ],
+    [
+     "Gross margin",
+     "~71%",
+     "~75%",
+     "~74%"
+    ],
+    [
+     "Op margin",
+     "~89%",
+     "~92%",
+     "~94%"
+    ],
+    [
+     "**GW sold/yr** (DC-rev implied)",
+     "**~9.2**",
+     "**~16.0**",
+     "**~24.8**"
+    ],
+    [
+     "**Cumulative GW (installed base)**",
+     "~8.6",
+     "~19.0",
+     "~35.1"
+    ],
+    [
+     "Revenue / GW ($bn)",
+     "~21",
+     "~24",
+     "~25"
+    ],
+    [
+     "Chips deployed (k)",
+     "4,731",
+     "7,670",
+     "7,570"
+    ],
+    [
+     "&nbsp;&nbsp;— Blackwell / Rubin",
+     "4,055 / 0",
+     "6,570 / 1,100",
+     "1,170 / 6,400"
+    ]
+   ],
+   "source": "Capstone official model (`Modelo Felipe NVDA.xlsx`, 2026-06-17). Model years 2025/26/27 (FY ≈ CY). DC ~90%+ of revenue."
+  },
+  "TSM": {
+   "years": {
+    "2024": {
+     "eps": 45.3,
+     "rev": 90.0,
+     "gm": 56.0
+    },
+    "2025": {
+     "eps": 66.3,
+     "rev": 122.0,
+     "gm": 60.0
+    },
+    "2026": {
+     "eps": 102.5,
+     "rev": 165.0,
+     "gm": 66.0
+    },
+    "2027": {
+     "eps": 143.5
+    }
+   },
+   "raw_header": [
+    "",
+    "2024",
+    "2025E",
+    "2026E",
+    "2027E"
+   ],
+   "raw_rows": [
+    [
+     "EPS (NT$)",
+     "45.3",
+     "66.3",
+     "102.5",
+     "143.5"
+    ],
+    [
+     "Revenue (US$bn)",
+     "90",
+     "122",
+     "165",
+     "—"
+    ],
+    [
+     "Gross margin",
+     "~56%",
+     "~60%",
+     "~66%",
+     "—"
+    ]
+   ],
+   "source": "Capstone official model (`Modelo Felipe TSM 1Q26.xlsm`, 2026-06-10)."
+  }
+ }
+}
