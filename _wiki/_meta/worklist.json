@@ -1,0 +1,128 @@
+{
+ "asof": "2026-06-25",
+ "bbg_missing": [
+  "AKAM",
+  "AOSL",
+  "APP",
+  "AXTI",
+  "BE",
+  "CEREBRAS",
+  "ETN",
+  "FSLY",
+  "MP",
+  "NET",
+  "PLTR",
+  "POET",
+  "POWI",
+  "SANM",
+  "TSEM",
+  "TSLA",
+  "VEEV"
+ ],
+ "no_transcript": [
+  "AKAM",
+  "AOSL",
+  "APP",
+  "AXTI",
+  "BE",
+  "CDNS",
+  "CEREBRAS",
+  "ETN",
+  "FSLY",
+  "MP",
+  "NET",
+  "PLTR",
+  "POET",
+  "POWI",
+  "SANM",
+  "SNPS",
+  "TSEM",
+  "TSLA",
+  "VEEV"
+ ],
+ "private_skipped": [
+  "ANTHROPIC",
+  "OPENAI"
+ ],
+ "actions": {
+  "fetch_estimates_cmd": "py \"E:\\.claude\\scripts\\fetch_estimates.py\" AKAM AOSL APP AXTI BE CEREBRAS ETN FSLY MP NET PLTR POET POWI SANM TSEM TSLA VEEV",
+  "transcript_tasks": [
+   {
+    "agent": "transcript-fetcher",
+    "prompt": "Get the latest earnings call transcript for AKAM and save it to E:\\Wiki Felipe empresas\\AKAM\\transcripts\\ as AKAM_<quarter>_<YYYY-MM-DD>.md"
+   },
+   {
+    "agent": "transcript-fetcher",
+    "prompt": "Get the latest earnings call transcript for AOSL and save it to E:\\Wiki Felipe empresas\\AOSL\\transcripts\\ as AOSL_<quarter>_<YYYY-MM-DD>.md"
+   },
+   {
+    "agent": "transcript-fetcher",
+    "prompt": "Get the latest earnings call transcript for APP and save it to E:\\Wiki Felipe empresas\\APP\\transcripts\\ as APP_<quarter>_<YYYY-MM-DD>.md"
+   },
+   {
+    "agent": "transcript-fetcher",
+    "prompt": "Get the latest earnings call transcript for AXTI and save it to E:\\Wiki Felipe empresas\\AXTI\\transcripts\\ as AXTI_<quarter>_<YYYY-MM-DD>.md"
+   },
+   {
+    "agent": "transcript-fetcher",
+    "prompt": "Get the latest earnings call transcript for BE and save it to E:\\Wiki Felipe empresas\\BE\\transcripts\\ as BE_<quarter>_<YYYY-MM-DD>.md"
+   },
+   {
+    "agent": "transcript-fetcher",
+    "prompt": "Get the latest earnings call transcript for CDNS and save it to E:\\Wiki Felipe empresas\\CDNS\\transcripts\\ as CDNS_<quarter>_<YYYY-MM-DD>.md"
+   },
+   {
+    "agent": "transcript-fetcher",
+    "prompt": "Get the latest earnings call transcript for CEREBRAS and save it to E:\\Wiki Felipe empresas\\CEREBRAS\\transcripts\\ as CEREBRAS_<quarter>_<YYYY-MM-DD>.md"
+   },
+   {
+    "agent": "transcript-fetcher",
+    "prompt": "Get the latest earnings call transcript for ETN and save it to E:\\Wiki Felipe empresas\\ETN\\transcripts\\ as ETN_<quarter>_<YYYY-MM-DD>.md"
+   },
+   {
+    "agent": "transcript-fetcher",
+    "prompt": "Get the latest earnings call transcript for FSLY and save it to E:\\Wiki Felipe empresas\\FSLY\\transcripts\\ as FSLY_<quarter>_<YYYY-MM-DD>.md"
+   },
+   {
+    "agent": "transcript-fetcher",
+    "prompt": "Get the latest earnings call transcript for MP and save it to E:\\Wiki Felipe empresas\\MP\\transcripts\\ as MP_<quarter>_<YYYY-MM-DD>.md"
+   },
+   {
+    "agent": "transcript-fetcher",
+    "prompt": "Get the latest earnings call transcript for NET and save it to E:\\Wiki Felipe empresas\\NET\\transcripts\\ as NET_<quarter>_<YYYY-MM-DD>.md"
+   },
+   {
+    "agent": "transcript-fetcher",
+    "prompt": "Get the latest earnings call transcript for PLTR and save it to E:\\Wiki Felipe empresas\\PLTR\\transcripts\\ as PLTR_<quarter>_<YYYY-MM-DD>.md"
+   },
+   {
+    "agent": "transcript-fetcher",
+    "prompt": "Get the latest earnings call transcript for POET and save it to E:\\Wiki Felipe empresas\\POET\\transcripts\\ as POET_<quarter>_<YYYY-MM-DD>.md"
+   },
+   {
+    "agent": "transcript-fetcher",
+    "prompt": "Get the latest earnings call transcript for POWI and save it to E:\\Wiki Felipe empresas\\POWI\\transcripts\\ as POWI_<quarter>_<YYYY-MM-DD>.md"
+   },
+   {
+    "agent": "transcript-fetcher",
+    "prompt": "Get the latest earnings call transcript for SANM and save it to E:\\Wiki Felipe empresas\\SANM\\transcripts\\ as SANM_<quarter>_<YYYY-MM-DD>.md"
+   },
+   {
+    "agent": "transcript-fetcher",
+    "prompt": "Get the latest earnings call transcript for SNPS and save it to E:\\Wiki Felipe empresas\\SNPS\\transcripts\\ as SNPS_<quarter>_<YYYY-MM-DD>.md"
+   },
+   {
+    "agent": "transcript-fetcher",
+    "prompt": "Get the latest earnings call transcript for TSEM and save it to E:\\Wiki Felipe empresas\\TSEM\\transcripts\\ as TSEM_<quarter>_<YYYY-MM-DD>.md"
+   },
+   {
+    "agent": "transcript-fetcher",
+    "prompt": "Get the latest earnings call transcript for TSLA and save it to E:\\Wiki Felipe empresas\\TSLA\\transcripts\\ as TSLA_<quarter>_<YYYY-MM-DD>.md"
+   },
+   {
+    "agent": "transcript-fetcher",
+    "prompt": "Get the latest earnings call transcript for VEEV and save it to E:\\Wiki Felipe empresas\\VEEV\\transcripts\\ as VEEV_<quarter>_<YYYY-MM-DD>.md"
+   }
+  ]
+ }
+}
