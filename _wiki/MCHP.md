@@ -2,6 +2,24 @@
 
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\MCHP` (filings + transcripts) · `_briefings` roll-up. Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $5.8bn | $7.0bn |
+| Gross profit | $3.7bn | $4.5bn |
+| Gross margin | 62.8% | 64.4% |
+| EBITDA | $2.4bn | $3.1bn |
+| EPS | $2.80 | $3.84 |
+| Capex | $94m | $128m |
+| OCF (≈EBITDA) | $2.4bn | $3.1bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="23.5" width="20" height="34.5" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="20.8" width="20" height="37.2" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+18.3% 3m · +27.4% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="20.3" width="20" height="37.7" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="19.3" width="20" height="38.7" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.3" width="20" height="43.7" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+13.7% 3m · +16.6% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Broad-line embedded-control semi: 8/16/32/64-bit mixed-signal microcontrollers, analog, FPGA, networking/connectivity, and data-center/memory products, sold as a "Total System Solution" into industrial, automotive, aerospace & defense, communications, data center and consumer. FY26 (ended Mar-31-26) net sales **$4,713.1M, +7.1% y/y**, split MCU **$2,355.4M (50.0%)**, Analog **$1,329.0M (28.2%)**, Other (incl. FPGA, DC, licensing) **$1,028.7M (21.8%)** (10-K FY26, 2026-05-21). ~75% of sales foreign (China 18%, Taiwan 15%); ~35% of FY26 sales from own US fabs, balance outsourced (10-K FY26). The story is mechanical cyclical torque: FY24 sales were **$7,634.4M** at the peak — MCHP cut almost in half through the destocking trough and is now climbing back, with operating leverage doing the heavy lifting.
 
@@ -78,31 +96,31 @@ _End-market mix from FY26 Q4 call (2026-05-07)._
 ## In the inbox (Outlook — recent sell-side flow)
 - **'VIVEK on Analog' expert call** _(2026-06-09)_ + **BofA TMT analog call** _(2026-06-09)_: MCU/analog destocking-recovery torque; **MS Equal-Weight ~$94** (per briefings), DC franchise lagging TXN/ADI.
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q4 FY26 print + intra-quarter · May 07 → Jun 22, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q4 FY26 print + intra-quarter · May 07 → Jun 22, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q4 FY26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q4 FY26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Recuperação / bookings** | +10,6% q/q, +35,1% y/y; abril o maior mês de bookings em ~4 anos | JPM: MCHP reiterou bookings recorde, momentum em maio, disti em 26 dias; OW top pick | **✓ confirma** (inflexão real) |
-| **Margem / preço** | GM 61,6%; meta LT 65% | Citi confirma aumento broad-based de preço em junho (junto IFX/TXN/NXPI/ON) | **✓ confirma** (preço sustenta GM) |
-| **Supply / constraints** | 70-80% dos nós constrained; amplo | Expert auto Tier-1: demanda "consistente", sem perda clara de share | **✓ confirma** (sem furo) |
-| **Data center** | 6 wins Gen6; retimers/CXL; DC 18% do mix | MS (bear): DC "não muito diferente de pares, atrás de TXN e ADI"; preço "defensivo, não ofensivo" | **⚠ nuança** (DC atrás dos pares) |
-| **MCU cycle / upside** | "Recovery inflection" validada (briefing) | Citi: ciclo MCU só ~4 trimestres (vs ~7 analog), receita ainda ~20% abaixo do pico — laggard a inflectir | **✓ confirma** (upside ainda à frente) |
+| **Recovery / bookings** | +10.6% q/q, +35.1% y/y; April the largest bookings month in ~4 years | JPM: MCHP reiterated record bookings, momentum into May, disti at 26 days; OW top pick | **✓ confirms** (real inflection) |
+| **Margin / price** | GM 61.6%; LT target 65% | Citi confirms a broad-based price increase in June (alongside IFX/TXN/NXPI/ON) | **✓ confirms** (price supports GM) |
+| **Supply / constraints** | 70-80% of nodes constrained; broad | Tier-1 auto expert: demand "consistent", no clear share loss | **✓ confirms** (no hole) |
+| **Data center** | 6 Gen6 wins; retimers/CXL; DC 18% of the mix | MS (bear): DC "not much different from peers, behind TXN and ADI"; pricing "defensive, not offensive" | **⚠ nuance** (DC behind peers) |
+| **MCU cycle / upside** | "Recovery inflection" validated (briefing) | Citi: MCU cycle only ~4 quarters (vs ~7 for analog), revenue still ~20% below the peak — laggard yet to inflect | **✓ confirms** (upside still ahead) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
 | 05-08 | MS · Moore | valuation | bear | MS reiterates Equal-Weight PT $94 — frames the DC disclosure as in-line and the price hikes as "defensive, not offensive," and flags MCHP's DC sub-segment as "not dissimilar from peers in size/growth but behind TXN and ADI" (briefing). |
 | 05-08 | Capstone briefing | valuation | bull | Sell-side stance on the print: GS reit Buy (Schneider); UBS reit Buy $85 (Arcuri); JPM "Recovery Inflection"; Citi Buy (Malik); Barclays constructive; MS EW $94 (Moore). FQ4 guide +11% with EPS ~19% above consensus "validates the re-rating call" (briefing). |
 | 05-29 | JPM · Harlan Sur | guidance | bull | At JPM's TMC, MCHP reiterated that April was the largest bookings month in nearly 4 years, with momentum continuing into May; distribution inventory at just 26 days, restocking underway, many direct customers returning after 12-18 months. MCHP is holding price to preserve design momentum but did not rule out a broader round of increases for 2H/next year; JPM keeps OW top pick; CY27 EPS for the broad-based trio +23% over two seasons ("Semis Spring Series"). |
-| 06-02 | Capstone briefing | demanda | bull | Data-center breakout and price hikes; a read-through anchor for the analog complex (ADI/ON/NXPI/STM/IFX/POWI) — peers raising DC guides on the same inflection (briefing). |
-| 06-08 | Expert call · auto Tier-1 | competicao | neutral | Tier-1 auto expert described Microchip demand as "consistent," with no clear share loss, affecting the product lines / new products it launches (Expert call). |
-| 06-15 | Citi · Atif Malik | margem | bull | Citi confirms MCHP announced a broad-based price increase starting in June (alongside IFX/TXN/NXPI/ON). Citi's cycle work frames the upside still ahead for MCU-heavy names: the microcontroller cycle has lasted only ~4 quarters (vs ~7 for analog), industry MCU revenue still ~20% below the prior peak and units ~23% below — MCU is the laggard category yet to inflect ("800V power"). |
+| 06-02 | Capstone briefing | demand | bull | Data-center breakout and price hikes; a read-through anchor for the analog complex (ADI/ON/NXPI/STM/IFX/POWI) — peers raising DC guides on the same inflection (briefing). |
+| 06-08 | Expert call · auto Tier-1 | competition | neutral | Tier-1 auto expert described Microchip demand as "consistent," with no clear share loss, affecting the product lines / new products it launches (Expert call). |
+| 06-15 | Citi · Atif Malik | margin | bull | Citi confirms MCHP announced a broad-based price increase starting in June (alongside IFX/TXN/NXPI/ON). Citi's cycle work frames the upside still ahead for MCU-heavy names: the microcontroller cycle has lasted only ~4 quarters (vs ~7 for analog), industry MCU revenue still ~20% below the prior peak and units ~23% below — MCU is the laggard category yet to inflect ("800V power"). |
 
-**Síntese do quarter:** o fluxo valida a re-rating call — recuperação de bookings, disti em mínima histórica e ciclo MCU como laggard ainda a inflectir (Citi) sustentam a gestão. O debate migrou para a qualidade da história de DC (MS: atrás de TXN/ADI, preço "defensivo") vs. o resto do bull case de inventory/preço, que está intacto.
+**Quarter synthesis:** the flow validates the re-rating call — bookings recovery, disti at a historic low and the MCU cycle as a laggard yet to inflect (Citi) support management. The debate shifted to the quality of the DC story (MS: behind TXN/ADI, pricing "defensive") vs. the rest of the inventory/price bull case, which is intact.
 
 ## Management commentary — evolution (last 4 quarters)
 

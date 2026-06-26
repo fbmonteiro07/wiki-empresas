@@ -4,6 +4,24 @@
 
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\NVT` (10-K FY2025, 10-Q Q1 2026, transcripts) · `E:\briefings\2026`. Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $4.9bn | $5.8bn |
+| Gross profit | $1.9bn | $2.2bn |
+| Gross margin | 38.2% | 37.8% |
+| EBITDA | $1.1bn | $1.3bn |
+| EPS | $4.45 | $5.67 |
+| Capex | $128m | $144m |
+| OCF (≈EBITDA) | $1.1bn | $1.3bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="18.7" width="20" height="39.3" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="17.3" width="20" height="40.7" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.2" width="20" height="43.8" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+8.2% 3m · +12.1% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="21.1" width="20" height="36.9" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="19.2" width="20" height="38.8" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.7" width="20" height="43.3" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+13.3% 3m · +19.1% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 nVent is an electrical connection & protection pure-play, spun off from Pentair in 2018. Two reportable segments post-portfolio reshuffle: **Systems Protection** (FY2025 $2,592.9M, +42.2%; brands HOFFMAN enclosures, SCHROFF, TRACHTE control buildings, plus switchgear/bus systems from the Avail Electrical Products Group; liquid cooling + air cooling) and **Electrical Connections** (FY2025 $1,300.2M, +9.9%; brands CADDY, ERICO, ILSCO; bus systems, cable management, power connections). FY2025 continuing net sales **$3,893.1M, +29.5% (+12.6% organic)** (10-K filed 2026-02-17). The company sold its Thermal Management business to Brookfield for **$1.6B** net cash (2025, now discontinued ops) and redeployed into infrastructure: **EPG/Avail ~$1.0B (closed 2025-05-01), Trachte ~$0.7B (2024), ECM ~$1.1B (2023)**. It sits squarely in the **AI data-center power & cooling** chain — DC sales hit ~$1B in 2025 (vs ~$600M in 2024), now the primary growth engine.
 
@@ -75,26 +93,26 @@ nVent converts commodity inputs (steel, copper, aluminum, electronic components)
 - **BofA Datacloud (Cannes) expert-call calendar** _(2026-06-08)_: nVent grouped with the datacenter-power/cooling names (VRT/ETN/CARR/JCI).
 - _Direct broker notes on nVent are thin in the inbox; coverage is mostly AI-DC-power read-through + the NVIDIA CDU partner-network angle._
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 2026 · May 1 → Jun 8, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 2026 · May 1 → Jun 8, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1'26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1'26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **DC/AI orders** | Ordens orgânicas +~40%, DC-led; backlog $2,6B | BofA/Cantor: NVT agrupado no complexo de power/cooling de DC (VRT/ETN/CARR/JCI) — único nome citado no corpus | **✓ confirma** (read-through DC positivo) |
-| **Liquid cooling** | Roadmaps de CDU até 2030; ~80% white space; <30% de penetração LC | Cantor (DataCloud): mercado de CDU escalando rápido — de 1 MW "big" no ano passado p/ 2,5 e 4-5 MW já discutidos | **✓ confirma** (escala de CDU acelera) |
-| **Competição / share** | — (franquia de liquid cooling) | Cantor (nuance bear): NVT não está na lista de power-system da NVIDIA; cita Eaton/Vertiv/Delta/Schneider como players 800V/SST | **⚠ nuança** (fora da lista NVIDIA) |
-| **Margem (Elec. Connections)** | ROS 24,4% (-390bps por inflação de cobre) | — (fluxo não toca margem) | **—** (sem leitura externa) |
+| **DC/AI orders** | Organic orders +~40%, DC-led; backlog $2.6B | BofA/Cantor: NVT grouped in the DC power/cooling complex (VRT/ETN/CARR/JCI) — the only name cited in the corpus | **✓ confirms** (positive DC read-through) |
+| **Liquid cooling** | CDU roadmaps to 2030; ~80% white space; <30% LC penetration | Cantor (DataCloud): CDU market scaling fast — from 1 MW "big" last year to 2.5 and 4-5 MW already being discussed | **✓ confirms** (CDU scale accelerating) |
+| **Competition / share** | — (liquid-cooling franchise) | Cantor (bear nuance): NVT is not on NVIDIA's power-system list; cites Eaton/Vertiv/Delta/Schneider as 800V/SST players | **⚠ nuance** (off the NVIDIA list) |
+| **Margin (Elec. Connections)** | ROS 24.4% (-390bps from copper inflation) | — (flow does not touch margin) | **—** (no external read) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 05-30 | BofA · Obin (briefing 2026-05-30-morning.md) | demanda | neutral | BofA Datacloud Cannes expert call (6/8, 10am ET, Obin) groups NVT with VRT/ETN/CARR/JCI in the datacenter power/cooling complex — the only name-level reference in the briefings corpus. |
-| 06-08 | Cantor · Obin (DataCloud recap) | demanda | bull | DataCloud Cannes recap: CDU market (nVent's liquid cooling franchise) scaling fast — 1 MW CDUs were "really big" last year, focus now on 2.5 MW and 4–5 MW already being discussed; chillers "not going away" (rooftop heat islands 20–25°C above ambient). Content/scale tailwind for on/around-rack cooling vendors. Cites Eaton/Vertiv/Delta/Schneider as 800V/SST sidecar players (consistent with the bear nuance that nVent is not on the NVIDIA power-system list). |
+| 05-30 | BofA · Obin (briefing 2026-05-30-morning.md) | demand | neutral | BofA Datacloud Cannes expert call (6/8, 10am ET, Obin) groups NVT with VRT/ETN/CARR/JCI in the datacenter power/cooling complex — the only name-level reference in the briefings corpus. |
+| 06-08 | Cantor · Obin (DataCloud recap) | demand | bull | DataCloud Cannes recap: CDU market (nVent's liquid cooling franchise) scaling fast — 1 MW CDUs were "really big" last year, focus now on 2.5 MW and 4–5 MW already being discussed; chillers "not going away" (rooftop heat islands 20–25°C above ambient). Content/scale tailwind for on/around-rack cooling vendors. Cites Eaton/Vertiv/Delta/Schneider as 800V/SST sidecar players (consistent with the bear nuance that nVent is not on the NVIDIA power-system list). |
 
-**Síntese do quarter:** cobertura fina, mas o pouco fluxo (read-through de DataCloud Cannes) confirma o tailwind de conteúdo/escala em liquid cooling — CDUs migrando de 1 MW p/ 4-5 MW. O único contraponto é a nuance de que a nVent não figura na lista de power-system da NVIDIA, com Eaton/Vertiv/Delta/Schneider citados como os players de 800V/SST.
+**Quarter synthesis:** thin coverage, but the little flow there is (the DataCloud Cannes read-through) confirms the content/scale tailwind in liquid cooling — CDUs migrating from 1 MW to 4-5 MW. The one counterpoint is the nuance that nVent is not on NVIDIA's power-system list, with Eaton/Vertiv/Delta/Schneider cited as the 800V/SST players.
 
 ## Management commentary — evolution (last 4 quarters)
 

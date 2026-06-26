@@ -4,6 +4,24 @@
 
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\ASML` (20-F + transcripts) · `_equity_calls` · `_briefings\by-ticker\ASML.md`. Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · EUR
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | €39.3bn | €48.2bn |
+| Gross profit | €20.5bn | €25.9bn |
+| Gross margin | 52.3% | 53.8% |
+| EBITDA | €15.2bn | €20.1bn |
+| EPS | €31.69 | €41.93 |
+| Capex | €2.0bn | €2.3bn |
+| OCF (≈EBITDA) | €15.2bn | €20.1bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="21.5" width="20" height="36.5" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="16.8" width="20" height="41.2" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.4" width="20" height="43.6" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+6.9% 3m · +20.5% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="23.8" width="20" height="34.2" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="18.0" width="20" height="40.0" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="15.0" width="20" height="43.0" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+9.9% 3m · +28.8% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 ASML is the sole supplier of EUV lithography and the dominant DUV/immersion vendor — the binding constraint of the leading-edge semiconductor supply chain. Revenue splits across system sales (EUV Low-NA + High-NA, plus non-EUV DUV/dry/immersion and Metrology & Inspection) and a high-margin recurring Installed Base Management (service + upgrades) business. FY25 net sales €32.7B: EUV €11.6B (48 systems, +39% y/y), DUV €12.0B (-6%), M&I €0.825B (+28%), IBM €8.2B (+26%); by segment Logic €16.1B (+22%), Memory €8.4B (-2%) (Q4/FY25, 2026-01-28). The franchise is a near-monopoly levered directly to the AI capex cycle via rising litho intensity in advanced Logic (3nm/2nm/A14) and DRAM (1c→1d EUV layer adoption). The installed base underpins a structural annuity: ASML "measures a machine's life in decades, not years," with >5,000 scanners running in fabs end-2022 and ~95% of the ~1,800 PAS 5500 DUV tools ever sold still in use; fab depreciation runs 5–7yr (TSMC 5yr, Micron 7yr, Intel extended to 8yr in 2023, cutting 2023 D&A ~$4.2B) but physical/economic life is 15–30+yr, so the field grows monotonically and IBM service+upgrade revenue compounds (Useful/Economic Life report, 2026).
 
@@ -22,13 +40,13 @@ Management **raised and narrowed FY26 guidance to €36–40B** (from €34–39
 **Capacity ramp is the story:** Low-NA EUV output at least 60 systems in 2026, scaling to **at least 80 in 2027** (Q1 2026, 2026-04-15) — up from 44 in 2025. JPM (Deshpande) reports management's messaging shifted from the "≥80 units" framing at Q1 to *capacity*: the previously-guided 90-EUV-tool capacity "is not the ceiling" and ASML can expand output **without building new clean rooms** by (i) cutting cycle time from ~20 to ~14 weeks by 2H27, (ii) freeing R&D cabins on the production floor, (iii) using unused High-NA capacity to build Low-NA until High-NA ramps, and (iv) "fast shipments" (customer-site testing) as in Covid — JPM came away thinking ASML could do **110 Low-NA EUV tools or more** without new buildings (JPM "The Street is Behind the Curve", 2026-06-03). Productivity uplifts lift ASPs: NXE:3800E to 230 wph (from 220), NXE:3800F to 260 wph (from 250), shipping 2027 / volume 2028; 1,000W source demo underpins 330 wph by ~2031. High-NA: >500k wafers processed, >80% availability; Intel accepted its EXE:5200B for HVM (Q4/FY25, 2026-01-28). First EXE:5200B shipped at ~175 wph; industry in Phase 1 (R&D) → Phase 2 (HVM insertion on 1–2 layers) 2026–27, Phase 3 volume thereafter (DeepResearch TSM, 2025). FY25 backlog ~€38.8B; Q4 bookings €13.2B (EUV €7.4B / non-EUV €5.8B), 56% Memory. New €12B buyback to 2028; FY25 dividend €7.50 (+17%). Long-term CMD'24 frame reiterated: 2030 revenue €44–60B at 56–60% GM (Q4/FY25, 2026-01-28).
 
 ## Capstone estimates (house model)
-_Source: Capstone peer model (`ASML_Peers_SemiCap_v16.xlsx` — Peer Comp, 2026-06-15). EPS-only (full P&L não modelado por nome aqui)._
+_Source: Capstone peer model (`ASML_Peers_SemiCap_v16.xlsx` — Peer Comp, 2026-06-15). EPS-only (full P&L not modeled by name here)._
 
 | Diluted EPS ($) | 2024 | 2025 | 2026E | 2027E | 2028E | vs cons NTM |
 |---|--:|--:|--:|--:|--:|--:|
 | ASML | 20.82 | 26.83 | 39.63 | 56.85 | 68.74 | ~34.87 |
 
-**House read:** EPS 2026E $39.63 / 2027E $56.85 / 2028E $68.74 — bem acima do consenso (NTM ~34.87). (Capstone peer model, 2026-06-15)
+**House read:** EPS 2026E $39.63 / 2027E $56.85 / 2028E $68.74 — well above consensus (NTM ~34.87). (Capstone peer model, 2026-06-15)
 
 ## Debate / thesis
 - **Capstone model (house view):** diluted EPS $39.6 / $56.8 / $68.7 (2026-28E) — well **above consensus** (NTM ~$34.9, Street-high ~$38.7); implied P/E ~48x→33x→28x at the model's snapshot price. (Capstone official model — ASML_Peers_SemiCap v16, 2026-06-15)
@@ -72,32 +90,32 @@ _Source: Capstone peer model (`ASML_Peers_SemiCap_v16.xlsx` — Peer Comp, 2026-
 - **2028 DRAM 4F² transition** air-pocket; High-NA HVM timing slippage; FCF lumpiness on down-payment timing.
 - **Technology disruption (long-dated):** Substrate XRL / xLight FEL could undercut EUV economics at end-of-decade if industrialized; low-probability but the only structural threat to the monopoly (SemiAnalysis, 2025-10-29).
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 2026 · Apr 15 → Jun 23 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 2026 · Apr 15 → Jun 23 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1'26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1'26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Demanda / AI** | Demanda "outpace supply" no horizonte previsível; litho é a binding constraint | UBS (Arcuri): WFE ~$250B em CY28, talvez $300s em CY29 · Redburn: $54B system sales em 2030 a 91% share | **✓ confirma** (bulls elevam WFE) |
-| **Capacidade EUV** | Low-NA a ≥80 sistemas em '27 (de 44 em '25) | JPM (Deshpande): "90-tool não é teto"; 110+ Low-NA sem novos prédios · Redburn: TSMC já reserva 40-45 EUV/'27, "hard to get more" | **⚠ nuança** (teto sobe além do guiado) |
-| **Memory / DRAM** | Memory HBM/DDR "sold out" '26, tight thru '26 | UBS: ASML ~30% dos dólares de DRAM WFE (>50% c/ AMAT) — o mais alavancado a DRAM | **✓ confirma** (DRAM nova perna) |
-| **Valuation / expectativa** | (n/a — guidance FY26 €36-40B, GM 51-53%) | Bernstein FY27E 26,9x "alinhado com AMAT"; Redburn (O'Mara): "a lot is already priced in" | **⚠ nuança** (muito já no preço) |
+| **Demand / AI** | Demand to "outpace supply" over the foreseeable horizon; litho is the binding constraint | UBS (Arcuri): WFE ~$250B in CY28, maybe $300s in CY29 · Redburn: $54B system sales in 2030 at 91% share | **✓ confirms** (bulls raise WFE) |
+| **EUV capacity** | Low-NA to ≥80 systems in '27 (from 44 in '25) | JPM (Deshpande): "90-tool is not the ceiling"; 110+ Low-NA without new buildings · Redburn: TSMC already booking 40-45 EUV/'27, "hard to get more" | **⚠ nuance** (ceiling rises beyond the guide) |
+| **Memory / DRAM** | Memory HBM/DDR "sold out" '26, tight thru '26 | UBS: ASML ~30% of DRAM WFE dollars (>50% w/ AMAT) — the most levered to DRAM | **✓ confirms** (DRAM a new leg) |
+| **Valuation / expectations** | (n/a — FY26 guidance €36-40B, GM 51-53%) | Bernstein FY27E 26.9x "aligned with AMAT"; Redburn (O'Mara): "a lot is already priced in" | **⚠ nuance** (a lot already in the price) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 04-15 | BofA callback | demanda | bull | DRAM is the new leg — the market shifted materially vs CMD'24, EUV-layer adoption rising 1b (~3-4) → 1c (~6-7) → 1d (~10 by ~2028); BofA's base moves ASML to Top Pick Dec'25. ASP/GM ladder locked in: D→E (~55% GM)→F (high-50s/low-60s, immersion-like), wafer capacity >2x even with EUV units ~2x. FY26 guide-raise driven by immersion+IBM, 'nothing to do with EUV'. |
-| 04-16 | BofA · Didier | demanda | mixed | AI demand structurally outpaces supply through 2027+; lithography is 'clearly the binding constraint'. Near-term risk to the reaction: the guide-raise was driven by immersion+IBM, which does not by itself signal incremental EUV strength. |
-| 05-21 | BofA · Sam Sivakumar (litho expert) | produto | bull | High-NA primer: one High-NA exposure replaces low-NA multi-patterning, cutting steps from 'several dozen to sub-10' (~75% fewer) — a 'no-brainer' case. Mid-field stitching 'is not as serious as previously thought'. DRAM 'eminently suitable' (likely early-adopter). TSMC a deliberate slow-adopter, Intel pushing harder. Quoted throughputs (170/230/250 wph) are 'demonstration numbers'. Resist transition CAR→MOR below ~12-13nm. |
+| 04-15 | BofA callback | demand | bull | DRAM is the new leg — the market shifted materially vs CMD'24, EUV-layer adoption rising 1b (~3-4) → 1c (~6-7) → 1d (~10 by ~2028); BofA's base moves ASML to Top Pick Dec'25. ASP/GM ladder locked in: D→E (~55% GM)→F (high-50s/low-60s, immersion-like), wafer capacity >2x even with EUV units ~2x. FY26 guide-raise driven by immersion+IBM, 'nothing to do with EUV'. |
+| 04-16 | BofA · Didier | demand | mixed | AI demand structurally outpaces supply through 2027+; lithography is 'clearly the binding constraint'. Near-term risk to the reaction: the guide-raise was driven by immersion+IBM, which does not by itself signal incremental EUV strength. |
+| 05-21 | BofA · Sam Sivakumar (litho expert) | product | bull | High-NA primer: one High-NA exposure replaces low-NA multi-patterning, cutting steps from 'several dozen to sub-10' (~75% fewer) — a 'no-brainer' case. Mid-field stitching 'is not as serious as previously thought'. DRAM 'eminently suitable' (likely early-adopter). TSMC a deliberate slow-adopter, Intel pushing harder. Quoted throughputs (170/230/250 wph) are 'demonstration numbers'. Resist transition CAR→MOR below ~12-13nm. |
 | 06-03 | JPM · Deshpande | supply | bull | 'The Street is Behind the Curve': the message shifted from '≥80 units' to capacity — the 90-tool capacity 'is not the ceiling'; ASML can expand output without new clean rooms (cycle ~20→14 weeks by 2H27, free up R&D bays, use High-NA capacity for Low-NA, fast shipments). JPM thinks ASML can do 110 Low-NA EUV or more without new buildings. PT €1,900, FY27/28 rev €55.4B/€63.8B. |
-| 06-15 | UBS · Arcuri | demanda | bull | WFE to ~$250B in CY28, possibly in the $300s in CY29 (A-rated semicaps would gain ~$50/share). ASML ~110 EUV 'slots' of physical capacity ≈ ~$225B WFE before needing to add floor space. On DRAM-dollar leverage: ASML ~30% and AMAT ~25% of DRAM WFE dollars (>50% combined) — the two most levered to DRAM. |
+| 06-15 | UBS · Arcuri | demand | bull | WFE to ~$250B in CY28, possibly in the $300s in CY29 (A-rated semicaps would gain ~$50/share). ASML ~110 EUV 'slots' of physical capacity ≈ ~$225B WFE before needing to add floor space. On DRAM-dollar leverage: ASML ~30% and AMAT ~25% of DRAM WFE dollars (>50% combined) — the two most levered to DRAM. |
 | 06-17 | Rothschild/Redburn | valuation | bull | Raised to €1,900 (from €1,570) Buy, ASML 'remains our top pick among semicaps' post Silicon Valley bus tour — raised FY27-30 EPS +9-12%, sitting 14% ahead of consensus; $68bn lithography market and $54bn of ASML system sales in 2030 at a stable 91% share. At peer multiples ASML would be €2,170 vs PT €1,900. |
 | 06-22 | AlphaSense Deep Research (Bernstein within) | valuation | mixed | ASML primer: Bernstein Outperform (May-21), P/E FY25A/26E/27E = 51.2x/38.7x/26.9x — multiple compression brought FY27E to 26.9x, 'directly aligned with AMAT' and below KLAC/LRCX; premium over SPE median compressed from 1.7x historical to ~1.1-1.2x. PT spread: Bernstein €1,700 / Kepler €1,460 / ING €1,700 / Santander Underperform €980. China normalizing to ~20% of 2026 sales. |
 | 06-23 | Redburn · Conor O'Mara | supply | mixed | Asia Trip Takeaways: TSMC already booking 40-45 EUV units for 2027 and finding it 'hard to get more' as memory makers compete for the same tools — read-through of EUV sold-out/capacity-allocated in 2027. But caution: buy-side expectations for ASML have already risen a lot ('a lot is already priced in') after the narrative turned to 'we can do at least 100 EUV machines'. |
 
-**Síntese do quarter:** o debate deixou de ser "há demanda?" (consenso bullish: WFE $250B+, DRAM como nova perna EUV) e migrou para *capacidade e quanto já está no preço* — JPM e Redburn argumentam que o teto de unidades é bem acima dos ≥80 guiados (110+ EUV sem novos prédios; EUV sold-out em '27), mas alertam que a barra do buy-side já subiu muito.
+**Quarter synthesis:** the debate is no longer "is there demand?" (bullish consensus: WFE $250B+, DRAM as a new EUV leg) and shifted to *capacity and how much is already in the price* — JPM and Redburn argue the unit ceiling is well above the ≥80 guided (110+ EUV without new buildings; EUV sold-out in '27), but warn that the buy-side bar has already risen a lot.
 
 ## Management commentary — evolution (last 5 quarters)
 

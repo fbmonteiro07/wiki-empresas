@@ -6,6 +6,24 @@
 
 _Wiki · generated 2026-06-20 · **No SEC filings — Japanese issuer (TSE Prime: 6146); thin English coverage.** Sources: `E:\Wiki Felipe\DISCO\transcripts` (IR results summaries / monthly-sales-driven disclosure) + `E:\briefings\2026` repo + BBG (JPY). Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · JPY
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | ¥506.0bn | ¥633.6bn |
+| Gross profit | ¥358.8bn | ¥459.3bn |
+| Gross margin | 70.9% | 72.5% |
+| EBITDA | ¥242.6bn | ¥277.8bn |
+| EPS | ¥1533.55 | ¥1785.34 |
+| Capex | ¥40.2bn | — |
+| OCF (≈EBITDA) | ¥242.6bn | ¥277.8bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="21.1" width="20" height="36.9" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="16.6" width="20" height="41.4" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.4" width="20" height="43.6" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+6.3% 3m · +19.2% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="23.2" width="20" height="34.8" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="16.1" width="20" height="41.9" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.1" width="20" height="43.9" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+5.0% 3m · +26.6% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 DISCO is the near-monopoly maker of **precision back-end semiconductor tools** — wafer **dicing** (blade & laser saws), **grinding** (back-grinders / wafer-thinning) and **polishing** — plus the **precision processing tools / consumables** (dicing blades, grinding & polishing wheels) those machines consume. It sits at the end of the wafer-fab flow, between wafer completion and assembly/packaging, and is structurally levered to **advanced packaging and HBM**: DISCO holds an estimated **~70-80% share** of the dicing/grinding equipment used to thin HBM wafers to ultra-thin 30-50µm for stacking (WebSearch / Bitget overview, Jan-2026). Two product categories: **Precision Machines** (dicing saws, laser saws, grinders, polishers) and **Precision Processing Tools** (consumable blades/wheels) plus support services (DISCO IR, 2026). FYE March; **~90% overseas sales** (89.9% in Q2, Quartr 2025-10-29). FY ended Mar-2026 was the **sixth consecutive record year** — net sales ¥436.9bn (+11.1% YoY), driven by generative-AI GPU/HBM demand (Quartr / Japan IR, 2026-04-22). See cross-theme: [cowos-packaging](themes/cowos-packaging.md). **Fiscal-year labeling caveat:** DISCO/Japan-IR call the year ended Mar-2026 "FY2026"; Quartr labels it "FY2025." Same period — flagged because aggregators disagree.
 

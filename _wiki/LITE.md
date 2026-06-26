@@ -2,6 +2,25 @@
 
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\LITE` (filings + transcripts) · `_equity_calls` · `_briefings\by-ticker\LITE.md`. Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Snapshot — Capstone official model + BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | **$4.2bn** | **$8.1bn** |
+| Gross profit | $2.0bn | $4.1bn |
+| Gross margin | 48.4% | 50.9% |
+| EBITDA | $1.7bn | $3.2bn |
+| EPS | **$12.81** | **$30.02** |
+| Capex | $401m | $461m |
+| OCF (≈EBITDA) | $1.7bn | $3.2bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="26.9" width="20" height="31.1" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="16.6" width="20" height="41.4" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.1" width="20" height="43.9" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+6.0% 3m · +41.4% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="37.5" width="20" height="20.5" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="23.0" width="20" height="35.0" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.3" width="20" height="43.7" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+25.6% 3m · +114.4% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_**Bold** = Capstone official model; plain = BBG consensus._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Lumentum is the cleanest US large-cap expression of the AI-datacenter photonics buildout. Two reportable segments — **Cloud & Networking** (the engine: optical/photonic chips, components, modules, subsystems for hyperscalers and NEMs; ~86% of FY25 sales, of which Components ~65% of total company revenue) and **Industrial Tech** (cyclically soft, ~14% of FY25, -15% YoY) (LITE 10-K, FY25, 2025-08-19; segment shares per Citi LITE initiation, 2025-08-29; TD Cowen, 2026-03-11). What matters is the AI stack: indium-phosphide (InP) EML/CW/ultra-high-power (UHP) lasers, cloud transceivers (1.6T), optical circuit switches (OCS), and the four growth legs management keeps repeating — cloud transceivers, OCS, scale-out CPO, and scale-up CPO. The franchise pivot is real: legacy cyclical telco supplier → "foundational engine of the AI revolution" (Hurlston, Q2FY26, 2026-02-03). NVIDIA took a direct equity stake (+$2.02B to cash) on top of a take-or-pay laser supply agreement (Q3FY26, 2026-05-06). The buy-side debate is no longer demand — it's whether they can build it (execution/capacity), whether InP merchant supply eventually overshoots, and whether the multiple holds.
 
@@ -33,7 +52,7 @@ _Source: Capstone official model (`Modelo consolidado incl. LITE .xlsx` — cons
 | EPS — adj ($) | 0.94 | 4.13 | 12.81 | 30.02 |
 | Operating margin | ~4% | ~18% | ~32% | ~43% |
 
-**House read:** receita $1.4bn → $8.1bn (24-27E; +49/+101/+92%) puxada por Datacom & AI (~77% do mix em 2027 incl. transceivers/OCS/CPO); EPS adj $0.94 → $30.02. (Capstone official model — consolidated optics, 2026-06-16)
+**House read:** revenue $1.4bn → $8.1bn (24-27E; +49/+101/+92%) driven by Datacom & AI (~77% of the mix in 2027 incl. transceivers/OCS/CPO); adj EPS $0.94 → $30.02. (Capstone official model — consolidated optics, 2026-06-16)
 
 ## Debate / thesis
 - **Capstone model (house view):** revenue $1.41B→$2.11B→$4.24B→$8.14B (2024-27E; +49%/+101%/+92%) on Datacom & AI ($0.46B→$2.53B→$6.27B, ~77% of mix by 2027) incl. transceivers / OCS / CPO ramps; adj EPS $0.94 / $4.13 / $12.81 / $30.02; op margin ~4%→43%. (Capstone official model — consolidated optics, 2026-06-16)
@@ -70,23 +89,23 @@ _Source: Capstone official model (`Modelo consolidado incl. LITE .xlsx` — cons
 - **Technology inflections / commoditization:** SiPh share gain at 1.6T, Chinese entrants, CPO/NPO cannibalizing pluggables; 3.2T reverts to EML (Hurlston, JPM 2026-05-18).
 - **Multiple risk:** stock +136% YTD into May; ~30x vs ~20x historical (JPM, 2025-12-15); extended technicals; CPO-timing headlines drive sharp drawdowns.
 
-## Intra-quarter — calls, comentários & relatórios
+## Intra-quarter — calls, commentary & reports
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q3 FY26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q3 FY26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **CPO / lasers UHP** | Moat sole-source na fonte de luz UHP; inflexão H2 cal'26 | BTG/LightCounting (Bob): no CPO o gargalo é laser de altíssima potência — só LITE e COHR fonte confiável ("dois, possivelmente três" fornecedores) | **✓ confirma** (moat UHP corroborado) |
-| **Demanda vs supply** | Imbalance EML ">30%"; "não há problema de demanda, o problema é execução/capacidade" | BTG: maioria dos designs early de CPO usa external laser sources, demanda concentrada em LITE/COHR | **✓ confirma** (supply é a trava) |
-| **Valuation** | (n/a — gestão não comenta múltiplo) | BofA/Arya: mantém **NEUTRAL, PO $1.100** (48x CY27) — "upside well priced in" (CY26/27E +18%/+9%) | **⚠ nuança** (múltiplo já precifica) |
+| **CPO / UHP lasers** | Sole-source moat on the UHP light source; inflection H2 cal'26 | BTG/LightCounting (Bob): in CPO the bottleneck is the ultra-high-power laser — only LITE and COHR are a reliable source ("two, possibly three" suppliers) | **✓ confirms** (UHP moat corroborated) |
+| **Demand vs supply** | EML imbalance ">30%"; "there's no demand problem, the problem is execution/capacity" | BTG: most early CPO designs use external laser sources, demand concentrated in LITE/COHR | **✓ confirms** (supply is the constraint) |
+| **Valuation** | (n/a — management doesn't comment on the multiple) | BofA/Arya: maintains **NEUTRAL, PO $1,100** (48x CY27) — "upside well priced in" (CY26/27E +18%/+9%) | **⚠ nuance** (multiple already prices it in) |
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 06-25 | BTG · LightCounting call | supply | bull | Expert (Bob): o gargalo do CPO é **laser de altíssima potência** — **só Lumentum e Coherent são fonte confiável** (AVGO supostamente tem high-power lasers mas não aparece nos designs near-term). Como um laser externo alimenta múltiplas portas, o ASP é mais alto e o número de fornecedores é "essencialmente dois, possivelmente três". A maioria dos designs early de CPO usa **external laser sources** (≠ VCSEL, que elimina o laser externo mas é interesse mais China/near-package, não tanto hyperscaler norte-americano). Reforça o moat de LITE/COHR na fonte de luz UHP p/ CPO. (BTG "LightCounting", 2026-06-25) |
+| 06-25 | BTG · LightCounting call | supply | bull | Expert (Bob): the CPO bottleneck is the **ultra-high-power laser** — **only Lumentum and Coherent are a reliable source** (AVGO supposedly has high-power lasers but doesn't show up in near-term designs). Because one external laser feeds multiple ports, the ASP is higher and the number of suppliers is "essentially two, possibly three". Most early CPO designs use **external laser sources** (≠ VCSEL, which eliminates the external laser but is more of a China/near-package interest, not so much North American hyperscalers). Reinforces the LITE/COHR moat on the UHP light source for CPO. (BTG "LightCounting", 2026-06-25) |
 
-_Nota: a BofA (Vivek Arya, "AI 2030", 2026-05-13) **manteve LITE Neutral, PO $1,100** (revisou estimativas; base 48x CY27 PE vs 50x antes) — já refletido na seção de sell-side acima (briefing 2026-05-06); datapoint histórico, sem mudança de tese._
+_Note: BofA (Vivek Arya, "AI 2030", 2026-05-13) **maintained LITE Neutral, PO $1,100** (revised estimates; based on 48x CY27 PE vs 50x before) — already reflected in the sell-side section above (briefing 2026-05-06); a historical datapoint, no change to the thesis._
 
-**Síntese do quarter:** o fluxo intra-quarter é confirmatório da tese de gestão — o BTG corrobora o moat LITE/COHR na fonte de luz UHP p/ CPO e que demanda excede supply (a trava é capacidade, não pedido). O debate não migrou da demanda para os fundamentos, e sim para o **múltiplo**: BofA trava em NEUTRAL ("upside well priced in") com a única nuança sendo o preço, não o produto.
+**Quarter synthesis:** the intra-quarter flow is confirmatory of management's thesis — BTG corroborates the LITE/COHR moat on the UHP light source for CPO and that demand exceeds supply (the constraint is capacity, not orders). The debate has not shifted from demand to fundamentals, but rather to the **multiple**: BofA holds at NEUTRAL ("upside well priced in") with the only nuance being the price, not the product.
 
 ## Management commentary — evolution (last 6 quarters)
 

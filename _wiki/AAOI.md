@@ -4,6 +4,24 @@
 
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AAOI` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\AAOI.md`. Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $1.0bn | $2.5bn |
+| Gross profit | $320m | $867m |
+| Gross margin | 31.3% | 34.9% |
+| EBITDA | $156m | $699m |
+| EPS | $0.92 | $4.77 |
+| Capex | $390m | $489m |
+| OCF (≈EBITDA) | $156m | $699m |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f"></text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="28.7" width="20" height="29.3" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+50.4% 3m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Vertically-integrated optical-components maker: designs and builds laser-based fiber-optic products from the indium phosphide (InP) laser chip up through finished transceiver. Three end-markets: (1) **data center** transceivers (100G/400G/800G/1.6T) for hyperscalers — the AI story; (2) **CATV** access-network amplifiers (1.8 GHz / DOCSIS 4.0); (3) telecom/FTTH (de minimis). In Q1 FY26, mix was **54% data center / 44% CATV / 2% telecom-FTTH-other** (Q1 FY26 transcript, 2026-05-07). The differentiator the whole bull case rests on: **in-house InP laser fab** (Sugar Land, TX) at a moment when laser/InP capacity is the binding constraint across the optical chain. US-anchored manufacturing footprint is a tariff and supply-security selling point. Volatile small/mid-cap; very high FinTwit interest (see Debate).
 
@@ -44,36 +62,36 @@ Vertically-integrated optical-components maker: designs and builds laser-based f
 - **China footprint:** 1.2M sq ft Ningbo plant (transceiver/CATV) — tariff and geopolitical exposure the US build-out aims to offset.
 - **Valuation/momentum:** parabolic move, high short interest, FinTwit-driven — sentiment unwind risk independent of fundamentals.
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 FY26 · May 07 → Jun 18, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 FY26 · May 07 → Jun 18, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1'26 · 2026-05-07) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1'26 · 2026-05-07) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Demanda** | FY26 raised >$1.1B; capacity-gated, demanda real $1.4–1.5B; ~$471M/mês DC em mid-2027 | Serenity: $471M/mês = ~$5.6B ARR vs ~$13.5B MC, "maior cadeia US de 800G/1.6T" · Rosenblatt: AMD caçando laser CW → AMZN/MSFT "must follow" | **✓ confirma** (lado da demanda) |
-| **Roadmap / 2028** | 800G ramp Q2; 1.6T late-26, ">$2B em 1.6T" em '27; ramp 2H'26 é step-function +60–80% Q/Q | @BenBajarin: mercado precisa crer que o ramp de '27 vira base maior em '28, não pull-forward de 1 ano | **⚠ nuança** (sustentação em '28) |
-| **Margem** | GM 29.2%; 35% exit-26, 40% por Q3/Q4'27 com mix 800G/1.6T + laser | Fluxo não disputa a trajetória de margem diretamente (sem broker formal); execução/diluição é o foco | **⚠ nuança** (não testada no fluxo) |
-| **Capacidade / moat laser** | InP in-house; +350% fab laser; top-3 laser mundial por YE27; >650k/mo YE26 | 650 Group: AAOI entre os novos entrantes em laser merchant (c/ MACOM, Semtech), TAM CPO → ~$1B — mas risco explícito de glut/oversupply | **⚠ nuança** (moat vs glut) |
-| **Execução / capital** | Capex $68.7M/tri+, caixa $449.4M (raise equity/dívida); FY26 >$140M op income | Crux/Gaetano: "$30B ou $3B?" — risco de execução + diluição na mesa · insider selling · Cramer: óticas "parabólicas" | **✗ contesta** (execução/diluição é o furo) |
+| **Demand** | FY26 raised >$1.1B; capacity-gated, true demand $1.4–1.5B; ~$471M/mo DC in mid-2027 | Serenity: $471M/mo = ~$5.6B ARR vs ~$13.5B MC, "largest US 800G/1.6T chain" · Rosenblatt: AMD chasing CW laser → AMZN/MSFT "must follow" | **✓ confirms** (demand side) |
+| **Roadmap / 2028** | 800G ramp Q2; 1.6T late-26, ">$2B in 1.6T" in '27; 2H'26 ramp is a step-function +60–80% Q/Q | @BenBajarin: the market must believe the '27 ramp becomes a larger base in '28, not a one-year pull-forward | **⚠ nuance** (durability into '28) |
+| **Margin** | GM 29.2%; 35% exit-26, 40% by Q3/Q4'27 with 800G/1.6T + laser mix | Flow does not dispute the margin trajectory directly (no formal broker); execution/dilution is the focus | **⚠ nuance** (not tested in the flow) |
+| **Capacity / laser moat** | InP in-house; +350% laser fab; top-3 laser worldwide by YE27; >650k/mo YE26 | 650 Group: AAOI among the new merchant-laser entrants (with MACOM, Semtech), CPO TAM → ~$1B — but explicit glut/oversupply risk | **⚠ nuance** (moat vs glut) |
+| **Execution / capital** | Capex $68.7M/qtr+, cash $449.4M (equity/debt raise); FY26 >$140M op income | Crux/Gaetano: "$30B or $3B?" — execution risk + dilution on the table · insider selling · Cramer: optical names "parabolic" | **✗ contests** (execution/dilution is the hole) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 05-07 | AAOI · Q1 FY26 earnings call (Thompson Lin) | demanda | bull | FY26 raised to >US$1.1B revenue with >US$140M non-GAAP op income. Management explicit that FY26 is capacity-gated, not demand-gated — Thompson Lin put true demand at US$1.4–1.5B, internal target US$1.2B. By mid-2027, ~US$471M/month of DC transceiver revenue (~780k transceivers/month). |
+| 05-07 | AAOI · Q1 FY26 earnings call (Thompson Lin) | demand | bull | FY26 raised to >US$1.1B revenue with >US$140M non-GAAP op income. Management explicit that FY26 is capacity-gated, not demand-gated — Thompson Lin put true demand at US$1.4–1.5B, internal target US$1.2B. By mid-2027, ~US$471M/month of DC transceiver revenue (~780k transceivers/month). |
 | 05-07 | AAOI · Q1 FY26 earnings call | supply | bull | The 2H'26 ramp is a step function, not linear — Q3 and Q4 each +60–80% Q/Q as Texas capacity comes online. Capacity: ~150k/mo 800G+1.6T this quarter, >650k/mo by YE26 (~30% Texas), >930k/mo by YE27 (>50% Texas). 1.6T contributes late-2026 (Lin: "more than US$2B for 1.6T transceivers" next year). |
 | 05-08 | briefing · Crux Capital / Gaetano | valuation | bear | Crux Capital/Gaetano: "$30B or $3B?" — "plenty of execution risk: capacity must expand dramatically + capex ramp + dilution on table + margins improve + new orders qualified + qualified orders ship on time". |
-| 05-08 | briefing · @BenBajarin | demanda | mixed | @BenBajarin: the market needs to believe the 2027 ramp extends into a much larger base in 2028, not a one-year hyperscaler pull-forward. |
+| 05-08 | briefing · @BenBajarin | demand | mixed | @BenBajarin: the market needs to believe the 2027 ramp extends into a much larger base in 2028, not a one-year hyperscaler pull-forward. |
 | 05-12 | briefing · Jim Cramer (CNBC) | valuation | bear | Jim Cramer (CNBC): the optical names are "parabolic… not going to be good for the market". |
 | 05-14 | briefing · ParadisLabs / Rothschild | valuation | mixed | ParadisLabs ranks AAOI behind LITE/COHR on order-book scale + commercial readiness. AAOI appeared on Rothschild's "12m relative highs" list. |
-| 05-19 | briefing · Crux Capital / Gaetano | demanda | mixed | Crux Capital/Gaetano: "the story is there, but we need the execution follow-through". |
-| 05-26 | 650 Group · networking research | competicao | mixed | 650 Group: AAOI named among the new entrants in the merchant laser market (alongside MACOM, Semtech) as the CPO laser opportunity scales from the low hundreds of millions to ~US$1B; the flip side is explicit oversupply/glut risk as everyone adds laser capacity. |
+| 05-19 | briefing · Crux Capital / Gaetano | demand | mixed | Crux Capital/Gaetano: "the story is there, but we need the execution follow-through". |
+| 05-26 | 650 Group · networking research | competition | mixed | 650 Group: AAOI named among the new entrants in the merchant laser market (alongside MACOM, Semtech) as the CPO laser opportunity scales from the low hundreds of millions to ~US$1B; the flip side is explicit oversupply/glut risk as everyone adds laser capacity. |
 | 06-01 | briefing · FinTwit | capital | bear | Insider selling noted. |
-| 06-17 | briefing · Rosenblatt checks / FinTwit | demanda | bull | Game-theory leg: AMD actively chasing CW laser supply (flagged in Rosenblatt checks) → once NVDA/AMD lock LTAs, AMZN/MSFT "must follow". |
+| 06-17 | briefing · Rosenblatt checks / FinTwit | demand | bull | Game-theory leg: AMD actively chasing CW laser supply (flagged in Rosenblatt checks) → once NVDA/AMD lock LTAs, AMZN/MSFT "must follow". |
 | 06-18 | briefing · @aleabitoreddit (Serenity) | valuation | bull | @aleabitoreddit (Serenity): ran from "$30 → $170/$175" and frames US$471M/month = ~US$5.6B ARR against a ~US$13.5B market cap in H1'27, "largest US transceiver supply chain for mass production of 800G/1.6T", with the bigger inflection in 2028. |
 
-**Síntese do quarter:** O debate saiu da demanda — que o fluxo praticamente confirma (Serenity, leg AMD/Rosenblatt) — e migrou para execução, diluição e sustentação da base em 2028: bulls compram o moat de laser InP in-house, bears (Crux, Cramer, insider selling) tratam tudo como projeção de 2027 a ser provada no print do Q3, com o 650 Group somando risco de glut de laser. Sem rating formal de sell-side — a validação é a impressão de capacidade do Q3.
+**Quarter synthesis:** The debate has moved off demand — which the flow largely confirms (Serenity, the AMD/Rosenblatt leg) — and migrated to execution, dilution and the durability of the base in 2028: bulls buy the in-house InP laser moat, bears (Crux, Cramer, insider selling) treat everything as a 2027 projection to be proven in the Q3 print, with 650 Group adding laser-glut risk. No formal sell-side rating — the validation is the Q3 capacity print.
 
 ## Management commentary — evolution (last 5 quarters)
 

@@ -4,6 +4,24 @@
 
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\ADI` (10-K FY2025, 10-Q FQ2 FY26, transcripts) · `E:\equity_calls_transcripts` · `E:\briefings\2026`. Master index: [00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $15.5bn | $17.3bn |
+| Gross profit | $11.2bn | $12.6bn |
+| Gross margin | 72.5% | 73.0% |
+| EBITDA | $8.6bn | $9.6bn |
+| EPS | $13.21 | $15.35 |
+| Capex | $774m | $823m |
+| OCF (≈EBITDA) | $8.6bn | $9.6bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="22.9" width="20" height="35.1" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="17.3" width="20" height="40.7" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="16.9" width="20" height="41.1" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+8.1% 3m · +25.2% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="24.8" width="20" height="33.2" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="19.5" width="20" height="38.5" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="18.5" width="20" height="39.5" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+14.4% 3m · +32.4% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Analog Devices is one of the world's largest **high-performance analog / mixed-signal** semiconductor companies — ICs that sense, measure, interpret, connect and **power** the physical world (data converters, amplifiers, power management, RF/microwave, edge processors, isolation, sensors/MEMS). FY2025 revenue **$11.0bn, +17% y/y** (10-K, 2025-11-25), mix: **Industrial 45%, Automotive 30%, Consumer 13%, Communications 13%** (10-K FY25). The franchise is built on sticky, long-life-cycle catalog analog with very high margins (FY25 EPS +20%+); the live story for a tech/semis book is the **broad-based industrial cyclical recovery** layered on a **data-center growth engine** (AI ATE, datacenter power, optical connectivity) now ~20% of revenue / ~$2bn run-rate (Q1 FY26 call, 2026-02-18). Diversified-analog peer set: TXN, NXPI, ON, MCHP, IFX, STM, MPWR.
 
@@ -86,31 +104,31 @@ ADI runs a **hybrid manufacturing** model: it operates internal wafer fabs (Wilm
 - **'VIVEK on Analog' expert call** _(2026-06-09)_ + **BofA TMT 'Analog Semis Call, APH CEO'** _(2026-06-09)_: analog up-cycle dynamics; ADI the premium franchise — the **TXN-long / ADI-short pair-trade** is the live debate.
 - **BofA Tech Conference lighting round** _(2026-06-08)_: analog recovery + datacenter-power content (Empower/AI-power).
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_FQ2 FY26 print + intra-quarter · May 20 → Jun 23, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_FQ2 FY26 print + intra-quarter · May 20 → Jun 23, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (FQ2'26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (FQ2'26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Industrial / ciclo** | Industrial 50% da rec, +56% a/a; A&D/ATE/energia lideram | JPM (Sur): "top pick" no diversificado, recuperação ampliando-se, PT $450 OW · Jefferies (Menon): demanda AI-DC aperta capacidade analógica | **✓ confirma** (ciclo sincronizado) |
-| **Data-center / power** | DC ~75% de comms, +>90% a/a; Empower fecha gap de vertical-power | Citi: Empower é o pure-play em IVR (arquitetura 2028+), design wins iniciais no 2H26 | **✓ confirma** (alavanca de DC-power) |
-| **Automotivo** | Auto +2% a/a; BMS volta a crescer; rumo a double-digit FY26 | Expert Tier-1: TI ganhando vs ADI em suporte de canal / FAE / lead times no auto | **✗ contesta** (perde share p/ TI) |
-| **Valuation / posicionamento** | Margem 73%, EPS recorde $3.09; guide FQ3 ~$3,9bn (8% acima do Street) | Barclays/Jefferies: "knife fight" em nome muito comprado; pair-trade long-TXN / short-ADI ganhando tração | **⚠ nuança** (crowding no pico) |
+| **Industrial / cycle** | Industrial 50% of rev, +56% y/y; A&D/ATE/energy lead | JPM (Sur): "top pick" in diversified, recovery broadening, PT $450 OW · Jefferies (Menon): AI-DC demand tightening analog capacity | **✓ confirms** (synchronized cycle) |
+| **Data-center / power** | DC ~75% of comms, +>90% y/y; Empower closes the vertical-power gap | Citi: Empower is the pure-play in IVR (2028+ architecture), initial design wins in 2H26 | **✓ confirms** (DC-power lever) |
+| **Automotive** | Auto +2% y/y; BMS back to growth; toward double-digit FY26 | Tier-1 expert: TI gaining vs ADI on channel support / FAE / lead times in auto | **✗ contests** (losing share to TI) |
+| **Valuation / positioning** | Margin 73%, record EPS $3.09; FQ3 guide ~$3.9bn (8% above Street) | Barclays/Jefferies: "knife fight" in a very well-owned name; long-TXN / short-ADI pair-trade gaining traction | **⚠ nuance** (crowding at the peak) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
 | 05-21 | Jefferies · Blayne Curtis / Citi · Atif Malik / MS · Joseph Moore / DB · Ross Seymore | valuation | bull | PT walk post-print: Jefferies raised to $475 Buy ('Cooking with Gas,' record bookings, comms +90% YoY in DC); Citi to $460 Buy (28x C27 ~$16, Empower adds DC-power share in '27); MS to $428 OW (9th consecutive quarter above seasonal, 'more room to run'). DB maintains Hold $365 — 'firing on all cylinders but the premium valuation already reflects it.' |
-| 05-23 | JPM · Harlan Sur (briefing) | demanda | bull | JPM calls ADI its 'top pick in the broad-based diversified semis segment,' PT $450 (from $400), OW — industrial recovery broadening beyond ATE/A&D, auto on track for double-digit YoY in FY26, Empower closing the vertical-power gap for AI accelerators. |
-| 05-29 | JPM · Harlan Sur (Semis spring update) | demanda | bull | JPM names ADI among its top OW picks in broad-based analog/MCU (with TXN/MCHP), reading the April earnings season + post-earnings checks as confirmation of a synchronized cyclical recovery; CY27 EPS for ADI/TXN/MCHP already revised up ~23% over two earnings seasons, with positive pricing actions possibly 'firing' in 2H26. |
-| 06-03 | Jefferies · Menon (Analog Semis) / Barclays · Rand | demanda | bull | Jefferies: the AI-datacenter demand pull is tightening analog/MOSFET/MCU capacity (creating shortage), naming TI/ADI as participants with 'lots of datacenter revenue.' Barclays: the long-TXN / short-ADI pair-trade gaining traction — TXN earlier in the recovery with more GM torque and a chance to 'double' DC-power exposure vs ADI's already among the highest. |
-| 06-08 | Expert call · Tier-1 automotivo | competicao | bear | Automotive Tier-1 expert judges TI gaining vs ADI in channel support / FAE / lead times — 'TI in general capturing the market much more and better than ADI, especially through its involvement in the automotive sector.' |
-| 06-09 | BofA · Vivek Arya (TMT Analog Semis Call) / briefing | demanda | bull | BofA: analog up-cycle dynamics; ADI the premium franchise and the long-TXN/short-ADI pair-trade is the live debate. BofA pegs the analog AI-DC TAM at ~$8bn (2025) → ~$27bn by 2030 (~28% CAGR), ADI among the beneficiaries. |
-| 06-15 | Citi · Atif Malik (800V power) | produto | bull | Citi frames Empower as the key pure-play in integrated voltage regulators (IVR) — the 2028+ co-packaged power-delivery architecture — with ADI guiding initial IVR design wins in 2H26; the deal 'could strengthen its position in the power-delivery market for next-generation platforms.' |
+| 05-23 | JPM · Harlan Sur (briefing) | demand | bull | JPM calls ADI its 'top pick in the broad-based diversified semis segment,' PT $450 (from $400), OW — industrial recovery broadening beyond ATE/A&D, auto on track for double-digit YoY in FY26, Empower closing the vertical-power gap for AI accelerators. |
+| 05-29 | JPM · Harlan Sur (Semis spring update) | demand | bull | JPM names ADI among its top OW picks in broad-based analog/MCU (with TXN/MCHP), reading the April earnings season + post-earnings checks as confirmation of a synchronized cyclical recovery; CY27 EPS for ADI/TXN/MCHP already revised up ~23% over two earnings seasons, with positive pricing actions possibly 'firing' in 2H26. |
+| 06-03 | Jefferies · Menon (Analog Semis) / Barclays · Rand | demand | bull | Jefferies: the AI-datacenter demand pull is tightening analog/MOSFET/MCU capacity (creating shortage), naming TI/ADI as participants with 'lots of datacenter revenue.' Barclays: the long-TXN / short-ADI pair-trade gaining traction — TXN earlier in the recovery with more GM torque and a chance to 'double' DC-power exposure vs ADI's already among the highest. |
+| 06-08 | Expert call · Tier-1 automotive | competition | bear | Automotive Tier-1 expert judges TI gaining vs ADI in channel support / FAE / lead times — 'TI in general capturing the market much more and better than ADI, especially through its involvement in the automotive sector.' |
+| 06-09 | BofA · Vivek Arya (TMT Analog Semis Call) / briefing | demand | bull | BofA: analog up-cycle dynamics; ADI the premium franchise and the long-TXN/short-ADI pair-trade is the live debate. BofA pegs the analog AI-DC TAM at ~$8bn (2025) → ~$27bn by 2030 (~28% CAGR), ADI among the beneficiaries. |
+| 06-15 | Citi · Atif Malik (800V power) | product | bull | Citi frames Empower as the key pure-play in integrated voltage regulators (IVR) — the 2028+ co-packaged power-delivery architecture — with ADI guiding initial IVR design wins in 2H26; the deal 'could strengthen its position in the power-delivery market for next-generation platforms.' |
 
-**Síntese do quarter:** o fundamento (ciclo industrial + DC-power via Empower) está confirmado e os PTs subiram em bloco pós-print ($428–$490), então o debate migrou de "a recuperação é real?" para "quanto já está no preço" — o ponto vivo virou o pair-trade long-TXN/short-ADI e o risco de share automotivo para a TI, não a tese de demanda.
+**Quarter synthesis:** the fundamentals (industrial cycle + DC-power via Empower) are confirmed and PTs rose as a block post-print ($428–$490), so the debate migrated from "is the recovery real?" to "how much is already in the price" — the live point became the long-TXN/short-ADI pair-trade and the risk of auto share to TI, not the demand thesis.
 
 ## Management commentary — evolution (last 4 quarters)
 

@@ -2,6 +2,24 @@
 
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\VST` (filings + transcripts) · `_briefings\by-ticker\VST.md`. Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $22.9bn | $25.0bn |
+| Gross profit | $12.5bn | $13.2bn |
+| Gross margin | 54.5% | 52.5% |
+| EBITDA | $7.3bn | $8.3bn |
+| EPS | $8.73 | $11.03 |
+| Capex | $2.2bn | $2.9bn |
+| OCF (≈EBITDA) | $7.3bn | $8.3bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="15.4" width="20" height="42.6" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="16.1" width="20" height="41.9" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="15.0" width="20" height="43.0" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+5.1% 3m · +3.4% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="16.4" width="20" height="41.6" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="15.0" width="20" height="43.0" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.7" width="20" height="43.3" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+2.3% 3m · +5.8% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Vistra is the largest competitive (merchant) power producer in the US: ~41GW+ of generation across ERCOT, PJM, New England, NY and California, spanning natural gas (combined-cycle/peakers), nuclear, coal-to-gas conversions, solar and battery storage, plus a leading competitive retail electricity franchise serving millions of residential and C&I customers. The model is **integrated** — generation + commercial hedging + retail — which is the core of the bull case: retail and gen offset each other across weather/price regimes (Q1 FY26, 2026-05-07). Two reportable segments: Generation (~$4.29B FY25 adj. EBITDA) and Retail (~$1.62B FY25), per Q4 FY25 (2026-02-26). The stock is now an AI-power / data-center demand play sitting at the intersection of merchant power and hyperscaler capex.
 
@@ -50,31 +68,31 @@ _Sell-side coverage in the disk sources is **thin** — one morning-briefing dat
 - Retail margin normalization toward ~$1.4B (Q4 FY25); battery/storage returns weak in ERCOT.
 - _Generic 10-K risk-factor categories (commodity, weather, nuclear, regulatory, cyber, leverage) per VST_10-K 2026-02-27; HTML not text-extractable here, so cited at category level only._
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 FY26 · May 7 → Jun 16, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 FY26 · May 7 → Jun 16, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1'26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1'26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Demanda / load growth** | ERCOT 5-6%, PJM 2-3% até 2030; tightening de DC só em "late 2027/early 2028"; forwards ERCOT abaixo da própria visão | JPM "AI Capex 2.0": 138 GW de DC, power é o gargalo, filas de interconexão crescendo em ERCOT | **✓ confirma** (demanda real, timing cauteloso) |
-| **Contratação DC** | ~3.2GW ainda não contratado; gás + bridge; PPAs nucleares (AMZN+Meta) | JPM corrobora o PPA Vistra/Meta (Beaver Valley/Davis-Besse/Perry, 2.6 GW, 20 anos) | **✓ confirma** (PPA marquee validado) |
-| **Grid vs BTM** | (tese bear: IPPs cedendo share de DC) | WF Chakri/midstream: BTM permanente, ~40% dos deals — leitura negativa p/ a tese grid · JPM: TX é mercado-chave de BTM (sem FERC) | **⚠ nuança** (BTM pressiona share) |
-| **Capital / leverage** | Fitch IG; ~$600M devolvidos YTD; 2.3x net debt/EBITDA até YE27 | MS Arcaro: Helix Digital Infra ($10B com KKR/NVDA/KIA) vale ~$23/sh — tema novo | **✓ confirma** (capital + opcionalidade nova) |
+| **Demand / load growth** | ERCOT 5-6%, PJM 2-3% to 2030; DC tightening only in "late 2027/early 2028"; ERCOT forwards below management's own view | JPM "AI Capex 2.0": 138 GW of DC, power is the bottleneck, interconnection queues growing in ERCOT | **✓ confirms** (real demand, cautious timing) |
+| **DC contracting** | ~3.2GW still uncontracted; gas + bridge; nuclear PPAs (AMZN+Meta) | JPM corroborates the Vistra/Meta PPA (Beaver Valley/Davis-Besse/Perry, 2.6 GW, 20 years) | **✓ confirms** (marquee PPA validated) |
+| **Grid vs BTM** | (bear thesis: IPPs ceding DC share) | WF Chakri/midstream: BTM permanent, ~40% of deals — a negative read for the grid thesis · JPM: TX is a key BTM market (no FERC) | **⚠ nuance** (BTM pressures share) |
+| **Capital / leverage** | Fitch IG; ~$600M returned YTD; 2.3x net debt/EBITDA by YE27 | MS Arcaro: Helix Digital Infra ($10B with KKR/NVDA/KIA) worth ~$23/sh — a new theme | **✓ confirms** (capital + new optionality) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
 | 05-07 | Vistra · Burke (Q1 FY26) | guidance | neutral | Management reaffirmed FY26 guidance for adjusted EBITDA and FCF-before-growth and held the FY27 EBITDA midpoint opportunity range — both EXCLUDE the pending Cogentrix deal and the Meta-PJM nuclear PPAs, to be updated post-close. |
 | 05-07 | Vistra · Moldovan (Q1 FY26) | capital | bull | ~$525M of buybacks in the first 4 months of FY26 + ~$75M dividend = ~$600M returned YTD; the 10b5-1 program accelerates on weakness. Line of sight to >$10B of cash generation 2026-2027: ~$3B to shareholders, ~$4B to accretive growth, ~$3B unallocated, at ~2.3x net debt/EBITDA by YE27. |
-| 05-07 | Vistra · Burke (Q1 FY26) | demanda | mixed | Load growth 'real, but not at the extremely elevated levels on the fast timeline forecast by many third parties'; DC tightening only begins in 'late 2027 or early 2028.' ERCOT 5-6% and PJM 2-3% through 2030, but ERCOT forwards softened on mild weather and don't even reflect management's own 5-6% view. |
-| 05-27 | Wells Fargo · Aman Chakri (BTM expert) | competicao | bear | BTM expert (ex-GE Vernova): behind-the-meter is a permanent solution, not a bridge — read-through to the grid-vs-BTM debate that frames the 'IPPs ceding DC share' bear. |
-| 06-05 | Wells Fargo · midstream Friday wrap | competicao | bear | Midstream DC expert: BTM at ~40% of power deals, with post-grid-connection BTM assets running only ~15-30% of capacity for peak-shaving. |
+| 05-07 | Vistra · Burke (Q1 FY26) | demand | mixed | Load growth 'real, but not at the extremely elevated levels on the fast timeline forecast by many third parties'; DC tightening only begins in 'late 2027 or early 2028.' ERCOT 5-6% and PJM 2-3% through 2030, but ERCOT forwards softened on mild weather and don't even reflect management's own 5-6% view. |
+| 05-27 | Wells Fargo · Aman Chakri (BTM expert) | competition | bear | BTM expert (ex-GE Vernova): behind-the-meter is a permanent solution, not a bridge — read-through to the grid-vs-BTM debate that frames the 'IPPs ceding DC share' bear. |
+| 06-05 | Wells Fargo · midstream Friday wrap | competition | bear | Midstream DC expert: BTM at ~40% of power deals, with post-grid-connection BTM assets running only ~15-30% of capacity for peak-shaving. |
 | 06-12 | MS · David Arcaro (briefing) | capital | bull | MS constructive, highlighting the Helix Digital Infrastructure initiative ($10B, with KKR/NVDA/KIA) as a new theme, worth ~$23/share starting from an initial $1B. |
-| 06-16 | JPM · AI Capex 2.0 | demanda | bull | JPM corroborates VST's marquee nuclear PPA — Vistra/Meta at Beaver Valley/Davis-Besse/Perry, 2.6 GW, 20 years (announced 1/9/26). Models 138 GW of US DC growth through 2030 with power the binding constraint; interconnection queues grow in ERCOT and Texas is a key BTM market given the lack of FERC oversight (a double-edged read). |
+| 06-16 | JPM · AI Capex 2.0 | demand | bull | JPM corroborates VST's marquee nuclear PPA — Vistra/Meta at Beaver Valley/Davis-Besse/Perry, 2.6 GW, 20 years (announced 1/9/26). Models 138 GW of US DC growth through 2030 with power the binding constraint; interconnection queues grow in ERCOT and Texas is a key BTM market given the lack of FERC oversight (a double-edged read). |
 
-**Síntese do quarter:** o debate migrou para a tensão entre a cautela da própria gestão no timing do load growth (tightening só em "late 2027/early 2028", forwards ERCOT moles) e a corroboração macro do JPM (138 GW, power o gargalo) — com o BTM (~40% dos deals, permanente) como o bear central de "IPPs cedendo share", e a Helix ($10B com KKR/NVDA/KIA) emergindo como opcionalidade nova de capital.
+**Quarter synthesis:** the debate has shifted to the tension between management's own caution on load-growth timing (tightening only in "late 2027/early 2028", soft ERCOT forwards) and JPM's macro corroboration (138 GW, power the bottleneck) — with BTM (~40% of deals, permanent) as the central "IPPs ceding share" bear, and Helix ($10B with KKR/NVDA/KIA) emerging as new capital optionality.
 
 ## Management commentary — evolution (last 5 quarters)
 

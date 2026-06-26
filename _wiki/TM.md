@@ -4,6 +4,24 @@
 
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\TM` (20-F + transcripts/QA + decks). No briefings roll-up nor equity calls (thin coverage). Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · JPY
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | ¥52390.5bn | ¥54510.7bn |
+| Gross profit | — | — |
+| Gross margin | — | — |
+| EBITDA | ¥5954.7bn | ¥6685.3bn |
+| EPS | — | — |
+| Capex | — | — |
+| OCF (≈EBITDA) | ¥5954.7bn | ¥6685.3bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="88" viewBox="0 0 150 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="16.1" width="20" height="41.9" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="16.1" width="20" height="41.9" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+4.9% 3m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 > **Fidelity caveat.** TM is a foreign private issuer (FPI). There is no English-language earnings call in the US format. The "transcripts" on disk are **English-language Q&A summaries extracted from SEC 6-K exhibits** (FY decks presented to the Tokyo Stock Exchange, EX-99.2) — they are **not verbatim transcripts** of Q&A with the sell-side. The entire "debate" reading below is inferred from the company's own material + 20-F; **English-language coverage is thin** (0 equity calls, 0 sell-side briefings on disk). Fiscal year ends 31-Mar; "FY2026" = fiscal year ended 31-Mar-2026.
 
 ## Snapshot
@@ -56,28 +74,28 @@ _(Inferred from the 6-K Q&A summaries + 20-F; English-language sell-side coverag
 - Structurally higher break-even volume — less cushion in a volume downturn (TM FY26Q2 deck, slide 19).
 - Idiosyncratic item: certification/recall (one-time Hino costs in FY25), reliance on suppliers and raw-material prices (20-F).
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_FY26 full year · May 8 → Jun 10, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_FY26 full year · May 8 → Jun 10, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (FY26 FY) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (FY26 FY) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Guidance / margem** | FY27 OI ¥3.0tn (margem 5.9%), 3º ano de erosão; novo impacto Oriente Médio -¥400bn | Deck 6-K (FY26Q4): mesma mensagem — declínio reflete Oriente Médio, labor/dep/R&D, deconsolidação da Hino | **✓ confirma** (guidance conservador) |
-| **Eletrificação / BEV** | HEV pilar (4,620k, +4.4%); BEV guiado a 598k (+146%) em FY27, mas histórico de cortes | Deck: BEV +146% é "off a low base", FY26 já cortado de 308k→277k | **⚠ nuança** (BEV abaixo do plano) |
-| **Capital** | Dividendo ¥95→¥100; buyback recorde ¥3.657tn; meta 20% ROE via value chain | Deck: retorno total FY26 ¥4.895tn, value chain +¥2.1tn de OI até 2030 | **✓ confirma** (retorno agressivo) |
-| **Competição / China** | China equity-method ¥108.2bn flat; CASE intensificando | 20-F: setor "highly volatile", competir em BEV "fundamental" sem garantias; BYD et al. | **⚠ nuança** (China upside limitado) |
+| **Guidance / margin** | FY27 OI ¥3.0tn (margin 5.9%), 3rd year of erosion; new Middle East impact -¥400bn | 6-K deck (FY26Q4): same message — the decline reflects the Middle East, labor/dep/R&D, Hino deconsolidation | **✓ confirms** (conservative guidance) |
+| **Electrification / BEV** | HEV the pillar (4,620k, +4.4%); BEV guided to 598k (+146%) in FY27, but a track record of cuts | Deck: BEV +146% is "off a low base", FY26 already cut from 308k→277k | **⚠ nuance** (BEV below plan) |
+| **Capital** | Dividend ¥95→¥100; record buyback ¥3.657tn; 20% ROE target via value chain | Deck: total FY26 return ¥4.895tn, value chain +¥2.1tn of OI by 2030 | **✓ confirms** (aggressive return) |
+| **Competition / China** | China equity-method ¥108.2bn flat; CASE intensifying | 20-F: sector "highly volatile", competing in BEV "fundamental" with no guarantees; BYD et al. | **⚠ nuance** (China upside limited) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
 | 05-08 | Toyota · FY26Q4 deck (6-K) | guidance | bear | FY27 guidance: revenue JPY51.0tn (+0.6%), OI JPY3.0tn (-JPY766bn, margin 5.9%), NI JPY3.0tn, volume 9,600k (+0.1%). The decline reflects a new Middle East impact (-JPY400bn), labor/depreciation/R&D, and the Hino deconsolidation (-JPY40bn OI). FX assumption JPY150/US$, JPY180/EUR. |
-| 05-08 | Toyota · FY26Q4 deck (6-K) | produto | mixed | HEV remains the profit pillar: FY26 electrified retail of 5,040k units (48.1% of the Toyota+Lexus mix), of which HEV 4,620k (+4.4%), BEV 243k (+68%). BEV guided to 598k retail (+146%) in FY27 — an acceleration, but off a low base and with a track record of cuts (FY26 cut from 308k to 277k). |
+| 05-08 | Toyota · FY26Q4 deck (6-K) | product | mixed | HEV remains the profit pillar: FY26 electrified retail of 5,040k units (48.1% of the Toyota+Lexus mix), of which HEV 4,620k (+4.4%), BEV 243k (+68%). BEV guided to 598k retail (+146%) in FY27 — an acceleration, but off a low base and with a track record of cuts (FY26 cut from 308k to 277k). |
 | 05-08 | Toyota · FY26Q4 deck (6-K) | capital | bull | Shareholder returns: FY26 dividend JPY95 (+5), FY27 forecast JPY100 (+5); record buyback of JPY3.657tn in FY26 (largely tied to the Toyota Industries take-private via tender offer); total FY26 return JPY4.895tn. Stated 20% ROE target via the value chain (+JPY2.1tn of OI by 2030). |
-| 06-10 | Toyota · 20-F FY26 | competicao | bear | The FY26 20-F frames the industry as "highly volatile" with competition intensifying via CASE; warns that competing in "electrified vehicles...will be fundamental" with no guarantees — risk of falling behind in markets with rapid BEV adoption. China equity-method profit ~flat (JPY108.2bn FY26) under intense local competition (BYD et al.). |
+| 06-10 | Toyota · 20-F FY26 | competition | bear | The FY26 20-F frames the industry as "highly volatile" with competition intensifying via CASE; warns that competing in "electrified vehicles...will be fundamental" with no guarantees — risk of falling behind in markets with rapid BEV adoption. China equity-method profit ~flat (JPY108.2bn FY26) under intense local competition (BYD et al.). |
 
-**Síntese do quarter:** sem fluxo sell-side em inglês (cobertura fina, 0 equity calls), o "debate" é essencialmente a própria leitura da empresa via 6-K/20-F — a tese migrou para a estrutura permanente do tarifaço US (N. América em prejuízo operacional, break-even subindo) e a compressão de margem em 3 anos consecutivos, com o BEV abaixo do plano e a China flat reforçando o caso de upside limitado apesar do retorno de capital recorde.
+**Quarter synthesis:** with no English-language sell-side flow (thin coverage, 0 equity calls), the "debate" is essentially the company's own read via the 6-K/20-F — the thesis has shifted to the permanent structure of the US tariff (N. America at an operating loss, break-even rising) and the margin compression over 3 consecutive years, with BEV below plan and China flat reinforcing the limited-upside case despite the record capital return.
 
 ## Management commentary — evolution (last 5 quarters)
 

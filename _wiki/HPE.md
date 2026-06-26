@@ -4,6 +4,24 @@
 
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\HPE` (filings + transcripts) · `_equity_calls` · `_briefings\by-ticker\HPE.md`. Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $45.9bn | $50.0bn |
+| Gross profit | $16.4bn | $17.7bn |
+| Gross margin | 35.6% | 35.5% |
+| EBITDA | $9.0bn | $10.4bn |
+| EPS | $3.42 | $4.08 |
+| Capex | $2.7bn | $2.9bn |
+| OCF (≈EBITDA) | $9.0bn | $10.4bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="27.6" width="20" height="30.4" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="26.8" width="20" height="31.2" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="26.8" width="20" height="31.2" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+41.2% 3m · +44.9% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="28.1" width="20" height="29.9" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="28.3" width="20" height="29.7" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="28.5" width="20" height="29.5" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+48.3% 3m · +47.4% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 HPE is an enterprise-infrastructure OEM selling compute (general-purpose ProLiant servers + AI systems, incl. Cray supercomputers), storage (Alletra MP), networking (Aruba campus/edge + Juniper data-center/routing/security), and an as-a-service consumption layer (GreenLake). After the **$13.4B Juniper Networks acquisition closed 2025-07-02** (10-Q, 2026-06-02), HPE reorganized effective 2025-11-01 into **two reportable segments — Cloud & AI and Networking** (plus Corporate Investments & Other), merging the old Server / Hybrid Cloud / Financial Services into Cloud & AI and folding Telco/Instant On out of Networking (10-Q, 2026-06-02). FY25 revenue $34.3B, +14% (Q4 FY25 call, 2025-12-04). Q2 FY26 mix: Cloud & AI $7.7B (72% — Server $5.45B, Storage $1.18B, Financial Services $0.90B), Networking $2.69B (25%), Corporate & Other $0.28B (10-Q, 2026-06-02). HPE sits in the **AI/enterprise infrastructure** chain — it converts NVIDIA GPUs + memory into AI systems and racks, and is now a top-2 enterprise networking franchise post-Juniper. The investor debate is whether the FY26 ASP-driven beat (memory pass-through) and the sovereign/enterprise AI backlog are durable, and how fast Juniper synergies compound.
 
@@ -88,32 +106,32 @@ Blowout print; stock +25–37% on the day (briefing, 2026-06-02). Revenue **$10.
 - **Post-Q2 sell-side split** _(briefings, Jun-2026)_: **GS PT $79 / JPM $68** (structural inflection, Juniper synergies) vs **MS/Bernstein/SIG/UBS EW-Neutral** (commodity-ASP pass-through, re-rate largely spent).
 - **Pre-print skeptic baseline** _(research reports)_: JPM (Chatterjee, 2025-12-15) **OW $30 Dec-26 but pulled from Analyst Focus List** on memory/execution overhang, FY26E EPS $2.35 / FY27E $2.85; Bernstein (Newman, 2025-09-15) **MP $24**, EV/FCF basis, "still struggle to underwrite the deal logic." PTs roughly tripled into the Q2 print.
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q2 FY26 · May 29 → Jun 9, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q2 FY26 · May 29 → Jun 9, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q2 FY26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q2 FY26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Demanda / sem cliff** | Bookings AI $1.8B no tri, cumulativo $16.4B, backlog $5.9B; Neri: "não vimos pull-in, não vemos cliff" | UBS (pré-print): HPE não mostrava a força da Dell, "não convencida" que seguiria · Barclays (pós): DELL+HPE "histórias compelling", viés de alta nas estimativas | **✓ confirma** (apesar do ceticismo prévio) |
-| **Margem / qualidade do server** | Server $5.45B (+32.7%), ASP-driven por memória/SSD; GM 36.9% (+810bps) | MS: captura de preço > Dell mas beat é "majoritariamente ASP pass-through, não demanda de unidades"; durabilidade é o debate-chave | **⚠ nuança** (ASP, não unidades) |
-| **Networking / Juniper** | $2.69B (+148% reportado / ~10% normalizado), op margin 21.6%; commits +>40% QoQ | Barclays: HPE melhor posicionada em enterprise networking · GS: upgrade Buy $79 em "server pricing + sinergia Juniper" | **✓ confirma** (Juniper entrega) |
-| **Guidance / LT targets** | FY26 EPS $3.35-3.45; metas de FY28 puxadas p/ FY26 | GS/JPM bull (PT $79/$68) · mas Bernstein/SIG/UBS ficam Neutral, "ainda preferem DELL"; valuation segura os céticos | **⚠ nuança** (re-rate em disputa) |
+| **Demand / no cliff** | AI bookings $1.8B in the quarter, cumulative $16.4B, backlog $5.9B; Neri: "we haven't seen any pull-in, we don't see a cliff" | UBS (pre-print): HPE wasn't showing Dell's strength, "not convinced" it would follow · Barclays (post): DELL+HPE "compelling stories", upward bias to estimates | **✓ confirms** (despite prior skepticism) |
+| **Margin / server quality** | Server $5.45B (+32.7%), ASP-driven by memory/SSD; GM 36.9% (+810bps) | MS: price capture > Dell but the beat is "mostly ASP pass-through, not unit demand"; durability is the key debate | **⚠ nuance** (ASP, not units) |
+| **Networking / Juniper** | $2.69B (+148% reported / ~10% normalized), op margin 21.6%; commits +>40% QoQ | Barclays: HPE better positioned in enterprise networking · GS: upgrade Buy $79 on "server pricing + Juniper synergy" | **✓ confirms** (Juniper delivers) |
+| **Guidance / LT targets** | FY26 EPS $3.35-3.45; FY28 targets pulled forward to FY26 | GS/JPM bull (PT $79/$68) · but Bernstein/SIG/UBS stay Neutral, "still prefer DELL"; valuation holds the skeptics back | **⚠ nuance** (re-rate in dispute) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 05-29 | UBS · Dave Vogt | demanda | bear | UBS (read-across from the Dell print, pre-HPE print): Dell's blowout may NOT be a clean read for HPE. From the mid-April meetings, HPE did not show the same level of demand strength in AI server and traditional server as Dell; it signaled agentic demand for core server only tentatively. HPE was also working on its cost structure given higher input costs. UBS "not entirely convinced" that HPE would follow Dell. |
+| 05-29 | UBS · Dave Vogt | demand | bear | UBS (read-across from the Dell print, pre-HPE print): Dell's blowout may NOT be a clean read for HPE. From the mid-April meetings, HPE did not show the same level of demand strength in AI server and traditional server as Dell; it signaled agentic demand for core server only tentatively. HPE was also working on its cost structure given higher input costs. UBS "not entirely convinced" that HPE would follow Dell. |
 | 06-02 | Goldman Sachs · K. Murphy | valuation | bull | GS (K. Murphy): PT upgrade to $79 Buy (from $32), FY27/28/29E EPS +41% on average, on "server pricing inflection + Juniper synergy". |
 | 06-02 | JPM · Chatterjee | valuation | bull | JPM (Chatterjee): Overweight, PT $68 — "hits $3 FY28 target in FY26… multi-segment demand inflection". |
-| 06-02 | Morgan Stanley · Woodring | margem | mixed | MS (Woodring): kept Equal-Weight even after raising PT to $71 — "server pricing capture > DELL; durability key debate". The beat is mostly memory/SSD ASP pass-through, not unit demand. |
+| 06-02 | Morgan Stanley · Woodring | margin | mixed | MS (Woodring): kept Equal-Weight even after raising PT to $71 — "server pricing capture > DELL; durability key debate". The beat is mostly memory/SSD ASP pass-through, not unit demand. |
 | 06-02 | Bernstein · Newman | valuation | bear | Bernstein (Newman): Market Perform $62 (from $35), "still favors DELL over HPE". |
 | 06-02 | SIG · Hosseini | valuation | bear | SIG (Hosseini): only Neutral despite raising PT to $65 (from $21). |
 | 06-02 | UBS · Vogt | valuation | bear | UBS (Vogt): stayed Neutral post-print. |
-| 06-09 | Barclays · Tim Long | demanda | bull | Barclays (Tim Long): DELL+HPE "compelling AI and Enterprise stories… navigated commodity costs well… still see upward bias to estimates even after large moves", with HPE better positioned in enterprise networking. |
+| 06-09 | Barclays · Tim Long | demand | bull | Barclays (Tim Long): DELL+HPE "compelling AI and Enterprise stories… navigated commodity costs well… still see upward bias to estimates even after large moves", with HPE better positioned in enterprise networking. |
 
-**Síntese do quarter:** o blowout (+25-37% no dia) silenciou o ceticismo de demanda da UBS pré-print, e o debate migrou para *qualidade e durabilidade* — MS insiste que o beat é ASP pass-through de memória, não unidades, e metade do sell-side (Bernstein/SIG/UBS) fica Neutral preferindo DELL, enquanto GS/JPM/Barclays compram a inflexão de pricing + sinergia Juniper.
+**Quarter synthesis:** the blowout (+25-37% on the day) silenced UBS's pre-print demand skepticism, and the debate shifted to *quality and durability* — MS insists the beat is memory ASP pass-through, not units, and half the sell-side (Bernstein/SIG/UBS) stays Neutral preferring DELL, while GS/JPM/Barclays buy the pricing inflection + Juniper synergy.
 
 ## Management commentary — evolution (last 4 quarters)
 

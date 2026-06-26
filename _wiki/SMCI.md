@@ -4,6 +4,24 @@
 
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\SMCI` (filings + transcripts) · `_equity_calls` · `E:\briefings\2026`. Master index: [00_INDEX.md](00_INDEX.md) · themes: [ai-datacenter-power](themes/ai-datacenter-power.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $48.3bn | $57.3bn |
+| Gross profit | $3.8bn | $4.8bn |
+| Gross margin | 7.8% | 8.4% |
+| EBITDA | $2.6bn | $3.6bn |
+| EPS | $2.76 | $3.61 |
+| Capex | $274m | $307m |
+| OCF (≈EBITDA) | $2.6bn | $3.6bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="23.0" width="20" height="35.0" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="19.4" width="20" height="38.6" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.2" width="20" height="43.8" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+13.4% 3m · +25.1% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="17.0" width="20" height="41.0" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="17.0" width="20" height="41.0" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.5" width="20" height="43.5" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+6.0% 3m · +6.0% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Supermicro designs and builds **application-optimized server and storage systems** — increasingly full **AI server systems and rack-scale "AI factories"** — assembling NVIDIA/AMD GPUs, CPUs, memory and its own motherboards/chassis into integrated, liquid- or air-cooled racks (10-K FY25, 2025-08-28). It is the highest-velocity **NVIDIA rack ODM/system integrator** and a leader in **direct liquid cooling (DLC)**, with capacity for **>6,000 high-end racks/month** (Q3 FY26, 2026-05-05). The structural problem with the equity is not demand — AI GPU platforms are **>80% of revenue** — it is that this is a **low-margin box-assembly business** (FY25 non-GAAP GM **11.2%**, down from 13.9% in FY24; Q2 FY26 GM trough of **6.4%**) sitting under a still-live **accounting/governance overhang**: a delayed FY24 10-K, **unremediated material weaknesses**, an auditor that resigned (EY, Oct-2024), and open **DOJ/SEC document subpoenas** stemming from the Aug-2024 short-seller report (10-K FY25; 10-Q Q3 FY26, 2026-05-11). Own the DLC/TTO franchise, but lead with the margin compression and the governance discount.
 
@@ -86,34 +104,34 @@ Supermicro is the **integration layer** of the AI-datacenter compute stack: it b
 - **JPM networking conf recap (JPM "Networking recap", 2026-05-26):** at JPM's conference Supermicro **"sounded good about demand visibility," highlighting a very big TAM it is going after, with the DCBBS mix improving and giving more margin visibility** — consistent with the bull's DCBBS-as-margin-lever thesis but offered only as qualitative conference color, not a rating (compute names were tangential to an optical-heavy recap). Backdrop: JPM raised its cloud-capex model to **~+80% y/y (2026) / +50% (2027)** after a record **8 GW** of North American DC power capacity was added in 1Q26 (JPM "Networking recap", 2026-05-26).
 - _Outlook unavailable this session (see Sources)._ Sell-side reads are sourced from the briefings corpus + research reports: Bernstein init Market-Perform $46 (2025-09-15); JPM Neutral $19 (2025-12-15); BofA (Ruplu) PO ↓; MS (Chatterjee) Held "GM recovery overshadowed by corp gov"; JPM/Citi (Tim Long) Held; Jefferies (Pu) Hold $43; Cramer favors DELL over SMCI (briefings 2026-05-06/07/08/12).
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q3 FY26 · May 05 → May 26, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q3 FY26 · May 05 → May 26, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q3 FY26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q3 FY26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Demanda** | AI >80% rev; receita $10,2B (+123% y/y, -19% q/q) por site delays | JPM (Networking conf): "sounded good about demand visibility", TAM grande; cloud-capex +80% y/y '26 | **✓ confirma** (visibilidade ok, push-out de timing) |
-| **Margem** | GM snaps p/ 10,1% (do trough 6,4%); Q4 guidada DOWN p/ 8,2-8,4% | @ParadisLabs: snap-back de GM prova que mix/expedite eram transitórios — vs BofA (Ruplu): "margins sequentially light" | **⚠ nuança** (recuperação real, mas Q4 recua) |
-| **Competição / share** | Cliente top 27% (de ~63% no Q2) | Cramer: "thorn in NVDA's side… get away", prefere DELL — valor sobe p/ NVIDIA | **⚠ nuança** (commoditização do server) |
-| **Capital / balanço** | — | 10-Q: caixa $1,29B (de $5,17B), net debt ~$7,5B, OCF ≈ -$6,6B, CCC 106 dias (de 54) | **✗ contesta** (balanço é o furo) |
-| **Software / DCBBS** | Software rev >$46M; alvo ≥20% do NI | JPM: mix DCBBS melhorando, dando mais visibilidade de margem | **✓ confirma** (lever de margem em curso) |
+| **Demand** | AI >80% rev; revenue $10.2B (+123% y/y, -19% q/q) on site delays | JPM (Networking conf): "sounded good about demand visibility", big TAM; cloud-capex +80% y/y '26 | **✓ confirms** (visibility ok, timing push-out) |
+| **Margin** | GM snaps to 10.1% (from the 6.4% trough); Q4 guided DOWN to 8.2-8.4% | @ParadisLabs: GM snap-back proves mix/expedite were transitory — vs BofA (Ruplu): "margins sequentially light" | **⚠ nuance** (real recovery, but Q4 steps back) |
+| **Competition / share** | Top customer 27% (from ~63% in Q2) | Cramer: "thorn in NVDA's side… get away", prefers DELL — value accrues to NVIDIA | **⚠ nuance** (server commoditization) |
+| **Capital / balance sheet** | — | 10-Q: cash $1.29B (from $5.17B), net debt ~$7.5B, OCF ≈ -$6.6B, CCC 106 days (from 54) | **✗ contests** (the balance sheet is the hole) |
+| **Software / DCBBS** | Software rev >$46M; target ≥20% of NI | JPM: DCBBS mix improving, giving more margin visibility | **✓ confirms** (margin lever in progress) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
 | 05-05 | SMCI (earnings) · management | guidance | bear | Q4 FY26 guidance: revenue US$11.0-12.5B, EPS US$0.65-0.79, GM guided back DOWN to 8.2-8.4% (mix / GB300 mega-rack ramp); FY26 cut to US$38.9-40.4B (below the prior 'at least US$40B'). |
 | 05-06 | FinTwit · @ParadisLabs (via briefing) | valuation | bull | The contrarian long into the print worked: stock +11% AH despite the revenue miss, with the GM snap-back to 10.1% (from 6.4%) being the bull's proof that mix/expedite costs were transitory (briefing 2026-05-06). |
 | 05-06 | BofA · Ruplu | valuation | bear | BofA (Ruplu) cut the PO on 'revenue pushout, margins sequentially light' (briefing 2026-05-06). |
 | 05-06 | Morgan Stanley · Chatterjee | valuation | mixed | Morgan Stanley (Chatterjee) maintained, with the framing 'GM Recovery Overshadowed by Corp Gov' — the margin recovery overshadowed by the governance overhang (briefing 2026-05-06). |
 | 05-07 | Jefferies · Jeff Pu | valuation | mixed | Jefferies (Jeff Pu) Hold, PT US$43 (briefing 2026-05-07). |
-| 05-08 | CNBC · Jim Cramer (via briefing) | competicao | bear | Cramer: 'Super Micro thorn in NVDA's side… get away from this morass', favoring DELL — the bear case in one line; value accrues upstream to NVIDIA (briefing 2026-05-08). |
+| 05-08 | CNBC · Jim Cramer (via briefing) | competition | bear | Cramer: 'Super Micro thorn in NVDA's side… get away from this morass', favoring DELL — the bear case in one line; value accrues upstream to NVIDIA (briefing 2026-05-08). |
 | 05-11 | SMCI · 10-Q Q3 FY26 | capital | bear | Balance sheet deteriorated: cash US$1.29B (from US$5.17B in Jun-2025); net debt ~US$7.5B (from US$787M q/q); operating cash flow ≈ -US$6.6B (≈US$10B of A/P payments); inventory US$11.1B; cash conversion cycle 106 days (from 54) (10-Q). |
-| 05-12 | SMCI · 10-Q (via briefing) | competicao | mixed | Customer concentration: one large data-center operator 27% (≈US$2.8B, from 62.6%/~US$7.9B in Q2) + one enterprise at 10%. Vik Malyala named CBO (briefing 2026-05-12). |
-| 05-26 | JPM · Networking conf recap | demanda | bull | At the JPM conference, Supermicro 'sounded good about demand visibility', highlighting a very large TAM, with DCBBS mix improving and giving more margin visibility. Backdrop: JPM raised its cloud-capex model to ~+80% y/y (2026)/+50% (2027) after a record 8 GW of DC power capacity added in 1Q26 (JPM 'Networking recap', 2026-05-26). |
+| 05-12 | SMCI · 10-Q (via briefing) | competition | mixed | Customer concentration: one large data-center operator 27% (≈US$2.8B, from 62.6%/~US$7.9B in Q2) + one enterprise at 10%. Vik Malyala named CBO (briefing 2026-05-12). |
+| 05-26 | JPM · Networking conf recap | demand | bull | At the JPM conference, Supermicro 'sounded good about demand visibility', highlighting a very large TAM, with DCBBS mix improving and giving more margin visibility. Backdrop: JPM raised its cloud-capex model to ~+80% y/y (2026)/+50% (2027) after a record 8 GW of DC power capacity added in 1Q26 (JPM 'Networking recap', 2026-05-26). |
 
-**Síntese do quarter:** demanda deixou de ser o debate (JPM corrobora visibilidade); a briga migrou para a qualidade da recuperação de margem — Q4 guidada de volta p/ baixo — e, sobretudo, para a deterioração do balanço (caixa despencou, net debt $7,5B, CCC dobrou), com o bear case de Cramer de que o valor acrua upstream à NVIDIA enquanto o server vira commodity.
+**Quarter synthesis:** demand has stopped being the debate (JPM corroborates the visibility); the fight has shifted to the quality of the margin recovery — Q4 guided back down — and, above all, to the balance-sheet deterioration (cash collapsed, net debt $7.5B, CCC doubled), with Cramer's bear case that value accrues upstream to NVIDIA while the server turns into a commodity.
 
 ## Management commentary — evolution (last 4 quarters)
 

@@ -4,6 +4,24 @@
 
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\RDDT` (10-K FY25 + 10-Q Q1-26 + transcripts) · `E:\briefings\2026` roll-up. Master index: [00_INDEX.md](00_INDEX.md). IPO Mar-2024 — short filing history (3 10-Ks back not available; coverage from FY24 onward)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $3.2bn | $4.2bn |
+| Gross profit | $2.9bn | $3.9bn |
+| Gross margin | 91.3% | 91.6% |
+| EBITDA | $1.4bn | $1.9bn |
+| EPS | $5.83 | $7.57 |
+| Capex | $11m | $16m |
+| OCF (≈EBITDA) | $1.4bn | $1.9bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="20.0" width="20" height="38.0" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="18.1" width="20" height="39.9" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="19.1" width="20" height="38.9" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">-11.7% 3m · +2.3% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="18.6" width="20" height="39.4" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="17.5" width="20" height="40.5" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="17.1" width="20" height="40.9" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">-7.0% 3m · +3.9% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Reddit is a community-driven social platform (~100K+ active subreddits) that monetizes the largest open corpus of human conversation on the internet through two engines: (1) **advertising** (~94% of revenue) and (2) **AI/content data-licensing** ("Other revenue," ~6%) to AI labs training LLMs. FY25 revenue $2,202.5M, +69% YoY; advertising $2,062.5M, licensing/other $140.0M; net income $530M vs a $484M net loss in FY24 — the inflection-to-profitability year (10-K, 2026-02-06). Q4-25 DAUq 121.4M global (+19% YoY), 68.9M international (+28%) (10-K). The platform increasingly runs its own on-site search (Reddit Answers) on top of its corpus, layering a third potential monetization vector. Structural tension: Reddit depends on Google organic referral traffic for user acquisition even as Google's AI Overviews / AI Mode answer queries in-place — the central bear overhang.
 
@@ -94,37 +112,37 @@ Q1 FY26 (call 2026-04-30): revenue $663.4M, +69% YoY — 7th straight quarter >6
 - **BofA online-advertising sector call (Ben Legg)** _(2026-06-10)_: 'Reddit automated ad tools' a key topic, alongside Google AI-search read-through.
 - **Stratechery (Eric Seufert)** _(2026-05-28)_ + Jefferies ad-expert checks: ad-monetization ramp vs Google AI-Overviews referral-traffic risk — the central debate.
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 FY26 · Apr 30 → Jun 17, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 FY26 · Apr 30 → Jun 17, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1'26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1'26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Usuários / DAUq** | DAUq 126.8M, mas cresc. desacelerou p/ ~17% (de 51% a/a); North Star 100M US / 1B global | JPM: US DAU "on the razor's edge" é o debate todo · Jefferies: dobrar US DAU p/ 100M+ convertendo 200M weekly em daily | **⚠ nuança** (decel é o furo) |
-| **Receita / ads** | Rev $663M +69% (7º tri >60%); ads $624.7M +74% | UBS/Legg modela ads Q2 73%/Q3 55%/Q4 51% (revisado p/ cima) · BofA survey "strong 2Q trends" · Bernstein: ad-load headroom, advertisers +75% | **✓ confirma** (ramp re-acelera) |
-| **Google / search traffic** | (sem comentário no call de Q1; risco reconhecido em Q2-25) | JPM #1 inbound: AI Mode/Google I/O encolhe tráfego orgânico (-5% em 05-21) · BofA/Wigg: AI Search Mode empacota conteúdo (-3% em 05-06) | **✗ contesta** (overhang vivo) |
-| **Data-licensing** | Other rev $39M +15%; dado "like oil"; shift p/ "product partnership" | JPM: renovações Google+OpenAI são evento mid-to-back-half · BofA/Wigg: top-1/2 fonte citada em IA, settlement Anthropic = upside | **⚠ nuança** (lumpy, ainda pequeno) |
-| **Valuation** | — | BofA/Fenske: ~50% cresc. a ~15x, CPMs ~metade do Pinterest, down 40-50% · Redburn: mínimas relativas 3m · Tiger $394M (13F) | **✓ confirma** (entrada barata p/ bulls) |
+| **Users / DAUq** | DAUq 126.8M, but growth decelerated to ~17% (from 51% YoY); North Star 100M US / 1B global | JPM: US DAU "on the razor's edge" is the whole debate · Jefferies: double US DAU to 100M+ by converting 200M weekly to daily | **⚠ nuance** (decel is the gap) |
+| **Revenue / ads** | Rev $663M +69% (7th qtr >60%); ads $624.7M +74% | UBS/Legg models ads Q2 73%/Q3 55%/Q4 51% (revised up) · BofA survey "strong 2Q trends" · Bernstein: ad-load headroom, advertisers +75% | **✓ confirms** (ramp re-accelerates) |
+| **Google / search traffic** | (no comment on the Q1 call; risk acknowledged in Q2-25) | JPM #1 inbound: AI Mode/Google I/O shrinks organic traffic (-5% on 05-21) · BofA/Wigg: AI Search Mode packages content (-3% on 05-06) | **✗ contests** (overhang live) |
+| **Data-licensing** | Other rev $39M +15%; data "like oil"; shift to "product partnership" | JPM: Google+OpenAI renewals are a mid-to-back-half event · BofA/Wigg: top-1/2 cited source in AI, Anthropic settlement = upside | **⚠ nuance** (lumpy, still small) |
+| **Valuation** | — | BofA/Fenske: ~50% growth at ~15x, CPMs ~half of Pinterest, down 40-50% · Redburn: 3m relative lows · Tiger $394M (13F) | **✓ confirms** (cheap entry for bulls) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
 | 04-15 | JPM · Anmuth | guidance | mixed | JPM (Internet 1Q preview): RDDT "pretty split" — revenue beats are not the debate (everyone expects ~$650M+ in Q1); what matters is US DAU, which is "on the razor's edge". Renewals of the data deals with Google + OpenAI are a mid-to-back-half event to watch. |
 | 04-16 | BofA · Fenske (spec-sales) | valuation | bull | BofA spec-sales pitched RDDT as one of the few non-AI-adjacent growth stocks left — ~50% growth at ~15x, down 40-50%, CPMs ~half of Pinterest's on a less mature platform, with data-deal renewals as binary upside. |
-| 05-06 | BofA · Wigg | demanda | mixed | BofA (Wigg): RDDT remains a top-1-or-2 cited source in AI (with Wikipedia), so OpenAI/Google renewals + a potential legal settlement with Anthropic could add high-margin dollars. The same day, RDDT -3% as Google AI Search Mode packaged Reddit content inside AI overviews. |
+| 05-06 | BofA · Wigg | demand | mixed | BofA (Wigg): RDDT remains a top-1-or-2 cited source in AI (with Wikipedia), so OpenAI/Google renewals + a potential legal settlement with Anthropic could add high-margin dollars. The same day, RDDT -3% as Google AI Search Mode packaged Reddit content inside AI overviews. |
 | 05-16 | Tiger Global (13F) | valuation | neutral | Tiger Global held $394M of RDDT (13F). |
-| 05-21 | JPM (desk) | demanda | bear | RDDT -5% / JPM's #1 inbound on a delayed reaction to Google I/O agentic-search risk ("organic search referral traffic to RDDT shrinks as AI Mode answers in-place"). |
+| 05-21 | JPM (desk) | demand | bear | RDDT -5% / JPM's #1 inbound on a delayed reaction to Google I/O agentic-search risk ("organic search referral traffic to RDDT shrinks as AI Mode answers in-place"). |
 | 05-26 | Redburn Atlantic | valuation | neutral | Redburn flagged relative 3-month lows (technical). |
-| 05-27 | BofA (advertiser survey) | demanda | bull | BofA advertiser survey signaled "Reddit strong 2Q trends". |
-| 05-28 | Bernstein · Seidman | demanda | bull | Bernstein (Seidman): the ads business is still early — ARPU +44% with ad-load headroom; active advertisers +75% y/y; SHOP integration unlocking SMB budgets. |
-| 06-01 | Jefferies · Brent Thill | demanda | bull | At the Jefferies conference, RDDT laid out a durable growth case: a long runway to add advertisers + lift existing advertisers' budgets (the biggest recent driver), reiterating the goal to double US DAU to 100M+ by converting 200M weekly users to daily. |
+| 05-27 | BofA (advertiser survey) | demand | bull | BofA advertiser survey signaled "Reddit strong 2Q trends". |
+| 05-28 | Bernstein · Seidman | demand | bull | Bernstein (Seidman): the ads business is still early — ARPU +44% with ad-load headroom; active advertisers +75% y/y; SHOP integration unlocking SMB budgets. |
+| 06-01 | Jefferies · Brent Thill | demand | bull | At the Jefferies conference, RDDT laid out a durable growth case: a long runway to add advertisers + lift existing advertisers' budgets (the biggest recent driver), reiterating the goal to double US DAU to 100M+ by converting 200M weekly users to daily. |
 | 06-10 | JPM · Schilsky/Anmuth | valuation | mixed | JPM hosting management access (OW stance); management's North Star: 100M US DAUq / 1B global DAUq. CPG advertisers' input-cost pressure also flagged. |
-| 06-10 | BofA · Ben Legg | demanda | mixed | BofA online-advertising sector call (Outlook): 'Reddit automated ad tools' a key theme, alongside Google AI-search read-through. |
-| 06-17 | UBS · Ben Legg | demanda | bull | UBS (Ben Legg) models RDDT ad growth Q2 73% / Q3 55% / Q4 51% (all nudged up vs April lows), calling Reddit "an amazing game of catch-up" as it cherry-picks the best features from Google/Meta. |
+| 06-10 | BofA · Ben Legg | demand | mixed | BofA online-advertising sector call (Outlook): 'Reddit automated ad tools' a key theme, alongside Google AI-search read-through. |
+| 06-17 | UBS · Ben Legg | demand | bull | UBS (Ben Legg) models RDDT ad growth Q2 73% / Q3 55% / Q4 51% (all nudged up vs April lows), calling Reddit "an amazing game of catch-up" as it cherry-picks the best features from Google/Meta. |
 
-**Síntese do quarter:** o debate migrou de "as receitas batem?" (consenso de que sim — ads re-acelerando nos expert checks da UBS/Bernstein) para o eixo **US DAU × dependência do Google**: o número de usuários ficou "na navalha" enquanto cada movimento de AI Mode/AI Overviews virou gatilho de queda, deixando o sinal de ads positivo refém do overhang de tráfego orgânico.
+**Quarter synthesis:** the debate has shifted from "do revenues beat?" (consensus that they do — ads re-accelerating in UBS/Bernstein expert checks) to the **US DAU × Google dependency** axis: the user count sits "on the razor's edge" while every AI Mode/AI Overviews move becomes a selloff trigger, leaving the positive ad signal hostage to the organic-traffic overhang.
 
 ## Management commentary — evolution (last 4 quarters)
 

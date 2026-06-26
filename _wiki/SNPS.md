@@ -2,6 +2,24 @@
 
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\SNPS` · `_equity_calls` · `_briefings\by-ticker\SNPS.md`. Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $9.8bn | $10.9bn |
+| Gross profit | $8.2bn | $9.1bn |
+| Gross margin | 83.0% | 83.5% |
+| EBITDA | $4.8bn | $5.2bn |
+| EPS | $15.06 | $18.09 |
+| Capex | $330m | $308m |
+| OCF (≈EBITDA) | $4.8bn | $5.2bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="15.2" width="20" height="42.8" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="14.9" width="20" height="43.1" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.9" width="20" height="43.1" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+2.2% 3m · +2.9% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="14.7" width="20" height="43.3" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="14.4" width="20" height="43.6" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.4" width="20" height="43.6" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+1.0% 3m · +1.5% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 The #1 EDA franchise — the chip-design software (synthesis, place-and-route, verification/emulation, signoff) that sits at the front of every advanced-node and chiplet design, in an effective duopoly with Cadence. Two reportable segments (10-K FY25, 2025-12-22): **Design Automation** — EDA + the newly acquired **Ansys** simulation/analysis (S&A) + system products — at $5.30B (75% of FY25 revenue), and **Design IP** (interface/foundation/security/processor IP, IP subsystems) at $1.75B (25%). Total FY25 revenue $7.05B, +15% y/y. The defining event is the **~$34.9B Ansys acquisition, closed July 17, 2025** ($199.91 cash + 0.3399 SNPS shares per ANSS share; $17.6B cash / $17.1B stock), which pushes SNPS up the stack from silicon EDA into multiphysics simulation (structures, fluids/Fluent, electronics/HFSS, optics/photonics) — the "silicon-to-systems" story. SNPS is leveraged to two structural tailwinds: rising design complexity at advanced nodes / multi-die packaging, and AI-driven design (Synopsys.ai, agentic EDA). It carries meaningful China/export-control exposure and is now an Ansys-integration / deleveraging story.
 
@@ -40,31 +58,31 @@ The #1 EDA franchise — the chip-design software (synthesis, place-and-route, v
 - **Litigation** — outstanding securities suits alleging Design IP-segment misstatements (10-K).
 - **Valuation / pricing-power proof** — multiple hinges on AI-EDA pricing leverage and Ansys cross-sell materializing (MS).
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q2 FY26 · May 13 → Jun 3, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q2 FY26 · May 13 → Jun 3, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o posicionamento/guidance da empresa × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — the company's positioning/guidance × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão / guidance (Q2 FY26) | Fluxo intra-quarter | Sinal |
+| Theme | Management / guidance (Q2 FY26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Guidance / FY26** | FY26 raised: receita ~$9,67B, EPS non-GAAP $14,76, op margin +50bp p/ 41,0%; FY26 "transition year" | JPM (Sur): OW, guide ainda conservador, agentic AI levanta EDA estruturalmente — vs MS (Simpson): EW, "2027 set-up yet to emerge" | **⚠ nuança** (transição: bull vs aguardar prova) |
-| **Design IP** | $454,2M, -6% y/y mas +12% q/q (sugere o fundo); IP fraco guidado p/ FY26 | @skundojjala: mgmt assume zero upside de IP de Intel 18A/14A em FY26; Citi: IP +16% y/y em FY27 | **⚠ nuança** (fundo provável, recuperação só FY27) |
-| **AI / EDA moat** | Synopsys.ai / agentic EDA como tailwind estrutural | GS (Schneider): SNPS+CDNS "uniquely insulated" da disrupção AI; custom silicon (Vera/Trainium/TPU) puxa demanda | **✓ confirma** (custom silicon = demand pull) |
-| **Competição em IP** | IP como franquia "silicon-to-systems" | Irrational Analysis: SNPS é o baseline de "stock IP" que designs internos batem (SRAM Marvell, CXL Astera julgados superiores) | **✗ contesta** (merchant default, não líder de perf) |
-| **Synergias Ansys** | $400M 1ª fase de synergies de receita começando FY27 | Citi: synergias SNPS-ANSS uma das 3 pernas do bull; ~50% das cost synergies por end-FY26 | **✓ confirma** (sell-side bull compra a tese) |
+| **Guidance / FY26** | FY26 raised: revenue ~$9.67B, non-GAAP EPS $14.76, op margin +50bp to 41.0%; FY26 a "transition year" | JPM (Sur): OW, guide still conservative, agentic AI structurally lifts EDA — vs MS (Simpson): EW, "2027 set-up yet to emerge" | **⚠ nuance** (transition: bull vs awaiting proof) |
+| **Design IP** | $454.2M, -6% y/y but +12% q/q (suggests the trough); weak IP guided for FY26 | @skundojjala: mgmt assumes zero IP upside from Intel 18A/14A in FY26; Citi: IP +16% y/y in FY27 | **⚠ nuance** (likely trough, recovery only FY27) |
+| **AI / EDA moat** | Synopsys.ai / agentic EDA as a structural tailwind | GS (Schneider): SNPS+CDNS "uniquely insulated" from AI disruption; custom silicon (Vera/Trainium/TPU) pulls demand | **✓ confirms** (custom silicon = demand pull) |
+| **Competition in IP** | IP as a "silicon-to-systems" franchise | Irrational Analysis: SNPS is the "stock IP" baseline that internal designs beat (Marvell SRAM, Astera CXL judged superior) | **✗ contests** (merchant default, not perf leader) |
+| **Ansys synergies** | $400M first phase of revenue synergies starting FY27 | Citi: SNPS-ANSS synergies one of the 3 legs of the bull; ~50% of cost synergies by end-FY26 | **✓ confirms** (sell-side bull buys the thesis) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
 | 05-13 | Citi · Atif Malik (research) | valuation | bull | Citi (Malik): Buy, PT $610, the most bullish on the Street, on three legs - agentic AI structurally lifting the EDA growth rate, SNPS-ANSS revenue synergies ($400M first phase starting FY27), and IP monetization via royalty; sees IP +16% y/y in FY27 and the historical ~25% valuation discount vs CDNS narrowing toward the ~10% average. |
 | 05-20 | MS · Lee Simpson (briefing) | guidance | bear | MS (Simpson): EW - FY26 is a "transition year" with muted Design IP growth (~-12% y/y in earlier reads); "2027 set-up yet to emerge," awaiting evidence of pricing leverage and acceleration in AI revenue ahead of the September Investor Day. |
-| 05-21 | GS · Jim Schneider (briefing) | competicao | bull | GS (Schneider): Buy - SNPS + CDNS "uniquely insulated against AI disruption," with the proliferation of custom silicon (Vera CPU, Trainium, TPU - all of which need EDA) as a demand pull. |
+| 05-21 | GS · Jim Schneider (briefing) | competition | bull | GS (Schneider): Buy - SNPS + CDNS "uniquely insulated against AI disruption," with the proliferation of custom silicon (Vera CPU, Trainium, TPU - all of which need EDA) as a demand pull. |
 | 05-28 | JPM · Harlan Sur / Citi / MS (briefing) | guidance | mixed | Post-print: FY26 guide raised - revenue ~$9.67B (from $9.61B), non-GAAP EPS midpoint $14.76, op margin +50bp to 41.0%; Q3 $2.41-2.46B (in-line). JPM (Sur) OW (guide still conservative, agentic AI structurally lifting EDA). MS raised PT to $525 (from $480) but maintains EW. FY27 EPS consensus ~$18.05. |
-| 05-29 | @skundojjala (FinTwit) | produto | neutral | @skundojjala: mgmt assumes no IP upside from Intel 18A/14A tape-outs in FY26 - a watch item for the sequential recovery in Design IP. |
-| 06-03 | Irrational Analysis (research) | competicao | bear | Irrational Analysis ("What's going on with Marvell?"): frames Synopsys as the baseline of licensable "stock IP" that internal/custom designs beat - Marvell's dense SRAM (500mV) and the CXL interface IP that Astera licenses are judged inferior to in-house IP; SNPS Design IP competes as the default merchant, not the performance leader, in the most demanding sockets. |
+| 05-29 | @skundojjala (FinTwit) | product | neutral | @skundojjala: mgmt assumes no IP upside from Intel 18A/14A tape-outs in FY26 - a watch item for the sequential recovery in Design IP. |
+| 06-03 | Irrational Analysis (research) | competition | bear | Irrational Analysis ("What's going on with Marvell?"): frames Synopsys as the baseline of licensable "stock IP" that internal/custom designs beat - Marvell's dense SRAM (500mV) and the CXL interface IP that Astera licenses are judged inferior to in-house IP; SNPS Design IP competes as the default merchant, not the performance leader, in the most demanding sockets. |
 
-**Síntese do quarter:** com Design IP provavelmente no fundo (+12% q/q) e o moat AI/EDA endossado pela proliferação de custom silicon, o debate migrou para o timing — MS isolado pedindo prova de pricing power e aceleração de receita AI antes do Investor Day de setembro — e para a competitividade do IP no high-end (Irrational Analysis: SNPS como merchant default, não líder de performance).
+**Quarter synthesis:** with Design IP likely at the trough (+12% q/q) and the AI/EDA moat endorsed by the proliferation of custom silicon, the debate has shifted to timing — MS alone asking for proof of pricing power and AI-revenue acceleration ahead of the September Investor Day — and to IP competitiveness at the high end (Irrational Analysis: SNPS as the merchant default, not the performance leader).
 
 ## Sources
 - **Filings:** [10-K FY25 (2025-12-22)](../SNPS/SNPS_10-K_2025-12-22_0000883241-25-000028.html) · [10-Q Q2 FY26 (2026-05-27)](../SNPS/SNPS_10-Q_2026-05-27_0000883241-26-000018.html) · [10-Q Q1 FY26 (2026-02-25)](../SNPS/SNPS_10-Q_2026-02-25_0000883241-26-000014.html)

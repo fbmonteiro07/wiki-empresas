@@ -2,6 +2,24 @@
 
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\CDNS` · `_equity_calls` · `_briefings\by-ticker\CDNS.md`. Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $6.2bn | $7.0bn |
+| Gross profit | $5.4bn | $6.2bn |
+| Gross margin | 88.0% | 88.2% |
+| EBITDA | $2.9bn | $3.4bn |
+| EPS | $7.88 | $9.32 |
+| Capex | $232m | $225m |
+| OCF (≈EBITDA) | $2.9bn | $3.4bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.4" width="20" height="43.6" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.4" width="20" height="43.6" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">-0.9% 3m · -0.8% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="15.1" width="20" height="42.9" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="14.4" width="20" height="43.6" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.1" width="20" height="43.9" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+1.0% 3m · +2.6% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Cadence is one half of the EDA duopoly (with Synopsys) — the chip-design software, IP, and hardware-emulation franchise that sits *upstream of every silicon project*: nothing gets taped out without Cadence or SNPS tools. Revenue splits into three categories (FY25 10-K, 2026-02-19): **Core EDA 70%** (Virtuoso custom/analog, Innovus digital implementation, Xcelium/Jasper verification, plus the Palladium emulation / Protium FPGA-prototyping hardware), **Semiconductor IP 14%** (interface/PHY, memory, chiplet subsystems sold into automotive, hyperscale, mobile), and **System Design & Analysis 16%** (PCB/Allegro, multiphysics, the Ansys-adjacent stack post the company's "Intelligent System Design" expansion). The model is overwhelmingly **recurring — 80% of FY25 revenue** recognized over time (time-based software licenses + maintenance + royalties + hardware leases), which is the structural reason the name compounds at a premium multiple. Whole thesis is a toll on rising design complexity: every extra process node, every chiplet/3D-IC stack, and every AI-accelerator startup raises tool intensity per chip, and Cadence is increasingly selling its *own* AI-design layer (Cadence.AI / Verisium / Cerebrus agentic flows) back into that workflow.
 
@@ -40,23 +58,23 @@ Cadence is one half of the EDA duopoly (with Synopsys) — the chip-design softw
 - **Revenue-timing lumpiness:** hardware (Palladium/Protium) and IP recognized up-front can swing a quarter's growth/margin even with stable underlying demand.
 - **Cyclicality / customer R&D budgets:** ultimately tied to semiconductor and systems-company R&D spend; a broad design-start slowdown would pressure renewals and bookings.
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 FY26 · May 1 → Jun 11, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 FY26 · May 1 → Jun 11, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o posicionamento/guidance da empresa (Current state, sem tabela de evolution) × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — the company's positioning/guidance (Current state, no evolution table) × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão / guidance | Fluxo intra-quarter | Sinal |
+| Theme | Management / guidance | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Custom-silicon / foundry** | Gestão (10-Q): wave de ASICs custom de hyperscalers é o tailwind mais limpo — mais tape-outs = mais demanda de seat/IP/emulação; "collateral regardless of which foundry wins" | firstadopter/Tae Kim: CDNS assinou IP no nó Intel 14A — citado pela BofA como sinal de credibilidade de foundry no double-upgrade da INTC | **✓ confirma** (ganha em qualquer foundry) |
-| **Crescimento / print** | Q1 FY26 rev $1.474B, +18,7% y/y; backlog (RPO) $8,0B; China $189M (+36%) | (sem fluxo intra-quarter contestando) | **✓ confirma** (sem contraponto) |
+| **Custom-silicon / foundry** | Management (10-Q): the hyperscaler custom-ASIC wave is the cleanest tailwind — more tape-outs = more seat/IP/emulation demand; "collateral regardless of which foundry wins" | firstadopter/Tae Kim: CDNS signed for IP on the Intel 14A node — cited by BofA as a foundry-credibility signal in the INTC double-upgrade | **✓ confirms** (wins at any foundry) |
+| **Growth / print** | Q1 FY26 rev $1.474B, +18.7% y/y; backlog (RPO) $8.0B; China $189M (+36%) | (no intra-quarter flow contesting) | **✓ confirms** (no counterpoint) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 06-11 | firstadopter / Tae Kim (briefing) | produto | bull | CDNS signed for IP on Intel's 14A node — cited by BofA as a foundry-credibility signal in the INTC double-upgrade, and a reminder that Cadence earns collateral regardless of which foundry/customer wins the node war. |
+| 06-11 | firstadopter / Tae Kim (briefing) | product | bull | CDNS signed for IP on Intel's 14A node — cited by BofA as a foundry-credibility signal in the INTC double-upgrade, and a reminder that Cadence earns collateral regardless of which foundry/customer wins the node war. |
 
-**Síntese do quarter:** fluxo intra-quarter raso — o único datapoint material (assinatura de IP no Intel 14A) confirma a tese de gestão de que a CDNS captura valor independentemente de qual foundry/cliente vença a guerra de nós; debate ainda gira em torno da normalização do mix recorrente e de um eventual guide-raise no Q2.
+**Quarter synthesis:** thin intra-quarter flow — the only material datapoint (signing IP on Intel 14A) confirms management's thesis that CDNS captures value regardless of which foundry/customer wins the node war; the debate still revolves around the normalization of the recurring mix and a possible guide-raise in Q2.
 
 ## Sources
 - **Filings (16):** [CDNS_10-K_2023-02-13_0000813672-23-000011.html](../CDNS/CDNS_10-K_2023-02-13_0000813672-23-000011.html), [CDNS_10-K_2024-02-14_0000813672-24-000034.html](../CDNS/CDNS_10-K_2024-02-14_0000813672-24-000034.html), [CDNS_10-K_2025-02-21_0000813672-25-000024.html](../CDNS/CDNS_10-K_2025-02-21_0000813672-25-000024.html), [CDNS_10-K_2026-02-19_0000813672-26-000016.html](../CDNS/CDNS_10-K_2026-02-19_0000813672-26-000016.html), [CDNS_10-Q_2022-07-25_0000813672-22-000037.html](../CDNS/CDNS_10-Q_2022-07-25_0000813672-22-000037.html), [CDNS_10-Q_2022-10-24_0000813672-22-000054.html](../CDNS/CDNS_10-Q_2022-10-24_0000813672-22-000054.html)

@@ -4,6 +4,24 @@
 
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\BKNG` (filings + transcripts) · sem equity calls, sem decks, sem briefing roll-up on disk. Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $29.9bn | $33.3bn |
+| Gross profit | $29.9bn | $33.3bn |
+| Gross margin | 100.0% | 100.0% |
+| EBITDA | $11.1bn | $12.8bn |
+| EPS | $10.63 | $12.46 |
+| Capex | $442m | $493m |
+| OCF (≈EBITDA) | $11.1bn | $12.8bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="14.4" width="20" height="43.6" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="15.0" width="20" height="43.0" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="15.0" width="20" height="43.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">-2.2% 3m · -1.3% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="14.7" width="20" height="43.3" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.7" width="20" height="43.3" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.7" width="20" height="43.3" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">-1.5% 3m · +0.1% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 > Sell-side coverage on disk is thin — there are **no equity-call notes, no decks, and no `_briefings/by-ticker/BKNG.md`** for this name (confirmed via [INDEX](../INDEX.md) §BKNG). The Bull/Bear below is built primarily from the two most recent earnings transcripts (analyst Q&A from GS, MS, Evercore, BofA, Citi, TD Cowen, DB, Mizuho, Barclays, Rothschild) plus the FY2025 10-K. Treat consensus/PT statements as absent rather than inferred.
 
 ## Snapshot
@@ -61,29 +79,29 @@ World's largest online travel agency by gross bookings. Two-sided marketplace co
 - FX translation swings (FY26 reported rates flattered ~2pts by FX; cc the cleaner read).
 - Seasonality (10-K) and ADR/length-of-stay softness at the lower-end US consumer segment.
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 FY2026 · Apr 28 → Jun 18 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 FY2026 · Apr 28 → Jun 18 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1'26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1'26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **IA / LLMs frontier** | Fogel: IA é net positive — escala + dados de intenção melhoram conversão; frontier migra p/ performance marketing (modelo de leilão tipo Google) | BofA (Post): grandes players de IA "moving away from transactions" → risco estrutural de desintermediação agêntica | **✗ contesta** (risco de desintermediação) |
-| **Connected Trip / produto** | High-teens (~3x total); air +28%, attractions ~25%; Penny já reserva direto c/ lift inicial | BofA (Post): proof points ainda de "amostra muito pequena" | **⚠ nuança** (amostra pequena) |
-| **Demanda / room nights** | +6% (~8% ex-conflito Oriente Médio); US acelerou pelo 4º tri seguido p/ low-teens | (sem novo fluxo intra-quarter contestando a trajetória de demanda) | **✓ confirma** (sem contraponto no fluxo) |
-| **Capital** | Buyback recorde $3,6B +$343M div; share count -40% desde 2014 | (sem fluxo intra-quarter) | **✓ confirma** (execução de capital) |
+| **AI / frontier LLMs** | Fogel: AI is a net positive — scale + intent data improve conversion; frontier moves toward performance marketing (Google-style auction model) | BofA (Post): large AI players "moving away from transactions" → structural risk of agentic disintermediation | **✗ contests** (disintermediation risk) |
+| **Connected Trip / product** | High-teens (~3x total); air +28%, attractions ~25%; Penny already booking direct w/ early lift | BofA (Post): proof points still from a "very small sample" | **⚠ nuance** (small sample) |
+| **Demand / room nights** | +6% (~8% ex-Middle East conflict); US accelerated for the 4th straight qtr to low-teens | (no new intra-quarter flow contesting the demand trajectory) | **✓ confirms** (no counterpoint in the flow) |
+| **Capital** | Record buyback $3.6B +$343M div; share count -40% since 2014 | (no intra-quarter flow) | **✓ confirms** (capital execution) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 04-28 | Booking Holdings · Fogel (call) | demanda | bull | Fogel argues that AI is a net positive, not a threat: incumbent scale plus proprietary intent data improve conversion, and travel discovery via LLMs expands the digital TAM ("35%... 45%... higher"). Responding to Justin Post (BofA), he stresses that frontier players are moving toward performance marketing/advertising, the Google-style auction model in which BKNG thrives. |
-| 04-28 | Booking Holdings · Fogel (call) | produto | bull | Connected Trip +high-teens (~3x total transaction growth); air tickets +28%, attractions ~+25%. Penny (Priceline) is already booking accommodation/flights directly with an early conversion lift (small sample). Agoda cut its servicing cost per booking by double digits via AI automation. |
+| 04-28 | Booking Holdings · Fogel (call) | demand | bull | Fogel argues that AI is a net positive, not a threat: incumbent scale plus proprietary intent data improve conversion, and travel discovery via LLMs expands the digital TAM ("35%... 45%... higher"). Responding to Justin Post (BofA), he stresses that frontier players are moving toward performance marketing/advertising, the Google-style auction model in which BKNG thrives. |
+| 04-28 | Booking Holdings · Fogel (call) | product | bull | Connected Trip +high-teens (~3x total transaction growth); air tickets +28%, attractions ~+25%. Penny (Priceline) is already booking accommodation/flights directly with an early conversion lift (small sample). Agoda cut its servicing cost per booking by double digits via AI automation. |
 | 04-28 | Booking Holdings · Steenbergen (call) | guidance | mixed | Q2'26 guide: room nights +2-4% (conflict ~3pts headwind; underlying ~5-7%), GBV/revenue/EBITDA each +4-6%. FY26 lowered at the midpoint but the high end of GBV and adj. EPS held. Steenbergen: the assumption of impact through end-June with recovery in 2H is explicitly uncertain ("anyone can put whatever you want in your model"). |
 | 04-28 | Booking Holdings · Fogel (call) | capital | bull | Record $3.6B buyback in Q1 (+$343M dividend); share count down >40% since 2014 at an average price of ~$93. Cash/investments $16.5B. |
 | 04-28 | BofA · Justin Post (call Q&A) | valuation | bear | Justin Post (BofA) flagged that large AI players are "moving away from transactions," raising the structural risk of agentic disintermediation; BKNG's proof points are still from a very small sample. |
 
-**Síntese do quarter:** o quarter foi quase inteiramente sobre o duelo IA — gestão (Fogel) defende a tese de net positive/leilão de performance, enquanto o único contraponto de peso (BofA/Post) eleva o risco de desintermediação agêntica e nota que os proof points de Penny vêm de amostra pequena; demanda e capital seguem sem contestação no fluxo.
+**Quarter synthesis:** the quarter was almost entirely about the AI duel — management (Fogel) defends the net-positive/performance-auction thesis, while the only weighty counterpoint (BofA/Post) raises the risk of agentic disintermediation and notes that Penny's proof points come from a small sample; demand and capital remain uncontested in the flow.
 
 ## Management commentary — evolution (last 6 quarters)
 

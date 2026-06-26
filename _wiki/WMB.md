@@ -2,6 +2,24 @@
 
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\WMB` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\WMB.md` (none — no briefing coverage for this name). Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $12.5bn | $13.8bn |
+| Gross profit | $10.2bn | $11.4bn |
+| Gross margin | 81.6% | 82.3% |
+| EBITDA | $8.3bn | $9.1bn |
+| EPS | $2.29 | $2.58 |
+| Capex | $8.2bn | $7.1bn |
+| OCF (≈EBITDA) | $8.3bn | $9.1bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="15.0" width="20" height="43.0" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="15.0" width="20" height="43.0" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+2.3% 3m · +2.3% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="15.1" width="20" height="42.9" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="15.7" width="20" height="42.3" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="16.4" width="20" height="41.6" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">-3.0% 3m · -5.5% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Williams is a US natural-gas midstream pure-play: interstate transmission, gathering & processing (G&P), storage, and gas marketing. Four reportable segments — **Transmission, Power & Gulf; Northeast G&P; West; and Gas & NGL Marketing Services** — plus "Other" (upstream, corporate) (10-K, 2026-02-24). The crown jewel is **Transco**, the largest US interstate gas pipeline by volume, running Gulf-to-Northeast and structurally short of capacity in the markets it serves. The franchise has pivoted hard into two demand-driven legs: (1) **gas transmission expansions** (Transco, Northwest Pipeline/Mountain West) feeding power-gen and LNG, and (2) a newer **Power Innovation (PI)** behind-the-meter business — building gas generation directly for hyperscaler data centers at a targeted ~5x EBITDA build multiple. Barclays frames WMB as "the poster child of the data-center-driven, gas-to-power story," with rising generalist investor interest (Barclays, T. Chen, 2026-01-21). Williams is positioned at the intersection of the AI/power capex cycle and the US LNG export ramp.
 
@@ -12,7 +30,7 @@ Williams is a US natural-gas midstream pure-play: interstate transmission, gathe
 | **Main buyer(s)** | Hyperscalers / data centers (Meta, IG counterparties) for PI; power-gen utilities, LNG exporters (Woodside) & gas marketers for transmission/G&P |
 | **Key suppliers** | Siemens Energy turbines (5 GW reservation, Caterpillar backup); upstream gas producers (Haynesville / Marcellus basins) |
 
-## Estado atual (Q1 FY2026, call 2026-05-05)
+## Current state (Q1 FY2026, call 2026-05-05)
 Record quarter. Adjusted EBITDA **$2.25bn, +13% YoY** (from $1.99bn); adjusted EPS **+22%** (John Porter, CFO, Q1 FY26). Transmission & Gulf led, +~$150m / ~17% — Transco +~10% YoY on the post-rate-case tariff step-up plus expansions; Deepwater Gulf +60%; storage +35%; West +16% (Haynesville / Louisiana Energy Gateway). Sequent marketing $227m EBITDA. Upstream Haynesville divested to JERA (closed Jan-26; ~$180m book gain excluded from recurring metrics).
 
 **Guidance:** now pointing to the **upper half** of original FY26 adjusted EBITDA guide; reaffirmed the Analyst-Day **10%+ EBITDA & EPS CAGR (2025–2030)**. Management says the *contracted* base CAGR moved from ~8% (Feb Analyst Day) to **~9%** with the new Q1 projects, and called that "still pretty conservative" (Porter, Q1 FY26). Seasonally soft 2Q expected before H2 reacceleration, including the partial Socrates startup in Q3.
@@ -49,30 +67,30 @@ Record quarter. Adjusted EBITDA **$2.25bn, +13% YoY** (from $1.99bn); adjusted E
 - **Permitting/litigation** — interstate projects exposed to state 401 vetoes and prolonged litigation (mgmt cited 13 years on Atlantic Sunrise).
 - **Counterparty/credit** and **competition** (10-K risk summary). **Policy/election** risk to the gas-build thesis (JSD pushback).
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 FY26 · May 05 → Jun 22 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 FY26 · May 05 → Jun 22 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1'26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1'26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **EBITDA / CAGR** | Recorde $2.25bn, +13% YoY, EPS +22%; metade superior do FY26; reafirma 10%+ CAGR | JSD: estrutura alavancada implica EPS CAGR "north of 20%", desk modela ~13% EBITDA CAGR; mover floor 8%→9% é breadcrumbing; survey ~80/20 bull | **✓ confirma** (com viés de upside ao guide) |
-| **Power Innovation (BTM DC)** | NEO (5ª, 682MW, $2.3bn, 12.5-yr, ISD H2-28); Atlas backup-power | JSD bear: PI é earnings de menor qualidade — contratos "só" 10-12.5 anos, recontratação em aberto; ceticismo se backlog de 6GW é reposto · WFC: feedback do PI-JV "lukewarm" | **⚠ nuança** (qualidade/terminal value do PI) |
-| **Balanço / financiamento** | Leverage 4.1x (timing 26/27), acima do alvo; JV/partnership em estudo, dividendo mantido | JSD: leverage pico ~4.3x em '27 precisa do ramp back-end aterrissar | **⚠ nuança** (leverage acima do alvo) |
-| **Valuation** | (tese: gas-to-power, 10%+ CAGR) | WFC OW: ~15% upside se bater targets BTM 2030, descontando ~5 de 8 GW · JSD bear: caro a 13-14x EBITDA, "generals" rodando p/ nomes de maior alavancagem operacional | **⚠ nuança** (debate de upside limitado) |
+| **EBITDA / CAGR** | Record $2.25bn, +13% YoY, EPS +22%; upper half of FY26; reaffirms 10%+ CAGR | JSD: leveraged structure implies EPS CAGR "north of 20%", desk models ~13% EBITDA CAGR; moving the floor 8%→9% is breadcrumbing; survey ~80/20 bull | **✓ confirms** (with upside bias to the guide) |
+| **Power Innovation (BTM DC)** | NEO (5th, 682MW, $2.3bn, 12.5-yr, ISD H2-28); Atlas backup-power | JSD bear: PI is lower-quality earnings — contracts "only" 10-12.5 years, recontracting an open question; skepticism on whether the 6GW backlog is being replenished · WFC: PI-JV feedback "lukewarm" | **⚠ nuance** (PI quality/terminal value) |
+| **Balance sheet / financing** | Leverage 4.1x (26/27 timing), above target; JV/partnership under study, dividend maintained | JSD: leverage peaking ~4.3x in '27 needs the back-end ramp to land | **⚠ nuance** (leverage above target) |
+| **Valuation** | (thesis: gas-to-power, 10%+ CAGR) | WFC OW: ~15% upside if it hits 2030 BTM targets, discounting ~5 of 8 GW · JSD bear: expensive at 13-14x EBITDA, "generals" rotating to names with more operating leverage | **⚠ nuance** (limited-upside debate) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 05-05 | WMB Q1 FY26 call · John Porter (CFO) | demanda | bull | Three new majors + one upsize: NEO (5th PI project, 682MW, 12.5-year contract, ~$2.3bn, ISD H2-2028, 5x build multiple — largest PI deal to date); Atlas (Transco gas-for-backup displacing diesel at a Northeast data center, up to 164 MMcf/d, 13 years, <$50m capex); Silver Spur (Northwest Pipeline expansion, 275 MMcf/d, ~$0.5bn); Power Express upsized to 750 MMcf/d. Growth capex midpoint raised to $7.3bn. |
+| 05-05 | WMB Q1 FY26 call · John Porter (CFO) | demand | bull | Three new majors + one upsize: NEO (5th PI project, 682MW, 12.5-year contract, ~$2.3bn, ISD H2-2028, 5x build multiple — largest PI deal to date); Atlas (Transco gas-for-backup displacing diesel at a Northeast data center, up to 164 MMcf/d, 13 years, <$50m capex); Silver Spur (Northwest Pipeline expansion, 275 MMcf/d, ~$0.5bn); Power Express upsized to 750 MMcf/d. Growth capex midpoint raised to $7.3bn. |
 | 05-05 | WMB Q1 FY26 call · John Porter (CFO) | capital | mixed | Leverage 4.1x, modestly above the 3.5-4.0x target — a '26/27 timing issue' with historic earnings growth in 28+ resetting capacity. Financing options under review (partnership/JV around PI, capital recycling); specifics promised 'in the next couple of months'. Dividend growth explicitly maintained. |
 | 05-06 | JSD · Williams midstream (equity call) | valuation | bull | Bull: 'Williams is the ultimate manifestation' of the gas-to-power thesis. JSD argues the financially leveraged structure implies an EPS CAGR 'north of 20%' — well above the stated 10% — and that moving the floor from 8%→9% is management breadcrumbing; the desk models ~13% EBITDA CAGR. JSD survey ~80/20 bullish; consensus sees WMB beating its 10% CAGR by 200-300bps and FID'ing ~$3bn more of PI capex this year. |
 | 05-06 | JSD · Williams midstream (equity call) | valuation | bear | Pushbacks: expensive at 13-14x EBITDA, 'fundamental/energy guys' see good growth but limited upside; 'generals' rotate to smaller, higher-operating-leverage names. PI terminal-value risk: contracts 'only' 10-12.5 years, recontracting an open question — the prevailing bear thesis is that PI is lower-quality earnings. Skepticism that the 6GW backlog is being replenished. Leverage 4.1x (peaking ~4.3x in 27) needs the back-end ramp to land. |
 | 06-05 | Wells Fargo · midstream Friday wrap | valuation | bull | WFC rates WMB Overweight; flags growing debate over the proposed PI-JV. BTM valuation work implies ~15% upside for Williams if it hits 2030 BTM power targets; WFC estimates Williams is discounting ~5 of its 8 GW BTM target. Uses 9.5x for the SOTP of the power business. DC expert: BTM now ~40% of power deals; post-grid BTM assets run at only 15-30% utilization (peak-shaving). Investor feedback on the PI-JV was 'lukewarm'. |
 | 06-05 | Wells Fargo · midstream Friday wrap | supply | mixed | Turbine-backlog color: more turbine reservation slots cancelled/released (~30-35 projects nationally cancelled/delayed; Kodiak picked up released slots on two occasions), with secondary-market capacity available at a premium. |
 
-**Síntese do quarter:** o debate migrou de "a demanda gas-to-power existe?" (consensualmente sim, bull no print e na CAGR acima do guide) para a qualidade/terminal value do Power Innovation (contratos de 10-12.5 anos, recontratação em aberto) e ao financiamento da alavancagem 4.1x — com o PI-JV recebendo feedback "lukewarm" e o bear focando em valuation cheio (13-14x) e upside limitado.
+**Quarter synthesis:** the debate has shifted from "does gas-to-power demand exist?" (consensually yes, bull on the print and on a CAGR above the guide) to the quality/terminal value of Power Innovation (10-12.5 year contracts, recontracting an open question) and to financing the 4.1x leverage — with the PI-JV drawing "lukewarm" feedback and the bear focused on a full valuation (13-14x) and limited upside.
 
 ## Management commentary — evolution (last 6 quarters)
 

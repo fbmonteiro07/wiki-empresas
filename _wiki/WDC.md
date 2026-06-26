@@ -4,6 +4,24 @@
 
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\WDC` (filings + transcripts) · `_equity_calls` · `_briefings`. Master index: [00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $15.1bn | $20.6bn |
+| Gross profit | $7.9bn | $11.9bn |
+| Gross margin | 52.2% | 58.0% |
+| EBITDA | $6.8bn | $11.0bn |
+| EPS | $13.52 | $21.57 |
+| Capex | $632m | $849m |
+| OCF (≈EBITDA) | $6.8bn | $11.0bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="23.8" width="20" height="34.2" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="18.3" width="20" height="39.7" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+10.7% 3m · +28.8% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="34.4" width="20" height="23.6" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="24.5" width="20" height="33.5" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="15.2" width="20" height="42.8" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+31.2% 3m · +86.5% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Western Digital is now a **pure-play hard disk drive (HDD) company** after spinning off its Flash/NAND unit as SanDisk on **February 21, 2025** (FY25 10-K, 2025-08-14). It develops and manufactures substantially all of its own recording heads and magnetic media, selling capacity-enterprise (nearline) drives into three end markets — **Cloud, Client, Consumer** — but the business is now overwhelmingly a hyperscaler mass-storage story: **Cloud was 89% of revenue** in fiscal Q3 FY26 (10-Q for period ended 2026-04-03; Q3 FY26 call, 2026-04-30). It is one of three scaled HDD makers alongside Seagate and Toshiba (FY25 10-K). The thesis: HDDs remain the lowest-TCO medium for the petabyte-to-exabyte "cold/warm" tier that the AI data buildout is inflating — management frames long-term storage demand at **>25% CAGR** with exabyte shipments +34% y/y last quarter (Q3 FY26, 2026-04-30). Differentiation runs on areal-density transitions: ePMR/OptiNAND/UltraSMR today, **HAMR** (heat-assisted magnetic recording) for the 44TB+ → 100TB+ roadmap.
 
@@ -85,26 +103,26 @@ The competitive structure has "fundamentally changed from a shrinking industry t
 - **Morgan Stanley (Erik Woodring) — 'HDDs: The Next Leg Higher'** _(2026-06-15)_: HDD pricing-upside idea (Industry View Cautious, but the long thesis is nearline pricing).
 - **Erik Woodring expert-call recap** _(2026-06-16)_: HDD pricing upside + server strength (WDC/STX, Dell/HPE, Apple cycles).
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q3 FY26 print + intra-quarter · Apr 30 → Jun 23, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q3 FY26 print + intra-quarter · Apr 30 → Jun 23, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q3 FY26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q3 FY26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Pricing (ASP/TB)** | +9% YoY em "better TCO"; sem aumento de capacidade de unidades | JPM (TMC): pricing é o maior upside incremental, "mid-teens em 12 meses" do nível ~+9% atual; nem WDC nem Seagate moderaram · MS Woodring: targets ~$25/TB CY27, ~$30 CY28 vs ~$14.50 hoje | **✓ confirma** (pricing é a tese, com upside) |
-| **Demanda cloud / exabyte** | Cloud $3.0B (89%, +48% YoY); 222 EB (+34% YoY) | MS Woodring: demanda alargando de cloud p/ AI training/inference, humanoides; supply capada em ~30-35% de crescimento, elonga o ciclo | **✓ confirma** (demanda alargando) |
-| **HAMR / roadmap** | HAMR em qual com 4 clientes (44TB); ramp H1 CY27 | MS Woodring mantém Seagate como top pick (WDC 1B): WDC ainda não qualificou HAMR, só ramp 44TB em H1 CY27 — atrás da Seagate | **⚠ nuança** (lag de HAMR é o furo tático) |
+| **Pricing (ASP/TB)** | +9% YoY on "better TCO"; no increase in unit capacity | JPM (TMC): pricing is the biggest incremental upside, "mid-teens in 12 months" from the current ~+9% level; neither WDC nor Seagate tempered it · MS Woodring: targets ~$25/TB CY27, ~$30 CY28 vs ~$14.50 today | **✓ confirms** (pricing is the thesis, with upside) |
+| **Cloud / exabyte demand** | Cloud $3.0B (89%, +48% YoY); 222 EB (+34% YoY) | MS Woodring: demand broadening from cloud to AI training/inference, humanoids; supply capped at ~30-35% growth, elongating the cycle | **✓ confirms** (demand broadening) |
+| **HAMR / roadmap** | HAMR in qual with 4 customers (44TB); ramp H1 CY27 | MS Woodring keeps Seagate as top pick (WDC 1B): WDC has not yet qualified HAMR, only ramps 44TB in H1 CY27 — behind Seagate | **⚠ nuance** (HAMR lag is the tactical gap) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 05-26 | JPM (Networking) | margem | bull | JPM (read from the TMC conference): pricing is the biggest incremental upside — neither WDC nor Seagate tried to temper price-increase expectations; from the current ~+9% QoQ level, 'mid-teens increases in 12 months could be.' WDC is more price-driven (cost declines limited to ~-10%/exabyte) vs Seagate more cost-driven; both reiterated no unit additions (growth only via density). |
-| 06-15 | Morgan Stanley · Erik Woodring ('HDDs: The Next Leg Higher') | margem | bull | Pricing upside idea in nearline (Industry View Cautious, but the long thesis is pricing). HDD vendors targeting ~$25/TB blended in CY27 and ~$30 in CY28 vs ~$14.50/TB today; non-LTA customers already paying ~+30% QoQ and NeoCloud spot at $30-35/TB. |
-| 06-16 | Morgan Stanley · Erik Woodring (equity call) | margem | mixed | Woodring raised numbers 'materially again' on Asia checks: demand broadening from cloud to AI training/inference, humanoids and robots; supply limited to ~30-35% annual exabyte growth, elongating the cycle. WDC CY27/CY28 EPS 'a little over $45 and a little over $70' if the checks hold — sub-10x in CY28. Keeps Seagate as top pick (WDC 1B) since WDC has not yet qualified HAMR and only ramps 44TB in H1 CY27. |
+| 05-26 | JPM (Networking) | margin | bull | JPM (read from the TMC conference): pricing is the biggest incremental upside — neither WDC nor Seagate tried to temper price-increase expectations; from the current ~+9% QoQ level, 'mid-teens increases in 12 months could be.' WDC is more price-driven (cost declines limited to ~-10%/exabyte) vs Seagate more cost-driven; both reiterated no unit additions (growth only via density). |
+| 06-15 | Morgan Stanley · Erik Woodring ('HDDs: The Next Leg Higher') | margin | bull | Pricing upside idea in nearline (Industry View Cautious, but the long thesis is pricing). HDD vendors targeting ~$25/TB blended in CY27 and ~$30 in CY28 vs ~$14.50/TB today; non-LTA customers already paying ~+30% QoQ and NeoCloud spot at $30-35/TB. |
+| 06-16 | Morgan Stanley · Erik Woodring (equity call) | margin | mixed | Woodring raised numbers 'materially again' on Asia checks: demand broadening from cloud to AI training/inference, humanoids and robots; supply limited to ~30-35% annual exabyte growth, elongating the cycle. WDC CY27/CY28 EPS 'a little over $45 and a little over $70' if the checks hold — sub-10x in CY28. Keeps Seagate as top pick (WDC 1B) since WDC has not yet qualified HAMR and only ramps 44TB in H1 CY27. |
 
-**Síntese do quarter:** o debate migrou de "a demanda segura?" para "quanto o pricing pode dobrar e por quanto tempo o ciclo se elonga" — o fluxo (JPM, MS Woodring) é unanimemente bull em pricing nearline (targets $25/$30/TB) e na elongação por supply capada, deixando o lag de HAMR vs Seagate como a única nuance tática (WDC 1B, não top pick).
+**Quarter synthesis:** the debate has shifted from "does demand hold?" to "how much can pricing double and how long does the cycle elongate" — the flow (JPM, MS Woodring) is unanimously bull on nearline pricing (targets $25/$30/TB) and on the elongation from capped supply, leaving the HAMR lag vs Seagate as the only tactical nuance (WDC 1B, not top pick).
 
 ## Management commentary — evolution (last 4 quarters)
 

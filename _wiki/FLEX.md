@@ -2,6 +2,24 @@
 
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\FLEX` (filings + transcripts) · `_briefings`. Master index: [00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $30.8bn | $40.4bn |
+| Gross profit | $3.0bn | $4.2bn |
+| Gross margin | 9.8% | 10.3% |
+| EBITDA | $2.6bn | $3.7bn |
+| EPS | $3.97 | $6.20 |
+| Capex | $1.2bn | $1.1bn |
+| OCF (≈EBITDA) | $2.6bn | $3.7bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="22.8" width="20" height="35.2" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="22.5" width="20" height="35.5" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="22.1" width="20" height="35.9" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+23.8% 3m · +24.9% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f"></text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Flex is the world's #2 contract electronics manufacturer / EMS-ODM (~$27.9B FY26 revenue, FYE Mar-31), pivoting from low-margin assembly toward an "end-to-end manufacturing partner" with proprietary **datacenter power and cooling** content. As of FY26 it reorganized into three reportable segments (10-K, 2026-05-20): **ITS** — Integrated Technology Solutions (Communications, Lifestyle; $11.1B, 40% of sales, -2% y/y); **RMS** — Regulated Manufacturing Solutions (Industrial, Automotive, Healthcare; $10.2B, 36%, +5%); and **CPI** — Cloud and Power Infrastructure (Cloud & Cooling, Power; $6.6B, 24%, +38% y/y). The CPI segment is the AI-datacenter story: **Anord Mardix** critical power (switchgear, busway, modular power pods, turnkey datacenter electrical), **Crown** medium-voltage switchgear/grid, **JetCool** direct-to-chip liquid cooling, plus embedded power (power shelves, BBUs, DC/DC) riding the **800V DC** and 1MW+ rack transition (10-K FY25, 2025-05-21; Q3 FY26, 2026-02-04). On May 5, 2026 Flex announced it will **spin off CPI into a separate public company** (target Q1 CY2027), splitting the AI-power pure-play from the legacy EMS base. No customer >10% of sales; top-10 = 45% (10-K FY26).
 
@@ -103,27 +121,27 @@ _Note: FLEX not yet present in `_data/estimates.json` (asof 2026-06-19) — cons
 - **JPM networking conf recap (JPM "Networking recap", 2026-05-26):** at JPM's conference Flex sounded **confident about power-segment margins rising with scale**, and explicitly framed the **~15% power margin as NOT the long-term target — room to go higher as scale improves** (incremental to the bull's CPI-margin debate; pre-CPI-spin commentary). The same recap's cloud-capex model is the demand backdrop: JPM raised its data-center capex outlook to **~+80% y/y in 2026** (>$250B step-up) and **~+50% in 2027** (>$285B step-up, ~$860B aggregate top-4 hyperscaler spend), after North American installed DC power capacity jumped **8 GW in 1Q26 (highest-ever quarterly add)** and the planned pipeline grew to **>175 GW** — and DC capex now consumes **>90% of hyperscaler operating cash flow** by JPM's 2027 forecast (JPM "Networking recap", 2026-05-26).
 - **S&P 500 inclusion** _(June 22, alongside MRVL)_ — passive demand tailwind.
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q4 FY26 · May 6 → Jun 22, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q4 FY26 · May 6 → Jun 22, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q4 FY26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q4 FY26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Demanda DC / CPI** | CPI FY26 $6.6B (+38%); guide FY27 CPI +65-75% | JPM: capex DC ~+80% y/y em 2026 (>$250B step-up), +50% em 2027; +8 GW de potência na NA no 1Q (maior add trimestral) | **✓ confirma** (macro de DC ampara) |
-| **Margem de power** | Power margins > cloud; rumo à "full architecture" | JPM: ~15% de margem de power NÃO é o alvo de LT, "room to go higher as scale improves" | **✓ confirma** (com upside) |
-| **Produto / 800V** | Suite 800V DC, racks 1MW+; parceiro NVIDIA | JPM: FLEX entre os best-positioned (Anord Mardix + 800V/1MW); power ~32% do CPI hoje → >40% em 2027; "long crowding subiu muito" | **✓ confirma** (posicionamento líder) |
-| **Estrutura / spin** | Spin-off do CPI anunciado, target Q1 CY2027 | S&P: inclusão no S&P 500 em 22-jun-2026 — tailwind de fluxo passivo | **✓ confirma** (re-rating em curso) |
+| **DC / CPI demand** | CPI FY26 $6.6B (+38%); FY27 guide CPI +65-75% | JPM: DC capex ~+80% y/y in 2026 (>$250B step-up), +50% in 2027; +8 GW of power in NA in 1Q (largest quarterly add) | **✓ confirms** (DC macro supports it) |
+| **Power margin** | Power margins > cloud; toward "full architecture" | JPM: ~15% power margin is NOT the LT target, "room to go higher as scale improves" | **✓ confirms** (with upside) |
+| **Product / 800V** | 800V DC suite, 1MW+ racks; NVIDIA partner | JPM: FLEX among the best-positioned (Anord Mardix + 800V/1MW); power ~32% of CPI today → >40% in 2027; "long crowding picked up a lot" | **✓ confirms** (leading positioning) |
+| **Structure / spin** | CPI spin-off announced, target Q1 CY2027 | S&P: S&P 500 inclusion on Jun 22, 2026 — passive-flow tailwind | **✓ confirms** (re-rating underway) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 05-26 | JPM · Samik (Networking conf recap) | margem | bull | At JPM's conference, Flex sounded confident about power margins rising with scale and framed ~15% power margin as NOT the LT target — "room to go higher as scale improves". Demand backdrop: JPM raised its DC capex outlook to ~+80% y/y in 2026 (>US$250B step-up) and ~+50% in 2027; North American DC power capacity +8 GW in 1Q26 (largest quarterly add ever); pipeline >175 GW. |
-| 06-09 | JPM · Samik (Watts Up! Shift to 800V) | produto | bull | FLEX among the best-positioned (Anord Mardix critical power + 800V/1MW rack); JPM notes that "long crowding in Flex has picked up substantially". Power-distribution TAM (Omdia) +20% CAGR from ~US$50bn (2025) to ~US$90bn (2028); power-management subset (~US$1mn/MW) +30% CAGR to US$45bn in 2028. JPM estimates Flex's power business is ~32% of CPI/SpinCo revenue today, on track to >40% in 2027; the 800V portfolio spans power shelves, PSUs, CBU, BBUs, liquid-cooled busbars, switchgear, substations and integrated power racks. NVIDIA power partner. |
+| 05-26 | JPM · Samik (Networking conf recap) | margin | bull | At JPM's conference, Flex sounded confident about power margins rising with scale and framed ~15% power margin as NOT the LT target — "room to go higher as scale improves". Demand backdrop: JPM raised its DC capex outlook to ~+80% y/y in 2026 (>US$250B step-up) and ~+50% in 2027; North American DC power capacity +8 GW in 1Q26 (largest quarterly add ever); pipeline >175 GW. |
+| 06-09 | JPM · Samik (Watts Up! Shift to 800V) | product | bull | FLEX among the best-positioned (Anord Mardix critical power + 800V/1MW rack); JPM notes that "long crowding in Flex has picked up substantially". Power-distribution TAM (Omdia) +20% CAGR from ~US$50bn (2025) to ~US$90bn (2028); power-management subset (~US$1mn/MW) +30% CAGR to US$45bn in 2028. JPM estimates Flex's power business is ~32% of CPI/SpinCo revenue today, on track to >40% in 2027; the 800V portfolio spans power shelves, PSUs, CBU, BBUs, liquid-cooled busbars, switchgear, substations and integrated power racks. NVIDIA power partner. |
 | 06-22 | S&P / briefings (2026-06-09) | valuation | bull | FLEX inclusion in the S&P 500 effective Jun 22, 2026 (alongside MRVL) — passive-flow tailwind. |
 
-**Síntese do quarter:** o fluxo intra-quarter foi quase unilateralmente confirmatório — JPM amplificou tudo que a gestão disse (capex de DC +80%, power margins com upside, FLEX best-positioned em 800V) e o "long crowding" subiu muito; o debate migrou de "se a demanda existe" para "quanto vale o SpinCo de power", com a entrada no S&P 500 dando o empurrão de fluxo.
+**Quarter synthesis:** the intra-quarter flow was almost one-sidedly confirmatory — JPM amplified everything management said (DC capex +80%, power margins with upside, FLEX best-positioned in 800V) and "long crowding" picked up a lot; the debate shifted from "whether the demand exists" to "what the power SpinCo is worth," with S&P 500 inclusion providing the flow push.
 
 ## Management commentary — evolution (last 4 quarters)
 | Theme | Q1 FY26 (Jul-24-25) | Q2 FY26 (Oct-29-25) | Q3 FY26 (Feb-04-26) | Q4 FY26 (May-06-26) |

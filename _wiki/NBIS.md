@@ -4,6 +4,24 @@
 
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\NBIS` (20-F filings + transcripts) · `E:\briefings\2026`. Master index: [00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $3.4bn | $12.6bn |
+| Gross profit | $2.4bn | $9.0bn |
+| Gross margin | 69.6% | 71.1% |
+| EBITDA | $1.4bn | $7.0bn |
+| EPS | $-3.27 | $-3.05 |
+| Capex | $24.3bn | $31.1bn |
+| OCF (≈EBITDA) | $1.4bn | $7.0bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="2.4" width="20" height="55.6" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="0.8" width="20" height="57.2" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">-20.8% 3m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f"></text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 > **Provenance / fidelity flag:** NBIS is the **restructured ex-Yandex entity** — Dutch holdco (Nebius Group N.V., Schiphol/Amsterdam), Nasdaq:NBIS. In **July 2024 it divested all Russia + related international businesses (>95% of consolidated revenue, assets and employees** at the time); trading resumed **2024-10-21** (20-F FY2025, 2026-04-30). Short public history as an AI company → financials are **immature and reorganized** (Toloka deconsolidated Q2 2025 and recast into discontinued ops). On-disk **filings are SEC 20-F** (foreign private issuer; no 10-Q/10-K). The two transcripts read (Q1 2026 2026-05-13, Q4 2025 2026-02-12) are **third-party reconstructions** (fool.com / investing.com via WebFetch) — close paraphrase, not verbatim. **Outlook: attempted (`outlook.py --no-body --days 7`), returned no output in this session — treat as unavailable;** sell-side flow below is from on-disk `E:\briefings\2026`.
 
 ## Snapshot
@@ -108,32 +126,32 @@ Beat-and-raise, with the EBITDA inflection now the story. **Group revenue $399m 
 - **Hedgeye Tactical Short** (Dec-4 @ $99.1, ~25% downside): "Neocloud Winter / CRWV 2.0" — MSFT NJ delay, pricing rollover, net-debt swing.
 - **Burry 'circular GPU-financing' bear** + 83% single-customer receivable concentration — the funding/quality-of-earnings counter.
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 2026 · May 11 → Jun 18, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 2026 · May 11 → Jun 18, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1'26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1'26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Demanda / sold-out** | Fully sold out — "4+ clientes competindo por cada GPU que ligamos" | Cantor (bull comp p/ CRWV): re-rating reflete percepção de muita capacidade ainda não-vendida amid GPU prices em alta | **⚠ nuança** (quanto já é contratado?) |
-| **ARR / guidance** | ARR ~$1,9bn exit (+50% q/q); guide '26 ARR $7-9bn, rev $3,0-3,4bn | MS Baer: EW, PT $126→$144 (reconhece os números mas múltiplo já reflete) | **✓ confirma** (números batem) |
-| **Capex / funding** | Capex elevado p/ $20-25bn "em resposta a demanda pré-comprometida p/ '27" | WF Fluidstack: custo de financiamento é a variável-chave (6% "ship it" vs high-teens "less excited") | **⚠ nuança** (depende de capital) |
-| **Validação NVDA / supply** | — | @paradislabs: stake NVDA $2bn + "Exemplar Cloud" GB300 + acesso Vera Rubin; Jensen: "Nebius will take care of you" | **✓ confirma** (selo NVDA) |
-| **Contratos âncora** | Meta $27bn/5a; MSFT ramp H2'26 (estruturados p/ destravar ABF) | Cantor: maior parte da receita ainda vem de contratos de reserva de capacidade LT | **✓ confirma** (backlog contratado) |
+| **Demand / sold-out** | Fully sold out — "4+ customers competing for every GPU we turn on" | Cantor (bull comp for CRWV): the re-rating reflects a perception of a lot of still-unsold capacity amid rising GPU prices | **⚠ nuance** (how much is already contracted?) |
+| **ARR / guidance** | ARR ~$1.9bn exit (+50% q/q); '26 guide ARR $7-9bn, rev $3.0-3.4bn | MS Baer: EW, PT $126→$144 (acknowledges the numbers but the multiple already reflects them) | **✓ confirms** (numbers check out) |
+| **Capex / funding** | Capex raised to $20-25bn "in response to pre-committed demand for '27" | WF Fluidstack: financing cost is the key variable (6% "ship it" vs high-teens "less excited") | **⚠ nuance** (depends on capital) |
+| **NVDA validation / supply** | — | @paradislabs: NVDA $2bn stake + "Exemplar Cloud" GB300 + Vera Rubin access; Jensen: "Nebius will take care of you" | **✓ confirms** (NVDA seal of approval) |
+| **Anchor contracts** | Meta $27bn/5yr; MSFT ramp H2'26 (structured to unlock ABF) | Cantor: most of the revenue still comes from LT capacity-reserve contracts | **✓ confirms** (contracted backlog) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
 | 05-11 | BofA | valuation | bull | BofA Buy, PO US$205 (PO raised, reit.; 1Q26 preview) — thesis: DC site activations supporting the 2H26 ramp, capex intensity (briefing 2026-05-11). |
 | 05-13 | NBIS (earnings) · CFO (via briefing) | guidance | bull | 2026 guide: group revenue US$3.0-3.4bn, ARR US$7-9bn exit, adj. EBITDA margin ~40%, capex raised to US$20-25bn (from US$16-20bn in Q4) 'in response to pre-committed customer demand for 2027 capacity'. The Meta US$27bn/5yr and Microsoft (ramp H2 2026) contracts are structured to unlock ABF (briefing 2026-05-13). |
 | 05-14 | Morgan Stanley · Baer | valuation | mixed | Morgan Stanley (Baer) Equal-Weight, PT US$126→US$144 post-Q1 (rev US$399m, ARR US$1.92B, capex US$20-25B; briefing 2026-05-14). |
-| 05-14 | NBIS (earnings, via briefing) | demanda | bull | Fully sold out — '4 or more customers competing for every GPU we bring online' (Q1 call via briefing 2026-05-14). |
+| 05-14 | NBIS (earnings, via briefing) | demand | bull | Fully sold out — '4 or more customers competing for every GPU we bring online' (Q1 call via briefing 2026-05-14). |
 | 06-01 | FinTwit · @paradislabs (via briefing) | supply | bull | NVIDIA validation: 'Nebius will take care of you' (Jensen, via @paradislabs briefing 2026-06-01). NVDA US$2bn stake + 'Exemplar Cloud' GB300 status + Vera Rubin/Vera CPU access. |
 | 06-08 | Wells Fargo · Fluidstack call | capital | mixed | Sector read-through for NBIS: financing cost is the swing variable (6% 'ship it' vs high-teens 'less excited'), the Anthropic inflection in Q1 drove the supply-demand imbalance, and inference economics approaching dollar-per-hour human output sustain demand durability. Supports the sold-out/contracted-ramp thesis but reinforces the dependence on capital access (Wells Fargo 'Fluidstack call', 2026-06-08). |
 | 06-18 | Cantor · 'CoreWeave call' | valuation | bull | Cantor uses NBIS as a bull comp for CRWV — 'Nebius and CoreWeave printed the same exact quarter in 1Q', both reaffirmed 2026 sold-out and raised capex, yet NBIS is up ~80% since and overtook CoreWeave in market cap despite less deployed IT capacity. The re-rating reflects the perception that NBIS has a lot of unsold capacity amid rising GPU prices; signals that most of NBIS's revenue still comes from long-term capacity-reservation contracts (Cantor 'CoreWeave call', 2026-06-18). |
 
-**Síntese do quarter:** o fluxo valida números, sold-out e o selo NVDA, mas o debate migrou para duas nuances de qualidade — quanto da capacidade já é contratado vs especulativo em meio à alta de GPU prices (Cantor), e a dependência do custo de financiamento como variável de swing (WF). Tese intacta; a pergunta virou "a que preço de capital o ramp de '27 se sustenta".
+**Quarter synthesis:** the flow validates the numbers, the sold-out status and the NVDA seal of approval, but the debate has shifted to two quality nuances — how much of the capacity is already contracted vs speculative amid rising GPU prices (Cantor), and the dependence on financing cost as the swing variable (WF). Thesis intact; the question has become "at what cost of capital does the '27 ramp hold up."
 
 ## Management commentary — evolution (last 4 quarters)
 

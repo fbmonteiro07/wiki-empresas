@@ -4,6 +4,25 @@
 
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\META` (filings + transcripts) · `_equity_calls` · `_briefings\by-ticker\META.md`. Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Snapshot — Capstone official model + BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | **$257.0bn** | **$313.0bn** |
+| Gross profit | $205.3bn | $246.3bn |
+| Gross margin | 79.9% | 78.7% |
+| EBITDA | $118.5bn | $146.9bn |
+| EPS | **$32.72** | **$38.24** |
+| Capex | $147.8bn | $177.2bn |
+| OCF (≈EBITDA) | $118.5bn | $146.9bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="21.6" width="20" height="36.4" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="22.3" width="20" height="35.7" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="17.6" width="20" height="40.4" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+23.4% 3m · +21.0% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="14.5" width="20" height="43.5" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="14.7" width="20" height="43.3" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.1" width="20" height="43.9" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+1.5% 3m · +1.1% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_**Bold** = Capstone official model; plain = BBG consensus._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Family of Apps (Facebook, Instagram, WhatsApp, Threads, Messenger) reaches 3.5B+ daily users; ~98% of revenue is advertising. Reality Labs (Quest, AI glasses, Horizon) is the secondary, loss-making segment. The stock is now a hyperscaler/AI-capex name as much as a digital-ads name: META is building frontier models inside Meta Superintelligence Labs (MSL), spending on NVDA GPUs + AMD + Broadcom custom silicon (>1GW own ASIC rolling out per Q1'26 call), and signing multi-year cloud deals. Chain position: ad platform + AI hyperscaler / GPU + ASIC buyer + power/data-center demand driver.
 
@@ -42,7 +61,7 @@ _Source: Capstone official model (`Modelo Meta pós 2Q26.xlsm`, 2026-06-11)._
 | FCF ($bn) | 22 | -17 | -23 |
 
 **Scenario PT:** Bear **$525** / Base **$688** / Bull **$840** (EPS 35 / 38 / 42 × 15 / 18 / 20x).
-**House read:** receita $201 → $313bn (25-27E); capex dobra a $170bn levando FCF a negativo; PT-base $688 em ~18× EPS '27. (Capstone official model, 2026-06-11)
+**House read:** revenue $201 → $313bn (25-27E); capex doubles to $170bn pushing FCF negative; base PT $688 at ~18× EPS '27. (Capstone official model, 2026-06-11)
 
 ## Debate / thesis
 - **Capstone model (house view):** revenue $201B / $257B / $313B (2025/26/27E, +28%/+22%); EPS $29.06 / $32.72 / $38.24; EBIT margin ~42%→35% as capex ramps ($70B→$131B→$170B, FCF turning negative). Scenario PTs **Bear $525 / Base $688 / Bull $840** (base ≈ $38 EPS × 18x). (Capstone official model, 2026-06-11)
@@ -70,39 +89,39 @@ _Source: Capstone official model (`Modelo Meta pós 2Q26.xlsm`, 2026-06-11)._
 - **RL drag:** ~$4B/qtr operating loss; wearables thesis unproven at scale.
 - **Founder control:** super-voting structure limits shareholder recourse (BofA call).
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 FY26 · Apr 29 → Jun 23, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 FY26 · Apr 29 → Jun 23, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1'26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1'26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Demanda / ads** | Rev $56,3B +33%; price/ad +12%, imps +19% | UBS Vayner: walled gardens ganham share — mas UBS Linzer (bear): IG underperforma, core desacelera p/ ~4% FY, preço flat-to-up é a hesitação | **⚠ nuança** (core desacelera) |
-| **Capex / capital** | FY26 elevado p/ $125-145B (preço de memória) | JPM (bear): FY27E ~$185B/FY28E ~$225B, FCF negativo, funding gap ~$97B/3a, $25B em bonds | **⚠ nuança** (financiamento aperta) |
-| **Meta AI / monetização** | Muse Spark shipado; adaptive ranking live; 8M+ advertisers em GenAI tools | BofA: 33% é pre-AI-product (Muse Spark ainda fora do stack); Linzer: Business AI "not ready for prime time", mais 2027 | **⚠ nuança** (produto ainda não no stack) |
-| **Infra / ASIC** | — (in-house silicon) | JPM: Broadcom planeja múltiplos GW de MTIA a partir de 2027; META treina próxima geração em MTIA | **✓ confirma** (ramp ASIC corrobora) |
-| **Re-rate / produto** | "AI acceleration" em '26 | Wigg/Thill (mixed): "show-me story", falta wrapper/cloud comercial p/ re-rate estilo GOOG | **✗ contesta** (falta veículo enterprise) |
+| **Demand / ads** | Rev $56.3B +33%; price/ad +12%, imps +19% | UBS Vayner: walled gardens gain share — but UBS Linzer (bear): IG underperforms, core decelerates to ~4% FY, pricing flat-to-up is the hesitation | **⚠ nuance** (core decelerates) |
+| **Capex / capital** | FY26 raised to $125-145B (memory pricing) | JPM (bear): FY27E ~$185B/FY28E ~$225B, FCF negative, funding gap ~$97B/3yr, $25B in bonds | **⚠ nuance** (financing tightens) |
+| **Meta AI / monetization** | Muse Spark shipped; adaptive ranking live; 8M+ advertisers on GenAI tools | BofA: 33% is pre-AI-product (Muse Spark still outside the stack); Linzer: Business AI "not ready for prime time", more 2027 | **⚠ nuance** (product not yet in the stack) |
+| **Infra / ASIC** | — (in-house silicon) | JPM: Broadcom planning multiple GW of MTIA from 2027; META trains its next generation on MTIA | **✓ confirms** (ASIC ramp corroborates) |
+| **Re-rate / product** | "AI acceleration" in '26 | Wigg/Thill (mixed): "show-me story", lacks a commercial wrapper/cloud for a GOOG-style re-rate | **✗ contests** (lacks an enterprise vehicle) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
 | 04-15 | JPM | guidance | neutral | JPM internet preview for 1Q26: estimate setup and framing of the capex guide as the central theme heading into the print. |
 | 04-16 | BofA · Fenske | valuation | bull | BofA/Fenske (spec-sales): META screened as the cheapest Mag7 name on relative forward P/E following the social-media litigation selloff, with the best post-earnings revisions in the group and untapped consumer-AI optionality across IG/WhatsApp/FB. |
 | 04-20 | BofA · Fenske | guidance | bull | BofA/Fenske preview: expected a beat (Street rev $55.4B, ~70% performance ads), with Muse Spark targeting frontier quality by year-end; a capex guide raise framed as a "non-event" vs MSFT/GOOG/AMZN, but META still lacks the enterprise/cloud re-rate thesis. |
-| 04-30 | Expert recap (hyperscaler WRC) | demanda | mixed | Expert recap: META was the only big-three to flag macro — an ad-spend deceleration in March (Middle East, US/W Europe), recovering in April; still printed ~33%, ~1.5pts below the top of the guide. The first full quarter of EU "less-personalized-ads" regulation exposes ~16% of ad revenue. |
+| 04-30 | Expert recap (hyperscaler WRC) | demand | mixed | Expert recap: META was the only big-three to flag macro — an ad-spend deceleration in March (Middle East, US/W Europe), recovering in April; still printed ~33%, ~1.5pts below the top of the guide. The first full quarter of EU "less-personalized-ads" regulation exposes ~16% of ad revenue. |
 | 05-06 | BofA · Wigg | valuation | mixed | BofA/Wigg (spec-sales): META remains a "show-me story" that needs a "wow" product shipped to re-rate vs the easier capex justification at GOOG/MSFT/AMZN. |
 | 05-08 | MS · Brian Nowak | valuation | bull | Nowak (MS, OW PT $775): META is his #1 pick in the Mag7 — "a deep freaking moat" (3.5B DAU). Catalysts: a personal/shoppable agent ("Meta Claw"/Muse); ad rev could grow ~20-25% in '27 on algo improvement alone. Neocloud as "backup optionality" (~$10B/GW) = 8%+ of upside to '28 EPS. |
-| 06-01 | Jefferies · Brent Thill | produto | bull | Jefferies conf: a CIO said he would bring Meta into his enterprise environment IF Meta launched a commercial model wrapper/cloud (Red Hat-style) — framed as underpriced bull optionality; the absence of such a vehicle is precisely why it does not get a GOOG-style re-rate. |
-| 06-11 | BofA · Justin Post (equity call) | demanda | mixed | BofA equity call: the bull emphasizes that the 33% growth is pre-AI-product (Muse Spark NOT yet in the ads/reco stack). Bears (buy-side PMs): ~$30B of capex to ~$150B for ~10pts of incremental growth, incremental ROIC "deeply negative," the MSL lab as a hidden loss of ~$40B/year through '27; no enterprise/cloud story to re-rate on. |
+| 06-01 | Jefferies · Brent Thill | product | bull | Jefferies conf: a CIO said he would bring Meta into his enterprise environment IF Meta launched a commercial model wrapper/cloud (Red Hat-style) — framed as underpriced bull optionality; the absence of such a vehicle is precisely why it does not get a GOOG-style re-rate. |
+| 06-11 | BofA · Justin Post (equity call) | demand | mixed | BofA equity call: the bull emphasizes that the 33% growth is pre-AI-product (Muse Spark NOT yet in the ads/reco stack). Bears (buy-side PMs): ~$30B of capex to ~$150B for ~10pts of incremental growth, incremental ROIC "deeply negative," the MSL lab as a hidden loss of ~$40B/year through '27; no enterprise/cloud story to re-rate on. |
 | 06-16 | JPM ("AI Capex 2.0") | capital | bear | JPM: FY26 capex midpoint raised +$10bn to $135bn (memory cost); models ~$185bn FY27E / ~$225bn FY28E. FCF turns negative, cumulative funding gap ~$97bn over 3 years; contractual commitments +$107bn in the quarter to $238bn; 20% Hyperion stake with ~$28bn of RVG. Returned to the bond market with a $25bn deal. |
-| 06-16 | JPM ("AI Capex 2.0") | produto | bull | JPM: Broadcom planning multiple gigawatts of MTIA deployments starting in 2027; Meta intends to train its next-generation models on MTIA — corroborates the >1GW in-house ASIC ramp. |
-| 06-17 | UBS · Ben Legg | demanda | bull | UBS/Ben Legg: increasingly excited about Meta Business Agents as the biggest 5-year tailwind — a SaaS layer ($15 and $50/month, free today). Models a ~1-2pt tailwind already in Q4, lifting FY ad growth to ~30-31%; micro-businesses ~$1.5T of ad spend by 2030, with Meta capturing ~$200B. |
-| 06-18 | UBS · Vayner Media | demanda | bull | UBS/Vayner Media (ad-agency): digital spend is a "tale of two cities" — efficiency cleanup everywhere funding continued scale in the walled gardens (Google/Meta/TikTok/Amazon) at the expense of everyone else. |
-| 06-22 | UBS · Scott Linzer | demanda | bear | UBS/Scott Linzer (agency checks): more skeptical on the core — total Meta Q2 1.4-1.5% / Q3 3.4% / Q4 4.5-5% / FY ~4%; Meta pricing flat-to-up (it does not fall like Google's CPCs) is the key hesitation; Instagram materially underperforming; Meta Business AI "not ready for prime time," more of a 2027 opportunity. |
-| 06-24 | QCOM Investor Day / @PatrickMoorhead (FinTwit) | capital | mixed | **QCOM confirma META como primeiro grande cliente big-tech para seu CPU de datacenter (C1000, 2028).** Na QCOM Investor Day, Qualcomm revelou que a META assinou um **MOU** para ser o primeiro deployador de escala do chip **Oryon C1000** no datacenter — QCOM mira **$15B em receita de DC em FY2029**. Para META, a leitura é mista: (1) **bull** — META diversifica sua stack de CPU de datacenter para além de x86 (Intel/AMD), com potencial redução de TCO se o C1000 entregar (QCOM argumenta custo/performance competitivo vs Intel Xeon); (2) **neutro-bear de curto prazo** — o C1000 tem apenas 2028 como data de entrega, sem impacto em capex/ROIC do ciclo imediato; (3) o MOU sinaliza que META está explorando diversificação no mesmo momento em que o capex já subiu para $125-145B FY26. Contextualização: META já treina no MTIA (Broadcom ASIC), agora explora QCOM Oryon para CPU de servidor — uma segunda camada de diversificação além do NVDA GPU. (@PatrickMoorhead; QCOM Investor Day slides, 2026-06-24) |
+| 06-16 | JPM ("AI Capex 2.0") | product | bull | JPM: Broadcom planning multiple gigawatts of MTIA deployments starting in 2027; Meta intends to train its next-generation models on MTIA — corroborates the >1GW in-house ASIC ramp. |
+| 06-17 | UBS · Ben Legg | demand | bull | UBS/Ben Legg: increasingly excited about Meta Business Agents as the biggest 5-year tailwind — a SaaS layer ($15 and $50/month, free today). Models a ~1-2pt tailwind already in Q4, lifting FY ad growth to ~30-31%; micro-businesses ~$1.5T of ad spend by 2030, with Meta capturing ~$200B. |
+| 06-18 | UBS · Vayner Media | demand | bull | UBS/Vayner Media (ad-agency): digital spend is a "tale of two cities" — efficiency cleanup everywhere funding continued scale in the walled gardens (Google/Meta/TikTok/Amazon) at the expense of everyone else. |
+| 06-22 | UBS · Scott Linzer | demand | bear | UBS/Scott Linzer (agency checks): more skeptical on the core — total Meta Q2 1.4-1.5% / Q3 3.4% / Q4 4.5-5% / FY ~4%; Meta pricing flat-to-up (it does not fall like Google's CPCs) is the key hesitation; Instagram materially underperforming; Meta Business AI "not ready for prime time," more of a 2027 opportunity. |
+| 06-24 | QCOM Investor Day / @PatrickMoorhead (FinTwit) | capital | mixed | **QCOM confirms META as the first major big-tech customer for its datacenter CPU (C1000, 2028).** At QCOM Investor Day, Qualcomm revealed that META signed an **MOU** to be the first scale deployer of the **Oryon C1000** chip in the datacenter — QCOM targets **$15B in DC revenue in FY2029**. For META, the read is mixed: (1) **bull** — META diversifies its datacenter CPU stack beyond x86 (Intel/AMD), with potential TCO reduction if the C1000 delivers (QCOM argues competitive cost/performance vs Intel Xeon); (2) **neutral-to-bear near-term** — the C1000 has only 2028 as a delivery date, no impact on the immediate cycle's capex/ROIC; (3) the MOU signals META is exploring diversification at the same time capex has already risen to $125-145B FY26. Context: META already trains on MTIA (Broadcom ASIC), and is now exploring QCOM Oryon for the server CPU — a second layer of diversification beyond the NVDA GPU. (@PatrickMoorhead; QCOM Investor Day slides, 2026-06-24) |
 
-**Síntese do quarter:** o print foi forte (+33% pre-AI-product), mas o debate migrou do crescimento de ads para a equação capex×ROIC — JPM modela FCF negativo e funding gap de ~$97B, enquanto bears veem MSL como ~$40B/ano de perda escondida. A controvérsia central virou a ausência de um veículo enterprise/cloud que destrave o re-rate estilo GOOG (Wigg/Thill), com o upside de monetização AI (Business Agents) ainda visto como história de 2027 (Linzer). Em 24-Jun, a confirmação de META como primeiro cliente big-tech do CPU C1000 da QCOM (datacenter, 2028) acrescenta uma camada de diversificação de stack que o mercado monitora como sinal de disciplina de TCO.
+**Quarter synthesis:** the print was strong (+33% pre-AI-product), but the debate shifted from ad growth to the capex×ROIC equation — JPM models negative FCF and a ~$97B funding gap, while bears see MSL as a hidden ~$40B/year loss. The central controversy became the absence of an enterprise/cloud vehicle that would unlock a GOOG-style re-rate (Wigg/Thill), with the AI monetization upside (Business Agents) still seen as a 2027 story (Linzer). On Jun-24, the confirmation of META as the first big-tech customer for QCOM's C1000 CPU (datacenter, 2028) adds a layer of stack diversification that the market is watching as a signal of TCO discipline.
 
 ## Management commentary — evolution (last 6 quarters)
 
@@ -120,7 +139,7 @@ _Source: META earnings calls (dates above); management commentary, paraphrased._
 ## Sources
 - **Filings:** [10-K FY25 (2026-01-29)](../META/META_10-K_2026-01-29_0001628280-26-003942.html) — business overview + risk factors.
 - **Transcripts:** [Q1 FY26 (2026-04-29)](../META/transcripts/META_Q1-2026-earnings_2026-04-29.md) · [Q4 FY25 (2026-01-28)](../META/transcripts/META_Q4-2025-earnings_2026-01-28.md).
-- **Equity calls:** [Nowak — hyperscaler capex (2026-05-08)](../_equity_calls/Internet/2026-05-08_Nowak_hyperscaler-capex.md) · [Justin Post — Meta (2026-06-11)](../_equity_calls/Internet/2026-06-11_JustinPost_Meta.md). Outras na seção META do [INDEX](../INDEX.md).
+- **Equity calls:** [Nowak — hyperscaler capex (2026-05-08)](../_equity_calls/Internet/2026-05-08_Nowak_hyperscaler-capex.md) · [Justin Post — Meta (2026-06-11)](../_equity_calls/Internet/2026-06-11_JustinPost_Meta.md). Others in the META section of [INDEX](../INDEX.md).
 - **Briefings:** [META roll-up](../_briefings/by-ticker/META.md) — 32 datapoints / 28 days.
 - **Research reports (relatórios bons):**
   - [3Q25 Data Center Leasing — Hyperscalers Hunt for MWs](../relat%C3%B3rios%20bons/3Q25_Data_Center_Leasing__Hyperscalers_Hunt_for_MWs_in_New_L.html) — Jefferies (2025-11-10): META 2025 capex $71B mid; $60B automated-ad run-rate; compute-starved; BUY.

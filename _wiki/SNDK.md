@@ -4,6 +4,24 @@
 
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\SNDK` (filings + transcripts) · `_briefings` (well-covered: NAND/memory). Master index: [../00_INDEX.md](00_INDEX.md). Theme: [HBM / Memory super-cycle](themes/hbm-memory.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $35.6bn | $50.0bn |
+| Gross profit | $28.6bn | $41.2bn |
+| Gross margin | 80.2% | 82.4% |
+| EBITDA | $26.0bn | $34.3bn |
+| EPS | $143.10 | $206.58 |
+| Capex | $359m | $435m |
+| OCF (≈EBITDA) | $26.0bn | $34.3bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="30.9" width="20" height="27.1" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.7" width="20" height="43.3" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+62.4% 3m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="38.3" width="20" height="19.7" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="17.2" width="20" height="40.8" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+123.5% 3m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 SanDisk is a pure-play **NAND flash** maker and storage-solutions vendor — flash components plus SSDs, memory cards and drives sold under the SanDisk and WD brands (FY25 10-K, 2025-08-21). It is the **standalone flash business spun out of Western Digital**, which separated on **Feb 21, 2025**; trades on Nasdaq as SNDK with only a short post-spin filing history (one 10-K, six 10-Qs as of Jun-2026). It runs a **single reportable segment** but reports three end-markets: **Data Center, Edge (PC/mobile), and Consumer** (10-K; Q3 FY26 transcript, 2026-04-30). Bits come from the long-standing **Kioxia "Flash Ventures" JV** (BiCS NAND fabs in Yokkaichi & Kitakami, Japan; JV extended to Dec-2034). It competes with Samsung, SK Hynix and YMTC in flash (FY25 10-K). The thesis: NAND is being repriced from a commodity into a strategic AI-storage input — enterprise/QLC SSD for the data-center capacity tier and KV-cache, plus on-device-AI premium storage at the edge. The demand math that underpinned the re-rate: MS sizes an **incremental ~US$29bn AI-NAND TAM by 2029**, with AI NAND reaching **34% of the global NAND market / 431EB (~20% of bit shipments) by 2029**, driven by CSP AI-inference storage (MS AI NAND overview, 2025-09-10).
 
@@ -90,31 +108,31 @@ SanDisk sits in the **middle** of the flash chain: it co-develops and co-manufac
 - **JPM 'Bits, Broadcasts & Bandwidth'** _(2026-05-29)_: **SanDisk** benefits with WDC/Seagate from improving enterprise-storage demand + rising flash pricing + higher nearline capacity.
 - **Morgan Stanley** (per briefings): bullish NAND call, street-high PT **~$1,750** flagged — with crowding / all-time-high cautionary notes.
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q3 FY26 print + intra-quarter · Apr 30 → Jun 23, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q3 FY26 print + intra-quarter · Apr 30 → Jun 23, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q3 FY26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q3 FY26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Margem / preço** | GM 78,4% (vs guide 65-67%); move é todo price/mix; Q4 guide 79-81% | MS (Moore): Q3 NAND pricing +20-30% QoQ, SNDK é price-setter ("being the bad guy") | **✓ confirma** (preço puxando margem) |
-| **LTAs / NBMs** | 5 NBMs, $42B backlog, >$11B garantias, >1/3 dos bits FY27 | Bernstein (ex-WDC Rob): garantias ~25% limitam downside efetivo a ~-25%; JPM: floor/ceiling + walkaways, undersupply estendida p/ end-CY27 | **✓ confirma** (estrutura dos contratos validada) |
-| **Oferta / undersupply** | Bits flat y/y; crescimento é price/mix | JPM (TMC): SNDK estendeu undersupply de end-CY26 p/ end-CY27 | **✓ confirma** (tightness mais longa) |
-| **Valuation 2028** | — | MS prefere Micron: SNDK mais caro em números 2028; alguns LTAs 2028 com preços DOWN vs 2027 (enterprise TLC) | **⚠ nuança** (lock-in de 2028 mais fraco) |
-| **Produto / tech** | BiCS 8 "gold standard"; liderou TLC eSSD | Redburn (O'Mara): prefere Kioxia no ângulo de latência p/ agentic; HPF da SNDK só em 2028 — "if Super IO works, HPF is dead on arrival" | **⚠ nuança** (gap de latência em 2028) |
+| **Margin / price** | GM 78.4% (vs guide 65-67%); the move is all price/mix; Q4 guide 79-81% | MS (Moore): Q3 NAND pricing +20-30% QoQ, SNDK is price-setter ("being the bad guy") | **✓ confirms** (price driving margin) |
+| **LTAs / NBMs** | 5 NBMs, $42B backlog, >$11B guarantees, >1/3 of FY27 bits | Bernstein (ex-WDC Rob): ~25% guarantees cap effective downside at ~-25%; JPM: floor/ceiling + walkaways, undersupply extended to end-CY27 | **✓ confirms** (contract structure validated) |
+| **Supply / undersupply** | Bits flat y/y; growth is price/mix | JPM (TMC): SNDK extended undersupply from end-CY26 to end-CY27 | **✓ confirms** (longer tightness) |
+| **2028 valuation** | — | MS prefers Micron: SNDK more expensive on 2028 numbers; some 2028 LTAs with prices DOWN vs 2027 (enterprise TLC) | **⚠ nuance** (weaker 2028 lock-in) |
+| **Product / tech** | BiCS 8 "gold standard"; led TLC eSSD | Redburn (O'Mara): prefers Kioxia on the latency angle for agentic; SNDK's HPF only in 2028 — "if Super IO works, HPF is dead on arrival" | **⚠ nuance** (latency gap in 2028) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
 | 05-04 | Bernstein · expert ex-WDC NAND VP Rob (HDD/NAND) | capital | bull | Mechanics of NBM enforceability: ~$11B of guarantees on ~$42B (~25%) — in a severe downturn, a customer that tears up the deal still leaves SanDisk capturing ~25%, so a -50% market price translates to an effective ASP of only ~-25%. In practice 'tearing up' = renegotiating for more years at a lower price. All high-capacity drives (128/256TB) are QLC, where SanDisk + Kioxia 'have done very well.' |
 | 05-22 | JPM (Conf feedback) | supply | bull | JPM corroborates the LTA layer at TMC: SanDisk extended the undersupply call from end-CY26 to end-CY27; the three signed LTAs carry floor-and-ceiling pricing and pre-pay-style walkaways with financial guarantees; BiCS 8 (200L+, TLC+QLC) executing well. |
 | 06-01 | Goldman Sachs (briefing) | valuation | bull | GS went into 'full bullish mode' on memory stocks, citing MU + SNDK. |
 | 06-03 | Morgan Stanley · Joseph Moore (briefing) | valuation | bull | MS (OW) raised PT to $1,750 (from $1,100), up +59%; SNDK repeatedly cited in GOOG's $80B AI supply-chain map for NAND (ParadisLabs). |
-| 06-22 | Morgan Stanley · Joe Moore (Memory & semicap) | margem | mixed | MS rates NAND fundamentals '8 of 10' vs DRAM '10/10'; SanDisk has become 'everyone's preferred investment' and is the price-setter ('being the bad guy,' Koreans pricing just below), but MS still prefers Micron because SanDisk looks more expensive on 2028 numbers. Some 2028 LTA lock-in prices are down vs 2027 ('materially' in some cases, esp. enterprise TLC). Q3 NAND pricing seen +20-30% QoQ. |
-| 06-23 | Redburn · Conor O'Mara (Asia Trip) | competicao | bear | Conor prefers Kioxia over SanDisk on the latency angle for agentic AI: SanDisk's HPF (its answer to Kioxia's Super IO/XL Flash, in design with Global Unichip) only ships in 2028, by which point Super IO SLC will have been shipping for ~2 years. Direct read: 'if Super IO works, HPF is dead on arrival.' |
+| 06-22 | Morgan Stanley · Joe Moore (Memory & semicap) | margin | mixed | MS rates NAND fundamentals '8 of 10' vs DRAM '10/10'; SanDisk has become 'everyone's preferred investment' and is the price-setter ('being the bad guy,' Koreans pricing just below), but MS still prefers Micron because SanDisk looks more expensive on 2028 numbers. Some 2028 LTA lock-in prices are down vs 2027 ('materially' in some cases, esp. enterprise TLC). Q3 NAND pricing seen +20-30% QoQ. |
+| 06-23 | Redburn · Conor O'Mara (Asia Trip) | competition | bear | Conor prefers Kioxia over SanDisk on the latency angle for agentic AI: SanDisk's HPF (its answer to Kioxia's Super IO/XL Flash, in design with Global Unichip) only ships in 2028, by which point Super IO SLC will have been shipping for ~2 years. Direct read: 'if Super IO works, HPF is dead on arrival.' |
 
-**Síntese do quarter:** o ciclo de preço/margem e a estrutura dos NBMs estão amplamente confirmados pelo fluxo (SNDK como price-setter, undersupply até end-CY27); o debate migrou para a cauda — valuation em números de 2028 (MS prefere Micron, alguns LTAs 2028 com preços abaixo de 2027) e o risco competitivo de latência no enterprise (Redburn: Kioxia Super IO vs HPF da SNDK só em 2028).
+**Quarter synthesis:** the price/margin cycle and the NBM structure are broadly confirmed by the flow (SNDK as price-setter, undersupply through end-CY27); the debate has shifted to the tail — valuation on 2028 numbers (MS prefers Micron, some 2028 LTAs priced below 2027) and the competitive latency risk in enterprise (Redburn: Kioxia Super IO vs SNDK's HPF only in 2028).
 
 ## Management commentary — evolution (last 4 quarters)
 

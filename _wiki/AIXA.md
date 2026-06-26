@@ -4,6 +4,24 @@
 
 _Wiki · generated 2026-06-19 · **German issuer (Prime Standard, Frankfurt; ticker AIXA GR) — NO SEC 10-K/10-Q/20-F.** Built from earnings transcripts + Aixtron IR + BBG estimates (EUR). **Internal coverage is thin** — name appears only in briefing read-across, not in our filings/equity-calls corpus. Sources: `E:\Wiki Felipe\AIXA\transcripts` · `E:\briefings\2026`. Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · EUR
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | €579m | €817m |
+| Gross profit | €247m | €362m |
+| Gross margin | 42.7% | 44.3% |
+| EBITDA | €137m | €159m |
+| EPS | €0.81 | €1.42 |
+| Capex | €34m | €34m |
+| OCF (≈EBITDA) | €137m | €159m |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="18.6" width="20" height="39.4" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="19.8" width="20" height="38.2" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="15.1" width="20" height="42.9" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+15.3% 3m · +11.8% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="26.8" width="20" height="31.2" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="24.0" width="20" height="34.0" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="16.1" width="20" height="41.9" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+29.4% 3m · +41.1% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 AIXTRON makes **MOCVD / epitaxy deposition equipment** (metal-organic chemical vapour deposition) for **compound semiconductors** — the tools that grow the III-V and wide-bandgap layers on wafers. It does not make chips; it sells the capital equipment to chipmakers. Four demand pillars: **optoelectronics** (lasers/EML/PIC, VCSEL, photonics for AI-datacenter optics), **GaN power**, **SiC power**, and **LED/MicroLED**. FY2025 revenue EUR 557m, -12% yoy, GM 40%, EBIT EUR 100m (Aixtron FY25 call, 2026-02-26). HQ Herzogenrath, Germany. Flagship platform: **G10** family (G10-AsP for lasers/photonics, G10-GaN, G10-SiC). Structurally a small-cap semicap with **near-monopoly niche share** — historically >90% in InP/laser epitaxy, >85% in GaN epitaxy (Q3/25 call, 2025-10-30).
 
@@ -80,27 +98,27 @@ A textbook "weak P&L, strong bookings" quarter. **Revenue EUR 59m, -47% yoy** (w
 - **Jefferies Global SEMIS Daily** _(2026-06-19)_: "AIXTRON — A Multi-Year A.I. Capex Play?"; **Crux Capital (optics)** _(2026-06-19)_ lists Aixtron among upstream optical tool providers.
 - **Jefferies (Om Bakhda / Janardan Menon)** — "Underappreciated AI Play with an Inflection Ahead — Upgrade to Buy" _(2026-02-10)_: **upgrade Hold→Buy, PT €18.20→€27** (+33%, off €20.32). Opto +18.5% vs cons FY26; ~90% GaN MOCVD share into 800V HVDC; SiC derisked to ~€40m (-70%). Bull/bear scenarios €35.8 (+76%) / €9.8 (-52%) on FY27 EV/EBITDA of 21x / 13x.
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 FY26 print → intra-quarter · Apr 30 → Jun 19, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 FY26 print → intra-quarter · Apr 30 → Jun 19, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1'26, 30 Abr 2026) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1'26, 30 Apr 2026) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Optoeletrônica / lasers AI-datacom** | "Clear inflection point"; >2/3 da intake | Beavington/Jefferies: transceiver units +~5x 2025-2028, ~100% share InP MOCVD, opto >2/3 da intake · Crux Capital lista AIXA entre os fornecedores upstream de óptica | **✓ confirma** (re-rate da óptica) |
-| **Order intake / book-to-bill** | EUR 171m, +~30% yoy | Jefferies +8%/+16% acima do consenso FY28 rev/EPS — "Multi-Year A.I. Capex Play" | **✓ confirma** (demanda corrobora) |
-| **Margens (GM)** | FY26 elevado p/ GM ~42% | Beavington vê upside de GM em volume de tools + mix crescente de G10 | **✓ confirma** (alavanca de mix) |
-| **GaN / SiC power** | GaN estável mas fraco (<10% da intake); SiC subutilizado | Read-across do Q1/26 marcado "positive in Optical **and Power**" (Capstone) | **⚠ nuança** (power leve no fluxo) |
+| **Optoelectronics / AI-datacom lasers** | "Clear inflection point"; >2/3 of intake | Beavington/Jefferies: transceiver units +~5x 2025-2028, ~100% InP MOCVD share, opto >2/3 of intake · Crux Capital lists AIXA among the upstream optical suppliers | **✓ confirms** (optical re-rate) |
+| **Order intake / book-to-bill** | EUR 171m, +~30% yoy | Jefferies +8%/+16% above FY28 rev/EPS consensus — "Multi-Year A.I. Capex Play" | **✓ confirms** (demand corroborates) |
+| **Margins (GM)** | FY26 raised to GM ~42% | Beavington sees GM upside on tool volumes + a growing G10 mix | **✓ confirms** (mix lever) |
+| **GaN / SiC power** | GaN stable but soft (<10% of intake); SiC underutilized | Read-across from Q1/26 tagged "positive in Optical **and Power**" (Capstone) | **⚠ nuance** (power light in the flow) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 05-11 | Capstone Morning Briefing | demanda | bull | Read-across from Q1/26 tagged "positive in Optical and Power." |
+| 05-11 | Capstone Morning Briefing | demand | bull | Read-across from Q1/26 tagged "positive in Optical and Power." |
 | 06-19 | Jefferies · Will Beavington | valuation | bull | "AIXTRON: The Multi-Year OPTICAL Play" — Buy, PT raised to EUR 73. US optical model has transceiver units +~5x 2025-2028 against AIXA's ~100% InP MOCVD share; +8%/+16% above the FY28 consensus on revenue/EPS, with GM upside on tool volumes + a growing G10 mix; opto >2/3 of order intake. |
-| 06-19 | Jefferies Global SEMIS Daily | demanda | bull | "AIXTRON — A Multi-Year A.I. Capex Play?". Crux Capital (optics) lists Aixtron among the upstream optical-tool suppliers. |
+| 06-19 | Jefferies Global SEMIS Daily | demand | bull | "AIXTRON — A Multi-Year A.I. Capex Play?". Crux Capital (optics) lists Aixtron among the upstream optical-tool suppliers. |
 
-**Síntese do quarter:** o debate migrou de "P&L fraco em trough quarter" para a duração da onda óptica de AI-datacom — a Jefferies dobrou a aposta levando o PT de EUR 27 (fev) a EUR 73, e o fluxo todo gravita pro share quase-monopólio em InP MOCVD; power (GaN/SiC) virou opcionalidade de 2027/28, não o driver atual.
+**Quarter synthesis:** the debate migrated from "weak P&L in a trough quarter" to the duration of the AI-datacom optical wave — Jefferies doubled down, taking the PT from EUR 27 (Feb) to EUR 73, and the whole flow gravitates to the near-monopoly InP MOCVD share; power (GaN/SiC) became 2027/28 optionality, not the current driver.
 
 ## Management commentary — evolution (last 4 quarters)
 

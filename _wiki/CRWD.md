@@ -4,6 +4,24 @@
 
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\CRWD` (filings + transcripts) · `E:\briefings\2026`. Master index: [../00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $5.9bn | $7.2bn |
+| Gross profit | $4.7bn | $5.7bn |
+| Gross margin | 78.7% | 79.2% |
+| EBITDA | $1.8bn | $2.2bn |
+| EPS | $4.83 | $6.21 |
+| Capex | $403m | $444m |
+| OCF (≈EBITDA) | $1.8bn | $2.2bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="15.2" width="20" height="42.8" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="14.6" width="20" height="43.4" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.7" width="20" height="43.3" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+1.4% 3m · +2.8% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="14.4" width="20" height="43.6" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.1" width="20" height="43.9" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+0.1% 3m · +0.9% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 > **Fidelity flag:** the two transcripts read (Q1 FY27 2026-06-03, Q4 FY26 2026-03-03) are third-party reconstructions (fool.com via WebFetch) — close paraphrase, **not verbatim**; quotation marks retained only where the source carried them. The WebFetch summary mislabeled Q1 FY27 as "ended Jan 31 2027" — it ended **April 30 2026** (confirmed by the 10-Q filed 2026-06-04). Q3/Q2 FY26 saved from WebSearch headline summaries (metrics only). No CRWD-specific sell-side PT exists in the on-disk briefings — only read-throughs and expert-call invites (see Debate); a standing MS rating is now confirmed via disclosure tables (see Debate).
 
 ## Snapshot
@@ -93,30 +111,30 @@ Record Q1, beat-and-raise. Total revenue $1.39bn (+26% y/y); subscription $1.32b
 - **Morgan Stanley TMT** _(2026-06-05)_: 'CRWD bullish on AI demand.'
 - **BTG Mythos expert call** _(2026-06-18)_: AI-driven-attack escalation = secular tailwind for AI-native cyber (Falcon / Charlotte AI / AIDR).
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 FY27 · Apr 13 → Jun 18, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 FY27 · Apr 13 → Jun 18, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1 FY27) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1 FY27) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Crescimento / ARR** | Rev $1,39bn, +26% (acelerando); ending ARR $5,51bn (+24%); net new ARR $256M (+32%, recorde Q1) | Jefferies (Cyber Joe): CRWD "go-to in a deserted island", quer cortar 80 ferramentas p/ ~5 · Bernstein: print FTNT é positivo p/ CRWD | **✓ confirma** (preferência de consolidação) |
-| **IA como tailwind** | AIDR +250%+ q/q; Kurtz reposiciona CRWD como "critical AI infra" | WFC: cyber é o "bright spot" onde se fala mais de oportunidade que de risco de IA · BTG: ataques IA = tailwind secular | **✓ confirma** (IA é oportunidade) |
-| **Budgets / demanda** | Guide FY27 elevado: net new ARR $1,279-1,303bn | UBS (Boyd): budgets "melhores que há meses" mas times resource-constrained, ciclos 6-12m não comprimem; dólares incrementais podem se espalhar | **⚠ nuança** (incremental se dispersa) |
-| **Consolidação / Flex** | Falcon Flex ARR $1,9bn (+99%); 480 ReFlex | Jefferies: CISOs querem reduzir stack p/ ~5 vendors (CRWD/PANW citados) | **✓ confirma** (Flex captura consolidação) |
+| **Growth / ARR** | Rev $1.39bn, +26% (accelerating); ending ARR $5.51bn (+24%); net new ARR $256M (+32%, record Q1) | Jefferies (Cyber Joe): CRWD "go-to in a deserted island", wants to cut 80 tools to ~5 · Bernstein: the FTNT print is positive for CRWD | **✓ confirms** (consolidation preference) |
+| **AI as tailwind** | AIDR +250%+ q/q; Kurtz repositions CRWD as "critical AI infra" | WFC: cyber is the "bright spot" where there's more talk of opportunity than AI risk · BTG: AI attacks = secular tailwind | **✓ confirms** (AI is an opportunity) |
+| **Budgets / demand** | FY27 guide raised: net new ARR $1.279-1.303bn | UBS (Boyd): budgets "better than a few months ago" but teams resource-constrained, 6-12m cycles don't compress; incremental dollars may spread | **⚠ nuance** (incremental spreads out) |
+| **Consolidation / Flex** | Falcon Flex ARR $1.9bn (+99%); 480 ReFlex | Jefferies: CISOs want to cut the stack to ~5 vendors (CRWD/PANW cited) | **✓ confirms** (Flex captures consolidation) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 04-13 | WFC · software conf recap | demanda | bull | WFC reported that its meeting with CrowdStrike at the conference was "very upbeat" on Project Glasswing/Mythos; cyber was "the one bright spot where people talk more about the AI opportunity than the AI risk" — Mythos seen as a net positive for cyber budgets. On the Glasswing logo list, only CrowdStrike and Palo were cited, making it "difficult to figure out who else to own". |
-| 05-05 | Morgan Stanley · TMT | demanda | bull | Morgan Stanley TMT (Outlook): 'CRWD bullish on AI demand.' |
-| 05-14 | Bernstein · Seidman | competicao | bull | Bernstein/Seidman: the FTNT print is a "positive for PANW/S/CRWD" read. |
-| 06-01 | Jefferies · Brent Thill / "Cyber Joe" | demanda | bull | Jefferies' CIO at the conference named CrowdStrike as his "go-to in a deserted island with one raft" (endpoint + cloud + ITDR), wanting to cut 80 cyber tools down to ~5. Structural point: even if Anthropic/OpenAI dominated the enterprise, "you would still need a third-party security auditor" — frontier-lab dominance does not displace CRWD. |
+| 04-13 | WFC · software conf recap | demand | bull | WFC reported that its meeting with CrowdStrike at the conference was "very upbeat" on Project Glasswing/Mythos; cyber was "the one bright spot where people talk more about the AI opportunity than the AI risk" — Mythos seen as a net positive for cyber budgets. On the Glasswing logo list, only CrowdStrike and Palo were cited, making it "difficult to figure out who else to own". |
+| 05-05 | Morgan Stanley · TMT | demand | bull | Morgan Stanley TMT (Outlook): 'CRWD bullish on AI demand.' |
+| 05-14 | Bernstein · Seidman | competition | bull | Bernstein/Seidman: the FTNT print is a "positive for PANW/S/CRWD" read. |
+| 06-01 | Jefferies · Brent Thill / "Cyber Joe" | demand | bull | Jefferies' CIO at the conference named CrowdStrike as his "go-to in a deserted island with one raft" (endpoint + cloud + ITDR), wanting to cut 80 cyber tools down to ~5. Structural point: even if Anthropic/OpenAI dominated the enterprise, "you would still need a third-party security auditor" — frontier-lab dominance does not displace CRWD. |
 | 06-18 | UBS · Roger Boyd | valuation | bear | UBS (over a dozen checks with CISOs): cyber budgets "in a better place than a few months ago" on board-level Mythos urgency, but teams remain resource-constrained and 6-12 month cycles are not compressing. Net: UBS turns slightly more positive on the non-CRWD/PANW vendors and slightly more cautious on CrowdStrike and Palo, on the view that the incremental dollars may spread out. |
-| 06-18 | BTG · Mythos expert call | demanda | bull | BTG Mythos expert call (Outlook): escalation of AI-driven attacks = secular tailwind for AI-native cyber (Falcon / Charlotte AI / AIDR). |
+| 06-18 | BTG · Mythos expert call | demand | bull | BTG Mythos expert call (Outlook): escalation of AI-driven attacks = secular tailwind for AI-native cyber (Falcon / Charlotte AI / AIDR). |
 
-**Síntese do quarter:** print de beat-and-raise com ARR acelerando confirma a tese de consolidação (Jefferies/CISOs querem ~5 vendors) e IA como tailwind de cyber; a única nuança veio da UBS (Boyd), que vê budgets melhores mas alerta que os dólares incrementais podem se espalhar para vendors não-CRWD/PANW, tornando-se ligeiramente mais cautelosa no par líder.
+**Quarter synthesis:** a beat-and-raise print with accelerating ARR confirms the consolidation thesis (Jefferies/CISOs want ~5 vendors) and AI as a cyber tailwind; the only nuance came from UBS (Boyd), who sees better budgets but warns the incremental dollars may spread to non-CRWD/PANW vendors, turning slightly more cautious on the leading pair.
 
 ## Management commentary — evolution (last 4 quarters)
 

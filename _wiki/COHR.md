@@ -4,6 +4,25 @@
 
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\COHR` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\COHR.md`. Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Snapshot — Capstone official model + BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | **$9.1bn** | **$16.6bn** |
+| Gross profit | $3.6bn | $6.8bn |
+| Gross margin | **40.0%** | **41.0%** |
+| EBITDA | $2.1bn | $3.0bn |
+| EPS | **$8.27** | **$19.21** |
+| Capex | $1.0bn | $1.1bn |
+| OCF (≈EBITDA) | $2.1bn | $3.0bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="17.0" width="20" height="41.0" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="14.9" width="20" height="43.1" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+2.1% 3m · +7.2% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="24.2" width="20" height="33.8" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="18.5" width="20" height="39.5" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.3" width="20" height="43.7" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+11.3% 3m · +30.1% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_**Bold** = Capstone official model; plain = BBG consensus._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Coherent is a vertically-integrated photonics maker that has re-rated into one of the cleanest large-cap plays on AI optical interconnect. The story is the Data Center & Communications segment, now ~75% of revenue (Q3 FY26, 2026-05-06), spanning datacom transceivers (800G/1.6T), DCI/scale-across coherent transceivers (ZR/ZR+), optical circuit switching (OCS), and an emerging co-packaged optics (CPO) franchise. The legacy Industrial segment (lasers, engineered materials, semicap) is the smaller, cyclical balance. Coherent's structural edge is owning the indium phosphide (InP) supply chain — EMLs, CW lasers, photodiodes — which is the binding constraint for the entire transceiver industry. Per the 10-K (FY25, 2025-08-15) the legacy reporting structure is three segments (Networking, Materials, Lasers); management now guides on the DC&Comms vs Industrial split. CEO Jim Anderson (ex-Lattice), CFO Sherri Luther.
 
@@ -34,7 +53,7 @@ _Source: Capstone official model (`Modelo COHR.xlsx`, 2026-05-26). Built on Jeff
 | EPS — pro forma ($) | 2.76 | 4.35 | 8.27 | 19.21 | 23.60 |
 | Gross margin | ~37% | ~39% | ~40% | ~41% | ~41% |
 
-**House read:** receita $6.3bn → $19.6bn (CY25-28E) no ramp 800G/1.6T (DC/Comms 68% → 88% do mix); EPS PF $4.35 → $23.60. (Capstone official model — Jefferies-based, 2026-05-26)
+**House read:** revenue $6.3bn → $19.6bn (CY25-28E) on the 800G/1.6T ramp (DC/Comms 68% → 88% of mix); pro forma EPS $4.35 → $23.60. (Capstone official model — Jefferies-based, 2026-05-26)
 
 ## Debate / thesis
 - **Capstone model (house view, built on Jefferies/Blayne Curtis):** revenue $6.3B→$9.1B→$16.6B→$19.6B (CY25-28E, +19/+44/+83/+18%) on the 800G/1.6T DC ramp (DC/Comms mix 68%→88%); pro-forma EPS $4.35 / $8.27 / $19.21 / $23.60; GM ~39%→41%, EBITDA margin ~23%→33%. (Capstone official model — based on Jefferies, 2026-05-26)
@@ -62,23 +81,23 @@ _Source: Capstone official model (`Modelo COHR.xlsx`, 2026-05-26). Built on Jeff
 ## In the inbox / theme read-through
 - **JPM "Watts Up! Shift to 800V" (2026-06-09):** Coherent named among Wolfspeed's **SiC power-semiconductor peers** (with Infineon, Mitsubishi, Navitas, onsemi, Power Integrations, ROHM, STMicro) in the 800V wide-bandgap power-device opportunity (WBG market $1bn→$5bn+ by 2030, 30%+ CAGR). A peripheral, optionality-only mention — COHR's equity story remains optical interconnect, not 800V power semis — but flags a SiC-materials adjacency worth tracking (JPM "800V", 2026-06-09).
 
-## Intra-quarter — calls, comentários & relatórios
+## Intra-quarter — calls, commentary & reports
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q3 FY26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q3 FY26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **CPO / lasers UHP** | CPO TAM >$15B; scale-out H2 CY26, scale-up H2 CY27; NVDA $2B deal | BofA/Arya: primeiros lasers p/ scale-out CPO embarcam 1H27; BTG: só COHR e LITE fonte confiável de laser UHP | **✓ confirma** (moat na fonte de luz) |
-| **InP / 6-inch** | Capacidade dobra 1 tri adiantado; >2x de novo CY27; 6" ajuda GM | BofA: vantagem 6" atende demanda em qualquer plataforma (SiPho/EML) | **✓ confirma** (6" é o diferencial) |
-| **Margem** | GM 39,6% (+57bp q/q); target >42% via 1.6T+6"+pricing | BofA: mantém NEUTRAL pois 41x CY27 já precifica earnings power à frente | **⚠ nuança** (múltiplo limita, não a margem) |
-| **Demanda / share** | DC&Comms +>40% y/y; visibilidade CY2028 | BofA: 20-30% share global de transceivers, best-positioned p/ 800G/1.6T | **✓ confirma** (share sustenta volume) |
+| **CPO / UHP lasers** | CPO TAM >$15B; scale-out H2 CY26, scale-up H2 CY27; NVDA $2B deal | BofA/Arya: first lasers for scale-out CPO ship 1H27; BTG: only COHR and LITE a reliable UHP laser source | **✓ confirms** (moat in the light source) |
+| **InP / 6-inch** | Capacity doubles a quarter early; >2x again CY27; 6" aids GM | BofA: 6" advantage serves demand on any platform (SiPho/EML) | **✓ confirms** (6" is the differentiator) |
+| **Margin** | GM 39.6% (+57bp q/q); target >42% via 1.6T+6"+pricing | BofA: stays NEUTRAL as 41x CY27 already prices in earnings power ahead | **⚠ nuance** (the multiple caps it, not the margin) |
+| **Demand / share** | DC&Comms +>40% y/y; visibility into CY2028 | BofA: 20-30% global transceiver share, best-positioned for 800G/1.6T | **✓ confirms** (share sustains volume) |
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 05-13 | BofA · Vivek Arya | valuation | neutral | **PO $365 → $400, mantém NEUTRAL** (41x CY27 PE vs 40x antes) — no topo do range histórico 7x-41x. Com **20-30% de share global de transceivers**, COHR best-positioned p/ volumes maiores em 800G/1.6T; sobe sales CY27/28E +5%/+10% p/ **$10.9bn (+33%)/$12.5bn (+10%)** e pf-EPS p/ **$9.77/$12.17**. Vantagem de **substratos 6"** atende demanda em qualquer plataforma (SiPho/EML); como o mercado de **CPO switching** cresce e a demanda por **lasers UHP** sobe junto, COHR ganha como parceiro na cadeia da NVDA — **primeiros lasers p/ scale-out CPO embarcam 1H27**. Mantém Neutral pois o valuation já precifica earnings power à frente. (BofA "AI 2030", 2026-05-13) |
-| 06-25 | BTG · LightCounting call | supply | bull | Expert (Bob): no CPO o gargalo é **laser de altíssima potência** — **só Coherent e Lumentum são fonte confiável** (um laser externo alimenta múltiplas portas → ASP mais alto, "essencialmente dois, possivelmente três" fornecedores). No coherent/scale-across (800ZR), os captives Cisco-Acacia/Nokia/Ciena fornecem módulos; MRVL fornece DSPs. Maioria dos designs early de CPO usa external laser sources, reforçando o moat COHR/LITE na fonte de luz UHP. (BTG "LightCounting", 2026-06-25) |
+| 05-13 | BofA · Vivek Arya | valuation | neutral | **PO $365 → $400, stays NEUTRAL** (41x CY27 PE vs 40x before) — at the top of the historical 7x-41x range. With **20-30% global transceiver share**, COHR best-positioned for larger 800G/1.6T volumes; raises CY27/28E sales +5%/+10% to **$10.9bn (+33%)/$12.5bn (+10%)** and pf-EPS to **$9.77/$12.17**. The **6" substrate** advantage serves demand on any platform (SiPho/EML); as the **CPO switching** market grows and demand for **UHP lasers** rises alongside it, COHR wins as a partner in the NVDA supply chain — **first lasers for scale-out CPO ship 1H27**. Stays Neutral as the valuation already prices in earnings power ahead. (BofA "AI 2030", 2026-05-13) |
+| 06-25 | BTG · LightCounting call | supply | bull | Expert (Bob): in CPO the bottleneck is the **ultra-high-power laser** — **only Coherent and Lumentum are a reliable source** (one external laser feeds multiple ports → higher ASP, "essentially two, possibly three" suppliers). In coherent/scale-across (800ZR), captives Cisco-Acacia/Nokia/Ciena supply modules; MRVL supplies DSPs. Most early CPO designs use external laser sources, reinforcing the COHR/LITE moat in the UHP light source. (BTG "LightCounting", 2026-06-25) |
 
-**Síntese do quarter:** o fluxo é amplamente confirmatório da tese de gestão — InP 6" como diferencial, CPO/lasers UHP como moat COHR/LITE (corroborado pelo BTG), share de transceivers sustentando volume. O único atrito é de **valuation, não operacional**: BofA endossa fundamentos mas trava em NEUTRAL no múltiplo (41x CY27).
+**Quarter synthesis:** the flow is broadly confirmatory of the management thesis — 6" InP as the differentiator, CPO/UHP lasers as the COHR/LITE moat (corroborated by BTG), transceiver share sustaining volume. The only friction is **valuation, not operational**: BofA endorses the fundamentals but stays at NEUTRAL on the multiple (41x CY27).
 
 ## Management commentary — evolution (last 6 quarters)
 

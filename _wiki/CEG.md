@@ -4,6 +4,24 @@
 
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\CEG` (filings + transcripts) · `_equity_calls` (none) · `_briefings\by-ticker\CEG.md` (absent). Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $34.9bn | $36.2bn |
+| Gross profit | $13.5bn | $18.2bn |
+| Gross margin | 38.7% | 50.3% |
+| EBITDA | $7.7bn | $8.9bn |
+| EPS | $11.37 | $13.54 |
+| Capex | $4.8bn | $4.4bn |
+| OCF (≈EBITDA) | $7.7bn | $8.9bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="15.6" width="20" height="42.4" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="15.0" width="20" height="43.0" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.4" width="20" height="43.6" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+2.4% 3m · +3.8% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="15.5" width="20" height="42.5" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.3" width="20" height="43.7" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">-0.1% 3m · +3.4% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 The largest private power producer in the world and the largest clean-energy generator in the US post-Calpine (10-K FY25, 2026-02-24). A fleet of ~55 GW of capacity — nuclear, natural gas, geothermal, hydro, wind and solar — capable of supplying ~27M homes and ~10% of the country's clean energy. The core is the largest nuclear fleet in the US: ~22 GW generating 183 TWh of zero-emission electricity in 2025. Calpine (closed 2026-01-07) added ~23 GW across 72 gas/geothermal/battery assets, strong in Texas, California and the Northeast — making CEG also the largest natural gas and geothermal generator in the country (10-K FY25). Beyond generation, it is one of the largest competitive retail suppliers, serving ~2.5M accounts and three-quarters of the Fortune 100. The structural thesis: selling firm 24/7 carbon-free power to data-center/AI demand via long-term PPAs.
 
@@ -54,29 +72,29 @@ _Sell-side coverage is thin in this corpus: zero equity calls and no briefings r
 - **Calpine share overhang** (lockups Jun-2026/Jun-2027).
 - **New nuclear cost/execution** — CEG remains cautious; significant capital only after a durable PPA + firm prices with proven constructibility (Q3 FY25).
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 FY26 · May 11 → Jun 16, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 FY26 · May 11 → Jun 16, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1'26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1'26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Demanda DC / capex** | Capex hyperscaler ~75% maior que ano anterior; algumas negociações pausadas | JPM (AI Capex 2.0): 138 GW de crescimento DC US até 2030, $5,5tn de capex; corrobora contrato Meta-Clinton 1,1 GW/20 anos | **✓ confirma** (capex valida demanda) |
-| **BYOG / visibilidade contratada** | ~5.000 MW submetidos à fila do PJM; aguardando clareza do PJM | Wells Fargo: BTM é solução permanente (não ponte), ~40% dos deals de power — ameaça à visibilidade da frota contratada | **✗ contesta** (BTM eroda share) |
-| **PPAs hyperscaler assinados** | Nenhum novo; aguardando clareza do PJM | JPM (broker DC): "big four" leva o que quer mas crédito de contraparte (não só power) trava o contracting; ~30% do pipeline é grid-islanded | **⚠ nuança** (crédito trava deals) |
-| **Guidance / capital** | FY26 reafirmado $11,00-12,00; crescimento de base ">20% até 2029"; ~$335M recomprado | (sem fluxo intra-quarter contestando) | **✓ confirma** (guidance mantido) |
+| **DC demand / capex** | Hyperscaler capex ~75% higher than the prior year; some negotiations paused | JPM (AI Capex 2.0): 138 GW of US DC growth through 2030, $5.5tn of capex; corroborates the Meta-Clinton 1.1 GW/20-yr contract | **✓ confirms** (capex validates demand) |
+| **BYOG / contracted visibility** | ~5,000 MW submitted to the PJM queue; awaiting PJM clarity | Wells Fargo: BTM is a permanent solution (not a bridge), ~40% of power deals — a threat to the contracted-fleet visibility | **✗ contests** (BTM erodes share) |
+| **Hyperscaler PPAs signed** | None new; awaiting PJM clarity | JPM (DC broker): the "big four" get what they want but counterparty credit (not just power) gates the contracting; ~30% of the pipeline is grid-islanded | **⚠ nuance** (credit gates deals) |
+| **Guidance / capital** | FY26 reaffirmed $11.00-12.00; base growth ">20% through 2029"; ~$335M repurchased | (no intra-quarter flow contesting) | **✓ confirms** (guidance maintained) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 05-04 | JPM · DC broker call (Chris) | demanda | mixed | DC broker: the 'big four' hyperscalers get what they want, Oracle is the IG credit swing and neoclouds need backstops — counterparty credit, not just power, gates the contracting; ~30% of the pipeline is genuinely grid-islanded BTM. Read-through: sharpens the 'deals slip / BYOG threatens visibility' bear. |
-| 05-11 | Constellation · Dominguez (Q1 FY26) | demanda | bull | Hyperscaler capex in 2026 cited as 'nearly 75% higher than last year.' ~5,000 MW of new resources (nuclear uprates, gas, battery) submitted to PJM's interconnection queue. FCF guided at $8.4B for 2026-2027 and $11.5-13B for 2028-2029. |
-| 05-27 | Wells Fargo · Aman Chakri (BTM expert) | demanda | bear | BTM expert (ex-GE Vernova): behind-the-meter is a permanent solution, not a bridge (grid reconnection raises public tariffs; ISOs 'pick their battles') — read-through to the BYOG threat to the visibility of CEG's contracted fleet. |
-| 06-05 | Wells Fargo · midstream Friday wrap | demanda | bear | Midstream DC expert puts BTM at ~40% of power deals — reinforces the bear on IPPs/generators ceding share of DC contracting. |
-| 06-16 | JPM · AI Capex 2.0 | demanda | bull | JPM models 138 GW of US DC capacity growth through 2030 (up from 122 GW in Nov-2025) within $5.5tn of AI capex; power remains the most critical constraint. Deal table corroborates the Constellation-Meta Clinton contract, 1.1 GW, 20 years starting June 2027. EPRI: DCs could reach 9-17% of US electricity demand by 2030. |
+| 05-04 | JPM · DC broker call (Chris) | demand | mixed | DC broker: the 'big four' hyperscalers get what they want, Oracle is the IG credit swing and neoclouds need backstops — counterparty credit, not just power, gates the contracting; ~30% of the pipeline is genuinely grid-islanded BTM. Read-through: sharpens the 'deals slip / BYOG threatens visibility' bear. |
+| 05-11 | Constellation · Dominguez (Q1 FY26) | demand | bull | Hyperscaler capex in 2026 cited as 'nearly 75% higher than last year.' ~5,000 MW of new resources (nuclear uprates, gas, battery) submitted to PJM's interconnection queue. FCF guided at $8.4B for 2026-2027 and $11.5-13B for 2028-2029. |
+| 05-27 | Wells Fargo · Aman Chakri (BTM expert) | demand | bear | BTM expert (ex-GE Vernova): behind-the-meter is a permanent solution, not a bridge (grid reconnection raises public tariffs; ISOs 'pick their battles') — read-through to the BYOG threat to the visibility of CEG's contracted fleet. |
+| 06-05 | Wells Fargo · midstream Friday wrap | demand | bear | Midstream DC expert puts BTM at ~40% of power deals — reinforces the bear on IPPs/generators ceding share of DC contracting. |
+| 06-16 | JPM · AI Capex 2.0 | demand | bull | JPM models 138 GW of US DC capacity growth through 2030 (up from 122 GW in Nov-2025) within $5.5tn of AI capex; power remains the most critical constraint. Deal table corroborates the Constellation-Meta Clinton contract, 1.1 GW, 20 years starting June 2027. EPRI: DCs could reach 9-17% of US electricity demand by 2030. |
 
-**Síntese do quarter:** com o capex de DC validando a demanda macro (JPM 138 GW/$5,5tn), o debate migrou para *quem fica com o contrato* — uma cadência de experts (Wells Fargo) consolida o bear de que behind-the-meter é permanente (~40% dos deals) e ameaça a visibilidade da frota contratada da CEG, enquanto o crédito de contraparte aparece como novo gargalo ao fechamento de PPAs.
+**Quarter synthesis:** with DC capex validating macro demand (JPM 138 GW/$5.5tn), the debate shifted to *who gets the contract* — a cadence of experts (Wells Fargo) consolidates the bear that behind-the-meter is permanent (~40% of deals) and threatens the visibility of CEG's contracted fleet, while counterparty credit emerges as a new bottleneck to closing PPAs.
 
 ## Management commentary — evolution (last 4 quarters)
 

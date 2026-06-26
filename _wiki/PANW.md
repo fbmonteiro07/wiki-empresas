@@ -2,6 +2,24 @@
 
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\PANW` (10-K FY25, 10-Q FQ3 FY26, transcripts) · `_equity_calls` · `E:\briefings\2026\*.md`. Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $12.9bn | $14.6bn |
+| Gross profit | $9.8bn | $11.2bn |
+| Gross margin | 76.3% | 76.5% |
+| EBITDA | $4.2bn | $5.1bn |
+| EPS | $3.71 | $4.42 |
+| Capex | $248m | $299m |
+| OCF (≈EBITDA) | $4.2bn | $5.1bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="15.9" width="20" height="42.1" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="15.9" width="20" height="42.1" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="15.0" width="20" height="43.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+2.2% 3m · -2.2% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="17.6" width="20" height="40.4" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="17.4" width="20" height="40.6" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="16.2" width="20" height="41.8" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+3.5% 3m · -4.9% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 The largest pure-play enterprise cybersecurity vendor, pivoting from a product (firewall) company to a multi-platform recurring-revenue franchise. Three platforms: **Strata** (network security — ML-powered NGFWs + Prisma Access/SD-WAN SASE), **Prisma Cloud / Cortex Cloud** (cloud-native protection, CNAPP), and **Cortex** (AI-driven security operations — XSIAM, XDR, XSOAR, Xpanse) — now extended into **identity** (CyberArk) and **observability** (Chronosphere). FY25 revenue $9,221.5M, +14.9% YoY; subscription & support is the growth engine, with recurring revenue now ~46% of product revenue vs 22% three years ago (10-K FY25, 2025-08-29; Q3 FY26 call, 2026-06-02). The strategic spine is **"platformization"** — consolidating point products onto PANW platforms — and, increasingly, securing customers' AI/agentic deployments. NGS ARR is the headline KPI: $5.6B exiting FY25, guided to $8.9–8.95B for FY26 (inflated by M&A).
 
@@ -88,34 +106,34 @@ PANW sits between upstream infrastructure/threat-intelligence inputs and downstr
 - **BTG Mythos expert call** _(2026-06-18)_ + **Glasswing/Mythos cyber note** _(2026-06-04)_: AI-native cyber is reshaping the security value chain — PANW positioned as the platform consolidator.
 - **Post-print sell-side reset** _(briefings, Jun-2026)_: PTs ~**$315–350** after a clean Q3; debate = organic vs M&A-flattered NGS ARR (CyberArk $21.1B + Chronosphere $3.0B).
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q3 FY26 · Jun 2 → Jun 18, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q3 FY26 · Jun 2 → Jun 18, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q3 FY26 · Jun'26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q3 FY26 · Jun'26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **NGS ARR / qualidade** | NGS ARR $8.13B, +60% (incl. M&A) | UBS: 8 dos 30pts de product growth vêm de CyberArk, subs+support caiu de novo · Redburn: "organic underwhelming" · IR: headline inflado por ~$1.6B de M&A | **✗ contesta** (orgânico é o furo) |
-| **Network security (SASE/NGFW)** | NGFW bkgs +40%; SASE $1.6B +40% | DB/Zelnick: "strongest Q3 in several years" em SASE, displacement vs ZS | **✓ confirma** (NetSec é o destaque) |
-| **M&A / Mythos (agentic-AI)** | CyberArk/Chrono closed; "Mythos moment" | BTG: Nikesh cita 800 reuniões desde abril · UBS: Nikesh chama de "chaos", decisões estratégicas a 6+ meses, "cutting checks não é coisa imediata" | **⚠ nuança** (demanda real, conversão lenta) |
-| **Margem operacional** | guide 28.9–29.2% (M&A dilutivo) | Barclays/Kalia: NetSec em aceleração sustenta margens de FCF; FY27 +$1.9B NNARR | **⚠ nuança** (diluição M&A vs FCF defensável) |
+| **NGS ARR / quality** | NGS ARR $8.13B, +60% (incl. M&A) | UBS: 8 of the 30pts of product growth come from CyberArk, subs+support fell again · Redburn: "organic underwhelming" · IR: headline inflated by ~$1.6B of M&A | **✗ contests** (organic is the gap) |
+| **Network security (SASE/NGFW)** | NGFW bkgs +40%; SASE $1.6B +40% | DB/Zelnick: "strongest Q3 in several years" in SASE, displacement vs ZS | **✓ confirms** (NetSec is the highlight) |
+| **M&A / Mythos (agentic-AI)** | CyberArk/Chrono closed; "Mythos moment" | BTG: Nikesh cites 800 meetings since April · UBS: Nikesh calls it "chaos," strategic decisions 6+ months out, "cutting checks is not an immediate thing" | **⚠ nuance** (real demand, slow conversion) |
+| **Operating margin** | guide 28.9–29.2% (M&A dilutive) | Barclays/Kalia: accelerating NetSec sustains FCF margins; FY27 +$1.9B NNARR | **⚠ nuance** (M&A dilution vs defensible FCF) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
 | 06-03 | Morgan Stanley · Marshall/Weiss | valuation | bull | "Cleared all bogeys; customers clearly turning to PANW to secure AI adoption; single-digit cyber share = long runway". MS raised PT to US$320 (from US$253), OW; FY26E revenue +23.8%, FY27E +18.2%. |
-| 06-03 | Deutsche Bank · Zelnick | competicao | bull | "Broad platform strength; NetSec/Prisma SASE displacement is the key differentiator vs ZS; constructive on the FY27 acceleration". DB Buy, PT US$350 — "strongest Q3 in several years" in SASE. |
+| 06-03 | Deutsche Bank · Zelnick | competition | bull | "Broad platform strength; NetSec/Prisma SASE displacement is the key differentiator vs ZS; constructive on the FY27 acceleration". DB Buy, PT US$350 — "strongest Q3 in several years" in SASE. |
 | 06-03 | JPM · Essex/Lee | guidance | bull | "Solid execution with AI tailwinds and M&A synergies ahead of plan" — XSIAM, Prisma AIRS, CyberArk all beating. JPM OW. |
 | 06-03 | UBS · PANW Q3 FY26 review + callbacks (Nikesh/Depak + IR) | guidance | bear | Bear's Exhibit A on quality: of the 30% product growth, 8 points came from CyberArk (inorganic); hardware revenue grew "roughly half" of the 40% bookings, implying subscription + support fell again even in the "best cyber demand environment ever". UBS models ~US$610M of organic net-new ARR in 4Q. Mythos framed as "chaos"; "cutting checks immediately is not really a thing", strategic decisions still 6+ months out. New markets: sovereign + neoclouds. At ~35x CY28 FCF, UBS sees "not a whole lot of wiggle room". |
 | 06-03 | Redburn/Rothschild | guidance | bear | "Beat-and-raise, but the organic business is underwhelming" — qualitative caution on the sustainability of product revenue. Neutral. |
-| 06-04 | Glasswing/Mythos cyber note | demanda | bull | AI-native cyber reshaping the security value chain — PANW positioned as the platform consolidator. |
+| 06-04 | Glasswing/Mythos cyber note | demand | bull | AI-native cyber reshaping the security value chain — PANW positioned as the platform consolidator. |
 | 06-08 | Barclays · Kalia | guidance | bull | IR-meeting takeaways: 4Q26 organic NNARR guide raised US$20M+ at the midpoint; FY27 could add US$1.9B+ of total NNARR; accelerating NetSec can sustain FCF margins. Barclays OW, PT US$315. |
 | 06-17 | IR meeting (briefing 2026-06-17) | guidance | mixed | IR takeaways: organic subscription revenue deceleration partly explained by virtual-firewall rev-rec mechanics; NGS ARR/RPO headline flattered by M&A (~US$1.6B from CyberArk + Chronosphere). |
-| 06-18 | BTG · Mythos expert call | demanda | bull | Expert (ex-PANW): Nikesh "referenced 800 customer meetings since April" on Mythos/AI security; "this is now the Mythos moment" (also acknowledged on the CRWD call). Unit 42 Frontier AI Defense: 800+ meetings in six weeks. |
+| 06-18 | BTG · Mythos expert call | demand | bull | Expert (ex-PANW): Nikesh "referenced 800 customer meetings since April" on Mythos/AI security; "this is now the Mythos moment" (also acknowledged on the CRWD call). Unit 42 Frontier AI Defense: 800+ meetings in six weeks. |
 | 06-18 | UBS · Roger Boyd (cyber checks / Karl software call) | valuation | bear | Nikesh frames the environment as "chaos", teams focused on assessing their own risk/patching; larger strategic Mythos opportunities "will still take six months plus". UBS turns slightly more cautious on Palo (and CrowdStrike) vs peers, seeing incremental cyber dollars spreading beyond the two platforms (identity + data gaining more attention). |
 
-**Síntese do quarter:** o debate migrou de "direção" (skew positivo, PTs $315–350) para **qualidade do crescimento** — NGS ARR/RPO de manchete flattered por M&A, com UBS/Redburn apontando que subs+support orgânico caiu mesmo no "melhor ambiente de demanda cyber"; o upside agora depende da reaceleração orgânica do 4Q (NNARR ~$610M UBS) e da conversão do pipeline Mythos, que a própria gestão admite ser de 6+ meses.
+**Quarter synthesis:** the debate has shifted from "direction" (positive skew, PTs $315–350) to **growth quality** — headline NGS ARR/RPO flattered by M&A, with UBS/Redburn pointing out that organic subs+support fell even in the "best cyber demand environment ever"; the upside now depends on the organic 4Q reacceleration (NNARR ~$610M UBS) and conversion of the Mythos pipeline, which management itself admits is 6+ months out.
 
 ## Management commentary — evolution (last 4 quarters)
 

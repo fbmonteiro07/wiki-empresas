@@ -3,6 +3,24 @@
 # AGX — Argan, Inc.
 
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AGX` (10-K + transcripts; deck InvestorDay 2025-04-08 not read) · Master index: [../INDEX.md](../INDEX.md)._
+
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $1.2bn | $1.7bn |
+| Gross profit | $234m | $359m |
+| Gross margin | 19.0% | 21.7% |
+| EBITDA | $202m | $365m |
+| EPS | $11.08 | $16.50 |
+| Capex | $11m | $6m |
+| OCF (≈EBITDA) | $202m | $365m |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="21.1" width="20" height="36.9" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="22.9" width="20" height="35.1" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="17.8" width="20" height="40.2" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+25.5% 3m · +19.1% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="25.9" width="20" height="32.1" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="26.2" width="20" height="31.8" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="17.5" width="20" height="40.5" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+38.3% 3m · +37.2% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
 _Note: no briefings roll-up or equity calls (thin coverage). Bull/Bear thesis derived primarily from the transcripts; sell-side and on-disk briefings coverage is nil._
 
 ## Snapshot
@@ -45,27 +63,27 @@ Argan is an EPC (engineering, procurement, construction) holding company for ene
 - **Inflation/supply chain and trade policy** (tariffs) on equipment for fixed-price projects; mitigated by early equipment purchasing, but not eliminated (10-K FY26).
 - **Margin and backlog lumpiness** — low visibility, no margin guidance (Baugher, Q4 FY26).
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 FY27 · Jun 04 → Jun 22 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 FY27 · Jun 04 → Jun 22 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1 FY27) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1 FY27) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Demanda (gás firme)** | Combined-cycle gás é "a solução ideal"; backlog inclui 4 plantas US >4,1 GW; runway p/ $2B de receita | Jefferies (DC build): ~25 GW de gás iniciando construção em '26, ~35 GW '27, ~38 GW '28 — tailwind plurianual de EPC | **✓ confirma** (pipeline setorial) |
-| **Backlog / lumpiness** | Backlog "oscila" entre jobs ($2,9B → $2,8B); novos jobs dependem de marcos de 3os em "10-18 meses" | Jefferies: maior parte da derrapagem é atraso, não cancelamento — gated por mão-de-obra, licenças e lead time de turbinas 3-5 anos | **✓ confirma** (gates corroborados) |
-| **Renováveis** | Demanda renovável "amoleceu"; backlog só 13% renovável vs 79% gás | Jefferies: backdrop de construção concentrado em gás (sem leitura de solar/bateria) | **⚠ nuança** (mix favorece gás) |
+| **Demand (firm gas)** | Combined-cycle gas is "the ideal solution"; backlog includes 4 US plants >4.1 GW; runway to $2B of revenue | Jefferies (DC build): ~25 GW of gas starting construction in '26, ~35 GW '27, ~38 GW '28 — multi-year EPC tailwind | **✓ confirms** (sector pipeline) |
+| **Backlog / lumpiness** | Backlog "swings" between jobs ($2.9B → $2.8B); new jobs depend on third-party milestones in "10-18 months" | Jefferies: most of the slippage is delay, not cancellation — gated by labor, permitting and 3-5-yr turbine lead times | **✓ confirms** (gates corroborated) |
+| **Renewables** | Renewable demand "softened"; backlog only 13% renewable vs 79% gas | Jefferies: construction backdrop concentrated in gas (no solar/battery read) | **⚠ nuance** (mix favors gas) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 06-04 | AGX Q1 FY27 call · Watson | demanda | bull | Structural demand for firm generation — electrification, onshoring, EVs and data centers pressure the grid; combined-cycle gas is 'the ideal solution' and few competitors execute gigawatt-plus fixed-price jobs. Long runway: target of $2B of revenue 'down the road', capacity for 10-12 simultaneous jobs (currently 8). Backlog includes 4 US gas plants totaling >4.1 GW. |
-| 06-04 | AGX Q1 FY27 call · Watson | competicao | bear | Renewable demand 'softened' — solar/battery exposure less attractive (backlog 13% renewable vs 79% gas). Backlog does not grow linearly (dipped from $2.9B → $2.8B); large new jobs depend on development milestones outside Argan's control (air/water permits, gas access, turbines, financing) in a repeated window of '10-18 months'. |
+| 06-04 | AGX Q1 FY27 call · Watson | demand | bull | Structural demand for firm generation — electrification, onshoring, EVs and data centers pressure the grid; combined-cycle gas is 'the ideal solution' and few competitors execute gigawatt-plus fixed-price jobs. Long runway: target of $2B of revenue 'down the road', capacity for 10-12 simultaneous jobs (currently 8). Backlog includes 4 US gas plants totaling >4.1 GW. |
+| 06-04 | AGX Q1 FY27 call · Watson | competition | bear | Renewable demand 'softened' — solar/battery exposure less attractive (backlog 13% renewable vs 79% gas). Backlog does not grow linearly (dipped from $2.9B → $2.8B); large new jobs depend on development milestones outside Argan's control (air/water permits, gas access, turbines, financing) in a repeated window of '10-18 months'. |
 | 06-04 | AGX Q1 FY27 call · Watson | capital | bull | Quarterly dividend $0.50 ($2/yr; +33% in Sep-25, 3rd consecutive increase). Buyback raised to $200M (from $150M) and extended to Jan-31-2030; $33.6M returned via repurchases in Q1 FY27. |
-| 06-22 | Jefferies · DC build / Vulcan-IIR | demanda | bull | Sector read-through (no AGX rating): ~25 GW of gas capacity starting construction in 2026 (~8 GW online '26, ~11 GW '27), then ~35 GW of starts in 2027 and ~38 GW in 2028 — a multi-year EPC tailwind. Corroborates the bear point on 'backlog swings' — most of the slippage is delays, not cancellations, gated by labor (5 craft workers retiring per 1 entrant), permitting and turbine lead times of 3-5 years. |
+| 06-22 | Jefferies · DC build / Vulcan-IIR | demand | bull | Sector read-through (no AGX rating): ~25 GW of gas capacity starting construction in 2026 (~8 GW online '26, ~11 GW '27), then ~35 GW of starts in 2027 and ~38 GW in 2028 — a multi-year EPC tailwind. Corroborates the bear point on 'backlog swings' — most of the slippage is delays, not cancellations, gated by labor (5 craft workers retiring per 1 entrant), permitting and turbine lead times of 3-5 years. |
 
-**Síntese do quarter:** cobertura fina (zero sell-side com rating no disco) — o único fluxo externo (Jefferies, 06-22) é leitura setorial que corrobora os dois lados da tese da própria gestão: confirma o tailwind plurianual de construção de gás e, ao mesmo tempo, valida o ponto bear de que o backlog "oscila" por atrasos gated em mão-de-obra, licenças e turbinas — o debate segue sendo cadência de conversão, não demanda.
+**Quarter synthesis:** thin coverage (zero rated sell-side on disk) — the only external flow (Jefferies, 06-22) is a sector read that corroborates both sides of management's own thesis: it confirms the multi-year gas-construction tailwind while validating the bear point that the backlog "swings" on delays gated by labor, permitting and turbines — the debate remains conversion cadence, not demand.
 
 ## Management commentary — evolution (last 6 quarters)
 

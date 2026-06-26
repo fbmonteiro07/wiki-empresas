@@ -2,6 +2,24 @@
 
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\MRVL` (filings + transcripts) · `_equity_calls` · `_briefings\by-ticker\MRVL.md` (none on disk). Master index: [00_INDEX.md](00_INDEX.md). Themes: [custom-asic-tpu](themes/custom-asic-tpu.md) · [optical-cpo](themes/optical-cpo.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $11.5bn | $16.8bn |
+| Gross profit | $6.7bn | $9.6bn |
+| Gross margin | 58.6% | 57.4% |
+| EBITDA | $4.5bn | $6.7bn |
+| EPS | $4.03 | $6.42 |
+| Capex | $479m | $607m |
+| OCF (≈EBITDA) | $4.5bn | $6.7bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="19.0" width="20" height="39.0" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="16.6" width="20" height="41.4" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="16.7" width="20" height="41.3" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+6.2% 3m · +12.9% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="27.7" width="20" height="30.3" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="23.7" width="20" height="34.3" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="23.1" width="20" height="34.9" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+28.1% 3m · +45.3% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Fabless data-infrastructure semiconductor supplier "spanning the data center core to the network edge" — core IP in complex SoCs integrating analog, mixed-signal, DSP, **electro-optics and silicon photonics** (FY26 10-K, 2026-03-11). One reportable segment; the **data center end market is 74% of revenue** ($6.10B of $8.19B in FY26, +46% y/y) with comms/enterprise/carrier the rest after the August-2025 divestiture of the automotive-Ethernet unit to Infineon for $2.5B (FY26 10-K). Three AI franchises drive the story: **custom compute ASICs/XPUs** for hyperscalers (the #2 merchant custom-silicon partner behind AVGO), **electro-optics** (1.6T PAM DSPs, 2nm coherent DCI, now CPO via Celestial AI), and **data-center switching/interconnect** (51.2T/100T, AEC/retimers, CXL via XConn). Highly concentrated: top-10 customers = 82% of FY26 revenue; one direct customer 14%, one distributor 37% (FY26 10-K).
 
@@ -103,23 +121,23 @@ MRVL is a fabless designer sitting between the foundry/IP/memory supply base and
 - **Harlan Sur (JPM) call note** _(2026-06-17)_: Marvell tied to the **Trainium 3** program; flags **a US sell-side competitor downgraded MRVL** on 1.6T DSP share concerns.
 - **AlphaSense expert alert** _(2026-06-17)_: Marvell AVP on yield optimization for advanced nodes (initial challenges, improving over time).
 
-## Intra-quarter — calls, comentários & relatórios
+## Intra-quarter — calls, commentary & reports
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1 FY27) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1 FY27) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **CPO scale-up / Celestial** | Celestial AI fechou no tri (já escolhido por tier-1 p/ scale-up); interconnect >70% y/y FY27 | BTG/LightCounting (Bob): Celestial leva MRVL a scale-up CPO "vai explodir" até fim de '27; CPO PAM4 legado escala p/ ~$150M tb; BofA: CPO Celestial $0→$901M CY26-28E | **✓ confirma** (Celestial é o leg novo) |
-| **DSP óptico / 1.6T** | 1.6T em produção; DCI p/ todos 5 US HS; liderança óptica | BTG: MRVL foi 1º no 1.6T mas atraso/dissipação fez todos refazerem em 3nm → AVGO emparelhou (**lockstep**); ainda dominante mas mercado c/ ~7 vendors | **⚠ nuança** (liderança erodindo p/ lockstep) |
-| **Custom silicon** | Line of sight >$10B custom FY29; >20% FY27, dobra FY28 | BofA: custom MSFT só ~$600M de contribuição CY27 vs $2bn de supply | **⚠ nuança** (contribuição < supply em '27) |
-| **Posição competitiva** | #2 merchant ASIC; parceria NVDA óptica/NVLink Fusion | BTG: "TSMC adorando o MRVL"; NVDA o vê como peça do ecossistema, não competidor (≠ Broadcom) | **✓ confirma** (ecossistema, não rival) |
+| **CPO scale-up / Celestial** | Celestial AI closed in the quarter (already selected by a tier-1 for scale-up); interconnect >70% y/y FY27 | BTG/LightCounting (Bob): Celestial takes MRVL into scale-up CPO, "going to explode" by end-'27; legacy PAM4 CPO scaling to ~$150M too; BofA: Celestial CPO $0→$901M CY26-28E | **✓ confirms** (Celestial is the new leg) |
+| **Optical DSP / 1.6T** | 1.6T in production; DCI to all 5 US HS; optical leadership | BTG: MRVL was first at 1.6T but the delay/dissipation made everyone respin in 3nm → AVGO caught up (**lockstep**); still dominant but the market now has ~7 vendors | **⚠ nuance** (leadership eroding toward lockstep) |
+| **Custom silicon** | Line of sight >$10B custom FY29; >20% FY27, doubles FY28 | BofA: MSFT custom only ~$600M of contribution CY27 vs $2bn of supply | **⚠ nuance** (contribution < supply in '27) |
+| **Competitive position** | #2 merchant ASIC; NVDA optics/NVLink Fusion partnership | BTG: "TSMC loving MRVL"; NVDA sees it as an ecosystem piece, not a competitor (≠ Broadcom) | **✓ confirms** (ecosystem, not rival) |
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 05-13 | BofA · Vivek Arya | valuation | bull | **Sobe rating implícito p/ BUY (C-1-7) e PO $125 → $200** (30x CY28E PE incl. SBC), na esteira de AI-networking TAM elevado p/ **~$316bn (de ~$240bn)**. Sobe sales FY28/29E +1%/+8% e EPS +3%/+15% p/ **$5.60/$7.80**. Drivers: ramp 1.6T (Ethernet transceivers TAM +$7bn/$10bn CY27/28, MRVL fornece DSP/TIA/drivers, ~60-70% share), **CPO scale-up via Celestial AI** ($0 → $145M → $901M CY26-28E, +$111M no CY28E vs antes) e custom-silicon (programa MSFT no CY28; só ~$600mn de contribuição em CY27 vs $2bn de supply). (BofA "AI 2030", 2026-05-13) |
-| 06-25 | BTG · LightCounting call | produto | bull | Expert (Bob): a **aquisição da Celestial AI** leva o MRVL pra scale-up CPO ramando **até o fim do ano que vem** — "vai explodir". Surpresa do último call: além do Celestial ($150M de receita ano que vem), MRVL agora fala do **CPO PAM4 legado escalando p/ os mesmos $150M** — estratégia de ofertar portfólio amplo (Celestial, VCSEL arrays, micro-LEDs) e deixar o cliente escolher, ≠ concorrentes presos a uma só tecnologia. No DSP, MRVL foi 1º no 1.6T mas o atraso/dissipação fez todos refazerem em 3nm → AVGO emparelhou (**lockstep**); demanda near-term de 1.6T é Google (usa MRVL) + NVDA (interno). MRVL ainda dominante em DSP óptico (mercado com ~7 vendors agora). No DCI/scale-across, MRVL forte em 400/800 ZR (fundou o 400ZR com a Microsoft). "TSMC adorando o MRVL" — NVDA o vê como peça do ecossistema, não competidor (≠ Broadcom). (BTG "LightCounting", 2026-06-25) |
+| 05-13 | BofA · Vivek Arya | valuation | bull | **Implicitly raises rating to BUY (C-1-7) and PO $125 → $200** (30x CY28E PE incl. SBC), on the back of a raised AI-networking TAM of **~$316bn (from ~$240bn)**. Raises sales FY28/29E +1%/+8% and EPS +3%/+15% to **$5.60/$7.80**. Drivers: 1.6T ramp (Ethernet transceivers TAM +$7bn/$10bn CY27/28, MRVL supplies DSP/TIA/drivers, ~60-70% share), **CPO scale-up via Celestial AI** ($0 → $145M → $901M CY26-28E, +$111M in CY28E vs prior) and custom-silicon (MSFT program in CY28; only ~$600mn of contribution in CY27 vs $2bn of supply). (BofA "AI 2030", 2026-05-13) |
+| 06-25 | BTG · LightCounting call | product | bull | Expert (Bob): the **Celestial AI acquisition** takes MRVL into scale-up CPO, ramping **by the end of next year** — "going to explode." Surprise from the last call: beyond Celestial ($150M of revenue next year), MRVL now talks about **legacy PAM4 CPO scaling to the same $150M** — a strategy of offering a broad portfolio (Celestial, VCSEL arrays, micro-LEDs) and letting the customer choose, ≠ competitors locked into a single technology. On DSP, MRVL was first at 1.6T but the delay/dissipation made everyone respin in 3nm → AVGO caught up (**lockstep**); near-term 1.6T demand is Google (uses MRVL) + NVDA (internal). MRVL still dominant in optical DSP (market now with ~7 vendors). In DCI/scale-across, MRVL strong in 400/800 ZR (founded 400ZR with Microsoft). "TSMC loving MRVL" — NVDA sees it as an ecosystem piece, not a competitor (≠ Broadcom). (BTG "LightCounting", 2026-06-25) |
 
-**Síntese do quarter:** o fluxo confirma os dois legs estratégicos — Celestial AI como entrada em scale-up CPO ("vai explodir") e a posição de ecossistema (não rival) junto a NVDA/TSMC. A nuança que migrou neste tri é a **erosão da liderança em DSP óptico**: o atraso no 1.6T colocou MRVL em "lockstep" com a AVGO no 3nm, e a contribuição custom de '27 ainda fica abaixo do supply contratado.
+**Quarter synthesis:** the flow confirms the two strategic legs — Celestial AI as the entry into scale-up CPO ("going to explode") and the ecosystem (not rival) position alongside NVDA/TSMC. The nuance that shifted this quarter is the **erosion of optical-DSP leadership**: the 1.6T delay put MRVL in "lockstep" with AVGO in 3nm, and the '27 custom contribution still falls below the contracted supply.
 
 ## Management commentary — evolution (last 4 quarters)
 
@@ -151,5 +169,5 @@ _Source: MRVL earnings calls (dates above); management commentary, paraphrased._
   - [650 Group — networking research (2026-05-26)](../relat%C3%B3rios%20bons/2026_05_26_650_group_26_05.html) — MRVL slightly lower share at 1.6T vs 800G on new entrants + dual-sourcing; copper/AEC longevity; UALink-over-Ethernet end-state.
   - [BofA (Tal) — Ciena supply-chain call (2026-06-12)](../relat%C3%B3rios%20bons/2026_06_12_cien_baml_supply_chain_12_jun_26.html) — Marvell named as the CPO/co-light competitor to watch as coherent optics move inside the data center.
   - [BofA (Vivek Arya) — "AI 2030: Stronger for Longer" (2026-05-13)](../relat%C3%B3rios%20bons/Vivek_State_of_the_union.html) — sobe MRVL p/ BUY, PO $125→$200 (30x CY28); AI-networking TAM ~$316bn; CPO Celestial CY28E $901M; FY28/29E EPS $5.60/$7.80.
-  - [BTG — LightCounting optics/CPO expert call (2026-06-25)](../relat%C3%B3rios%20bons/BTG_LightCounting_Optics_Expert_Call_2026-06-25.html) — Celestial AI leva MRVL a scale-up CPO ramando até fim do ano que vem ("vai explodir"); CPO legado escala p/ ~$150M tb; portfólio amplo; DSP em lockstep c/ AVGO no 3nm; "TSMC adorando o MRVL".
+  - [BTG — LightCounting optics/CPO expert call (2026-06-25)](../relat%C3%B3rios%20bons/BTG_LightCounting_Optics_Expert_Call_2026-06-25.html) — Celestial AI takes MRVL into scale-up CPO ramping by the end of next year ("set to explode"); legacy CPO scales to ~$150M too; broad portfolio; DSP in lockstep with AVGO on 3nm; "TSMC loving MRVL".
 - **Outlook / sell-side notes:** no Outlook tool available in this environment — none pulled. **Briefings:** no `_briefings/by-ticker/MRVL.md` on disk.

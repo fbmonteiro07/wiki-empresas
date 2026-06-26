@@ -4,6 +4,24 @@
 
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\VRT` (filings + transcripts) · `_equity_calls` · `E:\briefings\2026`. Master index: [00_INDEX.md](00_INDEX.md) · themes: [ai-datacenter-power](themes/ai-datacenter-power.md) · [800v-dc-power](themes/800v-dc-power.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $13.8bn | $17.8bn |
+| Gross profit | $5.2bn | $7.0bn |
+| Gross margin | 38.0% | 39.2% |
+| EBITDA | $3.3bn | $4.7bn |
+| EPS | $6.27 | $8.81 |
+| Capex | $474m | $575m |
+| OCF (≈EBITDA) | $3.3bn | $4.7bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="22.3" width="20" height="35.7" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="16.5" width="20" height="41.5" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+6.1% 3m · +23.3% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="24.9" width="20" height="33.1" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="17.4" width="20" height="40.6" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.1" width="20" height="43.9" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+8.4% 3m · +32.9% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Vertiv is the leading pure-play in **critical digital infrastructure** for data centers, communication networks, and commercial/industrial environments — it powers, cools, deploys and services the electronics that process and store data (10-K, 2026-02-13). Portfolio spans **power** (AC/DC power management, single- and three-phase UPS, low/medium-voltage switchgear, busbar/busway, rack PDU), **thermal management** (air- and liquid-cooled — chillers, CDUs, rear-door, direct-to-chip), **integrated modular/prefab** (SmartRun overhead busway, OneCore converged white-space), **racks/enclosures** (Great Lakes), and a large **service & spares** annuity. Reports three geographic segments: **Americas** (~68% of Q1'26 sales), **APAC** (~19%), **EMEA** (~12%). End markets: data centers (hyperscale/cloud, colo, neocloud, enterprise), comms networks, C&I — with hyperscale/cloud + neocloud (CoreWeave, Nebius) the AI growth engine. The directest listed AI-datacenter power/cooling pure-play, and NVIDIA's named **800 VDC** ecosystem partner.
 
@@ -91,30 +109,30 @@ Vertiv sits in the middle of the AI-datacenter physical-infrastructure stack: it
 - **Jefferies 3Q25 DC leasing (2025-11):** BUY; 3Q25 orders +60% y/y (from +15%), book-to-bill 1.4x; improving EMEA into 2H26.
 - **JPM "Watts Up! Shift to 800V" (2026-06-09):** Vertiv named among NVIDIA's **Data Center Power Systems** ecosystem partners (with ABB, Eaton, GE Vernova, Hitachi Energy, Mitsubishi, Schneider, Siemens). JPM builds its **power-management TAM off Vertiv's own content estimate (~$1mn/MW, ~30% of a $3.0–3.5mn/MW total DC content opportunity)** — growing ~30% CAGR from **$20bn (2025) to $45bn (2028)**; the broader power-distribution-solutions TAM (which JPM notes Vertiv/Delta/Flex serve) grows 20%+ CAGR from **$50bn to $90bn (2028)**. Reinforces VRT as the cleanest read on power-management content/MW into the 800V transition.
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 FY26 · Apr 22 → Jun 15, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 FY26 · Apr 22 → Jun 15, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1 FY26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1 FY26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **800V HVDC / ciclo NVIDIA** | Launches 800V no 2H26, volume 2027+; alinhado a Rubin Ultra | JPM Chatterjee: VRT é o read mais limpo de power-mgmt content/MW, TAM $20bn→$45bn (2028, ~30% CAGR) · briefing: Vera Rubin 800V puxado p/ Q3 2026 | **✓ confirma** (catalisador puxado) |
-| **Competição / disrupção do UPS** | (VRT "vai se adaptar") | UBS expert: 800V elimina UPS/LF transformer, VRT tem que pivotar o profit pool p/ BES/SST · AlphaSense: VRT/Schneider atrás de ABB/Eaton em SST | **⚠ nuança** (profit pool em pivot) |
-| **Ritmo de adoção** | Volume 2027+ | Cantor Obin: transição "gradual, many paths"; rack médio em EPC europeu ainda ~30 kW (vs 1 MW headlines); 800V só vira a ~180-200 kW/rack | **⚠ nuança** (timing gradual) |
-| **Demanda / backlog** | Backlog $15.0B; "pipeline momentum strong", visibilidade até 2027 | Cooperman mantém VRT concentrado ~$800M como "the gigawatt name" | **✓ confirma** (demanda intacta) |
+| **800V HVDC / NVIDIA cycle** | 800V launches in 2H26, volume 2027+; aligned to Rubin Ultra | JPM Chatterjee: VRT is the cleanest read on power-mgmt content/MW, TAM $20bn→$45bn (2028, ~30% CAGR) · briefing: Vera Rubin 800V pulled to Q3 2026 | **✓ confirms** (catalyst pulled forward) |
+| **Competition / UPS disruption** | (VRT "will adapt") | UBS expert: 800V eliminates UPS/LF transformer, VRT has to pivot its profit pool to BES/SST · AlphaSense: VRT/Schneider behind ABB/Eaton on SST | **⚠ nuance** (profit pool in pivot) |
+| **Adoption pace** | Volume 2027+ | Cantor Obin: transition "gradual, many paths"; avg rack at a European EPC still ~30 kW (vs 1 MW headlines); 800V only turns at ~180-200 kW/rack | **⚠ nuance** (gradual timing) |
+| **Demand / backlog** | Backlog $15.0B; "pipeline momentum strong", visibility into 2027 | Cooperman keeps VRT concentrated at ~$800M as "the gigawatt name" | **✓ confirms** (demand intact) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
 | 05-08 | Cooperman (briefing 2026-05-08) | valuation | bull | Cooperman keeps VRT concentrated at ~US$800M as "the gigawatt name" — top concentrated holding treating VRT as the AI-datacenter power proxy. |
-| 05-14 | UBS · 800V power expert call | competicao | mixed | 800V call: expert frames UPS players as adaptable and not disrupted — "Vertiv will just adapt". Bear nuance: 800V architecture eliminates the traditional UPS ("you will not have a UPS… you will have a BES") and low-frequency transformer layers; VRT has to pivot its core profit pool toward BES/SST, with the DC safety spec (arc, breakers) not yet finalized. |
-| 06-03 | AlphaSense · 800V power expert | competicao | mixed | Expert (ex-Amazon DC infra, now Delta): VRT/Schneider are behind ABB/Eaton on SST (solid-state transformer) technology, leading in UPS. SST at 1.4–1.6x conventional transformers (should fall with scale). 800V eliminates UPS and LF transformer (1–3% efficiency gain, >US$100M/yr opex at a 1GW campus). Choke point = DC breakers (ABB "is king"), then in-rack PSUs. 800V economics turn at ~180–200 kW/rack; "huge jump" in adoption expected in 2027. |
-| 06-08 | Cantor · Obin (DataCloud recap) | competicao | mixed | 3-hour dinner with Vertiv mgmt; sat with Eaton, visited Delta/Schneider/Legrand. 800V transition "going to be gradual… many paths" — sidecar happens first, full 800V conversion later (analogous to direct-to-chip cooling taking ~2 years). Reality check: average rack density at a European EPC still ~30 kW (vs 1 MW headlines); low-voltage players have "plenty of room… slowly melting ice cube". Sidecar/SST set = Eaton/Vertiv/Delta/Schneider. |
-| 06-09 | JPM · Samik Chatterjee (Watts Up! Shift to 800V) | demanda | bull | VRT among NVIDIA Data Center Power Systems partners (with ABB, Eaton, GE Vernova, Hitachi Energy, Mitsubishi, Schneider, Siemens). JPM builds the power-management TAM off Vertiv's own estimate (~US$1mn/MW, ~30% of US$3.0–3.5mn/MW total content) growing ~30% CAGR from US$20bn (2025) to US$45bn (2028); power-distribution TAM US$50bn → US$90bn (2028). Reinforces VRT as the cleanest read on power-management content/MW in the 800V transition. |
-| 06-15 | briefing 2026-06-15 | produto | bull | Vera Rubin 800V HVDC reportedly pulled ahead to Q3 2026 (small volume, via Taiwanese media) — flagged as "a direct catalyst for $VRT and the power-semi supply chain", alongside Delta, Schneider, Eaton. |
+| 05-14 | UBS · 800V power expert call | competition | mixed | 800V call: expert frames UPS players as adaptable and not disrupted — "Vertiv will just adapt". Bear nuance: 800V architecture eliminates the traditional UPS ("you will not have a UPS… you will have a BES") and low-frequency transformer layers; VRT has to pivot its core profit pool toward BES/SST, with the DC safety spec (arc, breakers) not yet finalized. |
+| 06-03 | AlphaSense · 800V power expert | competition | mixed | Expert (ex-Amazon DC infra, now Delta): VRT/Schneider are behind ABB/Eaton on SST (solid-state transformer) technology, leading in UPS. SST at 1.4–1.6x conventional transformers (should fall with scale). 800V eliminates UPS and LF transformer (1–3% efficiency gain, >US$100M/yr opex at a 1GW campus). Choke point = DC breakers (ABB "is king"), then in-rack PSUs. 800V economics turn at ~180–200 kW/rack; "huge jump" in adoption expected in 2027. |
+| 06-08 | Cantor · Obin (DataCloud recap) | competition | mixed | 3-hour dinner with Vertiv mgmt; sat with Eaton, visited Delta/Schneider/Legrand. 800V transition "going to be gradual… many paths" — sidecar happens first, full 800V conversion later (analogous to direct-to-chip cooling taking ~2 years). Reality check: average rack density at a European EPC still ~30 kW (vs 1 MW headlines); low-voltage players have "plenty of room… slowly melting ice cube". Sidecar/SST set = Eaton/Vertiv/Delta/Schneider. |
+| 06-09 | JPM · Samik Chatterjee (Watts Up! Shift to 800V) | demand | bull | VRT among NVIDIA Data Center Power Systems partners (with ABB, Eaton, GE Vernova, Hitachi Energy, Mitsubishi, Schneider, Siemens). JPM builds the power-management TAM off Vertiv's own estimate (~US$1mn/MW, ~30% of US$3.0–3.5mn/MW total content) growing ~30% CAGR from US$20bn (2025) to US$45bn (2028); power-distribution TAM US$50bn → US$90bn (2028). Reinforces VRT as the cleanest read on power-management content/MW in the 800V transition. |
+| 06-15 | briefing 2026-06-15 | product | bull | Vera Rubin 800V HVDC reportedly pulled ahead to Q3 2026 (small volume, via Taiwanese media) — flagged as "a direct catalyst for $VRT and the power-semi supply chain", alongside Delta, Schneider, Eaton. |
 
-**Síntese do quarter:** o debate migrou de "VRT pega o 800V?" (sim — JPM e o pull-ahead da Vera Rubin confirmam o conteúdo/MW) para "o que acontece com o profit pool de UPS quando o 800V elimina o UPS" — os experts (UBS, AlphaSense, Cantor) convergem que a transição é gradual e que VRT precisa pivotar p/ BES/SST, onde está atrás de ABB/Eaton.
+**Quarter synthesis:** the debate has shifted from "does VRT capture 800V?" (yes — JPM and the Vera Rubin pull-ahead confirm the content/MW) to "what happens to the UPS profit pool when 800V eliminates the UPS" — the experts (UBS, AlphaSense, Cantor) converge that the transition is gradual and that VRT needs to pivot to BES/SST, where it sits behind ABB/Eaton.
 
 ## Management commentary — evolution (last 4 quarters)
 

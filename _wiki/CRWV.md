@@ -2,6 +2,24 @@
 
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\CRWV` (10-K FY2025, four 10-Qs, transcripts) · `E:\briefings\2026`. Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $12.6bn | $24.8bn |
+| Gross profit | $8.7bn | $17.8bn |
+| Gross margin | 69.1% | 71.8% |
+| EBITDA | $7.4bn | $15.5bn |
+| EPS | $-3.08 | $-0.72 |
+| Capex | $32.7bn | $37.9bn |
+| OCF (≈EBITDA) | $7.4bn | $15.5bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="4.5" width="20" height="53.5" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="3.2" width="20" height="54.8" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+24.6% 3m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="13.1" width="20" height="44.9" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f"></text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 GPU "neocloud" — rents NVIDIA accelerated compute (GPU-as-a-service) to AI labs, hyperscalers and enterprises on multi-year contracts. IPO'd March 2025; short public history. FY2025 revenue **$5.1B, +168% YoY** (10-K FY2025, 2026-03-02), essentially all from AI cloud compute. Differentiated by purpose-built AI datacenters, early NVIDIA allocation (Exemplar Cloud / GB200 first-mover) and scale of contracted power. The model is capital-intensive and debt-funded: it converts a massive contracted backlog into revenue by building/leasing datacenters and buying GPUs ahead of the revenue ramp. Sits squarely in the AI infrastructure chain between NVIDIA silicon and the frontier-model demand layer.
 
@@ -95,36 +113,36 @@ Hedgeye estimates 2026 CoreWeave revenue ~**$11.68B (+126%)** on ~477k average G
 - **Jefferies conference desk color (Jefferies "Brent Thill AI", 2026-06-01):** "**CoreWeave absolutely crushing** … they're sold out"; a top-3 AI company told the desk "we need tokens and can't find enough … we cannot find enough infrastructure" — corroborates the sold-out/demand-exceeds-supply thesis (Jefferies "Brent Thill AI software/infra", 2026-06-01).
 - **Bernstein Underperform PT $67** + **Rothschild debt-encumbrance call** _(briefings, 2026)_: $99.4B backlog vs ~$25B high-coupon debt, $536M/qtr interest, ~65% top-2 customer concentration; FY26 AOI guide called 'nearly unhittable.'
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 FY26 · May 07 → Jun 22, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 FY26 · May 07 → Jun 22, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1'26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1'26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Demanda** | Backlog $99.4B (~4x y/y), $40B+ novos bookings; CFO "largely sold out of 2026", preços subindo Ampere→Hopper→Blackwell | Jefferies/desk "sold out, can't find enough infra" · Cantor RPO 2Q ~$125-130B vs cons $104B + provável novo big deal (Anthropic?) | **✓ confirma** (demanda > oferta) |
-| **Margem / profitabilidade** | EBITDA 56%; AOI só $21M (~1%) | Bernstein: guide AOI $900M-1.1B "quase inalcançável pela conta" (fit-out <8 sem + margem >21%) | **✗ contesta** (AOI é o furo) |
-| **Capital / financiamento** | Capex elevado p/ $31-35B FY26 (pricing de componentes) | Rothschild/Bernstein: dívida fixa = desvantagem estrutural vs hyperscalers · JPM: CRWV é proof-of-concept de financing GPU, mas duration mismatch | **⚠ nuança** (financing é o swing) |
-| **Produto / supply** | 1+ GW ativo, 3.5+ GW contratado; fleet operacional | SemiAnalysis: racks Vera Rubin/MI455 ainda "Eng/Quality Samples" → risco de ramp · GB300 NVL72 confirmado em uso (DeepSeek V4) | **⚠ nuança** (ramp próx. gen escorrega) |
+| **Demand** | Backlog $99.4B (~4x y/y), $40B+ new bookings; CFO "largely sold out of 2026", prices rising Ampere→Hopper→Blackwell | Jefferies/desk "sold out, can't find enough infra" · Cantor RPO 2Q ~$125-130B vs cons $104B + likely new big deal (Anthropic?) | **✓ confirms** (demand > supply) |
+| **Margin / profitability** | EBITDA 56%; AOI only $21M (~1%) | Bernstein: AOI guide $900M-1.1B "nearly unhittable per the math" (fit-out <8 wks + margin >21%) | **✗ contests** (AOI is the gap) |
+| **Capital / financing** | Capex raised to $31-35B FY26 (component pricing) | Rothschild/Bernstein: fixed debt = structural disadvantage vs hyperscalers · JPM: CRWV is a proof-of-concept for GPU financing, but a duration mismatch | **⚠ nuance** (financing is the swing) |
+| **Product / supply** | 1+ GW active, 3.5+ GW contracted; fleet operational | SemiAnalysis: Vera Rubin/MI455 racks still "Eng/Quality Samples" → ramp risk · GB300 NVL72 confirmed in use (DeepSeek V4) | **⚠ nuance** (next-gen ramp slips) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
 | 05-08 | Bernstein · Rezaei/Madison | guidance | bear | Bernstein Underperform, PT US$67 — the FY26 AOI guide of US$900M-1.1B is 'nearly unhittable per the math': it needs fit-out <8 weeks AND stabilized margins >21%; a blue-sky 6-week + 25% scenario only reaches the top of the range (briefings 2026-05-08/12/16). |
-| 05-16 | FinTwit · @TheTranscript_ (via briefing) | demanda | bull | CFO: 'largely sold out of 2026 capacity with prices increasing across the board from Ampere to Hopper to Blackwell... extending into 2027'. NVDA's 13F holds 47.21M CRWV shares — a public endorsement from the ecosystem (briefing 2026-05-16). |
-| 06-01 | Jefferies · Brent Thill (desk) | demanda | bull | Desk color: 'CoreWeave absolutely crushing… they're sold out'; one of the top-3 AI companies told the desk 'we need tokens and can't find enough… we cannot find enough infrastructure' — corroborates the sold-out/demand-exceeds-supply thesis (Jefferies 'Brent Thill AI', 2026-06-01). |
+| 05-16 | FinTwit · @TheTranscript_ (via briefing) | demand | bull | CFO: 'largely sold out of 2026 capacity with prices increasing across the board from Ampere to Hopper to Blackwell... extending into 2027'. NVDA's 13F holds 47.21M CRWV shares — a public endorsement from the ecosystem (briefing 2026-05-16). |
+| 06-01 | Jefferies · Brent Thill (desk) | demand | bull | Desk color: 'CoreWeave absolutely crushing… they're sold out'; one of the top-3 AI companies told the desk 'we need tokens and can't find enough… we cannot find enough infrastructure' — corroborates the sold-out/demand-exceeds-supply thesis (Jefferies 'Brent Thill AI', 2026-06-01). |
 | 06-03 | Rothschild (via briefing) | capital | bear | Heavy fixed debt payments are a structural disadvantage vs equity-funded hyperscalers — 'Short: ORCL/CoreWeave encumbered by fixed debt payments vs GOOG's now-equity-funded flexibility' (briefing 2026-06-03). |
 | 06-04 | FinTwit · @SemiAnalysis_ (via briefing) | supply | bear | NVDA Vera Rubin / MI455 racks at CoreWeave are 'still Engineering/Quality Samples — 800G OSFP cages not even populated' → near-term delivery/ramp risk (briefings 2026-06-04/05). |
 | 06-08 | Wells Fargo · Fluidstack call | capital | mixed | Neocloud read-through (FluidStack CEO): financing cost is the swing variable — 'if you're financing it at 6%, ship it; at high-teens, I'm less excited' (Oracle/CoreWeave brought financing in-house). The Anthropic inflection in Q1 drove the sector's supply-demand imbalance; inference economics approaching dollar-per-hour human output sustain demand durability (Wells Fargo 'Fluidstack call', 2026-06-08). |
-| 06-09 | SemiAnalysis · 'DeepSeek V4 Day 0' | produto | bull | When SemiAnalysis's GB300 cluster went down at the DeepSeek V4 launch, CoreWeave contributed two spare GB300 NVL72 racks to the open-source effort — incidental confirmation that CRWV's GB300 NVL72 fleet is operational and in use (SemiAnalysis 'DeepSeek V4 Day 0→43', 2026-06-09). |
+| 06-09 | SemiAnalysis · 'DeepSeek V4 Day 0' | product | bull | When SemiAnalysis's GB300 cluster went down at the DeepSeek V4 launch, CoreWeave contributed two spare GB300 NVL72 racks to the open-source effort — incidental confirmation that CRWV's GB300 NVL72 fleet is operational and in use (SemiAnalysis 'DeepSeek V4 Day 0→43', 2026-06-09). |
 | 06-11 | briefing 2026-06-11 | valuation | bear | Lockup overhang flagged: 9.2M shares registered for Jane Street's US$1B equity investment, lockup expires July 15 — potential supply overhang (briefing 2026-06-11). |
 | 06-13 | FinTwit · @The_AI_Investor (via briefing) | capital | bull | NVDA made an additional US$2B strategic investment (after the US$2B in Jan-2026 at US$87.20). Added to the Nasdaq-100 in June 2026 → passive flow (briefings 2026-06-13/17). |
 | 06-16 | JPM · 'AI Capex 2.0' | capital | mixed | JPM names CRWV as the proof-of-concept for public GPU financing ('with the exception of term loans and bonds for neocloud CoreWeave'). Two reads: (1) the rebounding neocloud H100 rental-price index is a 'very positive indicator' against draconian obsolescence assumptions — supportive of the ~6-year schedule; (2) but a structural duration mismatch (the market wants 10yr+ vs ~3-7yr GPU economic life) and the largest LevLoan tranche is only ~US$13bn (JPM 'AI Capex 2.0', 2026-06-16). |
 | 06-18 | Cantor · 'CoreWeave call' | valuation | bull | Cantor models CRWV ending FY25 at ~US$17B ARR → US$30B FY26, with ~75% of the 2027 >US$30B guide already contracted; sees a large RPO beat in 2Q (consensus US$104B; Cantor ~US$125-130B) plus a likely new big deal ('going to guess Anthropic'). 2027/28 up 15-20%; run-rate EBITDA could be ~US$25-26B in '27 (vs US$18B). GPU useful life: consensus moved from 3-4yr to 7-8yr, Cantor thinks ~10yr (Cantor 'CoreWeave call', 2026-06-18). |
 | 06-22 | Bernstein · 'Cloud in the Quarter' | valuation | bear | Bernstein reiterates Underperform, TP US$67 in its 1Q26 hyperscaler review — CRWV is 'much smaller than any of the other cloud providers', with no 'structural right-to-win' and a structural disadvantage vs hyperscalers over the long term. Framed as an 'interim capacity provider'; 1Q26 adjusted operating margin only ~0.5%. The US$8.5B DDTL 4.0 (first IG-rated, ~7%, backed solely by Meta's take-or-pay) is viewed as a bespoke 'proof of concept', not a repeatable baseline (Bernstein 'Cloud in the Quarter', 2026-06-22). |
 
-**Síntese do quarter:** o debate saiu da demanda (consenso: sold out, Cantor vê beat de RPO + Anthropic) e migrou para a *qualidade* dos lucros e a estrutura de capital — Bernstein ataca o AOI guide como inalcançável e a dívida fixa como desvantagem vs hyperscalers, enquanto a NVDA dobra a aposta (+$2B) e o ramp de Vera Rubin vira o novo risco de execução.
+**Quarter synthesis:** the debate moved off demand (consensus: sold out, Cantor sees an RPO beat + Anthropic) to the *quality* of earnings and the capital structure — Bernstein attacks the AOI guide as unhittable and fixed debt as a disadvantage vs hyperscalers, while NVDA doubles down (+$2B) and the Vera Rubin ramp becomes the new execution risk.
 
 ## Management commentary — evolution (last 4 quarters)
 

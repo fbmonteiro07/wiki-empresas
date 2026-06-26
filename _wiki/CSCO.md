@@ -4,6 +4,24 @@
 
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\CSCO` (filings + transcripts) · `_equity_calls` · `_briefings\by-ticker\CSCO.md`. Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $66.1bn | $70.8bn |
+| Gross profit | $43.8bn | $46.9bn |
+| Gross margin | 66.2% | 66.3% |
+| EBITDA | $24.7bn | $26.6bn |
+| EPS | $4.54 | $5.04 |
+| Capex | $1.3bn | $1.4bn |
+| OCF (≈EBITDA) | $24.7bn | $26.6bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="15.6" width="20" height="42.4" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="15.2" width="20" height="42.8" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+2.9% 3m · +3.8% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="17.0" width="20" height="41.0" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="16.6" width="20" height="41.4" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.1" width="20" height="43.9" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+6.2% 3m · +7.3% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Cisco is the incumbent enterprise/SP networking franchise re-rating into an AI-infrastructure story. Revenue is grouped into **Networking** (switching, routing, wireless, servers — the largest bucket and the standout grower), **Security** (incl. Splunk), **Collaboration**, and **Observability**, plus a large services/subscription annuity (FY26-FY10-K, 2025-09-03). Subscription was ~49% of total revenue and software ~$5.7B in Q3 FY26 (Q3 FY26 call, 2026-05-13). The new edge is twofold: (1) **AI infrastructure for hyperscalers** — Silicon One ASICs/systems + Acacia coherent pluggable optics; (2) a **multiyear enterprise campus refresh** (switching/WiFi 7/routing). 650 Group frames CSCO as one of three volume-scale data-center switch players alongside NVDA and Arista/Celestica (650 Group, 2026-06-04). In the broader DC networking-equipment market (~$36B), Cisco is the #2 vendor at ~16% share behind Arista at ~17% (BofA DC primer).
 
@@ -60,21 +78,21 @@ Cisco is the incumbent enterprise/SP networking franchise re-rating into an AI-i
 - Competition broadening in DC switching (HPE, Nokia, Juniper gaining in a >$100B TAM) and the structural AI-networking pair-trade vs ANET; CSCO is #2 (~16%) behind Arista (~17%) in the ~$36B DC networking-equipment market (650 Group, 2026-06-04; Barclays, briefing 2026-05-21; BofA DC primer).
 - Tariff/exemption assumptions baked into guidance; macro on enterprise/public-sector IT budgets (10-K risk factors, 2025-09-03).
 
-## Intra-quarter — calls, comentários & relatórios
+## Intra-quarter — calls, commentary & reports
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q3 FY26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q3 FY26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Silicon One / switching** | Silício é o moat ("sem silício você não é relevante p/ hyperscaler"); P200 scale-across wins | BTG/LightCounting (Bob): em switching de larga escala Cisco aparece "primariamente fornecendo sistemas" (≠ chip merchant como Broadcom) | **⚠ nuança** (sistemas, não merchant chip) |
-| **Acacia / óptica coerente** | Acacia >$1B orders Q3, on track >200% y/y; scale-across leg emergente | BTG: Cisco-Acacia um dos captives em 800ZR (vs Nokia/Ciena) competindo no DCI; quer entrar no mercado de DSP | **✓ confirma** (Acacia em scale-across) |
-| **AI / NVDA partnership** | Parceria NVDA posiciona p/ Enterprise AI | BTG: Cisco+NVDA trabalham juntos — suporta Spectrum X em Silicon One e desenhando em torno do silício NVDA, servindo enterprise Ethernet | **✓ confirma** (coopera com NVDA) |
+| **Silicon One / switching** | Silicon is the moat ("without silicon you're not relevant to a hyperscaler"); P200 scale-across wins | BTG/LightCounting (Bob): in large-scale switching Cisco appears "primarily supplying systems" (≠ a merchant-chip vendor like Broadcom) | **⚠ nuance** (systems, not merchant chip) |
+| **Acacia / coherent optics** | Acacia >$1B orders Q3, on track >200% y/y; emerging scale-across leg | BTG: Cisco-Acacia one of the captives in 800ZR (vs Nokia/Ciena) competing in DCI; wants to enter the DSP market | **✓ confirms** (Acacia in scale-across) |
+| **AI / NVDA partnership** | NVDA partnership positions for Enterprise AI | BTG: Cisco+NVDA work together — supports Spectrum X in Silicon One and designs around NVDA silicon, serving enterprise Ethernet | **✓ confirms** (cooperates with NVDA) |
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 06-25 | BTG · LightCounting call | produto | mixed | Expert (Bob): **Cisco e NVDA trabalham juntos** — Cisco suporta **Spectrum X** tanto em sistemas Silicon One quanto desenhando em torno do silício NVDA Spectrum X, servindo o cliente enterprise tradicional que precisa de Ethernet enquanto o Ultra Ethernet não amadurece. No coherent/scale-across (800ZR), **Cisco-Acacia** é um dos captives fornecendo módulos (junto de Nokia/Ciena), competindo no turf da Ciena no DCI. Cisco-Acacia também quer entrar no **mercado de DSP**. Em switching/AI-networking de larga escala, Cisco aparece "primariamente fornecendo sistemas" (≠ chip merchant como Broadcom). (BTG "LightCounting", 2026-06-25) |
+| 06-25 | BTG · LightCounting call | product | mixed | Expert (Bob): **Cisco and NVDA work together** — Cisco supports **Spectrum X** both in Silicon One systems and by designing around NVDA Spectrum X silicon, serving the traditional enterprise customer that needs Ethernet while Ultra Ethernet is not yet mature. In coherent/scale-across (800ZR), **Cisco-Acacia** is one of the captives supplying modules (alongside Nokia/Ciena), competing on Ciena's turf in DCI. Cisco-Acacia also wants to enter the **DSP market**. In large-scale switching/AI-networking, Cisco appears "primarily supplying systems" (≠ a merchant-chip vendor like Broadcom). (BTG "LightCounting", 2026-06-25) |
 
-**Síntese do quarter:** o fluxo de especialistas matiza o framing de "silício é o moat" — em AI-networking de larga escala a CSCO é vista como vendedora de **sistemas**, não chip merchant, e coopera (não compete) com a NVDA via Spectrum X; o leg mais limpo confirmado é Acacia/coerente em scale-across (DCI), onde a Cisco-Acacia disputa o turf da Ciena e mira o mercado de DSP.
+**Quarter synthesis:** the expert flow nuances the "silicon is the moat" framing — in large-scale AI-networking CSCO is seen as a vendor of **systems**, not a merchant chip, and cooperates (rather than competes) with NVDA via Spectrum X; the cleanest confirmed leg is Acacia/coherent in scale-across (DCI), where Cisco-Acacia competes on Ciena's turf and targets the DSP market.
 
 ## Management commentary — evolution (last 6 quarters)
 

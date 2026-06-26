@@ -4,6 +4,24 @@
 
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\LRCX` (10-K/10-Q + transcripts) · `_equity_calls` · semicap-WFE theme. Master index: [00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $27.0bn | $33.3bn |
+| Gross profit | $13.5bn | $17.0bn |
+| Gross margin | 50.2% | 50.9% |
+| EBITDA | $10.2bn | $13.3bn |
+| EPS | $6.84 | $9.01 |
+| Capex | $1.0bn | $1.2bn |
+| OCF (≈EBITDA) | $10.2bn | $13.3bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="20.5" width="20" height="37.5" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="16.7" width="20" height="41.3" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+6.6% 3m · +17.3% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="26.7" width="20" height="31.3" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="19.4" width="20" height="38.6" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.6" width="20" height="43.4" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+13.9% 3m · +40.6% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Lam Research is the leader in the **etch + deposition** legs of wafer-fab equipment — the tools that pattern and build up the 3D structures inside a chip. Product families: **Deposition** (ECD/SABRE, CVD/ALD tungsten & molybdenum/ALTUS, PECVD & ALD-gapfill/VECTOR, Stryker, SPEED) and **Etch** (conductor etch Kiyo/Versys/Acara, dielectric etch Flex/Vantex, TSV etch Syndion) plus wafer clean and the **Customer Support Business Group (CSBG)** — spares, upgrades, services and refurbished non-leading-edge tools (10-K FY25, 2025-08-11). Primary competitors: Applied Materials, Tokyo Electron, Hitachi in etch; AMAT, ASM International, Wonik IPS in ALD/PECVD (10-K FY25). International is the substantial majority of revenue; the two most significant customers in FY25 were **Samsung and TSMC** (10-K FY25). The model is levered to rising **deposition/etch intensity** as the industry goes 3D — 3D NAND layer-stacking, DRAM 4F²/capacitor scaling and HBM, and gate-all-around logic — and is the highest-conviction WFE share-gainer in the complex (ship-share of WFE +>1pp y/y in 2025; SAM into the mid-30s% of WFE, target high-30s%) (Q2/Q3 FY26 calls).
 
@@ -55,13 +73,13 @@ Lam sits in the middle of the WFE stack: precision-component suppliers feed it, 
 **Guidance (Q3 FY26 call, 2026-04-22):** FQ4 FY26 (June quarter) revenue **$6.6B ± $400M**, GM 50.5% ± 1pp, operating margin 36.5% ± 1pp, EPS **$1.65 ± $0.15**. **CY2026 WFE raised to ~$140B** (from $135B at Q2 FY26, 2026-01-28, off ~$110B in CY2025) — Archer: spending projections "have moved higher across all device segments." NAND is the structural new leg: a **~$40B NAND conversion** with the "majority of spending occurring before the end of CY2027" (pulled forward), data-center NAND bits now exceeding PC + mobile combined. Watch item: management flagged **China revenue declines in the June quarter**, and customer down payments fell to a ~4-year low (Q3 FY26 call). Second Malaysia facility (~same size as the first) ramps in H2 to scale into next year's demand.
 
 ## Capstone estimates (house model)
-_Source: Capstone peer model (`ASML_Peers_SemiCap_v16.xlsx` — Peer Comp, 2026-06-15). EPS-only (full P&L não modelado por nome aqui)._
+_Source: Capstone peer model (`ASML_Peers_SemiCap_v16.xlsx` — Peer Comp, 2026-06-15). EPS-only (full P&L not modeled by name here)._
 
 | Diluted EPS ($) | 2024 | 2025 | 2026E | 2027E | 2028E | vs cons NTM |
 |---|--:|--:|--:|--:|--:|--:|
 | LRCX | 2.87 | 4.15 | 5.78 | 8.43 | 11.57 | ~7.59 |
 
-**House read:** EPS 2026E $5.78 / 2027E $8.43 / 2028E $11.57 — acima do consenso (NTM ~7.59). (Capstone peer model, 2026-06-15)
+**House read:** EPS 2026E $5.78 / 2027E $8.43 / 2028E $11.57 — above consensus (NTM ~7.59). (Capstone peer model, 2026-06-15)
 
 ## Debate / thesis
 - **Capstone model (house view):** diluted EPS $5.8 / $8.4 / $11.6 (2026-28E) vs NTM consensus ~$7.6; implied P/E ~67x→46x→34x. (Capstone official model — ASML_Peers_SemiCap v16, 2026-06-15)
@@ -87,33 +105,33 @@ _Source: Capstone peer model (`ASML_Peers_SemiCap_v16.xlsx` — Peer Comp, 2026-
 
 <!-- Consensus estimates (BBG) block auto-injected here by the HTML builder -->
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_FQ3 FY26 print → intra-quarter · Apr 22 → Jun 22, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_FQ3 FY26 print → intra-quarter · Apr 22 → Jun 22, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q3 FY26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q3 FY26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **WFE / demanda** | CY26 elevado p/ ~$140B; "higher across all segments" | UBS Arcuri: LAM+AMAT "as duas ações pra ter", capacity actions sinalizam WFE rumo a $250B em CY28; MS WFE $149B/$191B | **✓ confirma** (teto de WFE sobe) |
-| **Competição / share** | 1ª win de dielectric-etch foundry/logic; ramp Kiyo | MS upgrade p/ OW (skeptic vira), prefere LAM+KLA > AMAT; LAM ganha share em '27 (NAND + recuperação Intel) | **✓ confirma** (preferido depo/etch) |
-| **NAND** | $40B de conversão, maioria do spend antes do fim de CY27 | JPM: greenfield NAND ainda ausente (1º só em CY28) — leg dependente de migração tech | **⚠ nuança** (sem greenfield ainda) |
-| **DRAM/HBM** | DRAM recorde 27% dos sistemas, +45% y/y; Stryker ALD | UBS Vella/Arcuri: LRCX o mais alavancado a memory capex do trio | **✓ confirma** (alavancagem memória) |
-| **Margem / guidance** | Guide jun: rev $6.6B / GM 50.5% / EPS $1.65 | AlphaSense: guide bem acima do Street ($6.05B/49.2%/$1.45 Bernstein); GAA ~dobra SAM/wafer | **✓ confirma** (acima do consenso) |
+| **WFE / demand** | CY26 raised to ~$140B; "higher across all segments" | UBS Arcuri: LAM+AMAT "the two stocks to own", capacity actions signal WFE toward $250B in CY28; MS WFE $149B/$191B | **✓ confirms** (WFE ceiling rises) |
+| **Competition / share** | First dielectric-etch foundry/logic win; Kiyo ramp | MS upgrade to OW (the skeptic turns), prefers LAM+KLA > AMAT; LAM gains share in '27 (NAND + Intel recovery) | **✓ confirms** (preferred depo/etch) |
+| **NAND** | $40B of conversion, majority of spend before the end of CY27 | JPM: NAND greenfield still absent (first only in CY28) — leg dependent on tech migration | **⚠ nuance** (no greenfield yet) |
+| **DRAM/HBM** | Record DRAM 27% of systems, +45% y/y; Stryker ALD | UBS Vella/Arcuri: LRCX the most levered to memory capex of the trio | **✓ confirms** (memory leverage) |
+| **Margin / guidance** | June guide: rev $6.6B / GM 50.5% / EPS $1.65 | AlphaSense: guide well above the Street ($6.05B/49.2%/$1.45 Bernstein); GAA ~doubles SAM/wafer | **✓ confirms** (above consensus) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 05-15 | JPM · Harlan Sur | competicao | bull | OW all three large caps — "overweight... KLA, Lam, and Applied Materials." CY26 favors depo/etch (LRCX/AMAT), but CY27 rotates to the new-node leaders KLAC/ASML as sub-2nm takes off — a relative forward-revisions headwind vs KLA. NAND greenfield still absent (first one only in CY28). The buy-side bar on WFE is "very, very high" — AMAT sold off on the guide-up because expectations were already there. |
-| 05-18 | UBS · Tim Arcuri | demanda | bull | "I like Semi Caps, AMAT, LAM. I've been pushing those now for a while" — LRCX+AMAT "the two stocks you want to own." Reads Lam's capacity actions as confirmation of a rising WFE ceiling: a 2nd Malaysia fab + discussion of a 3rd site = signal of WFE heading toward $250B CY28. UBS Buy, PT $200. |
-| 05-18 | Morgan Stanley · Joe Moore | competicao | bull | MS upgraded LRCX/LAM to Overweight ("memory mismatch unresolved, LAM up to OW, AMAT down to EW"), reversing the prior UW — the fundamental skeptic turned constructive on Lam, placing it above AMAT (cut to EW). |
+| 05-15 | JPM · Harlan Sur | competition | bull | OW all three large caps — "overweight... KLA, Lam, and Applied Materials." CY26 favors depo/etch (LRCX/AMAT), but CY27 rotates to the new-node leaders KLAC/ASML as sub-2nm takes off — a relative forward-revisions headwind vs KLA. NAND greenfield still absent (first one only in CY28). The buy-side bar on WFE is "very, very high" — AMAT sold off on the guide-up because expectations were already there. |
+| 05-18 | UBS · Tim Arcuri | demand | bull | "I like Semi Caps, AMAT, LAM. I've been pushing those now for a while" — LRCX+AMAT "the two stocks you want to own." Reads Lam's capacity actions as confirmation of a rising WFE ceiling: a 2nd Malaysia fab + discussion of a 3rd site = signal of WFE heading toward $250B CY28. UBS Buy, PT $200. |
+| 05-18 | Morgan Stanley · Joe Moore | competition | bull | MS upgraded LRCX/LAM to Overweight ("memory mismatch unresolved, LAM up to OW, AMAT down to EW"), reversing the prior UW — the fundamental skeptic turned constructive on Lam, placing it above AMAT (cut to EW). |
 | 05-29 | JPM · Harlan Sur | supply | bull | Semis Spring Series: OW LAM among the top semicap picks; flags TSMC with "a lot of urgency... to pull tool orders ahead of previously discussed schedules" — LAM a named beneficiary of the pull-ins. |
-| 06-10 | UBS · G. Vella | demanda | bull | "WFE Update: Early Innings" — constructive read-through on the WFE cycle; LRCX the most levered to memory capex of the trio. |
-| 06-22 | Morgan Stanley · J. Moore / Shane | competicao | bull | Shane prefers LAM + KLA over AMAT; LAM seen taking "another strong market-share gain" next year, levered to NAND + an Intel CAPEX recovery (vs AMAT's DRAM WFE deceleration to mid-to-high-20s% in 2027). MS WFE $149B/$191B/+mid-teens for 2026/27/28. |
-| 06-22 | Morgan Stanley · Tech Talk podcast (Joe Moore & Shane Brett, Ep. 310) | competicao | bull | Post-Asia-trip checks; chapter on "preference among AMAT, LRCX & KLAC." Anchors the MS rating — LAM Overweight (upgrade 2026-05-18), above AMAT (cut to EW); LAM the preferred depo/etch name alongside KLA. |
+| 06-10 | UBS · G. Vella | demand | bull | "WFE Update: Early Innings" — constructive read-through on the WFE cycle; LRCX the most levered to memory capex of the trio. |
+| 06-22 | Morgan Stanley · J. Moore / Shane | competition | bull | Shane prefers LAM + KLA over AMAT; LAM seen taking "another strong market-share gain" next year, levered to NAND + an Intel CAPEX recovery (vs AMAT's DRAM WFE deceleration to mid-to-high-20s% in 2027). MS WFE $149B/$191B/+mid-teens for 2026/27/28. |
+| 06-22 | Morgan Stanley · Tech Talk podcast (Joe Moore & Shane Brett, Ep. 310) | competition | bull | Post-Asia-trip checks; chapter on "preference among AMAT, LRCX & KLAC." Anchors the MS rating — LAM Overweight (upgrade 2026-05-18), above AMAT (cut to EW); LAM the preferred depo/etch name alongside KLA. |
 | 06-22 | AlphaSense Deep Research · LRCX primer (Bernstein/Mizuho/expert calls) | valuation | bull | FQ3 FY26 non-GAAP GM 49.9% (vs 49.0% guide); June guide rev $6.60B / GM 50.5% / EPS $1.65 well ahead of the Street ($6.05B / 49.2% / $1.45 per Bernstein). SAM economics: the GAA transition ~doubles Lam's SAM/wafer vs 5nm (~$1B incremental per 100k wfr/mo) + ~$1B from backside-power; HBM ~$450M SAM per 100k wfr/mo. China: the BIS 50% affiliates rule ≈ ~$600M revenue headwind in CY26. Mizuho valuation: LRCX CY27E P/E 36.6x / EV/FCF 40.9x — Outperform PT $380 (bull $500 / bear $305); Bernstein Outperform PT $325. |
 
-**Síntese do quarter:** consenso raro — o fluxo todo (incl. MS que era skeptic e virou OW) confirma a gestão: LAM é o nome preferido de depo/etch, alavancado a NAND + recuperação de capex da Intel, com teto de WFE subindo rumo a $250B em CY28. O único ponto de nuança é o NAND greenfield ainda ausente (1º só em CY28); debate residual é valuation a ~37x.
+**Quarter synthesis:** a rare consensus — the whole flow (incl. MS, which was a skeptic and flipped to OW) confirms management: LAM is the preferred depo/etch name, levered to NAND + Intel's capex recovery, with the WFE ceiling rising toward $250B in CY28. The only point of nuance is NAND greenfield still being absent (first only in CY28); the residual debate is valuation at ~37x.
 
 ## Management commentary — evolution (last 4 quarters)
 

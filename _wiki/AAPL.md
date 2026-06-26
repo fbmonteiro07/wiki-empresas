@@ -2,6 +2,25 @@
 
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AAPL` (filings + transcripts) · `_equity_calls` · `_briefings\by-ticker\AAPL.md`. Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Snapshot — Capstone official model + BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | **$480.0bn** | **$539.0bn** |
+| Gross profit | $229.0bn | $257.6bn |
+| Gross margin | 47.7% | 47.8% |
+| EBITDA | $170.0bn | $189.1bn |
+| EPS | **$10.12** | **$11.11** |
+| Capex | $13.8bn | $14.0bn |
+| OCF (≈EBITDA) | $170.0bn | $189.1bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="16.6" width="20" height="41.4" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="15.2" width="20" height="42.8" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.1" width="20" height="43.9" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+2.9% 3m · +6.2% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="16.3" width="20" height="41.7" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="15.2" width="20" height="42.8" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.1" width="20" height="43.9" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+2.9% 3m · +5.4% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_**Bold** = Capstone official model; plain = BBG consensus._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Consumer-hardware franchise (iPhone ~50%+ of revenue) plus a high-margin Services annuity layered on an installed base of **over 2.5bn active devices** (Q2 FY26, 2026-04-30). Revenue mix: iPhone, Mac, iPad, Wearables/Home/Accessories, and Services (App Store, advertising, iCloud, payments, Apple TV+, music). In the semis/AI chain, Apple is the largest TSMC customer (~17% of TSMC sales per BofA, 2026-05-11) — though Bernstein estimates NVIDIA rose to ~20% of TSMC revenue in 2025, "about as big a customer as Apple" (Bernstein Semis deck, 2025-05-05) — a leading-edge-node and DRAM/NAND buyer, and a hyperscaler-divergent AI player: capex/revenue has fallen ~3%→2% over Q1'20→Q1'26 (@TheTranscript_, briefing 2026-05-11) vs. 40–60% for peers (Vital Knowledge, 2026-06-09). AI strategy is capex-light and partner-led — a multi-year Google/Gemini collaboration powers next-gen Apple Foundation Models behind a privacy-first, on-device + Private Cloud Compute architecture; Bernstein frames the resolved Google DOJ remedies as not only clearing a downside risk but opening the path for Apple to leverage Gemini's AI (Bernstein initiation/Newman, 2025-09-15). CEO transition: Tim Cook → John Ternus effective 2026-09-01.
 
@@ -30,7 +49,7 @@ _Source: Capstone official model (`Modelo Apple Felipe 2Q26 - WIP.xlsm`, 2026-06
 | iPhone ASP ($) | — | 874 | 946 | 1,021 | — |
 | Services ($bn) | 96 | 109 | 126 | 145 | 164 |
 
-**House read:** receita $391bn → $585bn (24-28E), EPS adj $6.82 → $12.55; drivers = mix de iPhone (ASP $874 → $1,021) + Services compondo a ~$164bn. (Capstone official model, 2026-06-16)
+**House read:** revenue $391bn → $585bn (24-28E), adj EPS $6.82 → $12.55; drivers = iPhone mix (ASP $874 → $1,021) + Services compounding to ~$164bn. (Capstone official model, 2026-06-16)
 
 ## Debate / thesis
 - **Capstone model (house view):** revenue $416B / $480B / $539B / $585B (2025-28E, +6/+15/+12/+9%); adj EPS $8.35 (2025E, +22% off $6.82 in 2024); GM ~47%, op margin ~32%. Drivers: iPhone units 240M→267M→280M with ASP $874→$946→$1,021; Services $109B→$126B→$145B→$164B. (Capstone official model — WIP 2Q26, 2026-06-16)
@@ -64,36 +83,36 @@ _Source: Capstone official model (`Modelo Apple Felipe 2Q26 - WIP.xlsm`, 2026-06
 - **China exposure** (~strong but cyclically/geopolitically sensitive; Greater China is a swing segment) — in 3Q25 China smartphones, only Apple and Oppo posted positive YoY shipment growth among the top 5 (Citi China Tech, 2026-01-20).
 - **OpenAI relationship friction** (potential legal action over 2024 ChatGPT terms) — low-probability, high-flag (briefing 2026-05-18).
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q2 FY26 · Apr 30 → Jun 23, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q2 FY26 · Apr 30 → Jun 23, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q2 FY26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q2 FY26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Margem / memória** | GM 49.3%; memória "significativamente maior" em Jun, impacto crescente além de Jun | Wigg/Mohan: margem se sustenta via repasse (Buy $380, 37x C27) · StoneX/TrendForce: Apple já fechou +20% no DRAM mobile no Q3, 1ª onda de LTA | **✓ confirma** (repasse funciona) |
-| **iPhone / ciclo** | $57bn +22%; "lineup mais popular de sempre" | Citi/Counterpoint: sell-through −5% no Q1 (1º negativo desde Q4'23), iPhone 18 base escorrega p/ ~Mar/27 → 2H26 mais leve | **⚠ nuança** (calendário pesa no 2H) |
-| **AI / Siri** | Siri "chega este ano"; R&D acelerando | Barclays/MS: "outra tentativa de AI", catch-up não breakthrough, Siri 2.0 "é 2024, não 2026" | **✗ contesta** (execução em dúvida) |
-| **Produto (foldable)** | — (catalisador de ASP no pipeline) | Woodring: FY27 "ciclo iPhone X salvo por preço", ~20m unidades, $2.400, +10pts ASP (OW $360) | **✓ confirma** (alavanca de ASP) |
+| **Margin / memory** | GM 49.3%; memory "significantly higher" in Jun, increasing impact beyond Jun | Wigg/Mohan: margin holds via pass-through (Buy $380, 37x C27) · StoneX/TrendForce: Apple already agreed +20% on mobile DRAM in Q3, first LTA wave | **✓ confirms** (pass-through works) |
+| **iPhone / cycle** | $57bn +22%; "most popular lineup ever" | Citi/Counterpoint: sell-through −5% in Q1 (first negative since Q4'23), iPhone 18 base slips to ~Mar/27 → lighter 2H26 | **⚠ nuance** (calendar weighs on 2H) |
+| **AI / Siri** | Siri "coming this year"; R&D accelerating | Barclays/MS: "another AI attempt", catch-up not breakthrough, Siri 2.0 "is 2024, not 2026" | **✗ contests** (execution in doubt) |
+| **Product (foldable)** | — (ASP catalyst in the pipeline) | Woodring: FY27 "iPhone X cycle saved by pricing", ~20m units, $2,400, +10pts ASP (OW $360) | **✓ confirms** (ASP lever) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 05-06 | BofA · Wigg (spec-sales) | margem | bull | BofA/Wigg impressed by Apple guiding margins so strongly in the worst stretch of memory cost; reads the Google 'Siri brain transplant' as better than forcing in-house models, with the fall foldable (US$2-3K) a big ASP tailwind that needs few units to move EPS toward ~US$10-12; the multiple holds on Apple's FCF advantage vs the rest of the capex-heavy Mag7 (BofA/Wigg, 2026-05-06). |
+| 05-06 | BofA · Wigg (spec-sales) | margin | bull | BofA/Wigg impressed by Apple guiding margins so strongly in the worst stretch of memory cost; reads the Google 'Siri brain transplant' as better than forcing in-house models, with the fall foldable (US$2-3K) a big ASP tailwind that needs few units to move EPS toward ~US$10-12; the multiple holds on Apple's FCF advantage vs the rest of the capex-heavy Mag7 (BofA/Wigg, 2026-05-06). |
 | 05-12 | Apple IR · Parekh (equity call) | capital | bull | IR call: the board added US$100bn of buyback and dropped the net-cash-neutral target (Parekh: now evaluating cash and debt independently — the framework is 'no longer relevant'). The June constraint shifts to Mac (mini, Studio, MacBook Neo) on advanced 3nm node capacity, not memory (Apple IR, 2026-05-12). |
 | 06-04 | Barclays (desk, via briefing) | valuation | bear | AAPL used as a low-vol funding short vs semis by the Barclays desk (briefings 2026-05-14/06-08). |
-| 06-09 | Barclays · Tim Long (via briefing) | produto | bear | Barclays (Tim Long) Underweight, PT US$253 — AI is 'another AI attempt', no killer app, questionable monetization, ~16% downside. Siri 2.0 is 'catch-up, not a breakthrough' (briefing 2026-06-09). |
-| 06-09 | Vital Knowledge / Morgan Stanley (via briefing) | demanda | mixed | AI gated by the installed base: ~850m iPhones don't run Apple Intelligence, ~1.3bn don't run advanced Siri; a more intensive Siri needs iPhone 17 Pro/Air+ (~150m of a ~1.5bn base, Woodring). Apple's capex/revenue fell ~3%→2% (Q1'20→Q1'26) vs 40-60% for peers (Vital Knowledge, 2026-06-09). |
-| 06-15 | Citi/Counterpoint · WWDC & smartphone | demanda | mixed | Counterpoint: sell-through -5% y/y in Q1 (Apple's first negative since Q4'23) and -10% y/y for the total market in April; global FY26 shipments revised to -14%, but Apple seen ~flat. The iPhone 18 base shifts to ~Mar/2027, making 2H26 lighter. WWDC: Siri got its own app with Google/Gemini grounding knowledge. Foldable ~6M units in 2026, September launch, ASP just under US$1,000 (Citi/Counterpoint WWDC, 2026-06-15). |
-| 06-16 | Morgan Stanley · Woodring (equity call) | produto | bull | Woodring (MS) frames FY27 as an 'iPhone X-like cycle saved by pricing' — ~20m foldable units, US$2,400 starting price, ~10pts of ASP growth from the foldable mix alone; MS Overweight PT US$360, FY27E EPS US$10.30 (~8% above consensus). But the bear: Siri 2.0 is '2024 right now, not 2026' and NAND going 'parabolic' (MS, 2026-06-16). |
-| 06-18 | BofA · Mohan | margem | bull | BofA (Mohan) reiterates Buy, PT US$380 (37x C27 EPS) — margin holds via cost pass-through despite memory; trimming units marginally. Cook confirmed 'forced to raise pricing' in the WSJ (BofA, 2026-06-18). Last referenced price US$295.95. |
-| 06-23 | StoneX/TrendForce · 'Memory expert call (Avril)' | margem | mixed | Apple has already agreed to a ~+20% increase in mobile DRAM pricing in Q3 — among the few 'special deals' above the Q3 base of ~8-13% — and is in the first LTA wave alongside US CSPs and NVIDIA (3-yr contracts 2026-28). Avril reads Apple's 'vocal' memory-cost complaints as Apple not getting all the LPDDR5 output it wants (fighting NVIDIA) and not just a pricing story (StoneX/TrendForce, 2026-06-23). |
-| 06-23 | Redburn · Conor O'Mara ('Asia Trip Takeaways') | margem | mixed | Conor corroborates the Fubon read — TSMC raised Apple's wafer price only low-single-digit in 2026, then +≥10% in 2027 (the first time Apple is included in the hike) — a forward COGS headwind in the A-series/foldable cycle (Redburn 'Conor O'Mara Asia Trip Takeaways', 2026-06-23). |
-| 06-25 | Morgan Stanley · Woodring | margem | bull | **Apple raised Mac, iPad and accessories prices by 15-25%** — above MS's prior assumption of 5-10% for non-iPhone products. MS framing: "unprecedented push to protect margins amidst record memory inflation" — signals a **shift toward defending gross margins, not just offsetting cost inflation**, particularly from memory. Magnitude undershot by prior estimates → potential upside to MS revenue and EPS models. History suggests Apple's ecosystem supports relatively resilient pricing power + demand inelasticity. Still watching iPhone 18 pricing strategy (margin vs. shipments still evolving, but checks still indicate a healthy cycle). MS OW, PT $360. (MS Woodring, 2026-06-25) |
-| 06-25 | JPM · Chatterjee | margem | bull | JPM: Apple product price increases announced for Mac/iPad/accessories, with magnitude tracking **above JPM's prior expectations**. Demand elasticity is the key debate but ecosystem lock-in, financing options and inelastic demand could support revenue and EPS upside. OW. (JPM/Chatterjee, 2026-06-25) |
+| 06-09 | Barclays · Tim Long (via briefing) | product | bear | Barclays (Tim Long) Underweight, PT US$253 — AI is 'another AI attempt', no killer app, questionable monetization, ~16% downside. Siri 2.0 is 'catch-up, not a breakthrough' (briefing 2026-06-09). |
+| 06-09 | Vital Knowledge / Morgan Stanley (via briefing) | demand | mixed | AI gated by the installed base: ~850m iPhones don't run Apple Intelligence, ~1.3bn don't run advanced Siri; a more intensive Siri needs iPhone 17 Pro/Air+ (~150m of a ~1.5bn base, Woodring). Apple's capex/revenue fell ~3%→2% (Q1'20→Q1'26) vs 40-60% for peers (Vital Knowledge, 2026-06-09). |
+| 06-15 | Citi/Counterpoint · WWDC & smartphone | demand | mixed | Counterpoint: sell-through -5% y/y in Q1 (Apple's first negative since Q4'23) and -10% y/y for the total market in April; global FY26 shipments revised to -14%, but Apple seen ~flat. The iPhone 18 base shifts to ~Mar/2027, making 2H26 lighter. WWDC: Siri got its own app with Google/Gemini grounding knowledge. Foldable ~6M units in 2026, September launch, ASP just under US$1,000 (Citi/Counterpoint WWDC, 2026-06-15). |
+| 06-16 | Morgan Stanley · Woodring (equity call) | product | bull | Woodring (MS) frames FY27 as an 'iPhone X-like cycle saved by pricing' — ~20m foldable units, US$2,400 starting price, ~10pts of ASP growth from the foldable mix alone; MS Overweight PT US$360, FY27E EPS US$10.30 (~8% above consensus). But the bear: Siri 2.0 is '2024 right now, not 2026' and NAND going 'parabolic' (MS, 2026-06-16). |
+| 06-18 | BofA · Mohan | margin | bull | BofA (Mohan) reiterates Buy, PT US$380 (37x C27 EPS) — margin holds via cost pass-through despite memory; trimming units marginally. Cook confirmed 'forced to raise pricing' in the WSJ (BofA, 2026-06-18). Last referenced price US$295.95. |
+| 06-23 | StoneX/TrendForce · 'Memory expert call (Avril)' | margin | mixed | Apple has already agreed to a ~+20% increase in mobile DRAM pricing in Q3 — among the few 'special deals' above the Q3 base of ~8-13% — and is in the first LTA wave alongside US CSPs and NVIDIA (3-yr contracts 2026-28). Avril reads Apple's 'vocal' memory-cost complaints as Apple not getting all the LPDDR5 output it wants (fighting NVIDIA) and not just a pricing story (StoneX/TrendForce, 2026-06-23). |
+| 06-23 | Redburn · Conor O'Mara ('Asia Trip Takeaways') | margin | mixed | Conor corroborates the Fubon read — TSMC raised Apple's wafer price only low-single-digit in 2026, then +≥10% in 2027 (the first time Apple is included in the hike) — a forward COGS headwind in the A-series/foldable cycle (Redburn 'Conor O'Mara Asia Trip Takeaways', 2026-06-23). |
+| 06-25 | Morgan Stanley · Woodring | margin | bull | **Apple raised Mac, iPad and accessories prices by 15-25%** — above MS's prior assumption of 5-10% for non-iPhone products. MS framing: "unprecedented push to protect margins amidst record memory inflation" — signals a **shift toward defending gross margins, not just offsetting cost inflation**, particularly from memory. Magnitude undershot by prior estimates → potential upside to MS revenue and EPS models. History suggests Apple's ecosystem supports relatively resilient pricing power + demand inelasticity. Still watching iPhone 18 pricing strategy (margin vs. shipments still evolving, but checks still indicate a healthy cycle). MS OW, PT $360. (MS Woodring, 2026-06-25) |
+| 06-25 | JPM · Chatterjee | margin | bull | JPM: Apple product price increases announced for Mac/iPad/accessories, with magnitude tracking **above JPM's prior expectations**. Demand elasticity is the key debate but ecosystem lock-in, financing options and inelastic demand could support revenue and EPS upside. OW. (JPM/Chatterjee, 2026-06-25) |
 
-**Síntese do quarter:** o debate migrou da execução de AI (ainda o furo bear) para a aritmética de margem×preço. A **implementação das altas de preço (15-25% em Mac/iPad)** — acima das estimativas anteriores de 5-10% — confirma que a Apple está defendendo GMs ativamente, não apenas repassando custo. O consenso (MS, JPM, BofA) leu isso como potencial upside de receita/EPS; o risco é elasticidade de demanda num ciclo de smartphone global fraco (-5% a -14%) e um 2H26 mais leve (base do iPhone 18 empurrada para Mar/27).
+**Quarter synthesis:** the debate migrated from AI execution (still the bear hole) to margin×price arithmetic. The **implementation of price hikes (15-25% on Mac/iPad)** — above the prior 5-10% estimates — confirms Apple is actively defending GMs, not just passing through cost. The consensus (MS, JPM, BofA) read this as potential revenue/EPS upside; the risk is demand elasticity in a weak global smartphone cycle (-5% to -14%) and a lighter 2H26 (iPhone 18 base pushed into Mar/27).
 
 ## Management commentary — evolution (last 5 quarters)
 | Theme | Q2 FY25 (Mar, 05-01-25) | Q3 FY25 (Jun, 07-31-25) | Q4 FY25 (Sep, 10-30-25) | Q1 FY26 (Dec, 01-29-26) | Q2 FY26 (Mar, 04-30-26) |

@@ -2,6 +2,24 @@
 
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\TER` (filings + transcripts) · `_equity_calls` · `_briefings`. Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $4.4bn | $5.5bn |
+| Gross profit | $2.6bn | $3.3bn |
+| Gross margin | 58.7% | 59.6% |
+| EBITDA | $1.4bn | $2.0bn |
+| EPS | $6.79 | $9.72 |
+| Capex | $261m | $276m |
+| OCF (≈EBITDA) | $1.4bn | $2.0bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="26.3" width="20" height="31.7" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="19.9" width="20" height="38.1" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.1" width="20" height="43.9" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+15.5% 3m · +38.8% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="28.3" width="20" height="29.7" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="21.0" width="20" height="37.0" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="15.1" width="20" height="42.9" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+15.9% 3m · +44.5% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Teradyne is the #2 global automated-test-equipment (ATE) vendor — a back-end semiconductor name levered to **test intensity**, not wafer starts. Three reportable segments: **Semiconductor Test** (~87% of revenue: SoC + Memory + Integrated System Test/IST), **Robotics** (Universal Robots cobots + MiR autonomous mobile robots, ~7%), and **Product Test** (board test, wireless, PIC/silicon-photonics test, defense/aerospace, ~6%) (TER 10-Q, Q1 FY26, 2026-05-01). The structural story is the swing from a mobile-driven mix to an **AI-dominant** one: AI-related demand was **~70% of total revenue in Q1 FY26**, up from ~60% in Q4 FY25 and ~50% in Q3 FY25 (TER Q1 FY26 call, 2026-04-29). Duopoly in SoC/memory ATE vs **Advantest**; Robotics competes with FANUC/ABB/KUKA/Yaskawa (TER 10-K, 2026-02-19).
 
@@ -54,13 +72,13 @@ Back-end test. Teradyne buys instruments and handler/prober/robotics components,
 **Q1 FY26 (reported 2026-04-29, quarter ended Mar 29 2026)** — a record. Total revenue **$1,282.5M, +87% y/y / +18% q/q** ($200M above the prior 2021 peak); GAAP diluted EPS **$2.53** (vs $0.61 Q1 FY25), non-GAAP EPS **$2.56**; non-GAAP gross margin **60.9%** (+370bps q/q); non-GAAP operating margin a record **37.5%** (TER Q1 FY26 call; 10-Q 2026-05-01). GAAP gross profit $780.9M (61%), GAAP operating income $473.0M, net income $398.9M (10-Q). Segment split: **Semi Test $1,110.8M (+104.8% y/y)** — SoC $882M (~75% AI-compute), Memory $203M (near-record on HBM/DRAM), IST $27M; **Robotics $91.3M (+32% y/y, 4th straight q/q growth)**; **Product Test $80.4M (+8% y/y, defense/aerospace led)**. Geography heavily Asia: Taiwan 41%, Korea 19%, China 11% of revenue (10-Q). **Guidance Q2 FY26: revenue $1.15–$1.25B, non-GAAP EPS $1.86–$2.15, GM 58–59%**; H1-weighted (~55–60% of FY26 in H1). FY26 evergreen target reiterated: **~$6B revenue / $9.50–$11 non-GAAP EPS** (TER Q4 FY25 call, 2026-02-03). Capital return modest: $5.5M buyback + $20.4M dividends ($0.13/qtr) in Q1 (10-Q).
 
 ## Capstone estimates (house model)
-_Source: Capstone peer model (`ASML_Peers_SemiCap_v16.xlsx` — Peer Comp, 2026-06-15). EPS-only (full P&L não modelado por nome aqui)._
+_Source: Capstone peer model (`ASML_Peers_SemiCap_v16.xlsx` — Peer Comp, 2026-06-15). EPS-only (full P&L not modeled by name here)._
 
 | Diluted EPS ($) | 2024 | 2025 | 2026E | 2027E | 2028E | vs cons NTM |
 |---|--:|--:|--:|--:|--:|--:|
 | TER | 3.38 | 3.47 | 5.46 | 6.90 | — | ~8.25 |
 
-**House read:** EPS 2026E $5.46 / 2027E $6.90 — **abaixo** do consenso (mais cauteloso em ATE) (NTM ~8.25). (Capstone peer model, 2026-06-15)
+**House read:** EPS 2026E $5.46 / 2027E $6.90 — **below** consensus (more cautious on ATE) (NTM ~8.25). (Capstone peer model, 2026-06-15)
 
 ## Debate / thesis
 - **Capstone model (house view):** diluted EPS $5.5 / $6.9 (2026-27E) — **below** NTM consensus ~$8.2 (model more cautious on ATE); implied P/E ~79x→63x. (Capstone official model — ASML_Peers_SemiCap v16, 2026-06-15)
@@ -98,31 +116,31 @@ _Source: Capstone peer model (`ASML_Peers_SemiCap_v16.xlsx` — Peer Comp, 2026-
 - **UBS (Arcuri) — semis** _(2026-06-15)_: "Paradine [Teradyne]… talking about being qualified for **Google TPU** — that's pretty good stuff" — incremental SoC-test design-win color for the ASIC ramp (UBS "Arcuri", 2026-06-15).
 - **AlphaSense Deep Research — LRCX primer (Mizuho peer comp)** _(2026-06-22)_: TER at **CY27E P/E 38.2x / EV/FCF 49.8x / P/Sales 10.9x** (~$60bn mkt cap) — the richest EV/FCF in the Mizuho semicap comp table (AlphaSense "DR LRCX primer", 2026-06-22).
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 FY26 print → intra-quarter · Apr 29 → Jun 22, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 FY26 print → intra-quarter · Apr 29 → Jun 22, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1'26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1'26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **SoC / compute test** | SoC $882M (~75% compute-driven); shift estrutural mobile→AI | UBS (Arcuri): "qualificado p/ Google TPU — pretty good stuff", design-win color p/ ramp ASIC | **✓ confirma** (design-win ASIC) |
-| **Memory test** | $203M; força em HBM + DRAM | JPM (Samik): demanda de memory test mais forte → upside no 2H ("nuanced positive") | **✓ confirma** (memory puxa 2H) |
-| **Guidance / 2H** | Q2 guide receita $1,15-1,25B; "três ondas de AI" | JPM: 1H ainda lidera 2H no split VIP-compute (~85/15); Google ASIC qual finaliza ~end-3Q, receita modesta no 4Q, ramp em 2027 | **⚠ nuança** (upside de ASIC escorrega p/ 2027) |
-| **Produto / óptica** | — | UBS: deep-dive CPO/silicon photonics, 4 test insertions, TAM mid-term $300-700M, ramp pesado no H2 | **✓ confirma** (optionality real em CPO) |
-| **Valuation** | Record GM 60,9%; op margin 37,5% | UBS: top pick, late-cycle laggard — vs Mizuho comp: CY27E EV/FCF 49,8x, o mais rico da tabela semicap | **⚠ nuança** (laggard vs múltiplo esticado) |
+| **SoC / compute test** | SoC $882M (~75% compute-driven); structural mobile→AI shift | UBS (Arcuri): "qualified for Google TPU — pretty good stuff", design-win color for the ASIC ramp | **✓ confirms** (ASIC design-win) |
+| **Memory test** | $203M; strength in HBM + DRAM | JPM (Samik): stronger memory-test demand → 2H upside ("nuanced positive") | **✓ confirms** (memory pulls 2H) |
+| **Guidance / 2H** | Q2 guide revenue $1.15-1.25B; "three AI waves" | JPM: 1H still leads 2H on the VIP-compute split (~85/15); Google ASIC qual finishing ~end-3Q, modest 4Q revenue, ramp in 2027 | **⚠ nuance** (ASIC upside slips to 2027) |
+| **Product / optics** | — | UBS: CPO/silicon-photonics deep-dive, 4 test insertions, mid-term TAM $300-700M, ramp weighted to H2 | **✓ confirms** (real optionality in CPO) |
+| **Valuation** | Record GM 60.9%; op margin 37.5% | UBS: top pick, late-cycle laggard — vs Mizuho comp: CY27E EV/FCF 49.8x, the richest in the semicap table | **⚠ nuance** (laggard vs stretched multiple) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 05-04 | UBS · Arcuri / Shannon Poehlen / Gita Atalier | produto | bull | UBS-Teradyne deep-dive on CPO/silicon photonics: real optionality — four test insertions, mid-term TAM of $300-700M, first-mover via Fi-Con Tech + Quantifi/Photon 100. Ramp weighted to H2. |
+| 05-04 | UBS · Arcuri / Shannon Poehlen / Gita Atalier | product | bull | UBS-Teradyne deep-dive on CPO/silicon photonics: real optionality — four test insertions, mid-term TAM of $300-700M, first-mover via Fi-Con Tech + Quantifi/Photon 100. Ramp weighted to H2. |
 | 05-18 | UBS · Tim Arcuri | valuation | bull | In the weekly preview, TER among the top picks at a higher ref: "Teradyne at 320... that's one I like a lot," a late-cycle laggard. |
 | 06-12 | JPM · Samik Chatterjee | guidance | mixed | Preview: 2H improvement "nuanced positive" — stronger memory test demand → H2 upside; 1H still leads 2H on the VIP-compute split (~85/15 H1/H2). Google ASIC (VIP compute) qual finishing ~end-3Q, modest 4Q revenue and ramp in 2027; Intel merchant test shift is an out-year option. Read-through from Lumentum OCS outsourcing. |
-| 06-15 | UBS · Tim Arcuri | produto | bull | "Teradyne... talking about being qualified for Google TPU — that's pretty good stuff" — incremental SoC-test design-win color for the ASIC ramp. |
+| 06-15 | UBS · Tim Arcuri | product | bull | "Teradyne... talking about being qualified for Google TPU — that's pretty good stuff" — incremental SoC-test design-win color for the ASIC ramp. |
 | 06-18 | Susquehanna · corporate access | valuation | neutral | TER on the test/semicap events calendar (corporate access). |
 | 06-22 | AlphaSense Deep Research · LRCX primer (Mizuho comp) | valuation | mixed | TER at CY27E P/E 38.2x / EV/FCF 49.8x / P/Sales 10.9x (~$60bn mkt cap) — the richest EV/FCF in Mizuho's semicap comp table. |
 
-**Síntese do quarter:** o fluxo valida as alavancas de crescimento (memory test forte, design-win no Google TPU, optionality de CPO), mas o debate migrou para o timing e o preço — o ramp do ASIC do Google escorrega para 2027 (split 85/15 H1/H2 do JPM) e o múltiplo já é o EV/FCF mais rico da tabela semicap da Mizuho, mesmo com UBS chamando de late-cycle laggard.
+**Quarter synthesis:** the flow validates the growth levers (strong memory test, Google TPU design-win, CPO optionality), but the debate has shifted to timing and price — Google's ASIC ramp slips to 2027 (JPM's 85/15 H1/H2 split) and the multiple is already the richest EV/FCF in Mizuho's semicap table, even with UBS calling it a late-cycle laggard.
 
 ## Management commentary — evolution (last 4 quarters)
 

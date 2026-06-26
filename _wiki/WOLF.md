@@ -4,6 +4,24 @@
 
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\WOLF` (10-K/10-Q filings + transcripts) · briefings `E:\briefings\2026`. Master index: [00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $608m | $747m |
+| Gross profit | $-68m | $-22m |
+| Gross margin | -11.2% | -3.0% |
+| EBITDA | — | — |
+| EPS | $-8.93 | $-7.91 |
+| Capex | $199m | $191m |
+| OCF (≈EBITDA) | — | — |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f"></text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f"></text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Wolfspeed is a US-listed, **vertically integrated, pure-play silicon-carbide (SiC) company** — it grows its own SiC crystal/substrates and sells **(1) SiC + GaN materials** (wafers/substrates) and **(2) SiC power devices** (MOSFETs/modules). Two product lines: **Power Products ~67% of revenue, Materials Products ~33%** (10-Q, 2026-05-07; Power $218.4M vs Materials $100.3M over the Successor period 9/30/25–3/29/26). End-markets are **Automotive/EV + fast charging** and **Industrial & Energy** (AI data centers, grid modernization, renewables/storage) (10-Q, 2026-05-07). **The headline is the balance sheet, not the end-markets:** Wolfspeed filed a **prepackaged Chapter 11** (RSA 2025-06-22, confirmed 2025-09-08) and **emerged 2025-09-29**, cutting total debt ~70% and adopting **fresh-start accounting** — old equity was nearly wiped (existing holders kept ~1.3M of 25.8M new shares, ~5%; convertible noteholders took the rest) (10-Q, 2026-05-07). It is a sub-$200M-quarter, gross-loss, cash-burning turnaround with a SiC-800V optionality call layered on top — own the restructuring before you own the theme.
 
@@ -90,31 +108,31 @@ Wolfspeed is **vertically integrated in SiC** — it grows its own SiC boules/cr
 - **FinTwit** — high-beta distressed/800V call: "+300% or -50%" (@insane_analyst, 2026-05-16); "sizing up WOLF (800V DC)" but skeptical on SiC vs GaN (@insane_analyst, 2026-06-15); Serenity bullish on 800V acceleration (2026-06-15); WOLF smallest in crowd 800V basket at ~$2.2B (2026-06-09); "reduced highest-cost first-lien debt by 43%", stock +9% AH (@thetranscript_, 2026-05-06).
 - @trendforce _(briefing 2026-06-17)_ — Chinese SiC/GaN vendors challenging IDM leaders incl. Wolfspeed in certain segments.
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q3 FY26 · May 5 → Jun 17, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q3 FY26 · May 5 → Jun 17, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q3 FY26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q3 FY26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **AI data center / 800V** | DC +30% QoQ; migração 400V→800V; 1º 10kV SiC MOSFET comercial | JPM Chatterjee: WOLF entre os melhor posicionados no 800V (WBG $1bn→$5bn+ '30, 30%+ CAGR; power business ~10% da receita) · NVDA Vera Rubin 800V puxado p/ Q3 2026 | **✓ confirma** (tema valida o vetor de crescimento) |
-| **Balanço / restruturação** | Senior notes cortados 43%; ~$476M placements; 1ª maturidade 2030; liquidez $1.16bn | FinTwit @thetranscript_: cortou dívida 1st-lien de maior custo em 43%, ação +9% AH | **✓ confirma** (balanço sendo arrumado) |
-| **Competição / SiC vs GaN** | (pivot p/ 800V e 10kV SiC) | @insane_analyst: "SiC garbage, only GaN matters" · @trendforce: vendors chineses de SiC/GaN desafiando incumbentes incl. WOLF | **✗ contesta** (SiC contestado, flood China) |
-| **Demanda automotive** | EV/auto "uncertain"/soft; pivot p/ key-account | (sem fluxo intra-quarter tocando auto diretamente) | **⚠ nuança** (auto fraco, sem contraponto) |
+| **AI data center / 800V** | DC +30% QoQ; 400V→800V migration; first commercial 10kV SiC MOSFET | JPM Chatterjee: WOLF among the best-positioned in 800V (WBG $1bn→$5bn+ '30, 30%+ CAGR; power business ~10% of revenue) · NVDA Vera Rubin 800V pulled to Q3 2026 | **✓ confirms** (theme validates the growth vector) |
+| **Balance sheet / restructuring** | Senior notes cut 43%; ~$476M placements; first maturity 2030; liquidity $1.16bn | FinTwit @thetranscript_: cut highest-cost first-lien debt by 43%, stock +9% AH | **✓ confirms** (balance sheet being fixed) |
+| **Competition / SiC vs GaN** | (pivot to 800V and 10kV SiC) | @insane_analyst: "SiC garbage, only GaN matters" · @trendforce: Chinese SiC/GaN vendors challenging incumbents incl. WOLF | **✗ contests** (SiC contested, China flood) |
+| **Automotive demand** | EV/auto "uncertain"/soft; pivot to key accounts | (no intra-quarter flow touching auto directly) | **⚠ nuance** (auto weak, no counterpoint) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
 | 05-06 | FinTwit · @thetranscript_ (briefing 2026-05-06) | capital | bull | WOLF cut its highest-cost first-lien debt by 43%; stock +9% AH. |
 | 05-16 | FinTwit · @insane_analyst (briefing 2026-05-16) | valuation | mixed | WOLF treated as the levered torque play on 800V power-semi — "+300% or -50%". |
 | 05-31 | Desk positioning (briefing 2026-05-31) | valuation | bear | Semis desk short-biased on WOLF (alongside QCOM/SWKS/NVDA/QRVO) at the end of May. |
-| 06-09 | JPM · Samik Chatterjee (Watts Up! Shift to 800V) | produto | bull | WOLF among the best-positioned in the 800V theme (APH/FLEX/TEL/WOLF), though the equity rating remains UW. JPM/Navitas size the WBG market (AI DC + energy/grid) growing 30%+ CAGR from ~US$1bn (2025) to US$5bn+ by 2030 (800V pivot; PSU scaling non-linearly 2x power → ~5x SiC content; grid SSTs/BESS). LT content US$25K–35K/MW, split ~evenly SiC/GaN. WOLF's 800V participation: bare-die + packaged discrete MOSFETs and modules for grid-to-facility SST and rack power shelves; JPM estimates the power business at ~10% of total revenue. |
+| 06-09 | JPM · Samik Chatterjee (Watts Up! Shift to 800V) | product | bull | WOLF among the best-positioned in the 800V theme (APH/FLEX/TEL/WOLF), though the equity rating remains UW. JPM/Navitas size the WBG market (AI DC + energy/grid) growing 30%+ CAGR from ~US$1bn (2025) to US$5bn+ by 2030 (800V pivot; PSU scaling non-linearly 2x power → ~5x SiC content; grid SSTs/BESS). LT content US$25K–35K/MW, split ~evenly SiC/GaN. WOLF's 800V participation: bare-die + packaged discrete MOSFETs and modules for grid-to-facility SST and rack power shelves; JPM estimates the power business at ~10% of total revenue. |
 | 06-09 | FinTwit (briefing 2026-06-09) | valuation | mixed | 800V basket compiled by FinTwit ranks WOLF as the smallest at ~US$2.2B market cap (vs IFX US$116B, ON US$46B). |
-| 06-15 | FinTwit · @insane_analyst / Serenity (briefing 2026-06-15) | demanda | mixed | @insane_analyst "sizing up WOLF (800V DC)" but skeptical on SiC vs GaN ("SiC garbage, only GaN matters"); Serenity bullish on the 800V acceleration ("very stupid to be a bear… your WOLF power-semi basket should go brrr"). NVDA Vera Rubin 800V pulled ahead to Q3 2026. |
-| 06-17 | FinTwit · @trendforce (briefing 2026-06-17) | competicao | bear | Chinese SiC/GaN vendors challenging IDM leaders including Wolfspeed in certain segments (risk of SiC/GaN flood from China). |
+| 06-15 | FinTwit · @insane_analyst / Serenity (briefing 2026-06-15) | demand | mixed | @insane_analyst "sizing up WOLF (800V DC)" but skeptical on SiC vs GaN ("SiC garbage, only GaN matters"); Serenity bullish on the 800V acceleration ("very stupid to be a bear… your WOLF power-semi basket should go brrr"). NVDA Vera Rubin 800V pulled ahead to Q3 2026. |
+| 06-17 | FinTwit · @trendforce (briefing 2026-06-17) | competition | bear | Chinese SiC/GaN vendors challenging IDM leaders including Wolfspeed in certain segments (risk of SiC/GaN flood from China). |
 
-**Síntese do quarter:** o debate migrou do balanço (resolvido pós-Chapter 11 — dívida cortada, 1ª maturidade 2030) para o call option de 800V — onde o tema é validado (JPM), mas a controvérsia central é se SiC vence o GaN e se a China inunda o mercado; o fluxo trata WOLF como torque play levado de 800V ("+300% ou -50%") com o desk short-biased e a única rating formal (JPM) ainda Underweight.
+**Quarter synthesis:** the debate has shifted from the balance sheet (resolved post-Chapter 11 — debt cut, first maturity 2030) to the 800V call option — where the theme is validated (JPM), but the central controversy is whether SiC beats GaN and whether China floods the market; the flow treats WOLF as a levered 800V torque play ("+300% or -50%") with the desk short-biased and the only formal rating (JPM) still Underweight.
 
 ## Management commentary — evolution (last 4 quarters)
 

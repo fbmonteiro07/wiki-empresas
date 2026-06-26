@@ -2,6 +2,24 @@
 
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\ALAB` (filings + transcripts) · `E:\briefings\2026\*` · Master index: [00_INDEX.md](00_INDEX.md). Themes: [custom-asic-tpu](themes/custom-asic-tpu.md) · [optical-cpo](themes/optical-cpo.md). Note: IPO'd Mar-2024 — short filing history (~9 filings)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $1.5bn | $2.2bn |
+| Gross profit | $1.1bn | $1.6bn |
+| Gross margin | 72.3% | 71.1% |
+| EBITDA | $523m | $744m |
+| EPS | $2.90 | $4.31 |
+| Capex | $52m | $75m |
+| OCF (≈EBITDA) | $523m | $744m |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="24.0" width="20" height="34.0" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="21.9" width="20" height="36.1" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.3" width="20" height="43.7" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+21.8% 3m · +29.5% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="25.4" width="20" height="32.6" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="22.8" width="20" height="35.2" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="15.3" width="20" height="42.7" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+25.0% 3m · +35.1% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Fabless "Intelligent Connectivity Platform" supplier for AI/cloud infrastructure — purpose-built semiconductors that solve data, memory and networking bottlenecks inside the rack (FY25 10-K, 2026-02-20). Four product families on PCIe/Ethernet/CXL standards plus a COSMOS software suite: **Aries** PCIe/CXL Smart DSP retimers + smart cable modules (signal conditioning), **Scorpio** Smart Fabric Switches (P-Series scale-out, X-Series scale-up), **Taurus** Ethernet smart cable modules, and **Leo** CXL memory controllers. FY2025 revenue **$852.5M, +115% y/y**, non-GAAP GM **75.7%**, net income **$219.1M** vs. an $83.4M FY24 loss (10-K, 2026-02-20). The story is a pure AI-infrastructure connectivity play levered to hyperscaler capex, with **content per accelerator now >$1,000 and rising** and a stated SAM expanding ">10x over five years to $25B" (Mohan, Q4-2025 call, 2026-02-10). Extreme customer concentration: top-5 customers each 11–29% of revenue, manufacturing partners buying on behalf of end-hyperscalers (10-Q, 2026-05-06).
 
@@ -101,23 +119,23 @@ Astera is a fabless designer sitting between the foundry/packaging supply base a
 - **Morgan Stanley (J. Moore)** _(2026-05-06)_: **Overweight, PT $240** — scale-up connectivity (Scorpio) the growth leg.
 - **TMTB 'JPM TMT Conf Key Quotes (INTC, ALAB, ANET, DDOG)'** _(2026-05-19)_ + **Rothschild TMT Daily (Adley)** _(2026-05-20)_: ALAB/CRDO in focus; **Redburn Neutral** ('Tripping the Light Fantastic') the cautious counter.
 
-## Intra-quarter — calls, comentários & relatórios
+## Intra-quarter — calls, commentary & reports
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1'26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1'26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Produto / Scorpio scale-up** | X-Series em produção; #1 linha de receita por Q4'26 | BTG/LightCounting (Bob): Scorpio X "ramando agora", o que "vai explodir" no near-term; produto novo vira rápido o maior contribuidor | **✓ confirma** (timing alinhado) |
-| **Demanda / Amazon** | Conteúdo >$1.000/acelerador e subindo; ramp 2027 (UALink, AMD/Amazon) | BTG: ALAB "extremamente bem posicionado" em scale-up switched, liderado pela Amazon | **✓ confirma** (Amazon a âncora) |
-| **Competição / AEC** | — (Aries/Taurus AEC scale-out) | BTG: ALAB já pegou fatia AEC na Amazon (Credo dominante); "futuro brilhante" p/ AECs | **⚠ nuança** (Credo ainda ~dominante) |
-| **Valuation** | (n/a — gestão não comenta múltiplo) | BofA/Arya: PO $200→$240 mas **mantém NEUTRAL** (66x CY27E P/E) | **⚠ nuança** (múltiplo limita upside) |
+| **Product / Scorpio scale-up** | X-Series in production; #1 revenue line by Q4'26 | BTG/LightCounting (Bob): Scorpio X "ramping now", which will "explode" in the near-term; the new product quickly becomes the largest contributor | **✓ confirms** (timing aligned) |
+| **Demand / Amazon** | Content >$1,000/accelerator and rising; 2027 ramp (UALink, AMD/Amazon) | BTG: ALAB "extremely well positioned" in scale-up switched, led by Amazon | **✓ confirms** (Amazon the anchor) |
+| **Competition / AEC** | — (Aries/Taurus AEC scale-out) | BTG: ALAB has already taken AEC share at Amazon (Credo dominant); "bright future" for AECs | **⚠ nuance** (Credo still ~dominant) |
+| **Valuation** | (n/a — management does not comment on the multiple) | BofA/Arya: PO $200→$240 but **stays NEUTRAL** (66x CY27E P/E) | **⚠ nuance** (multiple caps upside) |
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 05-13 | BofA · Vivek Arya | valuation | neutral | **PO $200 → $240, mantém NEUTRAL** (66x CY27E P/E), no near-high de peers compute/óptica high-growth (18x-66x) mas in-line c/ framework 0.5x EV/S-to-sales-CAGR dado o crescimento superior de ALAB. Riscos de downside: delays/mudanças na Amazon, competição de MRVL/AVGO, adoção lenta de UALink/AEC. (BofA "AI 2030", 2026-05-13) — _consistente c/ o PO change positivo da BofA registrado em 05-06._ |
-| 06-25 | BTG · LightCounting call | produto | bull | Expert (Bob): scale-up switching + scale-up CPO são o que "vai explodir" no near-term, começando pelo **Astera Labs Scorpio X ramando agora**. ALAB "extremamente bem posicionado" na transição p/ arquiteturas scale-up switched, liderado pelo negócio na **Amazon**; small-cap "mais dinâmica", com produto novo que vira rápido o maior contribuidor de receita. Tecnologia alternativa = scale-up Ethernet (onde Broadcom lidera) — dois approaches competindo. No AEC, ALAB já pegou uma fatia na Amazon (Credo ainda dominante); expert vê **futuro brilhante p/ AECs** (rack-to-rack, substituindo DAC passivo). (BTG "LightCounting", 2026-06-25) |
+| 05-13 | BofA · Vivek Arya | valuation | neutral | **PO $200 → $240, stays NEUTRAL** (66x CY27E P/E), at the near-high of high-growth compute/optical peers (18x-66x) but in line with the 0.5x EV/S-to-sales-CAGR framework given ALAB's superior growth. Downside risks: delays/changes at Amazon, competition from MRVL/AVGO, slow UALink/AEC adoption. (BofA "AI 2030", 2026-05-13) — _consistent with the positive BofA PO change recorded on 05-06._ |
+| 06-25 | BTG · LightCounting call | product | bull | Expert (Bob): scale-up switching + scale-up CPO are what will "explode" in the near-term, starting with **Astera Labs Scorpio X ramping now**. ALAB "extremely well positioned" in the transition to scale-up switched architectures, led by the **Amazon** business; a "more dynamic" small-cap, with a new product that quickly becomes the largest revenue contributor. The alternative technology = scale-up Ethernet (where Broadcom leads) — two approaches competing. In AEC, ALAB has already taken a slice at Amazon (Credo still dominant); the expert sees a **bright future for AECs** (rack-to-rack, replacing passive DAC). (BTG "LightCounting", 2026-06-25) |
 
-**Síntese do quarter:** o fluxo confirma a tese de gestão sobre o scale-up (Scorpio X ramando, Amazon a âncora) — o debate migrou da demanda para o **preço da ação**: BofA endossa fundamentos mas trava em NEUTRAL no múltiplo (66x), e a única nuança operacional remanescente é a posição ainda subordinada em AEC vs Credo.
+**Quarter synthesis:** the flow confirms management's scale-up thesis (Scorpio X ramping, Amazon the anchor) — the debate migrated from demand to the **share price**: BofA endorses the fundamentals but locks at NEUTRAL on the multiple (66x), and the only remaining operational nuance is the still-subordinate position in AEC vs Credo.
 
 ## Management commentary — evolution (last 4 quarters)
 
@@ -144,7 +162,7 @@ _Source: ALAB earnings calls (dates above); management commentary, paraphrased._
   - [JPM (Harlan Sur) — Semis Spring Series / TMC feedback (2026-05-29 & 2026-05-22)](../relat%C3%B3rios%20bons/2026_05_29_jpm_semis_29_may_26.html) — ALAB OW small-cap top pick; fabric-switch + AEC demand; memory-tightness pulling CXL/PCIe-switch opportunities forward.
   - [Citi/Jefferies (Blaine) — Asia recal call (2026-05-22)](../relat%C3%B3rios%20bons/2026_05_22_jef_asia_recal_call_22_may_2026.html) — ALAB "the way to play the Trainium trade"; scale-up content-per-accelerator underestimated.
   - [BofA (Vivek Arya) — "AI 2030: Stronger for Longer" (2026-05-13)](../relat%C3%B3rios%20bons/Vivek_State_of_the_union.html) — ALAB PO $200→$240, mantém NEUTRAL (66x CY27E); riscos Amazon/competição MRVL-AVGO/UALink.
-  - [BTG — LightCounting optics/CPO expert call (2026-06-25)](../relat%C3%B3rios%20bons/BTG_LightCounting_Optics_Expert_Call_2026-06-25.html) — Scorpio X ramando agora; ALAB "extremamente bem posicionado" em scale-up switching (Amazon); produto novo vira o maior contribuidor de receita; futuro brilhante p/ AECs.
+  - [BTG — LightCounting optics/CPO expert call (2026-06-25)](../relat%C3%B3rios%20bons/BTG_LightCounting_Optics_Expert_Call_2026-06-25.html) — Scorpio X ramping now; ALAB "extremely well positioned" in scale-up switching (Amazon); the new product becomes the largest revenue contributor; bright future for AECs.
 - **Themes:** [custom-asic-tpu](themes/custom-asic-tpu.md) (custom/NVLink-Fusion attach to hyperscaler XPUs); [optical-cpo](themes/optical-cpo.md) (NPO 2027 / CPO 2028; ALAB rated Neutral vs optical pure-plays).
 - **Briefings:** `E:\briefings\2026\` — 2026-05-06 (MS PT $240 OW; BofA/JPM), 2026-05-11/05-12 (CRDO/AEC competition), 2026-05-15 (Jefferies conf), 2026-05-17/05-18/05-19/05-20 (JPM TMC, R&Co optical Neutral, +16% wk).
 - **Outlook / sell-side notes:** Outlook/MAPI not available in this environment — no live email flow pulled. Sell-side attribution above is from on-disk briefings + research reports only.

@@ -6,6 +6,24 @@
 
 _Wiki · generated 2026-06-19 · **No SEC filings — Japanese issuer (TSE Prime: 285A), IPO Dec-2024; thin coverage.** Sources: `E:\Wiki Felipe\KIOXIA\transcripts` (IR results briefings) + `E:\briefings\2026` roll-up + BBG (JPY). Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · JPY
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | ¥7798.1bn | ¥11942.5bn |
+| Gross profit | ¥6113.7bn | ¥9721.2bn |
+| Gross margin | 78.4% | 81.4% |
+| EBITDA | ¥6178.2bn | ¥9319.5bn |
+| EPS | ¥7496.71 | ¥12098.15 |
+| Capex | ¥379.5bn | ¥498.1bn |
+| OCF (≈EBITDA) | ¥6178.2bn | ¥9319.5bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="23.4" width="20" height="34.6" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f"></text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="39.9" width="20" height="18.1" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="23.2" width="20" height="34.8" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+143.5% 3m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Kioxia is the ex-Toshiba Memory NAND flash pure-play — one of the scaled NAND suppliers alongside Samsung, SK Hynix/Solidigm and Micron, and the manufacturing partner of **SanDisk (ex-Western Digital)** in the long-running Yokkaichi/Kitakami flash JV. It is the only large NAND maker without a captive DRAM business, so it is the cleanest listed proxy for the NAND/SSD cycle. Revenue splits into **SSD & Storage** (~55–60% — datacenter/enterprise/client SSD) and **Smart Devices** (mobile/consumer NAND), plus Other (FY25 results, 2026-05-15). The thesis runs through AI: NAND demand for cloud/AI-server SSD has tightened supply and re-priced the franchise; management targets datacenter + enterprise >60% of revenue by FY2028 (Investor Day, 2026-06-02). IPO'd on TSE Dec-2024; filing to list ADRs in the US to broaden the investor base (Q4 FY25, 2026-05-15). Reports in English; fiscal year ends March. See cross-theme: [hbm-memory](themes/hbm-memory.md).
 
@@ -93,31 +111,31 @@ Kioxia sits in the middle of the NAND chain: it buys wafers and WFE/equipment fr
 - **JPM 'Bits, Broadcasts & Bandwidth'** _(2026-05-29)_: NAND/flash pricing up-cycle read-through across the storage ecosystem.
 - _Direct desk coverage of Kioxia is thin in the inbox (Japanese issuer, IPO Dec-2024) — mostly NAND-complex read-through._
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q4 FY25 print + intra-quarter · Apr 16 → Jun 23, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q4 FY25 print + intra-quarter · Apr 16 → Jun 23, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q4 FY25) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q4 FY25) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Demanda / NAND** | CEO Oota "riding the wave of AI demand"; capacidade CY2026 sold out; LTAs até 2027 | BofA: NAND +70-75% QoQ (TrendForce), "too cheap to ignore" · JPM/BofA: capacidade sold out, LTAs multi-ano são o "this time is different" | **✓ confirma** (sold out + LTAs) |
-| **ASP / pricing** | ASP +100%+ QoQ, a maior entre peers NAND (Coreia ~80%) | JPM: ASP/bit +250%+ CY26E, OP 65-90% acima do consenso FY26E/27E; ~70% do trimestre de jun já fixado +60-65% QoQ | **✓ confirma** (pricing extremo) |
-| **Produto / mix DC** | DC+enterprise alvo >60% da receita FY28; BiCS Gen.10 (332L) sampling verão-2026 | Redburn: Super IO (XL Flash) p/ AI agentic, 10M unidades este ano → 100M, NVIDIA parceiro · StoneX: moat em QLC enterprise (YMTC só 13%) | **✓ confirma** (moat de produto) |
-| **Capital / valuation** | Retorno até 50% do net cash flow; dividendo progressivo desde FY2027; payout mín. 10-20% | JPM: valuation migra de ~3-5x p/ 7-8x (bulls 10-11x); overhang Bain (~20%) limita buyback → dividendo > recompra | **⚠ nuança** (overhang Bain) |
+| **Demand / NAND** | CEO Oota "riding the wave of AI demand"; CY2026 capacity sold out; LTAs into 2027 | BofA: NAND +70-75% QoQ (TrendForce), "too cheap to ignore" · JPM/BofA: capacity sold out, multi-year LTAs are the "this time is different" | **✓ confirms** (sold out + LTAs) |
+| **ASP / pricing** | ASP +100%+ QoQ, the highest among NAND peers (Korea ~80%) | JPM: ASP/bit +250%+ CY26E, OP 65-90% above consensus FY26E/27E; ~70% of the June quarter already fixed at +60-65% QoQ | **✓ confirms** (extreme pricing) |
+| **Product / DC mix** | DC+enterprise targeted >60% of revenue FY28; BiCS Gen.10 (332L) sampling summer-2026 | Redburn: Super IO (XL Flash) for agentic AI, 10M units this year → 100M, NVIDIA a partner · StoneX: moat in enterprise QLC (YMTC only 13%) | **✓ confirms** (product moat) |
+| **Capital / valuation** | Return up to 50% of net cash flow; progressive dividend from FY2027; minimum payout 10-20% | JPM: valuation moving from ~3-5x to 7-8x (bulls 10-11x); Bain overhang (~20%) limits buyback → dividend > buyback | **⚠ nuance** (Bain overhang) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
 | 04-16 | BofA · Mikio Hirokawa (Japan SPE) | valuation | bull | BofA 'too cheap to ignore': even after a ~50% rally, sees 'very little downside' — at ~¥30,000 the stock was at ~6x EPS FY3/27; with NAND prices +70-75% QoQ (TrendForce), EPS could exceed ¥7,000 → sub-5x P/E. Re-rate catalyst: Kioxia negotiating floor-price contracts (not fixed) to preserve the upside, taking the multiple from ~5x to ~10x. |
 | 05-17 | JPM · Mio Shikanai / Jay Kwon (briefing) | valuation | bull | JPM (OW) raised Street-high PT ¥38,000 → ¥80,000; EPS FY26-28E +63% to +80%, with ASP/bit +250%+ CY26E and OP 65-90% above consensus FY26E/27E; SSD mix ~60%. |
 | 05-18 | BofA/JPM (briefing) | valuation | bull | BofA/JPM team Buy, OP/EPS FY3/27 +52%/+54%; CY2026 with capacity sold out, LTAs (multi-year, prepay, penalties) being the 'this time is different' catalyst across the memory complex (Samsung/Hynix/Kioxia/MU). |
 | 05-28 | JPM · Mio (Memory) | capital | mixed | Kioxia runs everything on 1-year LTAs today (~70% of the June quarter already fixed at +60-65% QoQ); multi-year begins next year. LTA priorities: cancel-fee/binding over prepayment, and floor price with no cap. Valuation debate migrating from ~3-5x to 7-8x (bulls at 10-11x). Bain overhang (~20%) limits buyback; dividend over buyback, minimum payout (10-20%). |
-| 06-02 | Kioxia Investor Day | produto | bull | Datacenter + enterprise targeted at >60% of revenue by FY2028; NAND market CAGR 20%+ (up to 46%) 2025→2028; BiCS Gen.10 (332 layers) sampling summer-2026, mass production within a year; capex averaging ¥470bn/yr FY26-28; ROIC >60%; capital return up to 50% of net cash flow with progressive dividends from FY2027; OP margin guided ~74%. |
-| 06-23 | Redburn · Conor O'Mara (Asia Trip) | produto | bull | Conor's biggest reason to prefer Kioxia over SanDisk: Super IO (XL Flash) — ultra-low-latency SLC NAND for agentic AI — shipping 10M units this year vs 3M in the past, targeting 100M next year, with NVIDIA as a partner. SanDisk's competing HPF only arrives in 2028. Caveat: trade-ratio penalty for being SLC. |
-| 06-23 | StoneX/TrendForce · Avril (Memory expert call) | produto | bull | QLC is the most critical product for high-density enterprise SSD (the tightest-supply segment); Kioxia and Solidigm 'doing very well' in QLC mix, while YMTC has only 13% QLC (confined to consumer) — a structural quality moat for Kioxia at the high end. |
+| 06-02 | Kioxia Investor Day | product | bull | Datacenter + enterprise targeted at >60% of revenue by FY2028; NAND market CAGR 20%+ (up to 46%) 2025→2028; BiCS Gen.10 (332 layers) sampling summer-2026, mass production within a year; capex averaging ¥470bn/yr FY26-28; ROIC >60%; capital return up to 50% of net cash flow with progressive dividends from FY2027; OP margin guided ~74%. |
+| 06-23 | Redburn · Conor O'Mara (Asia Trip) | product | bull | Conor's biggest reason to prefer Kioxia over SanDisk: Super IO (XL Flash) — ultra-low-latency SLC NAND for agentic AI — shipping 10M units this year vs 3M in the past, targeting 100M next year, with NVIDIA as a partner. SanDisk's competing HPF only arrives in 2028. Caveat: trade-ratio penalty for being SLC. |
+| 06-23 | StoneX/TrendForce · Avril (Memory expert call) | product | bull | QLC is the most critical product for high-density enterprise SSD (the tightest-supply segment); Kioxia and Solidigm 'doing very well' in QLC mix, while YMTC has only 13% QLC (confined to consumer) — a structural quality moat for Kioxia at the high end. |
 
-**Síntese do quarter:** o fluxo é quase todo bull — demanda sold out, ASP +100%+ e moat de produto (Super IO/QLC) todos confirmados, com PT da JPM saltando p/ ¥80.000 (Street-high); o debate migrou de "se o ciclo é real" para *quanto re-ratar o múltiplo* (de ~3-5x para 7-11x) e como retornar capital sob o overhang de ~20% da Bain, que empurra dividendo acima de buyback.
+**Quarter synthesis:** the flow is almost all bull — sold-out demand, ASP +100%+ and the product moat (Super IO/QLC) all confirmed, with JPM's PT jumping to ¥80,000 (Street-high); the debate shifted from "whether the cycle is real" to *how far to re-rate the multiple* (from ~3-5x to 7-11x) and how to return capital under Bain's ~20% overhang, which pushes dividend above buyback.
 
 ## Management commentary — evolution (last 2 quarters)
 

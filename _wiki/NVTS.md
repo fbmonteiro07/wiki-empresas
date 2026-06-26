@@ -4,6 +4,24 @@
 
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\NVTS` (10-K/10-Q filings + transcripts) · briefings `E:\briefings\2026`. Master index: [00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $42m | $74m |
+| Gross profit | $16m | $31m |
+| Gross margin | 39.2% | 41.3% |
+| EBITDA | $-43m | $-33m |
+| EPS | $-0.18 | $-0.15 |
+| Capex | $2m | $2m |
+| OCF (≈EBITDA) | $-43m | $-33m |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="6.2" width="20" height="51.8" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="13.7" width="20" height="44.3" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">-15.0% 3m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="7.5" width="20" height="50.5" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="13.1" width="20" height="44.9" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">-12.8% 3m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Navitas is a **fabless, small-cap (~$45.9m FY25 revenue) wide-bandgap power-semiconductor pure-play** — **GaN** power ICs ("GaNFast") plus **SiC** MOSFETs/diodes ("GeneSiC", acquired Aug-2022) — that has executed a hard strategic pivot ("Navitas 2.0") away from its legacy China mobile/consumer fast-charger business toward **high-power markets: AI data centers, energy/grid infrastructure, performance computing, industrial electrification** (10-K FY2025, 2026-02-27). FY2025 revenue fell **45% to $45.9m** (from $83.3m) as China mobile/consumer rolled off; net loss **$117.0m** (10-K, 2026-02-27). The entire equity story now hangs on one swing factor: the **May-2025 selection by NVIDIA to co-develop the next-gen 800V HVDC datacenter power architecture** for Kyber/Rubin-Ultra rack-scale systems ([Navitas IR, 2025-05-21](https://ir.navitassemi.com/news-releases/news-release-details/nvidia-selects-navitas-collaborate-next-generation-800-v-hvdc)). This is a high-beta, binary-feel name — material AI-DC P&L contribution is not guided until **2027**, against a cash-burning P&L and a forced GaN-foundry migration off TSMC.
 
@@ -90,28 +108,28 @@ Navitas sits in the middle of the AI-power stack: it does **no fabrication itsel
 - **Citi "800V DC power" (2026-06-15)** — Citi's GaN/SiC split is **constructive on GaN-at-the-rack** (where NVTS plays): **GaN preferred for sub-650V conversion** at server/rack level, **SiC for >1,000V infrastructure** (rectifiers, power shelves, SSTs). Earliest broad deployment is **±400V HVDC bipolar (each rail ≤400V → ≤650V device stress)**, leveraging the mature/cost-competitive 650V GaN ecosystem from EVs — favorable adoption timing for rack-level GaN from 2027–2028. Note Citi's named GaN winners are TXN/ON (high-voltage + vertical GaN), not NVTS — i.e. the theme is GaN-positive but the share question for NVTS is open (Citi "800V", 2026-06-15).
 - **FinTwit** _(briefings 2026-06-15/06-16)_: **@insane_analyst** bearish on the SiC narrative ("only GaN portfolio of value"); **@bubbleboi** mentions NVTS as a potential AI-DC-power-stack re-entry (no fundamental conviction). Recurring pattern: NVTS shows **0 sell-side emails** on most days (2026-05-12 / 05-22 / 05-28 / 05-31 / 06-18) — coverage is thin and headline-driven.
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 2026 · May 5 → Jun 16, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 2026 · May 5 → Jun 16, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1'26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1'26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Demanda / TAM** | $3.5bn por 2030 a 60%+ CAGR; AI-infra +50% QoQ | JPM: WBG $1bn→$5bn+ a 30%+ CAGR (sizing fornecido pela própria NVTS), listada entre fornecedores da NVIDIA | **✓ confirma** (corrobora o TAM) |
-| **Produto / 800V roadmap** | Arquitetura 3-fases; prova de GaN in-rack Q1–Q2'27 | Citi: timing favorável p/ GaN no rack 2027–2028 via ±400V bipolar/650V maduro | **✓ confirma** (timing alinhado) |
-| **Competição / share GaN** | Tem GaN + SiC no caminho grid-to-GPU ("ter os dois faz diferença") | Citi: vencedores GaN são TXN/ON, não NVTS · @insane_analyst: "SiC é lixo, só GaN tem valor" | **✗ contesta** (share aberto, SiC questionado) |
-| **Valuation / convicção** | — | MS Underweight (ref $6.04) mas PT $13.70; DB "Stepping up the Voltage" | **⚠ nuança** (PT sobe, rating não) |
+| **Demand / TAM** | $3.5bn by 2030 at 60%+ CAGR; AI-infra +50% QoQ | JPM: WBG $1bn→$5bn+ at 30%+ CAGR (sizing supplied by NVTS itself), listed among NVIDIA's suppliers | **✓ confirms** (corroborates the TAM) |
+| **Product / 800V roadmap** | 3-phase architecture; in-rack GaN proof Q1–Q2'27 | Citi: favorable timing for rack GaN 2027–2028 via ±400V bipolar/mature 650V | **✓ confirms** (timing aligned) |
+| **Competition / GaN share** | Has GaN + SiC across the grid-to-GPU path ("having both makes a difference") | Citi: GaN winners are TXN/ON, not NVTS · @insane_analyst: "SiC is garbage, only GaN has value" | **✗ contests** (share open, SiC questioned) |
+| **Valuation / conviction** | — | MS Underweight (ref $6.04) but PT $13.70; DB "Stepping up the Voltage" | **⚠ nuance** (PT rises, rating doesn't) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
 | 05-06 | Morgan Stanley · Joseph Moore (briefing 2026-05-06) | valuation | mixed | MS maintains Underweight (since 2025-04-06, ref US$6.04) but raised PT to US$13.70 (from US$12.50), "tracking but proofpoints pending… Stepping up the Voltage". Deutsche Bank (Ross Seymore) also "Stepping up the Voltage". |
-| 06-09 | JPM · Samik Chatterjee (Watts Up! Shift to 800V) | demanda | bull | Navitas is the source of JPM's WBG sizing: WBG power-device market (AI DC + energy/grid) grows 30%+ CAGR from ~US$1bn (2025) to US$5bn+ by 2030; LT content US$25K–35K/MW split ~evenly SiC/GaN (GaN mainly inside the DC — the segment most relevant to NVTS). Driven by the 800V pivot, non-linear PSU scaling (2x power → ~5x SiC content) and grid SST/BESS modernization. Corroborates NVTS's own US$3.5bn-by-2030 / 60%+ CAGR TAM; Navitas listed among the silicon suppliers highlighted by NVIDIA. |
-| 06-15 | Citi · 800V DC power (briefing 2026-06-15) | competicao | mixed | Citi's GaN/SiC split is constructive on GaN-in-rack (where NVTS plays): GaN preferred for sub-650V conversion at the server/rack level, SiC for >1,000V infra. Earlier deployment is ±400V bipolar HVDC (each rail ≤400V → ≤650V stress) leveraging the mature 650V GaN ecosystem from EVs — favorable timing for rack GaN 2027–2028. Note: Citi's named GaN winners are TXN/ON (not NVTS) — GaN-positive theme but the share question for NVTS is open. |
-| 06-16 | FinTwit · @insane_analyst (briefing 2026-06-16) | competicao | bear | @insane_analyst bearish on the SiC narrative — "dumb ppl falling for Navitas CEO TAM bullshit. SiC is garbage. Only GaN portfolio of value". @bubbleboi mentions NVTS as a possible re-entry into the AI-DC-power-stack (without fundamental conviction). |
+| 06-09 | JPM · Samik Chatterjee (Watts Up! Shift to 800V) | demand | bull | Navitas is the source of JPM's WBG sizing: WBG power-device market (AI DC + energy/grid) grows 30%+ CAGR from ~US$1bn (2025) to US$5bn+ by 2030; LT content US$25K–35K/MW split ~evenly SiC/GaN (GaN mainly inside the DC — the segment most relevant to NVTS). Driven by the 800V pivot, non-linear PSU scaling (2x power → ~5x SiC content) and grid SST/BESS modernization. Corroborates NVTS's own US$3.5bn-by-2030 / 60%+ CAGR TAM; Navitas listed among the silicon suppliers highlighted by NVIDIA. |
+| 06-15 | Citi · 800V DC power (briefing 2026-06-15) | competition | mixed | Citi's GaN/SiC split is constructive on GaN-in-rack (where NVTS plays): GaN preferred for sub-650V conversion at the server/rack level, SiC for >1,000V infra. Earlier deployment is ±400V bipolar HVDC (each rail ≤400V → ≤650V stress) leveraging the mature 650V GaN ecosystem from EVs — favorable timing for rack GaN 2027–2028. Note: Citi's named GaN winners are TXN/ON (not NVTS) — GaN-positive theme but the share question for NVTS is open. |
+| 06-16 | FinTwit · @insane_analyst (briefing 2026-06-16) | competition | bear | @insane_analyst bearish on the SiC narrative — "dumb ppl falling for Navitas CEO TAM bullshit. SiC is garbage. Only GaN portfolio of value". @bubbleboi mentions NVTS as a possible re-entry into the AI-DC-power-stack (without fundamental conviction). |
 
-**Síntese do quarter:** O debate migrou do "se" do TAM (agora corroborado por JPM, com a NVTS como própria fonte do sizing) para o "quem captura" — a competição em GaN no rack (Citi aponta TXN/ON, não NVTS) e a credibilidade do SiC (FinTwit cético) viraram o furo, enquanto o sell-side sobe PT sem mudar rating, deixando a optionality de 2027 ainda não subscrita.
+**Quarter synthesis:** the debate has shifted from the "if" of the TAM (now corroborated by JPM, with NVTS itself the source of the sizing) to the "who captures it" — competition in rack GaN (Citi points to TXN/ON, not NVTS) and SiC credibility (FinTwit skeptical) have become the sticking point, while the sell-side raises PTs without changing ratings, leaving the 2027 optionality still not underwritten.
 
 ## Management commentary — evolution (last 4 quarters)
 

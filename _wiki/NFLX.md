@@ -4,6 +4,24 @@
 
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\NFLX` (10-K + transcripts) · `_equity_calls` · `_briefings\by-ticker\NFLX.md`. Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $51.3bn | $57.4bn |
+| Gross profit | $25.9bn | $29.8bn |
+| Gross margin | 50.5% | 52.0% |
+| EBITDA | $16.9bn | $20.4bn |
+| EPS | $3.16 | $3.88 |
+| Capex | $707m | $758m |
+| OCF (≈EBITDA) | $16.9bn | $20.4bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="18.0" width="20" height="40.0" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="18.8" width="20" height="39.2" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.2" width="20" height="43.8" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+12.3% 3m · +9.9% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="14.6" width="20" height="43.4" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="14.5" width="20" height="43.5" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+1.1% 3m · +1.3% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Global subscription streaming + ads. One operating segment, revenue from monthly paid memberships across four regions (UCAN, EMEA, LATAM, APAC), now supplemented by a fast-ramping advertising tier and emerging adjacencies — live events/sports, video podcasts, and cloud-first games. Ended 2025 with >325M paid members and an audience "approaching ~1 billion people" (Q1 2026, 2026-04-16). Management frames the long runway against three TAM lenses: <45% of ~800M addressable smart-TV households penetrated, ~7% of a ~$670B addressable consumer+ad market captured, and <5% of global TV view-share (Q1 2026, 2026-04-16). Not semis — this is the buy-side's large-cap streaming long, increasingly an AI-tooling and ad-tech story on the margin.
 
@@ -45,29 +63,29 @@ Global subscription streaming + ads. One operating segment, revenue from monthly
 - Engagement-quality reframing could mask deceleration in raw consumption; ad-revenue scale-up still early, concentrated, and (per Seufert) under-monetized relative to the user base (Stratechery, 2026-04-24).
 - Leadership transition (Hastings off Board) and M&A-discipline credibility post-WB.
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 2026 · Apr 15 → Jun 04, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 2026 · Apr 15 → Jun 04, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1'26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1'26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Receita / crescimento** | FY26 +12-14% mantido (~$51B); margem op 31,5% | JPM Anmuth: "cleaner story", OW PT $118 — double-digit rev + ~2pts/ano de margem sem capex AI-pesado | **✓ confirma** (history limpa) |
-| **Publicidade** | Ads ~2x p/ ~$3B; advertisers +70% a >4.000; programático rumo a >50% | Stratechery/Seufert: NFLX "not very aggressive", meta 2030 ~$9B mas '25 ~$2,15B "menos que Pinterest" | **⚠ nuança** (execução de ads atrás) |
-| **Posição competitiva** | — (liderança de streaming) | GS/Sensor Tower: NFLX ainda de longe o maior, 52% dos MAUs globais de streaming | **✓ confirma** (líder de share) |
-| **Catalisadores N/T** | WBC Japão recorde (31,4M); +5 jogos NFL em '26 | Bernstein (bear): "lacks N/T catalysts", NFLX/DIS no short camp do verão (FIFA/NBA/F1 dominam) | **✗ contesta** (sem gatilho de verão) |
+| **Revenue / growth** | FY26 +12-14% maintained (~$51B); op margin 31.5% | JPM Anmuth: "cleaner story", OW PT $118 — double-digit rev + ~2pts/yr of margin without AI-heavy capex | **✓ confirms** (clean track record) |
+| **Advertising** | Ads ~2x to ~$3B; advertisers +70% to >4,000; programmatic heading to >50% | Stratechery/Seufert: NFLX "not very aggressive", 2030 goal ~$9B but '25 ~$2.15B "less than Pinterest" | **⚠ nuance** (ads execution behind) |
+| **Competitive position** | — (streaming leadership) | GS/Sensor Tower: NFLX still by far the largest, 52% of global streaming MAUs | **✓ confirms** (share leader) |
+| **N/T catalysts** | WBC Japan record (31.4M); +5 NFL games in '26 | Bernstein (bear): "lacks N/T catalysts", NFLX/DIS in the summer short camp (FIFA/NBA/F1 dominate) | **✗ contests** (no summer trigger) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
 | 04-15 | JPM · Anmuth (internet 1Q preview) | guidance | bull | JPM framed NFLX as a 'cleaner story' top-5 internet name — double-digit revenue + ~2pts/yr of margin expansion + an ads ramp, without the AI-heavy capex or the AI-disintermediation risk that weighs on most internet names. The debate is whether NFLX raises its FY26 op-margin guide (>50bps unlikely) and revenue on the print; the must-do was increasing the buyback to dispel fears of another large M&A deal post-Warner (JPM/Anmuth, 2026-04-15). |
-| 04-16 | Goldman / Sensor Tower (equity call) | competicao | bull | NFLX still by far the largest streaming platform with 52% of global streaming MAUs (Goldman/Sensor Tower call, 2026-04-16). |
+| 04-16 | Goldman / Sensor Tower (equity call) | competition | bull | NFLX still by far the largest streaming platform with 52% of global streaming MAUs (Goldman/Sensor Tower call, 2026-04-16). |
 | 04-24 | Stratechery · Eric Seufert | valuation | mixed | Netflix is 'the baseline, must-have, default streaming service', a source of pricing power no one else has; the ad tier matters less for its own ad revenue and more because it unlocks the high-end. Critical on ads execution: NFLX is 'not very aggressive', only launched proprietary ad tech in the US in April 2025. Cites a leaked pre-earnings review: 2030 goal of ~US$9B in ad revenue (vs ~US$2.15B in 2025, a ~4x ramp) — and notes that US$2.15B is 'less than Pinterest' given the user base (Stratechery/Seufert, 2026-04-24). |
 | 05-14 | JPMorgan · Anmuth (via briefing) | valuation | bull | JPMorgan/Anmuth reiterates Overweight, PT US$118, citing ad MAUs of 250M+ and +5 NFL games in 2026 (briefing 2026-05-14). |
 | 06-04 | Bernstein (via briefing) | valuation | bear | Bernstein flagged that NFLX 'lacks N/T catalysts', keeping NFLX/DIS in the short camp for the summer with FIFA/NBA/F1 dominating attention (briefing 2026-06-04). |
 
-**Síntese do quarter:** o print foi limpo e o fluzo confirma a tese estrutural (líder de share, history sem capex AI), mas o debate migrou para (i) execução de ads — Seufert aponta que ~$2,15B em '25 é "menos que Pinterest" dada a base, e (ii) ausência de catalisadores de curto prazo no verão (Bernstein mantém short tático com FIFA/NBA/F1 dominando atenção).
+**Quarter synthesis:** the print was clean and the flow confirms the structural thesis (share leader, track record without AI capex), but the debate has shifted to (i) ads execution — Seufert notes ~$2.15B in '25 is "less than Pinterest" given the base, and (ii) the absence of short-term catalysts over the summer (Bernstein maintains a tactical short with FIFA/NBA/F1 dominating attention).
 
 ## Management commentary — evolution (last 5 quarters)
 

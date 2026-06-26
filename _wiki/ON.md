@@ -4,6 +4,24 @@
 
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\ON` (10-K/10-Q filings + transcripts) · equity calls `E:\equity_calls_transcripts` · briefings `E:\briefings\2026`. Master index: [00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $6.4bn | $7.2bn |
+| Gross profit | $2.6bn | $3.1bn |
+| Gross margin | 39.9% | 43.6% |
+| EBITDA | $2.0bn | $2.5bn |
+| EPS | $3.08 | $4.33 |
+| Capex | $219m | $305m |
+| OCF (≈EBITDA) | $2.0bn | $2.5bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="16.4" width="20" height="41.6" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="16.4" width="20" height="41.6" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+5.7% 3m · +5.7% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="16.8" width="20" height="41.2" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="16.6" width="20" height="41.4" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.5" width="20" height="43.5" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+6.4% 3m · +6.7% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 onsemi is a US-listed **IDM intelligent-power and intelligent-sensing** vendor — power discretes/modules (Si MOSFETs/IGBTs, **SiC** "EliteSiC", **GaN incl. vertical GaN**), analog/mixed-signal, and **CMOS image sensors**. Three reportable segments: **Power Solutions Group (PSG, 47% of FY25 revenue), Analog & Mixed-Signal Group (AMG, 38%), Intelligent Sensing Group (ISG, 15%)** (10-K, 2026-02-09). FY2025 revenue **$6.0bn** (Q4 FY25 call, 2026-02-09). By end-market: **Automotive 51%, Industrial 28%, Other 21%** (Other = AI data center, computing, consumer, networking) (10-K, 2026-02-09). The franchise is a cyclical auto/industrial power + image-sensor business — bottoming after seven quarters of auto decline — now layering a **structural AI-datacenter-power (800V DC) ramp** that is re-rating the analog/power group.
 
@@ -88,35 +106,35 @@ UBS models the cyclical recovery as gradual rather than V-shaped: FY25 revenue *
 - **Citi (Atif Malik)** _(briefing 2026-06-15)_: **Neutral**, opened a 90-day upside Catalyst Watch into the **Sept 16 Analyst Day**; 800V DC note flags onsemi's vertical-GaN differentiation; analog units still ~30–40% below prior peaks, mature-node utilization ~80% vs optimal 85–90%.
 - Recurring caution: most "ON" inbox hits are **false positives for ONON (Swiss running shoes)** — genuine onsemi flow is thin (briefings 2026-05-12 / 05-28 / 06-07).
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 FY26 print + intra-quarter · May 04 → Jun 22, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 FY26 print + intra-quarter · May 04 → Jun 22, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1'26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1'26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Demanda auto/cíclica** | Auto $797m flat QoQ, +5% YoY; encerra 7 trimestres de queda | Expert/Tier-1 alemão: demanda da ON "não subiu tanto" vs pares, faltam novos produtos · @bubbleboi: impacto 800V empurrado 2-3 anos | **⚠ nuança** (recuperação rasa) |
-| **AI data-center / 800V** | +30%+ QoQ, dobrou YoY; ~$115k/rack 800V; dobra de novo em '26 | @bubbleboi: "todo PM de DC sem planos por agora" · Citi: top pick 800V é TXN, não ON | **⚠ nuança** (timing/share) |
-| **Margem / utilização** | GM 38.5% (3º trim. seguido em alta); utilização 77% | Jefferies/Menon: SiC e IGBT "indústria horrível", margem-negativa · AlphaSense: EBIT FY25 caiu a 1.4% (de 30.8% pico FY23) | **✗ contesta** (alavancagem operacional) |
-| **SiC / ESS share** | ~55% dos novos modelos EV; share de ESS perto de 60% | Citi confirma ESS ~40% CAGR/5a e ~60% share, mas mantém Neutral c/ TXN à frente | **✓ confirma** (ressalva: ON Neutral) |
-| **GaN / vertical GaN** | Funnel >$1.5bn; primeira receita VGaN em 2027 | Citi: único nome em cobertura desenvolvendo VGaN (amostra agora, envio 2H27) · @trendforce: China pode inundar SiC/GaN | **✓ confirma** (risco China) |
-| **M&A / capital** | Sem menção a M&A no Q1 FY26 call | **Aquisição de Synaptics (SYNA) por ~$7B anunciada** (Vital Knowledge, 2026-06-25); MS dropped rating to NA pending review | **N/A — nova informação pós-quarter** |
+| **Auto / cyclical demand** | Auto $797m flat QoQ, +5% YoY; ends 7 quarters of decline | German expert/Tier-1: ON demand "didn't increase that much" vs peers, lacking new products · @bubbleboi: 800V impact pushed out 2-3 years | **⚠ nuance** (shallow recovery) |
+| **AI data-center / 800V** | +30%+ QoQ, doubled YoY; ~$115k/800V rack; doubles again in '26 | @bubbleboi: "every DC PM with no plans for now" · Citi: 800V top pick is TXN, not ON | **⚠ nuance** (timing/share) |
+| **Margin / utilization** | GM 38.5% (3rd straight quarter up); utilization 77% | Jefferies/Menon: SiC and IGBT a "horrible industry," margin-negative · AlphaSense: FY25 EBIT fell to 1.4% (from a 30.8% FY23 peak) | **✗ contests** (operating leverage) |
+| **SiC / ESS share** | ~55% of new EV models; ESS share approaching 60% | Citi confirms ESS ~40% CAGR/5yr and ~60% share, but keeps Neutral with TXN ahead | **✓ confirms** (caveat: ON Neutral) |
+| **GaN / vertical GaN** | Funnel >$1.5bn; first VGaN revenue in 2027 | Citi: only name in coverage developing VGaN (sampling now, shipment 2H27) · @trendforce: China could flood SiC/GaN | **✓ confirms** (China risk) |
+| **M&A / capital** | No mention of M&A on the Q1 FY26 call | **Acquisition of Synaptics (SYNA) for ~$7B announced** (Vital Knowledge, 2026-06-25); MS dropped rating to NA pending review | **N/A — new post-quarter information** |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
 | 05-11 | Morgan Stanley | valuation | neutral | MS marks ON Equal-weight (ref $50.78); onsemi is in coverage but not a featured name in the scale-up/800V thesis (MS scale-up primer). |
-| 06-03 | Jefferies · Menon | margem | bear | Jefferies' analog analyst is structurally negative on the discrete-power exposure that defines ON's PSG — SiC "is a pretty bad industry... while you're playing in silicon carbide, it's going to be negative for your margin," and silicon IGBTs a "terrible and horrible industry" being killed by China — vs silicon MOSFETs/analog/MCUs that he likes ("Analog Semis"). |
-| 06-08 | Expert call · auto Tier-1 | competicao | bear | German Tier-1 procurement expert: onsemi demand "definitely hasn't increased as much" vs peers, held back by a lack of new innovations / new product lines and an inability to meet OEM requirements (Expert call). |
+| 06-03 | Jefferies · Menon | margin | bear | Jefferies' analog analyst is structurally negative on the discrete-power exposure that defines ON's PSG — SiC "is a pretty bad industry... while you're playing in silicon carbide, it's going to be negative for your margin," and silicon IGBTs a "terrible and horrible industry" being killed by China — vs silicon MOSFETs/analog/MCUs that he likes ("Analog Semis"). |
+| 06-08 | Expert call · auto Tier-1 | competition | bear | German Tier-1 procurement expert: onsemi demand "definitely hasn't increased as much" vs peers, held back by a lack of new innovations / new product lines and an inability to meet OEM requirements (Expert call). |
 | 06-08 | FinTwit/crowd basket | valuation | neutral | onsemi is in the 800V DC crowd basket at ~$46.2bn mkt cap, #2 behind Infineon (briefing). |
-| 06-15 | Citi · Atif Malik | competicao | mixed | Citi keeps onsemi Neutral with a 90-day upside Catalyst Watch into the Sep-16 Analyst Day (expects a raised target model + renewed SiC momentum). Citi raised PT $100→$120 (20x 2028E) and EPS C26/27/28 +1%/+12%/+9% to $3.07/$4.64/$6.00; sees ON (with TXN) with the largest GM-expansion opportunity (>10pp) given ~65% of wafers internal; the only name in coverage developing vertical GaN (sampling now, shipment 2H27). ESS has grown ~40% CAGR over 5 years with ~60% share. Citi's 800V top pick, however, is TXN, not ON ("800V power"). |
-| 06-15 | @bubbleboi | demanda | bear | Channel checks push the 800V earnings impact out 2-3 years — "every DC-construction PM... no plans to do this anytime soon," and China may flood SiC/GaN as it did with InP (briefing). |
+| 06-15 | Citi · Atif Malik | competition | mixed | Citi keeps onsemi Neutral with a 90-day upside Catalyst Watch into the Sep-16 Analyst Day (expects a raised target model + renewed SiC momentum). Citi raised PT $100→$120 (20x 2028E) and EPS C26/27/28 +1%/+12%/+9% to $3.07/$4.64/$6.00; sees ON (with TXN) with the largest GM-expansion opportunity (>10pp) given ~65% of wafers internal; the only name in coverage developing vertical GaN (sampling now, shipment 2H27). ESS has grown ~40% CAGR over 5 years with ~60% share. Citi's 800V top pick, however, is TXN, not ON ("800V power"). |
+| 06-15 | @bubbleboi | demand | bear | Channel checks push the 800V earnings impact out 2-3 years — "every DC-construction PM... no plans to do this anytime soon," and China may flood SiC/GaN as it did with InP (briefing). |
 | 06-17 | @trendforce | supply | bear | Chinese SiC/GaN vendors and broader indigenization challenging IDM incumbents; potential oversupply/price pressure (briefing). |
 | 06-25 | Morgan Stanley (Joseph Moore) | capital | neutral | **MS dropped ON rating to NA (from Equal-weight) and PT to NA (from $87)** — standard coverage hold during an M&A review period. Vital Knowledge reports (same day): **ON Semiconductor is acquiring Synaptics (SYNA) for ~$7B**. Strategically, Synaptics adds IoT/edge-AI SoCs, automotive connectivity (wireless, display, USB), and human-interface ICs — expanding ON's presence in edge AI and automotive connectivity. Deal size ~$7B implies a significant premium to SYNA's market cap. No other sell-side detail yet; MS holding coverage pending regulatory/close review. (Vital Knowledge; MS Joseph Moore, 2026-06-25) |
-| 06-22 | AlphaSense · IFX Primer | margem | bear | Primer quantifies the operating-leverage downside: ON's FY25 EBIT margin collapsed to 1.4% from the FY23 peak of 30.8% — the most severe compression in the analog/power set — "illustrating the intense operating leverage inherent to discrete power-semiconductor manufacturing" ("IFX Primer"). |
+| 06-22 | AlphaSense · IFX Primer | margin | bear | Primer quantifies the operating-leverage downside: ON's FY25 EBIT margin collapsed to 1.4% from the FY23 peak of 30.8% — the most severe compression in the analog/power set — "illustrating the intense operating leverage inherent to discrete power-semiconductor manufacturing" ("IFX Primer"). |
 
-**Síntese do quarter:** O debate migrou da pergunta cíclica ("o fundo já passou?" — gestão diz que sim, auto +5% YoY) para a estrutural de margem e share: o fluxo aceita a inflexão de demanda mas ataca a alavancagem operacional do livro de power-discrete (Jefferies/AlphaSense) e questiona se a ON captura o 800V (Citi prefere TXN; @bubbleboi empurra o earnings 2-3 anos) — VGaN/ESS são o lado em que sell-side e gestão ainda concordam.
+**Quarter synthesis:** The debate has shifted from the cyclical question ("is the bottom in?" — management says yes, auto +5% YoY) to the structural one of margin and share: the flow accepts the demand inflection but attacks the operating leverage of the power-discrete book (Jefferies/AlphaSense) and questions whether ON captures 800V (Citi prefers TXN; @bubbleboi pushes the earnings out 2-3 years) — VGaN/ESS are the side where sell-side and management still agree.
 
 ## Management commentary — evolution (last 4 quarters)
 

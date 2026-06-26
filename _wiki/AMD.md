@@ -2,6 +2,24 @@
 
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AMD` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\AMD.md`. Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $48.9bn | $74.8bn |
+| Gross profit | $27.2bn | $41.8bn |
+| Gross margin | 55.7% | 55.9% |
+| EBITDA | $14.0bn | $25.0bn |
+| EPS | $7.29 | $13.08 |
+| Capex | $1.2bn | $1.6bn |
+| OCF (≈EBITDA) | $14.0bn | $25.0bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="18.5" width="20" height="39.5" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="17.3" width="20" height="40.7" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.1" width="20" height="43.9" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+8.1% 3m · +11.4% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="23.8" width="20" height="34.2" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="21.4" width="20" height="36.6" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.5" width="20" height="43.5" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+20.1% 3m · +28.8% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Fabless designer of x86 CPUs, GPUs and adaptive/embedded silicon, fabbed at TSMC (2nm/5nm) with some GF, UMC, Samsung capacity. Four segments: **Data Center** (EPYC server CPUs + Instinct AI GPUs — ~56% of revenue and the entire growth story), **Client & Gaming** (Ryzen PCs + Radeon + semi-custom consoles), and **Embedded** (Xilinx FPGA + adaptive SoC, highest-margin business at ~38-40% segment OM). Competes head-to-head with Intel (x86), Nvidia (AI GPU), Arm-based merchant/custom CPUs, and the custom-ASIC complex (Broadcom/Marvell). The thesis is fully an AI-infrastructure story: AMD is the credible #2 merchant GPU and the share-gaining merchant server CPU into an agentic-AI demand pull (10-K FY25, 2026-02-04).
 
@@ -56,37 +74,37 @@ Fabless designer of x86 CPUs, GPUs and adaptive/embedded silicon, fabbed at TSMC
 - **Memory/component cost inflation** dragging 2H Client + Gaming demand; console cycle in year 7 (semi-custom down significant double-digits in 2026).
 - Warrant-related share dilution; GPU gross margin dilutive during ramp.
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 FY26 · May 06 → Jun 23 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 FY26 · May 06 → Jun 23 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1'26, 06 Mai 2026) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1'26, 06 May 2026) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Server CPU (EPYC)** | >50% y/y; guia >70% no Q2; TAM >$120B/2030 | Arcuri/UBS prefere AMD vs Intel/ARM por core count em mundo agêntico (units +50%) · Joe Moore/MS "very enthused" em Venice (2nm), CPU agêntico como demanda net-new | **✓ confirma** (consenso no roadmap CPU) |
-| **GPU / Instinct (MI450)** | dbl-digit y/y; Meta 6GW; MI450 ramp H2 | JPM/Sur Neutral $385, GPU ainda "show-me" · Joe Moore "still show-me" a ~45x · Citi/Curtis MI450 "on track" p/ 1ª receita no Q4 (Inventec p/ Microsoft) | **⚠ nuança** ("show-me" no sistema) |
-| **Demanda por GW / capex** | ~$15B+ por GW; "multiple GW+/year customers" | JPM AI Capex 2.0: AMD rev $15-20B/GW; units 0.7M→0.6M→1.0M (25-27E); OpenAI 6GW, 1º ~1GW em 2H26 | **✓ confirma** (economia/GW corrobora) |
-| **MI450 / ramp Helios** | inicial Q3 → significativo Q4, em 2027 | Redburn/O'Mara: chip on track mas rack ~30K units (Meta/OpenAI); ODMs divididos no timing de montagem do rack; gargalos em ABF (Kinsus) e CCL (iTeq, T-glass) + TSMC 3nm | **⚠ nuança** (gargalo é o rack, não o chip) |
-| **Valuation** | — (n/a no call) | Citi upgrade Buy $575, Bernstein Outperform $600, BofA EPS $7.25/$12/$15 (FY26-28), under-owned (~1-em-3 large-caps) — vs Redburn "trim ~20% into the print" (guide-light risk) | **✓ confirma** (reset bullish, ressalva tática) |
+| **Server CPU (EPYC)** | >50% y/y; guides >70% in Q2; TAM >$120B/2030 | Arcuri/UBS prefers AMD vs Intel/ARM on core count in an agentic world (units +50%) · Joe Moore/MS "very enthused" on Venice (2nm), agentic CPU as net-new demand | **✓ confirms** (consensus on the CPU roadmap) |
+| **GPU / Instinct (MI450)** | dbl-digit y/y; Meta 6GW; MI450 ramp H2 | JPM/Sur Neutral $385, GPU still "show-me" · Joe Moore "still show-me" at ~45x · Citi/Curtis MI450 "on track" for first revenue in Q4 (Inventec for Microsoft) | **⚠ nuance** ("show-me" on the system) |
+| **GW demand / capex** | ~$15B+ per GW; "multiple GW+/year customers" | JPM AI Capex 2.0: AMD rev $15-20B/GW; units 0.7M→0.6M→1.0M (25-27E); OpenAI 6GW, first ~1GW in 2H26 | **✓ confirms** (per-GW economics corroborate) |
+| **MI450 / Helios ramp** | initial Q3 → significant Q4, into 2027 | Redburn/O'Mara: chip on track but rack ~30K units (Meta/OpenAI); ODMs split on rack-assembly timing; bottlenecks in ABF (Kinsus) and CCL (iTeq, T-glass) + TSMC 3nm | **⚠ nuance** (the bottleneck is the rack, not the chip) |
+| **Valuation** | — (n/a on the call) | Citi upgrade Buy $575, Bernstein Outperform $600, BofA EPS $7.25/$12/$15 (FY26-28), under-owned (~1-in-3 large-caps) — vs Redburn "trim ~20% into the print" (guide-light risk) | **✓ confirms** (bullish reset, tactical caveat) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 05-06 | AMD callback | demanda | bull | Server CPU >70% y/y in Q2, sustainable through 2H, mostly unit-driven (~2/3 units, 1/3 ASP) at 60-65%+ GM vs lower-margin GPU+HBM. Each GW of deal ≈ $15-20B; OpenAI + Meta ≈ 2GW of the ~3GW in play for 2027. AMD confirms ~$15B+ per GW and 'multiple GW+/year customers'. The final OpenAI tranche only vests at $600/share; ~26M shares per GW of dilution via warrant. |
+| 05-06 | AMD callback | demand | bull | Server CPU >70% y/y in Q2, sustainable through 2H, mostly unit-driven (~2/3 units, 1/3 ASP) at 60-65%+ GM vs lower-margin GPU+HBM. Each GW of deal ≈ $15-20B; OpenAI + Meta ≈ 2GW of the ~3GW in play for 2027. AMD confirms ~$15B+ per GW and 'multiple GW+/year customers'. The final OpenAI tranche only vests at $600/share; ~26M shares per GW of dilution via warrant. |
 | 05-06 | BofA · Vivek Arya | valuation | bull | Post-Q1 recap: consensus moving to ~$7.25 EPS FY26 (from ~$6.80), ~$12+ FY27, ~$15 FY28; AMD historically trades 35-40x next-year in growth → target $450-500. AMD remains under-owned — only ~1-in-3 large-cap funds hold it at ~0.41x relative weight (~36-60% underweight) vs NVDA ~78% ownership — the positioning gap is itself the bull catalyst. |
 | 05-06 | GS | valuation | bull | GS upgraded to Buy PT $410; part of the broad sell-side reset post-Q1 on the agentic CPU thesis (BofA Buy $450, MS OW $410, UBS Buy $300). |
 | 05-22 | Citi · Blayne Curtis | supply | bull | Asia recap: MI450 'on track' for first revenue in Q4; Curtis saw 2 of the 3 MI450 ODMs (end-customers Meta and Microsoft) and flagged Inventec building MI450 for Microsoft as a new data point. |
 | 06-13 | Citi · Atif Malik | valuation | bull | Citi upgraded to Buy, PT $575, ~+12-13% above the Street CY26-28E, SOTP-based — sees 2027 GPU revenue dispersion of $30-50bn as ~3GW come into play. |
 | 06-15 | JPM · Harlan Sur | valuation | bear | JPM Neutral PT $385 vs stock ~$511 — explicitly cautious on valuation (~45x NTM); GPU still 'show-me'. |
-| 06-15 | UBS · Arcuri | competicao | bull | Asked AMD-vs-Intel-vs-ARM, Arcuri 'would rather be in AMD' — core count is decisive in an agentic world (agents spawning agents), and AMD is 'well ahead of Intel on core count'; much less optimistic on Intel's product roadmap. AMD server units +50%. |
-| 06-16 | JPM · AI Capex 2.0 | demanda | bull | AMD DC capex at $35-40B per GW, of which AMD revenue is $15-20B/GW ($14-18B compute, ~$2B networking); raises GPU units to 0.7M (2025) → 0.6M (2026E) → 1.0M (2027E) as MI450 ramps; OpenAI deal (6 GW MI450, multi-generation) sees first ~1 GW deploy 2H26. |
-| 06-16 | MS · Joe Moore | produto | mixed | Bus tour: 'very enthused' on Venice (2nm, 2H ramp), sees agentic CPU as incremental net-new demand, not a GPU ratio, and flags x86 security advantage for enterprise agents over Arm. On GPU 'still show-me' with the stock at ~45x next year. |
+| 06-15 | UBS · Arcuri | competition | bull | Asked AMD-vs-Intel-vs-ARM, Arcuri 'would rather be in AMD' — core count is decisive in an agentic world (agents spawning agents), and AMD is 'well ahead of Intel on core count'; much less optimistic on Intel's product roadmap. AMD server units +50%. |
+| 06-16 | JPM · AI Capex 2.0 | demand | bull | AMD DC capex at $35-40B per GW, of which AMD revenue is $15-20B/GW ($14-18B compute, ~$2B networking); raises GPU units to 0.7M (2025) → 0.6M (2026E) → 1.0M (2027E) as MI450 ramps; OpenAI deal (6 GW MI450, multi-generation) sees first ~1 GW deploy 2H26. |
+| 06-16 | MS · Joe Moore | product | mixed | Bus tour: 'very enthused' on Venice (2nm, 2H ramp), sees agentic CPU as incremental net-new demand, not a GPU ratio, and flags x86 security advantage for enterprise agents over Arm. On GPU 'still show-me' with the stock at ~45x next year. |
 | 06-17 | Bernstein · Rasgon | valuation | bull | Bernstein Outperform PT $600. |
 | 06-23 | Redburn · Conor O'Mara | supply | mixed | Asia Trip Takeaways: AMD constrained on TSMC 3nm + two substrate bottlenecks — ABF (Kinsus ~40% share, growing only ~10%) and CCL (iTeq ~60% share at ~75% util on a T-glass shortage, recovering to 90-95% in Q4). Trade: if long AMD, trim ~20% into the print since AMD may guide light on the constraints, then buy the weakness. Server CPU pricing +15-20% again in H2. |
-| 06-23 | Redburn · Conor O'Mara | produto | mixed | MI450/Helios: MI450 chip in production on track; rack forecast steady at ~30,000 units for next year (mostly Meta and OpenAI), via AVC (liquid cooling)/Delta (power) checks. ODMs split on Helios rack assembly timing — one sees a delay to Q1 2026, another only a minor slip to late Q4 2025; the swing is whether the rack (not the chip) can be built. Vs NVDA's ~70-80K racks, 30K is a 'decent number'. |
+| 06-23 | Redburn · Conor O'Mara | product | mixed | MI450/Helios: MI450 chip in production on track; rack forecast steady at ~30,000 units for next year (mostly Meta and OpenAI), via AVC (liquid cooling)/Delta (power) checks. ODMs split on Helios rack assembly timing — one sees a delay to Q1 2026, another only a minor slip to late Q4 2025; the swing is whether the rack (not the chip) can be built. Vs NVDA's ~70-80K racks, 30K is a 'decent number'. |
 
-**Síntese do quarter:** o CPU deixou de ser debate (consenso amplo de que AMD tem roadmap superior ao Intel) e o foco migrou inteiramente p/ execução de GPU + valuation (~45x NTM) — bulls (Citi $575, Bernstein $600) sobem PT na ótica de $30-50bn de receita GPU em '27, enquanto o flow de supply-chain (Redburn) reposiciona o risco do chip (on track) para a montagem do rack Helios e gargalos de substrato, sugerindo trim tático até o print.
+**Quarter synthesis:** the CPU is no longer a debate (broad consensus that AMD has a superior roadmap to Intel) and the focus migrated entirely to GPU execution + valuation (~45x NTM) — bulls (Citi $575, Bernstein $600) raise PTs on the view of $30-50bn of GPU revenue in '27, while the supply-chain flow (Redburn) repositions the risk from the chip (on track) to the Helios rack assembly and substrate bottlenecks, suggesting a tactical trim into the print.
 
 ## Management commentary — evolution (last 5 quarters)
 

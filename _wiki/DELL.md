@@ -5,6 +5,24 @@
 
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\DELL` (filings + transcripts) · `_equity_calls` · `E:\briefings\2026`. Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $162.2bn | $194.5bn |
+| Gross profit | $28.5bn | $34.0bn |
+| Gross margin | 17.6% | 17.5% |
+| EBITDA | $16.7bn | $20.7bn |
+| EPS | $16.52 | $21.83 |
+| Capex | $3.6bn | $4.0bn |
+| OCF (≈EBITDA) | $16.7bn | $20.7bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="29.6" width="20" height="28.4" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="26.0" width="20" height="32.0" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="25.9" width="20" height="32.1" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+37.7% 3m · +55.0% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="31.3" width="20" height="26.7" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="28.1" width="20" height="29.9" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="27.6" width="20" height="30.4" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+47.1% 3m · +65.0% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Dell is the world's largest server/storage OEM and #1/#2 commercial PC vendor, now re-architected around AI infrastructure. Two reporting segments: **ISG** (Infrastructure Solutions Group — AI-optimized servers, traditional servers & networking, storage) and **CSG** (Client Solutions Group — commercial + consumer PCs). FY26 (ended 2026-01-30) revenue **$113.5B, +19%** (FY26 10-K), split ISG $60.8B / CSG $51.0B. The story is the AI-server ramp: AI-optimized servers went **$1.9B → $9.3B → $24.7B** (FY24→FY25→FY26) and management guides **~$60B for FY27** (Q1 FY27 print). At its 2025 Securities Analyst Meeting Dell **raised its long-term framework** to **7–9% revenue / 15%+ EPS growth** (from 3–4% / 6–8% in 2021/2023), targeting EPS to roughly double over five years (Dell SAM deck, 2025-10-07). Dell sits in the middle of the AI value chain — buying GPUs/components (chiefly NVIDIA + memory) and integrating, deploying and servicing rack-scale systems for neoclouds, sovereigns and enterprises. Capital-light model (no material buys until customer PO), shareholder-friendly (dividend +20%, buyback), ≥15% LT EPS framework.
 
@@ -91,31 +109,31 @@ Dell's 2025 Securities Analyst Meeting (Michael Dell / Jeff Clarke / Arthur Lewi
 - **UBS (Dave Vogt) Dell callback post-print (UBS "Dell callback", 2026-05-29):** UBS's read on the widest beat in Dell's history. Total revenue **$43.8B, ~$8.5B / 24% above UBS estimate**. AI server $16.1B (vs $13B est., ~24% upside) seen as **least controversial / sandbagged — not the stock driver**. The surprise was **core/traditional server +92% y/y with absolute UNIT growth, not just price** (mgmt "let slip" on the public call) — traditional servers taking on AI workloads at advanced enterprise/large-tech customers. On the AI order book: **a large/increasing share of orders is now Vera Rubin** (migrating up the NVIDIA roadmap), with **tremendous demand for the GB/Grace variants** (neoclouds taking Grace-GPU products). Backlog **$51B** exiting the quarter (from $43B), $24.4B orders booked; pipeline "multiple times backlog" (>$100B) but mgmt pushed back on building a linear order→rev-rec waterfall (lumpy). FY27 AI-server guide **$50B→$60B** (buy-side was higher); 2H step-down framed as **supply not demand; memory = #1 constraint**. CSG: 17% rev growth + **8% op margin (280 bps above UBS's 5.2%) is NOT sustainable** — normalizes to 5–6% (~$0.50 of the EPS beat was PC margin). UBS stays **Neutral on valuation** — Dell now trades near a market multiple / premium to NVDA/Broadcom on a declining-gross-margin business; flags a tough fiscal-28 first-half PC comp (UBS "Dell callback", 2026-05-29). Read-across: HPE may not follow Dell's traditional-server demand/margin strength; TD Synnex's high (general-purpose compute/networking) business a positive read.
 - **MS (Erik Woodring) servers note** _(2026-06-15/16)_ + **Dell CFO/ISG @ JPM post-print** _(2026-05-29)_: bull = $53B AI backlog / $60B FY27 guide; **MS bear** = thin AI-server margins (ISG 11.7% vs 12.8%) + traditional-server pull-forward.
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 FY27 · May 28 → Jun 16, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 FY27 · May 28 → Jun 16, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1 FY27) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1 FY27) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Demanda AI-server** | $16.1B (+757% y/y); orders $24.4B, backlog $53.1B, >$100B cumulativo, guide FY27 $50B→$60B | UBS: AI-server $16.1B "least controversial / sandbagged" · JPM OW corrobora backlog $53.1B / 5,000+ AI-factory clientes | **✓ confirma** (e ainda sandbagged) |
-| **Servidor tradicional** | $8.5B (+92%); FY27 guide >60% | UBS: a surpresa real — +92% y/y com crescimento de UNIDADES, não só preço, em workloads agentic | **✓ confirma** (unidades, não só preço) |
-| **Margem / mix** | Op margin +330bp; mix de AI ainda dilutivo | UBS: CSG 8% op margin "NÃO sustentável" (normaliza 5-6%) · MS: margem AI-server fina (ISG 11.7% vs 12.8%) | **⚠ nuança** (margem é o calcanhar) |
-| **Memória / supply** | Memória = constraint #1 no 2H; step-down é oferta, não demanda | BofA: Dell subindo preços p/ defender GM na inflação de memória e *ganhando* no supply | **✓ confirma** (supply é o gargalo) |
-| **Guidance / durabilidade** | Guide FY27 rev ~$168B, EPS $17.9 | MS: "números muito baixos esse ano" mas flag de duration risk — se unidades virarem flat/negativo, re-rate por peak-earnings | **⚠ nuança** (peak-earnings em debate) |
+| **AI-server demand** | $16.1B (+757% y/y); orders $24.4B, backlog $53.1B, >$100B cumulative, FY27 guide $50B→$60B | UBS: AI-server $16.1B "least controversial / sandbagged" · JPM OW corroborates backlog $53.1B / 5,000+ AI-factory customers | **✓ confirms** (and still sandbagged) |
+| **Traditional server** | $8.5B (+92%); FY27 guide >60% | UBS: the real surprise — +92% y/y with UNIT growth, not just price, on agentic workloads | **✓ confirms** (units, not just price) |
+| **Margin / mix** | Op margin +330bp; AI mix still dilutive | UBS: CSG 8% op margin "NOT sustainable" (normalizes 5-6%) · MS: thin AI-server margin (ISG 11.7% vs 12.8%) | **⚠ nuance** (margin is the soft spot) |
+| **Memory / supply** | Memory = constraint #1 in 2H; the step-down is supply, not demand | BofA: Dell raising prices to defend GM on memory inflation and *winning* on supply | **✓ confirms** (supply is the bottleneck) |
+| **Guidance / durability** | FY27 guide rev ~$168B, EPS $17.9 | MS: "numbers too low this year" but flags duration risk — if units turn flat/negative, re-rate on peak-earnings | **⚠ nuance** (peak-earnings debated) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 05-29 | UBS · Dave Vogt (callback) | demanda | mixed | UBS (post-print callback): total revenue $43.8B, ~$8.5B / 24% above UBS's estimate. AI server $16.1B seen as "least controversial / sandbagged". The surprise was core/traditional server +92% y/y with UNIT growth, not just price. A large/growing share of orders is now Vera Rubin; backlog $51B exiting the quarter. CSG at 8% op margin "NOT sustainable" (normalizes to 5-6%). UBS stays Neutral on valuation — Dell trades near a market multiple / premium to NVDA/Broadcom on a business with declining gross margin. |
+| 05-29 | UBS · Dave Vogt (callback) | demand | mixed | UBS (post-print callback): total revenue $43.8B, ~$8.5B / 24% above UBS's estimate. AI server $16.1B seen as "least controversial / sandbagged". The surprise was core/traditional server +92% y/y with UNIT growth, not just price. A large/growing share of orders is now Vera Rubin; backlog $51B exiting the quarter. CSG at 8% op margin "NOT sustainable" (normalizes to 5-6%). UBS stays Neutral on valuation — Dell trades near a market multiple / premium to NVDA/Broadcom on a business with declining gross margin. |
 | 05-29 | Bernstein | valuation | bull | Bernstein: PT raised to $500 post-Q1 (from $175 at the Outperform initiation on 2025-09-15). |
 | 05-29 | BofA · Wamsi Mohan | valuation | bull | BofA (Wamsi Mohan): Buy, PT $500, FY27E EPS ~$19. |
-| 05-29 | JPM · Samik Chatterjee | demanda | bull | JPM hosted a call with CFO David Kennedy + ISG pres. Arthur Lewis post-earnings: AI-server orders $24.4B, backlog $53.1B, >$100B in cumulative orders, 5,000+ AI-factory customers. Dell expects to beat a 2H PC market of ~-18% and gain share. JPM Overweight. |
-| 06-08 | BofA · Wamsi Mohan | margem | bull | BofA conference wrap: Dell raising prices to defend GM amid memory inflation and *winning* on supply. |
+| 05-29 | JPM · Samik Chatterjee | demand | bull | JPM hosted a call with CFO David Kennedy + ISG pres. Arthur Lewis post-earnings: AI-server orders $24.4B, backlog $53.1B, >$100B in cumulative orders, 5,000+ AI-factory customers. Dell expects to beat a 2H PC market of ~-18% and gain share. JPM Overweight. |
+| 06-08 | BofA · Wamsi Mohan | margin | bull | BofA conference wrap: Dell raising prices to defend GM amid memory inflation and *winning* on supply. |
 | 06-15 | Morgan Stanley · Erik Woodring | valuation | mixed | MS (Woodring) servers note: bull = $53B AI backlog / $60B FY27 guide; MS bear = thin AI-server margins (ISG 11.7% vs 12.8%) + traditional-server pull-forward. Concedes "numbers for Dell are too low this year" but flags duration risk — if order unit growth turns neutral/negative, the market re-rates on peak-earnings fear. Prefers to play the on-prem-compute theme via distributors/VARs. |
 
-**Síntese do quarter:** após o maior beat da história da Dell, o sell-side parou de discutir a demanda (consenso: AI-server sandbagged, server tradicional +92% em unidades) e migrou para a *qualidade e durabilidade* da margem — CSG insustentável (UBS), margem AI fina (MS) e o medo de peak-earnings se o crescimento de unidades virar; valuation (perto de múltiplo de mercado) é o que segura os Neutral.
+**Quarter synthesis:** after Dell's largest beat ever, the sell-side stopped debating demand (consensus: AI-server sandbagged, traditional server +92% in units) and moved to the *quality and durability* of the margin — CSG unsustainable (UBS), thin AI margin (MS) and the fear of peak-earnings if unit growth turns; valuation (near a market multiple) is what holds back the Neutrals.
 
 ## Management commentary — evolution (last 4 quarters)
 

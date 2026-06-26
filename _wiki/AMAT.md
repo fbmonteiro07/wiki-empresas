@@ -4,6 +4,24 @@
 
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\AMAT` (10-K/10-Q + transcripts) · `_equity_calls` (compiled AMAT dossier, 13 calls). No `_briefings\by-ticker\AMAT.md` and no Outlook sell-side notes available this session (see Sources). Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $36.0bn | $44.6bn |
+| Gross profit | $18.0bn | $22.5bn |
+| Gross margin | 50.0% | 50.5% |
+| EBITDA | $12.6bn | $16.6bn |
+| EPS | $13.56 | $18.08 |
+| Capex | $2.3bn | $2.2bn |
+| OCF (≈EBITDA) | $12.6bn | $16.6bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="23.9" width="20" height="34.1" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="18.4" width="20" height="39.6" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.3" width="20" height="43.7" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+11.1% 3m · +29.0% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="27.9" width="20" height="30.1" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="21.3" width="20" height="36.7" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="15.1" width="20" height="42.9" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+19.8% 3m · +46.2% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Applied Materials is the broadest-line wafer-fabrication-equipment (WFE) vendor — the only player spanning nearly every front-end materials-engineering step: deposition (CVD/PVD/ALD/epi), etch, CMP, ion implant, rapid thermal processing, plus metrology/inspection and advanced packaging. Two reportable segments: **Semiconductor Systems 73%** and **Applied Global Services (AGS) 23%**, with Display/Other ~4% (10-K FY2025, 2025-12-12). FY2025 (ended Oct 26, 2025) revenue **$28.4B** (+4% y/y), GAAP GM 48.7%, op margin 29.2%, diluted EPS $8.66. Semi-Systems end-market mix: foundry/logic 67%, DRAM 26%, NAND 7% (10-K FY2025). It sits in **front-end WFE** — levered to leading-edge logic (gate-all-around) and the memory/HBM buildout, with the highest pocket share in PVD and a top-tier position in DRAM WFE.
 
@@ -63,13 +81,13 @@ AMAT buys precision components and process materials from a broad supplier base,
 The print's signal was the **raised CY guide: equipment growth lifted to ">30% this calendar year"** (from ">20%" at Q1, 2026-02-12), with leading-edge foundry-logic + DRAM + advanced packaging driving 80%+ of WFE growth in 2026–27 (Q2 FY26, 2026-05-14). **Q3 FY26 guide: revenue $8.95B ±$500M (+23% y/y), non-GAAP EPS $3.36 ±$0.20 (+36% y/y).** Management reiterated unprecedented visibility — customers running "rolling 8-quarter forecasts" — and cited agentic-AI workloads as incremental demand. The key debate the print created: ">30%" implies shipments barely grow in CalQ3/Q4 after ~+$900M sequential adds in April and July, which Arcuri (UBS) read as deliberate conservatism (see Debate).
 
 ## Capstone estimates (house model)
-_Source: Capstone peer model (`ASML_Peers_SemiCap_v16.xlsx` — Peer Comp, 2026-06-15). EPS-only (full P&L não modelado por nome aqui)._
+_Source: Capstone peer model (`ASML_Peers_SemiCap_v16.xlsx` — Peer Comp, 2026-06-15). EPS-only (full P&L not modeled by name here)._
 
 | Diluted EPS ($) | 2024 | 2025 | 2026E | 2027E | 2028E | vs cons NTM |
 |---|--:|--:|--:|--:|--:|--:|
 | AMAT | 8.65 | 9.35 | 13.42 | 18.94 | 23.08 | ~13.84 |
 
-**House read:** EPS 2026E $13.42 / 2027E $18.94 / 2028E $23.08 — modestamente acima do consenso (NTM ~13.84). (Capstone peer model, 2026-06-15)
+**House read:** EPS 2026E $13.42 / 2027E $18.94 / 2028E $23.08 — modestly above consensus (NTM ~13.84). (Capstone peer model, 2026-06-15)
 
 ## Debate / thesis
 - **Capstone model (house view):** diluted EPS $13.4 / $18.9 / $23.1 (2026-28E), modestly above NTM consensus ~$13.8; implied P/E ~44x→31x→25x. (Capstone official model — ASML_Peers_SemiCap v16, 2026-06-15)
@@ -113,39 +131,39 @@ _Source: Capstone peer model (`ASML_Peers_SemiCap_v16.xlsx` — Peer Comp, 2026-
 - **Citi (Atif Malik) — MSFT/semicap recap** _(2026-04-30)_: AMAT/LAM seen growing total sales "more in the 20s" vs KLA "high teens" in 2026 — KLA's lower growth an artifact of tougher adv-packaging comps + higher DRAM mix in WFE that "impacts them negatively versus peers"; Citi in-house WFE ~$180B for 2027 (vs Street ~$200B) (Citi "C1Q26 recap", 2026-04-30).
 - **AlphaSense Deep Research (LRCX & ASML primers)** _(2026-06-22)_ — peer-comp datapoints: AMAT CY27E P/E **26.8x** (Mizuho, the lowest of the big-3 US semicaps), Outperform PT $540; Bernstein FY26E/27E reported P/E 34.0x/26.6x; AMAT ~49.9% GM in its most recent quarter (cost-parity with LRCX), op margin 31.9% (vs LRCX 35.0%, ASML 36.0%); AMAT holds a **9% stake in BESI** and is the largest CVD-deposition share leader; Mizuho frames AMAT CY24→27 cumulative revenue growth at 65% vs LRCX 128% vs WFE 85% (AlphaSense "DR LRCX/ASML primers", 2026-06-22).
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q2 FY26 · May 14 → Jun 23, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q2 FY26 · May 14 → Jun 23, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q2 FY26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q2 FY26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **WFE / crescimento equipment** | Elevado p/ ">30% neste ano-calendário" (de ">20%") | Arcuri/UBS: WFE ~$200B/'27 e ~$250B/'28; ">30%" provavelmente termina perto de +40%, "Applied being conservative" · JPM/Sur: WFE +20-25%/'26 | **✓ confirma** (guide visto conservador) |
-| **DRAM como driver** | DRAM driver-chave de 80%+ do crescimento de WFE 26-27 | Arcuri/UBS: AMAT ~25% dos dólares de DRAM WFE (2º atrás da ASML) — vs MS/Shane Brett: crescimento DRAM-WFE da AMAT desacelera de ~low-60s% '26 p/ mid-to-high-20s% '27 | **⚠ nuança** (debate no '27) |
-| **Visibilidade / backlog** | Clientes em "rolling 8-quarter forecasts" | Harlan/JPM: "8 trimestres-plus de backlog, a maior visibilidade vs qualquer ciclo"; Arcuri: nunca viu 8 trimestres em 30 anos | **✓ confirma** (corrobora forte) |
-| **Competição / share** | LE+DRAM+packaging = 80%+ do crescimento; share-gainer | Redburn: 15% de desconto no múltiplo por exposição à China (Naura/Piotech) · MS corta p/ EW, prefere LAM+KLA | **✗ contestado** (erosão de share é o furo) |
-| **Valuation** | — (n/a no call) | Beavington/Jefferies "Top pick"; Arcuri ~16x '28E, múltiplo "certo" 23-25x; BofA tape construtivo — vs JPM spec-sales "crowded long" | **⚠ nuança** (caro/lotado) |
+| **WFE / equipment growth** | Raised to ">30% this calendar year" (from ">20%") | Arcuri/UBS: WFE ~$200B/'27 and ~$250B/'28; ">30%" likely ends near +40%, "Applied being conservative" · JPM/Sur: WFE +20-25%/'26 | **✓ confirms** (guide seen as conservative) |
+| **DRAM as driver** | DRAM the key driver of 80%+ of WFE growth 26-27 | Arcuri/UBS: AMAT ~25% of DRAM WFE dollars (2nd behind ASML) — vs MS/Shane Brett: AMAT's DRAM-WFE growth decelerates from ~low-60s% '26 to mid-to-high-20s% '27 | **⚠ nuance** (debate over '27) |
+| **Visibility / backlog** | Customers on "rolling 8-quarter forecasts" | Harlan/JPM: "8 quarters-plus of backlog, the highest visibility vs any cycle"; Arcuri: never saw 8 quarters in 30 years | **✓ confirms** (corroborates strongly) |
+| **Competition / share** | LE+DRAM+packaging = 80%+ of growth; share-gainer | Redburn: 15% discount to the multiple for China exposure (Naura/Piotech) · MS cuts to EW, prefers LAM+KLA | **✗ contested** (share erosion is the hole) |
+| **Valuation** | — (n/a on the call) | Beavington/Jefferies "Top pick"; Arcuri ~16x '28E, "right" multiple 23-25x; BofA constructive tape — vs JPM spec-sales "crowded long" | **⚠ nuance** (expensive/crowded) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 05-15 | UBS · Tim Arcuri (AMAT recap) | demanda | bull | Arcuri (UBS): WFE to ~$200B in 2027 and ~$250B in 2028 (+$50B/year); AMAT recovers ~half of the 280 bps of share it lost in 2025, growing above the market. ">30%" likely ends near +40% — "Applied being conservative... keeping a low bar." Has never seen 8 quarters of visibility in 30 years. AMAT is the single largest position in his suggested book. |
-| 05-15 | JPM · Harlan Sur (semicap-AMAT) | demanda | bull | Harlan/JPM: "eight quarters-plus of order backlog... the highest visibility vs any prior cycle." PVD is the industry's highest-margin product (~70%+ GM at ~82-84% share); EBIT could reach 38-40% by 2028. Advanced packaging guided to >50% growth in 2026 toward ~$2B. |
-| 05-18 | MS | competicao | bear | MS cut AMAT to Equal-weight (from OW) while upgrading LAM to Overweight — "memory mismatch unresolved." |
-| 05-29 | JPM · Harlan Sur (Semis Spring Series) | demanda | bull | JPM (Sur): AMAT among the OW semicap names; WFE +20-25% in 2026, +20%+ in 2027; LRCX/AMAT favored as early-cycle names of the capacity cycle. |
+| 05-15 | UBS · Tim Arcuri (AMAT recap) | demand | bull | Arcuri (UBS): WFE to ~$200B in 2027 and ~$250B in 2028 (+$50B/year); AMAT recovers ~half of the 280 bps of share it lost in 2025, growing above the market. ">30%" likely ends near +40% — "Applied being conservative... keeping a low bar." Has never seen 8 quarters of visibility in 30 years. AMAT is the single largest position in his suggested book. |
+| 05-15 | JPM · Harlan Sur (semicap-AMAT) | demand | bull | Harlan/JPM: "eight quarters-plus of order backlog... the highest visibility vs any prior cycle." PVD is the industry's highest-margin product (~70%+ GM at ~82-84% share); EBIT could reach 38-40% by 2028. Advanced packaging guided to >50% growth in 2026 toward ~$2B. |
+| 05-18 | MS | competition | bear | MS cut AMAT to Equal-weight (from OW) while upgrading LAM to Overweight — "memory mismatch unresolved." |
+| 05-29 | JPM · Harlan Sur (Semis Spring Series) | demand | bull | JPM (Sur): AMAT among the OW semicap names; WFE +20-25% in 2026, +20%+ in 2027; LRCX/AMAT favored as early-cycle names of the capacity cycle. |
 | 06-01 | UBS · Tim Arcuri | valuation | bull | Arcuri (UBS): allocates the single largest position in his suggested book to AMAT (30-40¢ of every $10). |
 | 06-08 | UBS · Tim Arcuri / BofA conf wrap | valuation | mixed | Arcuri (UBS): at $250B of WFE, CY28 EPS power ~$35 (min $30+) implies the stock trades at ~16x 2028 earnings; the "right" multiple is 23-25x. BofA conf wrap: semicaps "tend to be sensitive to memory stocks"; ~0.9 correlation between AMAT and Micron. |
 | 06-11 | JPM (spec-sales) | valuation | bear | JPM spec-sales: flags AMAT as a "crowded long" alongside Intel/memory/foundry — in tension with Arcuri's read that the buyside is under-positioned in equipment vs memory. |
-| 06-15 | UBS · Tim Arcuri (semis/memory) | demanda | bull | UBS (Arcuri): in the DRAM dollar-leverage ranking, AMAT ~25% of DRAM WFE dollars (vs ASML ~30%) — "ASML first, Applied second, then a distant gap, then Lam, then KLA"; KLAC "fundamentally not that exposed to DRAM." |
+| 06-15 | UBS · Tim Arcuri (semis/memory) | demand | bull | UBS (Arcuri): in the DRAM dollar-leverage ranking, AMAT ~25% of DRAM WFE dollars (vs ASML ~30%) — "ASML first, Applied second, then a distant gap, then Lam, then KLA"; KLAC "fundamentally not that exposed to DRAM." |
 | 06-16 | Jefferies · Will Beavington | valuation | bull | Jefferies (Beavington), Global SEMIS Daily: AMAT named "Top pick" in the semicap complex. |
 | 06-17 | Redburn | valuation | mixed | Redburn (relative skeptic): Neutral, PT raised $450 → $560 post Silicon-Valley bus tour; lifts estimates +4-9% FY26-30 but applies a 15% discount to the peer EV/EBIT multiple for "greater exposure to slower-growth segments and vulnerability to China competition" (Naura/Piotech). Frames WFE at $272bn by 2030. |
 | 06-18 | BofA TMT sales | valuation | bull | BofA TMT sales: AMAT on the constructive semis tape (alongside MU/INTC) following the pop in the AAPL/Intel deal. |
-| 06-22 | MS · Joe Moore / Shane Brett (On Memory and Semicap / Tech Talk) | competicao | bear | MS (Shane Brett): prefers LAM + KLA over AMAT — sees AMAT's DRAM-WFE growth decelerating from ~low-60s% in 2026 to mid-to-high-20s% in 2027 "regardless of how I run my DRAM WFE numbers." MS WFE $149B (2026) / $191B (2027, +28%). Reiterates the cut to Equal-weight. |
+| 06-22 | MS · Joe Moore / Shane Brett (On Memory and Semicap / Tech Talk) | competition | bear | MS (Shane Brett): prefers LAM + KLA over AMAT — sees AMAT's DRAM-WFE growth decelerating from ~low-60s% in 2026 to mid-to-high-20s% in 2027 "regardless of how I run my DRAM WFE numbers." MS WFE $149B (2026) / $191B (2027, +28%). Reiterates the cut to Equal-weight. |
 | 06-22 | AlphaSense Deep Research (LRCX/ASML primers) | valuation | mixed | AlphaSense DR: peer-comp — AMAT CY27E P/E 26.8x (Mizuho, the lowest of the big-3 US semicaps), Outperform PT $540; Bernstein FY26E/27E reported P/E 34.0x/26.6x; GM ~49.9%, op margin 31.9% (vs LRCX 35.0%, ASML 36.0%); 9% stake in BESI; share leader in CVD-deposition. |
-| 06-24 | Cantor (management master class) | demanda | bull | **Cantor hosted an AMAT "Master Class" call with AMAT management covering DRAM and Advanced Packaging.** Cantor reiterates **Overweight, PT $650**. Key structural growth drivers highlighted by AMAT management: (1) **DRAM WFE supercycle** — HBM4/4E ramps require 3–4x wafer starts per bit vs conventional DRAM, compressing supply while expanding AMAT's etch/dep content per wafer; AMAT's advanced etch and CVD-ALD tools have above-corporate-average share in HBM; (2) **Advanced packaging** — AMAT sees its packaging tools (wafer-level bonders, CMP, Cu-plating via NEXX) growing faster than overall WFE; the CoWoS tightness translates to demand for AMAT's HAR etch and deposition used in the via/RDL layers; AMAT is still the only WFE supplier with a fully integrated wafer-to-package tool suite (Trillium ALD for GAA, NEXX plating for packaging); (3) **Long-term visibility** — management cited 8-quarter visibility across leading-edge DRAM and packaging customers, consistent with the guide raise to ">30% CY26." Cantor's conclusion: the MS relative-preference for LAM+KLA over AMAT reflects a 2027 deceleration in DRAM-WFE that Cantor views as "too pessimistic" given HBM4/4E complexity and the advanced-packaging layer that is almost exclusively AMAT content. (Cantor "AMAT Master Class" Outlook email, 2026-06-24) |
+| 06-24 | Cantor (management master class) | demand | bull | **Cantor hosted an AMAT "Master Class" call with AMAT management covering DRAM and Advanced Packaging.** Cantor reiterates **Overweight, PT $650**. Key structural growth drivers highlighted by AMAT management: (1) **DRAM WFE supercycle** — HBM4/4E ramps require 3–4x wafer starts per bit vs conventional DRAM, compressing supply while expanding AMAT's etch/dep content per wafer; AMAT's advanced etch and CVD-ALD tools have above-corporate-average share in HBM; (2) **Advanced packaging** — AMAT sees its packaging tools (wafer-level bonders, CMP, Cu-plating via NEXX) growing faster than overall WFE; the CoWoS tightness translates to demand for AMAT's HAR etch and deposition used in the via/RDL layers; AMAT is still the only WFE supplier with a fully integrated wafer-to-package tool suite (Trillium ALD for GAA, NEXX plating for packaging); (3) **Long-term visibility** — management cited 8-quarter visibility across leading-edge DRAM and packaging customers, consistent with the guide raise to ">30% CY26." Cantor's conclusion: the MS relative-preference for LAM+KLA over AMAT reflects a 2027 deceleration in DRAM-WFE that Cantor views as "too pessimistic" given HBM4/4E complexity and the advanced-packaging layer that is almost exclusively AMAT content. (Cantor "AMAT Master Class" Outlook email, 2026-06-24) |
 
-**Síntese do quarter:** o debate saiu do "o guide de >30% é sandbag?" (Arcuri diz que sim, vai a +40%) e migrou para o relativo dentro do semicap — MS rebaixou p/ EW preferindo LAM+KLA na desaceleração de DRAM-WFE em '27, e Redburn aplica desconto de múltiplo pela competição chinesa; o bull case (visibilidade de 8 trimestres, supercycle de WFE) segue intacto, mas a questão virou se o crescimento DRAM da AMAT decelera mais que o dos pares em 2027. Em 24-Jun, Cantor (Master Class com AMAT management) reiterou OW $650 com o argumento de que a decel de 2027 está precificada de forma muito pessimista, dado o HBM4/4E (3-4x starts/bit) e o advanced-packaging layer de conteúdo quase exclusivo da AMAT.
+**Quarter synthesis:** the debate moved off "is the >30% guide a sandbag?" (Arcuri says yes, it goes to +40%) and migrated to the relative call within semicap — MS cut to EW preferring LAM+KLA on the '27 DRAM-WFE deceleration, and Redburn applies a multiple discount for Chinese competition; the bull case (8-quarter visibility, WFE supercycle) remains intact, but the question became whether AMAT's DRAM growth decelerates more than peers' in 2027. On 24-Jun, Cantor (Master Class with AMAT management) reiterated OW $650 with the argument that the 2027 decel is priced far too pessimistically, given HBM4/4E (3-4x starts/bit) and the advanced-packaging layer of almost-exclusive AMAT content.
 
 ## Management commentary — evolution (last 4 quarters)
 

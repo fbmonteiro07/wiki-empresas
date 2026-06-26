@@ -4,6 +4,24 @@
 
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\TXN` (10-K/10-Q + transcripts) · `_equity_calls` · `E:\briefings\2026`. Master index: [00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $20.7bn | $23.4bn |
+| Gross profit | $12.2bn | $14.2bn |
+| Gross margin | 59.0% | 60.6% |
+| EBITDA | $10.7bn | $12.5bn |
+| EPS | $7.48 | $9.02 |
+| Capex | $2.6bn | $2.7bn |
+| OCF (≈EBITDA) | $10.7bn | $12.5bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="22.5" width="20" height="35.5" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="21.2" width="20" height="36.8" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.2" width="20" height="43.8" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+19.0% 3m · +23.4% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="21.2" width="20" height="36.8" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="20.7" width="20" height="37.3" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+17.9% 3m · +19.4% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 The world's largest **catalog analog + embedded-processing** semiconductor IDM — ~100,000 products, >80% direct-to-customer (incl. TI.com), longevity/diversity of sockets the moat. FY2025 revenue **$17.68bn** across two reportable segments: **Analog (~81% of revenue)** and **Embedded Processing (~15%)**, plus Other (~4%) (10-K, 2026-02-06). End markets: **Industrial 33%, Automotive 33%, Personal electronics 21%, Data center compute 9%, Communications equipment 3%, calculators ~1%** (10-K, 2026-02-06). Industrial + automotive + data center now ~75% of revenue, up from 43% in 2013 (Q4 FY25 call, 2026-01-27). The objective management manages to is **free-cash-flow-per-share growth over the long term**; the live debate is whether the just-completed 300mm internal-fab capex super-cycle now converts to a steep FCF/share inflection as capex rolls over.
 
@@ -81,37 +99,37 @@ TXN is a fully internalized IDM: it runs its **own 300mm wafer fabs** (Richardso
 - **JPM (Samik) 'Watts Up! Shift to 800V'** _(2026-06-09)_: TXN among DC-power-stack share gainers (Citi's 800V top pick).
 - **'VIVEK on Analog'** _(2026-06-09)_ + BofA analog call _(2026-06-09)_: cyclical recovery; valuation the bear (GS Sell).
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 FY26 print + intra-quarter · Apr 22 → Jun 22, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 FY26 print + intra-quarter · Apr 22 → Jun 22, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1'26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1'26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Demanda industrial** | Industrial +30% YoY/+20% QoQ, "5-6 meses de crescimento" | Barclays/Rand: TXN favorito no analog, mais cedo na recuperação que ADI, revisões positivas à frente | **✓ confirma** (ciclo virando) |
-| **Pricing / margem** | GM 58% (+210bps QoQ); "preços podem subir no 2H" | Jefferies Menon: TI sobe preço de novo em julho (2º/3º hike, muito mais rápido que '21) · Redburn: hikes 5-15% em mature nodes | **✓ confirma** (pricing acelera) |
-| **Data center / 800V** | DC ~+90% YoY/+25% QoQ, "quase todo socket do rack" | BofA Arya: AI >3x p/ $4.5bn LT · Citi Malik: share gains 2H26, GaN HV 4x desde Out'24 — vs @bubbleboi: PMs de DC "sem planos", lag 2-3 anos | **⚠ nuança** (timing do 800V contestado) |
-| **Capex / FCF** | Capex cortado p/ $2-3bn '26; ~$8 FCF/sh "muito provável" | JPM Sur: CY27 EPS já revisado +23% no grupo ADI/TXN/MCHP — vs GS Sell (valuation, 32x normalizado $13) | **✓ confirma** (FCF inflection; bear é valuation) |
+| **Industrial demand** | Industrial +30% YoY/+20% QoQ, "5-6 months of growth" | Barclays/Rand: TXN the favorite long in analog, earlier in the recovery than ADI, positive revisions ahead | **✓ confirms** (cycle turning) |
+| **Pricing / margin** | GM 58% (+210bps QoQ); "prices may go up in 2H" | Jefferies Menon: TI raising prices again in July (2nd/3rd hike, far faster than '21) · Redburn: 5-15% hikes on mature nodes | **✓ confirms** (pricing accelerating) |
+| **Data center / 800V** | DC ~+90% YoY/+25% QoQ, "almost every socket on the rack" | BofA Arya: AI >3x to $4.5bn LT · Citi Malik: share gains 2H26, GaN HV 4x since Oct'24 — vs @bubbleboi: DC PMs "no plans," 2-3 year lag | **⚠ nuance** (800V timing contested) |
+| **Capex / FCF** | Capex cut to $2-3bn '26; ~$8 FCF/sh "very probable" | JPM Sur: CY27 EPS already revised +23% across the ADI/TXN/MCHP group — vs GS Sell (valuation, 32x normalized $13) | **✓ confirms** (FCF inflection; bear is valuation) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
 | 05-12 | R&Co Redburn · Adley | valuation | bear | TXN on the 12m relative-high list, with semis ~63% above the 200-day average, "the widest margin since the dot-com bubble" — a technical overbought signal (briefing). |
-| 05-12 | R&Co Redburn · Adley | margem | bull | Redburn Buy sees 5-15% price increases on mature nodes broadening out, plus AI-DC supply tightness as support for GM (briefing). |
+| 05-12 | R&Co Redburn · Adley | margin | bull | Redburn Buy sees 5-15% price increases on mature nodes broadening out, plus AI-DC supply tightness as support for GM (briefing). |
 | 05-20 | GS · Schneider | valuation | bear | GS reiterates Sell on TXN (PT at ~32x normalized EPS of $13); reads ADI's strong print as a risk that pushes TXN estimates higher against the Sell thesis — valuation is the bear (briefing). |
-| 05-20 | Barclays/Rand desk | demanda | bull | TXN is the favorite long in analog — earlier in the recovery than ADI, more positive revisions ahead, with strong GM torque if the cycle is real (briefing). |
-| 05-26 | BofA · Vivek Arya | demanda | bull | BofA Buy: AI sales potentially >3x to $4.5bn long-term; best-positioned analog share gainer in the 800V data-center era (briefing). |
+| 05-20 | Barclays/Rand desk | demand | bull | TXN is the favorite long in analog — earlier in the recovery than ADI, more positive revisions ahead, with strong GM torque if the cycle is real (briefing). |
+| 05-26 | BofA · Vivek Arya | demand | bull | BofA Buy: AI sales potentially >3x to $4.5bn long-term; best-positioned analog share gainer in the 800V data-center era (briefing). |
 | 05-29 | JPM · Harlan Sur | guidance | bull | JPM keeps TXN overweight top pick in the broad-based segment (with ADI/MCHP); CY27 EPS already revised +23% across ADI/TXN/MCHP over the last two seasons, with 2H26 price actions possibly kicking in ("Semis spring update"). |
-| 06-03 | Jefferies · Menon | margem | bull | TI will raise prices again in July, its 2nd (possibly 3rd) increase this cycle — far faster than in 2021; names TI/ADI/Infineon well positioned in China since analog/MCUs/MOSFETs see "very little" Chinese investment, leaving the catalog structurally insulated from indigenization ("Analog Semis"). |
+| 06-03 | Jefferies · Menon | margin | bull | TI will raise prices again in July, its 2nd (possibly 3rd) increase this cycle — far faster than in 2021; names TI/ADI/Infineon well positioned in China since analog/MCUs/MOSFETs see "very little" Chinese investment, leaving the catalog structurally insulated from indigenization ("Analog Semis"). |
 | 06-03 | Barclays/Rand desk | valuation | bull | Buy-side consensus trade is long TXN / short ADI; first call with new CFO Julie Knecht on the Q2 print (~Jul-22); DB neutral on the CFO transition (briefing). |
-| 06-08 | Expert call · auto Tier-1 | competicao | bull | Tier-1 auto expert assessed TI gaining vs ADI — "TI capturing the market much better than ADI, especially through its involvement in the automotive sector"; named TI (with NXP) customizing to OEM requirements vs Qualcomm's higher-margin standardized parts. |
-| 06-15 | Citi · Atif Malik | competicao | bull | Citi reiterates TXN top pick in the 800V transition, expecting DC-power share gains in 2H26 vs Infineon/MPWR/Renesas; internal high-voltage GaN capacity has quadrupled since Oct'24. Citi raised PT $280→$345 (30x 2028E) and EPS C26/27/28 +1%/+1%/+6% to $8.03/$10.10/$11.42; largest GM-expansion opportunity (>10pp) with ~85% of wafers internal ("800V power"). |
-| 06-15 | @bubbleboi | demanda | bear | Pushback on the 800V/DC tailwind: checks with DC-construction PMs show "no plans to do this anytime soon," TXN "especially vocal," a 2-3 year lag before it reaches earnings, and China may flood GaN/SiC as it did with InP (briefing). |
+| 06-08 | Expert call · auto Tier-1 | competition | bull | Tier-1 auto expert assessed TI gaining vs ADI — "TI capturing the market much better than ADI, especially through its involvement in the automotive sector"; named TI (with NXP) customizing to OEM requirements vs Qualcomm's higher-margin standardized parts. |
+| 06-15 | Citi · Atif Malik | competition | bull | Citi reiterates TXN top pick in the 800V transition, expecting DC-power share gains in 2H26 vs Infineon/MPWR/Renesas; internal high-voltage GaN capacity has quadrupled since Oct'24. Citi raised PT $280→$345 (30x 2028E) and EPS C26/27/28 +1%/+1%/+6% to $8.03/$10.10/$11.42; largest GM-expansion opportunity (>10pp) with ~85% of wafers internal ("800V power"). |
+| 06-15 | @bubbleboi | demand | bear | Pushback on the 800V/DC tailwind: checks with DC-construction PMs show "no plans to do this anytime soon," TXN "especially vocal," a 2-3 year lag before it reaches earnings, and China may flood GaN/SiC as it did with InP (briefing). |
 | 06-17 | BofA-type investor survey | valuation | bull | Investor survey shows analog preference shifting toward IFX 25% / TXN 25%, displacing ADI 13%; reinforces the crowded long TXN / short ADI (briefing; Barclays/Rand). |
-| 06-22 | AlphaSense · IFX Primer | margem | bull | Peer benchmark quantifies TXN as the margin leader: FY25 GM 57.0%, EBIT 34.1%, ROIC 17.4% — the highest in the analog/power set (vs IFX 39%/10%, STM 34%/1.5%, ON 33%/1.4%, NXP 55%/24.8%); US analog giants (TI/NXP/ADI) return 80-100% of net income ("IFX Primer"). |
+| 06-22 | AlphaSense · IFX Primer | margin | bull | Peer benchmark quantifies TXN as the margin leader: FY25 GM 57.0%, EBIT 34.1%, ROIC 17.4% — the highest in the analog/power set (vs IFX 39%/10%, STM 34%/1.5%, ON 33%/1.4%, NXP 55%/24.8%); US analog giants (TI/NXP/ADI) return 80-100% of net income ("IFX Primer"). |
 
-**Síntese do quarter:** o debate migrou de "o ciclo virou?" (agora consensualmente sim — print Q1 confirmou a inflexão) para "quanto o pricing e o 800V/DC valem" — o fluxo é majoritariamente bull no pricing (Jefferies, Redburn) e na recuperação industrial (long TXN / short ADI crowded), com a discordância concentrada no timing do 800V (@bubbleboi vs Citi/BofA) e em valuation (GS Sell).
+**Quarter synthesis:** the debate has shifted from "has the cycle turned?" (now consensually yes — the Q1 print confirmed the inflection) to "how much are pricing and 800V/DC worth" — the flow is mostly bull on pricing (Jefferies, Redburn) and on the industrial recovery (long TXN / short ADI crowded), with the disagreement concentrated on 800V timing (@bubbleboi vs Citi/BofA) and on valuation (GS Sell).
 
 ## Management commentary — evolution (last 4 quarters)
 

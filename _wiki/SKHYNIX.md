@@ -7,6 +7,24 @@
 
 _Wiki · generated 2026-06-19 · **Korean issuer — NO SEC filings (no 10-K/10-Q/20-F).** Sources: `E:\Wiki Felipe\SKHYNIX\transcripts` (4 earnings calls, SK hynix holds English calls) · SK hynix IR (news.skhynix.com) · `_equity_calls` · `E:\briefings\2026` · BBG (KRW). Master index: [00_INDEX.md](00_INDEX.md) · Theme: [hbm-memory](themes/hbm-memory.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · KRW
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | ₩341528.0bn | ₩524676.2bn |
+| Gross profit | ₩287566.6bn | ₩446499.4bn |
+| Gross margin | 84.2% | 85.1% |
+| EBITDA | ₩291703.3bn | ₩422549.2bn |
+| EPS | ₩298080.52 | ₩438422.28 |
+| Capex | ₩45239.7bn | ₩59446.0bn |
+| OCF (≈EBITDA) | ₩291703.3bn | ₩422549.2bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="45.0" width="20" height="13.0" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="30.3" width="20" height="27.7" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="16.3" width="20" height="41.7" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+59.1% 3m · +238.9% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="48.1" width="20" height="9.9" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="34.6" width="20" height="23.4" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="17.9" width="20" height="40.1" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+88.4% 3m · +345.5% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 SK hynix is the world's #1 high-bandwidth memory (HBM) maker and the #2 DRAM/NAND producer overall, and is **NVIDIA's primary HBM supplier**. Near-monopoly HBM3E history — its HBM tool/process share into NVDA was ~100% "until last fall" (SemiAnalysis HBM). UBS models 2026 industry HBM share at **SK Hynix / Samsung / Micron = 56% / 22% / 22%**, with SK hynix "already shipping HBM4" and larger volumes by 2Q26 (UBS 2026 overview, Dec-2025) — i.e. share normalizing off the historical ~90% as Samsung/Micron qualify. FY2025 revenue 97.1tn KRW (+47% YoY), operating profit 47.2tn (+101%), 49% OP margin (SK hynix IR FY25, 2026-01-29). Mix: DRAM (incl. HBM) is the profit engine; NAND/enterprise SSD via wholly-owned **Solidigm**, where the group's eSSD share reached 30.2% in Q4-2025 (search digest, 2026-06); SK Hynix+Solidigm is modeled at ~36% of 2026e QLC eSSD output, the largest single bloc (MS AI NAND overview). It sits at the demand epicentre of the AI capex cycle: HBM has been "sold out since 2023," 2026 DRAM/HBM volume is contracted out (Q3 2025 call, 2025-10-29), and vendors reaffirm the 2026 sold-out/allocation tone (DeepResearch TSM, citing SK hynix/Micron commentary).
 
@@ -90,26 +108,26 @@ SK hynix converts silicon wafers and litho/etch/deposition tools (ASML EUV, AMAT
 - **UBS (R. Ruple) SemiBytes / Memory Monthly** _(2026-06-08)_: memory/HBM up-cycle commentary — SK Hynix the **HBM share leader / NVDA primary supplier**.
 - **Capstone briefings** _(mid-Jun 2026)_: SK Hynix featured across the HBM/memory super-cycle flow (sold-out HBM, margin ramp 41%→72%).
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 FY26 print + intra-quarter · Apr 23 → Jun 23, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 FY26 print + intra-quarter · Apr 23 → Jun 23, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1 2026) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1 2026) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Demanda HBM** | HBM4 "far exceeding supply capacity"; ramp prep | BofA (expert TSMC): Jensen como "firefighter" caçando capacidade Hynix; StoneX/TrendForce: maior capacidade HBM (~200K end-2026) | **✓ confirma** (Hynix = fonte primária no Rubin) |
-| **Preço / ASP** | "Significant price increases" em DRAM e NAND | Jefferies (KBI): DRAM ASP +50-60% QoQ no 2Q, +20% no 3Q; NAND +75-100% QoQ no 2Q | **✓ confirma** (ASP-led, ainda subindo) |
-| **Margem / ciclo** | OP margin 72% (+13pp QoQ) | GS (Yoon): longevidade do ciclo subestimada, 9x é "conservador" — vs ex-VP Micron: HBM vira commodity, "$900 → $50" em CY26/27 | **⚠ nuança** (durabilidade é o furo) |
-| **Supply / share** | Tight supply; 2026 travado | StoneX: risco Samsung virar #1 em HBM em 2027; Redburn: HBM 2027 revisado p/ baixo (60→50bn Gb-eq) pois DRAM convencional mais rentável | **⚠ nuança** (share/mix em disputa) |
-| **NAND** | Shipments ~-10% QoQ (base alta); eSSD ~$4,64bn | MS (Kim): NAND visto como indústria mais atraente que DRAM | **✓ confirma** (NAND como leg estrutural) |
+| **HBM demand** | HBM4 "far exceeding supply capacity"; ramp prep | BofA (TSMC expert): Jensen as "firefighter" chasing Hynix capacity; StoneX/TrendForce: largest HBM capacity (~200K end-2026) | **✓ confirms** (Hynix = primary source on Rubin) |
+| **Price / ASP** | "Significant price increases" in DRAM and NAND | Jefferies (KBI): DRAM ASP +50-60% QoQ in 2Q, +20% in 3Q; NAND +75-100% QoQ in 2Q | **✓ confirms** (ASP-led, still rising) |
+| **Margin / cycle** | OP margin 72% (+13pp QoQ) | GS (Yoon): cycle longevity underestimated, 9x is "conservative" — vs ex-Micron VP: HBM becomes a commodity, "$900 → $50" in CY26/27 | **⚠ nuance** (durability is the gap) |
+| **Supply / share** | Tight supply; 2026 locked | StoneX: risk Samsung becomes #1 in HBM in 2027; Redburn: HBM 2027 revised down (60→50bn Gb-eq) as conventional DRAM is more profitable | **⚠ nuance** (share/mix in dispute) |
+| **NAND** | Shipments ~-10% QoQ (high base); eSSD ~$4.64bn | MS (Kim): NAND seen as a more attractive industry than DRAM | **✓ confirms** (NAND as a structural leg) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 04-07 | Jefferies · Conor | margem | bull | Jefferies (Jeff Kim/KBI) argues Korea could out-earn Nvidia in 2027: HBM4 ~35% more expensive than HBM3E and Hynix HBM margins flat (not -20% as feared), with NVIDIA/hyperscalers absorbing the increase. The rally so far has been ASP-led and now needs to turn into unit growth in 2027. |
+| 04-07 | Jefferies · Conor | margin | bull | Jefferies (Jeff Kim/KBI) argues Korea could out-earn Nvidia in 2027: HBM4 ~35% more expensive than HBM3E and Hynix HBM margins flat (not -20% as feared), with NVIDIA/hyperscalers absorbing the increase. The rally so far has been ASP-led and now needs to turn into unit growth in 2027. |
 | 04-09 | BofA · expert TSMC (Best ideas) | supply | bull | The TSMC ecosystem supplies the logic base die beneath SK Hynix's HBM (Samsung joining the alliance); the expert described Jensen Huang as the supply chain's 'firefighter,' personally chasing Hynix capacity, corroborating Hynix as the primary HBM source on Rubin. |
-| 04-14 | Morgan Stanley · Sean Kim | competicao | mixed | MS: news that Hynix is cutting HBM4 volume/share 'doesn't matter for EPS' — it is better not to have HBM because commodity DRAM returns are higher; but HBM matters for the multiple (DRAM ~4-5x peak earnings vs HBM ~10x). Lower HBM share is EPS-neutral-to-positive but multiple-negative. NAND seen as a more attractive industry than DRAM. |
+| 04-14 | Morgan Stanley · Sean Kim | competition | mixed | MS: news that Hynix is cutting HBM4 volume/share 'doesn't matter for EPS' — it is better not to have HBM because commodity DRAM returns are higher; but HBM matters for the multiple (DRAM ~4-5x peak earnings vs HBM ~10x). Lower HBM share is EPS-neutral-to-positive but multiple-negative. NAND seen as a more attractive industry than DRAM. |
 | 05-28 | JPM · Jay | valuation | bull | JPM: the thesis that Samsung should 'catch up' to Hynix post-strike 'did not work'; Hynix's outperformance is tied to single-stock ETFs + Hynix-centric passive indexing, plus the confirmed US listing/ADR catalyst and HBM4 progress; retail is positioned in Hynix. |
 | 06-08 | Goldman Sachs · Junie Yoon (Memory) | valuation | bull | GS: cycle longevity is underestimated — Hynix at 5-6x earnings means the market disbelieves the durability; GS's 9x target is 'conservative.' Even a bear case of DRAM -30%/yr in 2027-28 leaves DRAM GM ~40%, supporting the earnings multiple. |
 | 06-10 | Expert call · ex-VP Procurement Micron | valuation | bear | Ex-VP of procurement at Micron: HBM becomes a commodity once 2-3 suppliers are qualified; 'your $900 stock goes back to $50' once capacity normalizes — a risk within CY26/early CY27. |
@@ -117,7 +135,7 @@ _Q1 FY26 print + intra-quarter · Apr 23 → Jun 23, 2026 · sell-side / expert 
 | 06-23 | StoneX/TrendForce · Avril (Memory expert call) | supply | bull | SK Hynix exits 2026 as #2 in DRAM at ~610K wafers/month (vs Samsung ~740K) but reaches 710K by end-2027, narrowing the gap. It remains dominant in HBM with the largest capacity (~200K end-2026 vs Samsung 180K, Micron 100K). Yongin FAB1 ready end-2027 but output only in 2028; FAB2 just announced. Risk: Samsung could overtake as #1 in HBM in 2027. Anthropic pursuing a deal (DRAM/eSSD 2027, HBM 2028). |
 | 06-23 | Redburn · Conor O'Mara (Asia Trip) | supply | mixed | HBM supply for 2027 revised down (60→50bn Gb-eq) as conventional DRAM becomes more profitable; LTAs viewed as call options; wafer shortage. |
 
-**Síntese do quarter:** com demanda e ASP de HBM já confirmados pelo fluxo, o debate migrou inteiramente para o múltiplo — durabilidade do ciclo (GS bull, Jefferies "out-earn the hyperscalers") vs commoditização do HBM uma vez que 2-3 fornecedores qualifiquem (ex-VP Micron) e risco de Samsung retomar a liderança em HBM em 2027.
+**Quarter synthesis:** with HBM demand and ASP already confirmed by the flow, the debate has shifted entirely to the multiple — cycle durability (GS bull, Jefferies "out-earn the hyperscalers") vs HBM commoditization once 2-3 suppliers qualify (ex-Micron VP) and the risk of Samsung retaking HBM leadership in 2027.
 
 ## Management commentary — evolution (last 4 quarters)
 

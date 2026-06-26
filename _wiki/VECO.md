@@ -3,6 +3,24 @@
 # VECO — Veeco Instruments Inc.
 
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\VECO` (filings + transcripts) · `_briefings`. Master index: [../INDEX.md](../INDEX.md)._
+
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $781m | $1.1bn |
+| Gross profit | $330m | $502m |
+| Gross margin | 42.3% | 46.0% |
+| EBITDA | $127m | $301m |
+| EPS | $1.67 | $3.45 |
+| Capex | $23m | $23m |
+| OCF (≈EBITDA) | $127m | $301m |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="17.8" width="20" height="40.2" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="15.3" width="20" height="42.7" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+6.2% 3m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f"></text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
 _**Internal coverage is thin** — Veeco has no equity-call notes and only incidental briefing mentions in our repo; this page is built mostly from primary sources (SEC filings + earnings transcripts)._
 
 ## Snapshot
@@ -86,27 +104,27 @@ Veeco is a specialty process-equipment supplier sitting between precision-compon
 - **JPM Special Situations — Deal Survey of the Americas** _(2026-06-12 / 06-02)_: tracks the **Veeco / Axcelis all-stock merger** (merger-arb / ACLS-proxy setup).
 - **Crux Capital (optics, Substack)** _(2026-06-19)_: names **Veeco** among the "upstream tool providers (Aixtron, Veeco, Riber)" levered to the compound-semi/optical build.
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 2026 print → intra-quarter · May 05 → Jun 19, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 2026 print → intra-quarter · May 05 → Jun 19, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1'26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1'26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Compound semi / InP photonics** | >$250M de orders de InP-laser; guide ~+50%; Spectre IBD ~10x capacidade | Citi Malik: Buy, upside em silicon photonics 2027E · Crux Capital: Veeco entre os "upstream tool suppliers" alavancados no build de compound-semi/optics | **✓ confirma** (swing factor validado) |
-| **M&A / capital** | (merger all-stock com Axcelis) | JPM Special Sit: VECO→0.3575 ACLS; última aprovação é SAMR China, close H2 2026 | **⚠ nuança** (close pende China) |
-| **Print / post-resultado** | Q1 rev $158M; BIS cortou ~$8M de LSA China; FY26 reafirmado $740-800M | JPM O'Malley: update post-print (neutro) | **⚠ nuança** (sem reação forte) |
+| **Compound semi / InP photonics** | >$250M of InP-laser orders; guide ~+50%; Spectre IBD ~10x capacity | Citi Malik: Buy, upside in silicon photonics 2027E · Crux Capital: Veeco among the "upstream tool suppliers" levered to the compound-semi/optics build | **✓ confirms** (swing factor validated) |
+| **M&A / capital** | (all-stock merger with Axcelis) | JPM Special Sit: VECO→0.3575 ACLS; last approval is China SAMR, close H2 2026 | **⚠ nuance** (close pending on China) |
+| **Print / post-results** | Q1 rev $158M; BIS cut ~$8M of China LSA; FY26 reaffirmed $740-800M | JPM O'Malley: post-print update (neutral) | **⚠ nuance** (no strong reaction) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
 | 05-06 | Citi · Atif Malik | valuation | bull | Buy reiterated — 2027E upside in silicon photonics (briefing mention). |
 | 05-19 | JPMorgan · Tom O'Malley | valuation | neutral | "O'Malley updates post-print" mention (briefing) — post-results update. |
 | 06-12 | JPM Special Situations · Deal Survey of the Americas | capital | neutral | Tracks the all-stock Veeco / Axcelis merger (merger-arb setup / ACLS proxy). Each VECO share converts into 0.3575 Axcelis shares; the last pending approval is China SAMR antitrust, close expected H2 2026. |
-| 06-19 | Crux Capital (optics, Substack) | demanda | bull | Names Veeco among the "upstream tool suppliers (Aixtron, Veeco, Riber)" levered to the compound-semi/optics build. |
+| 06-19 | Crux Capital (optics, Substack) | demand | bull | Names Veeco among the "upstream tool suppliers (Aixtron, Veeco, Riber)" levered to the compound-semi/optics build. |
 
-**Síntese do quarter:** com cobertura fina, o pouco fluxo que existe corrobora o swing factor da tese — o InP/silicon photonics (Citi, Crux) — enquanto a história "macro" do quarter passou a ser o merger com a Axcelis, cujo único gate restante é o antitruste chinês (SAMR), e o China/BIS continua sendo o lastro negativo do print.
+**Quarter synthesis:** with thin coverage, the little flow that exists corroborates the thesis's swing factor — InP/silicon photonics (Citi, Crux) — while the quarter's "macro" story has become the merger with Axcelis, whose only remaining gate is Chinese antitrust (SAMR), and China/BIS remains the negative drag on the print.
 
 ## Management commentary — evolution (last 4 quarters)
 

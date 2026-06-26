@@ -4,6 +4,24 @@
 
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\MU` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\MU.md`. Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $146.0bn | $222.4bn |
+| Gross profit | $118.7bn | $185.9bn |
+| Gross margin | 81.3% | 83.6% |
+| EBITDA | $124.3bn | $193.3bn |
+| EPS | $82.63 | $128.97 |
+| Capex | $30.8bn | $45.2bn |
+| OCF (≈EBITDA) | $124.3bn | $193.3bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="36.0" width="20" height="22.0" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="18.4" width="20" height="39.6" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="16.0" width="20" height="42.0" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+11.2% 3m · +99.9% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="24.0" width="20" height="34.0" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="19.8" width="20" height="38.2" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+29.5% 3m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Micron is one of three scaled DRAM makers (with Samsung and SK Hynix) and a top-tier NAND supplier, selling DRAM/NAND/NOR under the Micron and Crucial brands (FY25 10-K, 2025-10-03). DRAM is ~79% of revenue, NAND ~20-21% (Q2 FY26, 2026-03-18). The franchise is reorganized around four data-center-centric BUs: Cloud Memory (CMBU), Core Data Center (CDBU), Mobile & Client (MCBU), and Auto & Embedded (AEBU). The thesis hinges on memory being repositioned "from a system component to a strategic asset" for AI — Micron supplies the full memory hierarchy that agentic inference consumes: HBM next to the accelerator, LPDDR/DDR5/SoCAM expansion memory on the CPU, and high-capacity QLC/TLC data-center SSDs for the growing KV-cache/context tier (Sathya Kumar via UBS Arcuri call, 2026-05-15). It is the #2-3 HBM player behind SK Hynix; only credible third source on HBM4 given Samsung's product issues.
 
@@ -74,39 +92,39 @@ Micron is one of three scaled DRAM makers (with Samsung and SK Hynix) and a top-
 - HBM share/competition — SK Hynix leadership (NVIDIA multiyear tech partnership), Samsung HBM4 qualifying and ~20% share rising (Jefferies/Inspectrum 2025-12-17); customers dual-source by design.
 - Demand elasticity in price-sensitive PC/smartphone/consumer segments at elevated ASPs (Mehrotra, 2025-12-17).
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_intra-quarter · May 15 → Jun 23 2026 (F3Q26 reports Jun 24) · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_intra-quarter · May 15 → Jun 23 2026 (F3Q26 reports Jun 24) · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q2 FY26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q2 FY26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **DRAM pricing / tightness** | Preço +mid-60s% q/q; supply o gargalo (atende só 50%-2/3 da demanda); Q3 guide GM ~81% | JPM: tightness "well beyond CY26", undersupply em CY27; MS 10/10 DRAM; TrendForce mais conservador (Q3 +8-13%) vs Redburn 30-40% | **✓ confirma** (TrendForce nuança magnitude) |
-| **HBM** | HBM4 em volume; share = share de DRAM atingido | JPM: HBM4 ramp empurrado p/ 2H (ASP escorrega p/ '27), negociação só em jul; UBS: HBM é a surpresa de alta | **⚠ nuança** (timing do HBM4 / ASP) |
-| **Capacidade / supply** | Capex elevado p/ >$25B FY26 | TrendForce: MU "única com dificuldade extrema de adicionar wafer em '26", ~flat ~365K (vs Samsung 740K/Hynix 610K) | **✓ confirma** (constraint = preço) |
-| **Durabilidade / margem** | — (gestão não guia ciclo LT) | GS: longevidade subapreciada (5-6x earnings); ex-VP Procurement (bear): "pricing peak as sustainable é catastrófico", HBM comoditiza, "$900 volta a $50" | **⚠ nuança** (bear de durabilidade) |
-| **Valuation / re-rate** | — | Citi $840 (8x), UBS Arcuri $1.625 ("path to >$100 EPS", LTAs travam ~30% dos bits) — LTAs são o catalisador de re-rate | **✓ confirma** (LTAs sustentam) |
+| **DRAM pricing / tightness** | Price +mid-60s% q/q; supply the bottleneck (fills only 50%-2/3 of demand); Q3 guide GM ~81% | JPM: tightness "well beyond CY26", undersupply in CY27; MS 10/10 DRAM; TrendForce more conservative (Q3 +8-13%) vs Redburn 30-40% | **✓ confirms** (TrendForce nuances magnitude) |
+| **HBM** | HBM4 in volume; share = DRAM share reached | JPM: HBM4 ramp pushed to 2H (ASP slips to '27), negotiation only in July; UBS: HBM is the upside surprise | **⚠ nuance** (HBM4 / ASP timing) |
+| **Capacity / supply** | Capex raised to >$25B FY26 | TrendForce: MU "the only one with extreme difficulty adding wafer in '26", ~flat ~365K (vs Samsung 740K/Hynix 610K) | **✓ confirms** (constraint = price) |
+| **Durability / margin** | — (management does not guide the LT cycle) | GS: longevity underappreciated (5-6x earnings); ex-VP Procurement (bear): "pricing peak as sustainable is catastrophic", HBM commoditizes, "$900 back to $50" | **⚠ nuance** (durability bear) |
+| **Valuation / re-rate** | — | Citi $840 (8x), UBS Arcuri $1.625 ("path to >$100 EPS", LTAs lock ~30% of bits) — LTAs are the re-rate catalyst | **✓ confirms** (LTAs underpin) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 05-15 | UBS · Arcuri (Sathya Kumar) | demanda | bull | Memory repositioned 'from system component to strategic asset' for AI — Micron supplies the entire hierarchy that agentic inference consumes: HBM next to the accelerator, LPDDR/DDR5/SoCAM on the CPU, and high-capacity QLC/TLC SSDs for the growing KV-cache/context tier. |
+| 05-15 | UBS · Arcuri (Sathya Kumar) | demand | bull | Memory repositioned 'from system component to strategic asset' for AI — Micron supplies the entire hierarchy that agentic inference consumes: HBM next to the accelerator, LPDDR/DDR5/SoCAM on the CPU, and high-capacity QLC/TLC SSDs for the growing KV-cache/context tier. |
 | 05-19 | Citi · Atif Malik | valuation | bull | Citi Buy, PT $840 — re-rate to 8x C27 EPS from 5x. |
 | 05-22 | JPM (TMC conf) | guidance | bull | Conf feedback: MU emphasized tightness 'well beyond CY26', undersupply extended into CY27, secured its first 5-year DRAM SCA with multiple additional customers in active negotiation (incl NAND SCAs); HBM4 ramping ~2x faster than the HBM3E ramp; 1γ DRAM and G9 NAND on track to be the majority of bit mix by mid-2026. JPM OW. |
 | 05-26 | UBS · Arcuri (briefing) | valuation | bull | Marquee bull: UBS Arcuri Buy, PT $1,625 (raised from $535) on a 'path to >$100 EPS', LTAs locking up ~30% of the industry's DDR bits and ~$400bn of FCF C27-29E. UBS's own desk called the note 'the most controversial from UBS recently'. |
-| 05-28 | JPM · Gokul/Memory | margem | bull | Models blended HBM ASP +~30% for 2026 (~10% like-for-like + HBM4 mix) — but with the HBM4 ramp pushed to 2H, more of the ASP effect spills into 2027; HBM price negotiations only begin in July after the June quarter. Incremental CPU upside: NVDA Vera standalone ~500k units this year, ~3M next, could lift total server DRAM demand >15-20%. EUV as the 2028 supply governor. |
+| 05-28 | JPM · Gokul/Memory | margin | bull | Models blended HBM ASP +~30% for 2026 (~10% like-for-like + HBM4 mix) — but with the HBM4 ramp pushed to 2H, more of the ASP effect spills into 2027; HBM price negotiations only begin in July after the June quarter. Incremental CPU upside: NVDA Vera standalone ~500k units this year, ~3M next, could lift total server DRAM demand >15-20%. EUV as the 2028 supply governor. |
 | 06-04 | MS | valuation | bull | MS reiterates bull case PT $1,050. |
 | 06-08 | GS · Junie Yoon | valuation | bull | Central argument: cycle longevity is underappreciated — Hynix/Samsung (and by read-across MU) at 5-6x earnings says the market doesn't believe in the durability; GS's 9x target is 'conservative' vs semis peers at high-teens-20x. Downside-protection math: even a bear case of DRAM -30% in 2027 and -30% in 2028 (or -50% in 2028) still leaves DRAM GM ~40%. |
 | 06-10 | Equity call · ex-VP Procurement (Micron) | valuation | bear | Sharpest bear voice: the market is pricing peak earnings as a sustainable level — 'a highly catastrophic assumption'. HBM differentiation is temporary (commoditizes as 2nd/3rd vendors qualify); MU's cost structure is worse than Samsung, ~equal to SK Hynix; 'your $900 stock will go back to $50' when new fabs bring disruptive capacity ~1 year out, possible normalization 'this calendar year or early next'. |
 | 06-12 | Briefing Capstone | guidance | neutral | F3Q26 setup (print Jun-24): Street rev $34.7B vs guide $33.5B; FY27/28 EPS pegged $111.3/$115.7. Watch: GM trajectory past 81%, HBM4 ramp commentary, DDR-vs-HBM margin crossover, and any SCA disclosure. |
-| 06-15 | UBS · Arcuri (call) | margem | bull | Incremental tell into the June print: the market is fixated on DDR but HBM pricing is 'what is really surprising to the upside'; LTAs (not pricing) are the re-rate catalyst. MU told him after the PT raise: 'we think the stock should trade at a higher multiple and you finally opened that debate'. DDR GM (ex-HBM) likely exceeds HBM GM for the first time in early C2026. |
-| 06-17 | DB · Melissa Weathers | demanda | bull | DB Buy, raised PT: 'DRAM tightness extends to 2028+; agentic AI drives memory intensity'. |
-| 06-22 | MS · Joe Moore | demanda | bull | Fundamentals '10/10 for DRAM, maybe 8/10 for NAND' and more bullish on Micron than SanDisk — DRAM is the primary AI bottleneck (NVDA halved LPDDR5 content on Vera Rubin for lack of memory; servers shipping 'significantly nerfed' on DRAM). Sees MU as 'a much cheaper stock on 2028 numbers than SanDisk'. Tim Cook (WSJ) called memory pricing a '100-year flood'. |
+| 06-15 | UBS · Arcuri (call) | margin | bull | Incremental tell into the June print: the market is fixated on DDR but HBM pricing is 'what is really surprising to the upside'; LTAs (not pricing) are the re-rate catalyst. MU told him after the PT raise: 'we think the stock should trade at a higher multiple and you finally opened that debate'. DDR GM (ex-HBM) likely exceeds HBM GM for the first time in early C2026. |
+| 06-17 | DB · Melissa Weathers | demand | bull | DB Buy, raised PT: 'DRAM tightness extends to 2028+; agentic AI drives memory intensity'. |
+| 06-22 | MS · Joe Moore | demand | bull | Fundamentals '10/10 for DRAM, maybe 8/10 for NAND' and more bullish on Micron than SanDisk — DRAM is the primary AI bottleneck (NVDA halved LPDDR5 content on Vera Rubin for lack of memory; servers shipping 'significantly nerfed' on DRAM). Sees MU as 'a much cheaper stock on 2028 numbers than SanDisk'. Tim Cook (WSJ) called memory pricing a '100-year flood'. |
 | 06-23 | StoneX/TrendForce · Avril | supply | mixed | Memory expert call: Micron is the 'only company with extreme difficulty adding wafer capacity in 2026', ~flat at ~365K wafers/month (vs Samsung ~740K, SK Hynix ~610K). 27/28 growth comes from Idaho 1&2 + the acquired PSMC Taiwan fab (~40K), reaching ~440K by end-2027; grows faster than Korean peers in 2028 (+21% YoY). HBM cap end-2026 ~100K, risk of dropping to ~80K if HBM4 qualification issues persist. Anthropic deal = server DRAM+eSSD (2027) + HBM (2028). |
-| 06-23 | StoneX/TrendForce · Avril | margem | bull | Flags Micron as a likely price outlier in the QoQ negotiations — capacity-constrained, it pushes for the highest ASPs, 'and if Micron succeeds, the two Koreans follow' on share competition. Her DRAM base-case is the most conservative in the market: Q3 +8-13% / Q4 +3-8% (gut-feel upside Q3 >+20% / Q4 +10-15%) — vs Redburn checks of 30-40% QoQ in Q3 and Q4. |
+| 06-23 | StoneX/TrendForce · Avril | margin | bull | Flags Micron as a likely price outlier in the QoQ negotiations — capacity-constrained, it pushes for the highest ASPs, 'and if Micron succeeds, the two Koreans follow' on share competition. Her DRAM base-case is the most conservative in the market: Q3 +8-13% / Q4 +3-8% (gut-feel upside Q3 >+20% / Q4 +10-15%) — vs Redburn checks of 30-40% QoQ in Q3 and Q4. |
 
-**Síntese do quarter:** entrando no print de 24-jun, o fluxo é esmagadoramente bull e migrou da pergunta "tem demanda?" para "quão durável é?" — UBS Arcuri ($1.625, "path to >$100 EPS") e o re-rate via LTAs (~30% dos bits travados) ancoram o debate, contra a voz isolada do ex-VP de Procurement de que o mercado precifica earnings de pico como sustentável. Nuances no timing do HBM4 (ASP escorrega p/ '27) e na magnitude do preço de DRAM (TrendForce conservador vs Redburn).
+**Quarter synthesis:** heading into the Jun-24 print, the flow is overwhelmingly bullish and has shifted from "is there demand?" to "how durable is it?" — UBS Arcuri ($1.625, "path to >$100 EPS") and the re-rate via LTAs (~30% of bits locked) anchor the debate, against the lone voice of the ex-VP of Procurement that the market is pricing peak earnings as sustainable. Nuances on HBM4 timing (ASP slips to '27) and the magnitude of DRAM pricing (TrendForce conservative vs Redburn).
 
 ## Management commentary — evolution (last 5 quarters)
 

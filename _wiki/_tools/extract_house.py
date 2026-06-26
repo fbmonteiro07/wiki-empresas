@@ -24,7 +24,7 @@ def to_year(tok):
     m = re.search(r"20\d\d", t)
     if m:
         return int(m.group(0))
-    m = re.search(r"'?(\d\d)\b", t)
+    m = re.search(r"'?(\d\d)E?\b", t)  # E? so 'CY26E' / 'CY27E' parse, not just 'CY24'
     if m:
         return 2000 + int(m.group(1))
     return None

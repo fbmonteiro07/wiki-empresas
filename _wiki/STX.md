@@ -4,6 +4,24 @@
 
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\STX` (filings + transcripts) · `_equity_calls` · `_briefings`. Master index: [00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $14.2bn | $18.9bn |
+| Gross profit | $7.1bn | $10.6bn |
+| Gross margin | 50.3% | 56.3% |
+| EBITDA | $6.2bn | $9.5bn |
+| EPS | $20.75 | $33.35 |
+| Capex | $656m | $839m |
+| OCF (≈EBITDA) | $6.2bn | $9.5bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="24.1" width="20" height="33.9" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="19.7" width="20" height="38.3" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+15.0% 3m · +29.7% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="33.6" width="20" height="24.4" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="26.4" width="20" height="31.6" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="15.4" width="20" height="42.6" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+39.2% 3m · +80.4% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Seagate (Ireland-domiciled, "Seagate Technology Holdings plc") is one of three scaled hard-disk-drive makers (with Western Digital and Toshiba) and a **vertically integrated** one — it designs and manufactures substantially all of its own recording heads and media (FY25 10-K, 2025-08-01). The business is now overwhelmingly a hyperscaler mass-storage story: the **Mass Capacity** segment (high-capacity nearline drives + systems for cloud/enterprise) is the majority of revenue, and **data center was 80% of revenue / 88% of exabytes** in the March 2026 quarter (Q3 FY26 call, 2026-04-28). The thesis runs on **areal density**: Seagate's **Mozaic** platform is "the industry's first implementation of HAMR" (heat-assisted magnetic recording) (FY25 10-K), and per IDC hard drives store **87% of exabytes in large data-center deployments** (FY25 10-K). It also sells SSDs and Lyve edge-to-cloud systems (Edge IoT, ~20% of revenue), but the equity is a play on nearline HDD demand from AI data creation. Acquired Intevac (thin-film processing systems) on 2025-03-31, deepening the upstream toolset (FY25 10-K).
 
@@ -82,28 +100,28 @@ Seagate is the vertically integrated manufacturer in the HDD chain: it builds it
 - **Morgan Stanley (Erik Woodring) — 'HDDs: The Next Leg Higher'** _(2026-06-15)_ + call recap _(2026-06-16)_: nearline pricing escalators + HAMR ramp; **Seagate the HAMR front-runner** (MS top pick).
 - **JPM 'Bits, Broadcasts & Bandwidth'** _(2026-05-29)_: Seagate in the improving-storage-pricing ecosystem.
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q3 FY26 print + intra-quarter · Apr 28 → Jun 23, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q3 FY26 print + intra-quarter · Apr 28 → Jun 23, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q3 FY26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q3 FY26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Margem** | GM non-GAAP 47% (+480bps y/y); op margin 37,5% | JPM (Samik): ~90% incremental GM sequencial, opex ~$300M/qtr, "no need to give back price on generation changes" | **✓ confirma** (alavancagem operacional) |
-| **Preço / pricing** | Nearline alocada até CY2027; target de crescimento p/ "≥20%" | MS (Woodring): nearline pricing escalators; vendors mirando ~$25/TB CY27, ~$30 CY28 vs ~$14,50 hoje | **✓ confirma** (preço subindo materialmente) |
-| **HAMR / ramp** | Mozaic 4 shipping; 75% dos clientes cloud em Mozaic | MS: STX front-runner em HAMR (top pick), ramp agressivo 40TB 2H CY26 vs WDC só H1 CY27; contrato Google reprecifica em set-26 | **✓ confirma** (edge idiossincrático no HAMR) |
-| **Competição / share** | Top-3 CSP RPO ~$1,1T; nearline quase toda alocada | GS desk: "firmly WDC > STX", WDC +48% em junho vs STX +27% | **⚠ nuança** (preferência relativa por WDC) |
+| **Margin** | Non-GAAP GM 47% (+480bps y/y); op margin 37.5% | JPM (Samik): ~90% sequential incremental GM, opex ~$300M/qtr, "no need to give back price on generation changes" | **✓ confirms** (operating leverage) |
+| **Price / pricing** | Nearline allocated through CY2027; growth target raised to "≥20%" | MS (Woodring): nearline pricing escalators; vendors targeting ~$25/TB CY27, ~$30 CY28 vs ~$14.50 today | **✓ confirms** (price rising materially) |
+| **HAMR / ramp** | Mozaic 4 shipping; 75% of cloud customers on Mozaic | MS: STX HAMR front-runner (top pick), aggressive 40TB ramp 2H CY26 vs WDC only H1 CY27; Google contract reprices in Sept-26 | **✓ confirms** (idiosyncratic HAMR edge) |
+| **Competition / share** | Top-3 CSP RPO ~$1.1T; nearline almost fully allocated | GS desk: "firmly WDC > STX", WDC +48% in June vs STX +27% | **⚠ nuance** (relative preference for WDC) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 06-12 | JPM · Samik Chatterjee (equity call) | margem | bull | JPM/Samik: ~90% sequential incremental gross margin, STX guiding opex ~$300M/qtr (operating leverage) and 'no need to give back price on generation changes' in a constrained market. |
-| 06-15 | Morgan Stanley · Erik Woodring ('HDDs: The Next Leg Higher') | margem | bull | Nearline pricing escalators + HAMR ramp; Seagate the front-runner in HAMR (MS top pick). Vendors targeting ~$25/TB in CY27 and ~$30 in CY28 vs ~$14.50/TB today. |
-| 06-16 | Morgan Stanley · Erik Woodring (equity call) | margem | bull | Seagate top pick in HDDs; 'raised numbers materially, again' on Asia checks. STX CY27 EPS = $52 (base), $66 (bull); 'if we took our checks as fact... more than $70 in CY27, more than $100 in CY28' → sub-10x in CY28 bull. Idiosyncratic edge: Google's 'sweetheart' HAMR contract should reprice higher from June to Sept-26, and STX ramps 40TB HAMR aggressively in 2H CY26 vs WDC only in H1 CY27. |
-| 06-18 | Goldman Sachs · Peter Callahan (briefing) | competicao | bear | GS desk 'firmly WDC > STX,' with WDC +48% in June vs STX 'only' +27%. |
+| 06-12 | JPM · Samik Chatterjee (equity call) | margin | bull | JPM/Samik: ~90% sequential incremental gross margin, STX guiding opex ~$300M/qtr (operating leverage) and 'no need to give back price on generation changes' in a constrained market. |
+| 06-15 | Morgan Stanley · Erik Woodring ('HDDs: The Next Leg Higher') | margin | bull | Nearline pricing escalators + HAMR ramp; Seagate the front-runner in HAMR (MS top pick). Vendors targeting ~$25/TB in CY27 and ~$30 in CY28 vs ~$14.50/TB today. |
+| 06-16 | Morgan Stanley · Erik Woodring (equity call) | margin | bull | Seagate top pick in HDDs; 'raised numbers materially, again' on Asia checks. STX CY27 EPS = $52 (base), $66 (bull); 'if we took our checks as fact... more than $70 in CY27, more than $100 in CY28' → sub-10x in CY28 bull. Idiosyncratic edge: Google's 'sweetheart' HAMR contract should reprice higher from June to Sept-26, and STX ramps 40TB HAMR aggressively in 2H CY26 vs WDC only in H1 CY27. |
+| 06-18 | Goldman Sachs · Peter Callahan (briefing) | competition | bear | GS desk 'firmly WDC > STX,' with WDC +48% in June vs STX 'only' +27%. |
 
-**Síntese do quarter:** o fluxo confirma fortemente a tese de margem/preço/HAMR da gestão (JPM e MS empilhando upgrades, MS vendo sub-10x em CY28 no bull) — o único atrito é relativo, não fundamental: o desk do GS prefere WDC a STX como o melhor veículo dentro do mesmo trade de HDD/nearline.
+**Quarter synthesis:** the flow strongly confirms management's margin/price/HAMR thesis (JPM and MS stacking upgrades, MS seeing sub-10x in CY28 in the bull case) — the only friction is relative, not fundamental: the GS desk prefers WDC to STX as the best vehicle within the same HDD/nearline trade.
 
 ## Management commentary — evolution (last 4 quarters)
 

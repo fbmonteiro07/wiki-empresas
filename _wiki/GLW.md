@@ -2,6 +2,24 @@
 
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\GLW` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\GLW.md`. Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $21.8bn | $22.5bn |
+| Gross profit | $8.5bn | $9.0bn |
+| Gross margin | 39.0% | 40.0% |
+| EBITDA | $5.4bn | $6.5bn |
+| EPS | $3.17 | $4.17 |
+| Capex | $1.8bn | $2.0bn |
+| OCF (≈EBITDA) | $5.4bn | $6.5bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="15.8" width="20" height="42.2" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="15.2" width="20" height="42.8" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+2.7% 3m · +4.1% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="19.9" width="20" height="38.1" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="17.2" width="20" height="40.8" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.2" width="20" height="43.8" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+7.3% 3m · +14.8% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Corning is a materials-science compounder (175 years old as of 2026) that has re-rated into an AI infrastructure name. Five reporting segments as of Q1 2026: **Optical Communications** (~$1.8B/qtr, the growth engine — datacenter fiber/cable/connectivity for AI plus carrier fiber-to-the-home/DCI), **Glass Innovations** (newly combined Display + Specialty Materials; Gorilla Glass, semiconductor/EUV optics), **Automotive** (emission control + auto glass), **Solar** (newly carved out — polysilicon/wafers/modules), and **Life Sciences + Emerging Growth**. The whole equity story now runs through the "Springboard" plan and the optical/AI ramp. Q1 2026 sales $4.35B; FY2025 sales $16.4B (Q4-2025 call, 2026-01-28).
 
@@ -48,32 +66,32 @@ Sales +18% YoY to **$4.35B**, EPS +30% to **$0.70**, both at the high end of gui
 - **Cyclicality + customer concentration:** Display/auto/consumer-electronics demand swings; large LTAs concentrate optical exposure on a handful of hyperscalers + Nvidia.
 - **Valuation:** ~30x CY2028 leaves little margin for an adoption-timing slip (Marshall, 2026-05-07).
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 FY26 · Apr 28 → Jun 12, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 FY26 · Apr 28 → Jun 12, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1'26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1'26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Demanda / LTAs hyperscaler** | Meta até $6B + 2 novos LTAs hyperscaler de tamanho/duração similar concluídos; mais em curso | LITE (via JPM): deal NVDA-Corning é "purchase agreement grande" — Jensen "comprando fibras", mais fibra no rack | **✓ confirma** (NVDA valida o pivô) |
-| **Margem óptica** | Weeks: deixaria ROIC óptico passar o de vidro; margens podem "eclipsar" Display | (sem contestação direta no fluxo — sell-side foca em valuation) | **✓ confirma** (sem pushback) |
-| **Produto / Photonics** | Parceria NVDA: prepay multibi, warrant ~$3.2B, 10x capacidade US, +50% fibra; build de $10B | IR call: DCI target "$1B medium term" parece conservador (Arista já tem $1B) | **✓ confirma** (talvez conservador) |
-| **Valuation / expectativas** | Springboard elevado p/ +$11B até 2028, a estender p/ 2030 no May 6 | JPM corta p/ Neutral, PT $185 (Amazon "já baked in Springboard"); MS prefere LITE, GLW ~30x CY28 vs ~25x peers | **⚠ nuança** (múltiplo alcançou a tese) |
+| **Demand / hyperscaler LTAs** | Meta up to $6B + 2 new hyperscaler LTAs of similar size/duration concluded; more underway | LITE (via JPM): the NVDA-Corning deal is a "large purchase agreement" — Jensen "buying fibers", more fiber in the rack | **✓ confirms** (NVDA validates the pivot) |
+| **Optical margin** | Weeks: would let optical ROIC exceed glass; margins could "eclipse" Display | (no direct pushback in the flow — sell-side focuses on valuation) | **✓ confirms** (no pushback) |
+| **Product / Photonics** | NVDA partnership: multibillion prepay, ~$3.2B warrant, 10x US capacity, +50% fiber; $10B build | IR call: DCI target "$1B medium term" looks conservative (Arista already has $1B) | **✓ confirms** (perhaps conservative) |
+| **Valuation / expectations** | Springboard raised to +$11B by 2028, to be extended to 2030 on May 6 | JPM cuts to Neutral, PT $185 (Amazon "already baked in Springboard"); MS prefers LITE, GLW ~30x CY28 vs ~25x peers | **⚠ nuance** (multiple has caught up to the thesis) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 04-28 | GLW · Q1 FY26 earnings call (Weeks) | demanda | bull | On the up-to-US$6B agreement with Meta, Corning concluded two more hyperscaler LTAs of similar size/duration and is working on others. Carrier had its best quarter in years in FTTH + DCI; the Lumen agreement was expanded/extended. |
+| 04-28 | GLW · Q1 FY26 earnings call (Weeks) | demand | bull | On the up-to-US$6B agreement with Meta, Corning concluded two more hyperscaler LTAs of similar size/duration and is working on others. Carrier had its best quarter in years in FTTH + DCI; the Lumen agreement was expanded/extended. |
 | 04-28 | GLW · Q1 FY26 earnings call (Schlesinger) | guidance | bull | Q2 2026 guide: sales ~US$4.6B (+14% YoY), EPS US$0.73–0.77 (+25%), absorbing ~US$0.07 of solar-wafer drag. FY CapEx ~US$1.7B. Springboard: vs the Q4 2023 base, +33% sales / +79% EPS / +390bp op margin; the plan was raised to +US$11B of annualized sales by 2028, to be extended to 2030 at the May 6 event. |
-| 04-28 | GLW · Q1 FY26 Q&A (Weeks, w/ Wamsi Mohan/BofA) | margem | bull | Weeks: would let optical ROIC exceed the glass businesses, and gross/profit margins could "eclipse" Display. Hyperscaler/Nvidia LTAs use prepayments + take-or-pay to de-risk capex, so Corning grows in AI without a cash-flow dip. |
+| 04-28 | GLW · Q1 FY26 Q&A (Weeks, w/ Wamsi Mohan/BofA) | margin | bull | Weeks: would let optical ROIC exceed the glass businesses, and gross/profit margins could "eclipse" Display. Hyperscaler/Nvidia LTAs use prepayments + take-or-pay to de-risk capex, so Corning grows in AI without a cash-flow dip. |
 | 05-06 | Morgan Stanley · Meta Marshall | valuation | mixed | MS (Meta Marshall) ranks GLW #2 in the optical basket behind Lumentum on "control of its own destiny"; the May 6 day "certainly exceeded" reduced expectations. Post-Nvidia GLW trades ~30x CY2028 vs ~25x Lumentum/Coherent — a premium to the optical pack. Would be "more aggressive buyers on down days". Order: Lumentum > Corning > Coherent > Ciena. |
-| 05-07 | JPM · LITE mgmt call (Hurlston read) | competicao | bull | Lumentum's CEO characterized the NVDA-Corning deal as a large purchase agreement similar in structure to LITE's laser deal but without the ~US$2B equity backend — reads Jensen "buying fibers" as a sign NVDA is preparing to "own the wiring of scale-up clusters", more fiber in the racks and a shift from copper/Amphenol connectors to glass inside the rack. |
-| 05-12 | Corning · IR optical/Nvidia call | produto | bull | The Nvidia partnership (announced before May 6) adds a multibillion-dollar upfront prepayment, a ~US$3.2B warrant for Nvidia to take equity, 10x US connectivity capacity, +50% fiber, and anchors the US$10B Photonics build. The DCI target of "US$1B medium term" looked conservative to some vs the US$1B Arista already has. |
+| 05-07 | JPM · LITE mgmt call (Hurlston read) | competition | bull | Lumentum's CEO characterized the NVDA-Corning deal as a large purchase agreement similar in structure to LITE's laser deal but without the ~US$2B equity backend — reads Jensen "buying fibers" as a sign NVDA is preparing to "own the wiring of scale-up clusters", more fiber in the racks and a shift from copper/Amphenol connectors to glass inside the rack. |
+| 05-12 | Corning · IR optical/Nvidia call | product | bull | The Nvidia partnership (announced before May 6) adds a multibillion-dollar upfront prepayment, a ~US$3.2B warrant for Nvidia to take equity, 10x US connectivity capacity, +50% fiber, and anchors the US$10B Photonics build. The DCI target of "US$1B medium term" looked conservative to some vs the US$1B Arista already has. |
 | 05-19 | JPM · TMT conf | valuation | neutral | GLW present at JPM's TMT conference (2026-05-19); buyback cadence ongoing. |
 | 06-09 | JPM · Samik Chatterjee | valuation | mixed | JPM moved to Neutral, PT US$185, framed around the Photonics TAM and ~US$8 of 2030E EPS, noting an Amazon deal is already "baked in Springboard" — the shift in stance reflects valuation/expectations catching up to the post-May 6 high, not a demand call. |
 
-**Síntese do quarter:** a demanda óptica e os LTAs hyperscaler seguem confirmados (NVDA "comprando fibras" valida o pivô, DCI talvez conservador), então o debate migrou inteiramente para *valuation/expectativas* — JPM corta para Neutral (PT $185) e MS coloca GLW atrás de Lumentum com prêmio de múltiplo, sinalizando que a tese pós-May 6 já está no preço.
+**Quarter synthesis:** optical demand and the hyperscaler LTAs remain confirmed (NVDA "buying fibers" validates the pivot, DCI perhaps conservative), so the debate shifted entirely to *valuation/expectations* — JPM cuts to Neutral (PT $185) and MS puts GLW behind Lumentum at a multiple premium, signaling the post-May 6 thesis is already in the price.
 
 ## Management commentary — evolution (last 6 quarters)
 

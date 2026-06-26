@@ -2,6 +2,24 @@
 
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\GEV` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\GEV.md`. Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $45.4bn | $52.1bn |
+| Gross profit | $10.9bn | $14.1bn |
+| Gross margin | 24.1% | 27.0% |
+| EBITDA | $6.1bn | $9.1bn |
+| EPS | $14.88 | $23.08 |
+| Capex | $1.3bn | $1.3bn |
+| OCF (≈EBITDA) | $6.1bn | $9.1bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="30.4" width="20" height="27.6" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="28.2" width="20" height="29.8" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.6" width="20" height="43.4" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+45.6% 3m · +57.0% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="20.0" width="20" height="38.0" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="17.3" width="20" height="40.7" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.2" width="20" height="43.8" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+8.2% 3m · +15.9% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 GE Vernova is the GE spin-out (April 2024) holding the legacy electric-power franchise across three segments: **Power** (gas turbines, nuclear/SMR, hydro, steam), **Electrification** (grid transmission, HVDC, transformers, switchgear, power conversion/storage, grid software), and **Wind** (onshore + offshore). It is the central pure-play on the AI-driven electricity build-out: data-center load needs both new generation (Gas Power) and grid hardware (Electrification). FY26 revenue guided to ~$44.5–45.5B (Q1 FY26, 2026-04-22). Power is the cash/earnings anchor, Electrification is the emerging growth story, Wind is a managed drag. Largest installed base of gas/steam turbines + generators of any OEM globally (Q1 FY26 transcript), giving a structural services annuity.
 
@@ -49,36 +67,36 @@ GE Vernova is the GE spin-out (April 2024) holding the legacy electric-power fra
 - **Geopolitical** — Middle East exposure; LNG-to-power projects in Vietnam (4.8 GW) where one project is being weighed against renewables (Q1 FY26).
 - **Competitive capacity build / new entrants** — Siemens Energy ramping to 30+ GW avg FY28-30 and entrants (Doosan, FTAI, ProEnergy, Boom) adding aero/large-frame supply could erode GEV's scarcity-driven ~20–30% US price premium over time (Powering AI — Gas Turbines, 2026-01-21).
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 FY26 · Apr 22 → Jun 22 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 FY26 · Apr 22 → Jun 22 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1'26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1'26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Demanda Gas Power** | 21 GW assinados no Q1; GW sob contrato 100 (44 firme + 56 SRA); $200B backlog total puxado p/ '27 | Jefferies (Snyder): inicia Buy na tese de DC power buildout, 2028E EPS $6.35 · UBS liga GEV a 800V power | **✓ confirma** (com ressalva de peak) |
-| **Pricing power** | H1'26 orders +10-20 pts $/kW vs Q4'25, +10-20 pts upside nos SRAs | Desk "não tem certeza do que está rolando" — mix (peakers/aeros) distorce a métrica de $/kW | **⚠ nuança** (métrica ambígua) |
-| **Electrification / DC** | Orders +86% y/y; DC orders $2.4B só no Q1 (>todo FY25); TAM dobrado $150B→$300B | UBS/Jefferies corroboram tese de grid/DC power; Tiger top-10 holding (~$1.03B) | **✓ confirma** (tese de hard-asset) |
-| **Order-peak / framework** | $200B backlog por '27; pipeline de 30-35 framework agreements | Hedge funds ao desk: "isto é o pico, houve pull-forward" · Cantor: utilities reguladas não conseguem travar preço longo (risco de prudency clawback) | **✗ contesta** (peak/gating dos frameworks) |
+| **Gas Power demand** | 21 GW signed in Q1; GW under contract 100 (44 firm + 56 SRA); $200B total backlog pulled forward to '27 | Jefferies (Snyder): initiates Buy on the DC power buildout thesis, 2028E EPS $6.35 · UBS ties GEV to 800V power | **✓ confirms** (with a peak caveat) |
+| **Pricing power** | H1'26 orders +10-20 pts $/kW vs Q4'25, +10-20 pts upside in the SRAs | Desk "not sure what's going on" — mix (peakers/aeros) distorts the $/kW metric | **⚠ nuance** (ambiguous metric) |
+| **Electrification / DC** | Orders +86% y/y; DC orders $2.4B in Q1 alone (>all FY25); TAM doubled $150B→$300B | UBS/Jefferies corroborate the grid/DC power thesis; Tiger top-10 holding (~$1.03B) | **✓ confirms** (hard-asset thesis) |
+| **Order-peak / framework** | $200B backlog by '27; pipeline of 30-35 framework agreements | Hedge funds to the desk: "this is the peak, there was pull-forward" · Cantor: regulated utilities can't lock in long pricing (prudency-clawback risk) | **✗ contests** (peak/framework gating) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
 | 04-17 | GEVernova preview | guidance | mixed | Pre-print buy-side survey skews cautious: most expected Q1 orders only 'slightly above consensus, not a blow-out', and just ~12% saw Section 232 as 'impactful' — the bull case is largely embedded. 2030 EBITDA expectations re-rated: 44% see $18-20B, ~20% see >$20B vs the August pitch of only $14B. |
 | 04-17 | GEVernova preview | supply | bull | The Gas Power castings/forgings bottleneck (Howmet/PCP/Doncasters/CPP) appears to have eased — GEV 'wrote a check', is securing capacity first vs Siemens/MHI, commands a ~20-30% price premium in the US vs ENR, and may raise the 24 GW production target. |
-| 04-22 | GEVernova callback | demanda | bull | Gas Power: signed 21 GW of new agreements, GW under contract 83→100 sequentially (44 GW firm + 56 GW SRAs). ~80% traditional customers / ~20% data center. The US installed only 13 GW of gas in all of 2025 vs GEV signing ~18 GW in two quarters — demand 'rather dramatic'. Now expects $200B of total backlog by '27 (pulled forward from '28). |
-| 04-22 | GEVernova callback | demanda | bull | Electrification flipping from 'peaking' to accelerating: orders +86% y/y at ~$7.1B, data-center orders $2.4B in Q1 alone (more than all of FY25), EBITDA margin +590bps to 17.8%. Management doubled the TAM from $150B (mid-March) to $300B by the end of the decade. |
-| 04-22 | GEVernova callback | margem | bull | Pricing power confirmed: H1'26 orders priced 10-20 pts higher $/kW vs Q4'25, with another 10-20 pts of price upside sitting in the SRAs. The stock is an 'earnings-revisions machine' and PMs buy valuation-insensitive on the pace of EBITDA growth. |
+| 04-22 | GEVernova callback | demand | bull | Gas Power: signed 21 GW of new agreements, GW under contract 83→100 sequentially (44 GW firm + 56 GW SRAs). ~80% traditional customers / ~20% data center. The US installed only 13 GW of gas in all of 2025 vs GEV signing ~18 GW in two quarters — demand 'rather dramatic'. Now expects $200B of total backlog by '27 (pulled forward from '28). |
+| 04-22 | GEVernova callback | demand | bull | Electrification flipping from 'peaking' to accelerating: orders +86% y/y at ~$7.1B, data-center orders $2.4B in Q1 alone (more than all of FY25), EBITDA margin +590bps to 17.8%. Management doubled the TAM from $150B (mid-March) to $300B by the end of the decade. |
+| 04-22 | GEVernova callback | margin | bull | Pricing power confirmed: H1'26 orders priced 10-20 pts higher $/kW vs Q4'25, with another 10-20 pts of price upside sitting in the SRAs. The stock is an 'earnings-revisions machine' and PMs buy valuation-insensitive on the pace of EBITDA growth. |
 | 04-22 | GEVernova callback | valuation | bear | Order-peak risk: the Q4'25 of 24 GW / $22.2B is the comp to beat; post-analyst-day, hedge funds called the desk arguing 'this is the peak, there was pull-forward'. Ambiguity in the pricing metric — the 10-20 pts $/kW figure ignores mix (peakers/aeros distort it), desk 'not quite sure what's going on'. |
-| 05-14 | UBS · 800V power | demanda | bull | Equity call on 800V power links GEV to the power-density theme in data centers. |
+| 05-14 | UBS · 800V power | demand | bull | Equity call on 800V power links GEV to the power-density theme in data centers. |
 | 05-16 | briefing · positioning | valuation | bull | Hard-asset/AI-grid positioning: Tiger top-10 holding in GEV, ~$1.03B. |
 | 05-19 | JPM · Rishabh Gupta | valuation | bull | JPM OW on the India T&D arm, PT raised to Rs5,050 — a read-through for parent-level grid demand, not for the US listing. |
 | 06-01 | Jefferies · James Snyder | valuation | bull | Jefferies (Snyder) initiating Buy on a data-center power buildout thesis, 2028E EPS $6.35. |
-| 06-08 | Cantor · Obin (DataCloud) | demanda | mixed | Recap of DataCloud-Cannes: cynical industry response on why GEV cannot sign long-term framework agreements with regulated utilities — a regulated utility that locks in low turbine pricing 'looks bad' on EPS vs peers and risks prudency clawback if costs fall. Color on the gating of the 30-35 framework agreement pipeline. |
+| 06-08 | Cantor · Obin (DataCloud) | demand | mixed | Recap of DataCloud-Cannes: cynical industry response on why GEV cannot sign long-term framework agreements with regulated utilities — a regulated utility that locks in low turbine pricing 'looks bad' on EPS vs peers and risks prudency clawback if costs fall. Color on the gating of the 30-35 framework agreement pipeline. |
 | 06-12 | Jefferies · James Snyder | valuation | bull | Jefferies (Snyder) reiterates Buy on the data-center power buildout thesis (briefing). |
 
-**Síntese do quarter:** com o beat-and-raise e o stock +14% no dia, o sell-side comprou a tese de DC power (Jefferies inicia Buy, Tiger top-10) e o debate migrou para *sustentabilidade do pico* — hedge funds chamam pull-forward no comp de 24 GW do Q4'25, Cantor questiona por que utilities reguladas não fecham frameworks longos, e a própria métrica de $/kW ficou ambígua por mix.
+**Quarter synthesis:** with the beat-and-raise and the stock +14% on the day, the sell-side bought the DC power thesis (Jefferies initiates Buy, Tiger top-10) and the debate shifted to *sustainability of the peak* — hedge funds call pull-forward on the Q4'25 24 GW comp, Cantor questions why regulated utilities don't close long frameworks, and the $/kW metric itself turned ambiguous on mix.
 
 ## Management commentary — evolution (last 4 quarters)
 

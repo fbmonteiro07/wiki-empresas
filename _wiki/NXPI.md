@@ -4,6 +4,24 @@
 
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\NXPI` (10-K/10-Q + transcripts) · `_equity_calls` · `E:\briefings\2026`. Master index: [00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $14.0bn | $15.5bn |
+| Gross profit | $8.2bn | $9.2bn |
+| Gross margin | 58.2% | 59.4% |
+| EBITDA | $5.7bn | $6.6bn |
+| EPS | $14.71 | $17.70 |
+| Capex | $484m | $582m |
+| OCF (≈EBITDA) | $5.7bn | $6.6bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="16.8" width="20" height="41.2" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="16.3" width="20" height="41.7" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.1" width="20" height="43.9" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+5.6% 3m · +6.8% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="17.0" width="20" height="41.0" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="16.1" width="20" height="41.9" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.2" width="20" height="43.8" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+4.9% 3m · +7.4% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 A Dutch-domiciled (Eindhoven), 70+-year-old **mixed-signal / embedded-processing IDM** — embedded MCUs/processors, analog & power management, RF, connectivity, and security — run as **one reportable segment** but managed across **four end markets** (10-K, 2026-02-19). FY2025 revenue **$12,269m** (vs $12,614m FY24, **-3% YoY** in a down-cycle). End-market mix: **Automotive ~$7.1bn (~58%)**, **Industrial & IoT ~$2.3bn (~19%)**, **Mobile ~$1.6bn (~13%)**, **Communication Infrastructure & Other ~$1.3bn (~10%)** (Q4 FY25 call, 2026-02-03). NXP is the most **auto-levered** of the analog/embedded peers (vs TXN/ADI at ~33% auto) — the franchise sits on content-per-vehicle (radar, S32 processors, electrification, secure car access, networking) rather than unit growth. Heavy distribution channel: one distributor was **23% of revenue in 2025** (10-K, 2026-02-19). CEO transition complete: **Rafael Sotomayor** took over from Kurt Sievers (30-yr veteran) at the Q3 FY25 call (2025-10-28); **Bill Betz** CFO.
 
@@ -83,34 +101,34 @@ NXP runs a **hybrid manufacturing model** — internal front-end wafer fabs plus
 ## In the inbox (Outlook — recent sell-side flow)
 - **JPM (Samik) 'Watts Up! 800V'** _(2026-06-09)_: power-stack read-through; **'VIVEK on Analog'** _(2026-06-09)_ + BofA analog call _(2026-06-09)_: auto/industrial recovery — NXP the **highest auto-beta** name.
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 FY26 print + intra-quarter · Apr 28 → Jun 22, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 FY26 print + intra-quarter · Apr 28 → Jun 22, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1 FY26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1 FY26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Ciclo / demanda** | Q2 guide $3.45bn, +18% YoY — aceleração confirmada; sem restock ainda | GS/Schneider e JPM/Sur leem NXP positivo na recuperação analógica · JPM "Conf feedback": double-digit CY26/27, sem restocking ainda (tailwind por vir) | **✓ confirma** (restock ainda à frente) |
-| **Margem / pricing** | GM 57,1%, Q2 guide 58%; ~200bps de uplift via JV até 2028 | Jefferies: aumento de preço em julho c/ TI e IFX · Citi: 2ª rodada de preço Jun/Jul + utilização rumo a mid-80s% | **✓ confirma** (pricing reforça GM) |
-| **Competição / share** | Crescimento auto via conteúdo/SDV, não unidades | Expert Tier-1: NXP "clear share gainer", produtos mais competitivos — mas AlphaSense quantifica perda de share auto-MCU p/ IFX (10%→36% '19-'25) | **⚠ nuança** (ganha em analógico, perde MCU p/ IFX) |
-| **Industrial & IoT** | ~$628m +24% YoY; i.MX/RP/MCX +75% | Expert vê demanda analógica +10-15% YoY no Q2'26, book-to-bill 1,1-1,2, CY26 +15-20% | **✓ confirma** (demanda corrobora) |
-| **Sustentabilidade do ganho** | Conteúdo/design-in como driver secular | Expert: ganho mais pricing/supply-driven (menos durável) que design-in lock; lead times de volta a ~8 semanas | **⚠ nuança** (ganho menos durável) |
+| **Cycle / demand** | Q2 guide $3.45bn, +18% YoY — acceleration confirmed; no restock yet | GS/Schneider and JPM/Sur read NXP positively in the analog recovery · JPM "Conf feedback": double-digit CY26/27, no restocking yet (tailwind to come) | **✓ confirms** (restock still ahead) |
+| **Margin / pricing** | GM 57.1%, Q2 guide 58%; ~200bps of uplift via JV by 2028 | Jefferies: July price increase with TI and IFX · Citi: 2nd pricing round Jun/Jul + utilization heading to mid-80s% | **✓ confirms** (pricing reinforces GM) |
+| **Competition / share** | Auto growth via content/SDV, not units | Tier-1 expert: NXP "clear share gainer", more competitive products — but AlphaSense quantifies auto-MCU share loss to IFX (10%→36% '19-'25) | **⚠ nuance** (gains in analog, loses MCU to IFX) |
+| **Industrial & IoT** | ~$628m +24% YoY; i.MX/RP/MCX +75% | Expert sees analog demand +10-15% YoY in Q2'26, book-to-bill 1.1-1.2, CY26 +15-20% | **✓ confirms** (demand corroborates) |
+| **Durability of the gain** | Content/design-in as the secular driver | Expert: gain more pricing/supply-driven (less durable) than design-in lock; lead times back to ~8 weeks | **⚠ nuance** (gain less durable) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 05-20 | GS · Schneider | demanda | bull | GS framed strong analog results as positive for the group including NXPI, reading NXP positively in the analog recovery alongside TXN/ADI/ON (briefing). |
+| 05-20 | GS · Schneider | demand | bull | GS framed strong analog results as positive for the group including NXPI, reading NXP positively in the analog recovery alongside TXN/ADI/ON (briefing). |
 | 05-20 | JPM · Harlan Sur | valuation | bull | JPM groups NXPI into its OW semi baskets (briefing). |
 | 05-22 | JPM · Conf feedback | guidance | bull | At JPM's TMC conference, NXP guided to double-digit-% growth in CY26 and CY27 as the order book builds (auto/industrial/data-center drivers), and explicitly said there has been no major restocking activity yet — a tailwind still to come ("Conf feedback"). |
 | 05-26 | R&Co Redburn | valuation | bear | NXP appeared on Redburn's 12m relative-high list alongside the broader semi/analog complex — stretched positioning (briefing). |
-| 06-03 | Jefferies · Menon | margem | bull | NXP announced July price increases alongside TI and Infineon; Jefferies groups NXP (auto MCUs) among the analog franchises structurally insulated from Chinese indigenization, which targets only high-growth categories (SiC/GaN/GPUs), not MCUs/MOSFETs/analog ("Analog Semis"). |
-| 06-08 | Expert call · auto Tier-1 | competicao | bull | German Tier-1 procurement expert flagged NXP as a clear share gainer: NXP and Infineon "doing well across the whole pipeline" (vs Renesas more susceptible), NXP with "the most cost-competitive products" and the most aggressive pricing; in auto analog ICs NXP has "much better traction than the others." Sees analog IC demand +10-15% YoY in Q2'26, book-to-bill 1.1-1.2, CY2026 demand +15-20%. |
+| 06-03 | Jefferies · Menon | margin | bull | NXP announced July price increases alongside TI and Infineon; Jefferies groups NXP (auto MCUs) among the analog franchises structurally insulated from Chinese indigenization, which targets only high-growth categories (SiC/GaN/GPUs), not MCUs/MOSFETs/analog ("Analog Semis"). |
+| 06-08 | Expert call · auto Tier-1 | competition | bull | German Tier-1 procurement expert flagged NXP as a clear share gainer: NXP and Infineon "doing well across the whole pipeline" (vs Renesas more susceptible), NXP with "the most cost-competitive products" and the most aggressive pricing; in auto analog ICs NXP has "much better traction than the others." Sees analog IC demand +10-15% YoY in Q2'26, book-to-bill 1.1-1.2, CY2026 demand +15-20%. |
 | 06-08 | Expert call · auto Tier-1 | supply | mixed | Expert judged NXP's gains to be more pricing/supply-driven (less durable) than design-in lock, and flagged ICs and MOSFETs as the families most constrained on material availability; lead times back to ~8 weeks standard, channel inventory now lean/just-in-time (Expert call). |
-| 06-15 | Citi · Atif Malik | margem | bull | Citi notes NXPI joining IFX/TXN in announcing a second round of price increases effective Jun/Jul, and that NXPI's fab utilization recovered toward the optimal mid-80s% ("800V power"). |
-| 06-22 | AlphaSense · IFX Primer | margem | mixed | Primer frames NXP as the margin-resilience standout of the set: FY25 EBIT 24.8% (down only ~275bps from the FY22 peak) and ROIC 11.6%, on a higher-value auto-MCU mix. However it quantifies auto-MCU share loss to IFX (IFX share rose from 10% in 2019 to 36% in 2025, "mainly at the expense of Renesas and NXP"); NXP is a 10% partner in the EUR 10bn ESMC Dresden JV ("IFX Primer"). |
+| 06-15 | Citi · Atif Malik | margin | bull | Citi notes NXPI joining IFX/TXN in announcing a second round of price increases effective Jun/Jul, and that NXPI's fab utilization recovered toward the optimal mid-80s% ("800V power"). |
+| 06-22 | AlphaSense · IFX Primer | margin | mixed | Primer frames NXP as the margin-resilience standout of the set: FY25 EBIT 24.8% (down only ~275bps from the FY22 peak) and ROIC 11.6%, on a higher-value auto-MCU mix. However it quantifies auto-MCU share loss to IFX (IFX share rose from 10% in 2019 to 36% in 2025, "mainly at the expense of Renesas and NXP"); NXP is a 10% partner in the EUR 10bn ESMC Dresden JV ("IFX Primer"). |
 
-**Síntese do quarter:** o debate migrou da dúvida sobre a inflexão cíclica (já confirmada pelo guide de +18% YoY e validada por pricing e demanda no fluxo) para a *qualidade/durabilidade* do ganho — fluxo confirma margem e demanda, mas nuança o share (NXP ganha em analógico enquanto perde auto-MCU para a Infineon) e a natureza do ganho (mais pricing/supply do que design-in).
+**Quarter synthesis:** the debate has shifted from doubt about the cyclical inflection (already confirmed by the +18% YoY guide and validated by pricing and demand in the flow) to the *quality/durability* of the gain — the flow confirms margin and demand, but nuances the share (NXP gains in analog while losing auto-MCU to Infineon) and the nature of the gain (more pricing/supply than design-in).
 
 ## Management commentary — evolution (last 4 quarters)
 

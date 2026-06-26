@@ -4,6 +4,24 @@
 
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\KLAC` (10-K/10-Q + transcripts) · `_equity_calls` · semicap-WFE theme. Master index: [00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $15.2bn | $18.8bn |
+| Gross profit | $9.4bn | $11.8bn |
+| Gross margin | 62.0% | 62.7% |
+| EBITDA | $7.1bn | $9.1bn |
+| EPS | $4.34 | $5.69 |
+| Capex | $404m | $436m |
+| OCF (≈EBITDA) | $7.1bn | $9.1bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="15.3" width="20" height="42.7" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="14.6" width="20" height="43.4" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+1.3% 3m · +3.1% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="21.6" width="20" height="36.4" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="16.4" width="20" height="41.6" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.6" width="20" height="43.4" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+5.7% 3m · +20.8% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 KLA is the dominant process-control vendor in wafer-fab equipment — the inspection, metrology and defect-review tools (plus the software/analytics and services around them) that catch yield-killing defects across the fab, from R&D to high-volume production. It is the clear share leader, ~7x the size of its nearest process-control competitor, with share up ~360 bps since 2021 (Q3 FY26 call, 2026-04-29). Three reportable segments: **Semiconductor Process Control** (the core; inspection + metrology + software), **Specialty Semiconductor Process** (vacuum deposition/etch for MEMS/RF/power) and **PCB & Component Inspection** (10-K FY25, 2025-08-08). FQ3 FY26 product mix: Wafer Inspection 51%, Patterning 18%, Specialty 4%, PCB 3%, Services 23% (10-Q, 2026-04-30). Services ~22% of revenue and a 16-year run of annual growth (10-K FY25). The model is levered to **leading-edge complexity** (more EUV layers, larger AI die, HBM, sub-2nm nodes lift process-control intensity) and **new fab starts** — and the historical tie between process-control and litho intensity "has broken down," now driven by design proliferation and large-die AI adoption (Q4 FY25 call, 2025-07-31).
 
@@ -83,34 +101,34 @@ KLA is the quality-control layer of the fab: it sits between precision component
 - **UBS (Arcuri) — semis/memory** _(2026-06-15)_: in the DRAM-dollar leverage ranking KLAC is **last** — "fundamentally not that exposed to DRAM nor will they be"; inspection intensity per WFE dollar in memory is ~half that of foundry, though it is rising as die-stacking adds inspection (UBS "Arcuri", 2026-06-15).
 - **AlphaSense Deep Research — ASML primer** _(2026-06-22)_: KLAC in Bernstein's peer comp — reported P/E FY25A/26E/27E = **52.8x / 47.6x / 34.3x** (premium to ASML/AMAT on FY26E); Bernstein views **KLAC as a "premium vehicle" on structural process-control growth and lower exposure to China replacement risk** (AlphaSense "DR ASML primer", 2026-06-22). Mizuho's LRCX comp lists KLAC at CY27E P/E 35.6x, EV/FCF 42.0x (AlphaSense "DR LRCX primer", 2026-06-22).
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_FQ3 FY26 print → intra-quarter · Apr 29 → Jun 22, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_FQ3 FY26 print → intra-quarter · Apr 29 → Jun 22, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q3 FY26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q3 FY26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Demanda / WFE** | WFE >$140B; CY27 > CY26; visibilidade "sem precedentes" | JPM: 100+ design starts 3/2nm, "melhor visibilidade em uma década"; MS WFE $149B/$191B '26/'27 | **✓ confirma** (Street acompanha) |
-| **Process-control intensity** | PC cresce >20%, ~360bps de share desde 2021 | JPM: KLA o call de revisões positivas em '27 (sub-2nm); MS prefere LAM+KLA, "way to play Intel" | **✓ confirma** (líder de nó) |
-| **Margem** | GM ~62% no ano cheio | Citi (bear): June GM um pouco abaixo do Street — KLA "subestima de novo o impacto do preço de memória no GM de sistemas" | **⚠ nuança** (mix de memória pesa) |
-| **Adv. packaging** | ~$635M(25)→~$1B(26E), ~70% y/y | JPM: AP cresceu ~70% em '25 (CoWoS TSMC), +60-70% de novo em '26 | **✓ confirma** (CoWoS valida) |
-| **Valuation** | — (não é claim de gestão) | Redburn Neutral $260: "upside bem refletido", normaliza p/ 30x; Bernstein "premium vehicle" 47.6x FY26E | **⚠ nuança** (debate é múltiplo) |
+| **Demand / WFE** | WFE >$140B; CY27 > CY26; "unprecedented" visibility | JPM: 100+ design starts at 3/2nm, "best visibility in a decade"; MS WFE $149B/$191B '26/'27 | **✓ confirms** (Street follows) |
+| **Process-control intensity** | PC grows >20%, ~360bps of share since 2021 | JPM: KLA the call for positive revisions in '27 (sub-2nm); MS prefers LAM+KLA, "way to play Intel" | **✓ confirms** (node leader) |
+| **Margin** | GM ~62% full-year | Citi (bear): June GM slightly below the Street — KLA "again underestimates the impact of memory prices on systems GM" | **⚠ nuance** (memory mix weighs) |
+| **Adv. packaging** | ~$635M(25)→~$1B(26E), ~70% y/y | JPM: AP grew ~70% in '25 (TSMC CoWoS), +60-70% again in '26 | **✓ confirms** (CoWoS validates) |
+| **Valuation** | — (not a management claim) | Redburn Neutral $260: "upside well reflected", normalizes to 30x; Bernstein "premium vehicle" 47.6x FY26E | **⚠ nuance** (the debate is the multiple) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 04-30 | Citi · Atif Malik | margem | bear | Print recap: the stock fell because the June-quarter GM guide came in slightly below the Street. Citi: KLA "once again underestimated the impact of memory prices on systems GM, because its systems use far more memory... essentially servers that analyze defects." KLA guides total sales growth in the high-teens in 2026 vs LAM/AMAT "more in the 20s"; still points to 62% full-year GM and WFE ~$140B. |
-| 05-15 | JPM · Harlan Sur | competicao | bull | KLA is "the only company that has nailed it that WFE growth next year will be stronger than this year," with better visibility than peers and exposure to sub-2nm programs in CY27 (TSMC A14, Intel 14A, Samsung/Rapidus 2nm, first Terafab orders). Advanced packaging grew ~70% in 2025 (TSMC CoWoS) and ~60-70% again in 2026. CY26 favors depo/etch (LRCX/AMAT) but CY27 rotates back to the new-node leaders, KLA and ASML — KLA is the call for positive revisions into 2027. |
-| 05-22 | JPM · Harlan Sur | demanda | bull | Conference feedback: KLA tracking 100+ design starts at 3nm/2nm at the TMC conference — predominantly complex AI ASICs (XPUs), merchant GPUs, ASIC CPUs and networking. KLA raised CY26 WFE to >$140B and signaled H2 materially stronger than H1, with CY27 WFE > CY26 — "best visibility entering May in over a decade." 80% of CY26 incremental WFE concentrated in advanced foundry/logic + DRAM + advanced packaging. |
+| 04-30 | Citi · Atif Malik | margin | bear | Print recap: the stock fell because the June-quarter GM guide came in slightly below the Street. Citi: KLA "once again underestimated the impact of memory prices on systems GM, because its systems use far more memory... essentially servers that analyze defects." KLA guides total sales growth in the high-teens in 2026 vs LAM/AMAT "more in the 20s"; still points to 62% full-year GM and WFE ~$140B. |
+| 05-15 | JPM · Harlan Sur | competition | bull | KLA is "the only company that has nailed it that WFE growth next year will be stronger than this year," with better visibility than peers and exposure to sub-2nm programs in CY27 (TSMC A14, Intel 14A, Samsung/Rapidus 2nm, first Terafab orders). Advanced packaging grew ~70% in 2025 (TSMC CoWoS) and ~60-70% again in 2026. CY26 favors depo/etch (LRCX/AMAT) but CY27 rotates back to the new-node leaders, KLA and ASML — KLA is the call for positive revisions into 2027. |
+| 05-22 | JPM · Harlan Sur | demand | bull | Conference feedback: KLA tracking 100+ design starts at 3nm/2nm at the TMC conference — predominantly complex AI ASICs (XPUs), merchant GPUs, ASIC CPUs and networking. KLA raised CY26 WFE to >$140B and signaled H2 materially stronger than H1, with CY27 WFE > CY26 — "best visibility entering May in over a decade." 80% of CY26 incremental WFE concentrated in advanced foundry/logic + DRAM + advanced packaging. |
 | 06-08 | BofA · Scemama | valuation | bull | Conference wrap: BofA flagged KLA specifically as the semicap name with "very bullish commentary" that lagged the SOX — "catch-up potential." Semicap as a group is sensitive to moves in memory stocks, so a hiccup in DRAM/HBM pricing hits the multiple. |
-| 06-15 | Morgan Stanley TMT · T. Wigg | competicao | bull | ONTO (Onto Innovation) initiated Overweight — read-through from the process-control/metrology peer for KLAC. |
-| 06-15 | UBS · Tim Arcuri | demanda | bear | In the ranking of leverage to the DRAM dollar, KLAC is last — "fundamentally not as exposed to DRAM and won't be"; inspection intensity per WFE dollar in memory is ~half that of foundry, though it is rising as die-stacking adds inspection. |
+| 06-15 | Morgan Stanley TMT · T. Wigg | competition | bull | ONTO (Onto Innovation) initiated Overweight — read-through from the process-control/metrology peer for KLAC. |
+| 06-15 | UBS · Tim Arcuri | demand | bear | In the ranking of leverage to the DRAM dollar, KLAC is last — "fundamentally not as exposed to DRAM and won't be"; inspection intensity per WFE dollar in memory is ~half that of foundry, though it is rising as die-stacking adds inspection. |
 | 06-17 | Redburn | valuation | mixed | Neutral, PT raised $187 → $260. Agrees KLA is "well positioned to help maintain yields as leading-edge capacity expands" and raises estimates +1-7% on revenue (2-8% above the EBIT consensus FY27-30), but at $332bn of market cap, having rerated to 37x EV/EBIT two years out, concludes the upside "is well reflected in investor expectations"; normalizes valuation to 30x. |
-| 06-22 | Morgan Stanley · J. Moore / Shane | competicao | bull | Shane prefers LAM + KLA among the big-3; KLA is "the way to play Intel" in US semicap (Intel capex recovery in 2027, this year's Intel spend more concentrated in process control). MS estimates WFE $149B/$191B for 2026/27. |
+| 06-22 | Morgan Stanley · J. Moore / Shane | competition | bull | Shane prefers LAM + KLA among the big-3; KLA is "the way to play Intel" in US semicap (Intel capex recovery in 2027, this year's Intel spend more concentrated in process control). MS estimates WFE $149B/$191B for 2026/27. |
 | 06-22 | AlphaSense Deep Research · ASML primer | valuation | mixed | Bernstein peer comp: KLAC P/E FY25A/26E/27E = 52.8x / 47.6x / 34.3x (premium vs ASML/AMAT in FY26E); Bernstein sees KLAC as the "premium vehicle" on the structural growth of process-control and lower exposure to China replacement risk. Mizuho comp (LRCX primer) lists KLAC at CY27E P/E 35.6x, EV/FCF 42.0x. |
 
-**Síntese do quarter:** o fluxo ratifica a tese de demanda/WFE da gestão (KLA como o melhor call de revisões em '27 via sub-2nm e adv. packaging); o debate migrou para (i) a margem de sistemas pressionada pelo preço de memória — o furo do print — e (ii) valuation, com Redburn argumentando que o upside já está no preço a 37x EV/EBIT.
+**Quarter synthesis:** the flow ratifies management's demand/WFE thesis (KLA as the best revisions call in '27 via sub-2nm and adv. packaging); the debate shifted to (i) systems margin pressured by memory pricing — the print's blemish — and (ii) valuation, with Redburn arguing the upside is already in the price at 37x EV/EBIT.
 
 ## Management commentary — evolution (last 4 quarters)
 

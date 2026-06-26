@@ -2,6 +2,24 @@
 
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\PWR` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\PWR.md`. Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $34.2bn | $39.5bn |
+| Gross profit | $5.3bn | $6.3bn |
+| Gross margin | 15.6% | 15.9% |
+| EBITDA | $3.5bn | $4.1bn |
+| EPS | $13.37 | $16.30 |
+| Capex | $772m | $795m |
+| OCF (≈EBITDA) | $3.5bn | $4.1bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="19.1" width="20" height="38.9" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="16.4" width="20" height="41.6" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.1" width="20" height="43.9" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+5.7% 3m · +13.0% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="19.4" width="20" height="38.6" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="16.7" width="20" height="41.3" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.1" width="20" height="43.9" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+6.5% 3m · +14.1% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Quanta is the leading US/Canada/Australia infrastructure-solutions contractor for electric & gas utilities, power generation, large load centers (data centers), pipelines and communications — design, engineering, procurement, construction, upgrade and repair/maintenance (10-K 2026-02-19). As of the 2025 10-K it reports **two** segments: **Electric Infrastructure Solutions** (the old Electric Power + Renewable Energy segments combined) and **Underground Utility & Infrastructure Solutions** (10-K 2026-02-19). The model is decentralized — multiple operating companies, ~69,500 employees (Q4 FY25, 2026-02-19). The thesis is a single word: it is the labor- and execution-layer pick-and-shovel on the once-in-a-generation US grid build-out — transmission, electrification, gas backup, renewables/storage and data-center power. Data center work is now ~10% of business and the fastest-growing slice of backlog (Q4 FY25, 2026-02-19).
 
@@ -47,28 +65,28 @@ Quanta is the leading US/Canada/Australia infrastructure-solutions contractor fo
 - Project/award lumpiness on big transmission and CCGT work; permitting and air-permit timing.
 - Commodity/geopolitical noise — mgmt says diesel is "a little piece" and guide "contemplates" such moves (Austin, Q1 FY26), but it remains a swing on input costs.
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 FY26 · Apr 30 → Jun 22 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 FY26 · Apr 30 → Jun 22 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1'26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1'26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Backlog / demanda** | Backlog recorde $48.5bn; 765 kV "<$1bn" da alta — crescimento broad-based | Austin (call): demanda multi-década, CCGT até 2030 / execução em "2033+" · BofA/Fenske: PWR "free-rider winner" do ciclo AI mega-bull | **✓ confirma** (tese estrutural intacta) |
-| **Data center / AI load** | Tech/load center "+100%" de crescimento; ~10% do negócio | BofA/Fenske: read-through do capex hyperscaler (GEV/NVDA-power) · Jefferies/Rankie Wong: PWR em cesta ampla de infra US | **⚠ nuança** (só leitura temática, sem PT/rating) |
-| **Gas generation** | NiSource $5.7bn; single-cycle "confortável" | Austin (call): NiSource "$5.7bn…crescendo", mas geração ainda NÃO no backlog (permits de ar pendentes, "2º semestre e além") | **⚠ nuança** (upside ainda fora do backlog) |
-| **Supply chain / labor** | 6.7m sq ft off-site; "labor builds labor" | Austin (call): investimento $500-700m em transformadores HV (345-765 kV) p/ atacar gargalo de "36 meses"; +5-6k orgânicos no ano | **✓ confirma** (verticalização vira moat) |
+| **Backlog / demand** | Record backlog $48.5bn; 765 kV "<$1bn" of the rise — broad-based growth | Austin (call): multi-decade demand, CCGT through 2030 / execution in "2033+" · BofA/Fenske: PWR a "free-rider winner" of the AI mega-bull cycle | **✓ confirms** (structural thesis intact) |
+| **Data center / AI load** | Tech/load center "+100%" growth; ~10% of business | BofA/Fenske: read-through from hyperscaler capex (GEV/NVDA-power) · Jefferies/Rankie Wong: PWR in a broad US-infra basket | **⚠ nuance** (thematic read only, no PT/rating) |
+| **Gas generation** | NiSource $5.7bn; single-cycle "comfortable" | Austin (call): NiSource "$5.7bn…growing", but generation still NOT in backlog (air permits pending, "2nd half and beyond") | **⚠ nuance** (upside still outside the backlog) |
+| **Supply chain / labor** | 6.7m sq ft off-site; "labor builds labor" | Austin (call): $500-700m investment in HV transformers (345-765 kV) to attack the "36-month" bottleneck; +5-6k organic in the year | **✓ confirms** (vertical integration becomes a moat) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
 | 04-30 | PWR Q1 FY26 call · Austin | supply | bull | Announcement of a multi-year $500-700m investment in high-voltage power-transformer manufacturing (345-765 kV) — to attack the '36 months on transformers' bottleneck and de-risk customers like AEP via a US supply chain. Off-site footprint ~6.7m sq ft. 'Labor builds labor' — added 5,000-6,000 organically in the year. |
-| 04-30 | PWR Q1 FY26 call · Austin | demanda | bull | Multi-decade demand, not a single cycle: it took '70 or 100 years to build the grid…you can't double it overnight'; CCGT orders run through 2030 → execution in '2033 and beyond'. NiSource/Alphabet GenCo cited at '$5.7bn…growing every day', with announced generation work NOT yet in backlog (air permits pending; expected 'later half of the year and beyond'). |
+| 04-30 | PWR Q1 FY26 call · Austin | demand | bull | Multi-decade demand, not a single cycle: it took '70 or 100 years to build the grid…you can't double it overnight'; CCGT orders run through 2030 → execution in '2033 and beyond'. NiSource/Alphabet GenCo cited at '$5.7bn…growing every day', with announced generation work NOT yet in backlog (air permits pending; expected 'later half of the year and beyond'). |
 | 05-11 | BofA · Fenske | valuation | bull | BofA/Fenske places PWR within the AI mega-bull framework as one of the 'free-rider winners' of the cycle, alongside the hyperscalers. Read-throughs: GEV, NVDA-power, BE/AAOI. |
 | 05-11 | Jefferies · Rankie Wong | valuation | neutral | Jefferies (Rankie Wong) lists PWR in a broad US-infrastructure basket. Thematic/indirect datapoint — no PT, no rating in the file. |
 
-**Síntese do quarter:** o debate migrou de "a demanda é real?" para "quanto do upside (NiSource/CCGT, 765 kV) já está capturado vs. ainda fora do backlog" — o fluxo só corrobora a tese estrutural por via temática (BofA mega-bull, Jefferies cesta), sem nenhum PT/rating sponsored no arquivo.
+**Quarter synthesis:** the debate has shifted from "is the demand real?" to "how much of the upside (NiSource/CCGT, 765 kV) is already captured vs. still outside the backlog" — the flow only corroborates the structural thesis thematically (BofA mega-bull, Jefferies basket), with no sponsored PT/rating in the file.
 
 ## Management commentary — evolution (last 6 quarters)
 

@@ -3,6 +3,24 @@
 # TEL — TE Connectivity plc
 
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\TEL` (10-K FY2025, 10-Q FQ2 FY26, transcripts) · `E:\equity_calls_transcripts` · `E:\briefings\2026`. Master index: [00_INDEX.md](00_INDEX.md)._
+
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $20.0bn | $21.5bn |
+| Gross profit | $7.4bn | $8.1bn |
+| Gross margin | 37.1% | 37.7% |
+| EBITDA | $5.3bn | $5.9bn |
+| EPS | $11.46 | $12.86 |
+| Capex | $1.2bn | $1.2bn |
+| OCF (≈EBITDA) | $5.3bn | $5.9bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="16.2" width="20" height="41.8" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="14.7" width="20" height="43.3" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+1.5% 3m · +5.2% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="16.0" width="20" height="42.0" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="14.9" width="20" height="43.1" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+2.0% 3m · +4.7% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
 _NB: ticker TEL here = **TE Connectivity** (connectors & sensors), **not** Tokyo Electron._
 
 ## Snapshot
@@ -88,29 +106,29 @@ TE sits in the **middle of the electronics chain**: it buys raw materials (metal
 - **Citi — '800V DC power'** _(2026-06-15)_: TEL (with APH) **favorably positioned**. Citi cites TEL's own framing — higher rack power + data needs drives the **50%+ FY25–FY27 CAGR for the DDN segment**, with **power connectivity ~25% of segment revenue**, and the **shift to 800V could drive a 30%+ content increase vs today** (separate power architecture: board, new busbars, liquid cooling). 800V is also a positive for TEL's **energy business** — grid hardening (~66% of energy) and datacenter power connections (~20%). Adoption path: ±400V HVDC sidecar first, NVDA 800V sidecars w/ Rubin Ultra late-2H27, SST 800V from ~2029 (Citi "800V", 2026-06-15).
 - **650 Group — networking research** _(2026-05-26)_: read-through for the copper "workhorse" thesis. **400G-per-lane can still be copper** (settled by the standards bodies), with Broadcom pushing full-copper scale-up; a **co-packaged-copper** architecture benefits the connector vendors — **Molex, Amphenol, TE, TTM** — with higher-value connectors as speeds rise, while a front-panel transceiver/AEC remains. Supports TE's view that "copper will continue to be the workhorse in the rack" and keeps signal/power interconnect content in play across scale-up/scale-out (650 Group, 2026-05-26).
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_FQ2 FY26 · Apr 22 → Jun 22 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_FQ2 FY26 · Apr 22 → Jun 22 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (FQ2'26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (FQ2'26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **AI / DDN ramp** | DDN +~50% y/y (orders +60%); AI ~$2,4bn, raised +$150m; capex ~6% quase todo p/ AI | JPM/Citi: DDN com 50%+ CAGR FY25-FY27, power ~25% do segmento | **✓ confirma** (ramp DDN corroborado) |
-| **Produto / copper** | Copper "continua o workhorse no rack"; aquisição RampPhotonics (copper-and-optical) | 650 Group: 400G-por-lane ainda pode ser copper; arquitetura co-packaged beneficia conectores (TE/Molex/APH) | **✓ confirma** (tese copper validada) |
-| **800V / HVDC** | (framing próprio: 800V → 30%+ aumento de conteúdo) | JPM/Citi: TEL best-positioned no stack 800V (power interconnect ~$150 de ~$870/XPU); TE VP: HVDC corta perda 2-5%/estágio — vs @bubbleboi: conteúdo "2-3 anos antes de bater no earnings" | **⚠ nuança** (timing do 800V contestado) |
+| **AI / DDN ramp** | DDN +~50% y/y (orders +60%); AI ~$2.4bn, raised +$150m; capex ~6% almost all for AI | JPM/Citi: DDN at 50%+ CAGR FY25-FY27, power ~25% of the segment | **✓ confirms** (DDN ramp corroborated) |
+| **Product / copper** | Copper "remains the workhorse in the rack"; RampPhotonics acquisition (copper-and-optical) | 650 Group: 400G-per-lane can still be copper; co-packaged architecture benefits connectors (TE/Molex/APH) | **✓ confirms** (copper thesis validated) |
+| **800V / HVDC** | (own framing: 800V → 30%+ content increase) | JPM/Citi: TEL best-positioned in the 800V stack (power interconnect ~$150 of ~$870/XPU); TE VP: HVDC cuts loss 2-5%/stage — vs @bubbleboi: content "2-3 years before hitting earnings" | **⚠ nuance** (800V timing contested) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 04-22 | TEL FQ2 FY26 call · Curtin | produto | bull | Copper-and-optical strategy reinforced by the RampPhotonics acquisition; 'copper will continue to be the workhorse in the rack'. Capex raised to ~6% of revenue, 'almost entirely' for the AI/DDN ramp. H1 FY26 FCF $1.3bn (record), ~100% returned to shareholders, dividend +10%. |
-| 05-26 | 650 Group · networking research | competicao | bull | Read-through for the copper 'workhorse' thesis: 400G-per-lane can still be copper (settled by the standards bodies), with Broadcom pushing full-copper scale-up; the co-packaged-copper architecture benefits the connector vendors — Molex, Amphenol, TE, TTM — with higher-value connectors as speeds rise. Supports TE's view that copper remains the workhorse in the rack. |
-| 06-09 | JPM · Samik Chatterjee (Watts Up! 800V) | produto | bull | TE Connectivity flagged best-positioned as a beneficiary of connector content in the 800V/HVDC stack (with APH/FLEX/WOLF). JPM estimates TE's power business is ~25% of total data-center-related revenue, with 800V share in busbar connectors, board-level power connectors, power couplings and cable assemblies; TE advantaged by transferable automotive-800V (EV) IP covering 'grid-to-chip'. Power interconnect = ~$150 of the ~$870 content per XPU; TAM ~$2bn→$4bn+ by 2028. |
-| 06-15 | Citi · 800V DC power | produto | bull | TEL (with APH) favorably positioned. Citi cites TEL's own framing — higher power+data per rack drives 50%+ FY25-FY27 CAGR for the DDN segment, with power connectivity ~25% of segment revenue, and the transition to 800V could generate a 30%+ content increase vs today. 800V is also positive for TEL's energy business (grid hardening ~66% and DC power connections ~20%). Path: ±400V HVDC sidecar first, NVDA 800V w/ Rubin Ultra late-2H27, SST 800V from ~2029. |
-| 06-15 | briefing · @bubbleboi channel checks | produto | bear | 800V opportunity timing contested: @bubbleboi channel checks argue rack-level GaN/SiC/connector content is '2-3 years before hitting earnings' without a near-term pull from DC construction (in the broader 800V basket). |
-| 06-18 | briefing · TE VP/Head of ICT (expert call) | produto | bull | TE's VP/Head of ICT framed HVDC (400V→800V) as cutting energy loss 2-5% per conversion stage, with liquid cooling mainstream by 2030. |
+| 04-22 | TEL FQ2 FY26 call · Curtin | product | bull | Copper-and-optical strategy reinforced by the RampPhotonics acquisition; 'copper will continue to be the workhorse in the rack'. Capex raised to ~6% of revenue, 'almost entirely' for the AI/DDN ramp. H1 FY26 FCF $1.3bn (record), ~100% returned to shareholders, dividend +10%. |
+| 05-26 | 650 Group · networking research | competition | bull | Read-through for the copper 'workhorse' thesis: 400G-per-lane can still be copper (settled by the standards bodies), with Broadcom pushing full-copper scale-up; the co-packaged-copper architecture benefits the connector vendors — Molex, Amphenol, TE, TTM — with higher-value connectors as speeds rise. Supports TE's view that copper remains the workhorse in the rack. |
+| 06-09 | JPM · Samik Chatterjee (Watts Up! 800V) | product | bull | TE Connectivity flagged best-positioned as a beneficiary of connector content in the 800V/HVDC stack (with APH/FLEX/WOLF). JPM estimates TE's power business is ~25% of total data-center-related revenue, with 800V share in busbar connectors, board-level power connectors, power couplings and cable assemblies; TE advantaged by transferable automotive-800V (EV) IP covering 'grid-to-chip'. Power interconnect = ~$150 of the ~$870 content per XPU; TAM ~$2bn→$4bn+ by 2028. |
+| 06-15 | Citi · 800V DC power | product | bull | TEL (with APH) favorably positioned. Citi cites TEL's own framing — higher power+data per rack drives 50%+ FY25-FY27 CAGR for the DDN segment, with power connectivity ~25% of segment revenue, and the transition to 800V could generate a 30%+ content increase vs today. 800V is also positive for TEL's energy business (grid hardening ~66% and DC power connections ~20%). Path: ±400V HVDC sidecar first, NVDA 800V w/ Rubin Ultra late-2H27, SST 800V from ~2029. |
+| 06-15 | briefing · @bubbleboi channel checks | product | bear | 800V opportunity timing contested: @bubbleboi channel checks argue rack-level GaN/SiC/connector content is '2-3 years before hitting earnings' without a near-term pull from DC construction (in the broader 800V basket). |
+| 06-18 | briefing · TE VP/Head of ICT (expert call) | product | bull | TE's VP/Head of ICT framed HVDC (400V→800V) as cutting energy loss 2-5% per conversion stage, with liquid cooling mainstream by 2030. |
 
-**Síntese do quarter:** o fluxo está quase todo em "produto/AI" e endossa a tese copper-workhorse e o ramp DDN; o debate migrou para o timing do upside de 800V/HVDC — JPM/Citi/expert da própria TE bullish na magnitude do conteúdo, contra os channel checks do @bubbleboi de que o conteúdo de rack está "2-3 anos antes de bater no earnings".
+**Quarter synthesis:** the flow is almost all in "product/AI" and endorses the copper-workhorse thesis and the DDN ramp; the debate has shifted to the timing of the 800V/HVDC upside — JPM/Citi/TE's own expert bullish on the magnitude of the content, against @bubbleboi's channel checks that the rack content is "2-3 years before hitting earnings".
 
 ## Management commentary — evolution (last 4 quarters)
 

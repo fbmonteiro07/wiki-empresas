@@ -4,6 +4,24 @@
 
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\SAMSUNG\transcripts` (public English earnings transcripts) · Samsung IR · `_briefings` roll-up · BBG (KRW, auto-injected). Master index: [../00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · KRW
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | ₩681155.3bn | ₩915569.4bn |
+| Gross profit | ₩467953.7bn | ₩686677.1bn |
+| Gross margin | 68.7% | 75.0% |
+| EBITDA | ₩407757.2bn | ₩580153.9bn |
+| EPS | ₩43007.00 | ₩65543.24 |
+| Capex | ₩75960.6bn | ₩90333.7bn |
+| OCF (≈EBITDA) | ₩407757.2bn | ₩580153.9bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="46.1" width="20" height="11.9" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="33.3" width="20" height="24.7" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="16.1" width="20" height="41.9" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+78.3% 3m · +269.1% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="48.2" width="20" height="9.8" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="35.7" width="20" height="22.3" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="18.0" width="20" height="40.0" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+97.1% 3m · +347.2% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 > **No SEC filings (Korean issuer).** Samsung Electronics files in Korea (KRX 005930) and via GDR (LSE: SMSN); it is **not a US SEC registrant** — no 10-K/10-Q/20-F on disk or on EDGAR. All financials below are from public English-language earnings-call transcripts and Samsung IR, in **KRW**, with the consensus block auto-injected from BBG. Transcripts are summaries, not verbatim. Byline: transcripts + IR + BBG (KRW).
 
 ## Snapshot
@@ -110,39 +128,39 @@ _Foundry-vs-TSMC angle: TSMC advanced-node capacity is pre-booked through 2028+,
 - **Digitimes** _(2026-06-19)_: Samsung Foundry signed a strategic deal to **make 'Claros' power-management chips for AI data centers** — foundry AI-DC traction.
 - **Capstone Morning Briefing** _(2026-06-19)_: memory super-cycle tape — conventional-DRAM ASP melt-up + HBM5 (2028-29) roadmap; Samsung framed as the **HBM4 catch-up** story vs SK Hynix.
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1-2026 print → intra-quarter · Apr 30 → Jun 23, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1-2026 print → intra-quarter · Apr 30 → Jun 23, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1'26 / Apr 30) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1'26 / Apr 30) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **HBM** | HBM4 em mass production desde fev; "fully booked"; HBM sales >3x a/a em 2026 | StoneX/TrendForce: chance real de virar #1 em HBM em 2027 · Redburn/Conor: preço HBM4 ainda não fechado "apesar de já estar enviando" (+90-100% vs LTA) · @paradislabs: books underweight vs Hynix no yield | **⚠ nuança** (ramp ok, preço/yield em aberto) |
-| **DRAM / NAND pricing** | DRAM ASP +low-90s% q/q; NAND ASP +high-80s% q/q | @QQ_Timmy: server DRAM C3Q26 +30-40% q/q · Jefferies/@techfund1: shortage "no way out" por anos | **✓ confirma** (melt-up continua) |
-| **Foundry** | Crescimento dois-dígitos a/a; Taylor TX move-in; 1.4nm on track | Digitimes: deal 'Claros' PMIC p/ AI-DC · @techfund1: AMD/Google/Tesla migram da TSMC · BofA/Sivakumar: high-NA como leapfrog | **✓ confirma** (ressalva: ganhos por disponibilidade, não liderança — @paradislabs) |
-| **Capex / supply** | Capex 2026 com "substantial increase" | StoneX/TrendForce: maior cap DRAM (~740K/mês) mas só +45K em '27; clean-room é o gargalo até fim-2028; P5L ph.1 só mid-2028 | **⚠ nuança** (capex sobe mas oferta nova só chega tarde) |
-| **Margem / durabilidade** | OP recorde KRW 57tn; margem 43% | ex-Micron VP: HBM comoditiza, ciclo no topo, nova cap CY27-28 pode quebrar preço · GS: 5-6x "descrê" da durabilidade | **✗ contesta** (sustentabilidade do ciclo) |
+| **HBM** | HBM4 in mass production since Feb; "fully booked"; HBM sales >3x YoY in 2026 | StoneX/TrendForce: real chance of becoming #1 in HBM in 2027 · Redburn/Conor: HBM4 price still not closed "despite already shipping" (+90-100% vs LTA) · @paradislabs: books underweight vs Hynix on yield | **⚠ nuance** (ramp ok, price/yield open) |
+| **DRAM / NAND pricing** | DRAM ASP +low-90s% q/q; NAND ASP +high-80s% q/q | @QQ_Timmy: server DRAM C3Q26 +30-40% q/q · Jefferies/@techfund1: shortage with "no way out" for years | **✓ confirms** (melt-up continues) |
+| **Foundry** | Double-digit YoY growth; Taylor TX move-in; 1.4nm on track | Digitimes: 'Claros' PMIC deal for AI-DC · @techfund1: AMD/Google/Tesla migrate from TSMC · BofA/Sivakumar: high-NA as leapfrog | **✓ confirms** (caveat: gains driven by availability, not leadership — @paradislabs) |
+| **Capex / supply** | 2026 capex with a "substantial increase" | StoneX/TrendForce: largest DRAM cap (~740K/month) but only +45K in '27; clean-room is the bottleneck until end-2028; P5L ph.1 only mid-2028 | **⚠ nuance** (capex rises but new supply arrives only late) |
+| **Margin / durability** | Record OP KRW 57tn; margin 43% | ex-Micron VP: HBM commoditizes, cycle at the top, new cap CY27-28 could break pricing · GS: 5-6x "disbelieves" the durability | **✗ contests** (cycle sustainability) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 05-07 | @paradislabs (FinTwit memory) | competicao | bear | FinTwit memory books underweight Samsung vs SK Hynix on the HBM/yield advantage; SK Hynix ~5.3x vs Samsung ~5.9x fwd P/E. Hyperscalers diversifying away from TSMC engage Samsung Foundry (AMD/Google/Tesla) for availability despite lagging yields. |
+| 05-07 | @paradislabs (FinTwit memory) | competition | bear | FinTwit memory books underweight Samsung vs SK Hynix on the HBM/yield advantage; SK Hynix ~5.3x vs Samsung ~5.9x fwd P/E. Hyperscalers diversifying away from TSMC engage Samsung Foundry (AMD/Google/Tesla) for availability despite lagging yields. |
 | 05-08 | JPM | guidance | bear | JPM flagged a union strike with 7-12% downside to 2026 OP (briefing). |
 | 05-11 | Jefferies · Jeff Kim | guidance | bull | Three engines firing from 2H26 — memory + foundry + robotics. Q2-26 OP KRW 100tn vs his estimate of KRW 84tn; "the cheapest it will get" at 4.7x '27 P/E. DRAM shortage "with no way out for the next few years." |
-| 05-21 | BofA · Sam Sivakumar (litho expert) | produto | bull | High-NA EUV done well is "an advantage" via design simplification and ~75% fewer process steps vs low-NA double patterning; the half-field/stitching constraint is "not as serious as we thought"; DRAM "eminently suited" for high-NA — a structural opening for Samsung Foundry/memory to leapfrog TSMC (a slow high-NA adopter) if it executes. |
-| 05-28 | JPM · Jay | competicao | bear | JPM's call that Samsung would close the gap with Hynix post-strike "didn't work" — Hynix kept outperforming on passive/single-stock ETF flows + an ADR catalyst. Samsung catalysts: a real start to HBM4 volume production, a larger AMD chiplet/foundry order at US Foundry Day (late-June/early-July), and a shareholder-return update (~October). Near-term EPS drag: the union-settlement provision (~12% of profit) hits Q2, ~2pts above JPM's prior 10%. |
+| 05-21 | BofA · Sam Sivakumar (litho expert) | product | bull | High-NA EUV done well is "an advantage" via design simplification and ~75% fewer process steps vs low-NA double patterning; the half-field/stitching constraint is "not as serious as we thought"; DRAM "eminently suited" for high-NA — a structural opening for Samsung Foundry/memory to leapfrog TSMC (a slow high-NA adopter) if it executes. |
+| 05-28 | JPM · Jay | competition | bear | JPM's call that Samsung would close the gap with Hynix post-strike "didn't work" — Hynix kept outperforming on passive/single-stock ETF flows + an ADR catalyst. Samsung catalysts: a real start to HBM4 volume production, a larger AMD chiplet/foundry order at US Foundry Day (late-June/early-July), and a shareholder-return update (~October). Near-term EPS drag: the union-settlement provision (~12% of profit) hits Q2, ~2pts above JPM's prior 10%. |
 | 06-08 | Goldman Sachs · Memory (longevity of cycle) | valuation | mixed | 5-6x earnings disbelieves the durability of the cycle; 9x would be "conservative" (briefing). |
-| 06-10 | ex-Micron VP (expert call) | margem | mixed | HBM commoditizes once 2nd/3rd vendors qualify, but Samsung's cost structure is actually better than Micron's — relatively advantaged in a snap-back, but still at the cyclical top. New capacity (Samsung/SK/Micron) arriving ~CY27-28 could break pricing. |
-| 06-16 | @QQ_Timmy (FinTwit) | margem | bull | Server DRAM C3Q26 +30-40% q/q — DRAM ASP trajectory (a test of Jefferies' KRW 100tn OP estimate for Q2-26). |
-| 06-17 | @jukan05 (FinTwit) | produto | bull | DRAM 1d (7th generation) mass production, earlier in 1H27 (briefing). The Korean tape rose +4.8% overnight on memory pass-through from Apple. |
-| 06-18 | @techfund1 (FinTwit) | competicao | bull | DRAM shortage "with no way out for the next few years"; foundry optionality is incremental upside as hyperscalers diversify away from TSMC — TSMC advanced-node capacity pre-booked into 2028+ pushes AMD, Google (Axion ~2028 / TPU), Tesla to engage Samsung Foundry. |
-| 06-19 | Digitimes | produto | bull | Samsung Foundry signed a strategic deal to make 'Claros' power-management chips for AI data centers — AI-DC foundry traction. |
-| 06-19 | Capstone Morning Briefing | demanda | bull | Memory super-cycle tape — a melt-up in conventional DRAM ASP + the HBM5 roadmap (2028-29); Samsung framed as the HBM4 catch-up story vs SK Hynix. |
+| 06-10 | ex-Micron VP (expert call) | margin | mixed | HBM commoditizes once 2nd/3rd vendors qualify, but Samsung's cost structure is actually better than Micron's — relatively advantaged in a snap-back, but still at the cyclical top. New capacity (Samsung/SK/Micron) arriving ~CY27-28 could break pricing. |
+| 06-16 | @QQ_Timmy (FinTwit) | margin | bull | Server DRAM C3Q26 +30-40% q/q — DRAM ASP trajectory (a test of Jefferies' KRW 100tn OP estimate for Q2-26). |
+| 06-17 | @jukan05 (FinTwit) | product | bull | DRAM 1d (7th generation) mass production, earlier in 1H27 (briefing). The Korean tape rose +4.8% overnight on memory pass-through from Apple. |
+| 06-18 | @techfund1 (FinTwit) | competition | bull | DRAM shortage "with no way out for the next few years"; foundry optionality is incremental upside as hyperscalers diversify away from TSMC — TSMC advanced-node capacity pre-booked into 2028+ pushes AMD, Google (Axion ~2028 / TPU), Tesla to engage Samsung Foundry. |
+| 06-19 | Digitimes | product | bull | Samsung Foundry signed a strategic deal to make 'Claros' power-management chips for AI data centers — AI-DC foundry traction. |
+| 06-19 | Capstone Morning Briefing | demand | bull | Memory super-cycle tape — a melt-up in conventional DRAM ASP + the HBM5 roadmap (2028-29); Samsung framed as the HBM4 catch-up story vs SK Hynix. |
 | 06-23 | StoneX/TrendForce · Memory expert call (Avril) | supply | mixed | Samsung exits 2026 with the largest DRAM wafer capacity at ~740K wafers/month (vs SK Hynix ~610K, Micron ~365K), adding only ~45K in 2027 (clean-room is the constraint until end-2028); P5L phase-1 only ready mid-2028, phase-2 announced with output ~2030. NAND→DRAM conversion drives global NAND cap -3% in 2026 and Samsung loses NAND share. A real possibility Samsung overtakes SK Hynix as #1 in HBM in 2027. Anthropic's HBM deal (2028) with Samsung implies an in-house ASIC. |
-| 06-23 | Redburn · Conor O'Mara (Asia Trip Takeaways) | margem | bull | HBM4 price still not finalized two weeks ago "despite Samsung already shipping," expected +90-100% vs last year's LTA. First disclosure that Samsung has a hybrid-bonding project and is "willing to offer it at a premium" (for taller stacks / HBM4E) — read bullishly by Besi holders. Samsung said that if wafers are short it would optimize the mix — pushing conventional DRAM at the expense of HBM (a TSV backend penalty), further limiting HBM capacity. |
+| 06-23 | Redburn · Conor O'Mara (Asia Trip Takeaways) | margin | bull | HBM4 price still not finalized two weeks ago "despite Samsung already shipping," expected +90-100% vs last year's LTA. First disclosure that Samsung has a hybrid-bonding project and is "willing to offer it at a premium" (for taller stacks / HBM4E) — read bullishly by Besi holders. Samsung said that if wafers are short it would optimize the mix — pushing conventional DRAM at the expense of HBM (a TSV backend penalty), further limiting HBM capacity. |
 
-**Síntese do quarter:** o debate migrou do "Samsung consegue qualificar HBM4?" (resolvido — já em mass production e shipping) para preço/yield do HBM4 ainda em aberto e, sobretudo, para a *durabilidade* do ciclo de DRAM — com a tese de virar #1 em HBM em 2027 e a óptica de foundry ganhando tração contra o ceticismo de topo-de-ciclo (GS/ex-Micron).
+**Quarter synthesis:** the debate has shifted from "can Samsung qualify HBM4?" (resolved — already in mass production and shipping) to the still-open HBM4 price/yield and, above all, to the *durability* of the DRAM cycle — with the thesis of becoming #1 in HBM in 2027 and the foundry angle gaining traction against top-of-cycle skepticism (GS/ex-Micron).
 
 ## Management commentary — evolution (last 4 quarters)
 

@@ -2,6 +2,24 @@
 
 _Wiki · generated 2026-06-19 · **20-F filer (UK foreign private issuer)** — files annual 20-F, no 10-K/10-Q · sources: `E:\Wiki Felipe\ARM` (20-Fs FY24–FY26 + transcripts) · `_briefings\2026` roll-up · theme [custom-asic-tpu](themes/custom-asic-tpu.md). Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $5.6bn | $7.3bn |
+| Gross profit | $5.5bn | $6.9bn |
+| Gross margin | 98.1% | 94.2% |
+| EBITDA | $2.6bn | $3.6bn |
+| EPS | $1.99 | $2.79 |
+| Capex | $391m | $421m |
+| OCF (≈EBITDA) | $2.6bn | $3.6bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="16.1" width="20" height="41.9" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="15.2" width="20" height="42.8" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="15.1" width="20" height="42.9" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+2.2% 3m · -2.6% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="16.4" width="20" height="41.6" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="17.2" width="20" height="40.8" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.2" width="20" height="43.8" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+7.9% 3m · +5.7% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Arm is the upstream IP-licensing layer of the compute industry: it designs CPU/GPU/NPU architectures and processor IP and collects (i) up-front license fees and (ii) a per-unit royalty on substantially every chip shipped using its designs — typically a % of chip ASP or a fixed fee per unit, rising as more Arm IP is included (FY26 20-F, Item 4). FY26 revenue $4.92B, +23% YoY, split License & other $2.31B (47%) / Royalty $2.61B (53%); operating margin ~18% GAAP, ~49% non-GAAP in Q4 (FY26 20-F; Q4 FY26 call, 2026-05-06). The franchise is in two transitions that define the thesis: (1) royalty mix-up from ARMv9 + Compute Subsystems (CSS) lifting per-chip rates, and (2) a move *downstream* into its own silicon — the **Arm AGI CPU** launched at Q4 FY26 with Meta as lead partner. ~57% of revenue comes from top-5 customers (incl. Arm China and SoftBank); SoftBank controls Arm (~controlled-company / FPI status). Mobile app processors are ~43% of royalty (FY26 20-F).
 
@@ -81,34 +99,34 @@ Arm sits **upstream of nearly every SoC** in the world — virtually all smartph
 - **BofA — 'The CPU Debate with Vivek Arya'** _(2026-06-11)_: evolving CPU market / AI infra — ARM-architected server CPUs (Graviton/Axion/Cobalt) the TAM driver; agentic AI pushing CPU:GPU toward 1:1.
 - **Bernstein** (per Morning Briefing): server-CPU TAM raised to **$223B**, ARM Outperform **PT $500**.
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q4 FY26 print + intra-quarter · May 06 → Jun 23, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q4 FY26 print + intra-quarter · May 06 → Jun 23, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q4 FY26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q4 FY26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Data center / server CPU** | DC royalty >2x YoY; share hyperscaler ~50%; CPU TAM >$100B em 2030 | Bernstein: TAM $223B, ARM $22B rev em 2030 · UBS: share 16%→42% até 2030 · Citi: ~99% ARM em racks GB-class | **✓ confirma** (bulls elevam TAM) |
-| **Own silicon (AGI CPU)** | AGI CPU lançado c/ Meta; ~$2B demanda FY27+28 | Arcuri: clientes "don't do what they say"; Redburn modela só $1B em 18m e exclui os $15B de 2030 sem contrato | **⚠ nuança** (demanda AGI descontada) |
-| **Royalty / monetização** | Royalty $671M, +11% (light vs Street $691M) | Arcuri: NVDA paga "well below 50c/core", math core×royalty "too high" | **✗ contesta** (royalty/core é o furo) |
-| **Competição (x86)** | Demanda forte nos 3 segmentos de IA | CEO @ GCP: Axion desloca x86 "50% less power"; Citi: Google ~60% ARM, Graviton ~60% do AWS | **✓ confirma** (deslocamento x86) |
+| **Data center / server CPU** | DC royalty >2x YoY; hyperscaler share ~50%; CPU TAM >$100B in 2030 | Bernstein: TAM $223B, ARM $22B rev in 2030 · UBS: share 16%→42% by 2030 · Citi: ~99% ARM in GB-class racks | **✓ confirms** (bulls raise TAM) |
+| **Own silicon (AGI CPU)** | AGI CPU launched w/ Meta; ~$2B demand FY27+28 | Arcuri: customers "don't do what they say"; Redburn models only $1B over 18m and excludes the $15B of 2030 absent a contract | **⚠ nuance** (AGI demand discounted) |
+| **Royalty / monetization** | Royalty $671M, +11% (light vs Street $691M) | Arcuri: NVDA pays "well below 50c/core", core×royalty math "too high" | **✗ contests** (royalty/core is the hole) |
+| **Competition (x86)** | Strong demand across the 3 AI segments | CEO @ GCP: Axion displaces x86 "50% less power"; Citi: Google ~60% ARM, Graviton ~60% of AWS | **✓ confirms** (x86 displacement) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
 | 05-07 | Expert call · SiTime/ARM | guidance | bull | Post-Q4, ARM guides royalty and licensing both +20% YoY in fiscal Q1 (Jun) and across FY27; cloud/AI royalty ~2x YoY; cloud (data-center) share reached ~50% on ARM's metric (from ~zero in late-2020), with NVDA's Grace/Vera the big driver. AGI backlog "basically doubled in six weeks" but is memory-constrained; hyperscaler roadmap for a 700-core chip; server-CPU TAM internally pegged at $200-300bn by 2030. |
-| 05-07 | Patrick Moorhead | demanda | bull | ARM holds ~50% CPU share among top hyperscalers (Graviton/Axion/Cobalt/Vera all ARM); Meta as AGI lead (briefing). |
-| 05-11 | Arm CEO @ GCP Next | competicao | bull | Axion actively displacing x86 host CPUs on Google TPU 8t/8i — "50% less power, 80% improvement over x86" (briefing). |
-| 05-18 | Bernstein · David Dai | demanda | bull | Bernstein initiates at Outperform PT $300: agentic AI = ~120M CPU cores/GW (~4x a traditional data center); ARM at ~50% CPU share among top hyperscalers; CPU:GPU ratio from ~8:1 (training) to ~1:1 (agentic/inference). |
-| 05-21 | UBS · Sunny Lin | demanda | bull | UBS "Quantifying the server CPU opportunity": ARM's server-CPU unit share rises from 16% (2025) to 42% (2030) as agentic AI lifts CPU-bound orchestration work; total server-CPU market reaches ~$170bn by 2030 (units 23m→63m, 30% CAGR); AMD 24%→29%, Intel 60%→29%. |
-| 05-22 | Citi · Blayne Curtis | competicao | bull | Asia checks: ARM's storyline is more levered to companion CPUs (fixed CPU:GPU ratio in AI servers, ~99% ARM in GB-class racks). CPU mix at Google up to ~60% ARM (Axion, above expected) and Graviton ~60% of AWS's general-purpose mix; NVDA's ~$20bn standalone Arm-CPU figure (Vera) is "chips, not memory" ("Asia recap"). |
-| 06-01 | Capstone briefing | produto | bull | PC optionality: NVDA RTX Spark / N1X Arm PC with Microsoft; ARM +12% pre-market (briefing). |
+| 05-07 | Patrick Moorhead | demand | bull | ARM holds ~50% CPU share among top hyperscalers (Graviton/Axion/Cobalt/Vera all ARM); Meta as AGI lead (briefing). |
+| 05-11 | Arm CEO @ GCP Next | competition | bull | Axion actively displacing x86 host CPUs on Google TPU 8t/8i — "50% less power, 80% improvement over x86" (briefing). |
+| 05-18 | Bernstein · David Dai | demand | bull | Bernstein initiates at Outperform PT $300: agentic AI = ~120M CPU cores/GW (~4x a traditional data center); ARM at ~50% CPU share among top hyperscalers; CPU:GPU ratio from ~8:1 (training) to ~1:1 (agentic/inference). |
+| 05-21 | UBS · Sunny Lin | demand | bull | UBS "Quantifying the server CPU opportunity": ARM's server-CPU unit share rises from 16% (2025) to 42% (2030) as agentic AI lifts CPU-bound orchestration work; total server-CPU market reaches ~$170bn by 2030 (units 23m→63m, 30% CAGR); AMD 24%→29%, Intel 60%→29%. |
+| 05-22 | Citi · Blayne Curtis | competition | bull | Asia checks: ARM's storyline is more levered to companion CPUs (fixed CPU:GPU ratio in AI servers, ~99% ARM in GB-class racks). CPU mix at Google up to ~60% ARM (Axion, above expected) and Graviton ~60% of AWS's general-purpose mix; NVDA's ~$20bn standalone Arm-CPU figure (Vera) is "chips, not memory" ("Asia recap"). |
+| 06-01 | Capstone briefing | product | bull | PC optionality: NVDA RTX Spark / N1X Arm PC with Microsoft; ARM +12% pre-market (briefing). |
 | 06-15 | UBS · Arcuri | valuation | bear | Arcuri skeptical on the bull case's royalty math: investors model 50c-$1 per core, but the big winners pay far less — NVIDIA pays "substantially below 50 cents per core, well below," as do the large hyperscalers; the core-count × royalty math is "too high." Also discounts AGI-CPU demand because most customers (Meta + OpenAI) "don't do what they say they're going to do" ("Arcuri call"). |
 | 06-17 | Bernstein · Rasgon | valuation | bull | PT raised $300→$500, Outperform: server-CPU TAM revised to $223bn; ARM targeting $22bn of revenue by 2030, FY31E EPS raised from $9.83 to $11.79. Bernstein also raised SoftBank to OP ¥11,200 (from ¥8,200) on the same revision (briefing). |
 | 06-17 | Redburn | valuation | bear | Redburn Neutral PT $130, the most bearish house: raises revenue only on better-than-feared smartphone, but bakes in just $1bn of AGI CPU over the next 18 months and explicitly does NOT include the guided $15bn of 2030 AGI without confirmed contracts; sits 9-19% below consensus on FY29-31 revenue; ARM trades at ~48x EV/sales two years out, a steep premium vs peers (briefing). |
 
-**Síntese do quarter:** com o share de DC e o deslocamento de x86 amplamente confirmados pelos bulls (Bernstein PT $300→$500, UBS), o debate migrou para *quanto a ARM monetiza por core* — Arcuri e Redburn atacam a aritmética royalty×core-count e descontam os $15B de AGI-CPU de 2030 sem contrato, abrindo o maior spread de PT do setor ($130 vs $500).
+**Quarter synthesis:** with DC share and x86 displacement broadly confirmed by the bulls (Bernstein PT $300→$500, UBS), the debate shifted to *how much ARM monetizes per core* — Arcuri and Redburn attack the royalty×core-count arithmetic and discount the $15B of 2030 AGI-CPU absent a contract, opening the widest PT spread in the sector ($130 vs $500).
 
 ## Management commentary — evolution (last 4 quarters)
 

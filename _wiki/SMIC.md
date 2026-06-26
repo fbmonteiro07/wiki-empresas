@@ -2,6 +2,24 @@
 
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\SMIC` · `_equity_calls` · `_briefings\by-ticker\SMIC.md`. Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $11.5bn | $13.6bn |
+| Gross profit | $2.4bn | $3.1bn |
+| Gross margin | 21.2% | 22.9% |
+| EBITDA | $6.4bn | $7.7bn |
+| EPS | $0.15 | $0.21 |
+| Capex | $8.0bn | $6.7bn |
+| OCF (≈EBITDA) | $6.4bn | $7.7bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="17.2" width="20" height="40.8" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="15.9" width="20" height="42.1" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="15.0" width="20" height="43.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+5.6% 3m · -2.2% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="15.5" width="20" height="42.5" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="17.2" width="20" height="40.8" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="16.2" width="20" height="41.8" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+7.9% 3m · +3.5% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 China's largest pure-play foundry (0981 HK / 688981 SH), the national champion for domestic semiconductor manufacturing. Predominantly a **mature/legacy-node** house — 12-inch is ~76-77% of revenue, 8-inch ~23-24% (Q1 2026, 2026-05-15) — serving consumer electronics (~43-46%), smartphone (~19-25%), computer/tablet (~14-15%), industrial/automotive (~11-14%) and connectivity/IoT (~7-8%). Revenue is overwhelmingly China-facing (~85-89% domestic), making SMIC the cleanest listed proxy for the **China semiconductor self-sufficiency / import-substitution** theme. It also runs the only credible advanced-node line inside China — pushing 7nm (N+1/N+2, reportedly 5nm-class) via **DUV multi-patterning** since it is cut off from EUV under US export controls — which makes it Huawei's de facto leading-edge fab and the production backbone for domestic AI silicon (Huawei Ascend 910B/910C are made on SMIC 7nm; MS China DataCenter, 2025-04-29). In the chain: TSMC owns the leading edge globally; SMIC is the China-localized substitute pulling mature-node demand onshore and the bottleneck for any domestic AI/advanced-logic ambition. The sell-side now bifurcates sharply: Bernstein rates SMIC **Outperform** as the chief beneficiary of Huawei's AI scale-up (Bernstein Huawei roadmap, 2025-09-22), while MS sits **Equal-weight** flagging the mature-node downcycle (MS AI supply chain, 2025-08-18) — see thesis.
 
@@ -45,24 +63,24 @@ China's largest pure-play foundry (0981 HK / 688981 SH), the national champion f
 - **Capital intensity / no return of capital** — ~$8bn/yr capex, no dividend; FCF negative on the build-out (FY2025 investing -$6.5bn).
 - **Geopolitical tail** — US/China tariffs and sanctions; secondary-customer / supply-chain disruption.
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 2026 · May 15 → Jun 23, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 2026 · May 15 → Jun 23, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1'26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1'26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Guidance** | Q2 guide receita +14% a +16% q/q | JPM (Hariharan): guide superou em muito a barra baixa do Street/JPM (+2-7%); upgrade UW → Neutral, PT HK$57 → HK$67 | **✓ confirma** (guide bem acima do esperado) |
-| **ASP / pricing** | ASP +2,5% q/q; hikes de 5-10% no Q2 | JPM: split ~shipments +10% / ASP +5%, hikes 5-10% em BCD/analog/PMIC/storage | **✓ confirma** (price hikes corroborados) |
-| **Demanda / risco 2H** | "Strong demand for chips from AI"; NOR/NAND tight | JPM mantém Neutral por risco de consumo no 2H | **⚠ nuança** (2H consumer é o watch) |
+| **Guidance** | Q2 guide revenue +14% to +16% q/q | JPM (Hariharan): guide far exceeded the low Street/JPM bar (+2-7%); upgrade UW → Neutral, PT HK$57 → HK$67 | **✓ confirms** (guide well above expectations) |
+| **ASP / pricing** | ASP +2.5% q/q; 5-10% hikes in Q2 | JPM: split ~shipments +10% / ASP +5%, 5-10% hikes in BCD/analog/PMIC/storage | **✓ confirms** (price hikes corroborated) |
+| **Demand / 2H risk** | "Strong demand for chips from AI"; NOR/NAND tight | JPM stays Neutral on 2H consumer risk | **⚠ nuance** (2H consumer is the watch) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
 | 05-17 | JPM · Gokul Hariharan (briefing) | guidance | bull | The +14-16% Q2 guide far exceeded the low bar from the Street/JPM (+2-7%); split ~shipments +10% / ASP +5%, with price hikes of 5-10% in BCD/analog/PMIC/storage. JPM upgraded from UW → Neutral, PT HK$57 → HK$67, but kept Neutral on 2H consumer risk. |
 
-**Síntese do quarter:** fluxo fino (só o recap do JPM), mas convergente — o guide de Q2 (+14-16%) e os price hikes de 5-10% surpreenderam para cima e levaram a um upgrade, deslocando o debate para o único ponto de atrito remanescente: o risco de demanda de consumo no 2H, que mantém o JPM em Neutral.
+**Quarter synthesis:** thin flow (only the JPM recap), but convergent — the Q2 guide (+14-16%) and the 5-10% price hikes surprised to the upside and drove an upgrade, shifting the debate to the one remaining friction point: 2H consumer demand risk, which keeps JPM at Neutral.
 
 ## Management commentary — evolution (last 4 quarters)
 

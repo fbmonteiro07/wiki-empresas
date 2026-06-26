@@ -2,6 +2,24 @@
 
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\SPOT` (filings 20-F + transcripts) · `_briefings\by-ticker\SPOT.md`. Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · EUR
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | €19.5bn | €22.3bn |
+| Gross profit | €6.5bn | €7.7bn |
+| Gross margin | 33.2% | 34.4% |
+| EBITDA | €3.1bn | €4.0bn |
+| EPS | €12.29 | €15.61 |
+| Capex | €45m | €42m |
+| OCF (≈EBITDA) | €3.1bn | €4.0bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="16.8" width="20" height="41.2" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.6" width="20" height="43.4" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.7" width="20" height="43.3" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">-1.6% 3m · +5.1% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="15.6" width="20" height="42.4" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="15.1" width="20" height="42.9" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.9" width="20" height="43.1" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">-2.0% 3m · +1.6% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 > **Fidelity note:** SPOT publishes only its **prepared remarks** as an IR-CDN PDF; the Q&A is run live via Slido and is **not** transcribed. Both transcripts below are prepared-remarks-only (plus a short post-Q&A closing). No analyst Q&A is captured — treat the qualitative color as management-scripted, not interrogated. SPOT is a **20-F filer** (foreign private issuer; IFRS, EUR reporting) — there is no 10-K, no 10-Q.
 
 ## Snapshot
@@ -49,31 +67,31 @@ World's largest audio-streaming platform: **761M MAU** and **293M Premium Subscr
 - **Margin optics:** OI beats partly Social Charges (share-price-driven, non-operational); near-term op-margin pressure from AI inference / marketing reinvestment.
 - **FX / IFRS-EUR reporting** introduces translation noise (e.g., €35M currency headwind flagged into Q1).
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 FY26 · 28 Apr → 17 Jun 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 FY26 · 28 Apr → 17 Jun 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1'26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1'26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Margem** | GM 33,0% (+133bp y/y, 2ª-maior já feita) | MS: selloff -15%+ por custo de inferência AI (OI guidado down q/q no Q2 em reinvestimento) | **⚠ nuança** (margem alta vs reinvestimento AI) |
-| **AI / produto** | DJ 94M usuários; Taste Profile; 50+ features | DB (Black): partnership Remix c/ UMG "removes the bear narrative"; Bernstein: deal de licenciamento AI iminente | **✓ confirma** (Remix de-risca o AI) |
-| **Demanda / usuários** | MAU 761M (+10M, +12% y/y, acelerando); Subs 293M | Investor Day: reposiciona tese de user growth p/ monetização; JPM Top Pick PT $650 | **✓ confirma** (de-risk e reposicionamento) |
-| **Valuation / Remix** | LT targets: GM 35-40%, op margin 20%+ até 2030 | Redburn/Rothschild (Vyvyan): Neutral, PT $600→$550, Remix <2% do Premium rev em 2030e, sem oportunidade mass-market p/ AI | **✗ contesta** (Remix imaterial p/ Vyvyan) |
+| **Margin** | GM 33.0% (+133bp y/y, 2nd-highest ever) | MS: -15%+ selloff on AI inference cost (OI guided down q/q in Q2 on reinvestment) | **⚠ nuance** (high margin vs AI reinvestment) |
+| **AI / product** | DJ 94M users; Taste Profile; 50+ features | DB (Black): Remix partnership with UMG "removes the bear narrative"; Bernstein: AI licensing deal imminent | **✓ confirms** (Remix de-risks the AI) |
+| **Demand / users** | MAU 761M (+10M, +12% y/y, accelerating); Subs 293M | Investor Day: repositions the thesis from user growth to monetization; JPM Top Pick PT $650 | **✓ confirms** (de-risk and repositioning) |
+| **Valuation / Remix** | LT targets: GM 35-40%, op margin 20%+ by 2030 | Redburn/Rothschild (Vyvyan): Neutral, PT $600→$550, Remix <2% of Premium rev in 2030e, no mass-market opportunity for AI | **✗ contests** (Remix immaterial per Vyvyan) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 05-08 | MS (briefing) | margem | bear | MS flagged a -15%+ selloff on concerns over AI inference cost (OI guided down q/q in Q2 on reinvestment in AI inference + marketing). |
-| 05-21 | BofA · Reif Ehrlich / JPM/Anmuth (Investor Day) | demanda | bull | Investor Day repositioned the growth thesis from user growth to monetization and de-risked the AI narrative. JPM/Anmuth: OW, Top Pick, PT $650 (from $600). BofA/Reif Ehrlich: Buy PT $685, Remix add-on as a "clear answer to AI disintermediation". LT targets: 35-40% GM, 20%+ op margin by 2030. |
-| 05-21 | DB · Black (briefing) | produto | bull | DB (Black): Buy $620 - the AI remix partnership with UMG "removes the bear narrative". |
+| 05-08 | MS (briefing) | margin | bear | MS flagged a -15%+ selloff on concerns over AI inference cost (OI guided down q/q in Q2 on reinvestment in AI inference + marketing). |
+| 05-21 | BofA · Reif Ehrlich / JPM/Anmuth (Investor Day) | demand | bull | Investor Day repositioned the growth thesis from user growth to monetization and de-risked the AI narrative. JPM/Anmuth: OW, Top Pick, PT $650 (from $600). BofA/Reif Ehrlich: Buy PT $685, Remix add-on as a "clear answer to AI disintermediation". LT targets: 35-40% GM, 20%+ op margin by 2030. |
+| 05-21 | DB · Black (briefing) | product | bull | DB (Black): Buy $620 - the AI remix partnership with UMG "removes the bear narrative". |
 | 05-22 | JPM · Schilsky (spec-sales) | valuation | bull | JPM spec-sales (Schilsky): "I genuinely have no idea what the Bear Case is anymore. Buy SPOT." |
-| 06-09 | Bernstein · Moore (briefing) | produto | bull | Bernstein (Moore): speculative-positive that a SPOT AI licensing deal is imminent; UMG superfan framework. |
-| 06-11 | Bernstein · Seidman (briefing) | produto | bull | Bernstein (Seidman): speculative-positive that a SPOT AI licensing deal is imminent. |
+| 06-09 | Bernstein · Moore (briefing) | product | bull | Bernstein (Moore): speculative-positive that a SPOT AI licensing deal is imminent; UMG superfan framework. |
+| 06-11 | Bernstein · Seidman (briefing) | product | bull | Bernstein (Seidman): speculative-positive that a SPOT AI licensing deal is imminent. |
 | 06-17 | Redburn/Rothschild · Ed Vyvyan (briefing) | valuation | bear | Redburn/Rothschild (Vyvyan): Neutral, PT cut from $600 to $550 - the lone Neutral and the freshest datapoint. "We do not see a meaningful mass-market opportunity for AI derivative tools" and expects Remix contributing <2% of Premium revenues in 2030e; SPOT still searching for its killer differentiator, perhaps via M&A in live music. Models revenue -1%, EBIT -2-3% vs Street. |
 
-**Síntese do quarter:** o Investor Day e o Remix/UMG de-riscaram a narrativa AI a ponto de o spec-sales do JPM dizer "não sei mais qual é o bear case"; o debate migrou para o custo de inferência AI (MS, selloff -15%+) e para o único cético remanescente — Vyvyan (Redburn), que questiona se o Remix monetiza (vê <2% do Premium em 2030e).
+**Quarter synthesis:** the Investor Day and Remix/UMG de-risked the AI narrative to the point where JPM's spec-sales said "I no longer know what the bear case is"; the debate has shifted to AI inference cost (MS, -15%+ selloff) and to the one remaining skeptic — Vyvyan (Redburn), who questions whether Remix monetizes (sees <2% of Premium in 2030e).
 
 ## Management commentary — evolution (last 6 quarters)
 

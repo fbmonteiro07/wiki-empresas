@@ -2,6 +2,24 @@
 
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\CRDO` (filings + transcripts) · `_briefings\2026\*` (heavily covered, ~42 hits). Master index: [00_INDEX.md](00_INDEX.md). Themes: [optical-cpo](themes/optical-cpo.md) · [custom-asic-tpu](themes/custom-asic-tpu.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $2.1bn | $3.5bn |
+| Gross profit | $1.4bn | $2.3bn |
+| Gross margin | 67.1% | 66.7% |
+| EBITDA | $1.1bn | $1.9bn |
+| EPS | $4.96 | $8.40 |
+| Capex | $243m | $147m |
+| OCF (≈EBITDA) | $1.1bn | $1.9bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="30.6" width="20" height="27.4" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="23.7" width="20" height="34.3" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="21.1" width="20" height="36.9" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+28.2% 3m · +60.3% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="35.5" width="20" height="22.5" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="31.2" width="20" height="26.8" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="25.1" width="20" height="32.9" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+64.0% 3m · +95.5% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Fabless connectivity-IC supplier built to "transform connectivity at scale through fast, reliable and energy-efficient system solutions" for AI data centers (FY26 10-K, 2026-06-15). Sells high-speed copper and optical interconnect up to 1.6T: **ZeroFlap (ZF) Active Electrical Cables (AECs)**, ZF optical transceivers, **optical and PCIe retimers/DSPs**, **SerDes chiplets**, OmniConnect memory solutions, and SerDes-IP licensing — all on its own SerDes/DSP technology with an "n-1" (legacy-node) cost advantage. Optimized for Ethernet/PCIe and emerging **UALink, ESUN, SUE** scale-up fabrics across Front-End, Scale-Out, Scale-Up and Scale-In networks. **FY26 (ended ~Apr 2026) revenue $1.3B, +206% y/y** (vs $436.8M FY25), non-GAAP GM 68.1%, non-GAAP NI $662M (FY26 10-K; Q4 call 2026-06-01). The story is a **copper-to-optical-plus-AEC AI connectivity ramp** with extreme customer concentration: top-10 = ~90% of FY26 revenue, two customers >10% (Customer A 49%, Customer B 32% per 10-K) — Amazon is a confirmed customer (holds a Credo warrant) and Microsoft is named in the filing.
 
@@ -105,23 +123,23 @@ Credo is a fabless designer between the foundry/IP supply base and the hyperscal
 - **Citi (Blaine Curtis) — Asia checks / AI silicon call** _(2026-05-22)_: makes **CRDO a top pick** — "controversial," which he likes. The bear data point that knocked the stock was **BizLink (Credo's AEC cable partner) guiding a tempered first half with XA (a large customer) down**; but two offsets — (1) Credo is **ramping a second AEC source** (small/trailing-edge, even BizLink doesn't see it), and (2) **package-and-test DSP volumes up ~50–60% in Q1/Q2**, still implying a Credo beat-and-raise. AEC builds are lumpy and Credo already cycled one XA down-cycle (guided XA down, other customers up — and those customers wanted product Credo couldn't supply). On memory tiering, CRDO has a longer-term CXL-expander play alongside Marvell/Astera (Citi/Blaine, 2026-05-22).
 - **650 Group — networking research** _(2026-05-26)_: constructive on the **AEC market** — "a lot of robust growth ahead." Only ~half-dozen customers are on 800G/100G-per-lane today; the rest of the industry is still on 400G or 56/28G-per-lane, and as the whole X86/GPU server complex moves to 100G-per-lane (where you can't do passive copper) AECs become the attractive solution. **CPO concern is "both overblown and much further into the future"** — multi-rack scale-up is incremental and doesn't touch existing back-/front-end topologies, so **copper lasts far longer than people anticipate**; **400G-per-lane can still be copper** (no longer up for debate). Credo's **ZeroFlap optics has neat features beyond being another 1.6T DSP**, and **ALCs (Active LED / micro-LED) open a new market**; new DSP entrants (Nvidia, Cisco/Acacia, Credo ZeroLink) make the bigger 1.6T market attractive even at lower share (650 Group, 2026-05-26).
 
-## Intra-quarter — calls, comentários & relatórios
+## Intra-quarter — calls, commentary & reports
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q4 FY26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q4 FY26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Óptica (2ª perna)** | Subiu p/ >$600M FY27 (3 legs >$100M, +80%); floor ~$1,2B FY28 | BTG/LightCounting (Bob): Credo ("Kretos") **líder dos novos entrantes em DSP óptico** + integração vertical ZeroFlap (c/ Oracle) | **✓ confirma** (óptica decolando) |
-| **AEC (core copper)** | Motor de crescimento; hyperscaler + Neocloud; PCIe Gen6 MP 1H FY27 | BTG: AECs com "futuro brilhante" (substituindo DAC passivo); Credo cresceu adicionando clientes apesar da competição | **✓ confirma** (AEC durável) |
-| **Competição / agilidade** | (Líder AEC ~80% share) | BTG: menores (Credo, Astera) "mais ágeis e rápidas" no AI; MRVL foi lento p/ ramar AECs via parceiros | **✓ confirma** (incumbente lento) |
-| **Valuation** | (n/a — gestão não comenta múltiplo) | BofA/Arya (pré-print): Buy PO $210 (30x CY27), mas riscos de competição MRVL/AVGO + adoção AEC lenta | **⚠ nuança** ("show-me" pós-print) |
+| **Optical (2nd leg)** | Raised to >$600M FY27 (3 legs >$100M, +80%); floor ~$1.2B FY28 | BTG/LightCounting (Bob): Credo ("Kretos") **leader among the new optical-DSP entrants** + vertical ZeroFlap integration (with Oracle) | **✓ confirms** (optical taking off) |
+| **AEC (core copper)** | Growth engine; hyperscaler + Neocloud; PCIe Gen6 MP 1H FY27 | BTG: AECs have a "bright future" (displacing passive DAC); Credo grew by adding customers despite competition | **✓ confirms** (AEC durable) |
+| **Competition / agility** | (AEC leader ~80% share) | BTG: the smaller players (Credo, Astera) "more agile and faster" in AI; MRVL was slow to ramp AECs via partners | **✓ confirms** (incumbent slow) |
+| **Valuation** | (n/a — management doesn't comment on the multiple) | BofA/Arya (pre-print): Buy PO $210 (30x CY27), but risks from MRVL/AVGO competition + slow AEC adoption | **⚠ nuance** ("show-me" post-print) |
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 05-13 | BofA · Vivek Arya | valuation | bull | CRDO entre os nomes compute/óptica de alto crescimento; **rating BUY (C-1-9), PO $210** (30x CY27 PE, dentro do range de peers 22x-60x). Riscos de downside: competição de MRVL/AVGO em larga escala, adoção lenta de AEC, downturn de hyperscalers, incapacidade de escalar. (BofA "AI 2030", 2026-05-13) — _pré-print Q4; superado pela tabela pós-Q4 (Jefferies $270 / Barclays $260 / JPM $250) na seção de sell-side._ |
-| 06-25 | BTG · LightCounting call | competição | bull | Expert (Bob) sobre **Credo (referido como "Kretos")**: é o **líder dos novos entrantes em DSP óptico**, focado em China/baixo-custo, mas também fazendo algo incomum — **integração vertical com transceivers ZeroFlap** (mesmo playbook dos AECs, produto completo; desenvolvido c/ Oracle OCI). Ranqueia os entrantes near-term **Kretos > MaxLinear > Qualcomm**. Em AECs vê **futuro brilhante** (substituindo DAC passivo dentro/entre racks) — "fez um trabalho tremendo adicionando clientes e crescendo apesar da competição de incumbentes maiores"; pivotando p/ óptica. Empresas menores (Credo, Astera) "mais ágeis e rápidas" no AI vs incumbentes (ex.: MRVL foi lento p/ ramar AECs via parceiros de cabo). (BTG "LightCounting", 2026-06-25) |
+| 05-13 | BofA · Vivek Arya | valuation | bull | CRDO among the high-growth compute/optical names; **rating BUY (C-1-9), PO $210** (30x CY27 PE, within the peer range of 22x-60x). Downside risks: MRVL/AVGO competition at scale, slow AEC adoption, a hyperscaler downturn, inability to scale. (BofA "AI 2030", 2026-05-13) — _pre-print Q4; superseded by the post-Q4 table (Jefferies $270 / Barclays $260 / JPM $250) in the sell-side section._ |
+| 06-25 | BTG · LightCounting call | competition | bull | Expert (Bob) on **Credo (referred to as "Kretos")**: it is the **leader among the new optical-DSP entrants**, focused on China/low-cost, but also doing something unusual — **vertical integration with ZeroFlap transceivers** (same playbook as the AECs, a complete product; developed with Oracle OCI). Ranks the near-term entrants **Kretos > MaxLinear > Qualcomm**. On AECs he sees a **bright future** (displacing passive DAC within/between racks) — "did a tremendous job adding customers and growing despite competition from larger incumbents"; pivoting to optical. The smaller companies (Credo, Astera) are "more agile and faster" in AI vs incumbents (e.g., MRVL was slow to ramp AECs via cable partners). (BTG "LightCounting", 2026-06-25) |
 
-**Síntese do quarter:** o fluxo de especialistas (BTG) é confirmatório nas duas pernas — óptica decolando (Credo líder dos novos DSPs + vertical ZeroFlap) e AEC durável com agilidade vs incumbentes lentos —, mas o debate de mercado migrou da tese para a **qualidade do beat**: após o print, a ação caiu ~15% e entrou em "show-me" sobre quando a receita re-acelera, apesar do raise.
+**Quarter synthesis:** the expert flow (BTG) is confirmatory on both legs — optical taking off (Credo the leader among the new DSPs + the ZeroFlap vertical) and AEC durable with agility vs slow incumbents — but the market debate shifted from the thesis to the **quality of the beat**: after the print, the stock fell ~15% and entered "show-me" mode on when revenue re-accelerates, despite the raise.
 
 ## Management commentary — evolution (last 4 quarters)
 
@@ -148,7 +166,7 @@ _Source: CRDO earnings calls (dates above); management commentary, paraphrased._
   - [Citi (Blaine Curtis) — Asia checks / AI silicon (2026-05-22)](../relat%C3%B3rios%20bons/2026_05_22_jef_asia_recal_call_22_may_2026.html) — CRDO top pick; BizLink/XA bear point + 2nd-source and DSP P&T-volume offsets.
   - [650 Group — networking research (2026-05-26)](../relat%C3%B3rios%20bons/2026_05_26_650_group_26_05.html) — AEC robust growth, CPO concern overblown/far out, copper at 400G/lane, ZeroFlap/ALC optionality.
   - [BofA (Vivek Arya) — "AI 2030: Stronger for Longer" (2026-05-13)](../relat%C3%B3rios%20bons/Vivek_State_of_the_union.html) — CRDO Buy, PO $210 (30x CY27); riscos competição MRVL/AVGO + adoção AEC (pré-print Q4).
-  - [BTG — LightCounting optics/CPO expert call (2026-06-25)](../relat%C3%B3rios%20bons/BTG_LightCounting_Optics_Expert_Call_2026-06-25.html) — Credo ("Kretos") líder dos novos entrantes em DSP óptico + integração vertical (ZeroFlap, c/ Oracle); futuro brilhante p/ AECs; menores (Credo/Astera) mais ágeis que incumbentes.
+  - [BTG — LightCounting optics/CPO expert call (2026-06-25)](../relat%C3%B3rios%20bons/BTG_LightCounting_Optics_Expert_Call_2026-06-25.html) — Credo ("Kretos") leader among the new entrants in optical DSP + vertical integration (ZeroFlap, with Oracle); bright future for AECs; smaller players (Credo/Astera) more agile than incumbents.
 - **Briefings:** ~42 hits across `E:\briefings\2026\*` — Q4 print recap + sell-side PT table (2026-06-01/02), copper-vs-optical FinTwit debate (2026-05-12/13/14), connectivity bucketing + 12m relative highs (2026-06-19). JPM "Chips for Breakfast" thread context.
 - **Themes:** [optical-cpo](themes/optical-cpo.md) (CRDO in stronger copper+optics bucket vs pure-play optics); [custom-asic-tpu](themes/custom-asic-tpu.md) (AI back-end/scale-up interconnect read-through).
 - **Outlook / sell-side emails:** no Outlook tool available in this environment — none pulled directly. Sell-side stances above are quoted from the on-disk briefing roll-ups (JPM, Jefferies, Barclays, GS, SIG, Vital Knowledge) and the research reports listed above, attributed by bank + date.

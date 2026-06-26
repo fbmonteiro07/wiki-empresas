@@ -2,6 +2,24 @@
 
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\CIEN` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\CIEN.md`. Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $6.6bn | $8.5bn |
+| Gross profit | $3.0bn | $3.9bn |
+| Gross margin | 44.7% | 45.7% |
+| EBITDA | $1.5bn | $2.1bn |
+| EPS | $6.99 | $10.78 |
+| Capex | $259m | $298m |
+| OCF (≈EBITDA) | $1.5bn | $2.1bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="25.4" width="20" height="32.6" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="17.4" width="20" height="40.6" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="16.2" width="20" height="41.8" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+8.4% 3m · +34.8% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="27.9" width="20" height="30.1" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="21.5" width="20" height="36.5" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="18.4" width="20" height="39.6" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+20.6% 3m · +46.0% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Ciena is the merchant leader in high-speed optical networking — the "highways" that carry data across metro, long-haul, subsea and now data-center interconnect (DCI). Three revenue pillars: **Systems** (optical line systems/RLS + WaveLogic coherent modems, plus Routing & Switching incl. DCOM), **Interconnects** (400G/800G ZR coherent pluggables + the Nubis CPO/linear-redriver assets), and **Software & Services** (Navigator/Blue Planet + install/maintenance). Customer base splits roughly into cloud/hyperscalers and service providers; in Q2-FY26 two cloud customers were each >10% of revenue and together ~1/3 of the quarter (Q2 FY26, 2026-06-04). The thesis is that Ciena sits directly in the path of AI-driven network spend — both the WAN connecting AI data centers ("scale across") and increasingly inside/around the campus.
 
@@ -42,33 +60,33 @@ Ciena is the merchant leader in high-speed optical networking — the "highways"
 - **Competition / tech transitions** — Nokia/Cisco in coherent + line systems; Marvell, Broadcom as coherent/CPO move inside the data center; component vendors attempting to move up into systems (McFeely, Q2 FY26; equity call 2026-06-12).
 - **Valuation de-rate** — high-multiple AI name (re-rated to 30x+ NTM vs ~17x historical); any growth or supply wobble amplified (UBS, 2026-06-05; JPM, 2025-12-15; Redburn, 2026-05-19).
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q2 FY26 · Jun 04 → Jun 23, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q2 FY26 · Jun 04 → Jun 23, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q2 FY26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q2 FY26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Backlog / guidance** | Backlog $7,7B (+$600M QoQ), ~80% entregável em 12m, "visibilidade bem além das normas"; guide elevado 3ª vez | JPM (Chatterjee): OW PT $635, ~90% EPS CAGR FY25-28E · Citi: PT $658 | **✓ confirma** (sell-side eleva PT) |
-| **Cloud / scale-across** | Direct cloud +70% YoY; 1ª ordem multi-rail Hyper-Rail ("centenas de milhões em vários anos") | BofA: óptica > HDD, clientes assinam LTAs de até 5 anos travando supply | **✓ confirma** (lock-up de supply) |
-| **Margem** | GM ajustada 44,9% (+4pts YoY); "waypoint, não destino", rumo a upper-40s c/ caminho a 50%+ | Citi (Tóquio/Taipei): GM rumo a upper-40s c/ caminho a 50%+ via re-engenharia + mix | **✓ confirma** (margem compounding) |
-| **Valuation** | (n/a — rev FY26 ~+32%, EPS ~3x) | UBS (Vogt): Neutral, "85x NTM = expectativas desalinhadas" · Redburn (Mike): "can't get my numbers high enough", ~2,5x PEG | **✗ contesta** (múltiplo esticado) |
+| **Backlog / guidance** | Backlog $7.7B (+$600M QoQ), ~80% deliverable within 12m, "visibility well beyond norms"; guide raised for the 3rd time | JPM (Chatterjee): OW PT $635, ~90% EPS CAGR FY25-28E · Citi: PT $658 | **✓ confirms** (sell-side raises PT) |
+| **Cloud / scale-across** | Direct cloud +70% YoY; 1st multi-rail Hyper-Rail order ("hundreds of millions over several years") | BofA: optical > HDD, customers signing LTAs of up to 5 years locking in supply | **✓ confirms** (supply lock-up) |
+| **Margin** | Adjusted GM 44.9% (+4pts YoY); "waypoint, not destination", heading toward upper-40s w/ a path to 50%+ | Citi (Tokyo/Taipei): GM heading toward upper-40s w/ a path to 50%+ via re-engineering + mix | **✓ confirms** (margin compounding) |
+| **Valuation** | (n/a — FY26 rev ~+32%, EPS ~3x) | UBS (Vogt): Neutral, "85x NTM = misaligned expectations" · Redburn (Mike): "can't get my numbers high enough", ~2.5x PEG | **✗ contests** (stretched multiple) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
 | 05-19 | Rothschild/Redburn · Mike (optical call) | valuation | bear | Redburn's Mike loves the story but "can't get my numbers high enough to justify the share price" — even assuming a US$7B scale-across TAM and ~50% Ciena share by 2030 he barely reaches the price; stock at ~2.5x PEG, range-bound. |
 | 06-04 | CIEN · Q2 FY26 earnings call (Marc Graff) | guidance | bull | Backlog US$7.7B (+US$600M QoQ), ~US$6.4B hardware, ~80% deliverable within 12 months — "visibility well beyond historical norms". Guidance raised for the 3rd time this FY: FY26 revenue US$6.3B ±US$100M (~+32% YoY), GM 44.5–45%; Q3 ~US$1.625B. |
-| 06-04 | CIEN · Q2 FY26 earnings call (Gary Smith) | produto | bull | Industry-first multi-rail (RLS Hyper-Rail) order from a leading hyperscaler — "hundreds of millions over multiple years", linear revenue in '27; second DCOM order + a third in qualification; competitive coherent-module takeaway at a large hyperscaler. TAM framed to ~double to ~US$50B by 2029. |
+| 06-04 | CIEN · Q2 FY26 earnings call (Gary Smith) | product | bull | Industry-first multi-rail (RLS Hyper-Rail) order from a leading hyperscaler — "hundreds of millions over multiple years", linear revenue in '27; second DCOM order + a third in qualification; competitive coherent-module takeaway at a large hyperscaler. TAM framed to ~double to ~US$50B by 2029. |
 | 06-05 | JPM · Samik Chatterjee | valuation | bull | JPM (Chatterjee) OW, PT US$635, ~90% EPS CAGR FY25-28E. |
 | 06-05 | Citi · Atif Malik | valuation | bull | Citi (Atif Malik) PT raised to US$658 on the print. |
 | 06-05 | UBS · Vogt | valuation | bear | UBS (Vogt) Neutral — "85x NTM = misaligned expectations", limited upside on supply/margin. |
 | 06-12 | BofA · optical supply-chain call | supply | bull | BofA frames optical-sector fundamentals as stronger than HDD: optical companies sign LTAs of up to 5 years and add unit/InP capacity, while the HDD duopoly adds no capacity; customers are now locking up supply rather than chasing demand visibility. |
-| 06-12 | Ciena · optical equity call | margem | bull | Margins compounding: vertical integration (WaveLogic 6 + Nano "everything in there is Ciena"), 250+ cost-reduction programs, pricing/value-exchange and a richer Hyper-Rail/DCOM mix — 45% GM is a "waypoint, not the destination". Targets >2x pluggable revenue vs 2025 and #1 or near-#1 in 800G share exiting the year. |
-| 06-23 | Citi · Atif Malik (Asia Investor Meeting) | margem | bull | Citi hosted CFO Marc Graff + IR Patti Trautwein in Tokyo and Taipei. Buy, PT US$658. Early-stage scaling story: revenue ~+32% and EPS nearly triples; TAM doubling to ~US$50B by 2029; GM heading toward upper-40s with a path to 50%+ (product re-engineering + mix); operating leverage from R&D reuse + a concentrated hyperscaler base lowering S&M. |
+| 06-12 | Ciena · optical equity call | margin | bull | Margins compounding: vertical integration (WaveLogic 6 + Nano "everything in there is Ciena"), 250+ cost-reduction programs, pricing/value-exchange and a richer Hyper-Rail/DCOM mix — 45% GM is a "waypoint, not the destination". Targets >2x pluggable revenue vs 2025 and #1 or near-#1 in 800G share exiting the year. |
+| 06-23 | Citi · Atif Malik (Asia Investor Meeting) | margin | bull | Citi hosted CFO Marc Graff + IR Patti Trautwein in Tokyo and Taipei. Buy, PT US$658. Early-stage scaling story: revenue ~+32% and EPS nearly triples; TAM doubling to ~US$50B by 2029; GM heading toward upper-40s with a path to 50%+ (product re-engineering + mix); operating leverage from R&D reuse + a concentrated hyperscaler base lowering S&M. |
 
-**Síntese do quarter:** os fundamentos (backlog $7,7B, cloud +70%, GM 44,9%) estão amplamente confirmados pelo fluxo — incluindo o lock-up de supply via LTAs (BofA) — e o debate migrou inteiramente para *valuation*: bulls (JPM PT $635, Citi $658) vs bears que reconhecem a história mas não conseguem justificar o preço (UBS "85x NTM", Redburn "can't get my numbers high enough").
+**Quarter synthesis:** the fundamentals (backlog $7.7B, cloud +70%, GM 44.9%) are broadly confirmed by the flow — including the supply lock-up via LTAs (BofA) — and the debate shifted entirely to *valuation*: bulls (JPM PT $635, Citi $658) vs bears who acknowledge the story but can't justify the price (UBS "85x NTM", Redburn "can't get my numbers high enough").
 
 ## Management commentary — evolution (last 4 quarters)
 | Theme | Q2 FY24 (2024-06-06) | Q4 FY25 (2025-12-11) | Q1 FY26 (2026-03-05) | Q2 FY26 (2026-06-04) |
@@ -89,7 +107,7 @@ _Source: CIEN earnings calls (dates above); management commentary, paraphrased._
 - **Filings:** [10-K 2025-12-12](../CIEN/CIEN_10-K_2025-12-12_0001628280-25-056698.html); [10-Q 2026-06-04](../CIEN/CIEN_10-Q_2026-06-04_0001628280-26-040767.html).
 - **Transcripts:** [Q2 FY26 (2026-06-04)](../CIEN/transcripts/CIEN_Q2-FY26-earnings_2026-06-04.md); [Q1 FY26 (2026-03-05)](../CIEN/transcripts/CIEN_Q1-FY26-earnings_2026-03-05.md).
 - **Decks:** Investor Innovation Day 2025-09-25 (referenced; see INDEX).
-- **Equity calls:** 2 — [2026-06-12 Ciena optical](../_equity_calls/Semis/2026-06-12_Ciena_optical.md); [2026-05-19 Rothschild/Redburn optical](../_equity_calls/Semis/2026-05-19_Rothschild_optical.md). (ver seção CIEN no [INDEX](../INDEX.md))
+- **Equity calls:** 2 — [2026-06-12 Ciena optical](../_equity_calls/Semis/2026-06-12_Ciena_optical.md); [2026-05-19 Rothschild/Redburn optical](../_equity_calls/Semis/2026-05-19_Rothschild_optical.md). (see the CIEN section in [INDEX](../INDEX.md))
 - **Briefings:** [roll-up](../_briefings/by-ticker/CIEN.md) — 6 datapoints / 3 days.
 - **Research reports (relatórios bons):**
   - [JPM Hardware & Networking (2025-12-15)](../relat%C3%B3rios%20bons/JPM_Hardware___Networkin_2025-12-15_5155719.html)

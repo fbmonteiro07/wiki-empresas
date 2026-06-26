@@ -2,6 +2,24 @@
 
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\SHOP` (10-K/10-Q + transcripts) · `_briefings` (May–Jun 2026 roll-up). Master index: [00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $14.7bn | $18.1bn |
+| Gross profit | $7.0bn | $8.5bn |
+| Gross margin | 47.2% | 46.9% |
+| EBITDA | $2.7bn | $3.4bn |
+| EPS | $1.87 | $2.43 |
+| Capex | $30m | $37m |
+| OCF (≈EBITDA) | $2.7bn | $3.4bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="14.3" width="20" height="43.7" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="15.0" width="20" height="43.0" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+2.3% 3m · +0.6% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="14.4" width="20" height="43.6" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.4" width="20" height="43.6" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.4" width="20" height="43.6" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">-0.9% 3m · -0.1% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Global commerce operating system: a multi-tenant cloud platform that lets merchants — SMB to enterprise — start, run and scale a business across online, offline (POS), B2B and social/marketplace channels. Two revenue legs: **Subscription Solutions** (~24% of rev; recurring plan fees, Plus/enterprise, apps, themes, domains) and **Merchant Solutions** (~76% of rev; payments, capital/lending, shipping, ads/Shop Campaigns) — the latter is GMV-correlated and the growth engine, but lower-margin (Shopify Payments drags blended GM) (10-Q Q1 FY26, 2026-05-05). FY25: **GMV $378B (+29%), revenue $11.6B (+30%), FCF $2.0B / 17% margin** (Q4 FY25 call, 2026-02-11). >21,000 apps in the App Store; ~7,600 employees; >14% of U.S. e-commerce; ~half of merchants now outside North America (10-K FY25, 2026-02-11). In the AI value chain SHOP is a **commerce-platform/payments layer** — consumes cloud (Google Cloud) + payment rails, sells software + take-rate to merchants — and is positioning to be the **transaction back-end for agentic commerce** via UCP and Agentic Storefronts. Founder/CEO Tobi Lütke holds a Founder Share (concentrated voting). Files as a U.S. domestic-style registrant despite foreign-private-issuer status.
 
@@ -92,36 +110,36 @@ SHOP sits between infrastructure suppliers (cloud compute, card networks/acquire
 - **Rothschild TMT Daily** _(2026-06-19)_: SHOP in focus (with AMZN/META).
 - **JPM 'Agentic World: AMZN/WMT Deep Dive'** _(2026-06-18)_: the agentic-commerce debate — AI agents as TAM-expander vs LLM-storefront disintermediation.
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 FY26 · May 5 → Jun 22, 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 FY26 · May 5 → Jun 22, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1 FY26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1 FY26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Demanda / GMV** | GMV $101B (+35% y/y, +30% cc); 2º trimestre >$100B | JPM (Smilek/Anmuth): canal Platinum-partner bullish, demanda sólida; MS AlphaWise: POS ~2x y/y, ~4 serviços/merchant | **✓ confirma** (canais corroboram) |
-| **Margem** | FCF $476M (15% margem) | JPM desk: custo de tokens AI ~$9M/Q (~120bps Sub GM, headwind FY26 ~160bps); UBS Chiodo: Shop Campaigns como leg incremental de monetização | **⚠ nuança** (token cost vs upside ads) |
-| **Agentic / AI** | Tráfego AI +8x, pedidos AI ~+13x; UCP escalando | MS Spec-Sales: "big getting bigger" (SHOP no inventory); JPM: debate TAM-expander vs disintermediação por storefronts LLM | **⚠ nuança** (cara dupla do agentic) |
-| **Produto** | UCP com Amazon/Meta/MSFT/Salesforce/Stripe | JPM: Spring '26 Editions 150+ updates, AI Catalog ~2x conversões, Shop Pay p/ marcas não-SHOP (250M+) | **✓ confirma** (roadmap entregando) |
-| **Guidance / comp** | Q2 guide receita high-20s%; só ~0,5pt FX | Rothschild (Chaudhury): Q3 guide "just enough", comps H2 ~400bps mais duros, short interest subindo | **⚠ nuança** (comp de H2 aperta) |
+| **Demand / GMV** | GMV $101B (+35% y/y, +30% cc); 2nd quarter >$100B | JPM (Smilek/Anmuth): Platinum-partner channel bullish, demand solid; MS AlphaWise: POS ~2x y/y, ~4 services/merchant | **✓ confirms** (channels corroborate) |
+| **Margin** | FCF $476M (15% margin) | JPM desk: AI token cost ~$9M/Q (~120bps Sub GM, FY26 headwind ~160bps); UBS Chiodo: Shop Campaigns as an incremental monetization leg | **⚠ nuance** (token cost vs ads upside) |
+| **Agentic / AI** | AI traffic +8x, AI orders ~+13x; UCP scaling | MS Spec-Sales: "big getting bigger" (SHOP on inventory); JPM: TAM-expander vs disintermediation-by-LLM-storefronts debate | **⚠ nuance** (double edge of agentic) |
+| **Product** | UCP with Amazon/Meta/MSFT/Salesforce/Stripe | JPM: Spring '26 Editions 150+ updates, AI Catalog ~2x conversions, Shop Pay for non-SHOP brands (250M+) | **✓ confirms** (roadmap delivering) |
+| **Guidance / comp** | Q2 guide revenue high-20s%; only ~0.5pt FX | Rothschild (Chaudhury): Q3 guide "just enough", H2 comps ~400bps harder, short interest rising | **⚠ nuance** (H2 comp tightens) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 05-06 | JPM (desk) | margem | bear | JPM TMT desk recurring "AI Token Costs Eating Internet Profits Alive" (SHOP/SPOT/META/PINS): models ~$9M hit to Subscription COGS in Q1 (~120bps of Sub GM / ~30bps of total GM), with a 2026 y/y headwind of ~160bps/~40bps to Sub/Total GM. |
+| 05-06 | JPM (desk) | margin | bear | JPM TMT desk recurring "AI Token Costs Eating Internet Profits Alive" (SHOP/SPOT/META/PINS): models ~$9M hit to Subscription COGS in Q1 (~120bps of Sub GM / ~30bps of total GM), with a 2026 y/y headwind of ~160bps/~40bps to Sub/Total GM. |
 | 05-06 | DB · Bhavin Shah | valuation | bull | DB (Bhavin Shah): "strong 1Q presents a buying opportunity". |
-| 05-13 | Morgan Stanley (PYPL note) | competicao | mixed | MS PYPL bear note cites "Apple/Shopify/agentic" as a competitive-intensity vector in payments — the same agentic shift cuts both ways. |
-| 05-20 | Morgan Stanley · TMT Spec-Sales | demanda | bull | MS TMT Spec-Sales: agentic commerce = "big getting bigger" — GOOGL on data/protocol, AMZN on logistics, SHOP on inventory. |
+| 05-13 | Morgan Stanley (PYPL note) | competition | mixed | MS PYPL bear note cites "Apple/Shopify/agentic" as a competitive-intensity vector in payments — the same agentic shift cuts both ways. |
+| 05-20 | Morgan Stanley · TMT Spec-Sales | demand | bull | MS TMT Spec-Sales: agentic commerce = "big getting bigger" — GOOGL on data/protocol, AMZN on logistics, SHOP on inventory. |
 | 05-28 | Rothschild · Raj Chaudhury | guidance | bear | Rothschild (Chaudhury, Buy but cautious): Q2 ok but Q3 guide "just enough"; bears gain ammunition intra-quarter; H2 comps ~400bps harder; Q2 guide implies ~29-30% cc vs 30% in Q1; short interest rising; competitive pressure from Stripe + Meta + agentic ecommerce. |
-| 05-29 | Morgan Stanley · AlphaWise | demanda | bull | MS AlphaWise: POS adoption ~2x y/y, merchants now run ~4 Shopify services (was ~3); "XYZ/SHOP/Stripe momentum". |
+| 05-29 | Morgan Stanley · AlphaWise | demand | bull | MS AlphaWise: POS adoption ~2x y/y, merchants now run ~4 Shopify services (was ~3); "XYZ/SHOP/Stripe momentum". |
 | 06-09 | JPM · Smilek/Anmuth | valuation | bull | JPM (Smilek/Anmuth): Overweight, PT $150 — 3-year GMV/GP CAGR 20%+, FCF ~30%, OpInc 30%+; positive Platinum-partner channel check — "low META disruption risk", enterprise bullish, Sidekick strong, demand solid. |
-| 06-12 | JPM · Smilek/Anmuth | produto | bull | JPM: Spring 2026 Editions — 150+ updates, AI Catalog ~2x conversions vs scraped data, Shop Pay expanding to non-SHOP brands (250M+ shoppers). OW PT $150 reiterated. |
-| 06-18 | JPM · 'Agentic World: AMZN/WMT Deep Dive' | demanda | mixed | JPM (Outlook): agentic-commerce debate — AI agents as TAM-expander vs disintermediation by LLM storefronts. |
+| 06-12 | JPM · Smilek/Anmuth | product | bull | JPM: Spring 2026 Editions — 150+ updates, AI Catalog ~2x conversions vs scraped data, Shop Pay expanding to non-SHOP brands (250M+ shoppers). OW PT $150 reiterated. |
+| 06-18 | JPM · 'Agentic World: AMZN/WMT Deep Dive' | demand | mixed | JPM (Outlook): agentic-commerce debate — AI agents as TAM-expander vs disintermediation by LLM storefronts. |
 | 06-19 | Rothschild · TMT Daily | valuation | neutral | Rothschild TMT Daily (Outlook): SHOP in focus (with AMZN/META). |
-| 06-22 | UBS · Chiodo | margem | bull | UBS (Chiodo, Outlook): 'Shopify: Shop Campaigns Overview & Analysis' — ~20-page deep dive into the Shop Campaigns ads product as an incremental monetization leg, with an illustrative framework to quantify the potential take-rate/attach upside; no specific dollar/GM figures disclosed. |
+| 06-22 | UBS · Chiodo | margin | bull | UBS (Chiodo, Outlook): 'Shopify: Shop Campaigns Overview & Analysis' — ~20-page deep dive into the Shop Campaigns ads product as an incremental monetization leg, with an illustrative framework to quantify the potential take-rate/attach upside; no specific dollar/GM figures disclosed. |
 
-**Síntese do quarter:** o debate migrou de "crescimento de GMV" (confirmado, canais bullish) para a sustentabilidade da margem — custo de inferência AI vs novas pernas de monetização (Shop Campaigns/Shop Pay) — e para a faca de dois gumes do agentic commerce (TAM-expander vs disintermediação por storefronts LLM), com comps de H2 dando munição aos bears.
+**Quarter synthesis:** the debate has shifted from "GMV growth" (confirmed, channels bullish) to margin sustainability — AI inference cost vs new monetization legs (Shop Campaigns/Shop Pay) — and to the double-edged sword of agentic commerce (TAM-expander vs disintermediation by LLM storefronts), with H2 comps giving the bears ammunition.
 
 ## Management commentary — evolution (last 4 quarters)
 

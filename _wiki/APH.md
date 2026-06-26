@@ -4,6 +4,24 @@
 
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\APH` (filings + transcripts) · `_equity_calls` · `_briefings`. Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $33.0bn | $38.1bn |
+| Gross profit | $12.6bn | $14.7bn |
+| Gross margin | 38.1% | 38.5% |
+| EBITDA | $11.5bn | $15.7bn |
+| EPS | $4.68 | $5.55 |
+| Capex | $1.3bn | $1.4bn |
+| OCF (≈EBITDA) | $11.5bn | $15.7bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="20.6" width="20" height="37.4" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="18.0" width="20" height="40.0" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="14.5" width="20" height="43.5" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+10.1% 3m · +17.7% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="21.5" width="20" height="36.5" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="18.3" width="20" height="39.7" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="14.4" width="20" height="43.6" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+10.9% 3m · +20.7% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Amphenol is the world's #2 interconnect compounder — a serially-acquisitive, ultra-decentralized (145+ general managers) maker of connectors, cable, busbars, antennas and sensors. Three reportable segments at FY2025: **Communications Solutions ~52%** (high-speed, RF, power, fiber-optic connectors + cable + antennas), **Harsh Environment Solutions ~26%** (ruggedized mil-aero/industrial interconnect, printed circuits), **Interconnect and Sensor Systems ~22%** (busbars, power distribution, sensors) (10-K FY2025, 2026-02-11). By end market FY2025: **IT datacom 36%**, industrial 19%, automotive 15%, comms networks 10%, defense 9%, mobile devices 6%, commercial aero 5% (10-K, 2026-02-11). The equity story has flipped into a primary **AI-interconnect** name: IT datacom hit **just over 40% of sales in Q1 2026** with AI driving essentially all sequential growth (Q1-2026 call, 2026-04-29). On top of organic, APH closed the **$10.5B CommScope (CCS) acquisition Jan 1, 2026** — its largest ever — adding fiber-optic and high-speed datacom/comms-network capacity (Q4-2025 call, 2026-01-28).
 
@@ -85,31 +103,31 @@ Record sales **$7.62B**, +58% USD / +57% local / **+33% organic** YoY; record ad
 - **Copper terminal-value debate** _(briefing 2026-05-12)_: GLW bull case argues CPO/optics erode copper content; JPM counters APH's optical optionality is under-credited.
 - **650 Group — networking research** _(2026-05-26)_: supportive of the copper-content-durability thesis. **400G-per-lane can still be copper** ("no longer up for debate" per the standards bodies) — Broadcom is pushing a full-copper scale-up solution at 400G/lane. In a **co-packaged-copper** architecture the connector business benefits — **Molex, Amphenol, TE, TTM** — with "higher-value connectors as the speed goes up," and a front-panel transceiver/AEC still sits in front. Net: copper "lives longer than people anticipate," a release valve on CPO that keeps APH interconnect content in play across scale-up/scale-out/switching (650 Group, 2026-05-26).
 
-## Intra-quarter — calls, comentários & relatórios (desde o último print)
-_Q1 FY26 · Apr 29 → Jun 22 2026 · sell-side / expert calls / relatórios entre os earnings. Timeline visual: [timeline.html](timeline.html)._
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1 FY26 · Apr 29 → Jun 22 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
-**Sinal vs gestão** — o que a gestão disse no último call × o que o fluxo intra-quarter está dizendo (✓ confirma · ⚠ nuança · ✗ contesta):
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
-| Tema | Gestão disse (Q1 FY26) | Fluxo intra-quarter | Sinal |
+| Theme | Management said (Q1 FY26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Demanda IT datacom / AI** | 41% da rev, +81% organic, +27% QoQ, "virtually all" do crescimento sequencial é IA | Orders recorde $9,44B, B2B 1,24:1 todos mkts ≥1.0; Citi/JPM amplificam o ângulo power-interconnect | **✓ confirma** (orders corroboram) |
-| **Power / 800V interconnect** | "Talk about the power part"; busbars líquido-refrigerados, core partner em racks de alta potência | JPM (Chatterjee): APH best-positioned no 800V, ~$150/XPU em power, content 5x/chip · Citi: HVDC sidecar → 800V, TAM ~40%+ CAGR | **✓ confirma** (sell-side amplifica) |
-| **Competição / share (cobre)** | Tese de power/cobre durável | 650 Group: cobre "vive mais do que esperam", 400G/lane ainda cobre — vs JPM (Meyers): narrativa GLW CPO ergue APH como share loser | **⚠ nuança** (cobre×CPO em aberto) |
-| **M&A / CommScope** | CCS crescendo ~no ritmo organic da APH; ~$4,1B sales / $0,15 EPS | JPM (Meyers): CCS "não verticalmente integrada como GLW" | **⚠ nuança** (integração questionada) |
+| **IT datacom / AI demand** | 41% of rev, +81% organic, +27% QoQ, "virtually all" of sequential growth is AI | Record orders $9.44B, B2B 1.24:1 all mkts ≥1.0; Citi/JPM amplify the power-interconnect angle | **✓ confirms** (orders corroborate) |
+| **Power / 800V interconnect** | "Talk about the power part"; liquid-cooled busbars, core partner in high-power racks | JPM (Chatterjee): APH best-positioned in 800V, ~$150/XPU in power, content 5x/chip · Citi: HVDC sidecar → 800V, TAM ~40%+ CAGR | **✓ confirms** (sell-side amplifies) |
+| **Competition / share (copper)** | Durable power/copper thesis | 650 Group: copper "lives longer than people expect", 400G/lane still copper — vs JPM (Meyers): GLW CPO narrative frames APH as a share loser | **⚠ nuance** (copper×CPO open) |
+| **M&A / CommScope** | CCS growing ~at APH's organic pace; ~$4.1B sales / $0.15 EPS | JPM (Meyers): CCS "not vertically integrated like GLW" | **⚠ nuance** (integration questioned) |
 
-**Log completo** (todo o fluxo intra-quarter, por data):
+**Full log** (all intra-quarter flow, by date):
 
-| Data | Fonte | Tema | Viés | O que disse |
+| Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
-| 04-29 | APH Q1-2026 call · Norwitt | produto | bull | Power thesis: 'We talk a lot about the data part of AI data centers… we should also talk a lot about the power part.' APH cites the 'broadest array of power interconnect from discrete connectors to very complex power cable assemblies, bus bars, liquid cooled bus bars', positioning itself as a 'core partner' as racks migrate to higher power capacities. |
-| 05-12 | briefing company-specific · JPM J. Meyers | competicao | bear | Copper-terminal-value narrative: the GLW bull case argues CPO/optics erodes copper content; APH framed as a share loser vs GLW's vertically integrated CPO; the CommScope deal seen as 'not vertically integrated like GLW'. JPM counters that APH's optical optionality is under-credited. |
-| 05-26 | 650 Group · networking research | competicao | bull | Supports the durability of copper content: 400G-per-lane can still be copper ('no longer up for debate' per standards bodies); Broadcom is pushing a full-copper scale-up solution. In a co-packaged-copper architecture the connector business benefits — Molex, Amphenol, TE, TTM — with higher-value connectors as speeds rise. Copper 'lives longer than people anticipate'. |
-| 06-09 | JPM · Samik Chatterjee (Watts Up! 800V) | produto | bull | JPM names APH (with FLEX/TEL/WOLF) best-positioned in the rewiring of the AI-DC power stack to 800V. Power solutions ~$150 of the ~$870 total interconnect content per XPU (content up 5x/chip in three years); AI power-interconnect TAM growing ~40%+ CAGR from ~$2bn (2025) to $4bn+ (2028). APH's 800V share: busbar connectors/assemblies, board-level power connectors, blind-mate power couplings and cable assemblies. CEO presenting at the BofA conference. |
+| 04-29 | APH Q1-2026 call · Norwitt | product | bull | Power thesis: 'We talk a lot about the data part of AI data centers… we should also talk a lot about the power part.' APH cites the 'broadest array of power interconnect from discrete connectors to very complex power cable assemblies, bus bars, liquid cooled bus bars', positioning itself as a 'core partner' as racks migrate to higher power capacities. |
+| 05-12 | briefing company-specific · JPM J. Meyers | competition | bear | Copper-terminal-value narrative: the GLW bull case argues CPO/optics erodes copper content; APH framed as a share loser vs GLW's vertically integrated CPO; the CommScope deal seen as 'not vertically integrated like GLW'. JPM counters that APH's optical optionality is under-credited. |
+| 05-26 | 650 Group · networking research | competition | bull | Supports the durability of copper content: 400G-per-lane can still be copper ('no longer up for debate' per standards bodies); Broadcom is pushing a full-copper scale-up solution. In a co-packaged-copper architecture the connector business benefits — Molex, Amphenol, TE, TTM — with higher-value connectors as speeds rise. Copper 'lives longer than people anticipate'. |
+| 06-09 | JPM · Samik Chatterjee (Watts Up! 800V) | product | bull | JPM names APH (with FLEX/TEL/WOLF) best-positioned in the rewiring of the AI-DC power stack to 800V. Power solutions ~$150 of the ~$870 total interconnect content per XPU (content up 5x/chip in three years); AI power-interconnect TAM growing ~40%+ CAGR from ~$2bn (2025) to $4bn+ (2028). APH's 800V share: busbar connectors/assemblies, board-level power connectors, blind-mate power couplings and cable assemblies. CEO presenting at the BofA conference. |
 | 06-11 | JPM · AI-power desk call (equity call) | valuation | mixed | APH described as a 'modest crowded long' on the buy-side. JPM hosted a 'super meeting with Adam Norwitt' that drew attention. |
-| 06-12 | Ciena optical (equity call) | competicao | bull | Read-through: APH is a scale-up ACC cable partner (Ciena Nitro redriver → Luxshare/Amphenol/TE). |
-| 06-15 | Citi · 800V DC power | produto | bull | APH favorably positioned alongside TEL — 800V drives 'more specialized and higher value-added power distribution and connectivity', supporting datacom/data-network growth. Citi sees ±400V HVDC sidecar (CSP-driven, OCP 'Mount Diablo') adopted first (250kW-1MW racks), then NVDA 800V sidecars with Rubin Ultra in late 2H27, SST-based 800V for >1MW from ~2029. |
+| 06-12 | Ciena optical (equity call) | competition | bull | Read-through: APH is a scale-up ACC cable partner (Ciena Nitro redriver → Luxshare/Amphenol/TE). |
+| 06-15 | Citi · 800V DC power | product | bull | APH favorably positioned alongside TEL — 800V drives 'more specialized and higher value-added power distribution and connectivity', supporting datacom/data-network growth. Citi sees ±400V HVDC sidecar (CSP-driven, OCP 'Mount Diablo') adopted first (250kW-1MW racks), then NVDA 800V sidecars with Rubin Ultra in late 2H27, SST-based 800V for >1MW from ~2029. |
 
-**Síntese do quarter:** o debate migrou da demanda (IA confirmada por orders recorde e B2B 1,24:1) para a *durabilidade do conteúdo de cobre* face ao CPO da GLW — com o sell-side dividido (650 Group bull no cobre, JPM cético no posicionamento óptico) — enquanto o ângulo power/800V virou consenso bullish e ajudou a justificar o status de "crowded long".
+**Quarter synthesis:** the debate shifted from demand (AI confirmed by record orders and B2B 1.24:1) to the *durability of copper content* against GLW's CPO — with the sell-side split (650 Group bullish on copper, JPM skeptical on the optical positioning) — while the power/800V angle became a bullish consensus and helped justify the "crowded long" status.
 
 ## Management commentary — evolution (last 4 quarters)
 

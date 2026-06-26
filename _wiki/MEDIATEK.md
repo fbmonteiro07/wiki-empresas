@@ -6,6 +6,24 @@
 
 _Wiki · generated 2026-06-20 · **Taiwan issuer — no SEC filings**; sources: transcripts (`E:\Wiki Felipe\MEDIATEK\transcripts`) + MediaTek IR + BBG (**TWD**) · `_equity_calls` · briefings roll-up. Master index: [00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-06-22 · TWD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | NT$647.4bn | NT$1002.6bn |
+| Gross profit | NT$295.2bn | NT$446.2bn |
+| Gross margin | 45.6% | 44.5% |
+| EBITDA | NT$126.7bn | NT$240.9bn |
+| EPS | NT$64.81 | NT$121.18 |
+| Capex | NT$15.9bn | NT$18.0bn |
+| OCF (≈EBITDA) | NT$126.7bn | NT$240.9bn |
+
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="14.0" width="20" height="44.0" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="18.2" width="20" height="39.8" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="17.7" width="20" height="40.3" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="17.5" width="20" height="40.5" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+1.6% 3m · -8.0% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="25.1" width="20" height="32.9" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="22.8" width="20" height="35.2" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="15.0" width="20" height="43.0" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+25.1% 3m · +33.8% 6m</text></svg>
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 World's largest mobile-SoC vendor by units and a fast-emerging custom-ASIC house. FY25 revenue TWD 596bn (+12.3% y/y, >USD 19bn record), GM 47.5%, OpM 17.4%, EPS TWD 66.16 (Q4 FY25, 2026-02-04). Three reporting segments: **Mobile Phone** (Dimensity SoCs; 49% of Q1 FY26 rev), **Smart Edge Platforms** (connectivity/Wi-Fi/5G modem, compute, auto, edge-AI + the data-center ASIC business; 46%), and **Power IC** (5%) (Q1 FY26, 2026-04-30). The structural story is the pivot from a cyclical handset chipmaker to a data-center ASIC supplier: per JPM's Gopal Chatterjee, data center is ~30% of revenue in 2027 and could be **~60% in 2028** as TPU ramps, "essentially becoming a data center company from nothing in two to two-and-a-half years" (Gopal/Samik, 2026-06-10).
 
