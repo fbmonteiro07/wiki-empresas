@@ -23,13 +23,17 @@ STEPS = [
     ("build_readthrough.py", []),
     ("build_diff.py", []),
     ("build_catalysts.py", []),
+    ("build_gantt.py", []),
+    ("build_coverage.py", []),
 ]
 
 HUB = [
     ("Edge tracker", "edge.html", "House vs Street divergences (the alpha) — programmatic + curated."),
     ("Read-through map", "readthrough.html", "Supply-chain & substitutes: who reads through to whom."),
     ("Catalyst loop", "catalysts.html", "Upcoming calendar + passed catalysts awaiting a post-mortem."),
+    ("Catalyst timeline", "gantt.html", "Forward Gantt — every catalyst on one time axis (bar width = date precision)."),
     ("What changed", "diff.html", "Recent page changelog + ingest deltas (rating/PT moves starred)."),
+    ("Coverage audit", "coverage.html", "Source material on disk that the page never read (decks, calls, latest filings)."),
     ("Hyperscaler capex", "hyperscaler-capex/Capex_Cloud.html", "Consensus vs actual vs house cloud capex (existing)."),
 ]
 

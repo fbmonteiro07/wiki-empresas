@@ -1,0 +1,656 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>📌 Catalyst timeline (Gantt)</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font:15px/1.55 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#1a1f29;background:#f5f6f8}
+header{background:#0f1729;color:#fff;padding:18px 28px}
+header h1{margin:0;font-size:20px} header p{margin:4px 0 0;color:#8492ad;font-size:13px}
+header a{color:#7fb0ff;text-decoration:none}
+main{max-width:1180px;margin:0 auto;padding:24px 28px 80px}
+h2{font-size:17px;margin:26px 0 8px;color:#0f1729;border-bottom:1px solid #e3e7ee;padding-bottom:6px}
+table{border-collapse:collapse;width:100%;margin:10px 0;font-size:13px}
+th,td{border:1px solid #dde2ea;padding:6px 9px;text-align:left;vertical-align:top}
+th{background:#eef1f6;font-weight:700;cursor:pointer;user-select:none;white-space:nowrap;position:sticky;top:0}
+th:hover{background:#e2e7f0}
+tr:nth-child(even) td{background:#fafbfc}
+td.r,th.r{text-align:right;white-space:nowrap}
+.tk a{font-weight:700;color:#1c5fd6;text-decoration:none}
+.pos{color:#1c7d3f;font-weight:600} .neg{color:#c0392b;font-weight:600} .mut{color:#6b7280}
+.byline{color:#6b7280;font-size:12.5px}
+.pill{display:inline-block;padding:1px 7px;border-radius:10px;font-size:11px;font-weight:600}
+.pill.up{background:#e7f6ec;color:#1c7d3f} .pill.dn{background:#fdecea;color:#c0392b} .pill.due{background:#fff3cd;color:#8a6d1b}
+code{background:#eef1f6;padding:1px 5px;border-radius:4px;font-size:85%;font-family:ui-monospace,Consolas,monospace}
+</style></head><body>
+<header><h1>📌 Catalyst timeline (Gantt)</h1><p>2026-06-26 · 198 catalysts across 86 names · horizon 2026-06-01 → 2027-12-31 · <a href="../index.html">← back to wiki</a></p></header><main>
+<p class='byline'>Each bar's <b>width = date precision</b>: a point ◆ is an exact date, a wide bar is a quarter/half/year reference (honest about vagueness). Dates are heuristic — resolved from the words in each catalyst bullet; fiscal years approximated (NVDA FY=CY−1). Hover a bar for the full text; click a ticker to open its page.</p>
+<div class='legend'>
+<button class='lg' data-cat='regulatory' style='--c:#c0392b'><span class='sw'></span>regulatory</button>
+<button class='lg' data-cat='event' style='--c:#7c4dff'><span class='sw'></span>event</button>
+<button class='lg' data-cat='print' style='--c:#1c5fd6'><span class='sw'></span>print</button>
+<button class='lg' data-cat='product' style='--c:#1c7d3f'><span class='sw'></span>product</button>
+<button class='lg' data-cat='other' style='--c:#8492ad'><span class='sw'></span>other</button>
+</div>
+<div class='tl'>
+<div class='row head'><div class='lab'></div><div class='axis'>
+<span class='qlbl' style='left:0.0%'>Q2 '26</span>
+<span class='qlbl' style='left:5.19%'>Q3 '26</span>
+<span class='qlbl' style='left:21.107%'>Q4 '26</span>
+<span class='qlbl' style='left:37.024%'>Q1 '27</span>
+<span class='qlbl' style='left:52.595%'>Q2 '27</span>
+<span class='qlbl' style='left:68.339%'>Q3 '27</span>
+<span class='qlbl' style='left:84.256%'>Q4 '27</span>
+</div></div>
+<div class='tlbody'>
+<div class='grid'>
+<i class='gl' style='left:0.0%'></i>
+<i class='gl' style='left:5.19%'></i>
+<i class='gl' style='left:21.107%'></i>
+<i class='gl' style='left:37.024%'></i>
+<i class='gl' style='left:52.595%'></i>
+<i class='gl' style='left:68.339%'></i>
+<i class='gl' style='left:84.256%'></i>
+<i class='today' style='left:4.325%'></i><span class='todaylbl' style='left:4.325%'>today</span>
+</div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../AAOI.html'>AAOI</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="AAOI · 2026-01-01–2026-12-31 (year) · Q3 FY26 print — the validation event: did the step-function ramp (+60–80% Q/Q) and 800G volume actually land? …" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>AAOI</b> Q3 FY26 print — the validation event: did the st</span>
+</div></div>
+<div class='row' style='height:90px'>
+<div class='lab'><a href='../AAPL.html'>AAPL</a></div>
+<div class='track'>
+<span class='bar' data-cat='other' title="AAPL · 2026-01-01–2026-12-31 (year) · TSMC wafer-price pass-through: TSMC raised Apple&#x27;s wafer price only 1–2% in FY26 (vs ~10% for AI/HPC, ~5% for …" style='left:0.0%;width:36.851%;top:6px;--c:#8492ad'><b>AAPL</b> TSMC wafer-price pass-through: TSMC raised Apple</span>
+<span class='bar' data-cat='regulatory' title="AAPL · 2026-07-01–2026-12-31 (half) · Fall product cycle (mid-Sept): iPhone 18 Pro/Pro Max + foldable iPhone (~20m units, ~$2,400; iPhone 18 base re…" style='left:5.19%;width:31.660999999999998%;top:36px;--c:#c0392b'><b>AAPL</b> Fall product cycle (mid-Sept): iPhone 18 Pro/Pro</span>
+<span class='pt' data-cat='print' title="AAPL · 2026-09-01 (day) · Cook→Ternus CEO transition effective 2026-09-01; first earnings under Ternus is the Sept-qtr call (Oct)." style='left:15.917%;top:66px;--c:#1c5fd6'><i></i><b>AAPL</b> Cook→Ternus CEO transition effective 2026-</span>
+</div></div>
+<div class='row' style='height:90px'>
+<div class='lab'><a href='../ADI.html'>ADI</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="ADI · 2026-01-01–2026-12-31 (year) · FQ3 FY26 print (~Aug 2026): delivery vs the ~$3.9bn / $3.30 guide; whether the above-seasonal streak extends a…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>ADI</b> FQ3 FY26 print (~Aug 2026): delivery vs the ~$3.</span>
+<span class='bar' data-cat='regulatory' title="ADI · 2026-01-01–2026-12-31 (year) · Auto inflection: path to double-digit y/y FY26 (BMS, ADAS, GMSL) as China stabilizes." style='left:0.0%;width:36.851%;top:36px;--c:#c0392b'><b>ADI</b> Auto inflection: path to double-digit y/y FY26 (</span>
+<span class='bar' data-cat='regulatory' title="ADI · 2026-07-01–2026-12-31 (half) · Empower Semiconductor close (~2H CY26): integration detail; FY27 vertical-power-delivery ramp into AI accelera…" style='left:5.19%;width:31.660999999999998%;top:66px;--c:#c0392b'><b>ADI</b> Empower Semiconductor close (~2H CY26): integrat</span>
+</div></div>
+<div class='row' style='height:90px'>
+<div class='lab'><a href='../ADVANTEST.html'>ADVANTEST</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="ADVANTEST · 2026-01-01–2026-12-31 (year) · Q1 FY2026 print (late July 2026; AGM 2026-07-31) — first read on the flat-margin guide and whether AI/SoC orde…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>ADVANTEST</b> Q1 FY2026 print (late July 2026; AGM 2026-07-31)</span>
+<span class='bar' data-cat='product' title="ADVANTEST · 2026-01-01–2026-12-31 (year) · New hyperscaler ASIC customer ramping with FY26 contribution; HBM / high-performance DRAM test demand and cust…" style='left:0.0%;width:36.851%;top:36px;--c:#1c7d3f'><b>ADVANTEST</b> New hyperscaler ASIC customer ramping with FY26 </span>
+<span class='pt' data-cat='other' title="ADVANTEST · 2026-06-16 (day) · June 16 2026 IR webinar — Jefferies (O&#x27;Mara) hosted; JEF BUY ¥30,000 (briefing, 2026-06-03)." style='left:2.595%;top:66px;--c:#8492ad'><i></i><b>ADVANTEST</b> June 16 2026 IR webinar — Jefferies (O&#x27;Mar</span>
+</div></div>
+<div class='row' style='height:60px'>
+<div class='lab'><a href='../AIXA.html'>AIXA</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="AIXA · 2026-01-01–2026-12-31 (year) · Q2 FY2026 print — late July 2026 (revenue guided EUR 110m ±10m); first read on whether the opto order surge su…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>AIXA</b> Q2 FY2026 print — late July 2026 (revenue guided</span>
+<span class='bar' data-cat='product' title="AIXA · 2026-10-01–2026-12-31 (quarter) · GaN inflection — CEO expects pickup &quot;later 2026 / H1 2027&quot;; Jefferies times epi-tool orders to H2&#x27;26/H1&#x27;27 ahe…" style='left:21.107%;width:15.744%;top:36px;--c:#1c7d3f'><b>AIXA</b> GaN inflection — CEO expects pickup &quot;later 2026 </span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../AMAT.html'>AMAT</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="AMAT · 2026-01-01–2026-12-31 (year) · Q3 FY2026 print (mid-Aug 2026): does the &quot;&gt;30%&quot; CY guide move to +40%? Shipment trajectory into CalQ3/Q4 is th…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>AMAT</b> Q3 FY2026 print (mid-Aug 2026): does the &quot;&gt;30%&quot; </span>
+</div></div>
+<div class='row' style='height:60px'>
+<div class='lab'><a href='../AMD.html'>AMD</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="AMD · 2026-01-01–2026-12-31 (year) · Q2 FY26 print (early Aug) against the $11.2B guide; gross-margin trajectory Q3→Q4 with MI450 mix-in." style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>AMD</b> Q2 FY26 print (early Aug) against the $11.2B gui</span>
+<span class='bar' data-cat='other' title="AMD · 2026-07-01–2026-07-31 (month) · &quot;Advancing AI&quot; event, July 2026 — next-gen Instinct (MI450/Helios detail), Venice/Verano EPYC, customer engage…" style='left:5.19%;width:5.191%;top:36px;--c:#8492ad'><b>AMD</b> &quot;Advancing AI&quot; event, July 2026 — next-gen Insti</span>
+</div></div>
+<div class='row' style='height:60px'>
+<div class='lab'><a href='../AMZN.html'>AMZN</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="AMZN · 2026-01-01–2026-12-31 (year) · Q2 FY26 print (no confirmed date in sources; BofA expects rev at/above high end of guide)." style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>AMZN</b> Q2 FY26 print (no confirmed date in sources; Bof</span>
+<span class='bar' data-cat='product' title="AMZN · 2026-10-01–2026-12-31 (quarter) · Amazon LEO commercial launch (Q3&#x27;26); capex capitalization begins 4Q26 (Barclays). Signed commitments: Delta (…" style='left:21.107%;width:15.744%;top:36px;--c:#1c7d3f'><b>AMZN</b> Amazon LEO commercial launch (Q3&#x27;26); capex capi</span>
+</div></div>
+<div class='row' style='height:90px'>
+<div class='lab'><a href='../ANET.html'>ANET</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="ANET · 2026-01-01–2026-12-31 (year) · Q2 FY26 print (guide ~$2.8B rev / ~$0.88 EPS) — the key tell on whether the 28% guide closes the gap to Street…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>ANET</b> Q2 FY26 print (guide ~$2.8B rev / ~$0.88 EPS) — </span>
+<span class='bar' data-cat='other' title="ANET · 2026-07-01–2026-12-31 (half) · Deferred-revenue balance trajectory — management said it will &quot;flatten out&quot;; the 2H26 hyperscaler build comple…" style='left:5.19%;width:31.660999999999998%;top:36px;--c:#8492ad'><b>ANET</b> Deferred-revenue balance trajectory — management</span>
+<span class='bar' data-cat='product' title="ANET · 2026-10-01–2026-12-31 (quarter) · 1.6T rack-scale portfolio ramp: per Citi (2026-06-12), 1 platform launches Q4&#x27;26, 2 in Q1&#x27;27 — partners Meta/M…" style='left:21.107%;width:15.744%;top:66px;--c:#1c7d3f'><b>ANET</b> 1.6T rack-scale portfolio ramp: per Citi (2026-0</span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../ARM.html'>ARM</a></div>
+<div class='track'>
+<span class='bar' data-cat='product' title="ARM · 2026-01-01–2026-12-31 (year) · Arm AGI CPU production — expected by end of CY2026 (FY26 20-F); first revenue ~$90–100M in Q4 FY27; watch GM t…" style='left:0.0%;width:36.851%;top:6px;--c:#1c7d3f'><b>ARM</b> Arm AGI CPU production — expected by end of CY20</span>
+<span class='bar' data-cat='print' title="ARM · 2027-01-01–2027-03-31 (quarter) · Q1 FY27 print (~late July 2026): first read on royalty re-acceleration vs the light Q4 royalty; AGI CPU order-…" style='left:37.024%;width:15.397999999999996%;top:6px;--c:#1c5fd6'><b>ARM</b> Q1 FY27 print (~late July 2026): first read on r</span>
+</div></div>
+<div class='row' style='height:60px'>
+<div class='lab'><a href='../ASML.html'>ASML</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="ASML · 2026-01-01–2026-12-31 (year) · ASP/throughput ladder confirmed (BofA ASML callback, 2026-04-15): NXE:3800E (&quot;E tool&quot;) raised 220→230 wph (~€2…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>ASML</b> ASP/throughput ladder confirmed (BofA ASML callb</span>
+<span class='bar' data-cat='event' title="ASML · 2027-01-01–2027-03-31 (quarter) · Capital Markets Day — expected early/Q1 2027: management to formally revisit DRAM assumptions and likely raise…" style='left:37.024%;width:15.397999999999996%;top:6px;--c:#7c4dff'><b>ASML</b> Capital Markets Day — expected early/Q1 2027: ma</span>
+<span class='bar' data-cat='print' title="ASML · 2026-04-01–2026-06-30 (quarter) · Q2 2026 print (mid-July): immersion recovery confirmation, IBM-margin durability, any High-NA rev-rec slippage…" style='left:0.0%;width:5.017%;top:36px;--c:#1c5fd6'><b>ASML</b> Q2 2026 print (mid-July): immersion recovery con</span>
+</div></div>
+<div class='row' style='height:60px'>
+<div class='lab'><a href='../AVGO.html'>AVGO</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="AVGO · 2026-01-01–2026-12-31 (year) · Q3 FY26 print: Wednesday, Sep 2, 2026 AMC (call 2pm PT) — watch AI-semi print vs $16B guide, GM trajectory, an…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>AVGO</b> Q3 FY26 print: Wednesday, Sep 2, 2026 AMC (call </span>
+<span class='bar' data-cat='other' title="AVGO · 2027-01-01–2027-12-31 (year) · First $35B Apollo SPV tranche execution; Anthropic FY27 ~3.5GW, OpenAI 1.3GW, Meta 1GW initial (deliveries 2H …" style='left:37.024%;width:62.976%;top:6px;--c:#8492ad'><b>AVGO</b> First $35B Apollo SPV tranche execution; Anthrop</span>
+<span class='bar' data-cat='product' title="AVGO · 2026-01-01–2026-12-31 (year) · Advanced packaging: Singapore substrate ramps Aug; in-house advanced packaging (Applied Materials Singapore) 2…" style='left:0.0%;width:36.851%;top:36px;--c:#1c7d3f'><b>AVGO</b> Advanced packaging: Singapore substrate ramps Au</span>
+</div></div>
+<div class='row' style='height:60px'>
+<div class='lab'><a href='../BKNG.html'>BKNG</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="BKNG · 2026-01-01–2026-12-31 (year) · Q2 FY2026 print (late July/early Aug 2026, est.): the cleanest read on Middle East trajectory vs. the end-June…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>BKNG</b> Q2 FY2026 print (late July/early Aug 2026, est.)</span>
+<span class='bar' data-cat='other' title="BKNG · 2026-01-01–2026-12-31 (year) · Middle East de-escalation / transit-corridor (Europe–Asia) normalization — the single biggest swing factor on …" style='left:0.0%;width:36.851%;top:36px;--c:#8492ad'><b>BKNG</b> Middle East de-escalation / transit-corridor (Eu</span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../CDNS.html'>CDNS</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="CDNS · 2026-01-01–2026-12-31 (year) · Next print: Q2 FY26 earnings (late Jul 2026, ~7/28 cadence) — watch backlog trajectory off $8.0B, recurring-mi…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>CDNS</b> Next print: Q2 FY26 earnings (late Jul 2026, ~7/</span>
+</div></div>
+<div class='row' style='height:60px'>
+<div class='lab'><a href='../CEG.html'>CEG</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="CEG · 2026-01-01–2026-12-31 (year) · Next print: ~90 days after 2026-05-11, i.e., the Q2 FY26 call in Aug/2026 (Dominguez, Q1 FY26 closing)." style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>CEG</b> Next print: ~90 days after 2026-05-11, i.e., the</span>
+<span class='pt' data-cat='event' title="CEG · 2026-06-30 (day) · Calpine lockup expiration: 2026-06-30 (25M shares); the $5B buyback gives flexibility to absorb (Q1 FY26)." style='left:5.017%;top:36px;--c:#7c4dff'><i></i><b>CEG</b> Calpine lockup expiration: 2026-06-30 (25M</span>
+<span class='bar' data-cat='other' title="CEG · 2026-07-01–2026-07-31 (month) · FERC response on the Eddystone→Crane CIR transfer: Jun–Jul 2026 — unlocks 2027 capacity credit for the Crane r…" style='left:5.19%;width:5.191%;top:36px;--c:#8492ad'><b>CEG</b> FERC response on the Eddystone→Crane CIR transfe</span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../CIEN.html'>CIEN</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="CIEN · 2026-01-01–2026-12-31 (year) · Q3 FY26 print (guide ~$1.625B / ~45% GM) — watch backlog trajectory (mgmt expects it to keep rising) and wheth…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>CIEN</b> Q3 FY26 print (guide ~$1.625B / ~45% GM) — watch</span>
+<span class='bar' data-cat='print' title="CIEN · 2027-01-01–2027-12-31 (year) · RLS Hyper-Rail GA / first revenue in FY27 — linear ramp, multi-hyperscaler + wholesale/MOFN SP adoption; the k…" style='left:37.024%;width:62.976%;top:6px;--c:#1c5fd6'><b>CIEN</b> RLS Hyper-Rail GA / first revenue in FY27 — line</span>
+</div></div>
+<div class='row' style='height:90px'>
+<div class='lab'><a href='../COHR.html'>COHR</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="COHR · 2026-01-01–2026-12-31 (year) · Q4 FY26 print (≈Aug 2026): FY26 close + first FY27 framing; watch GM toward &gt;42% target and capex trajectory." style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>COHR</b> Q4 FY26 print (≈Aug 2026): FY26 close + first FY</span>
+<span class='bar' data-cat='print' title="COHR · 2027-01-01–2027-12-31 (year) · 6-inch InP milestone: internal capacity doubling expected next (June) quarter — a quarter early; Zurich third …" style='left:37.024%;width:62.976%;top:6px;--c:#1c5fd6'><b>COHR</b> 6-inch InP milestone: internal capacity doubling</span>
+<span class='bar' data-cat='other' title="COHR · 2026-01-01–2026-12-31 (year) · CPO revenue inflection: initial scale-out H2 CY26, scale-up H2 CY27 (NVIDIA lead customer + others); watch NVI…" style='left:0.0%;width:36.851%;top:36px;--c:#8492ad'><b>COHR</b> CPO revenue inflection: initial scale-out H2 CY2</span>
+<span class='bar' data-cat='other' title="COHR · 2026-01-01–2026-12-31 (year) · New vectors: Multi-Rail revenue H1 CY27; thermal (Thermadite/TEG) H2 CY27; semicap industrial recovery through…" style='left:0.0%;width:36.851%;top:66px;--c:#8492ad'><b>COHR</b> New vectors: Multi-Rail revenue H1 CY27; thermal</span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../CRWV.html'>CRWV</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="CRWV · 2026-01-01–2026-12-31 (year) · Q2 FY2026 print (Aug 2026) — first read on whether the $900M–$1.1B AOI guide holds; watch fit-out time and sta…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>CRWV</b> Q2 FY2026 print (Aug 2026) — first read on wheth</span>
+</div></div>
+<div class='row' style='height:60px'>
+<div class='lab'><a href='../CSCO.html'>CSCO</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="CSCO · 2026-01-01–2026-12-31 (year) · Q4 FY26 print — Wed Aug 12, 2026 (AMC) — first formal FY27 guide; watch whether AI orders sustain a ~$2-3.7B/q…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>CSCO</b> Q4 FY26 print — Wed Aug 12, 2026 (AMC) — first f</span>
+<span class='bar' data-cat='product' title="CSCO · 2027-01-01–2027-12-31 (year) · Silicon One P200 scale-across ramp — early Q4 orders, &quot;at scale&quot; only in FY27 (Robbins, Q3 FY26). Switch + coh…" style='left:37.024%;width:62.976%;top:6px;--c:#1c7d3f'><b>CSCO</b> Silicon One P200 scale-across ramp — early Q4 or</span>
+<span class='bar' data-cat='other' title="CSCO · 2027-01-01–2027-12-31 (year) · Restructuring execution — remaining charges into FY27; reallocation to silicon/optics/security/AI." style='left:37.024%;width:62.976%;top:36px;--c:#8492ad'><b>CSCO</b> Restructuring execution — remaining charges into</span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../GEV.html'>GEV</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="GEV · 2026-01-01–2026-12-31 (year) · Q2 FY26 print (~late July 2026): the order bogey — beat the Q4&#x27;25 24 GW / $22.2B; mgmt guided 10–15 GW new con…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>GEV</b> Q2 FY26 print (~late July 2026): the order bogey</span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../GOOG.html'>GOOG</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="GOOG · 2026-01-01–2026-12-31 (year) · Q2 FY26 print (~mid-July 2026) — first read on TPU-hardware external revenue recognition + C27 capex quantific…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>GOOG</b> Q2 FY26 print (~mid-July 2026) — first read on T</span>
+</div></div>
+<div class='row' style='height:120px'>
+<div class='lab'><a href='../HPE.html'>HPE</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="HPE · 2026-01-01–2026-12-31 (year) · Q3 FY26 print (guide rev $11.5–$12.1B, non-GAAP EPS $0.88–$0.93) — the tell on whether AI backlog ($5.9B) conv…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>HPE</b> Q3 FY26 print (guide rev $11.5–$12.1B, non-GAAP </span>
+<span class='bar' data-cat='other' title="HPE · 2026-01-01–2026-12-31 (year) · Juniper synergy delivery — cumulative synergies ≥$200M by FY26 end (vs $600M targeted cost synergies / &gt;$1B to…" style='left:0.0%;width:36.851%;top:36px;--c:#8492ad'><b>HPE</b> Juniper synergy delivery — cumulative synergies </span>
+<span class='bar' data-cat='other' title="HPE · 2026-01-01–2026-12-31 (year) · GreenLake $3.5B ARR target by FY26 end and net-retention trajectory (~110%)." style='left:0.0%;width:36.851%;top:66px;--c:#8492ad'><b>HPE</b> GreenLake $3.5B ARR target by FY26 end and net-r</span>
+<span class='bar' data-cat='event' title="HPE · 2026-01-01–2026-12-31 (year) · Capital return reset — net leverage to 2.0x by FY26 end (1yr early), then ~75% of FCF returned; buyback re-acc…" style='left:0.0%;width:36.851%;top:96px;--c:#7c4dff'><b>HPE</b> Capital return reset — net leverage to 2.0x by F</span>
+</div></div>
+<div class='row' style='height:60px'>
+<div class='lab'><a href='../IFX.html'>IFX</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="IFX · 2026-01-01–2026-12-31 (year) · Q3 FY26 print (early Aug 2026) — guidance is for AI-power in allocation; watch the FY26 &gt;EUR 16bn / ~20% margi…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>IFX</b> Q3 FY26 print (early Aug 2026) — guidance is for</span>
+<span class='pt' data-cat='other' title="IFX · 2026-06-29 (day) · 2026-06-29 — IFX AI-power fireside chat (BofA / Didier Scemama) with Adam White, head of PSS AI-power division…" style='left:4.844%;top:36px;--c:#8492ad'><i></i><b>IFX</b> 2026-06-29 — IFX AI-power fireside chat (B</span>
+<span class='pt' data-cat='print' title="IFX · 2026-07-01 (day) · 2026-07-01 — re-org into 3 divisions (Automotive / Power Systems / Edge Systems) — new segment reporting." style='left:5.19%;top:36px;--c:#1c5fd6'><i></i><b>IFX</b> 2026-07-01 — re-org into 3 divisions (Auto</span>
+</div></div>
+<div class='row' style='height:90px'>
+<div class='lab'><a href='../INTC.html'>INTC</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="INTC · 2026-01-01–2026-12-31 (year) · Q2 FY26 print (late July 2026) vs the $13.8–14.8B guide; GM trajectory and the quarterly foundry-loss reductio…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>INTC</b> Q2 FY26 print (late July 2026) vs the $13.8–14.8</span>
+<span class='bar' data-cat='other' title="INTC · 2026-01-01–2026-12-31 (year) · Capex/Ohio: equipment spend +25% y/y FY26; Ohio facilitization &quot;after 2030&quot; unless external wins pull it forwa…" style='left:0.0%;width:36.851%;top:36px;--c:#8492ad'><b>INTC</b> Capex/Ohio: equipment spend +25% y/y FY26; Ohio </span>
+<span class='bar' data-cat='product' title="INTC · 2026-07-01–2026-12-31 (half) · Advanced packaging (EMIB/EMIB-T) order conversion — first ramp year 2027, billions/engagement by year two; cap…" style='left:5.19%;width:31.660999999999998%;top:66px;--c:#1c7d3f'><b>INTC</b> Advanced packaging (EMIB/EMIB-T) order conversio</span>
+</div></div>
+<div class='row' style='height:60px'>
+<div class='lab'><a href='../KIOXIA.html'>KIOXIA</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="KIOXIA · 2026-01-01–2026-12-31 (year) · Q1 FY2026 print — Aug 7, 2026 (next reporting date per IR). Watch ASP trajectory past the +70% guided QoQ, bit…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>KIOXIA</b> Q1 FY2026 print — Aug 7, 2026 (next reporting da</span>
+<span class='bar' data-cat='event' title="KIOXIA · 2027-01-01–2027-12-31 (year) · Capital return: first progressive dividend from FY2027; possible stock split / higher equity comp." style='left:37.024%;width:62.976%;top:6px;--c:#7c4dff'><b>KIOXIA</b> Capital return: first progressive dividend from </span>
+<span class='bar' data-cat='other' title="KIOXIA · 2027-01-01–2027-12-31 (year) · Capacity adds and CY2027 NAND WFE up-cycle (BofA Hosseini flagged $200bn+ annualized WFE into 2H CY27, briefin…" style='left:37.024%;width:62.976%;top:36px;--c:#8492ad'><b>KIOXIA</b> Capacity adds and CY2027 NAND WFE up-cycle (BofA</span>
+</div></div>
+<div class='row' style='height:90px'>
+<div class='lab'><a href='../KLAC.html'>KLAC</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="KLAC · 2026-01-01–2026-12-31 (year) · FQ4 FY26 print (late July 2026): June-quarter guide $3.575B / $9.87 EPS; watch the GM trajectory vs. DRAM-cost…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>KLAC</b> FQ4 FY26 print (late July 2026): June-quarter gu</span>
+<span class='bar' data-cat='other' title="KLAC · 2026-01-01–2026-12-31 (year) · CY2027 framing: management has committed CY27 growth &gt; CY26; watch for quantification and sub-2nm order confir…" style='left:0.0%;width:36.851%;top:36px;--c:#8492ad'><b>KLAC</b> CY2027 framing: management has committed CY27 gr</span>
+<span class='pt' data-cat='print' title="KLAC · 2026-06-24 (day) · Memory capex cadence: DRAM/HBM is the engine of the incremental WFE dollars; sensitive to memory-pricing and a…" style='left:3.979%;top:66px;--c:#1c5fd6'><i></i><b>KLAC</b> Memory capex cadence: DRAM/HBM is the engi</span>
+</div></div>
+<div class='row' style='height:60px'>
+<div class='lab'><a href='../LITE.html'>LITE</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="LITE · 2026-01-01–2026-12-31 (year) · Q4FY26 / FY26 print (fiscal year-end; Street tracking the $960M–$1.01B guide). Watch the OCS Dec-Q exit rate v…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>LITE</b> Q4FY26 / FY26 print (fiscal year-end; Street tra</span>
+<span class='bar' data-cat='other' title="LITE · 2026-01-01–2026-12-31 (year) · Scale-out CPO inflection 2H cal-2026 (~$50M Q4); scale-up CPO first shipments late cal-2027 — the generational…" style='left:0.0%;width:36.851%;top:36px;--c:#8492ad'><b>LITE</b> Scale-out CPO inflection 2H cal-2026 (~$50M Q4);</span>
+</div></div>
+<div class='row' style='height:60px'>
+<div class='lab'><a href='../LRCX.html'>LRCX</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="LRCX · 2026-01-01–2026-12-31 (year) · FQ4 FY26 print (late July 2026): June-quarter guide $6.6B / EPS $1.65 / GM 50.5%; watch GM trajectory (Betting…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>LRCX</b> FQ4 FY26 print (late July 2026): June-quarter gu</span>
+<span class='bar' data-cat='product' title="LRCX · 2027-01-01–2027-12-31 (year) · NAND conversion ramp — the ~$40B layer-conversion wave with majority of spend pulled into CY27; the structural…" style='left:37.024%;width:62.976%;top:6px;--c:#1c7d3f'><b>LRCX</b> NAND conversion ramp — the ~$40B layer-conversio</span>
+<span class='pt' data-cat='print' title="LRCX · 2026-06-24 (day) · DRAM/HBM cadence — DRAM now 27% of systems and rising; HBM4/HBM4E + 16-high stacking lift electroplating/TSV-e…" style='left:3.979%;top:36px;--c:#1c5fd6'><i></i><b>LRCX</b> DRAM/HBM cadence — DRAM now 27% of systems</span>
+<span class='bar' data-cat='product' title="LRCX · 2027-01-01–2027-12-31 (year) · Segment rotation into CY27 — whether the depo/etch leadership (LRCX/AMAT) hands off to KLAC/ASML on the sub-2n…" style='left:37.024%;width:62.976%;top:36px;--c:#1c7d3f'><b>LRCX</b> Segment rotation into CY27 — whether the depo/et</span>
+</div></div>
+<div class='row' style='height:60px'>
+<div class='lab'><a href='../MEDIATEK.html'>MEDIATEK</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="MEDIATEK · 2026-01-01–2026-12-31 (year) · Q2 FY26 print (late-July 2026) — GM step-down to 43% guide; smartphone trajectory into H2." style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>MEDIATEK</b> Q2 FY26 print (late-July 2026) — GM step-down to</span>
+<span class='bar' data-cat='other' title="MEDIATEK · 2026-07-01–2026-09-30 (quarter) · New ASIC customer announcement before end-2026 (Tesla / Microsoft / Meta order of likelihood per Gopal, 2026-0…" style='left:5.19%;width:15.744%;top:36px;--c:#8492ad'><b>MEDIATEK</b> New ASIC customer announcement before end-2026 (</span>
+</div></div>
+<div class='row' style='height:60px'>
+<div class='lab'><a href='../MSFT.html'>MSFT</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="MSFT · 2026-01-01–2026-12-31 (year) · Q4 FY26 earnings (late Jul 2026): Azure cc growth + the 2H acceleration claim; CY26 $190B capex confirmation; …" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>MSFT</b> Q4 FY26 earnings (late Jul 2026): Azure cc growt</span>
+<span class='bar' data-cat='other' title="MSFT · 2027-01-01–2027-12-31 (year) · CY27 EPS inflection: OpenAI equity-method losses roll off once cumulative losses hit the ~$13B initial-investm…" style='left:37.024%;width:62.976%;top:6px;--c:#8492ad'><b>MSFT</b> CY27 EPS inflection: OpenAI equity-method losses</span>
+<span class='bar' data-cat='other' title="MSFT · 2026-01-01–2026-12-31 (year) · Capex revision watch: any move toward the $276B CY27 number (MS/Altimeter) vs the ~$190B CY26 base. JPM frames…" style='left:0.0%;width:36.851%;top:36px;--c:#8492ad'><b>MSFT</b> Capex revision watch: any move toward the $276B </span>
+</div></div>
+<div class='row' style='height:120px'>
+<div class='lab'><a href='../MU.html'>MU</a></div>
+<div class='track'>
+<span class='bar' data-cat='other' title="MU · 2026-01-01–2026-12-31 (year) · Capacity: Idaho fab 1 first wafers mid-CY27 (pulled in); Idaho 2 by 2028; New York groundbreaking early CY26; …" style='left:0.0%;width:36.851%;top:6px;--c:#8492ad'><b>MU</b> Capacity: Idaho fab 1 first wafers mid-CY27 (pul</span>
+<span class='bar' data-cat='other' title="MU · 2026-01-01–2026-12-31 (year) · NAND shortage inflection from 2H26 (MS, 2025-09-10) — eSSD/NL SSD displacement of HDD as a CY26-27 pricing cat…" style='left:0.0%;width:36.851%;top:36px;--c:#8492ad'><b>MU</b> NAND shortage inflection from 2H26 (MS, 2025-09-</span>
+<span class='bar' data-cat='product' title="MU · 2026-04-01–2026-06-30 (quarter) · HBM4 volume ramp in CQ2 2026 for NVIDIA Vera Rubin; HBM4E (custom base die) into CY27. Watch MU&#x27;s HBM4 base-di…" style='left:0.0%;width:5.017%;top:66px;--c:#1c7d3f'><b>MU</b> HBM4 volume ramp in CQ2 2026 for NVIDIA Vera Rub</span>
+<span class='pt' data-cat='print' title="MU · 2026-05-28 (day) · EUV / tool availability as a 2028 supply governor (JPM: ASML ~90 tools end-CY27 insufficient — Samsung/Hynix e…" style='left:0.0%;top:96px;--c:#1c5fd6'><i></i><b>MU</b> EUV / tool availability as a 2028 supply g</span>
+<span class='pt' data-cat='print' title="MU · 2026-06-24 (day) · F3Q26 print — REPORTED June 24, 2026 (massive beat-and-raise). Actuals $41.5B rev / 84.9% GM, F4Q26 guide $50B…" style='left:3.979%;top:96px;--c:#1c5fd6'><i></i><b>MU</b> F3Q26 print — REPORTED June 24, 2026 (mass</span>
+</div></div>
+<div class='row' style='height:60px'>
+<div class='lab'><a href='../NET.html'>NET</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="NET · 2026-01-01–2026-12-31 (year) · Q2 FY26 print — guide $664–665M / +30% / EPS $0.27; first quarter to show the RIF flowing through opex and whe…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>NET</b> Q2 FY26 print — guide $664–665M / +30% / EPS $0.</span>
+<span class='pt' data-cat='event' title="NET · 2026-06-09 (day) · Annual Investor Day — Tuesday, June 9, 2026 — flagged on the Q1 call; management said it will reframe disclosu…" style='left:1.384%;top:36px;--c:#7c4dff'><i></i><b>NET</b> Annual Investor Day — Tuesday, June 9, 202</span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../NOW.html'>NOW</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="NOW · 2026-01-01–2026-12-31 (year) · Q2 FY26 print (~Jul/2026, by historical cadence — Q2-25 was 2025-07-23). Watch: traction of the $1.5bn AI comm…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>NOW</b> Q2 FY26 print (~Jul/2026, by historical cadence </span>
+</div></div>
+<div class='row' style='height:60px'>
+<div class='lab'><a href='../NVDA.html'>NVDA</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="NVDA · 2026-01-01–2026-12-31 (year) · Q2 FY27 print: 2026-08-26 (guided $91B). Watch hyperscale vs hyperscale-capex growth under new segmentation (A…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>NVDA</b> Q2 FY27 print: 2026-08-26 (guided $91B). Watch h</span>
+<span class='pt' data-cat='other' title="NVDA · 2026-06-24 (day) · Stockholder meeting 2026-06-24. $20B+ benchmark bond (first HG bond in ~5 yrs; 424B5 filed mid-June) — read as…" style='left:3.979%;top:36px;--c:#8492ad'><i></i><b>NVDA</b> Stockholder meeting 2026-06-24. $20B+ benc</span>
+<span class='bar' data-cat='other' title="NVDA · 2026-07-01–2026-09-30 (quarter) · Supply-chain bottlenecks to monitor: CoWoS (180k/220k wpm by end-27/28E, Jefferies), HVLP4 copper foil / T-gla…" style='left:5.19%;width:15.744%;top:36px;--c:#8492ad'><b>NVDA</b> Supply-chain bottlenecks to monitor: CoWoS (180k</span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../NXPI.html'>NXPI</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="NXPI · 2026-01-01–2026-12-31 (year) · Q2 FY26 print — call ~late-Jul 2026 (guide $3.45bn / EPS $3.50, +18% YoY): confirmation of the sequential acce…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>NXPI</b> Q2 FY26 print — call ~late-Jul 2026 (guide $3.45</span>
+</div></div>
+<div class='row' style='height:60px'>
+<div class='lab'><a href='../ON.html'>ON</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="ON · 2026-01-01–2026-12-31 (year) · Q2 FY26 print (~early Aug 2026) — guide is $1.535–1.635bn / 38–40% GM; watch AI-DC doubling pace, utilization …" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>ON</b> Q2 FY26 print (~early Aug 2026) — guide is $1.53</span>
+<span class='pt' data-cat='event' title="ON · 2026-09-16 (day) · 2026-09-16 — onsemi Analyst Day (Citi exp. ~Sep 13 print first) — the key event; watch for a raised long-term …" style='left:18.512%;top:36px;--c:#7c4dff'><i></i><b>ON</b> 2026-09-16 — onsemi Analyst Day (Citi exp.</span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../PANW.html'>PANW</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="PANW · 2026-01-01–2026-12-31 (year) · FQ4 FY26 print — late August 2026 (FY-end Jul 31). Critical reads: organic NNARR (Barclays flags 4Q26 guide up…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>PANW</b> FQ4 FY26 print — late August 2026 (FY-end Jul 31</span>
+</div></div>
+<div class='row' style='height:60px'>
+<div class='lab'><a href='../PLTR.html'>PLTR</a></div>
+<div class='track'>
+<span class='bar' data-cat='event' title="PLTR · 2026-01-01–2026-12-31 (year) · Q4 FY26 Investor Day and any disclosed Apollo / AIPCon contract values or ARR." style='left:0.0%;width:36.851%;top:6px;--c:#7c4dff'><b>PLTR</b> Q4 FY26 Investor Day and any disclosed Apollo / </span>
+<span class='bar' data-cat='print' title="PLTR · 2026-01-01–2026-12-31 (year) · Q2/FY2026 guide and US-commercial ACV trajectory." style='left:0.0%;width:36.851%;top:36px;--c:#1c5fd6'><b>PLTR</b> Q2/FY2026 guide and US-commercial ACV trajectory</span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../PWR.html'>PWR</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="PWR · 2026-01-01–2026-12-31 (year) · Q2 FY26 print (~late July 2026 on prior cadence) — watch backlog trajectory (&quot;continue to rise&quot;), Underground …" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>PWR</b> Q2 FY26 print (~late July 2026 on prior cadence)</span>
+</div></div>
+<div class='row' style='height:90px'>
+<div class='lab'><a href='../QCOM.html'>QCOM</a></div>
+<div class='track'>
+<span class='bar' data-cat='regulatory' title="QCOM · 2026-01-01–2026-12-31 (year) · Q3 FY26 print (late Jul-2026) — does China handset trough confirm; QCT margin trajectory." style='left:0.0%;width:36.851%;top:6px;--c:#c0392b'><b>QCOM</b> Q3 FY26 print (late Jul-2026) — does China hands</span>
+<span class='bar' data-cat='event' title="QCOM · 2027-01-01–2027-12-31 (year) · DC ramp execution (post-Investor Day, 2026-06-24) — the $5B FY27 → $15B+ FY29 DC trajectory is the new central…" style='left:37.024%;width:62.976%;top:6px;--c:#7c4dff'><b>QCOM</b> DC ramp execution (post-Investor Day, 2026-06-24</span>
+<span class='bar' data-cat='other' title="QCOM · 2026-01-01–2026-12-31 (year) · Auto run-rate — exit FY26 &gt;$6B; FY29 Auto+IoT $22B target progress; ADAS/AD ~1/3 of the $45B design-win pipeli…" style='left:0.0%;width:36.851%;top:36px;--c:#8492ad'><b>QCOM</b> Auto run-rate — exit FY26 &gt;$6B; FY29 Auto+IoT $2</span>
+<span class='bar' data-cat='print' title="QCOM · 2026-12-01–2026-12-31 (month) · Data-center first shipments to lead hyperscaler — December 2026; any DC revenue disclosure (FY27 ramp guided o…" style='left:31.661%;width:5.189999999999998%;top:66px;--c:#1c5fd6'><b>QCOM</b> Data-center first shipments to lead hyperscaler </span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../SAMSUNG.html'>SAMSUNG</a></div>
+<div class='track'>
+<span class='bar' data-cat='product' title="SAMSUNG · 2026-01-01–2026-06-30 (half) · HBM4 volume ramp at NVIDIA — qualification disclosed as &quot;fully booked,&quot; but the share-gain proof point is volu…" style='left:0.0%;width:5.017%;top:6px;--c:#1c7d3f'><b>SAMSUNG</b> HBM4 volume ramp at NVIDIA — qualification discl</span>
+<span class='bar' data-cat='product' title="SAMSUNG · 2027-01-01–2027-06-30 (half) · 1d (7th-gen) DRAM mass production, earliest 1H27 (@jukan05, briefing 2026-06-17)." style='left:37.024%;width:31.141999999999996%;top:6px;--c:#1c7d3f'><b>SAMSUNG</b> 1d (7th-gen) DRAM mass production, earliest 1H27</span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../SHOP.html'>SHOP</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="SHOP · 2026-01-01–2026-12-31 (year) · Q2 FY26 print — ~early Aug 2026 (cadence: Q1 was 2026-05-05). Watch: GMV growth into tougher comps (guide high…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>SHOP</b> Q2 FY26 print — ~early Aug 2026 (cadence: Q1 was</span>
+</div></div>
+<div class='row' style='height:90px'>
+<div class='lab'><a href='../SKHYNIX.html'>SKHYNIX</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="SKHYNIX · 2026-01-01–2026-12-31 (year) · MU print as the cleanest near-term memory demand/pricing tell; UBS sees MU DDR GM surpassing HBM GM for the fi…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>SKHYNIX</b> MU print as the cleanest near-term memory demand</span>
+<span class='bar' data-cat='print' title="SKHYNIX · 2026-04-01–2026-06-30 (quarter) · Q2 2026 earnings: late July 2026 (English call; prior Q2 was 2025-07-24) — HBM4 ramp progress, DRAM ASP, capex…" style='left:0.0%;width:5.017%;top:36px;--c:#1c5fd6'><b>SKHYNIX</b> Q2 2026 earnings: late July 2026 (English call; </span>
+<span class='bar' data-cat='product' title="SKHYNIX · 2026-07-01–2026-12-31 (half) · HBM4 / NVDA Rubin ramp through 2026; HBM4 blended ≤50% of mix in 2026, 2H26 crossover (Jefferies Techknowledge…" style='left:5.19%;width:31.660999999999998%;top:36px;--c:#1c7d3f'><b>SKHYNIX</b> HBM4 / NVDA Rubin ramp through 2026; HBM4 blende</span>
+<span class='bar' data-cat='other' title="SKHYNIX · 2026-07-01–2026-12-31 (half) · HBF (High Bandwidth Flash) — SK hynix signed an MOU with SanDisk (Aug-2025) to standardize HBF for AI inferenc…" style='left:5.19%;width:31.660999999999998%;top:66px;--c:#8492ad'><b>SKHYNIX</b> HBF (High Bandwidth Flash) — SK hynix signed an </span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../SMCI.html'>SMCI</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="SMCI · 2026-01-01–2026-12-31 (year) · Q4 FY26 print (~early Aug 2026): does GM hold the guided 8.2–8.4% or re-trough; FY26 lands inside $38.9–40.4B;…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>SMCI</b> Q4 FY26 print (~early Aug 2026): does GM hold th</span>
+<span class='bar' data-cat='other' title="SMCI · 2027-01-01–2027-12-31 (year) · Cash/leverage trajectory — reversal of the OCF −$6.6B / net-debt $7.5B build is the single most important non-…" style='left:37.024%;width:62.976%;top:6px;--c:#8492ad'><b>SMCI</b> Cash/leverage trajectory — reversal of the OCF −</span>
+</div></div>
+<div class='row' style='height:60px'>
+<div class='lab'><a href='../SMIC.html'>SMIC</a></div>
+<div class='track'>
+<span class='bar' data-cat='regulatory' title="SMIC · 2026-01-01–2026-12-31 (year) · Capacity/capex pace — FY2026 capex ~flat at ~$8bn and +~40k 12-inch wafers/month; pace of mature-node adds acr…" style='left:0.0%;width:36.851%;top:6px;--c:#c0392b'><b>SMIC</b> Capacity/capex pace — FY2026 capex ~flat at ~$8b</span>
+<span class='bar' data-cat='print' title="SMIC · 2026-04-01–2026-06-30 (quarter) · Q2 2026 print (next earnings; mid-Aug cadence) — does the +14-16% guide convert, and does GM hold the 20-22% g…" style='left:0.0%;width:5.017%;top:36px;--c:#1c5fd6'><b>SMIC</b> Q2 2026 print (next earnings; mid-Aug cadence) —</span>
+<span class='bar' data-cat='other' title="SMIC · 2026-07-01–2026-12-31 (half) · 2H 2026 consumer demand — the explicit bear flag (JPM, briefing 2026-05-17); whether domestic consumer/smartph…" style='left:5.19%;width:31.660999999999998%;top:36px;--c:#8492ad'><b>SMIC</b> 2H 2026 consumer demand — the explicit bear flag</span>
+</div></div>
+<div class='row' style='height:90px'>
+<div class='lab'><a href='../SNDK.html'>SNDK</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="SNDK · 2026-01-01–2026-12-31 (year) · Q4 FY26 print (fiscal year-end June; reported ~Aug-2026) — vs guide rev $7.75–8.25B / GM 79–81% / EPS $30–33. …" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>SNDK</b> Q4 FY26 print (fiscal year-end June; reported ~A</span>
+<span class='bar' data-cat='other' title="SNDK · 2027-01-01–2027-12-31 (year) · NBM / LTA cadence — incremental multiyear agreements and how much of FY27/FY28 bits get locked (and at fixed v…" style='left:37.024%;width:62.976%;top:6px;--c:#8492ad'><b>SNDK</b> NBM / LTA cadence — incremental multiyear agreem</span>
+<span class='bar' data-cat='product' title="SNDK · 2026-01-01–2026-12-31 (year) · BiCS 8 ramp — to majority of bit production exiting FY26 (Q1 FY26, 2025-11-06); QLC &quot;Stargate&quot; hyperscaler rev…" style='left:0.0%;width:36.851%;top:36px;--c:#1c7d3f'><b>SNDK</b> BiCS 8 ramp — to majority of bit production exit</span>
+<span class='bar' data-cat='event' title="SNDK · 2026-07-01–2026-12-31 (half) · High Bandwidth Flash (HBF) — the bull-case optionality on AI accelerator-attached flash; introduced at the Feb…" style='left:5.19%;width:31.660999999999998%;top:66px;--c:#7c4dff'><b>SNDK</b> High Bandwidth Flash (HBF) — the bull-case optio</span>
+</div></div>
+<div class='row' style='height:150px'>
+<div class='lab'><a href='../SNPS.html'>SNPS</a></div>
+<div class='track'>
+<span class='bar' data-cat='regulatory' title="SNPS · 2026-01-01–2026-12-31 (year) · Q3 FY26 print (reports early Sept; qtr ends Jul 31, 2026) — guided $2.41–2.46B; watch Design IP sequential rec…" style='left:0.0%;width:36.851%;top:6px;--c:#c0392b'><b>SNPS</b> Q3 FY26 print (reports early Sept; qtr ends Jul </span>
+<span class='bar' data-cat='other' title="SNPS · 2026-01-01–2026-12-31 (year) · Ansys synergy realization — $400M first-phase revenue synergies starting FY27; ~50% of committed cost synergie…" style='left:0.0%;width:36.851%;top:36px;--c:#8492ad'><b>SNPS</b> Ansys synergy realization — $400M first-phase re</span>
+<span class='bar' data-cat='other' title="SNPS · 2026-01-01–2026-12-31 (year) · Deleveraging cadence — term loan already retired in Q1 FY26; watch FCF allocation against the ~$10B senior not…" style='left:0.0%;width:36.851%;top:66px;--c:#8492ad'><b>SNPS</b> Deleveraging cadence — term loan already retired</span>
+<span class='bar' data-cat='regulatory' title="SNPS · 2026-01-01–2026-12-31 (year) · China / export controls — any change to the Q3 2025 BIS restrictions or design-start activity; SNPS guides mut…" style='left:0.0%;width:36.851%;top:96px;--c:#c0392b'><b>SNPS</b> China / export controls — any change to the Q3 2</span>
+<span class='bar' data-cat='event' title="SNPS · 2026-09-01–2026-09-30 (month) · September 2026 Investor Day — the key catalyst per multiple desks (Citi, GS, MS): the venue to quantify Ansys …" style='left:15.917%;width:5.017000000000001%;top:126px;--c:#7c4dff'><b>SNPS</b> September 2026 Investor Day — the key catalyst p</span>
+</div></div>
+<div class='row' style='height:60px'>
+<div class='lab'><a href='../SPOT.html'>SPOT</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="SPOT · 2026-01-01–2026-12-31 (year) · Q2 FY26 print (late July) — watch MAU vs 778M guide, ARPU +7–7.5% delivery, and whether OI troughs as guided o…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>SPOT</b> Q2 FY26 print (late July) — watch MAU vs 778M gu</span>
+<span class='bar' data-cat='other' title="SPOT · 2026-07-01–2026-12-31 (half) · Ad business inflection — biddable &gt;30% of ad rev; management&#x27;s &quot;2H26 improvement&quot; claim is a show-me." style='left:5.19%;width:31.660999999999998%;top:36px;--c:#8492ad'><b>SPOT</b> Ad business inflection — biddable &gt;30% of ad rev</span>
+</div></div>
+<div class='row' style='height:90px'>
+<div class='lab'><a href='../STX.html'>STX</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="STX · 2026-01-01–2026-12-31 (year) · Q4 FY26 print (next earnings, ~late July 2026): guide $3.45B / &quot;lower 40%&quot; op margin / $5.00 EPS — watch GM tr…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>STX</b> Q4 FY26 print (next earnings, ~late July 2026): </span>
+<span class='bar' data-cat='other' title="STX · 2027-01-01–2027-12-31 (year) · CY27 nearline pricing — escalators toward the $25/$30/TB targets; &quot;almost fully allocated through CY2027&quot; with…" style='left:37.024%;width:62.976%;top:6px;--c:#8492ad'><b>STX</b> CY27 nearline pricing — escalators toward the $2</span>
+<span class='bar' data-cat='product' title="STX · 2026-01-01–2026-12-31 (year) · Mozaic 4 ramp + 40TB HAMR — 2H CY26 volume ramp; conversion of the remaining CSP qualifications (75% of leadin…" style='left:0.0%;width:36.851%;top:36px;--c:#1c7d3f'><b>STX</b> Mozaic 4 ramp + 40TB HAMR — 2H CY26 volume ramp;</span>
+<span class='bar' data-cat='product' title="STX · 2026-01-01–2026-12-31 (year) · WDC HAMR timing — WDC targets qualification 2H CY26, volume ramp 1H CY27; supply-chain checks (Q425 Techknowle…" style='left:0.0%;width:36.851%;top:66px;--c:#1c7d3f'><b>STX</b> WDC HAMR timing — WDC targets qualification 2H C</span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../TEL.html'>TEL</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="TEL · 2026-01-01–2026-12-31 (year) · FQ3 FY26 print (~late Jul 2026): delivery vs the ~$5.0bn / $2.83 guide; whether FY26 AI revenue tracks/exceeds…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>TEL</b> FQ3 FY26 print (~late Jul 2026): delivery vs the</span>
+</div></div>
+<div class='row' style='height:90px'>
+<div class='lab'><a href='../TER.html'>TER</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="TER · 2026-01-01–2026-12-31 (year) · Q2 FY26 print (late July 2026) — H1/H2 shape, memory-demand tone, whether H2 guide ticks up (JPM expects it to…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>TER</b> Q2 FY26 print (late July 2026) — H1/H2 shape, me</span>
+<span class='bar' data-cat='product' title="TER · 2026-01-01–2026-12-31 (year) · Amazon &quot;Project Vulcan&quot; ASIC win ramp through FY26 — also the swing factor for Robotics breakeven (UBS, 2025-1…" style='left:0.0%;width:36.851%;top:36px;--c:#1c7d3f'><b>TER</b> Amazon &quot;Project Vulcan&quot; ASIC win ramp through FY</span>
+<span class='bar' data-cat='product' title="TER · 2026-01-01–2026-12-31 (year) · Google VIP-compute qualification completing ~end-3Q FY26 → modest 4Q revenue, 2027 ramp (JPM, 2026-06-12)." style='left:0.0%;width:36.851%;top:66px;--c:#1c7d3f'><b>TER</b> Google VIP-compute qualification completing ~end</span>
+</div></div>
+<div class='row' style='height:60px'>
+<div class='lab'><a href='../TM.html'>TM</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="TM · 2026-01-01–2026-12-31 (year) · FY27 Q1/Q2 prints (~Aug/2025 and Nov/2025 on the Japanese fiscal calendar → for FY27, ~Aug/2026 and Nov/2026):…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>TM</b> FY27 Q1/Q2 prints (~Aug/2025 and Nov/2025 on the</span>
+<span class='bar' data-cat='print' title="TM · 2027-01-01–2027-12-31 (year) · FY27 BEV ramp (guidance 598k retail, +146%) — whether or not it delivers vs. a history of cuts." style='left:37.024%;width:62.976%;top:6px;--c:#1c5fd6'><b>TM</b> FY27 BEV ramp (guidance 598k retail, +146%) — wh</span>
+<span class='bar' data-cat='print' title="TM · 2027-01-01–2027-12-31 (year) · FY27 20-F (next annual report, ~Jun/2027) for updated risk factors." style='left:37.024%;width:62.976%;top:36px;--c:#1c5fd6'><b>TM</b> FY27 20-F (next annual report, ~Jun/2027) for up</span>
+</div></div>
+<div class='row' style='height:90px'>
+<div class='lab'><a href='../TOKYOELEC.html'>TOKYOELEC</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="TOKYOELEC · 2026-01-01–2026-12-31 (year) · H2 FY27 acceleration — guided stronger than H1 on later-CY26 DRAM + advanced-logic; watch order cadence." style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>TOKYOELEC</b> H2 FY27 acceleration — guided stronger than H1 o</span>
+<span class='bar' data-cat='other' title="TOKYOELEC · 2027-01-01–2027-12-31 (year) · WFE TAM revisions — UBS $200B/$250B CY27/28 vs Street; the memory-capex re-rate is the swing factor (semicap-w…" style='left:37.024%;width:62.976%;top:6px;--c:#8492ad'><b>TOKYOELEC</b> WFE TAM revisions — UBS $200B/$250B CY27/28 vs S</span>
+<span class='bar' data-cat='other' title="TOKYOELEC · 2026-01-01–2026-12-31 (year) · NAND greenfield watch — MS notes no greenfield NAND expansion has started; an early-CY26 greenfield announceme…" style='left:0.0%;width:36.851%;top:36px;--c:#8492ad'><b>TOKYOELEC</b> NAND greenfield watch — MS notes no greenfield N</span>
+<span class='bar' data-cat='print' title="TOKYOELEC · 2026-08-01–2026-08-31 (month) · Q1 FY2027 print — late-Jul/early-Aug 2026 (next reporting date). First test of the +41% SPE H1 ramp and whethe…" style='left:10.554%;width:5.1899999999999995%;top:66px;--c:#1c5fd6'><b>TOKYOELEC</b> Q1 FY2027 print — late-Jul/early-Aug 2026 (next </span>
+</div></div>
+<div class='row' style='height:120px'>
+<div class='lab'><a href='../TSM.html'>TSM</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="TSM · 2026-01-01–2026-12-31 (year) · Q2 FY26 print (mid-July 2026) — C.C. Wei deferred the precise above-30% FY number to July (&quot;a more precise num…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>TSM</b> Q2 FY26 print (mid-July 2026) — C.C. Wei deferre</span>
+<span class='bar' data-cat='other' title="TSM · 2027-01-01–2027-12-31 (year) · 2027 capacity-balance commentary (&quot;we&#x27;ll announce when we enter &#x27;27,&quot; C.C. Wei); 1Q26 the likely point at whic…" style='left:37.024%;width:62.976%;top:6px;--c:#8492ad'><b>TSM</b> 2027 capacity-balance commentary (&quot;we&#x27;ll announc</span>
+<span class='bar' data-cat='other' title="TSM · 2026-07-01–2026-12-31 (half) · N3 GM crossover to corporate average in 2H26; N2 dilution onset in 2H26." style='left:5.19%;width:31.660999999999998%;top:36px;--c:#8492ad'><b>TSM</b> N3 GM crossover to corporate average in 2H26; N2</span>
+<span class='bar' data-cat='other' title="TSM · 2027-07-01–2027-09-30 (quarter) · CoWoS / CoPoS capacity: Fubon raises 2027 year-end CoWoS to 180kwpm (from 170k) and models 2028 reaching 220kw…" style='left:68.339%;width:15.744%;top:36px;--c:#8492ad'><b>TSM</b> CoWoS / CoPoS capacity: Fubon raises 2027 year-e</span>
+<span class='bar' data-cat='product' title="TSM · 2026-07-01–2026-12-31 (half) · EMIB vs CoWoS-L decision on Google TPU V9 (MediaTek &quot;Puma Fish&quot;), expected late-2026/early-2027 (Gokul, 2026-0…" style='left:5.19%;width:31.660999999999998%;top:66px;--c:#1c7d3f'><b>TSM</b> EMIB vs CoWoS-L decision on Google TPU V9 (Media</span>
+<span class='bar' data-cat='other' title="TSM · 2026-07-01–2026-12-31 (half) · NVIDIA roadmap: Rubin stays on N3P in 2H26 (too late to redesign to N2), Feynman jumps to A16 in 2028; NVIDIA …" style='left:5.19%;width:31.660999999999998%;top:96px;--c:#8492ad'><b>TSM</b> NVIDIA roadmap: Rubin stays on N3P in 2H26 (too </span>
+</div></div>
+<div class='row' style='height:120px'>
+<div class='lab'><a href='../TXN.html'>TXN</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="TXN · 2026-01-01–2026-12-31 (year) · Q2 FY26 print — call ~2026-07-22 (guide $5.0–5.4bn / EPS $1.77–2.05); first call with new CFO Julie Knecht (DB…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>TXN</b> Q2 FY26 print — call ~2026-07-22 (guide $5.0–5.4</span>
+<span class='bar' data-cat='product' title="TXN · 2026-07-01–2026-12-31 (half) · 2H26 pricing: management flagged mature-node prices &quot;may go up&quot;; Redburn already sees 5–15% rises broadening (…" style='left:5.19%;width:31.660999999999998%;top:36px;--c:#1c7d3f'><b>TXN</b> 2H26 pricing: management flagged mature-node pri</span>
+<span class='bar' data-cat='product' title="TXN · 2026-07-01–2026-12-31 (half) · 800V DC-power share data points: Citi expects share gains in 2H26 vs IFX/MPWR/Renesas — watch GaN ramp and rac…" style='left:5.19%;width:31.660999999999998%;top:66px;--c:#1c7d3f'><b>TXN</b> 800V DC-power share data points: Citi expects sh</span>
+<span class='pt' data-cat='other' title="TXN · 2026-08-01 (day) · CFO transition: Rafael Lizardi out 2026-08-01 → Julie Knecht (CAO, 25-yr veteran), advisory through 2026-08-31…" style='left:10.554%;top:96px;--c:#8492ad'><i></i><b>TXN</b> CFO transition: Rafael Lizardi out 2026-08</span>
+</div></div>
+<div class='row' style='height:60px'>
+<div class='lab'><a href='../UBER.html'>UBER</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="UBER · 2026-01-01–2026-12-31 (year) · Q2 FY26 print — likely July 2026 (briefing 2026-06-17); watch US Mobility acceleration confirmation + insuranc…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>UBER</b> Q2 FY26 print — likely July 2026 (briefing 2026-</span>
+<span class='bar' data-cat='product' title="UBER · 2026-07-01–2026-12-31 (half) · 2H26 AV launches — Houston (Nuro/Lucid) vs Waymo, Zurich (WeRide); BofA&#x27;s &quot;5 notable launches&quot; is the near-ter…" style='left:5.19%;width:31.660999999999998%;top:36px;--c:#1c7d3f'><b>UBER</b> 2H26 AV launches — Houston (Nuro/Lucid) vs Waymo</span>
+</div></div>
+<div class='row' style='height:60px'>
+<div class='lab'><a href='../VRT.html'>VRT</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="VRT · 2026-01-01–2026-12-31 (year) · Q2 FY26 print (~late July 2026): test the +27% net-sales / $1.40 EPS guide; watch EMEA inflecting to growth an…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>VRT</b> Q2 FY26 print (~late July 2026): test the +27% n</span>
+<span class='bar' data-cat='print' title="VRT · 2026-07-01–2026-09-30 (quarter) · 800V HVDC commercial launch (H2 2026) → volume shipping 2027 into NVIDIA Rubin Ultra; Vera Rubin 800V reported…" style='left:5.19%;width:15.744%;top:36px;--c:#1c5fd6'><b>VRT</b> 800V HVDC commercial launch (H2 2026) → volume s</span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../VST.html'>VST</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="VST · 2026-01-01–2026-12-31 (year) · Cogentrix close (2H26) — triggers the FY26 guidance + FY27 midpoint update; ~$700-750M potential FY27 EBITDA a…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>VST</b> Cogentrix close (2H26) — triggers the FY26 guida</span>
+</div></div>
+<div class='row' style='height:60px'>
+<div class='lab'><a href='../WDC.html'>WDC</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="WDC · 2026-01-01–2026-12-31 (year) · Q4 FY26 print (next earnings, ~late July 2026): guide $3.65B / 51-52% GM / $3.25 EPS — watch GM trajectory tow…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>WDC</b> Q4 FY26 print (next earnings, ~late July 2026): </span>
+<span class='bar' data-cat='other' title="WDC · 2027-01-01–2027-12-31 (year) · LTA pricing resets — CY27/CY28 contract pricing (escalators toward the $25/$30/TB targets) is the single bigge…" style='left:37.024%;width:62.976%;top:6px;--c:#8492ad'><b>WDC</b> LTA pricing resets — CY27/CY28 contract pricing </span>
+<span class='bar' data-cat='product' title="WDC · 2026-01-01–2026-06-30 (half) · HAMR qualification — conversion of the four customers in qual to volume; 44TB ramp timing (H1 CY27 per Woodrin…" style='left:0.0%;width:5.017%;top:36px;--c:#1c7d3f'><b>WDC</b> HAMR qualification — conversion of the four cust</span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../WMB.html'>WMB</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="WMB · 2026-01-01–2026-12-31 (year) · Next print: Q2 FY26 (early Aug-26, seasonal trough)." style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>WMB</b> Next print: Q2 FY26 (early Aug-26, seasonal trou</span>
+</div></div>
+<div class='row' style='height:90px'>
+<div class='lab'><a href='../WOLF.html'>WOLF</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="WOLF · 2026-01-01–2026-12-31 (year) · Q4 FY26 print (~Aug 2026) — guide $140–160M; watch GM path toward break-even, underutilization trend, datacent…" style='left:0.0%;width:36.851%;top:6px;--c:#1c5fd6'><b>WOLF</b> Q4 FY26 print (~Aug 2026) — guide $140–160M; wat</span>
+<span class='bar' data-cat='other' title="WOLF · 2026-01-01–2026-12-31 (year) · Refinancing — next debt step-up mid-CY26; cost-of-capital and any liability-management actions on the new secu…" style='left:0.0%;width:36.851%;top:36px;--c:#8492ad'><b>WOLF</b> Refinancing — next debt step-up mid-CY26; cost-o</span>
+<span class='bar' data-cat='product' title="WOLF · 2026-07-01–2026-09-30 (quarter) · 800V AI-DC ramp — 400V→800V customer migration; SiC infrastructure design-ins; NVDA Vera Rubin 800V pulled ahe…" style='left:5.19%;width:15.744%;top:66px;--c:#1c7d3f'><b>WOLF</b> 800V AI-DC ramp — 400V→800V customer migration; </span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../AKAM.html'>AKAM</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="AKAM · 2026-04-01–2026-06-30 (quarter) · Q2 2026 print — guide revenue $1.075–1.1B (+3–5%), non-GAAP EPS $1.45–1.65, capex jumping to ~40–41% of revenu…" style='left:0.0%;width:5.017%;top:6px;--c:#1c5fd6'><b>AKAM</b> Q2 2026 print — guide revenue $1.075–1.1B (+3–5%</span>
+<span class='bar' data-cat='print' title="AKAM · 2026-10-01–2026-12-31 (quarter) · $1.8B deal ramp — revenue begins Q4 2026 (~$20–25M), partial year 2027, then full ramp; watch RPO build over c…" style='left:21.107%;width:15.744%;top:6px;--c:#1c5fd6'><b>AKAM</b> $1.8B deal ramp — revenue begins Q4 2026 (~$20–2</span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../APP.html'>APP</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="APP · 2026-04-01–2026-06-30 (quarter) · Q2 2026 print and eCommerce-as-%-of-revenue disclosure." style='left:0.0%;width:5.017%;top:6px;--c:#1c5fd6'><b>APP</b> Q2 2026 print and eCommerce-as-%-of-revenue disc</span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../ETN.html'>ETN</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="ETN · 2026-04-01–2026-06-30 (quarter) · Q2 2026 results (expected ~late July/early Aug 2026) — can the margin trend recover after the Q1 guide trim?" style='left:0.0%;width:5.017%;top:6px;--c:#1c5fd6'><b>ETN</b> Q2 2026 results (expected ~late July/early Aug 2</span>
+<span class='bar' data-cat='product' title="ETN · 2026-07-01–2026-09-30 (quarter) · 800V HVDC ramp — small-volume Q3 2026 start at NVDA/GOOGL; ETN content per the BofA Datacloud &#x27;26 note (full b…" style='left:5.19%;width:15.744%;top:6px;--c:#1c7d3f'><b>ETN</b> 800V HVDC ramp — small-volume Q3 2026 start at N</span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../GLW.html'>GLW</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="GLW · 2026-04-01–2026-06-30 (quarter) · Q2 2026 print (late July 2026): solar-wafer plant restart timing, op-margin trajectory above 20%, whether the …" style='left:0.0%;width:5.017%;top:6px;--c:#1c5fd6'><b>GLW</b> Q2 2026 print (late July 2026): solar-wafer plan</span>
+<span class='bar' data-cat='other' title="GLW · 2026-07-01–2026-12-31 (half) · Display memory-cost pass-through through 2H 2026; yen hedges in place through 2030." style='left:5.19%;width:31.660999999999998%;top:6px;--c:#8492ad'><b>GLW</b> Display memory-cost pass-through through 2H 2026</span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../NBIS.html'>NBIS</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="NBIS · 2026-04-01–2026-06-30 (quarter) · Q2 2026 print — by cadence ~early Aug 2026 (Q2&#x27;25 was 2025-08-07). Watch ARR trajectory toward the $7–9bn exit…" style='left:0.0%;width:5.017%;top:6px;--c:#1c5fd6'><b>NBIS</b> Q2 2026 print — by cadence ~early Aug 2026 (Q2&#x27;2</span>
+<span class='bar' data-cat='product' title="NBIS · 2026-10-01–2026-12-31 (quarter) · Capacity activations — Q3 &amp; Q4 2026 deploys; first PA megawatts (end-2027); Alabama/Missouri (early-2027); pro…" style='left:21.107%;width:15.744%;top:6px;--c:#1c7d3f'><b>NBIS</b> Capacity activations — Q3 &amp; Q4 2026 deploys; fir</span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../NFLX.html'>NFLX</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="NFLX · 2026-04-01–2026-06-30 (quarter) · Q2 2026 print (~mid/late July; Q2 2025 was 2025-07-17) — first full read on US price-increase elasticity and a…" style='left:0.0%;width:5.017%;top:6px;--c:#1c5fd6'><b>NFLX</b> Q2 2026 print (~mid/late July; Q2 2025 was 2025-</span>
+</div></div>
+<div class='row' style='height:60px'>
+<div class='lab'><a href='../NVT.html'>NVT</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="NVT · 2026-04-01–2026-06-30 (quarter) · Q2 2026 print (~early Aug 2026): EPS guide $1.12–$1.15; watch organic orders trajectory and whether DC momentu…" style='left:0.0%;width:5.017%;top:6px;--c:#1c5fd6'><b>NVT</b> Q2 2026 print (~early Aug 2026): EPS guide $1.12</span>
+<span class='bar' data-cat='other' title="NVT · 2026-04-01–2026-06-30 (quarter) · EPG flips to organic accounting in Q2 2026 (one-year anniversary) — first clean read on infrastructure organic…" style='left:0.0%;width:5.017%;top:36px;--c:#8492ad'><b>NVT</b> EPG flips to organic accounting in Q2 2026 (one-</span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../NVTS.html'>NVTS</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="NVTS · 2026-04-01–2026-06-30 (quarter) · Q2 2026 print (~early Aug 2026) — guide $10.0m ± $0.5m / 39.25% GM; watch high-power mix, AI-DC+grid sequentia…" style='left:0.0%;width:5.017%;top:6px;--c:#1c5fd6'><b>NVTS</b> Q2 2026 print (~early Aug 2026) — guide $10.0m ±</span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../TSEM.html'>TSEM</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="TSEM · 2026-04-01–2026-06-30 (quarter) · Q2 2026 actuals vs. the $455M guide." style='left:0.0%;width:5.017%;top:6px;--c:#1c5fd6'><b>TSEM</b> Q2 2026 actuals vs. the $455M guide.</span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../VECO.html'>VECO</a></div>
+<div class='track'>
+<span class='bar' data-cat='regulatory' title="VECO · 2026-04-01–2026-06-30 (quarter) · Q2 2026 print (~early Aug 2026): GM recovery toward 38–40%, China trajectory, and progress on the second-half-…" style='left:0.0%;width:5.017%;top:6px;--c:#c0392b'><b>VECO</b> Q2 2026 print (~early Aug 2026): GM recovery tow</span>
+<span class='bar' data-cat='product' title="VECO · 2026-07-01–2026-09-30 (quarter) · Silicon-photonics InP ramp: &gt;$250M order book — shipments from Q3&#x27;26, Spectre IBD ~10x capacity ramp into earl…" style='left:5.19%;width:15.744%;top:6px;--c:#1c7d3f'><b>VECO</b> Silicon-photonics InP ramp: &gt;$250M order book — </span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../CRM.html'>CRM</a></div>
+<div class='track'>
+<span class='pt' data-cat='other' title="CRM · 2026-06-02 (day) · BofA SF Global Tech Conference 2026-06-02–04 — CRM on the roster (briefing 2026-05-28); watch for agentic-mone…" style='left:0.173%;top:6px;--c:#8492ad'><i></i><b>CRM</b> BofA SF Global Tech Conference 2026-06-02–</span>
+<span class='bar' data-cat='print' title="CRM · 2027-01-01–2027-12-31 (year) · Q2 FY27 print (~early Sep 2026, by cadence — Q2 FY26 was 2025-09-03). Watch: H2 cRPO acceleration (the whole b…" style='left:37.024%;width:62.976%;top:6px;--c:#1c5fd6'><b>CRM</b> Q2 FY27 print (~early Sep 2026, by cadence — Q2 </span>
+</div></div>
+<div class='row' style='height:60px'>
+<div class='lab'><a href='../FLEX.html'>FLEX</a></div>
+<div class='track'>
+<span class='pt' data-cat='other' title="FLEX · 2026-06-22 (day) · June 22, 2026: S&amp;P 500 inclusion effective (passive buy flow)." style='left:3.633%;top:6px;--c:#8492ad'><i></i><b>FLEX</b> June 22, 2026: S&amp;P 500 inclusion effective</span>
+<span class='bar' data-cat='print' title="FLEX · 2027-01-01–2027-03-31 (quarter) · Q1 FY27 print (~late July 2026): guide $7.35–7.65B revenue / $0.86–0.92 EPS; CPI +20–30% (ramps 2H FY27) — wat…" style='left:37.024%;width:15.397999999999996%;top:6px;--c:#1c5fd6'><b>FLEX</b> Q1 FY27 print (~late July 2026): guide $7.35–7.6</span>
+<span class='bar' data-cat='event' title="FLEX · 2027-01-01–2027-12-31 (year) · CapEx step-up to $1.4–1.6B in FY27 — compute capacity additions; FCF conversion guided ~60% (ex-spin costs) vs…" style='left:37.024%;width:62.976%;top:36px;--c:#7c4dff'><b>FLEX</b> CapEx step-up to $1.4–1.6B in FY27 — compute cap</span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../SANM.html'>SANM</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="SANM · 2026-07-01–2026-09-30 (quarter) · F3Q26 (Jun) print vs. the $3.2B–$3.5B guide." style='left:5.19%;width:15.744%;top:6px;--c:#1c5fd6'><b>SANM</b> F3Q26 (Jun) print vs. the $3.2B–$3.5B guide.</span>
+<span class='bar' data-cat='product' title="SANM · 2027-01-01–2027-12-31 (year) · ZT ramp cadence from test units to MI450 production; AMD MI450 full-rack revenue contribution in FY27." style='left:37.024%;width:62.976%;top:6px;--c:#1c7d3f'><b>SANM</b> ZT ramp cadence from test units to MI450 product</span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../CRWD.html'>CRWD</a></div>
+<div class='track'>
+<span class='pt' data-cat='other' title="CRWD · 2026-07-02 (day) · 4-for-1 stock split effective 2026-07-02." style='left:5.363%;top:6px;--c:#8492ad'><i></i><b>CRWD</b> 4-for-1 stock split effective 2026-07-02.</span>
+<span class='bar' data-cat='print' title="CRWD · 2026-09-01–2026-09-30 (month) · Q2 FY27 print — by cadence ~late Aug/Sep 2026 (Q2 FY26 was 2025-08-27). Guide: net new ARR $284–286m (+28–29%)…" style='left:15.917%;width:5.017000000000001%;top:6px;--c:#1c5fd6'><b>CRWD</b> Q2 FY27 print — by cadence ~late Aug/Sep 2026 (Q</span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../DISCO.html'>DISCO</a></div>
+<div class='track'>
+<span class='pt' data-cat='print' title="DISCO · 2026-07-23 (day) · Q1 FYE-Mar-2027 print — 2026-07-23 (next scheduled, per Quartr). Watch vs the +18% rev / +20%+ OP guide and th…" style='left:8.997%;top:6px;--c:#1c5fd6'><i></i><b>DISCO</b> Q1 FYE-Mar-2027 print — 2026-07-23 (next s</span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../ALAB.html'>ALAB</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="ALAB · 2026-08-01–2026-08-31 (month) · Q2-2026 print: ~early Aug 2026 — watch the $355–365M guide (+15–18% q/q), Scorpio X scale-up ramp, and confirm…" style='left:10.554%;width:5.1899999999999995%;top:6px;--c:#1c5fd6'><b>ALAB</b> Q2-2026 print: ~early Aug 2026 — watch the $355–</span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../MRVL.html'>MRVL</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="MRVL · 2026-08-01–2026-08-31 (month) · Q2 FY27 print: ~late August 2026 — watch the ~$2.7B/+35% guide, custom-silicon ramp, and any FY28 raise above …" style='left:10.554%;width:5.1899999999999995%;top:6px;--c:#1c5fd6'><b>MRVL</b> Q2 FY27 print: ~late August 2026 — watch the ~$2</span>
+<span class='bar' data-cat='product' title="MRVL · 2027-01-01–2027-12-31 (year) · Switching: 51.2T ramp + 100T sampling (H1 FY27); UALink 115T sampling H2 FY27 → volume FY28; XConn CXL 3.1; me…" style='left:37.024%;width:62.976%;top:6px;--c:#1c7d3f'><b>MRVL</b> Switching: 51.2T ramp + 100T sampling (H1 FY27);</span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../CRDO.html'>CRDO</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="CRDO · 2026-09-01–2026-09-30 (month) · Q1 FY27 print: ~early September 2026 — first read on the $465–475M guide, optical &gt;$600M trajectory, and wheth…" style='left:15.917%;width:5.017000000000001%;top:6px;--c:#1c5fd6'><b>CRDO</b> Q1 FY27 print: ~early September 2026 — first rea</span>
+<span class='bar' data-cat='product' title="CRDO · 2027-01-01–2027-06-30 (half) · AEC roadmap: PCIe Gen 6 AECs to mass production 1H FY27; 200G/lane (light FY27, inflect 2H); fifth hyperscaler…" style='left:37.024%;width:31.141999999999996%;top:6px;--c:#1c7d3f'><b>CRDO</b> AEC roadmap: PCIe Gen 6 AECs to mass production </span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../ORCL.html'>ORCL</a></div>
+<div class='track'>
+<span class='pt' data-cat='print' title="ORCL · 2026-09-10 (day) · Q1 FY27 print: September 10, 2026 (AMC) — first look at the H2-weighted acceleration; watch cloud +58–64% guid…" style='left:17.474%;top:6px;--c:#1c5fd6'><i></i><b>ORCL</b> Q1 FY27 print: September 10, 2026 (AMC) — </span>
+<span class='pt' data-cat='event' title="ORCL · 2026-10-28 (day) · Oracle Investor Day: October 28, 2026, Las Vegas (AI World) — reaffirmation/update of FY30 +31% rev / +28% EPS…" style='left:25.779%;top:6px;--c:#7c4dff'><i></i><b>ORCL</b> Oracle Investor Day: October 28, 2026, Las</span>
+<span class='bar' data-cat='other' title="ORCL · 2027-01-01–2027-12-31 (year) · Funding execution: ~$40B FY27 raise incl. $20B ATM equity; first private-credit / structured or hybrid issuanc…" style='left:37.024%;width:62.976%;top:6px;--c:#8492ad'><b>ORCL</b> Funding execution: ~$40B FY27 raise incl. $20B A</span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../FSLY.html'>FSLY</a></div>
+<div class='track'>
+<span class='pt' data-cat='event' title="FSLY · 2026-09-23 (day) · Investor Day — September 23, 2026, Nasdaq MarketSite, NYC — first under CEO Kip Compton; likely the venue for …" style='left:19.723%;top:6px;--c:#7c4dff'><i></i><b>FSLY</b> Investor Day — September 23, 2026, Nasdaq </span>
+</div></div>
+<div class='row' style='height:60px'>
+<div class='lab'><a href='../AGX.html'>AGX</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="AGX · 2027-01-01–2027-12-31 (year) · Q2 FY27 print (next; date not confirmed on disk — the Q1 call indicated &quot;when we report Q2&quot;) — watch: conversi…" style='left:37.024%;width:62.976%;top:6px;--c:#1c5fd6'><b>AGX</b> Q2 FY27 print (next; date not confirmed on disk </span>
+<span class='bar' data-cat='product' title="AGX · 2027-01-01–2027-12-31 (year) · Ramp of SLEC / CPV / Texas projects — where FY27 revenue materializes." style='left:37.024%;width:62.976%;top:36px;--c:#1c7d3f'><b>AGX</b> Ramp of SLEC / CPV / Texas projects — where FY27</span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../DELL.html'>DELL</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="DELL · 2027-01-01–2027-12-31 (year) · Q2 FY27 print (~late Aug 2026): guide implied Q2 ≈ Q1 AI-server level; watch order book + backlog build and an…" style='left:37.024%;width:62.976%;top:6px;--c:#1c5fd6'><b>DELL</b> Q2 FY27 print (~late Aug 2026): guide implied Q2</span>
+</div></div>
+<div class='row' style='height:60px'>
+<div class='lab'><a href='../MCHP.html'>MCHP</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="MCHP · 2027-01-01–2027-03-31 (quarter) · FQ1 FY27 print (late July/early Aug 2026) — does the +11% q/q guide land, and does GM cross into the low-60s t…" style='left:37.024%;width:15.397999999999996%;top:6px;--c:#1c5fd6'><b>MCHP</b> FQ1 FY27 print (late July/early Aug 2026) — does</span>
+<span class='bar' data-cat='product' title="MCHP · 2027-01-01–2027-03-31 (quarter) · Data-center ramps: PCIe Gen6 switch large win → production CQ1 2027 ($100M+ CY27 rev); retimers/CXL controller…" style='left:37.024%;width:15.397999999999996%;top:36px;--c:#1c7d3f'><b>MCHP</b> Data-center ramps: PCIe Gen6 switch large win → </span>
+</div></div>
+<div class='row' style='height:30px'>
+<div class='lab'><a href='../META.html'>META</a></div>
+<div class='track'>
+<span class='bar' data-cat='print' title="META · 2027-01-01–2027-12-31 (year) · Next print (Q2 FY26) — does ad rev hold high-20s; FY27 capex/opex framing ($200B vs $210B opex debate, Nowak);…" style='left:37.024%;width:62.976%;top:6px;--c:#1c5fd6'><b>META</b> Next print (Q2 FY26) — does ad rev hold high-20s</span>
+</div></div>
+<div class='row' style='height:60px'>
+<div class='lab'><a href='../VEEV.html'>VEEV</a></div>
+<div class='track'>
+<span class='bar' data-cat='event' title="VEEV · 2027-01-01–2027-12-31 (year) · Q4 FY27 Investor Day — expected venue for Vault CRM AI-agent adoption disclosure." style='left:37.024%;width:62.976%;top:6px;--c:#7c4dff'><b>VEEV</b> Q4 FY27 Investor Day — expected venue for Vault </span>
+<span class='bar' data-cat='print' title="VEEV · 2027-01-01–2027-03-31 (quarter) · Exact Q1 FY27 results and FY27 guidance detail." style='left:37.024%;width:15.397999999999996%;top:36px;--c:#1c5fd6'><b>VEEV</b> Exact Q1 FY27 results and FY27 guidance detail.</span>
+</div></div>
+</div></div>
+<h2>Beyond the horizon — &gt;2027 (6)</h2>
+<ul class='far'>
+<li><a href='../ASML.html'>ASML</a> · <span class='mut'>2028-01-01+</span> — WFE ceiling / DRAM-dollar share (UBS Arcuri, 2026-06-15): WFE to ~$250B in CY28, possibly …</li>
+<li><a href='../CRDO.html'>CRDO</a> · <span class='mut'>2028-01-01+</span> — FY28 step-ups: ALCs (Active LED Cables) and Weaver/OmniConnect gearbox ramping FY28; FY28 …</li>
+<li><a href='../META.html'>META</a> · <span class='mut'>2028-01-01+</span> — Custom silicon — &gt;1GW Broadcom ASIC ramp + AMD; ~$13B AVGO XPU by FY28 (briefing 2026-05-3…</li>
+<li><a href='../PANW.html'>PANW</a> · <span class='mut'>2028-01-01+</span> — Long-term targets: NGS ARR $20B by FY30; 40%+ adjusted FCF margin by FY28 (Q1 FY26 call).</li>
+<li><a href='../MRVL.html'>MRVL</a> · <span class='mut'>2029-01-01+</span> — Custom: new tier-1 XPU program announcements feeding the &gt;$10B FY29 line-of-sight; Trainiu…</li>
+<li><a href='../NOW.html'>NOW</a> · <span class='mut'>2030-01-01+</span> — Financial Analyst Day 2026-05-04 — now covered via UBS read-through (see Debate): $30bn FY…</li>
+</ul>
+<style>
+.legend{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 14px}
+.lg{display:inline-flex;align-items:center;gap:6px;border:1px solid #dde2ea;background:#fff;border-radius:14px;
+    padding:3px 11px;font-size:12px;cursor:pointer;color:#33405c;text-transform:capitalize}
+.lg .sw{width:11px;height:11px;border-radius:3px;background:var(--c)}
+.lg.off{opacity:.32;text-decoration:line-through}
+.tl{background:#fff;border:1px solid #e3e7ee;border-radius:10px;padding:8px 14px 14px;overflow:hidden}
+.row{display:flex;align-items:stretch}
+.row.head{height:24px;margin-bottom:2px}
+.lab{flex:0 0 72px;font-size:11.5px;font-weight:700;display:flex;align-items:flex-start;padding-top:6px}
+.lab a{color:#1c5fd6;text-decoration:none}.lab a:hover{text-decoration:underline}
+.axis{position:relative;flex:1}
+.qlbl{position:absolute;font-size:11px;color:#8492ad;transform:translateX(3px);white-space:nowrap}
+.tlbody{position:relative}
+.grid{position:absolute;left:72px;right:0;top:0;bottom:0;pointer-events:none}
+.gl{position:absolute;top:0;bottom:0;width:1px;background:#eef1f6}
+.today{position:absolute;top:0;bottom:0;width:2px;background:#f0a020;opacity:.7}
+.todaylbl{position:absolute;top:-2px;font-size:10px;color:#b8801a;transform:translateX(-50%);font-weight:600}
+.track{position:relative;flex:1}
+.bar{position:absolute;height:18px;line-height:18px;border-radius:4px;background:var(--c);color:#fff;
+     font-size:11px;padding:0 6px;white-space:nowrap;overflow:hidden;box-shadow:0 1px 2px #0f172926;cursor:default}
+.bar b{font-weight:700}
+.pt{position:absolute;height:18px;line-height:18px;font-size:11px;color:#33405c;white-space:nowrap;
+    cursor:default;display:flex;align-items:center;gap:5px}
+.pt i{flex:0 0 11px;width:11px;height:11px;background:var(--c);transform:rotate(45deg);border-radius:2px;
+    box-shadow:0 1px 2px #0f172940}
+.pt b{font-weight:700;color:var(--c)}
+.bar.hide,.pt.hide{display:none}
+.far{font-size:13px;columns:2;column-gap:30px}.far li{margin:2px 0;break-inside:avoid}
+.far a{color:#1c5fd6;text-decoration:none;font-weight:700}
+</style>
+<script>
+document.querySelectorAll('.lg').forEach(function(b){b.onclick=function(){
+  var c=b.dataset.cat;b.classList.toggle('off');
+  document.querySelectorAll('[data-cat="'+c+'"]').forEach(function(el){el.classList.toggle('hide');});
+};});
+</script>
+</main>
+<script>
+function sortT(t,col,numeric){var tb=t.tBodies[0];var rows=[].slice.call(tb.rows);
+var asc=t.getAttribute('data-c')==col?!(t.getAttribute('data-a')=='1'):true;
+t.setAttribute('data-c',col);t.setAttribute('data-a',asc?'1':'0');
+rows.sort(function(a,b){var x=a.cells[col],y=b.cells[col];
+var av=numeric?parseFloat(x.getAttribute('data-v')||x.textContent):x.textContent.trim().toLowerCase();
+var bv=numeric?parseFloat(y.getAttribute('data-v')||y.textContent):y.textContent.trim().toLowerCase();
+if(numeric){av=isNaN(av)?-1e15:av;bv=isNaN(bv)?-1e15:bv;}
+return asc?(av>bv?1:av<bv?-1:0):(av<bv?1:av>bv?-1:0);});
+rows.forEach(function(r){tb.appendChild(r);});}
+document.querySelectorAll('table.sortable').forEach(function(t){
+[].forEach.call(t.tHead.rows[0].cells,function(th,i){th.onclick=function(){sortT(t,i,th.classList.contains('r'));};});});
+</script></body></html>
