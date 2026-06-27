@@ -21,7 +21,7 @@ td.r,th.r{text-align:right;white-space:nowrap}
 .pill.up{background:#e7f6ec;color:#1c7d3f} .pill.dn{background:#fdecea;color:#c0392b} .pill.due{background:#fff3cd;color:#8a6d1b}
 code{background:#eef1f6;padding:1px 5px;border-radius:4px;font-size:85%;font-family:ui-monospace,Consolas,monospace}
 </style></head><body>
-<header><h1>Edge tracker — house vs Street</h1><p>2026-06-26 · divergence = candidate alpha · <a href="../index.html">← back to wiki</a></p></header><main>
+<header><h1>Edge tracker — house vs Street</h1><p>2026-06-27 · divergence = candidate alpha · <a href="../index.html">← back to wiki</a></p></header><main>
 <p class='byline'>⚠️ Programmatic rows auto-computed from <code>house.json</code> vs <code>estimates.json</code> (USD names only). Verify revenue basis before trading. Click headers to sort.</p>
 <h2>Programmatic — house vs consensus (|Δ| ≥ 15%)</h2>
 <table class='sortable'><thead><tr><th>Ticker</th><th>Metric</th><th>Yr</th><th class='r'>House</th><th class='r'>Consensus</th><th class='r'>Δ</th></tr></thead><tbody>
@@ -34,29 +34,11 @@ code{background:#eef1f6;padding:1px 5px;border-radius:4px;font-size:85%;font-fam
 <tr><td class='tk'><a href='../index.html'>NVDA</a></td><td>EPS</td><td>2027</td><td class='r'>15.44</td><td class='r'>12.80</td><td class='r' data-v='20.6250'><span class="pos">+21%</span></td></tr>
 <tr><td class='tk'><a href='../index.html'>NVDA</a></td><td>Revenue $bn</td><td>2027</td><td class='r'>661.00</td><td class='r'>558.70</td><td class='r' data-v='18.3120'><span class="pos">+18%</span></td></tr>
 </tbody></table>
-<h2>Curated divergences — latest reconciliation (<code>reconciliation-2026-06-25.md</code>)</h2>
+<h2>Curated divergences — latest reconciliation (<code>reconciliation-2026-06-27.md</code>)</h2>
 <table><thead><tr><th>Name</th><th>New datapoint</th><th>Read (the edge)</th></tr></thead><tbody>
-<tr><td class='tk'>COHR</td><td>BofA CY27/28 EPS **$9.77 / $12.17**, PO $400 NEUTRAL (05-13)</td><td>**BBG resolves this: the outlier is OURS, not BofA&#x27;s.** Street consensus EPS (FY26/27/28) **$5.46 / $8.33 / $11.98**; BofA&#x27;s $9.77/$12.17 is **in line with Street**; our house **$19.21 ≈ 2× consensus**. Cons PT $386 ≈ BofA $400. **Action: interrogate the house COHR model** (Jefferies 1.6T ramp far above Street).</td></tr>
-<tr><td class='tk'>MRVL</td><td>BofA PO **$200 BUY**, FY28/29 EPS $5.60/$7.80 (05-13)</td><td>**BBG flags the page is stale:** live cons PT **$256**, stock **$281** — the $120/$80 on the page are obsolete. BofA $200 is **below** live consensus PT, and its EPS (FY28 $5.60) is **below** Street ($6.92) — so $200 is multiple-light, not a bull outlier. **Action: refresh MRVL targets.**</td></tr>
-<tr><td class='tk'>TSLA</td><td>JPM EPS 26E **$1.90** / 27E **$2.15** / 28E **$3.15**, PO $475 Neutral (06-24)</td><td>JPM 26E ≈ cons ($1.87); **JPM out-years BELOW Street** (27E $2.15 vs cons $2.44, -12%; 28E $3.15 vs $3.34) — JPM more cautious on the robotaxi ramp. But **PO $475 &gt; cons $422 &gt; spot $375**. Rev 26E $104.2bn ≈ cons $102.6bn.</td></tr>
-<tr><td class='tk'>AVGO</td><td>BofA ~**$110bn FY27 AI sales** (consensus; flags upside), top pick (05-13)</td><td>House FY27 EPS $21.07 ≈ cons FY27 **$19.20**; but house FY28 **$35.96 vs cons $25.72 (+40%)** — house bullish on the out-year. Cons PT **$522 vs spot $379 (+38% upside)** — Street very constructive.</td></tr>
-<tr><td class='tk'>GOOG</td><td>FundaAI capex **$180–190bn 2026**; Barclays capex &quot;up significantly&quot; 2027</td><td>New sell-side **matches house 2026 capex exactly ($183bn)**. EPS: house 27E $16.20 ≈ cons **$15.34** (page&#x27;s &quot;vs ~$14.5 consensus&quot; was stale). ⚠️ **Revenue basis mismatch** — house 2026 rev $505bn vs BBG `BEST_SALES` $422bn; likely gross-vs-net/TAC basis, verify before trusting the gap.</td></tr>
-<tr><td class='tk'>INTC</td><td>BofA PO **$56 → $96** but **still UNDERPERFORM** (05-13)</td><td>PT **+71% yet rating unchanged** — BofA chasing price, not endorsing. Logged to Changelog.</td></tr>
-<tr><td class='tk'>LITE</td><td>BofA PO **$1,100 NEUTRAL** (05-13)</td><td>$1,100 = ~37× house 2027E EPS. House very bullish; BofA neutral at a price the house EPS easily supports.</td></tr>
 </tbody></table>
 <h2>Consensus PT vs spot — live pull (upside ranked)</h2>
 <table class='sortable'><thead><tr><th>Ticker</th><th class='r'>Spot</th><th class='r'>Cons PT</th><th class='r'>Upside</th><th>Read</th></tr></thead><tbody>
-<tr><td class='tk'>NVDA</td><td class='r'>196</td><td class='r'>301</td><td class='r' data-v='53.5714'><span class="pos">+54%</span></td><td>+54% upside to cons PT; house EPS ≈ cons</td></tr>
-<tr><td class='tk'>AVGO</td><td class='r'>379</td><td class='r'>522</td><td class='r' data-v='37.7309'><span class="pos">+38%</span></td><td>+38% upside to cons PT; house FY28 +40% vs Street</td></tr>
-<tr><td class='tk'>LITE</td><td class='r'>862</td><td class='r'>1,126</td><td class='r' data-v='30.6265'><span class="pos">+31%</span></td><td>BofA ≈ cons PT; house $30 ≈ cons FY28 (1 yr early)</td></tr>
-<tr><td class='tk'>ALAB</td><td class='r'>398</td><td class='r'>278</td><td class='r' data-v='-30.1508'><span class="neg">-30%</span></td><td>**stock 43% &gt; cons PT** — most stretched vs targets</td></tr>
-<tr><td class='tk'>GOOGL</td><td class='r'>344</td><td class='r'>432</td><td class='r' data-v='25.5814'><span class="pos">+26%</span></td><td>house 27E ≈ cons; rev basis to verify</td></tr>
-<tr><td class='tk'>INTC</td><td class='r'>133</td><td class='r'>100</td><td class='r' data-v='-25.1880'><span class="neg">-25%</span></td><td>**stock &gt; both PTs** — momentum ahead of fundamentals</td></tr>
-<tr><td class='tk'>ARM</td><td class='r'>348</td><td class='r'>284</td><td class='r' data-v='-18.3908'><span class="neg">-18%</span></td><td>stock &gt; cons PT &gt; BofA</td></tr>
-<tr><td class='tk'>TSLA</td><td class='r'>375</td><td class='r'>422</td><td class='r' data-v='12.5333'><span class="pos">+13%</span></td><td>PO above Street; JPM EPS below Street out-years</td></tr>
-<tr><td class='tk'>MRVL</td><td class='r'>281</td><td class='r'>256</td><td class='r' data-v='-8.8968'><span class="neg">-9%</span></td><td>stock &gt; cons PT &gt; BofA; wiki $120/$80 stale</td></tr>
-<tr><td class='tk'>AMD</td><td class='r'>533</td><td class='r'>498</td><td class='r' data-v='-6.5666'><span class="neg">-7%</span></td><td>BofA ≈ cons; stock above both</td></tr>
-<tr><td class='tk'>COHR</td><td class='r'>407</td><td class='r'>386</td><td class='r' data-v='-5.1597'><span class="neg">-5%</span></td><td>BofA ≈ Street; **house $19.21 = 2× Street**</td></tr>
 </tbody></table>
 </main>
 <script>
