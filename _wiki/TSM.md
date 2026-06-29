@@ -47,7 +47,7 @@ Revenue USD 35.9bn, +6.4% q/q, above the high end of guidance. GM 66.2% (+390bp 
 - N3: ~140k WPM end-2025 → ~160k end-2027; N7/N5/N4 capacity declines 2026–27 on tool conversion (Fubon/Jefferies, 2025-10-28).
 - Intel already booking ~10k WPM of N2 by end-2026 (Nova Lake outsourcing) — an incremental 2027 growth driver (Fubon/Jefferies, 2025-10-28).
 - Long horizon: ~770k WPM of sub-7nm (1–7nm) capacity by 2030; US (Phoenix) only ~3–5% of total even by 2030 (StoneX/John Su, 2025-08-20).
-- **Fab-by-fab leading-edge build (UBS, 2026-06-28):** see the "Leading-edge capacity by node & fab (UBS)" table below — N3 →200–205k, N2/A16 →210k by 2028, A14 →~120k by 2029; UBS runs above the StoneX/Fubon figures here.
+- **Fab-by-fab leading-edge build (MS Research estimates):** see the "Leading-edge capacity by node & fab (MS)" table below — N3 →200–205k, N2/A16 →210k by 2028, A14 →~120k by 2029; MS runs above both UBS and the StoneX/Fubon figures here.
 
 **Pricing / wafer-shortage / EUV (Conor O'Mara Asia trip, 2026-06-23):**
 - 3nm "tight and nobody's cutting anything." **2026 wafer-price hikes by customer: AI/HPC ~+10%, consumer ~+5%, Apple low-single-digit → blended ASP ex-2nm only +3-4%.** **2027 wafer prices +≥10% across ALL customers including Apple**, with GM potentially reaching **high-60s to 70%**. Supply/demand gap widens to **15-20% in 2027**. (Redburn "Conor O'Mara Asia Trip Takeaways", 2026-06-23)
@@ -97,10 +97,10 @@ _Source: UBS (Sunny Lin / Randy Abrams), N3 capacity model accompanying the Q2 F
 | **TSMC N3 capacity** | | | 120 | 130 | 150 | 170 | 1,710 | 175 | 180 | 185 | 190 | 2,190 |
 | _Capacity utilisation_ | | | _107%_ | _107%_ | _110%_ | _106%_ | _107%_ | _101%_ | _106%_ | _104%_ | _102%_ | _103%_ |
 
-## Leading-edge capacity by node & fab (UBS)
-_Source: UBS (Sunny Lin / Randy Abrams) leading-edge capacity roadmap — the supply-side companion to the N3 demand model above (Q2 FY26 preview, 2026-06-28). Figures are **end-of-year installed capacity, kwpm** (monthly run-rate); ranges are UBS's. Tainan F22 P7/P8/P9 (N2) is highlighted in the source as a recent addition._
+## Leading-edge capacity by node & fab (MS)
+_Source: **Morgan Stanley Research estimates** — "Exhibit 16: TSMC fab roadmap" (MS TSMC coverage, Charlie Chan; exhibit date not stated — tentatively the MS Asia AI Supply Chain note, 2026-06-23, date inferred). Figures are **end-of-year installed capacity, kwpm** (monthly run-rate); ranges are MS's. Tainan F22 P7/P8/P9 (N2) is highlighted in the source as a recent addition._
 
-**Read:** the supply side of the same UBS model. N3 plateaus at **~200–205k by 2028** (consistent with the ~220kwpm-by-2028E road and the 102–110% N3 utilisation above), while **N2/A16 is the real ramp — 45k (2025) → 90–100k (2026) → 150–170k (2027) → 210k (2028)** — led by Kaohsiung F22 (→100k) and the newly-added Tainan F22 P7/P8/P9 (→60k). **A14** (HsinChu F20 + Taichung F25) starts in 2027 and scales to **~120k by 2029**, with **A10** (Tainan F26, 5k 2029) and the German **N28/16** fab (F24, →40k by 2028) rounding out the build. Note UBS's N2/N3 numbers run **above** the StoneX/Fubon figures in "Capacity build" above (e.g. UBS N2/A16 150–170k for 2027 vs Fubon's N2 110–120k).
+**Read:** MS's fab-by-fab supply roadmap. N3 plateaus at **~200–205k by 2028** (broadly in line with the ~220kwpm-by-2028E road and the 102–110% N3 utilisation in the UBS N3 model above), while **N2/A16 is the real ramp — 45k (2025) → 90–100k (2026) → 150–170k (2027) → 210k (2028)** — led by Kaohsiung F22 (→100k) and the newly-added Tainan F22 P7/P8/P9 (→60k). **A14** (HsinChu F20 + Taichung F25) starts in 2027 and scales to **~120k by 2029**, with **A10** (Tainan F26, 5k 2029) and the German **N28/16** fab (F24, →40k by 2028) rounding out the build. MS's N2/N3 numbers run **above** both UBS and the StoneX/Fubon figures elsewhere on this page (MS N2/A16 →210k by 2028 vs UBS N2 ~160k by 2028E; MS N2/A16 150–170k for 2027 vs Fubon's N2 110–120k) — a genuine cross-broker divergence on the N2 ramp.
 
 | Node | Location | Fab (phases) | 2025 | 2026 | 2027 | 2028 | 2029 |
 |---|---|---|--:|--:|--:|--:|--:|
@@ -228,7 +228,7 @@ _Source: TSMC earnings calls (dates above); management commentary, paraphrased._
 ## Changelog
 | Date | Change |
 |---|---|
-| 2026-06-29 | Added "Leading-edge capacity by node & fab (UBS)" table — fab-level installed-capacity roadmap 2025–29 across N3 / N2-A16 / A14 / A10 / N40-28-22-12 / N28-16, the supply-side companion to the N3 demand model; plus a pointer bullet in "Capacity build." Attribution inferred as the same UBS Q2-preview model (Sunny Lin / Randy Abrams, 2026-06-28). |
+| 2026-06-29 | Added "Leading-edge capacity by node & fab (MS)" table — fab-level installed-capacity roadmap 2025–29 across N3 / N2-A16 / A14 / A10 / N40-28-22-12 / N28-16; plus a pointer bullet in "Capacity build." **Source corrected to Morgan Stanley Research estimates** ("Exhibit 16: TSMC fab roadmap") — initially mis-attributed to UBS; confirmed by the user. Exhibit date not stated; tentatively the MS Asia AI Supply Chain note (Charlie Chan, 2026-06-23). The MS N2/A16 →210k-by-2028 figure (vs UBS N2 ~160k) is a cross-broker divergence, not a UBS internal mismatch. |
 | 2026-06-29 | Added "N3 bottoms-up supply/demand model (UBS)" section — full client/product N3 wafer-demand table by quarter (Q126E–Q427E) with Cloud-AI vs consumer split, total demand vs TSMC capacity, and 102–110% utilisation. (UBS / Sunny Lin, Randy Abrams, 2026-06-28) |
 | 2026-06-27 | Added 1 intra-quarter row (06-27): SFG "Feeding the Foundry Beast" (Hosseini, $432.35, Positive) — SCA/LTA template migrating from memory to foundry logic. Updated quarter synthesis. |
 - **Capstone model:** `P:\Felipe Monteiro\US Equities\Modelos oficiais\Modelo Felipe TSM 1Q26.xlsm` (house estimates).
