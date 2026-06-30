@@ -1,12 +1,11 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-06-29 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-06-30 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (10)
+## 📅 Upcoming (9)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-06-29 | IFX | **2026-06-29 — IFX AI-power fireside chat** (BofA / Didier Scemama) with **Adam White, head of PSS AI-power division** — direct read on the EUR 2.5bn FY27 AI-power target and 800V traction (briefing 2 |
 | 2026-06-30 | CEG | **Calpine lockup expiration:** 2026-06-30 (25M shares); the $5B buyback gives flexibility to absorb (Q1 FY26). |
 | 2026-07-01 | IFX | **2026-07-01 — re-org into 3 divisions** (Automotive / Power Systems / Edge Systems) — new segment reporting. |
 | 2026-07-02 | CRWD | **4-for-1 stock split** effective 2026-07-02. |
@@ -17,12 +16,13 @@ _Generated 2026-06-29 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-09-01 | AAPL | **Cook→Ternus CEO transition** effective **2026-09-01**; first earnings under Ternus is the Sept-qtr call (Oct). |
 | 2026-09-16 | ON | **2026-09-16 — onsemi Analyst Day** (Citi exp. ~Sep 13 print first) — the key event; watch for a raised long-term target model + SiC/800V framing (Citi, briefing 2026-06-15). |
 
-## ⏰ Passed — need a post-mortem (9)
+## ⏰ Passed — need a post-mortem (10)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
+| 2026-06-29 | IFX | **~~2026-06-29~~ — IFX AI-power fireside chat** (BofA / Adarsh Mehrotra with **Adam White, President Power & Systems division**) — occurred; key takeaway: CPU/GPU compute ratio converging 8:1 → ~1:1 a |
 | 2026-06-24 | NVDA | Stockholder meeting 2026-06-24. $20B+ benchmark bond (first HG bond in ~5 yrs; 424B5 filed mid-June) — read as AI-capex confidence. |
 | 2026-06-24 | LRCX | **DRAM/HBM cadence** — DRAM now 27% of systems and rising; HBM4/HBM4E + 16-high stacking lift electroplating/TSV-etch SAM. UBS: DRAM is >half the 2026 WFE increase and >2/3 of 2027. MU F3Q26 print **2 |
 | 2026-06-24 | KLAC | **Memory capex cadence:** DRAM/HBM is the engine of the incremental WFE dollars; sensitive to memory-pricing and any greenfield NAND (first NAND greenfield not until CY28, Sur/JPM 2026-05-15). MU F3Q2 |

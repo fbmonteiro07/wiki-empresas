@@ -1,6 +1,6 @@
 # Edge tracker — house vs Street
 
-_Generated 2026-06-29 · the standing view of where our model and the curated reconciliation runs disagree with consensus. Divergence = candidate alpha; agreement is noise. Rebuild: `py _wiki/_tools/build_edge.py`._
+_Generated 2026-06-30 · the standing view of where our model and the curated reconciliation runs disagree with consensus. Divergence = candidate alpha; agreement is noise. Rebuild: `py _wiki/_tools/build_edge.py`._
 
 > ⚠️ Programmatic rows are auto-computed (house.json vs estimates.json, USD names only) — **verify the basis before trading** (revenue gross/net/TAC differences can masquerade as edge). Curated rows below are analyst-vetted.
 
@@ -10,13 +10,13 @@ _Generated 2026-06-29 · the standing view of where our model and the curated re
 |---|---|---|--:|--:|--:|
 | _none over threshold_ | | | | | |
 
-## Curated divergences — latest reconciliation (`reconciliation-2026-06-29.md`)
+## Curated divergences — latest reconciliation (`reconciliation-2026-06-30.md`)
 
 | Name | New datapoint | Read (the edge) |
 |---|---|---|
 | _no reconciliation file_ | | |
 
-## Consensus PT vs spot — live pull in `reconciliation-2026-06-29.md` (upside ranked)
+## Consensus PT vs spot — live pull in `reconciliation-2026-06-30.md` (upside ranked)
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|
