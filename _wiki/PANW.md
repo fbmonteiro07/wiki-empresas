@@ -69,6 +69,7 @@ PANW sits between upstream infrastructure/threat-intelligence inputs and downstr
 - **Guide raised:** FY26 NGS ARR $8.9–8.95B (+59–60%), RPO $20.9–21.0B, revenue $11.415–11.425B (+24%), op margin 28.9–29.2%, adj FCF margin 37.5%; FQ4 EPS ~$0.97 vs Street ~$0.94 (briefing 2026-06-03; Q3 call). Stock fell ~1% post-print — "healthy breather," not a verdict (Jefferies/Favuzza, 2026-06-03).
 
 ## Debate / thesis
+- **AI-software read-through — agent cybersecurity as a new category (Vercel CEO Guillermo Rauch, Stanford MS&E435, 2026-06-29):** Rauch argues that as agents get their own computers/sandboxes they open a PC-era-scale wave of new attack surface (data exfiltration, prompt-injection/exploitation, abused tool/API access), requiring new products for sandbox isolation, data-exfil prevention, governance and guardrails. Tailwind read-through for PANW's secure-AI / AI-runtime-security push (Prisma AIRS). See [tokenmaxxing theme](themes/tokenmaxxing.md).
 - **Bull:**
   - "Cleared all bogeys; customers clearly turning to PANW to secure AI adoption; single-digit cyber share = long runway." MS (Marshall/Weiss) raised PT to **$320** from $253, OW; FY26E rev +23.8%, FY27E +18.2% (2026-06-03).
   - "Broad platform strength; NetSec/Prisma SASE displacement is the key differentiator vs ZS; constructive on FY27 acceleration." DB (Zelnick) Buy, PT **$350** — "strongest Q3 in several years" in SASE (2026-06-03).
