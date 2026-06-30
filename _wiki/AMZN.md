@@ -103,8 +103,9 @@ _Q1 FY26 · Apr 29 → Jun 23, 2026 · sell-side / expert calls / reports betwee
 | 06-23 | JPM · Doug Anmuth (Prime deep-dive) | demand | bull | OW, Dec-26 PT $330 (~32x 2027E GAAP EPS $10.38), AMZN Best Idea / Analyst Focus List. Prime 'unbundled' worth ~$1,440/year vs the $139 cost (~10x); 370M+ global subs at year-end 2026 (~139M US / ~231M Int'l); ~$7B-$8B of Prime Day revenue shifted into Q2'26; a $20 hike in the US price ≈ ~$3B of annualized sales, now seen slipping from 2026 to 2027. |
 | 06-23 | UBS · Keirstead/Arcuri | demanda | neutral | Neutral on hyperscalers re: token optimization — AWS Bedrock is the multi-model platform (already lists open Chinese models alongside Anthropic/OpenAI) and down-tiering still needs AWS inference compute, so model-agnosticism is an edge "like Snowflake/MongoDB being multi-cloud"; offset is that frontier-API rev growth could soften and AI price sensitivity could cap near-term GPU pricing. |
 | 06-26 | Morgan Stanley · Stephen Byrd (Thematic Research) | demanda | mixed | Named as a company experiencing "tokenmaxxing" pullback (spending rationalization on AI tokens). MS frames this as healthy optimization via Jevons Paradox; also sees hyperscalers (AMZN, MSFT, GOOG) as net beneficiaries of the orchestration/multi-model era. (MS "Tokenmaxxing discussion", 2026-06-26) |
+| 06-29 | BofA · Justin Post | demanda | bull | **AWS EC2 Capacity Block prices raised +20%, effective July 1.** This follows the +15% increase in January 2026; effective CB prices now +22% above the 2022 trough. BofA estimates the pricing action adds 1–2ppt to 2H AWS revenue growth, with compute pricing power thesis affirmed. Separate data point: Prime Day US sales +9% y/y to $26.4B (Adobe data) — demand read-through for the broader AMZN commerce and ad ecosystem. (BofA / Justin Post, 2026-06-29) |
 
-**Quarter synthesis:** the debate migrated from "is AWS reaccelerating?" (already answered: +28%, silicon validated, margin inflecting) to the sustainability of the funding and the health of the non-AI core — JPM shows FCF collapsing while AMZN pre-funds ~$85bn of the FY27 ramp, and the only crack in the bull is the non-AI cloud SSO weakness that Bernstein sees threatening 4Q.
+**Quarter synthesis:** the debate migrated from "is AWS reaccelerating?" (already answered: +28%, silicon validated, margin inflecting) to the sustainability of the funding and the health of the non-AI core — JPM shows FCF collapsing while AMZN pre-funds ~$85bn of the FY27 ramp, and the only crack in the bull is the non-AI cloud SSO weakness that Bernstein sees threatening 4Q. **06-29: BofA Justin Post confirms AWS compute pricing power** — +20% CB price hike (July 1), effective prices +22% from 2022 trough, adds 1–2ppt to 2H AWS growth. Prime Day +9% ($26.4B) confirms consumer demand resilience.
 
 ## Management commentary — evolution (last 6 quarters)
 
@@ -151,3 +152,8 @@ _Source: AMZN earnings calls (dates above); management commentary, paraphrased._
   - [UBS (Scott Linzer) — ad checks META/AMZN/GOOG (2026-06-22)](../relat%C3%B3rios%20bons/2026_06_22_scott_linzer_ubs_adv_call_22_jun_26.html)
   - [Jefferies — Russell rebalance / mega-cap IPOs (2026-06-08)](../relat%C3%B3rios%20bons/2026_06_08_jeff_rtya_rebal_8_jun_26.html)
   - [Morgan Stanley Stephen Byrd "Tokenmaxxing discussion" (2026-06-26)](../relat%C3%B3rios%20bons/2026_06_26_stephen_byrd_on_tokenmaxxing.html) — tokenmaxxing example (healthy optimization); hyperscaler orchestration winner read-through
+
+## Changelog
+| Date | Change |
+|---|---|
+| 2026-06-29 | Added 1 intra-quarter row (06-29): BofA Justin Post — AWS EC2 Capacity Block +20% (July 1), effective prices +22% from 2022 trough, adds 1–2ppt to 2H AWS growth; Prime Day +9% ($26.4B). Updated quarter synthesis. |

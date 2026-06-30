@@ -20,6 +20,7 @@ No quarterly financials in the ported corpus (no 1Q26 revenue/auto-GM/energy-GM/
   - **Bull:** Terafab (SpaceX + TSLA JV) confirmed by ASML CEO; total scope now up to $119bn; SpaceX providing initial capital; solves [INTC](INTC.md) 14A capacity utilization. SemiAnalysis frames Tesla as an anchor customer alongside SpaceX.
   - **Bear:** Capital requirements are massive; Tesla's own contribution not disclosed; the JV ties TSLA capital allocation to Intel Foundry execution risk.
 - **Megapack / Energy vs. EV volume:** BofA flagged Ford as an emerging battery-storage competitor to Megapack (MISO expert call, 2026-05-23). No Tesla energy-segment numbers in the corpus.
+- **US-China dual presence (Physical AI) — Gavekal (2026-06-29):** "Tesla's Two Way Bet In Physical AI" (Gavekal Technologies / Daniel Grozdea fwd, 2026-06-29). Gavekal frames the Shanghai Gigafactory precedent as evidence that Tesla's physical AI ambitions — Optimus, Cybercab, robotics supply chain — require operating at scale in both the US *and* China simultaneously. Shanghai gives Tesla access to the Chinese EV supply chain (lower BOM, faster iteration) while US fabs (Giga Texas + Terafab/SpaceX) provide the AI chip and energy-storage layer. Gavekal reads this dual-presence as a structural advantage vs. pure-US or pure-China competitors — but flags that it also creates a political risk surface if US-China tech decoupling accelerates (China's leverage over TSLA = a hold-up risk). Separately: Barron's flagged deeper ties between Tesla and SpaceX (Terafab + shared AI chip roadmaps) as an underappreciated asset in TSLA's valuation. (Gavekal Technologies, forwarded by Daniel Grozdea, 2026-06-29)
 - **Where the sell-side stands:** MS (Percoco) — Equal-Weight, PT $415 (autonomy "rate-of-change story," 2026-05-28). **JPMorgan (Rajat Gupta) — Neutral, PT $475 (Dec-27), price $381.61 (23-Jun-26)** (JPM "Tesla Robotaxi Deep-Dive", 2026-06-24); upgraded from Underweight 2026-06-08. Valuation flag: TSLA at 16x CY25 revenues vs. SPCX at ~90x (DanielTNiles, 2026-06-13).
 
 ## Catalysts / what to watch
@@ -42,7 +43,9 @@ Synthesis ported from the research-wiki corpus (sell-side notes + Twitter/X). Ke
 - **Research reports (relatórios bons):**
   - [JPM "Tesla Robotaxi Deep-Dive" (2026-06-24)](../relat%C3%B3rios%20bons/JPM_Tesla_Inc_Robotaxi_D_2026-06-24_5341280.html) — Rajat Gupta; Neutral/PT $475, EPS 26E cut to $1.90, 2Q26 deliveries 420K, unsupervised-Cybercab bottlenecks, FSD v15 ~5-6mo out, robotaxi/FSD TAM build.
 - No local filings/transcripts archive for TSLA in this wiki.
+- **External research:** [Gavekal Technologies (Daniel Grozdea fwd) — "Tesla's Two Way Bet In Physical AI" (2026-06-29)] — Shanghai gigafactory precedent; must operate in US + China; physical AI dual-presence as structural advantage and political risk.
 
 ## Changelog
 - 2026-06-25 — JPM PT/EPS added (JPM "Tesla Robotaxi Deep-Dive", Rajat Gupta, 2026-06-24): first JPM PT in the wiki = **$475 (Dec-27)** at price $381.61 (23-Jun-26); supersedes prior "Neutral, no PT in corpus" (was: U/G to Neutral 2026-06-08, no published PT). JPM Adj. EPS 26E cut $1.95→$1.90; Adj. EBITDA 26E $11,366→$11,135mn; 2Q26 deliveries est. lowered ~430.5K→420K.
 - 2026-06-25 — page created; ported from research-wiki corpus.
+- 2026-06-29 — Added Gavekal "Tesla's Two Way Bet In Physical AI" to Debate section: US-China dual presence thesis for physical AI (Optimus, Cybercab, robotics supply chain), Shanghai precedent as structural advantage + political risk surface. Added to Sources.
