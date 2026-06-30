@@ -120,6 +120,33 @@ _Source: **Morgan Stanley Research estimates** — "Exhibit 16: TSMC fab roadmap
 | **N40/28/22/12** | Japan | F23 – P1 | 25k | | | | |
 | **N28/16** | Germany | F24 | | | 5k | 40k | |
 
+## Node-level customer demand (MS) — and vs the UBS N3 model
+_Source: **Morgan Stanley Research estimates** — node-by-customer demand breakdowns (Ex.8 2nm, Ex.10 3nm, Ex.11 5/4nm; MS TSMC coverage, Charlie Chan; date inferred 2026-06-23, MS Asia AI Supply Chain). Ex.9 (N2-family capacity, "70% CAGR 2026-28e") is sourced to **TSMC**. **The kwpm figures below are read off MS's stacked-bar charts (no gridline labels) → ESTIMATE, ±~10-15 kwpm; directional, not precise.** Units: k 12"-equivalent wafers/month (kwpm)._
+
+**MS demand by node (chart-read, kwpm):**
+
+| Node | 2024e | 2025e | 2026e | 2027e | Shape |
+|---|--:|--:|--:|--:|---|
+| 5/4nm | ~150 | **~185** | ~160 | ~150 | **peaks 2025e, then declines** as AI/HPC migrates up-node |
+| 3nm (N3) | ~62 | ~103 | ~167 | ~218 | steep ramp; NVDA/AVGO/AI-ASIC stack rising, Apple/QCOM/MTK consumer base flat-to-down |
+| 2nm (N2) | ~0 | ~4 | ~58 | ~145 | inflects 2026→27; AAPL the largest single block, then AMD/AI-ASIC/AVGO |
+
+_(5/4nm history: ~22 (2020) → ~52 → ~103 → ~123 → ~150 → ~185 (2025e peak). 3nm history: ~1 (2022) → ~15 → ~62 → ~103 → ~167 → ~218.)_
+
+**MS vs UBS on N3 (3nm) demand** — the one apples-to-apples cross-check against the UBS N3 model above (2026-06-28). UBS reports annual k-wafers + quarterly kwpm; converting UBS to a comparable monthly run-rate (annual ÷ 12 = full-year average; Q4 = year-exit):
+
+| N3 demand (kwpm) | 2026e | 2027e |
+|---|--:|--:|
+| **MS** (Ex.10, chart-read) | ~167 | ~218 |
+| UBS — full-year avg (1,837k / 2,266k ÷ 12) | 153 | 189 |
+| UBS — year-exit (Q4 run-rate) | 180 | 194 |
+| **MS vs UBS avg** | +9% | **+15%** |
+| **MS vs UBS exit** | −7% | **+12%** |
+
+**Read:** MS and UBS agree closely on **2026** N3 demand (MS ~167 sits between UBS's 153 avg and 180 exit), but **MS runs ~12–15% hotter on 2027 N3 (~218 vs UBS 189 avg / 194 exit)**. Since both shops put N3 *capacity* at ~190k for 2027 (MS fab roadmap above; UBS Q427E 190 kwpm), MS implies a tighter node — ~**115% utilisation** vs UBS's stated 102–110%. Both reinforce the "N3 structurally sold out / supply-demand gap 15–20% in 2027" view elsewhere on this page; MS just sits at the more-oversubscribed end. There is no 2nm demand curve in the UBS material on the page, so N2 isn't directly comparable — but MS's 2nm demand (~145k 2027e) sits just under the MS N2/A16 capacity roadmap (150–170k 2027), i.e. N2 still filling.
+
+**Footnote — TSMC's "70% CAGR" vs the MS roadmap:** TSMC's Ex.9 claims N2-family capacity grows at a **70% CAGR 2026→2028e**; the MS fab roadmap (90–100k → 210k) implies only **~49%** ((210/95)^½−1). The two reconcile only off different 2026 bases — 210k @ 70% CAGR requires a ~**73k** 2026 base vs MS's 90–100k. Treat TSMC's "70%" as its own framing off a lower/narrower (likely N2-only) base, not consistent with MS's bundled N2/A16 90–100k→210k path.
+
 ## Capstone estimates (house model)
 _Source: Capstone official model (`Modelo Felipe TSM 1Q26.xlsm`, 2026-06-10)._
 
@@ -228,6 +255,7 @@ _Source: TSMC earnings calls (dates above); management commentary, paraphrased._
 ## Changelog
 | Date | Change |
 |---|---|
+| 2026-06-29 | Added "Node-level customer demand (MS) — and vs the UBS N3 model" section — MS node-demand chart reads (2nm/3nm/5-4nm, flagged ESTIMATE ±10-15 kwpm) + an MS-vs-UBS N3 comparison: MS runs **~12-15% above UBS on 2027 N3 demand** (~218 vs 189/194 kwpm), 5/4nm peaks 2025e then declines, and a footnote on TSMC's 70% N2 CAGR vs the MS-roadmap-implied ~49%. Comparison arithmetic + UBS page citations verified (double-check PASS). Source: MS Research estimates (Ex.8/10/11; Ex.9 = TSMC), date inferred 2026-06-23. |
 | 2026-06-29 | Added "Leading-edge capacity by node & fab (MS)" table — fab-level installed-capacity roadmap 2025–29 across N3 / N2-A16 / A14 / A10 / N40-28-22-12 / N28-16; plus a pointer bullet in "Capacity build." **Source corrected to Morgan Stanley Research estimates** ("Exhibit 16: TSMC fab roadmap") — initially mis-attributed to UBS; confirmed by the user. Exhibit date not stated; tentatively the MS Asia AI Supply Chain note (Charlie Chan, 2026-06-23). The MS N2/A16 →210k-by-2028 figure (vs UBS N2 ~160k) is a cross-broker divergence, not a UBS internal mismatch. |
 | 2026-06-29 | Added "N3 bottoms-up supply/demand model (UBS)" section — full client/product N3 wafer-demand table by quarter (Q126E–Q427E) with Cloud-AI vs consumer split, total demand vs TSMC capacity, and 102–110% utilisation. (UBS / Sunny Lin, Randy Abrams, 2026-06-28) |
 | 2026-06-27 | Added 1 intra-quarter row (06-27): SFG "Feeding the Foundry Beast" (Hosseini, $432.35, Positive) — SCA/LTA template migrating from memory to foundry logic. Updated quarter synthesis. |
