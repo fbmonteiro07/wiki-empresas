@@ -2,6 +2,22 @@
 
 _Wiki · generated 2026-06-25 · synthesis-only (no local filings archive) · sources: sell-side notes + Twitter/X corpus, ported from research corpus. Master index: [00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof  · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $102.4bn | $117.2bn |
+| Gross profit | $19.4bn | $24.4bn |
+| Gross margin | 19.0% | 20.8% |
+| EBITDA | $15.7bn | $22.0bn |
+| EPS | $1.85 | $2.57 |
+| Capex | $26.1bn | $20.6bn |
+| OCF (≈EBITDA) | $15.7bn | $22.0bn |
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Tesla is an EV maker, energy-storage company (Megapack), and autonomous-driving / robotics platform. The Street narrative is rotating from "EV volume story" toward an autonomy-and-robotics re-rate: FSD cumulative miles crossed 10bn and daily usage accelerated to 26.7mn/day (vs. 18.5mn/day in April 2026), with Morgan Stanley framing it as a "rate-of-change story." Alongside autonomy, Tesla is pursuing Optimus humanoid robots and is a co-anchor customer for the Terafab US chip-fab JV with SpaceX and [INTC](INTC.md), a project that has grown in scope from $55bn to up to $119bn.
 

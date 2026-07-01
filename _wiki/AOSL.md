@@ -2,6 +2,22 @@
 
 _Wiki · generated 2026-06-25 · synthesis-only (no local filings archive) · sources: sell-side notes + Twitter/X corpus, ported from research corpus. Master index: [00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof  · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $682m | — |
+| Gross profit | $158m | — |
+| Gross margin | 23.1% | — |
+| EBITDA | $44m | — |
+| EPS | $-0.84 | — |
+| Capex | — | — |
+| OCF (≈EBITDA) | $44m | — |
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Alpha and Omega Semiconductor designs power semiconductors — MOSFETs, power ICs, and gate drivers — serving consumer electronics, computing, communications, and industrial end markets. AOSL appears in the FinTwit 800V DC power-semis basket (NVDA Rubin-rack theme) alongside [NVTS](NVTS.md) and POWI, but with minimal dedicated sell-side coverage in the ported corpus.
 _Thin coverage — limited sources in corpus._

@@ -2,6 +2,22 @@
 
 _Wiki · generated 2026-06-25 · synthesis-only (no local filings archive) · sources: sell-side notes + Twitter/X corpus, ported from research corpus. Master index: [00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof  · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $1.9bn | $2.8bn |
+| Gross profit | $581m | $1.0bn |
+| Gross margin | 29.8% | 36.3% |
+| EBITDA | $688m | $994m |
+| EPS | $3.50 | $6.62 |
+| Capex | $646m | $535m |
+| OCF (≈EBITDA) | $688m | $994m |
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Tower Semiconductor is a specialty analog/mixed-signal foundry (Israel-HQ, US/Japan fabs) focused on differentiated platforms: silicon photonics (SiPho), SiGe, RF, and power. The market narrative casts TSEM as a primary beneficiary of the AI-datacenter optical buildout — SiPho transceivers/PICs and SiGe drivers/TIAs for optical and active-copper-cable (AEC) interconnects. A landmark **$1.3B committed SiPho revenue figure for 2027** (plus a $290M customer prepayment) positions TSEM as a Tier-1 optical-supply anchor alongside [LITE](LITE.md)/MTSI. In June 2026 TSEM converted former IP adversary IQE into a multi-year InP epiwafer customer, expanding its compound-semi TAM into the optical chain.
 

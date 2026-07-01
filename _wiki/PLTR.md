@@ -2,6 +2,22 @@
 
 _Wiki · generated 2026-06-25 · synthesis-only (no local filings archive) · sources: sell-side notes + Twitter/X corpus, ported from research corpus. Master index: [00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof  · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $7.6bn | $11.2bn |
+| Gross profit | $6.6bn | $9.7bn |
+| Gross margin | 86.1% | 86.6% |
+| EBITDA | $4.5bn | $6.7bn |
+| EPS | $1.42 | $2.10 |
+| Capex | $44m | $63m |
+| OCF (≈EBITDA) | $4.5bn | $6.7bn |
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Palantir builds AI-powered data-integration and decision-intelligence platforms for government and commercial customers, anchored by Foundry (commercial) and Gotham (government). The bull thesis centers on Palantir's ontology layer — a proprietary data model brokers assert AI labs cannot effectively replicate — marketed as an "action engine" with a claimed 5-year moat. AIPCon (its customer AI conference) has been the primary narrative catalyst in May–June 2026. The stock hit a 12-month relative low in mid-May 2026 (~$146, down from ~$207 in Nov 2025) before recovering through June. Consensus is overwhelmingly constructive on momentum but split on valuation.
 

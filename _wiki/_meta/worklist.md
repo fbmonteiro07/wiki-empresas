@@ -1,18 +1,18 @@
 # Wiki remediation worklist
 
-_Generated 2026-06-30 · closes the loop on `lint_wiki.py` / staleness.md. Rebuild: `py _wiki/_tools/remediate.py`._
+_Generated 2026-07-01 · closes the loop on `lint_wiki.py` / staleness.md. Rebuild: `py _wiki/_tools/remediate.py`._
 
-## 🔴 BBG estimates missing (98) — scriptable
+## 🔴 BBG estimates missing (1) — scriptable
 
 Run (BBG Terminal must be logged in) — `fetch_estimates.py` merges, so this is safe:
 
 ```
-py "E:\.claude\scripts\fetch_estimates.py" AAOI AAPL ADI ADVANTEST AGX AIXA AKAM ALAB AMAT AMD AMZN ANET AOSL APH APP ARM ASML AVGO AXTI BE BESI BKNG CDNS CEG CEREBRAS CIEN COHR CRDO CRM CRWD CRWV CSCO DELL DISCO ETN FLEX FSLY GEV GLW GOOG HPE IFX INTC KIOXIA KLAC LITE LRCX MCHP MEDIATEK META MP MRVL MSFT MU NBIS NET NFLX NOW NVDA NVT NVTS NXPI ON ORCL PANW PLTR POET POWI PWR QCOM RDDT SAMSUNG SANM SHOP SKHYNIX SMCI SMIC SNDK SNPS SPOT STX TEL TER TLN TM TOKYOELEC TSEM TSLA TSM TXN UBER VECO VEEV VRT VST WDC WMB WOLF
+py "E:\.claude\scripts\fetch_estimates.py" CEREBRAS
 ```
 
 Or auto: `py _wiki/_tools/remediate.py --run-estimates`
 
-AAOI, AAPL, ADI, ADVANTEST, AGX, AIXA, AKAM, ALAB, AMAT, AMD, AMZN, ANET, AOSL, APH, APP, ARM, ASML, AVGO, AXTI, BE, BESI, BKNG, CDNS, CEG, CEREBRAS, CIEN, COHR, CRDO, CRM, CRWD, CRWV, CSCO, DELL, DISCO, ETN, FLEX, FSLY, GEV, GLW, GOOG, HPE, IFX, INTC, KIOXIA, KLAC, LITE, LRCX, MCHP, MEDIATEK, META, MP, MRVL, MSFT, MU, NBIS, NET, NFLX, NOW, NVDA, NVT, NVTS, NXPI, ON, ORCL, PANW, PLTR, POET, POWI, PWR, QCOM, RDDT, SAMSUNG, SANM, SHOP, SKHYNIX, SMCI, SMIC, SNDK, SNPS, SPOT, STX, TEL, TER, TLN, TM, TOKYOELEC, TSEM, TSLA, TSM, TXN, UBER, VECO, VEEV, VRT, VST, WDC, WMB, WOLF
+CEREBRAS
 
 ## 🟡 No transcript on disk (19) — needs the transcript-fetcher agent
 

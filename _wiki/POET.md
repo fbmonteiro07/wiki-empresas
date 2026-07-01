@@ -2,6 +2,22 @@
 
 _Wiki · generated 2026-06-25 · synthesis-only (no local filings archive) · sources: sell-side notes + Twitter/X corpus, ported from research corpus. Master index: [00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof  · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $10m | — |
+| Gross profit | — | — |
+| Gross margin | — | — |
+| EBITDA | — | — |
+| EPS | $-0.24 | — |
+| Capex | — | — |
+| OCF (≈EBITDA) | — | — |
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 POET Technologies develops an Electrical-Optical Interposer (EOI) platform — wafer-scale optical integration targeting co-packaged optics (CPO) and near-package optics (NPO) for 800G/1.6T datacenter transceivers. The company is pre-revenue at meaningful scale (~$1M annual run-rate per FinTwit, May 2026) but secured a landmark $50M initial order from Lumilens in May 2026 (scalable to $500M over five years), framed as a ~50x run-rate de-risking event. POET sits in the photonics/CPO basket alongside [AAOI](AAOI.md), SIVE, ALMU, and LWLG, with persistent short pressure and a live valuation debate vs. Taiwan-listed FOCI (3363).
 _Thin coverage — limited sources in corpus._

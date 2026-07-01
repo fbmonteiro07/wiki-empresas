@@ -2,6 +2,22 @@
 
 _Wiki · generated 2026-06-25 · synthesis-only (no local filings archive) · sources: sell-side notes + Twitter/X corpus, ported from research corpus. Master index: [00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof  · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $8.1bn | $10.6bn |
+| Gross profit | $7.2bn | $9.3bn |
+| Gross margin | 88.2% | 88.0% |
+| EBITDA | $6.9bn | $8.9bn |
+| EPS | $15.97 | $21.02 |
+| Capex | $8m | $6m |
+| OCF (≈EBITDA) | $6.9bn | $8.9bn |
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 AppLovin is a mobile-advertising and AI-technology platform operating the AXON AI engine for performance marketing (app-install and eCommerce ads). The investment debate centers on whether APP can sustain its AI-driven ad-growth engine, expand into eCommerce monetization (the "next leg"), and whether the META bear case (META competing directly in non-IDFA mobile inventory) has structurally faded. The stock has repeatedly been flagged a high-beta "dislocated beyond megacap" name squeezing alongside RDDT in May–Jun 2026.
 

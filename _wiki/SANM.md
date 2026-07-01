@@ -2,6 +2,22 @@
 
 _Wiki · generated 2026-06-25 · synthesis-only (no local filings archive) · sources: sell-side notes + Twitter/X corpus, ported from research corpus. Master index: [00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof  · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $14.0bn | $17.0bn |
+| Gross profit | $1.3bn | $1.6bn |
+| Gross margin | 9.5% | 9.2% |
+| EBITDA | $1.1bn | — |
+| EPS | $11.05 | $13.75 |
+| Capex | $373m | $420m |
+| OCF (≈EBITDA) | $1.1bn | — |
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Sanmina is a US-HQ electronics-manufacturing-services (EMS) / contract manufacturer serving communications, cloud, industrial, defence, and medical end markets, competing with [FLEX](FLEX.md) and Celestica. The acquisition of ZT Systems (AI rack assembly) became the primary revenue driver and re-rating catalyst: ZT contributed $1.88B in F2Q26, well ahead of plan, driven by AMD MI300/MI450 accelerated-compute solutions. Management guides FY27 total revenue to $16B+ (~2x FY25). The Street is re-rating SANM from a legacy-EMS discount toward a ZT-enabled AI-infra play, though all three covering analysts (JPM, BofA, SIG) hold Neutral on ZT-margin-sustainability and rack-ramp-timing uncertainty. SANM and SMTC were added to the S&P MidCap 400 (2026-06-08).
 

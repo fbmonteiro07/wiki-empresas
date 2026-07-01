@@ -2,6 +2,22 @@
 
 _Wiki · generated 2026-06-25 · synthesis-only (no local filings archive) · sources: sell-side notes + Twitter/X corpus, ported from research corpus. Master index: [00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof  · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $31.8bn | $35.4bn |
+| Gross profit | $12.2bn | $14.0bn |
+| Gross margin | 38.3% | 39.5% |
+| EBITDA | $7.5bn | $8.9bn |
+| EPS | $13.27 | $15.73 |
+| Capex | $1.2bn | $1.1bn |
+| OCF (≈EBITDA) | $7.5bn | $8.9bn |
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Eaton is a global power-management company supplying electrical components, switchgear, busway, and power-distribution equipment — increasingly an "AI-factory power" name as hyperscaler buildouts require grid interconnection and in-facility power distribution. ETN sits in the datacenter-electrical basket alongside [VRT](VRT.md), [GEV](GEV.md), and [PWR](PWR.md), and is routinely tagged a beneficiary whenever datacenter-capex estimates are revised higher. A 2026-06-11 Reverse Morris Trust merging ETN's Mobility Group into Dana (DAN) sharpens the company toward higher-margin Electrical/Aerospace.
 

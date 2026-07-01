@@ -4,6 +4,22 @@
 
 _Wiki · generated 2026-06-25 · sources: `E:\Wiki Felipe empresas\CDNs\_imported_from_E_root\` (AKAM filings + transcripts + decks + BofA note). Master index: [00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof  · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $4.5bn | $5.0bn |
+| Gross profit | $3.2bn | $3.5bn |
+| Gross margin | 70.5% | 69.9% |
+| EBITDA | $1.8bn | $2.0bn |
+| EPS | $6.72 | $7.22 |
+| Capex | $1.8bn | $1.3bn |
+| OCF (≈EBITDA) | $1.8bn | $2.0bn |
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Akamai is the original CDN, now mid-pivot from a legacy content-**Delivery** business (in secular decline) toward two growth pillars: **Security** (Web App Firewall, API Security, Guardicore Segmentation / micro-segmentation, Zero Trust) and **Cloud Compute / Cloud Infrastructure Services (CIS)** built on the Linode acquisition plus a new Akamai Inference Cloud (distributed CPU + NVIDIA GPU at the edge). The platform spans 4,300 locations across 700 cities in 130 countries — the distributed footprint is the central value proposition for both security (intercepting attacks at the edge) and low-latency AI inference (AKAM Q1 2026 call, 2026-05-07). FY2025 revenue $4.208B, +5% YoY; by solution: Security $2.243B (~53%), Delivery $1.257B (~30%, declining), Cloud computing $708M (~17%, of which CIS $314M growing ~36%) (AKAM Q4 2025 PR, 2026-02-19). The core debate: can Security + CIS growth (and now AI-infrastructure mega-deals) outrun the structural erosion of legacy Delivery and re-rate a business that has long been valued as ex-growth.
 

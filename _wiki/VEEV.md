@@ -2,6 +2,22 @@
 
 _Wiki · generated 2026-06-25 · synthesis-only (no local filings archive) · sources: sell-side notes + Twitter/X corpus, ported from research corpus. Master index: [00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof  · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $3.6bn | $4.1bn |
+| Gross profit | $2.8bn | $3.1bn |
+| Gross margin | 77.2% | 77.3% |
+| EBITDA | $1.6bn | $1.8bn |
+| EPS | $8.95 | $9.92 |
+| Capex | $23m | $23m |
+| OCF (≈EBITDA) | $1.6bn | $1.8bn |
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Veeva Systems is a cloud-software provider purpose-built for the life-sciences industry, offering CRM (Vault CRM), regulatory, clinical, and commercial cloud applications. Heading into its June 3 print, the dominant narrative was deep bearish positioning (−21% YTD vs. software peers −5%), with the overhang being insufficient AI disclosure — specifically Vault CRM agent adoption — that the Street was waiting on until the Q4 Investor Day to reverse. The actual print was a "clean quarter" with subscription revenue at a record high driven by Vault CRM migrations.
 _Thin coverage — limited sources in corpus._

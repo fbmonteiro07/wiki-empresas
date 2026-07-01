@@ -5,19 +5,17 @@
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\SAMSUNG\transcripts` (public English earnings transcripts) · Samsung IR · `_briefings` roll-up · BBG (KRW, auto-injected). Master index: [../00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-06-22 · KRW
+### 📊 Consensus snapshot — BBG · asof  · KRW
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | ₩681155.3bn | ₩915569.4bn |
-| Gross profit | ₩467953.7bn | ₩686677.1bn |
-| Gross margin | 68.7% | 75.0% |
-| EBITDA | ₩407757.2bn | ₩580153.9bn |
-| EPS | ₩43007.00 | ₩65543.24 |
-| Capex | ₩75960.6bn | ₩90333.7bn |
-| OCF (≈EBITDA) | ₩407757.2bn | ₩580153.9bn |
-
-<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><rect x="0" y="46.1" width="20" height="11.9" rx="2" fill="#1c5fd6"/><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="28" y="33.3" width="20" height="24.7" rx="2" fill="#1c5fd6"/><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="16.1" width="20" height="41.9" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f">+78.3% 3m · +269.1% 6m</text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><rect x="176" y="48.2" width="20" height="9.8" rx="2" fill="#1c5fd6"/><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="35.7" width="20" height="22.3" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="18.0" width="20" height="40.0" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+97.1% 3m · +347.2% 6m</text></svg>
+| Revenue | ₩691910.0bn | ₩930556.9bn |
+| Gross profit | ₩477417.9bn | ₩701639.9bn |
+| Gross margin | 69.0% | 75.4% |
+| EBITDA | ₩412991.7bn | ₩603611.2bn |
+| EPS | ₩43618.28 | ₩67535.34 |
+| Capex | ₩76406.6bn | ₩88858.5bn |
+| OCF (≈EBITDA) | ₩412991.7bn | ₩603611.2bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

@@ -4,6 +4,22 @@
 
 _Wiki · generated 2026-06-25 · sources: `E:\Wiki Felipe empresas\CDNs\_imported_from_E_root\` (FSLY filings + transcripts + decks). Master index: [00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof  · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $723m | $799m |
+| Gross profit | $461m | $517m |
+| Gross margin | 63.8% | 64.7% |
+| EBITDA | $109m | $136m |
+| EPS | $0.28 | $0.40 |
+| Capex | $68m | $73m |
+| OCF (≈EBITDA) | $109m | $136m |
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Fastly is an edge-cloud platform — a modern, software-defined CDN whose thesis is diversification away from commoditizing delivery toward higher-value **Security** and **Compute@Edge**. It reports three lines: **Network Services** (delivery/CDN, the legacy core), **Security** (Next-Gen WAF plus a fast-expanded suite — DDoS Protection, Bot Management, API Discovery/Inventory, ContentGuard), and **Other** (Compute@Edge). FY2025 revenue was **$624.0M, +15% YoY** with the company's **first profitable fiscal year** on a non-GAAP basis (FSLY Q4 2025 call, 2026-02-11); GAAP still loss-making — net loss $121.7M in FY2025 vs $158.1M in FY2024 (FSLY 10-K FY2025). In Q1 2026 the mix was Network Services ~73% ($126.2M), Security 22% ($38.8M), Other (Compute) ~5% ($8.0M) (FSLY Q1 2026 call, 2026-05-06). The story: a CEO-led (Kip Compton, ~1yr in seat) turnaround — re-accelerating top line, record gross margins, swing to non-GAAP profit and positive FCF — set against heavy customer concentration, consumption-revenue volatility, and competition from Cloudflare, Akamai and hyperscalers.
 

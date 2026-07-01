@@ -7,19 +7,17 @@
 _Wiki · generated 2026-06-19 · **No SEC filings — Japanese issuer (TSE Prime: 285A), IPO Dec-2024; thin coverage.** Sources: `E:\Wiki Felipe\KIOXIA\transcripts` (IR results briefings) + `E:\briefings\2026` roll-up + BBG (JPY). Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-06-22 · JPY
+### 📊 Consensus snapshot — BBG · asof  · JPY
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | ¥7798.1bn | ¥11942.5bn |
-| Gross profit | ¥6113.7bn | ¥9721.2bn |
-| Gross margin | 78.4% | 81.4% |
-| EBITDA | ¥6178.2bn | ¥9319.5bn |
-| EPS | ¥7496.71 | ¥12098.15 |
-| Capex | ¥379.5bn | ¥498.1bn |
-| OCF (≈EBITDA) | ¥6178.2bn | ¥9319.5bn |
-
-<svg xmlns="http://www.w3.org/2000/svg" width="326" height="88" viewBox="0 0 326 88" font-family="-apple-system,Segoe UI,Roboto,sans-serif"><text x="0" y="10" font-size="11" font-weight="600" fill="#33405c">FY1 EPS revision</text><text x="10" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><text x="38" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="56" y="23.4" width="20" height="34.6" rx="2" fill="#1c5fd6"/><text x="66" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="84" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="94" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="0" y="84" font-size="10" fill="#1c7d3f"></text><text x="176" y="10" font-size="11" font-weight="600" fill="#33405c">FY2 EPS revision</text><text x="186" y="69" font-size="9" text-anchor="middle" fill="#8492ad">6m</text><rect x="204" y="39.9" width="20" height="18.1" rx="2" fill="#1c5fd6"/><text x="214" y="69" font-size="9" text-anchor="middle" fill="#8492ad">3m</text><rect x="232" y="23.2" width="20" height="34.8" rx="2" fill="#1c5fd6"/><text x="242" y="69" font-size="9" text-anchor="middle" fill="#8492ad">1m</text><rect x="260" y="14.0" width="20" height="44.0" rx="2" fill="#1c7d3f"/><text x="270" y="69" font-size="9" text-anchor="middle" fill="#8492ad">now</text><text x="176" y="84" font-size="10" fill="#1c7d3f">+143.5% 3m</text></svg>
+| Revenue | ¥7845.5bn | ¥11978.7bn |
+| Gross profit | ¥6150.9bn | ¥9762.7bn |
+| Gross margin | 78.4% | 81.5% |
+| EBITDA | ¥6260.8bn | ¥9374.5bn |
+| EPS | ¥7620.02 | ¥12123.54 |
+| Capex | ¥379.9bn | ¥498.1bn |
+| OCF (≈EBITDA) | ¥6260.8bn | ¥9374.5bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

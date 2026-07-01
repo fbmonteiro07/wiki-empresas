@@ -2,6 +2,22 @@
 
 _Wiki · generated 2026-06-25 · synthesis-only (no local filings archive) · sources: sell-side notes + Twitter/X corpus, ported from research corpus. Master index: [00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof  · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $474m | $547m |
+| Gross profit | $258m | $298m |
+| Gross margin | 54.3% | 54.5% |
+| EBITDA | $94m | $131m |
+| EPS | $1.32 | $1.84 |
+| Capex | $28m | $21m |
+| OCF (≈EBITDA) | $94m | $131m |
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Power Integrations designs high-voltage analog/mixed-signal ICs for power conversion, serving consumer electronics, communications, industrial, and computer end markets. POWI sits on the watchlist mainly as a derivative of the NVIDIA 800VDC datacenter-power architecture thesis — FinTwit (late May–early June 2026) names POWI as collaborating with NVDA on "main stages" of 800VDC AI-rack power distribution, alongside [NVTS](NVTS.md) and AOSL. Sell-side coverage in the ported corpus is sparse (SIG/Susquehanna post-earnings notes; UBS/MS subject-line-only mentions).
 _Thin coverage — limited sources in corpus._

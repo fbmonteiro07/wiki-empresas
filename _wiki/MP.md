@@ -2,6 +2,22 @@
 
 _Wiki · generated 2026-06-25 · synthesis-only (no local filings archive) · sources: sell-side notes + Twitter/X corpus, ported from research corpus. Master index: [00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof  · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $437m | $766m |
+| Gross profit | $195m | $425m |
+| Gross margin | 44.6% | 55.5% |
+| EBITDA | $154m | $372m |
+| EPS | $0.08 | $0.94 |
+| Capex | $591m | $540m |
+| OCF (≈EBITDA) | $154m | $372m |
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 MP Materials operates the Mountain Pass rare-earth mine and processing facility in California — the only scaled rare-earth mining and processing site in the Western Hemisphere — and is building toward domestic finished neodymium-iron-boron (NdFeB) magnet production. The investment narrative positions MP as a critical-materials beneficiary of the de-China supply-chain push: Chinese rare-earth export controls and a ~80% drop in Chinese Nd-magnet imports into Japan have created urgency for ex-China sourcing. Coatue flagged MP as an AI-infrastructure adjacency under its "follow the gigawatt" thesis, linking rare-earth magnets to EV motors, robotics actuators, and defense.
 _Thin coverage — limited sources in corpus._

@@ -2,6 +2,22 @@
 
 _Wiki · generated 2026-06-25 · synthesis-only (no local filings archive) · sources: sell-side notes + Twitter/X corpus, ported from research corpus. Master index: [00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof  · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $3.5bn | $6.5bn |
+| Gross profit | $1.2bn | $2.3bn |
+| Gross margin | 33.4% | 35.2% |
+| EBITDA | $666m | $1.6bn |
+| EPS | $1.71 | $4.13 |
+| Capex | $164m | $158m |
+| OCF (≈EBITDA) | $666m | $1.6bn |
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Bloom Energy manufactures solid-oxide fuel cells (SOFC) that generate electricity on-site from natural gas or hydrogen, sold primarily to commercial/industrial customers including data centers. The narrative centers on data-center power demand: hyperscalers and AI-infra builders (e.g., Nebius) are signing power-supply deals with BE as grid capacity constraints intensify, validating the "AI factory power" bottleneck thesis alongside [GEV](GEV.md), [VRT](VRT.md), [PWR](PWR.md), and [ETN](ETN.md).
 _Note: many "BE" tags in sell-side digests are false positives for BE Semiconductor (BESI) — Bloom-specific coverage is thinner than headline counts suggest._

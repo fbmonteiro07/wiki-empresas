@@ -2,6 +2,22 @@
 
 _Wiki · generated 2026-06-25 · synthesis-only (no local filings archive) · sources: sell-side notes + Twitter/X corpus, ported from research corpus. Master index: [00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof  · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $142m | $228m |
+| Gross profit | $46m | $90m |
+| Gross margin | 32.1% | 39.3% |
+| EBITDA | $17m | — |
+| EPS | $0.26 | $0.81 |
+| Capex | $21m | $54m |
+| OCF (≈EBITDA) | $17m | — |
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 AXT manufactures compound-semiconductor substrates — principally indium phosphide (InP), gallium arsenide (GaAs), and germanium. InP exceeded 50% of quarterly revenue as of Q1 2026, making AXTI the most direct public-market expression of the InP supply constraint that has become the bottleneck for AI-datacenter photonics (CPO / optical transceivers). China controls 70%+ of global InP output; AXT + Sumitomo together hold ~80% of non-China InP capacity. The stock re-rated from a ~$500M market cap to a reported $7.24B on the optical-supply thesis, but is increasingly framed by FinTwit as a higher-beta "trading vehicle," with [LITE](LITE.md)/[COHR](COHR.md)/IQE preferred for lower China-regulatory-risk core exposure.
 

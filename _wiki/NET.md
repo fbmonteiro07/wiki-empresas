@@ -4,6 +4,22 @@
 
 _Wiki · generated 2026-06-25 · sources: `E:\Wiki Felipe empresas\CDNs\_imported_from_E_root\` (NET filings + transcripts + decks). Master index: [00_INDEX.md](00_INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof  · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $2.8bn | $3.6bn |
+| Gross profit | $2.1bn | $2.6bn |
+| Gross margin | 73.7% | 73.4% |
+| EBITDA | $647m | $765m |
+| EPS | $1.19 | $1.59 |
+| Capex | $425m | $503m |
+| OCF (≈EBITDA) | $647m | $765m |
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Cloudflare is the "connectivity cloud" — a single global network (present in 120+ countries / 350+ cities) that sits in front of a large share of Internet traffic and sells application performance/security, network security, and a developer/compute platform on top of it. Management frames the business as four "Acts": **Act 1** = application services + the legacy CDN/security/performance layer (the largest revenue base); **Act 2** = Zero Trust / SASE (Access, Gateway, DLP, CASB, email security, browser isolation) displacing legacy hardware (Palo Alto, Zscaler-type incumbents); **Act 3** = the **Workers developer platform** (Workers, Workers AI, Durable Objects, Dynamic Workers, AI Gateway) — edge compute/inference; **Act 4** = the emerging AI-content layer (AI Crawl Control / "pay per crawl") to control and eventually monetize AI bot traffic (NET Q4 2025 call, 2026-02-10). FY2025 revenue $2,167.9M, +29.8% YoY (NET Q4 2025 PR, 2026-02-10). The core debate is whether Cloudflare is the structural winner of the "agentic Internet" re-platforming — owning both the traffic agents pass through (Act 1) and the platform they run on (Workers/Act 3) — at a premium multiple, against gross-margin dilution from the fast-growing-but-lower-margin developer platform.
 
