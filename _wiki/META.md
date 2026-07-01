@@ -141,6 +141,38 @@ _Q1 FY26 · Apr 29 → Jun 23, 2026 · sell-side / expert calls / reports betwee
 
 _Source: META earnings calls (dates above); management commentary, paraphrased._
 
+## Compute-demand commentary tracker (verbatim, Q2'24 → Q1'26)
+_The single clearest demand-side signal in the group: management's own words on compute capacity vs. demand, quarter by quarter — **verbatim** from the earnings-call transcripts (linked in Sources). Interactive chart: [META_compute_demand.html](../META/META_compute_demand.html) (capex-guide walk × constraint-language ladder × sell-side forward curve)._
+
+**The through-line escalates monotonically:** "build capacity before it's needed" (2024) → "capacity-constrained despite the buildout" (2025) → "we keep **underestimating** our own compute needs" (2026). Every fiscal-year capex guide was **raised at every subsequent call — never cut.** Capex ~10×'d: FY24 actual $39B → FY26 guide $135B mid → sell-side ~$225B FY28E.
+
+| Quarter (reported) | FY capex guide (mgmt, HARD) | Posture | Key verbatim compute-demand quote |
+|---|---|---|---|
+| **Q2'24** (07-31-24) | FY24 $37–40B | build-ahead | Zuckerberg: _"The amount of compute needed to train Llama 4 will likely be almost 10x more than what we used to train Llama 3… I'd rather risk building capacity before it is needed, rather than too late, given the long lead times."_ |
+| **Q3'24** (10-30-24) | FY24 $38–40B | ahead of plan | Zuckerberg: _"We're training the Llama 4 models on a cluster that is bigger than 100k H100s or bigger than anything that I've seen reported… We've been able to build out more capacity… more than we'd hoped and expected at the beginning of the year."_ |
+| **Q4'24** (01-29-25) | FY25 $60–65B (first) | scaling hard | Zuckerberg: _"The hundreds of billions of dollars that we will invest in AI infrastructure… we expect to bring online almost a gigawatt of capacity this year. And we're building a two-gigawatt and potentially bigger AI data center… so big it will cover a significant part of Manhattan."_ |
+| **Q1'25** (04-30-25) | FY25 $64–72B (raised) | **constrained** | Li: _"Even with the capacity that we're bringing online in 2025, we are having a hard time meeting the demand that teams have for compute resources across the company."_ |
+| **Q2'25** (07-30-25) | FY25 $66–72B (raised) | multi-GW build | Zuckerberg: _"Our Prometheus cluster is coming online next year and we think it'll be the world's first 1GW+ cluster. We're also building out Hyperion, which will be able to scale up to 5GW over several years… if you are building superintelligence, you should use all of your GPUs to make it so that you're serving your customers really well."_ |
+| **Q3'25** (10-29-25) | FY25 $70–72B; '26 "notably larger" | **compute-starved** | Zuckerberg: _"We are sort of perennially operating the family of apps and ads business in a compute-starved state at this point… we're seeing very high demand for additional compute both internally and externally."_ · Li: _"Our compute needs have continued to expand meaningfully, including versus our own expectations last quarter."_ |
+| **Q4'25** (01-28-26) | FY26 $115–135B (first) | still constrained | Li: _"We do continue to be capacity constrained… demands for compute resources across the company have increased even faster than our supply… we'll likely still be constrained through much of 2026 until additional capacity from our own facilities comes online later in the year."_ |
+| **Q1'26** (04-29-26) | FY26 $125–145B (raised) | **underestimating** | Li: _"Our experience so far has been that we have continued to underestimate our compute needs even as we have been ramping capacity significantly, as the advances in AI have continued and our teams continue to identify compelling new projects."_ |
+
+**Recurring sub-themes** (verbatim across quarters): (1) **fungibility** — data centers built so training capacity can flex to inference or core ads/ranking over the asset's life (Q2'24, Q4'24, Q2'25 — Li); (2) **efficiency as a lever against the constraint** — MTIA custom silicon, GEM ads model "twice as efficient," Andromeda compute efficiency "nearly tripled" (Q4'24 → Q4'25 — Li); (3) **external demand as overbuild insurance** — _"almost every week… people come to us from outside the company asking… if we have different compute that they could get from us"_ (Q3'25 — Zuckerberg); (4) **worst case is prebuilding** — _"the very worst case would be that we effectively have just prebuilt for a couple of years… but we'd grow into that and use it over time"_ (Q3'25 — Zuckerberg).
+
+**Cross-reference vs. sell-side capex (as carried elsewhere in this page):**
+
+| Source (date) | FY25E | FY26E | FY27E | FY28E |
+|---|--:|--:|--:|--:|
+| **Management guide (latest)** | ~$71B (act.) | **$125–145B** | — | — |
+| Capstone house model (2026-06-11) | $70B | $131B | $170B | — |
+| JPM — "AI Capex 2.0" (2026-06-16) | — | $135B (mid) | ~$185B | ~$225B |
+| Jefferies — DC leasing (2025-11-10) | $71B (mid) | — | — | — |
+| Barclays — "S-Curve Steepening" (2026-06-01) | — | — | — | agg¹ |
+
+_¹ Barclays carries no standalone META FY28 line — META sits inside its hyperscaler-capex **aggregate** that reaches **~$1.16T by FY28E** (25%+ above Street); OW._
+
+**Read:** the sell-side has fully internalized management's "we keep underestimating our compute needs" — Capstone ($170B) and JPM (~$185B) converge on **FY27E ~$170–185B**, JPM extends **FY28E to ~$225B**, i.e. the same up-and-to-the-right curve the guide-raise cadence implies. The demand signal is now consensus; the live debate is **financing** — JPM models negative FCF and a cumulative **~$97B funding gap over three years**, contractual commitments **+$107B in Q1'26 to $238B**, plus the 20% Hyperion stake with ~$28B residual-value guarantees. Ties into the [custom-ASIC/TPU theme](themes/custom-asic-tpu.md) (MTIA multi-GW from 2027) and the [tokenmaxxing theme](themes/tokenmaxxing.md).
+
 ## Sources
 - **Filings:** [10-K FY25 (2026-01-29)](../META/META_10-K_2026-01-29_0001628280-26-003942.html) — business overview + risk factors.
 - **Transcripts:** [Q1 FY26 (2026-04-29)](../META/transcripts/META_Q1-2026-earnings_2026-04-29.md) · [Q4 FY25 (2026-01-28)](../META/transcripts/META_Q4-2025-earnings_2026-01-28.md).
