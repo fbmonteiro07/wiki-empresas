@@ -70,6 +70,8 @@ Lam sits in the middle of the WFE stack: precision-component suppliers feed it, 
 ## Current state (latest quarter)
 **FQ3 FY26 / March-quarter (reported 2026-04-22):** revenue **$5.84B** (+9% q/q, +24% y/y), above midpoint — third consecutive record-revenue quarter; GAAP GM **49.9%** (high end), operating margin **35%** (high end), record diluted EPS **$1.47** (above the high end of the guide) (Q3 FY26 call; figures consistent with 10-Q FQ3 FY26, 2026-04-23). **DRAM hit an all-time-high 27% of systems** (from 23%), +45% y/y, on capacitor scaling (Stryker ALD) and HBM electroplating/TSV etch. **Advanced packaging guided to exceed +50% in CY2026.** **CSBG $2.1B** (record, first $2B+ quarter, +25% y/y). By region: **China 34%** (from 35%), Korea and Taiwan **each 23%** (record dollar levels) (Q3 FY26 call). Capital return 139% of FCF; $4.3B buyback remaining.
 
+**Memory-cycle tailwind, third-party corroboration (SemiAnalysis "Memory Mania", 2026-02-06):** LRCX named alongside ASML as confirming the large-scale DRAM node-migration trend to 1b/1c "in the latest earnings call" — a memory-upcycle equipment-demand tailwind that SemiAnalysis frames as part of the broader HBM-driven memory shortage/boom thesis (SemiAnalysis "Memory Mania", 2026-02-06).
+
 **Guidance (Q3 FY26 call, 2026-04-22):** FQ4 FY26 (June quarter) revenue **$6.6B ± $400M**, GM 50.5% ± 1pp, operating margin 36.5% ± 1pp, EPS **$1.65 ± $0.15**. **CY2026 WFE raised to ~$140B** (from $135B at Q2 FY26, 2026-01-28, off ~$110B in CY2025) — Archer: spending projections "have moved higher across all device segments." NAND is the structural new leg: a **~$40B NAND conversion** with the "majority of spending occurring before the end of CY2027" (pulled forward), data-center NAND bits now exceeding PC + mobile combined. Watch item: management flagged **China revenue declines in the June quarter**, and customer down payments fell to a ~4-year low (Q3 FY26 call). Second Malaysia facility (~same size as the first) ramps in H2 to scale into next year's demand.
 
 ## Capstone estimates (house model)
@@ -92,6 +94,7 @@ _Source: Capstone peer model (`ASML_Peers_SemiCap_v16.xlsx` — Peer Comp, 2026-
 - **China trajectory:** management guided June-quarter China *down* off 34%; watch the magnitude and any affiliate-rule / BIS news — the trio's most China-levered name. The Street is split: UBS sees China WFE flat-to-up ($44B+ in 2026), MS sees China restrictions as a 2026e headwind.
 - **NAND conversion ramp** — the ~$40B layer-conversion wave with majority of spend pulled into CY27; the structural new leg vs. the 2025 NAND-light base. First greenfield timing (CY27/28) a watch item. The AI-NAND inflection (MS: incremental ~$29bn TAM by 2029, NAND shortage from 2H26) is the bull's potential second leg, though MS warns NAND-supplier capex stays conservative near-term.
 - **DRAM/HBM cadence** — DRAM now 27% of systems and rising; HBM4/HBM4E + 16-high stacking lift electroplating/TSV-etch SAM. UBS: DRAM is >half the 2026 WFE increase and >2/3 of 2027. MU F3Q26 print **2026-06-24** a near-term read-through (semicap-WFE theme).
+- **1b/1c node migration confirmation** — SemiAnalysis flags large-scale memory-maker migration to 1b/1c over the next two years as "confirmed by ASML and LRCX management in the latest earnings call," corroborating the DRAM/HBM-driven equipment-demand tailwind (SemiAnalysis "Memory Mania", 2026-02-06).
 - **Capacity build-out** — second Malaysia fab ramps H2; UBS flags a *third* site being discussed (ex-Malaysia) as a $250B-WFE signal (Arcuri/UBS, 2026-05-18).
 - **Segment rotation into CY27** — whether the depo/etch leadership (LRCX/AMAT) hands off to KLAC/ASML on the sub-2nm node wave (Sur/JPM, 2026-05-15).
 
@@ -174,6 +177,10 @@ _Source: LRCX earnings calls (dates above); management commentary, paraphrased._
   - [AlphaSense Deep Research — ASML company primer (2026-06-22)](../relat%C3%B3rios%20bons/DR-Report-by-Alphasense-06-22-2026-20-18.html) — semicap peer comp table incl. LRCX (Bernstein FY26E/27E P/E 67.2x/34.8x).
   - [MS — On Memory and Semicap (2026-06-22)](../relat%C3%B3rios%20bons/2026_06_22_ms_on_memory_and_semicap_22_jun_26.html) — Shane prefers LAM+KLA over AMAT; LAM share-gain + NAND/Intel leverage; WFE $149B/$191B 2026/27.
   - [JPM (Sur) — Semis Spring Series (2026-05-29)](../relat%C3%B3rios%20bons/2026_05_29_jpm_semis_29_may_26.html) — OW LAM; TSMC pulling in tool orders.
+  - [SemiAnalysis — "Memory Mania: How a Once-in-Four-Decades Shortage Is Fueling a Memory Boom" (2026-02-06)](../relat%C3%B3rios%20bons/Memory_Mania__How_a_Once-in-Four-Decades_Shortage_Is_Fueling_a_Memory_Boom.html) — LRCX named with ASML confirming 1b/1c DRAM node-migration trend in the latest earnings call.
 - **Research library:** `SemiCap_2025_Actuals_and_Outlook.pdf` (2026-04-28, incl. LRCX; `E:\research_library`, catalog `00_CATALOGO.md`).
 - **Briefings:** LRCX read-through in `E:\briefings\2026\*-company-specific.md` (mid-May 2026, AMAT-print read-across; 52-wk-high lists; fund-holdings color). No dedicated LRCX roll-up in `_briefings/by-ticker/`.
 - **Outlook:** not available in this environment (no connected profile / two-pass `outlook.py` returns empty) — sell-side email flow to be added separately.
+
+## Changelog
+- **2026-06-30** — Added SemiAnalysis "Memory Mania" (2026-02-06) datapoint to Current state and Catalysts: LRCX named alongside ASML as confirming the large-scale 1b/1c DRAM node-migration trend "in the latest earnings call" — a memory-upcycle equipment-demand tailwind. Added report to Sources.
