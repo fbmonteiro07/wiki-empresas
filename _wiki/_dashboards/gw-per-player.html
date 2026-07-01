@@ -1,0 +1,194 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>GW per player — highest estimates</title>
+<style>
+body{margin:0;font:15px/1.55 -apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#1a1f29;background:#f5f6f8}
+header{background:#0f1729;color:#fff;padding:20px 28px}header h1{margin:0;font-size:20px}
+header a{color:#7fb0ff;text-decoration:none}header p{margin:4px 0 0;color:#8492ad;font-size:13px}
+main{max-width:1100px;margin:0 auto;padding:24px 28px}
+h2{font-size:17px;color:#0f1729;margin:28px 0 12px}
+.warn{background:#fef2f2;border:1px solid #fecaca;border-radius:10px;padding:12px 16px;font-size:13px;color:#7f1d1d;margin:16px 0}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px;font-size:12px}
+.tag{display:inline-block;border-radius:20px;padding:1px 9px;font-size:11px;font-weight:600;white-space:nowrap}
+.t-fac{background:#e0f2fe;color:#075985}.t-it{background:#ede9fe;color:#5b21b6}.t-chip{background:#dcfce7;color:#166534}
+.t-con{background:#fce7f3;color:#9d174d}.t-com{background:#fef9c3;color:#854d0e}.t-mod{background:#e5e7eb;color:#374151}
+.t-sa{background:#f59e0b;color:#fff}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:860px){.grid{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid #e3e7ee;border-radius:10px;padding:16px 18px}
+.card h3{margin:0 0 2px;color:#0f1729;font-size:16px}
+.hl{display:flex;align-items:baseline;gap:8px;margin:6px 0 2px}
+.hl .num{font-size:26px;font-weight:700;color:#0f1729}
+.hl .yr{font-size:13px;color:#6b7280}
+.ref{font-size:12px;color:#6b7280;margin:0 0 10px}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+td{padding:5px 6px;border-top:1px solid #eef1f5;vertical-align:top}
+td.v{white-space:nowrap;font-weight:600;color:#0f1729}
+tr.top td{background:#f0f7ff}
+tr.sa td{background:#fff7ed;border-left:3px solid #f59e0b}
+.src{color:#6b7280}
+.bars{background:#fff;border:1px solid #e3e7ee;border-radius:10px;padding:16px 18px;margin:12px 0}
+.bar{display:grid;grid-template-columns:150px 1fr 260px;gap:10px;align-items:center;margin:7px 0;font-size:12.5px}
+.bar .track{background:#eef1f5;border-radius:4px;height:18px;position:relative}
+.bar .fill{background:#4f8cff;height:18px;border-radius:4px;display:flex;align-items:center;justify-content:flex-end;color:#fff;font-size:11px;font-weight:600;padding-right:6px;box-sizing:border-box;min-width:34px}
+.bar .fill.sa{background:#f59e0b}
+.bar .lbl{font-weight:600;color:#0f1729}.bar .meta{color:#6b7280;font-size:11.5px}
+.foot{font-size:12px;color:#6b7280;margin:20px 0}
+.itable{background:#fff;border:1px solid #e3e7ee;border-radius:10px;padding:6px 12px}
+.itable td{font-size:12.5px}
+sup{color:#b91c1c}
+</style></head><body>
+<header><h1>⚡ GW per player — highest estimates in the database</h1>
+<p>Generated 2026-07-01 · sources: AI Model.xlsx + wiki corpus (<a href="../_meta/assumptions.md">assumptions ledger</a>) · <a href="index.html">← dashboards hub</a></p></header>
+<main>
+
+<div class="warn"><b>Basis rule (standing, from the assumptions ledger):</b> facility GW ≠ IT-load GW ≠ chip/accelerator GW ≠ contracted/leased GW ≠ multi-year commitment GW. "Highest" rows below are the biggest number on disk for each player — they are <b>not</b> directly comparable across players without the basis tag. Never fold 800V-debate GW (Citi 9→21) or BTM-generation GW into deployment totals.</div>
+
+<div class="legend">
+<span class="tag t-fac">FACILITY</span><span class="tag t-it">IT-LOAD / RACK</span><span class="tag t-chip">CHIP / ACCELERATOR GW</span><span class="tag t-con">CONTRACTED / LEASED</span><span class="tag t-com">MULTI-YR COMMITMENT</span><span class="tag t-mod">CAPSTONE MODEL (capex→chips→GW)</span><span class="tag t-sa">SEMIANALYSIS</span>
+</div>
+
+<h2>Highest estimate per player (headline bars)</h2>
+<div class="bars">
+<div class="bar"><span class="lbl">GOOG</span><div class="track"><div class="fill" style="width:100%">40.0</div></div><span class="meta">CY28E stock · AI Model.xlsx (Capstone, 2026-07-01)</span></div>
+<div class="bar"><span class="lbl">AMZN</span><div class="track"><div class="fill" style="width:96%">38.6</div></div><span class="meta">CY28E stock · AI Model.xlsx (Capstone, 2026-07-01)</span></div>
+<div class="bar"><span class="lbl">META</span><div class="track"><div class="fill" style="width:70%">28.1</div></div><span class="meta">CY28E stock · AI Model.xlsx (Capstone, 2026-07-01)</span></div>
+<div class="bar"><span class="lbl">MSFT</span><div class="track"><div class="fill" style="width:64%">25.7</div></div><span class="meta">CY28E stock · AI Model.xlsx (Capstone, 2026-07-01)</span></div>
+<div class="bar"><span class="lbl">OpenAI</span><div class="track"><div class="fill" style="width:72%">~28.8</div></div><span class="meta">announced multi-yr commitments · JPM AI Capex 2.0, 2026-06-16</span></div>
+<div class="bar"><span class="lbl">Anthropic</span><div class="track"><div class="fill" style="width:25%">~10+</div></div><span class="meta">announced multi-yr commitments · JPM AI Capex 2.0, 2026-06-16</span></div>
+<div class="bar"><span class="lbl">SpaceX/xAI</span><div class="track"><div class="fill" style="width:24%">9.5</div></div><span class="meta">2028E neocloud · Jeff Pu (SPCX.md, 2026-06-29)</span></div>
+<div class="bar"><span class="lbl">ORCL</span><div class="track"><div class="fill" style="width:18%">7.1</div></div><span class="meta">OCI 2027E · Barclays on OpenAI (Nov-25, ORCL.md)</span></div>
+<div class="bar"><span class="lbl">CoreWeave</span><div class="track"><div class="fill" style="width:13%">5.0</div></div><span class="meta">NVDA GPU commitment thru 2030 · Nomura, 2026-06-30</span></div>
+<div class="bar"><span class="lbl">Nebius</span><div class="track"><div class="fill" style="width:13%">5.0</div></div><span class="meta">NVDA commitment thru 2030 · NBIS.md, 2026</span></div>
+</div>
+
+<h2>Player cards — all estimates, highest first</h2>
+<div class="grid">
+
+<div class="card"><h3>GOOG</h3>
+<div class="hl"><span class="num">40.0 GW</span><span class="yr">CY28E stock (AI+non-AI)</span><span class="tag t-mod">MODEL</span></div>
+<p class="ref">AI Model.xlsx "Projeções GW" (Capstone, 2026-07-01) — 14.5 CY26E / 25.5 CY27E / 40.0 CY28E; AI-only 11.9 / 22.9 / 37.4</p>
+<table>
+<tr class="top"><td class="v">+9 GW</td><td>adds in 2028 (~7 GW TPU + ~2 GW GPU); '27 rack power 6.9 GW <span class="tag t-it">IT-LOAD</span></td><td class="src">MS Nowak / Risom desk, 2026-06-29/30 (GOOG.md)</td></tr>
+<tr><td class="v">4.6 → 7.75 GW</td><td>own TPU/compute fleet '26E → '27E <span class="tag t-chip">CHIP</span></td><td class="src">Capstone official model, 2026-06-05 (GOOG.md)</td></tr>
+<tr><td class="v">2.5 / 4.0 / 4.8 GW</td><td>TPU GW deployed, AVGO complex '26/'27/'28E <span class="tag t-mod">MODEL</span></td><td class="src">Capstone internal AVGO model (Felipe, Jun-08 — not a broker; see AVGO briefing)</td></tr>
+<tr><td class="v">+2.5–3 GW/yr</td><td>incremental capacity needed for cloud backlog <span class="tag t-fac">FACILITY</span></td><td class="src">JPM hyperscaler recap, 2026-04-30</td></tr>
+</table></div>
+
+<div class="card"><h3>AMZN</h3>
+<div class="hl"><span class="num">38.6 GW</span><span class="yr">CY28E stock (AI+non-AI)</span><span class="tag t-mod">MODEL</span></div>
+<p class="ref">AI Model.xlsx (Capstone, 2026-07-01) — 17.9 CY26E / 26.0 CY27E / 38.6 CY28E; AI-only 9.5 / 17.6 / 30.2</p>
+<table>
+<tr class="top"><td class="v">10.6 → 21.2 GW</td><td>AWS capacity YE25 → YE27 <span class="tag t-fac">FACILITY</span></td><td class="src">Barclays (AMZN.md:52)</td></tr>
+<tr><td class="v">+3.8 GW</td><td>power added trailing-12m; "double total capacity by end-2027" <span class="tag t-fac">FACILITY</span></td><td class="src">AMZN Q3'25 earnings call, 2025-10-31</td></tr>
+<tr><td class="v">2.25 GW</td><td>Project Rainier (Anthropic dedicated) <span class="tag t-con">CONTRACTED</span></td><td class="src">JPM (AMZN.md:73), 2025-09/11</td></tr>
+</table></div>
+
+<div class="card"><h3>META</h3>
+<div class="hl"><span class="num">28.1 GW</span><span class="yr">CY28E stock (AI+non-AI)</span><span class="tag t-mod">MODEL</span></div>
+<p class="ref">AI Model.xlsx (Capstone, 2026-07-01) — 13.5 CY26E / 19.5 CY27E / 28.1 CY28E; AI-only 6.5 / 12.5 / 21.1</p>
+<table>
+<tr class="top"><td class="v">~5 GW</td><td>Hyperion (Louisiana) planned scale over several yrs; Prometheus ~1 GW online '26 <span class="tag t-fac">FACILITY</span></td><td class="src">Zuckerberg, Q2'25 call, 2025-07-30 (META.md:60)</td></tr>
+<tr><td class="v">1.0 / 2.9 GW</td><td>MTIA GW deployed, AVGO complex '27/'28E <span class="tag t-mod">MODEL</span></td><td class="src">Capstone internal AVGO model (Felipe, Jun-08 — not a broker)</td></tr>
+<tr><td class="v">2.6 + 1.1 GW</td><td>nuclear PPAs (Vistra 20-yr; CEG Clinton) <span class="tag t-con">CONTRACTED</span></td><td class="src">JPM AI Capex 2.0, 2026-06-16 / CEG</td></tr>
+</table></div>
+
+<div class="card"><h3>MSFT</h3>
+<div class="hl"><span class="num">25.7 GW</span><span class="yr">CY28E stock (AI+non-AI)</span><span class="tag t-mod">MODEL</span></div>
+<p class="ref">AI Model.xlsx (Capstone, 2026-07-01) — 11.8 CY26E / 17.8 CY27E / 25.7 CY28E; AI-only 8.2 / 14.2 / 22.1</p>
+<table>
+<tr class="top"><td class="v">~1 GW/qtr</td><td>added in each of FQ2 &amp; FQ3; fleet ~doubling in 2 years <span class="tag t-fac">FACILITY</span></td><td class="src">MSFT IR call, 2026-05-18 (MSFT.md:114)</td></tr>
+<tr class="sa"><td class="v">~2 GW</td><td>Fairwater (WI) campus over time; ~300 MW per GPU building <span class="tag t-fac">FACILITY</span> <span class="tag t-sa">SEMIANALYSIS</span></td><td class="src">SemiAnalysis, 2025-11-12 (MSFT.md:69)</td></tr>
+<tr><td class="v">$276B</td><td>CY27 capex (biggest hyperscaler revision — GW upside driver)</td><td class="src">MS / Altimeter, 2026-06-13 (MSFT.md:56)</td></tr>
+</table></div>
+
+<div class="card"><h3>OpenAI</h3>
+<div class="hl"><span class="num">~28.8 GW</span><span class="yr">announced compute commitments, multi-yr</span><span class="tag t-com">COMMITMENT</span></div>
+<p class="ref">NVDA ≥10 + AVGO ~10 + AMD 6 + AWS Trainium 2 + Cerebras 0.75 — JPM AI Capex 2.0, 2026-06-16 (OPENAI.md)</p>
+<table>
+<tr class="top"><td class="v">~30 GW</td><td>cumulative 5-yr power need (Altman) → ~11 GW B200-equiv installed 2030 <span class="tag t-it">IT-LOAD</span></td><td class="src">Barclays on OpenAI, Nov-25 (OPENAI.md)</td></tr>
+<tr><td class="v">0.2 → 1.9 GW</td><td>compute footprint 2023 → 2025 <span class="tag t-chip">CHIP</span></td><td class="src">Citrini, 2026-05-12 (theme page)</td></tr>
+<tr><td class="v">1.3 / 4.3 GW</td><td>AVGO XPU deployed '27/'28E <span class="tag t-mod">MODEL</span></td><td class="src">Capstone internal AVGO model (Felipe, Jun-08 — not a broker)</td></tr>
+<tr><td class="v">3.6 / 4.9 GW</td><td>avg direct GW demand '26E/'27E <span class="tag t-mod">MODEL</span></td><td class="src">AI Model.xlsx "Resumo | Labs"</td></tr>
+</table></div>
+
+<div class="card"><h3>Anthropic</h3>
+<div class="hl"><span class="num">~10+ GW</span><span class="yr">announced commitments (AWS ≤5 + TPU ~4 + AVGO ~5 + Azure)</span><span class="tag t-com">COMMITMENT</span></div>
+<p class="ref">JPM AI Capex 2.0, 2026-06-16 (ANTHROPIC.md:26-27)</p>
+<table>
+<tr class="top"><td class="v">7.0 GW</td><td>AVGO-shipped in 2028E — largest AI customer by GW (1.4 '26 / 3.2 '27) <span class="tag t-mod">MODEL</span></td><td class="src">Capstone internal AVGO model (Felipe, Jun-08 — not a broker); MS comp: AVGO total ~14 GW '28</td></tr>
+<tr><td class="v">20 GW</td><td>AVGO/GOOG SPV through 2028 ($35B, 7M+ TPUs) — shared with OpenAI <span class="tag t-com">COMMITMENT</span></td><td class="src">Nomura, 2026-06-30 (ANTHROPIC.md:25)</td></tr>
+<tr><td class="v">~1 + ~3 GW</td><td>Google TPU '26 + incremental '27 <span class="tag t-con">CONTRACTED</span></td><td class="src">Expert callback, 2026-04-30</td></tr>
+<tr><td class="v">2.25 GW</td><td>Project Rainier (AWS) <span class="tag t-con">CONTRACTED</span></td><td class="src">JPM (AMZN.md:73)</td></tr>
+<tr class="sa"><td class="v">&lt;$10B/GW/yr</td><td>Trainium rental rate to Anthropic/OpenAI (economics, not capacity) <span class="tag t-sa">SEMIANALYSIS</span></td><td class="src">SemiAnalysis / Dylan Patel, 2026-06 (ANTHROPIC.md:23)</td></tr>
+<tr><td class="v">2.8 / 5.9 GW</td><td>avg direct GW demand '26E/'27E <span class="tag t-mod">MODEL</span></td><td class="src">AI Model.xlsx "Resumo | Labs"</td></tr>
+</table></div>
+
+<div class="card"><h3>ORCL <sup>⚠ booked at ZERO in AI Model.xlsx (OUTROS)</sup></h3>
+<div class="hl"><span class="num">7.1 GW</span><span class="yr">OCI capacity 2027E (2.4 GW YE25)</span><span class="tag t-fac">FACILITY</span></div>
+<p class="ref">Barclays on OpenAI, Nov-25 (ORCL.md:50) — OpenAI = 76% of OCI '28 AI capacity</p>
+<table>
+<tr class="top"><td class="v">~7 GW</td><td>full Stargate pipeline (Abilene 1.2–1.6 + Frontier 1.4 + Lighthouse 1 + Jupiter 1.5 + expansions), &gt;$400B capex <span class="tag t-fac">FACILITY</span></td><td class="src">Barclays "Powering AI — 45 GW US DC Pipeline", 2025-10-31 (ORCL.md:74)</td></tr>
+<tr><td class="v">&gt;1.2 GW</td><td>delivered FY26; ~1 GW in Q1 FY27 alone (≈ prior 4 qtrs combined) <span class="tag t-fac">FACILITY</span></td><td class="src">ORCL Q4 FY26 call, 2026-06-11 (ORCL.md:66)</td></tr>
+<tr><td class="v">+3,200 MW</td><td>3Q25 new leases — led all hyperscalers (MSFT ~600 / GOOGL +1,000 / META +300); ~5.4 GW under construction <span class="tag t-con">LEASED</span></td><td class="src">Jefferies DC leasing, 2025-11 (ORCL.md:73)</td></tr>
+<tr><td class="v">2.3 GW</td><td>VoltaGrid BTM power infrastructure for ORCL DCs <span class="tag t-con">CONTRACTED</span></td><td class="src">Barclays Powering AI (ORCL.md:75)</td></tr>
+</table></div>
+
+<div class="card"><h3>CoreWeave (CRWV)</h3>
+<div class="hl"><span class="num">5.0 GW</span><span class="yr">NVDA GPU commitment ceiling through 2030</span><span class="tag t-com">COMMITMENT</span></div>
+<p class="ref">Nomura, 2026-06-30 (CRWV.md:87)</p>
+<table>
+<tr class="top"><td class="v">3.5+ GW</td><td>contracted power; 1+ GW active; 1.7+ GW active targeted exit-2026 <span class="tag t-con">CONTRACTED</span></td><td class="src">CRWV Q1 FY26 call, 2026-05-07 (CRWV.md:82)</td></tr>
+<tr class="sa"><td class="v">850+ MW / 3.1+ GW</td><td>active / contracted, late-2025 (49 DCs) <span class="tag t-con">CONTRACTED</span> <span class="tag t-sa">SEMIANALYSIS</span></td><td class="src">SemiAnalysis, 2025-11-12 (CRWV.md:88)</td></tr>
+<tr><td class="v">590 MW / 2.9 GW</td><td>active / contracted, Q3 FY25 <span class="tag t-con">CONTRACTED</span></td><td class="src">Jefferies 3Q25 DC leasing, 2025-11-10 (CRWV.md:88)</td></tr>
+</table></div>
+
+<div class="card"><h3>Nebius (NBIS)</h3>
+<div class="hl"><span class="num">~5.0 GW</span><span class="yr">NVDA commitment through 2030 ("Exemplar Cloud", $2bn stake)</span><span class="tag t-com">COMMITMENT</span></div>
+<p class="ref">NBIS / NVIDIA (NBIS.md:95), 2026</p>
+<table>
+<tr class="top"><td class="v">4+ GW</td><td>contracted capacity target YE2026 (3.5+ GW today, &gt;75% owned) <span class="tag t-con">CONTRACTED</span></td><td class="src">NBIS briefing, 2026-05-14 / 20-F (NBIS.md:91-93)</td></tr>
+<tr><td class="v">1.2 GW</td><td>Pennsylvania site by 2030 (250–300 MW by end-2027) <span class="tag t-fac">FACILITY</span></td><td class="src">NBIS (NBIS.md:93)</td></tr>
+</table></div>
+
+<div class="card"><h3>SpaceX / xAI</h3>
+<div class="hl"><span class="num">9.5 GW</span><span class="yr">SpaceX neocloud 2028E (1.0 '26 → 4.5 '27)</span><span class="tag t-chip">CHIP</span></div>
+<p class="ref">Jeff Pu estimate — NOT company guidance; only the 1 GW '26 is a hard anchor (SPCX.md:34, 2026-06-29)</p>
+<table>
+<tr class="top"><td class="v">&gt;300 MW</td><td>xAI Colossus 1 (220k+ GPUs; 122-day build "not repeatable") <span class="tag t-fac">FACILITY</span></td><td class="src">ANTHROPIC.md:21 / JPM DC broker call, 2026-05-04</td></tr>
+<tr><td class="v">&gt;1 GW</td><td>Anthropic deploying on Colossus from mid-2026 ($1.25B/mo thru May-29) <span class="tag t-con">CONTRACTED</span></td><td class="src">Nomura, 2026-06-30 (ANTHROPIC.md:24)</td></tr>
+</table></div>
+
+</div>
+
+<h2>Industry cross-checks — highest trajectories by source</h2>
+<div class="itable"><table>
+<tr><td><b>Source (method)</b></td><td><b>CY25</b></td><td><b>CY26E</b></td><td><b>CY27E</b></td><td><b>CY28E</b></td><td><b>2030</b></td><td><b>Basis</b></td></tr>
+<tr class="sa"><td><span class="tag t-sa">SEMIANALYSIS</span> as keyed in AI Model.xlsx<sup>1</sup></td><td class="v">48*</td><td class="v">71.2</td><td class="v">108.5</td><td class="v">173.5</td><td>—</td><td>stock — <b>highest industry est. on file</b></td></tr>
+<tr class="sa"><td><span class="tag t-sa">SEMIANALYSIS</span> BTM generation pipeline (2026-06-24)</td><td>—</td><td>—</td><td>—</td><td class="v">&gt;40</td><td>—</td><td><b>behind-the-meter generation — never add to totals</b></td></tr>
+<tr><td>JPM AI GW as keyed in AI Model.xlsx<sup>1</sup></td><td class="v">36.5</td><td class="v">63</td><td class="v">105.6</td><td class="v">148.5</td><td>—</td><td>AI GW stock</td></tr>
+<tr><td>JPM "AI Capex 2.0" (2026-06-16, capex→GW)</td><td colspan="4">—</td><td class="v">138 cum.</td><td>US facility growth thru 2030</td></tr>
+<tr><td>JPM First Principles (2026-06-25) / JPM-Omdia 800V (2026-06-09)</td><td colspan="4">~60 GW new '27 / ~80 GW new '28</td><td class="v">240–300</td><td><span class="tag t-it">IT-LOAD</span> — keep separate</td></tr>
+<tr><td>Capstone AI Model — big-4 total stock (2026-07-01)</td><td class="v">38.2</td><td class="v">57.7</td><td class="v">88.9</td><td class="v">132.4</td><td>—</td><td>model, excl. ORCL/labs/neoclouds</td></tr>
+<tr><td>Barclays "S-Curve" (2026-06-01, XPU-capex→GW)</td><td>+8.8</td><td>+16.6</td><td>+27.5</td><td>+33.3</td><td>—</td><td>annual adds, next-gen compute</td></tr>
+<tr><td>Nomura DC tracker (2026-06-30, 280 projects)</td><td>—</td><td>+26</td><td>+32</td><td>+~23</td><td>—</td><td>annual adds <span class="tag t-fac">FACILITY</span></td></tr>
+<tr><td>Jefferies / SinMax-IIR satellite (2026-06-22)</td><td>+11</td><td>+14–16</td><td>+~20</td><td>—</td><td>—</td><td>annual adds <span class="tag t-fac">FACILITY</span> — reality floor</td></tr>
+<tr><td>Morgan Stanley Global AI Industry Model (on disk, vintage unclear<sup>2</sup>)</td><td>~8–10</td><td colspan="3">scenario-dependent</td><td class="v">15 / 30 / 60 / 90</td><td>installed AI compute, $50B/GW build</td></tr>
+<tr><td>Cantor (2026-06-18, chips-vs-buildings)</td><td colspan="4">~40 GW NVDA chips into US 2025–2030</td><td>—</td><td><span class="tag t-chip">CHIP</span></td></tr>
+</table></div>
+
+<p class="foot"><sup>1</sup> The JPM and SemiAnalysis annual series were hand-keyed into AI Model.xlsx and are <b>not auditable from the repo</b> — the JPM "AI Capex 2.0" file on disk is a 10 KB stub, and no document carries these exact series. The SemiAnalysis CY25 cell (48*) is a formula link to the JPM cell (<code>AA6=AA5</code>) — a hybrid series seeded from JPM, rolled forward with SemiAnalysis deltas. Re-source both before citing externally. Also note: the "Jefferies" GW-AI row in the same sheet links to the model's own Bottom-up Capex output, not to Jefferies data.<br>
+<sup>2</sup> <code>relatórios bons\Global_Artificial_Intelligence_AI_Industry_Model_Update...html</code> — four scenario tables (installed base in GWs, 2024 = 5 GW global); date the report before using.</p>
+
+<h2>All SemiAnalysis estimates in the database (explicit list)</h2>
+<div class="itable"><table>
+<tr class="sa"><td class="v">173.5 GW CY28E industry stock</td><td>as keyed in AI Model.xlsx (48* / 71.2 / 108.5 / 173.5) — series not on disk, CY25 seeded from JPM<sup>1</sup></td><td class="src">AI Model.xlsx "Projeções GW"</td></tr>
+<tr class="sa"><td class="v">&gt;40 GW BTM by 2028</td><td>behind-the-meter generation pipeline as grid constraints force hyperscalers off-grid</td><td class="src">SemiAnalysis / Dylan Patel, 2026-06-24 (ai-datacenter-power.md:27)</td></tr>
+<tr class="sa"><td class="v">~2 GW Fairwater (MSFT)</td><td>Wisconsin campus over time, ~300 MW per GPU building</td><td class="src">SemiAnalysis, 2025-11-12 (MSFT.md:69)</td></tr>
+<tr class="sa"><td class="v">850+ MW / 3.1+ GW (CRWV)</td><td>active / contracted late-2025, 49 DCs</td><td class="src">SemiAnalysis, 2025-11-12 (CRWV.md:88)</td></tr>
+<tr class="sa"><td class="v">&lt;$10B/GW/yr Trainium rental</td><td>AWS rental rate to Anthropic &amp; OpenAI (unit economics)</td><td class="src">SemiAnalysis / Dylan Patel, 2026-06 (ANTHROPIC.md:23)</td></tr>
+<tr class="sa"><td class="v">~$11/hr H100 (GOOG→SpaceX)</td><td>Google paying SpaceX above-market for non-Gemini compute</td><td class="src">SemiAnalysis, 2026-06 (GOOG.md:168)</td></tr>
+</table></div>
+
+<p class="foot"><b>Caveats carried from the 2026-07-01 double-check:</b> (1) the model books ORCL / xAI / neoclouds / labs-SPV at zero (OUTROS) while this page documents ~7 GW OCI + 20 GW SPV + 3.5–5 GW neoclouds — the big-4-only AI GW CY26E (36.1) already ≈ the JPM industry row (36.5); (2) big-4 model stocks are chip-derived (~2,167 W/chip all-in) — closer to facility than IT-load, but label before comparing; (3) GOOG house 4.6/7.75 GW is own-fleet, not total — different basis than the 14.5/25.5 model stock, both valid.</p>
+
+</main></body></html>
