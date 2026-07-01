@@ -11,6 +11,7 @@ _Generated 2026-06-19 · last updated 2026-06-23 (Redburn "Conor O'Mara Asia Tri
 | HBM / memory super-cycle | [hbm-memory](hbm-memory.md) | HBM sold-out CY26, DRAM/NAND pricing into 2027-28; duration vs commodity-top debate. |
 | Optical / CPO | [optical-cpo](optical-cpo.md) | Copper→optics phase change; InP/EML laser capacity the binding constraint through 2028. |
 | Custom ASIC / TPU | [custom-asic-tpu](custom-asic-tpu.md) | TPU v9 / Trainium / MTIA + AVGO $250-300B FY28; ASIC share vs NVDA merchant GPU. |
+| AI Data-Center TAM (BofA "AI 2030") | [ai-tam-bofa](ai-tam-bofa.md) | BofA's ~$1.7Tn CY30 AI-DC TAM as a fill-in engine: every line ≈ a fixed multiple of AI Accelerators; scaffold to plug Capstone accelerator estimates + reconcile vs our names. |
 | AI data-center power & nuclear | [ai-datacenter-power](ai-datacenter-power.md) | Firm 24/7 power as the binding constraint; ~$1.2T '27 capex, grid/permitting bottlenecks. |
 | Outros / Ásia | [outros-asia](outros-asia.md) | MLCC super-cycle — the "other AI squeeze"; Japan/Korea/Taiwan capacitor makers (Murata, SEMCO, Yageo), structural supply mismatch vs <15% capacity growth. |
 | CXL / memory fabric | [cxl-memory-fabric](cxl-memory-fabric.md) | Cache-coherent pooled-memory fabric (PCIe layer); KV-cache/weights tiered off HBM. Google MPU co-design w/ MRVL; MRVL FY29 CXL ~$1B; standard-lock-in vs UAL/NVLink debate. |
