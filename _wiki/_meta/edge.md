@@ -1,6 +1,6 @@
 # Edge tracker — house vs Street
 
-_Generated 2026-06-30 · the standing view of where our model and the curated reconciliation runs disagree with consensus. Divergence = candidate alpha; agreement is noise. Rebuild: `py _wiki/_tools/build_edge.py`._
+_Generated 2026-07-01 · the standing view of where our model and the curated reconciliation runs disagree with consensus. Divergence = candidate alpha; agreement is noise. Rebuild: `py _wiki/_tools/build_edge.py`._
 
 > ⚠️ Programmatic rows are auto-computed (house.json vs estimates.json, USD names only) — **verify the basis before trading** (revenue gross/net/TAC differences can masquerade as edge). Curated rows below are analyst-vetted.
 
@@ -8,7 +8,14 @@ _Generated 2026-06-30 · the standing view of where our model and the curated re
 
 | Ticker | Metric | Yr | House | Consensus | Δ |
 |---|---|---|--:|--:|--:|
-| _none over threshold_ | | | | | |
+| COHR | EPS | 2027 | 19.21 | 9.65 | +99% |
+| COHR | Revenue $bn | 2027 | 16.60 | 11.00 | +51% |
+| LITE | EPS | 2027 | 30.02 | 23.53 | +28% |
+| GOOG | Revenue $bn | 2027 | 641.00 | 513.30 | +25% |
+| COHR | EPS | 2026 | 8.27 | 6.74 | +23% |
+| GOOG | Revenue $bn | 2026 | 505.00 | 417.50 | +21% |
+| NVDA | EPS | 2027 | 15.44 | 12.90 | +20% |
+| NVDA | Revenue $bn | 2027 | 661.00 | 559.80 | +18% |
 
 ## Curated divergences — latest reconciliation (`reconciliation-2026-06-30.md`)
 

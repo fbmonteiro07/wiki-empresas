@@ -1,0 +1,15 @@
+{
+ "asof": "2026-07-01",
+ "note": "Hand-maintained book positions — build_book.py joins this against edge/catalysts/staleness to answer 'where is the book most exposed to a debate we haven't resolved?'. SEED 2026-07-01: initialized with the 8 Capstone house-model names, weights unknown (null). EDIT THIS FILE to match the real book: set weight (% NAV, negative = short) via the Core Positions sheet, add/remove names. side: long|short. conviction/note free-form.",
+ "seed": true,
+ "positions": [
+  {"tk": "NVDA", "side": "long", "weight": null, "note": ""},
+  {"tk": "TSM", "side": "long", "weight": null, "note": ""},
+  {"tk": "AVGO", "side": "long", "weight": null, "note": ""},
+  {"tk": "MSFT", "side": "long", "weight": null, "note": ""},
+  {"tk": "GOOG", "side": "long", "weight": null, "note": ""},
+  {"tk": "META", "side": "long", "weight": null, "note": ""},
+  {"tk": "AMZN", "side": "long", "weight": null, "note": ""},
+  {"tk": "AAPL", "side": "long", "weight": null, "note": ""}
+ ]
+}

@@ -25,6 +25,10 @@ STEPS = [
     ("build_catalysts.py", []),
     ("build_gantt.py", []),
     ("build_coverage.py", []),
+    ("build_assumptions.py", []),
+    ("build_book.py", []),          # needs build_catalysts + extract_house first
+    ("build_search_index.py", []),  # incremental — unchanged files skipped
+    ("build_graph.py", []),         # needs catalysts + search index + book + assumptions
 ]
 
 HUB = [
@@ -34,6 +38,9 @@ HUB = [
     ("Catalyst timeline", "gantt.html", "Forward Gantt — every catalyst on one time axis (bar width = date precision)."),
     ("What changed", "diff.html", "Recent page changelog + ingest deltas (rating/PT moves starred)."),
     ("Coverage audit", "coverage.html", "Source material on disk that the page never read (decks, calls, latest filings)."),
+    ("Canonical assumptions", "assumptions.html", "One number per debate — every cross-page figure, all variants, scope traps flagged."),
+    ("Knowledge graph", "graph.html", "Interactive map of the whole repo — tickers, themes, debates, brokers, supply chain."),
+    ("Book exposure", "book.html", "Positions × unresolved debates × catalysts — where the book is most exposed."),
     ("Hyperscaler capex", "hyperscaler-capex/Capex_Cloud.html", "Consensus vs actual vs house cloud capex (existing)."),
 ]
 

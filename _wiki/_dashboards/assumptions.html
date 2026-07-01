@@ -1,0 +1,222 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>Canonical assumptions — one number per debate</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font:15px/1.55 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#1a1f29;background:#f5f6f8}
+header{background:#0f1729;color:#fff;padding:18px 28px}
+header h1{margin:0;font-size:20px} header p{margin:4px 0 0;color:#8492ad;font-size:13px}
+header a{color:#7fb0ff;text-decoration:none}
+main{max-width:1180px;margin:0 auto;padding:24px 28px 80px}
+h2{font-size:17px;margin:26px 0 8px;color:#0f1729;border-bottom:1px solid #e3e7ee;padding-bottom:6px}
+table{border-collapse:collapse;width:100%;margin:10px 0;font-size:13px}
+th,td{border:1px solid #dde2ea;padding:6px 9px;text-align:left;vertical-align:top}
+th{background:#eef1f6;font-weight:700;cursor:pointer;user-select:none;white-space:nowrap;position:sticky;top:0}
+th:hover{background:#e2e7f0}
+tr:nth-child(even) td{background:#fafbfc}
+td.r,th.r{text-align:right;white-space:nowrap}
+.tk a{font-weight:700;color:#1c5fd6;text-decoration:none}
+.pos{color:#1c7d3f;font-weight:600} .neg{color:#c0392b;font-weight:600} .mut{color:#6b7280}
+.byline{color:#6b7280;font-size:12.5px}
+.pill{display:inline-block;padding:1px 7px;border-radius:10px;font-size:11px;font-weight:600}
+.pill.up{background:#e7f6ec;color:#1c7d3f} .pill.dn{background:#fdecea;color:#c0392b} .pill.due{background:#fff3cd;color:#8a6d1b}
+code{background:#eef1f6;padding:1px 5px;border-radius:4px;font-size:85%;font-family:ui-monospace,Consolas,monospace}
+</style></head><body>
+<header><h1>Canonical assumptions — one number per debate</h1><p>2026-07-01 · every cross-page number, all variants, scope traps flagged · <a href="../index.html">← back to wiki</a></p></header><main><h2>Custom-ASIC vs merchant-GPU share of AI accelerators <span class='pill due'>live debate</span></h2>
+<p class='byline'>ASIC/XPU vs merchant-GPU split of AI accelerator shipments — ALWAYS state basis (units vs dollars) and horizon.</p>
+<p><b>Canonical:</b> Near-term unit share inflects to ASICs (JPM: 42% 2026E -&gt; 53% 2027E, units) while long-term dollar/unit share settles ~65-70% GPU (BofA AI 2030, UBS durable 70/30). These are horizons, not contradictions — the debate is whether the 2027 unit inflection sticks or plateaus.</p>
+<p style='background:#fff3cd;padding:8px 12px;border-radius:6px'>⚠️ <b>Scope:</b> Unit share ≠ dollar share (ASIC ASPs are far lower). NVDA-page &#x27;~70% defensible&#x27; framing = long-horizon accelerator share, consistent with BofA 65-70% by 2030, NOT a rebuttal of JPM&#x27;s 2027 unit-share call.</p>
+<table><thead><tr><th>Value</th><th>Source</th><th>Date</th><th>Scope</th></tr></thead><tbody>
+<tr><td>42% ASIC / 58% GPU units 2026E -&gt; 53% / 47% 2027E; ASIC units +109% y/y vs GPU +39% (2026)</td><td>JPM Sur, AI Capex 2.0</td><td>2026-06-16</td><td>unit share, near-term</td></tr>
+<tr><td>~70/30 GPU/ASIC durable long-term</td><td>UBS Arcuri</td><td>2026-06-04</td><td>long-term split</td></tr>
+<tr><td>~65-70% GPU / 30-35% ASIC by 2030; NVDA ~68-77% of accelerators CY25-&gt;CY30, AVGO 8%-&gt;16%</td><td>BofA Arya, AI 2030</td><td>2026-05-13</td><td>share by 2030</td></tr>
+</tbody></table>
+<p><b>Debate:</b> Does the 2027 ASIC unit-share inflection (JPM) stick, or does GPU hold ~70% long-term (UBS/BofA)? Watch TPU v9 volumes, Trainium 3 ramp, MTIA.</p>
+<p class='mut'><b>Unreconciled sightings:</b></p><ul>
+<li><code>ADVANTEST.md</code> — …akers — demand pulled by GPU/HPC/custom-ASIC leaders (NVDA the single biggest opportunity); ~98% overseas, China ~20–25% | | **Key suppliers** | Ups…</li>
+<li><code>ANTHROPIC.md</code> — …26**, and (assuming ~1,000W TDP per TPU/ASIC) **20 GW ≈ 7mn+ TPU units ≈ 360–460k CoWoS demand** — a rare bottoms-up unit read on…</li>
+<li><code>ARM.md</code> — …h largely doesn&#x27;t build CPUs) wins more ASIC share, every Broadcom/MTIA deployment **still needs a host CPU**…</li>
+<li><code>AVGO.md</code> — …g as &quot;conservative messaging.&quot; Context: ASICs ~42% of total DC AI-chip units in 2026 → ~53% in 2027, with ASIC units growing ~3x faster…</li>
+<li><code>GOOG.md</code> — …TPU is one of the two dominant merchant ASICs; total ASIC + ASIC-server units both seen +50%+. - **CoWoS allocation reset higher** for T…</li>
+<li><code>MEDIATEK.md</code> — …ble-digit % growth FY26 | | Data-center ASIC | Multi-year cloud-ASIC opportunity reiterated | TAM ≥USD 50bn by 2028; target 10–15% share |…</li>
+<li><code>MRVL.md</code> — …— higher margin and durability vs. the ASIC opportunity&quot; (MS Scale-up primer). TD Cowen adds that the nascent scal…</li>
+<li><code>TER.md</code> — …-12-15)_: **Neutral, PT $193.37** — VIP-ASIC TAM durability + NVDA share gains the 2026 watchpoint; robotics still sub-breakeven. -…</li>
+<li><code>themes/ai-datacenter-power.md</code> — …er still the binding constraint; ASICs ~42% of AI chip units 2026 → ~53% 2027 (ASIC units +109% y/y vs GPU +39%) (JPM, 2026-06-16).…</li>
+<li><code>themes/macro-cycle.md</code> — …nsible. The current sell-side split is ~70/30 bull vs skeptic, but the skeptic case has gotten more sophi…</li>
+</ul>
+<h2>WFE market size CY26 / CY27 / CY28 <span class='pill dn'>house vs street</span></h2>
+<p class='byline'>Total wafer-fab equipment market ($bn) by calendar year.</p>
+<p><b>Canonical:</b> CY26 ~$140-160B (all sources agree). CY27: house $180-215B vs MS ~$191B vs UBS $200B. CY28 is the genuine conflict: house top end $260B vs UBS $250B vs MS-implied ~$230-240B; skeptic ceiling &#x27;never $300B&#x27; (ex-Samsung foundry EVP). Swing variable = memory-capex intensity + EUV availability post-2027 + first NAND greenfield (CY28).</p>
+<p style='background:#fff3cd;padding:8px 12px;border-radius:6px'>⚠️ <b>Scope:</b> House CY28 top-of-range ($260B) sits ABOVE street — this is a deliberate house-vs-street edge, tracked, not an error.</p>
+<table><thead><tr><th>Value</th><th>Source</th><th>Date</th><th>Scope</th></tr></thead><tbody>
+<tr><td>$148-158B CY26 / $180-215B CY27 / $202-260B CY28</td><td>Capstone house model</td><td>2026-06-15</td><td>house</td></tr>
+<tr><td>$147B CY26 / ~$191B CY27 / mid-teens growth CY28</td><td>MS Moore-Shane</td><td>2026-06-22</td><td>street</td></tr>
+<tr><td>~$150B CY26 / ~$170B CY27 base</td><td>Tokyo Electron (SIG tour)</td><td>2026-06-18</td><td>vendor view</td></tr>
+<tr><td>$200B CY27 / $250B CY28</td><td>UBS Arcuri</td><td>2026-05-15</td><td>street bull</td></tr>
+<tr><td>$272B by 2030 (18% CAGR)</td><td>Redburn</td><td>2026-06-17</td><td>2030 frame</td></tr>
+<tr><td>&#x27;never $300B&#x27; ceiling</td><td>former Samsung foundry EVP (expert call)</td><td>2026-06-30</td><td>skeptic ceiling</td></tr>
+</tbody></table>
+<p><b>Debate:</b> CY28: house $260B top vs street $230-250B. Resolves on memory greenfield timing + EUV shipments.</p>
+<p class='mut'><b>Unreconciled sightings:</b></p><ul>
+<li><code>ADVANTEST.md</code> — …d-through):** JEF Japan raised 2026/27E WFE to **$149bn / $165bn (+10%/+9%)**, still likely below buy-side (&gt;25% for CY27)…</li>
+<li><code>AMAT.md</code> — …T a share-gainer.** Arcuri (UBS) frames WFE to **~$200B in 2027 and ~$250B in 2028** (+$50B/yr); AMAT recovers ~half the **280 bps** o…</li>
+<li><code>ASML.md</code> — …ollar share (UBS Arcuri, 2026-06-15):** WFE to **~$250B in CY28, possibly into the $300s in CY29** (A-rated semicap…</li>
+<li><code>KIOXIA.md</code> — …y comp. - Capacity adds and CY2027 NAND WFE up-cycle (BofA Hosseini flagged $200bn+ annualized WFE into 2H CY27, briefing 2026-05-15) — suppl…</li>
+<li><code>KLAC.md</code> — …non-GAAP EPS $9.87 ±$1. For **CY2026**: WFE market expected to exceed **$140B** (raised through the year from a ~low-$120B view at Q2 FY2…</li>
+<li><code>LRCX.md</code> — …(Sur/JPM, 2026-05-15; 2026-05-22). The WFE TAM ceiling keeps rising — UBS holds **$200B CY27 / $250B CY28** and reads Lam&#x27;s capacity actions as con…</li>
+<li><code>MU.md</code> — …bottleneck until ~110 physical slots (~$225B WFE); ASML is getting the same 8-10-quarter visibility as US to…</li>
+<li><code>NVDA.md</code> — …model-builder that reinvests in capex. WFE $250B in 2028. | | 06-15 | Barclays · O&#x27;Malley / Rand | valuation…</li>
+<li><code>TOKYOELEC.md</code> — …treet keeps raising — UBS/Arcuri models WFE TAM ~$200B CY27 / ~$250B CY28 and says the buy side is &quot;not there&quot; ([semicap-wfe](th…</li>
+<li><code>themes/hbm-memory.md</code> — …to be the limitation&quot;; UBS raised 2028 WFE to $250B and floats 2029 into the $300B range, with memory not enter…</li>
+</ul>
+<h2>Hyperscaler / AI-datacenter capex CY25 / CY26 / CY27 <span class='pill up'>consistent</span></h2>
+<p class='byline'>Aggregate capex of the big US hyperscalers — ALWAYS state the basket (top-4 = MSFT/AMZN/GOOGL/META; five-name adds ORCL).</p>
+<p><b>Canonical:</b> Top-4: ~$410B 2025A -&gt; ~$700-725B 2026E (+~75%) -&gt; ~$1.1T 2027E (JPM AI Capex 2.0). Five-name consensus: ~$700B 2026 / ~$900B+ 2027. Buy-side 2027 bogey ~$1.2T (&#x27;could be 1.3-1.4&#x27;, Jefferies). Constraint is power/physical buildout, not demand.</p>
+<p style='background:#fff3cd;padding:8px 12px;border-radius:6px'>⚠️ <b>Scope:</b> Top-4 vs five-name basket differences masquerade as revisions. GOOG-only: ~$350B 2027 / ~$375B 2028 (MS Nowak 2026-06-29).</p>
+<table><thead><tr><th>Value</th><th>Source</th><th>Date</th><th>Scope</th></tr></thead><tbody>
+<tr><td>top-4: ~$410B 2025A / ~$700-725B 2026E / ~$1.1T 2027E</td><td>JPM Sur, AI Capex 2.0</td><td>2026-06-16</td><td>top-4</td></tr>
+<tr><td>~$1.2T 2027 buy-side bogey (&#x27;could be 1.3-1.4&#x27;)</td><td>Jefferies power/hyperscalers</td><td>2026-05-08</td><td>buy-side bogey</td></tr>
+<tr><td>five-name consensus ~$700B 2026 / ~$900B+ 2027</td><td>BBG / house</td><td>2026-06-11</td><td>five-name</td></tr>
+<tr><td>GOOG ~$350B 2027 / ~$375B 2028 (~9 GW incremental 2028)</td><td>MS Nowak</td><td>2026-06-29</td><td>GOOG only</td></tr>
+</tbody></table>
+<p><b>Debate:</b> Level agreed near-term; the debate is 2027+ durability (see macro-cycle: bubble vs supercycle).</p>
+<p class='mut'><b>Unreconciled sightings:</b></p><ul>
+<li><code>ANTHROPIC.md</code> — …stors that would value it at as much as $900bn** in a ~$30bn tender offer just one month after OpenAI&#x27;s M…</li>
+<li><code>MSFT.md</code> — …364B CY25 (Top-4), funded largely from ~$700B/yr OCF, with AI/DC issuers now ~14.5% of the JULI IG index…</li>
+<li><code>NVDA.md</code> — …venue exiting 2026,&quot; MS 2027 hyperscale capex chart lifted $950B→$1.1T (panel thinks ~$1.5T incl. SpaceX/neoclouds). - **Hardware…</li>
+<li><code>OPENAI.md</code> — …re-asserted with GPT-5.5; TAM seen at **$700bn+ by 2030** across consumer/hardware/ads/enterprise (JPM in…</li>
+<li><code>SAMSUNG.md</code> — …ory cost; premium/QD-OLED strategy. - **Capex/return:** Q1 capex KRW 11.2tn (DS 10.2tn); 2026 &quot;substantial y/y increase.&quot; Quarterly di…</li>
+<li><code>STX.md</code> — …n FY25; demand is driven by hyperscaler capex (FY25 10-K). Top-3 CSP RPO of $1.1T concentrates both upside and risk. - **Double-ordering / ab…</li>
+<li><code>VRT.md</code> — …in 2024 → &gt;$500bn 2025E, +23% CAGR to &gt;$900bn by 2028, of which **Electrical equipment ~$18bn and Therma…</li>
+<li><code>VST.md</code> — …FCF yield. Hyperscaler capex tailwind: &gt;$700B in 2026, ~+50% YoY (Q4 FY25); Jefferies flags +$0.5T of CY2…</li>
+<li><code>themes/ai-tam-bofa.md</code> — …](custom-asic-tpu.md) (accelerator $1.0→$1.2Tn, NVDA/AVGO/AMD split), [hyperscaler-capex](hyperscaler-capex.md) (demand envelope), [ai-datacenter-po…</li>
+</ul>
+<h2>AI datacenter power (GW) — facility GW vs IT-load GW vs 800V-debate GW <span class='pill dn'>scope trap</span></h2>
+<p class='byline'>THREE DISTINCT BASES — never mix: (1) facility GW deployed/added (grid + on-site); (2) IT-load GW (compute load in racks); (3) 800V-transition GW (subset of IT load moving to 800VDC).</p>
+<p><b>Canonical:</b> Facility: ~14-16 GW built 2026 / ~20 GW 2027 vs ~40-45 GW proposed (Jefferies satellite tracking, 50% haircut); ~138 GW capacity through 2030 (JPM). IT-load: ~300 GW by 2030 (+25% CAGR, JPM/Omdia) or ~240-280 GW global (JPM First Principles). 800V debate: Citi models 9 GW -&gt; 21 GW 2025-30 — a SUBSET, not total deployment.</p>
+<p style='background:#fff3cd;padding:8px 12px;border-radius:6px'>⚠️ <b>Scope:</b> STANDING RULE: the 800V notes&#x27; GW figures (IT load ~300 GW, Citi 9-&gt;21 GW) must NOT be folded into total-GW-deployed answers. Citi&#x27;s 9-&gt;21 GW is the AI-specific 800V-relevant increment.</p>
+<table><thead><tr><th>Value</th><th>Source</th><th>Date</th><th>Scope</th></tr></thead><tbody>
+<tr><td>~14-16 GW built 2026 / ~20 GW 2027 vs ~40-45 GW proposed (50% haircut)</td><td>Jefferies / SinMax / Industrial Info satellite tracking</td><td>2026-06-22</td><td>facility GW added</td></tr>
+<tr><td>~138 GW DC capacity through 2030 (base case)</td><td>JPM AI Capex 2.0</td><td>2026-06-16</td><td>facility GW cumulative</td></tr>
+<tr><td>~9.4 GW US leased 1Q26 (5x y/y) / ~11 GW near-term pipeline</td><td>TD Cowen</td><td>2026-05-19</td><td>facility GW leased</td></tr>
+<tr><td>~21 GW built in prior 25 years vs ~40 GW of NVDA chips into US 2025-2030</td><td>Cantor (CoreWeave)</td><td>2026-06-18</td><td>historical context</td></tr>
+<tr><td>~300 GW IT load by 2030 (+25% CAGR, &gt;35 GW/yr new)</td><td>JPM 800V / Omdia</td><td>2026-06-09</td><td>IT-LOAD — 800V debate, keep separate</td></tr>
+<tr><td>~240-280 GW global by 2030 (US &gt;160 GW, ~2x 2025&#x27;s ~115 GW)</td><td>JPM First Principles: AI Power Infrastructure</td><td>2026-06-25</td><td>IT-LOAD — 800V debate, keep separate</td></tr>
+<tr><td>9 GW -&gt; 21 GW 2025-30 (Citi model)</td><td>Citi 800V power</td><td>2026-06-15</td><td>800V-DEBATE GW — subset of IT load, keep separate</td></tr>
+</tbody></table>
+<p><b>Debate:</b> No numeric conflict — the risk is basis conflation. Any new GW datapoint must be labeled facility / IT-load / 800V-subset before it enters a page.</p>
+<p class='mut'><b>Unreconciled sightings:</b></p><ul>
+<li><code>CEG.md</code> — …x 2.0&quot;, 2026-06-16):** JPM now models **138 GW of US data-center capacity growth through 2030** (up from 1…</li>
+<li><code>TLN.md</code> — …ackdrop is supportive: JPM now models **138 GW US DC capacity growth through 2030** (up from 122 GW) withi…</li>
+<li><code>VST.md</code> — …&#x27;s load-growth thesis: JPM now models **138 GW of US DC capacity growth through 2030** (up from 122 GW) wi…</li>
+</ul>
+<h2>HBM — capacity, pricing, allocation, sold-out claims <span class='pill due'>live debate</span></h2>
+<p class='byline'>HBM wafer capacity, $/GB or $/Gb pricing (state which), allocation priority, sold-out horizon.</p>
+<p><b>Canonical:</b> Sold out CY26 incl. HBM4 (Micron Q1 FY26). Capacity ~473k wspm end-26E -&gt; ~668k end-27E (SemiAnalysis). Pricing: NVDA HBM ~$17-18/GB 2026 -&gt; $30-32/GB 2027, +70-80% (Redburn); blended ASP +~30% (JPM/Micron). Live tension: general-server DRAM overtook HBM as allocation priority #1 (Redburn/TrendForce) yet HBM pricing still marches higher. 2027 supply revised 60B -&gt; 50B Gb-equiv on allocation, not demand (Redburn).</p>
+<p style='background:#fff3cd;padding:8px 12px;border-radius:6px'>⚠️ <b>Scope:</b> $/GB (stack) vs $/Gb (die) are ~8-16x apart — always state units. TAM frames: $35B&#x27;25 -&gt; $100B&#x27;28 (Micron/JPM) vs $168B CY30 (BofA) are different horizons, both valid.</p>
+<table><thead><tr><th>Value</th><th>Source</th><th>Date</th><th>Scope</th></tr></thead><tbody>
+<tr><td>sold out CY26 on price and volume, incl. HBM4</td><td>Micron Mehrotra, Q1 FY26</td><td>2025-12-17</td><td>sold-out</td></tr>
+<tr><td>~123k -&gt; ~331k -&gt; ~473k -&gt; ~668k wspm (end-23/25/26E/27E); HBM ~35% of DRAM wafer cap end-27E</td><td>SemiAnalysis Memory Mania</td><td>2026-02-06</td><td>capacity</td></tr>
+<tr><td>NVDA HBM ~$17-18/GB 2026 -&gt; $30-32/GB 2027 (+70-80%)</td><td>Redburn Conor</td><td>2026-06-23</td><td>$/GB stack pricing</td></tr>
+<tr><td>blended HBM ASP +~30% next year (~10% like-for-like + mix)</td><td>JPM / Micron Jay</td><td>2026-05-28</td><td>blended ASP</td></tr>
+<tr><td>general-server DRAM now allocation #1, HBM #2 (4-yr reversal); 2027 HBM supply 60B -&gt; 50B Gb-equiv</td><td>Redburn / TrendForce</td><td>2026-06-23</td><td>allocation</td></tr>
+<tr><td>HBM TAM $35B 2025 -&gt; $100B 2028 (~40% CAGR)</td><td>Micron / JPM</td><td>2026-05-28</td><td>TAM to 2028</td></tr>
+<tr><td>HBM TAM $35B CY25 -&gt; $168B CY30 (+37% CAGR)</td><td>BofA Arya, AI 2030</td><td>2026-05-13</td><td>TAM to 2030</td></tr>
+</tbody></table>
+<p><b>Debate:</b> Allocation deprioritization (Redburn) vs pricing-marches-higher (JPM/TrendForce). Watch HBM4 LTA finalization (~90-100% up vs last year&#x27;s LTA).</p>
+<p class='mut'><b>Unreconciled sightings:</b></p><ul>
+<li><code>AMD.md</code> — …cron sourcing (Citi, 2026-06-29); watch HBM/DRAM allocation as a gate on the GPU ramp and 2H Client/Gaming. - **Q2 FY26…</li>
+<li><code>ARM.md</code> — …customers can&#x27;t place a TSMC PO without HBM allocation Arm can&#x27;t help secure), so &quot;AGI revenue will be more about…</li>
+<li><code>ASML.md</code> — …e guide) | | **Memory / DRAM** | Memory HBM/DDR &quot;sold out&quot; &#x27;26, tight thru &#x27;26 | UBS: ASML ~30% of DRAM WFE dollars (…</li>
+<li><code>AVGO.md</code> — …x drags consolidated GM toward low-70s; HBM pass-through pricing an added headwind, now quantified at ~$2.5k of a ~$12k TPU…</li>
+<li><code>KLAC.md</code> — …&quot; (Scemama/BofA, 2026-06-08), so a DRAM/HBM pricing wobble hits the multiple. UBS is the explicit skeptic on KL…</li>
+<li><code>LRCX.md</code> — …conference wrap, 2026-06-08), so a DRAM/HBM pricing wobble hits the group. The dissenting fundamental call is o…</li>
+<li><code>MU.md</code> — …nly 50-66% of key-customer demand, CY26 HBM sold out | | **Key suppliers** | TSMC (HBM4 base die, N12/N3) + IP p…</li>
+<li><code>OPENAI.md</code> — …g&quot; (2026-06-29) — Jalapeño specs (216GB HBM3e, ~740mm², ~700W, TSMC 3nm, ASP ~$15k, ~50% lower cost / 40% lower power vs Blackwell, 9-mo…</li>
+<li><code>SAMSUNG.md</code> — …s Samsung/SK/Micron divert capex toward HBM and smaller players are cash-constrained — supportive of pricing (MS AI NAND overview; Phison 2Q25). - **HBM:** first to mas…</li>
+<li><code>SKHYNIX.md</code> — …demand epicentre of the AI capex cycle: HBM has been &quot;sold out since 2023,&quot; 2026 DRAM/HBM volume is contracted out (Q3 202…</li>
+<li><code>SNDK.md</code> — …PS ~$214 in −72% ASP stress   - Mizuho &quot;HBM4e Ramping / Sizing Agentic AI / HBF-LTAs&quot; (2026-05-27) — SNDK PT $1,825, OW; Gen1 HBF 2H26E on 16-l…</li>
+<li><code>themes/cowos-packaging.md</code> — …mpute die + smaller I/O die, **6x 12-Hi HBM3e = 216GB**, 3nm, ~$15k ASP, ships end-C26 with volume in 2H27 (Jefferies &quot;Revisiting o…</li>
+<li><code>themes/custom-asic-tpu.md</code> — …roadcom charges the hyperscaler for the HBM** — so with HBM pricing rocketing (NVDA $17–18/GB 2026 → $30–32 2027), cutting HBM…</li>
+<li><code>themes/cxl-memory-fabric.md</code> — …e AI memory bottleneck is shifting from HBM allocation to *fabric architecture*, which makes CXL a front-burner th…</li>
+<li><code>themes/semicap-wfe.md</code> — …) and the demand-side beneficiary (DRAM/HBM/NAND pricing + KV-cache NAND tier). | Strongly positive. UBS (Arcuri) PT…</li>
+</ul>
+<h2>NVDA GPU units / GW shipped per year <span class='pill up'>consistent</span></h2>
+<p class='byline'>NVDA accelerator unit shipments and implied GW/yr — distinguish GPU units, Vera standalone CPU, Vera-Rubin racks.</p>
+<p><b>Canonical:</b> GPU units: 6.2M 2026 -&gt; 8.9M 2027 -&gt; 9.9M 2028 (JPM); Fubon &#x27;10M+ in 2027&#x27; consistent. Racks: 54.5k-62k NVL72 2027F (Nomura). Capstone GW frame: ~16 GW/yr sold 2026 -&gt; ~25 GW 2027 (house, NVDA page 2026-06-17) — the bottoms-up cross-check vs JPM units.</p>
+<p style='background:#fff3cd;padding:8px 12px;border-radius:6px'>⚠️ <b>Scope:</b> Vera standalone CPU (500k 2026 -&gt; 3M 2027 JPM; 5.75M units 2027 to ASE FoCoS per MS) is NOT the same series as Vera-Rubin racks (~2.0-2.2M units 2026, cut from 2.8-2.9M on HBM4 issues).</p>
+<table><thead><tr><th>Value</th><th>Source</th><th>Date</th><th>Scope</th></tr></thead><tbody>
+<tr><td>GPU units 6.2M 2026 -&gt; 8.9M 2027 -&gt; 9.9M 2028</td><td>JPM AI Capex 2.0</td><td>2026-06-16</td><td>GPU units</td></tr>
+<tr><td>could ship 10M+ GPUs in 2027</td><td>Fubon</td><td>2026-06-05</td><td>GPU units</td></tr>
+<tr><td>~16 GW sold/yr 2026 -&gt; ~25 GW 2027 (house estimate)</td><td>Capstone model</td><td>2026-06-17</td><td>GW shipped (house)</td></tr>
+<tr><td>54.5k -&gt; 62k NVL72 racks 2027F</td><td>Nomura</td><td>2026-06-30</td><td>racks</td></tr>
+<tr><td>Vera CPU 500k 2026 -&gt; 3M 2027; MS: 5.75M units 2027 (ASE FoCoS)</td><td>JPM Jay / MS Asia AI Supply Chain</td><td>2026-06-23</td><td>Vera standalone CPU</td></tr>
+</tbody></table>
+<p><b>Debate:</b> House 25 GW 2027 vs JPM 8.9M units — reconcile via W/unit assumptions when the Capstone GW model updates.</p>
+<p class='mut'><b>Unreconciled sightings:</b></p><ul>
+<li><code>AVGO.md</code> — …05-29):** Broadcom&#x27;s **TPU order book ≈ 6.5M units for next year** (up from a prior ~5.5-6M check); ships ~$2…</li>
+<li><code>CRWV.md</code> — …**CoreWeave contributed two spare GB300 NVL72 racks** to the open-source effort and is named an InferenceX supp…</li>
+<li><code>TSM.md</code> — …a structural tailwind: each GW ≈ 7,200 NVL72 racks ≈ ~33k TSMC wafers and ~US$1.0–1.5bn of TSMC revenue (found…</li>
+<li><code>themes/humanoids-robotics.md</code> — …E, $3.91M in 2026E). Industry GB200/300 NVL72 racks: **28,232 (2025E)**, 57,740 cumulative through Q2&#x27;26. Top-4…</li>
+</ul>
+<h2>CoWoS capacity and NVDA allocation share <span class='pill up'>converging</span></h2>
+<p class='byline'>NVDA&#x27;s share of TSMC CoWoS capacity; TPU-substrate splits within Google.</p>
+<p><b>Canonical:</b> NVDA ~50-55% of TSMC CoWoS 2027 (Fubon ~50%+; Nomura &lt;55% vs NVDA&#x27;s targeted ~60% — i.e. target likely missed on TPU squeeze). Within Google TPU: AVGO ~66-68% / MediaTek ~32-34% (Nomura).</p>
+<p style='background:#fff3cd;padding:8px 12px;border-radius:6px'>⚠️ <b>Scope:</b> The &#x27;targeted ~60%&#x27; is NVDA&#x27;s ask, not an outcome — don&#x27;t cite it as achieved share.</p>
+<table><thead><tr><th>Value</th><th>Source</th><th>Date</th><th>Scope</th></tr></thead><tbody>
+<tr><td>~50%+ of TSMC CoWoS 2027</td><td>Fubon</td><td>2026-06-05</td><td>NVDA share</td></tr>
+<tr><td>&lt;55% 2027F, down from targeted ~60% (TPU squeeze)</td><td>Nomura</td><td>2026-06-30</td><td>NVDA share</td></tr>
+<tr><td>AVGO ~66-68% / MediaTek ~32-34% of Google TPU</td><td>Nomura</td><td>2026-06-30</td><td>TPU split</td></tr>
+</tbody></table>
+<p><b>Debate:</b> Does NVDA claw back toward 60% or does TPU keep the squeeze on?</p>
+<p class='mut'><b>Unreconciled sightings:</b></p><ul>
+<li><code>AMAT.md</code> — …D for GAA | | **Advanced packaging (HBM/CoWoS)** | To &gt;double to &gt;$3B; share above co. avg | HBM among fastest-growing segments | Fastes…</li>
+<li><code>AMD.md</code> — …gressive on **2027F** and may seek more CoWoS allocation. Nomura models AMD AI GPUs at **9%/10% of TSMC AI revenu…</li>
+<li><code>AVGO.md</code> — …pply chain &amp; foundry capacity (new) - **CoWoS allocation raised:** Fubon (dist. Jefferies) lifts AVGO&#x27;s total TSM…</li>
+<li><code>BESI.md</code> — …on needs (HBM stacking, logic-on-logic, CoWoS-class 2.5D). AI-related orders were ~50% of total 2025 orders (Q4-25 call, 2026-02-19). Margins are…</li>
+<li><code>GOOG.md</code> — …ASIC-server units both seen +50%+. - **CoWoS allocation reset higher** for TPU 2027 projects (TSMC AP7/AP8 fully…</li>
+<li><code>INTC.md</code> — …execution holes*: EMIB yield well below CoWoS, long-term server-CPU share erosion (UBS) against Redburn&#x27;s contrarian read (60% in 202…</li>
+<li><code>MEDIATEK.md</code> — …ed TP, citing &quot;TPU upside.&quot;** Its 2027F CoWoS-allocation work argues **Google&#x27;s TPU CoWoS share rises to 26% in 2027 (from 23% in 2026)** — nearly doubling…</li>
+<li><code>NVDA.md</code> — …06-05) checks: NVDA still ~50%+ of TSMC CoWoS allocation in 2027, total NVDA GPU production &quot;could reach 10mn+ in…</li>
+<li><code>TSM.md</code> — …~$170bn/&#x27;30, ~$44bn for TSMC · MS Chan: CoWoS 200kwpm/&#x27;27 (~60% YoY XPU); CPU becomes a material 2.5D consumer | **✓ confir…</li>
+</ul>
+<h2>AI TAM by 2030 <span class='pill up'>consistent</span></h2>
+<p class='byline'>AI datacenter TAM frames — ALWAYS state scope (systems-only vs total infra).</p>
+<p><b>Canonical:</b> BofA ~$1.7T CY30 AI-DC-systems TAM (accelerators ~$1.2T, networking ~$316B, optical ~$88B, HBM $168B). Jensen&#x27;s &#x27;$3-4T end-of-decade AI infra&#x27; is a BROADER scope (adds power/grid/software) — not a conflict with BofA.</p>
+<p style='background:#fff3cd;padding:8px 12px;border-radius:6px'>⚠️ <b>Scope:</b> Never compare $1.7T (systems) against $3-4T (infra) as if same quantity.</p>
+<table><thead><tr><th>Value</th><th>Source</th><th>Date</th><th>Scope</th></tr></thead><tbody>
+<tr><td>~$1.7T CY30 AI-DC-systems TAM (accel ~$1.2T / networking ~$316B / optical ~$88B)</td><td>BofA Arya, AI 2030</td><td>2026-05-13</td><td>systems TAM</td></tr>
+<tr><td>~$3-4T end-of-decade AI infra</td><td>NVDA Jensen, Q1 FY27</td><td>2026-05-20</td><td>broad infra TAM</td></tr>
+</tbody></table>
+<p><b>Debate:</b> Scope discipline only — systems vs infra.</p>
+<p class='mut'><b>Unreconciled sightings:</b></p><ul>
+<li><code>AMD.md</code> — …VGO/MU/AMD/MRVL); AI DC TAM CY30 $1.4Tn→$1.7Tn, accelerator TAM ~$1.2Tn (AMD modeled ~5-7% share, GPU $6.…</li>
+<li><code>NVDA.md</code> — …tor pick.** AI DC TAM CY30 raised to **~$1.7Tn** (from $1.4Tn), +45% CAGR; accelerator TAM **~$1.2Tn** (f…</li>
+<li><code>SPCX.md</code> — …oal is explicitly unproven. Valuation (~$1.7tn+ implied) prices in enormous execution. - **Where the sell…</li>
+<li><code>themes/optical-cpo.md</code> — …CAGR / copper $22bn at +61%), inside a ~$1.7Tn total AI-DC-systems TAM; CPO transceiver TAM is modeled sm…</li>
+</ul>
+<h2>Conventional DRAM pricing cadence Q3/Q4 2026 <span class='pill due'>live debate</span></h2>
+<p class='byline'>QoQ contract-price growth for conventional DRAM, 2H26.</p>
+<p><b>Canonical:</b> TrendForce REVISED (2026-06-30, supersedes 06-23): +15-20% Q3 / +3-8% Q4 — vs experts +20-25% Q3 (Redburn/Sherman/Edison) and market chatter +30-40%. Direction agreed; magnitude is the debate.</p>
+<p style='background:#fff3cd;padding:8px 12px;border-radius:6px'>⚠️ <b>Scope:</b> The 06-23 TrendForce +8-13% Q3 is SUPERSEDED — don&#x27;t cite it as current.</p>
+<table><thead><tr><th>Value</th><th>Source</th><th>Date</th><th>Scope</th></tr></thead><tbody>
+<tr><td>+15-20% Q3 / +3-8% Q4 (revised up)</td><td>TrendForce</td><td>2026-06-30</td><td>current base case</td></tr>
+<tr><td>+20-25% Q3 / +20% Q4 (vs chatter +30-40%)</td><td>Redburn / Sherman / Edison experts</td><td>2026-06-23</td><td>expert view</td></tr>
+<tr><td>+8-13% Q3 / +3-8% Q4 [SUPERSEDED 2026-06-30]</td><td>TrendForce</td><td>2026-06-23</td><td>superseded</td></tr>
+</tbody></table>
+<p><b>Debate:</b> Magnitude of 2H26 DRAM hikes: TrendForce conservative vs expert +20-25% vs chatter +30-40%.</p>
+<p class='mut'><b>Unreconciled sightings:</b></p><ul>
+<li><code>MU.md</code> — …are-competition reasons. (Her base-case DRAM price view is the market&#x27;s most conservative: Q3 +8-13% / Q4 +3-8%, with gut-feel upside to Q3 &gt;+20% and Q4 +10-15% — vs…</li>
+</ul></main>
+<script>
+function sortT(t,col,numeric){var tb=t.tBodies[0];var rows=[].slice.call(tb.rows);
+var asc=t.getAttribute('data-c')==col?!(t.getAttribute('data-a')=='1'):true;
+t.setAttribute('data-c',col);t.setAttribute('data-a',asc?'1':'0');
+rows.sort(function(a,b){var x=a.cells[col],y=b.cells[col];
+var av=numeric?parseFloat(x.getAttribute('data-v')||x.textContent):x.textContent.trim().toLowerCase();
+var bv=numeric?parseFloat(y.getAttribute('data-v')||y.textContent):y.textContent.trim().toLowerCase();
+if(numeric){av=isNaN(av)?-1e15:av;bv=isNaN(bv)?-1e15:bv;}
+return asc?(av>bv?1:av<bv?-1:0):(av<bv?1:av>bv?-1:0);});
+rows.forEach(function(r){tb.appendChild(r);});}
+document.querySelectorAll('table.sortable').forEach(function(t){
+[].forEach.call(t.tHead.rows[0].cells,function(th,i){th.onclick=function(){sortT(t,i,th.classList.contains('r'));};});});
+</script></body></html>

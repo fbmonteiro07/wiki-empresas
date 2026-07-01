@@ -6,7 +6,13 @@
 !/.gitattributes
 !/INDEX.md
 !/_wiki/
+!/CLAUDE.md
+!/.claude/
+/.claude/*
+!/.claude/settings.json
 # throwaway previews inside _wiki
 _wiki/_preview_*.html
 __pycache__/
 *.pyc
+# full-corpus search index (binary, rebuilt by _tools/build_search_index.py)
+_wiki/_data/search.db

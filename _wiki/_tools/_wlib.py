@@ -97,12 +97,20 @@ def num(cell):
 
 
 def changelog_entries(md):
-    """Yield (date:str, text:str) dated bullets from a page's '## Changelog' section."""
+    """Yield (date:str, text:str) dated entries from a page's '## Changelog' section.
+    Accepts '- 2026-06-30 — text' and '- **2026-06-30:** text' bullets, plus the
+    '| Date | Change |' table style (date extracted from the first cell)."""
     body = section(md, r"^Changelog\b")
     for ln in body.split("\n"):
-        m = re.match(r"^\s*[-*]\s+(20\d\d-\d\d-\d\d)\s*[—\-–:]\s*(.*)$", ln)
+        m = re.match(r"^\s*[-*]\s+\*{0,2}(20\d\d-\d\d-\d\d)\s*[—\-–:]?\*{0,2}\s*[—\-–:]?\s*(.*)$", ln)
         if m:
             yield m.group(1), m.group(2).strip()
+    _, rows = parse_md_table(body)
+    for cells in rows:
+        if len(cells) >= 2:
+            m = DATE_RE.search(cells[0])
+            if m:
+                yield m.group(1), cells[1].strip()
 
 
 def html_head(title, subtitle=""):

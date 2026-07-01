@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "py",
+            "args": ["E:\\Wiki Felipe empresas\\_wiki\\_tools\\graph_query.py", "--hook"],
+            "timeout": 15,
+            "statusMessage": "Loading wiki knowledge-graph context…"
+          }
+        ]
+      }
+    ]
+  }
+}

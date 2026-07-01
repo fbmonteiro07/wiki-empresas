@@ -2,7 +2,9 @@
 
 > 🌐 **Navigable version (offline):** open [`index.html`](index.html) — sidebar by theme + full-text search across all pages. Rebuild: `py E:/.claude/scripts/build_wiki_html.py`.
 >
-> 📊 **Dashboards** (hub: [`_dashboards/index.html`](_dashboards/index.html)): [edge tracker](_dashboards/edge.html) · [read-through map](_dashboards/readthrough.html) · [catalyst loop](_dashboards/catalysts.html) · [catalyst timeline (Gantt)](_dashboards/gantt.html) · [what changed](_dashboards/diff.html). Rebuild all: `py "_wiki/_tools/refresh_features.py"`.
+> 📊 **Dashboards** (hub: [`_dashboards/index.html`](_dashboards/index.html)): [edge tracker](_dashboards/edge.html) · [read-through map](_dashboards/readthrough.html) · [catalyst loop](_dashboards/catalysts.html) · [catalyst timeline (Gantt)](_dashboards/gantt.html) · [what changed](_dashboards/diff.html) · [canonical assumptions](_dashboards/assumptions.html) · [book exposure](_dashboards/book.html). Rebuild all: `py "_wiki/_tools/refresh_features.py"`.
+>
+> 🔎 **Full-corpus search** (reports + calls + briefings + transcripts + Stratechery, not just wiki pages): `py "_wiki/_tools/search.py" <query>` (index: `py "_wiki/_tools/build_search_index.py"`).
 
 _Generated 2026-06-18 (financials refreshed 2026-06-19) · 56 companies + 2 private AI labs (58 pages) · one page per ticker synthesizing all co-located sources in `E:\Wiki Felipe`: filings (10-K/10-Q/20-F) + earnings transcripts + investor-day decks + thematic equity calls (`_equity_calls`) + per-ticker roll-up of the email briefings (`_briefings/by-ticker`) + BBG consensus & street-high estimates (`_data/estimates.json`)._
 
