@@ -15,7 +15,7 @@ One synthesized page per ticker (`_wiki/*.md`, ~101 names) + cross-company theme
 - Every datapoint attributed (broker/analyst/call + date). On pasted exhibits, confirm the source with the user — don't infer it.
 - **Thesis-drift rule**: never silently overwrite a number/rating/PT/thesis on a page — move the old value into the page's `## Changelog` with the date, then update the body.
 - When a catalyst resolves, add a line to `_wiki/_meta/outcomes.md` (`- TICKER YYYY-MM-DD — bull won|bear won|neutral — note`).
-- Feature scripts are read-only on pages; they write only to `_wiki/_meta`, `_wiki/_data`, `_wiki/_dashboards`.
+- Feature scripts are read-only on pages; they write only to `_wiki/_meta`, `_wiki/_data`, `_wiki/_dashboards`. Sole exception: `build_index.py` regenerates `_wiki/00_INDEX.md` (and nothing else) from `_data/index_meta.json`.
 - Machine is behind a TLS proxy — stdlib Python only, no pip.
 
 ## Rebuild / refresh
@@ -27,7 +27,7 @@ One synthesized page per ticker (`_wiki/*.md`, ~101 names) + cross-company theme
 
 ## Map
 
-- `_wiki/00_INDEX.md` — master index with one-line theses · `_wiki/_TEMPLATE.md` — page structure
+- `_wiki/00_INDEX.md` — master index with one-line theses (**derived** — edit `_data/index_meta.json`, rebuild with `build_index.py`) · `_wiki/_TEMPLATE.md` — page structure
 - `_wiki/_meta/` — assumptions.md, edge.md, catalysts.md + outcomes.md, book.md, staleness.md, diff-latest.md, worklist.md
-- `_wiki/_data/` — estimates.json (BBG consensus), house.json (Capstone models), book.json (positions — hand-edit), assumptions.json (canonical numbers — hand-edit), graph.json (curated supply edges — hand-edit), graph_full.json (derived), search.db (derived)
+- `_wiki/_data/` — estimates.json (BBG consensus), house.json (Capstone models), book.json (positions — hand-edit), assumptions.json (canonical numbers — hand-edit), graph.json (curated supply edges — hand-edit), index_meta.json (sector membership + one-line theses — hand-edit), graph_full.json (derived), search.db (derived)
 - `_wiki/_dashboards/index.html` — hub (edge, read-through, catalysts, gantt, diff, coverage, assumptions, book, graph)

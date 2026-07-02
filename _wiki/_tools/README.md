@@ -2,7 +2,10 @@
 
 Six **additive** features layered on the empresas wiki. They are all read-only on
 the company pages — every script writes only to `_meta/`, `_data/`, or
-`_dashboards/`. Nothing rewrites a page's content.
+`_dashboards/`. Nothing rewrites a page's content. (Sole exception:
+`build_index.py` regenerates `00_INDEX.md` — and only that file — from the
+hand-edited `_data/index_meta.json`; sector membership and one-line theses live
+in the json, and pages missing from it are auto-flagged, never dropped.)
 
 Rebuild everything in one shot (wire this into the nightly routine, after the ingest):
 

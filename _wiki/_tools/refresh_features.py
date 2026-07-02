@@ -17,6 +17,7 @@ RUN_EST = "--run-estimates" in sys.argv
 
 # (script, extra args) — extract_house feeds build_edge, so order matters.
 STEPS = [
+    ("build_index.py", []),         # 00_INDEX.md from _data/index_meta.json (before search index)
     ("extract_house.py", []),
     ("build_edge.py", []),
     ("remediate.py", ["--run-estimates"] if RUN_EST else []),

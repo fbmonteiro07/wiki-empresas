@@ -1,0 +1,580 @@
+{
+ "_note": "Hand-edit THIS file (sector membership + one-line theses); 00_INDEX.md is a DERIVED artifact rebuilt by _tools/build_index.py (wired into refresh_features.py). Pages not listed here are auto-flagged in an 'Unclassified' section rather than dropped.",
+ "sections": [
+  {
+   "title": "AI — Semis & Compute",
+   "entries": [
+    {
+     "ticker": "NVDA",
+     "display": "NVDA",
+     "thesis": "Full-stack AI-factory platform at +85% rev; debate is demand sustainability vs ASIC erosion."
+    },
+    {
+     "ticker": "AVGO",
+     "display": "AVGO",
+     "thesis": "#1 custom-ASIC/TPU partner; binary setup on the \">$100B\" FY27 guide vs $250-300B FY28 (JPM)."
+    },
+    {
+     "ticker": "AMD",
+     "display": "AMD",
+     "thesis": "AI-infra long with a server-CPU leg; risk concentrated in MI450 execution."
+    },
+    {
+     "ticker": "TSM",
+     "display": "TSM",
+     "thesis": "Sole-source leading-edge foundry (~70% share); pricing headroom vs overseas-fab dilution."
+    },
+    {
+     "ticker": "ASML",
+     "display": "ASML",
+     "thesis": "Supply-chain chokepoint (EUV near-monopoly); Street \"behind the curve\" on 2027/28 vs a 2028 DRAM air-pocket."
+    },
+    {
+     "ticker": "MU",
+     "display": "MU",
+     "thesis": "Pure-play on AI memory intensity (HBM sold-out CY26); debate = peak earnings vs run-rate."
+    },
+    {
+     "ticker": "MRVL",
+     "display": "MRVL",
+     "thesis": "#2 merchant custom-ASIC (Trainium/Maia) + optical DSP; debate = hyperscaler concentration + 1.6T share."
+    },
+    {
+     "ticker": "AXTI",
+     "display": "AXTI",
+     "thesis": "Most direct InP-substrate bottleneck play (~80% non-China w/ Sumitomo); bull = optical supply oligopoly, bear = China-permit gate + trading-vehicle beta."
+    },
+    {
+     "ticker": "TSEM",
+     "display": "TSEM",
+     "thesis": "Specialty foundry re-rating on SiPho/SiGe optical; $1.3B 2027 SiPho commit (NVDA-anchored per FinTwit); bear = ramp/concentration. SIG Positive $330."
+    },
+    {
+     "ticker": "POET",
+     "display": "POET",
+     "thesis": "Pre-revenue EOI/CPO optionality de-risked by $50M Lumilens order; bear = valuation vs FOCI + CPO timeline slip. Thin coverage."
+    },
+    {
+     "ticker": "INTC",
+     "display": "INTC",
+     "thesis": "Binary IDM turnaround; 18A yielding, but the equity is a call option on the first big external foundry customer."
+    },
+    {
+     "ticker": "IFX",
+     "display": "IFX",
+     "thesis": "#1 power/auto-semi IDM; cyclical recovery + 800V AI-datacenter-power ramp (NVIDIA anchor); bear = DC-power share loss."
+    },
+    {
+     "ticker": "SMIC",
+     "display": "SMIC",
+     "thesis": "China's national-champion mature-node foundry; self-sufficiency proxy vs mature-node price-war + EUV/export-control ceiling on its DUV 7nm push."
+    },
+    {
+     "ticker": "MEDIATEK",
+     "display": "MediaTek",
+     "thesis": "World's largest mobile-SoC vendor pivoting into a data-center custom-ASIC house (Google TPU v8t/v9/v10 roadmap); JPM sees DC ~30% of rev 2027 → ~60% 2028; GS PT NT$6,800. TWD, no SEC."
+    }
+   ]
+  },
+  {
+   "title": "AI — Hyperscalers & Software",
+   "entries": [
+    {
+     "ticker": "MSFT",
+     "display": "MSFT",
+     "thesis": "AI ARR >$37B/+123%; swing is capex (CY27 ~$276B) vs Azure revenue + OpenAI concentration."
+    },
+    {
+     "ticker": "AMZN",
+     "display": "AMZN",
+     "thesis": "AWS re-acceleration (+28%) + in-house silicon (Trainium); debate = $200B capex/ROIC."
+    },
+    {
+     "ticker": "GOOG",
+     "display": "GOOG",
+     "thesis": "Full-stack compounder (Search +19%, Cloud +63%); debate is valuation, not fundamentals."
+    },
+    {
+     "ticker": "META",
+     "display": "META",
+     "thesis": "Fastest grower in Mag7 ex-GPU; bear = capital intensity and negative incremental ROIC."
+    },
+    {
+     "ticker": "ORCL",
+     "display": "ORCL",
+     "thesis": "Turned into an AI-infra hyperscaler (RPO $638B/+363%); bear = dot-com-peak capex/sales + dilution."
+    },
+    {
+     "ticker": "NOW",
+     "display": "NOW",
+     "thesis": "Beat-and-raise (cRPO +21%) + agentic pivot to consumption; on-disk transcripts are paraphrased (fidelity)."
+    }
+   ]
+  },
+  {
+   "title": "AI labs (private)",
+   "entries": [
+    {
+     "ticker": "ANTHROPIC",
+     "display": "Anthropic",
+     "thesis": "Private frontier lab (Claude); enterprise/coding leadership + Amazon/Google compute; ~$40B+ ARR. No public financials."
+    },
+    {
+     "ticker": "OPENAI",
+     "display": "OpenAI",
+     "thesis": "Private frontier lab (ChatGPT/GPT); scale + distribution vs cash burn + sub-50% share; Microsoft-anchored. No public financials."
+    }
+   ]
+  },
+  {
+   "title": "Semiconductor equipment (semicap)",
+   "entries": [
+    {
+     "ticker": "AMAT",
+     "display": "AMAT",
+     "thesis": "Broadest-line front-end WFE; share-gainer into a $200B/$250B '27-'28 WFE cycle; bear = memory beta + crowded positioning."
+    },
+    {
+     "ticker": "KLAC",
+     "display": "KLAC",
+     "thesis": "Process-control near-monopoly (~7x peers); only semicap to guide CY27 WFE > CY26; back-half-of-cycle revision story."
+    },
+    {
+     "ticker": "TER",
+     "display": "TER",
+     "thesis": "Cleanest back-end proxy for AI test intensity (~70% AI); bear = ~2-customer concentration + H1-weighted book."
+    },
+    {
+     "ticker": "VECO",
+     "display": "VECO",
+     "thesis": "Specialty process equipment (LSA / ion-beam / MBE / MOCVD); now an Axcelis all-stock merger-arb / ACLS proxy."
+    },
+    {
+     "ticker": "AIXA",
+     "display": "AIXA",
+     "thesis": "Near-monopoly compound-semi MOCVD (~100% InP, >85% GaN); AI-optical inflection (Jefferies Buy €73); thin internal coverage."
+    },
+    {
+     "ticker": "LRCX",
+     "display": "LRCX",
+     "thesis": "Etch/deposition WFE — completes the AMAT/KLAC/LRCX trio; most memory-capex-levered (NAND/HBM)."
+    },
+    {
+     "ticker": "TOKYOELEC",
+     "display": "Tokyo Electron",
+     "thesis": "Broadest-line Japanese WFE (coater/developer ~91% share, dielectric etch >50%); cleanest Japan-listed proxy for leading-edge WFE + HBM packaging. ¥, FYE March."
+    },
+    {
+     "ticker": "ADVANTEST",
+     "display": "Advantest",
+     "thesis": "#1 ATE in a duopoly with Teradyne; ~80% of SoC test is HPC/AI and effectively sole SoC tester at the GPU/CoWoS leaders — levered to test intensity, not wafer starts. ¥."
+    },
+    {
+     "ticker": "DISCO",
+     "display": "DISCO",
+     "thesis": "Near-monopoly precision dicing/grinding/polishing (~70-80% share of HBM wafer-thinning tools) + consumables; sixth straight record year on AI GPU/HBM. ¥, FYE March."
+    },
+    {
+     "ticker": "BESI",
+     "display": "BESI",
+     "thesis": "Hybrid-bonding / TCB leader for HBM and 2.5D/3D stacking (AI ~50% of 2025 orders, GM 63-66%); AMAT hardware partner on the high-end HB roadmap."
+    }
+   ]
+  },
+  {
+   "title": "Memory & storage",
+   "entries": [
+    {
+     "ticker": "SAMSUNG",
+     "display": "Samsung",
+     "thesis": "Cheapest way to own the memory super-cycle; HBM4 catch-up vs SK Hynix + foundry optionality. ₩, no SEC."
+    },
+    {
+     "ticker": "SKHYNIX",
+     "display": "SK Hynix",
+     "thesis": "#1 HBM, NVDA's primary supplier, sold out through 2026; bear = HBM4 commoditization. ₩, no SEC."
+    },
+    {
+     "ticker": "KIOXIA",
+     "display": "Kioxia",
+     "thesis": "Cleanest listed NAND/SSD-cycle proxy; no DRAM/HBM offset on the downturn. ¥, no SEC, IPO'd 2024."
+    },
+    {
+     "ticker": "SNDK",
+     "display": "SanDisk",
+     "thesis": "Post-spin pure-play NAND on AI storage; price-driven blowout + $42B LTA backlog vs blowoff-top risk."
+    },
+    {
+     "ticker": "WDC",
+     "display": "WDC",
+     "thesis": "Pure-HDD post-SanDisk-spin; nearline exabyte growth + HAMR; the \"1B\" to Seagate's \"1A\"."
+    },
+    {
+     "ticker": "STX",
+     "display": "STX",
+     "thesis": "HAMR/Mozaic front-runner in a supply-constrained nearline cycle; pricing escalators into CY27/28."
+    }
+   ]
+  },
+  {
+   "title": "Analog & processors",
+   "entries": [
+    {
+     "ticker": "ADI",
+     "display": "ADI",
+     "thesis": "Highest-quality large-cap analog; industrial recovery + datacenter-power (Empower); crowded/premium."
+    },
+    {
+     "ticker": "TXN",
+     "display": "TXN",
+     "thesis": "Crowded analog long; 300mm capex→FCF inflection + 800V DC-power share; valuation the bear (GS Sell)."
+    },
+    {
+     "ticker": "QCOM",
+     "display": "QCOM",
+     "thesis": "High-FCF handset franchise eroding (Apple modem); re-rating hinges on auto/IoT/PC diversification."
+    },
+    {
+     "ticker": "ARM",
+     "display": "ARM",
+     "thesis": "Upstream IP toll on every SoC; ARMv9/CSS royalty + >$100B server-CPU TAM; own-silicon pivot the risk. 20-F filer."
+    },
+    {
+     "ticker": "NXPI",
+     "display": "NXP",
+     "thesis": "Highest auto-beta analog/embedded; content-per-vehicle + datacenter doubling; concentration the risk."
+    },
+    {
+     "ticker": "MCHP",
+     "display": "MCHP",
+     "thesis": "Textbook deep-cyclical MCU/analog recovery; GM 54%→62%; supply-gated, already re-rated."
+    },
+    {
+     "ticker": "ON",
+     "display": "onsemi",
+     "thesis": "Bottoming auto/SiC power IDM + AI-DC-power (800V) kicker; share not TAM (Citi Neutral vs TXN)."
+    }
+   ]
+  },
+  {
+   "title": "Optical / Networking",
+   "entries": [
+    {
+     "ticker": "ANET",
+     "display": "ANET",
+     "thesis": "Best-positioned merchant AI-Ethernet name; risk = 2H26 backlog drawdown + rich multiple."
+    },
+    {
+     "ticker": "CIEN",
+     "display": "CIEN",
+     "thesis": "Optical/DCI leader; demand outruns supply, debate purely valuation (~85x NTM)."
+    },
+    {
+     "ticker": "COHR",
+     "display": "COHR",
+     "thesis": "InP chokepoint in AI interconnect; NVIDIA stake + CPO deal; bear is relative vs LITE."
+    },
+    {
+     "ticker": "LITE",
+     "display": "LITE",
+     "thesis": "US photonics pure-play (rev +90%); demand isn't the question, supply/execution is."
+    },
+    {
+     "ticker": "AAOI",
+     "display": "AAOI",
+     "thesis": "Volatile small-cap with in-house InP fab; 2027 projection trading on FinTwit conviction."
+    },
+    {
+     "ticker": "GLW",
+     "display": "GLW",
+     "thesis": "Re-rate to AI-infra (Optical +36%, Meta/Nvidia LTAs); bear = valuation + CPO payoff 2028+."
+    },
+    {
+     "ticker": "CSCO",
+     "display": "CSCO",
+     "thesis": "Incumbent re-rating to AI-infra (orders +35%); bear prefers ANET, flags pull-forward."
+    },
+    {
+     "ticker": "CRDO",
+     "display": "CRDO",
+     "thesis": "AI-connectivity pure-play — active-copper (AEC) + SerDes/optical DSP; ~68% GM, hyperscaler-concentrated."
+    },
+    {
+     "ticker": "ALAB",
+     "display": "ALAB",
+     "thesis": "Scale-up connectivity (PCIe/CXL retimers + Scorpio fabric); >$1k content/accelerator; concentration + rich multiple."
+    }
+   ]
+  },
+  {
+   "title": "Power & Energy",
+   "entries": [
+    {
+     "ticker": "CEG",
+     "display": "CEG",
+     "thesis": "Owns what the AI-power cycle is short: 24/7 carbon-free nuclear; risk is PPA timing."
+    },
+    {
+     "ticker": "VST",
+     "display": "VST",
+     "thesis": "Largest US merchant power turning into an AI-power play; debate is pace, not direction."
+    },
+    {
+     "ticker": "TLN",
+     "display": "TLN",
+     "thesis": "PJM merchant IPP (Susquehanna nuclear + AWS PPA); risk = concentration + co-location regulation."
+    },
+    {
+     "ticker": "GEV",
+     "display": "GEV",
+     "thesis": "Cleanest AI-power earnings-revisions story (orders +71%); bear = order peak + Wind."
+    },
+    {
+     "ticker": "PWR",
+     "display": "PWR",
+     "thesis": "Labor pick-and-shovel on the grid/data-center super-cycle (backlog $48.5B)."
+    },
+    {
+     "ticker": "WMB",
+     "display": "WMB",
+     "thesis": "Gas-midstream compounder (Transco + Power Innovation); debate = valuation + PI earnings quality."
+    },
+    {
+     "ticker": "AGX",
+     "display": "AGX",
+     "thesis": "EPC pure-play on the firm-power super-cycle (backlog ~79% gas); nil coverage on disk."
+    },
+    {
+     "ticker": "ETN",
+     "display": "ETN",
+     "thesis": "\"AI-factory power\" electrical name (switchgear/busway); RMT sharpens portfolio; bull = capex/800V, bear = Q1 margin trim."
+    },
+    {
+     "ticker": "BE",
+     "display": "BE",
+     "thesis": "On-site SOFC fuel cells for DC power (Nebius/Google); bull = grid bottleneck, bear = Redburn Sell + Delta/Ceres competition."
+    }
+   ]
+  },
+  {
+   "title": "Power components & datacenter infra",
+   "entries": [
+    {
+     "ticker": "APH",
+     "display": "APH",
+     "thesis": "AI-interconnect compounder; 800V busbar/connector content + CommScope optical; debate = copper terminal value."
+    },
+    {
+     "ticker": "TEL",
+     "display": "TEL",
+     "thesis": "TE Connectivity — connector power/signal AI-DC content (AI rev →~$2.4bn FY26); auto-mix the drag."
+    },
+    {
+     "ticker": "NVT",
+     "display": "NVT",
+     "thesis": "nVent — AI-DC power + liquid cooling (DC ~$1B, backlog $2.6B); NVIDIA CDU partner; order lumpiness."
+    },
+    {
+     "ticker": "VRT",
+     "display": "VRT",
+     "thesis": "Vertiv — cleanest AI-DC power+cooling proxy; co-designs NVIDIA 800VDC; $15B backlog; order opacity."
+    },
+    {
+     "ticker": "FLEX",
+     "display": "FLEX",
+     "thesis": "EMS re-rating to AI-DC power (Anord Mardix) + JetCool cooling; CPI spin Q1-CY27; margin-dilutive near-term."
+    },
+    {
+     "ticker": "WOLF",
+     "display": "WOLF",
+     "thesis": "Wolfspeed — post-Ch11 SiC; 800V datacenter call-option but negative GM + restructuring overhang."
+    },
+    {
+     "ticker": "NVTS",
+     "display": "NVTS",
+     "thesis": "Navitas — GaN/SiC; binary on the NVIDIA 800V design win (rev 2027); cash burn + small-cap volatility."
+    },
+    {
+     "ticker": "POWI",
+     "display": "POWI",
+     "thesis": "Power-conversion ICs; FinTwit NVDA 800VDC \"main stages\" partner, but no capital catalyst + consumer drag. Thin coverage."
+    },
+    {
+     "ticker": "AOSL",
+     "display": "AOSL",
+     "thesis": "Power MOSFET/IC small-cap in the 800VDC Rubin-rack basket; design-win unconfirmed, negative EPS. Thin coverage."
+    }
+   ]
+  },
+  {
+   "title": "Software / security / internet",
+   "entries": [
+    {
+     "ticker": "PANW",
+     "display": "PANW",
+     "thesis": "Cybersecurity platformization land-grab + agentic SecOps; debate = organic vs M&A-flattered NGS ARR."
+    },
+    {
+     "ticker": "CRWD",
+     "display": "CRWD",
+     "thesis": "Falcon consolidation flywheel + Charlotte AI; net-new ARR re-accel; valuation/crowding + 2024-outage tail the bear."
+    },
+    {
+     "ticker": "CRM",
+     "display": "CRM",
+     "thesis": "Agentforce $0→$1B+ ARR is the AI-monetization test case; bear = ~10-13% growth + SaaS-seat-reset (BofA UW $160)."
+    },
+    {
+     "ticker": "RDDT",
+     "display": "RDDT",
+     "thesis": "Dual engine: ads + AI data-licensing; binary on Google AI-Overviews referral-traffic cannibalization."
+    },
+    {
+     "ticker": "SHOP",
+     "display": "SHOP",
+     "thesis": "Commerce OS at 30%+ GMV; agentic-commerce binary (TAM-expander vs LLM-storefront disintermediation)."
+    },
+    {
+     "ticker": "PLTR",
+     "display": "PLTR",
+     "thesis": "Ontology/\"action engine\" moat (claimed 5-yr); momentum strong but valuation split (UBS Buy $200 vs DB Hold $200)."
+    },
+    {
+     "ticker": "APP",
+     "display": "APP",
+     "thesis": "AXON AI ad engine; eCommerce inflection + fading META threat the bull, drawn-out eComm ramp the bear (DB Buy $660 / GS Neutral $585)."
+    },
+    {
+     "ticker": "VEEV",
+     "display": "VEEV",
+     "thesis": "Life-sciences cloud; Vault CRM migration vs AI-disclosure overhang until Q4 Investor Day (MS EW $215)."
+    }
+   ]
+  },
+  {
+   "title": "CDN / Edge cloud",
+   "entries": [
+    {
+     "ticker": "NET",
+     "display": "NET",
+     "thesis": "Cloudflare — developer/edge platform + Zero Trust security, AI-inference-at-edge (Workers AI); +34% rev, \"agentic-AI-first\" ~20% RIF; bull = platform/RPO compounding, bear = valuation + GM mix-down."
+    },
+    {
+     "ticker": "AKAM",
+     "display": "AKAM",
+     "thesis": "Akamai — legacy CDN delivery (declining) pivoting to Security + Cloud Compute; $1.8B 7-yr frontier-model infra deal re-accelerates growth to double-digits 2027 (BofA upgrade Buy $175)."
+    },
+    {
+     "ticker": "FSLY",
+     "display": "FSLY",
+     "thesis": "Fastly — edge-delivery turnaround diversifying into Security + Compute (Sec +47%); first profitable year; bear = customer concentration (TikTok/top-10) + Cloudflare/hyperscaler competition."
+    }
+   ]
+  },
+  {
+   "title": "Systems & neoclouds",
+   "entries": [
+    {
+     "ticker": "DELL",
+     "display": "DELL",
+     "thesis": "AI-server integration winner ($53B backlog, $60B FY27 guide); bear = thin AI-server margins + pull-forward."
+    },
+    {
+     "ticker": "HPE",
+     "display": "HPE",
+     "thesis": "Multi-segment beat + Juniper synergies; durability debate (GS bull $79 vs MS/Bernstein EW)."
+    },
+    {
+     "ticker": "SMCI",
+     "display": "SMCI",
+     "thesis": "Fastest NVIDIA rack integrator + DLC leader; thin assembly margin + governance overhang (Hold)."
+    },
+    {
+     "ticker": "CRWV",
+     "display": "CRWV",
+     "thesis": "Highest-visibility GPU neocloud ($99B backlog) but ~$25B high-coupon debt + customer concentration."
+    },
+    {
+     "ticker": "SANM",
+     "display": "SANM",
+     "thesis": "EMS re-rating via ZT Systems AMD-rack integration (FY27 $16B+, ~2x FY25); bear = ZT margin/pull-forward (JPM/BofA/SIG all Neutral)."
+    },
+    {
+     "ticker": "NBIS",
+     "display": "NBIS",
+     "thesis": "Highest-octane listed neocloud (ARR→$7-9B, NVDA stake); capex burn + circular-financing scrutiny."
+    },
+    {
+     "ticker": "CEREBRAS",
+     "display": "Cerebras",
+     "thesis": "Wafer-scale fast-inference vs NVDA; OpenAI take-or-pay; UAE concentration. Recent IPO, no public consensus."
+    },
+    {
+     "ticker": "SPCX",
+     "display": "SpaceX",
+     "thesis": "IPO'd Jun-2026 (~$75bn, largest ever); Starlink + Launch + AI (ex-xAI: Grok/X/COLOSSUS ~1GW, ~325k GPUs). FY25 rev $17.2bn, net loss ~$(4.9)bn; Musk ~82% vote. Read-through to NVDA/CRDO."
+    }
+   ]
+  },
+  {
+   "title": "Consumer / Internet / Other",
+   "entries": [
+    {
+     "ticker": "AAPL",
+     "display": "AAPL",
+     "thesis": "Strong franchise + memory-dislocation advantage; bear = AI catch-up + price elasticity."
+    },
+    {
+     "ticker": "NFLX",
+     "display": "NFLX",
+     "thesis": "Clean organic algorithm (12-14% rev, 31.5% margin); near-term setup is a catalyst vacuum."
+    },
+    {
+     "ticker": "BKNG",
+     "display": "BKNG",
+     "thesis": "World's #1 OTA; binary debate on agentic LLMs (TAM expander vs disintermediation)."
+    },
+    {
+     "ticker": "UBER",
+     "display": "UBER",
+     "thesis": "Winner-take-most demand aggregator (~$10B FCF); everything hinges on the AV binary."
+    },
+    {
+     "ticker": "SPOT",
+     "display": "SPOT",
+     "thesis": "High-quality audio compounder; debate = AI-music monetization (Remix) vs <2% rev 2030."
+    },
+    {
+     "ticker": "TM",
+     "display": "TM",
+     "thesis": "HEV volume leader generating cash; margin compressed 3 years by tariffs/FX; thin coverage."
+    },
+    {
+     "ticker": "TSLA",
+     "display": "TSLA",
+     "thesis": "Rotating from EV volume to autonomy/robotics re-rate (FSD, Optimus, Terafab); MS EW $415, JPM just to Neutral."
+    },
+    {
+     "ticker": "MP",
+     "display": "MP",
+     "thesis": "Only scaled ex-China rare-earth/magnet play; de-China \"follow the gigawatt\" bull vs trade-deal/execution risk (BofA Buy). Thin coverage."
+    }
+   ]
+  },
+  {
+   "title": "EDA & design software",
+   "entries": [
+    {
+     "ticker": "CDNS",
+     "display": "CDNS",
+     "thesis": "EDA duopoly (with SNPS) + hardware emulation; ~80% recurring, AI-design tailwind; bear = China/export-control exposure + rich multiple."
+    },
+    {
+     "ticker": "SNPS",
+     "display": "SNPS",
+     "thesis": "#1 EDA franchise + Design IP, now multiphysics via the ~$35B Ansys deal; AI-design secular grower; bear = Ansys integration/leverage + China."
+    }
+   ]
+  }
+ ]
+}

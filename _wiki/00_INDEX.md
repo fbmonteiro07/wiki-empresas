@@ -6,7 +6,7 @@
 >
 > 🔎 **Full-corpus search** (reports + calls + briefings + transcripts + Stratechery, not just wiki pages): `py "_wiki/_tools/search.py" <query>` (index: `py "_wiki/_tools/build_search_index.py"`).
 
-_Generated 2026-06-18 (financials refreshed 2026-06-19) · 56 companies + 2 private AI labs (58 pages) · one page per ticker synthesizing all co-located sources in `E:\Wiki Felipe`: filings (10-K/10-Q/20-F) + earnings transcripts + investor-day decks + thematic equity calls (`_equity_calls`) + per-ticker roll-up of the email briefings (`_briefings/by-ticker`) + BBG consensus & street-high estimates (`_data/estimates.json`)._
+_Generated 2026-07-02 by `_tools/build_index.py` from [`_data/index_meta.json`](_data/index_meta.json) (hand-edit the json, not this file) · **99 companies + 2 private AI labs (101 pages)** · one page per ticker synthesizing all co-located sources in `E:\Wiki Felipe`: filings (10-K/10-Q/20-F) + earnings transcripts + investor-day decks + thematic equity calls (`_equity_calls`) + per-ticker roll-up of the email briefings (`_briefings/by-ticker`) + BBG consensus & street-high estimates (`_data/estimates.json`)._
 
 Each page follows the [_TEMPLATE](_TEMPLATE.md): Snapshot · Current state (latest quarter) · Debate (bull/bear + where the sell-side stands, attributed + dated) · Catalysts · Risks · Consensus estimates (BBG) · Sources (links). Archive master index: [../INDEX.md](../INDEX.md). Thematic pages: [themes/00_THEMES.md](themes/00_THEMES.md).
 
@@ -27,8 +27,9 @@ Each page follows the [_TEMPLATE](_TEMPLATE.md): Snapshot · Current state (late
 | POET | [POET](POET.md) | Pre-revenue EOI/CPO optionality de-risked by $50M Lumilens order; bear = valuation vs FOCI + CPO timeline slip. Thin coverage. |
 | INTC | [INTC](INTC.md) | Binary IDM turnaround; 18A yielding, but the equity is a call option on the first big external foundry customer. |
 | IFX | [IFX](IFX.md) | #1 power/auto-semi IDM; cyclical recovery + 800V AI-datacenter-power ramp (NVIDIA anchor); bear = DC-power share loss. |
-
 | SMIC | [SMIC](SMIC.md) | China's national-champion mature-node foundry; self-sufficiency proxy vs mature-node price-war + EUV/export-control ceiling on its DUV 7nm push. |
+| MEDIATEK | [MediaTek](MEDIATEK.md) | World's largest mobile-SoC vendor pivoting into a data-center custom-ASIC house (Google TPU v8t/v9/v10 roadmap); JPM sees DC ~30% of rev 2027 → ~60% 2028; GS PT NT$6,800. TWD, no SEC. |
+
 ## AI — Hyperscalers & Software
 | Ticker | Page | One-line thesis |
 |---|---|---|
@@ -54,6 +55,10 @@ Each page follows the [_TEMPLATE](_TEMPLATE.md): Snapshot · Current state (late
 | VECO | [VECO](VECO.md) | Specialty process equipment (LSA / ion-beam / MBE / MOCVD); now an Axcelis all-stock merger-arb / ACLS proxy. |
 | AIXA | [AIXA](AIXA.md) | Near-monopoly compound-semi MOCVD (~100% InP, >85% GaN); AI-optical inflection (Jefferies Buy €73); thin internal coverage. |
 | LRCX | [LRCX](LRCX.md) | Etch/deposition WFE — completes the AMAT/KLAC/LRCX trio; most memory-capex-levered (NAND/HBM). |
+| TOKYOELEC | [Tokyo Electron](TOKYOELEC.md) | Broadest-line Japanese WFE (coater/developer ~91% share, dielectric etch >50%); cleanest Japan-listed proxy for leading-edge WFE + HBM packaging. ¥, FYE March. |
+| ADVANTEST | [Advantest](ADVANTEST.md) | #1 ATE in a duopoly with Teradyne; ~80% of SoC test is HPC/AI and effectively sole SoC tester at the GPU/CoWoS leaders — levered to test intensity, not wafer starts. ¥. |
+| DISCO | [DISCO](DISCO.md) | Near-monopoly precision dicing/grinding/polishing (~70-80% share of HBM wafer-thinning tools) + consumables; sixth straight record year on AI GPU/HBM. ¥, FYE March. |
+| BESI | [BESI](BESI.md) | Hybrid-bonding / TCB leader for HBM and 2.5D/3D stacking (AI ~50% of 2025 orders, GM 63-66%); AMAT hardware partner on the high-end HB roadmap. |
 
 ## Memory & storage
 | Ticker | Page | One-line thesis |
