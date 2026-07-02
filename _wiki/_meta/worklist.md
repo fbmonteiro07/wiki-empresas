@@ -1,23 +1,24 @@
 # Wiki remediation worklist
 
-_Generated 2026-07-01 · closes the loop on `lint_wiki.py` / staleness.md. Rebuild: `py _wiki/_tools/remediate.py`._
+_Generated 2026-07-02 · closes the loop on `lint_wiki.py` / staleness.md. Rebuild: `py _wiki/_tools/remediate.py`._
 
-## 🔴 BBG estimates missing (1) — scriptable
+## 🔴 BBG estimates missing (2) — scriptable
 
 Run (BBG Terminal must be logged in) — `fetch_estimates.py` merges, so this is safe:
 
 ```
-py "E:\.claude\scripts\fetch_estimates.py" CEREBRAS
+py "E:\.claude\scripts\fetch_estimates.py" AEIS CEREBRAS
 ```
 
 Or auto: `py _wiki/_tools/remediate.py --run-estimates`
 
-CEREBRAS
+AEIS, CEREBRAS
 
-## 🟡 No transcript on disk (19) — needs the transcript-fetcher agent
+## 🟡 No transcript on disk (20) — needs the transcript-fetcher agent
 
 Spawn one `transcript-fetcher` task per name (paste into Claude Code):
 
+- **AEIS** — "get the latest AEIS earnings transcript -> `E:\Wiki Felipe empresas\AEIS\transcripts\`"
 - **AKAM** — "get the latest AKAM earnings transcript -> `E:\Wiki Felipe empresas\AKAM\transcripts\`"
 - **AOSL** — "get the latest AOSL earnings transcript -> `E:\Wiki Felipe empresas\AOSL\transcripts\`"
 - **APP** — "get the latest APP earnings transcript -> `E:\Wiki Felipe empresas\APP\transcripts\`"

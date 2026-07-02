@@ -1,6 +1,6 @@
 # Read-through map — supply chain & substitutes
 
-_Generated 2026-07-01 · curated high-confidence edges from `_data/graph.json` (177 supply links, 22 compete links). A datapoint on a **supplier** reads through to its **customers** (and vice-versa). Edit the JSON to extend; rebuild: `py _wiki/_tools/build_readthrough.py`._
+_Generated 2026-07-02 · curated high-confidence edges from `_data/graph.json` (177 supply links, 22 compete links). A datapoint on a **supplier** reads through to its **customers** (and vice-versa). Edit the JSON to extend; rebuild: `py _wiki/_tools/build_readthrough.py`._
 
 | Ticker | ⬆ Suppliers (upstream) | ⬇ Customers (downstream) | ⚔ Competes |
 |---|---|---|---|

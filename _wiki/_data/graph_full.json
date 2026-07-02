@@ -1,8 +1,8 @@
 {
- "generated": "2026-07-01",
+ "generated": "2026-07-02",
  "counts": {
-  "nodes": 151,
-  "edges": 1094
+  "nodes": 153,
+  "edges": 1102
  },
  "nodes": [
   {
@@ -54,8 +54,8 @@
    "id": "ADVANTEST",
    "type": "ticker",
    "label": "ADVANTEST",
-   "sector": "",
-   "thesis": "",
+   "sector": "Semiconductor equipment (semicap)",
+   "thesis": "#1 ATE in a duopoly with Teradyne; ~80% of SoC test is HPC/AI and effectively sole SoC tester at the GPU/CoWoS leaders — levered to test intensity, not wafer st",
    "in_book": false,
    "docs": {
     "transcript": 3,
@@ -63,6 +63,19 @@
    },
    "next_catalyst": "",
    "last_chg": ""
+  },
+  {
+   "id": "AEIS",
+   "type": "ticker",
+   "label": "AEIS",
+   "sector": "Power components & datacenter infra",
+   "thesis": "RF/DC power for semicap (~30% share) + AI-DC power shelves; EPS power to high-teens; debate = DCC lumpiness + 800V positioning.",
+   "in_book": false,
+   "docs": {
+    "wiki": 1
+   },
+   "next_catalyst": "",
+   "last_chg": "2026-07-02"
   },
   {
    "id": "AGX",
@@ -76,7 +89,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-06-26"
+   "last_chg": "2026-07-02"
   },
   {
    "id": "AIXA",
@@ -310,8 +323,8 @@
    "id": "BESI",
    "type": "ticker",
    "label": "BESI",
-   "sector": "",
-   "thesis": "",
+   "sector": "Semiconductor equipment (semicap)",
+   "thesis": "Hybrid-bonding / TCB leader for HBM and 2.5D/3D stacking (AI ~50% of 2025 orders, GM 63-66%); AMAT hardware partner on the high-end HB roadmap.",
    "in_book": false,
    "docs": {
     "briefing": 1,
@@ -464,7 +477,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": ""
+   "last_chg": "2026-07-02"
   },
   {
    "id": "CSCO",
@@ -500,8 +513,8 @@
    "id": "DISCO",
    "type": "ticker",
    "label": "DISCO",
-   "sector": "",
-   "thesis": "",
+   "sector": "Semiconductor equipment (semicap)",
+   "thesis": "Near-monopoly precision dicing/grinding/polishing (~70-80% share of HBM wafer-thinning tools) + consumables; sixth straight record year on AI GPU/HBM. ¥, FYE Ma",
    "in_book": false,
    "docs": {
     "transcript": 4,
@@ -563,7 +576,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-06-26"
+   "last_chg": "2026-07-02"
   },
   {
    "id": "GLW",
@@ -622,7 +635,7 @@
     "transcript": 4,
     "wiki": 1
    },
-   "next_catalyst": "2026-07-01",
+   "next_catalyst": "2026-08-05",
    "last_chg": "2026-06-30"
   },
   {
@@ -719,8 +732,8 @@
    "id": "MEDIATEK",
    "type": "ticker",
    "label": "MEDIATEK",
-   "sector": "",
-   "thesis": "",
+   "sector": "AI — Semis & Compute",
+   "thesis": "World's largest mobile-SoC vendor pivoting into a data-center custom-ASIC house (Google TPU v8t/v9/v10 roadmap); JPM sees DC ~30% of rev 2027 → ~60% 2028; GS PT",
    "in_book": false,
    "docs": {
     "transcript": 4,
@@ -742,7 +755,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-07-01"
+   "last_chg": "2026-07-02"
   },
   {
    "id": "MP",
@@ -796,7 +809,7 @@
    "in_book": false,
    "docs": {
     "briefing": 1,
-    "transcript": 14,
+    "transcript": 17,
     "wiki": 1
    },
    "next_catalyst": "",
@@ -1282,8 +1295,8 @@
    "id": "TOKYOELEC",
    "type": "ticker",
    "label": "TOKYOELEC",
-   "sector": "",
-   "thesis": "",
+   "sector": "Semiconductor equipment (semicap)",
+   "thesis": "Broadest-line Japanese WFE (coater/developer ~91% share, dielectric etch >50%); cleanest Japan-listed proxy for leading-edge WFE + HBM packaging. ¥, FYE March.",
    "in_book": false,
    "docs": {
     "transcript": 2,
@@ -1586,6 +1599,14 @@
    "canonical": "Facility: ~14-16 GW built 2026 / ~20 GW 2027 vs ~40-45 GW proposed (Jefferies satellite tracking, 50% haircut); ~138 GW capacity through 2030 (JPM). IT-load: ~300 GW by 2030 (+25% CAGR, JPM/Omdia) or ~240-280 GW global (JPM First Principles). 800V debate: Citi models 9 GW -> 21 GW 2025-30 — a SUBSET, not total deployment."
   },
   {
+   "id": "assum:rev-per-gw",
+   "type": "assumption",
+   "label": "rev-per-gw",
+   "title": "AI compute revenue / rental rate per GW",
+   "status": "live",
+   "canonical": "Rental/revenue per GW of compute: Trainium <$10B/GW (Anthropic/OpenAI); merchant GPU ~$12-13B/GW (neocloud & AWS, pre-2H26 shortage); premium GPU ~$25B/GW (~$25M/MW/yr, SpaceX–Google deal). MS pegs 1P merchant TPU at ~$20B rev/GW (20% GM base). Colocation POWER-ONLY rent: ~$60/kW-month historically -> ~$120-160 typical now, up to ~$200 (weak-credit tenant + good DC), as low as ~$80-100 (India / mi"
+  },
+  {
    "id": "assum:hbm-cycle",
    "type": "assumption",
    "label": "hbm-cycle",
@@ -1726,14 +1747,14 @@
    "label": "SIG"
   },
   {
-   "id": "broker:TDCowen",
-   "type": "broker",
-   "label": "TDCowen"
-  },
-  {
    "id": "broker:Cantor",
    "type": "broker",
    "label": "Cantor"
+  },
+  {
+   "id": "broker:TDCowen",
+   "type": "broker",
+   "label": "TDCowen"
   },
   {
    "id": "broker:Mizuho",
@@ -3649,6 +3670,12 @@
   },
   {
    "u": "theme:semicap-wfe",
+   "v": "AEIS",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:semicap-wfe",
    "v": "AMAT",
    "type": "exposes",
    "label": ""
@@ -3818,6 +3845,24 @@
   {
    "u": "assum:ai-dc-power-gw",
    "v": "theme:ai-datacenter-power",
+   "type": "cites",
+   "label": ""
+  },
+  {
+   "u": "assum:rev-per-gw",
+   "v": "GOOG",
+   "type": "cites",
+   "label": ""
+  },
+  {
+   "u": "assum:rev-per-gw",
+   "v": "SPCX",
+   "type": "cites",
+   "label": ""
+  },
+  {
+   "u": "assum:rev-per-gw",
+   "v": "theme:custom-asic-tpu",
    "type": "cites",
    "label": ""
   },
@@ -4101,6 +4146,34 @@
    "type": "covers",
    "label": "",
    "w": 2
+  },
+  {
+   "u": "broker:BofA",
+   "v": "AEIS",
+   "type": "covers",
+   "label": "",
+   "w": 14
+  },
+  {
+   "u": "broker:Citi",
+   "v": "AEIS",
+   "type": "covers",
+   "label": "",
+   "w": 8
+  },
+  {
+   "u": "broker:SIG",
+   "v": "AEIS",
+   "type": "covers",
+   "label": "",
+   "w": 6
+  },
+  {
+   "u": "broker:Cantor",
+   "v": "AEIS",
+   "type": "covers",
+   "label": "",
+   "w": 7
   },
   {
    "u": "broker:Jefferies",
@@ -5444,7 +5517,7 @@
    "v": "CRWV",
    "type": "covers",
    "label": "",
-   "w": 5
+   "w": 6
   },
   {
    "u": "broker:JPM",
@@ -5472,7 +5545,7 @@
    "v": "CRWV",
    "type": "covers",
    "label": "",
-   "w": 14
+   "w": 17
   },
   {
    "u": "broker:DB",
@@ -5493,7 +5566,7 @@
    "v": "CRWV",
    "type": "covers",
    "label": "",
-   "w": 29
+   "w": 40
   },
   {
    "u": "broker:Nomura",
@@ -5507,7 +5580,7 @@
    "v": "CRWV",
    "type": "covers",
    "label": "",
-   "w": 15
+   "w": 16
   },
   {
    "u": "broker:SemiAnalysis",
@@ -5801,7 +5874,7 @@
    "v": "GEV",
    "type": "covers",
    "label": "",
-   "w": 10
+   "w": 11
   },
   {
    "u": "broker:Cantor",

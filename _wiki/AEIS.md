@@ -1,0 +1,42 @@
+# AEIS — Advanced Energy Industries
+
+_Wiki · generated 2026-07-02 · sources: 9 broker reports ingested 2026-07-02 (HTML copies in `relatórios bons\`) — no filings/transcripts on disk yet. Master index: [../INDEX.md](../INDEX.md)._
+
+## Snapshot
+Power-conversion/control specialist: RF + DC power for semicap (etch/dep critical subsystem, ~30% share, sold into AMAT/LRCX et al.), plus Data Center Computing (server/rack power shelves), Industrial & Medical, and Telecom & Networking (BofA initiation 2023-11-30; BofA 2026-05-05). Q1 26 mix: Semi 43% of revs ($219M), DCC 38% ($194M, +102% y/y), rest I&M/T&N (Needham 2026-05-05). Two-engine story: WFE-upcycle leverage + AI data-center power content, with 800V as the optionality kicker.
+
+## Current state (Q1 FY26, reported 2026-05-04)
+- Rev $511M +26% y/y (guide $480-520M; Street $506M), non-GAAP EPS $2.09 (guide $1.69-2.19, cons $1.98). Stock fell ~8% after the print — bulls wanted more Semi (Citi 2026-05-05; Needham 2026-05-05).
+- Guide: Q2 26 rev $520-560M ($540M MP vs Street $527M), +6% q/q driven by Semi and I&M; DCC pauses on customer delivery timing/downstream constraints (memory, fab output of GPUs) (Citi 2026-05-05).
+- FY26 raised: total rev up low-to-mid-20s% y/y (from high-teens); DCC up mid-30s% (from >30%); Semi accelerating to >30% y/y in 2H26 on stronger customer forecasts + eVoS/eVerest/NavX wins (BofA/Citi 2026-05-05).
+- Capacity: Malaysia/Philippines/Mexico support >$2.5B/yr rev exiting CY26; Thailand adds >$1B → >$3.5B total; FY26 capex raised to $170-180M on Thailand pull-in (BofA 2026-05-05). Zero-coupon convert issued intra-2Q26 (Cantor 2026-06-26). GM 40% in 1Q26 vs LT target 43% (Wells Fargo 2026-07-01).
+
+## Debate / thesis
+- **Bull:** multi-vector growth — Semi share gains (consistently outgrew WFE last decade) into a WFE upcycle, DCC on AI rack power (2nd wave of DC customers, >10 programs, ramping 2027), I&M bookings +14% q/q (highest since 2023), and 800V as incremental content; EPS power moving from ~$15 to high-teens with $3.5B+ capacity by 2028 (Susquehanna 2026-05-04; BofA 2026-05-05; Wells Fargo 2026-07-01). WF: 2Q26 underperformance (+16% vs semicap peers +93%, SOX +88% in 2Q26) = buying opportunity; sees FY26 DC guide going to >40% y/y and semi to high-20s/30% (2026-07-01).
+- **Bear:** DCC is lumpy (customer mix/downstream constraints — Q2 26 guided down q/q); mid-30s% DC guide was below buyside bar of >40% (Wells Fargo 2026-05-05). 800V architecture risk — pushback that AEIS lacks sidecar presence and native-800V removes the in-rack AC-DC step (Cantor NDR rebuttal 2026-06-26: stage-1 keeps in-rack DC-DC where AEIS is strong; sidecar likely Delta, a stop-gap). Execution risk on the capacity ramp to $3.5B+ (Susquehanna 2026-05-04, downside case $300 = 22x CY27 EPS).
+- **Where the sell-side stands:** BofA Buy PO $430 (from $330; 36x CY27E) — top SMid-cap pick (Duksan Jang/Vivek Arya, 2026-05-05). Citi Buy TP $410 (from $385; 32x CY27) + 90-day positive catalyst watch since coverage transfer (Elizabeth Sun/Atif Malik, 2026-05-05; sector piece 2026-03-19 saw DC +40% CY26). Susquehanna Positive PT $430 (from $375; 34x CY27E $12.63) (Mehdi Hosseini, 2026-05-04). Needham Buy PT $400 (from $330) (James Ricchiuti, 2026-05-05). Cantor Overweight PT $400 (initiated ~2026-06-12; reiterated post-NDR 2026-06-26, Matthew Prisco/C.J. Muse). Wells Fargo upgraded EW→**OW, PT $465** (from $345; 32x P/E on C2028E), added to 3Q26 Tactical Ideas (Joe Quatrochi, 2026-07-01).
+- EPS marks: CY26E $9.1-9.8 / CY27E $11.2-12.95 / CY28E $12.2-14.5 across BofA/Citi/SIG/Needham/WF (May-Jul 2026).
+
+## Catalysts / what to watch
+- 2Q26 print (~early Aug): WF expects semi upside vs guide +DD% q/q and FY26 raises (semi to high-20s/30%, DC to >40%) (2026-07-01).
+- Thailand facility opening + DC-customer qualifications there (rev contribution from 2027) (Citi 2026-05-05).
+- 800V: 800V→50V DC-DC modules (4/6/8kW, ~98% efficiency) sampling now; meaningful revenue 2H27/CY28 (BofA 2026-05-05; Cantor 2026-06-26).
+- 2nd-wave DC customer ramps in 2027 (>10 programs, WF 2026-07-01); eVoS/eVerest/NavX semi-product ramp 2027+ (Needham 2026-05-05).
+- I&M catch-up in Q2/Q3 (capacity allocation, not demand, drove the Q1 miss) (BofA 2026-05-05); M&A within I&M remains a focus (Cantor 2026-06-26).
+
+## Risks
+- DCC quarterly volatility from downstream constraints (memory/GPU fab output) and customer concentration; semicap customer concentration (AMAT/LRCX).
+- 800V transition could shrink in-rack content in native deployments (sidecar loss to Delta et al.).
+- Capacity-expansion execution/utilization risk (Malaysia/Philippines/Mexico/Thailand); GM structure capped mid-40s% vs 50%+ in 2018 (BofA 2023-11-30).
+
+## Sources
+- BofA (Jang/Arya) "Key beneficiary of semicap/DC buildout" 2026-05-05 — Buy $430; and initiation "Power solutions specialist" 2023-11-30 — Neutral $105 (background).
+- Citi (Sun/Malik) "Full-Year Outlook Raised" 2026-05-05 — Buy $410; and US semicap sector piece "WFE Upcycle Meets AI-Led Diversification" 2026-03-19 (coverage transfer, Buy $385, +ve catalyst watch).
+- Susquehanna (Hosseini) "Earning Power Moving Towards High Teens" 2026-05-04 — Positive $430.
+- Needham (Ricchiuti) "Beat/Raise Q1 May Not Satisfy Bulls" 2026-05-05 — Buy $400.
+- Wells Fargo (Quatrochi) PT change 2026-05-05 — EW $345; upgrade "Adding AEIS to 3Q26 Tactical Ideas; Upgrade to OW" 2026-07-01 — OW $465; and initiation 2023-11-21 — EW $100 (background).
+- Cantor (Prisco/Muse) "Takeaways from the Road" 2026-06-26 — OW $400 (NDR with CFO Paul Oldham).
+- HTML copies of all of the above in `relatórios bons\`.
+
+## Changelog
+- 2026-07-02 — page created from 9-report ingest (Mar-Jul 2026 notes + Nov 2023 initiations). Ratings history captured: WF initiated EW $100 (2023-11-21) → EW $340→$345 (2026-05-05) → OW $465 (2026-07-01); BofA initiated Neutral $105 (2023-11-30) → Buy, PO $330→$430 (2026-05-05); Citi Buy $385 (2026-03-19) → $410 (2026-05-05); SIG Positive $375→$430 (2026-05-04); Needham Buy $330→$400 (2026-05-05); Cantor initiated OW $400 (~2026-06-12).

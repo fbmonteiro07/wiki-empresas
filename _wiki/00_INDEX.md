@@ -6,7 +6,7 @@
 >
 > 🔎 **Full-corpus search** (reports + calls + briefings + transcripts + Stratechery, not just wiki pages): `py "_wiki/_tools/search.py" <query>` (index: `py "_wiki/_tools/build_search_index.py"`).
 
-_Generated 2026-07-02 by `_tools/build_index.py` from [`_data/index_meta.json`](_data/index_meta.json) (hand-edit the json, not this file) · **99 companies + 2 private AI labs (101 pages)** · one page per ticker synthesizing all co-located sources in `E:\Wiki Felipe`: filings (10-K/10-Q/20-F) + earnings transcripts + investor-day decks + thematic equity calls (`_equity_calls`) + per-ticker roll-up of the email briefings (`_briefings/by-ticker`) + BBG consensus & street-high estimates (`_data/estimates.json`)._
+_Generated 2026-07-02 by `_tools/build_index.py` from [`_data/index_meta.json`](_data/index_meta.json) (hand-edit the json, not this file) · **100 companies + 2 private AI labs (102 pages)** · one page per ticker synthesizing all co-located sources in `E:\Wiki Felipe`: filings (10-K/10-Q/20-F) + earnings transcripts + investor-day decks + thematic equity calls (`_equity_calls`) + per-ticker roll-up of the email briefings (`_briefings/by-ticker`) + BBG consensus & street-high estimates (`_data/estimates.json`)._
 
 Each page follows the [_TEMPLATE](_TEMPLATE.md): Snapshot · Current state (latest quarter) · Debate (bull/bear + where the sell-side stands, attributed + dated) · Catalysts · Risks · Consensus estimates (BBG) · Sources (links). Archive master index: [../INDEX.md](../INDEX.md). Thematic pages: [themes/00_THEMES.md](themes/00_THEMES.md).
 
@@ -110,6 +110,7 @@ Each page follows the [_TEMPLATE](_TEMPLATE.md): Snapshot · Current state (late
 ## Power components & datacenter infra
 | Ticker | Page | One-line thesis |
 |---|---|---|
+| AEIS | [AEIS](AEIS.md) | RF/DC power for semicap (~30% share) + AI-DC power shelves; EPS power to high-teens; debate = DCC lumpiness + 800V positioning. |
 | APH | [APH](APH.md) | AI-interconnect compounder; 800V busbar/connector content + CommScope optical; debate = copper terminal value. |
 | TEL | [TEL](TEL.md) | TE Connectivity — connector power/signal AI-DC content (AI rev →~$2.4bn FY26); auto-mix the drag. |
 | NVT | [NVT](NVT.md) | nVent — AI-DC power + liquid cooling (DC ~$1B, backlog $2.6B); NVIDIA CDU partner; order lumpiness. |

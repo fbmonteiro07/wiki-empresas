@@ -1,9 +1,11 @@
 {
- "asof": "2026-07-01",
+ "asof": "2026-07-02",
  "bbg_missing": [
+  "AEIS",
   "CEREBRAS"
  ],
  "no_transcript": [
+  "AEIS",
   "AKAM",
   "AOSL",
   "APP",
@@ -30,8 +32,12 @@
   "SPCX"
  ],
  "actions": {
-  "fetch_estimates_cmd": "py \"E:\\.claude\\scripts\\fetch_estimates.py\" CEREBRAS",
+  "fetch_estimates_cmd": "py \"E:\\.claude\\scripts\\fetch_estimates.py\" AEIS CEREBRAS",
   "transcript_tasks": [
+   {
+    "agent": "transcript-fetcher",
+    "prompt": "Get the latest earnings call transcript for AEIS and save it to E:\\Wiki Felipe empresas\\AEIS\\transcripts\\ as AEIS_<quarter>_<YYYY-MM-DD>.md"
+   },
    {
     "agent": "transcript-fetcher",
     "prompt": "Get the latest earnings call transcript for AKAM and save it to E:\\Wiki Felipe empresas\\AKAM\\transcripts\\ as AKAM_<quarter>_<YYYY-MM-DD>.md"
