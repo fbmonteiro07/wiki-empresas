@@ -7,7 +7,7 @@ _Generated 2026-07-01 · parsed from every page's 'Catalysts / what to watch'. D
 | Date | Ticker | Catalyst |
 |---|---|---|
 | 2026-07-01 | IFX | **2026-07-01 — re-org into 3 divisions** (Automotive / Power Systems / Edge Systems) — new segment reporting. |
-| 2026-07-02 | CRWD | **4-for-1 stock split** effective 2026-07-02. |
+| 2026-07-02 | CRWD | **4-for-1 stock split** effective 2026-07-02 — executes after market close 2026-07-01; stock ~$760/share pre-split implies ~$190-200/share post-split (Rothschild & Co Redburn, 2026-07-01). |
 | 2026-07-22 | TXN | **Q2 FY26 print — call ~2026-07-22** (guide $5.0–5.4bn / EPS $1.77–2.05); first call with new CFO **Julie Knecht** (DB, briefing 2026-06-03). |
 | 2026-07-23 | DISCO | **Q1 FYE-Mar-2027 print — 2026-07-23** (next scheduled, per Quartr). Watch vs the +18% rev / +20%+ OP guide and the seasonal QoQ dip. |
 | 2026-08-05 | IFX | **2026-08-05 — FY3Q26 print** — MS expects an in-line print (order-book momentum, industrial recovery, AI-DC commentary); watch the FY26 >EUR 16bn / ~20% margin bridge and HV-auto commentary (MS, 2026 |
