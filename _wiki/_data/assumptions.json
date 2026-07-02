@@ -68,6 +68,23 @@
    "status": "scope-trap",
    "debate": "No numeric conflict — the risk is basis conflation. Any new GW datapoint must be labeled facility / IT-load / 800V-subset before it enters a page."
   },
+  "rev-per-gw": {
+   "title": "AI compute revenue / rental rate per GW",
+   "definition": "Annualized $ revenue (or rental rate) per GW of AI compute capacity — state chip type (ASIC vs merchant GPU) and whether it is a rental rate or realized revenue. Distinct from facility BUILD cost per GW.",
+   "canonical": "Rental/revenue per GW of compute: Trainium <$10B/GW (Anthropic/OpenAI); merchant GPU ~$12-13B/GW (neocloud & AWS, pre-2H26 shortage); premium GPU ~$25B/GW (~$25M/MW/yr, SpaceX–Google deal). MS pegs 1P merchant TPU at ~$20B rev/GW (20% GM base). Colocation POWER-ONLY rent: ~$60/kW-month historically -> ~$120-160 typical now, up to ~$200 (weak-credit tenant + good DC), as low as ~$80-100 (India / mid DC / poor grid). Rev/GW is a data-center-QUALITY metric: credit, utilization, networking and speed-to-market drive a ~2x spread — a top-operator GW ≈ 2x a generic GW.",
+   "scope_note": "THREE distinct bases — never mix: (a) compute rev/rental $/GW (ASIC vs GPU, the monetization/quality metric); (b) colocation $/kW-month = power+shell only, NOT compute; (c) facility BUILD cost ~$30-40B/GW (ASIC) vs ~$50B/GW (NVDA-GPU infra) — see custom-asic-tpu. A $/kW-month figure ×12×1e6 ≈ $/GW-year only for the power-shell layer, not the compute.",
+   "patterns": ["/GW", "per GW", "kW-month", "kW/month", "B/GW", "M/MW"],
+   "variants": [
+    {"value": "Trainium <$10B/GW rental to Anthropic/OpenAI (floor mechanism; cancellable if it underperforms)", "source": "SemiAnalysis / Dylan Patel (Sequoia 'Training Data')", "date": "2026-06-30", "scope": "ASIC rental rate", "cited_in": ["themes/custom-asic-tpu.md"]},
+    {"value": "merchant GPU ~$12-13B/GW rental (neocloud & AWS, pre-2H26 shortage)", "source": "SemiAnalysis / Dylan Patel (Sequoia 'Training Data')", "date": "2026-06-30", "scope": "GPU rental rate", "cited_in": ["themes/custom-asic-tpu.md"]},
+    {"value": "premium GPU ~$25B/GW (~$25M/MW/yr) — SpaceX–Google deal", "source": "SemiAnalysis / Dylan Patel (Sequoia 'Training Data')", "date": "2026-06-30", "scope": "premium GPU rental", "cited_in": ["themes/custom-asic-tpu.md", "SPCX.md"]},
+    {"value": "colo power-only ~$60/kW-mo historical -> ~$120-160 typical, up to ~$200 (weak credit + good DC), ~$80-100 (India / mid DC)", "source": "SemiAnalysis / Dylan Patel (Sequoia 'Training Data')", "date": "2026-06-30", "scope": "colocation $/kW-month (power+shell only)", "cited_in": []},
+    {"value": "data-center quality: a top-operator GW ~2x a generic GW; Google runs ~1.5 GW hardware in a 1 GW DC (power-sloshing + utility oversell)", "source": "SemiAnalysis / Dylan Patel (Sequoia 'Training Data')", "date": "2026-06-30", "scope": "quality / utilization spread", "cited_in": []},
+    {"value": "1P merchant TPU ~$20B rev/GW at 20% GM base case", "source": "MS Nowak (ALPHABET)", "date": "2026-06-29", "scope": "merchant TPU realized rev/GW", "cited_in": ["themes/custom-asic-tpu.md", "GOOG.md"]}
+   ],
+   "status": "live",
+   "debate": "Rev/GW is emerging as a data-center-quality metric: ASIC (<$10B) < merchant GPU ($12-13B) < premium operator ($25B). The spread reflects credit quality, utilization, networking and speed-to-market — not just chip type. Watch whether the 2H26 GPU shortage pushes realized GPU rev/GW above the $12-13B pre-shortage mark."
+  },
   "hbm-cycle": {
    "title": "HBM — capacity, pricing, allocation, sold-out claims",
    "definition": "HBM wafer capacity, $/GB or $/Gb pricing (state which), allocation priority, sold-out horizon.",

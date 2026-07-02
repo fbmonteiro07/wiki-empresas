@@ -21,7 +21,7 @@ td.r,th.r{text-align:right;white-space:nowrap}
 .pill.up{background:#e7f6ec;color:#1c7d3f} .pill.dn{background:#fdecea;color:#c0392b} .pill.due{background:#fff3cd;color:#8a6d1b}
 code{background:#eef1f6;padding:1px 5px;border-radius:4px;font-size:85%;font-family:ui-monospace,Consolas,monospace}
 </style></head><body>
-<header><h1>Canonical assumptions — one number per debate</h1><p>2026-07-01 · every cross-page number, all variants, scope traps flagged · <a href="../index.html">← back to wiki</a></p></header><main><h2>Custom-ASIC vs merchant-GPU share of AI accelerators <span class='pill due'>live debate</span></h2>
+<header><h1>Canonical assumptions — one number per debate</h1><p>2026-07-02 · every cross-page number, all variants, scope traps flagged · <a href="../index.html">← back to wiki</a></p></header><main><h2>Custom-ASIC vs merchant-GPU share of AI accelerators <span class='pill due'>live debate</span></h2>
 <p class='byline'>ASIC/XPU vs merchant-GPU split of AI accelerator shipments — ALWAYS state basis (units vs dollars) and horizon.</p>
 <p><b>Canonical:</b> Near-term unit share inflects to ASICs (JPM: 42% 2026E -&gt; 53% 2027E, units) while long-term dollar/unit share settles ~65-70% GPU (BofA AI 2030, UBS durable 70/30). These are horizons, not contradictions — the debate is whether the 2027 unit inflection sticks or plateaus.</p>
 <p style='background:#fff3cd;padding:8px 12px;border-radius:6px'>⚠️ <b>Scope:</b> Unit share ≠ dollar share (ASIC ASPs are far lower). NVDA-page &#x27;~70% defensible&#x27; framing = long-horizon accelerator share, consistent with BofA 65-70% by 2030, NOT a rebuttal of JPM&#x27;s 2027 unit-share call.</p>
@@ -109,6 +109,36 @@ code{background:#eef1f6;padding:1px 5px;border-radius:4px;font-size:85%;font-fam
 <li><code>CEG.md</code> — …x 2.0&quot;, 2026-06-16):** JPM now models **138 GW of US data-center capacity growth through 2030** (up from 1…</li>
 <li><code>TLN.md</code> — …ackdrop is supportive: JPM now models **138 GW US DC capacity growth through 2030** (up from 122 GW) withi…</li>
 <li><code>VST.md</code> — …&#x27;s load-growth thesis: JPM now models **138 GW of US DC capacity growth through 2030** (up from 122 GW) wi…</li>
+</ul>
+<h2>AI compute revenue / rental rate per GW <span class='pill due'>live</span></h2>
+<p class='byline'>Annualized $ revenue (or rental rate) per GW of AI compute capacity — state chip type (ASIC vs merchant GPU) and whether it is a rental rate or realized revenue. Distinct from facility BUILD cost per GW.</p>
+<p><b>Canonical:</b> Rental/revenue per GW of compute: Trainium &lt;$10B/GW (Anthropic/OpenAI); merchant GPU ~$12-13B/GW (neocloud &amp; AWS, pre-2H26 shortage); premium GPU ~$25B/GW (~$25M/MW/yr, SpaceX–Google deal). MS pegs 1P merchant TPU at ~$20B rev/GW (20% GM base). Colocation POWER-ONLY rent: ~$60/kW-month historically -&gt; ~$120-160 typical now, up to ~$200 (weak-credit tenant + good DC), as low as ~$80-100 (India / mid DC / poor grid). Rev/GW is a data-center-QUALITY metric: credit, utilization, networking and speed-to-market drive a ~2x spread — a top-operator GW ≈ 2x a generic GW.</p>
+<p style='background:#fff3cd;padding:8px 12px;border-radius:6px'>⚠️ <b>Scope:</b> THREE distinct bases — never mix: (a) compute rev/rental $/GW (ASIC vs GPU, the monetization/quality metric); (b) colocation $/kW-month = power+shell only, NOT compute; (c) facility BUILD cost ~$30-40B/GW (ASIC) vs ~$50B/GW (NVDA-GPU infra) — see custom-asic-tpu. A $/kW-month figure ×12×1e6 ≈ $/GW-year only for the power-shell layer, not the compute.</p>
+<table><thead><tr><th>Value</th><th>Source</th><th>Date</th><th>Scope</th></tr></thead><tbody>
+<tr><td>Trainium &lt;$10B/GW rental to Anthropic/OpenAI (floor mechanism; cancellable if it underperforms)</td><td>SemiAnalysis / Dylan Patel (Sequoia &#x27;Training Data&#x27;)</td><td>2026-06-30</td><td>ASIC rental rate</td></tr>
+<tr><td>merchant GPU ~$12-13B/GW rental (neocloud &amp; AWS, pre-2H26 shortage)</td><td>SemiAnalysis / Dylan Patel (Sequoia &#x27;Training Data&#x27;)</td><td>2026-06-30</td><td>GPU rental rate</td></tr>
+<tr><td>premium GPU ~$25B/GW (~$25M/MW/yr) — SpaceX–Google deal</td><td>SemiAnalysis / Dylan Patel (Sequoia &#x27;Training Data&#x27;)</td><td>2026-06-30</td><td>premium GPU rental</td></tr>
+<tr><td>colo power-only ~$60/kW-mo historical -&gt; ~$120-160 typical, up to ~$200 (weak credit + good DC), ~$80-100 (India / mid DC)</td><td>SemiAnalysis / Dylan Patel (Sequoia &#x27;Training Data&#x27;)</td><td>2026-06-30</td><td>colocation $/kW-month (power+shell only)</td></tr>
+<tr><td>data-center quality: a top-operator GW ~2x a generic GW; Google runs ~1.5 GW hardware in a 1 GW DC (power-sloshing + utility oversell)</td><td>SemiAnalysis / Dylan Patel (Sequoia &#x27;Training Data&#x27;)</td><td>2026-06-30</td><td>quality / utilization spread</td></tr>
+<tr><td>1P merchant TPU ~$20B rev/GW at 20% GM base case</td><td>MS Nowak (ALPHABET)</td><td>2026-06-29</td><td>merchant TPU realized rev/GW</td></tr>
+</tbody></table>
+<p><b>Debate:</b> Rev/GW is emerging as a data-center-quality metric: ASIC (&lt;$10B) &lt; merchant GPU ($12-13B) &lt; premium operator ($25B). The spread reflects credit quality, utilization, networking and speed-to-market — not just chip type. Watch whether the 2H26 GPU shortage pushes realized GPU rev/GW above the $12-13B pre-shortage mark.</p>
+<p class='mut'><b>Unreconciled sightings:</b></p><ul>
+<li><code>AMD.md</code> — …GW**, of which **AMD revenue is $15-20B/GW** ($14-18B compute, ~$2B networking), and lifts AMD GPU uni…</li>
+<li><code>ANTHROPIC.md</code> — …nAI at sub-$10bn per GW/yr, vs ~$12–13bn/GW for GPUs (pre the last six months&#x27; shortage) and ~$25bn/GW…</li>
+<li><code>ARM.md</code> — …-18, $300): agentic AI = ~120M CPU cores/GW, ~4x a traditional data center; Arm holds ~50% CPU share am…</li>
+<li><code>AVGO.md</code> — …cks… all a chip business only&quot; — content/GW rises as CPU cores/HBM embed into XPUs (agentic). - **AI XP…</li>
+<li><code>CRWV.md</code> — …3 of CRWV backlog tied to Meta; $40-60bn/GW deal pricing; ~29% hyperscaler cash ROIC (2026-07-01). Bern…</li>
+<li><code>GEV.md</code> — …ts tracked (&gt;$2.5tn of US spend at ~$55mm/MW), GEV equipment anchors several — **Homer City Energy Campu…</li>
+<li><code>META.md</code> — …nt capacity partnerships valued at ~$50B/GW (Citi, 2026-07-01). **Morgan Stanley (Brian Nowak et al.) r…</li>
+<li><code>NBIS.md</code> — …cl. NBIS; compute-deal pricing ($40-60bn/GW annually, 30-60%+ premium to spot), hyperscaler cash ROIC ~…</li>
+<li><code>NVDA.md</code> — …B networking) — roughly 2x AMD&#x27;s $15-20B/GW capture. NVDA GPU unit shipments modeled **6.2M (2025) → 8.…</li>
+<li><code>OPENAI.md</code> — …+ Anthropic at ~15GW in F28 at ~$15-17bn/GW (AVGO call, 2026-06-05). AMD signed OpenAI to a ~6GW / ~$10…</li>
+<li><code>ORCL.md</code> — …Lancium, fully contracted by ORCL; ~$13mm/MW ex-IT); Frontier / Shackelford County TX (1.4 GW, Vantage,…</li>
+<li><code>WMB.md</code> — …rclays pegs implied build economics ~$4mm/MW including supporting gas infra for Prometheus, and estimate…</li>
+<li><code>themes/ai-datacenter-power.md</code> — …rc_recap_30_apr_2026.html) — ~$35B capex/GW, ~$12B cloud rev/GW; Google +2.5–3 GW/yr; Amazon ~20%+ per-…</li>
+<li><code>themes/hyperscaler-capex.md</code> — …capacity partnerships valued at **~$50B/GW**. This is the structural pivot — see new Key debates axis…</li>
+<li><code>themes/tokenmaxxing.md</code> — …compute deals, monetizing at **~$22–23B/GW/yr (Anthropic) and ~$50B/GW/yr (Google) vs ~$14B/GW/yr impl…</li>
 </ul>
 <h2>HBM — capacity, pricing, allocation, sold-out claims <span class='pill due'>live debate</span></h2>
 <p class='byline'>HBM wafer capacity, $/GB or $/Gb pricing (state which), allocation priority, sold-out horizon.</p>
