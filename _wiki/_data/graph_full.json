@@ -2,7 +2,7 @@
  "generated": "2026-07-01",
  "counts": {
   "nodes": 151,
-  "edges": 1092
+  "edges": 1094
  },
  "nodes": [
   {
@@ -404,7 +404,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-06-30"
+   "last_chg": "2026-07-01"
   },
   {
    "id": "CRDO",
@@ -3787,6 +3787,12 @@
   },
   {
    "u": "assum:wfe-tam",
+   "v": "ASML",
+   "type": "cites",
+   "label": ""
+  },
+  {
+   "u": "assum:wfe-tam",
    "v": "theme:semicap-wfe",
    "type": "cites",
    "label": ""
@@ -5231,6 +5237,13 @@
    "w": 2
   },
   {
+   "u": "broker:SIG",
+   "v": "COHR",
+   "type": "covers",
+   "label": "",
+   "w": 5
+  },
+  {
    "u": "broker:FinTwit",
    "v": "COHR",
    "type": "covers",
@@ -5837,7 +5850,7 @@
    "v": "GLW",
    "type": "covers",
    "label": "",
-   "w": 10
+   "w": 15
   },
   {
    "u": "broker:Barrons",

@@ -28,10 +28,12 @@
     {"value": "~$150B CY26 / ~$170B CY27 base", "source": "Tokyo Electron (SIG tour)", "date": "2026-06-18", "scope": "vendor view", "cited_in": ["themes/semicap-wfe.md"]},
     {"value": "$200B CY27 / $250B CY28", "source": "UBS Arcuri", "date": "2026-05-15", "scope": "street bull", "cited_in": ["themes/semicap-wfe.md"]},
     {"value": "$272B by 2030 (18% CAGR)", "source": "Redburn", "date": "2026-06-17", "scope": "2030 frame", "cited_in": ["themes/semicap-wfe.md"]},
+    {"value": "WFE<->EUV mapping: ~110 EUV slots ~= $225B WFE", "source": "UBS Arcuri", "date": "2026-06-15", "scope": "unit reconciliation", "cited_in": ["themes/semicap-wfe.md", "ASML.md"]},
+    {"value": "house CY28 $260B implies ASML ~110-120 EUV shipments 2028 (vs supply chain sized ~90; JPM: 110+ possible without new buildings)", "source": "Capstone reconciliation (Memory_supply_demand.xlsx EUV tab, sec.9)", "date": "2026-07-01", "scope": "house-vs-street bridge", "cited_in": ["themes/semicap-wfe.md"]},
     {"value": "'never $300B' ceiling", "source": "former Samsung foundry EVP (expert call)", "date": "2026-06-30", "scope": "skeptic ceiling", "cited_in": ["themes/semicap-wfe.md"]}
    ],
    "status": "house-vs-street",
-   "debate": "CY28: house $260B top vs street $230-250B. Resolves on memory greenfield timing + EUV shipments."
+   "debate": "CY28: house $260B top vs street $230-250B. Resolves on memory greenfield timing + EUV shipments. UNIT BRIDGE (2026-07-01): believing house $260B = believing ASML flexes to ~110-120 EUV ships in 2028 (above the ~90 supply-chain sizing; JPM says 110+ feasible). Base bottom-up demand supports ~88-95; the gap = faster DRAM node migration + 2029 pre-provisioning."
   },
   "hyperscaler-capex": {
    "title": "Hyperscaler / AI-datacenter capex CY25 / CY26 / CY27",
