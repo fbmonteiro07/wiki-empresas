@@ -17,13 +17,13 @@ _Generated 2026-07-02 · the standing view of where our model and the curated re
 | NVDA | EPS | 2027 | 15.44 | 12.90 | +20% |
 | NVDA | Revenue $bn | 2027 | 661.00 | 559.80 | +18% |
 
-## Curated divergences — latest reconciliation (`reconciliation-2026-07-01.md`)
+## Curated divergences — latest reconciliation (`reconciliation-2026-07-02.md`)
 
 | Name | New datapoint | Read (the edge) |
 |---|---|---|
 | _no reconciliation file_ | | |
 
-## Consensus PT vs spot — live pull in `reconciliation-2026-07-01.md` (upside ranked)
+## Consensus PT vs spot — live pull in `reconciliation-2026-07-02.md` (upside ranked)
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|
