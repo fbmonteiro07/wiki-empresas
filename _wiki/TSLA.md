@@ -7,13 +7,13 @@ _Wiki · generated 2026-06-25 · synthesis-only (no local filings archive) · so
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $102.4bn | $117.2bn |
-| Gross profit | $19.4bn | $24.4bn |
+| Revenue | $103.0bn | $117.6bn |
+| Gross profit | $19.6bn | $24.5bn |
 | Gross margin | 19.0% | 20.8% |
-| EBITDA | $15.7bn | $22.0bn |
-| EPS | $1.85 | $2.57 |
-| Capex | $26.1bn | $20.6bn |
-| OCF (≈EBITDA) | $15.7bn | $22.0bn |
+| EBITDA | $15.8bn | $22.0bn |
+| EPS | $1.87 | $2.58 |
+| Capex | $26.2bn | $20.7bn |
+| OCF (≈EBITDA) | $15.8bn | $22.0bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
@@ -22,6 +22,11 @@ _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown a
 Tesla is an EV maker, energy-storage company (Megapack), and autonomous-driving / robotics platform. The Street narrative is rotating from "EV volume story" toward an autonomy-and-robotics re-rate: FSD cumulative miles crossed 10bn and daily usage accelerated to 26.7mn/day (vs. 18.5mn/day in April 2026), with Morgan Stanley framing it as a "rate-of-change story." Alongside autonomy, Tesla is pursuing Optimus humanoid robots and is a co-anchor customer for the Terafab US chip-fab JV with SpaceX and [INTC](INTC.md), a project that has grown in scope from $55bn to up to $119bn.
 
 ## Current state (latest quarter)
+**2Q26 deliveries — big beat (reported 7/2/26 pre-market):** Tesla delivered **~480.1K vehicles** (+25% y/y, +34% q/q), well above sell-side consensus of ~406K (Visible Alpha/FactSet ~400-405K) and every broker estimate — a ~18% beat vs Street. Highest auto growth rate since 3Q23; 2Q production 451.8K (MS / Percoco, 2026-07-02). Energy storage deployments 13.5 GWh (+40%+ y/y) vs MSe 11.0 GWh / cons 13.8 GWh — a recovery after 1Q's weak 8.8 GWh (-15% y/y) (MS / Percoco, 2026-07-02). Broker reactions:
+- **MS (Percoco): EW, PT $415** — deliveries 480.1K vs MSe 413.2K / cons 406.0K; energy 13.5 GWh vs MSe 11.0 GWh (MS PULSE, 2026-07-02).
+- **GS (Mark Delaney): deliveries ~480K** (+34% q/q, +25% y/y) vs cons ~406K and GS est 420K — "well above consensus" (GS US Autos & Industrial Tech, 2026-07-02).
+- **JPM (Rajat Gupta): Neutral, PT $475 (Dec-27), price $425.30 (01-Jul)** — strong 2Q deliveries beat coincides with FSD progress that should drive positive feedback loops for both legacy-auto and robotaxi segments; **raised 2026/2027 estimates on strong global ex-US market trends** (JPM, 2026-07-02; supersedes the 06-24 420K delivery model — see Changelog). Next print: **earnings 7/22/26** (MS, 2026-07-02).
+
 No quarterly financials in the ported corpus (no 1Q26 revenue/auto-GM/energy-GM/EPS). MS IT-Hardware cloud-capex tracker shows TSLA capex +25% MoM to $25B+ for 2026 (2026-05-22). Operational/usage datapoints: FSD daily usage 26.7mn/day (vs. 18.5mn/day in April); Austin robotaxi launch tracked vs. NHTSA data; AI Safety Operator hiring picking up in northern metros (MS / Percoco, 2026-05-28).
 
 **JPM estimate cuts + 2Q26 preview (JPM "Tesla Robotaxi Deep-Dive", Rajat Gupta, 2026-06-24):** trimmed Adj. EPS 26E $1.95→$1.90 (-2.5%) and Adj. EBITDA 26E $11,366→$11,135mn (-2.0%) on lower 2Q deliveries/exit-rate; FY27 estimates and $475 Dec-27 PT unchanged. FY EPS path 2025A 1.66 / 26E 1.90 / 27E 2.15 / 28E 3.15. Models 2Q26 deliveries of **420K** (vs. ~430.5K prior) on mixed May/June EV-demand signals — May global EV registrations +3% y/y (Europe +23%, China -9%, North America -26%); Europe the bright spot (petrol prices, subsidies, affordable models), China/US softer as incentives roll off. Sees EV-native names (TSLA, RIVN) best positioned for any demand resurgence as legacy OEMs scale back EV lineups. FY26E revenue $104.2bn (+9.9%), Adj. EBITDA margin 10.7%; stock trades ~201x Adj. P/E 26E, EV/EBITDA 137x. JPM's 2040 SoTP framework: ~35mn Cybercab fleet, ~$500bn TSLA robotaxi revenue by 2040, ~14.6mn FSD subs ($29bn) — but near-term stock driver is auto sales + global FSD approvals + fixing unsupervised-robotaxi bottlenecks over the next 12-18 months.
@@ -42,6 +47,7 @@ No quarterly financials in the ported corpus (no 1Q26 revenue/auto-GM/energy-GM/
 - **Where the sell-side stands:** MS (Percoco) — Equal-Weight, PT $415 (autonomy "rate-of-change story," 2026-05-28). **JPMorgan (Rajat Gupta) — Neutral, PT $475 (Dec-27), price $381.61 (23-Jun-26)** (JPM "Tesla Robotaxi Deep-Dive", 2026-06-24); upgraded from Underweight 2026-06-08. Valuation flag: TSLA at 16x CY25 revenues vs. SPCX at ~90x (DanielTNiles, 2026-06-13).
 
 ## Catalysts / what to watch
+- **2Q26 earnings — 7/22/26** (MS, 2026-07-02): margin/energy-GM detail behind the 480K delivery beat; FSD/robotaxi commentary the swing factor.
 - **Austin robotaxi launch** — unit economics, pricing, fleet size, regulatory milestones.
 - **SpaceX-Tesla merger speculation** — whether Musk formally proposes combining the entities; watch for further org-chart/executive cross-over disclosures (The Information, 2026-07-01).
 - **Terafab** — Tesla's specific capital contribution, chip programs at [INTC](INTC.md) 14A (beyond FSD/Dojo), timeline to first wafer; ex-Intel hiring pace (Gary Jiang as foundry manager, The Information, 2026-07-01).
@@ -66,6 +72,7 @@ Synthesis ported from the research-wiki corpus (sell-side notes + Twitter/X). Ke
 - **External research:** [Gavekal Technologies (Daniel Grozdea fwd) — "Tesla's Two Way Bet In Physical AI" (2026-06-29)] — Shanghai gigafactory precedent; must operate in US + China; physical AI dual-presence as structural advantage and political risk.
 
 ## Changelog
+- 2026-07-02 — **2Q26 deliveries printed 480.1K (+25% y/y) vs Street ~406K** (reported 7/2/26). Supersedes the pre-print delivery estimates (now historical): JPM modeled **420K** 2Q26 deliveries (06-24); GS est **420K**; MS est **413.2K** — all beaten by ~15-18%. JPM (Gupta) raised 2026/2027 estimates on strong ex-US trends (maintained Neutral / $475 Dec-27). Energy storage 13.5 GWh (+40%+ y/y) vs 8.8 GWh in 1Q. Prior JPM Adj. EPS 26E $1.90 / EBITDA 26E $11,135mn from 06-24 likely to be revised up on next update.
 - 2026-06-25 — JPM PT/EPS added (JPM "Tesla Robotaxi Deep-Dive", Rajat Gupta, 2026-06-24): first JPM PT in the wiki = **$475 (Dec-27)** at price $381.61 (23-Jun-26); supersedes prior "Neutral, no PT in corpus" (was: U/G to Neutral 2026-06-08, no published PT). JPM Adj. EPS 26E cut $1.95→$1.90; Adj. EBITDA 26E $11,366→$11,135mn; 2Q26 deliveries est. lowered ~430.5K→420K.
 - 2026-06-25 — page created; ported from research-wiki corpus.
 - 2026-06-29 — Added Gavekal "Tesla's Two Way Bet In Physical AI" to Debate section: US-China dual presence thesis for physical AI (Optimus, Cybercab, robotics supply chain), Shanghai precedent as structural advantage + political risk surface. Added to Sources.

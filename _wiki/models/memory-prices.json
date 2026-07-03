@@ -1,6 +1,6 @@
 {
-  "asof_contract": "2026-05-31",
-  "asof_spot": "2026-06-25",
+  "asof_contract": "2026-06-30",
+  "asof_spot": "2026-07-02",
   "dram_act": [
     2.68,
     3.76,
@@ -19,31 +19,31 @@
       "t": "ISTPMR48 Index",
       "px": 24.0,
       "gb": 2,
-      "asof": "2026-05-31",
+      "asof": "2026-06-30",
       "hl": 1
     },
     {
       "s": "DRAM DDR5 8Gb contract",
       "t": "ISTPDR15 Index",
-      "px": 11.88,
+      "px": 12.25,
       "gb": 1,
-      "asof": "2026-05-31",
+      "asof": "2026-06-30",
       "hl": 0
     },
     {
       "s": "DRAM DDR5 16Gb spot",
       "t": "ISPPDR47 Index",
-      "px": 44.04,
+      "px": 44.94,
       "gb": 2,
-      "asof": "2026-06-25",
+      "asof": "2026-07-02",
       "hl": 0
     },
     {
       "s": "Server DRAM DDR5 64GB RDIMM",
       "t": "ISTPDR82 Index",
-      "px": 1270.0,
+      "px": 1310.0,
       "gb": 64,
-      "asof": "2026-05-31",
+      "asof": "2026-06-30",
       "hl": 0
     },
     {
@@ -51,15 +51,23 @@
       "t": "ISTPND27 Index",
       "px": 12.32,
       "gb": 256,
-      "asof": "2026-05-31",
+      "asof": "2026-06-30",
       "hl": 1
     },
     {
       "s": "NAND TLC 512Gb spot",
       "t": "ISPPN512 Index",
-      "px": 20.96,
+      "px": 20.59,
       "gb": 64,
-      "asof": "2026-06-25",
+      "asof": "2026-07-02",
+      "hl": 0
+    },
+    {
+      "s": "NAND TLC 512GB contract",
+      "t": "ISTPND28 Index",
+      "px": 24.6,
+      "gb": 512,
+      "asof": "2026-06-30",
       "hl": 0
     }
   ]

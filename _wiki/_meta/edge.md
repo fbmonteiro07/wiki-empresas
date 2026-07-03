@@ -8,12 +8,12 @@ _Generated 2026-07-02 · the standing view of where our model and the curated re
 
 | Ticker | Metric | Yr | House | Consensus | Δ |
 |---|---|---|--:|--:|--:|
-| COHR | EPS | 2027 | 19.21 | 9.65 | +99% |
-| COHR | Revenue $bn | 2027 | 16.60 | 11.00 | +51% |
+| COHR | EPS | 2027 | 19.21 | 9.75 | +97% |
+| COHR | Revenue $bn | 2027 | 16.60 | 11.00 | +50% |
 | LITE | EPS | 2027 | 30.02 | 23.53 | +28% |
-| GOOG | Revenue $bn | 2027 | 641.00 | 513.30 | +25% |
-| COHR | EPS | 2026 | 8.27 | 6.74 | +23% |
-| GOOG | Revenue $bn | 2026 | 505.00 | 417.50 | +21% |
+| GOOG | Revenue $bn | 2027 | 641.00 | 512.30 | +25% |
+| COHR | EPS | 2026 | 8.27 | 6.80 | +22% |
+| GOOG | Revenue $bn | 2026 | 505.00 | 419.80 | +20% |
 | NVDA | EPS | 2027 | 15.44 | 12.90 | +20% |
 | NVDA | Revenue $bn | 2027 | 661.00 | 559.80 | +18% |
 

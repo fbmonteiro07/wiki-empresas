@@ -44,6 +44,7 @@ HUB = [
     ("Book exposure", "book.html", "Positions × unresolved debates × catalysts — where the book is most exposed."),
     ("Hyperscaler capex", "hyperscaler-capex/Capex_Cloud.html", "Consensus vs actual vs house cloud capex (existing)."),
     ("GW per player", "gw-per-player.html", "Highest GW estimate per player, all sources cited, SemiAnalysis highlighted (hand-curated 2026-07-01)."),
+    ("Token fabric", "token-fabric.html", "Token supply vs demand 2026-2030 — calibrated tok/s/MW, per-user watts, malinvestment dial (hand-curated 2026-07-02)."),
 ]
 
 

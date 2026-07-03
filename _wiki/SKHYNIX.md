@@ -12,11 +12,11 @@ _Wiki · generated 2026-06-19 · **Korean issuer — NO SEC filings (no 10-K/10-
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | ₩345983.9bn | ₩545458.0bn |
-| Gross profit | ₩291664.4bn | ₩465821.1bn |
-| Gross margin | 84.3% | 85.4% |
+| Revenue | ₩348465.0bn | ₩552753.0bn |
+| Gross profit | ₩293756.0bn | ₩471498.3bn |
+| Gross margin | 84.3% | 85.3% |
 | EBITDA | ₩300187.8bn | ₩460460.9bn |
-| EPS | ₩342641.64 | ₩595061.38 |
+| EPS | ₩344427.43 | ₩595061.38 |
 | Capex | ₩48021.4bn | ₩60807.7bn |
 | OCF (≈EBITDA) | ₩300187.8bn | ₩460460.9bn |
 
@@ -175,6 +175,7 @@ _Q1 FY26 print + intra-quarter · Apr 23 → Jun 23, 2026 · sell-side / expert 
 | 07-01 | Jefferies (Silk Road desk) · Cristina Titu | valuation | bear | SK Hynix shares -2% in Korea trading — part of broader Korea underperformance vs Nasdaq/SOX strength despite the capex-plan news; KOSPI -1.8%. (Jefferies Silk Road · Cristina Titu, 2026-07-01) |
 | 07-01 | Rothschild & Co (TMT Daily) · Rowan Adley | valuation | mixed | SK Hynix -3.4%, part of a nine-day Korea foreign-selling streak despite the DRAM capacity-addition narrative lifting US semi-cap names (AMD/AMAT/LRCX/KLAC at 12-month highs). JPM dubs the disconnect the "hyperscaler curse" — Korea capex-beneficiary basket up 5% even as memory names themselves sold off, attributed to NPS rebalancing and a dip in June DRAM export data. (Rothschild & Co TMT Daily · Rowan Adley, 2026-07-01) |
 | 07-01 | Jefferies/KB · Jeff Kim (Samsung note, read-through) | supply | bull | Memory shortage seen persisting 2+ years; DRAM prices forecast +308% in 2026, NAND +256% in 2026; memory's share of AI capex rising from 14% to 50% by 2027 — directly relevant to SK Hynix as the #2 global DRAM/HBM supplier. (Jefferies/KB · Jeff Kim, 2026-07-01) |
+| 07-02 | BofA · Simon Woo/Dai Shen/Vivek Arya (Global Memory weekly) | demand | bull | **Meta will NOT cut memory orders** — supply-chain says Meta's long-term memory/component orders getting *stronger* (more HBM/LPDDR5/eSSD for AI DCs); the "Meta Compute = excess capacity" memory-demand fear behind the 07-01/02 selloff is "groundless." Also de-risks two overhangs: **CXMT's DRAM to Apple likely low** on quality/patent issues, and **Korea's new memory cluster won't have major near-term impact**. Direct fundamental counter to the KOSPI −7.9% (07-02) / memory selloff. (BofA Global Memory Tech, 2026-07-02) |
 | 02-06 | SemiAnalysis "Memory Mania" report | supply | bull | **Rubin (R200-class) HBM supply split modeled at SK hynix ~60% / Samsung ~30% / Micron ~0%** for the first 12 months — the clearest quantified read of SK hynix's HBM4/Rubin lead. HBM4 engineering samples ~10 Gbps pin speed (in line with Samsung, ahead of Micron), with lower jitter / stronger package execution vs Samsung. 2026 DRAM WFE capex +34% (highest of the three, vs Samsung +26%, Micron +20%). Yongin Phase 1 cleanroom not online until Feb-2027 (limited wafer output from 3Q27), but M15X + Yongin Phase 1 schedules both pulled in/accelerated. SemiAnalysis "turned bullish" on Samsung in Nov while staying bullish on SK hynix. (SemiAnalysis "Memory Mania: How a Once-in-Four-Decades Shortage Is Fueling a Memory Boom", 2026-02-06) |
 | 08-11 | SemiAnalysis "Scaling the Memory Wall: HBM" report | product | bull | **MR-MUF packaging + all-around power TSVs detailed as SK hynix's process moat**; proprietary TSV layouts framed as a future licensing-fee opportunity. History: SK hynix took HBM3 share from Samsung as Samsung's Hopper-era process shortfalls emerged; for HBM4 it is staying on the lower-risk 1b node (vs Samsung's 1c leapfrog), with yields "progressing smoothly." Risk flagged: concentrated TC-bonding tool dependency on Hanmi — a fall-2024 Hanwha diversification attempt led to Hanmi pulling field-service support (Apr-2025), undelivered Hanwha tools, and incompatible ASMPT bonders, forcing a placating re-order back to Hanmi. Also lacks in-house advanced-logic design (needs TSMC for HBM4 custom base die). (SemiAnalysis "Scaling the Memory Wall: The Rise and Roadmap of HBM", 2025-08-11) |
 

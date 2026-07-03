@@ -7,11 +7,11 @@ _Wiki · generated 2026-06-25 · synthesis-only (no local filings archive) · so
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $7.6bn | $11.2bn |
-| Gross profit | $6.6bn | $9.7bn |
-| Gross margin | 86.1% | 86.6% |
+| Revenue | $7.6bn | $11.3bn |
+| Gross profit | $6.6bn | $9.8bn |
+| Gross margin | 86.2% | 86.7% |
 | EBITDA | $4.5bn | $6.7bn |
-| EPS | $1.42 | $2.10 |
+| EPS | $1.42 | $2.12 |
 | Capex | $44m | $63m |
 | OCF (≈EBITDA) | $4.5bn | $6.7bn |
 
@@ -32,6 +32,7 @@ Detailed revenue/EPS figures and guidance are not in the ported corpus (qualitat
 - **Bull — canonical "token optimizer":** PLTR is the cleanest example of a software firm capturing the token-optimization wave rather than being hurt by it — it commercialized AIP Evolve (~a month before the note) to help customers optimize AI agent spend by routing to the best/cheapest model (incl. open-source), tuning prompts and pulling data better; in one case Evolve recommended a model swap that cut token costs 97%, and the tool hit a 90% adoption rate in its first three weeks — "strong evidence of token optimization interest." Software firms that don't own 1P models can play this model-agnostic role (UBS "The Ramp in Token Optimization" / Keirstead, 2026-06-23).
 - **Bear / debate — valuation and AI-disruption pressure:** PLTR hit a "12-month relative low" in mid-May alongside AI-disruption-basket pressure (2026-05-14). The broader "AI software ROI / messier margin math" debate (The Information) included PLTR (FundaAI, 2026-05-11). DB's Hold at $200 — maintained across Q3 2025, Q4 2025, and Q1 2026 beats — is the bear anchor (a constructive Hold, not a genuine bear; full coverage universe not captured). Michael Burry disclosed shorts in both NVDA and PLTR (GS PB, Nov 2025).
 - **Positioning:** PLTR/[CRWD](CRWD.md)/DDOG/NET/[NOW](NOW.md) are the only AI-related names receiving HF growth allocations; non-AI software broadly underweighted (GS Hedge Fund Trend Monitor, 2026-05-23).
+- **Bull/mixed — Karp positions PLTR as the "application layer" intermediary vs the labs (The Information / Applied AI, 2026-07-02):** in an interview after a "fiery" CNBC appearance, CEO Alex Karp **accused [OpenAI](OPENAI.md) and [Anthropic](ANTHROPIC.md) of "stealing data from and overcharging" customers**, pitching Palantir as the trusted intermediary/"application layer" that sits between enterprises/governments and the frontier labs. Bull read: reinforces the ontology-as-moat, model-agnostic "token optimizer" thesis (customers want a trusted layer, not direct lab dependence). Mixed caveat in the same piece: **some US-government customers have switched to open-source AI** — a demand-mix datapoint (cheaper open models displacing paid frontier APIs) that cuts both ways for PLTR's own model-routing value prop (The Information / Applied AI, 2026-07-02).
 - **Where the sell-side stands:** **UBS (Karl Keirstead) — Buy, $200** (46x 2027E FCF; competitive fears "unwarranted"). **BofA (Mariana Perez Mora) — Buy, $255** (compounding ontology; Apollo). **Deutsche Bank (Brad Zelnick) — Hold, $200** (no PT revision through Q1 2026; valuation-ceiling tension explicit).
 
 ## Catalysts / what to watch

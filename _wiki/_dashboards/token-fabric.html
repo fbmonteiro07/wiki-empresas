@@ -1,0 +1,357 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>Token fabric — supply vs demand</title>
+<style>
+body{margin:0;font:15px/1.55 -apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#1a1f29;background:#f5f6f8}
+header{background:#0f1729;color:#fff;padding:20px 28px}header h1{margin:0;font-size:20px}
+header a{color:#7fb0ff;text-decoration:none}header p{margin:4px 0 0;color:#8492ad;font-size:13px}
+main{max-width:980px;margin:0 auto;padding:24px 28px}
+section{background:#fff;border:1px solid #e3e7ee;border-radius:10px;padding:18px 22px;margin-bottom:18px}
+h2{margin:0 0 4px;font-size:16px;color:#0f1729}
+.stepno{display:inline-block;background:#0f1729;color:#fff;border-radius:50%;width:22px;height:22px;text-align:center;line-height:22px;font-size:12.5px;font-weight:700;margin-right:8px}
+.sub{margin:0 0 12px;color:#6b7280;font-size:13px}
+.today{font-size:17px;line-height:1.6}
+.today b{color:#0f1729}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.inp{border-radius:8px;padding:10px 12px;border:1px solid #e3e7ee;border-left:4px solid #9ca3af;background:#fafbfc}
+.inp label{display:block;font-size:12px;color:#374151;font-weight:600;margin-bottom:2px}
+.inp .src{display:block;font-size:11px;color:#8b93a3;margin-top:3px}
+.inp input[type=number]{width:80px;font:inherit;padding:2px 6px;border:1px solid #cdd3dd;border-radius:5px}
+.hard{border-left-color:#16a34a;background:#f2fbf5}.hard .tag{color:#16a34a}
+.partial{border-left-color:#2563eb;background:#f3f7fe}.partial .tag{color:#2563eb}
+.est{border-left-color:#d97706;background:#fefaf2}.est .tag{color:#d97706}
+.derived{border-left-color:#7c3aed;background:#f8f5fe}.derived .tag{color:#7c3aed}
+.tag{font-size:10px;font-weight:700;letter-spacing:.5px}
+.big{font-size:22px;font-weight:700;color:#0f1729}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{text-align:left;color:#6b7280;font-weight:600;border-bottom:2px solid #e3e7ee;padding:6px 8px}
+td{border-bottom:1px solid #eef1f5;padding:6px 8px}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.gr{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+.check{border-radius:8px;padding:8px 12px;font-size:12.5px;border:1px solid #e3e7ee;flex:1 1 230px}
+.ok{background:#f0fdf4;border-color:#bbf7d0}.bad{background:#fef2f2;border-color:#fecaca}.warn{background:#fffbeb;border-color:#fde68a}
+.check b{display:block;font-size:12px}
+svg{width:100%;height:auto;display:block}
+.note{font-size:12.5px;color:#6b7280;background:#f8fafc;border:1px solid #eef1f5;border-radius:8px;padding:10px 12px;margin-top:10px}
+.presets{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.preset{text-align:left;font:inherit;font-size:12.5px;padding:12px 14px;border-radius:10px;border:1.5px solid #e3e7ee;background:#fafbfc;cursor:pointer;transition:.12s}
+.preset:hover{border-color:#4f8cff}
+.preset.active{border-color:#0f1729;background:#0f1729;color:#fff}
+.preset.active small{color:#a8b3c9}.preset.active .pv{color:#ffd66b}
+.preset b{display:block;font-size:14px}
+.preset small{color:#6b7280;display:block;margin-top:3px;line-height:1.4}
+.preset .pv{display:block;margin-top:6px;font-weight:700;font-size:12.5px;color:#b45309}
+.verdict{border-radius:10px;padding:16px 20px;font-size:17.5px;line-height:1.5;margin-bottom:14px;border:1.5px solid}
+.v-short{background:#fef2f2;border-color:#fca5a5}
+.v-bal{background:#f0fdf4;border-color:#86efac}
+.v-over{background:#fffbeb;border-color:#fcd34d}
+.v-glut{background:#fef2f2;border-color:#fca5a5}
+.verdict small{display:block;font-size:13px;color:#6b7280;margin-top:6px}
+.keynum{display:inline-block;background:#fafbfc;border:1px solid #e3e7ee;border-radius:8px;padding:8px 14px;margin:4px 8px 4px 0}
+.keynum b{font-size:19px;color:#0f1729}.keynum span{display:block;font-size:11px;color:#6b7280}
+.dial{margin-bottom:12px}
+.dial label{display:flex;justify-content:space-between;font-size:13px;font-weight:600;color:#374151}
+.dial label output{font-variant-numeric:tabular-nums;color:#0f1729}
+.dial input[type=range]{width:100%;accent-color:#0f1729;margin:2px 0 0}
+.dial .src{font-size:11.5px;color:#8b93a3}
+.dials{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px 26px;margin-top:8px}
+details{border:1px solid #e3e7ee;border-radius:10px;background:#fff;margin-bottom:14px}
+details.inner{margin:12px 0 0;background:#fafbfc}
+details summary{cursor:pointer;padding:12px 18px;font-weight:600;color:#374151;font-size:13.5px}
+details summary:hover{color:#0f1729}
+details .body{padding:2px 18px 16px}
+.legend{display:flex;gap:14px;font-size:12px;color:#4b5563;margin:6px 0 0;flex-wrap:wrap}
+.legend i{display:inline-block;width:12px;height:12px;margin-right:5px;vertical-align:-1px;border-radius:3px;font-style:normal}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:12.5px}
+</style></head><body>
+<header><h1>🧵 Token fabric — will the AI buildout match token demand?</h1>
+<p>2026→2030 · companion to <i>Tentativa de conta de Token fabric.xlsx</i> and <a href="../themes/tokenmaxxing.md">themes/tokenmaxxing</a> · <a href="index.html">← dashboards hub</a></p>
+</header>
+<main>
+
+<section>
+<h2><span class="stepno">1</span>Where we are today</h2>
+<p class="today">The world runs <b>~30 quadrillion tokens a month</b> (14x more than a year ago), on roughly <b>16 GW of chips</b> doing inference. That pins down the one number everyone guesses: the fleet produces <b id="effInline">—</b> tokens per second per MW.</p>
+<details class="inner"><summary>Where these numbers come from (calibration + reality checks)</summary><div class="body">
+<p class="sub">The efficiency constant is <b>back-solved</b> from the observed token flow — not guessed. Colors: <span style="color:#16a34a;font-weight:700">HARD</span> sourced · <span style="color:#d97706;font-weight:700">ESTIMATE</span> our guess · <span style="color:#7c3aed;font-weight:700">DERIVED</span> back-solved.</p>
+<div class="grid">
+<div class="inp hard"><span class="tag">HARD · ANCHOR</span><label>Global tokens/month (quadrillion)</label><input id="anchorQ" type="number" value="30" step="1"><span class="src">Exponential View 2026-06-25 (+14x Y/Y). Google alone: 3.2 quad/mo (I/O 2026 via JPM 06-16)</span></div>
+<div class="inp est"><span class="tag">ESTIMATE</span><label>Installed chips mid-26 (IT-load GW)</label><input id="baseGW" type="number" value="32" step="1"><span class="src">NVDA ~16 GW sold 2026 (house) + prior gens + ASICs; Dylan: ~20 GW deploying 2026</span></div>
+<div class="inp est"><span class="tag">ESTIMATE</span><label>Share of chips on inference (%)</label><input id="infShare" type="number" value="50" step="5"><span class="src">Rising; no clean source</span></div>
+<div class="inp est"><span class="tag">ESTIMATE</span><label>Target utilization (%)</label><input id="util" type="number" value="60" step="5"><span class="src">Your xlsx: 75% (power basis). Cancels out of the gap math; drives watts/user only</span></div>
+<div class="inp derived"><span class="tag">DERIVED</span><label>Fleet efficiency, 2026</label><div class="big" id="effOut">—</div><span class="src">Must land between 0.5M (SemiAnalysis, frontier model on B200, 06-09) and 6.9M tok/s/MW (CoreWeave GB300 running small models, Cantor 06-18)</span></div>
+</div>
+<div class="gr" id="calChecks"></div>
+<div class="note">⚠ The two amber guesses stack multiplicatively (base GW × inference share): moving inference base 12→24 GW moves the constant 2x. Challenge these first.</div>
+</div></details>
+</section>
+
+<section>
+<h2><span class="stepno">2</span>Pick a world</h2>
+<p class="sub">Each card is one side of the live sell-side debate. Click to load its assumptions — or fine-tune below.</p>
+<div class="presets" id="presets"></div>
+<details class="inner"><summary>Fine-tune this world — the four dials that actually matter</summary><div class="body">
+<input type="hidden" id="hwGain" value="1.8"><input type="hidden" id="wtGain" value="1.4"><input type="hidden" id="ag30" value="600"><input type="hidden" id="gPlat" value="40">
+<div class="dials">
+<div class="dial"><label>Chips + software get better <output id="o_hwGain"></output></label><input type="range" data-sync="hwGain" min="1.2" max="2.6" step="0.05"><span class="src">Tokens per MW per year. Street: cost per token falls 60-70%/yr (JPM); Blackwell→Feynman −75% over ~4 yrs (MS)</span></div>
+<div class="dial"><label>Models get heavier <output id="o_wtGain"></output></label><input type="range" data-sync="wtGain" min="1.0" max="2.0" step="0.05"><span class="src">More params + more "thinking" per answer (12→36 thinking tokens). Eats the chip gains</span></div>
+<div class="dial"><label>People running AI agents by 2030 <output id="o_ag30"></output></label><input type="range" data-sync="ag30" min="50" max="2000" step="50"><span class="src">The demand swing factor: one agent task ≈ 1,200x a chat question</span></div>
+<div class="dial"><label>Background AI grows (search, feeds, APIs) <output id="o_gPlat"></output></label><input type="range" data-sync="gPlat" min="0" max="120" step="5"><span class="src">The ~88% of tokens nobody itemizes — machine-to-machine, free tiers, open-source</span></div>
+</div>
+<div id="tornadoWrap"><p class="sub" style="margin-top:10px"><b>What moves the answer most</b> — each assumption shaken around the current world; longer bar = more load-bearing:</p><div id="tornado"></div></div>
+</div></details>
+</section>
+
+<section>
+<h2><span class="stepno">3</span>The verdict</h2>
+<div id="verdict" class="verdict v-bal">—</div>
+<div id="keynums" style="margin-bottom:10px"></div>
+<div id="gapChart"></div>
+<div class="legend" id="gapLegend"></div>
+<div class="note">Read it like this: the colored stack is <b>who eats the tokens</b>; the green line is <b>what the built fleet can serve</b>. Line far above stack = idle fleet (malinvestment). Stack above line = compute shortage (pricing power).</div>
+</section>
+
+<section>
+<h2><span class="stepno">4</span>What one user consumes</h2>
+<p class="sub">Demand per user, translated into power (log scale). Dark bar = today's fleet; green dot = the same person on the 2030 fleet.</p>
+<div id="userChart"></div>
+</section>
+
+<details><summary>Economics — is there revenue under the tokens?</summary><div class="body">
+<div class="grid">
+<div class="inp derived"><span class="tag">DERIVED</span><label>Monetized share of tokens, 2026</label><div class="big" id="monOut">—</div><span class="src">= $175B ecosystem revenue ÷ (tokens × $2/Mtok) — Exp. View 06-25. Most tokens are free/internal</span></div>
+<div class="inp hard"><span class="tag">HARD</span><label>Blended price 2026 ($/Mtok)</label><input id="px26" type="number" value="2" step="0.25"><span class="src">Fell $17→$2 (Exp. View). Cost floor: GB300 $0.156/Mtok (SemiAnalysis)</span></div>
+<div class="inp est"><span class="tag">ESTIMATE</span><label>Price decline (%/yr)</label><input id="pxDecl" type="number" value="35" step="5"><span class="src">Less than cost decline if mix holds (Barclays: margins expanding)</span></div>
+<div class="inp est"><span class="tag">ESTIMATE</span><label>Monetized share by 2030 (%)</label><input id="mon30" type="number" value="40" step="5"><span class="src">Agents/API monetize better than surfaces</span></div>
+</div>
+<div id="econTable" style="margin-top:14px"></div>
+<div class="gr" id="econChecks"></div>
+</div></details>
+
+<details><summary>All other assumptions — demand segments &amp; buildout path</summary><div class="body">
+<h2 style="font-size:14px;margin-top:10px">Demand (2026 → 2030 pairs)</h2>
+<div class="grid">
+<div class="inp partial"><span class="tag">PARTIAL</span><label>Chat users (bn) 26 → 30</label><input id="chat26" type="number" value="1.5" step="0.1"> → <input id="chat30" type="number" value="2.5" step="0.1"><span class="src">ChatGPT alone >900M WAU Mar-26 (JPM)</span></div>
+<div class="inp hard"><span class="tag">HARD</span><label>Tokens per chat task</label><input id="tokChat" type="number" value="3400" step="100"><span class="src">Exp. View 06-25</span></div>
+<div class="inp est"><span class="tag">ESTIMATE</span><label>Chat tasks / user / day</label><input id="tasksDay" type="number" value="8" step="1"><span class="src">Our guess</span></div>
+<div class="inp partial"><span class="tag">PARTIAL</span><label>Coding seats (mn) 26 → 30</label><input id="dev26" type="number" value="30" step="5"> → <input id="dev30" type="number" value="70" step="5"><span class="src">Coding >70% of OpenAI+Anthropic ARR (SemiAnalysis 06-30)</span></div>
+<div class="inp partial"><span class="tag">PARTIAL</span><label>Tokens / coding seat / mo (mn) 26 → 30</label><input id="tokDev26" type="number" value="50" step="10"> → <input id="tokDev30" type="number" value="150" step="10"><span class="src">Claude Code $150-250/dev/mo (SemiAnalysis 06-30) ≈ 30-80M tok at $3-6/Mtok</span></div>
+<div class="inp est"><span class="tag">ESTIMATE</span><label>Agent users 2026 (mn)</label><input id="ag26" type="number" value="30" step="10"><span class="src">2030 value = slider in step 2</span></div>
+<div class="inp est"><span class="tag">ESTIMATE</span><label>Tokens / agent user / mo (mn) 26 → 30</label><input id="tokAg26" type="number" value="30" step="10"> → <input id="tokAg30" type="number" value="150" step="10"><span class="src">150M ≈ one 4.17M-token agent task per day. Meta tail: 280B/30d</span></div>
+<div class="inp derived"><span class="tag">DERIVED (residual)</span><label>Platform / API / embedded, 2026</label><div class="big" id="platOut">—</div><span class="src">= anchor − named segments (search, feeds, batch, open-source ≈ 80% of tokens, BG2 06-12)</span></div>
+</div>
+<div id="demTable" style="margin-top:14px"></div>
+<h2 style="font-size:14px;margin-top:18px">Buildout</h2>
+<div class="grid">
+<div class="inp partial"><span class="tag">PARTIAL</span><label>IT-load GW added /yr (27 / 28 / 29 / 30)</label>
+<input id="add27" type="number" value="30" step="5" style="width:52px"><input id="add28" type="number" value="35" step="5" style="width:52px"><input id="add29" type="number" value="40" step="5" style="width:52px"><input id="add30" type="number" value="45" step="5" style="width:52px">
+<span class="src">Dylan: >30 GW 2027; house NVDA ~25 GW 2027. ⚠ IT-load basis — never compare to JPM 138 GW facility-GW</span></div>
+<div class="inp est"><span class="tag">ESTIMATE</span><label>Inference share of fleet by 2030 (%)</label><input id="infShare30" type="number" value="60" step="5"><span class="src">Interpolated from 2026</span></div>
+</div>
+<div class="note" id="genNote"></div>
+</div></details>
+
+<details><summary>Sources &amp; provenance</summary><div class="body">
+<table><tr><th>Anchor</th><th>Value</th><th>Source · date</th></tr>
+<tr><td>Global token flow</td><td class="num">>30 quad/mo, +14x Y/Y</td><td>Exponential View "State of the AI Economy", 2026-06-25</td></tr>
+<tr><td>Google 1P tokens</td><td class="num">3.2 quad/mo (~7x Y/Y)</td><td>Google I/O 2026 via JPM "AI Capex 2.0", 2026-06-16 (⚠ Bernstein's ">16B tok/min" 06-22 is Cloud/Gemini-API scope, ~0.7 quad/mo — different basis)</td></tr>
+<tr><td>Frontier-class serving</td><td class="num">300k→500k tok/s/MW (B200); GB300 $0.156/Mtok</td><td>SemiAnalysis "DeepSeek V4 Day 0→43", 2026-06-09</td></tr>
+<tr><td>Small-model end</td><td class="num">GB300 $7-8/GPU-hr ≈ $0.14/Mtok ⇒ ~6.9M tok/s/MW</td><td>CoreWeave expert / Cantor, 2026-06-18</td></tr>
+<tr><td>Per-GW rental rates</td><td class="num">Trainium &lt;$10B · GPUs ~$12-13B · SpaceX/Google ~$25B/GW/yr</td><td>Dylan Patel @ Sequoia, 2026-06</td></tr>
+<tr><td>Per-GW monetization</td><td class="num">$14B (SpaceX impl.) · $22-23B (Anthropic) · ~$50B/GW/yr (Google)</td><td>BG2Pod (Gerstner/Baker), 2026-06-12 — different framing from rental rates, don't conflate</td></tr>
+<tr><td>Task sizes</td><td class="num">chat ~3.4k · agentic ~4.17M tok (~1,200x)</td><td>Exponential View, 2026-06-25</td></tr>
+<tr><td>Blended price path</td><td class="num">$17 → $2/Mtok</td><td>Exponential View, 2026-06-25</td></tr>
+<tr><td>Ecosystem revenue</td><td class="num">~$175B annualized (deduplicated)</td><td>Exponential View, 2026-06-25</td></tr>
+<tr><td>Per-token cost decline</td><td class="num">60-70%/yr; Blackwell→Feynman ~−75%</td><td>JPM "AI Capex 2.0" 2026-06-16; MS Byrd 2026-06-26</td></tr>
+<tr><td>GW flows</td><td class="num">NVDA ~16 GW/yr sold 26 → ~25 GW 27 (house); ~20 GW deploying 26, >30 GW 27; OpenAI+Anthropic >100 GW by 2030</td><td>Capstone house 2026-06-17; Dylan Patel @ Sequoia 2026-06</td></tr>
+<tr><td>Dev spend</td><td class="num">Claude Code avg $150-250/dev/mo; budgets $250-$2k/mo</td><td>SemiAnalysis "TokenBudgeting", 2026-06-30</td></tr>
+<tr><td>Per-DC engine</td><td class="num">200 MW IT ⇒ ~458k tok/s/MW real-world (1.7T-param)</td><td>Felipe xlsx "Tentativa de conta de Token fabric" (real-world branch ≈ SemiAnalysis 500k ✓)</td></tr>
+</table>
+<div class="note">⚠ Basis discipline: all GW here are <b>IT-load accelerator GW</b> — never compare to facility GW (JPM 138 GW through 2030) or 800V-subset GW (Citi 9→21 GW). See <code>_meta/assumptions.md · ai-dc-power-gw</code>.</div>
+</div></details>
+
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const S=2.628e6, YEARS=[2026,2027,2028,2029,2030];
+const fmt=(x,d=1)=>x>=1e3?x.toLocaleString('en-US',{maximumFractionDigits:0}):x.toLocaleString('en-US',{maximumFractionDigits:d});
+const lerp=(a,b,t)=>a+(b-a)*t;
+const COL={plat:'#c7d2fe',chat:'#94a3b8',dev:'#60a5fa',ag:'#f97316',sup:'#16a34a'};
+const NAMES={plat:'Platform/API (background AI)',chat:'Human chat',dev:'Coding agents',ag:'Non-coding agents'};
+
+const PRESETS={
+ base:{label:'Base',desc:'House blend — demand decelerates from +14x/yr but stays strong; buildout per Dylan/house.',
+  v:{chat30:2.5,dev30:70,tokDev30:150,ag30:600,tokAg30:150,gPlat:40,add27:30,add28:35,add29:40,add30:45,hwGain:1.8,wtGain:1.4,pxDecl:35,mon30:40}},
+ jevons:{label:'Jevons bull',desc:'BG2/Dylan: agents everywhere, tokens "as far as the eye can see" — demand outruns even a faster buildout.',
+  v:{chat30:3,dev30:100,tokDev30:250,ag30:1200,tokAg30:400,gPlat:70,add27:35,add28:45,add29:55,add30:65,hwGain:1.8,wtGain:1.5,pxDecl:25,mon30:45}},
+ pullback:{label:'Tokenmaxxing pullback',desc:'UBS bear: enterprises throttle spend and route to cheap models — efficiency compounds into a glut.',
+  v:{chat30:2.2,dev30:50,tokDev30:80,ag30:300,tokAg30:60,gPlat:25,add27:30,add28:30,add29:25,add30:25,hwGain:2.0,wtGain:1.2,pxDecl:45,mon30:35}},
+ heavy:{label:'Heavy models',desc:'Reasoning eats the chip gains (thinking tokens 12→36) — net efficiency ~flat, buildout exactly absorbed.',
+  v:{chat30:2.5,dev30:70,tokDev30:150,ag30:600,tokAg30:150,gPlat:40,add27:30,add28:35,add29:40,add30:45,hwGain:1.8,wtGain:1.8,pxDecl:35,mon30:40}},
+};
+
+const P_IDS=['anchorQ','baseGW','infShare','util','chat26','chat30','tokChat','tasksDay','dev26','dev30','tokDev26','tokDev30','ag26','ag30','tokAg26','tokAg30','gPlat','add27','add28','add29','add30','hwGain','wtGain','infShare30','px26','pxDecl','mon30'];
+function readP(){const P={};P_IDS.forEach(k=>P[k]=+$(k).value);return P;}
+
+function model(P){
+ const anchor=P.anchorQ*1e15, infMW26=P.baseGW*1e3*(P.infShare/100), util=P.util/100;
+ const eff26=anchor/(S*infMW26*util);
+ const seg=y=>{const t=(y-2026)/4;return{
+  chat:lerp(P.chat26,P.chat30,t)*1e9*P.tasksDay*30.4*P.tokChat,
+  dev:lerp(P.dev26,P.dev30,t)*1e6*lerp(P.tokDev26,P.tokDev30,t)*1e6,
+  ag:lerp(P.ag26,P.ag30,t)*1e6*lerp(P.tokAg26,P.tokAg30,t)*1e6};};
+ const s26=seg(2026), plat26=anchor-s26.chat-s26.dev-s26.ag;
+ const layers=YEARS.map(y=>{const s=seg(y);return{plat:plat26*Math.pow(1+P.gPlat/100,y-2026),chat:s.chat,dev:s.dev,ag:s.ag};});
+ const demand=layers.map(l=>l.plat+l.chat+l.dev+l.ag);
+ const net=P.hwGain/P.wtGain, adds=[0,P.add27,P.add28,P.add29,P.add30];
+ let cum=P.baseGW; const gwBuilt=[],effArr=[],sup=[];
+ YEARS.forEach((y,i)=>{cum+=adds[i];const is=lerp(P.infShare/100,P.infShare30/100,(y-2026)/4);const eff=eff26*Math.pow(net,y-2026);
+  gwBuilt.push(cum*is);effArr.push(eff);sup.push(cum*is*1e3*util*eff*S);});
+ const gwNeed=demand.map((d,i)=>d/(1e3*util*effArr[i]*S));
+ const implUtil=demand.map((d,i)=>d/(gwBuilt[i]*1e3*effArr[i]*S));
+ const mon26=175e9/((anchor/1e6)*12*P.px26);
+ const px=YEARS.map(y=>P.px26*Math.pow(1-P.pxDecl/100,y-2026));
+ const mon=YEARS.map(y=>lerp(mon26,P.mon30/100,(y-2026)/4));
+ const rev=YEARS.map((y,i)=>demand[i]/1e6*12*mon[i]*px[i]);
+ return{anchor,eff26,util,net,plat26,layers,demand,gwBuilt,effArr,sup,gwNeed,implUtil,mon26,px,mon,rev};
+}
+
+let activePreset='base';
+function applyPreset(k){activePreset=k;const v=PRESETS[k].v;for(const[id,val]of Object.entries(v)){$(id).value=val;}syncSliders();compute();}
+function renderPresets(){
+ $('presets').innerHTML=Object.entries(PRESETS).map(([k,p])=>{
+  const m=model({...readP(),...p.v});
+  const r=m.sup[4]/m.demand[4];
+  const tag=r<0.95?'🔴 shortage by 2030':r<=1.5?'⚖️ roughly balanced':r<=4?'🟡 '+((r-1)*100).toFixed(0)+'% overbuilt':'🔴 '+r.toFixed(0)+'x overbuilt';
+  return `<button class="preset${k===activePreset?' active':''}" onclick="applyPreset('${k}')"><b>${p.label}</b><small>${p.desc}</small><span class="pv">${tag}</span></button>`;}).join('');
+}
+function syncSliders(){document.querySelectorAll('input[type=range]').forEach(r=>{r.value=$(r.dataset.sync).value;});}
+
+function verdictText(m){
+ const r=m.sup[4]/m.demand[4], u=m.implUtil[4], gwN=m.gwNeed[4], gwB=m.gwBuilt[4], dx=(m.demand[4]/m.demand[0]);
+ if(r<0.95) return{cls:'v-short',html:`🔴 <b>In this world the fabric runs out.</b> Demand grows ${dx.toFixed(0)}x by 2030 and needs <b>${gwN.toFixed(0)} GW</b> of inference — only <b>${gwB.toFixed(0)} GW</b> gets built. Compute stays scarce and pricing power holds.<small>Read-through: bull NVDA / memory / power &amp; neoclouds — the Dylan "dark GDP" scenario. Every GW finds a customer.</small>`};
+ if(r<=1.5) return{cls:'v-bal',html:`⚖️ <b>Roughly balanced.</b> Demand (${dx.toFixed(0)}x growth) absorbs the buildout almost exactly — the fleet runs near its ${(m.util*100).toFixed(0)}% target (implied ${(u*100).toFixed(0)}%).<small>Read-through: capex keeps its ROI justification, but there is no slack — any efficiency surprise tips it either way.</small>`};
+ if(r<=4) return{cls:'v-over',html:`🟡 <b>Comfortable overbuild.</b> Demand grows ${dx.toFixed(0)}x, but efficiency + buildout outrun it: the 2030 fleet would run at <b>${(u*100).toFixed(0)}% utilization</b> (needs ${gwN.toFixed(0)} GW, has ${gwB.toFixed(0)} GW).<small>Read-through: fine if demand keeps surprising (it grew +14x last year) — but GPU rental prices and neocloud economics compress first.</small>`};
+ return{cls:'v-glut',html:`🔴 <b>Malinvestment territory.</b> The 2030 fleet would sit at <b>${(u*100).toFixed(0)}% utilization</b> — ${r.toFixed(0)}x more capacity than demand (needs ${gwN.toFixed(0)} GW, has ${gwB.toFixed(0)} GW).<small>Read-through: the Bernstein/Chanos scenario — capex ROI breaks, bear neoclouds/ORCL, GPU depreciation schedules get tested.</small>`};
+}
+
+function compute(){
+ const P=readP(), m=model(P);
+ $('effOut').textContent=(m.eff26/1e6).toFixed(2)+"M tok/s/MW";
+ $('effInline').textContent="~"+(m.eff26/1e6).toFixed(1)+" million";
+ $('platOut').textContent=(m.plat26/1e15).toFixed(1)+" quad/mo ("+(m.plat26/m.anchor*100).toFixed(0)+"%)";
+ $('monOut').textContent=(m.mon26*100).toFixed(0)+"% of tokens";
+ $('o_hwGain').textContent=P.hwGain.toFixed(2)+"x/yr";
+ $('o_wtGain').textContent=P.wtGain.toFixed(2)+"x/yr (net "+m.net.toFixed(2)+"x)";
+ $('o_ag30').textContent=fmt(P.ag30,0)+"M people";
+ $('o_gPlat').textContent="+"+P.gPlat+"%/yr";
+
+ const cal=[];
+ cal.push({ok:m.eff26>=0.5e6&&m.eff26<=6.9e6,txt:`<b>${m.eff26>=0.5e6&&m.eff26<=6.9e6?'🟢':'🔴'} Physical bracket</b> derived eff ${(m.eff26/1e6).toFixed(2)}M vs [0.50M frontier … 6.9M small-model] — independent of the fit`});
+ const googMW=3.2e15/(S*m.eff26*m.util);
+ cal.push({ok:googMW>500&&googMW<5000,txt:`<b>${googMW>500&&googMW<5000?'🟢':'🔴'} Google cross-check</b> 3.2 quad/mo ⇒ ${(googMW/1e3).toFixed(1)} GW of inference for Google — plausible vs its fleet?`});
+ cal.push({ok:true,txt:`<b>🟢 Felipe xlsx cross-check</b> your Rubin real-world branch ⇒ ~458k tok/s/MW (1.7T-param) ≈ SemiAnalysis 500k — blended fleet correctly sits above frontier-class`});
+ $('calChecks').innerHTML=cal.map(c=>`<div class="check ${c.ok?'ok':'bad'}">${c.txt}</div>`).join('');
+
+ const v=verdictText(m);
+ const vd=$('verdict');vd.className='verdict '+v.cls;vd.innerHTML=v.html;
+ $('keynums').innerHTML=
+  `<span class="keynum"><b>${(m.demand[4]/1e15).toFixed(0)}</b><span>quad tokens/mo 2030 (vs ${(m.demand[0]/1e15).toFixed(0)} today)</span></span>`+
+  `<span class="keynum"><b>${m.gwNeed[4].toFixed(0)} GW</b><span>needed 2030</span></span>`+
+  `<span class="keynum"><b>${m.gwBuilt[4].toFixed(0)} GW</b><span>built 2030</span></span>`+
+  `<span class="keynum"><b>${(m.implUtil[4]*100).toFixed(0)}%</b><span>implied fleet utilization 2030 (target ${(m.util*100).toFixed(0)}%)</span></span>`;
+
+ drawStack('gapChart',m);
+ $('gapLegend').innerHTML=Object.entries(NAMES).map(([k,n])=>`<span><i style="background:${COL[k]}"></i>${n}</span>`).join('')+`<span><i style="background:${COL.sup};height:3px;border-radius:2px;vertical-align:3px"></i>Fleet capacity at ${(m.util*100).toFixed(0)}% utilization</span>`;
+ drawTornado('tornado',P);
+
+ let dt="<table><tr><th>quad tokens/mo</th>"+YEARS.map(y=>`<th class=num>${y}</th>`).join('')+"</tr>";
+ for(const k of ['chat','dev','ag','plat']) dt+=`<tr><td>${NAMES[k]}</td>`+m.layers.map(l=>`<td class=num>${(l[k]/1e15).toFixed(1)}</td>`).join('')+"</tr>";
+ dt+=`<tr style="font-weight:700"><td>Total</td>`+m.demand.map(d=>`<td class=num>${(d/1e15).toFixed(0)}</td>`).join('')+`</tr>`;
+ dt+=`<tr><td style="color:#6b7280">growth y/y</td>`+m.demand.map((d,i)=>`<td class=num style="color:#6b7280">${i?'+'+((d/m.demand[i-1]-1)*100).toFixed(0)+'%':'—'}</td>`).join('')+"</tr></table>";
+ $('demTable').innerHTML=dt;
+
+ $('genNote').innerHTML=`Net fleet token-efficiency growth = ${P.hwGain}x ÷ ${P.wtGain}x = <b>${m.net.toFixed(2)}x/yr</b> ⇒ 2030 fleet at ${(m.effArr[4]/1e6).toFixed(1)}M tok/s/MW. For scale: 2025→26 demand grew +14x while GW roughly doubled — realized net efficiency + utilization take-up covered the rest.`;
+
+ let et=`<table><tr><th></th>`+YEARS.map(y=>`<th class=num>${y}</th>`).join('')+"</tr>";
+ et+=`<tr><td>Blended price ($/Mtok)</td>`+m.px.map(p=>`<td class=num>${p.toFixed(2)}</td>`).join('')+"</tr>";
+ et+=`<tr><td>Monetized share</td>`+m.mon.map(x=>`<td class=num>${(x*100).toFixed(0)}%</td>`).join('')+"</tr>";
+ et+=`<tr style="font-weight:700"><td>Token revenue ($B/yr)</td>`+m.rev.map(r=>`<td class=num>${(r/1e9).toFixed(0)}</td>`).join('')+"</tr>";
+ et+=`<tr><td>Revenue per built inference GW ($B/GW/yr)</td>`+m.rev.map((r,i)=>`<td class=num>${(r/m.gwBuilt[i]/1e9).toFixed(1)}</td>`).join('')+"</tr></table>";
+ $('econTable').innerHTML=et;
+ const rg26=m.rev[0]/m.gwBuilt[0]/1e9, ec=[];
+ ec.push({cls:rg26>=8&&rg26<=55?'ok':'bad',txt:`<b>${rg26>=8&&rg26<=55?'🟢':'🔴'} Per-GW monetization</b> $${rg26.toFixed(0)}B/GW/yr 2026 vs observed marks $14-50B/GW/yr (BG2 06-12; Sequoia rental $10-25B) — consistency check, NOT independent of the fit`});
+ const costFloor=0.156*Math.pow(0.35,4);
+ ec.push({cls:m.px[4]>costFloor?'ok':'warn',txt:`<b>${m.px[4]>costFloor?'🟢':'🟡'} Price vs cost floor</b> 2030 price $${m.px[4].toFixed(2)} vs serving-cost floor ~$${costFloor.toFixed(3)}/Mtok (GB300 $0.156 compounding −65%/yr)`});
+ ec.push({cls:m.rev[4]/1e9>700?'ok':'warn',txt:`<b>${m.rev[4]/1e9>700?'🟢':'🟡'} ROI context</b> 2030 token revenue $${(m.rev[4]/1e9).toFixed(0)}B vs hyperscaler capex ~$1.1T/yr 2027E (JPM) — the Bernstein funding-gap debate`});
+ $('econChecks').innerHTML=ec.map(c=>`<div class="check ${c.cls}">${c.txt}</div>`).join('');
+
+ drawUsers('userChart',m);
+ renderPresets();
+}
+
+function axes(W,H,Pd,max,fmtY){let g='';for(let k=0;k<=4;k++){const v=max*k/4,y=H-Pd.b-(H-Pd.t-Pd.b)*k/4;g+=`<line x1="${Pd.l}" y1="${y}" x2="${W-Pd.r}" y2="${y}" stroke="#eef1f5"/><text x="${Pd.l-6}" y="${y+4}" text-anchor="end" font-size="11" fill="#6b7280">${fmtY(v)}</text>`;}return g;}
+
+function drawStack(id,m){
+ const W=940,H=330,Pd={l:52,r:14,t:16,b:28};
+ const max=Math.max(...m.sup,...m.demand)*1.08;
+ const X=i=>Pd.l+(W-Pd.l-Pd.r)*i/4, Y=v=>H-Pd.b-(H-Pd.t-Pd.b)*v/max;
+ let g=axes(W,H,Pd,max,v=>fmt(v/1e15,0));
+ YEARS.forEach((y,i)=>g+=`<text x="${X(i)}" y="${H-8}" text-anchor="middle" font-size="11" fill="#6b7280">${y}</text>`);
+ const order=['plat','chat','dev','ag']; let base=YEARS.map(()=>0);
+ order.forEach(k=>{const top=base.map((b,i)=>b+m.layers[i][k]);
+  g+=`<path d="M${base.map((b,i)=>X(i)+','+Y(b)).join(' L')} L${top.slice().reverse().map((t,j)=>X(4-j)+','+Y(t)).join(' L')} Z" fill="${COL[k]}" fill-opacity="0.85"/>`;
+  base=top;});
+ g+=`<polyline fill="none" stroke="${COL.sup}" stroke-width="3" points="${m.sup.map((v,i)=>X(i)+','+Y(v)).join(' ')}"/>`;
+ m.sup.forEach((v,i)=>g+=`<circle cx="${X(i)}" cy="${Y(v)}" r="3.5" fill="${COL.sup}"/><text x="${X(i)}" y="${Y(v)-8}" text-anchor="middle" font-size="10.5" fill="${COL.sup}" font-weight="700">${fmt(v/1e15,0)}</text>`);
+ m.demand.forEach((v,i)=>g+=`<text x="${X(i)}" y="${Y(v)-8}" text-anchor="middle" font-size="10.5" fill="#374151">${fmt(v/1e15,0)}</text>`);
+ $(id).innerHTML=`<svg viewBox="0 0 ${W} ${H}"><text x="${Pd.l}" y="${Pd.t-4}" font-size="11" fill="#6b7280">quadrillion tokens / month</text>${g}</svg>`;
+}
+
+function drawTornado(id,P){
+ const baseRatio=(p=>{const m=model(p);return m.sup[4]/m.demand[4];})(P);
+ const vary=(k,lo,hi)=>{const a={...P},b={...P};a[k]=lo;b[k]=hi;const r1=model(a).sup[4]/model(a).demand[4],r2=model(b).sup[4]/model(b).demand[4];return[Math.min(r1,r2),Math.max(r1,r2)];};
+ const varyAdds=f=>{const a={...P};['add27','add28','add29','add30'].forEach(k=>a[k]=P[k]*f);return model(a).sup[4]/model(a).demand[4];};
+ const addLo=varyAdds(0.7), addHi=varyAdds(1.3);
+ const items=[
+  ['Chips get better (±0.3x/yr)',...vary('hwGain',P.hwGain-0.3,P.hwGain+0.3)],
+  ['Models get heavier (±0.2x/yr)',...vary('wtGain',Math.max(P.wtGain-0.2,1),P.wtGain+0.2)],
+  ['Background AI growth (±15pp)',...vary('gPlat',P.gPlat-15,P.gPlat+15)],
+  ['Agent users 2030 (±50%)',...vary('ag30',P.ag30*0.5,P.ag30*1.5)],
+  ['Tokens per agent (±50%)',...vary('tokAg30',P.tokAg30*0.5,P.tokAg30*1.5)],
+  ['GW added 27-30 (±30%)',Math.min(addLo,addHi),Math.max(addLo,addHi)],
+  ['Installed base mid-26 (±25%)',...vary('baseGW',P.baseGW*0.75,P.baseGW*1.25)],
+ ];
+ items.sort((a,b)=>(b[2]-b[1])-(a[2]-a[1]));
+ const W=940,rowH=32,L=290,R=W-20,H=items.length*rowH+40;
+ const maxR=Math.max(...items.map(i=>i[2]),baseRatio)*1.1;
+ const X=v=>L+(R-L)*v/maxR;
+ let g=`<line x1="${X(1)}" y1="10" x2="${X(1)}" y2="${H-24}" stroke="#dc2626" stroke-dasharray="4 3"/><text x="${X(1)}" y="${H-10}" text-anchor="middle" font-size="10.5" fill="#dc2626">1.0x = balanced</text>`;
+ g+=`<line x1="${X(baseRatio)}" y1="10" x2="${X(baseRatio)}" y2="${H-24}" stroke="#0f1729" stroke-dasharray="2 3"/><text x="${X(baseRatio)}" y="${H-10}" text-anchor="middle" font-size="10.5" fill="#0f1729">now ${baseRatio.toFixed(1)}x</text>`;
+ items.forEach((it,i)=>{const y=16+i*rowH;
+  g+=`<text x="${L-10}" y="${y+12}" text-anchor="end" font-size="12" fill="#374151">${it[0]}</text>`;
+  g+=`<rect x="${X(it[1])}" y="${y}" width="${Math.max(X(it[2])-X(it[1]),2)}" height="16" rx="4" fill="#60a5fa" fill-opacity="0.75"/>`;
+  g+=`<text x="${X(it[1])-5}" y="${y+12}" text-anchor="end" font-size="10.5" fill="#6b7280">${it[1].toFixed(1)}x</text><text x="${X(it[2])+5}" y="${y+12}" font-size="10.5" fill="#6b7280">${it[2].toFixed(1)}x</text>`;});
+ $(id).innerHTML=`<svg viewBox="0 0 ${W} ${H}"><text x="${L}" y="12" font-size="11" fill="#6b7280">2030 capacity ÷ demand (x)</text>${g}</svg>`;
+}
+
+function drawUsers(id,m){
+ const profiles=[['Casual chat — 1M tok/mo',1e6],['Average user today — '+(m.anchor/1e15/1.5).toFixed(0)+'M tok/mo',m.anchor/1.5e9],['Claude Code dev — 50M tok/mo',50e6],['Heavy agentic — 300M tok/mo',300e6],['Meta tail power-user — 280B tok/mo',280e9]];
+ const w26=t=>t/S/m.eff26/m.util*1e6, w30=t=>t/S/m.effArr[4]/m.util*1e6;
+ const W=940,rowH=40,L=290,R=W-90,H=profiles.length*rowH+30;
+ const lo=0.05, hi=200000;
+ const X=v=>L+(R-L)*(Math.log10(v)-Math.log10(lo))/(Math.log10(hi)-Math.log10(lo));
+ let g='';
+ [[0.1,'0.1W'],[1,'1W'],[10,'10W'],[100,'100W'],[1000,'1kW'],[10000,'10kW'],[100000,'100kW']].forEach(([v,l])=>{g+=`<line x1="${X(v)}" y1="8" x2="${X(v)}" y2="${H-22}" stroke="#eef1f5"/><text x="${X(v)}" y="${H-8}" text-anchor="middle" font-size="10.5" fill="#6b7280">${l}</text>`;});
+ profiles.forEach(([n,t],i)=>{const y=14+i*rowH, a=w26(t), b=w30(t);
+  g+=`<text x="${L-10}" y="${y+12}" text-anchor="end" font-size="12" fill="#374151">${n}</text>`;
+  g+=`<rect x="${X(lo)}" y="${y}" width="${X(a)-X(lo)}" height="16" rx="4" fill="#0f1729" fill-opacity="0.85"/>`;
+  g+=`<circle cx="${X(b)}" cy="${y+8}" r="5" fill="${COL.sup}"/>`;
+  g+=`<text x="${X(a)+8}" y="${y+12}" font-size="11" font-weight="700" fill="#0f1729">${a<1000?fmt(a,1)+' W':fmt(a/1000,1)+' kW'}</text>`;});
+ $(id).innerHTML=`<svg viewBox="0 0 ${W} ${H}">${g}</svg><div class="note">A lightbulb per casual user; a small space heater per heavy agentic user; one Meta-tail power user ≈ ${fmt(w26(280e9)/1000,0)} kW — half an IREN-scale datacenter per 1,000 such users. Dev cross-check: 50M tok × $2 blended ≈ $100/mo vs Anthropic's reported $150-250/dev/mo (devs pay a frontier premium).</div>`;
+}
+
+document.querySelectorAll('input[type=number]').forEach(i=>i.addEventListener('input',()=>{syncSliders();compute();}));
+document.querySelectorAll('input[type=range]').forEach(r=>r.addEventListener('input',()=>{$(r.dataset.sync).value=r.value;compute();}));
+syncSliders();compute();
+</script>
+</body></html>

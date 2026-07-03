@@ -66,6 +66,8 @@ def corpus():
         yield p, "stratechery", ""
     for p in (ROOT / "relatórios bons").glob("*.html"):
         yield p, "report", ""
+    for p in (WIKI / "_data" / "figures").glob("*.md"):
+        yield p, "figure", ""
     for d in ROOT.iterdir():
         if not d.is_dir() or d.name in NOT_TICKERS or d.name.startswith("."):
             continue

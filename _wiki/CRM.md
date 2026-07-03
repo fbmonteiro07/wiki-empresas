@@ -10,10 +10,10 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\CRM` (filings + transc
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $46.0bn | $50.4bn |
-| Gross profit | $37.1bn | $40.8bn |
-| Gross margin | 80.7% | 81.0% |
+| Gross profit | $36.1bn | $38.4bn |
+| Gross margin | 78.4% | 76.2% |
 | EBITDA | $19.0bn | $20.8bn |
-| EPS | $13.41 | $15.79 |
+| EPS | $13.42 | $15.79 |
 | Capex | $692m | $744m |
 | OCF (≈EBITDA) | $19.0bn | $20.8bn |
 

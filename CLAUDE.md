@@ -23,7 +23,7 @@ One synthesized page per ticker (`_wiki/*.md`, ~101 names) + cross-company theme
 - Everything (dashboards, meta, search index, graph): `py "E:\Wiki Felipe empresas\_wiki\_tools\refresh_features.py"`
 - BBG estimates (needs terminal): `py E:/.claude/scripts/fetch_estimates.py [tickers]` → then `py _wiki/_tools/build_snapshot.py`
 - Staleness report: `py E:/.claude/scripts/lint_wiki.py`
-- Inbox ingest: drop PDFs in `_inbox/`, run `py E:/.claude/scripts/ingest_inbox.py` (trust the filename `YYYYMMDD` date prefix over PDF metadata).
+- Inbox ingest: drop PDFs in `_inbox/`, run `py E:/.claude/scripts/ingest_inbox.py` (trust the filename `YYYYMMDD` date prefix over PDF metadata). The plan step also sweeps the team drop folder `P:\US Equities\Relatórios para a wiki` into `_inbox/` (P: originals moved to `...\Relatórios para a wiki\done\`; files locked by Excel/Acrobat are skipped and retried next run).
 
 ## Map
 

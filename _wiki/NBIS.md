@@ -9,13 +9,13 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\NBIS` (20-F filings + 
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $3.3bn | $12.5bn |
-| Gross profit | $2.3bn | $8.9bn |
-| Gross margin | 69.7% | 71.1% |
-| EBITDA | $1.3bn | $6.9bn |
-| EPS | $-3.07 | $-3.01 |
-| Capex | $24.3bn | $31.1bn |
-| OCF (≈EBITDA) | $1.3bn | $6.9bn |
+| Revenue | $3.2bn | $11.7bn |
+| Gross profit | $2.3bn | $8.3bn |
+| Gross margin | 69.7% | 71.2% |
+| EBITDA | $1.3bn | $6.5bn |
+| EPS | $-3.61 | $-4.48 |
+| Capex | $22.9bn | $29.8bn |
+| OCF (≈EBITDA) | $1.3bn | $6.5bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
@@ -157,6 +157,7 @@ _Q1 2026 · May 11 → Jul 1, 2026 · sell-side / expert calls / reports between
 | 06-30 | Barclays · Ross Sandler (referenced in Meta Compute coverage) | demand | mixed | Meta has signed $20bn+ TCV deals with neoclouds CoreWeave AND Nebius, plus multi-year deals with Oracle, Google Cloud and AWS — confirms Nebius as a named, material Meta compute-supply counterparty, which is precisely what makes it directly exposed to any Meta pullback or Meta's own compute-monetization pivot (Barclays · Ross Sandler, 2026-06-30). |
 | 07-01 | Citi Tech Research call summary · Alex Placeres/Ron Josey/Tyler Radke/Mike Rollins/Heath Terry (via Daniel Grozdea) | risk | bear | **"Meta Compute" headline risk:** Nebius counted among neoclouds with meaningful Meta exposure; Meta launched an external cloud business the same day to sell surplus AI computing capacity, competing directly with AWS/Azure/GCP and, by extension, neoclouds like Nebius and CoreWeave. Separately: recent large AI compute deals struck at $40-60bn annually per GW (30-60%+ premium to spot); hyperscaler cash ROIC on AI investment ~29%; data-center leasing focus now on 2028-2030 with power/NIMBYism as binding constraints (Citi Tech Research call summary, 2026-07-01). |
 | 07-01 | Bernstein · Madison/Gautam | valuation | neutral | $/MW analysis groups Nebius (NBIS) with CoreWeave (CRWV) and IREN comparing neoclouds vs. data-center REITs vs. emerging AI-infra providers on margin, revenue yield, financing, capex and risk profile. Within emerging AI-infra, CIFR and WULF stand out on leasing margins; IREN shows strong vertically-integrated landlord margins but lags CRWV/peers on scale/enterprise build (Bernstein · Madison/Gautam, 2026-07-01). |
+| 07-02 | Rothschild & Co · Rowan Adley (TMT Daily) | risk | bear | **Meta-Compute selloff — NBIS −17% on the day, the worst mover in the group** (vs META +8.8%, CRWV −14%, neoclouds −8%, semis −6.3%; Software +3%). The bear read: Meta reselling surplus capacity signals ecosystem-wide overcapacity → potential capex run-rate cuts; NBIS's higher % of unsold/uncontracted 2027 capacity (the same feature Cantor framed as bull optionality on 06-18) cuts the other way in a demand-scare tape (Rothschild TMT Daily · Rowan Adley, 2026-07-02). |
 
 **Quarter synthesis:** the flow validates the numbers, the sold-out status and the NVDA seal of approval, but the debate has shifted to two quality nuances — how much of the capacity is already contracted vs speculative amid rising GPU prices (Cantor), and the dependence on financing cost as the swing variable (WF). Thesis intact; the question has become "at what cost of capital does the '27 ramp hold up." **06-28: FundaAI adds a re-rating framework** — the bull case is no longer just "sold-out GPU cloud" but a full-stack AI cloud trajectory via Token Factory; the key milestones are utilization rate rising and Meta-class enterprise customers confirming the hyperscaler-adjacent tier. If NBIS demonstrates Token Factory at scale in 2H26, the multiple narrative shifts from capacity leasing to cloud SaaS, which is a meaningful re-rating lever. **07-01: new risk vector emerges** — Citi flags Meta's freshly launched "Meta Compute" external-cloud business as a headline risk: Meta is a confirmed, material Nebius compute-supply counterparty (Barclays, $20bn+ TCV, 06-30), but is now also entering the market as a seller of surplus AI compute, competing with the very neoclouds (Nebius, CoreWeave) it funds as a customer. This complicates the previously one-directional "Meta = anchor customer" bull framing without yet contradicting the underlying contract economics; watch whether Meta's own compute-monetization ramp changes its demand behavior toward Nebius. Bernstein's same-day $/MW cross-comp (NBIS vs. CRWV vs. IREN vs. data-center REITs/emerging AI-infra) is a useful positioning check but does not change the thesis.
 

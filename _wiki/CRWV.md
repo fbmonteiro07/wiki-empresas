@@ -9,10 +9,10 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\CRWV` (10-K FY2025, fo
 |---|--:|--:|
 | Revenue | $12.6bn | $25.0bn |
 | Gross profit | $8.7bn | $17.9bn |
-| Gross margin | 69.0% | 71.7% |
+| Gross margin | 69.1% | 71.7% |
 | EBITDA | $7.3bn | $15.5bn |
-| EPS | $-3.16 | $-0.90 |
-| Capex | $32.7bn | $38.3bn |
+| EPS | $-3.18 | $-0.86 |
+| Capex | $32.7bn | $38.2bn |
 | OCF (≈EBITDA) | $7.3bn | $15.5bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
@@ -160,6 +160,7 @@ _Q1 FY26 · May 07 → Jul 01, 2026 · sell-side / expert calls / reports betwee
 | 07-01 | Bernstein · Rezaei/Shmulik/Rasgon/Wu (Quick Take) | demand | bear | 'Meta's will they/won't they neocloud ambitions' — Underperform, PT US$67 reiterated (close US$99.54). Meta holds US$35.2B of CRWV contracts, 'a little over a third' of backlog; +~US$14B MSFT → nearly half of backlog from customers who will be full competitors at renewal. Meta footprint ~20 GW today + ~14 GW coming (est. IT load, owned+leased). Contracts tight/hard to churn → no immediate financial/debt risk, but 'extremely consistent' with the Situationships thesis; 'business model will be unsustainable' (Bernstein Quick Take, 2026-07-01). |
 | 07-01 | Citi Tech Research replay (full transcript) | demand | mixed | Beyond the summary row above: Radke — likelihood of another Meta deal with CRWV/Nebius 'virtually zero, at least for the near term'; Nebius has similar dollar Meta exposure. Offset from a recent Radke/Rollins DC tour (incl. CRWV New Jersey): CRWV still has 'a good amount of 2027 capacity to sell,' allocated to the highest price. Terry: spot is only ~3-5% of the total market; 'no such thing as a dark GPU'; hyperscaler cash-on-cash ~29% in both Q4 and Q1 (Citi replay call, 2026-07-01). |
 | 07-01 | Bernstein · Madison/Gautam | supply | mixed | US$/MW analysis across AI infra and cloud names: CIFR and WULF stand out on leasing margins; IREN shows strong margins from vertically-integrated landlord economics but lags CRWV and other cloud names on scale/enterprise build — CRWV positioned as the scale/enterprise-build leader among the comparison set (Bernstein, 2026-07-01). |
+| 07-02 | Rothschild & Co · Rowan Adley (TMT Daily) | valuation | bear | **Meta-Compute selloff — CRWV −14% on the day** (vs META +8.8%, semis −6.3%, neoclouds −8% as a group, NBIS −17%; Software +3% the degrossing winner). The bearish read driving the move: if Meta has genuine excess capacity to resell, the whole ecosystem may, implying capex run-rate cuts — direct de-rating pressure on the largest single-customer-concentrated neocloud (Rothschild TMT Daily · Rowan Adley, 2026-07-02). |
 
 **Quarter synthesis:** the debate moved off demand (consensus: sold out, Cantor sees an RPO beat + Anthropic) to the *quality* of earnings and the capital structure — Bernstein attacks the AOI guide as unhittable and fixed debt as a disadvantage vs hyperscalers, while NVDA doubles down (+$2B) and the Vera Rubin ramp becomes the new execution risk. Layered on top, Barron's mainstream-press read (05-18, 06-01) adds a recurring-insider-selling data point — 349,000 shares / $44.372M the week of 05-11/15, then ~$1.9M more from two board members on 06-01 as the stock "jumped 45%" — alongside its own restatement of the hard numbers (record $740M net loss, $99.4B backlog/$21B Meta deal, $31–35B debt-funded capex). None of it is thesis-changing on its own, but the pattern across two consecutive months is worth tracking alongside the widening loss. **New into July:** Meta's reported "Meta Compute" pivot (Bloomberg, via Barclays 2026-07-01) reframes the largest known single-customer relationship — Citi sizes ~1/3 of backlog as Meta-tied and reads the pivot as making further Meta-CRWV deals unlikely, a fresh bear signal for neoclouds broadly; Barclays' own stance stays middle-of-the-road (EW, PT $120) rather than turning bearish outright. Watch whether this is corroborated by other desks or fades as speculative Bloomberg-sourced reporting.
 

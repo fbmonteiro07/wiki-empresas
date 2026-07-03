@@ -19,5 +19,5 @@ _Generated 2026-07-02 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wi
 
 | Ticker | Metric | Δ | Thesis |
 |---|---|--:|---|
-| COHR | EPS 2027 | +99% | InP chokepoint in AI interconnect; NVIDIA stake + CPO deal; bear is relative vs LITE. |
+| COHR | EPS 2027 | +97% | InP chokepoint in AI interconnect; NVIDIA stake + CPO deal; bear is relative vs LITE. |
 | LITE | EPS 2027 | +28% | US photonics pure-play (rev +90%); demand isn't the question, supply/execution is. |
