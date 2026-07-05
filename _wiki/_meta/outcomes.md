@@ -8,6 +8,8 @@ Format (ticker + the catalyst date, then the verdict):
 
 Add lines here after each catalyst resolves. Newest first.
 
+- CRWD 2026-07-02 — neutral — 4-for-1 stock split executed as scheduled (effective 07-02, after 07-01 close); mechanical ~$760 pre-split → ~$190 post-split rebase, broker PTs re-based (Barclays $169). No fundamental change; the seat-reset/valuation (33x EV/sales) debate is the real driver.
+- IFX 2026-07-01 — neutral — re-org into 3 divisions (Automotive / Power Systems / Edge Systems) took effect as scheduled; new segment reporting begins with the FY3Q26 print (5 Aug). Structural/reporting change only — no fundamental or guidance impact.
 - CEG 2026-06-30 — neutral — Calpine lockup (25M shares) expired as scheduled; $5B buyback in place to absorb supply — watch flow/price action into the Aug Q2 print for the verdict.
 - IFX 2026-06-29 — neutral — Adam White fireside occurred: CPU/GPU compute ratio converging 8:1→~1:1 expands CPU power-mgmt TAM (IFX ~30-40% share); demand >> supply, Dresden Module 4 opening (BofA fireside, 2026-06-29).
 - NVDA 2026-06-24 — neutral — stockholder meeting held + $20B+ benchmark HG bond (first in ~5 yrs) priced — read as AI-capex confidence signal; no new disclosures flagged.

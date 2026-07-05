@@ -1,6 +1,6 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-07-03 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-07-04 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
 ## 📅 Upcoming (6)
 
@@ -13,19 +13,20 @@ _Generated 2026-07-03 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-08-31 | TXN | **CFO transition:** Rafael Lizardi out 2026-08-01 → **Julie Knecht** (CAO, 25-yr veteran), advisory through 2026-08-31 (DB/Seymore, briefing 2026-06-03). |
 | 2026-09-16 | ON | **2026-09-16 — onsemi Analyst Day** (Citi exp. ~Sep 13 print first) — the key event; watch for a raised long-term target model + SiC/800V framing (Citi, briefing 2026-06-15). |
 
-## ⏰ Passed — need a post-mortem (2)
+## ⏰ Passed — need a post-mortem (0)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-07-02 | CRWD | **4-for-1 stock split** effective 2026-07-02 — executes after market close 2026-07-01; stock ~$760/share pre-split implies ~$190-200/share post-split (Rothschild & Co Redburn, 2026-07-01). |
-| 2026-07-01 | IFX | **2026-07-01 — re-org into 3 divisions** (Automotive / Power Systems / Edge Systems) — new segment reporting. |
+| _none_ | | |
 
-## ✅ Resolved (14)
+## ✅ Resolved (16)
 
 | Date | Ticker | Verdict |
 |---|---|---|
+| 2026-07-02 | CRWD | neutral — 4-for-1 stock split executed as scheduled (effective 07-02, after 07-01 close); mechanical ~$760 pre-split → ~$190 post-split rebase, broker PTs re-based (Barclays $169). No fundamental change; the seat-reset/valuation (33x EV/sales) debate is the real driver. |
+| 2026-07-01 | IFX | neutral — re-org into 3 divisions (Automotive / Power Systems / Edge Systems) took effect as scheduled; new segment reporting begins with the FY3Q26 print (5 Aug). Structural/reporting change only — no fundamental or guidance impact. |
 | 2026-06-30 | CEG | neutral — Calpine lockup (25M shares) expired as scheduled; $5B buyback in place to absorb supply — watch flow/price action into the Aug Q2 print for the verdict. |
 | 2026-06-29 | IFX | neutral — Adam White fireside occurred: CPU/GPU compute ratio converging 8:1→~1:1 expands CPU power-mgmt TAM (IFX ~30-40% share); demand >> supply, Dresden Module 4 opening (BofA fireside, 2026-06-29). |
 | 2026-06-24 | NVDA | neutral — stockholder meeting held + $20B+ benchmark HG bond (first in ~5 yrs) priced — read as AI-capex confidence signal; no new disclosures flagged. |
