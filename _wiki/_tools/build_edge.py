@@ -71,8 +71,9 @@ def latest_recon():
 def curated_diverges(rf):
     """Parse the 'DIVERGES' table from the latest reconciliation file."""
     md = read(rf)
-    # isolate the section between '## Where the new data DIVERGES' and the next '##'
-    m = re.search(r"##\s*Where the new data DIVERGES.*?(?=\n##\s)", md, re.S | re.I)
+    # isolate the DIVERGES section — match any header variant ("Where the new data DIVERGES",
+    # "DIVERGES (the alpha)", "DIVERGES (potential alpha)", …) up to the next '##' or EOF.
+    m = re.search(r"##\s*[^\n]*DIVERGES[^\n]*.*?(?=\n##\s|\Z)", md, re.S | re.I)
     if not m:
         return []
     header, rows = parse_md_table(m.group(0))
