@@ -17,17 +17,18 @@ _Generated 2026-07-06 · the standing view of where our model and the curated re
 | NVDA | EPS | 2027 | 15.44 | 12.90 | +20% |
 | NVDA | Revenue $bn | 2027 | 661.00 | 559.80 | +18% |
 
-## Curated divergences — latest reconciliation (`reconciliation-2026-07-02.md`)
+## Curated divergences — latest reconciliation (`reconciliation-2026-07-06.md`)
 
 | Name | New datapoint | Read (the edge) |
 |---|---|---|
-| MEDIATEK | UBS **Key Call Buy, PT NT$1,800 → NT$6,500** (3.6×); TPU sales US$18/35bn 2027/28E; TPU design-service share 9%→38% 2026/27E; Cloud-ASIC EPS NT$111/219; new drivers ~83% of 2028E rev vs ~40% 2023 (UBS "Sector Keys", 07-02) | **Biggest single move in the batch.** The bull case is now "MediaTek = the #2 merchant TPU ASIC vendor." Stock +203% YTD already prices much of it; the debate is share durability vs Broadcom (which still ships 91%/62% in 26/27E). Watch for a house model init. |
-| AVGO | UBS: Broadcom TPU **ship share 91% → 62%** 2026→27E as MediaTek takes 9%→38%; Google moving front-end TPU design in-house (UBS, 07-02) | **Share-cede risk to the AVGO 2028 EPS.** Not a today problem (units still grow), but the mix shift caps the TPU-driven upside. Bridge the house 2028 vs the 62%-and-falling share path. |
-| META | SemiAnalysis: **>5GW contracted across Cloud & Colo in 1H26** (excl self-build), 2.5GW under construction in two campuses, 2027 capex "shockingly high," ~$10B Anthropic-type deal in talks (SemiAnalysis "Meta Compute", 07-02) | **Capex-upside / FCF-downside tension.** If Meta contracts >5GW in H1 alone and accelerates self-build, the house 2027 FCF looks high. Stress-test the FCF line against a higher 2027 capex. |
-| ANTHROPIC(private) | SemiAnalysis: **+$21B net-new ARR to ~$30B** (from ~$9B), inference GM **mid-60s** (from ~38% 2025, −94% 2024), OI-profitable in 2Q ex-SBC, >$100B ARR potential by year-end (SemiAnalysis "Bedrock Mix", 05-27) | **The engine behind the AWS margin story.** The GM ramp (38%→mid-60s) is the reconciling variable — it's what lets Bedrock/Claude lift AWS EBIT +213bp. Verify the prior ARR anchor on the page; if stale, this is a step-change. |
-| SKHYNIX/SAMSUNG | MS Korea: SK hynix **+KRW1,000tn** AI-DC capex (nearly doubled commitment); Samsung extended chip/HBM plan; Korea "Three Mega Projects" ~KRW2,000tn/$1.5tn (MS "S. Korea Industrial Strategy", 07-01) | **Scope divergence across brokers on one announcement** — flagged on-page, not reconciled to a single number. The signal is the capex-commitment direction, not the headline size. |
+| KLAC | GS Neutral, **PT $230** / norm EPS **$6.50** (35x), CY26 EPS **8% below Street** (07-05) | **⚠ Data-integrity flag, not a real Street-low.** GS's $230=35×$6.50 is internally consistent but on a wildly different per-share base than the page's UBS figures and vs where KLA trades (~$1,000+). Almost certainly a **split-adjusted / normalized basis** (or extraction convention) mismatch. Logged as-printed; **needs human verification before any comp use** — do NOT treat $230 as a genuine target cut. Separately, GS holds **Neutral while CY26 EPS 8% below Street** → genuine relative-caution call (WFE mix skewed to DRAM, low inspection/metrology intensity). |
+| SKHYNIX | UBS Buy **KRW 3.20m** (raised fr 3.00m, 07-03) vs **Bernstein OP KRW 1.15m** (07-06) | **UBS ≈ 2.8× Bernstein** on nearly the same date. Pure methodology gap: UBS earnings-power/upcycle framing vs Bernstein **1.5× 2-yr-fwd BVPS** book multiple. Real debate on how to value a peak-cycle Korean memory name — track which frame the market pays. (Bernstein garbled summary line "KR 3,300,000" excluded.) |
+| SAMSUNG | UBS "Key Call" Buy **KRW 550k** (fr 400k, 07-03) vs **Bernstein OP KRW 225k** common (07-06) | **UBS ≈ 2.4× Bernstein.** Same UBS-earnings-power vs Bernstein-1.6×-BVPS split as SK Hynix. (Bernstein garbled "KRW 440,000" excluded.) |
+| MU | UBS Buy **$1,625** (07-03) vs **Bernstein OP $1,300** (07-06) | **UBS ~25% above Bernstein**, adjacent dates. Both bullish; magnitude gap = how much peak-DRAM upcycle each capitalizes. |
+| WDC | GS **Neutral**, PT **$650 (fr $400, +63%)** (07-05) | **Rating-vs-PT tension**: +63% PT while rating held Neutral, GS explicitly prefers Buy-rated STX to take near-term share. Bullish HDD tape (WDC +240% YTD vs SOXX +103%) but GS not chasing — relative-value caution flag. |
+| ASML | Bernstein OP **PT €2,300 (fr €1,700, +35%)**, EPS basis €49.2, P/E 40x; EUV units **91/113** '27/'28 (07-06) | Bernstein's big topline/PT raise runs **in the same direction as (and is corroborated by) the house's well-above-consensus EPS**. Flag as DIVERGES-vs-Street (house + Bernstein both materially above cons) — this is the standing ASML edge, now reinforced. |
 
-## Consensus PT vs spot — live pull in `reconciliation-2026-07-02.md` (upside ranked)
+## Consensus PT vs spot — live pull in `reconciliation-2026-07-06.md` (upside ranked)
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|
