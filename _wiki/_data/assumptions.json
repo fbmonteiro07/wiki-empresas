@@ -106,18 +106,18 @@
   "nvda-units-gw": {
    "title": "NVDA GPU units / GW shipped per year",
    "definition": "NVDA accelerator unit shipments and implied GW/yr — distinguish GPU units, Vera standalone CPU, Vera-Rubin racks.",
-   "canonical": "GPU units: 6.2M 2026 -> 8.9M 2027 -> 9.9M 2028 (JPM); Fubon '10M+ in 2027' consistent. Racks: 54.5k-62k NVL72 2027F (Nomura). Capstone GW frame: ~16 GW/yr sold 2026 -> ~25 GW 2027 (house, NVDA page 2026-06-17) — the bottoms-up cross-check vs JPM units.",
+   "canonical": "GPU units: 6.2M 2025 -> 8.9M 2026E (+39%) -> 9.9M 2027E (JPM); Fubon '10M+ in 2027' consistent with JPM's 9.9M 2027E. Racks: 54.5k-62k NVL72 2027F (Nomura). Capstone GW frame: ~16 GW/yr sold 2026 -> ~25 GW 2027 (house, NVDA page 2026-06-17) — the bottoms-up cross-check vs JPM units. [Year labels corrected 2026-07-06 — a prior version showed 6.2M as 2026, shifted one year vs the JPM source quoted in NVDA.md.]",
    "scope_note": "Vera standalone CPU (500k 2026 -> 3M 2027 JPM; 5.75M units 2027 to ASE FoCoS per MS) is NOT the same series as Vera-Rubin racks (~2.0-2.2M units 2026, cut from 2.8-2.9M on HBM4 issues).",
    "patterns": ["[6-9]\\.\\dM\\s?(GPU|unit)", "10M\\+?\\s?GPU", "16\\s?GW.{0,20}25\\s?GW", "NVL72\\s?racks?"],
    "variants": [
-    {"value": "GPU units 6.2M 2026 -> 8.9M 2027 -> 9.9M 2028", "source": "JPM AI Capex 2.0", "date": "2026-06-16", "scope": "GPU units", "cited_in": ["themes/custom-asic-tpu.md"]},
+    {"value": "GPU units 6.2M 2025 -> 8.9M 2026E (+39%) -> 9.9M 2027E; total accelerators 10.1M -> 16.3M -> 23.3M", "source": "JPM AI Capex 2.0 (per NVDA.md sec. 'Per-GW economics')", "date": "2026-06-16", "scope": "GPU units", "cited_in": ["themes/custom-asic-tpu.md"]},
     {"value": "could ship 10M+ GPUs in 2027", "source": "Fubon", "date": "2026-06-05", "scope": "GPU units", "cited_in": ["NVDA.md"]},
     {"value": "~16 GW sold/yr 2026 -> ~25 GW 2027 (house estimate)", "source": "Capstone model", "date": "2026-06-17", "scope": "GW shipped (house)", "cited_in": ["NVDA.md"]},
     {"value": "54.5k -> 62k NVL72 racks 2027F", "source": "Nomura", "date": "2026-06-30", "scope": "racks", "cited_in": ["NVDA.md"]},
     {"value": "Vera CPU 500k 2026 -> 3M 2027; MS: 5.75M units 2027 (ASE FoCoS)", "source": "JPM Jay / MS Asia AI Supply Chain", "date": "2026-06-23", "scope": "Vera standalone CPU", "cited_in": ["themes/hbm-memory.md", "themes/cowos-packaging.md"]}
    ],
    "status": "consistent",
-   "debate": "House 25 GW 2027 vs JPM 8.9M units — reconcile via W/unit assumptions when the Capstone GW model updates."
+   "debate": "House 25 GW 2027 vs JPM 9.9M units 2027E — reconcile via W/unit assumptions when the Capstone GW model updates. AI Model.xlsx (2026-07-02 save) has 7.6M CY26 / 7.7M CY27 — BELOW JPM's 8.9M/9.9M; CY27 flatness is the open question."
   },
   "cowos-allocation": {
    "title": "CoWoS capacity and NVDA allocation share",

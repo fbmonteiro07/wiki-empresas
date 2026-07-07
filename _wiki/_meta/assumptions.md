@@ -193,19 +193,19 @@ _HBM wafer capacity, $/GB or $/Gb pricing (state which), allocation priority, so
 
 _NVDA accelerator unit shipments and implied GW/yr — distinguish GPU units, Vera standalone CPU, Vera-Rubin racks._
 
-**Canonical:** GPU units: 6.2M 2026 -> 8.9M 2027 -> 9.9M 2028 (JPM); Fubon '10M+ in 2027' consistent. Racks: 54.5k-62k NVL72 2027F (Nomura). Capstone GW frame: ~16 GW/yr sold 2026 -> ~25 GW 2027 (house, NVDA page 2026-06-17) — the bottoms-up cross-check vs JPM units.
+**Canonical:** GPU units: 6.2M 2025 -> 8.9M 2026E (+39%) -> 9.9M 2027E (JPM); Fubon '10M+ in 2027' consistent with JPM's 9.9M 2027E. Racks: 54.5k-62k NVL72 2027F (Nomura). Capstone GW frame: ~16 GW/yr sold 2026 -> ~25 GW 2027 (house, NVDA page 2026-06-17) — the bottoms-up cross-check vs JPM units. [Year labels corrected 2026-07-06 — a prior version showed 6.2M as 2026, shifted one year vs the JPM source quoted in NVDA.md.]
 
 > ⚠️ **Scope:** Vera standalone CPU (500k 2026 -> 3M 2027 JPM; 5.75M units 2027 to ASE FoCoS per MS) is NOT the same series as Vera-Rubin racks (~2.0-2.2M units 2026, cut from 2.8-2.9M on HBM4 issues).
 
 | Value | Source | Date | Scope |
 |---|---|---|---|
-| GPU units 6.2M 2026 -> 8.9M 2027 -> 9.9M 2028 | JPM AI Capex 2.0 | 2026-06-16 | GPU units |
+| GPU units 6.2M 2025 -> 8.9M 2026E (+39%) -> 9.9M 2027E; total accelerators 10.1M -> 16.3M -> 23.3M | JPM AI Capex 2.0 (per NVDA.md sec. 'Per-GW economics') | 2026-06-16 | GPU units |
 | could ship 10M+ GPUs in 2027 | Fubon | 2026-06-05 | GPU units |
 | ~16 GW sold/yr 2026 -> ~25 GW 2027 (house estimate) | Capstone model | 2026-06-17 | GW shipped (house) |
 | 54.5k -> 62k NVL72 racks 2027F | Nomura | 2026-06-30 | racks |
 | Vera CPU 500k 2026 -> 3M 2027; MS: 5.75M units 2027 (ASE FoCoS) | JPM Jay / MS Asia AI Supply Chain | 2026-06-23 | Vera standalone CPU |
 
-**Debate:** House 25 GW 2027 vs JPM 8.9M units — reconcile via W/unit assumptions when the Capstone GW model updates.
+**Debate:** House 25 GW 2027 vs JPM 9.9M units 2027E — reconcile via W/unit assumptions when the Capstone GW model updates. AI Model.xlsx (2026-07-02 save) has 7.6M CY26 / 7.7M CY27 — BELOW JPM's 8.9M/9.9M; CY27 flatness is the open question.
 
 **Unreconciled sightings** (pages matching this metric, not in the ledger's `cited_in`):
 - `AVGO.md` — …05-29):** Broadcom's **TPU order book ≈ 6.5M units for next year** (up from a prior ~5.5-6M check); ships ~$2…
@@ -238,7 +238,7 @@ _NVDA's share of TSMC CoWoS capacity; TPU-substrate splits within Google._
 - `INTC.md` — …execution holes*: EMIB yield well below CoWoS, long-term server-CPU share erosion (UBS) against Redburn's contrarian read (60% in 202…
 - `MEDIATEK.md` — …ed TP, citing "TPU upside."** Its 2027F CoWoS-allocation work argues **Google's TPU CoWoS share rises to 26% in 2027 (from 23% in 2026)** — nearly doubling…
 - `NVDA.md` — …06-05) checks: NVDA still ~50%+ of TSMC CoWoS allocation in 2027, total NVDA GPU production "could reach 10mn+ in…
-- `TSM.md` — …~$170bn/'30, ~$44bn for TSMC · MS Chan: CoWoS 200kwpm/'27 (~60% YoY XPU); CPU becomes a material 2.5D consumer | **✓ confir…
+- `TSM.md` — …~$170bn/'30, ~$44bn for TSMC · MS Chan: CoWoS 200kwpm/'27 (~60% YoY XPU); CPU becomes a material 2.5D consumer · **JPM Goku…
 
 ## AI TAM by 2030  `ai-tam-2030`
 
