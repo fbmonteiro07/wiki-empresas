@@ -17,18 +17,20 @@ _Generated 2026-07-07 · the standing view of where our model and the curated re
 | NVDA | EPS | 2027 | 15.44 | 12.90 | +20% |
 | NVDA | Revenue $bn | 2027 | 661.00 | 559.80 | +18% |
 
-## Curated divergences — latest reconciliation (`reconciliation-2026-07-06.md`)
+## Curated divergences — latest reconciliation (`reconciliation-2026-07-07.md`)
 
 | Name | New datapoint | Read (the edge) |
 |---|---|---|
-| KLAC | GS Neutral, **PT $230** / norm EPS **$6.50** (35x), CY26 EPS **8% below Street** (07-05) | **⚠ Data-integrity flag, not a real Street-low.** GS's $230=35×$6.50 is internally consistent but on a wildly different per-share base than the page's UBS figures and vs where KLA trades (~$1,000+). Almost certainly a **split-adjusted / normalized basis** (or extraction convention) mismatch. Logged as-printed; **needs human verification before any comp use** — do NOT treat $230 as a genuine target cut. Separately, GS holds **Neutral while CY26 EPS 8% below Street** → genuine relative-caution call (WFE mix skewed to DRAM, low inspection/metrology intensity). |
-| SKHYNIX | UBS Buy **KRW 3.20m** (raised fr 3.00m, 07-03) vs **Bernstein OP KRW 1.15m** (07-06) | **UBS ≈ 2.8× Bernstein** on nearly the same date. Pure methodology gap: UBS earnings-power/upcycle framing vs Bernstein **1.5× 2-yr-fwd BVPS** book multiple. Real debate on how to value a peak-cycle Korean memory name — track which frame the market pays. (Bernstein garbled summary line "KR 3,300,000" excluded.) |
-| SAMSUNG | UBS "Key Call" Buy **KRW 550k** (fr 400k, 07-03) vs **Bernstein OP KRW 225k** common (07-06) | **UBS ≈ 2.4× Bernstein.** Same UBS-earnings-power vs Bernstein-1.6×-BVPS split as SK Hynix. (Bernstein garbled "KRW 440,000" excluded.) |
-| MU | UBS Buy **$1,625** (07-03) vs **Bernstein OP $1,300** (07-06) | **UBS ~25% above Bernstein**, adjacent dates. Both bullish; magnitude gap = how much peak-DRAM upcycle each capitalizes. |
-| WDC | GS **Neutral**, PT **$650 (fr $400, +63%)** (07-05) | **Rating-vs-PT tension**: +63% PT while rating held Neutral, GS explicitly prefers Buy-rated STX to take near-term share. Bullish HDD tape (WDC +240% YTD vs SOXX +103%) but GS not chasing — relative-value caution flag. |
-| ASML | Bernstein OP **PT €2,300 (fr €1,700, +35%)**, EPS basis €49.2, P/E 40x; EUV units **91/113** '27/'28 (07-06) | Bernstein's big topline/PT raise runs **in the same direction as (and is corroborated by) the house's well-above-consensus EPS**. Flag as DIVERGES-vs-Street (house + Bernstein both materially above cons) — this is the standing ASML edge, now reinforced. |
+| GOOG | Capex 2027 | Both house AND BofA well above Street on '27 Google capex. BofA +$46bn (+19%) vs cons; **house $310bn is Street-highest, +$66bn (+27%) vs cons**. Consensus has not caught up to the post-June-3-capital-raise capex step-up. Edge: long Google capex-beneficiary read (TPU/semicap/power); the capex line itself is a headwind to near-term GOOG FCF (house 2027 FCF **−$55bn**). |
+| GOOG | Capex 2026 | BofA modestly above cons; house slightly below cons. Minor — the '27 gap is the story. |
+| META | Capex 2027 | BofA +$23bn (+14%) vs cons and +$15bn vs house. House sits between cons and BofA. Street still catching up to Meta's AI-capacity build. |
+| META | Capex 2026 | BofA +$10bn above both cons and house. House ≈ cons; BofA the high mark. |
+| META | EPS 2027 | Not from the BofA note, but flagged: **house 2027 EPS $38.24 is ~14% BELOW consensus $44.36** — the heavier house capex/depreciation drag. The capex-up datapoints reinforce the house-below-Street-EPS setup (more D&A). Watch on any 2Q print. |
+| INTC | Price target | UBS PT **+19% above the consensus median** and above spot ($110.39), yet rating stays **Neutral** — a rating-vs-PT tension (consensus median $102 sits *below* spot, i.e. Street sees downside; UBS sees upside but won't rate it Buy). The move is a **huge upward revision from UBS's own $40** (Dec-2025), driven by the Terafab optionality (INTC as Terafab "knowledge owner"/tool-slot broker), not core fundamentals. Optionality re-rating, not an earnings call. |
+| ASML | EPS 2027 | MS FY27 EPS **+10% above consensus €43.00**, driven by lifting EUV unit ests to **92** (from 90) — SK Hynix now 6 tools/qtr vs 3. Below the Street-high EPS bulls (Bernstein €56.7 25-28E, JPM +35% vs cons) already on the ASML/semicap pages but a clean above-cons mark. FY26 (€32.00 vs cons €31.80) and FY28 (€52.19 vs cons €52.07) are in line. |
+| ANTHROPIC | $/GW capacity | vs prior wiki marks: Patel ~$25bn/GW; BG2 ~$22–23bn/GW/yr; Trainium <$10bn/GW. BofA's $40–50bn/GW is a **high-end mark** — reflects specialized/leased AI capacity economics, not build cost. Directionally supports the "capacity-deal revenue/GW >> build cost/GW" thesis on the hyperscaler pages (AWS rev/GW $10.6bn, Google Cloud $15.7bn — the deals imply large upside). Reconciled vs prior wiki only (no BBG/house). |
 
-## Consensus PT vs spot — live pull in `reconciliation-2026-07-06.md` (upside ranked)
+## Consensus PT vs spot — live pull in `reconciliation-2026-07-07.md` (upside ranked)
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|

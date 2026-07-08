@@ -2,7 +2,7 @@
  "generated": "2026-07-07",
  "counts": {
   "nodes": 153,
-  "edges": 1139
+  "edges": 1143
  },
  "nodes": [
   {
@@ -146,7 +146,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-07-05"
+   "last_chg": "2026-07-07"
   },
   {
    "id": "AMD",
@@ -176,7 +176,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-07-02"
+   "last_chg": "2026-07-07"
   },
   {
    "id": "ANET",
@@ -606,7 +606,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-07-06"
+   "last_chg": "2026-07-07"
   },
   {
    "id": "HPE",
@@ -681,7 +681,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-07-05"
+   "last_chg": "2026-07-07"
   },
   {
    "id": "LITE",
@@ -711,7 +711,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-07-05"
+   "last_chg": "2026-07-07"
   },
   {
    "id": "MCHP",
@@ -755,7 +755,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-07-06"
+   "last_chg": "2026-07-07"
   },
   {
    "id": "MP",
@@ -1344,7 +1344,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-07-06"
+   "last_chg": "2026-07-07"
   },
   {
    "id": "TXN",
@@ -3070,6 +3070,12 @@
   },
   {
    "u": "theme:ai-datacenter-power",
+   "v": "AMZN",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:ai-datacenter-power",
    "v": "CEG",
    "type": "exposes",
    "label": ""
@@ -3077,6 +3083,18 @@
   {
    "u": "theme:ai-datacenter-power",
    "v": "GEV",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:ai-datacenter-power",
+   "v": "GOOG",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:ai-datacenter-power",
+   "v": "META",
    "type": "exposes",
    "label": ""
   },
@@ -3407,6 +3425,12 @@
   {
    "u": "theme:cxl-memory-fabric",
    "v": "STX",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:hbm-memory",
+   "v": "ASML",
    "type": "exposes",
    "label": ""
   },
@@ -4345,7 +4369,7 @@
    "v": "AMAT",
    "type": "covers",
    "label": "",
-   "w": 104
+   "w": 119
   },
   {
    "u": "broker:JPM",
@@ -4520,7 +4544,7 @@
    "v": "AMZN",
    "type": "covers",
    "label": "",
-   "w": 48
+   "w": 57
   },
   {
    "u": "broker:UBS",
@@ -4646,7 +4670,7 @@
    "v": "ANTHROPIC",
    "type": "covers",
    "label": "",
-   "w": 14
+   "w": 25
   },
   {
    "u": "broker:UBS",
@@ -4723,7 +4747,7 @@
    "v": "ANTHROPIC",
    "type": "covers",
    "label": "",
-   "w": 24
+   "w": 25
   },
   {
    "u": "broker:Barrons",
@@ -4912,7 +4936,7 @@
    "v": "ASML",
    "type": "covers",
    "label": "",
-   "w": 7
+   "w": 10
   },
   {
    "u": "broker:Bernstein",
@@ -6032,7 +6056,7 @@
    "v": "GOOG",
    "type": "covers",
    "label": "",
-   "w": 15
+   "w": 18
   },
   {
    "u": "broker:UBS",
@@ -6284,7 +6308,7 @@
    "v": "INTC",
    "type": "covers",
    "label": "",
-   "w": 48
+   "w": 80
   },
   {
    "u": "broker:JPM",
@@ -6445,7 +6469,7 @@
    "v": "KLAC",
    "type": "covers",
    "label": "",
-   "w": 36
+   "w": 51
   },
   {
    "u": "broker:JPM",
@@ -6578,7 +6602,7 @@
    "v": "LRCX",
    "type": "covers",
    "label": "",
-   "w": 37
+   "w": 53
   },
   {
    "u": "broker:JPM",
@@ -6774,7 +6798,7 @@
    "v": "META",
    "type": "covers",
    "label": "",
-   "w": 34
+   "w": 46
   },
   {
    "u": "broker:UBS",
@@ -6795,7 +6819,7 @@
    "v": "META",
    "type": "covers",
    "label": "",
-   "w": 23
+   "w": 24
   },
   {
    "u": "broker:Jefferies",
@@ -6809,7 +6833,7 @@
    "v": "META",
    "type": "covers",
    "label": "",
-   "w": 22
+   "w": 23
   },
   {
    "u": "broker:Barclays",
@@ -7061,7 +7085,7 @@
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 92
+   "w": 106
   },
   {
    "u": "broker:JPM",
@@ -7341,7 +7365,7 @@
    "v": "NVDA",
    "type": "covers",
    "label": "",
-   "w": 42
+   "w": 43
   },
   {
    "u": "broker:MS",
@@ -7439,7 +7463,7 @@
    "v": "NVDA",
    "type": "covers",
    "label": "",
-   "w": 65
+   "w": 72
   },
   {
    "u": "broker:Barrons",
@@ -7453,7 +7477,7 @@
    "v": "NVDA",
    "type": "covers",
    "label": "",
-   "w": 21
+   "w": 23
   },
   {
    "u": "broker:BofA",
@@ -8055,7 +8079,7 @@
    "v": "SAMSUNG",
    "type": "covers",
    "label": "",
-   "w": 21
+   "w": 33
   },
   {
    "u": "broker:JPM",
@@ -8209,7 +8233,7 @@
    "v": "SKHYNIX",
    "type": "covers",
    "label": "",
-   "w": 36
+   "w": 48
   },
   {
    "u": "broker:JPM",
@@ -8930,7 +8954,7 @@
    "v": "TSM",
    "type": "covers",
    "label": "",
-   "w": 62
+   "w": 74
   },
   {
    "u": "broker:JPM",
