@@ -2,10 +2,11 @@
 
 _Generated 2026-07-09 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (7)
+## 📅 Upcoming (8)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
+| 2026-07-10 | SKHYNIX | **US Nasdaq ADR listing — mechanics & premium/flow view (Morgan Stanley (S&T) "SK Hynix ADR Listing", 2026-07-08).** MS Equity S&T (Pankaj Mataney, Asia Platform Sales & QDS — *note: S&T commentary, n |
 | 2026-07-10 | SKHYNIX | **US Nasdaq listing — expected Friday 2026-07-10** (fresh capital raise on top of the KRX:000660 line); investor reception is a read on both the IPO-market strength and the US-investor bid for the nam |
 | 2026-07-22 | TXN | **Q2 FY26 print — call ~2026-07-22** (guide $5.0–5.4bn / EPS $1.77–2.05); first call with new CFO **Julie Knecht** (DB, briefing 2026-06-03). |
 | 2026-07-23 | DISCO | **Q1 FYE-Mar-2027 print — 2026-07-23** (next scheduled, per Quartr). Watch vs the +18% rev / +20%+ OP guide and the seasonal QoQ dip. |

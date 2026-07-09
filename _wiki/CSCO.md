@@ -92,6 +92,7 @@ Cisco is the incumbent enterprise/SP networking franchise re-rating into an AI-i
 
 | Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
+| 07-09 | MS · Terence Tsui / Meta Marshall ("Face-off: Nokia vs Ciena") | competicao | mixed | Read-through from an MS optical face-off centered on Nokia (OW) vs Ciena (EW): MS flags **Cisco competing more with Nokia in the multi-rail market in coming years**, and lists Cisco (with HPE/Juniper, Lumentum, Coherent) among the optical-networking competitor set — pluggables + optical competitors like Cisco cited as a risk to industry earnings power. Comms-infra TAM $600bn'25→$1.1T'26→$1.7T'30 (Dell'Oro). Light read-through; CSCO not the subject. (MS "Face-off: Comparing Nokia and Ciena", 2026-07-09) |
 | 06-25 | BTG · LightCounting call | product | mixed | Expert (Bob): **Cisco and NVDA work together** — Cisco supports **Spectrum X** both in Silicon One systems and by designing around NVDA Spectrum X silicon, serving the traditional enterprise customer that needs Ethernet while Ultra Ethernet is not yet mature. In coherent/scale-across (800ZR), **Cisco-Acacia** is one of the captives supplying modules (alongside Nokia/Ciena), competing on Ciena's turf in DCI. Cisco-Acacia also wants to enter the **DSP market**. In large-scale switching/AI-networking, Cisco appears "primarily supplying systems" (≠ a merchant-chip vendor like Broadcom). (BTG "LightCounting", 2026-06-25) |
 
 **Quarter synthesis:** the expert flow nuances the "silicon is the moat" framing — in large-scale AI-networking CSCO is seen as a vendor of **systems**, not a merchant chip, and cooperates (rather than competes) with NVDA via Spectrum X; the cleanest confirmed leg is Acacia/coherent in scale-across (DCI), where Cisco-Acacia competes on Ciena's turf and targets the DSP market.
@@ -125,6 +126,7 @@ _Source: CSCO earnings calls (dates above); management commentary, paraphrased._
   - [JPM — Networking recap (2026-05-08)](../relat%C3%B3rios%20bons/2026_05_08_jpm_nw_recap_8_may_2024.html) — networking callbacks (LITE/COHR/ANET).
   - [BofA — CIEN optical supply chain (2026-06-12)](../relat%C3%B3rios%20bons/2026_06_12_cien_baml_supply_chain_12_jun_26.html) — Cisco optics/systems inflection, Silicon One traction.
   - [650 Group — networking research (2026-05-26)](../relat%C3%B3rios%20bons/2026_05_26_650_group_26_05.html) — Silicon One, Tomahawk 6 timing, CPO/copper-at-400G-per-lane.
+  - [MS — Face-off: Comparing Nokia and Ciena (2026-07-09)](../relat%C3%B3rios%20bons/TECHNOLOGY_20260709_0200.html) — read-through: Cisco competing more with Nokia in multi-rail; listed among optical competitors as an earnings-power risk to the optical incumbents.
   - [BTG — LightCounting optics/CPO expert call (2026-06-25)](../relat%C3%B3rios%20bons/BTG_LightCounting_Optics_Expert_Call_2026-06-25.html) — Cisco+NVDA suportam Spectrum X (Silicon One + silício NVDA); Cisco-Acacia captive em 800ZR competindo no DCI e querendo entrar no DSP; Cisco "primariamente sistemas" em switching.
 
 ## Changelog
