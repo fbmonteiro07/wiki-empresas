@@ -1,0 +1,428 @@
+<meta charset="utf-8">
+<title>PM Meeting Flow · Jul 8, 2026</title>
+<style>
+  :root{
+    --ink:#0f172a; --ink2:#334155; --muted:#64748b; --faint:#94a3b8;
+    --line:#e2e8f0; --line2:#cbd5e1; --bg:#f8fafc; --card:#ffffff;
+    --accent:#b45309; --accentbg:#fffbeb;
+    --up:#059669; --upbg:#ecfdf5; --down:#dc2626; --downbg:#fef2f2;
+    --bull:#059669; --bear:#dc2626; --slate:#475569;
+    --blue:#2563eb; --indigo:#6366f1; --amber:#f59e0b; --red:#ef4444; --green:#10b981;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+  .num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum"1}
+  a{color:var(--blue);text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+
+  /* header */
+  header{background:linear-gradient(160deg,#0f172a,#1e293b);color:#fff;padding:26px 0 22px}
+  header .eyebrow{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#facc15;font-weight:700}
+  header h1{margin:6px 0 4px;font-size:27px;font-weight:750;letter-spacing:-.01em}
+  header .sub{color:#cbd5e1;font-size:13.5px;max-width:840px}
+  header .meta{margin-top:12px;font-size:12px;color:#94a3b8}
+  header .meta b{color:#e2e8f0}
+
+  /* sticky nav */
+  nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);}
+  nav .wrap{display:flex;gap:4px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  nav a{color:var(--ink2);font-weight:600;font-size:12.5px;padding:6px 11px;border-radius:7px}
+  nav a:hover{background:var(--bg)}
+  nav .tag{margin-left:auto;color:var(--faint);font-size:11.5px;font-weight:600;align-self:center}
+
+  section{padding:30px 0 8px}
+  .shead{display:flex;align-items:baseline;gap:12px;margin-bottom:4px}
+  .shead .k{font-size:11px;font-weight:800;color:var(--accent);letter-spacing:.12em;
+    background:var(--accentbg);border:1px solid #fde68a;border-radius:6px;padding:2px 8px}
+  .shead h2{margin:0;font-size:20px;font-weight:720;letter-spacing:-.01em}
+  .shead .note{color:var(--muted);font-size:12.5px;margin-left:2px}
+  .lede{color:var(--ink2);font-size:14.5px;margin:10px 0 18px;max-width:910px}
+  .lede b{color:var(--ink)}
+
+  /* stat cards */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:6px 0 18px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:13px 14px}
+  .stat .big{font-size:23px;font-weight:750;letter-spacing:-.02em}
+  .stat .big.dn{color:var(--down)} .stat .big.up{color:var(--up)}
+  .stat .lab{font-size:12px;color:var(--ink2);margin-top:3px;font-weight:600}
+  .stat .src{font-size:11px;color:var(--faint);margin-top:5px}
+
+  .callout{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);
+    border-radius:10px;padding:14px 16px;margin:4px 0 20px}
+  .callout h3{margin:0 0 6px;font-size:14px;font-weight:730}
+  .callout p{margin:6px 0;color:var(--ink2)}
+  .callout .macro{margin-top:10px;padding-top:10px;border-top:1px dashed var(--line2);font-size:13px;color:var(--muted)}
+
+  /* debate cards */
+  .debate{background:var(--card);border:1px solid var(--line);border-radius:13px;
+    padding:0;margin:0 0 16px;overflow:hidden;box-shadow:0 1px 2px rgba(15,23,42,.04)}
+  .debate .top{display:flex;gap:13px;align-items:flex-start;padding:15px 18px 12px;border-bottom:1px solid var(--line)}
+  .debate .no{flex:0 0 auto;width:30px;height:30px;border-radius:8px;background:#0f172a;color:#fff;
+    font-weight:750;font-size:15px;display:flex;align-items:center;justify-content:center}
+  .debate .th{flex:1}
+  .debate .th h3{margin:0;font-size:16.5px;font-weight:720;letter-spacing:-.01em}
+  .debate .q{color:var(--muted);font-size:13px;margin-top:2px}
+  .debate .chip{flex:0 0 auto;font-size:11px;font-weight:700;color:var(--slate);
+    background:var(--bg);border:1px solid var(--line2);border-radius:20px;padding:3px 10px;white-space:nowrap}
+  .bb{display:grid;grid-template-columns:1fr 1fr;gap:0}
+  .bb>div{padding:13px 18px}
+  .bb .bull{border-right:1px solid var(--line)}
+  .col-h{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:7px;display:flex;align-items:center;gap:6px}
+  .col-h.bull{color:var(--bull)} .col-h.bear{color:var(--bear)}
+  .dot{width:8px;height:8px;border-radius:50%}
+  .dot.bull{background:var(--bull)} .dot.bear{background:var(--bear)}
+  .bb ul{margin:0;padding-left:16px}
+  .bb li{margin:5px 0;color:var(--ink2);font-size:12.8px}
+  .bb li b{color:var(--ink)}
+  cite{font-style:normal;color:var(--faint);font-size:11.5px}
+  .foot{display:flex;gap:18px;flex-wrap:wrap;padding:11px 18px;background:var(--bg);border-top:1px solid var(--line);font-size:12.5px}
+  .foot .exp b,.foot .res b{color:var(--ink)}
+  .foot .exp{flex:1;min-width:280px;color:var(--ink2)}
+  .foot .res{flex:1;min-width:280px;color:var(--ink2)}
+  .tk{display:inline-block;font-weight:700;font-size:11.5px;background:#eef2ff;color:#3730a3;
+    border-radius:5px;padding:1px 6px;margin:1px 1px}
+
+  /* charts + tables */
+  .grid2{display:grid;grid-template-columns:1.15fr .85fr;gap:20px;align-items:start}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .panel h3{margin:0 0 3px;font-size:14.5px;font-weight:720}
+  .panel .psub{color:var(--muted);font-size:12px;margin-bottom:10px}
+  .scatter-legend{display:flex;gap:13px;flex-wrap:wrap;font-size:11.5px;color:var(--ink2);margin-top:6px}
+  .scatter-legend span{display:inline-flex;align-items:center;gap:5px}
+  .lg{width:9px;height:9px;border-radius:50%}
+  table{border-collapse:collapse;width:100%;font-size:12.6px}
+  th,td{text-align:right;padding:5px 9px;border-bottom:1px solid var(--line)}
+  th:first-child,td:first-child{text-align:left}
+  thead th{font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:700;border-bottom:1.5px solid var(--line2)}
+  tbody tr:hover{background:var(--bg)}
+  td.t{font-weight:700}
+  td.nm{color:var(--muted);font-size:11.5px;font-weight:500}
+  .pos{color:var(--up);font-weight:600} .neg{color:var(--down);font-weight:600}
+  .twocol{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:6px}
+  .bucket h4{margin:0 0 2px;font-size:13.5px}
+  .bucket .bsub{color:var(--muted);font-size:12px;margin-bottom:8px}
+
+  /* email flow */
+  .rev{width:100%;border-collapse:collapse;font-size:12.6px}
+  .rev th,.rev td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  .rev thead th{font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);border-bottom:1.5px solid var(--line2)}
+  .badge{font-size:10.5px;font-weight:700;border-radius:5px;padding:1px 6px;white-space:nowrap}
+  .badge.up{background:var(--upbg);color:var(--up)} .badge.dn{background:var(--downbg);color:var(--down)}
+  .badge.nt{background:#f1f5f9;color:var(--slate)}
+  .wave{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px 6px;margin-top:16px}
+  .wave .wi{display:flex;gap:12px;padding:9px 12px;border-bottom:1px solid var(--line)}
+  .wave .wi:last-child{border-bottom:0}
+  .wave .wt{flex:0 0 96px;font-weight:750}
+  .wave .wd{flex:1;color:var(--ink2);font-size:12.8px}
+  .wave .wd b{color:var(--ink)}
+
+  footer{margin-top:26px;padding:18px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+  footer code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:11.5px}
+
+  @media (max-width:820px){
+    .stats{grid-template-columns:repeat(2,1fr)} .grid2{grid-template-columns:1fr}
+    .bb{grid-template-columns:1fr} .bb .bull{border-right:0;border-bottom:1px solid var(--line)}
+    .twocol{grid-template-columns:1fr}
+  }
+  @media print{
+    nav{display:none} header{background:#0f172a!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .debate,.panel,.stat,.callout,.wave{break-inside:avoid} body{font-size:11px}
+  }
+</style>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Capstone · US Equities · Meeting flow</div>
+    <h1>State of the tape, the 5 debates, and what's hitting the desk</h1>
+    <div class="sub">Degross, not deterioration — an indiscriminate margin selloff across the AI complex (memory, optics, semis) against fundamentals that remain uniformly positive. The rotation into software and the Hormuz macro overlay are the two new variables.</div>
+    <div class="meta">Prepared for the PM meeting · <b>Jul 8, 2026</b> &nbsp;·&nbsp; Bloomberg comp-sheet <b>asof Jul 8 (10:44)</b>, 36 names &nbsp;·&nbsp; debates from the wiki (edge / catalysts / diff) &nbsp;·&nbsp; emails via the “Company specific Twitter + Sell Side” routine (Jul 8, 09:14)</div>
+  </div>
+</header>
+
+<nav><div class="wrap">
+  <a href="#tape">1 · The tape</a>
+  <a href="#debates">2 · The 5 debates</a>
+  <a href="#var">3 · Moves & drawdown</a>
+  <a href="#flow">4 · Emails & reports</a>
+  <span class="tag">walk the meeting top-to-bottom</span>
+</div></nav>
+
+<!-- ============ 1 · THE TAPE ============ -->
+<section id="tape"><div class="wrap">
+  <div class="shead"><span class="k">01</span><h2>The tape</h2><span class="note">where we're walking into the meeting</span></div>
+  <div class="lede">The SOX is <b>-18.2% off its June high</b> and the momentum factor is down <b>~20% from its peak</b> — the fastest drop in a decade. The epicenter is <b>memory</b> (MU -25% in 7 sessions), but the move is <b>indiscriminate</b> (memory, optics, neocloud and foundry-levered names all down 4–10% together): a signature of <b>margin liquidation / de-grossing</b>, not of earnings.</div>
+
+  <div class="stats">
+    <div class="stat"><div class="big dn num">-18.2%</div><div class="lab">SOX vs. June high</div><div class="src">Bespoke · briefing Jul 8</div></div>
+    <div class="stat"><div class="big dn num">-20%</div><div class="lab">Momentum factor vs. June peak — fastest in 10 years</div><div class="src">UBS TMI · Christina Dwyer · Jul 8</div></div>
+    <div class="stat"><div class="big dn num">-25%</div><div class="lab">MU in 7 sessions — at risk of leaving the $1tn club</div><div class="src">Bespoke · briefing Jul 8</div></div>
+    <div class="stat"><div class="big num">AI -20% / SW +18%</div><div class="lab">This week's rotation (baskets)</div><div class="src">@ParadisLabs · Jul 8</div></div>
+  </div>
+
+  <div class="callout">
+    <h3>The core thesis: “degross, not deterioration”</h3>
+    <p>Every high-conviction semis voice (Serenity, Tae Kim, Paradis) reads the move as forced cross-name liquidation, not a fundamental break. <b>The tell is the indiscriminacy</b> — and the tape itself ($NVDA green while $MU/$LITE/$INTC bleed = “a pod is blowing up,” Tae Kim).</p>
+    <p>Against the prices, the <b>fundamental datapoints are almost all positive</b>: SK Hynix's US$28bn IPO multiple-times oversubscribed + US$51bn new fab; Samsung record operating profit (+19x y/y); HBM $/rack quintupling into Vera Rubin; foundry/packaging demand at <b>130–150% of capacity</b>; TSMC set to guide up (3Q +13% vs. cons. +9%). The bearish friction is <b>narrative</b> (Kyber/Rubin-Ultra) + <b>rotation</b>, not the demand curve.</p>
+    <p class="macro"><b>Macro overlay (the wildcard):</b> Hormuz re-escalation, Iran's oil waiver revoked, Brent back into backwardation with speculative positioning at its <b>net-short of the year</b> and the SPR at a 43-year low → asymmetric upside risk in oil. <b>FOMC minutes today, 2:00pm ET.</b> This is what could turn an orderly degross into a broad risk-off.</p>
+  </div>
+</div></section>
+
+<!-- ============ 2 · THE 5 DEBATES ============ -->
+<section id="debates"><div class="wrap">
+  <div class="shead"><span class="k">02</span><h2>The 5 debates</h2><span class="note">what needs discussing — bull / bear / exposed / what resolves it</span></div>
+  <div class="lede">Selected for cross-company relevance and for being <b>live right now</b>. Every number carries source + date (house rule). The first three are <b>demand/fundamental</b>; the 4th is <b>share</b>; the 5th is <b>regime/positioning</b> — and it's what ties the drawdown to the book.</div>
+  <div id="debates-mount"></div>
+</div></section>
+
+<!-- ============ 3 · MOVES & DRAWDOWN ============ -->
+<section id="var"><div class="wrap">
+  <div class="shead"><span class="k">03</span><h2>Moves & drawdown</h2><span class="note">comp-sheet evidence · 36 names · asof Jul 8</span></div>
+  <div class="lede">The drawdown splits the desk into <b>two buckets</b>. <b>(A) AI leaders de-grossing:</b> still well up on the year but falling hard from recent highs — giving back gains, not a broken thesis. <b>(B) Structural de-rate:</b> names that led in 2024–25 (software, consumer, power) that are down on the year <i>and</i> far from their highs — the funding source for the rotation.</div>
+
+  <div class="grid2">
+    <div class="panel">
+      <h3>YTD × drawdown from 52-wk high</h3>
+      <div class="psub">Top-right = ran up and gave back (AI degross) · Left = down on the year (de-rate). Bubble = |4-wk move|</div>
+      <div id="scatter"></div>
+      <div class="scatter-legend" id="scatter-legend"></div>
+    </div>
+    <div class="panel">
+      <h3>Largest drawdowns from 52-wk high</h3>
+      <div class="psub">% below the 52-week high — the comp-sheet's “drawdown” metric</div>
+      <div id="dd-table"></div>
+    </div>
+  </div>
+
+  <div class="twocol">
+    <div class="panel bucket">
+      <h4>Biggest YTD gainers</h4>
+      <div class="bsub">the leaders now concentrating the de-grossing</div>
+      <div id="ytd-up"></div>
+    </div>
+    <div class="panel bucket">
+      <h4>Biggest 4-week decliners</h4>
+      <div class="bsub">the recent move — where the pain is fresh</div>
+      <div id="chg4-dn"></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ 4 · EMAILS & REPORTS ============ -->
+<section id="flow"><div class="wrap">
+  <div class="shead"><span class="k">04</span><h2>Emails & reports</h2><span class="note">the flow moving the names</span></div>
+  <div class="lede">Today's revisions (<b>Jul 8</b>) from the sell-side + X routine, followed by the <b>Jul 7 wave</b> (wiki ingest). Every PT/rating change logged with a source.</div>
+
+  <div class="panel" style="padding:14px 16px">
+    <h3 style="margin-bottom:8px">Today · Jul 8 — revisions & priority desks</h3>
+    <div id="rev-mount"></div>
+  </div>
+
+  <div class="wave">
+    <div class="wi"><div class="wt">SPCX ⭐</div><div class="wd"><b>Initiation wave</b> post quiet-period, uniformly Buy/OW (ref ~$160): <b>MS OW $300</b> (bull $600/bear $75), <b>JPM OW $225</b>, <b>DB Buy $255</b>, <b>Bernstein OP $239</b>, <b>BofA Buy $235</b>, <b>Citi Buy $200</b> (path to $900+). Avg PT ≈ $242. + JPM analysis of an SPCX-TSLA combination (~$28.5tn TAM). <cite>Outlook sell-side · Jul 7</cite></div></div>
+    <div class="wi"><div class="wt">Memory ⭐</div><div class="wd"><b>SK Hynix</b> — Nasdaq listing ~Jul 10 (SKHY), IPO <b>~US$29bn</b> (potentially the largest-ever foreign-issuer US IPO), oversubscribed; buy-ADR/sell-Seoul arb. <b>Samsung</b> — record print (OP <b>+19x y/y</b>), tape -7% (“hurdle has risen”); JPM OW W480k. <cite>Jefferies/Cristina Titu · JPM/Jay Kwon · Jul 7</cite></div></div>
+    <div class="wi"><div class="wt">NVDA ⭐</div><div class="wd"><b>BofA/Vivek Arya reiterates Buy, PO $350</b> (from $320); 18x fwd = 7-year low, implies an unjustified ~30–35% EPS cut; denies the Kyber “massive delay”; China as a risk (DeepSeek in-house chip). <cite>Outlook sell-side · Jul 7</cite></div></div>
+    <div class="wi"><div class="wt">Hyperscaler</div><div class="wd"><b>BofA/Justin Post raises capex</b> across all three: GOOG $195/$290bn, META $145/$185bn, AMZN $159/$230bn ('26/'27). Cost/GW: Meta $45bn &gt; Google $37bn &gt; Amazon $25bn. Street embeds only ~$4bn per Meta AI-GW vs. Google ~$110bn. <cite>BofA · Jul 7</cite></div></div>
+    <div class="wi"><div class="wt">ASML ⭐</div><div class="wd"><b>MS/Lee Simpson raises PT to €1,830</b> (from €1,660), OW/Top Pick; lifts EUV '26/'27 to 75/92 (SK Hynix 6 vs. 3 tools/qtr); summer “catch-up trade” on 3 debates into the 2Q print on Jul 15. <cite>MS “The Catalyst Path Ahead” · Jul 7</cite></div></div>
+    <div class="wi"><div class="wt">Terafab</div><div class="wd"><b>UBS/Arcuri</b> — SpaceX Terafab as a potential new <b>&gt;$50bn/yr WFE spender</b> (~$135bn over 5 years); INTC already engaged (potential “knowledge owner”); double-edged: validates the AI capacity shortage, but is a leading-foundry-scale entrant (long-term competitive risk to TSMC/memory). <cite>UBS · Jul 7</cite></div></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <b>Sources &amp; method.</b> Moves and drawdown: Bloomberg comp-sheet (<code>comp_data.json</code>, asof Jul 8 10:44) — <i>drawdown = price ÷ 52-wk high − 1</i>; “4-wk” and YTD are the comp-sheet's own columns. Debates: wiki <code>_meta/edge.md</code>, <code>catalysts.md</code>, <code>diff-latest.md</code> and <code>assumptions.md</code> (canonical numbers, each with source + date). Emails/reports: “Company specific Twitter + Sell Side” routine (Jul 8, 09:14) + the Jul 7 ingest wave. Quotes reflect the comp-sheet close; today's intraday (pre-market) moves are annotated from emails/X and may differ from the prior close. Prepared Jul 8, 2026.
+</div></footer>
+
+<script>
+const DATA = [{"tk":"ORCL","name":"ORACLE","sec":"Internet/Software","px":140.9,"ytd":-27.7,"dd52":-59.2,"c4":-33.5,"c3m":-1.9,"pe":16.9},{"tk":"AAOI","name":"APPL. OPTOELECTRONICS","sec":"Optics/Networking","px":116.06,"ytd":232.9,"dd52":-50.3,"c4":-41.0,"c3m":-12.5,"pe":32.5},{"tk":"NOW","name":"SERVICENOW","sec":"Internet/Software","px":107.27,"ytd":-30.0,"dd52":-49.0,"c4":-6.1,"c3m":10.1,"pe":23.2},{"tk":"CEG","name":"CONSTELLATION EN.","sec":"Power/Infra","px":239.91,"ytd":-32.1,"dd52":-41.9,"c4":-4.3,"c3m":-15.6,"pe":18.9},{"tk":"NFLX","name":"NETFLIX","sec":"Internet/Software","px":75.4,"ytd":-19.6,"dd52":-41.7,"c4":-8.8,"c3m":-24.1,"pe":20.5},{"tk":"SPOT","name":"SPOTIFY","sec":"Internet/Software","px":486.3,"ytd":-16.3,"dd52":-35.0,"c4":-3.3,"c3m":0.6,"pe":29.6},{"tk":"LITE","name":"LUMENTUM","sec":"Optics/Networking","px":709.76,"ytd":92.6,"dd52":-34.6,"c4":-20.7,"c3m":-20.8,"pe":38.7},{"tk":"CIEN","name":"CIENA","sec":"Optics/Networking","px":427.02,"ytd":82.6,"dd52":-33.0,"c4":-8.5,"c3m":-13.6,"pe":48.9},{"tk":"GLW","name":"CORNING","sec":"Optics/Networking","px":186.2,"ytd":112.7,"dd52":-31.5,"c4":-0.7,"c3m":12.8,"pe":50.1},{"tk":"MSFT","name":"MICROSOFT","sec":"Core Tech","px":384.19,"ytd":-20.6,"dd52":-30.8,"c4":-6.7,"c3m":2.6,"pe":19.6},{"tk":"VST","name":"VISTRA","sec":"Power/Infra","px":155.62,"ytd":-3.5,"dd52":-29.2,"c4":5.9,"c3m":-0.2,"pe":15.2},{"tk":"KLAC","name":"KLA CORP","sec":"Core Tech","px":218.53,"ytd":79.8,"dd52":-28.9,"c4":3.7,"c3m":30.7,"pe":42.5},{"tk":"UBER","name":"UBER","sec":"Internet/Software","px":73.96,"ytd":-9.5,"dd52":-27.5,"c4":5.6,"c3m":2.2,"pe":19.0},{"tk":"COHR","name":"COHERENT","sec":"Optics/Networking","px":322.29,"ytd":74.6,"dd52":-26.8,"c4":-19.8,"c3m":14.4,"pe":38.1},{"tk":"BKNG","name":"BOOKING","sec":"Internet/Software","px":175.91,"ytd":-17.9,"dd52":-24.7,"c4":8.4,"c3m":-2.8,"pe":15.4},{"tk":"MU","name":"MICRON","sec":"Information Technology","px":945.4,"ytd":231.2,"dd52":-24.7,"c4":-0.4,"c3m":132.4,"pe":6.7},{"tk":"META","name":"META PLATFORMS","sec":"Core Tech","px":602.61,"ytd":-8.7,"dd52":-24.3,"c4":2.9,"c3m":-1.6,"pe":14.6},{"tk":"LRCX","name":"LAM RESEARCH","sec":"Core Tech","px":334.49,"ytd":95.4,"dd52":-23.7,"c4":3.1,"c3m":35.7,"pe":41.6},{"tk":"AVGO","name":"BROADCOM","sec":"Core Tech","px":379.52,"ytd":9.7,"dd52":-23.3,"c4":-4.3,"c3m":8.2,"pe":22.5},{"tk":"AMAT","name":"APPLIED MATERIALS","sec":"Information Technology","px":572.41,"ytd":122.7,"dd52":-22.6,"c4":16.3,"c3m":48.4,"pe":37.2},{"tk":"ENR","name":"SIEMENS ENERGY","sec":"Power/Infra","px":152.3,"ytd":26.5,"dd52":-20.5,"c4":-3.4,"c3m":-7.9,"pe":26.6},{"tk":"TLN","name":"TALEN ENERGY","sec":"Power/Infra","px":366.4,"ytd":-2.3,"dd52":-18.8,"c4":0.4,"c3m":11.5,"pe":14.3},{"tk":"AGX","name":"ARGAN","sec":"Power/Infra","px":669.41,"ytd":113.7,"dd52":-16.9,"c4":8.0,"c3m":13.8,"pe":49.1},{"tk":"NVDA","name":"NVIDIA","sec":"Core Tech","px":197.91,"ytd":6.1,"dd52":-16.3,"c4":-5.1,"c3m":8.7,"pe":18.5},{"tk":"PWR","name":"QUANTA SERVICES","sec":"Power/Infra","px":664.6,"ytd":57.5,"dd52":-15.7,"c4":-4.2,"c3m":15.3,"pe":44.0},{"tk":"CSCO","name":"CISCO","sec":"Optics/Networking","px":112.77,"ytd":46.4,"dd52":-13.5,"c4":-9.2,"c3m":34.7,"pe":23.7},{"tk":"ASML","name":"ASML","sec":"Core Tech","px":1522.2,"ytd":65.2,"dd52":-12.6,"c4":0.5,"c3m":25.5,"pe":40.6},{"tk":"AMZN","name":"AMAZON","sec":"Core Tech","px":243.88,"ytd":5.7,"dd52":-12.4,"c4":-0.5,"c3m":10.2,"pe":22.4},{"tk":"AMD","name":"AMD","sec":"Core Tech","px":516.85,"ytd":141.3,"dd52":-11.6,"c4":5.4,"c3m":123.0,"pe":50.1},{"tk":"GOOG","name":"ALPHABET","sec":"Core Tech","px":361.17,"ytd":15.1,"dd52":-10.7,"c4":0.0,"c3m":14.8,"pe":24.3},{"tk":"TSM","name":"TSMC (ADR)","sec":"Core Tech","px":435.42,"ytd":43.3,"dd52":-9.1,"c4":2.0,"c3m":19.0,"pe":24.5},{"tk":"GEV","name":"GE VERNOVA","sec":"Power/Infra","px":1100.16,"ytd":68.3,"dd52":-8.0,"c4":17.8,"c3m":17.5,"pe":48.8},{"tk":"WMB","name":"WILLIAMS","sec":"Power/Infra","px":74.81,"ytd":24.5,"dd52":-6.6,"c4":4.5,"c3m":2.5,"pe":30.4},{"tk":"ANET","name":"ARISTA NETWORKS","sec":"Optics/Networking","px":169.73,"ytd":29.5,"dd52":-5.6,"c4":8.5,"c3m":17.0,"pe":42.1},{"tk":"AAPL","name":"APPLE","sec":"Core Tech","px":308.24,"ytd":13.4,"dd52":-2.9,"c4":2.2,"c3m":19.1,"pe":32.6},{"tk":"TSMC-TW","name":"TSMC (2330 TT)","sec":"Core Tech","px":2465.0,"ytd":59.0,"dd52":-2.8,"c4":7.4,"c3m":26.4,"pe":21.5}];
+
+const SEC_COLORS = {"Core Tech":"#2563eb","Information Technology":"#6366f1","Optics/Networking":"#f59e0b","Internet/Software":"#ef4444","Power/Infra":"#10b981"};
+const SEC_LABEL = {"Core Tech":"Core Tech / megacap+semi","Information Technology":"Memory / WFE (MU, AMAT)","Optics/Networking":"Optics / Networking","Internet/Software":"Internet / Software","Power/Infra":"Power / Infra"};
+
+const fmt = (x,d=1)=> (x==null?'—':(x>0?'+':'')+x.toFixed(d)+'%');
+const cls = x => x==null?'':(x>=0?'pos':'neg');
+
+/* ---------- scatter ---------- */
+(function(){
+  const W=560,H=380,m={l:44,r:14,t:14,b:40};
+  const xw=W-m.l-m.r, yh=H-m.t-m.b;
+  const xmin=-40,xmax=245,ymin=-62,ymax=4;
+  const sx=v=> m.l+(v-xmin)/(xmax-xmin)*xw;
+  const sy=v=> m.t+(ymax-v)/(ymax-ymin)*yh;
+  let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:100%;height:auto;font-family:inherit">`;
+  // quadrant shading
+  s+=`<rect x="${sx(40)}" y="${m.t}" width="${m.l+xw-sx(40)}" height="${yh}" fill="#eff6ff" opacity=".5"/>`;
+  s+=`<rect x="${m.l}" y="${m.t}" width="${sx(0)-m.l}" height="${yh}" fill="#fef2f2" opacity=".5"/>`;
+  // gridlines x
+  [-25,0,50,100,150,200].forEach(v=>{ if(v<xmin||v>xmax)return;
+    s+=`<line x1="${sx(v)}" y1="${m.t}" x2="${sx(v)}" y2="${m.t+yh}" stroke="#e2e8f0"/>`;
+    s+=`<text x="${sx(v)}" y="${H-24}" font-size="10" fill="#94a3b8" text-anchor="middle">${v>0?'+':''}${v}%</text>`;});
+  // gridlines y
+  [0,-10,-20,-30,-40,-50,-60].forEach(v=>{
+    s+=`<line x1="${m.l}" y1="${sy(v)}" x2="${m.l+xw}" y2="${sy(v)}" stroke="#e2e8f0"/>`;
+    s+=`<text x="${m.l-6}" y="${sy(v)+3}" font-size="10" fill="#94a3b8" text-anchor="end">${v}%</text>`;});
+  // axis titles
+  s+=`<text x="${m.l+xw/2}" y="${H-6}" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="600">YTD return</text>`;
+  s+=`<text transform="translate(12,${m.t+yh/2}) rotate(-90)" font-size="10.5" fill="#64748b" text-anchor="middle" font-weight="600">Drawdown from 52-wk high</text>`;
+  // points
+  DATA.forEach(d=>{
+    const r=4+Math.min(Math.abs(d.c4||0)/4,7);
+    const c=SEC_COLORS[d.sec]||'#64748b';
+    s+=`<circle cx="${sx(d.ytd)}" cy="${sy(d.dd52)}" r="${r}" fill="${c}" fill-opacity=".72" stroke="#fff" stroke-width="1"/>`;
+  });
+  // labels (label notable names)
+  const LAB=new Set(["MU","AAOI","LITE","COHR","CIEN","GLW","AMAT","LRCX","KLAC","AMD","NVDA","AVGO","GOOG","META","MSFT","AMZN","TSM","ORCL","NOW","CEG","NFLX","ASML","GEV","AAPL"]);
+  DATA.forEach(d=>{ if(!LAB.has(d.tk))return;
+    const x=sx(d.ytd), y=sy(d.dd52);
+    let dx=7,dy=-6,anc='start';
+    if(["MU","AAOI","AMAT","GLW","AGX"].includes(d.tk)){dx=-7;anc='end';}
+    if(["NVDA","AVGO"].includes(d.tk)){dy=12;}
+    s+=`<text x="${x+dx}" y="${y+dy}" font-size="9.5" fill="#0f172a" font-weight="700" text-anchor="${anc}">${d.tk}</text>`;
+  });
+  s+=`</svg>`;
+  document.getElementById('scatter').innerHTML=s;
+  let lg='';
+  Object.keys(SEC_LABEL).forEach(k=> lg+=`<span><span class="lg" style="background:${SEC_COLORS[k]}"></span>${SEC_LABEL[k]}</span>`);
+  document.getElementById('scatter-legend').innerHTML=lg;
+})();
+
+/* ---------- tables ---------- */
+function tbl(rows,cols){
+  let h='<table><thead><tr>'+cols.map(c=>`<th>${c.h}</th>`).join('')+'</tr></thead><tbody>';
+  rows.forEach(r=>{ h+='<tr>'+cols.map(c=>{
+    const v=c.f?c.f(r):r[c.k];
+    const cl=c.cl?c.cl(r):'';
+    return `<td class="${c.c||''} ${cl}">${v}</td>`;}).join('')+'</tr>'; });
+  return h+'</tbody></table>';
+}
+const colTk={h:'',k:'tk',c:'t',f:r=>`${r.tk}<div class="nm">${r.name}</div>`};
+const byDD=[...DATA].sort((a,b)=>a.dd52-b.dd52).slice(0,14);
+document.getElementById('dd-table').innerHTML=tbl(byDD,[
+  colTk,
+  {h:'From high',k:'dd52',c:'num',cl:r=>cls(r.dd52),f:r=>fmt(r.dd52)},
+  {h:'4-wk',k:'c4',c:'num',cl:r=>cls(r.c4),f:r=>fmt(r.c4)},
+  {h:'YTD',k:'ytd',c:'num',cl:r=>cls(r.ytd),f:r=>fmt(r.ytd)},
+]);
+const byYtdUp=[...DATA].sort((a,b)=>b.ytd-a.ytd).slice(0,10);
+document.getElementById('ytd-up').innerHTML=tbl(byYtdUp,[
+  colTk,
+  {h:'YTD',k:'ytd',c:'num',cl:r=>cls(r.ytd),f:r=>fmt(r.ytd)},
+  {h:'From high',k:'dd52',c:'num',cl:r=>cls(r.dd52),f:r=>fmt(r.dd52)},
+  {h:'Fwd P/E',k:'pe',c:'num',f:r=>r.pe?r.pe.toFixed(1)+'x':'—'},
+]);
+const by4Dn=[...DATA].sort((a,b)=>a.c4-b.c4).slice(0,10);
+document.getElementById('chg4-dn').innerHTML=tbl(by4Dn,[
+  colTk,
+  {h:'4-wk',k:'c4',c:'num',cl:r=>cls(r.c4),f:r=>fmt(r.c4)},
+  {h:'YTD',k:'ytd',c:'num',cl:r=>cls(r.ytd),f:r=>fmt(r.ytd)},
+  {h:'From high',k:'dd52',c:'num',cl:r=>cls(r.dd52),f:r=>fmt(r.dd52)},
+]);
+
+/* ---------- revisions (today) ---------- */
+const REV=[
+  {tk:"AMZN",a:"PT ↑",ac:"up",src:"GS · Eric Sheridan",r:"Buy (reit) $325→<b>$335</b>",n:"2Q'26 preview; 4 debates (capex/ROIC, custom silicon, funding, agentic shopping)"},
+  {tk:"DELL",a:"Ests ↑",ac:"up",src:"SIG · Mehdi Hosseini",r:"Positive <b>PT $700</b>",n:"NeoCloud+Enterprise; ISG rev CAGR 37% FY26-29; FY28/29 EPS $24.23/$28.08 vs cons $22.13/$25.70"},
+  {tk:"AVGO",a:"Reit",ac:"nt",src:"JPM · Harlan Sur",r:"Overweight",n:"TPU “v9” on track; Apple to 2031 (ASICs+RF); OpenAI XPU “taping out very soon”; Tomahawk 6 demand>supply"},
+  {tk:"AVGO",a:"Dgrd ↓",ac:"dn",src:"Erste (via @zerohedge)",r:"Buy → <b>Hold</b>",n:"Valuation call; AVGO -3% pre-market"},
+  {tk:"AAPL",a:"Data −",ac:"dn",src:"Bernstein · Newman/Dai",r:"May tracker",n:"iPhone units +2% y/y, below FQ3; China -16% y/y (first contraction); share gains continue"},
+  {tk:"ASE",a:"PT ↑",ac:"up",src:"Jefferies (via @sssjeffpu)",r:"<b>NT$805</b>",n:"Adv. packaging +10-20% pricing; AMD Venice + NVDA Vera drivers; EPS +4%/+21% 26E/27E"},
+  {tk:"NVDA",a:"Desk",ac:"nt",src:"Rothschild Spec-Sales",r:"TMT Daily",n:"“Another brutal day,” semis -4.7%; SOX support = Jun 9 low 11,794; TMT momentum -32% from the mid-June high"},
+  {tk:"META",a:"Desk",ac:"nt",src:"UBS TMI · Christina Dwyer",r:"sales note",n:"Meta “still hungry for compute” + AMZN $25bn bond = AI-infra narrative intact; momentum -20% from peak (fastest in 10 years), still >90th pct → room for more de-gross"},
+];
+document.getElementById('rev-mount').innerHTML=
+  '<table class="rev"><thead><tr><th>Name</th><th>Action</th><th>Source</th><th>Rating / PT</th><th>Note</th></tr></thead><tbody>'+
+  REV.map(r=>`<tr><td><span class="tk">${r.tk}</span></td><td><span class="badge ${r.ac}">${r.a}</span></td><td>${r.src}</td><td>${r.r}</td><td style="color:var(--ink2)">${r.n}</td></tr>`).join('')+
+  '</tbody></table>';
+
+/* ---------- debates ---------- */
+const DEB=[
+{no:1,tag:"Demand · memory",title:"Memory: degross or crack?",
+ q:"Is MU's -25% / the memory bloodbath forced liquidation or a fundamental break?",
+ bull:[
+  "DRAM <b>undersupplied through 2Q28</b>; contract price <b>+15-20% in 3Q</b> <cite>TrendForce · Jun 30</cite>",
+  "HBM $/GB <b>$17-18 → $30-32</b> ('26→'27, +70-80%) <cite>Redburn · Jun 23</cite>; HBM TAM <b>$35B → $100B'28</b> <cite>Micron/JPM</cite>",
+  "SK Hynix US$28bn IPO <b>multiple-times oversubscribed</b> + US$51bn new fab; Samsung OP <b>+19x y/y</b>",
+  "Paradis: capex $1T → <b>$1.5T</b>, 40-50% goes to memory; HBM $/rack quintupling into Vera Rubin"],
+ bear:[
+  "Niles: “spectacular, but <b>not vs. consensus</b>; AI names not close to oversold”",
+  "<b>CXMT/China creep</b>: Apple testing CXMT DRAM for China-market devices",
+  "Allocation: <b>server DRAM became priority #1, HBM #2</b> (4-year reversal) <cite>Redburn/TrendForce</cite>",
+  "Doug Kass still <b>short MU</b>; hike magnitude still contested (TrendForce conservative vs. chatter +30-40%)"],
+ exp:['MU','SKHYNIX','SAMSUNG','LITE','COHR','CIEN','LRCX','KLAC','AMAT'],
+ res:"SK Hynix IPO pricing (~Jul 9-10) · weekly DRAM/NAND spot (TrendForce) · HBM4 LTA finalization."},
+{no:2,tag:"Demand · capex",title:"Hyperscaler capex: bubble or build?",
+ q:"Is the ~$1.1T of '27 capex sustainable and return-generating — or over-build?",
+ bull:[
+  "Top-4 <b>~$700B'26 → ~$1.1T'27</b> (+75%) <cite>JPM AI Capex 2.0</cite>; the constraint is <b>power/physical, not demand</b>",
+  "BofA raised all three: GOOG $195/$290bn, META $145/$185bn, AMZN $159/$230bn ('26/'27) <cite>BofA · Jul 7</cite>",
+  "Amazon seeking a <b>≥$25bn</b> bond = confidence, not slowdown; the “Meta cutting capex” story was <b>debunked</b>",
+  "<b>House edge</b>: GOOG '27 capex <b>$310bn = Street-high</b> (+27% vs. cons.); GOOG '27 rev $641bn vs cons $512bn (+25%)"],
+ bear:[
+  "Capex ↑ = <b>FCF ↓</b>: house '27 FCF for GOOG <b>-$55bn</b>",
+  "D&A drag: house '27 EPS for META <b>~14% BELOW</b> consensus",
+  "Market <b>doesn't pay for capacity</b>: Street embeds only <b>~$4bn per Meta AI-GW</b> vs. Google ~$110bn",
+  "Cost/GW divergence (Meta $45bn > Google $37bn > Amazon $25bn) = very uneven efficiency"],
+ exp:['GOOG','META','AMZN','MSFT','TSM','AVGO'],
+ res:"2Q prints (AMZN preview GS Buy $335 today) · cost/GW and rev/GW disclosure · any real capex-cut signal."},
+{no:3,tag:"Demand · NVDA",title:"NVDA: scale-up gap + “central bank of AI”",
+ q:"Does the Kyber delay open a window for AMD/TPU — and is the GPU backstop strength or risk?",
+ bull:[
+  "NVDA <b>officially denied</b> the “massive delay”; bulls call it fear-planting (“all roads lead to CPO”)",
+  "GPU units <b>8.9M'26 → 9.9M'27</b> <cite>JPM</cite>; a rail-slide supplier +220% y/y in June",
+  "Backstop = minimum-revenue guarantee + rev-share; <b>AA rating</b> unlocks neocloud financing (“central bank,” >$7T AI debt by '29)",
+  "<b>BofA/Arya Buy $350</b>; <b>18x fwd = 7-year low</b>, implies an unjustified ~30-35% EPS cut"],
+ bear:[
+  "<b>Kyber NVL144 delayed 12+ months to 2028</b>; NVL576 small volume; NVL72x2 cancelled; CPO NVSwitch only at Feynman <cite>SemiAnalysis</cite>",
+  "→ Window for <b>AMD MI500X / Google TPUv8i ‘Broadfly’</b> to gain scale-up share",
+  "<b>China eroding</b>: DeepSeek with its own chip; MOFCOM restricts models; Bloomberg: Chinese firms leaving Nvidia",
+  "NVDA <b>only +6% YTD</b> (vs SOX which reached +82%) — the market already doubts"],
+ exp:['NVDA','AVGO','AMD','GOOG','MRVL'],
+ res:"2Q FY27 print on <b>Aug 26</b> (guide $91B) · TPU v9 volumes / MI ramp · CPO roadmap."},
+{no:4,tag:"Share",title:"Custom ASIC vs. merchant GPU",
+ q:"Does the ASIC share inflection in '27 stick, or does GPU hold ~70%?",
+ bull:[
+  "<b>ASIC case</b>: JPM <b>42% ASIC (units) '26 → 53% '27</b> (ASIC +109% y/y vs GPU +39%)",
+  "AVGO: TPU v9 on track, <b>OpenAI XPU taping out “very soon”</b>, Apple to 2031, Tomahawk 6 demand>supply <cite>JPM · Jul 8</cite>",
+  "MediaTek AI-ASIC raised to <b>$18bn'27 / $40bn'28</b> <cite>Citi · Jul 6</cite>",
+  "AVGO is the <b>cheapest of the AI-caps</b> (22.5x fwd, only +9.7% YTD)"],
+ bear:[
+  "<b>GPU holds</b>: UBS ~70/30 durable; BofA <b>65-70% GPU in dollars by 2030</b> (NVDA 68-77% of accelerators)",
+  "<b>Units ≠ dollars</b> — ASIC ASP is far lower; unit share overstates the threat",
+  "firstadopter: Apple “$30bn/5 years = $6bn/year = peanuts vs. $400bn+ revenue, free PR”",
+  "<b>Erste downgraded AVGO to Hold</b> (valuation) today <cite>Jul 8</cite>"],
+ exp:['AVGO','MEDIATEK','GOOG','AAPL','NVDA'],
+ res:"TPU v9 volumes · Trainium 3 ramp · MTIA · OpenAI XPU tape-out (the test of the '27 inflection)."},
+{no:5,tag:"Regime · positioning",title:"AI degross → rotation into software / momentum unwind",
+ q:"Is it a tradeable washout or a durable regime rotation? — the debate that ties the drawdown to the book. (Bull = constructive on our AI longs.)",
+ bull:[
+  "<b>Washout, not regime change</b>: indiscriminate tape = a <b>liquidity signature, not an earnings one</b>; NVDA green while peers bleed = a pod blowing up <cite>Tae Kim</cite>",
+  "Fundamentals <b>uniformly positive</b> (SK Hynix IPO oversubscribed, TSMC guide-up, HBM $/rack quintupling); Serenity: “the dumbest selloff”",
+  "AI-infra narrative <b>intact</b>: Meta “still hungry for compute” + AMZN $25bn bond; “Meta cutting capex” debunked <cite>UBS TMI</cite>",
+  "<b>Resolves this week</b> as a fundamental read: TSMC guide + SK Hynix IPO demand + GPT-5.6 “Sol” (Thu)"],
+ bear:[
+  "<b>Durable rotation</b>: momentum -20% from peak (fastest in a decade); High-Mom net exposure still <b>>90th pct → room for more de-gross</b> <cite>UBS TMI</cite>",
+  "This week: AI <b>-14 to -21%</b> (NBIS/MU/LITE/INTC/ALAB) vs. software <b>+10 to +19%</b> (PLTR/RDDT/NOW/ZETA/MDB) <cite>@ParadisLabs</cite>",
+  "Leadership <b>left the megacaps</b>: NDX +18% YTD but the Mag-7 index only +1.1%; “JPM offloading semis” (CramerTracker)",
+  "<b>Macro tail</b>: Hormuz re-escalation, Brent backwardation, spec at net-short of the year, SPR 43-yr low → asymmetric oil upside; <b>FOMC minutes today</b>"],
+ exp:['NVDA','AVGO','MU','LITE','NOW','MSFT','META','GOOG'],
+ res:"Exhaustion of the degross (does MU hold $1tn?) · this week's prints/IPO as a fundamental read · software-vs-AI basket behavior."},
+];
+document.getElementById('debates-mount').innerHTML=DEB.map(d=>`
+  <div class="debate">
+    <div class="top">
+      <div class="no">${d.no}</div>
+      <div class="th"><h3>${d.title}</h3><div class="q">${d.q}</div></div>
+      <div class="chip">${d.tag}</div>
+    </div>
+    <div class="bb">
+      <div class="bull"><div class="col-h bull"><span class="dot bull"></span>Bull</div><ul>${d.bull.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+      <div class="bear"><div class="col-h bear"><span class="dot bear"></span>Bear</div><ul>${d.bear.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+    </div>
+    <div class="foot">
+      <div class="exp"><b>Exposed:</b> ${d.exp.map(t=>`<span class="tk">${t}</span>`).join(' ')}</div>
+      <div class="res"><b>What resolves it:</b> ${d.res}</div>
+    </div>
+  </div>`).join('');
+</script>
