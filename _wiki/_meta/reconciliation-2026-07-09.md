@@ -34,3 +34,36 @@ Qualitative/thematic notes (INTC EMIB-T mechanics, GOOG TPU packaging, most them
 ## To close out
 1. **Log in to the Bloomberg Terminal / reconnect Capstone VPN**, then run `py "E:\Wiki Felipe empresas\_wiki\_tools\refresh_features.py" --run-estimates` to populate the PENDING consensus column for TSM, AMZN, CIEN, GEV, and the analog names (place Fubon's TSM EPS, GS's AMZN PT, and MS's CIEN CY28 EPS vs the consensus median).
 2. **Edge tracker** should pick up the new DIVERGES rows (TSM Street-high EPS/PT; AMZN new Street-high PT; CIEN MS Street-low; SPCX pre-IPO dispersion; ANTHROPIC ARR revision) after the feature rebuild.
+
+---
+
+# Reconciliation — run-inbox 2026-07-09 (Run 2 · second batch)
+
+New quantitative datapoints from the **second 2026-07-09 ingest** (3 new files: TD Cowen semicap preview + Bernstein "New Memory LTAs part 2"; the SemiAnalysis MSL piece is qualitative/strategic — excluded from the number reconciliation; the MS Nokia/Ciena file was a duplicate re-drop, no new numbers). Variance-checked vs **(1) prior wiki comments**, **(2) Capstone house models** (semicap-wfe page carries the ASML_Peers_SemiCap house EPS/WFE), and **(3) BBG consensus**.
+
+> **⚠ BBG column = PENDING (again).** The wrapper (`E:\bloomberg_api`) still raised **HTTP 503 — "please ensure you are logged in to Bloomberg Terminal"** on this second run. On-disk baselines completed below; consensus left PENDING. No web data substituted.
+
+## DIVERGES — the alpha
+
+| Name | New datapoint (source) | vs Prior wiki | vs House model | vs BBG cons |
+|---|---|---|---|---|
+| **AMAT** | TD Cowen **Buy, PT $525→$700** (top Long); CY28 EPS power ~**$25 @ $250B WFE** (≈1.9x CY26E $13.35) (TD Cowen "Puts & Takes", 2026-07-09) | **New Street-high PT** on the page: $700 > GS $645 (07-05) > Redburn $560 > Bernstein-implied. Cowen the most bullish semicap voice on AMAT. | Cowen CY28 EPS $25 sits **just above** house AMAT 2028E ~$23 — consistent, slightly ahead. | **PENDING** |
+| **ASML** | TD Cowen **Buy, PT €1,600**; EUV shippable 88/'27, 110/'28 (TD Cowen, 2026-07-09) | **Street-LOW anchor** vs the €1,830-2,300 cluster (Bernstein €2,300 07-06, JPM €1,900 06-03, MS €1,830 07-07, Redburn €1,900). Cowen's EUV-unit path (88/110) is *below* Bernstein's 91/113 and MS's 92 — the cautious ASML mark on the page even while calling it a top Long. | House ASML 2028E EPS €69 — cross-check PT-implied multiple once cons is back. | **PENDING** |
+| **TSM** | TD Cowen **Hold, PT $400 (TSM-US ADR) — below $436.98 spot**; capex $56-60/$80/$100B '26/'27/'28; 38 of 88 EUV tools '27 (TD Cowen, 2026-07-09) | **Lone cautious rating** on a bull-heavy page (Fubon PT NT$3,500 Street-high 07-08; JPM/UBS bullish). Note the tension: Cowen's **capex stack ($80B/'27, $100B/'28) is MORE aggressive** than UBS ($75B/$85B) — so it's a valuation/multiple call on an already-run ADR, not a demand call. | TSM house model exists (bullish) — Cowen Hold is the outlier vs house. | **PENDING** |
+| **STX** | TD Cowen **Buy, PT $850 (below $860 spot)**; CY27 EPS bull **→$45 (20% ASP)** from prior $35+; buyside already **+$50 (30% ASP)** (TD Cowen, 2026-07-09) | **Sell-side now chasing buy-side** — "first time in two years our bull view is below buyside." Buy rating with PT ~at/below spot = the pricing leg is largely in the tape. Prior wiki bull was $35+. | No STX house model. | **PENDING** |
+| **WDC** | TD Cowen **Buy, PT $500 (below $550 spot)**; CY27 EPS bull **→$25 (20% ASP)** from prior $20; buyside **+$30 (30% ASP)** (TD Cowen, 2026-07-09) | Same HDD dynamic as STX — Buy w/ PT below spot; EPS bull raised but buy-side has out-run it. | No WDC house model. | **PENDING** |
+| **AEIS** | TD Cowen **Hold, PT $350** (TD Cowen, 2026-07-09) | **Relative bear** — the sole non-Buy vs BofA $430, Citi $410, Needham $400, Cantor $400, WF OW $465. Cowen is the skeptic on the AEIS re-rate the page otherwise tracks. | No AEIS house model. | **PENDING** |
+| **LRCX** | TD Cowen **Buy, PT $340→$400** (top Long); EPS ~**$9-10 @ $250B WFE** (TD Cowen, 2026-07-09) | PT in-range (GS $380 07-05, MS $404, Redburn $420) — near consensus, not divergent. But Cowen's $9-10 @ $250B is **below house LRCX 2028E ~$12** — a modelling gap to flag. | **Cowen EPS below house $12** at a similar WFE — check the bridge (share/margin assumptions). | **PENDING** |
+
+## CONFIRMS — no action
+
+| Name | New datapoint (source) | Reconciliation |
+|---|---|---|
+| **SNDK** | Bernstein reiterate **Outperform, PT $3,000** (11x FY28 EPS); FY26E/27E EPS **$65.43 / $243.73**, P/E 7.1x; ~$69B RPO backed by >$11B guarantees (Bernstein "New Memory LTAs part 2", 2026-07-09) | **Confirms/reiterates** the 06-30 Bernstein note already on page (FY27E ~$243 +28% vs cons; PT $3,000; bull $350). No PT/estimate drift — this is the part-2 structural deep-dive. The ~$69B RPO is a distinct metric from the on-page $42B backlog (added, not overwritten). |
+| **MU** | TD Cowen **Buy, PT $1,600** (px $948.80); Bernstein: $18B cash deposits + $4B LC backing LTAs, coverage → 75-100% of RPO outer years (2026-07-09) | **Confirms.** Cowen $1,600 ≈ UBS $1,625 already on page (rounding, not a supersession). Bernstein's deposit/coverage figures corroborate the existing LTA-structure framing (the $18B/$4B were already on-page from the 06-29 Jefferies/Fubon IR call). |
+| **KLAC** | TD Cowen **Buy, PT $200→$260** (top Long; post 10:1 split, fwd ests updated) (TD Cowen, 2026-07-09) | **In-range with a split caveat.** $260 post-split brackets Redburn $260 / GS Neutral $230 / MS OW $274 — but confirm the split basis before comparing (KLAC did a 10:1 split; unsplit UBS mark was $1,260). No clean divergence. |
+| **ARM / TER** | ARM **Buy PT $475** (FY31 rev/EPS ~$25B/$9+ in $100B+ server-CPU TAM); TER **Buy PT $400** (TD Cowen, 2026-07-09) | ARM: no strong prior PT tracked on page — logged as new house mark, not a divergence. TER: $400 is **below GS $465 (07-05)** but within a reasonable band; Cowen flags back-end not raising prices / EPS de-risked (qualitative). |
+| **WFE TAM** | TD Cowen **$150/$200/$250/$300/$400B CY26-30** (TD Cowen, 2026-07-09) | **Broadly confirms the house/UBS bull curve** — Cowen $250B '28 ≈ Capstone house $260B '28 ≈ UBS $248B (all well above cons $202B). Cowen's $400B-by-2030 is the aggressive tail vs Redburn $272B/2030 — logged as the high-end scenario on `themes/semicap-wfe.md`. |
+
+## To close out (Run 2)
+- Same BBG dependency as Run 1 — once the Terminal is back, place the Cowen semicap PTs (AMAT $700 Street-high, ASML €1,600 Street-low, TSM $400 Hold below spot) and the STX/WDC HDD EPS bulls against the consensus median. Two on-disk gaps worth a model check: **LRCX Cowen EPS $9-10 @ $250B vs house ~$12**, and **TSM Cowen Hold vs the bullish house model**.
