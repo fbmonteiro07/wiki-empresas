@@ -17,18 +17,17 @@ _Generated 2026-07-10 · the standing view of where our model and the curated re
 | NVDA | EPS | 2027 | 15.44 | 12.90 | +20% |
 | NVDA | Revenue $bn | 2027 | 661.00 | 559.80 | +18% |
 
-## Curated divergences — latest reconciliation (`reconciliation-2026-07-09.md`)
+## Curated divergences — latest reconciliation (`reconciliation-2026-07-10.md`)
 
 | Name | New datapoint | Read (the edge) |
 |---|---|---|
-| TSM | Fubon FY26/FY27 EPS **NT$103.90 / NT$144.13**; PT **NT$3,500** (Buy) (Fubon, 2026-07-08) | **PENDING** |
-| AMZN | GS **PT $325 → $335** (Buy); rev **$827.6 / $952.9 / $1,081.0bn** FY26/27/28 (GS "Q2'26 Preview", 2026-07-07) | **PENDING** |
-| CIEN | MS reiterate **EW, PT $490**; MS **CY28 EPS ~$15** vs buyside ~$18-20 (MS "Face-off Nokia vs Ciena", 2026-07-09) | **PENDING** |
-| SPCX | JPM initiate **OW, Dec-27 PT $225**; rev $18.7B(FY25A)→**$160.4B (FY28E)**; Adj. EPS $(0.84)→$5.77 (JPM, 2026-07-07) | **PENDING** (pre-IPO; consensus thin) |
-| ANTHROPIC | ARR **$9B(end-'25)→$30B(1Q26)→>$60B(now)**; 3Q26 EBIT **~$1B**; **$6T** base-case valuation (SemiAnalysis, 2026-07-08) | n/a (private) |
-| OPENAI | 1Q26 **>65% subscription** / ~40% Consumer-sub ARR; IPO reportedly pushed to **2027** (SemiAnalysis, 2026-07-08) | n/a (private) |
+| NVDAout-yearrevenue | MS MW **$393B (FY27e) / $599B (FY28e)** (MS "NVDA NDR", 07-10) | **House is materially ABOVE the MS Street case** on the comparable out-year — house 2027E rev **$661B** vs MS's comparable FY28e **$599B** (~+10% house). House 2026E $407B ≈ MS FY27e $393B. |
+| NVDAout-yearEPS | MS MW EPS **$8.96 (FY27e) / $13.08 (FY28e)** | **House EPS ~18% above MS** on the comparable year ($15.44 vs $13.08). Combined w/ revenue, the house NVDA model sits well above even MS's constructive OW/Top-Pick framing → our edge is *long-side conviction beyond the Street*, but check the FY-alignment bridge before sizing. |
+| AVGOAI-semisgrowth | MS: NVDA & AVGO AI both **+80% next year**, supply-constrained ("NVDA NDR", 07-10) | House 2027 AI-semis growth (**+110%**) runs **hotter than MS's "+80% next year"**; house and MS converge closer on 2028 (+90%). House is the more bullish AI-semis ramp. |
+| MediaTekASICrevenue | GS: **2027 ~$20B (raised from ~$12B) / 2028 ~$52B**; HomoFish 4.5M @ ~$4,500 (27), 3M @ ~$16k + ZebraFish 1M (28); **contested 50/50 Broadcom split** (GS "TSMC preview", 07-09) | GS's own **+67% upward revision** to 2027 ASIC and a Street-high-ish 2028 $52B. The **live debate is the Broadcom/MediaTek share split** (GS 50/50 vs US-investor view of higher Broadcom share) — Hock Tan (07-07) publicly dismisses the MediaTek A8 program ("still in the Fab", "PR agency of MediaTek"). Two-sided; our edge = which side of the split is right. |
+| TSM2Q26grossmargin | 2Q GM **~69.5-70%** vs guide 67.5% (JPM·Gokul 07-08; GS 07-09 68.5→70%) | 2Q print tracking **~70%, above both guide and house FY-avg ~66%** → margin upside risk to the house TSM model (FY avg carries N2/overseas dilution, so not fully comparable, but the 2Q level is a positive surprise). |
 
-## Consensus PT vs spot — live pull in `reconciliation-2026-07-09.md` (upside ranked)
+## Consensus PT vs spot — live pull in `reconciliation-2026-07-10.md` (upside ranked)
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|
