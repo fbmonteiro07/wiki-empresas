@@ -1,14 +1,11 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-07-10 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-07-11 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (9)
+## 📅 Upcoming (6)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-07-10 | SKHYNIX | **SKHY book heavily oversubscribed** — demand for the ~$28bn US share sale was **more than 7x available shares** (Reuters, 2026-07-09), a strong read on the US-investor bid ahead of the 2026-07-10 tra |
-| 2026-07-10 | SKHYNIX | **US Nasdaq ADR listing — mechanics & premium/flow view (Morgan Stanley (S&T) "SK Hynix ADR Listing", 2026-07-08).** MS Equity S&T (Pankaj Mataney, Asia Platform Sales & QDS — *note: S&T commentary, n |
-| 2026-07-10 | SKHYNIX | **US Nasdaq listing — expected Friday 2026-07-10** (fresh capital raise on top of the KRX:000660 line); investor reception is a read on both the IPO-market strength and the US-investor bid for the nam |
 | 2026-07-22 | TXN | **Q2 FY26 print — call ~2026-07-22** (guide $5.0–5.4bn / EPS $1.77–2.05); first call with new CFO **Julie Knecht** (DB, briefing 2026-06-03). |
 | 2026-07-23 | DISCO | **Q1 FYE-Mar-2027 print — 2026-07-23** (next scheduled, per Quartr). Watch vs the +18% rev / +20%+ OP guide and the seasonal QoQ dip. |
 | 2026-08-05 | IFX | **2026-08-05 — FY3Q26 print** — MS expects an in-line print (order-book momentum, industrial recovery, AI-DC commentary); watch the FY26 >EUR 16bn / ~20% margin bridge and HV-auto commentary (MS, 2026 |
@@ -24,10 +21,13 @@ _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_me
 |---|---|---|
 | _none_ | | |
 
-## ✅ Resolved (16)
+## ✅ Resolved (19)
 
 | Date | Ticker | Verdict |
 |---|---|---|
+| 2026-07-10 | SKHYNIX | bull won — US Nasdaq ADR listing catalyst resolved: priced $149, raised ~$26.5bn (largest-ever first-time foreign share sale on US markets, past Alibaba), 7x oversubscribed with anchor allocations cut on demand; the long-flagged US-listing/ADR re-rating catalyst is now realized with record demand. Nuance: ~3% ADR premium landed below the 5-20% desks flagged, and the local line closed flat on foreign net-selling (flows, not fundamentals). |
+| 2026-07-10 | SKHYNIX | bull won — US Nasdaq ADR listing catalyst resolved: priced $149, raised ~$26.5bn (largest-ever first-time foreign share sale on US markets, past Alibaba), 7x oversubscribed with anchor allocations cut on demand; the long-flagged US-listing/ADR re-rating catalyst is now realized with record demand. Nuance: ~3% ADR premium landed below the 5-20% desks flagged, and the local line closed flat on foreign net-selling (flows, not fundamentals). |
+| 2026-07-10 | SKHYNIX | bull won — US Nasdaq ADR listing catalyst resolved: priced $149, raised ~$26.5bn (largest-ever first-time foreign share sale on US markets, past Alibaba), 7x oversubscribed with anchor allocations cut on demand; the long-flagged US-listing/ADR re-rating catalyst is now realized with record demand. Nuance: ~3% ADR premium landed below the 5-20% desks flagged, and the local line closed flat on foreign net-selling (flows, not fundamentals). |
 | 2026-07-02 | CRWD | neutral — 4-for-1 stock split executed as scheduled (effective 07-02, after 07-01 close); mechanical ~$760 pre-split → ~$190 post-split rebase, broker PTs re-based (Barclays $169). No fundamental change; the seat-reset/valuation (33x EV/sales) debate is the real driver. |
 | 2026-07-01 | IFX | neutral — re-org into 3 divisions (Automotive / Power Systems / Edge Systems) took effect as scheduled; new segment reporting begins with the FY3Q26 print (5 Aug). Structural/reporting change only — no fundamental or guidance impact. |
 | 2026-06-30 | CEG | neutral — Calpine lockup (25M shares) expired as scheduled; $5B buyback in place to absorb supply — watch flow/price action into the Aug Q2 print for the verdict. |
