@@ -1,6 +1,6 @@
 # Canonical assumptions — one number per debate
 
-_Generated 2026-07-11 from `_data/assumptions.json` (asof 2026-07-01). Every cross-page industry number lives here once, with all sourced variants. When a new source disagrees, add a variant to the JSON — never silently rebase a page. Rebuild: `py _wiki/_tools/build_assumptions.py`._
+_Generated 2026-07-12 from `_data/assumptions.json` (asof 2026-07-01). Every cross-page industry number lives here once, with all sourced variants. When a new source disagrees, add a variant to the JSON — never silently rebase a page. Rebuild: `py _wiki/_tools/build_assumptions.py`._
 
 ## Custom-ASIC vs merchant-GPU share of AI accelerators  `asic-vs-gpu-share`
 
@@ -85,10 +85,13 @@ _Aggregate capex of the big US hyperscalers — ALWAYS state the basket (top-4 =
 
 **Unreconciled sightings** (pages matching this metric, not in the ledger's `cited_in`):
 - `AMAT.md` — …e of SPE suppliers."** SpaceX AI capex ~$1.1T/5yrs, ~20% (~$225B) to Terafab; at 60% capex-to-WFE → **~$135B WFE over 5yrs (~= this year's entire glob…
+- `AMZN.md` — …| 07-12 | MS · Brian Nowak ("Internet: $1.4trln of Capex") | capital | bull | **MS raises AMZN company-wide capex 15…
 - `ANTHROPIC.md` — …stors that would value it at as much as $900bn** in a ~$30bn tender offer just one month after OpenAI's M…
+- `GOOG.md` — …| 07-12 | MS · Brian Nowak ("Internet: $1.4trln of Capex") | capital | bull | In MS's cross-hyperscaler capex deep-d…
 - `INTC.md` — …gles). Broader thesis: SpaceX AI capex ~$1.1T/5yrs, ~20% (~$225B) to Terafab; at 60% capex-to-WFE → ~$135B WFE over 5yrs (~= this year's entire global…
 - `KLAC.md` — …$50B/yr WFE spender** (SpaceX AI capex ~$1.1T/5yrs, ~20%/~$225B to Terafab, 60% capex-to-WFE → **~$135B WFE over 5yrs ≈ the entire global WFE TAM…
 - `LRCX.md` — …$50B/yr WFE spender** (SpaceX AI capex ~$1.1T/5yrs, ~20%/~$225B to Terafab, 60% capex-to-WFE → **~$135B WFE over 5yrs ≈ the entire global WFE TAM…
+- `META.md` — …MS raises capex again — META top pick, "$1.4trln of hyperscaler capex by '28" (MS · Brian Nowak, 2026-07-12):** MS's cross-hypers…
 - `MSFT.md` — …364B CY25 (Top-4), funded largely from ~$700B/yr OCF, with AI/DC issuers now ~14.5% of the JULI IG index…
 - `NVDA.md` — …venue exiting 2026," MS 2027 hyperscale capex chart lifted $950B→$1.1T (panel thinks ~$1.5T incl. SpaceX/neoclouds). - **Hardware…
 - `OPENAI.md` — …re-asserted with GPT-5.5; TAM seen at **$700bn+ by 2030** across consumer/hardware/ads/enterprise (JPM in…

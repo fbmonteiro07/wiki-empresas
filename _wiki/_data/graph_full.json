@@ -1,8 +1,8 @@
 {
- "generated": "2026-07-11",
+ "generated": "2026-07-12",
  "counts": {
   "nodes": 153,
-  "edges": 1195
+  "edges": 1197
  },
  "nodes": [
   {
@@ -755,7 +755,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-07-11"
+   "last_chg": "2026-07-12"
   },
   {
    "id": "MP",
@@ -813,7 +813,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-07-11"
+   "last_chg": "2026-07-12"
   },
   {
    "id": "NBIS",
@@ -1088,7 +1088,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-07-10"
+   "last_chg": "2026-07-12"
   },
   {
    "id": "SANM",
@@ -3568,6 +3568,12 @@
   },
   {
    "u": "theme:hyperscaler-capex",
+   "v": "AMD",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:hyperscaler-capex",
    "v": "AMZN",
    "type": "exposes",
    "label": ""
@@ -4577,7 +4583,7 @@
    "v": "AMD",
    "type": "covers",
    "label": "",
-   "w": 21
+   "w": 24
   },
   {
    "u": "broker:MS",
@@ -5658,6 +5664,13 @@
    "w": 6
   },
   {
+   "u": "broker:Redburn",
+   "v": "CRDO",
+   "type": "covers",
+   "label": "",
+   "w": 4
+  },
+  {
    "u": "broker:SIG",
    "v": "CRDO",
    "type": "covers",
@@ -6516,7 +6529,7 @@
    "v": "INTC",
    "type": "covers",
    "label": "",
-   "w": 23
+   "w": 26
   },
   {
    "u": "broker:MS",
@@ -7069,7 +7082,7 @@
    "v": "META",
    "type": "covers",
    "label": "",
-   "w": 14
+   "w": 19
   },
   {
    "u": "broker:Citi",
@@ -7328,7 +7341,7 @@
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 26
+   "w": 40
   },
   {
    "u": "broker:UBS",
@@ -7342,14 +7355,14 @@
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 55
+   "w": 59
   },
   {
    "u": "broker:MS",
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 19
+   "w": 21
   },
   {
    "u": "broker:Jefferies",
@@ -7461,7 +7474,7 @@
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 75
+   "w": 76
   },
   {
    "u": "broker:BofA",
@@ -7755,7 +7768,7 @@
    "v": "NVDA",
    "type": "covers",
    "label": "",
-   "w": 50
+   "w": 58
   },
   {
    "u": "broker:BofA",
@@ -8371,7 +8384,7 @@
    "v": "SAMSUNG",
    "type": "covers",
    "label": "",
-   "w": 29
+   "w": 35
   },
   {
    "u": "broker:UBS",
@@ -8455,7 +8468,7 @@
    "v": "SAMSUNG",
    "type": "covers",
    "label": "",
-   "w": 89
+   "w": 92
   },
   {
    "u": "broker:BofA",
@@ -9267,7 +9280,7 @@
    "v": "TSM",
    "type": "covers",
    "label": "",
-   "w": 4
+   "w": 9
   },
   {
    "u": "broker:UBS",
@@ -9281,7 +9294,7 @@
    "v": "TSM",
    "type": "covers",
    "label": "",
-   "w": 51
+   "w": 53
   },
   {
    "u": "broker:MS",
@@ -9316,7 +9329,7 @@
    "v": "TSM",
    "type": "covers",
    "label": "",
-   "w": 20
+   "w": 22
   },
   {
    "u": "broker:Redburn",
