@@ -8,9 +8,9 @@ Both sources are primarily qualitative/thematic. Only one new quantitative datap
 
 | Ticker | New datapoint | Source | Prior wiki / house | BBG consensus | Verdict |
 |---|---|---|---|---|---|
-| TSM | FY27 capex ~$65–70bn | Chris Wood (JEF, 2026-06-25) | Capstone house model: NT$2073.9bn ≈ **$65–66bn** (Modelo Felipe TSM 1Q26.xlsm, 2026-06-10); Redburn/Conor cap: **$70–75bn** | BEST_CAPEX: ~NT$2100bn ≈ ~$66bn (PENDING — BBG not checked, Terminal offline) | **CONFIRMS house model** (~$65–66bn); CW's range ($65–70bn) brackets our estimate; no revision needed. |
+| TSM | FY27 capex ~$65–70bn | Chris Wood (JEF, 2026-06-25) | Capstone house model: NT$2073.9bn ≈ **$65–66bn** (Modelo Felipe TSM 1Q26.xlsm, 2026-06-10); Redburn/Conor cap: **$70–75bn** | BBG cons CY27 capex **NT$2,196bn ≈ US$67.6B** (estimates.json asof 2026-07-13) | **CONFIRMS house model** (~$65–66bn); CW's range ($65–70bn) brackets both the house and the fresh BBG cons (~$67.6B); no revision needed. |
 
-## DIVERGES (alpha) — none
+## Where the new data DIVERGES — none
 No new PT/EPS/revenue/margin estimates from either source.
 
 ## Qualitative flags
@@ -23,4 +23,6 @@ No new PT/EPS/revenue/margin estimates from either source.
 | ANTHROPIC / OPENAI | MS Byrd gives $5/M token × a few hundred K = $2–3 per enterprise use case, saving $55 — a concrete enterprise ROI benchmark | CONFIRMS | Consistent with FundaAI $211/user/month avg Anthropic spend (high end of the spectrum). |
 
 ## Step 7 — BBG status
-BBG column: **PENDING** — no new covered-name PT/EPS from either source so BBG pull was not required. If TSM FY27 capex consensus is needed, pull `BEST_CAPEX` on `TSM US Equity` with `BEST_FPERIOD_OVERRIDE=2FY`.
+BBG column: **resolved 2026-07-13.** The only quantitative item was TSM FY27 capex — BBG cons CY27 capex ≈ NT$2,196bn / US$67.6B (estimates.json asof 2026-07-13) confirms the house ~$65–66bn and CW's $65–70bn bracket. No new covered-name PT/EPS from either source.
+
+_BBG column resolved 2026-07-13 — estimates.json asof 2026-07-13._

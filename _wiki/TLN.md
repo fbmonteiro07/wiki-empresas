@@ -11,7 +11,7 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\TLN` (filings + transc
 | Gross profit | $2.8bn | $3.1bn |
 | Gross margin | 64.0% | 58.4% |
 | EBITDA | $2.1bn | $2.7bn |
-| EPS | $24.12 | $28.95 |
+| EPS | $22.39 | $28.95 |
 | Capex | $169m | $211m |
 | OCF (≈EBITDA) | $2.1bn | $2.7bn |
 

@@ -9,13 +9,13 @@ _Wiki · generated 2026-06-19 · **German issuer — NO SEC 10-K/10-Q/20-F filin
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | €17.1bn | €19.7bn |
-| Gross profit | €7.2bn | €8.8bn |
-| Gross margin | 42.1% | 44.9% |
-| EBITDA | €5.7bn | €7.3bn |
-| EPS | €2.01 | €2.78 |
+| Revenue | €17.1bn | €19.9bn |
+| Gross profit | €7.2bn | €9.0bn |
+| Gross margin | 42.1% | 45.1% |
+| EBITDA | €5.5bn | €6.9bn |
+| EPS | €2.01 | €2.85 |
 | Capex | €2.9bn | €3.0bn |
-| OCF (≈EBITDA) | €5.7bn | €7.3bn |
+| OCF (≈EBITDA) | €5.5bn | €6.9bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

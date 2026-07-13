@@ -9,13 +9,13 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\ASML` (20-F + transcri
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | €39.3bn | €49.5bn |
-| Gross profit | €20.6bn | €26.7bn |
-| Gross margin | 52.4% | 54.0% |
-| EBITDA | €15.2bn | €20.2bn |
-| EPS | €31.80 | €43.65 |
+| Revenue | €39.4bn | €50.1bn |
+| Gross profit | €20.7bn | €27.1bn |
+| Gross margin | 52.4% | 54.1% |
+| EBITDA | €15.3bn | €20.6bn |
+| EPS | €31.92 | €44.69 |
 | Capex | €2.0bn | €2.3bn |
-| OCF (≈EBITDA) | €15.2bn | €20.2bn |
+| OCF (≈EBITDA) | €15.3bn | €20.6bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

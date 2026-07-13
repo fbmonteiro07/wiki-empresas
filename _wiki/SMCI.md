@@ -9,7 +9,7 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\SMCI` (filings + trans
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $48.9bn | $58.3bn |
+| Revenue | $48.9bn | $58.5bn |
 | Gross profit | $3.8bn | $4.9bn |
 | Gross margin | 7.8% | 8.4% |
 | EBITDA | $2.6bn | $3.6bn |

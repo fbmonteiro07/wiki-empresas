@@ -9,10 +9,10 @@ _Wiki · generated 2026-06-19 · **20-F filer (UK foreign private issuer)** — 
 |---|--:|--:|
 | Revenue | $5.6bn | $7.3bn |
 | Gross profit | $5.5bn | $6.9bn |
-| Gross margin | 98.1% | 94.2% |
+| Gross margin | 98.1% | 94.0% |
 | EBITDA | $2.6bn | $3.6bn |
 | EPS | $1.99 | $2.79 |
-| Capex | $391m | $422m |
+| Capex | $422m | $474m |
 | OCF (≈EBITDA) | $2.6bn | $3.6bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

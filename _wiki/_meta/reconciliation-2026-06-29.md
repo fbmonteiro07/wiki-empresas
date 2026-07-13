@@ -19,9 +19,11 @@ _Post-patch check: each new quantitative datapoint from today's 8 ingested sourc
 
 **PENDING — all tickers 503.** Bloomberg Terminal offline as of reconciliation run time. All consensus figures below are from the wiki-page embedded snapshots (BBG as-of **2026-06-22**) and from the `_wiki/_data/timelines/_forward/*.json` files, which carry sell-side estimates logged through **2026-06-23**. This is the standard fallback; methodology consistent with prior reconciliation runs (2026-06-25, 2026-06-27).
 
+_**BBG resolved 2026-07-13** — Terminal is back and estimates.json is fresh (asof 2026-07-13). Reviewed this batch: **none of its datapoints are broker PT/EPS/rev/capex/margin comparable to a BBG consensus line.** They are engineering specs (Vera Rubin ~2,300W TDP, ~30,000 MLCCs/GB300 server, ~30% DC power loss), infrastructure lead-times (7-yr transformers, xAI Colossus 122-day build), a known roadmap slip (A16 → 2027, already superseded on-page by StoneX 2028), and Gavin Baker podcast recollections (MU beat magnitude, DRAM-%-of-capex, SCA coverage) that were already reconciled against the actual MU Q3 print. Nothing to place against consensus — the DIVERGES rows stand as watchlist/structural items, not estimate divergences._
+
 ---
 
-## DIVERGES (potential alpha)
+## Where the new data DIVERGES
 
 | # | Ticker | Datapoint (new source) | New source says | Wiki / BBG consensus (as-of 2026-06-22) | Delta / read | Source |
 |---|---|---|---|---|---|---|

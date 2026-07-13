@@ -7,11 +7,11 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\VST` (filings + transc
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $23.0bn | $25.1bn |
-| Gross profit | $12.3bn | $12.9bn |
+| Revenue | $23.1bn | $25.3bn |
+| Gross profit | $12.3bn | $13.0bn |
 | Gross margin | 53.4% | 51.4% |
 | EBITDA | $7.3bn | $8.3bn |
-| EPS | $8.71 | $11.05 |
+| EPS | $8.72 | $11.08 |
 | Capex | $2.2bn | $2.9bn |
 | OCF (≈EBITDA) | $7.3bn | $8.3bn |
 

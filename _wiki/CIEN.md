@@ -12,7 +12,7 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\CIEN` (filings + trans
 | Gross margin | 44.7% | 45.7% |
 | EBITDA | $1.5bn | $2.1bn |
 | EPS | $7.00 | $10.81 |
-| Capex | $259m | $298m |
+| Capex | $257m | $298m |
 | OCF (≈EBITDA) | $1.5bn | $2.1bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
