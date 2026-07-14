@@ -10,10 +10,10 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\WMB` (filings + transc
 | Revenue | $12.5bn | $13.9bn |
 | Gross profit | $10.2bn | $11.4bn |
 | Gross margin | 81.6% | 82.3% |
-| EBITDA | $8.2bn | $9.2bn |
-| EPS | $2.28 | $2.61 |
-| Capex | $8.3bn | $7.1bn |
-| OCF (≈EBITDA) | $8.2bn | $9.2bn |
+| EBITDA | $8.2bn | $9.1bn |
+| EPS | $2.28 | $2.60 |
+| Capex | $8.3bn | $7.0bn |
+| OCF (≈EBITDA) | $8.2bn | $9.1bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

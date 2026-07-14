@@ -7,8 +7,8 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\TSM` (20-F + transcrip
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | NT$5236.4bn | NT$6787.4bn |
-| Gross profit | NT$3456.0bn | NT$4472.9bn |
+| Revenue | NT$5238.8bn | NT$6787.4bn |
+| Gross profit | NT$3457.6bn | NT$4472.9bn |
 | Gross margin | **66.0%** | 65.9% |
 | EBITDA | NT$3812.0bn | NT$4957.1bn |
 | EPS | **NT$102.50** | **NT$143.50** |

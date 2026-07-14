@@ -10,10 +10,10 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\NVDA` (filings + trans
 | Revenue | **$407.0bn** | **$661.0bn** |
 | Gross profit | $305.2bn | $489.1bn |
 | Gross margin | **75.0%** | **74.0%** |
-| EBITDA | $266.0bn | $382.4bn |
+| EBITDA | $266.3bn | $384.7bn |
 | EPS | **$9.26** | **$15.44** |
 | Capex | $7.3bn | $9.1bn |
-| OCF (≈EBITDA) | $266.0bn | $382.4bn |
+| OCF (≈EBITDA) | $266.3bn | $384.7bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 _**Bold** = Capstone official model; plain = BBG consensus._
