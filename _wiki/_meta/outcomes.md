@@ -8,6 +8,7 @@ Format (ticker + the catalyst date, then the verdict):
 
 Add lines here after each catalyst resolves. Newest first.
 
+- TSEM 2026-07-14 — bull won — Government-of-Japan/METI ~$1B grant CONFIRMED for a dual-track 300mm Japan SiPho/SiGe/packaging expansion; management's first hard 2028 model ($3.6B rev / $1.2B net profit, ≈ $10-11 EPS); resolves the long-flagged "300mm pending METI grant" catalyst. Offsets: ~$3B net capex back-end-loaded to 2027-29, Track 2 pending definitive agreements (TSEM 6-K, 2026-07-14).
 - CRWD 2026-07-02 — neutral — 4-for-1 stock split executed as scheduled (effective 07-02, after 07-01 close); mechanical ~$760 pre-split → ~$190 post-split rebase, broker PTs re-based (Barclays $169). No fundamental change; the seat-reset/valuation (33x EV/sales) debate is the real driver.
 - IFX 2026-07-01 — neutral — re-org into 3 divisions (Automotive / Power Systems / Edge Systems) took effect as scheduled; new segment reporting begins with the FY3Q26 print (5 Aug). Structural/reporting change only — no fundamental or guidance impact.
 - CEG 2026-06-30 — neutral — Calpine lockup (25M shares) expired as scheduled; $5B buyback in place to absorb supply — watch flow/price action into the Aug Q2 print for the verdict.

@@ -2,10 +2,11 @@
 
 _Generated 2026-07-14 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (6)
+## 📅 Upcoming (7)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
+| 2026-07-14 | TSEM | **300mm expansion — METI grant CONFIRMED 2026-07-14** (~$1B Government-of-Japan grant; dual-track Japan SiPho/SiGe/packaging build — Track 1 ready Q4'27, Track 2 accretive 2029). **New watch items:**  |
 | 2026-07-22 | TXN | **Q2 FY26 print — call ~2026-07-22** (guide $5.0–5.4bn / EPS $1.77–2.05); first call with new CFO **Julie Knecht** (DB, briefing 2026-06-03). |
 | 2026-07-23 | DISCO | **Q1 FYE-Mar-2027 print — 2026-07-23** (next scheduled, per Quartr). Watch vs the +18% rev / +20%+ OP guide and the seasonal QoQ dip. |
 | 2026-08-05 | IFX | **2026-08-05 — FY3Q26 print** — MS expects an in-line print (order-book momentum, industrial recovery, AI-DC commentary); watch the FY26 >EUR 16bn / ~20% margin bridge and HV-auto commentary (MS, 2026 |

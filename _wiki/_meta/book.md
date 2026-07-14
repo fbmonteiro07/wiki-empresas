@@ -1,6 +1,6 @@
 # Book — positions × unresolved debates × catalysts
 
-_Generated 2026-07-13 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wiki/_tools/build_book.py`._
+_Generated 2026-07-14 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wiki/_tools/build_book.py`._
 
 > ⚠️ **SEED book** — initialized from the 8 house-model names, weights unknown. Edit `_data/book.json` to match the real Core Positions (weights, adds/drops), then remove the `"seed": true` flag.
 
