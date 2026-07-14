@@ -1,5 +1,5 @@
 {
- "asof": "2026-07-01",
+ "asof": "2026-07-13",
  "note": "Canonical-assumptions ledger — one entry per cross-page industry number that multiple pages/themes cite. Purpose: every page should reference ONE canonical framing per metric; when a new source disagrees, add a variant here (never silently replace). build_assumptions.py renders _meta/assumptions.md + _dashboards/assumptions.html and scans pages for citations of each metric not yet reconciled into the ledger. Edit variants by hand; keep scope labels precise (units vs dollars, IT-load vs facility GW).",
  "metrics": {
   "asic-vs-gpu-share": {
@@ -30,10 +30,24 @@
     {"value": "$272B by 2030 (18% CAGR)", "source": "Redburn", "date": "2026-06-17", "scope": "2030 frame", "cited_in": ["themes/semicap-wfe.md"]},
     {"value": "WFE<->EUV mapping: ~110 EUV slots ~= $225B WFE", "source": "UBS Arcuri", "date": "2026-06-15", "scope": "unit reconciliation", "cited_in": ["themes/semicap-wfe.md", "ASML.md"]},
     {"value": "house CY28 $260B implies ASML ~110-120 EUV shipments 2028 (vs supply chain sized ~90; JPM: 110+ possible without new buildings)", "source": "Capstone reconciliation (Memory_supply_demand.xlsx EUV tab, sec.9)", "date": "2026-07-01", "scope": "house-vs-street bridge", "cited_in": ["themes/semicap-wfe.md"]},
-    {"value": "'never $300B' ceiling", "source": "former Samsung foundry EVP (expert call)", "date": "2026-06-30", "scope": "skeptic ceiling", "cited_in": ["themes/semicap-wfe.md"]}
+    {"value": "'never $300B' ceiling", "source": "former Samsung foundry EVP (expert call)", "date": "2026-06-30", "scope": "skeptic ceiling", "cited_in": ["themes/semicap-wfe.md"]},
+    {"value": "buy-side bottoms-up EUV units 65/100/112 (2026/27/28E) vs BBG ccs 65/89/101; ArFi 131/182/205 vs 123/145/156; DRAM the swing (incremental DRAM EUV tools 19/41/51)", "source": "Bristlemoon Global Fund Quarterly", "date": "2026-06-30", "scope": "buy-side EUV/DUV units vs consensus", "cited_in": ["ASML.md"]}
    ],
    "status": "house-vs-street",
    "debate": "CY28: house $260B top vs street $230-250B. Resolves on memory greenfield timing + EUV shipments. UNIT BRIDGE (2026-07-01): believing house $260B = believing ASML flexes to ~110-120 EUV ships in 2028 (above the ~90 supply-chain sizing; JPM says 110+ feasible). Base bottom-up demand supports ~88-95; the gap = faster DRAM node migration + 2029 pre-provisioning."
+  },
+  "euv-fab-intensity": {
+   "title": "EUV tools per fab & leading-edge capex intensity (per 10kwpm)",
+   "definition": "Conversion constants for capex<->wafers<->EUV-unit sizing: EUV tools required per kwpm of leading-edge/DRAM capacity, and $ capex per 10kwpm. ALWAYS state node + whether the EUV throughput is nameplate or real-world derated.",
+   "canonical": "N2 logic (Bristlemoon, Jun-2026): ~11 EUV tools per 25kwpm fab and ~US$4.7B TOTAL fab capex per 10kwpm, built on real EUV throughput ~1/3 of nameplate (NXE:3800E 220->165 wph @40mJ dose x 45% uptime -> 34% OEE -> 2,430 wpm/tool) and 25kwpm as the modern module size (no longer ~40kwpm); capex stack: tool $240M -> EUV 80% of litho -> litho 40% of WFE -> WFE 70% of fab total. Cross-check (former Samsung foundry EVP, Jun-2026): ~10-12 EUV machines per fab, each ~$400M incl. 5-10yr maintenance, ~100 wafers/hr; litho ~35-40% of advanced-node (<=4/3/2nm) equipment capex; ~$20B fab / ~$14B equipment. DRAM basis differs: ~57 EUV tools for HBM by 2028E on rising EUV layers/wafer (3->6, '25-'28).",
+   "scope_note": "Bristlemoon's $4.7B/10kwpm is TOTAL fab capex (litho+WFE+shell), NOT WFE-only or EUV-only. Real vs nameplate EUV throughput differ ~3x — never size tools off nameplate. Logic (22 EUV layers @ N2) vs DRAM (3-6 EUV layers/wafer) intensities are different bases.",
+   "patterns": ["\\$?4\\.7\\s?(US\\$)?B.{0,20}10\\s?kwpm", "per 10\\s?kwpm", "\\d{1,2}\\s?EUV tools?.{0,20}(fab|kwpm)", "1/3 of nameplate", "capex per 10kwpm"],
+   "variants": [
+    {"value": "N2 logic: ~11 EUV tools/25kwpm; ~US$4.7B fab capex/10kwpm (real EUV throughput ~1/3 nameplate; tool $240M; EUV 80% litho / litho 40% WFE / WFE 70% fab)", "source": "Bristlemoon Global Fund Quarterly", "date": "2026-06-30", "scope": "N2 logic, total fab capex", "cited_in": ["ASML.md"]},
+    {"value": "~10-12 EUV machines/fab, each ~$400M incl. maintenance; litho ~35-40% of advanced-node equipment capex; ~$20B fab / ~$14B equipment", "source": "former Samsung foundry EVP (expert call)", "date": "2026-06-30", "scope": "advanced-node, cross-check", "cited_in": ["ASML.md"]}
+   ],
+   "status": "consistent",
+   "debate": "Two independent Jun-2026 sources converge on ~10-12 EUV tools/fab. Reusable levers: real-vs-nameplate throughput (~3x derate), OEE (34% logic / 45% memory), and the litho->WFE->fab capex stack. Use for capex<->wafer<->EUV-unit conversions; see memory euv-fab-capex-model + dram-euv-tool-demand-model."
   },
   "hyperscaler-capex": {
    "title": "Hyperscaler / AI-datacenter capex CY25 / CY26 / CY27",

@@ -1,8 +1,8 @@
 {
- "generated": "2026-07-12",
+ "generated": "2026-07-13",
  "counts": {
-  "nodes": 153,
-  "edges": 1197
+  "nodes": 154,
+  "edges": 1198
  },
  "nodes": [
   {
@@ -276,7 +276,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-07-11"
+   "last_chg": "2026-07-13"
   },
   {
    "id": "AVGO",
@@ -1581,6 +1581,14 @@
    "title": "WFE market size CY26 / CY27 / CY28",
    "status": "house-vs-street",
    "canonical": "CY26 ~$140-160B (all sources agree). CY27: house $180-215B vs MS ~$191B vs UBS $200B. CY28 is the genuine conflict: house top end $260B vs UBS $250B vs MS-implied ~$230-240B; skeptic ceiling 'never $300B' (ex-Samsung foundry EVP). Swing variable = memory-capex intensity + EUV availability post-2027 + first NAND greenfield (CY28)."
+  },
+  {
+   "id": "assum:euv-fab-intensity",
+   "type": "assumption",
+   "label": "euv-fab-intensity",
+   "title": "EUV tools per fab & leading-edge capex intensity (per 10kwpm)",
+   "status": "consistent",
+   "canonical": "N2 logic (Bristlemoon, Jun-2026): ~11 EUV tools per 25kwpm fab and ~US$4.7B TOTAL fab capex per 10kwpm, built on real EUV throughput ~1/3 of nameplate (NXE:3800E 220->165 wph @40mJ dose x 45% uptime -> 34% OEE -> 2,430 wpm/tool) and 25kwpm as the modern module size (no longer ~40kwpm); capex stack: tool $240M -> EUV 80% of litho -> litho 40% of WFE -> WFE 70% of fab total. Cross-check (former Sams"
   },
   {
    "id": "assum:hyperscaler-capex",
@@ -4011,6 +4019,12 @@
    "label": ""
   },
   {
+   "u": "assum:euv-fab-intensity",
+   "v": "ASML",
+   "type": "cites",
+   "label": ""
+  },
+  {
    "u": "assum:hyperscaler-capex",
    "v": "theme:ai-datacenter-power",
    "type": "cites",
@@ -4527,7 +4541,7 @@
    "v": "AMAT",
    "type": "covers",
    "label": "",
-   "w": 3
+   "w": 7
   },
   {
    "u": "broker:Redburn",
@@ -4583,7 +4597,7 @@
    "v": "AMD",
    "type": "covers",
    "label": "",
-   "w": 24
+   "w": 26
   },
   {
    "u": "broker:MS",
@@ -5066,14 +5080,14 @@
    "v": "ASML",
    "type": "covers",
    "label": "",
-   "w": 15
+   "w": 17
   },
   {
    "u": "broker:JPM",
    "v": "ASML",
    "type": "covers",
    "label": "",
-   "w": 30
+   "w": 33
   },
   {
    "u": "broker:MS",
@@ -5087,7 +5101,7 @@
    "v": "ASML",
    "type": "covers",
    "label": "",
-   "w": 23
+   "w": 32
   },
   {
    "u": "broker:Redburn",
@@ -5129,7 +5143,7 @@
    "v": "ASML",
    "type": "covers",
    "label": "",
-   "w": 9
+   "w": 10
   },
   {
    "u": "broker:BofA",
@@ -5150,7 +5164,7 @@
    "v": "AVGO",
    "type": "covers",
    "label": "",
-   "w": 143
+   "w": 146
   },
   {
    "u": "broker:MS",
@@ -6375,7 +6389,7 @@
    "v": "GOOG",
    "type": "covers",
    "label": "",
-   "w": 7
+   "w": 10
   },
   {
    "u": "broker:BofA",
@@ -7131,7 +7145,7 @@
    "v": "META",
    "type": "covers",
    "label": "",
-   "w": 51
+   "w": 55
   },
   {
    "u": "broker:BofA",
@@ -8615,7 +8629,7 @@
    "v": "SKHYNIX",
    "type": "covers",
    "label": "",
-   "w": 52
+   "w": 55
   },
   {
    "u": "broker:BofA",
@@ -8895,7 +8909,7 @@
    "v": "SPCX",
    "type": "covers",
    "label": "",
-   "w": 19
+   "w": 20
   },
   {
    "u": "broker:BofA",

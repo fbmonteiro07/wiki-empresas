@@ -1,6 +1,6 @@
 # Book — positions × unresolved debates × catalysts
 
-_Generated 2026-07-12 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wiki/_tools/build_book.py`._
+_Generated 2026-07-13 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wiki/_tools/build_book.py`._
 
 > ⚠️ **SEED book** — initialized from the 8 house-model names, weights unknown. Edit `_data/book.json` to match the real Core Positions (weights, adds/drops), then remove the `"seed": true` flag.
 
@@ -9,7 +9,7 @@ _Generated 2026-07-12 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wi
 | GOOG | long | ? | REV 2027 +25% | _none dated_ |  |  | 2026-07-10 | Full-stack compounder (Search +19%, Cloud +63%); debate is valuation, not fundamentals. |
 | NVDA | long | ? | EPS 2027 +20% | 2026-08-26 — Q2 FY27 print: 2026-08-26 (guided $91B). Watch hyperscale vs hyperscale-capex growth under new segmentation (Arcuri: bec |  |  | 2026-07-10 | Full-stack AI-factory platform at +85% rev; debate is demand sustainability vs ASIC erosion. |
 | AAPL | long | ? | EPS 2026 +14% | _none dated_ |  |  | 2026-07-11 | Strong franchise + memory-dislocation advantage; bear = AI catch-up + price elasticity. |
-| META | long | ? | EPS 2026 -11% | _none dated_ |  |  | 2026-07-12 | Fastest grower in Mag7 ex-GPU; bear = capital intensity and negative incremental ROIC. |
+| META | long | ? | EPS 2026 -10% | _none dated_ |  |  | 2026-07-12 | Fastest grower in Mag7 ex-GPU; bear = capital intensity and negative incremental ROIC. |
 | AVGO | long | ? | EPS 2026 -5% | _none dated_ |  |  | 2026-07-10 | #1 custom-ASIC/TPU partner; binary setup on the ">$100B" FY27 guide vs $250-300B FY28 (JPM). |
 | TSM | long | ? | — | _none dated_ |  |  | 2026-07-11 | Sole-source leading-edge foundry (~70% share); pricing headroom vs overseas-fab dilution. |
 | MSFT | long | ? | no house model | _none dated_ |  |  | 2026-07-09 | AI ARR >$37B/+123%; swing is capex (CY27 ~$276B) vs Azure revenue + OpenAI concentration. |
@@ -19,5 +19,5 @@ _Generated 2026-07-12 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wi
 
 | Ticker | Metric | Δ | Thesis |
 |---|---|--:|---|
-| COHR | EPS 2027 | +97% | InP chokepoint in AI interconnect; NVIDIA stake + CPO deal; bear is relative vs LITE. |
-| LITE | EPS 2027 | +28% | US photonics pure-play (rev +90%); demand isn't the question, supply/execution is. |
+| COHR | EPS 2027 | +96% | InP chokepoint in AI interconnect; NVIDIA stake + CPO deal; bear is relative vs LITE. |
+| LITE | EPS 2027 | +27% | US photonics pure-play (rev +90%); demand isn't the question, supply/execution is. |

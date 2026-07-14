@@ -21,7 +21,7 @@ td.r,th.r{text-align:right;white-space:nowrap}
 .pill.up{background:#e7f6ec;color:#1c7d3f} .pill.dn{background:#fdecea;color:#c0392b} .pill.due{background:#fff3cd;color:#8a6d1b}
 code{background:#eef1f6;padding:1px 5px;border-radius:4px;font-size:85%;font-family:ui-monospace,Consolas,monospace}
 </style></head><body>
-<header><h1>Canonical assumptions — one number per debate</h1><p>2026-07-12 · every cross-page number, all variants, scope traps flagged · <a href="../index.html">← back to wiki</a></p></header><main><h2>Custom-ASIC vs merchant-GPU share of AI accelerators <span class='pill due'>live debate</span></h2>
+<header><h1>Canonical assumptions — one number per debate</h1><p>2026-07-13 · every cross-page number, all variants, scope traps flagged · <a href="../index.html">← back to wiki</a></p></header><main><h2>Custom-ASIC vs merchant-GPU share of AI accelerators <span class='pill due'>live debate</span></h2>
 <p class='byline'>ASIC/XPU vs merchant-GPU split of AI accelerator shipments — ALWAYS state basis (units vs dollars) and horizon.</p>
 <p><b>Canonical:</b> Near-term unit share inflects to ASICs (JPM: 42% 2026E -&gt; 53% 2027E, units) while long-term dollar/unit share settles ~65-70% GPU (BofA AI 2030, UBS durable 70/30). These are horizons, not contradictions — the debate is whether the 2027 unit inflection sticks or plateaus.</p>
 <p style='background:#fff3cd;padding:8px 12px;border-radius:6px'>⚠️ <b>Scope:</b> Unit share ≠ dollar share (ASIC ASPs are far lower). NVDA-page &#x27;~70% defensible&#x27; framing = long-horizon accelerator share, consistent with BofA 65-70% by 2030, NOT a rebuttal of JPM&#x27;s 2027 unit-share call.</p>
@@ -58,6 +58,7 @@ code{background:#eef1f6;padding:1px 5px;border-radius:4px;font-size:85%;font-fam
 <tr><td>WFE&lt;-&gt;EUV mapping: ~110 EUV slots ~= $225B WFE</td><td>UBS Arcuri</td><td>2026-06-15</td><td>unit reconciliation</td></tr>
 <tr><td>house CY28 $260B implies ASML ~110-120 EUV shipments 2028 (vs supply chain sized ~90; JPM: 110+ possible without new buildings)</td><td>Capstone reconciliation (Memory_supply_demand.xlsx EUV tab, sec.9)</td><td>2026-07-01</td><td>house-vs-street bridge</td></tr>
 <tr><td>&#x27;never $300B&#x27; ceiling</td><td>former Samsung foundry EVP (expert call)</td><td>2026-06-30</td><td>skeptic ceiling</td></tr>
+<tr><td>buy-side bottoms-up EUV units 65/100/112 (2026/27/28E) vs BBG ccs 65/89/101; ArFi 131/182/205 vs 123/145/156; DRAM the swing (incremental DRAM EUV tools 19/41/51)</td><td>Bristlemoon Global Fund Quarterly</td><td>2026-06-30</td><td>buy-side EUV/DUV units vs consensus</td></tr>
 </tbody></table>
 <p><b>Debate:</b> CY28: house $260B top vs street $230-250B. Resolves on memory greenfield timing + EUV shipments. UNIT BRIDGE (2026-07-01): believing house $260B = believing ASML flexes to ~110-120 EUV ships in 2028 (above the ~90 supply-chain sizing; JPM says 110+ feasible). Base bottom-up demand supports ~88-95; the gap = faster DRAM node migration + 2029 pre-provisioning.</p>
 <p class='mut'><b>Unreconciled sightings:</b></p><ul>
@@ -73,6 +74,15 @@ code{background:#eef1f6;padding:1px 5px;border-radius:4px;font-size:85%;font-fam
 <li><code>TSM.md</code> — …der (SpaceX AI capex ~$1.1T/5yrs, ~20%/~$225B to Terafab, ~$135B WFE/5yrs). Cuts mixed for TSMC: near-term it validates that TSM…</li>
 <li><code>themes/hbm-memory.md</code> — …to be the limitation&quot;; UBS raised 2028 WFE to $250B and floats 2029 into the $300B range, with memory not enter…</li>
 </ul>
+<h2>EUV tools per fab &amp; leading-edge capex intensity (per 10kwpm) <span class='pill up'>consistent</span></h2>
+<p class='byline'>Conversion constants for capex&lt;-&gt;wafers&lt;-&gt;EUV-unit sizing: EUV tools required per kwpm of leading-edge/DRAM capacity, and $ capex per 10kwpm. ALWAYS state node + whether the EUV throughput is nameplate or real-world derated.</p>
+<p><b>Canonical:</b> N2 logic (Bristlemoon, Jun-2026): ~11 EUV tools per 25kwpm fab and ~US$4.7B TOTAL fab capex per 10kwpm, built on real EUV throughput ~1/3 of nameplate (NXE:3800E 220-&gt;165 wph @40mJ dose x 45% uptime -&gt; 34% OEE -&gt; 2,430 wpm/tool) and 25kwpm as the modern module size (no longer ~40kwpm); capex stack: tool $240M -&gt; EUV 80% of litho -&gt; litho 40% of WFE -&gt; WFE 70% of fab total. Cross-check (former Samsung foundry EVP, Jun-2026): ~10-12 EUV machines per fab, each ~$400M incl. 5-10yr maintenance, ~100 wafers/hr; litho ~35-40% of advanced-node (&lt;=4/3/2nm) equipment capex; ~$20B fab / ~$14B equipment. DRAM basis differs: ~57 EUV tools for HBM by 2028E on rising EUV layers/wafer (3-&gt;6, &#x27;25-&#x27;28).</p>
+<p style='background:#fff3cd;padding:8px 12px;border-radius:6px'>⚠️ <b>Scope:</b> Bristlemoon&#x27;s $4.7B/10kwpm is TOTAL fab capex (litho+WFE+shell), NOT WFE-only or EUV-only. Real vs nameplate EUV throughput differ ~3x — never size tools off nameplate. Logic (22 EUV layers @ N2) vs DRAM (3-6 EUV layers/wafer) intensities are different bases.</p>
+<table><thead><tr><th>Value</th><th>Source</th><th>Date</th><th>Scope</th></tr></thead><tbody>
+<tr><td>N2 logic: ~11 EUV tools/25kwpm; ~US$4.7B fab capex/10kwpm (real EUV throughput ~1/3 nameplate; tool $240M; EUV 80% litho / litho 40% WFE / WFE 70% fab)</td><td>Bristlemoon Global Fund Quarterly</td><td>2026-06-30</td><td>N2 logic, total fab capex</td></tr>
+<tr><td>~10-12 EUV machines/fab, each ~$400M incl. maintenance; litho ~35-40% of advanced-node equipment capex; ~$20B fab / ~$14B equipment</td><td>former Samsung foundry EVP (expert call)</td><td>2026-06-30</td><td>advanced-node, cross-check</td></tr>
+</tbody></table>
+<p><b>Debate:</b> Two independent Jun-2026 sources converge on ~10-12 EUV tools/fab. Reusable levers: real-vs-nameplate throughput (~3x derate), OEE (34% logic / 45% memory), and the litho-&gt;WFE-&gt;fab capex stack. Use for capex&lt;-&gt;wafer&lt;-&gt;EUV-unit conversions; see memory euv-fab-capex-model + dram-euv-tool-demand-model.</p>
 <h2>Hyperscaler / AI-datacenter capex CY25 / CY26 / CY27 <span class='pill up'>consistent</span></h2>
 <p class='byline'>Aggregate capex of the big US hyperscalers — ALWAYS state the basket (top-4 = MSFT/AMZN/GOOGL/META; five-name adds ORCL).</p>
 <p><b>Canonical:</b> Top-4: ~$410B 2025A -&gt; ~$700-725B 2026E (+~75%) -&gt; ~$1.1T 2027E (JPM AI Capex 2.0). Five-name consensus: ~$700B 2026 / ~$900B+ 2027. Buy-side 2027 bogey ~$1.2T (&#x27;could be 1.3-1.4&#x27;, Jefferies). Constraint is power/physical buildout, not demand.</p>
@@ -97,6 +107,7 @@ code{background:#eef1f6;padding:1px 5px;border-radius:4px;font-size:85%;font-fam
 <li><code>NVDA.md</code> — …venue exiting 2026,&quot; MS 2027 hyperscale capex chart lifted $950B→$1.1T (panel thinks ~$1.5T incl. SpaceX/neoclouds). - **Hardware…</li>
 <li><code>OPENAI.md</code> — …re-asserted with GPT-5.5; TAM seen at **$700bn+ by 2030** across consumer/hardware/ads/enterprise (JPM in…</li>
 <li><code>SAMSUNG.md</code> — …ory cost; premium/QD-OLED strategy. - **Capex/return:** Q1 capex KRW 11.2tn (DS 10.2tn); 2026 &quot;substantial y/y increase.&quot; Quarterly di…</li>
+<li><code>SPCX.md</code> — …(MS · Brian Nowak, 2026-07-12):** MS&#x27;s &quot;$1.4trln of Capex / 120 GW by &#x27;28&quot; Internet note **includes SPCX (terrestrial…</li>
 <li><code>STX.md</code> — …n FY25; demand is driven by hyperscaler capex (FY25 10-K). Top-3 CSP RPO of $1.1T concentrates both upside and risk. - **Double-ordering / ab…</li>
 <li><code>TSM.md</code> — …ial new &gt;$50B/yr WFE spender (SpaceX AI capex ~$1.1T/5yrs, ~20%/~$225B to Terafab, ~$135B WFE/5yrs). Cuts mixed…</li>
 <li><code>VRT.md</code> — …in 2024 → &gt;$500bn 2025E, +23% CAGR to &gt;$900bn by 2028, of which **Electrical equipment ~$18bn and Therma…</li>

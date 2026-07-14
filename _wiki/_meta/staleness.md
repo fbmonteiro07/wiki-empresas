@@ -1,6 +1,6 @@
 # Wiki staleness report
 
-_Generated 2026-07-10 · 102 pages checked._
+_Generated 2026-07-13 · 102 pages checked._
 
 ## 🔴 BBG estimates missing/errored (2)
 AEIS, CEREBRAS
