@@ -17,17 +17,19 @@ _Generated 2026-07-13 · the standing view of where our model and the curated re
 | NVDA | EPS | 2027 | 15.44 | 12.88 | +20% |
 | NVDA | Revenue $bn | 2027 | 661.00 | 561.40 | +18% |
 
-## Curated divergences — latest reconciliation (`reconciliation-2026-07-10.md`)
+## Curated divergences — latest reconciliation (`reconciliation-2026-07-13.md`)
 
 | Name | New datapoint | Read (the edge) |
 |---|---|---|
-| NVDAout-yearrevenue | MS MW **$393B (FY27e) / $599B (FY28e)** (MS "NVDA NDR", 07-10) | **House ABOVE both MS and BBG cons** on the comparable out-year — house CY27 $661B vs cons $561.4B (+18%) and vs MS FY28e $599B (+10%), still below the $732B street-high. MS FY27e $393B ≈ cons CY26 $390.9B; MS FY28e $599B ~+7% above cons CY27. |
-| NVDAout-yearEPS | MS MW EPS **$8.96 (FY27e) / $13.08 (FY28e)** | **House EPS ~18% above MS and +20% above BBG cons** ($15.44 vs cons $12.88, approaching the $16.59 street-high). MS FY27e $8.96 ≈ cons CY26 $8.87; MS FY28e $13.08 ≈ cons CY27 $12.88. Edge = *long-side conviction beyond the Street*; check the FY-alignment bridge before sizing. |
-| AVGOAI-semisgrowth | MS: NVDA & AVGO AI both **+80% next year**, supply-constrained ("NVDA NDR", 07-10) | House 2027 AI-semis growth (**+110%**) runs **hotter than MS's "+80% next year"**; converge closer on 2028 (+90%). House the more bullish AI-semis ramp; BBG carries no AI-semis-segment line, only total-company (house ≈ cons on total EPS — see 07-02). |
-| MediaTekASICrevenue | GS: **2027 ~$20B (raised from ~$12B) / 2028 ~$52B**; HomoFish 4.5M @ ~$4,500 (27), 3M @ ~$16k + ZebraFish 1M (28); **contested 50/50 Broadcom split** (GS "TSMC preview", 07-09) | GS's **+67% upward revision** to 2027 ASIC and a Street-high-ish 2028 $52B. The **live debate is the Broadcom/MediaTek share split** (GS 50/50 vs US-investor view of higher Broadcom share) — Hock Tan (07-07) dismisses the MediaTek A8 program ("still in the Fab", "PR agency of MediaTek"). Two-sided; edge = which side of the split is right. BBG carries no ASIC-segment consensus to adjudicate. |
-| TSM2Q26grossmargin | 2Q GM **~69.5-70%** vs guide 67.5% (JPM·Gokul 07-08; GS 07-09 68.5→70%) | 2Q print tracking **~70%, above guide (67.5%), BBG cons FY26 (65.7%) and house FY-avg (~66%)** → margin upside risk to full-year consensus (FY avg carries N2/overseas dilution, not fully comparable, but the 2Q level is a positive surprise). |
+| INTC | **BofA (Arya) flips to Buy, PO $160** (2026-07-13); Mizuho Neutral $135 (07-11) | **Biggest thesis shift of the run.** A two-notch BofA reversal on stronger PC/server pricing + Products OpM +~600bps + 18A-P/14A foundry traction — even while BofA models INTC server share *falling* 41%→24% by CY30. Rating-vs-fundamentals tension worth pressing: the Buy is a pricing/margin/foundry-option call, not a share call. Mizuho ($135 Neutral) is the more cautious anchor. **Verify the Buy against the underlying PDF** (inferred from disclosure code C-1-9; QCOM's B-3-7=U/P cross-checks the mapping). |
+| COHR | MS (Marshall/Moore) 2028E revenue ~**$12.86bn** (07-13) | **House is ~50% above MS on COHR '28 revenue** ($19.6bn vs $12.86bn). Either the house 800G/1.6T ramp is too steep or MS is under-modeling the scale-up optical pull it just turned more constructive on. Material — reconcile the house COHR model's CY28 ramp vs MS's rebuilt CPO-adoption model. |
+| ARM | BofA Neutral, **PT $245 → $460** (07-13); Mizuho OP $500 (07-11) | **~2x PT hike while holding Neutral** = classic rating-vs-PT tension (BofA sees ~50% CPU value-share by CY30 / AGI demand >$2bn FY27-28 vs ~$1bn supply, but valuation caps the rating). Mizuho Outperform $500 is the more directional call. JPM's ~90% AI-head-node / ~43%-blended-by-'28 share frame underwrites the bull. |
+| MU | Mizuho OP **$1,375** (07-11) | +$225 (+20%) PT hike on "memory prices remain elevated" as an AI-capex input. Consistent with the LTA-tightening thesis already on the page (SK Hynix roadshow / Bernstein LTA notes, 07-06/07-09). Confirms direction; magnitude is a new Street data point. |
+| SNDK | Mizuho OP **$2,200** (07-11) | +$375 (+21%) on the same elevated-NAND thesis. New Street-high context; track vs the NAND up-cycle already logged. |
+| CRDO | Mizuho OP **$290 — new Street high** (07-11) | New Street high on the copper-durability + optics-second-engine story (>80% FY27 growth, >$600M optical). Momentum name; flag if fundamentals lag the multiple. |
+| META(capex) | MS capex '27/'28 **$225bn/$250bn** (07-12); Mizuho: +7GW/14GW 2027 ⇒ ~$200-300B (07-11) | **House META capex ($170bn '27) sits well below the new Street ('27 $225bn, '28 $250bn).** If the Street ramp is right, house under-models META spend (and the downstream AVGO/NVDA/memory pull). House base PT $688 also below MS $775 (but inside house bull $840). Bridge the house capex line to the announced 14GW-by-2027. |
 
-## Consensus PT vs spot — live pull in `reconciliation-2026-07-10.md` (upside ranked)
+## Consensus PT vs spot — live pull in `reconciliation-2026-07-13.md` (upside ranked)
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|
