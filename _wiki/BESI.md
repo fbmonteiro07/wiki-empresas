@@ -89,6 +89,29 @@ BESI sits in the **back-end / advanced-packaging** tier of semicap — between p
 
 <!-- Consensus estimates (BBG, EUR) block auto-injected here by the HTML builder -->
 
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q1-26 · Apr 23 → Jul 14, 2026 · sell-side / expert calls / reports between earnings._
+
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
+
+| Theme | Management said (Q1-26 · 2026-04-23) | Intra-quarter flow | Signal |
+|---|---|---|---|
+| **HB / AI-packaging demand** | HB units >2x vs Q4, adoption to 20 customers; "everything up and to the right" | MS (OW €300) raised LT model to €1.7–2.2bn; Redburn (Buy €350) two AI-logic HB legs, visibility to 2030; Conor: sole TSMC-qualified HB, SOIC needs 15-20 bonders/10K line | **✓ confirms** (broad-based order momentum) |
+| **CPO / photonics** | CPO moving R&D→production faster than expected | Redburn: CPO reliability tips scale-up adoption 2028/29 (EIC-PIC Cu-Cu HB via COUPE); ~50 CPO bonders by 2030 | **✓ confirms** (CPO an emerging equipment leg) |
+| **AI-capex monetisation / valuation** | AI ~50% of 2025 orders; capital-light, high-return model | Rothschild/Redburn strategy screen names BESI a European top Buy (clears FCF/RoCE/leverage gates); but Conor: "a lot is already priced in," buy-side bar high | **⚠ nuance** (thesis intact, expectations elevated) |
+
+**Full log** (all intra-quarter flow, by date):
+
+| Date | Source | Theme | Bias | What was said |
+|---|---|---|---|---|
+| 06-15 | Rothschild/Redburn · Aziz/Schulze-Melander | produto | bull | "Two opportunities, Two risks": **Buy, PT €270→€350**; two AI-logic HB legs (Huawei LogicFolding — 73 bonders to China by 2030; CPO — 50 CPO bonders by 2030 from 2H28); BESI rev €972m/€1,414m/€1,820m FY26-28E; HB €242m→€1,085m (60% 5yr CAGR); 46% EBIT CAGR to 2030. |
+| 06-18 | Morgan Stanley · van Putten (investor day) | guidance | bull | **OW, PT €300**; LT revenue model raised to €1.7–2.2bn (from €1.5–1.9bn) + OP-margin band 45–55%; CPO "clearest area of upside," 2–4 generation tech lead, 20 customers ordered / 10 in production. |
+| 06-22 | AlphaSense Deep Research (ASML/LRCX primers) | capital | mixed | Building takeover narrative: Kepler names **Lam an active suitor** for BESI (completes adv-packaging chain); ASML framed as the "prominent logical consolidator" (Dutch-on-Dutch, ~€14B mcap, AMAT ~9% stake); Bernstein cautions mass-market HB for HBM/DRAM ~2028. |
+| 06-23 | Rothschild/Redburn · Conor O'Mara (Asia trip) | competicao | bull | BESI **sole TSMC-qualified hybrid bonder** (Shibaura not yet); TSMC's SOIC expansion 2027-28 needs **15-20 HB per 10,000-unit SOIC line**; new SOIC use cases = silicon-photonics chips + Broadcom's next-gen TPU. Bullish, but "buy-side expectations have risen a lot — a lot is already priced in"; Samsung disclosed its own HB project (longer-run second source). |
+| 07-14 | Rothschild/Redburn · Karamanos (strategy) | valuation | bull | **"AI Monetisation & the Impact on Sector Rotation" strategy note names BE Semiconductor a European top Buy** — "BESI's hybrid-bonding franchise is a direct AI-logic advanced-packaging play, with the AI upcycle strengthening and visibility extended toward 2030. Core AI infrastructure with high-return, capital-light growth." BESI clears Redburn's FCF/RoCE/leverage screen (6-mo Δ: sales-growth **+5.7%**, FCF **+28.1%**, RoCE **+1.3%**, EBITDA-margin **+0.2%**, net-debt/EBITDA **−0.2x**, capital-employed growth **+5.0%**). Rating **Buy** (Redburn Buy = ≥15% upside over 1yr); strategy-level top-Buy screen citing the earlier "BE Semiconductor: Two Opportunities, Two Risks" (15 Jun 2026) — no new PT (Redburn PT €350 unchanged). (Rothschild/Redburn · Karamanos "AI Monetisation & Sector Rotation", 2026-07-14) |
+
+**Quarter synthesis:** the intra-quarter flow is uniformly constructive on the HB/CPO secular story — MS (OW €300) and Redburn (Buy €350) both raised, Conor confirms BESI as the sole TSMC-qualified hybrid bonder into a 2027-28 SOIC expansion, and takeover chatter (Lam/ASML) adds optionality. **07-14:** Rothschild/Redburn's AI-monetisation strategy screen adds a top-Buy endorsement (advanced-packaging AI-logic play clearing the FCF/RoCE/leverage gates) — a strategy-level confirmation of the thesis rather than a new estimate; the standing caution (Conor: "a lot is already priced in," MS FY26/27 estimate trims despite the LT raise) is the offset.
+
 ## Management commentary — evolution (last 4 quarters)
 
 | Theme | Q2-25 (2025-07-24) | Q3-25 (2025-10-23) | Q4-25 (2026-02-19) | Q1-26 (2026-04-23) |
@@ -112,9 +135,15 @@ _Source: BESI earnings calls (dates above); management commentary, paraphrased._
   - [Jefferies — Asia tech (2026-04-07)](../relat%C3%B3rios%20bons/2026_04_07_jef_asia_7_apr_2026.html) — AI ~50% of BESI revenue; flip-chip benefits from CoWoS adds; Shibaura not qualified for logic-logic HB.
   - [Redburn (Conor O'Mara) — Asia Trip Takeaways (2026-06-23)](../relat%C3%B3rios%20bons/77420a6c-61c1-4757-8047-3a24cced258c_Key_Takeaways_from_Conor_OMaras_recent_Management_Meetings_across_ASIA_1.html) — Besi sole TSMC-qualified HB (Shibaura not); SOIC expansion 2027-28 needs 15-20 bonders/10K line; new SOIC = silicon photonics + Broadcom next TPU; bullish but much priced in; Samsung discloses own HB project.
   - [BofA — TSMC/ASML review (2026-04-16)](../relat%C3%B3rios%20bons/2026_04_16_tsm_baml_16_apr_2026.html) — raised numbers on ASM + BESI on TSMC CoWoS/SoC capacity adds.
+  - [Rothschild/Redburn (Karamanos) — "AI Monetisation & the Impact on Sector Rotation" (2026-07-14)](../relat%C3%B3rios%20bons/Redburn_Research_3.html) — BESI a European top Buy (hybrid-bonding AI-logic advanced-packaging play, visibility to 2030, capital-light high-return; clears the FCF/RoCE/leverage screen: sales-growth Δ +5.7%, FCF +28.1%, RoCE Δ +1.3%); strategy-level top-Buy screen citing the earlier 15-Jun BESI note, no fresh PT.
   - [Nutty "The AI Power Crisis — Part 4" (nuttycld.substack.com, 2026-04-25)](../relat%C3%B3rios%20bons/The_AI_Power_Crisis_Part_4_-_Nutty.html) — BESI named "the more interesting name" in the BSPDN/hybrid-bonding convergence thesis: the same process logic (attach more tightly, connect more closely) drives both BSPDN (backside power delivery) and HBM stacking, and BESI + AMAT lead the D2W (die-to-wafer) side of that convergence. SK Hynix ordering a hybrid bonding inline system jointly developed by AMAT and BESI for its HBM line — "not just an HBM headline" but validation that BESI's HB technology is at the center of both the HBM and BSPDN structural waves. EVG/Tokyo Electron lead the W2W (wafer-to-wafer) carrier-bonding side of BSPDN; BESI/AMAT lead D2W. Intel's Q1'26 call signaling advanced packaging demand "at the billions of dollars per year level" (not hundreds of millions as initially expected) directionally supports BESI's TAM.
 - **Transcripts:** [`Q1-26 (2026-04-23)`](../BESI/transcripts/BESI_Q1-2026-earnings_2026-04-23.md) · [`Q4-25 (2026-02-19)`](../BESI/transcripts/BESI_Q4-2025-earnings_2026-02-19.md) · [`Q3-25`](../BESI/transcripts/BESI_Q3-2025-earnings_2025-10-23.md) · [`Q2-25 (2025-07-24)`](../BESI/transcripts/BESI_Q2-2025-earnings_2025-07-24.md). Read in depth: Q1-26 + Q4-25.
 - **Briefings:** `E:\briefings\2026\2026-06-19-company-specific.md` (MS OW €300, LT model raise), `2026-06-18-company-specific.md` (investor day guide raise), `2026-05-26-company-specific.md` (Redburn Buy €350; Barclays CMD preview), `2026-05-11-company-specific.md` (BofA EU Intel-foundry basket), `2026-06-15-company-specific.md` (12m relative highs).
 - **Outlook:** attempted via `outlook.py` — Python not available on PATH in this shell (`py`/`python` both failed); no live inbox pull. Sell-side attribution above is sourced from the archived company-specific briefings.
 - **BBG:** consensus estimates (EUR) auto-injected by HTML builder.
 - **Themes:** [cowos-packaging](themes/cowos-packaging.md), [semicap-wfe](themes/semicap-wfe.md).
+
+## Changelog
+| Date | Change |
+|---|---|
+| 2026-07-14 | Added **Rothschild/Redburn (Karamanos) "AI Monetisation & the Impact on Sector Rotation" (2026-07-14)** — BESI a named **European top Buy** (hybrid-bonding AI-logic advanced-packaging play, visibility to 2030, capital-light high-return; clears the note's FCF/RoCE/leverage screen, 6-mo Δ sales-growth +5.7% / FCF +28.1% / RoCE +1.3%). A strategy-level top-Buy screen citing the earlier 15-Jun "Two Opportunities, Two Risks" note — **no fresh PT** (Redburn PT €350 / MS €300 unchanged). Scaffolded the **`## Intra-quarter — calls, commentary & reports`** section by hand (page previously lacked one): Signal-vs-management table + full log (populated with the post-Q1-26 flow already documented in Debate: 06-15 Redburn, 06-18 MS, 06-22 AlphaSense M&A, 06-23 Conor O'Mara + the new 07-14 row) + synthesis. Added a Sources link. No PT/rating superseded — additive. |

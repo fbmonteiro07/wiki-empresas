@@ -89,6 +89,7 @@ SHOP sits between infrastructure suppliers (cloud compute, card networks/acquire
 ## Catalysts / what to watch
 - **Q2 FY26 print** — ~early Aug 2026 (cadence: Q1 was 2026-05-05). Watch: GMV growth into tougher comps (guide high-20s rev, ~0.5pt FX tailwind only), attach-rate/Payments penetration, AI/token COGS trajectory vs JPM's ~160bps 2026 Sub-GM model.
 - **Agentic-commerce proof points** — UCP adoption with Amazon/Meta/Microsoft/Salesforce/Stripe + Google universal cart; AI-search order conversion durability beyond the small base.
+- **DotDev developer conference — July 21-22, 2026** — flagged in JPM's US Internet catalyst calendar; watch for agentic-commerce / dev-platform (UCP, Sidekick, checkout) announcements (JPM · Anmuth "US Internet 2Q26 Preview", 2026-07-14). [Source](../relat%C3%B3rios%20bons/JPM_JPM_ANMUTH___US_Inte_2026-07-14_5366760.html)
 - **Spring/Fall 2026 Editions** — product cadence (AI Catalog, Sidekick, Shop Pay to non-SHOP brands / 250M+ shoppers).
 - **Enterprise pipeline** — $100M+ GMV merchant adds, B2B (+80% y/y) ramp.
 - **Capital return** — $2B buyback execution (authorized Q4 FY25).
