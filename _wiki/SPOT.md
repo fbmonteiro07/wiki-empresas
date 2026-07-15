@@ -7,7 +7,7 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\SPOT` (filings 20-F + 
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | €19.5bn | €22.3bn |
+| Revenue | €19.5bn | €22.4bn |
 | Gross profit | €6.5bn | €7.7bn |
 | Gross margin | 33.2% | 34.3% |
 | EBITDA | €3.0bn | €3.9bn |

@@ -14,7 +14,7 @@ _Wiki · generated 2026-06-20 · **Dutch issuer — no SEC 10-K/10-Q/20-F**; sou
 | Gross profit | €619m | €824m |
 | Gross margin | 64.8% | 65.7% |
 | EBITDA | €431m | €566m |
-| EPS | €4.13 | €5.97 |
+| EPS | €4.12 | €5.97 |
 | Capex | €14m | €17m |
 | OCF (≈EBITDA) | €431m | €566m |
 
