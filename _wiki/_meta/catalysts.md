@@ -1,12 +1,11 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-07-14 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-07-15 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (7)
+## 📅 Upcoming (6)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-07-14 | TSEM | **300mm expansion — METI grant CONFIRMED 2026-07-14** (~$1B Government-of-Japan grant; dual-track Japan SiPho/SiGe/packaging build — Track 1 ready Q4'27, Track 2 accretive 2029). **New watch items:**  |
 | 2026-07-22 | TXN | **Q2 FY26 print — call ~2026-07-22** (guide $5.0–5.4bn / EPS $1.77–2.05); first call with new CFO **Julie Knecht** (DB, briefing 2026-06-03). |
 | 2026-07-23 | DISCO | **Q1 FYE-Mar-2027 print — 2026-07-23** (next scheduled, per Quartr). Watch vs the +18% rev / +20%+ OP guide and the seasonal QoQ dip. |
 | 2026-08-05 | IFX | **2026-08-05 — FY3Q26 print** — MS expects an in-line print (order-book momentum, industrial recovery, AI-DC commentary); watch the FY26 >EUR 16bn / ~20% margin bridge and HV-auto commentary (MS, 2026 |
@@ -22,10 +21,11 @@ _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_me
 |---|---|---|
 | _none_ | | |
 
-## ✅ Resolved (19)
+## ✅ Resolved (20)
 
 | Date | Ticker | Verdict |
 |---|---|---|
+| 2026-07-14 | TSEM | bull won — Government-of-Japan/METI ~$1B grant CONFIRMED for a dual-track 300mm Japan SiPho/SiGe/packaging expansion; management's first hard 2028 model ($3.6B rev / $1.2B net profit, ≈ $10-11 EPS); resolves the long-flagged "300mm pending METI grant" catalyst. Offsets: ~$3B net capex back-end-loaded to 2027-29, Track 2 pending definitive agreements (TSEM 6-K, 2026-07-14). |
 | 2026-07-10 | SKHYNIX | bull won — US Nasdaq ADR listing catalyst resolved: priced $149, raised ~$26.5bn (largest-ever first-time foreign share sale on US markets, past Alibaba), 7x oversubscribed with anchor allocations cut on demand; the long-flagged US-listing/ADR re-rating catalyst is now realized with record demand. Nuance: ~3% ADR premium landed below the 5-20% desks flagged, and the local line closed flat on foreign net-selling (flows, not fundamentals). |
 | 2026-07-10 | SKHYNIX | bull won — US Nasdaq ADR listing catalyst resolved: priced $149, raised ~$26.5bn (largest-ever first-time foreign share sale on US markets, past Alibaba), 7x oversubscribed with anchor allocations cut on demand; the long-flagged US-listing/ADR re-rating catalyst is now realized with record demand. Nuance: ~3% ADR premium landed below the 5-20% desks flagged, and the local line closed flat on foreign net-selling (flows, not fundamentals). |
 | 2026-07-10 | SKHYNIX | bull won — US Nasdaq ADR listing catalyst resolved: priced $149, raised ~$26.5bn (largest-ever first-time foreign share sale on US markets, past Alibaba), 7x oversubscribed with anchor allocations cut on demand; the long-flagged US-listing/ADR re-rating catalyst is now realized with record demand. Nuance: ~3% ADR premium landed below the 5-20% desks flagged, and the local line closed flat on foreign net-selling (flows, not fundamentals). |
