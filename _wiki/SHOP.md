@@ -8,8 +8,8 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\SHOP` (10-K/10-Q + tra
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $14.7bn | $18.2bn |
-| Gross profit | $7.0bn | $8.5bn |
-| Gross margin | 47.2% | 46.9% |
+| Gross profit | $7.0bn | $8.6bn |
+| Gross margin | 47.2% | 47.0% |
 | EBITDA | $2.7bn | $3.5bn |
 | EPS | $1.87 | $2.46 |
 | Capex | $31m | $38m |

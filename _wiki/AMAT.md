@@ -13,7 +13,7 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\AMAT` (10-K/10-Q + tra
 | Gross profit | $18.1bn | $23.1bn |
 | Gross margin | 50.0% | 50.6% |
 | EBITDA | $12.6bn | $17.2bn |
-| EPS | $13.62 | $18.69 |
+| EPS | $13.62 | $18.70 |
 | Capex | $2.3bn | $2.2bn |
 | OCF (≈EBITDA) | $12.6bn | $17.2bn |
 

@@ -12,10 +12,10 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\COHR` (filings + trans
 | Revenue | **$9.1bn** | **$16.6bn** |
 | Gross profit | $3.6bn | $6.8bn |
 | Gross margin | **40.0%** | **41.0%** |
-| EBITDA | $2.1bn | $3.0bn |
+| EBITDA | $2.1bn | $3.1bn |
 | EPS | **$8.27** | **$19.21** |
 | Capex | $1.0bn | $1.1bn |
-| OCF (≈EBITDA) | $2.1bn | $3.0bn |
+| OCF (≈EBITDA) | $2.1bn | $3.1bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 _**Bold** = Capstone official model; plain = BBG consensus._
