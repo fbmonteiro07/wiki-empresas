@@ -8,12 +8,12 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\GOOG` (filings + trans
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | **$505.0bn** | **$641.0bn** |
-| Gross profit | $352.5bn | $445.5bn |
-| Gross margin | 69.8% | 69.5% |
-| EBITDA | $227.0bn | $287.4bn |
+| Gross profit | $341.9bn | $445.5bn |
+| Gross margin | 67.7% | 69.5% |
+| EBITDA | $227.4bn | $288.0bn |
 | EPS | **$11.80** | **$16.20** |
-| Capex | $187.6bn | $254.0bn |
-| OCF (≈EBITDA) | $227.0bn | $287.4bn |
+| Capex | $187.8bn | $259.1bn |
+| OCF (≈EBITDA) | $227.4bn | $288.0bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 _**Bold** = Capstone official model; plain = BBG consensus._
