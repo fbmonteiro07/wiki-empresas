@@ -9,9 +9,9 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\SNPS` · `_equity_call
 |---|--:|--:|
 | Revenue | $9.8bn | $10.9bn |
 | Gross profit | $8.1bn | $9.1bn |
-| Gross margin | 82.6% | 83.0% |
+| Gross margin | 82.7% | 83.1% |
 | EBITDA | $4.8bn | $5.2bn |
-| EPS | $15.07 | $18.11 |
+| EPS | $15.08 | $18.12 |
 | Capex | $330m | $308m |
 | OCF (≈EBITDA) | $4.8bn | $5.2bn |
 

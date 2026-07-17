@@ -9,12 +9,12 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\BKNG` (filings + trans
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $29.9bn | $33.2bn |
-| Gross profit | $29.9bn | $33.2bn |
+| Revenue | $29.2bn | $31.9bn |
+| Gross profit | $29.2bn | $31.9bn |
 | Gross margin | 100.0% | 100.0% |
 | EBITDA | $11.1bn | $12.8bn |
-| EPS | $10.36 | $12.43 |
-| Capex | $442m | $493m |
+| EPS | $10.35 | $12.43 |
+| Capex | $441m | $493m |
 | OCF (≈EBITDA) | $11.1bn | $12.8bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

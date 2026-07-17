@@ -9,7 +9,7 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\CDNS` · `_equity_call
 |---|--:|--:|
 | Revenue | $6.2bn | $7.0bn |
 | Gross profit | $5.4bn | $6.2bn |
-| Gross margin | 88.0% | 88.2% |
+| Gross margin | 88.1% | 88.3% |
 | EBITDA | $2.9bn | $3.4bn |
 | EPS | $7.88 | $9.31 |
 | Capex | $229m | $226m |

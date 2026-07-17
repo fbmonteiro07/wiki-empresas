@@ -9,13 +9,13 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\ANET` (filings + trans
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $11.5bn | $14.2bn |
+| Revenue | $11.5bn | $14.3bn |
 | Gross profit | $7.2bn | $8.9bn |
 | Gross margin | 62.6% | 62.6% |
-| EBITDA | $5.4bn | $6.7bn |
-| EPS | $3.57 | $4.43 |
+| EBITDA | $5.4bn | $6.8bn |
+| EPS | $3.58 | $4.45 |
 | Capex | $168m | $163m |
-| OCF (≈EBITDA) | $5.4bn | $6.7bn |
+| OCF (≈EBITDA) | $5.4bn | $6.8bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

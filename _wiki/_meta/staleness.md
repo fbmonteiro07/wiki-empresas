@@ -1,6 +1,6 @@
 # Wiki staleness report
 
-_Generated 2026-07-15 · 102 pages checked._
+_Generated 2026-07-16 · 102 pages checked._
 
 ## 🔴 BBG estimates missing/errored (2)
 AEIS, CEREBRAS
@@ -13,3 +13,6 @@ AEIS, AKAM, AOSL, APP, AXTI, BE, CDNS, CEREBRAS, ETN, FSLY, MP, NET, PLTR, POET,
 
 ## ⚪ Scaffold <TODO> not filled (0)
 _none_
+
+## 🟣 Modelos oficiais drift vs canonical P: folder (0)
+_in sync_

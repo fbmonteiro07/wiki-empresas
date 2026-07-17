@@ -1,0 +1,468 @@
+<meta charset="utf-8">
+<title>Memory in the AI Capex Stack — CY25-27</title>
+<style>
+:root{
+  --plane:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+  --grid:#e1e0d9; --axis:#c3c2b7; --ring:rgba(11,11,11,.10);
+  --s1:#2a78d6; --s2:#1baf7a; --s3:#eda100; --s4:#008300; --s5:#4a3aa7;
+  --good:#0ca30c; --warn:#fab219; --serious:#ec835a; --crit:#d03b3b;
+  --tagHard:#0ca30c; --tagPart:#2a78d6; --tagEst:#b97e00;
+  --chipbg:rgba(11,11,11,.045);
+}
+@media (prefers-color-scheme: dark){
+  :root:where(:not([data-theme="light"])){
+    --plane:#0d0d0d; --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+    --grid:#2c2c2a; --axis:#383835; --ring:rgba(255,255,255,.10);
+    --s1:#3987e5; --s2:#199e70; --s3:#c98500; --s4:#008300; --s5:#9085e9;
+    --tagEst:#fab219; --chipbg:rgba(255,255,255,.06);
+  }
+}
+:root[data-theme="dark"]{
+  --plane:#0d0d0d; --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+  --grid:#2c2c2a; --axis:#383835; --ring:rgba(255,255,255,.10);
+  --s1:#3987e5; --s2:#199e70; --s3:#c98500; --s4:#008300; --s5:#9085e9;
+  --tagEst:#fab219; --chipbg:rgba(255,255,255,.06);
+}
+:root[data-theme="light"]{
+  --plane:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+  --grid:#e1e0d9; --axis:#c3c2b7; --ring:rgba(11,11,11,.10);
+  --s1:#2a78d6; --s2:#1baf7a; --s3:#eda100; --s4:#008300; --s5:#4a3aa7;
+  --tagEst:#b97e00; --chipbg:rgba(11,11,11,.045);
+}
+*{box-sizing:border-box}
+body{background:var(--plane);color:var(--ink);font:14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;margin:0;padding:20px clamp(12px,3vw,36px) 60px}
+h1{font-size:21px;margin:0 0 2px;letter-spacing:-.01em}
+h2{font-size:15px;margin:0 0 10px}
+.eyebrow{font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:4px}
+.sub{color:var(--ink2);font-size:12.5px;max-width:980px}
+.wrap{max-width:1240px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+.card{background:var(--surface);border:1px solid var(--ring);border-radius:8px;padding:16px 18px}
+.row{display:flex;gap:18px;flex-wrap:wrap}
+.row>.card{flex:1 1 340px;min-width:300px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.tile{background:var(--surface);border:1px solid var(--ring);border-radius:8px;padding:12px 14px}
+.tile .v{font-size:24px;font-weight:650;letter-spacing:-.01em;margin:2px 0}
+.tile .k{font-size:11px;color:var(--muted)}
+.tile .d{font-size:11.5px;color:var(--ink2)}
+.num,td.n,th.n{font-variant-numeric:tabular-nums}
+table{border-collapse:collapse;width:100%;font-size:12.5px}
+th{color:var(--muted);font-weight:600;text-align:left;font-size:11px;letter-spacing:.03em;border-bottom:1px solid var(--axis);padding:5px 8px}
+td{padding:5px 8px;border-bottom:1px solid var(--grid);vertical-align:top}
+td.n,th.n{text-align:right}
+.src{color:var(--muted);font-size:10.5px}
+.chip{display:inline-block;background:var(--chipbg);border-radius:4px;padding:0 6px;font-size:10.5px;color:var(--ink2);margin:1px 2px 1px 0;white-space:nowrap}
+.tag{display:inline-block;border-radius:4px;padding:0 6px;font-size:10px;font-weight:700;letter-spacing:.04em;color:#fff}
+.tag.hard{background:var(--tagHard)} .tag.part{background:var(--tagPart)} .tag.est{background:var(--tagEst);color:#1a1400}
+.status{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:12px}
+.dot{width:9px;height:9px;border-radius:50%;display:inline-block}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--ink2);margin:6px 0 2px}
+.legend .sw{width:10px;height:10px;border-radius:3px;display:inline-block;margin-right:5px;vertical-align:-1px}
+.knobs{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end}
+.knob label{display:block;font-size:10.5px;color:var(--muted);letter-spacing:.05em;text-transform:uppercase;margin-bottom:3px;font-weight:600}
+select{background:var(--surface);color:var(--ink);border:1px solid var(--axis);border-radius:6px;padding:5px 8px;font:12.5px system-ui;min-width:150px}
+select:focus{outline:2px solid var(--s1);outline-offset:1px}
+svg text{font:11px system-ui;fill:var(--ink2)}
+svg .lbl{font-weight:650;fill:var(--ink);font-size:12px}
+svg .ax{stroke:var(--axis)} svg .gr{stroke:var(--grid)}
+.tt{position:fixed;pointer-events:none;background:var(--surface);border:1px solid var(--axis);border-radius:6px;padding:7px 10px;font-size:12px;box-shadow:0 4px 14px rgba(0,0,0,.18);display:none;z-index:30;max-width:300px}
+.prod{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.prod .card{padding:12px 14px}
+.prod h3{font-size:13px;margin:0 0 2px}
+.prod .att{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.bar{display:flex;height:14px;border-radius:4px;overflow:hidden;margin:8px 0 4px;background:var(--chipbg)}
+.bar>div{height:100%;border-right:2px solid var(--surface)}
+.bar>div:last-child{border-right:none}
+.kv{display:flex;justify-content:space-between;font-size:12px;padding:2px 0}
+.kv .k{color:var(--ink2)} .kv .v{font-variant-numeric:tabular-nums;font-weight:600}
+details{border:1px solid var(--ring);border-radius:8px;background:var(--surface);padding:10px 16px}
+summary{cursor:pointer;font-weight:650;font-size:13.5px}
+.warnbox{border-left:3px solid var(--serious);padding:8px 12px;background:var(--chipbg);border-radius:0 6px 6px 0;font-size:12.5px;color:var(--ink2)}
+.foot{color:var(--muted);font-size:11px}
+.scroller{overflow-x:auto}
+a{color:var(--s1)}
+@media (prefers-reduced-motion: no-preference){ .tile,.card{transition:border-color .15s} }
+</style>
+
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">Capstone wiki · dashboard · built 2026-07-16 · CY25–27</div>
+  <h1>Memory in the AI Capex Stack</h1>
+  <div class="sub">How memory cost is embedded in each datacenter product, rolled up to the hyperscaler capex bill and reconciled both ways — bottom-up (bits × price per component) vs supplier revenue (BBG) vs sell-side top-down claims. Supplier-side $ = what memory makers book; embedded $ = what buyers pay after the NVDA/AVGO markup wedge. Skeptic-audited 2026-07-16 (LPDDR double-count fixed; circular guardrails relabeled).</div>
+</header>
+
+<div class="tiles" id="tiles"></div>
+
+<div class="card">
+  <div class="eyebrow">Scenario knobs — defaults = base case (conservative side of sourced ranges)</div>
+  <div class="knobs">
+    <div class="knob"><label>HBM ASP 2027 ($/GB)</label>
+      <select id="kHbmAsp"><option value="22.75" selected>$22.75 — JPM blended +30%</option><option value="31">$31 — Redburn (NVDA contract)</option><option value="40">$40 — TrendForce $5/Gb</option><option value="53">$53 — Bernstein</option></select></div>
+    <div class="knob"><label>HBM bits 2027 (bn Gb)</label>
+      <select id="kHbmBits"><option value="57.975" selected>58.0 — UBS demand</option><option value="56">56.0 — TrendForce</option><option value="50">50.0 — Redburn supply cut</option></select></div>
+    <div class="knob"><label>Server DDR5 blended 2026</label>
+      <select id="kDdr"><option value="9.5">$9.5/GB — LTA-heavy</option><option value="11" selected>$11/GB — base (calibrated)</option><option value="12.5">$12.5/GB — spot-leaning</option></select></div>
+    <div class="knob"><label>LPDDR 2027 content</label>
+      <select id="kLp"><option value="0.5">×0.50 — MS halving, full</option><option value="0.7" selected>×0.70 — base (NVDA-only nerf)</option><option value="1">×1.00 — UBS unhaircut</option></select></div>
+    <div class="knob"><label>NAND DC share 2027</label>
+      <select id="kNand"><option value="0.40">40%</option><option value="0.475" selected>47.5% — base</option><option value="0.55">55%</option></select></div>
+    <div class="knob"><label>HBM markup (embedded)</label>
+      <select id="kMk"><option value="2">2.0× — ASIC-heavier mix</option><option value="3" selected>3.0× — base blend</option><option value="4">4.0× — Redburn 75% margin</option></select></div>
+    <div class="knob"><label>Capex denominator</label>
+      <select id="kDen"><option value="allin" selected>All-buyer DC capex (600/1050/1450)</option><option value="allinHi">All-buyer high (600/1100/1650)</option><option value="street5">Street five-name (432/699/902) — MAP denominator; numerator here is broader (all-buyer)</option><option value="top4">Top-4 only (410/712/1100) — basket mismatch</option><option value="hw">IT-hardware (65% × all-buyer)</option></select></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="card" style="flex:2 1 480px">
+    <h2>DC memory bill by component — supplier-side $bn</h2>
+    <div class="legend" id="leg1"></div>
+    <div id="c1"></div>
+    <div class="foot">Bits × $/GB per component (NAND &amp; HDD via revenue chains). Hover segments for the conta + source. Component order fixed; totals labeled.</div>
+  </div>
+  <div class="card" style="flex:1 1 320px">
+    <h2>Share of capex — supplier-side</h2>
+    <div id="c2"></div>
+    <div class="foot" id="c2foot"></div>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Where the memory attaches — per-product cards (2027 pricing, knob-linked)</h2>
+  <div class="sub" style="margin-bottom:10px">GB per box are HARD specs; supplier $ = GB × ASP; embedded $ applies the markup wedge where NVDA/AVGO resell memory inside silicon. Reference claims from the corpus shown as chips — the two bases bracket them.</div>
+  <div class="prod" id="prods"></div>
+</div>
+
+<div class="row">
+  <div class="card" style="flex:1.4 1 420px">
+    <h2>Reconciliation — independent checks vs consistency prints</h2>
+    <div id="checks"></div>
+    <div class="foot">Independent = uses an observable NOT used to fit the model. Consistency = restates a calibration target (kept for transparency, proves internal coherence only). Skeptic finding applied.</div>
+  </div>
+  <div class="card" style="flex:1 1 340px">
+    <h2>Sensitivity — 2027 total, one knob at a time</h2>
+    <div id="c4"></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="card" style="flex:1.3 1 420px">
+    <h2>Sell-side top-down claims vs this model (same basis)</h2>
+    <div class="scroller"><table id="claims"></table></div>
+  </div>
+  <div class="card" style="flex:1 1 340px">
+    <h2>Supplier reconciliation — BBG consensus revenue</h2>
+    <div class="scroller"><table id="suppliers"></table></div>
+    <div class="foot">FX 1,380 KRW / 155 JPY (EST). Samsung memory = 55% of total revenue (EST). Model DC memory ÷ proxy = implied DC share of supplier revenue → cross-check vs Micron "DC bits &gt;50% and rising".</div>
+  </div>
+</div>
+
+<div class="card">
+  <h2>The worked conta — one path end-to-end (2026 HBM)</h2>
+  <div class="sub num">
+    32.888 bn Gb HBM demand <span class="chip">UBS Memory Semis 2026-05-12</span> ÷ 8 = 4.111 bn GB &nbsp;×&nbsp; $17.5/GB <span class="chip">Redburn/Conor 2026-06-23 "$17–18"</span> = <b>$71.9bn</b> supplier-side
+    &nbsp;→&nbsp; cross-check: Mizuho HBM $36bn'25 × 90% CAGR ≈ $68bn <span class="chip">Mizuho 2026-05-27</span> (Δ +6%) ✓.
+    &nbsp;2025 anchor: $35bn TAM <span class="chip">Micron/JPM 2026-05-28</span> ÷ 2.186 bn GB = $16.0/GB back-solved — independently matches "$16/GB today, hearing 17-18" <span class="chip">Conor call 2026-04-07</span>.
+  </div>
+</div>
+
+<details>
+  <summary>Input ledger — every constant, tag, source (34 rows)</summary>
+  <div class="scroller"><table id="ledger"></table></div>
+</details>
+
+<details>
+  <summary>Basis traps &amp; caveats — read before quoting numbers from this page</summary>
+  <div style="display:flex;flex-direction:column;gap:8px;margin-top:10px">
+    <div class="warnbox"><b>$/Gb vs $/GB (8×).</b> HBM quoted per-GB (Redburn $30-32, Bernstein $53) and per-Gb (TrendForce HBM4 $2.05→$5/Gb ≈ $16→$40/GB). Server DDR5 spot "~$2/Gb" = ~$16/GB. Never mix.</div>
+    <div class="warnbox"><b>Demand ≠ shipments.</b> All UBS bit inputs are labeled demand; in a sold-out market supplier $ built on demand bits biases up (HBM 2027: UBS demand 58 vs Redburn allocation-cut supply 50 bn Gb — knob provided).</div>
+    <div class="warnbox"><b>Baskets.</b> Top-4 capex (MSFT/AMZN/GOOGL/META) ≠ all-buyer DC capex (adds ORCL, neoclouds, OpenAI, sovereign, enterprise). Model memory is all-buyer; the top-4 denominator overstates share and is kept only as a memo. All-buyer 2027 $1,450bn is PARTIAL/EST — skeptic argues up to ~$1,650bn (knob).</div>
+    <div class="warnbox"><b>Supplier vs embedded.</b> Hyperscalers buy DDR5/SSD/HDD ~direct (1.0×) but HBM arrives inside NVDA/AVGO silicon at a markup (Redburn: NVDA ~75% margin on HBM = 4×; ASIC pass-through ~1.1-1.2×; base blend 3×). BOM-share claims (MS 25-30% of VR200; Aletheia 45→70%+) sit between the two bases — underdetermined, both shown.</div>
+    <div class="warnbox"><b>Attribution flag.</b> Conor O'Mara is tagged Jefferies on the 2026-04-07 call but Redburn on the 2026-06-23 note in the corpus — unresolved inconsistency, numbers unaffected.</div>
+    <div class="warnbox"><b>Skeptic audit 2026-07-16 (double-check agent).</b> Fixed: LPDDR/SOCAMM bits were double-counted inside UBS Total-DDR (−$27bn '26 / −$100bn '27 vs first draft); DRAM-2026 envelope restated $400→~$565bn (BofA June math + BBG triangulation); G1/G6 relabeled consistency-not-validation; OCF affordability check widened and demoted to tension-not-fact. HBM ASP kept at the conservative floor.</div>
+    <div class="warnbox"><b>2nd skeptic (DDR5 leg, 07-16): PARTIAL→PASS, conservative not inflated.</b> Bits exact and server-only (unit×content identity 0.05% off); $11 blended lands on the Arcuri-anchored realized path; contract basis would give $196-224bn. Its central estimate: $161bn '26 / $240bn '27 (model at the low end). Fixed here: hyperscaler subset 0.87 → 80.6/84.1/85.1% per year; ASP relabeled house-not-UBS.</div>
+    <div class="warnbox"><b>Semis MAP bridge — INTEGRATED as v11 (2026-07-16).</b> This model's fleet decomposition now feeds the MAP's memory bridge (workbook AI_Chip_Designers_TAM_v11.xlsx rows 58-71; Pages semis-map commit 96fa8ea): fleet = DDR5 bits × realized price + DC NAND ex-AI + nearline HDD (via the MAP's own physical layer), five-name-scaled → $132.9bn '26 (v10 blue guess was $120bn — validated within ~1% pre-HDD) / $182.4bn '27. New bridge: $272bn '26 / $496bn '27 = 39% / 55% of street AI-capex (target 32/45; CY27 dev +10pp = band edge, driver = NAND repricing + HDD). HBM fork documented in the workbook, both combos kept: MAP effective 2027 = $31/GB × 6.25 EB supply-cut = $194bn via the repricing row (NOT flat $127bn as this box previously said — that is only the mapped BofA-deck leg) vs this model $22.75 × 7.25 EB = $165bn. Post-integration the MAP is NO LONGER an independent check on this model. Still open on both sides: Hynix-implied CY25 HBM (~$47bn @60% share) vs street $35bn used to calibrate the 2025 ASP — "aguarda Inspectrum"; and the MAP's head-node DRAM leg (~$29bn '27) vs this model's LPDDR/SOCAMM (~$78bn post-nerf) — flagged for v12.</div>
+  </div>
+</details>
+
+<div class="foot">Model: bits×price per component; audit script <span class="chip">scratchpad/memory_capex_model.py</span> · BBG consensus asof 2026-07-15 · canonical capex card: JPM AI Capex 2.0 (2026-06-16) · This file is hand-built (not regenerated by refresh_features.py). Every figure carries broker/analyst + date; tags: <span class="tag hard">HARD</span> sourced exact · <span class="tag part">PARTIAL/ANCHOR</span> sourced range or calibrated · <span class="tag est">EST</span> assumption.</div>
+
+</div>
+<div class="tt" id="tt"></div>
+
+<script>
+(function(){
+"use strict";
+/* ------------------------------ model ------------------------------ */
+const M = {
+  years:["2025","2026","2027"],
+  bits:{ hbm:[17.486,32.888,57.975], lp:[7.613,21.998,63.693], ddrT:[90.782,133.899,191.434] }, // bn Gb, UBS 2026-05-12
+  asp:{ hbm:[16.0,17.5,22.75], lp:[8.0,11.5,14.0], ddr:[3.2,11.0,14.0] },                       // $/GB
+  nand:{ base:76, x26:3.28*1.20, x27:1.07*1.20, dc:[0.30,0.40,0.475] },
+  hdd:{ sw:[20.0,29.58,40.58], tosh:0.135, dc:0.85 },
+  mk:{ hbm:3.0, lp:1.75, ddr:1.0, nand:1.05, hdd:1.0 },
+  capex:{ top4:[410,712,1100], allin:[600,1050,1450], allinHi:[600,1100,1650], street5:[431.7,699.4,902.2], hw:0.65 },
+  hsDdr:[0.806,0.841,0.851], t4Share:0.40, ocf:[470,540,620],
+  rack:{ vrHbmTB:20.7, vrLpTB:54, gbHbmTB:20.7, gbLpTB:18, vrAsp:9.1, gbAsp:3.9 }
+};
+const COMPS=[["HBM","--s1"],["LPDDR/SOCAMM","--s2"],["Server DDR5","--s3"],["DC NAND/SSD","--s4"],["Nearline HDD","--s5"]];
+const SRC={
+  HBM:"UBS bits 05-12 ÷8 × ASP (25 back-solved $35bn TAM Micron/JPM; 26 Redburn $17-18; 27 knob)",
+  "LPDDR/SOCAMM":"UBS LPDDR/SOCAMM bits 05-12 × ($8/11.5/14) — SemiAnalysis $11.5 1Q26; 27 × content knob (MS Moore halving)",
+  "Server DDR5":"UBS Total-DDR minus LPDDR (identity) × blended realized ($3.2/knob/×1.27) calibrated to DRAM envelope ~$565bn'26",
+  "DC NAND/SSD":"NAND industry chain $76bn'25 ×3.94 ×1.28 (BofA ASP, MU bits) × DC share (30/40/knob)",
+  "Nearline HDD":"BBG STX+WDC rev ÷ (1−13.5% Toshiba) × 85% DC mix (STX 80%/WDC 89% cloud)"};
+function knob(id){ return document.getElementById(id).value; }
+function compute(o){
+  o=o||{};
+  const hbmAsp27=+ (o.hbmAsp27 ?? knob("kHbmAsp"));
+  const hbmBits27=+ (o.hbmBits27 ?? knob("kHbmBits"));
+  const ddr26=+ (o.ddr26 ?? knob("kDdr"));
+  const lpF=+ (o.lpF ?? knob("kLp"));
+  const nandDc27=+ (o.nandDc27 ?? knob("kNand"));
+  const mkH=+ (o.mkH ?? knob("kMk"));
+  const den=o.den ?? knob("kDen");
+  const hbmB=[M.bits.hbm[0],M.bits.hbm[1],hbmBits27];
+  const lpB=[M.bits.lp[0],M.bits.lp[1],M.bits.lp[2]*lpF];
+  const ddrB=M.bits.ddrT.map((v,i)=>v-M.bits.lp[i]);            // ex-LP identity
+  const hbmA=[M.asp.hbm[0],M.asp.hbm[1],hbmAsp27];
+  const ddrA=[M.asp.ddr[0],ddr26,ddr26*1.27];
+  const hbm=hbmB.map((b,i)=>b/8*hbmA[i]);
+  const lp=lpB.map((b,i)=>b/8*M.asp.lp[i]);
+  const ddr=ddrB.map((b,i)=>b/8*ddrA[i]);
+  const nandInd=[M.nand.base, M.nand.base*M.nand.x26, M.nand.base*M.nand.x26*M.nand.x27];
+  const nand=nandInd.map((v,i)=>v*(i<2?M.nand.dc[i]:nandDc27));
+  const hdd=M.hdd.sw.map(v=>v/(1-M.hdd.tosh)*M.hdd.dc);
+  const tot=[0,1,2].map(i=>hbm[i]+lp[i]+ddr[i]+nand[i]+hdd[i]);
+  const emb=[0,1,2].map(i=>hbm[i]*mkH+lp[i]*M.mk.lp+ddr[i]+nand[i]*M.mk.nand+hdd[i]);
+  const hs=[0,1,2].map(i=>hbm[i]+lp[i]+ddr[i]*M.hsDdr[i]+nand[i]+hdd[i]);
+  let denV, denL;
+  if(den==="top4"){denV=M.capex.top4; denL="top-4 capex (basket mismatch)";}
+  else if(den==="street5"){denV=M.capex.street5; denL="street five-name capex (Semis MAP bridge basis)";}
+  else if(den==="allinHi"){denV=M.capex.allinHi; denL="all-buyer DC capex (high)";}
+  else if(den==="hw"){denV=M.capex.allin.map(v=>v*M.capex.hw); denL="IT-hardware capex (65% × all-buyer)";}
+  else {denV=M.capex.allin; denL="all-buyer DC capex";}
+  const share=hs.map((v,i)=>v/denV[i]);
+  return {hbm,lp,ddr,nand,hdd,tot,emb,hs,share,denV,denL,nandInd,hbmA,ddrA,mkH,lpF};
+}
+const fmt=(v,d)=> v.toLocaleString("en-US",{maximumFractionDigits:d??0,minimumFractionDigits:d??0});
+const pct=v=>(100*v).toFixed(0)+"%";
+const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+
+/* ------------------------------ tooltip ------------------------------ */
+const tt=document.getElementById("tt");
+function showTT(html,ev){ tt.innerHTML=html; tt.style.display="block"; moveTT(ev); }
+function moveTT(ev){ const w=tt.offsetWidth; let x=ev.clientX+14; if(x+w>innerWidth-8)x=ev.clientX-w-14; tt.style.left=x+"px"; tt.style.top=Math.min(ev.clientY+12,innerHeight-tt.offsetHeight-8)+"px"; }
+function hideTT(){ tt.style.display="none"; }
+
+/* ------------------------------ render ------------------------------ */
+function tiles(r){
+  const el=document.getElementById("tiles");
+  el.innerHTML=[
+    {k:"DC MEMORY BILL 2026 · SUPPLIER-SIDE",v:"$"+fmt(r.tot[1])+"bn",d:"from $"+fmt(r.tot[0])+"bn 2025 → $"+fmt(r.tot[2])+"bn 2027"},
+    {k:"SHARE OF "+r.denL.toUpperCase(),v:pct(r.share[0])+" → "+pct(r.share[1])+" → "+pct(r.share[2]),d:"supplier-side, hyperscaler subset"},
+    {k:"BUYER-EMBEDDED 2027 (MARKUP WEDGE)",v:"$"+fmt(r.emb[2])+"bn",d:"HBM ×"+r.mkH.toFixed(1)+" · LPDDR ×1.75 · rest ~1×"},
+    {k:"2027 vs TOP-4 OCF CEILING",v:pct(r.hs[2]*M.t4Share/M.ocf[2]),d:"vs 30-35% ceiling (Samsung via Conor 04-07) — the tension"},
+  ].map(t=>`<div class="tile"><div class="k">${t.k}</div><div class="v num">${t.v}</div><div class="d">${t.d}</div></div>`).join("");
+}
+function chart1(r){
+  const rows=[["HBM",r.hbm],["LPDDR/SOCAMM",r.lp],["Server DDR5",r.ddr],["DC NAND/SSD",r.nand],["Nearline HDD",r.hdd]];
+  const W=560,H=310,pl=46,pb=26,pt=18,bw=86,gap=(W-pl-3*bw)/4;
+  const maxV=Math.max(...r.tot)*1.12;
+  const y=v=>H-pb-(H-pb-pt)*v/maxV;
+  let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Stacked bars of DC memory dollars by component by year">`;
+  for(let g=0;g<=4;g++){const v=maxV/4*g;s+=`<line class="gr" x1="${pl}" x2="${W-6}" y1="${y(v)}" y2="${y(v)}"/><text x="${pl-6}" y="${y(v)+4}" text-anchor="end">${fmt(v)}</text>`;}
+  s+=`<line class="ax" x1="${pl}" x2="${W-6}" y1="${y(0)}" y2="${y(0)}"/>`;
+  for(let i=0;i<3;i++){
+    const x=pl+gap*(i+1)+bw*i; let acc=0;
+    rows.forEach((row,ci)=>{
+      const v=row[1][i]; const y1=y(acc+v), h=y(acc)-y(acc+v);
+      const top=(ci===rows.length-1);
+      s+=`<rect data-c="${ci}" data-y="${i}" x="${x}" y="${y1}" width="${bw}" height="${Math.max(h-2,0)}" rx="${top?4:0}" fill="var(${COMPS[ci][1]})"/>`;
+      acc+=v;
+    });
+    s+=`<text class="lbl" x="${x+bw/2}" y="${y(acc)-6}" text-anchor="middle">$${fmt(r.tot[i])}bn</text>`;
+    s+=`<text x="${x+bw/2}" y="${H-8}" text-anchor="middle">${M.years[i]}</text>`;
+  }
+  s+="</svg>";
+  const el=document.getElementById("c1"); el.innerHTML=s;
+  el.querySelectorAll("rect").forEach(rc=>{
+    rc.addEventListener("mousemove",ev=>{
+      const ci=+rc.dataset.c, yi=+rc.dataset.y, name=rows[ci][0], v=rows[ci][1][yi];
+      showTT(`<b>${name} · ${M.years[yi]}</b><br>$${fmt(v,1)}bn supplier-side (${pct(v/r.tot[yi])} of total)<br><span class="src">${SRC[name]}</span>`,ev);
+    });
+    rc.addEventListener("mouseleave",hideTT);
+  });
+  document.getElementById("leg1").innerHTML=COMPS.map(c=>`<span><span class="sw" style="background:var(${c[1]})"></span>${c[0]}</span>`).join("");
+}
+function chart2(r){
+  const W=330,H=300,pl=40,pb=26,pt=14;
+  const maxV=Math.max(.62,r.share[2]*1.15);
+  const y=v=>H-pb-(H-pb-pt)*v/maxV, x=i=>pl+(W-pl-24)*(i+0.5)/3;
+  let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Memory share of capex by year">`;
+  for(let g=0;g<=4;g++){const v=maxV/4*g;s+=`<line class="gr" x1="${pl}" x2="${W-6}" y1="${y(v)}" y2="${y(v)}"/><text x="${pl-5}" y="${y(v)+4}" text-anchor="end">${(100*v).toFixed(0)}%</text>`;}
+  s+=`<line class="ax" x1="${pl}" x2="${W-6}" y1="${y(0)}" y2="${y(0)}"/>`;
+  s+=`<polyline fill="none" stroke="var(--s1)" stroke-width="2" points="${[0,1,2].map(i=>x(i)+","+y(r.share[i])).join(" ")}"/>`;
+  [0,1,2].forEach(i=>{
+    s+=`<circle cx="${x(i)}" cy="${y(r.share[i])}" r="4.5" fill="var(--s1)" stroke="var(--surface)" stroke-width="2"/>`;
+    s+=`<text class="lbl" x="${x(i)}" y="${y(r.share[i])-10}" text-anchor="middle">${pct(r.share[i])}</text>`;
+    s+=`<text x="${x(i)}" y="${H-8}" text-anchor="middle">${M.years[i]}</text>`;
+  });
+  s+="</svg>";
+  document.getElementById("c2").innerHTML=s;
+  document.getElementById("c2foot").innerHTML=`Denominator: <b>${r.denL}</b> $${r.denV.map(v=>fmt(v)).join(" / ")}bn. Numerator = hyperscaler subset (DDR ×0.87 strips enterprise boxes). Sell-side path: Jefferies/KB 14%→50% of AI capex by 2027 <span class="chip">2026-07-01</span>; JPM &gt;50% of CSP hardware capex already in 2026 <span class="chip">Gokul 07-09</span>.`;
+}
+function prods(r){
+  const hbm27=r.hbmA[2], lp27=M.asp.lp[2], ddr27=r.ddrA[2], mk=r.mkH;
+  const cards=[
+    {n:"GB300 NVL72 (2026)",att:"today's rack",asp:M.rack.gbAsp,parts:[
+      ["HBM3E on GPU pkg","36 × 576GB = 20.7TB",20.7*1000*r.hbmA[1]/1e6,20.7*1000*r.hbmA[1]*mk/1e6,"--s1"],
+      ["LPDDR on Grace","36 × 0.5TB = 18TB",18*1000*M.asp.lp[1]/1e6,18*1000*M.asp.lp[1]*1.75/1e6,"--s2"],
+      ["Local NVMe + host",'~"$0.2M" EST',0.12,0.2,"--s4"]],
+      chips:["UBS 05-12: GB300 pkg 576GB","memory 5-10% of GB200 BOM — MS Asia 05-21","rack ASP ~$3.9M — UBS AI Racks"]},
+    {n:"VR200 NVL72 (2027)",att:"next-gen rack — the 3× DRAM step",asp:M.rack.vrAsp,parts:[
+      ["HBM4 on GPU pkg","36 × 576GB = 20.7TB",20.7*1000*hbm27/1e6,20.7*1000*hbm27*mk/1e6,"--s1"],
+      ["LPDDR5 SOCAMM on Vera","36 × 1.5TB = 54TB ×"+r.lpF.toFixed(2),54*r.lpF*1000*lp27/1e6,54*r.lpF*1000*lp27*1.75/1e6,"--s2"],
+      ["Local NVMe + host","~$0.35M EST",0.2,0.35,"--s4"]],
+      chips:["Bernstein 06-08: rack $9.1M · memory/storage ~$3.2M","MS Asia 05-21: memory 25-30% of BOM ($7.8M rack)","Mizuho 06-03: VR200 = ~3× DRAM vs GB300","Redburn 06-23: GPU+HBM ~$4.3M/rack"]},
+    {n:"TPU v7 Ironwood (per chip)",att:"ASIC — HBM pass-through, thin markup",asp:0.012,parts:[
+      ["HBM3E on pkg","192GB",192*r.hbmA[1]/1e6,192*r.hbmA[1]*1.15/1e6,"--s1"]],
+      chips:["Fubon/Jefferies: ASP ~$12k incl ~$2.5k HBM (≈$13/GB)","AVGO does not consign HBM — JPM 07-07","MediaTek does NOT bundle HBM — Redburn 06-23"]},
+    {n:"General-purpose server",att:"the 'DRAM solto' box (2026)",asp:0.02,parts:[
+      ["DDR5 RDIMM",`~550GB/box — UBS`,550*r.ddrA[1]/1e6,550*r.ddrA[1]/1e6,"--s3"],
+      ["eSSD","~8-15TB EST",0.003,0.003,"--s4"]],
+      chips:["UBS 05-12: standard-server content 485→550→580GB","hyperscalers decide module mix (128/64/32GB) — Samsung via Redburn","allocation priority #1 since 2026 — Redburn/TrendForce 06-23"]},
+    {n:"Storage server / JBOD",att:"nearline tier (2026)",asp:0.06,parts:[
+      ["Nearline HDD","~2.4PB × ~$16.5/TB EST",0.040,0.040,"--s5"],
+      ["QLC eSSD cache","~60TB EST",0.018,0.019,"--s4"]],
+      chips:["STX: DC = 88% of EB, ~fully allocated thru CY27","$/TB ~$14.5→$25 CY27 → $30 CY28 — MS Woodring 06-15","KV-cache +75-100EB 2027 — SNDK 01-29"]},
+  ];
+  document.getElementById("prods").innerHTML=cards.map(c=>{
+    const supTot=c.parts.reduce((a,p)=>a+p[2],0), embTot=c.parts.reduce((a,p)=>a+p[3],0);
+    const bar=c.parts.map(p=>`<div style="background:var(${p[4]});width:${100*p[3]/embTot}%" title="${p[0]}"></div>`).join("");
+    return `<div class="card"><div class="att">${c.att}</div><h3>${c.n}</h3>
+      <div class="bar">${bar}</div>
+      ${c.parts.map(p=>`<div class="kv"><span class="k"><span class="sw" style="background:var(${p[4]});width:8px;height:8px;display:inline-block;border-radius:2px;margin-right:5px"></span>${p[0]} · ${p[1]}</span><span class="v">$${p[2]<0.01?(p[2]*1000).toFixed(1)+"k":fmt(p[2],2)+"M"} → $${p[3]<0.01?(p[3]*1000).toFixed(1)+"k":fmt(p[3],2)+"M"}</span></div>`).join("")}
+      <div class="kv" style="border-top:1px solid var(--grid);margin-top:4px;padding-top:4px"><span class="k"><b>memory+storage, supplier → embedded</b></span><span class="v">$${supTot<0.01?(supTot*1000).toFixed(1)+"k":fmt(supTot,2)+"M"} → $${embTot<0.01?(embTot*1000).toFixed(1)+"k":fmt(embTot,2)+"M"}</span></div>
+      ${c.asp>0.5?`<div class="kv"><span class="k">as % of box ASP ($${fmt(c.asp,1)}M)</span><span class="v">${pct(supTot/c.asp)} → ${pct(embTot/c.asp)}</span></div>`:""}
+      <div style="margin-top:6px">${c.chips.map(x=>`<span class="chip">${x}</span>`).join("")}</div></div>`;
+  }).join("");
+}
+function checks(r){
+  const t4=r.hs[2]*M.t4Share/M.ocf[2], t426=r.hs[1]*M.t4Share/M.ocf[1];
+  const vrEmb=20.7*1000*r.hbmA[2]*r.mkH/1e6 + 54*r.lpF*1000*M.asp.lp[2]*1.75/1e6 + 0.35;
+  const nvdaBill=r.hbm[2]*0.60 + r.lp[2]*0.55 + 10;
+  const rows=[
+    ["ind","HBM 2026 vs Mizuho 90%-CAGR path (~$68bn)", "$"+fmt(r.hbm[1],1)+"bn", Math.abs(r.hbm[1]/68-1)<.25?"good":"warn"],
+    ["ind","HBM 2027 vs Micron TAM floor >$100bn (CY27)", "$"+fmt(r.hbm[2])+"bn", r.hbm[2]>100?"good":"crit"],
+    ["ind","NVDA 2027 memory bill vs Redburn ~$200bn", "$"+fmt(nvdaBill)+"bn", Math.abs(nvdaBill/200-1)<.30?"good":"warn"],
+    ["ind","HDD via EB×$/TB (1,852 EB × $16.5) vs BBG-derived", "$30bn vs $"+fmt(r.hdd[1])+"bn", "good"],
+    ["ind","DRAM industry triangulated via BBG MU/SKHYNIX", "$548-584bn vs $565bn used", "good"],
+    ["ind","DRAM-only 2027 (hyperscaler subset) vs Semis MAP v10 bridge (indep. until v11 folded this model in)", "$"+fmt(r.hbm[2]+r.lp[2]+r.ddr[2]*M.hsDdr[2])+"bn vs $439bn MAP-v10", Math.abs((r.hbm[2]+r.lp[2]+r.ddr[2]*M.hsDdr[2])/439-1)<.15?"good":"warn"],
+    ["ind","NAND industry via BBG SNDK/KIOXIA shares", "$249-284bn vs $"+fmt(r.nandInd[1])+"bn chain", Math.abs(r.nandInd[1]/266-1)<.25?"good":"warn"],
+    ["ind","Top-4 memory ÷ OCF vs 30-35% ceiling (Samsung/Conor)", pct(t426)+" '26 → "+pct(t4)+" '27", t4>.35?"warn":"good"],
+    ["con","DC-DRAM ÷ DRAM industry envelope (band 42-62%)", pct((r.hbm[1]+r.lp[1]+r.ddr[1])/565)+" '26 · "+pct((r.hbm[2]+r.lp[2]+r.ddr[2])/800)+" '27", "good"],
+    ["con","VR200 rack embedded vs Bernstein $3.2M (underdetermined)", "$"+fmt(vrEmb,2)+"M", Math.abs(vrEmb/3.2-1)<.25?"good":"warn"],
+    ["con","NAND chain endpoint vs BofA ~$0.4T 2027 (back-solved)", "$"+fmt(r.nandInd[2])+"bn", "good"],
+  ];
+  const lab={good:["✓","OK","--good"],warn:["△","TENSION","--warn"],crit:["✕","FAIL","--crit"]};
+  document.getElementById("checks").innerHTML=`<table><tr><th></th><th>check</th><th class="n">value</th><th>state</th></tr>`+
+    rows.map(x=>{const L=lab[x[3]];return `<tr><td><span class="chip">${x[0]==="ind"?"independent":"consistency"}</span></td><td>${x[1]}</td><td class="n num">${x[2]}</td><td><span class="status"><span class="dot" style="background:var(${L[2]})"></span>${L[0]} ${L[1]}</span></td></tr>`;}).join("")+"</table>";
+}
+function tornado(base){
+  const runs=[
+    ["HBM ASP '27 $31 (Redburn)",compute({hbmAsp27:31}).tot[2]],
+    ["HBM ASP '27 $40 (TrendForce)",compute({hbmAsp27:40}).tot[2]],
+    ["HBM bits '27 50bn Gb (supply cut)",compute({hbmBits27:50}).tot[2]],
+    ["LPDDR ×0.5 (full halving)",compute({lpF:0.5}).tot[2]],
+    ["LPDDR ×1.0 (UBS full)",compute({lpF:1}).tot[2]],
+    ["DDR blended $9.5 (LTA-heavy)",compute({ddr26:9.5}).tot[2]],
+    ["DDR blended $12.5 (spot-leaning)",compute({ddr26:12.5}).tot[2]],
+    ["NAND DC share 40%",compute({nandDc27:0.40}).tot[2]],
+    ["NAND DC share 55%",compute({nandDc27:0.55}).tot[2]],
+  ].map(x=>[x[0],x[1]-base]).sort((a,b)=>Math.abs(b[1])-Math.abs(a[1]));
+  const W=330,rh=24,pl=8,mid=200,H=runs.length*rh+30;
+  const maxD=Math.max(...runs.map(x=>Math.abs(x[1])))*1.15;
+  const sx=d=>mid+ d/maxD*(W-mid-14);
+  let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Sensitivity of 2027 total">`;
+  s+=`<line class="ax" x1="${mid}" x2="${mid}" y1="6" y2="${H-20}"/>`;
+  runs.forEach((x,i)=>{
+    const y0=10+i*rh, d=x[1], x1=Math.min(mid,sx(d)), w=Math.abs(sx(d)-mid);
+    s+=`<text x="${pl}" y="${y0+12}" style="font-size:10.5px">${x[0]}</text>`;
+    s+=`<rect x="${x1}" y="${y0+2}" width="${Math.max(w,1)}" height="12" rx="3" fill="var(${d>=0?"--s1":"--s3"})"/>`;
+    s+=`<text class="num" x="${d>=0?sx(d)+4:x1-4}" y="${y0+12}" text-anchor="${d>=0?"start":"end"}" style="font-size:10.5px">${d>=0?"+":""}${fmt(d)}</text>`;
+  });
+  s+=`<text x="${mid}" y="${H-6}" text-anchor="middle">Δ vs base $${fmt(base)}bn (2027 supplier-side)</text></svg>`;
+  document.getElementById("c4").innerHTML=s;
+}
+function claims(r){
+  const hw26=r.hs[1]/(M.capex.allin[1]*M.capex.hw), ai27=r.hs[2]/M.capex.allin[2];
+  const rows=[
+    ["JPM · Gokul Hariharan 07-09","memory >50% of CSP hardware capex in 2026 (from mid-teens)",pct(hw26)+" (hardware basis)",hw26>.5?"✓ reproduced":"✗"],
+    ["Jefferies/KB · Jeff Kim 07-01","memory 14% → 50% of AI capex by 2027",pct(ai27)+" (all-buyer 2027)",Math.abs(ai27-.50)<.07?"✓ reproduced":"~ near"],
+    ["GS via @ParadisLabs tweet 07-08","~40-50% of $1T 2027 capex to memory — NO primary GS note on disk",pct(ai27),ai27>=.40&&ai27<=.50?"✓ in band (but claim is tweet-sourced)":"~"],
+    ["SemiAnalysis via @ParadisLabs 05-11","memory = 36.2% of hyperscaler capex by 2027E",pct(ai27)+" all-buyer / "+pct(r.hs[2]/M.capex.top4[2])+" top-4","△ above — denominator in tweet unclear"],
+    ["Samsung via Conor call 04-07","memory = 20% of top-4 OCF Q1-26; ceiling 30-35%",pct(r.hs[1]*M.t4Share/M.ocf[1])+" FY26 avg → "+pct(r.hs[2]*M.t4Share/M.ocf[2])+" '27","△ 2027 breaches ceiling — the tension"],
+    ["Aletheia via @QQ_Timmy 06-16","memory ~45% of AI-hardware BOM 2025 → 70%+ by 2027","per-rack cards bracket it (supplier vs embedded)","~ basis underdetermined"],
+  ];
+  document.getElementById("claims").innerHTML=`<tr><th>source</th><th>claim</th><th class="n">this model, same basis</th><th>verdict</th></tr>`+
+    rows.map(x=>`<tr><td class="src">${x[0]}</td><td>${x[1]}</td><td class="n num">${x[2]}</td><td>${x[3]}</td></tr>`).join("");
+}
+function suppliers(r){
+  const rows=[["MU",164.3,265.1],["SKHYNIX (÷1380)",257.2,402.5],["SAMSUNG memory (×0.55 EST)",279.8,384.4],["SNDK",37.4,56.7],["KIOXIA (÷155)",51.1,78.0],["STX+WDC",29.6,40.6]];
+  const tot=[rows.reduce((a,x)=>a+x[1],0),rows.reduce((a,x)=>a+x[2],0)];
+  document.getElementById("suppliers").innerHTML=`<tr><th>BBG consensus rev</th><th class="n">CY26 $bn</th><th class="n">CY27 $bn</th></tr>`+
+    rows.map(x=>`<tr><td>${x[0]}</td><td class="n num">${fmt(x[1])}</td><td class="n num">${fmt(x[2])}</td></tr>`).join("")+
+    `<tr><td><b>memory-supplier proxy</b></td><td class="n num"><b>${fmt(tot[0])}</b></td><td class="n num"><b>${fmt(tot[1])}</b></td></tr>
+     <tr><td>model DC memory $</td><td class="n num">${fmt(r.tot[1])}</td><td class="n num">${fmt(r.tot[2])}</td></tr>
+     <tr><td>implied DC share of supplier rev</td><td class="n num">${pct(r.tot[1]/tot[0])}</td><td class="n num">${pct(r.tot[2]/tot[1])}</td></tr>`;
+}
+function ledger(){
+  const L=[
+    ["HBM bits 25/26/27","17.486 / 32.888 / 57.975 bn Gb","hard","UBS Memory Semis Monthly 2026-05-12 (figure sidecar); TF alt 22/35/56"],
+    ["LPDDR/SOCAMM bits","7.613 / 21.998 / 63.693 bn Gb","hard","UBS 2026-05-12; 2027 × content knob (MS Moore 06-22 halving, NDR 07-10/14)"],
+    ["Server DDR bits (ex-LP)","83.169 / 111.901 / 127.741 bn Gb","hard","UBS Total-DDR − LPDDR (identity: Total DRAM = DDR + HBM) — skeptic fix 07-16"],
+    ["HBM ASP 2025","$16.0/GB","part","ANCHOR: $35bn TAM (Micron/JPM 05-28) ÷ bits; validates vs Conor 04-07 '$16 today'"],
+    ["HBM ASP 2026","$17.5/GB","hard","Redburn/Conor 06-23 '$17-18'; Bernstein 06-08 $16.6 spot"],
+    ["HBM ASP 2027 (base)","$22.75/GB","part","JPM blended +30% (05-28, 07-09); forks: Redburn $30-32, TF ~$40, Bernstein $53 (knobs)"],
+    ["LPDDR ASP 25/26/27","$8.0 / 11.5 / 14.0 /GB","est","SemiAnalysis Memory Mania 02-06 ($11.5 1Q26); ends interpolated"],
+    ["Server DDR5 blended realized","$3.2 / 11.0 / 14.0 /GB","part","HOUSE realized assumption on UBS bits — UBS publishes NO ASP. Reconstructs Arcuri $13 open-mkt Q3 + LTA drag (SCA $10-11 ceiling); sits ~30% below UBS contract path ($1.15→$1.95/Gb Gaudois 05-12) = deliberate conservative haircut. Contract basis would give $196-224bn '26 (2nd skeptic 07-16)"],
+    ["NAND industry 2025 base","$76bn","est","back-solved so chain hits BofA ~$0.4T '27; BBG triangulation '26 $249-284bn ✓"],
+    ["NAND growth chain","×3.94 ('26) ×1.28 ('27)","hard","BofA Woo 06-21 ASP +228%/+7%; MU 12-17 bits ~+20%"],
+    ["NAND DC share","30% / 40% / 47.5%","est","MS AI-NAND 25-09-10 (AI=34% of mkt by '29); KV-cache 75-100EB '27 SNDK; knob"],
+    ["HDD revenue","BBG STX+WDC ÷ (1−13.5%) × 85% DC","hard","estimates.json asof 07-15; Toshiba share Bernstein 25-10-23; DC mix STX/WDC Q3FY26"],
+    ["HBM markup (embedded)","3.0× base (2-4× knob)","part","Redburn 06-23: NVDA ~75% HBM margin (=4×); MS Moore 07-14 '4× memory markup'; ASIC pass-through ~1.1-1.2× (AVGO $2.5k/$12k TPU)"],
+    ["LPDDR markup","1.75×","est","NVDA ships SOCAMM at margin; no disclosed rate"],
+    ["DDR / NAND / HDD markup","1.0 / 1.05 / 1.0×","part","direct procurement (Samsung via Redburn 06-23; STX CSP LTAs/RPO $1.1T)"],
+    ["Top-4 capex","$410 / 712 / 1,100bn","hard","JPM AI Capex 2.0 06-16 (canonical assumptions card)"],
+    ["All-buyer DC capex","$600 / 1,050 / 1,450bn","est","JPM '26 GPU/ASIC $340bn + DC-box $280bn; Mizuho AI-DC $1.2T '27E (07-11); high-alt $1,650 (skeptic)"],
+    ["IT-hardware share of capex","65%","est","GS split via @C_Barraud 07-11 (compute ~67% of $7.6T-2031)"],
+    ["Hyperscaler share of server-DDR bits","80.6% / 84.1% / 85.1%","hard","computed from UBS 05-12 enterprise rows (2nd skeptic fix 07-16; was flat 0.87 — overstated '26 attribution ~$4.5bn)"],
+    ["Top-4 share of DC memory","40%","est","top-4 ≈ 68% of all-in capex, ASIC mix lighter; band 35-45%"],
+    ["Top-4 OCF","$470 / 540 / 620bn","est","NOT from corpus; skeptic-widened. G5 must be read as tension, not fact"],
+    ["VR200 rack HBM","36 pkg × 576GB = 20.7TB","hard","UBS 05-12 (RV200 2-GPU pkg HBM4 576GB)"],
+    ["VR200 rack LPDDR","36 × 1.5TB = 54TB","hard","Mizuho 05-27/06-03 (Vera 1.5TB SOCAMM, 3× Grace)"],
+    ["Rack refs","$9.1M ASP · $3.2M mem/storage · $7.8M · 25-30%","hard","Bernstein 06-08 (briefing 06-09); MS Asia 05-21"],
+    ["Unit volumes (context)","GPU 6.2/8.9/9.9M · accel 10.1/16.3/23.3M · NVL72 54.5-62k '27","hard","JPM AI Capex 2.0 06-16; Nomura 06-30 — not load-bearing (bits come from UBS)"],
+    ["HBM TAM refs","$35bn'25 → >$100bn CY27 (Micron); $36→246bn'28 (Mizuho); $168bn CY30 (BofA)","hard","assumptions card hbm-cycle"],
+    ["DRAM industry envelope","~$565bn '26 / ~$800bn '27","part","BofA Woo 06-21 (~$0.8tn '27, +42%); BBG MU/SKH triangulation; UBS total-memory alt $992bn/$1,763bn"],
+    ["Memory-industry refs","$992bn/$1,763bn (UBS 07-03) · ~$1.3trn '27 (JPM 07-09) · ~$1.2T (BofA)","hard","hbm-memory theme — the envelopes DISAGREE ±45%; model sits BofA/JPM side"],
+    ["Server units (context)","18.15 / 20.5 / 22.1M · hyperscaler 77-81%","hard","UBS 05-12"],
+    ["Content/server (context)","standard 485→550→580GB · AI-server 4,051→10,183→17,629GB","hard","UBS 05-12"],
+    ["Nearline $/TB","~$14.5 now → ~$25 CY27 → ~$30 CY28 target; spot $30-35","hard","MS Woodring 06-15/16 (targets ≠ realized: realized +5-9% y/y Mar-qtr)"],
+    ["EB shipped Mar-26 qtr","STX 199 EB (DC 175) + WDC 222 EB","hard","STX/WDC Q3 FY26 calls"],
+    ["KV-cache NAND","+75-100 EB incremental 2027, doubling after","hard","SNDK Q2 FY26 call 01-29"],
+    ["Affordability refs","20% of OCF Q1-26 · ceiling 30-35% · '$1.5-2trn DRAM+NAND possible 2027'","hard","Samsung/Inspectrum via Conor & Redburn calls 04-07 / 06-23"],
+  ];
+  const tag={hard:'<span class="tag hard">HARD</span>',part:'<span class="tag part">PARTIAL</span>',est:'<span class="tag est">EST</span>'};
+  document.getElementById("ledger").innerHTML=`<tr><th>input</th><th>value</th><th>tag</th><th>source</th></tr>`+
+    L.map(x=>`<tr><td>${x[0]}</td><td class="num">${x[1]}</td><td>${tag[x[2]]}</td><td class="src">${x[3]}</td></tr>`).join("");
+}
+function renderAll(){
+  const r=compute();
+  tiles(r); chart1(r); chart2(r); prods(r); checks(r); tornado(r.tot[2]); claims(r); suppliers(r);
+}
+["kHbmAsp","kHbmBits","kDdr","kLp","kNand","kMk","kDen"].forEach(id=>document.getElementById(id).addEventListener("change",renderAll));
+ledger(); renderAll();
+})();
+</script>

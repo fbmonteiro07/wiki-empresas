@@ -31,3 +31,4 @@ One synthesized page per ticker (`_wiki/*.md`, ~101 names) + cross-company theme
 - `_wiki/_meta/` — assumptions.md, edge.md, catalysts.md + outcomes.md, book.md, staleness.md, diff-latest.md, worklist.md
 - `_wiki/_data/` — estimates.json (BBG consensus), house.json (Capstone models), book.json (positions — hand-edit), assumptions.json (canonical numbers — hand-edit), graph.json (curated supply edges — hand-edit), index_meta.json (sector membership + one-line theses — hand-edit), graph_full.json (derived), search.db (derived)
 - `_wiki/_dashboards/index.html` — hub (edge, read-through, catalysts, gantt, diff, coverage, assumptions, book, graph)
+- `INFRA.md` (repo root, git-untracked, synced to P:) — access/sync/backup runbook: every scheduled routine (Windows + Claude tasks), the three copies (E: master / P: mirror / GitHub), backup layers
