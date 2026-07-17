@@ -1,16 +1,18 @@
 {"ticker":"MU","forward":[
-{"metric":"Q3 FY26 guide","horizon":"Q3 FY26 (reports Jun 24)","trend":"up","trail":[
-{"date":"2026-03-18","val":"Q3 FY26 guide rev $33.5B ±$750M, GM ~81% (+600bps q/q), EPS $19.15 ±$0.40, capex ~$7.0B","src":"MU Q2 FY26"},
-{"date":"2026-06-12","val":"Street rev $34.7B vs guide $33.5B; FY27/28 EPS pegged $111.3/$115.7","src":"briefing 2026-06-12"}],
-"note":"Watch GM past 81%, HBM4 ramp, DDR-vs-HBM margin crossover, SCA disclosures."},
+{"metric":"F3Q26 result / F4Q26 guide","horizon":"F3Q26 printed Jun 24 → F4Q26","trend":"up","trail":[
+{"date":"2026-03-18","val":"F3Q26 guide rev $33.5B ±$750M, GM ~81% (+600bps q/q), EPS $19.15 ±$0.40, capex ~$7.0B","src":"MU Q2 FY26"},
+{"date":"2026-06-24","val":"F3Q26 BLOWOUT: rev ~$41.5B (vs $33.5B guide), non-GAAP GM ~85% (guide ~86% F4Q26); F4Q26 guide rev ~$50B / EPS ~$31; 16 SCAs (14 = $100B min floor) targeting >50% of revenue, locked to 2030; capex FY27 above mid-$40B","src":"MU F3Q26 print"}],
+"note":"Beat & raise; 35/42 analysts raised EPS (next-FY consensus $144.27 from $101.74 a month prior), stock still ~9x forward — re-rate the remaining catalyst."},
 {"metric":"HBM TAM 2028","horizon":"2028","trend":"up","trail":[
 {"date":"2025-12-17","val":"HBM TAM ~$35B (2025) → ~$100B by 2028 (~40% CAGR), pulled in two years vs prior","src":"MU Q1 FY26"}],
 "note":"Entire CY26 HBM supply incl. HBM4 sold out on price and volume."},
 {"metric":"DRAM pricing / cycle duration","horizon":"2026→2028","trend":"up","trail":[
 {"date":"2025-12-22","val":"UBS: DRAM contract +35%/+30% q/q C4Q25/C1Q26; could be longest upcycle in 30 years","src":"UBS 2026 overview"},
 {"date":"2026-06-17","val":"DB raised PT: DRAM tightness extends to 2028+, agentic AI drives memory intensity","src":"DB Melissa Weathers"},
-{"date":"2026-06-23","val":"conventional DRAM 30-40% QoQ in Q3 & Q4 (Redburn); StoneX base Q3 +8-13%/Q4 +3-8%, MU likely price outlier","src":"Redburn / StoneX-TrendForce Avril"}],
-"note":"Bull = durable up-cycle through CY27/2028; bear (ex-VP) = textbook top, normalizes within a year."},
+{"date":"2026-06-23","val":"conventional DRAM 30-40% QoQ in Q3 & Q4 (Redburn); StoneX base Q3 +8-13%/Q4 +3-8%, MU likely price outlier","src":"Redburn / StoneX-TrendForce Avril"},
+{"date":"2026-07-03","val":"UBS raises 2H26 base-line: DRAM 3Q26 +32% QoQ (was +17%) / 4Q26 +18%, after +67% in 2Q; DRAM undersupplied until at least 2Q28 (2027 sufficiency -13.6%, 'unprecedented over 30 years')","src":"UBS Gaudois Memory Monthly (PT $1,625)"},
+{"date":"2026-07-13","val":"BofA: no earnings miss vs the Korea correction — conventional ASP +50-60% QoQ; global DRAM ASP +53%/+21%/+7% QoQ 2Q/3Q/4Q; >50% of conventional DRAM still off-LTA (price upside remains)","src":"BofA Simon Woo"}],
+"note":"Bull = durable up-cycle through CY27/2028 (UBS/BofA raising the pricing cadence); bear (ex-VP) = textbook top, normalizes within a year; long-dated China capacity the residual oversupply watch."},
 {"metric":"Wafer capacity 2027/28","horizon":"2026→2028","trend":"up","trail":[
 {"date":"2025-12-17","val":"FY26 capex raised to >$25B; FY27 to step up meaningfully, >$10B incremental construction capex y/y","src":"MU Q1/Q2 FY26"},
 {"date":"2026-06-23","val":"hardest to add wafer: ~365K wpm flat 2026 → ~440K end-2027 (Idaho 1&2 + PSMC); MU grows faster than Koreans in 2028 (+21% YoY)","src":"StoneX/TrendForce Avril"}],

@@ -10,15 +10,17 @@
 {"metric":"HBM wafer cap / share","horizon":"2026->2027","trend":"contested","trail":[
 {"date":"2025-12-17","val":"Cannot increase non-NVDA above 20% in 2026; declined ASIC/AMD volume; NVDA nudging Samsung to ramp","src":"Jefferies Techknowledge"},
 {"date":"2025-12 (UBS 2026 overview)","val":"UBS models 2026 HBM share SK Hynix/Samsung/Micron = 56%/22%/22%, off historical ~90%","src":"UBS 2026 overview"},
-{"date":"2026-06-23","val":"Dominant HBM supplier, largest HBM wafer cap ~200K end-2026 (vs Samsung 180K, Micron 100K); risk Samsung overtakes as #1 in 2027","src":"StoneX/TrendForce (Avril)"}],
-"note":"Share normalizing off ~90%; 2027 #1-spot now genuinely contested by Samsung HBM4."},
+{"date":"2026-06-23","val":"Dominant HBM supplier, largest HBM wafer cap ~200K end-2026 (vs Samsung 180K, Micron 100K); risk Samsung overtakes as #1 in 2027","src":"StoneX/TrendForce (Avril)"},
+{"date":"2026-07-14","val":"Ray Wang/SemiAnalysis: in a fully-sold-out HBM market, Samsung gaining HBM share need NOT come at SK Hynix's expense — the bottleneck is wafer capacity, not demand; undersupplied through 2027 into 2028","src":"Ray Wang/SemiAnalysis via @QQ_Timmy"}],
+"note":"Share normalizing off ~90%; the '2027 #1 contested' bear is reframed as a capacity-constraint, not a zero-sum share fight."},
 {"metric":"DRAM wafer capacity","horizon":"end-2027","trend":"up","trail":[
 {"date":"2026-06-23","val":"Exits 2026 #2 DRAM at ~610K wafers/month (vs Samsung ~740K); reaches 710K by end-2027, narrowing gap (Samsung adds only ~45K)","src":"StoneX/TrendForce (Avril)"}],
 "note":"Clean-room space — not equipment/demand — is the binding constraint through end-2028."},
 {"metric":"Yongin FAB1 / capacity to deploy","horizon":"end-2027->2028","trend":"up","trail":[
 {"date":"2026-01-29","val":"Capex up 'significantly YoY'; M15X, Yongin, Indiana build-out","src":"Q4 2025 / FY25 call"},
-{"date":"2026-06-23","val":"Yongin FAB1 (200-250K, geometry-dependent) ready end-2027, chip output only 2028; FAB2 just announced, 'far along'","src":"StoneX/TrendForce (Avril)"}],
-"note":"Greenfield clusters land output in 2028 given install + wafer-cycle lags."},
+{"date":"2026-06-23","val":"Yongin FAB1 (200-250K, geometry-dependent) ready end-2027, chip output only 2028; FAB2 just announced, 'far along'","src":"StoneX/TrendForce (Avril)"},
+{"date":"2026-07-14","val":"Yongin 'Y1' pulled forward: Phase-1 pilot ('one-pass') line to Feb-2027 (from May), full install ~20K wpm Mar/Apr, targeting 1c DRAM (also HBM4E); ~$26.5bn ADR raise funds Korean capacity + more ASML EUV; 4th Yongin fab pulled forward 12yrs to 2033","src":"@jukan05 / MS Kathleen Oh"}],
+"note":"Greenfield clusters land output in 2028; the mega-plan/ADR raise accelerates the Yongin ramp. CEO Kwak: 2027 'the worst supply year in history', demand > capacity past 2030."},
 {"metric":"HBM supply for 2027","horizon":"2027","trend":"down","trail":[
 {"date":"2026-06-23","val":"2027 HBM supply revised DOWN (60->50bn Gb-eq) as conventional DRAM more profitable; LTAs treated as call options; wafer shortage","src":"Redburn (Conor O'Mara Asia trip)"}],
 "note":"Hynix electing more commodity DRAM over HBM where margins favor it."}

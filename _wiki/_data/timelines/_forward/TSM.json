@@ -1,30 +1,37 @@
 {"ticker":"TSM","forward":[
 {"metric":"FY26 revenue growth","horizon":"FY26","trend":"up","trail":[
 {"date":"2026-01-15","val":"FY26 \"close to 30%\" in USD (Q4 FY25)","src":"TSMC Q4 FY25"},
-{"date":"2026-04-16","val":"FY26 raised to \"above 30%\" in USD; agentic shift another step-up in tokens","src":"TSMC Q1 FY26 (C.C. Wei)"}],
-"note":"Precise above-30% number deferred to July print."},
+{"date":"2026-04-16","val":"FY26 raised to \"above 30%\" in USD; agentic shift another step-up in tokens","src":"TSMC Q1 FY26 (C.C. Wei)"},
+{"date":"2026-07-16","val":"FY26 rev now guided \"slightly above 40%\" in USD — clears the most-watched pre-print bogey (buy-side ~40%); 2Q rev US$40.2bn (record)","src":"TSMC 2Q26 print"}],
+"note":"FY26 guide raised twice this year; 3Q26 rev guide US$44.6-45.8bn (mid $45.2bn)."},
+{"metric":"FY26/27 EPS","horizon":"FY26→FY27","trend":"up","trail":[
+{"date":"2026-06-05","val":"Fubon FY27 rev NT$7,057bn (+37%, Street-high), GM 68.8%","src":"Fubon 2027 outlook"},
+{"date":"2026-07-08","val":"Fubon FY27 EPS NT$144.13 vs cons NT$127.84","src":"Fubon 2Q26 preview"},
+{"date":"2026-07-16","val":"Fubon raises FY26/FY27 EPS to NT$108.80 / NT$155.41 (from NT$103.90/144.13) vs cons NT$100.13/129.26 — market-high","src":"Fubon post-print 'Capex hike a strong indicator'"}],
+"note":"Fubon EPS the Street-high; consensus dragging behind on the FY26 >40% guide + capex raise."},
 {"metric":"Wafer pricing 2027","horizon":"2027","trend":"up","trail":[
 {"date":"2026-05-27","val":"N3 regular hikes ~10%, N2 ~5-6% into Jan-27; hot-run/super-hot-run premiums rising","src":"Gokul/JPM CoWoS update"},
 {"date":"2026-06-05","val":"2027 wafer-price hikes start at 10% incl. Apple (vs +1-2% Apple 2026); blended ASP ≥10%; GM to 68-70%","src":"Fubon 2027 outlook"},
 {"date":"2026-06-23","val":"2027 wafer prices +≥10% across ALL customers incl. Apple; GM potentially high-60s to 70%; supply/demand gap 15-20%","src":"Redburn Conor O'Mara Asia Trip"}],
-"note":"Pricing the key GM lever; 2027 supply-demand gap widens to 15-20%."},
-{"metric":"Capex FY27/28","horizon":"2027→2028","trend":"contested","trail":[
-{"date":"2026-04-02","val":"raised CY27/28 capex to ~$63-64B / >$70B ($190B cumulative 26-28)","src":"JPM Gokul preview"},
-{"date":"2026-04-16","val":"next 3 years of capex \"significantly higher\" than the $101bn prior 3 years","src":"TSMC Q1 FY26 (CFO)"},
-{"date":"2026-06-23","val":"40-45 EUV units already booked for 2027, hard to get more (DRAM competition) → caps 2027 capex ~$70-75B vs others' $80-85B","src":"Redburn Conor O'Mara Asia Trip"}],
-"note":"EUV-tool availability the binding cap on 2027 capex upside."},
+"note":"Pricing the key GM lever; 2027 supply-demand gap widens to 15-20%. Q3'26 GM guided 65-67% on N2/overseas dilution."},
+{"metric":"Capex FY26/27/28","horizon":"FY26→2028","trend":"up","trail":[
+{"date":"2026-04-16","val":"FY26 to high end (~$56bn); next 3 years of capex \"significantly higher\" than the $101bn prior 3 years","src":"TSMC Q1 FY26 (CFO)"},
+{"date":"2026-06-23","val":"40-45 EUV units already booked for 2027 (DRAM competition) → caps 2027 capex ~$70-75B vs others' $80-85B","src":"Redburn Conor O'Mara Asia Trip"},
+{"date":"2026-07-16","val":"FY26 capex RAISED to US$60-64bn (from ~$56bn) on demand + tool-price inflation; next 3 years 'even more significantly higher' (no numeric 27/28 guide); +$100bn Arizona → $265bn total","src":"TSMC 2Q26 call"}],
+"note":"FY26 hard raise to $60-64bn clears the ~$58bn buy-side bogey; GS models FY27 $78bn, JPM $78/85bn 27/28 — EUV-tool availability the binding cap."},
 {"metric":"N2 capacity ramp","horizon":"2026→2027","trend":"up","trail":[
 {"date":"2025-08-20","val":"N2 first-year rev contribution ~6% in 2025; ~60k capacity exiting Q4-25","src":"StoneX/John Su"},
-{"date":"2025-10-28","val":"N2 ~40-45k WPM end-2025 → 65-70k end-2026 → 110-120k end-2027 (nearly doubles 2027)","src":"Fubon/Jefferies"}],
-"note":"N2 ramp dilutes FY26 GM 2-3pts; net-new tooling (GAA + backside power)."},
+{"date":"2025-10-28","val":"N2 ~40-45k WPM end-2025 → 65-70k end-2026 → 110-120k end-2027 (nearly doubles 2027)","src":"Fubon/Jefferies"},
+{"date":"2026-07-16","val":"N2 = 3% of 2Q26 wafer revenue (first contribution); Fubon marks N2 to 120k / N3 to 210-220k by end-2027; steep ramp = 3-4pt H2'26 GM drag","src":"TSMC 2Q26 print + Fubon post-print"}],
+"note":"N2 ramp dilutes FY26 GM 3-4pt in H2; net-new tooling (GAA + backside power)."},
 {"metric":"CoWoS / advanced-packaging capacity 2027","horizon":"2027→2028","trend":"up","trail":[
-{"date":"2025-10-28","val":"in-house CoWoS ~75-80k WPM exiting 2025 → ~100-105k by end-2026","src":"Fubon/Jefferies"},
 {"date":"2025-12-17","val":"raised trajectory to 120k end-2026 / 140k end-2027","src":"Q425 Techknowledge/Jefferies"},
 {"date":"2026-05-27","val":"JPM raising CoWoS capacity to 115k/175k/220k WPM end-26/27/28; SoIC ~30-40k by end-2027","src":"JPM Gokul"},
 {"date":"2026-06-23","val":"MS raised 2027 CoWoS to 200kwpm by year-end (from 170k) = ~60% Y/Y AI-XPU growth; Fubon 2028 220k + 20-30k CoPoS","src":"MS Asia AI Supply Chain / Fubon"}],
-"note":"NVDA single-sources CoWoS-L ~910k 2027; CPU a fresh 2.5D leg (Vera 5.75M / Venice 6.75M units)."},
+"note":"NVDA single-sources CoWoS-L ~910k 2027; CPU a fresh 2.5D leg (Vera 5.75M / Venice 6.75M units). Packaging 'so tight' TSMC welcomes Intel EMIB-T flexibility (2Q26 call)."},
 {"metric":"AI-accelerator revenue CAGR","horizon":"2024-29 (structural)","trend":"up","trail":[
 {"date":"2026-01-15","val":"CAGR raised to mid-/high-50s % (2024-29)","src":"TSMC Q4 FY25"},
-{"date":"2026-04-16","val":"CAGR toward higher-50s; AI \"extremely robust\"","src":"TSMC Q1 FY26 (Bruce Lu)"}],
-"note":"Wafers the binding AI constraint into 2027; AI-accel die yields ~50-60% vs ~90% consumer amplifies wafer demand."}
+{"date":"2026-04-16","val":"CAGR toward higher-50s; AI \"extremely robust\"","src":"TSMC Q1 FY26 (Bruce Lu)"},
+{"date":"2026-07-16","val":"C.C. Wei declined a new number but said the CAGR is 'stronger and stronger and stronger… stronger than what we said before' (watched 70-80% not formally given)","src":"TSMC 2Q26 call"}],
+"note":"Wafers the binding AI constraint into 2029-30; demand-vs-supply gap on N3-and-below 'really big'. Agentic AI adds a fresh CPU silicon leg."}
 ]}

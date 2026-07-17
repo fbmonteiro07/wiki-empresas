@@ -1,29 +1,30 @@
 {"ticker":"ASML","forward":[
 {"metric":"Low-NA EUV units 2027/28","horizon":"2027→2028","trend":"up","trail":[
 {"date":"2026-01-28","val":"Low-NA EUV output ≥60 in 2026, scaling to ≥80 in 2027 (vs 44 in 2025)","src":"ASML Q4/FY25"},
-{"date":"2026-04-14","val":"MS raised 2027 EUV shipment forecast to 84 systems (from 80)","src":"MS Memory webcast"},
-{"date":"2026-06-03","val":"JPM: 90 EUV units 2027, 105 in 2028 (vs prior 81/85); capacity could do 110 Low-NA tools+ without new buildings","src":"JPM Deshpande \"Street Behind the Curve\""}],
-"note":"2027 unit confirmation above 80 the key buy-side trigger; capacity, not clean rooms, is the new framing."},
+{"date":"2026-06-03","val":"JPM: 90 EUV units 2027, 105 in 2028 (vs prior 81/85); capacity could do 110 Low-NA tools+ without new buildings","src":"JPM Deshpande \"Street Behind the Curve\""},
+{"date":"2026-07-15","val":"ASML guides Low-NA EUV & ArFi capacity +30%/yr for '27 & '28 → EUV cap ~85 ('27) / ~110 ('28); the 85 for 2027 came slightly BELOW buy-side 90-100 (the one soft spot) but 'can still be raised'","src":"ASML Q2 2026 call"}],
+"note":"85 EUV for 2027 the soft spot; DUV immersion the positive surprise. Watch: whether 2027 EUV gets revised up from 85 toward 90-100 as orders firm."},
 {"metric":"FY26 revenue guide","horizon":"FY26","trend":"up","trail":[
-{"date":"2026-01-28","val":"FY26 €34-39B, GM 51-53%","src":"ASML Q4/FY25"},
-{"date":"2026-04-15","val":"raised and narrowed FY26 to €36-40B, GM held 51-53%, H2-weighted","src":"ASML Q1 2026"}],
-"note":"Guide-raise driven by immersion + IBM upgrades, \"nothing to do with EUV.\""},
+{"date":"2026-04-15","val":"raised and narrowed FY26 to €36-40B, GM held 51-53%, H2-weighted","src":"ASML Q1 2026"},
+{"date":"2026-07-15","val":"FY26 RAISED again to €43-45B at 54-56% GM — 2nd raise this year, >10ppt top-line upgrade with six months left; implied Q4 annualized rev ~$56B","src":"ASML Q2 2026 print"}],
+"note":"FY26 growth mix behind the €44B midpoint: EUV +45%, DUV+M&I +25%, IBM +30%; Memory +75%, Logic +25%. Q3'26 guide €11-12B (mid €11.5B) at 55-57% GM."},
 {"metric":"FY27/28 revenue & EPS","horizon":"2027→2028","trend":"up","trail":[
-{"date":"2025-12-22","val":"UBS system+service WFE rev $30.0B(26E)→$34.6B(27E,+15%); blue-sky upside far above consensus","src":"UBS 2026 overview"},
 {"date":"2026-06-03","val":"JPM PT €1,900: FY27/28 rev €55.4B/€63.8B, EPS €54.4/€64.4 (~+32/35% vs cons); EUV rev 10.4%/19.7% above cons","src":"JPM Deshpande"},
-{"date":"2026-06-17","val":"Redburn raised FY27-30 EPS +9-12%, sits 14% ahead of consensus; PT €1,900","src":"Redburn Conor O'Mara Asia Trip"}],
-"note":"Street numbers seen as behind; buy-side already at €43-50 FY27 EPS so further upside needs capacity confirmation."},
-{"metric":"Immersion DUV 2027","horizon":"2027","trend":"up","trail":[
-{"date":"2026-04-15","val":"non-EUV now expected to grow (vs prior flat) as immersion supply-chain bottleneck reversed","src":"ASML Q1 2026"},
-{"date":"2026-06-03","val":"JPM models ~200 immersion units in 2027 (vs cons 137); immersion rev 34.8% above cons, total DUV 39.3% above","src":"JPM Deshpande"}],
-"note":"Second under-modeled vector; China shells built 2026, equipped 2027."},
+{"date":"2026-07-15","val":"UBS/Bernstein see 20-30% lift to '27/'28 consensus EPS post-print (DUV immersion +30%/yr vs cons +11/6%, GM >60% new models, value-based pricing)","src":"UBS ASML Q2 call-back / Bernstein"},
+{"date":"2026-07-16","val":"Redburn PT €1,900→€2,100: net sales FY26/27/28 €44.1/55.8/69.2B (+11/12/22% vs cons), EPS(dil) $40.2/56.8/77.5, GM 55.7/57.6/59.4%, FY28E FCF €30.5B","src":"Rothschild/Redburn 'Visibility extending'"}],
+"note":"Estimates going up post-print; Bernstein PT €2,500 (Street-high), Redburn €2,100. Buy-side already at €43-50 FY27 EPS."},
+{"metric":"Immersion DUV 2027/28","horizon":"2027→2028","trend":"up","trail":[
+{"date":"2026-06-03","val":"JPM models ~200 immersion units in 2027 (vs cons 137); immersion rev 34.8% above cons, total DUV 39.3% above","src":"JPM Deshpande"},
+{"date":"2026-07-15","val":"ASML guides ArF-immersion capacity +30% in BOTH '27 & '28 (130→170→220) vs cons +11%/+6% — the big upside, tightly correlated with EUV; new-model GM potentially >60% on immersion mix","src":"ASML Q2 2026 call / UBS call-back"}],
+"note":"Second under-modeled vector now confirmed by mgmt; the positive surprise of the print vs the light 85-EUV number."},
 {"metric":"DRAM litho intensity (EUV layers)","horizon":"2026→2028 (structural)","trend":"up","trail":[
 {"date":"2026-04-15","val":"EUV layers/DRAM node 1b (~3-4) → 1c (~6-7, current) → 1d (~10, ~2028); DRAM materially stronger than CMD'24","src":"BofA ASML callback"},
-{"date":"2026-06-23","val":"TSMC booked 40-45 EUV for 2027, hard to get more as memory makers compete for same tools (DRAM EUV demand)","src":"Redburn Conor O'Mara Asia Trip"}],
+{"date":"2026-06-23","val":"TSMC booked 40-45 EUV for 2027, hard to get more as memory makers compete for same tools (DRAM EUV demand)","src":"Redburn Conor O'Mara Asia Trip"},
+{"date":"2026-07-15","val":"Memory 49% of Q2 revenue (first time ≥50% of system sales since 2H18); Memory rev +75% y/y vs ~40-50% WFE-memory — evidence of rising 1c→1d litho intensity","src":"ASML Q2 2026 print"}],
 "note":"DRAM is the new leg of the thesis; 2028 4F² transition a possible EUV-to-DRAM air-pocket (bear)."},
 {"metric":"2030 revenue frame / WFE ceiling","horizon":"2030 (structural)","trend":"up","trail":[
-{"date":"2026-01-28","val":"CMD'24 frame reiterated: 2030 revenue €44-60B at 56-60% GM","src":"ASML Q4/FY25"},
 {"date":"2026-06-15","val":"UBS: WFE ~$250B CY28, into $300s CY29; ASML ~110 EUV slots ≈ ~$225B WFE before adding floor space","src":"UBS Arcuri"},
-{"date":"2026-06-17","val":"Redburn frames $68bn litho market / $54bn ASML system sales in 2030 at stable 91% litho share","src":"Redburn Conor O'Mara Asia Trip"}],
-"note":"CMD expected early 2027 likely raises the 2030 €44-60B frame; BofA models €70B mid-case."}
+{"date":"2026-06-17","val":"Redburn frames $68bn litho market / $54bn ASML system sales in 2030 at stable 91% litho share","src":"Redburn Conor O'Mara Asia Trip"},
+{"date":"2026-07-16","val":"Redburn PT €2,100: FY28E net sales €69.2B / EPS(dil) $77.5 / GM 59.4% / FCF €30.5B — pulls the out-year model well above the €44-60B CMD'24 frame","src":"Rothschild/Redburn 'Visibility extending'"}],
+"note":"CMD expected early 2027 likely raises the 2030 €44-60B frame; BofA models €70B mid-case. Backlog value at the Q4 report (Jan '27) the next hard catalyst."}
 ]}

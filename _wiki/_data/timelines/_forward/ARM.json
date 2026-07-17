@@ -3,7 +3,9 @@
 {"date":"2026-02-23","val":"server CPU TAM ~$60B by CY30E from ~$27B CY25; Arm value share to ~20-25%+","src":"BofA/Arya"},
 {"date":"2026-05-06","val":">$100B data-center CPU TAM by 2030 (agentic AI needs >4x CPU)","src":"Q4 FY26 call"},
 {"date":"2026-05-21","val":"server-CPU market ~$170bn by 2030; ARM unit share 16% (2025)→42% (2030)","src":"UBS/Lin"},
-{"date":"2026-06-17","val":"server CPU TAM raised to $223B; Arm targeting $22B revenue by 2030","src":"Bernstein/Rasgon"}
+{"date":"2026-06-17","val":"server CPU TAM raised to $223B; Arm targeting $22B revenue by 2030","src":"Bernstein/Rasgon"},
+{"date":"2026-06-24","val":"UBS: $170B C2030 CPU TAM; ARM ~40% unit / ~50% rev share; AGI rev ~$14B by C2030 (~8% of TAM)","src":"UBS Arcuri (PT $470)"},
+{"date":"2026-07-12","val":"JPM proprietary model: ARM ~90% of AI head-node CPU + ~43% of the blended server-CPU market by 2028 (from ~22% 2025), 72% ARM unit CAGR vs 25% x86","src":"JPM Hung/Hariharan"}
 ],"note":"The swing variable behind the bull re-rate; internal Arm framing pegs $200-300B by 2030 (Expert)."},
 {"metric":"AGI CPU own-silicon revenue","horizon":"FY27→FY31","trend":"up","trail":[
 {"date":"2026-05-06","val":"launched w/ Meta lead; ~$2B demand across FY27+FY28 (>2x analyst-day); FY27 ~$1B (supply-constrained); FY31 ~$15B AGI + ~$10B IP","src":"Q4 FY26 call"},
@@ -17,8 +19,9 @@
 {"metric":"FY31 / FY27 EPS","horizon":"FY27→FY31","trend":"up","trail":[
 {"date":"2025-12-22","val":"FY27E rev $6,056M / EPS $2.42 (CY27 $3.01); above Street","src":"UBS/Arcuri (Buy $195)"},
 {"date":"2026-05-06","val":"FY31 combined (AGI+IP) EPS >$9","src":"Q4 FY26 call"},
-{"date":"2026-06-17","val":"FY31E EPS lifted $9.83 → $11.79; PT $300→$500","src":"Bernstein/Rasgon"}
-],"note":"Royalty re-acceleration is the watch into Q1 FY27 print; Q4 royalty was light at +11%."},
+{"date":"2026-06-17","val":"FY31E EPS lifted $9.83 → $11.79; PT $300→$500","src":"Bernstein/Rasgon"},
+{"date":"2026-06-24","val":"UBS: CY26/27/28 EPS $2.00/$2.97/$4.33 (CY28E unchanged); C2030E EPS $9.95; 108x CY28E P/E (PT $470, up/base/down $580/$470/$265)","src":"UBS Arcuri"}
+],"note":"Royalty re-acceleration is the watch into Q1 FY27 print; Q4 royalty was light at +11%. PT spread widest in the sector: GS $150 / Redburn $130 bears vs Bernstein $500 / Mizuho $500 / TD Cowen $475 bulls."},
 {"metric":"Royalty/licensing growth FY27","horizon":"FY27","trend":"up","trail":[
 {"date":"2026-05-06","val":"Q1 FY27 guide rev $1.26B ±$50M (~+20%), EPS $0.40 ±$0.04","src":"Q4 FY26 call"},
 {"date":"2026-05-07","val":"both royalty and licensing guided +20% YoY in fiscal Q1 and across FY27; cloud royalty ~2x YoY","src":"Expert \"SiTime/ARM call\""}

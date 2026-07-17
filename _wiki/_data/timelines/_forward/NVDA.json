@@ -23,8 +23,10 @@
 {"date":"Q2 FY26 (Aug'25)","val":"$3-4T by end of decade; ~$600B capex this yr","src":"NVDA call"},
 {"date":"Q4 FY26 (Feb'26)","val":"capex approaching $700B","src":"NVDA call"},
 {"date":"2026-05-20","val":"AI infra spend reaching $3-4T/yr by end of decade; hyperscale capex >$1T in 2027","src":"NVDA Q1 FY27 call"},
-{"date":"2026-06-16","val":"JPM models aggregate; OpenAI compute commitments >$1T over 4-5 yrs","src":"JPM AI Capex 2.0"}
-],"note":"Macro TAM frame Jensen keeps escalating; binding constraint is power."},
+{"date":"2026-06-16","val":"JPM models aggregate; OpenAI compute commitments >$1T over 4-5 yrs","src":"JPM AI Capex 2.0"},
+{"date":"2026-07-11","val":"Mizuho: consensus AI DC capex $1.2T 2027E (+35% y/y) / >$1.4T 2028E; ~$50B/GW × cumulative 106GW 2026-30E ≈ >$5.3T (~4x 2025-26E); OP PT $300","src":"Mizuho Rakesh"},
+{"date":"2026-07-16","val":"TSM 2Q26 read-through: FY26 rev 'slightly above 40%', FY26 capex raised to $60-64bn, demand strong 'to 2029, 2030', N3-and-below supply gap 'really big' — corroborates the multi-year compute-demand frame (NVDA ~50%+ of TSMC 2027 CoWoS)","src":"TSMC 2Q26 print (read-through)"}
+],"note":"Macro TAM frame Jensen keeps escalating; binding constraint is power. Mizuho $1.4T-2028E + the TSM print are the latest external corroboration."},
 {"metric":"Gross margin trajectory","horizon":"FY27 / structural","trend":"flat","trail":[
 {"date":"Q3 FY26 (Nov'25)","val":"guide 74.8-75%","src":"NVDA call"},
 {"date":"Q4 FY26 (Feb'26)","val":"mid-70s for FY27","src":"NVDA call"},
@@ -36,6 +38,8 @@
 {"date":"Q3 FY26 (Nov'25)","val":"Rubin 2H26","src":"NVDA call"},
 {"date":"Q4 FY26 (Feb'26)","val":"Rubin unveiled at CES; first samples shipped","src":"NVDA call"},
 {"date":"2026-05-19","val":"ships to supply chain Q3, real external-customer ramp Q4 into early next year","src":"BofA Vivek Arya setup call"},
-{"date":"2026-05-20","val":"Vera Rubin production shipments begin 2H, starting Q3 (Oct qtr), ramping into Q4/Q1","src":"NVDA Q1 FY27 call"}
-],"note":"Product-cycle catalyst; stays in NVL72 scale-up domain so ramp should be cleaner than Hopper→Blackwell."}
+{"date":"2026-05-20","val":"Vera Rubin production shipments begin 2H, starting Q3 (Oct qtr), ramping into Q4/Q1","src":"NVDA Q1 FY27 call"},
+{"date":"2026-07-06","val":"SemiAnalysis: Kyber NVL144 delayed 12+ mo to 2028, NVL576 delayed/small-vol, NVL72x2 cancelled → argued no proven scale-up world-size path for Rubin Ultra","src":"SemiAnalysis (Dylan Patel)"},
+{"date":"2026-07-14","val":"NVDA walks the delay back (5 corroborations incl. Jensen direct): Rubin Ultra 'on track to ship next year' (NOT 2028); Kyber replaced by a 'better solution' (larger scale-up domain, die/package 4→2); 800V + CPO optical scale-out on schedule, 'no material delay'","src":"MS Joe Moore NDR / Jensen via @aleabitoreddit"}
+],"note":"Product-cycle catalyst; the SemiAnalysis Kyber-delay scare (07-06) was largely walked back by NVDA/Citi/MS/BofA and Jensen himself into 07-14."}
 ]}

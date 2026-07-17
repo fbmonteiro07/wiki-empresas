@@ -10,8 +10,9 @@
 ],"note":"Directly conflicting checks on the key proof point; riskier swing jumping straight to 1c DRAM."},
 {"metric":"Q2-2026 operating profit","horizon":"Q2-2026","trend":"up","trail":[
 {"date":"2026-05-11","val":"Jefferies (Jeff Kim) Q2-26 OP KRW 100tn vs his prior KRW 84tn","src":"Jefferies"},
-{"date":"2026-05-28","val":"union-settlement provision (~12% of profit) hits Q2, ~2pts above JPM's prior 10%","src":"JPM (Jay)"}
-],"note":"Test of Jefferies' KRW 100tn OP; union provision trims the EPS beat."},
+{"date":"2026-05-28","val":"union-settlement provision (~12% of profit) hits Q2, ~2pts above JPM's prior 10%","src":"JPM (Jay)"},
+{"date":"2026-07-07","val":"2Q26 PRELIMINARY OP W89.4tn (beat lowered Street W75-84tn after ~W15tn+ 1H labor provisions), sales ~W171tn; memory OPM ~80% DRAM / ~65% NAND; 4nm HBM4 base-die in full MP. Stock fell ~7% on the print (hurdle raised); full detail Jul 30","src":"Samsung prelim / JPM Jay Kwon (OW W480k)"}
+],"note":"Jefferies' KRW 100tn OP not quite hit but a clear beat; the stock sold off — expectations, not results, now the binding constraint."},
 {"metric":"HBM4 / HBM4E ASP","horizon":"2027 LTA","trend":"up","trail":[
 {"date":"2026-04-30","val":"HBM4E samples Q2 (16 Gbps, 4.0 TB/s)","src":"Q1-2026 call"},
 {"date":"2026-06-23","val":"HBM4 price still unfinalized despite Samsung already shipping; expected +90-100% vs last year's LTA","src":"Redburn (Conor O'Mara)"}
@@ -22,8 +23,9 @@
 {"metric":"Foundry wins / Taylor TX ramp","horizon":"2027 -> 2028","trend":"up","trail":[
 {"date":"2025-10-30","val":"utilization up; 2nm GAA ramp in Q4","src":"Q3-2025 call"},
 {"date":"2026-04-30","val":"Taylor TX move-in Apr 23, ops 2026 / mass production 2027; 1.4nm on track; BSPDN target 2027","src":"Q1-2026 call"},
-{"date":"2026-06-19","val":"Samsung Foundry signed deal to make 'Claros' power-management chips for AI data centers","src":"Digitimes"}
-],"note":"Foundry valued at zero-to-negative EV; AMD/Google/Tesla inquiries on TSMC capacity scarcity = valuation kicker."},
+{"date":"2026-06-19","val":"Samsung Foundry signed deal to make 'Claros' power-management chips for AI data centers","src":"Digitimes"},
+{"date":"2026-07-14","val":"Foundry backlog ~KRW50tn (~$32.7B); Anthropic 2nm win reportedly agreed (+DeepX), Taylor completed Tesla's A15/AI5 tape-out (2nd US 2nm chip), and Samsung to fab Google's 2nm 'Icefish' TPU I/O die — but JPM/Gokul caps Samsung+Intel at ~5-6% of 2028-29 2nm (overflow, not leadership)","src":"@jukan05 (Korean media) / JPM Gokul"}
+],"note":"Foundry valued at zero-to-negative EV; the accumulating AI-lab/hyperscaler wins are real availability-driven overflow, capped near-term by TSMC's ~90-95% 2nm dominance."},
 {"metric":"NAND wafer capacity / share","horizon":"2026","trend":"down","trail":[
 {"date":"2026-06-23","val":"NAND->DRAM conversion drives global NAND wafer cap -3% in 2026; Samsung losing NAND share as it prioritizes DRAM/HBM","src":"StoneX/TrendForce (Avril)"}
 ],"note":"Capex diverted to DRAM/HBM; supportive of NAND pricing but Samsung cedes share."}

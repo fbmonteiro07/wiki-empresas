@@ -1,6 +1,6 @@
 # Edge tracker — house vs Street
 
-_Generated 2026-07-16 · the standing view of where our model and the curated reconciliation runs disagree with consensus. Divergence = candidate alpha; agreement is noise. Rebuild: `py _wiki/_tools/build_edge.py`._
+_Generated 2026-07-17 · the standing view of where our model and the curated reconciliation runs disagree with consensus. Divergence = candidate alpha; agreement is noise. Rebuild: `py _wiki/_tools/build_edge.py`._
 
 > ⚠️ Programmatic rows are auto-computed (house.json vs estimates.json, USD names only) — **verify the basis before trading** (revenue gross/net/TAC differences can masquerade as edge). Curated rows below are analyst-vetted.
 
@@ -17,22 +17,18 @@ _Generated 2026-07-16 · the standing view of where our model and the curated re
 | NVDA | EPS | 2027 | 15.44 | 12.99 | +19% |
 | NVDA | Revenue $bn | 2027 | 661.00 | 565.80 | +17% |
 
-## Curated divergences — latest reconciliation (`reconciliation-2026-07-14.md`)
+## Curated divergences — latest reconciliation (`reconciliation-2026-07-16.md`)
 
 | Name | New datapoint | Read (the edge) |
 |---|---|---|
-| SKHYNIX | Mirae **Buy, TP W4,200,000** + **2026F OP W266,817bn** (Mirae, 07-14) | PENDING |
-| SKHYNIX | Mirae **2026F OP W266,817bn (~3% BELOW consensus W275,793bn)** yet carries street-high TP (Mirae, 07-14) | PENDING (cons on page: W275,793bn) |
-| META | JPM **capex $142.1B'26 / $202.1B'27** (JPM Anmuth, 07-14) | PENDING |
-| META | JPM **GAAP EPS '27 $34.19** (JPM, 07-14) | PENDING |
-| META | JPM **Neutral, PT $725** (JPM, 07-14) | PENDING |
-| GOOG | JPM **GAAP EPS '27 $14.34** (JPM, 07-14) | PENDING |
-| GOOG | JPM **rev '27 $604.5B** (JPM, 07-14) | PENDING |
-| NVDA | MS **2027E GM 73%** (MS · Moore, 07-14) | PENDING |
-| AAPL | MS **FY27e EPS $10.30** (MS · Woodring, 07-14) | PENDING |
-| RDDT | JPM **Neutral $200** (JPM, 07-14) | PENDING |
+| TSM | Print + Fubon: FY26 EPS **NT$108.80**, FY27 **NT$155.41**; 2Q26 GM **67.7%**; FY26 capex **$60-64bn** confirmed; FY26 rev growth **">40%"** (Fubon, TSMC 2Q26 call, 07-16) | **House trails the print.** Fubon FY26/27 EPS ~+6%/+8% above house; ">40%" growth implies ~US$172bn vs house $165bn; GM 67.7% > house 66%. **→ raise house TSM post-print.** |
+| LITE | Citi FY27E EPS **$21.18** (raised from $20.03), Buy PT **$1,100** (Citi, 07-16) | House CY27 LITE EPS sits **well above** Citi's FY27 trajectory even after FY(Jun)/CY alignment — house is Street-aggressive on LITE out-years. **→ sanity-check house LITE CY27 build.** |
+| GOOG | BofA clean-basis FY27 EPS **$14.70** / FY28 $18.12; FY26 **$19.70** *(incl. ~$80bn one-time Anthropic-stake revaluation OI)*; PO $430 Buy (BofA/Post, 07-16) | Clean-basis **house 2027 ($16.20) > BofA ($14.70)** — house more bullish out-year. FY26 $19.70 is distorted by the non-recurring Anthropic markup — do **not** compare to house directly. (See also GOOG revenue-basis artifact in "screened out".) |
+| ARM | UBS PT **$470** (from $245), **108x** CY28E EPS $4.33; EPS CY26/27/28 $2.00/$2.97/$4.33 (UBS, 06-24) | PT nearly doubled but is **multiple-driven** (61x→108x), not EPS-driven — rating-vs-PT/valuation tension. Treat as sentiment, not earnings, upside. |
+| ANTHROPIC | Arete forward ARR **~$70bn by Sept-26 / >$110bn YE** (SDK-correlation, 04-14) vs BofA **~$45-47bn exiting 2Q26** run-rate (07-06) | **Wide source dispersion** on the ARR ramp — Arete's SDK-extrapolated forward is far above BofA's booked run-rate. Also new: Google marks stake **$380bn→$965bn** (BofA). |
+| AMD | UBS new **Street-high PT $700** (from $670 06-24; stale $300 retired); EPS C26/27/28 $7.69/$14.63/$21.11 (UBS, 07-15) | New Street-high, GPU rev C27 $41bn/C28 $61bn. No house to check — flag as the top of the AMD range. |
 
-## Consensus PT vs spot — live pull in `reconciliation-2026-07-14.md` (upside ranked)
+## Consensus PT vs spot — live pull in `reconciliation-2026-07-16.md` (upside ranked)
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|

@@ -1,14 +1,11 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-07-16 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-07-17 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (9)
+## 📅 Upcoming (6)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-07-16 | MU | **CXMT STAR Market IPO listing ~2026-07-16** (China's biggest 2026 IPO; no daily price limit for the first 5 trading days). Competitive-supply milestone to watch: CXMT is guided to exit 2026 with ~60- |
-| 2026-07-16 | SPCX | **Starship 13 — launch window 2026-07-16 (JPM Research "SPCX — Next Starship Flight Approaching", 2026-07-16; Bernstein · Seidman, 2026-07-13):** SpaceX set **Starship flight 13 for July 16**, address |
-| 2026-07-16 | TSM | **✅ Call transcript in hand** ([archived](../TSM/transcripts/TSM_Q2-2026-earnings_2026-07-16.md), 2026-07-16) — **confirmed** the FY26 capex raise to US$60–64bn, the N2 −3–4pt 2H GM dilution, and the  |
 | 2026-07-22 | TXN | **Q2 FY26 print — call ~2026-07-22** (guide $5.0–5.4bn / EPS $1.77–2.05); first call with new CFO **Julie Knecht** (DB, briefing 2026-06-03). |
 | 2026-07-23 | DISCO | **Q1 FYE-Mar-2027 print — 2026-07-23** (next scheduled, per Quartr). Watch vs the +18% rev / +20%+ OP guide and the seasonal QoQ dip. |
 | 2026-08-05 | IFX | **2026-08-05 — FY3Q26 print** — MS expects an in-line print (order-book momentum, industrial recovery, AI-DC commentary); watch the FY26 >EUR 16bn / ~20% margin bridge and HV-auto commentary (MS, 2026 |
@@ -16,18 +13,20 @@ _Generated 2026-07-16 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-08-31 | TXN | **CFO transition:** Rafael Lizardi out 2026-08-01 → **Julie Knecht** (CAO, 25-yr veteran), advisory through 2026-08-31 (DB/Seymore, briefing 2026-06-03). |
 | 2026-09-16 | ON | **2026-09-16 — onsemi Analyst Day** (Citi exp. ~Sep 13 print first) — the key event; watch for a raised long-term target model + SiC/800V framing (Citi, briefing 2026-06-15). |
 
-## ⏰ Passed — need a post-mortem (0)
+## ⏰ Passed — need a post-mortem (2)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| _none_ | | |
+| 2026-07-16 | SPCX | **Starship 13 — launch window 2026-07-16 (JPM Research "SPCX — Next Starship Flight Approaching", 2026-07-16; Bernstein · Seidman, 2026-07-13):** SpaceX set **Starship flight 13 for July 16**, address |
+| 2026-07-16 | MU | **CXMT STAR Market IPO listing ~2026-07-16** (China's biggest 2026 IPO; no daily price limit for the first 5 trading days). Competitive-supply milestone to watch: CXMT is guided to exit 2026 with ~60- |
 
-## ✅ Resolved (20)
+## ✅ Resolved (21)
 
 | Date | Ticker | Verdict |
 |---|---|---|
+| 2026-07-16 | TSM | bull won — 2Q26 print cleared the fundamental bar: rev US$40.20bn (+12.0% q/q, high-end of guide, record quarter), GM 67.7% (above the 65.5–67.5% guide), OpM 60.3%, EPS NT$27.25; and — the key metric — FY26 revenue guide RAISED to "slightly above 40%" in USD (from "above 30%"), clearing the "high-30s is a must" buy-side bogey; FY26 capex raised to US$60–64bn (confirmed on the call by CFO Wendell Huang; next 3 yrs "even more significantly higher"), above the ~US$58bn bogey; plus a surprise additional US$100bn Arizona investment (US$265bn total); N2 already 3% of wafer revenue (first contribution). Nuance (why it may not trade cleanly): 2Q GM 67.7% beat the guide but MISSED the ≥69% day-1 bogey, and the 3Q GM guide (65–67%) sits below the ~68% buy-side bar on N2 + overseas-fab dilution — so the near-term reaction is a "beat-but-margin-debate" (Taiwan futures softer post-print; JPMorgan market intelligence). Primary: TSMC 2Q26 earnings release/management report/presentation, 2026-07-16. |
 | 2026-07-14 | TSEM | bull won — Government-of-Japan/METI ~$1B grant CONFIRMED for a dual-track 300mm Japan SiPho/SiGe/packaging expansion; management's first hard 2028 model ($3.6B rev / $1.2B net profit, ≈ $10-11 EPS); resolves the long-flagged "300mm pending METI grant" catalyst. Offsets: ~$3B net capex back-end-loaded to 2027-29, Track 2 pending definitive agreements (TSEM 6-K, 2026-07-14). |
 | 2026-07-10 | SKHYNIX | bull won — US Nasdaq ADR listing catalyst resolved: priced $149, raised ~$26.5bn (largest-ever first-time foreign share sale on US markets, past Alibaba), 7x oversubscribed with anchor allocations cut on demand; the long-flagged US-listing/ADR re-rating catalyst is now realized with record demand. Nuance: ~3% ADR premium landed below the 5-20% desks flagged, and the local line closed flat on foreign net-selling (flows, not fundamentals). |
 | 2026-07-10 | SKHYNIX | bull won — US Nasdaq ADR listing catalyst resolved: priced $149, raised ~$26.5bn (largest-ever first-time foreign share sale on US markets, past Alibaba), 7x oversubscribed with anchor allocations cut on demand; the long-flagged US-listing/ADR re-rating catalyst is now realized with record demand. Nuance: ~3% ADR premium landed below the 5-20% desks flagged, and the local line closed flat on foreign net-selling (flows, not fundamentals). |

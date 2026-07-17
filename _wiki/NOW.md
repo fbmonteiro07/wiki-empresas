@@ -75,7 +75,7 @@ Beat-and-raise. Subscription revenue $3.671bn (+19% y/y); cRPO +21% y/y (~100bps
 - Cybersecurity / data-localization and regulatory expectations around data use and movement.
 
 ## Intra-quarter — calls, commentary & reports (since the last print)
-_Q1 FY26 · Apr 22 → Jun 23, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
+_Q1 FY26 · Apr 22 → Jul 16, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
 **Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
@@ -95,6 +95,7 @@ _Q1 FY26 · Apr 22 → Jun 23, 2026 · sell-side / expert calls / reports betwee
 | 05-05 | UBS · Keirstead ("NOW investor day / PLTR call") | guidance | mixed | UBS/Keirstead read-through from the FAD: a likely positive catalyst, but "measured" on three concerns — McDermott's unhedged optimism (zero disruption risk acknowledged), uncertainty over whether the coding-style seat→usage uplift translates to non-coding use cases, and the non-linear trajectory (the real seat→agent ACV inflection only ~2028, leaving 2027 potentially "a little more modest"). NOW also flagged an AI-native down-market ITSM at 100% consumption. |
 | 05-19 | BofA | valuation | bull | BofA reinstated coverage at Buy, PO $130 (via morning briefing): "AI beneficiary, entrenched workflow position" thesis. |
 | 06-23 | UBS · Keirstead | demand | mixed | UBS names NOW (with CRM/WDAY) as a well-penetrated seat-based SaaS firm NOT helped as enterprises cut headcount/optimize seats/trim app-budget growth to offset AI token costs; seat-plus-usage pricing "may now be met with even greater resistance." Offset: model-neutral software could gain playing an independent "token optimizer" role like Palantir's Evolve. |
+| 07-16 | Morgan Stanley · Josh Baer / Sanjit Singh (2Q26 CIO Survey + Edge AI Survey) | competition | bull | **NOW screens as a top winner in MS's 2Q26 CIO survey** (n=100): **Microsoft and ServiceNow are the ONLY two tracked vendors expected to ACCELERATE forward-year growth in 2026** (all others decelerating); MS's AI-native/vendor-consolidation framework points "most constructively to Microsoft and ServiceNow as scaled platforms best positioned to embed AI into existing workflows and consolidate spend." NOW is a **top-4 agentic-automation vendor preference** (Now Assist/Moveworks 4%→5%), carries a **6% incremental-GenAI-spend share in 2026 / 5% on a 3-yr view**, and is called out (with CRM) as retaining meaningful AI relevance. A direct sell-side rebuttal to the seat-erosion/token-optimization bear (UBS 06-23) — corroborates the "AI reinvigorates the core / consolidation-layer winner" bull thesis. (MS · Josh Baer, 2026-07-16) |
 
 **Quarter synthesis:** the print was a beat-and-raise and the Financial Analyst Day set a $30bn target for 2030, but the debate has shifted to the timing and translation of the pricing pivot — UBS is constructive on the long term, but "measured": the seat→usage uplift may not generalize to non-coding use cases and the real ACV inflection only comes ~2028, leaving '27 potentially more modest, all the more so with customers pausing renewals to reassess AI models.
 

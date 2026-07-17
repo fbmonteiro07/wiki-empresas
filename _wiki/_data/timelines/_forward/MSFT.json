@@ -2,11 +2,14 @@
 {"metric":"Azure cc growth","horizon":"Q4 FY26 / 2H CY26","trend":"up","trail":[
 {"date":"2026-01-28","val":"Q2 FY26 Azure +38% cc, beat","src":"Q2 FY26 call"},
 {"date":"2026-04-29","val":"Q3 +40% cc; Q4 guide +39-40% cc; modest 2H CY26 acceleration expected","src":"Q3 FY26 call"},
-{"date":"2026-04-30","val":"UBS models 42-43% exiting the year; 2H accel from efficiency (40% more throughput same HW), not capacity adds","src":"UBS/Keirstead"}],"note":"OpenAI explains 100%+ of CY26 Azure AI growth on MS math; 'Other' Azure AI re-accel the bull tell."},
+{"date":"2026-04-30","val":"UBS models 42-43% exiting the year; 2H accel from efficiency (40% more throughput same HW), not capacity adds","src":"UBS/Keirstead"},
+{"date":"2026-07-08","val":"GS/Borges: 4QFY Azure 40-41% cc likely (>guide 39-40%); 1QFY guide ~40-41% vs Street 41%","src":"GS Borges"},
+{"date":"2026-07-12","val":"BofA buyside bogey ratcheted up: 4QFY26 Azure cc 40.7% / 1QFY27 guide 41.4% (vs ~38.4% into the April print) — the bar the stock must clear is ~2pts higher","src":"BofA Fenske bogey poll"}],"note":"OpenAI explains 100%+ of CY26 Azure AI growth on MS math; the buyside Azure bar has moved up faster than the guide into the 7/29 print."},
 {"metric":"CY26→FY28 capex","horizon":"CY26→FY28","trend":"up","trail":[
 {"date":"2026-04-29","val":"CY26 capex ~$190B (~$25B higher memory); Q4 steps to >$40B","src":"Q3 FY26 call"},
 {"date":"2026-04-30","val":"UBS raised FY27 capex est ~$181B → ~$234B (~+65%); FY27 FCF to ~−$21B","src":"UBS/Keirstead"},
-{"date":"2026-06-16","val":"JPM: capex ~$140bn FY26 → ≥$240bn FY27 → ~$300bn FY28; funding gap ~$90bn FY27 / ~$130bn FY28","src":"JPM 'AI Capex 2.0'"}],"note":"MS/Altimeter revised CY27 est $178B → $276B, biggest hyperscaler revision."},
+{"date":"2026-06-16","val":"JPM: capex ~$140bn FY26 → ≥$240bn FY27 → ~$300bn FY28; funding gap ~$90bn FY27 / ~$130bn FY28","src":"JPM 'AI Capex 2.0'"},
+{"date":"2026-07-12","val":"BofA buyside capex bogeys FY27 $243.5B / FY28 $276.9B / FY29 $289.0B; Big-5 '26-28 capex intensity 37.5%→~46.5% on buyside bogeys","src":"BofA Fenske bogey poll"}],"note":"MS/Altimeter revised CY27 est $178B → $276B, biggest hyperscaler revision; MSFT the 'laggard pre-funder' → new bond supply expected C2H26."},
 {"metric":"M365 Copilot paid seats","horizon":"forward seat adds","trend":"up","trail":[
 {"date":"2026-01-28","val":"15M paid seats, +160% y/y","src":"Q2 FY26 call"},
 {"date":"2026-04-29","val":">20M paid seats, +250% y/y; net adds guided up sequentially","src":"Q3 FY26 call"},
@@ -16,7 +19,8 @@
 {"date":"2026-04-30","val":"June-qtr GM ~mid-66% (down ~220bps y/y) even after OpenAI rev-share removal helps","src":"UBS/Keirstead"}],"note":"Memory inflation + 6-yr depreciation build the headwind; OpenAI rev-share removal a COGS offset."},
 {"metric":"FY27 revenue/OI framing & EPS inflection","horizon":"FY27/CY27","trend":"up","trail":[
 {"date":"2025-05-21","val":"MS: EPS growth accelerates CY27 as cumulative OpenAI losses hit ~$13B cap and drag rolls off","src":"MS MSFT/OpenAI"},
-{"date":"2026-04-29","val":"FY27 'another year of double-digit revenue and operating income growth'; flat FY27 op margins","src":"Q3 FY26 call"}],"note":"OpenAI equity-method loss roll-off a mechanical GAAP EPS tailwind not in the multiple."},
+{"date":"2026-04-29","val":"FY27 'another year of double-digit revenue and operating income growth'; flat FY27 op margins","src":"Q3 FY26 call"},
+{"date":"2026-07-16","val":"MS ModelWare FY EPS 06/26e $17.35 / 06/27e $19.62 (prior $19.71) / 06/28e $23.86 (prior $24.03) — slight downward FY27/28 revision; OW, PT $650. CIO survey: MSFT top incremental-GenAI-spend gainer (27% '26 / 30% 3-yr), M365 Copilot penetration 88%","src":"MS Weiss/Baer '2Q26 CIO Survey'"}],"note":"OpenAI equity-method loss roll-off a mechanical GAAP EPS tailwind not in the multiple; MS trims FY27/28 EPS slightly while reiterating GenAI leadership."},
 {"metric":"Maia custom silicon roadmap","horizon":"2028 (Maia 300 late-2027)","trend":"contested","trail":[
 {"date":"2025-11-12","val":"SemiAnalysis: Maia 200 internal failure; 2nm Maia 300 not deployable near targets until late 2027","src":"SemiAnalysis MSFT AI Strategy"},
 {"date":"2026-06-15","val":"Targeting ~50% of AI compute on own silicon by 2028; Maia 200 >30% better perf/$","src":"@ParadisLabs / JPM 'AI Capex 2.0'"}],"note":"Custom-ASIC the structural weak spot vs GOOG/AMZN; first-party silicon lowers COGS if it lands."}
