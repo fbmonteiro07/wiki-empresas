@@ -17,18 +17,15 @@ _Generated 2026-07-17 · the standing view of where our model and the curated re
 | GOOG | Revenue $bn | 2026 | 505.00 | 423.70 | +19% |
 | NVDA | Revenue $bn | 2027 | 661.00 | 565.80 | +17% |
 
-## Curated divergences — latest reconciliation (`reconciliation-2026-07-16.md`)
+## Curated divergences — latest reconciliation (`reconciliation-2026-07-17.md`)
 
 | Name | New datapoint | Read (the edge) |
 |---|---|---|
-| TSM | Print + Fubon: FY26 EPS **NT$108.80**, FY27 **NT$155.41**; 2Q26 GM **67.7%**; FY26 capex **$60-64bn** confirmed; FY26 rev growth **">40%"** (Fubon, TSMC 2Q26 call, 07-16) | **House trails the print.** Fubon FY26/27 EPS ~+6%/+8% above house; ">40%" growth implies ~US$172bn vs house $165bn; GM 67.7% > house 66%. **→ raise house TSM post-print.** |
-| LITE | Citi FY27E EPS **$21.18** (raised from $20.03), Buy PT **$1,100** (Citi, 07-16) | House CY27 LITE EPS sits **well above** Citi's FY27 trajectory even after FY(Jun)/CY alignment — house is Street-aggressive on LITE out-years. **→ sanity-check house LITE CY27 build.** |
-| GOOG | BofA clean-basis FY27 EPS **$14.70** / FY28 $18.12; FY26 **$19.70** *(incl. ~$80bn one-time Anthropic-stake revaluation OI)*; PO $430 Buy (BofA/Post, 07-16) | Clean-basis **house 2027 ($16.20) > BofA ($14.70) > cons is between** — house most bullish out-year. FY26 $19.70 is distorted by the non-recurring Anthropic markup — do **not** compare to house directly. (See also GOOG revenue-basis artifact in "screened out".) |
-| ARM | UBS PT **$470** (from $245), **108x** CY28E EPS $4.33; EPS CY26/27/28 $2.00/$2.97/$4.33 (UBS, 06-24) | PT nearly doubled but is **multiple-driven** (61x→108x), not EPS-driven — rating-vs-PT/valuation tension. Treat as sentiment, not earnings, upside. |
-| ANTHROPIC | Arete forward ARR **~$70bn by Sept-26 / >$110bn YE** (SDK-correlation, 04-14) vs BofA **~$45-47bn exiting 2Q26** run-rate (07-06) | **Wide source dispersion** on the ARR ramp — Arete's SDK-extrapolated forward is far above BofA's booked run-rate. Also new: Google marks stake **$380bn→$965bn** (BofA). |
-| AMD | UBS new **Street-high PT $700** (from $670 06-24; stale $300 retired); EPS C26/27/28 $7.69/$14.63/$21.11 (UBS, 07-15) | New Street-high, GPU rev C27 $41bn/C28 $61bn. No house to check — flag as the top of the AMD range. |
+| 1 | **TSMC FY27 capex** (Jefferies · Sherman Chang, 07-17) | **Jefferies +12% above BBG consensus.** Sits with the bull broker cluster; BBG is lagging the post-print capex reset. Bullish read-through → [[ASML]] / [[semicap-wfe]]. |
+| 2 | **TSMC FY28 capex** (Jefferies · Sherman Chang, 07-17) | **Jefferies +13% above BBG consensus.** Out-year capex divergence is the standing semicap alpha — sell-side marks running well ahead of the tape. |
+| 3 | **Google TPU units 2028** (Jefferies · Sherman Chang, 07-17) | New **2028** point, ~40-60% above the '27 unit marks → a steeper TPU ramp than the tracked '27 numbers imply. Mildly bullish [[AVGO]] / [[GOOG]] / [[custom-asic-tpu]]; single-broker, unverified vs a second source → watch. |
 
-## Consensus PT vs spot — live pull in `reconciliation-2026-07-16.md` (upside ranked)
+## Consensus PT vs spot — live pull in `reconciliation-2026-07-17.md` (upside ranked)
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|
