@@ -11,7 +11,7 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\NVTS` (10-K/10-Q filin
 |---|--:|--:|
 | Revenue | $42m | $74m |
 | Gross profit | $16m | $31m |
-| Gross margin | 39.2% | 41.3% |
+| Gross margin | 39.3% | 41.3% |
 | EBITDA | $-43m | $-33m |
 | EPS | $-0.18 | $-0.15 |
 | Capex | $2m | $2m |
