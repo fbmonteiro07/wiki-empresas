@@ -1,6 +1,6 @@
 # Canonical assumptions — one number per debate
 
-_Generated 2026-07-18 from `_data/assumptions.json` (asof 2026-07-13). Every cross-page industry number lives here once, with all sourced variants. When a new source disagrees, add a variant to the JSON — never silently rebase a page. Rebuild: `py _wiki/_tools/build_assumptions.py`._
+_Generated 2026-07-19 from `_data/assumptions.json` (asof 2026-07-13). Every cross-page industry number lives here once, with all sourced variants. When a new source disagrees, add a variant to the JSON — never silently rebase a page. Rebuild: `py _wiki/_tools/build_assumptions.py`._
 
 ## Custom-ASIC vs merchant-GPU share of AI accelerators  `asic-vs-gpu-share`
 
