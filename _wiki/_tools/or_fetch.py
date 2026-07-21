@@ -42,6 +42,24 @@ ENDPOINTS = {
     "apps":       FE + "/rankings/apps?view=week",
 }
 
+# Per-provider price watchlist (documented public API: /api/v1/models/{slug}/endpoints).
+# First three prove "first-party = same price on every venue"; the rest map the
+# neocloud market (Together/Fireworks/DeepInfra/...) for open-weight models.
+ENDPOINT_MODELS = [
+    "anthropic/claude-opus-4.8",
+    "anthropic/claude-sonnet-5",
+    "openai/gpt-5.6-sol",
+    "deepseek/deepseek-v3.2",
+    "deepseek/deepseek-v4-flash",
+    "deepseek/deepseek-v4-pro",
+    "qwen/qwen3-next-80b-a3b-instruct",
+    "meta-llama/llama-4-maverick",
+    "z-ai/glm-5.2",
+    "minimax/minimax-m3",
+    "moonshotai/kimi-k2.5",
+    "mistralai/mistral-large-2512",
+]
+
 
 def get(url, tries=3):
     last = None
@@ -72,6 +90,16 @@ def main():
         except Exception as e:
             manifest["endpoints"][name] = {"url": url, "ok": False, "error": "%s: %s" % (type(e).__name__, e)}
             print("  ERR %-11s %s" % (name, e), file=sys.stderr)
+    # per-provider endpoint prices for the watchlist (fail-soft per slug)
+    eps = {}
+    for slug in ENDPOINT_MODELS:
+        try:
+            eps[slug] = get(BASE + "/api/v1/models/" + slug + "/endpoints").get("data", {})
+        except Exception as e:
+            manifest["endpoints"].setdefault("model_endpoints_errors", {})[slug] = str(e)
+    (outdir / "endpoints.json").write_text(json.dumps(eps), encoding="utf-8")
+    manifest["endpoints"]["model_endpoints"] = {"ok": True, "n": len(eps)}
+    print("  OK  %-11s %s models" % ("endpoints", len(eps)))
     (outdir / "_manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     # pointer to the newest good snapshot
     (OR / "latest.txt").write_text(today, encoding="utf-8")

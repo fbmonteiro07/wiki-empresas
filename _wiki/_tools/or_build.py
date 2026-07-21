@@ -273,6 +273,52 @@ def build():
     G["free_token_share"] = ("INFO", "%.1f%% of text tokens are $0 free-variant (padding the token base; use paid-token share to compare $)" % (wk_st["free_tok"] / plat_text_tok * 100 if plat_text_tok else 0))
     G["nontext_excluded"] = ("INFO", "%.2f%% of all tokens excluded as non-text (image/audio/embed)" % (wk_st["nontext_tok"] / wk_st["total_tok"] * 100 if wk_st["total_tok"] else 0))
 
+    # ---- neocloud / per-provider prices from the endpoints watchlist ----
+    # Who serves each model and at what price: maker's own API vs neoclouds
+    # (Together/Fireworks/DeepInfra/...) vs hyperscalers appearing as hosts.
+    MAKER_PROVIDER = {"deepseek": "DeepSeek", "z-ai": "Z.AI", "minimax": "Minimax",
+                      "moonshotai": "Moonshot AI", "mistralai": "Mistral",
+                      "anthropic": "Anthropic", "openai": "OpenAI"}
+    neoclouds = []
+    epf = snap / "endpoints.json"
+    if epf.is_file():
+        try:
+            epdata = json.loads(epf.read_text(encoding="utf-8"))
+        except ValueError:
+            epdata = {}
+        for slug, d in epdata.items():
+            eps = d.get("endpoints") or []
+            provs = []
+            for e in eps:
+                p = e.get("pricing") or {}
+                pin = f(p.get("prompt")) * 1e6
+                pout = f(p.get("completion")) * 1e6
+                if pin <= 0 and pout <= 0:
+                    continue
+                provs.append({"provider": e.get("provider_name") or "?", "in": pin, "out": pout,
+                              "quant": e.get("quantization") or "", "ctx": e.get("context_length")})
+            if not provs:
+                continue
+            provs.sort(key=lambda x: x["in"])
+            author = slug.split("/")[0]
+            maker_name = MAKER_PROVIDER.get(author)
+            maker = next((x for x in provs if x["provider"] == maker_name), None)
+            c = cat.get(slug) or cat.get(stripv(slug))
+            disp, capk, _ = lab_meta(author)
+            neoclouds.append({
+                "slug": slug, "name": (c["name"] if c else slug.split("/")[-1]), "lab": disp,
+                "klass": ("first-party" if capk == "first-party" else "open"),
+                "maker": maker, "cheapest": provs[0],
+                "together": next((x for x in provs if x["provider"] == "Together"), None),
+                "fireworks": next((x for x in provs if x["provider"] == "Fireworks"), None),
+                "deepinfra": next((x for x in provs if x["provider"] == "DeepInfra"), None),
+                "google": next((x for x in provs if x["provider"] == "Google"), None),
+                "bedrock": next((x for x in provs if x["provider"] == "Amazon Bedrock"), None),
+                "azure": next((x for x in provs if x["provider"] == "Azure"), None),
+                "n_providers": len(provs),
+                "spread_in": (provs[-1]["in"] / provs[0]["in"]) if provs[0]["in"] > 0 else None,
+            })
+
     # ---- new models vs previous snapshot (launch tracking) ----
     new_models = []
     raw_dirs = sorted((OR / "raw").glob("20*-*-*"))
@@ -294,7 +340,7 @@ def build():
 
     out = {
         "asof": asof, "generated": dt.datetime.now().isoformat(timespec="seconds"),
-        "new_models": new_models,
+        "new_models": new_models, "neoclouds": neoclouds,
         "platform": {
             "tokens_week": plat_text_tok, "tokens_month_run_rate": tokens_month, "daily_tokens": plat_text_tok / 7.0,
             "paid_tokens_week": wk_st["paid_tok"], "requests_week": wk_st["reqs"],

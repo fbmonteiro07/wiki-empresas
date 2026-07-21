@@ -316,6 +316,7 @@ models_table = "".join(mrows)
 CLOUDS = json.loads((OR / "cloud_prices.json").read_text(encoding="utf-8"))
 CONF_BADGE = {
     "official": ('<span class="conf off">official</span>', ""),
+    "observed": ('<span class="conf off">observed</span>', "seen live in OpenRouter's routing feed"),
     "list": ('<span class="conf lst">=list</span>', "resold at the model-maker's list price (mechanism)"),
     "native": ('<span class="conf off">native</span>', ""),
     "reported": ('<span class="conf rep">reported</span>', ""),
@@ -357,6 +358,56 @@ mech_table = "".join(
     '<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>' % (
         esc(r["venue"]), esc(r["batch"]), esc(r["cache_read"]), esc(r["long_context"]), esc(r["regional"]))
     for r in CLOUDS.get("mechanics", {}).get("rows", []))
+
+# ---------- NEOCLOUD MARKET (per-provider prices from the endpoints watchlist) ----------
+NEO = D.get("neoclouds") or []
+neo_open = [n for n in NEO if n["klass"] == "open"]
+neo_fp = [n for n in NEO if n["klass"] == "first-party"]
+
+
+def neo_cell(entry, maker):
+    if not entry:
+        return '<td class="r mut" data-v="-1">—</td>'
+    mult = ""
+    if maker and maker.get("in"):
+        m = entry["in"] / maker["in"]
+        if abs(m - 1) > 0.02:
+            mult = ' <span class="%s">%.1fx</span>' % ("neg" if m > 1 else "pos", m)
+        else:
+            mult = ' <span class="mut">=maker</span>'
+    return '<td class="r" data-v="%.4f" title="%s · ctx %s">$%.2f / $%.2f%s</td>' % (
+        entry["in"], esc(entry.get("quant") or ""), entry.get("ctx"), entry["in"], entry["out"], mult)
+
+
+neo_rows = []
+for n in sorted(neo_open, key=lambda x: -(x["n_providers"])):
+    maker = n.get("maker")
+    maker_txt = ('<td class="r" data-v="%.4f"><b>$%.2f / $%.2f</b></td>' % (maker["in"], maker["in"], maker["out"])) if maker else '<td class="r mut" data-v="-1">—</td>'
+    ch = n["cheapest"]
+    ch_txt = '<td class="r" data-v="%.4f">%s <b>$%.2f / $%.2f</b>%s</td>' % (
+        ch["in"], esc(ch["provider"]), ch["in"], ch["out"],
+        (' <span class="pos">%.1fx</span>' % (ch["in"] / maker["in"]) if maker and maker.get("in") and ch["in"] / maker["in"] < 0.98 else ""))
+    neo_rows.append('<tr><td>%s <span class="mut">· %s</span></td>%s%s%s%s%s%s<td class="r" data-v="%d">%d</td><td class="r" data-v="%.2f">%.1fx</td></tr>' % (
+        esc(n["name"]), esc(n["lab"]), maker_txt, ch_txt,
+        neo_cell(n.get("together"), maker), neo_cell(n.get("fireworks"), maker),
+        neo_cell(n.get("deepinfra"), maker), neo_cell(n.get("google"), maker),
+        n["n_providers"], n["n_providers"], n.get("spread_in") or 0, n.get("spread_in") or 0))
+neo_table = "".join(neo_rows)
+
+fp_proof = ""
+if neo_fp:
+    bits = []
+    for n in neo_fp:
+        venues = []
+        for k, label in (("maker", n["lab"].split(" (")[0]), ("bedrock", "Bedrock"), ("google", "Vertex"), ("azure", "Azure")):
+            e = n.get(k)
+            if e:
+                venues.append("%s $%.0f/$%.0f" % (label, e["in"], e["out"]))
+        if len(venues) >= 2:
+            bits.append("<b>%s</b>: %s" % (esc(n["name"]), esc(" = ".join(venues))))
+    if bits:
+        fp_proof = ('<div class="callout"><b>Observed, not inferred:</b> the routing feed shows the same first-party model at the SAME price on every venue — %s. '
+                    'The lab sets one list price; clouds are distribution. (Second entries at +10%% are regional tiers.)</div>' % " · ".join(bits))
 
 # ---------- APPS ----------
 amx = max(a["tokens_week"] for a in apps) or 1
@@ -504,7 +555,16 @@ BODY = (
     '<p class="sub" style="margin-bottom:8px">Cache-read ≈ <b>10% of input</b> and batch ≈ <b>50% off</b> at every venue — commoditized. The differentiation is <b>long-context surcharges</b> (Gemini Pro doubles input above 200K ctx — the lever that monetizes big-context agents) and regional premia.</p>'
     '<div class="scroll"><table><thead><tr><th>Venue</th><th>Batch</th><th>Cache-read</th><th>Long-context</th><th>Regional / other</th></tr></thead>'
     '<tbody>' + mech_table + '</tbody></table></div>'
-    '<p class="note">Cell flags: <span class="conf off">official</span> read from that venue\'s page · <span class="conf lst">=list</span> venue resells at the model-maker\'s list (documented mechanism) · <span class="conf rep">reported</span> page-scraped, not hand-verified · "offered · $?" = on the venue, price not yet captured; hover a cell for cache/batch/long-context detail. Hand-edit <code>_data/openrouter/cloud_prices.json</code>. Vertex publishes Gemini only (no partner Claude/Llama prices on the public page); Azure page fetch failed (=list shown).</p></div>'
+    '<p class="note">Cell flags: <span class="conf off">official</span> read from that venue\'s page · <span class="conf off">observed</span> seen in OpenRouter\'s live routing feed · <span class="conf lst">=list</span> venue resells at the model-maker\'s list (documented mechanism) · <span class="conf rep">reported</span> page-scraped, not hand-verified · "offered · $?" = on the venue, price not yet captured; hover a cell for cache/batch/long-context detail. Hand-edit <code>_data/openrouter/cloud_prices.json</code>.</p></div>'
+    '<h2>Same model, many sellers — the neocloud market</h2>'
+    '<p class="sub">Per-provider prices from OpenRouter\'s endpoints feed (observed, auto-refreshed weekly): the model-maker\'s own API vs Together, Fireworks, DeepInfra and the cheapest route. Multiples are vs the maker\'s own price; hover for quantization &amp; context.</p>'
+    + fp_proof +
+    '<div class="card scroll"><table class="sortable"><thead><tr><th>Model</th><th class="r">Maker\'s own API</th><th class="r">Cheapest route</th>'
+    '<th class="r">Together</th><th class="r">Fireworks</th><th class="r">DeepInfra</th><th class="r">Google (Model Garden)</th><th class="r"># sellers</th><th class="r">Spread (in)</th></tr></thead>'
+    '<tbody>' + neo_table + '</tbody></table>'
+    '<div class="callout" style="margin-top:12px"><b>Who subsidizes whom.</b> The neocloud-vs-maker relationship flips by lab: <b>DeepSeek\'s own API is the FLOOR</b> — Together/Fireworks charge up to ~4× DeepSeek\'s price for V4 Pro (its $0.44/$0.87 looks subsidized; no third party can serve it at that price). '
+    '<b>Z.ai and Moonshot are the opposite</b> — neoclouds undercut the maker\'s API by ~40% (GLM-5.2: StreamLake $0.82 vs Z.AI $1.40). <b>Together prices AT maker list</b> (GLM $1.40/$4.40, MiniMax $0.30/$1.20 — matches its own pricing page) — it competes on reliability/quality, not price. '
+    'And <b>Google shows up as a neocloud</b> (Model Garden) serving DeepSeek/Qwen/Llama at mid-pack prices. Wide spreads partly reflect quantization (fp4 vs fp8 vs int4) and context-length differences — hover the cells.</div></div>'
     '<h2>Methodology, guardrails &amp; scope</h2>'
     '<div class="card"><table><thead><tr><th>Check</th><th>Metric</th><th>Result</th></tr></thead><tbody>' + guard_html + '</tbody></table>'
     '<p class="note" style="margin-top:12px"><b>What OpenRouter\'s public feed does NOT expose:</b> tool-call counts, reasoning/cached tokens, and image/audio volume are all returned as 0; per-task ("Programming", "Roleplay") and "fastest-models" breakdowns are auth-gated. So those panels from openrouter.ai/rankings can\'t be reproduced from public data — omitted rather than faked.</p>'
