@@ -17,15 +17,25 @@ _Generated 2026-07-20 · the standing view of where our model and the curated re
 | GOOG | Revenue $bn | 2026 | 505.00 | 423.70 | +19% |
 | NVDA | Revenue $bn | 2027 | 661.00 | 565.80 | +17% |
 
-## Curated divergences — latest reconciliation (`reconciliation-2026-07-17.md`)
+## Curated divergences — latest reconciliation (`reconciliation-2026-07-20.md`)
 
 | Name | New datapoint | Read (the edge) |
 |---|---|---|
-| 1 | **TSMC FY27 capex** (Jefferies · Sherman Chang, 07-17) | **Jefferies +12% above BBG consensus.** Sits with the bull broker cluster; BBG is lagging the post-print capex reset. Bullish read-through → [[ASML]] / [[semicap-wfe]]. |
-| 2 | **TSMC FY28 capex** (Jefferies · Sherman Chang, 07-17) | **Jefferies +13% above BBG consensus.** Out-year capex divergence is the standing semicap alpha — sell-side marks running well ahead of the tape. |
-| 3 | **Google TPU units 2028** (Jefferies · Sherman Chang, 07-17) | New **2028** point, ~40-60% above the '27 unit marks → a steeper TPU ramp than the tracked '27 numbers imply. Mildly bullish [[AVGO]] / [[GOOG]] / [[custom-asic-tpu]]; single-broker, unverified vs a second source → watch. |
+| ASML | Bernstein OP €2,500 / ADR $2,859 (40x on €62.6 Q5-8 EPS) — *(Bernstein "WFE/AI-GW", 2026-07-20)* | **Sell-side internally split ~30%** on ASML — the gap is target multiple (40x vs 35x) × out-year EPS base. Watch which base the Street median sits on when BBG returns. |
+| GOOG | DB FY27 Cloud **~$190-195bn vs Street ~$142bn** (+35% above Street); FY27 capex $325bn (from ~$250bn) *(DB "Aiming for the Clouds", 2026-07-20)* | **House + DB both materially above Street on Cloud** — the standing GOOG edge. DB EPS $14.24 (GAAP) sits below house $16.20 (basis/segment mix — verify vs BBG). |
+| NVDA | Bernstein 27E EPS $12.52 (OP $315) *(2026-06-17)*; MS ~22x CY27 EPS $13.08 *(MS Memory, 2026-07-20)* | **House is well above consensus on NVDA out-year EPS** — genuine positive edge; size it against the BBG median when back. |
+| AVGO | MS values at 28x CY27e ModelWare $17.92 / ~26x non-GAAP $19.59 *(MS Memory, 2026-07-20)* | House above Street on AVGO out-year EPS too (AI-semi ramp $132bn'27). Positive edge; confirm basis vs BBG. |
+| TSM | JPM: 2026 rev guide **"40%+ and could end higher"**, capex $62bn midpoint *(JPM post-2Q, 2026-07-16)* | **House 2026 rev likely too conservative vs the 40%+ guide** — carry-over gap, now larger. House GM ~66% ≈ cons 2027 67.6% (fine). |
+| META | JPM 2027 capex **+42% to ~$200bn** *(JPM joint call, 2026-07-20)*; Citrini ~14GW/3yr | **House capex trails the new sell-side** — update risk to house FCF ($-23bn'27 would deepen). BofA PO $835 (24x) vs house EPS $38.24. |
+| AMZN | Redburn Neutral **$230** (AWS gross margin -520bp, Gen-AI book ~12%) *(R&Co Redburn, 2026-07-20)* | **First hard margin-compression short on the page** — directly contests the AWS-margin-inflection narrative (SemiAnalysis +213bp). The live debate. |
+| MSFT | Redburn Neutral $400, Gen-AI book ~13% (IC GM -680bp); JPM credit **DOWNGRADE to UW** (debt issuance imminent) *(both 2026-07-20)* | Margin-compression + funding-supply bear case vs the Azure-reaccel bull — two-sided into the 07-29 print. |
+| ORCL | Redburn **SELL, PT $155→$110** (database bet won't ramp; cloud-DB +29% vs 50%+ implied) *(2026-07-20)*; JPM credit **UPGRADE to OW** | **Equity SELL / credit OW split** — Street-low equity PT while credit turns constructive on rel-val. Sharpest divergence in the hyperscaler set. |
+| ARM | Bernstein OP **$500 (from $300)**, $223bn 2030 TAM *(2026-06-17)* | **Widest PT dispersion in coverage** ($130-500) — Bernstein's TAM-expansion bull vs the fund short. Pure alpha/opinion split. |
+| INTC | Octahedron (fund) FY-next EPS **$5-6.50**, path to $150 *(2026-07-15)* | **~3-4x EPS gap** between the fund's non-consensus earnings-power call and sell-side — the fund is underwriting a mis-modeled turnaround. Track against the print. |
+| SNDK | Bernstein OP **$3,000** vs MS OW **$1,750** SAME DAY *(2026-07-20)* | ~$1,250 PT dispersion = the NAND 2028-durability / cycle-normalization debate (Bernstein sees LTAs de-risking the cycle → higher through-cycle EPS). |
+| QCOM | Citrini FY29 non-handset guide **$22bn→$40bn** (HBC/AI200-300) *(2026-07-20)* | Newsletter DC-pivot bull vs sell-side skepticism — the datacenter-optionality debate on a mislabeled mobile name. |
 
-## Consensus PT vs spot — live pull in `reconciliation-2026-07-17.md` (upside ranked)
+## Consensus PT vs spot — live pull in `reconciliation-2026-07-20.md` (upside ranked)
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|

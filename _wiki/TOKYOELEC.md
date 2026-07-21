@@ -104,6 +104,24 @@ TEL sits in the middle of the WFE chain: it buys precision components and sub-sy
 - **BofA (Hirokawa) — Japan SPE preview** _(2026-04-16)_: BofA is **cautious on the front-end (Tokyo Electron) near-term** — its house view is that the March-2026 quarter is the memory-pricing peak (NAND ASP +~70% q/q in Mar-Q, decelerating to ~30% in Jun-Q), and historically TEL's share price peaks within ~3 quarters of the memory-price-momentum peak. (BofA prefers back-end/DISCO over front-end as a result.) The bull counter is TrendForce's call for another +70-75% q/q NAND-pricing quarter in Jun-Q, which would extend TEL's strength (BofA "Japan SPE preview", 2026-04-16).
 - **Jefferies (Wong) — Asia tech** _(2026-04-07)_: Tokyo Electron itself admits it is **conservative on WFE this year at +15%; "more like 20"**, and sees upside to China (had expected flat, now +10%, potentially more on CXMT/YMTC IPOs); ALD a tailwind as 16A/14A logic needs more single-layer ALD (Jefferies "Asia tech", 2026-04-07).
 
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q4 FY26 print → intra-quarter · Apr 30 → Jul 20, 2026 · sell-side / expert calls / reports since the 2026-04-30 print._
+
+**Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
+
+| Theme | Management said (Q4 FY26, 04-30) | Intra-quarter flow | Signal |
+|---|---|---|---|
+| **WFE / demand** | WFE CY26-27 $150-170bn, +20%+; leading-edge +30%+; H1 FY27 SPE +41% YoY | Bernstein/Rasgon (07-20): Outperform ¥59,200 — TEL gains share + expands margins on competitive pricing post-yen-depreciation | **✓ confirms** (constructive on share/margin) |
+| **Valuation** | — (n/a on the call) | Bernstein PT ¥59,200 vs spot ¥65,100 — trading ABOVE the PT | **⚠ nuance** (spot already above PT) |
+
+**Full log** (all intra-quarter flow, by date):
+
+| Date | Source | Theme | Bias | What was said |
+|---|---|---|---|---|
+| 07-20 | Bernstein · Stacy Rasgon ("WFE / AI GW note") | competicao | bull | **Outperform, PT ¥59,200** (px ¥65,100 — trading ABOVE the PT); EPS ¥1,250.88/1,504.14/1,848.77. TEL the **#4 SPE supplier globally / biggest Japanese SPE supplier**, expected to gain share + expand margins on competitive pricing after yen depreciation; spot already above the PT. First sell-side PT on the page. (Bernstein / Stacy Rasgon, 2026-07-20) |
+
+**Quarter synthesis:** the sole post-print sell-side mark is Bernstein/Rasgon's "WFE / AI GW note" (07-20) — **Outperform, PT ¥59,200** — endorsing TEL as the biggest Japanese SPE supplier set to gain share and expand margins on competitive pricing post-yen-depreciation, but with the stock (¥65,100) already trading ABOVE the PT the call is valuation-cautious. Consistent with the page's constructive WFE-complex read-through.
+
 ## Management commentary — evolution (last 2 quarters)
 
 | Theme | Q3 FY26 (2026-02-06) | Q4 / FY26 (2026-04-30) |
@@ -124,7 +142,11 @@ _Source: TOKYOELEC earnings calls (dates above); management commentary, paraphra
   - [Morgan Stanley — AI NAND overview](../relat%C3%B3rios%20bons/AI_Nand_overview_MS.html) (2025-09-10) — NAND-WFE intensity thesis (~18% flat-line through 2027), TEL among NAND-exposed Japanese SPE makers, CBA/wafer-bonding density lever, MS cautious on WFE vs Advantest/Disco.
   - [BofA — Japan SPE preview (Hirokawa, 2026-04-16)](../relat%C3%B3rios%20bons/2026_04_16_japan_spe_baml_16_apr_2026.html) — cautious on front-end/TEL near-term (Mar-Q memory peak → TEL share-price peak within ~3 quarters); prefers back-end/DISCO.
   - [Jefferies — Asia tech (2026-04-07)](../relat%C3%B3rios%20bons/2026_04_07_jef_asia_7_apr_2026.html) — TEL conservative on WFE +15% ("more like 20"); China flat → +10%; ALD tailwind at 16A/14A.
+  - [Bernstein (Stacy Rasgon) — "WFE / AI GW note" (2026-07-20)](../relat%C3%B3rios%20bons/Bernstein_on_WFE.html) — Outperform, PT ¥59,200 (px ¥65,100, above PT); EPS ¥1,250.88/1,504.14/1,848.77; TEL the #4 SPE supplier globally / biggest Japanese SPE, gaining share + expanding margins on competitive pricing post-yen-depreciation.
 - **Equity calls:** WFE read-throughs — `../../../equity_calls_transcripts/Semis/2026-05-15_Harlan_semicap-AMAT.md`, `2026-05-28` JPM memory-China call (TEL prober/FormFactor reference in `_consolidado/TODOS_Semis.md`).
 - **Briefings:** `E:\briefings\2026` — TEL datapoints in 2026-06-18 (memory rally +4.7%; President Kawai 3D-integration ¥300bn-by-2030, China ~30% and falling).
 - **Outlook:** not pulled — Python alias unavailable this session.
 - **Cross-theme:** [semicap-wfe](themes/semicap-wfe.md) · [hbm-memory](themes/hbm-memory.md).
+
+## Changelog
+- **2026-07-20** — Scaffolded the **`## Intra-quarter — calls, commentary & reports`** section (page previously lacked one): Signal-vs-management table + Full-log table + synthesis, plus this Changelog. Added **Bernstein/Stacy Rasgon "WFE / AI GW note" (2026-07-20)** — first sell-side PT on the page: **Outperform, PT ¥59,200** (px ¥65,100, trading ABOVE the PT); EPS ¥1,250.88/1,504.14/1,848.77; TEL the #4 SPE supplier globally / biggest Japanese SPE supplier, expected to gain share + expand margins on competitive pricing post-yen-depreciation. Added a Sources link. Additive — no figure superseded.
