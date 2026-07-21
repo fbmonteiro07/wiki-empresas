@@ -400,8 +400,15 @@ def build():
                     except (ValueError, KeyError):
                         pass
     tok_series[asof] = tokens_month / 1e12
+    blend_today = (tot_rev / plat_text_tok * 1e6) if plat_text_tok else 0.0  # $/Mtok, current model blend (list)
+    token_series_list = [{"date": d, "tokens_mo_T": tok_series[d]} for d in sorted(tok_series)]
     system_growth = {
-        "token_series": [{"date": d, "tokens_mo_T": tok_series[d]} for d in sorted(tok_series)],
+        "token_series": token_series_list,
+        # "total cost growth" = each period's tokens priced at TODAY's model blend (counterfactual;
+        # isolates the volume effect). Realized spend (spend_points) is the flat reference.
+        "blend_per_mtok": blend_today,
+        "cost_series": [{"date": p["date"], "cost_mo_musd": p["tokens_mo_T"] * blend_today,
+                         "cost_yr_busd": p["tokens_mo_T"] * blend_today * 12 / 1e3} for p in token_series_list],
         "spend_points": sg.get("spend_points", []),
         "run_rate_quad_yr": tokens_month * 12 / 1e15,
         "token_points_meta": sg.get("token_points", []),

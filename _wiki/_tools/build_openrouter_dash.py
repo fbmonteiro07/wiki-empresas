@@ -49,6 +49,47 @@ def esc(s):
     return (str(s) if s is not None else "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
+def linechart(pts, vk, color, ylab, pts2=None, color2=None, W=660, H=210):
+    """Small time-series line chart. pts/pts2 = [{date, <vk>}]; ylab = v->label."""
+    pts = sorted([p for p in pts if p.get(vk) is not None], key=lambda p: p["date"])
+    pts2 = sorted([q for q in (pts2 or []) if q.get(vk) is not None], key=lambda p: p["date"])
+    if not pts:
+        return ""
+    PL, PB, PT, PR = 56, 28, 14, 72
+    PW, PH = W - PL - PR, H - PT - PB
+    dates = sorted({p["date"] for p in pts} | {q["date"] for q in pts2})
+    xi = {d: i for i, d in enumerate(dates)}
+    n = max(len(dates) - 1, 1)
+    mx = (max([p[vk] for p in pts] + [q[vk] for q in pts2]) or 1) * 1.18
+
+    def X(d):
+        return PL + (xi[d] / n) * PW
+
+    def Y(v):
+        return PT + PH - (v / mx) * PH
+
+    s = ['<svg viewBox="0 0 %d %d" width="100%%" role="img" font-family="system-ui,-apple-system,Segoe UI,sans-serif">' % (W, H)]
+    for k in range(5):
+        v = mx * k / 4.0
+        y = Y(v)
+        s.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="var(--grid)" stroke-width="1"/>' % (PL, y, PL + PW, y))
+        s.append('<text x="%d" y="%.1f" fill="var(--muted)" font-size="10.5" text-anchor="end">%s</text>' % (PL - 6, y + 3, esc(ylab(v))))
+    for d in dates:
+        s.append('<text x="%.1f" y="%d" fill="var(--muted)" font-size="10.5" text-anchor="middle">%s</text>' % (X(d), H - 8, esc(d[:7])))
+    if len(pts) > 1:
+        s.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.5"/>' % (" ".join("%s%.1f %.1f" % ("M" if i == 0 else "L", X(p["date"]), Y(p[vk])) for i, p in enumerate(pts)), color))
+    for p in pts:
+        s.append('<circle cx="%.1f" cy="%.1f" r="4" fill="%s"><title>%s — %s</title></circle>' % (X(p["date"]), Y(p[vk]), color, esc(p["date"]), esc(ylab(p[vk]))))
+        s.append('<text x="%.1f" y="%.1f" fill="var(--ink)" font-size="10.5" text-anchor="middle">%s</text>' % (X(p["date"]), Y(p[vk]) - 9, esc(ylab(p[vk]))))
+    if pts2:
+        if len(pts2) > 1:
+            s.append('<path d="%s" fill="none" stroke="%s" stroke-width="2" stroke-dasharray="5 4"/>' % (" ".join("%s%.1f %.1f" % ("M" if i == 0 else "L", X(q["date"]), Y(q[vk])) for i, q in enumerate(pts2)), color2))
+        for q in pts2:
+            s.append('<circle cx="%.1f" cy="%.1f" r="3.5" fill="%s"><title>%s — %s (realized)</title></circle>' % (X(q["date"]), Y(q[vk]), color2, esc(q["date"]), esc(ylab(q[vk]))))
+    s.append('</svg>')
+    return "".join(s)
+
+
 plat = D["platform"]
 labs = D["labs"]
 models = D["models"]
@@ -430,39 +471,20 @@ may = next((p["tokens_mo_T"] for p in ts if p["date"] == "2026-05"), None)
 now_t = ts[-1]["tokens_mo_T"] if ts else plat["tokens_month_run_rate"] / 1e12
 if may:
     mult_may = now_t / may
+cost_pts = sysg.get("cost_series", [])
+realized_pts = [{"date": p["date"], "cost_mo_musd": p["spend_mo_musd"]} for p in spend_pts]
+blend_tok = sysg.get("blend_per_mtok", 0)
+cost_now = (cost_pts[-1]["cost_mo_musd"] if cost_pts else 0)
 gtiles = [
-    ("System run-rate", "%.0fT/mo" % now_t, "~%.1f quadrillion tokens/yr" % sysg.get("run_rate_quad_yr", 0)),
-    ("Growth", ("%.1f×" % mult_may) if mult_may else "n/a", "tokens/mo since May 2026"),
-    ("Realized spend", "$%.0fM/mo" % (spend_pts[-1]["spend_mo_musd"] if spend_pts else 0), "reported (~$0.9B/yr GMV) — ~flat since Mar"),
-    ("Price per token", "collapsing", "tokens ~%.1f× while $ ~flat ⇒ $/tok falling" % (mult_may or 0)),
+    ("Token run-rate", "%.0fT/mo" % now_t, "~%.1f quadrillion tokens/yr" % sysg.get("run_rate_quad_yr", 0)),
+    ("Token growth", ("%.1f×" % mult_may) if mult_may else "n/a", "since May 2026"),
+    ("Cost @ today's blend", "$%.0fM/mo" % cost_now, "$%.1fB/yr at $%.2f/Mtok blended" % (cost_now * 12 / 1e3, blend_tok)),
+    ("Realized spend", "$%.0fM/mo" % (spend_pts[-1]["spend_mo_musd"] if spend_pts else 0), "reported (~$0.9B/yr) — ~flat since Mar"),
+    ("Price / token", "collapsing", "vol ~%.1f×, $ ~flat ⇒ $/tok ↓" % (mult_may or 0)),
 ]
 gtiles_html = "".join('<div class="tile"><div class="tlabel">%s</div><div class="tval">%s</div><div class="tsub">%s</div></div>' % (esc(a), esc(b), esc(c)) for a, b, c in gtiles)
-GW, GH, GPL, GPB, GPT, GPR = 660, 210, 52, 30, 14, 66
-GPWi, GPHi = GW - GPL - GPR, GH - GPT - GPB
-gsvg = ""
-if len(ts) >= 2:
-    gmax = max(p["tokens_mo_T"] for p in ts) * 1.15
-    n = len(ts) - 1
-    def gx(i):
-        return GPL + (i / n) * GPWi
-    def gy(v):
-        return GPT + GPHi - (v / gmax) * GPHi
-    s = ['<svg viewBox="0 0 %d %d" width="100%%" role="img" aria-label="OpenRouter total tokens per month over time" font-family="system-ui,-apple-system,Segoe UI,sans-serif">' % (GW, GH)]
-    gstep = 100 if gmax <= 350 else 200
-    v = 0
-    while v <= gmax:
-        y = gy(v)
-        s.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="var(--grid)" stroke-width="1"/>' % (GPL, y, GPL + GPWi, y))
-        s.append('<text x="%d" y="%.1f" fill="var(--muted)" font-size="11" text-anchor="end">%dT</text>' % (GPL - 6, y + 3, v))
-        v += gstep
-    pathpts = " ".join("%s%.1f %.1f" % ("M" if k == 0 else "L", gx(k), gy(p["tokens_mo_T"])) for k, p in enumerate(ts))
-    s.append('<path d="%s" fill="none" stroke="var(--s1)" stroke-width="2.5"/>' % pathpts)
-    for k, p in enumerate(ts):
-        s.append('<circle cx="%.1f" cy="%.1f" r="4" fill="var(--s1)"><title>%s — %.0fT/mo</title></circle>' % (gx(k), gy(p["tokens_mo_T"]), esc(p["date"]), p["tokens_mo_T"]))
-        s.append('<text x="%.1f" y="%.1f" fill="var(--ink)" font-size="10.5" text-anchor="middle">%.0fT</text>' % (gx(k), gy(p["tokens_mo_T"]) - 9, p["tokens_mo_T"]))
-        s.append('<text x="%.1f" y="%d" fill="var(--muted)" font-size="10.5" text-anchor="middle">%s</text>' % (gx(k), GH - 8, esc(p["date"][:7])))
-    s.append('</svg>')
-    gsvg = "".join(s)
+gsvg = linechart(ts, "tokens_mo_T", "var(--s1)", lambda v: "%.0fT" % v)
+csvg = linechart(cost_pts, "cost_mo_musd", "var(--s4)", lambda v: "$%.0fM" % v, pts2=realized_pts, color2="var(--good)")
 
 # ---------- SHARE BY PRODUCT ----------
 pm = D.get("product_mix", {})
@@ -478,20 +500,26 @@ wl_html = "".join(
         esc(w["name"]), w["pct"] / wlmax * 100, pct(w["pct"], 0)) for w in wl)
 mod_txt = " · ".join("%s %s" % (esc(m["name"]), pct(m["pct"], 2 if m["pct"] < 0.01 else 1)) for m in pm.get("modality", []))
 
-# assemble the growth + product-mix + io-math section (pre-formatted; no % in the BODY concat)
-GROWTH_PRODUCT = (
-    '<h2>Total system growth</h2>'
-    '<p class="sub">OpenRouter\'s whole token pie, monthly run-rate. The line accumulates one point per weekly snapshot; May-2026 is a reported anchor (~8M users); the Mar ~8.4T figure is a different/earlier basis and is excluded.</p>'
-    '<div class="tiles">' + gtiles_html + '</div>'
-    '<div class="card">' + gsvg
-    + ('<p class="note" style="margin-top:8px"><b>The tell:</b> OpenRouter processed <b>~%.1f×</b> more tokens May→now while reported spend stayed ~flat ($83M Mar → $76M Jun) — so the <b>blended price per token is collapsing</b> as free tiers and cheap open models take the marginal token. Volume is exploding; realized revenue per token is not.</p></div>' % (mult_may or 0))
-    + '<h2>What the system runs — share by product</h2>'
+# assemble growth + product-mix + io-math (pre-formatted vars; no % in the BODY concat)
+GROWTH = (
+    '<h2 id="growth">System growth — total tokens &amp; cost</h2>'
+    + ('<p class="sub">OpenRouter\'s whole pie over time. <b>Left:</b> total tokens/mo (one point per weekly snapshot; May-2026 is a reported anchor ~8M users; Mar ~8.4T excluded as off-basis). <b>Right:</b> total cost/mo = those tokens priced at today\'s model blend ($%.2f/Mtok); the dashed green line is OpenRouter\'s reported <i>realized</i> spend.</p>' % blend_tok)
+    + '<div class="tiles">' + gtiles_html + '</div>'
+    + '<div class="grid2"><div class="card"><div class="tlabel" style="margin-bottom:6px">Total token growth</div>' + gsvg + '</div>'
+    + '<div class="card"><div class="tlabel" style="margin-bottom:6px">Total cost growth <span class="mut">(volume × today\'s blend)</span></div>' + csvg
+    + '<div class="legend"><span><span class="dot" style="background:var(--s4)"></span>implied $ at today\'s blend</span><span><span class="dot" style="background:var(--good)"></span>reported realized spend</span></div></div></div>'
+    + ('<p class="note"><b>The tell:</b> at today\'s blend the cost curve tracks volume (~%.1f× since May), but reported spend is ~flat ($83M Mar → $76M Jun) — so the <b>blended price per token is collapsing</b> as free tiers and cheap open models eat the marginal token. The "cost @ blend" line is a <i>ceiling</i> scenario (list price, no caching); realized sits ~⅓ of it.</p>' % (mult_may or 0)))
+
+PRODUCT = (
+    '<h2 id="product">What the system runs — share by product</h2>'
     '<p class="sub">Three cuts of the same token volume: by phase (input vs output), by workload, and by modality.</p>'
     '<div class="grid2"><div class="card"><div class="tlabel" style="margin-bottom:6px">By phase — input vs output tokens</div>' + io_bar
     + ('<p class="note" style="margin-top:8px">The system is <b>%.0f%% input tokens (%.1f:1)</b> — the fingerprint of coding/agentic traffic (huge context in, small answer out), and the single biggest driver of serving margin (see note below).</p></div>' % (io_in * 100, pm.get("ratio", 0)))
     + ('<div class="card"><div class="tlabel" style="margin-bottom:6px">By workload <span class="mut">(top-20 apps = %.0f%% of system tokens)</span></div>' % (pm.get("workload_coverage_pct", 0) * 100)) + wl_html
     + ('<p class="note" style="margin-top:8px">Modality: %s. Coding/agentic dominates the app-attributable volume; the rest is unlabeled long-tail.</p></div></div>' % mod_txt)
     + ('<div class="callout"><b>How the input/output math is decided.</b> The mix is <b>observed, not assumed</b>: every model row in OpenRouter\'s feed reports <code>total_prompt_tokens</code> and <code>total_completion_tokens</code>; the ratio is their quotient (platform %.1f:1; Anthropic 65:1, DeepSeek 20:1, Xiaomi 113:1). It drives margin through two asymmetries — <b>cost:</b> serving input (prefill: parallel, compute-bound) runs ~5× cheaper per token than output (decode: sequential, HBM-bandwidth-bound), per DeepSeek\'s own disclosure (73.7k vs 14.8k tok/s/node); <b>price:</b> providers list input at ~20-35%% of the output price. Input-heavy traffic therefore stacks cheap-to-serve tokens priced above cost → structurally fat blended margin. The serving-margin model blends at <b>each lab\'s own observed mix</b> — using a chat-like 3:1 where the traffic is really 20-65:1 understates margin by ~15-25 points.</div>' % pm.get("ratio", 0)))
+
+GROWTH_PRODUCT = GROWTH + PRODUCT
 
 # ---------- GUARDRAILS ----------
 gmap = {"PASS": "good", "WARN": "warn", "INFO": "info", "FAIL": "crit"}
@@ -514,6 +542,10 @@ CSS = r"""
 body{margin:0;background:var(--plane);color:var(--ink);font:15px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 header{background:var(--headbg);color:#fff;padding:20px 28px}
 header h1{margin:0;font-size:21px} header p{margin:5px 0 0;color:var(--headsub);font-size:13px} header a{color:var(--link);text-decoration:none}
+nav.tabs{position:sticky;top:0;z-index:30;background:var(--headbg);display:flex;gap:2px;flex-wrap:wrap;padding:8px 20px;border-bottom:1px solid rgba(255,255,255,.08)}
+nav.tabs a{color:var(--headsub);font-size:12px;font-weight:600;padding:6px 10px;border-radius:7px;text-decoration:none;white-space:nowrap}
+nav.tabs a:hover{color:#fff;background:rgba(255,255,255,.10)}
+h2{scroll-margin-top:52px}
 main{max-width:1080px;margin:0 auto;padding:22px 26px 90px}
 h2{font-size:17px;margin:34px 0 4px;border-bottom:1px solid var(--grid);padding-bottom:6px}
 .sub{color:var(--ink2);font-size:13px;margin:0 0 14px}
@@ -584,7 +616,8 @@ def scinsight():
 
 BODY = (
     '<header><h1>AI-Lab Traction Monitor <span style="font-weight:400;color:var(--headsub)">· built on OpenRouter public data</span></h1>'
-    '<p>Developer/API demand → implied inference spend by lab · as of <b>' + asof + '</b> · trailing 7-day window · <a href="../index.html">← wiki</a></p></header><main>'
+    '<p>Developer/API demand → implied inference spend by lab · as of <b>' + asof + '</b> · trailing 7-day window · <a href="../index.html">← wiki</a></p></header>'
+    '<nav class="tabs"><a href="#growth">System growth</a><a href="#value">Tokens ≠ $</a><a href="#labs">Lab leaderboard</a><a href="#cloud">Cross-cloud pricing</a><a href="#neo">Neocloud market</a><a href="#method">Method</a></nav><main>'
     '<div class="callout warn"><b>Read this first.</b> This reconstructs an "AI-lab ARR" view from OpenRouter\'s public usage feed. It captures <b>developer/API traction routed through OpenRouter</b> — a real, high-frequency leading indicator, but a <i>slice</i> that excludes first-party enterprise API and consumer subscriptions (ChatGPT/Claude/Gemini), the bulk of frontier-lab ARR. '
     'Dollars are <b>tokens × list price with caching OFF</b>, so they are a <b>ceiling ≈ 3× realized</b> spend. <b>Lead with relative rank and share, not the absolute $.</b></div>'
     '<div class="tiles">' + tiles_html + '</div>'
@@ -593,7 +626,7 @@ BODY = (
     '<p class="sub">Implied spend priced at list with no cache credit, then with 50%/70% of input re-priced at each model\'s cache-read rate, vs OpenRouter\'s reported <i>actual</i> monthly spend. The ceiling reconciles toward reality once caching &amp; provider discounts are applied.</p>'
     '<div class="card">' + ladder_html + '<p class="note" style="margin-top:10px">OpenRouter spend was ~<b>flat</b> Mar→Jun 2026 (~$83M→$76M/mo) even as tokens ~2.7×\'d — the marginal token is cheap/free — so the gap is <b>list-vs-realized</b>, not platform growth. '
     '<span class="mut">(Mar ~$83M is <b>derived</b>: Sacra\'s ~$50M annualized OR-revenue ÷ ~5% take ÷ 12 — estimate-on-estimate; Jun $76M is a reported snapshot.)</span></p></div>'
-    '<h2>Tokens ≠ dollars</h2>'
+    '<h2 id="value">Tokens ≠ dollars</h2>'
     '<p class="sub">Each lab by share of <b>paid</b> tokens (volume) vs share of implied dollars (value). Above the line = premium pricing; below = commodity volume. Bubble size = implied $/yr.</p>'
     '<div class="card">' + scatter_svg +
     '<div class="legend"><span><span class="dot" style="background:var(--s1)"></span>First-party API (OR $ ≈ lab)</span>'
@@ -604,7 +637,7 @@ BODY = (
     '<p class="sub">Tokens × list price, annualized from the trailing-7-day run-rate. Momentum = 7-day daily rate vs 30-day daily rate.</p>'
     '<div class="card">' + bars_html + '</div>'
     + trend_html +
-    '<h2>Lab leaderboard</h2><div class="card scroll"><table class="sortable"><thead><tr>'
+    '<h2 id="labs">Lab leaderboard</h2><div class="card scroll"><table class="sortable"><thead><tr>'
     '<th>Lab</th><th>Capture</th><th class="r">Paid tok %</th><th class="r">Req %</th><th class="r">$ share</th><th class="r">Implied $/yr</th>'
     '<th class="r">$/Mtok</th><th class="r">in:out</th><th class="r">Momentum</th><th class="r">Δ$shr WoW</th><th class="r">Reported ARR</th><th class="r">OR % of ARR</th></tr></thead>'
     '<tbody>' + lab_table + '</tbody></table>'
@@ -618,7 +651,7 @@ BODY = (
     '<h2>Top models by implied spend</h2><div class="card scroll"><table class="sortable"><thead><tr>'
     '<th>Model</th><th>Lab</th><th class="r">Tokens/day</th><th class="r">$/Mtok in</th><th class="r">$/Mtok out</th><th class="r">Implied $/yr</th><th class="r">$/Mtok blended</th><th class="r">in:out</th></tr></thead>'
     '<tbody>' + models_table + '</tbody></table></div>'
-    '<h2>Cross-cloud token pricing <span class="mut" style="font-size:13px;font-weight:400">(USD per 1M tokens, input / output, on-demand)</span></h2>'
+    '<h2 id="cloud">Cross-cloud token pricing <span class="mut" style="font-size:13px;font-weight:400">(USD per 1M tokens, input / output, on-demand)</span></h2>'
     '<p class="sub">The same model priced across venues: first-party list (= OpenRouter route) vs AWS Bedrock vs Google Vertex vs Azure. As of ' + esc(CLOUDS.get("asof", "")) + '.</p>'
     '<div class="card scroll"><table class="sortable"><thead><tr><th>Model</th><th class="r">List / OpenRouter</th><th class="r">AWS Bedrock</th><th class="r">GCP Vertex</th><th class="r">Azure</th></tr></thead>'
     '<tbody>' + cloud_table + '</tbody></table>'
@@ -631,7 +664,7 @@ BODY = (
     '<div class="scroll"><table><thead><tr><th>Venue</th><th>Batch</th><th>Cache-read</th><th>Long-context</th><th>Regional / other</th></tr></thead>'
     '<tbody>' + mech_table + '</tbody></table></div>'
     '<p class="note">Cell flags: <span class="conf off">official</span> read from that venue\'s page · <span class="conf off">observed</span> seen in OpenRouter\'s live routing feed · <span class="conf lst">=list</span> venue resells at the model-maker\'s list (documented mechanism) · <span class="conf rep">reported</span> page-scraped, not hand-verified · "offered · $?" = on the venue, price not yet captured; hover a cell for cache/batch/long-context detail. Hand-edit <code>_data/openrouter/cloud_prices.json</code>.</p></div>'
-    '<h2>Same model, many sellers — the neocloud market</h2>'
+    '<h2 id="neo">Same model, many sellers — the neocloud market</h2>'
     '<p class="sub">Per-provider prices from OpenRouter\'s endpoints feed (observed, auto-refreshed weekly): the model-maker\'s own API vs Together, Fireworks, DeepInfra and the cheapest route. Multiples are vs the maker\'s own price; hover for quantization &amp; context.</p>'
     + fp_proof +
     '<div class="card scroll"><table class="sortable"><thead><tr><th>Model</th><th class="r">Maker\'s own API</th><th class="r">Cheapest route</th>'
@@ -640,7 +673,7 @@ BODY = (
     '<div class="callout" style="margin-top:12px"><b>Who subsidizes whom.</b> The neocloud-vs-maker relationship flips by lab: <b>DeepSeek\'s own API is the FLOOR</b> — Together/Fireworks charge up to ~4× DeepSeek\'s price for V4 Pro (its $0.44/$0.87 looks subsidized; no third party can serve it at that price). '
     '<b>Z.ai and Moonshot are the opposite</b> — neoclouds undercut the maker\'s API by ~40% (GLM-5.2: StreamLake $0.82 vs Z.AI $1.40). <b>Together prices AT maker list</b> (GLM $1.40/$4.40, MiniMax $0.30/$1.20 — matches its own pricing page) — it competes on reliability/quality, not price. '
     'And <b>Google shows up as a neocloud</b> (Model Garden) serving DeepSeek/Qwen/Llama at mid-pack prices. Wide spreads partly reflect quantization (fp4 vs fp8 vs int4) and context-length differences — hover the cells.</div></div>'
-    '<h2>Methodology, guardrails &amp; scope</h2>'
+    '<h2 id="method">Methodology, guardrails &amp; scope</h2>'
     '<div class="card"><table><thead><tr><th>Check</th><th>Metric</th><th>Result</th></tr></thead><tbody>' + guard_html + '</tbody></table>'
     '<p class="note" style="margin-top:12px"><b>What OpenRouter\'s public feed does NOT expose:</b> tool-call counts, reasoning/cached tokens, and image/audio volume are all returned as 0; per-task ("Programming", "Roleplay") and "fastest-models" breakdowns are auth-gated. So those panels from openrouter.ai/rankings can\'t be reproduced from public data — omitted rather than faked.</p>'
     '<p class="note"><b>Method.</b> Implied $ = Σ (prompt×list-prompt + completion×list-completion) per model, caching off (the feed reports 0 cached), annualized from the trailing-7-day window; grouped by model author. Token counts &amp; prices are OpenRouter\'s own public JSON. Anchors: Menlo Ventures ("&gt;1 quadrillion tokens/yr"), Sacra (~$50M OR revenue @ ~5% take ⇒ ~$1B/yr spend), Jun-26 ~$76M/mo actual. ' + esc(orr.get("source", "")) + '</p>'
