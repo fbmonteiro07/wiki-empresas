@@ -17,4 +17,8 @@ __pycache__/
 *.pyc
 # full-corpus search index (binary, rebuilt by _tools/build_search_index.py)
 _wiki/_data/search.db
+# OpenRouter raw weekly snapshots (~5 MB/week; P: mirror keeps them; history.jsonl is the durable record)
+_wiki/_data/openrouter/raw/
+# artifact fragment (claude.ai republish duplicate of _dashboards/openrouter.html)
+_wiki/_data/openrouter/openrouter.artifact.html
 _wiki/%TEMP%/

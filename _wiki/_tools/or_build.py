@@ -225,10 +225,13 @@ def build():
     for d in wk_models.values():
         disp, cap, parent = lab_meta(d["author"])
         tok = d["tokens"]
+        pr = price_for(d["permaslug"]) or {}
         models_out.append({
             "permaslug": d["permaslug"], "name": d["name"], "lab": disp, "capture": cap,
             "tokens_week": tok, "daily_tokens": tok / 7.0, "requests_week": d["reqs"],
             "revenue_week": d["r0"], "revenue_annualized": ann(d["r0"]),
+            "price_in_mtok": pr.get("prompt", 0.0) * 1e6, "price_out_mtok": pr.get("completion", 0.0) * 1e6,
+            "cache_read_mtok": pr.get("cache_read", 0.0) * 1e6,
             "blended_price_per_mtok": (d["r0"] / tok * 1e6) if tok else 0.0,
             "input_ratio": (d["prompt"] / d["comp"]) if d["comp"] else None,
         })
@@ -270,8 +273,28 @@ def build():
     G["free_token_share"] = ("INFO", "%.1f%% of text tokens are $0 free-variant (padding the token base; use paid-token share to compare $)" % (wk_st["free_tok"] / plat_text_tok * 100 if plat_text_tok else 0))
     G["nontext_excluded"] = ("INFO", "%.2f%% of all tokens excluded as non-text (image/audio/embed)" % (wk_st["nontext_tok"] / wk_st["total_tok"] * 100 if wk_st["total_tok"] else 0))
 
+    # ---- new models vs previous snapshot (launch tracking) ----
+    new_models = []
+    raw_dirs = sorted((OR / "raw").glob("20*-*-*"))
+    if len(raw_dirs) >= 2:
+        try:
+            prev_wk = json.loads((raw_dirs[-2] / "rank_week.json").read_text(encoding="utf-8"))["data"]
+            prev_slugs = {r["model_permaslug"] for r in prev_wk}
+            cur = {}
+            for r in latest_rows(wk):
+                if r["model_permaslug"] not in prev_slugs:
+                    cur[r["model_permaslug"]] = cur.get(r["model_permaslug"], 0.0) + f(r.get("total_prompt_tokens")) + f(r.get("total_completion_tokens"))
+            for ps, tokv in sorted(cur.items(), key=lambda kv: -kv[1])[:10]:
+                c = cat.get(ps) or cat.get(stripv(ps))
+                disp, _, _ = lab_meta(c["author"] if c else ps.split("/")[0])
+                new_models.append({"permaslug": ps, "name": (c["name"] if c else ps.split("/")[-1]),
+                                   "lab": disp, "tokens_week": tokv, "since": raw_dirs[-2].name})
+        except Exception:
+            pass
+
     out = {
         "asof": asof, "generated": dt.datetime.now().isoformat(timespec="seconds"),
+        "new_models": new_models,
         "platform": {
             "tokens_week": plat_text_tok, "tokens_month_run_rate": tokens_month, "daily_tokens": plat_text_tok / 7.0,
             "paid_tokens_week": wk_st["paid_tok"], "requests_week": wk_st["reqs"],
@@ -286,11 +309,23 @@ def build():
     }
     (OR / "dashboard.json").write_text(json.dumps(out, indent=1), encoding="utf-8")
 
+    # history: one line per date (dedupe keep-last, so intraday re-runs don't pollute the trend)
     hist = {"date": asof, "tokens_week": plat_text_tok, "revenue_annualized": ann(tot_rev),
             "labs": {l["author"]: {"tok_wk": l["tokens_week"], "paid_wk": l["paid_tokens_week"],
                                    "rev_ann": l["revenue_annualized"]} for l in labs[:15]}}
-    with (OR / "history.jsonl").open("a", encoding="utf-8") as fh:
-        fh.write(json.dumps(hist) + "\n")
+    hp = OR / "history.jsonl"
+    by_date = {}
+    if hp.is_file():
+        for ln in hp.read_text(encoding="utf-8").splitlines():
+            ln = ln.strip()
+            if ln:
+                try:
+                    rec = json.loads(ln)
+                    by_date[rec.get("date")] = rec
+                except ValueError:
+                    pass
+    by_date[asof] = hist
+    hp.write_text("".join(json.dumps(by_date[d]) + "\n" for d in sorted(by_date)), encoding="utf-8")
 
     # console report
     print("=" * 78)
