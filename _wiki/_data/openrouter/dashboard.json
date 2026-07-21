@@ -1,6 +1,6 @@
 {
  "asof": "2026-07-21",
- "generated": "2026-07-21T14:56:16",
+ "generated": "2026-07-21T15:18:21",
  "new_models": [],
  "neoclouds": [
   {
@@ -503,6 +503,10 @@
  "system_growth": {
   "token_series": [
    {
+    "date": "2026-03",
+    "tokens_mo_T": 8.4
+   },
+   {
     "date": "2026-05",
     "tokens_mo_T": 100
    },
@@ -513,6 +517,11 @@
   ],
   "blend_per_mtok": 0.9326405828115764,
   "cost_series": [
+   {
+    "date": "2026-03",
+    "cost_mo_musd": 7.834180895617242,
+    "cost_yr_busd": 0.0940101707474069
+   },
    {
     "date": "2026-05",
     "cost_mo_musd": 93.26405828115763,
@@ -541,8 +550,9 @@
    {
     "date": "2026-03",
     "tokens_mo_T": 8.4,
-    "plot": false,
-    "src": "reported (~2.5M users) \u2014 earlier/different basis, chart-excluded"
+    "plot": true,
+    "flag": "basis break \u2014 press figure at ~2.5M users; methodology differs from later points",
+    "src": "reported (~2.5M users)"
    },
    {
     "date": "2026-05",

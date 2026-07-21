@@ -49,43 +49,99 @@ def esc(s):
     return (str(s) if s is not None else "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
-def linechart(pts, vk, color, ylab, pts2=None, color2=None, W=660, H=210):
-    """Small time-series line chart. pts/pts2 = [{date, <vk>}]; ylab = v->label."""
-    pts = sorted([p for p in pts if p.get(vk) is not None], key=lambda p: p["date"])
+import math as _m
+from datetime import date as _date
+
+_GRAD_N = [0]
+
+
+def _dnum(d):
+    p = (d + "-01-01")[:10].split("-")
+    return _date(int(p[0]), int(p[1]), int(p[2])).toordinal()
+
+
+def _smooth(P):
+    """Monotone-ish cubic path through points [(x,y),...]."""
+    if len(P) < 2:
+        return ""
+    d = ["M%.1f %.1f" % P[0]]
+    for i in range(len(P) - 1):
+        x0, y0 = P[i]; x1, y1 = P[i + 1]
+        dx = (x1 - x0) * 0.42
+        d.append("C%.1f %.1f %.1f %.1f %.1f %.1f" % (x0 + dx, y0, x1 - dx, y1, x1, y1))
+    return " ".join(d)
+
+
+def linechart(pts, vk, color, ylab, pts2=None, color2=None, W=1010, H=280, log=False, area=True, flags=None):
+    """Polished time-series chart: real time axis, smooth curve, gradient area,
+    monthly ticks, optional log scale, flagged basis-break points (hollow)."""
+    pts = sorted([p for p in pts if p.get(vk)], key=lambda p: p["date"])
     pts2 = sorted([q for q in (pts2 or []) if q.get(vk) is not None], key=lambda p: p["date"])
     if not pts:
         return ""
-    PL, PB, PT, PR = 56, 28, 14, 72
+    flags = flags or {}
+    PL, PB, PT, PR = 58, 30, 16, 24
     PW, PH = W - PL - PR, H - PT - PB
-    dates = sorted({p["date"] for p in pts} | {q["date"] for q in pts2})
-    xi = {d: i for i, d in enumerate(dates)}
-    n = max(len(dates) - 1, 1)
-    mx = (max([p[vk] for p in pts] + [q[vk] for q in pts2]) or 1) * 1.18
-
-    def X(d):
-        return PL + (xi[d] / n) * PW
-
-    def Y(v):
-        return PT + PH - (v / mx) * PH
-
+    alld = [p["date"] for p in pts] + [q["date"] for q in pts2]
+    x0, x1 = _dnum(min(alld)), _dnum(max(alld))
+    span = max(x1 - x0, 1)
+    x0 -= span * 0.03; x1 += span * 0.03
+    vals = [p[vk] for p in pts] + [q[vk] for q in pts2]
+    if log:
+        lo = min(vals) / 1.6; hi = max(vals) * 1.6
+        L0, L1 = _m.log10(lo), _m.log10(hi)
+        Y = lambda v: PT + PH - (_m.log10(max(v, 1e-9)) - L0) / (L1 - L0) * PH
+    else:
+        hi = max(vals) * 1.18
+        Y = lambda v: PT + PH - (v / hi) * PH
+    X = lambda d: PL + (_dnum(d) - x0) / (x1 - x0) * PW
+    _GRAD_N[0] += 1
+    gid = "g%d" % _GRAD_N[0]
     s = ['<svg viewBox="0 0 %d %d" width="100%%" role="img" font-family="system-ui,-apple-system,Segoe UI,sans-serif">' % (W, H)]
-    for k in range(5):
-        v = mx * k / 4.0
-        y = Y(v)
-        s.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="var(--grid)" stroke-width="1"/>' % (PL, y, PL + PW, y))
-        s.append('<text x="%d" y="%.1f" fill="var(--muted)" font-size="10.5" text-anchor="end">%s</text>' % (PL - 6, y + 3, esc(ylab(v))))
-    for d in dates:
-        s.append('<text x="%.1f" y="%d" fill="var(--muted)" font-size="10.5" text-anchor="middle">%s</text>' % (X(d), H - 8, esc(d[:7])))
-    if len(pts) > 1:
-        s.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.5"/>' % (" ".join("%s%.1f %.1f" % ("M" if i == 0 else "L", X(p["date"]), Y(p[vk])) for i, p in enumerate(pts)), color))
-    for p in pts:
-        s.append('<circle cx="%.1f" cy="%.1f" r="4" fill="%s"><title>%s — %s</title></circle>' % (X(p["date"]), Y(p[vk]), color, esc(p["date"]), esc(ylab(p[vk]))))
-        s.append('<text x="%.1f" y="%.1f" fill="var(--ink)" font-size="10.5" text-anchor="middle">%s</text>' % (X(p["date"]), Y(p[vk]) - 9, esc(ylab(p[vk]))))
+    s.append('<defs><linearGradient id="%s" x1="0" y1="0" x2="0" y2="1">'
+             '<stop offset="0" stop-color="%s" stop-opacity=".28"/><stop offset="1" stop-color="%s" stop-opacity="0"/></linearGradient></defs>' % (gid, color, color))
+    # y grid
+    if log:
+        v = 10 ** _m.floor(_m.log10(min(vals) / 1.6))
+        gv = []
+        while v <= hi:
+            gv.append(v); v *= 10
+    else:
+        gv = [hi * k / 4 for k in range(5)]
+    for v in gv:
+        y = Y(v) if v > 0 or log else PT + PH
+        if PT - 2 <= y <= PT + PH + 2:
+            s.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="var(--grid)" stroke-width="1"/>' % (PL, y, PL + PW, y))
+            s.append('<text x="%d" y="%.1f" fill="var(--muted)" font-size="10.5" text-anchor="end">%s</text>' % (PL - 7, y + 3, esc(ylab(v))))
+    # monthly x ticks
+    yy, mm = int(min(alld)[:4]), int(min(alld)[5:7])
+    while (yy, mm) <= (int(max(alld)[:4]), int(max(alld)[5:7])):
+        d = "%04d-%02d" % (yy, mm)
+        xx = X(d)
+        if PL - 2 <= xx <= PL + PW + 2:
+            s.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="var(--grid)" stroke-width="1" opacity=".6"/>' % (xx, PT, xx, PT + PH))
+            s.append('<text x="%.1f" y="%d" fill="var(--muted)" font-size="10.5" text-anchor="middle">%s/%02d</text>' % (xx, H - 9, ("jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec")[mm-1], yy % 100))
+        mm += 1
+        if mm > 12:
+            mm = 1; yy += 1
+    P = [(X(p["date"]), Y(p[vk])) for p in pts]
+    if area and len(P) > 1:
+        s.append('<path d="%s L%.1f %.1f L%.1f %.1f Z" fill="url(#%s)" stroke="none"/>' % (_smooth(P), P[-1][0], PT + PH, P[0][0], PT + PH, gid))
+    if len(P) > 1:
+        s.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.5" stroke-linecap="round"/>' % (_smooth(P), color))
+    for p, (xx, yv) in zip(pts, P):
+        fl = flags.get(p["date"])
+        if fl:
+            s.append('<circle cx="%.1f" cy="%.1f" r="4.5" fill="var(--surf)" stroke="%s" stroke-width="2" stroke-dasharray="2 2"><title>%s — %s\n⚠ %s</title></circle>' % (xx, yv, color, esc(p["date"]), esc(ylab(p[vk])), esc(fl)))
+        else:
+            s.append('<circle cx="%.1f" cy="%.1f" r="4" fill="%s" stroke="var(--surf)" stroke-width="1.5"><title>%s — %s</title></circle>' % (xx, yv, color, esc(p["date"]), esc(ylab(p[vk]))))
+        s.append('<text x="%.1f" y="%.1f" fill="var(--ink)" font-size="10.5" font-weight="600" text-anchor="middle">%s</text>' % (xx, yv - 10, esc(ylab(p[vk]))))
     if pts2:
-        if len(pts2) > 1:
-            s.append('<path d="%s" fill="none" stroke="%s" stroke-width="2" stroke-dasharray="5 4"/>' % (" ".join("%s%.1f %.1f" % ("M" if i == 0 else "L", X(q["date"]), Y(q[vk])) for i, q in enumerate(pts2)), color2))
-        for q in pts2:
-            s.append('<circle cx="%.1f" cy="%.1f" r="3.5" fill="%s"><title>%s — %s (realized)</title></circle>' % (X(q["date"]), Y(q[vk]), color2, esc(q["date"]), esc(ylab(q[vk]))))
+        P2 = [(X(q["date"]), Y(q[vk])) for q in pts2]
+        if len(P2) > 1:
+            s.append('<path d="%s" fill="none" stroke="%s" stroke-width="2" stroke-dasharray="5 4"/>' % (_smooth(P2), color2))
+        for q, (xx, yv) in zip(pts2, P2):
+            s.append('<circle cx="%.1f" cy="%.1f" r="3.5" fill="%s"><title>%s — %s (realized)</title></circle>' % (xx, yv, color2, esc(q["date"]), esc(ylab(q[vk]))))
     s.append('</svg>')
     return "".join(s)
 
@@ -483,7 +539,8 @@ gtiles = [
     ("Price / token", "collapsing", "vol ~%.1f×, $ ~flat ⇒ $/tok ↓" % (mult_may or 0)),
 ]
 gtiles_html = "".join('<div class="tile"><div class="tlabel">%s</div><div class="tval">%s</div><div class="tsub">%s</div></div>' % (esc(a), esc(b), esc(c)) for a, b, c in gtiles)
-gsvg = linechart(ts, "tokens_mo_T", "var(--s1)", lambda v: "%.0fT" % v)
+tok_flags = {p["date"]: p["flag"] for p in sysg.get("token_points_meta", []) if p.get("flag")}
+gsvg = linechart(ts, "tokens_mo_T", "var(--s1)", lambda v: ("%.0fT" % v) if v >= 10 else ("%.1fT" % v), log=True, flags=tok_flags)
 csvg = linechart(cost_pts, "cost_mo_musd", "var(--s4)", lambda v: "$%.0fM" % v, pts2=realized_pts, color2="var(--good)")
 
 # ---------- SHARE BY PRODUCT ----------
@@ -505,9 +562,9 @@ GROWTH = (
     '<h2 id="growth">System growth — total tokens &amp; cost</h2>'
     + ('<p class="sub">OpenRouter\'s whole pie over time. <b>Left:</b> total tokens/mo (one point per weekly snapshot; May-2026 is a reported anchor ~8M users; Mar ~8.4T excluded as off-basis). <b>Right:</b> total cost/mo = those tokens priced at today\'s model blend ($%.2f/Mtok); the dashed green line is OpenRouter\'s reported <i>realized</i> spend.</p>' % blend_tok)
     + '<div class="tiles">' + gtiles_html + '</div>'
-    + '<div class="grid2"><div class="card"><div class="tlabel" style="margin-bottom:6px">Total token growth</div>' + gsvg + '</div>'
+    + '<div class="card"><div class="tlabel" style="margin-bottom:6px">Total token growth <span class="mut">(log scale · hollow dashed point = basis break, hover it)</span></div>' + gsvg + '</div>'
     + '<div class="card"><div class="tlabel" style="margin-bottom:6px">Total cost growth <span class="mut">(volume × today\'s blend)</span></div>' + csvg
-    + '<div class="legend"><span><span class="dot" style="background:var(--s4)"></span>implied $ at today\'s blend</span><span><span class="dot" style="background:var(--good)"></span>reported realized spend</span></div></div></div>'
+    + '<div class="legend"><span><span class="dot" style="background:var(--s4)"></span>implied $ at today\'s blend</span><span><span class="dot" style="background:var(--good)"></span>reported realized spend</span></div></div>'
     + ('<p class="note"><b>The tell:</b> at today\'s blend the cost curve tracks volume (~%.1f× since May), but reported spend is ~flat ($83M Mar → $76M Jun) — so the <b>blended price per token is collapsing</b> as free tiers and cheap open models eat the marginal token. The "cost @ blend" line is a <i>ceiling</i> scenario (list price, no caching); realized sits ~⅓ of it.</p>' % (mult_may or 0)))
 
 PRODUCT = (
