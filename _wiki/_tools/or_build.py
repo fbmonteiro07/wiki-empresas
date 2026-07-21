@@ -118,12 +118,38 @@ def build():
             if k:
                 cat.setdefault(k, rec)
 
+    cat_ci = {str(k).lower(): v for k, v in cat.items()}
+    cat_tail = {}
+    for k, v in cat_ci.items():
+        tail = k.rsplit("/", 1)[-1]
+        if tail not in cat_tail:
+            cat_tail[tail] = v
+        elif cat_tail[tail] != v:
+            cat_tail[tail] = None  # ambiguous basename: never guess
+
+    def cat_for(ps):
+        key = str(ps).lower()
+        stripped = stripv(ps).lower()
+        return (
+            cat.get(ps) or cat.get(stripv(ps))
+            or cat_ci.get(key) or cat_ci.get(stripped)
+            or cat_tail.get(key.rsplit("/", 1)[-1])
+            or cat_tail.get(stripped.rsplit("/", 1)[-1])
+        )
+
     def price_for(ps):
         return price.get(ps) or price.get(stripv(ps))
 
     def latest_rows(rows):
         last = max(r["date"] for r in rows)
         return [r for r in rows if r["date"] == last]
+
+    def catalog_misses(rows):
+        """Every unmatched model/variant is surfaced by the platform guardrail."""
+        return sorted({
+            "%s|%s" % (r["model_permaslug"], r.get("variant", "standard"))
+            for r in rows if cat_for(r["model_permaslug"]) is None
+        })
 
     def rev_at(prompt, comp, pr, cache_frac):
         """$ at list, with cache_frac of INPUT priced at the model's cache-read rate."""
@@ -133,7 +159,7 @@ def build():
         in_price = (1 - cache_frac) * pr["prompt"] + cache_frac * cr
         return prompt * in_price + comp * pr["completion"]
 
-    def digest(rows):
+    def digest(rows, normalized_catalog=False):
         by_model = {}
         st = defaultdict(float)
         for r in rows:
@@ -171,8 +197,12 @@ def build():
                 d["paid_tokens"] += tok
         return by_model, st
 
-    wk_models, wk_st = digest(latest_rows(wk))
+    # Lab/model tables use a matched latest-date cohort; platform totals use
+    # every observed row in each OpenRouter window.
+    wk_models, _ = digest(latest_rows(wk))
     mo_models, _ = digest(latest_rows(mo))
+    _, wk_st = digest(wk, normalized_catalog=True)
+    _, mo_st = digest(mo, normalized_catalog=True)
 
     def agg_lab(md):
         a = defaultdict(lambda: defaultdict(float))
@@ -250,6 +280,16 @@ def build():
     # text tokens = everything minus non-text; free rows already sit inside priced_tok,
     # so derive the total from (all - nontext) to avoid double-counting the free subset.
     plat_text_tok = wk_st["total_tok"] - wk_st["nontext_tok"]
+    plat_text_tok_7d_all = plat_text_tok
+    plat_text_tok_30d = mo_st["total_tok"] - mo_st["nontext_tok"]
+    wk_cutoff = max((r["date"] for r in wk), default="")
+    mo_cutoff = max((r["date"] for r in mo), default="")
+    wk_unmatched = catalog_misses(wk)
+    mo_unmatched = catalog_misses(mo)
+    token_momentum_weekly = (
+        (plat_text_tok_7d_all / 7.0) / (plat_text_tok_30d / 30.0) - 1.0
+        if plat_text_tok_30d > 0 else None
+    )
     tokens_month = plat_text_tok / 7.0 * 30.0
     rev_month = tot_rev / 7.0 * 30.0
     rev_month_c50 = sum(v["r50"] for v in wk_lab.values()) / 7.0 * 30.0
@@ -267,6 +307,19 @@ def build():
     G = {}
     G["priced_token_coverage"] = ("PASS" if coverage >= 0.90 else "WARN", "%.2f%% of text tokens priced" % (coverage * 100))
     G["platform_tokens_vs_anchor"] = ("INFO", "computed ~%.0fT tok/mo vs OR-reported ~%sT/mo (%s); tokens ~2.7x since => on-trend" % (tokens_month / 1e12, orr.get("reported_tokens_per_month_T"), orr.get("tokens_asof")))
+    weekly_basis_ok = (
+        plat_text_tok_7d_all > 0
+        and plat_text_tok_30d >= plat_text_tok_7d_all
+        and wk_cutoff == mo_cutoff
+        and not wk_unmatched
+        and not mo_unmatched
+    )
+    momentum_text = ("%+.1f%%" % (token_momentum_weekly * 100)) if token_momentum_weekly is not None else "n/a"
+    G["weekly_token_momentum_basis"] = (
+        "PASS" if weekly_basis_ok else "WARN",
+        "OpenRouter all-row observed 7d %.1fT vs 30d %.1fT text tokens (same cutoff %s; unmatched catalog rows 7d=%d, 30d=%d); 7d-vs-30d momentum = (7d/7) / (30d/30) - 1 = %s. Overlapping windows, not strict WoW."
+        % (plat_text_tok_7d_all / 1e12, plat_text_tok_30d / 1e12, wk_cutoff or "n/a", len(wk_unmatched), len(mo_unmatched), momentum_text)
+    )
     G["implied_$_is_a_CEILING"] = ("WARN", "list & cache-OFF: $%.0fM/mo vs OR actual ~$%sM/mo (%s) = %.1fx. OR spend was ~FLAT Mar~$%.0fM->Jun$%sM, so the gap is list-vs-realized (caching-off + provider discounting), NOT growth." % (spendM, spend_jun, orr.get("spend_asof"), ratio or 0, (spend_mar or 0), spend_jun))
     G["cache_sensitivity"] = ("INFO", "if 50/70%% of input were cache-reads: $%.0fM/$%.0fM per mo (vs $%.0fM at cache-off)" % (rev_month_c50 / 1e6, rev_month_c70 / 1e6, spendM))
     G["input_heaviness"] = ("INFO", "platform prompt:completion = %.1f:1 (%.0f%% input tokens) => $ is an INPUT-price construct" % (input_ratio, wk_st["prompt_tok"] / plat_text_tok * 100 if plat_text_tok else 0))
@@ -420,6 +473,7 @@ def build():
         "product_mix": product_mix, "system_growth": system_growth,
         "platform": {
             "tokens_week": plat_text_tok, "tokens_month_run_rate": tokens_month, "daily_tokens": plat_text_tok / 7.0,
+            "tokens_7d_observed": plat_text_tok_7d_all, "tokens_30d_observed": plat_text_tok_30d, "token_momentum_weekly": token_momentum_weekly,
             "paid_tokens_week": wk_st["paid_tok"], "requests_week": wk_st["reqs"],
             "revenue_week": tot_rev, "revenue_month_run_rate": rev_month, "revenue_annualized": ann(tot_rev),
             "revenue_month_cache50": rev_month_c50, "revenue_month_cache70": rev_month_c70,
@@ -433,7 +487,7 @@ def build():
     (OR / "dashboard.json").write_text(json.dumps(out, indent=1), encoding="utf-8")
 
     # history: one line per date (dedupe keep-last, so intraday re-runs don't pollute the trend)
-    hist = {"date": asof, "tokens_week": plat_text_tok, "revenue_annualized": ann(tot_rev),
+    hist = {"date": asof, "tokens_week": plat_text_tok, "token_momentum_weekly": token_momentum_weekly, "revenue_annualized": ann(tot_rev),
             "labs": {l["author"]: {"tok_wk": l["tokens_week"], "paid_wk": l["paid_tokens_week"],
                                    "rev_ann": l["revenue_annualized"]} for l in labs[:15]}}
     hp = OR / "history.jsonl"

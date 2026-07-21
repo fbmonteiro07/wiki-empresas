@@ -147,6 +147,11 @@ def linechart(pts, vk, color, ylab, pts2=None, color2=None, W=1010, H=280, log=F
 
 
 plat = D["platform"]
+token_mom = plat.get("token_momentum_weekly")
+if token_mom is None:
+    token_mom_label = "n/a"
+else:
+    token_mom_label = (chr(9650) if token_mom >= 0 else chr(9660)) + (" %+.0f%%" % (token_mom * 100))
 labs = D["labs"]
 models = D["models"]
 apps = D["apps"]
@@ -196,9 +201,32 @@ tiles = [
     ("Implied $ / yr", dol(plat["revenue_annualized"]), "at LIST price, caching OFF — a ceiling (~3× realized)"),
     ("Input intensity", "%.1f:1" % plat["input_ratio"], "prompt : completion · ~97% of tokens are input"),
     ("#1 by implied $", esc(top_lab["display"]), "%s/yr · %s of $ vs %s of paid tokens" % (dol(top_lab["revenue_annualized"]), pct(top_lab["rev_share"], 0), pct(top_lab["paid_token_share"], 0))),
+    ("7d vs 30d token momentum", token_mom_label, "all observed text models · overlapping windows"),
     ("#1 app", esc(top_app.get("title", "-")), "%s tokens/wk · coding agents lead" % tok(top_app.get("tokens_week", 0))),
 ]
 tiles_html = "".join('<div class="tile"><div class="tlabel">%s</div><div class="tval">%s</div><div class="tsub">%s</div></div>' % (esc(a), esc(b), esc(c)) for a, b, c in tiles)
+
+# ---------- EXECUTIVE READ ----------
+# A compact decision layer for the first viewport. Every number below already
+# exists in dashboard.json; this is presentation only, not a second model.
+volume_lab = max(labs, key=lambda l: l.get("paid_token_share", 0))
+reported_monthly = (orr.get("reported_monthly_spend_musd") or 0) * 1e6
+insights = [
+    ("Value leader", top_lab["display"],
+     "%s of implied dollars on %s of paid tokens" %
+     (pct(top_lab["rev_share"], 0), pct(top_lab["paid_token_share"], 0)), "accent-blue"),
+    ("Volume / value gap", volume_lab["display"],
+     "%s of paid tokens, but %s of implied dollars" %
+     (pct(volume_lab["paid_token_share"], 0), pct(volume_lab["rev_share"], 0)), "accent-pink"),
+    ("Reality check", dol(reported_monthly) + "/mo realized",
+     "vs %s/mo at list price with caching off" % dol(plat["revenue_month_run_rate"]), "accent-amber"),
+]
+insights_html = "".join(
+    '<article class="insight %s"><div class="insight-kicker">%s</div>'
+    '<div class="insight-value">%s</div><p>%s</p>'
+    '<div class="insight-source">OpenRouter public data &middot; %s &middot; trailing 7d</div></article>' %
+    (cls, esc(kicker), esc(value), esc(body), esc(D["asof"]))
+    for kicker, value, body, cls in insights)
 
 # ---------- CACHE-SENSITIVITY LADDER ----------
 ladder = [
@@ -534,6 +562,7 @@ cost_now = (cost_pts[-1]["cost_mo_musd"] if cost_pts else 0)
 gtiles = [
     ("Token run-rate", "%.0fT/mo" % now_t, "~%.1f quadrillion tokens/yr" % sysg.get("run_rate_quad_yr", 0)),
     ("Token growth", ("%.1f×" % mult_may) if mult_may else "n/a", "since May 2026"),
+    ("7d vs 30d token momentum", token_mom_label, "all observed text models · not strict WoW"),
     ("Cost @ today's blend", "$%.0fM/mo" % cost_now, "$%.1fB/yr at $%.2f/Mtok blended" % (cost_now * 12 / 1e3, blend_tok)),
     ("Realized spend", "$%.0fM/mo" % (spend_pts[-1]["spend_mo_musd"] if spend_pts else 0), "reported (~$0.9B/yr) — ~flat since Mar"),
     ("Price / token", "collapsing", "vol ~%.1f×, $ ~flat ⇒ $/tok ↓" % (mult_may or 0)),
@@ -561,7 +590,7 @@ mod_txt = " · ".join("%s %s" % (esc(m["name"]), pct(m["pct"], 2 if m["pct"] < 0
 GROWTH = (
     '<h2 id="growth">System growth — total tokens &amp; cost</h2>'
     + ('<p class="sub">OpenRouter\'s whole pie over time. <b>Left:</b> total tokens/mo (one point per weekly snapshot; May-2026 is a reported anchor ~8M users; Mar ~8.4T excluded as off-basis). <b>Right:</b> total cost/mo = those tokens priced at today\'s model blend ($%.2f/Mtok); the dashed green line is OpenRouter\'s reported <i>realized</i> spend.</p>' % blend_tok)
-    + '<div class="tiles">' + gtiles_html + '</div>'
+    + '<div class="tiles growth-tiles">' + gtiles_html + '</div>'
     + '<div class="card"><div class="tlabel" style="margin-bottom:6px">Total token growth <span class="mut">(log scale · hollow dashed point = basis break, hover it)</span></div>' + gsvg + '</div>'
     + '<div class="card"><div class="tlabel" style="margin-bottom:6px">Total cost growth <span class="mut">(volume × today\'s blend)</span></div>' + csvg
     + '<div class="legend"><span><span class="dot" style="background:var(--s4)"></span>implied $ at today\'s blend</span><span><span class="dot" style="background:var(--good)"></span>reported realized spend</span></div></div>'
@@ -646,6 +675,85 @@ tr:hover td{background:rgba(127,127,127,.06)}
 .pillk.fp{background:rgba(42,120,214,.14);color:var(--s1)}.pillk.ow{background:rgba(0,131,0,.13);color:var(--s2)}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 @media(max-width:820px){.grid2{grid-template-columns:1fr}.barrow{grid-template-columns:140px 1fr 74px}.barmom{display:none}.barrow2{grid-template-columns:150px 1fr 120px}}
+
+/* Research cockpit refresh */
+:root{--plane:#f3f5f8;--surf:#fff;--surf2:#f8fafc;--ink:#101828;--ink2:#475467;--muted:#667085;
+--grid:#e4e7ec;--base:#d0d5dd;--border:rgba(16,24,40,.10);--s1:#6157e5;--s2:#039855;--s3:#e14d72;
+--s4:#dc6803;--s5:#079455;--good:#039855;--crit:#d92d20;--warn:#dc6803;--headbg:#0b1220;
+--headsub:#a7b2c5;--link:#c7d7fe;--shadow:0 1px 2px rgba(16,24,40,.04),0 8px 24px rgba(16,24,40,.05)}
+@media(prefers-color-scheme:dark){:root:where(:not([data-theme=light])){--plane:#080d17;--surf:#111827;--surf2:#0d1524;
+--ink:#f5f7fa;--ink2:#cbd5e1;--muted:#94a3b8;--grid:#263244;--base:#344054;--border:rgba(255,255,255,.10);
+--s1:#8b83ff;--s2:#32d583;--s3:#f970a0;--s4:#fdb022;--s5:#32d583;--good:#32d583;--crit:#f97066;
+--warn:#fdb022;--headbg:#050914;--headsub:#94a3b8;--link:#c7d7fe;--shadow:0 12px 32px rgba(0,0,0,.18)}}
+:root[data-theme=dark]{--plane:#080d17;--surf:#111827;--surf2:#0d1524;--ink:#f5f7fa;--ink2:#cbd5e1;
+--muted:#94a3b8;--grid:#263244;--base:#344054;--border:rgba(255,255,255,.10);--s1:#8b83ff;--s2:#32d583;
+--s3:#f970a0;--s4:#fdb022;--s5:#32d583;--good:#32d583;--crit:#f97066;--warn:#fdb022;--headbg:#050914;
+--headsub:#94a3b8;--link:#c7d7fe;--shadow:0 12px 32px rgba(0,0,0,.18)}
+html{scroll-behavior:smooth}
+body{font:14px/1.55 Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+.skip{position:fixed;left:16px;top:-60px;z-index:100;background:var(--surf);color:var(--ink);padding:9px 13px;
+border-radius:8px;box-shadow:var(--shadow);text-decoration:none}.skip:focus{top:12px}
+.progress{position:fixed;left:0;top:0;z-index:90;width:100%;height:3px;background:transparent}
+.progress>span{display:block;width:0;height:100%;background:linear-gradient(90deg,var(--s1),var(--s3));transition:width .1s linear}
+header.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 78% 15%,rgba(97,87,229,.28),transparent 30%),
+radial-gradient(circle at 95% 100%,rgba(7,148,85,.17),transparent 32%),var(--headbg);padding:34px 30px 38px}
+header.hero:after{content:"";position:absolute;inset:auto -8% -110px 48%;height:170px;border:1px solid rgba(255,255,255,.08);
+border-radius:50%;transform:rotate(-8deg);pointer-events:none}
+.hero-inner{max-width:1440px;margin:auto;position:relative;z-index:1}.eyebrow{display:flex;align-items:center;gap:8px;color:#cbd5e1;
+font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;margin-bottom:12px}.status-dot{width:7px;height:7px;
+background:#32d583;border-radius:50%;box-shadow:0 0 0 5px rgba(50,213,131,.12)}
+.hero-grid{display:flex;align-items:end;justify-content:space-between;gap:32px}.hero h1{font-size:clamp(30px,4vw,50px);
+letter-spacing:-.045em;line-height:1.02;max-width:800px}.hero h1 span{color:#b9b4ff}.hero p{max-width:760px;
+font-size:15px;line-height:1.6;margin-top:12px;color:#aab6ca}.hero-actions{display:flex;gap:9px;flex-shrink:0}
+.action{display:inline-flex;align-items:center;justify-content:center;height:38px;padding:0 13px;border:1px solid rgba(255,255,255,.15);
+border-radius:9px;background:rgba(255,255,255,.07);color:#fff!important;font:600 12px/1 inherit;cursor:pointer;text-decoration:none}
+.action:hover{background:rgba(255,255,255,.13)}
+.page-shell{max-width:1480px;margin:0 auto;display:grid;grid-template-columns:220px minmax(0,1fr);gap:34px;padding:0 30px}
+.rail{position:sticky;top:18px;align-self:start;padding:26px 0;max-height:calc(100vh - 36px);overflow:auto}.rail-label{color:var(--muted);
+font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;padding:0 10px 8px}
+nav.tabs{position:static;display:flex;flex-direction:column;gap:2px;background:transparent;border:0;padding:0;flex-wrap:nowrap}
+nav.tabs a{position:relative;color:var(--ink2);font-size:12px;padding:8px 10px;border-radius:8px;font-weight:600}
+nav.tabs a:hover{background:var(--surf);color:var(--ink)}nav.tabs a.active{background:var(--surf);color:var(--ink);box-shadow:var(--shadow)}
+nav.tabs a.active:before{content:"";position:absolute;left:0;top:8px;bottom:8px;width:3px;border-radius:2px;background:var(--s1)}
+.rail-note{margin:18px 10px 0;padding-top:14px;border-top:1px solid var(--grid);color:var(--muted);font-size:10.5px;line-height:1.55}
+main{max-width:none;min-width:0;margin:0;padding:28px 0 100px}.overview{background:var(--surf);border:1px solid var(--border);border-radius:18px;
+padding:22px 22px 20px;box-shadow:var(--shadow)}.section-kicker{font-size:10px;color:var(--s1);font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+.overview-title{font-size:22px;margin:3px 0 0;letter-spacing:-.02em}.overview-title:before{display:none}.overview>.tiles,.growth-tiles{grid-template-columns:repeat(3,minmax(0,1fr))}.callout{border-left-width:3px;border-radius:0 10px 10px 0}
+.overview .callout{margin:15px 0}.tiles{grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}.tile{position:relative;background:var(--surf2);
+border-radius:12px;padding:14px;overflow:hidden}.tile:before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--s1);opacity:.55}
+.tval{font-size:22px;letter-spacing:-.025em}.insight-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px}
+.insight{position:relative;border:1px solid var(--border);background:var(--surf2);border-radius:12px;padding:15px;overflow:hidden}
+.insight:after{content:"";position:absolute;right:-22px;top:-24px;width:74px;height:74px;border-radius:50%;background:var(--s1);opacity:.08}
+.insight.accent-pink:after{background:var(--s3)}.insight.accent-amber:after{background:var(--s4)}.insight-kicker{font-size:10px;
+font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}.insight-value{font-size:18px;font-weight:750;letter-spacing:-.02em;margin-top:5px}
+.insight p{color:var(--ink2);font-size:12px;margin:3px 0 12px}.insight-source{color:var(--muted);font-size:9.5px}
+h2{font-size:24px;letter-spacing:-.025em;margin:44px 0 5px;border:0;padding:0;scroll-margin-top:28px}
+h2:before{content:"";display:block;width:32px;height:3px;background:var(--s1);border-radius:4px;margin-bottom:10px}.sub{font-size:13px;max-width:880px}
+.card{border-radius:14px;padding:18px 20px;box-shadow:var(--shadow)}.grid2{gap:16px}.legend{gap:10px}
+.bartrack{height:10px;border-radius:999px}.barfill{height:10px;border-radius:999px}
+.table-tools{position:sticky;left:0;display:flex;align-items:end;justify-content:space-between;gap:12px;margin:0 0 10px}
+.table-search{min-width:260px;height:36px;border:1px solid var(--grid);border-radius:9px;background:var(--surf2);color:var(--ink);
+padding:0 11px;font:inherit;outline:none}.table-search:focus{border-color:var(--s1);box-shadow:0 0 0 3px rgba(97,87,229,.12)}
+.row-count{color:var(--muted);font-size:11px}table{font-size:12px}th{position:relative;background:var(--surf);padding-top:9px;padding-bottom:9px}
+th[role=button]:after{content:"  \2195";opacity:.35}th[aria-sort=ascending]:after{content:"  \2191";opacity:1;color:var(--s1)}
+th[aria-sort=descending]:after{content:"  \2193";opacity:1;color:var(--s1)}th:focus-visible{outline:2px solid var(--s1);outline-offset:-2px}
+td{padding-top:8px;padding-bottom:8px}tbody tr:nth-child(even) td{background:rgba(127,127,127,.025)}
+.scroll{scrollbar-width:thin;scrollbar-color:var(--base) transparent}.scroll table th:first-child,.scroll table td:first-child{position:sticky;left:0;
+z-index:2;background:var(--surf);box-shadow:1px 0 0 var(--grid)}.scroll table th:first-child{z-index:3}
+.back-top{position:fixed;right:22px;bottom:22px;z-index:50;width:40px;height:40px;border:1px solid var(--border);border-radius:12px;
+background:var(--surf);color:var(--ink);box-shadow:var(--shadow);cursor:pointer;opacity:0;transform:translateY(8px);pointer-events:none;transition:.2s}
+.back-top.show{opacity:1;transform:none;pointer-events:auto}a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--s1);outline-offset:3px}
+@media(max-width:1100px){.tiles{grid-template-columns:repeat(3,minmax(0,1fr))}.page-shell{grid-template-columns:190px minmax(0,1fr);gap:22px}}
+@media(max-width:820px){header.hero{padding:26px 18px 28px}.hero-grid{display:block}.hero-actions{margin-top:20px}.page-shell{display:block;padding:0 14px}
+.rail{position:sticky;top:0;z-index:40;max-height:none;margin:0 -14px;padding:7px 14px;background:var(--plane);border-bottom:1px solid var(--grid);overflow-x:auto}
+.rail-label,.rail-note{display:none}nav.tabs{flex-direction:row;width:max-content}nav.tabs a{padding:7px 10px}
+nav.tabs a.active:before{left:9px;right:9px;top:auto;bottom:2px;width:auto;height:2px}.overview{border-radius:14px;padding:17px}
+.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.insight-grid{grid-template-columns:1fr}h2{font-size:21px;scroll-margin-top:60px}
+.barrow2{grid-template-columns:minmax(120px,1fr) 1fr 90px}.table-tools{align-items:stretch;flex-direction:column}.table-search{min-width:0;width:100%}}
+@media(max-width:520px){.hero h1{font-size:32px}.tiles{grid-template-columns:1fr 1fr}.tval{font-size:19px}.tile{padding:12px}
+.barrow{grid-template-columns:110px 1fr 64px}.barrow2{grid-template-columns:110px 1fr 78px}.barname{padding-left:0}.card{padding:15px}
+.grid2{gap:0}.hero-actions{width:100%}.action{flex:1}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.progress>span,.back-top{transition:none}}
 """
 
 JS = r"""
@@ -655,6 +763,33 @@ rs.sort(function(a,b){var x=a.cells[c],y=b.cells[c];var av=num?parseFloat(x.getA
 var bv=num?parseFloat(y.getAttribute('data-v')||y.textContent):y.textContent.trim().toLowerCase();
 if(num){av=isNaN(av)?-1e18:av;bv=isNaN(bv)?-1e18:bv;}return asc?(av>bv?1:av<bv?-1:0):(av<bv?1:av>bv?-1:0);});rs.forEach(function(r){tb.appendChild(r);});}
 document.querySelectorAll('table.sortable').forEach(function(t){[].forEach.call(t.tHead.rows[0].cells,function(th,i){th.onclick=function(){sortT(t,i,th.classList.contains('r'));};});});
+
+(function(){
+  var root=document.documentElement,themeBtn=document.getElementById('themeToggle');
+  function applyTheme(t){root.setAttribute('data-theme',t);if(themeBtn){themeBtn.textContent=t==='dark'?'Light mode':'Dark mode';themeBtn.setAttribute('aria-pressed',t==='dark'?'true':'false');}}
+  var saved='';try{saved=localStorage.getItem('or-theme')||'';}catch(e){}
+  if(saved){applyTheme(saved);}else{applyTheme(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');}
+  if(themeBtn){themeBtn.addEventListener('click',function(){var next=root.getAttribute('data-theme')==='dark'?'light':'dark';applyTheme(next);try{localStorage.setItem('or-theme',next);}catch(e){}});}
+  var progress=document.querySelector('.progress span'),topBtn=document.querySelector('.back-top');
+  function onScroll(){var max=document.documentElement.scrollHeight-innerHeight;var p=max>0?scrollY/max*100:0;if(progress)progress.style.width=p+'%';if(topBtn)topBtn.classList.toggle('show',scrollY>700);}
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+  if(topBtn){topBtn.addEventListener('click',function(){scrollTo({top:0,behavior:'smooth'});});}
+  document.querySelectorAll('.table-search').forEach(function(input){
+    var table=document.getElementById(input.getAttribute('data-table')),counter=document.querySelector('[data-for="'+input.getAttribute('data-table')+'"]');
+    if(!table)return;var rows=[].slice.call(table.tBodies[0].rows);
+    function filter(){var q=input.value.trim().toLowerCase(),shown=0;rows.forEach(function(row){var yes=!q||row.textContent.toLowerCase().indexOf(q)>-1;row.hidden=!yes;if(yes)shown++;});if(counter)counter.textContent=shown+' of '+rows.length+' rows';}
+    input.addEventListener('input',filter);filter();
+  });
+  document.querySelectorAll('table.sortable th').forEach(function(th){
+    th.setAttribute('role','button');th.setAttribute('tabindex','0');th.setAttribute('aria-sort','none');
+    th.addEventListener('click',function(){var table=th.closest('table');table.querySelectorAll('th').forEach(function(x){x.setAttribute('aria-sort','none');});
+      th.setAttribute('aria-sort',table.getAttribute('data-a')==='1'?'ascending':'descending');});
+    th.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();th.click();}});
+  });
+  var links=[].slice.call(document.querySelectorAll('nav.tabs a[href^="#"]'));
+  var targets=links.map(function(a){return document.querySelector(a.getAttribute('href'));}).filter(Boolean);
+  if('IntersectionObserver' in window){var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){links.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+entry.target.id);});}});},{rootMargin:'-15% 0px -74% 0px',threshold:0});targets.forEach(function(t){observer.observe(t);});}
+})();
 """
 
 def scinsight():
@@ -739,12 +874,79 @@ BODY = (
     '</main>'
 )
 
+
+# ---------- PRESENTATION SHELL ----------
+# Keep the analytical sections above simple to generate; add the navigation,
+# executive layer and interaction hooks here so the weekly refresh stays safe.
+BODY = BODY.replace(
+    '<header>',
+    '<a class="skip" href="#content">Skip to analysis</a><div class="progress" aria-hidden="true"><span></span></div>'
+    '<header class="hero"><div class="hero-inner"><div class="eyebrow"><span class="status-dot"></span>'
+    'Weekly market signal</div><div class="hero-grid"><div class="hero-copy">', 1)
+BODY = BODY.replace(
+    '</header>',
+    '</div><div class="hero-actions"><a class="action" href="../index.html">Wiki home</a>'
+    '<button class="action" id="themeToggle" type="button" aria-pressed="false">Dark mode</button>'
+    '</div></div></div></header>', 1)
+
+_nav_start = BODY.index('<nav class="tabs">')
+_nav_end = BODY.index('</nav>', _nav_start) + len('</nav>')
+_nav = (
+    '<div class="page-shell"><aside class="rail"><div class="rail-label">Explore</div>'
+    '<nav class="tabs" aria-label="Dashboard sections">'
+    '<a class="active" href="#overview">Executive read</a><a href="#growth">System growth</a>'
+    '<a href="#product">Workload mix</a><a href="#reality">Ceiling vs reality</a>'
+    '<a href="#value">Tokens &ne; dollars</a><a href="#spend">Spend ranking</a>'
+    '<a href="#labs">Lab leaderboard</a><a href="#models">Top models</a>'
+    '<a href="#cloud">Cross-cloud pricing</a><a href="#neo">Neocloud market</a>'
+    '<a href="#method">Methodology</a></nav>'
+    '<div class="rail-note">OpenRouter public feed<br>Trailing 7-day window<br>Refreshes every Monday</div></aside>'
+)
+BODY = BODY[:_nav_start] + _nav + BODY[_nav_end:]
+BODY = BODY.replace('<main>', '<main id="content" tabindex="-1">', 1)
+BODY = BODY.replace(
+    '<div class="callout warn">',
+    '<section class="overview" id="overview"><div class="section-kicker">Executive read</div>'
+    '<h2 class="overview-title">What matters in this snapshot</h2><div class="callout warn">', 1)
+BODY = BODY.replace(
+    '<div class="tiles">' + tiles_html + '</div>',
+    '<div class="tiles">' + tiles_html + '</div><div class="insight-grid">' + insights_html + '</div></section>', 1)
+BODY = BODY.replace('<h2>Is the $ real?', '<h2 id="reality">Is the $ real?', 1)
+BODY = BODY.replace('<h2>Implied annualized spend by lab', '<h2 id="spend">Implied annualized spend by lab', 1)
+BODY = BODY.replace('<h2>Share of implied $ over time', '<h2 id="trend">Share of implied $ over time', 1)
+BODY = BODY.replace('<h2>Top models by implied spend</h2>', '<h2 id="models">Top models by implied spend</h2>', 1)
+BODY = BODY.replace(
+    '<h2 id="labs">Lab leaderboard</h2><div class="card scroll"><table class="sortable">',
+    '<h2 id="labs">Lab leaderboard</h2><div class="card scroll"><div class="table-tools">'
+    '<input class="table-search" data-table="lab-table" aria-label="Filter lab leaderboard" placeholder="Filter labs, capture type, or metric...">'
+    '<span class="row-count" data-for="lab-table"></span></div><table class="sortable" id="lab-table">', 1)
+BODY = BODY.replace(
+    '<h2 id="models">Top models by implied spend</h2><div class="card scroll"><table class="sortable">',
+    '<h2 id="models">Top models by implied spend</h2><div class="card scroll"><div class="table-tools">'
+    '<input class="table-search" data-table="model-table" aria-label="Filter top models" placeholder="Filter models or labs...">'
+    '<span class="row-count" data-for="model-table"></span></div><table class="sortable" id="model-table">', 1)
+BODY = BODY.replace(
+    '<div class="card scroll"><table class="sortable"><thead><tr><th>Model</th><th class="r">List / OpenRouter</th>',
+    '<div class="card scroll"><div class="table-tools"><input class="table-search" data-table="cloud-table" '
+    'aria-label="Filter cross-cloud pricing" placeholder="Filter models or venues..."><span class="row-count" '
+    'data-for="cloud-table"></span></div><table class="sortable" id="cloud-table"><thead><tr><th>Model</th>'
+    '<th class="r">List / OpenRouter</th>', 1)
+BODY = BODY.replace(
+    '<div class="card scroll"><table class="sortable"><thead><tr><th>Model</th><th class="r">Maker',
+    '<div class="card scroll"><div class="table-tools"><input class="table-search" data-table="neo-table" '
+    'aria-label="Filter neocloud pricing" placeholder="Filter models or providers..."><span class="row-count" '
+    'data-for="neo-table"></span></div><table class="sortable" id="neo-table"><thead><tr><th>Model</th>'
+    '<th class="r">Maker', 1)
+BODY = BODY.replace(
+    '</main>',
+    '<button class="back-top" type="button" aria-label="Back to top">&uarr;</button></main></div>', 1)
+
 # Full standalone page (local dashboard, links back to the wiki).
 FULL = ('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
         '<title>AI-Lab Traction — OpenRouter</title><style>' + CSS + '</style></head><body>' + BODY + '<script>' + JS + '</script></body></html>')
 # Artifact fragment: no doctype/html/head/body (the Artifact host injects those); drop the wiki back-link.
 FRAG = '<style>' + CSS + '</style>' + BODY.replace(' · <a href="../index.html">← wiki</a>', '') + '<script>' + JS + '</script>'
 
-(DASH / "openrouter.html").write_text(FULL, encoding="utf-8")
-(OR / "openrouter.artifact.html").write_text(FRAG, encoding="utf-8")
+(DASH / "openrouter.html").write_text(FULL, encoding="utf-8", newline="\n")
+(OR / "openrouter.artifact.html").write_text(FRAG, encoding="utf-8", newline="\n")
 print("wrote", DASH / "openrouter.html", "(full %.0f KB) + artifact fragment (%.0f KB)" % (len(FULL) / 1024, len(FRAG) / 1024))
