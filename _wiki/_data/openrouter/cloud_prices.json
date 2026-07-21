@@ -8,7 +8,7 @@
     "azure": "Azure OpenAI list (page fetch failed 2026-07-21) => shown as list-by-mechanism"
   },
   "mechanics": {
-    "_comment": "Official pricing mechanics per venue (read 2026-07-21). The stylized facts: cache-read ~10% of input and batch ~50% off EVERYWHERE; differentiation is long-context surcharge and regional premia.",
+    "_comment": "Official pricing mechanics per venue (read 2026-07-21). Stylized facts QUALIFIED per 2026-07-21 audit: cache-read ~10% of input and batch ~50% off hold for FIRST-PARTY FRONTIER labs (Anthropic/OpenAI/Google); open-weight makers run wider (DeepSeek cache-read 20-52% of input by model: v4-flash 20%, v3.2 50%, v3.1 52%, v4-pro ~1%; xAI Grok ~15%). Differentiation = long-context surcharge + regional premia.",
     "rows": [
       {"venue": "Anthropic list (= Bedrock/Vertex resale)", "batch": "50% off", "cache_read": "10% of input ($0.50 on $5 Opus; 5m cache-write +25%)", "long_context": "none published", "regional": "Bedrock: extended-access fee on legacy models ($6/$30 3.5-Sonnet)"},
       {"venue": "OpenAI list (= Azure resale)", "batch": "50% off", "cache_read": "10% of input ($0.125 on $1.25 GPT-5)", "long_context": "none published", "regional": "n/a"},

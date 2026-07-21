@@ -97,7 +97,7 @@ top_app = next((a for a in apps if a.get("title")), {})
 tiles = [
     ("Tokens / day", tok(plat["daily_tokens"]), "via OpenRouter · ~%s/mo · %s free" % (tok(plat["tokens_month_run_rate"]), pct(plat["free_token_pct"], 0))),
     ("Implied $ / yr", dol(plat["revenue_annualized"]), "at LIST price, caching OFF — a ceiling (~3× realized)"),
-    ("Input intensity", "%.0f:1" % plat["input_ratio"], "prompt : completion · ~97% of tokens are input"),
+    ("Input intensity", "%.1f:1" % plat["input_ratio"], "prompt : completion · ~97% of tokens are input"),
     ("#1 by implied $", esc(top_lab["display"]), "%s/yr · %s of $ vs %s of paid tokens" % (dol(top_lab["revenue_annualized"]), pct(top_lab["rev_share"], 0), pct(top_lab["paid_token_share"], 0))),
     ("#1 app", esc(top_app.get("title", "-")), "%s tokens/wk · coding agents lead" % tok(top_app.get("tokens_week", 0))),
 ]
@@ -518,7 +518,8 @@ BODY = (
     '<div class="tiles">' + tiles_html + '</div>'
     '<h2>Is the $ real? — the ceiling vs reality</h2>'
     '<p class="sub">Implied spend priced at list with no cache credit, then with 50%/70% of input re-priced at each model\'s cache-read rate, vs OpenRouter\'s reported <i>actual</i> monthly spend. The ceiling reconciles toward reality once caching &amp; provider discounts are applied.</p>'
-    '<div class="card">' + ladder_html + '<p class="note" style="margin-top:10px">OpenRouter spend was ~<b>flat</b> Mar→Jun 2026 (~$83M→$76M/mo) even as tokens ~2.7×\'d — the marginal token is cheap/free — so the gap is <b>list-vs-realized</b>, not platform growth.</p></div>'
+    '<div class="card">' + ladder_html + '<p class="note" style="margin-top:10px">OpenRouter spend was ~<b>flat</b> Mar→Jun 2026 (~$83M→$76M/mo) even as tokens ~2.7×\'d — the marginal token is cheap/free — so the gap is <b>list-vs-realized</b>, not platform growth. '
+    '<span class="mut">(Mar ~$83M is <b>derived</b>: Sacra\'s ~$50M annualized OR-revenue ÷ ~5% take ÷ 12 — estimate-on-estimate; Jun $76M is a reported snapshot.)</span></p></div>'
     '<h2>Tokens ≠ dollars</h2>'
     '<p class="sub">Each lab by share of <b>paid</b> tokens (volume) vs share of implied dollars (value). Above the line = premium pricing; below = commodity volume. Bubble size = implied $/yr.</p>'
     '<div class="card">' + scatter_svg +
@@ -548,11 +549,12 @@ BODY = (
     '<p class="sub">The same model priced across venues: first-party list (= OpenRouter route) vs AWS Bedrock vs Google Vertex vs Azure. As of ' + esc(CLOUDS.get("asof", "")) + '.</p>'
     '<div class="card scroll"><table class="sortable"><thead><tr><th>Model</th><th class="r">List / OpenRouter</th><th class="r">AWS Bedrock</th><th class="r">GCP Vertex</th><th class="r">Azure</th></tr></thead>'
     '<tbody>' + cloud_table + '</tbody></table>'
-    '<div class="callout" style="margin-top:12px"><b>The pricing-power read.</b> Frontier <b>first-party</b> models cost the same everywhere — the lab sets one list price and the clouds resell it (Bedrock\'s "$6/$30 Claude" is the <i>legacy 3.5-Sonnet extended-access</i> fee, not current Claude; Sonnet 5 is $2/$10 on AWS\'s own page). '
+    '<div class="callout" style="margin-top:12px"><b>The pricing-power read.</b> Frontier <b>first-party</b> pricing is venue-independent — <b>observed</b>, not just asserted: the routing feed shows Claude Opus 4.8 at $5/$25 and Sonnet 5 at $2/$10 identically on Anthropic, Bedrock, Vertex and Azure (regional tiers +10%), and Sonnet 5\'s $2/$10 promo is printed on AWS\'s own page. '
+    '(AWS\'s page also shows a $6/$30 Claude line — those rows are labeled <i>"Claude 3.5 Sonnet (extended access)"</i>, a legacy-model keep-alive fee; the page is JS-rendered and machine-reads badly, so treat any scrape of it with care.) '
     'Where hyperscalers DO mark up is <b>open-weight</b> hosting: DeepSeek V3.2 costs ~2.3× more per input token on Bedrock ($0.62) than its cheapest route ($0.27), Qwen3-Next ~1.5×; Mistral Large 3 is the exception at exactly list. '
-    'So the cloud premium sits on open models (managed-hosting convenience), while frontier-lab pricing is venue-independent — the lab, not the cloud, owns the token P&amp;L.</b></div>'
+    'So the cloud premium sits on open models (managed-hosting convenience), while frontier-lab pricing is venue-independent — <b>the lab, not the cloud, owns the token P&amp;L.</b></div>'
     '<h3 style="font-size:14.5px;margin:20px 0 4px">Beyond the sticker: discount &amp; surcharge mechanics <span class="mut" style="font-weight:400">(official pages, 2026-07-21)</span></h3>'
-    '<p class="sub" style="margin-bottom:8px">Cache-read ≈ <b>10% of input</b> and batch ≈ <b>50% off</b> at every venue — commoditized. The differentiation is <b>long-context surcharges</b> (Gemini Pro doubles input above 200K ctx — the lever that monetizes big-context agents) and regional premia.</p>'
+    '<p class="sub" style="margin-bottom:8px">Among the <b>first-party frontier labs</b> (Anthropic / OpenAI / Google), cache-read ≈ <b>10% of input</b> and batch ≈ <b>50% off</b> — commoditized. Open-weight makers run wider: DeepSeek prices cache-read at <b>20–52%</b> of input depending on model, xAI ~15%. The real differentiation is <b>long-context surcharges</b> (Gemini Pro doubles input above 200K ctx — the lever that monetizes big-context agents) and regional premia.</p>'
     '<div class="scroll"><table><thead><tr><th>Venue</th><th>Batch</th><th>Cache-read</th><th>Long-context</th><th>Regional / other</th></tr></thead>'
     '<tbody>' + mech_table + '</tbody></table></div>'
     '<p class="note">Cell flags: <span class="conf off">official</span> read from that venue\'s page · <span class="conf off">observed</span> seen in OpenRouter\'s live routing feed · <span class="conf lst">=list</span> venue resells at the model-maker\'s list (documented mechanism) · <span class="conf rep">reported</span> page-scraped, not hand-verified · "offered · $?" = on the venue, price not yet captured; hover a cell for cache/batch/long-context detail. Hand-edit <code>_data/openrouter/cloud_prices.json</code>.</p></div>'
