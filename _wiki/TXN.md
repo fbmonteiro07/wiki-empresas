@@ -12,10 +12,10 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\TXN` (10-K/10-Q + tran
 | Revenue | $20.8bn | $23.6bn |
 | Gross profit | $12.3bn | $14.3bn |
 | Gross margin | 59.1% | 60.7% |
-| EBITDA | $10.7bn | $12.6bn |
-| EPS | $7.56 | $9.21 |
+| EBITDA | $10.7bn | $12.7bn |
+| EPS | $7.56 | $9.22 |
 | Capex | $2.6bn | $2.7bn |
-| OCF (≈EBITDA) | $10.7bn | $12.6bn |
+| OCF (≈EBITDA) | $10.7bn | $12.7bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

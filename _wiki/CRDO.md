@@ -8,11 +8,11 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\CRDO` (filings + trans
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $2.1bn | $3.5bn |
-| Gross profit | $1.4bn | $2.3bn |
+| Gross profit | $1.4bn | $2.4bn |
 | Gross margin | 67.0% | 66.6% |
 | EBITDA | $1.1bn | $1.9bn |
-| EPS | $5.03 | $8.64 |
-| Capex | $333m | $148m |
+| EPS | $5.03 | $8.70 |
+| Capex | $399m | $148m |
 | OCF (≈EBITDA) | $1.1bn | $1.9bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

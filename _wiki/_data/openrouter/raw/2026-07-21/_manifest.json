@@ -1,0 +1,36 @@
+{
+  "fetched_at": "2026-07-21T10:12:31",
+  "date": "2026-07-21",
+  "endpoints": {
+    "models": {
+      "url": "https://openrouter.ai/api/v1/models",
+      "ok": true,
+      "n": 338
+    },
+    "catalog": {
+      "url": "https://openrouter.ai/api/frontend/v1/catalog/models",
+      "ok": true,
+      "n": 805
+    },
+    "providers": {
+      "url": "https://openrouter.ai/api/frontend/v1/all-providers",
+      "ok": true,
+      "n": 76
+    },
+    "rank_week": {
+      "url": "https://openrouter.ai/api/frontend/v1/rankings/models?view=week",
+      "ok": true,
+      "n": 437
+    },
+    "rank_month": {
+      "url": "https://openrouter.ai/api/frontend/v1/rankings/models?view=month",
+      "ok": true,
+      "n": 461
+    },
+    "apps": {
+      "url": "https://openrouter.ai/api/frontend/v1/rankings/apps?view=week",
+      "ok": true,
+      "n": 3
+    }
+  }
+}

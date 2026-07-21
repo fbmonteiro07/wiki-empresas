@@ -7,11 +7,11 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AMD` (filings + transc
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $49.2bn | $77.0bn |
+| Revenue | $49.2bn | $76.9bn |
 | Gross profit | $27.4bn | $42.8bn |
 | Gross margin | 55.7% | 55.6% |
 | EBITDA | $14.2bn | $25.9bn |
-| EPS | $7.35 | $13.44 |
+| EPS | $7.35 | $13.43 |
 | Capex | $1.2bn | $1.6bn |
 | OCF (≈EBITDA) | $14.2bn | $25.9bn |
 

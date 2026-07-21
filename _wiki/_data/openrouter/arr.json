@@ -1,0 +1,30 @@
+{
+  "_comment": "Hand-editable. Reported/estimated TOTAL company revenue run-rate (ARR-equivalent) for AI labs, used ONLY for the ARR-bridge panel. Every figure is a press/analyst estimate unless the lab stated it. OpenRouter-implied $ is a DIFFERENT, much smaller thing (developer API spend routed through OpenRouter at list price) — the bridge shows OR-$ as a % of these to reveal how thin/representative the OpenRouter slice is. Edit values as new prints land; keep source+asof.",
+  "_units": "arr_busd = total company run-rate revenue in USD billions (annualized)",
+  "labs": {
+    "openai": {"display": "OpenAI", "arr_busd": 25.0, "asof": "2026-06", "capture": "first-party", "tag": "ESTIMATE", "source": "Multiple press (valueaddvc, useluminix, futuresearch), Jun 2026: ~$25B annualized (~$2B/mo), enterprise >40%"},
+    "anthropic": {"display": "Anthropic", "arr_busd": 47.0, "asof": "2026-05-28", "capture": "first-party", "tag": "PARTIAL", "source": "Company Series-H announcement 2026-05-28 run-rate ~$47B; July 2026 press (NextBigFuture) reports up to ~$69B; wiki corpus: The Information ~$50B (Jun 2026)"},
+    "google": {"display": "Google (Gemini)", "arr_busd": null, "asof": "2025-FY", "capture": "first-party", "tag": "n/a", "source": "No clean standalone ARR (embedded in Alphabet). $1.2B Gemini subscriptions FY25; GenAI-product revenue +~800% YoY; Gemini API ~2.4M devs, ~16B tok/min (Q1-26)"},
+    "x-ai": {"display": "xAI (Grok)", "arr_busd": 0.5, "asof": "2026-06", "capture": "first-party", "tag": "ESTIMATE", "source": "Bloomberg/Sacra mid-2026: ~$0.5B AI-only ARR (SuperGrok+API+enterprise); FY25 ~$0.35B; FY26 target ~$2B"},
+    "deepseek": {"display": "DeepSeek", "arr_busd": 0.45, "asof": "2026-06", "capture": "open-weight+own-api", "tag": "ESTIMATE", "source": "The Information / PYMNTS mid-2026: annualized ~$400-500M (mostly API); raised >$7.4B at >$50B val (Jun 2026)"},
+    "mistralai": {"display": "Mistral", "arr_busd": 0.4, "asof": "2026-01", "capture": "open-weight+own-api", "tag": "ESTIMATE", "source": "getlatka/mlq Jan 2026: ~$400M ARR; target >$1B by EoY26; ~$23B val"},
+    "moonshotai": {"display": "Moonshot (Kimi)", "arr_busd": null, "asof": null, "capture": "open-weight+own-api", "tag": "n/a", "source": "No disclosed standalone ARR"},
+    "z-ai": {"display": "Z.ai (Zhipu)", "arr_busd": null, "asof": null, "capture": "open-weight+own-api", "tag": "n/a", "source": "No disclosed standalone ARR"},
+    "minimax": {"display": "MiniMax", "arr_busd": null, "asof": null, "capture": "open-weight+own-api", "tag": "n/a", "source": "No disclosed standalone ARR"},
+    "qwen": {"display": "Qwen (Alibaba)", "arr_busd": null, "asof": null, "capture": "open-weight", "tag": "n/a", "source": "Embedded in Alibaba Cloud; no clean standalone ARR"},
+    "meta": {"display": "Meta (Llama)", "arr_busd": null, "asof": null, "capture": "open-weight", "tag": "n/a", "source": "Open-weight; monetized indirectly, no LLM ARR"},
+    "nvidia": {"display": "NVIDIA (Nemotron)", "arr_busd": null, "asof": null, "capture": "open-weight", "tag": "n/a", "source": "Models are open-weight demos; revenue is hardware, not model API"},
+    "tencent": {"display": "Tencent", "arr_busd": null, "asof": null, "capture": "open-weight", "tag": "n/a", "source": "Embedded in Tencent; no clean standalone LLM ARR"},
+    "xiaomi": {"display": "Xiaomi", "arr_busd": null, "asof": null, "capture": "open-weight", "tag": "n/a", "source": "Embedded in Xiaomi; no clean standalone LLM ARR"},
+    "stepfun": {"display": "StepFun", "arr_busd": null, "asof": null, "capture": "open-weight+own-api", "tag": "n/a", "source": "No disclosed standalone ARR"}
+  },
+  "openrouter": {
+    "reported_tokens_per_month_T": 100, "tokens_asof": "2026-05",
+    "reported_annual_run_rate_quadrillion": 1.5, "run_rate_asof": "2026-05",
+    "reported_monthly_spend_musd": 76, "spend_asof": "2026-06",
+    "reported_or_revenue_annualized_musd": 50, "or_rev_asof": "2026-03",
+    "take_rate_pct": 5,
+    "valuation_busd": 1.3, "val_asof": "2026 Series B ($113M raise)",
+    "source": "Menlo Ventures ('>1 quadrillion tokens/yr'); Sacra (~$50M OR ARR Mar-26 @ ~5% take => ~$1B inference spend); Jun-26 snapshot ~$76M monthly spend"
+  }
+}

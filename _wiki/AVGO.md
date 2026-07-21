@@ -7,8 +7,8 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AVGO` (filings + trans
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $123.1bn | $189.5bn |
-| Gross profit | $91.4bn | $137.2bn |
+| Revenue | $123.2bn | $189.8bn |
+| Gross profit | $91.4bn | $137.4bn |
 | Gross margin | 74.2% | 72.4% |
 | EBITDA | $84.1bn | $130.3bn |
 | EPS | **$12.89** | **$21.07** |

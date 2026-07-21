@@ -13,8 +13,8 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\NOW` (filings + transc
 | Gross profit | $12.9bn | $15.3bn |
 | Gross margin | 79.6% | 79.7% |
 | EBITDA | $6.0bn | $7.3bn |
-| EPS | $4.16 | $5.04 |
-| Capex | $914m | $998m |
+| EPS | $4.15 | $5.04 |
+| Capex | $908m | $980m |
 | OCF (≈EBITDA) | $6.0bn | $7.3bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

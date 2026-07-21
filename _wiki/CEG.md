@@ -13,7 +13,7 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\CEG` (filings + transc
 | Gross profit | $13.4bn | $18.2bn |
 | Gross margin | 38.7% | 50.3% |
 | EBITDA | $7.8bn | $8.8bn |
-| EPS | $11.38 | $13.43 |
+| EPS | $11.40 | $13.43 |
 | Capex | $5.2bn | $4.8bn |
 | OCF (≈EBITDA) | $7.8bn | $8.8bn |
 
