@@ -1,9 +1,11 @@
 # Research Wiki — themes (cross-company)
 
-_Generated 2026-06-19 · last updated 2026-06-23 (Redburn "Conor O'Mara Asia Trip Takeaways" + StoneX/TrendForce "Avril" memory call folded into hbm-memory, semicap-wfe, cowos-packaging, custom-asic-tpu, optical-cpo, outros-asia) · cross-company theme pages synthesizing the corpus (equity calls, briefing roll-ups, transcripts, research library) with attribution, each linking the companies exposed. Company index: [../00_INDEX.md](../00_INDEX.md)._
+_Generated 2026-06-19 · last updated 2026-07-20 (Citrini Semis, "All Along the AI Watchtower") · cross-company theme pages synthesizing the corpus (equity calls, briefing roll-ups, transcripts, research library) with attribution, each linking the companies exposed. Company index: [../00_INDEX.md](../00_INDEX.md)._
 
 | Theme | Page | What it is |
 |---|---|---|
+| AI builder toolkit | [ai-builder-toolkit](ai-builder-toolkit.md) | Developer/data/design systems whose billable activity can rise as agents create more code, state, queries and variants. |
+| Secure & sovereign AI infrastructure | [secure-sovereign-infrastructure](secure-sovereign-infrastructure.md) | Cybersecurity, hardware identity, private/hybrid infrastructure and cloud repatriation as second-order AI beneficiaries. |
 | 800V DC power | [800v-dc-power](800v-dc-power.md) | The 48V/415V→800V DC data-center power transition; content-per-MW re-rating, SST/GaN/SiC, gated by the chip ramp. |
 | Tokenmaxxing / AI monetization | [tokenmaxxing](tokenmaxxing.md) | Enterprises managing token spend / cheaper-model substitution; frontier still captures ~90% of revenue. |
 | Semicap / WFE | [semicap-wfe](semicap-wfe.md) | $200B/$250B CY27/28 WFE bull case, memory-capex-driven; EUV bottleneck + KV-cache→NAND. |

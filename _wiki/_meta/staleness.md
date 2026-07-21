@@ -1,6 +1,6 @@
 # Wiki staleness report
 
-_Generated 2026-07-17 · 102 pages checked._
+_Generated 2026-07-20 · 102 pages checked._
 
 ## 🔴 BBG estimates missing/errored (2)
 AEIS, CEREBRAS
@@ -14,5 +14,7 @@ AEIS, AKAM, AOSL, APP, AXTI, BE, CDNS, CEREBRAS, ETN, FSLY, MP, NET, PLTR, POET,
 ## ⚪ Scaffold <TODO> not filled (0)
 _none_
 
-## 🟣 Modelos oficiais drift vs canonical P: folder (0)
-_in sync_
+## 🟣 Modelos oficiais drift vs canonical P: folder (3)
+- missing on E:: Modelo Felipe TSM pós 2Q26 - WIP.xlsm
+- newer on P: (E: copy stale): ASML_Peers_SemiCap_v17.xlsx
+- newer on P: (E: copy stale): Google Modelo oficial.xlsx

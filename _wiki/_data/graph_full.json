@@ -1,8 +1,8 @@
 {
- "generated": "2026-07-19",
+ "generated": "2026-07-20",
  "counts": {
-  "nodes": 155,
-  "edges": 1265
+  "nodes": 158,
+  "edges": 1273
  },
  "nodes": [
   {
@@ -33,7 +33,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-07-16"
+   "last_chg": "2026-07-20"
   },
   {
    "id": "ADI",
@@ -146,7 +146,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-07-16"
+   "last_chg": "2026-07-20"
   },
   {
    "id": "AMD",
@@ -161,7 +161,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-07-17"
+   "last_chg": "2026-07-20"
   },
   {
    "id": "AMZN",
@@ -276,7 +276,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-07-17"
+   "last_chg": "2026-07-20"
   },
   {
    "id": "AVGO",
@@ -507,7 +507,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-07-13"
+   "last_chg": "2026-07-20"
   },
   {
    "id": "DISCO",
@@ -606,7 +606,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-07-17"
+   "last_chg": "2026-07-20"
   },
   {
    "id": "HPE",
@@ -621,7 +621,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-06-30"
+   "last_chg": "2026-07-20"
   },
   {
    "id": "IFX",
@@ -651,7 +651,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-07-16"
+   "last_chg": "2026-07-20"
   },
   {
    "id": "KIOXIA",
@@ -681,7 +681,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-07-09"
+   "last_chg": "2026-07-20"
   },
   {
    "id": "LITE",
@@ -755,7 +755,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-07-17"
+   "last_chg": "2026-07-20"
   },
   {
    "id": "MP",
@@ -974,7 +974,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-07-13"
+   "last_chg": "2026-07-20"
   },
   {
    "id": "PANW",
@@ -1058,7 +1058,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-07-19"
+   "last_chg": "2026-07-20"
   },
   {
    "id": "RDDT",
@@ -1088,7 +1088,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-07-16"
+   "last_chg": "2026-07-20"
   },
   {
    "id": "SANM",
@@ -1160,7 +1160,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-07-02"
+   "last_chg": "2026-07-20"
   },
   {
    "id": "SNDK",
@@ -1217,7 +1217,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-07-14"
+   "last_chg": "2026-07-20"
   },
   {
    "id": "STX",
@@ -1359,7 +1359,7 @@
     "wiki": 1
    },
    "next_catalyst": "2026-08-31",
-   "last_chg": "2026-07-19"
+   "last_chg": "2026-07-20"
   },
   {
    "id": "UBER",
@@ -1483,6 +1483,12 @@
    "title": "Theme — 800V DC Data-Center Power"
   },
   {
+   "id": "theme:ai-builder-toolkit",
+   "type": "theme",
+   "label": "ai-builder-toolkit",
+   "title": "Theme — AI Builder Toolkit"
+  },
+  {
    "id": "theme:ai-datacenter-power",
    "type": "theme",
    "label": "ai-datacenter-power",
@@ -1555,6 +1561,12 @@
    "title": "Theme — Outros / Ásia (Asia supply chain ex-coverage)"
   },
   {
+   "id": "theme:secure-sovereign-infrastructure",
+   "type": "theme",
+   "label": "secure-sovereign-infrastructure",
+   "title": "Theme — Secure & Sovereign AI Infrastructure"
+  },
+  {
    "id": "theme:semicap-wfe",
    "type": "theme",
    "label": "semicap-wfe",
@@ -1580,7 +1592,7 @@
    "label": "wfe-tam",
    "title": "WFE market size CY26 / CY27 / CY28",
    "status": "house-vs-street",
-   "canonical": "CY26 ~$140-160B (all sources agree). CY27: house $180-215B vs MS ~$191B vs UBS $200B. CY28 is the genuine conflict: house top end $260B vs UBS $250B vs MS-implied ~$230-240B; skeptic ceiling 'never $300B' (ex-Samsung foundry EVP). Swing variable = memory-capex intensity + EUV availability post-2027 + first NAND greenfield (CY28)."
+   "canonical": "CY26 ~$140-160B (all sources agree; Bernstein 148 incl WLP). CY27: house $180-215B vs MS ~$191B vs UBS $200B vs Bernstein base $175B (street low). CY28 is the genuine conflict: house top end $260B vs UBS $250B vs MS-implied ~$230-240B vs Bernstein base $198B; skeptic ceiling 'never $300B' (ex-Samsung foundry EVP) now directly challenged by Bernstein's GW-frame (50GW scenario: $245B/28, $291B/29, '"
   },
   {
    "id": "assum:euv-fab-intensity",
@@ -1653,6 +1665,14 @@
    "title": "Conventional DRAM pricing cadence Q3/Q4 2026",
    "status": "live-debate",
    "canonical": "TrendForce REVISED (2026-06-30, supersedes 06-23): +15-20% Q3 / +3-8% Q4 — vs experts +20-25% Q3 (Redburn/Sherman/Edison) and market chatter +30-40%. Direction agreed; magnitude is the debate."
+  },
+  {
+   "id": "assum:server-cpu-tam",
+   "type": "assumption",
+   "label": "server-cpu-tam",
+   "title": "Server-CPU TAM / unidades — o leg agentic",
+   "status": "",
+   "canonical": "TRES construcoes independentes convergem em CY26 (~$50-55bn) e divergem no timing do 1:1 agentic: (1) unidades bottom-up — JPM proprietario 26M (2025) -> 68M (2028), agentic 155% CAGR; house build (Bottom_Up_Capex v2, unidades x ASP c/ hikes Sherman) ~$55bn CY26 / ~$96bn CY27 (CPU-silicio total); (2) capex-ratio top-down — Bernstein/Rasgon 06-16: $37bn 2025 -> $137bn 2030 BASE, $223bn BULL (premis"
   },
   {
    "id": "broker:650Group",
@@ -3587,6 +3607,12 @@
   },
   {
    "u": "theme:hbm-memory",
+   "v": "QCOM",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:hbm-memory",
    "v": "SAMSUNG",
    "type": "exposes",
    "label": ""
@@ -3600,6 +3626,18 @@
   {
    "u": "theme:hbm-memory",
    "v": "SNDK",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:hbm-memory",
+   "v": "STX",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:hbm-memory",
+   "v": "WDC",
    "type": "exposes",
    "label": ""
   },
@@ -3918,6 +3956,18 @@
   {
    "u": "theme:outros-asia",
    "v": "TSM",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:secure-sovereign-infrastructure",
+   "v": "DELL",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:secure-sovereign-infrastructure",
+   "v": "HPE",
    "type": "exposes",
    "label": ""
   },
@@ -4692,7 +4742,7 @@
    "v": "AMAT",
    "type": "covers",
    "label": "",
-   "w": 7
+   "w": 14
   },
   {
    "u": "broker:Redburn",
@@ -4734,14 +4784,14 @@
    "v": "AMD",
    "type": "covers",
    "label": "",
-   "w": 73
+   "w": 74
   },
   {
    "u": "broker:UBS",
    "v": "AMD",
    "type": "covers",
    "label": "",
-   "w": 82
+   "w": 83
   },
   {
    "u": "broker:JPM",
@@ -4762,7 +4812,7 @@
    "v": "AMD",
    "type": "covers",
    "label": "",
-   "w": 21
+   "w": 23
   },
   {
    "u": "broker:Citi",
@@ -4783,7 +4833,7 @@
    "v": "AMD",
    "type": "covers",
    "label": "",
-   "w": 8
+   "w": 10
   },
   {
    "u": "broker:Redburn",
@@ -4811,7 +4861,7 @@
    "v": "AMD",
    "type": "covers",
    "label": "",
-   "w": 14
+   "w": 15
   },
   {
    "u": "broker:KeyBanc",
@@ -5301,7 +5351,7 @@
    "v": "ASML",
    "type": "covers",
    "label": "",
-   "w": 15
+   "w": 17
   },
   {
    "u": "broker:Bernstein",
@@ -6284,6 +6334,13 @@
    "w": 4
   },
   {
+   "u": "broker:Barclays",
+   "v": "DELL",
+   "type": "covers",
+   "label": "",
+   "w": 5
+  },
+  {
    "u": "broker:Bernstein",
    "v": "DELL",
    "type": "covers",
@@ -6547,7 +6604,7 @@
    "v": "GOOG",
    "type": "covers",
    "label": "",
-   "w": 45
+   "w": 47
   },
   {
    "u": "broker:UBS",
@@ -6590,6 +6647,13 @@
    "type": "covers",
    "label": "",
    "w": 22
+  },
+  {
+   "u": "broker:DB",
+   "v": "GOOG",
+   "type": "covers",
+   "label": "",
+   "w": 6
   },
   {
    "u": "broker:Barclays",
@@ -6708,7 +6772,7 @@
    "v": "HPE",
    "type": "covers",
    "label": "",
-   "w": 8
+   "w": 12
   },
   {
    "u": "broker:Bernstein",
@@ -6827,7 +6891,7 @@
    "v": "INTC",
    "type": "covers",
    "label": "",
-   "w": 15
+   "w": 17
   },
   {
    "u": "broker:Jefferies",
@@ -6904,7 +6968,7 @@
    "v": "INTC",
    "type": "covers",
    "label": "",
-   "w": 53
+   "w": 58
   },
   {
    "u": "broker:Barrons",
@@ -6995,7 +7059,7 @@
    "v": "KLAC",
    "type": "covers",
    "label": "",
-   "w": 55
+   "w": 65
   },
   {
    "u": "broker:JPM",
@@ -8801,35 +8865,35 @@
    "v": "SAMSUNG",
    "type": "covers",
    "label": "",
-   "w": 46
+   "w": 48
   },
   {
    "u": "broker:UBS",
    "v": "SAMSUNG",
    "type": "covers",
    "label": "",
-   "w": 37
+   "w": 38
   },
   {
    "u": "broker:JPM",
    "v": "SAMSUNG",
    "type": "covers",
    "label": "",
-   "w": 84
+   "w": 85
   },
   {
    "u": "broker:MS",
    "v": "SAMSUNG",
    "type": "covers",
    "label": "",
-   "w": 28
+   "w": 29
   },
   {
    "u": "broker:Jefferies",
    "v": "SAMSUNG",
    "type": "covers",
    "label": "",
-   "w": 62
+   "w": 64
   },
   {
    "u": "broker:Citi",
@@ -8892,7 +8956,7 @@
    "v": "SAMSUNG",
    "type": "covers",
    "label": "",
-   "w": 166
+   "w": 169
   },
   {
    "u": "broker:BofA",
@@ -9116,14 +9180,14 @@
    "v": "SMIC",
    "type": "covers",
    "label": "",
-   "w": 11
+   "w": 10
   },
   {
    "u": "broker:JPM",
    "v": "SMIC",
    "type": "covers",
    "label": "",
-   "w": 17
+   "w": 16
   },
   {
    "u": "broker:MS",
@@ -9145,6 +9209,13 @@
    "type": "covers",
    "label": "",
    "w": 18
+  },
+  {
+   "u": "broker:SemiAnalysis",
+   "v": "SMIC",
+   "type": "covers",
+   "label": "",
+   "w": 8
   },
   {
    "u": "broker:BofA",
@@ -9361,7 +9432,7 @@
    "v": "SPOT",
    "type": "covers",
    "label": "",
-   "w": 3
+   "w": 7
   },
   {
    "u": "broker:DB",
@@ -9865,14 +9936,14 @@
    "v": "TXN",
    "type": "covers",
    "label": "",
-   "w": 16
+   "w": 19
   },
   {
    "u": "broker:MS",
    "v": "TXN",
    "type": "covers",
    "label": "",
-   "w": 3
+   "w": 5
   },
   {
    "u": "broker:Jefferies",

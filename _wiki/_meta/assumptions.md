@@ -1,6 +1,6 @@
 # Canonical assumptions — one number per debate
 
-_Generated 2026-07-19 from `_data/assumptions.json` (asof 2026-07-13). Every cross-page industry number lives here once, with all sourced variants. When a new source disagrees, add a variant to the JSON — never silently rebase a page. Rebuild: `py _wiki/_tools/build_assumptions.py`._
+_Generated 2026-07-20 from `_data/assumptions.json` (asof 2026-07-20). Every cross-page industry number lives here once, with all sourced variants. When a new source disagrees, add a variant to the JSON — never silently rebase a page. Rebuild: `py _wiki/_tools/build_assumptions.py`._
 
 ## Custom-ASIC vs merchant-GPU share of AI accelerators  `asic-vs-gpu-share`
 
@@ -41,7 +41,7 @@ _ASIC/XPU vs merchant-GPU split of AI accelerator shipments — ALWAYS state bas
 
 _Total wafer-fab equipment market ($bn) by calendar year._
 
-**Canonical:** CY26 ~$140-160B (all sources agree). CY27: house $180-215B vs MS ~$191B vs UBS $200B. CY28 is the genuine conflict: house top end $260B vs UBS $250B vs MS-implied ~$230-240B; skeptic ceiling 'never $300B' (ex-Samsung foundry EVP). Swing variable = memory-capex intensity + EUV availability post-2027 + first NAND greenfield (CY28).
+**Canonical:** CY26 ~$140-160B (all sources agree; Bernstein 148 incl WLP). CY27: house $180-215B vs MS ~$191B vs UBS $200B vs Bernstein base $175B (street low). CY28 is the genuine conflict: house top end $260B vs UBS $250B vs MS-implied ~$230-240B vs Bernstein base $198B; skeptic ceiling 'never $300B' (ex-Samsung foundry EVP) now directly challenged by Bernstein's GW-frame (50GW scenario: $245B/28, $291B/29, '$300B+ doable'). Swing variable = memory-capex intensity + EUV availability post-2027 + first NAND greenfield (CY28). Conversion card: ~$7.5-8B WFE per incremental GW/yr of DC additions capability (~46-50k WSPM/GW, compute-TDP basis).
 
 > ⚠️ **Scope:** House CY28 top-of-range ($260B) sits ABOVE street — this is a deliberate house-vs-street edge, tracked, not an error.
 
@@ -56,6 +56,8 @@ _Total wafer-fab equipment market ($bn) by calendar year._
 | house CY28 $260B implies ASML ~110-120 EUV shipments 2028 (vs supply chain sized ~90; JPM: 110+ possible without new buildings) | Capstone reconciliation (Memory_supply_demand.xlsx EUV tab, sec.9) | 2026-07-01 | house-vs-street bridge |
 | 'never $300B' ceiling | former Samsung foundry EVP (expert call) | 2026-06-30 | skeptic ceiling |
 | buy-side bottoms-up EUV units 65/100/112 (2026/27/28E) vs BBG ccs 65/89/101; ArFi 131/182/205 vs 123/145/156; DRAM the swing (incremental DRAM EUV tools 19/41/51) | Bristlemoon Global Fund Quarterly | 2026-06-30 | buy-side EUV/DUV units vs consensus |
+| $148B CY26 / $175B CY27 / $198B CY28 base — street LOW, incl WLP ~$9-11B/yr (segments 28E: logic 93, DRAM 71, NAND 23, WLP 11) | Bernstein Rasgon, 'How much WFE to reach AI nirvana' | 2026-07-20 | street conservative base |
+| GW-frame: ~$7.5-8B WFE per incremental GW/yr (~46-50k WSPM/GW: DRAM 53%/NAND 20%/HBM 16%/logic 11%); 50GW scenario = $200/245/291B CY27-29 (cum $736B incl $120B/yr non-AI baseline), back-loaded (2027 capped at 200 in all scenarios); 100GW -> $542B CY29. '$300B+ doable' | Bernstein Rasgon, 'How much WFE to reach AI nirvana' | 2026-07-20 | GW-scenario frame (bull, compute-TDP GW basis) |
 
 **Debate:** CY28: house $260B top vs street $230-250B. Resolves on memory greenfield timing + EUV shipments. UNIT BRIDGE (2026-07-01): believing house $260B = believing ASML flexes to ~110-120 EUV ships in 2028 (above the ~90 supply-chain sizing; JPM says 110+ feasible). Base bottom-up demand supports ~88-95; the gap = faster DRAM node migration + 2029 pre-provisioning.
 
@@ -211,6 +213,7 @@ _Annualized $ revenue (or rental rate) per GW of AI compute capacity — state c
 - `themes/ai-datacenter-power.md` — …ve DC deployed 2026-30E (~$5.3T at ~$50B/GW, ~4x 2025-26 combined); DC to drive >50-60% of US power cap…
 - `themes/hbm-memory.md` — …vated" as a key AI-DC-capex input; ~$50B/GW includes rising memory content (Mizuho "DC Capex Ramping to…
 - `themes/hyperscaler-capex.md` — …~$1T CY2030 ⇒ **24.2GW of DC at ~$31.3B/GW**; GS's $1T-hyperscaler-capex-2027 with ~40-50% to memory a…
+- `themes/semicap-wfe.md` — …0 rack = 220kW compute-TDP → 4,545 racks/GW × ~65 wafers/rack, plus non-rack legs — agentic CPUs ~1.4M…
 - `themes/tokenmaxxing.md` — …quadruple peers' revenue-per-MW** (~$50B/GW of annual revenue; **200MW ≈ >$10B/yr**), with a 90-day bil…
 
 ## HBM — capacity, pricing, allocation, sold-out claims  `hbm-cycle`
@@ -248,7 +251,7 @@ _HBM wafer capacity, $/GB or $/Gb pricing (state which), allocation priority, so
 - `themes/cowos-packaging.md` — …mpute die + smaller I/O die, **6x 12-Hi HBM3e = 216GB**, 3nm, ~$15k ASP, ships end-C26 with volume in 2H27 (Jefferies "Revisiting o…
 - `themes/custom-asic-tpu.md` — …roadcom charges the hyperscaler for the HBM** — so with HBM pricing rocketing (NVDA $17–18/GB 2026 → $30–32 2027), cutting HBM…
 - `themes/cxl-memory-fabric.md` — …e AI memory bottleneck is shifting from HBM allocation to *fabric architecture*, which makes CXL a front-burner th…
-- `themes/semicap-wfe.md` — …) and the demand-side beneficiary (DRAM/HBM/NAND pricing + KV-cache NAND tier). | Strongly positive. UBS (Arcuri) PT…
+- `themes/semicap-wfe.md` — …tal intensity (**adv logic $3.4B / DRAM-HBM $1.4B / NAND $1.3B per 10k WSPM**) ⇒ **~$7.5-8B WFE per incremental GW/yr**. Their publishe…
 
 ## NVDA GPU units / GW shipped per year  `nvda-units-gw`
 
@@ -348,4 +351,23 @@ _QoQ contract-price growth for conventional DRAM, 2H26._
 
 **Unreconciled sightings** (pages matching this metric, not in the ledger's `cited_in`):
 - `MU.md` — …are-competition reasons. (Her base-case DRAM price view is the market's most conservative: Q3 +8-13% / Q4 +3-8%, with gut-feel upside to Q3 >+20% and Q4 +10-15% — vs…
+
+## Server-CPU TAM / unidades — o leg agentic  `server-cpu-tam`
+
+_TAM de CPU-silicio de servidor (merchant + captive + Grace/Vera) e unidades — SEMPRE declarar basis ($ TAM vs unidades; mercado total vs hyperscaler-only)._
+
+**Canonical:** TRES construcoes independentes convergem em CY26 (~$50-55bn) e divergem no timing do 1:1 agentic: (1) unidades bottom-up — JPM proprietario 26M (2025) -> 68M (2028), agentic 155% CAGR; house build (Bottom_Up_Capex v2, unidades x ASP c/ hikes Sherman) ~$55bn CY26 / ~$96bn CY27 (CPU-silicio total); (2) capex-ratio top-down — Bernstein/Rasgon 06-16: $37bn 2025 -> $137bn 2030 BASE, $223bn BULL (premissas: $3.5T AI-DC capex + pareamento 1:1 CPU:GPU em inferencia); (3) UBS bottoms-up: ~$175bn em 2030. House 2030 ~$180-200bn = entre base e bull do Rasgon. TSMC 2Q26 (C.C. Wei): 'agentic AI = resurgence of CPUs... x86, ARM ou RISC-V, quase todos clientes TSMC'.
+
+> ⚠️ **Scope:** Basis traps: TAM $ total-mercado (Bernstein/UBS) vs hyperscaler-only (house ex-enterprise); unidades (JPM) precisam de ASP p/ virar $ (hikes Sherman +15-20% x2 em 2026); Vera/Grace CONTAM no TAM mas moram dentro da receita Compute da NVDA (nao somar 2x em contas de capex); ARM $22bn ate CY30 = ARM-as-CPU-maker (Bernstein), != royalties.
+
+| Value | Source | Date | Scope |
+|---|---|---|---|
+| 26M (2025) -> 36M (2026E interp) -> 49M (2027E interp) -> 68M (2028), 38% CAGR; agentic-AI CPUs 155% CAGR | JPM proprietary server-CPU model (Hung/Hariharan) | 2026-07-12 | unidades, mercado total |
+| $37bn 2025 -> $137bn 2030 BASE; $223bn BULL (1:1 CPU:GPU @ $3.5T capex); ARM $22bn CY30; PTs ARM $500/AMD $600/INTC $100 | Bernstein Rasgon | 2026-06-16 | $ TAM, mercado total |
+| ~$175bn server-CPU market 2030 (bottoms-up) | UBS (via ARM.md) | 2026-06 | $ TAM 2030 |
+| ~$55bn CY26 / ~$96bn CY27 / ~$137bn CY28 (CPU-silicio total incl Vera+enterprise; motor por familia: JPM units x ASP) | Capstone Bottom_Up_Capex v2 'BU | CPU & Servidores' | 2026-07-17 | house build |
+| Vera standalone ~$20bn F2H27 (~4-5M un @ $4-5k, ~metade standalone); 500k 2026 -> 3M 2027 (JPM) / ate 5.5M (UBS) | BofA Core Wars / JPM Jay / UBS Sunny Lin | 2026-07-13 | NVDA Vera |
+| server CPUs podem exigir ~200 kwpm de leading edge; server-CPU-maker TAM $4bn'25 -> $44bn'30E (ARM-as-maker leg) | Bernstein complex (briefing) | 2026-05-21 | wafer/ARM-maker leg |
+
+**Debate:** Timing do 1:1 agentic: house build chega ao NIVEL do bull-2030 do Rasgon ja em 27-28 (ratio 1.31-1.35x vs bull path) — ou o house front-loada demais (hikes+unidades compostas), ou o path do Rasgon e back-loaded. Resolve nos prints de server CPU 2H26 (AMD guide >70% y/y; Intel 80-90% fulfillment) e na rampa Vera. Cross de wafer: CPUs ~5-9 kwpm N3/N2 no house CY26-27 vs '200 kwpm' do complexo Bernstein (basis a reconciliar — provavelmente all-leading-edge cumulativo).
 

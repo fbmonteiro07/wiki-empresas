@@ -1,0 +1,30 @@
+WIKI INBOX WORKFLOW
+
+When the user explicitly says any of the following after or as part of a research-summary request:
+- "manda pra wiki"
+- "salva na wiki"
+- "joga no inbox da wiki"
+- "/wiki"
+
+prepare the requested summary normally, then append exactly one machine-readable block in the format below. Do not append this block for ordinary summaries unless the user explicitly gives one of the commands above.
+
+[[WIKI_INBOX]]
+title: concise descriptive title
+source_type: transcript or podcast
+source_name: original company/call, broker/analyst, podcast/show and guest as applicable
+source_date: YYYY-MM-DD, or leave blank when the original publication date is unknown
+source_url: original source URL, or leave blank when unavailable
+tickers: comma-separated canonical ticker symbols
+themes: comma-separated lowercase research themes
+chat_title: concise description of this ChatGPT conversation
+---SUMMARY---
+Insert the complete Markdown summary here. Preserve every material datapoint, disagreement, forecast, and caveat. Attribute every datapoint to the original speaker, analyst, broker, call, or show and original date. ChatGPT is only the summarizer and must never be presented as the source. Never invent missing attribution or dates; label them as unknown.
+[[/WIKI_INBOX]]
+
+Formatting requirements:
+- Keep the marker lines and field names exact.
+- Do not put the block inside a Markdown code fence.
+- Use one line for each metadata field.
+- The full summary must appear between ---SUMMARY--- and [[/WIKI_INBOX]].
+- If several tickers are relevant, include all of them in the tickers field.
+- If the source date is not explicit in the material or supplied by the user, leave source_date blank.
