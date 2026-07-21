@@ -1,6 +1,6 @@
 {
  "asof": "2026-07-21",
- "generated": "2026-07-21T15:18:21",
+ "generated": "2026-07-21T17:55:19",
  "new_models": [],
  "neoclouds": [
   {
@@ -467,9 +467,9 @@
   }
  ],
  "product_mix": {
-  "input_pct": 0.9711840731239,
-  "output_pct": 0.028815926876099966,
-  "ratio": 33.70303087246531,
+  "input_pct": 0.9711834057066052,
+  "output_pct": 0.028816594293394768,
+  "ratio": 33.70222712019846,
   "modality": [
    {
     "name": "text",
@@ -498,7 +498,7 @@
     "pct": 0.02286344531417804
    }
   ],
-  "workload_coverage_pct": 0.2931288351957758
+  "workload_coverage_pct": 0.2931259408999069
  },
  "system_growth": {
   "token_series": [
@@ -512,25 +512,25 @@
    },
    {
     "date": "2026-07-21",
-    "tokens_mo_T": 265.0650210887143
+    "tokens_mo_T": 265.06763831390145
    }
   ],
-  "blend_per_mtok": 0.9326405828115764,
+  "blend_per_mtok": 0.9326313741037937,
   "cost_series": [
    {
     "date": "2026-03",
-    "cost_mo_musd": 7.834180895617242,
-    "cost_yr_busd": 0.0940101707474069
+    "cost_mo_musd": 7.834103542471867,
+    "cost_yr_busd": 0.09400924250966242
    },
    {
     "date": "2026-05",
-    "cost_mo_musd": 93.26405828115763,
-    "cost_yr_busd": 1.1191686993738914
+    "cost_mo_musd": 93.26313741037937,
+    "cost_yr_busd": 1.1191576489245525
    },
    {
     "date": "2026-07-21",
-    "cost_mo_musd": 247.21039575114125,
-    "cost_yr_busd": 2.966524749013695
+    "cost_mo_musd": 247.2103957511413,
+    "cost_yr_busd": 2.9665247490136957
    }
   ],
   "spend_points": [
@@ -545,7 +545,7 @@
     "src": "reported snapshot (~$0.9B/yr GMV)"
    }
   ],
-  "run_rate_quad_yr": 3.1807802530645715,
+  "run_rate_quad_yr": 3.180811659766817,
   "token_points_meta": [
    {
     "date": "2026-03",
@@ -569,20 +569,23 @@
   ]
  },
  "platform": {
-  "tokens_week": 61848504920700.0,
-  "tokens_month_run_rate": 265065021088714.28,
-  "daily_tokens": 8835500702957.143,
+  "tokens_week": 61849115606577.0,
+  "tokens_month_run_rate": 265067638313901.44,
+  "daily_tokens": 8835587943796.715,
+  "tokens_7d_observed": 61849115606577.0,
+  "tokens_30d_observed": 221334604821816.0,
+  "token_momentum_weekly": 0.19758787166287184,
   "paid_tokens_week": 45898471884182.0,
-  "requests_week": 3493286860.0,
+  "requests_week": 3493548834.0,
   "revenue_week": 57682425.675266296,
   "revenue_month_run_rate": 247210395.75114125,
   "revenue_annualized": 3007726481.6388855,
   "revenue_month_cache50": 147928759.80762875,
   "revenue_month_cache70": 108216105.43022376,
-  "priced_coverage": 0.9999999974456941,
-  "input_ratio": 33.70303087246531,
-  "free_token_pct": 0.2578838542570785,
-  "blended_price_per_mtok": 0.9326405828115764
+  "priced_coverage": 0.9999918942724875,
+  "input_ratio": 33.70222712019846,
+  "free_token_pct": 0.2578830785911982,
+  "blended_price_per_mtok": 0.9326313741037937
  },
  "anchors": {
   "reported_tokens_per_month_T": 100,
@@ -607,6 +610,10 @@
   "platform_tokens_vs_anchor": [
    "INFO",
    "computed ~265T tok/mo vs OR-reported ~100T/mo (2026-05); tokens ~2.7x since => on-trend"
+  ],
+  "weekly_token_momentum_basis": [
+   "PASS",
+   "OpenRouter all-row observed 7d 61.8T vs 30d 221.3T text tokens (same cutoff 2026-07-20 00:00:00; unmatched catalog rows 7d=0, 30d=0); 7d-vs-30d momentum = (7d/7) / (30d/30) - 1 = +19.8%. Overlapping windows, not strict WoW."
   ],
   "implied_$_is_a_CEILING": [
    "WARN",
