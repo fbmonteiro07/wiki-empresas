@@ -338,9 +338,79 @@ def build():
         except Exception:
             pass
 
+    # ---- product mix (what the system runs) ----
+    lr = latest_rows(wk)
+    by_mod = defaultdict(float)
+    for r in lr:
+        ps = r["model_permaslug"]
+        t = f(r.get("total_prompt_tokens")) + f(r.get("total_completion_tokens"))
+        c = cat.get(ps) or cat.get(stripv(ps))
+        outs = None
+        for cc in catalog:
+            if cc.get("permaslug") == ps or cc.get("slug") == ps:
+                outs = cc.get("output_modalities"); break
+        outs = outs or (["text"] if (c is None or c["is_text"]) else [])
+        bucket = "text" if "text" in outs else ("image" if "image" in outs else ("audio" if "audio" in outs else "embedding/other"))
+        by_mod[bucket] += t
+    mod_total = sum(by_mod.values()) or 1.0
+
+    def workload_bucket(cats):
+        s = " ".join(cats).lower()
+        if any(k in s for k in ["roleplay", "companion", "character", "creative", "story", "game"]):
+            return "Roleplay / creative"
+        if any(k in s for k in ["cod", "program", "cli-agent", "ide", "agent", "app-builder", "dev"]):
+            return "Coding / agentic"
+        if any(k in s for k in ["chat", "assistant", "search", "writing", "productivity", "general"]):
+            return "Chat / assistant"
+        return "Other / unlabeled"
+
+    by_wl = defaultdict(float)
+    appsum = 0.0
+    for a in apps:
+        b = workload_bucket(a.get("categories", []))
+        by_wl[b] += a["tokens_week"]; appsum += a["tokens_week"]
+    appsum = appsum or 1.0
+
+    product_mix = {
+        "input_pct": wk_st["prompt_tok"] / (wk_st["prompt_tok"] + wk_st["comp_tok"]) if wk_st["comp_tok"] else 0,
+        "output_pct": wk_st["comp_tok"] / (wk_st["prompt_tok"] + wk_st["comp_tok"]) if wk_st["comp_tok"] else 0,
+        "ratio": input_ratio,
+        "modality": [{"name": k, "pct": v / mod_total} for k, v in sorted(by_mod.items(), key=lambda kv: -kv[1])],
+        "workload": [{"name": k, "pct": v / appsum} for k, v in sorted(by_wl.items(), key=lambda kv: -kv[1])],
+        "workload_coverage_pct": appsum / plat_text_tok if plat_text_tok else 0,
+    }
+
+    # ---- total-system growth (external anchors + our computed run-rate) ----
+    sg = {}
+    sgp = OR / "system_growth.json"
+    if sgp.is_file():
+        sg = json.loads(sgp.read_text(encoding="utf-8"))
+    tok_series = {}
+    for p in sg.get("token_points", []):
+        if p.get("plot"):
+            tok_series[p["date"]] = p["tokens_mo_T"]
+    if hp_prior := (OR / "history.jsonl"):
+        if hp_prior.is_file():
+            for ln in hp_prior.read_text(encoding="utf-8").splitlines():
+                ln = ln.strip()
+                if ln:
+                    try:
+                        rec = json.loads(ln)
+                        tok_series[rec["date"]] = rec["tokens_week"] / 7.0 * 30.0 / 1e12
+                    except (ValueError, KeyError):
+                        pass
+    tok_series[asof] = tokens_month / 1e12
+    system_growth = {
+        "token_series": [{"date": d, "tokens_mo_T": tok_series[d]} for d in sorted(tok_series)],
+        "spend_points": sg.get("spend_points", []),
+        "run_rate_quad_yr": tokens_month * 12 / 1e15,
+        "token_points_meta": sg.get("token_points", []),
+    }
+
     out = {
         "asof": asof, "generated": dt.datetime.now().isoformat(timespec="seconds"),
         "new_models": new_models, "neoclouds": neoclouds,
+        "product_mix": product_mix, "system_growth": system_growth,
         "platform": {
             "tokens_week": plat_text_tok, "tokens_month_run_rate": tokens_month, "daily_tokens": plat_text_tok / 7.0,
             "paid_tokens_week": wk_st["paid_tok"], "requests_week": wk_st["reqs"],

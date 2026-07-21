@@ -1,0 +1,12 @@
+{
+  "_comment": "Hand-editable. Total-OpenRouter-system growth anchors. Token points with plot=true feed the growth chart (merged with our computed monthly run-rate from history.jsonl); the Mar point is chart-excluded (plot=false) because it is a different/earlier basis (2.5M users, and $83M/8.4T implies an absurd $9.9/Mtok — not same-basis as later points). Spend points power the 'tokens exploding, spend flat -> price collapsing' insight.",
+  "token_points": [
+    {"date": "2026-03", "tokens_mo_T": 8.4, "plot": false, "src": "reported (~2.5M users) — earlier/different basis, chart-excluded"},
+    {"date": "2026-05", "tokens_mo_T": 100, "plot": true, "src": "reported (~8M users); Menlo/press ~1.5 quadrillion/yr run-rate"},
+    {"date": "2026-07-21", "tokens_mo_T": 265, "plot": true, "src": "computed from rankings feed (~3.2 quadrillion tokens/yr)"}
+  ],
+  "spend_points": [
+    {"date": "2026-03", "spend_mo_musd": 83, "src": "derived: Sacra ~$50M annualized OR-revenue / ~5% take / 12"},
+    {"date": "2026-06", "spend_mo_musd": 76, "src": "reported snapshot (~$0.9B/yr GMV)"}
+  ]
+}

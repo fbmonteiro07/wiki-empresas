@@ -1,6 +1,6 @@
 {
  "asof": "2026-07-21",
- "generated": "2026-07-21T11:23:38",
+ "generated": "2026-07-21T14:38:49",
  "new_models": [],
  "neoclouds": [
   {
@@ -466,6 +466,85 @@
    "spread_in": 1.0
   }
  ],
+ "product_mix": {
+  "input_pct": 0.9711840731239,
+  "output_pct": 0.028815926876099966,
+  "ratio": 33.70303087246531,
+  "modality": [
+   {
+    "name": "text",
+    "pct": 0.993258178491074
+   },
+   {
+    "name": "embedding/other",
+    "pct": 0.0066356974422540314
+   },
+   {
+    "name": "image",
+    "pct": 0.00010612406667195114
+   }
+  ],
+  "workload": [
+   {
+    "name": "Coding / agentic",
+    "pct": 0.9348349405801639
+   },
+   {
+    "name": "Roleplay / creative",
+    "pct": 0.042301614105658046
+   },
+   {
+    "name": "Other / unlabeled",
+    "pct": 0.02286344531417804
+   }
+  ],
+  "workload_coverage_pct": 0.2931288351957758
+ },
+ "system_growth": {
+  "token_series": [
+   {
+    "date": "2026-05",
+    "tokens_mo_T": 100
+   },
+   {
+    "date": "2026-07-21",
+    "tokens_mo_T": 265.0650210887143
+   }
+  ],
+  "spend_points": [
+   {
+    "date": "2026-03",
+    "spend_mo_musd": 83,
+    "src": "derived: Sacra ~$50M annualized OR-revenue / ~5% take / 12"
+   },
+   {
+    "date": "2026-06",
+    "spend_mo_musd": 76,
+    "src": "reported snapshot (~$0.9B/yr GMV)"
+   }
+  ],
+  "run_rate_quad_yr": 3.1807802530645715,
+  "token_points_meta": [
+   {
+    "date": "2026-03",
+    "tokens_mo_T": 8.4,
+    "plot": false,
+    "src": "reported (~2.5M users) \u2014 earlier/different basis, chart-excluded"
+   },
+   {
+    "date": "2026-05",
+    "tokens_mo_T": 100,
+    "plot": true,
+    "src": "reported (~8M users); Menlo/press ~1.5 quadrillion/yr run-rate"
+   },
+   {
+    "date": "2026-07-21",
+    "tokens_mo_T": 265,
+    "plot": true,
+    "src": "computed from rankings feed (~3.2 quadrillion tokens/yr)"
+   }
+  ]
+ },
  "platform": {
   "tokens_week": 61848504920700.0,
   "tokens_month_run_rate": 265065021088714.28,

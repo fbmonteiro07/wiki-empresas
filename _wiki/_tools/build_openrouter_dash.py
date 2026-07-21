@@ -421,6 +421,78 @@ for a in apps[:15]:
         '<div class="barval">%s/wk</div></div>' % (esc(a["title"]), esc(", ".join(a.get("categories", [])[:2])), a["tokens_week"] / amx * 100, tok(a["tokens_week"])))
 apps_html = "".join(arows)
 
+# ---------- TOTAL SYSTEM GROWTH ----------
+sysg = D.get("system_growth", {})
+ts = sysg.get("token_series", [])
+spend_pts = sysg.get("spend_points", [])
+mult_may = None
+may = next((p["tokens_mo_T"] for p in ts if p["date"] == "2026-05"), None)
+now_t = ts[-1]["tokens_mo_T"] if ts else plat["tokens_month_run_rate"] / 1e12
+if may:
+    mult_may = now_t / may
+gtiles = [
+    ("System run-rate", "%.0fT/mo" % now_t, "~%.1f quadrillion tokens/yr" % sysg.get("run_rate_quad_yr", 0)),
+    ("Growth", ("%.1f×" % mult_may) if mult_may else "n/a", "tokens/mo since May 2026"),
+    ("Realized spend", "$%.0fM/mo" % (spend_pts[-1]["spend_mo_musd"] if spend_pts else 0), "reported (~$0.9B/yr GMV) — ~flat since Mar"),
+    ("Price per token", "collapsing", "tokens ~%.1f× while $ ~flat ⇒ $/tok falling" % (mult_may or 0)),
+]
+gtiles_html = "".join('<div class="tile"><div class="tlabel">%s</div><div class="tval">%s</div><div class="tsub">%s</div></div>' % (esc(a), esc(b), esc(c)) for a, b, c in gtiles)
+GW, GH, GPL, GPB, GPT, GPR = 660, 210, 52, 30, 14, 66
+GPWi, GPHi = GW - GPL - GPR, GH - GPT - GPB
+gsvg = ""
+if len(ts) >= 2:
+    gmax = max(p["tokens_mo_T"] for p in ts) * 1.15
+    n = len(ts) - 1
+    def gx(i):
+        return GPL + (i / n) * GPWi
+    def gy(v):
+        return GPT + GPHi - (v / gmax) * GPHi
+    s = ['<svg viewBox="0 0 %d %d" width="100%%" role="img" aria-label="OpenRouter total tokens per month over time" font-family="system-ui,-apple-system,Segoe UI,sans-serif">' % (GW, GH)]
+    gstep = 100 if gmax <= 350 else 200
+    v = 0
+    while v <= gmax:
+        y = gy(v)
+        s.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="var(--grid)" stroke-width="1"/>' % (GPL, y, GPL + GPWi, y))
+        s.append('<text x="%d" y="%.1f" fill="var(--muted)" font-size="11" text-anchor="end">%dT</text>' % (GPL - 6, y + 3, v))
+        v += gstep
+    pathpts = " ".join("%s%.1f %.1f" % ("M" if k == 0 else "L", gx(k), gy(p["tokens_mo_T"])) for k, p in enumerate(ts))
+    s.append('<path d="%s" fill="none" stroke="var(--s1)" stroke-width="2.5"/>' % pathpts)
+    for k, p in enumerate(ts):
+        s.append('<circle cx="%.1f" cy="%.1f" r="4" fill="var(--s1)"><title>%s — %.0fT/mo</title></circle>' % (gx(k), gy(p["tokens_mo_T"]), esc(p["date"]), p["tokens_mo_T"]))
+        s.append('<text x="%.1f" y="%.1f" fill="var(--ink)" font-size="10.5" text-anchor="middle">%.0fT</text>' % (gx(k), gy(p["tokens_mo_T"]) - 9, p["tokens_mo_T"]))
+        s.append('<text x="%.1f" y="%d" fill="var(--muted)" font-size="10.5" text-anchor="middle">%s</text>' % (gx(k), GH - 8, esc(p["date"][:7])))
+    s.append('</svg>')
+    gsvg = "".join(s)
+
+# ---------- SHARE BY PRODUCT ----------
+pm = D.get("product_mix", {})
+io_in, io_out = pm.get("input_pct", 0), pm.get("output_pct", 0)
+io_bar = ('<div style="display:flex;height:26px;border-radius:5px;overflow:hidden;font-size:11.5px;font-weight:700;color:#fff">'
+          '<div style="width:%.1f%%;background:var(--s1);display:flex;align-items:center;justify-content:center">input %.0f%%</div>'
+          '<div style="width:%.1f%%;background:var(--s4);display:flex;align-items:center;justify-content:center">out %.0f%%</div></div>' % (
+              io_in * 100, io_in * 100, io_out * 100, io_out * 100))
+wl = pm.get("workload", [])
+wlmax = max((w["pct"] for w in wl), default=1) or 1
+wl_html = "".join(
+    '<div class="barrow2"><div class="barname">%s</div><div class="bartrack"><div class="barfill" style="width:%.1f%%;background:var(--s2)"></div></div><div class="barval">%s</div></div>' % (
+        esc(w["name"]), w["pct"] / wlmax * 100, pct(w["pct"], 0)) for w in wl)
+mod_txt = " · ".join("%s %s" % (esc(m["name"]), pct(m["pct"], 2 if m["pct"] < 0.01 else 1)) for m in pm.get("modality", []))
+
+# assemble the growth + product-mix + io-math section (pre-formatted; no % in the BODY concat)
+GROWTH_PRODUCT = (
+    '<h2>Total system growth</h2>'
+    '<p class="sub">OpenRouter\'s whole token pie, monthly run-rate. The line accumulates one point per weekly snapshot; May-2026 is a reported anchor (~8M users); the Mar ~8.4T figure is a different/earlier basis and is excluded.</p>'
+    '<div class="tiles">' + gtiles_html + '</div>'
+    '<div class="card">' + gsvg
+    + ('<p class="note" style="margin-top:8px"><b>The tell:</b> OpenRouter processed <b>~%.1f×</b> more tokens May→now while reported spend stayed ~flat ($83M Mar → $76M Jun) — so the <b>blended price per token is collapsing</b> as free tiers and cheap open models take the marginal token. Volume is exploding; realized revenue per token is not.</p></div>' % (mult_may or 0))
+    + '<h2>What the system runs — share by product</h2>'
+    '<p class="sub">Three cuts of the same token volume: by phase (input vs output), by workload, and by modality.</p>'
+    '<div class="grid2"><div class="card"><div class="tlabel" style="margin-bottom:6px">By phase — input vs output tokens</div>' + io_bar
+    + ('<p class="note" style="margin-top:8px">The system is <b>%.0f%% input tokens (%.1f:1)</b> — the fingerprint of coding/agentic traffic (huge context in, small answer out), and the single biggest driver of serving margin (see note below).</p></div>' % (io_in * 100, pm.get("ratio", 0)))
+    + ('<div class="card"><div class="tlabel" style="margin-bottom:6px">By workload <span class="mut">(top-20 apps = %.0f%% of system tokens)</span></div>' % (pm.get("workload_coverage_pct", 0) * 100)) + wl_html
+    + ('<p class="note" style="margin-top:8px">Modality: %s. Coding/agentic dominates the app-attributable volume; the rest is unlabeled long-tail.</p></div></div>' % mod_txt)
+    + ('<div class="callout"><b>How the input/output math is decided.</b> The mix is <b>observed, not assumed</b>: every model row in OpenRouter\'s feed reports <code>total_prompt_tokens</code> and <code>total_completion_tokens</code>; the ratio is their quotient (platform %.1f:1; Anthropic 65:1, DeepSeek 20:1, Xiaomi 113:1). It drives margin through two asymmetries — <b>cost:</b> serving input (prefill: parallel, compute-bound) runs ~5× cheaper per token than output (decode: sequential, HBM-bandwidth-bound), per DeepSeek\'s own disclosure (73.7k vs 14.8k tok/s/node); <b>price:</b> providers list input at ~20-35%% of the output price. Input-heavy traffic therefore stacks cheap-to-serve tokens priced above cost → structurally fat blended margin. The serving-margin model blends at <b>each lab\'s own observed mix</b> — using a chat-like 3:1 where the traffic is really 20-65:1 understates margin by ~15-25 points.</div>' % pm.get("ratio", 0)))
+
 # ---------- GUARDRAILS ----------
 gmap = {"PASS": "good", "WARN": "warn", "INFO": "info", "FAIL": "crit"}
 guard_html = "".join('<tr><td><span class="gstat %s">%s</span></td><td>%s</td><td>%s</td></tr>' % (
@@ -516,6 +588,7 @@ BODY = (
     '<div class="callout warn"><b>Read this first.</b> This reconstructs an "AI-lab ARR" view from OpenRouter\'s public usage feed. It captures <b>developer/API traction routed through OpenRouter</b> — a real, high-frequency leading indicator, but a <i>slice</i> that excludes first-party enterprise API and consumer subscriptions (ChatGPT/Claude/Gemini), the bulk of frontier-lab ARR. '
     'Dollars are <b>tokens × list price with caching OFF</b>, so they are a <b>ceiling ≈ 3× realized</b> spend. <b>Lead with relative rank and share, not the absolute $.</b></div>'
     '<div class="tiles">' + tiles_html + '</div>'
+    + GROWTH_PRODUCT +
     '<h2>Is the $ real? — the ceiling vs reality</h2>'
     '<p class="sub">Implied spend priced at list with no cache credit, then with 50%/70% of input re-priced at each model\'s cache-read rate, vs OpenRouter\'s reported <i>actual</i> monthly spend. The ceiling reconciles toward reality once caching &amp; provider discounts are applied.</p>'
     '<div class="card">' + ladder_html + '<p class="note" style="margin-top:10px">OpenRouter spend was ~<b>flat</b> Mar→Jun 2026 (~$83M→$76M/mo) even as tokens ~2.7×\'d — the marginal token is cheap/free — so the gap is <b>list-vs-realized</b>, not platform growth. '
