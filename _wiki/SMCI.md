@@ -161,3 +161,6 @@ _Source: SMCI earnings calls (dates above); management commentary, paraphrased._
 
 ## Themes
 - [AI Data-Center Power & Nuclear](themes/ai-datacenter-power.md)
+
+## Changelog
+- **2026-07-23** — /wiki-ingest — **preliminary F4Q26 (Jun-end) pre-announce** (earnings call Aug 11); additive to the current intra-quarter section. **JPM · Joseph Cardoso (2026-07-21, Neutral)** — revenue toward the LOW end of the $11.0-12.5B range (~-6% below midpoint) but **GM guidance RAISED to 15-17% (from 8.2-8.4% prior)** on favorable customer/product mix → **implied EPS ≥+80% above consensus**; orders tracked to **$60bn+** (vs the $39bn intra-quarter update and Dell's $24bn); positive read-through to DELL/HPE. **Barclays · Tim Long (2026-07-21)** — Equal Weight, **PT raised to $38 from $34** (Barclays' own prior estimate — no Barclays PT was previously logged on this page, so treated as a new attributed addition, not a page thesis-drift overwrite); same prelim details (low-end rev, GM 15-17%, orders >$60bn, top-line walk-down = customer-readiness/supply constraints, limited rev-rec visibility). Added 2 intra-quarter Full-log rows (07-21), updated the Demand + Margin Sinal-vs-management rows, and extended the quarter synthesis. Created this Changelog section (page previously had none).

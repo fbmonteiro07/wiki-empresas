@@ -29,6 +29,33 @@ Power-conversion/control specialist: RF + DC power for semicap (etch/dep critica
 - 800V transition could shrink in-rack content in native deployments (sidecar loss to Delta et al.).
 - Capacity-expansion execution/utilization risk (Malaysia/Philippines/Mexico/Thailand); GM structure capped mid-40s% vs 50%+ in 2018 (BofA 2023-11-30).
 
+## Intra-quarter — calls, commentary & reports (since the last print)
+_Q2 FY26 · May 5 → Jul 22, 2026 · sell-side / expert calls / reports between earnings._
+
+**Signal vs management** — what management said on the Q1 FY26 call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
+
+| Theme | Management said (Q1 FY26 · 2026-05-04) | Intra-quarter flow | Signal |
+|---|---|---|---|
+| **Semi growth** | Semi accelerating to >30% y/y in 2H26 on stronger forecasts (eVoS/eVerest/NavX wins) | WF sees semi to high-20s/30%; MS models Semi +30%/+33% (26/27) in line with WFE +32%/+31%, AMAT+LAM shipments +41%/+33% | **✓ confirms** |
+| **Data Center (DCC)** | FY26 DCC up mid-30s% y/y | Buyside bar was >40%; WF sees FY26 DC guide going to >40%; MS models DC +41%/+49% (26/27), bull +40% above '27 base | **⚠ nuance** (flow above the mgmt guide, but DCC lumpy q/q) |
+| **800V / content** | 800V incremental content; DC-DC modules sampling, revenue 2H27/CY28 | Bear: native-800V removes in-rack AC-DC step, sidecar loss to Delta; Cantor NDR rebuttal defends stage-1 in-rack DC-DC; MS models content rising with 800V/HVDC | **⚠ contested** |
+| **Valuation** | — (n/a) | PT ladder $350 (TD Cowen, sole Hold) → $421 (MS init) → $465 (WF); 7 Buy / 1 Hold | **✓ confirms** (broad Buy) |
+
+**Síntese do quarter:** the debate is not *whether* AEIS grows but *how much idiosyncratic upside* sits on top of the WFE upcycle — MS's initiation (07-22, OW $421, CY27 EPS 14% above Street) crystallizes the bull framing (Semi + DC dual-vector, Meta ~$207mn rev/GW), while the standing skeptic (TD Cowen Hold $350) and the bear (800V in-rack content erosion, 54% customer concentration in AMAT+LAM+Meta) frame the risk. Net intra-quarter drift: **bull** (PT ladder migrated up, EW→OW upgrade at WF, new OW initiation at MS).
+
+**Full log** (all intra-quarter flow, by date):
+
+| Date | Source | Theme | Bias | What was said |
+|---|---|---|---|---|
+| 05-04 | Susquehanna · Mehdi Hosseini | valuation | bull | Positive, PT $430 (from $375; 34x CY27E $12.63); downside case $300 = 22x CY27. Multi-vector growth (Semi share + DCC + I&M). |
+| 05-05 | BofA · Vivek Arya / Duksan Jang | demanda | bull | Buy, PO $430 (from $330; 36x CY27E) — top SMid-cap pick. FY26 DCC mid-30s%, Semi >30% 2H26. |
+| 05-05 | Citi · Atif Malik / Elizabeth Sun | demanda | bull | Buy, TP $410 (from $385; 32x CY27) + 90-day positive catalyst watch. Bulls wanted more Semi post-print (stock −8%). |
+| 05-05 | Needham · James Ricchiuti | demanda | bull | Buy, PT $400 (from $330). I&M miss was capacity allocation, not demand. |
+| 06-26 | Cantor · Matthew Prisco / C.J. Muse | produto | bull | Overweight, PT $400 (initiated ~06-12, reiterated post-NDR). Rebuts 800V bear: stage-1 keeps in-rack DC-DC where AEIS is strong; sidecar likely Delta stop-gap. |
+| 07-01 | Wells Fargo · Joe Quatrochi | valuation | bull | Upgrade EW→**OW, PT $465** (from $345; 32x C2028E); added to 3Q26 Tactical Ideas. 2Q26 underperformance (+16% vs semicap +93%) = buying op; sees FY26 DC to >40%, semi to high-20s/30%. GM 40% vs 43% LT. |
+| 07-09 | TD Cowen · Krish Sankar | valuation | mixed | **Hold, PT $350** — the sole non-Buy / relative skeptic ("Earnings Preview: Puts & Takes"). |
+| 07-22 | Morgan Stanley · Shane Brett / Joseph Moore | demanda | bull | **INITIATE Overweight, PT $421** (39% upside; base 24x CY28 EPS $17.54), "No slowdown to WFE or Data Center." CY27 EPS **14% above Street**, rev growth 34% vs Street 18%, 5:1 skew. Semi +30%/+33% (in line WFE +32%/+31%; AMAT+LAM shipments +41%/+33% = 75% of AEIS '25 semi rev); DC +41%/+49% (bull +40% over '27 base); Meta ~$207mn rev/GW (58% of DC rev / ~19% of total). Bull $605 / bear $250. Risk: **54% of '25 rev from AMAT+LAM+Meta**. [Source](../relat%C3%B3rios%20bons/ADVANCED_20260722_0401.html) |
+
 ## Sources
 - BofA (Jang/Arya) "Key beneficiary of semicap/DC buildout" 2026-05-05 — Buy $430; and initiation "Power solutions specialist" 2023-11-30 — Neutral $105 (background).
 - Citi (Sun/Malik) "Full-Year Outlook Raised" 2026-05-05 — Buy $410; and US semicap sector piece "WFE Upcycle Meets AI-Led Diversification" 2026-03-19 (coverage transfer, Buy $385, +ve catalyst watch).
