@@ -13,7 +13,7 @@ _Wiki · generated 2026-06-19 · **German issuer (Prime Standard, Frankfurt; tic
 | Gross profit | €249m | €360m |
 | Gross margin | 42.8% | 44.2% |
 | EBITDA | €137m | €173m |
-| EPS | €0.81 | €1.39 |
+| EPS | €0.77 | €1.39 |
 | Capex | €34m | €34m |
 | OCF (≈EBITDA) | €137m | €173m |
 

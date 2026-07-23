@@ -11,7 +11,7 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\MCHP` (filings + trans
 | Gross profit | $3.7bn | $4.5bn |
 | Gross margin | 62.8% | 64.4% |
 | EBITDA | $2.4bn | $3.1bn |
-| EPS | $2.82 | $3.90 |
+| EPS | $2.82 | $3.92 |
 | Capex | $95m | $130m |
 | OCF (≈EBITDA) | $2.4bn | $3.1bn |
 

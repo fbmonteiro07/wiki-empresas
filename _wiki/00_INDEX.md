@@ -6,7 +6,7 @@
 >
 > 🔎 **Full-corpus search** (reports + calls + briefings + transcripts + Stratechery, not just wiki pages): `py "_wiki/_tools/search.py" <query>` (index: `py "_wiki/_tools/build_search_index.py"`).
 
-_Generated 2026-07-21 by `_tools/build_index.py` from [`_data/index_meta.json`](_data/index_meta.json) (hand-edit the json, not this file) · **100 companies + 2 private AI labs (102 pages)** · one page per ticker synthesizing all co-located sources in `E:\Wiki Felipe`: filings (10-K/10-Q/20-F) + earnings transcripts + investor-day decks + thematic equity calls (`_equity_calls`) + per-ticker roll-up of the email briefings (`_briefings/by-ticker`) + BBG consensus & street-high estimates (`_data/estimates.json`)._
+_Generated 2026-07-22 by `_tools/build_index.py` from [`_data/index_meta.json`](_data/index_meta.json) (hand-edit the json, not this file) · **100 companies + 2 private AI labs (102 pages)** · one page per ticker synthesizing all co-located sources in `E:\Wiki Felipe`: filings (10-K/10-Q/20-F) + earnings transcripts + investor-day decks + thematic equity calls (`_equity_calls`) + per-ticker roll-up of the email briefings (`_briefings/by-ticker`) + BBG consensus & street-high estimates (`_data/estimates.json`)._
 
 Each page follows the [_TEMPLATE](_TEMPLATE.md): Snapshot · Current state (latest quarter) · Debate (bull/bear + where the sell-side stands, attributed + dated) · Catalysts · Risks · Consensus estimates (BBG) · Sources (links). Archive master index: [../INDEX.md](../INDEX.md). Thematic pages: [themes/00_THEMES.md](themes/00_THEMES.md).
 
@@ -35,7 +35,7 @@ Each page follows the [_TEMPLATE](_TEMPLATE.md): Snapshot · Current state (late
 |---|---|---|
 | MSFT | [MSFT](MSFT.md) | AI ARR >$37B/+123%; swing is capex (CY27 ~$276B) vs Azure revenue + OpenAI concentration. |
 | AMZN | [AMZN](AMZN.md) | AWS re-acceleration (+28%) + in-house silicon (Trainium); debate = $200B capex/ROIC. |
-| GOOG | [GOOG](GOOG.md) | Full-stack compounder (Search +19%, Cloud +63%); debate is valuation, not fundamentals. |
+| GOOG | [GOOG](GOOG.md) | Full-stack compounder (Search +17%, Cloud +82%); debate is valuation and capital intensity, not demand. |
 | META | [META](META.md) | Fastest grower in Mag7 ex-GPU; bear = capital intensity and negative incremental ROIC. |
 | ORCL | [ORCL](ORCL.md) | Turned into an AI-infra hyperscaler (RPO $638B/+363%); bear = dot-com-peak capex/sales + dilution. |
 | NOW | [NOW](NOW.md) | Beat-and-raise (cRPO +21%) + agentic pivot to consumption; on-disk transcripts are paraphrased (fidelity). |

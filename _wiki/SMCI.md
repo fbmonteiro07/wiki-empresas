@@ -9,13 +9,13 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\SMCI` (filings + trans
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $48.9bn | $59.0bn |
-| Gross profit | $3.8bn | $4.9bn |
-| Gross margin | 7.8% | 8.3% |
-| EBITDA | $2.6bn | $3.6bn |
-| EPS | $2.71 | $3.56 |
-| Capex | $274m | $312m |
-| OCF (≈EBITDA) | $2.6bn | $3.6bn |
+| Revenue | $49.5bn | $60.3bn |
+| Gross profit | $4.0bn | $5.2bn |
+| Gross margin | 8.1% | 8.6% |
+| EBITDA | $2.9bn | $3.9bn |
+| EPS | $2.83 | $3.75 |
+| Capex | $278m | $316m |
+| OCF (≈EBITDA) | $2.9bn | $3.9bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
@@ -109,8 +109,8 @@ _Q3 FY26 · May 05 → May 26, 2026 · sell-side / expert calls / reports betwee
 
 | Theme | Management said (Q3 FY26) | Intra-quarter flow | Signal |
 |---|---|---|---|
-| **Demand** | AI >80% rev; revenue $10.2B (+123% y/y, -19% q/q) on site delays | JPM (Networking conf): "sounded good about demand visibility", big TAM; cloud-capex +80% y/y '26 | **✓ confirms** (visibility ok, timing push-out) |
-| **Margin** | GM snaps to 10.1% (from the 6.4% trough); Q4 guided DOWN to 8.2-8.4% | @ParadisLabs: GM snap-back proves mix/expedite were transitory — vs BofA (Ruplu): "margins sequentially light" | **⚠ nuance** (real recovery, but Q4 steps back) |
+| **Demand** | AI >80% rev; revenue $10.2B (+123% y/y, -19% q/q) on site delays | JPM (Networking conf): "sounded good about demand visibility", big TAM; cloud-capex +80% y/y '26 · **07-21 prelim F4Q26: rev toward the LOW end of $11-12.5B (~-6% below mid) but orders tracked $60bn+ (vs $39bn intra-qtr, Dell $24bn) (JPM/Barclays)** | **✓ confirms** (orders strong; near-term rev pushed out on customer readiness) |
+| **Margin** | GM snaps to 10.1% (from the 6.4% trough); Q4 guided DOWN to 8.2-8.4% | @ParadisLabs: GM snap-back proves mix/expedite were transitory — vs BofA (Ruplu): "margins sequentially light" · **07-21 prelim: F4Q26 GM guided UP to 15-17% (from the 8.2-8.4% guide) on customer/product mix → implied EPS ≥+80% vs cons (JPM/Barclays)** | **✓ upside** (prelim GM 15-17% far above the 8.2-8.4% guide — does NOT step back) |
 | **Competition / share** | Top customer 27% (from ~63% in Q2) | Cramer: "thorn in NVDA's side… get away", prefers DELL · 06-30: Taiwan raid on SMCI offices (alleged chip smuggling to China) — Barron's calls it a 'slam dunk' for DELL | **⚠ nuance** (server commoditization + governance/legal overhang) |
 | **Capital / balance sheet** | — | 10-Q: cash $1.29B (from $5.17B), net debt ~$7.5B, OCF ≈ -$6.6B, CCC 106 days (from 54) | **✗ contests** (the balance sheet is the hole) |
 | **Software / DCBBS** | Software rev >$46M; target ≥20% of NI | JPM: DCBBS mix improving, giving more margin visibility | **✓ confirms** (margin lever in progress) |
@@ -130,8 +130,10 @@ _Q3 FY26 · May 05 → May 26, 2026 · sell-side / expert calls / reports betwee
 | 05-26 | JPM · Networking conf recap | demand | bull | At the JPM conference, Supermicro 'sounded good about demand visibility', highlighting a very large TAM, with DCBBS mix improving and giving more margin visibility. Backdrop: JPM raised its cloud-capex model to ~+80% y/y (2026)/+50% (2027) after a record 8 GW of DC power capacity added in 1Q26 (JPM 'Networking recap', 2026-05-26). |
 | 06-30 | @dnystedt / media (via Rothschild TMT) | competition | bear | **Taiwan raided Supermicro's offices** over allegedly routing NVIDIA chips through Japan to China in a chip-smuggling operation — including the homes of 6 individuals and 3 affiliated sites. SMCI says it is "working closely with authorities." (Exporting AI chips to China is not currently a crime in Taiwan, though new laws are being considered.) Fresh legal/governance overhang layered on the unresolved DOJ/SEC inquiries. (@dnystedt, 2026-06-30) |
 | 06-30 | Barron's | competition | bear | "Super Micro's Problems Are a 'Slam Dunk' for Dell Stock" — frames the raid/governance overhang as a share-shift catalyst toward DELL, echoing the standing Cramer "favor DELL" bear. (Barron's, 2026-06-30) |
+| 07-21 | JPM · Joseph Cardoso | guidance | bull | **Preliminary F4Q26 (Jun-end) update:** revenue guided toward the **LOW end** of the prior US$11.0-12.5B range (~-6% below midpoint), **BUT gross-margin guidance RAISED to 15%-17% (from 8.2%-8.4% prior)** on favorable customer + product mix → **implied EPS at least +80% above consensus**; orders tracked to **US$60bn+ in F4Q26** (well ahead of the US$39bn intra-quarter update and Dell's US$24bn AI-server orders). Earnings call Aug 11; positive read-through to DELL/HPE. Watch margin sustainability + memory headwinds. Neutral rating. (JPMorgan · Joseph Cardoso, 2026-07-21) |
+| 07-21 | Barclays · Tim Long | guidance | bull | Equal Weight, **PT raised to US$38 (from US$34).** On the prelim: Jun-Q revenue near the low end of US$11-12.5B, **GM 15-17% (vs prior 8.2-8.4%)** on customer/product mix, **new orders >US$60bn received in the quarter** (to ship over future quarters); reads the top-line walk-down as customer-readiness/supply constraints; rev-rec visibility limited. (Barclays · Tim Long, 2026-07-21) |
 
-**Quarter synthesis:** demand has stopped being the debate (JPM corroborates the visibility); the fight has shifted to the quality of the margin recovery — Q4 guided back down — and, above all, to the balance-sheet deterioration (cash collapsed, net debt $7.5B, CCC doubled), with Cramer's bear case that value accrues upstream to NVIDIA while the server turns into a commodity. **06-30: a Taiwan raid on SMCI offices** (alleged NVIDIA-chip smuggling to China via Japan) reopens the legal/governance-overhang leg of the bear on top of the still-unresolved DOJ/SEC inquiries — Barron's frames it as a 'slam dunk' for DELL.
+**Quarter synthesis:** demand has stopped being the debate (JPM corroborates the visibility); the fight has shifted to the quality of the margin recovery — Q4 guided back down — and, above all, to the balance-sheet deterioration (cash collapsed, net debt $7.5B, CCC doubled), with Cramer's bear case that value accrues upstream to NVIDIA while the server turns into a commodity. **06-30: a Taiwan raid on SMCI offices** (alleged NVIDIA-chip smuggling to China via Japan) reopens the legal/governance-overhang leg of the bear on top of the still-unresolved DOJ/SEC inquiries — Barron's frames it as a 'slam dunk' for DELL. **07-21: a preliminary F4Q26 pre-announce reframes the margin debate** — revenue toward the LOW end of $11-12.5B (~-6% below mid) but GM guided UP to 15-17% (vs the 8.2-8.4% Q4 guide) on customer/product mix, implying EPS ≥+80% above consensus, with orders tracked to $60bn+ (JPM Neutral; Barclays EW, PT $34→$38). The GM pre-announce directly answers the bear's "does GM re-trough" question for this quarter (positive), even as the top-line walk-down keeps the customer-readiness/rev-rec-visibility concern alive; earnings call Aug 11.
 
 ## Management commentary — evolution (last 4 quarters)
 

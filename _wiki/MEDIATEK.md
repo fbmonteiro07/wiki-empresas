@@ -11,13 +11,13 @@ _Wiki · generated 2026-06-20 · **Taiwan issuer — no SEC filings**; sources: 
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | NT$647.7bn | NT$1055.6bn |
-| Gross profit | NT$296.0bn | NT$468.7bn |
+| Revenue | NT$648.7bn | NT$1075.3bn |
+| Gross profit | NT$296.5bn | NT$477.4bn |
 | Gross margin | 45.7% | 44.4% |
-| EBITDA | NT$127.4bn | NT$262.3bn |
-| EPS | NT$64.96 | NT$130.00 |
+| EBITDA | NT$128.0bn | NT$261.5bn |
+| EPS | NT$65.04 | NT$132.51 |
 | Capex | NT$15.9bn | NT$18.0bn |
-| OCF (≈EBITDA) | NT$127.4bn | NT$262.3bn |
+| OCF (≈EBITDA) | NT$128.0bn | NT$261.5bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
@@ -119,6 +119,8 @@ See cross-company theme: [custom-asic-tpu](themes/custom-asic-tpu.md).
 - **Valuation (Citrini Semis, "All Along the AI Watchtower," 2026-07-20; newsletter):** MediaTek "came into the year trading just shy of 20x NTM earnings… re-rated hard as TPU upside brought it out of the handset cold" — Citrini frames the DC-ASIC ramp as the catalyst that pulled a cheap, handset-cyclical multiple sharply higher, consistent with the stacked TPU-share bulls above (Citrini Semis, "All Along the AI Watchtower," 2026-07-20). [Source](../relat%C3%B3rios%20bons/Citrini_jul_20.html)
 - **Read-through (Expert call "EMIB vs CoWoS," Kaizad, 2026-07-16):** MediaTek named (with Broadcom) as a Google TPU vendor (Expert call "EMIB vs CoWoS", 2026-07-16). [Source](../relat%C3%B3rios%20bons/2026_07_16_emib_vs_cowos_expert.html)
 - **Read-through (JPM · Gokul "TSMC 2Q26 post-earnings," 2026-07-16):** JPM references "the TPU V9 that MediaTek is working on" as EMIB's first big product, ramping late-27/2028 (JPM · Gokul Hariharan, "TSMC 2Q26 post-earnings", 2026-07-16). [Source](../relat%C3%B3rios%20bons/2026_07_16_tsmc_post_earnings.html)
+- **Bull (JPM 2Q26 preview, Gokul Hariharan, 2026-07-21):** Overweight, **PT NT$5,300** (Jun-27; unchanged). Ahead of the **07-31 earnings call**, JPM's tone is upbeat on ASIC, more guarded on near-term smartphones. Reiterates **~US$2bn 2026 AI-ASIC revenue** (JPMe US$2.2bn, ~500k TPU v8t units); **RAISES its 2027 ASIC estimate +20%** (JPMe now ~**3.0mn v8t units** vs 2.5mn prior) and expects MediaTek to **guide the high end of its US$7-12bn 2027 range**. **TPU v9 "Humufish" 2028 revenue estimate RAISED to US$36bn (from US$25bn), ~3mn units (from ~2mn)** — the competing **"Pumafish" (US fabless) appears cancelled/delayed**; Intel **EMIB-T packaging yield ~60%+** (v9's primary packaging). **TPU v10 in bidding stage** (decision in a couple months), high chance MediaTek wins the larger share (Google moving toward semi-CoT). **New customer win likely 3Q26 — SpaceX most likely.** RAISED 2028 EPS +20%. (JPMorgan · Gokul Hariharan, 2026-07-21)
+- **Bull (Fubon/Jefferies 2Q26 preview, Sherman Shang, 2026-07-22):** BUY, **PT NT$6,000** (~56% upside; unchanged). Flags MediaTek is **"potentially raising its ASIC market-share target to 15-20%"** on a Google TAM update; frames the recent share weakness as a re-entry point and sees another customer/project win possibly coming later. (Jefferies · Fubon Securities [Sherman Shang], 2026-07-22)
 
 ## Catalysts / what to watch
 - **Q2 FY26 print (late-July 2026)** — GM step-down to 43% guide; smartphone trajectory into H2.
@@ -199,6 +201,7 @@ _Source: MEDIATEK earnings calls (dates above); management commentary, paraphras
 ## Changelog
 | Date | Change |
 |---|---|
+| 2026-07-23 | /wiki-ingest — 2Q26 previews (earnings call 07-31); both additive, no PT/rating superseded (folded into Debate/thesis per this page's no-Intra-quarter convention). **JPM · Gokul Hariharan (2026-07-21)** — Overweight, **PT NT$5,300 unchanged**; upbeat on ASIC, guarded on near-term smartphones; reiterates ~US$2bn 2026 ASIC (JPMe US$2.2bn / ~500k v8t units); **raises 2027 ASIC estimate +20% (~3.0mn v8t units vs 2.5mn prior)**, expects guide to the high end of the US$7-12bn range; **v9 "Humufish" 2028 rev raised US$25bn→US$36bn, ~2mn→~3mn units**; "Pumafish" (US fabless) cancelled/delayed, EMIB-T yield ~60%+; v10 in bidding (decision in a couple months), MTK likely larger share; new customer win likely 3Q26 (SpaceX most likely); 2028 EPS +20%. **Fubon/Jefferies · Sherman Shang (2026-07-22)** — BUY, **PT NT$6,000 unchanged** (~56% upside); potentially raising ASIC market-share target to 15-20% on a Google TAM update; recent weakness a re-entry point, another win may come later. Added 2 Debate/thesis bullets. |
 | 2026-07-20 | /run-inbox. Added 3 Debate/thesis bullets (folded into Debate per this page's no-Intra-quarter convention; all additive, no PT/rating/estimate superseded): **(1) Citrini Semis "All Along the AI Watchtower" (2026-07-20, newsletter)** — valuation/bull: MediaTek came into the year "just shy of 20x NTM earnings… re-rated hard as TPU upside brought it out of the handset cold"; **(2) Expert call "EMIB vs CoWoS" (Kaizad, 2026-07-16)** — read-through: MediaTek named (with Broadcom) as a Google TPU vendor; **(3) JPM · Gokul "TSMC 2Q26 post-earnings" (2026-07-16)** — read-through: "the TPU V9 that MediaTek is working on," EMIB's first big product, ramp late-27/2028. Added 3 Sources entries. |
 | 2026-07-19 | /wiki-ingest (Twitter/X corpus). Added 3 Debate bullets (no PT/rating/estimate superseded; folded into Debate per this page's no-Intra-quarter convention): **(1) MS defends AVGO's TPU majority** (via @firstadopter, 07-14) — "MediaTek participation real but not disruptive; AVGO stays ~80% share; 50%-share/displacement calls premature" — a dissent to the stacked 2027-share bulls (UBS 38%, Nomura 30%+, GS 50/50, Citi/GS US$18-20bn'27); **(2) Pixel 11 5G-modem design win** (@dnystedt 07-15) — MediaTek edges out Qualcomm/Samsung for the Pixel 11 modem, a Smart-Edge win taking modem share from QCOM; **(3) FY smartphone outlook cut again** (@dnystedt 07-14) — corroborates the handset-cyclicality bear + the TSMC-wafer-allocation-is-the-ASIC-swing dependency. |
 | 2026-07-16 | **/run-inbox — Fubon "Capex hike a strong indicator" (2026-07-16), post the TSMC 2Q26 print.** Added a Debate/thesis bullet + Catalyst + Sources: Fubon reads the TSMC call (CoWoS severe shortage, welcomes Intel EMIB-T) as **positive for MediaTek — could raise its custom-ASIC market-share target on the upcoming earnings call**; caveat that server-CPU prioritization + mobile-4nm cuts freed N4 wafers to AMD. No PT/rating/estimate superseded (folded into Debate/thesis + Catalysts + Sources per this page's no-Intra-quarter-scaffold convention). |
