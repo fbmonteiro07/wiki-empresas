@@ -6,7 +6,7 @@ _New quantitative datapoints from the two files ingested 2026-07-17, reconciled 
 
 ---
 
-## DIVERGES (the alpha)
+## Where the new data DIVERGES
 
 | # | Datapoint (source) | Value | Prior wiki | House | BBG consensus | Read |
 |---|---|---|--:|--:|--:|---|

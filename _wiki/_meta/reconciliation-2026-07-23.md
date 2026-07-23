@@ -17,7 +17,7 @@ BBG consensus snapshot (2026-07-23, USD unless noted; EPS FY1/FY2/FY3):
 
 ---
 
-## DIVERGES (the alpha)
+## Where the new data DIVERGES
 
 | Name | New datapoint (this run) | vs prior wiki | vs house model | vs BBG consensus | Read |
 |---|---|---|---|---|---|

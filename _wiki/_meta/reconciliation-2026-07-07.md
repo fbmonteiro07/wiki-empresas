@@ -6,7 +6,7 @@ Sources: MS "The Catalyst Path Ahead" (ASML, Lee Simpson) · BofA "Raising Inter
 
 ---
 
-## DIVERGES — the alpha
+## Where the new data DIVERGES
 
 | Name | Metric | New datapoint (source) | BBG consensus | House | Read |
 |---|---|---|---|---|---|
