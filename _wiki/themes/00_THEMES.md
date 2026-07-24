@@ -1,6 +1,6 @@
 # Research Wiki — themes (cross-company)
 
-_Generated 2026-06-19 · last updated 2026-07-20 (Citrini Semis, "All Along the AI Watchtower") · cross-company theme pages synthesizing the corpus (equity calls, briefing roll-ups, transcripts, research library) with attribution, each linking the companies exposed. Company index: [../00_INDEX.md](../00_INDEX.md)._
+_Generated 2026-06-19 · last updated 2026-07-23 (inbox ingest — cross-company read-throughs into 800V/ai-dc-power/cowos/custom-asic/hbm/optical/semicap/tokenmaxxing + macro-cycle) · cross-company theme pages synthesizing the corpus (equity calls, briefing roll-ups, transcripts, research library) with attribution, each linking the companies exposed. Company index: [../00_INDEX.md](../00_INDEX.md)._
 
 | Theme | Page | What it is |
 |---|---|---|

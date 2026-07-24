@@ -45,3 +45,34 @@ BBG consensus snapshot (2026-07-23, USD unless noted; EPS FY1/FY2/FY3):
 - **QCOM $314** is the one lighter-name mark that stands out as a Street-high vs consensus ($227) — but it rests on the unproven HBC near-memory-compute narrative; treat as an option, not a base case, until there is commercial evidence.
 - ASML/TSM EPS are in **EUR / NT$** respectively; do not compare cross-currency without the FX + ADR-ratio adjustment applied above.
 - Private names (OPENAI, ANTHROPIC) from the UBS token-spend call are **qualitative** (token-optimization as a revenue-trajectory headwind) — no BBG/house baseline; reconciled vs prior wiki only, no quantitative divergence to score.
+
+---
+---
+
+# Part 2 — inbox batch (44 files: earnings previews, expert calls, MS Alphabet/Internet notes)
+
+_Appended by the 44-file /run-inbox scheduled run (ran alongside the batch above — concurrent ingest). Variance pass on the NEW **July-2026 / live** quantitative datapoints only (April–May previews + older MS notes were folded as historical → Changelog, excluded here)._
+
+**BBG status for this batch:** the Terminal that was live for Part 1 earlier today is **now returning HTTP 503 (not logged in / VPN down)** at my run time. I reuse Part 1's 2026-07-23 consensus snapshot for the one overlapping name (**GOOG**); all other Part-2 names are **PENDING** — re-run `/wiki-consensus` (or `refresh_features.py --run-estimates`) when the Terminal reconnects. Do NOT substitute web data.
+
+## DIVERGES (the alpha)
+
+| Name | New datapoint (source) | Prior wiki | House model | BBG (2026-07-23) | Read |
+|---|---|---|---|---|---|
+| **GOOG** | MS/Nowak cuts **PT $415→$400** (OW held); '27/'28 EPS **−7%/−5%**; models **'27 capex ~$375bn**; TPU compute **~3.5GW '27 / ~4GW '28** (MS "Alphabet", 2026-07-23) | MS was $415; sell-side cluster $405–460 | House '27 capex **$310bn**; **TPU base ~4.6GW '26 → 7.75GW '27**; EPS 2027E **$16.20** | cons PT **$426.5**; EPS FY1/2/3 **$15.05/$15.63/$18.68** | **MS PT $400 is now BELOW consensus PT $426.5** (MS the bear on price; OW-held-with-cut = funding-short tension). **House TPU GW ~2× MS** (7.75 vs 3.5GW '27) = the central external-TPU-monetization disagreement, and it's *ours vs MS*, not vs the Street. House 2027E EPS $16.20 ≈ **+3.6% above** cons FY2 $15.63; MS's −7% cut moves MS below both house and cons. |
+| **NFLX** | House (Capstone/F. Watkins preview, 2026-07-15): **FY27 EPS ~$3.6 vs cons $3.90** (~8% **below** Street) | 2Q26 printed a **miss** (rev $12.56B vs $12.65–12.7B bogey; FY26 OM held 31.5%); stock −8/−9% on 7/16 | House **below consensus** FY27 | PENDING | House sits **below the Street** into a name that just printed soft — the asymmetric-downside setup materialized. Watch for Street FY27 revisions toward house. |
+| **IFX** | **UBS (François) Buy→Neutral downgrade**, relayed 2nd-hand on the UBS ASML call-back (2026-07-15): DC power-share 50-60% "too aggressive"; Monolithic taking share | Page carried prior **UBS Buy €44** (now likely stale) | no house block | PENDING | **Rating change surfaced only secondhand** — primary UBS IFX note is NOT in the inbox. Source it before treating as confirmed; prior Buy €44 left in place, not overwritten. |
+
+## CONFIRMS (no action)
+
+| Name | New datapoint (source) | Baseline check | BBG |
+|---|---|---|---|
+| **AMD** | MS "Advancing AI" roundtable (2026-07-23): **CPU TAM >$200bn (~$220bn) by 2030**, **>50% share** reaffirmed; **Anthropic 2GW MI450 (Helios), first GW 1H27, ~$15-20bn/GW** | Confirms the mgmt/Street TAM-raise cluster on page ($200bn mgmt → Bernstein $223bn → BofA $1.5T infra TAM). **Anthropic 2GW = new concrete commitment** (was "swing factor"). MS PT stays **Street-low $410** vs cluster $575–700 | PENDING |
+| **VRT** | BofA/Obin (2026-07-16): **FY26 EPS $6.67 vs Street $6.49** (+2.8%); Q2 rev $3.435B; 27E/28E EPS $8.40/$10 | Modestly above Street — consistent with the page's bullish above-consensus setup; big-five capex tracker $811B/$1.1T/$1.25T | PENDING |
+| **TSM** | BofA/Haas Liu preview (2026-07-13, HIST — 2Q printed 7/16): **capex $78/$83bn '27/'28**; super-hot-run mix **20-30%**; ABF substrate = emerging bottleneck | Consistent with the on-page Fubon above-cons view (FY27 GM 68.8%, EPS NT$144 vs cons NT$127.84) + "supply/demand gap widens FY27" thesis | PENDING (TSM ADR blank in Part-1 snapshot) |
+| **MSFT** | Jefferies IR call (2026-06-08): **>5M Q4 Copilot net seat adds**; Azure capacity split **OpenAI $250B / Anthropic $30B**; power/shell space #1 constraint thru CY26 | Confirms the Azure-inflection + Copilot narrative on page (GS/BofA bogey Azure ~40.7% 4QFY26); no PT/estimate superseded | PENDING |
+
+### Part-2 follow-ups
+1. Source the primary **UBS IFX downgrade** note (only relayed secondhand this run).
+2. Reconcile the **GOOG house-vs-MS TPU-GW gap** (7.75 vs 3.5GW '27) at the next model review — largest open house-vs-sell-side divergence from this batch.
+3. Re-run BBG for the Part-2 PENDING names (NFLX, VRT, AMD, MSFT, IFX, TSM-ADR) once the Terminal reconnects.
