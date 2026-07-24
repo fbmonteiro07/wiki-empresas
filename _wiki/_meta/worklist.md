@@ -39,7 +39,7 @@ Spawn one `transcript-fetcher` task per name (paste into Claude Code):
 - **TSLA** — "get the latest TSLA earnings transcript -> `E:\Wiki Felipe empresas\TSLA\transcripts\`"
 - **VEEV** — "get the latest VEEV earnings transcript -> `E:\Wiki Felipe empresas\VEEV\transcripts\`"
 
-## ⚪ Private — intentionally skipped (3)
+## ⚪ Private — intentionally skipped (4)
 
-ANTHROPIC, OPENAI, SPCX
+ANTHROPIC, GOOG, OPENAI, SPCX
 

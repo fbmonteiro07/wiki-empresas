@@ -6,7 +6,7 @@ _Generated 2026-07-23 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wi
 
 | Ticker | Side | Wt % | House vs cons | Next catalyst | ⏰ due | Flags | Last chg | Thesis |
 |---|---|--:|---|---|--:|---|---|---|
-| GOOG | long | ? | REV 2027 +24% | _none dated_ |  |  | 2026-07-22 | Full-stack compounder (Search +17%, Cloud +82%); debate is valuation and capital intensity, not demand. |
+| GOOG | long | ? | REV 2027 +22% | _none dated_ |  |  | 2026-07-23 | Full-stack compounder (Search +17%, Cloud +82%); debate is valuation and capital intensity, not demand. |
 | NVDA | long | ? | EPS 2027 +20% | 2026-08-26 — Q2 FY27 print: 2026-08-26 (guided $91B). Watch hyperscale vs hyperscale-capex growth under new segmentation (Arcuri: bec |  |  | 2026-07-23 | Full-stack AI-factory platform at +85% rev; debate is demand sustainability vs ASIC erosion. |
 | AAPL | long | ? | EPS 2026 +14% | _none dated_ |  |  | 2026-07-23 | Strong franchise + memory-dislocation advantage; bear = AI catch-up + price elasticity. |
 | META | long | ? | EPS 2026 -10% | _none dated_ |  |  | 2026-07-23 | Fastest grower in Mag7 ex-GPU; bear = capital intensity and negative incremental ROIC. |
