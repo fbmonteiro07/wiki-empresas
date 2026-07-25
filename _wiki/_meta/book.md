@@ -1,6 +1,6 @@
 # Book — positions × unresolved debates × catalysts
 
-_Generated 2026-07-24 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wiki/_tools/build_book.py`._
+_Generated 2026-07-25 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wiki/_tools/build_book.py`._
 
 > ⚠️ **SEED book** — initialized from the 8 house-model names, weights unknown. Edit `_data/book.json` to match the real Core Positions (weights, adds/drops), then remove the `"seed": true` flag.
 
@@ -13,7 +13,7 @@ _Generated 2026-07-24 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wi
 | AVGO | long | ? | EPS 2026 -5% | _none dated_ |  |  | 2026-07-24 | #1 custom-ASIC/TPU partner; binary setup on the ">$100B" FY27 guide vs $250-300B FY28 (JPM). |
 | TSM | long | ? | — | _none dated_ |  |  | 2026-07-24 | Sole-source leading-edge foundry (~70% share); pricing headroom vs overseas-fab dilution. |
 | MSFT | long | ? | no house model | _none dated_ |  |  | 2026-07-24 | AI ARR >$37B/+123%; swing is capex (CY27 ~$276B) vs Azure revenue + OpenAI concentration. |
-| AMZN | long | ? | no house model | _none dated_ |  |  | 2026-07-23 | AWS re-acceleration (+28%) + in-house silicon (Trainium); debate = $200B capex/ROIC. |
+| AMZN | long | ? | no house model | _none dated_ |  |  | 2026-07-24 | AWS re-acceleration (+28%) + in-house silicon (Trainium); debate = $200B capex/ROIC. |
 
 ## Not in book — house-vs-consensus divergence ≥ 10% (candidates)
 
