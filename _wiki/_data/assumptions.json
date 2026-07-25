@@ -595,7 +595,7 @@
   "ai-tam-2030": {
    "title": "AI TAM by 2030",
    "definition": "AI datacenter TAM frames — ALWAYS state scope (systems-only vs total infra).",
-   "canonical": "BofA ~$1.7T CY30 AI-DC-systems TAM (accelerators ~$1.2T, networking ~$316B, optical ~$88B, HBM $168B). Jensen's '$3-4T end-of-decade AI infra' is a BROADER scope (adds power/grid/software) — not a conflict with BofA.",
+   "canonical": "BofA ~$1.7T CY30 AI-DC-systems TAM (accelerators ~$1.2T, networking ~$316B, optical ~$88B, HBM $168B). Jensen's '$3-4T end-of-decade AI infra' is a BROADER scope (adds power/grid/software) — not a conflict with BofA. NOVO 2026-07-23: AMD (Advancing AI) eleva accelerator TAM a $1.4T 2030 — ACIMA do BofA $1.2T; compute total $2T. House build CY30 ~$1.41T = trilho AMD (1.01x), 1.21x BofA.",
    "scope_note": "Never compare $1.7T (systems) against $3-4T (infra) as if same quantity.",
    "patterns": [
     "\\$1\\.7\\s?T",
@@ -621,6 +621,12 @@
      "cited_in": [
       "themes/custom-asic-tpu.md"
      ]
+    },
+    {
+     "value": "compute total $2T / AI accelerator $1.4T (de '>$1T' no FAD Nov-25) — alvo 2030; acima do preview (BofA esperava $1.5T/$200B)",
+     "source": "AMD Advancing AI 2026 (Lisa Su) via GS Schneider + MS roundtable",
+     "date": "2026-07-23",
+     "scope": "TAM de evento da empresa — viés alto-cima; accel $1.4T > BofA $1.2T"
     }
    ],
    "status": "consistent",
@@ -670,7 +676,7 @@
   "server-cpu-tam": {
    "title": "Server-CPU TAM / unidades — o leg agentic",
    "definition": "TAM de CPU-silicio de servidor (merchant + captive + Grace/Vera) e unidades — SEMPRE declarar basis ($ TAM vs unidades; mercado total vs hyperscaler-only).",
-   "canonical": "TRES construcoes independentes convergem em CY26 (~$50-55bn) e divergem no timing do 1:1 agentic: (1) unidades bottom-up — JPM proprietario 26M (2025) -> 68M (2028), agentic 155% CAGR; house build (Bottom_Up_Capex v2, unidades x ASP c/ hikes Sherman) ~$55bn CY26 / ~$96bn CY27 (CPU-silicio total); (2) capex-ratio top-down — Bernstein/Rasgon 06-16: $37bn 2025 -> $137bn 2030 BASE, $223bn BULL (premissas: $3.5T AI-DC capex + pareamento 1:1 CPU:GPU em inferencia); (3) UBS bottoms-up: ~$175bn em 2030. House 2030 ~$180-200bn = entre base e bull do Rasgon. TSMC 2Q26 (C.C. Wei): 'agentic AI = resurgence of CPUs... x86, ARM ou RISC-V, quase todos clientes TSMC'.",
+   "canonical": "TRES construcoes independentes convergem em CY26 (~$50-55bn) e divergem no timing do 1:1 agentic: (1) unidades bottom-up — JPM proprietario 26M (2025) -> 68M (2028), agentic 155% CAGR; house build (Bottom_Up_Capex v2, unidades x ASP c/ hikes Sherman) ~$55bn CY26 / ~$96bn CY27 (CPU-silicio total); (2) capex-ratio top-down — Bernstein/Rasgon 06-16: $37bn 2025 -> $137bn 2030 BASE, $223bn BULL (premissas: $3.5T AI-DC capex + pareamento 1:1 CPU:GPU em inferencia); (3) UBS bottoms-up: ~$175bn em 2030. House 2030 ~$180-200bn = entre base e bull do Rasgon. TSMC 2Q26 (C.C. Wei): 'agentic AI = resurgence of CPUs... x86, ARM ou RISC-V, quase todos clientes TSMC'. ATUALIZAÇÃO 07-23: AMD adota $220bn 2030 + share >50% — o bull do Bernstein virou guidance de empresa; house build ~0.8x do path AMD no terminal (gap = 1:1 pleno).",
    "scope_note": "Basis traps: TAM $ total-mercado (Bernstein/UBS) vs hyperscaler-only (house ex-enterprise); unidades (JPM) precisam de ASP p/ virar $ (hikes Sherman +15-20% x2 em 2026); Vera/Grace CONTAM no TAM mas moram dentro da receita Compute da NVDA (nao somar 2x em contas de capex); ARM $22bn ate CY30 = ARM-as-CPU-maker (Bernstein), != royalties.",
    "variants": [
     {
@@ -708,6 +714,12 @@
      "source": "Bernstein complex (briefing)",
      "date": "2026-05-21",
      "scope": "wafer/ARM-maker leg"
+    },
+    {
+     "value": "server-CPU TAM $220bn 2030 + share-alvo AMD >50% (~$110bn só de AMD); histórico da empresa: ~$60bn (FAD Nov-25) -> $120bn (mai-26) -> $220bn = 3.7x em 8 meses; ratio 4:1 -> >1:1",
+     "source": "AMD Advancing AI 2026 via GS/MS",
+     "date": "2026-07-23",
+     "scope": "empresa oficializa o cenário BULL do Bernstein ($223bn)"
     }
    ],
    "debate": "Timing do 1:1 agentic: house build chega ao NIVEL do bull-2030 do Rasgon ja em 27-28 (ratio 1.31-1.35x vs bull path) — ou o house front-loada demais (hikes+unidades compostas), ou o path do Rasgon e back-loaded. Resolve nos prints de server CPU 2H26 (AMD guide >70% y/y; Intel 80-90% fulfillment) e na rampa Vera. Cross de wafer: CPUs ~5-9 kwpm N3/N2 no house CY26-27 vs '200 kwpm' do complexo Bernstein (basis a reconciliar — provavelmente all-leading-edge cumulativo).",

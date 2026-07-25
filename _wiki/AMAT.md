@@ -9,8 +9,8 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\AMAT` (10-K/10-Q + tra
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $36.2bn | $45.7bn |
-| Gross profit | $18.1bn | $23.1bn |
+| Revenue | $36.1bn | $45.8bn |
+| Gross profit | $18.1bn | $23.2bn |
 | Gross margin | 50.0% | 50.6% |
 | EBITDA | $12.6bn | $17.2bn |
 | EPS | $13.62 | $18.70 |

@@ -7,12 +7,12 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\SNPS` · `_equity_call
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $9.8bn | $10.9bn |
+| Revenue | $9.8bn | $11.0bn |
 | Gross profit | $8.1bn | $9.1bn |
 | Gross margin | 82.7% | 83.1% |
 | EBITDA | $4.8bn | $5.2bn |
-| EPS | $15.08 | $18.13 |
-| Capex | $330m | $308m |
+| EPS | $15.07 | $18.15 |
+| Capex | $330m | $307m |
 | OCF (≈EBITDA) | $4.8bn | $5.2bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

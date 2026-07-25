@@ -11,13 +11,13 @@ _Wiki · generated 2026-06-20 · **No SEC filings — Japanese issuer (TSE Prime
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | ¥514.2bn | ¥618.3bn |
-| Gross profit | ¥364.1bn | ¥447.7bn |
+| Revenue | ¥514.3bn | ¥628.0bn |
+| Gross profit | ¥364.1bn | ¥454.7bn |
 | Gross margin | 70.8% | 72.4% |
-| EBITDA | ¥243.1bn | ¥281.3bn |
+| EBITDA | ¥244.7bn | ¥297.3bn |
 | EPS | ¥1577.58 | ¥1885.55 |
 | Capex | ¥41.2bn | — |
-| OCF (≈EBITDA) | ¥243.1bn | ¥281.3bn |
+| OCF (≈EBITDA) | ¥244.7bn | ¥297.3bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

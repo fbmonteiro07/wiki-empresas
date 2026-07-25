@@ -13,8 +13,8 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\ADI` (10-K FY2025, 10-
 | Gross profit | $11.3bn | $12.7bn |
 | Gross margin | 72.4% | 72.8% |
 | EBITDA | $8.8bn | $9.9bn |
-| EPS | $13.29 | $15.58 |
-| Capex | $753m | $832m |
+| EPS | $13.31 | $15.59 |
+| Capex | $744m | $820m |
 | OCF (≈EBITDA) | $8.8bn | $9.9bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

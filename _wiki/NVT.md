@@ -13,7 +13,7 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\NVT` (10-K FY2025, 10-
 | Gross profit | $1.9bn | $2.3bn |
 | Gross margin | 38.0% | 38.2% |
 | EBITDA | $1.1bn | $1.4bn |
-| EPS | $4.46 | $5.87 |
+| EPS | $4.43 | $5.87 |
 | Capex | $128m | $143m |
 | OCF (≈EBITDA) | $1.1bn | $1.4bn |
 

@@ -1,6 +1,6 @@
 # Wiki staleness report
 
-_Generated 2026-07-23 · 102 pages checked._
+_Generated 2026-07-24 · 102 pages checked._
 
 ## 🔴 BBG estimates missing/errored (2)
 AEIS, CEREBRAS
@@ -15,6 +15,6 @@ AEIS, AKAM, AOSL, APP, AXTI, BE, CDNS, CEREBRAS, ETN, FSLY, MP, NET, PLTR, POET,
 _none_
 
 ## 🟣 Modelos oficiais drift vs canonical P: folder (3)
-- missing on E:: Google Modelo oficial pós 2Q26 - 10Q.xlsx
-- missing on E:: Google Modelo oficial pós 2Q26.xlsx
-- newer on P: (E: copy stale): AMD WIP.xlsx
+- missing on E:: Google Modelo oficial pós 2Q26 - autosave.xlsx
+- newer on P: (E: copy stale): Google Modelo oficial pós 2Q26.xlsx
+- newer on P: (E: copy stale): Modelo Meta pós 2Q26.xlsm

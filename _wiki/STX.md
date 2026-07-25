@@ -11,7 +11,7 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\STX` (filings + transc
 |---|--:|--:|
 | Revenue | $14.3bn | $19.6bn |
 | Gross profit | $7.2bn | $11.2bn |
-| Gross margin | 50.5% | 57.1% |
+| Gross margin | 50.5% | 57.2% |
 | EBITDA | $6.4bn | $10.5bn |
 | EPS | $20.99 | $34.75 |
 | Capex | $670m | $867m |
