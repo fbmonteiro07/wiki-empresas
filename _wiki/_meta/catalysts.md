@@ -11,12 +11,13 @@ _Generated 2026-07-25 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-08-31 | TXN | **CFO transition:** Rafael Lizardi out 2026-08-01 → **Julie Knecht** (CAO, 25-yr veteran), advisory through 2026-08-31 (DB/Seymore, briefing 2026-06-03). |
 | 2026-09-16 | ON | **2026-09-16 — onsemi Analyst Day** (Citi exp. ~Sep 13 print first) — the key event; watch for a raised long-term target model + SiC/800V framing (Citi, briefing 2026-06-15). |
 
-## ⏰ Passed — need a post-mortem (1)
+## ⏰ Passed — need a post-mortem (2)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
+| 2026-07-24 | GOOG | **New inference chip "Frozen v2"** — The Information (2026-07-20) reports a new Google-designed chip to run its AI models "much more efficiently" — a custom-silicon efficiency play beyond the TPU line |
 | 2026-07-24 | AMD | **Update 2026-07-24 — scoring the pre-event debate list.** BofA had set five debates going in; four now have answers. **(1) How will Anthropic split share across TPU / Trainium / NVDA / AMD? — STILL O |
 
 ## ✅ Resolved (25)

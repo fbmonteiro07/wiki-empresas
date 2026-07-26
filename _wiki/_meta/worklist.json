@@ -1,8 +1,7 @@
 {
  "asof": "2026-07-25",
  "bbg_missing": [
-  "AEIS",
-  "CEREBRAS"
+  "AEIS"
  ],
  "no_transcript": [
   "AEIS",
@@ -12,7 +11,6 @@
   "AXTI",
   "BE",
   "CDNS",
-  "CEREBRAS",
   "ETN",
   "FSLY",
   "MP",
@@ -28,12 +26,13 @@
  ],
  "private_skipped": [
   "ANTHROPIC",
+  "CEREBRAS",
   "GOOG",
   "OPENAI",
   "SPCX"
  ],
  "actions": {
-  "fetch_estimates_cmd": "py \"E:\\.claude\\scripts\\fetch_estimates.py\" AEIS CEREBRAS",
+  "fetch_estimates_cmd": "py \"E:\\.claude\\scripts\\fetch_estimates.py\" AEIS",
   "transcript_tasks": [
    {
     "agent": "transcript-fetcher",
@@ -62,10 +61,6 @@
    {
     "agent": "transcript-fetcher",
     "prompt": "Get the latest earnings call transcript for CDNS and save it to E:\\Wiki Felipe empresas\\CDNS\\transcripts\\ as CDNS_<quarter>_<YYYY-MM-DD>.md"
-   },
-   {
-    "agent": "transcript-fetcher",
-    "prompt": "Get the latest earnings call transcript for CEREBRAS and save it to E:\\Wiki Felipe empresas\\CEREBRAS\\transcripts\\ as CEREBRAS_<quarter>_<YYYY-MM-DD>.md"
    },
    {
     "agent": "transcript-fetcher",
