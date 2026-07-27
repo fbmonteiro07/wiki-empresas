@@ -1,6 +1,6 @@
 {
  "asof": "2026-07-27",
- "generated": "2026-07-27T08:05:05",
+ "generated": "2026-07-27T08:58:03",
  "new_models": [
   {
    "permaslug": "inclusionai/ling-3.0-flash-20260723",
@@ -3127,6 +3127,51 @@
    "tokens_week": 99125988022.0,
    "requests_week": 8934643.0,
    "rank": 25
+  }
+ ],
+ "wow_implied": {
+  "win_week_days": 7,
+  "win_month_days": 28,
+  "tok_week": 55702644171081.0,
+  "tok_month": 208319356799595.0,
+  "rate_week_day": 7957520595868.714,
+  "rate_prior_day": 7267462506119.714,
+  "prior_days": 21,
+  "momentum_pct": 9.495172340661174,
+  "flat_ratio": 4.0,
+  "obs_ratio": 3.739846822347935,
+  "month_span_inferred": true
+ },
+ "wow_series": [
+  {
+   "from": "2026-03",
+   "to": "2026-05",
+   "days": 61,
+   "weeks": 8.714285714285714,
+   "ratio": 11.904761904761905,
+   "wow_pct": 32.87502542020215,
+   "src": "anchor",
+   "basis_break": true
+  },
+  {
+   "from": "2026-05",
+   "to": "2026-07-21",
+   "days": 67,
+   "weeks": 9.571428571428571,
+   "ratio": 2.6506502108871426,
+   "wow_pct": 10.721216792151566,
+   "src": "anchor",
+   "basis_break": false
+  },
+  {
+   "from": "2026-07-21",
+   "to": "2026-07-27",
+   "days": 6,
+   "weeks": 0.8571428571428571,
+   "ratio": 0.9006304071941753,
+   "wow_pct": -11.49434105695466,
+   "src": "snapshot",
+   "basis_break": false
   }
  ]
 }

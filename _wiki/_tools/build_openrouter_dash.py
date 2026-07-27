@@ -539,6 +539,52 @@ gtiles = [
     ("Price / token", "collapsing", "vol ~%.1f×, $ ~flat ⇒ $/tok ↓" % (mult_may or 0)),
 ]
 gtiles_html = "".join('<div class="tile"><div class="tlabel">%s</div><div class="tval">%s</div><div class="tsub">%s</div></div>' % (esc(a), esc(b), esc(c)) for a, b, c in gtiles)
+# ---------- WEEKLY GROWTH of the overall market ----------
+WOWS = D.get("wow_series") or []
+MOM = D.get("wow_implied") or {}
+snap_segs = [s for s in WOWS if s["src"] == "snapshot"]
+latest_wow = snap_segs[-1] if snap_segs else None
+anchor_clean = [s for s in WOWS if s["src"] == "anchor" and not s["basis_break"]]
+
+_mx = max([abs(s["wow_pct"]) for s in WOWS] or [1]) or 1
+wow_rows = []
+for s in WOWS:
+    v = s["wow_pct"]
+    pos = v >= 0
+    w = abs(v) / _mx * 46.0  # % of the half-track
+    badge = ('<span class="gstat good">observed</span>' if s["src"] == "snapshot"
+             else '<span class="gstat info">press anchor</span>')
+    warn = ' <span class="gstat warn" title="crosses a flagged basis break — not a clean measurement">basis break</span>' if s["basis_break"] else ""
+    wow_rows.append(
+        '<div class="barrow2" style="grid-template-columns:190px 1fr 118px">'
+        '<div class="barname">%s → %s<span class="cap">%d days · %.2fx</span></div>'
+        '<div style="position:relative;height:17px;background:var(--grid);border-radius:4px">'
+        '<div style="position:absolute;left:50%%;top:0;bottom:0;width:1px;background:var(--base)"></div>'
+        '<div style="position:absolute;top:2px;height:13px;border-radius:3px;background:%s;%s:50%%;width:%.1f%%"></div>'
+        '</div>'
+        '<div class="barval" style="color:%s">%+.1f%%/wk %s%s</div></div>' % (
+            esc(s["from"]), esc(s["to"]), s["days"], s["ratio"],
+            "var(--good)" if pos else "var(--crit)", "left" if pos else "right", w,
+            "var(--good)" if pos else "var(--crit)", v, badge, warn))
+wow_bars = "".join(wow_rows)
+
+wow_tiles = []
+if latest_wow:
+    wow_tiles.append(("Latest observed WoW", "%+.1f%%" % ((latest_wow["ratio"] - 1) * 100),
+                      "wk ending %s vs prior · %d-day gap · <b>hard</b>" % (latest_wow["to"], latest_wow["days"])))
+if MOM.get("momentum_pct") is not None:
+    wow_tiles.append(("Momentum vs prior ~3wk", "%+.1f%%" % MOM["momentum_pct"],
+                      "last %dd %.2f T/day vs prior %dd %.2f T/day · level, <b>not</b> a rate" % (
+                          MOM["win_week_days"], MOM["rate_week_day"] / 1e12,
+                          MOM["prior_days"], MOM["rate_prior_day"] / 1e12)))
+if anchor_clean:
+    a = anchor_clean[-1]
+    wow_tiles.append(("Long-run avg (%s→%s)" % (a["from"], a["to"]), "%+.1f%%/wk" % a["wow_pct"],
+                      "press anchors · independent of the feed"))
+wow_tile_html = "".join(
+    '<div class="tile"><div class="tlabel">%s</div><div class="tval">%s</div><div class="tsub">%s</div></div>' % (
+        esc(t), esc(v), s) for t, v, s in wow_tiles)
+
 tok_flags = {p["date"]: p["flag"] for p in sysg.get("token_points_meta", []) if p.get("flag")}
 gsvg = linechart(ts, "tokens_mo_T", "var(--s1)", lambda v: ("%.0fT" % v) if v >= 10 else ("%.1fT" % v), log=True, flags=tok_flags)
 csvg = linechart(cost_pts, "cost_mo_musd", "var(--s4)", lambda v: "$%.0fM" % v, pts2=realized_pts, color2="var(--good)")
@@ -565,6 +611,13 @@ GROWTH = (
     + '<div class="card"><div class="tlabel" style="margin-bottom:6px">Total token growth <span class="mut">(log scale · hollow dashed point = basis break, hover it)</span></div>' + gsvg + '</div>'
     + '<div class="card"><div class="tlabel" style="margin-bottom:6px">Total cost growth <span class="mut">(volume × today\'s blend)</span></div>' + csvg
     + '<div class="legend"><span><span class="dot" style="background:var(--s4)"></span>implied $ at today\'s blend</span><span><span class="dot" style="background:var(--good)"></span>reported realized spend</span></div></div>'
+    + '<h3 style="font-size:14.5px;margin:22px 0 4px">Weekly growth of the overall market</h3>'
+    + '<p class="sub" style="margin-bottom:10px">Compound %/week over each segment\'s <b>actual day gap</b> (the series mixes monthly press anchors with our weekly snapshots, so raw point-to-point deltas would not be comparable). <span class="gstat good">observed</span> = measured from two of our own snapshots; <span class="gstat info">press anchor</span> = derived from reported figures.</p>'
+    + '<div class="tiles">' + wow_tile_html + '</div>'
+    + '<div class="card">' + wow_bars + '</div>'
+    + '<div class="callout warn"><b>Read this before quoting a weekly growth number.</b> The first two real snapshots print <b>−9.9%</b> WoW — but that is a <b>spike retracing, not a downtrend</b>: the week ending 07-20 ran 8.90 T/day (hot), the week ending 07-26 ran 7.96 T/day, and the three weeks <i>before</i> the spike averaged ~7.3 T/day. The latest week is still above the pre-spike baseline while being down on the week. '
+      'Weekly token prints are <b>spiky — do not extrapolate a single week</b>. '
+      '<br><br><b>A method we tried and discarded, on purpose:</b> from one snapshot you can compare the trailing-week run-rate to the trailing-month-ex-week run-rate and compound it into an implied WoW. It read <b>+13.7%/wk</b> on the 07-21 snapshot and <b>+4.6%/wk</b> on 07-27, while the actual outcome was <b>−9.9%</b>. It compounds a level gap between two overlapping windows, so a one-week spike masquerades as a growth rate. We now show that comparison only as an un-compounded <b>momentum</b> level (and its month-window length is inferred from sparse feed buckets, drifting 30d→28d between snapshots, so treat it as directional).</div>'
     + ('<p class="note"><b>The tell:</b> at today\'s blend the cost curve tracks volume (~%.1f× since May), but reported spend is ~flat ($83M Mar → $76M Jun) — so the <b>blended price per token is collapsing</b> as free tiers and cheap open models eat the marginal token. The "cost @ blend" line is a <i>ceiling</i> scenario (list price, no caching); realized sits ~⅓ of it.</p>' % (mult_may or 0)))
 
 PRODUCT = (

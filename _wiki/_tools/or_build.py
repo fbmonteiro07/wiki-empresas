@@ -183,6 +183,51 @@ def build():
         return a
 
     wk_lab = agg_lab(wk_models); mo_lab = agg_lab(mo_models)
+
+    # ---- implied weekly growth of the whole platform, from ONE snapshot ----
+    # The two rankings views are trailing windows ending on the same day. Window
+    # lengths are OBSERVED from the bucket date spans (week 7d, month 30d), so the
+    # month CONTAINS the week -> the honest comparison is week vs month-EX-week,
+    # never week vs whole month (that would double-count the week and understate).
+    #   r_week  = W / 7                      (last 7 days)
+    #   r_prior = (M - W) / (Dm - 7)         (the 23 days before that)
+    # Growth is measured between window MIDPOINTS, not window edges.
+    def win_span(rows):
+        ds = sorted({r["date"][:10] for r in rows})
+        if not ds:
+            return None
+        a = dt.date(*map(int, ds[0].split("-"))); b = dt.date(*map(int, ds[-1].split("-")))
+        return (b - a).days + 1
+
+    # span comes from ALL buckets (the straggler buckets trace the window edges);
+    # latest_rows() would collapse to a single day and yield Dw==Dm==1.
+    Dw = win_span(wk) or 7
+    Dm = win_span(mo) or 30
+    W_tok = sum(v["tokens"] for v in wk_lab.values())
+    M_tok = sum(v["tokens"] for v in mo_lab.values())
+    wow = None
+    if M_tok > W_tok > 0 and Dm > Dw > 0:
+        r_week = W_tok / Dw
+        r_prior = (M_tok - W_tok) / (Dm - Dw)
+        if r_prior > 0:
+            g = r_week / r_prior
+            wow = {
+                "win_week_days": Dw, "win_month_days": Dm,
+                "tok_week": W_tok, "tok_month": M_tok,
+                "rate_week_day": r_week, "rate_prior_day": r_prior,
+                "prior_days": Dm - Dw,
+                # LEVEL-vs-LEVEL only. Do NOT compound this into a growth rate:
+                # it is the last week's run-rate against the prior ~3 weeks' average,
+                # so a one-week spike shows up as a big "step". Empirically falsified
+                # as a growth proxy — from the 2026-07-21 snapshot it implied +13.7%/wk
+                # while the next real snapshot came in at -9.9%. It is a MOMENTUM /
+                # spike indicator; the honest growth number is wow_series (observed).
+                "momentum_pct": (g - 1) * 100,
+                "flat_ratio": Dm / float(Dw), "obs_ratio": M_tok / W_tok,
+                # Dm is inferred from straggler bucket dates and drifts (30d on the
+                # 07-21 snapshot, 28d on 07-27) -> treat momentum as directional only.
+                "month_span_inferred": True,
+            }
     tot_tok = sum(v["tokens"] for v in wk_lab.values()) or 1.0
     tot_paid = sum(v["paid_tokens"] for v in wk_lab.values()) or 1.0
     tot_rev = sum(v["r0"] for v in wk_lab.values()) or 1.0
@@ -402,6 +447,30 @@ def build():
     tok_series[asof] = tokens_month / 1e12
     blend_today = (tot_rev / plat_text_tok * 1e6) if plat_text_tok else 0.0  # $/Mtok, current model blend (list)
     token_series_list = [{"date": d, "tokens_mo_T": tok_series[d]} for d in sorted(tok_series)]
+
+    # ---- weekly growth of the overall market, segment by segment ----
+    # Each consecutive pair of points becomes a compound %/week over the ACTUAL
+    # day gap (the series mixes monthly press anchors with our weekly snapshots,
+    # so a raw point-to-point delta would be meaningless). Segments crossing a
+    # flagged basis break are marked so they never read as clean measurements.
+    def _pdate(s):
+        p = (s + "-15" if len(s) == 7 else s)[:10].split("-")
+        return dt.date(int(p[0]), int(p[1]), int(p[2]))
+
+    flagged = {p["date"] for p in sg.get("token_points", []) if p.get("flag")}
+    wow_series = []
+    for a, b in zip(token_series_list, token_series_list[1:]):
+        days = (_pdate(b["date"]) - _pdate(a["date"])).days
+        if days <= 0 or a["tokens_mo_T"] <= 0:
+            continue
+        weeks = days / 7.0
+        ratio = b["tokens_mo_T"] / a["tokens_mo_T"]
+        wow_series.append({
+            "from": a["date"], "to": b["date"], "days": days, "weeks": weeks,
+            "ratio": ratio, "wow_pct": (ratio ** (1.0 / weeks) - 1) * 100,
+            "src": "snapshot" if len(a["date"]) == 10 and len(b["date"]) == 10 else "anchor",
+            "basis_break": bool(flagged & {a["date"], b["date"]}),
+        })
     system_growth = {
         "token_series": token_series_list,
         # "total cost growth" = each period's tokens priced at TODAY's model blend (counterfactual;
@@ -429,6 +498,7 @@ def build():
         },
         "anchors": orr, "anchor_spend_mar_musd": spend_mar,
         "guardrails": G, "labs": labs, "models": models_out[:40], "apps": apps[:20],
+        "wow_implied": wow, "wow_series": wow_series,
     }
     (OR / "dashboard.json").write_text(json.dumps(out, indent=1), encoding="utf-8")
 
