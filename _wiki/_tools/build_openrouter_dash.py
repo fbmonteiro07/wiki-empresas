@@ -72,76 +72,136 @@ def _smooth(P):
     return " ".join(d)
 
 
-def linechart(pts, vk, color, ylab, pts2=None, color2=None, W=1010, H=280, log=False, area=True, flags=None):
-    """Polished time-series chart: real time axis, smooth curve, gradient area,
-    monthly ticks, optional log scale, flagged basis-break points (hollow)."""
+def _logticks(lo, hi):
+    """1 / 2 / 5 per decade — readable density on a wide log range."""
+    out, e = [], int(_m.floor(_m.log10(lo)))
+    while True:
+        stop = True
+        for mant in (1, 2, 5):
+            v = mant * (10.0 ** e)
+            if v > hi:
+                continue
+            stop = False
+            if v >= lo:
+                out.append(v)
+        if 10.0 ** e > hi:
+            break
+        e += 1
+        if e > 20:
+            break
+    return out
+
+
+def linechart(pts, vk, color, ylab, pts2=None, color2=None, W=1010, H=300, log=False, area=True, flags=None):
+    """Irregular-cadence time-series chart.
+
+    Deliberately uses STRAIGHT segments, not a smooth spline: the points are
+    ~2 months apart on the left and ~6 days apart on the right, so a bezier
+    would invent a curve shape between observations we never made. Segments
+    spanning >10 days are drawn DASHED (we are interpolating across unobserved
+    time); consecutive weekly snapshots are solid. Value labels flip above/below
+    and drop out when they would collide, which is what made the dense right-hand
+    cluster unreadable.
+    """
     pts = sorted([p for p in pts if p.get(vk)], key=lambda p: p["date"])
     pts2 = sorted([q for q in (pts2 or []) if q.get(vk) is not None], key=lambda p: p["date"])
     if not pts:
         return ""
     flags = flags or {}
-    PL, PB, PT, PR = 58, 30, 16, 24
+    PL, PB, PT, PR = 62, 32, 26, 30
     PW, PH = W - PL - PR, H - PT - PB
     alld = [p["date"] for p in pts] + [q["date"] for q in pts2]
     x0, x1 = _dnum(min(alld)), _dnum(max(alld))
     span = max(x1 - x0, 1)
-    x0 -= span * 0.03; x1 += span * 0.03
+    x0 -= span * 0.04; x1 += span * 0.04
     vals = [p[vk] for p in pts] + [q[vk] for q in pts2]
     if log:
-        lo = min(vals) / 1.6; hi = max(vals) * 1.6
+        lo = min(vals) / 1.8; hi = max(vals) * 1.8
         L0, L1 = _m.log10(lo), _m.log10(hi)
         Y = lambda v: PT + PH - (_m.log10(max(v, 1e-9)) - L0) / (L1 - L0) * PH
+        gv = _logticks(lo, hi)
     else:
-        hi = max(vals) * 1.18
+        hi = max(vals) * 1.20
         Y = lambda v: PT + PH - (v / hi) * PH
+        gv = [hi * k / 4 for k in range(5)]
     X = lambda d: PL + (_dnum(d) - x0) / (x1 - x0) * PW
     _GRAD_N[0] += 1
     gid = "g%d" % _GRAD_N[0]
     s = ['<svg viewBox="0 0 %d %d" width="100%%" role="img" font-family="system-ui,-apple-system,Segoe UI,sans-serif">' % (W, H)]
     s.append('<defs><linearGradient id="%s" x1="0" y1="0" x2="0" y2="1">'
-             '<stop offset="0" stop-color="%s" stop-opacity=".28"/><stop offset="1" stop-color="%s" stop-opacity="0"/></linearGradient></defs>' % (gid, color, color))
-    # y grid
-    if log:
-        v = 10 ** _m.floor(_m.log10(min(vals) / 1.6))
-        gv = []
-        while v <= hi:
-            gv.append(v); v *= 10
-    else:
-        gv = [hi * k / 4 for k in range(5)]
+             '<stop offset="0" stop-color="%s" stop-opacity=".22"/><stop offset="1" stop-color="%s" stop-opacity="0"/></linearGradient></defs>' % (gid, color, color))
     for v in gv:
-        y = Y(v) if v > 0 or log else PT + PH
+        y = Y(v)
         if PT - 2 <= y <= PT + PH + 2:
             s.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="var(--grid)" stroke-width="1"/>' % (PL, y, PL + PW, y))
-            s.append('<text x="%d" y="%.1f" fill="var(--muted)" font-size="10.5" text-anchor="end">%s</text>' % (PL - 7, y + 3, esc(ylab(v))))
-    # monthly x ticks
+            s.append('<text x="%d" y="%.1f" fill="var(--muted)" font-size="10.5" text-anchor="end">%s</text>' % (PL - 8, y + 3, esc(ylab(v))))
     yy, mm = int(min(alld)[:4]), int(min(alld)[5:7])
     while (yy, mm) <= (int(max(alld)[:4]), int(max(alld)[5:7])):
-        d = "%04d-%02d" % (yy, mm)
-        xx = X(d)
+        xx = X("%04d-%02d" % (yy, mm))
         if PL - 2 <= xx <= PL + PW + 2:
-            s.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="var(--grid)" stroke-width="1" opacity=".6"/>' % (xx, PT, xx, PT + PH))
-            s.append('<text x="%.1f" y="%d" fill="var(--muted)" font-size="10.5" text-anchor="middle">%s/%02d</text>' % (xx, H - 9, ("jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec")[mm-1], yy % 100))
+            s.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="var(--grid)" stroke-width="1" opacity=".5"/>' % (xx, PT, xx, PT + PH))
+            s.append('<text x="%.1f" y="%d" fill="var(--muted)" font-size="10.5" text-anchor="middle">%s/%02d</text>' % (
+                xx, H - 10, ("jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec")[mm - 1], yy % 100))
         mm += 1
         if mm > 12:
             mm = 1; yy += 1
     P = [(X(p["date"]), Y(p[vk])) for p in pts]
     if area and len(P) > 1:
-        s.append('<path d="%s L%.1f %.1f L%.1f %.1f Z" fill="url(#%s)" stroke="none"/>' % (_smooth(P), P[-1][0], PT + PH, P[0][0], PT + PH, gid))
-    if len(P) > 1:
-        s.append('<path d="%s" fill="none" stroke="%s" stroke-width="2.5" stroke-linecap="round"/>' % (_smooth(P), color))
-    for p, (xx, yv) in zip(pts, P):
+        s.append('<path d="M%s L%.1f %.1f L%.1f %.1f Z" fill="url(#%s)" stroke="none"/>' % (
+            " L".join("%.1f %.1f" % xy for xy in P), P[-1][0], PT + PH, P[0][0], PT + PH, gid))
+    # segments: dashed where we interpolate across unobserved time
+    for i in range(len(P) - 1):
+        gap = _dnum(pts[i + 1]["date"]) - _dnum(pts[i]["date"])
+        dash = ' stroke-dasharray="6 5" opacity=".75"' if gap > 10 else ''
+        s.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="2.5" stroke-linecap="round"%s/>' % (
+            P[i][0], P[i][1], P[i + 1][0], P[i + 1][1], color, dash))
+    # markers
+    for i, (p, (xx, yv)) in enumerate(zip(pts, P)):
         fl = flags.get(p["date"])
+        obs = len(p["date"]) == 10          # our own dated snapshot vs a month-only press anchor
+        last = i == len(pts) - 1
         if fl:
-            s.append('<circle cx="%.1f" cy="%.1f" r="4.5" fill="var(--surf)" stroke="%s" stroke-width="2" stroke-dasharray="2 2"><title>%s — %s\n⚠ %s</title></circle>' % (xx, yv, color, esc(p["date"]), esc(ylab(p[vk])), esc(fl)))
+            s.append('<circle cx="%.1f" cy="%.1f" r="5" fill="var(--surf)" stroke="%s" stroke-width="2" stroke-dasharray="2 2"><title>%s — %s\n⚠ %s</title></circle>' % (
+                xx, yv, color, esc(p["date"]), esc(ylab(p[vk])), esc(fl)))
+        elif not obs:
+            s.append('<circle cx="%.1f" cy="%.1f" r="5" fill="var(--surf)" stroke="%s" stroke-width="2.5"><title>%s — %s (reported anchor)</title></circle>' % (
+                xx, yv, color, esc(p["date"]), esc(ylab(p[vk]))))
         else:
-            s.append('<circle cx="%.1f" cy="%.1f" r="4" fill="%s" stroke="var(--surf)" stroke-width="1.5"><title>%s — %s</title></circle>' % (xx, yv, color, esc(p["date"]), esc(ylab(p[vk]))))
-        s.append('<text x="%.1f" y="%.1f" fill="var(--ink)" font-size="10.5" font-weight="600" text-anchor="middle">%s</text>' % (xx, yv - 10, esc(ylab(p[vk]))))
+            r = 5.5 if last else 4.2
+            s.append('<circle cx="%.1f" cy="%.1f" r="%.1f" fill="%s" stroke="var(--surf)" stroke-width="1.8"><title>%s — %s (observed snapshot)</title></circle>' % (
+                xx, yv, r, color, esc(p["date"]), esc(ylab(p[vk]))))
+    # value labels: prefer above, flip below on collision, drop if both taken
+    rows = {0: [], 1: []}
+    for i, (p, (xx, yv)) in enumerate(zip(pts, P)):
+        txt = ylab(p[vk])
+        hw = len(txt) * 3.2 + 3
+        last = i == len(pts) - 1
+        placed = False
+        for row in (0, 1):
+            if any(abs(xx - ox) < (hw + ohw + 6) for ox, ohw in rows[row]):
+                continue
+            ax, anch = xx, "middle"
+            if xx - hw < PL:
+                ax, anch = PL, "start"
+            elif xx + hw > PL + PW:
+                ax, anch = PL + PW, "end"
+            dy = -11 if row == 0 else 17
+            s.append('<text x="%.1f" y="%.1f" fill="var(--ink)" font-size="%s" font-weight="%s" text-anchor="%s">%s</text>' % (
+                ax, yv + dy, "11.5" if last else "10.5", "700" if last else "600", anch, esc(txt)))
+            rows[row].append((xx, hw))
+            placed = True
+            break
+        if not placed and last:
+            s.append('<text x="%.1f" y="%.1f" fill="var(--ink)" font-size="11.5" font-weight="700" text-anchor="end">%s</text>' % (
+                PL + PW, yv - 11, esc(txt)))
     if pts2:
         P2 = [(X(q["date"]), Y(q[vk])) for q in pts2]
         if len(P2) > 1:
-            s.append('<path d="%s" fill="none" stroke="%s" stroke-width="2" stroke-dasharray="5 4"/>' % (_smooth(P2), color2))
+            s.append('<path d="M%s" fill="none" stroke="%s" stroke-width="2" stroke-dasharray="5 4"/>' % (
+                " L".join("%.1f %.1f" % xy for xy in P2), color2))
         for q, (xx, yv) in zip(pts2, P2):
-            s.append('<circle cx="%.1f" cy="%.1f" r="3.5" fill="%s"><title>%s — %s (realized)</title></circle>' % (xx, yv, color2, esc(q["date"]), esc(ylab(q[vk]))))
+            s.append('<circle cx="%.1f" cy="%.1f" r="3.5" fill="%s"><title>%s — %s (realized)</title></circle>' % (
+                xx, yv, color2, esc(q["date"]), esc(ylab(q[vk]))))
     s.append('</svg>')
     return "".join(s)
 
@@ -640,7 +700,14 @@ GROWTH = (
     '<h2 id="growth">System growth — total tokens &amp; cost</h2>'
     + ('<p class="sub">OpenRouter\'s whole pie over time. <b>Left:</b> total tokens/mo (one point per weekly snapshot; May-2026 is a reported anchor ~8M users; Mar ~8.4T excluded as off-basis). <b>Right:</b> total cost/mo = those tokens priced at today\'s model blend ($%.2f/Mtok); the dashed green line is OpenRouter\'s reported <i>realized</i> spend.</p>' % blend_tok)
     + '<div class="tiles">' + gtiles_html + '</div>'
-    + '<div class="card"><div class="tlabel" style="margin-bottom:6px">Total token growth <span class="mut">(log scale · hollow dashed point = basis break, hover it)</span></div>' + gsvg + '</div>'
+    + '<div class="card"><div class="tlabel" style="margin-bottom:6px">Total token growth <span class="mut">(log scale)</span></div>' + gsvg
+    + '<div class="legend" style="margin-top:2px">'
+      '<span><svg width="26" height="10"><circle cx="13" cy="5" r="4.2" fill="var(--s1)"/></svg>observed snapshot (ours)</span>'
+      '<span><svg width="26" height="10"><circle cx="13" cy="5" r="4.5" fill="var(--surf)" stroke="var(--s1)" stroke-width="2.5"/></svg>reported anchor (press)</span>'
+      '<span><svg width="26" height="10"><circle cx="13" cy="5" r="4.5" fill="var(--surf)" stroke="var(--s1)" stroke-width="2" stroke-dasharray="2 2"/></svg>basis break — hover</span>'
+      '<span><svg width="30" height="10"><line x1="2" y1="5" x2="28" y2="5" stroke="var(--s1)" stroke-width="2.5"/></svg>consecutive weeks</span>'
+      '<span><svg width="30" height="10"><line x1="2" y1="5" x2="28" y2="5" stroke="var(--s1)" stroke-width="2.5" stroke-dasharray="6 5" opacity=".75"/></svg>gap — interpolated, not measured</span>'
+      '</div></div>'
     + '<div class="card"><div class="tlabel" style="margin-bottom:6px">Total cost growth <span class="mut">(volume × today\'s blend)</span></div>' + csvg
     + '<div class="legend"><span><span class="dot" style="background:var(--s4)"></span>implied $ at today\'s blend</span><span><span class="dot" style="background:var(--good)"></span>reported realized spend</span></div></div>'
     + '<h3 style="font-size:14.5px;margin:22px 0 4px">Weekly growth of the overall market</h3>'
