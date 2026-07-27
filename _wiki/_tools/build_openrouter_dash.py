@@ -541,49 +541,81 @@ gtiles = [
 gtiles_html = "".join('<div class="tile"><div class="tlabel">%s</div><div class="tval">%s</div><div class="tsub">%s</div></div>' % (esc(a), esc(b), esc(c)) for a, b, c in gtiles)
 # ---------- WEEKLY GROWTH of the overall market ----------
 WOWS = D.get("wow_series") or []
-MOM = D.get("wow_implied") or {}
+DEC = D.get("wow_decomp") or {}
 snap_segs = [s for s in WOWS if s["src"] == "snapshot"]
-latest_wow = snap_segs[-1] if snap_segs else None
-anchor_clean = [s for s in WOWS if s["src"] == "anchor" and not s["basis_break"]]
+anchor_segs = [s for s in WOWS if s["src"] == "anchor"]
 
-_mx = max([abs(s["wow_pct"]) for s in WOWS] or [1]) or 1
-wow_rows = []
-for s in WOWS:
-    v = s["wow_pct"]
-    pos = v >= 0
-    w = abs(v) / _mx * 46.0  # % of the half-track
-    badge = ('<span class="gstat good">observed</span>' if s["src"] == "snapshot"
-             else '<span class="gstat info">press anchor</span>')
-    warn = ' <span class="gstat warn" title="crosses a flagged basis break — not a clean measurement">basis break</span>' if s["basis_break"] else ""
-    wow_rows.append(
-        '<div class="barrow2" style="grid-template-columns:190px 1fr 118px">'
-        '<div class="barname">%s → %s<span class="cap">%d days · %.2fx</span></div>'
-        '<div style="position:relative;height:17px;background:var(--grid);border-radius:4px">'
-        '<div style="position:absolute;left:50%%;top:0;bottom:0;width:1px;background:var(--base)"></div>'
-        '<div style="position:absolute;top:2px;height:13px;border-radius:3px;background:%s;%s:50%%;width:%.1f%%"></div>'
-        '</div>'
-        '<div class="barval" style="color:%s">%+.1f%%/wk %s%s</div></div>' % (
-            esc(s["from"]), esc(s["to"]), s["days"], s["ratio"],
-            "var(--good)" if pos else "var(--crit)", "left" if pos else "right", w,
-            "var(--good)" if pos else "var(--crit)", v, badge, warn))
-wow_bars = "".join(wow_rows)
+
+def _bar(label, cap, val, unit, mx, badge=""):
+    pos = val >= 0
+    w = abs(val) / (mx or 1) * 46.0
+    return ('<div class="barrow2" style="grid-template-columns:190px 1fr 132px">'
+            '<div class="barname">%s<span class="cap">%s</span></div>'
+            '<div style="position:relative;height:17px;background:var(--grid);border-radius:4px">'
+            '<div style="position:absolute;left:50%%;top:0;bottom:0;width:1px;background:var(--base)"></div>'
+            '<div style="position:absolute;top:2px;height:13px;border-radius:3px;background:%s;%s:50%%;width:%.1f%%"></div>'
+            '</div><div class="barval" style="color:%s">%+.1f%%%s %s</div></div>' % (
+                esc(label), esc(cap), "var(--good)" if pos else "var(--crit)",
+                "left" if pos else "right", w, "var(--good)" if pos else "var(--crit)",
+                val, unit, badge))
+
+
+# group 1 — observed week-to-week, decomposed (raw % change, NOT compounded)
+dec_bars = ""
+if DEC:
+    mx = max(abs(DEC[k]["wow_pct"]) for k in ("total", "paid", "free"))
+    dec_bars = "".join([
+        _bar("Paid tokens", "%.1fT → %.1fT · the demand signal" % (DEC["paid"]["a_T"], DEC["paid"]["b_T"]),
+             DEC["paid"]["wow_pct"], "", mx, '<span class="gstat good">observed</span>'),
+        _bar("Free tokens", "%.1fT → %.1fT · promo-driven" % (DEC["free"]["a_T"], DEC["free"]["b_T"]),
+             DEC["free"]["wow_pct"], "", mx, '<span class="gstat info">observed</span>'),
+        _bar("Total (headline)", "%.1fT → %.1fT · mix of both" % (DEC["total"]["a_T"], DEC["total"]["b_T"]),
+             DEC["total"]["wow_pct"], "", mx, '<span class="gstat warn">do not quote alone</span>'),
+    ])
+    if DEC.get("ex_biggest") and DEC["ex_biggest"].get("wow_pct") is not None:
+        dec_bars += _bar("Total ex-%s" % DEC["ex_biggest"]["model"].split("/")[-1].split("-2026")[0],
+                         "same total, excluding the one model that drove it",
+                         DEC["ex_biggest"]["wow_pct"], "", mx,
+                         '<span class="gstat good">robustness</span>')
+
+# group 2 — long-run anchor segments (compound %/week over multi-month gaps)
+anc_bars = ""
+if anchor_segs:
+    mxa = max(abs(s.get("wow_pct") or 0) for s in anchor_segs) or 1
+    for s in anchor_segs:
+        if s.get("wow_pct") is None:
+            continue
+        warn = (' <span class="gstat warn" title="crosses a flagged basis break">basis break</span>'
+                if s["basis_break"] else "")
+        circ = (' <span class="gstat warn" title="this endpoint is our own feed, not a press figure — partly circular">semi-circular</span>'
+                if len(s["to"]) == 10 else "")
+        anc_bars += _bar("%s → %s" % (s["from"], s["to"]), "%d days · %.2fx" % (s["days"], s["ratio"]),
+                         s["wow_pct"], "/wk", mxa,
+                         '<span class="gstat info">press anchor</span>' + warn + circ)
+
+# movers table
+mv_rows = ""
+if DEC:
+    for t in DEC.get("top_down", [])[:3] + DEC.get("top_up", [])[:3]:
+        v = t["delta_T"]
+        mv_rows += ('<tr><td>%s <span class="mut">· %s</span></td><td class="r" style="color:%s">%+.2f T</td>'
+                    '<td class="r mut">%s</td></tr>' % (
+                        esc(t["model"].split("-2026")[0]), esc(t["variant"] or "—"),
+                        "var(--good)" if v >= 0 else "var(--crit)", v,
+                        ("%.0f%% of net" % t["pct_of_net"]) if t.get("pct_of_net") else ""))
 
 wow_tiles = []
-if latest_wow:
-    wow_tiles.append(("Latest observed WoW", "%+.1f%%" % ((latest_wow["ratio"] - 1) * 100),
-                      "wk ending %s vs prior · %d-day gap · <b>hard</b>" % (latest_wow["to"], latest_wow["days"])))
-if MOM.get("momentum_pct") is not None:
-    wow_tiles.append(("Momentum vs prior ~3wk", "%+.1f%%" % MOM["momentum_pct"],
-                      "last %dd %.2f T/day vs prior %dd %.2f T/day · level, <b>not</b> a rate" % (
-                          MOM["win_week_days"], MOM["rate_week_day"] / 1e12,
-                          MOM["prior_days"], MOM["rate_prior_day"] / 1e12)))
-if anchor_clean:
-    a = anchor_clean[-1]
-    wow_tiles.append(("Long-run avg (%s→%s)" % (a["from"], a["to"]), "%+.1f%%/wk" % a["wow_pct"],
-                      "press anchors · independent of the feed"))
+if DEC:
+    wow_tiles = [
+        ("Paid tokens WoW", "%+.1f%%" % DEC["paid"]["wow_pct"], "the demand signal · <b>robust</b> to every basis tested"),
+        ("Free tokens WoW", "%+.1f%%" % DEC["free"]["wow_pct"], "one expiring promo · not demand"),
+        ("Free share of tokens", "%.0f%% → %.0f%%" % (DEC["free_share_a"], DEC["free_share_b"]), "collapsed in one week"),
+        ("Total WoW <span class=\"gstat warn\">caveat</span>", "%+.1f%%" % DEC["total"]["wow_pct"],
+         "mix artifact — read the decomposition, not this"),
+    ]
 wow_tile_html = "".join(
     '<div class="tile"><div class="tlabel">%s</div><div class="tval">%s</div><div class="tsub">%s</div></div>' % (
-        esc(t), esc(v), s) for t, v, s in wow_tiles)
+        t, esc(v), s) for t, v, s in wow_tiles)
 
 tok_flags = {p["date"]: p["flag"] for p in sysg.get("token_points_meta", []) if p.get("flag")}
 gsvg = linechart(ts, "tokens_mo_T", "var(--s1)", lambda v: ("%.0fT" % v) if v >= 10 else ("%.1fT" % v), log=True, flags=tok_flags)
@@ -612,12 +644,26 @@ GROWTH = (
     + '<div class="card"><div class="tlabel" style="margin-bottom:6px">Total cost growth <span class="mut">(volume × today\'s blend)</span></div>' + csvg
     + '<div class="legend"><span><span class="dot" style="background:var(--s4)"></span>implied $ at today\'s blend</span><span><span class="dot" style="background:var(--good)"></span>reported realized spend</span></div></div>'
     + '<h3 style="font-size:14.5px;margin:22px 0 4px">Weekly growth of the overall market</h3>'
-    + '<p class="sub" style="margin-bottom:10px">Compound %/week over each segment\'s <b>actual day gap</b> (the series mixes monthly press anchors with our weekly snapshots, so raw point-to-point deltas would not be comparable). <span class="gstat good">observed</span> = measured from two of our own snapshots; <span class="gstat info">press anchor</span> = derived from reported figures.</p>'
+    + '<p class="sub" style="margin-bottom:10px">Measured from two of our own snapshots (%s → %s). <b>The aggregate is decomposed because on its own it is misleading.</b> Basis: %s.</p>' % (
+        esc(DEC.get("from", "")), esc(DEC.get("to", "")), esc(DEC.get("basis", "")))
     + '<div class="tiles">' + wow_tile_html + '</div>'
-    + '<div class="card">' + wow_bars + '</div>'
-    + '<div class="callout warn"><b>Read this before quoting a weekly growth number.</b> The first two real snapshots print <b>−9.9%</b> WoW — but that is a <b>spike retracing, not a downtrend</b>: the week ending 07-20 ran 8.90 T/day (hot), the week ending 07-26 ran 7.96 T/day, and the three weeks <i>before</i> the spike averaged ~7.3 T/day. The latest week is still above the pre-spike baseline while being down on the week. '
-      'Weekly token prints are <b>spiky — do not extrapolate a single week</b>. '
-      '<br><br><b>A method we tried and discarded, on purpose:</b> from one snapshot you can compare the trailing-week run-rate to the trailing-month-ex-week run-rate and compound it into an implied WoW. It read <b>+13.7%/wk</b> on the 07-21 snapshot and <b>+4.6%/wk</b> on 07-27, while the actual outcome was <b>−9.9%</b>. It compounds a level gap between two overlapping windows, so a one-week spike masquerades as a growth rate. We now show that comparison only as an un-compounded <b>momentum</b> level (and its month-window length is inferred from sparse feed buckets, drifting 30d→28d between snapshots, so treat it as directional).</div>'
+    + '<div class="callout"><b>The real finding: paid tokens grew, free tokens collapsed.</b> The headline total is <b>%s</b> — but that is almost entirely <b>one expiring free promo</b>. Paid tokens (the demand signal, and what actually monetizes) grew <b>%s</b>; free tokens fell <b>%s</b>, dropping the free share of the platform from <b>%.0f%% to %.0f%% in a single week</b>. Excluding just the one model that drove it, the platform <b>grew %s</b>. A PM reading "total tokens −7%%" as a demand rollover would have it exactly backwards.</div>' % (
+        ("%+.1f%%" % DEC["total"]["wow_pct"]) if DEC else "n/a",
+        ("%+.1f%%" % DEC["paid"]["wow_pct"]) if DEC else "n/a",
+        ("%+.1f%%" % DEC["free"]["wow_pct"]) if DEC else "n/a",
+        DEC.get("free_share_a") or 0, DEC.get("free_share_b") or 0,
+        ("%+.1f%%" % DEC["ex_biggest"]["wow_pct"]) if DEC.get("ex_biggest") else "n/a")
+    + '<div class="card">' + dec_bars + '</div>'
+    + ('<div class="card scroll"><div class="tlabel" style="margin-bottom:6px">What moved (week-over-week token delta by model)</div>'
+       '<table><thead><tr><th>Model · variant</th><th class="r">Δ tokens</th><th class="r">share of net</th></tr></thead><tbody>'
+       + mv_rows + '</tbody></table></div>' if mv_rows else "")
+    + ('<div class="card"><div class="tlabel" style="margin-bottom:6px">Long-run segments <span class="mut">(compound %/week over multi-month gaps)</span></div>' + anc_bars
+       + '<p class="note" style="margin-top:8px">Month-only anchors (e.g. <code>2026-03</code>) are dated to the <b>15th</b> by convention — a ±10-day shift moves these rates materially. The 05→07 segment is marked <b>semi-circular</b> because its later endpoint is our own feed, not an independent press figure.</p></div>' if anc_bars else "")
+    + '<div class="callout warn"><b>Methodology — what we do NOT publish here, and why.</b> '
+      '<b>(1) No single-snapshot growth proxy.</b> Comparing the trailing-week run-rate to the trailing-month-ex-week rate and compounding it read <b>+13.7%/wk</b> on the 07-21 snapshot while the next real snapshot printed negative — it compounds a level gap between <i>overlapping</i> windows, so one hot week becomes a "rate". Left un-compounded as a "momentum" level it swings <b>+0.2% / +9.7% / +9.7% / +20.1%</b> across two defensible choices (month window 28d vs 30d × two aggregation bases), so it carries no information and is gone. '
+      '<b>(2) The week-to-week segment is not compounded</b> into a %/week rate: the series is step-driven (promos start and end), so a compound rate would describe no real process. Only multi-month anchor segments are normalised to %/week. '
+      '<b>(3) A fixed aggregation bug is now corrected:</b> the feed buckets each model by its <i>last active day</i> in the window, and we previously kept only the final bucket — silently deleting dormant models\' real volume (0.0% of the 07-21 week but 3.0% of the 07-27 week, an asymmetry that by itself manufactured ~3pp of a fake decline). All windows now sum every bucket; verified no model appears in two buckets. '
+      '<b>(4) N=2.</b> This is one observed transition. Treat direction as informative and magnitude as provisional until several more Mondays land.</div>'
     + ('<p class="note"><b>The tell:</b> at today\'s blend the cost curve tracks volume (~%.1f× since May), but reported spend is ~flat ($83M Mar → $76M Jun) — so the <b>blended price per token is collapsing</b> as free tiers and cheap open models eat the marginal token. The "cost @ blend" line is a <i>ceiling</i> scenario (list price, no caching); realized sits ~⅓ of it.</p>' % (mult_may or 0)))
 
 PRODUCT = (

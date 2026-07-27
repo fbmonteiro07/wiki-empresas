@@ -122,8 +122,18 @@ def build():
         return price.get(ps) or price.get(stripv(ps))
 
     def latest_rows(rows):
-        last = max(r["date"] for r in rows)
-        return [r for r in rows if r["date"] == last]
+        """All rows in the window — NOT just the last bucket.
+
+        A row's `date` is the last day that model was active inside the trailing
+        window, and its value is that model's tokens over [window_start, date].
+        So models that went dormant mid-window sit in earlier buckets carrying
+        real in-window volume. Keeping only the max bucket silently deletes them:
+        0.00% of the 2026-07-21 week but 3.04% of the 2026-07-27 week (and 9.3%
+        of that month window) — an ASYMMETRIC cut that manufactured most of a
+        fake -9.9% WoW. Verified safe to sum: no (model,variant) key appears in
+        more than one bucket in any captured file.
+        """
+        return rows
 
     def rev_at(prompt, comp, pr, cache_frac):
         """$ at list, with cache_frac of INPUT priced at the model's cache-read rate."""
@@ -184,50 +194,20 @@ def build():
 
     wk_lab = agg_lab(wk_models); mo_lab = agg_lab(mo_models)
 
-    # ---- implied weekly growth of the whole platform, from ONE snapshot ----
-    # The two rankings views are trailing windows ending on the same day. Window
-    # lengths are OBSERVED from the bucket date spans (week 7d, month 30d), so the
-    # month CONTAINS the week -> the honest comparison is week vs month-EX-week,
-    # never week vs whole month (that would double-count the week and understate).
-    #   r_week  = W / 7                      (last 7 days)
-    #   r_prior = (M - W) / (Dm - 7)         (the 23 days before that)
-    # Growth is measured between window MIDPOINTS, not window edges.
-    def win_span(rows):
-        ds = sorted({r["date"][:10] for r in rows})
-        if not ds:
-            return None
-        a = dt.date(*map(int, ds[0].split("-"))); b = dt.date(*map(int, ds[-1].split("-")))
-        return (b - a).days + 1
-
-    # span comes from ALL buckets (the straggler buckets trace the window edges);
-    # latest_rows() would collapse to a single day and yield Dw==Dm==1.
-    Dw = win_span(wk) or 7
-    Dm = win_span(mo) or 30
-    W_tok = sum(v["tokens"] for v in wk_lab.values())
-    M_tok = sum(v["tokens"] for v in mo_lab.values())
-    wow = None
-    if M_tok > W_tok > 0 and Dm > Dw > 0:
-        r_week = W_tok / Dw
-        r_prior = (M_tok - W_tok) / (Dm - Dw)
-        if r_prior > 0:
-            g = r_week / r_prior
-            wow = {
-                "win_week_days": Dw, "win_month_days": Dm,
-                "tok_week": W_tok, "tok_month": M_tok,
-                "rate_week_day": r_week, "rate_prior_day": r_prior,
-                "prior_days": Dm - Dw,
-                # LEVEL-vs-LEVEL only. Do NOT compound this into a growth rate:
-                # it is the last week's run-rate against the prior ~3 weeks' average,
-                # so a one-week spike shows up as a big "step". Empirically falsified
-                # as a growth proxy — from the 2026-07-21 snapshot it implied +13.7%/wk
-                # while the next real snapshot came in at -9.9%. It is a MOMENTUM /
-                # spike indicator; the honest growth number is wow_series (observed).
-                "momentum_pct": (g - 1) * 100,
-                "flat_ratio": Dm / float(Dw), "obs_ratio": M_tok / W_tok,
-                # Dm is inferred from straggler bucket dates and drifts (30d on the
-                # 07-21 snapshot, 28d on 07-27) -> treat momentum as directional only.
-                "month_span_inferred": True,
-            }
+    # ---- NO single-snapshot growth proxy is published. ----
+    # Two were tried and both failed an audit against the raw feed:
+    #  (1) week-run-rate vs month-ex-week, COMPOUNDED across window midpoints:
+    #      read +13.7%/wk on 2026-07-21 while the next real snapshot printed
+    #      negative. It compounds a level gap between OVERLAPPING windows, so one
+    #      hot week masquerades as a growth rate.
+    #  (2) the same comparison left UN-compounded as a "momentum" level: on the
+    #      2026-07-27 snapshot it reads +0.2% / +9.7% / +9.7% / +20.1% depending
+    #      on two undisclosed choices (month-window 28d vs 30d, max-bucket vs
+    #      all-bucket aggregation). A ~20pp span carries no information.
+    # The month-window length cannot be measured from the feed either: it is
+    # inferred from the earliest straggler bucket, which is a LOWER BOUND that
+    # moves with the straggler distribution, not a window edge.
+    # Growth is therefore reported ONLY from snapshot-to-snapshot observation.
     tot_tok = sum(v["tokens"] for v in wk_lab.values()) or 1.0
     tot_paid = sum(v["paid_tokens"] for v in wk_lab.values()) or 1.0
     tot_rev = sum(v["r0"] for v in wk_lab.values()) or 1.0
@@ -295,7 +275,12 @@ def build():
     # text tokens = everything minus non-text; free rows already sit inside priced_tok,
     # so derive the total from (all - nontext) to avoid double-counting the free subset.
     plat_text_tok = wk_st["total_tok"] - wk_st["nontext_tok"]
+    # RUN-RATE (current week annualised to 30d) — not the same construct as the
+    # feed's directly-observed trailing-30d total, which is also on disk. During
+    # a hot or cold week the two diverge; publish both so the run-rate is never
+    # mistaken for a measured monthly volume.
     tokens_month = plat_text_tok / 7.0 * 30.0
+    tokens_month_observed = sum(v["tokens"] for v in mo_lab.values())
     rev_month = tot_rev / 7.0 * 30.0
     rev_month_c50 = sum(v["r50"] for v in wk_lab.values()) / 7.0 * 30.0
     rev_month_c70 = sum(v["r70"] for v in wk_lab.values()) / 7.0 * 30.0
@@ -311,7 +296,13 @@ def build():
 
     G = {}
     G["priced_token_coverage"] = ("PASS" if coverage >= 0.90 else "WARN", "%.2f%% of text tokens priced" % (coverage * 100))
+    _gap = (tokens_month / tokens_month_observed - 1) * 100 if tokens_month_observed else 0
     G["platform_tokens_vs_anchor"] = ("INFO", "computed ~%.0fT tok/mo vs OR-reported ~%sT/mo (%s); tokens ~2.7x since => on-trend" % (tokens_month / 1e12, orr.get("reported_tokens_per_month_T"), orr.get("tokens_asof")))
+    G["runrate_vs_observed_month"] = (
+        "GOOD" if abs(_gap) <= 10 else "WARN",
+        "week-annualised run-rate %.0fT/mo vs the feed's directly-observed trailing-30d %.0fT/mo (%+.1f%%) — "
+        "run-rate leads when the latest week is hot, lags when soft; quote the observed figure for a monthly volume"
+        % (tokens_month / 1e12, tokens_month_observed / 1e12, _gap))
     G["implied_$_is_a_CEILING"] = ("WARN", "list & cache-OFF: $%.0fM/mo vs OR actual ~$%sM/mo (%s) = %.1fx. OR spend was ~FLAT Mar~$%.0fM->Jun$%sM, so the gap is list-vs-realized (caching-off + provider discounting), NOT growth." % (spendM, spend_jun, orr.get("spend_asof"), ratio or 0, (spend_mar or 0), spend_jun))
     G["cache_sensitivity"] = ("INFO", "if 50/70%% of input were cache-reads: $%.0fM/$%.0fM per mo (vs $%.0fM at cache-off)" % (rev_month_c50 / 1e6, rev_month_c70 / 1e6, spendM))
     G["input_heaviness"] = ("INFO", "platform prompt:completion = %.1f:1 (%.0f%% input tokens) => $ is an INPUT-price construct" % (input_ratio, wk_st["prompt_tok"] / plat_text_tok * 100 if plat_text_tok else 0))
@@ -457,6 +448,58 @@ def build():
         p = (s + "-15" if len(s) == 7 else s)[:10].split("-")
         return dt.date(int(p[0]), int(p[1]), int(p[2]))
 
+    # ---- WoW DECOMPOSITION: paid vs free, and the single-model concentration ----
+    # The aggregate WoW is not a demand signal on its own. On the first real
+    # transition (2026-07-21 -> 07-27) one free variant (tencent/hy3) accounted
+    # for more than the entire decline while PAID tokens grew — so the headline
+    # must be decomposed or it reads as a demand rollover when it is a promo
+    # expiry plus a free->paid migration. Computed on ONE consistent basis for
+    # both snapshots: all buckets, raw prompt+completion (incl. non-text).
+    def wk_by_variant(rdir):
+        try:
+            rows = json.loads((rdir / "rank_week.json").read_text(encoding="utf-8"))["data"]
+        except (OSError, ValueError, KeyError):
+            return None
+        agg = defaultdict(float)
+        for r in rows:
+            agg[(r.get("model_permaslug"), r.get("variant"))] += (
+                f(r.get("total_prompt_tokens")) + f(r.get("total_completion_tokens")))
+        return agg
+
+    wow_decomp = None
+    if len(raw_dirs) >= 2:
+        pa, pb = wk_by_variant(raw_dirs[-2]), wk_by_variant(raw_dirs[-1])
+        if pa and pb:
+            def split(m):
+                fr = sum(v for k, v in m.items() if k[1] == "free")
+                return sum(m.values()), fr, sum(m.values()) - fr
+
+            tA, fA, dA = split(pa)
+            tB, fB, dB = split(pb)
+            delta = {k: pb.get(k, 0) - pa.get(k, 0) for k in set(pa) | set(pb)}
+            net = tB - tA
+            movers = sorted(delta.items(), key=lambda kv: kv[1])
+            top_dn = [{"model": k[0], "variant": k[1], "delta_T": v / 1e12,
+                       "pct_of_net": (v / net * 100) if net else None} for k, v in movers[:4]]
+            top_up = [{"model": k[0], "variant": k[1], "delta_T": v / 1e12}
+                      for k, v in movers[::-1][:4]]
+            big = movers[0][0][0] if movers else None
+            ex = None
+            if big:
+                exA = sum(v for k, v in pa.items() if k[0] != big)
+                exB = sum(v for k, v in pb.items() if k[0] != big)
+                ex = {"model": big, "wow_pct": (exB / exA - 1) * 100 if exA else None}
+            wow_decomp = {
+                "from": raw_dirs[-2].name, "to": raw_dirs[-1].name,
+                "basis": "all buckets, raw prompt+completion (incl. non-text)",
+                "total": {"a_T": tA / 1e12, "b_T": tB / 1e12, "wow_pct": (tB / tA - 1) * 100 if tA else None},
+                "paid": {"a_T": dA / 1e12, "b_T": dB / 1e12, "wow_pct": (dB / dA - 1) * 100 if dA else None},
+                "free": {"a_T": fA / 1e12, "b_T": fB / 1e12, "wow_pct": (fB / fA - 1) * 100 if fA else None},
+                "free_share_a": fA / tA * 100 if tA else None,
+                "free_share_b": fB / tB * 100 if tB else None,
+                "top_down": top_dn, "top_up": top_up, "ex_biggest": ex,
+            }
+
     flagged = {p["date"] for p in sg.get("token_points", []) if p.get("flag")}
     wow_series = []
     for a, b in zip(token_series_list, token_series_list[1:]):
@@ -465,12 +508,20 @@ def build():
             continue
         weeks = days / 7.0
         ratio = b["tokens_mo_T"] / a["tokens_mo_T"]
-        wow_series.append({
+        is_snap = len(a["date"]) == 10 and len(b["date"]) == 10
+        seg = {
             "from": a["date"], "to": b["date"], "days": days, "weeks": weeks,
-            "ratio": ratio, "wow_pct": (ratio ** (1.0 / weeks) - 1) * 100,
-            "src": "snapshot" if len(a["date"]) == 10 and len(b["date"]) == 10 else "anchor",
+            "ratio": ratio, "change_pct": (ratio - 1) * 100,
+            "src": "snapshot" if is_snap else "anchor",
             "basis_break": bool(flagged & {a["date"], b["date"]}),
-        })
+        }
+        # Only MULTI-MONTH anchor gaps get normalised to a compound %/week.
+        # A snapshot-to-snapshot segment is ~one week of a spiky, step-driven
+        # series (promo starts/ends), so compounding it invents a "rate" that
+        # describes no real process — publish the raw change instead.
+        if not is_snap and weeks >= 2:
+            seg["wow_pct"] = (ratio ** (1.0 / weeks) - 1) * 100
+        wow_series.append(seg)
     system_growth = {
         "token_series": token_series_list,
         # "total cost growth" = each period's tokens priced at TODAY's model blend (counterfactual;
@@ -498,7 +549,7 @@ def build():
         },
         "anchors": orr, "anchor_spend_mar_musd": spend_mar,
         "guardrails": G, "labs": labs, "models": models_out[:40], "apps": apps[:20],
-        "wow_implied": wow, "wow_series": wow_series,
+        "wow_series": wow_series, "wow_decomp": wow_decomp,
     }
     (OR / "dashboard.json").write_text(json.dumps(out, indent=1), encoding="utf-8")
 
