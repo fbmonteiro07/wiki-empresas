@@ -7,7 +7,7 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\GEV` (filings + transc
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $45.8bn | $52.9bn |
+| Revenue | $45.7bn | $52.9bn |
 | Gross profit | $11.1bn | $14.5bn |
 | Gross margin | 24.2% | 27.3% |
 | EBITDA | $6.2bn | $9.4bn |

@@ -11,11 +11,11 @@ _Wiki · generated 2026-06-25 · sources: `E:\Wiki Felipe empresas\CDNs\_importe
 |---|--:|--:|
 | Revenue | $2.8bn | $3.6bn |
 | Gross profit | $2.1bn | $2.6bn |
-| Gross margin | 73.6% | 73.3% |
-| EBITDA | $647m | $769m |
+| Gross margin | 73.7% | 73.3% |
+| EBITDA | $645m | $761m |
 | EPS | $1.18 | $1.59 |
 | Capex | $420m | $503m |
-| OCF (≈EBITDA) | $647m | $769m |
+| OCF (≈EBITDA) | $645m | $761m |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

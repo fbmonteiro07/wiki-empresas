@@ -11,10 +11,10 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\WDC` (filings + transc
 |---|--:|--:|
 | Revenue | $15.3bn | $21.1bn |
 | Gross profit | $8.0bn | $12.4bn |
-| Gross margin | 52.3% | 58.5% |
+| Gross margin | 52.4% | 58.6% |
 | EBITDA | $7.0bn | $11.5bn |
-| EPS | $13.91 | $23.22 |
-| Capex | $633m | $875m |
+| EPS | $13.85 | $23.19 |
+| Capex | $642m | $881m |
 | OCF (≈EBITDA) | $7.0bn | $11.5bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

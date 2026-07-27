@@ -1,0 +1,716 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PM Meeting Flow · Jul 27, 2026</title>
+<style>
+  :root{
+    --ink:#0b0b0b; --ink2:#334155; --muted:#52514e; --faint:#898781;
+    --line:#e1e0d9; --line2:#c3c2b7; --page:#f9f9f7; --card:#ffffff;
+    /* diverging pair (validated all-pairs on #ffffff: CVD dE 21.6, normal 32.3) */
+    --pos:#2a78d6; --neg:#e34948; --mid:#f0efec;
+    --series1:#2a78d6;
+    /* status — always paired with an icon/label, never colour alone */
+    --good:#0ca30c; --crit:#d03b3b; --warn:#fab219;
+    --bull:#006300; --bear:#d03b3b;
+    --accent:#184f95; --accentbg:#eef4fd;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--page);color:var(--ink);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+  .num{font-variant-numeric:tabular-nums}
+  a{color:var(--accent)}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 22px}
+
+  header{background:#0b0b0b;color:#fff;padding:26px 0 22px}
+  header .eyebrow{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#fab219;font-weight:700}
+  header h1{margin:6px 0 5px;font-size:27px;font-weight:700;letter-spacing:-.01em}
+  header .sub{color:#c3c2b7;font-size:13.5px;max-width:880px}
+  header .meta{margin-top:12px;font-size:12px;color:#898781}
+  header .meta b{color:#e1e0d9}
+
+  nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;gap:3px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  nav a{color:var(--ink2);font-weight:600;font-size:12.5px;padding:6px 10px;border-radius:7px;text-decoration:none}
+  nav a:hover{background:var(--page)}
+
+  section{padding:30px 0 8px}
+  .shead{display:flex;align-items:baseline;gap:12px;margin-bottom:4px;flex-wrap:wrap}
+  .shead .k{font-size:11px;font-weight:800;color:var(--accent);letter-spacing:.12em;
+    background:var(--accentbg);border:1px solid #cde2fb;border-radius:6px;padding:2px 8px}
+  .shead h2{margin:0;font-size:20px;font-weight:700;letter-spacing:-.01em}
+  .shead .note{color:var(--muted);font-size:12.5px}
+  .lede{color:var(--ink2);font-size:14.5px;margin:10px 0 18px;max-width:940px}
+  .lede b{color:var(--ink)}
+
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:6px 0 18px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:13px 14px}
+  .stat .big{font-size:24px;font-weight:700;letter-spacing:-.02em}
+  .stat .big.dn{color:var(--neg)} .stat .big.up{color:var(--pos)}
+  .stat .lab{font-size:12px;color:var(--ink2);margin-top:3px;font-weight:600}
+  .stat .src{font-size:11px;color:var(--faint);margin-top:5px}
+
+  .callout{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);
+    border-radius:10px;padding:15px 17px;margin:4px 0 20px}
+  .callout h3{margin:0 0 7px;font-size:14.5px;font-weight:700}
+  .callout p{margin:7px 0;color:var(--ink2)}
+  .callout .macro{margin-top:11px;padding-top:11px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+  .callout .miniwrap{overflow-x:auto}
+  .callout table.mini{width:auto;margin:9px 0 3px;font-size:12.5px}
+  .callout table.mini td{padding:3px 14px 3px 0;border:0;white-space:nowrap}
+
+  .debate{background:var(--card);border:1px solid var(--line);border-radius:13px;margin:0 0 16px;overflow:hidden}
+  .debate .top{display:flex;gap:13px;align-items:flex-start;padding:15px 18px 12px;border-bottom:1px solid var(--line)}
+  .debate .no{flex:0 0 auto;width:30px;height:30px;border-radius:8px;background:#0b0b0b;color:#fff;
+    font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center}
+  .debate .th{flex:1;min-width:220px}
+  .debate .th h3{margin:0;font-size:16.5px;font-weight:700;letter-spacing:-.01em}
+  .debate .q{color:var(--muted);font-size:13px;margin-top:3px}
+  .debate .chip{flex:0 0 auto;font-size:11px;font-weight:700;color:var(--muted);
+    background:var(--page);border:1px solid var(--line2);border-radius:20px;padding:3px 10px;white-space:nowrap}
+  .bb{display:grid;grid-template-columns:1fr 1fr}
+  .bb>div{padding:13px 18px}
+  .bb .bull{border-right:1px solid var(--line)}
+  .col-h{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:7px;display:flex;align-items:center;gap:6px}
+  .col-h.bull{color:var(--bull)} .col-h.bear{color:var(--bear)}
+  .ic{font-size:12px;line-height:1}
+  .bb ul{margin:0;padding-left:16px}
+  .bb li{margin:6px 0;color:var(--ink2);font-size:12.8px}
+  .bb li b{color:var(--ink)}
+  cite{font-style:normal;color:var(--faint);font-size:11.5px}
+  .foot{display:flex;gap:18px;flex-wrap:wrap;padding:11px 18px;background:var(--page);border-top:1px solid var(--line);font-size:12.5px}
+  .foot .exp,.foot .res{flex:1;min-width:290px;color:var(--ink2)}
+  .foot b{color:var(--ink)}
+  .tk{display:inline-block;font-weight:700;font-size:11.5px;background:var(--accentbg);color:var(--accent);
+    border-radius:5px;padding:1px 6px;margin:1px 1px}
+
+  .grid2{display:grid;grid-template-columns:1.06fr .94fr;gap:20px;align-items:start}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .panel h3{margin:0 0 3px;font-size:14.5px;font-weight:700}
+  .panel .psub{color:var(--muted);font-size:12px;margin-bottom:11px}
+  .lgnd{display:flex;gap:14px;flex-wrap:wrap;font-size:11.5px;color:var(--ink2);margin-top:9px;align-items:center}
+  .lgnd span{display:inline-flex;align-items:center;gap:5px}
+  .sw{width:10px;height:10px;border-radius:2px;display:inline-block}
+  .scrollx{overflow-x:auto}
+  table{border-collapse:collapse;width:100%;font-size:12.6px}
+  th,td{text-align:right;padding:5px 9px;border-bottom:1px solid var(--line)}
+  th:first-child,td:first-child{text-align:left}
+  thead th{font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:700;border-bottom:1px solid var(--line2)}
+  tbody tr:hover{background:var(--page)}
+  td.t{font-weight:700}
+  td.nm{color:var(--muted);font-size:11.5px;font-weight:500}
+  .pos{color:var(--pos);font-weight:600} .neg{color:var(--neg);font-weight:600}
+  .twocol{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
+
+  .arc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0;margin-bottom:14px;overflow:hidden}
+  .arc .ah{display:flex;gap:10px;align-items:baseline;padding:12px 17px;background:var(--page);border-bottom:1px solid var(--line)}
+  .arc .ah h4{margin:0;font-size:14.5px;font-weight:700}
+  .arc .ah .d{font-size:11.5px;color:var(--faint);font-weight:600;margin-left:auto}
+  .arc .ab{padding:12px 17px}
+  .arc .ab p{margin:0 0 8px;color:var(--ink2);font-size:13px}
+  .arc .ab p:last-child{margin-bottom:0}
+  .arc .ab b{color:var(--ink)}
+
+  .reading{width:100%;font-size:12.7px}
+  .reading th,.reading td{text-align:left;padding:7px 10px;vertical-align:top}
+  .reading td.src{white-space:nowrap;color:var(--muted);font-weight:600}
+  .reading td.ti{font-weight:600;color:var(--ink)}
+  .reading td.wh{color:var(--ink2)}
+  .starred{color:#fab219}
+
+  .tam{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:14px;overflow:hidden}
+  .tam .th2{padding:12px 17px;background:var(--page);border-bottom:1px solid var(--line);display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+  .tam .th2 h4{margin:0;font-size:14.5px;font-weight:700}
+  .tam .th2 code{font-size:11px;background:#eef2f7;padding:1px 6px;border-radius:4px;color:var(--muted)}
+  .tam .cn{padding:11px 17px;font-size:13px;color:var(--ink2);border-bottom:1px solid var(--line)}
+  .tam .cn b{color:var(--ink)}
+  .tam .tr{padding:10px 17px;font-size:12.5px;color:#7a2e12;background:#fef7ed;display:flex;gap:8px}
+  .tam .tr b{color:#7a2e12}
+  .tam .vs{padding:4px 17px 11px}
+  .tam table{font-size:12.3px}
+  .tam td:first-child{font-weight:600}
+
+  .rev{width:100%;font-size:12.6px}
+  .rev th,.rev td{text-align:left;padding:7px 10px;vertical-align:top}
+  .badge{font-size:10.5px;font-weight:700;border-radius:5px;padding:1px 6px;white-space:nowrap}
+  .badge.up{background:#eaf3fd;color:var(--accent)} .badge.dn{background:#fdecec;color:#a32020}
+  .badge.nt{background:#f1f0ec;color:var(--muted)}
+  .cal{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:12px;margin-top:6px}
+  .cal .ev{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 13px}
+  .cal .ev .dt{font-size:11px;font-weight:800;color:var(--accent);letter-spacing:.04em}
+  .cal .ev .nm2{font-weight:700;margin-top:2px;font-size:13.5px}
+  .cal .ev .ds{font-size:12px;color:var(--ink2);margin-top:3px}
+
+  footer{margin-top:26px;padding:18px 0 44px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+  footer code{background:#f1f0ec;padding:1px 5px;border-radius:4px;font-size:11.5px}
+
+  @media (max-width:900px){
+    .stats{grid-template-columns:repeat(2,1fr)} .grid2{grid-template-columns:1fr}
+    .bb{grid-template-columns:1fr} .bb .bull{border-right:0;border-bottom:1px solid var(--line)}
+    .twocol{grid-template-columns:1fr}
+  }
+  @media print{
+    nav{display:none} header{background:#0b0b0b!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .debate,.panel,.stat,.callout,.arc,.tam,.cal .ev{break-inside:avoid} body{font-size:10.5px}
+  }
+</style>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Capstone · US Equities · Meeting flow</div>
+    <h1>Estimates up, prices down — the de-rating, the 5 debates, and the week that produced them</h1>
+    <div class="sub">The AI complex just had its best week of earnings revisions <em>and</em> one of its worst weeks of price action. NTM EPS is up <b>+17% at ASML</b>, <b>+11% at Google</b>, <b>+10% at TSMC</b> over four weeks while all three de-rated. That is multiple compression, not earnings deterioration — and it is the frame for everything below.</div>
+    <div class="meta">Prepared for the PM meeting · <b>Mon Jul 27, 2026</b> &nbsp;·&nbsp; prices &amp; consensus: <b>live Bloomberg pull, today</b> (35 names) &nbsp;·&nbsp; debates: wiki edge tracker (<b>reconciliation 07-24</b>) &nbsp;·&nbsp; week covered: <b>Jul 20 → 26</b> (253 page changes, 237 rating/PT moves, 5 ingest runs)</div>
+  </div>
+</header>
+
+<nav><div class="wrap">
+  <a href="#tape">1 · The tape</a>
+  <a href="#debates">2 · The 5 debates</a>
+  <a href="#var">3 · Moves &amp; drawdown</a>
+  <a href="#week">4 · What else moved</a>
+  <a href="#reading">5 · Reading list</a>
+  <a href="#tam">6 · TAM ledger</a>
+  <a href="#flow">7 · Flow &amp; calendar</a>
+</div></nav>
+
+<!-- ============ 1 · TAPE ============ -->
+<section id="tape"><div class="wrap">
+  <div class="shead"><span class="k">01</span><h2>The tape</h2><span class="note">where we walk in</span></div>
+  <div class="lede">Three weeks ago this was a de-grossing story. It still is — but the evidence has sharpened into something more useful: <b>the names with the biggest upward estimate revisions are the ones falling hardest.</b> Every name with an NTM EPS revision above +4% over four weeks de-rated; every name that re-rated had flat-to-negative revisions. That is a positioning rotation with a clean signature, not a demand break.</div>
+
+  <div class="stats">
+    <div class="stat"><div class="big dn num">−19.3%</div><div class="lab">ASML multiple compression, 4 wks — price −5.5% on NTM EPS <b>+17.1%</b></div><div class="src">Bloomberg, today</div></div>
+    <div class="stat"><div class="big dn num">−33.6%</div><div class="lab">Median optics/networking drawdown from 52-wk high — the worst bucket</div><div class="src">Bloomberg, today · 7 names</div></div>
+    <div class="stat"><div class="big up num">+18.0%</div><div class="lab">AAPL multiple <em>expansion</em>, 4 wks — the safe-haven bid (0.2% off its high)</div><div class="src">Bloomberg, today</div></div>
+    <div class="stat"><div class="big num">237</div><div class="lab">Rating/PT moves logged on the wiki in 7 days</div><div class="src">build_diff.py · 07-27</div></div>
+  </div>
+
+  <div class="callout">
+    <h3>The one thing to agree on before we start: this is multiple compression</h3>
+    <p>Split the book by 4-week NTM EPS revision and the rotation is unambiguous:</p>
+    <div class="miniwrap"><table class="mini num">
+      <tr><td><b>Estimates UP, price DOWN</b> (de-rating)</td>
+          <td>ASML +17.1% est / −5.5% px</td><td>GOOG +10.7% / −1.9%</td><td>TSM +9.6% / −7.7%</td><td>GEV +4.6% / −6.4%</td></tr>
+      <tr><td><b>Estimates FLAT, price UP</b> (re-rating)</td>
+          <td>AAPL +0.4% est / <span class="pos">+18.5%</span> px</td><td>META −0.9% / <span class="pos">+10.5%</span></td><td>MSFT −0.1% / <span class="pos">+5.1%</span></td><td>NOW −0.9% / <span class="pos">+4.7%</span></td></tr>
+    </table></div>
+    <p>The fundamental record from last week backs the estimate side, not the price side: <b>INTC</b> beat and raised hard (rev $16.1bn vs ~$14.4bn, EPS $0.42 vs ~$0.22, stock +8–9%, <b>2026 capex raised to $18–20bn</b> with a "significant increase" flagged for 2027); <b>TSMC</b> lifted its FY26 revenue guide to "slightly above 40%" and capex to $60–64bn; <b>DISCO</b> beat and raised; <b>AMD</b> raised all three CY30 TAMs at once. Nothing in that set says cut estimates.</p>
+    <p class="macro"><b>The honest bear rebuttal:</b> revisions are a lagging, sell-side-supplied series — they tell you what analysts did after the prints, not what the marginal buyer will pay. The 2026 SOX drawdown (~−23% at the 07-17 low) is still inside the historical median (−25%) and average (−29%) peak-to-trough, so "it's already washed out" is not established. And two funding facts got worse, not better, last week: <b>Google posted its first negative FCF since going public (−$5.9bn)</b>, and <b>Oracle sits −65% off its high with CDS at records</b>. Multiple compression is what a rotation looks like on the way through, not proof that it is over.</p>
+  </div>
+</div></section>
+
+<!-- ============ 2 · DEBATES ============ -->
+<section id="debates"><div class="wrap">
+  <div class="shead"><span class="k">02</span><h2>The 5 debates</h2><span class="note">bull / bear · who's exposed · what actually resolves it</span></div>
+  <div class="lede">Picked for cross-company relevance and for being live <em>this week</em>. Four are fundamental and single-name-actionable; the fifth is the regime question that ties the drawdown to the book. Sourced from the wiki edge tracker (<code>reconciliation-2026-07-24</code>), which this week is unusually SemiAnalysis-heavy — worth flagging as a single-source concentration risk.</div>
+  <div id="debates-mount"></div>
+</div></section>
+
+<!-- ============ 3 · MOVES ============ -->
+<section id="var"><div class="wrap">
+  <div class="shead"><span class="k">03</span><h2>Moves &amp; drawdown</h2><span class="note">live Bloomberg · 35 names · Jul 27</span></div>
+  <div class="lede">The hero chart is the one worth arguing over: <b>estimate revision on the x-axis, price on the y</b>. The bottom-right quadrant — estimates up, price down — is where the de-rating lives, and it contains the entire foundry/semicap/optical complex. The top-left is empty, which matters: <b>nothing is going up on falling estimates.</b></div>
+
+  <div class="grid2">
+    <div class="panel">
+      <h3>Estimate revision vs price — 4 weeks</h3>
+      <div class="psub">x = NTM consensus EPS revision · y = price. Bottom-right = de-rating (estimates up, price down). Hover any point for detail.</div>
+      <div id="scatter"></div>
+      <div class="lgnd">
+        <span><span class="sw" style="background:var(--series1)"></span>All 35 names, one series</span>
+        <span style="color:var(--muted)">shaded quadrant = de-rating</span>
+      </div>
+    </div>
+    <div class="panel">
+      <h3>Implied multiple change — 4 weeks</h3>
+      <div class="psub">(1+price) ÷ (1+EPS revision) − 1: what the market paid per unit of earnings. Sorted; 16 largest absolute moves.</div>
+      <div id="divbars"></div>
+      <div class="lgnd">
+        <span><span class="sw" style="background:var(--neg)"></span>Compression (de-rate)</span>
+        <span><span class="sw" style="background:var(--pos)"></span>Expansion (re-rate)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="twocol">
+    <div class="panel">
+      <h3>Deepest drawdowns from 52-wk high</h3>
+      <div class="psub">Table view — the WCAG-clean twin of the charts above. 14 deepest.</div>
+      <div class="scrollx" id="dd-table"></div>
+    </div>
+    <div class="panel">
+      <h3>By bucket</h3>
+      <div class="psub">Median per sector — separates "still falling" from "already de-rated and bouncing".</div>
+      <div class="scrollx" id="sector-table"></div>
+      <p style="font-size:12.5px;color:var(--ink2);margin:11px 0 0">
+        <b>Optics is both deep and still falling</b> (median −33.6% off the high, −11.7% in 4 wks) — the only bucket where both are true. <b>Internet/Software has the deepest drawdown but the best recent move</b> (−35.0% / +1.3%): those names de-rated first and are now the destination of the rotation. That asymmetry is the trade to discuss.
+      </p>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ 4 · WHAT ELSE MOVED ============ -->
+<section id="week"><div class="wrap">
+  <div class="shead"><span class="k">04</span><h2>What else moved last week</h2><span class="note">Jul 20 → 26 · the arcs behind the 5 debates</span></div>
+  <div class="lede">Beyond the five debates, seven storylines carried the week. Two of them (Samsung–Broadcom, the NVDA backstop) are structurally new information, not incremental.</div>
+  <div id="arcs-mount"></div>
+</div></section>
+
+<!-- ============ 5 · READING LIST ============ -->
+<section id="reading"><div class="wrap">
+  <div class="shead"><span class="k">05</span><h2>Reading list</h2><span class="note">the titles that mattered — <span class="starred">★</span> = read this one</span></div>
+  <div class="lede">The week's flow, by title. SemiAnalysis dominated (a 10-source drop on 07-24) and is the source behind most of debates 1–4 — read it, but note the concentration.</div>
+  <div class="panel scrollx" style="padding:8px 6px"><div id="reading-mount"></div></div>
+</div></section>
+
+<!-- ============ 6 · TAM ============ -->
+<section id="tam"><div class="wrap">
+  <div class="shead"><span class="k">06</span><h2>TAM ledger</h2><span class="note">canonical numbers + the scope traps</span></div>
+  <div class="lede">One number per debate, from <code>_meta/assumptions.md</code> (12 metrics, 61 sourced variants, regenerated 07-26). <b>The scope traps are the point of this section</b> — most TAM disagreements in a meeting are two people quoting different bases. The biggest move of the week: <b>AMD adopted Bernstein's bull case as company guidance</b> on server CPU.</div>
+  <div id="tam-mount"></div>
+</div></section>
+
+<!-- ============ 7 · FLOW ============ -->
+<section id="flow"><div class="wrap">
+  <div class="shead"><span class="k">07</span><h2>Flow &amp; calendar</h2><span class="note">PT/rating moves + what's dated next</span></div>
+  <div class="panel" style="padding:14px 16px;margin-bottom:18px">
+    <h3 style="margin-bottom:9px">Rating &amp; PT moves logged last week</h3>
+    <div class="scrollx" id="rev-mount"></div>
+  </div>
+  <h3 style="font-size:14.5px;margin:0 0 9px">Dated ahead</h3>
+  <div class="cal" id="cal-mount"></div>
+</div></section>
+
+<footer><div class="wrap">
+  <b>Sources &amp; method.</b> Prices, YTD, 52-week high and NTM consensus EPS revisions: <b>live Bloomberg pull via the Capstone wrapper, 2026-07-27</b> (35 names, the comp-sheet universe) — <i>drawdown = price ÷ 52-wk high − 1</i>; <i>implied multiple change = (1+price chg) ÷ (1+NTM EPS revision) − 1</i>, both on the 4-week window. Note the shared <code>comp_data.json</code> on P: is asof 07-20 (the 09:45 rotina refreshes highlights, not quotes) — this page uses a fresh independent pull and writes nothing back. Debates: <code>_wiki/_meta/edge.md</code> (curated from <code>reconciliation-2026-07-24</code>), <code>catalysts.md</code>, <code>diff-latest.md</code> (7-day window, rebuilt 07-27). TAM: <code>_wiki/_meta/assumptions.md</code> / <code>_data/assumptions.json</code>, asof 07-20, regenerated 07-26. Every datapoint carries broker/analyst + date per house rule; single-source and unverified claims are labelled as such inline. Chart palette validated against the data-viz six checks (diverging pair CVD ΔE 21.6, normal-vision 32.3, both poles ≥3:1 on white). Prepared 2026-07-27.
+</div></footer>
+
+<script>
+/* ---------- data: live Bloomberg pull, 2026-07-27 ---------- */
+const DATA = [
+ {tk:"AAOI", nm:"APPL. OPTOELECTRONICS", sec:"Optics/Networking", px:96.68,  ytd:177.3, dd:-58.6, c5:-6.2, c4:-28.8, rev:0.0,  pe:25.4},
+ {tk:"AAPL", nm:"APPLE",                 sec:"Core Tech",         px:336.39, ytd:23.7,  dd:-0.2,  c5:3.0,  c4:18.5,  rev:0.4,  pe:35.3},
+ {tk:"AGX",  nm:"ARGAN",                 sec:"Power/Infra",       px:549.43, ytd:75.4,  dd:-31.8, c5:-8.8, c4:-28.2, rev:0.0,  pe:39.8},
+ {tk:"AMAT", nm:"APPLIED MATERIALS",     sec:"Core Tech",         px:517.36, ytd:101.3, dd:-30.1, c5:-1.6, c4:-17.5, rev:1.9,  pe:32.6},
+ {tk:"AMD",  nm:"AMD",                   sec:"Core Tech",         px:501.64, ytd:134.2, dd:-14.2, c5:-0.4, c4:-3.8,  rev:1.9,  pe:46.2},
+ {tk:"AMZN", nm:"AMAZON",                sec:"Core Tech",         px:234.68, ytd:1.7,   dd:-15.8, c5:-6.1, c4:0.9,   rev:-0.5, pe:21.5},
+ {tk:"ANET", nm:"ARISTA NETWORKS",       sec:"Optics/Networking", px:171.02, ytd:30.5,  dd:-9.9,  c5:1.0,  c4:8.5,   rev:0.3,  pe:41.9},
+ {tk:"ASML", nm:"ASML (NA)",             sec:"Core Tech",         px:1491.40,ytd:61.9,  dd:-14.3, c5:-1.9, c4:-5.5,  rev:17.1, pe:33.5},
+ {tk:"AVGO", nm:"BROADCOM",              sec:"Core Tech",         px:382.30, ytd:10.5,  dd:-22.8, c5:1.1,  c4:4.7,   rev:0.2,  pe:22.2},
+ {tk:"BKNG", nm:"BOOKING",               sec:"Internet/Software", px:183.80, ytd:-14.2, dd:-20.7, c5:2.4,  c4:1.3,   rev:0.0,  pe:16.0},
+ {tk:"CEG",  nm:"CONSTELLATION EN.",     sec:"Power/Infra",       px:270.42, ytd:-23.5, dd:-34.5, c5:6.7,  c4:2.4,   rev:-0.1, pe:21.1},
+ {tk:"CIEN", nm:"CIENA",                 sec:"Optics/Networking", px:371.73, ytd:58.9,  dd:-41.7, c5:-1.9, c4:-22.5, rev:0.0,  pe:41.7},
+ {tk:"COHR", nm:"COHERENT",              sec:"Optics/Networking", px:269.34, ytd:45.9,  dd:-38.8, c5:-5.6, c4:-29.2, rev:2.4,  pe:30.7},
+ {tk:"CSCO", nm:"CISCO",                 sec:"Optics/Networking", px:113.81, ytd:47.7,  dd:-12.7, c5:2.8,  c4:0.0,   rev:0.0,  pe:23.8},
+ {tk:"ENR",  nm:"SIEMENS ENERGY",        sec:"Power/Infra",       px:151.88, ytd:26.1,  dd:-20.8, c5:-0.5, c4:-1.3,  rev:0.6,  pe:26.2},
+ {tk:"GEV",  nm:"GE VERNOVA",            sec:"Power/Infra",       px:978.46, ytd:49.7,  dd:-18.2, c5:-9.3, c4:-6.4,  rev:4.6,  pe:41.4},
+ {tk:"GLW",  nm:"CORNING",               sec:"Optics/Networking", px:141.44, ytd:61.5,  dd:-48.0, c5:-7.6, c4:-36.0, rev:0.3,  pe:37.7},
+ {tk:"GOOG", nm:"ALPHABET",              sec:"Core Tech",         px:328.47, ytd:4.7,   dd:-18.8, c5:-6.5, c4:-1.9,  rev:10.7, pe:19.9},
+ {tk:"KLAC", nm:"KLA CORP",              sec:"Core Tech",         px:204.62, ytd:68.4,  dd:-33.4, c5:-1.4, c4:-17.7, rev:-2.2, pe:40.2},
+ {tk:"LITE", nm:"LUMENTUM",              sec:"Optics/Networking", px:721.00, ytd:95.6,  dd:-33.6, c5:-5.8, c4:-11.7, rev:1.8,  pe:37.5},
+ {tk:"LRCX", nm:"LAM RESEARCH",          sec:"Core Tech",         px:293.53, ytd:71.5,  dd:-33.1, c5:-4.3, c4:-22.6, rev:2.6,  pe:35.2},
+ {tk:"META", nm:"META PLATFORMS",        sec:"Core Tech",         px:608.23, ytd:-7.9,  dd:-23.6, c5:-5.8, c4:10.5,  rev:-0.9, pe:14.7},
+ {tk:"MSFT", nm:"MICROSOFT",             sec:"Core Tech",         px:392.03, ytd:-18.9, dd:-29.4, c5:-2.6, c4:5.1,   rev:-0.1, pe:19.9},
+ {tk:"NFLX", nm:"NETFLIX",               sec:"Internet/Software", px:70.36,  ytd:-25.0, dd:-44.5, c5:4.1,  c4:-4.7,  rev:0.0,  pe:19.0},
+ {tk:"NOW",  nm:"SERVICENOW",            sec:"Internet/Software", px:103.01, ytd:-32.8, dd:-48.8, c5:-1.6, c4:4.7,   rev:-0.9, pe:22.3},
+ {tk:"NVDA", nm:"NVIDIA",                sec:"Core Tech",         px:202.45, ytd:8.6,   dd:-14.4, c5:-0.4, c4:5.2,   rev:0.6,  pe:18.6},
+ {tk:"ORCL", nm:"ORACLE",                sec:"Internet/Software", px:121.02, ytd:-37.9, dd:-65.0, c5:-0.3, c4:-18.5, rev:-0.1, pe:14.3},
+ {tk:"PWR",  nm:"QUANTA SERVICES",       sec:"Power/Infra",       px:618.46, ytd:46.5,  dd:-21.6, c5:-2.2, c4:-10.1, rev:-0.4, pe:40.8},
+ {tk:"SPOT", nm:"SPOTIFY",               sec:"Internet/Software", px:486.30, ytd:-16.3, dd:-35.0, c5:-1.2, c4:5.7,   rev:-0.5, pe:29.5},
+ {tk:"TLN",  nm:"TALEN ENERGY",          sec:"Power/Infra",       px:352.94, ytd:-5.8,  dd:-21.8, c5:-2.0, c4:-12.7, rev:-2.0, pe:13.6},
+ {tk:"TSM",  nm:"TSMC (ADR)",            sec:"Core Tech",         px:399.03, ytd:31.3,  dd:-16.7, c5:-0.8, c4:-7.7,  rev:9.6,  pe:20.6},
+ {tk:"2330", nm:"TSMC (2330 TT)",        sec:"Core Tech",         px:2350.0, ytd:51.6,  dd:-7.3,  c5:1.3,  c4:0.4,   rev:9.6,  pe:18.7},
+ {tk:"UBER", nm:"UBER",                  sec:"Internet/Software", px:66.62,  ytd:-18.5, dd:-34.7, c5:-7.7, c4:-12.6, rev:0.0,  pe:16.9},
+ {tk:"VST",  nm:"VISTRA",                sec:"Power/Infra",       px:158.97, ytd:-1.5,  dd:-27.7, c5:0.6,  c4:-2.8,  rev:-0.7, pe:15.5},
+ {tk:"WMB",  nm:"WILLIAMS",              sec:"Power/Infra",       px:71.90,  ytd:19.6,  dd:-10.2, c5:-3.0, c4:-7.7,  rev:0.6,  pe:29.0},
+];
+DATA.forEach(d => d.mult = ((1 + d.c4/100) / (1 + d.rev/100) - 1) * 100);
+
+const fmt = (x,d=1)=> (x==null?'—':(x>0?'+':'')+x.toFixed(d)+'%');
+const cls = x => x==null?'':(x>=0?'pos':'neg');
+const CSS = k => getComputedStyle(document.documentElement).getPropertyValue(k).trim();
+
+/* ---------- hover tooltip (shared) ---------- */
+const tip = document.createElement('div');
+tip.style.cssText = 'position:fixed;pointer-events:none;opacity:0;transition:opacity .12s;'
+  + 'background:#0b0b0b;color:#fff;font:12px system-ui,-apple-system,"Segoe UI",sans-serif;'
+  + 'padding:7px 10px;border-radius:7px;z-index:99;max-width:260px;line-height:1.45;box-shadow:0 4px 14px rgba(0,0,0,.22)';
+document.body.appendChild(tip);
+function bindTip(el, html){
+  el.addEventListener('mouseenter', e => { tip.innerHTML = html; tip.style.opacity = 1; });
+  el.addEventListener('mousemove', e => {
+    tip.style.left = Math.min(e.clientX + 14, window.innerWidth - 275) + 'px';
+    tip.style.top  = Math.max(e.clientY - 12, 8) + 'px';
+  });
+  el.addEventListener('mouseleave', () => { tip.style.opacity = 0; });
+}
+const tipHTML = d => `<b>${d.tk}</b> · ${d.nm}<br>NTM EPS rev 4wk: <b>${fmt(d.rev)}</b>`
+  + `<br>Price 4wk: <b>${fmt(d.c4)}</b><br>Implied multiple: <b>${fmt(d.mult)}</b>`
+  + `<br>From 52-wk high: ${fmt(d.dd)} · YTD ${fmt(d.ytd)}<br>NTM P/E ${d.pe.toFixed(1)}x`;
+
+/* ---------- chart 1: scatter, revision vs price ---------- */
+(function(){
+  const W=580,H=400,m={l:50,r:16,t:14,b:46};
+  const xw=W-m.l-m.r, yh=H-m.t-m.b;
+  const xmin=-4, xmax=19, ymin=-38, ymax=21;
+  const sx=v=> m.l+(v-xmin)/(xmax-xmin)*xw;
+  const sy=v=> m.t+(ymax-v)/(ymax-ymin)*yh;
+  const line=CSS('--line'), faint=CSS('--faint'), mut=CSS('--muted'), s1=CSS('--series1'), base=CSS('--line2');
+  let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:100%;height:auto;overflow:visible" role="img" aria-label="Scatter of 4-week consensus EPS revision against 4-week price change for 35 names">`;
+  // de-rating quadrant (x>0, y<0)
+  s+=`<rect x="${sx(0)}" y="${sy(0)}" width="${m.l+xw-sx(0)}" height="${m.t+yh-sy(0)}" fill="${CSS('--mid')}" opacity=".85"/>`;
+  // gridlines
+  [-2.5,0,2.5,5,7.5,10,12.5,15,17.5].forEach(v=>{
+    s+=`<line x1="${sx(v)}" y1="${m.t}" x2="${sx(v)}" y2="${m.t+yh}" stroke="${line}" stroke-width="1"/>`;});
+  [-30,-20,-10,0,10,20].forEach(v=>{
+    s+=`<line x1="${m.l}" y1="${sy(v)}" x2="${m.l+xw}" y2="${sy(v)}" stroke="${line}" stroke-width="1"/>`;
+    s+=`<text x="${m.l-7}" y="${sy(v)+3.5}" font-size="10" fill="${faint}" text-anchor="end" style="font-variant-numeric:tabular-nums">${v>0?'+':''}${v}%</text>`;});
+  [0,5,10,15].forEach(v=>{
+    s+=`<text x="${sx(v)}" y="${H-26}" font-size="10" fill="${faint}" text-anchor="middle" style="font-variant-numeric:tabular-nums">${v>0?'+':''}${v}%</text>`;});
+  // zero rules (solid, one shade stronger)
+  s+=`<line x1="${m.l}" y1="${sy(0)}" x2="${m.l+xw}" y2="${sy(0)}" stroke="${base}" stroke-width="1"/>`;
+  s+=`<line x1="${sx(0)}" y1="${m.t}" x2="${sx(0)}" y2="${m.t+yh}" stroke="${base}" stroke-width="1"/>`;
+  // quadrant caption
+  s+=`<text x="${m.l+xw-6}" y="${m.t+yh-8}" font-size="10.5" fill="${mut}" text-anchor="end" font-weight="700">estimates up, price down → de-rating</text>`;
+  s+=`<text x="${m.l+xw/2}" y="${H-8}" font-size="10.5" fill="${mut}" text-anchor="middle" font-weight="600">NTM consensus EPS revision, 4 weeks</text>`;
+  s+=`<text transform="translate(13,${m.t+yh/2}) rotate(-90)" font-size="10.5" fill="${mut}" text-anchor="middle" font-weight="600">Price change, 4 weeks</text>`;
+  // marks — 2px surface ring on overlap
+  DATA.forEach(d=>{
+    s+=`<circle cx="${sx(Math.max(xmin,Math.min(xmax,d.rev)))}" cy="${sy(Math.max(ymin,Math.min(ymax,d.c4)))}" r="5" fill="${s1}" fill-opacity=".8" stroke="#fff" stroke-width="2"/>`;
+  });
+  // selective direct labels
+  const LAB={ASML:[9,-9],GOOG:[9,4],TSM:[9,-8],"2330":[9,13],GEV:[9,12],AAPL:[-9,4],META:[-9,4],GLW:[-9,4],
+             COHR:[-9,4],AAOI:[9,4],LRCX:[9,4],AMAT:[9,-7],KLAC:[-9,-6],CIEN:[-9,4],ORCL:[-9,4],AGX:[9,4],
+             NVDA:[-9,-6],MSFT:[-9,12],LITE:[9,4],AMD:[-9,4],NOW:[9,4],ANET:[-9,4]};
+  DATA.forEach(d=>{ const L=LAB[d.tk]; if(!L)return;
+    const anc = L[0]<0 ? 'end':'start';
+    s+=`<text x="${sx(Math.max(xmin,Math.min(xmax,d.rev)))+L[0]}" y="${sy(Math.max(ymin,Math.min(ymax,d.c4)))+L[1]}" font-size="9.5" font-weight="700" fill="${CSS('--ink')}" text-anchor="${anc}">${d.tk}</text>`;});
+  // hit layer — ~24px targets
+  DATA.forEach((d,i)=>{
+    s+=`<circle class="hit" data-i="${i}" cx="${sx(Math.max(xmin,Math.min(xmax,d.rev)))}" cy="${sy(Math.max(ymin,Math.min(ymax,d.c4)))}" r="12" fill="transparent" style="cursor:pointer"/>`;});
+  s+=`</svg>`;
+  const host=document.getElementById('scatter'); host.innerHTML=s;
+  host.querySelectorAll('.hit').forEach(c=> bindTip(c, tipHTML(DATA[+c.dataset.i])));
+})();
+
+/* ---------- chart 2: diverging bars, implied multiple change ---------- */
+(function(){
+  const rows=[...DATA].sort((a,b)=>Math.abs(b.mult)-Math.abs(a.mult)).slice(0,16)
+                      .sort((a,b)=>a.mult-b.mult);
+  const rh=20, gap=2, m={l:52,r:52,t:22,b:26};
+  const W=520, H=m.t+m.b+rows.length*(rh+gap);
+  const xw=W-m.l-m.r;
+  const lim=40;
+  const sx=v=> m.l+(v+lim)/(2*lim)*xw;
+  const pos=CSS('--pos'), neg=CSS('--neg'), line=CSS('--line'), faint=CSS('--faint'), base=CSS('--line2');
+  let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:100%;height:auto;overflow:visible" role="img" aria-label="Diverging bar chart of implied multiple change over four weeks">`;
+  [-40,-20,0,20].forEach(v=>{
+    s+=`<line x1="${sx(v)}" y1="${m.t-6}" x2="${sx(v)}" y2="${H-m.b+2}" stroke="${v===0?base:line}" stroke-width="1"/>`;
+    s+=`<text x="${sx(v)}" y="${H-m.b+15}" font-size="10" fill="${faint}" text-anchor="middle" style="font-variant-numeric:tabular-nums">${v>0?'+':''}${v}%</text>`;});
+  s+=`<text x="${sx(-lim)}" y="${m.t-10}" font-size="10" fill="${faint}" text-anchor="start">◀ paid less per $ of earnings</text>`;
+  s+=`<text x="${sx(lim)}" y="${m.t-10}" font-size="10" fill="${faint}" text-anchor="end">paid more ▶</text>`;
+  rows.forEach((d,i)=>{
+    const y=m.t+i*(rh+gap), x0=sx(0), x1=sx(d.mult);
+    const x=Math.min(x0,x1), w=Math.max(Math.abs(x1-x0),2);
+    const r=4, right=d.mult>=0;
+    // rounded data-end only, anchored to the zero baseline
+    const path = right
+      ? `M${x},${y} H${x+w-r} a${r},${r} 0 0 1 ${r},${r} V${y+rh-r} a${r},${r} 0 0 1 -${r},${r} H${x} Z`
+      : `M${x+w},${y} H${x+r} a${r},${r} 0 0 0 -${r},${r} V${y+rh-r} a${r},${r} 0 0 0 ${r},${r} H${x+w} Z`;
+    s+=`<path d="${path}" fill="${right?pos:neg}" fill-opacity=".88"/>`;
+    s+=`<text x="${m.l-8}" y="${y+rh/2+3.5}" font-size="10.5" font-weight="700" fill="${CSS('--ink')}" text-anchor="end">${d.tk}</text>`;
+    s+=`<text x="${right?x+w+7:x-7}" y="${y+rh/2+3.5}" font-size="10.5" fill="${CSS('--ink2')}" text-anchor="${right?'start':'end'}" style="font-variant-numeric:tabular-nums">${fmt(d.mult)}</text>`;
+    s+=`<rect class="hit" data-tk="${d.tk}" x="${m.l}" y="${y-1}" width="${xw}" height="${rh+2}" fill="transparent" style="cursor:pointer"/>`;
+  });
+  s+=`</svg>`;
+  const host=document.getElementById('divbars'); host.innerHTML=s;
+  host.querySelectorAll('.hit').forEach(r=> bindTip(r, tipHTML(DATA.find(d=>d.tk===r.dataset.tk))));
+})();
+
+/* ---------- tables ---------- */
+function tbl(rows,cols){
+  let h='<table><thead><tr>'+cols.map(c=>`<th>${c.h}</th>`).join('')+'</tr></thead><tbody>';
+  rows.forEach(r=>{ h+='<tr>'+cols.map(c=>{
+    const v=c.f?c.f(r):r[c.k]; const cl=c.cl?c.cl(r):'';
+    return `<td class="${c.c||''} ${cl}">${v}</td>`;}).join('')+'</tr>'; });
+  return h+'</tbody></table>';
+}
+const colTk={h:'',k:'tk',c:'t',f:r=>`${r.tk}<div class="nm">${r.nm}</div>`};
+document.getElementById('dd-table').innerHTML=tbl([...DATA].sort((a,b)=>a.dd-b.dd).slice(0,14),[
+  colTk,
+  {h:'From high',c:'num',cl:r=>cls(r.dd),f:r=>fmt(r.dd)},
+  {h:'4-wk px',c:'num',cl:r=>cls(r.c4),f:r=>fmt(r.c4)},
+  {h:'4-wk est',c:'num',cl:r=>cls(r.rev),f:r=>fmt(r.rev)},
+  {h:'YTD',c:'num',cl:r=>cls(r.ytd),f:r=>fmt(r.ytd)},
+]);
+(function(){
+  const med=a=>{const s=[...a].sort((x,y)=>x-y),n=s.length;return n%2?s[(n-1)/2]:(s[n/2-1]+s[n/2])/2;};
+  const secs={};
+  DATA.forEach(d=>{ (secs[d.sec]=secs[d.sec]||[]).push(d); });
+  const rows=Object.entries(secs).map(([sec,ds])=>({
+    sec, n:ds.length, m4:med(ds.map(d=>d.c4)), mdd:med(ds.map(d=>d.dd)),
+    mrev:med(ds.map(d=>d.rev)), mmult:med(ds.map(d=>d.mult))
+  })).sort((a,b)=>a.m4-b.m4);
+  document.getElementById('sector-table').innerHTML=tbl(rows,[
+    {h:'Bucket',k:'sec',c:'t'},
+    {h:'n',k:'n',c:'num'},
+    {h:'Med 4-wk',c:'num',cl:r=>cls(r.m4),f:r=>fmt(r.m4)},
+    {h:'Med from high',c:'num',cl:r=>cls(r.mdd),f:r=>fmt(r.mdd)},
+    {h:'Med est rev',c:'num',cl:r=>cls(r.mrev),f:r=>fmt(r.mrev)},
+  ]);
+})();
+
+/* ---------- debates ---------- */
+const DEB=[
+{no:1,tag:"AMD · unmodelled",title:"The AMD warrant rebate nobody models",
+ q:"Consensus EPS and the warrant book are mutually inconsistent — which one gives?",
+ bull:[
+  "<b>Advancing AI 2026 over-delivered</b> (Jul 22-23): <b>Anthropic the 4th GW-scale MI customer</b> (up to 2GW MI450/Helios from 1H27, <b>$5bn AMD equity, no warrants</b>) — UBS/BofA read +$10-15bn on CY27 MI consensus of $35-40bn → DC could <b>double to $60-65bn+</b>",
+  "The harshest ROCm critic capitulated: <b>SemiAnalysis moved \"0% chance\" → \"a great chance of success\"</b> <cite>2026-07-24</cite>",
+  "Warrants are a <b>customer-acquisition weapon consensus doesn't model</b>, and only cost AMD if the stock triples toward the $600 hurdle",
+  "PT ladder up: <b>UBS $730</b> (high, 07-25), Barclays $665, GS $640, BofA $620; Microsoft Helios formalised 07-20; Cerebras disaggregated-inference tie-up (~5x throughput)"],
+ bear:[
+  "<b>The arithmetic doesn't close.</b> OpenAI + Meta warrants are each up to <b>160M shares (~10% of s/o) at $0.01</b> vesting against 6GW. At the $600 hurdle that records <b>~$16.0B/GW of rebate</b> — vs <b>OpenAI paying ~$15.2B/GW (a ~105% discount)</b> and Meta ~$18.7B/GW (~85%)",
+  "SemiAnalysis: \"OpenAI could <b>earn money simply by buying MI455X servers</b> and exercising the accompanying warrants\"",
+  "<b>MS stays EW $410</b> — warrants as marketing expense \"wipes out most of the profits from GPU for the next few years\"",
+  "<b>Power:</b> MI455X Helios <b>~240kW/server, ~257kW/rack all-in vs GB300 NVL72 ~142kW/~159kW</b>. In a watt-constrained world that strengthens the \"AMD misses its ~6-of-27GW share\" objection; tokens/$ then survives on price, not efficiency",
+  "3 dated software milestones <b>missed</b> at the event (90%-CUDA vLLM gating; Pollara/K8s CI at 0% parity; gfx1250 nightly CI slipped to Oct-26)"],
+ exp:['AMD','META','OPENAI','NVDA','ANTHROPIC'],
+ res:"<b>Q2 print Aug-4</b> (guide $11.2bn) — and specifically the <b>structure of the next GW-scale deal (equity vs warrants)</b>. Also: 2H26 deployed racks-per-MW, which settles the power dispute (SemiAnalysis builds bottoms-up from rack BOM; BofA from marketed platform budgets). <b>Action: build a house AMD model with an explicit warrant/GW bridge — that is where the edge is.</b>"},
+
+{no:2,tag:"Memory · content",title:"Memory: price up, content down",
+ q:"Consensus is a price call. What if the biggest buyers respond to price by deleting attach?",
+ bull:[
+  "2027 HBM repricing as suppliers <b>move to match the margins they now earn on commodity DRAM</b> — the pricing leg of the thesis is intact",
+  "DRAM undersupplied <b>through 2Q28</b>; contract price <b>+15-20% Q3 / +3-8% Q4</b> <cite>TrendForce, revised 06-30</cite>, vs expert +20-25% and chatter +30-40%",
+  "HBM $/GB <b>$17-18 (2026) → $30-32 (2027)</b>, +70-80% <cite>Redburn</cite>; TAM <b>$35bn'25 → $100bn'28</b> <cite>Micron/JPM</cite>",
+  "The semicap read-through held all week: <b>INTC capex raised to $18-20bn</b> with 2027 \"significantly higher\" (KLAC +2.8%, ASML +2.4% on the print); <b>Samsung–AVGO $200bn</b> spans memory + foundry + packaging"],
+ bear:[
+  "<b>First hard evidence of de-spec.</b> AMD's MI455X BOM has <b>LPDDR5X removed entirely</b> (the planned up-to-1TB second tier is gone) plus a significant DDR5 de-spec, from an original <b>138TB DRAM</b> estimate: \"much of the DRAM price increases are <b>offset by aggressive de-specs</b>\"",
+  "Compounding: Meta's custom MI455 cuts HBM <b>12→6 stacks and 12-Hi→8-Hi</b> — on a program SemiAnalysis says may itself shrink",
+  "<b>HBM4 splits into two bins:</b> MI455X runs <b>7.6 Gbps</b>; NVDA targets <b>10.7 Gbps (+40%)</b>, \"well above the original JEDEC HBM4 specification… driven by the need to make up for the memory-bandwidth deficit to AMD MI455X\" — which forced suppliers to rework HBM4",
+  "That converts an undifferentiated volume line into a <b>binning/share question</b>: whoever clears 10.7 Gbps at yield takes the NVDA socket at premium ASP; whoever can't is relegated to the 7.6 Gbps tier. <b>The source names no winner and neither will I</b> — this is the highest-value open question in memory"],
+ exp:['MU','SKHYNIX','SAMSUNG','LRCX','KLAC','AMAT','AMD'],
+ res:"<b>HBM Gb-equivalent shipped vs $/Gb.</b> If bits decelerate while price rises, the +92% revenue line is the wrong shape. Watch HBM4 LTA finalisation and the 10.7 Gbps yield disclosures."},
+
+{no:3,tag:"Capital · funding",title:"Who funds the build — and at what rate",
+ q:"Every capacity model assumes backstopped funding. What breaks if that assumption goes?",
+ bull:[
+  "Demand is contracted, not hoped for: <b>META &gt;5GW across Cloud &amp; Colo in 1H26 alone</b> (ex-self-build) on ~10GW since early-2024; two largest campuses = <b>2.5GW under construction</b>; \"<b>Capex in 2027 will be shockingly high</b>\"",
+  "<b>NVDA's backstop works because NVDA's balance sheet is real</b> — AA/Aa2 IG unlocks neocloud financing; modelled cloud service agreements <b>$77.5bn → $175.3bn</b> (end-F1/27 → end-F1/29), incremental revenue $1.8bn → $13.9bn, \"near-pure margin and recurring\"",
+  "Hyperscaler-backstopped 5y prices at <b>~SOFR+225bps</b> vs CRWV 5yr unsecured ~10% — the backstop is worth ~400bps of funding cost",
+  "Street is <b>raising, not cutting</b>, into it: top-4 capex ~$700-725bn'26 → <b>~$1.1T'27</b> <cite>JPM AI Capex 2.0</cite>"],
+ bear:[
+  "<b>CRWV: the funding assumption IS the model.</b> 5yr unsecured ~10% (≈600bps Z) vs 5.9% on the Meta-backstopped $8.5bn DDTL — and <b>5.62% → 10% all-in cuts PBT margin 14.8% → 5.4%</b>, roughly the entire FY3 earnings step. The consensus PT (+93%) is a financing-cost bet whether the analysts frame it that way or not",
+  "<b>NVDA is accreting a $175bn off-balance-sheet contingent guarantee</b> to manufacture demand — captured by no visible consensus metric — while SemiAnalysis puts <b>neocloud IRR under an activated backstop at ~zero to slightly negative</b>",
+  "<b>GOOG posted its first negative FCF since going public (−$5.9bn)</b>, FY26 capex to $195-205bn, and separately <b>$44bn of lease guarantees</b>; MS cut PT $415→$400 with '27/'28 EPS −7%/−5%",
+  "<b>ORCL −65% off its high with CDS at records</b>; the market pays ~46% of the consensus PT"],
+ exp:['CRWV','NBIS','ORCL','NVDA','GOOG','META','AMZN'],
+ res:"The next neocloud financing print (spread vs the backstopped 5.9% benchmark), GPU rental prices rolling or not, and whether Meta's 1H26 5GW contracting pace persists into 2H — consensus has 2027 capex growth <em>decelerating</em> from +29% to +11%."},
+
+{no:4,tag:"Optical · supply",title:"Optics: worst drawdown in the book, tightest supply story",
+ q:"The bucket down the most is the one where the supply evidence got better. Which is wrong?",
+ bull:[
+  "<b>The InP squeeze may be structurally worse than the DRAM squeeze:</b> \"Only 25% of the world's DRAM goes to AI — can just take more from consumer. <b>80% of InP already going to AI</b>\" — because InP has <b>no consumer end-market to reallocate from</b> <cite>Irrational Analysis, 07-25</cite>",
+  "<b>All three critical transceiver inputs \"at capacity / sold out\"</b> — SiPh foundry, lasers, DSP; lead times grow each generation, forcing LTAs to hold share; vendors now share one laser's power across multiple outputs <cite>Lumentum Director of SiPh R&amp;D expert call, 07-23</cite>",
+  "<b>China EML gap 3-5 years and \"will not close\"</b> (no EML-substrate access; China is CW-only). Hyperscaler consolidation (RFP ~10 → ≤3 per SKU) favours incumbents",
+  "Barclays <b>upgraded LITE to Overweight</b> 07-20; house EPS runs far above Street on both optical names (<b>COHR '27 $19.21 vs $10.00, +92%; LITE $30.02 vs $23.90, +26%</b>)"],
+ bear:[
+  "<b>The tape says otherwise, hard:</b> GLW <b>−36.0%</b> in 4 weeks, COHR −29.2%, AAOI −28.8%, CIEN −22.5%, LITE −11.7% — median bucket drawdown <b>−33.6%</b> off the high and still the worst 4-week performer",
+  "<b>Estimates are NOT following the supply story:</b> optical median 4-week EPS revision ≈ <b>0%</b> (GLW +0.3, AAOI 0.0, CIEN 0.0) — so unlike ASML/TSM this is <em>not</em> a clean de-rating-with-rising-numbers. Price and estimates agree here",
+  "<b>CPO timing keeps slipping right:</b> scale-up optics \"don't exist today,\" GPU-GPU stays copper \"at least one more generation,\" CPO trial ~2028 and hyperscaler deployment <b>~2030</b> — well beyond the multiples",
+  "The single best bull datapoint is <b>single-source, unverified, and the author self-discloses being long Lumentum</b> (\"Lumentum cut everyone except Nvidia off\"). Treat as a channel claim to confirm, not fact — and note it doubles as customer-concentration risk",
+  "Barclays' own buy-side feedback on the LITE upgrade: \"<b>not much has changed fundamentally</b>\" — i.e. little contrarian edge left"],
+ exp:['LITE','COHR','GLW','CIEN','AAOI','ANET','AXTI'],
+ res:"Q2 prints and the 2028 bogeys (Barclays: \"hard to move '28 bogeys on Q2 prints\"). Confirm the Lumentum-allocation claim independently before sizing anything on it. The cleanest tell: whether optical EPS revisions turn up to match the sold-out commentary."},
+
+{no:5,tag:"Regime · positioning",title:"De-rating vs revisions — is this washed out?",
+ q:"Estimates up, prices down. Buy the compression, or respect the rotation? (Bull = constructive on the AI longs.)",
+ bull:[
+  "<b>The signature is liquidity, not earnings.</b> Every name with a 4-week EPS revision above +4% de-rated; the top-left quadrant (price up on falling estimates) is <b>empty</b>. Nothing is being bought on deteriorating numbers",
+  "<b>Last week's fundamental record is uniformly positive:</b> INTC beat-and-raise +8-9% with capex to $18-20bn; TSMC FY26 guide to \"slightly above 40%\" and capex $60-64bn; DISCO beat and raised; AMD raised all three CY30 TAMs; Samsung–AVGO $200bn",
+  "Valuation has actually reset: <b>NVDA 18.6x NTM, META 14.7x, GOOG 19.9x, TSM 20.6x</b> — with GOOG/TSM NTM EPS up ~10% in four weeks",
+  "The 2026 SOX drawdown (~−23% at the 07-17 low) is <b>shallower than the historical median (−25%) and average (−29%)</b> peak-to-trough — and MS's Joe Moore called the memory selloff a \"compelling entry point\""],
+ bear:[
+  "<b>Positioning still isn't clean.</b> The rotation destination is explicit in the data: AAPL multiple <b>+18.0%</b>, META +11.6%, ANET +8.2%, SPOT +6.2%, NOW +5.7%, MSFT +5.2% — all on <b>flat-to-negative</b> estimate revisions. That is momentum, and momentum doesn't stop where it's convenient",
+  "<b>Internet/Software has the deepest drawdown (−35.0%) AND the best 4-week move (+1.3%)</b> — the de-rated names are where the money is going, not the cheap-on-rising-estimates names",
+  "The sell-side is <b>marketing longer-dated AI-bubble hedges</b> as the trades roll over <cite>MS MSPB</cite> — a sentiment tell, and it hasn't reversed",
+  "Two funding facts got <b>worse</b>: GOOG's first negative FCF since IPO; ORCL −65% with record CDS. If the bubble case has a transmission mechanism, it is funding cost, and that line is moving the wrong way",
+  "<b>Revisions are a lagging series.</b> They record what analysts did after the prints — they are not evidence about the marginal buyer"],
+ exp:['NVDA','ASML','TSM','GOOG','AMAT','LRCX','KLAC','AAPL','META'],
+ res:"<b>AMD Aug-4</b>, <b>IFX Aug-5</b>, <b>NVDA Aug-26</b> (guide $91bn). Between now and then the tell is whether estimate revisions keep rising while prices don't — if the gap widens for another month without prices following, the de-rating is positioning; if estimates roll over, it was information."},
+];
+document.getElementById('debates-mount').innerHTML=DEB.map(d=>`
+  <div class="debate">
+    <div class="top">
+      <div class="no">${d.no}</div>
+      <div class="th"><h3>${d.title}</h3><div class="q">${d.q}</div></div>
+      <div class="chip">${d.tag}</div>
+    </div>
+    <div class="bb">
+      <div class="bull"><div class="col-h bull"><span class="ic">▲</span>Bull</div><ul>${d.bull.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+      <div class="bear"><div class="col-h bear"><span class="ic">▼</span>Bear</div><ul>${d.bear.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+    </div>
+    <div class="foot">
+      <div class="exp"><b>Exposed:</b> ${d.exp.map(t=>`<span class="tk">${t}</span>`).join(' ')}</div>
+      <div class="res"><b>What resolves it:</b> ${d.res}</div>
+    </div>
+  </div>`).join('');
+
+/* ---------- week arcs ---------- */
+const ARCS=[
+ {t:"Earnings week 1 — the prints landed better than the tape", d:"Jul 22-23",
+  b:["<b>INTC — bull won, decisively.</b> Rev $16.1bn vs Street ~$14.4bn, GM 41.8% vs ~39.2%, OPM 17.2%, EPS $0.42 vs ~$0.22; CCG $8.9bn/+11% and DCAI $6.3bn/+13% both beat; Q3 guide all above. <b>2026 capex raised to $18-20bn</b> with a \"significant increase\" flagged for 2027; 14A HVM pulled into 2028; CFO cited multiple multi-year CPU/XPU supply LTAs. Stock +8-9%; KLAC +2.8%, ASML +2.4% on the read-through. External foundry still only ~$300M — the debate moves from execution to <b>funding</b>.",
+     "<b>GOOG — the capex/FCF crossover.</b> FY26 capex to $195-205bn and <b>FCF −$5.9bn: the first cash burn since going public</b>. Stock −3 to −4%; MS/Nowak $415→$400 with '27/'28 EPS −7%/−5%. Separately, <b>$44bn of lease guarantees</b> surfaced. Note the tension with the estimate tape: GOOG's NTM EPS is still <b>+10.7%</b> over four weeks.",
+     "Also printed: <b>TXN</b> and <b>GEV</b>; <b>TSLA</b> missed on margin (JPM $475→$445); <b>NFLX</b> reset its window (PTs cut). <b>DISCO</b> beat its +18% guide with parent sales +26% y/y and <b>raised</b> forecasts and dividend."]},
+ {t:"AMD Advancing AI 2026 — the week's biggest event", d:"Jul 22-23",
+  b:["Anthropic became the <b>4th GW-scale MI customer</b> (up to 2GW MI450/Helios from 1H27, $5bn AMD equity, <b>no warrants</b>); Microsoft Helios formalised 07-20; Meta on stage for a 4th consecutive EPYC generation; <b>Cerebras disaggregated-inference tie-up</b> (~5x throughput, Cerebras Cloud by end-2026) — which MS frames as AMD's answer to NVDA/Groq; <b>ROCm.ai</b> launched.",
+     "<b>All three CY30 TAMs raised at once</b> — total compute $1T→$2T, AI accelerators →$1.4T, server CPU $120bn→$220bn — above what BofA had pre-called ($1.5T/$200bn). See the TAM ledger below: this is AMD adopting Bernstein's <em>bull</em> case as company guidance.",
+     "No MI-revenue guide-up (as expected). Muted stock reaction into a risk-off tape — Barclays was \"somewhat surprised… a customer expansion wasn't expected at the AD.\" <b>2 of BofA's 5 pre-event debates remain open</b>: how Anthropic splits share across TPU/Trainium/NVDA/AMD, and whether TSMC leading-edge capacity suffices across MI450/EPYC/Client."]},
+ {t:"Samsung–Broadcom $200bn — structurally new", d:"Jul 26",
+  b:["\"Samsung Elec wins $200 billion Broadcom AI chip partnership, boosting foundry push\" — spanning <b>memory + foundry + packaging</b>. If it holds at anything like that scale it is the most significant challenge to the TSMC-only leading-edge assumption in the book, and it lands on the same page as the Korea trade thread (\"US Negotiating Leverage Bears Fruit\", Korean sovereign AI).",
+     "Caveat carried on the wiki: the framing in the flow was <b>\"AVGO <em>possibly</em> doing $200B deal with Samsung foundry\"</b> — confirm the structure and the split across the three legs before treating it as a foundry-share datapoint."]},
+ {t:"NVDA's $250bn OpenAI backstop and the \"AI Project Trinity\"", d:"Jul 26",
+  b:["The backstop mechanism modelled out: <b>take-or-pay minimum-revenue guarantee + revenue share above the backstop</b>, accounted as an <b>off-balance-sheet contingent guarantee unless triggered</b>. Modelled cloud service agreements <b>$77.5bn → $175.3bn</b> (end-F1/27 → end-F1/29), ~$5.9bn contingent guarantee per 100MW, incremental revenue $1.8bn → $13.9bn.",
+     "The P&L is a rounding error against $393-692bn of revenue. <b>The story is the $175bn contingent obligation</b> — captured by no visible consensus metric — alongside SemiAnalysis's estimate that neocloud IRR <em>under an activated backstop</em> is ~zero to slightly negative. Feeds debate 3."]},
+ {t:"Google's TPU goes external — and gets modelled", d:"Jul 20-26",
+  b:["\"Unpacking TPU-As-A-Service\", \"AVGO Forecasts Coming to Life in GOOG Filings\", \"GOOGL Selling TPUs Externally\", \"Cloud [is] Now a TPU Story\" — the week TPU-aaS stopped being a rumour and started being a line in models. Cross-reads to <b>AVGO</b> (~66-68% of Google TPU) and <b>MediaTek</b> (~32-34%; \"The TPU Trade Nobody Owns Yet, +56%\").",
+     "Separately, <b>\"Frozen v2\"</b> got specified (Jefferies/Curtis, 07-24): Gemini hardwired into silicon, <b>6-10x more tokens per unit of power vs the latest TPUs</b> — but \"more experimental rather than a replacement for the TPU program,\" <b>C28 deployment at volumes well below TPU</b>, and only for Gemini versions keeping the same core architecture. Logged <b>neutral</b>: a cost-per-token option, not a roadmap event."]},
+ {t:"Pricing power showed up in odd places", d:"Jul 20-26",
+  b:["<b>\"Qualcomm tells customers that prices are going up by double digits\"</b> and <b>\"Higher Prices Beget Higher Earnings\"</b> — the price-hike thread widened beyond memory into logic and analog. Advanced packaging is doing the same: Jefferies took ASE to NT$805 on <b>+10-20% packaging pricing</b>.",
+     "Reads across to the memory de-spec debate (#2): when everything reprices at once, the question stops being \"can they raise price\" and becomes \"what does the buyer delete in response.\""]},
+ {t:"The skeptic file grew too", d:"Jul 20-26",
+  b:["<b>First bearish Anthropic ARR read</b> logged (07-24) — notable because the Anthropic ARR ramp has been the single most-cited bull datapoint in the macro-cycle theme.",
+     "<b>SPCX</b>: \"SpaceX has erased $1 trillion in market value over the past month\"; \"SpaceX Approaches $100: What's in the Price?\" — from the initiation wave at ~$242 average PT three weeks ago.",
+     "<b>ORCL</b>: SemiAnalysis on the SpaceX deals going to Anthropic and Google at <b>3-4x peers' revenue per MW</b> — \"a massive blow… yet another piece of evidence that they could've done a much better job monetizing all of their gigawatts of compute.\" Only Oracle and Meta could have played that segment. <b>The market's 46%-of-PT discount and the SemiAnalysis critique agree with each other and disagree with the sell-side.</b>",
+     "<b>Process race:</b> \"Is SMIC N+3's Metal Pitch Smaller than Intel 18A's?\", \"China out-pitches Intel\", and \"TSMC could spend $10B more on N2 capacity. Why won't they?\" — three separate challenges to the leading-edge-moat assumption in one week."]},
+];
+document.getElementById('arcs-mount').innerHTML=ARCS.map(a=>`
+  <div class="arc"><div class="ah"><h4>${a.t}</h4><span class="d">${a.d}</span></div>
+  <div class="ab">${a.b.map(p=>`<p>${p}</p>`).join('')}</div></div>`).join('');
+
+/* ---------- reading list ---------- */
+const READ=[
+ {s:"SemiAnalysis", t:"Can AMD break the CUDA Moat? AMD Advancing AI 2026", w:"The source behind debate 1. Contains the warrant/GW arithmetic and the 240kW power figure. <b>Also the ROCm capitulation</b> — same shop that said 0%.", star:1},
+ {s:"SemiAnalysis", t:"Nvidia GPU Debt Backstop Unleashes the AI Project Trinity", w:"The $175.3bn contingent-guarantee build and the ~zero-IRR-under-activation claim. Debate 3.", star:1},
+ {s:"SemiAnalysis", t:"Scaling the Memory Wall", w:"The de-spec evidence and the HBM4 7.6-vs-10.7 Gbps binning split. Debate 2.", star:1},
+ {s:"SemiAnalysis", t:"Amazon's AI Resurgence: AWS &amp; Anthropic's Multi-Gigawatt Trainium Expansion", w:"Plus the 2027 Trainium absorption gap (Anthropic can't absorb AWS's 2027 output) — still live 11 months on.", star:0},
+ {s:"SemiAnalysis", t:"Meta's Infrastructure Team Needs A Culture Reset · Meta Compute: Everyone Wants To Be A Cloud", w:"&gt;5GW contracted in 1H26 alone; \"capex in 2027 will be shockingly high\"; the Arista DSF→NSF displacement.", star:0},
+ {s:"SemiAnalysis", t:"How Much Do GPU Clusters Really Cost? · H100 vs GB200 NVL72 Training Benchmarks", w:"Cluster-TCO archetypes (hyperscaler 1.10-1.61x a gold-tier neocloud). Note: modelled on a generic hyperscaler, not AWS specifically.", star:0},
+ {s:"Bernstein · Rasgon", t:"The CPU Renaissance? $223bn TAM", w:"Recurring all week — and AMD just adopted the $220bn bull case as guidance. See the TAM ledger.", star:1},
+ {s:"Bernstein · Rasgon", t:"How much WFE to reach AI nirvana", w:"The GW-frame: ~$7.5-8bn WFE per incremental GW/yr; 50GW scenario → $291bn CY29, \"$300B+ doable\". Street-low base ($198bn CY28).", star:1},
+ {s:"Bernstein", t:"TSMC could spend $10B more on N2 capacity. Why won't they? · Is SMIC N+3's Metal Pitch Smaller than Intel 18A's? · EDA Market Primer", w:"Three separate pokes at the leading-edge moat, plus the SNPS-vs-CDNS organic-growth divergence.", star:0},
+ {s:"Irrational Analysis", t:"Stranded Indium-Phosphide", w:"Debate 4's bull leg: 80% of InP already goes to AI with no consumer buffer. <b>Single-source, unverified, author long LITE.</b>", star:1},
+ {s:"Expert call (fwd D. Grozdea)", t:"Lumentum Director of Silicon Photonics R&amp;D", w:"SiPh foundry / lasers / DSP all \"at capacity\"; CPO trial ~2028, deployment ~2030; China EML gap 3-5yrs \"will not close\".", star:1},
+ {s:"Redburn / JPM", t:"Hyperscalers — Margin Call · Hyperscalers Joint Equity &amp; Credit call", w:"The credit lens on the capex build — the right companion to debate 3.", star:0},
+ {s:"MS · Nowak / Moore", t:"US memory selloff = entry point · Learnings from Earnings: Part II", w:"Joe Moore defended MU/SNDK as a \"compelling entry point\"; the earnings-learnings note is the desk's post-print positioning read.", star:0},
+ {s:"Jefferies · Curtis", t:"Blayne's Bytes — \"Frozen v2\"", w:"Specifies Google's hardwired-Gemini silicon: 6-10x tokens/watt but C28 and sub-TPU volumes. Caps the hype.", star:0},
+ {s:"UBS", t:"Q2 preview block (31 pages, 5 themes) · Implication of Intel's capex raise for ASML and ASMI", w:"The semicap read-through on INTC's $18-20bn.", star:0},
+ {s:"GS / BofA / MS", t:"Advancing AI 2026 recaps · AMD Advancing AI Investor Roundtable", w:"The PT ladder and the 5-pre-event-debates scorecard (2 still open).", star:0},
+ {s:"Barclays · O'Malley", t:"Q2 Earnings Preview: Hard to Move '28 Bogeys on Q2 Prints; UG LITE to OW", w:"The LITE upgrade — and the buy-side feedback that \"not much has changed fundamentally.\"", star:0},
+ {s:"Various", t:"Samsung Elec wins $200 billion Broadcom AI chip partnership · US Negotiating Leverage Bears Fruit", w:"Confirm the structure before treating as a foundry-share datapoint (flow framing was \"possibly\").", star:1},
+ {s:"Citi / misc", t:"MediaTek: The TPU Trade Nobody Owns Yet (+56%) · Unpacking TPU-As-A-Service · AVGO Forecasts Coming to Life in GOOG Filings", w:"The TPU-external thread, from three angles.", star:0},
+ {s:"Misc", t:"Qualcomm tells customers that prices are going up by double digits · Higher Prices Beget Higher Earnings · SpaceX Approaches $100: What's in the Price?", w:"Pricing power, and the SPCX round-trip.", star:0},
+];
+document.getElementById('reading-mount').innerHTML=
+ '<table class="reading"><thead><tr><th style="width:150px">Source</th><th style="width:38%">Title</th><th>Why it matters</th></tr></thead><tbody>'
+ + READ.map(r=>`<tr><td class="src">${r.star?'<span class="starred">★</span> ':''}${r.s}</td><td class="ti">${r.t}</td><td class="wh">${r.w}</td></tr>`).join('')
+ + '</tbody></table>';
+
+/* ---------- TAM ledger ---------- */
+const TAM=[
+ {k:"ai-tam-2030", h:"AI TAM by 2030",
+  canon:"<b>BofA: ~$1.7T CY30 AI-DC-<em>systems</em> TAM</b> (accelerators ~$1.2T, networking ~$316bn, optical ~$88bn, HBM $168bn). <b>New 07-23: AMD lifts accelerator TAM to $1.4T</b> — above BofA's $1.2T — with total compute $2T. House build CY30 ~$1.41T = on the AMD trail (1.01x), 1.21x BofA.",
+  trap:"Never compare $1.7T (systems) against Jensen's $3-4T (total infra, adds power/grid/software) as if they were the same quantity. They are different scopes, not a disagreement.",
+  vs:[["~$1.7T CY30 systems","BofA · Arya, AI 2030","2026-05-13"],
+      ["compute $2T / accelerators $1.4T","AMD Advancing AI 2026 (Lisa Su) via GS + MS","2026-07-23"],
+      ["~$3-4T end-of-decade AI infra","NVDA · Jensen, Q1 FY27","2026-05-20"]]},
+ {k:"server-cpu-tam", h:"Server-CPU TAM — the agentic leg",
+  canon:"<b>The big move of the week.</b> AMD adopted <b>$220bn 2030 with a &gt;50% share target</b> (~$110bn from AMD alone) — which <em>is</em> Bernstein's bull case ($223bn), now company guidance. AMD's own history: ~$60bn (FAD Nov-25) → $120bn (May-26) → <b>$220bn = 3.7x in 8 months</b>. Bernstein base $137bn; UBS bottoms-up ~$175bn; house build ~$55bn CY26 / ~$96bn CY27 / ~$137bn CY28.",
+  trap:"Three traps. (1) Units ≠ dollars — JPM's 26M (2025) → 68M (2028) needs an ASP to become a TAM. (2) Total-market (Bernstein/UBS) vs hyperscaler-only (house, ex-enterprise). (3) <b>Vera/Grace count in the TAM but live inside NVDA's Compute revenue — do not double-count them in capex math.</b>",
+  vs:[["$220bn 2030 + AMD share &gt;50%","AMD Advancing AI 2026 via GS/MS","2026-07-23"],
+      ["$137bn 2030 BASE / $223bn BULL","Bernstein · Rasgon","2026-06-16"],
+      ["~$175bn 2030 bottoms-up","UBS","2026-06"],
+      ["~$55bn CY26 / ~$96bn CY27 / ~$137bn CY28","Capstone house (Bottom_Up_Capex v2)","2026-07-17"]]},
+ {k:"wfe-tam", h:"WFE market size CY26 / 27 / 28",
+  canon:"CY26 <b>~$140-160bn</b> — everyone agrees. CY27 splits: house $180-215bn vs UBS $200bn vs MS ~$191bn vs <b>Bernstein $175bn (street low)</b>. <b>CY28 is the genuine conflict</b>: house top-end <b>$260bn</b> vs UBS $250bn vs Bernstein base $198bn. Bernstein's new GW-frame: <b>~$7.5-8bn WFE per incremental GW/yr</b>; a 50GW scenario gives $245bn'28 / $291bn'29 and \"$300bn+ doable\".",
+  trap:"House CY28 $260bn sits deliberately ABOVE street — that's a tracked edge, not an error. But believing it means believing <b>ASML flexes to ~110-120 EUV shipments in 2028</b> vs a supply chain sized for ~90 (JPM says 110+ is feasible). Base bottoms-up demand supports ~88-95.",
+  vs:[["$148-158bn / $180-215bn / $202-260bn","Capstone house model","2026-06-15"],
+      ["$148bn / $175bn / $198bn — street LOW","Bernstein · Rasgon, 'AI nirvana'","2026-07-20"],
+      ["$200bn CY27 / $250bn CY28","UBS · Arcuri","2026-05-15"],
+      ["$147bn CY26 / ~$191bn CY27","MS · Moore-Shane","2026-06-22"]]},
+ {k:"hyperscaler-capex", h:"Hyperscaler / AI-DC capex",
+  canon:"Top-4 (MSFT/AMZN/GOOGL/META): <b>~$410bn 2025A → ~$700-725bn 2026E (+~75%) → ~$1.1T 2027E</b> (JPM AI Capex 2.0). Five-name consensus (adds ORCL) ~$700bn'26 / ~$900bn+'27. Buy-side 2027 bogey <b>~$1.2T</b> (\"could be 1.3-1.4\"). The constraint is power/physical buildout, not demand.",
+  trap:"Top-4 vs five-name basket differences masquerade as revisions. Always state the basket. GOOG-only: ~$350bn 2027 / ~$375bn 2028 (MS Nowak).",
+  vs:[["top-4 ~$410bn / ~$700-725bn / ~$1.1T","JPM · Sur, AI Capex 2.0","2026-06-16"],
+      ["~$1.2T 2027 buy-side bogey","Jefferies","2026-05-08"],
+      ["five-name ~$700bn'26 / ~$900bn+'27","BBG / house","2026-06-11"]]},
+ {k:"hbm-cycle", h:"HBM — TAM, pricing, allocation",
+  canon:"Sold out CY26 incl. HBM4. TAM <b>$35bn'25 → $100bn'28</b> (~40% CAGR, Micron/JPM) or <b>$168bn CY30</b> (BofA) — different horizons, both valid. Pricing: NVDA HBM <b>~$17-18/GB 2026 → $30-32/GB 2027</b> (+70-80%, Redburn); blended ASP +~30%. Capacity ~473k wspm end-26E → ~668k end-27E.",
+  trap:"<b>$/GB (stack) and $/Gb (die) are ~8-16x apart — always state units.</b> Live tension: general-server DRAM overtook HBM as allocation priority #1 (a 4-year reversal) while HBM pricing still marches higher.",
+  vs:[["$35bn 2025 → $100bn 2028","Micron / JPM","2026-05-28"],
+      ["$35bn CY25 → $168bn CY30","BofA · Arya, AI 2030","2026-05-13"],
+      ["$17-18/GB → $30-32/GB","Redburn · Conor","2026-06-23"],
+      ["server DRAM now allocation #1, HBM #2","Redburn / TrendForce","2026-06-23"]]},
+ {k:"ai-dc-power-gw", h:"AI datacenter power (GW) — three distinct bases",
+  canon:"<b>Facility GW:</b> ~14-16 GW built 2026 / ~20 GW 2027 vs ~40-45 GW proposed (Jefferies satellite tracking, 50% haircut); ~138 GW cumulative through 2030 (JPM). <b>IT-load GW:</b> ~300 GW by 2030 (+25% CAGR) or ~240-280 GW global. <b>800V-transition GW:</b> Citi models 9 → 21 GW 2025-30 — a SUBSET.",
+  trap:"<b>STANDING RULE:</b> the 800V notes' GW figures (IT load ~300 GW, Citi 9→21 GW) must NOT be folded into total-GW-deployed answers. There is no numeric conflict here — the only risk is basis conflation. Label every new GW datapoint facility / IT-load / 800V-subset before it enters a page.",
+  vs:[["~14-16 GW built 2026 / ~20 GW 2027","Jefferies / satellite tracking","2026-06-22"],
+      ["~138 GW cumulative through 2030","JPM AI Capex 2.0","2026-06-16"],
+      ["~300 GW IT load by 2030","JPM 800V / Omdia","2026-06-09"],
+      ["9 → 21 GW 2025-30 (800V subset)","Citi 800V power","2026-06-15"]]},
+ {k:"rev-per-gw", h:"Revenue / rental per GW — and build cost per GW",
+  canon:"Rental/revenue per GW of compute: <b>Trainium &lt;$10bn/GW</b> · <b>merchant GPU ~$12-13bn/GW</b> (pre the 2H26 shortage) · <b>premium GPU ~$25bn/GW</b> (SpaceX–Google). MS pegs 1P merchant TPU at ~$20bn rev/GW. Rev/GW is emerging as a data-centre <em>quality</em> metric — credit, utilisation, networking and speed-to-market drive a ~2x spread.",
+  trap:"<b>Three bases, never mix:</b> (a) compute rev/rental $/GW; (b) colocation $/kW-month = power+shell only, NOT compute; (c) facility BUILD cost ~$30-40bn/GW (ASIC) vs ~$50bn/GW (NVDA GPU infra). A $/kW-month × 12 × 1e6 ≈ $/GW-yr only for the power-shell layer.",
+  vs:[["Trainium &lt;$10bn/GW","SemiAnalysis / Patel","2026-06-30"],
+      ["merchant GPU ~$12-13bn/GW","SemiAnalysis / Patel","2026-06-30"],
+      ["premium GPU ~$25bn/GW (SpaceX–Google)","SemiAnalysis / Patel","2026-06-30"],
+      ["1P merchant TPU ~$20bn rev/GW @ 20% GM","MS · Nowak","2026-06-29"]]},
+ {k:"asic-vs-gpu-share", h:"Custom ASIC vs merchant GPU share",
+  canon:"Near-term <b>unit</b> share inflects to ASICs (JPM: <b>42% 2026E → 53% 2027E</b>, ASIC units +109% y/y vs GPU +39%) while long-term <b>dollar</b> share settles <b>~65-70% GPU</b> (BofA AI 2030; UBS durable 70/30). These are horizons, not contradictions.",
+  trap:"<b>Unit share ≠ dollar share</b> — ASIC ASPs are far lower, so unit share overstates the threat. The NVDA-page \"~70% defensible\" framing is the long-horizon accelerator share and is consistent with BofA, NOT a rebuttal of JPM's 2027 unit call.",
+  vs:[["42%/58% units 2026E → 53%/47% 2027E","JPM · Sur, AI Capex 2.0","2026-06-16"],
+      ["~65-70% GPU dollars by 2030","BofA · Arya, AI 2030","2026-05-13"],
+      ["~70/30 GPU/ASIC durable","UBS · Arcuri","2026-06-04"]]},
+];
+document.getElementById('tam-mount').innerHTML=TAM.map(t=>`
+  <div class="tam">
+    <div class="th2"><h4>${t.h}</h4><code>${t.k}</code></div>
+    <div class="cn"><b>Canonical:</b> ${t.canon}</div>
+    <div class="tr"><span>⚠</span><div><b>Scope trap:</b> ${t.trap}</div></div>
+    <div class="vs scrollx"><table><thead><tr><th>Sourced variants</th><th style="text-align:left">Source</th><th style="text-align:right;width:92px">Date</th></tr></thead><tbody>
+    ${t.vs.map(v=>`<tr><td>${v[0]}</td><td style="text-align:left;color:var(--muted)">${v[1]}</td><td style="text-align:right;color:var(--faint)" class="num">${v[2]}</td></tr>`).join('')}
+    </tbody></table></div>
+  </div>`).join('');
+
+/* ---------- flow ---------- */
+const REV=[
+ {tk:"AMD",  a:"PT ↑", ac:"up", src:"UBS · Arcuri", r:"<b>$730</b> (Street high)", n:"Post-Advancing-AI; ladder also Barclays $665 / GS $640 / BofA $620 reiterated. MS the holdout at EW $410 on warrants-as-marketing-expense.", d:"07-25"},
+ {tk:"GOOG", a:"PT ↓", ac:"dn", src:"MS · Nowak", r:"$415 → <b>$400</b>", n:"'27/'28 EPS −7%/−5% on the capex raise to $195-205bn and FCF −$5.9bn (first negative since IPO).", d:"07-23"},
+ {tk:"INTC", a:"PT ↑", ac:"up", src:"MS", r:"→ <b>$75</b>", n:"Pre-print raise; then the Q2 beat-and-raise (+8-9%) and capex to $18-20bn. Debate moves execution → funding.", d:"07-20"},
+ {tk:"TXN",  a:"PT ↑", ac:"up", src:"MS", r:"→ <b>$230</b>", n:"Logged in the same MS block as INTC.", d:"07-20"},
+ {tk:"TSLA", a:"PT ↓", ac:"dn", src:"JPM", r:"$475 → <b>$445</b>", n:"Q2 margin miss.", d:"07-23"},
+ {tk:"ASML", a:"PT split", ac:"nt", src:"MS vs Bernstein", r:"MS <b>€1,930</b> · Bernstein <b>€2,500</b>", n:"A €570 spread on the same name — methodology divergence, both live. NTM EPS +17.1% in 4 weeks; the stock is −5.5%.", d:"07-20"},
+ {tk:"LITE", a:"Upgrade", ac:"up", src:"Barclays · O'Malley", r:"→ <b>Overweight</b>", n:"Buy-side feedback: \"not much has changed fundamentally, NPO will be an interesting driver\" — little contrarian edge left.", d:"07-20"},
+ {tk:"ASE",  a:"PT ↑", ac:"up", src:"Jefferies", r:"→ <b>NT$805</b>", n:"Advanced packaging +10-20% pricing; EPS +4%/+21% 26E/27E.", d:"07-24"},
+ {tk:"DISCO",a:"PT ↑", ac:"up", src:"Bernstein", r:"¥90k → <b>¥99,000</b>", n:"Post beat-and-raise; silicon photonics as an emerging growth driver.", d:"07-23"},
+ {tk:"NFLX", a:"PT ↓", ac:"dn", src:"multiple", r:"cuts", n:"Q2 print reset the window.", d:"07-17→20"},
+];
+document.getElementById('rev-mount').innerHTML=
+ '<table class="rev"><thead><tr><th>Name</th><th>Action</th><th>Source</th><th>Rating / PT</th><th>Note</th><th style="text-align:right">Date</th></tr></thead><tbody>'
+ + REV.map(r=>`<tr><td><span class="tk">${r.tk}</span></td><td><span class="badge ${r.ac}">${r.a}</span></td><td style="color:var(--muted)">${r.src}</td><td>${r.r}</td><td style="color:var(--ink2)">${r.n}</td><td style="text-align:right;color:var(--faint)" class="num">${r.d}</td></tr>`).join('')
+ + '</tbody></table>';
+
+const CAL=[
+ {d:"Jul 31", n:"GEV bull/bear debate", s:"Jefferies Access call, 12:00pm ET — GEV is −9.3% in 5 days on +4.6% estimate revisions."},
+ {d:"Aug 4",  n:"AMD Q2 FY26 print", s:"Guide $11.2bn. The test is the structure of the next GW-scale deal — equity or warrants (debate 1)."},
+ {d:"Aug 5",  n:"IFX FY3Q26 print", s:"First print on the new 3-division reporting. MS expects in-line; watch the FY26 >€16bn / ~20% margin bridge."},
+ {d:"Aug 7",  n:"Siemens Energy & GEV call", s:"BofA, 8:00am ET."},
+ {d:"Aug 26", n:"NVDA Q2 FY27 print", s:"Guided $91bn. Watch hyperscale vs hyperscale-capex growth under the new segmentation."},
+ {d:"Aug 31", n:"TXN CFO transition ends", s:"Lizardi out Aug-1 → Julie Knecht; advisory through Aug-31."},
+ {d:"Sep 16", n:"onsemi Analyst Day", s:"Citi expects a print ~Sep 13 first. Watch for a raised long-term target model + SiC/800V framing."},
+];
+document.getElementById('cal-mount').innerHTML=CAL.map(c=>`
+ <div class="ev"><div class="dt">${c.d}</div><div class="nm2">${c.n}</div><div class="ds">${c.s}</div></div>`).join('');
+</script>

@@ -9,11 +9,11 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\HPE` (filings + transc
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $45.9bn | $49.7bn |
+| Revenue | $46.0bn | $49.8bn |
 | Gross profit | $16.4bn | $17.7bn |
 | Gross margin | 35.6% | 35.6% |
 | EBITDA | $9.0bn | $10.3bn |
-| EPS | $3.43 | $4.06 |
+| EPS | $3.44 | $4.06 |
 | Capex | $2.7bn | $2.9bn |
 | OCF (≈EBITDA) | $9.0bn | $10.3bn |
 

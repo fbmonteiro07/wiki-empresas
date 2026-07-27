@@ -11,13 +11,13 @@ _Wiki · generated 2026-06-20 · **Taiwan issuer — no SEC filings**; sources: 
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | NT$648.7bn | NT$1075.3bn |
-| Gross profit | NT$296.5bn | NT$477.4bn |
+| Revenue | NT$649.2bn | NT$1075.3bn |
+| Gross profit | NT$296.7bn | NT$477.4bn |
 | Gross margin | 45.7% | 44.4% |
-| EBITDA | NT$128.0bn | NT$261.5bn |
-| EPS | NT$65.04 | NT$132.51 |
-| Capex | NT$16.2bn | NT$18.0bn |
-| OCF (≈EBITDA) | NT$128.0bn | NT$261.5bn |
+| EBITDA | NT$128.5bn | NT$261.5bn |
+| EPS | NT$65.19 | NT$132.54 |
+| Capex | NT$16.2bn | NT$20.9bn |
+| OCF (≈EBITDA) | NT$128.5bn | NT$261.5bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

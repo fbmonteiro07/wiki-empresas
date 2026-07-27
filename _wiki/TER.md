@@ -11,7 +11,7 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\TER` (filings + transc
 | Gross profit | $2.6bn | $3.4bn |
 | Gross margin | 58.6% | 59.6% |
 | EBITDA | $1.4bn | $2.0bn |
-| EPS | $6.89 | $10.31 |
+| EPS | $6.91 | $10.31 |
 | Capex | $264m | $277m |
 | OCF (≈EBITDA) | $1.4bn | $2.0bn |
 

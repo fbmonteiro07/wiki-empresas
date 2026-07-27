@@ -7,13 +7,13 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\TSM` (20-F + transcrip
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | NT$5433.9bn | NT$7338.9bn |
-| Gross profit | NT$3586.4bn | NT$4865.7bn |
-| Gross margin | **66.0%** | 66.3% |
-| EBITDA | NT$3966.1bn | NT$5337.1bn |
+| Revenue | NT$5433.0bn | NT$7349.0bn |
+| Gross profit | NT$3585.8bn | NT$4879.7bn |
+| Gross margin | **66.0%** | 66.4% |
+| EBITDA | NT$3964.7bn | NT$5368.5bn |
 | EPS | **NT$102.50** | **NT$143.50** |
-| Capex | NT$1942.5bn | NT$2464.2bn |
-| OCF (≈EBITDA) | NT$3966.1bn | NT$5337.1bn |
+| Capex | NT$1956.5bn | NT$2476.2bn |
+| OCF (≈EBITDA) | NT$3964.7bn | NT$5368.5bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 _**Bold** = Capstone official model; plain = BBG consensus._

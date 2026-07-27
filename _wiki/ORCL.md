@@ -11,7 +11,7 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\ORCL` (filings + trans
 | Gross profit | $49.0bn | $60.1bn |
 | Gross margin | 64.2% | 56.4% |
 | EBITDA | $43.1bn | $61.2bn |
-| EPS | $7.29 | $9.20 |
+| EPS | $7.28 | $9.15 |
 | Capex | $66.7bn | $99.3bn |
 | OCF (≈EBITDA) | $43.1bn | $61.2bn |
 

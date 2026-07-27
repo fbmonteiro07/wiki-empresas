@@ -7,13 +7,13 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\INTC` (filings + trans
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $59.7bn | $71.4bn |
-| Gross profit | $23.8bn | $31.2bn |
-| Gross margin | 39.9% | 43.7% |
-| EBITDA | $19.3bn | $25.0bn |
-| EPS | $0.99 | $1.96 |
-| Capex | $15.6bn | $24.2bn |
-| OCF (≈EBITDA) | $19.3bn | $25.0bn |
+| Revenue | $59.9bn | $71.6bn |
+| Gross profit | $23.8bn | $31.3bn |
+| Gross margin | 39.8% | 43.8% |
+| EBITDA | $19.4bn | $25.1bn |
+| EPS | $1.00 | $2.01 |
+| Capex | $19.2bn | $24.5bn |
+| OCF (≈EBITDA) | $19.4bn | $25.1bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

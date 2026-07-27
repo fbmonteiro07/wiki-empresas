@@ -38,7 +38,7 @@ Capex lines used below: META **135.6 / 175.0 / 194.8bn**; GOOGL **196.8 / 290.0 
 
 ---
 
-## DIVERGES (the alpha)
+## Where the new data DIVERGES
 
 | Name | New datapoint (this run) | vs prior wiki | vs house model | vs BBG consensus | Read |
 |---|---|---|---|---|---|

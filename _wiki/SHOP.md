@@ -9,9 +9,9 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\SHOP` (10-K/10-Q + tra
 |---|--:|--:|
 | Revenue | $14.7bn | $18.2bn |
 | Gross profit | $7.0bn | $8.5bn |
-| Gross margin | 47.4% | 47.0% |
+| Gross margin | 47.3% | 47.0% |
 | EBITDA | $2.7bn | $3.5bn |
-| EPS | $1.87 | $2.45 |
+| EPS | $1.89 | $2.47 |
 | Capex | $31m | $38m |
 | OCF (≈EBITDA) | $2.7bn | $3.5bn |
 
