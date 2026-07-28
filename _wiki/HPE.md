@@ -13,7 +13,7 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\HPE` (filings + transc
 | Gross profit | $16.4bn | $17.7bn |
 | Gross margin | 35.6% | 35.6% |
 | EBITDA | $9.0bn | $10.3bn |
-| EPS | $3.44 | $4.06 |
+| EPS | $3.44 | $4.07 |
 | Capex | $2.7bn | $2.9bn |
 | OCF (≈EBITDA) | $9.0bn | $10.3bn |
 

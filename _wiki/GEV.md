@@ -11,7 +11,7 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\GEV` (filings + transc
 | Gross profit | $11.1bn | $14.5bn |
 | Gross margin | 24.2% | 27.3% |
 | EBITDA | $6.2bn | $9.4bn |
-| EPS | $15.26 | $24.12 |
+| EPS | $15.28 | $24.12 |
 | Capex | $1.3bn | $1.4bn |
 | OCF (≈EBITDA) | $6.2bn | $9.4bn |
 

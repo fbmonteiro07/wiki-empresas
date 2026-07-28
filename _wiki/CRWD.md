@@ -14,7 +14,7 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\CRWD` (filings + trans
 | Gross margin | 78.7% | 79.1% |
 | EBITDA | $1.8bn | $2.2bn |
 | EPS | $1.21 | $1.55 |
-| Capex | $403m | $445m |
+| Capex | $403m | $446m |
 | OCF (≈EBITDA) | $1.8bn | $2.2bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

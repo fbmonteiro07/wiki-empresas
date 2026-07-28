@@ -9,13 +9,13 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\NVTS` (10-K/10-Q filin
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $42m | $74m |
-| Gross profit | $16m | $31m |
-| Gross margin | 39.3% | 41.3% |
-| EBITDA | $-43m | $-33m |
-| EPS | $-0.18 | $-0.15 |
+| Revenue | $43m | $72m |
+| Gross profit | $17m | $30m |
+| Gross margin | 39.4% | 41.3% |
+| EBITDA | $-43m | $-34m |
+| EPS | $-0.17 | $-0.13 |
 | Capex | $2m | $2m |
-| OCF (≈EBITDA) | $-43m | $-33m |
+| OCF (≈EBITDA) | $-43m | $-34m |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

@@ -12,8 +12,8 @@ _Wiki · generated 2026-06-19 · **Korean issuer — NO SEC filings (no 10-K/10-
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | ₩354220.0bn | ₩555088.6bn |
-| Gross profit | ₩298961.7bn | ₩474045.7bn |
+| Revenue | ₩353942.0bn | ₩554746.6bn |
+| Gross profit | ₩298727.0bn | ₩473753.6bn |
 | Gross margin | 84.4% | 85.4% |
 | EBITDA | ₩297019.3bn | ₩458707.1bn |
 | EPS | ₩356133.74 | ₩638717.56 |
