@@ -2,10 +2,11 @@
 
 _Generated 2026-07-27 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (4)
+## 📅 Upcoming (5)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
+| 2026-07-27 | CDNS | **~~Q2 FY26 earnings~~ — RESOLVED 2026-07-27 (AMC).** Beat-and-raise: rev $1.584bn in line, OpM 45.5% (vs 45.0%), EPS $2.11 (vs $2.05), **backlog to $8.1bn**, **FY26 raised to $6.30bn mid / EPS $8.10* |
 | 2026-08-05 | IFX | **2026-08-05 — FY3Q26 print** — MS expects an in-line print (order-book momentum, industrial recovery, AI-DC commentary); watch the FY26 >EUR 16bn / ~20% margin bridge and HV-auto commentary (MS, 2026 |
 | 2026-08-26 | NVDA | **Q2 FY27 print: 2026-08-26** (guided $91B). Watch hyperscale vs hyperscale-capex growth under new segmentation (Arcuri: becomes a debate if NVDA ever under-grows it). |
 | 2026-08-31 | TXN | **CFO transition:** Rafael Lizardi out 2026-08-01 → **Julie Knecht** (CAO, 25-yr veteran), advisory through 2026-08-31 (DB/Seymore, briefing 2026-06-03). |

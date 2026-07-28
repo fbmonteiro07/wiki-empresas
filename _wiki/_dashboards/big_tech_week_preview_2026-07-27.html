@@ -1,0 +1,224 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Big Tech Earnings Week · Jul 29–30, 2026</title>
+<style>
+  :root{
+    --ink:#0b0b0b; --ink2:#334155; --muted:#52514e; --faint:#898781;
+    --line:#e1e0d9; --line2:#c3c2b7; --page:#f9f9f7; --card:#ffffff;
+    --pos:#2a78d6; --neg:#e34948;
+    --bull:#006300; --bear:#d03b3b;
+    --accent:#184f95; --accentbg:#eef4fd; --warnbg:#fef7ed; --warnink:#7a2e12;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--page);color:var(--ink);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    font-size:13px;line-height:1.45;-webkit-font-smoothing:antialiased}
+  .num{font-variant-numeric:tabular-nums}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 18px}
+
+  header{background:#0b0b0b;color:#fff;padding:18px 0 15px}
+  header .eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#fab219;font-weight:700}
+  header h1{margin:5px 0 4px;font-size:22px;font-weight:700;letter-spacing:-.01em}
+  header .sub{color:#c3c2b7;font-size:12.5px;max-width:1020px}
+  header .sub b{color:#fff}
+  header .meta{margin-top:8px;font-size:11px;color:#898781}
+  header .meta b{color:#e1e0d9}
+
+  .strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0}
+  .strip .s{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 13px;font-size:12px;color:var(--ink2)}
+  .strip .s b{color:var(--ink)}
+  .strip .s .h{font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 14px}
+  .co{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+  .co .hd{display:flex;gap:10px;align-items:baseline;padding:10px 14px;border-bottom:1px solid var(--line);background:var(--page)}
+  .co .hd .tk{font-size:17px;font-weight:800;letter-spacing:-.01em}
+  .co .hd .q{font-size:11px;color:var(--muted);font-weight:600}
+  .co .hd .dt{margin-left:auto;font-size:11px;font-weight:800;color:#fff;background:#0b0b0b;border-radius:6px;padding:2px 8px;white-space:nowrap}
+  .co .one{padding:8px 14px;font-size:12.3px;color:var(--ink2);border-bottom:1px solid var(--line)}
+  .co .one b{color:var(--ink)}
+  .co .bbline{display:flex;gap:14px;flex-wrap:wrap;padding:7px 14px;border-bottom:1px solid var(--line);font-size:11.8px}
+  .co .bbline .bl{color:var(--bull)} .co .bbline .br{color:var(--bear)}
+  .co .bbline b{font-weight:700}
+
+  .co table{border-collapse:collapse;width:100%;font-size:11.6px}
+  .co th,.co td{text-align:left;padding:4px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+  .co thead th{font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:700;background:var(--page)}
+  .co td.m{white-space:nowrap;font-weight:700;color:var(--ink)}
+  .co td.c{color:var(--ink2);white-space:nowrap}
+  .co td.b{color:var(--ink)}
+  .co td.b b{color:var(--accent)}
+  .co .tblwrap{overflow-x:auto}
+  cite{font-style:normal;color:var(--faint);font-size:10.3px}
+
+  .co .sec{padding:7px 14px 4px;font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+  .co ul{margin:0 0 8px;padding:0 14px 0 30px}
+  .co li{margin:3px 0;font-size:11.9px;color:var(--ink2)}
+  .co li b{color:var(--ink)}
+  .co .setup{margin-top:auto;padding:8px 14px 10px;border-top:1px solid var(--line);background:var(--page);font-size:11.6px;color:var(--ink2)}
+  .co .setup b{color:var(--ink)}
+  .flag{background:var(--warnbg);color:var(--warnink);font-size:11px;padding:5px 14px;border-bottom:1px solid var(--line)}
+  .flag b{color:var(--warnink)}
+
+  footer{padding:12px 0 34px;border-top:1px solid var(--line);color:var(--muted);font-size:11px}
+  footer code{background:#f1f0ec;padding:1px 4px;border-radius:4px;font-size:10.5px}
+
+  @media (max-width:920px){ .grid{grid-template-columns:1fr} .strip{grid-template-columns:1fr} }
+  @media print{
+    @page{ size:A4 landscape; margin:7mm }
+    body{font-size:9px;background:#fff}
+    header{padding:8px 0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    header h1{font-size:15px} header .sub{font-size:9px}
+    .wrap{max-width:none;padding:0 4px}
+    .strip{margin:6px 0;gap:6px} .strip .s{padding:5px 8px;font-size:8.3px}
+    .grid{gap:6px} .co{break-inside:avoid}
+    .co .hd{padding:5px 9px} .co .hd .tk{font-size:12px}
+    .co .one{padding:4px 9px;font-size:8.6px}
+    .co .bbline{padding:4px 9px;font-size:8.2px}
+    .co table{font-size:8px} .co th,.co td{padding:2px 5px}
+    .co .sec{padding:4px 9px 2px;font-size:7.5px}
+    .co li{font-size:8.2px;margin:1.5px 0}
+    .co .setup{padding:4px 9px;font-size:8px}
+    .flag{font-size:7.8px;padding:3px 9px}
+    cite{font-size:7.2px}
+    footer{font-size:7.5px;padding:6px 0}
+  }
+</style>
+
+<header><div class="wrap">
+  <div class="eyebrow">Capstone · US Equities · Week preview</div>
+  <h1>Big Tech earnings week — MSFT &amp; META Wed 7/29 · AMZN &amp; AAPL Thu 7/30 (all AMC)</h1>
+  <div class="sub">Four prints, ~<b>$120bn of June-quarter capex</b> in consensus, and the resolution test for the "estimates up, prices down" de-rating: these are the guides (Azure, AWS, FY27 capex) that decide whether the semis book's revision tailwind holds. <b>The positioning asymmetry is the meeting point:</b> the crowd is long AMZN (#1 MAG7 favourite, 31%) and AAPL (3rd-most-overbought) into their prints, and out of MSFT (zero favourite votes, HFs at 10th-percentile MAG7 exposure).</div>
+  <div class="meta">Prepared <b>Mon Jul 27, 2026</b> · consensus: BBG estimates asof <b>07-27</b> · bogeys: wiki pages MSFT/META/AMZN/AAPL (preview flow ingested through <b>07-26</b>) · every number attributed broker + date</div>
+</div></header>
+
+<div class="wrap">
+
+  <div class="strip">
+    <div class="s"><div class="h">The capex ledger (the semis event)</div>
+      FY/CY27 capex bogeys on the table this week: <b>MSFT $243–260bn</b> (BofA poll $243.5 vs UBS bogey $255–260 — an unreconciled $12–17bn spread), <b>AMZN $278–350bn</b> (buy-side poll $277.7 / BofA $282 / UBS desk $300–350 — the widest spread on any page), <b>META $185–250bn</b> (Post holds $185, buy-side poll $204, desks $225–250). GOOG already raised ($195–205bn '26). Land these at bogey-high and the top-4 '27 track ≈ JPM's ~$1.1T.</div>
+    <div class="s"><div class="h">Positioning asymmetry</div>
+      <b>AMZN most crowded</b>: #1 MAG7 favourite (31%), UBS sentiment 8/10 — an in-line print is a risk even if AWS clears 35%. <b>MSFT washed out</b>: −21% YTD, 11% below 200-dma, LOs trimming since Dec, zero favourite votes — the asymmetric beat payoff. <b>AAPL</b>: RSI 65, 3rd-most-overbought in Jefferies tech, "largely priced in" (MS). <b>META</b>: HFs long "but not in size" — a show-me story (UBS).</div>
+    <div class="s"><div class="h">Read-throughs to capture for the book</div>
+      Capex guides → <b>semicap/NVDA/AVGO/TSM</b>. AMZN Trainium3 units + Anthropic backlog → <b>AVGO/MRVL/ALAB</b> (and the Alchip margin-squeeze thread). META AMD-warrant/custom-MI455 language → <b>AMD debate #1</b>. AAPL CXMT/YMTC qualification + White House lobbying → <b>MU/memory</b>. MSFT Maia status → <b>custom-ASIC share</b>. All four are LITE/COHR/optical customers.</div>
+  </div>
+
+  <div class="grid">
+
+    <!-- ================= MSFT ================= -->
+    <div class="co">
+      <div class="hd"><span class="tk">MSFT</span><span class="q">F4Q26 (Jun-Q)</span><span class="dt">WED 7/29 AMC</span></div>
+      <div class="one"><b>Washed-out positioning meets the highest Azure bar of the cycle</b> — buy-side needs ~41% cc vs the 39–40% guide, and the FY27 capex number is the semis event.</div>
+      <div class="bbline"><span class="bl">▲ <b>Bull:</b> low-40s Azure + Copilot ARPU inflection at ~16x FY28 GAAP (MS/GS/DB)</span><span class="br">▼ <b>Bear:</b> Gen-AI mix crushes margin (100bps mix = −77bps cloud GM); "no model, no chip" (JPM/Redburn)</span></div>
+      <div class="tblwrap"><table>
+        <thead><tr><th>Metric</th><th>Consensus</th><th>Buy-side bar</th></tr></thead>
+        <tbody>
+        <tr><td class="m">Revenue / EPS</td><td class="c num">$87.7bn / $4.25 <cite>BBG</cite></td><td class="b num">—</td></tr>
+        <tr><td class="m">Azure cc, FQ4</td><td class="c num">40.5% as-rep, ~$3.3bn q/q <cite>MS 07-23</cite></td><td class="b num"><b>40.7–41%</b> <cite>BofA poll 07-12/26 · UBS 07-26 · MS 07-23</cite></td></tr>
+        <tr><td class="m">Azure FQ1 guide</td><td class="c num">guide was 39–40% cc</td><td class="b num"><b>41.4–42%</b> + reiterate F1H27 "modest accel" = 42%+ <cite>BofA · UBS · MS</cite></td></tr>
+        <tr><td class="m">FQ4 capex</td><td class="c num">$35.2bn <cite>BBG</cite></td><td class="b num"><b>&gt;$40bn</b>; raise $190bn CY26 or guide FY27 &gt;$240bn <cite>UBS 07-25/26</cite></td></tr>
+        <tr><td class="m">FY27 capex</td><td class="c num">—</td><td class="b num"><b>$243.5bn</b> BofA poll vs <b>$255–260bn</b> UBS bogey <cite>07-12→26</cite></td></tr>
+        <tr><td class="m">Copilot seats</td><td class="c num">guided 25M+ vs 20M <cite>UBS 07-25</cite></td><td class="b num"><b>6M+ net adds</b> (MS); &gt;5M to re-rate <cite>BofA 07-20</cite></td></tr>
+        <tr><td class="m">FCF</td><td class="c num">$14.4–15.8bn vs $25.5bn y/y <cite>BofA/UBS</cite></td><td class="b num">FY26-29 aggregate cut −48% to $231bn; trough $32bn FY27 <cite>BofA 07-26</cite></td></tr>
+        </tbody>
+      </table></div>
+      <div class="sec">Listen for</div>
+      <ul>
+        <li><b>Azure AI vs "Other"</b> — AI ~100% y/y (~19pts of growth, MS); the non-OpenAI re-acceleration is the quality tell; OpenAI ~45% of RPO</li>
+        <li><b>Amy Hood's "allocated capacity" framing</b> — growth governed by buildout/GPU timing, not demand; power/shell the #1 constraint (IR 06-08)</li>
+        <li><b>Maia</b> — GS calls silicon datapoints the key to outperform vs JPM's "No Model, No Chip, No Hope?" (07-23)</li>
+        <li><b>RPO conversion</b> — ~25% of $630bn = ~$150bn+ NTM (BofA's "works-if" #1); M365 Copilot inflection is in nobody's model — the flagged non-consensus optionality (UBS 07-25)</li>
+        <li><b>Margin language</b> — layoffs ~4,800 (~2%) vs Redburn's "margins propped up by cost cuts"; Anthropic distribution (Claude in Teams, Foundry) as a hedge tell</li>
+      </ul>
+      <div class="setup"><b>Setup:</b> −21% YTD, 11% below 200-dma, sentiment 5/10, LOs trimming since ~Dec, HFs at 10th-pct MAG7, zero favourite votes — the washed-out one. <b>PTs 2wks:</b> MS $650→$600 · UBS $510→$480 · Redburn init Neutral $400 · standing DB $550, Bernstein $646. <cite>No house/Capstone view on the page.</cite></div>
+    </div>
+
+    <!-- ================= META ================= -->
+    <div class="co">
+      <div class="hd"><span class="tk">META</span><span class="q">Q2 2026</span><span class="dt">WED 7/29 AMC</span></div>
+      <div class="one"><b>"Highest earnings torque from capex disclosure" in MAG7 (MS)</b> — the market wants a line in the sand on 2027 capex and ROI breadcrumbs, not a Q2 beat.</div>
+      <div class="bbline"><span class="bl">▲ <b>Bull:</b> Street embeds ~$4bn per AI-GW vs Google ~$110bn — the capacity is free (BofA SOTP $600+$250)</span><span class="br">▼ <b>Bear:</b> FCF −$3.8/−$23.9/−$15.6bn '26-28, ~$97bn funding gap, MSL a ~$40bn/yr hidden loss (JPM/BofA)</span></div>
+      <div class="tblwrap"><table>
+        <thead><tr><th>Metric</th><th>Consensus</th><th>Buy-side bar</th></tr></thead>
+        <tbody>
+        <tr><td class="m">Revenue Q2</td><td class="c num">$60.2bn (guide $58–61bn) <cite>BBG/street</cite></td><td class="b num"><b>$61.5–62.0bn</b> <cite>JPM 07-14 · UBS 07-26 $61bn+</cite></td></tr>
+        <tr><td class="m">EPS Q2 (GAAP)</td><td class="c num">$7.18 street <cite>BofA 07-20</cite>*</td><td class="b num"><b>$7.53</b> <cite>BofA poll 07-26</cite>; JPM models $7.50</td></tr>
+        <tr><td class="m">Q3 rev guide</td><td class="c num">$60.5–63.5bn range <cite>BofA</cite></td><td class="b num"><b>~$63–63.5bn</b> <cite>UBS 07-26</cite></td></tr>
+        <tr><td class="m">FY26 capex</td><td class="c num">guide $125–145bn</td><td class="b num"><b>$142–155bn</b>; BofA may raise guide to $135–150bn <cite>JPM 07-14 · BofA 07-20</cite></td></tr>
+        <tr><td class="m">FY27 capex</td><td class="c num">Post holds <b>$185bn</b></td><td class="b num">poll <b>$204bn</b>; post-memo convos $215–230; desks $225–250 <cite>BofA 07-12/26 · UBS 07-26</cite></td></tr>
+        <tr><td class="m">FY26 opex</td><td class="c num">guide $162–169bn</td><td class="b num">$162bn poll; possible $1–2bn cut at the high end <cite>BofA 07-26/07-20</cite></td></tr>
+        </tbody>
+      </table></div>
+      <div class="flag">* Basis flag: BBG blended Q2 EPS is <b>$9.11</b> vs broker GAAP marks $7.18–7.53 — different bases (adj vs GAAP); don't mix. Only bogey set implying a capex <b>peak</b>: BofA poll FY29 $235.8bn &lt; FY28 $248.6bn.</div>
+      <div class="sec">Listen for</div>
+      <ul>
+        <li><b>The 2027 capex sentence</b> — "any line in the sand on the longer-term trajectory" is what gets rewarded (UBS); SemiAnalysis: &gt;5GW contracted in 1H26 alone, "2027 capex will be shockingly high"</li>
+        <li><b>MSL / ROIC language</b> — ~$40bn/yr hidden loss by '27 (BofA); "incremental ROIC deeply negative" vs Octahedron's rebuttal; Zuckerberg "rapidly exploring changes" to infra org (SemiAnalysis 07-24)</li>
+        <li><b>AMD warrant / custom MI455</b> — ~85% effective discount (~$16.0bn/GW rebate vs $18.7bn paid); cut-down part TBD Lab doesn't want → feeds AMD debate; any language on the 6GW deployment pace</li>
+        <li><b>Meta Compute / neocloud</b> — leasing compute to Anthropic (JPM 07-20); ~$50bn/GW framing; the 90-day clawback clause as the MSL tell</li>
+        <li><b>Watermelon breadcrumbs</b> — frontier model at GPT-5.5 parity, ~10x Avocado compute; ⚠ codename collision: Redburn uses "Watermelon" for an SMB tool — unresolved, don't conflate</li>
+      </ul>
+      <div class="setup"><b>Setup:</b> best week in &gt;2yrs (+15%), +20% in 2wks pre-print; HFs long "but not in size," LOs sidelined — show-me. <b>House (06-11):</b> EPS $32.72/'26, <b>$38.24/'27 (above Street)</b>; capex $170bn'27 = near the bottom of the range → house FCF is the optimistic line; Base PT $688. <b>PTs 2wks:</b> Redburn init <b>Buy $1,000</b> (page high, on ~$145bn capex '26-27 declining to ~$100bn'28 — a path nobody else models) · JPM Neutral $725 the low · BofA $835, MS $775.</div>
+    </div>
+
+    <!-- ================= AMZN ================= -->
+    <div class="co">
+      <div class="hd"><span class="tk">AMZN</span><span class="q">Q2 2026</span><span class="dt">THU 7/30 AMC*</span></div>
+      <div class="one"><b>The crowd's favourite needs an operating-income beat, not just AWS 35%</b> — sell-side sits 2–3pts under the buy-side bar, so "Street beat, bogey miss" is the live risk.</div>
+      <div class="bbline"><span class="bl">▲ <b>Bull:</b> AWS mid-30s reaccel on Bedrock/Anthropic mix + Trainium cost lead; GS Buy $335</span><span class="br">▼ <b>Bear:</b> "strongest margins on thinnest disclosure," Gen-AI incremental margin ~12%; buy only when capex guide gets cut (Redburn $230)</span></div>
+      <div class="tblwrap"><table>
+        <thead><tr><th>Metric</th><th>Consensus</th><th>Buy-side bar</th></tr></thead>
+        <tbody>
+        <tr><td class="m">Revenue / EPS</td><td class="c num">$197.0bn / $2.27 <cite>BBG</cite>; UBS ~$200bn vs guide $194–199</td><td class="b num">rev bogey +18.2% y/y <cite>BofA poll</cite></td></tr>
+        <tr><td class="m">AWS growth</td><td class="c num">sell-side <b>32–34%</b>: GS 32, JPM 32, Citi 32.5, BofA 33, MS 34 <cite>07-07→23</cite></td><td class="b num"><b>35–36% is the bar</b> <cite>UBS 07-24/26</cite>; poll firmed 34.3%→~35% <cite>BofA 07-26</cite></td></tr>
+        <tr><td class="m">Op income Q2</td><td class="c num">$23.6bn street; guide $20–24bn</td><td class="b num"><b>$24–25bn</b> <cite>JPM 07-14</cite>; UBS $25.5–26bn; "stock doesn't work" without OI beats <cite>JPM</cite></td></tr>
+        <tr><td class="m">AWS margin</td><td class="c num">~34–37%, down q/q on &gt;$2bn SBC <cite>BofA 07-20/22</cite></td><td class="b num">high-30s hold; Bedrock ~35% OI <cite>Barclays 07-17</cite></td></tr>
+        <tr><td class="m">Capex '26</td><td class="c num">Q2 $48.7bn <cite>BBG</cite>; F26 $200bn prior</td><td class="b num"><b>$210–215bn "basically consensus"</b> <cite>UBS 07-26</cite>; poll $204.5bn</td></tr>
+        <tr><td class="m">Capex '27</td><td class="c num">—</td><td class="b num">poll <b>$277.7bn</b> · BofA <b>$282bn</b> · JPM ~$300bn · UBS desk <b>$300–350bn</b> — widest spread on the page <cite>07-12→26</cite></td></tr>
+        </tbody>
+      </table></div>
+      <div class="flag">* Date: best-supported is <b>Thu 7/30 AMC</b> (UBS 07-26, MS 07-23) but two page entries say 7/31 and Catalysts says "no confirmed date" — confirm before the meeting.</div>
+      <div class="sec">Listen for</div>
+      <ul>
+        <li><b>Trainium3 ramp + the 2027 absorption gap</b> — UBS/Arcuri raised units to 1.8M/2.8M C26/27; Anthropic was the sole Trn2+ customer; the OpenAI ~$100bn/~2GW deal narrows but doesn't close the gap → ROIC risk (SemiAnalysis)</li>
+        <li><b>Anthropic economics</b> — &gt;$2bn of AMZN revenue this quarter; backlog +$100–110bn q/q → ~$475bn (BofA/MS); AWS the only CSP with rising true margins</li>
+        <li><b>GPT-5.6 GA on Bedrock</b> — OpenAI-on-AWS as demand + margin mix; GPU price hikes (+20% on 7/1)</li>
+        <li><b>Funding</b> — $25bn bond (Jul-7) drove ~20bp own-curve widening; $92bn YTD across 4 currencies; S&amp;P trigger at 1.5x net leverage (JPM credit)</li>
+        <li><b>Agentic shopping</b> — Rufus→Alexa+: $12bn annualized incremental sales, 300M customers (GS); lowest-cost builder ~$25bn/GW vs Google $37/Meta $45</li>
+      </ul>
+      <div class="setup"><b>Setup:</b> the crowded one — #1 MAG7 favourite (31%), UBS sentiment 8/10 (highest in TMT), though P/E de-rated 35x→21x while EPS compounded ~60%. <b>PTs 2wks:</b> GS $325→$335 (only move) · Redburn init Neutral $230 (low) · BofA $310, JPM $330, Barclays $330. <cite>No house/Capstone view on the page.</cite></div>
+    </div>
+
+    <!-- ================= AAPL ================= -->
+    <div class="co">
+      <div class="hd"><span class="tk">AAPL</span><span class="q">F3Q26 (Jun-Q)</span><span class="dt">THU 7/30 AMC</span></div>
+      <div class="one"><b>Tim Cook's last earnings call as CEO</b> (Ternus effective Sept 1) — and the number that matters is the <b>Sept-Q gross-margin guide</b>, not the June quarter, on a 3rd-most-overbought setup.</div>
+      <div class="bbline"><span class="bl">▲ <b>Bull:</b> higher prices beget higher earnings — $100–200 iPhone-18 hike on 0.2–0.5 elasticity; GM trough is pre-paid, recovers to 38.5% product GM by Dec (MS/BofA)</span><span class="br">▼ <b>Bear:</b> pricing only half-offsets +300% memory (contribution margin 42%→24%, hike recovers to 31%) at a 60% premium to the S&amp;P (UBS)</span></div>
+      <div class="tblwrap"><table>
+        <thead><tr><th>Metric</th><th>Consensus</th><th>Buy-side bar</th></tr></thead>
+        <tbody>
+        <tr><td class="m">Revenue / EPS</td><td class="c num">$108.9bn / $1.88 <cite>BBG</cite>; UBS $107.8/$1.84</td><td class="b num"><b>+16.0% y/y rev</b>; ~$110bn whisper <cite>BofA poll 07-12/26 · UBS 07-26</cite></td></tr>
+        <tr><td class="m">iPhone Jun-Q</td><td class="c num">~$53.3bn <cite>UBS</cite></td><td class="b num"><b>$53.6bn</b> poll; MS &gt;$54bn (+22%), 57.5M units ~4M above cons <cite>MS 07-23</cite></td></tr>
+        <tr><td class="m">Services</td><td class="c num">street ~14.5–14.6%</td><td class="b num">poll <b>+15.9%</b> — but UBS tracks ~+13% FX-n, MS 13.3% → <b>decel is the sleeper risk</b> <cite>07-23/25</cite></td></tr>
+        <tr><td class="m">GM Jun-Q</td><td class="c num">~48% <cite>UBS/BofA</cite></td><td class="b num"><b>48.0%</b> poll <cite>BofA 07-12</cite></td></tr>
+        <tr><td class="m">Sept-Q guide</td><td class="c num">Street rev $114bn / EPS $2.01</td><td class="b num">poll rev <b>$116bn / GM 47.3%</b>; BofA models only $106bn; MS GM 46.5–47.5% = "technically a guide-down" <cite>07-20/23</cite></td></tr>
+        <tr><td class="m">China</td><td class="c num">May sell-through <b>−16% y/y</b>, first contraction <cite>Bernstein 07-07</cite></td><td class="b num">vs MS: MTD-July double-digit growth — contested <cite>MS 07-23</cite></td></tr>
+        </tbody>
+      </table></div>
+      <div class="sec">Listen for</div>
+      <ul>
+        <li><b>Succession framing</b> — Cook→Ternus Sept 1; Street reads it as an AI-strategy handoff; first Ternus call is the Oct (Sept-Q) print</li>
+        <li><b>Foldable</b> — $2,299–2,499, ~10M units 2026 (~1M Sep / 7M Dec builds); foldable sell-in GM +500–1,000bps vs 17 Pro (UBS); no Face ID per Jefferies (inference — confirm)</li>
+        <li><b>iPhone-18 pricing</b> — JPM base $100 hike (from $50), MS $200; UBS counter: $100 only lifts contribution margin 24%→31%</li>
+        <li><b>China memory</b> — CXMT DRAM in active qualification + YMTC NAND talks; lobbying the White House for ex-US-devices-only approval, MU "fiercely opposed" (WSJ 07-26) → MU read-through</li>
+        <li><b>Baltra / AVGO / regulatory</b> — Baltra small volumes C1H27; Broadcom ASICs through 2031 ($30bn+, ramp ~2029-30); Epic at Supreme Court, DOJ settlement talks</li>
+      </ul>
+      <div class="setup"><b>Setup:</b> safe-haven bid ahead of iPhone 18 — RSI 65, 3rd-most-overbought in Jefferies tech; 32–35x; MS: "largely priced in… don't expect much follow-through post-earnings" after 7pts of 4-wk outperformance. <b>House (CY basis):</b> EPS $10.12/$11.11 — above the buy-side FY bogeys ($8.83/$10.01) but different fiscal/GAAP bases, don't mix. <b>PTs 2wks:</b> MS $360→$364 (only move) · BofA Buy $380 · UBS Neutral $296 · Barclays UW $253.</div>
+    </div>
+
+  </div>
+</div>
+
+<footer><div class="wrap">
+  <b>Sources &amp; method.</b> Consensus: BBG <code>estimates.json</code> asof 2026-07-27 (1FQ = Jun-Q blended; capex = consensus capex where modelled). Bogeys and discourse points: wiki pages <code>MSFT.md / META.md / AMZN.md / AAPL.md</code>, preview flow ingested through 07-26 — principally BofA/Fenske buy-side bogey polls (07-12, re-run 07-26), UBS TMI Weekend Wrap (Dwyer, 07-26), MS previews (Wood 07-23, Woodring 07-23), BofA previews (Post 07-20/22, Mohan 07-20), JPM (Anmuth 07-14), GS (Sheridan/Borges 07-07/08), Redburn initiations (07-20/26). Print dates as attributed on each card; AMZN carries a 7/30-vs-7/31 inconsistency — confirm. House numbers only where a Capstone model exists on the page (META, AAPL); MSFT/AMZN have none. One page when printed A4 landscape. Prepared 2026-07-27.
+</div></footer>

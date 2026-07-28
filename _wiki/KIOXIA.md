@@ -11,9 +11,9 @@ _Wiki · generated 2026-06-19 · **No SEC filings — Japanese issuer (TSE Prime
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | ¥7969.9bn | ¥12110.3bn |
-| Gross profit | ¥6280.3bn | ¥9894.1bn |
-| Gross margin | 78.8% | 81.7% |
+| Revenue | ¥7998.8bn | ¥12119.7bn |
+| Gross profit | ¥6327.0bn | ¥9901.8bn |
+| Gross margin | 79.1% | 81.7% |
 | EBITDA | ¥6396.3bn | ¥9206.0bn |
 | EPS | ¥7853.31 | ¥12620.80 |
 | Capex | ¥379.9bn | ¥498.1bn |
@@ -129,6 +129,8 @@ _Q4 FY25 print + intra-quarter · Apr 16 → Jul 17, 2026 · sell-side / expert 
 
 | Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
+| 07-21 | @aleabitoreddit / @ParadisLabs (FinTwit corpus) | demanda | bull | **Corpus backfill of the 07-21 memory melt-up and the pricing forecasts behind it. Tape: 'MEMORY NAMES FROM KIOXIA FINISHED UP A WHOPPING +17.18%. [[SAMSUNG]] UP +6.15%. Optical networking from $SIVE, [[LITE]] and [[AAOI]] are showing signs of recovery, all up 4%+. Neoclouds from [[NBIS]] to $IREN all up 4%+ premarket. [[INTC]] to [[AMD]] to [[MRVL]] all up 4%+'** (@aleabitoreddit, 07-21, 1.5k likes). **The forecasts driving it (@ParadisLabs, 07-21): 'Counterpoint forecast a 20% QoQ INCREASE FOR DRAM. TrendForce are more conservative at 13-18% FOR CONVENTIONAL DRAM AND 10-15% FOR NAND. Morgan Stanley raised Q3 PC DRAM forecast to 15-20% INCREASES QoQ FROM 3-8%.'** The MS revision is the notable one — roughly a tripling of the forecast increase within a quarter. NAND at **10-15% q/q** is the directly relevant number for this page. (FinTwit corpus, 2026-07-21) |
+| 07-23 | @jukan05 (FinTwit corpus) | competicao | bear | **A share datapoint that goes directly to Kioxia's competitive position: 'According to AUTHORITATIVE THIRD-PARTY DATA, YMTC HAS ALREADY SURPASSED [[MU]] AND [[SNDK]] IN MARKET SHARE, NARROWING THE GAP WITH KIOXIA TO JUST 0.4 PERCENTAGE POINTS.'** (@jukan05, 07-23, 598 likes). If accurate this is the most direct evidence yet that Chinese NAND supply is displacing incumbents at the share level rather than only at the margin — and it lands against the backdrop of CXMT's 470%+ Shanghai debut (07-27) giving Chinese memory a far lower cost of capital for capacity. **The source is not named beyond 'authoritative third-party data', so the specific 0.4pp figure should be treated as indicative.** Related policy thread: [[AAPL]] is lobbying to allow CXMT/YMTC memory in Apple products sold outside the US, with MU aggressively opposing (WSJ, 07-27). (FinTwit corpus, 2026-07-23) |
 | 04-16 | BofA · Mikio Hirokawa (Japan SPE) | valuation | bull | BofA 'too cheap to ignore': even after a ~50% rally, sees 'very little downside' — at ~¥30,000 the stock was at ~6x EPS FY3/27; with NAND prices +70-75% QoQ (TrendForce), EPS could exceed ¥7,000 → sub-5x P/E. Re-rate catalyst: Kioxia negotiating floor-price contracts (not fixed) to preserve the upside, taking the multiple from ~5x to ~10x. |
 | 05-17 | JPM · Mio Shikanai / Jay Kwon (briefing) | valuation | bull | JPM (OW) raised Street-high PT ¥38,000 → ¥80,000; EPS FY26-28E +63% to +80%, with ASP/bit +250%+ CY26E and OP 65-90% above consensus FY26E/27E; SSD mix ~60%. |
 | 05-18 | BofA/JPM (briefing) | valuation | bull | BofA/JPM team Buy, OP/EPS FY3/27 +52%/+54%; CY2026 with capacity sold out, LTAs (multi-year, prepay, penalties) being the 'this time is different' catalyst across the memory complex (Samsung/Hynix/Kioxia/MU). |
@@ -163,6 +165,9 @@ _Q4 FY25 print + intra-quarter · Apr 16 → Jul 17, 2026 · sell-side / expert 
 | Guidance / strategic | Q4 guide rev ~¥890bn, adj NI ~¥340bn | Q1 FY26 OP ~¥1.3tn; US ADR listing; BiCS 332L sampling summer-2026 |
 
 _Source: KIOXIA earnings calls (dates above); management commentary, paraphrased._
+
+## Changelog
+- **2026-07-27** — **/wiki-ingest (Twitter corpus backfill + Outlook). 2 intra-quarter rows. Nothing superseded** — high-water mark was 2026-07-19, so the 07-21/23 corpus material was uncaptured. **Two rows pointing in opposite directions, which is the honest state of this name.** **The bullish one is pricing: on 07-21 Kioxia finished +17.18% with [[SAMSUNG]] +6.15%, in a broad memory/optical/neocloud melt-up, on three forecast revisions — Counterpoint at +20% q/q for DRAM, TrendForce more conservative at 13-18% for conventional DRAM AND 10-15% FOR NAND, and Morgan Stanley RAISING ITS Q3 PC DRAM FORECAST TO 15-20% q/q FROM 3-8%. The MS revision — roughly a tripling within a quarter — is the notable one; the 10-15% NAND figure is the directly relevant number here.** **The bearish one is share, and it is more consequential: per 'authoritative third-party data' cited on 07-23, YMTC HAS ALREADY SURPASSED [[MU]] AND [[SNDK]] IN NAND MARKET SHARE AND HAS NARROWED THE GAP WITH KIOXIA TO JUST 0.4 PERCENTAGE POINTS.** **If that holds it is the first evidence that Chinese NAND is displacing incumbents at the share level rather than only pressuring the margin — and Kioxia is the incumbent most directly in the path. Logged with its limitation: the underlying source is unnamed, so the 0.4pp figure is indicative rather than verified.** **The two rows connect through cost of capital: CXMT's 470%+ Shanghai debut on 07-27 (to an almost $500bn market cap, the most valuable China-listed company) materially improves Chinese memory's ability to fund capacity into exactly the pricing environment that drove the 07-21 rally.** Policy thread running alongside: **[[AAPL]] is lobbying the administration to permit CXMT/YMTC memory in Apple products sold outside the US, with MU aggressively opposing** (WSJ, 07-27) — the outcome determines whether Chinese NAND gets a marquee Western design-in. Cross-filed [[SNDK]], [[MU]], [[SAMSUNG]], [[SKHYNIX]], [[AAPL]], [themes/hbm-memory](themes/hbm-memory.md).
 
 ## Sources
 - **Filings:** none — Japanese issuer (TSE Prime: 285A), IPO Dec-2024; no SEC filings exist.
