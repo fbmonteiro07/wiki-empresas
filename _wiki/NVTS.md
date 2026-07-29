@@ -9,11 +9,11 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\NVTS` (10-K/10-Q filin
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $43m | $72m |
+| Revenue | $44m | $72m |
 | Gross profit | $17m | $30m |
 | Gross margin | 39.4% | 41.3% |
 | EBITDA | $-43m | $-34m |
-| EPS | $-0.17 | $-0.13 |
+| EPS | $-0.18 | $-0.16 |
 | Capex | $2m | $2m |
 | OCF (≈EBITDA) | $-43m | $-34m |
 
@@ -124,6 +124,8 @@ _Q1 2026 · May 5 → Jun 16, 2026 · sell-side / expert calls / reports between
 
 | Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
+| 07-28 | Morgan Stanley · Joseph Moore (“IDEA: Progress, but proof points still pending”) | guidance | **bear** | **Price target LOWERED to $12.60 from $13.70.** Title carries the verdict — **progress is acknowledged, but the proof points remain pending.** This is the first MS mark on the page and it sets the near-term frame: the story is execution-gated, and MS is not yet willing to underwrite the conversion. (Morgan Stanley · Joseph Moore, 2026-07-28) |
+| 07-27 | Kevin Garrigan (“SiC Now, GaN Later; NVTS 2.0 Ahead of Schedule”) | produto | mixed | **HOLD.** The framing is a sequencing call rather than a demand call: **SiC is the near-term revenue driver and GaN is the later leg**, with the **“NVTS 2.0” restructuring/transition running ahead of schedule.** Constructive on execution, non-committal on the multiple. (Kevin Garrigan, 2026-07-27) |
 | 05-25 | BofA · Arya/Jang/Mani/Scemama (Watts to Tokens) | demand | mixed | BofA's full AI-power model sizes the **GaN device pool $118m CY25 → $1,612m CY30 (69% CAGR, fastest-growing device type**; SiC $183m→$2,098m at 63%) and names Navitas as a key GaN vendor **targeting 800V-to-50V and 800V-to-6V IBC conversion** (the 6V path framed around cutting conversion stages / freeing GPU-board space) — GaN "the leading IBC material for high-power racks." But NVTS is inside the model's "Other" bucket, NOT among the 8 named suppliers with a revenue/share line — GaN-pool-positive, but BofA doesn't yet underwrite named NVTS share. |
 | 05-06 | Morgan Stanley · Joseph Moore (briefing 2026-05-06) | valuation | mixed | MS maintains Underweight (since 2025-04-06, ref US$6.04) but raised PT to US$13.70 (from US$12.50), "tracking but proofpoints pending… Stepping up the Voltage". Deutsche Bank (Ross Seymore) also "Stepping up the Voltage". |
 | 06-09 | JPM · Samik Chatterjee (Watts Up! Shift to 800V) | demand | bull | Navitas is the source of JPM's WBG sizing: WBG power-device market (AI DC + energy/grid) grows 30%+ CAGR from ~US$1bn (2025) to US$5bn+ by 2030; LT content US$25K–35K/MW split ~evenly SiC/GaN (GaN mainly inside the DC — the segment most relevant to NVTS). Driven by the 800V pivot, non-linear PSU scaling (2x power → ~5x SiC content) and grid SST/BESS modernization. Corroborates NVTS's own US$3.5bn-by-2030 / 60%+ CAGR TAM; Navitas listed among the silicon suppliers highlighted by NVIDIA. |
@@ -165,5 +167,6 @@ _Source: NVTS earnings calls (dates above); management commentary, paraphrased._
 - **Consensus:** BBG estimates auto-injected from `_data/estimates.json` (NVTS US Equity, USD) — not present as of 2026-06-20.
 
 ## Changelog
+- **2026-07-28** — **/wiki-ingest (Outlook). 2 intra-quarter rows. SUPERSEDED per the thesis-drift rule: Morgan Stanley price target $13.70 → $12.60** (Joseph Moore, “IDEA: Progress, but proof points still pending,” 2026-07-28) — ⚠️ note the **prior $13.70 mark was never carried on this page**, so it is logged here as the superseded value rather than back-filled into the body. **MS's framing is the useful part and it is a sequencing/execution call, not a demand call: progress is acknowledged, but the proof points are still pending** — i.e. the burden is on conversion, not on the end-market. That lines up with **Kevin Garrigan's HOLD (2026-07-27), “SiC Now, GaN Later; NVTS 2.0 Ahead of Schedule”** — the same shape of argument from the other side: **SiC carries near-term revenue, GaN is the later leg, and the “NVTS 2.0” transition is running ahead of schedule.** Two independent seats therefore agree the restructuring is executing and disagree only on whether to pay for it yet; neither is underwriting the GaN leg on today's evidence. Context worth holding: this landed in the week the SOX fell ~25% from its June high and the crowded semis longs were hit hardest, so a small-cap power-semi name with pending proof points had no sponsorship. Cross-filed [themes/800v-dc-power](themes/800v-dc-power.md).
 - 2026-07-16 — **/run-inbox — MS "The Analog Playbook: 2Q26" (Joe Moore, 2026-07-13).** Added 1 intra-quarter row confirming MS Underweight, PT $13.7: GaN market increasingly competitive (STM/IFX/Renesas via M&A/partnerships), NVDA 800V "too early to fully price in," losses until 2026e; growth led by AI DC/grid/industrial; MS CY26 rev $43mn / GM ~39%. Additive; no figure superseded.
 - 2026-07-09 — Folded the **BofA "Watts to Tokens" full 51-page model (2026-05-25, `Bofa_Watt_to_tokens.html`)** — net-new for this page. Added the GaN-pool sizing (**$118m→$1,612m CY25-30, 69% CAGR, fastest device type**) + BofA naming NVTS on 800V-to-50V/6V IBC conversion, with the key nuance that **NVTS sits in the model's "Other" bucket (no named revenue/share line)** — GaN-pool-positive but not an underwritten NVTS-share call. Added to Position-in-value-chain, a 05-25 intra-quarter row, the competition Signal-vs-management row, and Sources. No prior number superseded.

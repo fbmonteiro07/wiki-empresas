@@ -51,7 +51,7 @@
   "wfe-tam": {
    "title": "WFE market size CY26 / CY27 / CY28",
    "definition": "Total wafer-fab equipment market ($bn) by calendar year.",
-   "canonical": "CY26 ~$140-160B (all sources agree; Bernstein 148 incl WLP). CY27: house $180-215B vs MS ~$191B vs UBS $200B vs Bernstein base $175B (street low). CY28 is the genuine conflict: house top end $260B vs UBS $250B vs MS-implied ~$230-240B vs Bernstein base $198B; skeptic ceiling 'never $300B' (ex-Samsung foundry EVP) now directly challenged by Bernstein's GW-frame (50GW scenario: $245B/28, $291B/29, '$300B+ doable'). Swing variable = memory-capex intensity + EUV availability post-2027 + first NAND greenfield (CY28). Conversion card: ~$7.5-8B WFE per incremental GW/yr of DC additions capability (~46-50k WSPM/GW, compute-TDP basis).",
+   "canonical": "CY26 ~$140-160B (all sources agree; Bernstein 148 incl WLP). CY27: house $180-215B vs MS ~$191B vs UBS $200B vs Bernstein base $175B (street low). CY28 is the genuine conflict: house top end $260B vs UBS $250B vs MS-implied ~$230-240B vs Bernstein base $198B; skeptic ceiling 'never $300B' (ex-Samsung foundry EVP) now directly challenged by Bernstein's GW-frame (50GW scenario: $245B/28, $291B/29, '$300B+ doable'). Swing variable = memory-capex intensity + EUV availability post-2027 + first NAND greenfield (CY28). Conversion card: ~$7.5-8B WFE per incremental GW/yr of DC additions capability (~46-50k WSPM/GW, compute-TDP basis). UPDATE 2026-07-15 (ASML 2Q26): Low-NA capacity plan 65/85/110 for CY26/27/28 — the ~110 CY28 is now the company plan under investigation, so house CY28  ~= the ASML path rather than an above-plan flex; the binding question moved to allocation (memory residual ~24-31 units in 2027 after TSMC 38-45 + Intel/Samsung ~16).",
    "scope_note": "House CY28 top-of-range ($260B) sits ABOVE street — this is a deliberate house-vs-street edge, tracked, not an error.",
    "patterns": [
     "WFE.{0,40}\\$\\s?2\\d\\dB",
@@ -160,6 +160,15 @@
      "scope": "GW-scenario frame (bull, compute-TDP GW basis)",
      "cited_in": [
       "themes/semicap-wfe.md"
+     ]
+    },
+    {
+     "value": "ASML 2Q26 capacity plan: Low-NA EUV 65 (2026) / ~85 (2027, +30%, close to fully order-covered) / ~110 (2028, further +30% under investigation, order-backed) + ~20 High-NA capacity 27-28; immersion +30%/+30% (units ~130/170/220). The ~110 for 2028 is now the COMPANY plan (was: supply chain sized ~90 + JPM capability view) — house CY28  no longer requires an above-plan ASML flex. 2027 squeeze intact: 85 came below buy-side 90-100; TSMC books 38-45, Intel+Samsung ~48 cum 26-28, memory residual ~24-31 units vs ~55-70 grossed-up need",
+     "source": "ASML 2Q26 transcript + London Roadshow + IR small-group (Memory_supply_demand.xlsx v4 EUV tab)",
+     "date": "2026-07-15",
+     "scope": "vendor capacity plan (Low-NA units)",
+     "cited_in": [
+      "ASML.md"
      ]
     }
    ],
@@ -483,6 +492,17 @@
      "cited_in": [
       "themes/hbm-memory.md",
       "themes/ai-tam-bofa.md"
+     ]
+    },
+    {
+     "value": "HBM demand 33.1B Gb 2026 (+90% y/y) / 58.7B Gb 2027 (+77%), REVISED UP from 32.9/58.0 on Google TPU units raised to 4.2M/9.1M 2026/27 — vs Redburn 2027 HBM supply 50B Gb-eq (unrevised) = ~-15% HBM rationing 2027; Memory_supply_demand.xlsx v4 base has allocation chasing to ~600K wspm exit-27 (52.9B Gb, still ~-10%)",
+     "source": "UBS Gaudois Memory Semis Monthly (via hbm-memory theme; model: Memory_supply_demand.xlsx v4)",
+     "date": "2026-07-03",
+     "scope": "HBM bit demand vs supply, Gb-equivalent",
+     "cited_in": [
+      "themes/hbm-memory.md",
+      "MU.md",
+      "SKHYNIX.md"
      ]
     }
    ],
