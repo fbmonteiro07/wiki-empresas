@@ -5,7 +5,7 @@
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\NBIS` (20-F filings + transcripts) · `E:\briefings\2026`. Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof  · USD
+### 📊 Consensus snapshot — BBG · asof 2026-07-30 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -13,7 +13,7 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\NBIS` (20-F filings + 
 | Gross profit | $2.3bn | $8.4bn |
 | Gross margin | 69.8% | 70.3% |
 | EBITDA | $1.3bn | $6.5bn |
-| EPS | $-3.74 | $-5.72 |
+| EPS | $-3.74 | $-5.74 |
 | Capex | $23.3bn | $30.5bn |
 | OCF (≈EBITDA) | $1.3bn | $6.5bn |
 

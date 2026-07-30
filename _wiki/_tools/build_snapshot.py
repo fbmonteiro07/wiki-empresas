@@ -171,7 +171,7 @@ def build_block(ticker, est_co, house_co):
         ("OCF (≈EBITDA)", [cell(c, "ebitda", lambda v: money(v, sym)) for c in cols]),
     ]
 
-    asof = est_co.get("revisions", {}).get("asof", "")
+    asof = est_co.get("revisions", {}).get("asof") or EST_ASOF
     if is_house:
         heading = f"### \U0001F4CA Snapshot — Capstone official model + BBG · asof {asof} · {ccy}"
         legend = "\n_**Bold** = Capstone official model; plain = BBG consensus._"
@@ -224,6 +224,7 @@ def inject(md_path, block):
 
 
 SVG_MODE = True  # default: inline SVG chart for EPS revision; pass --text for the unicode sparkline fallback
+EST_ASOF = ""    # estimates.json fetch stamp, set in main(); used when a company has no revisions.asof
 
 
 def main():
@@ -234,7 +235,10 @@ def main():
     if "--text" in args:
         SVG_MODE = False
         args.remove("--text")
-    est = json.load(open("_data/estimates.json", encoding="utf-8"))["companies"]
+    global EST_ASOF
+    estj = json.load(open("_data/estimates.json", encoding="utf-8"))
+    EST_ASOF = estj.get("asof", "")   # per-company "revisions.asof" is never populated -> fall back to the fetch stamp
+    est = estj["companies"]
     house = json.load(open("_data/house.json", encoding="utf-8"))["companies"]
     only = set(a.upper().replace(".MD", "") for a in args)
     files = sorted(f for f in glob.glob("*.md") if not f.startswith("_") and f != "00_INDEX.md")

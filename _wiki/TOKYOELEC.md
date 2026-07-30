@@ -8,17 +8,17 @@
 _Wiki · generated 2026-06-20 · **No SEC filings — Japanese issuer (TSE Prime: 8035); transcripts + IR + BBG (JPY).** Sources: `E:\Wiki Felipe\TOKYOELEC\transcripts` (IR results decks/scripts) + `E:\briefings\2026` roll-up + equity-call read-throughs (`E:\equity_calls_transcripts\Semis`) + BBG (JPY). Master index: [../INDEX.md](../INDEX.md). (Disambiguation: the US-wiki page [TEL](TEL.md) is **TE Connectivity** — unrelated.)_
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof  · JPY
+### 📊 Consensus snapshot — BBG · asof 2026-07-30 · JPY
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | ¥3081.2bn | ¥3996.7bn |
-| Gross profit | ¥1432.8bn | ¥1990.3bn |
-| Gross margin | 46.5% | 49.8% |
-| EBITDA | ¥925.3bn | ¥1349.4bn |
-| EPS | ¥1535.72 | ¥2044.89 |
-| Capex | ¥205.7bn | — |
-| OCF (≈EBITDA) | ¥925.3bn | ¥1349.4bn |
+| Revenue | ¥3115.6bn | ¥4016.7bn |
+| Gross profit | ¥1445.6bn | ¥2000.3bn |
+| Gross margin | 46.4% | 49.8% |
+| EBITDA | ¥937.2bn | ¥1351.5bn |
+| EPS | ¥1568.71 | ¥2063.85 |
+| Capex | ¥207.5bn | — |
+| OCF (≈EBITDA) | ¥937.2bn | ¥1351.5bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

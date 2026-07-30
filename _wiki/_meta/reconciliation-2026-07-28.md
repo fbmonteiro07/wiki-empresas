@@ -16,7 +16,7 @@ Consensus figures are **CY-basis** (calendar-year sums, uniform non-GAAP) — se
 
 ---
 
-# DIVERGES — the alpha
+## Where the new data DIVERGES
 
 ### 1. MU — the $100bn RPO is a **floor-price** number, and back-solving the floor is the trade
 **New (S3):** Satish states the ~**$100bn RPO** on the 14 priced SCAs is computed as **contract volumes × the FLOOR price**, and that actual SCA revenue "will be well above the RPO levels" because pricing currently sits **at the ceiling** (≈ the June-CQ market price).

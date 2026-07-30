@@ -3,17 +3,17 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\PWR` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\PWR.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof  · USD
+### 📊 Consensus snapshot — BBG · asof 2026-07-30 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $34.0bn | $39.5bn |
-| Gross profit | $5.3bn | $6.3bn |
+| Revenue | $34.0bn | $40.5bn |
+| Gross profit | $5.3bn | $6.4bn |
 | Gross margin | 15.6% | 15.9% |
-| EBITDA | $3.5bn | $4.1bn |
-| EPS | $13.24 | $16.32 |
-| Capex | $774m | $797m |
-| OCF (≈EBITDA) | $3.5bn | $4.1bn |
+| EBITDA | $3.5bn | $4.2bn |
+| EPS | $13.24 | $16.91 |
+| Capex | $781m | $825m |
+| OCF (≈EBITDA) | $3.5bn | $4.2bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
