@@ -13,7 +13,7 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\SNDK` (filings + trans
 | Gross profit | $30.7bn | $48.7bn |
 | Gross margin | 81.3% | 84.5% |
 | EBITDA | $28.2bn | $38.9bn |
-| EPS | $148.84 | $229.54 |
+| EPS | $148.55 | $229.54 |
 | Capex | $366m | $470m |
 | OCF (≈EBITDA) | $28.2bn | $38.9bn |
 

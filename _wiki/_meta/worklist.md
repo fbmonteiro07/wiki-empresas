@@ -1,6 +1,6 @@
 # Wiki remediation worklist
 
-_Generated 2026-07-29 · closes the loop on `lint_wiki.py` / staleness.md. Rebuild: `py _wiki/_tools/remediate.py`._
+_Generated 2026-07-30 · closes the loop on `lint_wiki.py` / staleness.md. Rebuild: `py _wiki/_tools/remediate.py`._
 
 ## 🔴 BBG estimates missing (1) — scriptable
 
@@ -38,7 +38,7 @@ Spawn one `transcript-fetcher` task per name (paste into Claude Code):
 - **TSLA** — "get the latest TSLA earnings transcript -> `E:\Wiki Felipe empresas\TSLA\transcripts\`"
 - **VEEV** — "get the latest VEEV earnings transcript -> `E:\Wiki Felipe empresas\VEEV\transcripts\`"
 
-## ⚪ Private — intentionally skipped (5)
+## ⚪ Private — intentionally skipped (6)
 
-ANTHROPIC, CEREBRAS, GOOG, OPENAI, SPCX
+ANTHROPIC, CEREBRAS, GOOG, MSFT, OPENAI, SPCX
 

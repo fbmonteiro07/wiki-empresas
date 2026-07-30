@@ -13,7 +13,7 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\VECO` (filings + trans
 | Gross profit | $331m | $502m |
 | Gross margin | 42.3% | 46.0% |
 | EBITDA | $125m | $301m |
-| EPS | $1.67 | $3.45 |
+| EPS | $1.68 | $3.45 |
 | Capex | $23m | $23m |
 | OCF (≈EBITDA) | $125m | $301m |
 

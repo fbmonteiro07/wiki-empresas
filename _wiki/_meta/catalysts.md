@@ -12,13 +12,15 @@ _Generated 2026-07-30 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-08-31 | TXN | **CFO transition:** Rafael Lizardi out 2026-08-01 → **Julie Knecht** (CAO, 25-yr veteran), advisory through 2026-08-31 (DB/Seymore, briefing 2026-06-03). |
 | 2026-09-16 | ON | **2026-09-16 — onsemi Analyst Day** (Citi exp. ~Sep 13 print first) — the key event; watch for a raised long-term target model + SiC/800V framing (Citi, briefing 2026-06-15). |
 
-## ⏰ Passed — need a post-mortem (0)
+## ⏰ Passed — need a post-mortem (3)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| _none_ | | |
+| 2026-07-29 | MSFT | **✅ RESOLVED — Q4 FY26 earnings printed 2026-07-29 AMC (MSFT 4QFY26 earnings call, 2026-07-29). Outcome: BULL WON on the two live questions. Azure +43% (cc ≈42%) vs the 39-40% cc guide and the 40.7-41 |
+| 2026-07-29 | META | **Equity-raise decision** — **[NOT resolved at the Q2'26 call, 2026-07-29: no equity raise announced. Li answered the funding question with "a greater mix of debt as we work to bring down our cost of  |
+| 2026-07-29 | META | **"Meta Compute" build-out and disclosure** — **[PARTIALLY RESOLVED at the Q2'26 call, 2026-07-29: management confirmed the effort by name, confirmed "offers for Compute at a significant premium over  |
 
 ## ✅ Resolved (29)
 

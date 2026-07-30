@@ -7,13 +7,13 @@ _Wiki · generated 2026-06-20 · **Japanese issuer — NO SEC filings**; sources
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | ¥1381.6bn | ¥1587.8bn |
-| Gross profit | ¥907.7bn | ¥1027.3bn |
-| Gross margin | 65.7% | 64.7% |
-| EBITDA | ¥640.4bn | ¥721.4bn |
-| EPS | ¥648.14 | ¥716.09 |
+| Revenue | ¥1435.5bn | ¥1608.1bn |
+| Gross profit | ¥951.7bn | ¥1043.6bn |
+| Gross margin | 66.3% | 64.9% |
+| EBITDA | ¥719.3bn | ¥760.3bn |
+| EPS | ¥705.69 | ¥766.03 |
 | Capex | — | — |
-| OCF (≈EBITDA) | ¥640.4bn | ¥721.4bn |
+| OCF (≈EBITDA) | ¥719.3bn | ¥760.3bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

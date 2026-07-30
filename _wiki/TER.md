@@ -7,12 +7,12 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\TER` (filings + transc
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $4.4bn | $5.7bn |
-| Gross profit | $2.6bn | $3.4bn |
-| Gross margin | 58.6% | 59.6% |
+| Revenue | $4.6bn | $5.8bn |
+| Gross profit | $2.7bn | $3.5bn |
+| Gross margin | 58.7% | 59.6% |
 | EBITDA | $1.5bn | $2.0bn |
-| EPS | $6.91 | $10.39 |
-| Capex | $259m | $262m |
+| EPS | $7.53 | $10.62 |
+| Capex | $278m | $269m |
 | OCF (≈EBITDA) | $1.5bn | $2.0bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

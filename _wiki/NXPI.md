@@ -9,13 +9,13 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\NXPI` (10-K/10-Q + tra
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $14.1bn | $15.7bn |
-| Gross profit | $8.2bn | $9.3bn |
-| Gross margin | 58.2% | 59.4% |
-| EBITDA | $5.7bn | $6.7bn |
-| EPS | $14.74 | $17.66 |
-| Capex | $472m | $574m |
-| OCF (≈EBITDA) | $5.7bn | $6.7bn |
+| Revenue | $14.2bn | $15.9bn |
+| Gross profit | $8.3bn | $9.5bn |
+| Gross margin | 58.2% | 59.5% |
+| EBITDA | $5.8bn | $6.7bn |
+| EPS | $14.97 | $18.21 |
+| Capex | $455m | $565m |
+| OCF (≈EBITDA) | $5.8bn | $6.7bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

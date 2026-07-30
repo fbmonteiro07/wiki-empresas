@@ -9,13 +9,13 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\STX` (filings + transc
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $14.3bn | $19.7bn |
-| Gross profit | $7.2bn | $11.3bn |
-| Gross margin | 50.5% | 57.4% |
-| EBITDA | $6.4bn | $10.6bn |
-| EPS | $21.02 | $35.01 |
-| Capex | $670m | $862m |
-| OCF (≈EBITDA) | $6.4bn | $10.6bn |
+| Revenue | $14.9bn | $21.0bn |
+| Gross profit | $8.0bn | $13.0bn |
+| Gross margin | 53.5% | 62.1% |
+| EBITDA | $6.9bn | $12.3bn |
+| EPS | $23.82 | $43.44 |
+| Capex | $695m | $936m |
+| OCF (≈EBITDA) | $6.9bn | $12.3bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

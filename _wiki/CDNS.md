@@ -10,10 +10,10 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\CDNS` · `_equity_call
 | Revenue | $6.3bn | $7.1bn |
 | Gross profit | $5.5bn | $6.3bn |
 | Gross margin | 88.2% | 88.2% |
-| EBITDA | $3.0bn | $3.4bn |
-| EPS | $7.99 | $9.46 |
+| EBITDA | $3.0bn | $3.5bn |
+| EPS | $8.00 | $9.47 |
 | Capex | $237m | $241m |
-| OCF (≈EBITDA) | $3.0bn | $3.4bn |
+| OCF (≈EBITDA) | $3.0bn | $3.5bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
