@@ -1,5 +1,5 @@
 {
- "asof": "2026-07-30",
+ "asof": "2026-07-31",
  "bbg_missing": [
   "AEIS"
  ],
@@ -10,7 +10,6 @@
   "APP",
   "AXTI",
   "BE",
-  "CDNS",
   "ETN",
   "FSLY",
   "MP",
@@ -18,10 +17,8 @@
   "PLTR",
   "POET",
   "POWI",
-  "SANM",
   "SNPS",
   "TSEM",
-  "TSLA",
   "VEEV"
  ],
  "private_skipped": [
@@ -61,10 +58,6 @@
    },
    {
     "agent": "transcript-fetcher",
-    "prompt": "Get the latest earnings call transcript for CDNS and save it to E:\\Wiki Felipe empresas\\CDNS\\transcripts\\ as CDNS_<quarter>_<YYYY-MM-DD>.md"
-   },
-   {
-    "agent": "transcript-fetcher",
     "prompt": "Get the latest earnings call transcript for ETN and save it to E:\\Wiki Felipe empresas\\ETN\\transcripts\\ as ETN_<quarter>_<YYYY-MM-DD>.md"
    },
    {
@@ -93,19 +86,11 @@
    },
    {
     "agent": "transcript-fetcher",
-    "prompt": "Get the latest earnings call transcript for SANM and save it to E:\\Wiki Felipe empresas\\SANM\\transcripts\\ as SANM_<quarter>_<YYYY-MM-DD>.md"
-   },
-   {
-    "agent": "transcript-fetcher",
     "prompt": "Get the latest earnings call transcript for SNPS and save it to E:\\Wiki Felipe empresas\\SNPS\\transcripts\\ as SNPS_<quarter>_<YYYY-MM-DD>.md"
    },
    {
     "agent": "transcript-fetcher",
     "prompt": "Get the latest earnings call transcript for TSEM and save it to E:\\Wiki Felipe empresas\\TSEM\\transcripts\\ as TSEM_<quarter>_<YYYY-MM-DD>.md"
-   },
-   {
-    "agent": "transcript-fetcher",
-    "prompt": "Get the latest earnings call transcript for TSLA and save it to E:\\Wiki Felipe empresas\\TSLA\\transcripts\\ as TSLA_<quarter>_<YYYY-MM-DD>.md"
    },
    {
     "agent": "transcript-fetcher",
