@@ -28,6 +28,7 @@ STEPS = [
     ("build_coverage.py", []),
     ("build_assumptions.py", []),
     ("build_book.py", []),          # needs build_catalysts + extract_house first
+    ("build_mgmt_comms.py", []),    # reads each page's commentary-evolution table
     ("build_search_index.py", []),  # incremental — unchanged files skipped
     ("build_graph.py", []),         # needs catalysts + search index + book + assumptions
 ]
@@ -42,6 +43,7 @@ HUB = [
     ("Canonical assumptions", "assumptions.html", "One number per debate — every cross-page figure, all variants, scope traps flagged."),
     ("Knowledge graph", "graph.html", "Interactive map of the whole repo — tickers, themes, debates, brokers, supply chain."),
     ("Book exposure", "book.html", "Positions × unresolved debates × catalysts — where the book is most exposed."),
+    ("Management communication", "mgmt-communication.html", "MSFT · AMZN · GOOG · META · NVDA · TSM · ASML · AVGO — how the discourse moved quarter by quarter, the capex-message vs tape cross-section, and who will and won't put a number on it."),
     ("Hyperscaler capex", "hyperscaler-capex/Capex_Cloud.html", "Consensus vs actual vs house cloud capex (existing)."),
     ("GW per player", "gw-per-player.html", "Highest GW estimate per player, all sources cited, SemiAnalysis highlighted (hand-curated 2026-07-01)."),
     ("Token fabric", "token-fabric.html", "Token supply vs demand 2026-2030 — calibrated tok/s/MW, per-user watts, malinvestment dial (hand-curated 2026-07-02)."),
