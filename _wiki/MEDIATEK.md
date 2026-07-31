@@ -70,6 +70,19 @@ MediaTek is fabless: it designs SoCs and ASICs, outsources all manufacturing to 
 See cross-company theme: [custom-asic-tpu](themes/custom-asic-tpu.md).
 
 ## Current state (latest quarter)
+
+**Into the 2026-07-31 print (after the close, call 3pm) — the debate is ASIC share, not smartphones.** Fubon's Sherman Shang via Jefferies (Hubert King / Conor O'Mara, 2026-07-30) — the most aggressive TPU-supply-chain framing logged on this page:
+
+- **"The real debate is ASIC mkt share, not sluggish smartphones. If Sherman is right on 15-20% ASIC share, MTK won't be valued as a smartphone stock much longer."**
+- **AI ASIC TAM has expanded to US$70-80bn, with MTK targeting 10-15% share, implying a potential US$7-12bn ASIC revenue opportunity longer term** — and "MTK is confident in their TPU revs and **could raise its FY27 ASIC mkt share from 10-15% to 15-20%, which could imply US$10bn business impact**."
+- **[[GOOG]] TPU is the variant view:** "Earlier expectations were for a relatively small side project, but Sherman has repeatedly highlighted that **Google's shipment targets have increased materially, with MTK potentially securing 1m+ TPU units and several billion dollars of future revenue**." And the 2028 roadmap: "Sherman now believes **Google's 2028 TPU roadmap is substantially larger than investors appreciate, with TPU shipments potentially reaching 12-15m units. Based on the V10 four-compute-die architecture, this could translate into 30-35m compute dies**, implying explosive growth across the TPU supply chain."
+- **Numbers well above the Street:** "Sherman raised **FY27 EPS to NT$153.34, versus Bloomberg consensus of NT$128.12, a ~20% upside gap. More importantly, FY27 revenue was raised 26% versus prior forecasts** as ASIC assumptions increase."
+- **Bear case is execution and CoWoS:** "Can they get enough TSMC CoWoS to monetize TPU orders" — though "Sherman's CoWoS report earlier in the week suggests Mediatek has got more CoWoS allocation," and **[[INTC]]'s EMIB-T could prove better-than-expected, which would help MTK hit their lofty targets.**
+- **Second ASIC customer:** "Sherman does not expect an announcement this quarter, but still believes a **second major project may emerge later, potentially tied to xAI/[[SPCX]]**."
+- **Cross-desk check:** "the recent MS report on MTK — they forecast **MTK US$15-20bn TPU rev opportunity under their FY27e US$100bn TAM case**."
+- **Positioning:** "Stock price **-27% MTD**, but bouncing today"; margin loans came off from 12m shares to ~9m, "but I would rather it get closer to the 6.5m shs back in April before the rally."
+- **The counterweight, from a first-party source.** An AlphaSense expert call with a **Principal Architect and CTO at a leading global cloud provider** (2026-07-30) ranks the ASIC partner stack as "**[[AVGO]] … the leading partner … with [[MRVL]] as a distant second and MediaTek focused on price competitiveness but lacking system-level capabilities**," and puts a ceiling on the whole category — custom ASICs capped at **~40-50% of training FLOPS by 2030-2035**, with scale and vertical integration as prerequisites. Worth holding against Fubon's numbers.
+
 **Q1 FY26 (2026-04-30):** Revenue TWD 149.2bn, −0.7% q/q / −2.7% y/y, at the high end of guidance. GM 46.3% (+0.2pt q/q, −1.8pt y/y); OpM 15.3%; net income TWD 24.4bn; EPS TWD 15.17. Mobile −17% q/q / −15% y/y (49% of rev) as OEMs raised retail prices and skewed to higher-end on memory/BOM inflation; Smart Edge +23% q/q / +13% y/y (46%); Power IC 5% (Q1 FY26, 2026-04-30).
 
 **Guidance / messages:**

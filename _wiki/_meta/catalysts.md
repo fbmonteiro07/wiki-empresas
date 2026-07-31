@@ -2,11 +2,17 @@
 
 _Generated 2026-07-30 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (5)
+## 📅 Upcoming (11)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
+| 2026-07-30 | AAPL | ~~**FQ3'26 (June qtr) print:** ~late-Jul/early-Aug — memory GM impact + Mac supply commentary.~~ **RESOLVED 2026-07-30 (AMC): bear won.** The quarter was in line ex-tariff-refund but the Sept-Q guide  |
+| 2026-07-30 | AMZN | ~~**Q2 FY26 print**~~ — **RESOLVED 2026-07-30 (AMC): bull won.** Rev $200.6B / OI $27.5B / AWS +36.7% / AWS margin 39.4% / backlog $496B, all above bogeys; stock +8-10% AH. The offsets: Q3 revenue gui |
+| 2026-07-30 | RDDT | ~~**Q2-26 print** (~late Jul/early Aug 2026) — guide $715–725M; lapping tough Q2-25 comp, so the decel optics matter.~~ **RESOLVED 2026-07-30: bear won on the metric that mattered.** Revenue $805M cru |
 | 2026-07-30 | SAMSUNG | **Q2-2026 print — Thursday 2026-07-30** (date confirmed by MS's Sean on the 07-28 webcast: "we do have earnings for Hynix tomorrow. And we have Samsung on Thursday"): test of Jefferies' KRW 100tn OP;  |
+| 2026-07-31 | AAPL | **MS AAPL 2Q26 group callback with Erik Woodring — 2026-07-31, 9:00 AM ET** (MS Wigg, 2026-07-30). |
+| 2026-07-31 | AMZN | **MS AMZN 2Q26 group callback with Brian Nowak — 2026-07-31, 8:30 AM ET** (MS Wigg, 2026-07-30). |
+| 2026-07-31 | RDDT | **MS RBLX/RDDT 2Q26 group callback — 2026-07-31, 8:00 AM ET** (Matt Cost / Nikhil Javeri; MS Wigg 2026-07-30). |
 | 2026-08-05 | IFX | **2026-08-05 — FY3Q26 print** — MS expects an in-line print (order-book momentum, industrial recovery, AI-DC commentary); watch the FY26 >EUR 16bn / ~20% margin bridge and HV-auto commentary (MS, 2026 |
 | 2026-08-26 | NVDA | **Q2 FY27 print: 2026-08-26** (guided $91B). Watch hyperscale vs hyperscale-capex growth under new segmentation (Arcuri: becomes a debate if NVDA ever under-grows it). |
 | 2026-08-31 | TXN | **CFO transition:** Rafael Lizardi out 2026-08-01 → **Julie Knecht** (CAO, 25-yr veteran), advisory through 2026-08-31 (DB/Seymore, briefing 2026-06-03). |

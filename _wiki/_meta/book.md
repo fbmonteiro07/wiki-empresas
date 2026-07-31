@@ -8,12 +8,12 @@ _Generated 2026-07-30 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wi
 |---|---|--:|---|---|--:|---|---|---|
 | NVDA | long | ? | EPS 2027 +20% | 2026-08-26 — Q2 FY27 print: 2026-08-26 (guided $91B). Watch hyperscale vs hyperscale-capex growth under new segmentation (Arcuri: bec |  |  | 2026-07-30 | Full-stack AI-factory platform at +85% rev; debate is demand sustainability vs ASIC erosion. |
 | GOOG | long | ? | REV 2026 +18% | _none dated_ |  |  | 2026-07-28 | Full-stack compounder (Search +17%, Cloud +82%); debate is valuation and capital intensity, not demand. |
-| AAPL | long | ? | EPS 2026 +14% | _none dated_ |  |  | 2026-07-28 | Strong franchise + memory-dislocation advantage; bear = AI catch-up + price elasticity. |
-| META | long | ? | EPS 2027 +7% | _none dated_ | 2 |  | 2026-07-30 | Fastest grower in Mag7 ex-GPU; bear = capital intensity and negative incremental ROIC. |
+| AAPL | long | ? | EPS 2026 +14% | 2026-07-30 — ~~FQ3'26 (June qtr) print: ~late-Jul/early-Aug — memory GM impact + Mac supply commentary.~~ RESOLVED 2026-07-30 (AMC):  |  |  | 2026-07-30 | Strong franchise + memory-dislocation advantage; bear = AI catch-up + price elasticity. |
+| META | long | ? | EPS 2027 +14% | _none dated_ | 2 |  | 2026-07-30 | Fastest grower in Mag7 ex-GPU; bear = capital intensity and negative incremental ROIC. |
 | AVGO | long | ? | EPS 2026 -5% | _none dated_ |  |  | 2026-07-30 | #1 custom-ASIC/TPU partner; binary setup on the ">$100B" FY27 guide vs $250-300B FY28 (JPM). |
+| AMZN | long | ? | no house model | 2026-07-30 — ~~Q2 FY26 print~~ — RESOLVED 2026-07-30 (AMC): bull won. Rev $200.6B / OI $27.5B / AWS +36.7% / AWS margin 39.4% / backl |  |  | 2026-07-30 | AWS re-acceleration (+28%) + in-house silicon (Trainium); debate = $200B capex/ROIC. |
 | TSM | long | ? | — | _none dated_ |  |  | 2026-07-28 | Sole-source leading-edge foundry (~70% share); pricing headroom vs overseas-fab dilution. |
 | MSFT | long | ? | no house model | _none dated_ | 1 |  | 2026-07-30 | AI ARR >$37B/+123%; swing is capex (CY27 ~$276B) vs Azure revenue + OpenAI concentration. |
-| AMZN | long | ? | no house model | _none dated_ |  |  | 2026-07-30 | AWS re-acceleration (+28%) + in-house silicon (Trainium); debate = $200B capex/ROIC. |
 
 ## Not in book — house-vs-consensus divergence ≥ 10% (candidates)
 

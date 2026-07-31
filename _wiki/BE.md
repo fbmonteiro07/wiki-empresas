@@ -23,6 +23,14 @@ Bloom Energy manufactures solid-oxide fuel cells (SOFC) that generate electricit
 _Note: many "BE" tags in sell-side digests are false positives for BE Semiconductor (BESI) — Bloom-specific coverage is thinner than headline counts suggest._
 
 ## Current state (latest quarter)
+
+**Q2 2026 (reported 2026-07-28/29) — earnings more than double expectations, full-year guidance raised for the second consecutive quarter.** "**Bloom Energy (BE) jumps 8% after the fuel-cell maker posted earnings that were more than double expectations and raised full-year guidance for the second consecutive quarter, a sign of rampant demand from data centers**" (@zerohedge premarket movers, 2026-07-29). Scale of the growth: "**$BE … reported blowout results, with Bloom reporting 166% Y/Y rev growth + expanding margins + raised 2026 guidance**" (@aleabitoreddit, 2026-07-28).
+
+- **Call tone:** "Bloom Q2 earnings call theme: **Exuding quietly, quite the confidence!** Saying short sellers can question Bloom's conviction all they want" (@OutspokenGeek, 2026-07-29).
+- **Then the tape did something unrelated to fundamentals — and this is the important part for position sizing.** BE was one of the largest holdings of Leopold Aschenbrenner's Situational Awareness fund, which CNBC reported on 2026-07-30 was **forced to unwind its entire public equity book in a single print to Citadel**. "It's not surprising some of Leopold's largest holdings were up the most: NBIS +27%; **BE +27%**; SNDK +26%; CRWV +22%" (TMT Breakout EOD, 2026-07-30). The July drawdown in BE was therefore substantially a forced-seller event on top of a beat-and-raise, not a fundamental de-rating — "a lot of the current selloff looks like it overshot its mark through forced deleveraging" (@aleabitoreddit, 2026-07-30). @insane_analyst had flagged the linkage a day early: "Always maintain situational awareness. **Who owns a lot of SK Hynix and Bloom?**" (2026-07-29).
+- **Sector-level caution to hold against it:** **Caterpillar fell 4% on 2026-07-29 after Baird cut to neutral, "citing a growing trend of state and local government actions targeting data centers"** (@zerohedge) — the same permitting/community-pushback risk a former-NVIDIA expert called "the most significant long-term constraint to AI infrastructure expansion" (AlphaSense/StoneX, 2026-07-30). Behind-the-meter power is the workaround, which is BE's pitch, but the political risk is now being priced somewhere in the complex.
+- **Adjacent read:** Jefferies energy/power notes it is "**BTM-confident on 2H contracts**" (James Snyder, 2026-07-30).
+
 No quarterly financials in the ported corpus. SIG/Susquehanna (Chuck Minervino) note titles imply momentum: "2026 Guidance Ahead of Expectations" post-Q4 (2026-02-06) and "Raising 2026 Guidance; Demand Accelerating" post-Q1 (2026-04-29) — no PT/rating captured in digest headers. AEP exercised a fuel-cell order option with BE (2026-01-09).
 
 ## Debate / thesis
