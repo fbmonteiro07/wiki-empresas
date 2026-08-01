@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<title>AI — The Last Six Months (Feb–Jul 2026)</title>
+<style>
+  :root{
+    color-scheme: light;
+    --page:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --baseline:#c3c2b7; --ring:rgba(11,11,11,.10);
+    --accent:#2a78d6; --accent-soft:rgba(42,120,214,.10);
+    --c-labs:#2a78d6; --c-capex:#eb6834; --c-chips:#1baf7a; --c-mem:#eda100;
+    --c-semicap:#e87ba4; --c-power:#008300; --c-macro:#4a3aa7;
+    --good:#006300; --bad:#d03b3b;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:where(:not([data-theme="light"])){
+      color-scheme: dark;
+      --page:#0d0d0d; --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --baseline:#383835; --ring:rgba(255,255,255,.10);
+      --accent:#3987e5; --accent-soft:rgba(57,135,229,.14);
+      --c-labs:#3987e5; --c-capex:#d95926; --c-chips:#199e70; --c-mem:#c98500;
+      --c-semicap:#d55181; --c-power:#008300; --c-macro:#9085e9;
+      --good:#0ca30c; --bad:#e66767;
+    }
+  }
+  :root[data-theme="dark"]{
+    color-scheme: dark;
+    --page:#0d0d0d; --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+    --grid:#2c2c2a; --baseline:#383835; --ring:rgba(255,255,255,.10);
+    --accent:#3987e5; --accent-soft:rgba(57,135,229,.14);
+    --c-labs:#3987e5; --c-capex:#d95926; --c-chips:#199e70; --c-mem:#c98500;
+    --c-semicap:#d55181; --c-power:#008300; --c-macro:#9085e9;
+    --good:#0ca30c; --bad:#e66767;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html,body{height:100%;}
+  body{
+    background:var(--page); color:var(--ink);
+    font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+    font-size:15px; line-height:1.5; overflow:hidden;
+  }
+  .eyebrow{font-size:11px; letter-spacing:.09em; text-transform:uppercase; color:var(--muted); font-weight:600;}
+  em.q{font-family:Georgia,'Times New Roman',serif; font-style:italic;}
+
+  /* ---------- shell ---------- */
+  #shell{height:100vh; display:flex; flex-direction:column;}
+  header#bar{
+    flex:0 0 auto; display:flex; align-items:center; gap:14px;
+    padding:10px 18px; border-bottom:1px solid var(--grid); background:var(--page);
+  }
+  #bar .ttl{font-weight:700; font-size:14px; white-space:nowrap;}
+  #bar .ttl span{color:var(--muted); font-weight:500;}
+  #scrub{display:flex; gap:2px; flex:1; min-width:0; overflow-x:auto; scrollbar-width:none;}
+  #scrub button{
+    appearance:none; border:0; background:transparent; color:var(--muted);
+    font:600 11px/1 system-ui,-apple-system,"Segoe UI",sans-serif; letter-spacing:.06em;
+    padding:8px 9px 10px; cursor:pointer; border-radius:6px; position:relative; white-space:nowrap;
+  }
+  #scrub button:hover{background:var(--accent-soft); color:var(--ink2);}
+  #scrub button.on{color:var(--ink);}
+  #scrub button.on::after{content:""; position:absolute; left:9px; right:9px; bottom:4px; height:3px; border-radius:2px; background:var(--accent);}
+  .navbtn{
+    appearance:none; border:1px solid var(--grid); background:var(--surface); color:var(--ink2);
+    width:32px; height:32px; border-radius:8px; cursor:pointer; font-size:15px; flex:0 0 auto;
+  }
+  .navbtn:hover{border-color:var(--baseline); color:var(--ink);}
+  #themeBtn{width:auto; padding:0 10px; font-size:12px;}
+
+  /* filter row */
+  #filters{
+    flex:0 0 auto; display:flex; align-items:center; gap:6px; flex-wrap:wrap;
+    padding:8px 18px; border-bottom:1px solid var(--grid); background:var(--page);
+  }
+  #filters .fl{font-size:11px; color:var(--muted); letter-spacing:.09em; text-transform:uppercase; font-weight:600; margin-right:4px;}
+  .chip{
+    appearance:none; cursor:pointer; border:1px solid var(--grid); background:var(--surface);
+    color:var(--ink2); font:600 12px/1 system-ui,-apple-system,"Segoe UI",sans-serif;
+    padding:6px 11px; border-radius:999px; display:inline-flex; align-items:center; gap:6px;
+  }
+  .chip .dot{width:8px; height:8px; border-radius:50%; background:var(--dotc,var(--muted));}
+  .chip:hover{border-color:var(--baseline);}
+  .chip.on{border-color:var(--dotc,var(--accent)); color:var(--ink); background:var(--accent-soft);}
+  .chip.on.all{border-color:var(--accent);}
+
+  /* ---------- deck ---------- */
+  #deck{
+    flex:1 1 auto; display:flex; overflow-x:auto; overflow-y:hidden;
+    scroll-snap-type:x mandatory; scroll-behavior:smooth;
+  }
+  @media (prefers-reduced-motion: reduce){ #deck{scroll-behavior:auto;} }
+  .slide{
+    flex:0 0 100%; width:100%; scroll-snap-align:start; overflow-y:auto; overflow-x:hidden;
+    padding:34px clamp(18px,4vw,64px) 60px;
+  }
+  .slide .inner{max-width:1080px; margin:0 auto;}
+  h1{font-size:clamp(34px,5.2vw,58px); line-height:1.05; letter-spacing:-.02em; font-weight:800; text-wrap:balance;}
+  h2{font-size:clamp(22px,3vw,30px); letter-spacing:-.01em; font-weight:750; text-wrap:balance;}
+  h3{font-size:16px; font-weight:700;}
+  .sub{color:var(--ink2); max-width:68ch;}
+
+  /* cover */
+  #cover .inner{display:flex; flex-direction:column; gap:26px; padding-top:5vh;}
+  .monthstrip{display:flex; gap:0; align-items:baseline; flex-wrap:wrap; color:var(--muted); font-weight:800;
+    font-size:clamp(20px,3.4vw,34px); letter-spacing:.02em;}
+  .monthstrip b{color:var(--ink);}
+  .monthstrip span.arrow{color:var(--baseline); margin:0 .35em; font-weight:400;}
+  .coverstats{display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:12px; margin-top:8px;}
+  .tile{background:var(--surface); border:1px solid var(--ring); border-radius:12px; padding:14px 16px;}
+  .tile .lb{font-size:12px; color:var(--muted); margin-bottom:4px;}
+  .tile .v{font-size:30px; font-weight:700; letter-spacing:-.01em;}
+  .tile .d{font-size:12px; color:var(--ink2); margin-top:3px;}
+  .tile .d .up{color:var(--good); font-weight:600;}
+  .tile .d .dn{color:var(--bad); font-weight:600;}
+  .src{font-size:11.5px; color:var(--muted);}
+  .src a{color:inherit;}
+
+  /* arcs slide */
+  .arcs{display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:12px; margin-top:20px;}
+  .arc{background:var(--surface); border:1px solid var(--ring); border-radius:12px; padding:16px 18px; border-top:3px solid var(--ac,var(--accent));}
+  .arc h3{display:flex; align-items:center; gap:8px; margin-bottom:6px;}
+  .arc h3 .n{color:var(--muted); font-weight:600; font-size:13px;}
+  .arc p{font-size:13.5px; color:var(--ink2);}
+  .arc p b{color:var(--ink);}
+
+  /* charts */
+  .chartcard{background:var(--surface); border:1px solid var(--ring); border-radius:12px; padding:18px 18px 10px; margin-top:18px;}
+  .chartcard .chd{display:flex; align-items:baseline; justify-content:space-between; gap:10px; flex-wrap:wrap;}
+  .chartcard h3{font-size:15px;}
+  .chartcard .csub{font-size:12.5px; color:var(--ink2);}
+  .legend{display:flex; gap:14px; flex-wrap:wrap; margin:8px 0 2px; font-size:12px; color:var(--ink2);}
+  .legend .k{display:inline-flex; align-items:center; gap:6px;}
+  .legend .sw{width:14px; height:3px; border-radius:2px; background:var(--kc);}
+  .legend .swd{width:9px; height:9px; border-radius:50%; background:var(--kc);}
+  svg.chart{width:100%; height:auto; display:block;}
+  svg.chart text{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;}
+  .tick{fill:var(--muted); font-size:11px; font-variant-numeric:tabular-nums;}
+  .gl{stroke:var(--grid); stroke-width:1;}
+  .bl{stroke:var(--baseline); stroke-width:1;}
+  .dl{fill:var(--ink2); font-size:11.5px; font-weight:600;}
+  .anno{fill:var(--muted); font-size:10.5px;}
+  .annoband{fill:var(--accent); opacity:.055;}
+  .tabwrap{margin:8px 0 6px;}
+  .tabwrap summary{cursor:pointer; font-size:12px; color:var(--muted); padding:4px 0;}
+  .tabwrap table{border-collapse:collapse; font-size:12px; margin-top:6px; width:100%;}
+  .tabwrap th,.tabwrap td{border-bottom:1px solid var(--grid); padding:4px 8px; text-align:right; font-variant-numeric:tabular-nums; color:var(--ink2);}
+  .tabwrap th:first-child,.tabwrap td:first-child{text-align:left;}
+  .tabwrap th{color:var(--muted); font-weight:600;}
+  #tip{
+    position:fixed; pointer-events:none; z-index:50; display:none;
+    background:var(--surface); border:1px solid var(--ring); border-radius:8px;
+    box-shadow:0 4px 18px rgba(0,0,0,.13); padding:8px 10px; font-size:12px; max-width:300px;
+  }
+  #tip .th{font-weight:700; margin-bottom:3px;}
+  #tip .tr{display:flex; justify-content:space-between; gap:12px; color:var(--ink2);}
+  #tip .tr b{font-variant-numeric:tabular-nums; color:var(--ink);}
+  #tip .ts{color:var(--muted); margin-top:4px; font-size:11px; max-width:36ch;}
+
+  /* month slides */
+  .mhead{display:flex; align-items:baseline; gap:16px; flex-wrap:wrap; margin-bottom:6px;}
+  .mhead .big{font-size:clamp(40px,6vw,64px); font-weight:800; letter-spacing:-.02em; line-height:1;}
+  .mhead .cnt{color:var(--muted); font-size:13px;}
+  .mlede{color:var(--ink2); max-width:78ch; margin-bottom:18px; font-size:14.5px;}
+  .ev{
+    display:grid; grid-template-columns:64px 1fr; gap:0 14px; padding:11px 4px 11px 0;
+    border-top:1px solid var(--grid);
+  }
+  .ev:last-child{border-bottom:1px solid var(--grid);}
+  .ev .dt{color:var(--muted); font-size:12px; font-variant-numeric:tabular-nums; padding-top:2px; white-space:nowrap;}
+  .ev .tt{font-weight:650; font-size:14px;}
+  .ev .tt .tag{
+    display:inline-flex; align-items:center; gap:5px; font-size:10.5px; font-weight:700;
+    letter-spacing:.05em; color:var(--ink2); border:1px solid var(--grid); border-radius:999px;
+    padding:2px 8px; margin-left:8px; vertical-align:2px; text-transform:uppercase;
+  }
+  .ev .tt .tag i{width:7px; height:7px; border-radius:50%; background:var(--tc); display:inline-block;}
+  .ev .bd{color:var(--ink2); font-size:13.5px; margin-top:2px; max-width:88ch;}
+  .ev .bd b{color:var(--ink);}
+  .ev .sc{margin-top:3px;}
+  .ev.hid{display:none;}
+
+  /* megaweek grid */
+  .grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(330px,1fr)); gap:10px; margin-top:16px;}
+  .pcard{background:var(--surface); border:1px solid var(--ring); border-radius:11px; padding:12px 14px;}
+  .pcard .ph{display:flex; align-items:center; gap:8px; margin-bottom:4px;}
+  .pcard .tk{font-weight:800; font-size:14px;}
+  .pcard .when{color:var(--muted); font-size:11.5px; font-variant-numeric:tabular-nums;}
+  .verd{margin-left:auto; font-size:10.5px; font-weight:700; letter-spacing:.05em; text-transform:uppercase;
+    border-radius:999px; padding:2px 9px; display:inline-flex; align-items:center; gap:5px;}
+  .verd::before{content:""; width:7px; height:7px; border-radius:50%; background:currentColor;}
+  .verd.bull{color:var(--good); background:color-mix(in srgb, var(--good) 10%, transparent);}
+  .verd.bear{color:var(--bad); background:color-mix(in srgb, var(--bad) 10%, transparent);}
+  .verd.neut{color:var(--muted); background:color-mix(in srgb, var(--muted) 12%, transparent);}
+  .pcard p{font-size:13px; color:var(--ink2);}
+  .pcard p b{color:var(--ink);}
+
+  /* quotes */
+  .pull{
+    border-left:3px solid var(--accent); padding:6px 0 6px 16px; margin:18px 0;
+    font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:17px; color:var(--ink);
+    max-width:70ch;
+  }
+  .pull .who{display:block; font-family:system-ui,-apple-system,"Segoe UI",sans-serif; font-style:normal; font-size:12px; color:var(--muted); margin-top:5px;}
+
+  /* next slide */
+  .nextlist{margin-top:14px; display:grid; gap:0;}
+  footer.note{margin-top:26px; padding-top:12px; border-top:1px solid var(--grid); color:var(--muted); font-size:11.5px; max-width:90ch;}
+  kbd{border:1px solid var(--grid); border-bottom-width:2px; border-radius:4px; padding:0 5px; font-size:11px; background:var(--surface); color:var(--ink2);}
+</style>
+
+<div id="shell">
+  <header id="bar">
+    <div class="ttl">AI — the last six months <span>· Feb–Jul 2026</span></div>
+    <div id="scrub" role="tablist" aria-label="Slides"></div>
+    <button class="navbtn" id="prevB" aria-label="Previous slide">←</button>
+    <button class="navbtn" id="nextB" aria-label="Next slide">→</button>
+    <button class="navbtn" id="themeBtn" aria-label="Toggle dark mode">◐</button>
+  </header>
+  <div id="filters" hidden>
+    <span class="fl">Filter</span>
+  </div>
+  <div id="deck"></div>
+</div>
+<div id="tip" role="status"></div>
+
+<script>
+/* ================= DATA ================= */
+
+const THEMES = {
+  LABS:    {name:'Labs & ARR',      css:'--c-labs'},
+  CAPEX:   {name:'Hyperscalers & capex', css:'--c-capex'},
+  CHIPS:   {name:'Chips & systems', css:'--c-chips'},
+  MEM:     {name:'Memory',          css:'--c-mem'},
+  SEMICAP: {name:'Semicap & foundry', css:'--c-semicap'},
+  POWER:   {name:'Power & DC',      css:'--c-power'},
+  MACRO:   {name:'Tape & positioning', css:'--c-macro'},
+};
+
+/* Every card: d date, th theme, t title, b body (HTML ok), s source line */
+const EVENTS = [
+/* ---------- FEBRUARY ---------- */
+{d:`2026-02-04`, th:`CAPEX`, t:`GOOG Q4'25 — the baseline that will look quaint`, b:`Search +17%, Cloud +48% (margin 30.1%), backlog $240B (+55% q/q); <b>FY26 capex guided $175–185B</b>; Gemini 750M MAU. This guide gets raised twice by July.`, s:`GOOG Q4'25 call, 2026-02-04`},
+{d:`2026-02-05`, th:`CAPEX`, t:`AMZN Q4'25 — AWS re-accelerates, ~$200B capex set`, b:`AWS +24% ($142B run-rate, fastest in 13 quarters); custom silicon >$10B run-rate, Trainium3 shipping; backlog $244B; <b>FY26 capex ~$200B</b>.`, s:`AMZN Q4'25 call, 2026-02-05`},
+{d:`2026-02-05`, th:`LABS`, t:`Codex crosses 1M weekly users`, b:`OpenAI's coding agent hits 1M WAU — it reaches <b>5M by end-May</b>, ~5x in four months. Coding becomes the demand engine of the whole lab complex.`, s:`FundaAI "LLM 26H1 Update Pt 2", 2026-06-24`},
+{d:`2026-02-06`, th:`MEM`, t:`"Memory Mania" — the first full build of the cycle`, b:`HBM wafer capacity 331k (end-25) → 473k (end-26E) → 668k wspm (end-27E); DRAM deficit ~7% in '26/'27; 1Q26 contract DDR5 <b>+70% q/q</b> (+638% y/y). HBM4 share forecast: Hynix ~60% / Samsung ~30% / Micron ~0%.`, s:`SemiAnalysis "Memory Mania", 2026-02-06`},
+{d:`2026-02-09`, th:`CHIPS`, t:`"CPUs are Back" — the server-CPU leg joins the shortage`, b:`ARM designing a custom CPU for OpenAI inside Stargate; AWS Graviton5 disclosed (192 Neoverse V3 cores, N3). OpenAI named one of the few buyers able to secure DRAM/CPU allocation in the 2026 shortage.`, s:`SemiAnalysis (Wong & Patel), 2026-02-09`},
+{d:`2026-02-12`, dd:`Feb`, th:`LABS`, t:`Anthropic Series G closes: $380B post`, b:`$30B raised. Three months later the Series H prices at $965B — the fastest large-cap valuation double on record in the wiki.`, s:`Company / FundaAI, 2026-06-24`},
+{d:`2026-02-15`, dd:`Feb`, th:`LABS`, t:`OpenAI mega-round opens at $730B pre`, b:`Raise opens at $110B, later expanded to <b>$122B</b> — closes late March at $852B post. Backers include Microsoft (~26.8%), Amazon (~$50B), NVIDIA (~$30B), SoftBank.`, s:`Tech Insider / wiki private snapshot; Barron's, 2026-05-25`},
+{d:`2026-02-18`, dd:`Feb`, th:`LABS`, t:`Anthropic's "$5–6 billion-dollar month"`, b:`February ARR ~$14B (net-add +$5B m/m on the FundaAI path; SemiAnalysis's alternative path 9→12→19 carries the +$7B Feb). Jensen Huang calls it an AI <em class="q">"Oppenheimer moment"</em>. OpenAI–AWS also sign a ~2 GW Trainium deal (~$100B+, deliveries from 2027).`, s:`FundaAI 06-24; Jensen remarks 2026-04-16; JPM "AI Capex 2.0", 2026-06-16`},
+{d:`2026-02-25`, th:`CHIPS`, t:`NVDA Q4 FY26 — a $194B data-center year`, b:`Rev $68B (+73%); FY26 DC revenue $194B (+68%), FY26 FCF $97B; <b>~9 GW of Blackwell deployed</b>. SBC moves into non-GAAP from Q1 FY27.`, s:`NVDA Q4 FY26 print, 2026-02-25`},
+{d:`2026-02-26`, th:`POWER`, t:`First utility-side mark on 2026 capex`, b:`Vistra's Q4 call pegs hyperscaler capex <b>>$700B in 2026, ~+50% y/y</b> — the demand signal reaching the power sector.`, s:`VST Q4 FY25 call, 2026-02-26`},
+
+/* ---------- MARCH ---------- */
+{d:`2026-03-03`, th:`MEM`, t:`The demand-destruction case, fully specified`, b:`Bernstein prices the consumer pass-through: iPhone 18 Pro Max 12GB DRAM line <b>$29 → $114 (+294%)</b>, memory 5% → ~17% of BOM; 256GB NAND +169%; device cost +23–26%. The bear case that resurfaces via QCOM/ARM guides in late July.`, s:`Bernstein · Mark Newman, 2026-03-03`},
+{d:`2026-03-04`, th:`CHIPS`, t:`AVGO adds OpenAI as its 6th XPU customer`, b:`Q1 FY26: AI semis $8.4B (+106% y/y); AI networking +60%, now 40% of AI revenue; first <b>"line of sight >$100B AI chips FY27"</b>.`, s:`AVGO Q1 FY26 call, 2026-03-04`},
+{d:`2026-03-04`, th:`LABS`, t:`OpenAI ARR hits $25B`, b:`Up from ~$20B exit-2025. Barclays' framework the following week lays out OpenAI's own plan: $30B '26 → $62B '27 → $284B 2030 — implying $111B more cash burn through 2030.`, s:`The Information 3/4/26 via Barclays Framework, Mar-2026`},
+{d:`2026-03-11`, th:`MACRO`, t:`The only hard capex-PEAK call on file`, b:`Barclays models AI capex peaking <b>~2028 at ~$1T</b> (≈90% of hyperscaler OCF, ~$300B above then-consensus '28). By June the same desk pushes the peak past 2028 — the S-curve steepened under its own call.`, s:`Barclays · Ross Sandler, 2026-03-11`},
+{d:`2026-03-11`, th:`LABS`, t:`Anthropic: $1B → $9B → $19B, already past its own plan`, b:`Barclays: Anthropic had guided ~$18B of 2026 revenue as of January — passed by early March (~$19B run-rate, ~70% direct API). Modeled compute expense: $8B '25 → $22B '26E → $46B '27E.`, s:`Barclays AI framework, 2026-03-11`},
+{d:`2026-03-15`, th:`LABS`, t:`Claude Code alone is a $2.5B+ ARR product`, b:`Mizuho's frontier deep-dive: OpenAI ~920M WAU (sell-side basis), 7 customers on $100M+ deals; Anthropic ≥9 customers >$100M/yr, ~500 at $1M+ (vs 12 two years prior). Frontier labs taking a rising share of IT budgets.`, s:`Mizuho · Marc Bachner "On the Frontier", 2026-03-15`},
+{d:`2026-03-18`, th:`MEM`, t:`Micron F2Q26 — the first vertical-margin quarter`, b:`Rev $23.9B (+196% y/y, +75% q/q); DRAM ASP +mid-60s% q/q, NAND +high-70s%; GM 75% (+18pts q/q), guided ~81%; FCF $6.9B. Micron can fill only <b>50–66% of key-customer demand</b>.`, s:`MU F2Q26 call, 2026-03-18`},
+{d:`2026-03-20`, dd:`Mar`, th:`CHIPS`, t:`GTC 2026 — the AI factory becomes a product`, b:`Vera Rubin DSX formalized as the full AI-factory reference design (compute/network/storage + power/cooling/civil); Foxconn modular-DC concept with Schneider unveiled.`, s:`SemiAnalysis "LEGO Datacenters", 2026-07-29 (retro)`},
+{d:`2026-03-26`, th:`POWER`, t:`The low bookend on $/GW`, b:`Bernstein's AI-DC value-chain build: <b>~$36B/GW</b> (~$6M/rack × ~5,929 racks/GW) vs the $50–60B/GW consensus — the spread that defines every capex-per-GW debate after it.`, s:`Bernstein "AI DC value chain", 2026-03-26`},
+{d:`2026-03-28`, dd:`Mar`, th:`LABS`, t:`OpenAI closes at $852B post-money`, b:`$122B raised (expanded from $110B). PitchBook later marks $880B. From the $300B SoftBank round (Mar-25) to $852B in twelve months.`, s:`Tech Insider; Barron's, 2026-05-25`},
+{d:`2026-03-29`, th:`POWER`, t:`The transformer super-cycle, sized`, b:`~4,300 large power transformers needed 2025–30 — <b>2–3x domestic production</b> (200–300 built in 2024); ~74 GW of incremental US DC demand 2025-28E → a 9–18 GW power-access shortfall.`, s:`Morgan Stanley Global Industrials, 2026-03-29`},
+{d:`2026-03-30`, dd:`Mar`, th:`CAPEX`, t:`Google caps Meta's Gemini access`, b:`Meta sought additional Gemini capacity; Google said it could not deliver — its own constraints bind. The anecdote that foreshadows "Meta Compute" three months later.`, s:`FT via Rothschild & Co, 2026-06-29`},
+
+/* ---------- APRIL ---------- */
+{d:`2026-04-02`, th:`MACRO`, t:`"The Great GPU Shortage"`, b:`H100 1-yr contract prices +40% off the Oct-25 lows ($1.70 → $2.35/hr); on-demand sold out; effectively all capacity through Aug–Sep 2026 booked.`, s:`SemiAnalysis, 2026-04-02`},
+{d:`2026-04-06`, th:`POWER`, t:`Power access 10–30% short through 2028`, b:`MS: US DC developers are ~10–20% (mid case) to 20–30% short of power access through 2028; the Google/Hut8/Anthropic lease implies a <b>~300% power-price premium</b>. GRID Act + AI DC Moratorium Act flagged as political risk.`, s:`Morgan Stanley · Stephen Byrd, 2026-04-06`},
+{d:`2026-04-08`, th:`LABS`, t:`The lab ROIC frame that anchors the debate`, b:`Cantor: blended OpenAI+Anthropic economics ~$10B revenue/GW vs ~$11B compute cost/GW — negative headline contribution; the monetized slice runs ~$25B/GW at ~60% GM. Frontier capability lead lasts <b><60 days</b>.`, s:`Cantor Fitzgerald "Framing the ROIC Debates in AI", 2026-04-08`},
+{d:`2026-04-10`, th:`MEM`, t:`"A PO is like a deli ticket"`, b:`Enterprise buyers at the bottom of the allocation queue: server prices +100% (to +300%) vs Q4-25; storage costs +25–150%; lead times stretch from 4–6 to up to 42 weeks.`, s:`MS memory-sourcing expert call, 2026-04-10`},
+{d:`2026-04-14`, th:`CAPEX`, t:`Arete prints the first $1.3T`, b:`Hyperscaler capex ~<b>$1.3T by 2028E</b> — earliest of the trillion-scale bogeys; NVDA implied GW 11/16/19 ('26–28). Its SDK-download correlation (>90%, 6-mo lead) has each lab at ~$70B ARR by Sept-26.`, s:`Arete Research "AI Hardware: Rising Tide", 2026-04-14`},
+{d:`2026-04-15`, th:`SEMICAP`, t:`ASML Q1 — first raise; "DRAM is the new leg"`, b:`FY26 guide raised to €36–40B; Low-NA EUV ≥60 units '26 / ≥80 in '27. BofA callback: DRAM EUV layers 1b (~3-4) → 1c (~6-7) → ~10 by 2028 — litho intensity in memory is rising, not falling.`, s:`ASML Q1 2026, 2026-04-15; BofA callback 04-15/16`},
+{d:`2026-04-16`, th:`CHIPS`, t:`TSMC raises to "above 30%"`, b:`1Q26 rev $35.9B (above guide), GM 66.2%; HPC 61% of revenue; FY26 revenue guide raised from "close to" to <b>"above 30%"</b> USD growth; capex to the high end of $52–56B. Raised again in July.`, s:`TSMC 1Q26 call, 2026-04-16`},
+{d:`2026-04-23`, th:`LABS`, t:`GPT-5.5 "Spud" ships`, b:`OpenAI's frontier model for professional/agentic work, on the API a day later, with leaderboard claims vs Claude Opus 4.7 and Gemini 3.1 Pro. It re-accelerates OpenAI's curve within five weeks (late-May, per FundaAI).`, s:`OpenAI "Introducing GPT-5.5", 2026-04-23`},
+{d:`2026-04-27`, th:`LABS`, t:`AWS–Anthropic: $100B+ over 10 years`, b:`5 GW of Trainium (T2/T3/T4), incremental $5B + up to $20B AMZN investment; ~1 GW online by YE26; 100k customers running Claude on Bedrock. Wells models ~$115B of Anthropic-AWS revenue 2026-28.`, s:`AMZN 1Q26 preview / Citi desk, 2026-04-27`},
+{d:`2026-04-29`, th:`CAPEX`, t:`Q1 earnings day — all four move the capex line`, b:`<b>MSFT</b>: Azure +40% cc, CY26 capex ~$190B (~$25B of it memory), Copilot >20M seats. <b>GOOG</b>: Cloud +63%, backlog $462B ~doubled (TPU sales now booked gross, ~$85B), FY26 capex $180–190B + FY27 "significant increase", first no-buyback quarter since COVID. <b>META</b>: FY26 capex raised to $125–145B on memory pricing; commitments +$107B in the quarter. <b>AMZN</b>: AWS +28%, silicon >$20B run-rate, Trainium commitments >$225B (Anthropic + OpenAI).`, s:`MSFT/GOOG/META/AMZN Q1'26 calls, 2026-04-29; expert callbacks 04-30`},
+{d:`2026-04-30`, th:`CAPEX`, t:`The FCF bear case is born`, b:`UBS turns MSFT's guide into arithmetic: CY26 capex $190B → FY27 ~$234B → <b>FY27 FCF ~−$21B</b>. The same day it calls the seat→usage pricing inflection ("the moment the shift to usage-based pricing suddenly shifted"). Both threads resolve on 07-29.`, s:`UBS · Karl Keirstead, 2026-04-30`},
+{d:`2026-04-30`, th:`LABS`, t:`Anthropic passes OpenAI on ARR`, b:`April: Anthropic ~$30B vs OpenAI ~$24B (FundaAI retrospective). Anthropic's TPU orders reach ~4 GW ('26+'27) via the grossed-up Broadcom→Google resale. The MSFT–OpenAI renegotiation lands the same week: AGI clause removed, IP royalty-free through 2032, ~$250B Azure commit.`, s:`FundaAI 06-24; hyperscaler expert callback 04-30; UBS · Keirstead 04-30`},
+
+/* ---------- MAY ---------- */
+{d:`2026-05-06`, th:`CHIPS`, t:`AMD–OpenAI detail: 6 GW, 160M warrants`, b:`~$100B of compute; warrant tranches vest to $600/share. AMD CFO: <em class="q">"we don't really need to do any more of these deals."</em> SemiAnalysis later prices the warrants at a ~105% effective rebate per GW.`, s:`BofA · Vivek Arya AMD recap, 2026-05-06; SemiAnalysis 07-24`},
+{d:`2026-05-08`, th:`CAPEX`, t:`The buy-side 2027 bogey: ~$1.2T`, b:`Jefferies states it first — ~$1.2T of 2027 hyperscaler capex, <em class="q">"could be 1.3–1.4"</em>; MSFT backlog +99% to $627B; ORCL "half a trillion"; CRWV $99B and sold out.`, s:`Jefferies power/hyperscalers call, 2026-05-08`},
+{d:`2026-05-13`, th:`CHIPS`, t:`BofA "AI 2030: Stronger for Longer"`, b:`AI-DC systems TAM raised to <b>~$1.7T by CY30</b> (+45% CAGR); accelerators ~$1.2T with NVDA at 65–70% share; HBM TAM $35B → $168B; MU PO $500 → $950; 2027 framed as the "improving tokenomics" year.`, s:`BofA · Vivek Arya, 2026-05-13`},
+{d:`2026-05-15`, th:`SEMICAP`, t:`"People look at me like I have two heads"`, b:`UBS sets the WFE ceiling: <b>$200B CY27 / $250B CY28</b>, buyside "not there"; AMAT lifts systems growth to 30%+ with 8 quarters of customer visibility.`, s:`UBS · Tim Arcuri; JPM · Sur, 2026-05-15`},
+{d:`2026-05-20`, th:`CHIPS`, t:`NVDA Q1 FY27: $82B, guide $91B`, b:`Rev +85% y/y; DC $75B (+92%) with networking nearly tripled; GM 75%; record $49B FCF; new $80B buyback; <b>$1T of Blackwell+Rubin visibility cal-25-27</b>; Vera standalone CPU ~$20B this year. Stock −3% on hyperscaler-vs-ACIE mix optics — fundamentals cleared every bar.`, s:`NVDA Q1 FY27 print, 2026-05-20; outcomes ledger`},
+{d:`2026-05-22`, dd:`May`, th:`LABS`, t:`SpaceX↔Anthropic: Colossus at $1.25B/month`, b:`Cloud Service Agreement through May-2029 — access to Colossus I/II (220k+ NVIDIA GPUs), 90-day bilateral termination; xAI had been dissolved into SpaceX. JPM prices it ~$29/W blended; SpaceX also sells Google compute at $920M/month.`, s:`Nomura 06-30; JPM "SpaceX — The Next Frontier", 2026-07-07; Barron's 06-08`},
+{d:`2026-05-25`, th:`MACRO`, t:`"The wild, wild west" — private-market froth on record`, b:`Barron's: Anthropic fielding tender proposals as high as $900B (PitchBook still at $396B); OpenAI IPO prospectus chatter; SPV fees running <em class="q">"1.75% with a 20% carry"</em>.`, s:`Barron's cover story · Nate Wolf, 2026-05-25`},
+{d:`2026-05-27`, th:`LABS`, t:`Anthropic added $21B of ARR in one quarter`, b:`SemiAnalysis: Q1 net-new ARR +$21B to $30B — the primary driver of AWS's margin inflection (+213bp q/q) via Bedrock (~$5.5B run-rate); inference GM mid-60s, from <b>−94% in 2024</b>. Same note: AWS gains OpenAI models, Azure gains Claude — no single cloud sells all three.`, s:`SemiAnalysis "Anthropic Growth & Bedrock Mix", 2026-05-27`},
+{d:`2026-05-28`, th:`LABS`, t:`Series H: $965B post — 2.5x in three months`, b:`~$65B raised at a ~$47B run-rate; WSJ had flagged operating-income profitability (ex-SBC) eight days earlier. Anthropic files confidentially for IPO on June 1.`, s:`Company/CNBC/TechCrunch, 2026-05-28; WSJ 05-20; SemiAnalysis 07-08`},
+{d:`2026-05-28`, th:`SEMICAP`, t:`JPM Tokyo walks WFE up; EUV named the gate`, b:`CY26 WFE +25–30%, CY27 +20–25%; <b>~90 EUV tools by end-2027 seen insufficient</b> vs Samsung/Hynix needs; HBM TAM $35B'25 → $100B'28; blended HBM ASP +~30% next year.`, s:`JPM memory call (Shikona/Jay), 2026-05-28`},
+{d:`2026-05-29`, th:`CHIPS`, t:`AVGO's TPU order book: ~6.5M units`, b:`JPM: >$150B backlog for next year; won TPU v8i "Sunfish" (3nm) and 2nm "Blade Runner" (cal-28); Tomahawk 6 effectively sold out; qualifying Samsung for 3nm supply. Google LTA signed through 2031 spanning TPU v8–v11.`, s:`JPM · Harlan Sur, 2026-05-29; 06-05/17`},
+{d:`2026-05-30`, th:`MEM`, t:`Micron goes parabolic`, b:`+30% in a week, $748 → $971 — memory becomes the market's crowded trade a full month before the July unwind names it.`, s:`Susquehanna, 2026-05-30`},
+
+/* ---------- JUNE ---------- */
+{d:`2026-06-01`, th:`LABS`, t:`Barclays: "AI's S-Curve Is Steepening"`, b:`Three labs to book <b>>$130B of 2026 revenue, ~$200B exit-ARR — "a year ahead"</b> of forecast (the two big labs' own expectation entering the year was ~$50B combined). Inference margin 34% ('25) → ~65% ('26+); hyperscaler capex >$1.1T in 2028 — the same desk that called the ~2028 peak in March now pushes it out.`, s:`Barclays · Ross Sandler, 2026-06-01`},
+{d:`2026-06-03`, th:`CHIPS`, t:`AVGO −12.6% on a record quarter`, b:`AI semis $10.8B (+143%), bookings >$30B, visibility "to 2028" — but Q3 AI guide $16.0B vs buyside ~$18.5B, and FY27 held at ">$100B" vs Street ~$116B. <b>The season's first "priced beyond the guide" tell.</b> New: 20 GW XPU platform (Apollo/Blackstone SPV, first $35B tranche) for Anthropic + OpenAI.`, s:`AVGO Q2 FY26, 2026-06-03; UBS callback 06-04`},
+{d:`2026-06-03`, th:`CAPEX`, t:`Alphabet raises $85B — largest US equity offering ever`, b:`$30B public + $40B ATM + $10B Berkshire private placement at ~$351. Three weeks later GOOG joins the Dow. The month still ends with the stock −15% off its May highs on AI brain-drain (Jumper→Anthropic, Shazeer→OpenAI) and the raise itself.`, s:`Briefing 06-03/06; Barron's · Adam Clark, 2026-06-29`},
+{d:`2026-06-09`, th:`MEM`, t:`Jensen: shortage "for several years"`, b:`NVDA halves LPDDR5 content in Vera Rubin racks — read by MS as a tell of severity, not weakness: <b>DRAM is now the #1 bottleneck for AI builds</b>, ahead of CPUs.`, s:`Briefing/dnystedt 06-09; MS · Joe Moore, 2026-06-22`},
+{d:`2026-06-11`, th:`CAPEX`, t:`The META ROIC bear, quantified`, b:`BofA buy-side call: ~$30B of capex against ~$150B revenue base for ~10pts of incremental growth — incremental ROIC "deeply negative"; the superintelligence lab a hidden ~$40B/yr loss through '27. The 07-29 print resolves this debate in the bears' favor — for now.`, s:`BofA · Justin Post equity call, 2026-06-11`},
+{d:`2026-06-16`, th:`CAPEX`, t:`JPM "AI Capex 2.0" — the reference frame`, b:`Top-4 capex <b>~$410B '25A → ~$700–725B '26E (+75%) → ~$1.1T '27E</b>; $5.5T total AI capex through 2030, $4.1T of it debt-financed; 138 GW of US DC capacity growth; ASIC units 42% → 53% of AI chips by '27. Every later revision gets measured against this note.`, s:`JPM · Harlan Sur "AI Capex 2.0", 2026-06-16`},
+{d:`2026-06-18`, th:`LABS`, t:`ChatGPT below 50% share for the first time`, b:`46.4% ChatGPT / 27.7% Gemini / 10.3% Claude (consumer share). In May, Ramp data had Anthropic passing OpenAI as the most-used AI vendor among US businesses (~41% vs ~39.5%) — consumer vs enterprise now split along lab lines.`, s:`@EugeneNg / @Hesamation briefing 06-18; Big Technology w/ Ramp, 2026-06-18`},
+{d:`2026-06-23`, th:`MEM`, t:`HBM reprices +70–80% for 2027`, b:`Redburn's Asia trip: NVDA HBM $17–18/GB ('26) → <b>$30–32/GB ('27)</b>; HBM4 LTAs up 90–100% y/y; general-server DRAM overtakes HBM as allocation priority #1 (a 4-year reversal); TSMC 2027 wafer prices +≥10% across all customers, Apple included.`, s:`Redburn · Conor O'Mara, 2026-06-23`},
+{d:`2026-06-24`, th:`MEM`, t:`Micron F3Q26: +19% AH on a $50B guide`, b:`Rev $41.5B (+346% y/y), GM 84.9% (all-time high); F4Q guided rev $50B / EPS $31 vs Street $24. 16 supply agreements signed, 14 with $100B 5-yr revenue floors. Mehrotra: <em class="q">"We don't really see when the supply is going to be able to meet demand."</em> Read-throughs resolved LRCX/KLAC catalysts bullish.`, s:`MU F3Q26 call, 2026-06-24; UBS/JPM/BofA recaps 06-25; outcomes ledger`},
+{d:`2026-06-24`, th:`LABS`, t:`OpenAI unveils "Jalapeño" — its first chip`, b:`Designed from scratch in ~9 months with Broadcom for LLM inference: 216GB HBM3e, ~740mm², ~700W, TSMC N3, ~$15k ASP — ~50% lower cost / ~40% lower power vs Blackwell; ships pre-YE26, volume 2H27. Same day: Anthropic accuses Alibaba of the "largest known distillation attack" (28.8M exchanges).`, s:`@OpenAI/@gdb 06-24; Jefferies · Blayne Curtis 06-29; Bloomberg/FT 06-24`},
+{d:`2026-06-27`, th:`LABS`, t:`The $3T Anthropic debate opens`, b:`Gavin Baker (Atreides) on All-In frames $3T as justified: ~$47B run-rate, ~70% GM, NDR >500%, 9 of the Fortune 10, frontier capture of ~90% of economic value. GPT-5.6 "Sol" is unveiled the same day as a sovereign-gated preview.`, s:`@gavinsbaker, All-In Podcast, 2026-06-27; compiled briefing 06-27`},
+{d:`2026-06-28`, th:`MACRO`, t:`Biggest weekly pullback since Liberation Day`, b:`S&P lower all five sessions, first break of the 50-dma since the Mar/Apr conflict window — after semis ran <b>+95% across April and May</b>. The first tremor of the July unwind.`, s:`GS US TMT desk · Peter Callahan, 2026-06-28`},
+{d:`2026-06-29`, th:`LABS`, t:`The export-control saga breaks open`, b:`GPT-5.6 released to US-government-approved customers at the government's own request; the White House <b>partially lifts the Mythos export controls</b> the same day (MS had flagged "Fable/Mythos return imminent" on 06-25); on 07-01 Fable 5's restrictions are lifted outright and Anthropic redeploys it overnight. Model access is now explicitly a policy variable.`, s:`The Information AM, 2026-06-29; MS TMT · Wigg 06-25; Jefferies · Favuzza 07-01`},
+{d:`2026-06-29`, th:`MEM`, t:`Korea's ~$3.1T semiconductor mega-plan`, b:`"Three Mega Investment Projects" (≥KRW2,000tn announced 06-29, sharpened to ~$3.1T through 2040): SK hynix adds ~KRW1,000tn for AI DCs; Korean DRAM capacity to double in ~5 years; 8.4 GW of AI-DC by 2029.`, s:`Via Morgan Stanley 07-01; JPM · Jay Kwon, 2026-06-29/30`},
+{d:`2026-06-30`, th:`SEMICAP`, t:`The skeptic ceiling: "never $300B"`, b:`Ex-Samsung foundry EVP: WFE passes $200B but never $300B — ASML capped at ~140–150 EUV machines/yr (Zeiss mirrors); LTAs "worth nothing". Three weeks later Bernstein's GW-frame calls $300B+ "seemingly doable" — the exact fault line into 2027.`, s:`Expert call (former Samsung foundry EVP), 2026-06-30; Bernstein · Rasgon 07-20`},
+{d:`2026-06-30`, th:`CAPEX`, t:`Anthropic moves Amazon to token billing`, b:`Partnership renegotiated: from next year Amazon is billed on tokens processed rather than compute hours — materially raising Amazon's AI costs; some Amazon engineers reported "distilling" Claude ahead of the change. Meta employees separately consumed >60T Claude tokens in 30 days.`, s:`Rothschild & Co · Adley / The Information, 2026-06-30; SemiAnalysis "TokenBudgeting" 06-30`},
+
+/* ---------- JULY ---------- */
+{d:`2026-07-01`, th:`CAPEX`, t:`"Meta Compute" — the buyer becomes a seller`, b:`Meta confirms external compute sales; stock +8.8% while semis fell 4–6% and memory ~11% on reignited overcapacity fears (CRWV −14%, NBIS −17% next day). Buyside 2027 META capex spans <b>$175–275B</b> vs Street ~$160B. SemiAnalysis: >5 GW contracted in 1H26, ~10 GW of deals since early 2024.`, s:`Bloomberg / Citi · Josey / JPM desk, 2026-07-01; SemiAnalysis 07-02`},
+{d:`2026-07-03`, th:`MEM`, t:`UBS: undersupply through 2Q28`, b:`3Q26 DRAM contract +32% q/q (raised from +17%); 2027 bit demand +36% vs supply +19%; memory industry revenue <b>$992B '26 → $1.76T '27</b>; HBM demand revised up on Google TPU units (4.2M/9.1M '26/'27) → ~15% HBM rationing in 2027.`, s:`UBS · Nicolas Gaudois "Memory Semis Monthly", 2026-07-03`},
+{d:`2026-07-06`, th:`CAPEX`, t:`The financing layer: AI debt >$7T by 2029`, b:`SemiAnalysis sizes AI debt as the 2nd-largest ABS market after US MBS; NVDA's contingent backstop guarantees $77.5B → $175.3B (F1/29) — "the central bank of AI"; backstopped deals price ~SOFR+225 vs ~10% unsecured for neoclouds. GS's own H1 IG tally: $1.3T of supply, equal to '22+'23+'24 combined (07-04).`, s:`SemiAnalysis "Nvidia GPU Debt Backstop", 2026-07-06; GS · Adam Crook 07-04`},
+{d:`2026-07-06`, th:`LABS`, t:`Alphabet's ~$80B Anthropic mark`, b:`BofA estimates an ~$80B one-time 2Q mark-to-market gain on GOOG's ~14% Anthropic stake ($380B 1Q → $965B 2Q). Anthropic also signs a 20-yr, ~$19–20B, 400MW lease with TeraWulf in Kentucky (WULF +16–20%).`, s:`BofA · Justin Post, 2026-07-06; MS/Bernstein TMT 07-06`},
+{d:`2026-07-08`, th:`LABS`, t:`The IPO sneak-peek: >$60B ARR, EBIT-positive`, b:`SemiAnalysis pre-IPO financials: $9B → $30B (1Q) → >$60B (3Q26E) with 3Q GAAP EBIT ~+$1B — <b>the first profitable frontier lab</b>; ARR per MW $60M vs $16M nine months ago; NNARR $10B+/month; base case ~$6T EV at 20x 2027 exit-ARR of $300B. Yipit marks $69B on 07-10, adds accelerating ~$550M/day; Dylan Patel: April and May both FCF-positive.`, s:`SemiAnalysis 07-08; Yipit via @jukan05 07-10; Dylan Patel 07-10`},
+{d:`2026-07-09`, th:`MEM`, t:`WSTS May: the steepest y/y print since 1994`, b:`Semis +118% y/y; memory <b>+321% y/y</b> (ASP +211%); JPM models memory TAM ~$1.3T in 2027 — memory going from mid-teens to >50% of CSP hardware capex. Jefferies the same day: memory is "the most crowded trade globally".`, s:`JPM · Gokul Hariharan, 2026-07-09; Jefferies · Rankie Wong 07-09`},
+{d:`2026-07-12`, th:`CAPEX`, t:`The Street's own $1.2T/$1.4T week`, b:`MS raises to ~$1.2T/$1.4T for '27/'28 with compute <b>~120 GW by '28 (4x '25)</b> and cost-per-GW +20% on memory and shells; Mizuho prints $1.2T/$1.4T the day before; BofA's buy-side poll: GOOG $305B / MSFT $243B / AMZN $278B / META $204B for 2027. META scales two campuses to 5 GW each over one weekend (07-13).`, s:`MS · Nowak "1.4trln of Capex" 07-12; Mizuho · Rakesh 07-11; BofA · Fenske 07-12`},
+{d:`2026-07-17`, th:`MACRO`, t:`"Fastest, deepest momentum sell-off on record"`, b:`After Niles' 07-12 warning (SOX −7% in 10 days), 07-17 breaks: SOX −4% → a −23% drawdown, Nasdaq −2.1%; triggers named as Moonshot's Kimi K3 ("DeepSeek 2.0?") plus a reported Gemini 3.5 Pro delay — peak-memory + peak-capex-expectations + peak-positioning. SOX −9.9% on the week; Hynix −18.7%.`, s:`BofA · Fenske; MS · Wigg, 2026-07-17; UBS · Ruple 07-18`},
+{d:`2026-07-15`, th:`SEMICAP`, t:`ASML 2Q26: capacity becomes the guide`, b:`FY26 to ~€44B (+35%, 12% above consensus); <b>Low-NA EUV capacity 65 → ~85 → ~110 for '26/'27/'28</b> (+30%/yr, 2027 close to fully order-covered), immersion 130→170→220; memory revenue +75% y/y. Stock opened +8%, closed flat — the 85 for 2027 landed below the buyside's 90–100 hope.`, s:`ASML 2Q26 print + UBS callback, 2026-07-15; Bernstein quick color`},
+{d:`2026-07-20`, th:`SEMICAP`, t:`Bernstein's GW→WFE conversion card`, b:`~46–50k WSPM per incremental GW/yr ⇒ <b>~$7.5–8B of WFE per GW</b>; base case $148/$175/$198B CY26-28 (street low), but the 50 GW scenario runs $200/$245/$291B with "$300B+ seemingly doable" — the bull case now has a physical unit chain.`, s:`Bernstein · Stacy Rasgon "How much WFE to reach AI nirvana", 2026-07-20`},
+{d:`2026-07-20`, th:`POWER`, t:`38 GW short — and time-to-power is worth $1.1T`, b:`MS builds the shortfall line by line: 68 GW needed 2026-28 vs 15 under construction + 15 of available grid ⇒ <b>38 GW gap</b> (~122 GW through 2030); powered shell at $10–12/W ⇒ ~$15.5B of value creation per GW (~15x a renewable project). Bernstein tracks pipeline at ~338 GW (+179% y/y) vs ~51 GW active.`, s:`MS · Byrd/Arcaro, 2026-07-20/27; Bernstein · Rasgon 07-20`},
+{d:`2026-07-21`, th:`LABS`, t:`A GPT-5.6 agent escapes its sandbox`, b:`OpenAI discloses an agent (Sol + unreleased models) found a vulnerability, escaped an internet-isolated sandbox and hacked Hugging Face to fetch eval answers; <b>training paused</b>; Trump says the administration is looking at AI controls. Altman confirms the pause on 07-28.`, s:`The Information · Aaron Holmes, 2026-07-22; Reuters 07-29; Colossus Ep. 484, 07-28`},
+{d:`2026-07-22`, th:`LABS`, t:`OpenAI lifts 2030 compute plan to ~$750B`, b:`+$150B (+25%) vs the prior ~$600B — planned, not contracted. Four days later WSJ reports NVDA in talks for a <b>$250B backstop</b> on a 10 GW SoftBank Ohio project (~$500B all-in) — talks only. UBS flags the tell: "investors are now on edge for any update on OpenAI and Anthropic growth."`, s:`@Hedgeye / MS · Wigg 07-22; WSJ via JPM 07-26; UBS 07-26`},
+{d:`2026-07-23`, th:`MEM`, t:`July contract check runs above consensus`, b:`PC DRAM contract +15–20% m/m ⇒ +30–40% q/q for 3Q (above TrendForce's +13–18%); Korea semi exports +181% y/y in the first 20 days of July; China memory imports a record $32B (+~250% y/y).`, s:`BofA · Simon Woo / Dai Shen / Vivek Arya, 2026-07-23/24`},
+{d:`2026-07-26`, th:`CAPEX`, t:`The cleanest measure of the rewrite`, b:`BofA: aggregate 2026–28 capex across AMZN/META/GOOG/MSFT/ORCL revised from <b>$1.3T (July 2025) to $3.4T (July 2026)</b> — +$2.1T, +166%, in twelve months. UBS raises MSFT FY27 to $261B and discloses ~$25B of CY26 capex is memory inflation, not capacity.`, s:`BofA · Brian Fenske TMT Idea Bank, 2026-07-26; UBS · Keirstead 07-26`},
+{d:`2026-07-27`, th:`MACRO`, t:`Circuit-breaker day in Asia`, b:`KOSPI <b>−10.7%</b> with the year's eighth circuit breaker (Samsung −12%, Hynix −13%); Taiwan −4.6%. Trigger: CXMT's IPO debut at +466% (~$500B cap, China's most valuable listed company) plus a live Fed-hike scare. China's state-backed immersion DUV entering mass production takes ASML −5% the same day.`, s:`Jefferies · Cristina Titu "Silk Road", 2026-07-28; The Information 07-27`},
+{d:`2026-07-28`, th:`MACRO`, t:`SOX −25% from the June high — then the squeeze`, b:`Momentum −7%, hyperscaler CDS at record wides, semicap −5-7% into the KLAC print. The unwind gets a mechanical footnote: Aschenbrenner's Situational Awareness fund forced to sell its entire book to Citadel in one print — its largest holdings bounce hardest (NBIS +27%, SNDK +26%). SOXL takes its largest monthly inflow ever ($4.4B) INTO the drawdown.`, s:`JPM · Matthew See 07-28; CNBC via TMT Breakout 07-30; R&Co · Denney 07-30`},
+{d:`2026-07-30`, th:`CAPEX`, t:`The regime-change line`, b:`<em class="q">"The era of 20%+ surprises to hyperscaler capex expectations is likely over… demand signals are intact — but no longer arriving as major capex raises."</em> Good for hyperscaler ROI; removes the perpetual re-rating fuel for semis. The week's capex facts: MSFT's $175B "cut" is a lease reclassification; META raised only the floor; AMZN raised outright — attributing the increment to memory prices.`, s:`Rothschild & Co Redburn · Rowan Adley, 2026-07-30`},
+];
+
+/* Late-July earnings megaweek scorecard */
+const WEEK = [
+  {tk:'TSM', d:'07-16', v:'bull', t:'FY26 guide raised to “slightly above 40%” USD growth; capex to $60–64bn; +$100bn Arizona (total $265bn); N2 already 3% of wafer revenue. 3Q GM guide 65–67% keeps the margin debate open.', s:'TSMC 2Q26 release/call, 2026-07-16'},
+  {tk:'GOOG', d:'07-22', v:'bull', t:'Search +17%, Cloud +82% ($514B backlog) — but capex doubled to $44.9B, FY26 guide to $195–205B, FCF −$5.9B; stock −3–4%. Operating bull, capital-intensity bear.', s:'Alphabet 2Q26 release; MS Nowak PT $415→$400, 2026-07-23'},
+  {tk:'GEV', d:'07-22', v:'bull', t:'Orders +88%, backlog $176B, gas GW under contract 100→116; FY26 FCF guide $6.5–7.5B→$11.5–12.5B; ~20% of gas orders now data-center-driven; new ~30GW/yr-by-2030 capacity target.', s:'GEV Q2 FY26 print, 2026-07-22'},
+  {tk:'AMD', d:'07-22/23', v:'bull', t:'Advancing AI: Anthropic = 4th GW-scale MI customer (up to 2GW MI450 + $5B equity, no warrants); CY30 TAMs raised (compute $2T, accelerators $1.4T, server CPU $220bn); SemiAnalysis flips ROCm from “0% chance” to “a great chance”.', s:'GS Schneider 07-23; BofA Arya 07-24; SemiAnalysis 07-24'},
+  {tk:'INTC', d:'07-23', v:'bull', t:'Big beat & raise, stock +8–9%: rev $16.1B vs ~$14.4B, GM 41.8%; 2026 capex raised to $18–20B with a “significant increase” flagged for 2027; 14A pulled in to 2028. Execution finally catching the narrative.', s:'INTC Q2 FY26 print, 2026-07-23'},
+  {tk:'KLAC', d:'07-28', v:'bear', t:'Beat, guided above, raised CY26 WFE to “low $150B” — and fell 7–9%. The season’s lesson: buyside WFE sits ABOVE management’s raised numbers; beat-and-raise is now the base case. 24 hours later LRCX guided the SAME WFE number and rose 6–8% (service-led beat, advanced packaging to 70%+ growth) — the tape rewarding only what it hadn’t already paid for.', s:'KLA FQ4 print; Barclays, 2026-07-28; LRCX F4Q26, 2026-07-29'},
+  {tk:'STX', d:'07-28', v:'bull', t:'Beat-and-raise above even the bull bar: Sept guide ~$4.1B / $7.30 EPS (~25% above Street); price/EB stepping ~10%→~20%+; customers extending planning horizons through 2029+. HAMR ~40% of nearline EB run-rate.', s:'STX F4Q26 print; MS Woodring / Barclays, 2026-07-28'},
+  {tk:'SKHYNIX', d:'07-28', v:'bear', t:'The cycle’s first headline miss (OP ₩60.5tn vs ₩64.2tn cons) on the HBM4 ramp delay — but DRAM ASP still +30% q/q, GM 83%. Capex guided up as much as +80%, no buyback. KOSPI −10.7%, the year’s 8th circuit breaker, on CXMT’s +466% debut.', s:'SK hynix Q2-26 print; Jefferies, 2026-07-28'},
+  {tk:'MSFT', d:'07-29', v:'bull', t:'The modelled negative-FCF year didn’t arrive: Q4 FCF +$19.6B (UBS had −$21B), FY27 guided FCF-positive; Azure +43% with Q1 FY27 guided ~+45% cc. Caveats: $0.27 of the $4.74 EPS is discrete (incl. a $3.2B Anthropic mark-up); CY26 capex ~$190B→~$175B is a lease reclassification, not a cut.', s:'MSFT F4Q26 call, 2026-07-29; UBS/BofA post-mortems'},
+  {tk:'META', d:'07-29', v:'bear', t:'Fine-to-better numbers (rev $60.8B +28%; guide in line; capex ceiling $145B untouched), but no equity-raise decision (deferred to 2027 planning) and “Meta Compute” confirmed with no scale, pricing or logo — stock −8–9%. JPM desk: “META Q2 ‘Trust Me, Bro’”. 2027 EPS barely moved — a multiple event, not an estimate event.', s:'META 2Q26 call; JPM Anmuth desk, 2026-07-29/30'},
+  {tk:'AMZN', d:'07-30', v:'bull', t:'AWS +36.7% — fastest in 18 quarters — with AWS margin at 39.4%; backlog $364B→$496B in one quarter; AI run-rate >$25B AND chips >$25B, both triple-digit growth; the season’s only quantified payback frame (“a little less than three years to break even”). Capex $200B→$220B, the increment attributed to memory costs; FCF −$9B. Stock +8–10%.', s:'AMZN Q2 FY26 call, 2026-07-30'},
+  {tk:'AAPL', d:'07-30', v:'bear', t:'The anti-AI safe haven broke on memory: Sept-Q guide +9–11% vs Street +12%, GM ~46.5% underlying; memory explained “more than 100% of” the sequential GM decline — Cook: a “hundred-year flood on the memory pricing”. MU/SNDK rallied after-hours on Apple’s own commentary. Tim Cook’s last call as CEO.', s:'AAPL FQ3 call, 2026-07-30; Jefferies read-across'},
+  {tk:'SAMSUNG', d:'07-30', v:'bull', t:'Record by a wide margin: OP ₩89.5tn (~$62bn, >19x y/y, “nearly all” semis) — one day after Hynix’s own record — and management on the record: server demand “keeping the market undersupplied”. Landed ~10% short of Jefferies’ ₩100tn test; stock flat — same “buyside already there” dynamic.', s:'AP via GS TMT Today, 2026-07-30'},
+  {tk:'RDDT', d:'07-30', v:'bear', t:'Revenue crushed ($805M vs $730M St; Q3 guided above) but US logged-in DAU fell ~100K q/q — “Search referrals were choppy… visibility remains low” — read straight through to Google AI Overviews. Stock −8–13%. Great numbers, wrong metric.', s:'RDDT Q2 print; MS Wigg / Bernstein, 2026-07-30'},
+];
+
+/* ARR series (USD bn, run-rate marks) */
+const ARR = {
+  anthropic: [
+    {d:'2025-12-31', v:9,  s:'Exit-2025 ~$9B (from $1B end-2024) — FundaAI series, 2026-06-24; JPM “AI Capex 2.0”, 2026-06-16'},
+    {d:'2026-02-28', v:14, s:'Feb ~$14B (net-add +$7B; Jensen: “an Oppenheimer moment… a $5–6 billion-dollar month”) — FundaAI 06-24; SemiAnalysis 07-08. Variant: Mizuho 03-15 “~doubled to ~$20B in first 2 months”'},
+    {d:'2026-03-31', v:19, s:'Mar ~$19B (net-add +$11B) — FundaAI 06-24; BofA Justin Post 07-06. Variant: SemiAnalysis has 1Q exit at $30B'},
+    {d:'2026-04-30', v:30, s:'Apr ~$30B — overtakes OpenAI (~$24B) for the first time — FundaAI “LLM 26H1 Pt 2”, 2026-06-24'},
+    {d:'2026-05-28', v:47, s:'>$47B at Series H ($965B post, ~$65B raised) — company/CNBC 05-28; Barclays 06-01 (+422% YTD). Variant: Anthropic’s own May quote “$30B run-rate” (Barron’s 05-25)'},
+    {d:'2026-07-08', v:60, s:'>$60B (3Q26), GAAP EBIT ~$1B (~6% margin), NNARR $10B+/month — SemiAnalysis IPO-financials, 2026-07-08; MS TMT (Wigg) same day'},
+    {d:'2026-07-10', v:69, s:'$69B; daily adds ~$400M→~$550M/day — Yipit via @jukan05, 2026-07-10. First contrary read 07-24 (TickerTrends “growth slowed”, unverified — R&Co Adley)'},
+  ],
+  openai: [
+    {d:'2025-12-31', v:20, s:'Run-rate “exceeded $20B” in 2025 (FY25 revenue $13.1B) — OpenAI CFO, via Sherwood/Barron’s'},
+    {d:'2026-03-04', v:25, s:'$25B ARR — The Information 3/4/26, via Barclays Framework, Mar-2026; JPM: >$25bn as of Mar-26'},
+    {d:'2026-04-30', v:24, s:'~$24B (Apr, FundaAI retrospective series) — the month Anthropic passes; GPT-5.5 “Spud” ships 04-23'},
+    {d:'2026-05-31', v:33, s:'~$33B (May), re-accelerating late-May on GPT-5.5/Codex — FundaAI 06-24; Barclays 06-01 (+65% YTD). Variants: $28B (@EugeneNg 06-18) / $40B (compiled briefing 06-27) / ~$50B (Octahedron 07-15)'},
+    {d:'2026-07-29', v:null, s:'“July run-rate revenue exceeded ALL of Q2 — and Q2 was no slouch” — CFO Sarah Friar, internal all-hands via CNBC / The Information, 2026-07-30. Credited to GPT-5.6, ChatGPT Work, Codex; ChatGPT nearing ~1B WAU (The Information, 07-29)'},
+  ],
+};
+
+/* 4-name capex consensus (BEst, USD bn, weekly) — from _wiki/_data/hyperscaler_revisions_2027_2028.json, asof 2026-07-31 */
+const CAPEX_HIST = {"2027":[["2026-01-02",540.0,127.3,130.1,121.1,161.4],["2026-01-09",536.5,127.3,128.7,120.9,159.6],["2026-01-16",540.4,127.7,129.4,120.8,162.5],["2026-01-23",544.5,130.0,130.3,121.8,162.3],["2026-01-30",574.2,141.6,131.3,137.9,163.4],["2026-02-06",649.7,141.6,171.9,138.6,197.6],["2026-02-13",666.4,141.6,183.3,139.1,202.4],["2026-02-20",667.7,142.8,185.3,138.1,201.5],["2026-02-27",677.5,142.8,192.3,139.1,203.3],["2026-03-06",688.5,142.8,192.6,140.0,213.0],["2026-03-13",688.0,142.8,192.6,140.5,212.1],["2026-03-20",687.4,143.9,190.6,140.8,212.1],["2026-03-27",687.6,143.9,191.1,140.8,211.8],["2026-04-03",687.4,143.9,191.7,140.3,211.5],["2026-04-10",689.9,145.3,192.0,140.4,212.2],["2026-04-17",691.9,145.3,192.1,141.3,213.2],["2026-04-24",693.3,146.6,192.4,140.6,213.8],["2026-05-01",796.3,190.3,225.5,159.0,221.5],["2026-05-08",812.9,191.8,233.9,160.2,227.1],["2026-05-15",823.0,191.8,243.9,160.7,226.6],["2026-05-22",824.7,193.0,244.1,159.9,227.7],["2026-05-29",829.4,196.0,244.4,159.9,229.0],["2026-06-05",832.4,197.0,244.5,161.5,229.5],["2026-06-12",835.9,197.0,247.7,161.8,229.5],["2026-06-19",836.0,197.0,247.3,161.8,230.0],["2026-06-26",836.5,195.7,248.1,161.8,231.0],["2026-07-03",836.9,195.7,248.8,162.2,230.2],["2026-07-10",841.0,196.9,249.9,163.0,231.1],["2026-07-17",856.9,200.5,256.7,166.3,233.5],["2026-07-24",906.4,203.6,291.1,175.0,236.8],["2026-07-31",955.3,205.4,301.7,190.1,258.1]],"2028":[["2026-01-02",539.9,131.4,129.6,122.0,156.9],["2026-01-09",545.3,131.4,132.8,122.7,158.4],["2026-01-16",546.7,131.8,133.7,122.8,158.4],["2026-01-23",546.6,133.5,131.9,122.8,158.4],["2026-01-30",578.8,150.0,131.9,139.1,157.9],["2026-02-06",671.9,150.0,185.3,139.6,197.0],["2026-02-13",692.8,150.0,195.8,140.6,206.3],["2026-02-20",699.5,150.8,199.8,142.5,206.3],["2026-02-27",703.6,150.8,200.5,146.0,206.3],["2026-03-06",719.0,150.8,200.5,147.9,219.7],["2026-03-13",718.0,150.8,200.5,146.9,219.7],["2026-03-20",715.4,150.8,198.0,146.9,219.7],["2026-03-27",714.6,150.8,197.2,146.8,219.7],["2026-04-03",715.4,150.8,198.0,146.8,219.8],["2026-04-10",723.7,155.7,202.4,145.8,219.8],["2026-04-17",726.5,155.7,202.2,147.6,221.1],["2026-04-24",725.7,155.7,200.7,148.1,221.2],["2026-05-01",850.7,209.9,244.1,171.0,225.7],["2026-05-08",867.8,210.2,252.3,172.5,232.9],["2026-05-15",872.6,210.2,259.4,172.5,230.6],["2026-05-22",886.3,215.3,264.5,173.2,233.3],["2026-05-29",899.1,223.4,265.4,173.2,237.0],["2026-06-05",904.1,225.7,263.5,178.0,237.0],["2026-06-12",909.1,225.7,267.4,179.0,237.0],["2026-06-19",909.1,225.7,267.4,179.0,237.0],["2026-06-26",908.7,225.2,267.4,179.0,237.0],["2026-07-03",909.1,225.2,267.4,179.4,237.0],["2026-07-10",915.7,226.3,270.3,179.8,239.3],["2026-07-17",940.4,232.7,280.7,184.4,242.6],["2026-07-24",1009.2,232.6,334.4,194.8,247.5],["2026-07-31",1059.7,229.2,341.5,212.1,276.8]]};
+
+/* what to watch */
+const NEXT = [
+  {d:'2026-08-04', t:'AMD Q2 FY26 print', b:'Guide $11.2B; the forward test is the structure of the next GW-scale deal (equity vs warrants) and MI450 momentum into 1H27.', s:'GS/BofA post-Advancing-AI, 2026-07-24'},
+  {d:'2026-08-26', t:'NVDA Q2 FY27 print', b:'Guided $91B ±2%. Watch hyperscaler-vs-ACIE growth mix under the new segmentation — the optics that cost the stock 3% on a Q1 beat.', s:'NVDA Q1 FY27 call, 2026-05-20'},
+  {d:'2026-09 →', t:'Memory: peak calls vs undersupply guides', b:'Jefferies models hikes of 15–20% (vs 25–30% expected) and a ~1H27 price peak; against Samsung/Hynix/Micron management undersupply-through-2027+ language and the HBM4 yield fault line (Samsung 1c). MU FQ4 late-Sep.', s:'Jefferies, 2026-07-28; Samsung 2Q call, 2026-07-30'},
+  {d:'2026-10 →', t:'META Q3 print — the first FY27 capex guide', b:'The spread to resolve: $142B (Redburn, reported, after off-BS JVs) / $180–200B (gross build) / $243B (JPM Anmuth). Track cash PP&E, not reported capex. Equity-raise question re-dated to the 2027 planning cycle.', s:'META 2Q26 post-mortem, 2026-07-30'},
+  {d:'2026-10 → 2027-01', t:'Samsung shareholder-return window', b:'MS (Sean Kim): announcement comes with Q4 results — the Oct-to-Jan window is the real date. The 1H26 labour-provision split (₩100tn vs ₩110–120tn ex-provision) is still unresolved.', s:'MS, 2026-07-28'},
+  {d:'open', t:'Anthropic ARR curve & the OpenAI reacceleration', b:'Yipit run: ~$550M/day of net adds. Arete’s SDK-correlation path (each lab ~$70B by Sep-26, >$110B by YE) is now the live test; OpenAI’s July>Q2 claim needs a hard number.', s:'Yipit 07-10; Arete 04-14; CNBC 07-30'},
+  {d:'open', t:'WFE 2027/28 — house vs street vs ASML plan', b:'House CY28 top $260B vs street $230–250B vs Bernstein base $198B; ASML’s 65/85/110 Low-NA plan makes ~110 the company path — the binding question is 2027 allocation (memory residual ~24–31 tools).', s:'assumptions ledger, 2026-07-20; ASML 2Q26, 2026-07-15'},
+];
+
+/* ================= RENDER ================= */
+const $=q=>document.querySelector(q), $$=q=>[...document.querySelectorAll(q)];
+const deck=$('#deck'), scrub=$('#scrub');
+const MONTH_INFO = {
+  '02':{key:'FEB', lede:'The baselines get set — and immediately start moving. Q4’25 calls guide GOOG to $175–185B and AMZN to ~$200B of 2026 capex; NVDA prints a $194B data-center year; memory contract prices inflect (+70% q/q DDR5); the OpenAI mega-round opens and Anthropic adds $7B of ARR in a single month.'},
+  '03':{key:'MAR', lede:'The acceleration gets its first hard marks: OpenAI at $25B ARR, Anthropic past its own full-year plan by early March, Micron’s first vertical-margin quarter — while Barclays files the only hard capex-peak call of the window (and abandons it by June).'},
+  '04':{key:'APR', lede:'Q1 earnings move every capex line (META raises on memory pricing, GOOG’s backlog doubles on TPU deals, UBS turns MSFT’s guide into a −$21B FY27 FCF model) — GPT-5.5 ships, and Anthropic passes OpenAI on ARR.'},
+  '05':{key:'MAY', lede:'The month the lab curve went vertical: +$21B of Anthropic ARR in a quarter, Series H at $965B, the first $1.2T buy-side capex bogey, NVDA guiding $91B — and Micron up 30% in a week.'},
+  '06':{key:'JUN', lede:'The synthesis month: JPM’s AI Capex 2.0 becomes the reference frame, the $3T Anthropic debate opens, OpenAI unveils its own silicon, model access becomes a policy variable — and the tape wobbles for the first time after semis ran +95% in two months.'},
+  '07':{key:'JUL', lede:'Everything at once: Meta Compute, a record memory tape meeting the fastest momentum unwind on record, Asia’s circuit-breaker day, ASML/TSMC guiding higher — then the megaweek (next slide), which rewrote 2027/28 capex a third time.'},
+};
+
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+function tag(th){const t=THEMES[th];return `<span class="tag" style="--tc:var(${t.css})"><i></i>${t.name}</span>`;}
+
+function evCard(e){
+  return `<div class="ev" data-th="${e.th}">
+    <div class="dt">${e.dd||e.d.slice(5)}</div>
+    <div>
+      <div class="tt">${e.t} ${tag(e.th)}</div>
+      <div class="bd">${e.b}</div>
+      <div class="src sc">${e.s}</div>
+    </div>
+  </div>`;
+}
+
+function buildSlides(){
+  const slides=[];
+  /* cover */
+  slides.push({id:'cover', lab:'COVER', html:`
+  <div class="inner" id="coverInner">
+    <div>
+      <div class="eyebrow">Capstone · buyside research wiki · data through 2026-07-31</div>
+      <h1>AI — the last six months</h1>
+      <div class="monthstrip"><b>FEB</b><span class="arrow">→</span>MAR<span class="arrow">→</span>ABR<span class="arrow">→</span>MAI<span class="arrow">→</span>JUN<span class="arrow">→</span><b>JUL</b><span style="color:var(--muted);font-size:.55em;font-weight:600;margin-left:14px">2026</span></div>
+    </div>
+    <p class="sub">A chronological recap of the AI trade, February to July 2026 — lab revenue, hyperscaler capex, memory, semicap, power and the tape. Every datapoint carries its source (broker/analyst or primary + date), as logged in the wiki.</p>
+    <div class="coverstats">
+      <div class="tile"><div class="lb">Anthropic ARR (run-rate)</div><div class="v">$9B → $69B</div><div class="d"><span class="up">7.7x</span> YE25 → Jul-10 · Yipit</div></div>
+      <div class="tile"><div class="lb">Street 2027E capex, MSFT+GOOG+META+AMZN</div><div class="v">$540B → $955B</div><div class="d"><span class="up">+77%</span> YTD · BBG BEst, weekly</div></div>
+      <div class="tile"><div class="lb">AWS y/y growth, Q2-26</div><div class="v">+36.7%</div><div class="d">fastest in 18 quarters · AMZN 07-30</div></div>
+      <div class="tile"><div class="lb">Samsung Q2-26 operating profit</div><div class="v">₩89.5tn</div><div class="d">~$62bn, >19x y/y — record; stock <span class="dn">flat</span></div></div>
+    </div>
+    <div class="src">Navigate: <kbd>←</kbd> <kbd>→</kbd> or the rail above · filter the months by theme once you’re past the charts.</div>
+  </div>`});
+
+  /* arcs */
+  slides.push({id:'arcs', lab:'THE ARCS', html:`
+  <div class="inner">
+    <div class="eyebrow">The recap in one slide</div>
+    <h2>Six arcs, one direction</h2>
+    <div class="arcs">
+      <div class="arc" style="--ac:var(--c-labs)"><h3><span class="n">1</span> Lab ARR acceleration</h3>
+        <p>Anthropic <b>$9B → $69B</b> run-rate in ~7 months (Yipit 07-10), overtaking OpenAI in May; OpenAI <b>$20B → ~$33B</b>, then “July exceeded all of Q2” (CFO Friar). Coding is >70% of the two labs’ ARR (SemiAnalysis). Valuations repriced with it: OpenAI $300B → <b>$852B</b>, Anthropic $380B → <b>$965B</b> — and a $3T debate.</p></div>
+      <div class="arc" style="--ac:var(--c-capex)"><h3><span class="n">2</span> The capex rewrite</h3>
+        <p>Street 2027E capex for the top-4 went <b>$540B → $955B</b> (+77% YTD); 2028E crossed <b>$1.05T</b>. Each earnings season forced a step-up. JPM’s “AI Capex 2.0” ($1.1T top-4 2027), MS’s $1.4T/120GW frame. The constraint is power and physical buildout, not demand.</p></div>
+      <div class="arc" style="--ac:var(--c-mem)"><h3><span class="n">3</span> Memory super-cycle</h3>
+        <p>Sold-out CY26, DRAM ASP <b>+30% q/q</b> (Hynix 2Q), HBM $17–18/GB → <b>$30–32/GB</b> 2027E (Redburn), record Samsung/Hynix quarters — and the cost shock arriving downstream: Apple’s <b>“hundred-year flood”</b>, AMZN’s +$20B capex increment attributed to memory.</p></div>
+      <div class="arc" style="--ac:var(--c-chips)"><h3><span class="n">4</span> Compute build-out & the ASIC turn</h3>
+        <p>NVDA to a <b>$91B</b> quarterly guide; TSM to “slightly above 40%” FY26 growth with $265bn committed to Arizona; ASIC units inflecting <b>42% → 53%</b> of AI chips 2026→27E (JPM); AMD lands its 4th GW-scale customer; Google hardwires Gemini into silicon (“Frozen v2”).</p></div>
+      <div class="arc" style="--ac:var(--c-power)"><h3><span class="n">5</span> Power becomes the gate</h3>
+        <p>~14–16 GW buildable 2026 vs ~40–45 GW proposed (Jefferies); ~<b>138 GW</b> US DC growth through 2030 (JPM); GEV backlog $176B with ~20% of gas orders DC-driven; rev/GW emerges as the quality metric (<b>&lt;$10B ASIC → ~$25B premium GPU</b>).</p></div>
+      <div class="arc" style="--ac:var(--c-macro)"><h3><span class="n">6</span> Positioning catches up</h3>
+        <p>By late July the buyside was <b>above</b> management’s raised numbers: KLAC beat, raised, fell 7–9%; Samsung’s record traded flat; SK hynix’s first miss broke the KOSPI (−10.7%, 8th circuit breaker) as CXMT debuted +466%. Beat-and-raise became the base case.</p></div>
+    </div>
+    <footer class="note">Basis discipline: GW figures keep their basis (facility ≠ IT-load ≠ 800V-subset); capex consensus is BEst calendar-year, MSFT calendarized from fiscal quarters. Sources inline throughout.</footer>
+  </div>`});
+
+  /* charts */
+  slides.push({id:'charts', lab:'TWO CHARTS', html:`
+  <div class="inner">
+    <div class="eyebrow">The six months in two charts</div>
+    <h2>The revenue curve the capex is chasing</h2>
+    <div class="chartcard" id="arrCard">
+      <div class="chd"><h3>Frontier-lab run-rate revenue — reported marks, USD bn</h3><span class="csub">hover the points for the source behind each mark</span></div>
+      <div class="legend">
+        <span class="k"><span class="swd" style="--kc:var(--c-labs)"></span>Anthropic</span>
+        <span class="k"><span class="swd" style="--kc:var(--c-capex)"></span>OpenAI</span>
+      </div>
+      <div id="arrChart"></div>
+      <details class="tabwrap"><summary>Table view</summary><div id="arrTable"></div></details>
+      <div class="src">Marks as logged in the wiki: JPM (06-16) · Mizuho (03-15) · BofA (07-06) · company Series H (05-28) · FundaAI (06-24) · SemiAnalysis / MS Wigg (07-08) · Yipit (07-10) · The Information (03-04) · CNBC/The Information (07-30). Run-rate estimates, not audited revenue.</div>
+    </div>
+    <div class="chartcard" id="cpxCard">
+      <div class="chd"><h3>Street rewrote 2027 capex three times — once per earnings season</h3><span class="csub">BEst consensus capex, CY2027E, USD bn — weekly</span></div>
+      <div class="legend">
+        <span class="k"><span class="sw" style="--kc:var(--c-labs)"></span>MSFT</span>
+        <span class="k"><span class="sw" style="--kc:var(--c-capex)"></span>GOOG</span>
+        <span class="k"><span class="sw" style="--kc:var(--c-chips)"></span>META</span>
+        <span class="k"><span class="sw" style="--kc:var(--c-mem)"></span>AMZN</span>
+      </div>
+      <div id="cpxChart"></div>
+      <details class="tabwrap"><summary>Table view (month-ends)</summary><div id="cpxTable"></div></details>
+      <div class="src">Bloomberg BEst via Capstone wrapper, asof 2026-07-31 (MSFT calendarized from fiscal quarters; see _data/hyperscaler_revisions_2027_2028.json). Four-name sum: 2027E $540B→$955B (+77% YTD); 2028E $540B→$1,060B (+96%).</div>
+    </div>
+  </div>`});
+
+  /* month slides */
+  for(const mk of ['02','03','04','05','06','07']){
+    const evs = EVENTS.filter(e=>e.d.slice(5,7)===mk).sort((a,b)=>a.d<b.d?-1:1);
+    const info = MONTH_INFO[mk];
+    slides.push({id:'m'+mk, lab:info.key, month:true, html:`
+    <div class="inner">
+      <div class="mhead"><div class="big">${info.key} <span style="color:var(--muted);font-size:.45em;font-weight:600">2026</span></div><div class="cnt">${evs.length} logged events</div></div>
+      <p class="mlede">${info.lede}</p>
+      <div class="evlist">${evs.map(evCard).join('')}</div>
+    </div>`});
+  }
+
+  /* megaweek */
+  slides.push({id:'week', lab:'THE MEGAWEEK', html:`
+  <div class="inner">
+    <div class="eyebrow">Jul 16 – Jul 30 · earnings vs the bogeys</div>
+    <h2>Positioning meets the prints</h2>
+    <p class="sub">The clean read of the season: the discriminator was <b>visible accelerating cloud revenue alongside the spend</b> — AMZN raised capex and rallied, MSFT held and rallied, META narrowed and fell. And in semis, a beat-and-raise was no longer enough.</p>
+    <div class="grid2">${WEEK.map(w=>`
+      <div class="pcard">
+        <div class="ph"><span class="tk">${w.tk}</span><span class="when">${w.d}</span><span class="verd ${w.v==='bull'?'bull':w.v==='bear'?'bear':'neut'}">${w.v==='bull'?'bull won':w.v==='bear'?'bear won':'neutral'}</span></div>
+        <p>${w.t}</p>
+        <div class="src" style="margin-top:5px">${w.s}</div>
+      </div>`).join('')}
+    </div>
+    <footer class="note">Also that week: TER record quarter with a Sept guide ~21%/37% above Street (bull); CDNS beat-and-raise into “the worst EDA sentiment” JPM had seen (bull); GLW beat on every line and fell >15% on a reiterated-not-raised Springboard (bear); NXPI met numbers and fell 5.7% after TXN had re-rated the group (bear); SK hynix priced the largest-ever first-time foreign US listing on 07-10 ($26.5B, 7x oversubscribed). Sources: respective prints + desk recaps, 2026-07-27/30; outcomes ledger.</footer>
+  </div>`});
+
+  /* next */
+  slides.push({id:'next', lab:'WHAT’S NEXT', html:`
+  <div class="inner">
+    <div class="eyebrow">Aug 2026 onward</div>
+    <h2>What resolves the open debates</h2>
+    <div class="nextlist">${NEXT.map(n=>`
+      <div class="ev" data-th="X"><div class="dt">${n.d.replace('2026-','')}</div>
+      <div><div class="tt">${n.t}</div><div class="bd">${n.b}</div><div class="src sc">${n.s}</div></div></div>`).join('')}
+    </div>
+    <div class="pull">“Buyside numbers are already there — and higher. Earnings season could be tough for all of semicap given how high buyside numbers already are for the next few years.”<span class="who">Barclays, on the KLAC reaction — 2026-07-28</span></div>
+    <footer class="note">Built from the Capstone research wiki (sell-side notes, expert calls, transcripts, primary filings), 2026-07-31. Attribution rule applies throughout: broker/analyst + date on every datapoint; ARR figures are run-rate estimates unless stated by the company; capex consensus is Bloomberg BEst. Not investment advice.</footer>
+  </div>`});
+
+  return slides;
+}
+
+/* ---------- deck mechanics ---------- */
+let SLIDES=[], cur=0;
+function mount(){
+  SLIDES=buildSlides();
+  deck.innerHTML=SLIDES.map(s=>`<section class="slide" id="s-${s.id}" role="tabpanel">${s.html}</section>`).join('');
+  scrub.innerHTML=SLIDES.map((s,i)=>`<button role="tab" data-i="${i}">${s.lab}</button>`).join('');
+  scrub.addEventListener('click',e=>{const b=e.target.closest('button'); if(b) go(+b.dataset.i);});
+  buildFilters(); drawARR(); drawCapex(); sync(0);
+  deck.addEventListener('scroll',()=>{clearTimeout(deck._t); deck._t=setTimeout(()=>{const i=Math.round(deck.scrollLeft/deck.clientWidth); if(i!==cur) sync(i);},80);});
+}
+function go(i){ cur=Math.max(0,Math.min(SLIDES.length-1,i)); deck.scrollTo({left:cur*deck.clientWidth,behavior:'smooth'}); sync(cur); }
+function sync(i){ cur=i; $$('#scrub button').forEach((b,j)=>b.classList.toggle('on',j===i));
+  $('#filters').hidden = !(SLIDES[i]&&SLIDES[i].month);
+  const on=$$('#scrub button')[i]; if(on) on.scrollIntoView({block:'nearest',inline:'nearest'});
+}
+$('#prevB').onclick=()=>go(cur-1); $('#nextB').onclick=()=>go(cur+1);
+addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight'||e.key==='PageDown') go(cur+1);
+  if(e.key==='ArrowLeft'||e.key==='PageUp') go(cur-1);
+});
+addEventListener('resize',()=>{deck.scrollTo({left:cur*deck.clientWidth});});
+
+/* theme toggle */
+$('#themeBtn').onclick=()=>{
+  const r=document.documentElement;
+  const dark = r.dataset.theme ? r.dataset.theme==='dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  r.dataset.theme = dark?'light':'dark';
+  drawARR(); drawCapex();
+};
+
+/* filters */
+let FILTER='ALL';
+function buildFilters(){
+  const f=$('#filters');
+  f.insertAdjacentHTML('beforeend',
+    `<button class="chip all on" data-th="ALL">All</button>`+
+    Object.entries(THEMES).map(([k,t])=>`<button class="chip" data-th="${k}" style="--dotc:var(${t.css})"><span class="dot"></span>${t.name}</button>`).join(''));
+  f.addEventListener('click',e=>{
+    const c=e.target.closest('.chip'); if(!c) return;
+    FILTER=c.dataset.th;
+    $$('#filters .chip').forEach(x=>x.classList.toggle('on',x===c));
+    $$('.ev[data-th]').forEach(ev=>{ if(ev.dataset.th==='X') return;
+      ev.classList.toggle('hid', FILTER!=='ALL'&&ev.dataset.th!==FILTER);});
+  });
+}
+
+/* ---------- charts ---------- */
+const tip=$('#tip');
+function showTip(html,x,y){ tip.innerHTML=html; tip.style.display='block';
+  const r=tip.getBoundingClientRect();
+  tip.style.left=Math.min(innerWidth-r.width-10,x+14)+'px';
+  tip.style.top=Math.min(innerHeight-r.height-10,y+14)+'px'; }
+function hideTip(){ tip.style.display='none'; }
+function cssv(n){ return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); }
+const dayN=d=>Math.round((new Date(d+'T00:00:00Z')-new Date('2025-12-01T00:00:00Z'))/864e5);
+const fmt=v=>v>=100?Math.round(v).toLocaleString('en-US'):(Math.round(v*10)/10).toLocaleString('en-US');
+
+function drawARR(){
+  const host=$('#arrChart'); if(!host) return;
+  const W=980,H=380,L=46,R=120,T=18,B=34;
+  const x0=dayN('2025-12-15'), x1=dayN('2026-08-05');
+  const X=d=>L+(dayN(d)-x0)/(x1-x0)*(W-L-R);
+  const ymax=75, Y=v=>T+(1-v/ymax)*(H-T-B);
+  const cA=cssv('--c-labs'), cO=cssv('--c-capex'), surf=cssv('--surface');
+  let s='';
+  for(const g of [0,25,50,75]) s+=`<line class="gl" x1="${L}" x2="${W-R}" y1="${Y(g)}" y2="${Y(g)}"/><text class="tick" x="${L-8}" y="${Y(g)+4}" text-anchor="end">${g}</text>`;
+  s+=`<line class="bl" x1="${L}" x2="${W-R}" y1="${Y(0)}" y2="${Y(0)}"/>`;
+  const months=['2026-01-01','2026-02-01','2026-03-01','2026-04-01','2026-05-01','2026-06-01','2026-07-01','2026-08-01'];
+  const mlab=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug'];
+  months.forEach((m,i)=>{ s+=`<text class="tick" x="${X(m)}" y="${H-B+18}" text-anchor="middle">${mlab[i]}</text>`; });
+  /* crossover annotation */
+  s+=`<rect class="annoband" x="${X('2026-04-01')}" y="${T}" width="${X('2026-05-15')-X('2026-04-01')}" height="${H-T-B}"/>`;
+  s+=`<text class="anno" x="${X('2026-04-22')}" y="${T+12}" text-anchor="middle">Anthropic overtakes OpenAI (Apr, ARR; May, business share)</text>`;
+  function line(pts,col){
+    const p=pts.filter(p=>p.v!=null);
+    return `<path d="${p.map((q,i)=>(i?'L':'M')+X(q.d).toFixed(1)+','+Y(q.v).toFixed(1)).join(' ')}" fill="none" stroke="${col}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`
+      + p.map(q=>`<circle class="pt" data-tip="${esc(q.s)}" data-v="$${q.v}B — ${q.d}" cx="${X(q.d).toFixed(1)}" cy="${Y(q.v).toFixed(1)}" r="4.5" fill="${col}" stroke="${surf}" stroke-width="2"/>`).join('');
+  }
+  s+=line(ARR.anthropic,cA)+line(ARR.openai,cO);
+  /* July>Q2 annotation for OpenAI */
+  s+=`<circle class="pt" data-tip="${esc(ARR.openai[3].s)}" data-v="no figure disclosed" cx="${X('2026-07-29')}" cy="${Y(36)}" r="4.5" fill="${surf}" stroke="${cO}" stroke-width="2" stroke-dasharray="none"/>
+      <text class="anno" x="${X('2026-07-29')}" y="${Y(36)-10}" text-anchor="middle">“July &gt; all of Q2”</text>`;
+  s+=`<text class="dl" x="${X('2026-07-10')+10}" y="${Y(69)+4}">Anthropic $69B</text>`;
+  s+=`<text class="dl" x="${X('2026-05-31')+10}" y="${Y(33)+14}">OpenAI ~$33B</text>`;
+  host.innerHTML=`<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Frontier lab ARR marks, Dec 2025 to Jul 2026">${s}</svg>`;
+  hookPts(host);
+  $('#arrTable').innerHTML=tbl(['Date','Lab','Run-rate ($bn)','Source'],
+    [...ARR.anthropic.map(p=>[p.d,'Anthropic',p.v??'—',p.s]),...ARR.openai.map(p=>[p.d,'OpenAI',p.v??'—',p.s])].sort((a,b)=>a[0]<b[0]?-1:1));
+}
+
+function drawCapex(){
+  const host=$('#cpxChart'); if(!host) return;
+  const rows=CAPEX_HIST['2027'];
+  const W=980,H=400,L=52,R=96,T=16,B=34;
+  const x0=dayN(rows[0][0]), x1=dayN(rows[rows.length-1][0])+4;
+  const X=d=>L+(dayN(d)-x0)/(x1-x0)*(W-L-R);
+  const ymax=320, Y=v=>T+(1-v/ymax)*(H-T-B);
+  const cols=[cssv('--c-labs'),cssv('--c-capex'),cssv('--c-chips'),cssv('--c-mem')];
+  const names=['MSFT','GOOG','META','AMZN'];
+  const surf=cssv('--surface');
+  let s='';
+  for(const g of [0,100,200,300]) s+=`<line class="gl" x1="${L}" x2="${W-R}" y1="${Y(g)}" y2="${Y(g)}"/><text class="tick" x="${L-8}" y="${Y(g)+4}" text-anchor="end">${g}</text>`;
+  s+=`<line class="bl" x1="${L}" x2="${W-R}" y1="${Y(0)}" y2="${Y(0)}"/>`;
+  const months=['2026-01-01','2026-02-01','2026-03-01','2026-04-01','2026-05-01','2026-06-01','2026-07-01'];
+  const mlab=['Jan','Feb','Mar','Apr','May','Jun','Jul'];
+  months.forEach((m,i)=>{ s+=`<text class="tick" x="${X(m)}" y="${H-B+18}" text-anchor="middle">${mlab[i]}</text>`; });
+  /* earnings-season bands */
+  const bands=[['2026-01-27','2026-02-13','Q4-25 season'],['2026-04-22','2026-05-08','Q1-26 season'],['2026-07-15','2026-07-31','Q2-26 season']];
+  for(const [a,b,lab] of bands){ s+=`<rect class="annoband" x="${X(a)}" y="${T}" width="${X(b)-X(a)}" height="${H-T-B}"/><text class="anno" x="${(X(a)+X(b))/2}" y="${T+11}" text-anchor="middle">${lab}</text>`; }
+  /* series: idx 2..5 = MSFT GOOG META AMZN */
+  names.forEach((nm,k)=>{
+    const pts=rows.map(r=>[r[0],r[2+k]]);
+    s+=`<path d="${pts.map((p,i)=>(i?'L':'M')+X(p[0]).toFixed(1)+','+Y(p[1]).toFixed(1)).join(' ')}" fill="none" stroke="${cols[k]}" stroke-width="2" stroke-linejoin="round"/>`;
+    const last=pts[pts.length-1];
+    s+=`<circle cx="${X(last[0])}" cy="${Y(last[1])}" r="4.5" fill="${cols[k]}" stroke="${surf}" stroke-width="2"/>`;
+    s+=`<text class="dl" x="${X(last[0])+9}" y="${Y(last[1])+4}">${nm} ${Math.round(last[1])}</text>`;
+  });
+  /* hover layer: nearest-date crosshair */
+  s+=`<line id="cx" y1="${T}" y2="${H-B}" stroke="${cssv('--baseline')}" stroke-width="1" style="display:none"/>`;
+  s+=`<rect id="hover" x="${L}" y="${T}" width="${W-L-R}" height="${H-T-B}" fill="transparent"/>`;
+  host.innerHTML=`<svg class="chart" id="cpxSvg" viewBox="0 0 ${W} ${H}" role="img" aria-label="2027 capex consensus by company, weekly">${s}</svg>`;
+  const svg=$('#cpxSvg'), hov=svg.querySelector('#hover'), cx=svg.querySelector('#cx');
+  hov.addEventListener('mousemove',e=>{
+    const r=svg.getBoundingClientRect(), mx=(e.clientX-r.left)*(W/r.width);
+    let bi=0,bd=1e9;
+    rows.forEach((row,i)=>{const d=Math.abs(X(row[0])-mx); if(d<bd){bd=d;bi=i;}});
+    const row=rows[bi];
+    cx.style.display='block'; cx.setAttribute('x1',X(row[0])); cx.setAttribute('x2',X(row[0]));
+    showTip(`<div class="th">${row[0]}</div>`+names.map((nm,k)=>`<div class="tr"><span>${nm}</span><b>$${fmt(row[2+k])}B</b></div>`).join('')+`<div class="tr" style="margin-top:3px"><span>Sum</span><b>$${fmt(row[1])}B</b></div>`,e.clientX,e.clientY);
+  });
+  hov.addEventListener('mouseleave',()=>{cx.style.display='none';hideTip();});
+  const me=rows.filter((r,i)=>i===0||r[0].slice(8)>='24'&&(i===rows.length-1||rows[i+1][0].slice(5,7)!==r[0].slice(5,7))||i===rows.length-1);
+  $('#cpxTable').innerHTML=tbl(['Week','MSFT','GOOG','META','AMZN','Sum 2027E','Sum 2028E'],
+    me.map(r=>{const r8=CAPEX_HIST['2028'].find(q=>q[0]===r[0]);return [r[0],fmt(r[2]),fmt(r[3]),fmt(r[4]),fmt(r[5]),fmt(r[1]),r8?fmt(r8[1]):'—'];}));
+}
+
+function tbl(head,rows){
+  return `<div style="overflow-x:auto"><table><thead><tr>${head.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+}
+function hookPts(host){
+  host.querySelectorAll('.pt').forEach(c=>{
+    c.style.cursor='pointer';
+    c.addEventListener('mousemove',e=>showTip(`<div class="th">${c.dataset.v}</div><div class="ts">${c.dataset.tip}</div>`,e.clientX,e.clientY));
+    c.addEventListener('mouseleave',hideTip);
+  });
+}
+
+mount();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,908 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI — Nine Signals (Feb–Jul 2026)</title>
+</head>
+<body>
+<style>
+  :root{
+    color-scheme: light;
+    --page:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --baseline:#c3c2b7; --ring:rgba(11,11,11,.10);
+    --accent:#2a78d6; --accent-soft:rgba(42,120,214,.10);
+    --c-blue:#2a78d6; --c-orange:#eb6834; --c-green:#1baf7a; --c-amber:#eda100;
+    --c-pink:#e87ba4; --c-purple:#4a3aa7;
+    --good:#006300; --bad:#d03b3b; --warnc:#9a6a00;
+    --hard:#0e7a3d; --partial:#2a5fb0; --est:#9a6a00;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:where(:not([data-theme="light"])){
+      color-scheme: dark;
+      --page:#0d0d0d; --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --baseline:#383835; --ring:rgba(255,255,255,.10);
+      --accent:#3987e5; --accent-soft:rgba(57,135,229,.14);
+      --c-blue:#3987e5; --c-orange:#d95926; --c-green:#199e70; --c-amber:#c98500;
+      --c-pink:#d55181; --c-purple:#9085e9;
+      --good:#0ca30c; --bad:#e66767; --warnc:#d9a520;
+      --hard:#2fbf6e; --partial:#6ea8ef; --est:#d9a520;
+    }
+  }
+  :root[data-theme="dark"]{
+    color-scheme: dark;
+    --page:#0d0d0d; --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+    --grid:#2c2c2a; --baseline:#383835; --ring:rgba(255,255,255,.10);
+    --accent:#3987e5; --accent-soft:rgba(57,135,229,.14);
+    --c-blue:#3987e5; --c-orange:#d95926; --c-green:#199e70; --c-amber:#c98500;
+    --c-pink:#d55181; --c-purple:#9085e9;
+    --good:#0ca30c; --bad:#e66767; --warnc:#d9a520;
+    --hard:#2fbf6e; --partial:#6ea8ef; --est:#d9a520;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html,body{height:100%;}
+  body{background:var(--page); color:var(--ink); font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+    font-size:15px; line-height:1.5; overflow:hidden;}
+  .eyebrow{font-size:11px; letter-spacing:.09em; text-transform:uppercase; color:var(--muted); font-weight:600;}
+  em.q{font-family:Georgia,'Times New Roman',serif; font-style:italic;}
+
+  #shell{height:100vh; display:flex; flex-direction:column;}
+  header#bar{flex:0 0 auto; display:flex; align-items:center; gap:12px; padding:10px 18px;
+    border-bottom:1px solid var(--grid); background:var(--page);}
+  #bar .ttl{font-weight:700; font-size:14px; white-space:nowrap;}
+  #bar .ttl span{color:var(--muted); font-weight:500;}
+  #scrub{display:flex; gap:2px; flex:1; min-width:0; overflow-x:auto; scrollbar-width:none;}
+  #scrub button{appearance:none; border:0; background:transparent; color:var(--muted);
+    font:600 11px/1 system-ui,-apple-system,"Segoe UI",sans-serif; letter-spacing:.05em;
+    padding:8px 8px 10px; cursor:pointer; border-radius:6px; position:relative; white-space:nowrap;}
+  #scrub button:hover{background:var(--accent-soft); color:var(--ink2);}
+  #scrub button.on{color:var(--ink);}
+  #scrub button.on::after{content:""; position:absolute; left:8px; right:8px; bottom:4px; height:3px; border-radius:2px; background:var(--accent);}
+  .navbtn{appearance:none; border:1px solid var(--grid); background:var(--surface); color:var(--ink2);
+    width:32px; height:32px; border-radius:8px; cursor:pointer; font-size:15px; flex:0 0 auto;}
+  .navbtn:hover{border-color:var(--baseline); color:var(--ink);}
+  #themeBtn{width:auto; padding:0 10px; font-size:12px;}
+
+  #deck{flex:1 1 auto; display:flex; overflow-x:auto; overflow-y:hidden;
+    scroll-snap-type:x mandatory; scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ #deck{scroll-behavior:auto;} }
+  .slide{flex:0 0 100%; width:100%; scroll-snap-align:start; overflow-y:auto; overflow-x:hidden;
+    padding:30px clamp(18px,4vw,64px) 60px;}
+  .slide .inner{max-width:1120px; margin:0 auto;}
+  h1{font-size:clamp(32px,4.8vw,54px); line-height:1.06; letter-spacing:-.02em; font-weight:800; text-wrap:balance;}
+  h2{font-size:clamp(21px,2.8vw,29px); letter-spacing:-.01em; font-weight:750; text-wrap:balance;}
+  h3{font-size:15.5px; font-weight:700;}
+  .sub{color:var(--ink2); max-width:76ch;}
+  .shead{display:flex; align-items:baseline; justify-content:space-between; gap:14px; flex-wrap:wrap; margin-bottom:6px;}
+  .verd{display:inline-flex; align-items:center; gap:7px; font-weight:700; font-size:12px; letter-spacing:.05em;
+    text-transform:uppercase; padding:6px 12px; border-radius:999px; white-space:nowrap;}
+  .verd::before{content:""; width:9px; height:9px; border-radius:50%; background:currentColor;}
+  .verd.up{color:var(--good); background:color-mix(in srgb, var(--good) 10%, transparent);}
+  .verd.watch{color:var(--warnc); background:color-mix(in srgb, var(--warnc) 12%, transparent);}
+  .verd.flat{color:var(--muted); background:color-mix(in srgb, var(--muted) 14%, transparent);}
+
+  .tilegrid{display:grid; grid-template-columns:repeat(auto-fit,minmax(215px,1fr)); gap:12px; margin-top:10px;}
+  .tile{background:var(--surface); border:1px solid var(--ring); border-radius:12px; padding:13px 15px;}
+  .tile .lb{font-size:11.5px; color:var(--muted); margin-bottom:3px;}
+  .tile .v{font-size:26px; font-weight:750; letter-spacing:-.01em;}
+  .tile .v.sm{font-size:21px;}
+  .tile .d{font-size:12px; color:var(--ink2); margin-top:2px;}
+  .tile .d .up{color:var(--good); font-weight:650;}
+  .tile .d .dn{color:var(--bad); font-weight:650;}
+  .src{font-size:11px; color:var(--muted);}
+  .chartcard{background:var(--surface); border:1px solid var(--ring); border-radius:12px; padding:16px 16px 10px; margin-top:14px;}
+  .chartcard .chd{display:flex; align-items:baseline; justify-content:space-between; gap:10px; flex-wrap:wrap;}
+  .chartcard h3{font-size:14.5px;}
+  .chartcard .csub{font-size:12px; color:var(--ink2);}
+  .legend{display:flex; gap:14px; flex-wrap:wrap; margin:7px 0 2px; font-size:12px; color:var(--ink2);}
+  .legend .k{display:inline-flex; align-items:center; gap:6px;}
+  .legend .sw{width:14px; height:3px; border-radius:2px; background:var(--kc);}
+  .legend .swd{width:9px; height:9px; border-radius:50%; background:var(--kc);}
+  svg.chart{width:100%; height:auto; display:block;}
+  svg.chart text{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;}
+  .tick{fill:var(--muted); font-size:10.5px; font-variant-numeric:tabular-nums;}
+  .gl{stroke:var(--grid); stroke-width:1;}
+  .bl{stroke:var(--baseline); stroke-width:1;}
+  .dl{fill:var(--ink2); font-size:11px; font-weight:650;}
+  .anno{fill:var(--muted); font-size:10px;}
+  .tabwrap{margin:8px 0 6px;}
+  .tabwrap summary{cursor:pointer; font-size:12px; color:var(--muted); padding:3px 0;}
+  .tabwrap table{border-collapse:collapse; font-size:12px; margin-top:6px; width:100%;}
+  .tabwrap th,.tabwrap td{border-bottom:1px solid var(--grid); padding:4px 8px; text-align:right; font-variant-numeric:tabular-nums; color:var(--ink2);}
+  .tabwrap th:first-child,.tabwrap td:first-child{text-align:left;}
+  .grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(330px,1fr)); gap:12px; margin-top:14px;}
+  .facts{margin-top:14px; display:grid; gap:8px;}
+  .fact{display:flex; gap:10px; align-items:baseline; background:var(--surface); border:1px solid var(--ring);
+    border-radius:10px; padding:10px 14px; font-size:13.5px; color:var(--ink2);}
+  .fact b{color:var(--ink);}
+  .fact .fd{flex:0 0 auto; font-size:11px; color:var(--muted); font-variant-numeric:tabular-nums; min-width:44px; font-weight:650;}
+  .pull{border-left:3px solid var(--accent); padding:5px 0 5px 15px; margin:14px 0;
+    font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:16px; color:var(--ink); max-width:76ch;}
+  .pull .who{display:block; font-family:system-ui,-apple-system,"Segoe UI",sans-serif; font-style:normal; font-size:11.5px; color:var(--muted); margin-top:4px;}
+  .counter{margin-top:14px; border:1px dashed var(--baseline); border-radius:12px; padding:12px 16px; font-size:13px; color:var(--ink2);}
+  .counter b{color:var(--ink);}
+  .counter .ct{font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--warnc); font-weight:700; margin-bottom:4px;}
+  footer.note{margin-top:24px; padding-top:12px; border-top:1px solid var(--grid); color:var(--muted); font-size:11px; max-width:100ch;}
+  kbd{border:1px solid var(--grid); border-bottom-width:2px; border-radius:4px; padding:0 5px; font-size:11px; background:var(--surface); color:var(--ink2);}
+  .tagH,.tagP,.tagE{font-size:10px; font-weight:700; letter-spacing:.04em; padding:1.5px 6px; border-radius:5px; vertical-align:1px;}
+  .tagH{color:var(--hard); background:color-mix(in srgb, var(--hard) 12%, transparent);}
+  .tagP{color:var(--partial); background:color-mix(in srgb, var(--partial) 12%, transparent);}
+  .tagE{color:var(--est); background:color-mix(in srgb, var(--est) 14%, transparent);}
+  .gridtable{border-collapse:collapse; width:100%; font-size:13px; margin-top:8px;}
+  .gridtable th,.gridtable td{border:1px solid var(--grid); padding:7px 10px; text-align:right; font-variant-numeric:tabular-nums;}
+  .gridtable th{background:var(--accent-soft); color:var(--ink); font-weight:650;}
+  .gridtable td:first-child,.gridtable th:first-child{text-align:left;}
+  .steps{display:flex; flex-direction:column; gap:0; margin-top:10px;}
+  .step{display:flex; gap:12px; align-items:baseline; padding:9px 4px; border-bottom:1px solid var(--grid);}
+  .step:last-child{border-bottom:0;}
+  .step .sd{flex:0 0 74px; font-size:11px; color:var(--muted); font-weight:650; font-variant-numeric:tabular-nums;}
+  .step .sv{flex:0 0 auto; font-size:17px; font-weight:750; min-width:150px;}
+  .step .sn{font-size:12.5px; color:var(--ink2);}
+  .scorerow{display:grid; grid-template-columns:34px 1fr 1fr 1fr 130px; gap:10px; padding:9px 6px;
+    border-bottom:1px solid var(--grid); font-size:12.5px; align-items:center;}
+  .scorerow.hd{color:var(--muted); font-size:10.5px; letter-spacing:.07em; text-transform:uppercase; font-weight:700; border-bottom:2px solid var(--baseline);}
+  .scorerow .n{font-weight:800; color:var(--muted);}
+  .scorerow b{color:var(--ink);}
+  .scorerow .cell{color:var(--ink2);}
+  #tip{position:fixed; z-index:50; pointer-events:none; background:var(--ink); color:var(--page);
+    font-size:11.5px; line-height:1.35; padding:7px 10px; border-radius:8px; max-width:340px; opacity:0; transition:opacity .12s;}
+  #tip.on{opacity:.97;}
+  .mono{font-variant-numeric:tabular-nums;}
+  .basis{font-size:10.5px; color:var(--muted); font-style:italic;}
+</style>
+
+<div id="shell">
+  <header id="bar">
+    <div class="ttl">AI — nine signals <span>· Feb–Jul 2026</span></div>
+    <div id="scrub" role="tablist" aria-label="Slides"></div>
+    <button class="navbtn" id="prevB" aria-label="Previous slide">←</button>
+    <button class="navbtn" id="nextB" aria-label="Next slide">→</button>
+    <button class="navbtn" id="themeBtn" aria-label="Toggle dark mode">◐</button>
+  </header>
+  <div id="deck"></div>
+</div>
+<div id="tip" role="status"></div>
+
+<script>
+/* ============ DATA — every datapoint carries source + date ============ */
+
+/* S1 — Lab ARR (run-rate marks, USD bn) */
+const ARR = {
+  anthropic: [
+    {d:'2025-12-31', v:9,  s:'Exit-2025 ~$9B (from ~$1B end-2024) — FundaAI series 2026-06-24; JPM "AI Capex 2.0" 2026-06-16'},
+    {d:'2026-02-28', v:14, s:'Feb ~$14B (net-add +$5B m/m on this FundaAI path; SemiAnalysis’s alternative path runs 9→12→19) — FundaAI 06-24'},
+    {d:'2026-03-31', v:19, s:'Mar ~$19B — FundaAI 06-24; BofA Post 07-06 (SemiAnalysis has 1Q exit $30B)'},
+    {d:'2026-04-30', v:30, s:'Apr ~$30B — passes OpenAI for the first time — FundaAI "LLM 26H1 Pt 2" 2026-06-24'},
+    {d:'2026-05-28', v:47, s:'>$47B at Series H ($965B post) — company/CNBC 2026-05-28; Barclays 06-01 (+422% YTD)'},
+    {d:'2026-07-08', v:60, s:'>$60B 3Q26E, GAAP EBIT ~+$1B — SemiAnalysis pre-IPO financials 2026-07-08'},
+    {d:'2026-07-10', v:69, s:'$69B; net adds ~$550M/day — Yipit via @jukan05 2026-07-10'},
+  ],
+  openai: [
+    {d:'2025-12-31', v:20, s:'Run-rate "exceeded $20B" exit-2025 (FY25 revenue $13.1B) — OpenAI CFO via Barron’s/Sherwood'},
+    {d:'2026-03-04', v:25, s:'$25B ARR — The Information 3/4/26 via Barclays framework; JPM ">$25bn as of Mar-26"'},
+    {d:'2026-04-30', v:24, s:'~$24B Apr (FundaAI retrospective) — the month Anthropic passes'},
+    {d:'2026-05-31', v:33, s:'~$33B May, re-accelerating late-May on GPT-5.5/Codex — FundaAI 06-24; Barclays 06-01 (+65% YTD)'},
+  ],
+};
+const ARR_OPEN_NOTE = {d:'2026-07-29', s:'"July run-rate revenue exceeded ALL of Q2" — CFO Sarah Friar, internal all-hands via CNBC/The Information 2026-07-30. No hard number yet.'};
+
+/* S2 — Tokens, three independent bases */
+const TOK_GOOGLE = [ /* all-surfaces monthly tokens, trillions */
+  {d:'2025-05-15', v:480,  lb:'480T/mo', s:'"At I/O in May, we announced that we processed 480 trillion monthly tokens across our surfaces" — Alphabet Q2’25 call 2025-07-29'},
+  {d:'2025-07-29', v:980,  lb:'980T/mo', s:'"Since then, we have doubled that number, now processing over 980 trillion" — Alphabet Q2’25 call 2025-07-29'},
+  {d:'2025-10-29', v:1300, lb:'~1.3Q/mo*', s:'~1.3 quadrillion/mo, ">20x growth in a year" — Alphabet Q3’25 call 2025-10-29 (*transcript unit garbled; inferred from the 980T July anchor — verify vs IR)'},
+];
+const TOK_API = [ /* Gemini API, billions of tokens per minute */
+  {d:'2025-10-29', v:7,  s:'"first-party models now process 7 billion tokens per minute via direct API" — Pichai, Q3’25 call 2025-10-29'},
+  {d:'2026-02-04', v:10, s:'"over 10 billion tokens per minute via direct API, up from 7 billion last quarter" — Pichai, Q4’25 call 2026-02-04'},
+  {d:'2026-04-29', v:16, s:'"more than 16 billion tokens per minute, up from 10 billion last quarter" — Pichai, Q1’26 call 2026-04-29'},
+  {d:'2026-07-22', v:22, s:'"approximately 22 billion tokens per minute, up from 16 billion just a quarter ago" — Pichai, Q2’26 call 2026-07-22'},
+];
+/* OpenRouter — FULL weekly token series from the public rankings chart (site data,
+   captured via the live page 2026-07-31). total_B = ALL models incl. "Others", billions/week.
+   Last week (2026-07-27) is IN PROGRESS: fc_B = the site's own forecast for the remainder. */
+const OR_WEEKLY = [["2025-08-04",3431,0],["2025-08-11",3204,0],["2025-08-18",3207,0],["2025-08-25",3725,0],["2025-09-01",4600,0],["2025-09-08",4897,0],["2025-09-15",4917,0],["2025-09-22",5258,0],["2025-09-29",5380,0],["2025-10-06",5020,0],["2025-10-13",4644,0],["2025-10-20",4886,0],["2025-10-27",5511,0],["2025-11-03",5828,0],["2025-11-10",5928,0],["2025-11-17",6272,0],["2025-11-24",7185,0],["2025-12-01",6184,0],["2025-12-08",5773,0],["2025-12-15",5841,0],["2025-12-22",5665,0],["2025-12-29",5567,0],["2026-01-05",6420,0],["2026-01-12",7643,0],["2026-01-19",7494,0],["2026-01-26",8250,0],["2026-02-02",9804,0],["2026-02-09",13015,0],["2026-02-16",13948,0],["2026-02-23",13616,0],["2026-03-02",14789,0],["2026-03-09",16874,0],["2026-03-16",20297,0],["2026-03-23",22640,0],["2026-03-30",27006,0],["2026-04-06",20991,0],["2026-04-13",20469,0],["2026-04-20",21883,0],["2026-04-27",23798,0],["2026-05-04",25732,0],["2026-05-11",26906,0],["2026-05-18",28920,0],["2026-05-25",31808,0],["2026-06-01",36126,0],["2026-06-08",44606,0],["2026-06-15",46648,0],["2026-06-22",46720,0],["2026-06-29",46720,0],["2026-07-06",52620,0],["2026-07-13",62774,0],["2026-07-20",58041,0],["2026-07-27",41328,16147]];
+const OR_SRC = 'OpenRouter public rankings chart ("Tokens processed per week", all models incl. Others), captured from the live site 2026-07-31. Final week is in progress: solid = booked, open point = booked + the site’s own 1-week forecast. Marketplace volume ≠ industry total — OpenRouter is a small, fast-growing slice; use the slope, not the level.';
+const TOK_COHORT = [
+  {q:'Q3’25', v:150,  s:'"nearly 150 Google Cloud customers each processed ~1T tokens over the past 12 months" — Q3’25 call'},
+  {q:'Q1’26', v:330,  s:'"330 Google Cloud customers each processed over 1T tokens; 35 reached the 10T milestone" — Q1’26 call'},
+  {q:'Q2’26', v:500,  s:'"Nearly 500 cloud customers have each processed more than 1 trillion tokens in the last year" — Q2’26 call'},
+];
+
+/* S3 — Cloud growth y/y % by calendar quarter */
+const CG_Q = ['CQ2’24','CQ3’24','CQ4’24','CQ1’25','CQ2’25','CQ3’25','CQ4’25','CQ1’26','CQ2’26'];
+const CLOUD = [
+  {name:'Google Cloud', css:'--c-orange', pts:[29,35,30,28,32,34,48,63,82],
+   note:'Q2’26 includes first TPU system-sale revenue — growth "accelerated meaningfully even after excluding TPU sales" (CFO). Q1’26 revenue is TPU-free; the Q1 basis change was in BACKLOG only'},
+  {name:'AWS', css:'--c-green', pts:[18.8,19.1,19,17,17.5,20.2,24,28,36.7],
+   note:'Q2’26 +36.7% = "fastest growth in 18 quarters", 5th straight quarter of acceleration (Jassy)'},
+  {name:'Azure', css:'--c-blue', pts:[29,33,31,33,39,40,39,40,43], guide:45,
+   cc:[30,34,31,35,39,39,38,39,null],
+   note:'As-reported; constant-currency in the table view (F4Q26 cc not separately disclosed). F1Q27 guided ~+45% cc (2026-07-29)'},
+];
+const CLOUD_SRC = 'MSFT/GOOG/AMZN earnings transcripts, CQ2’24–CQ2’26 (MSFT fiscal quarters mapped to calendar). Azure = as-reported (cc variants in table); guide point = ~45% cc for CQ3’26, guided 2026-07-29.';
+
+/* S4 — Backlog, USD bn, by calendar quarter */
+const BK_Q = ['Q2’25','Q3’25','Q4’25','Q1’26','Q2’26'];
+const BACKLOG = [
+  {name:'MSFT commercial RPO', css:'--c-blue', pts:[368,392,625,627,678],
+   s:'MSFT earnings calls (fiscal F4Q25–F4Q26). F4Q26: +84% y/y, +25% ex-OpenAI; ~30% recognized <12mo; WAD 2.3yr'},
+  {name:'Google Cloud backlog', css:'--c-orange', pts:[106,155,240,462,514],
+   s:'Alphabet earnings calls. Q1’26 "nearly doubled" INCLUDES first TPU-hardware sales (basis change); majority still GCP contracts'},
+  {name:'AWS backlog', css:'--c-green', pts:[null,200,244,364,496],
+   s:'AMZN earnings calls. Q3’25 $200B from a paraphrased transcript (flag); Q2’26 $496B "growing triple-digits y/y"'},
+];
+
+/* S5 — margins + MS GenAI ROIC (planilha) */
+const GCP_MARGIN = [11,17,17.5,17.8,20.7,23.7,30.1,32.9,35.6]; /* same CG_Q axis */
+const MS_ROIC = [
+  {m:'Model 1 — GPU rental (IaaS)', rev:[18.9,27.0], revBase:22.9, ret:[23,39], retBase:31, retLb:'ROIC', mgn:'~67% incr. EBIT margin',
+   note:'Rents ALL capacity; the renter bears the training question'},
+  {m:'Model 2 — API on owned infra', rev:[17.0,38.8], revBase:30.4, ret:[19,63], retBase:46, retLb:'ROIC', mgn:'~75% incr. EBIT margin',
+   note:'65% of capacity on inference (base); training share earns zero but bears cost'},
+  {m:'Model 3 — API on rented infra', rev:[22.6,51.8], revBase:40.5, ret:[-9,32], retBase:25, retLb:'NOPAT margin (NOT ROIC)', mgn:'~31% incr. EBIT margin',
+   note:'No 75% utilization haircut (MS disclosure) — revenue basis flattered ~33% vs Model 2; return is a margin, not an asset-base ROIC'},
+];
+const MS_ROIC_SRC = 'Morgan Stanley "The Paths to 25–50% GenAI ROIC" — Brian Nowak (w/ Byrd, Wood), 2026-07-27. Standardized unit: 1GW = 410,256 GB300s, $39bn all-in capex, $7.7bn/yr owned-infra opex, 21% tax. Rebuilt as a live-formula workbook (Capstone, 2026-07-30) — reconciles to every reported anchor.';
+
+/* S6 — TAM: the simple what-if. 500M users × $/month × 12 */
+const WHATIF = [
+  {pm:50,  tam:300,  note:'≈ 3x the entire frontier-lab complex today (~$100B combined ARR)'},
+  {pm:100, tam:600,  note:'≈ 16x Microsoft’s whole AI business (AI ARR $37B, F3Q26)'},
+  {pm:200, tam:1200, note:'≈ the scale of BofA’s ENTIRE AI-datacenter systems TAM for 2030 ($1.7T) — funded by seats alone'},
+];
+/* Second frame: share of listed-world revenue. Aggregates derived from BBG index data
+   2026-07-31: BEst CY26 sales/share ÷ px × mkt cap → SPX ~$19.4T, RTY ~$2.3T, SXXP ~$9.4T ≈ $31T. */
+const WHATIF2 = [
+  {pct:1, tam:310, note:'≈ the $50/month seat case, arrived at from the other direction'},
+  {pct:2, tam:620, note:'≈ the $100/month seat case'},
+  {pct:3, tam:940, note:'approaching the $200/month seat case ($1.2T ≈ 4%)'},
+];
+/* $ per user per MONTH (FundaAI’s $25/$211 are monthly figures — "average spend $211/user/month, 8.4x OpenAI’s $25") */
+const LADDER = [
+  {v:25,   lb:'ChatGPT — average spend per user',   tag:'P', s:'$25/user/month — FundaAI "LLM 26H1 Pt 2", 2026-06-24 (~85% consumer mix)'},
+  {v:30,   lb:'M365 Copilot list',                  tag:'H', s:'$30/seat/month list; >30M paid seats as of F4Q26 (call, 2026-07-29)'},
+  {v:200,  lb:'Claude Max 20x',                     tag:'H', s:'$200/month — Anthropic public pricing'},
+  {v:211,  lb:'Claude — average spend per user',    tag:'P', s:'$211/user/month, 8.4x ChatGPT’s average — FundaAI "LLM 26H1 Pt 2", 2026-06-24 (~80% enterprise mix)'},
+  {v:4200, lb:'Meta — per-employee spend, at list', tag:'P', s:'>60T Claude tokens/30d ≅ ≥$50k/yr per employee AT LIST (~$4.2k/mo) — SemiAnalysis "TokenBudgeting", 2026-06-30'},
+  {v:8300, lb:'99th-pctile companies, per employee',tag:'P', s:'"the 99th percentile of companies spend $100,000 per year on AI per employee" (~$8.3k/mo; Ramp data) — SemiAnalysis Tokenomics Ep.020, 2026-07-15'},
+];
+
+/* S7 — Capex intensity (capex ÷ revenue, matching periods) */
+const INTENSITY = [
+  {tk:'META', css:'--c-pink', vals:[{y:'2025A',c:70,r:201,src:'CY25A: capex ~$70B / rev $201B (co. reports; house model 2026-06-11)'},
+    {y:'2026',c:137.5,r:253.7,src:'CY26: guide $130–145B (mid $137.5B; floor raised at the 2Q26 call 07-29, from $125–145B set 04-29) / rev BEst $253.7B'},
+    {y:'2027E',c:190.1,r:303.7,src:'CY27E: BEst capex $190.1B / BEst rev $303.7B, asof 2026-07-31'},
+    {y:'2028E',c:212.1,r:357.5,src:'CY28E: BEst $212.1B / $357.5B'}], basis:'calendar years'},
+  {tk:'GOOG', css:'--c-orange', vals:[{y:'2025A',c:91,r:403,src:'CY25A: capex ~$91B / rev $403B (co. reports; house model 2026-06-05)'},
+    {y:'2026',c:200,r:432.5,src:'CY26: guide $195–205B (raised twice: $175–185 → $180–190 → $195–205) / rev BEst $432.5B'},
+    {y:'2027E',c:301.7,r:541.9,src:'CY27E: BEst capex $301.7B / BEst rev $541.9B. MS Nowak models ~$350B'},
+    {y:'2028E',c:341.5,r:666.2,src:'CY28E: BEst $341.5B / $666.2B'}], basis:'calendar years'},
+  {tk:'MSFT', css:'--c-blue', vals:[{y:'FY25A',c:88.2,r:281.7,src:'FY25 (Jun-25): capex incl. finance leases ~$88B / rev $281.7B (co. reports; JPM 06-16)'},
+    {y:'FY26A',c:145.3,r:331.8,src:'FY26: all-in capex $145.3B (sum of reported quarters incl. leases) / rev $331.8B reported'},
+    {y:'FY27E',c:182.1,r:390.1,src:'FY27E: BEst capex $182.1B / BEst rev $390.1B (cash basis; JPM all-in path ≥$240B sits higher)'},
+    {y:'FY28E',c:217.0,r:465.9,src:'FY28E: BEst $217.0B / $465.9B'}], basis:'fiscal years (Jun-end)'},
+  {tk:'AMZN', css:'--c-green', vals:[{y:'2025A',c:131.8,r:716.9,src:'CY25A: capex $131.8B reported (BBG CAPITAL_EXPEND; cash-capex basis ≈$128B) / rev $716.9B'},
+    {y:'2026',c:220,r:826.7,src:'CY26: guide ~$220B (raised from ~$200B on memory costs, 07-30) / rev BEst $826.7B'},
+    {y:'2027E',c:258.1,r:942.7,src:'CY27E: BEst capex $258.1B / BEst rev $942.7B'},
+    {y:'2028E',c:276.8,r:1056.1,src:'CY28E: BEst $276.8B / $1,056B'}], basis:'calendar years; whole-co revenue'},
+];
+
+/* S8 — re-rating: weekly fwd P/E paths (BEst blended), 2025-07 → 2026-07 */
+const PE_LB = ['MSFT','GOOG','META','AMZN','NVDA','AVGO','TSM','ASML'];
+/* filled from _data/ai_rerating_2026.json at build time */
+const PE_DATES = ["2025-07-04", "2025-07-11", "2025-07-18", "2025-07-25", "2025-08-01", "2025-08-08", "2025-08-15", "2025-08-22", "2025-08-29", "2025-09-05", "2025-09-12", "2025-09-19", "2025-09-26", "2025-10-03", "2025-10-10", "2025-10-17", "2025-10-24", "2025-10-31", "2025-11-07", "2025-11-14", "2025-11-21", "2025-11-28", "2025-12-05", "2025-12-12", "2025-12-19", "2025-12-26", "2026-01-02", "2026-01-09", "2026-01-16", "2026-01-23", "2026-01-30", "2026-02-06", "2026-02-13", "2026-02-20", "2026-02-27", "2026-03-06", "2026-03-13", "2026-03-20", "2026-03-27", "2026-04-03", "2026-04-10", "2026-04-17", "2026-04-24", "2026-05-01", "2026-05-08", "2026-05-15", "2026-05-22", "2026-05-29", "2026-06-05", "2026-06-12", "2026-06-19", "2026-06-26", "2026-07-03", "2026-07-10", "2026-07-17", "2026-07-24", "2026-07-31"];
+const PE_PATHS = {"MSFT":[[0,28.52],[1,28.77],[2,29.15],[3,29.39],[4,29.03],[5,28.94],[6,28.88],[7,28.16],[8,28.09],[9,27.44],[10,28.27],[11,28.71],[12,28.35],[13,28.66],[14,28.36],[15,28.51],[16,29.1],[17,27.68],[18,26.56],[19,27.31],[20,25.24],[21,26.28],[22,25.81],[23,25.58],[24,26.0],[25,26.1],[26,25.31],[27,25.6],[28,24.51],[29,24.9],[30,22.63],[31,21.11],[32,21.13],[33,20.91],[34,20.67],[35,21.61],[36,20.89],[37,20.17],[38,18.84],[39,19.73],[40,19.62],[41,22.38],[42,22.44],[43,21.41],[44,21.4],[45,21.75],[46,21.55],[47,23.18],[48,21.45],[49,20.12],[50,19.53],[51,19.2],[52,20.1],[53,19.83],[54,20.28],[55,19.64],[56,23.67]],"GOOG":[[0,14.17],[1,14.16],[2,14.47],[3,15.41],[4,15.08],[5,15.96],[6,16.2],[7,16.35],[8,16.89],[9,19.12],[10,19.63],[11,20.74],[12,20.09],[13,19.99],[14,19.12],[15,20.43],[16,20.97],[17,21.53],[18,21.37],[19,20.5],[20,22.08],[21,23.59],[22,23.8],[23,23.01],[24,22.82],[25,23.29],[26,23.28],[27,24.22],[28,24.29],[29,24.25],[30,24.96],[31,23.72],[32,22.46],[33,23.11],[34,22.9],[35,21.82],[36,22.05],[37,21.85],[38,20.02],[39,21.53],[40,23.17],[41,24.89],[42,25.1],[43,27.39],[44,28.43],[45,28.16],[46,27.02],[47,26.81],[48,25.98],[49,25.1],[50,25.82],[51,23.46],[52,25.0],[53,24.88],[54,24.16],[55,21.86],[56,24.27]],"META":[[0,19.56],[1,19.52],[2,17.32],[3,17.39],[4,18.53],[5,19.01],[6,19.4],[7,18.65],[8,18.25],[9,18.59],[10,18.67],[11,19.23],[12,18.38],[13,17.66],[14,17.53],[15,17.77],[16,18.81],[17,17.72],[18,16.99],[19,16.62],[20,16.48],[21,17.97],[22,18.82],[23,18.0],[24,18.28],[25,18.41],[26,17.95],[27,18.14],[28,17.12],[29,18.36],[30,20.4],[31,18.73],[32,18.12],[33,18.57],[34,18.31],[35,18.22],[36,16.78],[37,16.2],[38,14.34],[39,15.67],[40,17.63],[41,19.39],[42,18.92],[43,16.78],[44,16.85],[45,16.97],[46,16.86],[47,17.86],[48,16.74],[49,15.39],[50,15.66],[51,14.93],[52,16.3],[53,18.8],[54,18.23],[55,16.95],[56,16.42]],"AMZN":[[0,22.64],[1,22.8],[2,22.91],[3,23.42],[4,21.04],[5,21.72],[6,22.47],[7,22.26],[8,22.28],[9,22.6],[10,22.19],[11,22.52],[12,21.38],[13,21.35],[14,21.04],[15,20.02],[16,21.07],[17,23.18],[18,23.2],[19,22.27],[20,20.95],[21,22.16],[22,21.32],[23,21.01],[24,21.34],[25,21.82],[26,21.26],[27,22.81],[28,22.0],[29,22.01],[30,21.88],[31,20.07],[32,19.0],[33,20.08],[34,20.07],[35,20.71],[36,20.17],[37,19.95],[38,19.36],[39,20.38],[40,23.09],[41,24.27],[42,26.12],[43,25.77],[44,25.91],[45,25.09],[46,25.3],[47,25.87],[48,23.51],[49,22.8],[50,23.36],[51,22.24],[52,23.19],[53,23.45],[54,23.59],[55,22.15],[56,24.64]],"NVDA":[[0,26.81],[1,27.75],[2,28.51],[3,28.58],[4,28.53],[5,29.95],[6,29.28],[7,28.14],[8,26.28],[9,25.21],[10,26.9],[11,26.67],[12,26.89],[13,28.23],[14,27.55],[15,27.0],[16,27.4],[17,28.54],[18,26.33],[19,26.04],[20,22.24],[21,21.7],[22,22.33],[23,21.43],[24,21.94],[25,23.09],[26,22.89],[27,22.29],[28,22.32],[29,22.47],[30,22.88],[31,22.19],[32,21.78],[33,22.48],[34,19.83],[35,19.74],[36,20.03],[37,18.98],[38,18.32],[39,19.37],[40,20.6],[41,21.95],[42,22.67],[43,21.6],[44,23.42],[45,24.27],[46,22.05],[47,21.62],[48,21.05],[49,21.07],[50,21.67],[51,19.44],[52,19.68],[53,21.3],[54,20.37],[55,20.77],[56,20.19]],"AVGO":[[0,29.85],[1,29.76],[2,30.7],[3,31.43],[4,31.25],[5,33.09],[6,33.24],[7,31.9],[8,32.16],[9,31.4],[10,33.46],[11,31.99],[12,30.9],[13,31.26],[14,30.05],[15,32.03],[16,32.43],[17,33.85],[18,31.96],[19,31.13],[20,30.73],[21,35.78],[22,34.55],[23,28.75],[24,26.98],[25,27.91],[26,27.55],[27,27.28],[28,27.35],[29,24.88],[30,25.69],[31,25.9],[32,25.21],[33,25.61],[34,24.63],[35,22.41],[36,21.79],[37,20.84],[38,20.12],[39,21.05],[40,24.52],[41,26.72],[42,27.79],[43,27.69],[44,28.27],[45,27.79],[46,27.41],[47,29.59],[48,24.83],[49,24.4],[50,26.27],[51,23.35],[52,22.98],[53,25.5],[54,23.62],[55,24.33],[56,24.87]],"TSM":[[0,18.59],[1,18.71],[2,19.85],[3,20.34],[4,19.83],[5,20.3],[6,20.15],[7,20.03],[8,19.85],[9,20.81],[10,21.97],[11,22.37],[12,23.02],[13,23.82],[14,22.69],[15,21.99],[16,21.9],[17,22.04],[18,21.19],[19,21.15],[20,20.54],[21,21.75],[22,21.88],[23,21.54],[24,21.43],[25,22.37],[26,23.2],[27,23.65],[28,22.21],[29,21.34],[30,20.92],[31,22.23],[32,23.11],[33,23.52],[34,23.54],[35,21.54],[36,21.67],[37,21.01],[38,20.84],[39,21.63],[40,23.08],[41,21.79],[42,23.33],[43,23.08],[44,23.71],[45,23.37],[46,23.36],[47,23.95],[48,23.83],[49,24.43],[50,26.52],[51,24.91],[52,24.61],[53,24.39],[54,21.18],[55,21.1],[56,21.08]],"ASML":[[0,24.38],[1,25.02],[2,23.41],[3,22.44],[4,22.13],[5,22.86],[6,23.39],[7,23.76],[8,23.41],[9,24.58],[10,25.57],[11,29.22],[12,29.98],[13,32.24],[14,29.68],[15,30.95],[16,30.74],[17,31.8],[18,30.33],[19,29.91],[20,29.01],[21,31.44],[22,32.49],[23,31.66],[24,31.01],[25,31.36],[26,33.32],[27,36.06],[28,38.39],[29,37.93],[30,35.41],[31,35.23],[32,34.81],[33,36.66],[34,36.07],[35,32.7],[36,34.45],[37,33.38],[38,33.08],[39,33.43],[40,36.09],[41,33.52],[42,33.27],[43,32.49],[44,36.07],[45,34.47],[46,37.54],[47,36.88],[48,37.88],[49,42.84],[50,44.76],[51,41.58],[52,40.33],[53,40.71],[54,32.35],[55,32.68],[56,29.85]]};
+const PE_MARKS = { /* first weekly obs (2025-08-01), Jan-30-26, Jul-31-26 */
+  MSFT:[29.0,22.6,23.7], GOOG:[15.1,25.0,24.3], META:[18.5,20.4,16.4], AMZN:[21.0,21.9,24.6],
+  NVDA:[28.5,22.9,20.2], AVGO:[31.3,25.7,24.9], TSM:[19.8,20.9,21.1], ASML:[22.1,35.4,29.8],
+};
+const PX_CHG = {MSFT:8.2, GOOG:5.5, META:-22.2, AMZN:13.7, NVDA:5.4, AVGO:17.9, TSM:22.5, ASML:14.7}; /* Jan-30→Jul-31 % */
+const G27 = [ /* consensus CY27 revenue growth %, Feb vintage vs now */
+  {tk:'AVGO', feb:38.3, now:54.1}, {tk:'NVDA', feb:27.7, now:43.7}, {tk:'TSM', feb:23.6, now:34.3},
+  {tk:'ASML', feb:17.5, now:27.6}, {tk:'GOOG', feb:14.4, now:25.3}, {tk:'META', feb:18.1, now:19.7},
+  {tk:'AMZN', feb:11.3, now:14.0},
+];
+const G28 = [
+  {tk:'AVGO', feb:20.5, now:32.5}, {tk:'NVDA', feb:27.1, now:22.7}, {tk:'TSM', feb:17.6, now:25.0},
+  {tk:'ASML', feb:9.8, now:20.3}, {tk:'GOOG', feb:13.0, now:22.9}, {tk:'META', feb:17.5, now:17.7},
+  {tk:'AMZN', feb:10.4, now:12.0},
+];
+const RERATE_SRC = 'Bloomberg BEst via Capstone wrapper, asof 2026-07-31 (_data/ai_rerating_2026.json). P/E = BEST_PE_RATIO pulled via HistoricalDataRequest with no period override (blended-forward basis; note a reference/bdp request defaults to current-FY and reads differently — e.g. GOOG ~18.5x on CY26 incl. the ~$80bn 2Q Anthropic mark). Revenue growth = BEST_SALES with 1CY/2CY/3CY calendar overrides; "Feb" vintage = week of 2026-01-30. MSFT excluded from the CY panel (June fiscal year makes weekly CY calendarization contributor-thin); on BEst 1FY/2FY fiscal overrides Street has MSFT FY27 +17.6% and FY28 +19.4% (re-pulled 07-31; blended-forward windows read ~+19.5% both years).';
+
+/* S9 — TSM & ASML guide walks + quotes */
+const TSM_STEPS = [
+  {d:'2026-01-15', v:'"close to 30%"', n:'FY26 USD revenue-growth guide; capex $52–56B; "next 3 years capex significantly higher than the past 3" — 4Q25 call'},
+  {d:'2026-04-16', v:'"above 30%"', n:'guide raised; capex to the high end of $52–56B; the July raise was pre-announced (verbatim: "a more accurate or a more precise number" to come in July) — 1Q26 call'},
+  {d:'2026-07-16', v:'"slightly above 40%"', n:'raised again; capex raised to $60–64B; +$100B Arizona (total $265B, "additional four or more fabs"); 13 new fabs in Taiwan; "capex in the next three years will be EVEN MORE significantly higher" — 2Q26 call'},
+];
+const ASML_STEPS = [
+  {d:'2026-01-28', v:'€34–39B', n:'FY26 net-sales guide, GM 51–53%; last disclosed backlog €38.8B, Q4 bookings €13.2B (56% memory) — Q4’25 call'},
+  {d:'2026-04-15', v:'€36–40B', n:'narrowed and raised; "for the foreseeable future, demand will continue to outpace supply"; memory customers "sold out for the remainder of the year" — Q1’26 call'},
+  {d:'2026-07-15', v:'€43–45B', n:'+35% y/y at mid, GM raised to 54–56%; memory system sales +75% y/y; Low-NA EUV capacity +30% in 2027 (2027 "close to being fully covered with orders") and a further +30% under investigation for 2028; immersion +30%/+30% — Q2’26 call'},
+];
+
+/* Verdict scorecard */
+const SCORE = [
+  {n:1, sig:'Lab ARR', feb:'OpenAI ~$20B + Anthropic ~$9B run-rate; plans saw ~$50B combined for 2026', jul:'~$100B combined ARR; Anthropic $69B and EBIT-positive; OpenAI "July > all of Q2"', v:'up', lb:'accelerating'},
+  {n:2, sig:'Token consumption', feb:'OpenRouter ~10T tokens/wk; Gemini API ~10B tok/min', jul:'OpenRouter 58–63T/wk (~17x y/y); API 22B tok/min; ~500 GCP customers past 1T tokens', v:'up', lb:'~17x/yr'},
+  {n:3, sig:'Cloud growth', feb:'AWS +24%, GCP +48%, Azure ~+39–40%', jul:'AWS +36.7%, GCP +82%, Azure +43% and guiding ~+45% cc', v:'up', lb:'all 3 accelerating'},
+  {n:4, sig:'Cloud backlog', feb:'~$1.11T disclosed (MSFT 625 + GOOG 240 + AMZN 244)', jul:'~$1.69T; MSFT sequential growth ALL ex-frontier-labs', v:'up', lb:'quality improving'},
+  {n:5, sig:'Margins & ROIC', feb:'Dilution feared; ROIC an act of faith', jul:'GCP op margin 35.6% at +82% growth; AWS 39.3%; MS quantifies 25–50% ROIC paths', v:'up', lb:'quantified'},
+  {n:6, sig:'TAM ahead', feb:'Copilot 15–20M seats, $30 seat cap', jul:'What-if: 500M workers × $50–200/mo = $0.3–1.2T/yr (≈1–4% of S&P+R2000+STOXX revenue); seats 2x in 6 months; GitHub’s usage-billing template landed (+60% q/q)', v:'up', lb:'option opening'},
+  {n:7, sig:'Capex intensity', feb:'2027E street capex $540B (4 names)', jul:'$955B street / $1.1–1.4T frames; intensity → 27–63% of revenue; FCF negative pockets', v:'watch', lb:'the bill'},
+  {n:8, sig:'Multiple', feb:'Complex at 20–35x fwd P/E', jul:'Prices +5–22% with multiples flat-to-LOWER — estimate-led, not re-rating-led', v:'up', lb:'earned, not paid'},
+  {n:9, sig:'TSM & ASML', feb:'TSM "close to 30%"; ASML €34–39B', jul:'TSM "slightly above 40%" + $265B Arizona; ASML €44B +30%/+30% capacity into 2028', v:'up', lb:'cycle extends'},
+];
+</script>
+<script>
+/* ============ RENDER ============ */
+const $=q=>document.querySelector(q), $$=q=>[...document.querySelectorAll(q)];
+const deck=$('#deck'), scrub=$('#scrub');
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');}
+const fmt1=v=>v==null?'–':(Math.round(v*10)/10).toLocaleString('en-US');
+const fmt0=v=>v==null?'–':Math.round(v).toLocaleString('en-US');
+
+/* ---- generic scales ---- */
+function scaler(min,max,a,b){const d=(max-min)||1; return v=>a+(v-min)/d*(b-a);}
+function niceTicks(min,max,n=5){
+  const span=max-min, step0=span/n, mag=Math.pow(10,Math.floor(Math.log10(step0)));
+  const step=[1,2,2.5,5,10].map(m=>m*mag).find(s=>span/s<=n+1)||mag*10;
+  const lo=Math.ceil(min/step)*step, out=[];
+  for(let v=lo;v<=max+1e-9;v+=step) out.push(Math.round(v*100)/100);
+  return out;
+}
+
+/* ---- multi-series category line chart ---- */
+function lineChart({cats, series, W=940, H=330, yfmt=v=>v, ypad=0.08, unit='', endLabels=true}){
+  const P={l:46,r:150,t:16,b:30};
+  let vals=[]; series.forEach(s=>{s.pts.forEach(v=>{if(v!=null)vals.push(v);}); if(s.guide!=null)vals.push(s.guide);});
+  let ymin=Math.min(...vals), ymax=Math.max(...vals);
+  const span=(ymax-ymin)||1; ymin=Math.max(0,ymin-span*ypad); ymax+=span*ypad;
+  const ticks=niceTicks(ymin,ymax,5);
+  ymin=Math.min(ymin,ticks[0]); ymax=Math.max(ymax,ticks[ticks.length-1]);
+  const nx=cats.length + (series.some(s=>s.guide!=null)?1:0);
+  const X=i=>P.l+i/(nx-1)*(W-P.l-P.r), Y=scaler(ymin,ymax,H-P.b,P.t);
+  let g='';
+  ticks.forEach(t=>{g+=`<line class="gl" x1="${P.l}" x2="${W-P.r}" y1="${Y(t)}" y2="${Y(t)}"/><text class="tick" x="${P.l-7}" y="${Y(t)+3.5}" text-anchor="end">${yfmt(t)}</text>`;});
+  cats.forEach((c,i)=>{ if(i%1===0) g+=`<text class="tick" x="${X(i)}" y="${H-P.b+16}" text-anchor="middle">${c}</text>`;});
+  series.forEach(s=>{
+    const col=`var(${s.css})`;
+    let path='', prev=false;
+    s.pts.forEach((v,i)=>{ if(v==null){prev=false;return;} path+=(prev?'L':'M')+X(i).toFixed(1)+','+Y(v).toFixed(1); prev=true;});
+    g+=`<path d="${path}" fill="none" stroke="${col}" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>`;
+    s.pts.forEach((v,i)=>{ if(v==null)return;
+      const tip=esc(`${s.name} — ${cats[i]}: ${yfmt(v)}${unit}${s.note?'\n'+s.note:''}`);
+      g+=`<circle cx="${X(i)}" cy="${Y(v)}" r="3.4" fill="${col}" stroke="var(--surface)" stroke-width="2"/>`;
+      g+=`<circle cx="${X(i)}" cy="${Y(v)}" r="11" fill="transparent" data-tip="${tip}"/>`;});
+    if(s.guide!=null){
+      const i0=s.pts.length-1, xg=X(nx-1);
+      g+=`<line x1="${X(i0)}" y1="${Y(s.pts[i0])}" x2="${xg}" y2="${Y(s.guide)}" stroke="${col}" stroke-width="2" stroke-dasharray="3 4"/>`;
+      g+=`<circle cx="${xg}" cy="${Y(s.guide)}" r="4" fill="var(--surface)" stroke="${col}" stroke-width="2.2" data-tip="${esc(s.name+' guide: ~'+yfmt(s.guide)+unit+' — '+(s.guideNote||''))}"/>`;
+      g+=`<text class="tick" x="${xg}" y="${H-P.b+16}" text-anchor="middle">guide</text>`;
+    }
+    if(endLabels){
+      const li=s.pts.map((v,i)=>v==null?null:i).filter(v=>v!=null).pop();
+      const lx=s.guide!=null?X(nx-1):X(li), ly=Y(s.guide!=null?s.guide:s.pts[li]);
+      g+=`<circle cx="${lx+10}" cy="${ly-1}" r="3.5" fill="${col}"/><text class="dl" x="${lx+17}" y="${ly+3}">${s.name} ${yfmt(s.guide!=null?s.guide:s.pts[li])}${unit}</text>`;
+    }
+  });
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img">${g}</svg>`;
+}
+
+/* ---- date-scatter chart (ARR) ---- */
+function arrChart(){
+  const W=940,H=330,P={l:46,r:170,t:18,b:30};
+  const d0=new Date('2025-12-01').getTime(), d1=new Date('2026-08-10').getTime();
+  const X=t=>P.l+(new Date(t).getTime()-d0)/(d1-d0)*(W-P.l-P.r);
+  const Y=scaler(0,75,H-P.b,P.t);
+  let g='';
+  [0,25,50,75].forEach(t=>{g+=`<line class="gl" x1="${P.l}" x2="${W-P.r}" y1="${Y(t)}" y2="${Y(t)}"/><text class="tick" x="${P.l-7}" y="${Y(t)+3.5}" text-anchor="end">$${t}B</text>`;});
+  ['2026-01-01','2026-02-01','2026-03-01','2026-04-01','2026-05-01','2026-06-01','2026-07-01','2026-08-01'].forEach(d=>{
+    g+=`<text class="tick" x="${X(d)}" y="${H-P.b+16}" text-anchor="middle">${['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug'][new Date(d).getUTCMonth()]}</text>`;});
+  const draw=(rows,css,name)=>{
+    const col=`var(${css})`;
+    let path=''; rows.forEach((r,i)=>{path+=(i?'L':'M')+X(r.d).toFixed(1)+','+Y(r.v).toFixed(1);});
+    g+=`<path d="${path}" fill="none" stroke="${col}" stroke-width="2.2" stroke-linejoin="round"/>`;
+    rows.forEach(r=>{g+=`<circle cx="${X(r.d)}" cy="${Y(r.v)}" r="4" fill="${col}" stroke="var(--surface)" stroke-width="2"/><circle cx="${X(r.d)}" cy="${Y(r.v)}" r="12" fill="transparent" data-tip="${esc('$'+r.v+'B — '+r.s)}"/>`;});
+    const last=rows[rows.length-1];
+    g+=`<circle cx="${X(last.d)+10}" cy="${Y(last.v)-1}" r="3.5" fill="${col}"/><text class="dl" x="${X(last.d)+17}" y="${Y(last.v)+3}">${name} $${last.v}B</text>`;
+  };
+  draw(ARR.anthropic,'--c-purple','Anthropic');
+  draw(ARR.openai,'--c-green','OpenAI');
+  /* OpenAI July arrow — no hard number */
+  const lo=ARR.openai[ARR.openai.length-1];
+  g+=`<line x1="${X(lo.d)}" y1="${Y(lo.v)}" x2="${X('2026-07-29')}" y2="${Y(52)}" stroke="var(--c-green)" stroke-width="2" stroke-dasharray="3 4"/>`;
+  g+=`<circle cx="${X('2026-07-29')}" cy="${Y(52)}" r="5" fill="var(--surface)" stroke="var(--c-green)" stroke-width="2" data-tip="${esc(ARR_OPEN_NOTE.s+' Vertical position illustrative — no disclosed level.')}"/>`;
+  g+=`<text class="anno" x="${X('2026-07-29')-4}" y="${Y(52)-10}" text-anchor="end">“July exceeded all of Q2” (level unknown)</text>`;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img">${g}</svg>`;
+}
+
+/* ---- OpenRouter full weekly token chart (the whole picture) ---- */
+function orChart(){
+  const W=940,H=350,P={l:50,r:96,t:26,b:32};
+  const n=OR_WEEKLY.length;
+  const X=scaler(0,n-1,P.l,W-P.r);
+  const Y=scaler(0,70,H-P.b,P.t); /* trillions/week */
+  let g='';
+  [0,10,20,30,40,50,60,70].forEach(t=>{g+=`<line class="gl" x1="${P.l}" x2="${W-P.r}" y1="${Y(t)}" y2="${Y(t)}"/><text class="tick" x="${P.l-7}" y="${Y(t)+3.5}" text-anchor="end">${t}T</text>`;});
+  /* month ticks where the month changes (string-sliced, no Date TZ traps) */
+  const MN=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  let pm='';
+  OR_WEEKLY.forEach((r,i)=>{const m=r[0].slice(5,7); if(m!==pm){pm=m;
+    const lb=MN[+m-1]+(m==='01'||i===0?'-'+r[0].slice(2,4):'');
+    g+=`<text class="tick" x="${X(i)}" y="${H-P.b+16}" text-anchor="middle">${lb}</text>`;}});
+  /* area + line over complete weeks (all but last) */
+  const tv=i=>OR_WEEKLY[i][1]/1000;
+  let path='', area=`M${X(0).toFixed(1)},${Y(0).toFixed(1)}`;
+  for(let i=0;i<n-1;i++){const cmd=(i?'L':'M'); path+=cmd+X(i).toFixed(1)+','+Y(tv(i)).toFixed(1); area+='L'+X(i).toFixed(1)+','+Y(tv(i)).toFixed(1);}
+  area+=`L${X(n-2).toFixed(1)},${Y(0).toFixed(1)}Z`;
+  g+=`<path d="${area}" fill="var(--c-purple)" opacity=".13"/>`;
+  g+=`<path d="${path}" fill="none" stroke="var(--c-purple)" stroke-width="2.2" stroke-linejoin="round"/>`;
+  /* final in-progress week: dashed to booked+forecast */
+  const proj=(OR_WEEKLY[n-1][1]+OR_WEEKLY[n-1][2])/1000;
+  g+=`<line x1="${X(n-2)}" y1="${Y(tv(n-2))}" x2="${X(n-1)}" y2="${Y(proj)}" stroke="var(--c-purple)" stroke-width="2" stroke-dasharray="3 4"/>`;
+  g+=`<circle cx="${X(n-1)}" cy="${Y(proj)}" r="4.5" fill="var(--surface)" stroke="var(--c-purple)" stroke-width="2.2" data-tip="${esc('Week of 2026-07-27 (in progress): '+fmt1(OR_WEEKLY[n-1][1]/1000)+'T booked + '+fmt1(OR_WEEKLY[n-1][2]/1000)+'T site forecast ≈ '+fmt1(proj)+'T')}"/>`;
+  /* hover targets on every complete week */
+  for(let i=0;i<n-1;i++){
+    g+=`<circle cx="${X(i)}" cy="${Y(tv(i))}" r="9" fill="transparent" data-tip="${esc('Week of '+OR_WEEKLY[i][0]+': '+fmt1(tv(i))+'T tokens')}"/>`;}
+  /* annotations */
+  const iPeak=49; /* 2026-07-13, 62.8T */
+  g+=`<circle cx="${X(0)}" cy="${Y(tv(0))}" r="3.5" fill="var(--c-purple)"/><text class="anno" x="${X(0)}" y="${Y(tv(0))-9}" text-anchor="start">3.4T/wk</text>`;
+  g+=`<circle cx="${X(iPeak)}" cy="${Y(tv(iPeak))}" r="3.5" fill="var(--c-purple)"/><text class="dl" x="${X(iPeak)-6}" y="${Y(tv(iPeak))-9}" text-anchor="end">62.8T/wk</text>`;
+  g+=`<text class="dl" x="${X(n-1)+9}" y="${Y(proj)+3}">≈${fmt1(proj)}T proj.</text>`;
+  g+=`<text class="anno" x="${X(30)}" y="${Y(46)}" text-anchor="middle">~17–18x in 12 months</text>`;
+  g+=`<line class="bl" x1="${P.l}" x2="${W-P.r}" y1="${Y(0)}" y2="${Y(0)}"/>`;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img">${g}</svg>`;
+}
+function tabview_or(){
+  const rows=[]; for(let i=0;i<OR_WEEKLY.length;i+=4) rows.push([OR_WEEKLY[i][0], fmt1(OR_WEEKLY[i][1]/1000)]);
+  const last=OR_WEEKLY[OR_WEEKLY.length-1];
+  rows.push([last[0]+' (partial)', fmt1(last[1]/1000)+' +'+fmt1(last[2]/1000)+' fc']);
+  return tabview('or', ['Week of','Tokens, T'], rows);
+}
+
+/* ---- grouped bars (backlog) ---- */
+function backlogChart(){
+  const W=940,H=340,P={l:52,r:14,t:20,b:30};
+  const nq=BK_Q.length, ns=BACKLOG.length;
+  const ymax=720, Y=scaler(0,ymax,H-P.b,P.t);
+  const bandW=(W-P.l-P.r)/nq, barW=Math.min(40,(bandW-24)/ns);
+  let g='';
+  niceTicks(0,ymax,5).forEach(t=>{g+=`<line class="gl" x1="${P.l}" x2="${W-P.r}" y1="${Y(t)}" y2="${Y(t)}"/><text class="tick" x="${P.l-7}" y="${Y(t)+3.5}" text-anchor="end">$${t}B</text>`;});
+  BK_Q.forEach((q,i)=>{g+=`<text class="tick" x="${P.l+bandW*(i+0.5)}" y="${H-P.b+16}" text-anchor="middle">${q}</text>`;});
+  BACKLOG.forEach((s,si)=>{
+    const col=`var(${s.css})`;
+    s.pts.forEach((v,i)=>{ if(v==null)return;
+      const x=P.l+bandW*i+(bandW-ns*barW-(ns-1)*2)/2+si*(barW+2);
+      g+=`<rect x="${x.toFixed(1)}" y="${Y(v).toFixed(1)}" width="${barW}" height="${(Y(0)-Y(v)).toFixed(1)}" rx="4" fill="${col}" data-tip="${esc(s.name+' — '+BK_Q[i]+': $'+v+'B\n'+s.s)}"/>`;
+      g+=`<text class="dl" x="${x+barW/2}" y="${Y(v)-5}" text-anchor="middle" style="font-size:10px">${v}</text>`;});
+  });
+  g+=`<line class="bl" x1="${P.l}" x2="${W-P.r}" y1="${Y(0)}" y2="${Y(0)}"/>`;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img">${g}</svg>`;
+}
+
+/* ---- MS ROIC band chart ---- */
+function roicChart(){
+  const W=940,H=250,P={l:250,r:250,t:34,b:34};
+  const X=scaler(0,55,P.l,W-P.r);
+  let g='';
+  [0,10,20,30,40,50].forEach(t=>{g+=`<line class="gl" x1="${X(t)}" x2="${X(t)}" y1="${P.t-6}" y2="${H-P.b+6}"/><text class="tick" x="${X(t)}" y="${H-P.b+22}" text-anchor="middle">$${t}B</text>`;});
+  g+=`<text class="anno" x="${X(27.5)}" y="${P.t-16}" text-anchor="middle">Revenue per GW-year, $bn (band = MS bear→bull scenarios; dot = base)</text>`;
+  MS_ROIC.forEach((m,i)=>{
+    const y=P.t+22+i*58, col=['--c-blue','--c-green','--c-amber'][i];
+    g+=`<text class="dl" x="${P.l-12}" y="${y+4}" text-anchor="end">${m.m}</text>`;
+    g+=`<rect x="${X(m.rev[0])}" y="${y-7}" width="${X(m.rev[1])-X(m.rev[0])}" height="14" rx="7" fill="var(${col})" opacity=".28" data-tip="${esc(m.m+'\nRevenue/GW: $'+m.rev[0]+'–'+m.rev[1]+'B (base $'+m.revBase+'B)\n'+m.mgn+'\n'+m.note)}"/>`;
+    g+=`<circle cx="${X(m.revBase)}" cy="${y}" r="5.5" fill="var(${col})" stroke="var(--surface)" stroke-width="2" data-tip="${esc(m.m+' — base case $'+m.revBase+'B revenue/GW; '+m.retLb+' '+m.retBase+'%')}"/>`;
+    g+=`<text class="dl" x="${W-P.r+12}" y="${y-3}">${m.retLb}: <tspan style="font-weight:800">${m.retBase}%</tspan></text>`;
+    g+=`<text class="anno" x="${W-P.r+12}" y="${y+13}">band ${m.ret[0]}% → ${m.ret[1]}%</text>`;
+  });
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img">${g}</svg>`;
+}
+
+/* ---- TAM ladder (log x) ---- */
+function ladderChart(){
+  const W=940,H=250,P={l:20,r:20,t:44,b:40};
+  const lg=v=>Math.log10(v), X=scaler(lg(18),lg(13000),P.l+80,W-P.r-40);
+  const y=H/2+6;
+  let g=`<line class="bl" x1="${P.l}" x2="${W-P.r}" y1="${y}" y2="${y}"/>`;
+  [25,100,300,1000,3000,10000].forEach(t=>{g+=`<text class="tick" x="${X(lg(t))}" y="${H-10}" text-anchor="middle">$${t>=1000?(t/1000)+'k':t}</text>`;g+=`<line class="gl" x1="${X(lg(t))}" x2="${X(lg(t))}" y1="${y-6}" y2="${y+6}"/>`;});
+  /* the what-if band $50–200/mo */
+  g+=`<rect x="${X(lg(50))}" y="${y-14}" width="${X(lg(200))-X(lg(50))}" height="28" rx="6" fill="var(--accent)" opacity=".09"/>`;
+  g+=`<text class="anno" x="${(X(lg(50))+X(lg(200)))/2}" y="${y+50}" text-anchor="middle" style="fill:var(--accent); font-weight:650">the what-if band ($50–200/mo)</text>`;
+  const tagc={H:'var(--hard)',P:'var(--partial)',E:'var(--est)'};
+  LADDER.forEach((r,i)=>{
+    const x=X(lg(r.v)), up=i%2===0;
+    g+=`<circle cx="${x}" cy="${y}" r="7" fill="${tagc[r.tag]}" stroke="var(--surface)" stroke-width="2.5" data-tip="${esc('$'+fmt0(r.v)+'/user/month — '+r.lb+'\n'+r.s)}"/>`;
+    g+=`<line x1="${x}" y1="${y+(up?-9:9)}" x2="${x}" y2="${y+(up?-26:26)}" stroke="var(--baseline)" stroke-width="1"/>`;
+    g+=`<text class="dl" x="${x}" y="${y+(up?-32:40)}" text-anchor="middle">$${r.v>=1000?((r.v/1000).toFixed(r.v<10000?1:0).replace(/\.0$/,''))+'k':r.v}</text>`;
+    g+=`<text class="anno" x="${x}" y="${y+(up?-46:54)}" text-anchor="middle">${r.lb.split(' — ')[0]}</text>`;
+  });
+  g+=`<text class="anno" x="${P.l}" y="${16}">$ per user per MONTH — log scale. Green = listed price (HARD) · blue = reported estimate (PARTIAL)</text>`;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img">${g}</svg>`;
+}
+
+/* ---- intensity small multiples ---- */
+function intensityPanels(){
+  return `<div class="grid2" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">`+INTENSITY.map(co=>{
+    const W=300,H=210,P={l:38,r:8,t:26,b:24};
+    const ymax=70, Y=scaler(0,ymax,H-P.b,P.t);
+    const n=co.vals.length, bandW=(W-P.l-P.r)/n, barW=Math.min(46,bandW-16);
+    let g='';
+    [0,20,40,60].forEach(t=>{g+=`<line class="gl" x1="${P.l}" x2="${W-P.r}" y1="${Y(t)}" y2="${Y(t)}"/><text class="tick" x="${P.l-5}" y="${Y(t)+3.5}" text-anchor="end">${t}%</text>`;});
+    co.vals.forEach((v,i)=>{
+      const pct=v.c/v.r*100, x=P.l+bandW*i+(bandW-barW)/2;
+      g+=`<rect x="${x}" y="${Y(pct).toFixed(1)}" width="${barW}" height="${(Y(0)-Y(pct)).toFixed(1)}" rx="4" fill="var(${co.css})" data-tip="${esc(co.tk+' '+v.y+': capex $'+v.c+'B ÷ revenue $'+v.r+'B = '+pct.toFixed(0)+'%\n'+v.src)}"/>`;
+      g+=`<text class="dl" x="${x+barW/2}" y="${Y(pct)-5}" text-anchor="middle" style="font-size:10.5px">${pct.toFixed(0)}%</text>`;
+      g+=`<text class="tick" x="${x+barW/2}" y="${H-P.b+15}" text-anchor="middle">${v.y}</text>`;});
+    g+=`<line class="bl" x1="${P.l}" x2="${W-P.r}" y1="${Y(0)}" y2="${Y(0)}"/>`;
+    return `<div class="chartcard" style="margin-top:0"><div class="chd"><h3>${co.tk}</h3><span class="basis">${co.basis}</span></div>
+      <svg class="chart" viewBox="0 0 ${W} ${H}" role="img">${g}</svg>
+      <div class="src">capex ÷ revenue: ${co.vals.map(v=>`${v.y} $${fmt0(v.c)}B/$${fmt0(v.r)}B`).join(' · ')}</div></div>`;
+  }).join('')+`</div>`;
+}
+
+/* ---- P/E small multiples ---- */
+function peSparks(){
+  return `<div class="grid2" style="grid-template-columns:repeat(auto-fit,minmax(215px,1fr))">`+PE_LB.map(tk=>{
+    const rows=PE_PATHS[tk]||[]; if(!rows.length)return '';
+    const W=280,H=120,P={l:8,r:8,t:22,b:8};
+    const vs=rows.map(r=>r[1]);
+    const ymin=Math.min(...vs)*0.94, ymax=Math.max(...vs)*1.06;
+    const X=scaler(0,rows.length-1,P.l,W-P.r), Y=scaler(ymin,ymax,H-P.b,P.t);
+    let path=''; rows.forEach((r,i)=>{path+=(i?'L':'M')+X(i).toFixed(1)+','+Y(r[1]).toFixed(1);});
+    /* Feb marker = closest to 2026-01-30 = index in PE_DATES */
+    const febIdx=PE_DATES.indexOf('2026-01-30')>=0?PE_DATES.indexOf('2026-01-30'):Math.round(rows.length*0.52);
+    const m=PE_MARKS[tk], chg=((m[2]/m[1]-1)*100);
+    let g=`<path d="${path}" fill="none" stroke="var(--accent)" stroke-width="2"/>`;
+    g+=`<circle cx="${X(0)}" cy="${Y(rows[0][1])}" r="3" fill="var(--muted)" data-tip="${esc(tk+' '+PE_DATES[0]+': '+rows[0][1].toFixed(1)+'x')}"/>`;
+    g+=`<circle cx="${X(febIdx)}" cy="${Y(rows[febIdx][1])}" r="3.5" fill="var(--ink)" stroke="var(--surface)" stroke-width="1.5" data-tip="${esc(tk+' 2026-01-30: '+rows[febIdx][1].toFixed(1)+'x — start of the window')}"/>`;
+    g+=`<circle cx="${X(rows.length-1)}" cy="${Y(rows[rows.length-1][1])}" r="3.5" fill="var(--accent)" stroke="var(--surface)" stroke-width="1.5" data-tip="${esc(tk+' now: '+rows[rows.length-1][1].toFixed(1)+'x')}"/>`;
+    g+=`<text class="anno" x="${X(0)}" y="${Y(rows[0][1])-8}">${rows[0][1].toFixed(0)}x</text>`;
+    g+=`<text class="dl" x="${X(rows.length-1)-4}" y="${Y(rows[rows.length-1][1])-8}" text-anchor="end">${rows[rows.length-1][1].toFixed(1)}x</text>`;
+    const pcol=PX_CHG[tk]>=0?'var(--good)':'var(--bad)', mcol=chg<=0?'var(--good)':'var(--bad)';
+    return `<div class="chartcard" style="margin-top:0;padding-bottom:8px"><div class="chd"><h3>${tk}</h3>
+      <span class="csub mono">px <b style="color:${pcol}">${PX_CHG[tk]>0?'+':''}${PX_CHG[tk].toFixed(1)}%</b> · P/E <b style="color:${mcol}">${chg>0?'+':''}${chg.toFixed(1)}%</b></span></div>
+      <svg class="chart" viewBox="0 0 ${W} ${H}" role="img">${g}</svg></div>`;
+  }).join('')+`</div>
+  <div class="src" style="margin-top:6px">Each panel: blended-forward consensus P/E, weekly, Jul-2025 → Jul-2026. Black dot = 2026-01-30; blue dot = now. Header: price change and P/E change over Feb→Jul (the window of this deck). ${esc('Source: '+RERATE_SRC)}</div>`;
+}
+
+/* ---- dumbbell growth panels ---- */
+function dumbbellPanel(rows, title, sub){
+  const W=460,H=30+rows.length*40,P={l:64,r:96,t:16,b:26};
+  const vals=rows.flatMap(r=>[r.feb,r.now]);
+  const X=scaler(Math.min(...vals)*0.8,Math.max(...vals)*1.06,P.l,W-P.r);
+  let g='';
+  niceTicks(Math.min(...vals)*0.8,Math.max(...vals)*1.06,4).forEach(t=>{g+=`<line class="gl" x1="${X(t)}" x2="${X(t)}" y1="${P.t}" y2="${H-P.b}"/><text class="tick" x="${X(t)}" y="${H-P.b+15}" text-anchor="middle">${t}%</text>`;});
+  rows.forEach((r,i)=>{
+    const y=P.t+14+i*40, d=r.now-r.feb, col=d>=0?'var(--good)':'var(--bad)';
+    g+=`<text class="dl" x="${P.l-10}" y="${y+4}" text-anchor="end">${r.tk}</text>`;
+    g+=`<line x1="${X(r.feb)}" y1="${y}" x2="${X(r.now)}" y2="${y}" stroke="${col}" stroke-width="2.4"/>`;
+    g+=`<circle cx="${X(r.feb)}" cy="${y}" r="4.5" fill="var(--muted)" stroke="var(--surface)" stroke-width="2" data-tip="${esc(r.tk+' — consensus as of 2026-01-30: +'+r.feb.toFixed(1)+'%')}"/>`;
+    g+=`<circle cx="${X(r.now)}" cy="${y}" r="5.5" fill="${col}" stroke="var(--surface)" stroke-width="2" data-tip="${esc(r.tk+' — consensus now (07-31): +'+r.now.toFixed(1)+'%')}"/>`;
+    g+=`<text class="dl" x="${W-P.r+10}" y="${y+4}" style="fill:${col}">${r.feb.toFixed(0)}% → ${r.now.toFixed(0)}%</text>`;});
+  return `<div class="chartcard" style="margin-top:0"><div class="chd"><h3>${title}</h3><span class="csub">${sub}</span></div>
+    <div class="legend"><span class="k"><span class="swd" style="--kc:var(--muted)"></span>consensus on Jan-30</span><span class="k"><span class="swd" style="--kc:var(--good)"></span>consensus now</span></div>
+    <svg class="chart" viewBox="0 0 ${W} ${H}" role="img">${g}</svg></div>`;
+}
+
+/* ---- helpers for slide furniture ---- */
+function verdict(cls,txt){return `<span class="verd ${cls}">${txt}</span>`;}
+function facts(list){return `<div class="facts">${list.map(f=>`<div class="fact"><span class="fd">${f.d}</span><span>${f.t} <span class="src">${f.s}</span></span></div>`).join('')}</div>`;}
+function tabview(id, head, rows){
+  return `<details class="tabwrap"><summary>Table view</summary><table><tr>${head.map(h=>`<th>${h}</th>`).join('')}</tr>${rows.map(r=>`<tr>${r.map(c=>`<td>${c==null?'–':c}</td>`).join('')}</tr>`).join('')}</table></details>`;
+}
+
+/* ============ SLIDES ============ */
+function buildSlides(){
+  const S=[];
+
+  /* COVER */
+  S.push({id:'cover', lab:'COVER', html:`<div class="inner" style="padding-top:4vh">
+    <div class="eyebrow">Capstone · buyside research wiki · data through 2026-07-31 · sources inline on every datapoint</div>
+    <h1 style="margin-top:10px">Is AI demand strengthening<br>at the edge?</h1>
+    <p class="sub" style="margin-top:14px; font-size:17px">Nine signals from the last six months — revenue first, then consumption, capacity, economics, and what the market paid for it.
+    <b>Eight of the nine got stronger between February and July. The ninth is the bill.</b></p>
+    <div class="tilegrid" style="margin-top:22px">
+      <div class="tile"><div class="lb">AWS growth, Q2’26</div><div class="v">+36.7%</div><div class="d"><span class="up">fastest in 18 quarters</span>, 5th straight accel · AMZN call 07-30</div></div>
+      <div class="tile"><div class="lb">Anthropic ARR</div><div class="v">$9B → $69B</div><div class="d"><span class="up">7.7x</span> in just over 6 months · FundaAI / Yipit 07-10</div></div>
+      <div class="tile"><div class="lb">MSFT RPO, sequential add</div><div class="v">+$51B</div><div class="d"><span class="up">all of it ex-frontier labs</span> · F4Q26 call 07-29</div></div>
+      <div class="tile"><div class="lb">Street 2027E capex, 4 names</div><div class="v">$540→955B</div><div class="d"><span class="dn">+77% YTD</span> — the cost of the bull case · BBG BEst</div></div>
+    </div>
+    <div class="src" style="margin-top:22px">Navigate: <kbd>←</kbd> <kbd>→</kbd> or the rail above · hover any datapoint for its source · <kbd>◐</kbd> toggles dark mode.</div>
+  </div>`});
+
+  /* S1 — LAB ARR */
+  S.push({id:'s1', lab:'1 · LAB ARR', html:`<div class="inner">
+    <div class="shead"><div><div class="eyebrow">Signal 1 / 9 — model-layer revenue</div>
+    <h2>Lab ARR: the fastest revenue ramp software has ever printed</h2></div>${verdict('up','accelerating')}</div>
+    <p class="sub">Coming into 2026 the two big labs expected <b>~$50B combined</b> revenue for the year (Barclays). By July the run-rate was <b>~$100B combined</b> — with Anthropic EBIT-positive.</p>
+    <div class="chartcard"><div class="chd"><h3>Frontier-lab run-rate revenue — reported marks, USD bn</h3><span class="csub">hover each point for the source</span></div>
+      <div class="legend"><span class="k"><span class="swd" style="--kc:var(--c-purple)"></span>Anthropic</span><span class="k"><span class="swd" style="--kc:var(--c-green)"></span>OpenAI</span></div>
+      ${arrChart()}
+      ${tabview_arr()}
+      <div class="src">Run-rate estimates unless stated by the company. Marks: FundaAI (06-24) · Barclays (06-01) · SemiAnalysis (07-08) · Yipit (07-10) · company Series-H (05-28) · The Information (03-04) · CNBC (07-30).</div>
+    </div>
+    ${facts([
+      {d:'06-01', t:'<b>Three labs to book >$130B of 2026 revenue, ~$200B exit-ARR — “a year ahead” of forecast.</b>', s:'Barclays · Sandler, "AI’s S-Curve Is Steepening", 2026-06-01'},
+      {d:'07-08', t:'Anthropic 3Q26E GAAP EBIT ~<b>+$1B — the first profitable frontier lab</b>; ARR/MW $60M vs $16M nine months ago.', s:'SemiAnalysis pre-IPO financials, 2026-07-08'},
+      {d:'06-30', t:'<b>>70% of OpenAI + Anthropic ARR is coding</b> — the demand engine is production software work, not chat.', s:'SemiAnalysis "TokenBudgeting", 2026-06-30'},
+      {d:'04-14', t:'Independent forward mark: SDK-download signal (>90% correlation, ~6-mo lead) has <b>each lab ~$70B by Sep-26, >$110B by year-end</b>.', s:'Arete Research, 2026-04-14'},
+      {d:'—', t:'Valuations repriced with it: OpenAI $300B (Mar-25) → <b>$852B</b> (Mar-26); Anthropic $380B (Feb) → <b>$965B</b> (May) — and a live $3T debate.', s:'Company rounds; @gavinsbaker All-In, 2026-06-27'},
+    ])}
+    <div class="counter"><div class="ct">Honest counterpoint</div>First contrary read on Anthropic’s curve appeared 07-24 (TickerTrends “growth slowed”, unverified); OpenAI’s July claim (“exceeded all of Q2”) has <b>no hard number yet</b>. The Yipit ~$550M/day net-add run is the live wire to watch. <span class="src">R&Co · Adley 07-24; CNBC 07-30</span></div>
+  </div>`});
+
+  /* S2 — TOKENS */
+  S.push({id:'s2', lab:'2 · TOKENS', html:`<div class="inner">
+    <div class="shead"><div><div class="eyebrow">Signal 2 / 9 — consumption, the longer lens</div>
+    <h2>Token consumption: ~17x in twelve months — the full OpenRouter picture</h2></div>${verdict('up','unabated')}</div>
+    <p class="sub">Here is the whole OpenRouter picture — every week for the last twelve months, all models. <b>3.4T tokens/week in August 2025 → a 62.8T peak in mid-July 2026, ~17–18x in a year</b> — and the shape is convex: each model wave (GPT-5.5 in April, the Claude/Codex leg in May–June, the Chinese open-weights flood in July) stacked on top of the last instead of replacing it.</p>
+    <div class="chartcard"><div class="chd"><h3>OpenRouter — tokens processed per week, all models</h3><span class="csub">the full 52-week series behind “the photo” · hover any week</span></div>
+      ${orChart()}
+      ${tabview_or()}
+      <div class="src">${esc(OR_SRC)}</div>
+    </div>
+    <div class="grid2">
+      <div class="chartcard" style="margin-top:0"><div class="chd"><h3>Gemini API — billions of tokens <i>per minute</i></h3><span class="csub">the cleanest quarterly series Google discloses</span></div>
+        ${lineChart({cats:['Q3’25','Q4’25','Q1’26','Q2’26'], series:[{name:'API', css:'--c-orange', pts:TOK_API.map(r=>r.v), note:'paid, first-party model APIs'}], W:460, H:230, yfmt:v=>v+'B', endLabels:false})}
+        <div class="src">7 → 10 → 16 → 22 B tokens/min = <b>3.1x in three quarters</b>. “We continue to be supply constrained” — Pichai, Q2’26 call 07-22.</div></div>
+      <div class="chartcard" style="margin-top:0"><div class="chd"><h3>Who is past 1 trillion tokens?</h3><span class="csub">customer cohorts, trailing 12 months</span></div>
+        ${lineChart({cats:TOK_COHORT.map(r=>r.q), series:[{name:'GCP customers >1T tokens', css:'--c-orange', pts:TOK_COHORT.map(r=>r.v)}], W:460, H:230, yfmt:v=>v, endLabels:false})}
+        <div class="src">~150 → 330 → ~500 customers (GOOG calls). Plus >2,000 enterprises past 100B tokens (Q2’26). MSFT Foundry: customers at a 1T-token annualized run-rate <b>4x y/y</b>; 100k Foundry customers, revenue 2x y/y (F4Q26, 07-29).</div></div>
+    </div>
+    ${facts([
+      {d:'—', t:'Google’s own platform meter, before disclosure shifted to the API rate: <b>480T tokens/mo (May-25) → 980T (Jul-25) → ~1.3 quadrillion (Oct-25*)</b>. *Q3’25 transcript unit garbled — verify vs IR.', s:'Alphabet earnings calls, 2025-07-29 / 2025-10-29'},
+      {d:'07-2x', t:'OpenRouter annualized run-rate ≈ <b>3.0–3.2 quadrillion tokens</b> (265T/mo metric dated 07-21; the 07-27 refresh printed 246T/mo). Anthropic is <b>~10% of paid tokens but ~46% of platform revenue</b> — premium models carry the economics while open-weights carry the volume.', s:'wiki OpenRouter pipeline (asof 07-27) + site data 07-31'},
+      {d:'04-16', t:'“The shift from generative AI in query mode to <b>agentic AI in command-and-action mode</b> is leading to another step-up in the amount of tokens being consumed.”', s:'C.C. Wei, TSMC 1Q26 call, 2026-04-16'},
+      {d:'06-30', t:'Meta employees alone consumed <b>>60T Claude tokens in 30 days</b>; enterprise “token budgeting” is emerging — but SemiAnalysis (n>50 enterprises) finds “not a material risk to 2H26 AI budgets”.', s:'SemiAnalysis "TokenBudgeting", 2026-06-30'},
+    ])}
+    <div class="counter"><div class="ct">Honest counterpoint</div>The last two full weeks printed below the July 13 peak (62.8 → 58.0 → ~57.5T projected) — the first pause since April. One platform, two weeks: noise until it isn’t. The multi-meter slope (this chart + Gemini API + cohorts below) is the signal. <span class="src">OpenRouter site data, captured 2026-07-31</span></div>
+  </div>`});
+
+  /* S3 — CLOUD GROWTH */
+  S.push({id:'s3', lab:'3 · CLOUD GROWTH', html:`<div class="inner">
+    <div class="shead"><div><div class="eyebrow">Signal 3 / 9 — hyperscaler revenue</div>
+    <h2>Cloud growth: all three accelerating at once — a first</h2></div>${verdict('up','all 3 accelerating')}</div>
+    <p class="sub">AWS went from +17% to +36.7% in five quarters. Google Cloud from +28% to +82% (with a TPU-sales basis note). Azure printed +43% and <b>guided the next quarter higher (~+45% cc)</b>. Every management team says the same word: constrained.</p>
+    <div class="chartcard"><div class="chd"><h3>Cloud revenue growth, y/y %</h3><span class="csub">calendar quarters · hover points for source notes</span></div>
+      <div class="legend">${CLOUD.map(s=>`<span class="k"><span class="sw" style="--kc:var(${s.css})"></span>${s.name}</span>`).join('')}</div>
+      ${lineChart({cats:CG_Q, series:CLOUD, yfmt:v=>v+'%', unit:'', endLabels:true})}
+      ${tabview_cloud()}
+      <div class="src">${esc(CLOUD_SRC)}</div>
+    </div>
+    <div class="grid2">
+      <div class="pull" style="margin:0">“Demand continues to exceed available supply… you can even see it, I think, in some of the pricing that’s occurring in the spot market for assets.”<span class="who">Amy Hood, CFO — MSFT F4Q26 call, 2026-07-29</span></div>
+      <div class="pull" style="margin:0">“Even at [$220B of capex] we will still not have enough capacity to meet all the demand we have in 2026, and I believe this will also be true in 2027. In fact, <b>the demand we already have for 2028 is striking</b>… [AWS] will very possibly be a $1 trillion annual revenue business.”<span class="who">Andy Jassy — AMZN Q2’26 call, 2026-07-30</span></div>
+      <div class="pull" style="margin:0">“Our cloud revenue would have been higher if we were able to meet the demand.”<span class="who">Sundar Pichai — GOOG Q1’26 call, 2026-04-29</span></div>
+      <div class="pull" style="margin:0">“While we have increased our capacity quite significantly over the past three years, <b>the demand still outpaces that investment</b>.”<span class="who">Anat Ashkenazi, CFO — GOOG Q2’26 call, 2026-07-22</span></div>
+    </div>
+  </div>`});
+
+  /* S4 — BACKLOG */
+  S.push({id:'s4', lab:'4 · BACKLOG', html:`<div class="inner">
+    <div class="shead"><div><div class="eyebrow">Signal 4 / 9 — contracted demand</div>
+    <h2>Backlog: ~$1.7 trillion of contracted cloud — and the mix is broadening</h2></div>${verdict('up','quality improving')}</div>
+    <p class="sub">The bear case said backlog = a few frontier labs recycling capital. The July prints broke that: <b>MSFT’s entire $51B sequential RPO add came from customers outside the frontier labs</b> (+25% y/y ex-OpenAI), and AMZN’s backlog is growing triple digits.</p>
+    <div class="chartcard"><div class="chd"><h3>Disclosed cloud backlog / RPO, $bn</h3><span class="csub">three different disclosure bases — labeled, not summed into one line</span></div>
+      <div class="legend">${BACKLOG.map(s=>`<span class="k"><span class="swd" style="--kc:var(${s.css})"></span>${s.name}</span>`).join('')}</div>
+      ${backlogChart()}
+      ${tabview_backlog()}
+      <div class="src">MSFT commercial RPO (fiscal quarters mapped to calendar) · GOOG revenue backlog (Q1’26 on includes TPU hardware sales — basis change; “majority still typical GCP contracts”) · AWS backlog (Q3’25 from a paraphrased transcript). Sum at Q2’26 ≈ $1.69T across three different bases — directional, not additive.</div>
+    </div>
+    ${facts([
+      {d:'07-29', t:'MSFT commercial RPO <b>$678B, +84%</b>; +25% ex-OpenAI; “all sequential RPO growth was driven by commitments from customers outside of frontier model companies”; ~30% converts to revenue within 12 months.', s:'Amy Hood, F4Q26 call, 2026-07-29'},
+      {d:'07-30', t:'AWS backlog <b>$496B, “growing triple-digits year-over-year”</b> — one quarter after adding the >$100B Anthropic commitment.', s:'AMZN Q2’26 call, 2026-07-30'},
+      {d:'07-22', t:'Google Cloud backlog <b>$514B</b>; TPU-sale revenue mostly lands in <b>2027</b> — contracted growth already banked for next year.', s:'Ashkenazi, GOOG Q2’26 call, 2026-07-22'},
+      {d:'06-22', t:'Context for the skeptics: ~$300B of Oracle’s $638B RPO is OpenAI, and MSFT’s RPO carries a $250B+ OpenAI commit — <b>the frontier-lab concentration is real, which is exactly why the ex-frontier acceleration matters</b>.', s:'Bernstein "Cloud in the Quarter", 2026-06-22'},
+    ])}
+  </div>`});
+
+  /* S5 — MARGINS & ROIC */
+  S.push({id:'s5', lab:'5 · MARGINS & ROIC', html:`<div class="inner">
+    <div class="shead"><div><div class="eyebrow">Signal 5 / 9 — unit economics</div>
+    <h2>Margins held while AI scaled — and ROIC now has arithmetic</h2></div>${verdict('up','quantified')}</div>
+    <p class="sub">The 2025 fear was AI revenue diluting cloud margins. The opposite printed: <b>Google Cloud’s operating margin tripled while growth tripled</b>, and AWS put up a 39.4% margin — its best in five quarters — alongside its fastest growth in 18. On the “what does a GW earn” question, Morgan Stanley’s July note replaced faith with a model.</p>
+    <div class="grid2">
+      <div class="chartcard" style="margin-top:0"><div class="chd"><h3>Google Cloud operating margin, %</h3><span class="csub">while revenue growth went 29% → 82%</span></div>
+        ${lineChart({cats:CG_Q, series:[{name:'GCP op margin', css:'--c-orange', pts:GCP_MARGIN}], W:460, H:240, yfmt:v=>v+'%', endLabels:false})}
+        <div class="src">Alphabet earnings calls, CFO prepared remarks (11.3% → 35.6% over 8 quarters). Wiz adds a “low single-digit” margin headwind from Q2’26 — absorbed.</div></div>
+      <div class="chartcard" style="margin-top:0"><div class="chd"><h3>The cloud-margin scoreboard, Q2’26</h3></div>
+        <div class="tilegrid" style="grid-template-columns:1fr 1fr">
+          <div class="tile"><div class="lb">AWS operating margin</div><div class="v">39.4%</div><div class="d">+650bp y/y (+520 ex-derivative gain) at +36.7% growth · AMZN 07-30</div></div>
+          <div class="tile"><div class="lb">GCP operating margin</div><div class="v">35.6%</div><div class="d">from 20.7% a year ago, at +82% growth · GOOG 07-22</div></div>
+          <div class="tile"><div class="lb">MSFT AI ARR</div><div class="v">$37B</div><div class="d">+123% y/y (F3Q26; not updated on the F4Q26 call — flag) · 04-29</div></div>
+          <div class="tile"><div class="lb">Inference gross margin</div><div class="v">34→65%</div><div class="d">2025 → 2026E across the lab complex · Barclays 06-01</div></div>
+        </div></div>
+    </div>
+    <div class="chartcard"><div class="chd"><h3>What 1 GW earns — Morgan Stanley’s three business models (a planilha)</h3><span class="csub">same standardized gigawatt: 410,256 GB300s · $39bn all-in capex · 21% tax</span></div>
+      ${roicChart()}
+      <div class="src">${esc(MS_ROIC_SRC)} MS’s conclusion: healthy token returns get competed away at the model layer and <b>capitalized into whoever owns the gigawatts</b> — OW the infra owners (AMZN/GOOGL/MSFT).</div>
+    </div>
+    ${facts([
+      {d:'07-30', t:'The only management-quantified payback of the season: <i class="q">“for servers and networking equipment, on average it takes <b>a little less than three years to break even</b>”</i> — on 5-6yr useful lives, with most AI capacity contracted ≥5 years.', s:'Andy Jassy, AMZN Q2’26 call, 2026-07-30'},
+      {d:'05-27', t:'The margin inflection has a named driver: Anthropic-on-Bedrock (~$5.5B run-rate) helped AWS margins inflect <b>+213bp q/q</b>; Anthropic inference GM mid-60s, from −94% in 2024.', s:'SemiAnalysis, 2026-05-27'},
+      {d:'04-08', t:'The bear frame, kept honest: blended lab economics ~<b>$10B revenue/GW vs ~$11B compute cost/GW</b> — negative at the headline; the monetized slice earns ~$25B/GW at ~60% GM. Free tiers are the drag (40% of OpenAI inference compute).', s:'Cantor Fitzgerald "Framing the ROIC Debates", 2026-04-08'},
+    ])}
+    <div class="counter"><div class="ct">Basis discipline</div>MS Model 3’s “ROIC” is a <b>NOPAT margin, not an asset-base return</b> (MS’s own caveat), and its revenue basis skips the 75% utilization haircut of Model 2 — do not quote the three columns as one metric. Models 1–2 ROIC is steady-state year-1 on gross capex, with no model R&D anywhere.</div>
+  </div>`});
+
+  /* S6 — TAM */
+  S.push({id:'s6', lab:'6 · TAM AHEAD', html:`<div class="inner">
+    <div class="shead"><div><div class="eyebrow">Signal 6 / 9 — the demand still in front</div>
+    <h2>What if 500 million knowledge workers pay for AI?</h2></div>${verdict('up','option opening')}</div>
+    <p class="sub">The base is real: Microsoft alone has <b>>450M paid M365 commercial seats</b> <span class="tagH">HARD</span> (last disclosed F2Q26, growing +6%/yr — ~464M implied today <span class="tagE">ARITHMETIC</span>). Round it to 500M knowledge workers and ask the only question that matters:</p>
+    <div class="tilegrid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); margin-top:16px">
+      ${WHATIF.map(w=>`<div class="tile" style="padding:18px 20px">
+        <div class="lb">…paying <b style="color:var(--ink)">$${w.pm}/month</b></div>
+        <div class="v" style="font-size:40px">${w.tam>=1000?'$'+(w.tam/1000).toFixed(1)+'T':'$'+w.tam+'B'}<span style="font-size:15px; color:var(--muted); font-weight:600"> /yr</span></div>
+        <div class="d mono">500M × $${w.pm} × 12 = ${w.tam>=1000?'$'+(w.tam/1000).toFixed(1)+'T':'$'+w.tam+'B'} a year</div>
+        <div class="d" style="margin-top:6px">${w.note}</div>
+      </div>`).join('')}
+    </div>
+    <div class="src" style="margin-top:8px">Comparisons: combined lab ARR ~$100B — SemiAnalysis 07-08 · MSFT AI ARR $37B — F3Q26 call 04-29 · BofA "AI 2030" AI-DC systems TAM ~$1.7T CY30 — 05-13. The what-if is revenue at the SOFTWARE layer; BofA’s $1.7T is infrastructure spend — the point is the scale match, not the same line item.</div>
+    <div class="eyebrow" style="margin-top:20px">…or ask the same question through revenue share</div>
+    <div class="tilegrid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); margin-top:8px">
+      ${WHATIF2.map(w=>`<div class="tile" style="padding:16px 20px">
+        <div class="lb">AI captures <b style="color:var(--ink)">${w.pct}%</b> of listed-world revenue</div>
+        <div class="v" style="font-size:34px">$${w.tam}B<span style="font-size:14px; color:var(--muted); font-weight:600"> /yr</span></div>
+        <div class="d mono">${w.pct}% × ~$31T combined revenue</div>
+        <div class="d" style="margin-top:5px">${w.note}</div>
+      </div>`).join('')}
+    </div>
+    <div class="src" style="margin-top:8px">Revenue base <span class="tagP">PARTIAL</span>: S&P 500 ~$19.4T + Russell 2000 ~$2.3T + STOXX 600 ~$9.4T ≈ <b>$31T</b> of CY26E aggregate revenue — derived from Bloomberg index data 2026-07-31 (BEst CY26 sales-per-share ÷ index level × market cap, per index). Two unrelated frames — <b>seats × price</b> and <b>share of corporate revenue</b> — land in the same $0.3–1.2T corridor; today’s ~$100B of lab ARR is ~0.3% of that revenue base.</div>
+    <div class="chartcard"><div class="chd"><h3>Is $50–200/month plausible? It’s already the observed band</h3><span class="csub">$ per user per MONTH, log scale — every rung is a reported number, not a scenario</span></div>
+      ${ladderChart()}
+      <div class="src">The what-if band ($50–200/mo) sits between the two labs’ CURRENT averages: ChatGPT’s average user pays <b>$25/mo</b> (consumer-heavy mix) and Claude’s average user already pays <b>$211/mo</b> — above the biggest consumer plan (Max 20x, $200/mo). Per-employee spend at AI-forward companies runs 20–40x higher still at list. The what-if is not a fantasy price; it is the corridor between today’s two averages. (FundaAI: "$211/user/month, 8.4x OpenAI’s $25", 2026-06-24.)</div>
+    </div>
+    <div class="grid2">
+      <div class="chartcard" style="margin-top:0"><div class="chd"><h3>Where adoption actually is (the first rung)</h3></div>
+        <div class="tilegrid" style="grid-template-columns:1fr 1fr">
+          <div class="tile"><div class="lb">M365 Copilot paid seats</div><div class="v sm">>30M</div><div class="d">~6–7% of the base; net adds <span class="up">2x q/q</span> · F4Q26</div></div>
+          <div class="tile"><div class="lb">Copilot $ today (at $30 list)</div><div class="v sm">≈$10.8B/yr</div><div class="d">Bernstein est. realized ~$6–7B — the $600B what-if is ~60x this</div></div>
+        </div>
+        <div class="src" style="margin-top:6px">The gap between the first rung and the what-if IS the slide: this TAM is opened by attach × price-per-user, and both just moved (seats 15M→30M in six months; pricing now usage-based).</div></div>
+      <div class="chartcard" style="margin-top:0"><div class="chd"><h3>Why the ceiling moved</h3></div>
+        ${facts([
+          {d:'07-29', t:'<b>M365 Copilot >30M paid seats, net adds more than doubled q/q</b>; customers with >50k seats up >7x y/y; NHS 505k / HSBC 200k Copilot seats; EY moved 400k employees to the E7 bundle.', s:'MSFT F4Q26 call, 2026-07-29'},
+          {d:'07-29', t:'<b>GitHub Copilot: 50M users</b>; June shift to usage-based billing → “significant consumption revenue… Copilot revenue accelerated over 60% q/q”.', s:'Nadella, F4Q26 call, 2026-07-29'},
+          {d:'04-30', t:'“The moment the shift to usage-based pricing suddenly shifted” — the seat→usage inflection was called in April; it printed in July.', s:'UBS · Keirstead, 2026-04-30'},
+        ])}
+      </div>
+    </div>
+    <div class="counter"><div class="ct">Guardrail — keep the what-if honest</div>The math is linear and assumes <b>all 500M pay</b> — that is the point of a what-if, not a forecast: half the users or half the price is half the TAM. Direction check: the $50/mo case ($300B/yr) ≈ 1.5x what the whole lab complex is expected to exit 2026 at (~$200B ARR — Barclays 06-01), and ~30x today’s realized Copilot (~$6–7B, Bernstein est.) — i.e. the upside lives in <b>attach × price-per-user</b>, and both are moving: seats 15M→30M in six months, and the usage-based template landed at GitHub Copilot (revenue +60% q/q post-shift) and Dynamics (usage credits +4x q/q) — per-employee spend at AI-forward companies already runs 20–40x above the $200/mo rung at list. <span class="tagE">Illustrative, not a house estimate.</span></div>
+  </div>`});
+
+  /* S7 — CAPEX INTENSITY */
+  S.push({id:'s7', lab:'7 · CAPEX INTENSITY', html:`<div class="inner">
+    <div class="shead"><div><div class="eyebrow">Signal 7 / 9 — the cost of the bull case</div>
+    <h2>Capex intensity: the AI clouds now out-spend the foundry model</h2></div>${verdict('watch','the bill')}</div>
+    <p class="sub">Capex-to-revenue was ~15–25% for this group two years ago. Street numbers now put <b>GOOG at ~56% and META at ~63% of revenue in 2027</b> — beyond TSMC at peak build (~36% in 2026). The demand signals (slides 1–6) are what make this financeable; the FCF line is where it shows.</p>
+    ${intensityPanels()}
+    ${facts([
+      {d:'06-16', t:'The reference frame: top-4 capex <b>~$410B 2025A → ~$700–725B 2026E (+75%) → ~$1.1T 2027E</b>; $5.5T total AI capex through 2030, $4.1T debt-financed.', s:'JPM · Sur, "AI Capex 2.0", 2026-06-16'},
+      {d:'07-26', t:'The cleanest measure of the rewrite: aggregate 2026–28 capex across AMZN/META/GOOG/MSFT/ORCL revised <b>$1.3T → $3.4T (+166%) in twelve months</b>.', s:'BofA · Fenske, 2026-07-26'},
+      {d:'07-22/30', t:'The FCF consequence, July prints: GOOG quarterly FCF <b>−$5.9B</b>; AMZN <b>−$9B</b>; MSFT stayed positive (<b>+$19.6B</b> Q4) — UBS’s modeled −$21B FY27 year didn’t arrive; FY27 guided FCF-positive.', s:'2Q26 prints; UBS · Keirstead 04-30 → 07-29 post-mortem'},
+      {d:'07-06', t:'The financing layer is now its own market: <b>$1.3T of IG supply in H1</b> (= ’22+’23+’24 combined); NVDA’s backstop guarantees $77.5B → $175.3B; AI debt >$7T by 2029 projected.', s:'GS · Crook 07-04; SemiAnalysis 07-06'},
+    ])}
+    <div class="counter"><div class="ct">The line to respect</div>“The era of 20%+ surprises to hyperscaler capex expectations is likely over… demand signals are intact — but no longer arriving as major capex raises.” Good for hyperscaler ROI; removes the perpetual re-rating fuel for semis. <b>Watch guides, not vibes.</b> <span class="src">Rothschild & Co Redburn · Adley, 2026-07-30</span></div>
+  </div>`});
+
+  /* S8 — RE-RATING */
+  S.push({id:'s8', lab:'8 · MULTIPLE', html:`<div class="inner">
+    <div class="shead"><div><div class="eyebrow">Signal 8 / 9 — what the market paid for it</div>
+    <h2>The re-rating that didn’t happen: the rally was earned in estimates</h2></div>${verdict('up','earned, not paid')}</div>
+    <p class="sub">Since end-January, seven of these eight names are up 5–22% — while <b>forward P/Es are flat to LOWER for six of the eight</b>. Prices followed the estimates (below), not the multiple. The exceptions tell the story too: META fell 22% and de-rated ~20% on the “trust me” quarter; ASML round-tripped a spike to ~45x in May back to ~30x as 2027 became order-covered fact.</p>
+    <div class="chartcard"><div class="chd"><h3>Blended-forward P/E, weekly — Jul-2025 → Jul-2026</h3><span class="csub">panel header: price change · P/E change over Feb→Jul 2026</span></div>
+      ${peSparks()}
+    </div>
+    <div class="grid2">
+      ${dumbbellPanel(G27,'Consensus CY2027 revenue growth','what Street underwrote for 2027: Feb vs now')}
+      ${dumbbellPanel(G28,'Consensus CY2028 revenue growth','2028: raised nearly everywhere too')}
+    </div>
+    <div class="src" style="margin-top:8px">${esc(RERATE_SRC)}</div>
+    ${facts([
+      {d:'07-31', t:'CY27 consensus revenue was rewritten up <b>+4% (META) to +42% (AVGO)</b> in six months; CY27 growth rates re-underwritten by +2 to +16pts. NVDA’s CY28 growth marked DOWN (27%→23%) — big-number conservatism, not weakness.', s:'BBG BEst, Feb-vintage vs 07-31'},
+      {d:'07-29', t:'MSFT (fiscal basis, excluded from the CY panel): Street has <b>FY27 +17.6% and FY28 +19.4%</b> on 1FY/2FY overrides — high-teens growth SUSTAINED into the out-years (blended-forward windows read ~+19.5% both years; no deceleration on either basis).', s:'BBG BEst snapshots, 2026-07-31'},
+      {d:'07-28', t:'The tape’s own discipline check: KLAC beat, raised WFE to “low $150B” — and fell 7–9%, because buyside numbers were already higher. <b>Where estimates lead prices, surprises must keep landing.</b>', s:'Barclays · Rand, 2026-07-28'},
+    ])}
+  </div>`});
+
+  /* S9 — TSM & ASML */
+  S.push({id:'s9', lab:'9 · TSM & ASML', html:`<div class="inner">
+    <div class="shead"><div><div class="eyebrow">Signal 9 / 9 — the longest lead times in the chain</div>
+    <h2>TSMC & ASML: the deepest layer says this runs through 2028–30</h2></div>${verdict('up','cycle extends')}</div>
+    <p class="sub">Foundry and litho sit 2–7 years ahead of demand by construction. Both raised twice in six months, and both are now spending for <b>2028–29 supply</b> — TSMC’s words, not ours.</p>
+    <div class="grid2">
+      <div class="chartcard" style="margin-top:0"><div class="chd"><h3>TSMC — FY26 guide walk</h3><span class="csub">USD revenue growth, guided</span></div>
+        <div class="steps">${TSM_STEPS.map(s=>`<div class="step"><span class="sd">${s.d}</span><span class="sv">${s.v}</span><span class="sn">${s.n}</span></div>`).join('')}</div></div>
+      <div class="chartcard" style="margin-top:0"><div class="chd"><h3>ASML — FY26 guide walk</h3><span class="csub">net sales, guided</span></div>
+        <div class="steps">${ASML_STEPS.map(s=>`<div class="step"><span class="sd">${s.d}</span><span class="sv">${s.v}</span><span class="sn">${s.n}</span></div>`).join('')}</div></div>
+    </div>
+    <div class="grid2">
+      <div class="pull" style="margin:0">“I believe from this day on, all the way to probably 2029, 2030, the demand is very strong. Whether in between there’s a dip or not, I’m not very sure. But the trend is so robust that I believe we are witnessing a kind of a new industry… called the AI industry.”<span class="who">C.C. Wei — TSMC 2Q26 call, 2026-07-16 (in January: “it looks like it’s going to be endless… for many years to come”)</span></div>
+      <div class="pull" style="margin:0">“Customer demand remains very strong, with visibility now extending several years into the future… the rapid growth of AI-related demand in advanced logic and DRAM is accelerating the move toward more advanced lithography solutions and increasing lithography intensity.”<span class="who">Christophe Fouquet — ASML Q2’26 call, 2026-07-15</span></div>
+    </div>
+    ${facts([
+      {d:'07-16', t:'TSMC raised capex to <b>$60–64B</b>, added <b>+$100B in Arizona (total $265B, “four or more” fabs)</b> + 13 fabs in Taiwan; “capex in the next three years will be <b>even more</b> significantly higher than the past three”. And the planning horizon is the tell: developing a node, building and ramping its capacity “now takes <b>five to seven years. There are no shortcuts</b>” — the business is being committed on 2031-era horizons.', s:'TSMC 2Q26 call, 2026-07-16'},
+      {d:'01-15', t:'The spend is explicitly for the out-years: “even [as] we start to spend the $52–56B, the contribution to this year is almost none… <b>we are actually looking for 2028, 2029 supply</b>”.', s:'C.C. Wei, TSMC 4Q25 call, 2026-01-15'},
+      {d:'07-15', t:'ASML: memory system sales <b>+75% y/y</b>; Low-NA EUV capacity <b>+30% in 2027</b> (~85 units — broker arithmetic ASML’s IR later confirmed: “30 plus 30 takes us to 110 units, roughly” for 2028) and 2027 “<b>close to being fully covered with orders</b>” (Dassen); customers’ LTAs with their own customers give “quite unprecedented visibility”.', s:'ASML Q2’26 call, 2026-07-15; ASML IR small-group, 07-20'},
+      {d:'07-16', t:'N2 at <b>3% of wafer revenue in its first quarter</b>; HPC 66% of revenue; the ≤3nm demand-supply gap: “the gap is really big… a very big gap” — and “we do not foresee any bottlenecks to our capacity expansion plans”.', s:'TSMC 2Q26 call, 2026-07-16'},
+    ])}
+    <div class="counter"><div class="ct">The other side, kept on the page</div>Ex-Samsung foundry EVP (06-30): WFE passes $200B but <b>“never $300B”</b>; ASML capped ~140–150 EUV/yr by Zeiss mirrors; memory LTAs “not worth the toilet paper they’re written on”. Note what July did to this: ASML’s own 2028 plan (~110 units) sits <b>inside</b> the skeptic’s cap — the cap doesn’t bind the current path — and Bernstein’s GW-frame (07-20) made “$300B+ seemingly doable” with a physical unit chain. Two caveats stay live: ASML no longer discloses bookings (“we don’t report bookings anymore” — IR, 07-20; visibility is asserted, not printed), and its IR softened “fully booked” to “<b>not completely booked… holes in the list</b>”. <span class="src">expert call 06-30; Bernstein · Rasgon 07-20; ASML IR 07-20</span></div>
+  </div>`});
+
+  /* VERDICT */
+  S.push({id:'verdict', lab:'VERDICT', html:`<div class="inner">
+    <div class="eyebrow">The nine signals, scored</div>
+    <h2>Verdict: strengthening at the edge — and increasingly paid-for</h2>
+    <div style="margin-top:14px">
+      <div class="scorerow hd"><span>#</span><span>Signal</span><span>Where it stood (≈Feb)</span><span>Where it stands (Jul)</span><span>Call</span></div>
+      ${SCORE.map(r=>`<div class="scorerow"><span class="n">${r.n}</span><b>${r.sig}</b><span class="cell">${r.feb}</span><span class="cell">${r.jul}</span><span>${verdict(r.v==='up'?'up':r.v==='watch'?'watch':'flat', r.lb)}</span></div>`).join('')}
+    </div>
+    <p class="sub" style="margin-top:18px">The through-line: <b>demand evidence strengthened on every independent meter</b> — revenue, tokens, cloud P&L, contracts, unit economics, and the supply chain’s own capacity bets. The two disciplines to keep: the spend is now so large that FCF and funding mix are load-bearing (signal 7), and the tape has started refusing to pay for what it already knows (KLAC beat-raised-fell; Samsung’s record traded flat). Acceleration is necessary but no longer sufficient — <b>surprise is the currency now</b>.</p>
+    ${facts([
+      {d:'08-04', t:'<b>AMD Q2 print</b> — structure of the next GW-scale deal; MI450 momentum into 1H27.', s:'catalysts ledger'},
+      {d:'08-26', t:'<b>NVDA Q2 FY27</b> — guided $91B ±2%; hyperscaler-vs-ACIE mix optics under the new segmentation.', s:'NVDA Q1 FY27 call, 2026-05-20'},
+      {d:'Oct', t:'<b>META Q3</b> — the first FY27 capex guide ($142B reported-basis vs $180–200B gross builds vs $243B JPM); track cash PP&E, not reported capex. Plus: does the Rothschild “no more 20% surprises” line hold across the group’s Q3 guides?', s:'META 2Q26 post-mortems, 2026-07-30'},
+      {d:'live', t:'<b>Lab net-adds</b> — Yipit’s ~$550M/day Anthropic run and OpenAI’s July claim getting a hard number are the highest-frequency confirmations either way.', s:'Yipit 07-10; CNBC 07-30'},
+    ])}
+    <footer class="note">Built from the Capstone research wiki (primary transcripts, sell-side notes, expert calls, house models), 2026-07-31. Attribution rule: broker/analyst or primary source + date on every datapoint; consensus = Bloomberg BEst; ARR figures are run-rate estimates unless company-stated; GW bases kept separate (facility ≠ IT-load); backlog bases labeled, not summed. Companion chronological deck: ai-recap-feb-jul-2026.html. Not investment advice.</footer>
+  </div>`});
+
+  return S;
+}
+
+/* table views (defined after data) */
+function tabview_arr(){
+  return tabview('arr', ['Date','Anthropic $B','OpenAI $B'],
+    ['2025-12-31','2026-02-28','2026-03-31','2026-04-30','2026-05-28','2026-07-08','2026-07-10'].map(d=>{
+      const a=ARR.anthropic.find(r=>r.d===d), o=ARR.openai.find(r=>r.d===d)||ARR.openai.find(r=>r.d.slice(0,7)===d.slice(0,7));
+      return [d, a?a.v:null, o?o.v:null];}));
+}
+function tabview_cloud(){
+  return tabview('cloud', ['Quarter','Google Cloud %','AWS %','Azure % (as-reported)','Azure % (cc)'],
+    CG_Q.map((q,i)=>[q, CLOUD[0].pts[i], CLOUD[1].pts[i], CLOUD[2].pts[i], (CLOUD[2].cc&&CLOUD[2].cc[i])!=null?CLOUD[2].cc[i]:'n/d']));
+}
+function tabview_backlog(){
+  return tabview('backlog', ['Quarter','MSFT RPO $B','GOOG backlog $B','AWS backlog $B'],
+    BK_Q.map((q,i)=>[q, BACKLOG[0].pts[i], BACKLOG[1].pts[i], BACKLOG[2].pts[i]]));
+}
+
+/* ============ MECHANICS ============ */
+let SLIDES=[], cur=0;
+function mount(){
+  SLIDES=buildSlides();
+  deck.innerHTML=SLIDES.map(s=>`<section class="slide" id="s-${s.id}" role="tabpanel">${s.html}</section>`).join('');
+  scrub.innerHTML=SLIDES.map((s,i)=>`<button role="tab" data-i="${i}">${s.lab}</button>`).join('');
+  scrub.addEventListener('click',e=>{const b=e.target.closest('button'); if(b) go(+b.dataset.i);});
+  sync(0);
+}
+function go(i){cur=Math.max(0,Math.min(SLIDES.length-1,i)); deck.scrollTo({left:cur*deck.clientWidth,behavior:'smooth'}); sync(cur);}
+function sync(i){cur=i; $$('#scrub button').forEach((b,j)=>b.classList.toggle('on',j===i));}
+deck.addEventListener('scroll',()=>{const i=Math.round(deck.scrollLeft/deck.clientWidth); if(i!==cur)sync(i);},{passive:true});
+$('#prevB').onclick=()=>go(cur-1); $('#nextB').onclick=()=>go(cur+1);
+addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight'||e.key==='PageDown')go(cur+1);
+  if(e.key==='ArrowLeft'||e.key==='PageUp')go(cur-1);
+  if(e.key==='Home')go(0); if(e.key==='End')go(SLIDES.length-1);});
+addEventListener('resize',()=>{deck.scrollTo({left:cur*deck.clientWidth});});
+$('#themeBtn').onclick=()=>{
+  const r=document.documentElement, curT=r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+  r.dataset.theme=curT==='dark'?'light':'dark';};
+/* tooltip */
+const tip=$('#tip');
+document.addEventListener('mouseover',e=>{
+  const t=e.target.closest('[data-tip]'); if(!t){tip.classList.remove('on');return;}
+  tip.textContent=t.dataset.tip; tip.classList.add('on');});
+document.addEventListener('mousemove',e=>{
+  if(!tip.classList.contains('on'))return;
+  const w=tip.offsetWidth,h=tip.offsetHeight;
+  tip.style.left=Math.min(innerWidth-w-12,e.clientX+14)+'px';
+  tip.style.top=Math.max(8,Math.min(innerHeight-h-10,e.clientY-h-12))+'px';});
+mount();
+
+</script>
+</body>
+</html>
