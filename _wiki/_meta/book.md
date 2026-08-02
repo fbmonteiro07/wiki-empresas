@@ -1,6 +1,6 @@
 # Book — positions × unresolved debates × catalysts
 
-_Generated 2026-07-31 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wiki/_tools/build_book.py`._
+_Generated 2026-08-01 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wiki/_tools/build_book.py`._
 
 > ⚠️ **SEED book** — initialized from the 8 house-model names, weights unknown. Edit `_data/book.json` to match the real Core Positions (weights, adds/drops), then remove the `"seed": true` flag.
 
@@ -8,12 +8,12 @@ _Generated 2026-07-31 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wi
 |---|---|--:|---|---|--:|---|---|---|
 | NVDA | long | ? | EPS 2027 +20% | 2026-08-26 — Q2 FY27 print: 2026-08-26 (guided $91B). Watch hyperscale vs hyperscale-capex growth under new segmentation (Arcuri: bec |  |  | 2026-07-30 | Full-stack AI-factory platform at +85% rev; debate is demand sustainability vs ASIC erosion. |
 | GOOG | long | ? | REV 2026 +18% | _none dated_ |  |  | 2026-07-31 | Full-stack compounder (Search +17%, Cloud +82%); debate is valuation and capital intensity, not demand. |
-| AAPL | long | ? | EPS 2026 +15% | 2026-07-31 — MS AAPL 2Q26 group callback with Erik Woodring — 2026-07-31, 9:00 AM ET (MS Wigg, 2026-07-30). |  |  | 2026-07-31 | Strong franchise + memory-dislocation advantage; bear = AI catch-up + price elasticity. |
+| AAPL | long | ? | EPS 2026 +15% | _none dated_ | 1 |  | 2026-07-31 | Strong franchise + memory-dislocation advantage; bear = AI catch-up + price elasticity. |
 | AVGO | long | ? | EPS 2026 -5% | _none dated_ |  |  | 2026-07-30 | #1 custom-ASIC/TPU partner; binary setup on the ">$100B" FY27 guide vs $250-300B FY28 (JPM). |
 | META | long | ? | EPS 2027 +5% | _none dated_ |  |  | 2026-07-31 | Fastest grower in Mag7 ex-GPU; bear = capital intensity and negative incremental ROIC. |
-| AMZN | long | ? | no house model | 2026-07-31 — MS AMZN 2Q26 group callback with Brian Nowak — 2026-07-31, 8:30 AM ET (MS Wigg, 2026-07-30). |  |  | 2026-07-31 | AWS re-acceleration (+28%) + in-house silicon (Trainium); debate = $200B capex/ROIC. |
 | TSM | long | ? | — | _none dated_ |  |  | 2026-07-31 | Sole-source leading-edge foundry (~70% share); pricing headroom vs overseas-fab dilution. |
 | MSFT | long | ? | no house model | _none dated_ |  |  | 2026-07-31 | AI ARR >$37B/+123%; swing is capex (CY27 ~$276B) vs Azure revenue + OpenAI concentration. |
+| AMZN | long | ? | no house model | _none dated_ | 1 |  | 2026-07-31 | AWS re-acceleration (+28%) + in-house silicon (Trainium); debate = $200B capex/ROIC. |
 
 ## Not in book — house-vs-consensus divergence ≥ 10% (candidates)
 

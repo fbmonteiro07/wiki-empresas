@@ -1,26 +1,25 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-07-31 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-08-01 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (7)
+## 📅 Upcoming (4)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-07-31 | AAPL | **MS AAPL 2Q26 group callback with Erik Woodring — 2026-07-31, 9:00 AM ET** (MS Wigg, 2026-07-30). |
-| 2026-07-31 | AMZN | **MS AMZN 2Q26 group callback with Brian Nowak — 2026-07-31, 8:30 AM ET** (MS Wigg, 2026-07-30). |
-| 2026-07-31 | RDDT | **MS RBLX/RDDT 2Q26 group callback — 2026-07-31, 8:00 AM ET** (Matt Cost / Nikhil Javeri; MS Wigg 2026-07-30). |
 | 2026-08-05 | IFX | **2026-08-05 — FY3Q26 print** — MS expects an in-line print (order-book momentum, industrial recovery, AI-DC commentary); watch the FY26 >EUR 16bn / ~20% margin bridge and HV-auto commentary (MS, 2026 |
 | 2026-08-26 | NVDA | **Q2 FY27 print: 2026-08-26** (guided $91B). Watch hyperscale vs hyperscale-capex growth under new segmentation (Arcuri: becomes a debate if NVDA ever under-grows it). |
 | 2026-08-31 | TXN | **CFO transition:** Rafael Lizardi out 2026-08-01 → **Julie Knecht** (CAO, 25-yr veteran), advisory through 2026-08-31 (DB/Seymore, briefing 2026-06-03). |
 | 2026-09-16 | ON | **2026-09-16 — onsemi Analyst Day** (Citi exp. ~Sep 13 print first) — the key event; watch for a raised long-term target model + SiC/800V framing (Citi, briefing 2026-06-15). |
 
-## ⏰ Passed — need a post-mortem (0)
+## ⏰ Passed — need a post-mortem (3)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| _none_ | | |
+| 2026-07-31 | RDDT | **MS RBLX/RDDT 2Q26 group callback — 2026-07-31, 8:00 AM ET** (Matt Cost / Nikhil Javeri; MS Wigg 2026-07-30). |
+| 2026-07-31 | AMZN | **MS AMZN 2Q26 group callback with Brian Nowak — 2026-07-31, 8:30 AM ET** (MS Wigg, 2026-07-30). |
+| 2026-07-31 | AAPL | **MS AAPL 2Q26 group callback with Erik Woodring — 2026-07-31, 9:00 AM ET** (MS Wigg, 2026-07-30). |
 
 ## ✅ Resolved (36)
 

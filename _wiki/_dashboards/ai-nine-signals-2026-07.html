@@ -132,6 +132,19 @@
   .gridtable th,.gridtable td{border:1px solid var(--grid); padding:7px 10px; text-align:right; font-variant-numeric:tabular-nums;}
   .gridtable th{background:var(--accent-soft); color:var(--ink); font-weight:650;}
   .gridtable td:first-child,.gridtable th:first-child{text-align:left;}
+  .tblwrap{overflow-x:auto;}
+  .mst{border-collapse:collapse; width:100%; font-size:12.5px; margin-top:8px; min-width:640px;}
+  .mst th,.mst td{border:1px solid var(--grid); padding:5.5px 9px; text-align:right; font-variant-numeric:tabular-nums; color:var(--ink2);}
+  .mst th{background:var(--accent-soft); color:var(--ink); font-weight:650; text-align:center; font-size:11.5px;}
+  .mst td.rl{text-align:left; color:var(--ink2);}
+  .mst td.rl[data-tip]{cursor:help; text-decoration:underline dotted var(--baseline); text-underline-offset:3px;}
+  .mst tr.k-in td.rl{color:var(--partial); font-weight:650;}
+  .mst tr.k-res td{font-weight:750; color:var(--ink); background:color-mix(in srgb, var(--accent) 6%, transparent);}
+  .mst td.bc{background:color-mix(in srgb, var(--accent) 11%, transparent); color:var(--ink); font-weight:650;}
+  .mst tr.k-res td.bc{background:color-mix(in srgb, var(--accent) 19%, transparent);}
+  .mst td.neg{color:var(--bad);}
+  .mst td.yc{color:var(--est); font-style:italic;}
+  .mst th.bh{background:color-mix(in srgb, var(--accent) 22%, transparent);}
   .steps{display:flex; flex-direction:column; gap:0; margin-top:10px;}
   .step{display:flex; gap:12px; align-items:baseline; padding:9px 4px; border-bottom:1px solid var(--grid);}
   .step:last-child{border-bottom:0;}
@@ -244,6 +257,56 @@ const MS_ROIC = [
    note:'No 75% utilization haircut (MS disclosure) — revenue basis flattered ~33% vs Model 2; return is a margin, not an asset-base ROIC'},
 ];
 const MS_ROIC_SRC = 'Morgan Stanley "The Paths to 25–50% GenAI ROIC" — Brian Nowak (w/ Byrd, Wood), 2026-07-27. Standardized unit: 1GW = 410,256 GB300s, $39bn all-in capex, $7.7bn/yr owned-infra opex, 21% tax. Rebuilt as a live-formula workbook (Capstone, 2026-07-30) — reconciles to every reported anchor.';
+
+/* S5b — the conta opened line-by-line (from MS_GenAI_ROIC_1GW_v1.xlsx, all five scenario columns).
+   kind: in = MS input (flex lever) · calc = formula step · res = result line · yellow = Capstone-interpolated input */
+const MS_DETAIL = [
+ {m:'Model 1 — GPU rental (IaaS)', tagline:'the hyperscaler rents raw compute; the renter bears the training question',
+  lever:'price per GPU-hour', retLb:'ROIC (NOPAT ÷ $39bn gross capex)',
+  rows:[
+   {lb:'GB300 chips in 1 GW', k:'calc', f:'n0', v:[410256,410256,410256,410256,410256], note:'MS estimate of GB300 chips in a 1GW datacenter — the standardized unit across all three models (~2.44 kW all-in per chip ≈ 1.88 kW IT × ~1.3 PUE)'},
+   {lb:'× hours per year', k:'calc', f:'n0', v:[8760,8760,8760,8760,8760]},
+   {lb:'= GPU-hours per year (bn)', k:'calc', f:'n1', v:[3.59,3.59,3.59,3.59,3.59], note:'3.6bn GPU-hours/yr — the unit MS quotes for 1GW'},
+   {lb:'× utilization', k:'in', f:'pct', v:[75,75,75,75,75], note:'MS est. of uptime — the rented/billable share of capacity'},
+   {lb:'× price per GPU-hour', k:'in', f:'usd2', v:[7.00,8.00,8.50,9.00,10.00], note:'MS illustrative range; base case $8.50/hr. THE lever of Model 1'},
+   {lb:'= Revenue per GW ($bn)', k:'res', f:'usd1', v:[18.9,21.6,22.9,24.3,27.0]},
+   {lb:'− opex: IT dep 4.6 + non-IT dep 1.1 + energy/other 2.0', k:'calc', f:'usd1', v:[7.7,7.7,7.7,7.7,7.7], note:'IT capex $23bn over 5yr + non-IT $16bn over 15yr + $2bn energy/labor/maintenance (industry data, MS)'},
+   {lb:'= incremental EBIT ($bn)', k:'calc', f:'usd1', v:[11.2,13.9,15.2,16.6,19.3]},
+   {lb:'EBIT margin', k:'calc', f:'pct', v:[59,64,67,68,72]},
+   {lb:'× (1 − 21% tax) = NOPAT ($bn)', k:'calc', f:'usd1', v:[8.8,11.0,12.0,13.1,15.2]},
+   {lb:'ROIC = NOPAT ÷ $39bn capex', k:'res', f:'pct', v:[23,28,31,34,39], note:'MS stated range for this business: 60–70% incremental EBIT margins, 25–40% ROIC. Steady-state year-1 on GROSS capex — not a lifecycle IRR'},
+  ]},
+ {m:'Model 2 — API on OWNED infrastructure', tagline:'the owner sells tokens; training share earns zero but bears full cost',
+  lever:'% on inference × tokens/s × $/M tokens', retLb:'ROIC (NOPAT ÷ $39bn gross capex)',
+  rows:[
+   {lb:'GB300 chips in 1 GW', k:'calc', f:'n0', v:[410256,410256,410256,410256,410256]},
+   {lb:'× % of capacity on inference', k:'in', f:'pct', v:[50,60,65,70,80], note:'Training share generates no revenue but bears full cost — the ROIC is already burdened by it (35% in base)'},
+   {lb:'× tokens per second per GPU', k:'in', f:'n0', v:[3500,3000,2750,2500,2000], note:'Workload spec (DeepSeek-V4-Pro 1.6T, FP4, 8K/1K I/O, ~50 tok/s/user), NOT a hardware constant — richer workloads = fewer tokens/s at higher price'},
+   {lb:'× seconds/yr × 75% utilization = tokens/yr (tn)', k:'calc', f:'n0', v:[16981,17466,17345,16981,15525], note:'MS’s exhibit labels this row (bn); the unit is actually TRILLIONS — 16,981tn × $/M is what reconciles to $17bn revenue'},
+   {lb:'× price per million tokens', k:'in', f:'usd2', v:[1.00,1.50,1.75,2.00,2.50], note:'MS range; Muse Spark 1.1 blended pricing $1.58/M (8K/1K I/O) is the market benchmark'},
+   {lb:'= Revenue per GW ($bn)', k:'res', f:'usd1', v:[17.0,26.2,30.4,34.0,38.8]},
+   {lb:'− opex (same owned-infra stack)', k:'calc', f:'usd1', v:[7.7,7.7,7.7,7.7,7.7]},
+   {lb:'= incremental EBIT ($bn)', k:'calc', f:'usd1', v:[9.3,18.5,22.7,26.3,31.1]},
+   {lb:'EBIT margin', k:'calc', f:'pct', v:[55,71,75,77,80]},
+   {lb:'× (1 − 21% tax) = NOPAT ($bn)', k:'calc', f:'usd1', v:[7.4,14.6,17.9,20.8,24.6]},
+   {lb:'ROIC = NOPAT ÷ $39bn capex', k:'res', f:'pct', v:[19,38,46,53,63], note:'Owning the infra AND the token margin doubles Model 1’s base ROIC (46% vs 31%)'},
+  ]},
+ {m:'Model 3 — API on RENTED (3P) infrastructure', tagline:'the model lab without its own datacenters — rents the fleet, sells the tokens',
+  lever:'GPU rental rate vs token price', retLb:'NOPAT margin — NOT an asset-base ROIC (MS’s own caveat)',
+  rows:[
+   {lb:'GB300 chips in 1 GW', k:'calc', f:'n0', v:[410256,410256,410256,410256,410256]},
+   {lb:'× % of capacity on inference', k:'in', f:'pct', v:[50,60,65,70,80]},
+   {lb:'× tokens per second per GPU', k:'in', f:'n0', v:[3500,3000,2750,2500,2000]},
+   {lb:'× seconds/yr — NO utilization haircut = tokens/yr (tn)', k:'calc', f:'n0', v:[22641,23288,23126,22641,20701], note:'MS’s own disclosure: no 75% haircut in the 3P case — flatters Revenue/GW ~33% vs Model 2’s basis. Do not compare revenue lines across models without this'},
+   {lb:'× price per million tokens', k:'in', f:'usd2', v:[1.00,1.50,1.75,2.00,2.50]},
+   {lb:'= Revenue per GW ($bn)', k:'res', f:'usd1', v:[22.6,34.9,40.5,45.3,51.8]},
+   {lb:'− rental: FULL fleet × 8,760h × $/GPU-hr', k:'in', f:'usd1', v:[25.2,27.0,27.9,28.8,30.5], yellow:[false,true,false,true,false], note:'Rental rate grid $7.00 / $7.50* / $7.75 / $8.00* / $8.50 — MS anchors $7.00 low, $7.75 base, $8.50 high; *mid columns are CAPSTONE interpolation. The zero-revenue training share still pays full rent — no energy/dep lines, bundled in the rate'},
+   {lb:'= incremental EBIT ($bn)', k:'calc', f:'usd1', v:[-2.5,8.0,12.6,16.5,21.2], note:'The bear case is LOSS-MAKING: −$2.5bn at $1.00/M tokens against $7.00/hr rental — renting-to-serve only works above a token-price floor'},
+   {lb:'EBIT margin', k:'calc', f:'pct', v:[-11,23,31,37,41]},
+   {lb:'× (1 − 21% tax) = NOPAT ($bn)', k:'calc', f:'usd1', v:[-2.0,6.3,10.0,13.1,16.8]},
+   {lb:'NOPAT margin (MS’s illustrative “ROIC”)', k:'res', f:'pct', v:[-9,18,25,29,32], note:'NOT computed on an asset base — MS’s own labeling caveat. Do not put this column next to Models 1–2 ROIC'},
+  ]},
+];
 
 /* S6 — TAM: the simple what-if. 500M users × $/month × 12 */
 const WHATIF = [
@@ -500,6 +563,34 @@ function roicChart(){
   return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img">${g}</svg>`;
 }
 
+/* ---- MS ROIC line-by-line tables (slide 5b) ---- */
+function msFmt(f,v){
+  if(v==null)return '–';
+  if(f==='n0')return Math.round(v).toLocaleString('en-US');
+  if(f==='n1')return v.toFixed(2).replace(/0$/,'');
+  if(f==='pct')return v+'%';
+  if(f==='usd1')return (v<0?'−$':'$')+Math.abs(v).toFixed(1);
+  if(f==='usd2')return '$'+v.toFixed(2);
+  return String(v);
+}
+function msDetailCard(mod){
+  const heads=['1 · bear','2','3 · MS base','4','5 · bull'];
+  const rows=mod.rows.map(r=>{
+    const tds=r.v.map((v,i)=>{
+      const cls=[i===2?'bc':'', v<0?'neg':'', (r.yellow&&r.yellow[i])?'yc':''].filter(Boolean).join(' ');
+      return `<td class="${cls}">${msFmt(r.f,v)}${(r.yellow&&r.yellow[i])?'*':''}</td>`;});
+    const tip=r.note?` data-tip="${esc(r.note)}"`:'';
+    return `<tr class="k-${r.k}"><td class="rl"${tip}>${r.lb}</td>${tds.join('')}</tr>`;
+  }).join('');
+  return `<div class="chartcard"><div class="chd"><h3>${mod.m}</h3><span class="csub">${mod.tagline}</span></div>
+    <div class="tblwrap"><table class="mst">
+      <tr><th style="text-align:left">line (hover for the assumption)</th>${heads.map((h,i)=>`<th class="${i===2?'bh':''}">${h}</th>`).join('')}</tr>
+      ${rows}
+    </table></div>
+    <div class="src" style="margin-top:6px">Lever: <b>${mod.lever}</b> · return metric: ${mod.retLb}</div>
+  </div>`;
+}
+
 /* ---- TAM ladder (log x) ---- */
 function ladderChart(){
   const W=940,H=250,P={l:20,r:20,t:44,b:40};
@@ -725,7 +816,20 @@ function buildSlides(){
       {d:'05-27', t:'The margin inflection has a named driver: Anthropic-on-Bedrock (~$5.5B run-rate) helped AWS margins inflect <b>+213bp q/q</b>; Anthropic inference GM mid-60s, from −94% in 2024.', s:'SemiAnalysis, 2026-05-27'},
       {d:'04-08', t:'The bear frame, kept honest: blended lab economics ~<b>$10B revenue/GW vs ~$11B compute cost/GW</b> — negative at the headline; the monetized slice earns ~$25B/GW at ~60% GM. Free tiers are the drag (40% of OpenAI inference compute).', s:'Cantor Fitzgerald "Framing the ROIC Debates", 2026-04-08'},
     ])}
-    <div class="counter"><div class="ct">Basis discipline</div>MS Model 3’s “ROIC” is a <b>NOPAT margin, not an asset-base return</b> (MS’s own caveat), and its revenue basis skips the 75% utilization haircut of Model 2 — do not quote the three columns as one metric. Models 1–2 ROIC is steady-state year-1 on gross capex, with no model R&D anywhere.</div>
+    <div class="counter"><div class="ct">Basis discipline</div>MS Model 3’s “ROIC” is a <b>NOPAT margin, not an asset-base return</b> (MS’s own caveat), and its revenue basis skips the 75% utilization haircut of Model 2 — do not quote the three columns as one metric. Models 1–2 ROIC is steady-state year-1 on gross capex, with no model R&D anywhere. <b>The full line-by-line conta is on the next slide →</b></div>
+  </div>`});
+
+  /* S5b — the conta, opened */
+  S.push({id:'s5b', lab:'5b · THE 1GW MATH', html:`<div class="inner">
+    <div class="shead"><div><div class="eyebrow">Signal 5 / 9 — annex · a planilha, opened line by line</div>
+    <h2>The 1GW conta: three ways to monetize the same gigawatt</h2></div><span class="verd flat">annex — the arithmetic</span></div>
+    <p class="sub">Everything below runs on the <b>same standardized gigawatt</b>: 410,256 GB300 chips · <b>$39bn all-in capex</b> ($23bn IT depreciated over 5 years + $16bn non-IT over 15) · $7.7bn/yr of owned-infra opex · 21% tax. Five scenarios per model, bear → bull; the highlighted column is <b>MS’s base case</b>. Blue lines are the input levers — change those, everything below reprices. Hover any line for the assumption behind it.</p>
+    ${MS_DETAIL.map(msDetailCard).join('')}
+    <div class="chartcard" style="border-left:3px solid var(--accent)"><div class="chd"><h3>Read across the base column</h3></div>
+      <p style="font-size:13.5px; color:var(--ink2); margin-top:4px">The same gigawatt earns <b>$22.9bn renting compute (31% ROIC)</b>, <b>$30.4bn selling tokens on owned infrastructure (46% ROIC)</b>, or <b>$40.5bn selling tokens on rented infrastructure (25% NOPAT margin, −9% in the bear)</b>. Two conclusions fall out of the arithmetic: <b>(1) owning the infrastructure is where the return concentrates</b> — Model 2’s base ROIC is ~1.5x Model 1’s because the owner keeps the token margin on top of the rental economics; <b>(2) renting-to-serve only works above a token-price floor</b> — at $1.00/M tokens against a $7.00/hr rental the model-layer renter loses $2.5bn per GW-year. That asymmetry is MS’s thesis in one table: token returns get competed away at the model layer and capitalized into whoever owns the gigawatts — OW the infra owners (AMZN/GOOGL/MSFT).</p>
+      <div class="src">${esc(MS_ROIC_SRC)} Legend: <span style="color:var(--partial); font-weight:650">blue line</span> = MS input lever · <span style="color:var(--est); font-style:italic">amber*</span> = Capstone-interpolated input (not MS-reported) · returns are steady-state year-1 on gross capex; no model R&D, working capital or lifecycle decay anywhere. Reconciliation: the rebuilt workbook closes vs every figure MS reported (deltas are display rounding, ≤0.7pp).</div>
+    </div>
+    <div class="counter"><div class="ct">How to argue with it</div>The sensitivities the table hands you: Model 1 swings ~<b>1.6pp of ROIC per $0.25/hr</b> of GPU pricing; Model 2 swings ~<b>9pp of ROIC per $0.25/M</b> of token pricing at base volumes; Model 3 flips sign somewhere between $1.00 and $1.50/M at a $7–7.75/hr rental. The bear case for the whole complex is therefore a TOKEN-PRICE bear (competition at the model layer), not a utilization bear — utilization is pinned at 75% in every owned scenario, and today’s constraint evidence (slides 3–4) sits on the other side of that assumption.</div>
   </div>`});
 
   /* S6 — TAM */
