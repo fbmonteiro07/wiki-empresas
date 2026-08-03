@@ -2,7 +2,7 @@
 
 Variance pass on the NEW quantitative datapoints from the 6 substantive sources (MS South Korea, MS NAND Outlook, SemiAnalysis ECTC/Bedrock/Meta-Compute, UBS Asia Semis Sector Keys). Purely thematic/qualitative items (packaging roadmaps, TPU-track mechanics, CPO timing) are excluded from the table but summarized at the end.
 
-**Baselines:** (1) prior wiki comments (on-disk) · (2) Capstone house models (`_wiki/_data/house.json`, asof 2026-07-02) · (3) BBG consensus — **PENDING**: wrapper returned **HTTP 503 (Bloomberg Terminal not logged in)**. Re-run `refresh_features.py --run-estimates` and the BBG column below once the Terminal/VPN is reconnected. Web data was NOT substituted for consensus.
+**Baselines:** (1) prior wiki comments (on-disk) · (2) Capstone house models (`_wiki/_data/house.json`, asof 2026-07-02) · (3) BBG consensus — **PENDING at run time → ✅ RESOLVED 2026-07-13** (see the filled column at the bottom of this file): wrapper returned **HTTP 503 (Bloomberg Terminal not logged in)** on 07-02. Web data was NOT substituted for consensus. _Status line closed out 2026-08-03 by `/wiki-consensus` — no open BBG cell._
 
 ---
 

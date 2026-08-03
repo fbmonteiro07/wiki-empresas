@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\CDNS` · `_equity_calls` · `_briefings\by-ticker\CDNS.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-07-31 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-08-03 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -11,8 +11,8 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\CDNS` · `_equity_call
 | Gross profit | $5.5bn | $6.3bn |
 | Gross margin | 88.2% | 88.2% |
 | EBITDA | $3.0bn | $3.5bn |
-| EPS | $8.00 | $9.47 |
-| Capex | $238m | $241m |
+| EPS | $8.01 | $9.49 |
+| Capex | $237m | $240m |
 | OCF (≈EBITDA) | $3.0bn | $3.5bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

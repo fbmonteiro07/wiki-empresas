@@ -2,7 +2,7 @@
 
 New quantitative datapoints from the 8 files ingested 2026-07-09, variance-checked vs **(1) prior wiki comments** (on disk), **(2) Capstone house models** (on-page `## Capstone estimates` blocks), and **(3) BBG consensus**.
 
-> **⚠ BBG column = PENDING.** The Bloomberg wrapper (`E:\bloomberg_api`) raised **HTTP 503 — "Bloomberg connection test failed, please ensure you are logged in to Bloomberg Terminal."** The Terminal is not logged in / VPN likely down. Per protocol, the two on-disk baselines are completed below and the consensus column is left PENDING — **no web data was substituted for consensus.** Re-run `py "E:\Wiki Felipe empresas\_wiki\_tools\refresh_features.py" --run-estimates` (or `py E:\.claude\scripts\fetch_estimates.py`) once the Terminal is back to close these out.
+> **⚠ BBG column = PENDING at run time → ✅ RESOLVED 2026-07-13** (see the footer of this file; status line closed out 2026-08-03 by `/wiki-consensus`)**.** The Bloomberg wrapper (`E:\bloomberg_api`) raised **HTTP 503 — "Bloomberg connection test failed, please ensure you are logged in to Bloomberg Terminal."** The Terminal is not logged in / VPN likely down. Per protocol, the two on-disk baselines are completed below and the consensus column is left PENDING — **no web data was substituted for consensus.** Re-run `py "E:\Wiki Felipe empresas\_wiki\_tools\refresh_features.py" --run-estimates` (or `py E:\.claude\scripts\fetch_estimates.py`) once the Terminal is back to close these out.
 
 Qualitative/thematic notes (INTC EMIB-T mechanics, GOOG TPU packaging, most theme read-throughs) are excluded — only NEW numbers are reconciled.
 
@@ -41,7 +41,7 @@ Qualitative/thematic notes (INTC EMIB-T mechanics, GOOG TPU packaging, most them
 
 New quantitative datapoints from the **second 2026-07-09 ingest** (3 new files: TD Cowen semicap preview + Bernstein "New Memory LTAs part 2"; the SemiAnalysis MSL piece is qualitative/strategic — excluded from the number reconciliation; the MS Nokia/Ciena file was a duplicate re-drop, no new numbers). Variance-checked vs **(1) prior wiki comments**, **(2) Capstone house models** (semicap-wfe page carries the ASML_Peers_SemiCap house EPS/WFE), and **(3) BBG consensus**.
 
-> **⚠ BBG column = PENDING (again).** The wrapper (`E:\bloomberg_api`) still raised **HTTP 503 — "please ensure you are logged in to Bloomberg Terminal"** on this second run. On-disk baselines completed below; consensus left PENDING. No web data substituted.
+> **⚠ BBG column = PENDING (again) at run time → ✅ RESOLVED 2026-07-13** (footer)**.** The wrapper (`E:\bloomberg_api`) still raised **HTTP 503 — "please ensure you are logged in to Bloomberg Terminal"** on this second run. On-disk baselines completed below; consensus left PENDING. No web data substituted.
 
 ## Where the new data DIVERGES
 

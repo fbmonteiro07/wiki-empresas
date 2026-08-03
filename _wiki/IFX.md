@@ -5,13 +5,13 @@
 _Wiki · generated 2026-06-19 · **German issuer — NO SEC 10-K/10-Q/20-F filings exist.** Covered via earnings-call transcripts (`E:\Wiki Felipe\IFX\transcripts`) + Infineon IR + BBG consensus (EUR). Equity calls: `E:\equity_calls_transcripts`. Briefing roll-ups: `E:\briefings\2026`. Master index: [INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-07-31 · EUR
+### 📊 Consensus snapshot — BBG · asof 2026-08-03 · EUR
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | €17.1bn | €20.1bn |
 | Gross profit | €7.2bn | €9.2bn |
-| Gross margin | 41.9% | 45.5% |
+| Gross margin | 42.0% | 45.5% |
 | EBITDA | €5.8bn | €7.4bn |
 | EPS | €2.02 | €2.91 |
 | Capex | €3.0bn | €3.2bn |

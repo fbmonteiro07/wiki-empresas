@@ -1,7 +1,7 @@
 # Reconciliation — run-inbox 2026-07-14
 
 _New quantitative datapoints from the 12-file batch vs three baselines: (1) prior wiki comments on disk, (2) Capstone house models (`_data/house.json`, asof 2026-07-14), (3) BBG consensus._
-**BBG column = PENDING this run** — Bloomberg Terminal not logged in (wrapper returned HTTP 503). Re-run `refresh_features.py --run-estimates` (or `wiki-consensus`) once the Terminal + Capstone VPN are back to fill it. On-disk baselines (1) + (2) done live below.
+**BBG column = PENDING at run time → ✅ RESOLVED 2026-07-17** (see the footer) — Bloomberg Terminal was not logged in on 07-14 (wrapper returned HTTP 503). On-disk baselines (1) + (2) were done live below. _Status line closed out 2026-08-03 by `/wiki-consensus` — no open BBG cell._
 
 ---
 

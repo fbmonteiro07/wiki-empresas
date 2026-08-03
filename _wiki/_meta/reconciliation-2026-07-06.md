@@ -3,7 +3,7 @@
 New quantitative datapoints from 4 sources (GS 2Q Preview 07-05 · Bernstein ASML HNA 07-06 · SemiAnalysis NVDA backstop 07-06 · UBS Memory Monthly 07-03) reconciled vs three baselines:
 1. **Prior wiki** (on disk) — most recent PT/estimate already logged on each page.
 2. **Capstone house models** (on disk) — the `## Capstone estimates` block (models exist for NVDA, GOOG, TSM, ASML-peers among these names).
-3. **BBG consensus** — **PENDING**: Bloomberg wrapper raised **HTTP 503 (Terminal not logged in)**. Re-run `refresh_features.py --run-estimates` (or `/wiki-consensus`) once the Terminal is up + Capstone VPN connected. No web data substituted.
+3. **BBG consensus** — **PENDING at run time → ✅ RESOLVED 2026-07-13** (see the filled column at the bottom of this file): Bloomberg wrapper raised **HTTP 503 (Terminal not logged in)** on 07-06. No web data substituted. _Status line closed out 2026-08-03 by `/wiki-consensus` — this report has no open BBG cell._
 
 SemiAnalysis is qualitative/thematic (NVDA backstop mechanics + proprietary AI-debt macro) — no PT/EPS to place against consensus; noted under CONFIRMS only.
 

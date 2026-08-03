@@ -3,7 +3,7 @@
 Variance pass on the NEW quantitative datapoints folded this run, vs three baselines:
 1. **Prior wiki comments** (on disk) — the most recent PT/estimate already logged on each page.
 2. **Capstone house models** (`_wiki/_data/house.json`, asof 2026-07-16 — covers AAPL, AVGO, COHR, GOOG, LITE, META, NVDA, TSM).
-3. **BBG consensus** — **PENDING**: Bloomberg wrapper returned HTTP 503 (Terminal not logged in / Capstone VPN down) at run time. Re-run `/wiki-consensus` or `refresh_features.py --run-estimates` once the Terminal is back to populate this column.
+3. **BBG consensus** — **PENDING at run time → ✅ RESOLVED 2026-07-17** (the BBG column below is filled; see the footer): the wrapper returned HTTP 503 (Terminal not logged in / Capstone VPN down) on 07-16. _Status line closed out 2026-08-03 by `/wiki-consensus` — no open BBG cell._
 
 Private names (ANTHROPIC, OPENAI) have no BBG/house → reconciled vs prior wiki only.
 

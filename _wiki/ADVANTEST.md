@@ -3,17 +3,17 @@
 _Wiki · generated 2026-06-20 · **Japanese issuer — NO SEC filings**; sources: TSE/IFRS IR results + earnings-call transcripts (`E:\Wiki Felipe\ADVANTEST\transcripts`) · `_briefings` · **BBG (consensus block, JPY)**. All financials JPY. Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-07-31 · JPY
+### 📊 Consensus snapshot — BBG · asof 2026-08-03 · JPY
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | ¥1457.6bn | ¥1839.9bn |
 | Gross profit | ¥969.3bn | ¥1236.4bn |
 | Gross margin | 66.5% | 67.2% |
-| EBITDA | ¥758.7bn | ¥917.9bn |
+| EBITDA | ¥758.7bn | ¥932.1bn |
 | EPS | ¥733.78 | ¥959.18 |
-| Capex | — | — |
-| OCF (≈EBITDA) | ¥758.7bn | ¥917.9bn |
+| Capex | ¥23.6bn | — |
+| OCF (≈EBITDA) | ¥758.7bn | ¥932.1bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

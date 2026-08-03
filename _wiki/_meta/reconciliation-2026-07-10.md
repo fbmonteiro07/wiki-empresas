@@ -3,7 +3,7 @@
 New quantitative datapoints from the 07-10 ingest (8 substantive sources) reconciled vs three baselines:
 **(1)** prior wiki comments (on disk), **(2)** Capstone house models (`_data/house.json`, as-of 2026-07-10), **(3)** BBG consensus.
 
-> **BBG column = PENDING.** The Bloomberg wrapper returned **HTTP 503 — "Bloomberg connection test failed, please ensure you are logged in to Bloomberg Terminal"** (Terminal not logged in / Capstone VPN down). On-disk baselines (1) & (2) done now; re-run the BBG leg via `/wiki-consensus` or `refresh_features.py --run-estimates` once the Terminal is back. Per protocol, web data was **not** substituted for consensus.
+> **BBG column = PENDING at run time → ✅ RESOLVED 2026-07-13** (see the footer; status line closed out 2026-08-03 by `/wiki-consensus`)**.** The Bloomberg wrapper returned **HTTP 503 — "Bloomberg connection test failed, please ensure you are logged in to Bloomberg Terminal"** (Terminal not logged in / Capstone VPN down). On-disk baselines (1) & (2) done now; re-run the BBG leg via `/wiki-consensus` or `refresh_features.py --run-estimates` once the Terminal is back. Per protocol, web data was **not** substituted for consensus.
 
 Purely qualitative/structural inputs (SK Hynix ADR mechanics & LTA philosophy, Bernstein LTA-effectiveness math, AVGO Tomahawk/SerDes/COT commentary, INTC IMT-yield color, Samsung 2nm-share color, Chairman Chey interview) are excluded from the variance table.
 
