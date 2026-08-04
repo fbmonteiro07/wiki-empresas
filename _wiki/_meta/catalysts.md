@@ -2,10 +2,12 @@
 
 _Generated 2026-08-03 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (5)
+## 📅 Upcoming (7)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
+| 2026-08-03 | ON | ~~**Q2 FY26 print (~early Aug 2026)**~~ — **RESOLVED 2026-08-03**: beat on rev/GM/EPS, guide above on all three, AI-DC raised to "more than double" — but **auto −2% QoQ and below Street**. See Current |
+| 2026-08-03 | PLTR | ~~Q2/FY2026 guide and US-commercial ACV trajectory~~ — **RESOLVED 2026-08-03**: US Commercial $809m (+149% y/y) vs a ~$716m consensus bar; FY26 guide raised to $8.15bn. |
 | 2026-08-05 | IFX | **2026-08-05 — FY3Q26 print** — MS expects an in-line print (order-book momentum, industrial recovery, AI-DC commentary); watch the FY26 >EUR 16bn / ~20% margin bridge and HV-auto commentary (MS, 2026 |
 | 2026-08-26 | NVDA | **Q2 FY27 print: 2026-08-26** (guided $91B). Watch hyperscale vs hyperscale-capex growth under new segmentation (Arcuri: becomes a debate if NVDA ever under-grows it). |
 | 2026-08-31 | TXN | **CFO transition:** Rafael Lizardi out 2026-08-01 → **Julie Knecht** (CAO, 25-yr veteran), advisory through 2026-08-31 (DB/Seymore, briefing 2026-06-03). |

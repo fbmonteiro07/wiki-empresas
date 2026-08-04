@@ -1,0 +1,1601 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Update — Recap 1S26 | Capstone (slides)</title>
+</head>
+<body data-theme="ppt">
+<style>
+  :root{
+    /* PPT theme: white body, petrol title band, print-safe categorical palette */
+    --band:#002231; --paper:#ffffff; --panel:#ffffff; --panel2:#fbfcfd; --bg:#e8eaec;
+    --txt:#16181a; --ink:#16181a; --ink2:#3f4750; --mut:#6b7480;
+    --line:#e3e6ea; --grid:#e3e6ea; --baseline:#c6ccd3;
+    --blue:#0F6290; --gold:#C77A0F; --green:#1F9D6B; --purple:#6B5CA5;
+    --pink:#B5306B; --red:#C0392B; --gray:#5B6573; --rest:#9AA7B5;
+    --acc:#0F6290; --up:#1e7d3c; --dn:#c0392b; --good:#1e7d3c; --bad:#c0392b; --warnc:#b45309;
+    --hard:#0e7a3d; --partial:#2a5fb0; --est:#9a6a00;
+    --pet:#0F6290; --org:#C77A0F; --pur:#6B5CA5; --steel:#5B6573; --surface:#ffffff;
+    /* OpenRouter buckets (print-safe) */
+    --or-ds:#B5306B; --or-xi:#6B5CA5; --or-tc:#1B7F94; --or-za:#8a7318; --or-ms:#5f6b21;
+    --or-gg:#0F6290; --or-oa:#1F9D6B; --or-an:#C77A0F; --or-oth:#9AA7B5;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html,body{height:100%;}
+  html{scroll-snap-type:y mandatory; scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
+  body{background:var(--bg); color:var(--txt);
+    font-family:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif; font-size:14.5px;}
+  /* page chrome hidden — the deck IS the page */
+  header.top{display:none;}
+  nav.tabs{position:fixed; top:0; left:0; right:0; z-index:30; display:flex; gap:6px; flex-wrap:nowrap;
+    padding:7px 12px; background:rgba(0,34,49,.94); backdrop-filter:blur(6px);
+    overflow-x:auto; overflow-y:hidden; scrollbar-width:thin;}
+  nav.tabs a{color:#9fb3bd; text-decoration:none; border:1px solid #14384a; background:#062535;
+    border-radius:14px; padding:3px 10px; font-size:10.5px; white-space:nowrap; cursor:pointer; font-weight:600;}
+  nav.tabs a:hover{color:#fff; border-color:#3f7f9c;}
+  nav.tabs a.on{background:var(--gold); border-color:var(--gold); color:#fff;}
+  footer.pagefoot{display:none;}
+  /* slides */
+  .slidewrap{height:100vh; scroll-snap-align:center; display:flex; align-items:center; justify-content:center; padding-top:40px;}
+  .panel, #hero{width:1280px; height:720px; flex:0 0 auto; background:var(--paper);
+    border:0; border-radius:0; margin:0; padding:0; overflow:hidden;
+    display:flex; flex-direction:column; position:relative;
+    box-shadow:0 8px 40px rgba(0,20,30,.20); transform:scale(var(--sc,1)); transform-origin:center center;}
+  .panel>h2{flex:0 0 86px; background:var(--band); color:#fff; margin:0; padding:0 40px;
+    display:flex; align-items:center; gap:14px; font-size:29px; font-weight:700;
+    text-transform:none; letter-spacing:-.01em; line-height:1.08;}
+  .panel>h2 .sub{color:#9fb3bd; font-weight:400; font-size:16px; letter-spacing:0; text-transform:none;}
+  .panel>h2 .verd{margin-left:auto; font-size:12px; padding:5px 12px; border-radius:12px; font-weight:700; white-space:nowrap;}
+  .verd.up{background:var(--up); color:#fff;} .verd.watch{background:var(--warnc); color:#fff;} .verd.flat{background:#38505e; color:#dfe7ec;}
+  .panel>h2 img.slidelogo{height:60px; margin-left:auto; flex:0 0 auto;}
+  .panel>h2 .verd + img.slidelogo{margin-left:14px;}
+  .pbody{flex:1 1 auto; padding:22px 40px 8px; overflow:hidden; min-height:0;}
+  .note{flex:0 0 auto; color:var(--mut); font-size:10.5px; line-height:1.4; padding:8px 40px 14px;
+    border-top:1px solid var(--line); margin:0 0 0; max-width:none;}
+  .pageno{position:absolute; bottom:11px; right:18px; font-size:10.5px; color:var(--mut); font-variant-numeric:tabular-nums;}
+  /* cover */
+  #hero{background:var(--band); color:#fff; padding:56px 64px; display:flex; flex-direction:column;}
+  #hero .hero{background:none; border:0; padding:0; margin:0;}
+  #hero .hero .q{font-size:56px; font-weight:800; letter-spacing:-.02em; line-height:1.03; color:#fff; max-width:20ch;}
+  #hero .hero .a{font-size:19px; color:#a9bcc6; margin-top:16px; max-width:80ch; line-height:1.5;}
+  #hero .hero .a b{color:#fff;}
+  #hero .kpis{margin-top:auto; gap:16px;}
+  #hero .kpi{background:none; border:0; border-top:2px solid rgba(255,255,255,.28); border-radius:0; padding:12px 0 0; min-width:0;}
+  #hero .kpi .l{color:#9fb3bd; font-size:11px;}
+  #hero .kpi .v{color:#fff; font-size:27px;}
+  #hero .kpi .v em{color:var(--gold);}
+  #hero .kpi .s{color:#8ba3b0; font-size:10.5px;}
+  #hero .kpi .s .up{color:#5fd48b;} #hero .kpi .s .dn{color:#ff8f9a;}
+  #hero img.coverlogo{position:absolute; top:44px; right:56px; height:92px;}
+  #hero .coverfoot{position:absolute; bottom:26px; left:64px; right:64px; color:#7d939f; font-size:11px;}
+  /* content bits — light restyle of the dashboard components */
+  .lede{font-size:15.5px; color:var(--ink2); margin-bottom:12px; max-width:none; line-height:1.5;}
+  .lede b{color:var(--ink);}
+  .kpis{display:flex; gap:14px; flex-wrap:wrap;}
+  .kpi{background:var(--panel2); border:1px solid var(--line); border-radius:10px; padding:11px 16px; min-width:150px; flex:1;}
+  .kpi .v{font-size:22px; font-weight:700; color:var(--band); margin-top:2px;}
+  .kpi .l{color:var(--mut); font-size:11px; text-transform:uppercase; letter-spacing:.6px;}
+  .kpi .s{color:var(--ink2); font-size:11px; margin-top:2px;}
+  .rcard{background:var(--panel2); border:1px solid var(--line); border-radius:10px; padding:11px 13px;}
+  .rcard .rt{font-size:13.5px; font-weight:700; color:var(--ink); margin-bottom:8px; padding-left:9px;
+    border-left:3px solid currentColor; line-height:1.3;}
+  .rcard .rt span{display:block; font-size:10.5px; font-weight:400; color:var(--mut);}
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:22px;}
+  .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+  .grid4{display:grid; grid-template-columns:repeat(4,1fr); gap:18px;}
+  .chtitle{font-size:14px; font-weight:700; color:var(--ink); text-align:center; margin-bottom:4px;
+    padding-left:0; border-left:0;}
+  .rsecx{color:var(--band); font-size:11px; text-transform:uppercase; letter-spacing:.5px; margin:7px 0 4px;
+    font-weight:700; padding-left:9px; border-left:3px solid var(--gold); line-height:1.2;}
+  .rsecx:first-child{margin-top:0;}
+  /* o quadro das clouds (9 mini-charts) precisa caber em 720px */
+  .rsecx + .grid3{gap:12px;}
+  .rsecx ~ .grid3 .rcard{padding:5px 8px 2px;}
+  .rsecx ~ .grid3 .rcard .rt{font-size:11px; margin-bottom:2px; padding-left:7px;}
+  .colh{font-size:15px; font-weight:700; color:#fff; background:var(--band); text-transform:none;
+    letter-spacing:0; padding:9px 14px; border-radius:3px; margin-bottom:12px;}
+  .trow{display:grid; gap:13px;}
+  .stile{background:var(--panel2); border:1px solid var(--line); border-radius:10px; padding:12px 15px;}
+  .stile .l{font-size:11px; color:var(--mut); font-weight:600; text-transform:uppercase; letter-spacing:.5px;}
+  .stile .v{font-size:26px; font-weight:750; color:var(--band); margin-top:1px;}
+  .stile .d{font-size:11.5px; color:var(--ink2); margin-top:2px; line-height:1.4;}
+  .bigrow{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  .bignum{background:var(--panel2); border:1px solid var(--line); border-radius:10px; padding:20px 24px;}
+  .bignum .k{font-size:14.5px; color:var(--ink2); font-weight:600;}
+  .bignum .k b{color:var(--ink);}
+  .bignum .v{font-size:52px; font-weight:800; letter-spacing:-.02em; color:var(--band); margin:2px 0;}
+  .bignum .v span{font-size:18px; color:var(--mut);}
+  .bignum .conta{font-size:13px; color:var(--blue); font-weight:700;}
+  .bignum .n{font-size:12.5px; color:var(--mut); margin-top:8px; line-height:1.4;}
+  .q{font-size:18px; line-height:1.5; color:var(--ink2); background:none; border:0;
+    border-left:3px solid var(--blue); border-radius:0; padding:6px 0 6px 18px;}
+  .q b{color:var(--ink);}
+  .q .who{display:block; font-size:12px; color:var(--mut); margin-top:5px; font-weight:600;}
+  .q.warn{border-left-color:var(--warnc);}
+  .qlist{display:flex; flex-direction:column; gap:18px; justify-content:center; height:100%;}
+  .legend{display:flex; gap:18px; font-size:13px; color:var(--ink2); margin:2px 0 8px; flex-wrap:wrap;}
+  .legend .k{display:inline-flex; align-items:center; gap:7px; font-weight:600;}
+  .legend .sw{width:16px; height:3.5px; border-radius:2px; background:var(--kc);}
+  .legend .swd{width:10px; height:10px; border-radius:50%; background:var(--kc);}
+  svg.chart text{font-family:"Segoe UI",system-ui,sans-serif;}
+  .tick{fill:var(--mut); font-size:11.5px; font-variant-numeric:tabular-nums;}
+  .gl{stroke:var(--grid); stroke-width:1;}
+  .bl{stroke:var(--baseline); stroke-width:1;}
+  .dl{fill:var(--ink2); font-size:13px; font-weight:650;}
+  .anno{fill:var(--mut); font-size:11px;}
+  .steps2{display:flex; flex-direction:column; gap:11px;}
+  .step2{display:grid; grid-template-columns:110px 220px 1fr; gap:14px; align-items:center;}
+  .step2 .sd{font-size:12px; color:var(--mut); font-weight:650;}
+  .step2 .sv{background:var(--band); border:0; color:#fff; font-size:17px; font-weight:750; padding:9px 14px; text-align:center; border-radius:3px;}
+  .step2 .sn{font-size:12.5px; color:var(--ink2); line-height:1.42;}
+  .stepB{margin-bottom:13px;}
+  .stepB .hd{display:flex; align-items:center; gap:12px; margin-bottom:4px;}
+  .stepB .sd{font-size:12px; color:var(--mut); font-weight:650; min-width:78px;}
+  .stepB .sv{background:var(--band); border:0; color:#fff; font-size:17px; font-weight:750; padding:7px 15px; border-radius:3px;}
+  .stepB .sn{font-size:12.5px; color:var(--ink2); line-height:1.42;}
+  .stepB .sn b{color:var(--ink);}
+  .tablewrap{overflow:hidden;}
+  table{border-collapse:collapse; width:100%;}
+  th,td{padding:6px 11px; text-align:right; font-variant-numeric:tabular-nums;}
+  th{color:#fff; background:var(--band); font-size:12px; text-transform:none; letter-spacing:.3px; border-bottom:0; font-weight:650;}
+  td:first-child,th:first-child{text-align:left;}
+  tbody tr{border-bottom:1px solid var(--line);}
+  tbody tr:hover{background:rgba(15,98,144,.05);}
+  .mst{font-size:13px; white-space:nowrap;}
+  .mst td{color:var(--ink2); border:1px solid var(--line);}
+  .mst th{border:1px solid var(--band);}
+  .mst tr.k-in td.rl{color:var(--blue); font-weight:650;}
+  .mst tr.k-res td{font-weight:750; color:var(--ink); background:#eef3f6;}
+  .mst td.bc{background:#dfeaf1; color:var(--ink); font-weight:650;}
+  .mst tr.k-res td.bc{background:#cfe0ea;}
+  .mst td.neg{color:var(--bad);}
+  .mst td.yc{color:var(--est); font-style:italic;}
+  .mst th.bh{background:var(--blue);}
+  .sc{font-size:13px;}
+  .sc td{color:var(--ink2); white-space:normal; border-bottom:1px solid var(--line); vertical-align:top; padding:7px 12px;}
+  .sc td b{color:var(--ink);}
+  .sc td.n{font-weight:800; color:var(--mut); width:26px;}
+  .arrow-up{color:var(--up); font-weight:800;} .arrow-watch{color:var(--warnc); font-weight:800;}
+  .tagH,.tagP,.tagE{font-size:10px; font-weight:700; padding:1.5px 6px; border-radius:5px; vertical-align:1px; color:#fff;}
+  .tagH{background:var(--hard);} .tagP{background:var(--partial);} .tagE{background:var(--est);}
+  .mono{font-variant-numeric:tabular-nums;}
+  #tip{position:fixed; z-index:50; pointer-events:none; background:#16181a; color:#fff;
+    font-size:12px; line-height:1.4; padding:8px 11px; border-radius:6px; max-width:380px; opacity:0; transition:opacity .12s;}
+  #tip.on{opacity:.97;}
+  @media print{
+    html{scroll-snap-type:none;}
+    body{background:#fff;}
+    nav.tabs{display:none;}
+    .slidewrap{height:auto; padding-top:0; page-break-after:always; display:block;}
+    .slidewrap:last-of-type{page-break-after:auto;}
+    .panel,#hero{transform:none!important; box-shadow:none; margin:0 auto;}
+    @page{size:1280px 720px; margin:0;}
+  }
+</style>
+
+<header class="top">
+  <h1>AI UPDATE <span>| Recap Fev → Jul 2026</span></h1>
+  <span class="asof" id="asof"></span>
+  <span class="src">Capstone · uso interno</span>
+</header>
+<nav class="tabs" id="tabs"></nav>
+<div id="page"></div>
+<div id="tip" role="status"></div>
+
+<script>
+const CAPSTONE_LOGO = "iVBORw0KGgoAAAANSUhEUgAAAJYAAAB0CAYAAABnjctrAAASfElEQVR4nO1dD2xV5RU/baWraVOCmBEYRFL/pLHRiDo21MnE4nP6mAzzDFuHc5OBCpl/YoeDocwyA2NTETezjgyHYTruNEzeut1J2OrYUCYZg+BQNgLB4TS4BgJpAylZTvl97OvXc+57Iuu7977vlxCw772+V++v55zvd37nXCIPDw8PDw8PDw8PDw8PDw8Pj7ggzAeV0n+H+aAyzAdD3MfLCRWl/gBJAROFiKqIqJeIziOiMUQ0Gv8egT8Glfj7BBEdJKJ9RHSAiN7Dv/fge1Emm+uhFMITS0CYD2qI6GwiOoY/jUSUJaIcEY07Q//vdxFRBxEFRPQmvsZk604D2TyxBkalakSiaWeYSIXA0exZIloD0nE0O04JhSdWf0K1ENGjTlorBbqJaCkRtRPRUSI6ksnmOK0mBmVLLBTWnHouJaL7QapisZmINhDRTiJ6F3VUDwhxmIhqQVT+U09Ew/A1TqmfI6JJH+K91oFkbyJNJiKKVZRxDcXp7mnOOAWezjXWahDpL0S03yKNebxbiyjhSQJzvUYg8hH8XUdEVxBRMxHNIKJRBT7HX4noHiJ6i4gOxT2ClRWxwnzA0YP/LCkQofYjSoRE9D6T5/9VUIcniWeIegsR3QvCadgEgu3LZHMcHWOJijKLUnOJaFnE01YS0RMonusG+8KF/6v1uMabQ0QPRDz9cSJqjWvkSj2xEBH4ZPdGxNP4Ai7nf8TlQoX5YAjXU2E+mIOUrYHrtW2ZbK6LYoRUEyvMB8MRpRYpT1mKx6rjmlbCfFALUZYPGI8pT1tFRPfF6fRYkXJSdRJRk3LS+kqSTlnhyTTZi8jKvywu+BBxDaJXyX+mipQW6OcS0T+Vp0whoh0sEWSyOdaIkvjzXQzVnmUMF5NZDin1z5YqYuF/+rVEtF54+EUi+joRce3CJ7001I6PEdE84eH5RPRUKcmVGmKhFpkGzclFKxfAaejBCenxJqR26dS4uFRFfUWKSMXFbZvw8JVEtDuuxfkZ+tlHQ0A1QqwBt4QWZbI57g4MKipSok/dhFTnNnXHoZYqeTE7CJGLsREFfMn1rooU1BlThFTA3qdxaailTuOXbKXQVZiYyeZepUFERcJ/S7mpu10g1Zi46DmlQJgPLiMiJhlBovjHYNdaSbbO1guk2ktEF5UzqYDtmWzuNda0uGldigK+IsHRar/gm+JI9U6JPpZHkiMWSPW0QKompEGPGOAsSt7Rmk+As5yHWmAjKfcUGBtUJHBKhl2arlYzP5PNfVCij+aR8FTIxfoK52tMsoc8qeKHygTpMyx2znQeurlEH8kjDcRCj+9B4SFu4xwqwUfySFGN9Uki2qI8PD4uPiSPBEUsYCt8Vvy3CyZcDqdGjxggMRHLIMwHbG67S7Hpsvnti3Gy6JYrKhPUue8D2hM8STNReDprXP8iorHlvOklDohtxAIxRqHRPMBqi8c5er2i7Fdg0TSfVh9W3BHn3+o66FZMnBWwHZ8CpzrWrzLZ3OVKWlyDwVSPEiDOEWuk0/vjPQk3soHPPf0hemVQY7nYg7R5wNddZU4s1FWzlEHNSUiNA/zrYT4wFl0+PZaVRTluiGsqPDtitwLbbx9VpAWOcGMVQvIk9CNn+HN6JDBi8QAmFViOcSuvDXKjF14/RfDBE3SwST5ylRmxEIkmoGi3yTBaWYjG9dMWgVwfxwHg79bKIRsTSuWuLAfENRV+SZgL5BrpBeG5PEY/19W7iIgJ05XJ5j6GE6K0PG0ORvE9yiBiMdn/Q0RDrS/zSqGjIM+dRPSM9FIIpAM2xkCtn4YJFolgU0BCr9anPGINdQYk+iZOIDM8h6aziwwmUi50C3uku3WwL/Nz3JTIqx4vBQE90kYsRCt3mx2f8kaYFg0UeK65zlFGy3lp2p3wcJ0CzIAsN5ylpEaWKe5gIda3g1KWCgvsIpiMsaZTQ6ioj76qbOkzS0AG7OsE6WaZZWvC677Gka3UG1uSjFgRyyDMB7wSe6HwEI+LP2xfcKS9iyO8Wo0YtOgRyNUARV8CHxb2+FNjClKhBXYvTFVWOm7kSOWkxh2oyzidSanxFje9gWjvQKVnTUwSVKd5j1eKIpaV5qpAllFKsf6qHYmQSucrqyHbsZH4mHT6C/PBt5Rmttn+5z1eKYhYptjmvt5FEfLCg7YOhVPjUiM7OJiFE+YI1ykBPKVESf7av4vYw+4Rx4hlbQmuEaIQK+g3KAIpR7QvwL1wyvUAwnUo0gSTJVRaQdyn/C1kCBfcv/yNr7sSRCwG6pnXQYjFthMBj9VitygTzQVrVLvsNIe66sfC2BijLZPNPRzxOZYoS2TbsW/KuyQSRiy+JQiBXLfZtxOxbh/CCvp04VtwDfWME7nMWP5a4fk70Ws8qvQaG9Eykjxe49EA95NBCSBWpaCMjxXSXD1u+Sa1aDhdtgiRayxOepK6zlvw3nRTHCSJWqRbvvGli4nwhnlyxZxYml2GU1K7Qy5zo6XdyrdrhNJ+wiHkSpDSRRvSo0iSMB/8QLkFyVK8lk+bnmAxPRX23c5WABv3nrcdDEhd+9Da6VT0q5YwH/CtdQ04zd4Ntd4FC7KvCC4Jg8VIzS54Hfaf+dRoNK/QaSeVI+JcY0notZT040W2aPh2ILOF50ep7k14D3cyiCNeLVKqJD9wLbfBR67kEcsWR3fYa6YRaSY6BkGDLpClx66jQLBfKzemvB0HCLFAD/PBWiWltqZxp3zSUyFHJNfRuVwRR+c5qfE4/PB18FjZGAY//A22NQYX//OKHLHaeOeV1DZTed0yTo082FHO7aC4RawaiJP2lPP5RDRS6eeJu9zxfZZAfpAa2Qvs1g6ef5lASMKu05txEJAa2RciNWr2523lGL1iRSxGmA+edAhxDk6KNRF38+La5jUnzQ0DWTiKSTrUBOhXR507nXYqaj3rZi8pM41no5aTUuO98H+VlUM1bqmQcFNtG5chRbLS/Sko3y64FrrLdjCAZJtATO4R2mhAtBtv0hwmq3vg+1qo6GMrBZfECZBzJk6cJKTyVUpESy3iGLGanQKcG9ALTDQCEZqVO3z1Kenu6ki8ZoVSE7Eb4vtOKh2JFNeppMbP8t9C9OIoeYHiDTtmDc2mPjXGkVjD4UE34MjSZJMFRXsD6jFW1Aua+3DRb0H0cNGJk2GVIQsi01CMj41Q1Podbs8Q73MIKVjaiHMrGuCpdqfGkVhSW2crIpHtHDUpaaUieIr37AvzwQWIbFJqYnJ1Omp9DVIjfz/pBPgQ/0PxeM1TFpO8gOiZWrU+dsRihPngEcWsx6lkrxO9alBYr1JkiVsdQtZA4V+HlOqC66RnBeuO5sXfCNvOgNsAhycb2eOVtN1lnWhTF71iSSxGmA9exryfJEAuF+SFRsWa3IsLuFNIdS3KjTM3WDOKx51op/UmOe1tVdT6KiL6o3KinQonbKomsuNMrCGIHpJAut707UxkscTSFxVCzkQKsm04TMhLlGKbCXmp4vHS0u9C+PW7hcmgWjwu3WqXyX1fmsgVW2I5N9beHBGJdjlRhYvnGQohOwzpLHLV4nu5wqwBE2i14JKYDhOhdBD4srSPC+S/RtHW9lqnzcTrXbEmlhVVekEKqSbiyNXh1FFRF7ALj73rCKpRM4oscN5jD1SAkOcVaGTvEdR6fl19RCM7A7U+0TfxjD2xbIT5YI6y+yrgVOdYmc29dzQlfSqcCC4hr1AiZDci5CmPl6W6r1UGOO4mop9LNmZEvW8o97HmaPtAkiNX0ojFae5q5ZTFqeR6pKCeIgdgl6Nv6Nqf6+CxaipmEAOEnIs+pAs+rd6jbCAcDtJLKy63Y49XIm8+lShiWamxHpGIT4IFJ2lw4Zs/zI5SRJR5in71DG4OdVhoSG8Xnt+LMTaJ9Mb+vDNCiN2WNEkiccRyLvyjioOB66TvCILqubjw2gK3TQK5rotYPjLJdlZYJOlQ0u8USAtSaqxELScNibRBYklM9EoksfgiMAFw4ZuVlZC78dt+ysFgRa8lin99WSab+6bzXjUgYp/9WHjNJBDS1seqcVOpNiXatSqSxGj8PJLYy5LIjUmRJBJJLOXCvxGxLXmnUxPVom8orTPiiDbZ2WpjivQVEe2jdnuMLDxJ+quV9HsATo2DQmochj4o/zwSzAEi1qkxUcSyRNBq9zceBHtcsa4swgj9EUfz4pbL286iNzsSbXGi3XB8XZpR3GTun5jpX3sNh+zBYqt0EPi9tBcCP88qJTW2Yn4ytuRKDLFgZbnTSkdr0ELpKbJvuBkX3iVXJZTvFoWQ3xd6jechotQpEWWfc3jgCPkj+OilerDf1LfzXi3K/OR63JDKbNyJFZJErEuEE9d4kMuNXA14rjRONgF2l6NFXkDuG94mnDKrIiLKQsxBvu+Q67ooH5k0uFHgtEl47IO41V5JIhbXLD9zNsKw7+kT0m8sLshapW84mwt+weN1YQQhm1DbHHde84BijVmN9+m3NgmpcbtyELgSRsKDQn+yCqRkZV7qPmyIE7kqEqhfsfHPRjtUaolc9VjtLa1BWodUMmBfVpgPfqoU6Vy/PSfIGE0REeV8+N3d8f2fKI7WRfi80o0RovqgHD3vi8uKy8QQixEhL4iDDlZUGa9M+RCi1LsCWVqjIpFw0evxuZqF19yOz+daamYotp2NqAd7hdQ4HJ9ZajsdQdR7v9TRK1HEsi7608LpbxyW30pOTmMz/mXEcOoLuJC2paZJOfZ34wJK09LfVvSrNXifakuSqEFKfFtJv+K9rvHLUg8jo7tlmhAJXyoluRJHLIsoB4XNMWOk285Zr6tBT09yMLRDj+q30gjvtVlR0lvQN3RrtQnKIMYBFOn9im28Zq2yUZBTcqDcCLQa3YdW5ecRS4TBQCKJxcCyD3esiyCWdhUglxaJ+DBwudvTw2vmK43sviazMwBbCbG2Q4ko03H3V1cjm664N/j7TFVSPX+2axG9JCJflcnmeHnKoCLJxOJodYkQGY7gpKhu3LNWQv5Bue0vn7xeA1l6ivB4HcD36XHE0fqIfuZj1vqjE0WsFj8EtV5aLW52qmo/zzWZbO5PVOYDq0UBqWSrkD5YtDykLLA1rz0OAlyvDG3wb/8j9iQPokUnBmD5fW2Mwmm12RmaPQw5ggnpYr4ZLRNWi9cJh42hEavFD+O9PqP8yKzrDSoSG7Gctsw0RVIYg7So1hkFBmD3o0jvl1oRLZdgdVIxzoohqAc3Kxe539iZdSP1WcqK8L7V4k5fsltx2a6EH2xQx8wSTyzrf+wMpT4Zj/sSHi7w+nMxgd1QpLkvSknfw+8r2VwiNgMuzGRziwXST1DS73vGvYHI+rYwK7kapBr0Aj6xqdAGSNOu9Pu4XplRYKVQN2qzJticJTG133QNLtarMBu6om0Dn1rDfPBp4X0fVj5nW5gP/mY/H0TeBJHVng43h5TdsOfsFUjVBru2PxV+VCDyXKtEkfW4w0R31O4ERImbIm77O9m+8ZO1h/57ipL+ELsuhE3Oo1GzjVBS41YTZa2WjuYjK/ieg41UpEIbOLaPimix9FlVijg1mlWSVYU8UdaFb1GcFR143zpBv3oe+xwKWmPwPjnlRgoG/Bl+Veq2TuqIZV0wTg0vK0r7FvQJB3jQhe+jNX5n4wLbI2FD4Lt6vRhCFtnauZGlEcHj5TayWY64ym2UlwqpJJZzertLOVmparuQGm9XhlMHjOJbbtMXFUIOGAlDamxURFszkd1vRhFp/0ko8+tN1IsDqVJPLMeYt0mxLhNOk0+ggO/nkbciUaOSXo9ZwmXXh3BW3CZYcCgiQt4Lj5c7dlYVx31bqSeWE0XuUCQJsi7qAsgFrvXZ3MtnvdI3nI2eXpfz3lcrzoou479yot0IRNG5WiM7CYOsZUEsA2s8a5nit7LTzwKQaBfqpSp8vRcns2WaxyszsM9o6r2JSmr8BQTRLCJTlFI+6O2Z00FZEUs47n9XOZHZYP3oJdRTRqjkonmk0vjdiyLa3eTM73m/YqkpBhxF785kc7+jBKAsiSUQ7EFFg9KwGeLoMcXxQLBEdzjpdAjUeomQGjpAxrfiZD0uhLImlpWqhoEkOdQ20s6G08Hjws3RzW6IN+AE1cBkehYHit4kTUEzyp5YNqzpm3pIDLMKXPxiU9jkTDa3x3mvShTpJjUeg5b1w0w2tw2EF+9fnQR4YhX2bB1Dm2gK0tjpRLNe7vdJhjuM1VfD01UVh0GIMwFPrCJgebvMNudakG4kbnDQAL/USKv3t5+I3kEE3CFJEWmGJ9ZHhGW6syWJarNqO84ipoeHh4eHh4eHh4eHh4eHh4eHB5U5/gu8BlIUnGAJMwAAAABJRU5ErkJggg==";
+/* ============ DATA — every datapoint carries source + date ============ */
+
+/* S1 — Lab ARR (run-rate marks, USD bn) */
+const ARR = {
+  anthropic: [
+    {d:'2025-12-31', v:9,  s:'Exit-2025 ~$9B (from ~$1B end-2024) — FundaAI series 2026-06-24; JPM "AI Capex 2.0" 2026-06-16'},
+    {d:'2026-02-28', v:14, s:'Feb ~$14B (net-add +$5B m/m on this FundaAI path; SemiAnalysis’s alternative path runs 9→12→19) — FundaAI 06-24'},
+    {d:'2026-03-31', v:19, s:'Mar ~$19B — FundaAI 06-24; BofA Post 07-06 (SemiAnalysis has 1Q exit $30B)'},
+    {d:'2026-04-30', v:30, s:'Apr ~$30B — passes OpenAI for the first time — FundaAI "LLM 26H1 Pt 2" 2026-06-24'},
+    {d:'2026-05-28', v:47, s:'>$47B at Series H ($965B post) — company/CNBC 2026-05-28; Barclays 06-01 (+422% YTD)'},
+    {d:'2026-07-08', v:60, s:'>$60B 3Q26E, GAAP EBIT ~+$1B — SemiAnalysis pre-IPO financials 2026-07-08'},
+    {d:'2026-07-10', v:69, s:'$69B; net adds ~$550M/day — Yipit via @jukan05 2026-07-10'},
+  ],
+  openai: [
+    {d:'2025-12-31', v:20, s:'Run-rate "exceeded $20B" exit-2025 (FY25 revenue $13.1B) — OpenAI CFO via Barron’s/Sherwood'},
+    {d:'2026-03-04', v:25, s:'$25B ARR — The Information 3/4/26 via Barclays framework; JPM ">$25bn as of Mar-26"'},
+    {d:'2026-04-30', v:24, s:'~$24B Apr (FundaAI retrospective) — the month Anthropic passes'},
+    {d:'2026-05-31', v:33, s:'~$33B May, re-accelerating late-May on GPT-5.5/Codex — FundaAI 06-24; Barclays 06-01 (+65% YTD)'},
+  ],
+};
+const ARR_OPEN_NOTE = {d:'2026-07-29', s:'"July run-rate revenue exceeded ALL of Q2" — CFO Sarah Friar, internal all-hands via CNBC/The Information 2026-07-30. No hard number yet.'};
+
+/* S2 — Tokens, three independent bases */
+const TOK_GOOGLE = [ /* all-surfaces monthly tokens, trillions */
+  {d:'2025-05-15', v:480,  lb:'480T/mo', s:'"At I/O in May, we announced that we processed 480 trillion monthly tokens across our surfaces" — Alphabet Q2’25 call 2025-07-29'},
+  {d:'2025-07-29', v:980,  lb:'980T/mo', s:'"Since then, we have doubled that number, now processing over 980 trillion" — Alphabet Q2’25 call 2025-07-29'},
+  {d:'2025-10-29', v:1300, lb:'~1.3Q/mo*', s:'~1.3 quadrillion/mo, ">20x growth in a year" — Alphabet Q3’25 call 2025-10-29 (*transcript unit garbled; inferred from the 980T July anchor — verify vs IR)'},
+];
+const TOK_API = [ /* Gemini API, billions of tokens per minute */
+  {d:'2025-10-29', v:7,  s:'"first-party models now process 7 billion tokens per minute via direct API" — Pichai, Q3’25 call 2025-10-29'},
+  {d:'2026-02-04', v:10, s:'"over 10 billion tokens per minute via direct API, up from 7 billion last quarter" — Pichai, Q4’25 call 2026-02-04'},
+  {d:'2026-04-29', v:16, s:'"more than 16 billion tokens per minute, up from 10 billion last quarter" — Pichai, Q1’26 call 2026-04-29'},
+  {d:'2026-07-22', v:22, s:'"approximately 22 billion tokens per minute, up from 16 billion just a quarter ago" — Pichai, Q2’26 call 2026-07-22'},
+];
+/* OpenRouter — FULL weekly token series from the public rankings chart (site data,
+   captured via the live page 2026-07-31). total_B = ALL models incl. "Others", billions/week.
+   Last week (2026-07-27) is IN PROGRESS: fc_B = the site's own forecast for the remainder. */
+const OR_WEEKLY = [["2025-08-04",3431,0],["2025-08-11",3204,0],["2025-08-18",3207,0],["2025-08-25",3725,0],["2025-09-01",4600,0],["2025-09-08",4897,0],["2025-09-15",4917,0],["2025-09-22",5258,0],["2025-09-29",5380,0],["2025-10-06",5020,0],["2025-10-13",4644,0],["2025-10-20",4886,0],["2025-10-27",5511,0],["2025-11-03",5828,0],["2025-11-10",5928,0],["2025-11-17",6272,0],["2025-11-24",7185,0],["2025-12-01",6184,0],["2025-12-08",5773,0],["2025-12-15",5841,0],["2025-12-22",5665,0],["2025-12-29",5567,0],["2026-01-05",6420,0],["2026-01-12",7643,0],["2026-01-19",7494,0],["2026-01-26",8250,0],["2026-02-02",9804,0],["2026-02-09",13015,0],["2026-02-16",13948,0],["2026-02-23",13616,0],["2026-03-02",14789,0],["2026-03-09",16874,0],["2026-03-16",20297,0],["2026-03-23",22640,0],["2026-03-30",27006,0],["2026-04-06",20991,0],["2026-04-13",20469,0],["2026-04-20",21883,0],["2026-04-27",23798,0],["2026-05-04",25732,0],["2026-05-11",26906,0],["2026-05-18",28920,0],["2026-05-25",31808,0],["2026-06-01",36126,0],["2026-06-08",44606,0],["2026-06-15",46648,0],["2026-06-22",46720,0],["2026-06-29",46720,0],["2026-07-06",52620,0],["2026-07-13",62774,0],["2026-07-20",58041,0],["2026-07-27",41328,16147]];
+const OR_SRC = 'OpenRouter public rankings chart ("Tokens processed per week", all models incl. Others), captured from the live site 2026-07-31. Final week is in progress: solid = booked, open point = booked + the site’s own 1-week forecast. Marketplace volume ≠ industry total — OpenRouter is a small, fast-growing slice; use the slope, not the level.';
+const TOK_COHORT = [
+  {q:'Q3’25', v:150,  s:'"nearly 150 Google Cloud customers each processed ~1T tokens over the past 12 months" — Q3’25 call'},
+  {q:'Q1’26', v:330,  s:'"330 Google Cloud customers each processed over 1T tokens; 35 reached the 10T milestone" — Q1’26 call'},
+  {q:'Q2’26', v:500,  s:'"Nearly 500 cloud customers have each processed more than 1 trillion tokens in the last year" — Q2’26 call'},
+];
+
+/* S3 — Cloud growth y/y % by calendar quarter */
+const CG_Q = ['CQ2’24','CQ3’24','CQ4’24','CQ1’25','CQ2’25','CQ3’25','CQ4’25','CQ1’26','CQ2’26'];
+const CLOUD = [
+  {name:'Google Cloud', css:'--c-orange', pts:[29,35,30,28,32,34,48,63,82],
+   note:'Q2’26 includes first TPU system-sale revenue — growth "accelerated meaningfully even after excluding TPU sales" (CFO). Q1’26 revenue is TPU-free; the Q1 basis change was in BACKLOG only'},
+  {name:'AWS', css:'--c-green', pts:[18.8,19.1,19,17,17.5,20.2,24,28,36.7],
+   note:'Q2’26 +36.7% = "fastest growth in 18 quarters", 5th straight quarter of acceleration (Jassy)'},
+  {name:'Azure', css:'--c-blue', pts:[29,33,31,33,39,40,39,40,43], guide:45,
+   cc:[30,34,31,35,39,39,38,39,null],
+   note:'As-reported; constant-currency in the table view (F4Q26 cc not separately disclosed). F1Q27 guided ~+45% cc (2026-07-29)'},
+];
+const CLOUD_SRC = 'MSFT/GOOG/AMZN earnings transcripts, CQ2’24–CQ2’26 (MSFT fiscal quarters mapped to calendar). Azure = as-reported (cc variants in table); guide point = ~45% cc for CQ3’26, guided 2026-07-29.';
+
+/* S4 — Backlog, USD bn, by calendar quarter */
+const BK_Q = ['Q2’25','Q3’25','Q4’25','Q1’26','Q2’26'];
+const BACKLOG = [
+  {name:'MSFT commercial RPO', css:'--c-blue', pts:[368,392,625,627,678],
+   s:'MSFT earnings calls (fiscal F4Q25–F4Q26). F4Q26: +84% y/y, +25% ex-OpenAI; ~30% recognized <12mo; WAD 2.3yr'},
+  {name:'Google Cloud backlog', css:'--c-orange', pts:[106,155,240,462,514],
+   s:'Alphabet earnings calls. Q1’26 "nearly doubled" INCLUDES first TPU-hardware sales (basis change); majority still GCP contracts'},
+  {name:'AWS backlog', css:'--c-green', pts:[null,200,244,364,496],
+   s:'AMZN earnings calls. Q3’25 $200B from a paraphrased transcript (flag); Q2’26 $496B "growing triple-digits y/y"'},
+];
+
+/* S5 — margins + MS GenAI ROIC (planilha) */
+const GCP_MARGIN = [11,17,17.5,17.8,20.7,23.7,30.1,32.9,35.6]; /* same CG_Q axis */
+const MS_ROIC = [
+  {m:'Model 1 — GPU rental (IaaS)', rev:[18.9,27.0], revBase:22.9, ret:[23,39], retBase:31, retLb:'ROIC', mgn:'~67% incr. EBIT margin',
+   note:'Rents ALL capacity; the renter bears the training question'},
+  {m:'Model 2 — API on owned infra', rev:[17.0,38.8], revBase:30.4, ret:[19,63], retBase:46, retLb:'ROIC', mgn:'~75% incr. EBIT margin',
+   note:'65% of capacity on inference (base); training share earns zero but bears cost'},
+  {m:'Model 3 — API on rented infra', rev:[22.6,51.8], revBase:40.5, ret:[-9,32], retBase:25, retLb:'NOPAT margin (NOT ROIC)', mgn:'~31% incr. EBIT margin',
+   note:'No 75% utilization haircut (MS disclosure) — revenue basis flattered ~33% vs Model 2; return is a margin, not an asset-base ROIC'},
+];
+const MS_ROIC_SRC = 'Morgan Stanley "The Paths to 25–50% GenAI ROIC" — Brian Nowak (w/ Byrd, Wood), 2026-07-27. Standardized unit: 1GW = 410,256 GB300s, $39bn all-in capex, $7.7bn/yr owned-infra opex, 21% tax. Rebuilt as a live-formula workbook (Capstone, 2026-07-30) — reconciles to every reported anchor.';
+
+/* S5b — the conta opened line-by-line (from MS_GenAI_ROIC_1GW_v1.xlsx, all five scenario columns).
+   kind: in = MS input (flex lever) · calc = formula step · res = result line · yellow = Capstone-interpolated input */
+const MS_DETAIL = [
+ {m:'Model 1 — GPU rental (IaaS)', tagline:'the hyperscaler rents raw compute; the renter bears the training question',
+  lever:'price per GPU-hour', retLb:'ROIC (NOPAT ÷ $39bn gross capex)',
+  rows:[
+   {lb:'GB300 chips in 1 GW', k:'calc', f:'n0', v:[410256,410256,410256,410256,410256], note:'MS estimate of GB300 chips in a 1GW datacenter — the standardized unit across all three models (~2.44 kW all-in per chip ≈ 1.88 kW IT × ~1.3 PUE)'},
+   {lb:'× hours per year', k:'calc', f:'n0', v:[8760,8760,8760,8760,8760]},
+   {lb:'= GPU-hours per year (bn)', k:'calc', f:'n1', v:[3.59,3.59,3.59,3.59,3.59], note:'3.6bn GPU-hours/yr — the unit MS quotes for 1GW'},
+   {lb:'× utilization', k:'in', f:'pct', v:[75,75,75,75,75], note:'MS est. of uptime — the rented/billable share of capacity'},
+   {lb:'× price per GPU-hour', k:'in', f:'usd2', v:[7.00,8.00,8.50,9.00,10.00], note:'MS illustrative range; base case $8.50/hr. THE lever of Model 1'},
+   {lb:'= Revenue per GW ($bn)', k:'res', f:'usd1', v:[18.9,21.6,22.9,24.3,27.0]},
+   {lb:'− opex: IT dep 4.6 + non-IT dep 1.1 + energy/other 2.0', k:'calc', f:'usd1', v:[7.7,7.7,7.7,7.7,7.7], note:'IT capex $23bn over 5yr + non-IT $16bn over 15yr + $2bn energy/labor/maintenance (industry data, MS)'},
+   {lb:'= incremental EBIT ($bn)', k:'calc', f:'usd1', v:[11.2,13.9,15.2,16.6,19.3]},
+   {lb:'EBIT margin', k:'calc', f:'pct', v:[59,64,67,68,72]},
+   {lb:'× (1 − 21% tax) = NOPAT ($bn)', k:'calc', f:'usd1', v:[8.8,11.0,12.0,13.1,15.2]},
+   {lb:'ROIC = NOPAT ÷ $39bn capex', k:'res', f:'pct', v:[23,28,31,34,39], note:'MS stated range for this business: 60–70% incremental EBIT margins, 25–40% ROIC. Steady-state year-1 on GROSS capex — not a lifecycle IRR'},
+  ]},
+ {m:'Model 2 — API on OWNED infrastructure', tagline:'the owner sells tokens; training share earns zero but bears full cost',
+  lever:'% on inference × tokens/s × $/M tokens', retLb:'ROIC (NOPAT ÷ $39bn gross capex)',
+  rows:[
+   {lb:'GB300 chips in 1 GW', k:'calc', f:'n0', v:[410256,410256,410256,410256,410256]},
+   {lb:'× % of capacity on inference', k:'in', f:'pct', v:[50,60,65,70,80], note:'Training share generates no revenue but bears full cost — the ROIC is already burdened by it (35% in base)'},
+   {lb:'× tokens per second per GPU', k:'in', f:'n0', v:[3500,3000,2750,2500,2000], note:'Workload spec (DeepSeek-V4-Pro 1.6T, FP4, 8K/1K I/O, ~50 tok/s/user), NOT a hardware constant — richer workloads = fewer tokens/s at higher price'},
+   {lb:'× seconds/yr × 75% utilization = tokens/yr (tn)', k:'calc', f:'n0', v:[16981,17466,17345,16981,15525], note:'MS’s exhibit labels this row (bn); the unit is actually TRILLIONS — 16,981tn × $/M is what reconciles to $17bn revenue'},
+   {lb:'× price per million tokens', k:'in', f:'usd2', v:[1.00,1.50,1.75,2.00,2.50], note:'MS range; Muse Spark 1.1 blended pricing $1.58/M (8K/1K I/O) is the market benchmark'},
+   {lb:'= Revenue per GW ($bn)', k:'res', f:'usd1', v:[17.0,26.2,30.4,34.0,38.8]},
+   {lb:'− opex (same owned-infra stack)', k:'calc', f:'usd1', v:[7.7,7.7,7.7,7.7,7.7]},
+   {lb:'= incremental EBIT ($bn)', k:'calc', f:'usd1', v:[9.3,18.5,22.7,26.3,31.1]},
+   {lb:'EBIT margin', k:'calc', f:'pct', v:[55,71,75,77,80]},
+   {lb:'× (1 − 21% tax) = NOPAT ($bn)', k:'calc', f:'usd1', v:[7.4,14.6,17.9,20.8,24.6]},
+   {lb:'ROIC = NOPAT ÷ $39bn capex', k:'res', f:'pct', v:[19,38,46,53,63], note:'Owning the infra AND the token margin doubles Model 1’s base ROIC (46% vs 31%)'},
+  ]},
+ {m:'Model 3 — API on RENTED (3P) infrastructure', tagline:'the model lab without its own datacenters — rents the fleet, sells the tokens',
+  lever:'GPU rental rate vs token price', retLb:'NOPAT margin — NOT an asset-base ROIC (MS’s own caveat)',
+  rows:[
+   {lb:'GB300 chips in 1 GW', k:'calc', f:'n0', v:[410256,410256,410256,410256,410256]},
+   {lb:'× % of capacity on inference', k:'in', f:'pct', v:[50,60,65,70,80]},
+   {lb:'× tokens per second per GPU', k:'in', f:'n0', v:[3500,3000,2750,2500,2000]},
+   {lb:'× seconds/yr — NO utilization haircut = tokens/yr (tn)', k:'calc', f:'n0', v:[22641,23288,23126,22641,20701], note:'MS’s own disclosure: no 75% haircut in the 3P case — flatters Revenue/GW ~33% vs Model 2’s basis. Do not compare revenue lines across models without this'},
+   {lb:'× price per million tokens', k:'in', f:'usd2', v:[1.00,1.50,1.75,2.00,2.50]},
+   {lb:'= Revenue per GW ($bn)', k:'res', f:'usd1', v:[22.6,34.9,40.5,45.3,51.8]},
+   {lb:'− rental: FULL fleet × 8,760h × $/GPU-hr', k:'in', f:'usd1', v:[25.2,27.0,27.9,28.8,30.5], yellow:[false,true,false,true,false], note:'Rental rate grid $7.00 / $7.50* / $7.75 / $8.00* / $8.50 — MS anchors $7.00 low, $7.75 base, $8.50 high; *mid columns are CAPSTONE interpolation. The zero-revenue training share still pays full rent — no energy/dep lines, bundled in the rate'},
+   {lb:'= incremental EBIT ($bn)', k:'calc', f:'usd1', v:[-2.5,8.0,12.6,16.5,21.2], note:'The bear case is LOSS-MAKING: −$2.5bn at $1.00/M tokens against $7.00/hr rental — renting-to-serve only works above a token-price floor'},
+   {lb:'EBIT margin', k:'calc', f:'pct', v:[-11,23,31,37,41]},
+   {lb:'× (1 − 21% tax) = NOPAT ($bn)', k:'calc', f:'usd1', v:[-2.0,6.3,10.0,13.1,16.8]},
+   {lb:'NOPAT margin (MS’s illustrative “ROIC”)', k:'res', f:'pct', v:[-9,18,25,29,32], note:'NOT computed on an asset base — MS’s own labeling caveat. Do not put this column next to Models 1–2 ROIC'},
+  ]},
+];
+
+/* S6 — TAM: the simple what-if. 500M users × $/month × 12 */
+const WHATIF = [
+  {pm:50,  tam:300,  note:'≈ 3x the entire frontier-lab complex today (~$100B combined ARR)'},
+  {pm:100, tam:600,  note:'≈ 16x Microsoft’s whole AI business (AI ARR $37B, F3Q26)'},
+  {pm:200, tam:1200, note:'≈ the scale of BofA’s ENTIRE AI-datacenter systems TAM for 2030 ($1.7T) — funded by seats alone'},
+];
+/* Second frame: share of listed-world revenue. Aggregates derived from BBG index data
+   2026-07-31: BEst CY26 sales/share ÷ px × mkt cap → SPX ~$19.4T, RTY ~$2.3T, SXXP ~$9.4T ≈ $31T. */
+const WHATIF2 = [
+  {pct:1, tam:310, note:'≈ the $50/month seat case, arrived at from the other direction'},
+  {pct:2, tam:620, note:'≈ the $100/month seat case'},
+  {pct:3, tam:940, note:'approaching the $200/month seat case ($1.2T ≈ 4%)'},
+];
+/* $ per user per MONTH (FundaAI’s $25/$211 are monthly figures — "average spend $211/user/month, 8.4x OpenAI’s $25") */
+const LADDER = [
+  {v:25,   lb:'ChatGPT — average spend per user',   tag:'P', s:'$25/user/month — FundaAI "LLM 26H1 Pt 2", 2026-06-24 (~85% consumer mix)'},
+  {v:30,   lb:'M365 Copilot list',                  tag:'H', s:'$30/seat/month list; >30M paid seats as of F4Q26 (call, 2026-07-29)'},
+  {v:200,  lb:'Claude Max 20x',                     tag:'H', s:'$200/month — Anthropic public pricing'},
+  {v:211,  lb:'Claude — average spend per user',    tag:'P', s:'$211/user/month, 8.4x ChatGPT’s average — FundaAI "LLM 26H1 Pt 2", 2026-06-24 (~80% enterprise mix)'},
+  {v:4200, lb:'Meta — per-employee spend, at list', tag:'P', s:'>60T Claude tokens/30d ≅ ≥$50k/yr per employee AT LIST (~$4.2k/mo) — SemiAnalysis "TokenBudgeting", 2026-06-30'},
+  {v:8300, lb:'99th-pctile companies, per employee',tag:'P', s:'"the 99th percentile of companies spend $100,000 per year on AI per employee" (~$8.3k/mo; Ramp data) — SemiAnalysis Tokenomics Ep.020, 2026-07-15'},
+];
+
+/* S7 — Capex intensity (capex ÷ revenue, matching periods) */
+const INTENSITY = [
+  {tk:'META', css:'--c-pink', vals:[{y:'2025A',c:70,r:201,src:'CY25A: capex ~$70B / rev $201B (co. reports; house model 2026-06-11)'},
+    {y:'2026',c:137.5,r:253.7,src:'CY26: guide $130–145B (mid $137.5B; floor raised at the 2Q26 call 07-29, from $125–145B set 04-29) / rev BEst $253.7B'},
+    {y:'2027E',c:190.1,r:303.7,src:'CY27E: BEst capex $190.1B / BEst rev $303.7B, asof 2026-07-31'},
+    {y:'2028E',c:212.1,r:357.5,src:'CY28E: BEst $212.1B / $357.5B'}], basis:'calendar years'},
+  {tk:'GOOG', css:'--c-orange', vals:[{y:'2025A',c:91,r:403,src:'CY25A: capex ~$91B / rev $403B (co. reports; house model 2026-06-05)'},
+    {y:'2026',c:200,r:432.5,src:'CY26: guide $195–205B (raised twice: $175–185 → $180–190 → $195–205) / rev BEst $432.5B'},
+    {y:'2027E',c:301.7,r:541.9,src:'CY27E: BEst capex $301.7B / BEst rev $541.9B. MS Nowak models ~$350B'},
+    {y:'2028E',c:341.5,r:666.2,src:'CY28E: BEst $341.5B / $666.2B'}], basis:'calendar years'},
+  {tk:'MSFT', css:'--c-blue', vals:[{y:'FY25A',c:88.2,r:281.7,src:'FY25 (Jun-25): capex incl. finance leases ~$88B / rev $281.7B (co. reports; JPM 06-16)'},
+    {y:'FY26A',c:145.3,r:331.8,src:'FY26: all-in capex $145.3B (sum of reported quarters incl. leases) / rev $331.8B reported'},
+    {y:'FY27E',c:182.1,r:390.1,src:'FY27E: BEst capex $182.1B / BEst rev $390.1B (cash basis; JPM all-in path ≥$240B sits higher)'},
+    {y:'FY28E',c:217.0,r:465.9,src:'FY28E: BEst $217.0B / $465.9B'}], basis:'fiscal years (Jun-end)'},
+  {tk:'AMZN', css:'--c-green', vals:[{y:'2025A',c:131.8,r:716.9,src:'CY25A: capex $131.8B reported (BBG CAPITAL_EXPEND; cash-capex basis ≈$128B) / rev $716.9B'},
+    {y:'2026',c:220,r:826.7,src:'CY26: guide ~$220B (raised from ~$200B on memory costs, 07-30) / rev BEst $826.7B'},
+    {y:'2027E',c:258.1,r:942.7,src:'CY27E: BEst capex $258.1B / BEst rev $942.7B'},
+    {y:'2028E',c:276.8,r:1056.1,src:'CY28E: BEst $276.8B / $1,056B'}], basis:'calendar years; whole-co revenue'},
+];
+
+/* S8 — re-rating: weekly fwd P/E paths (BEst blended), 2025-07 → 2026-07 */
+const PE_LB = ['MSFT','GOOG','META','AMZN','NVDA','AVGO','TSM','ASML'];
+/* filled from _data/ai_rerating_2026.json at build time */
+const PE_DATES = ["2025-07-04", "2025-07-11", "2025-07-18", "2025-07-25", "2025-08-01", "2025-08-08", "2025-08-15", "2025-08-22", "2025-08-29", "2025-09-05", "2025-09-12", "2025-09-19", "2025-09-26", "2025-10-03", "2025-10-10", "2025-10-17", "2025-10-24", "2025-10-31", "2025-11-07", "2025-11-14", "2025-11-21", "2025-11-28", "2025-12-05", "2025-12-12", "2025-12-19", "2025-12-26", "2026-01-02", "2026-01-09", "2026-01-16", "2026-01-23", "2026-01-30", "2026-02-06", "2026-02-13", "2026-02-20", "2026-02-27", "2026-03-06", "2026-03-13", "2026-03-20", "2026-03-27", "2026-04-03", "2026-04-10", "2026-04-17", "2026-04-24", "2026-05-01", "2026-05-08", "2026-05-15", "2026-05-22", "2026-05-29", "2026-06-05", "2026-06-12", "2026-06-19", "2026-06-26", "2026-07-03", "2026-07-10", "2026-07-17", "2026-07-24", "2026-07-31"];
+const PE_PATHS = {"MSFT":[[0,28.52],[1,28.77],[2,29.15],[3,29.39],[4,29.03],[5,28.94],[6,28.88],[7,28.16],[8,28.09],[9,27.44],[10,28.27],[11,28.71],[12,28.35],[13,28.66],[14,28.36],[15,28.51],[16,29.1],[17,27.68],[18,26.56],[19,27.31],[20,25.24],[21,26.28],[22,25.81],[23,25.58],[24,26.0],[25,26.1],[26,25.31],[27,25.6],[28,24.51],[29,24.9],[30,22.63],[31,21.11],[32,21.13],[33,20.91],[34,20.67],[35,21.61],[36,20.89],[37,20.17],[38,18.84],[39,19.73],[40,19.62],[41,22.38],[42,22.44],[43,21.41],[44,21.4],[45,21.75],[46,21.55],[47,23.18],[48,21.45],[49,20.12],[50,19.53],[51,19.2],[52,20.1],[53,19.83],[54,20.28],[55,19.64],[56,23.67]],"GOOG":[[0,14.17],[1,14.16],[2,14.47],[3,15.41],[4,15.08],[5,15.96],[6,16.2],[7,16.35],[8,16.89],[9,19.12],[10,19.63],[11,20.74],[12,20.09],[13,19.99],[14,19.12],[15,20.43],[16,20.97],[17,21.53],[18,21.37],[19,20.5],[20,22.08],[21,23.59],[22,23.8],[23,23.01],[24,22.82],[25,23.29],[26,23.28],[27,24.22],[28,24.29],[29,24.25],[30,24.96],[31,23.72],[32,22.46],[33,23.11],[34,22.9],[35,21.82],[36,22.05],[37,21.85],[38,20.02],[39,21.53],[40,23.17],[41,24.89],[42,25.1],[43,27.39],[44,28.43],[45,28.16],[46,27.02],[47,26.81],[48,25.98],[49,25.1],[50,25.82],[51,23.46],[52,25.0],[53,24.88],[54,24.16],[55,21.86],[56,24.27]],"META":[[0,19.56],[1,19.52],[2,17.32],[3,17.39],[4,18.53],[5,19.01],[6,19.4],[7,18.65],[8,18.25],[9,18.59],[10,18.67],[11,19.23],[12,18.38],[13,17.66],[14,17.53],[15,17.77],[16,18.81],[17,17.72],[18,16.99],[19,16.62],[20,16.48],[21,17.97],[22,18.82],[23,18.0],[24,18.28],[25,18.41],[26,17.95],[27,18.14],[28,17.12],[29,18.36],[30,20.4],[31,18.73],[32,18.12],[33,18.57],[34,18.31],[35,18.22],[36,16.78],[37,16.2],[38,14.34],[39,15.67],[40,17.63],[41,19.39],[42,18.92],[43,16.78],[44,16.85],[45,16.97],[46,16.86],[47,17.86],[48,16.74],[49,15.39],[50,15.66],[51,14.93],[52,16.3],[53,18.8],[54,18.23],[55,16.95],[56,16.42]],"AMZN":[[0,22.64],[1,22.8],[2,22.91],[3,23.42],[4,21.04],[5,21.72],[6,22.47],[7,22.26],[8,22.28],[9,22.6],[10,22.19],[11,22.52],[12,21.38],[13,21.35],[14,21.04],[15,20.02],[16,21.07],[17,23.18],[18,23.2],[19,22.27],[20,20.95],[21,22.16],[22,21.32],[23,21.01],[24,21.34],[25,21.82],[26,21.26],[27,22.81],[28,22.0],[29,22.01],[30,21.88],[31,20.07],[32,19.0],[33,20.08],[34,20.07],[35,20.71],[36,20.17],[37,19.95],[38,19.36],[39,20.38],[40,23.09],[41,24.27],[42,26.12],[43,25.77],[44,25.91],[45,25.09],[46,25.3],[47,25.87],[48,23.51],[49,22.8],[50,23.36],[51,22.24],[52,23.19],[53,23.45],[54,23.59],[55,22.15],[56,24.64]],"NVDA":[[0,26.81],[1,27.75],[2,28.51],[3,28.58],[4,28.53],[5,29.95],[6,29.28],[7,28.14],[8,26.28],[9,25.21],[10,26.9],[11,26.67],[12,26.89],[13,28.23],[14,27.55],[15,27.0],[16,27.4],[17,28.54],[18,26.33],[19,26.04],[20,22.24],[21,21.7],[22,22.33],[23,21.43],[24,21.94],[25,23.09],[26,22.89],[27,22.29],[28,22.32],[29,22.47],[30,22.88],[31,22.19],[32,21.78],[33,22.48],[34,19.83],[35,19.74],[36,20.03],[37,18.98],[38,18.32],[39,19.37],[40,20.6],[41,21.95],[42,22.67],[43,21.6],[44,23.42],[45,24.27],[46,22.05],[47,21.62],[48,21.05],[49,21.07],[50,21.67],[51,19.44],[52,19.68],[53,21.3],[54,20.37],[55,20.77],[56,20.19]],"AVGO":[[0,29.85],[1,29.76],[2,30.7],[3,31.43],[4,31.25],[5,33.09],[6,33.24],[7,31.9],[8,32.16],[9,31.4],[10,33.46],[11,31.99],[12,30.9],[13,31.26],[14,30.05],[15,32.03],[16,32.43],[17,33.85],[18,31.96],[19,31.13],[20,30.73],[21,35.78],[22,34.55],[23,28.75],[24,26.98],[25,27.91],[26,27.55],[27,27.28],[28,27.35],[29,24.88],[30,25.69],[31,25.9],[32,25.21],[33,25.61],[34,24.63],[35,22.41],[36,21.79],[37,20.84],[38,20.12],[39,21.05],[40,24.52],[41,26.72],[42,27.79],[43,27.69],[44,28.27],[45,27.79],[46,27.41],[47,29.59],[48,24.83],[49,24.4],[50,26.27],[51,23.35],[52,22.98],[53,25.5],[54,23.62],[55,24.33],[56,24.87]],"TSM":[[0,18.59],[1,18.71],[2,19.85],[3,20.34],[4,19.83],[5,20.3],[6,20.15],[7,20.03],[8,19.85],[9,20.81],[10,21.97],[11,22.37],[12,23.02],[13,23.82],[14,22.69],[15,21.99],[16,21.9],[17,22.04],[18,21.19],[19,21.15],[20,20.54],[21,21.75],[22,21.88],[23,21.54],[24,21.43],[25,22.37],[26,23.2],[27,23.65],[28,22.21],[29,21.34],[30,20.92],[31,22.23],[32,23.11],[33,23.52],[34,23.54],[35,21.54],[36,21.67],[37,21.01],[38,20.84],[39,21.63],[40,23.08],[41,21.79],[42,23.33],[43,23.08],[44,23.71],[45,23.37],[46,23.36],[47,23.95],[48,23.83],[49,24.43],[50,26.52],[51,24.91],[52,24.61],[53,24.39],[54,21.18],[55,21.1],[56,21.08]],"ASML":[[0,24.38],[1,25.02],[2,23.41],[3,22.44],[4,22.13],[5,22.86],[6,23.39],[7,23.76],[8,23.41],[9,24.58],[10,25.57],[11,29.22],[12,29.98],[13,32.24],[14,29.68],[15,30.95],[16,30.74],[17,31.8],[18,30.33],[19,29.91],[20,29.01],[21,31.44],[22,32.49],[23,31.66],[24,31.01],[25,31.36],[26,33.32],[27,36.06],[28,38.39],[29,37.93],[30,35.41],[31,35.23],[32,34.81],[33,36.66],[34,36.07],[35,32.7],[36,34.45],[37,33.38],[38,33.08],[39,33.43],[40,36.09],[41,33.52],[42,33.27],[43,32.49],[44,36.07],[45,34.47],[46,37.54],[47,36.88],[48,37.88],[49,42.84],[50,44.76],[51,41.58],[52,40.33],[53,40.71],[54,32.35],[55,32.68],[56,29.85]]};
+const PE_MARKS = { /* first weekly obs (2025-08-01), Jan-30-26, Jul-31-26 */
+  MSFT:[29.0,22.6,23.7], GOOG:[15.1,25.0,24.3], META:[18.5,20.4,16.4], AMZN:[21.0,21.9,24.6],
+  NVDA:[28.5,22.9,20.2], AVGO:[31.3,25.7,24.9], TSM:[19.8,20.9,21.1], ASML:[22.1,35.4,29.8],
+};
+const PX_CHG = {MSFT:8.2, GOOG:5.5, META:-22.2, AMZN:13.7, NVDA:5.4, AVGO:17.9, TSM:22.5, ASML:14.7}; /* Jan-30→Jul-31 % */
+const G27 = [ /* consensus CY27 revenue growth %, Feb vintage vs now */
+  {tk:'AVGO', feb:38.3, now:54.1}, {tk:'NVDA', feb:27.7, now:43.7}, {tk:'TSM', feb:23.6, now:34.3},
+  {tk:'ASML', feb:17.5, now:27.6}, {tk:'GOOG', feb:14.4, now:25.3}, {tk:'META', feb:18.1, now:19.7},
+  {tk:'AMZN', feb:11.3, now:14.0},
+];
+const G28 = [
+  {tk:'AVGO', feb:20.5, now:32.5}, {tk:'NVDA', feb:27.1, now:22.7}, {tk:'TSM', feb:17.6, now:25.0},
+  {tk:'ASML', feb:9.8, now:20.3}, {tk:'GOOG', feb:13.0, now:22.9}, {tk:'META', feb:17.5, now:17.7},
+  {tk:'AMZN', feb:10.4, now:12.0},
+];
+const RERATE_SRC = 'Bloomberg BEst via Capstone wrapper, asof 2026-07-31 (_data/ai_rerating_2026.json). P/E = BEST_PE_RATIO pulled via HistoricalDataRequest with no period override (blended-forward basis; note a reference/bdp request defaults to current-FY and reads differently — e.g. GOOG ~18.5x on CY26 incl. the ~$80bn 2Q Anthropic mark). Revenue growth = BEST_SALES with 1CY/2CY/3CY calendar overrides; "Feb" vintage = week of 2026-01-30. MSFT excluded from the CY panel (June fiscal year makes weekly CY calendarization contributor-thin); on BEst 1FY/2FY fiscal overrides Street has MSFT FY27 +17.6% and FY28 +19.4% (re-pulled 07-31; blended-forward windows read ~+19.5% both years).';
+
+/* S9 — TSM & ASML guide walks + quotes */
+const TSM_STEPS = [
+  {d:'2026-01-15', v:'"close to 30%"', n:'FY26 USD revenue-growth guide; capex $52–56B; "next 3 years capex significantly higher than the past 3" — 4Q25 call'},
+  {d:'2026-04-16', v:'"above 30%"', n:'guide raised; capex to the high end of $52–56B; the July raise was pre-announced (verbatim: "a more accurate or a more precise number" to come in July) — 1Q26 call'},
+  {d:'2026-07-16', v:'"slightly above 40%"', n:'raised again; capex raised to $60–64B; +$100B Arizona (total $265B, "additional four or more fabs"); 13 new fabs in Taiwan; "capex in the next three years will be EVEN MORE significantly higher" — 2Q26 call'},
+];
+const ASML_STEPS = [
+  {d:'2026-01-28', v:'€34–39B', n:'FY26 net-sales guide, GM 51–53%; last disclosed backlog €38.8B, Q4 bookings €13.2B (56% memory) — Q4’25 call'},
+  {d:'2026-04-15', v:'€36–40B', n:'narrowed and raised; "for the foreseeable future, demand will continue to outpace supply"; memory customers "sold out for the remainder of the year" — Q1’26 call'},
+  {d:'2026-07-15', v:'€43–45B', n:'+35% y/y at mid, GM raised to 54–56%; memory system sales +75% y/y; Low-NA EUV capacity +30% in 2027 (2027 "close to being fully covered with orders") and a further +30% under investigation for 2028; immersion +30%/+30% — Q2’26 call'},
+];
+
+/* Verdict scorecard */
+const SCORE = [
+  {n:1, sig:'Lab ARR', feb:'OpenAI ~$20B + Anthropic ~$9B run-rate; plans saw ~$50B combined for 2026', jul:'~$100B combined ARR; Anthropic $69B and EBIT-positive; OpenAI "July > all of Q2"', v:'up', lb:'accelerating'},
+  {n:2, sig:'Token consumption', feb:'OpenRouter ~10T tokens/wk; Gemini API ~10B tok/min', jul:'OpenRouter 58–63T/wk (~17x y/y); API 22B tok/min; ~500 GCP customers past 1T tokens', v:'up', lb:'~17x/yr'},
+  {n:3, sig:'Cloud growth', feb:'AWS +24%, GCP +48%, Azure ~+39–40%', jul:'AWS +36.7%, GCP +82%, Azure +43% and guiding ~+45% cc', v:'up', lb:'all 3 accelerating'},
+  {n:4, sig:'Cloud backlog', feb:'~$1.11T disclosed (MSFT 625 + GOOG 240 + AMZN 244)', jul:'~$1.69T; MSFT sequential growth ALL ex-frontier-labs', v:'up', lb:'quality improving'},
+  {n:5, sig:'Margins & ROIC', feb:'Dilution feared; ROIC an act of faith', jul:'GCP op margin 35.6% at +82% growth; AWS 39.3%; MS quantifies 25–50% ROIC paths', v:'up', lb:'quantified'},
+  {n:6, sig:'TAM ahead', feb:'Copilot 15–20M seats, $30 seat cap', jul:'What-if: 500M workers × $50–200/mo = $0.3–1.2T/yr (≈1–4% of S&P+R2000+STOXX revenue); seats 2x in 6 months; GitHub’s usage-billing template landed (+60% q/q)', v:'up', lb:'option opening'},
+  {n:7, sig:'Capex intensity', feb:'2027E street capex $540B (4 names)', jul:'$955B street / $1.1–1.4T frames; intensity → 27–63% of revenue; FCF negative pockets', v:'watch', lb:'the bill'},
+  {n:8, sig:'Multiple', feb:'Complex at 20–35x fwd P/E', jul:'Prices +5–22% with multiples flat-to-LOWER — estimate-led, not re-rating-led', v:'up', lb:'earned, not paid'},
+  {n:9, sig:'TSM & ASML', feb:'TSM "close to 30%"; ASML €34–39B', jul:'TSM "slightly above 40%" + $265B Arizona; ASML €44B +30%/+30% capacity into 2028', v:'up', lb:'cycle extends'},
+];
+
+const CAPEX_HIST = {"2027":[["2026-01-02",540.0],["2026-01-09",536.5],["2026-01-16",540.4],["2026-01-23",544.5],["2026-01-30",574.2],["2026-02-06",649.7],["2026-02-13",666.4],["2026-02-20",667.7],["2026-02-27",677.5],["2026-03-06",688.5],["2026-03-13",688.0],["2026-03-20",687.4],["2026-03-27",687.6],["2026-04-03",687.4],["2026-04-10",689.9],["2026-04-17",691.9],["2026-04-24",693.3],["2026-05-01",796.3],["2026-05-08",812.9],["2026-05-15",823.0],["2026-05-22",824.7],["2026-05-29",829.4],["2026-06-05",832.4],["2026-06-12",835.9],["2026-06-19",836.0],["2026-06-26",836.5],["2026-07-03",836.9],["2026-07-10",841.0],["2026-07-17",856.9],["2026-07-24",906.4],["2026-07-31",956.2]],"2028":[["2026-01-02",539.9],["2026-01-09",545.3],["2026-01-16",546.7],["2026-01-23",546.6],["2026-01-30",578.8],["2026-02-06",671.9],["2026-02-13",692.8],["2026-02-20",699.5],["2026-02-27",703.6],["2026-03-06",719.0],["2026-03-13",718.0],["2026-03-20",715.4],["2026-03-27",714.6],["2026-04-03",715.4],["2026-04-10",723.7],["2026-04-17",726.5],["2026-04-24",725.7],["2026-05-01",850.7],["2026-05-08",867.8],["2026-05-15",872.6],["2026-05-22",886.3],["2026-05-29",899.1],["2026-06-05",904.1],["2026-06-12",909.1],["2026-06-19",909.1],["2026-06-26",908.7],["2026-07-03",909.1],["2026-07-10",915.7],["2026-07-17",940.4],["2026-07-24",1009.2],["2026-07-31",1064.2]]};
+const CAPEX_ASOF = "2026-07-31";
+const H_RES = {"labels":["4Q21","1Q22","2Q22","3Q22","4Q22","1Q23","2Q23","3Q23","4Q23","1Q24","2Q24","3Q24","4Q24","1Q25","2Q25","3Q25","4Q25","1Q26","2Q26"],"yoycc":{"aws":[0.4,0.37,0.33,0.28,0.2,0.16,0.12,0.12,0.13,0.17,0.19,0.19,0.19,0.17,0.17,0.2,0.24,0.28,0.37],"msft":[0.46,0.49,0.46,0.42,0.38,0.31,0.27,0.28,0.28,0.31,0.3,0.34,0.31,0.35,0.39,0.39,0.37,0.4,0.43],"gcp":[0.61,0.57,0.45,0.49,0.4,0.33,0.33,0.26,0.31,0.33,0.34,0.43,0.36,0.32,0.38,0.41,0.57,0.7,0.88]},"dyoy":{"aws":[5038,4938,4930,4428,3598,2913,2401,2521,2826,3683,4141,4393,4582,4230,4599,5545,6909,8312,11426],"msft":[2653,2493,2433,2447,2414,2391,2792,2926,3449,3723,4012,4080,4309,4739,6167,6578,7101,7639,9451],"gcp":[1357,1528,1365,1557,1422,1391,1477,1228,1531,1842,1996,2555,2365,2366,2983,3522,5074,6866,9571]},"arr":{"aws":[6680,2644,5192,3196,3360,-96,3144,3676,4580,3332,4976,4684,5336,1924,6453,8469,10789,7537,18908],"msft":[4182,837,3046,1724,4048,744,4653,2258,6139,1841,5810,2532,7054,3560,11522,4177,9147,5712,18768],"gcp":[1500,2499,848,1382,958,2377,1191,386,2169,3622,1807,2624,1407,3628,4273,4783,7612,10796,15094]}};
+const PE5Y = {"meta":{"asof":"2026-08-03","source":"Bloomberg BEST_PE_RATIO via Capstone wrapper; BEST_FPERIOD_OVERRIDE=1BF/2BF (blended forward), weekly","start":"2021-08-01"},"dates":["2021-08-06","2021-08-13","2021-08-20","2021-08-27","2021-09-03","2021-09-10","2021-09-17","2021-09-24","2021-10-01","2021-10-08","2021-10-15","2021-10-22","2021-10-29","2021-11-05","2021-11-12","2021-11-19","2021-11-26","2021-12-03","2021-12-10","2021-12-17","2021-12-24","2021-12-31","2022-01-07","2022-01-14","2022-01-21","2022-01-28","2022-02-04","2022-02-11","2022-02-18","2022-02-25","2022-03-04","2022-03-11","2022-03-18","2022-03-25","2022-04-01","2022-04-08","2022-04-15","2022-04-22","2022-04-29","2022-05-06","2022-05-13","2022-05-20","2022-05-27","2022-06-03","2022-06-10","2022-06-17","2022-06-24","2022-07-01","2022-07-08","2022-07-15","2022-07-22","2022-07-29","2022-08-05","2022-08-12","2022-08-19","2022-08-26","2022-09-02","2022-09-09","2022-09-16","2022-09-23","2022-09-30","2022-10-07","2022-10-14","2022-10-21","2022-10-28","2022-11-04","2022-11-11","2022-11-18","2022-11-25","2022-12-02","2022-12-09","2022-12-16","2022-12-23","2022-12-30","2023-01-06","2023-01-13","2023-01-20","2023-01-27","2023-02-03","2023-02-10","2023-02-17","2023-02-24","2023-03-03","2023-03-10","2023-03-17","2023-03-24","2023-03-31","2023-04-07","2023-04-14","2023-04-21","2023-04-28","2023-05-05","2023-05-12","2023-05-19","2023-05-26","2023-06-02","2023-06-09","2023-06-16","2023-06-23","2023-06-30","2023-07-07","2023-07-14","2023-07-21","2023-07-28","2023-08-04","2023-08-11","2023-08-18","2023-08-25","2023-09-01","2023-09-08","2023-09-15","2023-09-22","2023-09-29","2023-10-06","2023-10-13","2023-10-20","2023-10-27","2023-11-03","2023-11-10","2023-11-17","2023-11-24","2023-12-01","2023-12-08","2023-12-15","2023-12-22","2023-12-29","2024-01-05","2024-01-12","2024-01-19","2024-01-26","2024-02-02","2024-02-09","2024-02-16","2024-02-23","2024-03-01","2024-03-08","2024-03-15","2024-03-22","2024-03-29","2024-04-05","2024-04-12","2024-04-19","2024-04-26","2024-05-03","2024-05-10","2024-05-17","2024-05-24","2024-05-31","2024-06-07","2024-06-14","2024-06-21","2024-06-28","2024-07-05","2024-07-12","2024-07-19","2024-07-26","2024-08-02","2024-08-09","2024-08-16","2024-08-23","2024-08-30","2024-09-06","2024-09-13","2024-09-20","2024-09-27","2024-10-04","2024-10-11","2024-10-18","2024-10-25","2024-11-01","2024-11-08","2024-11-15","2024-11-22","2024-11-29","2024-12-06","2024-12-13","2024-12-20","2024-12-27","2025-01-03","2025-01-10","2025-01-17","2025-01-24","2025-01-31","2025-02-07","2025-02-14","2025-02-21","2025-02-28","2025-03-07","2025-03-14","2025-03-21","2025-03-28","2025-04-04","2025-04-11","2025-04-18","2025-04-25","2025-05-02","2025-05-09","2025-05-16","2025-05-23","2025-05-30","2025-06-06","2025-06-13","2025-06-20","2025-06-27","2025-07-04","2025-07-11","2025-07-18","2025-07-25","2025-08-01","2025-08-08","2025-08-15","2025-08-22","2025-08-29","2025-09-05","2025-09-12","2025-09-19","2025-09-26","2025-10-03","2025-10-10","2025-10-17","2025-10-24","2025-10-31","2025-11-07","2025-11-14","2025-11-21","2025-11-28","2025-12-05","2025-12-12","2025-12-19","2025-12-26","2026-01-02","2026-01-09","2026-01-16","2026-01-23","2026-01-30","2026-02-06","2026-02-13","2026-02-20","2026-02-27","2026-03-06","2026-03-13","2026-03-20","2026-03-27","2026-04-03","2026-04-10","2026-04-17","2026-04-24","2026-05-01","2026-05-08","2026-05-15","2026-05-22","2026-05-29","2026-06-05","2026-06-12","2026-06-19","2026-06-26","2026-07-03","2026-07-10","2026-07-17","2026-07-24","2026-07-31","2026-08-03"],"pe":{"MSFT":{"p1":[32.629,32.893,34.084,33.472,33.447,32.751,33.111,32.961,31.718,32.262,33.194,33.596,34.415,34.571,34.56,35.089,33.575,32.824,34.712,32.754,33.769,33.809,31.42,30.963,29.506,30.108,29.854,28.713,27.955,28.827,28.037,27.025,28.908,29.158,29.649,28.381,26.698,26.051,26.321,25.986,24.641,23.779,25.662,25.341,23.706,23.162,24.986,24.158,24.855,23.858,24.191,26.841,26.95,27.766,27.117,25.29,24.168,24.881,22.954,22.256,21.735,21.832,21.269,22.564,22.702,21.304,23.729,23.199,23.735,24.425,23.439,23.317,22.682,22.745,21.276,22.674,22.763,23.951,24.976,25.601,25.056,24.132,24.642,23.929,26.82,26.867,27.528,27.778,27.183,27.114,28.593,28.789,28.589,29.387,30.643,30.791,29.926,31.271,30.474,30.899,30.512,31.28,30.872,30.361,29.374,28.674,28.206,28.705,29.115,29.53,29.167,27.871,27.663,28.542,28.46,28.33,28.028,29.795,31.133,31.07,31.627,31.26,31.138,30.768,31.022,31.064,30.301,31.933,32.611,32.929,32.777,33.403,31.982,32.384,32.437,31.642,32.352,33.146,32.508,32.793,32.433,30.616,31.042,30.968,31.524,31.92,32.604,31.447,32.05,33.393,33.879,33.565,35.023,33.79,32.473,31.474,30.391,30.096,30.989,30.771,30.706,29.541,31.569,31.818,31.198,30.232,30.113,30.149,30.874,29.702,30.575,29.852,29.917,30.325,31.702,31.869,31.025,30.521,29.927,29.501,30.145,31.124,28.887,28.425,28.399,28.37,27.529,27.212,26.82,26.948,26.034,24.68,26.621,25.114,26.705,29.286,29.376,30.369,30.024,30.635,31.23,31.455,31.545,32.679,32.791,32.964,33.289,33.418,33.375,32.987,32.767,31.839,31.587,30.759,31.594,31.986,31.424,31.683,31.222,31.286,31.766,30.6,29.354,29.973,27.664,28.73,28.127,27.748,28.104,28.12,27.185,27.454,26.151,26.483,24.055,22.267,22.223,21.932,21.623,22.374,21.587,20.79,19.372,20.242,20.079,22.833,22.873,21.886,21.773,22.076,21.859,23.476,21.571,20.181,19.557,19.14,19.993,19.652,20.04,19.364,23.192,24.254],"p2":[28.462,28.698,29.699,29.159,29.192,28.568,28.871,28.722,27.634,28.102,28.911,29.27,30.267,30.371,30.32,30.729,29.337,28.657,30.295,28.536,29.378,29.399,27.167,26.751,25.558,26.169,25.879,24.868,24.198,24.914,24.215,23.33,24.956,25.165,25.576,24.477,23.021,22.442,22.687,22.378,21.21,20.458,22.072,21.757,20.37,19.886,21.444,20.737,21.331,20.479,20.706,22.948,23.056,23.755,23.176,21.619,20.608,21.214,19.578,18.98,18.546,18.663,18.233,19.387,19.545,18.348,20.415,19.937,20.395,20.974,20.123,20.02,19.472,19.552,18.282,19.444,19.588,20.813,21.665,22.122,21.634,20.835,21.279,20.664,23.154,23.192,23.783,23.987,23.476,23.42,24.852,25.052,24.861,25.552,26.646,26.776,26.021,27.189,26.486,26.852,26.494,27.152,26.735,26.31,25.528,24.919,24.501,24.925,25.267,25.618,25.31,24.217,24.016,24.812,24.715,24.486,24.167,25.648,26.769,26.676,27.104,26.803,26.668,26.345,26.534,26.547,25.873,27.256,27.806,28.077,28.074,28.591,27.351,27.653,27.768,27.072,27.658,28.357,27.851,28.088,27.767,26.209,26.557,26.471,26.933,27.211,27.767,26.792,27.293,28.415,28.798,28.507,29.797,28.731,27.621,26.795,26.071,25.857,26.621,26.422,26.366,25.35,27.08,27.285,26.745,25.902,25.799,25.823,26.413,25.464,26.297,25.667,25.731,26.05,27.23,27.363,26.688,26.245,25.725,25.386,25.933,26.757,25.083,24.67,24.593,24.532,23.803,23.525,23.177,23.298,22.507,21.356,22.902,21.634,23.008,25.178,25.241,26.017,25.709,26.23,26.722,26.892,26.954,27.948,28.037,28.167,28.401,28.521,28.396,28.103,27.936,27.147,26.954,26.25,26.957,27.294,26.822,27.034,26.642,26.698,27.085,26.06,24.92,25.463,23.506,24.404,23.889,23.576,23.863,23.873,23.076,23.325,22.235,22.542,20.538,19.053,19.031,18.767,18.499,19.201,18.515,17.796,16.575,17.317,17.191,19.54,19.613,18.684,18.592,18.842,18.655,20.065,18.437,17.241,16.693,16.298,17.034,16.738,17.093,16.524,19.494,20.36]},"GOOG":{"p1":[21.87,22.053,22.022,22.958,22.957,22.396,23.12,23.279,21.989,22.186,23.05,22.783,23.894,24.021,24.23,24.238,22.984,22.914,23.871,22.819,23.483,23.119,21.925,22.4,20.727,21.379,22.25,20.9,20.306,20.861,20.419,20.112,21.018,21.671,21.474,20.413,19.327,18.028,17.461,17.364,17.496,16.329,16.635,16.914,16.406,15.897,17.423,16.02,17.759,16.625,16.449,18.411,18.759,19.463,18.69,17.681,17.214,17.653,16.399,15.622,15.385,15.854,15.483,16.27,16.059,14.415,16.366,16.609,16.497,16.88,15.486,15.129,14.9,14.766,14.664,15.514,16.727,17.041,17.957,16.187,16.21,15.287,16.025,15.431,17.413,17.943,17.48,18.437,18.459,17.726,17.625,17.358,19.154,19.966,20.251,20.149,19.878,20.002,19.767,19.224,19.028,19.938,19.287,20.683,20.159,20.4,20.023,20.366,21.223,21.172,21.263,20.148,20.184,21.177,20.999,20.834,18.317,19.273,19.677,19.503,19.729,18.996,19.407,18.953,20.133,19.816,19.287,20.168,20.636,21.359,20.017,20.825,19.598,20.123,19.241,18.933,19.68,20.851,20.939,21.107,21.951,21.135,22.246,20.93,21.052,21.825,21.679,21.332,21.448,21.712,21.887,22.402,23.401,22.72,21.614,19.862,19.78,19.363,19.251,19.517,19.197,17.669,18.289,18.968,18.983,19.332,18.814,18.713,19.086,19.225,19.929,19.195,18.331,18.726,19.384,20.982,21.019,21.094,21.036,20.802,21.217,21.68,22.076,19.999,19.932,19.314,18.174,18.49,17.61,17.549,16.402,15.505,16.851,16.254,16.559,16.575,14.473,15.681,15.806,16.099,16.213,16.269,15.483,16.263,16.617,16.658,17.058,17.781,17.376,18.373,18.628,18.759,19.3,21.319,21.864,23.086,22.325,22.218,21.043,22.434,23.004,24.623,24.111,23.947,25.679,27.414,27.491,26.424,26.1,26.596,26.615,27.669,27.683,27.461,28.22,26.777,25.175,25.82,24.952,23.878,24.076,23.802,21.746,23.385,24.972,26.647,26.749,27.471,27.916,26.877,25.73,25.554,24.752,24.272,24.735,22.501,23.923,23.774,23.221,19.298,20.202,20.845],"p2":[19.122,19.253,19.198,19.984,19.954,19.207,19.83,19.927,18.939,18.955,19.558,19.448,20.917,20.998,21.016,20.979,19.918,19.825,20.625,19.791,20.34,19.948,18.925,19.204,17.788,18.269,18.904,17.735,17.178,17.709,17.336,17.091,17.898,18.462,18.303,17.401,16.464,15.24,14.97,14.956,15.083,14.095,14.463,14.695,14.254,13.791,15.113,13.902,15.33,14.417,14.468,15.923,16.217,16.851,16.187,15.277,14.878,15.261,14.239,13.584,13.501,13.862,13.488,14.248,13.926,12.476,14.064,14.188,14.102,14.519,13.362,13.062,12.795,12.678,12.619,13.35,14.493,14.626,15.185,13.608,13.523,12.765,13.387,12.926,14.604,15.005,14.607,15.346,15.402,14.832,14.921,14.663,16.261,16.947,17.216,17.14,16.861,16.973,16.781,16.452,16.292,17.134,16.453,17.449,16.856,17.028,16.777,16.984,17.76,17.753,17.834,16.866,16.924,17.775,17.544,17.423,15.691,16.534,16.855,16.995,17.074,16.452,16.819,16.411,17.463,17.2,16.733,17.758,18.177,18.882,17.473,18.256,17.206,17.587,16.911,16.654,17.298,18.352,18.364,18.522,19.049,18.252,19.381,18.212,18.341,19.032,18.9,18.595,18.756,18.971,19.119,19.673,20.575,19.962,18.934,17.544,17.462,17.031,16.927,17.17,16.89,15.331,15.896,16.481,16.473,16.799,16.337,16.254,16.61,16.709,17.298,16.611,15.853,16.182,16.745,18.129,18.241,18.296,18.249,18.006,18.378,18.817,19.258,17.393,17.38,16.853,15.866,16.163,15.382,15.34,14.339,13.593,14.758,14.239,14.792,14.836,12.946,14.019,14.062,14.302,14.437,14.48,13.774,14.346,14.719,14.713,15.023,15.94,15.464,16.465,16.663,16.763,17.256,19.035,19.46,20.5,19.791,19.702,18.883,20.13,20.509,21.494,20.916,20.666,22.167,23.566,23.619,22.549,22.146,22.534,22.497,23.517,23.542,23.229,23.925,22.74,21.496,22.068,21.578,20.701,20.827,20.583,18.8,20.24,21.57,22.981,23.1,24.547,25.056,24.251,23.244,23.018,22.153,21.544,21.941,19.907,21.123,20.893,20.267,17.929,19.492,20.069]},"META":{"p1":[21.115,21.043,20.771,21.484,21.891,21.98,20.928,20.206,19.59,18.873,18.553,18.538,20.597,21.831,21.803,22.17,21.376,19.851,21.383,21.635,21.72,21.779,21.372,21.31,19.403,19.39,15.941,14.744,13.905,14.254,13.62,12.961,14.94,15.256,15.427,15.321,14.793,12.819,13.754,13.956,13.839,13.378,13.546,13.444,12.33,11.456,11.862,11.074,11.825,11.375,12.101,11.84,12.403,13.35,12.394,11.981,12.277,12.913,11.133,10.651,10.261,10.265,9.785,10.249,8.408,7.836,9.216,9.125,8.648,9.948,9.321,9.968,10.082,10.644,11.394,12.151,12.511,13.692,16.204,14.785,14.509,14.581,15.98,15.435,16.075,16.768,17.053,17.63,18.023,16.838,17.98,17.316,17.13,18.056,19.273,19.867,19.513,20.592,21.06,20.832,20.857,21.912,20.138,21.446,20.35,19.528,18.245,18.099,18.681,18.547,18.608,18.555,18.516,19.232,18.99,18.474,16.936,17.627,18.685,18.97,19.083,18.158,18.536,18.552,19.488,19.452,19.423,20.677,21.273,21.8,24.64,23.669,22.473,22.936,23.892,23.975,22.871,24.013,22.773,24.655,23.826,21.883,19.807,20.163,21.186,20.951,21.165,20.605,21.765,22.279,21.777,22.133,23.623,21.767,21.028,20.568,20.829,21.841,22.204,22.044,21.709,20.921,21.884,23.306,23.639,24.779,24.31,23.489,23.291,22.239,23.162,21.035,21.181,21.719,23.581,23.335,21.898,22.561,22.687,22.894,22.271,23.602,25.907,26.858,27.498,25.639,24.986,23.375,22.582,22.128,21.308,18.613,20.17,18.6,20.495,21.017,20.583,20.317,19.703,20.319,21.84,21.319,21.061,22.573,22.073,21.978,21.599,21.663,22.064,22.496,22.957,22.062,21.59,21.987,21.844,22.452,21.454,20.43,20.562,20.852,21.389,19.73,18.905,18.499,17.91,19.587,20.47,19.556,19.883,19.99,19.561,19.293,18.275,19.451,21.601,19.778,19.049,19.465,19.214,19.431,18.221,17.518,15.311,16.563,18.458,20.038,19.654,16.508,16.191,16.28,16.161,16.758,14.899,14.005,14.243,13.56,14.298,16.397,15.955,14.644,14.699,15.825],"p2":[18.56,18.498,18.26,18.888,19.35,19.431,18.628,17.989,17.445,16.947,16.648,16.616,18.073,19.14,19.075,19.278,18.547,17.047,18.269,18.439,18.465,18.472,18.266,18.194,16.549,16.545,13.774,12.778,12.073,12.386,11.865,11.142,12.834,13.127,13.296,13.167,12.96,11.35,12.138,12.274,12.065,11.73,12.019,11.87,10.91,10.118,10.503,9.805,10.571,10.215,10.926,10.852,11.463,12.379,11.523,11.137,11.273,11.883,10.267,9.843,9.503,9.521,9.121,9.631,7.371,6.72,8.195,8.107,7.592,8.416,7.875,8.516,8.591,9.107,9.639,10.399,10.756,11.624,13.699,12.475,12.288,12.079,13.186,12.659,13.268,13.822,14.04,14.504,14.778,13.899,14.742,14.149,14.074,14.79,15.773,16.327,15.969,16.867,17.296,17.141,17.234,18.142,16.895,17.38,16.705,16.014,15.028,14.947,15.434,15.27,15.345,15.37,15.557,16.127,15.914,15.476,14.524,15.258,16.152,16.294,16.405,15.718,16.061,16.102,16.936,16.921,16.92,17.981,18.799,19.346,21.184,20.394,19.591,20.008,20.71,20.781,19.834,20.852,19.753,21.399,20.588,18.844,17.27,17.601,18.498,18.361,18.578,18.093,19.128,19.515,19.091,19.409,20.719,19.082,18.429,17.939,18.164,19.163,19.293,19.211,18.918,18.145,18.977,20.196,20.512,21.504,21.068,20.283,20.108,19.107,19.973,18.324,18.444,18.91,20.569,20.403,19.279,19.714,19.761,20.182,19.47,20.756,22.58,23.084,23.702,22.04,21.477,20.079,19.39,19.023,18.336,16.023,17.434,16.129,17.717,18.447,18.159,18.055,17.687,18.204,19.552,19.062,18.715,20.058,19.59,19.47,19.059,19.111,20.186,20.311,20.67,19.81,19.338,19.64,19.412,19.942,18.997,18.05,18.285,18.535,19.095,17.368,16.611,16.243,15.72,17.236,17.878,17.06,17.365,17.441,17.074,16.894,16.004,16.931,18.608,17.039,16.381,16.722,16.439,16.522,15.446,14.826,12.909,13.987,15.506,16.796,16.498,14.229,14.004,14.052,13.772,14.3,13.097,12.423,12.607,11.971,12.459,14.359,13.919,12.894,12.604,13.516]},"AMZN":{"p1":[43.542,41.84,40.515,42.274,43.754,43.502,44.334,43.72,41.772,41.708,43.285,41.294,51.336,52.019,51.944,54.003,51.313,49.476,50.112,50.235,50.417,48.948,48.645,48.734,41.113,41.563,44.805,45.8,45.172,45.107,42.331,41.231,45.552,46.159,46.328,43.874,42.781,40.684,47.112,44.332,43.105,40.498,43.082,46.462,40.659,40.928,44.296,40.22,41.9,41.255,44.981,50.478,51.897,52.709,50.092,46.77,46.303,47.791,43.962,39.986,39.715,40.369,37.203,42.521,38.882,33.817,37.039,35.314,35.236,35.073,33.248,32.822,30.925,30.172,31.142,34.982,34.44,34.252,35.213,33.63,33.293,32.248,32.53,31.115,33.794,34.779,36.363,35.713,36.225,37.662,36.473,36.226,37.608,40.175,41.261,42.274,41.977,42.417,44.034,44.137,43.697,45.849,43.753,43.43,40.617,39.325,37.799,37.38,37.131,37.048,36.865,33.889,33.247,34.038,33.441,33.132,31.846,34.368,35.472,33.252,33.701,33.611,33.741,34.194,34.478,34.524,32.808,35.048,33.735,33.956,34.382,34.278,33.152,34.061,34.529,33.036,32.721,33.476,33.747,34.752,34.792,32.057,32.349,32.711,33.077,30.975,30.2,29.37,30.565,31.118,31.674,32.38,33.381,31.706,29.89,29.21,26.422,25.862,27.144,27.01,27.185,26.182,28.435,29.078,28.392,28.126,28.042,28.005,27.829,28.761,29.52,28.453,27.634,29.153,31.238,31.19,31.561,31.358,31.36,30.751,31.174,31.918,31.942,31.472,30.66,29.115,27.729,25.861,25.619,25.154,24.643,21.809,23.594,21.542,23.821,24.92,25.114,25.777,25.133,25.567,26.563,26.285,25.916,27.158,27.116,27.126,27.198,27.507,24.697,25.478,26.298,26.002,25.973,26.424,25.904,26.237,24.868,24.71,24.294,23.781,24.932,26.245,26.326,25.234,23.545,25.097,24.492,24.098,24.375,24.888,24.197,26.089,25.062,24.956,24.687,22.551,21.002,22.117,22.024,22.253,21.242,20.94,20.261,21.256,23.912,25.367,26.996,25.518,25.087,24.246,24.391,24.833,22.528,21.798,22.289,21.174,22.041,22.233,22.263,21.107,23.862,24.911],"p2":[35.121,33.077,31.974,33.306,34.414,34.16,34.121,33.58,32.019,31.906,33.297,32.237,37.737,37.659,37.505,38.89,36.857,35.446,35.811,35.172,35.182,34.086,33.675,33.415,28.358,28.664,32.001,30.936,30.617,30.677,28.857,27.979,31.168,31.625,32.487,31.313,30.622,28.829,28.864,26.833,26.251,24.812,26.102,27.736,24.624,24.917,27.13,24.644,25.8,25.801,27.935,30.364,31.083,31.389,29.996,28.159,28.828,29.927,27.576,25.227,24.957,25.725,23.846,27.798,25.791,22.551,24.83,23.952,24.322,24.369,22.945,22.87,22.058,21.616,22.564,25.466,25.419,26.0,27.243,25.133,24.812,23.664,23.815,22.827,24.698,24.512,25.571,25.587,25.891,26.927,26.555,26.306,27.232,28.483,29.18,29.584,29.138,29.389,30.349,30.338,29.956,31.288,29.842,29.948,30.428,29.703,28.431,27.797,28.529,28.371,28.128,26.083,25.552,25.683,25.642,25.287,25.484,27.428,28.294,26.494,26.688,26.58,26.49,26.835,27.082,27.201,25.761,27.942,26.814,27.397,27.918,27.774,26.921,27.701,28.154,27.101,26.869,27.508,27.65,28.369,28.432,26.505,26.697,27.202,27.563,26.352,25.728,25.055,25.885,26.037,26.609,27.114,27.978,26.808,25.234,24.887,22.934,22.967,23.883,23.781,23.912,23.077,25.045,25.518,24.958,24.643,24.469,24.104,23.782,24.616,25.318,24.506,23.774,24.987,26.659,26.541,26.863,26.645,26.622,26.125,26.513,27.159,27.199,26.689,26.333,24.94,23.895,22.257,22.027,21.8,21.332,18.858,20.448,18.915,20.8,21.646,21.612,22.039,21.468,21.818,22.647,22.41,22.073,23.248,23.175,23.21,23.242,23.526,21.177,21.779,22.488,22.196,22.133,22.411,21.928,22.254,21.055,20.87,20.497,19.756,20.618,21.783,21.901,20.955,19.487,20.779,20.098,19.734,19.76,20.134,19.555,21.183,20.392,20.329,20.333,18.679,17.536,18.463,18.381,18.885,18.051,17.785,17.151,17.991,20.218,21.172,21.794,21.527,21.483,20.722,20.804,21.34,19.321,18.659,19.048,18.056,18.764,18.888,18.608,17.47,19.138,19.98]},"NVDA":{"p1":[49.063,48.422,47.354,51.336,51.7,50.77,49.364,49.67,46.564,46.597,48.88,50.709,56.839,66.007,66.936,66.191,62.885,60.846,59.669,54.754,58.22,57.55,52.668,51.896,44.872,43.7,46.402,45.378,41.546,42.018,39.761,38.133,45.712,47.412,45.569,39.231,35.961,32.891,31.15,31.255,29.529,27.777,32.491,32.191,28.995,27.038,29.155,24.771,27.214,27.294,30.032,31.405,32.74,38.972,38.522,38.462,32.423,34.137,31.158,29.514,28.617,28.299,26.413,29.248,32.468,33.045,37.928,36.104,37.946,39.068,39.141,38.096,34.841,33.307,33.687,38.111,39.934,46.166,47.631,47.739,47.756,50.291,52.179,49.888,55.4,57.176,58.749,56.687,55.699,56.078,57.074,58.676,57.395,62.521,50.106,48.594,46.838,51.171,50.357,50.173,50.141,52.356,49.526,51.74,49.137,44.109,43.769,33.186,34.101,31.782,30.323,28.502,29.446,30.508,30.085,27.192,26.304,29.008,30.919,30.997,25.927,25.049,25.247,25.782,25.553,25.718,24.992,27.636,29.226,29.722,32.07,34.574,33.841,32.937,32.958,34.926,34.908,37.13,35.441,34.421,34.29,29.478,33.714,33.876,33.902,34.281,36.548,36.672,40.164,43.178,41.229,39.902,40.336,41.203,37.367,35.362,33.329,32.009,37.758,38.673,34.059,29.002,33.287,32.176,33.452,34.192,36.621,37.131,37.842,35.963,38.741,36.155,34.739,33.547,34.273,32.087,31.959,32.127,33.586,31.301,31.431,32.296,27.043,29.194,31.057,29.987,27.137,24.357,25.908,24.779,22.969,19.743,23.246,21.79,23.823,24.471,24.979,29.102,28.17,28.235,29.398,29.24,29.397,31.995,32.09,32.947,33.97,33.894,33.663,35.1,34.19,33.279,31.177,29.754,31.373,30.938,30.957,32.314,31.402,30.963,31.224,32.972,30.382,30.133,25.985,24.858,25.207,24.029,24.611,25.706,25.309,24.525,24.418,24.388,24.649,23.776,23.246,23.925,21.037,20.893,21.038,19.877,19.133,20.155,21.299,22.545,23.141,21.917,23.592,24.345,22.04,21.393,20.644,20.394,20.948,18.349,18.465,19.845,18.824,19.067,18.396,18.767],"p2":[43.875,43.005,41.951,45.454,45.755,44.911,43.647,43.786,41.026,41.072,43.022,44.609,50.034,58.08,58.481,55.737,53.051,51.141,50.158,46.033,48.853,48.324,44.605,43.907,37.979,37.002,39.261,38.624,35.387,35.938,34.048,32.718,39.169,40.29,38.795,33.477,30.818,28.237,26.793,26.944,25.505,24.009,28.058,27.693,25.054,23.386,25.164,21.402,23.52,23.921,26.272,27.489,28.673,31.146,30.327,30.007,25.425,26.759,24.614,23.334,22.54,22.332,20.713,22.874,25.315,25.795,29.879,28.066,29.508,30.468,30.564,29.914,27.255,26.085,26.412,29.914,31.392,35.821,37.005,37.23,37.445,38.832,40.075,38.522,42.706,44.614,45.569,44.181,43.487,43.702,44.515,45.802,44.554,48.571,39.624,39.06,37.885,41.393,40.442,40.388,40.461,40.824,38.956,40.326,38.404,34.413,34.323,25.632,26.719,25.034,23.869,22.561,23.479,24.34,24.108,22.043,21.509,23.841,25.54,25.696,21.534,20.659,20.929,21.479,21.394,21.638,21.247,23.614,25.146,25.645,27.708,29.796,28.994,27.461,27.636,29.352,29.426,30.92,29.569,28.97,29.082,25.069,28.789,28.814,28.666,28.693,29.591,29.462,32.517,34.415,32.913,31.789,32.235,32.612,29.662,28.206,26.648,25.295,29.933,30.615,27.066,22.786,26.119,25.353,26.439,27.102,29.08,29.638,30.296,28.855,31.109,28.869,27.455,26.651,27.353,25.687,25.623,25.958,27.111,25.285,25.454,26.219,21.995,23.793,25.498,24.699,22.209,19.981,21.146,20.333,19.001,16.435,19.262,17.919,19.663,20.244,20.587,24.186,23.532,23.24,24.095,24.08,24.33,26.399,26.58,27.227,27.959,28.007,27.726,28.983,28.406,27.49,25.099,24.024,25.548,25.313,25.241,26.356,25.713,25.183,25.514,26.411,24.048,23.642,20.016,19.028,19.462,18.482,18.917,19.83,19.525,18.934,18.889,18.968,19.196,18.601,18.255,18.876,16.282,16.241,16.466,15.32,14.769,15.616,16.555,17.553,18.083,17.188,18.494,19.047,17.01,16.504,15.988,15.966,16.432,13.733,13.844,14.949,14.211,14.432,13.9,14.18]},"AVGO":{"p1":[16.537,16.537,16.139,16.785,16.373,16.323,16.549,16.463,15.86,16.009,16.3,16.663,17.156,18.018,18.117,18.272,17.54,17.888,19.106,19.078,19.931,19.914,18.507,17.772,15.863,16.642,17.505,16.972,17.138,17.339,16.463,15.766,16.577,17.05,16.973,15.873,15.495,15.795,14.886,15.552,15.746,14.517,15.068,14.528,13.908,12.792,13.039,12.21,12.723,12.605,13.062,13.626,14.0,14.151,13.881,13.16,12.501,13.016,12.52,11.66,11.031,11.421,10.579,11.123,11.697,11.498,12.787,12.699,13.048,13.312,13.33,13.556,13.441,13.586,14.293,14.037,13.815,14.3,14.459,14.334,14.371,13.922,15.036,14.571,14.902,14.99,15.097,14.635,14.571,14.867,14.682,14.778,14.784,15.969,19.025,18.587,18.363,19.762,18.691,19.694,19.177,20.067,20.231,20.272,19.823,18.631,18.517,19.07,19.239,18.872,18.711,18.178,18.182,18.442,19.194,18.52,18.158,19.062,20.644,21.022,20.922,19.798,19.768,23.521,23.329,23.14,21.701,22.837,24.914,24.682,25.006,26.128,25.256,26.198,28.138,26.096,24.324,26.54,25.898,26.104,26.061,23.16,25.738,24.379,25.291,26.333,26.466,24.874,26.224,31.094,29.575,28.397,29.871,29.821,27.412,26.289,24.813,25.438,28.295,28.267,27.525,22.855,27.741,28.174,28.311,28.832,29.466,29.1,27.856,27.105,29.378,26.391,26.226,25.817,28.544,35.164,33.925,36.988,35.443,34.041,35.803,36.768,33.118,33.768,34.862,32.565,29.647,28.014,27.663,27.004,23.751,20.477,25.379,23.779,26.8,28.287,28.827,31.551,31.44,32.92,32.762,32.822,32.766,35.031,35.649,35.339,36.31,36.999,36.653,38.634,38.656,36.954,37.108,38.273,40.55,38.633,36.809,37.027,35.351,37.638,37.939,39.385,37.077,36.074,35.602,41.545,40.057,34.688,32.213,33.124,32.624,32.042,31.808,28.709,29.477,29.588,28.623,28.964,27.59,25.519,24.438,23.142,22.091,22.929,26.349,28.414,29.293,28.941,29.291,28.569,27.758,29.686,24.299,23.452,25.045,22.049,21.567,23.688,21.754,22.191,22.426,21.993],"p2":[15.599,15.607,15.238,15.936,15.317,15.309,15.533,15.442,14.888,15.039,15.321,15.673,16.149,16.977,17.057,17.211,16.529,16.866,17.565,17.557,18.361,18.357,17.061,16.407,14.653,15.374,16.181,15.704,15.866,16.067,15.261,14.671,15.447,15.9,15.905,14.887,14.543,14.852,14.015,14.654,14.848,13.7,14.19,13.632,13.082,12.041,12.282,11.476,11.965,11.855,12.31,12.849,13.217,13.367,13.12,12.448,11.709,12.212,11.784,10.979,10.39,10.763,9.955,10.47,11.015,10.83,12.049,11.971,12.303,12.573,12.514,12.716,12.611,12.754,13.447,13.189,12.987,13.455,13.595,13.485,13.527,13.112,14.1,13.693,14.019,14.121,14.227,13.796,13.739,14.021,13.865,13.944,13.952,15.073,17.992,17.494,17.338,18.68,17.675,18.631,18.091,18.856,18.994,19.036,18.628,17.512,17.41,17.94,17.772,17.417,17.268,16.772,16.628,16.892,17.602,16.986,16.678,17.532,18.987,19.355,19.258,18.112,16.916,20.26,20.11,19.979,18.744,19.731,21.481,21.272,21.571,22.561,21.736,22.568,24.269,22.18,20.641,22.509,21.99,22.193,22.152,19.736,21.969,20.843,21.664,22.608,22.762,21.423,22.589,26.402,25.173,24.169,25.193,24.816,22.925,22.031,20.839,21.42,23.877,23.904,23.286,19.23,23.532,23.946,24.101,24.584,25.088,24.74,23.724,23.099,25.019,23.205,23.029,22.64,25.001,29.972,28.298,30.764,29.496,28.304,29.746,30.563,27.548,28.049,29.035,27.006,24.581,23.52,23.421,22.878,20.171,17.399,21.616,20.257,22.917,24.2,24.673,27.016,26.942,28.249,27.547,27.448,27.159,28.74,29.216,28.956,29.76,30.36,29.961,31.768,31.8,30.414,30.555,29.913,31.756,30.237,28.717,28.925,27.672,29.133,29.42,30.693,28.882,27.996,27.575,31.755,30.486,25.499,23.736,24.458,24.048,23.626,23.749,21.418,21.911,21.962,21.221,21.542,20.641,18.127,17.325,16.416,15.757,16.418,18.813,20.349,21.066,20.898,21.236,20.66,20.153,21.51,17.066,16.391,17.557,15.553,15.276,16.854,15.57,15.932,16.154,15.837]},"TSM":{"p1":[26.894,26.279,24.694,26.687,27.388,27.006,25.906,25.271,24.358,24.155,24.386,23.999,23.752,24.593,24.622,25.657,24.134,24.401,24.306,23.717,24.459,24.232,24.566,25.663,22.482,21.272,21.825,21.763,21.411,20.002,18.915,18.334,19.203,19.328,18.607,18.04,17.056,16.47,16.059,15.935,15.853,15.634,15.956,15.922,15.167,14.562,14.68,13.149,13.905,13.778,13.87,14.168,14.379,14.576,14.001,13.689,13.214,13.452,12.994,12.477,11.607,11.79,10.802,10.855,10.551,10.661,12.225,13.627,13.37,13.32,13.264,12.604,12.405,12.403,13.159,15.231,15.978,16.336,16.204,16.445,15.608,15.295,15.548,15.237,15.423,15.847,16.003,15.478,15.099,15.144,15.003,15.019,14.735,16.223,18.155,17.342,17.979,18.22,17.825,17.778,17.775,18.367,17.758,18.454,17.686,16.921,16.795,17.045,17.011,16.419,16.223,15.629,15.874,16.166,16.335,16.234,15.234,16.129,17.116,17.203,16.675,16.614,16.836,17.061,17.081,16.839,16.373,16.607,18.594,18.91,18.544,21.287,20.169,20.668,21.307,23.016,21.603,22.264,21.497,22.231,22.335,19.89,21.427,21.708,22.816,22.934,24.119,22.819,24.527,25.665,25.513,25.308,26.591,26.664,22.796,21.989,20.235,22.175,22.975,22.192,22.143,20.069,22.024,22.119,22.226,22.79,23.837,23.511,23.41,22.023,22.922,21.331,21.748,21.004,22.875,22.6,22.206,22.668,23.458,23.206,23.196,24.04,22.602,22.255,21.915,21.134,19.264,18.769,18.492,18.754,17.537,15.444,16.327,15.789,17.091,17.499,16.89,18.497,18.25,18.271,19.392,19.675,19.492,20.878,21.259,21.278,22.316,22.78,22.155,22.614,22.403,22.218,21.916,22.898,24.094,24.516,25.337,26.488,25.266,24.887,24.642,24.984,23.943,23.735,23.028,24.303,24.274,23.826,23.672,24.622,25.708,23.24,24.385,23.294,22.687,24.104,24.991,25.321,25.243,23.002,23.179,22.226,21.973,23.071,24.602,22.778,24.005,23.753,24.289,23.777,23.654,24.231,23.998,24.487,26.412,24.716,24.511,24.38,21.159,20.887,20.773,20.765],"p2":[22.917,22.371,21.011,22.579,23.041,22.699,21.823,21.185,20.368,20.077,20.524,20.191,19.989,20.701,20.856,21.74,20.454,20.689,20.592,20.092,20.652,20.479,20.67,22.174,19.482,18.437,18.919,18.842,18.54,17.322,16.387,15.821,16.578,16.711,16.069,15.609,15.084,14.692,14.314,14.192,14.107,13.93,14.203,14.128,13.446,12.904,12.977,11.589,12.295,12.434,12.509,12.768,12.929,13.071,12.526,12.212,11.822,12.01,11.534,11.055,10.235,10.33,9.597,9.6,9.3,9.382,10.702,11.973,11.708,11.616,11.504,10.894,10.669,10.614,11.345,12.654,13.32,13.67,13.588,13.867,13.188,12.953,13.228,12.991,13.2,13.566,13.701,13.288,13.006,12.932,12.813,12.857,12.642,13.937,15.537,14.866,15.307,15.52,14.879,14.784,14.819,15.256,14.664,15.234,14.605,13.977,13.902,14.113,14.089,13.602,13.438,12.928,13.064,13.278,13.415,13.379,12.53,13.26,14.065,14.081,13.697,13.614,13.799,13.977,13.995,13.791,13.368,13.529,15.09,15.324,15.034,17.266,16.371,16.808,17.349,18.728,17.601,18.166,17.597,18.24,18.324,16.291,17.536,17.793,18.705,18.849,19.825,18.773,20.148,21.078,20.908,20.68,21.76,21.79,18.83,18.011,16.597,18.222,18.885,18.161,18.14,16.45,18.066,18.159,18.314,18.801,19.656,19.564,19.581,18.276,19.04,17.747,18.121,17.549,19.109,18.91,18.576,18.988,19.702,19.479,20.404,20.513,19.38,19.067,18.769,17.842,16.271,15.871,15.63,15.834,14.842,13.083,13.914,13.564,14.712,15.082,14.56,15.94,15.814,15.831,16.791,17.033,16.83,18.008,18.331,18.342,19.246,19.681,19.131,19.447,19.248,19.074,18.776,19.63,20.691,21.104,21.574,22.403,21.358,20.868,20.563,20.835,20.391,20.214,19.599,20.691,20.752,20.365,20.26,21.089,21.948,19.401,20.507,19.054,18.639,19.82,20.526,20.823,20.783,18.95,19.106,18.351,18.073,19.069,20.083,18.513,19.491,19.283,19.737,19.318,19.184,19.654,19.496,19.826,21.291,19.925,19.573,19.348,16.675,16.444,16.348,16.351]},"ASML":{"p1":[44.067,43.976,44.137,46.123,46.62,46.634,46.889,47.203,40.504,39.789,42.653,42.845,43.524,44.929,45.29,46.02,41.777,40.987,41.35,39.687,42.03,41.377,39.249,38.173,35.757,33.572,32.972,31.658,32.589,33.603,30.778,30.083,34.319,34.785,33.381,30.79,30.157,31.025,29.306,28.417,28.659,27.358,29.434,28.007,26.307,23.869,25.663,22.697,23.437,24.869,29.358,31.49,31.469,30.945,29.794,27.838,26.241,27.722,25.981,24.835,23.221,24.195,21.284,26.669,27.755,26.549,31.16,31.698,31.198,31.47,30.815,29.331,27.978,27.357,29.886,32.28,31.57,32.022,32.478,31.976,31.603,30.221,30.775,28.784,30.255,30.549,31.663,30.266,30.47,28.93,28.837,29.338,29.583,31.652,33.757,33.146,32.509,32.096,31.056,32.067,30.593,32.211,29.84,31.163,29.381,28.841,28.685,28.697,29.167,27.769,26.393,26.014,26.284,26.831,27.18,27.466,28.324,30.391,31.447,31.988,32.015,32.231,32.799,35.078,34.671,34.752,32.494,32.719,34.722,40.589,41.568,41.03,39.832,39.629,41.735,41.115,38.85,40.4,39.871,39.462,41.093,36.077,38.155,35.444,36.31,35.639,36.652,36.522,38.799,38.841,38.9,37.962,39.145,38.902,32.806,32.334,28.235,29.947,31.514,30.419,30.454,25.161,27.192,26.263,27.653,28.092,28.336,28.706,28.753,27.058,27.047,27.009,27.758,27.82,28.615,29.041,28.643,28.876,29.153,30.174,30.796,29.464,29.114,28.879,28.943,28.205,27.332,26.923,26.055,26.185,24.557,21.771,23.475,23.0,24.357,24.912,25.55,27.257,26.13,26.178,26.588,26.406,26.297,27.17,27.08,27.484,25.576,24.587,24.18,24.987,25.558,25.924,25.474,26.732,27.853,31.886,32.626,34.965,32.008,34.59,34.712,35.878,34.174,33.682,32.302,35.022,36.112,35.148,34.467,34.822,37.574,40.829,42.956,42.267,40.508,39.772,38.936,40.785,39.86,35.953,37.663,36.325,35.822,36.059,39.115,36.656,36.268,35.224,38.884,36.987,40.057,38.976,39.759,44.602,46.218,42.557,41.389,41.342,34.656,34.81,31.508,31.551],"p2":[34.463,34.28,34.35,35.823,36.144,36.048,36.125,36.144,31.098,30.576,32.825,32.711,33.209,34.256,34.543,35.075,31.802,31.319,31.583,30.315,32.053,31.578,30.07,29.379,27.256,25.672,25.366,24.461,25.25,26.115,23.968,23.468,26.975,27.439,26.338,24.349,23.962,24.501,23.162,22.569,22.945,22.03,23.678,22.655,21.177,19.285,20.778,18.524,19.243,20.589,23.4,25.202,25.275,24.965,24.105,22.608,21.256,22.541,21.087,20.233,19.024,19.865,17.517,21.58,22.513,21.571,25.195,25.534,25.013,24.682,23.953,22.791,21.754,21.286,23.291,25.054,24.229,24.273,24.694,25.881,25.56,24.431,24.87,23.251,24.459,24.646,25.566,24.404,24.537,23.575,23.497,23.876,24.009,25.71,27.387,26.859,26.313,25.926,25.057,25.814,24.604,25.898,24.119,25.178,23.665,23.166,22.99,22.939,23.254,22.086,20.923,20.514,20.673,20.993,21.238,21.017,21.435,22.876,23.543,23.82,23.763,23.796,24.091,25.543,25.171,25.091,23.466,23.68,25.311,28.146,28.828,30.365,29.618,29.496,31.175,30.737,29.09,30.363,30.042,29.777,29.406,25.796,27.418,26.619,27.397,26.911,27.662,27.706,29.734,29.929,30.125,29.5,30.397,30.453,25.07,24.6,22.266,23.799,25.147,24.387,24.503,20.386,22.121,21.477,22.703,23.131,23.389,22.755,22.836,21.492,21.481,21.58,22.222,22.262,22.963,23.364,23.005,23.192,23.425,24.306,24.921,23.831,24.246,24.001,24.13,23.685,22.882,22.529,21.832,21.945,20.618,18.311,19.69,19.654,20.816,21.177,21.695,23.122,22.159,22.215,22.548,22.372,22.295,23.033,22.9,23.452,22.288,21.392,20.974,21.663,22.216,22.48,22.063,23.152,24.01,27.37,27.901,29.908,27.487,29.086,29.058,29.948,28.381,27.742,26.517,28.709,29.392,28.53,27.84,28.052,30.02,32.436,34.157,33.322,31.78,31.164,30.559,32.08,31.426,28.387,29.74,28.756,28.431,28.612,31.068,29.17,28.998,28.242,31.266,29.8,32.359,31.534,31.868,35.895,37.171,33.783,32.684,32.587,26.343,26.442,23.946,23.968]}}};
+</script>
+<script>
+/* ============ CAPSTONE-STYLE RENDER ============ */
+const $=q=>document.querySelector(q), $$=q=>[...document.querySelectorAll(q)];
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');}
+const fmt1=v=>v==null?'–':(Math.round(v*10)/10).toLocaleString('en-US');
+const fmt0=v=>v==null?'–':Math.round(v).toLocaleString('en-US');
+function scaler(min,max,a,b){const d=(max-min)||1; return v=>a+(v-min)/d*(b-a);}
+function niceTicks(min,max,n=5){
+  const span=max-min, step0=span/n, mag=Math.pow(10,Math.floor(Math.log10(step0)));
+  const step=[1,2,2.5,5,10].map(m=>m*mag).find(s=>span/s<=n+1)||mag*10;
+  const lo=Math.ceil(min/step)*step, out=[];
+  for(let v=lo;v<=max+1e-9;v+=step) out.push(Math.round(v*100)/100);
+  return out;
+}
+const PET='var(--blue)', ORG='var(--gold)', PUR='var(--purple)', STEEL='var(--gray)';
+const BLUE='var(--blue)', GOLD='var(--gold)', GREEN='var(--green)', PURPLE='var(--purple)',
+      PINK='var(--pink)', RED='var(--red)', GRAY='var(--gray)', REST='var(--rest)';
+
+/* ---- generic category line chart ---- */
+function lineChart2({cats,series,W=1180,H=460,yfmt=v=>v,unit='',ypad=.08,guideLabel='guide'}){
+  const P={l:56,r:190,t:20,b:40};
+  let vals=[]; series.forEach(s=>{s.pts.forEach(v=>{if(v!=null)vals.push(v);}); if(s.guide!=null)vals.push(s.guide);});
+  let ymin=Math.min(...vals), ymax=Math.max(...vals);
+  const span=(ymax-ymin)||1; ymin=Math.max(0,ymin-span*ypad); ymax+=span*ypad;
+  const ticks=niceTicks(ymin,ymax,5);
+  ymin=Math.min(ymin,ticks[0]); ymax=Math.max(ymax,ticks[ticks.length-1]);
+  const nx=cats.length+(series.some(s=>s.guide!=null)?1:0);
+  const X=i=>P.l+i/(nx-1)*(W-P.l-P.r), Y=scaler(ymin,ymax,H-P.b,P.t);
+  let g='';
+  ticks.forEach(t=>{g+=`<line class="gl" x1="${P.l}" x2="${W-P.r}" y1="${Y(t)}" y2="${Y(t)}"/><text class="tick" x="${P.l-8}" y="${Y(t)+4}" text-anchor="end">${yfmt(t)}</text>`;});
+  cats.forEach((c,i)=>{g+=`<text class="tick" x="${X(i)}" y="${H-P.b+20}" text-anchor="middle">${c}</text>`;});
+  series.forEach(s=>{
+    let path='',prev=false;
+    s.pts.forEach((v,i)=>{if(v==null){prev=false;return;} path+=(prev?'L':'M')+X(i).toFixed(1)+','+Y(v).toFixed(1); prev=true;});
+    g+=`<path d="${path}" fill="none" stroke="${s.col}" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>`;
+    s.pts.forEach((v,i)=>{if(v==null)return;
+      g+=`<circle cx="${X(i)}" cy="${Y(v)}" r="4" fill="${s.col}" stroke="var(--paper)" stroke-width="2"/><circle cx="${X(i)}" cy="${Y(v)}" r="12" fill="transparent" data-tip="${esc(s.name+' — '+cats[i]+': '+yfmt(v)+unit+(s.note?'\n'+s.note:''))}"/>`;});
+    if(s.guide!=null){
+      const i0=s.pts.length-1,xg=X(nx-1);
+      g+=`<line x1="${X(i0)}" y1="${Y(s.pts[i0])}" x2="${xg}" y2="${Y(s.guide)}" stroke="${s.col}" stroke-width="2.6" stroke-dasharray="4 5"/>`;
+      g+=`<circle cx="${xg}" cy="${Y(s.guide)}" r="5" fill="var(--paper)" stroke="${s.col}" stroke-width="2.6" data-tip="${esc(s.name+' guide: ~'+yfmt(s.guide)+unit+' — '+(s.guideNote||''))}"/>`;
+      g+=`<text class="tick" x="${xg}" y="${H-P.b+20}" text-anchor="middle">${guideLabel}</text>`;}
+    const li=s.pts.map((v,i)=>v==null?null:i).filter(v=>v!=null).pop();
+    const lx=s.guide!=null?X(nx-1):X(li), ly=Y(s.guide!=null?s.guide:s.pts[li]);
+    g+=`<circle cx="${lx+12}" cy="${ly-1}" r="4" fill="${s.col}"/><text class="dl" x="${lx+20}" y="${ly+4}">${s.name} ${yfmt(s.guide!=null?s.guide:s.pts[li])}${unit}</text>`;
+  });
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" style="width:100%" role="img">${g}</svg>`;
+}
+
+/* ---- ARR date chart ---- */
+function arrChart2(W=740,H=440){
+  const P={l:52,r:180,t:22,b:36};
+  const d0=new Date('2025-12-01').getTime(), d1=new Date('2026-08-10').getTime();
+  const X=t=>P.l+(new Date(t).getTime()-d0)/(d1-d0)*(W-P.l-P.r);
+  const Y=scaler(0,75,H-P.b,P.t);
+  let g='';
+  [0,25,50,75].forEach(t=>{g+=`<line class="gl" x1="${P.l}" x2="${W-P.r}" y1="${Y(t)}" y2="${Y(t)}"/><text class="tick" x="${P.l-8}" y="${Y(t)+4}" text-anchor="end">$${t}B</text>`;});
+  ['2026-01-01','2026-02-01','2026-03-01','2026-04-01','2026-05-01','2026-06-01','2026-07-01','2026-08-01'].forEach(d=>{
+    g+=`<text class="tick" x="${X(d)}" y="${H-P.b+20}" text-anchor="middle">${['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug'][new Date(d).getUTCMonth()]}</text>`;});
+  const draw=(rows,col,name)=>{
+    let path=''; rows.forEach((r,i)=>{path+=(i?'L':'M')+X(r.d).toFixed(1)+','+Y(r.v).toFixed(1);});
+    g+=`<path d="${path}" fill="none" stroke="${col}" stroke-width="3"/>`;
+    rows.forEach(r=>{g+=`<circle cx="${X(r.d)}" cy="${Y(r.v)}" r="4.5" fill="${col}" stroke="var(--paper)" stroke-width="2"/><circle cx="${X(r.d)}" cy="${Y(r.v)}" r="13" fill="transparent" data-tip="${esc('$'+r.v+'B — '+r.s)}"/>`;});
+    const last=rows[rows.length-1];
+    g+=`<circle cx="${X(last.d)+12}" cy="${Y(last.v)-1}" r="4" fill="${col}"/><text class="dl" x="${X(last.d)+20}" y="${Y(last.v)+4}">${name} $${last.v}B</text>`;
+  };
+  draw(ARR.anthropic,GOLD,'Anthropic');
+  draw(ARR.openai,GREEN,'OpenAI');
+  const lo=ARR.openai[ARR.openai.length-1];
+  g+=`<line x1="${X(lo.d)}" y1="${Y(lo.v)}" x2="${X('2026-07-29')}" y2="${Y(52)}" stroke="${GREEN}" stroke-width="2.4" stroke-dasharray="4 5"/>`;
+  g+=`<circle cx="${X('2026-07-29')}" cy="${Y(52)}" r="5.5" fill="var(--paper)" stroke="${GREEN}" stroke-width="2.4" data-tip="${esc(ARR_OPEN_NOTE.s+' Vertical position illustrative — no disclosed level.')}"/>`;
+  g+=`<text class="anno" x="${X('2026-07-29')-6}" y="${Y(52)-12}" text-anchor="end">“July exceeded all of Q2”</text>`;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" style="width:100%" role="img">${g}</svg>`;
+}
+
+/* ---- OpenRouter stacked weekly bars (site replica, per-lab buckets) ---- */
+/* Captured live from openrouter.ai/rankings (React fiber), 2026-08-03. Buckets = top-10 models
+   of each week attributed by author; the rest falls in "Outros" (same artifact as the site). */
+const OR_STACK={
+  keys:['deepseek','xiaomi','tencent','z-ai','moonshotai','google','openai','anthropic','oth'],
+  names:{deepseek:'DeepSeek',xiaomi:'Xiaomi',tencent:'Tencent','z-ai':'Z.ai',moonshotai:'Moonshot',google:'Google',openai:'OpenAI',anthropic:'Anthropic',oth:'Outros (long tail)'},
+  cols:{deepseek:'var(--or-ds)',xiaomi:'var(--or-xi)',tencent:'var(--or-tc)','z-ai':'var(--or-za)',moonshotai:'var(--or-ms)',google:'var(--or-gg)',openai:'var(--or-oa)',anthropic:'var(--or-an)',oth:'var(--or-oth)'},
+  rows:[["2025-08-04",0,354,0,0,0,0,684,0,646,1746],["2025-08-11",0,418,0,0,0,0,671,0,662,1452],["2025-08-18",0,373,0,0,0,0,617,0,646,1571],["2025-08-25",0,304,0,0,0,0,727,0,560,2134],["2025-09-01",0,304,0,0,0,0,772,161,545,2818],["2025-09-08",0,307,0,0,0,0,651,167,568,3204],["2025-09-15",0,322,0,0,0,0,512,157,586,3340],["2025-09-22",0,350,0,0,0,0,643,139,579,3547],["2025-09-29",0,223,0,0,0,0,647,172,614,3724],["2025-10-06",0,0,0,0,0,0,618,146,732,3523],["2025-10-13",0,114,0,0,0,0,616,0,672,3242],["2025-10-20",0,111,0,0,0,0,716,0,679,3381],["2025-10-27",0,0,0,0,0,0,796,0,795,3920],["2025-11-03",0,0,0,0,0,0,853,0,806,4170],["2025-11-10",0,0,0,0,0,0,865,0,604,4459],["2025-11-17",0,0,0,0,0,0,711,0,497,5064],["2025-11-24",0,0,0,0,0,0,852,0,428,5905],["2025-12-01",0,0,0,0,0,0,897,0,638,4649],["2025-12-08",0,0,0,0,0,0,966,323,643,3841],["2025-12-15",0,205,171,0,0,0,806,220,626,3813],["2025-12-22",0,327,379,0,0,0,765,0,544,3650],["2025-12-29",0,352,351,0,0,0,809,0,529,3525],["2026-01-05",0,311,397,0,0,0,1004,0,901,3806],["2026-01-12",0,355,546,0,0,0,1213,0,1238,4291],["2026-01-19",0,396,575,0,0,0,1169,0,1077,4277],["2026-01-26",0,507,0,0,0,359,1095,304,1152,4832],["2026-02-02",0,665,0,0,0,1159,1537,0,1075,5369],["2026-02-09",0,756,0,0,628,1296,1226,0,1150,7958],["2026-02-16",0,745,0,0,803,1036,859,0,1177,9328],["2026-02-23",0,800,0,0,0,692,1027,0,1799,9298],["2026-03-02",0,831,0,0,0,743,1043,0,1450,10721],["2026-03-09",0,1036,0,0,0,559,1577,0,1710,11991],["2026-03-16",0,1134,1491,0,1028,0,937,0,2010,13697],["2026-03-23",0,1238,3947,0,965,0,968,0,2026,13496],["2026-03-30",0,1188,3076,0,0,0,980,0,2049,19713],["2026-04-06",0,1267,606,0,0,0,1063,0,2355,15701],["2026-04-13",0,1280,1148,0,0,0,1736,0,2600,13705],["2026-04-20",0,1275,0,0,0,1581,1038,0,3190,14800],["2026-04-27",0,1609,0,3031,0,1812,971,0,2277,14097],["2026-05-04",0,2794,0,3533,0,1614,1074,0,2686,14031],["2026-05-11",0,3980,0,2656,0,1054,1151,0,3081,14983],["2026-05-18",0,5481,0,3071,0,0,1101,0,3823,15445],["2026-05-25",0,5402,2706,3027,0,0,0,0,4248,16425],["2026-06-01",0,6549,2188,2942,0,0,0,0,3196,21250],["2026-06-08",0,6369,3590,4136,0,0,0,0,5709,24801],["2026-06-15",0,7468,3941,3627,0,0,0,0,5753,25858],["2026-06-22",0,6699,4482,3361,2108,0,0,0,4243,25827],["2026-06-29",0,7700,4381,3127,2578,0,0,0,4283,24650],["2026-07-06",0,8049,5947,6134,3192,0,0,0,4287,25012],["2026-07-13",0,8095,9320,11517,3672,0,0,0,4242,25929],["2026-07-20",0,9543,10463,5704,3288,0,0,0,0,29044],["2026-07-27",0,10499,6305,4825,2890,0,0,1945,0,30325],["2026-08-03",60598,1381,486,683,231,0,0,325,0,2414]],
+  /* row = [date, fc_B, deepseek, xiaomi, tencent, z-ai, moonshotai, google, openai, anthropic, oth] */
+};
+function orStackBars(W=1180,H=430){
+  const P={l:56,r:20,t:26,b:40};
+  const rows=OR_STACK.rows, n=rows.length, K=OR_STACK.keys;
+  const totals=rows.map(r=>K.reduce((s,_,ki)=>s+r[ki+2],0)/1000);
+  const ymax=72;
+  const Y=scaler(0,ymax,H-P.b,P.t);
+  const bandW=(W-P.l-P.r)/n, barW=Math.max(10,bandW-4);
+  let g='';
+  [0,10,20,30,40,50,60,70].forEach(t=>{g+=`<line class="gl" x1="${P.l}" x2="${W-P.r}" y1="${Y(t)}" y2="${Y(t)}"/><text class="tick" x="${P.l-8}" y="${Y(t)+4}" text-anchor="end">${t}T</text>`;});
+  const MN=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  let pm='';
+  rows.forEach((r,i)=>{const m=r[0].slice(5,7); if(m!==pm){pm=m;
+    g+=`<text class="tick" x="${(P.l+bandW*(i+0.5)).toFixed(1)}" y="${H-P.b+20}" text-anchor="middle">${MN[+m-1]+((m==='01'||i===0)?'-'+r[0].slice(2,4):'')}</text>`;}});
+  g=`<defs><pattern id="hx" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="var(--line)"/><line x1="0" y1="0" x2="0" y2="7" stroke="var(--gray)" stroke-width="2.2"/></pattern></defs>`+g;
+  rows.forEach((r,i)=>{
+    const x=P.l+bandW*i+(bandW-barW)/2;
+    const isLast=i===n-1;
+    let y0=Y(0);
+    K.forEach((k,ki)=>{
+      const v=r[ki+2]/1000; if(v<=0)return;
+      const hpx=Y(0)-Y(v); y0-=hpx;
+      g+=`<rect x="${x.toFixed(1)}" y="${y0.toFixed(1)}" width="${barW.toFixed(1)}" height="${Math.max(0,hpx-0.6).toFixed(1)}" fill="${OR_STACK.cols[k]}" data-tip="${esc(OR_STACK.names[k]+' — semana de '+r[0]+': '+fmt1(v)+'T tokens (atribuição top-10 da semana)')}"/>`;});
+    if(isLast){
+      const fcT=r[1]/1000, top=Y(totals[i]+fcT);
+      g+=`<rect x="${x.toFixed(1)}" y="${top.toFixed(1)}" width="${barW.toFixed(1)}" height="${(y0-top).toFixed(1)}" fill="url(#hx)" stroke="#8696ad" stroke-dasharray="3 3" data-tip="${esc('Semana em curso ('+r[0]+'): '+fmt1(totals[i])+'T contabilizados + '+fmt1(fcT)+'T de forecast do site ≈ '+fmt1(totals[i]+fcT)+'T — seria novo recorde')}"/>`;
+      g+=`<text class="dl" x="${x+barW/2}" y="${top-8}" text-anchor="middle" style="fill:#8696ad">≈${fmt1(totals[i]+fcT)}T proj.</text>`;
+    }
+  });
+  const iPeak=totals.indexOf(Math.max(...totals.slice(0,n-1)));
+  g+=`<text class="dl" x="${P.l+bandW*(iPeak+0.5)}" y="${Y(totals[iPeak])-8}" text-anchor="middle" style="fill:${ORG}">${fmt1(totals[iPeak])}T</text>`;
+  g+=`<text class="anno" x="${P.l+bandW*2}" y="${Y(6)-10}">3.4T/sem</text>`;
+  g+=`<line class="bl" x1="${P.l}" x2="${W-P.r}" y1="${Y(0)}" y2="${Y(0)}"/>`;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" style="width:100%" role="img">${g}</svg>`;
+}
+
+/* ---- OpenRouter weekly (line, kept unused) ---- */
+function orChart2(W=1180,H=470){
+  const P={l:56,r:110,t:26,b:40};
+  const n=OR_WEEKLY.length, X=scaler(0,n-1,P.l,W-P.r), Y=scaler(0,70,H-P.b,P.t);
+  let g='';
+  [0,10,20,30,40,50,60,70].forEach(t=>{g+=`<line class="gl" x1="${P.l}" x2="${W-P.r}" y1="${Y(t)}" y2="${Y(t)}"/><text class="tick" x="${P.l-8}" y="${Y(t)+4}" text-anchor="end">${t}T</text>`;});
+  const MN=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  let pm='';
+  OR_WEEKLY.forEach((r,i)=>{const m=r[0].slice(5,7); if(m!==pm){pm=m;
+    g+=`<text class="tick" x="${X(i)}" y="${H-P.b+20}" text-anchor="middle">${MN[+m-1]+((m==='01'||i===0)?'-'+r[0].slice(2,4):'')}</text>`;}});
+  const tv=i=>OR_WEEKLY[i][1]/1000;
+  let path='', area=`M${X(0).toFixed(1)},${Y(0).toFixed(1)}`;
+  for(let i=0;i<n-1;i++){path+=(i?'L':'M')+X(i).toFixed(1)+','+Y(tv(i)).toFixed(1); area+='L'+X(i).toFixed(1)+','+Y(tv(i)).toFixed(1);}
+  area+=`L${X(n-2).toFixed(1)},${Y(0).toFixed(1)}Z`;
+  g+=`<path d="${area}" fill="${PET}" opacity=".14"/>`;
+  g+=`<path d="${path}" fill="none" stroke="${PET}" stroke-width="3"/>`;
+  const proj=(OR_WEEKLY[n-1][1]+OR_WEEKLY[n-1][2])/1000;
+  g+=`<line x1="${X(n-2)}" y1="${Y(tv(n-2))}" x2="${X(n-1)}" y2="${Y(proj)}" stroke="${PET}" stroke-width="2.6" stroke-dasharray="4 5"/>`;
+  g+=`<circle cx="${X(n-1)}" cy="${Y(proj)}" r="5.5" fill="var(--paper)" stroke="${PET}" stroke-width="2.6" data-tip="${esc('Semana de 2026-07-27 (em curso): '+fmt1(OR_WEEKLY[n-1][1]/1000)+'T contabilizados + '+fmt1(OR_WEEKLY[n-1][2]/1000)+'T forecast do site ≈ '+fmt1(proj)+'T')}"/>`;
+  for(let i=0;i<n-1;i++){g+=`<circle cx="${X(i)}" cy="${Y(tv(i))}" r="10" fill="transparent" data-tip="${esc('Semana de '+OR_WEEKLY[i][0]+': '+fmt1(tv(i))+'T tokens')}"/>`;}
+  const iPeak=49;
+  g+=`<circle cx="${X(0)}" cy="${Y(tv(0))}" r="4" fill="${PET}"/><text class="anno" x="${X(0)+4}" y="${Y(tv(0))-12}">3.4T/sem</text>`;
+  g+=`<circle cx="${X(iPeak)}" cy="${Y(tv(iPeak))}" r="4" fill="${ORG}"/><text class="dl" x="${X(iPeak)-8}" y="${Y(tv(iPeak))-12}" text-anchor="end" style="fill:${ORG}">62.8T/sem</text>`;
+  g+=`<text class="dl" x="${X(n-1)+10}" y="${Y(proj)+4}">≈${fmt1(proj)}T</text>`;
+  g+=`<text class="anno" x="${X(30)}" y="${Y(48)}" text-anchor="middle" style="font-size:15px; font-weight:700; fill:${ORG}">~17–18x em 12 meses</text>`;
+  g+=`<line class="bl" x1="${P.l}" x2="${W-P.r}" y1="${Y(0)}" y2="${Y(0)}"/>`;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" style="width:100%" role="img">${g}</svg>`;
+}
+
+/* ---- backlog bars ---- */
+function backlogChart2(W=1180,H=440){
+  const P={l:60,r:16,t:26,b:36};
+  const nq=BK_Q.length, ns=3;
+  const Y=scaler(0,720,H-P.b,P.t);
+  const bandW=(W-P.l-P.r)/nq, barW=Math.min(58,(bandW-40)/ns);
+  const cols=[BLUE,GREEN,GOLD];
+  let g='';
+  niceTicks(0,720,5).forEach(t=>{g+=`<line class="gl" x1="${P.l}" x2="${W-P.r}" y1="${Y(t)}" y2="${Y(t)}"/><text class="tick" x="${P.l-8}" y="${Y(t)+4}" text-anchor="end">$${t}B</text>`;});
+  BK_Q.forEach((q,i)=>{g+=`<text class="tick" x="${P.l+bandW*(i+0.5)}" y="${H-P.b+20}" text-anchor="middle">${q}</text>`;});
+  BACKLOG.forEach((s,si)=>{
+    s.pts.forEach((v,i)=>{if(v==null)return;
+      const x=P.l+bandW*i+(bandW-ns*barW-(ns-1)*3)/2+si*(barW+3);
+      g+=`<rect x="${x.toFixed(1)}" y="${Y(v).toFixed(1)}" width="${barW}" height="${(Y(0)-Y(v)).toFixed(1)}" rx="4" fill="${cols[si]}" data-tip="${esc(s.name+' — '+BK_Q[i]+': $'+v+'B\n'+s.s)}"/>`;
+      g+=`<text class="dl" x="${x+barW/2}" y="${Y(v)-6}" text-anchor="middle" style="font-size:11.5px">${v}</text>`;});
+  });
+  g+=`<line class="bl" x1="${P.l}" x2="${W-P.r}" y1="${Y(0)}" y2="${Y(0)}"/>`;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" style="width:100%" role="img">${g}</svg>`;
+}
+
+/* ---- ROIC bands ---- */
+function roicChart2(W=1180,H=300){
+  const P={l:300,r:300,t:40,b:38};
+  const X=scaler(0,55,P.l,W-P.r);
+  let g='';
+  [0,10,20,30,40,50].forEach(t=>{g+=`<line class="gl" x1="${X(t)}" x2="${X(t)}" y1="${P.t-8}" y2="${H-P.b+8}"/><text class="tick" x="${X(t)}" y="${H-P.b+26}" text-anchor="middle">$${t}B</text>`;});
+  g+=`<text class="anno" x="${X(27.5)}" y="${P.t-20}" text-anchor="middle" style="font-size:12.5px">Receita por GW-ano, $bn (banda = bear→bull; ponto = base MS)</text>`;
+  const cols=[BLUE,GREEN,GOLD];
+  MS_ROIC.forEach((m,i)=>{
+    const y=P.t+26+i*72;
+    g+=`<text class="dl" x="${P.l-14}" y="${y+4}" text-anchor="end" style="font-size:14px">${m.m.replace(' — ',' — ')}</text>`;
+    g+=`<rect x="${X(m.rev[0])}" y="${y-9}" width="${X(m.rev[1])-X(m.rev[0])}" height="18" rx="9" fill="${cols[i]}" opacity=".3" data-tip="${esc(m.m+'\nReceita/GW: $'+m.rev[0]+'–'+m.rev[1]+'B (base $'+m.revBase+'B)\n'+m.mgn+'\n'+m.note)}"/>`;
+    g+=`<circle cx="${X(m.revBase)}" cy="${y}" r="6.5" fill="${cols[i]}" stroke="var(--paper)" stroke-width="2.4" data-tip="${esc(m.m+' — base $'+m.revBase+'B/GW; '+m.retLb+' '+m.retBase+'%')}"/>`;
+    g+=`<text class="dl" x="${W-P.r+14}" y="${y-4}" style="font-size:14px">${m.retLb.split(' (')[0]}: <tspan style="font-weight:800">${m.retBase}%</tspan></text>`;
+    g+=`<text class="anno" x="${W-P.r+14}" y="${y+15}">banda ${m.ret[0]}% → ${m.ret[1]}%</text>`;
+  });
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" style="width:100%" role="img">${g}</svg>`;
+}
+
+/* ---- model detail table ---- */
+function msFmt(f,v){
+  if(v==null)return '–';
+  if(f==='n0')return Math.round(v).toLocaleString('en-US');
+  if(f==='n1')return v.toFixed(2);
+  if(f==='pct')return v+'%';
+  if(f==='usd1')return (v<0?'−$':'$')+Math.abs(v).toFixed(1);
+  if(f==='usd2')return '$'+v.toFixed(2);
+  return String(v);
+}
+function msTable(mod){
+  const heads=['1 · bear','2','3 · base MS','4','5 · bull'];
+  const rows=mod.rows.map(r=>{
+    const tds=r.v.map((v,i)=>{
+      const cls=[i===2?'bc':'',v<0?'neg':'',(r.yellow&&r.yellow[i])?'yc':''].filter(Boolean).join(' ');
+      return `<td class="${cls}">${msFmt(r.f,v)}${(r.yellow&&r.yellow[i])?'*':''}</td>`;});
+    return `<tr class="k-${r.k}"><td class="rl"${r.note?` data-tip="${esc(r.note)}"`:''}>${r.lb}</td>${tds.join('')}</tr>`;
+  }).join('');
+  return `<table class="mst"><tr><th style="text-align:left">linha (hover = premissa)</th>${heads.map((h,i)=>`<th class="${i===2?'bh':''}">${h}</th>`).join('')}</tr>${rows}</table>`;
+}
+
+/* ---- intensity panels ---- */
+function intensityPanels2(){
+  return `<div style="display:grid; grid-template-columns:repeat(4,1fr); gap:20px">`+INTENSITY.map((co,ci)=>{
+    const W=272,H=300,P={l:40,r:6,t:30,b:26};
+    const ymax=70, Y=scaler(0,ymax,H-P.b,P.t);
+    const n=co.vals.length, bandW=(W-P.l-P.r)/n, barW=Math.min(46,bandW-12);
+    const col=[PINK,GREEN,BLUE,GOLD][ci]; /* META, GOOG, MSFT, AMZN */
+    let g='';
+    [0,20,40,60].forEach(t=>{g+=`<line class="gl" x1="${P.l}" x2="${W-P.r}" y1="${Y(t)}" y2="${Y(t)}"/><text class="tick" x="${P.l-6}" y="${Y(t)+4}" text-anchor="end">${t}%</text>`;});
+    co.vals.forEach((v,i)=>{
+      const pct=v.c/v.r*100, x=P.l+bandW*i+(bandW-barW)/2;
+      g+=`<rect x="${x}" y="${Y(pct).toFixed(1)}" width="${barW}" height="${(Y(0)-Y(pct)).toFixed(1)}" rx="4" fill="${col}" data-tip="${esc(co.tk+' '+v.y+': capex $'+v.c+'B ÷ receita $'+v.r+'B = '+pct.toFixed(0)+'%\n'+v.src)}"/>`;
+      g+=`<text class="dl" x="${x+barW/2}" y="${Y(pct)-6}" text-anchor="middle" style="font-size:12px">${pct.toFixed(0)}%</text>`;
+      g+=`<text class="tick" x="${x+barW/2}" y="${H-P.b+18}" text-anchor="middle" style="font-size:10.5px">${v.y}</text>`;});
+    g+=`<line class="bl" x1="${P.l}" x2="${W-P.r}" y1="${Y(0)}" y2="${Y(0)}"/>`;
+    g+=`<text x="${P.l+(W-P.l-P.r)/2}" y="16" text-anchor="middle" style="font-size:15px; font-weight:750; fill:var(--ink)">${co.tk}</text>`;
+    return `<div><svg class="chart" viewBox="0 0 ${W} ${H}" style="width:100%" role="img">${g}</svg>
+      <div style="font-size:10.5px; color:var(--mut); text-align:center">${co.basis}</div></div>`;
+  }).join('')+`</div>`;
+}
+
+/* ---- P/E dumbbell ---- */
+function peDumbbell(W=1180,H=460){
+  const P={l:90,r:250,t:34,b:36};
+  const rows=PE_LB.map(tk=>({tk, a:PE_MARKS[tk][1], b:PE_MARKS[tk][2], px:PX_CHG[tk]}));
+  const vals=rows.flatMap(r=>[r.a,r.b]);
+  const X=scaler(Math.min(...vals)*.9, Math.max(...vals)*1.05, P.l, W-P.r);
+  let g='';
+  niceTicks(14,38,6).forEach(t=>{g+=`<line class="gl" x1="${X(t)}" x2="${X(t)}" y1="${P.t-6}" y2="${H-P.b}"/><text class="tick" x="${X(t)}" y="${H-P.b+20}" text-anchor="middle">${t}x</text>`;});
+  rows.forEach((r,i)=>{
+    const y=P.t+16+i*((H-P.t-P.b-20)/rows.length);
+    const d=r.b-r.a, col=d<=0?'var(--good)':ORG;
+    g+=`<text class="dl" x="${P.l-14}" y="${y+4}" text-anchor="end" style="font-size:14px">${r.tk}</text>`;
+    g+=`<line x1="${X(r.a)}" y1="${y}" x2="${X(r.b)}" y2="${y}" stroke="${col}" stroke-width="3"/>`;
+    g+=`<circle cx="${X(r.a)}" cy="${y}" r="5" fill="var(--baseline)" stroke="var(--paper)" stroke-width="2" data-tip="${esc(r.tk+' P/E fwd em 30-Jan-26: '+r.a.toFixed(1)+'x')}"/>`;
+    g+=`<circle cx="${X(r.b)}" cy="${y}" r="6.5" fill="${col}" stroke="var(--paper)" stroke-width="2" data-tip="${esc(r.tk+' P/E fwd agora: '+r.b.toFixed(1)+'x ('+((r.b/r.a-1)*100).toFixed(1)+'%)')}"/>`;
+    const pcol=r.px>=0?'var(--good)':'var(--bad)';
+    g+=`<text class="dl" x="${W-P.r+16}" y="${y+4}" style="font-size:13.5px">${r.a.toFixed(1)}x → ${r.b.toFixed(1)}x · px <tspan style="fill:${pcol}">${r.px>0?'+':''}${r.px.toFixed(0)}%</tspan></text>`;
+  });
+  g+=`<text class="anno" x="${P.l}" y="${P.t-14}">cinza = 30-Jan-2026 · colorido = 31-Jul-2026 (verde = de-rating, laranja = re-rating) · direita: variação do preço no período</text>`;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" style="width:100%" role="img">${g}</svg>`;
+}
+
+/* ---- growth dumbbells ---- */
+function growthPanel(rows,title,W=565){
+  const H=44+rows.length*46, P={l:70,r:120,t:30,b:30};
+  const vals=rows.flatMap(r=>[r.feb,r.now]);
+  const X=scaler(Math.min(...vals)*.8, Math.max(...vals)*1.06, P.l, W-P.r);
+  let g='';
+  niceTicks(Math.min(...vals)*.8, Math.max(...vals)*1.06,4).forEach(t=>{g+=`<line class="gl" x1="${X(t)}" x2="${X(t)}" y1="${P.t}" y2="${H-P.b}"/><text class="tick" x="${X(t)}" y="${H-P.b+18}" text-anchor="middle">${t}%</text>`;});
+  rows.forEach((r,i)=>{
+    const y=P.t+18+i*46, d=r.now-r.feb, col=d>=0?'var(--good)':'var(--bad)';
+    g+=`<text class="dl" x="${P.l-12}" y="${y+4}" text-anchor="end">${r.tk}</text>`;
+    g+=`<line x1="${X(r.feb)}" y1="${y}" x2="${X(r.now)}" y2="${y}" stroke="${col}" stroke-width="3"/>`;
+    g+=`<circle cx="${X(r.feb)}" cy="${y}" r="5" fill="var(--baseline)" stroke="var(--paper)" stroke-width="2" data-tip="${esc(r.tk+' — consenso em 30-Jan: +'+r.feb.toFixed(1)+'%')}"/>`;
+    g+=`<circle cx="${X(r.now)}" cy="${y}" r="6" fill="${col}" stroke="var(--paper)" stroke-width="2" data-tip="${esc(r.tk+' — consenso agora: +'+r.now.toFixed(1)+'%')}"/>`;
+    g+=`<text class="dl" x="${W-P.r+12}" y="${y+4}" style="fill:${col}; font-size:13px">${r.feb.toFixed(0)}% → ${r.now.toFixed(0)}%</text>`;});
+  g+=`<text x="${P.l}" y="14" style="font-size:15px; font-weight:750; fill:var(--ink)">${title}</text>`;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" style="width:100%" role="img">${g}</svg>`;
+}
+
+/* ---- capex revision lines (CY27/CY28 weekly consensus sums) ---- */
+function capexRevChart(W=700,H=430){
+  const P={l:64,r:150,t:24,b:38};
+  const s27=CAPEX_HIST['2027'], s28=CAPEX_HIST['2028'];
+  const d0=new Date(s27[0][0]).getTime(), d1=new Date(s27[s27.length-1][0]).getTime();
+  const X=d=>P.l+(new Date(d).getTime()-d0)/(d1-d0)*(W-P.l-P.r);
+  const Y=scaler(450,1150,H-P.b,P.t);
+  let g='';
+  [500,600,700,800,900,1000,1100].forEach(t=>{g+=`<line class="gl" x1="${P.l}" x2="${W-P.r}" y1="${Y(t)}" y2="${Y(t)}"/><text class="tick" x="${P.l-8}" y="${Y(t)+4}" text-anchor="end">$${t}B</text>`;});
+  ['2026-01-02','2026-03-01','2026-05-01','2026-07-01'].forEach(d=>{
+    g+=`<text class="tick" x="${X(d)}" y="${H-P.b+20}" text-anchor="middle">${['Jan','Fev','Mar','Abr','Mai','Jun','Jul'][new Date(d).getUTCMonth()]}</text>`;});
+  const draw=(ser,col,lb)=>{
+    let path=''; ser.forEach((r,i)=>{path+=(i?'L':'M')+X(r[0]).toFixed(1)+','+Y(r[1]).toFixed(1);});
+    g+=`<path d="${path}" fill="none" stroke="${col}" stroke-width="3"/>`;
+    ser.forEach(r=>{g+=`<circle cx="${X(r[0])}" cy="${Y(r[1])}" r="9" fill="transparent" data-tip="${esc(lb+' — semana de '+r[0]+': $'+fmt0(r[1])+'B (soma MSFT+GOOG+META+AMZN)')}"/>`;});
+    const a=ser[0][1], b=ser[ser.length-1][1];
+    g+=`<circle cx="${X(ser[ser.length-1][0])+10}" cy="${Y(b)-1}" r="4" fill="${col}"/>`;
+    g+=`<text class="dl" x="${X(ser[ser.length-1][0])+18}" y="${Y(b)-6}" style="font-size:14px">${lb}: $${fmt0(b)}B</text>`;
+    g+=`<text class="anno" x="${X(ser[ser.length-1][0])+18}" y="${Y(b)+12}" style="font-weight:700; fill:${col}">+${((b/a-1)*100).toFixed(0)}% YTD</text>`;
+    g+=`<text class="anno" x="${X(ser[0][0])+4}" y="${Y(a)-10}">$${fmt0(a)}B</text>`;
+  };
+  draw(s27,PET,'2027E'); draw(s28,ORG,'2028E');
+  g+=`<text class="anno" x="${P.l}" y="${P.t-8}" style="font-size:12px">Consenso BEst de capex, soma dos 4 (MSFT calendarizado) — semanal desde 02-jan-2026</text>`;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" style="width:100%" role="img">${g}</svg>`;
+}
+
+/* ---- forward P/E panel (comp-dashboard grammar) ---- */
+function peStats(tk){
+  const p1=PE5Y.pe[tk].p1.filter(v=>v!=null);
+  const avg=p1.reduce((s,v)=>s+v,0)/p1.length;
+  const sd=Math.sqrt(p1.reduce((s,v)=>s+(v-avg)*(v-avg),0)/p1.length);
+  const l1=[...PE5Y.pe[tk].p1].reverse().find(v=>v!=null), l2=[...PE5Y.pe[tk].p2].reverse().find(v=>v!=null);
+  return {avg,sd,l1,l2};
+}
+function peFwdPanel(tk,W=565,H=194){
+  const P={l:42,r:12,t:8,b:24};
+  const D=PE5Y.dates, p1=PE5Y.pe[tk].p1, p2=PE5Y.pe[tk].p2;
+  const {avg,sd,l1,l2}=peStats(tk);
+  const vals=[...p1,...p2].filter(v=>v!=null).concat([avg+sd,avg-sd]);
+  let ymin=Math.min(...vals), ymax=Math.max(...vals);
+  const span=ymax-ymin; ymin=Math.max(0,ymin-span*.07); ymax+=span*.07;
+  const X=scaler(0,D.length-1,P.l,W-P.r), Y=scaler(ymin,ymax,H-P.b,P.t);
+  let g='';
+  niceTicks(ymin,ymax,4).forEach(t=>{g+=`<line class="gl" x1="${P.l}" x2="${W-P.r}" y1="${Y(t)}" y2="${Y(t)}"/><text class="tick" x="${P.l-6}" y="${Y(t)+3.5}" text-anchor="end" style="font-size:10.5px">${t}</text>`;});
+  let py='';
+  D.forEach((d,i)=>{const yy=d.slice(0,4); if(yy!==py&&d.slice(5,7)<='01'&&i>0||i===0){py=yy;
+    if(+yy>2021) g+=`<text class="tick" x="${X(i)}" y="${H-P.b+16}" text-anchor="middle" style="font-size:10.5px">${yy}</text>`;}});
+  /* sigma band + avg */
+  [[avg+sd,'+1σ'],[avg-sd,'−1σ']].forEach(([v,lb])=>{
+    g+=`<line x1="${P.l}" x2="${W-P.r}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--warnc)" stroke-width="1.4" stroke-dasharray="2 5" opacity=".75" data-tip="${esc(tk+' '+lb+': '+v.toFixed(1)+'x')}"/>`;});
+  g+=`<line x1="${P.l}" x2="${W-P.r}" y1="${Y(avg)}" y2="${Y(avg)}" stroke="var(--ink)" stroke-width="1.4" stroke-dasharray="7 5" opacity=".8" data-tip="${esc(tk+' média 5 anos (1Y fwd): '+avg.toFixed(1)+'x')}"/>`;
+  const draw=(arr,col)=>{
+    let path='',prev=false;
+    arr.forEach((v,i)=>{if(v==null){prev=false;return;} path+=(prev?'L':'M')+X(i).toFixed(1)+','+Y(v).toFixed(1); prev=true;});
+    g+=`<path d="${path}" fill="none" stroke="${col}" stroke-width="2"/>`;};
+  draw(p2,'var(--green)'); draw(p1,'var(--blue)');
+  /* hover: sample every 4th week to keep DOM light */
+  for(let i=0;i<D.length;i+=4){ if(p1[i]==null)continue;
+    g+=`<circle cx="${X(i)}" cy="${Y(p1[i])}" r="8" fill="transparent" data-tip="${esc(tk+' — '+D[i]+': 1Y fwd '+p1[i].toFixed(1)+'x'+(p2[i]!=null?' · 2Y fwd '+p2[i].toFixed(1)+'x':''))}"/>`;}
+  const head=`<div style="font-size:13px; margin-bottom:2px; padding-left:8px; border-left:3px solid var(--blue)"><b style="color:var(--gold)">${tk}</b><span style="color:var(--mut)"> — FORWARD P/E 5Y · </span><b style="color:var(--txt)">1Y ${l1.toFixed(1)}</b><span style="color:var(--mut)"> · 2Y ${l2.toFixed(1)} · 5Y AVG ${avg.toFixed(1)}</span></div>`;
+  return `<div>${head}<svg class="chart" viewBox="0 0 ${W} ${H}" style="width:100%" role="img">${g}</svg></div>`;
+}
+function peLegendRow(){
+  return `<div class="legend" style="justify-content:center; margin:0 0 6px">
+    <span class="k"><span class="sw" style="--kc:var(--blue)"></span>1Y fwd P/E</span>
+    <span class="k"><span class="sw" style="--kc:var(--green)"></span>2Y fwd P/E</span>
+    <span class="k" style="color:var(--txt)">— — média 5A (1Y)</span>
+    <span class="k" style="color:var(--gold)">· · · ±1σ</span></div>`;
+}
+
+/* ---- ladder ---- */
+function ladderChart2(W=1180,H=290){
+  const P={l:30,r:30,t:52,b:46};
+  const lg=v=>Math.log10(v), X=scaler(lg(18),lg(13000),P.l+90,W-P.r-50);
+  const y=H/2+8;
+  let g=`<line class="bl" x1="${P.l}" x2="${W-P.r}" y1="${y}" y2="${y}"/>`;
+  [25,100,300,1000,3000,10000].forEach(t=>{g+=`<text class="tick" x="${X(lg(t))}" y="${H-12}" text-anchor="middle">$${t>=1000?(t/1000)+'k':t}</text>`;g+=`<line class="gl" x1="${X(lg(t))}" x2="${X(lg(t))}" y1="${y-7}" y2="${y+7}"/>`;});
+  g+=`<rect x="${X(lg(50))}" y="${y-17}" width="${X(lg(200))-X(lg(50))}" height="34" rx="7" fill="${ORG}" opacity=".14"/>`;
+  g+=`<text class="anno" x="${(X(lg(50))+X(lg(200)))/2}" y="${y+58}" text-anchor="middle" style="fill:${ORG}; font-weight:700; font-size:12.5px">a banda do what-if ($50–200/mês)</text>`;
+  const tagc={H:'var(--hard)',P:'var(--partial)',E:'var(--est)'};
+  LADDER.forEach((r,i)=>{
+    const x=X(lg(r.v)), up=i%2===0;
+    g+=`<circle cx="${x}" cy="${y}" r="8" fill="${tagc[r.tag]}" stroke="var(--paper)" stroke-width="2.6" data-tip="${esc('$'+fmt0(r.v)+'/usuário/mês — '+r.lb+'\n'+r.s)}"/>`;
+    g+=`<line x1="${x}" y1="${y+(up?-10:10)}" x2="${x}" y2="${y+(up?-30:30)}" stroke="var(--baseline)" stroke-width="1"/>`;
+    g+=`<text class="dl" x="${x}" y="${y+(up?-38:46)}" text-anchor="middle" style="font-size:14px">$${r.v>=1000?((r.v/1000).toFixed(r.v<10000?1:0).replace(/\.0$/,''))+'k':r.v}</text>`;
+    g+=`<text class="anno" x="${x}" y="${y+(up?-54:62)}" text-anchor="middle" style="font-size:11.5px">${r.lb.split(' — ')[0]}</text>`;});
+  g+=`<text class="anno" x="${P.l}" y="${20}" style="font-size:12px">$ por usuário por MÊS — escala log. Verde = preço de tabela (HARD) · azul = estimativa reportada (PARTIAL)</text>`;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" style="width:100%" role="img">${g}</svg>`;
+}
+
+/* ============ HOUSE MODEL DATA (Fernanda's Oficiais dashboards, 2026-08-03) ============ */
+/* rcloud.html — Revenue das Clouds, decomposição (US$ M), CY24..CY28E */
+const H_YEARS=['CY24','CY25','CY26E','CY27E','CY28E'];
+const H_RC={
+  ind:{nonAI:[196113,236464,286164,352214,432262],aiLabs:[5939,27496,125396,250897,430757],aiOther:[13462,19101,25360,80283,162815]},
+  msft:{nonAI:[57825,71512,87245,106439,129855],aiLabs:[4250,12897,39679,83693,154449],aiOther:[2750,5000,9000,18000,32400]},
+  aws:{nonAI:[106913,124164,145895,176843,212796],aiLabs:[390,3918,26553,59859,103330],aiOther:[253,758,5303,13258,26515]},
+  goog:{nonAI:[31375,40788,53024,68932,89611],aiLabs:[1299,4155,26244,55895,95978],aiOther:[112,1789,5367,21467,64400]},
+};
+const H_LABS={
+  msft:{openai:[4250,12897,33330,56629,100970],anthropic:[0,0,6349,27064,53479],gemini:[0,0,0,0,0]},
+  aws:{openai:[0,0,4768,12610,29221],anthropic:[390,3918,21785,47250,74109],gemini:[0,0,0,0,0]},
+  goog:{openai:[0,0,1500,2250,3250],anthropic:[1122,3155,17673,35103,47936],gemini:[176,1000,5404,16875,43125]},
+};
+/* economics_industria.html — per-GW economics + resumo + comparativo (aba Comp, 14-jul-26) */
+const H_PGW={chips:[17649,18195,18767,21175,25303],net:[4412,5074,6596,8575,10290],oth:[10866,10950,11936,13366,14894]}; /* NVDA-class chip capex/GW */
+const H_RESUMO={capexTotal:[233864,396261,901599,1733854,2584253],gwOnlineAvg:[3.0,9.7,22.5,46.8,88.6],gwEop:[11,24,51,98,162],receitaAi:[38687,133930,304675,691219,1201733],chips:[9819,10126,15449,21385,22700]};
+const H_CAPEX={ /* [CY26,CY27,CY28] $bn */
+  'Google':{voce:[189.6,308.3,439.0],ms:[190,350,375],bofa:[195,290,330],cons:[186.6,246.1,261.8],bogey:[203.0,304.7,null]},
+  'Amazon':{voce:[216.7,292.7,420.6],ms:[218,308,318],bofa:[201.2,275.7,325.8],cons:[199.7,231.4,237.4],bogey:[210.0,290.7,null]},
+  'Microsoft':{voce:[191.5,280.9,326.8],ms:[190,276,344],bofa:[190,276,344],cons:[180.7,200.8,211.6],bogey:[null,260.2,null]},
+  'Meta':{voce:[141.4,221.5,352.6],ms:[145,225,250],bofa:[145,185,210],cons:[134.9,165.2,181.8],bogey:[155.0,237.5,null]},
+};
+const H_CAPEX_TOT={voce:[739.2,1103.4,1539.1],ms:[743,1159,1287],bofa:[731.2,1026.7,1209.8],cons:[701.9,843.5,892.6]};
+const H_GW={ /* YE installed GW 2024..2028 */
+  Google:{voce:[5.0,8.05,15.48,25.81,37.63],ms:[null,5.0,11.1,20.2,31.6],media:[4.98,6.53,11.32,18.24,27.37]},
+  Amazon:{voce:[9.0,12.8,18.53,26.72,39.58],ms:[null,13.8,19.8,27.8,35.8],media:[10.2,14.03,19.98,27.31,34.36]},
+  Microsoft:{voce:[5.0,7.86,13.13,20.0,28.23],ms:[null,7.5,10.3,14.5,20.3],media:[6.3,8.2,11.5,16.35,21.4]},
+  Meta:{voce:[2.82,4.56,8.21,14.41,24.43],ms:[null,3.5,8.4,13.8,21.2],media:[4.75,5.33,9.12,13.61,18.92]},
+};
+const H_IMPL={ /* capex/GW $bn, [CY26,27,28], v=house, b=benchmark */
+  'Google':{v:[28.2,30.8,35.3],b:[36.7,34.9,38.4],src:'BofA'},
+  'Amazon':{v:[29.9,31.0,30.3],b:[24.9,26.6,29.8],src:'BofA'},
+  'Meta':{v:[31.0,34.3,34.1],b:[45.4,43.1,47.4],src:'BofA'},
+  'Microsoft':{v:[35.8,40.2,39.5],b:[null,null,null],src:'—'},
+  'NVDA (chips)':{v:[36.2,41.7,42.0],b:[39.0,49.0,49.5],src:'MS'},
+};
+const H_SRC='Modelo house Capstone (Bottom-up Capex v3; comparativo = aba Comp, 14-jul-26) via dashboards Oficiais — pipeline MarketData (Fernanda Neves), atualizado 03-ago-2026. Números HOUSE, não consenso; "bogeys" = buyside.';
+
+/* ============ CAPEX BOTTOM-UP (dashboard ai-capex-bottom-up, 27-jul-26; Bottom_Up_Capex_v3.xlsx) ============ */
+const H_BU={
+  years:['CY25','CY26E','CY27E','CY28E'],
+  chipsM:[10.126,15.449,21.385,22.700],
+  stack:{chips:[190.171,399.900,692.003,992.480],network:[65.260,178.576,407.185,650.415],other:[140.830,323.122,634.666,941.359]},
+  capex:[396.261,901.599,1733.854,2584.253],
+  gwAdded:[12.861,27.072,47.483,63.205],
+  capexPerGw:[30.811,33.304,36.515,40.886],
+  hyperModel:[410.130,722.177,1044.907,1426.413],
+  hyperBottom:[334.102,655.009,1098.504,1426.413],
+  jpm:[[410,410],[700,725],[1100,1100],[null,null]],
+  arch:{ 'NVIDIA GPU':[34.219,37.299,43.116,50.487],'Google TPU':[24.835,27.729,31.662,40.062],
+         'Trainium':[18.668,21.545,25.178,27.809],'AMD GPU':[27.048,32.820,35.044,35.307],'Meta MTIA':[24.373,25.551,32.492,38.714] },
+};
+function buArchChart(W=560,H=IS_PPT?196:230){
+  const P={l:120,r:70,t:24,b:26};
+  const names=Object.keys(H_BU.arch), X=scaler(0,55,P.l,W-P.r);
+  const rowH=(H-P.t-P.b)/names.length;
+  const cols={'NVIDIA GPU':'var(--green)','Google TPU':'var(--blue)','Trainium':'var(--gold)','AMD GPU':'var(--red)','Meta MTIA':'var(--pink)'};
+  let g='';
+  [0,10,20,30,40,50].forEach(t=>{g+=`<line class="gl" x1="${X(t)}" x2="${X(t)}" y1="${P.t-4}" y2="${H-P.b}"/><text class="tick" x="${X(t)}" y="${H-P.b+16}" text-anchor="middle">$${t}B</text>`;});
+  names.forEach((n,i)=>{
+    const y=P.t+rowH*(i+.5), a=H_BU.arch[n][1], b=H_BU.arch[n][3];
+    g+=`<text class="dl" x="${P.l-10}" y="${y+4}" text-anchor="end" style="font-size:11.5px">${n}</text>`;
+    g+=`<line x1="${X(a)}" y1="${y}" x2="${X(b)}" y2="${y}" stroke="${cols[n]}" stroke-width="2.6"/>`;
+    g+=`<circle cx="${X(a)}" cy="${y}" r="5" fill="${cols[n]}" stroke="var(--paper)" stroke-width="1.6" data-tip="${esc(n+' — CY26E: $'+a.toFixed(1)+'bn de capex all-in por GW adicionado')}"/>`;
+    g+=`<circle cx="${X(b)}" cy="${y}" r="5" fill="var(--paper)" stroke="${cols[n]}" stroke-width="2.2" data-tip="${esc(n+' — CY28E: $'+b.toFixed(1)+'bn/GW')}"/>`;
+    g+=`<text class="dl" x="${W-P.r+8}" y="${y+4}" style="font-size:11.5px; fill:${cols[n]}">${a.toFixed(0)}→${b.toFixed(0)}</text>`;});
+  g+=`<text class="anno" x="${X(27)}" y="${P.t-10}" text-anchor="middle">capex all-in por GW adicionado — cheio CY26E · vazado CY28E</text>`;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" style="width:100%" role="img">${g}</svg>`;
+}
+
+/* ============ CUSTO DO TOKEN (pesquisa de corpus, 03-ago-2026) ============ */
+/* "Preço mais barato para atingir um dado nível de capacidade" ($/Mtok, blended 3:1),
+   agrupado por desempenho no GPQA-Diamond. Exponential View "State of the AI Economy
+   2026" (25-jun-26), fonte declarada: análise EV + Epoch AI. Valores lidos do gráfico. */
+const TC_TIERS=[
+  {name:'nível GPT-4',   fold:'~440x', pts:[['1T23',40],['2024 · Haiku 3',0.5],['fim-24 · Qwen Turbo',0.09]]},
+  {name:'nível Opus 3',  fold:'~250x', pts:[['1T24',30],['Sonnet 3.5',6],['',2],['fim-24 · Phi-4',0.12]]},
+  {name:'nível o1',      fold:'~173x', pts:[['fim-24',26],['1T25 · DeepSeek-R1',1],['2025 · GPT-5 nano',0.15]]},
+  {name:'nível o3',      fold:'~57x',  pts:[['2025',17],['meados-25',3.5],['fim-25 · DeepSeek V3.2',0.3]]},
+];
+/* Preço REALIZADO (não tabela): de → para */
+const TC_REAL=[
+  {lb:'Anthropic — receita por Mtok, livro todo', a:5.60, b:0.65,
+   s:'1T24 → 4T26E · modelo Tokenomics da SemiAnalysis, 08-jul-26 ("API revenue per M tokens falls 5.60 → 0.65")'},
+  {lb:'Mercado — preço blended por Mtok', a:17, b:2,
+   s:'Exponential View, 25-jun-26 — no MESMO período o índice de capacidade da Epoch subiu 112 → 158 e os tokens de "raciocínio" por token de saída foram de 12 para 36'},
+  {lb:'Família Opus 4.1 / 4 / 3', a:13.97, b:3.16, s:'1T25 → 4T26E · SemiAnalysis Tokenomics'},
+  {lb:'Família Sonnet (4.6 → 3)', a:2.79, b:0.53, s:'1T25 → 2S26 · SemiAnalysis Tokenomics'},
+];
+/* Custo de servir vs preço de tabela (SAÍDA, $/Mtok) */
+const TC_PC=[
+  {lb:'Custo de servir — GB300 NVL72', v:0.156, kind:'custo',
+   s:'DeepSeek V4 1.6T, FP4, 8k in/1k out, 50 tok/s/usuário, MTP on — SemiAnalysis InferenceX, 09-jun-26. Leitura de gráfico (o PDF na wiki é imagem)'},
+  {lb:'Meta Muse Spark 1.1', v:4.25, kind:'preço', s:'lista, 30-85% abaixo do frontier privado — MS Nowak 12-jul-26'},
+  {lb:'Sonnet 5 (a partir de 01-set)', v:15, kind:'preço', s:'$3/$15 — SOBE de $2/$10 em 01-set-26 (+50% efetivo) · Anthropic'},
+  {lb:'Opus 4.8 / Opus 5', v:25, kind:'preço', s:'Opus 5 (24-jul-26) manteve $5/$25 do Opus 4.8 — capacidade sobe, preço de tabela não cai · MS Wigg 27-jul'},
+  {lb:'Fable 5', v:50, kind:'preço', s:'$10/$50 — topo de mercado · JPM Chatterjee 26-jul-26'},
+];
+/* Tokens por tarefa — o contrapeso */
+const TC_TASK=[
+  {lb:'Code reasoning (1 turno)', v:1190, s:'1,03k saída + 0,16k entrada'},
+  {lb:'Code chat (multi-turno)', v:3390, s:'1,45k saída + 1,94k entrada'},
+  {lb:'Coding agêntico (agente OpenHands)', v:4170000, s:'26,9k saída + 4,14M entrada — "≈1.200x os tokens de uma tarefa de chat"'},
+];
+const TC_RATES=[
+  {v:'−70 a −100%', p:'por ano', who:'Hock Tan (Broadcom) via JPM · Sur, 07-jul-26'},
+  {v:'−60 a −70%', p:'por ano', who:'JPM "AI Capex 2.0", 16-jun-26 — "usage more than re-absorbs it"'},
+  {v:'−60%', p:'em 6 meses', who:'NVDA no GB300 (+2,7x throughput) · call 1T F27, 20-mai-26'},
+  {v:'"mais que a metade"', p:'em 1 ano', who:'Satya Nadella — custo por token · call 3T F25, 30-abr-25'},
+];
+const TC_SRC='Fontes por datapoint no gráfico (hover). Curva de capacidade: Exponential View "State of the AI Economy 2026", 25-jun-26 (análise EV + Epoch AI) — valores lidos de gráfico, tratar como ±. Preço realizado e margens: modelo Tokenomics da SemiAnalysis, 08-jul-26. Custo de servir: SemiAnalysis InferenceX, 09-jun-26. Tokens por tarefa: Exponential View p.42 (OpenRouter + Bai et al. 2026).';
+
+/* ---- log dumbbells: preço para uma dada capacidade ---- */
+function tcTierChart(W=590,H=IS_PPT?236:290){
+  const P={l:132,r:74,t:26,b:30};
+  const lg=v=>Math.log10(v), X=scaler(lg(0.06),lg(60),P.l,W-P.r);
+  let g='';
+  [0.1,0.3,1,3,10,30].forEach(t=>{g+=`<line class="gl" x1="${X(lg(t))}" x2="${X(lg(t))}" y1="${P.t-4}" y2="${H-P.b}"/><text class="tick" x="${X(lg(t))}" y="${H-P.b+16}" text-anchor="middle">$${t<1?t:t}</text>`;});
+  const rowH=(H-P.t-P.b)/TC_TIERS.length;
+  TC_TIERS.forEach((t,i)=>{
+    const y=P.t+rowH*(i+.5);
+    g+=`<text class="dl" x="${P.l-12}" y="${y+4}" text-anchor="end">${t.name}</text>`;
+    const xs=t.pts.map(p=>X(lg(p[1])));
+    g+=`<line x1="${Math.min(...xs)}" y1="${y}" x2="${Math.max(...xs)}" y2="${y}" stroke="var(--gold)" stroke-width="2.6"/>`;
+    t.pts.forEach((p,j)=>{
+      const first=j===0, last=j===t.pts.length-1;
+      const col=first?'var(--gray)':(last?'var(--green)':'var(--gold)');
+      g+=`<circle cx="${X(lg(p[1]))}" cy="${y}" r="${last||first?5.5:3.6}" fill="${col}" stroke="var(--paper)" stroke-width="1.6" data-tip="${esc(t.name+' — '+(p[0]||'intermediário')+': $'+p[1]+'/Mtok')}"/>`;
+      if(first||last)g+=`<text class="anno" x="${X(lg(p[1]))}" y="${y-11}" text-anchor="middle">$${p[1]}</text>`;});
+    g+=`<text class="dl" x="${W-P.r+10}" y="${y+4}" style="fill:var(--green)">${t.fold}</text>`;
+  });
+  g+=`<text class="anno" x="${P.l-12}" y="${P.t-10}" text-anchor="end">nível de capacidade</text>`;
+  g+=`<text class="anno" x="${X(lg(1.6))}" y="${P.t-10}" text-anchor="middle">$/Mtok mais barato para atingir o nível (escala log)</text>`;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" style="width:100%" role="img">${g}</svg>`;
+}
+/* ---- dumbbells: preço realizado de → para ---- */
+function tcRealChart(W=590,H=IS_PPT?188:230){
+  const P={l:250,r:80,t:24,b:28};
+  const lg=v=>Math.log10(v), X=scaler(lg(0.4),lg(20),P.l,W-P.r);
+  let g='';
+  [0.5,1,2,5,10,20].forEach(t=>{g+=`<line class="gl" x1="${X(lg(t))}" x2="${X(lg(t))}" y1="${P.t-4}" y2="${H-P.b}"/><text class="tick" x="${X(lg(t))}" y="${H-P.b+16}" text-anchor="middle">$${t}</text>`;});
+  const rowH=(H-P.t-P.b)/TC_REAL.length;
+  TC_REAL.forEach((r,i)=>{
+    const y=P.t+rowH*(i+.5);
+    g+=`<text class="dl" x="${P.l-12}" y="${y+4}" text-anchor="end" style="font-size:11.5px">${r.lb}</text>`;
+    g+=`<line x1="${X(lg(r.b))}" y1="${y}" x2="${X(lg(r.a))}" y2="${y}" stroke="var(--blue)" stroke-width="2.6"/>`;
+    g+=`<circle cx="${X(lg(r.a))}" cy="${y}" r="5" fill="var(--gray)" stroke="var(--paper)" stroke-width="1.6" data-tip="${esc(r.lb+' — de $'+r.a+'/Mtok. '+r.s)}"/>`;
+    g+=`<circle cx="${X(lg(r.b))}" cy="${y}" r="5.5" fill="var(--blue)" stroke="var(--paper)" stroke-width="1.6" data-tip="${esc(r.lb+' — para $'+r.b+'/Mtok. '+r.s)}"/>`;
+    g+=`<text class="dl" x="${W-P.r+10}" y="${y+4}" style="fill:var(--blue); font-size:12px">÷${(r.a/r.b).toFixed(1)}</text>`;});
+  g+=`<text class="anno" x="${P.l-12}" y="${P.t-10}" text-anchor="end">preço REALIZADO por Mtok</text>`;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" style="width:100%" role="img">${g}</svg>`;
+}
+/* ---- custo de servir vs preço de tabela ---- */
+function tcPriceCostChart(W=590,H=IS_PPT?214:250){
+  const P={l:216,r:66,t:24,b:28};
+  const lg=v=>Math.log10(v), X=scaler(lg(0.1),lg(70),P.l,W-P.r);
+  const rowH=(H-P.t-P.b)/TC_PC.length;
+  let g='';
+  [0.1,0.5,1,5,10,50].forEach(t=>{g+=`<line class="gl" x1="${X(lg(t))}" x2="${X(lg(t))}" y1="${P.t-4}" y2="${H-P.b}"/><text class="tick" x="${X(lg(t))}" y="${H-P.b+16}" text-anchor="middle">$${t}</text>`;});
+  TC_PC.forEach((r,i)=>{
+    const y=P.t+rowH*(i+.5), col=r.kind==='custo'?'var(--green)':'var(--gold)';
+    const bh=Math.min(rowH-9,IS_PPT?17:20);
+    g+=`<text class="dl" x="${P.l-12}" y="${y+4}" text-anchor="end" style="font-size:11.5px">${r.lb}</text>`;
+    g+=`<rect x="${P.l}" y="${y-bh/2}" width="${Math.max(2,X(lg(r.v))-P.l)}" height="${bh}" rx="2" fill="${col}" data-tip="${esc(r.lb+': $'+r.v+'/Mtok de saída. '+r.s)}"/>`;
+    g+=`<text class="dl" x="${X(lg(r.v))+8}" y="${y+4}" style="fill:${col}; font-size:12px">$${r.v}</text>`;});
+  g+=`<text class="anno" x="${P.l-12}" y="${P.t-10}" text-anchor="end">$/Mtok de SAÍDA (log)</text>`;
+  g+=`<text class="anno" x="${X(lg(3))}" y="${P.t-10}" text-anchor="middle" style="fill:var(--green)">verde = custo de servir · dourado = preço de tabela</text>`;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" style="width:100%" role="img">${g}</svg>`;
+}
+/* ---- tokens por tarefa (log) ---- */
+function tcTaskChart(W=590,H=IS_PPT?196:225){
+  const P={l:216,r:80,t:26,b:28};
+  const lg=v=>Math.log10(v), X=scaler(lg(800),lg(9e6),P.l,W-P.r);
+  const rowH=(H-P.t-P.b)/TC_TASK.length;
+  let g='';
+  [1e3,1e4,1e5,1e6].forEach(t=>{g+=`<line class="gl" x1="${X(lg(t))}" x2="${X(lg(t))}" y1="${P.t-4}" y2="${H-P.b}"/><text class="tick" x="${X(lg(t))}" y="${H-P.b+16}" text-anchor="middle">${t>=1e6?(t/1e6)+'M':(t/1e3)+'k'}</text>`;});
+  TC_TASK.forEach((r,i)=>{
+    const y=P.t+rowH*(i+.5), last=i===TC_TASK.length-1;
+    const bh=Math.min(rowH-9,IS_PPT?19:22);
+    g+=`<text class="dl" x="${P.l-12}" y="${y+4}" text-anchor="end" style="font-size:11.5px">${r.lb}</text>`;
+    g+=`<rect x="${P.l}" y="${y-bh/2}" width="${Math.max(2,X(lg(r.v))-P.l)}" height="${bh}" rx="2" fill="${last?'var(--pink)':'var(--blue)'}" data-tip="${esc(r.lb+': '+fmt0(r.v)+' tokens por tarefa — '+r.s)}"/>`;
+    g+=`<text class="dl" x="${X(lg(r.v))+8}" y="${y+4}" style="font-size:12px; fill:${last?'var(--pink)':'var(--blue)'}">${r.v>=1e6?(r.v/1e6).toFixed(2)+'M':fmt0(r.v/1000)+'k'}</text>`;});
+  g+=`<text class="anno" x="${P.l-12}" y="${P.t-10}" text-anchor="end">tokens por tarefa (log)</text>`;
+  g+=`<text class="anno" x="${X(lg(1e5))}" y="${P.t-10}" text-anchor="middle" style="fill:var(--pink); font-weight:700">≈1.200x de chat para agente</text>`;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" style="width:100%" role="img">${g}</svg>`;
+}
+
+/* ---- RES: replica do painel "Resultado" do rcloud (3 métricas × 3 clouds) ---- */
+const RES_ENTS=[['aws','AWS','var(--gold)'],['msft','Azure','var(--blue)'],['gcp','Google Cloud','var(--green)']];
+function resTicks(){const L=H_RES.labels;return L.map((l,i)=>i%3===0?l:null);}
+const IS_PPT=document.body.dataset.theme==='ppt';
+function miniLine(vals,col,yfmt,unit){
+  const W=380,H=IS_PPT?104:150,P={l:34,r:18,t:9,b:IS_PPT?17:20};
+  const v=vals.filter(x=>x!=null);
+  let ymin=Math.min(...v), ymax=Math.max(...v);
+  const sp=(ymax-ymin)||1; ymin=Math.max(0,ymin-sp*.12); ymax+=sp*.12;
+  const ticks=niceTicks(ymin,ymax,4);
+  ymin=Math.min(ymin,ticks[0]); ymax=Math.max(ymax,ticks[ticks.length-1]);
+  const X=scaler(0,vals.length-1,P.l,W-P.r), Y=scaler(ymin,ymax,H-P.b,P.t);
+  let g='';
+  ticks.forEach(t=>{g+=`<line class="gl" x1="${P.l}" x2="${W-P.r}" y1="${Y(t)}" y2="${Y(t)}"/><text class="tick" x="${P.l-5}" y="${Y(t)+3}" text-anchor="end" style="font-size:9px">${yfmt(t)}</text>`;});
+  resTicks().forEach((l,i)=>{if(l)g+=`<text class="tick" x="${X(i)}" y="${H-P.b+13}" text-anchor="middle" style="font-size:9px">${l}</text>`;});
+  let path='',prev=false;
+  vals.forEach((x,i)=>{if(x==null){prev=false;return;} path+=(prev?'L':'M')+X(i).toFixed(1)+','+Y(x).toFixed(1); prev=true;});
+  g+=`<path d="${path}" fill="none" stroke="${col}" stroke-width="2.2" stroke-linejoin="round"/>`;
+  vals.forEach((x,i)=>{if(x==null)return;
+    g+=`<circle cx="${X(i)}" cy="${Y(x)}" r="2.6" fill="${col}"/><circle cx="${X(i)}" cy="${Y(x)}" r="9" fill="transparent" data-tip="${esc(H_RES.labels[i]+': '+yfmt(x)+(unit||''))}"/>`;});
+  const li=vals.length-1;
+  g+=`<text class="dl" x="${X(li)-4}" y="${Y(vals[li])-8}" text-anchor="end" style="font-size:11px; fill:${col}">${yfmt(vals[li])}</text>`;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" style="width:100%" role="img">${g}</svg>`;
+}
+function miniBars(vals,col,yfmt,unit){
+  const W=380,H=IS_PPT?104:150,P={l:36,r:16,t:11,b:IS_PPT?17:20};
+  const v=vals.filter(x=>x!=null);
+  const ymax=Math.max(...v)*1.1, ymin=Math.min(0,Math.min(...v)*1.1);
+  const ticks=niceTicks(ymin,ymax,4);
+  const Y=scaler(Math.min(ymin,ticks[0]),Math.max(ymax,ticks[ticks.length-1]),H-P.b,P.t);
+  const bandW=(W-P.l-P.r)/vals.length, barW=Math.max(6,bandW-3);
+  let g='';
+  ticks.forEach(t=>{g+=`<line class="gl" x1="${P.l}" x2="${W-P.r}" y1="${Y(t)}" y2="${Y(t)}"/><text class="tick" x="${P.l-5}" y="${Y(t)+3}" text-anchor="end" style="font-size:9px">${yfmt(t)}</text>`;});
+  resTicks().forEach((l,i)=>{if(l)g+=`<text class="tick" x="${P.l+bandW*(i+.5)}" y="${H-P.b+13}" text-anchor="middle" style="font-size:9px">${l}</text>`;});
+  vals.forEach((x,i)=>{if(x==null)return;
+    const y0=Y(Math.max(0,x)), h=Math.abs(Y(x)-Y(0));
+    g+=`<rect x="${(P.l+bandW*i+(bandW-barW)/2).toFixed(1)}" y="${y0.toFixed(1)}" width="${barW.toFixed(1)}" height="${Math.max(1,h).toFixed(1)}" rx="1.5" fill="${col}" data-tip="${esc(H_RES.labels[i]+': '+yfmt(x)+(unit||''))}"/>`;});
+  const li=vals.length-1;
+  g+=`<text class="dl" x="${(P.l+bandW*(li+.5)).toFixed(1)}" y="${Y(vals[li])-5}" text-anchor="end" style="font-size:11px; fill:${col}">${yfmt(vals[li])}</text>`;
+  g+=`<line class="bl" x1="${P.l}" x2="${W-P.r}" y1="${Y(0)}" y2="${Y(0)}"/>`;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" style="width:100%" role="img">${g}</svg>`;
+}
+const pctF=v=>Math.round(v*100)+'%';
+const bnF=v=>'$'+(Math.abs(v)>=1000?(v/1000).toFixed(0):(v/1000).toFixed(1))+'bn';
+function resRow(title,metric,render,yfmt,unit){
+  return `<div class="rsecx">${title}</div>
+    <div class="grid3">${RES_ENTS.map(([k,name,col])=>`
+      <div class="rcard" style="color:${col}"><div class="rt">${name}</div>
+        ${render(H_RES[metric][k],col,yfmt,unit)}</div>`).join('')}</div>`;
+}
+function resGrid(){
+  return resRow('YoY revenue growth (cc)','yoycc',miniLine,pctF,'')
+    +resRow('Δ receita YoY nominal','dyoy',miniBars,bnF,' vs mesmo tri do ano anterior')
+    +resRow('Net new ARR no trimestre — Δ receita QoQ anualizada (×4)','arr',miniBars,bnF,' de ARR adicionado');
+}
+
+/* ---- stacked bars (generic, annual) ---- */
+function stackedBars({cats,layers,W=740,H=420,ytick='$',ymaxPad=1.06,unit='B',totLabel=true}){
+  const P={l:64,r:20,t:26,b:36};
+  const totals=cats.map((_,i)=>layers.reduce((s,l)=>s+l.data[i],0));
+  const ymax=Math.max(...totals)*ymaxPad;
+  const Y=scaler(0,ymax,H-P.b,P.t);
+  const bandW=(W-P.l-P.r)/cats.length, barW=Math.min(84,bandW-34);
+  let g='';
+  niceTicks(0,ymax,5).forEach(t=>{g+=`<line class="gl" x1="${P.l}" x2="${W-P.r}" y1="${Y(t)}" y2="${Y(t)}"/><text class="tick" x="${P.l-8}" y="${Y(t)+4}" text-anchor="end">${ytick}${fmt0(t)}${unit}</text>`;});
+  cats.forEach((c,i)=>{
+    const x=P.l+bandW*i+(bandW-barW)/2;
+    let y0=Y(0);
+    layers.forEach(l=>{
+      const v=l.data[i]; if(v<=0)return;
+      const hpx=Y(0)-Y(v);
+      y0-=hpx;
+      g+=`<rect x="${x}" y="${y0.toFixed(1)}" width="${barW}" height="${Math.max(0,hpx-2).toFixed(1)}" rx="3" fill="${l.col}" data-tip="${esc(l.name+' — '+c+': '+ytick+fmt0(v)+unit+(l.tip?'\n'+l.tip:''))}"/>`;});
+    if(totLabel)g+=`<text class="dl" x="${x+barW/2}" y="${Y(totals[i])-7}" text-anchor="middle">${ytick}${fmt0(totals[i])}${unit}</text>`;
+    g+=`<text class="tick" x="${x+barW/2}" y="${H-P.b+20}" text-anchor="middle">${c}</text>`;});
+  g+=`<line class="bl" x1="${P.l}" x2="${W-P.r}" y1="${Y(0)}" y2="${Y(0)}"/>`;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" style="width:100%" role="img">${g}</svg>`;
+}
+
+/* ---- grouped bars: house vs casas ---- */
+function houseVsBars({groups,series,W=1180,H=380,unit='B',ytick='$'}){
+  const P={l:66,r:16,t:26,b:38};
+  const vals=series.flatMap(s=>s.data).filter(v=>v!=null);
+  const ymax=Math.max(...vals)*1.12;
+  const Y=scaler(0,ymax,H-P.b,P.t);
+  const bandW=(W-P.l-P.r)/groups.length;
+  const ns=series.length, barW=Math.min(34,(bandW-46)/ns);
+  let g='';
+  niceTicks(0,ymax,5).forEach(t=>{g+=`<line class="gl" x1="${P.l}" x2="${W-P.r}" y1="${Y(t)}" y2="${Y(t)}"/><text class="tick" x="${P.l-8}" y="${Y(t)+4}" text-anchor="end">${ytick}${fmt0(t)}${unit}</text>`;});
+  groups.forEach((gname,gi)=>{
+    g+=`<text class="tick" x="${P.l+bandW*(gi+0.5)}" y="${H-P.b+20}" text-anchor="middle" style="font-size:12.5px; font-weight:650">${gname}</text>`;
+    series.forEach((s,si)=>{
+      const v=s.data[gi]; if(v==null)return;
+      const x=P.l+bandW*gi+(bandW-ns*barW-(ns-1)*3)/2+si*(barW+3);
+      g+=`<rect x="${x.toFixed(1)}" y="${Y(v).toFixed(1)}" width="${barW}" height="${(Y(0)-Y(v)).toFixed(1)}" rx="3" fill="${s.col}" data-tip="${esc(s.name+' — '+gname+': '+ytick+fmt1(v)+unit)}"/>`;
+      g+=`<text class="dl" x="${x+barW/2}" y="${Y(v)-5}" text-anchor="middle" style="font-size:10px">${Math.round(v)}</text>`;});
+  });
+  g+=`<line class="bl" x1="${P.l}" x2="${W-P.r}" y1="${Y(0)}" y2="${Y(0)}"/>`;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" style="width:100%" role="img">${g}</svg>`;
+}
+
+/* ---- GW mini panel (house vs MS vs média) ---- */
+function gwPanel(name,W=565,H=200){
+  const d=H_GW[name], P={l:44,r:96,t:24,b:24};
+  const vals=[...d.voce,...(d.ms||[]),...(d.media||[])].filter(v=>v!=null);
+  const Y=scaler(0,Math.max(...vals)*1.1,H-P.b,P.t);
+  const X=scaler(0,4,P.l,W-P.r);
+  let g='';
+  niceTicks(0,Math.max(...vals)*1.1,4).forEach(t=>{g+=`<line class="gl" x1="${P.l}" x2="${W-P.r}" y1="${Y(t)}" y2="${Y(t)}"/><text class="tick" x="${P.l-6}" y="${Y(t)+3.5}" text-anchor="end" style="font-size:10.5px">${t}</text>`;});
+  [2024,2025,2026,2027,2028].forEach((yy,i)=>{g+=`<text class="tick" x="${X(i)}" y="${H-P.b+16}" text-anchor="middle" style="font-size:10.5px">${yy}</text>`;});
+  const draw=(arr,col,dash,lb)=>{
+    let path='',prev=false;
+    arr.forEach((v,i)=>{if(v==null){prev=false;return;} path+=(prev?'L':'M')+X(i).toFixed(1)+','+Y(v).toFixed(1); prev=true;});
+    g+=`<path d="${path}" fill="none" stroke="${col}" stroke-width="2.4" ${dash?'stroke-dasharray="5 5"':''}/>`;
+    arr.forEach((v,i)=>{if(v==null)return; g+=`<circle cx="${X(i)}" cy="${Y(v)}" r="8" fill="transparent" data-tip="${esc(name+' — '+lb+' '+(2024+i)+': '+fmt1(v)+' GW')}"/>`;});
+  };
+  draw(d.media,'var(--mut)',true,'média sell-side');
+  if(d.ms)draw(d.ms,PET,false,'MS');
+  draw(d.voce,ORG,false,'Capstone');
+  const last=d.voce[4];
+  g+=`<text class="dl" x="${X(4)+8}" y="${Y(last)+4}" style="fill:${ORG}">${fmt1(last)}</text>`;
+  g+=`<text class="anno" x="${X(4)+8}" y="${Y(d.media[4])+4}">${fmt1(d.media[4])} média</text>`;
+  g+=`<text x="${P.l}" y="14" style="font-size:13.5px; font-weight:750; fill:var(--ink)">${name}</text>`;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" style="width:100%" role="img">${g}</svg>`;
+}
+
+/* ============ PANEL FURNITURE (dashboard) ============ */
+const SECTIONS=[];
+let SLIDE_SEQ=0;
+function slide(title, bodyHtml, foot, opts={}){
+  const id='sec'+(++SLIDE_SEQ);
+  const m=title.match(/^(\S{1,3})\s*·\s*(.*)$/);
+  const LBL={'1':'1 · LABS','2':'2 · TOKENS','3':'3 · CLOUDS','4':'4 · BACKLOG','5':'5 · MARGENS','6':'6 · TAM','7':'7 · CAPEX','8':'8 · MÚLTIPLO','9':'9 · TSM·ASML'};
+  const lab=m?(LBL[m[1]]||m[1].toUpperCase()):(title.startsWith('Os nove')?'SCORECARD':title.split(/[:—]/)[0].trim().slice(0,10).toUpperCase());
+  SECTIONS.push({id,lab});
+  const [main,sub]=(m?m[2]:title).split(/ — |: /);
+  return `<section class="panel" id="${id}"><h2>${m?m[1]+' · ':''}${main}${sub?`<span class="sub">— ${sub}</span>`:''}</h2>${bodyHtml}${foot?`<div class="note">${foot}</div>`:''}</section>`;
+}
+function legend(items){return `<div class="legend">${items.map(([c,n])=>`<span class="k"><span class="sw" style="--kc:${c}"></span>${n}</span>`).join('')}</div>`;}
+
+/* ============ SLIDES ============ */
+function buildDeck(){
+  const S=[];
+
+  /* 1 — HERO + KPIs */
+  SECTIONS.push({id:'hero',lab:'TOPO'});
+  S.push(`<section id="hero" style="scroll-margin-top:64px">
+    <div class="hero">
+      <div class="q">A demanda está se fortalecendo na ponta?</div>
+      <div class="a">Nove sinais, na ordem — receita dos labs, tokens, clouds, backlog, economics, TAM, capex, múltiplo e supply chain — com fonte e data em cada número. <b>Oito ficaram mais fortes entre fevereiro e julho; o nono é a conta.</b></div>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><div class="l">AWS · 2T26</div><div class="v">+36.7%</div><div class="s"><span class="up">mais rápido em 18 tri</span> · 5º accel seguido · 07-30</div></div>
+      <div class="kpi"><div class="l">ARR Anthropic</div><div class="v">$9→<em>$69B</em></div><div class="s">7.7x em pouco mais de 6 meses · Yipit 07-10</div></div>
+      <div class="kpi"><div class="l">RPO MSFT · adicional no tri</div><div class="v">+$51B</div><div class="s"><span class="up">100% ex-frontier labs</span> · call 07-29</div></div>
+      <div class="kpi"><div class="l">Capex 2027E street · 4 nomes</div><div class="v">$540→<em>$955B</em></div><div class="s"><span class="dn">+77% YTD</span> — o custo da tese · BBG BEst</div></div>
+      <div class="kpi"><div class="l">Fwd P/E vs média 5A</div><div class="v">≤ +0.2σ</div><div class="s">nos 8 nomes; NVDA <span class="up">−1.5σ</span> — pago em estimativa, não múltiplo</div></div>
+    </div>
+  </section>`);
+
+  /* 2 — SCORECARD */
+  S.push(slide('Os nove sinais em uma página', `
+    <table class="sc">
+      <tr><th style="width:30px">#</th><th style="width:170px">Sinal</th><th>Onde estava (≈Fev)</th><th>Onde está (Jul)</th><th style="width:150px">Leitura</th></tr>
+      ${SCORE.map(r=>`<tr><td class="n">${r.n}</td><td><b>${r.sig}</b></td><td>${r.feb}</td><td>${r.jul}</td>
+        <td class="${r.v==='up'?'arrow-up':'arrow-watch'}">${r.v==='up'?'▲':'⚠'} ${r.lb}</td></tr>`).join('')}
+    </table>`,
+    'Cada linha detalhada nos slides seguintes, com fonte e data em cada número.'));
+
+  /* 3 — LAB ARR */
+  S.push(slide('1 · Lab ARR: a curva de receita que o capex persegue', `
+    <div class="lede">Entrando em 2026 os dois grandes labs esperavam <b>~$50B combinados</b> no ano (Barclays). Em julho o run-rate combinado era <b>~$100B</b> — com a Anthropic EBIT-positiva.</div>
+    <div style="display:grid; grid-template-columns:1fr 330px; gap:26px; align-items:start">
+      <div>${legend([[ORG,'Anthropic'],[PET,'OpenAI']])}${arrChart2(800,420)}</div>
+      <div class="trow" style="grid-template-columns:1fr">
+        <div class="stile"><div class="l">3 labs, receita 2026E</div><div class="v">>$130B</div><div class="d">~$200B exit-ARR — <span class="up">"a year ahead"</span> · Barclays 06-01</div></div>
+        <div class="stile"><div class="l">Anthropic 3T26E</div><div class="v">EBIT +$1B</div><div class="d">primeiro lab lucrativo · SemiAnalysis 07-08</div></div>
+        <div class="stile"><div class="l">Mix do ARR (2 labs)</div><div class="v">>70%</div><div class="d">é coding — trabalho de produção, não chat · SemiAnalysis 06-30</div></div>
+        <div class="stile"><div class="l">Valuations junto</div><div class="v">2.5–2.8x</div><div class="d">OpenAI $300B→$852B · Anthropic $380B→$965B, debate $3T aberto</div></div>
+      </div>
+    </div>`,
+    'Marcas de run-rate como registradas na wiki: FundaAI (06-24) · Barclays (06-01) · SemiAnalysis (07-08) · Yipit (07-10) · The Information (03-04) · CNBC (07-30). Contraponto honesto: 1ª leitura contrária no Anthropic em 07-24 (TickerTrends, não verificada); o "julho > todo o 2T" da OpenAI ainda não tem número.'));
+
+  /* 4 — OPENROUTER */
+  S.push(slide('2 · Tokens: a foto inteira do OpenRouter', `
+    <div class="lede" style="margin-bottom:8px">Uso semanal, empilhado por lab: <b>3.4T tokens/semana (ago-25) → pico de 62.8T (13-jul) → 56.8T na última semana cheia</b> — e a semana em curso projetada pelo próprio site em <b>~66T, novo recorde</b>. Cada onda (GPT-5.5 em abril, Claude/Codex em mai-jun, open-weights chineses em julho) empilhou sobre a anterior.</div>
+    <div class="legend" style="flex-wrap:wrap">${OR_STACK.keys.map(k=>`<span class="k"><span class="swd" style="--kc:${OR_STACK.cols[k]}"></span>${OR_STACK.names[k]}</span>`).join('')}</div>
+    ${orStackBars(1180,408)}`,
+    'Chart "Tokens processed per week" do openrouter.ai/rankings, capturado ao vivo em 03-ago-2026; barra hachurada = semana em curso (contabilizado + forecast do site). Atribuição por lab = top-10 modelos DA SEMANA (como no site) — o resto cai em "Outros"; por isso a Anthropic "some" das barras de julho: Claude saiu do top-10 de VOLUME com a inundação de open-weights, mas segue ~46% da RECEITA da plataforma (premium models carregam a economia; volume ≠ economics). Marketplace ≠ indústria — use a inclinação, não o nível.'));
+
+  /* 5 — OUTROS MEDIDORES */
+  S.push(slide('2b · Os outros medidores apontam igual', `
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:30px">
+      <div><div class="chtitle">Gemini API — bilhões de tokens por MINUTO</div>
+        ${lineChart2({cats:['3T25','4T25','1T26','2T26'],series:[{name:'API',col:ORG,pts:TOK_API.map(r=>r.v),note:'APIs pagas, modelos first-party'}],W:565,H:330,yfmt:v=>v+'B',ypad:.15})}
+        <div style="font-size:12.5px; color:var(--mut); text-align:center">7 → 10 → 16 → 22 B/min = <b style="color:var(--ink)">3.1x em três trimestres</b> · calls do Alphabet</div></div>
+      <div><div class="chtitle">Clientes GCP com >1 trilhão de tokens (12m)</div>
+        ${lineChart2({cats:TOK_COHORT.map(r=>r.q),series:[{name:'clientes',col:PET,pts:TOK_COHORT.map(r=>r.v)}],W:565,H:330,yfmt:v=>v,ypad:.15})}
+        <div style="font-size:12.5px; color:var(--mut); text-align:center">~150 → 330 → ~500 clientes; >2.000 empresas acima de 100B tokens</div></div>
+    </div>
+    <div class="trow" style="grid-template-columns:1fr 1fr 1fr; margin-top:14px">
+      <div class="stile"><div class="l">MSFT Foundry — clientes em run-rate de 1T tokens</div><div class="v">4x a/a</div><div class="d">100 mil clientes Foundry; receita 2x a/a · F4T26, 07-29</div></div>
+      <div class="stile"><div class="l">Google, todas as superfícies (última série)</div><div class="v">480T→~1.3Q</div><div class="d">tokens/mês, mai-25 → out-25* (*unidade truncada no transcript)</div></div>
+      <div class="stile"><div class="l">"Supply constrained"</div><div class="v">Pichai</div><div class="d">"we continue to be supply constrained" · 2T26, 07-22</div></div>
+    </div>`,
+    'Fontes: calls do Alphabet (Pichai/Ashkenazi) e Microsoft (Nadella/Hood); wiki OpenRouter pipeline. C.C. Wei (TSMC 1T26): "the shift to agentic AI in command-and-action mode is leading to another step-up in the amount of tokens being consumed."'));
+
+  /* 5c — A QUEDA DO PREÇO DO TOKEN */
+  S.push(slide('2c · A queda do custo do token: o preço da mesma capacidade colapsa', `
+    <div class="lede" style="margin-bottom:6px">Duas medidas distintas da mesma coisa. À esquerda, o <b>preço mais barato para atingir um dado nível de capacidade</b>: o nível do GPT-4 saiu de ~$40 por Mtok (1T23) para <b>$0.09</b> (fim-24) — <b>~440x</b>; o nível do o3 caiu <b>~57x em doze meses</b>. À direita, o preço <b>realizado</b> (não de tabela): a receita por Mtok da Anthropic vai de <b>$5.60 para $0.65</b> no modelo da SemiAnalysis, e o blended de mercado de <b>$17 para $2</b> — <b>enquanto o índice de capacidade da Epoch subia 112 → 158</b>.</div>
+    <div class="grid2" style="gap:18px">
+      <div class="rcard" style="color:var(--gold)"><div class="rt">Preço para uma dada capacidade<span>"cheapest price to reach the level", blended 3:1 · GPQA-Diamond</span></div>${tcTierChart()}</div>
+      <div>
+        <div class="rcard" style="color:var(--blue); margin-bottom:12px"><div class="rt">Preço realizado por Mtok<span>de → para, por família e no mercado</span></div>${tcRealChart()}</div>
+        <div class="trow" style="grid-template-columns:1fr 1fr">
+          ${TC_RATES.map(r=>`<div class="stile" style="padding:9px 12px"><div class="l">${r.p}</div><div class="v" style="font-size:19px">${r.v}</div><div class="d" style="font-size:10.5px">${r.who}</div></div>`).join('')}
+        </div>
+      </div>
+    </div>`,
+    esc(TC_SRC)+' A anotação do próprio gráfico da EV: "Labs earn a time-limited premium on the current frontier" — o preço do frontier NÃO cai; o que cai é o preço de ONTEM.'));
+
+  /* 5d — A CONTA */
+  S.push(slide('2d · A conta: por que a receita sobe com o preço caindo', `
+    <div class="lede" style="margin-bottom:6px">A identidade é <b class="mono">receita = tokens × preço por token</b>. Os dois lados correm em direções opostas — e o volume ganha. Na mesma nota da SemiAnalysis: a receita por Mtok da Anthropic cai <b>÷8.6</b> enquanto o ARR faz <b>×6.7</b> ($9B saída-25 → >$60B 3T26E) ⇒ <b>o volume de tokens tem que ter crescido ~58x</b>. É isso que o OpenRouter (×17/ano) e os tokens por tarefa (à direita) estão medindo.</div>
+    <div class="grid2" style="gap:18px">
+      <div>
+        <div class="rcard" style="color:var(--green)"><div class="rt">Custo de servir vs preço de tabela<span>o espaço que permite o preço cair</span></div>${tcPriceCostChart()}</div>
+        <div class="trow" style="grid-template-columns:1fr 1fr; margin-top:12px">
+          <div class="stile" style="padding:9px 12px"><div class="l">Folga preço/custo</div><div class="v" style="font-size:19px">~10x a ~160x</div><div class="d" style="font-size:10.5px">$0.156 de custo no GB300 vs $1.58 (Muse blended) a $25 (Opus) de preço</div></div>
+          <div class="stile" style="padding:9px 12px"><div class="l">GM de inference paga (Anthropic)</div><div class="v" style="font-size:19px">−94% → 67%</div><div class="d" style="font-size:10.5px">2024 → 4T26E; 41% em 2025 · SemiAnalysis 08-jul</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="rcard" style="color:var(--pink)"><div class="rt">O contrapeso: tokens por tarefa<span>chat → agente, mesma família de modelo</span></div>${tcTaskChart()}</div>
+        <div class="rcard" style="color:var(--gold); margin-top:12px"><div class="rt">A conta, passo a passo</div>
+          <div style="font-size:12.5px; color:var(--mut); line-height:1.55" class="mono">
+            receita/Mtok $5.60 → $0.65 &nbsp;=&nbsp; <b style="color:var(--blue)">÷8.6</b> <span class="tagP">PARTIAL</span><br>
+            ARR $9B → &gt;$60B &nbsp;=&nbsp; <b style="color:var(--green)">×6.7</b> <span class="tagP">PARTIAL</span><br>
+            ⇒ tokens implícitos = 6.7 × 8.6 &nbsp;=&nbsp; <b style="color:var(--gold); font-size:15px">×58</b> <span class="tagE">DERIVADO</span><br>
+            <span style="font-size:11px">≈ <b>×7.6 por ano</b> — dentro da banda medida de forma independente: OpenRouter ×17/ano · Google ~7x a/a · API da OpenAI ~20x · gasto por empresa (Ramp) ×15 em 17 meses <b style="color:var(--green)">✓ guardrail passa</b></span>
+          </div>
+        </div>
+      </div>
+    </div>`,
+    'Conta: ambas as pernas vêm da MESMA nota (SemiAnalysis "Anthropic 3Q26 Profit Over $1B", 08-jul-26) — internamente consistente, e cruzada com quatro medidores de volume independentes. Tokens por tarefa: Exponential View p.42 (OpenRouter + Bai et al. 2026). Custo de servir: InferenceX 09-jun-26 (leitura de gráfico). O CONTRAPONTO, mantido honesto: Sonnet 5 SOBE +50% em 01-set (de $2/$10 para $3/$15) e o Kimi K3 subiu ~3x vs o próprio K2.6 ($0.95/$4 → $3/$15); a Citi (10-jul) vê "average output-token prices RISING" com aluguel de GPU em alta; a Redburn mede que, ajustado por cache (~98% dos tokens em uso agentino real), o open-weight é só ~2x mais barato — não 76x; e o HBM ~dobra de custo em 2027 (Fubon 28-jul), empurrando o custo por token para CIMA. A conta do cliente sobe mesmo com o preço unitário caindo: $100 → $1.500 por desenvolvedor em 6-7 meses (UBS 26-jul).'));
+
+  /* 6 — CLOUD GROWTH */
+  S.push(slide('3 · Cloud: os três acelerando juntos — inédito', `
+    <div class="lede">AWS foi de +17% a <b>+36.7%</b> em cinco trimestres; Google Cloud de +28% a <b>+82%</b>; Azure imprimiu <b>+43%</b> e <b>guiou o trimestre seguinte MAIS ALTO (~+45% cc)</b>. Todos os managements usam a mesma palavra: constrained.</div>
+    ${legend([[GREEN,'Google Cloud'],[GOLD,'AWS'],[BLUE,'Azure']])}
+    ${lineChart2({cats:CG_Q, series:[
+      {name:'Google Cloud',col:GREEN,pts:CLOUD[0].pts,note:CLOUD[0].note},
+      {name:'AWS',col:GOLD,pts:CLOUD[1].pts,note:CLOUD[1].note},
+      {name:'Azure',col:BLUE,pts:CLOUD[2].pts,guide:CLOUD[2].guide,note:CLOUD[2].note,guideNote:'F1T27 guiado ~+45% cc (07-29)'},
+    ], W:1180,H:400, yfmt:v=>v+'%'})}`,
+    esc(CLOUD_SRC)+' 2T26 do GCP inclui a primeira receita de venda de sistemas TPU — "accelerated meaningfully even after excluding TPU sales" (CFO); a receita do 1T26 é ex-TPU (a mudança de base do 1T foi só no backlog).'));
+
+  /* 6b — O QUADRO DO DASHBOARD (réplica do painel Resultado do rcloud) */
+  S.push(slide('3b · O quadro completo das clouds: crescimento, Δ$ e net new ARR', `
+    <div class="lede" style="margin-bottom:6px">O painel do AI Model, trimestre a trimestre de 4T21 a 2T26 — três leituras da mesma aceleração: <b>a taxa</b>, <b>os dólares incrementais a/a</b> e <b>o ARR novo do trimestre</b> (= Δ receita QoQ × 4). No 2T26 os três somam <b>~$30bn de receita incremental a/a</b> e <b>~$53bn de ARR novo em um único trimestre</b>.</div>
+    ${resGrid()}`,
+    'Fonte: painel "Resultado" do dashboard Oficiais (rcloud.html) — modelo house TAM_Cloud.xlsb aba \'Mercado\', último trimestre reportado 2T26, série própria até 4T26E (não plotada aqui: AWS +42%, Azure +46%, GCP +75% no 4T26E). ATENÇÃO à base do GCP: a série house roda ~6-7pts acima do reportado (2T26: 88% house vs +82% reportado nas contas do Alphabet; 1T26: 70% vs 63%) — AWS e Azure batem com o reportado (37%/43%). Para o número reportado, use o gráfico do painel anterior.'));
+
+  /* 7 — CLOUD QUOTES */
+  S.push(slide('3c · O que os managements disseram', `
+    <div class="qlist">
+      <div class="q">“Demand continues to exceed available supply… <b>you can even see it, I think, in some of the pricing that’s occurring in the spot market for assets.</b>”<span class="who">Amy Hood, CFO — Microsoft F4T26, 29-jul-2026</span></div>
+      <div class="q">“Even at [$220B of capex] <b>we will still not have enough capacity to meet all the demand we have in 2026</b>, and I believe this will also be true in 2027. In fact, <b>the demand we already have for 2028 is striking</b>… [AWS] will very possibly be a <b>$1 trillion annual revenue business</b>.”<span class="who">Andy Jassy — Amazon 2T26, 30-jul-2026</span></div>
+      <div class="q">“Our cloud revenue <b>would have been higher if we were able to meet the demand</b>.”<span class="who">Sundar Pichai — Alphabet 1T26, 29-abr-2026</span></div>
+      <div class="q">“While we have increased our capacity quite significantly over the past three years, <b>the demand still outpaces that investment</b>.”<span class="who">Anat Ashkenazi, CFO — Alphabet 2T26, 22-jul-2026</span></div>
+    </div>`,
+    'Transcripts das calls, verbatim.'));
+
+  /* 3c — HOUSE: DECOMPOSIÇÃO DAS CLOUDS */
+  const hInd=H_RC.ind, hTot=H_YEARS.map((_,i)=>(hInd.nonAI[i]+hInd.aiLabs[i]+hInd.aiOther[i])/1000);
+  const hLabsPct=H_YEARS.map((_,i)=>hInd.aiLabs[i]/(hInd.nonAI[i]+hInd.aiLabs[i]+hInd.aiOther[i])*100);
+  S.push(slide('3d · Clouds: a decomposição house — AI vs non-AI', `
+    <div class="lede">O modelo house separa a receita das clouds em três camadas. A leitura: <b>a receita vinda dos AI labs vai de $5.9B (CY24) para $431B (CY28E)</b> — de ${hLabsPct[0].toFixed(0)}% para <b>${hLabsPct[4].toFixed(0)}% da indústria</b> — enquanto o non-AI segue crescendo ~dígito-alto.</div>
+    <div style="display:grid; grid-template-columns:1fr 330px; gap:26px; align-items:start">
+      <div>
+        <div class="legend"><span class="k"><span class="sw" style="--kc:#9AA7B5"></span>Non-AI</span><span class="k"><span class="sw" style="--kc:${PET}"></span>AI — outros</span><span class="k"><span class="sw" style="--kc:${ORG}"></span>AI — labs</span></div>
+        ${stackedBars({cats:H_YEARS,layers:[
+          {name:'Non-AI',col:REST,data:hInd.nonAI.map(v=>v/1000)},
+          {name:'AI — outros',col:PET,data:hInd.aiOther.map(v=>v/1000)},
+          {name:'AI — labs',col:ORG,data:hInd.aiLabs.map(v=>v/1000)}],W:800,H:370})}
+      </div>
+      <div class="trow" style="grid-template-columns:1fr">
+        <div class="stile"><div class="l">Receita total das clouds</div><div class="v">$216B→$1.03T</div><div class="d">CY24 → CY28E, <span class="up">~48%/ano</span> no modelo house</div></div>
+        <div class="stile"><div class="l">Share dos AI labs</div><div class="v">${hLabsPct[0].toFixed(0)}%→${hLabsPct[4].toFixed(0)}%</div><div class="d">CY26E já em ${hLabsPct[2].toFixed(0)}% — o cliente marginal da cloud é o lab</div></div>
+        <div class="stile"><div class="l">AI — labs, CY26E</div><div class="v">$125B</div><div class="d">4.6x o CY25 ($27.5B); CY27E $251B; CY28E $431B</div></div>
+        <div class="stile"><div class="l">AI — outros (enterprise)</div><div class="v">$25→$163B</div><div class="d">CY26E → CY28E — a segunda onda, depois dos labs</div></div>
+      </div>
+    </div>`,
+    esc(H_SRC)+' Painel "Cloud | Ótica da demanda" do rcloud.html; entidades MSFT/AWS/Google/Outros somadas na Indústria.'));
+
+  /* 3d — HOUSE: EXPOSIÇÃO AOS LABS */
+  const expo=(e)=>{const d=H_RC[e],l=H_LABS[e];return [2,3,4].map(i=>({y:H_YEARS[i],tot:(d.nonAI[i]+d.aiLabs[i]+d.aiOther[i]),labs:d.aiLabs[i],oa:l.openai[i],an:l.anthropic[i],ge:l.gemini[i]}));};
+  const expPanel=(name,e)=>{
+    const rows=expo(e);
+    return `<div><div class="chtitle">${name}</div>
+      ${stackedBars({cats:rows.map(r=>r.y),layers:[
+        {name:'OpenAI',col:GREEN,data:rows.map(r=>r.oa/1000)},
+        {name:'Anthropic',col:GOLD,data:rows.map(r=>r.an/1000)},
+        {name:'Gemini',col:PURPLE,data:rows.map(r=>r.ge/1000)}],W:372,H:270})}
+      <div style="font-size:12px; color:var(--ink2); text-align:center; margin-top:2px">% da receita da cloud: <b>${rows.map(r=>(r.labs/r.tot*100).toFixed(0)+'%').join(' → ')}</b></div></div>`;};
+  S.push(slide('3e · Quem depende de quem: exposição de cada cloud aos labs', `
+    <div class="lede">A receita vinda dos frontier labs, por cloud e por lab (US$ bn, house). A concentração é real — <b>no modelo, quase metade da MSFT em CY28E é lab-driven</b> — e é exatamente por isso que o RPO ex-frontier acelerando (slide 4) importa tanto.</div>
+    <div class="legend" style="justify-content:center"><span class="k"><span class="swd" style="--kc:${GREEN}"></span>OpenAI</span><span class="k"><span class="swd" style="--kc:${GOLD}"></span>Anthropic</span><span class="k"><span class="swd" style="--kc:${PURPLE}"></span>Gemini</span></div>
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:26px">
+      ${expPanel('MSFT (Azure)','msft')}${expPanel('AWS','aws')}${expPanel('Google Cloud','goog')}
+    </div>`,
+    esc(H_SRC)+' Painel "Exposição das Clouds aos Labs". Pares âncora: MSFT↔OpenAI (com Anthropic entrando via Azure), AWS↔Anthropic, Google↔Gemini+Anthropic (TPU resale).'));
+
+  /* 8 — BACKLOG */
+  S.push(slide('4 · Backlog: ~$1.7 trilhão contratado — e a mistura melhorou', `
+    <div class="lede">O bear case dizia: backlog = meia dúzia de frontier labs reciclando capital. Julho quebrou isso: <b>todo o adicional sequencial de $51B no RPO da MSFT veio de clientes FORA dos frontier labs</b> (+25% a/a ex-OpenAI), e o backlog da AWS cresce triple-digit.</div>
+    ${legend([[BLUE,'MSFT commercial RPO'],[GREEN,'Google Cloud backlog'],[GOLD,'AWS backlog']])}
+    ${backlogChart2(1180,395)}`,
+    'Calls das empresas (MSFT fiscal→calendário). Bases distintas — não somar numa linha só; soma indicativa 2T26 ≈ $1.69T (vs ~$1.11T em fev). GOOG 1T26 inclui vendas de hardware TPU (mudança de base; "maioria ainda é contrato GCP típico"); AWS 3T25 vem de transcript parafraseado.'));
+
+  /* 9 — MARGINS */
+  S.push(slide('5 · Margens seguraram enquanto a AI escalou', `
+    <div class="lede">O medo de 2025 era diluição de margem. Imprimiu o contrário: <b>a margem operacional do Google Cloud triplicou enquanto o growth triplicava</b>, e a AWS fez 39.4% — melhor em cinco trimestres — no growth mais rápido em 18.</div>
+    <div style="display:grid; grid-template-columns:1fr 400px; gap:26px; align-items:start">
+      <div><div class="chtitle">Google Cloud — margem operacional, %</div>
+      ${lineChart2({cats:CG_Q, series:[{name:'GCP op margin',col:ORG,pts:GCP_MARGIN}],W:790,H:340,yfmt:v=>v+'%'})}</div>
+      <div class="trow" style="grid-template-columns:1fr 1fr">
+        <div class="stile" style="padding:11px 14px"><div class="l">AWS op margin, 2T26</div><div class="v" style="font-size:25px">39.4%</div><div class="d">+650bp a/a (+520 ex-deriv.) a +36.7% growth · 07-30</div></div>
+        <div class="stile" style="padding:11px 14px"><div class="l">MSFT AI ARR</div><div class="v" style="font-size:25px">$37B</div><div class="d">+123% a/a (F3T26; não atualizado no F4T26) · 04-29</div></div>
+        <div class="stile" style="padding:11px 14px"><div class="l">GM de inference (labs)</div><div class="v" style="font-size:25px">34→65%</div><div class="d">2025 → 2026E · Barclays 06-01</div></div>
+        <div class="stile" style="padding:11px 14px"><div class="l">Payback (único quantificado)</div><div class="v" style="font-size:25px">&lt;3 anos</div><div class="d">"a little less than three years to break even" · Jassy 07-30</div></div>
+      </div>
+    </div>`,
+    'Margens: prepared remarks dos CFOs. Driver nomeado da inflexão AWS: Anthropic-on-Bedrock (~$5.5B run-rate) → +213bp t/t (SemiAnalysis 05-27). Wiz entra como headwind "low single-digit" na margem do GCP a partir do 2T26 — absorvido.'));
+
+  /* 10 — ROIC RESUMO */
+  S.push(slide('5b · ROIC: a planilha do MS — o mesmo GW, três negócios', `
+    <div class="lede">Morgan Stanley padronizou o gigawatt (<b>410,256 GB300s · $39bn de capex · $7.7bn/ano de opex · 21% de imposto</b>) e rodou três modelos de negócio. A régua substituiu a fé: <b>25–50% de ROIC</b> nos casos-base.</div>
+    ${roicChart2(1180,310)}
+    <div class="lede" style="margin-top:10px; font-size:15px">Conclusão do MS: retornos de token saudáveis atraem competição — <b>são competidos no model layer e capitalizados em quem é DONO dos gigawatts</b>. OW nos donos de infra: AMZN / GOOGL / MSFT.</div>`,
+    esc(MS_ROIC_SRC)+' Model 3: "ROIC" é margem NOPAT (caveat do próprio MS) e a base de receita não tem o haircut de 75% de utilização — não comparar as três colunas como uma métrica só. A conta linha a linha: próximos 3 slides.'));
+
+  /* 11-13 — MODEL TABLES */
+  const mfoot=[
+    'Alavanca: preço por GPU-hora. Range MS $7.00–10.00, base $8.50. ROIC = NOPAT ÷ $39bn de capex bruto (steady-state ano-1, sem R&D de modelo). Fonte: MS "The Paths to 25–50% GenAI ROIC", Nowak, 27-jul-2026; workbook reconstruído com fórmulas vivas (Capstone, 30-jul) fecha com todos os números reportados.',
+    'Alavancas: % da capacidade em inference × tokens/s × preço por milhão de tokens (benchmark de mercado: Muse Spark 1.1 blended $1.58/M). A fatia de training não gera receita mas carrega o custo — o ROIC já nasce onerado por ela. Mesma fonte e reconciliação do slide anterior.',
+    'ATENÇÃO às duas bases: sem haircut de utilização (infla receita ~33% vs Model 2) e retorno = margem NOPAT, NÃO ROIC sobre ativos (caveats do próprio MS). *Células âmbar = interpolação Capstone (não reportadas pelo MS). No bear, alugar para servir PERDE $2.5bn/GW-ano — só funciona acima de um piso de preço de token.',
+  ];
+  MS_DETAIL.forEach((mod,i)=>{
+    S.push(slide(`5${['c','d','e'][i]} · A conta linha a linha — ${mod.m.split(' — ')[0]}`, `
+      <div class="lede" style="margin-bottom:10px"><b>${mod.m.split(' — ')[1]}</b> — ${mod.tagline}. Linhas azuis = inputs do MS (mexa nelas e tudo abaixo reprecifica); coluna destacada = caso-base.</div>
+      ${msTable(mod)}`,
+      mfoot[i]));
+  });
+
+  /* 5f — HOUSE: ECONOMICS POR GW */
+  const pgwTot=H_YEARS.map((_,i)=>(H_PGW.chips[i]+H_PGW.net[i]+H_PGW.oth[i])/1000);
+  const revPgw=H_YEARS.map((_,i)=>H_RESUMO.receitaAi[i]/1000/H_RESUMO.gwOnlineAvg[i]);
+  S.push(slide('5f · A mesma conta, no modelo house — economics por GW', `
+    <div class="lede">O build house (bottom-up, por camada) chega em <b>$${fmt1(pgwTot[2])}bn de capex all-in por GW em CY26E</b> — a um dólar do $39bn/GW do MS, por caminho independente. E a receita de AI realizada por GW médio online roda <b>$${fmt1(revPgw[2])}–${fmt1(revPgw[3])}bn/GW</b> — entre o blended da Cantor (~$10bn) e a fatia monetizada (~$25bn).</div>
+    <div style="display:grid; grid-template-columns:1fr 330px; gap:26px; align-items:start">
+      <div>
+        <div class="legend"><span class="k"><span class="sw" style="--kc:${ORG}"></span>Chips (classe NVDA)</span><span class="k"><span class="sw" style="--kc:${PET}"></span>Networking</span><span class="k"><span class="sw" style="--kc:#9AA7B5"></span>Resto do DC (shell/power/etc.)</span></div>
+        ${stackedBars({cats:H_YEARS,layers:[
+          {name:'Chips',col:ORG,data:H_PGW.chips.map(v=>v/1000)},
+          {name:'Networking',col:PET,data:H_PGW.net.map(v=>v/1000)},
+          {name:'Resto do DC',col:REST,data:H_PGW.oth.map(v=>v/1000)}],W:800,H:345,ytick:'$',unit:'B'})}
+      </div>
+      <div class="trow" style="grid-template-columns:1fr">
+        <div class="stile" style="padding:11px 14px"><div class="l">Capex all-in por GW, CY26E</div><div class="v" style="font-size:25px">$${fmt1(pgwTot[2])}bn</div><div class="d">house, bottom-up — vs <b>$39bn</b> do MS: contas independentes, mesmo número</div></div>
+        <div class="stile" style="padding:11px 14px"><div class="l">Receita AI ÷ GW online médio</div><div class="v" style="font-size:25px">$${fmt1(revPgw[2])}bn/GW</div><div class="d">CY26E; 27E $${fmt1(revPgw[3])}bn · 28E $${fmt1(revPgw[4])}bn — blended realizado</div></div>
+        <div class="stile" style="padding:11px 14px"><div class="l">Custo sobe, não cai</div><div class="v" style="font-size:25px">$33→$50bn</div><div class="d">capex/GW CY24→CY28E (+53%) — o "deflator" não chegou</div></div>
+        <div class="stile" style="padding:11px 14px"><div class="l">Chips na indústria</div><div class="v" style="font-size:25px">15.4M→22.7M</div><div class="d">aceleradores/ano CY26E → CY28E</div></div>
+      </div>
+    </div>`,
+    esc(H_SRC)+' Camadas por GW = classe NVDA (chip capex/GW ' + '$18.8bn CY26E) + networking + resto do DC; designers ASIC rodam mais baratos por GW (AVGO $9.0bn, TPU $9.2bn de chip-capex/GW em CY26E). Receita/GW usa GW online MÉDIO do ano (basis própria — não comparar com bases YE).'));
+
+  /* 14 — WHAT-IF SEATS */
+  S.push(slide('6 · TAM: e se 500 milhões de usuários pagarem?', `
+    <div class="lede">A base é real: só a Microsoft tem <b>>450M de seats comerciais M365 pagos</b> (divulgado no F2T26; ~464M implícitos hoje). Arredonde para 500M knowledge workers e faça a única pergunta que importa:</div>
+    <div class="bigrow" style="margin-top:8px">
+      ${WHATIF.map(w=>`<div class="bignum">
+        <div class="k">…pagando <b>$${w.pm}/mês</b></div>
+        <div class="v">${w.tam>=1000?'$'+(w.tam/1000).toFixed(1)+'T':'$'+w.tam+'B'}<span> /ano</span></div>
+        <div class="conta">500M × $${w.pm} × 12</div>
+        <div class="n">${w.note}</div>
+      </div>`).join('')}
+    </div>
+    <div class="lede" style="margin-top:18px; font-size:14.5px">Guardrail: a conta é linear e assume <b>todos os 500M pagando</b> — é what-if, não forecast (metade dos usuários ou metade do preço = metade do TAM). O caso $50/mês ≈ 1.5x o exit-ARR esperado de TODO o complexo de labs em 2026 (~$200B, Barclays) e ~30x o Copilot realizado hoje (~$6–7B, Bernstein est.).</div>`,
+    'Comparações: ARR combinado dos labs ~$100B (SemiAnalysis 07-08) · MSFT AI ARR $37B (F3T26) · BofA "AI 2030" AI-DC TAM ~$1.7T CY30 (infra, não software — a comparação é de escala). Ilustrativo, não estimativa house.'));
+
+  /* 15 — WHAT-IF ÍNDICES */
+  S.push(slide('6b · A mesma pergunta, pela receita dos índices', `
+    <div class="lede">Base de receita agregada CY26E: <b>S&P 500 ~$19.4T + Russell 2000 ~$2.3T + STOXX 600 ~$9.4T ≈ $31 trilhões</b> (Bloomberg, 31-jul; BEst sales-per-share ÷ índice × market cap).</div>
+    <div class="bigrow" style="margin-top:8px">
+      ${WHATIF2.map(w=>`<div class="bignum">
+        <div class="k">AI captura <b>${w.pct}%</b> da receita listada</div>
+        <div class="v">$${w.tam}B<span> /ano</span></div>
+        <div class="conta">${w.pct}% × ~$31T</div>
+        <div class="n">${w.note}</div>
+      </div>`).join('')}
+    </div>
+    <div class="lede" style="margin-top:18px; font-size:15px"><b>Dois frames que não se conhecem — seats × preço e share de receita corporativa — caem no mesmo corredor de $0.3–1.2T/ano.</b> Hoje, os ~$100B de ARR dos labs são ~0.3% dessa base de receita.</div>`,
+    'Receita agregada derivada de dados de índice Bloomberg em 31-jul-2026 (método declarado acima; STOXX convertido pelo mkt cap em USD). O what-if é receita na camada de SOFTWARE.'));
+
+  /* 16 — LADDER */
+  S.push(slide('6c · $50–200/mês é plausível? Já é a banda observada', `
+    <div class="lede">O usuário médio do ChatGPT paga <b>$25/mês</b> (mix consumer) e o do Claude já paga <b>$211/mês</b> — acima do maior plano consumer (Max 20x, $200). <b>O what-if não é preço de fantasia: é o corredor entre as duas médias atuais.</b> Nas empresas AI-forward, o gasto por funcionário já roda 20–40x acima disso (a preço de tabela).</div>
+    ${ladderChart2(1180,300)}`,
+    'FundaAI "LLM 26H1 Pt 2" (24-jun): "average spend $211/user/month, 8.4x OpenAI’s $25". Claude Max e M365 Copilot: preços públicos. Meta: >60T tokens Claude/30d ≅ ≥$50k/ano/funcionário A PREÇO DE TABELA (SemiAnalysis 06-30). 99º percentil: ~$100k/ano/funcionário (dados Ramp via SemiAnalysis Ep.020, 15-jul).'));
+
+  /* 17 — CAPEX INTENSITY */
+  S.push(slide('7 · O custo da tese: capex sobre receita', `
+    <div class="lede">Intensidade de capex era ~15–25% há dois anos. O street agora tem <b>GOOG a ~56% e META a ~63% da receita em 2027</b> — acima da TSMC no pico do build (~36% em 2026). FCF trimestral: GOOG −$5.9B, AMZN −$9B, MSFT +$19.6B.</div>
+    ${intensityPanels2()}`,
+    'Frame de referência: top-4 ~$410B 2025A → ~$700–725B 2026E → ~$1.1T 2027E (JPM "AI Capex 2.0", 06-16); reescrita agregada 26–28: $1.3T → $3.4T em 12 meses (BofA 07-26). Financiamento: $1.3T de IG no 1S (GS); backstop NVDA $77.5B→$175.3B. A linha a respeitar: "the era of 20%+ surprises to hyperscaler capex expectations is likely over" (Rothschild/Redburn, 07-30).'));
+
+  /* 17b — CAPEX REVISIONS 26/27/28 */
+  S.push(slide('7b · A revisão de capex: 2026, 2027 e 2028', `
+    <div class="lede">O street reescreveu 2027E de <b>$540B para $955B (+77%)</b> e 2028E para <b>$1,060B (+96%)</b> em sete meses — um degrau a cada temporada de resultados. Em 2026, a revisão veio pelos próprios guides: <b>três das quatro subiram o número durante o ano</b>.</div>
+    <div style="display:grid; grid-template-columns:1fr 400px; gap:26px; align-items:start">
+      <div>${capexRevChart(740,400)}</div>
+      <div>
+        <div class="colh" style="font-size:15px; padding:8px">Guides de capex 2026 — o walk</div>
+        <div class="steps2" style="gap:10px">
+          <div class="step2" style="grid-template-columns:70px 1fr"><span class="sv" style="font-size:15px; padding:8px">GOOG</span><span class="sn">$175–185B (fev) → $180–190B (abr) → <b>$195–205B</b> (jul) — duas altas, "aceleração na entrega de capacidade"</span></div>
+          <div class="step2" style="grid-template-columns:70px 1fr"><span class="sv" style="font-size:15px; padding:8px">AMZN</span><span class="sn">~$200B (fev) → <b>~$220B</b> (jul) — incremento atribuído ao custo de memória</span></div>
+          <div class="step2" style="grid-template-columns:70px 1fr"><span class="sv" style="font-size:15px; padding:8px">META</span><span class="sn">$125–145B (abr, alta por memória) → <b>$130–145B</b> (jul, piso subiu)</span></div>
+          <div class="step2" style="grid-template-columns:70px 1fr"><span class="sv" style="font-size:15px; padding:8px">MSFT</span><span class="sn">CY26 ~$190B (abr, ~$25B é memória) → <b>~$175B</b> (jul) — <b>reclassificação de leases</b> 15→25 anos, "underlying spend unchanged"</span></div>
+        </div>
+      </div>
+    </div>`,
+    'Linhas: Bloomberg BEst semanal, CY27E/CY28E, soma MSFT+GOOG+META+AMZN (MSFT calendarizado de trimestres fiscais; _data/hyperscaler_revisions_2027_2028.json, asof '+CAPEX_ASOF+'). Guides 2026: calls das empresas (GOOG 02-04/04-29/07-22 · AMZN 02-05/07-30 · META 04-29/07-29 · MSFT 04-29/07-29). Framing de referência: JPM "AI Capex 2.0" top-4 $410B 25A → $700–725B 26E → ~$1.1T 27E (06-16).'));
+
+  /* 7c — HOUSE vs CASAS: CAPEX POR EMPRESA */
+  S.push(slide('7c · Capex por empresa: house vs casas — CY27E', `
+    <div class="lede">O confronto da aba Comp: em CY27E o house tem os 4 em <b>$1,103bn</b> — <b>−5% vs MS, +7% vs BofA e +31% acima do consenso BBG</b>. O gap explode em CY28E: house $1,539bn = <b>+72% vs consenso</b>. A divergência não é "se", é a inclinação do S-curve.</div>
+    <div class="legend"><span class="k"><span class="sw" style="--kc:${GOLD}"></span>Capstone</span><span class="k"><span class="sw" style="--kc:${BLUE}"></span>Morgan Stanley</span><span class="k"><span class="sw" style="--kc:${RED}"></span>BofA</span><span class="k"><span class="sw" style="--kc:${PINK}"></span>Bogeys (buyside)</span><span class="k"><span class="sw" style="--kc:${GRAY}"></span>Consenso BBG</span></div>
+    ${houseVsBars({groups:Object.keys(H_CAPEX),series:[
+      {name:'Capstone',col:GOLD,data:Object.values(H_CAPEX).map(d=>d.voce[1])},
+      {name:'MS',col:BLUE,data:Object.values(H_CAPEX).map(d=>d.ms[1])},
+      {name:'BofA',col:RED,data:Object.values(H_CAPEX).map(d=>d.bofa[1])},
+      {name:'Bogeys',col:PINK,data:Object.values(H_CAPEX).map(d=>d.bogey[1])},
+      {name:'Consenso BBG',col:GRAY,data:Object.values(H_CAPEX).map(d=>d.cons[1])}],W:1180,H:330})}
+    <div class="trow" style="grid-template-columns:1fr 1fr 1fr; margin-top:10px">
+      <div class="stile"><div class="l">Total 4 cos · CY27E</div><div class="v">$1,103bn</div><div class="d"><span class="dn">−5% vs MS</span> · <span class="up">+7% vs BofA</span> · <span class="up">+31% vs consenso</span></div></div>
+      <div class="stile"><div class="l">Total 4 cos · CY28E</div><div class="v">$1,539bn</div><div class="d"><span class="up">+20% vs MS · +27% vs BofA · +72% vs consenso</span></div></div>
+      <div class="stile"><div class="l">O wildcard fora dos 4</div><div class="v">SpaceX $146bn</div><div class="d">CY27E house vs $70bn do MS — o maior gap qualitativo do comp</div></div>
+    </div>`,
+    esc(H_SRC)));
+
+  /* 7d — HOUSE vs CASAS: GW POR EMPRESA */
+  S.push(slide('7d · Os gigawatts por trás do capex — house vs casas', `
+    <div class="lede">Capacidade instalada YE (GW, AI DCs): o house chega a <b>129.9 GW nos top-4 em YE28 — +19% vs MS (108.9) e +27% vs a média dos sell-sides (102.1)</b>. O maior gap individual: Google 2027 (25.8 GW house vs 18.2 da média).</div>
+    <div class="legend" style="justify-content:center"><span class="k"><span class="sw" style="--kc:${ORG}"></span>Capstone</span><span class="k"><span class="sw" style="--kc:${PET}"></span>Morgan Stanley</span><span class="k" style="color:var(--mut)">- - média sell-side</span></div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px 26px">
+      ${['Google','Amazon','Microsoft','Meta'].map(n=>gwPanel(n)).join('')}
+    </div>`,
+    esc(H_SRC)+' Capex/GW implícito (house, CY26→28): GOOG $28→35bn · AMZN ~$30bn · META $31→34bn (vs benchmark BofA $45–47bn!) · MSFT $36–40bn · NVDA-chips $36–42bn vs MS $39–49bn. GW = basis YE instalado, ótica designers — não misturar com GW online médio (slide 5f).'));
+
+  /* 7e — HOUSE: A INDÚSTRIA INTEIRA */
+  const rc=(i)=>H_RESUMO.receitaAi[i]/H_RESUMO.capexTotal[i];
+  S.push(slide('7e · A indústria inteira, na visão house', `
+    <div class="lede">Somando TODAS as camadas (chips, networking, shells, power): o capex de AI da indústria vai a <b>$2.58T em CY28E</b> — mas a receita de AI cresce mais rápido que o capex: <b>a razão receita/capex sobe de 0.17x (CY24) para 0.47x (CY28E)</b>. A monetização está alcançando o spend, não o contrário.</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:26px">
+      <div><div class="chtitle">Capex total de AI — US$ bn</div>
+        ${stackedBars({cats:H_YEARS,layers:[{name:'Capex total AI',col:PET,data:H_RESUMO.capexTotal.map(v=>v/1000)}],W:372,H:280})}</div>
+      <div><div class="chtitle">GW de AI online (média do ano)</div>
+        ${stackedBars({cats:H_YEARS,layers:[{name:'GW online médio',col:REST,data:H_RESUMO.gwOnlineAvg}],W:372,H:280,ytick:'',unit:' GW'})}</div>
+      <div><div class="chtitle">Receita de AI — US$ bn</div>
+        ${stackedBars({cats:H_YEARS,layers:[{name:'Receita AI',col:ORG,data:H_RESUMO.receitaAi.map(v=>v/1000)}],W:372,H:280})}</div>
+    </div>
+    <div class="lede" style="margin-top:8px; font-size:14.5px">Receita/capex: <b class="mono">${rc(0).toFixed(2)}x → ${rc(1).toFixed(2)}x → ${rc(2).toFixed(2)}x → ${rc(3).toFixed(2)}x → ${rc(4).toFixed(2)}x</b> (CY24→CY28E). No frame do payback de <3 anos do Jassy (slide 5), uma indústria a ~0.5x receita/capex corrente está dentro da régua — o problema seria essa razão CAIR com o capex subindo.</div>`,
+    esc(H_SRC)+' "Capex total AI" = todas as camadas da indústria (não só top-4 — cf. JPM $410bn top-4 2025 vs $396bn house indústria: bases distintas). GW EOP: 11→24→51→98→162.'));
+
+  /* 7f — CAPEX BOTTOM-UP */
+  const buT=H_BU.capex, buR=H_BU.years.map((_,i)=>H_BU.hyperBottom[i]/H_BU.hyperModel[i]);
+  S.push(slide('7f · Capex bottom-up: a conta por camadas', `
+    <div class="lede" style="margin-bottom:6px">A metodologia mais distintiva do modelo house — de baixo para cima: <b>receita dos designers → chips (15.4M em CY26E) → GW adicionados no ano → × capex/GW por camada → capex total da indústria</b>. A identidade fecha exata: <b class="mono">27.1 GW × $33.3bn/GW = $902bn (CY26E)</b>.</div>
+    <div class="grid2" style="gap:18px">
+      <div>
+        <div class="legend"><span class="k"><span class="sw" style="--kc:${GOLD}"></span>Chips (receita designers)</span><span class="k"><span class="sw" style="--kc:${BLUE}"></span>Networking</span><span class="k"><span class="sw" style="--kc:${REST}"></span>Resto do DC</span></div>
+        ${stackedBars({cats:H_BU.years,layers:[
+          {name:'Chips',col:GOLD,data:H_BU.stack.chips},
+          {name:'Networking',col:BLUE,data:H_BU.stack.network},
+          {name:'Resto do DC',col:REST,data:H_BU.stack.other}],W:600,H:IS_PPT?330:390,ytick:'$',unit:'B'})}
+      </div>
+      <div>
+        <div class="rcard" style="color:var(--green); margin-bottom:12px"><div class="rt">Capex/GW por arquitetura<span>por que o mix ASIC importa: o mesmo GW custa 25–45% menos fora da NVIDIA</span></div>${buArchChart()}</div>
+        <div class="trow" style="grid-template-columns:1fr 1fr">
+          <div class="stile" style="padding:9px 12px"><div class="l">Guardrail embutido: bottom-up ÷ top-down</div><div class="v" style="font-size:19px">${buR.map(r=>r.toFixed(2)).join(' · ')}</div><div class="d" style="font-size:10.5px">implícito dos designers ÷ modelo dos hyperscalers, CY25→28E — converge para 1.00x</div></div>
+          <div class="stile" style="padding:9px 12px"><div class="l">Capex/GW blended (mix c/ ASICs)</div><div class="v" style="font-size:19px">$31→$41bn</div><div class="d" style="font-size:10.5px">CY25→CY28E (+33%) — sobe mesmo com mix ASIC; NVDA-class $37→$50 (slide 5f)</div></div>
+        </div>
+      </div>
+    </div>`,
+    'Fonte: Bottom_Up_Capex_v3.xlsx (modelo house) via dashboard ai-capex-bottom-up, 27-jul-26. Escopo = indústria TODA (não só top-4): CY26E $902bn vs JPM top-4 $700–725bn — bases distintas; o cross-check certo é o guardrail acima (hyperscalers bottom-up $655bn CY26E vs modelo top-down $722bn = 0.91x; CY27 1.05x; CY28 1.00x). GW aqui = ADICIONADOS no ano (fluxo) — não misturar com GW instalados YE (slide 7d) nem GW online médio (slide 5f). Vintage 27-jul (o comparativo 7c/7d usa a aba Comp de 14-jul; top-4 YE28 125.8 vs 129.9 GW entre vintages).'));
+
+  /* 18/18b — FORWARD P/E PANELS (comp-dashboard grammar) */
+  const peLede=`<div class="lede" style="margin-bottom:6px">De 30-jan a 31-jul, sete dos oito subiram 5–22% — com <b>P/E forward flat ou MENOR em seis dos oito</b>: o rally foi pago por estimativa, não por múltiplo. Contra a régua de 5 anos, <b>nenhum dos oito negocia acima de +0.2σ da própria média</b>: MSFT e AMZN estão em <b>−1σ</b>, META bem abaixo da média; GOOG é o único levemente acima (+0.2σ).</div>`;
+  S.push(slide('8 · Re-rating? Forward P/E contra a régua de 5 anos — mega-caps', `
+    ${peLede}${peLegendRow()}
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px 26px">
+      ${['MSFT','GOOG','META','AMZN'].map(tk=>peFwdPanel(tk)).join('')}
+    </div>`,
+    esc(PE5Y.meta.source)+' · início 2021-08, asof '+PE5Y.meta.asof+'. Média e ±1σ calculadas sobre a série 1Y fwd dos 5 anos. Basis idêntica ao comp dashboard (1BF/2BF).'));
+  S.push(slide('8b · Forward P/E contra a régua de 5 anos — AI hardware', `
+    <div class="lede" style="margin-bottom:6px">Em semis a história é mais extrema: <b>NVDA a 18.8x fwd, −1.5σ contra a própria média de 5 anos (35.4x)</b> — depois de um ano de +85% de receita; <b>AVGO na média</b> (22.0x vs 23.1x) com o consenso de 2027 subindo +42% no semestre; TSM e ASML em cima das médias (20.8x/31.6x). <b>O ciclo mais forte da história do setor está sendo pago a múltiplos médios ou de desconto.</b></div>
+    ${peLegendRow()}
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px 26px">
+      ${['NVDA','AVGO','TSM','ASML'].map(tk=>peFwdPanel(tk)).join('')}
+    </div>`,
+    esc(PE5Y.meta.source)+' · início 2021-08, asof '+PE5Y.meta.asof+'. Nota: 1Y/2Y fwd = BEst blended-forward; o P/E "current-FY" do terminal lê diferente (ex.: GOOG ~18.5x CY26 inflado pelo ganho Anthropic do 2T).'));
+
+  /* 19 — REVENUE ACCELERATION */
+  S.push(slide('8c · O que expandiu foi a receita de 2027/28', `
+    <div class="lede">O consenso reescreveu 2027 para cima em <b>+4% (META) a +42% (AVGO)</b> em seis meses; as taxas de crescimento de 2027 foram re-subscritas em +2 a +16pts. MSFT (base fiscal): FY27 +17.6% e FY28 +19.4% — high-teens sustentado.</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:30px">
+      ${growthPanel(G27,'Crescimento de receita CY2027 — consenso: 30-jan vs agora')}
+      ${growthPanel(G28,'Crescimento de receita CY2028 — idem')}
+    </div>
+    <div class="legend" style="margin-top:6px"><span class="k"><span class="swd" style="--kc:var(--baseline)"></span>consenso em 30-jan</span><span class="k"><span class="swd" style="--kc:var(--good)"></span>consenso agora (verde = pra cima)</span></div>`,
+    'BBG BEst, overrides 1CY/2CY/3CY, vintage 30-jan vs 31-jul. NVDA CY28 marcado PARA BAIXO (27%→23%) — conservadorismo de número grande, não fraqueza. A lição do tape (KLAC 07-28): beat-and-raise virou caso-base; onde estimativa lidera preço, a surpresa precisa continuar chegando (Barclays).'));
+
+  /* 20 — TSM & ASML WALKS */
+  const walkCol=(title,steps)=>`<div class="rcard" style="color:var(--gold)"><div class="rt">${title}</div>
+    ${steps.map(s=>`<div class="stepB">
+      <div class="hd"><span class="sd mono">${s.d}</span><span class="sv">${s.v}</span></div>
+      <div class="sn">${s.n}</div>
+    </div>`).join('')}</div>`;
+  S.push(slide('9 · TSMC & ASML: a camada mais funda diz ciclo até 2028–30', `
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px">
+      ${walkCol('TSMC — guide FY26 (USD)',TSM_STEPS)}
+      ${walkCol('ASML — guide FY26 (net sales)',ASML_STEPS)}
+    </div>`,
+    'Dois raises em seis meses, nos dois. TSMC: +$100B no Arizona (total $265B, "four or more fabs") + 13 fabs em Taiwan; capex dos próximos 3 anos "EVEN MORE significantly higher". ASML: capacidade Low-NA +30% em 2027 (~85un) e +30% em investigação para 2028 (~110un — aritmética de broker confirmada pelo IR em 07-20); 2027 "close to being fully covered with orders" (IR depois suavizou: "not completely booked… holes in the list"). Contraponto no próximo slide.'));
+
+  /* 21 — TSM/ASML QUOTES */
+  S.push(slide('9b · Nas palavras deles — e o outro lado', `
+    <div class="qlist">
+      <div class="q">“I believe from this day on, <b>all the way to probably 2029, 2030, the demand is very strong</b>. Whether in between there’s a dip or not, I’m not very sure. But the trend is so robust that I believe <b>we are witnessing a kind of a new industry… called the AI industry</b>.”<span class="who">C.C. Wei — TSMC 2T26, 16-jul-2026 (em janeiro: “it looks like it’s going to be endless… for many years to come”)</span></div>
+      <div class="q">“Customer demand remains very strong, <b>with visibility now extending several years into the future</b>… the rapid growth of AI-related demand in advanced logic and DRAM is accelerating the move toward more advanced lithography solutions and increasing lithography intensity.”<span class="who">Christophe Fouquet — ASML 2T26, 15-jul-2026</span></div>
+      <div class="q">“Even [as] we start to spend the $52–56B, the contribution to this year is almost none… <b>we are actually looking for 2028, 2029 supply</b>.” — e o horizonte endureceu: desenvolver e rampar um node “now takes <b>five to seven years. There are no shortcuts</b>.”<span class="who">C.C. Wei — TSMC 4T25 (15-jan) e 2T26 (16-jul)</span></div>
+      <div class="q" style="border-left:3px solid var(--warnc); padding-left:16px">O outro lado, mantido na página: ex-EVP de foundry da Samsung (30-jun): WFE passa de $200B mas <b>“never $300B”</b>; ASML limitada a ~140–150 EUV/ano pelos espelhos Zeiss; LTAs de memória “not worth the toilet paper they’re written on”. Nota: o próprio plano da ASML para 2028 (~110 un) cabe DENTRO do teto do cético — e a Bernstein (07-20) reabriu o topo com cadeia física ($300B+ “seemingly doable”). ASML não divulga mais bookings — visibilidade é afirmação, não número.<span class="who">Expert call 30-jun · Bernstein Rasgon 07-20 · ASML IR 07-20</span></div>
+    </div>`,
+    'Transcripts verbatim (hedge do Wei mantido de propósito — deixa a citação mais crível, não menos).'));
+
+  /* 22 — VERDICT / NEXT */
+  S.push(slide('Veredito — e o que resolve os debates', `
+    <div class="lede" style="font-size:18px"><b>Fortalecendo na ponta — e cada vez mais pago.</b> A evidência de demanda melhorou em todos os medidores independentes (receita, tokens, P&L das clouds, contratos, unit economics, e as apostas de capacidade da própria supply chain). As duas disciplinas a manter: o spend agora é tão grande que FCF e mix de funding viraram load-bearing (sinal 7), e o tape parou de pagar pelo que já sabe — <b>aceleração é necessária, mas a moeda agora é surpresa</b> (KLAC beat-raised-fell; recorde da Samsung negociou flat).</div>
+    <div class="steps2" style="margin-top:22px">
+      <div class="step2"><span class="sd">04-ago</span><span class="sv">AMD 2T</span><span class="sn">estrutura do próximo deal GW-scale (equity vs warrants); momentum MI450 para 1S27.</span></div>
+      <div class="step2"><span class="sd">26-ago</span><span class="sv">NVDA 2T F27</span><span class="sn">guiado $91B ±2%; ótica do mix hyperscaler-vs-ACIE sob a nova segmentação — o que custou 3% num beat no 1T.</span></div>
+      <div class="step2"><span class="sd">out</span><span class="sv">META 3T</span><span class="sn">primeiro guide de capex FY27 ($142B reportado vs $180–200B gross vs $243B JPM) — acompanhar cash PP&E, não capex reportado. E: a linha do Rothschild ("sem mais surpresas de 20%") segura nos guides do 3T?</span></div>
+      <div class="step2"><span class="sd">ao vivo</span><span class="sv">Labs</span><span class="sn">net-adds da Anthropic (~$550M/dia, Yipit) e um número duro para o "julho > 2T inteiro" da OpenAI — as confirmações de maior frequência, para os dois lados.</span></div>
+    </div>`,
+    'Construído da wiki de research Capstone (transcripts primários, notas de sell-side, expert calls, modelos house), 31-jul-2026. Regra de atribuição em todo dado: broker/analista ou fonte primária + data; consenso = Bloomberg BEst; ARR = run-rate estimado salvo declaração da empresa; bases de GW e backlog mantidas separadas. Não é recomendação de investimento.'));
+
+  return S;
+}
+
+/* ============ MOUNT (dashboard page) ============ */
+function mount(){
+  document.getElementById('asof').textContent='as of 2026-08-03 · janela Fev→Jul 2026';
+  const S=buildDeck();
+  document.getElementById('page').innerHTML=S.join('')+
+    `<footer class="pagefoot">Construído da wiki de research Capstone (transcripts primários, sell-side, expert calls, modelo house / AI Model via dashboards Oficiais) · consenso = Bloomberg BEst · ARR = run-rate estimado salvo declaração da empresa · bases de GW e backlog mantidas separadas · não é recomendação de investimento.</footer>`;
+  const tabs=document.getElementById('tabs');
+  tabs.innerHTML=SECTIONS.map(s=>`<a data-id="${s.id}">${s.lab}</a>`).join('');
+  tabs.addEventListener('click',e=>{
+    const a=e.target.closest('a'); if(!a)return;
+    document.getElementById(a.dataset.id).scrollIntoView({behavior:'smooth',block:'start'});
+  });
+  const links=[...tabs.querySelectorAll('a')];
+  const secs=SECTIONS.map(s=>document.getElementById(s.id));
+  const spy=()=>{
+    let best=0;
+    secs.forEach((el,i)=>{if(el.getBoundingClientRect().top<=120)best=i;});
+    links.forEach((a,i)=>a.classList.toggle('on',i===best));
+  };
+  addEventListener('scroll',spy,{passive:true}); spy();
+}
+const tip=document.getElementById('tip');
+document.addEventListener('mouseover',e=>{
+  const t=e.target.closest('[data-tip]'); if(!t){tip.classList.remove('on');return;}
+  tip.textContent=t.dataset.tip; tip.classList.add('on');});
+document.addEventListener('mousemove',e=>{
+  if(!tip.classList.contains('on'))return;
+  const w=tip.offsetWidth,h=tip.offsetHeight;
+  tip.style.left=Math.min(innerWidth-w-12,e.clientX+14)+'px';
+  tip.style.top=Math.max(8,Math.min(innerHeight-h-10,e.clientY-h-12))+'px';});
+mount();
+
+</script>
+<script>
+/* ===== PPT shell: turn the dashboard panels into 16:9 slides ===== */
+(function(){
+  const page=document.getElementById('page');
+  const slides=[...page.children].filter(el=>el.classList.contains('panel')||el.id==='hero');
+  /* 1. split each panel into band (h2) + body + note */
+  slides.forEach(el=>{
+    if(el.id==='hero'){
+      const img=document.createElement('img'); img.className='coverlogo';
+      img.src='data:image/png;base64,'+CAPSTONE_LOGO; el.appendChild(img);
+      const f=document.createElement('div'); f.className='coverfoot';
+      f.textContent='Capstone · wiki de research — fontes (broker/analista ou fonte primária + data) em cada slide · dados até 03-ago-2026 · setas ↓ ↑ navegam · Ctrl+P exporta em PDF';
+      el.appendChild(f);
+      return;
+    }
+    const h2=el.querySelector(':scope>h2'), note=el.querySelector(':scope>.note');
+    const body=document.createElement('div'); body.className='pbody';
+    [...el.children].forEach(c=>{ if(c!==h2 && c!==note) body.appendChild(c); });
+    el.insertBefore(body, note||null);
+    if(h2){ const img=document.createElement('img'); img.className='slidelogo';
+      img.src='data:image/png;base64,'+CAPSTONE_LOGO; h2.appendChild(img); }
+  });
+  /* 2. wrap each slide in a full-viewport snap cell + page numbers */
+  slides.forEach((el,i)=>{
+    const w=document.createElement('section'); w.className='slidewrap';
+    page.insertBefore(w,el); w.appendChild(el);
+    const n=document.createElement('div'); n.className='pageno';
+    n.textContent=(i+1)+' / '+slides.length; el.appendChild(n);
+  });
+  /* 3. scale to viewport */
+  const fit=()=>{ const sc=Math.min((innerWidth-36)/1280,(innerHeight-76)/720);
+    slides.forEach(p=>p.style.setProperty('--sc',sc.toFixed(4))); };
+  fit(); addEventListener('resize',fit);
+  /* 4. keyboard nav */
+  const wraps=[...document.querySelectorAll('.slidewrap')];
+  const curIdx=()=>{ let b=0; wraps.forEach((w,i)=>{ if(w.getBoundingClientRect().top<=innerHeight*0.45) b=i; }); return b; };
+  const go=i=>{ const t=wraps[Math.max(0,Math.min(wraps.length-1,i))]; if(t) t.scrollIntoView({behavior:'smooth',block:'center'}); };
+  addEventListener('keydown',e=>{
+    if(['ArrowRight','ArrowDown','PageDown',' '].includes(e.key)){e.preventDefault(); go(curIdx()+1);}
+    if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){e.preventDefault(); go(curIdx()-1);}
+    if(e.key==='Home'){e.preventDefault(); go(0);} if(e.key==='End'){e.preventDefault(); go(wraps.length-1);}
+  });
+})();
+</script>
+</body>
+</html>
