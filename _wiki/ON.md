@@ -133,8 +133,7 @@ _**Q2 FY26 window · opened 2026-08-03** (print AMC 08-03). The Q1 FY26 window i
 
 **Quarter synthesis (Q2 FY26 window, opening):** The print **resolved the Jefferies-vs-UBS argument from the 08-01/08-02 previews in a split decision.** Jefferies was directionally right — it was a beat with the guide above — but its case rested on an **auto and industrial recovery broadening out (read across from [[TXN]] and [[NXPI]])**, and that is exactly what did *not* show up: auto **−2% q/q and below Street**, industrial barely up and below Street. UBS was right to be ON-specific rather than end-market-generic, and its Neutral/6-of-10 sentiment score plus the "losing pricing share while building unit inventories" channel flag now looks like the better-calibrated read on the core franchise — while being wrong on the stock, which it concedes on positioning grounds. **What actually beat was the AI/compute line ("Other" $399.5m vs $332.8m) and gross margin**, which is the bull case the page has carried since Q4 FY25 and which management just escalated ("more than double in 2026," MGX, AI-DC TAM to $47.5bn by 2030). The open question the call transcript should settle: **whether the auto softness is ON-specific share loss (UBS's thesis) or timing** — that determines whether the Sept 16 Analyst Day target model is credible.
 
-<details>
-<summary><b>ARCHIVED — Q1 FY26 intra-quarter window (May 04 → Aug 02, 2026), closed by the 08-03 print</b></summary>
+**[ARCHIVED — Q1 FY26 intra-quarter window, May 04 → Aug 02, 2026; closed by the 08-03 print. Retained in full: the pre-print debate is the record against which the outcome was scored — see `_meta/outcomes.md`.]**
 
 _Q1 FY26 print + intra-quarter · May 04 → Aug 02, 2026 · sell-side / expert calls / reports between earnings._
 
@@ -179,7 +178,7 @@ _Q1 FY26 print + intra-quarter · May 04 → Aug 02, 2026 · sell-side / expert 
 
 **Quarter synthesis:** The debate has shifted from the cyclical question ("is the bottom in?" — management says yes, auto +5% YoY) to the structural one of margin and share: the flow accepts the demand inflection but attacks the operating leverage of the power-discrete book (Jefferies/AlphaSense) and questions whether ON captures 800V (Citi prefers TXN; @bubbleboi pushes the earnings out 2-3 years) — VGaN/ESS are the side where sell-side and management still agree. Post-quarter, the **SYNA (~$7B all-stock) acquisition** became its own debate — initially read as dilutive to the DC narrative (stock -14%), but BofA (07-08, after hosting mgmt in NYC) reframes it as EPS-accretive with cost synergies that likely *understate* the opportunity and TAM that expands well beyond the old $64bn Analyst-Day frame.
 
-</details>
+**[END ARCHIVED Q1 FY26 window]**
 
 ## Management commentary — evolution (last 4 quarters)
 
