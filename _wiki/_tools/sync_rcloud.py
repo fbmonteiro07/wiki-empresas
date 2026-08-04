@@ -17,8 +17,9 @@ e aborta se a Fernanda introduzir um CDN, senão a página quebraria atrás do p
 
 Adaptações aplicadas (as mesmas de clean_links() no build_ai_dashboards.py, + as daqui):
   • BOM removido (as réplicas já existentes não têm BOM);
-  • rótulo de fonte "AI Model 25-06.xlsx · Tork Capital · uso interno" -> rótulo de réplica
-    com a data do snapshot. "Tork Capital" é rótulo legado do template da origem;
+  • rótulo de fonte reescrito como "Capstone · réplica ... · snapshot <data>", seja qual for
+    o que a origem tenha no <span class="src"> — a casa é Capstone, e o rótulo da origem já
+    veio errado uma vez (nome de outra casa, herdado do template);
   • link "← Dashboard Principal" (href="index.html") re-rotulado: neste diretório o
     index.html é o hub de dashboards da wiki, não o hub da Fernanda;
   • links "../" (quebrados no destino) removidos — defensivo, hoje não há nenhum;
@@ -38,7 +39,6 @@ sys.stdout.reconfigure(encoding="utf-8")
 SRC = r"P:\Fernanda Neves\MarketData_PYTHON_CODES\Dashboards\Oficiais\rcloud.html"
 OUT = r"E:\Wiki Felipe empresas\_wiki\_dashboards\rcloud.html"
 
-SRC_LABEL_OLD = "AI Model 25-06.xlsx · Tork Capital · uso interno"
 NAV_OLD = '<a href="index.html">← Dashboard Principal</a>'
 NAV_NEW = '<a href="index.html">← Wiki dashboards</a>'
 
@@ -58,16 +58,15 @@ def main():
                  + "\n  ".join(sorted(set(ext))[:10]))
 
     # ── rótulo de fonte ──────────────────────────────────────────────────────
-    label = f"réplica · rcloud.html (Fernanda Neves) · snapshot {snapshot} · uso interno"
-    if SRC_LABEL_OLD in h:
-        h = h.replace(SRC_LABEL_OLD, label)
+    # Reescreve o <span class="src"> qualquer que seja o conteúdo (não casa string literal:
+    # a origem muda o rótulo de vez em quando e já trouxe nome de casa errado).
+    label = f"Capstone · réplica do rcloud.html (Fernanda Neves) · snapshot {snapshot} · uso interno"
+    src_old = re.search(r'<span class="src">([^<]*)</span>', h)
+    h, n = re.subn(r'(<span class="src">)[^<]*(</span>)', rf"\g<1>{label}\g<2>", h, count=1)
+    if n == 0:
+        print('  [AVISO] <span class="src"> não encontrado — réplica sai sem rótulo de snapshot.')
     else:
-        # rótulo mudou na origem: substitui o conteúdo do <span class="src"> seja ele qual for
-        h, n = re.subn(r'(<span class="src">)[^<]*(</span>)', rf"\g<1>{label}\g<2>", h, count=1)
-        if n == 0:
-            print('  [AVISO] <span class="src"> não encontrado — réplica sai sem rótulo de snapshot.')
-        else:
-            print(f'  [AVISO] rótulo de fonte da origem mudou (não era "{SRC_LABEL_OLD}") — reescrito.')
+        print(f'  rótulo de fonte: "{src_old.group(1)}"\n               -> "{label}"')
 
     # ── navegação ────────────────────────────────────────────────────────────
     if NAV_OLD in h:
