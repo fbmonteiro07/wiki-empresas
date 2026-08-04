@@ -5,7 +5,7 @@
 _Wiki · generated 2026-06-25 · sources: `E:\Wiki Felipe empresas\CDNs\_imported_from_E_root\` (AKAM filings + transcripts + decks + BofA note). Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-03 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-08-04 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|

@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\MRVL` (filings + transcripts) · `_equity_calls` · `_briefings\by-ticker\MRVL.md` (none on disk). Master index: [00_INDEX.md](00_INDEX.md). Themes: [custom-asic-tpu](themes/custom-asic-tpu.md) · [optical-cpo](themes/optical-cpo.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-03 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-08-04 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
