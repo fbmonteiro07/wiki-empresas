@@ -3,16 +3,16 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\SPOT` (filings 20-F + transcripts) · `_briefings\by-ticker\SPOT.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-04 · EUR
+### 📊 Consensus snapshot — BBG · asof 2026-08-05 · EUR
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | €19.5bn | €22.5bn |
+| Revenue | €19.5bn | €22.4bn |
 | Gross profit | €6.5bn | €7.7bn |
 | Gross margin | 33.2% | 34.3% |
 | EBITDA | €3.0bn | €3.9bn |
-| EPS | €12.06 | €15.50 |
-| Capex | €48m | €46m |
+| EPS | €12.01 | €15.43 |
+| Capex | €51m | €56m |
 | OCF (≈EBITDA) | €3.0bn | €3.9bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

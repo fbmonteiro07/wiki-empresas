@@ -5,17 +5,17 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\ANET` (filings + transcripts) · `_equity_calls` · `_briefings\by-ticker\ANET.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-04 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-08-05 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $11.5bn | $14.3bn |
-| Gross profit | $7.2bn | $8.9bn |
-| Gross margin | 62.6% | 62.6% |
-| EBITDA | $5.4bn | $6.8bn |
-| EPS | $3.58 | $4.43 |
-| Capex | $168m | $163m |
-| OCF (≈EBITDA) | $5.4bn | $6.8bn |
+| Revenue | $11.5bn | $16.0bn |
+| Gross profit | $7.2bn | $10.0bn |
+| Gross margin | 62.7% | 62.7% |
+| EBITDA | $5.7bn | $7.8bn |
+| EPS | $3.68 | $5.06 |
+| Capex | $153m | $135m |
+| OCF (≈EBITDA) | $5.7bn | $7.8bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
