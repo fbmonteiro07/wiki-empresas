@@ -10,11 +10,11 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\DELL` (filings + trans
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $162.6bn | $196.0bn |
+| Revenue | $162.5bn | $196.2bn |
 | Gross profit | $28.6bn | $34.3bn |
 | Gross margin | 17.6% | 17.5% |
 | EBITDA | $16.6bn | $20.3bn |
-| EPS | $16.66 | $22.11 |
+| EPS | $16.66 | $22.12 |
 | Capex | $3.6bn | $4.0bn |
 | OCF (≈EBITDA) | $16.6bn | $20.3bn |
 

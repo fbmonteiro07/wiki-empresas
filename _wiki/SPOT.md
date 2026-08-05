@@ -7,12 +7,12 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\SPOT` (filings 20-F + 
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | €19.5bn | €22.4bn |
+| Revenue | €19.5bn | €22.5bn |
 | Gross profit | €6.5bn | €7.7bn |
 | Gross margin | 33.2% | 34.3% |
 | EBITDA | €3.0bn | €3.9bn |
-| EPS | €12.15 | €15.61 |
-| Capex | €47m | €44m |
+| EPS | €12.06 | €15.50 |
+| Capex | €48m | €46m |
 | OCF (≈EBITDA) | €3.0bn | €3.9bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
@@ -31,7 +31,19 @@ World's largest audio-streaming platform: **761M MAU** and **293M Premium Subscr
 | **Key suppliers** | Music majors — Universal, Sony, Warner (licenses + minimum-guarantee royalties); cloud/compute (Google Cloud) for streaming + AI inference |
 
 ## Current state (latest quarter)
-**Q1 FY26 (2026-04-28, prepared remarks):**
+**Q2 FY26 (reported 2026-08-04 BMO — press release + first takes; transcript not yet on file). A "quarter fine, guide light" print. Stock −3%, then reversed further intraday.** The shape: **MAUs missed the guide by a hair, Premium net adds beat, gross margin hit an all-time high for a Q2 — and the Q3 subscriber guide came in below consensus, which is what the market traded.**
+- **MAU 777M vs the 778M guide** — a ~1M miss (MS TMT desk · Tom Wigg, 2026-08-04).
+- **Premium net adds 300M total vs the 299M guide** — a small beat.
+- 🔴 **Q3 Premium net adds guided +5M vs consensus +6M** — the headline disappointment.
+- **Q3 margins guided down as expected but slightly more than hoped: −50bps q/q vs an expected −30-40bps.** ⚠️ **Offsetting, and the bulls' main point: gross margin hit an ALL-TIME HIGH for a Q2.**
+- **Ads underwhelmed**; MS's Sean Diffley nonetheless **reiterates Overweight**, underscoring **strong mid-teens revenue growth** and reading the **free tier as likely improved** (MS Research via desk, 2026-08-04).
+- **Merlin AI deal** framed as **"a tangible step toward fan-made covers and remixes"** building on the existing UMG deal — with the important nuance that **management does not need all majors nor all artists** to make it work (MS, 2026-08-04). JPM's Doug Anmuth headlines the same tension: **"Solid 2Q, But Lighter MAUs & Profit Outlook, w/Focus on Gross Margins, 2H Net Adds, & AI."**
+- **Live/ticketing: the LYV "Reserved" program for fan tickets is early but "going very well," and LYV upsized mid-run** (MS, 2026-08-04).
+- **The debate the print sets up, per Barclays' Kannan Venkateshwar: "Quarter and guidance likely to fuel debate on GROWTH NARRATIVE."** GS's Eric Sheridan and UBS both published same-morning first takes; **UBS's desk flagged a "SPOT REVERSAL" by midday** (UBS TMI · Christina Dwyer, 2026-08-04), i.e. the stock gave up an early move — consistent with a print where the in-quarter numbers were fine and the forward guide was not.
+- ⚠️ **Not captured in this ingest and worth pulling from the primary notes: absolute revenue, EPS, ARPU and the FY guide. The desk summaries above are KPI-and-reaction level only — treat the numbers as the subscriber/margin story, not a complete P&L read.**
+- **AI/model-selection colour from an unexpected source:** 22V's Dauvin Peterson filed **"Open source models — QWEN; Spotify earnings call commentary on AI adoption/model selection"** (2026-08-04) — i.e. Spotify's call was being read for **which models it deploys and how it chooses them**, a datapoint for the open-weight-vs-frontier debate rather than for SPOT itself. See [themes/tokenmaxxing](themes/tokenmaxxing.md).
+
+**Prior quarter — Q1 FY26 (2026-04-28, prepared remarks):**
 - **MAU 761M**, +10M q/q, beating guide by 2M; growth **+12% y/y**, accelerating from 11% in Q4. Outperformance led by Rest of World + North America on the enhanced free-tier rollout.
 - **Subscribers 293M**, +3M net, in line with guide. **"No surprises" on churn** from the January U.S. price increase.
 - **Revenue €4.5B, +14% y/y** (accel from +13% Q4). **Premium revenue ~+15%** on subs growth + **ARPU +5.7% y/y**. **Ad-Supported only ~+3%** — legacy direct-sales channel still "choppy"; **biddable/automated now >30% of ad revenue**; management expects ad growth to improve in 2H26.

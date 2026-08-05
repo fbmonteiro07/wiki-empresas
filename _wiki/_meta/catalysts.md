@@ -2,24 +2,31 @@
 
 _Generated 2026-08-04 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (6)
+## 📅 Upcoming (13)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
+| 2026-08-04 | ALAB | ~~**Q2-2026 print: ~early Aug 2026** — watch the $355–365M guide (+15–18% q/q), Scorpio X scale-up ramp, and confirmation Scorpio becomes #1 product line by Q4.~~ — **RESOLVED 2026-08-04**: revenue ** |
+| 2026-08-04 | AMD | ~~**Q2 FY26 print** (early Aug) against the $11.2B guide; gross-margin trajectory Q3→Q4 with MI450 mix-in.~~ — **RESOLVED 2026-08-04**: rev **$11.54bn** (beat the $11.2bn guide and the $11.3bn Street, |
 | 2026-08-04 | INTC | **🔴 Ibiden earnings call — 2026-08-04, "another important indicator for Intel's EMIB" (Fubon, 2026-08-03).** Fubon hears **Ibiden** (ASR: "Epident") *"is also very aggressive in expanding their substr |
+| 2026-08-04 | PLTR | ~~**Whether the Street re-rates off the raised FY guide (+82% y/y, from +71%)**~~ — **RESOLVED 2026-08-04: it did.** Stock **+30%** on the day; **DB upgraded to Buy**, **UBS raised PT to $220**. The m |
+| 2026-08-04 | SPCX | ~~**First post-IPO earnings** (Q2 2026 — **Aug 4**)~~ — **RESOLVED 2026-08-04: revenue $7.81bn (+92% y/y) vs Street $7.11bn; adj. EBITDA $3.5bn (+191%) vs ~$2bn; all three segments beat (Space $962m / |
+| 2026-08-04 | TSEM | ~~**Q2 2026 actuals vs. the $455M guide.**~~ — **RESOLVED 2026-08-04: $460M revenue (consensus $454M), EPS $0.88 (consensus $0.76); Q3 guided $520M vs $497M consensus.** |
 | 2026-08-05 | IFX | **2026-08-05 — FY3Q26 print** — MS expects an in-line print (order-book momentum, industrial recovery, AI-DC commentary); watch the FY26 >EUR 16bn / ~20% margin bridge and HV-auto commentary (MS, 2026 |
+| 2026-08-06 | NET | **🔴 Q2 FY26 print — THURSDAY 2026-08-06 AMC (date confirmed).** Guide $664–665M / +30% / EPS $0.27; first quarter to show the RIF flowing through opex and whether AE capacity growth actually re-accele |
+| 2026-08-06 | SPCX | 🔴 **2026-08-06 — THE LOCKUP. The only thing that matters near-term, and both houses say so.** **>930mn shares (~$100bn) release on Aug 6 — the first of 8 tranches unlocking ~4bn shares through January |
 | 2026-08-26 | NVDA | **Q2 FY27 print: 2026-08-26** (guided $91B). Watch hyperscale vs hyperscale-capex growth under new segmentation (Arcuri: becomes a debate if NVDA ever under-grows it). |
 | 2026-08-31 | TXN | **CFO transition:** Rafael Lizardi out 2026-08-01 → **Julie Knecht** (CAO, 25-yr veteran), advisory through 2026-08-31 (DB/Seymore, briefing 2026-06-03). |
 | 2026-09-11 | TER | **Q3 CY26 print (~late Oct 2026)** — first test of the re-cut 2H, and of whether the merchant-GPU/second-hyperscaler correlation converts into guided revenue. Quiet period begins **2026-09-11**; manag |
 | 2026-09-16 | ON | **2026-09-16 — onsemi Analyst Day** (Citi exp. ~Sep 13 print first) — the key event; watch for a raised long-term target model + SiC/800V framing (Citi, briefing 2026-06-15). |
 
-## ⏰ Passed — need a post-mortem (0)
+## ⏰ Passed — need a post-mortem (1)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| _none_ | | |
+| 2026-08-03 | AEIS | ~~2Q26 print (~early Aug): WF expects semi upside vs guide +DD% q/q and FY26 raises (semi to high-20s/30%, DC to >40%) (2026-07-01).~~ — **RESOLVED 2026-08-03: rev $574M / EPS $2.70 vs ~$540M/$2.22 ex |
 
 ## ✅ Resolved (42)
 

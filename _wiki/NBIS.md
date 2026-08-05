@@ -14,7 +14,7 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\NBIS` (20-F filings + 
 | Gross margin | 69.8% | 70.3% |
 | EBITDA | $1.3bn | $6.3bn |
 | EPS | $-3.64 | $-5.25 |
-| Capex | $22.6bn | $30.0bn |
+| Capex | $22.7bn | $30.3bn |
 | OCF (≈EBITDA) | $1.3bn | $6.3bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

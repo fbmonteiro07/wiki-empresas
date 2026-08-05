@@ -9,13 +9,13 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\QCOM` (10-K FY25, 10-Q
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $41.0bn | $47.2bn |
-| Gross profit | $22.3bn | $24.9bn |
-| Gross margin | 54.3% | 52.8% |
-| EBITDA | $13.2bn | $14.6bn |
-| EPS | $9.34 | $10.97 |
-| Capex | $1.7bn | $2.0bn |
-| OCF (≈EBITDA) | $13.2bn | $14.6bn |
+| Revenue | $40.9bn | $47.3bn |
+| Gross profit | $22.2bn | $24.8bn |
+| Gross margin | 54.2% | 52.5% |
+| EBITDA | $13.1bn | $14.6bn |
+| EPS | $9.26 | $10.88 |
+| Capex | $1.7bn | $2.1bn |
+| OCF (≈EBITDA) | $13.1bn | $14.6bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

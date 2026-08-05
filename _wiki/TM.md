@@ -9,7 +9,7 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\TM` (20-F + transcript
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | ¥52625.5bn | ¥54398.4bn |
+| Revenue | ¥52649.0bn | ¥54421.8bn |
 | Gross profit | — | — |
 | Gross margin | — | — |
 | EBITDA | ¥6032.7bn | ¥6841.5bn |

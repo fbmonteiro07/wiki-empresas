@@ -829,6 +829,56 @@ function buArchChart(W=560,H=IS_PPT?196:230){
   return `<svg class="chart" viewBox="0 0 ${W} ${H}" style="width:100%" role="img">${g}</svg>`;
 }
 
+/* ============ CAPEX IMPLÍCITO ATÉ 2030 — curve fan (tabela house fornecida 03-ago-26) ============ */
+/* Bottom_Up_Capex, aba "capex implícito" CY23→CY30E ($bn). Camadas CY26E→CY30E:
+   aceleradores 400→1,345 · CPUs/servidores 79→264 · memória direta 301→892 ·
+   rede 101→306 · infra P&C 65→190 · não-IT 235→927. */
+const H_FAN={
+  years:['CY23','CY24','CY25','CY26E','CY27E','CY28E','CY29E','CY30E'],
+  high:[166,315,528,1182,2015,2764,3326,3924],          /* = tabela house (teto da banda) */
+  low: [166,315,528,1135,1855,2400,2730,3000],          /* piso ILUSTRATIVO: abre até ~$3.0T em CY30 (−24%) */
+  histN:3,
+};
+function buFanChart(W=1180,H=IS_PPT?358:430){
+  const P={l:64,r:120,t:26,b:34};
+  const n=H_FAN.years.length;
+  const X=scaler(0,n-1,P.l,W-P.r), Y=scaler(0,4200,H-P.b,P.t);
+  let g='';
+  [0,1000,2000,3000,4000].forEach(t=>{g+=`<line class="gl" x1="${P.l}" x2="${W-P.r}" y1="${Y(t)}" y2="${Y(t)}"/><text class="tick" x="${P.l-8}" y="${Y(t)+4}" text-anchor="end">${t===0?'$0':'$'+(t/1000)+'T'}</text>`;});
+  H_FAN.years.forEach((y,i)=>{g+=`<text class="tick" x="${X(i)}" y="${H-P.b+18}" text-anchor="middle">${y}</text>`;});
+  /* Today marker (~ago-26, dentro de CY26) */
+  const xT=X(2)+(X(3)-X(2))*0.58;
+  g+=`<line x1="${xT}" y1="${P.t}" x2="${xT}" y2="${H-P.b}" stroke="var(--baseline)" stroke-width="1.4" stroke-dasharray="5 5"/>`;
+  g+=`<text class="anno" x="${xT+7}" y="${P.t+12}">Hoje</text>`;
+  /* banda (do último realizado até CY30E) */
+  const h0=H_FAN.histN-1;
+  let band=`M${X(h0)},${Y(H_FAN.high[h0])}`;
+  for(let i=h0+1;i<n;i++)band+=`L${X(i)},${Y(H_FAN.high[i])}`;
+  for(let i=n-1;i>=h0;i--)band+=`L${X(i)},${Y(H_FAN.low[i])}`;
+  band+='Z';
+  g+=`<path d="${band}" fill="var(--gold)" opacity=".16"/>`;
+  /* histórico sólido */
+  let ph='';
+  for(let i=0;i<=h0;i++)ph+=(i?'L':'M')+X(i).toFixed(1)+','+Y(H_FAN.high[i]).toFixed(1);
+  g+=`<path d="${ph}" fill="none" stroke="var(--gold)" stroke-width="3"/>`;
+  /* teto (house) tracejado + losangos; piso linha fina */
+  let pt2=`M${X(h0)},${Y(H_FAN.high[h0])}`, pl=`M${X(h0)},${Y(H_FAN.low[h0])}`;
+  for(let i=h0+1;i<n;i++){pt2+=`L${X(i)},${Y(H_FAN.high[i])}`; pl+=`L${X(i)},${Y(H_FAN.low[i])}`;}
+  g+=`<path d="${pt2}" fill="none" stroke="var(--gold)" stroke-width="2.6" stroke-dasharray="6 5"/>`;
+  g+=`<path d="${pl}" fill="none" stroke="var(--gold)" stroke-width="1.4" stroke-dasharray="2 4" opacity=".8"/>`;
+  /* marcadores: histórico = losango cheio; forecast teto = losango vazado */
+  const diamond=(x,y,r,fill,stroke)=>`<path d="M${x},${y-r}L${x+r},${y}L${x},${y+r}L${x-r},${y}Z" fill="${fill}" stroke="${stroke}" stroke-width="1.8"/>`;
+  H_FAN.years.forEach((yl,i)=>{
+    const v=H_FAN.high[i], hist=i<=h0;
+    g+=diamond(X(i),Y(v),5.5,hist?'var(--gold)':'var(--paper)','var(--gold)');
+    g+=`<circle cx="${X(i)}" cy="${Y(v)}" r="12" fill="transparent" data-tip="${esc(yl+': $'+fmt0(v)+'bn'+(hist?' (realizado no modelo)':' — teto da banda = bottom-up house')+(i>h0?' · piso: $'+fmt0(H_FAN.low[i])+'bn':''))}"/>`;
+    g+=`<text class="dl" x="${X(i)}" y="${Y(v)-11}" text-anchor="middle" style="font-size:11.5px">${v>=1000?('$'+(v/1000).toFixed(v<2000?2:1)+'T'):('$'+v+'B')}</text>`;});
+  g+=`<text class="dl" x="${X(n-1)+10}" y="${Y(H_FAN.low[n-1])+4}" style="fill:var(--gold); font-size:12px">~$3.0T</text>`;
+  g+=`<text class="anno" x="${X(n-1)+10}" y="${Y(H_FAN.low[n-1])+18}">piso da banda</text>`;
+  g+=`<text class="anno" x="${X(4)+6}" y="${Y(700)}" style="fill:var(--gold)">banda: teto = modelo house (bottom-up implícito) · piso ilustrativo (−24% em CY30)</text>`;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" style="width:100%" role="img">${g}</svg>`;
+}
+
 /* ============ CUSTO DO TOKEN (pesquisa de corpus, 03-ago-2026) ============ */
 /* "Preço mais barato para atingir um dado nível de capacidade" ($/Mtok, blended 3:1),
    agrupado por desempenho no GPQA-Diamond. Exponential View "State of the AI Economy
@@ -1442,6 +1492,17 @@ function buildDeck(){
       </div>
     </div>`,
     'Fonte: Bottom_Up_Capex_v3.xlsx (modelo house) via dashboard ai-capex-bottom-up, 27-jul-26. Escopo = indústria TODA (não só top-4): CY26E $902bn vs JPM top-4 $700–725bn — bases distintas; o cross-check certo é o guardrail acima (hyperscalers bottom-up $655bn CY26E vs modelo top-down $722bn = 0.91x; CY27 1.05x; CY28 1.00x). GW aqui = ADICIONADOS no ano (fluxo) — não misturar com GW instalados YE (slide 7d) nem GW online médio (slide 5f). Vintage 27-jul (o comparativo 7c/7d usa a aba Comp de 14-jul; top-4 YE28 125.8 vs 129.9 GW entre vintages).'));
+
+  /* 7g — CAPEX IMPLÍCITO ATÉ 2030 (curve fan) */
+  S.push(slide('7g · O capex implícito até 2030: a banda', `
+    <div class="lede" style="margin-bottom:4px">Estendendo o bottom-up até a década: o modelo house implica <b>$3.9T de capex de AI em CY30E</b> (teto da banda) — <b>~7.4x o CY25, ~49%/ano</b>. Mesmo o piso ilustrativo da banda, <b>~$3.0T</b>, ainda é <b>~5.7x em cinco anos (~41%/ano)</b>. A pergunta do mercado deixou de ser "se" e virou <b>a inclinação</b>.</div>
+    ${buFanChart()}
+    <div class="trow" style="grid-template-columns:1fr 1fr 1fr; margin-top:8px">
+      <div class="stile" style="padding:8px 12px"><div class="l">CY30E — teto (house)</div><div class="v" style="font-size:19px">$3.92T</div><div class="d" style="font-size:10.5px">aceleradores $1.35T · memória direta $892bn · não-IT $927bn · rede $306bn</div></div>
+      <div class="stile" style="padding:8px 12px"><div class="l">CY30E — piso da banda</div><div class="v" style="font-size:19px">~$3.0T</div><div class="d" style="font-size:10.5px">cenário ilustrativo (−24% vs house) — ainda ~41%/ano de CAGR 25→30</div></div>
+      <div class="stile" style="padding:8px 12px"><div class="l">Cross-check externo</div><div class="v" style="font-size:19px">$5.5T</div><div class="d" style="font-size:10.5px">JPM: capex de AI ACUMULADO até 2030 (16-jun) — o house acumula ~$13.7T no teto: a house está bem ACIMA da rua na década</div></div>
+    </div>`,
+    'Fonte do teto: modelo house Bottom_Up_Capex, aba "capex implícito bottom-up" CY23→CY30E (tabela fornecida 03-ago-26): $166bn → $315 → $528 → $1,182 → $2,015 → $2,764 → $3,326 → $3,924bn. Piso da banda = escolha ILUSTRATIVA (fecha em ~$3.0T em CY30, abrindo gradualmente a partir de hoje) — não é um cenário modelado. ESCOPO ≠ slide 7f: esta série inclui memória comprada direta (DDR5+NAND+HDD, $301bn CY26E) e CPUs/servidores general-purpose ($79bn) como camadas próprias — por isso CY26E $1,182bn aqui vs $902bn no 7f; não somar entre slides. História CY23–25 = realizado no modelo.'));
 
   /* 18/18b — FORWARD P/E PANELS (comp-dashboard grammar) */
   const peLede=`<div class="lede" style="margin-bottom:6px">De 30-jan a 31-jul, sete dos oito subiram 5–22% — com <b>P/E forward flat ou MENOR em seis dos oito</b>: o rally foi pago por estimativa, não por múltiplo. Contra a régua de 5 anos, <b>nenhum dos oito negocia acima de +0.2σ da própria média</b>: MSFT e AMZN estão em <b>−1σ</b>, META bem abaixo da média; GOOG é o único levemente acima (+0.2σ).</div>`;
