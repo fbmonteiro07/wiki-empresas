@@ -25,12 +25,20 @@ Adaptações aplicadas (as mesmas de clean_links() no build_ai_dashboards.py, + 
   • links "../" (quebrados no destino) removidos — defensivo, hoje não há nenhum;
   • comentário de procedência injetado no topo.
 
-Uso:  py "E:\Wiki Felipe empresas\_wiki\_tools\sync_rcloud.py"
+Uso:  py "E:\Wiki Felipe empresas\_wiki\_tools\sync_rcloud.py"                 # só a réplica da wiki
+      py "E:\Wiki Felipe empresas\_wiki\_tools\sync_rcloud.py" --publish-team  # + Capstone-Wiki (Pages)
 Só stdlib.
+
+--publish-team espelha em Capstone-Wiki/rcloud/index.html e JÁ DÁ commit+push no main.
+O push não é opcional por segurança: a rotina das 09:45 roda `git reset --hard origin/main`
+naquele clone, então arquivo não-commitado ali é destruído no dia seguinte. Mesmo padrão do
+publish_team() do refresh_memoria.py.
 """
 
 import os
 import re
+import shutil
+import subprocess
 import sys
 from datetime import date
 
@@ -38,9 +46,14 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 SRC = r"P:\Fernanda Neves\MarketData_PYTHON_CODES\Dashboards\Oficiais\rcloud.html"
 OUT = r"E:\Wiki Felipe empresas\_wiki\_dashboards\rcloud.html"
+TEAM = r"P:\Felipe Monteiro\US Equities\Capstone-Wiki"      # clone vivo do Pages do time
+TEAM_REL = "rcloud/index.html"
 
 NAV_OLD = '<a href="index.html">← Dashboard Principal</a>'
 NAV_NEW = '<a href="index.html">← Wiki dashboards</a>'
+# no Capstone-Wiki o dashboard vira rcloud/index.html, então "index.html" apontaria pra ele
+# mesmo — o link do hub tem que virar "../" (idem refresh_memoria.py)
+NAV_TEAM = '<a href="../">← Capstone Wiki</a>'
 
 
 def main():
@@ -88,6 +101,42 @@ def main():
     with open(OUT, "w", encoding="utf-8", newline="") as f:
         f.write(h)
     print(f"rcloud.html escrito ({len(h):,} chars) · snapshot {snapshot}\n  -> {OUT}")
+
+    if "--publish-team" in sys.argv:
+        publish_team(h)
+
+
+def _run(args, cwd=None):
+    return subprocess.run(args, cwd=cwd).returncode
+
+
+def publish_team(h):
+    """Espelha em Capstone-Wiki/rcloud/index.html e commita+pusha main se mudou."""
+    if not os.path.isdir(os.path.join(TEAM, ".git")):
+        print(f"  [AVISO] clone do Capstone-Wiki não encontrado em {TEAM} — team copy pulada.")
+        return
+    if NAV_NEW in h:
+        h = h.replace(NAV_NEW, NAV_TEAM)
+    else:
+        print("  [AVISO] link do hub não encontrado — team copy pode ter link quebrado.")
+
+    dest = os.path.join(TEAM, *TEAM_REL.split("/"))
+    os.makedirs(os.path.dirname(dest), exist_ok=True)
+    with open(dest, "w", encoding="utf-8", newline="") as f:
+        f.write(h)
+
+    _run(["git", "add", TEAM_REL], cwd=TEAM)
+    if subprocess.run(["git", "diff", "--cached", "--quiet", "--", TEAM_REL], cwd=TEAM).returncode == 0:
+        print("  team copy sem mudança — nada a commitar.")
+        return
+    msg = ("rcloud: Revenue das Clouds (réplica do dashboard da Fernanda)\n\n"
+           "Decomposição da receita das clouds — resultado, RPO (split OpenAI/Anthropic),\n"
+           "projeções Capstone vs consenso vs bogey, exposição aos labs, EBIT e capex/FCF.\n"
+           "Snapshot dos dados da origem; publicado por _wiki/_tools/sync_rcloud.py.\n\n"
+           "Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>")
+    if _run(["git", "commit", "-m", msg], cwd=TEAM) == 0:
+        _run(["git", "push", "origin", "main"], cwd=TEAM)
+        print("  team copy publicada -> https://fbmonteiro07.github.io/Capstone-Wiki/rcloud/")
 
 
 if __name__ == "__main__":
