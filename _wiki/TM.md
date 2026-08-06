@@ -5,17 +5,17 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\TM` (20-F + transcripts/QA + decks). No briefings roll-up nor equity calls (thin coverage). Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-05 · JPY
+### 📊 Consensus snapshot — BBG · asof 2026-08-06 · JPY
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | ¥52693.9bn | ¥54534.0bn |
+| Revenue | ¥52693.9bn | ¥54520.2bn |
 | Gross profit | — | — |
 | Gross margin | — | — |
-| EBITDA | ¥6026.9bn | ¥6771.1bn |
+| EBITDA | ¥5811.7bn | ¥6696.7bn |
 | EPS | — | — |
 | Capex | ¥2656.5bn | ¥3019.1bn |
-| OCF (≈EBITDA) | ¥6026.9bn | ¥6771.1bn |
+| OCF (≈EBITDA) | ¥5811.7bn | ¥6696.7bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

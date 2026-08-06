@@ -5,17 +5,17 @@
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\SNDK` (filings + transcripts) · `_briefings` (well-covered: NAND/memory). Master index: [../00_INDEX.md](00_INDEX.md). Theme: [HBM / Memory super-cycle](themes/hbm-memory.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-05 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-08-06 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $37.7bn | $57.6bn |
-| Gross profit | $30.7bn | $48.7bn |
-| Gross margin | 81.3% | 84.5% |
-| EBITDA | $28.2bn | $38.9bn |
-| EPS | $148.55 | $229.54 |
-| Capex | $366m | $470m |
-| OCF (≈EBITDA) | $28.2bn | $38.9bn |
+| Revenue | $37.8bn | $58.2bn |
+| Gross profit | $31.1bn | $49.5bn |
+| Gross margin | 82.3% | 85.0% |
+| EBITDA | $28.2bn | $40.4bn |
+| EPS | $152.78 | $240.33 |
+| Capex | $343m | $447m |
+| OCF (≈EBITDA) | $28.2bn | $40.4bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

@@ -5,15 +5,15 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\BKNG` (filings + transcripts) · sem equity calls, sem decks, sem briefing roll-up on disk. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-05 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-08-06 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $29.1bn | $31.8bn |
-| Gross profit | $29.1bn | $31.8bn |
+| Revenue | $29.0bn | $31.8bn |
+| Gross profit | $29.0bn | $31.8bn |
 | Gross margin | 100.0% | 100.0% |
 | EBITDA | $10.7bn | $12.4bn |
-| EPS | $10.31 | $12.26 |
+| EPS | $10.30 | $12.26 |
 | Capex | $421m | $475m |
 | OCF (≈EBITDA) | $10.7bn | $12.4bn |
 

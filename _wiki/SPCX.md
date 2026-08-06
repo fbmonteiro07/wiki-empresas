@@ -6,20 +6,24 @@
 _Wiki · generated 2026-06-29 · sources: IPO prospectus (424B4 2026-06-12 / S-1 2026-05-20, archived in `../SPCX/`) + FinTwit. **Newly public — IPO'd June 2026 (Nasdaq: SPCX).** Master index: [../INDEX.md](../INDEX.md). Themes: [ai-datacenter-power](themes/ai-datacenter-power.md) · [custom-asic-tpu](themes/custom-asic-tpu.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-05 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-08-06 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $41.7bn | $91.5bn |
-| Gross profit | — | $56.8bn |
-| Gross margin | — | 62.1% |
-| EBITDA | $19.0bn | $52.6bn |
-| EPS | $-0.99 | $1.33 |
-| Capex | $35.3bn | $135.6bn |
-| OCF (≈EBITDA) | $19.0bn | $52.6bn |
+| Revenue | $42.9bn | $98.0bn |
+| Gross profit | — | $61.7bn |
+| Gross margin | — | 63.0% |
+| EBITDA | $19.1bn | $57.6bn |
+| EPS | $-0.99 | $1.42 |
+| Capex | $37.5bn | $151.1bn |
+| OCF (≈EBITDA) | $19.1bn | $57.6bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
+
+> 🔴 **DO NOT CITE THE CAPEX LINE IN THE SNAPSHOT ABOVE — it is a known `estimates.json` CY-sum defect, reproduced on two independent BBG pulls (2026-08-05 and 2026-08-06).** The `CY2026` capex field reads **$37.5bn** but its own quarterly components sum to **$57.4bn** (Q1 $10.0bn actual + Q2 $18.4bn actual + Q3E $10.83bn + Q4E $18.19bn) — a **~$19.9bn** internal gap. `CY2027` capex reads **$151.1bn = 154% of** CY2027 revenue, with no quarterly components available to verify it — treat as **UNVERIFIED**. **Use sum-of-quarters for SPCX capex.** Every other line in the block is sound (the revenue CY-sum checks out to within ~$1bn). Tracked as open item #2 in [reconciliation-2026-08-05](_meta/reconciliation-2026-08-05.md).
+>
+> 📌 **Live consensus marks, 2026-08-06:** Q3-26E capex **$10.83bn** vs management's ~**$18.4bn** guide (**−41%**; street high $14.51bn is still 21% below) · Q4-26E capex **$18.19bn** (−1.1% vs guide) · Q4-26E revenue **$18.71bn** · consensus PT **$222.43** vs spot **$111.78** (**+99.0%**), rating 4.41/5. **The Street absorbed the capex guide into Q4 alone and took Q3 down** — see [reconciliation-2026-08-05](_meta/reconciliation-2026-08-05.md) ①.
 
 > ⚠️ **Page corrected 2026-06-29:** SpaceX is **not private** — it completed the largest IPO on record (~$75B raised) and absorbed **xAI** (Grok, X, AI compute) in Feb 2026. The earlier "private, single-tweet" version of this page was wrong; superseded facts are in the [Changelog](#changelog).
 

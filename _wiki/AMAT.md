@@ -5,17 +5,17 @@
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\AMAT` (10-K/10-Q + transcripts) · `_equity_calls` (compiled AMAT dossier, 13 calls). No `_briefings\by-ticker\AMAT.md` and no Outlook sell-side notes available this session (see Sources). Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-05 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-08-06 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $36.3bn | $46.3bn |
-| Gross profit | $18.1bn | $23.4bn |
+| Gross profit | $18.2bn | $23.5bn |
 | Gross margin | 50.0% | 50.6% |
-| EBITDA | $12.7bn | $17.5bn |
-| EPS | $13.71 | $19.02 |
+| EBITDA | $12.8bn | $17.5bn |
+| EPS | $13.74 | $19.05 |
 | Capex | $2.3bn | $2.3bn |
-| OCF (≈EBITDA) | $12.7bn | $17.5bn |
+| OCF (≈EBITDA) | $12.8bn | $17.5bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
