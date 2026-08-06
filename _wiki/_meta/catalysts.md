@@ -2,25 +2,30 @@
 
 _Generated 2026-08-05 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (7)
+## 📅 Upcoming (12)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-08-05 | IFX | **2026-08-05 — FY3Q26 print** — MS expects an in-line print (order-book momentum, industrial recovery, AI-DC commentary); watch the FY26 >EUR 16bn / ~20% margin bridge and HV-auto commentary (MS, 2026 |
+| 2026-08-05 | IFX | ~~**2026-08-05 — FY3Q26 print** — MS expects an in-line print; watch the FY26 >EUR 16bn / ~20% margin bridge and HV-auto commentary.~~ — **RESOLVED 2026-08-05**: revenue **EUR 4,172m (+9.4% q/q, cons. |
+| 2026-08-05 | SHOP | ~~**Q2 FY26 print** — Watch: GMV growth into tougher comps, attach-rate/Payments penetration, AI/token COGS trajectory vs JPM's ~160bps 2026 Sub-GM model.~~ — **RESOLVED 2026-08-05 (BMO)**: **GMV $116 |
+| 2026-08-05 | SNDK | ~~**Q4 FY26 print** (fiscal year-end June; reported ~Aug-2026) — vs guide rev $7.75–8.25B / GM 79–81% / EPS $30–33.~~ — **RESOLVED 2026-08-05**: rev **$8.97bn** / GM **84.6%** / EPS **$39.25**, beatin |
+| 2026-08-05 | UBER | ~~**Q2 FY26 print** — watch US Mobility acceleration confirmation + insurance leverage.~~ — **RESOLVED 2026-08-05 (BMO)**: GBs **$58bn, +22% FXN** (above the high end of the 18-22% guide), **Mobility  |
+| 2026-08-05 | WDC | ~~**Q4 FY26 print** (**8/5 AMC**): guide $3.65B / 51-52% GM / $3.25 EPS~~ — **RESOLVED 2026-08-05**: rev **$3.75bn** / GM **54.4%** / EPS **$3.56**, beating the guide on all three and beating the Stre |
 | 2026-08-06 | NET | **🔴 Q2 FY26 print — THURSDAY 2026-08-06 AMC (date confirmed).** Guide $664–665M / +30% / EPS $0.27; first quarter to show the RIF flowing through opex and whether AE capacity growth actually re-accele |
 | 2026-08-06 | SPCX | 🔴 **2026-08-06 — THE LOCKUP. The only thing that matters near-term, and both houses say so.** **>930mn shares (~$100bn) release on Aug 6 — the first of 8 tranches unlocking ~4bn shares through January |
+| 2026-08-13 | SNDK | **🆕 SanDisk INVESTOR DAY — 2026-08-13, 9am ET webcast. This is now the live catalyst, not the print.** Management explicitly teased **HBF timeline/roadmap, KV-cache sizing, and other new products/oppo |
 | 2026-08-26 | NVDA | **Q2 FY27 print: 2026-08-26** (guided $91B). Watch hyperscale vs hyperscale-capex growth under new segmentation (Arcuri: becomes a debate if NVDA ever under-grows it). |
 | 2026-08-31 | TXN | **CFO transition:** Rafael Lizardi out 2026-08-01 → **Julie Knecht** (CAO, 25-yr veteran), advisory through 2026-08-31 (DB/Seymore, briefing 2026-06-03). |
 | 2026-09-11 | TER | **Q3 CY26 print (~late Oct 2026)** — first test of the re-cut 2H, and of whether the merchant-GPU/second-hyperscaler correlation converts into guided revenue. Quiet period begins **2026-09-11**; manag |
 | 2026-09-16 | ON | **2026-09-16 — onsemi Analyst Day** (Citi exp. ~Sep 13 print first) — the key event; watch for a raised long-term target model + SiC/800V framing (Citi, briefing 2026-06-15). |
 
-## ⏰ Passed — need a post-mortem (0)
+## ⏰ Passed — need a post-mortem (1)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| _none_ | | |
+| 2026-07-16 | UBER | **🆕 Both bulge houses are restricted, so the published-PT tape is thin.** **MS rating/PT = NA since 2026-07-16** (financial advisor to Uber on the Delivery Hero offer, disclosed in the 08-05 note); ** |
 
 ## ✅ Resolved (50)
 

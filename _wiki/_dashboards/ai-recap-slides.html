@@ -13,7 +13,7 @@
     --txt:#16181a; --ink:#16181a; --ink2:#3f4750; --mut:#6b7480;
     --line:#e3e6ea; --grid:#e3e6ea; --baseline:#c6ccd3;
     --blue:#0F6290; --gold:#C77A0F; --green:#1F9D6B; --purple:#6B5CA5;
-    --pink:#B5306B; --red:#C0392B; --gray:#5B6573; --rest:#9AA7B5;
+    --pink:#B5306B; --red:#C0392B; --gray:#5B6573; --rest:#9AA7B5; --cyan:#1B7F94;
     --acc:#0F6290; --up:#1e7d3c; --dn:#c0392b; --good:#1e7d3c; --bad:#c0392b; --warnc:#b45309;
     --hard:#0e7a3d; --partial:#2a5fb0; --est:#9a6a00;
     --pet:#0F6290; --org:#C77A0F; --pur:#6B5CA5; --steel:#5B6573; --surface:#ffffff;
@@ -782,45 +782,49 @@ const H_RC={
   goog:{nonAI:[31375,40788,53024,68932,89611],aiLabs:[1299,4155,26244,55895,95978],aiOther:[112,1789,5367,21467,64400]},
 };
 const H_LABS={
+  ind:{openai:[4250,19423,72518,122939,210441],anthropic:[1512,7073,45807,109417,175524],gemini:[176,1000,5404,16875,43125]},
   msft:{openai:[4250,12897,33330,56629,100970],anthropic:[0,0,6349,27064,53479],gemini:[0,0,0,0,0]},
   aws:{openai:[0,0,4768,12610,29221],anthropic:[390,3918,21785,47250,74109],gemini:[0,0,0,0,0]},
   goog:{openai:[0,0,1500,2250,3250],anthropic:[1122,3155,17673,35103,47936],gemini:[176,1000,5404,16875,43125]},
 };
-/* economics_industria.html — per-GW economics + resumo + comparativo (aba Comp, 14-jul-26) */
-const H_PGW={chips:[17649,18195,18767,21175,25303],net:[4412,5074,6596,8575,10290],oth:[10866,10950,11936,13366,14894]}; /* NVDA-class chip capex/GW */
-const H_RESUMO={capexTotal:[233864,396261,901599,1733854,2584253],gwOnlineAvg:[3.0,9.7,22.5,46.8,88.6],gwEop:[11,24,51,98,162],receitaAi:[38687,133930,304675,691219,1201733],chips:[9819,10126,15449,21385,22700]};
-const H_CAPEX={ /* [CY26,CY27,CY28] $bn */
-  'Google':{voce:[189.6,308.3,439.0],ms:[190,350,375],bofa:[195,290,330],cons:[186.6,246.1,261.8],bogey:[203.0,304.7,null]},
-  'Amazon':{voce:[216.7,292.7,420.6],ms:[218,308,318],bofa:[201.2,275.7,325.8],cons:[199.7,231.4,237.4],bogey:[210.0,290.7,null]},
-  'Microsoft':{voce:[191.5,280.9,326.8],ms:[190,276,344],bofa:[190,276,344],cons:[180.7,200.8,211.6],bogey:[null,260.2,null]},
-  'Meta':{voce:[141.4,221.5,352.6],ms:[145,225,250],bofa:[145,185,210],cons:[134.9,165.2,181.8],bogey:[155.0,237.5,null]},
+const H_RC_BASE23_IND={nonAI:162087,aiLabs:0,aiOther:7071}; /* CY23 base — âncora do crescimento a/a de CY24 */
+/* Resumo|Clouds, bloco "Receita que as Clouds fazem com os Labs" por tipo × todos-os-labs × Indústria — NÃO fecha 1:1 com H_RC (linha check da planilha ~1.17x); mesma ressalva do rcloud.html */
+const H_LABEXP_IND={api:[1446,6315,33887,93107,210579],infer:[3000,11410,48306,97279,156731],trein:[889,7775,39455,71000,110000],outros:[850,2800,9121,16568,30391]};
+/* per-GW economics + resumo + comparativo — AI Model "pós spcx" (Modelos oficiais, 05-ago-26): Comp + Resumo|Total + Economics GW */
+const H_PGW={chips:[17649,18195,18767,21396,25303],net:[4412,5074,6596,8575,10290],oth:[10866,10950,11936,13466,14894]}; /* NVDA-class chip capex/GW (CY27 pós-spcx; demais = dashboard 27-jul) */
+const H_RESUMO={capexTotal:[233864,396261,901599,1885413,2913099],gwOnlineAvg:[3.0,9.7,22.5,47.2,91.4],gwEop:[11.1,24.1,51.1,101.8,171.3],receitaAi:[38687,125033,305491,682741,1202681],chips:[9819,10126,15449,22385,23700]}; /* AI Model pós-spcx, Resumo|Total (05-ago) */
+const H_CAPEX={ /* [CY26,CY27,CY28] $bn — AI Model pós-spcx, aba Comp (05-ago-26) */
+  'Google':{voce:[195.2,376.1,483.4],ms:[190,350,375],bofa:[195,290,330],cons:[186.6,246.1,261.8],bogey:[203.0,304.7,null]},
+  'Amazon':{voce:[175.0,286.3,360.3],ms:[218,308,318],bofa:[197.8,273.0,323.0],cons:[199.7,231.4,237.4],bogey:[210.0,290.7,null]},
+  'Microsoft':{voce:[170.2,284.2,355.0],ms:[190,276,344],bofa:[190,276,344],cons:[180.7,200.8,211.6],bogey:[200.0,260.2,null]},
+  'Meta':{voce:[141.4,245.6,351.8],ms:[145,225,250],bofa:[145,185,210],cons:[134.9,165.2,181.8],bogey:[155.0,270.0,null]},
 };
-const H_CAPEX_TOT={voce:[739.2,1103.4,1539.1],ms:[743,1159,1287],bofa:[731.2,1026.7,1209.8],cons:[701.9,843.5,892.6]};
-const H_GW={ /* YE installed GW 2024..2028 */
-  Google:{voce:[5.0,8.05,15.48,25.81,37.63],ms:[null,5.0,11.1,20.2,31.6],media:[4.98,6.53,11.32,18.24,27.37]},
-  Amazon:{voce:[9.0,12.8,18.53,26.72,39.58],ms:[null,13.8,19.8,27.8,35.8],media:[10.2,14.03,19.98,27.31,34.36]},
-  Microsoft:{voce:[5.0,7.86,13.13,20.0,28.23],ms:[null,7.5,10.3,14.5,20.3],media:[6.3,8.2,11.5,16.35,21.4]},
-  Meta:{voce:[2.82,4.56,8.21,14.41,24.43],ms:[null,3.5,8.4,13.8,21.2],media:[4.75,5.33,9.12,13.61,18.92]},
+const H_CAPEX_TOT={voce:[681.9,1192.2,1550.5],ms:[743,1159,1287],bofa:[727.8,1024.0,1207.0],cons:[701.9,843.5,892.6]};
+const H_GW={ /* YE installed GW 2024..2028 — AI Model pós-spcx, aba Comp */
+  Google:{voce:[5.0,8.0,14.5,25.6,36.3],ms:[null,5.0,11.1,20.2,31.6],media:[4.98,6.53,11.32,18.24,27.37]},
+  Amazon:{voce:[9.0,12.9,18.5,27.1,38.4],ms:[null,13.8,19.8,27.8,35.8],media:[10.2,14.03,19.98,27.31,34.36]},
+  Microsoft:{voce:[5.0,7.8,12.9,20.1,27.9],ms:[null,7.5,10.3,14.5,20.3],media:[6.3,8.2,11.5,16.35,21.4]},
+  Meta:{voce:[2.8,4.6,8.2,14.8,24.1],ms:[null,3.5,8.4,13.8,21.2],media:[4.75,5.33,9.12,13.61,18.92]},
 };
-const H_IMPL={ /* capex/GW $bn, [CY26,27,28], v=house, b=benchmark */
-  'Google':{v:[28.2,30.8,35.3],b:[36.7,34.9,38.4],src:'BofA'},
-  'Amazon':{v:[29.9,31.0,30.3],b:[24.9,26.6,29.8],src:'BofA'},
-  'Meta':{v:[31.0,34.3,34.1],b:[45.4,43.1,47.4],src:'BofA'},
-  'Microsoft':{v:[35.8,40.2,39.5],b:[null,null,null],src:'—'},
-  'NVDA (chips)':{v:[36.2,41.7,42.0],b:[39.0,49.0,49.5],src:'MS'},
+const H_IMPL={ /* capex/GW $bn, [CY26,27,28], v=house, b=benchmark — pós-spcx */
+  'Google':{v:[29.5,32.5,40.1],b:[36.7,34.9,38.4],src:'BofA'},
+  'Amazon':{v:[30.8,33.3,34.1],b:[24.9,26.6,29.8],src:'BofA'},
+  'Meta':{v:[31.6,35.8,37.7],b:[45.4,43.1,47.4],src:'BofA'},
+  'Microsoft':{v:[36.9,42.0,47.1],b:[null,null,null],src:'—'},
+  'NVDA (chips)':{v:[37.3,43.4,50.8],b:[39.0,49.0,49.5],src:'MS'},
 };
-const H_SRC='Modelo house Capstone (Bottom-up Capex v3; comparativo = aba Comp, 14-jul-26) via dashboards Oficiais — pipeline MarketData (Fernanda Neves), atualizado 03-ago-2026. Números HOUSE, não consenso; "bogeys" = buyside.';
+const H_SRC='Modelo house Capstone — AI Model "pós spcx" (Modelos oficiais, lido 05-ago-26), aba Comp. Números HOUSE, não consenso; "bogeys" = buyside. Vintage anterior (aba Comp 14-jul via dashboards Oficiais) substituído.';
 
 /* ============ CAPEX BOTTOM-UP (dashboard ai-capex-bottom-up, 27-jul-26; Bottom_Up_Capex_v3.xlsx) ============ */
-const H_BU={
+const H_BU={ /* AI Model pós-spcx, Resumo|Total (05-ago) */
   years:['CY25','CY26E','CY27E','CY28E'],
-  chipsM:[10.126,15.449,21.385,22.700],
-  stack:{chips:[190.171,399.900,692.003,992.480],network:[65.260,178.576,407.185,650.415],other:[140.830,323.122,634.666,941.359]},
-  capex:[396.261,901.599,1733.854,2584.253],
-  gwAdded:[12.861,27.072,47.483,63.205],
-  capexPerGw:[30.811,33.304,36.515,40.886],
-  hyperModel:[410.130,722.177,1044.907,1426.413],
-  hyperBottom:[334.102,655.009,1098.504,1426.413],
+  chipsM:[10.126,15.449,22.385,23.700],
+  stack:{chips:[190.171,399.900,767.003,1157.436],network:[65.260,178.576,435.135,715.097],other:[140.830,323.122,683.276,1040.565]},
+  capex:[396.261,901.599,1885.413,2913.099],
+  gwAdded:[13.0,27.0,50.7,69.5],
+  capexPerGw:[30.5,33.4,37.2,41.9],
+  hyperModel:[410.130,718.430,1066.606,1550.464],
+  hyperBottom:[336.421,681.879,1192.164,1550.464],
   jpm:[[410,410],[700,725],[1100,1100],[null,null]],
   arch:{ 'NVIDIA GPU':[34.219,37.299,43.116,50.487],'Google TPU':[24.835,27.729,31.662,40.062],
          'Trainium':[18.668,21.545,25.178,27.809],'AMD GPU':[27.048,32.820,35.044,35.307],'Meta MTIA':[24.373,25.551,32.492,38.714] },
@@ -852,8 +856,13 @@ const H_FAN={
   high:[166,315,528,1182,2015,2764,3326,3924],          /* = tabela house (teto da banda) */
   low: [166,315,528,1135,1855,2400,2730,3000],          /* piso ILUSTRATIVO: abre até ~$3.0T em CY30 (−24%) */
   histN:3,
+  /* EBITDA Big-4 (proxy de geração de caixa): CY27/28 = consenso BBG BEst (asof 31-jul,
+     _data/hyperscaler_revisions: MSFT 262+GOOG 296+META 154+AMZN 277 = 987; 28 = 1.238);
+     CY29/30 = EXTRAPOLAÇÃO no growth do consenso 27→28 (+25.4%/ano). */
+  ebitda:[null,null,null,null,987,1238,1553,1948],
+  ebN:5, /* índice do último ponto de consenso (CY28E) */
 };
-function buFanChart(W=1180,H=IS_PPT?358:430){
+function buFanChart(W=1180,H=IS_PPT?322:430){
   const P={l:64,r:120,t:26,b:34};
   const n=H_FAN.years.length;
   const X=scaler(0,n-1,P.l,W-P.r), Y=scaler(0,4200,H-P.b,P.t);
@@ -887,9 +896,29 @@ function buFanChart(W=1180,H=IS_PPT?358:430){
     g+=diamond(X(i),Y(v),5.5,hist?'var(--gold)':'var(--paper)','var(--gold)');
     g+=`<circle cx="${X(i)}" cy="${Y(v)}" r="12" fill="transparent" data-tip="${esc(yl+': $'+fmt0(v)+'bn'+(hist?' (realizado no modelo)':' — teto da banda = bottom-up house')+(i>h0?' · piso: $'+fmt0(H_FAN.low[i])+'bn':''))}"/>`;
     g+=`<text class="dl" x="${X(i)}" y="${Y(v)-11}" text-anchor="middle" style="font-size:11.5px">${v>=1000?('$'+(v/1000).toFixed(v<2000?2:1)+'T'):('$'+v+'B')}</text>`;});
-  g+=`<text class="dl" x="${X(n-1)+10}" y="${Y(H_FAN.low[n-1])+4}" style="fill:var(--gold); font-size:12px">~$3.0T</text>`;
-  g+=`<text class="anno" x="${X(n-1)+10}" y="${Y(H_FAN.low[n-1])+18}">piso da banda</text>`;
-  g+=`<text class="anno" x="${X(4)+6}" y="${Y(700)}" style="fill:var(--gold)">banda: teto = modelo house (bottom-up implícito) · piso ilustrativo (−24% em CY30)</text>`;
+  g+=`<text class="dl" x="${X(n-1)-10}" y="${Y(H_FAN.low[n-1])+20}" text-anchor="end" style="fill:var(--gold); font-size:12px">piso da banda ~$3.0T</text>`;
+  g+=`<text class="anno" x="${X(3)+6}" y="${Y(3650)}" style="fill:var(--gold)">banda: teto = modelo house (bottom-up implícito) · piso ilustrativo (−24% em CY30)</text>`;
+  /* EBITDA Big-4 (proxy de caixa) — consenso sólido-tracejado, extrapolação pontilhada */
+  const eb=H_FAN.ebitda, i0=eb.findIndex(v=>v!=null);
+  let pe1='',pe2='';
+  for(let i=i0;i<=H_FAN.ebN;i++)pe1+=(i===i0?'M':'L')+X(i).toFixed(1)+','+Y(eb[i]).toFixed(1);
+  for(let i=H_FAN.ebN;i<n;i++)pe2+=(i===H_FAN.ebN?'M':'L')+X(i).toFixed(1)+','+Y(eb[i]).toFixed(1);
+  g+=`<path d="${pe1}" fill="none" stroke="var(--blue)" stroke-width="2.6" stroke-dasharray="6 5"/>`;
+  g+=`<path d="${pe2}" fill="none" stroke="var(--blue)" stroke-width="1.8" stroke-dasharray="2 4"/>`;
+  eb.forEach((v,i)=>{ if(v==null)return;
+    const cons=i<=H_FAN.ebN;
+    g+=diamond(X(i),Y(v),5,cons?'var(--blue)':'var(--paper)','var(--blue)');
+    g+=`<circle cx="${X(i)}" cy="${Y(v)}" r="11" fill="transparent" data-tip="${esc(H_FAN.years[i]+': EBITDA Big-4 $'+fmt0(v)+'bn — '+(cons?'consenso BBG BEst (asof 31-jul-26)':'extrapolação a +25.4%/ano (growth do consenso 27→28) — ESTIMATIVA'))}"/>`;
+    g+=`<text class="dl" x="${X(i)}" y="${Y(v)+20}" text-anchor="middle" style="font-size:11px; fill:var(--blue)">${v>=1000?'$'+(v/1000).toFixed(2)+'T':'$'+v+'B'}</text>`;});
+  g+=`<circle cx="${X(i0)-9}" cy="${Y(eb[i0])-1}" r="0"/>`;
+  g+=`<text class="dl" x="${X(i0)-8}" y="${Y(eb[i0])+4}" text-anchor="end" style="fill:var(--blue); font-size:11.5px">EBITDA Big-4</text>`;
+  /* gap bracket em CY30 */
+  const xg=X(n-1)+34;
+  g+=`<line x1="${xg}" y1="${Y(H_FAN.high[n-1])}" x2="${xg}" y2="${Y(eb[n-1])}" stroke="var(--red)" stroke-width="1.6"/>`;
+  g+=`<line x1="${xg-4}" y1="${Y(H_FAN.high[n-1])}" x2="${xg+4}" y2="${Y(H_FAN.high[n-1])}" stroke="var(--red)" stroke-width="1.6"/>`;
+  g+=`<line x1="${xg-4}" y1="${Y(eb[n-1])}" x2="${xg+4}" y2="${Y(eb[n-1])}" stroke="var(--red)" stroke-width="1.6"/>`;
+  g+=`<text x="${xg+8}" y="${Y((H_FAN.high[n-1]+eb[n-1])/2)-2}" style="font-size:11.5px; font-weight:700; fill:var(--red)">gap</text>`;
+  g+=`<text x="${xg+8}" y="${Y((H_FAN.high[n-1]+eb[n-1])/2)+12}" style="font-size:11px; fill:var(--red)">~$2.0T</text>`;
   return `<svg class="chart" viewBox="0 0 ${W} ${H}" style="width:100%" role="img">${g}</svg>`;
 }
 
@@ -1111,6 +1140,56 @@ function houseVsBars({groups,series,W=1180,H=380,unit='B',ytick='$'}){
   return `<svg class="chart" viewBox="0 0 ${W} ${H}" style="width:100%" role="img">${g}</svg>`;
 }
 
+/* ---- 100%-stacked mix bars (rcloud "Exposição das Clouds aos Labs" grammar) ---- */
+/* replicates leRev()/leType()/leShare()/leDelta() from rcloud.html exactly (entity=ind, lab=total) */
+function labExpCalc(){
+  const ks=['openai','anthropic','gemini'], n=H_YEARS.length;
+  const d=H_RC.ind, rl=H_LABS.ind, b=H_RC_BASE23_IND;
+  const nn=d.nonAI.map(v=>Math.max(0,v)), ao=d.aiOther.map(v=>Math.max(0,v)), al=d.aiLabs.map(v=>Math.max(0,v));
+  const tot=nn.map((v,i)=>v+ao[i]+al[i]), resto=nn.map((v,i)=>v+ao[i]);
+  const split={};
+  ks.forEach(k=>split[k]=[]);
+  for(let i=0;i<n;i++){const s=ks.reduce((a,k)=>a+Math.max(0,rl[k][i]),0);
+    ks.forEach(k=>split[k].push(s>0?al[i]*Math.max(0,rl[k][i])/s:0));}
+  const labTot=tot.map((t,i)=>t-resto[i]);
+  const bTot=b.nonAI+b.aiLabs+b.aiOther, bRest=b.nonAI+b.aiOther;
+  const delta=(arr,base)=>arr.map((v,i)=>i===0?(base==null?null:v-base):v-arr[i-1]);
+  const share=(num,den)=>num.map((v,i)=>(den[i]&&Math.abs(den[i])>1e-9)?v/den[i]*100:null);
+  const dTot=delta(tot,bTot), dResto=delta(resto,bRest);
+  const dSplit=Object.fromEntries(ks.map(k=>[k,delta(split[k],0)]));
+  const dLab=delta(labTot,b.aiLabs);
+  const tks=['api','infer','trein','outros'], tv=H_LABEXP_IND;
+  const totL=tv.api.map((_,i)=>tks.reduce((a,k)=>a+tv[k][i],0));
+  const dl=Object.fromEntries(tks.map(k=>[k,delta(tv[k],0)]));
+  const dTotL=delta(totL,0);
+  return {tot,resto,split,labTot,dTot,dResto,dSplit,dLab,
+    c1:{openai:share(split.openai,tot),anthropic:share(split.anthropic,tot),gemini:share(split.gemini,tot),resto:share(resto,tot)},
+    c2:{openai:share(dSplit.openai,dTot),anthropic:share(dSplit.anthropic,dTot),gemini:share(dSplit.gemini,dTot),resto:share(dResto,dTot)},
+    c3:{api:share(tv.api,totL),infer:share(tv.infer,totL),trein:share(tv.trein,totL),outros:share(tv.outros,totL)},
+    c4:{api:share(dl.api,dTotL),infer:share(dl.infer,dTotL),trein:share(dl.trein,dTotL),outros:share(dl.outros,dTotL)},
+    totL,dTotL,val:tv,dl};
+}
+function pctStack100(cats,segs,W=565,H=250){
+  const P={l:34,r:6,t:20,b:24};
+  const Y=scaler(0,100,H-P.b,P.t);
+  const bandW=(W-P.l-P.r)/cats.length, barW=Math.min(70,bandW-16);
+  let g='';
+  [0,25,50,75,100].forEach(t=>{g+=`<line class="gl" x1="${P.l}" x2="${W-P.r}" y1="${Y(t)}" y2="${Y(t)}"/><text class="tick" x="${P.l-6}" y="${Y(t)+3.5}" text-anchor="end" style="font-size:10px">${t}%</text>`;});
+  cats.forEach((c,i)=>{
+    const x=P.l+bandW*i+(bandW-barW)/2;
+    let y0=Y(0);
+    segs.forEach(s=>{
+      const v=s.pct[i]; if(v==null||v<=0)return;
+      const hpx=Y(0)-Y(v); y0-=hpx;
+      const nomTip=s.nom?`\n${leBnFmt(s.nom[i])}`:'';
+      g+=`<rect x="${x.toFixed(1)}" y="${y0.toFixed(1)}" width="${barW}" height="${Math.max(0,hpx-1).toFixed(1)}" fill="${s.col}" data-tip="${esc(s.name+' — '+c+': '+v.toFixed(1)+'%'+nomTip)}"/>`;
+      if(hpx>=13)g+=`<text x="${x+barW/2}" y="${y0+hpx/2+3.5}" text-anchor="middle" style="font-size:${hpx>=19?'10.5px':'9px'}; font-weight:650; fill:${s.dark?'#0b1018':'#eef2f8'}">${Math.round(v)}%</text>`;});
+    g+=`<text class="tick" x="${x+barW/2}" y="${H-P.b+18}" text-anchor="middle" style="font-size:11px">${c}</text>`;});
+  g+=`<line class="bl" x1="${P.l}" x2="${W-P.r}" y1="${Y(0)}" y2="${Y(0)}"/><line class="bl" x1="${P.l}" x2="${W-P.r}" y1="${Y(100)}" y2="${Y(100)}" opacity=".35"/>`;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" style="width:100%" role="img">${g}</svg>`;
+}
+const leBnFmt=v=>v==null?'–':(v<0?'-$':'$')+(Math.abs(v)>=10000?fmt0(Math.abs(v)/1000):fmt1(Math.abs(v)/1000))+'bn';
+
 /* ---- GW mini panel (house vs MS vs média) ---- */
 function gwPanel(name,W=565,H=200){
   const d=H_GW[name], P={l:44,r:96,t:24,b:24};
@@ -1134,6 +1213,80 @@ function gwPanel(name,W=565,H=200){
   g+=`<text class="anno" x="${X(4)+8}" y="${Y(d.media[4])+4}">${fmt1(d.media[4])} média</text>`;
   g+=`<text x="${P.l}" y="14" style="font-size:13.5px; font-weight:750; fill:var(--ink)">${name}</text>`;
   return `<svg class="chart" viewBox="0 0 ${W} ${H}" style="width:100%" role="img">${g}</svg>`;
+}
+
+/* ============ INTERACTIVE SIMULATORS (dashboard skin only — PPT skin keeps the static tables) ============ */
+const IDX_AGG_BN=31100; /* S&P500 ~$19.4T + R2000 ~$2.3T + STOXX600 ~$9.4T, BBG 31-jul-26 (mesma base do slide 6b) */
+function simCtl(id,lb,min,max,step,val){
+  return `<div class="simctl"><div class="simlb"><span>${lb}</span><b id="${id}-v"></b></div>
+    <input type="range" id="${id}" min="${min}" max="${max}" step="${step}" value="${val}"></div>`;
+}
+function tamSim(){
+  return `<div class="simwrap">
+    <div class="simtitle"><span>Simulador — arraste os controles</span><span class="simreset" data-sim="tam">voltar ao base 500M × $100</span></div>
+    <div class="simgrid">
+      ${simCtl('tam-u','Usuários pagantes (M)',50,1500,25,500)}
+      ${simCtl('tam-p','Preço por usuário/mês ($)',10,300,5,100)}
+    </div>
+    <div class="simout">
+      <div class="stile"><div class="l">TAM anual</div><div class="v" id="tam-o1" style="color:var(--gold); font-size:27px">—</div><div class="d" id="tam-d1"></div></div>
+      <div class="stile"><div class="l">% da receita listada</div><div class="v" id="tam-o2">—</div><div class="d">÷ ~$31.1T — S&P500 + R2000 + STOXX 600, CY26E (BBG 31-jul)</div></div>
+      <div class="stile"><div class="l">× o complexo de labs hoje</div><div class="v" id="tam-o3">—</div><div class="d">÷ ~$100B de ARR combinado dos frontier labs (SemiAnalysis 08-jul)</div></div>
+    </div>
+  </div>`;
+}
+function roicSim(){
+  return `<div class="simwrap">
+    <div class="simtitle"><span>Simulador — a mecânica do Model 2 ao vivo</span><span class="simreset" data-sim="rs">voltar ao base MS</span></div>
+    <div class="simgrid s5">
+      ${simCtl('rs-inf','% capacidade em inference',40,85,1,65)}
+      ${simCtl('rs-tps','Tokens/s por GPU',1500,4000,50,2750)}
+      ${simCtl('rs-p','Preço por 1M tokens ($)',0.50,3.00,0.05,1.75)}
+      ${simCtl('rs-u','Utilização (%)',50,90,1,75)}
+      ${simCtl('rs-l','Vida útil IT capex (anos)',3,7,1,5)}
+    </div>
+    <div class="simout s5">
+      <div class="stile"><div class="l">Tokens/ano</div><div class="v" id="rs-o1">—</div><div class="d">trilhões · 1 GW</div></div>
+      <div class="stile"><div class="l">Receita por GW</div><div class="v" id="rs-o2">—</div><div class="d">tokens × $/M tokens</div></div>
+      <div class="stile"><div class="l">EBIT incremental</div><div class="v" id="rs-o3">—</div><div class="d" id="rs-d3">− opex $7.7bn</div></div>
+      <div class="stile"><div class="l">Margem EBIT</div><div class="v" id="rs-o4">—</div><div class="d">base MS: 75%</div></div>
+      <div class="stile"><div class="l">ROIC</div><div class="v" id="rs-o5" style="font-size:27px">—</div><div class="d" id="rs-d5">NOPAT ÷ $39bn</div></div>
+    </div>
+    <div class="simnote">Mesmas fórmulas da tabela acima (unidade MS: 410,256 GB300s · $39bn capex bruto · dep IT $23bn ÷ vida útil + $1.1bn dep não-IT + $2.0bn energia/opex · 21% imposto; base = vida útil de 5 anos). Inputs fora da grade do MS = extrapolação Capstone na MESMA mecânica, não cenários do MS. Trade-off real: workloads mais ricos rodam MENOS tokens/s a preço MAIOR — mover um slider sem o outro é meio cenário.</div>
+  </div>`;
+}
+function wireSims(){
+  const $=id=>document.getElementById(id);
+  const wire=(ids,upd)=>{ids.forEach(id=>$(id).addEventListener('input',upd)); upd();};
+  document.querySelectorAll('.simreset').forEach(b=>b.addEventListener('click',()=>{
+    document.querySelectorAll(`.simwrap input[id^="${b.dataset.sim}-"]`).forEach(inp=>{inp.value=inp.defaultValue; inp.dispatchEvent(new Event('input'));});
+  }));
+  if($('tam-u')) wire(['tam-u','tam-p'],()=>{
+    const u=+$('tam-u').value, p=+$('tam-p').value, tam=u*p*12/1000;
+    $('tam-u-v').textContent=u+'M'; $('tam-p-v').textContent='$'+p;
+    $('tam-o1').textContent=tam>=1000?'$'+(tam/1000).toFixed(2)+'T':'$'+Math.round(tam)+'B';
+    $('tam-d1').textContent=u+'M × $'+p+' × 12 — por ano';
+    $('tam-o2').textContent=(tam/IDX_AGG_BN*100).toFixed(1)+'%';
+    $('tam-o3').textContent=(tam/100).toFixed(1)+'x';
+  });
+  if($('rs-inf')) wire(['rs-inf','rs-tps','rs-p','rs-u','rs-l'],()=>{
+    const inf=+$('rs-inf').value, tps=+$('rs-tps').value, pr=+$('rs-p').value, ut=+$('rs-u').value, life=+$('rs-l').value;
+    $('rs-inf-v').textContent=inf+'%'; $('rs-tps-v').textContent=tps.toLocaleString('en-US');
+    $('rs-p-v').textContent='$'+pr.toFixed(2); $('rs-u-v').textContent=ut+'%'; $('rs-l-v').textContent=life+' anos';
+    const tok=410256*(inf/100)*tps*31536000*(ut/100)/1e12;   /* tn/ano (mesma linha da tabela: chips × inf% × tok/s × s/ano × util) */
+    const rev=tok*pr/1000;                                    /* $bn: tn tokens = 1e6 Mtok */
+    const opex=23/life+1.1+2.0, ebit=rev-opex, nopat=ebit*0.79, roic=nopat/39*100;
+    $('rs-o1').textContent=Math.round(tok).toLocaleString('en-US');
+    $('rs-o2').textContent='$'+rev.toFixed(1)+'bn';
+    $('rs-o3').textContent=(ebit<0?'−$':'$')+Math.abs(ebit).toFixed(1)+'bn';
+    $('rs-d3').textContent='− opex $'+opex.toFixed(1)+'bn';
+    $('rs-o4').textContent=Math.round(ebit/rev*100)+'%';
+    $('rs-o3').style.color=ebit<0?'var(--dn)':'var(--txt)';
+    $('rs-o5').textContent=(roic<0?'−':'')+Math.abs(roic).toFixed(0)+'%';
+    $('rs-o5').style.color=roic<0?'var(--dn)':'var(--gold)';
+    const d=roic-46;
+    $('rs-d5').textContent='NOPAT ÷ $39bn · '+(d>=0?'+':'−')+Math.abs(d).toFixed(0)+'pp vs base MS 46%';
+  });
 }
 
 /* ============ PANEL FURNITURE (dashboard) ============ */
@@ -1323,6 +1476,50 @@ function buildDeck(){
     </div>`,
     esc(H_SRC)+' Painel "Exposição das Clouds aos Labs". Pares âncora: MSFT↔OpenAI (com Anthropic entrando via Azure), AWS↔Anthropic, Google↔Gemini+Anthropic (TPU resale).'));
 
+  /* 3f — EXPOSIÇÃO DAS CLOUDS AOS LABS: as 4 perguntas do rcloud (Indústria, % mix, todos os labs) */
+  (function(){
+    const le=labExpCalc(), ki=2, kL=H_YEARS[ki];
+    const pctOf=(a,b)=>(b&&Math.abs(b)>1e-9)?a/b*100:null;
+    const kpi1=pctOf(le.labTot[ki],le.tot[ki]), kpi2=pctOf(le.dLab[ki],le.dTot[ki]);
+    const legendLabs=`<div class="legend"><span class="k"><span class="sw" style="--kc:${GREEN}"></span>OpenAI</span><span class="k"><span class="sw" style="--kc:${GOLD}"></span>Anthropic</span><span class="k"><span class="sw" style="--kc:${PURPLE}"></span>Gemini</span><span class="k"><span class="sw" style="--kc:${REST}"></span>Resto (non-AI + AI ex-labs)</span></div>`;
+    const legendTypes=`<div class="legend"><span class="k"><span class="sw" style="--kc:${BLUE}"></span>API</span><span class="k"><span class="sw" style="--kc:var(--cyan)"></span>Inferência</span><span class="k"><span class="sw" style="--kc:${PINK}"></span>Treinamento</span><span class="k"><span class="sw" style="--kc:${GRAY}"></span>Outros</span></div>`;
+    S.push(slide('3f · Exposição das clouds aos labs — quanto é lab, e em que os labs gastam', `
+      <div class="lede"${IS_PPT?' style="font-size:13px; margin-bottom:6px"':''}>Quatro perguntas sobre a MESMA receita, no nível da indústria: quanto da receita/crescimento da cloud é lab, e em que os labs gastam esse dólar. Em <b>${kL}</b>, os labs já são <b>${fmt1(kpi1)}% da receita das clouds</b> mas <b>${fmt1(kpi2)}% de TODO o crescimento</b> — o cliente marginal da cloud é o lab, várias vezes mais do que sua fatia do estoque sugere.</div>
+      <div class="trow" style="grid-template-columns:repeat(4,1fr); margin-bottom:${IS_PPT?9:16}px">
+        <div class="stile" style="padding:${IS_PPT?'6px 9px':'10px 13px'}"><div class="l">1 · Labs % da receita — Indústria (${kL})</div><div class="v" style="font-size:${IS_PPT?18:22}px; color:#f0e14a">${fmt1(kpi1)}%</div><div class="d">${leBnFmt(le.labTot[ki])} de ${leBnFmt(le.tot[ki])} · OpenAI ${fmt1(pctOf(le.split.openai[ki],le.tot[ki]))}% · Anthropic ${fmt1(pctOf(le.split.anthropic[ki],le.tot[ki]))}% · Gemini ${fmt1(pctOf(le.split.gemini[ki],le.tot[ki]))}%</div></div>
+        <div class="stile" style="padding:${IS_PPT?'6px 9px':'10px 13px'}"><div class="l">2 · Labs % do CRESCIMENTO (${kL})</div><div class="v" style="font-size:${IS_PPT?18:22}px; color:#ff9a3c">${fmt1(kpi2)}%</div><div class="d">${leBnFmt(le.dLab[ki])} de ${leBnFmt(le.dTot[ki])} · OpenAI ${fmt1(pctOf(le.dSplit.openai[ki],le.dTot[ki]))}% · Anthropic ${fmt1(pctOf(le.dSplit.anthropic[ki],le.dTot[ki]))}% · Gemini ${fmt1(pctOf(le.dSplit.gemini[ki],le.dTot[ki]))}%</div></div>
+        <div class="stile" style="padding:${IS_PPT?'6px 9px':'10px 13px'}"><div class="l">3 · Mix da receita dos labs — todos (${kL})</div><div class="v" style="font-size:${IS_PPT?18:22}px; color:${BLUE}">${leBnFmt(le.totL[ki])}</div><div class="d">API ${fmt1(pctOf(le.val.api[ki],le.totL[ki]))}% · Inferência ${fmt1(pctOf(le.val.infer[ki],le.totL[ki]))}% · Treino ${fmt1(pctOf(le.val.trein[ki],le.totL[ki]))}% · Outros ${fmt1(pctOf(le.val.outros[ki],le.totL[ki]))}%</div></div>
+        <div class="stile" style="padding:${IS_PPT?'6px 9px':'10px 13px'}"><div class="l">4 · Mix do CRESCIMENTO — todos (${kL})</div><div class="v" style="font-size:${IS_PPT?18:22}px; color:${GREEN}">+${leBnFmt(le.dTotL[ki])}</div><div class="d">API ${fmt1(pctOf(le.dl.api[ki],le.dTotL[ki]))}% · Inferência ${fmt1(pctOf(le.dl.infer[ki],le.dTotL[ki]))}% · Treino ${fmt1(pctOf(le.dl.trein[ki],le.dTotL[ki]))}% · Outros ${fmt1(pctOf(le.dl.outros[ki],le.dTotL[ki]))}%</div></div>
+      </div>
+      ${legendLabs}
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-bottom:${IS_PPT?2:8}px">
+        <div><div class="chtitle">1 · Da RECEITA da cloud, quanto é lab?</div>${pctStack100(H_YEARS,[
+          {name:'OpenAI',col:GREEN,pct:le.c1.openai,nom:le.split.openai},
+          {name:'Anthropic',col:GOLD,pct:le.c1.anthropic,nom:le.split.anthropic},
+          {name:'Gemini',col:PURPLE,pct:le.c1.gemini,nom:le.split.gemini},
+          {name:'Resto (non-AI + AI ex-labs)',col:REST,dark:true,pct:le.c1.resto,nom:le.resto}],565,IS_PPT?128:250)}</div>
+        <div><div class="chtitle">2 · Do CRESCIMENTO da cloud, quanto é lab?</div>${pctStack100(H_YEARS,[
+          {name:'OpenAI',col:GREEN,pct:le.c2.openai,nom:le.dSplit.openai},
+          {name:'Anthropic',col:GOLD,pct:le.c2.anthropic,nom:le.dSplit.anthropic},
+          {name:'Gemini',col:PURPLE,pct:le.c2.gemini,nom:le.dSplit.gemini},
+          {name:'Resto (non-AI + AI ex-labs)',col:REST,dark:true,pct:le.c2.resto,nom:le.dResto}],565,IS_PPT?128:250)}</div>
+      </div>
+      ${legendTypes}
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:22px">
+        <div><div class="chtitle">3 · Da RECEITA que os labs dão pra cloud, qual o mix?${IS_PPT?'':'<span style="font-weight:400; color:var(--mut)"> — API / Inferência / Treino / Outros</span>'}</div>${pctStack100(H_YEARS,[
+          {name:'API',col:BLUE,pct:le.c3.api,nom:le.val.api},
+          {name:'Inferência',col:'var(--cyan)',pct:le.c3.infer,nom:le.val.infer},
+          {name:'Treinamento',col:PINK,pct:le.c3.trein,nom:le.val.trein},
+          {name:'Outros',col:GRAY,dark:true,pct:le.c3.outros,nom:le.val.outros}],565,IS_PPT?128:250)}</div>
+        <div><div class="chtitle">4 · Do CRESCIMENTO dessa receita, qual o mix?${IS_PPT?'':'<span style="font-weight:400; color:var(--mut)"> — API / Inferência / Treino / Outros</span>'}</div>${pctStack100(H_YEARS,[
+          {name:'API',col:BLUE,pct:le.c4.api,nom:le.dl.api},
+          {name:'Inferência',col:'var(--cyan)',pct:le.c4.infer,nom:le.dl.infer},
+          {name:'Treinamento',col:PINK,pct:le.c4.trein,nom:le.dl.trein},
+          {name:'Outros',col:GRAY,dark:true,pct:le.c4.outros,nom:le.dl.outros}],565,IS_PPT?128:250)}</div>
+      </div>`,
+      'Réplica do painel "Exposição das Clouds aos Labs" (rcloud.html, Fernanda Neves, snapshot 03-ago-26) — corte Indústria · % Mix · Todos os labs. Fonte: Resumo | Clouds do AI Model — gráficos 1-2 usam o bloco RC/RCLABS (\'ótica da demanda\', split por lab pró-rata sobre AI Labs); gráficos 3-4 usam o bloco \'Receita que as Clouds fazem com os Labs\' por tipo. ⚠ os dois blocos da planilha NÃO fecham entre si (linha "check" da planilha ≈1.17x) — por isso 3-4 usam o PRÓPRIO total (não o do gráfico 1). Crescimento = Δ a/a (CY24 ancora no CY23 base; CY25-28E = ano vs ano anterior); em % de mix o crescimento pode passar de 100% num segmento se outro encolheu.'));
+  })();
+
   /* 8 — BACKLOG */
   S.push(slide('4 · Backlog: ~$1.7 trilhão contratado — e a mistura melhorou', `
     <div class="lede">O bear case dizia: backlog = meia dúzia de frontier labs reciclando capital. Julho quebrou isso: <b>todo o adicional sequencial de $51B no RPO da MSFT veio de clientes FORA dos frontier labs</b> (+25% a/a ex-OpenAI), e o backlog da AWS cresce triple-digit.</div>
@@ -1361,7 +1558,7 @@ function buildDeck(){
   MS_DETAIL.forEach((mod,i)=>{
     S.push(slide(`5${['c','d','e'][i]} · A conta linha a linha — ${mod.m.split(' — ')[0]}`, `
       <div class="lede" style="margin-bottom:10px"><b>${mod.m.split(' — ')[1]}</b> — ${mod.tagline}. Linhas azuis = inputs do MS (mexa nelas e tudo abaixo reprecifica); coluna destacada = caso-base.</div>
-      ${msTable(mod)}`,
+      ${msTable(mod)}${(!IS_PPT&&i===1)?roicSim():''}`,
       mfoot[i]));
   });
 
@@ -1382,7 +1579,7 @@ function buildDeck(){
         <div class="stile" style="padding:11px 14px"><div class="l">Capex all-in por GW, CY26E</div><div class="v" style="font-size:25px">$${fmt1(pgwTot[2])}bn</div><div class="d">house, bottom-up — vs <b>$39bn</b> do MS: contas independentes, mesmo número</div></div>
         <div class="stile" style="padding:11px 14px"><div class="l">Receita AI ÷ GW online médio</div><div class="v" style="font-size:25px">$${fmt1(revPgw[2])}bn/GW</div><div class="d">CY26E; 27E $${fmt1(revPgw[3])}bn · 28E $${fmt1(revPgw[4])}bn — blended realizado</div></div>
         <div class="stile" style="padding:11px 14px"><div class="l">Custo sobe, não cai</div><div class="v" style="font-size:25px">$33→$50bn</div><div class="d">capex/GW CY24→CY28E (+53%) — o "deflator" não chegou</div></div>
-        <div class="stile" style="padding:11px 14px"><div class="l">Chips na indústria</div><div class="v" style="font-size:25px">15.4M→22.7M</div><div class="d">aceleradores/ano CY26E → CY28E</div></div>
+        <div class="stile" style="padding:11px 14px"><div class="l">Chips na indústria</div><div class="v" style="font-size:25px">15.4M→23.7M</div><div class="d">aceleradores/ano CY26E → CY28E (pós-spcx)</div></div>
       </div>
     </div>`,
     esc(H_SRC)+' Camadas por GW = classe NVDA (chip capex/GW ' + '$18.8bn CY26E) + networking + resto do DC; designers ASIC rodam mais baratos por GW (AVGO $9.0bn, TPU $9.2bn de chip-capex/GW em CY26E). Receita/GW usa GW online MÉDIO do ano (basis própria — não comparar com bases YE).'));
@@ -1398,7 +1595,8 @@ function buildDeck(){
         <div class="n">${w.note}</div>
       </div>`).join('')}
     </div>
-    <div class="lede" style="margin-top:18px; font-size:14.5px">Guardrail: a conta é linear e assume <b>todos os 500M pagando</b> — é what-if, não forecast (metade dos usuários ou metade do preço = metade do TAM). O caso $50/mês ≈ 1.5x o exit-ARR esperado de TODO o complexo de labs em 2026 (~$200B, Barclays) e ~30x o Copilot realizado hoje (~$6–7B, Bernstein est.).</div>`,
+    <div class="lede" style="margin-top:18px; font-size:14.5px">Guardrail: a conta é linear e assume <b>todos os 500M pagando</b> — é what-if, não forecast (metade dos usuários ou metade do preço = metade do TAM). O caso $50/mês ≈ 1.5x o exit-ARR esperado de TODO o complexo de labs em 2026 (~$200B, Barclays) e ~30x o Copilot realizado hoje (~$6–7B, Bernstein est.).</div>
+    ${IS_PPT?'':tamSim()}`,
     'Comparações: ARR combinado dos labs ~$100B (SemiAnalysis 07-08) · MSFT AI ARR $37B (F3T26) · BofA "AI 2030" AI-DC TAM ~$1.7T CY30 (infra, não software — a comparação é de escala). Ilustrativo, não estimativa house.'));
 
   /* 15 — WHAT-IF ÍNDICES */
@@ -1446,7 +1644,7 @@ function buildDeck(){
 
   /* 7c — HOUSE vs CASAS: CAPEX POR EMPRESA */
   S.push(slide('7c · Capex por empresa: house vs casas — CY27E', `
-    <div class="lede">O confronto da aba Comp: em CY27E o house tem os 4 em <b>$1,103bn</b> — <b>−5% vs MS, +7% vs BofA e +31% acima do consenso BBG</b>. O gap explode em CY28E: house $1,539bn = <b>+72% vs consenso</b>. A divergência não é "se", é a inclinação do S-curve.</div>
+    <div class="lede">A aba Comp do vintage "pós-spcx": em CY27E o house tem os 4 em <b>$1,192bn</b> — <b>+3% vs MS, +16% vs BofA e +41% acima do consenso BBG</b>. Em CY28E, house $1,551bn = <b>+74% vs consenso</b>. A revisão pós-spcx colocou o house ACIMA do MS pela primeira vez — e o maior salto individual foi Google (CY27 $376bn).</div>
     <div class="legend"><span class="k"><span class="sw" style="--kc:${GOLD}"></span>Capstone</span><span class="k"><span class="sw" style="--kc:${BLUE}"></span>Morgan Stanley</span><span class="k"><span class="sw" style="--kc:${RED}"></span>BofA</span><span class="k"><span class="sw" style="--kc:${PINK}"></span>Bogeys (buyside)</span><span class="k"><span class="sw" style="--kc:${GRAY}"></span>Consenso BBG</span></div>
     ${houseVsBars({groups:Object.keys(H_CAPEX),series:[
       {name:'Capstone',col:GOLD,data:Object.values(H_CAPEX).map(d=>d.voce[1])},
@@ -1455,25 +1653,25 @@ function buildDeck(){
       {name:'Bogeys',col:PINK,data:Object.values(H_CAPEX).map(d=>d.bogey[1])},
       {name:'Consenso BBG',col:GRAY,data:Object.values(H_CAPEX).map(d=>d.cons[1])}],W:1180,H:330})}
     <div class="trow" style="grid-template-columns:1fr 1fr 1fr; margin-top:10px">
-      <div class="stile"><div class="l">Total 4 cos · CY27E</div><div class="v">$1,103bn</div><div class="d"><span class="dn">−5% vs MS</span> · <span class="up">+7% vs BofA</span> · <span class="up">+31% vs consenso</span></div></div>
-      <div class="stile"><div class="l">Total 4 cos · CY28E</div><div class="v">$1,539bn</div><div class="d"><span class="up">+20% vs MS · +27% vs BofA · +72% vs consenso</span></div></div>
-      <div class="stile"><div class="l">O wildcard fora dos 4</div><div class="v">SpaceX $146bn</div><div class="d">CY27E house vs $70bn do MS — o maior gap qualitativo do comp</div></div>
+      <div class="stile"><div class="l">Total 4 cos · CY27E</div><div class="v">$1,192bn</div><div class="d"><span class="up">+3% vs MS</span> · <span class="up">+16% vs BofA</span> · <span class="up">+41% vs consenso</span></div></div>
+      <div class="stile"><div class="l">Total 4 cos · CY28E</div><div class="v">$1,551bn</div><div class="d"><span class="up">+20% vs MS · +28% vs BofA · +74% vs consenso</span></div></div>
+      <div class="stile"><div class="l">O wildcard fora dos 4</div><div class="v">SpaceX $217bn</div><div class="d">CY27E house vs $70bn do MS (CY28E $254bn vs $109) — o "pós-spcx" do nome do arquivo é isto</div></div>
     </div>`,
     esc(H_SRC)));
 
   /* 7d — HOUSE vs CASAS: GW POR EMPRESA */
   S.push(slide('7d · Os gigawatts por trás do capex — house vs casas', `
-    <div class="lede">Capacidade instalada YE (GW, AI DCs): o house chega a <b>129.9 GW nos top-4 em YE28 — +19% vs MS (108.9) e +27% vs a média dos sell-sides (102.1)</b>. O maior gap individual: Google 2027 (25.8 GW house vs 18.2 da média).</div>
+    <div class="lede">Capacidade instalada YE (GW, AI DCs): o house chega a <b>126.7 GW nos top-4 em YE28 — +16% vs MS (108.9) e +24% vs a média dos sell-sides (102.0)</b>. O maior gap individual: Google 2027 (<b>25.6 GW house vs 18.2 da média, +41%</b>).</div>
     <div class="legend" style="justify-content:center"><span class="k"><span class="sw" style="--kc:${ORG}"></span>Capstone</span><span class="k"><span class="sw" style="--kc:${PET}"></span>Morgan Stanley</span><span class="k" style="color:var(--mut)">- - média sell-side</span></div>
     <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px 26px">
       ${['Google','Amazon','Microsoft','Meta'].map(n=>gwPanel(n)).join('')}
     </div>`,
-    esc(H_SRC)+' Capex/GW implícito (house, CY26→28): GOOG $28→35bn · AMZN ~$30bn · META $31→34bn (vs benchmark BofA $45–47bn!) · MSFT $36–40bn · NVDA-chips $36–42bn vs MS $39–49bn. GW = basis YE instalado, ótica designers — não misturar com GW online médio (slide 5f).'));
+    esc(H_SRC)+' Capex/GW implícito (house, CY26→28, pós-spcx): GOOG $29.5→40.1bn (em CY28 já ACIMA do benchmark BofA de 38.4) · AMZN $31→34bn · META $32→38bn (vs BofA 45–47) · MSFT $37→47bn · NVDA-chips $37→51bn vs MS 39→49.5. GW = basis YE instalado, ótica designers — não misturar com GW online médio (slide 5f).'));
 
   /* 7e — HOUSE: A INDÚSTRIA INTEIRA */
   const rc=(i)=>H_RESUMO.receitaAi[i]/H_RESUMO.capexTotal[i];
   S.push(slide('7e · A indústria inteira, na visão house', `
-    <div class="lede">Somando TODAS as camadas (chips, networking, shells, power): o capex de AI da indústria vai a <b>$2.58T em CY28E</b> — mas a receita de AI cresce mais rápido que o capex: <b>a razão receita/capex sobe de 0.17x (CY24) para 0.47x (CY28E)</b>. A monetização está alcançando o spend, não o contrário.</div>
+    <div class="lede">Somando TODAS as camadas (chips, networking, shells, power): o capex de AI da indústria vai a <b>$2.91T em CY28E</b> no vintage pós-spcx — mas a receita de AI ainda cresce mais rápido que o capex: <b>a razão receita/capex sobe de 0.17x (CY24) para 0.41x (CY28E)</b>. A monetização segue alcançando o spend, embora a revisão de capex tenha comprimido a razão vs o vintage anterior (era 0.47x).</div>
     <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:26px">
       <div><div class="chtitle">Capex total de AI — US$ bn</div>
         ${stackedBars({cats:H_YEARS,layers:[{name:'Capex total AI',col:PET,data:H_RESUMO.capexTotal.map(v=>v/1000)}],W:372,H:280})}</div>
@@ -1482,13 +1680,13 @@ function buildDeck(){
       <div><div class="chtitle">Receita de AI — US$ bn</div>
         ${stackedBars({cats:H_YEARS,layers:[{name:'Receita AI',col:ORG,data:H_RESUMO.receitaAi.map(v=>v/1000)}],W:372,H:280})}</div>
     </div>
-    <div class="lede" style="margin-top:8px; font-size:14.5px">Receita/capex: <b class="mono">${rc(0).toFixed(2)}x → ${rc(1).toFixed(2)}x → ${rc(2).toFixed(2)}x → ${rc(3).toFixed(2)}x → ${rc(4).toFixed(2)}x</b> (CY24→CY28E). No frame do payback de <3 anos do Jassy (slide 5), uma indústria a ~0.5x receita/capex corrente está dentro da régua — o problema seria essa razão CAIR com o capex subindo.</div>`,
-    esc(H_SRC)+' "Capex total AI" = todas as camadas da indústria (não só top-4 — cf. JPM $410bn top-4 2025 vs $396bn house indústria: bases distintas). GW EOP: 11→24→51→98→162.'));
+    <div class="lede" style="margin-top:8px; font-size:14.5px">Receita/capex: <b class="mono">${rc(0).toFixed(2)}x → ${rc(1).toFixed(2)}x → ${rc(2).toFixed(2)}x → ${rc(3).toFixed(2)}x → ${rc(4).toFixed(2)}x</b> (CY24→CY28E). No frame do payback de <3 anos do Jassy (slide 5), uma indústria a ~0.4x receita/capex corrente ainda está dentro da régua — o sinal de alerta seria essa razão CAIR com o capex subindo, e a revisão pós-spcx a comprimiu na margem (CY27 0.36x vs 0.40x antes).</div>`,
+    esc(H_SRC)+' "Capex total AI" = todas as camadas da indústria (não só top-4 — cf. JPM $410bn top-4 2025 vs $396bn house indústria: bases distintas). GW EOP: 11→24→51→102→171.'));
 
   /* 7f — CAPEX BOTTOM-UP */
   const buT=H_BU.capex, buR=H_BU.years.map((_,i)=>H_BU.hyperBottom[i]/H_BU.hyperModel[i]);
   S.push(slide('7f · Capex bottom-up: a conta por camadas', `
-    <div class="lede" style="margin-bottom:6px">A metodologia mais distintiva do modelo house — de baixo para cima: <b>receita dos designers → chips (15.4M em CY26E) → GW adicionados no ano → × capex/GW por camada → capex total da indústria</b>. A identidade fecha exata: <b class="mono">27.1 GW × $33.3bn/GW = $902bn (CY26E)</b>.</div>
+    <div class="lede" style="margin-bottom:6px">A metodologia mais distintiva do modelo house — de baixo para cima: <b>receita dos designers → chips (15.4M em CY26E) → GW adicionados no ano → × capex/GW por camada → capex total da indústria</b>. A identidade fecha exata: <b class="mono">27.0 GW × $33.4bn/GW = $902bn (CY26E)</b>.</div>
     <div class="grid2" style="gap:18px">
       <div>
         <div class="legend"><span class="k"><span class="sw" style="--kc:${GOLD}"></span>Chips (receita designers)</span><span class="k"><span class="sw" style="--kc:${BLUE}"></span>Networking</span><span class="k"><span class="sw" style="--kc:${REST}"></span>Resto do DC</span></div>
@@ -1501,22 +1699,23 @@ function buildDeck(){
         <div class="rcard" style="color:var(--green); margin-bottom:12px"><div class="rt">Capex/GW por arquitetura<span>por que o mix ASIC importa: o mesmo GW custa 25–45% menos fora da NVIDIA</span></div>${buArchChart()}</div>
         <div class="trow" style="grid-template-columns:1fr 1fr">
           <div class="stile" style="padding:9px 12px"><div class="l">Guardrail embutido: bottom-up ÷ top-down</div><div class="v" style="font-size:19px">${buR.map(r=>r.toFixed(2)).join(' · ')}</div><div class="d" style="font-size:10.5px">implícito dos designers ÷ modelo dos hyperscalers, CY25→28E — converge para 1.00x</div></div>
-          <div class="stile" style="padding:9px 12px"><div class="l">Capex/GW blended (mix c/ ASICs)</div><div class="v" style="font-size:19px">$31→$41bn</div><div class="d" style="font-size:10.5px">CY25→CY28E (+33%) — sobe mesmo com mix ASIC; NVDA-class $37→$50 (slide 5f)</div></div>
+          <div class="stile" style="padding:9px 12px"><div class="l">Capex/GW blended (mix c/ ASICs)</div><div class="v" style="font-size:19px">$31→$42bn</div><div class="d" style="font-size:10.5px">CY25→CY28E (+37%) — sobe mesmo com mix ASIC; NVDA-class $37→$51 (slide 5f)</div></div>
         </div>
       </div>
     </div>`,
-    'Fonte: Bottom_Up_Capex_v3.xlsx (modelo house) via dashboard ai-capex-bottom-up, 27-jul-26. Escopo = indústria TODA (não só top-4): CY26E $902bn vs JPM top-4 $700–725bn — bases distintas; o cross-check certo é o guardrail acima (hyperscalers bottom-up $655bn CY26E vs modelo top-down $722bn = 0.91x; CY27 1.05x; CY28 1.00x). GW aqui = ADICIONADOS no ano (fluxo) — não misturar com GW instalados YE (slide 7d) nem GW online médio (slide 5f). Vintage 27-jul (o comparativo 7c/7d usa a aba Comp de 14-jul; top-4 YE28 125.8 vs 129.9 GW entre vintages).'));
+    'Fonte: Bottom_Up_Capex_v3.xlsx (modelo house) via dashboard ai-capex-bottom-up, 27-jul-26. Escopo = indústria TODA (não só top-4): CY26E $902bn vs JPM top-4 $700–725bn — bases distintas; o cross-check certo é o guardrail acima (hyperscalers bottom-up $682bn CY26E vs modelo top-down $718bn = 0.95x; CY27 1.12x — o bottom-up agora SUPERA o top-down; CY28 1.00x). GW aqui = ADICIONADOS no ano (fluxo) — não misturar com GW instalados YE (slide 7d) nem GW online médio (slide 5f). Serie principal = AI Model pos-spcx (05-ago); chart de arquiteturas = vintage dashboard 27-jul (variacoes <2% no CY27).'));
 
   /* 7g — CAPEX IMPLÍCITO ATÉ 2030 (curve fan) */
   S.push(slide('7g · O capex implícito até 2030: a banda', `
-    <div class="lede" style="margin-bottom:4px">Estendendo o bottom-up até a década: o modelo house implica <b>$3.9T de capex de AI em CY30E</b> (teto da banda) — <b>~7.4x o CY25, ~49%/ano</b>. Mesmo o piso ilustrativo da banda, <b>~$3.0T</b>, ainda é <b>~5.7x em cinco anos (~41%/ano)</b>. A pergunta do mercado deixou de ser "se" e virou <b>a inclinação</b>.</div>
+    <div class="lede" style="margin-bottom:4px">O modelo house implica <b>$3.9T de capex de AI em CY30E</b> (teto da banda, ~49%/ano); mesmo o piso ilustrativo, <b>~$3.0T</b>, é ~41%/ano. Embaixo, o motor de caixa de quem paga a maior parte: <b>o EBITDA consenso dos Big-4 chega a ~$1.95T em CY30E</b> na extrapolação — <b>o teto do capex roda ~2x o EBITDA o caminho inteiro</b> (2.04x em 27, 2.01x em 30). O gap de <b>~$2.0T</b> é exatamente o que vira dívida, SPVs e funders fora dos quatro (slide 7).</div>
     ${buFanChart()}
-    <div class="trow" style="grid-template-columns:1fr 1fr 1fr; margin-top:8px">
+    <div class="trow" style="grid-template-columns:1fr 1fr 1fr 1fr; margin-top:8px">
       <div class="stile" style="padding:8px 12px"><div class="l">CY30E — teto (house)</div><div class="v" style="font-size:19px">$3.92T</div><div class="d" style="font-size:10.5px">aceleradores $1.35T · memória direta $892bn · não-IT $927bn · rede $306bn</div></div>
-      <div class="stile" style="padding:8px 12px"><div class="l">CY30E — piso da banda</div><div class="v" style="font-size:19px">~$3.0T</div><div class="d" style="font-size:10.5px">cenário ilustrativo (−24% vs house) — ainda ~41%/ano de CAGR 25→30</div></div>
-      <div class="stile" style="padding:8px 12px"><div class="l">Cross-check externo</div><div class="v" style="font-size:19px">$5.5T</div><div class="d" style="font-size:10.5px">JPM: capex de AI ACUMULADO até 2030 (16-jun) — o house acumula ~$13.7T no teto: a house está bem ACIMA da rua na década</div></div>
+      <div class="stile" style="padding:8px 12px"><div class="l">CY30E — piso da banda</div><div class="v" style="font-size:19px">~$3.0T</div><div class="d" style="font-size:10.5px">ilustrativo (−24% vs house) — ainda ~41%/ano de CAGR 25→30</div></div>
+      <div class="stile" style="padding:8px 12px"><div class="l">EBITDA Big-4 · CY30E</div><div class="v" style="font-size:19px">~$1.95T</div><div class="d" style="font-size:10.5px">consenso $987bn (27) → $1,238bn (28); 29/30 extrapolados a +25%/ano</div></div>
+      <div class="stile" style="padding:8px 12px"><div class="l">O gap = o layer de financiamento</div><div class="v" style="font-size:19px">~$2.0T</div><div class="d" style="font-size:10.5px">teto − EBITDA em CY30E; piso − EBITDA ≈ $1.1T — cf. $4.1T de dívida até 2030 (JPM) e o backstop NVDA</div></div>
     </div>`,
-    'Fonte do teto: modelo house Bottom_Up_Capex, aba "capex implícito bottom-up" CY23→CY30E (tabela fornecida 03-ago-26): $166bn → $315 → $528 → $1,182 → $2,015 → $2,764 → $3,326 → $3,924bn. Piso da banda = escolha ILUSTRATIVA (fecha em ~$3.0T em CY30, abrindo gradualmente a partir de hoje) — não é um cenário modelado. ESCOPO ≠ slide 7f: esta série inclui memória comprada direta (DDR5+NAND+HDD, $301bn CY26E) e CPUs/servidores general-purpose ($79bn) como camadas próprias — por isso CY26E $1,182bn aqui vs $902bn no 7f; não somar entre slides. História CY23–25 = realizado no modelo.'));
+    'Fonte do teto: modelo house Bottom_Up_Capex, aba "capex implícito bottom-up" CY23→CY30E (03-ago): $166bn → $315 → $528 → $1,182 → $2,015 → $2,764 → $3,326 → $3,924bn. Piso = escolha ILUSTRATIVA (~$3.0T em CY30), não cenário modelado. EBITDA: soma MSFT+GOOG+META+AMZN, consenso BBG BEst CY27/28 (31-jul, MSFT calendarizado); CY29/30 = EXTRAPOLAÇÃO ao growth do consenso 27→28 (+25.4%/ano), não consenso. LEIA COM CUIDADO: (1) bases distintas — a banda é a indústria TODA (labs, neoclouds, ORCL, SpaceX…), vs EBITDA só dos 4 — o gap é o cheque que passa a dívida/SPVs/outros funders, não "déficit dos 4"; (2) EBITDA é proxy de geração de caixa PRÉ-imposto, juros e capital de giro — e antes do próprio capex; (3) escopo ≠ slide 7f (memória direta e CPUs como camadas próprias; CY26E $1,182bn aqui vs $902bn lá). Cross-check: JPM acumula $5.5T até 2030 (16-jun) vs ~$13.7T do teto house. FLAG pós-spcx (05-ago): o AI Model novo imprime CY28E $2.91T — acima do ponto CY28 da banda ($2.76T) mesmo em escopo menor; a tabela implícita ainda não absorveu a revisão → o teto está conservador.'));
 
   /* 18/18b — FORWARD P/E PANELS (comp-dashboard grammar) */
   const peLede=`<div class="lede" style="margin-bottom:6px">De 30-jan a 31-jul, sete dos oito subiram 5–22% — com <b>P/E forward flat ou MENOR em seis dos oito</b>: o rally foi pago por estimativa, não por múltiplo. Contra a régua de 5 anos, <b>nenhum dos oito negocia acima de +0.2σ da própria média</b>: MSFT e AMZN estão em <b>−1σ</b>, META bem abaixo da média; GOOG é o único levemente acima (+0.2σ).</div>`;
@@ -1601,6 +1800,7 @@ function mount(){
     links.forEach((a,i)=>a.classList.toggle('on',i===best));
   };
   addEventListener('scroll',spy,{passive:true}); spy();
+  wireSims();
 }
 const tip=document.getElementById('tip');
 document.addEventListener('mouseover',e=>{

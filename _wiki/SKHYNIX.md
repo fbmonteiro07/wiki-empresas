@@ -15,10 +15,10 @@ _Wiki · generated 2026-06-19 · **Korean issuer — NO SEC filings (no 10-K/10-
 | Revenue | ₩350148.0bn | ₩545370.3bn |
 | Gross profit | ₩294124.3bn | ₩455929.5bn |
 | Gross margin | 84.0% | 83.6% |
-| EBITDA | ₩291806.0bn | ₩441490.1bn |
-| EPS | ₩319159.36 | ₩582799.48 |
-| Capex | ₩48385.7bn | ₩63162.0bn |
-| OCF (≈EBITDA) | ₩291806.0bn | ₩441490.1bn |
+| EBITDA | ₩292045.2bn | ₩441619.8bn |
+| EPS | ₩320075.14 | ₩584336.71 |
+| Capex | ₩48493.5bn | ₩62402.0bn |
+| OCF (≈EBITDA) | ₩292045.2bn | ₩441619.8bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
