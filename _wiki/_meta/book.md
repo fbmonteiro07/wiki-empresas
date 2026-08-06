@@ -6,7 +6,7 @@ _Generated 2026-08-05 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wi
 
 | Ticker | Side | Wt % | House vs cons | Next catalyst | ⏰ due | Flags | Last chg | Thesis |
 |---|---|--:|---|---|--:|---|---|---|
-| NVDA | long | ? | EPS 2027 +20% | 2026-08-26 — Q2 FY27 print: 2026-08-26 (guided $91B). Watch hyperscale vs hyperscale-capex growth under new segmentation (Arcuri: bec |  |  | 2026-08-04 | Full-stack AI-factory platform at +85% rev; debate is demand sustainability vs ASIC erosion. |
+| NVDA | long | ? | EPS 2027 +20% | 2026-08-26 — Q2 FY27 print: 2026-08-26 (guided $91B). Watch hyperscale vs hyperscale-capex growth under new segmentation (Arcuri: bec |  |  | 2026-08-05 | Full-stack AI-factory platform at +85% rev; debate is demand sustainability vs ASIC erosion. |
 | GOOG | long | ? | REV 2026 +18% | _none dated_ |  |  | 2026-08-03 | Full-stack compounder (Search +17%, Cloud +82%); debate is valuation and capital intensity, not demand. |
 | AAPL | long | ? | EPS 2026 +15% | _none dated_ |  |  | 2026-08-05 | Strong franchise + memory-dislocation advantage; bear = AI catch-up + price elasticity. |
 | AVGO | long | ? | EPS 2026 -5% | _none dated_ |  |  | 2026-08-03 | #1 custom-ASIC/TPU partner; binary setup on the ">$100B" FY27 guide vs $250-300B FY28 (JPM). |
