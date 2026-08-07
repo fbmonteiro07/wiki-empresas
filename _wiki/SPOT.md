@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\SPOT` (filings 20-F + transcripts) · `_briefings\by-ticker\SPOT.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-06 · EUR
+### 📊 Consensus snapshot — BBG · asof 2026-08-07 · EUR
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
