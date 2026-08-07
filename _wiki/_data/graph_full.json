@@ -2,7 +2,7 @@
  "generated": "2026-08-06",
  "counts": {
   "nodes": 161,
-  "edges": 1473
+  "edges": 1475
  },
  "nodes": [
   {
@@ -176,7 +176,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-08-04"
+   "last_chg": "2026-08-06"
   },
   {
    "id": "ANET",
@@ -799,7 +799,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-08-04"
+   "last_chg": "2026-08-06"
   },
   {
    "id": "MU",
@@ -1003,7 +1003,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-08-04"
+   "last_chg": "2026-08-06"
   },
   {
    "id": "POET",
@@ -3277,6 +3277,12 @@
   },
   {
    "u": "theme:ai-tam-bofa",
+   "v": "ANTHROPIC",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:ai-tam-bofa",
    "v": "ARM",
    "type": "exposes",
    "label": ""
@@ -5310,14 +5316,14 @@
    "v": "AMZN",
    "type": "covers",
    "label": "",
-   "w": 97
+   "w": 102
   },
   {
    "u": "broker:JPM",
    "v": "AMZN",
    "type": "covers",
    "label": "",
-   "w": 135
+   "w": 139
   },
   {
    "u": "broker:MS",
@@ -5373,14 +5379,14 @@
    "v": "AMZN",
    "type": "covers",
    "label": "",
-   "w": 36
+   "w": 40
   },
   {
    "u": "broker:Fubon",
    "v": "AMZN",
    "type": "covers",
    "label": "",
-   "w": 20
+   "w": 28
   },
   {
    "u": "broker:SIG",
@@ -5401,7 +5407,7 @@
    "v": "AMZN",
    "type": "covers",
    "label": "",
-   "w": 73
+   "w": 80
   },
   {
    "u": "broker:Barrons",
@@ -5506,7 +5512,7 @@
    "v": "ANTHROPIC",
    "type": "covers",
    "label": "",
-   "w": 59
+   "w": 61
   },
   {
    "u": "broker:UBS",
@@ -5520,7 +5526,7 @@
    "v": "ANTHROPIC",
    "type": "covers",
    "label": "",
-   "w": 103
+   "w": 105
   },
   {
    "u": "broker:MS",
@@ -5541,7 +5547,7 @@
    "v": "ANTHROPIC",
    "type": "covers",
    "label": "",
-   "w": 2
+   "w": 7
   },
   {
    "u": "broker:GS",
@@ -5555,7 +5561,7 @@
    "v": "ANTHROPIC",
    "type": "covers",
    "label": "",
-   "w": 19
+   "w": 21
   },
   {
    "u": "broker:Bernstein",
@@ -5590,7 +5596,7 @@
    "v": "ANTHROPIC",
    "type": "covers",
    "label": "",
-   "w": 6
+   "w": 8
   },
   {
    "u": "broker:TrendForce",
@@ -5604,7 +5610,7 @@
    "v": "ANTHROPIC",
    "type": "covers",
    "label": "",
-   "w": 101
+   "w": 112
   },
   {
    "u": "broker:Stratechery",
@@ -7361,14 +7367,14 @@
    "v": "GOOG",
    "type": "covers",
    "label": "",
-   "w": 117
+   "w": 123
   },
   {
    "u": "broker:MS",
    "v": "GOOG",
    "type": "covers",
    "label": "",
-   "w": 80
+   "w": 81
   },
   {
    "u": "broker:Jefferies",
@@ -8565,7 +8571,7 @@
    "v": "MSFT",
    "type": "covers",
    "label": "",
-   "w": 130
+   "w": 132
   },
   {
    "u": "broker:MS",
@@ -8586,7 +8592,7 @@
    "v": "MSFT",
    "type": "covers",
    "label": "",
-   "w": 11
+   "w": 13
   },
   {
    "u": "broker:GS",
@@ -8621,7 +8627,7 @@
    "v": "MSFT",
    "type": "covers",
    "label": "",
-   "w": 54
+   "w": 62
   },
   {
    "u": "broker:Fubon",
@@ -8649,7 +8655,7 @@
    "v": "MSFT",
    "type": "covers",
    "label": "",
-   "w": 94
+   "w": 95
   },
   {
    "u": "broker:Stratechery",
@@ -9398,7 +9404,7 @@
    "v": "OPENAI",
    "type": "covers",
    "label": "",
-   "w": 105
+   "w": 113
   },
   {
    "u": "broker:JPM",
@@ -9496,7 +9502,7 @@
    "v": "OPENAI",
    "type": "covers",
    "label": "",
-   "w": 21
+   "w": 22
   },
   {
    "u": "broker:FinTwit",
@@ -9657,7 +9663,7 @@
    "v": "PLTR",
    "type": "covers",
    "label": "",
-   "w": 29
+   "w": 32
   },
   {
    "u": "broker:MS",
@@ -9674,6 +9680,13 @@
    "w": 8
   },
   {
+   "u": "broker:Citi",
+   "v": "PLTR",
+   "type": "covers",
+   "label": "",
+   "w": 2
+  },
+  {
    "u": "broker:GS",
    "v": "PLTR",
    "type": "covers",
@@ -9685,7 +9698,7 @@
    "v": "PLTR",
    "type": "covers",
    "label": "",
-   "w": 15
+   "w": 19
   },
   {
    "u": "broker:Jefferies",
