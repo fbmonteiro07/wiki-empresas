@@ -2,7 +2,7 @@
 
 _Generated 2026-08-06 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (7)
+## 📅 Upcoming (8)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
@@ -13,14 +13,15 @@ _Generated 2026-08-06 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-08-31 | TXN | **CFO transition:** Rafael Lizardi out 2026-08-01 → **Julie Knecht** (CAO, 25-yr veteran), advisory through 2026-08-31 (DB/Seymore, briefing 2026-06-03). |
 | 2026-09-11 | TER | **Q3 CY26 print (~late Oct 2026)** — first test of the re-cut 2H, and of whether the merchant-GPU/second-hyperscaler correlation converts into guided revenue. Quiet period begins **2026-09-11**; manag |
 | 2026-09-16 | ON | **2026-09-16 — onsemi Analyst Day** (Citi exp. ~Sep 13 print first) — the key event; watch for a raised long-term target model + SiC/800V framing (Citi, briefing 2026-06-15). |
+| 2026-09-23 | GOOG | **🆕 Koray Kavukcuoglu's first public outing — The Information's AI Agenda Live, San Francisco, 2026-09-23.** Billed topics include integrating frontier models across Search and the multi-billion-user  |
 
-## ⏰ Passed — need a post-mortem (0)
+## ⏰ Passed — need a post-mortem (1)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| _none_ | | |
+| 2026-08-05 | GOOG | **🆕🔴 GEMINI 4 — now the single highest-stakes event on this page.** The model's release is what the 2026-08-05 leadership overhaul has to be judged against. **Two independent negatives to test: The In |
 
 ## ✅ Resolved (56)
 

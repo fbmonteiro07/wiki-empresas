@@ -6,12 +6,12 @@ _Generated 2026-08-06 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wi
 
 | Ticker | Side | Wt % | House vs cons | Next catalyst | ⏰ due | Flags | Last chg | Thesis |
 |---|---|--:|---|---|--:|---|---|---|
-| NVDA | long | ? | EPS 2027 +20% | 2026-08-26 — Q2 FY27 print: 2026-08-26 (guided $91B). Watch hyperscale vs hyperscale-capex growth under new segmentation (Arcuri: bec |  |  | 2026-08-05 | Full-stack AI-factory platform at +85% rev; debate is demand sustainability vs ASIC erosion. |
-| GOOG | long | ? | REV 2026 +18% | _none dated_ |  |  | 2026-08-06 | Full-stack compounder (Search +17%, Cloud +82%); debate is valuation and capital intensity, not demand. |
-| AAPL | long | ? | EPS 2026 +15% | _none dated_ |  |  | 2026-08-05 | Strong franchise + memory-dislocation advantage; bear = AI catch-up + price elasticity. |
+| NVDA | long | ? | EPS 2027 +20% | 2026-08-26 — Q2 FY27 print: 2026-08-26 (guided $91B). Watch hyperscale vs hyperscale-capex growth under new segmentation (Arcuri: bec |  |  | 2026-08-06 | Full-stack AI-factory platform at +85% rev; debate is demand sustainability vs ASIC erosion. |
+| GOOG | long | ? | REV 2026 +18% | 2026-09-23 — 🆕 Koray Kavukcuoglu's first public outing — The Information's AI Agenda Live, San Francisco, 2026-09-23. Billed topics i | 1 |  | 2026-08-06 | Full-stack compounder (Search +17%, Cloud +82%); debate is valuation and capital intensity, not demand. |
+| AAPL | long | ? | EPS 2026 +15% | _none dated_ |  |  | 2026-08-06 | Strong franchise + memory-dislocation advantage; bear = AI catch-up + price elasticity. |
 | AVGO | long | ? | EPS 2026 -5% | _none dated_ |  |  | 2026-08-03 | #1 custom-ASIC/TPU partner; binary setup on the ">$100B" FY27 guide vs $250-300B FY28 (JPM). |
-| META | long | ? | EPS 2027 +5% | _none dated_ |  |  | 2026-08-02 | Fastest grower in Mag7 ex-GPU; bear = capital intensity and negative incremental ROIC. |
-| TSM | long | ? | — | _none dated_ |  |  | 2026-08-03 | Sole-source leading-edge foundry (~70% share); pricing headroom vs overseas-fab dilution. |
+| META | long | ? | EPS 2027 +5% | _none dated_ |  |  | 2026-08-06 | Fastest grower in Mag7 ex-GPU; bear = capital intensity and negative incremental ROIC. |
+| TSM | long | ? | — | _none dated_ |  |  | 2026-08-06 | Sole-source leading-edge foundry (~70% share); pricing headroom vs overseas-fab dilution. |
 | MSFT | long | ? | no house model | _none dated_ |  |  | 2026-08-04 | AI ARR >$37B/+123%; swing is capex (CY27 ~$276B) vs Azure revenue + OpenAI concentration. |
 | AMZN | long | ? | no house model | _none dated_ |  |  | 2026-08-04 | AWS re-acceleration (+28%) + in-house silicon (Trainium); debate = $200B capex/ROIC. |
 

@@ -11,11 +11,11 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\CEG` (filings + transc
 |---|--:|--:|
 | Revenue | $34.0bn | $36.0bn |
 | Gross profit | $13.0bn | $18.1bn |
-| Gross margin | 38.2% | 50.3% |
-| EBITDA | $7.6bn | $8.9bn |
-| EPS | $11.31 | $13.13 |
-| Capex | $4.9bn | $4.0bn |
-| OCF (≈EBITDA) | $7.6bn | $8.9bn |
+| Gross margin | 38.3% | 50.3% |
+| EBITDA | $7.8bn | $9.1bn |
+| EPS | $11.26 | $12.84 |
+| Capex | $4.7bn | $4.0bn |
+| OCF (≈EBITDA) | $7.8bn | $9.1bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
