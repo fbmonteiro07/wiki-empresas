@@ -22,7 +22,7 @@ _Variance pass on every NEW quantitative datapoint from tonight's inbox against 
 
 ---
 
-## DIVERGES — the alpha
+## Where the new data DIVERGES
 
 ### 1. ★ MSFT FY27 capex: BBG consensus is BELOW every apples-to-apples desk estimate, including the cash-basis ones
 

@@ -8,7 +8,7 @@ _Source ingested this run: **Bernstein · David Dai / Carmine Milano / Juho Hwan
 
 ---
 
-## 🔴 DIVERGES — the alpha
+## Where the new data DIVERGES
 
 _Machine-readable summary (parsed by `build_edge.py` into the standing edge tracker); the narrative and the arithmetic follow below._
 

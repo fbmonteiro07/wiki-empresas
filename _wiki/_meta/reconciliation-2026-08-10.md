@@ -2,13 +2,13 @@
 
 _Every NEW quantitative datapoint from the 2026-08-10 ingest, checked against (1) prior wiki comments, (2) Capstone house models (`_data/house.json`, asof 2026-08-10), (3) BBG consensus (`_data/estimates.json`, **asof 2026-08-07**). Split DIVERGES (alpha) vs CONFIRMS._
 
-**BBG column status: AVAILABLE (on-disk snapshot, asof 2026-08-07 — three days stale, 98 companies).** ⚠️ **No fresh Terminal pull was run inside this task, deliberately: refreshing 98 tickers mid-run carries the known partial-drop failure mode (the fetch prints "n/n ok" and exits 0 even when the Terminal dies mid-run, stamping carry-overs with today's asof). The 08-07 snapshot is the wiki's canonical consensus file and is fit for a three-day-old comparison; a refresh is `/wiki-consensus`'s job.** ⚠️ **Standing basis caveat applies to every CY2026 figure below: the CY sums embed PRE-PRINT consensus for already-reported quarters, so CY2026 understates beats. CY2027 is clean (all quarters forecast) and is the column to lean on.**
+**BBG column status: ✅ REFRESHED 2026-08-10 via `/wiki-consensus` — every consensus figure below has been re-placed against a live pull (`estimates.json` asof 2026-08-10, 98/98 names, 0 records byte-identical to the 08-07 vintage, every `px` moved ⇒ no silent carry-overs), plus an ad-hoc live `bdp` pull of `PX_LAST / BEST_TARGET_PRICE / BEST_ANALYST_RATING / TOT_ANALYST_REC`. See "BBG refresh — 2026-08-10" at the foot of this file: three findings moved, none reversed, and carried-forward items 1, 2 and 7 are closed out there.** _Original status line, kept for the record:_ **AVAILABLE (on-disk snapshot, asof 2026-08-07 — three days stale, 98 companies).** ⚠️ **No fresh Terminal pull was run inside this task, deliberately: refreshing 98 tickers mid-run carries the known partial-drop failure mode (the fetch prints "n/n ok" and exits 0 even when the Terminal dies mid-run, stamping carry-overs with today's asof). The 08-07 snapshot is the wiki's canonical consensus file and is fit for a three-day-old comparison; a refresh is `/wiki-consensus`'s job.** ⚠️ **Standing basis caveat applies to every CY2026 figure below: the CY sums embed PRE-PRINT consensus for already-reported quarters, so CY2026 understates beats. CY2027 is clean (all quarters forecast) and is the column to lean on.**
 
 **House-model coverage is 8 names (AAPL, AVGO, COHR, GOOG, LITE, META, NVDA, TSM).** Of the 25 pages patched today, only 4 have a house model — so the house column is marked **n/a** rather than silently skipped on the other 21.
 
 ---
 
-## 🔴 DIVERGES — the alpha
+## Where the new data DIVERGES
 
 ### 1. SKHYNIX — TWO CONSENSUS VENDORS DISAGREE BY 26% ON 2027, AND UBS'S "12% ABOVE CONSENSUS" CLAIM INVERTS ON OUR OWN DATA
 
@@ -133,10 +133,78 @@ _Every NEW quantitative datapoint from the 2026-08-10 ingest, checked against (1
 
 ## Open items carried forward
 
-1. 🔴 **Resolve the SKHYNIX consensus-vendor gap (BBG CY2027 580,750 vs Visible Alpha 462,067).** Until then, do not quote UBS's "+12% vs consensus" on the page without naming the vendor. Candidate for `/wiki-consensus`.
-2. 🔴 **SNDK's Jefferies PT is KNOWN-STALE** — "cut pretty heavily," no number given on the call; the page still shows the desk's BUY / TP $3,000 (08-05), flagged in place. Resolve against the published note.
+1. ~~🔴 **Resolve the SKHYNIX consensus-vendor gap (BBG CY2027 580,750 vs Visible Alpha 462,067).**~~ ⚠️ **PARTIALLY ADDRESSED 2026-08-10 — the gap narrowed but did NOT close, and the refresh surfaced a reason to trust BBG's CY2027 line less, not more. See §A1 below. The instruction stands: do not quote UBS's "+12% vs consensus" on the page without naming the vendor.**
+2. ~~🔴 **SNDK's Jefferies PT is KNOWN-STALE** — "cut pretty heavily," no number given on the call; the page still shows the desk's BUY / TP $3,000 (08-05), flagged in place.~~ ✅ **BOUNDED 2026-08-10 — BBG cannot give a single broker's PT, but it brackets the desk mark: consensus PT $2,152.86, so BUY/TP $3,000 is +39.3% ABOVE consensus. See §A6. Still resolve the exact Jefferies number against the published note.**
 3. **COHR house model: mark the 6-inch InP assumption as the load-bearing input** and re-test it after next week's print.
 4. **Ask whether the house NVDA model contains any LPU line at all** — SemiAnalysis models LPU30/LPU40 shipments quarterly; we carry no such line.
 5. **Model coverage gap:** AAOI, SNDK, MCHP, TXN, ON, KLAC all patched today with no house model.
 6. ⚠️ **`CEREBRAS.md`'s intra-quarter window header still reads "May 06 → Jul 09, 2026" and is stale** — left for `/wiki-lint`.
-7. **BBG snapshot is 3 days old (asof 2026-08-07).** Next `/wiki-consensus` should refresh and re-run items 1 and 2 above.
+7. ~~**BBG snapshot is 3 days old (asof 2026-08-07).** Next `/wiki-consensus` should refresh and re-run items 1 and 2 above.~~ ✅ **DONE 2026-08-10 — full live re-fetch (98/98, 0 carry-overs) + live PT/rating pull; items 1 and 2 re-run above; every quantitative row in this file re-placed in the section below.**
+
+---
+
+## BBG refresh — 2026-08-10 (`/wiki-consensus`)
+
+_Live pull `estimates.json` **asof 2026-08-10** (98/98 names). **Carry-over check passed the hard way:** 0 of 98 company records are byte-identical to the 08-07 vintage and every single `px` moved, so the known "prints n/n ok while the Terminal died mid-run" failure mode did not occur here. Spot / PT / rating rows come from one ad-hoc live `bdp` pull (`PX_LAST, BEST_TARGET_PRICE, BEST_ANALYST_RATING, TOT_ANALYST_REC`) taken the same session, so px and PT are from the same snapshot — they differ by a few tenths of a percent from `estimates.json` px, which was stamped earlier in the run. **No web data substituted at any point.**_
+
+⚠️ **The standing CY2026 basis caveat is unchanged:** CY sums embed pre-print consensus for already-reported quarters. **Every re-placement below leans on CY2027, the clean column.**
+
+**Net effect: 3 findings moved, 0 reversed, 0 rows crossed between DIVERGES and CONFIRMS.** The three that moved (§A1 SKHYNIX, §A2 AAOI, §A6 SNDK) all moved in the direction the original finding predicted — which is itself the useful result: these were revision calls, and the revision tape has started to run their way inside three days.
+
+## Row-by-row re-placement — 2026-08-10 refresh
+
+**A1 · SKHYNIX (§1) — MOVED, and the new fact cuts against BBG's own number.** BBG CY2027 EPS **580,750 → 574,123 (−1.1%)**; CY2026 318,472 → 318,175. UBS's 547,875 is now **−4.6%** vs BBG (was −5.7%); Visible Alpha's 462,067 is **−19.5%** vs BBG (was −26%… i.e. the two vendors converged by ~1pt in three days, on a 20-point gap). **The finding stands: UBS's "12% above consensus" still inverts to BELOW consensus on the BBG line this wiki carries.**
+- 🔴 **NET-NEW AND IT IS THE REASON TO DOWNWEIGHT BBG HERE: on CY2027 the BBG median and the BBG street-high are the SAME NUMBER (574,122.8 both).** A median that equals the high means the CY2027 sum is being carried by a thin contributor set, not a broad one. **That is a direct, mechanical argument that the BBG CY2027 KRW line is the less-populated of the two vendors — consistent with UBS's claim that Visible Alpha "has now factored in LTA adjustments" while BBG's set has not.** Item 1 therefore stays open as a page-hygiene rule, but the evidence now leans toward Visible Alpha being the better-informed mark.
+- Spot **KRW 1,418,000** (−3.3% since 08-07). Consensus PT **KRW 3,231,945 = +127.9%**, rating 4.94/5 on 48 analysts. **A near-unanimous Strong Buy carrying 2.3x upside on a name where the two consensus vendors cannot agree within 20% is exactly the dispersion the page already flags on targets. Do not treat the +128% as information until the vendor question is settled.**
+
+**A2 · AAOI (§2) — MOVED, and it strengthens finding 2(a) materially.** BBG CY2027 EPS **$4.70 → $4.14 (−11.9%)** in three days; the street-high collapsed **$6.95 → $4.65 (−33%)**. Wolfe's $3.60 is now **−13.0%** vs consensus, versus −23.4% at 08-07. **Consensus is converging on Wolfe faster than the original row assumed — the "Wolfe's differentiation has evaporated" call is being confirmed in real time.** Finding 2(b) is untouched: Q3-26E rev **$266.5M unchanged**, still **below the company's own $273M guide midpoint**, and CY2026 rev $1,046.3M unchanged, still ~5% below the reaffirmed $1.1B.
+- Spot **$133.75**; consensus PT **$136.83 = +2.3%** on just 8 analysts. ⚠️ **A consensus PT sitting essentially ON spot, with the CY2027 number being cut 12% a week, says the sell-side has no view here — it is marking to the tape. The Q3 print is genuinely the referee.**
+
+**A3 · LITE (§3) — unchanged numerically, and the refresh hands the row its missing piece.** BBG CY2027 EPS **$23.96, unmoved**; house $30.02 is still **+25.3%** above it. Spot fell **$886.35 → $839.74 (−5.3%)**.
+- 🔴 **NET-NEW: the consensus PT is $1,115.33 (+32.8% upside, rating 4.71/5, 31 analysts). At Jefferies' own 20x, that PT implies $55.77 of earnings — i.e. THE STREET'S PUBLISHED TARGET IS UNDERWRITING ESSENTIALLY THE "$50 NUMBER" JEFFERIES SAYS THE MARKET THREW OUT.** The original row was a triangulation off one analyst's descriptive multiple; it now has a second, independent Street mark landing in the same place. **The bull case at these prices requires ~2.3x the BBG CY2027 consensus EPS — and the Street's own PT is quietly carrying it. That is the single most underwritable number on this page.**
+
+**A4 · COHR (§4) — unchanged; the provenance finding is untouched.** BBG CY2027 EPS **$10.00, unmoved**; house $19.21 remains **+92.1%** above consensus. Spot fell **$377.48 → $335.08 (−11.2%)**, consensus PT **$403.76 = +20.5%** (4.52/5, 27 analysts). **CONFIRMS the row as written — the issue was never the number, it is that the model's source analyst now prefers [[LITE]]. Nothing in the consensus tape resolves that; only the 6-inch InP disclosure at the print will.**
+
+**A5 · MCHP (§5) — MOVED, and it makes the row scoreable, which it previously was not.** BBG CY2027 EPS **$4.42, unmoved** — so the row's core claim holds exactly: the bear (Jefferies $5.00) is **+13%** above consensus, the bull (GS $4.50) is in line, and none of the $15 of target separation is an earnings disagreement.
+- 🔴 **NET-NEW, and it settles the re-rating question in the bull's favour AS OF TODAY: consensus PT $110.73 on consensus EPS $4.42 = an implied 25.1x.** Jefferies' $100 is 22.6x, GS's $115 is 26.0x. **The Street is currently granting the PREMIUM multiple, not the "undergrowing, therefore discount" 20x.** Spot $81.84 ⇒ **+35.3%** upside, rating 4.54/5 on 24 analysts. **The row stays in DIVERGES, but it now has a marker: track the implied consensus multiple, not the EPS. If 25.1x compresses toward 20x while EPS holds, Jefferies wins without a single estimate moving.**
+
+**A6 · SNDK / LRCX (§8) — MOVED on SNDK, and it resolves carried-forward item 2 as far as BBG can.** BBG CY2027 EPS **$237.45 → $237.30 (flat)**, so the calibration point stands: the "$300-500 of earnings" Jefferies is attacking is **not** in consensus.
+- 🔴 **STRONGER NOW, AND THIS IS THE REAL RESULT: the CY2027 street-HIGH was cut $326.91 → $290.80 (−11%), and CY2026 high $187.63 → $159.13 (−15%).** At 08-07 the street-high still sat inside the $300-500 band. **As of 08-10 NOT ONE BBG contributor carries $300+ for CY2027.** The bull case Jefferies is puncturing is now entirely a buy-side narrative with zero published support — which is what he said, and the tape has caught up to him in three days. Q4-26E rev also cut $12,711.8M → $12,007.1M (−5.5%).
+- ✅ **Item 2 bounded:** spot **$1,239.94**, consensus PT **$2,152.86 (+73.6%**, 4.70/5, 30 analysts). The page's desk mark of **BUY / TP $3,000 is +39.3% above the consensus PT** — a street-high-type mark, not a consensus one. ⚠️ **BBG returns a consensus, never a single house's target, so the exact post-cut Jefferies number still has to come from the published note. But the desk mark is now dimensioned instead of merely flagged.**
+- ✅ **LRCX side CONFIRMS on fresh data, which is the point of re-checking it: CY2027 EPS $10.61, revenue $37,634.5M — IDENTICAL to 08-07, to the decimal.** Three days later the Street still carries **no haircut whatsoever** for the pulled-forward NAND capacity Jefferies attributes to the Koreans. Consensus PT $373.02 = +21.4% (4.65/5, 37 analysts). **The supply divergence is unpriced in the equipment layer's numbers, not just under-discussed.**
+
+**A7 · SPCX (§6) — unchanged in substance.** CY2027 rev **$98,634M → $99,140M (+0.5%)**, EPS $1.43 → $1.44. Nothing in consensus touches the $/GPU-hour lease-rate finding, which remains a bases question no model on the page carries. **The no-netting rule stays enforced: $/GPU-hour was NOT converted to $/MW/year.** Spot $130.86, consensus PT **$220.70 = +68.7%** (4.46/5, 39 analysts).
+
+**A8 · NVDA (§7) — unchanged, exactly as the row predicted.** CY2026 and CY2027 rev/EPS/GM **identical to 08-07 in every field**. The row said there was nothing to reconcile numerically because no model breaks out an LPU line; a full refresh three days later confirms it. Spot $219.38, consensus PT **$304.44 = +38.8%** (4.88/5, 80 analysts). **The open question — whether the house NVDA model contains an LPU line at all — is unaffected by consensus and stays live as item 4.**
+
+**A9 · AVGO (CONFIRMS 1) — holds.** BBG CY2027 EPS **$21.21 → $21.28** vs house **$21.07** — now 1.0% apart (was 0.7%). **The house and the Street still agree on 2027; the entire house call remains the +71% 2028 step that BBG has no CY2028 line for.** Consensus PT $530.98 = +24.9% (4.77/5, 61 analysts).
+
+**A10 · AMAT (CONFIRMS 5) — the bogey is confirmed and marginally firmer.** Next-quarter consensus **rev $9,012.7M → $9,019.6M, EPS $3.42 unchanged**. ✅ **The dated, scoreable bogey for "their print next week should be closer to Lam" survives a full refresh: beat $9,019.6M / $3.42 or the Jefferies call fails on the day.** Consensus PT $622.97 = +17.7% (4.74/5, 43 analysts).
+
+## BBG consensus pull — 2026-08-10 (live, ranked by upside)
+
+_Header kept in this exact form because `build_edge.py` parses the PT/spot table off it._
+
+| Ticker | Spot | Consensus PT | Upside | Rating (5=Buy) | Analysts | Read |
+|---|--:|--:|--:|--:|--:|---|
+| SKHYNIX | 1,418,000.00 | 3,231,945.00 | **+127.9%** | 4.94 | 48 | KRW. Near-unanimous Buy at 2.3x upside on a name whose two consensus vendors disagree by 20% on 2027 — dispersion, not information |
+| SNDK | 1,239.94 | 2,152.86 | **+73.6%** | 4.70 | 30 | Desk BUY/TP $3,000 sits +39% ABOVE this consensus PT; CY2027 street-high cut to $290.80, so no contributor carries the $300+ bull EPS |
+| SPCX | 130.86 | 220.70 | **+68.7%** | 4.46 | 39 | Consensus untouched by the $/GPU-hour lease-rate finding — no model on the page carries either leg |
+| NVDA | 219.38 | 304.44 | **+38.8%** | 4.88 | 80 | Estimates identical to 08-07 in every field; the LPU line is invisible in every number we hold |
+| MCHP | 81.84 | 110.73 | **+35.3%** | 4.54 | 24 | PT/cons EPS = 25.1x — the Street grants the GS premium multiple, not the Jefferies 20x discount. Track the multiple, not the EPS |
+| LITE | 839.74 | 1,115.33 | **+32.8%** | 4.71 | 31 | At Jefferies' 20x this PT implies $55.77 EPS — the Street is quietly underwriting the "$50 number", 2.3x BBG CY2027 |
+| AVGO | 425.13 | 530.98 | **+24.9%** | 4.77 | 61 | House $21.07 vs cons $21.28 on 2027 — agreement; the whole call is the 2028 step BBG has no line for |
+| LRCX | 307.21 | 373.02 | **+21.4%** | 4.65 | 37 | CY2027 EPS $10.61 unchanged to the decimal — still zero haircut for a pulled-forward NAND cycle |
+| COHR | 335.08 | 403.76 | **+20.5%** | 4.52 | 27 | House $19.21 is +92% vs cons $10.00; the risk is provenance (source analyst now prefers LITE), not the number |
+| AMAT | 529.48 | 622.97 | **+17.7%** | 4.74 | 43 | Next-qtr bogey confirmed: rev $9,019.6M / EPS $3.42 — scoreable on the day |
+| AAOI | 133.75 | 136.83 | **+2.3%** | 4.25 | 8 | PT essentially ON spot while CY2027 EPS is cut 12% in a week — the sell-side is marking to tape, not forecasting |
+
+⚠️ **KRW and USD rows are in native currency and were NOT converted or compared across the FX line.** Upside is PT/spot within one currency only, so the ranking is valid but the Spot/PT columns must not be read across rows.
+
+## Note on the PENDING sweep
+
+**No reconciliation report in `_meta` carries an unresolved BBG `PENDING` cell — all 22 files that ever had one were closed out by earlier `/wiki-consensus` runs (the most recent on 2026-08-07, against `reconciliation-2026-08-06.md`).** This run therefore had no PENDING cell to overwrite and no row to move between DIVERGES and CONFIRMS on that basis; the work above is the re-placement the 08-10 report itself asked for in its carried-forward items 1, 2 and 7.
+
+⚠️ **One thing this run could NOT fix, flagged rather than papered over: `build_edge.py` parsed 0 curated divergences out of this file.** The header was a variant and has been renamed to the canonical `## Where the new data DIVERGES`, but that is not the blocker — the parser wants ONE wide table with ≥5 columns per row, and this report (like every recent `/run-inbox` output) writes each finding as its own narrative sub-section with a 3-4 column table. **So `edge.md`'s curated half is empty by construction on the current report format, not because there is no edge.** Left for `/wiki-edge`, which harvests these by hand. **Not fixed here because rewriting the report into a flat table would destroy the findings.**
+
+_BBG column resolved 2026-08-10 — estimates.json asof 2026-08-10._
