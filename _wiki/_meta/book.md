@@ -11,7 +11,7 @@ _Generated 2026-08-10 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wi
 | AAPL | long | ? | EPS 2026 +15% | _none dated_ |  |  | 2026-08-06 | Strong franchise + memory-dislocation advantage; bear = AI catch-up + price elasticity. |
 | AVGO | long | ? | EPS 2026 -5% | _none dated_ |  |  | 2026-08-10 | #1 custom-ASIC/TPU partner; binary setup on the ">$100B" FY27 guide vs $250-300B FY28 (JPM). |
 | META | long | ? | EPS 2027 +5% | _none dated_ |  |  | 2026-08-06 | Fastest grower in Mag7 ex-GPU; bear = capital intensity and negative incremental ROIC. |
-| TSM | long | ? | — | _none dated_ |  |  | 2026-08-06 | Sole-source leading-edge foundry (~70% share); pricing headroom vs overseas-fab dilution. |
+| TSM | long | ? | — | _none dated_ |  |  | 2026-08-10 | Sole-source leading-edge foundry (~70% share); pricing headroom vs overseas-fab dilution. |
 | MSFT | long | ? | no house model | _none dated_ |  |  | 2026-08-07 | AI ARR >$37B/+123%; swing is capex (CY27 ~$276B) vs Azure revenue + OpenAI concentration. |
 | AMZN | long | ? | no house model | _none dated_ |  |  | 2026-08-10 | AWS re-acceleration (+28%) + in-house silicon (Trainium); debate = $200B capex/ROIC. |
 
