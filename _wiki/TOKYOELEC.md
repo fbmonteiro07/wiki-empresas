@@ -65,6 +65,9 @@ TEL sits in the middle of the WFE chain: it buys precision components and sub-sy
 </svg>
 
 ## Current state (latest quarter)
+
+**🆕 2026-08-09 — Taiwan SPE import tracker (Jul-26):** Taiwan semiconductor-equipment imports **+40% y/y globally and +54% y/y from Japan**, but **-22% m/m globally / -24% m/m from Japan**, with the **3-month moving average at +1% for both global and Japan**. Bernstein reads the strong Taiwan foundry capex as continuing (Bernstein / David Dai, MOF Taiwan data released 2026-08-08, published 2026-08-09). Cross-ref [AMAT.md](AMAT.md), [ASML.md](ASML.md).
+
 **Q4 FY2026 (quarter ended Mar-2026; reported Apr-30-2026) — strong rebound off a timing-driven Q3 trough.** Net sales **¥711.8bn (+28.9% QoQ, +8.6% YoY)**; gross margin **46.8% (+4.1pts QoQ)**; operating income **¥205.6bn (+77.1% QoQ)**, OPM **28.9%**; net income ¥214.2bn (lifted by a ¥115.4bn full-year gain on sale of strategic shareholdings) (FY26 IR deck, 2026-04-30). Q3 FY26 had dipped to ¥552.0bn / OPM 21.0% purely on **shipment timing**, not demand (Q3 deck, 2026-02-06).
 
 **Full-year FY2026:** net sales **¥2,443.5bn (+0.5% YoY, record)**; gross profit ¥1,107.8bn, **GM 45.3% (−1.8pts YoY)**; operating income **¥624.9bn (−10.4% YoY)**, OPM **25.6% (−3.1pts)**; net income **¥574.4bn (+5.6%, all-time high)**; ROE 29.6%; record FCF ¥433.2bn. **Margin compression** came from parts/materials inflation, product mix, more ex-Japan field engineers, and +11% R&D — TEL is spending into the cycle, not harvesting it (FY26 deck, 2026-04-30). SPE end-mix FY26: **non-memory 59% / DRAM 31% / NAND 10%**; by product Etch 36% / Coater-developer 28% / Deposition 20% / Cleaning 9% / Prober 5%. China fell to **34.1% of FY26 sales** (from 41.7% FY25) as leading-edge (Korea/Taiwan) outgrew mature-node (China-heavy).

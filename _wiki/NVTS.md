@@ -70,6 +70,13 @@ Navitas sits in the middle of the AI-power stack: it does **no fabrication itsel
 </svg>
 
 ## Current state (latest quarter)
+
+**🆕 2026-08-09 — Wolfspeed sues Navitas; the engineering read is that the patent case is weak (Irrational Analysis, 2026-08-09).** Wolfspeed filed suit against Navitas citing **six patents**. The independent teardown of the six:
+- **The lead patent is on GaN transistors — and Wolfspeed sells no GaN products, substrates or anything** — and, per his read, **is expected to expire in about four months.**
+- Two are chemistry/process patents he does not characterise; one he judges **"stupid from an engineering perspective."**
+- **The final Wolfspeed patent is SiC-specific**, on which his (unflattering) conclusion is defensive for Navitas: *"all Navitas SiC products are utter dogshit. I think you guys are fine."*
+Net read: **an IP action from a supplier that does not compete in the asserted category, on at least one near-expiry patent** — headline litigation risk rather than an existential product-line risk, on this source's analysis. Treat as an opinionated independent channel, not legal or sell-side advice; the outcome is a legal question this page cannot resolve. Logged because the filing itself is the fact, and the six-patent composition is checkable.
+
 **Q1 2026 (quarter ended 2026-03-31; call 2026-05-05):** Revenue **$8.6m**, +18% sequentially (Q4'25 $7.3m), above the high end of guidance; **high-power markets +35% YoY** and now the majority of revenue, "AI infrastructure" (data center + grid) **+50% QoQ** (Q1 2026 call). Non-GAAP gross margin **39.0%** (+30bps); non-GAAP operating loss **$11.7m**; non-GAAP net loss **-$0.04**. GAAP net loss **$33.8m / -$0.15** (incl. ~$10.3m stock comp, $4.7m intangible amortization, earnout fair-value swings) (10-Q, 2026-05-05). Cash **$221m, zero debt** (down from $237m at YE25 on working-capital build; inventory $14.9m); ~230m diluted shares. **Customer concentration is extreme — Distributor A was 59% of Q1 revenue** (10-Q, 2026-05-05). Q2 2026 guide: revenue **$10.0m ± $0.5m** (16%+ sequential), non-GAAP GM **39.25% ± 75bps**, opex **$14.5–15.5m** (Q1 2026 call). Mobile/low-end consumer is "rapidly diminishing… insignificant by year-end." Management TAM: **$3.5bn by 2030 at 60%+ CAGR**.
 
 ## Debate / thesis
@@ -135,6 +142,8 @@ _Q1 2026 · May 5 → Jun 16, 2026 · sell-side / expert calls / reports between
 | 07-13 | MS · Joe Moore ("The Analog Playbook: 2Q26") | competition | bear | **Reiterate Underweight, PT $13.7.** MS thesis: the GaN market is **increasingly competitive** — STMicro, Infineon and Renesas are all making inroads into GaN via acquisitions/partnerships, which may expand the TAM but pressures Navitas; NVDA's 800V AI server racks are "an enticing opportunity, but given competition and timeline, too early to fully price in." Expects Navitas to **incur losses until 2026e** (aggressive capacity adds, rising depreciation → margin pressure through the next 5 industry-wide moderate years). Sequential growth outlook led by **AI data center, grid/energy infrastructure and industrial electrification**; MS model CY26 rev **$43mn**, GM ramping to ~39.3% CY26e / 41.9% CY28e. (MS "The Analog Playbook: 2Q26", 2026-07-13) [Source](../relat%C3%B3rios%20bons/TECHNOLOGY_20260713_0400.html) |
 
 **Quarter synthesis:** the debate has shifted from the "if" of the TAM (now corroborated by JPM, with NVTS itself the source of the sizing) to the "who captures it" — competition in rack GaN (Citi points to TXN/ON, not NVTS) and SiC credibility (FinTwit skeptical) have become the sticking point, while the sell-side raises PTs without changing ratings, leaving the 2027 optionality still not underwritten.
+
+**🆕 08-09 · Irrational Analysis · `competicao` · mixed** — Wolfspeed patent suit against Navitas: **six patents, lead patent GaN-transistor (Wolfspeed sells no GaN) and expiring in ~4 months**, one judged engineering-weak, the SiC-specific one read as non-threatening. Frames it as headline risk more than product risk. New overhang on the page regardless of merit — litigation is a real cost and distraction line for a company this size.
 
 ## Management commentary — evolution (last 4 quarters)
 

@@ -70,6 +70,13 @@ MRVL is a fabless designer sitting between the foundry/IP/memory supply base and
 </svg>
 
 ## Current state (latest quarter)
+
+**🆕 2026-08-10 — three product disclosures from the Future of Memory Storage conference (UBS / Tim Arcuri, 2026-08-10, attending):**
+- **CXL:** Marvell highlighted its CXL solutions and argued they could **extend the useful life of legacy memory technologies (explicitly DDR4)** — a margin/TAM point in a cycle where every legacy bit has scarcity value.
+- **Optical disaggregated memory:** more interestingly, MRVL **already appears to be working on optical-based disaggregated memory**, citing know-how obtained via the **Celestial AI** deal, to enable local-memory-like architectures with the memory **located somewhere other than the rack**.
+- **SRAM IP:** MRVL cited internal **SRAM-related IP capable of ~17x higher bandwidth/mm² vs industry alternatives** — UBS flags the appeal to hyperscalers wanting **ultra-fast inference silicon alternatives similar to CBRS**.
+Read-through: two of the three (optical disaggregation, high-density SRAM) point at the same customer conversation that AMD just bought Taalas for and that Cerebras sells against — the memory-wall workaround is becoming a contested product category rather than a niche. Cross-ref [CEREBRAS.md](CEREBRAS.md), [AMD.md](AMD.md), [SNDK.md](SNDK.md).
+
 **Q1 FY27 (reported 2026-05-27, quarter ended May 2, 2026):**
 - Revenue **$2.418B**, +9% q/q, **+28% y/y** (10-Q, 2026-05-28; transcript 2026-05-27); data center **$1.8B = 76% of total**, +27% y/y, driven by AI demand (data-center end market +27% per 10-Q).
 - Non-GAAP EPS **$0.80** (+29% y/y), ~$0.05 above the ~$0.75 Street; non-GAAP GM 58.9%, GAAP GM 52.1% (GAAP gross profit $1,260.8M on $2,417.5M).
