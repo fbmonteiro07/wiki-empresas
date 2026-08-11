@@ -16,7 +16,7 @@ _Generated 2026-08-11 · the standing view of where our model and the curated re
 | GOOG | Revenue $bn | 2026 | 505.00 | 426.80 | +18% |
 | GOOG | Revenue $bn | 2027 | 641.00 | 544.30 | +18% |
 | NVDA | Revenue $bn | 2027 | 661.00 | 568.20 | +16% |
-| AAPL | EPS | 2026 | 10.12 | 8.77 | +15% |
+| AAPL | EPS | 2026 | 10.12 | 8.78 | +15% |
 
 ## Curated divergences — latest reconciliation (`reconciliation-2026-08-10.md`)
 
