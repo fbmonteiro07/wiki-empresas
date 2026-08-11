@@ -2,11 +2,15 @@
 
 _Generated 2026-08-10 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (6)
+## 📅 Upcoming (10)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
+| 2026-08-11 | CRWV | **🆕 Q2 2026 print — TUE 2026-08-11, POST-CLOSE.** BofA Buy PO $140 into it. **The operating bogey: active power ~1.0 GW → 1.7 GW by year-end**, with more capacity coming online in 2H26 to drive accele |
+| 2026-08-11 | LITE | **🆕🔴 Q4 FY26 PRINT — TUE 2026-08-11 AMC.** The bogeys, from three independent setups on 2026-08-10: **JunQ revenue ≥$1,003M** vs the $960M-$1,010M guide and **GM ≥48.5%** (UBS Neutral $960); **the Dec |
+| 2026-08-12 | NBIS | **🆕 Q2 2026 print — WED 2026-08-12, PRE-OPEN.** BofA Buy PO $280 into it; three named focus areas: **(1) capacity activation / DC execution, (2) capex requirements for the build, (3) EBITDA margin tra |
 | 2026-08-13 | SNDK | **🆕 SanDisk INVESTOR DAY — 2026-08-13, 9am ET webcast. This is now the live catalyst, not the print.** Management explicitly teased **HBF timeline/roadmap, KV-cache sizing, and other new products/oppo |
+| 2026-08-17 | NBIS | **🆕🔴 VINELAND, NJ EXPANSION HEARING RESUMES — 2026-08-17.** Local opposition to the *expansion* (phase 1 already approved); the revised design is **primarily powered by [[BE]] fuel cells** (announced  |
 | 2026-08-26 | NVDA | **Q2 FY27 print: 2026-08-26** (guided $91B). Watch hyperscale vs hyperscale-capex growth under new segmentation (Arcuri: becomes a debate if NVDA ever under-grows it). |
 | 2026-08-31 | TXN | **CFO transition:** Rafael Lizardi out 2026-08-01 → **Julie Knecht** (CAO, 25-yr veteran), advisory through 2026-08-31 (DB/Seymore, briefing 2026-06-03). |
 | 2026-09-11 | TER | **Q3 CY26 print (~late Oct 2026)** — first test of the re-cut 2H, and of whether the merchant-GPU/second-hyperscaler correlation converts into guided revenue. Quiet period begins **2026-09-11**; manag |

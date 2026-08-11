@@ -12,7 +12,7 @@ _Wiki · generated 2026-06-25 · synthesis-only (no local filings archive) · so
 | Gross margin | 42.4% | 54.9% |
 | EBITDA | $133m | $344m |
 | EPS | $-0.02 | $0.77 |
-| Capex | $568m | $538m |
+| Capex | $573m | $549m |
 | OCF (≈EBITDA) | $133m | $344m |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

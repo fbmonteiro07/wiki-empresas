@@ -29,6 +29,12 @@ Uso:  py "E:\Wiki Felipe empresas\_wiki\_tools\sync_rcloud.py"                 #
       py "E:\Wiki Felipe empresas\_wiki\_tools\sync_rcloud.py" --publish-team  # + Capstone-Wiki (Pages)
 Só stdlib.
 
+--src PATH publica de OUTRO arquivo em vez do rcloud.html da Fernanda. Serve pra quando os
+workbooks dela (AI Model.xlsx / TAM_Cloud.xlsb) já estão mais novos que o rcloud.html — aí a
+gente reroda o atualizar_rcloud.py dela contra os workbooks e publica o resultado sem ter que
+esperar/mexer no arquivo dela. Nesse caso passe também --origin "texto" descrevendo a
+procedência real, senão o rótulo apontaria pra um caminho temporário e mentiria sobre a fonte.
+
 --publish-team espelha em Capstone-Wiki/rcloud/index.html e JÁ DÁ commit+push no main.
 O push não é opcional por segurança: a rotina das 09:45 roda `git reset --hard origin/main`
 naquele clone, então arquivo não-commitado ali é destruído no dia seguinte. Mesmo padrão do
@@ -56,12 +62,27 @@ NAV_NEW = '<a href="index.html">← Wiki dashboards</a>'
 NAV_TEAM = '<a href="../">← Capstone Wiki</a>'
 
 
-def main():
-    if not os.path.exists(SRC):
-        sys.exit(f"[ERRO] origem não encontrada (P: montado?): {SRC}")
+def _argval(flag):
+    """Valor de '--flag valor' em sys.argv, ou None."""
+    if flag in sys.argv:
+        i = sys.argv.index(flag)
+        if i + 1 < len(sys.argv):
+            return sys.argv[i + 1]
+        sys.exit(f"[ERRO] {flag} exige um valor.")
+    return None
 
-    snapshot = date.fromtimestamp(os.path.getmtime(SRC)).isoformat()
-    with open(SRC, "r", encoding="utf-8-sig") as f:      # utf-8-sig tira o BOM
+
+def main():
+    src = _argval("--src") or SRC
+    origin = _argval("--origin")
+    if not os.path.exists(src):
+        sys.exit(f"[ERRO] origem não encontrada (P: montado?): {src}")
+    if src != SRC and not origin:
+        sys.exit("[ERRO] --src sem --origin: o rótulo de fonte ficaria apontando pro caminho\n"
+                 "       temporário. Passe --origin \"descrição da procedência real\".")
+
+    snapshot = date.fromtimestamp(os.path.getmtime(src)).isoformat()
+    with open(src, "r", encoding="utf-8-sig") as f:      # utf-8-sig tira o BOM
         h = f.read()
 
     # ── guarda: a réplica precisa continuar auto-suficiente ───────────────────
@@ -73,7 +94,9 @@ def main():
     # ── rótulo de fonte ──────────────────────────────────────────────────────
     # Reescreve o <span class="src"> qualquer que seja o conteúdo (não casa string literal:
     # a origem muda o rótulo de vez em quando e já trouxe nome de casa errado).
-    label = f"Capstone · réplica do rcloud.html (Fernanda Neves) · snapshot {snapshot} · uso interno"
+    label = (f"Capstone · réplica do rcloud.html (Fernanda Neves) · snapshot {snapshot} · uso interno"
+             if origin is None else
+             f"Capstone · réplica do rcloud.html (Fernanda Neves) · {origin} · uso interno")
     src_old = re.search(r'<span class="src">([^<]*)</span>', h)
     h, n = re.subn(r'(<span class="src">)[^<]*(</span>)', rf"\g<1>{label}\g<2>", h, count=1)
     if n == 0:
@@ -90,11 +113,13 @@ def main():
 
     # ── procedência ──────────────────────────────────────────────────────────
     stamp = (f"<!-- RÉPLICA gerada por _wiki/_tools/sync_rcloud.py em {date.today().isoformat()}.\n"
-             f"     Origem: {SRC}\n"
-             f"     Snapshot dos dados: {snapshot} (mtime do original).\n"
+             f"     Origem: {src}\n"
+             + (f"     Procedência: {origin}\n" if origin else "")
+             + f"     Snapshot dos dados: {snapshot} (mtime da origem).\n"
              f"     Não editar aqui — edite na origem e rode o sync de novo.\n"
-             f"     Os dados vêm do atualizar_rcloud.py da Fernanda (TAM_Cloud.xlsb, sheet 'Mercado');\n"
-             f"     esse pipeline não está portado pra wiki, então a réplica não se auto-atualiza. -->")
+             f"     Os dados vêm do atualizar_rcloud.py da Fernanda (AI Model.xlsx +\n"
+             f"     TAM_Cloud.xlsb sheet 'Mercado'); esse pipeline não está portado pra wiki,\n"
+             f"     então a réplica não se auto-atualiza. -->")
     h = h.replace("<!DOCTYPE html>", "<!DOCTYPE html>\n" + stamp, 1)
 
     os.makedirs(os.path.dirname(OUT), exist_ok=True)

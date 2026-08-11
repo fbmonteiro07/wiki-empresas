@@ -10,8 +10,8 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\VECO` (filings + trans
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $785m | $1.1bn |
-| Gross profit | $328m | $497m |
-| Gross margin | 41.8% | 45.1% |
+| Gross profit | $328m | $496m |
+| Gross margin | 41.8% | 45.0% |
 | EBITDA | $117m | $289m |
 | EPS | $1.53 | $3.20 |
 | Capex | $23m | $23m |

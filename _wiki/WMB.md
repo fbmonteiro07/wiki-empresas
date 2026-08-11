@@ -8,7 +8,7 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\WMB` (filings + transc
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $12.1bn | $13.4bn |
-| Gross profit | $9.8bn | $11.1bn |
+| Gross profit | $9.9bn | $11.1bn |
 | Gross margin | 81.6% | 82.3% |
 | EBITDA | $8.3bn | $9.3bn |
 | EPS | $2.25 | $2.52 |

@@ -10,7 +10,7 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\KLAC` (10-K/10-Q + tra
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $15.5bn | $20.0bn |
-| Gross profit | $9.6bn | $12.5bn |
+| Gross profit | $9.6bn | $12.6bn |
 | Gross margin | 62.2% | 62.8% |
 | EBITDA | $7.3bn | $10.2bn |
 | EPS | $4.47 | $6.26 |
