@@ -2,7 +2,7 @@
  "generated": "2026-08-10",
  "counts": {
   "nodes": 161,
-  "edges": 1496
+  "edges": 1506
  },
  "nodes": [
   {
@@ -667,7 +667,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-08-09"
+   "last_chg": "2026-08-10"
   },
   {
    "id": "KLAC",
@@ -3367,6 +3367,12 @@
   },
   {
    "u": "theme:china-export",
+   "v": "KIOXIA",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:china-export",
    "v": "KLAC",
    "type": "exposes",
    "label": ""
@@ -3404,6 +3410,12 @@
   {
    "u": "theme:china-export",
    "v": "SMIC",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:china-export",
+   "v": "SNDK",
    "type": "exposes",
    "label": ""
   },
@@ -3481,7 +3493,25 @@
   },
   {
    "u": "theme:cowos-packaging",
+   "v": "MU",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:cowos-packaging",
    "v": "NVDA",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:cowos-packaging",
+   "v": "SAMSUNG",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:cowos-packaging",
+   "v": "SKHYNIX",
    "type": "exposes",
    "label": ""
   },
@@ -3607,6 +3637,12 @@
   },
   {
    "u": "theme:custom-asic-tpu",
+   "v": "SKHYNIX",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:custom-asic-tpu",
    "v": "SPCX",
    "type": "exposes",
    "label": ""
@@ -3644,6 +3680,12 @@
   {
    "u": "theme:cxl-memory-fabric",
    "v": "GOOG",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:cxl-memory-fabric",
+   "v": "KIOXIA",
    "type": "exposes",
    "label": ""
   },
@@ -3710,6 +3752,12 @@
   {
    "u": "theme:hbm-memory",
    "v": "ASML",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:hbm-memory",
+   "v": "AVGO",
    "type": "exposes",
    "label": ""
   },
@@ -3871,6 +3919,12 @@
   },
   {
    "u": "theme:hyperscaler-capex",
+   "v": "MU",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:hyperscaler-capex",
    "v": "NBIS",
    "type": "exposes",
    "label": ""
@@ -3902,6 +3956,12 @@
   {
    "u": "theme:hyperscaler-capex",
    "v": "SAMSUNG",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:hyperscaler-capex",
+   "v": "SKHYNIX",
    "type": "exposes",
    "label": ""
   },
@@ -5254,7 +5314,7 @@
    "v": "AMD",
    "type": "covers",
    "label": "",
-   "w": 60
+   "w": 74
   },
   {
    "u": "broker:MS",
@@ -5352,7 +5412,7 @@
    "v": "AMD",
    "type": "covers",
    "label": "",
-   "w": 165
+   "w": 167
   },
   {
    "u": "broker:Barrons",
@@ -5394,7 +5454,7 @@
    "v": "AMZN",
    "type": "covers",
    "label": "",
-   "w": 48
+   "w": 52
   },
   {
    "u": "broker:Jefferies",
@@ -5492,7 +5552,7 @@
    "v": "AMZN",
    "type": "covers",
    "label": "",
-   "w": 30
+   "w": 32
   },
   {
    "u": "broker:BofA",
@@ -6045,7 +6105,7 @@
    "v": "AVGO",
    "type": "covers",
    "label": "",
-   "w": 189
+   "w": 199
   },
   {
    "u": "broker:MS",
@@ -6129,7 +6189,7 @@
    "v": "AVGO",
    "type": "covers",
    "label": "",
-   "w": 30
+   "w": 32
   },
   {
    "u": "broker:TrendForce",
@@ -7858,7 +7918,7 @@
    "v": "KIOXIA",
    "type": "covers",
    "label": "",
-   "w": 34
+   "w": 52
   },
   {
    "u": "broker:MS",
@@ -8796,7 +8856,7 @@
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 63
+   "w": 76
   },
   {
    "u": "broker:MS",
@@ -9181,14 +9241,14 @@
    "v": "NVDA",
    "type": "covers",
    "label": "",
-   "w": 83
+   "w": 97
   },
   {
    "u": "broker:MS",
    "v": "NVDA",
    "type": "covers",
    "label": "",
-   "w": 116
+   "w": 117
   },
   {
    "u": "broker:Jefferies",
@@ -10091,7 +10151,7 @@
    "v": "SAMSUNG",
    "type": "covers",
    "label": "",
-   "w": 110
+   "w": 113
   },
   {
    "u": "broker:UBS",
@@ -10105,7 +10165,7 @@
    "v": "SAMSUNG",
    "type": "covers",
    "label": "",
-   "w": 123
+   "w": 140
   },
   {
    "u": "broker:MS",
@@ -10294,14 +10354,14 @@
    "v": "SKHYNIX",
    "type": "covers",
    "label": "",
-   "w": 91
+   "w": 93
   },
   {
    "u": "broker:JPM",
    "v": "SKHYNIX",
    "type": "covers",
    "label": "",
-   "w": 115
+   "w": 130
   },
   {
    "u": "broker:MS",
