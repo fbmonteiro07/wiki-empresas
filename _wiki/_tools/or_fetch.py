@@ -49,6 +49,8 @@ ENDPOINT_MODELS = [
     "anthropic/claude-opus-4.8",
     "anthropic/claude-sonnet-5",
     "openai/gpt-5.6-sol",
+    "openai/gpt-5.6-luna",   # 50% OR discount since 07-27 + 80% list cut 07-30 — watch for the discount lapsing
+    "openai/gpt-5.6-terra",
     "deepseek/deepseek-v3.2",
     "deepseek/deepseek-v4-flash",
     "deepseek/deepseek-v4-pro",

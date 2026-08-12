@@ -18,24 +18,17 @@ _Generated 2026-08-11 · the standing view of where our model and the curated re
 | NVDA | Revenue $bn | 2027 | 661.00 | 568.20 | +16% |
 | AAPL | EPS | 2026 | 10.12 | 8.78 | +15% |
 
-## Curated divergences — latest reconciliation (`reconciliation-2026-08-10.md`)
+## Curated divergences — latest reconciliation (`reconciliation-2026-08-11.md`)
 
 | Name | New datapoint | Read (the edge) |
 |---|---|---|
-| _no reconciliation file_ | | |
+| Bernstein(07-27,NEW) | **10,013** | **−16.7%** |
+| BBGconsensus(08-11) | 8,141 | — |
+| Delta | **+23.0%** |  |
+| Priorwiki | JPM OW ¥130,000 (still standing) |  |
 
-## Consensus PT vs spot — live pull in `reconciliation-2026-08-10.md` (upside ranked)
+## Consensus PT vs spot — live pull in `reconciliation-2026-08-11.md` (upside ranked)
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|
-| SKHYNIX | 1,418,000 | 3,231,945 | +128% | KRW. Near-unanimous Buy at 2.3x upside on a name whose two consensus vendors disagree by 20% on 2027 — dispersion, not information |
-| SNDK | 1,240 | 2,153 | +74% | Desk BUY/TP $3,000 sits +39% ABOVE this consensus PT; CY2027 street-high cut to $290.80, so no contributor carries the $300+ bull EPS |
-| SPCX | 131 | 221 | +69% | Consensus untouched by the $/GPU-hour lease-rate finding — no model on the page carries either leg |
-| NVDA | 219 | 304 | +39% | Estimates identical to 08-07 in every field; the LPU line is invisible in every number we hold |
-| MCHP | 82 | 111 | +35% | PT/cons EPS = 25.1x — the Street grants the GS premium multiple, not the Jefferies 20x discount. Track the multiple, not the EPS |
-| LITE | 840 | 1,115 | +33% | At Jefferies' 20x this PT implies $55.77 EPS — the Street is quietly underwriting the "$50 number", 2.3x BBG CY2027 |
-| AVGO | 425 | 531 | +25% | House $21.07 vs cons $21.28 on 2027 — agreement; the whole call is the 2028 step BBG has no line for |
-| LRCX | 307 | 373 | +21% | CY2027 EPS $10.61 unchanged to the decimal — still zero haircut for a pulled-forward NAND cycle |
-| COHR | 335 | 404 | +20% | House $19.21 is +92% vs cons $10.00; the risk is provenance (source analyst now prefers LITE), not the number |
-| AMAT | 529 | 623 | +18% | Next-qtr bogey confirmed: rev $9,019.6M / EPS $3.42 — scoreable on the day |
-| AAOI | 134 | 137 | +2% | PT essentially ON spot while CY2027 EPS is cut 12% in a week — the sell-side is marking to tape, not forecasting |
+| _no live pull_ | | | | |

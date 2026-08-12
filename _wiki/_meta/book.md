@@ -13,7 +13,7 @@ _Generated 2026-08-11 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wi
 | META | long | ? | EPS 2027 +5% | _none dated_ |  |  | 2026-08-11 | Fastest grower in Mag7 ex-GPU; bear = capital intensity and negative incremental ROIC. |
 | TSM | long | ? | — | _none dated_ |  |  | 2026-08-11 | Sole-source leading-edge foundry (~70% share); pricing headroom vs overseas-fab dilution. |
 | MSFT | long | ? | no house model | _none dated_ |  |  | 2026-08-11 | AI ARR >$37B/+123%; swing is capex (CY27 ~$276B) vs Azure revenue + OpenAI concentration. |
-| AMZN | long | ? | no house model | _none dated_ |  |  | 2026-08-10 | AWS re-acceleration (+28%) + in-house silicon (Trainium); debate = $200B capex/ROIC. |
+| AMZN | long | ? | no house model | _none dated_ |  |  | 2026-08-11 | AWS re-acceleration (+28%) + in-house silicon (Trainium); debate = $200B capex/ROIC. |
 
 ## Not in book — house-vs-consensus divergence ≥ 10% (candidates)
 
