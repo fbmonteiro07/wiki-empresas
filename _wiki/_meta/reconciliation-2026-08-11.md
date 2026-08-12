@@ -10,7 +10,7 @@ _Every NEW quantitative datapoint from tonight's ingest, placed against three ba
 
 ---
 
-## DIVERGES (the alpha)
+## Where the new data DIVERGES
 
 ### 1. 🔴 KIOXIA — Bernstein's 2027 EPS is **29% BELOW consensus**, and it is the only downside price target in the run
 | Baseline | 2026E EPS (¥) | 2027E EPS (¥) | PT | vs spot |
@@ -147,7 +147,11 @@ _Every NEW quantitative datapoint from tonight's ingest, placed against three ba
 ---
 
 ## Carry-forward / open items
-1. **BBG live pull failed (503, Terminal logged out).** The on-disk snapshot used here is same-day, so nothing is PENDING — but a live re-pull would let the KIOXIA and TOKYOELEC gaps be checked against intraday medians rather than the 21h snapshot. Run `/wiki-consensus` when the Terminal is up.
+1. ~~**BBG live pull failed (503, Terminal logged out).** The on-disk snapshot used here is same-day, so nothing is PENDING — but a live re-pull would let the KIOXIA and TOKYOELEC gaps be checked against intraday medians rather than the 21h snapshot. Run `/wiki-consensus` when the Terminal is up.~~ ⚠️ **PARTIALLY DONE 2026-08-12 — `KIOXIA` re-placed live, `TOKYOELEC` COULD NOT BE.** The 08-12 `/wiki-consensus` pull completed **60 of 98 names**; the BBG entitlement flipped to `LIMIT / REVIEW / Access pending review` at ticker 61 and the HTTP wrapper fallback was unreachable (ConnectTimeout), so the last 38 names — **including TOKYOELEC, ADVANTEST and DISCO** — are still the 2026-08-11 snapshot and are now stamped as such (`revisions.asof=2026-08-11`, `carried_over=true`). **Every fresh name re-places to the decimal and no row moves between DIVERGES and CONFIRMS:** KIOXIA 2026E **¥8,140.64** / 2027E **¥13,532.64** (unchanged ⇒ Bernstein still **+23.0% / −28.6%**, #1 stands); SKHYNIX 2026E KRW **318,057** (−0.04% drift) / 2027E **574,123** unchanged ⇒ **+24.4% / −0.9%**, #3 stands; NVDA **$8.86 / $12.91** and AVGO **$13.61 / $21.28** both unchanged ⇒ #4 and #5 stand; TSM rev/capex/EPS unchanged ⇒ Bernstein **+6.4% / +1.8%** on EPS, **−0.2%** on 2027 revenue and **−3.9%** on 2027 capex, so #6's "it is a ~2% call, not an 18.5% one" holds on live data. **Divergences #2 (TOKYOELEC), #7 (ADVANTEST) and #8 (DISCO) remain un-re-placed and still rest on the 08-11 snapshot — re-run `/wiki-consensus` once the entitlement clears.**
 2. **`estimates.json` has a mixed-unit record for TSM** (px in USD per ADR, eps in TWD per ADR, ccy labelled TWD). Worth fixing in `fetch_estimates.py` — any automated house-vs-consensus comparison on TSM is currently wrong by 5x unless it happens to divide.
 3. **No house model exists for ASML, TOKYOELEC, KIOXIA, SKHYNIX, SAMSUNG, DISCO or ADVANTEST** — five of the ten divergences above therefore have only two baselines. The Japanese semicap names in particular now carry the largest consensus gaps in the coverage with no house view against them.
 4. **Kokusai (6525.JP) has no wiki page and is Bernstein's TOP Japan pick, ranked above TOKYOELEC.** Second time in three weeks. It cannot be reconciled at all.
+
+---
+
+_BBG column resolved 2026-08-12 — `estimates.json` asof **2026-08-12 (PARTIAL: 60/98 names fetched live; 38 names, incl. TOKYOELEC / ADVANTEST / DISCO, carried over from 2026-08-11 and stamped `revisions.asof=2026-08-11`)**. No `PENDING` cell existed in this report, so Step 3 had no cell to overwrite; the re-placement above is the resolution of carry-forward item 1. **No row crossed DIVERGES ↔ CONFIRMS.** Canonical header `## Where the new data DIVERGES` applied (was `## DIVERGES (the alpha)`)._

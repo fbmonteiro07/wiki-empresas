@@ -69,15 +69,52 @@ def latest_recon():
 
 
 def curated_diverges(rf):
-    """Parse the 'DIVERGES' table from the latest reconciliation file."""
+    """Parse the 'DIVERGES' findings from the latest reconciliation file.
+
+    Two report shapes exist in _meta and both must work:
+      (a) NARRATIVE (every report since ~2026-07): each finding is its own
+          '### N. <flag> TICKER — headline' sub-section followed by a per-finding
+          baseline table (3-4 cols) and a '➜ **Action:**' line. The rows of those
+          tables are BASELINES ("Bernstein (07-27)", "BBG consensus", "Delta"),
+          NOT tickers — feeding them to the flat-table parser below yields
+          nonsense rows like "Delta | +23.0%" and silently drops every finding
+          after the first table. Parsed here from the headings instead.
+      (b) FLAT TABLE (older reports): one wide table whose first column IS the
+          ticker. Kept as a fallback when no '###' sub-sections are present.
+    """
     md = read(rf)
     # isolate the DIVERGES section — match any header variant ("Where the new data DIVERGES",
     # "DIVERGES (the alpha)", "DIVERGES (potential alpha)", …) up to the next '##' or EOF.
     m = re.search(r"##\s*[^\n]*DIVERGES[^\n]*.*?(?=\n##\s|\Z)", md, re.S | re.I)
     if not m:
         return []
-    header, rows = parse_md_table(m.group(0))
+    section = m.group(0)
+
+    # --- (a) narrative sub-sections ------------------------------------------------
+    parts = re.split(r"\n###\s+", section)[1:]     # drop the text before the first '###'
     out = []
+    for part in parts:
+        head, _, body = part.partition("\n")
+        # strip leading numbering ("1.", "①") and severity flags (🔴 🟡 🟢 ★ ⚠️ ✅)
+        h = re.sub(r"^\s*(?:\d+\.|[①-⓿❶-❿])\s*", "", head.strip())
+        flag = "".join(ch for ch in h if ch in "\U0001F534\U0001F7E1\U0001F7E2★")
+        h = re.sub(r"^[\U0001F300-\U0001FAFF☀-➿️\s]+", "", h)
+        name, sep, tail = h.partition("—")          # em-dash separates name from headline
+        if not sep:                                  # no em-dash: keep whole heading as the claim
+            name, tail = "", h
+        name = re.sub(r"\*\*", "", name).strip() or "—"
+        claim = re.sub(r"\*\*", "", tail).strip()
+        # prefer the explicit '➜ Action:' line as the read; fall back to the headline
+        a = re.search(r"➜\s*\*\*(.+?)\*\*", body, re.S)
+        read_txt = re.sub(r"\s+", " ", re.sub(r"\*\*", "", a.group(1))).strip() if a else claim
+        if len(read_txt) > 400:
+            read_txt = read_txt[:397] + "…"
+        out.append({"name": (flag + " " + name).strip(), "new": claim, "read": read_txt})
+    if out:
+        return out
+
+    # --- (b) legacy flat table -----------------------------------------------------
+    header, rows = parse_md_table(section)
     for cells in rows:
         if len(cells) < 5:
             continue
