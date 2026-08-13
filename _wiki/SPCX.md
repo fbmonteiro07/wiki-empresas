@@ -6,17 +6,17 @@
 _Wiki · generated 2026-06-29 · sources: IPO prospectus (424B4 2026-06-12 / S-1 2026-05-20, archived in `../SPCX/`) + FinTwit. **Newly public — IPO'd June 2026 (Nasdaq: SPCX).** Master index: [../INDEX.md](../INDEX.md). Themes: [ai-datacenter-power](themes/ai-datacenter-power.md) · [custom-asic-tpu](themes/custom-asic-tpu.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-12 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-08-13 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $43.3bn | $101.2bn |
-| Gross profit | — | $63.8bn |
-| Gross margin | — | 63.0% |
-| EBITDA | $19.4bn | $60.4bn |
-| EPS | $-0.99 | $1.44 |
-| Capex | $42.6bn | $159.5bn |
-| OCF (≈EBITDA) | $19.4bn | $60.4bn |
+| Revenue | $43.8bn | $102.2bn |
+| Gross profit | — | $64.6bn |
+| Gross margin | — | 63.2% |
+| EBITDA | $20.1bn | $62.5bn |
+| EPS | $-0.93 | $1.58 |
+| Capex | $47.5bn | $168.6bn |
+| OCF (≈EBITDA) | $20.1bn | $62.5bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

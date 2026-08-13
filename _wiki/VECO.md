@@ -5,17 +5,17 @@
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\VECO` (filings + transcripts) · `_briefings`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-12 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-08-13 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $785m | $1.1bn |
-| Gross profit | $327m | $495m |
-| Gross margin | 41.6% | 44.9% |
-| EBITDA | $117m | $289m |
-| EPS | $1.53 | $3.20 |
-| Capex | $23m | $23m |
-| OCF (≈EBITDA) | $117m | $289m |
+| Revenue | $788m | $1.1bn |
+| Gross profit | $326m | $498m |
+| Gross margin | 41.3% | 44.8% |
+| EBITDA | $114m | $293m |
+| EPS | $1.48 | $3.15 |
+| Capex | $26m | $28m |
+| OCF (≈EBITDA) | $114m | $293m |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

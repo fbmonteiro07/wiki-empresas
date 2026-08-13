@@ -2,18 +2,20 @@
 
 _Every NEW quantitative datapoint from this run, placed against three baselines: (1) prior wiki comments, (2) Capstone house models (`_data/house.json`, 8 names), (3) BBG consensus. Qualitative/thematic notes are skipped._
 
-> ## ⚠️ BBG COLUMN — PARTIALLY PENDING
+> ## ✅ BBG COLUMN — PARTIALLY PENDING → RESOLVED 2026-08-13
 > **A live BBG pull was attempted twice at 23:20 and FAILED both ways** — local blpapi refused on `127.0.0.1:8194` ("could not start session / Terminal not running or logged out"), and the `BBG_SERVER_FIRST=1` route returned the same `ConnectionError`. **Terminal is logged out and/or the Capstone VPN is down.**
 >
 > **However, `_data/estimates.json` carries a SUCCESSFUL same-day pull (`asof 2026-08-12`, 98 companies, 0 null prices — validated against the known all-null-wipe failure mode).** That snapshot is used as the consensus baseline throughout and is labelled as such. **It is a snapshot, not a live quote.**
 >
 > ⚠️ **38 names in that file were CARRIED OVER from 2026-08-11 rather than refreshed.** Of the names in this reconciliation, the stale ones are **ETN, NBIS, CRWV, AKAM** — flagged inline as `[STALE 08-11]`. Every consensus figure for those four is one day old.
 >
-> **No web data was substituted for consensus.** Re-run `/wiki-consensus` once the Terminal is back to convert the flagged rows.
+> **No web data was substituted for consensus.** ~~Re-run `/wiki-consensus` once the Terminal is back to convert the flagged rows.~~
+>
+> ✅ **RESOLVED 2026-08-13 via `/wiki-consensus`.** The Terminal came back and the entitlement block cleared: full live pull, **`estimates.json` asof 2026-08-13, 98/98 names, 0 FAIL lines, 0 records byte-identical to the 08-12 vintage, 0 null prices, and 0 per-company carry-over stamps** — i.e. every one of the 38 previously stale records refreshed. **All four `[STALE 08-11]` flags below are now converted on live data (§§10, 11, 13) and NO row moved between DIVERGES and CONFIRMS.** ⚠️ **One cleanup fell out of it:** `fetch_estimates.py` **merges into the existing file** (line 249), so the hand-written `partial_refresh` block from the 08-12 run **survived into today's full pull and would have mislabelled 38 freshly-pulled names as 08-11 carry-overs**. It was removed after the full pull was verified by content.
 
 ---
 
-## DIVERGES — the alpha
+## Where the new data DIVERGES
 
 ### 1. 🔴🔴 STX — two bulls, same name, same horizon, ~2x apart on EPS. The single widest gap in this run.
 
@@ -122,11 +124,14 @@ Fact, undisputed: **two-thirds of SNDK volume sits on LTAs at an 80% floor gross
 
 **Consensus implies +13.1% FY27 revenue growth** (CY2026 $4,491.75m → CY2027 $5,081.22m). On the same 08-10 call the CEO said **"mid-teens"** early and **"we should be in the low teens next year"** later. ➜ **Consensus sits at the low end of the CEO's own range. The page's low-teens mark (GS, 08-07) was NOT superseded — correctly, since the primary contradicts itself.** Everything else on that call is corroborative rather than divergent: **$2.8bn of multi-year CIS commits signed YTD**, CIS growth **+39% last quarter / ~50% FY26**, **$1 capex → $1 of ARR** on ordinary deals and **≥2:1 revenue-to-investment on mega-deals**. ⚠️ **The one item that is genuinely forward-risky: $500M of incremental GPU capex, largely FY27, with the "large majority" for customers NOT YET SIGNED.**
 
-### 11. ⚠️ NBIS / CRWV — consensus has not absorbed the disclosed backlogs `[STALE 08-11]`
+✅ **08-13 live re-placement:** **CY2027 revenue is UNCHANGED TO THE CENT at $5,081.22m**; CY2026 drifted −$2.38m (−0.05%) to **$4,489.37m**, so implied FY27 growth is **+13.2%** (was +13.1%). **The finding stands exactly: consensus sits at the low end of the CEO's own straddle.** New and useful — **the STREET HIGH ($5,261.0m) implies +17.2% growth**, so the CEO's two numbers (“mid-teens” / “low teens”) effectively bracket the median-to-high range rather than sitting outside it. **Stays as written.**
+
+### 11. ⚠️ NBIS / CRWV — consensus has not absorbed the disclosed backlogs
 
 - **NBIS:** ARR **$3.0bn at end-June** (+598% y/y) against **consensus FY2026 revenue of $3.23bn** — i.e. the exit ARR alone roughly equals the full consensus year. **Contracted/committed backlog ~$40bn** against **consensus CY2027 revenue of $11.74bn**. **YE26 contracted power raised to 5 GW** (from >4 GW), with **">1 GW per year deployment starting 2027."**
 - **CRWV:** **contracted power 4.2 GW** plus **>1.5 GW of optioned power** ⇒ management's *"close to about 6 gigawatts already."* Jefferies models **implied RPO $200–230bn vs $99bn today** at $12bn/GW over a 5-year average duration, against **consensus CY2027 revenue of $26.2bn**.
-- ⚠️ **Both consensus rows are one day stale, and both companies are loss-making at the consensus line (NBIS CY2026 EPS −$3.55, CRWV −$3.86), so the EPS comparison is not meaningful — the divergence is a REVENUE-RECOGNITION-TIMING question, not an earnings-power one.** ➜ **Re-run once the Terminal is up.**
+- ⚠️ **Both consensus rows are one day stale, and both companies are loss-making at the consensus line (NBIS CY2026 EPS −$3.55, CRWV −$3.86), so the EPS comparison is not meaningful — the divergence is a REVENUE-RECOGNITION-TIMING question, not an earnings-power one.** 
+- ✅ **08-13 live re-placement (both rows now fresh):** **NBIS** CY2026 rev **$3,256.31m**, CY2027 **$11,925.68m** (+1.6% vs the 08-11 mark) — so the **~$40bn contracted backlog is still ~3.4x the full CY2027 consensus year, and even the STREET HIGH ($15,679.61m) is only ~39% of it**. Exit ARR $3.0bn ≈ **92% of the entire CY2026 consensus revenue line**. **CRWV** CY2026 rev **$12,772.79m**, CY2027 **$26,504.24m** (+1.2%), street high **$32,224m** — against Jefferies' implied RPO $200–230bn. **Both loss-making on the refreshed line too (NBIS CY2026 EPS −$3.40, CRWV −$3.89), so the EPS comparison remains meaningless and the divergence stays a TIMING question.** **Stays DIVERGES.**
 - 🔴 **The cross-cutting number that reprices both: GW monetisation went from $8–12bn to $30–50bn per GW in six months (3–5x)** — but ⚠️ *"all those 30 to 50 have the option for a 90-DAY LEASE CANCEL,"* so **headline deal size ≠ committed size**, and Jefferies is explicit that the benefit accrues to the **hyperscalers**, not to [[ORCL]] or [[CRWV]] *"where you're doing a five-year contract with LOCKED-IN unit economics."*
 
 ### 12. ⚠️ AMD — UBS's 2027 DC number is far above the figure floated on the call
@@ -142,7 +147,9 @@ Fact, undisputed: **two-thirds of SNDK volume sits on LTAs at an 80% floor gross
 | **PWR** | **$16.90 / $19.24** | $15.09 / $19.50 | **+12% 2026**, in line 2027 |
 | **VRT** | $6.60 / $9.06 | $6.47 / $9.23 | in line |
 | **NVT** | $4.84 / $6.26 | $4.69 / $6.47 | in line |
-| **ETN** `[STALE 08-11]` | $13.45 / $16.37 | $13.40 / $15.84 | in line 2026, **+3% 2027** |
+| **ETN** | $13.45 / $16.37 | $13.40 / $15.84 | in line 2026, **+3% 2027** |
+
+✅ **08-13 live re-placement of the ETN row (was `[STALE 08-11]`): consensus is UNCHANGED TO THE CENT on BOTH legs — CY2026 $13.40, CY2027 $15.84** ⇒ Bernstein **+0.4% / +3.3%**, i.e. “in line 2026, +3% 2027” is verified on live data, not inferred from a stale row. The table's read is unchanged and **the framework divergence below is where the whole item lives.**
 
 ⚠️ **Note the SHAPE of the PWR action: rating held at Market-Perform, PT $538 → $748 (+39%), 2026E EPS $13.04 → $16.90 (+30%). Bernstein marked to earnings power it had underestimated; it did not re-rate the stock.** A PT raised 39% on an unchanged rating is a house telling you it was wrong on numbers, not that it has changed its mind.
 
@@ -178,4 +185,6 @@ Fact, undisputed: **two-thirds of SNDK volume sits on LTAs at an 80% floor gross
 
 ---
 
-_Baselines: prior wiki comments (on disk) · `_data/house.json` asof 2026-08-12 (8 names: AAPL, AVGO, COHR, GOOG, LITE, META, NVDA, TSM) · `_data/estimates.json` BBG snapshot asof 2026-08-12 (98 names, 38 carried over from 08-11). **Live BBG PENDING — Terminal logged out at 23:20; re-run `/wiki-consensus` when back.**_
+_Baselines: prior wiki comments (on disk) · `_data/house.json` asof 2026-08-12 (8 names: AAPL, AVGO, COHR, GOOG, LITE, META, NVDA, TSM) · `_data/estimates.json` BBG snapshot asof 2026-08-12 (98 names, 38 carried over from 08-11). ~~**Live BBG PENDING — Terminal logged out at 23:20; re-run `/wiki-consensus` when back.**~~_
+
+_BBG column resolved 2026-08-13 — `estimates.json` asof **2026-08-13** (98/98 live, 0 carry-overs, 0 null prices). The four `[STALE 08-11]` rows (ETN, NBIS, CRWV, AKAM) are converted on live data; **AKAM CY2027 and BOTH ETN legs came back unchanged to the cent**, NBIS/CRWV drifted +1.6%/+1.2% on CY2027 revenue. **No row crossed DIVERGES ↔ CONFIRMS.** Canonical header `## Where the new data DIVERGES` applied (was `## DIVERGES — the alpha`)._

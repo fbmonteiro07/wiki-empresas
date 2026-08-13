@@ -8,14 +8,14 @@ _Generated 2026-08-13 · the standing view of where our model and the curated re
 
 | Ticker | Metric | Yr | House | Consensus | Δ |
 |---|---|---|--:|--:|--:|
-| COHR | EPS | 2027 | 19.21 | 10.00 | +92% |
-| COHR | Revenue $bn | 2027 | 16.60 | 11.20 | +48% |
-| COHR | EPS | 2026 | 8.27 | 6.82 | +21% |
+| COHR | EPS | 2027 | 19.21 | 11.38 | +69% |
+| COHR | Revenue $bn | 2027 | 16.60 | 12.40 | +34% |
 | NVDA | EPS | 2027 | 15.44 | 12.91 | +20% |
 | GOOG | Revenue $bn | 2026 | 505.00 | 426.80 | +18% |
 | GOOG | Revenue $bn | 2027 | 641.00 | 544.30 | +18% |
 | NVDA | Revenue $bn | 2027 | 661.00 | 568.30 | +16% |
-| AAPL | EPS | 2026 | 10.12 | 8.78 | +15% |
+| AAPL | EPS | 2026 | 10.12 | 8.74 | +16% |
+| COHR | EPS | 2026 | 8.27 | 7.17 | +15% |
 
 ## Curated divergences — latest reconciliation (`reconciliation-2026-08-12.md`)
 
@@ -31,7 +31,7 @@ _Generated 2026-08-13 · the standing view of where our model and the curated re
 | 🔴 INTC | BofA is ~50% above consensus on 2026 EPS | BofA is ~50% above consensus on 2026 EPS |
 | 🔴 SKHYNIX / SAMSUNG | Mirae is the only house to re-cut after the print, and it cut CAPEX into an up-guided capex cycle | A house cutting Korean capex into an up-guided cycle is exactly the kind of divergence to interrogate — it reads directly to [[AMAT]]/[[LRCX]]/[[KLAC]]/[[TOKYOELEC]] order books. |
 | AKAM | the CEO gave two different FY27 growth numbers on the same call, and they straddle consensus | Consensus sits at the low end of the CEO's own range. The page's low-teens mark (GS, 08-07) was NOT superseded — correctly, since the primary contradicts itself. |
-| NBIS / CRWV | consensus has not absorbed the disclosed backlogs `[STALE 08-11]` | Re-run once the Terminal is up. |
+| NBIS / CRWV | consensus has not absorbed the disclosed backlogs | consensus has not absorbed the disclosed backlogs |
 | AMD | UBS's 2027 DC number is far above the figure floated on the call | UBS's 2027 DC number is far above the figure floated on the call |
 | PWR / VRT / NVT / ETN | Bernstein's marks are mostly IN LINE; the divergence is the framework, not the numbers | If SemiAnalysis is closer to right, Bernstein's ceiling is materially too generous and its central conclusion — *"enough to support the consensus view of 25–35 GW/year"* — INVERTS into a binding constraint. Neither figure was overwritten; both sit side by side. |
 | META | the house sits above both the Street and the pre-print bar | A house above Street on a name the covering analyst ranks second-from-bottom on compute capacity is a position worth re-testing. |
