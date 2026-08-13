@@ -5,7 +5,7 @@
 _Wiki · generated 2026-06-25 · sources: `E:\Wiki Felipe empresas\CDNs\_imported_from_E_root\` (AKAM filings + transcripts + decks + BofA note). Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-11 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-08-12 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -14,7 +14,7 @@ _Wiki · generated 2026-06-25 · sources: `E:\Wiki Felipe empresas\CDNs\_importe
 | Gross margin | 70.6% | 69.8% |
 | EBITDA | $1.8bn | $2.0bn |
 | EPS | $6.69 | $7.20 |
-| Capex | $2.1bn | $1.7bn |
+| Capex | $2.0bn | $1.7bn |
 | OCF (≈EBITDA) | $1.8bn | $2.0bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
@@ -31,6 +31,15 @@ Akamai is the original CDN, now mid-pivot from a legacy content-**Delivery** bus
 | **Key suppliers** | NVIDIA (RTX Pro 6000 GPUs for Inference Cloud) · co-location / data-center providers (power + space) · memory/component vendors (cost exposure flagged) (AKAM Q1 2026 call, 2026-05-07) |
 
 ## Current state (latest quarter — Q2 2026, print 2026-08-06 AMC)
+
+**🆕🔴 2026-08-12 — JPM PUBLISHES ITS TAKEAWAYS FROM THE CEO CALL, AND THE HEADLINE IS THAT LEIGHTON SAID CIS "COULD BECOME A MAJORITY OF AKAMAI'S TOTAL REVENUE" — PLUS THE FIRST PRICE INCREASE IN COMPANY HISTORY ON DELIVERY.** (JPM Software / Samik Chatterjee, "AKAM: CEO Investor Call Takeaways", **Underweight**, price ref $117.65, 2026-08-12 — write-up of the investor call with CEO Dr. Tom Leighton logged below.)
+
+- **🔴 THE CIS AMBITION, and note it comes from a house that is UNDERWEIGHT: "Citing the strength in the demand pipeline and his expectations for 'TREMENDOUS, EXTRAORDINARY GROWTH', Dr. Leighton indicated that CIS COULD BECOME A MAJORITY OF AKAMAI'S TOTAL REVENUE in the future, though he refrained from putting a timeline on it."** ⚠️ **No timeline = not a guide. Log as a management aspiration.** Context: **CIS has recorded nearly $3bn in revenue backlog additions from large committed-capacity contracts to date in 2026.**
+- **🔴 THE FIRST PRICE INCREASE IN COMPANY HISTORY, AND MEMORY IS THE NAMED CAUSE: "Akamai's CEO confirmed that the company has RAISED PRICES FOR THE FIRST TIME IN COMPANY HISTORY and will continue to do so across the board in response to increasing costs, INCLUDING MEMORY, IN PARTICULAR."** ⚠️ **This is a genuine cross-wiki datapoint, not an AKAM-only one: memory inflation is now visibly passing through to the CDN/edge layer, alongside UBS's same-day call that memory pricing will constrain low-to-mid-tier PC demand. Two independent pass-through channels in one day. Cross-ref [[MU]], [[SAMSUNG]], [[SKHYNIX]], [[INTC]].** Management adds it **"has been intentional about customer churn for deals with unattractive economics (price / input costs / traffic frequency)"** — ➜ **price increases plus deliberate churn means Delivery revenue quality improves while the revenue line stays under pressure; do not read a Delivery revenue miss as pure demand.**
+- **The architectural pitch, as management frames it:** CIS was **jumpstarted by the Linode acquisition**, marrying the edge network with core cloud compute/storage into a **full-stack** offering; the differentiator vs hyperscalers and neoclouds is **the distributed platform**. Worked example given: **a robotics customer — (1) ingest high-bandwidth robot video at the edge, (2) process with GPUs/CPUs to generate instructions, (3) return instructions at ultra-low latency.** Cost driver cited: **"significantly lower data egress fees vs. hyperscalers."**
+- **Competitive frame, in management's words: hyperscalers are the primary competitor; NEOCLOUDS "occasionally emerge in larger deals"; DigitalOcean on smaller ones.** ✅ **Deal economics defended structurally: "Akamai doesn't offer a 'bare-metal' compute service, meaning customers must commit to the FULL-STACK solution, which leads to relatively attractive deal economics."** ⚠️ **Read against [[CRWV]] and [[NBIS]] this same week, both of which are moving toward SHORTER, higher-priced contracts and broadening beyond bare GPU — the neocloud and the edge-CDN are converging on the same "full platform, not raw compute" pitch from opposite directions.**
+- **Revenue-recognition mechanics that matter for modelling: "With the three large committed capacity deals signed this year YET TO TRANSLATE TO REVENUE, Dr. Leighton indicated that MOST OF THE CIS REVENUES CURRENTLY ARE DRIVEN BY ON-DEMAND BUSINESS."** Near term the mix skews **committed-capacity as the large wins ramp**; medium-to-long term **on-demand likely rises in share** as enterprises adopt. ➜ **The ~$3bn of backlog is not in the run-rate yet. That is the gap between the bull narrative and the reported number.**
+- **Security detail: API Security — being integrated with LayerX as Akamai Workforce Protector — "is now driving a lot of the growth in Security at a larger scale." Guardicore (microsegmentation across on-prem IT, OT and cloud) skews to NEW rather than existing customers, because it appeals to companies "that historically may not have had a public web presence" and so never needed Delivery or WAF.** ✅ **That is a genuine TAM-expansion argument rather than a cross-sell one.**
 
 **🆕 2026-08-10 — two post-print events, and they point in opposite directions.** (1) **JPM hosted an investor group call with CEO Dr. Tom Leighton, Mon 2026-08-10 1:00pm ET**, *"post-Q2 earnings… to discuss business trends and emerging opportunities related to Akamai as well as address investor questions"* (JPM / Samik Chatterjee, 2026-08-10; replay on JPM Markets Multimedia). ⚠️ **Invitation captured, content NOT — the wiki has the fact of the call, not its substance. Chase the replay: the standing open items it should resolve are DBNR (still uncarried by any house) and whether CIS margins land at the top or bottom of the disclosed cash-GM mid-60s-to-mid-70s / PF-OM low-20s-to-low-30s band.** (2) **AKAM was DOWNGRADED by a house this morning** — listed in the Jefferies desk's rating-change round-up alongside downgrades in GLBE, IOT, TDC, TTD (Jefferies Tech / Jeffrey Favuzza, 2026-08-10). ⚠️ **The downgrading house is not named in the source received and is NOT inferred here.** Consistent with the tape: AKAM shows **−7% on its EPS day** in the same desk's software leaders/laggards table.
 

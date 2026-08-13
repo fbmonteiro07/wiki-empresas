@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\SNPS` · `_equity_calls` · `_briefings\by-ticker\SNPS.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-11 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-08-12 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -29,6 +29,13 @@ The #1 EDA franchise — the chip-design software (synthesis, place-and-route, v
 | **Key suppliers** | Software/IP business — light upstream; third-party IP partners (e.g. Arm) and cloud/compute for Synopsys.ai; emulation hardware components — otherwise "—" |
 
 ## Current state (latest quarter)
+
+**🆕 2026-08-12 — GS PREVIEWS THE QUARTER AND EXPECTS AN FY26 GUIDE UPTICK; POSITIONING HAS TURNED MORE POSITIVE ON THE BACK OF CADENCE'S PRINT.** *"We expect Synopsys to report a solid quarter with a modest uptick to FY26 guidance, with investor focus on the impact of **AI tool features and pricing**. Based on our conversations, we believe **investor positioning has turned somewhat more positive in recent weeks given a positive earnings report from [[CDNS]] relative to its AI tool functionality**. We continue to believe that Synopsys (and Cadence) are **uniquely insulated against AI disruption** and poised for growth through multiple vectors across the semi industry, and we see tailwinds stemming from **the diffusion of custom chip design across a broader range of customers**"* (GS / James Schneider, 2026-08-12).
+- **The three things GS says investors will focus on: (1) the rate and pace of RECOVERY IN IP REVENUE; (2) potential demand acceleration for core EDA software in custom chip design; (3) updates to cost and revenue synergies from the completed ANSYS deal.**
+- **GS expects modest upside to 2Q results with the FY26 uptick driven by better visibility into 2H26 momentum, "particularly in IP."** ⚠️ **IP has been the soft line on this page; GS is explicitly underwriting a recovery there. That is the falsifiable part of the preview.**
+- ✅ **The structural argument worth carrying: "uniquely insulated against AI disruption" — i.e. GS frames EDA as a beneficiary of custom-silicon diffusion rather than a victim of AI-generated design. Cross-read to the custom-ASIC thread on [[MRVL]], [[AVGO]], [[ALAB]].**
+- **Positioning note: SNPS was included in JPM's late-cycle semis BUY-SIDE RESULTS SURVEY alongside [[AVGO]], [[MRVL]] and [[NVDA]]** (JPM / Joshua Meyers, 2026-08-11).
+
 **Q2 FY26 (qtr ended Apr 30, 2026; 10-Q 2026-05-27):** GAAP revenue **$2,276.0M, +42% y/y** (10-Q), the first full quarter with Ansys in the base. Ansys contributed **$652.4M** of revenue (incl. a $12.5M gross-to-net channel reclass that is cost-neutral to EPS/FCF — briefing 2026-05-28). Design Automation $1,821.8M (+62% y/y, Ansys-inflated); **Design IP $454.2M, -6% y/y** — still the weak link, though +12% q/q (briefing) suggesting the trough. On a non-GAAP basis the print was a beat: **revenue $2.28B (+42%), non-GAAP EPS $3.35 vs $3.14 cons (+7% beat)** (briefing 2026-05-28). GAAP EPS was optically depressed by Ansys deal amortization. Backlog ~$11B (briefing; 10-K FY25 backlog $11.4B incl. $2.0B non-cancellable FSA, vs $8.1B a year earlier).
 - **Guide:** FY26 raised — revenue ~$9.67B (from $9.61B), non-GAAP EPS midpoint $14.76, operating margin +50bp to 41.0%; Q3 revenue $2.41–2.46B (in-line) (briefing 2026-05-28). Mgmt frames FY26 as a **"transition year"** with muted Design IP growth (MS, 2026-05-20; 10-K FY25 explicitly guides muted IP growth in FY26).
 - **Balance sheet / deleveraging:** Ansys was funded with **$10B senior notes + a $4.3B term loan**; total debt was ~$13.5B at FY25 year-end (10-K). Critically, SNPS **paid off the remaining $3.5B term loan in Q1 FY26** (10-Q 2026-05-27), terminating it — fast deleveraging toward the ~$10B notes-only structure.

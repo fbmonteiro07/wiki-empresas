@@ -5,7 +5,7 @@
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\HPE` (filings + transcripts) · `_equity_calls` · `_briefings\by-ticker\HPE.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-11 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-08-12 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -13,7 +13,7 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\HPE` (filings + transc
 | Gross profit | $16.4bn | $17.7bn |
 | Gross margin | 35.6% | 35.6% |
 | EBITDA | $9.0bn | $10.3bn |
-| EPS | $3.44 | $4.10 |
+| EPS | $3.45 | $4.10 |
 | Capex | $2.7bn | $2.9bn |
 | OCF (≈EBITDA) | $9.0bn | $10.3bn |
 
@@ -69,6 +69,12 @@ HPE is the system integrator in the middle of the enterprise-AI stack: it buys G
 </svg>
 
 ## Current state (latest quarter — Q2 FY26, call 2026-06-01)
+
+**🆕 2026-08-12 — MS TAKES THE UPGRADE TO THE FULL SECTOR AND PUTS IT ON A PODCAST; GS REITERATES BUY IN ITS C2Q26 PREVIEW — WITH THE SAME "GROWTH IS PRICE, NOT UNITS" CAVEAT.**
+- **MS: the 08-10 single-name upgrade below is now framed as an IT HARDWARE SECTOR UPGRADE covering HPE / [[DELL]] / NTAP / HPQ** ("Morgan Stanley Tech Talk: Erik Woodring on IT Hardware Sector Upgrade", 2026-08-12).
+- **GS reiterates Buy on [[DELL]], HPE and NTAP, but flags the setup: "we see upside to estimates across IT hardware vendors from higher ASPs and improving AI-related infrastructure demand from enterprise… [but] the strong outperformance for the sector in 2Q (+111% v. SPX +13%) makes for a CHALLENGING RISK/REWARD SET UP INTO EARNINGS"** (GS / Katherine Murphy, 2026-08-12).
+- **🔴 The mechanism GS underwrites is pricing, not volume: "much of the growth in C2Q26 for data center hardware will be driven by PRICING VS. UNIT GROWTH, especially as enterprises have shown a higher willingness to accept elevated prices than previously expected,"** with supply constraints limiting shipment growth near-term but **building 2H26/2027 visibility through stronger backlogs**. On PCs: **double-digit % unit declines expected in C2H26, "more than offset by higher pricing."** ⚠️ **Same-week corroboration from two other houses on the silicon side ([[INTC]] PC ASPs +9% q/q on falling unit share, per Mercury/UBS; UBS expecting memory inflation to constrain low-to-mid-tier PC demand) — the PC market is now a price story on declining units. Cross-ref [[DELL]], [[INTC]], [[MU]].**
+- **GS's watch-list for the season, relevant to the AI-server thesis on this page: (1) how much agentic AI lifts traditional compute; (2) whether AI-server demand is BROADENING from hyperscalers/neoclouds to SOVEREIGNS AND ENTERPRISE; (3) the role of storage appliances.**
 
 **🆕 2026-08-10 — MS upgrades to Overweight from Equal-weight; PT $69 (from $71)** (Morgan Stanley / Erik Woodring, 2026-08-10). Delivered inside the **"AI + Chipflation: Two Tailwinds, One Trade… For Now"** global IT-hardware note (98 pages, Industry View **In-Line**). Note the shape of the call: **rating up, price target down** — the upgrade is relative-value within IT hardware, not a numbers raise. The same note **cuts Dell's PT to $430 from $477 (EW maintained)**, so MS is explicitly rotating from DELL toward HPE. Other actions: **NetApp to EW from UW (PT $173 from $137)**, **Teradata to EW from OW (PT $29 from $35)**, **Everpure to OW from EW (PT $108 from $87)**, plus Taiwan PT raises at Asustek/Giga-Byte/Acer. This resolves in the bulls' favour the standing split on this page, where **UBS/Bernstein/SIG had stayed Neutral preferring DELL** while GS/JPM/Barclays/Evercore bought the pricing-inflection + Juniper-synergy re-rating — MS has now crossed to the buy side of that debate. Cross-ref [DELL.md](DELL.md).
 

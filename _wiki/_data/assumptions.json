@@ -1,5 +1,5 @@
 {
- "asof": "2026-07-20",
+ "asof": "2026-08-12",
  "note": "Canonical-assumptions ledger — one entry per cross-page industry number that multiple pages/themes cite. Purpose: every page should reference ONE canonical framing per metric; when a new source disagrees, add a variant here (never silently replace). build_assumptions.py renders _meta/assumptions.md + _dashboards/assumptions.html and scans pages for citations of each metric not yet reconciled into the ledger. Edit variants by hand; keep scope labels precise (units vs dollars, IT-load vs facility GW).",
  "metrics": {
   "asic-vs-gpu-share": {
@@ -51,7 +51,7 @@
   "wfe-tam": {
    "title": "WFE market size CY26 / CY27 / CY28",
    "definition": "Total wafer-fab equipment market ($bn) by calendar year.",
-   "canonical": "CY26 ~$140-160B (all sources agree; Bernstein 148 incl WLP). CY27: house $180-215B vs MS ~$191B vs UBS $200B vs Bernstein base $175B (street low). CY28 is the genuine conflict: house top end $260B vs UBS $250B vs MS-implied ~$230-240B vs Bernstein base $198B; skeptic ceiling 'never $300B' (ex-Samsung foundry EVP) now directly challenged by Bernstein's GW-frame (50GW scenario: $245B/28, $291B/29, '$300B+ doable'). Swing variable = memory-capex intensity + EUV availability post-2027 + first NAND greenfield (CY28). Conversion card: ~$7.5-8B WFE per incremental GW/yr of DC additions capability (~46-50k WSPM/GW, compute-TDP basis). UPDATE 2026-07-15 (ASML 2Q26): Low-NA capacity plan 65/85/110 for CY26/27/28 — the ~110 CY28 is now the company plan under investigation, so house CY28  ~= the ASML path rather than an above-plan flex; the binding question moved to allocation (memory residual ~24-31 units in 2027 after TSMC 38-45 + Intel/Samsung ~16).",
+   "canonical": "CY26 ~$140-160B (all sources agree; Bernstein 148 incl WLP). CY27: house $180-215B vs MS ~$191B vs UBS $200B vs Bernstein base $175B (street low). CY28 is the genuine conflict: house top end $260B vs UBS $250B vs MS-implied ~$230-240B vs Bernstein base $198B; skeptic ceiling 'never $300B' (ex-Samsung foundry EVP) now directly challenged by Bernstein's GW-frame (50GW scenario: $245B/28, $291B/29, '$300B+ doable'). Swing variable = memory-capex intensity + EUV availability post-2027 + first NAND greenfield (CY28). Conversion card: ~$7.5-8B WFE per incremental GW/yr of DC additions capability (~46-50k WSPM/GW, compute-TDP basis). UPDATE 2026-07-15 (ASML 2Q26): Low-NA capacity plan 65/85/110 for CY26/27/28 — the ~110 CY28 is now the company plan under investigation, so house CY28  ~= the ASML path rather than an above-plan flex; the binding question moved to allocation (memory residual ~24-31 units in 2027 after TSMC 38-45 + Intel/Samsung ~16). 2026-08-12 - SECOND, SEPARATE CONVERSION CARD ON A DIFFERENT DENOMINATOR (do NOT mix with the $/GW card above): LRCX CFO Doug Bettinger raised the AI-capex conversion from ~$8B of WFE per $100B of AI capex (framework set Oct-2025) to 'closer to $9-10B per $100B', on inference mix pulling through memory and CPU content alongside GPU/XPU (JPM Mgmt Access Forum, 2026-08-12). The $7.5-8B-per-GW card and the $9-10B-per-$100B-capex card are DIFFERENT BASES - one denominated in datacenter GW, the other in dollars of AI capex - and must never be substituted for one another.",
    "scope_note": "House CY28 top-of-range ($260B) sits ABOVE street — this is a deliberate house-vs-street edge, tracked, not an error.",
    "patterns": [
     "WFE.{0,40}\\$\\s?2\\d\\dB",
@@ -62,6 +62,16 @@
     "\\$1[4-9]\\dB.{0,30}WFE"
    ],
    "variants": [
+    {
+     "value": "$9-10B WFE per $100B of AI capex (raised from the ~$8B framework put out Oct-2025). Cause per LRCX: mix shift as inference becomes dominant, pulling through memory and CPU intensity alongside GPU/XPU -> rising semi content per dollar of AI infrastructure.",
+     "source": "Lam Research CFO Doug Bettinger, JPM 2026 Hardware & Semis Management Access Forum (JPM Semis / Harlan Sur)",
+     "date": "2026-08-12",
+     "scope": "company-guided (AI-capex denominator - NOT the $/GW card)",
+     "cited_in": [
+      "LRCX.md",
+      "themes/semicap-wfe.md"
+     ]
+    },
     {
      "value": "$148-158B CY26 / $180-215B CY27 / $202-260B CY28",
      "source": "Capstone house model",

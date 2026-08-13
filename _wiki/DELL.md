@@ -6,17 +6,17 @@
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\DELL` (filings + transcripts) · `_equity_calls` · `E:\briefings\2026`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-11 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-08-12 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $162.6bn | $196.5bn |
-| Gross profit | $28.6bn | $34.4bn |
+| Revenue | $162.8bn | $196.7bn |
+| Gross profit | $28.7bn | $34.4bn |
 | Gross margin | 17.6% | 17.5% |
-| EBITDA | $16.7bn | $20.4bn |
-| EPS | $16.66 | $22.36 |
+| EBITDA | $16.8bn | $20.4bn |
+| EPS | $16.85 | $22.36 |
 | Capex | $3.6bn | $4.0bn |
-| OCF (≈EBITDA) | $16.7bn | $20.4bn |
+| OCF (≈EBITDA) | $16.8bn | $20.4bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
@@ -62,6 +62,14 @@ Dell is the systems integrator between silicon and the AI buyer: it takes NVIDIA
 </svg>
 
 ## Current state (latest quarter)
+
+**🆕🔴 2026-08-12 — GS PREVIEWS C2Q26 HARDWARE AND ITS CENTRAL CLAIM IS THAT THE GROWTH IS PRICE, NOT UNITS — WHILE MORGAN STANLEY UPGRADES THE IT HARDWARE SECTOR.**
+
+- **GS: "Reiterate Buy on DELL, [[HPE]], NTAP" — but with an explicit setup warning: "While we see upside to estimates across IT hardware vendors from higher ASPs and improving AI-related infrastructure demand from enterprise, we think the STRONG OUTPERFORMANCE FOR THE SECTOR IN 2Q (+111% v. SPX +13%) MAKES FOR A CHALLENGING RISK/REWARD SET UP INTO EARNINGS"** (GS / Katherine Murphy, "Americas Technology: Hardware: C2Q26 preview", 2026-08-12). ⚠️ **+111% vs +13% for the index in one quarter — the same "cleared consensus, missed the whisper" setup that just produced flat-to-down tapes on [[LITE]] and [[COHR]] prints this week.**
+- **🔴 THE PRICE-VS-VOLUME CALL, and it is the line to carry: "we expect much of the growth in C2Q26 for data center hardware will be DRIVEN BY PRICING VS. UNIT GROWTH, especially as enterprises have shown a HIGHER WILLINGNESS TO ACCEPT ELEVATED PRICES THAN PREVIOUSLY EXPECTED."** Supply constraints **"should limit significant shipment growth in the near term (but provide visibility in 2H26 and 2027 revenue through STRONGER BACKLOGS)."**
+- **🔴 PCs — a stark unit call fully offset by price: "we continue to expect DOUBLE-DIGIT % DECLINES IN UNIT SHIPMENTS IN C2H26, though these volume declines should be MORE THAN OFFSET BY HIGHER PRICING."** ⚠️ **Corroborated the same day from the silicon side: UBS expects "memory price inflation and mix allocation towards higher-end products will likely constrain demand for low-to-mid tier PCs, while pass-through of some costs will also pressure unit volume" (UBS / Arcuri, CPU Industry Update, 2026-08-12), and Mercury data shows [[INTC]] PC ASPs +9% q/q while losing unit share. Three independent reads, one week, same conclusion: the PC market is now a price story on declining units. Cross-ref [[MU]], [[INTC]], [[HPE]].**
+- **Demand-side framing: "on-premise agentic AI adoption & ongoing data center modernization efforts will drive continued strong demand for data center hardware (servers, storage, networking)."** GS's three watch-items for the season: **(1) how much can agentic AI lift the traditional compute market? (2) is AI-server demand broadening out from hyperscalers and neoclouds to SOVEREIGNS AND ENTERPRISE? (3) what is the role of storage appliances?** ⚠️ **Question (2) is being answered elsewhere in the wiki this week: [[CRWV]] reported customers broadening into industrials, life sciences and financial services, and [[SMCI]] went from four to nine $1bn+ customers. The broadening is real — the open question for DELL is whether it captures it or gets disintermediated (see the 08-11 item below).**
+- **Sector upgrade from a second house: MS upgraded the IT Hardware sector, naming HPE / DELL / NTAP / HPQ** (MS / Erik Woodring, "Morgan Stanley Tech Talk: Erik Woodring on IT Hardware Sector Upgrade", podcast, 2026-08-12); Bernstein's TMT desk carried a positive read-through to the AI supply chain from the [[CRWV]] print the same day (Bernstein / Tyler Seidman, 2026-08-12).
 
 **🆕🔴 2026-08-11 — THE DISINTERMEDIATION RISK GOT A NAMED CHANNEL CHECK, A DATE AND A PRODUCT: [[SPCX]] AND [[CRWV]] PLAN TO BUY AI SERVERS DIRECTLY FROM TAIWANESE ODMs INSTEAD OF 100% FROM DELL, LIKELY FROM 2027, STARTING WITH VR200. DELL -4% on it (Fubon / Titan Cheng, relayed by Jefferies / Conor O'Mara and Rankie Wong, and by TMTB, all 2026-08-11).**
 - **The check, verbatim:** *"Our latest channel checks show that **SPCX and CRWV plan to buy AI servers directly from Taiwanese ODM's, instead of purchasing 100% from DELL** — and they are currently **in discussions with Hon Hai, Quanta (2382 TT), Wiwynn (6669 TT) and Wistron (3231 TT)**. We expect this take place in **2027E, most likely starting with VR200**."* Fubon frames it as a positive for Hon Hai, whose TP it raised to **NT$370 from NT$323** on the same note.

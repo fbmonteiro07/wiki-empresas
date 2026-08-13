@@ -1,13 +1,11 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-08-11 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-08-12 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (10)
+## 📅 Upcoming (8)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-08-11 | CRWV | **🆕 Q2 2026 print — TUE 2026-08-11, POST-CLOSE (historical record of the bogey).** BofA Buy PO $140 into it. **The operating bogey: active power ~1.0 GW → 1.7 GW by year-end**, with more capacity comi |
-| 2026-08-11 | LITE | **🆕🔴 Q4 FY26 PRINT — TUE 2026-08-11 AMC.** The bogeys, from three independent setups on 2026-08-10: **JunQ revenue ≥$1,003M** vs the $960M-$1,010M guide and **GM ≥48.5%** (UBS Neutral $960); **the Dec |
 | 2026-08-12 | NBIS | **🆕 Q2 2026 print — WED 2026-08-12, PRE-OPEN.** BofA Buy PO $280 into it; three named focus areas: **(1) capacity activation / DC execution, (2) capex requirements for the build, (3) EBITDA margin tra |
 | 2026-08-13 | SNDK | **🆕 SanDisk INVESTOR DAY — 2026-08-13, 9am ET webcast. This is now the live catalyst, not the print.** Management explicitly teased **HBF timeline/roadmap, KV-cache sizing, and other new products/oppo |
 | 2026-08-17 | NBIS | **🆕🔴 VINELAND, NJ EXPANSION HEARING RESUMES — 2026-08-17.** Local opposition to the *expansion* (phase 1 already approved); the revised design is **primarily powered by [[BE]] fuel cells** (announced  |
@@ -17,13 +15,14 @@ _Generated 2026-08-11 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-09-16 | ON | **2026-09-16 — onsemi Analyst Day** (Citi exp. ~Sep 13 print first) — the key event; watch for a raised long-term target model + SiC/800V framing (Citi, briefing 2026-06-15). |
 | 2026-09-23 | GOOG | **🆕 Koray Kavukcuoglu's first public outing — The Information's AI Agenda Live, San Francisco, 2026-09-23.** Billed topics include integrating frontier models across Search and the multi-billion-user  |
 
-## ⏰ Passed — need a post-mortem (0)
+## ⏰ Passed — need a post-mortem (2)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| _none_ | | |
+| 2026-08-11 | LITE | **🆕🔴 Q4 FY26 PRINT — TUE 2026-08-11 AMC.** The bogeys, from three independent setups on 2026-08-10: **JunQ revenue ≥$1,003M** vs the $960M-$1,010M guide and **GM ≥48.5%** (UBS Neutral $960); **the Dec |
+| 2026-08-11 | CRWV | **🆕 Q2 2026 print — TUE 2026-08-11, POST-CLOSE (historical record of the bogey).** BofA Buy PO $140 into it. **The operating bogey: active power ~1.0 GW → 1.7 GW by year-end**, with more capacity comi |
 
 ## ✅ Resolved (59)
 
