@@ -8,7 +8,7 @@ _Every NEW quantitative datapoint from tonight's ingest, marked against three ba
 
 ---
 
-## DIVERGES — the alpha
+## Where the new data DIVERGES
 
 ### 1. 🔴 COHR — the house model is 68% above consensus on CY27 EPS, and tonight's guide does not obviously bridge it
 
@@ -119,11 +119,59 @@ These would each read as a large edge and none of them is one. Recording them so
 
 ## Open items for the desk
 
-- **COHR house CY27 (+68% vs consensus)** — re-underwrite against the printed guide, or mark the model stale. Highest-priority item on this list.
+- **COHR house CY27 (+68% vs consensus median — and ⚠️ +40% above the STREET HIGH, per the 08-14 re-placement below)** — re-underwrite against the printed guide, or mark the model stale. Highest-priority item on this list, and upgraded by the street-high placement: no analyst on the tape underwrites this number.
 - **ORCL revenue-per-GW**: the $10bn vs $30–50bn/GW gap now has a **bull** reading (UBS: "strong upward bias") against the SemiAnalysis/Jefferies structural-handicap reading. Left explicitly unresolved — the highest-value open ORCL debate.
 - **QCOM**: management guides **$15B+ datacenter revenue by FY29**; BofA models **~$2.4bn CY29E server CPU**. ~6x apart — reconcilable only if that revenue is *not* server CPU. Worth asking IR.
 - **ADVANTEST's Jefferies rating is self-contradictory in the source** (comp table NR on the US line; disclosure list "6857 JP ¥35,940 **BUY**"). No rating claim was made. Resolve before citing.
-- **BBG live re-pull**: not required for this report — the on-disk snapshot is same-day — but any *intraday* mark (spot, live consensus revisions after 18:29) needs the Terminal up.
+- ~~**BBG live re-pull**: not required for this report — the on-disk snapshot is same-day — but any *intraday* mark (spot, live consensus revisions after 18:29) needs the Terminal up.~~ ✅ **DONE 2026-08-14 via `/wiki-consensus`** — full live pull (98/98) plus an ad-hoc `BEST_TARGET_PRICE / BEST_ANALYST_RATING` pull. See the re-placement layer below.
+
+---
+
+## BBG re-placement — 2026-08-14 `/wiki-consensus`
+
+_No `PENDING` cell existed in this report (the 08-13 snapshot was same-day), so Step 3 had no cell to overwrite. This layer instead re-places every quantitative row above against a **fresh live pull**: `estimates.json` **asof 2026-08-14, 98/98 names, 0 FAIL lines, 0 null prices, 0 carry-over stamps, 1 record (BESI) byte-identical to the 08-13 vintage**. Consensus barely moved overnight (largest drift in this report's names: NBIS CY27 rev +1.28%, COHR CY27 rev +1.04%); **prices moved much more than estimates did**, which is what changes the placements below. **No row crosses DIVERGES ↔ CONFIRMS.**_
+
+**The one finding that materially changes: the house-vs-STREET-HIGH placement.** The report states its house gaps against the consensus **median** only. Placed against the **street high** (`_hi`), two of them invert in character:
+
+| Name | Year | House | Cons median | Street high | vs median | **vs street high** |
+|---|---|---|---|---|---|---|
+| **COHR** | CY27 EPS | **$19.21** | $11.45 | **$13.72** | +67.8% | **+40.0%** |
+| **COHR** | CY27 rev | **$16.6bn** | $12.52bn | **$13.96bn** | +32.6% | **+18.9%** |
+| **COHR** | CY26 EPS | $8.27 | $7.18 | $7.95 | +15.2% | **+4.0%** |
+| **NVDA** | CY27 EPS | $15.44 | $12.93 | **$15.94** | +19.4% | **−3.1%** |
+| **NVDA** | CY27 rev | $661bn | $569.1bn | **$732.2bn** | +16.1% | **−9.7%** |
+
+➜ **COHR (DIVERGES #1) is stronger than written — and worse for the model.** The house is above the *most bullish analyst on the tape* on both CY26 and CY27, on revenue and EPS. "+68% vs the median" could be dismissed as a stale-median artifact; **+40% above the street high cannot be.** No one underwrites this number. This upgrades the open item from "re-underwrite" to **"re-underwrite before the number is quoted to anyone, internal or external."**
+➜ **NVDA (DIVERGES #6) is weaker than written.** The house CY27 sits **inside** the Street's range — below the street high on both revenue and EPS. It is an above-median call, not an out-of-consensus one. The report's own framing ("the house edge is entirely an out-year call") survives, but the edge is **positional within the Street distribution, not differentiated from it**. Do not present NVDA CY27 as a contrarian house view.
+➜ For completeness, the CONFIRMS rows hold on street-high too: LITE CY27 EPS −21.0%, META CY27 −15.7%, AVGO CY27 −16.9% vs their street highs — all comfortably inside the range, no action.
+
+**PT placements** (ad-hoc live `bdp` pull 2026-08-14; `estimates.json` carries no `BEST_TARGET_PRICE`, so these are a separate pull). Broker PTs from the report vs the **BBG mean target**:
+
+| Name | Broker PT (report) | BBG mean PT | Broker vs Street | Spot | BBG upside | Rating (n) |
+|---|---|---|---|---|---|---|
+| **INTC** | BofA **$145** (cut from $160) | $119.18 | **+21.7%** | $102.84 | +15.9% | **3.61**/5 (54) |
+| **QCOM** | BofA **$180** (cut from $220) | $202.47 | **−11.1%** | $163.35 | +24.0% | **3.69**/5 (45) |
+| **NVDA** | BofA **$350** | $303.71 | **+15.2%** | $225.08 | +34.9% | **4.88**/5 (81) |
+| **AMD** | BofA **$620** | $620.95 | **−0.2%** | $500.15 | +24.2% | 4.59/5 (66) |
+| **ARM** | BofA **$260** | $283.52 | **−8.3%** | $276.45 | **+2.6%** | 4.25/5 (48) |
+| **ORCL** | DB $300 / UBS $245 / **JPM $200** | **$252.05** | DB +19.0% / UBS −2.8% / **JPM −20.6%** | $153.54 | **+64.2%** | 4.55/5 (51) |
+| **MSFT** | JPM **$625** | $568.51 | +9.9% | $498.36 | +14.1% | 4.84/5 (73) |
+| **COHR** | — | $418.43 | — | $324.31 | +29.0% | 4.52/5 (27) |
+| **STX** | Bernstein $1,350 | $1,112.70 | +21.3% | $951.65 | +16.9% | 4.70/5 (27) |
+| **NBIS** | — | $284.10 | — | $267.86 | **+6.1%** | 4.29/5 (21) |
+
+➜ **DIVERGES #2 sharpens: BofA's two cuts land on opposite sides of the Street.** Even after cutting INTC to $145, BofA is still **+21.7% above** the Street mean — its "PO cut" leaves it a relative *bull* on INTC. On QCOM the $180 sits **−11.1% below** the mean, consistent with the held Underperform. So the note is not uniformly bearish on the incumbents; it is bearish on QCOM and merely less-bullish on INTC. The rating field corroborates the direction: INTC **3.61** and QCOM **3.69** are the only two sub-4 ratings in the set, against NVDA's 4.88. **The "sliced away from the incumbents" framing holds — the Street already agrees, and has for a while.**
+➜ **AMD is the quiet anomaly**: BofA calls it the **top CPU pick** and prints a PT **dead-on the Street mean** (−0.2%). The conviction is in the ranking, not in the number.
+➜ **DIVERGES #3 (ARM) is materially strengthened.** The BBG mean PT implies **+2.6%** upside — **the lowest in this entire 14-name set** (next lowest is NBIS at +6.1%; the median across the set is ~+24%). BofA's sub-spot $260 is not an outlier, it is **8.3% below a Street that is itself already at fair value.** The report called this "coherent rather than anomalous"; the live tape now evidences it. The ISA-thesis / equity-thesis separation stands on data, not inference. **Still DIVERGES — but the divergence is ARM-vs-its-own-multiple, not BofA-vs-the-Street.**
+➜ **DIVERGES #4 (ORCL) re-places, and JPM is the outlier.** At a BBG mean of **$252.05**, JPM's $200 is **−20.6% below the Street** — not merely the low of the three houses on the page. UBS $245 is essentially *at* the mean (−2.8%); DB $300 is +19.0% above. Recomputed on today's $153.54 spot the three upsides are **DB +95.4% / UBS +59.6% / JPM +30.3%** (vs +92.0% / +56.8% / +28.0% on 08-13 — all widened as the stock fell −2.0%). Spot now trades **16.7x** CY27 consensus EPS of $9.19 (was 17.0x); the BBG mean PT implies **27.4x**. **The report's finding — both Buy-rated houses de-rated the multiple while staying constructive — is unaffected and now has the Street mean as a fourth reference point sitting between them.**
+➜ **NBIS (#7) gets a live caveat**: after a **+6.0% move** in the price, the BBG mean PT is only **+6.1%** above spot. The Street has closed the gap to the price. The report's basis correction (contracted ≠ connected ≠ revenue-generating) is exactly the kind of thing that re-opens it; consensus CY26/CY27 EPS remain negative (−$3.40 / −$4.43, unchanged).
+➜ **MSFT (CONFIRMS) holds to the decimal**: consensus CY27 EPS **$21.38 unchanged**, so JPM's $625 still implies **29.2x** vs **23.3x** spot. JPM sits +9.9% above the Street mean with the highest rating in the set (4.84/5). **No action.**
+
+**Prices moved, estimates did not.** Notable one-day spot moves inside this report's names: **AMD +4.4%**, **NBIS +6.0%**, **LITE +5.9%**, **STX +4.2%**, **AVGO −5.3%**, **ORCL −2.0%**. Every consensus EPS line for ARM, AMD, MSFT, STX, LITE, META, AVGO, AKAM and SPCX came back **unchanged to the cent**. The overnight information was entirely in price.
+
+---
+
+_BBG column resolved 2026-08-14 — `estimates.json` asof **2026-08-14** (98/98 live, 0 FAIL, 0 null prices, 0 carry-over stamps; BESI the sole byte-identical record). No `PENDING` cell existed in this report; the layer above is the live re-placement its own open item asked for. **No row crossed DIVERGES ↔ CONFIRMS.** Canonical header `## Where the new data DIVERGES` applied (was `## DIVERGES — the alpha`)._
 
 ---
 
