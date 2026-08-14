@@ -2,11 +2,14 @@
 
 _Generated 2026-08-13 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (7)
+## 📅 Upcoming (10)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-08-13 | SNDK | **🆕 SanDisk INVESTOR DAY — 2026-08-13, 9am ET webcast. This is now the live catalyst, not the print.** Management explicitly teased **HBF timeline/roadmap, KV-cache sizing, and other new products/oppo |
+| 2026-08-13 | SNDK | **🆕 SanDisk INVESTOR DAY — 2026-08-13, 9am ET webcast (original catalyst entry, retained for the audit trail).** Management explicitly teased **HBF timeline/roadmap, KV-cache sizing, and other new pro |
+| 2026-08-13 | SNDK | ~~**🆕 SanDisk INVESTOR DAY — 2026-08-13**~~ — **RESOLVED 2026-08-13**: FY28–30 model given (revenue mid-to-high teens growth, **GM ~80%**, **OM 75%**, **FCF margin ~50%**), **100% of excess FCF return |
+| 2026-08-14 | CEREBRAS | **🆕🔴 LOCK-UP EXPIRY — 2026-08-14, on 36.4M shares ("the largest chunk").** Named by Barclays (O'Malley, 2026-08-13) as a likely contributor to the -16% aftermarket move. **Dated, one day out, and it m |
+| 2026-08-17 | CEREBRAS | **🆕 "Supernova" event — week of 2026-08-17: CS-4 unveiling.** CS-5 targeted for **2H 2027** (MS · Moore, 2026-08-13). Prior page framing had CS-4 ramping early 2027 and CS-5 in 2028 — the roadmap lang |
 | 2026-08-17 | NBIS | **🆕🔴 VINELAND, NJ EXPANSION HEARING RESUMES — 2026-08-17.** Local opposition to the *expansion* (phase 1 already approved); the revised design is **primarily powered by [[BE]] fuel cells** (announced  |
 | 2026-08-26 | NVDA | **Q2 FY27 print: 2026-08-26** (guided $91B). Watch hyperscale vs hyperscale-capex growth under new segmentation (Arcuri: becomes a debate if NVDA ever under-grows it). |
 | 2026-08-31 | TXN | **CFO transition:** Rafael Lizardi out 2026-08-01 → **Julie Knecht** (CAO, 25-yr veteran), advisory through 2026-08-31 (DB/Seymore, briefing 2026-06-03). |

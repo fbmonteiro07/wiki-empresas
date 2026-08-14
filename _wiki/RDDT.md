@@ -13,7 +13,7 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\RDDT` (10-K FY25 + 10-
 | Gross profit | $3.0bn | $4.0bn |
 | Gross margin | 91.3% | 91.5% |
 | EBITDA | $1.4bn | $2.1bn |
-| EPS | $6.21 | $8.26 |
+| EPS | $6.21 | $8.29 |
 | Capex | $10m | $15m |
 | OCF (≈EBITDA) | $1.4bn | $2.1bn |
 

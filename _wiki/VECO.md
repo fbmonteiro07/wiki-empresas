@@ -10,12 +10,12 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\VECO` (filings + trans
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $788m | $1.1bn |
-| Gross profit | $326m | $498m |
+| Gross profit | $326m | $495m |
 | Gross margin | 41.3% | 44.8% |
-| EBITDA | $114m | $293m |
-| EPS | $1.48 | $3.15 |
+| EBITDA | $114m | $294m |
+| EPS | $1.48 | $3.05 |
 | Capex | $26m | $28m |
-| OCF (≈EBITDA) | $114m | $293m |
+| OCF (≈EBITDA) | $114m | $294m |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
@@ -117,6 +117,7 @@ _Q1 2026 print → intra-quarter · May 05 → Jun 19, 2026 · sell-side / exper
 
 | Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
+| **08-13** | 🔴🔴 **Barclays · Tom O'Malley — "Updating Numbers Post-Earnings". EQUAL WEIGHT, PT $55 UNCHANGED (px 08-12 $53.26)** | **demanda / supply / margem** | **bull on demand, cautious on execution** | 🔴 **TWO NEW ORDERS DISCLOSED, and they are the substance: a $200M ADVANCED-PACKAGING ORDER in the Semiconductor business, plus AN ADDITIONAL ORDER FOR THE LUMINA+ MOCVD SYSTEM in Compound Semi (financials undisclosed) — both "incremental to the $250M+ InP order from last quarter."** ⚠️ **The InP order is a direct read-through to the optics supply chain this wiki tracks on [[COHR]] and [[LITE]], both of which are constrained on indium-phosphide capacity — VECO is selling the tools into that constraint.** **Growth: "Revenue growth potentially accelerating to ~40% Y/Y in CY27 as the company invests to MORE THAN DOUBLE CAPACITY IN AP AND SiPho"; Barclays models the two segments accelerating into CY27 and total revenue growth of 44% y/y.** ⚠️ **THE MARGIN COST OF THAT, AND IT IS WHY THE RATING DID NOT MOVE: "September top-line guide roughly in-line while GMs are WELL BELOW THE STREET due to investments being made AHEAD of expected demand in 2027."** *"The company is rapidly expanding capacity, hiring personnel, and expanding its supply chain to meet higher demand. **This remains an EXECUTION STORY as the company brings on the necessary capacity (we think closer to 2H CY27)**."* ➜ **Demand is contracted, margin is being spent forward, and the capacity does not arrive until 2H CY27 — the gap between order intake and revenue recognition is the whole risk.** (Barclays, 2026-08-13) |
 | 05-06 | Citi · Atif Malik | valuation | bull | Buy reiterated — 2027E upside in silicon photonics (briefing mention). |
 | 05-19 | JPMorgan · Tom O'Malley | valuation | neutral | "O'Malley updates post-print" mention (briefing) — post-results update. |
 | 06-12 | JPM Special Situations · Deal Survey of the Americas | capital | neutral | Tracks the all-stock Veeco / Axcelis merger (merger-arb setup / ACLS proxy). Each VECO share converts into 0.3575 Axcelis shares; the last pending approval is China SAMR antitrust, close expected H2 2026. |

@@ -11,7 +11,7 @@ _Wiki · generated 2026-06-25 · synthesis-only (no local filings archive) · so
 | Gross profit | $158m | $187m |
 | Gross margin | 23.2% | 25.1% |
 | EBITDA | $37m | — |
-| EPS | $-0.90 | $-0.09 |
+| EPS | $-0.90 | $-0.10 |
 | Capex | — | — |
 | OCF (≈EBITDA) | $37m | — |
 

@@ -8,14 +8,14 @@ _Generated 2026-08-13 · the standing view of where our model and the curated re
 
 | Ticker | Metric | Yr | House | Consensus | Δ |
 |---|---|---|--:|--:|--:|
-| COHR | EPS | 2027 | 19.21 | 11.38 | +69% |
+| COHR | EPS | 2027 | 19.21 | 11.43 | +68% |
 | COHR | Revenue $bn | 2027 | 16.60 | 12.40 | +34% |
 | NVDA | EPS | 2027 | 15.44 | 12.91 | +20% |
 | GOOG | Revenue $bn | 2026 | 505.00 | 426.80 | +18% |
 | GOOG | Revenue $bn | 2027 | 641.00 | 544.30 | +18% |
 | NVDA | Revenue $bn | 2027 | 661.00 | 568.30 | +16% |
 | AAPL | EPS | 2026 | 10.12 | 8.74 | +16% |
-| COHR | EPS | 2026 | 8.27 | 7.17 | +15% |
+| COHR | EPS | 2026 | 8.27 | 7.18 | +15% |
 
 ## Curated divergences — latest reconciliation (`reconciliation-2026-08-12.md`)
 
