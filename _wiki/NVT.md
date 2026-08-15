@@ -10,11 +10,11 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\NVT` (10-K FY2025, 10-
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $5.1bn | $6.5bn |
-| Gross profit | $1.9bn | $2.5bn |
-| Gross margin | 37.6% | 37.8% |
+| Gross profit | $1.9bn | $2.4bn |
+| Gross margin | 37.5% | 37.5% |
 | EBITDA | $1.1bn | $1.5bn |
-| EPS | $4.69 | $6.47 |
-| Capex | $132m | $149m |
+| EPS | $4.69 | $6.48 |
+| Capex | $133m | $151m |
 | OCF (≈EBITDA) | $1.1bn | $1.5bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

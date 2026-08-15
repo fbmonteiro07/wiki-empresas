@@ -7,12 +7,12 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\CRWV` (10-K FY2025, fo
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $12.8bn | $26.5bn |
-| Gross profit | $8.7bn | $18.8bn |
+| Revenue | $12.8bn | $26.4bn |
+| Gross profit | $8.6bn | $18.7bn |
 | Gross margin | 67.7% | 70.7% |
 | EBITDA | $7.5bn | $16.6bn |
-| EPS | $-3.90 | $-1.81 |
-| Capex | $35.2bn | $46.5bn |
+| EPS | $-3.96 | $-1.81 |
+| Capex | $35.4bn | $46.9bn |
 | OCF (≈EBITDA) | $7.5bn | $16.6bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

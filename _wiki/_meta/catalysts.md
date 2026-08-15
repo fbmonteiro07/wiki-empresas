@@ -2,13 +2,14 @@
 
 _Generated 2026-08-14 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (8)
+## 📅 Upcoming (9)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
 | 2026-08-14 | CEREBRAS | **🆕🔴 LOCK-UP EXPIRY — 2026-08-14, on 36.4M shares ("the largest chunk").** Named by Barclays (O'Malley, 2026-08-13) as a likely contributor to the -16% aftermarket move. **Dated, one day out, and it m |
 | 2026-08-17 | CEREBRAS | **🆕 "Supernova" event — week of 2026-08-17: CS-4 unveiling.** CS-5 targeted for **2H 2027** (MS · Moore, 2026-08-13). Prior page framing had CS-4 ramping early 2027 and CS-5 in 2028 — the roadmap lang |
 | 2026-08-17 | NBIS | **🆕🔴 VINELAND, NJ EXPANSION HEARING RESUMES — 2026-08-17.** Local opposition to the *expansion* (phase 1 already approved); the revised design is **primarily powered by [[BE]] fuel cells** (announced  |
+| 2026-08-17 | RDDT | ~~Potential S&P 500 inclusion candidate (Barron's flagged, 2026-06-09).~~ — **✅ RESOLVED 2026-08-13/14: RDDT ADDED TO THE S&P 500, replacing AVB (acquired by EQR), effective at the close of 2026-08-17 |
 | 2026-08-26 | NVDA | **Q2 FY27 print: 2026-08-26** (guided $91B). Watch hyperscale vs hyperscale-capex growth under new segmentation (Arcuri: becomes a debate if NVDA ever under-grows it). |
 | 2026-08-31 | TXN | **CFO transition:** Rafael Lizardi out 2026-08-01 → **Julie Knecht** (CAO, 25-yr veteran), advisory through 2026-08-31 (DB/Seymore, briefing 2026-06-03). |
 | 2026-09-11 | TER | **Q3 CY26 print (~late Oct 2026)** — first test of the re-cut 2H, and of whether the merchant-GPU/second-hyperscaler correlation converts into guided revenue. Quiet period begins **2026-09-11**; manag |
