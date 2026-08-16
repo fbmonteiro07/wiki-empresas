@@ -4,6 +4,33 @@
 
 _Wiki · generated 2026-06-19 · updated 2026-06-29 (gap-audit additions, tagged "audit add") · cross-company theme · sources: equity calls (`../../equity_calls_transcripts`), briefing roll-ups (`../_briefings/by-ticker`), morning briefings (`E:\briefings\2026`), research library (`E:\research_library`). Company pages: [../00_INDEX.md](../00_INDEX.md) · themes index: [00_THEMES.md](00_THEMES.md)._
 
+## 🆕 Recent signals (Aug 15, /run-inbox) — 🔴 **THE CACHE DISCOUNT IS NOT A VENDOR CHOICE, IT IS AN INDUSTRY CONVENTION: [[OPENAI]], [[ANTHROPIC]] AND [[GOOG]] ALL PRICE A CACHED TOKEN AT EXACTLY 10% OF A COMPUTE TOKEN**
+
+- 🔴 **THE EXHIBIT, AND IT IS THE PRICE SIGNAL THAT MAKES KV-CACHE OFFLOAD TO NAND ECONOMICALLY RATIONAL.** *"There is a meaningful cost difference between compute (fresh uncached) tokens and cached tokens… Because accessing cached data is far less computationally intensive than recomputing it, cache tokens are significantly cheaper to serve. **The industry has converged on a 90% discount for cache reads — OpenAI, Anthropic and Google all price cached token at exactly 10% of compute token on current-generation models.**"* (Bernstein · Mark C. Newman / April Li / Phoebe Sun, "Memory & Storage: Why Sandisk investor day makes us more bullish on SNDK," 2026-08-14, Exhibit 4 — sourced to the vendors' own public pricing pages.)
+
+| Model | Compute ($/1M tok) | Cache read ($/1M tok) | Cache as % of input |
+|---|--:|--:|--:|
+| OpenAI gpt-5.6-sol | $5.00 | $0.50 | **10.0%** |
+| OpenAI gpt-5.6-terra | $2.00 | $0.20 | **10.0%** |
+| OpenAI gpt-5.6-luna | $0.20 | $0.02 | **10.0%** |
+| OpenAI gpt-5.4 | $2.50 | $0.25 | **10.0%** |
+| _OpenAI gpt-4o (prior gen)_ | _$2.50_ | _$1.25_ | _50.0%_ |
+| Claude Opus 5 / 4.8 | $5.00 | $0.50 | **10.0%** |
+| Claude Sonnet 5 | $2.00 | $0.20 | **10.0%** |
+| Claude Sonnet 4.6 | $3.00 | $0.30 | **10.0%** |
+| Claude Haiku 4.5 | $1.00 | $0.10 | **10.0%** |
+| Gemini 3.1 Pro (≤200k) | $2.00 | $0.20 | **10.0%** |
+| Gemini 3 Flash | $0.50 | $0.05 | **10.0%** |
+| Gemini 2.5 Pro (≤200k) | $1.25 | $0.13 | **10.0%** |
+| Gemini 2.5 Flash | $0.30 | $0.03 | **10.0%** |
+| DeepSeek V4-Pro | $0.44 | ~$0.00 | **~0.8%** |
+| DeepSeek V4-Flash | $0.14 | ~$0.00 | **~2%** |
+
+- ➜ **WHY THIS MATTERS TO THIS THEME SPECIFICALLY, AND IT CUTS BOTH WAYS.** (1) **The 10% convention is a floor under the storage thesis:** at a 90% discount, re-serving a cached token is worth ~9x its price in avoided compute, which is exactly the arbitrage that justifies persisting KV cache to NAND rather than recomputing it. It converts "KV cache offload" from an engineering preference into a priced decision, and it is the demand-side complement to the [[SNDK]] KV-cache TAM on [[hbm-memory]]. (2) **But it is also a token-DEFLATION mechanism of precisely the kind this page tracks:** every workload that shifts from compute tokens to cached tokens takes a **90% price cut** on that volume. On a revenue-per-token basis, cache adoption looks exactly like the "token optimization" phase change logged Aug 10 — spend holds only if cached volume grows more than 10x the compute volume it displaces.
+- **The generational pattern is the tell, and it is worth watching as a leading indicator:** the only model in the table NOT at 10% is **prior-generation gpt-4o at 50%**. ➜ **The discount DEEPENED with the current generation (50% → 10%), i.e. the labs are actively pricing to push traffic into cache. That is a deliberate migration, not a passive one — and it should accelerate the KV-cache storage build. DeepSeek at ~1-2% is effectively giving cache reads away, which sets the competitive floor.**
+- ⚠️ **Attribution guard: these are LIST prices from public pricing pages as compiled by Bernstein on 2026-08-14, not realised blended rates. Enterprise contracts, batch discounts and committed-use pricing are not visible here, so do NOT convert this table into a revenue-mix estimate for any lab.**
+- **Context in the note (Bernstein's own framing):** the tokenomics exhibit sits inside a *"memory-centric AI"* argument — that *"memory capacity and memory bandwidth is the main limitation to compute"* and that NAND is *"the most optimal solution for inference given inference emphasis on read (vs. write) and the explosion of context memory (i.e. KV-cache)."* Cross-ref [[SNDK]], [[MU]], [themes/hbm-memory.md](hbm-memory.md).
+
 ## 🆕 Recent signals (Aug 13) — 🔴 THE AGENTIC TURN GETS ITS FIRST HARD COMPUTE COEFFICIENT (**CPU:XPU GOES 1:4 → 1:2 → ~1:1**), AND MS RE-RUNS THE ROIC GRID UNDER OPEN WEIGHTS AND GETS THE **SAME** ANSWER
 
 **(1) 🔴 THE COEFFICIENT THIS PAGE HAS BEEN MISSING FOR THE AGENTIC LEG — a token is no longer the unit of work; a TASK is, and a task fans out** (BofA Securities · Vivek Arya / Duksan Jang / Michael Mani / Liam Pharr, "Rise of the agents: raising CPU TAM (again) to $210bn", 2026-08-12, Price Objective Change). BofA raises **CY30E server CPU TAM to $210bn+ from ~$170bn** — *"nearly **5x** growth off the **~$35bn CY25** level, and still **2.5x** growth off a strong CY26E base"* (CY26E = **$61.4bn**), lifting the CY26-30 CAGR to **+36% from +30% prior**. The stated mechanism is the tokenmaxxing-relevant part: *"**agentic inference is pushing the CPU to GPU ratio from ~1:4 in the training era to ~1:2 for AI inference, and ultimately toward ~1:1 for agentic AI**, as CPUs become **the orchestration control plane**."* [Source](../../relat%C3%B3rios%20bons/Vivek_on_CPU.html)

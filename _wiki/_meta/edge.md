@@ -17,20 +17,19 @@ _Generated 2026-08-15 · the standing view of where our model and the curated re
 | AAPL | EPS | 2026 | 10.12 | 8.74 | +16% |
 | COHR | EPS | 2026 | 8.27 | 7.18 | +15% |
 
-## Curated divergences — latest reconciliation (`reconciliation-2026-08-13.md`)
+## Curated divergences — latest reconciliation (`reconciliation-2026-08-15.md`)
 
 | Name | New datapoint | Read (the edge) |
 |---|---|---|
-| 🔴 COHR | the house model is 68% above consensus on CY27 EPS, and tonight's guide does not obviously bridge it | Action: re-underwrite the house CY27 bridge before it is quoted. |
-| 🔴 — | BofA raised the CPU TAM 24% and cut price targets on both x86-adjacent incumbents | The divergence is internal to the note and it is the tradeable observation: a 24% bigger pie, sliced away from the incumbents. |
-| 🔴 ARM | the only negative-upside target in tonight's set, and it is coherent rather than anomalous | the only negative-upside target in tonight's set, and it is coherent rather than anomalous |
-| 🔴 ORCL | three houses, a $100 target spread, and both Buy-rated houses de-rated the multiple | The pattern, not the levels, is the finding: two positively-rated houses both cut the multiple and both rolled the valuation year forward inside eight days. |
-| 🔴 A double-count found in our own prior comment | MSFT/OpenAI revenue share | Carrying it forward double-counts it. |
-| NVDA | house sits 19.6% above consensus on CY27 EPS, and tonight's flow cuts both ways | The house CY27 number is a margin call as much as a volume call. |
-| NBIS | a basis correction that changes how the guide should be read | Also a basis flag: the $40–50M/MW marks are GB300-era, not Vera Rubin. |
-| STX | the primary transcript softens a claim the relay had hardened | "Targeting the mid-20s" is data-center exabyte growth, not a margin metric |
+| 🔴🔴 MU | consensus models an 86% CY27 gross margin, but management has just disclosed that most contracted volume is CEILINGED at CQ2-2026 pricing | consensus models an 86% CY27 gross margin, but management has just disclosed that most contracted volume is CEILINGED at CQ2-2026 pricing |
+| 🔴 MU vs SNDK | the two largest LTA books are priced the OPPOSITE way round, and the wiki had been treating them as one trade | the two largest LTA books are priced the OPPOSITE way round, and the wiki had been treating them as one trade |
+| 🔴 SNDK | Bernstein's Street-high $3,000 is built on a model that REJECTS the growth guide it endorses | Bernstein's Street-high $3,000 is built on a model that REJECTS the growth guide it endorses |
+| 🔴 SNDK | consensus CY27 gross margin (84.3%) sits ABOVE the company's own FY28-30 target (~80%) | consensus CY27 gross margin (84.3%) sits ABOVE the company's own FY28-30 target (~80%) |
+| AMAT | Arcuri's capacity-derived 2028 systems number is far above anything in the consensus trajectory | Arcuri's capacity-derived 2028 systems number is far above anything in the consensus trajectory |
+| SNDK | the post-Investor-Day house cluster sits ABOVE the on-disk consensus, which has not yet caught up | the post-Investor-Day house cluster sits ABOVE the on-disk consensus, which has not yet caught up |
+| SNDK | Citi is 33% ABOVE consensus in the out-year while 6% BELOW it in the near year | Citi is 33% ABOVE consensus in the out-year while 6% BELOW it in the near year |
 
-## Consensus PT vs spot — live pull in `reconciliation-2026-08-13.md` (upside ranked)
+## Consensus PT vs spot — live pull in `reconciliation-2026-08-15.md` (upside ranked)
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|
