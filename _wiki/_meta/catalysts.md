@@ -1,28 +1,31 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-08-14 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-08-15 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (9)
+## 📅 Upcoming (12)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-08-14 | CEREBRAS | **🆕🔴 LOCK-UP EXPIRY — 2026-08-14, on 36.4M shares ("the largest chunk").** Named by Barclays (O'Malley, 2026-08-13) as a likely contributor to the -16% aftermarket move. **Dated, one day out, and it m |
 | 2026-08-17 | CEREBRAS | **🆕 "Supernova" event — week of 2026-08-17: CS-4 unveiling.** CS-5 targeted for **2H 2027** (MS · Moore, 2026-08-13). Prior page framing had CS-4 ramping early 2027 and CS-5 in 2028 — the roadmap lang |
 | 2026-08-17 | NBIS | **🆕🔴 VINELAND, NJ EXPANSION HEARING RESUMES — 2026-08-17.** Local opposition to the *expansion* (phase 1 already approved); the revised design is **primarily powered by [[BE]] fuel cells** (announced  |
 | 2026-08-17 | RDDT | ~~Potential S&P 500 inclusion candidate (Barron's flagged, 2026-06-09).~~ — **✅ RESOLVED 2026-08-13/14: RDDT ADDED TO THE S&P 500, replacing AVB (acquired by EQR), effective at the close of 2026-08-17 |
+| 2026-08-19 | ADI | **🔴 FQ3 FY26 print — 2026-08-19 (Wed, BMO):** delivery vs the ~$3.9bn / $3.30 guide; whether the above-seasonal streak extends. **The scoreable item is the FQ4 GROSS-MARGIN guide, which is where Jeffe |
+| 2026-08-20 | ADI | **Post-print access, both 2026-08-20 (Thu):** **BofA fireside with ADI Head of IR Jeff Ambrosi, hosted by Vivek Arya, 11:00 ET (~45 min)** (BofA TMT Sales · Brian Fenske, 2026-08-14) · **UBS "ADI Earn |
 | 2026-08-26 | NVDA | **Q2 FY27 print: 2026-08-26** (guided $91B). Watch hyperscale vs hyperscale-capex growth under new segmentation (Arcuri: becomes a debate if NVDA ever under-grows it). |
+| 2026-08-26 | NVDA | **🆕 Buy-side bogeys are ABOVE the sell-side into 2026-08-26.** UBS guides FQ3 to ~$107-108bn, *"although investor 'bogeys' appear closer to **$110b+**"* (UBS Sales · Ruple, 2026-08-15) — the same $110 |
 | 2026-08-31 | TXN | **CFO transition:** Rafael Lizardi out 2026-08-01 → **Julie Knecht** (CAO, 25-yr veteran), advisory through 2026-08-31 (DB/Seymore, briefing 2026-06-03). |
 | 2026-09-11 | TER | **Q3 CY26 print (~late Oct 2026)** — first test of the re-cut 2H, and of whether the merchant-GPU/second-hyperscaler correlation converts into guided revenue. Quiet period begins **2026-09-11**; manag |
+| 2026-09-14 | NVDA | **🆕 Post-print access, both dated:** **BofA fireside with Toshiya Hari, VP of IR & Strategic Finance, hosted by Vivek Arya — 2026-09-02, 11:00 ET (~1hr)** (BofA TMT Sales, 2026-08-14) · **UBS-arranged |
 | 2026-09-16 | ON | **2026-09-16 — onsemi Analyst Day** (Citi exp. ~Sep 13 print first) — the key event; watch for a raised long-term target model + SiC/800V framing (Citi, briefing 2026-06-15). |
 | 2026-09-23 | GOOG | **🆕 Koray Kavukcuoglu's first public outing — The Information's AI Agenda Live, San Francisco, 2026-09-23.** Billed topics include integrating frontier models across Search and the multi-billion-user  |
 
-## ⏰ Passed — need a post-mortem (0)
+## ⏰ Passed — need a post-mortem (1)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| _none_ | | |
+| 2026-08-14 | CEREBRAS | **🆕🔴 LOCK-UP EXPIRY — 2026-08-14, on 36.4M shares ("the largest chunk").** Named by Barclays (O'Malley, 2026-08-13) as a likely contributor to the -16% aftermarket move. **Dated, one day out, and it m |
 
 ## ✅ Resolved (64)
 
