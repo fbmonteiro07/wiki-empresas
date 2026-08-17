@@ -5,15 +5,15 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\CEG` (filings + transcripts) · `_equity_calls` (none) · `_briefings\by-ticker\CEG.md` (absent). Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-14 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-08-17 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $34.1bn | $36.1bn |
-| Gross profit | $13.0bn | $18.2bn |
-| Gross margin | 38.3% | 50.3% |
+| Revenue | $34.2bn | $36.1bn |
+| Gross profit | $12.7bn | $18.2bn |
+| Gross margin | 37.2% | 50.3% |
 | EBITDA | $7.8bn | $9.0bn |
-| EPS | $11.33 | $12.80 |
+| EPS | $11.31 | $12.80 |
 | Capex | $4.7bn | $3.9bn |
 | OCF (≈EBITDA) | $7.8bn | $9.0bn |
 
