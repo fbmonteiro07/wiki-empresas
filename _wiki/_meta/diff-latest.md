@@ -1,9 +1,23 @@
 # What changed — last 7 days
 
-_Generated 2026-08-15 (since 2026-08-08) · rolls up every page's `## Changelog` + the ingest run log. ⭐ = rating/PT move. Rebuild: `py _wiki/_tools/build_diff.py [days]`._
+_Generated 2026-08-16 (since 2026-08-09) · rolls up every page's `## Changelog` + the ingest run log. ⭐ = rating/PT move. Rebuild: `py _wiki/_tools/build_diff.py [days]`._
 
 | Date | Ticker | Change |
 |---|---|---|
+| 2026-08-16 | ⭐ TSLA | (wiki-ingest, scheduled — 1 source: MS · Andrew Percoco, 2026-08-10). 1 catalyst block. NOTHING SUPERSEDED — MS stays EQUAL-WEIGHT, PT $400 unchanged, and no reported number on this page moved.** |
+| 2026-08-16 | ⭐ SPCX | (wiki-ingest, scheduled — 1 source: MS · Adam Jonas, "Blades & Vanes", 2026-08-16). 1 new dated section. RATING/PT UNCHANGED (OW, PT $300, bull $600). ONE MARK SUPERSEDED.** |
+| 2026-08-16 | ⭐ SMIC | (wiki-ingest, scheduled — 2 sources). 2 intra-quarter rows. NOTHING SUPERSEDED on the company's own numbers (the Q2 print and 3Q guide already on the page are unchanged); TWO NEW BROKER MARKS ADDED, one of which is a PT RAISE.** |
+| 2026-08-16 | ⭐ QCOM | (wiki-ingest, scheduled — 1 source). 1 intra-quarter row. NOTHING SUPERSEDED — no rating, PT, guide or reported number on this page moved.** |
+| 2026-08-16 | ⭐ NBIS | (wiki-ingest, scheduled — 1 source). 1 intra-quarter row. NOTHING SUPERSEDED — no rating, PT, ARR, capex or contract figure moved.** |
+| 2026-08-16 | ⭐ MEDIATEK | (wiki-ingest, scheduled — 2 sources). 2 intra-quarter rows. NOTHING SUPERSEDED — no MTK rating, PT, guide or estimate moved.** |
+| 2026-08-16 | ⭐ LITE | (wiki-ingest, scheduled — 2 sources). 2 intra-quarter rows. NOTHING SUPERSEDED — no rating, PT, guide or reported number on this page moved.** |
+| 2026-08-16 | ⭐ KIOXIA | (wiki-ingest, scheduled — 1 source). 1 intra-quarter row. NOTHING SUPERSEDED — no rating, PT, guide or reported number moved.** |
+| 2026-08-16 | ⭐ GOOG | (wiki-ingest, scheduled — 2 sources). 3 intra-quarter rows. NOTHING SUPERSEDED on GOOG's own numbers — no rating, PT or estimate on this page moved; the changes are all in the TPU SUPPLY stack.** |
+| 2026-08-16 | ⭐ CRWV | (wiki-ingest, scheduled — 1 source). 1 intra-quarter row. NOTHING SUPERSEDED — no rating, PT, backlog, guide or reported number moved.** |
+| 2026-08-16 | ⭐ CDNS | (wiki-ingest, scheduled — 2 sources). 2 intra-quarter rows. NOTHING SUPERSEDED — no rating, PT, guide or estimate on this page moved (JPM stays OW; neither note published numbers).** |
+| 2026-08-16 | ⭐ AVGO | (wiki-ingest, scheduled — 1 source). 1 intra-quarter row. NOTHING SUPERSEDED — no AVGO rating, PT, guide or reported number moved.** |
+| 2026-08-16 | ⭐ AMZN | (wiki-ingest, scheduled — 3 sources). 3 intra-quarter rows + 1 Signal-row update. NOTHING SUPERSEDED — no reported number, guide, rating or PT on this page moved; MS base PT stays $335 (OW).** |
+| 2026-08-16 | ⭐ AMD | (wiki-ingest, scheduled — 2 sources). 1 intra-quarter row. NOTHING SUPERSEDED — no rating, PT, guide or estimate on this page moved.** |
 | 2026-08-15 | ⭐ SPCX | (wiki-ingest, scheduled — 3 sources). 2 Current-state blocks. NOTHING SUPERSEDED — no rating, PT, revenue, capex, GW, ARR or lease mark on this page moved.** |
 | 2026-08-15 | ⭐ SNDK | (/run-inbox, scheduled — 8 SNDK sources incl. the company PRIMARY). NO RATING OR PT SUPERSEDED — every house reiterated. Two houses ADDED (Citi, Bernstein) and THREE OF THIS PAGE'S OWN CLAIMS CORRECTED against the primary deck.** |
 | 2026-08-15 | ⭐ SNDK | (wiki-ingest, scheduled — 5 sources). 3 Current-state blocks. NOTHING SUPERSEDED — no rating, PT or sell-side estimate on this page was replaced; the PT ladder is unchanged for a third consecutive session.** |

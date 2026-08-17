@@ -1,8 +1,8 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-08-15 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-08-16 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (12)
+## 📅 Upcoming (13)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
@@ -10,6 +10,7 @@ _Generated 2026-08-15 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-08-17 | NBIS | **🆕🔴 VINELAND, NJ EXPANSION HEARING RESUMES — 2026-08-17.** Local opposition to the *expansion* (phase 1 already approved); the revised design is **primarily powered by [[BE]] fuel cells** (announced  |
 | 2026-08-17 | RDDT | ~~Potential S&P 500 inclusion candidate (Barron's flagged, 2026-06-09).~~ — **✅ RESOLVED 2026-08-13/14: RDDT ADDED TO THE S&P 500, replacing AVB (acquired by EQR), effective at the close of 2026-08-17 |
 | 2026-08-19 | ADI | **🔴 FQ3 FY26 print — 2026-08-19 (Wed, BMO):** delivery vs the ~$3.9bn / $3.30 guide; whether the above-seasonal streak extends. **The scoreable item is the FQ4 GROSS-MARGIN guide, which is where Jeffe |
+| 2026-08-19 | CDNS | **🆕 2026-08-19 (Wed, NYC) — CDNS CEO ANIRUDH DEVGAN small-group meeting, BofA-hosted (Vivek Arya), in person, allocated** (BofA · Brian Fenske, 2026-08-14). **The two questions IR left open at the JPM |
 | 2026-08-20 | ADI | **Post-print access, both 2026-08-20 (Thu):** **BofA fireside with ADI Head of IR Jeff Ambrosi, hosted by Vivek Arya, 11:00 ET (~45 min)** (BofA TMT Sales · Brian Fenske, 2026-08-14) · **UBS "ADI Earn |
 | 2026-08-26 | NVDA | **Q2 FY27 print: 2026-08-26** (guided $91B). Watch hyperscale vs hyperscale-capex growth under new segmentation (Arcuri: becomes a debate if NVDA ever under-grows it). |
 | 2026-08-26 | NVDA | **🆕 Buy-side bogeys are ABOVE the sell-side into 2026-08-26.** UBS guides FQ3 to ~$107-108bn, *"although investor 'bogeys' appear closer to **$110b+**"* (UBS Sales · Ruple, 2026-08-15) — the same $110 |
