@@ -1,0 +1,765 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quem Paga a Conta</title></head><body>
+<style>
+:root{
+  --paper:#FAF9F6; --card:#FFFFFF; --ink:#1B2632; --muted:#5D6B79; --faint:#8A96A3;
+  --line:#E5E1D8; --line2:#EFECE4; --navy:#1E3A5F; --navy-ink:#FFFFFF;
+  --s-tot:#C65A1E; --s-hyp:#2E5EA8; --s-ocf:#15803D;
+  --sp-chip:#1E3A5F; --sp-net:#5B84C4; --sp-shell:#AD7A2E;
+  --s-tot-soft:rgba(198,90,30,.09); --s-hyp-soft:rgba(46,94,168,.09); --s-ocf-soft:rgba(21,128,61,.10);
+  --red:#B4332A; --red-soft:rgba(180,51,42,.08);
+  --chip-ok:#DFF0E5; --chip-ok-ink:#155A33; --chip-mid:#FFF0DC; --chip-mid-ink:#8A4A12;
+  --chip-warn:#F9E2DF; --chip-warn-ink:#8F2A22; --chip-info:#E3EBF7; --chip-info-ink:#274E86;
+  --heat0:#FAF9F6; --heat1:#F6E3D3; --heat2:#EFC29E; --heat3:#E09B60; --heat4:#C65A1E; --heat5:#8F3D10;
+  --shadow:0 1px 2px rgba(27,38,50,.05), 0 8px 28px -18px rgba(27,38,50,.25);
+}
+:root:not([data-theme="light"]){}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0F141B; --card:#151C25; --ink:#E9E7E2; --muted:#98A4B1; --faint:#6E7B88;
+    --line:#29323E; --line2:#1E2733; --navy:#24405F; --navy-ink:#DCE6F2;
+    --s-tot:#C4682E; --s-hyp:#5C86C5; --s-ocf:#2F9960;
+    --sp-chip:#3B5D8F; --sp-net:#5C86C5; --sp-shell:#B08540;
+    --s-tot-soft:rgba(196,104,46,.14); --s-hyp-soft:rgba(92,134,197,.13); --s-ocf-soft:rgba(47,153,96,.14);
+    --red:#D06A5F; --red-soft:rgba(208,106,95,.12);
+    --chip-ok:#173427; --chip-ok-ink:#7FCBA0; --chip-mid:#3A2A16; --chip-mid-ink:#E3A96A;
+    --chip-warn:#3C1F1C; --chip-warn-ink:#E58F86; --chip-info:#1D2C42; --chip-info-ink:#9FBEE8;
+    --heat0:#0F141B; --heat1:#2A2018; --heat2:#4A331F; --heat3:#7A4A22; --heat4:#C4682E; --heat5:#E89055;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 28px -18px rgba(0,0,0,.6);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0F141B; --card:#151C25; --ink:#E9E7E2; --muted:#98A4B1; --faint:#6E7B88;
+  --line:#29323E; --line2:#1E2733; --navy:#24405F; --navy-ink:#DCE6F2;
+  --s-tot:#C4682E; --s-hyp:#5C86C5; --s-ocf:#2F9960;
+  --sp-chip:#3B5D8F; --sp-net:#5C86C5; --sp-shell:#B08540;
+  --s-tot-soft:rgba(196,104,46,.14); --s-hyp-soft:rgba(92,134,197,.13); --s-ocf-soft:rgba(47,153,96,.14);
+  --red:#D06A5F; --red-soft:rgba(208,106,95,.12);
+  --chip-ok:#173427; --chip-ok-ink:#7FCBA0; --chip-mid:#3A2A16; --chip-mid-ink:#E3A96A;
+  --chip-warn:#3C1F1C; --chip-warn-ink:#E58F86; --chip-info:#1D2C42; --chip-info-ink:#9FBEE8;
+  --heat0:#0F141B; --heat1:#2A2018; --heat2:#4A331F; --heat3:#7A4A22; --heat4:#C4682E; --heat5:#E89055;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 28px -18px rgba(0,0,0,.6);
+}
+*{box-sizing:border-box; margin:0}
+body{background:var(--paper); color:var(--ink);
+  font:15px/1.55 "Segoe UI", -apple-system, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing:antialiased; padding:0 20px 80px}
+.wrap{max-width:1180px; margin:0 auto}
+.num{font-variant-numeric:tabular-nums}
+a{color:var(--s-hyp)}
+
+/* ---------- masthead ---------- */
+header.mast{padding:44px 0 26px; border-bottom:3px solid var(--navy)}
+.eyebrow{font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); font-weight:600}
+.mast h1{font-family:Georgia, "Times New Roman", serif; font-weight:700; font-size:clamp(30px,4.6vw,46px);
+  line-height:1.08; margin:10px 0 12px; text-wrap:balance}
+.mast .dek{max-width:70ch; color:var(--muted); font-size:16.5px}
+.mast .meta{display:flex; flex-wrap:wrap; gap:10px 22px; margin-top:16px; font-size:12.5px; color:var(--faint)}
+.mast .meta b{color:var(--muted); font-weight:600}
+
+/* ---------- KPI band ---------- */
+.kpis{display:grid; grid-template-columns:repeat(auto-fit,minmax(215px,1fr)); gap:12px; margin:26px 0 8px}
+.kpi{background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px 16px 13px; box-shadow:var(--shadow)}
+.kpi .lb{font-size:11px; letter-spacing:.13em; text-transform:uppercase; color:var(--muted); font-weight:600}
+.kpi .v{font-size:30px; font-weight:700; letter-spacing:-.01em; margin:6px 0 2px}
+.kpi .v small{font-size:16px; font-weight:600; color:var(--muted)}
+.kpi .s{font-size:12.5px; color:var(--muted)}
+.kpi .src{font-size:11px; color:var(--faint); margin-top:7px; border-top:1px solid var(--line2); padding-top:6px}
+.kpi.tot .v{color:var(--s-tot)} .kpi.hyp .v{color:var(--s-hyp)} .kpi.ocf .v{color:var(--s-ocf)}
+
+/* ---------- sections ---------- */
+section{margin-top:46px}
+.sec-head{display:flex; align-items:baseline; gap:14px; border-bottom:1px solid var(--line); padding-bottom:10px; margin-bottom:18px}
+.sec-head .n{font-family:Georgia, serif; font-size:15px; color:var(--s-tot); font-weight:700}
+.sec-head h2{font-family:Georgia, serif; font-size:24px; font-weight:700; letter-spacing:-.01em}
+.sec-head .sub{font-size:13px; color:var(--muted)}
+.card{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px; box-shadow:var(--shadow)}
+.note{font-size:12px; color:var(--faint); margin-top:12px; line-height:1.5}
+.note b{color:var(--muted)}
+.grid2{display:grid; grid-template-columns:2.1fr 1fr; gap:16px}
+@media (max-width:900px){.grid2{grid-template-columns:1fr}}
+
+/* ---------- charts ---------- */
+.chart-box{overflow-x:auto}
+.chart-box svg{display:block; min-width:760px; width:100%; height:auto}
+.legend{display:flex; flex-wrap:wrap; gap:8px 18px; font-size:12.5px; color:var(--muted); margin:0 0 10px}
+.legend .it{display:inline-flex; align-items:center; gap:7px}
+.sw{width:18px; height:0; border-top:3px solid; border-radius:2px}
+.sw.dash{border-top-style:dashed}
+.sq{width:11px; height:11px; border-radius:3px; display:inline-block}
+.gl{stroke:var(--line2); stroke-width:1}
+.tick{font-size:11px; fill:var(--faint)}
+.axl{font-size:11px; fill:var(--faint)}
+.dlab{font-size:12px; font-weight:700; paint-order:stroke; stroke:var(--card); stroke-width:4px}
+.alab{font-size:11.5px; font-weight:600}
+#tip{position:fixed; z-index:50; pointer-events:none; background:var(--ink); color:var(--paper);
+  font-size:12px; line-height:1.5; padding:8px 11px; border-radius:8px; max-width:320px; display:none;
+  box-shadow:0 6px 24px rgba(0,0,0,.25); white-space:pre-line}
+
+/* annotation panel */
+.ann{display:flex; flex-direction:column; gap:12px}
+.ann .a{border-left:4px solid; border-radius:8px; padding:12px 14px; font-size:13px; background:var(--card); border-top:1px solid var(--line); border-right:1px solid var(--line); border-bottom:1px solid var(--line)}
+.ann .a h4{font-size:12px; letter-spacing:.1em; text-transform:uppercase; margin-bottom:4px}
+.ann .a .big{font-size:22px; font-weight:700}
+.ann .a p{color:var(--muted); font-size:12.5px; margin-top:3px}
+
+/* ---------- tables ---------- */
+.tbl-box{overflow-x:auto; border:1px solid var(--line); border-radius:10px}
+table{border-collapse:collapse; width:100%; font-size:12.8px}
+th,td{padding:7px 10px; text-align:right; white-space:nowrap}
+thead th{background:var(--navy); color:var(--navy-ink); font-weight:600; font-size:12px; position:sticky; top:0}
+tbody th{text-align:left; font-weight:600; color:var(--ink); background:var(--card); position:sticky; left:0; border-right:1px solid var(--line)}
+thead th:first-child{text-align:left; position:sticky; left:0; z-index:2}
+tbody tr{border-top:1px solid var(--line2)}
+tbody tr.grp td, tbody tr.grp th{background:var(--line2); font-weight:700; font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); text-align:left}
+tbody tr.tot th, tbody tr.tot td{font-weight:700; border-top:2px solid var(--line)}
+td.est{color:var(--red); font-weight:600}
+td.lease{color:var(--s-hyp)}
+.ratio td{font-weight:600}
+
+/* ledger */
+.ledger td, .ledger th{white-space:normal; text-align:left; vertical-align:top; font-size:12.6px}
+.ledger td.num, .ledger th.num{text-align:right; white-space:nowrap}
+.chip{display:inline-block; font-size:10.5px; font-weight:700; letter-spacing:.06em; padding:2px 8px; border-radius:20px; text-transform:uppercase}
+.chip.ok{background:var(--chip-ok); color:var(--chip-ok-ink)}
+.chip.mid{background:var(--chip-mid); color:var(--chip-mid-ink)}
+.chip.warn{background:var(--chip-warn); color:var(--chip-warn-ink)}
+.chip.info{background:var(--chip-info); color:var(--chip-info-ink)}
+
+/* comparação por camada */
+.cmp-box{overflow-x:auto}
+.cmp{display:grid; grid-template-columns:118px 1fr 1fr; min-width:720px}
+.cmp .r{display:contents}
+.cmp .r>div{padding:12px 16px; border-top:1px solid var(--line2); font-size:13px; line-height:1.5}
+.cmp .r>div:nth-child(3){border-left:1px solid var(--line2)}
+.cmp .r.h>div{border-top:0; padding-bottom:14px}
+.cmp .hd{font-family:Georgia,serif; font-size:16px; font-weight:700; display:flex; align-items:center; gap:9px}
+.cmp .hd em{font-style:normal; font-family:"Segoe UI",sans-serif; font-size:11px; font-weight:600; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--muted); margin-left:auto}
+.cmp .dot{width:11px; height:11px; border-radius:3px; flex:none}
+.cmp .lbl{font-size:10.5px; letter-spacing:.11em; text-transform:uppercase; color:var(--faint); font-weight:700; padding-top:15px}
+.cmp .mut{color:var(--muted)}
+.cmp .num{font-variant-numeric:tabular-nums}
+.pill{display:inline-block; font-size:11.5px; padding:2px 9px; margin:0 5px 5px 0; border-radius:20px;
+  background:var(--line2); color:var(--muted); border:1px solid var(--line); white-space:nowrap}
+.cmp .ev>div:not(.lbl){display:flex; flex-direction:column; gap:7px}
+.cmp .e{font-size:12.3px; color:var(--muted); padding-left:12px; position:relative}
+.cmp .e::before{content:''; position:absolute; left:0; top:7px; width:4px; height:4px; border-radius:50%; background:var(--faint)}
+.cmp .e b{color:var(--ink)}
+.cmp .e i{font-style:normal; color:var(--faint); font-size:11px}
+
+/* aggregates + quotes */
+.cards3{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:12px}
+.mini{background:var(--card); border:1px solid var(--line); border-radius:10px; padding:15px 16px}
+.mini h4{font-size:11.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-bottom:6px}
+.mini .v{font-size:21px; font-weight:700}
+.mini p{font-size:12.5px; color:var(--muted); margin-top:4px}
+.mini .src{font-size:11px; color:var(--faint); margin-top:8px}
+.quote{border-left:4px solid var(--line); padding:13px 16px; background:var(--card); border-radius:8px; border-top:1px solid var(--line); border-right:1px solid var(--line); border-bottom:1px solid var(--line)}
+.quote.bull{border-left-color:var(--s-ocf)} .quote.bear{border-left-color:var(--red)} .quote.watch{border-left-color:var(--s-hyp)}
+.quote p{font-size:13.5px; line-height:1.55}
+.quote .who{font-size:11.5px; color:var(--faint); margin-top:8px}
+.quote .tag{float:right; font-size:10px; font-weight:700; letter-spacing:.08em; padding:1px 8px; border-radius:12px}
+.quote.bull .tag{background:var(--chip-ok); color:var(--chip-ok-ink)}
+.quote.bear .tag{background:var(--chip-warn); color:var(--chip-warn-ink)}
+.quote.watch .tag{background:var(--chip-info); color:var(--chip-info-ink)}
+
+details{margin-top:10px}
+details summary{cursor:pointer; font-size:12.5px; color:var(--muted); font-weight:600}
+footer{margin-top:56px; border-top:3px solid var(--navy); padding-top:18px; font-size:12px; color:var(--muted); line-height:1.7}
+footer h3{font-family:Georgia,serif; font-size:15px; color:var(--ink); margin:14px 0 6px}
+footer .disc{margin-top:16px; font-size:11.5px; color:var(--faint); border-top:1px solid var(--line); padding-top:12px}
+@media (prefers-reduced-motion:no-preference){ .kpi,.card,.mini{transition:border-color .15s} }
+</style>
+
+<div class="wrap">
+
+<header class="mast">
+  <div class="eyebrow">Capstone · US Equities Research · AI Infra</div>
+  <h1>Quem paga a conta do AI capex?</h1>
+  <p class="dek">O capex de IA chega a <b>US$ 2,9 trilhões em 2028E</b> nas contas Capstone — e <b>51% já não é dos hyperscalers</b>. Este painel junta a conta-síntese (capex vs. geração de caixa), a decomposição por player e o mapa de quem está financiando o resto: private credit, SPVs, vendor financing, equity e soberanos. Todo dado carrega fonte e data.</p>
+  <div class="meta">
+    <span><b>Data-base:</b> 17-ago-2026</span>
+    <span><b>Números house:</b> modelos oficiais Capstone + AI Model bottom-up (ago-26)</span>
+    <span><b>Terceiros:</b> atribuídos nominalmente em cada bloco</span>
+  </div>
+</header>
+
+<div class="kpis">
+  <div class="kpi tot"><div class="lb">Capex total de IA · 2028E</div><div class="v num">US$ 2,9 <small>tri</small></div>
+    <div class="s num">US$ 902 bi (26E) → 1.885 (27E) → 2.913 (28E)</div><div class="src">Capstone AI Model, bottom-up (ago-26)</div></div>
+  <div class="kpi tot"><div class="lb">Fora dos hyperscalers · 2028E</div><div class="v num">51%</div>
+    <div class="s num">US$ 1.488 bi em 28E · acum. 26–28E: US$ 2.468 bi</div><div class="src">Capstone — labs, neoclouds, Oracle, SpaceX, soberanos</div></div>
+  <div class="kpi hyp"><div class="lb">Gap dos hyperscalers · capex AI − OCF</div><div class="v num">US$ 229 <small>bi</small></div>
+    <div class="s num">em 28E · acumulado 26–28E: US$ 433 bi</div><div class="src">Capstone — modelos oficiais, calendarizado</div></div>
+  <div class="kpi"><div class="lb">Emissão pública IG · 2026E</div><div class="v num">US$ 275–285 <small>bi</small></div>
+    <div class="s">≈ 35–40% do capex do ano financiado no mercado de bonds</div><div class="src">UBS Credit (Ganesh), 01-ago-26 — revisado de 230–240</div></div>
+  <div class="kpi"><div class="lb">Já levantado em 2026 · top-5</div><div class="v num">~US$ 270 <small>bi</small></div>
+    <div class="s">dívida longa (3–40 anos) + equity permanente</div><div class="src">BofA (Arya), 02-ago-26 — “otimização de balanço”</div></div>
+  <div class="kpi"><div class="lb">Plataforma NVDA · capital de terceiros</div><div class="v num">&gt;US$ 500 <small>bi</small></div>
+    <div class="s">Apollo, BlackRock, Blackstone, Brookfield, GS, KKR — a ~7–8%</div><div class="src">NVIDIA Newsroom, 10-ago-26 — mobilização (MOUs), não compromisso</div></div>
+</div>
+
+<!-- ============ S1 — A CONTA ============ -->
+<section id="s1">
+  <div class="sec-head"><span class="n">I.</span><h2>A conta — capex de IA vs. caixa dos hyperscalers</h2>
+    <span class="sub">US$ bi · CY · Capstone (ago-26)</span></div>
+  <div class="grid2">
+    <div class="card">
+      <div class="legend">
+        <span class="it"><span class="sw dash" style="border-color:var(--s-tot)"></span>Capex total de IA — todos os players</span>
+        <span class="it"><span class="sw" style="border-color:var(--s-hyp)"></span>Capex AI — hyperscalers (MSFT·GOOG·AMZN·META)</span>
+        <span class="it"><span class="sw" style="border-color:var(--s-ocf)"></span>OCF hyperscalers — reportado até 25A</span>
+      </div>
+      <div class="chart-box" id="bridge"></div>
+      <details><summary>ver dados da série</summary><div class="tbl-box" style="margin-top:8px"><table id="bridge-tbl"></table></div></details>
+      <p class="note"><b>Bases:</b> capex AI dos hyperscalers = 4 nomes, bottom-up do AI Model (Oracle entra em “outros players”); OCF calendarizado FY→CY; total = todos os players (labs, neoclouds, Oracle, SpaceX, soberanos). Pontos 2027E sem rótulo são os implícitos nas somas acumuladas do quadro-síntese (ago-26). Série total a partir de CY24.</p>
+    </div>
+    <div class="ann">
+      <div class="a" style="border-left-color:var(--s-tot)"><h4 style="color:var(--s-tot)">Área laranja — outros players</h4>
+        <div class="big num">US$ 2.468 bi</div>
+        <p>necessidade de capital acumulada 26E–28E de <b>labs (OpenAI, Anthropic), neoclouds (CRWV), Oracle, SpaceX e soberanos</b> — US$ 1.488 bi só em 28E, praticamente todo financiado <b>fora do próprio caixa</b>.</p></div>
+      <div class="a" style="border-left-color:var(--s-ocf)"><h4 style="color:var(--s-ocf)">Área verde — hyperscalers</h4>
+        <div class="big num">US$ 433 bi</div>
+        <p>capex AI acima do OCF, acumulado 26E–28E (US$ 229 bi em 28E). O gap abre em 2027 — até 2026 o caixa operacional ainda cobre o capex de IA.</p></div>
+      <div class="a" style="border-left-color:var(--s-hyp)"><h4 style="color:var(--s-hyp)">vs. Street</h4>
+        <p style="font-size:13px"><b>Consenso 5 nomes:</b> ~US$ 700 bi (26E) / ~US$ 900 bi+ (27E) · <b>JPM top-4:</b> ~US$ 1,1 tri (27E) · <b>bogey buy-side:</b> ~US$ 1,2 tri (27E). MS (03-ago): consenso 2027 a ~US$ 1,2 tri, +15 p.p./+US$ 170 bi em um mês — e <i>ainda</i> conservador (implica capex não-IA +7%).</p>
+        <p style="font-size:11px; color:var(--faint); margin-top:6px">BBG/house 11-jun · JPM AI Capex 2.0 16-jun · Jefferies 08-mai · MS Global Cloud Capex Tracker 03-ago</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S2 — DE QUEM É O CAPEX ============ -->
+<section id="s2">
+  <div class="sec-head"><span class="n">II.</span><h2>De quem é o capex — a fatia “outros” explode</h2>
+    <span class="sub">US$ bi · capex de IA por player · Capstone AI Model (06-ago-26)</span></div>
+  <div class="card">
+    <div class="legend" id="stack-leg"></div>
+    <div class="chart-box" id="stack"></div>
+    <div class="tbl-box" style="margin-top:14px"><table id="stack-tbl"></table></div>
+    <p class="note"><b>Vintages:</b> a decomposição usa o AI Model bottom-up de 06-ago (hyperscalers US$ 1.550 bi em 28E); o quadro-síntese da seção I usa a revisão ago-26 dos modelos oficiais (US$ 1.425 bi). A diferença (~8% em 28E) é revisão de capex dos 4 nomes entre vintages — a leitura de composição não muda: <b>“outros” saem de ~15% (25A) para ~47–51% (28E) do capex total de IA</b>. “Outros (resid.)” = xAI, ByteDance, soberanos e plug de calibração do bottom-up (negativo em 23–25).</p>
+  </div>
+</section>
+
+<!-- ============ S2B — SHELL vs COMPUTE ============ -->
+<section id="s2b">
+  <div class="sec-head"><span class="n">III.</span><h2>Shell vs. compute — dois relógios, dois financiamentos</h2>
+    <span class="sub">a mesma conta, cortada por camada de ativo — e o funding próprio de cada camada</span></div>
+  <div class="grid2">
+    <div class="card">
+      <div class="legend">
+        <span class="it"><span class="sq" style="background:var(--sp-chip)"></span>Chips (GPU/XPU + HBM)</span>
+        <span class="it"><span class="sq" style="background:var(--sp-net)"></span>Networking + CPU + memória/storage</span>
+        <span class="it"><span class="sq" style="background:var(--sp-shell)"></span>Resto — shell, power, site</span>
+      </div>
+      <div class="chart-box" id="split"></div>
+      <p class="note"><b>Fonte:</b> Capstone AI Model, Resumo|Total (categorias do próprio modelo; capex total de IA, todos os players). Per-GW house: US$ 30,5 → 41,9 bi por GW <i>adicionado</i> (CY25→28E). A camada de silício (chips + networking) é <b>~61–64% da conta e cresce</b>; o shell é ~36% — mas é a metade <b>comprometida com anos de antecedência</b>.</p>
+    </div>
+    <div class="ann">
+      <div class="a" style="border-left-color:var(--sp-chip)"><h4 style="color:var(--sp-chip)">O relógio do silício</h4>
+        <p>Vida contábil ~5–6 anos; comprado <b>meses</b> antes do go-live (“short-lived assets”). ~2/3 do capex trimestral da MSFT. “Se o ambiente de demanda mudar, você simplesmente desacelera <b>o maior componente</b>” (Amy Hood, via UncoverAlpha, 13-ago — quote relayed). <b>Um “corte de capex” é quase sempre corte de silício.</b></p></div>
+      <div class="a" style="border-left-color:var(--sp-shell)"><h4 style="color:var(--sp-shell)">O relógio do shell</h4>
+        <p>Terra, prédio, power e cooling — vida <b>15–25 anos</b> (MSFT estendeu 15→25 no FY27), comprometido <b>anos</b> antes, “different capital cycles” (Jassy). É o piso sob o complexo de power — a metade que <b>não</b> se cancela.</p></div>
+      <div class="a" style="border-left-color:var(--red)"><h4 style="color:var(--red)">O debate de vida útil</h4>
+        <p>O que os livros dizem: <b>Meta deprecia servidores/rede em 5–5,5 anos</b> (estendeu para 5,5 em jan-25 — 10-K FY25: <b>−US$ 2,9 bi de depreciação</b> e +US$ 2,6 bi de lucro no ano; prédios 25–30 anos); MSFT estendeu <b>shells/prédios de 15→25 anos</b> no FY27 (benefício de OI “mínimo”, diz a gestão). A crítica bear (Chanos, via MacroTourist nov-25): a vida <i>econômica</i> do compute é <b>~2–3 anos</b> — estender vida contábil sobrestima lucros. O contra: CRWV tem <b>chips de 2020 contratados até 2029</b> (“nine-year useful life” — um coorte, preço do roll não divulgado) e Baker: contratos rolam para <i>cima</i>.</p></div>
+    </div>
+  </div>
+
+  <div class="cards3" style="margin-top:16px">
+    <div class="mini"><h4>A âncora por GW · MS</h4><div class="v num">US$ 39 bi/GW</div>
+      <p>1 GW GB300 all-in = <b>US$ 23 bi de TI (vida 5 anos) + US$ 16 bi não-TI (vida 15 anos)</b>; 410.256 chips/GW. É a régua pública mais limpa do split shell/compute.</p>
+      <div class="src">Morgan Stanley (Nowak), framework GenAI ROIC 1 GW, 27-jul (reafirmado 12-ago)</div></div>
+    <div class="mini"><h4>Custo incremental por GW · 2026</h4><div class="v num">US$ 25–45 bi/GW</div>
+      <p>AMZN ~US$ 25 bi/GW (escala + chips próprios) vs. Google US$ 37 bi vs. Meta US$ 45 bi; deals especializados de IA a &gt;US$ 40 até ~US$ 50 bi/GW.</p>
+      <div class="src">BofA (Justin Post), “Raising Internet capex ests”, 07-jul-26</div></div>
+    <div class="mini"><h4>House · por GW adicionado</h4><div class="v num">US$ 30,5 → 41,9 bi</div>
+      <p>CY25 → CY28E, com o mix encarecendo: chips vão de ~48% para ~40% do stack e networking+CPU+memória de ~16% para ~25% — inferência puxa memória e CPU (LRCX: US$ 9–10 bi de WFE por US$ 100 bi de capex de IA).</p>
+      <div class="src">Capstone AI Model (ago-26) · LRCX CFO, JPM Forum, 12-ago</div></div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3 style="font-family:Georgia,serif; font-size:17px">Mapa de financiamento por camada</h3>
+    <p style="font-size:13px; color:var(--muted); margin:4px 0 16px">Cada camada tem seu próprio relógio, seu próprio instrumento e seu próprio dono do risco residual.</p>
+    <div class="cmp-box"><div class="cmp">
+      <div class="r h">
+        <div></div>
+        <div class="hd"><span class="dot" style="background:var(--sp-shell)"></span>Shell &amp; site<em>~36% do capex 28E</em></div>
+        <div class="hd"><span class="dot" style="background:var(--sp-chip)"></span>Compute<em>~64% do capex 28E</em></div>
+      </div>
+      <div class="r">
+        <div class="lbl">Ativo</div>
+        <div>Terra, prédio, power, cooling</div>
+        <div>GPU/XPU, HBM, servidores <span class="mut">— networking, CPU e storage viajam no mesmo pacote</span></div>
+      </div>
+      <div class="r">
+        <div class="lbl">Vida contábil</div>
+        <div><b>15–25 anos</b> <span class="mut">MSFT estendeu 15→25 no FY27</span></div>
+        <div><b>~5–6 anos</b> <span class="mut">META servidores 5,5 · debate: 2–3 de vida econômica</span></div>
+      </div>
+      <div class="r">
+        <div class="lbl">Compromete</div>
+        <div><b>anos</b> antes <span class="mut">long-lead</span></div>
+        <div><b>meses</b> antes <span class="mut">short-lived</span></div>
+      </div>
+      <div class="r">
+        <div class="lbl">Instrumentos</div>
+        <div><span class="pill">operating lease</span><span class="pill">SPV / project finance</span><span class="pill">developer + backstop</span><span class="pill">colocation</span></div>
+        <div><span class="pill">OCF</span><span class="pill">bonds IG</span><span class="pill">dívida garantida por GPU</span><span class="pill">pré-pagamento</span><span class="pill">vendor floor</span><span class="pill">warrants-rebate</span></div>
+      </div>
+      <div class="r">
+        <div class="lbl">Custo observado</div>
+        <div class="num">SPV ~6,5% <span class="mut">Hyperion</span> · 7,0% <span class="mut">Meta Texas</span><br>colo US$ 120–160/kW-mês</div>
+        <div class="num">IG ~5% · CRWV 5,9% <span class="mut">c/ backstop</span> · NBIS SOFR+250<br>sem garantia ~10%</div>
+      </div>
+      <div class="r">
+        <div class="lbl">Risco residual</div>
+        <div>Developer / SPV / private credit — <b>com backstop, volta ao tomador</b></div>
+        <div>Tomador — no vendor floor, <b>contingente na NVDA</b> <span class="mut">off-balance até acionar</span></div>
+      </div>
+      <div class="r ev">
+        <div class="lbl">Evidência</div>
+        <div>
+          <span class="e">MSFT <b>US$ 329 bi</b> de leases assinados não iniciados <i>Rothschild, 30-jul</i></span>
+          <span class="e">META <b>US$ 183 bi</b> de leases + <b>US$ 28 bi</b> de garantias residuais <i>Redburn</i></span>
+          <span class="e">GOOG <b>US$ 43,8 bi</b> de backstops, com warrants de 14% (TeraWulf) e 5,4% (Cypher) <i>10-Q + The Information, 27-jul</i></span>
+        </div>
+        <div>
+          <span class="e">NBIS: <b>~70%</b> dos deals pré-pagos, cobrindo <b>50–60%</b> do capex <i>call 2T26, 12-ago</i></span>
+          <span class="e">CRWV <b>&gt;US$ 32 bi</b> captados <i>call, 11-ago</i></span>
+          <span class="e">AMD–OpenAI: warrants ≈<b>105%</b> de rebate/GW <i>SemiAnalysis, 24-jul</i></span>
+          <span class="e">Plataforma NVDA <b>US$ 500 bi</b> a ~7–8%; exposição em garantias no 10-Q: <b>US$ 3,5 bi</b></span>
+        </div>
+      </div>
+    </div></div>
+    <p class="note"><b>A consequência contábil:</b> à medida que o shell migra para operating lease e SPV, ele <b>sai do capex reportado</b> (MSFT: ~US$ 15 bi/ano só na reclassificação) — o capex reportado converge para a camada de silício, e comparações y/y entre bases quebram. E a cancelabilidade é assimétrica: o shell está contratado; <b>a opção de parar existe só no silício</b> — por isso pedido de GPU mercante é a linha frágil e roadmap de ASIC próprio (anual) é a estável. <b>Networking + CPU + storage</b> financia-se junto do compute, mas é a linha que mais acelera: ~14% → ~25% do stack (CY23→28E).</p>
+  </div>
+</section>
+
+<!-- ============ S3 — OCF vs CAPEX POR EMPRESA ============ -->
+<section id="s3">
+  <div class="sec-head"><span class="n">IV.</span><h2>OCF vs. capex por empresa — a régua de 2013 a 2027</h2>
+    <span class="sub">US$ mi · anos fiscais · modelos oficiais Capstone sobre base de consenso · ago-26</span></div>
+  <div class="card">
+    <div class="tbl-box" style="max-height:640px; overflow-y:auto"><table id="ocf-tbl"></table></div>
+    <p class="note"><b>Leitura:</b> em 2013–2023 o grupo investia 24–56% do OCF; em 2026E a razão passa de <b>100%</b> pela primeira vez (109%) e vai a <b>129% em 2027E</b> — Oracle a 200%. <b>Vermelho</b> = estimativa Capstone (base de consenso). <b>Azul</b> (Microsoft) = capex incluindo finance leases (base reportada); a partir do FY27 a MSFT reclassifica finance→operating lease (~US$ 15 bi saem do capex reportado — mesma despesa, base diferente). Anos fiscais: MSFT jun, Oracle mai, demais dez.</p>
+  </div>
+</section>
+
+<!-- ============ S4 — QUEM FINANCIA ============ -->
+<section id="s4">
+  <div class="sec-head"><span class="n">V.</span><h2>Quem financia — private credit, SPVs, vendor financing e equity</h2>
+    <span class="sub">o funding deixou de ser um problema de balanço e virou um mercado</span></div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3 style="font-family:Georgia,serif; font-size:17px; margin-bottom:4px">A escada de custo de capital</h3>
+      <p style="font-size:12.5px; color:var(--muted); margin-bottom:10px">Hyperscalers subindo a escada (IG → SPV → híbrido/equity); neoclouds descendo (de “equity ou nada” para 7–8% com a plataforma NVDA). <b>Os custos marginais se cruzaram.</b></p>
+      <div class="legend">
+        <span class="it"><span class="sq" style="background:var(--s-hyp)"></span>hyperscalers &amp; estruturas ligadas</span>
+        <span class="it"><span class="sq" style="background:var(--s-tot)"></span>neoclouds</span>
+      </div>
+      <div class="chart-box" id="ladder"></div>
+      <p class="note">Altimeter via TMT Breakout (12-ago) · SemiAnalysis “AI Project Trinity” (06-jul) · Alphabet 10-Q (23-jul) · calls CRWV/NBIS 2T26 (11/12-ago). NBIS: SOFR+250 bp plotado a ~6,8% (SOFR ~4,3%).</p>
+    </div>
+    <div class="ann">
+      <div class="a" style="border-left-color:var(--s-tot)"><h4 style="color:var(--s-tot)">O crossover</h4>
+        <p>“Os custos marginais de capital não só convergiram — <b>cruzaram</b>. Como o próximo gigawatt é precificado no dólar marginal, <b>o pilar de financiamento do moat dos hyperscalers acabou</b>.” <span style="color:var(--faint)">— Altimeter, via TMT Breakout, 12-ago</span></p>
+        <p style="margin-top:6px">O contraponto, registrado com o mesmo peso: agentes precisam do <i>toolkit</i> completo de cloud e do silício próprio barato (TPU/Trainium) — <b>o moat migra de balanço para plataforma + chip</b>.</p></div>
+      <div class="a" style="border-left-color:var(--s-hyp)"><h4 style="color:var(--s-hyp)">O sinal de junho</h4>
+        <p>“Quando o balanço mais forte da história corporativa escolhe <b>diluição e híbridos a 6,25%</b> em vez de mais alavancagem, ele está te dizendo exatamente onde seu dólar marginal está precificado.” <span style="color:var(--faint)">— Altimeter (sobre o equity raise da Alphabet), 12-ago</span></p></div>
+      <div class="a" style="border-left-color:var(--red)"><h4 style="color:var(--red)">O teste</h4>
+        <p>“A capacidade do mercado de crédito para financiar IA está sendo <b>posta à prova no 3T26</b>.” <span style="color:var(--faint)">— UBS Credit (Ganish), 15-ago</span> · NVDA CDS 77 bp vs CDX IG 52 bp (11-ago); CDS de hyperscalers em máximas históricas (28-jul).</p></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3 style="font-family:Georgia,serif; font-size:17px; margin-bottom:10px">Ledger — as estruturas no radar</h3>
+    <div class="tbl-box"><table class="ledger" id="ledger-tbl"></table></div>
+    <p class="note"><b>Regras da casa ao ler o ledger:</b> LOI ≠ backlog (padrão documentado de “re-anúncio”); os ~US$ 100 bi do campus de Ohio <b>não se somam</b> à plataforma de US$ 500 bi (relação não divulgada); a plataforma NVDA são MOUs — “mobilização, não capital comprometido”; backstops NVDA são garantias contingentes (off-balance até serem acionadas — exposição divulgada no 10-Q: US$ 3,5 bi).</p>
+  </div>
+
+  <div class="cards3" style="margin-top:16px">
+    <div class="mini"><h4>Dívida até 2030</h4><div class="v num">US$ 4,1 tri</div>
+      <p>de US$ 5,5 tri de capex de IA até 2030 financiado via dívida (LTC médio &gt;85%).</p><div class="src">JPM “AI Capex 2.0”, 16-jun-26</div></div>
+    <div class="mini"><h4>Crédito AI outstanding · 2029</h4><div class="v num">&gt;US$ 7 tri</div>
+      <p>viraria o 2º maior mercado de crédito dos EUA, atrás só do MBS (~US$ 13 tri). Sequência de restrição: capacidade (25) → chips (início 26) → <b>financiamento (meados 26)</b>.</p><div class="src">SemiAnalysis “AI Project Trinity”, 06-jul-26</div></div>
+    <div class="mini"><h4>Levantado YTD (todo o complexo)</h4><div class="v num">&gt;US$ 1 tri</div>
+      <p>vs. US$ 555 bi em 2025 inteiro, num buildout de US$ 7,5 tri/5 anos. Conclusão do painel: “a restrição é power e permitting, <b>não capital</b>”.</p><div class="src">Painel Goldman/Blue Owl/Skadden, via Rothschild &amp; Co, 27-jul-26</div></div>
+    <div class="mini"><h4>Emissão top-5 · 26E/27E</h4><div class="v num">US$ 257 / 419 bi</div>
+      <p>31–35% do capex; dívida acumulada ~US$ 421 bi até 2028 — balanços saudáveis <b>ex-Oracle</b>.</p><div class="src">relay @sssjeffpu, 06-ago-26 — fonte única, não verificado; forma &gt; ponto</div></div>
+    <div class="mini"><h4>FCF agregado do grupo</h4><div class="v num">−1% → −6%</div>
+      <p>margem FCF em CY26 → CY27-28 (vs. +15–20% histórico), com capex a 100–115% do OCF.</p><div class="src">BofA (Arya), 02-ago-26</div></div>
+    <div class="mini"><h4>O contra-argumento</h4><div class="v num">−US$ 700 bi</div>
+      <p>de necessidade de crédito se o OCF de consenso remarcar Blackwell/Rubin a preço de mercado — hoje modela monetização “à taxa de Ampere, duas gerações atrás”.</p><div class="src">Gavin Baker (Atreides), podcast ILTB, 04-ago-26 — comentário informal</div></div>
+  </div>
+</section>
+
+<!-- ============ S5 — LABS ============ -->
+<section id="s5">
+  <div class="sec-head"><span class="n">VI.</span><h2>Os labs — rounds privados e compromissos de compute</h2>
+    <span class="sub">a ponta compradora que ancora metade da conta</span></div>
+  <div class="cards3">
+    <div class="mini"><h4>Anthropic · valuation privado</h4><div class="v num">US$ 380 bi → 965 bi</div>
+      <p>post-money da Série G (fev-26) → Série H (28-mai-26), ~2,5x em um trimestre; &gt;US$ 100 bi captados na vida. IPO confidencial protocolado em 01-jun (GS lead; janela out-26 reportada).</p>
+      <div class="src">Wiki Capstone · SemiAnalysis · Bloomberg/The Information, jul-26</div></div>
+    <div class="mini"><h4>OpenAI · marca privada</h4><div class="v num">US$ 852–880 bi</div>
+      <p>NAV SoftBank (~10,7% da posição) e estimativa PitchBook. Capex próprio 2030 planejado: US$ 750 bi (“planejado, não contratado”).</p>
+      <div class="src">Barron’s 25-mai-26 · @Hedgeye/MS 22-jul-26</div></div>
+    <div class="mini"><h4>OpenAI · obrigações de compute</h4><div class="v num">&gt;US$ 1 tri</div>
+      <p>em 4–5 anos (JPM), 50–60% acruando aos parceiros: Oracle/Stargate ~300 · Azure ~250+ · AWS ~138 · GCP ~40 · CRWV ~22 (US$ bi). Chips: NVDA ≥10 GW · AMD 6 GW · AVGO 10 GW.</p>
+      <div class="src">JPM · Bernstein · MSFT FY26 10-K (US$ 24,1 bi de receita OpenAI)</div></div>
+    <div class="mini"><h4>Anthropic · compute multi-plataforma</h4><div class="v num">4 plataformas</div>
+      <p>“até 1 mi TPUs” (Google, com backstop de US$ 15 bi no campus do Texas) · Trainium 500k→1M chips (Rainier) · AMD 2 GW (+US$ 5 bi de cash da AMD) · NVDA. Paga ~US$ 30 bi/GW — fundo do range de mercado (30–50).</p>
+      <div class="src">FUNDA 05-ago · WSJ 30-jul · BofA 20-jul · SemiAnalysis 24-jul</div></div>
+    <div class="mini"><h4>Theseus (Anthropic)</h4><div class="v num">MAM + GIC</div>
+      <p>plataforma de DCs dedicados com lease longo à Anthropic; parceiros financiam a <b>maioria do equity</b> de cada projeto. Tamanho não divulgado; sem backstop de crédito divulgado (contraste com os leases garantidos pelo Google).</p>
+      <div class="src">Press release conjunto, 10-ago-26 — fonte primária</div></div>
+    <div class="mini"><h4>SpaceX · o novo comprador</h4><div class="v num">US$ 85,7 bi</div>
+      <p>IPO de junho (+US$ 25 bi de dívida). Capex 2T26: US$ 18,4 bi (US$ 15,8 bi em IA); FCF 1S26 ≈ −US$ 31 bi. No AI Model, SpaceX toma 18,5% da alocação NVDA em 27E.</p>
+      <div class="src">FUNDA 04-ago · Capstone AI Model (ago-26)</div></div>
+  </div>
+</section>
+
+<!-- ============ S6 — O DEBATE ============ -->
+<section id="s6">
+  <div class="sec-head"><span class="n">VII.</span><h2>O debate — a leitura de cada lado</h2>
+    <span class="sub">as citações que organizam a discussão · fonte e data em cada uma</span></div>
+  <div class="cards3">
+    <div class="quote bear"><span class="tag">bear</span>
+      <p>“Todo mundo sabe que falta <b>compute</b>. Todo mundo sabe que logo pode faltar <b>power</b>. E se faltar <b>capital</b>? Se a IA vale o que parece, deveria se pagar — e isso ainda não aconteceu. [A engenharia financeira] pode construir a ponte até a receita sustentável… e também <b>amplia o raio da explosão de uma bolha</b>.”</p>
+      <div class="who">Ben Thompson · Stratechery, “Nvidia’s Risky Business”, 14-ago-26 · compara os backstops de valor residual à mania ferroviária de 1870s</div></div>
+    <div class="quote bear"><span class="tag">bear</span>
+      <p>“A indústria de IA, no agregado, segue com <b>escassez extrema de fluxo de caixa</b>, e o mercado de capitais está sendo forçado a tapar o buraco — mas <b>investidores não absorvem oferta infinita de dívida e equity para sempre</b>.”</p>
+      <div class="who">Adam Crisafulli · Vital Knowledge, 10-ago-26 · na mesma linha: Hartnett (BofA) “construtivo em IA, <b>short em bonds de IA</b>” (14-ago)</div></div>
+    <div class="quote bull"><span class="tag">bull</span>
+      <p>“Yields reais subiram, spreads abriram, CDS de todo mundo estourou — fatos inegáveis. E isso seria assustador <b>SE precisássemos de dívida para financiar este buildout</b>. [Remarcando o compute a spot] é mais uns US$ 2 tri de OCF — e isso tira uns <b>US$ 700 bi da demanda por crédito</b>.”</p>
+      <div class="who">Gavin Baker · Atreides, podcast Invest Like the Best, 04-ago-26 · consenso modela Blackwell/Rubin monetizando “à taxa de Ampere”</div></div>
+    <div class="quote bull"><span class="tag">bull</span>
+      <p>“O que dissemos de free cash flow é que esperamos ser FCF-positivos no ano. <b>Não é uma linha na areia</b>… Vemos a demanda, a receita, o uso e a unit economics? Enquanto isso for verdade, vamos investir — não investir seria deixar demanda na mesa e <b>entregar share</b>.”</p>
+      <div class="who">Microsoft IR (Mary), call de 13-ago-26 · a regra de parada é teste de demanda, não de caixa</div></div>
+    <div class="quote watch"><span class="tag">watch</span>
+      <p>“Antes, os hyperscalers só precisavam satisfazer o investidor de <b>equity</b>; depois dos grandes raises, agora precisam manter o investidor de <b>bond</b> feliz também… mais uma camada de incerteza sobre a duração do ciclo de capex.”</p>
+      <div class="who">JPM (Matthew See), 28-jul-26 · afeta o custo do capex em si, não o múltiplo dos beneficiários</div></div>
+    <div class="quote watch"><span class="tag">watch</span>
+      <p>“Uma corrida armamentista <b>individualmente racional</b> pode comprimir os retornos da indústria: quando todos precisam expandir, o custo da expansão é leiloado para cima e consome parte do ganho esperado… parte substancial do valor da IA pode se assentar como <b>excedente do consumidor</b>, não lucro do produtor.”</p>
+      <div class="who">FUNDA, “RSI Is the Most Important Variable”, 05-ago-26 · cenário B (“digestão de capex”, peso sério): o capex acontece e o retorno decepciona — discriminantes: utilização e alavancagem</div></div>
+  </div>
+</section>
+
+<footer>
+  <h3>Notas de base — as regras que evitam contas erradas</h3>
+  · <b>Capex AI ≠ capex total reportado:</b> o gráfico-síntese (seção I) usa capex de IA (4 hyperscalers, ex-Oracle); a tabela da seção III usa capex total reportado (5 nomes, anos fiscais). Não somar entre bases.<br>
+  · <b>MSFT:</b> capex reportado inclui finance leases; a partir do FY27, reclassificação finance→operating (~US$ 15 bi) e vida útil de DCs 15→25 anos — mesma despesa, base diferente; não comparar y/y entre as duas bases.<br>
+  · <b>CRWV:</b> define capex por “placed-in-service”, não caixa — somar com capex de hyperscaler dobra contagem de timing.<br>
+  · <b>GOOG:</b> GCP inclui venda de sistemas TPU a SPVs em base <i>bruta</i> (~US$ 35 bi/GW; ~10 p.p. do crescimento de 2T26) — não comparar crescimento headline com AWS/Azure sem ajustar.<br>
+  · <b>LOI ≠ backlog:</b> “letters of intent are not worth the paper they’re written on” — padrão documentado de re-anúncio (NVDA/SK, AVGO/Samsung, 27-jul).<br>
+  · <b>Plataforma NVDA (US$ 500 bi):</b> MOUs de mobilização; backstop residual de até 25% (US$ 125 bi) é opção, não funding; exposição atual divulgada em garantias: US$ 3,5 bi (10-Q). Os ~US$ 100 bi de suporte ao campus de Ohio (The Information, 14/15-ago, não confirmado) <b>não se somam</b> à plataforma.<br>
+  · <b>GW:</b> bases de GW (facility, IT-load, subset 800V) nunca se misturam neste painel — todos os GW citados são capacidade instalada do AI Model.
+  <h3>Fontes</h3>
+  Capstone: modelos oficiais (ago-26), AI Model bottom-up “pós-spcx” (05/06-ago-26), wiki de research (17-ago-26). Terceiros citados nominalmente: JPM, Morgan Stanley, BofA, UBS, Deutsche Bank, Barclays, Bernstein, Jefferies, Redburn, Rothschild &amp; Co, Goldman Sachs, SemiAnalysis, Stratechery, FUNDA, Altimeter (via TMT Breakout), Vital Knowledge, The Information, WSJ, Barron’s, Bloomberg, NVIDIA Newsroom, Alphabet 10-Q, calls de resultados 2T26 (CRWV, NBIS, MSFT).
+  <div class="disc">Material preparado pela equipe de US Equities da Capstone. Estimativas house sujeitas a revisão; números de terceiros pertencem às fontes citadas, com data. Consenso: Bloomberg. Este material é informativo e não constitui oferta ou recomendação de investimento. © Capstone, ago-2026.</div>
+</footer>
+
+</div>
+<div id="tip"></div>
+
+<script>
+/* ================= DATA ================= */
+const YEARS = ['2023A','2024A','2025A','2026E','2027E','2028E'];
+
+/* Seção I — série do quadro-síntese (US$ bi, CY). Total/labels = exhibit ago-26 (modelos oficiais);
+   hyper CY23-26 = AI Model Resumo|Total (bate com os rótulos do exhibit); 27E implícito nas somas acumuladas. */
+const BR = {
+  total: [null, 233.9, 396.3, 901.6, 1885.4, 2913.1],
+  hyper: [93.8, 178.8, 336.4, 681.9, 1125.2, 1425.0],
+  ocf:   [365, 460, 580, 687, 921, 1197],
+  lbl: { total:{3:'$902',5:'$2.913'}, hyper:{0:'$94',3:'$682',5:'$1.425'}, ocf:{0:'$365',3:'$687',5:'$1.197'} }
+};
+
+/* Seção II — capex de IA por player, AI Model Resumo|Total (US$ bi, CY23–28) */
+const PLAYERS = [
+  {k:'MSFT',  bloc:'h', v:[22.6, 50.7, 95.9, 170.2, 284.2, 355.0]},
+  {k:'AMZN',  bloc:'h', v:[24.7, 53.0, 96.5, 175.0, 286.3, 360.3]},
+  {k:'GOOG',  bloc:'h', v:[19.4, 37.8, 74.3, 195.2, 376.1, 483.4]},
+  {k:'META',  bloc:'h', v:[27.0, 37.3, 69.7, 141.4, 245.6, 351.8]},
+  {k:'Oracle',bloc:'o', v:[7.9, 20.2, 31.7, 65.3, 119.5, 198.0]},
+  {k:'CoreWeave',bloc:'o', v:[8.1, 15.1, 26.0, 44.3, 111.9, 198.0]},
+  {k:'SpaceX',bloc:'o', v:[0, 0, 13.7, 67.1, 217.2, 253.8]},
+  {k:'Labs (OpenAI+Anthropic)',bloc:'o', v:[0, 0, 0, 0, 154.1, 505.2]},
+  {k:'Outros (resid.)',bloc:'o', v:[-20.1, 19.9, -11.5, 43.0, 90.7, 207.7]},
+];
+const BLUES = ['#1E3A5F','#2E5EA8','#5B84C4','#8FAEDA'];
+const ORANGES = ['#8F3D10','#C65A1E','#DE7E3C','#ECA467','#F3C79B'];
+const BLUES_D = ['#3B5D8F','#5C86C5','#7FA3D6','#A5C1E5'];
+const ORANGES_D = ['#8F4A1D','#C4682E','#D98A4E','#E8AC78','#F0C9A4'];
+
+/* Seção III — OCF vs Capex, US$ mi, anos fiscais — modelos oficiais Capstone / base de consenso, ago-26 */
+const T_YEARS = [2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026,2027];
+const OCF = {
+ 'Google (FY dez)':      [18659,22376,26572,36036,37091,47971,54520,65124,91652,91495,101746,125299,164713,182236,262119],
+ 'Microsoft (FY jun)':   [28833,32502,29668,33325,39507,43884,52185,60675,76740,89035,87582,118548,136162,182935,220380],
+ 'Meta (FY dez)':        [4222,5457,8599,16108,24216,29274,36314,38747,57683,50475,71113,91328,115800,113288,143589],
+ 'Oracle (FY mai)':      [14224,14921,14580,13685,14126,15386,14551,13139,15887,9539,17165,18673,20821,31977,45723],
+ 'Amazon (FY dez)':      [5475,6842,12039,17203,18365,30723,38514,66064,46327,46752,84946,115877,139514,197108,240066],
+};
+const CAPEX = {
+ 'Google (FY dez)':      [7358,10959,9950,10212,13184,25139,23548,22281,24640,31485,32251,52535,91447,200598,360000],
+ 'Microsoft (FY jun)':   [4257,5485,5944,8900,10200,13600,16900,19000,24200,29200,31900,55700,88200,145300,251923],
+ 'Meta (FY dez)':        [1362,1831,2523,4491,6733,13915,15102,15163,18690,31431,27266,37256,69691,150695,199986],
+ 'Oracle (FY mai)':      [650,580,1391,1189,2021,1736,1660,1564,2135,4511,8695,6866,21215,55663,91488],
+ 'Amazon (FY dez)':      [3444,4893,5387,7804,11955,13427,16861,40140,61053,63645,52729,82999,131819,220579,276765],
+};
+const MSFT_LEASE_FROM = 3; // 2016+ = capex incl. finance leases (célula azul)
+
+/* Seção IV — escada de custo de capital */
+const LADDER = [
+  {n:'IG hyperscaler — custo médio (AA/AAA)', lo:5.0, hi:null, bloc:'h', src:'Altimeter via TMT Breakout, 12-ago'},
+  {n:'META bond 5 anos', lo:5.0, hi:null, bloc:'h', src:'SemiAnalysis, 06-jul'},
+  {n:'CRWV DDTL 4.0 — backstop Meta (US$ 8,5 bi)', lo:5.9, hi:null, bloc:'o', src:'SemiAnalysis, 06-jul · SOFR+225'},
+  {n:'GOOG conversível mandatório (US$ 18 bi)', lo:6.25, hi:null, bloc:'h', src:'Alphabet 10-Q, 23-jul'},
+  {n:'META SPV Hyperion — Blue Owl (~US$ 27 bi)', lo:6.5, hi:null, bloc:'h', src:'Altimeter via TMT Breakout, 12-ago'},
+  {n:'NBIS facility garantida por GPUs (US$ 775 mi)', lo:6.8, hi:null, bloc:'o', src:'call 2T26, 12-ago · SOFR+250'},
+  {n:'META DC Texas (US$ 12 bi)', lo:7.0, hi:null, bloc:'h', src:'via OPENAI/wiki, 24-jul · +40bp vs Hyperion'},
+  {n:'Neocloud pós-plataforma NVDA (US$ 500 bi)', lo:7.0, hi:8.0, bloc:'o', src:'Altimeter via TMT Breakout, 12-ago'},
+  {n:'CRWV bonds 5a sem garantia', lo:10.0, hi:null, bloc:'o', src:'SemiAnalysis, 06-jul · ~600bp Z-spread'},
+  {n:'Neocloud pré-plataforma (só com contrato)', lo:9.0, hi:14.0, bloc:'o', src:'Altimeter via TMT Breakout, 12-ago'},
+];
+
+/* Seção IV — ledger */
+const LEDGER = [
+ ['10-ago','NVDA + Apollo · BlackRock · Blackstone · Brookfield · GS · KKR','Plataformas de financiamento — capital de terceiros p/ infra de IA','>US$ 500 bi (mobilização)','~7–8% (Altimeter)','mid|ANUNCIADO','NVIDIA Newsroom 10-ago · MOUs (“sujeitas a execução”); backstop residual NVDA até 25%/US$ 125 bi (MS, 13-ago)'],
+ ['14/15-ago','OpenAI ← NVDA','Suporte de crédito p/ lease do campus de Ohio + equity na SB Energy','~US$ 100 bi + US$ 3 bi','—','warn|NÃO CONFIRMADO','The Information · não somar à plataforma de US$ 500 bi; fase 2 “de magnitude semelhante”; IPO SB Energy “já no mês que vem”'],
+ ['~nov-25','Meta / Hyperion','SPV off-balance-sheet (private credit)','~US$ 27 bi · +US$ 28 bi de garantias de valor residual','~6,5%','mid|REPORTADO','Altimeter via TMT Breakout 12-ago · Redburn/R&Co · “o mais agressivo em tirar capex do balanço”'],
+ ['jun-26','Alphabet','Equity + conversível mandatório','US$ 84,75 bi equity + US$ 18 bi conv.','6,25%','ok|CONFIRMADO','10-Q 23-jul (conv.; dívida LP US$ 23,6→98,2 bi; 1º tri de FCF negativo) · equity via JPM'],
+ ['27-jul','Alphabet → DCs de terceiros','Backstops de lease p/ TPU-as-a-Service (Fluidstack→Anthropic; Hut 8, TeraWulf, Cypher)','notional US$ 43,8 bi (era 6,5 em set-25) + US$ 24,1 bi a caminho','leases até 15 anos','ok|CONFIRMADO','10-Q 2T26 · The Information/Rothschild 27-jul · warrants: 14% TeraWulf, 5,4% Cypher'],
+ ['24-jul','SPVs de TPU (Blackstone-Google JV · “AI XPV Platform” AVGO-Blackstone-Apollo)','Venda de sistemas TPU a SPVs externos — até 20 GW até 2028','receita externa TPU US$ 20→68→~253 bi (26–28E)','vendido a ~US$ 35 bi/GW (base bruta)','mid|REPORTADO','Barclays “Unpacking TPU-as-a-Service” 24-jul · SemiAnalysis · BofA Credit cortou AVGO por “risco de valor residual” (11-ago)'],
+ ['2T26','CoreWeave','DDTL 4.0 (backstop Meta) + DDTL 5.5 + eurobond inaugural','US$ 8,5 bi + ~US$ 18 bi no tri; >US$ 32 bi captados','5,9% fixo; custo médio −300 bp em 12m','ok|CONFIRMADO','call 2T26 (11-ago) · JPM: DDTL 5.5 “o desenvolvimento mais importante” — 1º com contratos <5 anos'],
+ ['2T26','Nebius','Facility garantida por GPUs + contratos IG · ATM','US$ 775 mi + US$ 2,8 bi ATM','SOFR+250 bp','ok|CONFIRMADO','call 2T26 (12-ago) · ~70% dos deals pré-pagos (50–60% do capex adiantado pelo cliente); backlog US$ 40 bi como borrowing base'],
+ ['FY26','Oracle','Bonds + conversível; plano FY27','US$ 43 bi + US$ 5 bi; ~US$ 40 bi em FY27','4,45–6,10% até 2065','ok|CONFIRMADO','JPM 13-ago · S&P BBB− (09-jul, “um degrau acima de high-yield”; ~US$ 300 bi de concentração OpenAI) · alav. líq. 3,3x · gap FY27-28: UBS ~36 / DB ~80 / JPM ~54 (US$ bi)'],
+ ['1S26','Amazon','Bonds (4 moedas) + DDTL 3 anos','~US$ 67 bi + US$ 17,5 bi (US$ 92 bi YTD)','—','ok|CONFIRMADO','JPM · 1ª dívida nova em ~3 anos; emissão de US$ 25 bi abriu ~20 bp os próprios bonds (07-jul)'],
+ ['FY27','Microsoft','Reclassificação finance→operating lease + vida útil DC 15→25 anos','capex reportado ~US$ 190→175 bi; leases assinados não iniciados US$ 197→329 bi','—','ok|CONFIRMADO','call FY26 (29-jul, Amy Hood) · mesma despesa, base diferente — não comparar y/y'],
+ ['10-ago','Anthropic / Theseus','Plataforma de DCs dedicados — lease longo à Anthropic','tamanho n.d. · MAM + GIC financiam a maioria do equity','—','mid|ANUNCIADO','press release conjunto 10-ago · sem backstop de crédito divulgado'],
+ ['jun-26','SpaceX','IPO + dívida','US$ 85,7 bi + US$ 25 bi','—','ok|CONFIRMADO','FUNDA 04-ago · FCF 1S26 ≈ −US$ 31 bi'],
+ ['jun–jul','NVDA → Firmus · SharonAI','Backstops de GPU (garantia de receita mínima + rev-share)','Firmus até 170k GPUs (Batam); SharonAI 40k GB300 — backstop US$ 4,88 bi (piso ~US$ 2,33/hr)','rev-share 40–60% acima do piso','mid|ANUNCIADO','GS AI Project Pulse 31-jul · SemiAnalysis 06-jul · garantia contingente — off-balance até acionada'],
+];
+
+/* ================= HELPERS ================= */
+const $=q=>document.querySelector(q);
+const NB=v=>v==null?'–':Math.round(v).toLocaleString('pt-BR');
+const NB1=v=>v==null?'–':v.toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1});
+const tip=$('#tip');
+function bindTips(root){
+  root.querySelectorAll('[data-tip]').forEach(el=>{
+    el.addEventListener('mousemove',e=>{tip.style.display='block'; tip.textContent=el.dataset.tip;
+      const w=tip.offsetWidth; tip.style.left=Math.min(window.innerWidth-w-14,e.clientX+14)+'px'; tip.style.top=(e.clientY+16)+'px';});
+    el.addEventListener('mouseleave',()=>tip.style.display='none');
+  });
+}
+const DARK=()=>document.documentElement.dataset.theme==='dark'||(document.documentElement.dataset.theme!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches);
+
+/* ================= S1 — BRIDGE ================= */
+(function(){
+  const W=1156,H=470,P={l:64,r:186,t:26,b:38};
+  const X=i=>P.l+i/(YEARS.length-1)*(W-P.l-P.r);
+  const Y=v=>H-P.b-(v/3000)*(H-P.t-P.b);
+  let g='';
+  g+=`<defs>
+    <pattern id="hO" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="var(--s-tot-soft)"/><line x1="0" y1="0" x2="0" y2="7" stroke="var(--s-tot)" stroke-opacity=".38" stroke-width="1.1"/></pattern>
+    <pattern id="hG" width="7" height="7" patternTransform="rotate(135)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="var(--s-ocf-soft)"/><line x1="0" y1="0" x2="0" y2="7" stroke="var(--s-ocf)" stroke-opacity=".38" stroke-width="1.1"/></pattern>
+  </defs>`;
+  for(let v=0;v<=3000;v+=500){g+=`<line class="gl" x1="${P.l}" x2="${W-P.r}" y1="${Y(v)}" y2="${Y(v)}"/><text class="tick" x="${P.l-8}" y="${Y(v)+4}" text-anchor="end">${v?('$'+NB(v)):'$0'}</text>`;}
+  YEARS.forEach((c,i)=>g+=`<text class="tick" x="${X(i)}" y="${H-P.b+18}" text-anchor="middle">${c}</text>`);
+  g+=`<text class="axl" x="${P.l-46}" y="${P.t-8}">US$ bi</text>`;
+  /* áreas */
+  const oi=[3,4,5];
+  g+=`<polygon points="${oi.map(i=>X(i)+','+Y(BR.total[i])).join(' ')} ${oi.slice().reverse().map(i=>X(i)+','+Y(BR.hyper[i])).join(' ')}" fill="url(#hO)" stroke="none"/>`;
+  const t0=5/209.3, xc=X(3)+t0*(X(4)-X(3)), yc=Y(687+t0*(921-687));
+  g+=`<polygon points="${xc},${yc} ${X(4)},${Y(BR.hyper[4])} ${X(5)},${Y(BR.hyper[5])} ${X(5)},${Y(BR.ocf[5])} ${X(4)},${Y(BR.ocf[4])}" fill="url(#hG)" stroke="none"/>`;
+  /* linhas */
+  const mk={total:{c:'var(--s-tot)',d:'7 6',m:'o'},hyper:{c:'var(--s-hyp)',d:null,m:'d'},ocf:{c:'var(--s-ocf)',d:null,m:'c'}};
+  const NAME={total:'Capex total de IA — todos os players',hyper:'Capex AI — hyperscalers (4 nomes)',ocf:'OCF hyperscalers (CY)'};
+  for(const k of ['total','hyper','ocf']){
+    let path=''; BR[k].forEach((v,i)=>{if(v==null)return; path+=(path?'L':'M')+X(i).toFixed(1)+','+Y(v).toFixed(1);});
+    g+=`<path d="${path}" fill="none" stroke="${mk[k].c}" stroke-width="3.2" ${mk[k].d?`stroke-dasharray="${mk[k].d}"`:''} stroke-linejoin="round" stroke-linecap="round"/>`;
+    BR[k].forEach((v,i)=>{ if(v==null)return;
+      const x=X(i),y=Y(v);
+      if(mk[k].m==='d') g+=`<rect x="${x-4.6}" y="${y-4.6}" width="9.2" height="9.2" transform="rotate(45 ${x} ${y})" fill="var(--card)" stroke="${mk[k].c}" stroke-width="2.4"/>`;
+      else g+=`<circle cx="${x}" cy="${y}" r="4.6" fill="${k==='ocf'?'var(--card)':mk[k].c}" stroke="${mk[k].c}" stroke-width="2.4"/>`;
+      const lab=BR.lbl[k][i];
+      if(lab){let dx=0, dy=k==='ocf'?23:(k==='total'?-12:-13), anc='middle';
+        if(k==='ocf'&&i===0){dx=-13; dy=4; anc='end';}
+        g+=`<text class="dlab" x="${x+dx}" y="${y+dy}" text-anchor="${anc}" fill="${mk[k].c}">${lab}</text>`;}
+    });
+  }
+  /* bracket 28E */
+  const xb=X(5)+16;
+  g+=`<line x1="${xb}" x2="${xb}" y1="${Y(2913.1)}" y2="${Y(1425)}" stroke="var(--s-tot)" stroke-width="1.6"/>`;
+  g+=`<line x1="${xb-5}" x2="${xb}" y1="${Y(2913.1)}" y2="${Y(2913.1)}" stroke="var(--s-tot)" stroke-width="1.6"/>`;
+  g+=`<line x1="${xb-5}" x2="${xb}" y1="${Y(1425)}" y2="${Y(1425)}" stroke="var(--s-tot)" stroke-width="1.6"/>`;
+  g+=`<text class="alab" x="${xb+8}" y="${Y(2169)-16}" fill="var(--s-tot)">Δ 2028E</text>`;
+  g+=`<text class="alab" x="${xb+8}" y="${Y(2169)}" fill="var(--s-tot)" font-size="15" font-weight="700">$1.488 bi</text>`;
+  g+=`<text class="alab" x="${xb+8}" y="${Y(2169)+15}" fill="var(--muted)" font-size="10.5">capex que NÃO é dos</text>`;
+  g+=`<text class="alab" x="${xb+8}" y="${Y(2169)+28}" fill="var(--muted)" font-size="10.5">hyperscalers = 51% do total</text>`;
+  g+=`<line x1="${xb}" x2="${xb}" y1="${Y(1425)-2}" y2="${Y(1197)}" stroke="var(--s-ocf)" stroke-width="1.6"/>`;
+  g+=`<text class="alab" x="${xb+8}" y="${Y(1311)+4}" fill="var(--s-ocf)" font-size="11">gap $229 bi</text>`;
+  /* hover columns */
+  const info=i=>{
+    const t=BR.total[i],h=BR.hyper[i],o=BR.ocf[i];
+    let s=`${YEARS[i]}${i===4?' (implícito)':''}\nTotal IA: ${t==null?'–':'US$ '+NB1(t)+' bi'}\nHyperscalers (AI): US$ ${NB1(h)} bi\nOCF hyperscalers: US$ ${NB(o)} bi`;
+    if(t!=null) s+=`\nOutros players: US$ ${NB1(t-h)} bi`;
+    if(h>o) s+=`\nGap capex−OCF: US$ ${NB(h-o)} bi`;
+    return s;
+  };
+  YEARS.forEach((c,i)=>{g+=`<rect x="${X(i)-45}" y="${P.t}" width="90" height="${H-P.t-P.b}" fill="transparent" data-tip="${info(i).replace(/"/g,'&quot;')}"/>`;});
+  $('#bridge').innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Capex total de IA, capex AI dos hyperscalers e OCF dos hyperscalers, 2023 a 2028E">${g}</svg>`;
+  bindTips($('#bridge'));
+  /* data table */
+  let tb='<thead><tr><th>US$ bi</th>'+YEARS.map(y=>`<th>${y}</th>`).join('')+'</tr></thead><tbody>';
+  [['Capex total de IA','total'],['Capex AI — hyperscalers','hyper'],['OCF hyperscalers','ocf']].forEach(([n,k])=>{
+    tb+=`<tr><th>${n}</th>`+BR[k].map((v,i)=>`<td class="num${i>2?' est':''}">${v==null?'–':NB1(v)}</td>`).join('')+'</tr>';});
+  tb+=`<tr><th>Outros players (total − hypers)</th>`+YEARS.map((y,i)=>{const t=BR.total[i];return `<td class="num${i>2?' est':''}">${t==null?'–':NB1(t-BR.hyper[i])}</td>`;}).join('')+'</tr>';
+  tb+='</tbody>';
+  $('#bridge-tbl').innerHTML=tb;
+})();
+
+/* ================= S2 — STACK ================= */
+(function(){
+  const W=1120,H=460,P={l:64,r:24,t:30,b:66};
+  const dark=DARK();
+  const blues=dark?BLUES_D:BLUES, oranges=dark?ORANGES_D:ORANGES;
+  let bi=0,oi=0; PLAYERS.forEach(p=>{p.col=p.bloc==='h'?blues[bi++]:oranges[oi++];});
+  const tot=[89.7,233.9,396.3,901.6,1885.4,2913.1]; /* totais canônicos do AI Model (as barras somam o mesmo, a menos de arredondamento de 1 casa) */
+  const posMax=Math.max(...YEARS.map((y,i)=>PLAYERS.reduce((a,p)=>a+Math.max(0,p.v[i]),0)));
+  const negMin=Math.min(...YEARS.map((y,i)=>PLAYERS.reduce((a,p)=>a+Math.min(0,p.v[i]),0)));
+  const Y=v=>P.t+(1-(v-negMin)/(posMax*1.06-negMin))*(H-P.t-P.b);
+  const bw=64, X=i=>P.l+30+i*((W-P.l-P.r-60)/(YEARS.length-1))-bw/2;
+  let g='';
+  for(let v=0;v<=3000;v+=500){g+=`<line class="gl" x1="${P.l}" x2="${W-P.r}" y1="${Y(v)}" y2="${Y(v)}"/><text class="tick" x="${P.l-8}" y="${Y(v)+4}" text-anchor="end">$${NB(v)}</text>`;}
+  g+=`<text class="axl" x="${P.l-46}" y="${P.t-10}">US$ bi</text>`;
+  YEARS.forEach((c,i)=>{
+    let up=0, dn=0;
+    PLAYERS.forEach(p=>{
+      const v=p.v[i]; if(!v) return;
+      let y0,y1;
+      if(v>0){y1=Y(up); up+=v; y0=Y(up);} else {y0=Y(dn); dn+=v; y1=Y(dn);}
+      const hpx=Math.abs(y1-y0);
+      g+=`<rect x="${X(i)}" y="${Math.min(y0,y1)}" width="${bw}" height="${Math.max(0,hpx-1.6)}" rx="2.5" fill="${p.col}" stroke="var(--card)" stroke-width="1"
+        data-tip="${c} — ${p.k}: US$ ${NB1(v)} bi (${(v/tot[i]*100).toFixed(0)}% do total)"/>`;
+      if(hpx>21 && p.bloc==='h') g+=`<text x="${X(i)+bw/2}" y="${(y0+y1)/2+4}" text-anchor="middle" font-size="10" fill="#FFFFFF" opacity=".92">${p.k}</text>`;
+    });
+    g+=`<text class="dlab" x="${X(i)+bw/2}" y="${Y(up)-8}" text-anchor="middle" fill="var(--ink)">${i>2?'$'+NB(tot[i]):NB(tot[i])}</text>`;
+    g+=`<text class="tick" x="${X(i)+bw/2}" y="${H-P.b+18}" text-anchor="middle">${c}</text>`;
+    const oshare=PLAYERS.filter(p=>p.bloc==='o').reduce((a,p)=>a+p.v[i],0)/tot[i]*100;
+    g+=`<text x="${X(i)+bw/2}" y="${H-P.b+36}" text-anchor="middle" font-size="11" font-weight="700" fill="var(--s-tot)">${oshare>0?oshare.toFixed(0)+'%':'–'}</text>`;
+  });
+  g+=`<text x="${P.l}" y="${H-P.b+36}" font-size="10.5" fill="var(--faint)">outros, % do total →</text>`;
+  $('#stack').innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Capex de IA por player, 2023 a 2028E">${g}</svg>`;
+  bindTips($('#stack'));
+  $('#stack-leg').innerHTML=PLAYERS.map(p=>`<span class="it"><span class="sq" style="background:${p.col}"></span>${p.k}</span>`).join('');
+  let tb='<thead><tr><th>US$ bi</th>'+YEARS.map(y=>`<th>${y}</th>`).join('')+'</tr></thead><tbody>';
+  tb+='<tr class="grp"><th>Hyperscalers</th>'+YEARS.map(()=>'<td></td>').join('')+'</tr>';
+  PLAYERS.filter(p=>p.bloc==='h').forEach(p=>{tb+=`<tr><th>${p.k}</th>`+p.v.map((v,i)=>`<td class="num${i>2?' est':''}">${NB1(v)}</td>`).join('')+'</tr>';});
+  tb+='<tr class="grp"><th>Outros players</th>'+YEARS.map(()=>'<td></td>').join('')+'</tr>';
+  PLAYERS.filter(p=>p.bloc==='o').forEach(p=>{tb+=`<tr><th>${p.k}</th>`+p.v.map((v,i)=>`<td class="num${i>2?' est':''}">${NB1(v)}</td>`).join('')+'</tr>';});
+  tb+=`<tr class="tot"><th>Total</th>`+YEARS.map((y,i)=>`<td class="num${i>2?' est':''}">${NB1(tot[i])}</td>`).join('')+'</tr></tbody>';
+  $('#stack-tbl').innerHTML=tb;
+})();
+
+/* ================= S2B — SPLIT SHELL vs COMPUTE ================= */
+(function(){
+  /* AI Model Resumo|Total — Capex | Chips / Networking+CPU / Other (US$ bi, CY23–28) */
+  const SPLIT=[
+    {k:'Chips (GPU/XPU + HBM)', cvar:'var(--sp-chip)', v:[42.4,114.8,190.2,399.9,767.0,1157.4]},
+    {k:'Networking + CPU + memória/storage', cvar:'var(--sp-net)', v:[12.8,34.4,65.3,178.6,435.1,715.1]},
+    {k:'Resto — shell, power, site', cvar:'var(--sp-shell)', v:[34.5,84.6,140.8,323.1,683.3,1040.6]},
+  ];
+  const TOT=[89.7,233.9,396.3,901.6,1885.4,2913.1];
+  const W=1120,H=440,P={l:64,r:24,t:30,b:44};
+  const Y=v=>P.t+(1-v/3000)*(H-P.t-P.b);
+  const bw=64, X=i=>P.l+30+i*((W-P.l-P.r-60)/(YEARS.length-1))-bw/2;
+  let g='';
+  for(let v=0;v<=3000;v+=500){g+=`<line class="gl" x1="${P.l}" x2="${W-P.r}" y1="${Y(v)}" y2="${Y(v)}"/><text class="tick" x="${P.l-8}" y="${Y(v)+4}" text-anchor="end">$${NB(v)}</text>`;}
+  g+=`<text class="axl" x="${P.l-46}" y="${P.t-10}">US$ bi</text>`;
+  YEARS.forEach((c,i)=>{
+    let up=0;
+    SPLIT.forEach(s=>{
+      const v=s.v[i]; if(!v) return;
+      const y1=Y(up); up+=v; const y0=Y(up);
+      const hpx=y1-y0;
+      const sh=(v/TOT[i]*100);
+      g+=`<rect x="${X(i)}" y="${y0}" width="${bw}" height="${Math.max(0,hpx-1.6)}" rx="2.5" fill="${s.cvar}" stroke="var(--card)" stroke-width="1"
+        data-tip="${c} — ${s.k}: US$ ${NB1(v)} bi (${sh.toFixed(0)}% do total)"/>`;
+      if(hpx>18) g+=`<text x="${X(i)+bw/2}" y="${(y0+y1)/2+4}" text-anchor="middle" font-size="10.5" font-weight="700" fill="#FFFFFF" opacity=".95">${sh.toFixed(0)}%</text>`;
+    });
+    g+=`<text class="dlab" x="${X(i)+bw/2}" y="${Y(up)-8}" text-anchor="middle" fill="var(--ink)">${i>2?'$'+NB(TOT[i]):NB(TOT[i])}</text>`;
+    g+=`<text class="tick" x="${X(i)+bw/2}" y="${H-P.b+18}" text-anchor="middle">${c}</text>`;
+  });
+  $('#split').innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Capex de IA por camada: chips, networking e shell, 2023 a 2028E">${g}</svg>`;
+  bindTips($('#split'));
+})();
+
+/* ================= S3 — TABELA OCF/CAPEX ================= */
+(function(){
+  const cos=Object.keys(OCF);
+  const sum=o=>T_YEARS.map((y,i)=>cos.reduce((a,c)=>a+o[c][i],0));
+  const oT=sum(OCF), cT=sum(CAPEX);
+  const heat=r=>{if(r==null)return '';const p=r*100;
+    if(p<40)return '';if(p<60)return `background:var(--heat1)`;if(p<80)return `background:var(--heat2)`;
+    if(p<100)return `background:var(--heat3);color:#fff`;if(p<140)return `background:var(--heat4);color:#fff`;return `background:var(--heat5);color:#fff`;};
+  let h='<thead><tr><th>US$ mi</th>'+T_YEARS.map(y=>`<th>${y}</th>`).join('')+'</tr></thead><tbody>';
+  h+='<tr class="grp"><th>OCF</th>'+T_YEARS.map(()=>'<td></td>').join('')+'</tr>';
+  cos.forEach(c=>{h+=`<tr><th>${c}</th>`+OCF[c].map((v,i)=>`<td class="num${i>=13?' est':''}">${NB(v)}</td>`).join('')+'</tr>';});
+  h+=`<tr class="tot"><th>Total</th>`+oT.map((v,i)=>`<td class="num${i>=13?' est':''}">${NB(v)}</td>`).join('')+'</tr>';
+  h+='<tr class="grp"><th>Capex</th>'+T_YEARS.map(()=>'<td></td>').join('')+'</tr>';
+  cos.forEach(c=>{h+=`<tr><th>${c}</th>`+CAPEX[c].map((v,i)=>{
+    const cls=c.startsWith('Microsoft')?(i>=MSFT_LEASE_FROM&&i<=13?' lease':''):(i>=13?' est':'');
+    return `<td class="num${cls}">${NB(v)}</td>`;}).join('')+'</tr>';});
+  h+=`<tr class="tot"><th>Total</th>`+cT.map((v,i)=>`<td class="num${i>=13?' est':''}">${NB(v)}</td>`).join('')+'</tr>';
+  h+='<tr class="grp"><th>Capex / OCF</th>'+T_YEARS.map(()=>'<td></td>').join('')+'</tr>';
+  cos.forEach(c=>{h+=`<tr class="ratio"><th>${c}</th>`+CAPEX[c].map((v,i)=>{
+    const r=v/OCF[c][i];return `<td class="num" style="${heat(r)}">${(r*100).toFixed(1).replace('.',',')}%</td>`;}).join('')+'</tr>';});
+  h+=`<tr class="ratio tot"><th>Total</th>`+cT.map((v,i)=>{const r=v/oT[i];
+    return `<td class="num" style="${heat(r)}">${(r*100).toFixed(1).replace('.',',')}%</td>`;}).join('')+'</tr>';
+  h+='</tbody>';
+  $('#ocf-tbl').innerHTML=h;
+})();
+
+/* ================= S4 — LADDER ================= */
+(function(){
+  const W=1120,rowH=34;
+  const Pl=430,Pr=40,Pt=28,Pb=34;
+  const H=Pt+Pb+LADDER.length*rowH;
+  const X=v=>Pl+(v-4)/(14.5-4)*(W-Pl-Pr);
+  let g='';
+  for(let v=4;v<=14;v+=2){g+=`<line class="gl" x1="${X(v)}" x2="${X(v)}" y1="${Pt-6}" y2="${H-Pb}"/><text class="tick" x="${X(v)}" y="${H-Pb+16}" text-anchor="middle">${v}%</text>`;}
+  LADDER.forEach((d,i)=>{
+    const y=Pt+i*rowH+rowH/2;
+    const col=d.bloc==='h'?'var(--s-hyp)':'var(--s-tot)';
+    g+=`<text x="${Pl-12}" y="${y+4}" text-anchor="end" font-size="12" fill="var(--ink)">${d.n}</text>`;
+    g+=`<line x1="${X(4)}" x2="${X(14.5)}" y1="${y}" y2="${y}" stroke="var(--line2)" stroke-width="1"/>`;
+    if(d.hi){g+=`<rect x="${X(d.lo)}" y="${y-7}" width="${X(d.hi)-X(d.lo)}" height="14" rx="7" fill="${col}" opacity=".28" data-tip="${d.n}: ${String(d.lo).replace('.',',')}–${String(d.hi).replace('.',',')}% · ${d.src}"/>`;
+      g+=`<circle cx="${X(d.lo)}" cy="${y}" r="6" fill="${col}" stroke="var(--card)" stroke-width="2" data-tip="${d.n}: ${String(d.lo).replace('.',',')}% · ${d.src}"/>`;
+      g+=`<circle cx="${X(d.hi)}" cy="${y}" r="6" fill="${col}" stroke="var(--card)" stroke-width="2" data-tip="${d.n}: ${String(d.hi).replace('.',',')}% · ${d.src}"/>`;
+      g+=`<text class="dlab" x="${X(d.hi)+12}" y="${y+4}" fill="${col}" font-size="11.5">${String(d.lo).replace('.',',')}–${String(d.hi).replace('.',',')}%</text>`;}
+    else{g+=`<circle cx="${X(d.lo)}" cy="${y}" r="6.5" fill="${col}" stroke="var(--card)" stroke-width="2" data-tip="${d.n}: ${String(d.lo).replace('.',',')}% · ${d.src}"/>`;
+      g+=`<text class="dlab" x="${X(d.lo)+12}" y="${y+4}" fill="${col}" font-size="11.5">${d.lo.toFixed(d.lo%1?2:1).replace('.',',')}%</text>`;}
+  });
+  const yA=Pt+7*rowH+rowH/2, yB=Pt+9*rowH+rowH/2;
+  g+=`<path d="M ${X(11.5)} ${yB} C ${X(12.6)} ${yB-20}, ${X(9.6)} ${yA+26}, ${X(8.2)} ${yA+8}" fill="none" stroke="var(--s-tot)" stroke-width="1.4" stroke-dasharray="3 4" marker-end="url(#arr)"/>`;
+  g+=`<defs><marker id="arr" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="var(--s-tot)"/></marker></defs>`;
+  $('#ladder').innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Escada de custo de capital do funding de IA">${g}</svg>`;
+  bindTips($('#ladder'));
+})();
+
+/* ================= S4 — LEDGER ================= */
+(function(){
+  let h=`<thead><tr><th style="text-align:left">Data</th><th style="text-align:left">Tomador / estrutura</th><th style="text-align:left">Instrumento</th><th style="text-align:left">Tamanho</th><th style="text-align:left">Custo</th><th style="text-align:left">Status</th><th style="text-align:left">Fonte · observações</th></tr></thead><tbody>`;
+  LEDGER.forEach(r=>{
+    const [cls,txt]=r[5].split('|');
+    h+=`<tr><td style="white-space:nowrap">${r[0]}</td><td><b>${r[1]}</b></td><td>${r[2]}</td><td class="num" style="text-align:left">${r[3]}</td><td>${r[4]}</td><td><span class="chip ${cls}">${txt}</span></td><td style="color:var(--muted)">${r[6]}</td></tr>`;
+  });
+  $('#ledger-tbl').innerHTML=h+'</tbody>';
+})();
+</script>
+</body></html>

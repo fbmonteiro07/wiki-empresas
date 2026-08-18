@@ -9,8 +9,8 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\CSCO` (filings + trans
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $68.3bn | $75.5bn |
-| Gross profit | $44.8bn | $48.9bn |
+| Revenue | $68.5bn | $75.5bn |
+| Gross profit | $44.9bn | $48.9bn |
 | Gross margin | 65.6% | 64.8% |
 | EBITDA | $25.8bn | $28.2bn |
 | EPS | $4.77 | $5.29 |

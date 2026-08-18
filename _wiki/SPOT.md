@@ -11,8 +11,8 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\SPOT` (filings 20-F + 
 | Gross profit | €6.5bn | €7.7bn |
 | Gross margin | 33.2% | 34.3% |
 | EBITDA | €3.0bn | €3.9bn |
-| EPS | €11.93 | €15.44 |
-| Capex | €53m | €60m |
+| EPS | €11.91 | €15.44 |
+| Capex | €54m | €60m |
 | OCF (≈EBITDA) | €3.0bn | €3.9bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

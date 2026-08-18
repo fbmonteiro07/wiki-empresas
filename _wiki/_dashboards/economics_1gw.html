@@ -83,7 +83,7 @@ select.isel{background:var(--panel2);border:1px solid var(--line);color:var(--tx
 <header>
   <h1>QUAL O ECONOMICS DE 1 GW? <span style="color:var(--mut);font-weight:400">| chips · capex · receita · payback</span></h1>
   <span class="asof" id="asof"></span>
-  <span class="src">AI Model (comentado 2026-07-06).xlsx · uso interno · réplica</span>
+  <span class="src">AI Model.xlsx (2026-08-17) · uso interno · réplica</span>
 </header>
 <nav class="tabs">
   <a href="como_flui_capacidade.html">Como flui a capacidade?</a>
@@ -165,56 +165,56 @@ select.isel{background:var(--panel2);border:1px solid var(--line);color:var(--tx
 const YEARS = ["CY24","CY25","CY26E","CY27E","CY28E"];
 
 // ---- Economics per GW (from Bottom-up Capex, all years except CY23) ----
-const NET_PGW  = [6007,6618,6908,7840,9195];
-const OTH_PGW  = [14793,11892,11494,11587,11736];
+const NET_PGW  = [4412,5074,6596,8575,10290];
+const OTH_PGW  = [10866,10950,11936,13466,14974];
 
 // chipCapex/GW by designer by year (CY24,CY25,CY26E,CY27E,CY28E)
 const CHIP_PGW = {
-  NVDA:    [24027,19853,18676,19195,19539],
-  AVGO:    [7451,9056,9025,9245,13760],
-  Google:    [5864,9090,9197,9361,14879],
-  Meta:    [17391,8614,7018,10160,13530],
-  OpenAI:    [0,0,0,8021,7964],
-  MRVL:    [2728,2728,3013,2476,2288],
-  Trainium:    [2728,2728,3013,3117,2625],
-  MSFT:    [0,0,0,4697,5058],
-  AMD:    [8980,11374,14288,12617,10123],
-  MTK:    [0,0,4305,4305,4636],
-  Alchip:    [14603,14603,0,2123,1273]
+  NVDA:    [17649,18195,18767,21396,25495],
+  AVGO:    [6305,8777,9025,9600,13760],
+  Google:    [4962,8811,9197,9721,14879],
+  Meta:    [14716,8349,7018,10550,13530],
+  OpenAI:    [0,0,0,8330,7964],
+  MRVL:    [2308,2644,3013,2571,2288],
+  Trainium:    [2308,2644,3013,3237,2625],
+  MSFT:    [0,0,0,4877,5058],
+  AMD:    [7599,11024,14288,13102,10123],
+  MTK:    [0,0,4305,4470,4636],
+  Alchip:    [12357,14154,0,2205,1273]
 };
 
 // chips/GW by designer by year
 const CHIPS_PGW = {
-  NVDA:    [1094,621,456,293,143],
-  AVGO:    [4321,1301,803,575,520],
-  Google:    [2234,735,648,584,522],
-  Meta:    [17391,8614,2618,575,500],
-  OpenAI:    [0,0,0,529,525],
-  MRVL:    [996,996,777,480,396],
-  Trainium:    [996,996,777,778,581],
-  MSFT:    [0,0,0,433,467],
-  AMD:    [853,678,464,361,215],
-  MTK:    [0,0,701,701,755],
-  Alchip:    [20186,20186,0,719,362]
+  NVDA:    [845,596,458,321,171],
+  AVGO:    [3656,1261,803,598,520],
+  Google:    [1891,712,648,607,522],
+  Meta:    [14716,8349,2618,597,500],
+  OpenAI:    [0,0,0,549,525],
+  MRVL:    [842,965,777,498,396],
+  Trainium:    [842,965,777,808,581],
+  MSFT:    [0,0,0,450,467],
+  AMD:    [722,658,464,375,215],
+  MTK:    [0,0,701,728,755],
+  Alchip:    [17081,19565,0,747,362]
 };
 
 // Fonte: aba ' Bottom-up Capex', bloco 'Capex Chips (Receita Designers)' (receita, US$ M)
 // e bloco 'GW | AI DCs (ótica designers)' (GW instalado cumulativo). CY24..CY28E.
 const DES_GW = {
-  NVDA:    [4.04,12.54,29.24,55.47,90.17],
-  AVGO:    [0.73,2.96,9.65,23.22,43.91],
-  Google:    [0.63,2.7,8.86,19.22,34.54],
-  Meta:    [0.1,0.26,0.79,2.07,4.57],
-  OpenAI:    [0.0,0.0,0.0,1.94,4.8],
-  MRVL:    [0.29,1.35,3.63,7.39,13.19],
-  Trainium:    [0.29,1.35,3.63,7.04,12.2],
-  MSFT:    [0.0,0.0,0.0,0.35,0.99],
-  AMD:    [0.61,1.31,2.75,5.8,10.91],
-  MTK:    [0.0,0.0,0.04,2.89,7.26],
-  Alchip:    [0.05,0.07,0.07,1.46,4.23]
+  NVDA:    [5.81,14.53,31.15,58.19,88.94],
+  AVGO:    [0.87,3.16,9.85,22.92,43.61],
+  Google:    [0.75,2.88,9.04,19.01,34.34],
+  Meta:    [0.12,0.28,0.81,2.04,4.54],
+  OpenAI:    [0.0,0.0,0.0,1.87,4.72],
+  MRVL:    [0.35,1.44,3.72,7.33,13.14],
+  Trainium:    [0.35,1.44,3.72,7.0,12.16],
+  MSFT:    [0.0,0.0,0.0,0.33,0.98],
+  AMD:    [0.72,1.44,2.89,5.82,10.93],
+  MTK:    [0.0,0.0,0.04,2.78,7.15],
+  Alchip:    [0.05,0.08,0.08,1.42,4.19]
 };
 const DES_REV = {
-  NVDA:    [97122,168795,311816,503574,677860],
+  NVDA:    [102470,158799,311816,578574,783967],
   AVGO:    [5459,20144,60380,125478,284635],
   Google:    [3705,18767,56682,96941,228057],
   Meta:    [1754,1377,3698,12989,33824],

@@ -10,10 +10,10 @@ _Wiki · generated 2026-06-25 · synthesis-only (no local filings archive) · so
 | Revenue | $8.1bn | $10.5bn |
 | Gross profit | $7.1bn | $9.2bn |
 | Gross margin | 87.9% | 87.6% |
-| EBITDA | $6.8bn | $8.9bn |
+| EBITDA | $6.8bn | $8.8bn |
 | EPS | $15.80 | $20.98 |
 | Capex | $11m | $9m |
-| OCF (≈EBITDA) | $6.8bn | $8.9bn |
+| OCF (≈EBITDA) | $6.8bn | $8.8bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

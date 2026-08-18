@@ -2,11 +2,12 @@
 
 _Generated 2026-08-17 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (13)
+## 📅 Upcoming (18)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
 | 2026-08-17 | CEREBRAS | **🆕 "Supernova" event — week of 2026-08-17: CS-4 unveiling.** CS-5 targeted for **2H 2027** (MS · Moore, 2026-08-13). Prior page framing had CS-4 ramping early 2027 and CS-5 in 2028 — the roadmap lang |
+| 2026-08-17 | LITE | **2026-08-17 — FY26 10-K filed** (Q4 Inc./SEC alert, 2026-08-17). Not yet read into this page; pull for the segment/customer-concentration disclosure and any LTA language behind the "sold out" pump-la |
 | 2026-08-17 | NBIS | **🆕🔴 VINELAND, NJ EXPANSION HEARING RESUMES — 2026-08-17.** Local opposition to the *expansion* (phase 1 already approved); the revised design is **primarily powered by [[BE]] fuel cells** (announced  |
 | 2026-08-17 | RDDT | ~~Potential S&P 500 inclusion candidate (Barron's flagged, 2026-06-09).~~ — **✅ RESOLVED 2026-08-13/14: RDDT ADDED TO THE S&P 500, replacing AVB (acquired by EQR), effective at the close of 2026-08-17 |
 | 2026-08-19 | ADI | **🔴 FQ3 FY26 print — 2026-08-19 (Wed, BMO):** delivery vs the ~$3.9bn / $3.30 guide; whether the above-seasonal streak extends. **The scoreable item is the FQ4 GROSS-MARGIN guide, which is where Jeffe |
@@ -15,9 +16,13 @@ _Generated 2026-08-17 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-08-26 | NVDA | **Q2 FY27 print: 2026-08-26** (guided $91B). Watch hyperscale vs hyperscale-capex growth under new segmentation (Arcuri: becomes a debate if NVDA ever under-grows it). |
 | 2026-08-26 | NVDA | **🆕 Buy-side bogeys are ABOVE the sell-side into 2026-08-26.** UBS guides FQ3 to ~$107-108bn, *"although investor 'bogeys' appear closer to **$110b+**"* (UBS Sales · Ruple, 2026-08-15) — the same $110 |
 | 2026-08-31 | TXN | **CFO transition:** Rafael Lizardi out 2026-08-01 → **Julie Knecht** (CAO, 25-yr veteran), advisory through 2026-08-31 (DB/Seymore, briefing 2026-06-03). |
+| 2026-09-02 | NVDA | **2026-08-26 (AMC) — Q2 FY27 print.** Street/house bogeys now on the page from three houses: **UBS/Arcuri report $110-111bn, guide bogey $107-108bn** (08-14) vs **MS/Moore July $91.1bn, October $102.3 |
 | 2026-09-11 | TER | **Q3 CY26 print (~late Oct 2026)** — first test of the re-cut 2H, and of whether the merchant-GPU/second-hyperscaler correlation converts into guided revenue. Quiet period begins **2026-09-11**; manag |
 | 2026-09-14 | NVDA | **🆕 Post-print access, both dated:** **BofA fireside with Toshiya Hari, VP of IR & Strategic Finance, hosted by Vivek Arya — 2026-09-02, 11:00 ET (~1hr)** (BofA TMT Sales, 2026-08-14) · **UBS-arranged |
 | 2026-09-16 | ON | **2026-09-16 — onsemi Analyst Day** (Citi exp. ~Sep 13 print first) — the key event; watch for a raised long-term target model + SiC/800V framing (Citi, briefing 2026-06-15). |
+| 2026-09-22 | ADI | **2026-08-19 (7am ET, call 10am) — F3Q26 print.** Bogeys on the page from the JPM buy-side survey (guide/consensus: rev $3.9bn/$3.92bn, OPM 49%/49.2%, EPS $3.30/$3.34; F4Q guides $4.08bn / 49.9% / $3. |
+| 2026-09-22 | CRDO | **2026-09-22 — ECOC, JPM-hosted meeting with CEO Bill Brennan** (alongside [[CIEN]], [[LITE]] and Nokia; JPM · Cardoso / Deshpande, 2026-08-17). **JPM is also running an off-cycle hardware-reporter bu |
+| 2026-09-22 | LITE | **2026-09-22 — ECOC (JPM-hosted meetings).** CEO **Michael Hurlston** meeting alongside [[CRDO]] (CEO Bill Brennan), [[CIEN]] and Nokia (JPM · Joe Cardoso / Sandeep Deshpande, 2026-08-17). The natural |
 | 2026-09-23 | GOOG | **🆕 Koray Kavukcuoglu's first public outing — The Information's AI Agenda Live, San Francisco, 2026-09-23.** Billed topics include integrating frontier models across Search and the multi-billion-user  |
 
 ## ⏰ Passed — need a post-mortem (0)

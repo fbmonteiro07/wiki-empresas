@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cascata do AI capex</title>
+<style>
+:root{
+  --paper:#FAF9F6; --ink:#1B2632; --muted:#5D6B79; --faint:#8A96A3; --line:#EFECE4;
+  --in:#15803D; --h4:#2E5EA8; --oth:#C65A1E; --lvl:#3A4552;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0F141B; --ink:#E9E7E2; --muted:#98A4B1; --faint:#6E7B88; --line:#232C38;
+    --in:#2F9960; --h4:#5C86C5; --oth:#C4682E; --lvl:#9FB0C0;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0F141B; --ink:#E9E7E2; --muted:#98A4B1; --faint:#6E7B88; --line:#232C38;
+  --in:#2F9960; --h4:#5C86C5; --oth:#C4682E; --lvl:#9FB0C0;
+}
+*{box-sizing:border-box; margin:0}
+body{background:var(--paper); color:var(--ink); padding:26px 22px 30px;
+  font:15px/1.5 "Segoe UI",-apple-system,Arial,sans-serif; -webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px; margin:0 auto}
+h1{font:700 19px/1.25 Georgia,"Times New Roman",serif; letter-spacing:-.01em}
+.sub{font-size:12.5px; color:var(--muted); margin-top:4px}
+.legend{display:flex; flex-wrap:wrap; gap:7px 18px; font-size:12.5px; color:var(--muted); margin:16px 0 6px}
+.legend span.it{display:inline-flex; align-items:center; gap:7px}
+.sq{width:11px; height:11px; border-radius:3px}
+.box{overflow-x:auto}
+svg{display:block; min-width:880px; width:100%; height:auto}
+.gl{stroke:var(--line); stroke-width:1}
+.zl{stroke:var(--muted); stroke-width:1.3}
+.sep{stroke:var(--line); stroke-width:1}
+.conn{stroke:var(--faint); stroke-width:1.1; stroke-dasharray:3 3}
+.tick{font-size:11px; fill:var(--faint)}
+.yr{font-size:13px; font-weight:700; fill:var(--muted)}
+.vlab{font-size:11.5px; font-weight:700; paint-order:stroke; stroke:var(--paper); stroke-width:3.5px}
+.slab{font-size:12.5px; font-weight:700; fill:var(--lvl); paint-order:stroke; stroke:var(--paper); stroke-width:3.5px}
+.src{font-size:11.5px; color:var(--faint); margin-top:10px; line-height:1.5}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Capex de IA vs. caixa das top-4 — a conta em cascata, ano após ano</h1>
+  <p class="sub">US$ bi · ano-calendário · cada ano começa no nível onde o anterior terminou</p>
+  <div class="legend">
+    <span class="it"><span class="sq" style="background:var(--in)"></span>+ OCF das top-4 (MSFT · GOOG · AMZN · META)</span>
+    <span class="it"><span class="sq" style="background:var(--h4)"></span>− capex de IA das top-4</span>
+    <span class="it"><span class="sq" style="background:var(--oth)"></span>− capex de IA dos outros players</span>
+    <span class="it"><span class="sq" style="background:var(--lvl)"></span>caixa acumulado desde 2025A</span>
+  </div>
+  <div class="box" id="wf"></div>
+  <p class="src">Capstone AI Model bottom-up + modelos oficiais (rev. ago-26). Capex das top-4 em 27E–28E = 1.125 / 1.425 (quadro-síntese ago-26); “outros players” = capex total do sistema − top-4 (labs, neoclouds, Oracle, SpaceX, soberanos). OCF de 2025A = 515 conforme o quadro de origem — o painel “Quem paga a conta” carrega 580 para o mesmo CY25.</p>
+</div>
+<script>
+const D=[{y:'2025A',ocf:515,h4:336.4,oth:59.9},
+         {y:'2026E',ocf:687,h4:681.9,oth:219.7},
+         {y:'2027E',ocf:921,h4:1125.2,oth:760.2},
+         {y:'2028E',ocf:1197,h4:1425.0,oth:1488.1}];
+const NB=v=>Math.round(Math.abs(v)).toLocaleString('pt-BR');
+const SG=v=>(v<0?'−':'+')+NB(v);
+const W=1160,H=500,P={l:66,r:20,t:34,b:44},MIN=-3000,MAX=900,GAP=20;
+const S=[]; let run=0;
+D.forEach((d,yi)=>{
+  const push=(k,v)=>{const a=run;run+=v;S.push({yi,k,v,a,b:run,lab:SG(v)});};
+  push('in',d.ocf); push('h4',-d.h4); push('oth',-d.oth);
+  S.push({yi,k:'lvl',a:0,b:run,lab:SG(run)});
+});
+const slot=(W-P.l-P.r-3*GAP)/S.length, bw=Math.min(56,slot-7);
+const X=i=>P.l+i*slot+Math.floor(i/4)*GAP, CX=i=>X(i)+slot/2;
+const Y=v=>P.t+(MAX-v)/(MAX-MIN)*(H-P.t-P.b);
+const F={in:'var(--in)',h4:'var(--h4)',oth:'var(--oth)',lvl:'var(--lvl)'};
+let g='';
+for(let v=-3000;v<=MAX;v+=500){const y=Y(v);
+  g+=`<line class="${v?'gl':'zl'}" x1="${P.l}" x2="${W-P.r}" y1="${y}" y2="${y}"/>`;
+  g+=`<text class="tick" x="${P.l-9}" y="${y+4}" text-anchor="end">${v<0?'−'+NB(v):NB(v)}</text>`;}
+g+=`<text class="tick" x="${P.l-50}" y="${P.t-12}">US$ bi</text>`;
+D.forEach((d,yi)=>{
+  if(yi) g+=`<line class="sep" x1="${X(yi*4)-GAP/2}" x2="${X(yi*4)-GAP/2}" y1="${P.t-8}" y2="${H-P.b+8}"/>`;
+  g+=`<text class="yr" x="${CX(yi*4+1)+slot/2}" y="${H-P.b+24}" text-anchor="middle">${d.y}</text>`;});
+S.forEach((s,i)=>{const n=S[i+1]; if(!n) return;
+  g+=`<line class="conn" x1="${X(i)+(slot-bw)/2+bw}" x2="${X(i+1)+(slot-bw)/2}" y1="${Y(s.b)}" y2="${Y(s.b)}"/>`;});
+S.forEach((s,i)=>{
+  const x=X(i)+(slot-bw)/2, y0=Y(Math.max(s.a,s.b)), h=Math.max(2.5,Y(Math.min(s.a,s.b))-y0);
+  const up = s.k==='lvl' ? s.b>=0 : s.v>=0;
+  g+=`<rect x="${x}" y="${y0}" width="${bw}" height="${h}" rx="3" fill="${F[s.k]}"/>`;
+  g+=`<text class="${s.k==='lvl'?'slab':'vlab'}" ${s.k==='lvl'?'':`fill="${F[s.k]}"`} x="${x+bw/2}" y="${up?y0-8:y0+h+15}" text-anchor="middle">${s.lab}</text>`;});
+document.getElementById('wf').innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Cascata encadeada: OCF das top-4 menos capex de IA das top-4 e dos outros players, 2025A a 2028E; caixa acumulado cai de mais 119 para menos 2.776 bilhões de dólares">${g}</svg>`;
+</script>
+</body>
+</html>

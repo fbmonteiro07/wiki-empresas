@@ -24,13 +24,24 @@ Só stdlib + openpyxl (sem pip).
 import os
 import re
 import math
+import time
 import openpyxl
 
 # ─── caminhos ───────────────────────────────────────────────────────────────
-WB_PATH  = r"P:\Felipe Monteiro\US Equities\Modelos oficiais\AI Model (comentado 2026-07-06).xlsx"
+# P: é o canônico (Felipe renomeia o arquivo a cada vintage); E: é o espelho noturno.
+# Pega o candidato de mtime MAIS RECENTE — nunca cai num espelho velho quando P: está no ar.
+WB_CANDIDATES = [
+    r"P:\Felipe Monteiro\US Equities\Modelos oficiais\AI Model.xlsx",
+    r"E:\Wiki Felipe empresas\Modelos oficiais\AI Model.xlsx",
+    r"E:\Wiki Felipe empresas\Modelos oficiais\AI Model - pós spcx.xlsx",
+]
+_found = [p for p in WB_CANDIDATES if os.path.exists(p)]
+WB_PATH  = max(_found, key=os.path.getmtime) if _found else WB_CANDIDATES[0]
 SRC_DIR  = r"P:\Fernanda Neves\MarketData_PYTHON_CODES\Dashboards\Oficiais"
-OUT_DIR  = r"E:\Wiki Felipe empresas\_wiki\_dashboards"
-SRC_LABEL = "AI Model (comentado 2026-07-06).xlsx · uso interno · réplica"
+OUT_DIR  = os.environ.get("AI_DASH_OUT", r"E:\Wiki Felipe empresas\_wiki\_dashboards")
+_WB_DATE = (time.strftime("%Y-%m-%d", time.localtime(os.path.getmtime(WB_PATH)))
+            if _found else "?")
+SRC_LABEL = f"{os.path.basename(WB_PATH)} ({_WB_DATE}) · uso interno · réplica"
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # Shim xlwings→openpyxl: replica a semântica de sheet.range(...).value usada pelos
@@ -141,7 +152,8 @@ def csp_row(hdr, cspx, span=14):
 H_INST = find_header("Estoque GW AI, EOP", 1)
 H_ONL  = find_header("Estoque GW AI, EOP", 2)
 H_AVG  = find_header("Estoque GW AI, AVG", 1)
-H_CAPM = find_header("Capex Hyperscalers | Bottom-Up", 1)
+# o bloco foi renomeado no vintage ago-26: "Capex Hyperscalers | Bottom-Up" → "... AI | Bottom-Up"
+H_CAPM = find_header("Capex Hyperscalers | Bottom-Up", 1) or find_header("Capex Hyperscalers AI | Bottom-Up", 1)
 H_CAPO = find_header("Capex OUTROS Players", 1)
 
 MAJ = ["MSFT", "AMZN", "GOOGLE", "META"]
@@ -179,12 +191,13 @@ gwonline_map = hyper_split(H_ONL,  rt_row(H_ONL))
 avgGw_map    = hyper_split(H_AVG,  rt_row(H_AVG), extra=["OAI", "ANTHROPIC"])
 
 capex_map = hyper_map(H_CAPM, MAJ)
-_capo = hyper_map(H_CAPO, ["ORCL", "CRWV"])
+# SpaceX ganhou linha própria de capex no bloco OUTROS no vintage ago-26 (antes vinha 0 e caía no resíduo)
+_capo = hyper_map(H_CAPO, ["ORCL", "CRWV", "SpaceX"])
 capex_map["ORCL"]   = _capo["ORCL"]
 capex_map["CRWV"]   = _capo["CRWV"]
-capex_map["SpaceX"] = [0, 0, 0, 0, 0]
-capex_map["OUTROS"] = _resid(block_sum(H_CAPO, ["ORCL", "CRWV", "OAI", "ANTHROPIC", "OUTROS"]),
-                             [capex_map["ORCL"], capex_map["CRWV"]])
+capex_map["SpaceX"] = _capo["SpaceX"]
+capex_map["OUTROS"] = _resid(block_sum(H_CAPO, ["ORCL", "CRWV", "SpaceX", "OAI", "ANTHROPIC", "OUTROS"]),
+                             [capex_map["ORCL"], capex_map["CRWV"], capex_map["SpaceX"]])
 print("  HYPER lido.")
 
 def bu_row(row):
@@ -197,25 +210,76 @@ def cumsum(vals):
         out.append(round(acc, 2))
     return out
 
-DES_REV_ROWS = {"NVDA":134,"AVGO":135,"Google":136,"Meta":137,"OpenAI":138,
-                "MRVL":139,"Trainium":140,"MSFT":141,"AMD":142,"MTK":143,"Alchip":144}
-CLI_REV_ROWS = {"NVDA":148,"AMD":149,"Google":151,"Amazon":152,"Meta":153,"MSFT":154,"OpenAI":155}
+# ── âncoras da ' Bottom-up Capex' por RÓTULO ──────────────────────────────────
+# O modelo ganha/perde linhas a cada save (ago-26: +4 linhas nos blocos 'By client' e
+# 'Receita/GW'), então nada aqui pode ser pinado por número de linha.
+_BU_MAXROW = 430
+def _bu_label(r):
+    for c in range(1, 7):
+        v = bu.ws.cell(row=r, column=c).value
+        if isinstance(v, str) and v.strip():
+            return v.strip()
+    return None
+_BU_LAB = {r: _bu_label(r) for r in range(1, _BU_MAXROW + 1)}
+
+def bu_find(substr, start=1):
+    """1ª linha cujo rótulo CONTÉM substr (case-insensitive)."""
+    s = substr.lower()
+    for r in range(start, _BU_MAXROW + 1):
+        l = _BU_LAB.get(r)
+        if l and s in l.lower():
+            return r
+    return None
+
+def bu_exact(name, start=1, span=30):
+    """1ª linha cujo rótulo É `name` (normalizado) — 'Total' sem casar 'Check Total'."""
+    tgt = _norm(name)
+    for r in range(start, min(start + span, _BU_MAXROW) + 1):
+        if _norm(_BU_LAB.get(r)) == tgt:
+            return r
+    return None
+
+def bu_block(section, sub, names, span=25):
+    """{name: linha} do bloco `sub` ('By designer'/'By client') logo abaixo de `section`."""
+    sec = bu_find(section)
+    hdr = bu_find(sub, sec + 1) if sec else None
+    out = {}
+    if hdr is None:
+        print(f"  [AVISO] bloco '{section}' / '{sub}' não achado na ' Bottom-up Capex'.")
+        return out
+    for n in names:
+        r = bu_exact(n, hdr + 1, span)
+        if r is None:
+            print(f"  [AVISO] '{n}' não achado no bloco '{section}' / '{sub}' (linha {hdr}).")
+        else:
+            out[n] = r
+    return out
+
+DESIGNERS = ["NVDA","AVGO","Google","Meta","OpenAI","MRVL","Trainium","MSFT","AMD","MTK","Alchip"]
+CLIENTS   = ["NVDA","AMD","Google","Amazon","Meta","MSFT","OpenAI"]
+
+DES_REV_ROWS = bu_block("Capex Chips (Receita Designers)", "By designer", DESIGNERS)
+CLI_REV_ROWS = bu_block("Capex Chips (Receita Designers)", "By client",   CLIENTS)
 des_rev        = {k: [round(x) for x in bu_row(r)] for k, r in DES_REV_ROWS.items()}
 des_rev_client = {k: [round(x) for x in bu_row(r)] for k, r in CLI_REV_ROWS.items()}
 
-DES_GW_ROWS = {"NVDA":99,"AVGO":100,"Google":101,"Meta":102,"OpenAI":103,
-               "MRVL":104,"Trainium":105,"MSFT":106,"AMD":107,"MTK":108,"Alchip":109}
-CLI_GW_ROWS = {"NVDA":112,"AMD":113,"Google":115,"Amazon":116,"Meta":117,"MSFT":118,"OpenAI":119}
+DES_GW_ROWS = bu_block("AI DCs", "By designer", DESIGNERS)   # 'GW | AI DCs << otica designers'
+CLI_GW_ROWS = bu_block("AI DCs", "By client",   CLIENTS)
 des_gw        = {k: cumsum(bu_row(r)) for k, r in DES_GW_ROWS.items()}
 des_gw_client = {k: cumsum(bu_row(r)) for k, r in CLI_GW_ROWS.items()}
-print("  DES_GW / DES_REV / CLIENT lidos.")
+print(f"  DES_GW / DES_REV / CLIENT lidos (GW L{min(DES_GW_ROWS.values(), default=0)}+, "
+      f"REV L{min(DES_REV_ROWS.values(), default=0)}+).")
 
-CHIP_PGW_ROWS  = {"NVDA":170,"AVGO":171,"Google":172,"Meta":173,"OpenAI":174,
-                  "MRVL":175,"Trainium":176,"MSFT":177,"AMD":178,"MTK":179,"Alchip":180}
-CHIPS_PGW_ROWS = {"NVDA":36,"AVGO":37,"Google":38,"Meta":39,"OpenAI":40,
-                  "MRVL":41,"Trainium":42,"MSFT":43,"AMD":44,"MTK":45,"Alchip":46}
-net_pgw   = [round(x) for x in bu_row(251)]
-oth_pgw   = [round(x) for x in bu_row(363)]
+CHIP_PGW_ROWS  = bu_block("Receita das designers / AI DC GW", "By designer", DESIGNERS)
+CHIPS_PGW_ROWS = bu_block("# Chips /GW", "By designer", DESIGNERS)
+_r_net = bu_find('Capex "Networking+CPU+NAND..." /GW')
+_r_oth = bu_find("Other Capex /GW")
+_r_net = bu_exact("Total", _r_net + 1, 10) if _r_net else None
+_r_oth = bu_exact("Total", _r_oth + 1, 10) if _r_oth else None
+if not _r_net or not _r_oth:
+    print(f"  [AVISO] NET_PGW/OTH_PGW não achados (net={_r_net}, oth={_r_oth}).")
+net_pgw   = [round(x) for x in bu_row(_r_net)] if _r_net else [0] * 5
+oth_pgw   = [round(x) for x in bu_row(_r_oth)] if _r_oth else [0] * 5
 chip_pgw  = {k: [round(x) for x in bu_row(r)] for k, r in CHIP_PGW_ROWS.items()}
 chips_pgw = {k: [round(x) for x in bu_row(r)] for k, r in CHIPS_PGW_ROWS.items()}
 print("  ECONOMICS/GW lido.")
@@ -252,7 +316,14 @@ def _rt_avg(row):
     v = rt.range((row, 4), (row, 8)).value
     v = v if isinstance(v, list) else [v]
     return [round(0 if (x is None or (isinstance(x, float) and math.isnan(x))) else x, 2) for x in v]
-avggw = {"total": _rt_avg(88), "msft": _rt_avg(89), "amzn": _rt_avg(90), "goog": _rt_avg(91), "meta": _rt_avg(92)}
+# label-driven (o bloco 'Por Cloud' andou de 88 p/ 84 no vintage ago-26 e a ordem dos players mudou)
+_AVG_KEYS = {"msft": "MSFT", "amzn": "AMZN", "goog": "GOOGLE", "meta": "META"}
+avggw = {"total": _rt_avg(H_AVG)}
+for _k, _lbl in _AVG_KEYS.items():
+    _r = csp_row(H_AVG, _lbl)
+    if _r is None:
+        print(f"  [AVISO] AVGGW.{_k}: '{_lbl}' não achado no bloco linha {H_AVG}.")
+    avggw[_k] = _rt_avg(_r) if _r else [0.0] * 5
 avggw_js = "{\n" + ",\n".join(f"  {k}:{jlist_gw(avggw[k])}" for k in ["total","msft","amzn","goog","meta"]) + "\n}"
 print("  AVGGW lido.")
 
@@ -404,7 +475,8 @@ def clean_links(html):
         return nav
     html = re.sub(r'<nav class="tabs">[\s\S]*?</nav>', _nav, html, count=1)
     html = re.sub(r'<a href="\.\./[^"]*"[^>]*>([\s\S]*?)</a>', r'\1', html)
-    html = html.replace("AI Model.xlsx · uso interno", SRC_LABEL)
+    # rótulo de fonte: casa o original da Fernanda E o rótulo de uma réplica anterior (troca de vintage)
+    html = re.sub(r'AI Model[^<]*uso interno[^<]*', SRC_LABEL, html)
     return html
 
 def read_template(name):
