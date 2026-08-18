@@ -6,88 +6,122 @@
 <title>Cascata do AI capex</title>
 <style>
 :root{
-  --paper:#FAF9F6; --ink:#1B2632; --muted:#5D6B79; --faint:#8A96A3; --line:#EFECE4;
-  --in:#15803D; --h4:#2E5EA8; --oth:#C65A1E; --lvl:#3A4552;
+  --paper:#FFFFFF; --card:#FFFFFF; --ink:#1B2632; --muted:#5D6B79; --faint:#8A96A3;
+  --line:#EAE7DF; --navy:#1E3A5F;
+  --ocf:#1D9E75; --cx4:#C65A1E; --cxo:#E39B58; --pos:#1E3A5F; --neg:#B4332A;
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --paper:#0F141B; --ink:#E9E7E2; --muted:#98A4B1; --faint:#6E7B88; --line:#232C38;
-    --in:#2F9960; --h4:#5C86C5; --oth:#C4682E; --lvl:#9FB0C0;
+    --paper:#0F141B; --card:#151C25; --ink:#E9E7E2; --muted:#98A4B1; --faint:#6E7B88;
+    --line:#242D39; --navy:#9FBEE8;
+    --ocf:#25A17C; --cx4:#B45E28; --cxo:#E0A067; --pos:#7E9CBE; --neg:#D06A5F;
   }
 }
 :root[data-theme="dark"]{
-  --paper:#0F141B; --ink:#E9E7E2; --muted:#98A4B1; --faint:#6E7B88; --line:#232C38;
-  --in:#2F9960; --h4:#5C86C5; --oth:#C4682E; --lvl:#9FB0C0;
+  --paper:#0F141B; --card:#151C25; --ink:#E9E7E2; --muted:#98A4B1; --faint:#6E7B88;
+  --line:#242D39; --navy:#9FBEE8;
+  --ocf:#25A17C; --cx4:#B45E28; --cxo:#E0A067; --pos:#7E9CBE; --neg:#D06A5F;
 }
 *{box-sizing:border-box; margin:0}
-body{background:var(--paper); color:var(--ink); padding:26px 22px 30px;
-  font:15px/1.5 "Segoe UI",-apple-system,Arial,sans-serif; -webkit-font-smoothing:antialiased}
-.wrap{max-width:1180px; margin:0 auto}
-h1{font:700 19px/1.25 Georgia,"Times New Roman",serif; letter-spacing:-.01em}
-.sub{font-size:12.5px; color:var(--muted); margin-top:4px}
-.legend{display:flex; flex-wrap:wrap; gap:7px 18px; font-size:12.5px; color:var(--muted); margin:16px 0 6px}
+body{background:var(--paper); color:var(--ink); padding:24px 22px 28px;
+  font:14px/1.5 "Segoe UI",-apple-system,"Helvetica Neue",Arial,sans-serif; -webkit-font-smoothing:antialiased}
+.wrap{max-width:1400px; margin:0 auto; display:grid; grid-template-columns:minmax(0,1fr) 312px; gap:26px; align-items:start}
+@media (max-width:1100px){.wrap{grid-template-columns:minmax(0,1fr)}}
+.sub{font-size:13px; color:var(--muted); margin-bottom:8px}
+.sub b{color:var(--ink)}
+.legend{display:flex; flex-wrap:wrap; gap:6px 20px; font-size:12.5px; color:var(--muted); margin-bottom:10px}
 .legend span.it{display:inline-flex; align-items:center; gap:7px}
-.sq{width:11px; height:11px; border-radius:3px}
+.sq{width:11px; height:11px; border-radius:2px}
 .box{overflow-x:auto}
-svg{display:block; min-width:880px; width:100%; height:auto}
+svg{display:block; min-width:760px; width:100%; height:auto}
 .gl{stroke:var(--line); stroke-width:1}
-.zl{stroke:var(--muted); stroke-width:1.3}
-.sep{stroke:var(--line); stroke-width:1}
-.conn{stroke:var(--faint); stroke-width:1.1; stroke-dasharray:3 3}
-.tick{font-size:11px; fill:var(--faint)}
-.yr{font-size:13px; font-weight:700; fill:var(--muted)}
-.vlab{font-size:11.5px; font-weight:700; paint-order:stroke; stroke:var(--paper); stroke-width:3.5px}
-.slab{font-size:12.5px; font-weight:700; fill:var(--lvl); paint-order:stroke; stroke:var(--paper); stroke-width:3.5px}
-.src{font-size:11.5px; color:var(--faint); margin-top:10px; line-height:1.5}
+.zl{stroke:var(--muted); stroke-width:1.2}
+.div{stroke:var(--neg); stroke-width:1.2; stroke-dasharray:5 4}
+.conn{stroke:var(--faint); stroke-width:1.2}
+.tick{font-size:11.5px; fill:var(--faint)}
+.yr{font-size:13.5px; font-weight:700; fill:var(--ink)}
+.vl{font-size:12px; font-weight:700; paint-order:stroke; stroke:var(--paper); stroke-width:3.5px}
+.il{font-size:11.5px; font-weight:700}
+.note{font-size:11.5px; color:var(--faint); margin-top:12px; line-height:1.5; max-width:96ch}
+.pan h2{font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--navy); font-weight:700; margin-bottom:11px}
+.kp{border:1px solid var(--line); border-left:4px solid; border-radius:9px; background:var(--card); padding:13px 15px; margin-bottom:11px}
+.kp .lb{font-size:10.5px; letter-spacing:.13em; text-transform:uppercase; color:var(--muted); font-weight:700}
+.kp .v{font-size:30px; font-weight:700; letter-spacing:-.015em; margin:5px 0 3px; font-variant-numeric:tabular-nums}
+.kp p{font-size:12px; color:var(--muted); line-height:1.45}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <h1>Capex de IA vs. caixa das top-4 — a conta em cascata, ano após ano</h1>
-  <p class="sub">US$ bi · ano-calendário · cada ano começa no nível onde o anterior terminou</p>
+<div>
+  <div class="sub">Cada ano parte do zero: <b>OCF das top-4</b> sobe, o <b>capex de IA do sistema</b> desce em um degrau (top-4 + outros players), e a barra final é o <b>FCF do ano</b>.</div>
   <div class="legend">
-    <span class="it"><span class="sq" style="background:var(--in)"></span>+ OCF das top-4 (MSFT · GOOG · AMZN · META)</span>
-    <span class="it"><span class="sq" style="background:var(--h4)"></span>− capex de IA das top-4</span>
-    <span class="it"><span class="sq" style="background:var(--oth)"></span>− capex de IA dos outros players</span>
-    <span class="it"><span class="sq" style="background:var(--lvl)"></span>caixa acumulado desde 2025A</span>
+    <span class="it"><span class="sq" style="background:var(--ocf)"></span>OCF das top-4</span>
+    <span class="it"><span class="sq" style="background:var(--cx4)"></span>capex top-4</span>
+    <span class="it"><span class="sq" style="background:var(--cxo)"></span>capex outros players</span>
+    <span class="it"><span class="sq" style="background:var(--pos)"></span>FCF do ano</span>
   </div>
   <div class="box" id="wf"></div>
-  <p class="src">Capstone AI Model bottom-up + modelos oficiais (rev. ago-26). Capex das top-4 em 27E–28E = 1.125 / 1.425 (quadro-síntese ago-26); “outros players” = capex total do sistema − top-4 (labs, neoclouds, Oracle, SpaceX, soberanos). OCF de 2025A = 515 conforme o quadro de origem — o painel “Quem paga a conta” carrega 580 para o mesmo CY25.</p>
+  <p class="note">Top-4 = MSFT · GOOG · AMZN · META; outros players = labs, neoclouds, Oracle, SpaceX, soberanos. FCF = OCF das top-4 − capex de IA de todo o sistema (a construção do quadro-síntese). Capstone AI Model bottom-up + modelos oficiais, rev. ago-26.</p>
+</div>
+<div class="pan">
+  <h2>Acumulado 26E–28E</h2>
+  <div class="kp" style="border-left-color:var(--cx4)">
+    <div class="lb">Capex total do sistema</div>
+    <div class="v" style="color:var(--cx4)">$5,70 T</div>
+    <p>top-4 $3,23T + outros players $2,47T</p>
+  </div>
+  <div class="kp" style="border-left-color:var(--ocf)">
+    <div class="lb">OCF das top-4</div>
+    <div class="v" style="color:var(--ocf)">$2,80 T</div>
+    <p>os únicos com caixa operacional no modelo</p>
+  </div>
+  <div class="kp" style="border-left-color:var(--neg)">
+    <div class="lb">Queima de caixa</div>
+    <div class="v" style="color:var(--neg)">−$2,90 T</div>
+    <p>capex − OCF. Confere com as áreas do slide de funding: laranja $2,47T + verde $0,43T</p>
+  </div>
+</div>
 </div>
 <script>
-const D=[{y:'2025A',ocf:515,h4:336.4,oth:59.9},
-         {y:'2026E',ocf:687,h4:681.9,oth:219.7},
-         {y:'2027E',ocf:921,h4:1125.2,oth:760.2},
-         {y:'2028E',ocf:1197,h4:1425.0,oth:1488.1}];
-const NB=v=>Math.round(Math.abs(v)).toLocaleString('pt-BR');
-const SG=v=>(v<0?'−':'+')+NB(v);
-const W=1160,H=500,P={l:66,r:20,t:34,b:44},MIN=-3000,MAX=900,GAP=20;
-const S=[]; let run=0;
-D.forEach((d,yi)=>{
-  const push=(k,v)=>{const a=run;run+=v;S.push({yi,k,v,a,b:run,lab:SG(v)});};
-  push('in',d.ocf); push('h4',-d.h4); push('oth',-d.oth);
-  S.push({yi,k:'lvl',a:0,b:run,lab:SG(run)});
-});
-const slot=(W-P.l-P.r-3*GAP)/S.length, bw=Math.min(56,slot-7);
-const X=i=>P.l+i*slot+Math.floor(i/4)*GAP, CX=i=>X(i)+slot/2;
+const D=[
+ {y:'2025A',ocf:515, c4:336.4, co:59.9},
+ {y:'2026E',ocf:687, c4:681.9, co:219.7},
+ {y:'2027E',ocf:921, c4:1125.2,co:760.2},
+ {y:'2028E',ocf:1197,c4:1425.0,co:1488.1}];
+const T=v=>{const a=Math.abs(v);return a>=1000
+  ?'$'+(a/1000).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})+' T'
+  :'$'+Math.round(a).toLocaleString('pt-BR')+' bn';};
+const AX=v=>v===0?'0':(v<0?'−':'')+(Math.abs(v)/1000).toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})+'T';
+const W=1036,H=520,P={l:58,r:16,t:30,b:48},MIN=-2000,MAX=1500;
+const BW=58,IG=16,YG=46,BLK=3*BW+2*IG;
 const Y=v=>P.t+(MAX-v)/(MAX-MIN)*(H-P.t-P.b);
-const F={in:'var(--in)',h4:'var(--h4)',oth:'var(--oth)',lvl:'var(--lvl)'};
 let g='';
-for(let v=-3000;v<=MAX;v+=500){const y=Y(v);
+for(let v=MIN;v<=MAX;v+=500){const y=Y(v);
   g+=`<line class="${v?'gl':'zl'}" x1="${P.l}" x2="${W-P.r}" y1="${y}" y2="${y}"/>`;
-  g+=`<text class="tick" x="${P.l-9}" y="${y+4}" text-anchor="end">${v<0?'−'+NB(v):NB(v)}</text>`;}
-g+=`<text class="tick" x="${P.l-50}" y="${P.t-12}">US$ bi</text>`;
+  g+=`<text class="tick" x="${P.l-9}" y="${y+4}" text-anchor="end">${AX(v)}</text>`;}
+const xd=P.l+BLK+YG/2;
+g+=`<line class="div" x1="${xd}" x2="${xd}" y1="${P.t-8}" y2="${H-P.b+8}"/>`;
+g+=`<text class="vl" fill="var(--neg)" x="${xd+9}" y="${P.t+4}">FCF vira negativo em 2026E</text>`;
 D.forEach((d,yi)=>{
-  if(yi) g+=`<line class="sep" x1="${X(yi*4)-GAP/2}" x2="${X(yi*4)-GAP/2}" y1="${P.t-8}" y2="${H-P.b+8}"/>`;
-  g+=`<text class="yr" x="${CX(yi*4+1)+slot/2}" y="${H-P.b+24}" text-anchor="middle">${d.y}</text>`;});
-S.forEach((s,i)=>{const n=S[i+1]; if(!n) return;
-  g+=`<line class="conn" x1="${X(i)+(slot-bw)/2+bw}" x2="${X(i+1)+(slot-bw)/2}" y1="${Y(s.b)}" y2="${Y(s.b)}"/>`;});
-S.forEach((s,i)=>{
-  const x=X(i)+(slot-bw)/2, y0=Y(Math.max(s.a,s.b)), h=Math.max(2.5,Y(Math.min(s.a,s.b))-y0);
-  const up = s.k==='lvl' ? s.b>=0 : s.v>=0;
-  g+=`<rect x="${x}" y="${y0}" width="${bw}" height="${h}" rx="3" fill="${F[s.k]}"/>`;
-  g+=`<text class="${s.k==='lvl'?'slab':'vlab'}" ${s.k==='lvl'?'':`fill="${F[s.k]}"`} x="${x+bw/2}" y="${up?y0-8:y0+h+15}" text-anchor="middle">${s.lab}</text>`;});
-document.getElementById('wf').innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Cascata encadeada: OCF das top-4 menos capex de IA das top-4 e dos outros players, 2025A a 2028E; caixa acumulado cai de mais 119 para menos 2.776 bilhões de dólares">${g}</svg>`;
+  const x0=P.l+yi*(BLK+YG), x1=x0, x2=x0+BW+IG, x3=x0+2*(BW+IG);
+  const mid=d.ocf-d.c4, fcf=mid-d.co, tot=d.c4+d.co;
+  g+=`<line class="conn" x1="${x1+BW}" x2="${x2}" y1="${Y(d.ocf)}" y2="${Y(d.ocf)}"/>`;
+  g+=`<line class="conn" x1="${x2+BW}" x2="${x3}" y1="${Y(fcf)}" y2="${Y(fcf)}"/>`;
+  g+=`<rect x="${x1}" y="${Y(d.ocf)}" width="${BW}" height="${Y(0)-Y(d.ocf)}" rx="2" fill="var(--ocf)"/>`;
+  g+=`<text class="vl" fill="var(--ocf)" x="${x1+BW/2}" y="${Y(d.ocf)-8}" text-anchor="middle">+${T(d.ocf)}</text>`;
+  const h4=Y(mid)-Y(d.ocf), ho=Y(fcf)-Y(mid);
+  g+=`<rect x="${x2}" y="${Y(d.ocf)}" width="${BW}" height="${h4}" rx="2" fill="var(--cx4)"/>`;
+  g+=`<rect x="${x2}" y="${Y(mid)}" width="${BW}" height="${ho}" rx="2" fill="var(--cxo)"/>`;
+  g+=`<line x1="${x2}" x2="${x2+BW}" y1="${Y(mid)}" y2="${Y(mid)}" stroke="var(--paper)" stroke-width="2"/>`;
+  if(h4>=20) g+=`<text class="il" fill="#FFFFFF" x="${x2+BW/2}" y="${(Y(d.ocf)+Y(mid))/2+4}" text-anchor="middle">−${T(d.c4)}</text>`;
+  if(ho>=20) g+=`<text class="il" fill="#3A2410" x="${x2+BW/2}" y="${(Y(mid)+Y(fcf))/2+4}" text-anchor="middle">−${T(d.co)}</text>`;
+  g+=`<text class="vl" fill="var(--cx4)" x="${x2+BW/2}" y="${Y(fcf)+17}" text-anchor="middle">−${T(tot)}</text>`;
+  const fk=fcf>=0?'pos':'neg';
+  g+=`<rect x="${x3}" y="${Y(Math.max(fcf,0))}" width="${BW}" height="${Math.max(2.5,Math.abs(Y(fcf)-Y(0)))}" rx="2" fill="var(--${fk})"/>`;
+  g+=`<text class="vl" fill="var(--${fk})" x="${x3+BW/2}" y="${fcf>=0?Y(fcf)-8:Y(fcf)+17}" text-anchor="middle">${fcf>=0?'+':'−'}${T(fcf)}</text>`;
+  g+=`<text class="yr" x="${x0+BLK/2}" y="${H-P.b+30}" text-anchor="middle">${d.y}</text>`;
+});
+document.getElementById('wf').innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Ponte anual: OCF das top-4 menos o degrau de capex de IA do sistema (top-4 mais outros players) igual a FCF do ano; de mais 119 bilhoes em 2025A a menos 1,72 trilhao em 2028E">${g}</svg>`;
 </script>
 </body>
 </html>

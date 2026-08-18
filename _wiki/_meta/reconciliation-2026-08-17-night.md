@@ -10,16 +10,16 @@ _Variance pass on every NEW quantitative datapoint from tonight's 12 sources, ag
 |---|---|
 | **1. Prior wiki comments** | ✅ Done (on disk). Every patch agent ran an explicit before-insert read; the collisions are itemised below. |
 | **2. Capstone house models** | ✅ Done — coverage is thin for tonight's names. `_data/house.json` (asof 2026-08-17) holds **AAPL, AVGO, COHR, GOOG, LITE, META, NVDA, TSM**. Of tonight's newly-marked names only **LITE, AVGO, NVDA, META, GOOG** have a house model. **DELL, HPE, STX, SPCX, SNDK, MU, AMD, INTC, CRDO, MEDIATEK, KIOXIA, MRVL, ALAB, MCHP, AAOI, AXTI, TSEM, CIEN, ANET, CSCO have no house model** — reconciled vs wiki + BBG only. |
-| **3. BBG consensus — LIVE** | 🔴 **PENDING.** Live `bdp` against `E:\bloomberg_api` raised `ConnectionError: blpapi: could not start session` at **23:40** (three failed connects to 127.0.0.1:8194, `PlatformController` gave up) — Terminal not running / logged out at that hour. **No web data was substituted at any point.** The one column this costs us is **consensus target price / rating**, which is not in the on-disk snapshot. |
+| **3. BBG consensus — LIVE** | ✅ **RESOLVED 2026-08-18 via `/wiki-consensus`** (was 🔴 PENDING on `ConnectionError: blpapi: could not start session` at 23:40 on 08-17). Terminal back up: full live re-fetch **`estimates.json` asof 2026-08-18, 98/98 names, 0 FAIL lines, 0 null prices, 0 carry-over `revisions` stamps and 0 records byte-identical to the 08-17 vintage** (i.e. no silent carry-overs), plus an **ad-hoc live `BEST_TARGET_PRICE` / `BEST_ANALYST_RATING` pull for all 12 names in the PT table** — see `BBG consensus pull — live 2026-08-18`. **No web data was substituted at any point.** ⚠️ **CY2028 is still absent for every name**, so DB's SPCX 2028E and Mizuho's 2028E marks remain unarbitrated. |
 | **3b. BBG consensus — ON-DISK SNAPSHOT** | ✅ **Used, and it is NOT stale: `_wiki/_data/estimates.json` is `asof 2026-08-17`, written at 18:29 tonight** by today's `/wiki-consensus` run (98/98 names). So the EPS / revenue / capex consensus columns below are same-day, not a carry-over. ✅ **Integrity spot-check passed: the snapshot's `LITE.actual.rev` = 3014.0 matches the FY26 10-K's $3,014.0m to the decimal**, which independently validates the actuals side of the snapshot against a filing that landed after it was written. ⚠️ Standing caveat applies: **CY2026 sums embed pre-print consensus for already-reported quarters — CY2027 is the clean column and is what is used below.** ⚠️ **CY2028 is absent for every name**, so DB's SPCX 2028E and Mizuho's 2028E marks have no consensus counterpart. |
 
-**Action required:** log in to the Bloomberg Terminal / reconnect the Capstone VPN and re-run `/wiki-consensus` to resolve the **consensus PT + rating** column, priority rows **DELL** (item ①) and **SPCX** (item ③).
+~~**Action required:** log in to the Bloomberg Terminal / reconnect the Capstone VPN and re-run `/wiki-consensus` to resolve the **consensus PT + rating** column, priority rows **DELL** (item ①) and **SPCX** (item ③).~~ ✅ **DONE 2026-08-18.** Both priority rows resolved, and **they resolve in opposite directions**: **DELL's** MS target of $430 is **14.7% below the consensus PT of $504.04** — genuinely below-Street, not merely below-spot, which is the stronger reading of item ①; **SPCX's** DB target of $235 is only **+6.3% above the consensus PT of $221.09** and its 2027 revenue mark sits **26.8% BELOW the street-high**, so item ③ is a **mid-range** call, not an aggressive one.
 
 ---
 
 ## New price targets vs spot and vs consensus CY2027 EPS
 
-_Spot and consensus EPS both from the 18:29 on-disk snapshot, so the implied multiples are internally consistent. Consensus PT column PENDING (see above)._
+_Spot and consensus EPS both from the 08-17 18:29 on-disk snapshot, so the implied multiples are internally consistent **as written on 08-17**. ✅ **The consensus-PT column that was PENDING here is now resolved in its own dated section below** (`BBG consensus pull — live 2026-08-18`) rather than by overwriting this table, because **spot moved hard overnight**: every name in this table fell between the 08-17 snapshot and the 08-18 pull, **−2.6% (NVDA) to −12.5% (CRDO)**, so the `Upside` column below is stale on price. **That is a price move, not an estimate revision** — consensus CY2027 EPS is unchanged to the decimal for 10 of the 12 names (DELL and NVDA are the only movers, both up)._
 
 | Ticker | Spot | New PT | Upside | Cons CY27 EPS | PT on CY27 | Action | Note |
 |---|--:|--:|--:|--:|--:|---|---|
@@ -39,9 +39,44 @@ _Spot and consensus EPS both from the 18:29 on-disk snapshot, so the implied mul
 
 ---
 
-## DIVERGES — the alpha
+## BBG consensus pull — live 2026-08-18 (the PT column this run never had)
 
-### ① 🔴🔴 DELL — Morgan Stanley is **+27.5% above consensus on EPS** and its price target is **10.4% BELOW spot**. Both houses raised the numbers and neither will pay for them.
+_Ad-hoc `bdp` against `E:\bloomberg_api`, **2026-08-18**. Spot and PT pulled in the **same call**, so each upside is internally consistent (these spots sit +0.1% to +0.8% above the same-morning `estimates.json` prices — intraday drift, immaterial). Rating = `BEST_ANALYST_RATING` on the 1-5 scale (5 = all buys); **n** = `TOT_ANALYST_REC`. "vs cons PT" places the broker target from the table above against the Street's own target._
+
+| Ticker | Spot | Cons PT | Upside | Rating (n) | Broker PT | vs cons PT | Read |
+|---|--:|--:|--:|--:|--:|--:|---|
+| **MU** | 940.45 | 1586.42 | **+68.7%** | 4.83/5 (59) | 1375 (Mizuho) | **−13.3%** | 🔴 **Largest consensus upside in the entire run — and Mizuho's "no-drift" reiteration is 13.3% BELOW the Street's target.** The 07-11 reiteration was logged as ✅ CONFIRMS on the grounds that it had not moved; the PT layer shows what standing still cost. Consensus CY27 EPS **$163.61 unchanged to the decimal**, so this is not an estimate disagreement — the Street simply pays more for the same number. Reads into ⑧: the house carrying the **+70–100% HBM4e pricing** call also has the lowest target on the name that would capture it. |
+| **SPCX** | 141.97 | 221.09 | **+55.7%** | 4.46/5 (39) | 235 (DB) | **+6.3%** | 🔴 **This is the resolution that most changes item ③.** DB's $235 is barely above the Street's $221.09, and DB's 2027 revenue of **$115,308m sits 26.8% BELOW the street-high of $157,527m** — so DB is **between median and high, not an outlier**. The +11.1% revenue divergence is real but **mid-range**, and should not be traded as an aggressive call. Lowest rating conviction of the bullish cluster (4.46/5) on a 39-rec sample. ⚠️ The EPS sign conflict (DB +$1.06 vs consensus −$0.94 for CY2026) is **untouched by this pull** — still a basis question. |
+| **AVGO** | 379.39 | 530.98 | **+40.0%** | 4.77/5 (61) | 530 (Mizuho) | **−0.2%** | ✅ **CONFIRMS — Mizuho's $530 is the consensus target to within 18 cents.** No PT edge either way. The finding in ⑤ was never a PT call: the **$29bn maximum contingent exposure = 15.2% of consensus CY2027 revenue ($190,743m, unchanged to the decimal)** and appears in neither the house nor the Street number. **A $531 consensus target that does not price a 15%-of-revenue second-loss exposure peaking mid-2027 is the finding**, and the fresh pull leaves it exactly as stated. |
+| **NVDA** | 219.69 | 303.71 | **+38.2%** | 4.88/5 (81) | 300 (Mizuho) | **−1.2%** | ✅ **CONFIRMS row 1 holds on fresh data — the consensus PT is $303.71, IDENTICAL TO THE CENT to the 08-17 live pull**, while spot fell 2.4%. Highest-rated name in the run (4.88/5 on the deepest sample, 81 recs). Mizuho's $300 remains a reiteration sitting on consensus. **Nothing to re-place.** |
+| **SNDK** | 1634.25 | 2196.10 | **+34.4%** | 4.71/5 (31) | 1900 (Mizuho) | **−13.5%** | 🔴 **The largest below-Street gap in the run, and it quantifies ⑪.** Mizuho cut $2,200 → $1,900 with no model work; the Street's target is **$2,196.10 — i.e. essentially Mizuho's OLD number ($2,200, −0.2%).** So the un-rationalised cut moved Mizuho from *on consensus* to *13.5% below it*. Consensus CY27 EPS **$238.25 unchanged to the decimal** — the Street did not follow. **The new $1,750–$1,900 rungs are Mizuho's alone.** |
+| **AMD** | 478.36 | 624.40 | **+30.5%** | 4.59/5 (66) | 580 (Mizuho) | **−7.1%** | 🔴 **Same pattern as SNDK, same house, same note — quantified.** The unexplained $615 → $580 cut lands **7.1% below** the Street's $624.40, and consensus CY27 EPS is **$15.30 unchanged to the decimal**. Mizuho's old $615 was itself only −1.5% vs today's consensus PT. **Two un-rationalised cuts in one note, both taking the house from consensus to below it.** |
+| **LITE** | 875.88 | 1130.23 | **+29.0%** | 4.71/5 (31) | 1140 (Mizuho) | **+0.9%** | ✅ **PT is consensus (+0.9%) — so item ② is entirely an estimates-and-disclosure finding, not a price call.** ⚠️ **Worth flagging: spot fell 9.6% overnight** (968.90 → 875.88), the second-largest drop in the table, on the session *after* the FY26 10-K disclosed the >$90.0m OCS year and the **$757.8m of early convertible conversion requests**. Consensus CY27 EPS **$27.95 unchanged**, so the Street has not re-cut numbers — **the tape moved before the estimates did.** The **F1Q27 OCS ≥$100m** pass/fail stands. |
+| **HPE** | 55.17 | 68.50 | **+24.2%** | 4.30/5 (23) | 69 (MS) | **+0.7%** | ✅ **CONFIRMS on the PT leg, and it re-frames ④.** MS's upgrade target of $69 is **the consensus target (+0.7%)** — so the EW→OW upgrade is a **convergence to where the Street already was**, not a contrarian call. 🔴 **The EPS leg still DIVERGES but with a ceiling now attached:** MS's FY27 EPS of **$4.58 is +11.7% above the consensus $4.10 but −0.9% BELOW the street-high of $4.62** — MS is *at the top of the range, not beyond it*. |
+| **INTC** | 95.98 | 118.90 | **+23.9%** | **3.61/5 (54)** | 109 (Mizuho) | **−8.3%** | 🔴 **The only sub-4 rating in the run (3.61/5) — by far the weakest Street conviction**, and the third Mizuho mark landing below consensus. The $109 reiteration that "retroactively firms" the 08-09 cut from $135 sits **8.3% under** the Street's $118.90; the old $135 was **+13.5% above** today's consensus PT. Consensus CY27 EPS **$2.02 unchanged to the decimal** on a **54.0x** multiple. **Reads with ⑥: the house making the un-sourced ">97% EMIB-T yield" claim is also the most bearish on the target.** |
+| **STX** | 908.14 | 1112.70 | **+22.5%** | 4.70/5 (27) | 1035 (standing) | **−7.0%** | ✅ **The absence of a restated PT was correctly not read as a change — and the standing $1,035 is now 7.0% BELOW consensus.** Spot fell **8.7%** overnight, so the standing target's upside widened from +4.0% to **+14.0% on price alone**. Consensus CY27 EPS **$45.50 unchanged**. **"Top Pick reiterated" is, against the Street's own target, a below-consensus mark.** |
+| **CRDO** | 247.59 | 296.31 | **+19.7%** | 4.87/5 (23) | 290 (Mizuho) | **−2.1%** | ✅ **PT effectively consensus (−2.1%), on the second-highest rating in the run (4.87/5).** ⚠️ **Biggest overnight price move in the table: −12.5%** (282.82 → 247.59), so the Mizuho reiteration's upside widened from +2.5% to **+17.1% on price alone**. Consensus CY27 EPS **$8.77 unchanged to the decimal**. The **unmodelled "ALC/microLED" leg** from ⑭ remains unsized and is a question for the print. |
+| **DELL** | 461.33 | **504.04** | **+9.3%** | 4.32/5 (31) | **430 (MS)** | **−14.7%** | 🔴🔴 **THE RESOLUTION OF ITEM ①, and it lands on the stronger side. MS's $430 is 14.7% BELOW the consensus PT of $504.04 — genuinely below-Street, not merely below-spot.** And **DELL's +9.3% consensus upside is the LOWEST in the entire 12-name table** (next lowest is CRDO at +19.7%, i.e. DELL's is less than half), on the second-weakest rating (4.32/5). **So the Street as a whole is the least willing to pay up for DELL of any name in this run — which corroborates the "numbers up, multiple down" mechanism rather than softening it.** Mizuho's $500 is the consensus target (−0.8%). 🔴 **But the EPS leg cuts the other way — see item ① below.** |
+| **ANTHROPIC**, **OPENAI** | — | — | — | — | — | — | **No BBG (private — not on the wrapper).** Items ⑮ and ⑯ have no consensus or house baseline by construction and are reconciled vs prior wiki comments only. Unchanged by this pull. |
+
+**Two estimate lines moved overnight; both are DELL and NVDA, and the DELL one matters.**
+
+| Name | Line | 08-17 | 08-18 | Δ |
+|---|---|--:|--:|--:|
+| **DELL** | CY2027 EPS | 22.48 | **22.74** | **+1.16%** |
+| **DELL** | CY2027 EPS street-high | 28.83 | **29.91** | **+3.75%** |
+| **DELL** | CY2027 revenue | 197,512.6 | 198,207.8 | +0.35% |
+| NVDA | CY2027 EPS | 12.93 | 12.95 | +0.15% |
+| NVDA | CY2027 EPS street-high | 15.94 | 16.32 | +2.38% |
+| NVDA | CY2027 revenue | 569,132.6 | 570,977.2 | +0.32% |
+
+**Every other CY2027 line cited anywhere in this report is unchanged to the decimal.** No row moves wholesale between DIVERGES and CONFIRMS; the **PT legs** of ③, ④ and ⑤ resolve as **CONFIRMS** (broker target ≈ consensus target) while their **estimate legs** stand, and ⑪ is **strengthened and now quantified**.
+
+---
+
+## Where the new data DIVERGES
+
+### ① 🔴🔴 DELL — Morgan Stanley is **+26.0% above consensus on EPS** and its price target is **14.7% BELOW the consensus target**. Both houses raised the numbers and neither will pay for them — and neither does the Street.
 
 | Mark | Value | vs consensus CY2027 EPS $22.48 |
 |---|--:|--:|
@@ -53,7 +88,30 @@ _Spot and consensus EPS both from the 18:29 on-disk snapshot, so the implied mul
 MS raised FY28 EPS **+20%** ($23.83 → $28.66) and simultaneously cut the target multiple **20x → 15x**, netting a **−9.9% PT ($477 → $430)** — a target that now sits **10.4% below the $479.81 spot**. Mizuho's $500, struck six days later, is **+4.2%**. **So the two houses that just told us Dell's earnings revisions go higher are jointly marking the stock at −10% to +4%.** Woodring says it outright: Dell "will see significant positive earnings revisions in the months ahead… but at 16x our new FY28 EPS, we believe valuation largely reflects this strength."
 
 **The edge:** this is a pure multiple call dressed as a rating. If MS's own $28.66 is right and the multiple merely holds at the 19.1x that spot implies, the stock is worth ~$547; at MS's old 20x it is ~$573. **Consensus EPS has ~27% of catch-up to do to reach a number MS has already published**, and DELL has no house model to arbitrate. ⚠️ Note the opposing supply-chain check already on the page: Fubon (08-11) has SPCX/CRWV going **direct to ODMs at VR200**, i.e. a bigger rack pie but possibly a smaller Dell slice of the marginal rack.
-**PENDING:** the consensus PT would settle whether $430 is genuinely below-Street or merely below-spot.
+✅ **RESOLVED 2026-08-18 (was PENDING) — it is genuinely below-Street, and the row gets STRONGER on the PT leg and WEAKER on the EPS leg. Both halves are stated.**
+
+| Mark | 08-18 live | Placement |
+|---|--:|---|
+| **Consensus PT** | **$504.04** | MS's $430 is **−14.7%** below it — **genuinely below-Street, not merely below-spot** |
+| Consensus PT upside on spot $461.33 | **+9.3%** | **the LOWEST of the 12 names pulled** (next lowest CRDO +19.7%) |
+| Rating | 4.32/5 (31) | second-weakest in the run, after INTC |
+| Mizuho $500 | −0.8% vs cons PT | **the consensus target**, not a bullish outlier |
+| MS $430 vs new spot | −6.8% | still below spot, but the gap narrowed from −10.4% as DELL fell 3.9% |
+
+🔴 **The PT leg strengthens: the Street itself will not pay for DELL either.** A +9.3% consensus upside on a 4.32/5 rating, against +19.7% to +68.7% for every other name in the table, says the multiple-compression mechanism this item identifies **is the Street's own view, not just Woodring's** — MS is simply the most explicit about it.
+
+⚠️ **The EPS leg weakens, and this is the correction to the item as written.** DELL is one of only two names whose consensus moved overnight, and it moved **toward** MS:
+
+| | 08-17 | 08-18 |
+|---|--:|--:|
+| Consensus CY2027 EPS | 22.48 | **22.74** (+1.16%) |
+| **Street-high CY2027 EPS** | 28.83 | **29.91** (+3.75%) |
+| MS FY28 EPS $28.66 vs consensus | +27.5% | **+26.0%** |
+| **MS FY28 EPS $28.66 vs street-high** | −0.6% | **−4.2%** |
+
+**So MS is no longer the Street's high mark on DELL — somebody is already 4.2% above $28.66, and the median started closing the gap the same session.** The item's claim that "consensus EPS has ~27% of catch-up to do to reach a number MS has already published" should read **~26%, with the catch-up visibly under way and the ceiling already past MS.** On the fresh numbers spot implies **20.3x** consensus CY27 EPS; MS's $28.66 at that multiple is **~$581** (the item's ~$547 was struck on the 08-17 base).
+⚠️ **Basis caveat retained:** MS's mark is **FY28** and consensus here is **CY2027** — Dell's fiscal year ends late January, so FY28 ≈ CY2027 on the wiki's snap-to-nearest-quarter convention, but the two are not identical periods. **DELL still has no house model to arbitrate.**
+**Verdict: stays DIVERGES**, on the PT leg more firmly than before.
 
 ### ② 🔴 LITE — the first FILED full-year OCS number, and the ramp is **already guided**, not merely relayed. Skepticism moves off the relays and onto the $400m.
 
@@ -97,10 +155,29 @@ DB took 2027E revenue **$97,105m → $115,308m** and 2028E **$148,081m → $198,
 ⚠️ **Do NOT report the EPS gap as a 2.07x divergence.** Consensus has SPCX at **−$0.94** for CY2026 where DB has **+$1.06** — a sign difference, not a magnitude difference, which points to a non-GAAP treatment mismatch rather than a disagreement about the business. **Resolve at the next print before trading it.**
 🔴 **Capex has three live bases and they must not be blended:** DB 2026E **$66,950m** vs the page's mandated sum-of-quarters **~$57.4bn** vs the CY-sum snapshot **$47.4bn** — the standing `estimates.json` CY-sum defect (CY columns embed pre-print consensus for reported quarters) showing up again. **CY2028 has no consensus at all**, so DB's 2028E numbers are unarbitrated.
 - **vs prior wiki:** DB's "1.4 GW exiting 2Q26 → >2 GW by year-end" is the **same ladder as the Q2 print, not independent corroboration**, and DB does **not** underwrite the ~10 GW exit-2027 figure carried elsewhere on the page. DB's PT ($235, +60.7% on spot) was already on the page from 08-10 — **no PT drift this run.**
+✅ **08-18 resolution (was PENDING) — DB is a MID-RANGE bull, not an outlier, and that is a material downgrade of this item's force.**
+
+| DB 2027E mark | DB | Consensus median | Street-high | DB vs median | **DB vs street-high** |
+|---|--:|--:|--:|--:|--:|
+| Revenue | $115,308m | $103,785m | **$157,527m** | +11.1% | **−26.8%** |
+| Capex | $185,034m | $181,353m | — | +2.0% | — |
+
+**DB's revenue mark sits 26.8% BELOW the street-high**, i.e. comfortably inside the existing range — and its **PT of $235 is only +6.3% above the consensus PT of $221.09**, with the Street already carrying **+55.7% upside** on a 4.46/5 rating (39 recs). **So neither DB's number nor DB's target is the aggressive mark on this name; the Street's own high end is far above DB.** The +11.1% median gap is real but should be traded as a *mid-range* view, not a differentiated one.
+🔴 **Unchanged and still the blocking issue:** the **EPS sign conflict** (DB +$1.06 vs consensus −$0.94 for CY2026) is a **non-GAAP basis mismatch**, and no PT pull can resolve it — **resolve at the next print before trading it.** **CY2028 remains absent from the wrapper for every name**, so DB's 2028E revenue ($198,056m) and EPS ($5.62) stay unarbitrated. The three incompatible capex bases stand as flagged; **do not blend them.**
 
 ### ④ 🔴 HPE — an **upgrade with a price-target cut**, and MS is **+11.7% above consensus** on the fiscal year it is valuing.
 
 MS moved HPE **Equal-weight → Overweight while cutting the PT $71 → $69**, because the methodology changed from **17x FY27 EPS of $4.17** to **15x FY27 EPS of $4.58**: the estimate rose ~10%, the multiple compressed ~12%. **MS's $4.58 is +11.7% above the consensus CY2027 EPS of $4.10.** The PT still implies +19.8% on spot. **The edge is the same shape as DELL's — numbers up, multiple down — but here the rating followed the numbers instead of the multiple.** ⚠️ MS now argues the pull-forward is structural, which cuts against the same analyst's own June "ASP, not units" bear line still standing on the page.
+✅ **08-18 resolution (was PENDING) — the upgrade is a CONVERGENCE to consensus, and MS's estimate is at the ceiling, not through it.**
+
+| Mark | Value | Placement |
+|---|--:|---|
+| MS PT | $69 | **+0.7% vs consensus PT $68.50 — i.e. the consensus target** |
+| Consensus PT upside | **+24.2%** on spot $55.17 | the Street was already there |
+| MS FY27 EPS | $4.58 | **+11.7% vs consensus $4.10** |
+| **MS FY27 EPS vs street-high $4.62** | −0.9% | **at the top of the range, not beyond it** |
+
+**The EW→OW upgrade with a PT cut resolves as MS arriving where the Street already stood**, so the "PT falls on an upgrade" oddity is a methodology change (17x→15x) that happens to land on the consensus target — **not a contrarian call.** The **EPS divergence stands at +11.7% above the median**, but with MS **0.9% below the street-high**, the honest reading is *MS has joined the bulls at the ceiling*, not *MS is alone above the Street*. Consensus CY2027 EPS **$4.10 unchanged to the decimal** on the fresh pull. **PT leg → CONFIRMS; EPS leg stays DIVERGES.** ⚠️ HPE has **no house model**, so the +11.7% cannot be arbitrated in-house.
 
 ### ⑤ 🔴 AVGO — Epoch reconciles **to the dollar** with what the page already held, but it adds a **timing and seniority** shape that no estimate carries.
 
@@ -175,6 +252,20 @@ Diagnosed as **SKU ambiguity, not noise**. **Rule recorded: no per-GPU HBM numbe
 - The same house did this to **INTC ($135 → $109 inside the 08-09 AVGO note)**; tonight's $109 reiteration retroactively firms that cut.
 - **SNDK $2,200 (07-11) → $1,900 (08-16)**, Outperform held, in an industry note with **no SNDK model work**, on a ~14% lower price. First house to re-mark post-Investor-Day (retiring one of three "stale" flags). **The new ladder is $2,745 → $2,500 → $2,250 → $2,200 → $2,100 → $1,900 → $1,750, so the page's repeated "nobody between $1,750 and $2,200" no longer holds.**
 **Read:** PT marks embedded in industry notes are being changed without rationale. They are logged as published and flagged as un-rationalised rather than treated as analytical revisions.
+✅ **08-18 resolution (was PENDING) — the pattern is now QUANTIFIED, and it is systematic: every un-rationalised Mizuho mark lands BELOW the Street's own target.**
+
+| Name | Mizuho PT | Consensus PT | Mizuho vs cons PT | Mizuho's OLD PT vs cons PT | Consensus CY27 EPS |
+|---|--:|--:|--:|--:|---|
+| **SNDK** | 1,900 | **2,196.10** | **−13.5%** | $2,200 → **−0.2% (on consensus)** | $238.25 **unchanged** |
+| **MU** | 1,375 | **1,586.42** | **−13.3%** | (reiteration) | $163.61 **unchanged** |
+| **INTC** | 109 | **118.90** | **−8.3%** | $135 → **+13.5% (above)** | $2.02 **unchanged** |
+| **AMD** | 580 | **624.40** | **−7.1%** | $615 → **−1.5% (on consensus)** | $15.30 **unchanged** |
+| CRDO | 290 | 296.31 | −2.1% | (reiteration) | $8.77 **unchanged** |
+| AVGO | 530 | 530.98 | −0.2% | (reiteration) | $21.28 **unchanged** |
+| NVDA | 300 | 303.71 | −1.2% | (reiteration) | $12.95 (+0.15%) |
+
+🔴 **The four names Mizuho actually re-marked are the four furthest below consensus (−7.1% to −13.5%); the three it merely reiterated sit ON consensus (−0.2% to −2.1%).** And in each re-marked case the **OLD** number was at or above the Street: SNDK's $2,200 was the consensus target to within 0.2%, AMD's $615 within 1.5%, INTC's $135 was 13.5% *above* it. **So these were not corrections toward the Street — they moved Mizuho from consensus to a below-consensus stance, unexplained, inside industry notes.** Meanwhile **consensus EPS did not move for any of them** (unchanged to the decimal), so no estimate revision justifies the cuts.
+**Read (updated):** treat these as **house-level de-rating unaccompanied by published model work**, not as analytical revisions. **They remain logged as published and flagged as un-rationalised.** ⚠️ Mizuho is the single source on all four; **no second house has followed**, which is itself the falsifier to watch.
 
 ### ⑫ 🔴 Fabrinet — a relay of the SAME print already on the wiki is measured on a **taxonomy the company retired in that very report**.
 
@@ -246,7 +337,10 @@ DB estimates **Cursor's internal Composer model costs 10–20% of Claude/GPT**, 
 | 12 | **CXL 1H27 expansion / 2H27 pooling** | FUNDA independently corroborates the BNP timeline already on the theme. |
 | 13 | **Scale-across clusters in the low-$20bn band** | Three constructions (Redburn, ANET, CIEN) — reinforces that 650 Group's "$100bn+" is the outlier. ⚠️ Subject to item ⑩'s base caveat. |
 | 14 | **FN's "NPO before CPO"** | Independent supply-chain-side corroboration of the NPO-additivity thesis built from LITE's call and the LightCounting revision — from the layer that physically builds the packages. FN gave **no** revenue or margin ("too early to talk about revenues and margins"). |
-| 15 | **Nothing on the programmatic edge list moved** | House-vs-consensus |Δ|≥15% rows (COHR EPS +65% / rev +31%, NVDA EPS +19% / rev +16%, GOOG rev +18%, AAPL EPS +16%) are untouched by tonight's sources. LITE house-vs-consensus is **+7.4%** on 2027 EPS — below threshold. |
+| 15 | **Nothing on the programmatic edge list moved** | House-vs-consensus \|Δ\|≥15% rows (COHR EPS +65% / rev +31%, NVDA EPS +19% / rev +16%, GOOG rev +18%, AAPL EPS +16%) are untouched by tonight's sources. LITE house-vs-consensus is **+7.4%** on 2027 EPS — below threshold. |
+| 16 | **NVDA consensus PT unchanged to the cent** | ✅ **08-18 live pull: $303.71, identical to the 08-17 pull**, while spot fell 2.4%. Row 1 above holds on fresh data rather than on a one-day-old figure. Rating 4.88/5 on 81 recs — the deepest, highest-conviction sample in the run. |
+| 17 | **Broker PT ≈ consensus PT on four names** | ✅ **08-18 live pull:** AVGO Mizuho $530 vs cons $530.98 (**−0.2%**), HPE MS $69 vs $68.50 (**+0.7%**), LITE Mizuho $1,140 vs $1,130.23 (**+0.9%**), CRDO Mizuho $290 vs $296.31 (**−2.1%**). **The PT legs of items ③/④/⑤ are CONFIRMS** — those findings rest on estimates and disclosure, not on price calls. |
+| 18 | **Consensus estimates did not move overnight** | ✅ **Every CY2027 line cited in this report is unchanged to the decimal except DELL and NVDA** (both up: DELL EPS +1.16%, NVDA EPS +0.15%). So the overnight **−2.6% to −12.5% price moves across all 12 names are a tape event, not an estimate revision** — the widened "upside" figures carry **no** estimate content. |
 
 ---
 
@@ -260,7 +354,11 @@ DB estimates **Cursor's internal Composer model costs 10–20% of Claude/GPT**, 
 
 ## Baselines that could not be run
 
-- **Consensus target price and rating for every name above** — Terminal offline (item 3 in the baseline table). Priority rows: **DELL** and **SPCX**.
-- **CY2028 consensus for any name** — absent from the snapshot, so DB's SPCX 2028E ($198.1bn revenue / $5.62 EPS) and Mizuho's 2028E packaging and unit marks are unarbitrated.
+- ~~**Consensus target price and rating for every name above** — Terminal offline (item 3 in the baseline table). Priority rows: **DELL** and **SPCX**.~~ ✅ **RESOLVED 2026-08-18** — full live re-fetch (98/98, 0 FAIL, 0 null prices, 0 carry-overs) plus an ad-hoc `BEST_TARGET_PRICE` / `BEST_ANALYST_RATING` pull for all 12 names. **See `BBG consensus pull — live 2026-08-18`.** Both priority rows resolved: **DELL** below-Street on the PT (−14.7%) but no longer the street-high on EPS; **SPCX** a mid-range bull (26.8% below the street-high on 2027 revenue).
+- **CY2028 consensus for any name** — absent from the snapshot, so DB's SPCX 2028E ($198.1bn revenue / $5.62 EPS) and Mizuho's 2028E packaging and unit marks are unarbitrated. ⚠️ **STILL OPEN after the 08-18 refresh** — the wrapper carries no CY2028 column for any of the 98 names, so this is a structural limit of `fetch_estimates.py` (periods = 1FQ/2FQ/CY2026/CY2027), not a Terminal-availability issue. **A quarterly probe across the 8F–11F fiscal periods is the only route**, as used for the H1-CY2028 placement in `reconciliation-2026-08-15.md`.
 - **House models for 20 of tonight's marked names** (see baseline table) — DELL and SPCX, the two largest estimate divergences in the run, both lack one.
 - **Private names (ANTHROPIC, OPENAI)** have no BBG or house baseline by construction — reconciled vs prior wiki comments only.
+
+---
+
+_BBG column resolved 2026-08-18 — `estimates.json` asof **2026-08-18** (98/98 live, 0 FAIL, 0 null prices, 0 carry-over `revisions` stamps, **0 records byte-identical to the 08-17 vintage** so no silent carry-overs), plus an ad-hoc live `BEST_TARGET_PRICE` / `BEST_ANALYST_RATING` / `TOT_ANALYST_REC` pull for the 12 names in the PT table. **Resolved: items ① (DELL), ③ (SPCX), ④ (HPE), ⑪ (Mizuho PT moves) and the baseline-table PT/rating column; 3 CONFIRMS rows added (16–18).** **No row moved wholesale between DIVERGES and CONFIRMS** — the PT legs of ③/④/⑤ resolved as CONFIRMS while their estimate legs stand, ①'s PT leg strengthened and its EPS leg was corrected downward (+27.5% → +26.0% vs median, and MS is now 4.2% BELOW the street-high), and ⑪ was strengthened and quantified. Canonical header `## Where the new data DIVERGES` applied (was `## DIVERGES — the alpha`). **Still open: CY2028 consensus (structural wrapper limit) and the SPCX non-GAAP EPS sign conflict (resolve at the print).**_

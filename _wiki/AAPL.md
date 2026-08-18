@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AAPL` (filings + transcripts) · `_equity_calls` · `_briefings\by-ticker\AAPL.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Snapshot — Capstone official model + BBG · asof 2026-08-17 · USD
+### 📊 Snapshot — Capstone official model + BBG · asof 2026-08-18 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -30,6 +30,7 @@ Consumer-hardware franchise (iPhone ~50%+ of revenue) plus a high-margin Service
 | **Key suppliers** | TSMC (leading-edge foundry, ~17% of TSMC sales) · DRAM/NAND memory (SK Hynix/Micron/Samsung) · RF (Qorvo/Skyworks) · Asia assembly (Luxshare/Foxconn) |
 
 ## Current state (latest quarter)
+**NEW 2026-08-18 — "STAY IN HARDWARE" IS A VALID AI STRATEGY, UNTIL AMBIENT AI MOVES THE CENTER AWAY FROM THE PHONE.** Ben Thompson's bull case is that Apple owns customer access, can source whichever model wins, and may eventually push simple inference on-device onto the customer's electricity; physical-device engineering, distribution and the smartphone itself remain hard moats. The bear is architectural: an ambient assistant distributed across home/device/cloud could demote the phone the way mobile demoted the PC, and Apple's deterministic product culture is poorly matched to probabilistic frontier-model iteration. Net: not building a frontier model is sensible; failing to own the post-phone interface is not (Ben Thompson, *Invest Like the Best*, 2026-08-18).
 
 **🆕🔴 2026-08-11 — THE 08-10 VERIFICATION ITEM GOT ANSWERED, AND IT CUTS AGAINST JEFFERIES: Bloomberg's Gurman says the glass-centric 2027 iPhone Pro is ON TRACK, and only the *fully* all-glass variant was scrapped. The Jefferies Sell (logged 08-10) is restated here in full with its quantified ASP cut, because the cut is now contingent on a premise the best-sourced Apple reporter disputes.**
 
@@ -270,6 +271,7 @@ _Note: this was **Tim Cook's last earnings call as CEO** (2026-07-30); John Tern
 _Source: AAPL earnings calls (dates above); management commentary, paraphrased._
 
 ## Sources
+- [Invest Like the Best — Ben Thompson with Patrick O'Shaughnessy, "What Happens When the AI Boom Runs Out of Money" (2026-08-18)](https://www.youtube.com/watch?v=h-0NZ-oIjlk) — page-specific read-through of AI funding duration, monetization, competition and market structure; see the dated thesis block above. [Raw transcript](../_inbox/_done/2026-08-18__Invest_Like_The_Best__Ben_Thompson__What_Happens_When_the_AI_Boom_Runs_Out_of_Money.txt).
 - **Filings:** [AAPL 10-K FY25 (2025-10-31)](../AAPL/AAPL_10-K_2025-10-31_0000320193-25-000079.html) · [10-Q (2026-05-01)](../AAPL/AAPL_10-Q_2026-05-01_0000320193-26-000013.html) · [10-Q (2026-01-30)](../AAPL/AAPL_10-Q_2026-01-30_0000320193-26-000006.html).
 - **Transcripts:** [Q2 FY26 (2026-04-30)](../AAPL/transcripts/AAPL_Q2-FY26-earnings_2026-04-30.md) · [Q1 FY26 (2026-01-29)](../AAPL/transcripts/AAPL_Q1-FY26-earnings_2026-01-29.md).
 - **Equity calls:** 2 used — [Apple IR — margins (2026-05-12)](../_equity_calls/Overall/2026-05-12_Apple_IR-margins.md) · [Woodring (MS) — HDD/Dell/Apple (2026-06-16)](../_equity_calls/Overall/2026-06-16_ErikWoodring_HDD-Dell-Apple.md). Full list (12): [INDEX §AAPL](../INDEX.md).
@@ -314,6 +316,7 @@ _Source: AAPL earnings calls (dates above); management commentary, paraphrased._
   - **Capstone model:** `P:\Felipe Monteiro\US Equities\Modelos oficiais\Modelo Apple Felipe 2Q26 - WIP.xlsm` (house estimates).
 
 ## Changelog
+- **2026-08-18 (/wiki-ingest — Invest Like the Best / Ben Thompson).** Added one dated thesis block plus source/archive links. **Nothing superseded — qualitative source; no rating, PT, guide, consensus, house or canonical theme number changed.**
 
 - **2026-08-17 (wiki-ingest, scheduled — 3 rows). ONE NEW BROKER MARK, NOTHING OVERWRITTEN.** New: **Rothschild & Co Redburn UPGRADE to BUY, PT $400 (from $260, new analyst Timm Schulze-Melander, model rebuilt) — FY27-30 EPS 10-18% above consensus**, on (a) iPhone Ultra foldable at **$2,199 / 14mn units FY27 / +11% blended ASP by Jun-27**, ~$200 BoM uplift, and (b) an open-source "AI gatekeeper" case via an [[NVDA]] Nemotron tie-up; desk flags Taiwan checks at **10m+ Ultra units this year / 25m next vs the note's 4m/14m**. Also: **Lutnick/WSJ — administration formally opposes Apple sourcing CXMT/YMTC memory** while COO Sabih Khan says Apple must "look at all options"; **Nikkei — Japanese refurbished iPhone sales more than doubled after the July price hikes** (first elasticity evidence, logged AGAINST the Redburn ASP thesis); Apple building a China-specific model with Alibaba.
 

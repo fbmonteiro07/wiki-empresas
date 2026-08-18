@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\INTC` (filings + transcripts) · `E:\equity_calls_transcripts` · `E:\Wiki Felipe\_briefings`. Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-17 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-08-18 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -66,6 +66,7 @@ Intel is the rare name that occupies the **middle box and reaches into both neig
 </svg>
 
 ## Current state (latest quarter)
+**NEW / BULL-CATALYST 2026-08-18 — "SCARCITY IS WHAT ULTIMATELY SAVED INTEL."** Ben Thompson's foundry argument is that no rational hyperscaler would pay the insurance cost of qualifying Intel while TSMC was ample and easier to use. Acute leading-edge scarcity changes that arithmetic: foregone AI revenue can exceed the engineering pain of making Intel a real foundry partner, and the customer itself supplies the process/culture learning Intel lacks. Thompson expects a major partner announcement in the near term; this is an analyst expectation, not a disclosed customer win. The risk is unchanged: the thesis only works if that scarcity bridge lasts long enough for yield, packaging, IP and service culture to become competitive (Ben Thompson, *Invest Like the Best*, 2026-08-18).
 
 **🆕🔴🔴 2026-08-16 — THE MOST CONCRETE EXTERNAL ADVANCED-PACKAGING WIN SIGNAL THIS PAGE HAS CARRIED IN MONTHS, AND IT ARRIVES AS A YIELD NUMBER THAT WOULD CLEAR THE CUSTOMER'S OWN STATED BAR: MIZUHO SAYS **EMIB-T YIELDS ARE >97%** WITH "REAL TRACTION," AND PUTS **[[MEDIATEK]]'s TPU AS THE FIRST HIGH-VOLUME EMIB-T CUSTOMER IN 2028E — POTENTIALLY FOR TPUv9**. Mizuho stays Neutral, PT $109 (px $102.50).**
 - 🔴 **AS PRINTED: "EMIB-T is seeing good yields >97% and real traction," with MediaTek potentially using it for TPUv9 and MTK's TPU the FIRST HIGH-VOLUME EMIB-T CUSTOMER IN 2028E** (Mizuho · Vijay Rakesh, "AI Server Call: 2027 VR with HBM and NPO/CPO, Adv. Packaging EMIB-T/CoPoS Ramps", 2026-08-16 — the note flags that MTK is covered by Mizuho's Kevin Wang in HK). **Keep the hedges: "potentially" on TPUv9, and "first high-volume customer" is dated 2028E, not now.**
@@ -236,6 +237,7 @@ Intel is the rare name that occupies the **middle box and reaches into both neig
 <!-- Consensus estimates (BBG) block auto-injected here by the HTML builder -->
 
 ## Changelog
+- **2026-08-18 (/wiki-ingest — Invest Like the Best / Ben Thompson).** Added one dated thesis block plus source/archive links. **Nothing superseded — qualitative source; no rating, PT, guide, consensus, house or canonical theme number changed.**
 
 - **2026-08-17 (/run-inbox, scheduled — 1 source: Mizuho AI-Server Call PRIMARY). 1 Current-state block, 1 intra-quarter row, 1 Sinal-table flag, 1 Síntese update, 1 Sources link. NOTHING SUPERSEDED — the Mizuho Neutral / PT $109 is a REITERATION of the mark this page adopted on 08-09, and no other broker mark, guide, house or BBG estimate moved.**
   🔴 **THE HEADLINE, AND IT IS THE BEST EXTERNAL ADVANCED-PACKAGING SIGNAL THIS PAGE HAS CARRIED IN MONTHS: "EMIB-T is seeing good yields >97% and real traction," with [[MEDIATEK]] potentially using it for TPUv9 and MTK's TPU as the FIRST HIGH-VOLUME EMIB-T CUSTOMER IN 2028E** (Mizuho · Vijay Rakesh, 2026-08-16; MTK covered by Mizuho's Kevin Wang in HK). **Both hedges carried into the body verbatim — "potentially" on TPUv9, and "first high-volume customer" dated 2028E rather than now.**
@@ -526,6 +528,7 @@ _The Q1'26 Signal-vs-management table and full log below are retained for the hi
 _Source: INTC earnings calls (dates above); management commentary, paraphrased._
 
 ## Sources
+- [Invest Like the Best — Ben Thompson with Patrick O'Shaughnessy, "What Happens When the AI Boom Runs Out of Money" (2026-08-18)](https://www.youtube.com/watch?v=h-0NZ-oIjlk) — page-specific read-through of AI funding duration, monetization, competition and market structure; see the dated thesis block above. [Raw transcript](../_inbox/_done/2026-08-18__Invest_Like_The_Best__Ben_Thompson__What_Happens_When_the_AI_Boom_Runs_Out_of_Money.txt).
 - 🆕 **[Ingest run — 2026-08-17 · PRIMARY NOTE]** [Mizuho · Vijay Rakesh (w/ Dale Gai, Kevin Wang) — "AI Server Call: 2027 VR with HBM and NPO/CPO, Adv. Packaging EMIB-T/CoPoS Ramps" (2026-08-16)](../relat%C3%B3rios%20bons/AI_Server_Call__2027_VR_with_HBM_and_NPO_CPO_Adv_Packaging.html) — **Neutral, PT $109 REITERATED (px $102.50).** 🔴 **"EMIB-T is seeing good yields >97% and real traction," with [[MEDIATEK]] potentially using it for TPUv9 and MTK's TPU the FIRST HIGH-VOLUME EMIB-T CUSTOMER IN 2028E**; **2028E CoPoS/EMIB-T unlocks 8–12x reticle (or a 5–10x increase in ASIC outs) vs CoWoS-L 5.5x today**; volume CoPoS ramp 2028E. ⚠️ **THE >97% HAS NO STATED MEASUREMENT LEVEL — do not compare it with Fubon's 95%+ Google gate, nor with the ~50–60% substrate / ~90–92% package cluster from DIGITIMES, JPM and UBS, without that basis.**
 - **Filings:** [10-K FY25 (2026-01-23)](../INTC/INTC_10-K_2026-01-23_0000050863-26-000011.html); [10-Q Q1 FY26 (2026-04-24)](../INTC/INTC_10-Q_2026-04-24_0000050863-26-000079.html).
 - **Transcripts:** [Q1 FY26 (2026-04-23)](../INTC/transcripts/INTC_Q1-2026-earnings_2026-04-23.md); [Q4 FY25 (2026-01-22)](../INTC/transcripts/INTC_Q4-2025-earnings_2026-01-22.md); [Q3 FY25 (2025-10-23)](../INTC/transcripts/INTC_Q3-2025-earnings_2025-10-23.md); [Q2 FY25 (2025-07-24)](../INTC/transcripts/INTC_Q2-2025-earnings_2025-07-24.md).

@@ -3,17 +3,17 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\NVDA` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\NVDA.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Snapshot — Capstone official model + BBG · asof 2026-08-17 · USD
+### 📊 Snapshot — Capstone official model + BBG · asof 2026-08-18 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | **$407.0bn** | **$661.0bn** |
 | Gross profit | $305.2bn | $489.1bn |
 | Gross margin | **75.0%** | **74.0%** |
-| EBITDA | $266.6bn | $389.6bn |
+| EBITDA | $267.0bn | $392.3bn |
 | EPS | **$9.26** | **$15.44** |
 | Capex | $7.4bn | $9.4bn |
-| OCF (≈EBITDA) | $266.6bn | $389.6bn |
+| OCF (≈EBITDA) | $267.0bn | $392.3bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 _**Bold** = Capstone official model; plain = BBG consensus._
@@ -30,6 +30,7 @@ The accelerated-computing platform that sits at the center of the AI buildout �
 | **Key suppliers** | TSMC foundry (N3/N2) + CoWoS advanced packaging; HBM from SK Hynix/Samsung/Micron; substrates/optical (COHR/LITE) |
 
 ## Current state (latest quarter)
+**NEW / BEAR 2026-08-18 — THE ECONOMIC PRICE CUT IS IN THE FINANCING, NOT THE ASP.** Ben Thompson argues that NVDA's still-pristine reported chip margins omit the expected value of equity stakes, residual-value support, purchase guarantees and other risk assumed so customers can finance more GPUs: holistically, that risk transfer is an economic discount even when gross margin does not show it. The long-run bear is [[GOOG]]/[[AMZN]] externalizing TPU/Trainium with a lower cost of capital; the remaining moat is fungibility plus best tokens/watt. A true power shortage therefore helps NVDA, while unexpectedly abundant US power gives custom silicon more time to close the efficiency gap (Ben Thompson, *Invest Like the Best*, 2026-08-18).
 
 **🆕🔴 2026-08-16 (PRIMARY NOTE) — THE MIZUHO AI-SERVER CALL AS PUBLISHED, AND IT CORRECTS THE RELAY THIS PAGE LOGGED ON 08-17: THE >50K RUBIN-RACK NUMBER FINALLY GETS ITS YEAR (2027E) AND A 2026E BASE (2.5–3K), AND THE VR-ULTRA HBM LINE COMES OUT THE **OPPOSITE** WAY — PER-GPU CONTENT STEPS **DOWN**, NOT UP. Mizuho stays Outperform, PT $300 (px $225.16); NVDA "maintaining its leadership position as the merchant GPU king."**
 - **The rack ladder, with the years attached:** **VR200 NVL72 production "on track" for a SepQ launch and a DecQ volume ramp, potentially 2.5–3K NVL72 racks in 2026E, driven by [[META]] and xAI (see [[SPCX]])**; **2027E growing to >50K VR racks and >20K GB**, with **NVDA explicitly "limited by CoWoS and DC power"** (Mizuho · Vijay Rakesh, "AI Server Call: 2027 VR with HBM and NPO/CPO, Adv. Packaging EMIB-T/CoPoS Ramps", 2026-08-16). ➤ **The 2.5–3K 2026E figure is net-new and is the missing base the >50K number needed — the page has carried ">50K" since 08-17 with no year and no starting point.** The constraint sentence is the more useful half: Mizuho is saying 2027E units are supply-set, not demand-set.
@@ -579,6 +580,7 @@ _Source: NVDA earnings calls (dates above); management commentary, paraphrased._
 - **2026-06-22 — Jefferies Asia Morning TMT (Conor O'Mara / Sherman / Jacky):** Kyber rack delay flagged — orthogonal-backplane-PCB design slips from Rubin Ultra 2027 to **≥2028** (2-canister simplified design still challenged); **Rubin Ultra 2027 stays on Oberon/NVL72**. AI PCB/CCL TAM impact ~5%/8% (2027), ~11%/16% downside (2028) if it slips further or is canceled; copper-cable vendors benefit. (See Catalysts.)
 
 ## Sources
+- [Invest Like the Best — Ben Thompson with Patrick O'Shaughnessy, "What Happens When the AI Boom Runs Out of Money" (2026-08-18)](https://www.youtube.com/watch?v=h-0NZ-oIjlk) — page-specific read-through of AI funding duration, monetization, competition and market structure; see the dated thesis block above. [Raw transcript](../_inbox/_done/2026-08-18__Invest_Like_The_Best__Ben_Thompson__What_Happens_When_the_AI_Boom_Runs_Out_of_Money.txt).
 - 🆕 **[Ingest run — 2026-08-17 · PRIMARY NOTE (supersedes the 08-17 TMTB relay in detail)]** [Mizuho · Vijay Rakesh (w/ Dale Gai, Kevin Wang) — "AI Server Call: 2027 VR with HBM and NPO/CPO, Adv. Packaging EMIB-T/CoPoS Ramps" (2026-08-16)](../relat%C3%B3rios%20bons/AI_Server_Call__2027_VR_with_HBM_and_NPO_CPO_Adv_Packaging.html) — **Outperform, PT $300 reiterated (px $225.16).** VR200 NVL72 SepQ launch / DecQ volume ramp, **2.5–3K racks 2026E** ([[META]] + xAI) → **>50K VR racks + >20K GB 2027E, limited by CoWoS and DC power**; **VR-Ultra 2028E possibly 2-die (from 4-die), Kyber/Feynman delayed on midplane**; **HBM/GPU flat 288GB → VR-Ultra 256GB HBM4e (pricing +70–100%) → Feynman 768GB HBM4e/16Hi**, +3.5x density **rack-level** on NVL576; **CPO/Spectrum-X ~80–100K 2027E → 130K+ 2028E**; **CoWoS +>75% y/y 2027E**.
 - 🆕 **[Ingest run — 2026-08-17 · COMPANY PRIMARY, read-through only — subject company is Fabrinet, which has no wiki page]** [Fabrinet — Q4 FY26 earnings call, Bloomberg **INITIAL DRAFT** transcript (call 2026-08-17)](../relat%C3%B3rios%20bons/bfm807C.html) — **NVIDIA 16% of FN's FY26 revenue and FN's NVIDIA line DOWN 20%+ for FN's fiscal year** (ended 2026-06-26) against mid-30s total growth; CEO on 1.6T timing: *"This is a call you have to talk to NVIDIA about."* ⚠️ **FN-specific revenue line, FN's fiscal year — not an NVDA revenue read.** ⚠️ Draft transcript: some names render garbled.
 - 🆕 **[Ingest run — 2026-08-17 · independent substack, read-through]** [FUNDA — "Research\|Takeaways from the Future of Memory and Storage Conference 2026" (2026-08-11)](../relat%C3%B3rios%20bons/fundamemory.html) — the hierarchy labelled by **NVDA's G1–G4 tiers (CMX at G3.5)**; **NVDA absent from every HBF panel** (implying a high-IOPS-SSD architecture) while HBF confirmed **[[GOOG]]** interest; **"specification downgrades by Nvidia and others are aimed squarely at maximizing GPU shipments within a limited memory supply."**
@@ -658,6 +660,7 @@ _Source: NVDA earnings calls (dates above); management commentary, paraphrased._
 - **Briefings:** [roll-up](../_briefings/by-ticker/NVDA.md) — 76 datapoints / 38 days.
 
 ## Changelog
+- **2026-08-18 (/wiki-ingest — Invest Like the Best / Ben Thompson).** Added one dated thesis block plus source/archive links. **Nothing superseded — qualitative source; no rating, PT, guide, consensus, house or canonical theme number changed.**
 
 - **2026-08-17 (/run-inbox, scheduled — 4 sources: Mizuho AI-Server Call PRIMARY, Fabrinet Q4 FY26 call, FUNDA FMS, Hugging Face). 2 Current-state blocks, 1 NEW Sinal row + 1 Sinal row extended, 4 intra-quarter rows, 4 Sources links, synthesis updated. NO RATING, PT, GUIDE, HOUSE OR BBG ESTIMATE SUPERSEDED — but ONE PRIOR PAGE STATEMENT IS CORRECTED.**
   🔴 **THESIS-DRIFT / RELAY CORRECTION (the material one): the page's 08-17 full-log row — sourced "Mizuho via TMT Breakout" — said HBM content is "roughly FLAT from GB300 to VR200 **before stepping up materially with VR-Ultra**." The PRIMARY note (2026-08-16) says the opposite on the per-GPU axis: 288GB HBM4 flat GB300/BW300→VR200, then VR-Ultra **DOWN to 256GB HBM4e** (pricing +70–100%), with Feynman the density step at 768GB HBM4e/16Hi. The "+3.5x" the relay was compressing is a RACK-level figure for NVL576 (Oberon x4, Taycan) vs NVL72.** Per the relays-lose-to-primaries rule the relay row is **RETAINED for the record** (it is a real, dated observation of what the desk circulated) and the correction is carried in the new **"Memory content per GPU"** Sinal row plus the 08-16 full-log row. **Prior page value moved to the record: "HBM content roughly flat from GB300 to VR200 before stepping up materially with VR-Ultra" (Mizuho via TMTB, 2026-08-17).**

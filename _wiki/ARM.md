@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-19 · **20-F filer (UK foreign private issuer)** — files annual 20-F, no 10-K/10-Q · sources: `E:\Wiki Felipe\ARM` (20-Fs FY24–FY26 + transcripts + equity calls) · `_briefings\2026` roll-up · theme [custom-asic-tpu](themes/custom-asic-tpu.md). Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-17 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-08-18 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|

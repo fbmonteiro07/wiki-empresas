@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AMZN` (filings + transcripts) · `_equity_calls` · `_briefings\by-ticker\AMZN.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-17 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-08-18 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -29,6 +29,7 @@ Three reportable segments: **North America** (Q1'26 $104.1B rev, +12%, 7.9% OI m
 | **Key suppliers** | TSMC (N3P foundry for Trainium), HBM3E from SK Hynix/Micron, Alchip (Trn3/Trn4 ASIC backend), Nvidia (GB200/GB300), own datacenters |
 
 ## Current state (latest quarter)
+**NEW 2026-08-18 — "THE ANSWER IS ALWAYS AMAZON": SELF-AS-FIRST-CUSTOMER IS THE MOAT.** Ben Thompson's mechanism is not spare capacity; it is that Amazon's own scale lets it incubate services and hardware, hide weak early Graviton/Trainium generations beneath managed services, iterate them with captive volume, then sell the mature product externally. Retail/logistics are difficult for model-layer AI to attack and supply a recurring test bed for call-center, agent and infrastructure products. Together with [[GOOG]], Amazon is the most credible long-run [[NVDA]] challenger because Trainium can be sold as commodity silicon from the industry's lowest-cost capital base (Ben Thompson, *Invest Like the Best*, 2026-08-18).
 
 **🆕🔴 2026-08-14 — THE EC2 PRICE-HIKE HYPOTHESIS NOW HAS CUSTOMER-SIDE CONFIRMATION, AND IT ARRIVES WITH THE CONTRACT MECHANICS THAT DETERMINE HOW FAST IT REACHES REVENUE.** (Capstone-hosted expert call · **Daniel Abraahão**, cloud specialist / ex-Banco Inter practitioner, 2026-08-14 — call in Portuguese; summary is Capstone's own. ⚠️ **A single practitioner with buyer-side visibility into one large Brazilian bank's AWS estate. NOT an AWS disclosure, NOT sell-side, and the revenue-split percentages below are explicitly his estimates.**)
 - 🔴 **THE VALUE IS THAT IT CORROBORATES AN EXISTING SELL-SIDE HYPOTHESIS FROM THE OTHER SIDE OF THE TABLE, AND MATCHES ITS KEY INPUT EXACTLY.** GS modelled *"a potential **20% EC2 price hike in 2H26 = ~$2-4B net rev tailwind (EC2 ~50%+ of AWS)"*** back on 2026-07-07 (Sheridan preview, already on this page). The expert, unprompted and from the buyer's chair, independently puts **EC2 at ~50% of AWS core revenue** and says AWS is **considering and applying price increases on EC2 and on GPUs**, driven by **hardware supply-chain scarcity** — behaviour he frames as running *"against the culture"* of a company whose entire pricing history is cuts. ➜ **Two independent sources, one an analyst model and one a customer, agree on both the ~50% EC2 weighting and the direction of price. That is the strongest form this datapoint has taken on the page.**
@@ -250,6 +251,7 @@ _Source: AMZN earnings calls (dates above); management commentary, paraphrased._
 - **2026-06-23 — JPM (Doug Anmuth / Bryan Smilek), "Amazon.com: Prime Deep Dive Suggests 10x Value Potential":** OW, Dec-26 PT $330 (~32x 2027E GAAP EPS $10.38), AMZN a Best Idea / Analyst Focus List. Unbundled Prime worth ~$1,440/yr vs $139 US cost (~10x); 370M+ global subs ending 2026 (~139M US / ~231M Int'l); ~$7B–$8B Prime Day revenue shift into 2Q26; $20 US price hike ≈ ~$3B annualized net sales, now seen slipping to 2027. Folded into Debate/thesis and Current state above.
 
 ## Sources
+- [Invest Like the Best — Ben Thompson with Patrick O'Shaughnessy, "What Happens When the AI Boom Runs Out of Money" (2026-08-18)](https://www.youtube.com/watch?v=h-0NZ-oIjlk) — page-specific read-through of AI funding duration, monetization, competition and market structure; see the dated thesis block above. [Raw transcript](../_inbox/_done/2026-08-18__Invest_Like_The_Best__Ben_Thompson__What_Happens_When_the_AI_Boom_Runs_Out_of_Money.txt).
 - **[Ingest run — 2026-08-10 PM · PRIMARY, backfill]** [Morgan Stanley — "Bringing More Light to Scale-Up Networks: An Updated Scale-Up Primer" (Meta Marshall / Joseph Moore / Ella Tulchinsky / Antonio Jaramillo, 2026-07-13, 39pp)](../relat%C3%B3rios%20bons/20260713_Morgan_Stanley_COHR_Technology-_Bringing_More_Light_to_Scale_Up_Networks-_An_1.html) — the PRIMARY behind the 07-17 entry that had been taken from the MS Tech Talk podcast companion. Carries the per-XPU-vendor optical adoption calendar, Exhibit 10 accelerator unit share (AMD 3% / Other AVGO ASIC 2% / AWS Trainium 11% / NVIDIA GPU 48% / Google TPU 24% / Other 13% — the figure that corrected the wiki's 13% Google TPU mark), the LITE/COHR/GLW model-change and FY28 EPS-sensitivity grids, and the KEYS upgrade to OW with PT $350 → $400.
 - **Filings:** [AMZN 10-K FY25 (filed 2026-02-06)](../AMZN/AMZN_10-K_2026-02-06_0001018724-26-000004.html); [10-Q Q1'26 (2026-04-30)](../AMZN/AMZN_10-Q_2026-04-30_0001018724-26-000014.html).
 - **Transcripts:** [Q1 FY26 (2026-04-29)](../AMZN/transcripts/AMZN_Q1-2026-earnings_2026-04-29.md); [Q4 FY25 (2026-02-05)](../AMZN/transcripts/AMZN_Q4-2025-earnings_2026-02-05.md).
@@ -308,6 +310,7 @@ _Source: AMZN earnings calls (dates above); management commentary, paraphrased._
   - [Morgan Stanley · Brian Nowak — "How Much Revenue per GW Could Be Generated with the Capacity Ahead?" (2026-05-27, HIST)](../relat%C3%B3rios%20bons/INTERNET_20260527_2032.html) — AWS/GCP '27 growth **36%/86% "achievable, potentially conservative"**; bottom-up ~14/20 GW incremental hyperscaler capacity '26/'27 (~6/8 GW to public cloud); **AMZN +3.5/~5 GW '26/'27** (GCP +3/3.5 GW); **~$14bn/$11bn incremental revenue per incremental GW '27 (AWS/GCP)** — the capacity-to-revenue bridge behind the AWS-reaccel case.
 
 ## Changelog
+- **2026-08-18 (/wiki-ingest — Invest Like the Best / Ben Thompson).** Added one dated thesis block plus source/archive links. **Nothing superseded — qualitative source; no rating, PT, guide, consensus, house or canonical theme number changed.**
 
 - **2026-08-17 (wiki-ingest, scheduled — 2 rows). NOTHING SUPERSEDED.** New: **first Trainium 4 optical-engine forecast — 5mn OE units 2H27E, 12mn 2028E, primarily 6.4T, with 2 of 3 configurations expected to adopt NPO** (⚠️ OE units = optical engines, NOT accelerators); JPM raised **Alchip F27/F28 EPS +3%/+16%** on a stronger Trainium 3/4 ramp; 22V on permitted Texas land, read against the **ERCOT audit of >474 GW of queued load (~90% data-center)** and the 2026-08-20 ERCOT checkpoint.
 

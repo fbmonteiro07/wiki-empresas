@@ -1,5 +1,17 @@
 # COHR model v3 — supply-side TAM reconstruction (research notes)
 
+> ⚠️ **AUDIT 2026-08-18 — PARTIAL / headline FAILED. Read before reusing anything here.**
+> Three claims in this file did not survive verification and are corrected inline below:
+> **(1)** the house model is NOT on the MS deck (see the retraction in §1);
+> **(2)** Routes 1 and 2 are NOT independent — both are LightCounting, relayed via FUNDA, which
+> `_wiki/themes/optical-cpo.md:604` explicitly forbids counting as corroboration; the primary is
+> **JPM · Joseph Cardoso, 2026-08-06**, which was in the inbox and unread;
+> **(3)** the 23.4% Innolight divisor is **uncited** and is contradicted by marks already on
+> `_wiki/COHR.md` — Damnang 27% (line 242) and Papa Sylla 35–40% (line 100). At 27% the Route-1
+> anchor FAILS its own guardrail.
+> Also: the CY26–29 TAM interior is a hand-raised plug, +51% above the geometric path implied by
+> the same source's published endpoints, worth **−17.5% on CY27**.
+
 _Built 2026-08-17 for the v3 rebuild Felipe asked for. Purpose: replace the single-broker TAM
 denominator (which the 2026-08-17 audit showed was carrying the entire share thesis) with a
 TAM triangulated from the module makers' OWN reported revenue._
@@ -11,8 +23,14 @@ TAM triangulated from the module makers' OWN reported revenue._
 The v2 model used the **GS optical-module deck (2026-08-10)** as its denominator. The audit found:
 - the GS note is **not on disk**, has **no named analyst**, and was ingested from a pasted exhibit;
 - **MS/Andy Meng (2026-05-15)** has 800G+1.6T units **1.22x / 1.55x / 1.54x** above GS for CY26-28;
-- the **house model** (`Modelos oficiais\Modelo COHR.xlsx`, `Unit x ASP` tab) is on the **MS deck**
-  (its 800G+1.6T units are 73 / 142 / 151 vs MS 73 / 141 / 150 — essentially exact);
+- ~~the **house model** is on the **MS deck** (units 73/142/151 vs MS 73/141/150)~~ — **RETRACTED 2026-08-18
+  after audit.** The house `Unit x ASP` tab states its own source in row 2: *"Primary source: Jefferies Optical
+  Model (client file, Feb-2026). Industry units and ASPs from JEF 'Total Ethernet Market' tab"*, and row 1 is
+  headed *"Jefferies-calibrated, Apr-2026"*. The units are **Jefferies', not MS's** — the match with MS is
+  coincidence or convergence, not sourcing. The tab is also **orphaned (0 formula references)**; the house
+  Summary reads `Rev!EL/EM` directly, so the house CY27 $16.6bn is a **stale raw-Jefferies Feb-2026 vintage**
+  (Cover spot price $102.50). Jefferies has since cut its own CY27 to $12,251.9m (2026-08-13). That vintage
+  gap — not a TAM-deck disagreement — is the real explanation of the house-vs-Street gap;
 - so the wiki and the house model sit on **different denominators**, and every share number in the
   v2 write-up is deck-dependent.
 
