@@ -1,15 +1,11 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-08-17 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-08-18 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (18)
+## 📅 Upcoming (15)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-08-17 | CEREBRAS | **🆕 "Supernova" event — week of 2026-08-17: CS-4 unveiling.** CS-5 targeted for **2H 2027** (MS · Moore, 2026-08-13). Prior page framing had CS-4 ramping early 2027 and CS-5 in 2028 — the roadmap lang |
-| 2026-08-17 | LITE | **2026-08-17 — FY26 10-K filed** (Q4 Inc./SEC alert, 2026-08-17). Not yet read into this page; pull for the segment/customer-concentration disclosure and any LTA language behind the "sold out" pump-la |
-| 2026-08-17 | NBIS | **🆕🔴 VINELAND, NJ EXPANSION HEARING RESUMES — 2026-08-17.** Local opposition to the *expansion* (phase 1 already approved); the revised design is **primarily powered by [[BE]] fuel cells** (announced  |
-| 2026-08-17 | RDDT | ~~Potential S&P 500 inclusion candidate (Barron's flagged, 2026-06-09).~~ — **✅ RESOLVED 2026-08-13/14: RDDT ADDED TO THE S&P 500, replacing AVB (acquired by EQR), effective at the close of 2026-08-17 |
 | 2026-08-19 | ADI | **🔴 FQ3 FY26 print — 2026-08-19 (Wed, BMO):** delivery vs the ~$3.9bn / $3.30 guide; whether the above-seasonal streak extends. **The scoreable item is the FQ4 GROSS-MARGIN guide, which is where Jeffe |
 | 2026-08-19 | CDNS | **🆕 2026-08-19 (Wed, NYC) — CDNS CEO ANIRUDH DEVGAN small-group meeting, BofA-hosted (Vivek Arya), in person, allocated** (BofA · Brian Fenske, 2026-08-14). **The two questions IR left open at the JPM |
 | 2026-08-20 | ADI | **Post-print access, both 2026-08-20 (Thu):** **BofA fireside with ADI Head of IR Jeff Ambrosi, hosted by Vivek Arya, 11:00 ET (~45 min)** (BofA TMT Sales · Brian Fenske, 2026-08-14) · **UBS "ADI Earn |
@@ -20,18 +16,24 @@ _Generated 2026-08-17 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-09-11 | TER | **Q3 CY26 print (~late Oct 2026)** — first test of the re-cut 2H, and of whether the merchant-GPU/second-hyperscaler correlation converts into guided revenue. Quiet period begins **2026-09-11**; manag |
 | 2026-09-14 | NVDA | **🆕 Post-print access, both dated:** **BofA fireside with Toshiya Hari, VP of IR & Strategic Finance, hosted by Vivek Arya — 2026-09-02, 11:00 ET (~1hr)** (BofA TMT Sales, 2026-08-14) · **UBS-arranged |
 | 2026-09-16 | ON | **2026-09-16 — onsemi Analyst Day** (Citi exp. ~Sep 13 print first) — the key event; watch for a raised long-term target model + SiC/800V framing (Citi, briefing 2026-06-15). |
+| 2026-09-21 | COHR | **🆕 2026-09-21 — PHOTONLINK LAUNCH: establish the PLATFORM, LANE RATE AND MODULATION FORMAT, not just the positioning.** The FQ1 FY27 synthesis lists PhotonLink as a genuinely net-new BULL item (platf |
 | 2026-09-22 | ADI | **2026-08-19 (7am ET, call 10am) — F3Q26 print.** Bogeys on the page from the JPM buy-side survey (guide/consensus: rev $3.9bn/$3.92bn, OPM 49%/49.2%, EPS $3.30/$3.34; F4Q guides $4.08bn / 49.9% / $3. |
 | 2026-09-22 | CRDO | **2026-09-22 — ECOC, JPM-hosted meeting with CEO Bill Brennan** (alongside [[CIEN]], [[LITE]] and Nokia; JPM · Cardoso / Deshpande, 2026-08-17). **JPM is also running an off-cycle hardware-reporter bu |
 | 2026-09-22 | LITE | **2026-09-22 — ECOC (JPM-hosted meetings).** CEO **Michael Hurlston** meeting alongside [[CRDO]] (CEO Bill Brennan), [[CIEN]] and Nokia (JPM · Joe Cardoso / Sandeep Deshpande, 2026-08-17). The natural |
 | 2026-09-23 | GOOG | **🆕 Koray Kavukcuoglu's first public outing — The Information's AI Agenda Live, San Francisco, 2026-09-23.** Billed topics include integrating frontier models across Search and the multi-billion-user  |
 
-## ⏰ Passed — need a post-mortem (0)
+## ⏰ Passed — need a post-mortem (6)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| _none_ | | |
+| 2026-08-17 | RDDT | ~~Potential S&P 500 inclusion candidate (Barron's flagged, 2026-06-09).~~ — **✅ RESOLVED 2026-08-13/14: RDDT ADDED TO THE S&P 500, replacing AVB (acquired by EQR), effective at the close of 2026-08-17 |
+| 2026-08-17 | NBIS | **🆕🔴 VINELAND, NJ EXPANSION HEARING RESUMES — 2026-08-17.** Local opposition to the *expansion* (phase 1 already approved); the revised design is **primarily powered by [[BE]] fuel cells** (announced  |
+| 2026-08-17 | LITE | ✅ **RESOLVED 2026-08-17 (run-inbox) — the 10-K is now on disk and read into `## Current state`, `## Risks` and `## Sources`.** The two disclosures this catalyst was opened for both landed: **customer  |
+| 2026-08-17 | LITE | **2026-08-17 — FY26 10-K filed** (Q4 Inc./SEC alert, 2026-08-17). Not yet read into this page; pull for the segment/customer-concentration disclosure and any LTA language behind the "sold out" pump-la |
+| 2026-08-17 | CEREBRAS | **🆕 "Supernova" event — week of 2026-08-17: CS-4 unveiling.** CS-5 targeted for **2H 2027** (MS · Moore, 2026-08-13). Prior page framing had CS-4 ramping early 2027 and CS-5 in 2028 — the roadmap lang |
+| 2026-06-26 | COHR | **🆕 FIRST AXT 6-INCH InP VOLUME — watch it as a COHR variable, not only an [[AXTI]] one.** The exculpatory version of the yield bear is that **6-inch InP wafer UNIFORMITY at the substrate supplier (Su |
 
 ## ✅ Resolved (65)
 
