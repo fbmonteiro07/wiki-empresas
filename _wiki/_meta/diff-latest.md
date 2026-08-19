@@ -5,6 +5,7 @@ _Generated 2026-08-18 (since 2026-08-11) · rolls up every page's `## Changelog`
 | Date | Ticker | Change |
 |---|---|---|
 | 2026-08-18 | ⭐ TSM | (/wiki-ingest — Invest Like the Best / Ben Thompson).** Added one dated thesis block plus source/archive links. **Nothing superseded — qualitative source; no rating, PT, guide, consensus, house or canonical theme number changed.** |
+| 2026-08-18 | SAMSUNG | (/run-inbox, scheduled night run — 3 sources: UBS Key Call 08-07, the KB Securities primary behind the 08-11 relay, and Bernstein LTA Part 3 of 07-20). 2 Current-state blocks, 3 Full-log rows, 3 Sources.** |
 | 2026-08-18 | ⭐ OPENAI | (/wiki-ingest — Invest Like the Best / Ben Thompson).** Added one dated thesis block plus source/archive links. **Nothing superseded — qualitative source; no rating, PT, guide, consensus, house or canonical theme number changed.** |
 | 2026-08-18 | ⭐ NVDA | (/wiki-ingest — Invest Like the Best / Ben Thompson).** Added one dated thesis block plus source/archive links. **Nothing superseded — qualitative source; no rating, PT, guide, consensus, house or canonical theme number changed.** |
 | 2026-08-18 | ⭐ META | (/wiki-ingest — Invest Like the Best / Ben Thompson).** Added one dated thesis block plus source/archive links. **Nothing superseded — qualitative source; no rating, PT, guide, consensus, house or canonical theme number changed.** |
