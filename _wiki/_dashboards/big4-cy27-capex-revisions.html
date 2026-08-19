@@ -1,0 +1,339 @@
+<title>Big-4 CY27 Capex Revisions</title>
+<style>
+  :root {
+    color-scheme: light;
+    --page:        #f9f9f7;
+    --surface-1:   #fcfcfb;
+    --ink:         #0b0b0b;
+    --ink-2:       #52514e;
+    --muted:       #898781;
+    --grid:        #e1e0d9;
+    --axis:        #c3c2b7;
+    --border:      rgba(11,11,11,0.10);
+    --series-1:    #2a78d6;
+    --band:        rgba(225,224,217,0.42);
+    --tip-bg:      #fcfcfb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --page:      #0d0d0d;
+      --surface-1: #1a1a19;
+      --ink:       #ffffff;
+      --ink-2:     #c3c2b7;
+      --muted:     #898781;
+      --grid:      #2c2c2a;
+      --axis:      #383835;
+      --border:    rgba(255,255,255,0.10);
+      --series-1:  #3987e5;
+      --band:      rgba(44,44,42,0.55);
+      --tip-bg:    #1a1a19;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --page:      #0d0d0d;
+    --surface-1: #1a1a19;
+    --ink:       #ffffff;
+    --ink-2:     #c3c2b7;
+    --muted:     #898781;
+    --grid:      #2c2c2a;
+    --axis:      #383835;
+    --border:    rgba(255,255,255,0.10);
+    --series-1:  #3987e5;
+    --band:      rgba(44,44,42,0.55);
+    --tip-bg:    #1a1a19;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--page);
+    color: var(--ink);
+    font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 36px 20px 48px; }
+
+  header h1 { font-size: 21px; font-weight: 650; margin: 0 0 4px; letter-spacing: -0.01em; text-wrap: balance; }
+  header .sub { color: var(--ink-2); font-size: 13px; margin: 0; }
+  header .sub b { color: var(--ink); font-weight: 600; }
+
+  .tiles { display: flex; flex-wrap: wrap; gap: 12px; margin: 22px 0 18px; }
+  .tile {
+    background: var(--surface-1); border: 1px solid var(--border); border-radius: 8px;
+    padding: 12px 16px 11px; min-width: 168px; flex: 0 1 auto;
+  }
+  .tile .lbl { font-size: 11px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
+  .tile .val { font-size: 27px; font-weight: 650; margin-top: 2px; }
+  .tile .val small { font-size: 14px; font-weight: 500; color: var(--ink-2); }
+  .tile .note { font-size: 11.5px; color: var(--muted); margin-top: 1px; }
+
+  .card {
+    background: var(--surface-1); border: 1px solid var(--border); border-radius: 8px;
+    padding: 18px 18px 12px; margin-bottom: 18px;
+  }
+  .card h2 { font-size: 13.5px; font-weight: 650; margin: 0 0 2px; }
+  .card .cap { font-size: 12px; color: var(--ink-2); margin: 0 0 10px; }
+
+  .chart-wrap { position: relative; }
+  .chart-wrap:focus { outline: 2px solid var(--series-1); outline-offset: 2px; border-radius: 4px; }
+  svg { display: block; width: 100%; height: auto; }
+  svg text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .ticktxt { font-size: 11px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+  .bandtxt { font-size: 11px; fill: var(--ink-2); }
+  .endlbl  { font-size: 12.5px; font-weight: 650; fill: var(--ink); font-variant-numeric: tabular-nums; }
+
+  #tip {
+    position: absolute; display: none; pointer-events: none; z-index: 5;
+    background: var(--tip-bg); border: 1px solid var(--border); border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+    padding: 8px 11px; font-size: 12px; min-width: 172px;
+  }
+  #tip .d { color: var(--muted); font-size: 11px; }
+  #tip .sum { font-size: 15px; font-weight: 650; font-variant-numeric: tabular-nums; margin: 1px 0 5px; }
+  #tip .row { display: flex; justify-content: space-between; gap: 14px; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+  #tip .row b { color: var(--ink); font-weight: 600; }
+  #tip .delta { margin-top: 5px; padding-top: 5px; border-top: 1px solid var(--grid); color: var(--ink-2); font-variant-numeric: tabular-nums; }
+
+  .bars { display: grid; grid-template-columns: max-content 1fr max-content; gap: 7px 12px; align-items: center; margin-top: 6px; }
+  .bars .nm { font-weight: 600; font-size: 13px; line-height: 1.2; }
+  .bars .nm .rng { display: block; font-weight: 400; font-size: 10.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .bars .track { height: 20px; position: relative; }
+  .bars .bar { position: absolute; inset: 0 auto 0 0; background: var(--series-1); border-radius: 0 4px 4px 0; }
+  .bars .v { font-size: 12.5px; font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+  .bars .v small { color: var(--ink-2); }
+
+  details { margin-bottom: 18px; }
+  summary { cursor: pointer; font-size: 12.5px; color: var(--ink-2); }
+  summary:focus-visible { outline: 2px solid var(--series-1); outline-offset: 2px; }
+  .tbl { overflow-x: auto; margin-top: 10px; }
+  table { border-collapse: collapse; font-size: 12px; font-variant-numeric: tabular-nums; min-width: 520px; }
+  th, td { text-align: right; padding: 3px 12px 3px 0; border-bottom: 1px solid var(--grid); }
+  th:first-child, td:first-child { text-align: left; }
+  th { color: var(--muted); font-weight: 600; }
+  td.s { font-weight: 650; }
+
+  .notes { font-size: 11.5px; color: var(--ink-2); line-height: 1.65; border-top: 1px solid var(--grid); padding-top: 12px; }
+  .notes p { margin: 0 0 6px; }
+  .notes b { color: var(--ink); font-weight: 600; }
+  @media (prefers-reduced-motion: no-preference) { .bars .bar { transition: width .5s ease; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Big-4 hyperscaler capex — CY2027 consensus revision path</h1>
+    <p class="sub"><b>MSFT + AMZN + GOOG + META</b>, Bloomberg BEst calendar-2027 capex, weekly since 02-Jan-2026 · as of <b>18-Aug-2026</b></p>
+  </header>
+
+  <div class="tiles">
+    <div class="tile">
+      <div class="lbl">Consensus now</div>
+      <div class="val">$983<small>bn</small></div>
+      <div class="note">18-Aug-2026 snapshot</div>
+    </div>
+    <div class="tile">
+      <div class="lbl">YTD revision</div>
+      <div class="val">+$444<small>bn</small></div>
+      <div class="note">vs $540bn on 02-Jan</div>
+    </div>
+    <div class="tile">
+      <div class="lbl">YTD change</div>
+      <div class="val">+82<small>%</small></div>
+      <div class="note">~84% of it inside the three print windows</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Sum of the four CY2027 capex consensus estimates, US$bn</h2>
+    <p class="cap">Weekly Friday snapshots + live 18-Aug point · hover or use ←/→ for per-name readout</p>
+    <div class="chart-wrap" id="chartwrap" tabindex="0" role="img"
+         aria-label="Line chart: summed CY2027 capex consensus for Microsoft, Amazon, Alphabet and Meta rising from 540 billion dollars on 2 January 2026 to 983 billion on 18 August 2026, with steps at the three earnings windows.">
+      <svg id="chart" viewBox="0 0 960 432" aria-hidden="true"></svg>
+      <div id="tip"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Who drove it — YTD revision by name, US$bn</h2>
+    <p class="cap">Change in CY2027 BEst capex, 02-Jan → 18-Aug-2026</p>
+    <div class="bars" id="bars"></div>
+  </div>
+
+  <details>
+    <summary>Weekly data table (all values US$bn)</summary>
+    <div class="tbl"><table id="dtable"></table></div>
+  </details>
+
+  <div class="notes">
+    <p><b>Source:</b> Bloomberg BEst consensus (BEST_CAPEX), fixed calendar-2027, weekly snapshots 02-Jan → 14-Aug-2026 plus the live 18-Aug reading — pulled 18-Aug-2026 via the Capstone wrapper / local Desktop API. Capex shown as positive spend. Basket is the top-4 (ex-ORCL).</p>
+    <p><b>MSFT basis:</b> June fiscal year — CY2027 is calendarized as the sum of four quarterly BEst estimates, with quarter-window cutovers the day after each 2026 report (28-Jan, 29-Apr, 29-Jul). META/GOOG/AMZN use Bloomberg's native calendar-year override.</p>
+    <p><b>Print windows:</b> 4Q25 results (MSFT 28-Jan; GOOG/AMZN/META early Feb) +$122bn; 1Q26 results (late Apr) +$122bn; 2Q26 results (GOOG 22-Jul, MSFT/META 29-Jul, AMZN 30-Jul, incl. the following week's estimate roll-ins) +$128bn. Between windows the sum drifts by only a few $bn per month.</p>
+    <p><b>Reference marks, different basis (broker estimates, not consensus):</b> JPM "AI Capex 2.0" top-4 2027E ~$1.1T (16-Jun-2026); buy-side bogey ~$1.2T (Jefferies, 08-May-2026). Consensus has now closed most of the gap to JPM's mark.</p>
+    <p><b>Pipeline:</b> _wiki/_tools/build_hyperscaler_revisions.py → _wiki/_data/hyperscaler_revisions_2027_2028.json (asof 2026-08-18) · Capstone US Equities.</p>
+  </div>
+</div>
+
+<script>
+const DATA = [["2026-01-02",127.28,161.42,130.11,121.14,539.95],["2026-01-09",127.28,159.64,128.7,120.92,536.54],["2026-01-16",127.68,162.48,129.44,120.83,540.42],["2026-01-23",130.01,162.31,130.3,121.85,544.47],["2026-01-30",141.6,163.45,131.27,137.9,574.21],["2026-02-06",141.6,197.56,171.93,138.59,649.68],["2026-02-13",141.6,202.38,183.28,139.13,666.39],["2026-02-20",142.81,201.47,185.32,138.08,667.68],["2026-02-27",142.81,203.27,192.28,139.13,677.5],["2026-03-06",142.81,212.34,192.62,140.01,687.78],["2026-03-13",142.81,211.43,192.62,140.52,687.38],["2026-03-20",143.88,211.43,190.6,140.83,686.73],["2026-03-27",143.88,211.19,191.09,140.78,686.93],["2026-04-03",143.88,210.95,191.7,140.34,686.86],["2026-04-10",145.28,211.64,192.03,140.38,689.34],["2026-04-17",145.28,212.61,192.07,141.34,691.3],["2026-04-24",146.6,213.11,192.43,140.57,692.7],["2026-05-01",190.34,221.77,225.52,158.96,796.59],["2026-05-08",191.77,228.39,233.89,160.21,814.26],["2026-05-15",191.77,228.05,243.89,160.66,824.37],["2026-05-22",193.03,228.99,244.06,159.93,826.01],["2026-05-29",195.97,229.04,244.43,159.93,829.36],["2026-06-05",197.03,229.46,244.47,161.49,832.45],["2026-06-12",197.03,229.46,247.69,161.76,835.94],["2026-06-19",197.03,229.99,247.25,161.76,836.03],["2026-06-26",195.67,231.01,248.08,161.76,836.51],["2026-07-03",195.67,230.19,248.78,162.21,836.86],["2026-07-10",196.89,231.14,249.91,163.02,840.96],["2026-07-17",200.46,233.45,256.71,166.3,856.92],["2026-07-24",203.57,236.81,292.07,175.01,907.45],["2026-07-31",202.3,261.77,301.66,189.94,955.68],["2026-08-07",204.02,278.32,304.95,197.33,984.63],["2026-08-14",205.24,277.74,305.45,196.9,985.33],["2026-08-18",205.24,275.99,305.45,196.77,983.45]];
+const NAMES = ["MSFT","AMZN","GOOG","META"];
+const BANDS = [
+  { a: "2026-01-23", b: "2026-02-13", lbl: "4Q25 prints", d: "+$122bn" },
+  { a: "2026-04-24", b: "2026-05-08", lbl: "1Q26 prints", d: "+$122bn" },
+  { a: "2026-07-17", b: "2026-08-07", lbl: "2Q26 prints", d: "+$128bn" },
+];
+
+const W = 960, H = 432, L = 58, R = 886, T = 40, B = 398;
+const t0 = Date.parse(DATA[0][0]), t1 = Date.parse(DATA[DATA.length-1][0]);
+const Y0 = 500, Y1 = 1000;
+const X = iso => L + (Date.parse(iso) - t0) / (t1 - t0) * (R - L);
+const Y = v => B - (v - Y0) / (Y1 - Y0) * (B - T);
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const NS = "http://www.w3.org/2000/svg";
+const el = (n, at) => { const e = document.createElementNS(NS, n); for (const k in at) e.setAttribute(k, at[k]); return e; };
+const svg = document.getElementById("chart");
+
+function draw() {
+  svg.textContent = "";
+  // print-window bands (chrome, behind everything)
+  for (const bd of BANDS) {
+    svg.appendChild(el("rect", { x: X(bd.a), y: T, width: X(bd.b) - X(bd.a), height: B - T, fill: "var(--band)" }));
+    const tx = el("text", { x: (X(bd.a) + X(bd.b)) / 2, y: T - 20, "text-anchor": "middle", class: "bandtxt" });
+    tx.textContent = bd.lbl;
+    const tx2 = el("text", { x: (X(bd.a) + X(bd.b)) / 2, y: T - 7, "text-anchor": "middle", class: "bandtxt", "font-weight": "650" });
+    tx2.textContent = bd.d;
+    svg.appendChild(tx); svg.appendChild(tx2);
+  }
+  // horizontal grid + y ticks
+  for (let v = Y0; v <= Y1; v += 100) {
+    svg.appendChild(el("line", { x1: L, x2: R, y1: Y(v), y2: Y(v), stroke: v === Y0 ? "var(--axis)" : "var(--grid)", "stroke-width": 1 }));
+    const t = el("text", { x: L - 8, y: Y(v) + 4, "text-anchor": "end", class: "ticktxt" });
+    t.textContent = v.toLocaleString("en-US");
+    svg.appendChild(t);
+  }
+  const unit = el("text", { x: L - 8, y: T - 10, "text-anchor": "end", class: "ticktxt" });
+  unit.textContent = "US$bn";
+  svg.appendChild(unit);
+  // month ticks
+  for (let m = 0; m < 8; m++) {
+    const d = new Date(Date.UTC(2026, m, 1));
+    const iso = d.toISOString().slice(0, 10);
+    if (Date.parse(iso) < t0) continue;
+    const t = el("text", { x: X(iso), y: B + 18, "text-anchor": "middle", class: "ticktxt" });
+    t.textContent = d.toLocaleDateString("en-US", { month: "short", timeZone: "UTC" });
+    svg.appendChild(t);
+  }
+  // the line
+  const path = DATA.map((r, i) => (i ? "L" : "M") + X(r[0]).toFixed(1) + " " + Y(r[5]).toFixed(1)).join("");
+  svg.appendChild(el("path", { d: path, fill: "none", stroke: "var(--series-1)", "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round" }));
+  // endpoint marker + direct label
+  const last = DATA[DATA.length - 1];
+  svg.appendChild(el("circle", { cx: X(last[0]), cy: Y(last[5]), r: 4.5, fill: "var(--series-1)", stroke: "var(--surface-1)", "stroke-width": 2 }));
+  const e1 = el("text", { x: X(last[0]) + 10, y: Y(last[5]) - 2, class: "endlbl" });
+  e1.textContent = "$983bn";
+  const e2 = el("text", { x: X(last[0]) + 10, y: Y(last[5]) + 12, class: "ticktxt" });
+  e2.textContent = "18-Aug";
+  svg.appendChild(e1); svg.appendChild(e2);
+  // start label
+  const s1 = el("text", { x: X(DATA[0][0]), y: Y(DATA[0][5]) + 22, "text-anchor": "start", class: "ticktxt" });
+  s1.textContent = "$540bn";
+  svg.appendChild(s1);
+  // hover layer
+  crossV = el("line", { y1: T, y2: B, stroke: "var(--muted)", "stroke-width": 1, visibility: "hidden" });
+  hoverDot = el("circle", { r: 4.5, fill: "var(--series-1)", stroke: "var(--surface-1)", "stroke-width": 2, visibility: "hidden" });
+  svg.appendChild(crossV); svg.appendChild(hoverDot);
+  svg.appendChild(el("rect", { id: "hit", x: L, y: T, width: R - L, height: B - T, fill: "transparent" }));
+}
+let crossV, hoverDot, activeIdx = -1;
+const wrapEl = document.getElementById("chartwrap"), tip = document.getElementById("tip");
+const fmt = v => "$" + v.toLocaleString("en-US", { maximumFractionDigits: 0 }) + "bn";
+
+function showIdx(i, fromKey) {
+  activeIdx = i;
+  const r = DATA[i];
+  crossV.setAttribute("x1", X(r[0])); crossV.setAttribute("x2", X(r[0]));
+  crossV.setAttribute("visibility", "visible");
+  hoverDot.setAttribute("cx", X(r[0])); hoverDot.setAttribute("cy", Y(r[5]));
+  hoverDot.setAttribute("visibility", "visible");
+  tip.textContent = "";
+  const d = document.createElement("div"); d.className = "d";
+  d.textContent = new Date(r[0] + "T00:00:00Z").toLocaleDateString("en-US", { day: "2-digit", month: "short", year: "numeric", timeZone: "UTC" });
+  const sm = document.createElement("div"); sm.className = "sum"; sm.textContent = fmt(r[5]) + " summed";
+  tip.appendChild(d); tip.appendChild(sm);
+  NAMES.forEach((n, k) => {
+    const row = document.createElement("div"); row.className = "row";
+    const a = document.createElement("span"); a.textContent = n;
+    const b = document.createElement("b"); b.textContent = fmt(r[k + 1]);
+    row.appendChild(a); row.appendChild(b); tip.appendChild(row);
+  });
+  const dl = document.createElement("div"); dl.className = "delta";
+  const d0 = r[5] - DATA[0][5];
+  dl.textContent = "vs 02-Jan: +" + d0.toLocaleString("en-US", { maximumFractionDigits: 0 }) + "bn (+" + ((r[5] / DATA[0][5] - 1) * 100).toFixed(0) + "%)";
+  tip.appendChild(dl);
+  const box = wrapEl.getBoundingClientRect(), sx = box.width / W;
+  let px = X(r[0]) * sx + 14;
+  tip.style.display = "block";
+  if (px + tip.offsetWidth > box.width - 4) px = X(r[0]) * sx - tip.offsetWidth - 14;
+  tip.style.left = px + "px";
+  tip.style.top = Math.max(4, Y(r[5]) * sx - (fromKey ? 0 : 10)) + "px";
+}
+function hideTip() {
+  activeIdx = -1; tip.style.display = "none";
+  crossV.setAttribute("visibility", "hidden"); hoverDot.setAttribute("visibility", "hidden");
+}
+wrapEl.addEventListener("pointermove", ev => {
+  const box = wrapEl.getBoundingClientRect();
+  const mx = (ev.clientX - box.left) / (box.width / W);
+  if (mx < L - 10 || mx > R + 10) { hideTip(); return; }
+  let best = 0, bd = 1e9;
+  DATA.forEach((r, i) => { const dd = Math.abs(X(r[0]) - mx); if (dd < bd) { bd = dd; best = i; } });
+  showIdx(best, false);
+});
+wrapEl.addEventListener("pointerleave", hideTip);
+wrapEl.addEventListener("keydown", ev => {
+  if (ev.key === "ArrowRight") { showIdx(Math.min(DATA.length - 1, activeIdx < 0 ? DATA.length - 1 : activeIdx + 1), true); ev.preventDefault(); }
+  else if (ev.key === "ArrowLeft") { showIdx(Math.max(0, activeIdx < 0 ? DATA.length - 1 : activeIdx - 1), true); ev.preventDefault(); }
+  else if (ev.key === "Escape") hideTip();
+});
+wrapEl.addEventListener("blur", hideTip);
+
+// per-name YTD bars
+const first = DATA[0], lastR = DATA[DATA.length - 1];
+const rowsB = NAMES.map((n, k) => ({ n, a: first[k + 1], b: lastR[k + 1], d: lastR[k + 1] - first[k + 1] }))
+  .sort((x, y) => y.d - x.d);
+const maxD = Math.max(...rowsB.map(r => r.d));
+const barsEl = document.getElementById("bars");
+rowsB.forEach(r => {
+  const nm = document.createElement("div"); nm.className = "nm";
+  nm.textContent = r.n;
+  const rng = document.createElement("span"); rng.className = "rng";
+  rng.textContent = "$" + r.a.toFixed(0) + " → $" + r.b.toFixed(0) + "bn";
+  nm.appendChild(rng);
+  const track = document.createElement("div"); track.className = "track";
+  const bar = document.createElement("div"); bar.className = "bar";
+  bar.style.width = (r.d / maxD * 100).toFixed(1) + "%";
+  track.appendChild(bar);
+  const v = document.createElement("div"); v.className = "v";
+  v.textContent = "+$" + r.d.toFixed(0) + "bn ";
+  const pc = document.createElement("small"); pc.textContent = "(+" + ((r.b / r.a - 1) * 100).toFixed(0) + "%)";
+  v.appendChild(pc);
+  barsEl.appendChild(nm); barsEl.appendChild(track); barsEl.appendChild(v);
+});
+
+// data table
+const tbl = document.getElementById("dtable");
+const trh = document.createElement("tr");
+["Week", "MSFT", "AMZN", "GOOG", "META", "Sum"].forEach(h => { const th = document.createElement("th"); th.textContent = h; trh.appendChild(th); });
+tbl.appendChild(trh);
+DATA.forEach(r => {
+  const tr = document.createElement("tr");
+  const td0 = document.createElement("td"); td0.textContent = r[0]; tr.appendChild(td0);
+  for (let k = 1; k <= 5; k++) {
+    const td = document.createElement("td"); td.textContent = r[k].toFixed(1);
+    if (k === 5) td.className = "s";
+    tr.appendChild(td);
+  }
+  tbl.appendChild(tr);
+});
+
+draw();
+</script>

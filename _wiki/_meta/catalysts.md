@@ -2,10 +2,12 @@
 
 _Generated 2026-08-18 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (15)
+## 📅 Upcoming (17)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
+| 2026-08-18 | APP | **🆕🔴 2026-08-18 — AN ADVERTISER-LEVEL EXPERT DATAPOINT, AND IT IS A CEILING STORY RATHER THAN A GROWTH STORY (Jefferies expert-call replay, relayed in Jefferies Tech, 2026-08-18).** The advertiser is  |
+| 2026-08-18 | VEEV | **🆕🔴 2026-08-18 — Barclays · Saket Kalia raises PT to $275 (from $235) into the print, on ~22x FY28E FCF of ~$1.744bn**; the multiple uplift is explicitly *"reflect[ing] recent multiple expansion acro |
 | 2026-08-19 | ADI | **🔴 FQ3 FY26 print — 2026-08-19 (Wed, BMO):** delivery vs the ~$3.9bn / $3.30 guide; whether the above-seasonal streak extends. **The scoreable item is the FQ4 GROSS-MARGIN guide, which is where Jeffe |
 | 2026-08-19 | CDNS | **🆕 2026-08-19 (Wed, NYC) — CDNS CEO ANIRUDH DEVGAN small-group meeting, BofA-hosted (Vivek Arya), in person, allocated** (BofA · Brian Fenske, 2026-08-14). **The two questions IR left open at the JPM |
 | 2026-08-20 | ADI | **Post-print access, both 2026-08-20 (Thu):** **BofA fireside with ADI Head of IR Jeff Ambrosi, hosted by Vivek Arya, 11:00 ET (~45 min)** (BofA TMT Sales · Brian Fenske, 2026-08-14) · **UBS "ADI Earn |
@@ -22,13 +24,13 @@ _Generated 2026-08-18 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-09-22 | LITE | **2026-09-22 — ECOC (JPM-hosted meetings).** CEO **Michael Hurlston** meeting alongside [[CRDO]] (CEO Bill Brennan), [[CIEN]] and Nokia (JPM · Joe Cardoso / Sandeep Deshpande, 2026-08-17). The natural |
 | 2026-09-23 | GOOG | **🆕 Koray Kavukcuoglu's first public outing — The Information's AI Agenda Live, San Francisco, 2026-09-23.** Billed topics include integrating frontier models across Search and the multi-billion-user  |
 
-## ⏰ Passed — need a post-mortem (0)
+## ⏰ Passed — need a post-mortem (1)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| _none_ | | |
+| 2026-08-17 | APP | **Tape context: APP −9% on 2026-08-17 in a session where Internet fell only 1% (MS Internet, 08-18), and APP screened at RSI 30 (Barclays desk, 08-18) — the expert datapoint landed into an already-bro |
 
 ## ✅ Resolved (71)
 

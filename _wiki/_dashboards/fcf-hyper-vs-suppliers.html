@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FCF: hyperscalers vs. fornecedores</title>
+<style>
+:root{
+  --paper:#FFFFFF; --ink:#1B2632; --muted:#5D6B79; --faint:#8A96A3; --line:#EAE7DF;
+  --hyp:#2E5EA8; --tsm:#C65A1E; --nvda:#1D9E75; --mem:#993556; --neg:#B4332A;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0F141B; --ink:#E9E7E2; --muted:#98A4B1; --faint:#6E7B88; --line:#242D39;
+    --hyp:#5C86C5; --tsm:#C4682E; --nvda:#31A97F; --mem:#B04E72; --neg:#D06A5F;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0F141B; --ink:#E9E7E2; --muted:#98A4B1; --faint:#6E7B88; --line:#242D39;
+  --hyp:#5C86C5; --tsm:#C4682E; --nvda:#31A97F; --mem:#B04E72; --neg:#D06A5F;
+}
+*{box-sizing:border-box; margin:0}
+body{background:var(--paper); color:var(--ink); padding:24px 22px 28px;
+  font:14px/1.5 "Segoe UI",-apple-system,"Helvetica Neue",Arial,sans-serif; -webkit-font-smoothing:antialiased}
+.wrap{max-width:1220px; margin:0 auto}
+h1{font:700 19px/1.25 Georgia,"Times New Roman",serif; letter-spacing:-.01em}
+.sub{font-size:13px; color:var(--muted); margin-top:4px; max-width:100ch}
+.sub b{color:var(--ink)}
+.legend{display:flex; flex-wrap:wrap; gap:7px 22px; font-size:12.5px; color:var(--muted); margin:14px 0 6px}
+.legend .it{display:inline-flex; align-items:center; gap:7px}
+.sq{width:11px; height:11px; border-radius:2px; display:inline-block}
+.box{overflow-x:auto}
+.box>svg{display:block; min-width:860px; width:100%; height:auto}
+.gl{stroke:var(--line); stroke-width:1}
+.zl{stroke:var(--muted); stroke-width:1.3}
+.div{stroke:var(--faint); stroke-width:1; stroke-dasharray:2 4}
+.tick{font-size:11.5px; fill:var(--faint)}
+.xt{font-size:12px; fill:var(--muted)}
+.xt.e{font-weight:700}
+.vl{font-size:12px; font-weight:700; paint-order:stroke; stroke:var(--paper); stroke-width:3.5px}
+.el{font-size:12.5px; font-weight:700; paint-order:stroke; stroke:var(--paper); stroke-width:3.5px}
+.an{font-size:12px; font-weight:600; fill:var(--muted); paint-order:stroke; stroke:var(--paper); stroke-width:3.5px}
+.note{font-size:11.5px; color:var(--faint); margin-top:12px; line-height:1.55; max-width:110ch}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>FCF anual: hyperscalers vs. TSMC, NVIDIA e memória</h1>
+  <p class="sub">US$ bi · 2023A–25A reportado · 26E–28E consenso BEst. Em 2027E os três fornecedores geram <b>~$701 bi</b> de FCF enquanto as quatro hyperscalers queimam <b>−$59 bi</b> — o caixa da cadeia troca de dono.</p>
+  <div class="legend" id="lg"></div>
+  <div class="box" id="ch"></div>
+  <p class="note"><b>Bases:</b> FCF total da empresa (não o recorte AI-only do quadro de funding). Hyperscalers = MSFT + GOOGL + AMZN + META (Oracle fora, coerente com “outros players”). Memória = MU + SK Hynix, em USD; Samsung fora (conglomerado), SanDisk/Kioxia fora. TSMC (2330 TT) e SK Hynix (000660 KS) convertidos a USD. Histórico = CF_FREE_CASH_FLOW trimestral calendarizado; 26E–28E = BEST_ESTIMATE_FCF (1CY/2CY/3CY). Bloomberg, 18-ago-26.</p>
+</div>
+<script>
+const YR=['2023A','2024A','2025A','2026E','2027E','2028E'];
+const S=[
+ {k:'hyp', n:'Hyperscalers (top-4)', v:[213.0,229.7,204.5,5.4,-58.5,76.1]},
+ {k:'tsm', n:'TSMC',                 v:[10.6,29.0,34.7,45.6,68.5,89.8]},
+ {k:'nvda',n:'NVIDIA',               v:[27.0,60.9,96.7,205.1,294.7,363.1]},
+ {k:'mem', n:'Memória (MU + SK Hynix)', v:[-8.2,10.7,22.9,186.8,338.0,368.6]},
+];
+const NB=v=>Math.round(Math.abs(v)).toLocaleString('pt-BR');
+const SG=v=>(v<0?'−':'+')+NB(v);
+const W=1180,H=560,P={l:54,r:18,t:40,b:44},MIN=-100,MAX=400;
+const EST=3; // index of 2026E
+const NGRP=YR.length, SLOT=(W-P.l-P.r)/NGRP, BW=36, IGAP=9;
+const GW=4*BW+3*IGAP;
+const Y=v=>P.t+(MAX-v)/(MAX-MIN)*(H-P.t-P.b);
+const GX=i=>P.l+i*SLOT+(SLOT-GW)/2;
+let g='';
+for(let v=MIN;v<=MAX;v+=100){const y=Y(v);
+  g+=`<line class="${v?'gl':'zl'}" x1="${P.l}" x2="${W-P.r}" y1="${y}" y2="${y}"/>`;
+  g+=`<text class="tick" x="${P.l-9}" y="${y+4}" text-anchor="end">${v<0?'−':''}${NB(v)}</text>`;}
+g+=`<text class="tick" x="${P.l-42}" y="${P.t-14}">US$ bi</text>`;
+const xd=P.l+EST*SLOT;
+g+=`<line class="div" x1="${xd}" x2="${xd}" y1="${P.t-10}" y2="${H-P.b+6}"/>`;
+g+=`<text class="an" x="${xd-8}" y="${P.t-2}" text-anchor="end">reportado</text>`;
+g+=`<text class="an" x="${xd+8}" y="${P.t-2}">consenso BEst</text>`;
+YR.forEach((y,i)=>g+=`<text class="xt${i>=EST?' e':''}" x="${GX(i)+GW/2}" y="${H-P.b+24}" text-anchor="middle">${y}</text>`);
+YR.forEach((_,yi)=>{
+  S.forEach((s,si)=>{
+    const v=s.v[yi], x=GX(yi)+si*(BW+IGAP), c=`var(--${s.k})`;
+    const y0=Y(Math.max(v,0)), h=Math.max(2.5,Math.abs(Y(v)-Y(0)));
+    g+=`<rect x="${x}" y="${y0}" width="${BW}" height="${h}" rx="2" fill="${c}"/>`;
+    const neg=v<0;
+    g+=`<text class="vl" fill="${neg?'var(--neg)':c}" x="${x+BW/2}" y="${neg?Y(v)+16:y0-7}" text-anchor="middle">${SG(v)}</text>`;
+  });
+});
+g+=`<text class="an" x="${xd+8}" y="${Y(255)}">26E: NVDA e memória</text>`;
+g+=`<text class="an" x="${xd+8}" y="${Y(255)+16}">cruzam os hyperscalers</text>`;
+document.getElementById('ch').innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="FCF anual em barras, 2023 a 2028E: hyperscalers top-4 caem de 205 bilhoes de dolares em 2025 para menos 59 em 2027E; TSMC sobe a 90, NVIDIA a 363, memoria MU mais SK Hynix a 369">${g}</svg>`;
+const LG=document.getElementById('lg');
+LG.innerHTML=S.map(s=>`<span class="it"><span class="sq" style="background:var(--${s.k})"></span>${s.n}</span>`).join('');
+</script>
+</body>
+</html>

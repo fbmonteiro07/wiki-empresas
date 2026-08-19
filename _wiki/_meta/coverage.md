@@ -10,9 +10,9 @@ _Generated 2026-08-18 · 96 public-company pages · flags inputs that exist on d
 | 2.0 | TEL | 3674 | 15 | 202.4 | 2026-04-22 | ✓ | 0/0 | 0/0 | latest 10-Q 2026-07-24 unread (no same-qtr transcript either) |
 | 2.0 | AKAM | 11481 | 20 | — | — | ✗ | 0/0 | 0/0 | latest 10-Q 2026-05-08 unread (no same-qtr transcript either) |
 | 2.0 | AOSL | 596 | 6 | — | — | ✗ | 0/0 | 0/0 | latest 10-Q 2026-05-06 unread (no same-qtr transcript either) |
-| 2.0 | AXTI | 9647 | 24 | — | — | ✗ | 0/0 | 0/0 | latest 10-Q 2026-05-14 unread (no same-qtr transcript either) |
+| 2.0 | AXTI | 9647 | 25 | — | — | ✗ | 0/0 | 0/0 | latest 10-Q 2026-05-14 unread (no same-qtr transcript either) |
 | 2.0 | MP | 733 | 8 | — | — | ✗ | 0/0 | 0/0 | latest 10-Q 2026-05-08 unread (no same-qtr transcript either) |
 | 2.0 | NET | 7500 | 17 | — | — | ✗ | 0/0 | 0/0 | latest 10-Q 2026-05-08 unread (no same-qtr transcript either) |
-| 2.0 | VEEV | 571 | 5 | — | — | ✗ | 0/0 | 0/0 | latest 10-Q 2026-06-05 unread (no same-qtr transcript either) |
+| 2.0 | VEEV | 807 | 5 | — | — | ✗ | 0/0 | 0/0 | latest 10-Q 2026-06-05 unread (no same-qtr transcript either) |
 
 _Density = (words + 25·citations) / (filings+transcripts+calls+briefings+decks). Low density + high material = thin synthesis. 'Calls used' = `_equity_calls` links / available (a low ratio is fine if the page links a representative subset)._

@@ -11,7 +11,7 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\VRT` (filings + transc
 |---|--:|--:|
 | Revenue | $14.1bn | $18.4bn |
 | Gross profit | $5.4bn | $7.2bn |
-| Gross margin | 37.9% | 39.4% |
+| Gross margin | 38.0% | 39.4% |
 | EBITDA | $3.4bn | $4.9bn |
 | EPS | $6.46 | $9.22 |
 | Capex | $487m | $589m |
