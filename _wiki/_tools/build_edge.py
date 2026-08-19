@@ -95,6 +95,14 @@ def curated_diverges(rf):
     out = []
     for part in parts:
         head, _, body = part.partition("\n")
+        # A later /wiki-consensus run can RESOLVE a finding and move it to CONFIRMS while
+        # leaving the sub-section in place, so the report keeps its history. Such a heading
+        # is tagged "RESOLVED <date> -> CONFIRMS": it is no longer an open divergence and
+        # must not be listed as one, nor have its retired '➜ Action' line quoted here.
+        # NB: match the HEADING only. Findings that were resolved but STAYED in DIVERGES
+        # carry a "✅ … resolution" block in the BODY and must be kept.
+        if re.search(r"RESOLVED\b.*?(?:→|->)\s*CONFIRMS", head, re.I):
+            continue
         # strip leading numbering ("1.", "①") and severity flags (🔴 🟡 🟢 ★ ⚠️ ✅)
         h = re.sub(r"^\s*(?:\d+\.|[①-⓿❶-❿])\s*", "", head.strip())
         flag = "".join(ch for ch in h if ch in "\U0001F534\U0001F7E1\U0001F7E2★")

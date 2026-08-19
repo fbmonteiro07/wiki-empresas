@@ -381,3 +381,22 @@ Citrini's **480EB staging / 420EB KV cache / 300EB fast data lakes** is exactly 
 ---
 
 _BBG column resolved 2026-08-17 — `estimates.json` asof **2026-08-17** (98/98 live, 0 FAIL, 0 null prices, 0 records byte-identical to the 08-14 vintage, so no silent carry-overs), plus three ad-hoc live pulls the same date: consensus PT/rating for the six names, the reported-quarter adjusted-basis GM ladder for MU + SNDK (`0FQ`/`-1FQ`… overrides), and an H1-CY2028 probe across the full 8FQ horizon. **All nine PENDING quantitative rows placed — ①-⑦ in DIVERGES and ⑧-⑨ in CONFIRMS. No row crossed DIVERGES ↔ CONFIRMS** — items ①②③④⑥ stay DIVERGES (①②③④ strengthened), ⑤ upgraded ⚠️→🔴 and sized, ⑦ re-tagged NOT BBG-RESOLVABLE, ⑧⑨ stay CONFIRMS on consensus that did not move to the decimal. Canonical header `## Where the new data DIVERGES` applied (was `## DIVERGES (the alpha)`). **No web data substituted at any point.**_
+
+---
+
+## Day-5 check on this report's two dated tests — 2026-08-19 consensus refresh
+
+This report set two time-boxed tests. Both are re-read here against a live 98/98 pull (`estimates.json` asof **2026-08-19**); neither is due yet, and **neither has moved**.
+
+| Test set by this report | 08-14 (as written) | 08-17 (day 3) | **08-19 (day 5)** | Due |
+|---|--:|--:|--:|---|
+| [[SNDK]] CY2027 consensus EPS — *"if it has NOT moved toward ~$245-250 within a week, the gap is real rather than a lag"* | $238.25 | $238.25 | **$238.25** | **08-22** |
+| [[SNDK]] CY2027 street-high EPS | $290.80 | $290.80 | **$290.80** | — |
+| [[MU]] CY2027 consensus gross margin — *"check whether CY27 GM has moved since 08-14"* | 86.0% | 86.0% | **86.0%** | open |
+| [[MU]] CY2027 consensus EPS | $163.61 | $163.61 | **$163.61** | open |
+
+**Five of the seven days have run with literally zero movement on the SNDK out-year**, against four houses (Citi ~$244, JPM $250, BofA $255, FUNDA $292) that all published on 08-14 and all sit above it. ➜ **The lag hypothesis is now the weaker reading.** A Street that needed time to process would have moved something by day 5; this Street moved the *near* year within three days (+$40m on CY26 revenue, logged at day 3) and has left the out-year untouched. Final call still lands **08-22** as specified — but the direction of travel is toward "the gap is real."
+
+⚠️ **Basis caveat on the day-5 control.** At day 3 the control line (CY2026 revenue) moved, which proved the record had genuinely refreshed rather than carried over. **Today the control is also flat** ($36,009.54 on both 08-18 and 08-19), so it cannot serve as the refresh proof this time. The proof today is **price**: [[SNDK]] $1,625.78 → **$1,594.23** and [[MU]] $940.76 → **$932.44**, and neither record is byte-identical to the 08-18 vintage. **These are genuine no-moves on the estimates, not carry-overs.**
+
+_Checked 2026-08-19 by `/wiki-consensus` — `estimates.json` asof 2026-08-19 (98/98 live, 0 FAIL, 0 null prices, 0 `error` keys). No row in this report changes state; no PENDING cell existed (all nine were resolved 08-17). **No web data substituted.**_

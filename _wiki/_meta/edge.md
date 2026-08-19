@@ -8,8 +8,8 @@ _Generated 2026-08-19 · the standing view of where our model and the curated re
 
 | Ticker | Metric | Yr | House | Consensus | Δ |
 |---|---|---|--:|--:|--:|
-| COHR | EPS | 2027 | 19.21 | 11.66 | +65% |
-| COHR | Revenue $bn | 2027 | 16.60 | 12.60 | +31% |
+| COHR | EPS | 2027 | 19.21 | 11.89 | +62% |
+| COHR | Revenue $bn | 2027 | 16.60 | 12.70 | +31% |
 | NVDA | EPS | 2027 | 15.44 | 12.95 | +19% |
 | GOOG | Revenue $bn | 2026 | 505.00 | 426.90 | +18% |
 | GOOG | Revenue $bn | 2027 | 641.00 | 544.40 | +18% |
@@ -24,10 +24,8 @@ _Generated 2026-08-19 · the standing view of where our model and the curated re
 | 🔴🔴 GOOG | Wells' TPU fleet (8.2GW in 2028) is smaller than Barclays' EXTERNAL-only TPU-aaS capacity (11.5GW) already on the page. Both cannot be right | Action: until this is pinned down, treat every GW-based sizing of Google's TPU economics on this wiki as unsafe, including the TPU-aaS unit economics. It is cheap to resolve at the next disclosure and it is the highest-value open question of the run. |
 | 🔴 GOOG | Wells' $811bn purchase-commitment figure fails its own arithmetic; the wiki's primary-sourced $707.0bn stands | Action: none on the number — the wiki figure stands. Carry the lesson instead: this line is now large enough that a ~$100bn discrepancy passes unnoticed through a published note, so purchase commitments must be taken from the filing every quarter and never from a broker restatement. |
 | 🔴🔴 CROSS-THEME | memory alone at $1.61tn of 2027 revenue does not fit inside $5.8tn of six-year hyperscaler capex | Action: size where that memory revenue is actually SOLD. Three resolutions with opposite trade implications — (a) memory forecasts are too high (bearish MU/SAMSUNG/SKHYNIX/SNDK); (b) hyperscaler capex is too low (bullish the complex); (c) memory sells far beyond the five hyperscalers into sovereign, neocloud, enterprise and on-device demand, which would make memory structurally LESS hyperscaler… |
-| 🔴 SAMSUNG | both new houses are BELOW BBG on 2027 EPS while both claim to be ABOVE consensus on operating profit | Action: "X% above consensus" claims on Samsung are NOT comparable across houses this quarter, nor to our BBG snapshot. Any Korean-memory screen must state which consensus it uses or it is measuring vendor methodology. Re-run this row against a LIVE `BEST_EPS` 12/27E pull once the Terminal is up to separate a vendor artefact from a stale on-disk figure. |
 | 🔴 AVGO | the Street-high forecast and a BELOW-consensus forecast differ by one unobservable assumption on identical volumes | Action: $/GW is now the dominant variable in every custom-ASIC forecast on this wiki and the range in active use spans ~2×. REJECT any GW-based ASIC number quoted without its $/GW rate. Standing unit rule re-applied: these are CONTENT-per-GW figures and must never be netted against project-DEBT-per-GW ($34.5bn ÷ >1GW) or build-cost-per-GW anchors. |
 | 🔴 SKHYNIX | two houses now hand the 2027 HBM bit-share lead to Samsung, but the mechanism weakens the claim | Action: the falsifiable claim is "SK Hynix ships LESS than currently modelled in 2027" — NOT "Samsung ships more." That is checkable against SK Hynix's own capacity disclosures and is the cleanest test this theme can run in the next two quarters. |
-| MU | management's mid-$40bn FY27 capex is ~14% below BBG's CY2027, but the periods do not line up | Action: DO NOT score this as a disagreement without adjusting the period — MU's FY27 contains only ~2/3 of CY2027 and capex is ramping, so the fiscal figure is mechanically lower. The real question the gap raises is whether consensus is front-running a capacity ramp management describes as C2028-weighted (ID1 + Tongluo brownfield mid-C2027; Tongluo greenfield, ID2 and Hiroshima F15 in C2028). I… |
 | MEDIATEK | a named house now contests the part-level attribution the DC-ASIC sizing rests on | Action: part attribution is now an ASSUMPTION rather than a given. Anyone sizing MediaTek's 2027 DC-ASIC revenue off a specific part number must say so explicitly. Resolvable at the next TPU disclosure; kept as an open contest on the MEDIATEK page, not a correction. |
 
 ## Consensus PT vs spot — live pull in `reconciliation-2026-08-18-run-inbox.md` (upside ranked)

@@ -1,0 +1,63 @@
+{
+ "created": "2026-08-19 11:21",
+ "hash": "125d3b5a8f20e43e",
+ "assumptions": {
+  "inp_yy_cq1_26": 0.65,
+  "inp_yy_cq2_26": 0.8,
+  "inp_yy_cq3_26": 1.0,
+  "inp_yy_cq4_26": 1.05,
+  "inp_yy_cq1_27": 1.0,
+  "inp_yy_cq2_27": 0.95,
+  "inp_yy_cq3_27": 0.9,
+  "inp_yy_cq4_27": 1.0,
+  "inp_yy_cy28": 0.55,
+  "share_cq1_26": 0.56,
+  "share_cq2_26": 0.58,
+  "share_cq3_26": 0.6,
+  "share_cq4_26": 0.63,
+  "share_cq1_27": 0.66,
+  "share_cq2_27": 0.69,
+  "share_cq3_27": 0.72,
+  "share_cq4_27": 0.75,
+  "share_cy28": 0.8,
+  "asp_yy_26": 0.14,
+  "asp_yy_27": -0.06,
+  "asp_yy_28": -0.1,
+  "legacy_cy25": 850.0,
+  "legacy_decay": 0.8,
+  "ocs_cy26": 190.0,
+  "ocs_cy27": 620.0,
+  "ocs_cy28": 1150.0,
+  "cpo_cy26": 30.0,
+  "cpo_cy27": 300.0,
+  "cpo_cy28": 780.0,
+  "other_nm_cy27": 75.0,
+  "other_nm_cy28": 300.0,
+  "comms_cy26": 1896.5,
+  "comms_cy27": 2542.8,
+  "comms_cy28": 3051.4,
+  "semi_cy26": 287.0,
+  "semi_cy27": 280.7,
+  "semi_cy28": 280.7,
+  "indl_cy26": 1748.4,
+  "indl_cy27": 1801.0,
+  "indl_cy28": 1855.0
+ },
+ "revisions": [
+  {
+   "when": "2026-08-19 11:21",
+   "reason": "initial lock",
+   "changes": {}
+  },
+  {
+   "when": "2026-08-19 11:23",
+   "reason": "asp_yy_26 0.08 -> 0.14. Derived, not tuned: GS speed ASPs (800G 440->396, 1.6T 840->734) against COHR revenue mix moving ~75/25 to ~35/65 on the stated 1.6T ramp gives mix +30% and within-speed price -12%, net +14%. The original 8% was a guess with no arithmetic behind it. Legacy datacom deliberately NOT touched - moving it would close the guide gap and that is the plug this model exists to avoid.",
+   "changes": {
+    "asp_yy_26": {
+     "from": 0.08,
+     "to": 0.14
+    }
+   }
+  }
+ ]
+}
