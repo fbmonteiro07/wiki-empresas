@@ -1,6 +1,6 @@
 # Wiki remediation worklist
 
-_Generated 2026-08-18 · closes the loop on `lint_wiki.py` / staleness.md. Rebuild: `py _wiki/_tools/remediate.py`._
+_Generated 2026-08-19 · closes the loop on `lint_wiki.py` / staleness.md. Rebuild: `py _wiki/_tools/remediate.py`._
 
 ## 🔴 BBG estimates missing (1) — scriptable
 

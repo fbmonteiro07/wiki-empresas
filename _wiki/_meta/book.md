@@ -1,6 +1,6 @@
 # Book — positions × unresolved debates × catalysts
 
-_Generated 2026-08-18 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wiki/_tools/build_book.py`._
+_Generated 2026-08-19 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wiki/_tools/build_book.py`._
 
 > ⚠️ **SEED book** — initialized from the 8 house-model names, weights unknown. Edit `_data/book.json` to match the real Core Positions (weights, adds/drops), then remove the `"seed": true` flag.
 
@@ -11,7 +11,7 @@ _Generated 2026-08-18 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wi
 | AAPL | long | ? | EPS 2026 +16% | _none dated_ |  |  | 2026-08-18 | Strong franchise + memory-dislocation advantage; bear = AI catch-up + price elasticity. |
 | AVGO | long | ? | EPS 2026 -5% | _none dated_ |  |  | 2026-08-17 | #1 custom-ASIC/TPU partner; binary setup on the ">$100B" FY27 guide vs $250-300B FY28 (JPM). |
 | META | long | ? | EPS 2027 +5% | _none dated_ |  |  | 2026-08-18 | Fastest grower in Mag7 ex-GPU; bear = capital intensity and negative incremental ROIC. |
-| TSM | long | ? | — | _none dated_ |  |  | 2026-08-18 | Sole-source leading-edge foundry (~70% share); pricing headroom vs overseas-fab dilution. |
+| TSM | long | ? | — | _none dated_ | 4 |  | 2026-08-18 | Sole-source leading-edge foundry (~70% share); pricing headroom vs overseas-fab dilution. |
 | MSFT | long | ? | no house model | _none dated_ |  |  | 2026-08-17 | AI ARR >$37B/+123%; swing is capex (CY27 ~$276B) vs Azure revenue + OpenAI concentration. |
 | AMZN | long | ? | no house model | _none dated_ |  |  | 2026-08-18 | AWS re-acceleration (+28%) + in-house silicon (Trainium); debate = $200B capex/ROIC. |
 
@@ -19,5 +19,5 @@ _Generated 2026-08-18 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wi
 
 | Ticker | Metric | Δ | Thesis |
 |---|---|--:|---|
-| COHR | EPS 2027 | +65% | InP chokepoint in AI interconnect; NVIDIA stake + CPO deal; bear is relative vs LITE. |
+| COHR | EPS 2027 | +62% | InP chokepoint in AI interconnect; NVIDIA stake + CPO deal; bear is relative vs LITE. |
 | LITE | EPS 2026 | -11% | US photonics pure-play (rev +90%); demand isn't the question, supply/execution is. |

@@ -22,13 +22,16 @@ _Generated 2026-08-19 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-09-22 | LITE | **2026-09-22 — ECOC (JPM-hosted meetings).** CEO **Michael Hurlston** meeting alongside [[CRDO]] (CEO Bill Brennan), [[CIEN]] and Nokia (JPM · Joe Cardoso / Sandeep Deshpande, 2026-08-17). The natural |
 | 2026-09-23 | GOOG | **🆕 Koray Kavukcuoglu's first public outing — The Information's AI Agenda Live, San Francisco, 2026-09-23.** Billed topics include integrating frontier models across Search and the multi-billion-user  |
 
-## ⏰ Passed — need a post-mortem (0)
+## ⏰ Passed — need a post-mortem (4)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| _none_ | | |
+| 2026-08-18 | TSM | **🆕🔴🔴 2026-08-18 — POWER AND ELECTRICITY IS THE MONITOR TSMC ITSELF NAMES, AND IT IS THE ONLY DISCLOSED CAPEX-CUT TRIGGER.** *"Looking out through the end of the decade, the key thing we focus on is p |
+| 2026-08-18 | TSM | **🆕🔴 2026-08-18 — THE TIGHTNESS HAS MOVED FROM COWOS TO THE FRONT END, which changes the relief timeline.** *"More of the tightness has been concentrated on… advanced packaging or CoWoS… now, today, m |
+| 2026-08-18 | TSM | **🆕🔴 2026-08-18 — THE 2026-28 CAPEX FLOOR: "significantly higher" than the $101bn of 2023-25, with 2026 at $62-64bn.** ⚠️ **The call renders the 2026 figure both as "$62-64bn" and as "$62bn at the mid |
+| 2026-08-18 | TSM | **🆕⚠️ 2026-08-18 — ASKED AND NOT ANSWERED, so they stay open: CoWoS lead time / queue length; any capacity growth number ("I don't have a capacity number to give you"); and whether memory supply gates |
 
 ## ✅ Resolved (74)
 
