@@ -2,16 +2,21 @@
 
 _Generated 2026-08-19 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (15)
+## 📅 Upcoming (23)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
 | 2026-08-19 | ADI | **🔴 FQ3 FY26 print — 2026-08-19 (Wed, BMO):** delivery vs the ~$3.9bn / $3.30 guide; whether the above-seasonal streak extends. **The scoreable item is the FQ4 GROSS-MARGIN guide, which is where Jeffe |
+| 2026-08-19 | AVGO | **🆕🔴 Google supplier-base broadening — the live competitive question, now with three named challengers.** [[MRVL]] signed an expanded Google agreement on 2026-08-19 (attach content, warrant to ~$120bn |
 | 2026-08-19 | CDNS | **🆕 2026-08-19 (Wed, NYC) — CDNS CEO ANIRUDH DEVGAN small-group meeting, BofA-hosted (Vivek Arya), in person, allocated** (BofA · Brian Fenske, 2026-08-14). **The two questions IR left open at the JPM |
+| 2026-08-19 | PLTR | **🆕 AIP EVOLVE adoption — the thing to watch is whether "model liquidity" shows up in RETENTION and expansion metrics rather than in demos.** Introduced at the 2026-08-19 Sovereignty Bootcamp (DB · Ze |
 | 2026-08-20 | ADI | **Post-print access, both 2026-08-20 (Thu):** **BofA fireside with ADI Head of IR Jeff Ambrosi, hosted by Vivek Arya, 11:00 ET (~45 min)** (BofA TMT Sales · Brian Fenske, 2026-08-14) · **UBS "ADI Earn |
+| 2026-08-20 | SPCX | **🆕 2026-08-20 10:00am ET — MS investor webcast, "SpaceX: Key Catalysts and Risks on the Path to $300"** (Jonas/Tackett). |
 | 2026-08-26 | NVDA | **Q2 FY27 print: 2026-08-26** (guided $91B). Watch hyperscale vs hyperscale-capex growth under new segmentation (Arcuri: becomes a debate if NVDA ever under-grows it). |
 | 2026-08-26 | NVDA | **🆕 Buy-side bogeys are ABOVE the sell-side into 2026-08-26.** UBS guides FQ3 to ~$107-108bn, *"although investor 'bogeys' appear closer to **$110b+**"* (UBS Sales · Ruple, 2026-08-15) — the same $110 |
+| 2026-08-26 | SNPS | **🆕 2026-08-26 (Wed) — 3Q26 print, with the bar already met in consensus.** MS expects revenue $2.45bn / EPS $3.68 at the upper end of the guide, versus consensus already at $2.44bn / $3.68. **The asy |
 | 2026-08-31 | TXN | **CFO transition:** Rafael Lizardi out 2026-08-01 → **Julie Knecht** (CAO, 25-yr veteran), advisory through 2026-08-31 (DB/Seymore, briefing 2026-06-03). |
+| 2026-09-02 | AVGO | **🆕🔴 2026-09-02 — FQ3 FY26 print, and the bar is set by consensus rather than by the guide: ~$120bn of FY27 AI sales is in the Street's numbers versus management's ">$100bn" (BofA · Arya, 2026-08-19). |
 | 2026-09-02 | NVDA | **2026-08-26 (AMC) — Q2 FY27 print.** Street/house bogeys now on the page from three houses: **UBS/Arcuri report $110-111bn, guide bogey $107-108bn** (08-14) vs **MS/Moore July $91.1bn, October $102.3 |
 | 2026-09-11 | TER | **Q3 CY26 print (~late Oct 2026)** — first test of the re-cut 2H, and of whether the merchant-GPU/second-hyperscaler correlation converts into guided revenue. Quiet period begins **2026-09-11**; manag |
 | 2026-09-14 | NVDA | **🆕 Post-print access, both dated:** **BofA fireside with Toshiya Hari, VP of IR & Strategic Finance, hosted by Vivek Arya — 2026-09-02, 11:00 ET (~1hr)** (BofA TMT Sales, 2026-08-14) · **UBS-arranged |
@@ -21,6 +26,9 @@ _Generated 2026-08-19 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-09-22 | CRDO | **2026-09-22 — ECOC, JPM-hosted meeting with CEO Bill Brennan** (alongside [[CIEN]], [[LITE]] and Nokia; JPM · Cardoso / Deshpande, 2026-08-17). **JPM is also running an off-cycle hardware-reporter bu |
 | 2026-09-22 | LITE | **2026-09-22 — ECOC (JPM-hosted meetings).** CEO **Michael Hurlston** meeting alongside [[CRDO]] (CEO Bill Brennan), [[CIEN]] and Nokia (JPM · Joe Cardoso / Sandeep Deshpande, 2026-08-17). The natural |
 | 2026-09-23 | GOOG | **🆕 Koray Kavukcuoglu's first public outing — The Information's AI Agenda Live, San Francisco, 2026-09-23.** Billed topics include integrating frontier models across Search and the multi-billion-user  |
+| 2026-09-30 | SKHYNIX | **🆕🔴 By 2026-09-30 — HBM CONTRACT PRICE UPDATE.** Named by JPM (Kwon, 2026-08-19) as the #2 company-specific catalyst. **This is the one that moves earnings rather than the share count**, and it is th |
+| 2026-09-30 | SNPS | **🆕🔴 2026-09-30 — INVESTOR DAY is the real event, not the 08-26 print.** MS (Simpson, 2026-08-19) is explicit: none of the three things that matter — Design IP reacceleration, agentic-EDA monetisation |
+| 2026-11-19 | SKHYNIX | **🆕 2026-08-20 → 2026-11-19 — the buyback executes on-market** (SK Securities). Daily execution is observable; **the falsifier for the "most aggressive among peers" claim is whether the full W40trn ac |
 
 ## ⏰ Passed — need a post-mortem (4)
 

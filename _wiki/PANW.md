@@ -9,7 +9,7 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\PANW` (10-K FY25, 10-Q
 |---|--:|--:|
 | Revenue | $12.9bn | $14.7bn |
 | Gross profit | $9.8bn | $11.2bn |
-| Gross margin | 76.3% | 76.6% |
+| Gross margin | 76.3% | 76.5% |
 | EBITDA | $4.2bn | $5.2bn |
 | EPS | $3.72 | $4.44 |
 | Capex | $242m | $301m |
@@ -59,6 +59,11 @@ PANW sits between upstream infrastructure/threat-intelligence inputs and downstr
 </svg>
 
 ## Current state (latest quarter)
+
+**🆕🔴 2026-08-19 — THE BARCLAYS DESK BOGEY SURVEY IS OUT, AND IT SHOWS THE BUY-SIDE BAR SITTING MEANINGFULLY ABOVE THE STREET ON THE Q4 NUMBER AND ONLY MARGINALLY ABOVE ON THE FY27 GUIDE.** (Barclays TMT Desk Commentary · Jeffrey Rand, 2026-08-19 — desk analysts/trading, explicitly NOT research.)
+- **Q4 organic net-new NGS ARR expectations:** **<$585mn (<19% y/y) — 4%** · **$585-600mn (19-22%) — 9%** · **$600-615mn (22-25%) — 35%** · **$615-630mn (25-29%) — 22%** · **>$630mn (>29%) — 30%**. 🔴 **The distribution is the point: the modal answer is $600-615mn, but 52% of respondents are at $615mn or above. A print in the modal bucket would clear the median and MISS the majority.**
+- **FY27 NGS ARR guide expectations:** **<$10.9bn (below Street) — 0%** · **$10.9-10.95bn (in line with Street) — 39%** · **$10.95-11bn (23% y/y) — 43%** · **>$11bn (>23%) — 17%**. 🔴 **Nobody surveyed expects a guide below the Street — 60% expect above it. That is a one-sided setup on the guide, which is the number that usually matters more than the quarter for this name.**
+- ⚠️ **Survey of a broker's own client base, self-selected, sample size not disclosed. Treat as positioning information, not as a forecast.** UBS's desk the same day also carried PANW alongside ADI/KEYS/CBRS in its tech commentary.
 **Q3 FY26 (qtr ended Apr 30, 2026; reported 2026-06-02).** A broad beat clearing all bogeys after a ~60% one-month run into the print.
 - **NGS ARR $8.13B, +60% YoY** (incl. ~$1.6B from CyberArk + Chronosphere); **RPO $18.4B** (10-Q, 2026-06-03), +36% YoY; **revenue $3.00B, +31% YoY** (10-Q: $3,002M vs $2,289M PY).
 - **Organic** NNARR $370M vs $350M guide; organic RPO bookings +25% YoY (Barclays/Kalia, 2026-06-03).
@@ -122,6 +127,7 @@ _Q3 FY26 · Jun 2 → Jul 20, 2026 · sell-side / expert calls / reports between
 
 | Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
+| 08-19 | 🔴 **Barclays TMT Desk · Jeffrey Rand — buy-side bogey survey into the print** (desk, NOT research) | guidance | **mixed** | **Q4 organic net-new NGS ARR: <$585mn 4% · $585-600mn 9% · $600-615mn 35% · $615-630mn 22% · >$630mn 30% — modal bucket is $600-615mn but 52% sit at $615mn+, so a modal print clears the median and misses the majority. FY27 NGS ARR guide: <$10.9bn (below Street) 0% · $10.9-10.95bn (in line) 39% · $10.95-11bn 43% · >$11bn 17% — NOBODY expects a below-Street guide and 60% expect above.** ⚠️ Self-selected broker client survey, sample size undisclosed — positioning information, not a forecast. |
 | 06-03 | Morgan Stanley · Marshall/Weiss | valuation | bull | "Cleared all bogeys; customers clearly turning to PANW to secure AI adoption; single-digit cyber share = long runway". MS raised PT to US$320 (from US$253), OW; FY26E revenue +23.8%, FY27E +18.2%. |
 | 06-03 | Deutsche Bank · Zelnick | competition | bull | "Broad platform strength; NetSec/Prisma SASE displacement is the key differentiator vs ZS; constructive on the FY27 acceleration". DB Buy, PT US$350 — "strongest Q3 in several years" in SASE. |
 | 06-03 | JPM · Essex/Lee | guidance | bull | "Solid execution with AI tailwinds and M&A synergies ahead of plan" — XSIAM, Prisma AIRS, CyberArk all beating. JPM OW. |

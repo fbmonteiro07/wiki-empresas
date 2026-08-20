@@ -13,7 +13,7 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\CSCO` (filings + trans
 | Gross profit | $44.8bn | $48.9bn |
 | Gross margin | 65.6% | 64.8% |
 | EBITDA | $25.8bn | $28.2bn |
-| EPS | $4.77 | $5.29 |
+| EPS | $4.75 | $5.25 |
 | Capex | $1.3bn | $1.4bn |
 | OCF (≈EBITDA) | $25.8bn | $28.2bn |
 

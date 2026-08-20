@@ -71,6 +71,11 @@ Cloud infra + telemetry feed the Falcon cloud-native platform, which fans out ac
 </svg>
 
 ## Current state (Q1 FY27, call 2026-06-03)
+
+**🆕🔴 2026-08-19 — TWO PRE-PRINT ITEMS: a Barclays desk bogey survey, and JPM naming the quarter "THE MYTHOS QUARTER" in its Q2 preview.** (Barclays TMT Desk · Jeffrey Rand; JPM Tech Sketch · Mark Schilsky, both 2026-08-19.)
+- **Barclays ran a joint [[PANW]] / CRWD bogey survey into the results.** ⚠️ **The CRWD-specific response distribution was not extracted in this ingest — the survey tables captured cover PANW's Q4 net-new NGS ARR and FY27 guide. Flagged for the next pass.** Desk product, not research.
+- **JPM's framing is "CRWD Q2 Preview — The Mythos Quarter,"** carried in the same Tech Sketch that flags **[[RDDT]] citations dropping in ChatGPT** and "more AI ARR bogeys." ⚠️ Headline framing captured; the underlying bogeys were not extracted line-by-line here.
+- 🔴 **A genuinely new, non-preview datapoint the same day, and it is a product endorsement from an unusual venue: at [[CEREBRAS]]'s Supernova event, CrowdStrike appeared as a customer and argued that LOWER INFERENCE LATENCY ALLOWS MORE SECURITY ANALYSIS WITHIN THE SAME DECISION WINDOW, improving security outcomes** (UBS · Arcuri, 2026-08-19). **That is a concrete statement of how CRWD converts inference speed into product efficacy rather than into cost savings — worth holding as the mechanism behind any "AI improves detection" claim on the next call.**
 Record Q1, beat-and-raise. Total revenue $1.39bn (+26% y/y); subscription $1.32bn (+26%). **Ending ARR $5.51bn (+24% y/y, accelerating);** **net new ARR $256m (+32% y/y)** — record Q1, above guide. Non-GAAP op income $326m (24% margin, +62% y/y); non-GAAP EPS $1.10 (pre-split); **FCF $468.5m (34% margin, all-time high)**; non-GAAP gross margin 79% (sub 81%); Rule of 40 = 59 (Q1 FY27, 2026-06-03).
 - **FY27 guide raised:** net new ARR to $1.279–1.303bn (+27–29% midpoint), up >520bps / >$50m vs the initial Q4 guide of $1.21–1.26bn; revenue $5.915–5.959bn (+23–24%); FCF margin ≥30% (Q1 FY27 vs Q4 FY26, 2026-03-03).
 - **Falcon Flex (consolidation engine):** ending ARR **$1.9bn (+99% y/y)**, 300+ new accounts; ReFlex base 480 (25% of Flex), avg +26% ARR uplift; 130+ multi-reflexers avg +51% over initial contract (Q1 FY27). At Q4 FY26: Flex $1.69bn (+120%), 1,600+ adopters, avg ARR >$1m.
@@ -134,6 +139,8 @@ _Q1 FY27 · Apr 13 → Jun 18, 2026 · sell-side / expert calls / reports betwee
 
 | Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
+| 08-19 | Barclays TMT Desk · Jeffrey Rand (desk, NOT research) · JPM Tech Sketch · Mark Schilsky | guidance | neutral | Barclays ran a joint [[PANW]]/CRWD **bogey survey** into the results; JPM previewed Q2 as "**The Mythos Quarter**," in the same note that flags **[[RDDT]] citations dropping in ChatGPT** and "more AI ARR bogeys." ⚠️ **CRWD-specific survey distributions and JPM's bogeys were NOT extracted line-by-line in this ingest — flagged for the next pass.** |
+| 08-19 | 🔴 [[CEREBRAS]] Supernova — CrowdStrike as customer, on stage (via UBS · Arcuri) | produto | **bull** | **CRWD argued that lower inference latency "allows more security analysis within the same DECISION WINDOW, improving security outcomes."** A concrete mechanism for converting inference speed into product efficacy rather than cost savings — the underpinning for any "AI improves detection" claim on the next call. |
 | 04-13 | WFC · software conf recap | demand | bull | WFC reported that its meeting with CrowdStrike at the conference was "very upbeat" on Project Glasswing/Mythos; cyber was "the one bright spot where people talk more about the AI opportunity than the AI risk" — Mythos seen as a net positive for cyber budgets. On the Glasswing logo list, only CrowdStrike and Palo were cited, making it "difficult to figure out who else to own". |
 | 05-05 | Morgan Stanley · TMT | demand | bull | Morgan Stanley TMT (Outlook): 'CRWD bullish on AI demand.' |
 | 05-14 | Bernstein · Seidman | competition | bull | Bernstein/Seidman: the FTNT print is a "positive for PANW/S/CRWD" read. |
