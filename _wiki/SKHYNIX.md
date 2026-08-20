@@ -8,17 +8,17 @@
 _Wiki · generated 2026-06-19 · **Korean issuer — NO SEC filings (no 10-K/10-Q/20-F).** Sources: `E:\Wiki Felipe\SKHYNIX\transcripts` (4 earnings calls, SK hynix holds English calls) · SK hynix IR (news.skhynix.com) · `_equity_calls` · `E:\briefings\2026` · BBG (KRW). Master index: [00_INDEX.md](00_INDEX.md) · Theme: [hbm-memory](themes/hbm-memory.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-19 · KRW
+### 📊 Consensus snapshot — BBG · asof 2026-08-20 · KRW
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | ₩350801.5bn | ₩544989.1bn |
-| Gross profit | ₩295024.1bn | ₩458880.8bn |
+| Revenue | ₩350708.9bn | ₩544681.4bn |
+| Gross profit | ₩294946.2bn | ₩458621.8bn |
 | Gross margin | 84.1% | 84.2% |
-| EBITDA | ₩292628.8bn | ₩444494.6bn |
-| EPS | ₩320967.40 | ₩565756.14 |
-| Capex | ₩49049.2bn | ₩62657.2bn |
-| OCF (≈EBITDA) | ₩292628.8bn | ₩444494.6bn |
+| EBITDA | ₩292496.6bn | ₩444533.2bn |
+| EPS | ₩320926.94 | ₩566102.46 |
+| Capex | ₩49049.2bn | ₩62664.3bn |
+| OCF (≈EBITDA) | ₩292496.6bn | ₩444533.2bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
@@ -83,11 +83,34 @@ _(Source: **J.P. Morgan · Jay Kwon** (Asia Pacific Equity Research, Seoul), **"
 | Capex | **−47,328** | −49,049 | −3.5% | **−60,000** | −62,657 | −4.2% | **−80,000** |
 | EBITDA | **285,843** | — | — | **450,281** | — | — | **564,744** |
 
-- 🔴 **THE CY2026 EPS GAP IS THE ALPHA AND IT IS A *BELOW-THE-LINE* STORY, WHICH IS UNUSUAL AND WORTH A BRIDGE.** JPM is **−0.7% on revenue and −1.1% on EBIT** yet **+14.1% on EPS**. You cannot get there from operations — it has to come from **tax rate, non-operating income, or share count**. The model's own history shows how large those lines can be for this issuer (a W2.37tn investment loss and heavy non-operating swings in prior cycles). ➤ **This is a testable, mechanical disagreement with consensus — not a demand call. If JPM's tax/non-op assumptions are right, the Street's CY26 EPS is ~12% too low on essentially identical operating forecasts. Worth pulling the published note to see which line carries it.**
-- ⚠️🔴 **THE CY2027 EPS "−20.9%" IS LARGELY AN ARTEFACT OF OUR OWN DATA AND MUST NOT BE TRADED.** This wiki's CY figures are calendar-year sums of quarterly consensus, and **Korean EPS is known to run materially above BBG's own annual line on that construction — ~+20.1% for SK Hynix.** De-biasing the consensus CY2027 EPS (W565,756 ÷ 1.201 ≈ **W471,071**) puts **JPM at only −5.1%**, i.e. broadly in line rather than a fifth below. ➤ **Carry the de-biased comparison. The raw −21% is a false divergence of exactly the kind this wiki has manufactured before.**
-- **What genuinely diverges on the OUT-YEAR, after de-biasing: not much on earnings, a little on spend.** JPM runs revenue −1.4% and EBIT −2.4% below consensus for CY2027 at a **79.0% vs 79.8% margin** — a marginally more conservative shape, not a different cycle view. **Capex is the cleaner difference: JPM is BELOW consensus in both years (−3.5% CY26, −4.2% CY27) on a path of W47.3tn → W60.0tn → W80.0tn.** ➤ **A lower SK Hynix capex path than consensus is a mild negative read-through for semicap — cross-ref [[AMAT]], [[LRCX]], [[KLAC]], [[ASML]], [[TOKYOELEC]] and [themes/semicap-wfe](themes/semicap-wfe.md) — though a 3-4% delta is inside noise, and JPM still has capex nearly DOUBLING CY26→CY28.**
+- 🔴 **THE CY2026 EPS GAP IS THE ALPHA AND IT IS A *BELOW-THE-LINE* STORY, WHICH IS UNUSUAL AND WORTH A BRIDGE.** JPM is **−0.7% on revenue and −1.1% on EBIT** yet **+14.1% on EPS**. You cannot get there from operations — it has to come from **tax rate, non-operating income, or share count**. The model's own history shows how large those lines can be for this issuer (a W2.37tn investment loss and heavy non-operating swings in prior cycles). ➤ **This is a testable, mechanical disagreement with consensus — not a demand call. If JPM's tax/non-op assumptions are right, the Street's CY26 EPS is ~12% too low on essentially identical operating forecasts. Worth pulling the published note to see which line carries it.** ⛔ **RESIZED 2026-08-20 — the gap is +4.7%, not +14.1% (the consensus column above is a CY-SUM, not BBG's annual line), and the carrying line is now IDENTIFIED as non-operating income. See `## BBG annual-line correction (2026-08-20)`.**
+- ⚠️🔴 **THE CY2027 EPS "−20.9%" IS LARGELY AN ARTEFACT OF OUR OWN DATA AND MUST NOT BE TRADED.** This wiki's CY figures are calendar-year sums of quarterly consensus, and **Korean EPS is known to run materially above BBG's own annual line on that construction — ~+20.1% for SK Hynix.** De-biasing the consensus CY2027 EPS (W565,756 ÷ 1.201 ≈ **W471,071**) puts **JPM at only −5.1%**, i.e. broadly in line rather than a fifth below. ➤ **Carry the de-biased comparison. The raw −21% is a false divergence of exactly the kind this wiki has manufactured before.** ✅ **CONFIRMED LIVE 2026-08-20 — the bias measures +22.3% (not +20.1%) against BBG's annual line, so JPM CY2027 EPS is −3.4% vs consensus. The de-bias instinct was right.**
+- **What genuinely diverges on the OUT-YEAR, after de-biasing: not much on earnings, a little on spend.** JPM runs revenue −1.4% and EBIT −2.4% below consensus for CY2027 at a **79.0% vs 79.8% margin** — a marginally more conservative shape, not a different cycle view. **Capex is the cleaner difference: JPM is BELOW consensus in both years (−3.5% CY26, −4.2% CY27) on a path of W47.3tn → W60.0tn → W80.0tn.** ➤ **A lower SK Hynix capex path than consensus is a mild negative read-through for semicap — cross-ref [[AMAT]], [[LRCX]], [[KLAC]], [[ASML]], [[TOKYOELEC]] and [themes/semicap-wfe](themes/semicap-wfe.md) — though a 3-4% delta is inside noise, and JPM still has capex nearly DOUBLING CY26→CY28.** ⛔ **SIGN FLIP 2026-08-20 — on BBG's annual capex line JPM is +4.0% ABOVE consensus in CY2026 and −0.4% (flat) in CY2027, NOT −3.5%/−4.2% below. The negative semicap read-through is WITHDRAWN. See correction block.**
 - **For the record, the historicals the model anchors on (all internally consistent with the quarterly grid):** FY2024 revenue **W66,193bn**, EBIT **W23,467bn** (35.5% margin), EPS **W27,190**, capex **W15,946bn**; FY2025 revenue **W97,147bn**, EBIT **W47,206bn** (48.6%), EPS **W58,987**, capex **W27,519bn**. Quarterly FY2025 revenue **W17,639 / 22,232 / 24,449 / 32,827bn**, EBIT **W7,441 / 9,213 / 11,383 / 19,170bn**. ➤ **The margin trajectory 35.5% → 48.6% → 77.2%E is the single most important thing in this table, and consensus independently sits at 77.5% — the memory cycle is being modelled at operating margins the industry has never previously sustained. That is the assumption the whole complex now rests on.**
 - ⚠️ **PROCESS NOTE, LOGGED BECAUSE IT NEARLY COST US THE FILE: this workbook was initially REJECTED in this run as "corrupted," on the grounds that a 77% operating margin and a +258% revenue jump could not be a real forecast. Same-day BBG consensus overturned that at the reconciliation step. The error was the reviewer's, not the file's — and catching it is precisely what Step 7 is for. See `_inbox/_ingest-log.md` (2026-08-19) and [## Changelog](#changelog).** ⚠️ **Mechanical hazard for anyone re-reading these workbooks: forecast columns are headed by STRINGS (`2026E`) while historicals are numeric — numeric-only header detection silently returns 2024/2025 only, or lands on growth-rate rows and yields nonsense.**
+
+### BBG annual-line correction (2026-08-20)
+
+⚠️ **The consensus column in the table above is this wiki's CY-SUM (quarterly consensus added up), which for Korean names differs materially from BBG's own annual consensus line. Placed against `1FY`/`2FY` (live pull 2026-08-20), three of the conclusions above change.**
+
+| Metric | JPM (workbook) | BBG **annual line** | Δ | Δ as printed above (vs CY-sum) |
+|---|--:|--:|--:|--:|
+| CY2026 revenue | W348,253bn | W349,829bn | **−0.5%** | −0.7% |
+| CY2026 EBIT | W268,932bn | W271,095bn | **−0.8%** | −1.1% |
+| CY2026 net income | W265,922bn | W253,477bn | **+4.9%** | n/a |
+| CY2026 EPS | W366,143 | W349,876 | **+4.7%** | **+14.1%** |
+| CY2026 capex | W47,328bn | W45,519bn | **+4.0%** | **−3.5%** |
+| CY2027 revenue | W537,307bn | W539,592bn | **−0.4%** | −1.4% |
+| CY2027 EBIT | W424,425bn | W425,240bn | **−0.2%** | −2.4% |
+| CY2027 EPS | W447,275 | W463,073 | **−3.4%** | −20.9% raw / −5.1% de-biased |
+| CY2027 capex | W60,000bn | W60,234bn | **−0.4%** | **−4.2%** |
+
+- 🔴 **The below-the-line story SURVIVES but at a third of its billed size, and the line is now NAMED.** +4.7% EPS / +4.9% net income against −0.5% revenue / −0.8% EBIT is a ~5.5pt operating-to-bottom-line spread, not ~15pt. **The workbook itself answers the open question: JPM carries W77,504bn of non-operating income in CY2026E (pre-tax W346,435bn against EBIT W268,932bn = +28.8% of EBIT), taxed at 23.2%.** So it is **non-operating income**, not tax rate and not share count — the model's implied share count (726mn) matches BBG's (724mn). ➤ **No need to pull the published note for this; it is answered. Tradeable only with a view on that W77.5tn non-operating line.**
+- ⚠️ **JPM is 18.1% BELOW the street-high CY2026 EPS (W446,951).** It is a mid-range bull inside the distribution, not an outlier — which caps how much this row is worth.
+- ⛔ **The capex read-through is WITHDRAWN and reverses.** On the annual line JPM is **+4.0% ABOVE** consensus on CY2026 capex and flat (−0.4%) on CY2027 — the opposite of the "BELOW consensus in both years" reading. **The mild negative semicap signal cross-referenced to [[AMAT]], [[LRCX]], [[KLAC]], [[ASML]], [[TOKYOELEC]] and [themes/semicap-wfe](themes/semicap-wfe.md) does not exist.** Our CY-sum capex runs 7.8% (CY26) and 4.0% (CY27) above BBG's annual line, which manufactured the whole gap.
+- ⚠️ **Standing methodology note: the Korean CY-sum bias is NOT confined to CY2027 EPS.** Measured live 2026-08-20 — EPS: CY2026 **−8.3%**, CY2027 **+22.3%**; capex: CY2026 **+7.8%**, CY2027 **+4.0%**. It **inverts sign between years** and is present on capex too. ➤ **For Korean names place broker annual models against `1FY`/`2FY`, never against the CY-sum.**
+
+_Source: `estimates.json` asof 2026-08-20 (98/98 live, 0 FAIL, 0 null prices, 0 byte-identical carry-overs) + ad-hoc `BEST_FPERIOD_OVERRIDE=1FY/2FY` pulls; JPM figures read directly from `000660 KS Equity_MODEL_JPM_Aug 06 2026.xlsx` (`Report-Consol`). See [reconciliation-2026-08-19](_meta/reconciliation-2026-08-19.md) §BBG resolution._
 
 
 **🆕🔴 2026-08-19 (post-market KST) — THE BUYBACK LANDED, AND IT IS THE BIGGEST SHARE CANCELLATION EVER BY A KOREAN LISTED COMPANY: W40trn (~US$28.6-29bn), 24.07mn shares (3.3% of the 730,492,365 outstanding), TO BE FULLY CANCELLED. The policy change underneath it matters more than the headline: the shareholder-return framework moves from "WITHIN 50%" of FCF to "OVER 50%".** (SK hynix board resolution + company release, 2026-08-19; MS · Shawn Kim/Ryan Kim "PULSE"; JPM · Jay Kwon; Jefferies · Conor O'Mara; MS Sales · Amir Amerian.)
