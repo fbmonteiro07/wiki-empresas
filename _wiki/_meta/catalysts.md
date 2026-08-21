@@ -1,15 +1,14 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-08-20 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-08-21 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (20)
+## 📅 Upcoming (19)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-08-20 | ADI | **Post-print access, both 2026-08-20 (Thu):** **BofA fireside with ADI Head of IR Jeff Ambrosi, hosted by Vivek Arya, 11:00 ET (~45 min)** (BofA TMT Sales · Brian Fenske, 2026-08-14) · **UBS "ADI Earn |
-| 2026-08-20 | SPCX | **🆕 2026-08-20 10:00am ET — MS investor webcast, "SpaceX: Key Catalysts and Risks on the Path to $300"** (Jonas/Tackett). |
 | 2026-08-26 | NVDA | **Q2 FY27 print: 2026-08-26** (guided $91B). Watch hyperscale vs hyperscale-capex growth under new segmentation (Arcuri: becomes a debate if NVDA ever under-grows it). |
 | 2026-08-26 | NVDA | **🆕 Buy-side bogeys are ABOVE the sell-side into 2026-08-26.** UBS guides FQ3 to ~$107-108bn, *"although investor 'bogeys' appear closer to **$110b+**"* (UBS Sales · Ruple, 2026-08-15) — the same $110 |
+| 2026-08-26 | NVDA | **🆕🔴 2026-08-26 IS NOW EXPLICITLY NAMED AS "THE FIRST FORMAL TEST" OF THE FINANCING ARCHITECTURE (Ash & Seed Press · Shanaka Anslem Perera, "THE CONTINUITY STACK", 2026-08-18 — ⚠️ independent Substack |
 | 2026-08-26 | SNPS | **🆕 2026-08-26 (Wed) — 3Q26 print, with the bar already met in consensus.** MS expects revenue $2.45bn / EPS $3.68 at the upper end of the guide, versus consensus already at $2.44bn / $3.68. **The asy |
 | 2026-08-31 | TXN | **CFO transition:** Rafael Lizardi out 2026-08-01 → **Julie Knecht** (CAO, 25-yr veteran), advisory through 2026-08-31 (DB/Seymore, briefing 2026-06-03). |
 | 2026-09-02 | AVGO | **🆕🔴 2026-09-02 — FQ3 FY26 print, and the bar is set by consensus rather than by the guide: ~$120bn of FY27 AI sales is in the Street's numbers versus management's ">$100bn" (BofA · Arya, 2026-08-19). |
@@ -27,13 +26,15 @@ _Generated 2026-08-20 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-10-06 | MRVL | **🆕🔴 DATED, TWO-STEP: Q2 FY27 print THURSDAY 2026-08-27 (after market close) → INVESTOR DAY MONDAY 2026-10-06, NYC.** Jefferies (Curtis, 2026-08-20) splits the catalyst explicitly: the print is where  |
 | 2026-11-19 | SKHYNIX | **🆕 2026-08-20 → 2026-11-19 — the buyback executes on-market** (SK Securities). Daily execution is observable; **the falsifier for the "most aggressive among peers" claim is whether the full W40trn ac |
 
-## ⏰ Passed — need a post-mortem (0)
+## ⏰ Passed — need a post-mortem (3)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| _none_ | | |
+| 2026-08-20 | SPCX | **🆕 2026-08-20 10:00am ET — MS investor webcast, "SpaceX: Key Catalysts and Risks on the Path to $300"** (Jonas/Tackett). |
+| 2026-08-20 | GOOG | **External TPU / merchant-silicon ramp** — 🆕🔴 **UNIT MARKS UPDATED 2026-08-20 (⚠️ THESIS DRIFT — the superseded 2025-12-17 range is preserved in `## Changelog`): the current base case is ~4-4.5mn 2026 |
+| 2026-08-20 | ADI | **Post-print access, both 2026-08-20 (Thu):** **BofA fireside with ADI Head of IR Jeff Ambrosi, hosted by Vivek Arya, 11:00 ET (~45 min)** (BofA TMT Sales · Brian Fenske, 2026-08-14) · **UBS "ADI Earn |
 
 ## ✅ Resolved (82)
 
