@@ -768,6 +768,60 @@
     "INTC.md",
     "themes/hbm-memory.md"
    ]
+  },
+  "enterprise-ai-spend-per-employee": {
+   "title": "Enterprise AI spend per employee (Ramp AI Index)",
+   "definition": "Median monthly AI-tool spend per employee from the Ramp AI Index, by cohort (all companies / top 10% / top 1%). ALWAYS state the cohort AND the month -- the three cohort medians differ by ~2 orders of magnitude ($11.95 / $650 / $7,400 in Jul-26) and are routinely quoted without the label.",
+   "canonical": "PRIMARY SERIES on disk (_wiki/_data/ramp-ai-index/, 36 obs Aug-23 to Jul-26, CSV supplied 2026-08-20): median $2.32 -> $11.95 (5.15x, +4.79%/mo compound, +8.38%/mo last 12m); top decile $62.02 -> $650.00 (10.48x, +6.94%/mo, +10.75%/mo); top 1% $858.59 -> $7,400.50 (8.62x, +6.35%/mo, +12.08%/mo). The growth RATE steps up across three 12-month regimes -- median compound +2.25 -> +3.78 -> +8.79 %/mo (top decile +4.17 -> +5.48 -> +11.72; top 1% +3.65 -> +2.83 -> +13.46) -- and 63% of the median cohort's whole 3-yr dollar gain (74% for the top 1%) landed in the last six months. Quote LEVELS and COMPOUND RATES off the file; second-hand y/y figures on this index have not reproduced.",
+   "scope_note": "FOUR traps. (a) Cohort labels: 'top 10%/1%' are read off the column headers as the MEDIAN spend WITHIN that cohort -- Ramp's methodology note is NOT verified. (b) Cohorts are RE-CUT MONTHLY, so part of a cohort's step is re-ranking, not same-company growth (top-1% monthly sigma 16.4pp vs median 5.7pp) -- it is not a same-store series. (c) 'Start of the year' is ambiguous and load-bearing: GS's $5/$240 are the DEC-25 prints, giving +127%/+169% to Jul-26, against +140%/+171% implied by the rounded pair and +104%/+131% off a January base. (d) NOT a revenue proxy for any listed name -- panel is Ramp's US corporate-card/bill-pay customer base, and per-employee is a ratio a hiring freeze flatters. Jul-26 top decile prints exactly $650.00, which reads as rounded or preliminary.",
+   "patterns": [
+    "Ramp AI Index",
+    "AI spend per employee",
+    "spend per employee"
+   ],
+   "variants": [
+    {
+     "value": "median $11.95 / top decile $650.00 / top 1% $7,400.50 (Jul-26); 36-month compound +4.79 / +6.94 / +6.35 %/mo; regime ladder median +2.25 -> +3.78 -> +8.79 %/mo",
+     "source": "Ramp AI Index (primary CSV on disk, supplied by Felipe)",
+     "date": "2026-08-20",
+     "scope": "PRIMARY - full 36-month series, Aug-23 to Jul-26",
+     "cited_in": [
+      "themes/tokenmaxxing.md",
+      "themes/macro-cycle.md"
+     ]
+    },
+    {
+     "value": "median $5 at start of year -> $12 in July; top decile $240 -> $650",
+     "source": "Goldman Sachs, US Weekly Kickstart ('What Q2 earnings reports signaled...')",
+     "date": "2026-08-14",
+     "scope": "RECONCILED - basis pinned to the Dec-25 print ($5.26 / $241.46); real move +127% / +169%",
+     "cited_in": [
+      "themes/tokenmaxxing.md",
+      "themes/macro-cycle.md"
+     ]
+    },
+    {
+     "value": "median ~$11 in June +167% y/y; top decile $516, top 1% >$4,880, each +~240-250% y/y",
+     "source": "Morgan Stanley (via SPCX page)",
+     "date": "2026-08-17",
+     "scope": "PARTLY UNRECONCILED - levels tie ($10.93 / $520.48 / $4,973.62) but the y/y does not (file June: +154.8% / +215.4% / +200.9%); top decile's +240.6% is the JULY y/y",
+     "cited_in": [
+      "SPCX.md"
+     ]
+    },
+    {
+     "value": "median $11, top-10% $611 ('the 06-18 cut')",
+     "source": "unattributed mark carried on themes/tokenmaxxing.md",
+     "date": "2026-06-18",
+     "scope": "UNRECONCILED - $611 appears in no month of the primary series; newest print available on 2026-06-18 was May-26 ($10.50 / $465.39). Different cut or transcription error",
+     "cited_in": [
+      "themes/tokenmaxxing.md",
+      "themes/macro-cycle.md"
+     ]
+    }
+   ],
+   "status": "primary series on disk; two second-hand readings unreconciled",
+   "debate": "Not a bull/bear debate but a BASIS debate: the level series is now primary and unambiguous, while every second-hand GROWTH figure the wiki carried is either rounding-inflated (GS) or fails to reproduce (MS, the 06-18 cut). Forward question for the macro-cycle page: does the median cohort hold its +8.79%/mo step-change regime, or revert to the +3-4%/mo of 2024-25? Only Dec-23, Aug-24 and Nov-25 saw all three cohorts fall together in three years."
   }
  }
 }

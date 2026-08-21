@@ -7,11 +7,11 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\MSFT` (filings + trans
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $355.5bn | $427.6bn |
+| Revenue | $355.5bn | $427.5bn |
 | Gross profit | $237.5bn | $279.2bn |
 | Gross margin | 66.8% | 65.3% |
 | EBITDA | $214.6bn | $261.1bn |
-| EPS | $17.86 | $21.38 |
+| EPS | $17.86 | $21.37 |
 | Capex | $153.5bn | $205.2bn |
 | OCF (≈EBITDA) | $214.6bn | $261.1bn |
 

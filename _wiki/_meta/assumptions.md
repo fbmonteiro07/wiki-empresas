@@ -1,6 +1,6 @@
 # Canonical assumptions — one number per debate
 
-_Generated 2026-08-19 from `_data/assumptions.json` (asof 2026-08-12). Every cross-page industry number lives here once, with all sourced variants. When a new source disagrees, add a variant to the JSON — never silently rebase a page. Rebuild: `py _wiki/_tools/build_assumptions.py`._
+_Generated 2026-08-20 from `_data/assumptions.json` (asof 2026-08-12). Every cross-page industry number lives here once, with all sourced variants. When a new source disagrees, add a variant to the JSON — never silently rebase a page. Rebuild: `py _wiki/_tools/build_assumptions.py`._
 
 ## Custom-ASIC vs merchant-GPU share of AI accelerators  `asic-vs-gpu-share`
 
@@ -242,7 +242,7 @@ _Annualized $ revenue (or rental rate) per GW of AI compute capacity — state c
 - `SNDK.md` — …ex **$1.2T 2027E / >$1.4T 2028E**; ~$50B/GW × cumulative **106GW 2026-30E** ≈ **>$5.3T**; component (me…
 - `WMB.md` — …rclays pegs implied build economics ~$4mm/MW including supporting gas infra for Prometheus, and estimate…
 - `themes/800v-dc-power.md` — …🔴 **THE 800V TRANSITION FINALLY GETS A $/GW ANALOG CONTENT NUMBER FROM THE SUPPLIER SIDE — $1.0-1.5bn O…
-- `themes/ai-datacenter-power.md` — …it with the all-in build anchors ($39bn/GW MS, ~$36bn/GW Bernstein, ~$50bn/GW Mizuho, $50–60bn/GW Blac…
+- `themes/ai-datacenter-power.md` — …of build, NOT revenue-per-watt and NOT $/GW build cost — the three must never be chained.** - 🔴 **AND T…
 - `themes/hbm-memory.md` — …vated" as a key AI-DC-capex input; ~$50B/GW includes rising memory content (Mizuho "DC Capex Ramping to…
 - `themes/hyperscaler-capex.md` — …APL]] and [[TSLA]] are outside it. Any $/GW or memory-share cross-check run off "five hyperscalers" on…
 - `themes/optical-cpo.md` — …umption is which rack he meant — the 25m/GW PUE/250kW ladder is DOWNSTREAM and does not condition it; s…
@@ -441,4 +441,21 @@ _TAM de CPU-silicio de servidor (merchant + captive + Grace/Vera) e unidades —
 | server-CPU TAM $220bn 2030 + share-alvo AMD >50% (~$110bn só de AMD); histórico da empresa: ~$60bn (FAD Nov-25) -> $120bn (mai-26) -> $220bn = 3.7x em 8 meses; ratio 4:1 -> >1:1 | AMD Advancing AI 2026 via GS/MS | 2026-07-23 | empresa oficializa o cenário BULL do Bernstein ($223bn) |
 
 **Debate:** Timing do 1:1 agentic: house build chega ao NIVEL do bull-2030 do Rasgon ja em 27-28 (ratio 1.31-1.35x vs bull path) — ou o house front-loada demais (hikes+unidades compostas), ou o path do Rasgon e back-loaded. Resolve nos prints de server CPU 2H26 (AMD guide >70% y/y; Intel 80-90% fulfillment) e na rampa Vera. Cross de wafer: CPUs ~5-9 kwpm N3/N2 no house CY26-27 vs '200 kwpm' do complexo Bernstein (basis a reconciliar — provavelmente all-leading-edge cumulativo).
+
+## Enterprise AI spend per employee (Ramp AI Index)  `enterprise-ai-spend-per-employee`
+
+_Median monthly AI-tool spend per employee from the Ramp AI Index, by cohort (all companies / top 10% / top 1%). ALWAYS state the cohort AND the month -- the three cohort medians differ by ~2 orders of magnitude ($11.95 / $650 / $7,400 in Jul-26) and are routinely quoted without the label._
+
+**Canonical:** PRIMARY SERIES on disk (_wiki/_data/ramp-ai-index/, 36 obs Aug-23 to Jul-26, CSV supplied 2026-08-20): median $2.32 -> $11.95 (5.15x, +4.79%/mo compound, +8.38%/mo last 12m); top decile $62.02 -> $650.00 (10.48x, +6.94%/mo, +10.75%/mo); top 1% $858.59 -> $7,400.50 (8.62x, +6.35%/mo, +12.08%/mo). The growth RATE steps up across three 12-month regimes -- median compound +2.25 -> +3.78 -> +8.79 %/mo (top decile +4.17 -> +5.48 -> +11.72; top 1% +3.65 -> +2.83 -> +13.46) -- and 63% of the median cohort's whole 3-yr dollar gain (74% for the top 1%) landed in the last six months. Quote LEVELS and COMPOUND RATES off the file; second-hand y/y figures on this index have not reproduced.
+
+> ⚠️ **Scope:** FOUR traps. (a) Cohort labels: 'top 10%/1%' are read off the column headers as the MEDIAN spend WITHIN that cohort -- Ramp's methodology note is NOT verified. (b) Cohorts are RE-CUT MONTHLY, so part of a cohort's step is re-ranking, not same-company growth (top-1% monthly sigma 16.4pp vs median 5.7pp) -- it is not a same-store series. (c) 'Start of the year' is ambiguous and load-bearing: GS's $5/$240 are the DEC-25 prints, giving +127%/+169% to Jul-26, against +140%/+171% implied by the rounded pair and +104%/+131% off a January base. (d) NOT a revenue proxy for any listed name -- panel is Ramp's US corporate-card/bill-pay customer base, and per-employee is a ratio a hiring freeze flatters. Jul-26 top decile prints exactly $650.00, which reads as rounded or preliminary.
+
+| Value | Source | Date | Scope |
+|---|---|---|---|
+| median $11.95 / top decile $650.00 / top 1% $7,400.50 (Jul-26); 36-month compound +4.79 / +6.94 / +6.35 %/mo; regime ladder median +2.25 -> +3.78 -> +8.79 %/mo | Ramp AI Index (primary CSV on disk, supplied by Felipe) | 2026-08-20 | PRIMARY - full 36-month series, Aug-23 to Jul-26 |
+| median $5 at start of year -> $12 in July; top decile $240 -> $650 | Goldman Sachs, US Weekly Kickstart ('What Q2 earnings reports signaled...') | 2026-08-14 | RECONCILED - basis pinned to the Dec-25 print ($5.26 / $241.46); real move +127% / +169% |
+| median ~$11 in June +167% y/y; top decile $516, top 1% >$4,880, each +~240-250% y/y | Morgan Stanley (via SPCX page) | 2026-08-17 | PARTLY UNRECONCILED - levels tie ($10.93 / $520.48 / $4,973.62) but the y/y does not (file June: +154.8% / +215.4% / +200.9%); top decile's +240.6% is the JULY y/y |
+| median $11, top-10% $611 ('the 06-18 cut') | unattributed mark carried on themes/tokenmaxxing.md | 2026-06-18 | UNRECONCILED - $611 appears in no month of the primary series; newest print available on 2026-06-18 was May-26 ($10.50 / $465.39). Different cut or transcription error |
+
+**Debate:** Not a bull/bear debate but a BASIS debate: the level series is now primary and unambiguous, while every second-hand GROWTH figure the wiki carried is either rounding-inflated (GS) or fails to reproduce (MS, the 06-18 cut). Forward question for the macro-cycle page: does the median cohort hold its +8.79%/mo step-change regime, or revert to the +3-4%/mo of 2024-25? Only Dec-23, Aug-24 and Nov-25 saw all three cohorts fall together in three years.
 

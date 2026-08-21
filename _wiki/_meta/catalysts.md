@@ -2,7 +2,7 @@
 
 _Generated 2026-08-20 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (19)
+## 📅 Upcoming (20)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
@@ -24,6 +24,7 @@ _Generated 2026-08-20 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-09-23 | GOOG | **🆕 Koray Kavukcuoglu's first public outing — The Information's AI Agenda Live, San Francisco, 2026-09-23.** Billed topics include integrating frontier models across Search and the multi-billion-user  |
 | 2026-09-30 | SKHYNIX | **🆕🔴 By 2026-09-30 — HBM CONTRACT PRICE UPDATE.** Named by JPM (Kwon, 2026-08-19) as the #2 company-specific catalyst. **This is the one that moves earnings rather than the share count**, and it is th |
 | 2026-09-30 | SNPS | **🆕🔴 2026-09-30 — INVESTOR DAY is the real event, not the 08-26 print.** MS (Simpson, 2026-08-19) is explicit: none of the three things that matter — Design IP reacceleration, agentic-EDA monetisation |
+| 2026-10-06 | MRVL | **🆕🔴 DATED, TWO-STEP: Q2 FY27 print THURSDAY 2026-08-27 (after market close) → INVESTOR DAY MONDAY 2026-10-06, NYC.** Jefferies (Curtis, 2026-08-20) splits the catalyst explicitly: the print is where  |
 | 2026-11-19 | SKHYNIX | **🆕 2026-08-20 → 2026-11-19 — the buyback executes on-market** (SK Securities). Daily execution is observable; **the falsifier for the "most aggressive among peers" claim is whether the full W40trn ac |
 
 ## ⏰ Passed — need a post-mortem (0)
