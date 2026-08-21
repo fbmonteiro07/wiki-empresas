@@ -2,7 +2,7 @@
 
 _Variance pass on every NEW quantitative datapoint from the 2026-08-20 ingest, against three baselines: **(1)** prior wiki comments on disk, **(2)** Capstone house models / on-disk house data, **(3)** BBG consensus._
 
-**Baseline-3 status: ⚠️ BBG LIVE WRAPPER DOWN — `bloomberg.bdp` raised `ConnectionError` (blpapi could not start session; localhost:8194 refused, "Terminal not running / logged out"). Terminal not logged in at run time (23:47).** ✅ **However `_wiki/_data/estimates.json` carries BBG consensus stamped `asof 2026-08-20` — i.e. SAME-DAY cached consensus for 98 names, written 18:29 today — so the consensus column below is BBG data, just not re-pulled live. No web data was substituted anywhere.** ⚠️ **One structural limit of the cached file that bites this run specifically: it carries NO `BEST_TARGET_PRICE`. This ingest was unusually PT-heavy (11 fresh MS targets, 3 broker PTs on SK hynix), so every PT below is reconciled against prior wiki marks and against spot — never against a consensus target.**
+**Baseline-3 status: ✅ RESOLVED 2026-08-21 via `/wiki-consensus` — re-pulled LIVE (`estimates.json` asof 2026-08-21, 98/98, 0 carry-overs) and the missing consensus-target baseline supplied; see [✅ BBG COLUMN RESOLVED](#-bbg-column-resolved--live-re-pull-2026-08-21-wiki-consensus) at the foot of this report. Was: ⚠️ BBG LIVE WRAPPER DOWN — `bloomberg.bdp` raised `ConnectionError` (blpapi could not start session; localhost:8194 refused, "Terminal not running / logged out"). Terminal not logged in at run time (23:47).** ✅ **However `_wiki/_data/estimates.json` carries BBG consensus stamped `asof 2026-08-20` — i.e. SAME-DAY cached consensus for 98 names, written 18:29 today — so the consensus column below is BBG data, just not re-pulled live. No web data was substituted anywhere.** ⚠️ **One structural limit of the cached file that bites this run specifically: it carries NO `BEST_TARGET_PRICE`. This ingest was unusually PT-heavy (11 fresh MS targets, 3 broker PTs on SK hynix), so every PT below is reconciled against prior wiki marks and against spot — never against a consensus target.**
 
 ---
 
@@ -231,5 +231,96 @@ Several items in this run restated figures the wiki already held. That is not wa
 3. **ORCL/AVGO September prints** — MS flags both as the single names *"front and center."* The Oracle capex-vs-funding inconsistency (Headline #3) should resolve one way or the other there.
 4. **SK hynix 3Q26 results** — the dividend-vs-buyback mix, and whether Barclays' c.KRW200trn 2027 assumption or JPM's W73.3trn is closer.
 5. **AMZN Trainium units** — the JPM/BofA 0.5–1.3m gap needs a scope reconciliation (which generations, which level of the chain).
-6. **Re-run live BBG** when the Terminal is up to attach consensus **target prices**, which the cached file does not carry — the only genuinely missing baseline in this run.
+6. ~~**Re-run live BBG** when the Terminal is up to attach consensus **target prices**, which the cached file does not carry — the only genuinely missing baseline in this run.~~ ✅ **DONE 2026-08-21** — Terminal back up; full live re-fetch (98/98, 0 FAIL, 0 nulls, 0 carry-overs) plus an ad-hoc `BEST_TARGET_PRICE` pull for 29 names. **Material finding: MS is below the consensus target on 9 of the 12 names in its own Exhibit 12 screen**, so Headline #2 gains a second and larger leg. `estimates.json` still carries no `BEST_TARGET_PRICE`.
 7. **Samsung KRW 2,450trn / Dec-2040 figure — UNVERIFIED.** Extracted from a two-column exhibit this PDF's text layer demonstrably interleaves elsewhere, and roughly an order of magnitude above Samsung's capex run-rate. **Quarantined out of page bodies; needs checking against the original exhibit.** (By contrast SK hynix's KRW1,100trn **is** corroborated — same house, 2026-07-01, decomposed W600trn Yongin + W100trn Cheongju + W400trn southwestern.)
+
+---
+
+## ✅ BBG COLUMN RESOLVED — live re-pull 2026-08-21 (`/wiki-consensus`)
+
+**Baseline-3 upgraded from CACHED to LIVE.** The 08-20 run reconciled against a same-day *cached* `estimates.json` because `bloomberg.bdp` raised `ConnectionError` at 23:47. The Terminal is up today: full live re-fetch — **`estimates.json` asof 2026-08-21, 98/98 names, 0 FAIL lines, 0 null prices, 0 `error` keys, 0 carry-over `revisions` stamps, and 0 records byte-identical to the 08-20 vintage** (i.e. no silent carry-overs — verified record-by-record rather than trusted from the script's own `98/98 ok` line). `build_snapshot.py` (98 injected, 4 skipped — no BBG consensus), `build_edge.py` and `build_wiki_html.py` re-run. **No web data was substituted at any point.**
+
+✅ **This closes open item #6 — described in the run itself as "the only genuinely missing baseline."** `estimates.json` **still carries no `BEST_TARGET_PRICE`**, so consensus targets came from an ad-hoc live `bdp` pull of `PX_LAST / BEST_TARGET_PRICE / BEST_ANALYST_RATING / TOT_ANALYST_REC` across 29 names, same date.
+
+⚠️ **First, the boring half, stated so it is not mistaken for confirmation-by-silence: consensus barely moved overnight.** Of the quantitative consensus marks cited in this report, all but two are **unchanged to the decimal**, and the two that moved are inside 0.3% (MRVL CY27 revenue +0.13%, NVDA CY27 revenue +0.29%). **No finding in this report changes state because of an estimate revision.** What the live pull actually adds is (a) the target-price baseline that was missing, and (b) one more session of tape.
+
+---
+
+### 🔴 Headline #2 gains a SECOND leg — and it is larger than the staleness leg
+
+The 08-20 finding was that MS Exhibit 12 is priced off a 12-Aug tape and so understates its own upside by 4–19pp. **That holds.** What the consensus-target baseline adds is separate and bigger: **MS's targets sit BELOW the Street's consensus target on 9 of the 12 names in its own screen** — including every semicap name it rates OW except KLAC.
+
+| Name | MS PT | **BBG cons PT** | Spot (21-Aug) | **MS vs cons** | MS upside | **Cons upside** |
+|---|--:|--:|--:|--:|--:|--:|
+| **TER** | 397 | **450.87** | 367.45 | **−11.9%** | +8.0% | **+22.7%** |
+| **INTC** | 84 | **118.90** | 90.19 | **−29.4%** | −6.9% | **+31.8%** |
+| **TXN** | 255 | **328.68** | 264.31 | **−22.4%** | −3.5% | **+24.4%** |
+| **AMAT** | 646 | **663.06** | 486.20 | −2.6% | +32.9% | +36.4% |
+| **LRCX** | 367 | **376.81** | 307.53 | −2.6% | +19.3% | +22.5% |
+| **KLAC** | 253 | **234.54** | 183.27 | **+7.9%** | **+38.0%** | +28.0% |
+| **TOKYOELEC** | 65,000 | **74,759** | 54,290 | **−13.1%** | +19.7% | **+37.7%** |
+| **ETN** | 500 | **481.96** | 420.85 | +3.7% | +18.8% | +14.5% |
+| **SPCX** | 300 | **217.81** | 135.48 | **+37.7%** | **+121.4%** | +60.8% |
+| **SAMSUNG** (common) | 381,000 | **490,018** | 270,000 | **−22.2%** | +41.1% | **+81.5%** |
+| **SAMSUNG** (pref 005935) | 304,800 | **353,450** | 207,000 | **−13.8%** | +47.2% | **+70.7%** |
+| **SMIC** | HK$85 | **HK$98.27** | 72.50 | **−13.5%** | +17.2% | **+35.5%** |
+
+➤ **The read: the screen is stale on price AND below-Street on target, and the two errors point the same way.** A note whose entire argument is that AI sovereignty drives a spending supercycle is carrying targets **11–29% below consensus** on TER, INTC, TXN, TOKYOELEC, SAMSUNG and SMIC. **The bullish framing and the mark sheet disagree**, and quoting the screen's upside column today understates the Street twice over.
+
+➤ **Three exceptions, and they are the informative ones — the only names where MS is genuinely out in front:** **SPCX +37.7% above consensus** (MS $300 vs Street $217.81; MS's +124% call vs the Street's +60.8% — MS is the outlier bull, not a consensus follower), **KLAC +7.9% above** (which sharpens the in-house contradiction already logged: Shane Brett's 08-03 most-negative-relative call on KLAC is now the one name in the screen where MS's target leads the Street), and **ETN +3.7% above**.
+
+➤ **The TER sign-flip survives the harder test.** On today's tape MS's $397 implies **+8.0%**, not the note's −1% — but the Street's own target implies **+22.7%**, so MS is 11.9% light. **TER is not "marginally undervalued on MS's math"; it is materially undervalued on the Street's, and MS is the bear.** ⚠️ The two MS marks are still 2.6% apart (Exhibit 12 $397 vs standalone $387, 07-28); both sit below consensus, so the choice between them does not change the direction.
+
+➤ ⚠️ **SAMSUNG: the no-blending rule holds and now has a price leg.** Common and preferred were pulled as separate securities — **005930 at 270,000 (cons PT 490,018) and 005935 at 207,000 (cons PT 353,450)** — and MS is below consensus on **both** classes. The two must not be averaged, and this is a *price-target* placement only: per the standing discipline, **Samsung is placed at NET INCOME, never EPS**, because broker headline EPS is common-only while BBG is preferred-inclusive.
+
+---
+
+### Row-by-row re-placement against the live 2026-08-21 pull
+
+| # | Row | Live placement | Verdict |
+|---|---|---|:--|
+| **1** | **MRVL / GOOG** warrant | CY27 consensus revenue **$16,894.3m** (+0.13% o/n). Google-only ~$17.1bn/yr = **101.2% of ALL CY27 consensus revenue** (was ~102%). ⚠️ **The strike cushion narrowed hard: MRVL fell −5.9% in the session, so the $206.58 strike is now 12.5% below spot ($236.17), not 17.7%** — 5.2pp of in-the-moneyness gone in one day. Cons PT **$271.85 = +16.3%**. | 🔴 **DIVERGES — unchanged and undiluted.** The ~7x gap between the contract ceiling and the modelled base stands on a consensus that did not move. First tranche still accrues in the quarter guided **08/27**. |
+| **2** | **ORCL** capex vs funding | capex/revenue **88.0% CY26 → 95.7% CY27**, unchanged to the decimal. **New:** consensus PT **$252.05 vs spot $147.08 = +71.4%**, on 51 recommendations. | 🔴 **DIVERGES — and the target price makes it sharper.** Equity research carries **+71% upside** on a name whose credit MS reads as *"cautious… given forward financing needs"* at ~8% yields with equity −22% YTD. **Three markets, three verdicts, one balance sheet.** |
+| **3** | **MS PTs priced 12-Aug** | See the table above. | 🔴 **DIVERGES — STRENGTHENED and re-stated.** The staleness leg holds; the new below-Street leg is larger. |
+| **4** | **SMCI** dilution | Consensus EPS **CY26 $4.31 / CY27 $4.90**, unchanged. Re-struck on 900m vs 761m shares: **CY26 $3.64 · CY27 $4.14, −15.4% both years** — reproduces exactly. Revenue +36.6% vs EPS +13.7% CY26→CY27, unchanged. **New:** cons PT **$43.89 vs spot $37.05 = +18.5%**, consensus rating **3.26 — the lowest of the 29 names pulled**, on only 23 recs. | 🔴 **DIVERGES — and the Street is already the least enthusiastic here of anywhere in the coverage.** The dilution is still uncomputed by consensus, but the rating says the Street is not defending the name either. Wolfe's internal tension (raising 2028 revenue while arguing +18% shares) is unaffected. |
+| **5** | **AMZN Trainium units** | No consensus unit data on the wrapper — re-verified against the live field set, not assumed. | ⚠️ **UNRESOLVED, as logged.** The JPM/BofA 0.5–1.3m gap **cannot** be arbitrated with BBG. Scope reconciliation (T2+T3 vs unstated) remains the only route. |
+| **6** | **SKHYNIX** buyback | CY27 consensus NI **KRW 344.9trn** (CY-sum), unchanged — Barclays' c.KRW200trn = **58.0%**. W40trn = **18.5% of CY26 NI (216.2trn)**, reproduces. **New:** cons PT **KRW 3,231,945 vs spot 1,761,000 = +83.5%**, rating 4.94 on 48 recs. **The two broker PTs driving this row both sit BELOW the Street's: JPM's implied ~2.74m is −15.1% vs the consensus PT, UBS's ~3.00m is −7.3%.** | 🔴 **DIVERGES — and it inverts the framing.** The row read as "two bullish houses far apart on the buyback." On the target-price leg **neither house is bullish relative to the Street** — consensus is above both. ⚠️ **And the 58% is a FLOOR, not the number:** KRW 344.9trn is a **CY-sum**, which for SKHYNIX carries a documented upward bias versus the annual line; deflating it puts Barclays' buyback nearer **~71% of net income**. The factor drifts and is deliberately **not** hard-coded here — the point is only that the ratio errs low, which makes the divergence larger, not smaller. |
+| **7** | **LITE** managed quarter | CY26 consensus revenue **$4,520.5m**, unchanged. **New:** cons PT **$1,130.23 vs spot $864.46 = +30.7%**. | 🔴 **DIVERGES — unchanged.** Consensus still cannot see deferred revenue by construction. Remains a second-hand assertion of a management admission; **not upgraded in evidence class by the consensus pull.** |
+| **8** | **MS 2027 capex $1.4tr** | Live sum of the same six CY27 capex lines: AMZN 283.9 + GOOG 308.7 + META 216.1 + MSFT 205.2 + ORCL 102.1 + SPCX 181.4 = **$1,297.4bn**. MS **+7.9%**. | ⚠️ **CONFIRMS to the decimal** — the aggregate reproduced on a fully independent live pull. The house number still leads the Street by ~8% on the way up. |
+| **9** | **ANTHROPIC** $70bn vs $65bn | Private — not on the wrapper. | **no BBG.** The conflict stays flagged in both places, unresolved, as recorded. |
+| **10** | **NVDA "$65bn"** | CY26 consensus revenue **$393.9bn ⇒ ~$98.5bn/qtr**; CY27 $577.7bn / EPS $12.96. **$65bn matches no NVDA consensus figure on any period.** | ⚠️ **CONFIRMS the mis-attribution read.** A live pull was the fair test and it fails cleanly. **Not adopted as an NVDA datapoint.** |
+| **11** | **CRWV** credit spread | Bond pricing is not a wrapper field. **New:** cons PT **$144.74 vs spot $89.72 = +61.3%**. | 🔴 **DIVERGES — unchanged, and the equity/credit split widens.** Equity research carries +61% upside while credit charges CRWV-offtake 300–600bp over Amazon-offtake on comparable assets. |
+| **12–14, 16–18** | GOOG purchase commitments · TPU / Rubin / MediaTek unit levels · OpenAI PORTS-Pike | Unit counts, purchase commitments and contract terms have **no consensus line** on the wrapper. | **no BBG — verified against the live field set, not assumed.** The measurement-level rules (chip / test / module / rack-consumed) stand as written. |
+| **15** | **ASM Intl China 2H26** | ASMI has no wiki page and is not in the 98-name fetch. | **no BBG.** Logged unresolved; both vendors' views stand. |
+| **19** | **AVGO** chip financing | Private-placement issuance is not a wrapper field. **New:** cons PT **$528.27 vs spot $367.15 = +43.9%**. | 🔴 **DIVERGES — unchanged.** The 0 → $35bn channel appears in no consensus line. |
+| **20** | **SPCX** in the capex aggregate | capex/revenue **1.085x CY26 → 1.747x CY27**; CY27 EPS **+$1.66**; CY27 capex **$181.4bn = 88.4% of MSFT's $205.2bn (within 11.6%)**. All reproduce. **New:** cons PT **$217.81 = +60.8%** against MS's $300 / +124%. | ✅ **CONFIRMS — and MS is now placed as the outlier bull rather than merely "the widest bull case in the screen."** The Street underwrites +61%; MS underwrites +124%. |
+
+➤ **Net effect on the report: no row changes side.** Every 🔴 DIVERGES stays DIVERGES and every ✅ CONFIRMS stays CONFIRMS. **Three rows get materially stronger** (#3 on the below-Street leg, #6 on the inverted SKHYNIX PT framing, #2 on the +71% equity target against impaired credit) and **one gets a caveat that cuts against the tape** (#1: MRVL's warrant strike cushion narrowed 5.2pp in a single session).
+
+---
+
+### Consensus target prices — the other covered names touched by this run
+
+Recorded because the run had no consensus-PT baseline at all, and these are the marks future PT reconciliations should be placed against.
+
+| Name | Cons PT | Spot | Upside | Rating | n |
+|---|--:|--:|--:|--:|--:|
+| **MU** | 1,581.01 | 963.34 | **+64.1%** | 4.83 | 60 |
+| **CRWV** | 144.74 | 89.72 | +61.3% | 4.21 | 43 |
+| **MEDIATEK** | 5,591.48 | 3,790.00 | +47.5% | 4.91 | 32 |
+| **COHR** | 418.62 | 284.44 | +47.2% | 4.52 | 27 |
+| **AVGO** | 528.27 | 367.15 | +43.9% | 4.77 | 62 |
+| **NVDA** | 307.56 | 215.60 | +42.7% | 4.88 | 82 |
+| **META** | 745.54 | 550.03 | +35.5% | 4.77 | 78 |
+| **LITE** | 1,130.23 | 864.46 | +30.7% | 4.71 | 31 |
+| **AMZN** | 329.03 | 259.05 | +27.0% | 4.85 | 82 |
+| **GOOG** | 427.91 | 341.66 | +25.2% | 4.83 | 18 |
+| **SMCI** | 43.89 | 37.05 | +18.5% | **3.26** | 23 |
+| **MSFT** | 568.77 | 483.83 | +17.6% | 4.84 | 73 |
+| **MRVL** | 271.85 | 233.75 | +16.3% | 4.74 | 50 |
+| **DELL** | 506.04 | 436.50 | +15.9% | 4.32 | 31 |
+| **AAPL** | 330.94 | 310.10 | **+6.7%** | 3.93 | 58 |
+
+➤ **Two things fall out that are worth carrying forward.** **AAPL's +6.7% is the thinnest consensus upside in the entire coverage** — the market-priced counterpart to the standing house-vs-MS Apple margin gap logged on 08-03. And **SMCI's 3.26 is the only rating below 3.6 apart from INTC's 3.61**, on the smallest analyst count of any large name here (23) — thin coverage and a lukewarm Street underneath a computable, unpriced 15.4% dilution.
+
+_BBG column resolved 2026-08-21 — `estimates.json` asof **2026-08-21** (98/98 live, 0 FAIL, 0 null prices, 0 `error` keys, 0 carry-over stamps, 0 records byte-identical to the 08-20 vintage), plus an ad-hoc live `PX_LAST` / `BEST_TARGET_PRICE` / `BEST_ANALYST_RATING` / `TOT_ANALYST_REC` pull the same date for 29 names. No `PENDING` cell existed in this report — the 08-20 BBG column was same-day cached, not blank; this layer upgrades it to live and supplies the target-price baseline it lacked._

@@ -5,7 +5,7 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AAOI` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\AAOI.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-20 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-08-21 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|

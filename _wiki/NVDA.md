@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\NVDA` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\NVDA.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Snapshot — Capstone official model + BBG · asof 2026-08-20 · USD
+### 📊 Snapshot — Capstone official model + BBG · asof 2026-08-21 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -12,7 +12,7 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\NVDA` (filings + trans
 | Gross margin | **75.0%** | **74.0%** |
 | EBITDA | $266.1bn | $391.6bn |
 | EPS | **$9.26** | **$15.44** |
-| Capex | $7.5bn | $9.4bn |
+| Capex | $7.5bn | $9.5bn |
 | OCF (≈EBITDA) | $266.1bn | $391.6bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

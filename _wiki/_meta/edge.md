@@ -11,8 +11,8 @@ _Generated 2026-08-21 · the standing view of where our model and the curated re
 | COHR | EPS | 2027 | 19.21 | 11.89 | +62% |
 | COHR | Revenue $bn | 2027 | 16.60 | 12.70 | +31% |
 | NVDA | EPS | 2027 | 15.44 | 12.96 | +19% |
-| GOOG | Revenue $bn | 2026 | 505.00 | 428.10 | +18% |
-| GOOG | Revenue $bn | 2027 | 641.00 | 544.40 | +18% |
+| GOOG | Revenue $bn | 2026 | 505.00 | 427.50 | +18% |
+| GOOG | Revenue $bn | 2027 | 641.00 | 544.30 | +18% |
 | AAPL | EPS | 2026 | 10.12 | 8.76 | +16% |
 
 ## Curated divergences — latest reconciliation (`reconciliation-2026-08-20.md`)
