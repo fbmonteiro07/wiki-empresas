@@ -14,7 +14,7 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\TM` (20-F + transcript
 | Gross margin | — | — |
 | EBITDA | ¥5917.4bn | ¥6823.1bn |
 | EPS | — | — |
-| Capex | ¥2453.7bn | ¥2476.4bn |
+| Capex | ¥2589.3bn | ¥2839.2bn |
 | OCF (≈EBITDA) | ¥5917.4bn | ¥6823.1bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

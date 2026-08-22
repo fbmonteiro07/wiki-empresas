@@ -7,13 +7,13 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\SMIC` · `_equity_call
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $11.7bn | $14.2bn |
-| Gross profit | $2.7bn | $3.6bn |
-| Gross margin | 22.9% | 25.4% |
-| EBITDA | $6.5bn | $8.2bn |
-| EPS | $0.16 | $0.24 |
-| Capex | $8.5bn | $7.2bn |
-| OCF (≈EBITDA) | $6.5bn | $8.2bn |
+| Revenue | $11.6bn | $14.3bn |
+| Gross profit | — | $3.6bn |
+| Gross margin | — | 25.5% |
+| EBITDA | $6.8bn | $8.2bn |
+| EPS | $0.19 | $0.23 |
+| Capex | $5.3bn | $7.1bn |
+| OCF (≈EBITDA) | $6.8bn | $8.2bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
