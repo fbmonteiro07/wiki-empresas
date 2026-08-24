@@ -34,6 +34,7 @@ STEPS = [
 ]
 
 HUB = [
+    ("AI credit & funding monitor", "credit-monitor.html", "AI issuance, neocloud spreads, counterparty tiering, appetite scoreboard — manual refresh: fetch_funding.py + build_funding_monitor.py."),
     ("Edge tracker", "edge.html", "House vs Street divergences (the alpha) — programmatic + curated."),
     ("Read-through map", "readthrough.html", "Supply-chain & substitutes: who reads through to whom."),
     ("Catalyst loop", "catalysts.html", "Upcoming calendar + passed catalysts awaiting a post-mortem."),
