@@ -534,8 +534,50 @@ def build():
         "token_points_meta": sg.get("token_points", []),
     }
 
+    # ---- llm_map: tier feed for LLM_Market_MAP_v1 (P:\Felipe Monteiro\Semis MAP) ----
+    # Pure derivation from labs/models rows already computed above — no new fetches.
+    # Consumed by the LLM Market MAP workbook/dashboard: capture-class token shares,
+    # the tokens-per-request k observable, and the G9 flagship-vs-commodity-open watch
+    # (if flagship-open keeps pricing AT frontier, commoditization scenarios overstate
+    # revenue loss). Prices here are OR list-blend (cache-off) — ceilings, not realized.
+    def _cls_agg(cls):
+        rows = [l for l in labs if l.get("capture") == cls and l.get("requests_week")]
+        tok = sum(l["tokens_week"] for l in rows)
+        req = sum(l["requests_week"] for l in rows)
+        return {"tokens_week": tok, "requests_week": req,
+                "tok_per_req_k": tok / req / 1e3 if req else None,
+                "token_share": tok / plat_text_tok if plat_text_tok else None}
+    _cagg = {c: _cls_agg(c) for c in ("first-party", "open+own", "open-weight")}
+    _fp_tpr = _cagg["first-party"]["tok_per_req_k"]
+    _open_rows = [m for m in models_out
+                  if m.get("capture") in ("open-weight", "open+own")
+                  and m.get("blended_price_per_mtok") and m.get("tokens_week")]
+    _k3 = next((m for m in models_out if "kimi-k3" in m.get("permaslug", "")), None)
+    _flag_rows = [m for m in _open_rows if m["tokens_week"] >= 1e11]
+    _flagship = (_k3["blended_price_per_mtok"] if _k3 and _k3.get("blended_price_per_mtok")
+                 else max((m["blended_price_per_mtok"] for m in _flag_rows), default=None))
+    _comm_rows = [m for m in _open_rows if m["blended_price_per_mtok"] <= 1.0]
+    _ct = sum(m["tokens_week"] for m in _comm_rows)
+    _commodity = (sum(m["blended_price_per_mtok"] * m["tokens_week"] for m in _comm_rows) / _ct
+                  if _ct else None)
+    llm_map = {
+        "asof": asof,
+        "class_agg": _cagg,
+        "k_ceiling_open_weight": (_cagg["open-weight"]["tok_per_req_k"] / _fp_tpr
+                                  if _fp_tpr else None),
+        "k_ceiling_open_own": (_cagg["open+own"]["tok_per_req_k"] / _fp_tpr
+                               if _fp_tpr else None),
+        "flagship_open_blended_mtok": _flagship,
+        "commodity_open_blended_mtok": _commodity,
+        "g9_flagship_commodity_ratio": (_flagship / _commodity
+                                        if _flagship and _commodity else None),
+        "platform_run_rate_quad_yr": tokens_month * 12 / 1e15,
+        "effective_blend_mtok": tot_rev / plat_text_tok * 1e6 if plat_text_tok else None,
+    }
+
     out = {
         "asof": asof, "generated": dt.datetime.now().isoformat(timespec="seconds"),
+        "llm_map": llm_map,
         "new_models": new_models, "neoclouds": neoclouds,
         "product_mix": product_mix, "system_growth": system_growth,
         "platform": {

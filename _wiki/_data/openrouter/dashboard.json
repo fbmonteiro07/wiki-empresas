@@ -1,6 +1,36 @@
 {
  "asof": "2026-08-24",
- "generated": "2026-08-24T08:05:08",
+ "generated": "2026-08-24T19:24:12",
+ "llm_map": {
+  "asof": "2026-08-24",
+  "class_agg": {
+   "first-party": {
+    "tokens_week": 22529110574472.0,
+    "requests_week": 1950107223.0,
+    "tok_per_req_k": 11.552754796638174,
+    "token_share": 0.24253896234974082
+   },
+   "open+own": {
+    "tokens_week": 30964151353041.0,
+    "requests_week": 1435493388.0,
+    "tok_per_req_k": 21.57038939495345,
+    "token_share": 0.3333470761920167
+   },
+   "open-weight": {
+    "tokens_week": 39395362465895.0,
+    "requests_week": 900121895.0,
+    "tok_per_req_k": 43.76669724925978,
+    "token_share": 0.42411396145824243
+   }
+  },
+  "k_ceiling_open_weight": 3.788420858892962,
+  "k_ceiling_open_own": 1.8671208533942387,
+  "flagship_open_blended_mtok": 3.219456045859826,
+  "commodity_open_blended_mtok": 0.1417365001055983,
+  "g9_flagship_commodity_ratio": 22.71437522064695,
+  "platform_run_rate_quad_yr": 4.777129254518126,
+  "effective_blend_mtok": 0.593916733126422
+ },
  "new_models": [
   {
    "permaslug": "stealth/ox-alpha",
