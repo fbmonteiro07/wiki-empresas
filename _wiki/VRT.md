@@ -5,7 +5,7 @@
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\VRT` (filings + transcripts) · `_equity_calls` · `E:\briefings\2026`. Master index: [00_INDEX.md](00_INDEX.md) · themes: [ai-datacenter-power](themes/ai-datacenter-power.md) · [800v-dc-power](themes/800v-dc-power.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-21 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-08-24 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|

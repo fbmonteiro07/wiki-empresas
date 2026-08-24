@@ -5,13 +5,13 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\NFLX` (10-K + transcripts) · `_equity_calls` · `_briefings\by-ticker\NFLX.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-21 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-08-24 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $64.0bn | $57.0bn |
-| Gross profit | $31.9bn | $29.7bn |
-| Gross margin | 49.9% | 52.1% |
+| Revenue | $51.1bn | $57.0bn |
+| Gross profit | $25.8bn | $29.7bn |
+| Gross margin | 50.4% | 52.1% |
 | EBITDA | $16.8bn | $20.2bn |
 | EPS | $3.13 | $3.86 |
 | Capex | $727m | $805m |

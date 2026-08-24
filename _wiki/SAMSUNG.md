@@ -5,15 +5,15 @@
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\SAMSUNG\transcripts` (public English earnings transcripts) · Samsung IR · `_briefings` roll-up · BBG (KRW, auto-injected). Master index: [../00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-21 · KRW
+### 📊 Consensus snapshot — BBG · asof 2026-08-24 · KRW
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | ₩719382.1bn | ₩990684.4bn |
-| Gross profit | ₩500689.9bn | ₩744004.0bn |
+| Revenue | ₩719381.7bn | ₩990684.4bn |
+| Gross profit | ₩500689.7bn | ₩744004.0bn |
 | Gross margin | 69.6% | 75.1% |
 | EBITDA | ₩430105.2bn | ₩636539.1bn |
-| EPS | ₩46404.32 | ₩75198.30 |
+| EPS | ₩46433.37 | ₩75326.22 |
 | Capex | ₩75971.6bn | ₩91715.0bn |
 | OCF (≈EBITDA) | ₩430105.2bn | ₩636539.1bn |
 

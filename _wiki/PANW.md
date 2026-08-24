@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\PANW` (10-K FY25, 10-Q FQ3 FY26, transcripts) · `_equity_calls` · `E:\briefings\2026\*.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-21 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-08-24 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
