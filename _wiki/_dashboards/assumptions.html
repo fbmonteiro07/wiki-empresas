@@ -21,7 +21,7 @@ td.r,th.r{text-align:right;white-space:nowrap}
 .pill.up{background:#e7f6ec;color:#1c7d3f} .pill.dn{background:#fdecea;color:#c0392b} .pill.due{background:#fff3cd;color:#8a6d1b}
 code{background:#eef1f6;padding:1px 5px;border-radius:4px;font-size:85%;font-family:ui-monospace,Consolas,monospace}
 </style></head><body>
-<header><h1>Canonical assumptions — one number per debate</h1><p>2026-08-22 · every cross-page number, all variants, scope traps flagged · <a href="../index.html">← back to wiki</a></p></header><main><h2>Custom-ASIC vs merchant-GPU share of AI accelerators <span class='pill due'>live debate</span></h2>
+<header><h1>Canonical assumptions — one number per debate</h1><p>2026-08-24 · every cross-page number, all variants, scope traps flagged · <a href="../index.html">← back to wiki</a></p></header><main><h2>Custom-ASIC vs merchant-GPU share of AI accelerators <span class='pill due'>live debate</span></h2>
 <p class='byline'>ASIC/XPU vs merchant-GPU split of AI accelerator shipments — ALWAYS state basis (units vs dollars) and horizon.</p>
 <p><b>Canonical:</b> Near-term unit share inflects to ASICs (JPM: 42% 2026E -&gt; 53% 2027E, units) while long-term dollar/unit share settles ~65-70% GPU (BofA AI 2030, UBS durable 70/30). These are horizons, not contradictions — the debate is whether the 2027 unit inflection sticks or plateaus.</p>
 <p style='background:#fff3cd;padding:8px 12px;border-radius:6px'>⚠️ <b>Scope:</b> Unit share ≠ dollar share (ASIC ASPs are far lower). NVDA-page &#x27;~70% defensible&#x27; framing = long-horizon accelerator share, consistent with BofA 65-70% by 2030, NOT a rebuttal of JPM&#x27;s 2027 unit-share call.</p>
@@ -38,6 +38,7 @@ code{background:#eef1f6;padding:1px 5px;border-radius:4px;font-size:85%;font-fam
 <li><code>ARM.md</code> — …h largely doesn&#x27;t build CPUs) wins more ASIC share, every Broadcom/MTIA deployment **still needs a host CPU**…</li>
 <li><code>ASML.md</code> — …AM/logic demand mix now ~50/50** (from ~70/30 logic); DRAM litho-intensity NOT falling — **6F²→4F² transi…</li>
 <li><code>AVGO.md</code> — …s part of [[MEDIATEK]]&#x27;s raised 2027 AI-ASIC share guide (10-15% → 15-20%, ≈$14bn of revenue) to &quot;increased al…</li>
+<li><code>CRM.md</code> — …tion-to-API at the start of the year to 70/30.** (FundaAI enterprise AI adoption survey, 13 interviews, 1…</li>
 <li><code>GOOG.md</code> — …DIATEK]] confirmed its expected 2027 AI-ASIC share rising from 10-15% to 15-20% (≈$14bn of revenue at the midp…</li>
 <li><code>INTC.md</code> — …99%; advanced packaging a **&quot;Coke-Pepsi 70/30&quot; duopoly** (Intel the Pepsi) capped 20-30% share absent a w…</li>
 <li><code>LITE.md</code> — …if-converted diluted drag into actual basic shares, which is a different line.** - **Housekeeping from the fi…</li>
@@ -53,10 +54,11 @@ code{background:#eef1f6;padding:1px 5px;border-radius:4px;font-size:85%;font-fam
 <li><code>themes/cowos-packaging.md</code> — …— the cleanest available read on custom-ASIC share shifting inside a fixed packaging envelope. - **NEW (2026-0…</li>
 <li><code>themes/cxl-memory-fabric.md</code> — …August, *&quot;a structure in which multiple XPUs and racks reach a SHARED WARM KV [CACHE] TIER OF UP TO 32TB over an optical fabric…</li>
 <li><code>themes/hbm-memory.md</code> — …o a higher HBM mix lowers volatility. **ASIC share of HBM is rising but &quot;the majority still goes into GPU.&quot;**…</li>
+<li><code>themes/hyperscaler-capex.md</code> — …arma from ~80/20 subscription-to-API to 70/30.** - 🔴 **THE DELIVERY BOTTLENECK IS NOW THE BINDING CONSTRA…</li>
 <li><code>themes/macro-cycle.md</code> — …nsible. The current sell-side split is ~70/30 bull vs skeptic, but the skeptic case has gotten more sophi…</li>
 <li><code>themes/optical-cpo.md</code> — …-priced:** `TAM = XPU units × ports-per-XPU × $/port × external share`. A circuit switch doesn&#x27;t re-price with line rate (house p…</li>
 <li><code>themes/semicap-wfe.md</code> — …/logic demand mix is now **~50/50 (was ~70/30 logic)**. On multi-beam e-beam inspection (HMI): the curren…</li>
-<li><code>themes/tokenmaxxing.md</code> — …80%+ proprietary Claude/GPT); **Claude ~70/30 over GPT** after the GPT-5.5 resurgence; **data agents are…</li>
+<li><code>themes/tokenmaxxing.md</code> — …tion-to-API at the start of the year to 70/30.** ⚠️ **Seat saturation is a structural headwind to per-sea…</li>
 </ul>
 <h2>WFE market size CY26 / CY27 / CY28 <span class='pill dn'>house vs street</span></h2>
 <p class='byline'>Total wafer-fab equipment market ($bn) by calendar year.</p>
@@ -80,19 +82,23 @@ code{background:#eef1f6;padding:1px 5px;border-radius:4px;font-size:85%;font-fam
 <p><b>Debate:</b> CY28: house $260B top vs street $230-250B. Resolves on memory greenfield timing + EUV shipments. UNIT BRIDGE (2026-07-01): believing house $260B = believing ASML flexes to ~110-120 EUV ships in 2028 (above the ~90 supply-chain sizing; JPM says 110+ feasible). Base bottom-up demand supports ~88-95; the gap = faster DRAM node migration + 2029 pre-provisioning.</p>
 <p class='mut'><b>Unreconciled sightings:</b></p><ul>
 <li><code>ADVANTEST.md</code> — …*settle at 7-9%, most likely 7-8%**. On WFE approaching **~$250B by the end of the decade**, that implies a **total ATE TAM…</li>
-<li><code>AMAT.md</code> — …· Hosseini, 2026-08-13). **This page&#x27;s WFE marks — Bernstein $154bn/$204bn/$259bn and UBS &gt;$200bn/&#x27;27, $250bn/&#x27;28 — got no company validatio…</li>
+<li><code>AIXA.md</code> — …e revision, in full: 2026 / 2027 / 2028 WFE to $150bn / $218bn / $281bn (+36% / +45% / +29% y/y) from $141bn / $186bn / $208bn (+2…</li>
+<li><code>AMAT.md</code> — …e revision, in full: 2026 / 2027 / 2028 WFE to $150bn / $218bn / $281bn (+36% / +45% / +29% y/y) from $141bn / $186bn / $208bn (+2…</li>
+<li><code>BESI.md</code> — …e revision, in full: 2026 / 2027 / 2028 WFE to $150bn / $218bn / $281bn (+36% / +45% / +29% y/y) from $141bn / $186bn / $208bn (+2…</li>
 <li><code>DISCO.md</code> — …T moved because the sector model moved (WFE CY26/27/28 to $154bn / $204bn / $259bn, with DRAM WFE to $69bn/$96bn in 2027-28E), not because an…</li>
 <li><code>GLW.md</code> — …in the same week: [[KLAC]] raised CY26 WFE to the &quot;low $150B range&quot; and fell 7-9%; GLW beat every line and fell &gt;15% on…</li>
 <li><code>INTC.md</code> — …** (Rasgon / Dai, 2026-08-11), inside a WFE raise to **$148bn/$204bn/$259bn for 2026/27/28**. **JPM/Harlan Sur separately names INTC a…</li>
 <li><code>KIOXIA.md</code> — …2028 on &quot;NAND is recovering,&quot; inside a WFE raise to $148bn/$204bn/$259bn (2026/27/28)** (Bernstein / Rasgon &amp; Dai, 2026-08-11). **A…</li>
-<li><code>KLAC.md</code> — …e to this year&quot;; corrected, this year&#x27;s WFE went UP $6bn. CY27 $204bn and CY28 $259bn are internally consistent and stand unchanged.** ⚠️ **④ A…</li>
+<li><code>KLAC.md</code> — …e revision, in full: 2026 / 2027 / 2028 WFE to $150bn / $218bn / $281bn (+36% / +45% / +29% y/y) from $141bn / $186bn / $208bn (+2…</li>
 <li><code>META.md</code> — …hat is a three-way spread of ~$145bn / ~$200bn / $250bn+ on 2027 capex, and it is logged unreconciled because it i…</li>
 <li><code>MU.md</code> — …bottleneck until ~110 physical slots (~$225B WFE); ASML is getting the same 8-10-quarter visibility as US to…</li>
 <li><code>NVDA.md</code> — …model-builder that reinvests in capex. WFE $250B in 2028. | | 06-15 | Barclays · O&#x27;Malley / Rand | valuation…</li>
 <li><code>SPCX.md</code> — …&#x27;S WFE MODEL.** Bernstein raised global WFE to **$148bn (2026) / $204bn (2027) / $259bn (2028)** — from $141bn/$175bn/$198bn — and in listing the…</li>
 <li><code>TER.md</code> — …the WFE→ATE time lag. Framing marks: **WFE approaching ~$250B by end of the decade**, driving **5-10% annual 300mm wafer…</li>
-<li><code>TOKYOELEC.md</code> — …treet keeps raising — UBS/Arcuri models WFE TAM ~$200B CY27 / ~$250B CY28 and says the buy side is &quot;not there&quot; ([semicap-wfe](th…</li>
+<li><code>TOKYOELEC.md</code> — …e revision, in full: 2026 / 2027 / 2028 WFE to $150bn / $218bn / $281bn (+36% / +45% / +29% y/y) from $141bn / $186bn / $208bn (+2…</li>
+<li><code>TSEM.md</code> — …SECTOR BACKDROP: GOLDMAN RAISED 2026-28 WFE TO $150bn / $218bn / $281bn (from $141bn / $186bn / $208bn), i.e. 2028 growth goes fro…</li>
 <li><code>TSM.md</code> — …der (SpaceX AI capex ~$1.1T/5yrs, ~20%/~$225B to Terafab, ~$135B WFE/5yrs). Cuts mixed for TSMC: near-term it validates that TSM…</li>
+<li><code>VECO.md</code> — …e revision, in full: 2026 / 2027 / 2028 WFE to $150bn / $218bn / $281bn (+36% / +45% / +29% y/y) from $141bn / $186bn / $208bn (+2…</li>
 <li><code>themes/hbm-memory.md</code> — …to +58% and +42% on recovery, inside a WFE raise to $148bn / $204bn / $259bn** (Bernstein / Rasgon &amp; Dai, 2026-08-11 desk distribution;…</li>
 <li><code>themes/hyperscaler-capex.md</code> — …t is a **three-way spread of ~$145bn / ~$200bn / $250bn+ on a single company&#x27;s 2027 capex**, recorded rather than…</li>
 </ul>
@@ -269,7 +275,7 @@ code{background:#eef1f6;padding:1px 5px;border-radius:4px;font-size:85%;font-fam
 <li><code>MSFT.md</code> — …d: no volumes, node, packaging partner, HBM config, pricing, or any Anthropic commitment (email carried the lede only;…</li>
 <li><code>OPENAI.md</code> — …g&quot; (2026-06-29) — Jalapeño specs (216GB HBM3e, ~740mm², ~700W, TSMC 3nm, ASP ~$15k, ~50% lower cost / 40% lower power vs Blackwell, 9-mo…</li>
 <li><code>QCOM.md</code> — …ramme on this wiki that is NOT gated by HBM allocation or CoWoS — which is exactly the constraint set doing the da…</li>
-<li><code>SAMSUNG.md</code> — …ting a 5y base term with 1y rollover**; HBM ASP more than doubling in 2027 with **HBM4 share reaching 44% (…</li>
+<li><code>SAMSUNG.md</code> — …an source it:** *&quot;Investors found SEC&#x27;s HBM pricing and wallet share commentary more aggressive vs SKH prioriti…</li>
 <li><code>SNDK.md</code> — …nel Mizuho names for SNDK is the memory/HBM leg, not NAND pricing:** VR-Ultra driving *&quot;strong NPO/CPO adoption and upside to…</li>
 <li><code>themes/china-export.md</code> — …d SKH cash-return sensitivity), and the HBM share / wallet-share / ASP-by-generation series. ⚠️ Note the top-line of this note was…</li>
 <li><code>themes/cowos-packaging.md</code> — …is model. At JPM&#x27;s own 2028E HBM ASP of $3.4/Gb that ~390mn 1GB-eq wedge is on the order of **$10bn+ of HBM…</li>
@@ -323,7 +329,7 @@ code{background:#eef1f6;padding:1px 5px;border-radius:4px;font-size:85%;font-fam
 <li><code>AMAT.md</code> — …g&quot; (Hill) | | **Advanced packaging (HBM/CoWoS)** | To &gt;double to &gt;$3B; share above co. avg | HBM among fastest-growing segments | Fastes…</li>
 <li><code>AMD.md</code> — …&#x27;s ADVANCED PACKAGING ALLOCATION (TSM&#x27;s CoWoS + ASE&#x27;s FoCoS) to 300k for 2027E (+260% y/y), which points to higher output on both their GPUs and…</li>
 <li><code>AMZN.md</code> — …). (@SemiAnalysis_, 2026-07-14) - **AWS CoWoS allocation: share slips, wafers still +54% — read the denominator, not the percentage (Fubon &quot;Our adva…</li>
-<li><code>AVGO.md</code> — …pply chain &amp; foundry capacity (new) - **CoWoS allocation raised:** Fubon (dist. Jefferies) lifts AVGO&#x27;s total TSM…</li>
+<li><code>AVGO.md</code> — …]] and [[INTC]]** and says **[[NVDA]]&#x27;s CoWoS share at [[TSM]] &quot;will remain stable in 2027.&quot;**) - **Why this is…</li>
 <li><code>BESI.md</code> — …on needs (HBM stacking, logic-on-logic, CoWoS-class 2.5D). AI-related orders were ~50% of total 2025 orders (Q4-25 call, 2026-02-19). Margins are…</li>
 <li><code>GOOG.md</code> — …ly for the TPU ramp (Broadcom/MediaTek, CoWoS allocation, HBM4) laid out in the TPU section. Small, but it is the…</li>
 <li><code>INTC.md</code> — …ER edge quantified (EMIB ~0.30pJ/bit vs CoWoS 0.56, ~50% saving)**, complementing the page&#x27;s cost edge (50% cheaper). Offset logged: Mizuho&#x27;s own CoPoS pull-in call (2…</li>
@@ -337,7 +343,7 @@ code{background:#eef1f6;padding:1px 5px;border-radius:4px;font-size:85%;font-fam
 <li><code>NVDA.md</code> — …dia, AMD and Broadcom. That is the same CoWoS-allocation squeeze the page tracks via Nomura (06-30) and Jefferies…</li>
 <li><code>SAMSUNG.md</code> — …TPU), 2027 CapEx revised up to ~$78bn, CoWoS to ~220k/mo by end-2027 — implying limited near-term 2nm share leakage to Samsung/Intel; read alongside Gokul&#x27;s ~5-6% Sams…</li>
 <li><code>SKHYNIX.md</code> — …i version later. Assuming NVIDIA&#x27;s 2027 CoWoS allocation is 1,200k, NVIDIA&#x27;s accelerator output is estimated at 9…</li>
-<li><code>TSM.md</code> — …5B / 82B in 2026 / 27 / 28.** - **🔴 The CoWoS statement is a deliberate strategic choice, not a share loss to be feared: &quot;TSMC is strategically &#x27;ALLOWING&#x27; share…</li>
+<li><code>TSM.md</code> — …to themes/semicap-wfe. - **➖ Neutral — CoWoS allocation is holding at the top:** **&quot;Nvidia&#x27;s CoWoS share at TSM will remain stable in 2027&quot;**, with **460k CoWoS (AS…</li>
 <li><code>themes/hbm-memory.md</code> — …es via @jukan05: assuming **NVDA&#x27;s 2027 CoWoS allocation of 1,200k → accelerator output ~9.9M units, Rubin Ultra…</li>
 <li><code>themes/optical-cpo.md</code> — …ynman) delayed with midplane headwinds; CoWoS +&gt;75% y/y in 2027E; CSP capex +111%/+50% in 2026E/2027E to ~$1T/~$1.5T. Preferred names into 2027E:…</li>
 <li><code>themes/outros-asia.md</code> — …BS expects TSMC to lean on its existing CoWoS suppliers and sees **GPTC&#x27;s share rising to 70-80% in CoPoS, from roughly 50% in CoWoS** — th…</li>
