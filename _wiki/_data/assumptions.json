@@ -430,7 +430,7 @@
   "hbm-cycle": {
    "title": "HBM — capacity, pricing, allocation, sold-out claims",
    "definition": "HBM wafer capacity, $/GB or $/Gb pricing (state which), allocation priority, sold-out horizon.",
-   "canonical": "Sold out CY26 incl. HBM4 (Micron Q1 FY26). Capacity ~473k wspm end-26E -> ~668k end-27E (SemiAnalysis). Pricing: NVDA HBM ~$17-18/GB 2026 -> $30-32/GB 2027, +70-80% (Redburn); blended ASP +~30% (JPM/Micron). Live tension: general-server DRAM overtook HBM as allocation priority #1 (Redburn/TrendForce) yet HBM pricing still marches higher. 2027 supply revised 60B -> 50B Gb-equiv on allocation, not demand (Redburn).",
+   "canonical": "Sold out CY26 incl. HBM4 (Micron Q1 FY26). Capacity ~473k wspm end-26E -> ~668k end-27E (SemiAnalysis). Pricing: NVDA HBM ~$17-18/GB 2026 -> $30-32/GB 2027, +70-80% (Redburn); blended ASP +~30% (JPM/Micron). Live tension: general-server DRAM overtook HBM as allocation priority #1 (Redburn/TrendForce) yet HBM pricing still marches higher. 2027 supply revised 60B -> 50B Gb-equiv on allocation, not demand (Redburn). Trade ratio: HBM3E consumes ~3:1 DRAM wafer capacity per bit -> ~4:1 at HBM4/4E (Micron Sadana 2026-08-10; BMO/Mizuho ~4:1) — DRAM->HBM conversion REDUCES net industry bit supply.",
    "scope_note": "$/GB (stack) vs $/Gb (die) are ~8-16x apart — always state units. TAM frames: $35B'25 -> $100B'28 (Micron/JPM) vs $168B CY30 (BofA) are different horizons, both valid.",
    "patterns": [
     "HBM.{0,50}sold.?out",
@@ -446,6 +446,17 @@
      "scope": "sold-out",
      "cited_in": [
       "themes/hbm-memory.md"
+     ]
+    },
+    {
+     "value": "trade ratio 3:1 at HBM3E -> ~4:1 at HBM4E ('100 bits of HBM = reduce 300 bits of DDR supply'); HBM absorbs ~24%/30% of industry DRAM wafer capacity end-26/27 (UBS Gaudois)",
+     "source": "Micron Sadana (EVP/CBO), KeyBanc Technology Leadership Forum; corrob. BMO ~4:1 (2026-08-20), Mizuho 4:1 (2026-05-27)",
+     "date": "2026-08-10",
+     "scope": "trade-ratio",
+     "cited_in": [
+      "themes/hbm-memory.md",
+      "themes/internal-weekly-meeting.md",
+      "MU.md"
      ]
     },
     {

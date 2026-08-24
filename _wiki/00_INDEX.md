@@ -43,7 +43,7 @@ Each page follows the [_TEMPLATE](_TEMPLATE.md): Snapshot · Current state (late
 ## AI labs (private)
 | Ticker | Page | One-line thesis |
 |---|---|---|
-| ANTHROPIC | [Anthropic](ANTHROPIC.md) | Private frontier lab (Claude); enterprise/coding leadership + Amazon/Google compute; ~$40B+ ARR. No public financials. |
+| ANTHROPIC | [Anthropic](ANTHROPIC.md) | Private frontier lab (Claude); enterprise/coding leadership + Amazon/Google compute; $65B+ ARR (conflict-flagged vs >$70B, bases unknown pre-S1). IPO window late-Sep/early-Oct. |
 | OPENAI | [OpenAI](OPENAI.md) | Private frontier lab (ChatGPT/GPT); scale + distribution vs cash burn + sub-50% share; Microsoft-anchored. No public financials. |
 
 ## Semiconductor equipment (semicap)

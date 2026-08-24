@@ -1,8 +1,8 @@
 {
  "generated": "2026-08-24",
  "counts": {
-  "nodes": 162,
-  "edges": 1633
+  "nodes": 163,
+  "edges": 1666
  },
  "nodes": [
   {
@@ -198,14 +198,14 @@
    "type": "ticker",
    "label": "ANTHROPIC",
    "sector": "AI labs (private)",
-   "thesis": "Private frontier lab (Claude); enterprise/coding leadership + Amazon/Google compute; ~$40B+ ARR. No public financials.",
+   "thesis": "Private frontier lab (Claude); enterprise/coding leadership + Amazon/Google compute; $65B+ ARR (conflict-flagged vs >$70B, bases unknown pre-S1). IPO window lat",
    "in_book": false,
    "docs": {
     "briefing": 1,
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-08-21"
+   "last_chg": "2026-08-24"
   },
   {
    "id": "AOSL",
@@ -447,7 +447,7 @@
     "transcript": 4,
     "wiki": 1
    },
-   "next_catalyst": "",
+   "next_catalyst": "2026-08-26",
    "last_chg": "2026-08-13"
   },
   {
@@ -1544,6 +1544,12 @@
    "type": "theme",
    "label": "hyperscaler-capex",
    "title": "Theme — Hyperscaler Capex"
+  },
+  {
+   "id": "theme:internal-weekly-meeting",
+   "type": "theme",
+   "label": "internal-weekly-meeting",
+   "title": "Theme — Internal Weekly Meeting (US Equities)"
   },
   {
    "id": "theme:macro-cycle",
@@ -4148,6 +4154,198 @@
    "label": ""
   },
   {
+   "u": "theme:internal-weekly-meeting",
+   "v": "AGX",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "AMZN",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "ANTHROPIC",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "AVGO",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "CIEN",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "CRM",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "CRWD",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "CRWV",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "CSCO",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "DELL",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "GEV",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "GLW",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "GOOG",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "HPE",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "INTC",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "KIOXIA",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "META",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "MRVL",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "MSFT",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "MU",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "NBIS",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "NET",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "NVDA",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "OPENAI",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "PWR",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "SAMSUNG",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "SKHYNIX",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "SNDK",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "SPCX",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "TLN",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "TSM",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:internal-weekly-meeting",
+   "v": "VST",
+   "type": "exposes",
+   "label": ""
+  },
+  {
    "u": "theme:macro-cycle",
    "v": "AAPL",
    "type": "exposes",
@@ -4888,6 +5086,12 @@
   {
    "u": "assum:hbm-cycle",
    "v": "theme:hbm-memory",
+   "type": "cites",
+   "label": ""
+  },
+  {
+   "u": "assum:hbm-cycle",
+   "v": "theme:internal-weekly-meeting",
    "type": "cites",
    "label": ""
   },
@@ -6149,7 +6353,7 @@
    "v": "ANTHROPIC",
    "type": "covers",
    "label": "",
-   "w": 184
+   "w": 185
   },
   {
    "u": "broker:Stratechery",
@@ -7297,7 +7501,7 @@
    "v": "CRM",
    "type": "covers",
    "label": "",
-   "w": 48
+   "w": 49
   },
   {
    "u": "broker:JPM",
@@ -7325,7 +7529,7 @@
    "v": "CRM",
    "type": "covers",
    "label": "",
-   "w": 8
+   "w": 9
   },
   {
    "u": "broker:Barclays",

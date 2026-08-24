@@ -118,7 +118,7 @@ Beat that "cleared the bar but didn't change the AI debate" — stock ~flat to -
 - **Where the sell-side stands (on-disk, attributed):** **MS (Weiss) OW $287** (2026-05-28); **Barclays (Lenschow) OW, PT cut $252→$236**, "solid but not thesis-changing" (2026-05-28); **UBS (Keirstead) Neutral** (2026-05-28); **R&Co Redburn Buy** (2026-05-28); **BofA Underperform $160** (2026-05-19); **JPM (Murphy)** suspended rating/PT for policy reasons into the print (2026-05-27). Net: bifurcated — growth-discount bears vs self-help/agentic bulls; the swing variable is H2 FY27 cRPO acceleration + Agentforce ARR slope.
 
 ## Catalysts / what to watch
-- **Q2 FY27 print** (~early Sep 2026, by cadence — Q2 FY26 was 2025-09-03). Watch: H2 cRPO acceleration (the whole bull/bear hinge), Agentforce ARR slope past $1bn, token/work-unit growth, and whether non-seat/consumption mix is disclosed.
+- **Q2 FY27 print: 2026-08-26** (sourced date per UBS · Keirstead 08-11 / DB 08-19 elsewhere on this page; a prior version of this bullet said "~early Sep by cadence" — corrected 2026-08-24 by the meeting-debate-sweep). Watch: H2 cRPO acceleration (the whole bull/bear hinge), Agentforce ARR slope past $1bn, token/work-unit growth, and whether non-seat/consumption mix is disclosed.
 - **BofA SF Global Tech Conference 2026-06-02–04** — CRM on the roster (briefing 2026-05-28); watch for agentic-monetization framing.
 - Tableau/Marketing/Commerce stabilization — the drag offsetting Agentforce.
 - Informatica integration revenue contribution; further M&A.

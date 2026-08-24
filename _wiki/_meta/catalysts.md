@@ -2,11 +2,12 @@
 
 _Generated 2026-08-24 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (26)
+## 📅 Upcoming (27)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
 | 2026-08-25 | NVDA | **🆕 2026-08-25, 08:00 EST — MS Global Technology call: "Nvidia, Neoclouds, Memory and Analog"** with Shawn Kim (MS, 2026-08-24) — the day before the print. |
+| 2026-08-26 | CRM | **Q2 FY27 print: 2026-08-26** (sourced date per UBS · Keirstead 08-11 / DB 08-19 elsewhere on this page; a prior version of this bullet said "~early Sep by cadence" — corrected 2026-08-24 by the meeti |
 | 2026-08-26 | NVDA | **Q2 FY27 print: 2026-08-26** (guided $91B). Watch hyperscale vs hyperscale-capex growth under new segmentation (Arcuri: becomes a debate if NVDA ever under-grows it). |
 | 2026-08-26 | NVDA | **🆕 Buy-side bogeys are ABOVE the sell-side into 2026-08-26.** UBS guides FQ3 to ~$107-108bn, *"although investor 'bogeys' appear closer to **$110b+**"* (UBS Sales · Ruple, 2026-08-15) — the same $110 |
 | 2026-08-26 | NVDA | **🆕🔴 2026-08-26 (AMC) — Q2 FY27: the bogey stack is now THREE-DEEP AND INVERTED VS THE STREET.** Buy-side (BofA poll, 08-24): **FQ2 $94.6bn / EPS $2.18; FQ3 guide $109bn / EPS $2.48 / GM 74.8%**. JPM  |
