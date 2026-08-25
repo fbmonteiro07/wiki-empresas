@@ -2,24 +2,30 @@
 
 _Generated 2026-08-24 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (27)
+## 📅 Upcoming (33)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
+| 2026-08-24 | LITE | **🆕 2026-08-24 — A FORM 144 WAS FILED (proposed sale of securities), timestamped 16:15 ET.** (Lumentum IR alert via Q4 Inc., 2026-08-24) ⚠️ **A Form 144 is a NOTICE OF INTENT by an affiliate to sell r |
+| 2026-08-24 | LITE | **🆕 2026-08-24 — tape:** LITE was among the chips/components/infrastructure underperformers on a **SOX −3%** session, alongside [[COHR]], [[CIEN]], [[CRDO]] and [[GLW]] (Vital Knowledge · Adam Crisafu |
+| 2026-08-24 | TSLA | **🆕 2026-08-24 — tape:** TSLA traded with the **autos underperformers (APTV, F, GM)** rather than with the hyperscalers on a session where AI-linked names fell and non-AI tech rallied (Vital Knowledge |
 | 2026-08-25 | NVDA | **🆕 2026-08-25, 08:00 EST — MS Global Technology call: "Nvidia, Neoclouds, Memory and Analog"** with Shawn Kim (MS, 2026-08-24) — the day before the print. |
 | 2026-08-26 | CRM | **Q2 FY27 print: 2026-08-26** (sourced date per UBS · Keirstead 08-11 / DB 08-19 elsewhere on this page; a prior version of this bullet said "~early Sep by cadence" — corrected 2026-08-24 by the meeti |
 | 2026-08-26 | NVDA | **Q2 FY27 print: 2026-08-26** (guided $91B). Watch hyperscale vs hyperscale-capex growth under new segmentation (Arcuri: becomes a debate if NVDA ever under-grows it). |
 | 2026-08-26 | NVDA | **🆕 Buy-side bogeys are ABOVE the sell-side into 2026-08-26.** UBS guides FQ3 to ~$107-108bn, *"although investor 'bogeys' appear closer to **$110b+**"* (UBS Sales · Ruple, 2026-08-15) — the same $110 |
 | 2026-08-26 | NVDA | **🆕🔴 2026-08-26 (AMC) — Q2 FY27: the bogey stack is now THREE-DEEP AND INVERTED VS THE STREET.** Buy-side (BofA poll, 08-24): **FQ2 $94.6bn / EPS $2.18; FQ3 guide $109bn / EPS $2.48 / GM 74.8%**. JPM  |
 | 2026-08-26 | NVDA | **🆕🔴 2026-08-26 IS NOW EXPLICITLY NAMED AS "THE FIRST FORMAL TEST" OF THE FINANCING ARCHITECTURE (Ash & Seed Press · Shanaka Anslem Perera, "THE CONTINUITY STACK", 2026-08-18 — ⚠️ independent Substack |
+| 2026-08-26 | NVDA | **🆕🔴 2026-08-26, ~16:20 ET print / 17:00 ET call — NVDA HAS TOLD A REPORTER THE $500BN FINANCING WILL BE ADDRESSED ON THIS CALL.** Asked for detail, *"An Nvidia spokesperson said the topic will likely |
 | 2026-08-26 | SKHYNIX | **🆕 2026-08-26, 09:00 HKT — Nanya Tech President call (BofA-hosted).** Nanya is the cleanest independent read on the CXMT question — at the JPM tour it argued **CXMT "has now been present in the marke |
 | 2026-08-26 | SNPS | **🆕 2026-08-26 (Wed) — 3Q26 print, with the bar already met in consensus.** MS expects revenue $2.45bn / EPS $3.68 at the upper end of the guide, versus consensus already at $2.44bn / $3.68. **The asy |
 | 2026-08-27 | MRVL | **🆕🔴 2026-08-27 (AMC) — Q2 FY27: the bogey stack is now FOUR-DEEP and the houses disagree on the guide by ~2.5%.** Jefferies (08-20): **July $2.8bn vs Street $2.7bn; October guide $3.1bn vs Street $3. |
 | 2026-08-27 | NVDA | **🆕 2026-08-27, 08:00 EST — BofA hosts a post-print NVDA call with Vivek Arya** (BofA sales, 2026-08-24). |
+| 2026-08-27 | NVDA | **🆕 2026-08-27, 08:30 ET — UBS hosts its NVDA earnings recap call with Tim Arcuri** (UBS Semis Investor Calls schedule, Robert Ruple, 2026-08-24; replay ~60 min post-call for 30 days). |
 | 2026-08-27 | SAMSUNG | **🆕 2026-08-27, 09:00 HKT — BofA hosts a Samsung C&T SMR / nuclear-power call.** Relevant here because **C&T is a key stakeholder of Samsung Electronics** and constructs SMR/nuclear plants — BofA is u |
 | 2026-08-31 | TXN | **CFO transition:** Rafael Lizardi out 2026-08-01 → **Julie Knecht** (CAO, 25-yr veteran), advisory through 2026-08-31 (DB/Seymore, briefing 2026-06-03). |
 | 2026-09-02 | AVGO | **🆕🔴 2026-09-02 — FQ3 FY26 print, and the bar is set by consensus rather than by the guide: ~$120bn of FY27 AI sales is in the Street's numbers versus management's ">$100bn" (BofA · Arya, 2026-08-19). |
 | 2026-09-02 | NVDA | **2026-08-26 (AMC) — Q2 FY27 print.** Street/house bogeys now on the page from three houses: **UBS/Arcuri report $110-111bn, guide bogey $107-108bn** (08-14) vs **MS/Moore July $91.1bn, October $102.3 |
+| 2026-09-03 | TSLA | **🆕 2026-09-03 — CYBERCAB EVENT, AND THE PRE-READ IS DELIBERATELY DEFLATIONARY.** *"Tesla will hold a **Cybercab event on Sept 3**, but it sounds like this will be **relatively anticlimactic, with the |
 | 2026-09-11 | TER | **Q3 CY26 print (~late Oct 2026)** — first test of the re-cut 2H, and of whether the merchant-GPU/second-hyperscaler correlation converts into guided revenue. Quiet period begins **2026-09-11**; manag |
 | 2026-09-14 | NVDA | **🆕 Post-print access, both dated:** **BofA fireside with Toshiya Hari, VP of IR & Strategic Finance, hosted by Vivek Arya — 2026-09-02, 11:00 ET (~1hr)** (BofA TMT Sales, 2026-08-14) · **UBS-arranged |
 | 2026-09-16 | ON | **2026-09-16 — onsemi Analyst Day** (Citi exp. ~Sep 13 print first) — the key event; watch for a raised long-term target model + SiC/800V framing (Citi, briefing 2026-06-15). |
