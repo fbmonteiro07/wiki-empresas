@@ -6,6 +6,8 @@ _Wiki · created 2026-08-24 · **rolling page** — one section per weekly inter
 
 The team's weekly internal meeting is where debates are opened, assumptions circulate, and the to-do list grows. This page closes the loop: every debate point gets a **wiki answer** with attribution, every quantitative claim gets a **verdict** (CONFIRMED / PARTIAL / CONTRADICTED / UNVERIFIED), and every action item gets mapped to **what already exists** in the wiki/house stack — so the to-do only carries real gaps. Meeting datapoints are attributed "internal weekly YYYY-MM-DD" unless a broker/analyst is named; machine-transcription garbles are tracked in each briefing's noise ledger.
 
+**⚖️ Authority runs one way (house rule, 2026-08-25): the wiki corrects the meeting notes — the meeting NEVER corrects the wiki.** Meeting claims are hypotheses; any wiki edit a sweep triggers must be sourced from the corpus/BBG/web with changelog discipline (the meeting is the trigger, never the citation), and meeting-only color (e.g. prime-broker positioning) stays on this page and its briefings — it never propagates to ticker pages as fact. The sweep also carries standing authorization to launch resolution agents on the problems each meeting raises.
+
 ---
 
 # Meeting 2026-08-24
@@ -164,6 +166,7 @@ _No wiki page (plain text): Semtech (NPO analog supplier), Nutanix, Pure Storage
 
 ## Changelog
 
+- 2026-08-25 — **house rule codified (Felipe): authority runs wiki → meeting, never meeting → wiki** — meeting content is never a source for wiki pages; sweep-triggered wiki fixes must be corpus/BBG/web-sourced; meeting-only color quarantined here. Standing authorization added: resolution agents may be launched proactively on each meeting's problems. (Rule also written into the meeting-debate-sweep agent definition + session memory. Audit of the 2026-08-24 run: compliant — the ANTHROPIC one-liner, hbm trade-ratio and CRM date fixes were all corpus-sourced.)
 - 2026-08-24 (v3) — **action item #3 closed: AI credit & funding monitor built** (`_dashboards/credit-monitor.html` + `_tools/fetch_funding.py`/`build_funding_monitor.py` + `_data/funding_deals.json`; EN, wiki-internal, manual refresh by design, hub card added). Bond-level live series pending ISINs (bonds[] slot); sovereign issuance remains a corpus gap.
 - 2026-08-24 (v2, post-sweep) — six-cluster debate sweep folded in: 17-row fact-check scoreboard (2 CONTRADICTED: Anthropic-$7B artifact, TSM-tracks-SMH; the "40% FCF" claim split per-name on live BBG), 9 debate answers (incl. the INVERTED ex-AWS rev-share memory), action-item map (items #8/#9 ~70% pre-built), 4 deep-dive briefs (NVDA backstop pre-print, TaaS, Anthropic pre-S1 starter, cloud-window sketch), week watch-list with 2 calendar corrections (CRM Wed 08-26; DELL Thu 09-03), ranked follow-ups. Side-effects logged on their own pages: ANTHROPIC index one-liner refresh (ANTHROPIC.md Changelog), HBM 3:1→4:1 trade-ratio variant added to `assumptions.json` (`hbm-cycle`).
 - 2026-08-24 — page created; 2026-08-24 meeting ingested (briefing + PDF archived); debate sweep launched (6 clusters).
