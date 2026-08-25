@@ -8,17 +8,17 @@
 _Wiki · generated 2026-06-19 · **Korean issuer — NO SEC filings (no 10-K/10-Q/20-F).** Sources: `E:\Wiki Felipe\SKHYNIX\transcripts` (4 earnings calls, SK hynix holds English calls) · SK hynix IR (news.skhynix.com) · `_equity_calls` · `E:\briefings\2026` · BBG (KRW). Master index: [00_INDEX.md](00_INDEX.md) · Theme: [hbm-memory](themes/hbm-memory.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-24 · KRW
+### 📊 Consensus snapshot — BBG · asof 2026-08-25 · KRW
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | ₩351528.0bn | ₩544681.4bn |
-| Gross profit | ₩295635.0bn | ₩458621.8bn |
+| Revenue | ₩351540.4bn | ₩544681.4bn |
+| Gross profit | ₩295645.5bn | ₩458621.8bn |
 | Gross margin | 84.1% | 84.2% |
-| EBITDA | ₩292496.6bn | ₩444533.2bn |
-| EPS | ₩320926.94 | ₩566102.46 |
+| EBITDA | ₩292496.6bn | ₩444057.1bn |
+| EPS | ₩321049.32 | ₩567656.28 |
 | Capex | ₩49049.2bn | ₩62664.3bn |
-| OCF (≈EBITDA) | ₩292496.6bn | ₩444533.2bn |
+| OCF (≈EBITDA) | ₩292496.6bn | ₩444057.1bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

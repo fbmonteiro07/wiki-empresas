@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\CRDO` (filings + transcripts) · `_briefings\2026\*` (heavily covered, ~42 hits). Master index: [00_INDEX.md](00_INDEX.md). Themes: [optical-cpo](themes/optical-cpo.md) · [custom-asic-tpu](themes/custom-asic-tpu.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-24 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-08-25 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|

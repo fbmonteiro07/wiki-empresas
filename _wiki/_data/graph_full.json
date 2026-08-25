@@ -1,8 +1,8 @@
 {
- "generated": "2026-08-24",
+ "generated": "2026-08-25",
  "counts": {
-  "nodes": 163,
-  "edges": 1667
+  "nodes": 164,
+  "edges": 1670
  },
  "nodes": [
   {
@@ -696,7 +696,7 @@
     "transcript": 9,
     "wiki": 1
    },
-   "next_catalyst": "2026-08-24",
+   "next_catalyst": "2026-09-22",
    "last_chg": "2026-08-17"
   },
   {
@@ -1331,7 +1331,7 @@
     "transcript": 1,
     "wiki": 1
    },
-   "next_catalyst": "2026-08-24",
+   "next_catalyst": "2026-09-03",
    "last_chg": "2026-08-21"
   },
   {
@@ -1496,6 +1496,12 @@
    "type": "theme",
    "label": "ai-datacenter-power",
    "title": "Theme — AI Data-Center Power & Nuclear"
+  },
+  {
+   "id": "theme:ai-datacenter-water",
+   "type": "theme",
+   "label": "ai-datacenter-water",
+   "title": "Theme — AI Data-Center Water & Ultrapure Water"
   },
   {
    "id": "theme:ai-tam-bofa",
@@ -3298,6 +3304,24 @@
   {
    "u": "theme:ai-datacenter-power",
    "v": "WMB",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:ai-datacenter-water",
+   "v": "AMZN",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:ai-datacenter-water",
+   "v": "TSM",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:ai-datacenter-water",
+   "v": "VRT",
    "type": "exposes",
    "label": ""
   },

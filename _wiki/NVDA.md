@@ -3,17 +3,17 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\NVDA` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\NVDA.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Snapshot — Capstone official model + BBG · asof 2026-08-24 · USD
+### 📊 Snapshot — Capstone official model + BBG · asof 2026-08-25 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | **$407.0bn** | **$661.0bn** |
 | Gross profit | $305.2bn | $489.1bn |
 | Gross margin | **75.0%** | **74.0%** |
-| EBITDA | $266.6bn | $392.7bn |
+| EBITDA | $266.5bn | $393.5bn |
 | EPS | **$9.26** | **$15.44** |
 | Capex | $7.5bn | $9.5bn |
-| OCF (≈EBITDA) | $266.6bn | $392.7bn |
+| OCF (≈EBITDA) | $266.5bn | $393.5bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 _**Bold** = Capstone official model; plain = BBG consensus._
@@ -268,6 +268,7 @@ The accelerated-computing platform that sits at the center of the AI buildout �
 | Quanta (2382.TW, OW) | NT$366.3bn (-5% m/m, +131% y/y) | **2.2-2.25K (-4% m/m)** | ~18.7K (unchanged) |
 | Wistron (3231.TW, OW) | NT$308.2bn (-4% m/m, +61% y/y) | **1,150-1,200 rack-equiv (-6% m/m)** | **~17.9K (raised)** |
 Hon Hai's m/m was led by server-related revenue; Quanta's and Wistron's m/m declines are notebook/DT/monitor, not racks. Wiwynn revenue NT$117.7bn (+6% m/m, +39% y/y).
+- **Model on disk (saved 2026-08-25):** the note's companion workbook (`Request_NV AI Server Model_081026.xlsx`, from the Kao email) → [NVDA/MS_Kao_NV_AI_Server_Model_2026-08-10.xlsx](../NVDA/MS_Kao_NV_AI_Server_Model_2026-08-10.xlsx) (team copies: `P:\US Equities\Rack B.O.M\` and the P: wiki mirror). 10 sheets: Nvidia Rack Layout · GPU Roadmap · ODM share analysis · GB200-300 monthly Tracker · NVL72 BoM Comparison · per-SKU BoMs (GB200 / GB300 / VR200) — including a **"VR200 BoM (Less Memory)"** variant sheet, i.e. MS's own model carries the de-spec'd memory config as a scenario, consistent with the four de-spec datapoints logged above.
 
 **🆕 2026-08-10 — Nvidia takes a stake in the power, not just the silicon.** NVDA has agreed to invest **$2bn into Lancium** — the power-infrastructure developer behind the **OpenAI/Oracle Stargate campus in Texas** — for **~20%**, and to commit **another $1bn as Lancium secures additional planned power**, which would take it to **~30%** once campuses hit thresholds including grid hookups. The deal values Lancium and its land/power-connection portfolio at **~$10bn enterprise value** including the investment and debt. Backer: **Blackstone**. Stated purpose: **secure multiple gigawatts of pending power rights for Nvidia's chip customers' data projects** as energy becomes the binding constraint (The Information / Ann Davis Vaughan, Valida Pau, Phoebe Liu, 2026-08-07-08; DIGITIMES, 2026-08-10). Vital Knowledge frames it inside the broader capital-structure point — **"the AI industry is demanding capital far above what companies are generating via operating cash flow"** — and notes SemiAnalysis speculation that **Nvidia could provide enormous vendor financing to SpaceX** for Musk's compute build-out (Vital Knowledge / Adam Crisafulli, 2026-08-10). Cross-ref [SPCX.md](SPCX.md), [OPENAI.md](OPENAI.md), [ORCL.md](ORCL.md).
 
