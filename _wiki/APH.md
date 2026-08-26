@@ -9,11 +9,11 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\APH` (filings + transc
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $34.4bn | $41.5bn |
-| Gross profit | $13.4bn | $16.5bn |
+| Revenue | $34.5bn | $41.3bn |
+| Gross profit | $13.4bn | $16.4bn |
 | Gross margin | 38.8% | 39.7% |
 | EBITDA | $11.1bn | $13.6bn |
-| EPS | $5.02 | $6.41 |
+| EPS | $5.03 | $6.41 |
 | Capex | $1.3bn | $1.4bn |
 | OCF (≈EBITDA) | $11.1bn | $13.6bn |
 
@@ -64,6 +64,13 @@ Amphenol sits in the middle of the AI-infrastructure interconnect chain: it buys
 </svg>
 
 ## Current state (latest quarter — Q1 FY2026, 2026-04-29)
+
+**🆕🔴 2026-08-25 — THE INTERCONNECT/PASSIVE SUPPLY CHAIN IS SIGNING LONGER AND HARDER CONTRACTS THAN THE END MARKET IS PRICING, AND JPM RANKED THEM BY DURATION.** From JPM's Asia Tech Tour (SEMCO, LGE, LGIT, ISU Petasys, ISC; 50+ investors) — *"suppliers pointed to a rise in **LTA discussions with key customers**, and it is worth noting both the **quantity** (from a couple of customers with short-duration LTA commitments to **5-10 customers with LONG-duration LTA commitments**) and **quality** (from B2C-centric to **B2B-centric, mainly in the AI space**) of customers have dramatically improved vs the previous '16-'18 first phase of the cloud investment cycle or the '20-'22 Work-From-Home cycle"* (JPM · Jay Kwon, Sangsik Lee, 2026-08-25).
+- 🔴 **THE DURATION RANKING, which is the single most useful line: "In the order of LTA duration and visibility, we have witnessed the longest at **ABF SUBSTRATE and TESTING SOCKET (3-5 years) > AI MLB (2-3 years of order visibility) > AI MLCC (1-2 years)**."** *"**Capex subsidization and dedicated production fabs** were also frequently discussed concepts."*
+- **MLCC — a seller's market, quantified:** *"suppliers are operating capacities at **full utilization (near 95%)** and accelerating capacity expansion (**tier-1 +20% y/y, tier-2 +10% y/y**) while adjusting mix toward AI-grade at the expense of IT MLCC. **AI MLCC product lead time is lengthening to as long as SIX MONTHS and equipment lead time is nearing NINE MONTHS or longer.** AI MLCC assembly yield is lower than standard MLCC and it commands a **significant ASP premium (certain segments 10x over standard spec; AI vs GP server also over 3x)**."* **JPM models AI/GP server demand rising from 5.5% of total MLCC industry demand in 26E to 11% in 28E.**
+- **Substrate — order books now reach 2030:** *"suppliers are **extending their order discussions beyond 2028E (as far as 2030E)** and plan additional capacity expansion,"* with **SEMCO/LGIT substrate OPM at +14%/+10% in 2Q26 (vs +8%/+8% in 1Q26 and +6%/+1% in 2Q25)**. **Unimicron adds the pricing mechanic: "LTA terms continue to FAVOUR SUBSTRATE MAKERS as they lock only VOLUME delivery and NOT THE PRICING," with substrate pricing negotiated by chip generation and guaranteeing "attractive margins (say, 50%-60%) these days even after taking fabrication yield into account"** (JPM · Jerry Tsai, 2026-08-25).
+- ⚠️ **A DISCIPLINE CAVEAT worth carrying: YAGEO "believes MLCC vendors are MORE DISCIPLINED this cycle to prioritize long-term relationships with customers"** — i.e. the pricing power is real but is deliberately not being fully exercised (JPM · Jerry Tsai, 2026-08-25).
+- **ABF film is the acute chokepoint:** *"**Japan's Ajinomoto has recently informed customers that, due to an ACUTE SUPPLY SHORTAGE, it will PRIORITIZE ALLOCATIONS FOR AI AND HIGH-END APPLICATIONS. As of 2Q26 its ABF film production lines are already operating at FULL CAPACITY**, while meaningful contributions from new capacity additions will take considerable time"* (Meritz Securities via @jukan05, corpus, 2026-08-25). **AT&S, on a Jefferies call, guides FY26/27 revenue +45-55% cc off a €1.8bn base with a 32-37% EBITDA margin and ~€1-1.2bn net capex, and says its ABF capacity expansion is "fully backed by long-term customer commitments" at a ~1:1 capex-to-sales ratio; its CTO is "bullish on EMIB and embedding power in the substrate" and "skeptical on COWOP"** (Jefferies Asia TMT sales · Conor O'Mara + Lucy Rowe, call with AT&S IR Gebhardt Philipp, 2026-08-24).
 
 **🆕🔴 2026-08-11 — THE COMMSCOPE ACQUISITION IS BEING MARKED UP HARD, AND IT IS IT-DATACOM DOING IT: FY26 CommScope revenue raised to $4.6B from $4.1B (+12%) and EPS accretion DOUBLED to $0.30 from $0.15 (Morgan Stanley / Meta Marshall · Antonio Jaramillo, "Fiber EPS Read-Throughs Highlight [[GLW]]'s Capacity Tightness", 2026-08-11).**
 - **The revision, as stated:** *"**Amphenol raised FY26 CommScope revenue to $4.6B from $4.1B (+12%) and EPS accretion to $0.30 from $0.15**, driven primarily by **IT datacom, where sales nearly DOUBLED Y/Y and are expected to approach HALF of FY26 revenue vs ⅓ in 2025**."* ➜ **A 100% increase in guided accretion inside one fiscal year. The mix shift is the mechanism: IT datacom going from ~⅓ to ~½ of CommScope revenue is what turns an acquisition thesis into an AI-infrastructure thesis.**

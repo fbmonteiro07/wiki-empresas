@@ -72,6 +72,10 @@ Cloud infra + telemetry feed the Falcon cloud-native platform, which fans out ac
 
 ## Current state (Q1 FY27, call 2026-06-03)
 
+**🆕 2026-08-25 — THE SECTOR SOLD OFF ON AN UNANNOUNCED COMPETITOR.** *"Cyber weaker — **[[PANW]] −3% / CRWD −3%** as have heard some investors express concern **[[ANTHROPIC]] will be on the road promoting its own cybersecurity products**, given the security talent Anthropic has hired both to build products and to sell into cyber peer plays"* (TMTB EOD Wrap, 2026-08-25). ⚠️ **Desk relay of investor chatter — no Anthropic security product has been announced and no source is named. Logged because it is the first time this wiki records a frontier lab moving cyber-software prices on a product EXPECTATION.**
+
+**🆕 2026-08-25 — THE COUNTERVAILING DEMAND ARGUMENT, from a covering house on the peer:** *"**CIO urgency to improve security posture has accelerated in a post-Mythos environment**… We have already seen signs of **accelerating volume and sophistication of threats** in the environment and **pipelines have begun to accelerate across our coverage universe**"* (JPM · Brian Essex, PANW preview, 2026-08-25). 🔴 **Both statements can be true: AI raises the threat surface (demand up) and simultaneously lowers the barrier to building security products (supply up). CRWD reports on 2026-08-26 alongside CRM, NTNX, OKTA and SNPS.**
+
 **🆕🔴 2026-08-21 — MORGAN STANLEY'S FQ2 PREVIEW IS THE MOST SPECIFIC BOGEY SET ON THIS PAGE AND IT COMES WITH AN EXPLICIT WARNING THAT A NORMAL BEAT MAY NOT BE ENOUGH: "Falcon May See Some Leveling Off After Flying Higher."** (MS · Meta A. Marshall w/ Adam Wood, Lucas Cerisola, "2Q27 Preview", 2026-08-21 — **Overweight, PT $227 unchanged**.)
 
 **🆕🔴 2026-08-24 — THE FQ2 SET-UP IN NUMBERS, WITH THE HARD BOGEY AND THE SEASONALITY TRAP BOTH NAMED. PRINT AUG 26 AMC.** (UBS · **Buy, PT $235**, preview relayed via UBS Sector Sales "TECH / Earnings Previews", Robert Ruple, 2026-08-24 — *sales relay of research*)

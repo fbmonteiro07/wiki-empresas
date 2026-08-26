@@ -833,6 +833,81 @@
    ],
    "status": "primary series on disk; two second-hand readings unreconciled",
    "debate": "Not a bull/bear debate but a BASIS debate: the level series is now primary and unambiguous, while every second-hand GROWTH figure the wiki carried is either rounding-inflated (GS) or fails to reproduce (MS, the 06-18 cut). Forward question for the macro-cycle page: does the median cohort hold its +8.79%/mo step-change regime, or revert to the +3-4%/mo of 2024-25? Only Dec-23, Aug-24 and Nov-25 saw all three cohorts fall together in three years."
+  },
+  "wafers-per-gw": {
+   "title": "Wafers per GW of AI compute — node split (N3 / N5 / DRAM)",
+   "definition": "300mm wafer starts needed to BUILD 1 GW of AI compute, split by node/type. A one-time wafer BILL per GW, not a standing monthly capacity — never mix with the WSPM cards. Every figure must carry (a) its rack denominator (racks/GW and the kW/rack behind it), (b) its GW basis (compute-TDP / IT-load vs facility), and (c) whether it is logic-only (foundry) or all-wafer (logic + DRAM + NAND).",
+   "canonical": "Rack denominator for VR200 is FIRM at ~4,440-4,545 racks/GW on an IT-load/compute-TDP basis — TrendForce ~225kW/rack (2026-06-28) and Bernstein 220kW compute-TDP (2026-07-20) agree independently. On that denominator, 1 GW of Vera Rubin ≈ 230-295k total 300mm wafers: DRAM 141-205k (house bottom-up; central ~155-186k) and foundry logic 25-30k (house bottom-up) vs Patel's 61k. The DRAM leg is well-anchored; the LOGIC leg is the live dispute — Patel's 55k N3 + 6k N5 is ~2x a die-area bottom-up of the NVL144 rack BOM and ~2.9x Fubon's Blackwell card (33k TSMC wafers/GW at 7,200 NVL72 racks = 4.6 wafers/rack).",
+   "scope_note": "THREE traps. (1) Rack denominator: Blackwell GB300 ~150kW => 7,200 racks/GW (Fubon) vs VR200 ~220-225kW => ~4,440-4,545 racks/GW vs Redburn's FACILITY-GW frame (PUE 1.15, 90% to GPU racks, 250kW/rack) => 3,130 racks/GW. Wafers/GW scales inversely with kW/rack. (2) JPM's VR200 'rack design power' of 330-444kW is NAMEPLATE, not draw — do not build a rack count on it. (3) logic-only vs all-wafer: Fubon's 33k is foundry wafers only; Bernstein's 65 wafers/rack and the AlphaSense 350k are all-wafer.",
+   "status": "live-debate",
+   "patterns": [
+    "\\d{2,3},?0{3}\\s*(N3|N5|DRAM)\\s*wafers",
+    "wafers?\\s*(per|/)\\s*GW",
+    "wafer starts per GW",
+    "wafers?\\s*(per|/)\\s*rack"
+   ],
+   "variants": [
+    {
+     "value": "55,000 N3 + 6,000 N5 + 170,000 DRAM wafers per GW of Vera Rubin (= ~231k total) [~2Q26 VINTAGE — Patel dates the figures to an earlier interview, and the SOCAMM spec has been halved since]",
+     "source": "Dylan Patel (SemiAnalysis), in interview — relayed by Felipe",
+     "date": "2026-08-25",
+     "scope": "node-split, all-wafer, Vera Rubin; rack denominator not stated by the source (house work pins it at IT-load ~4,400-4,500 racks/GW)",
+     "cited_in": [
+      "TSM.md",
+      "NVDA.md",
+      "themes/hbm-memory.md",
+      "themes/semicap-wfe.md"
+     ]
+    },
+    {
+     "value": "House bottom-up cross-check: DRAM 141-205k wafers/GW (central ~155-186k) CONFIRMS the 170k; foundry logic ~25-30k/GW vs the quoted 61k — the quoted logic leg is ~2x the NVL144 rack BOM",
+     "source": "Capstone (house reconciliation on wiki inputs: 288/192GB HBM4 SKUs, 768GB SOCAMM, MU 3:1->4:1 HBM displacement, Fubon 50-60% AI-die yield)",
+     "date": "2026-08-25",
+     "scope": "house bottom-up at 4,545 racks/GW",
+     "cited_in": [
+      "TSM.md",
+      "themes/hbm-memory.md"
+     ]
+    },
+    {
+     "value": "each GW ≈ 7,200 NVL72 racks ≈ ~33k TSMC wafers (= 4.6 wafers/rack) and ~US$1.0-1.5bn of TSMC revenue (foundry + CoWoS + other BOM)",
+     "source": "Fubon / Jefferies",
+     "date": "2025-10-28",
+     "scope": "LOGIC-ONLY (TSMC wafers), Blackwell NVL72 basis (~139-150kW/rack)",
+     "cited_in": [
+      "TSM.md"
+     ]
+    },
+    {
+     "value": "~65 wafers/rack x 4,545 racks/GW ≈ 295k rack wafers/GW; ~46-50k WSPM per incremental GW/yr incl non-rack legs (DRAM 53% / NAND 20% / HBM 16% / logic 11%)",
+     "source": "Bernstein · Stacy Rasgon",
+     "date": "2026-07-20",
+     "scope": "ALL-WAFER, VR200 220kW compute-TDP; the WSPM figure is standing CAPACITY, not a per-GW bill",
+     "cited_in": [
+      "themes/semicap-wfe.md",
+      "themes/hbm-memory.md"
+     ]
+    },
+    {
+     "value": "~350,000 300mm wafer starts per GW of AI compute, HBM 60-70% of it",
+     "source": "AlphaSense expert (ex-Broadcom/Intel/Huawei/TI CTO)",
+     "date": "2026-07-17",
+     "scope": "ALL-WAFER, generic AI compute; rack/GW basis unstated",
+     "cited_in": [
+      "themes/hbm-memory.md"
+     ]
+    },
+    {
+     "value": "1GW facility -> 1.15 PUE -> 870MW IT -> 90% to GPU racks -> 783MW -> at 250kW/rack ⇒ ~3,130 racks/GW ⇒ 225,391 GPUs/GW",
+     "source": "Redburn",
+     "date": "2026-06-17",
+     "scope": "FACILITY-GW rack denominator (the low-rack-count end); PUE + 90% allocation + 250kW are Redburn assumptions",
+     "cited_in": [
+      "NVDA.md"
+     ]
+    }
+   ],
+   "debate": "The LOGIC leg. 55k N3 + 6k N5 = 61k foundry wafers/GW ⇒ 13.4 logic wafers/rack, against ~5.5-6.5 from a die-area bottom-up of the NVL144 BOM (144 Rubin dies ~750mm², 65-70 gross/wafer, 50-60% AI-die yield ⇒ ~4.0 wafers; + Vera CPU ~0.5, NVLink-6 switch ~1.0, CX9/BlueField ~1.0) and against Fubon's 4.6 wafers/rack on Blackwell. The DRAM leg pins the denominator at ~4,400-4,545 racks/GW (a facility-GW denominator of 3,130 racks would require ~480GB per HBM wafer = a ~5:1 displacement vs DDR5, worse than MU's own ~4:1 at HBM4E — unlikely, though not impossible), so the gap cannot be explained by the GW basis — it has to be extra silicon (Rubin CPX, standalone Vera CPU racks, LPU racks, Spectrum-6/CX9 CPO) or a much worse yield assumption. Note CPX cannot close it at JPM's assumption of 144 CPX/rack at only 10-15% attach in 2027/28. Unresolved: what Patel's 55k N3 actually covers — the NVL144 compute rack alone or the whole Rubin family — is not stated in the excerpt, and the figures are ~2Q26 vintage."
   }
  }
 }

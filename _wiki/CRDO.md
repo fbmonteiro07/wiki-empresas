@@ -72,6 +72,10 @@ Credo is a fabless designer between the foundry/IP supply base and the hyperscal
 </svg>
 
 ## Current state (latest quarter)
+**🆕 2026-08-25 — MIZUHO FLAGS UPSIDE ON AI RACK CONNECTIVITY, AND THE 800V DELAY IS FRAMED AS A *TAILWIND*.** *"Mizuho flagged upside to **CRDO +1.7% and [[LITE]]** as AI rack connectivity scales. They see **stronger 2027 AEC copper demand, accelerating NPO/SiPho/InP adoption**, and noted **potential 800V delays could EXTEND the 400V architecture cycle, supporting near-term connectivity content**"* (via TMTB EOD Wrap, 2026-08-25). ⚠️ **Desk relay; the Mizuho note itself was not read here.** 🔴 **The 800V point is worth isolating: on `themes/800v-dc-power` a delay is a negative for the power-semi names, but here it is a POSITIVE — it keeps rack architectures on the copper/AEC-heavy 400V generation for longer. Same event, opposite sign, and this wiki should not carry it as a single directional item.**
+
+**🆕 2026-08-25 — THE OFFSETTING STRUCTURAL DATAPOINT, FROM [[AMD]] AT HOT CHIPS.** *"AMD said **Helios is near the practical limit for an all-electrical scale-up fabric**. Electrical connectivity forces GPUs, switches and cabling into a very dense physical configuration because reach is limited. **AMD expects to begin introducing OPTICAL SCALE-UP in the following generation**"* (TMT Breakout Hot Chips recap, 2026-08-25). ➤ **Read the two together: Mizuho's AEC/copper call is a 2027 statement; AMD's optical statement is a next-generation statement. They are not in conflict yet, but they bracket the copper runway.** **Susquehanna hosts a "Deep Dive into AI Networking and Previewing MRVL/AVGO with 650 Group" on 08-27 (Rolland) naming CRDO; JPM hosts CRDO CEO Bill Brennan at ECOC on Sept 22.**
+
 **Q4 FY26 (reported 2026-06-01 AMC; quarter ended ~April 2026), capping FY26:**
 
 **🆕🔴 2026-08-24 — THE FULL F1Q27 BOGEY GRID. PRINT SEP 1, 16:05 ET, CALL 17:00 ET.** (JPM · **Joshua Meyers**, TMT Specialist Sales, "Off-Cycle Hardware Reporters SURVEY: CIEN, CRDO, DELL, HPE, NTAP", 2026-08-24 — *buy-side survey instrument, NOT research; the guide and Bloomberg marks are the hard content*)

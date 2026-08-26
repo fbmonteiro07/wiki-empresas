@@ -52,6 +52,7 @@ Cerebras sits between a concentrated TSMC-based supply chain and a concentrated,
 </svg>
 
 ## State of play
+**🆕 2026-08-25 — EXTERNAL ARCHITECTURE READ: CEREBRAS'S SRAM ADVANTAGE LOOKS COMPLEMENTARY TO HBM/DRAM, NOT A STAND-ALONE REPLACEMENT (Invest Like the Best EP488; Sail Research founder/CEO Neil Movva).** Movva contrasts roughly **21 PB/s of on-wafer SRAM bandwidth on WSE-3 with ~10 TB/s of HBM bandwidth on a Blackwell-class GPU**, but stresses the capacity trade-off: model weights can be placed in fast SRAM, while the dynamic KV cache grows with users/context and can exceed the weights. His likely end-state is a hybrid accelerator: Cerebras-like SRAM hosting the weights/MLP path and a GPU/DRAM device hosting attention/KV capacity. 🔴 **Read-through:** this validates the page's SRAM roofline while narrowing the displacement claim—Cerebras is a specialist in a disaggregated system, not necessarily the whole inference computer. ⚠️ **Do not conflate this proposed MLP/attention partition with the separately disclosed AMD/Cerebras prefill/decode commercial arrangement; they are different decompositions.** Practitioner opinion, not a Cerebras roadmap or benchmark; no CS-4 specification, contract, rating, PT or estimate changes.
 
 **🆕🔴 2026-08-19 (Supernova event, 08-18 PT) — CS-4 IS ANNOUNCED, AND THE HONEST READ IS THAT IT IS A SYSTEM REDESIGN RATHER THAN A NEW WAFER GENERATION: the WSE-3T keeps the SAME core count and the SAME 44 GB of SRAM as WSE-3 on the SAME N5 node, and every performance gain comes from power delivery, cooling and I/O.** (Cerebras Supernova, 2026-08-18/19; MS · Joseph Moore OW PT $279; UBS · Timothy Arcuri Buy PT $330; SemiAnalysis; @bubbleboi.)
 
@@ -212,6 +213,7 @@ _intra-quarter (recent IPO) · May 06 → Jul 09, 2026 · sell-side / expert cal
 ## Sources
 - **Equity calls:** `../../equity_calls_transcripts/Semis/2026-05-06_Cerebras_IPO-UBS.md` — UBS investor-education call (Tim Archer), 2026-05-06.
 - **Research reports (relatórios bons):**
+  - [Invest Like the Best EP488 — Patrick O'Shaughnessy with Neil Movva, Sail Research, "From Transistor to Token" (2026-08-25)](https://colossus.com/episode/from-transistor-to-token/) — **external practitioner read, interested inference-provider founder; no rating/PT/model.** Cerebras SRAM-vs-HBM bandwidth/capacity trade-off, KV-cache constraint and hybrid MLP/attention architecture. [YouTube](https://www.youtube.com/watch?v=uyzqxIoiobU) · [Raw transcript](../_inbox/_done/2026-08-25__Invest_Like_The_Best_EP488__Neil_Movva__From_Transistor_to_Token.txt).
   - [MS "Memory + semicap" (2026-06-22) — MS Overweight init; ~10x token-price tailwind; Kimmy trillion-param rebuttal; OpenAI-contract gate](../relat%C3%B3rios%20bons/2026_06_22_ms_on_memory_and_semicap_22_jun_26.html)
   - [BofA "AMD recap" (Vivek Arya, 2026-05-06) — Cerebras ~Groq, 10-20% incremental, SRAM/model-size niche; AMD investment/Feldman tie](../relat%C3%B3rios%20bons/2026_05_06_amd_vivek_recap_6_may_2026.html)
   - [UBS "Previewing AMD's AI Day" (Tim Arcuri, 2026-07-15) — flags a possible AMD-Cerebras fast-inference partnership + AMD custom-ASIC push at the Jul-23 event (cross-refs UBS's CBRS earnings recap)](../relat%C3%B3rios%20bons/UBS_on_AMD.html)
@@ -226,6 +228,7 @@ _intra-quarter (recent IPO) · May 06 → Jul 09, 2026 · sell-side / expert cal
 - **Consensus:** none — no BBG estimates file for this name.
 
 ## Changelog
+- **2026-08-25 — Invest Like the Best EP488 / Sail Research founder Neil Movva external architecture read.** Added one State-of-play block and one Sources entry. **Nothing superseded:** no Cerebras specification, contract, rating, PT, capacity or estimate changed. The addition keeps the SRAM roofline thesis but explicitly narrows it to a complementary hybrid role, and distinguishes Movva's proposed MLP/attention partition from the disclosed AMD/Cerebras prefill/decode product.
 - **2026-08-13 (wiki-ingest, scheduled) — 🔴 THE POST-PRINT PASS: TWO PTs MOVED, ONE FULL MS ESTIMATE STRUCTURE SUPERSEDED, AND THE CAPACITY OVERHANG THIS PAGE HAS CARRIED SINCE THE IPO WAS RETIRED. 3 Full-log rows + a rewritten "where the Street stands" + 2 catalysts.**
   **SUPERSEDED — price targets: UBS (Arcuri) Buy $320 → $330 · Morgan Stanley (Moore) OW $273 → $279 · Barclays (O'Malley) OW $280 UNCHANGED. Old values preserved here.**
   **SUPERSEDED — MS estimates: 2026/27/28 core revenue $863m / $2.71bn / $6.46bn ➜ $886m / $2.88bn / $6.70bn; 2026/27/28 GM 39.4% / 51.1% / 57.9% ➜ 41.8% / 52.1% / 58.0%; 2026/27 op margin (28.2)% / 9.7% ➜ (18.1)% / 10.9%; non-GAAP EPS 2026 $(0.78) ➜ $(0.46), 2027 $0.88 ➜ $1.03. Old values preserved here.**

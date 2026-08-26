@@ -71,6 +71,26 @@ MRVL is a fabless designer sitting between the foundry/IP/memory supply base and
 
 ## Current state (latest quarter)
 
+**🆕🔴 2026-08-25 (PRINT EVE) — THE BOGEYS ARE NOW ON THE RECORD FROM TWO DESKS AND ONE RESEARCH HOUSE, AND THEY AGREE ON THE OCTOBER GUIDE TO WITHIN A NICKEL.**
+
+| Source (2026-08-25) | July-Q revenue | Oct-Q guide | Note |
+|---|---|---|---|
+| **Barclays desk · Jeffrey Rand** (buy-side feedback) | — | **$3.10-3.15bn** vs Street **$3.03bn** | *"investors expect a slight revenue raise"* |
+| **Jefferies · Blayne Curtis** (research) | **$2.8bn (+16% q/q)** vs St. **$2.7bn** | **$3.1bn (+11% q/q)** vs St. **$3.025bn** | *"expects a beat and raise"* |
+| **JPM · Harlan Sur** (research) | — | — | *"the guide could surprise positively on datacenter strength"* |
+
+🔴 **The bigger number is the FY target, and the question is WHEN it moves:** *"Investors expect MRVL to **raise the $16.5bn revenue target for next year, perhaps to ~$18bn**, but there is some uncertainty on whether MRVL raises that at earnings or just highlights during earnings that it will update this at the **Analyst Day** — **can't just reconfirm the $16.5bn though**"* (Barclays desk · Jeffrey Rand, 2026-08-25). **The desk's read on the setup: *"earnings this week is not likely a big catalyst… it is more of a check-the-box, and then the Oct 6 Analyst Day could be the bigger catalyst."*** ⚠️ *Desk commentary, explicitly NOT research.*
+
+**🆕🔴 2026-08-25 — JEFFERIES SPELLS OUT THE SCOPE OF THE [[GOOG]] AGREEMENT AND ADDS A SECOND HYPERSCALER LEG.** (Jefferies · Blayne Curtis, relayed by Jefferies Asia TMT sales · Conor O'Mara, 2026-08-25)
+- **Scope:** *"The GOOG agreement spans **inference accelerators, storage controllers, NICs, memory-interface controllers, and near-memory compute attached to the TPU ecosystem**, with **warrant vesting tied primarily to $120B of qualifying revenue**."* ⚠️ **Consistent with this page's standing warning — the $120bn is the CUMULATIVE-REVENUE VESTING THRESHOLD, not deal revenue, and is a different figure from the $12.2bn conditional cash-exercise proceeds.**
+- 🔴 **[[MSFT]] as the next leg:** *"recent checks suggesting potential for **300K Maia 300 units in C27, representing a ~$1.5B revenue opportunity**."*
+- **[[AMZN]]:** *"**Trainium should grow 25-30% in C26** with incremental **Trainium 4 content from Celestial** ahead of a potential **Trainium 5 volume ramp in C28**."*
+- **Optics is the clearest near-term driver:** *"**FY27 growth now guided to 70%+**, **TIAs and drivers approaching a $1B annualized run rate**, and **DCI on a path from ~$500M in FY26 toward $1B in FY28** — though **potential 1.6T share loss remains the key risk**."* Near-term upside from the **1.6T PAM DSP ramp**, continued **800G** strength, plus Switching and Communications.
+- **The framing that matters for the Analyst Day:** *"the larger custom-silicon debate centers on **C28 and whether the $10B outlook moves higher**, with additional details likely reserved for the **October 6 Analyst Day**."*
+**Susquehanna's Christopher Rolland the same day:** *"We expect **continued Inphi upside in the near term**. Meanwhile, the longer-term **'custom XPU' story is also brightening amid an expanded partnership with Google**"* (Susquehanna, via William Hearon, 2026-08-25).
+
+**🆕 2026-08-25 — POSITIONING:** *"Investor sentiment on MRVL is leaning positive right now and the recent GOOGL deal allows investors to dream the dream of large positive number revisions over the next few years. Right now, **the common pair in the space is long MRVL / short [[AVGO]]**"* (Barclays desk · Jeffrey Rand, 2026-08-25). **MRVL traded +2.8% pre-market on 08-25 against semis +2%.**
+
 **🆕🔴 2026-08-24 — A THIRD HOUSE PUTS A NUMBER ON THE GOOGLE DEAL, AND IT IS THE BIGGEST PT MOVE ON THIS PAGE SO FAR: WELLS FARGO $240 → $310 (+29.2%), OVERWEIGHT — AND ITS FY29 EPS BRIDGE LANDS ON THE *SAME* ~$11/sh AS JPM'S, FROM A COMPLETELY DIFFERENT DIRECTION.** (Wells Fargo Securities · **Aaron Rakers, CFA** w/ Michael Tsvetanov, Richard Strifler — "Thoughts on Potential EPS Impact of MRVL + GOOGL Overweight Agreement — We See Path to +$11/sh. FY29 EPS", 2026-08-24 05:00 EDT; **Overweight, PT $240 → $310**, px **$237.04** (08/21/2026), upside/downside to target **+30.8%**. Estimates as of 8/23/2026.) [Source](../relat%C3%B3rios%20bons/0083c061-ce51-490f-b180-1ee9023c4776.html)
 - ⚠️ **THESIS DRIFT — PT SUPERSEDED: Wells Fargo $240 → $310. This is the FIRST Wells Fargo mark on this page; prior value retired to `## Changelog`. Rating Overweight, unchanged.** ⚠️ **DO NOT CONFLATE WITH THE UBS $310 ALREADY ON THIS PAGE** — UBS/Arcuri hit $310 on 08-19 and has since CUT to $300 (08-24). Two different houses at the same number, moving in opposite directions, off the same $237.04 reference price.
 - 🔴 **THE BRIDGE, AND IT IS THE MOST EXPLICIT GOOGLE-REVENUE MODEL ANY HOUSE HAS SHOWN HERE: Wells assumes ~50% gross margin, ~12% opex-to-revenue and accounts for incremental warrant share dilution, on "$80 billion of cumulative GOOGL revenue thru FY33" ⇒ a path to +$11/sh EPS by FY29 (CY28) and +$24/sh by FY33 (CY32). At the FULL $120bn the same model implies +$28–$30/sh by FY33.** The $310 PT is **~28x** that +$11/sh FY29 EPS upside view. Scenarios: **upside $360** (high-20x on >$10/sh), **base $310**, **downside $200** (low/mid-20x on ~$9/sh CY28).
