@@ -5,7 +5,7 @@
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\NVT` (10-K FY2025, 10-Q Q1 2026, transcripts) · `E:\briefings\2026`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-26 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-08-27 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|

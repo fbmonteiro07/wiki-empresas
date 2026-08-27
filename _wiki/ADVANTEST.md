@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-20 · **Japanese issuer — NO SEC filings**; sources: TSE/IFRS IR results + earnings-call transcripts (`E:\Wiki Felipe\ADVANTEST\transcripts`) · `_briefings` · **BBG (consensus block, JPY)**. All financials JPY. Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-26 · JPY
+### 📊 Consensus snapshot — BBG · asof 2026-08-27 · JPY
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
