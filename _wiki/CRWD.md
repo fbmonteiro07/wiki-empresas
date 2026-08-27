@@ -72,6 +72,50 @@ Cloud infra + telemetry feed the Falcon cloud-native platform, which fans out ac
 
 ## Current state (Q1 FY27, call 2026-06-03)
 
+**🆕🔴🔴 2026-08-26 (PRINT — F2Q27, reported AMC) — A CLEAN BEAT-AND-RAISE WHERE THE RAISE EXCEEDED THE BEAT, RPO ACCELERATED 33 POINTS TO +62.5% Y/Y ON FLEX COMMITMENTS, AND ARR REACCELERATED. STOCK +10/+11% AFTER HOURS.**
+
+**THE NUMBERS (Rothschild & Co Redburn; MS; Barclays · Saket Kalia; JPM · Brian Essex; GS · Gabriela Borges; DB · Brad Zelnick — 2026-08-26/27):**
+| Line | F2Q27 | Consensus | Comment |
+|---|---|---|---|
+| Subscription revenue | **$1.40bn**, **+27% y/y** | $1.37bn | vs **+25.7% in 1Q** — a **continued REACCELERATION** |
+| Total revenue | **$1.47bn**, **+25.8% y/y** | $1.44bn | vs +25.6% in 1Q |
+| **ARR** | **$5.84bn**, **+25.4% y/y** | $5.79bn | **$1.18bn of net new additions y/y**, vs $1.07bn in 1Q |
+| **NNARR** | **$333m** | ~$310m (MS desk expects) | **a ~20% BEAT** |
+| **Total RPO** | 🔴 **$11.7bn, +62.5% y/y** | **$9.2bn** | vs **+29.4% in 1Q** — *"reflecting a **SURGE IN LARGE MULTI-YEAR FLEX COMMITMENTS**"* |
+| Adj subscription GM | **81%** | — | +100bp y/y |
+| Adj operating income | **$372m**, 25.3% margin | $349m | **+350bp y/y**, *"primarily driven by topline outperformance"* |
+| FCF | **$377m**, 25.7% margin | $349m | — |
+
+🔴 **THE RPO LINE IS THE STANDOUT AND IT IS NOT SUBTLE: total RPO beat consensus by ~27% ($11.7bn vs $9.2bn) and the growth rate accelerated from +29.4% to +62.5% y/y in a single quarter. That is a backlog step-change, not a beat.**
+
+**🔴 FLEX IS DOING THE WORK, AND THE CONVERSION MATH IS THE THESIS:**
+- **Flex-account ARR **+101% y/y**, now **~40% of TOTAL ARR.***
+- 🔴 ***"Customers converting to the Flex model observed **>40% AVERAGE ENDING ARR UPLIFT**"*** — i.e. the migration is not revenue-neutral repackaging, it expands the account.
+- ***"New-logo Flex contributing a **RECORD 34% of net new ARR**."***
+➤ **Flex at ~40% of ARR growing +101% with a >40% uplift on conversion is the cleanest platform-consolidation datapoint on this page. The risk it creates is duration concentration: the RPO surge is *"large multi-year Flex commitments,"* so a slowdown in Flex conversions would decelerate RPO far faster than revenue.**
+
+**GUIDANCE — RAISED BY MORE THAN THE BEAT, WHICH IS THE KEY TELL:**
+- **F3Q27: total revenue **$1.52-1.53bn** (cons $1.52bn), **+24% y/y**; total ARR **$6.18-6.19bn** (cons $6.12bn); adj operating income **$373-376m** (cons $370m), 24.5% margin at midpoint; adj diluted EPS **$0.31** (cons $0.31).**
+- **FY27 RAISED: total revenue **$5.99-6.01bn** (prev $5.91-5.96bn), **+24-25% y/y**; total ARR **$6.60-6.61bn** (prev $6.53-6.56bn); adj operating income **$1.50-1.51bn** (prev $1.45-1.48bn), 25% margin at midpoint; adj diluted EPS **$1.25-1.26** (cons $1.26).**
+- 🔴 **MS's desk makes the accretive point explicitly: *"NNARR at $333M (vs expects ~$310M) was a ~20% beat and **RAISED FY27 ARR BY MORE THAN THE BEAT (to +34% y/y vs +28% prior)**, indicating momentum after a strong FY raise in F1Q"* (MS TMT · Wigg, 2026-08-26).** ➤ **Raising the full year by more than the quarterly beat is management signalling H2 confidence, not banking upside.**
+- ⚠️ **GUIDANCE EXCLUDES the pending **XM Cyber** acquisition, *"expected to close in 2H27."*** Management framed the raise on *"a broader **AI-DRIVEN SECURITY MODERNISATION CYCLE**, record 3Q pipeline and durable demand signals across the Flex platform."*
+- ⚠️ *Redburn's FY27 ARR line reads "(prev $6.53-6.56bn **and cons $6.12bn**)" — the $6.12bn is the 3Q consensus repeated in the FY row. Use the guide ranges, not that consensus figure.*
+
+**HOUSE FRAMING:**
+| House / analyst | Take |
+|---|---|
+| **JPM · Brian Essex** | ***"'MYTHOS MOMENT' Drives Solid 2Q Results with Better Than Expected NNARR Acceleration"*** |
+| **Barclays · Saket Kalia** | *"Numbers Speak for Themselves; Three key Points Beyond Beat & Raise; **COULD SEE $10B IN FY29**"* |
+| **MS** | *"FQ2 Recap — **Standing Out Amongst the Crowd**"* |
+| **GS · Borges** | *"2QFY: **Fundamentals inflecting SOONER THAN WE EXPECTED**"* |
+| **DB · Zelnick** | *"Cybersecurity — F2Q EPS Wrap — CRWD, OKTA"* |
+
+**⚠️⚠️ THE VALUATION IS THE ENTIRE BEAR CASE, AND REDBURN STATES IT PLAINLY: *"Stock was up +10% a/h, fair considering continued top-line surprises versus expectations, strong backlog and underlying momentum re platform adoption. **CRWD continued to be a rel outperformer +61% YTD vs US software (IGV −3%), trades on 32x EV/SALES FY1 vs 10x INFRASTRUCTURE SOFTWARE AVG**"* (2026-08-27).** ➤ **A 3.2x premium to the infrastructure-software average on forward sales, after a +61% YTD run against a −3% sector. The fundamentals are not in question; the multiple is the position risk. ⚠️ Note the pairing hazard for anyone using it as a funding long against SaaS: MS's desk flagged the reverse rotation the same night (*"bearish positioning in SaaS relative to Cybersecurity"*), and [[CRM]] +13% / OKTA +20% both outran CRWD's +11%.**
+
+**⚠️ CONTEXT ON THE COMPETITIVE SET, LOGGED FOR THE READ-THROUGH: [[PANW]] *"considered a merger in 2025"* with Datadog before acquiring **Chronosphere for $3.35bn in Jan 2026** to enter observability (The Information, 2026-08-26). Redburn's four reasons it did not happen — DDOG management receptivity, antitrust, GTM/cultural mismatch (*"previous case studies, e.g. Cisco/Splunk, illustrate folding a product-led engineering-driven culture into a larger security incumbent tends to SLOW PRODUCT VELOCITY and lead to TALENT ATTRITION"*), and PANW's funding need (*"material debt for anything >15% of total consideration in cash, would lead to 3/4x EBITDA"*). ➤ **Relevant to CRWD as the platform-consolidation comparator: the incumbent-eats-adjacency route is being attempted by the competitor, and the sell-side's own case study says it degrades the acquired asset.** See [[PANW]].**
+
+
+
 **🆕 2026-08-25 — THE SECTOR SOLD OFF ON AN UNANNOUNCED COMPETITOR.** *"Cyber weaker — **[[PANW]] −3% / CRWD −3%** as have heard some investors express concern **[[ANTHROPIC]] will be on the road promoting its own cybersecurity products**, given the security talent Anthropic has hired both to build products and to sell into cyber peer plays"* (TMTB EOD Wrap, 2026-08-25). ⚠️ **Desk relay of investor chatter — no Anthropic security product has been announced and no source is named. Logged because it is the first time this wiki records a frontier lab moving cyber-software prices on a product EXPECTATION.**
 
 **🆕 2026-08-25 — THE COUNTERVAILING DEMAND ARGUMENT, from a covering house on the peer:** *"**CIO urgency to improve security posture has accelerated in a post-Mythos environment**… We have already seen signs of **accelerating volume and sophistication of threats** in the environment and **pipelines have begun to accelerate across our coverage universe**"* (JPM · Brian Essex, PANW preview, 2026-08-25). 🔴 **Both statements can be true: AI raises the threat surface (demand up) and simultaneously lowers the barrier to building security products (supply up). CRWD reports on 2026-08-26 alongside CRM, NTNX, OKTA and SNPS.**

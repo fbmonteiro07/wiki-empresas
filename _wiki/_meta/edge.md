@@ -14,16 +14,19 @@ _Generated 2026-08-27 · the standing view of where our model and the curated re
 | GOOG | Revenue $bn | 2027 | 641.00 | 544.30 | +18% |
 | AAPL | EPS | 2026 | 10.12 | 8.76 | +16% |
 
-## Curated divergences — latest reconciliation (`reconciliation-2026-08-24.md`)
+## Curated divergences — latest reconciliation (`reconciliation-2026-08-27.md`)
 
 | Name | New datapoint | Read (the edge) |
 |---|---|---|
-| 🔴🔴 HBM 2027 ASP | UBS +90% vs JPM +42%. The widest pricing gap on the wiki. | ACTION: resolve at the 4Q26 / January disclosures, or by rebuilding UBS's blended ASP on JPM's $/Gb basis from the `SKH HBM` / `Samsung HBM` sheets in `JPM_HBM_client_model_Aug2026.xlsx` (now archived in `_inbox\_done\`). Until then, do not quote either number without its basis. OPEN. |
-| 🔴 MRVL CY28 EPS | Wells Fargo AND JPM both land on ~$11/sh, +12.0% above the live BBG consensus of $9.818 (UBS's $9.82 IS that consensus). Two houses, two independent methods, one above-Street number — and the PTs span $224-$325 on it. | So the open MRVL question is now the MULTIPLE, not the earnings power |
-| NOT LOAD-BEARING | Samsung EPS. UBS reads −6.2% below consensus for CY26 and +25.6% above for CY28 on the bases printed here; on the live ANNUAL BBG line those become +4.9% ABOVE (CY27, sign flips) and +11.6% (CY28). A basis artifact, not a tradeable duration call. | Samsung EPS. UBS reads −6.2% below consensus for CY26 and +25.6% above for CY28 on the bases printed here; on the live ANNUAL BBG line those become +4.9% ABOVE (CY27, sign flips) and +11.6% (CY28). A basis artifact, not a tradeable duration call. |
-| "Vera Rubin crushes Blackwell" | disconfirmed by its own primary. | Not a valuation item, but a corpus-integrity one: a relay claim that the primary does not support, caught only because the primary arrived. |
+| 🔴🔴🔴 NVDA GROSS MARGIN | CONSENSUS IS 141-241bp ABOVE MANAGEMENT'S OWN GUIDED TROUGH. THIS IS THE SINGLE LARGEST GAP IN THIS REPORT AND IT IS AGAINST A COMPANY GUIDE, NOT AN OPINION. | The price hikes are real and confirmed by Kress, but they land in FQ1 FY28, AFTER the trough, and only recover to 72-73% — not 75%. |
+| 🔴🔴 NVDA FY28 REVENUE | MANAGEMENT'S IMPLIED ~$692bn IS ~8% ABOVE BBG CY2027 OF $638bn | Treat the direction as the signal and the magnitude as indicative: consensus and the house are both BELOW management's own first-ever full-year guide, and the house is closer than the Street. |
+| 🔴 NVDA REVENUE PER GIGAWATT | MANAGEMENT'S $40bn (VERA RUBIN) vs THE HOUSE'S ~$25bn | But it does bound the upside: the house's 2027E of ~$25bn/GW implies Vera Rubin is a small share of 2027 GW. Management says Vera Rubin will be ~20% of FQ3 DC revenue and *"the fastest product ramp in NVIDIA's history."* If the mix shifts faster, the house's revenue/GW — and therefore its $661bn — is low. |
+| 🔴 NVDA | ~25% OF FY28 REVENUE IS ATTACHED TO CUSTOMERS NVDA IS FINANCING, AND NO BASELINE ON THIS WIKI HAD A NUMBER FOR IT | ~25% OF FY28 REVENUE IS ATTACHED TO CUSTOMERS NVDA IS FINANCING, AND NO BASELINE ON THIS WIKI HAD A NUMBER FOR IT |
+| 🔴 META | THE ~$10bn 3Q26 LEGAL ACCRUAL IS ALMOST CERTAINLY NOT IN THE CONSENSUS EPS YET | BUT the direction of travel among the covering houses is the opposite: BOTH maintained targets (BofA BUY PO $810, on 24x 2027E GAAP EPS; Barclays OVERWEIGHT PT $780), i.e. they are treating it as a NON-RECURRING charge and looking through it. The reconciliation item is therefore a MECHANICAL one — watch whether BBG's CY2026 GAAP EPS drops ~$3 while CY2027 is untouched. If CY2027 moves, someone … |
+| 🔴 GS INITIATES CXMT AT BUY (TP Rmb129) | THE MOST CONCRETE DRAM-SUPPLY BEAR CASE THIS WIKI HAS, AND IT IS NOT IN ANY MEMORY-PAGE NUMBER | OPEN ITEM for the next pass: does 665k wpm of Chinese conventional DRAM by 2030 change the conventional-DRAM scarcity rent that the HBM pricing debate implicitly assumes? Note the direction — it is the supply answer to the scarcity, and no memory page currently models it. |
+| NVDA CAPITAL RETURN | UBS WAS RIGHT ON THE REASON, WRONG ON THE SIZE | "Net of strategic uses" is the operative phrase given the ~$50bn already invested in the labs. There is no BBG consensus line for buyback pace. |
 
-## Consensus PT vs spot — live pull in `reconciliation-2026-08-24.md` (upside ranked)
+## Consensus PT vs spot — live pull in `reconciliation-2026-08-27.md` (upside ranked)
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|

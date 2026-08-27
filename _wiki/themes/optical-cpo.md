@@ -17,6 +17,52 @@ _Wiki · generated 2026-06-19 · cross-company theme · sources: equity calls (`
 
 ---
 
+## 🆕 Recent signals (Aug 27, /wiki-ingest — **~100 COMPANIES AT ONE CONFERENCE SAY CPO HAS SLIPPED TO 2H C28 AT THE EARLIEST AND POSSIBLY C29/C30 — AND [[COHR]] SAYS THE NPO CONTENT OPPORTUNITY IS "BROADLY COMPARABLE," WHICH TURNS THE DELAY FROM A THESIS RISK INTO A FORM-FACTOR SUBSTITUTION**) — 🔴🔴 **THIS PAGE'S OPEN ITEM HAS BEEN "CPO IS INEVITABLE (DAMNANG, MARCH)" vs "CPO IS ~2-3 YEARS+ OUT (MIZUHO/SEMIANALYSIS, AUGUST)". THE JEFFERIES CONFERENCE RESOLVES THE TIMING SIDE DECISIVELY TOWARD *LATER*, AND THREE INDEPENDENT SOURCES IN THE SAME 48 HOURS SAY THE CONTENT DOLLARS DO NOT WAIT FOR IT.**
+
+### 🔴🔴 THE CONFERENCE READ — "NPO STEALS THE SHOW"
+
+**Jefferies annual Semiconductor Conference, ~100 companies across the semiconductor and hardware ecosystem (Blayne Curtis / Janardan Menon / Kevin Garrigan et al., recap 2026-08-27). Verbatim:**
+- **THE VOLUME NUMBER: *"**1.6T transceiver shipments now tracking toward 100M UNITS in C27** while demand for 800G remains robust, creating **OVERLAPPING RAMPS rather than a simple replacement cycle**."*** ➤ **The "overlapping ramps" framing is the important part: 800G is not being cannibalised on the timetable the bears assumed.**
+- **[[COHR]] SPECIFICALLY: *"COHR described demand as **EXTRAORDINARY** and expects **demand to exceed supply for at least another 12-18 MONTHS**, potentially requiring **capacity expansion BEYOND its existing 4x plan**."***
+- 🔴 **THE TIMING VERDICT: *"several companies indicated that **meaningful CPO adoption has shifted to 2H C28 AT THE EARLIEST and could SLIP INTO C29/C30** as **testing, reliability, supply-chain, and standardization challenges persist**."***
+- 🔴 **AND THE CONSEQUENCE, WHICH IS THE ACTIONABLE PART: *"The delay is creating a **significant OPENING FOR NPO**, with **multiple hyperscalers, switch vendors, and XPU providers developing PROPRIETARY architectures rather than waiting for standardized CPO solutions.** Importantly, **[[COHR]] sees the optical-content opportunity in NPO as BROADLY COMPARABLE TO CPO**, suggesting the **timing shift changes the near-term FORM FACTOR more than it diminishes the longer-term opportunity for lasers, optical engines, fiber attachment, and other optical components.**"***
+➤ **This is the cleanest statement of the thesis this page needs: the CPO date slipping is NOT a content-dollar downgrade, it is a redistribution from a standardised platform transition to a set of proprietary NPO designs. What changes is WHO integrates (hyperscalers and switch vendors, in-house, sooner) and WHEN standards arrive (later) — not how many lasers, engines and fibre attachments get sold.**
+
+### ✅ THIS CORROBORATES THE 08-25 [[LITE]] DATAPOINT RATHER THAN CONTRADICTING IT
+
+**The 08-25 entry on this wiki logged LITE up-sizing CPO with its largest customer and **pulling NPO FORWARD from CY29 to CY28**. Read against Jefferies: CPO slips to 2H C28+, NPO pulls forward to CY28. **Those are the same statement from two ends of the chain — NPO arrives first and CPO arrives late — and the LITE optical TAM raise ($90bn → ~$100bn by CY30 at a 45-50% CAGR) is what that substitution looks like in a supplier's model.** ➤ **The apparent contradiction between "CPO delayed" and "LITE raising optical TAM" dissolves once form factor is separated from content.**
+
+### 🔴 A THIRD INDEPENDENT VOICE, AND IT IS THE SWITCH VENDOR: [[ANET]] MAKES NON-INTEGRATION THE STRATEGY
+
+**From an [[ANET]] investor call (2026-08-26; internal relay via Daniel Grozdea — ⚠️ *this is an LLM-structured SUMMARY of the call, not a verbatim transcript; treat the quotes as paraphrase-grade*):**
+- **ANET's *"LACK of in-house optical integration is presented as a VIRTUE, allowing it to work with a broad MERCHANT ecosystem — Cisco/Acacia, [[CIEN]], Nokia/Infinera, [[MRVL]] — to offer optimal solutions (lowest cost, power, highest transmission distance) to customers WITHOUT VENDOR LOCK-IN."***
+- **Its **XPO (External Pluggable Optics)** approach: *"liquid-cooled, high-reliability, short/long-reach laser options, **including LPO (Linear Pluggable Optics) for very low power consumption, analogous to CPO BUT WITH SERVICEABILITY**."* ANET *"also supports **'Open CPO'** to ensure multi-vendor choice and serviceability."*
+- **The summary's own read: *"the strategic advantage of ARST's non-integrated optical approach and the practical benefits of **XPO over early CPO implementations (serviceability, choice, power efficiency)** are often overlooked in the CPO hype cycle."***
+➤ **Three different layers of the stack — the component vendor ([[COHR]]), the module/laser vendor ([[LITE]]) and the switch vendor ([[ANET]]) — independently arrive at the same 2026 conclusion: serviceable pluggable/near-package optics win the next two years, and standardised CPO is a late-decade event. That is now the page's best-supported position, and it is a reversal of the March "CPO is inevitable [soon]" framing.**
+
+### 🔴 AND [[NVDA]] HEDGED IT IN SILICON, IN THE SAME WEEK
+
+**Announced with NVDA's Q2 FY27 print: *"NVIDIA **Spectrum-6** switch systems — **supporting BOTH pluggable AND co-packaged optics** as part of the NVIDIA Vera Rubin platform — are arriving across the world's gigascale AI factories"* (NVIDIA product announcements, relayed by Jefferies · Conor O'Mara, 2026-08-26).
+➤ **The largest buyer of optics in the world is shipping a switch that takes either form factor. That is a supplier-friendly outcome (both roadmaps get volume) and it removes the binary risk this page has been carrying on CPO timing. It also means NVDA is no longer a forcing function for a CPO date.**
+- ⚠️ **Carry the standing engineering caveat from this page's 08-18 entry alongside it: the joint NVIDIA-Research/[[LITE]] monolithic DFB laser array for NPO was judged NOT shippable by an independent reviewer on RIN (~−137 dBc/Hz), and **~10% laser wall-plug efficiency is the critical floor below which CPO/NPO energy savings degrade exponentially.** An NPO-first world still has to clear that floor.**
+
+### THE ADJACENT SUPPLY CONSTRAINTS — AND THEY ARE NOW THE BINDING ONES
+
+- 🔴 **SUBSTRATES AND GLASS CLOTH, NOT OPTICS, MAY BE THE 2027 CEILING: *"**ABF substrates & PCB/CCL are the biggest constraints for 2027.** Nvidia or Google can reduce HBM per GPU and DRAM per server to increase shipments, but **they can't work around this**"* (@zephyr_z9, corpus, 2026-08-27). Concretely, **Kinsus says T-glass shortage means *"approximately 10% to 15% of potential MONTHLY REVENUE cannot currently be realized"* — *"the key operational bottleneck"* — with ABF utilisation at 85% heading to ~95% by year-end and **BT utilisation ~75% → ~85%, *"supported by memory demand and GROWING OPPORTUNITIES IN HIGH-SPEED OPTICAL COMMUNICATIONS"***, and a possible further capacity round **as early as mid-2027 if optical demand accelerates** (Jefferies · O'Mara, 2026-08-26).**
+- **Taiwan's tape agreed: *"TAIEX +1.5% with **CPO/ABF/CCL/Cooling leading the rally**"* (Jefferies · O'Mara, 2026-08-26).
+- **A new gold-bumping datapoint in the optical chain: Jefferies/Fubon initiated on **Chipbond (6147 TT, BUY)** on *"gold bumping in high-speed optics"* (2026-08-26) — and **Jefferies Silk Road initiated BUY on LUXSHARE and CHIPBOND TECH, with BUYs on CRYSTAL OPTECH and LANTE OPTICS** (2026-08-27). *All off-coverage here; logged as chain-level confirmation that the optical build is broadening into packaging and component names.*
+- ⚠️ **The bear vector on laser pricing this page already tracks got no new support: no update this week on JX Advanced Metals' InP substrate capacity plan (+7-10x). The InP bottleneck framing from JPM (EML supply ~30% BELOW demand; AXT and Sumitomo as the consolidated substrate base) stands unchallenged. See [[AXTI]], [[COHR]], [[AAOI]].**
+
+### 🔴 THE OTHER STRUCTURAL SHIFT: "SCALE-ACROSS" IS ALREADY ONE-THIRD OF [[ANET]]'S AI BUSINESS
+
+**From the same ANET call (2026-08-26): AI networking is *"transitioning from **scale-out** (single data center) to **scale-across** (multi-site clusters), which **ALREADY ACCOUNTS FOR ONE-THIRD of its AI business**"*, driven by *"the physical limitations (space, power) of single data centers for ever-growing AI clusters."* **Scale-up** (within-rack high-bandwidth) is *"expected to be material **no earlier than next year**, representing a multi-year journey"*, with ANET *"actively influencing the development of Ethernet for scale-up in OCP."* ANET reaffirmed its **minimum $3.5bn AI guide** and now has **over 100 AI customers**, with **two 10%+ customers and one-to-two more expected to reach that threshold, potentially including neoclouds.**
+➤ **Scale-across is a long-reach, DWDM/coherent problem, not a short-reach transceiver problem. At one-third of ANET's AI revenue already, it is the fastest-growing optical demand pool on this page and it favours [[CIEN]], Nokia/Infinera, [[MRVL]] coherent DSP and long-reach laser content over intra-rack CPO. It is also the clearest example of demand migrating to a form factor the CPO debate does not cover at all.**
+- **Supply-chain visibility from the same call, useful as a lead-time anchor for the whole theme: *"Demand visibility for projects extends **1-2 years**, with customers planning **18-24 months out due to 52-WEEK LEAD TIMES for TSMC wafer starts**."***
+
+### ⚠️ AND THE PERENNIAL COUNTERWEIGHT, RESTATED
+
+**A cautionary voice on the whole build re-entered the corpus this week: *"Fiber Optics Boom Bust. Is It Going To Happen Again?"* (@Gaetano substack, corpus, 2026-08-26 — *video, not read here; logged as a sentiment marker only, no analytic content extracted*).** ⚠️ *Recorded so the page does not read as one-sided; it carries no data.*
+
 ## Recent signals (Aug 25, /run-inbox 23h — **THE JPM OPTICAL FEEDBACK CALL, THE MIZUHO/SEMIANALYSIS DINNER, AND A SAMSUNG SILICON-PHOTONICS DATAPOINT FROM THE COMPANY**) — 🔴🔴 **TWO HOUSES PUT OPPOSITE-SOUNDING CPO TIMELINES ON THE TAPE WITHIN TEN DAYS AND THEY ARE *NOT* IN CONFLICT — BOTH LAND ON 2028. WHAT THEY GENUINELY DISAGREE ABOUT IS WHAT YOU OWN IN THE MEANTIME.**
 
 ### THE APPARENT CONTRADICTION, RESOLVED — AND THE REAL DISAGREEMENT UNDERNEATH IT
