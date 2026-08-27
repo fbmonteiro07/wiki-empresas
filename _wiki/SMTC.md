@@ -3,9 +3,19 @@
 _Wiki · generated 2026-08-26 · **new page** — founding source is the Q2 FY2027 earnings call (2026-08-25). ⚠️ **No local filings archive for SMTC yet** (no `E:\Wiki Felipe empresas\SMTC\` folder, no 10-K/10-Q on disk); everything below is from the call transcript unless stated. Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · pending
+### 📊 Consensus snapshot — BBG · asof 2026-08-27 · USD
 
-⚠️ **NO BBG CONSENSUS ON FILE FOR SMTC** — the ticker is absent from `_data/estimates.json`, so this block is empty until the next `/wiki-consensus` run picks it up. Every figure on this page is company-guided or company-reported; nothing here is a Street number.
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $1.5bn | $1.9bn |
+| Gross profit | $825m | $1.2bn |
+| Gross margin | 56.4% | 63.4% |
+| EBITDA | $422m | $734m |
+| EPS | $3.31 | $5.87 |
+| Capex | $25m | $31m |
+| OCF (≈EBITDA) | $422m | $734m |
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

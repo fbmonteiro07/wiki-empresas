@@ -12,10 +12,10 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\META` (filings + trans
 | Revenue | **$257.0bn** | **$313.0bn** |
 | Gross profit | $205.9bn | $247.0bn |
 | Gross margin | 80.1% | 78.9% |
-| EBITDA | $121.0bn | $148.7bn |
+| EBITDA | $120.4bn | $148.7bn |
 | EPS | **$32.72** | **$38.24** |
 | Capex | $150.6bn | $214.5bn |
-| OCF (≈EBITDA) | $121.0bn | $148.7bn |
+| OCF (≈EBITDA) | $120.4bn | $148.7bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 _**Bold** = Capstone official model; plain = BBG consensus._

@@ -23,7 +23,7 @@ _Wiki · generated 2026-06-29 · sources: IPO prospectus (424B4 2026-06-12 / S-1
 | Gross profit | — | $66.2bn |
 | Gross margin | — | 63.8% |
 | EBITDA | $20.1bn | $66.7bn |
-| EPS | $-0.94 | $1.66 |
+| EPS | $-0.94 | $1.64 |
 | Capex | $47.4bn | $181.4bn |
 | OCF (≈EBITDA) | $20.1bn | $66.7bn |
 
