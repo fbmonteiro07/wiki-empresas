@@ -5,7 +5,7 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\BKNG` (filings + transcripts) · sem equity calls, sem decks, sem briefing roll-up on disk. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-25 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-08-26 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|

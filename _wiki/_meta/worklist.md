@@ -1,20 +1,20 @@
 # Wiki remediation worklist
 
-_Generated 2026-08-25 · closes the loop on `lint_wiki.py` / staleness.md. Rebuild: `py _wiki/_tools/remediate.py`._
+_Generated 2026-08-26 · closes the loop on `lint_wiki.py` / staleness.md. Rebuild: `py _wiki/_tools/remediate.py`._
 
-## 🔴 BBG estimates missing (1) — scriptable
+## 🔴 BBG estimates missing (2) — scriptable
 
 Run (BBG Terminal must be logged in) — `fetch_estimates.py` merges, so this is safe:
 
 ```
-py "E:\.claude\scripts\fetch_estimates.py" AEIS
+py "E:\.claude\scripts\fetch_estimates.py" AEIS SMTC
 ```
 
 Or auto: `py _wiki/_tools/remediate.py --run-estimates`
 
-AEIS
+AEIS, SMTC
 
-## 🟡 No transcript on disk (16) — needs the transcript-fetcher agent
+## 🟡 No transcript on disk (17) — needs the transcript-fetcher agent
 
 Spawn one `transcript-fetcher` task per name (paste into Claude Code):
 
@@ -31,6 +31,7 @@ Spawn one `transcript-fetcher` task per name (paste into Claude Code):
 - **PLTR** — "get the latest PLTR earnings transcript -> `E:\Wiki Felipe empresas\PLTR\transcripts\`"
 - **POET** — "get the latest POET earnings transcript -> `E:\Wiki Felipe empresas\POET\transcripts\`"
 - **POWI** — "get the latest POWI earnings transcript -> `E:\Wiki Felipe empresas\POWI\transcripts\`"
+- **SMTC** — "get the latest SMTC earnings transcript -> `E:\Wiki Felipe empresas\SMTC\transcripts\`"
 - **SNPS** — "get the latest SNPS earnings transcript -> `E:\Wiki Felipe empresas\SNPS\transcripts\`"
 - **TSEM** — "get the latest TSEM earnings transcript -> `E:\Wiki Felipe empresas\TSEM\transcripts\`"
 - **VEEV** — "get the latest VEEV earnings transcript -> `E:\Wiki Felipe empresas\VEEV\transcripts\`"

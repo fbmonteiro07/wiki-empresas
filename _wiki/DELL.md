@@ -6,17 +6,17 @@
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\DELL` (filings + transcripts) · `_equity_calls` · `E:\briefings\2026`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-25 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-08-26 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $163.9bn | $199.0bn |
-| Gross profit | $28.7bn | $34.6bn |
+| Revenue | $164.4bn | $200.1bn |
+| Gross profit | $28.8bn | $34.8bn |
 | Gross margin | 17.5% | 17.4% |
-| EBITDA | $17.1bn | $20.7bn |
-| EPS | $17.06 | $22.77 |
+| EBITDA | $17.2bn | $20.7bn |
+| EPS | $17.12 | $22.91 |
 | Capex | $3.6bn | $4.0bn |
-| OCF (≈EBITDA) | $17.1bn | $20.7bn |
+| OCF (≈EBITDA) | $17.2bn | $20.7bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
@@ -160,6 +160,8 @@ Dell's 2025 Securities Analyst Meeting (Michael Dell / Jeff Clarke / Arthur Lewi
   - **SIG (Mehdi Hosseini) — Positive, PT $700 (2026-07-08):** raising estimates on a higher mix of NeoCloud/Enterprise spend — new **FY28/FY29 EPS $24.23/$28.08** vs consensus $22.13/$25.70 (PT = **25x FY29 EPS**). ISG revenue CAGR **37% FY26–29**; DC segment rising to **>60% of ISG by FY29** (from ~40% in FY27) as Dell gains NeoCloud share; Enterprise troughs FY27 (-12% y/y) then returns to double-digit growth as inferencing broadens; **Vera (Arm) CPU an FY28 opportunity.** Supply-chain checks: Inventec/Foxconn guiding ~20% server-shipment growth CY26; industry shifting toward PCIe/MGX form factors vs rack-scale (SIG/Mehdi Hosseini, 2026-07-08).
 - **Bear:** AI-optimized servers are **low-margin** — Bernstein estimates AI-server op margin **~5% or less vs low-teens for traditional** (Bernstein, 2025-09-15); ISG margin -110bp YoY (FY26 10-K); the +88% top line masks GM compression (corporate GM 20.0% FY26 vs 22.2% FY25). Morgan Stanley's Erik Woodring (2026-06-16) concedes "numbers for Dell are too low this year" but flags the **duration risk**: how much is pull-forward + pricing vs sustainable units — if order-unit growth flips neutral/negative, the market re-rates on peak-earnings fear even as EPS rises. He's playing the on-prem-compute theme via distributors/VARs rather than chasing the OEM. Bernstein's own sector caveat: enterprise-inferencing TAM ~$370B today is "potentially insufficient to sustain current levels of spend without a near-term digestion cycle," with historical precedent (Sun Microsystems dot-com) for violent OEM swings (Bernstein, 2025-09-15).
 - **Where the Street stands:** Post-Q1 print, near-universal positive: Bernstein OP $500, BofA Buy $500, JPM (Samik Chatterjee) Overweight (hosted the 5/29 call), Barclays moved positioning from -2 (crowded short) to 0 on massive short-cover (briefing 2026-05-29). FinTwit euphoric (@patrickmoorhead, @altcap). MS the notable cautious/duration holdout.
+
+- **The inference-storage tier as an OEM revenue line — a June architecture marker this page did not carry (DAMNANG "Vera Rubin’s DRAM Cut in Half: Is the Memory Cycle Really Over?", 2026-06-08):** independent Korean-semis Substack (paid) — **not a broker; no rating, no PT, no estimate**, and June-dated, so it supersedes nothing on this page. **Dell is named as connecting CMX support and KV-cache offload to its own storage stack.** The mechanism: NVIDIA’s **CMX** is a context-memory storage platform for holding inference context that does not need to sit long in HBM or CPU memory and recalling it on demand, and **STX** is a **BlueField-4**-based reference architecture NVIDIA put forward so storage makers can build systems aligned to it. The frame is a three-layer memory hierarchy — *captive* (HBM4), *absorbed* (SOCAMM/warm state), *leaked* (cold context falling to NAND/SSD) — in which **the OEMs are paid on the leaked layer if, and only if, CMX/STX harden into shipped architectures.** ⚠️ **The author is explicit about the limit, and it is the part worth keeping: the direction is clear but "how much of this structure actually gets installed, and how much it gets booked as revenue at which storage maker, is not yet confirmed" — he refuses to call storage an unconditional beneficiary of the Vera Rubin DRAM cut. Treat this as an architecture marker to watch for in the next print, not as a demand datapoint.** [Source](../relat%C3%B3rios%20bons/2026-06-08_-_Vera_Rubins_DRAM_Cut_in_Half-_Is_the_Memory_Cycle_Really_Over-.html)
 
 ## Catalysts / what to watch
 - **Q2 FY27 print** (~late Aug 2026): guide implied Q2 ≈ Q1 AI-server level; watch order book + backlog build and any 2H supply unlock.
