@@ -29,6 +29,13 @@ Global mobility/delivery aggregator running a three-segment platform: **Mobility
 | **Key suppliers** | Supply side: 10M+ drivers/couriers; AV partners (Waymo, NVIDIA, Nuro/Lucid, Zoox, WeRide), Mobileye DRIVE hardware (~$50k/unit); cloud/compute |
 
 ## Current state (latest quarter — Q2 FY26, reported 2026-08-05 BMO)
+
+**🆕 2026-08-27 — BARCLAYS ON DELIVERY HERO: *"BUSINESS ACCELERATING AT SAME TIME OF UBER OFFER"* — WHICH IS THE AWKWARD TIMING FOR AN ACQUIRER.**
+- **Barclays (Andrew Ross, *"Delivery Hero: Business accelerating at same time of Uber offer"*, 2026-08-27).** ⚠️ *Received as a title-and-summary alert; the note body, offer terms and any valuation work were NOT readable in the material captured here. Logged as a dated signal, not as deal detail.*
+- ➤ **THE READ IS IN THE HEADLINE: a target whose operating momentum is improving while a bid is live is a target whose board has a stronger case for a higher price. **If Delivery Hero's trajectory is genuinely accelerating, Uber's offer is more likely to need raising than to close at terms.** Watch for a Delivery Hero trading update as the next catalyst.**
+- **Sector context from the same window, for the read-across on food-delivery economics: Delivery Hero's own numbers as summarised elsewhere in the flow — **Group GMV €13.2bn, +8% y/y and +11.3% LFL (+3.5% vs consensus)**, with beats across Europe, MENA, Americas and Integrated Verticals offset by a small Asia miss; **1H26 EBITDA €427m, +3.9% y/y (+8% vs consensus)**; and a **FY GUIDE RAISE — GMV +9-11% LFL (prior 8-10%), revenue +17-19% LFL (prior 14-16%), adj. EBITDA €960-1,000m (prior €910-960m), FCF >€250m (prior >€200m)** (Rothschild & Co Redburn, 2026-08-27). ➤ **That is a guide raise on all four lines, which materially strengthens the target's negotiating position.**
+- **Also logged: Rothschild's TMT desk carried **UBER** in its 08-26 daily alongside Mythos 2, Jalapeño, INTU, Z.ai, [[META]], [[CRM]], OAI, SNOW, [[GOOG]] and [[NBIS]] (Rothschild & Co, 2026-08-26); and a Rothschild BLT Bulletin covered *"The Hitchhiker's Guide, North American Railroads, Uber"* (2026-08-26). ⚠️ *No Uber-specific content extractable from either.*
+
 **A clean beat with both engines accelerating, and the stock sold off on revenue optics. Gross bookings beat the high end of guide, Delivery ACCELERATED, EBITDA beat the high end — and management committed $10bn to AV.** (JPM · Anmuth quick take, 2026-08-05; MS · Brian Nowak "Acceleration Station", 2026-08-05; GS · Eric Sheridan Q2'26 review, 2026-08-05.)
 
 - **Gross bookings slightly above $58bn, +22% FXN** — vs the **18-22% FXN guide**, ~1% ahead of JPMe $57.5bn and **above the high end of the $56.25-57.75bn guide range**. **MAPCs +16% to 208M; frequency +2%.**

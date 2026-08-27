@@ -71,6 +71,13 @@ Navitas sits in the middle of the AI-power stack: it does **no fabrication itsel
 
 ## Current state (latest quarter)
 
+**🆕🔴 2026-08-26 — NAVITAS TO ACQUIRE CLAROS. THE DEAL DETAIL IS NOT IN THE MATERIAL RECEIVED HERE, BUT THE CONTEXT IS: THIS IS THE THIRD VRM/POWER-CONTROLLER ACQUISITION IN THE SUB-SEGMENT IN ONE QUARTER.**
+- **MS PULSE: *"**Navitas Semiconductor Corp: Navitas to Acquire Claros**"* (MS · Joseph Moore, 2026-08-26). ⚠️⚠️ **Received as a PULSE alert only — deal size, consideration mix, funding, product overlap and any estimate/PT change were NOT readable in the material captured here. Logged as a dated event; the terms must be obtained before this is used.**
+- ➤ 🔴 **WHY IT MATTERS MORE THAN A BOLT-ON WOULD NORMALLY: this wiki logged on 08-25 that **[[IFX]] acquired C2i Semiconductor (software-defined multiphase controllers)** months after **[[ADI]] bought Empower** — with **MS describing VRMs in vertical power delivery as *"the HIGHEST DOLLAR CONTENT ELEMENT IN THE RACK."*** **Navitas is now the third buyer into the same narrow pool of controller IP inside a quarter, and it is much the smallest of the three.** That cuts two ways: it is strategically necessary to stay in the 800V/VPD content fight, and it is being done against balance sheets many times larger. **The financing terms are the thing to check.** See [themes/800v-dc-power](themes/800v-dc-power.md).
+- **THE ADJACENT DEMAND SIGNAL, from a different corner: DIGITIMES — *"**Growth in low-Earth-orbit satellite communications accelerates; further boosts demand for GaN components**"* (2026-08-26). ⚠️ *Headline-level; no sizing extracted. Logged because LEO is a GaN end-market outside the data-centre thesis that dominates this page.*
+- **AND THE SECTOR FRAME: Jefferies' ~100-company conference — *"**Data Center Continues to Power Analog Recovery**"*, with auto *"modestly improved, particularly in China and EV/ADAS applications, but **Tier 1 inventories remain lean and there are limited signs of meaningful restocking thus far**"* (Jefferies · Blayne Curtis, 2026-08-27).**
+
+
 **🆕 2026-08-09 — Wolfspeed sues Navitas; the engineering read is that the patent case is weak (Irrational Analysis, 2026-08-09).** Wolfspeed filed suit against Navitas citing **six patents**. The independent teardown of the six:
 - **The lead patent is on GaN transistors — and Wolfspeed sells no GaN products, substrates or anything** — and, per his read, **is expected to expire in about four months.**
 - Two are chemistry/process patents he does not characterise; one he judges **"stupid from an engineering perspective."**
