@@ -7,17 +7,17 @@
 _Wiki · generated 2026-06-19 · **No SEC filings — Japanese issuer (TSE Prime: 285A), IPO Dec-2024; thin coverage.** Sources: `E:\Wiki Felipe\KIOXIA\transcripts` (IR results briefings) + `E:\briefings\2026` roll-up + BBG (JPY). Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-27 · JPY
+### 📊 Consensus snapshot — BBG · asof 2026-08-28 · JPY
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | ¥8117.4bn | ¥12740.2bn |
-| Gross profit | ¥6445.2bn | ¥10561.6bn |
+| Revenue | ¥8117.6bn | ¥12761.0bn |
+| Gross profit | ¥6445.3bn | ¥10578.9bn |
 | Gross margin | 79.4% | 82.9% |
-| EBITDA | ¥6511.2bn | ¥9714.6bn |
+| EBITDA | ¥6514.9bn | ¥9750.6bn |
 | EPS | ¥8116.39 | ¥13767.54 |
-| Capex | ¥388.8bn | ¥508.7bn |
-| OCF (≈EBITDA) | ¥6511.2bn | ¥9714.6bn |
+| Capex | ¥388.8bn | ¥556.7bn |
+| OCF (≈EBITDA) | ¥6514.9bn | ¥9750.6bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

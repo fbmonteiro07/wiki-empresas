@@ -64,8 +64,20 @@ def programmatic_edges():
 
 
 def latest_recon():
-    files = sorted(META.glob("reconciliation-*.md"))
-    return files[-1] if files else None
+    # NB: sort by the DATE IN THE FILENAME, then mtime — never lexically.
+    # A same-day suffixed report ("reconciliation-2026-08-27-runinbox.md") sorts
+    # BEFORE the plain one lexically ('-' 0x2D < '.' 0x2E), so a plain sorted()[-1]
+    # silently returns the OLDER report whenever a date has two files.
+    files = list(META.glob("reconciliation-*.md"))
+    if not files:
+        return None
+
+    def key(p):
+        m = re.match(r"reconciliation-(\d{4})-(\d{2})-(\d{2})", p.name)
+        d = (int(m.group(1)), int(m.group(2)), int(m.group(3))) if m else (0, 0, 0)
+        return (d, p.stat().st_mtime)
+
+    return max(files, key=key)
 
 
 def curated_diverges(rf):

@@ -4,11 +4,11 @@ _Every NEW quantitative datapoint from tonight's 13 ingested sources, placed aga
 
 **BBG status: ✅ LIVE.** Pulled 2026-08-27 via the Capstone wrapper (`E:\bloomberg_api`, `bdp`, `BEST_FPERIOD_OVERRIDE` passed as a **kwarg**, not in an `overrides=` dict — the dict form raises `BAD_ARGS / Invalid override field`). Fields: `BEST_EPS`, `BEST_SALES`, `BEST_EBIT`, `BEST_CAPEX` at `1FY/2FY/3FY`. **Periods are each company's own FISCAL years**, which avoids the CY-sum wedge documented in `_meta/assumptions.md`.
 
-⚠️ **Two consensus rows were EXCLUDED from this report as implausible-and-unverified rather than used: `MU` (1FY sales $129.3bn on a ~$45bn base, 76% EBIT margin) and `SNDK` (1FY sales $48.8bn, 79% EBIT margin, and 3FY EPS BELOW 2FY).** Per the standing rule on this wiki, these are **not** being rejected on plausibility — they are simply not being used as a baseline until the basis is verified, because neither name carries a new quantitative datapoint tonight (both were qualitative de-spec read-throughs). **Flagged for `/wiki-consensus` to check the currency/scaling on those two tickers.**
+✅ **RESOLVED 2026-08-28 via `/wiki-consensus` — BOTH ROWS ARE CORRECT AND ARE NOW ADMITTED AS BASELINES. The two figures reproduce EXACTLY on a fresh live pull, and the reason they looked wrong is a QUARTER-vs-FISCAL-YEAR BASIS ERROR in the original flag, not a currency or scaling fault.** Live `bdp` re-pull 2026-08-28 (`BEST_FPERIOD_OVERRIDE` = `1FY`/`2FY`/`3FY`, kwarg form): **`MU` 1FY sales $129,311.2m, EBIT margin 76.2%, EPS $72.78**; **`SNDK` 1FY sales $48,825.5m, EBIT margin 79.5%, EPS $211.74, and 3FY EPS $211.10 BELOW 2FY $259.46** — i.e. every flagged number is transcribed correctly. ⚠️ **The `MU` flag's *"on a ~$45bn base"* is the defect: it places a full FISCAL YEAR against roughly ONE QUARTER of revenue.** MU printed **$41.5bn in F3Q26 alone** and guided F4Q26 to **~$50bn**; its last full fiscal year (FY25) was **$37.4bn**. 🔴 **The decisive corroboration is external and independent: BMO's own FY26E model — built bottom-up from three ALREADY-REPORTED quarters ($13,643 + $23,860 + $41,456 = $78,959m) plus the guided quarter ($50,140m) — totals $129,099m and $73.00 EPS, versus BBG's $129,311.2m and $72.78. That is +0.16% on revenue and −0.30% on EPS.** Three quarters of MU's "1FY" is therefore reported FACT, not forecast. The 2FY line ($151.683) also reproduces the $151.678 logged on 08-21/08-22 to three decimals — stable across seven sessions. **`SNDK` is corroborated the same way and lands CONSERVATIVE:** its 1FY (FY-Jun-2027) $48,825.5m sits **BELOW** both Susquehanna's FY27e $51.4bn and Bernstein's FY27 $50.0bn, and the 79.5% EBIT margin follows directly from a **PRINTED 84.6% non-GAAP gross margin in Q4 FY26** and an 83-85% guide. ➤ **Per the standing rule on this wiki, neither row is rejected on plausibility — and on inspection neither deserved to be. Both are restored as usable baselines.** See the new item **10** below, which is what the `SNDK` 3FY line actually means.
 
 ---
 
-## 🔴 DIVERGES — the alpha
+## Where the new data DIVERGES
 
 ### 1. [[LITE]] — management's FY28 earnings power is ~20% above consensus and ~a full year ahead of the consensus trajectory
 **New datapoint:** Lumentum management, Deutsche Bank Technology Conference (2026-08-27), *"substantially take up where we think our earnings power will be in… our fiscal 2028"* — the ingested digest renders the destination as **$40 of FY28 earnings power**, attributed to OCS volume × OCS margin.
@@ -105,6 +105,27 @@ _Every NEW quantitative datapoint from tonight's 13 ingested sources, placed aga
 
 ---
 
+### 10. [[SNDK]] — consensus models an FY29 REVENUE DECLINE against management's own mid-to-high-teens growth framework, and this is the largest house-vs-Street gap on the wiki, now sized
+**Source of the finding:** the `3FY EPS BELOW 2FY` line originally flagged as an implausible-scaling artefact (see header note) is **not an artefact — it is consensus deliberately modelling a cycle-down**, and placing it is the whole value of the row.
+
+| SNDK consensus (BBG live, 2026-08-28, `BEST_FPERIOD_OVERRIDE`) | 1FY (FY-Jun-27) | 2FY (FY28) | 3FY (FY29) |
+|---|--:|--:|--:|
+| Revenue ($m) | 48,825.5 | 58,588.7 | **52,670.9** |
+| y/y | — | +20.0% | **−10.1%** |
+| EBIT margin | 79.5% | 78.5% | **71.4%** |
+| EPS (median) | 211.74 | 259.46 | **211.10** (−18.6% y/y) |
+| EPS street-high | 238.36 | 361.20 | **330.00** |
+| Street-high premium to median | +12.6% | +39.2% | **+56.3%** |
+
+➤ **The divergence, stated as a number: management guided mid-to-high-teens revenue growth EVERY year FY28-30 (Investor Day, 2026-08-13). At +16%, FY29 revenue would be ~$67,963m. Consensus carries $52,671m — roughly 22.5% BELOW the company's own framework, and pointing the opposite way in sign (−10.1% versus ~+16%).** The Street is not merely conservative on the out-year; it is modelling a cyclical downturn that management says will not happen.
+
+✅ **This CORROBORATES two marks already on [[SNDK]] and converts both from prose into a placed figure.** (a) Jefferies: *"implies big upward revisions to current consensus forecasts (+16% / −4% / −30% y-y for FY28E/29E/30E)"* — the −4% FY29E and the sign flip are now confirmed directly off the wrapper. (b) Bernstein's own model does the same thing while carrying the Street-HIGH target: FY27 $50.0bn → FY28 $56.8bn → **FY29 $50.1bn (−11.9%)** → FY30 $53.0bn. **Bernstein's $3,000 and consensus agree that FY29 declines; they disagree only on the multiple.**
+
+🔴 **The read: the durability debate is unresolved in consensus itself, and the dispersion proves it — the street-high premium WIDENS from +12.6% (1FY) to +39.2% (2FY) to +56.3% (3FY). The bull and bear tails diverge fastest in exactly the year the NBM book is supposed to be protecting.** ➤ **The falsifiable test is the NBM coverage disclosure, not the price tape: management stated FY29 NBM coverage is *"consistent with the '28 number so far"* (~two-thirds of bits), withheld only because it is still being optimised. If that holds, a −10% FY29 revenue line requires ASPs to fall through a contracted floor on two-thirds of volume — which is the one thing the NBM structure is designed to prevent.**
+
+⚠️ **Basis guard: these are FISCAL-year lines (SNDK FY ends ~Jun), pulled with the period override — NOT the CY sums in `estimates.json`, which straddle fiscal years and would manufacture a different gap. Do not mix the two.** ⚠️ **`estimates.json` carries no FY29/CY2028 column at all, so this row is only reproducible from the live wrapper.**
+
+
 ## ✅ CONFIRMS — no action
 
 | # | Name | New datapoint | Baseline | Verdict |
@@ -117,6 +138,7 @@ _Every NEW quantitative datapoint from tonight's 13 ingested sources, placed aga
 | 6 | **[[NVDA]]** | China DC Hopper **<1% of DC revenue**; FQ3 guide assumes **zero** China DC compute | Prior wiki carried both from the call | ✅ Verbatim confirmation from the company primary |
 | 7 | **[[NVDA]]** house EPS | House 2027E non-GAAP **$15.49** | BBG 2FY **$14.915** | ✅ House **+3.9%** — inside tolerance, and directionally consistent with the house's higher revenue |
 | 8 | **[[LITE]]** | NPO pulled forward *"late 2028/early 2029"* → *"**late 2027/early 2028**"* | Prior wiki 08-25: "NPO pulled FORWARD CY29 → CY28"; Jefferies conference 08-27: CPO slips to 2H C28+, NPO fills the gap | ✅✅ **Three sources, same direction — and this one is the company itself, with the mechanism (*"the market has caught on to these same PHYSICS issues"*)** |
+| 9 | **[[MU]]** | The `1FY` consensus row this report EXCLUDED as implausible ($129.3bn sales, 76% EBIT margin) | BBG live 2026-08-28 **$129,311.2m / 76.2% / EPS $72.78** vs **BMO's independently-built FY26E $129,099m / EPS $73.00** | ✅✅ **RESOLVED — consensus is RIGHT and the exclusion was the error. +0.16% on revenue and −0.30% on EPS against a bottom-up broker model, because three of the four quarters are ALREADY REPORTED ($13,643 + $23,860 + $41,456) plus a guided ~$50bn. The original flag compared a fiscal YEAR to one QUARTER's revenue. No house edge is asserted or removed — the row simply returns to service as a baseline.** |
 | 9 | **HBM de-spec** | DAMNANG: **~1.63x** effective output, HBM revenue at **81.5-98% of plan** | Jefferies, independently and with a model: de-spec *"stretches a constrained die pool and INCREASES accelerator shipments… does not undermine structural bit growth"* | ✅✅ **Two independent sources, one with a model, same conclusion. Also consistent with this page's own supply evidence — SK Hynix "tight even over the long term", UBS Korea DRAM fulfilment ratio 60%.** |
 | 10 | **[[ALAB]]/[[COHR]]/[[LITE]]** | CPO ~C29, NPO C27-C28 | Three separate suppliers in one conference week | ✅ Converged |
 | 11 | **[[ARM]]** | AGI CPU demand **>$2bn FY27-28** against a **$1bn TSMC allocation** | BBG 1FY sales **$6,070m** → the new business is **16-33% of current revenue**; consensus 1FY→2FY revenue **+35%** | ✅ **Consistent in scale.** ⚠️ But note management guided **total royalty growth DOWN to high-teens from ~20% on smartphone weakness** — the DC doubling is offsetting mobile, not adding to a healthy base. Consensus +35% total revenue growth is carried by licensing + AGI CPU, not royalties. |
@@ -131,5 +153,9 @@ _Every NEW quantitative datapoint from tonight's 13 ingested sources, placed aga
 1. 🔴🔴 **[[LITE]] "$40 FY28 earnings power"** — obtain the primary Deutsche Bank conference transcript (Bloomberg or company). The number is +20% vs consensus and +33% vs the house model, and it currently rests on an AI-generated digest. **Nothing should be modelled until this is verified.**
 2. 🔴 **[[META]] house capex** — the house $170bn is ~14% below consensus $197bn and ~15-25% below the buy-side floor; the FCF consequence is the live issue.
 3. 🔴 **[[NVDA]] house gross margin** — house ~74% vs management's guided 72-73% FY28. Also decide the LPDDR5 consignment treatment before bridging FQ3.
-4. ⚠️ **`MU` and `SNDK` BBG consensus rows** — implausible scaling (see header note). Route to `/wiki-consensus`.
+4. ~~⚠️ **`MU` and `SNDK` BBG consensus rows** — implausible scaling (see header note). Route to `/wiki-consensus`.~~ ✅ **DONE 2026-08-28 — and it resolved AGAINST the flag: both rows are correct.** `MU` reproduces to +0.16% of BMO's bottom-up FY26E; `SNDK`'s 1FY sits BELOW two broker models (SIG $51.4bn, Bernstein $50.0bn). **The `SNDK` 3FY line was the real find and is now item 10 in `DIVERGES`: consensus models FY29 revenue −10.1% against a mid-to-high-teens company guide, ~22.5% below the framework.** ⚠️ **New standing item: neither row is reproducible from `estimates.json` — the FY ladder needs the live wrapper with `BEST_FPERIOD_OVERRIDE`.**
 5. ⚠️ **[[VEEV]]** — correct the page's framing of "14% growth" as bearish; it is above the sell-side aggregate (+12.2%) and below the buy-side assumption only.
+
+---
+
+_BBG column resolved 2026-08-28 — `estimates.json` asof **2026-08-28** (99/99 live, 0 FAIL lines, 0 `error` keys, 0 null prices, 0 `carried_over` stamps, and **0 records byte-identical to the 08-27 vintage**, so no silent carry-overs), plus an ad-hoc live `BEST_FPERIOD_OVERRIDE=1FY/2FY/3FY` pull of `BEST_SALES / BEST_EBIT / BEST_NET_INCOME / BEST_EPS / BEST_EPS_HI / BEST_CAPEX` for `MU` and `SNDK`. **No `PENDING` cell existed in this report, nor anywhere in the 43-file backlog** — independently re-verified this run by scanning for literal table-cell `PENDING` values rather than trusting the prior run's summary line. **The two EXCLUDED consensus rows are the work this run actually did: both were validated and readmitted — `MU` into `CONFIRMS` (row 9), and `SNDK` into `DIVERGES` (item 10), where its 3FY line turned out to carry the largest house-vs-Street gap on the wiki.** Canonical header `## Where the new data DIVERGES` applied (was `## 🔴 DIVERGES — the alpha`). **No web data was substituted at any point.**_

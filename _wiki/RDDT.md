@@ -5,7 +5,7 @@
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\RDDT` (10-K FY25 + 10-Q Q1-26 + transcripts) · `E:\briefings\2026` roll-up. Master index: [00_INDEX.md](00_INDEX.md). IPO Mar-2024 — short filing history (3 10-Ks back not available; coverage from FY24 onward)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-08-27 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-08-28 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -13,7 +13,7 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\RDDT` (10-K FY25 + 10-
 | Gross profit | $3.0bn | $4.0bn |
 | Gross margin | 91.3% | 91.5% |
 | EBITDA | $1.4bn | $2.1bn |
-| EPS | $6.23 | $8.37 |
+| EPS | $6.26 | $8.41 |
 | Capex | $10m | $15m |
 | OCF (≈EBITDA) | $1.4bn | $2.1bn |
 
