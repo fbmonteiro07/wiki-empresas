@@ -8,9 +8,9 @@ _Generated 2026-08-27 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wi
 |---|---|--:|---|---|--:|---|---|---|
 | GOOG | long | ? | REV 2026 +18% | 2026-09-23 — 🆕 Koray Kavukcuoglu's first public outing — The Information's AI Agenda Live, San Francisco, 2026-09-23. Billed topics i |  |  | 2026-08-25 | Full-stack compounder (Search +17%, Cloud +82%); debate is valuation and capital intensity, not demand. |
 | AAPL | long | ? | EPS 2026 +16% | _none dated_ |  |  | 2026-08-20 | Strong franchise + memory-dislocation advantage; bear = AI catch-up + price elasticity. |
-| NVDA | long | ? | EPS 2027 +8% | 2026-08-27 — 🆕 2026-08-27, 08:00 EST — BofA hosts a post-print NVDA call with Vivek Arya (BofA sales, 2026-08-24). |  |  | 2026-08-27 | Full-stack AI-factory platform at +85% rev; debate is demand sustainability vs ASIC erosion. |
 | AVGO | long | ? | EPS 2026 -5% | 2026-09-02 — 🆕🔴 2026-09-02 — FQ3 FY26 print, and the bar is set by consensus rather than by the guide: ~$120bn of FY27 AI sales is in |  |  | 2026-08-25 | #1 custom-ASIC/TPU partner; binary setup on the ">$100B" FY27 guide vs $250-300B FY28 (JPM). |
 | META | long | ? | EPS 2027 +5% | _none dated_ |  |  | 2026-08-27 | Fastest grower in Mag7 ex-GPU; bear = capital intensity and negative incremental ROIC. |
+| NVDA | long | ? | EPS 2027 +4% | 2026-08-27 — 🆕 2026-08-27, 08:00 EST — BofA hosts a post-print NVDA call with Vivek Arya (BofA sales, 2026-08-24). |  |  | 2026-08-27 | Full-stack AI-factory platform at +85% rev; debate is demand sustainability vs ASIC erosion. |
 | TSM | long | ? | — | _none dated_ |  |  | 2026-08-26 | Sole-source leading-edge foundry (~70% share); pricing headroom vs overseas-fab dilution. |
 | MSFT | long | ? | no house model | _none dated_ |  |  | 2026-08-25 | AI ARR >$37B/+123%; swing is capex (CY27 ~$276B) vs Azure revenue + OpenAI concentration. |
 | AMZN | long | ? | no house model | _none dated_ |  |  | 2026-08-25 | AWS re-acceleration (+28%) + in-house silicon (Trainium); debate = $200B capex/ROIC. |

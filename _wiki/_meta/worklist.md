@@ -2,17 +2,17 @@
 
 _Generated 2026-08-27 · closes the loop on `lint_wiki.py` / staleness.md. Rebuild: `py _wiki/_tools/remediate.py`._
 
-## 🔴 BBG estimates missing (2) — scriptable
+## 🔴 BBG estimates missing (1) — scriptable
 
 Run (BBG Terminal must be logged in) — `fetch_estimates.py` merges, so this is safe:
 
 ```
-py "E:\.claude\scripts\fetch_estimates.py" AEIS SMTC
+py "E:\.claude\scripts\fetch_estimates.py" AEIS
 ```
 
 Or auto: `py _wiki/_tools/remediate.py --run-estimates`
 
-AEIS, SMTC
+AEIS
 
 ## 🟡 No transcript on disk (17) — needs the transcript-fetcher agent
 

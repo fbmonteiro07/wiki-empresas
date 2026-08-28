@@ -11,10 +11,10 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\CRWD` (filings + trans
 |---|--:|--:|
 | Revenue | $5.9bn | $7.3bn |
 | Gross profit | $4.7bn | $5.8bn |
-| Gross margin | 78.7% | 79.2% |
+| Gross margin | 78.7% | 79.3% |
 | EBITDA | $1.8bn | $2.2bn |
 | EPS | $1.23 | $1.57 |
-| Capex | $413m | $463m |
+| Capex | $414m | $464m |
 | OCF (≈EBITDA) | $1.8bn | $2.2bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
@@ -71,6 +71,14 @@ Cloud infra + telemetry feed the Falcon cloud-native platform, which fans out ac
 </svg>
 
 ## Current state (Q1 FY27, call 2026-06-03)
+
+**🆕🔴 2026-08-27 — THE UBS POST-PRINT CALLBACK WITH BERT (CFO) AND MIKE, AND THE MOST USEFUL LINE IS THE BEAT-RATE ARITHMETIC THE STREET SHOULD NOW ANCHOR ON.** (**UBS · Roger Boyd**, on the UBS software virtual event hosted by Karl Keirstead, 2026-08-27. **Buy-rated.**) [Source](../relat%C3%B3rios%20bons/2026_08_27_salesforce_crm_veeva_veev_crowdstrike_crwd_okta_ok.html)
+- 🔴 **THE FRAMING NUMBER: *"it's not lost on me that when you look at the **BLENDED BEAT ACROSS THE FIRST HALF OF THE YEAR, you get to roughly 10%**. So, if I had to guess, **that's kind of where people are going to continue to hold expectations for the rest of the year.**"*** ➤ **A ~10% blended H1 beat is now the working bar for H2 — which means an in-line quarter is a miss and a 5% beat is a disappointment. That is the single most actionable line for setting the next print's bogey.** **On guidance philosophy nothing changed: Bert *"chalked 2Q up as kind of a REALLY GOOD QUARTER"* and did not dispute that it *"looked like it was maybe NOT THAT DISTINCTIVELY BACK-END WEIGHTED, which was supported by the **DSOs again relatively LOW in the second quarter**."* Boyd: *"I'm inclined to think he's still being fairly CONSERVATIVE."***
+- **WHERE THE STRENGTH CAME FROM, NAMED: *"on new-logo **FLEX** wins, he said that **NEXT-GEN SIEM has been THE BIG WINNER**. They've been able to consolidate some LARGER deals, **DISPLACE SOME INCUMBENTS** — they continue to call out **SPLUNK**, they called out **QRADAR** on the earnings call. And broadly just seeing **BETTER PLATFORM ADOPTION UPFRONT after moving to a FLEX-FIRST SALES MOTION**."* Also called out: **Falcon Shield (application security), *"still seeing some TAILWINDS from customers that had issues with the SALESFORCE BREACH."*** ⚠️ **A competitor's security incident is a real but non-recurring demand source — do not extrapolate it.**
+- 🔴 **THE CFO'S OWN THESIS, AND IT IS A CONSOLIDATION CLAIM: *"his most important comment was that **he feels like CONSOLIDATORS ARE WINNING IN THIS ENVIRONMENT**"* — pointing to Flex traction, **TCO as *"still a major part of why they win"***, and platform breadth winning incremental deals. ⚠️ **Boyd flags it himself: *"that's obviously somewhat SELF-SERVING."***
+- 🔴 **THE AI-LABS COHORT IS THE NEW STRUCTURAL DEMAND STORY, AND IT IS EXPLICITLY EARLY: on the eight-figure **FOUNDATION-MODEL win** called out on the earnings call, Mike said *"**DIGITAL NATIVES in general are coming to them. It's still VERY EARLY for the AI Labs**, but that traction is fairly healthy, and the **FRONTIER LABS and AI NATIVES can absolutely become MASSIVE CUSTOMERS. They generate an ENORMOUS AMOUNT OF AGENTS AND DATA** and it's a huge opportunity for them."*** ➤ **Cross-read: [[CRM]] disclosed the same week that 9 of the top 10 AI companies use Salesforce and Slack with spend +435% y/y. Two vendors in two different categories independently identifying the frontier labs as the fastest-growing customer cohort — the labs are becoming a spending SEGMENT, not just a technology.**
+- **CHANNEL, WITH ANECDOTES RATHER THAN NUMBERS: a Big Four consultancy *"brought EIGHT TOURS of customers into CrowdStrike's EBC over the past week or so… that CrowdStrike had NEVER SEEN BEFORE"*, and another GSI is *"**10Xing the number of reps** they're bringing to their user conference next week."*
+- 🔴 **AND THE FORWARD CATALYST IS DATED — NEXT WEEK'S USER CONFERENCE, WITH TWO SPECIFIC EXPECTATIONS: (1) *"a lot of INCREMENTAL ANNOUNCEMENTS around their AI SECURITY products"*, and Boyd *"wouldn't be surprised if they gave some sort of **AI ARR NUMBER**"* cutting across **AIDR, Agentic SOC and Charlotte**; (2) a long-term guidance refresh — Bert *"had some TRICKS UP HIS SLEEVE."*** ⚠️⚠️ **BUT BOYD PRE-EMPTIVELY DEFLATES THE OBVIOUS ONE: *"the LOW-HANGING FRUIT would be to guide **FY29 to $10 BILLION ARR. But the street's frankly ALREADY THERE**, so I'm not sure that would be much of a catalyst."* ➤ A $10bn FY29 ARR target would be a non-event; the catalyst would have to be a five-year target or an AI ARR disclosure. That is a clean, dated setup for next week.**
 
 **🆕🔴🔴 2026-08-26 (PRINT — F2Q27, reported AMC) — A CLEAN BEAT-AND-RAISE WHERE THE RAISE EXCEEDED THE BEAT, RPO ACCELERATED 33 POINTS TO +62.5% Y/Y ON FLEX COMMITMENTS, AND ARR REACCELERATED. STOCK +10/+11% AFTER HOURS.**
 
