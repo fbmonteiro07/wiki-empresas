@@ -1,6 +1,46 @@
 # Theme — AI Data-Center Water & Ultrapure Water
 
-_Wiki · opened 2026-08-25 · cross-company theme · **RADAR STATUS — this theme is opened as a watch item, not as a researched position.** No name here is in Capstone coverage; no transcript is on disk yet. Company index: [../00_INDEX.md](../00_INDEX.md) · themes index: [00_THEMES.md](00_THEMES.md) · sibling: [ai-datacenter-power](ai-datacenter-power.md)._
+_Wiki · opened 2026-08-25 · **updated 2026-08-28 (/run-inbox) — STATUS UPGRADED: RADAR → SOURCED THESIS.** A covering sell-side note on this exact thesis is now on disk (Jefferies · Volkmann, 2026-08-24, XYL Buy PT 50), with hyperscaler and fab water contracts named, dated and priced — see the SOURCE CONFIRMATION block below. ⚠️ **Still no name here is in Capstone coverage and no transcript is on disk; the pure-plays (XYL/VLTO/ECL/Veolia) are off-coverage markers, not recommendations. What changed is that the thesis is now attributable rather than speculative.** The covered-name exposure is [[AMZN]] / [[GOOG]] / [[MSFT]] (siting + committed water capital) and [[INTC]] / [[TSM]] (UPW scope and Arizona water contention). Company index: [../00_INDEX.md](../00_INDEX.md) · themes index: [00_THEMES.md](00_THEMES.md) · sibling: [ai-datacenter-power](ai-datacenter-power.md)._
+## 🆕 🔴🔴 SOURCE CONFIRMATION (Aug 28, /run-inbox) — **THE RADAR STATUS CAN NOW BE PARTLY LIFTED: A COVERING SELL-SIDE NOTE ON THIS EXACT THESIS IS ON DISK, WITH THE HYPERSCALER CONTRACTS NAMED, DATED AND PRICED**
+
+**This page was opened 2026-08-25 as a radar item with its pitch sizing explicitly quarantined "pending source confirmation." That source has arrived** — Jefferies' Multi-Industrials team published the thesis as a titled sell-side theme note the day before this page was created, and it independently reaches the same "water is the next behind-the-meter" framing this page was built on.
+
+**The note: Jefferies, "Water & AI Infrastructure: The Next 'Behind the Meter' Theme?", Stephen Volkmann, 2026-08-24. Featured stock XYL at BUY, PT raised to $150.00 from $145.00.** ⚠️ **XYL is not a covered name on this wiki; it is carried here as the theme's pure-play marker, not as a recommendation.**
+
+### 🔴 The contract table — the part this page most needed, because it converts a narrative into signed dollars
+
+| Counterparty / project | Year | What it is | Size |
+|---|---|---|---|
+| **[[MSFT]] — Goodyear, AZ** | — | Committed to a municipal wastewater plant **"to maintain site access"** | **>$40m** |
+| **[[AMZN]] — Louisiana campus** | — | Local water infrastructure alongside a **$12bn** campus | **$400m** |
+| **[[AMZN]] / Veolia — Mississippi** | — | Reclaimed-water cooling at a data centre | n/d |
+| **[[AMZN]] / Xylem — Mexico** | 2025 | Digital water management across Mexico City & Monterrey utilities (leak detection, pressure monitoring, cloud analytics) | **1.3M m³/yr saved** |
+| **[[GOOG]] — seven US states** | 2025 | Water infrastructure near DCs incl. wetland restoration, utility leak detection | **$500M**; 7bn gal replenished 2025, target 19bn gal/yr by 2030 |
+| **Veolia / [[INTC]] — Ohio** | 2025 | 16-year design-build-operate **UPW + wastewater** for the Ohio semi campus | **$550M — "largest single disclosed water contract for a US semiconductor facility"** |
+| **[[INTC]] — Arizona** | 2023 | Ocotillo Brine Reduction Facility, Chandler; **96% on-site water recovery** | **12.8M m³ saved** |
+| **Xylem / Dow** | 2026 | 23-year outsourced water contract, Xylem's largest ever; ~75% service / ~25% capital, service begins 2028 | **$850M** |
+| **Veolia / WaaS (US semi fab)** | 2024 | Water-as-a-Service, template for outsourced fab water | **$66M**; 2.1M gal/day recycled |
+
+### What the note adds beyond the contracts
+
+- **🔴 THE PLEDGE IS THE MECHANISM: "All four major hyperscalers have committed to being water-positive by 2030, requiring CONTRACTED INFRASTRUCTURE rather than just efficiency targets."** ➤ **That is what converts an ESG line into a procurement pipeline with counterparties and durations — and it is why the Veolia/Xylem contract lengths (16, 23 years) matter more than the headline dollars.**
+- **The revenue is already printing at the pure-play: "Xylem's AW data center orders increased more than 300% in 2Q26 and management expects DC revenue to grow ~200% this year"**, with management framing the opportunity as spanning *"semiconductors, power generation, mining, water reuse, and outsourced water services."*
+- **🔴 THE DEMAND-STACK CORRECTION, WHICH DIRECTLY ADDRESSES THIS PAGE'S DEBATE #1 (closed-loop cooling cannibalising the volumetric TAM):** *"Water demand comes from all AI value chains, and the market focuses on the smallest one. **Direct data center cooling is visible but least significant.** The larger driver is power generation: **thermoelectric plants account for ~95% of total data center water withdrawals**, a footprint absent from hyperscaler disclosures. **Semiconductor manufacturing remains the fastest-growing demand vector.**"* ➤ **If ~95% of the withdrawal sits at the power plant rather than at the rack, then closed-loop cooling at the DC cannibalises only the smallest slice — which substantially weakens the cannibalisation objection this page quarantined the sizing over.**
+- **The TAM, attributed and with its basis stated:** **Global Water Intelligence estimates ~31bn m³ of incremental annual water demand from the broader AI ecosystem by 2050**, which Jefferies converts to **"roughly $15-31bn of annualized water-related spend per our calculations."** ⚠️ **A 2050 horizon and a broker-derived conversion — use as an order of magnitude only.**
+- **The analogy is made explicit and is falsifiable:** *"When data centers could not obtain sufficient grid capacity, they shifted from passive grid buyers to on-site private generation builders. **CAT captured that wave as the recip engine backlog surged more than 3.5x, and the market re-rated the company.** Water could be the next beneficiary."*
+
+### ⚠️ The friction is regulatory and it is accelerating — this is now a SITING risk for the covered names
+
+- **Arizona enacted a three-year moratorium on data-center tax incentives in June 2026**, after a **$14bn Goodyear development was withdrawn**, a **Tucson project's water permit revoked**, and **Chandler blocked a 100mn+ gal/yr request.** Phoenix-area DCs are projected at **>20% of the city's water demand by 2031** against a multi-decade megadrought and Colorado River shortage.
+- **Texas is next: DCs projected at ~3% of state water use by 2030; the PUC began requiring DCs to report water usage, cooling technologies and electricity sources in spring 2026**, with the Legislature directing industry-wide water data by end-2026 and further limiting legislation under consideration.
+- **🔴 THE FAB OVERLAP IS THE UNDER-APPRECIATED PART: "TSMC's Arizona campus and Intel's Chandler operations are served by the same water system, already under pressure from data center demand,"** while CHIPS-Act capacity concentrates in **Arizona, Texas and New York** — the same states absorbing DC growth. ➤ **[[TSM]] and [[INTC]] are competing for the same water as the hyperscalers in the two states where both are building hardest.**
+- **In Chile, communities have pursued legal action against Amazon, Google and Microsoft over water.**
+
+➤ **Status change proposed: this page moves from "RADAR — no coverage, no transcripts" to "covered thesis with a named sell-side sponsor and a signed-contract base." The `## ⚠️ UNVERIFIED` section below should be re-audited against this note before the next lint pass — several items there are now sourced.**
+
+(Jefferies "Water & AI Infrastructure: The Next 'Behind the Meter' Theme?", Stephen Volkmann, 2026-08-24.) [Source](../../relat%C3%B3rios%20bons/Water_AI_Infrastructure__The_Next___Behind_the_Meter___Theme.html)
+
+
 
 ## What it is / why it matters
 

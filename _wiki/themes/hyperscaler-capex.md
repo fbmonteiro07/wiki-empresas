@@ -4,6 +4,29 @@ _Wiki · generated 2026-06-25 · cross-company theme · sources: the AI_Demand_C
 
 > **Live dashboard:** [Capex Cloud](../_dashboards/hyperscaler-capex/Capex_Cloud.html) (snapshot in the wiki). Build source / source of truth: `E:\AI_Demand_Capex` (`build_capex_cloud.py` → also publishes to `E:\ASML - Copia\.publish_semicap\CapexCloud`). **TODO (next pass):** improve this dashboard with our own model data — see the house-model reconciliation below.
 
+## 🆕 Recent signals (Aug 28, /run-inbox — **BARCLAYS BUILDS THE AI-LAB→HYPERSCALER PASS-THROUGH AS AN ACTUAL P&L, NAMES AWS AND GCP AT $37bn EACH IN '26E, AND DATES THE SHARE LOSS TO '28; AN EX-BEDROCK PM SAYS AZURE IS ITSELF RENTING NEOCLOUD CAPACITY**) — 🔴🔴 **THIS PAGE TRACKS CAPEX GOING OUT. IT HAS HAD NO CLEAN MODEL OF THE AI REVENUE COMING BACK IN. BARCLAYS SUPPLIES ONE — AND ITS TERMINAL YEAR CARRIES A SHARE-LOSS CALL THAT LANDS ON EXACTLY THE BACKSTOPPED-INFRASTRUCTURE FINANCING THIS PAGE HAS BEEN DOCUMENTING.**
+
+### 🔴 (1) THE RETURN LEG, SIZED: $35-40 OF EVERY $100 OF AI-LAB REVENUE, AT 35-45% OI MARGIN
+
+- **The pass-through: "around $35-$40 of every $100 in AI Lab revenue flows to hyperscaler revenue in '26, on which the hyperscalers generate nearly $10-$20 in OI (at high ~35%-45% operating margin)."** By lab archetype: **API-weighted "Lab A" → $35 of hyperscaler revenue at 34% margin; subscription-weighted "Lab B" → $41 at 47%**, the difference being a **20%-of-revenue strategic-partner fee** — though *"the actual profit on a per token basis is likely the same excluding these fees."*
+- **The industry ladder ($bn): AI-lab revenue 7 / 26 / 137 / 376 / 690 ('24/'25/'26E/'27E/'28E) → hyperscaler AI revenue 11 / 36 / 124 / 289 / 502.** Crucially the RATIO falls: **153% / 136% / 90% / 77% / 73%.** *"Right now, just about every dollar of AI lab ARR is finding its way to the hyperscaler revenue line, because of the high mix of training relative to inference in '26."*
+- **Named splits: AWS AI revenue $3 / $10 / $37 / $87 / $151bn and GCP AI revenue $3 / $10 / $37 / $87 / $151bn — an assumed FLAT ~30% share each, with "Other Cloud" (incl. Azure) at 40% ($49 / $116 / $201bn '26E-'28E).** ⚠️ **Azure is NOT broken out. And the AWS=GCP parity is asserted, not derived — record it as a modelling convention, not a share call.**
+- **🔴 THE DATED DISCONTINUITY, AND IT IS THE ITEM FOR THIS PAGE: "Hyperscalers likely start to LOSE MARKET SHARE of AI lab training and inference starting in '28 when BACKSTOPPED AI INFRASTRUCTURE PROJECTS come online and become the first option for AI labs."** ➤ **That is the residual-value-guarantee / vendor-financing architecture this page has been cataloguing (NVDA's "up to 25%" residual support, AVGO's ~82% guarantee, the ~$5.9bn-per-100MW guarantee math) re-read as a COMPETITIVE THREAT to the hyperscalers rather than as a credit risk. Same structures, opposite sign, and Barclays puts a year on it.**
+
+(Barclays "U.S. Internet: A Primer on AI Lab & AI Hyperscaler Unit Economics", Ross Sandler / Alex Hughes, 2026-08-28.) [Source](../../relat%C3%B3rios%20bons/US_Internet_A_Primer_on_AI_Lab_AI_Hyperscaler_Unit_Economics_US_Internet_A_Primer_on_AI_Lab_AI_Hyperscaler_Unit.html)
+
+### 🔴 (2) AZURE RENTS FROM NEOCLOUDS — AND THE ENTERPRISE ROUTES 90/10 THROUGH THE CLOUDS ANYWAY
+
+From an AlphaSense expert call with a former AWS Bedrock PM (also ex-Google Vertex, ex-Meta, ex-Microsoft Azure ML). ⚠️ **Single expert, left AWS 2024; directional.**
+
+- **🔴 "If you look at Azure, it rents data centers from Lambda or any NeoClouds today"** — framed as deliberate diversification, and used to argue the labs will keep renting too even after building their own. ➤ **A portion of hyperscaler AI capacity is LEASED, not owned — which flatters owned-capex optics, shifts the cost from capex to opex, and means [[CRWV]]/[[NBIS]] demand is partly hyperscaler demand rather than competing demand. Directly relevant to this page's off-balance-sheet-commitments work (~$3.1tn) and to the capex-vs-OCF ratios.**
+- **The demand-routing claim underneath all the cloud AI revenue lines: "enterprises are… mostly 90/10 that they will go to Azure, Vertex, or Bedrock to get their API access and not go to OpenAI and Anthropic,"** on multi-geography support and *"six or eight nines"* network reliability.
+- **On the neoclouds as competitors: "currently serve as supplemental infrastructure rather than direct competition, but could become competitors if demand stabilizes and they move up the stack"** — and *"if you look three years down the line, I do see CoreWeave and Nebius"* as such. Today the hyperscalers are not fighting them: *"let's increase the pie and not compete."*
+- ➤ **🔴 NOTE THE CONVERGENCE: Barclays dates hyperscaler AI-lab share loss to '28 from a financing/backstop argument; the operator independently arrives at ~3 years from a stickiness argument. Two unrelated sources, same window — the strongest cross-corroborated forward risk on this page this week.**
+
+(AlphaSense expert call, former Product Manager Technical at AWS (Bedrock), buy-side-led, 2026-08-27.) [Source](../../relat%C3%B3rios%20bons/--_-_ExpertCall_document_dated_27-08-2026_1.html)
+
+
 ## 🆕 Recent signals (Aug 27, /run-inbox — **[[META]] 2027 CAPEX GETS A BUY-SIDE FLOOR (~$200bn) AND A REUTERS-DERIVED CEILING (MID-$200bns), OFF ~$145bn THIS YEAR — AND THE COVERING ANALYST SAYS THE HIGH CASE REQUIRES A CAPITAL RAISE**) — 🔴🔴 **THIS PAGE TRACKS AGGREGATES. WHAT IT HAS LACKED IS A SINGLE HYPERSCALER'S 2027 RANGE WITH THE FINANCING CONSTRAINT ATTACHED. BofA'S POST-SETTLEMENT CALL SUPPLIES BOTH, PLUS THE GW→DOLLARS ASSUMPTION USED TO BUILD IT.**
 
 **Source: BofA Securities · Justin Post, hosted client call on the Meta AG settlement, 2026-08-27. PT $800.** [Source](../../relat%C3%B3rios%20bons/2026_08_27_meta_call_baml_27_ago_26.html)

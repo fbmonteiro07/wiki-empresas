@@ -3,6 +3,41 @@
 # Theme — HBM / Memory Super-Cycle
 
 _Wiki · generated 2026-06-19 · cross-company theme · sources: equity calls (`../_equity_calls/Semis`), briefing roll-ups (`../_briefings/by-ticker`), earnings transcripts, company pages. Company pages: [../00_INDEX.md](../00_INDEX.md) · themes index: [00_THEMES.md](00_THEMES.md)._
+## 🆕 Recent signals (Aug 28, /run-inbox — **THREE NAND CONTRACT STRUCTURES SIDE BY SIDE, AND THEY ARE NOT THE SAME TRADE; PLUS AN INDEPENDENT AUDIT THAT SAYS [[SNDK]]'S LONG-TERM MODEL IS INTERNALLY INCONSISTENT**) — 🔴🔴 **THIS PAGE HAS TREATED "LTAs DE-CYCLICALISE MEMORY" AS ONE THESIS. TWO SOURCES THIS WEEK SHOW THE THREE MAJOR NAND SUPPLIERS HAVE SIGNED MATERIALLY DIFFERENT CONTRACTS — FLOOR-ONLY, FLOOR-AND-CEILING, AND QUARTERLY-RENEGOTIABLE — WHICH MEANS THEY WILL NOT BEHAVE THE SAME WAY IN EITHER TAIL.**
+
+### 🔴 (1) THE LTA STRUCTURE COMPARISON — THE MOST USEFUL NEW DISTINCTION ON THIS PAGE THIS WEEK
+
+| Supplier | Coverage | Price structure | Who keeps the upside |
+|---|---|---|---|
+| **[[KIOXIA]]** | **~50% of CY28 bits; >50% of CY27** | *"commonly secure a certain return on investment **WITHOUT SETTING A CEILING**"* | **Supplier** — *"enabling the company to capture some upside when market prices rise"* |
+| **[[SNDK]]** (NBMs) | **~50% of FY27 bits; ~2/3 of FY28** | **Floor AND ceiling**, fixed + variable, volumes growing over a 4-yr WAL; **8 customers, $94bn minimum contracted revenue over 4 years** | **Shared/capped** — traded upside for a harder floor |
+| **[[SAMSUNG]]** | LTAs target **60-70% of total wafer capacity** | *"memory ASP remains **NEGOTIABLE ON A QUARTERLY BASIS** even under LTAs"* | **Neither** — volume is contracted, price is not |
+
+➤ **🔴 THE CONSEQUENCE: "LTAs will smooth the cycle" is not a single industry claim and should stop being carried as one on this page. In a sustained-tight tape Kioxia captures most, Sandisk least. In a downturn Sandisk has the hardest floor — IF the counterparties honour it — while Samsung has effectively no price protection at all. These are three different bets on the same commodity.**
+
+### 🔴 (2) KIOXIA IR, VIA GOLDMAN: TIGHTNESS REAFFIRMED THROUGH CY27, AND CY29 LTAs MAY CARRY ADVANCE PAYMENTS
+
+- **Coverage ratio "roughly 50% for CY28 bit shipments (higher than 50% for CY27)"**, centred on hyperscalers, enterprise and consumer; discussions **already underway for CY29 and beyond**, where **advance payments "could be a possibility"** (they are not a prerequisite through CY28). ➤ **Customer prepayment for 2029 NAND bits would be the single strongest supply-tightness signal this page could receive; flagged as a trackable milestone.**
+- **Bit shipments rise q/q in FY3/27 3Q AND 4Q — "which typically sees a seasonal decline."** ASP increases are **moderating**, but the company **"does not assume a scenario of like-for-like price declines, as it expects demand to continue to exceed supply through CY27."** GS: *"a higher level of profits is sustainable compared to past NAND cycles."*
+- **On China: Chinese makers "unlikely to become a direct threat"** — eSSDs need per-customer software customisation plus geopolitics; and **cheap Chinese AI models, if widely adopted, "could actually serve to BOOST NAND demand."**
+- **GS Buy, TP ¥116,000 vs ¥50,930 (+127.8%); revenue ¥2,338bn (3/26) → ¥10,405bn (3/27E) → ¥13,874bn (3/28E) → ¥16,364bn (3/29E); P/E 8.0x → 4.7x → 3.4x → 2.9x.**
+
+(Goldman Sachs "Kioxia Holdings (285A.T): Conf. call", Shuhei Nakamura / Kaho Otake, 2026-08-25.) [Source](../../relat%C3%B3rios%20bons/20260825_Goldman_Sachs_285A-JP_Kioxia_Holdings_-285AT--_Conf_call-_Reaffirms_view_tha.html)
+
+### 🔴 (3) BRISTLEMOON ON SANDISK: THE LONG-TERM MODEL DOES NOT RECONCILE WITH ITSELF
+
+An independent buy-side audit of [[SNDK]]'s FY28-FY30 model, and the finding generalises to every NAND long-term model on this page:
+
+- **Derived NBM floor: ~$14bn minimum contracted FY27 revenue on the ~50% of bits under NBM → ~$28bn total, vs a 4Q26 annualised run-rate of $36bn going to $38-39bn. That puts the NBM floor price 26-28% BELOW realised 4Q26 ASP, and the gross-margin floor at 78-79% vs 4Q26's 84.6%** — corroborated by CFO Luis Visoso's Investor Day confirmation of a **"around 80%"** NBM floor gross margin.
+- **🔴 THE INCONSISTENCY: management guides mid-high-teens BIT growth with discipline → the model's mid-high-teens revenue growth is bit-driven at FLAT ASP. But "the ~80% average gross margin is only plausible if ASP falls by over 30% from today's levels." The only reconciliation is that GM ENTERS FY28 at 80% — blended ASP already at the NBM floor — making the "sustainable model" a bet that the NBMs hold in an oversupplied market.** Verdict: *"the long-term model as presented is a piece of investor marketing material that should be de-emphasized because actual performance will either be better or MATERIALLY WORSE."*
+- **⚠️ THE SENSITIVITY WARNING BELONGS ON EVERY NAND PAGE HERE: "a ~MSD% bit deficit has been sufficient to push NAND ASPs up FOUR-FOLD over the past year. Conversely, a MSD% bit surplus could in theory drive a similar collapse… the error bars alone are enough to drive multiples-higher or lower changes in ASP."** ➤ **Point estimates of FY29-30 NAND ASP are not meaningful. Scenario bands are.**
+- **The bear scenarios, quantified:** non-NBM ASP **-50% by 4Q29 vs 4Q26** with NBM at floor → **FY29 GM 78%, EPS $218**; **NBMs breached**, both -50% → **GM 72%, EPS $154.** At 8x that is a **"trough" price of $1,200-$1,700 in mid-2028 vs $1,485 today** — **the breach case is roughly flat, which is the genuinely surprising result.**
+- **The demand offset, and it is this page's KV-cache thesis with a number: Sandisk estimates a 1 ZB installed base of KV-cache-offload storage by 2030, absorbing a HIGH-TEENS % of industry bit supply over four years** (industry capacity ~1.2 ZB). Bristlemoon calls that aggressive but still models **incremental mid-high-teens annual bit demand** from KV-cache offload plus persistent agentic memory, before AI-video storage.
+- **The supply check, which is where this page's China risk gets bounded:** [[SKHYNIX]] 50% Dalian expansion, [[SAMSUNG]] Pyeongtaek P5, [[KIOXIA]] Kitakami K3 all land **2027-2029+**; **YMTC at ~200kwpm (~15% industry share) plans three new 100kwpm mostly-NAND fabs, first 50kwpm operational 2027 — 300kwpm is a 20% lift to industry wafer capacity but only ~4%/yr spread over five years.** Conclusion: *"unlikely… sufficient to tip the market into oversupply within the next 2-3 years."*
+
+(Bristlemoon Capital "Making sense of Sandisk's long-term financial model", 2026-08-28.) [Source](../../relat%C3%B3rios%20bons/sndk_bristlemoon.html)
+
+
 ## 🆕 Recent signals (Aug 28 ingest; source ~late Aug, Hot Chips week) — 🔴🔴 **A MEMORY VENDOR, ON STAGE AT HOT CHIPS: *TODAY'S* DEMAND WOULD TAKE **THREE YEARS OF CAPACITY** TO SUPPLY — "IT'S NOT EVEN FUTURE DEMAND"**
 
 _(Source: **a16z (Andreessen Horowitz) podcast — "Why Top Founders Are Racing Into AI Infrastructure"**, announcing the firm's new **"Machine Age" fund**. Speakers: **Ben Horowitz**, **Martin Casado** and **"Ragu"** (surname not stated in the transcript), with an unnamed a16z host. Source date not stated — the transcript says Hot Chips *"is going on"* at Stanford, which places it in **late Aug 2026**; ingested 2026-08-28. Firm identity is confirmed by internal evidence, not inference: the discussion references **"American Dynamism"** (a16z's own fund), **partner Alex Rampell**, and a **Marc Andreessen** quote. ⚠️ Machine transcript, heavily garbled on proper nouns — "Fineman"=Feynman, "Open Clock"=OpenClaw, "Chad GBT"=ChatGPT, "Patrick Carlson"=Collison, "Michael Trolls"=Truell, "hot chips"=Hot Chips.)_

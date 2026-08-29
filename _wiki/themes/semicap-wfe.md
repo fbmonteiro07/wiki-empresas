@@ -3,6 +3,28 @@
 # Theme — Semicap / WFE (Wafer-Fab Equipment)
 
 _Wiki · generated 2026-06-19 · cross-company theme · sources: equity calls (`../../../equity_calls_transcripts/Semis`), briefing roll-ups (`../_briefings/by-ticker`), earnings transcripts, research library (`E:\research_library`). Company pages: [../00_INDEX.md](../00_INDEX.md) · themes index: [00_THEMES.md](00_THEMES.md)._
+## 🆕 Recent signals (Aug 28, /run-inbox — **YMTC TURNS ITS NEW FABS INTO *QUALIFICATION ENVIRONMENTS* FOR DOMESTIC TOOLS, WITH A >50% LOCAL-CONTENT FLOOR ON PHASE III; PLUS A $550M UPW CONTRACT THAT PRICES A FAB COST LINE NOBODY MODELS**) — 🔴 **TWO SLOW-BURN ITEMS, NEITHER OF WHICH MOVES A 2026 WFE NUMBER, BOTH OF WHICH CHANGE WHAT A FAB DOLLAR BUYS.**
+
+### 🔴 (1) THE CHINA LOCALISATION TRANSMISSION BELT GETS NAMED: FABS AS TOOL-QUALIFICATION SITES
+
+- **17 semiconductor companies signed projects worth >CNY6bn** in Wuhan's Donghu zone (China Optics Valley) under YMTC's **"Wutong Tree" Plan**, first group; named equipment suppliers **AMEC and Skyverse**. YMTC is *"drawing equipment, components, inspection and R&D companies closer to its fabs to create a more concentrated domestic semiconductor supply chain centred on wafer manufacturing"* — explicitly *"rather than simply adding vendors."*
+- **🔴 THE MECHANISM THIS PAGE HAS BEEN MISSING: "new production lines therefore serve two purposes: expanding capacity AND PROVIDING PRODUCTION ENVIRONMENTS IN WHICH LOCALLY MADE EQUIPMENT AND MATERIALS CAN BE QUALIFIED."** Plus a hard floor: **YMTC Phase III lines are reportedly subject to a >50% domestic-equipment requirement.**
+- ➤ **Why it matters more than another China-capex headline: qualification is the gate. This page's China WFE numbers ($57 / $73 / $101bn) implicitly assume a foreign-vendor share that erodes only as domestic tools PASS QUAL — and YMTC is now industrialising the qual process itself, at scale, with state zoning behind it. Slower than an export ban, and far harder to reverse. Cross-filed to [china-export.md](china-export.md).**
+- ⚠️ **Trade-press single source; CNY6bn is signed-project value NOT capex; no Phase III timeline given.**
+
+(Digitimes "YMTC builds China chip supply chain around Wuhan fabs with 'Wutong Tree' Plan", Taipei, 2026-08-28.) [Source](../../relat%C3%B3rios%20bons/YMTC_builds_China_chip_supply_chain_around_Wuhan_fabs_with_Wutong_Tree_Plan.html)
+
+### (2) A $550M ULTRAPURE-WATER CONTRACT — THE FAB COST LINE THIS PAGE HAS NEVER SIZED
+
+Jefferies' water theme note puts hard numbers on fab water scope, which sits *outside* WFE but inside fab capex/opex and increasingly gates *where* a fab can be built at all:
+
+- **Veolia / [[INTC]] Ohio, 2025: a 16-YEAR design-build-operate contract for UPW and wastewater treatment — $550M, "the largest single disclosed water contract for a US semiconductor facility."** Plus **Intel's Ocotillo Brine Reduction Facility (Chandler, 2023) at 96% on-site water recovery, 12.8M m³ saved**, which Jefferies calls the model for fab-to-utility partnerships. A separate **Veolia Water-as-a-Service deal for a US fab (2024) at $66M / 2.1M gal/day recycled.**
+- **🔴 THE SITING CONSTRAINT IS THE REAL READ-THROUGH: "TSMC's Arizona campus and Intel's Chandler operations are served by the same water system, already under pressure from data center demand,"** while CHIPS-Act capacity concentrates in **Arizona, Texas and New York** — the same states absorbing hyperscaler DC growth. Arizona enacted a **three-year moratorium on DC tax incentives (June 2026)**; Texas's PUC began requiring DC water/cooling/power reporting in spring 2026.
+- ➤ **For this page: a second, non-WFE gate on greenfield timing, alongside the cleanroom-space cap [[AMAT]] management already named as the limit on 2028 upside. Water permitting does not change tool intensity per wafer — it changes whether and when the shell that holds the tools gets approved. Detail on [ai-datacenter-water.md](ai-datacenter-water.md).**
+
+(Jefferies "Water & AI Infrastructure: The Next 'Behind the Meter' Theme?", Stephen Volkmann, 2026-08-24.) [Source](../../relat%C3%B3rios%20bons/Water_AI_Infrastructure__The_Next___Behind_the_Meter___Theme.html)
+
+
 ## 🆕 Recent signals (Aug 27, /run-inbox — **THE JEFFERIES CONFERENCE PRIMARY: [[AMAT]] SAYS DEMAND IS RUNNING *ABOVE* THE ~$150bn 2026 SHIPPED-WFE MARKET, TWO VENDORS INDEPENDENTLY RANK C27 GROWTH DRAM-FIRST, AND [[ASML]] HAS A 2029 CAPACITY DECISION DUE BEFORE DECEMBER**) — 🔴 **THIS PAGE ALREADY CARRIES THE 21h RELAY OF THIS CONFERENCE. WHAT THE FULL NOTE ADDS IS PER-COMPANY DETAIL — INCLUDING TWO DATED DECISION POINTS AND ONE CAPACITY CEILING THAT NO AGGREGATE ON THIS PAGE HAS.**
 
 **Source: Jefferies "2026 Semiconductor Conference Recap" (Blayne Curtis, Janardan Menon, Kevin Garrigan et al.), 2026-08-27.** [Source](../../relat%C3%B3rios%20bons/2026_Semiconductor_Conference_Recap.html)

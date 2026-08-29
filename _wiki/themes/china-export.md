@@ -1,6 +1,33 @@
 # Theme — China AI Buildout & Export Controls
 
 _Wiki · generated 2026-06-25 · cross-company theme · sources: equity calls, briefing roll-ups, earnings transcripts, research library, Twitter/X corpus (ported from research-wiki). Company pages: [../00_INDEX.md](../00_INDEX.md) · themes index: [00_THEMES.md](00_THEMES.md)._
+## 🆕 Recent signals (Aug 28, /run-inbox — **YMTC IS BUILDING A *DOMESTIC TOOL QUALIFICATION LOOP* AROUND ITS WUHAN FABS, AND UBS'S CXMT MODEL FILE PUTS A FAB-BY-FAB CAPACITY LADDER ON DISK**) — 🔴🔴 **THIS PAGE HAS TRACKED CHINESE MEMORY AS CAPACITY AND AS POLICY. TODAY IT GETS THE *MECHANISM* BY WHICH CAPACITY BECOMES LOCALISED TOOLING — AND A THIRD, MORE GRANULAR CAPACITY MODEL TO TEST THE EXISTING TWO AGAINST.**
+
+### 🔴 (1) YMTC'S "WUTONG TREE" PLAN — NEW FABS AS *QUALIFICATION ENVIRONMENTS* FOR DOMESTIC TOOLS
+
+- **17 semiconductor companies signed projects worth more than CNY6 billion** in the Wuhan Donghu New Technology Development Zone (China Optics Valley), the first group under YMTC's **Wutong (Chinese parasol) Tree Plan**. Named equipment suppliers include **AMEC and Skyverse**.
+- **🔴 THE STRUCTURAL POINT, AND IT IS THE ONE THIS PAGE HAS BEEN MISSING: the fabs are not only capacity, they are TEST BEDS.** *"For YMTC, new production lines therefore serve two purposes: expanding capacity and **providing production environments in which locally made equipment and materials can be qualified**."* And YMTC is *"drawing equipment, components, inspection and R&D companies closer to its fabs to create a more concentrated domestic semiconductor supply chain centred on wafer manufacturing"* — not merely adding vendors.
+- **A policy floor is attached: YMTC's Phase III production lines are reportedly subject to a requirement that MORE THAN 50% OF EQUIPMENT be domestically sourced.**
+- ➤ **Read-through for [[AMAT]] / [[LRCX]] / [[KLAC]] / [[ASML]] / [[TOKYOELEC]]: this is the transmission belt that converts Chinese memory capex into domestic tool share over time. It is slower than an export ban and more durable — qualification is what makes localisation stick, and a >50% domestic-content mandate on new lines is a scheduled share transfer, not a demand signal. Cross-filed to [semicap-wfe.md](semicap-wfe.md).**
+- ⚠️ **Trade-press single source (Digitimes staff report, Taipei); CNY6bn is the signed-project value, NOT capex, and no timeline is given for Phase III.**
+
+(Digitimes "YMTC builds China chip supply chain around Wuhan fabs with 'Wutong Tree' Plan", staff reporter, Taipei, 2026-08-28.) [Source](../../relat%C3%B3rios%20bons/YMTC_builds_China_chip_supply_chain_around_Wuhan_fabs_with_Wutong_Tree_Plan.html)
+
+### 🔴 (2) THE UBS CXMT MODEL FILE ITSELF — A FAB-BY-FAB DRAM CAPACITY LADDER, NOW ON DISK
+
+The underlying UBS model workbook for **CXMT (长鑫科技, 688825.SS)** — Nicolas Gaudois / Jimmy Yu / Xinlei Li — is now archived, which lets this page test the two capacity models it already carries against a third, more granular one.
+
+- **🔴 TOTAL 12" DRAM CAPACITY (k wpm, installed): 240 (2025) → 292 (2026E) → 381.5 (2027E) → 466 (2028E) → 538 (2029E)** — absolute adds of **+52 / +89.5 / +84.5 / +72k wpm** a year. Utilisation is modelled at **86% → 92% → 89% → 88% → 87%.**
+- **The fab-by-fab build, which is the net-new detail:** Hefei ph.1 (max 120k) already at ~119k and *declining* as it converts; **Hefei ph.2** 58.75 → 100k by 2027; **Beijing ph.1** 55 → 100k by 2028 (**Beijing ph.2 stays at ZERO throughout the forecast**); **🔴 Shanghai fab 1 starts at just 3k in 2026 and ramps to 45k (2027) → 82.5k (2028) → 100k (2029)**, with **Shanghai fab 2** only appearing in 2029 (31.25k); **Hefei ph.3** 6.75k (2027) → 48k (2028) → 90.25k (2029); **Hefei ph.4** a token 3.75k in 2029.
+- ➤ **⚠️ THAT SHANGHAI RAMP IS THE EXPORT-CONTROL PRESSURE POINT ALREADY NAMED ON THIS PAGE. Nomura's 07-26 initiation flagged the MATCH Act risk as CXMT's "Shanghai expansion (potentially 30-40% of total capacity by 2028F) pushed out". UBS's file quantifies exactly that exposure: Shanghai is 82.5 of 466k wpm in 2028E ≈ 18%, rising to 131.25 of 538k ≈ 24% in 2029E. A Shanghai delay is therefore worth roughly a fifth of CXMT's 2028-29 capacity — material but NOT the 30-40% Nomura implies on UBS's own fab schedule.**
+- **Node migration is the other half of the bit story:** geometry mix moves **G3(≈1y) 92% (2025) → 44% (2026) → 17% (2027) → 1% (2028)** as **G4(≈1z)** goes **8% → 56% → 76% → 66%**, then **G5(≈1α)** takes over at **7% (2027) → 33% (2028) → 64% (2029)**. ➜ **Bits grow far faster than wafers: yearly DRAM wafer starts 2,283k (2025) → 2,916 → 3,543 → 4,422 → 5,223k, i.e. +28%/+22%/+25%/+18% — while node shrink adds a second multiplier on top.**
+- **The P&L UBS runs off it (Rmb m):** revenue **61,799 (2025) → 307,464 (2026E) → 659,221 (2027E) → 860,049 (2028E) → 584,452 (2029E) → 582,056 (2030E)**; EBIT **7,667 → 230,848 → 558,342 → 731,953 → 431,265 → 398,140**; net profit attributable **1,875 → 139,739 → 332,844 → 428,239 → 258,440 → 235,765.**
+- **🔴 THE SHAPE IS THE SIGNAL, NOT THE LEVEL: UBS's own model has CXMT revenue and profit PEAKING IN 2028 AND FALLING ~32% IN 2029.** ➜ **A house modelling China's DRAM champion is underwriting a cycle roll two years out — which is a materially different message from the capacity-share headlines this page carries from the same broker complex, and it belongs in the memory-duration debate on [hbm-memory.md](hbm-memory.md).**
+- ⚠️ **Gross margins of ~83% ('26E) / ~89% ('27E) / ~89% ('28E) are extreme and are recorded as modelled, NOT adopted. Note the standing wiki rule against rejecting broker models on plausibility — the Korean memory notes of the same fortnight carry 80%+ DRAM OP margins from two independent houses, so the level is at least internally consistent with the supercycle case. Minority interests run ~35-44% of profit after tax, so ATTRIBUTABLE profit is far below EBIT.**
+
+(UBS CXMT model file, Nicolas Gaudois / Jimmy Yu / Xinlei Li, workbook dated 2026-08-06; ingested 2026-08-28.)
+
+
 
 ## 🆕 Recent signals (Aug 27, /wiki-ingest — **THE EXPORT-CONTROL PERIMETER IS LEAKING IN BOTH DIRECTIONS AT ONCE: CHINESE NAND IS REACHING US NEOCLOUDS THROUGH MODULE-MAKER INTERMEDIATION, A CHINESE OPEN MODEL IS NEGOTIATING TO RUN ON AZURE/AWS/GCP FOR A 30% REVENUE SHARE, AND [[ASML]]'S CHINA REVENUE MAY BE A 2027 *UPSIDE* VECTOR**) — 🔴🔴
 

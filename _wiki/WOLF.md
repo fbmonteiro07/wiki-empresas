@@ -10,8 +10,8 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\WOLF` (10-K/10-Q filin
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $604m | $720m |
-| Gross profit | $-100m | $-77m |
-| Gross margin | -16.6% | -10.7% |
+| Gross profit | $-100m | $-68m |
+| Gross margin | -16.6% | -9.4% |
 | EBITDA | — | — |
 | EPS | $-9.41 | $-6.77 |
 | Capex | $110m | $32m |
