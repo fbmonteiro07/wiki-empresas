@@ -3,6 +3,56 @@
 # Theme — HBM / Memory Super-Cycle
 
 _Wiki · generated 2026-06-19 · cross-company theme · sources: equity calls (`../_equity_calls/Semis`), briefing roll-ups (`../_briefings/by-ticker`), earnings transcripts, company pages. Company pages: [../00_INDEX.md](../00_INDEX.md) · themes index: [00_THEMES.md](00_THEMES.md)._
+## 🆕 Recent signals (Aug 29, /run-inbox — **THE ACRONYM WAVE GETS A FRAMEWORK, AND IT IS A MAP OF WHO LOSES PRICING POWER**) — 🔴🔴 **BERNSTEIN PUBLISHES A 34-PAGE AI-MEMORY PRIMER THAT PLACES HBF, zHBM, NVHBM, HBC, XBM, ZAM, CXL, CMX AND PIM INTO TWO HIERARCHIES — AND THE SINGLE MOST IMPORTANT INVESTMENT CONCLUSION IN IT IS THAT NVHBM STRUCTURALLY REDUCES WHAT MEMORY SUPPLIERS GET PAID FOR, WITH THE VALUE MIGRATING TO [[NVDA]] AND [[TSM]].**
+
+_(Bernstein · Mark Li / Mark C. Newman / Edward Hou / Phoebe Sun — "Global Memory: An AI memory primer", PRIMER, 2026-08-28, first published 14:43 UTC. [Source](../../relat%C3%B3rios%20bons/Bernstein_SNDK_Global_Memory_An_AI_memory_primer.html))_
+
+⚠️ **Scope discipline: this is a TECHNOLOGY primer, not a call. Its ticker table RE-STATES marks this wiki already carries (table below) — nothing here is a PT change. The value is the framework and the per-architecture read-throughs.**
+
+### 🔴 (1) THE STRUCTURAL CALL — NVHBM MOVES THE BASE DIE, AND THE BASE DIE IS WHERE MEMORY SUPPLIERS DIFFERENTIATE
+
+**What NVHBM is, per Bernstein: *"basically HBM customized with base die designed by NVIDIA & manufactured by TSMC."* By moving the memory-controller circuits off the XPU and onto the base die, NVHBM *"should reduce the die size & cost of XPU (or keep die size/cost the same but give more areas to compute circuits), and enhance bandwidth & lower power consumption."***
+
+🔴🔴 **THE VALUE-CAPTURE CONCLUSION, VERBATIM AND UNHEDGED: *"Compared to standard HBM, NVHBM REDUCES THE VALUE PROVIDED BY MEMORY SUPPLIERS as the base die currently designed by memory suppliers will be designed by NVIDIA. Some memory suppliers (e.g. Samsung & Micron) manufacture the base die in the standard HBM, but THE MANUFACTURING VALUE WILL BE CAPTURED BY FOUNDRIES, MOST LIKELY TSMC, IN NVHBM. Memory suppliers currently differentiate on base die but THE ROOM OF DIFFERENTIATION WILL BE 'STANDARDIZED' AWAY by the base die from NVIDIA."*** ➤ **This is the cleanest statement on this wiki of the mechanism by which the HBM super-cycle could stop being a memory-supplier MARGIN story while remaining a memory VOLUME story. It bears on every 2027-28 HBM ASP forecast this page carries — those forecasts price bits and ASP, not the base-die content being reassigned.**
+
+⚠️ **Bernstein records NVIDIA's counter-argument and it should be held alongside: NVIDIA *"tries to make NVHBM 'open'"* by (1) standardising the implementation so multiple memory suppliers can provide it, and (2) expanding NVLink Fusion with NVHBM so third-party XPUs can adopt it too. **[[AMZN]]'s Annapurna Labs has already announced it will work with NVIDIA on NVHBM** — the first evidence on this page that the standard travels beyond NVIDIA's own accelerators.**
+
+### (2) THE COMPETING ARCHITECTURES, AND WHO OWNS EACH — a scoreboard this page did not have
+
+| Architecture | Owner | What it does | Bernstein's read / dates |
+|---|---|---|---|
+| **HBF** (high-bandwidth flash) | **Led by [[SNDK]] and [[SKHYNIX]]** | NAND dies stacked like HBM; HBF stacks are **mixed with HBM stacks and packaged with the XPU using CoWoS-equivalent packaging** | Aims to **match HBM bandwidth at significantly higher capacity and lower cost per bit**, complementing rather than replacing HBM — aimed at **AI inference**. ➤ **Note the packaging dependency: HBF consumes CoWoS-class capacity, so it is ADDITIVE to the [[TSM]] packaging constraint, not a route around it (see [cowos-packaging](cowos-packaging.md)).** |
+| **zHBM** | **[[SAMSUNG]]** | Moves HBM stacks **from beside the XPU (2.5D, via interposer) to ON TOP of it (3D)**, shortening the HBM-XPU path; Samsung plans **wafer-to-wafer hybrid bonding** between the DRAM dies | ⚠️ **Bernstein is openly sceptical on thermals: *"we wonder how the DRAM dies in zHBM can withstand the heat dissipated from XPU in the bottom and keep its operations within the designed specifications."*** Hybrid bonding is read as partly a heat-dissipation fix. |
+| **HBC** (high-bandwidth compute) | **[[QCOM]]** | Deliberately **compromises performance to avoid CoWoS cost** — conventional packaging, no interposer or 2.5D organic substrate, fewer wires; uses **LPDDR dies instead of DDR** to cut power | 🔴 **DATED AND NEAR: Qualcomm targets HBC gen-1 shipping in FY2027 and gen-2 in 2028.** Classified as the G1 tier. |
+| **XBM** (cross-batch memory) | **[[INTC]]** (patents) | DRAM cells built in the **back-end of line (BEOL)** among the metal wires using thin-film transistors, rather than the usual front-end of line | Bernstein treats it as *"emerging memory"*; the possible co-existence of DRAM and logic on one die makes XBM **a candidate for PIM**. ⚠️ **Unresolved who is even suited to build it — *"not sure… whether memory suppliers, Intel, or others, will be more suited to produce XBM in the future."*** |
+| **ZAM** (Z-angle memory) | **[[INTC]]**, with **SAIMEMORY** (a 100% SoftBank subsidiary) | **Reorients the DRAM dies in a stack by 90 degrees** so they sit side-by-side horizontally, letting heat escape through the vertical gaps | **Targeted at practical use in FY2029** — i.e. outside every forecast window on this page. Wireless data transmission among the dies is the named challenge. G1 tier. |
+
+### (3) THE WORKLOAD FRAMEWORK — why the memory tier depends on which part of inference you run
+
+- **Training** is *"the most demanding task, and puts a difficult constraint on ALL TIERS of memory."*
+- **Inference splits, and the split is the investable part: PREFILL is *"compute-bound"* — XPUs and the HBM inside them matter most. DECODE is *"memory-bound"*, and the binding constraint is the KV CACHE, whose size *"compound[s] quickly with BOTH token count AND concurrent user count."*** ➤ **That is the technical mechanism underneath the [tokenmaxxing](tokenmaxxing.md) thesis: agentic workloads raise tokens AND concurrency at the same time, so KV-cache pressure compounds on two axes at once. Bernstein's three named fixes — expanding HBM capacity affordably, offloading to conventional DRAM/NAND, or inserting new tiers between them — are precisely the architectures tabled above.**
+- **RAG**: building the database needs large-capacity SSD/HDD plus DRAM; *searching* it leans more on **system DRAM**. **Agentic workflows first trigger many non-AI tasks for CPU and system memory**, whose results then need to be understood by the model — *"that in turn calls for more compute & memory needs."* ➤ **A second-order read for [[MU]]/[[SAMSUNG]]/[[SKHYNIX]] conventional DRAM and for [[STX]]/[[WDC]]/[[SNDK]] storage: agentic AI is argued to pull NON-HBM memory as well — the opposite of the crowding-out framing this page usually carries.**
+- Two hierarchies are defined: an **architectural** one (SRAM inside the XPU → system memory → local SSD → shared storage, with **HBM inserted just beneath the on-die SRAM**, **CXL and "Storage Next" between system memory and local SSD**, and **CMX between local SSD and shared storage**), and a **hardware** one covering the die/package innovations above. **MRDIMM, SOCAMM2 and LPCAMM2** innovate at the module level; **China is accelerating 4F2 and 3D DRAM R&D**; **PIM** mixes logic and memory on one die but *"adoption of PIM has been very limited as it differs from the current computer systems & supply chain significantly."* **LPU resorts to SRAM to minimise latency; zNAND-O targets on-device AI by stacking NAND dies with TSV.**
+
+### (4) THE TICKER TABLE — ⚠️ CONFIRMS, DOES NOT CHANGE (28-Aug-2026 close)
+
+| Name | Rating | Price | PT | EPS 2026E | EPS 2027E |
+|---|---|--:|--:|--:|--:|
+| **[[SAMSUNG]]** 005930.KS | **O** | KRW 256,500 | **KRW 440,000** | 48,393 | 77,273 |
+| [[SAMSUNG]] pref 005935.KS | O | KRW 186,800 | KRW 374,000 | 48,393 | 77,273 |
+| **[[SKHYNIX]]** 000660.KS | **O** | KRW 1,658,000 | **KRW 3,300,000** | 395,677 | 568,862 |
+| **[[MU]]** | **O** | $935.39 | **$1,300** | $67.39 | $158.99 |
+| **[[KIOXIA]]** 285A.JP | **U** | JPY 47,900 | **JPY 40,000** | 10,013 | 9,656.84 |
+| **[[SNDK]]** | **O** | $1,484.95 | **$3,000** | $238.36 | $272.09 |
+| **[[STX]]** | **O** | $847.20 | **$1,350** | $40.61 | $64.40 |
+| **[[WDC]]** | **O** | $462.00 | **$770** | $23.39 | $36.58 |
+
+_MU/SNDK/STX/WDC figures are Adjusted EPS and Adjusted P/E; SNDK/STX/WDC base year is 2026. Source: Bloomberg, Bernstein estimates and analysis._
+
+⚠️⚠️ **SAMSUNG EPS TRAP, PER THIS WIKI'S STANDING RULE: Bernstein prints the SAME EPS (48,393 / 77,273) against BOTH the common and the preferred line. Do NOT reconcile these against BBG consensus EPS — the common-vs-preferred share-count convention differs between broker headline EPS and BBG. Place [[SAMSUNG]] at NET INCOME for any consensus comparison.**
+
+⚠️ **Cross-house spread worth carrying: on the same complex a week earlier, Wells Fargo (Rakers, 08-21) marks [[SNDK]] at EW $1,550 against Bernstein's O $3,000; [[STX]] OW $1,180 vs $1,350; [[WDC]] OW $730 vs $770; [[MU]] OW $1,525 vs $1,300. The SNDK gap — roughly 2x — is the widest single-name disagreement in memory on this wiki, and the two houses are on OPPOSITE SIDES of the rating too (EW vs O).**
+
 ## 🆕 Recent signals (Aug 28, /run-inbox — **THREE NAND CONTRACT STRUCTURES SIDE BY SIDE, AND THEY ARE NOT THE SAME TRADE; PLUS AN INDEPENDENT AUDIT THAT SAYS [[SNDK]]'S LONG-TERM MODEL IS INTERNALLY INCONSISTENT**) — 🔴🔴 **THIS PAGE HAS TREATED "LTAs DE-CYCLICALISE MEMORY" AS ONE THESIS. TWO SOURCES THIS WEEK SHOW THE THREE MAJOR NAND SUPPLIERS HAVE SIGNED MATERIALLY DIFFERENT CONTRACTS — FLOOR-ONLY, FLOOR-AND-CEILING, AND QUARTERLY-RENEGOTIABLE — WHICH MEANS THEY WILL NOT BEHAVE THE SAME WAY IN EITHER TAIL.**
 
 ### 🔴 (1) THE LTA STRUCTURE COMPARISON — THE MOST USEFUL NEW DISTINCTION ON THIS PAGE THIS WEEK

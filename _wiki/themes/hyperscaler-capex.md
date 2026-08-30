@@ -4,6 +4,38 @@ _Wiki · generated 2026-06-25 · cross-company theme · sources: the AI_Demand_C
 
 > **Live dashboard:** [Capex Cloud](../_dashboards/hyperscaler-capex/Capex_Cloud.html) (snapshot in the wiki). Build source / source of truth: `E:\AI_Demand_Capex` (`build_capex_cloud.py` → also publishes to `E:\ASML - Copia\.publish_semicap\CapexCloud`). **TODO (next pass):** improve this dashboard with our own model data — see the house-model reconciliation below.
 
+## 🆕 Recent signals (Aug 29, /run-inbox — **A FULL MODELLED CAPEX SERIES THROUGH 2029, AND IT CROSSES $1 TRILLION FOR THE BIG FOUR IN 2027**) — 🔴🔴 **CITI'S AI INDUSTRY MODEL IS NOW ON DISK AS A WORKBOOK RATHER THAN A NOTE — WHICH MEANS THIS THEME CAN CARRY THE WHOLE PER-NAME, PER-YEAR SERIES INSTEAD OF THE HEADLINE.**
+
+_(Citi Research · Heath Terry, "Citi AI Industry Model" workbook, 2026-08-05, data as of 8/3/26 — an .xlsx model file; no HTML render exists for this source)_
+
+⚠️⚠️ **PROVENANCE DISCIPLINE FIRST, BECAUSE IT GOVERNS HOW THIS SERIES MAY BE QUOTED: this source is a MODEL WORKBOOK (`Artificial_Intelligence_AI_Industry_Model.xlsx`, TMT Global Technology, Heath Terry / Citi Research), NOT a published note. There is no thesis text, no rating, no PT and no analyst commentary attached to these numbers. The 2028-29 columns are model extrapolation, not company guidance. Treat it as a consensus-adjacent REFERENCE SERIES for the capex debate and always cite it as a model file.**
+
+### 🔴 (1) THE SERIES — AI demand capex, $bn, calendarised (data as of 8/3/26)
+
+| $bn | 2024 | 2025 | 2026E | 2027E | 2028E | 2029E |
+|---|--:|--:|--:|--:|--:|--:|
+| **[[GOOG]]** | 52.5 | 91.4 | **204.5** | **321.6** | 407.6 | 481.8 |
+| **[[MSFT]]** (Azure) | 67.7 | 108.8 | **174.1** | **252.9** | 305.7 | 340.3 |
+| **[[AMZN]]** (AWS) | 53.4 | 90.1 | **167.2** | **244.1** | 301.0 | 345.3 |
+| **[[META]]** | 39.2 | 72.2 | **143.7** | **205.3** | 249.0 | 272.2 |
+| **BIG FOUR US** | **212.9** | **362.6** | **689.5** | **🔴 1,023.9** | **1,263.3** | **1,439.6** |
+| [[CRWV]] | 8.3 | 14.9 | 34.0 | 35.7 | 37.5 | 39.4 |
+| SpaceX (SPCX) | — | 12.6 | 36.0 | 94.7 | 155.5 | 246.3 |
+| **TOTAL US PUBLIC** | **231.5** | **427.7** | **837.2** | **1,244.1** | **1,549.7** | **1,819.3** |
+| **TOTAL (incl. RoW)** | **232.5** | **439.0** | **841.1** | **1,260.5** | **1,739.8** | **2,298.0** |
+
+_Citi line definitions differ by name (Amazon = infrastructure incl. finance leases; Meta = total capex; Google = capex; Microsoft = calendarised Azure capex), so the per-name rows are NOT strictly like-for-like. Alibaba and Tencent are modelled separately in RMB._
+
+🔴 **THE HEADLINE THIS THEME DID NOT HAVE: the Big Four US hyperscalers cross **$1 TRILLION of annual AI capex in 2027E ($1,023.9bn)**, from $362.6bn in 2025 — a 2.8x in two years. Including neoclouds and RoW, Citi's total AI capex line reaches **$1,260.5bn in 2027E** and **$2,298.0bn by 2029E**.**
+
+### ⚠️ (2) WHERE THIS SERIES DISAGREES WITH THE HOUSES ALREADY ON THIS PAGE — and the [[META]] gap is the one to trade
+
+- 🔴🔴 **META 2027E: CITI $205.3bn vs ROTHSCHILD & CO REDBURN $142.2bn — a ~$63bn / ~44% GAP on the same year, and the widest single-name capex disagreement this wiki carries.** Redburn's own note says the buy-side bar is *"over $200bn in 2027"*, and Citi's $205.3bn sits almost exactly on that bar — i.e. **Citi's model IS the buy-side consensus Redburn is arguing against**, which makes the pair a clean, dated, falsifiable divergence rather than two loose estimates. Wells Fargo (Gawrelski, 07-09) independently reads market expectation as *"roughly $200B."* ➤ **Filed to [wiki-edge](../_meta/edge.md): the META 2027 capex question now has a bull mark ($205bn, Citi/buy-side), a bear mark ($142bn, Redburn) and a stated resolution mechanism (Meta's own 2027 guide).**
+- **GOOG is modelled as the LARGEST spender of the Big Four in both 2026E and 2027E ($204.5bn / $321.6bn)** — ahead of MSFT and AMZN. That is consistent with the Wells Fargo read logged on [[GOOG]] that *"only Google will deliver more than 7GW of capacity in '27, powered by TPU capacity."* **Two independent sources, different methods, same conclusion: Google is the capacity leader in 2027.**
+- ⚠️ **The "Other (incl. RoW)" line is the one to treat with most caution: it steps from $16.4bn (2027E) to $190.1bn (2028E) to $478.7bn (2029E). That is a modelled RoW ramp with no disclosed build, and it accounts for most of the difference between the Total US Public and Total lines in the out-years. Do not quote the 2029 total without it.**
+- **[[CRWV]] is modelled as FLATTENING — $34.0bn (2026E) → $35.7bn → $37.5bn → $39.4bn — i.e. Citi has the largest listed neocloud growing ~5%/yr after 2026, while the hyperscalers compound at 20-50%. ➤ An implicit call that neocloud capex share PEAKS in 2026; worth testing against CoreWeave's own contracted backlog.**
+- **SpaceX (SPCX) is modelled at $94.7bn of AI capex in 2027E rising to $246.3bn by 2029E — larger than [[META]]'s 2027 line. ⚠️ Flagged rather than endorsed: SPCX has no BBG consensus line on this wiki and this is a single house's private-company model.**
+
 ## 🆕 Recent signals (Aug 28, /run-inbox — **BARCLAYS BUILDS THE AI-LAB→HYPERSCALER PASS-THROUGH AS AN ACTUAL P&L, NAMES AWS AND GCP AT $37bn EACH IN '26E, AND DATES THE SHARE LOSS TO '28; AN EX-BEDROCK PM SAYS AZURE IS ITSELF RENTING NEOCLOUD CAPACITY**) — 🔴🔴 **THIS PAGE TRACKS CAPEX GOING OUT. IT HAS HAD NO CLEAN MODEL OF THE AI REVENUE COMING BACK IN. BARCLAYS SUPPLIES ONE — AND ITS TERMINAL YEAR CARRIES A SHARE-LOSS CALL THAT LANDS ON EXACTLY THE BACKSTOPPED-INFRASTRUCTURE FINANCING THIS PAGE HAS BEEN DOCUMENTING.**
 
 ### 🔴 (1) THE RETURN LEG, SIZED: $35-40 OF EVERY $100 OF AI-LAB REVENUE, AT 35-45% OI MARGIN

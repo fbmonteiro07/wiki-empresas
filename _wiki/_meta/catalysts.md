@@ -1,12 +1,11 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-08-28 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-08-29 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (23)
+## 📅 Upcoming (22)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-08-28 | MRVL | **🆕 2026-08-28, 8:30am ET — JPM hosting a Harlan Sur *"Ask Me Anything"* on NVDA, SNPS & MRVL results** (JPM · Joshua Meyers, 2026-08-26/27). **The morning-after read from the house whose F28 line (*" |
 | 2026-08-31 | TXN | **CFO transition:** Rafael Lizardi out 2026-08-01 → **Julie Knecht** (CAO, 25-yr veteran), advisory through 2026-08-31 (DB/Seymore, briefing 2026-06-03). |
 | 2026-09-01 | CRDO | **🆕🔴 DATED — Q1 FY27 PRINT: TUESDAY 2026-09-01, release 4:15pm ET, call 5:00pm ET** (Jefferies · Curtis, 2026-08-27). **The bars to beat: July revenue $480m vs Street $472m; October guide $530m vs Str |
 | 2026-09-02 | AVGO | **🆕🔴 2026-09-02 — FQ3 FY26 print, and the bar is set by consensus rather than by the guide: ~$120bn of FY27 AI sales is in the Street's numbers versus management's ">$100bn" (BofA · Arya, 2026-08-19). |
@@ -30,12 +29,13 @@ _Generated 2026-08-28 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-11-19 | SKHYNIX | **🆕 2026-08-20 → 2026-11-19 — the buyback executes on-market** (SK Securities). Daily execution is observable; **the falsifier for the "most aggressive among peers" claim is whether the full W40trn ac |
 | 2026-11-21 | SAMSUNG | **🆕 2026-08-24 → 2026-11-21 — the 53.3mn-share PSU treasury purchase window is open.** A mechanical, non-discretionary bid in the market for three months; note it is **excluded** from the FCF payout b |
 
-## ⏰ Passed — need a post-mortem (1)
+## ⏰ Passed — need a post-mortem (2)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
+| 2026-08-28 | MRVL | **🆕 2026-08-28, 8:30am ET — JPM hosting a Harlan Sur *"Ask Me Anything"* on NVDA, SNPS & MRVL results** (JPM · Joshua Meyers, 2026-08-26/27). **The morning-after read from the house whose F28 line (*" |
 | 2026-08-27 | KIOXIA | **🆕🔴 K3 (third Kitakami fab) — OPERATIONS TO START FY2029; ~¥1.8trn of building + equipment inside a ~¥5trn Kioxia/[[SNDK]] JV programme running FY2026-31, announced 2026-08-27** (JPM · Shikanai/Kwon, |
 
 ## ✅ Resolved (103)

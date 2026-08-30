@@ -1,6 +1,34 @@
 # Theme — AI Data-Center Power & Nuclear
 
 _Wiki · generated 2026-06-19 · cross-company theme · sources: equity calls (`_equity_calls` / `E:\equity_calls_transcripts`), briefing roll-ups (`_briefings/by-ticker`), earnings transcripts, research library. Company pages: [../00_INDEX.md](../00_INDEX.md) · themes index: [00_THEMES.md](00_THEMES.md)._
+## 🆕 Recent signals (Aug 29, /run-inbox — **THE RETURNS ON A GIGAWATT, RANKED BY WHO YOU SELL IT TO — AND A PRE-IPO NEOCLOUD'S BACKER LIST AS A MAP OF THE FINANCING STACK**)
+
+### 🔴 (1) A GIGAWATT IS NOT A GIGAWATT: the same 1GW earns a 10% IRR or a 45% IRR depending on the customer
+
+**Rothschild & Co Redburn models the returns on **one gigawatt of compute** allocated four different ways at [[META]] — the most useful framing this theme has for why "selling compute" and "selling intelligence" are different businesses on identical hardware (15-year IRR, 5-year hardware depreciation cycle):**
+
+| Use of 1GW | Revenue per 1GW | EBIT margin | IRR (0-15yr) | CROIC |
+|---|--:|--:|--:|--:|
+| **AI cloud — CONCENTRATED** (selling to model providers: [[ANTHROPIC]], [[OPENAI]], [[AMZN]]) | **$13bn** | 35% | **10%** | 8% |
+| **AI cloud — DIVERSIFIED** (mid-market software & AI vendors on open-source models) | **$23bn** | 46% | **30%** | 19% |
+| Core advertising | $22bn | **64%** | 43% | 26% |
+| **SMB LLM** | **$25bn** | 58% | **45%** | **27%** |
+
+➤ **THE INVESTABLE POINT: selling raw compute to a handful of frontier labs earns a 10% IRR — roughly a quarter of what the same gigawatt earns pointed at a diversified customer base or an owned software product. Redburn notes precedent deals set the concentrated price at *"c$13bn per GW"*, and prefers *"this diversified route to a concentrated neo-cloud business selling to a handful of buyers."* Zuckerberg's own framing, quoted in the note: *"the margin on selling intelligence is higher than raw compute."*** (Rothschild & Co Redburn · Dominic Ball, "Selling Intelligence over Selling Compute", 2026-07-30) [Source](../../relat%C3%B3rios%20bons/Selling_Intelligence_over_Selling_Compute.html)
+
+⚠️⚠️ **UNIT DISCIPLINE — THE STANDING `$/watt` RULE ON THIS WIKI APPLIES DIRECTLY HERE: the $13-25bn per GW above is REVENUE PER GW earned by the OWNER of the capacity. It is NOT a build cost. It must NEVER be netted against, or chained with, the ~$40bn/GW TOTAL BUILD COST used elsewhere on this wiki (Wells Fargo/Gawrelski 07-09 on [[META]]; BofA/Post 08-27). Two different quantities that share a denominator — mixing them silently inverts the economics.**
+
+**Also from the same note, and relevant to every "should hyperscaler X build an AI cloud" debate on this page: Redburn argues building the next "AI AWS" would be *"a material uphill battle, including a massive incremental capex build-up (AWS HAS SPENT $450BN SINCE 2011), with an IRR BELOW Meta's core ads business."*** **Their [[META]] GW model has **c6GW of over-capacity by 2030** (excess/AI-cloud rising 0.6GW → 6.2GW of a 14.2GW total), with training FALLING from 50% to 10% of the mix as inference scales.**
+
+### (2) NSCALE — a pre-IPO neocloud whose investor list is itself the datapoint
+
+**Bloomberg Intelligence published a pre-IPO assessment of NSCALE, and for this theme the useful content is the FINANCING AND PARTNER STACK rather than the governance write-up.** ⚠️ **No covered company is the subject here — logged as a theme read-through only, no company page patched.**
+
+- **Strategic backers span the whole stack: [[NVDA]] (compute), Dell and Lenovo (systems), Nokia (connectivity), Aker (Nordic industrial and POWER expertise) — plus financial capital from Citadel, Jane Street, Point72, Fidelity and Blue Owl.** ➤ **The presence of Blue Owl and a sovereign-adjacent industrial partner alongside the silicon vendor is the same off-balance-sheet financing pattern this wiki is tracking at [[META]] (BlackRock JV) and [[ANTHROPIC]] (Theseus / MAM / GIC) — a third instance of the structure, at a company small enough that it must disclose it in an S-1.**
+- **[[MSFT]] is the anchor customer, and Nscale hired Nidhi Chappell — the former Microsoft AI-infrastructure chief who led the supercomputer infrastructure supporting ChatGPT.** Global headcount topped **800 in August** with **200+ openings** concentrated in AI infrastructure, data centres and finance.
+- **The strategy is explicitly full-stack, not GPU rental: the agreed ANYSCALE acquisition adds Ray-based orchestration and ~200 software employees, which BI argues *"should raise switching costs and provide more scope to capture economics beyond infrastructure rental."*** ➤ **Consistent with the Redburn table above: the neocloud business model is migrating up-stack precisely because raw compute rental is the lowest-IRR use of a gigawatt.**
+- ⚠️ **BI's own caveats, recorded: the operating track record is short, execution *"is unproven at scale"*, and strategic investors *"may also benefit commercially from its growth"* — so the backer list does not establish stand-alone economics. Board (Sheryl Sandberg, Nick Clegg, Susan Decker) is framed as IPO-grade governance, with the S-1 to reveal founder control, related-party terms and the rationale for 2025 director departures.** (Bloomberg Intelligence · Vasu Kasibhotla, "Nscale's People, Partners Bolster Pre-IPO Execution Credibility", 2026-08-28) [Source](../../relat%C3%B3rios%20bons/20260828_Nscale-s_People-_Partners_Bolster_Pre_IPO_Execution_Credibility.html)
+
 ## 🆕 Recent signals (Aug 28 ingest; source ~late Aug) — 🔴🔴 **THE LABOUR BOTTLENECK GETS A NUMBER AND IT IS ABSURD — *ONLY ~2% OF US ELECTRICIANS ARE CERTIFIED ON DC POWER* — PLUS A 2028 GAP OF ~44GW OF NEW DC DEMAND AGAINST ~25GW OF EXPECTED GRID ADDITIONS, AND A RATEPAYER COUNTER-MODEL THAT ACTUALLY *LOWERS* RATES**
 
 _(Source: **a16z (Andreessen Horowitz) podcast — "Why Top Founders Are Racing Into AI Infrastructure"**, announcing the firm's new **"Machine Age" fund**. Speakers: **Ben Horowitz**, **Martin Casado** and **"Ragu"** (surname not stated in the transcript), with an unnamed a16z host. Source date not stated — the transcript says Hot Chips *"is going on"* at Stanford, which places it in **late Aug 2026**; ingested 2026-08-28. Firm identity is confirmed by internal evidence, not inference: the discussion references **"American Dynamism"** (a16z's own fund), **partner Alex Rampell**, and a **Marc Andreessen** quote. ⚠️ Machine transcript, heavily garbled on proper nouns — "Fineman"=Feynman, "Open Clock"=OpenClaw, "Chad GBT"=ChatGPT, "Patrick Carlson"=Collison, "Michael Trolls"=Truell, "hot chips"=Hot Chips.)_

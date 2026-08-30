@@ -1,6 +1,6 @@
 # Edge tracker — house vs Street
 
-_Generated 2026-08-28 · the standing view of where our model and the curated reconciliation runs disagree with consensus. Divergence = candidate alpha; agreement is noise. Rebuild: `py _wiki/_tools/build_edge.py`._
+_Generated 2026-08-29 · the standing view of where our model and the curated reconciliation runs disagree with consensus. Divergence = candidate alpha; agreement is noise. Rebuild: `py _wiki/_tools/build_edge.py`._
 
 > ⚠️ Programmatic rows are auto-computed (house.json vs estimates.json, USD names only) — **verify the basis before trading** (revenue gross/net/TAC differences can masquerade as edge). Curated rows below are analyst-vetted.
 
@@ -14,18 +14,17 @@ _Generated 2026-08-28 · the standing view of where our model and the curated re
 | GOOG | Revenue $bn | 2027 | 641.00 | 548.30 | +17% |
 | AAPL | EPS | 2026 | 10.12 | 8.76 | +16% |
 
-## Curated divergences — latest reconciliation (`reconciliation-2026-08-28.md`)
+## Curated divergences — latest reconciliation (`reconciliation-2026-08-29.md`)
 
 | Name | New datapoint | Read (the edge) |
 |---|---|---|
-| ★★ [[SNDK]] | THREE INDEPENDENT SOURCES NOW REJECT MANAGEMENT'S FY28-30 GROWTH FRAME, AND CONSENSUS IS ONE OF THEM | THREE INDEPENDENT SOURCES NOW REJECT MANAGEMENT'S FY28-30 GROWTH FRAME, AND CONSENSUS IS ONE OF THEM |
-| 🔴 [[NOW]] | THE EXPERT'S DISRUPTION CASE IS NOT IN CONSENSUS AT ALL | THE EXPERT'S DISRUPTION CASE IS NOT IN CONSENSUS AT ALL |
-| 🔴 BARCLAYS vs THE EX-BEDROCK OPERATOR | A DIRECT CONFLICT ON HYPERSCALER INDIRECT-API ECONOMICS | A DIRECT CONFLICT ON HYPERSCALER INDIRECT-API ECONOMICS |
-| 🔴 [[KIOXIA]] | GOLDMAN RUNS ABOVE CONSENSUS, AND THE GAP WIDENS WITH HORIZON (the cycle-duration bet, quantified) | GOLDMAN RUNS ABOVE CONSENSUS, AND THE GAP WIDENS WITH HORIZON (the cycle-duration bet, quantified) |
-| [[CRWV]] / [[NBIS]] | CONSENSUS PUTS FIRST PROFIT IN EXACTLY THE YEAR TWO INDEPENDENT SOURCES SAY THE COMPETITIVE WINDOW OPENS | CONSENSUS PUTS FIRST PROFIT IN EXACTLY THE YEAR TWO INDEPENDENT SOURCES SAY THE COMPETITIVE WINDOW OPENS |
-| [[SAMSUNG]] / [[SKHYNIX]] | BofA's PUBLISHED CONSENSUS COLUMN IS ~3-4x BELOW ITS OWN ESTIMATES (recorded, NOT adjudicated) | BofA's PUBLISHED CONSENSUS COLUMN IS ~3-4x BELOW ITS OWN ESTIMATES (recorded, NOT adjudicated) |
+| [[META]] 2027 CAPEX | the widest single-name divergence on this wiki, and it now has FOUR marks | the widest single-name divergence on this wiki, and it now has FOUR marks |
+| [[META]] 2028 | the capex-CUT call, ⚠️ BBG PENDING (no CY2028 line exists) | the capex-CUT call, ⚠️ BBG PENDING (no CY2028 line exists) |
+| [[KIOXIA]] | Bernstein models 2027 EPS DOWN while consensus models it UP (the direction, not just the level) | Bernstein models 2027 EPS DOWN while consensus models it UP (the direction, not just the level) |
+| [[SNDK]] | two houses, ~2x apart on price target, on OPPOSITE ratings, seven days apart | two houses, ~2x apart on price target, on OPPOSITE ratings, seven days apart |
+| [[MSFT]] | Citi's 2027 capex sits 23% ABOVE BBG (flagged, but basis is uncertain) | Citi's 2027 capex sits 23% ABOVE BBG (flagged, but basis is uncertain) |
 
-## Consensus PT vs spot — live pull in `reconciliation-2026-08-28.md` (upside ranked)
+## Consensus PT vs spot — live pull in `reconciliation-2026-08-29.md` (upside ranked)
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|

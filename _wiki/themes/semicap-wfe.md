@@ -3,6 +3,16 @@
 # Theme — Semicap / WFE (Wafer-Fab Equipment)
 
 _Wiki · generated 2026-06-19 · cross-company theme · sources: equity calls (`../../../equity_calls_transcripts/Semis`), briefing roll-ups (`../_briefings/by-ticker`), earnings transcripts, research library (`E:\research_library`). Company pages: [../00_INDEX.md](../00_INDEX.md) · themes index: [00_THEMES.md](00_THEMES.md)._
+## 🆕 Recent signals (Aug 29, /run-inbox — **LEAD TIMES BACK THROUGH 18 MONTHS, AND THE KOREA IMPORT PRINT IS STILL *ACCELERATING* ON A 3-MONTH BASIS**)
+
+- 🔴 **LEAD TIMES: Wells Fargo reports lead times from the **top five semi-cap equipment makers — [[AMAT]], [[LRCX]], [[TOKYOELEC]], [[KLAC]] and [[ASML]] — stretching to >18 MONTHS.** ⚠️ **Rakers frames the consequence as a question this theme should treat as a RISK, not a bull point: *"Stretching Semi Cap Lead Times Providing a Boost for China Domestic Players?"* An 18-month quoted lead time is simultaneously a demand signal and a share-donation mechanism to domestic Chinese toolmakers who can deliver sooner at the trailing edge — which connects directly to the [china-export](china-export.md) and YMTC/CXMT threads on this wiki.**
+- **As a reminder, Rakers notes [[AMAT]] *"has continued to report visibility of 8 ROLLING QUARTERS"*, and that AMAT and [[LRCX]] *"have consistently expressed confidence"* that the shortage is concentrated at **leading-edge nodes requiring significantly more advanced tooling** — i.e. the tightness is a mix phenomenon, which is also why the trailing-edge share risk above is real.**
+- 🔴🔴 **THE KOREA PRINT — the highest-frequency read on memory WFE available, and it is still accelerating: **July South Korea semiconductor tool imports of $2.24bn, −6% M/M but +90% Y/Y. The 3-MONTH AVERAGE IS +70% Y/Y, UP FROM +64% Y/Y IN 2Q26.**** ➤ **The sequential dip is noise; the accelerating 3-month average is the signal. A +70% and rising 3-month trend is difficult to reconcile with any 2027 memory-WFE digestion call, and it corroborates the DRAM-capex leg this theme already carries from the $69bn/$96bn 2027-28 DRAM WFE marks. Rakers tracks the series against combined Korea revenue for AMAT, ASML, Lam Research, KLA and Tokyo Electron.**
+- **[[ASML]] capital returns, for the trail: **€391M repurchased in the week 8/10-8/14 (5 active days), ~flat W/W; €1.91bn QTD across 1.26M shares — the highest since 4Q25, and ~5.4% of ASML's trading volume.****
+- **Also in the same weekly, filed for completeness: SYNA's CFO resigned to join Qnity; Avnet raised its dividend 5.7% (7th increase in 6 years).**
+
+_(Wells Fargo Securities · Aaron Rakers, Technology Weekly, 2026-08-21) [Source](../../relat%C3%B3rios%20bons/Wells_Fargo_Hynix_-_Whos_Customer_B_CPO_Roadmap_S_Korea_Memo.html)_
+
 ## 🆕 Recent signals (Aug 28, /run-inbox — **YMTC TURNS ITS NEW FABS INTO *QUALIFICATION ENVIRONMENTS* FOR DOMESTIC TOOLS, WITH A >50% LOCAL-CONTENT FLOOR ON PHASE III; PLUS A $550M UPW CONTRACT THAT PRICES A FAB COST LINE NOBODY MODELS**) — 🔴 **TWO SLOW-BURN ITEMS, NEITHER OF WHICH MOVES A 2026 WFE NUMBER, BOTH OF WHICH CHANGE WHAT A FAB DOLLAR BUYS.**
 
 ### 🔴 (1) THE CHINA LOCALISATION TRANSMISSION BELT GETS NAMED: FABS AS TOOL-QUALIFICATION SITES
