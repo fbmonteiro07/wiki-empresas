@@ -5,7 +5,7 @@ Extends the curated supply-chain graph (_data/graph.json) into a graph of the
 WHOLE information repository — derived, no hand-curation beyond what exists:
 
   nodes: tickers (sector from 00_INDEX, thesis, book membership, docs on disk,
-         next catalyst) · themes · canonical assumptions · brokers/analysts
+         next catalyst) · themes · canonical assumptions · brokers/analysts · independent voices
   edges: supplies / competes        (from graph.json, curated)
          theme --exposes--> ticker  (from ](../TICKER.md) links in theme pages)
          assumption --cites--> page (from assumptions.json cited_in)
@@ -37,7 +37,15 @@ BROKERS = {
     "650Group": r"650 Group", "Omdia": r"\bOmdia\b", "Barrons": r"Barron'?s",
     "FinTwit": r"\bFinTwit\b|@\w{3,}",
 }
+# Independent research voices that are NOT brokers. Kept in their own lexicon so
+# the graph types them "independent", never "broker" — DAMNANG in particular is
+# filed as an independent author on every page (no ratings, no PTs, no models).
+INDEPENDENTS = {
+    "DAMNANG": r"\bDAMNANG\b|\bDamnang\b|damnang2\.substack",
+}
+
 BROKER_RX = {k: re.compile(v) for k, v in BROKERS.items()}
+INDEP_RX = {k: re.compile(v) for k, v in INDEPENDENTS.items()}
 MIN_MENTIONS = 2
 TICKER_LINK = re.compile(r"\]\(\.\./([A-Z][A-Z0-9.]{0,9})\.md\)")
 
@@ -157,6 +165,12 @@ def main():
             if n >= MIN_MENTIONS:
                 add_node(f"broker:{bid}", "broker", bid)
                 edges.append({"u": f"broker:{bid}", "v": tk, "type": "covers", "label": "", "w": n})
+        for iid, rx in INDEP_RX.items():
+            n = len(rx.findall(txt))
+            if n >= MIN_MENTIONS:
+                add_node(f"independent:{iid}", "independent", iid)
+                edges.append({"u": f"independent:{iid}", "v": tk, "type": "covers",
+                              "label": "", "w": n})
 
     out = {"generated": TODAY.isoformat(),
            "counts": {"nodes": len(nodes), "edges": len(edges)},
@@ -190,9 +204,9 @@ canvas{display:block}
 <div id="panel"></div><canvas id="c"></canvas>
 <script>
 const G = __PAYLOAD__;
-const COL = {ticker:"#5aa2ff", theme:"#e8b54d", assumption:"#ff6b7a", broker:"#3ecf8e"};
-const R = {ticker:6, theme:9, assumption:9, broker:5};
-let show = {ticker:true, theme:true, assumption:true, broker:false};
+const COL = {ticker:"#5aa2ff", theme:"#e8b54d", assumption:"#ff6b7a", broker:"#3ecf8e", independent:"#c792ea"};
+const R = {ticker:6, theme:9, assumption:9, broker:5, independent:6};
+let show = {ticker:true, theme:true, assumption:true, broker:false, independent:false};
 const cv = document.getElementById("c"), ctx = cv.getContext("2d");
 let W, H; function rs(){W=cv.width=innerWidth; H=cv.height=innerHeight;} rs(); onresize=rs;
 const nodes = G.nodes.map(n=>({...n, x:Math.random()*W, y:60+Math.random()*(H-60), vx:0, vy:0}));

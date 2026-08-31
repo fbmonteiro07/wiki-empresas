@@ -30,7 +30,7 @@ PREAMBLE = """# Research Wiki — by company
 >
 > 📊 **Dashboards** (hub: [`_dashboards/index.html`](_dashboards/index.html)): [edge tracker](_dashboards/edge.html) · [read-through map](_dashboards/readthrough.html) · [catalyst loop](_dashboards/catalysts.html) · [catalyst timeline (Gantt)](_dashboards/gantt.html) · [what changed](_dashboards/diff.html) · [canonical assumptions](_dashboards/assumptions.html) · [book exposure](_dashboards/book.html). Rebuild all: `py "_wiki/_tools/refresh_features.py"`.
 >
-> 🔎 **Full-corpus search** (reports + calls + briefings + transcripts + Stratechery, not just wiki pages): `py "_wiki/_tools/search.py" <query>` (index: `py "_wiki/_tools/build_search_index.py"`).
+> 🔎 **Full-corpus search** (reports + calls + briefings + transcripts + Stratechery + DAMNANG, not just wiki pages): `py "_wiki/_tools/search.py" <query>` (index: `py "_wiki/_tools/build_search_index.py"`).
 """
 
 DESCRIPTION = """Each page follows the [_TEMPLATE](_TEMPLATE.md): Snapshot · Current state (latest quarter) · Debate (bull/bear + where the sell-side stands, attributed + dated) · Catalysts · Risks · Consensus estimates (BBG) · Sources (links). Archive master index: [../INDEX.md](../INDEX.md). Thematic pages: [themes/00_THEMES.md](themes/00_THEMES.md).

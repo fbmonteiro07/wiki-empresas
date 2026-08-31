@@ -2,28 +2,45 @@
 
 _Generated 2026-08-31 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (22)
+## 📅 Upcoming (39)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
+| 2026-08-31 | AVGO | **🆕 VMware Explore 2026 — Day 1 keynote MONDAY 2026-08-31, 7:00pm ET.** The software leg of the story gets its annual airing 48 hours before the semis print; watch for any restatement of the VMware/VC |
 | 2026-08-31 | TXN | **CFO transition:** Rafael Lizardi out 2026-08-01 → **Julie Knecht** (CAO, 25-yr veteran), advisory through 2026-08-31 (DB/Seymore, briefing 2026-06-03). |
+| 2026-09-01 | AAPL | **🆕🔴🔴 CEO TRANSITION EFFECTIVE 2026-09-01 — John Ternus succeeds Tim Cook (Cook's last day was 2026-08-31).** ➜ **Watch: whether the September product event is used to reset the Siri/AI timeline, and  |
 | 2026-09-01 | CRDO | **🆕🔴 DATED — Q1 FY27 PRINT: TUESDAY 2026-09-01, release 4:15pm ET, call 5:00pm ET** (Jefferies · Curtis, 2026-08-27). **The bars to beat: July revenue $480m vs Street $472m; October guide $530m vs Str |
+| 2026-09-01 | CRDO | **🆕🔴🔴 F1Q27 PRINT — TUESDAY 2026-09-01, 4:15pm ET RELEASE. THE ONE NUMBER THAT ADJUDICATES THE QUARTER IS THE F27 ZEROFLAP OPTICAL OUTLOOK, AND THREE HOUSES HAVE PUBLISHED THREE DIFFERENT BARS FOR IT: |
+| 2026-09-01 | DELL | **🆕🔴🔴 F2Q27 PRINT — TUESDAY 2026-09-01, AFTER MARKET.** The four things that decide it, per BofA: **(1) the AI-server triple — revenue / orders / backlog, modelled at $15.6bn / $25bn / $60.6bn against |
+| 2026-09-01 | RDDT | **🆕 GS COMMUNACOPIA + TECHNOLOGY, SAN FRANCISCO — week of 2026-09-01.** Goldman explicitly frames its 08-30 r/bodega takeaways as setting up *"key debates into our Communacopia + Technology conference |
 | 2026-09-02 | AVGO | **🆕🔴 2026-09-02 — FQ3 FY26 print, and the bar is set by consensus rather than by the guide: ~$120bn of FY27 AI sales is in the Street's numbers versus management's ">$100bn" (BofA · Arya, 2026-08-19). |
+| 2026-09-02 | AVGO | **🆕🔴🔴 Q3 FY26 PRINT — WEDNESDAY 2026-09-02, ~4:15pm ET release / 5:00pm ET call. Implied move 6.3%; JPM positioning score +3 (−5/+5).** The four numbers that decide it, in order: **(1) the FY27 AI rev |
+| 2026-09-02 | CRWD | **🆕🔴🔴 FAL.CON 2026 — 2026-08-31 → 09-03, Las Vegas. THE INVESTOR BRIEFING IS 2026-09-02, 11:30am-3:00pm PST.** The five items MS is watching, in order of how much they move the model: **(1) AIDR sizin |
+| 2026-09-02 | HPE | **🆕🔴🔴 F3Q26 PRINT — WEDNESDAY 2026-09-02, AFTER MARKET.** Bars: **revenue $12.3bn (BofA) vs Street $12.0bn vs guidance $11.5-12.1bn; EPS $0.95 vs Street $0.93 vs guidance $0.88-0.93; Networking $2.9bn |
 | 2026-09-02 | NVDA | **2026-08-26 (AMC) — Q2 FY27 print.** Street/house bogeys now on the page from three houses: **UBS/Arcuri report $110-111bn, guide bogey $107-108bn** (08-14) vs **MS/Moore July $91.1bn, October $102.3 |
+| 2026-09-03 | AVGO | **🆕 POST-PRINT BROKER CALLBACKS ALREADY SCHEDULED — the fastest read on how the Street re-rates the guide.** **Morgan Stanley Q3 group callback with Joseph Moore, 2026-09-03, 9:00am ET** (stream); **J |
 | 2026-09-03 | TSLA | **🆕 2026-09-03 — CYBERCAB EVENT, AND THE PRE-READ IS DELIBERATELY DEFLATIONARY.** *"Tesla will hold a **Cybercab event on Sept 3**, but it sounds like this will be **relatively anticlimactic, with the |
+| 2026-09-04 | DELL | **🆕 BERNSTEIN DELL Q2 FY27 POST-EARNINGS CFO CALL — 2026-09-04, 11:00am ET.** First scheduled management access after the print. (Bernstein · Tyler Seidman, 2026-08-31) |
 | 2026-09-11 | TER | **Q3 CY26 print (~late Oct 2026)** — first test of the re-cut 2H, and of whether the merchant-GPU/second-hyperscaler correlation converts into guided revenue. Quiet period begins **2026-09-11**; manag |
 | 2026-09-14 | NVDA | **🆕 Post-print access, both dated:** **BofA fireside with Toshiya Hari, VP of IR & Strategic Finance, hosted by Vivek Arya — 2026-09-02, 11:00 ET (~1hr)** (BofA TMT Sales, 2026-08-14) · **UBS-arranged |
+| 2026-09-15 | AVGO | **🆕 BERNSTEIN 8th ANNUAL SEMIS BUS TOUR, 2026-09-15/16, San Jose — AVGO on the roster alongside [[ALAB]], [[AMAT]], AMBA, LSCC, MPWR, [[NVDA]], [[NXPI]].** First scheduled corporate-access window afte |
 | 2026-09-16 | ON | **2026-09-16 — onsemi Analyst Day** (Citi exp. ~Sep 13 print first) — the key event; watch for a raised long-term target model + SiC/800V framing (Citi, briefing 2026-06-15). |
+| 2026-09-21 | CIEN | **🆕 ECOC 2026, 2026-09-21/22 (Spain) — Morgan Stanley hosts COHR, CIEN, [[CSCO]], KEYS and NOK.** First optical-systems corporate-access window after the print. (MS TMT desk, 2026-08-31) |
 | 2026-09-21 | COHR | **🆕 2026-09-21 — PHOTONLINK LAUNCH: establish the PLATFORM, LANE RATE AND MODULATION FORMAT, not just the positioning.** The FQ1 FY27 synthesis lists PhotonLink as a genuinely net-new BULL item (platf |
 | 2026-09-22 | ADI | **2026-08-19 (7am ET, call 10am) — F3Q26 print.** Bogeys on the page from the JPM buy-side survey (guide/consensus: rev $3.9bn/$3.92bn, OPM 49%/49.2%, EPS $3.30/$3.34; F4Q guides $4.08bn / 49.9% / $3. |
 | 2026-09-22 | CRDO | **2026-09-22 — ECOC, JPM-hosted meeting with CEO Bill Brennan** (alongside [[CIEN]], [[LITE]] and Nokia; JPM · Cardoso / Deshpande, 2026-08-17). **JPM is also running an off-cycle hardware-reporter bu |
 | 2026-09-22 | LITE | **2026-09-22 — ECOC (JPM-hosted meetings).** CEO **Michael Hurlston** meeting alongside [[CRDO]] (CEO Bill Brennan), [[CIEN]] and Nokia (JPM · Joe Cardoso / Sandeep Deshpande, 2026-08-17). The natural |
 | 2026-09-23 | GOOG | **🆕 Koray Kavukcuoglu's first public outing — The Information's AI Agenda Live, San Francisco, 2026-09-23.** Billed topics include integrating frontier models across Search and the multi-billion-user  |
+| 2026-09-23 | META | **🆕🔴🔴 META CONNECT — 2026-09-23/24.** Both UBS (exact dates) and MS (*"25 days away"* as of 08-30) name it as the product catalyst the whole re-rating argument depends on. **Watch for: the Watermelon  |
+| 2026-09-24 | NVDA | **🆕🔴 TRUMP-XI MEETING, 2026-09-24 — the dated headline-risk window, and UBS says the newsflow into it is not random.** *"As is usually the case before Trump-Xi meetings, headline risks likely to pick  |
+| 2026-09-24 | TSM | **🆕⚠️ TRUMP-XI, 2026-09-24 — UBS puts SPE and MEMORY as the most exposed verticals, with the ASML/Netherlands MATCH Act immersion-DUV headlines and new BIS measures on Chinese compute access via Thail |
+| 2026-09-30 | HPE | **🆕🔴 HPE NETWORKING ANALYST DAY — 2026-09-30.** This is where the *"segment returns to HPE's historical margin profile of mid-20s"* claim gets defended, dated, or walked back. ➜ **It matters more than |
 | 2026-09-30 | SKHYNIX | **🆕🔴 By 2026-09-30 — HBM CONTRACT PRICE UPDATE.** Named by JPM (Kwon, 2026-08-19) as the #2 company-specific catalyst. **This is the one that moves earnings rather than the share count**, and it is th |
 | 2026-09-30 | SNPS | **🆕🔴 2026-09-30 — INVESTOR DAY is the real event, not the 08-26 print.** MS (Simpson, 2026-08-19) is explicit: none of the three things that matter — Design IP reacceleration, agentic-EDA monetisation |
 | 2026-10-06 | MRVL | **🆕🔴 DATED, TWO-STEP: Q2 FY27 print THURSDAY 2026-08-27 (after market close) → INVESTOR DAY MONDAY 2026-10-06, NYC.** Jefferies (Curtis, 2026-08-20) splits the catalyst explicitly: the print is where  |
 | 2026-10-06 | MRVL | **🆕🔴 NEXT, AND IT IS NOW THE ONLY CATALYST THAT MATTERS ON THIS PAGE: INVESTOR DAY — MONDAY 2026-10-06, NYC.** Three desks stated on print night that management deliberately withheld the [[GOOG]] sizi |
 | 2026-10-15 | SMTC | **🔴 2026-10-15 — INVESTOR / ANALYST DAY, San Jose. The single most important dated event on this page, because management deferred the two questions that matter to it.** Promised content: *"an in-dept |
+| 2026-11-12 | SPCX | **🆕🔴🔴 2026-11-12 — [[OPENAI]] CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.** OpenAI's own post: *"**We're ending our partnership with Cursor following its acquisit |
 | 2026-11-17 | NVDA | **🆕🔴 NEXT THREE DATED COMPANY EVENTS, ALL STATED ON THE 08-26 CALL BY IR (Toshiya Hari):** **(1) 2026-09-10 — Jensen Huang keynote fireside chat at the Goldman Sachs Communacopia & Technology Conferen |
 | 2026-11-17 | NVDA | **🆕🔴 THE THREE THINGS THE 08-26 PRINT MADE FALSIFIABLE, AND WHEN THEY RESOLVE.** **(1) THE GM TROUGH — guided to 71-72% in FQ4 FY27 (reports ~Feb-2027) with recovery to 72-73% in FY28 "as executed pri |
 | 2026-11-19 | SKHYNIX | **🆕 2026-08-20 → 2026-11-19 — the buyback executes on-market** (SK Securities). Daily execution is observable; **the falsifier for the "most aggressive among peers" claim is whether the full W40trn ac |

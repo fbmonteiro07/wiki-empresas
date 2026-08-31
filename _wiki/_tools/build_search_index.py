@@ -3,7 +3,7 @@ FEATURE 8 — Full-corpus search index (SQLite FTS5).
 
 The offline wiki search only covers the ~120 synthesized pages. The raw corpus
 — 300+ ingested reports (relatórios bons), equity calls, briefings, earnings
-transcripts, Stratechery — is only reachable if a page happened to cite it.
+transcripts, Stratechery, DAMNANG — is only reachable if a page happened to cite it.
 This indexes ALL of it into one FTS5 database so "everything anyone said about
 CPO connector attach rates" returns primary-source hits.
 
@@ -35,7 +35,7 @@ WS_RE = re.compile(r"[ \t]+")
 
 # Non-ticker top-level dirs to skip when walking ticker folders
 NOT_TICKERS = {"_briefings", "_equity_calls", "_inbox", "_wiki", ".claude", ".git",
-               "Modelos oficiais", "relatórios bons", "Stratechery"}
+               "Modelos oficiais", "relatórios bons", "Stratechery", "Damnang"}
 
 
 def strip_html(txt):
@@ -64,6 +64,12 @@ def corpus():
         yield p, "briefing", (p.stem.upper() if p.parent.name == "by-ticker" else "")
     for p in (ROOT / "Stratechery").glob("*.md"):
         yield p, "stratechery", ""
+    # DAMNANG — independent Korean ex-QCOM engineer's Substack, a continuous source.
+    # Markdown (not HTML) at the repo root on purpose: index_sec_filings.py counts
+    # <root>/<dir>/*.html as SEC filings, so an HTML folder here would pollute it.
+    for p in (ROOT / "Damnang").glob("*.md"):
+        if p.name != "index.md":
+            yield p, "damnang", ""
     for p in (ROOT / "relatórios bons").glob("*.html"):
         yield p, "report", ""
     for p in (WIKI / "_data" / "figures").glob("*.md"):

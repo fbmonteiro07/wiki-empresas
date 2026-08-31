@@ -1,0 +1,814 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>html{color-scheme:light dark}body{margin:0}</style>
+</head>
+<body><title>NVDA DCF Sandbox</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --page:#f3f5f8; --card:#fcfcfb; --card2:#f6f7f5;
+    --ink:#101318; --ink2:#4d5560; --muted:#82868d;
+    --grid:#e3e5ea; --baseline:#c4c7cc; --border:rgba(16,19,24,.12); --border-soft:rgba(16,19,24,.07);
+    --accent:#256abf; --accent-strong:#1c5cab; --accent-soft:rgba(42,120,214,.10);
+    --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --dim:#b9bdc4;
+    --good:#006300; --bad:#d03b3b;
+    --thumb:#ffffff;
+    --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,"Cascadia Mono",Consolas,monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --page:#0e1013; --card:#1a1a19; --card2:#202021;
+      --ink:#f2f3f5; --ink2:#a9b0b9; --muted:#8b8e94;
+      --grid:#2a2c30; --baseline:#3a3c40; --border:rgba(255,255,255,.13); --border-soft:rgba(255,255,255,.07);
+      --accent:#3987e5; --accent-strong:#5598e7; --accent-soft:rgba(57,135,229,.16);
+      --s1:#3987e5; --s2:#d95926; --s3:#199e70; --dim:#4a4d52;
+      --good:#0ca30c; --bad:#e66767;
+      --thumb:#1a1a19;
+    }
+  }
+  :root[data-theme="dark"]{
+    --page:#0e1013; --card:#1a1a19; --card2:#202021;
+    --ink:#f2f3f5; --ink2:#a9b0b9; --muted:#8b8e94;
+    --grid:#2a2c30; --baseline:#3a3c40; --border:rgba(255,255,255,.13); --border-soft:rgba(255,255,255,.07);
+    --accent:#3987e5; --accent-strong:#5598e7; --accent-soft:rgba(57,135,229,.16);
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --dim:#4a4d52;
+    --good:#0ca30c; --bad:#e66767;
+    --thumb:#1a1a19;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--page);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.45;margin:0;padding:0}
+  .wrap{max-width:1240px;margin:0 auto;padding:20px 20px 60px}
+  h1{font-size:20px;font-weight:700;letter-spacing:-.01em;margin:0}
+  h2{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--ink2);margin:0 0 10px}
+  .src{color:var(--muted);font-size:12px;margin-top:3px}
+  .src .m{font-family:var(--mono);font-size:11px}
+
+  /* ---------- hero strip ---------- */
+  .hero{position:sticky;top:0;z-index:40;background:var(--card);border:1px solid var(--border);border-radius:12px;
+        padding:12px 18px;margin:16px 0 18px;display:flex;flex-wrap:wrap;gap:6px 26px;align-items:center;
+        box-shadow:0 4px 14px rgba(10,15,25,.06)}
+  .hero .fv{display:flex;align-items:baseline;gap:10px}
+  .hero .fv .v{font-size:44px;font-weight:600;letter-spacing:-.02em;line-height:1}
+  .hero .fv .lab{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+  .delta{font-size:13px;font-weight:600}
+  .delta.up{color:var(--good)} .delta.dn{color:var(--bad)} .delta.flat{color:var(--muted)}
+  .hstat{display:flex;flex-direction:column;gap:1px}
+  .hstat .k{font-size:11px;color:var(--muted)}
+  .hstat .n{font-size:17px;font-weight:600}
+  .hero .warn{background:var(--bad);color:#fff;border-radius:6px;padding:3px 8px;font-size:12px;font-weight:600;display:none}
+
+  /* ---------- layout ---------- */
+  .cols{display:grid;grid-template-columns:330px 1fr;gap:18px;align-items:start}
+  .cols>*{min-width:0}
+  @media(max-width:920px){.cols{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--border-soft);border-radius:12px;padding:14px 16px;margin-bottom:14px}
+  .card p.blurb{margin:-4px 0 10px;font-size:12px;color:var(--muted)}
+
+  /* ---------- presets ---------- */
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{border:1px solid var(--border);background:transparent;color:var(--ink);border-radius:999px;
+        padding:5px 13px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:var(--sans)}
+  .chip:hover{background:var(--accent-soft)}
+  .chip.on{background:var(--accent);border-color:var(--accent);color:#fff}
+  .chip:focus-visible,button:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .presetnote{font-size:11px;color:var(--muted);margin-top:8px}
+
+  /* ---------- knobs ---------- */
+  .knob{padding:9px 0 3px;border-top:1px solid var(--border-soft)}
+  .knob:first-of-type{border-top:none}
+  .krow{display:flex;align-items:center;justify-content:space-between;gap:8px}
+  .klab{font-size:12.5px;font-weight:500;color:var(--ink)}
+  .kref{font-family:var(--mono);font-size:10px;color:var(--muted);background:var(--card2);
+        border:1px solid var(--border-soft);border-radius:4px;padding:0 4px;margin-left:6px;vertical-align:1px}
+  .kreset{border:none;background:transparent;color:var(--accent);font-size:11px;cursor:pointer;padding:0 2px;visibility:hidden;font-family:var(--sans)}
+  .kreset.show{visibility:visible}
+  .kctrl{display:flex;align-items:center;gap:10px;margin-top:5px}
+  .kslide{position:relative;flex:1;height:22px;display:flex;align-items:center}
+  .kslide .basetick{position:absolute;top:16px;width:1px;height:5px;background:var(--muted);pointer-events:none}
+  input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:22px;background:transparent;margin:0;cursor:pointer}
+  input[type=range]::-webkit-slider-runnable-track{height:4px;border-radius:2px;background:var(--range-bg,var(--grid))}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:15px;height:15px;border-radius:50%;
+      background:var(--thumb);border:2.5px solid var(--accent);margin-top:-5.5px;box-shadow:0 1px 3px rgba(0,0,0,.25)}
+  input[type=range]::-moz-range-track{height:4px;border-radius:2px;background:var(--grid)}
+  input[type=range]::-moz-range-progress{height:4px;border-radius:2px;background:var(--accent)}
+  input[type=range]::-moz-range-thumb{width:12px;height:12px;border-radius:50%;background:var(--thumb);border:2.5px solid var(--accent)}
+  .knum{width:76px;background:var(--card2);border:1px solid var(--border);border-radius:6px;color:var(--ink);
+        font-family:var(--mono);font-size:12px;padding:4px 6px;text-align:right}
+  .knum::-webkit-outer-spin-button,.knum::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+  .kout{font-size:11px;color:var(--muted);margin-top:4px}
+  .kout b{color:var(--ink2);font-weight:600}
+  details.adv{margin-top:4px}
+  details.adv>summary{cursor:pointer;font-size:12px;color:var(--accent);font-weight:600;list-style:none}
+  details.adv>summary::before{content:"▸ "} details.adv[open]>summary::before{content:"▾ "}
+  .resetall{width:100%;margin-top:4px;border:1px solid var(--border);background:transparent;color:var(--ink2);
+        border-radius:8px;padding:7px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:var(--sans)}
+  .resetall:hover{background:var(--accent-soft);color:var(--accent)}
+
+  /* ---------- tiles ---------- */
+  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:14px}
+  .tile{background:var(--card);border:1px solid var(--border-soft);border-radius:12px;padding:10px 13px}
+  .tile .k{font-size:11px;color:var(--muted)}
+  .tile .n{font-size:21px;font-weight:600;letter-spacing:-.01em;margin-top:2px}
+  .tile .s{font-size:11px;color:var(--ink2);margin-top:1px}
+  .tile .n .up{color:var(--good)} .tile .n .dn{color:var(--bad)}
+
+  /* ---------- charts ---------- */
+  .chart-card{position:relative}
+  .chart-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 14px;margin-bottom:4px}
+  .legend{display:flex;flex-wrap:wrap;gap:12px;font-size:11.5px;color:var(--ink2)}
+  .legend .it{display:inline-flex;align-items:center;gap:5px}
+  .sw{width:10px;height:10px;border-radius:3px;display:inline-block}
+  .sw.line{width:14px;height:0;border-top:2.5px solid var(--ink);border-radius:0}
+  svg{display:block;width:100%;height:auto}
+  svg text{font-family:var(--sans)}
+  .tip{position:absolute;pointer-events:none;background:var(--card);border:1px solid var(--border);border-radius:8px;
+       padding:7px 10px;font-size:11.5px;box-shadow:0 6px 18px rgba(10,15,25,.18);display:none;z-index:30;min-width:150px}
+  .tip .yy{font-weight:700;font-family:var(--mono);font-size:11px;margin-bottom:3px}
+  .tip .r{display:flex;justify-content:space-between;gap:14px}
+  .tip .r .l{display:flex;align-items:center;gap:5px;color:var(--ink2)}
+  .tip .r .v{font-family:var(--mono)}
+
+  /* ---------- heatmaps ---------- */
+  .heat2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:1020px){.heat2{grid-template-columns:1fr}}
+  .hm{display:grid;gap:2px;margin-top:6px}
+  .hm .cell{border:none;border-radius:4px;font-family:var(--mono);font-size:10.5px;padding:7px 2px;cursor:pointer;
+            text-align:center;line-height:1}
+  .hm .cell:hover{filter:brightness(1.12)}
+  .hm .cell.cur{outline:2px solid var(--ink);outline-offset:-2px;font-weight:700}
+  .hm .hd{background:transparent;color:var(--muted);font-family:var(--mono);font-size:10px;padding:4px 2px;text-align:center}
+  .hm .rowhd{background:transparent;color:var(--muted);font-family:var(--mono);font-size:10px;display:flex;align-items:center;justify-content:flex-end;padding-right:5px}
+  .axlab{font-size:10.5px;color:var(--muted);margin-top:6px}
+
+  /* ---------- compare ---------- */
+  .pinbtns{display:flex;gap:8px}
+  table.cmp{width:100%;border-collapse:collapse;font-size:12.5px}
+  table.cmp th{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600;text-align:right;padding:5px 8px;border-bottom:1px solid var(--border-soft)}
+  table.cmp th:first-child,table.cmp td:first-child{text-align:left}
+  table.cmp td{padding:5px 8px;text-align:right;font-family:var(--mono);font-size:12px;border-bottom:1px solid var(--border-soft)}
+  table.cmp td:first-child{font-family:var(--sans);font-weight:600}
+
+  /* ---------- year table ---------- */
+  .scrollx{overflow-x:auto;border:1px solid var(--border-soft);border-radius:10px}
+  table.yr{border-collapse:collapse;font-size:11px;white-space:nowrap;min-width:100%}
+  table.yr th,table.yr td{padding:4px 8px;text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums}
+  table.yr thead th{position:sticky;top:0;background:var(--card2);color:var(--ink2);font-weight:600;border-bottom:1px solid var(--border);z-index:2}
+  table.yr td:first-child,table.yr th:first-child{position:sticky;left:0;background:var(--card);text-align:left;font-family:var(--sans);font-weight:500;color:var(--ink2);z-index:3;border-right:1px solid var(--border-soft);min-width:190px}
+  table.yr thead th:first-child{background:var(--card2);z-index:4}
+  table.yr tr.sec td{border-top:1px solid var(--border-soft)}
+  table.yr tr.hl td{color:var(--ink);font-weight:600}
+  table.yr td.est{color:var(--accent-strong)}
+  table.yr .ref{color:var(--muted);font-family:var(--mono);font-size:9.5px;margin-left:5px}
+
+  details.block{background:var(--card);border:1px solid var(--border-soft);border-radius:12px;padding:14px 16px;margin-bottom:14px}
+  details.block>summary{cursor:pointer;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--ink2);list-style:none}
+  details.block>summary::before{content:"▸ "} details.block[open]>summary::before{content:"▾ "}
+  details.block .inner{margin-top:12px}
+  .note{font-size:12.5px;color:var(--ink2)}
+  .note ul{margin:6px 0;padding-left:18px}
+  .note li{margin:4px 0}
+  .note .m{font-family:var(--mono);font-size:11px}
+  footer{margin-top:22px;color:var(--muted);font-size:11.5px}
+  @media (prefers-reduced-motion:no-preference){
+    .chip,.kreset,.resetall,.hm .cell{transition:background .12s,color .12s,filter .12s}
+  }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>NVDA DCF Sandbox</h1>
+    <div class="src">Interactive replica of <span class="m">Template DCF.xlsx</span> (P:\Felipe Monteiro\US Equities\Modelos oficiais · read 27-Aug-2026) — AI-capex bottom-up → NVDA earnings-payout DCF. Values US$ mn, shown in US$ bn. Base preset reproduces the sheet to the cent.</div>
+  </header>
+
+  <div class="hero" id="hero">
+    <div class="fv">
+      <div>
+        <div class="lab">Fair value / share (D88)</div>
+        <div class="v" id="h-fv">—</div>
+      </div>
+      <div class="delta flat" id="h-dv">—</div>
+    </div>
+    <div class="hstat"><span class="k">P/E justo CY27 (D90)</span><span class="n" id="h-pe27">—</span></div>
+    <div class="hstat"><span class="k">P/E justo CY28 (E90)</span><span class="n" id="h-pe28">—</span></div>
+    <div class="hstat"><span class="k">NPV (D85)</span><span class="n" id="h-npv">—</span></div>
+    <div class="hstat"><span class="k">Terminal value share</span><span class="n" id="h-tv">—</span></div>
+    <span class="warn" id="h-warn">Ke must exceed perpetuity g</span>
+  </div>
+
+  <div class="cols">
+    <aside id="dials"></aside>
+
+    <section>
+      <div class="tiles" id="tiles"></div>
+
+      <div class="card chart-card" id="cc-capex">
+        <div class="chart-head">
+          <h2 style="margin:0">AI capex, total &amp; split — CY23–45</h2>
+          <div class="legend">
+            <span class="it"><span class="sw" style="background:var(--s1)"></span>Chips</span>
+            <span class="it"><span class="sw" style="background:var(--s2)"></span>Networking + CPU</span>
+            <span class="it"><span class="sw" style="background:var(--s3)"></span>Hard assets / other</span>
+          </div>
+        </div>
+        <div id="ch-capex"></div><div class="tip" id="tip-capex"></div>
+      </div>
+
+      <div class="card chart-card" id="cc-rev">
+        <div class="chart-head">
+          <h2 style="margin:0">NVDA revenue build &amp; earnings — CY23–45</h2>
+          <div class="legend">
+            <span class="it"><span class="sw" style="background:var(--s1)"></span>Chips (share × capex)</span>
+            <span class="it"><span class="sw" style="background:var(--s2)"></span>Networking attach</span>
+            <span class="it"><span class="sw" style="background:var(--dim)"></span>Other segments</span>
+            <span class="it"><span class="sw line"></span>Earnings</span>
+          </div>
+        </div>
+        <div id="ch-rev"></div><div class="tip" id="tip-rev"></div>
+      </div>
+
+      <div class="card chart-card" id="cc-pv">
+        <div class="chart-head">
+          <h2 style="margin:0">Where the value sits — PV of distributions</h2>
+        </div>
+        <div id="ch-comp"></div>
+        <div id="ch-pv" style="margin-top:10px"></div><div class="tip" id="tip-pv"></div>
+      </div>
+
+      <div class="heat2">
+        <div class="card">
+          <h2>Fair value — Ke × perpetuity g</h2>
+          <p class="blurb" style="margin:0 0 2px;font-size:11.5px;color:var(--muted)">Click a cell to apply. Other dials held at current scenario.</p>
+          <div class="hm" id="hm1"></div>
+          <div class="axlab">Rows: Ke (D81) · Columns: perpetuity growth (D83)</div>
+        </div>
+        <div class="card">
+          <h2>Fair value — NVDA share × GM floor</h2>
+          <p class="blurb" style="margin:0 0 2px;font-size:11.5px;color:var(--muted)">Click a cell to apply. Share = CY31+ steady state; GM floor sets the fade.</p>
+          <div class="hm" id="hm2"></div>
+          <div class="axlab">Rows: NVDA share of chips CY31+ (L53) · Columns: terminal gross margin</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="chart-head">
+          <h2 style="margin:0">Scenario compare</h2>
+          <div class="pinbtns">
+            <button class="chip" id="pinA">Pin current as A</button>
+            <button class="chip" id="pinB">Pin current as B</button>
+          </div>
+        </div>
+        <div style="overflow-x:auto"><table class="cmp" id="cmp"></table></div>
+      </div>
+
+      <details class="block" open>
+        <summary>Full model — year by year</summary>
+        <div class="inner">
+          <div class="scrollx" style="max-height:520px;overflow-y:auto"><table class="yr" id="yrtbl"></table></div>
+          <div class="axlab" style="margin-top:8px">Blue = driven by scenario dials · black = fixed history / hardcoded sheet inputs. Row refs are the sheet's row numbers on “Capa DCF”.</div>
+        </div>
+      </details>
+
+      <details class="block">
+        <summary>Reference — capex anchors CY23–28 (static, from the sheet)</summary>
+        <div class="inner scrollx"><table class="yr" id="ctxtbl"></table></div>
+      </details>
+
+      <details class="block">
+        <summary>Methodology &amp; fidelity</summary>
+        <div class="inner note">
+          <ul>
+            <li><b>Chain:</b> total AI capex (row 6) → split into chips / networking+CPU / hard assets (rows 7–9, share rules rows 13–14) → NVDA chips revenue = share of chips capex (row 53) → + networking attach (25% of chips revenue from CY27) + other segments (frozen at CY28 <span class="m">$31.6bn</span>, linked to the NVDA model in the workbook) → gross margin fade → opex % → 18% tax → earnings × payout = distribution → NPV at Ke.</li>
+            <li><b>Fidelity:</b> the engine reproduces the saved sheet bit-for-bit on 14 checkpoints (NPV <span class="m">D85</span>, value <span class="m">D88</span>, P/E <span class="m">D90/E90</span>, TV <span class="m">AA79</span>, capex CY29/31/45, revenue CY29/45, earnings CY45, distribution CY26, EPS CY27/28). Base preset = the sheet as saved 27-Aug-2026.</li>
+            <li><b>Excel NPV convention preserved:</b> <span class="m">=NPV(Ke, G79:AA79)</span> discounts the CY26 distribution one full period (valuation point ≈ end-CY25) and the terminal value 21 periods — one period beyond the last cash flow. That is the sheet's own convention, kept as-is.</li>
+            <li><b>Terminal value:</b> final-year (CY45) distribution at 100% payout × (1+g)/(Ke−g).</li>
+            <li>This is a <b>distributed-earnings (dividend-style) DCF</b> — no explicit reinvestment/working-capital below the payout ratio.</li>
+            <li>CY23–25 are fixed history. CY26–28 are anchored to the AI Model bottom-up (hyperscalers $1,425bn + others $1,488bn = $2,913bn total in CY28); the <b>realization dial</b> scales those three years and flows through to revenue — it is an extension, not a sheet cell (marked <span class="m">ext</span>).</li>
+            <li>Bull / Bear presets are <b>illustrative dial settings, not house calls</b>.</li>
+            <li>The model of record remains <span class="m">Template DCF.xlsx</span> on P:. This page never writes back to it.</li>
+          </ul>
+        </div>
+      </details>
+
+      <footer>Capstone internal research sandbox — scenario tool, not investment advice. Rebuilt 27-Aug-2026 from the saved workbook.</footer>
+    </section>
+  </div>
+</div>
+
+<script>
+"use strict";
+/* ================= engine (verified vs sheet) ================= */
+const Y0=2023, Y1=2045, YEARS=[]; for(let y=Y0;y<=Y1;y++) YEARS.push(y);
+const HIST={
+  capexTotal:{2023:89712.40820607246,2024:233863.6914606447,2025:396260.75318642706,2026:901598.6609927113,2027:1885412.9385329485,2028:2913098.507988303},
+  capexNW:{2023:12810.585642691623,2024:34371.34178788408,2025:65259.50252817853,2026:178576.41748539842,2027:435134.5910540439,2028:715097.2059606818},
+  capexHA:{2023:34490.038268785145,2024:84645.84171643095,2025:140829.88978513746,2026:323121.9047414263,2027:683275.731164706,2028:1040564.949653554},
+  nvdaRev:{2023:38518.10659033064,2024:102470.1886726464,2025:158799.22567251758,2026:311815.5170199417,2027:578573.6453898079,2028:783966.6825195056},
+  others:{2023:13397,2024:15311,2025:22551.385200000004,2026:27814.750627325513,2027:31633.57971702217,2028:31633.57971702217},
+  gm:{2023:0.738,2024:0.755,2025:0.72},
+  opexMg:{2023:0.4126566323125973,2024:0.18595909523653195,2025:0.12571170218472455}
+};
+const BASE={haircut:1,g29:.15,g30:0,g31:.08,nwStep:.02,haStart:.36,haStep:.03,
+  s29:.62,s30:.55,s31:.50,attach:.25,othersFlat:31633.57971702217,
+  gm26:.75,gm27:.73,gm28:.72,gmStep:.02,opex26:0.10686400726134353,opex27:.07,opex28:.06,tax:.18,
+  pay26:.5,pay27:.6,pay28:.7,paySteady:.8,payTerminal:1,ke:.10,perp:.03,shares:24100,price:0};
+const BULL={...BASE,g29:.20,g30:.05,g31:.10,s29:.65,s30:.60,s31:.55,attach:.28,gmStep:.01,paySteady:.85,ke:.095,perp:.035};
+const BEAR={...BASE,haircut:.85,g29:.05,g30:-.05,g31:.05,s29:.55,s30:.45,s31:.40,attach:.20,
+  gm26:.74,gm27:.71,gm28:.69,gmStep:.025,opex28:.07,paySteady:.75,ke:.11,perp:.025};
+
+function run(P){
+  const h=P.haircut, T={},NW={},HA={},CH={};
+  for(let y=2023;y<=2028;y++){const f=y>=2026?h:1;
+    T[y]=HIST.capexTotal[y]*f;NW[y]=HIST.capexNW[y]*f;HA[y]=HIST.capexHA[y]*f;CH[y]=T[y]-NW[y]-HA[y];}
+  for(let y=2029;y<=Y1;y++){const g=y===2029?P.g29:(y===2030?P.g30:P.g31);T[y]=T[y-1]*(1+g);}
+  const sNW={},sHA={};
+  sNW[2028]=NW[2028]/T[2028];
+  for(let y=2029;y<=Y1;y++) sNW[y]=sNW[y-1]+((y-2029)<5?P.nwStep:0);
+  for(let y=2029;y<=Y1;y++) sHA[y]=(y===2029)?P.haStart:sHA[y-1]-((y-2030)<4?P.haStep:0);
+  for(let y=2029;y<=Y1;y++){NW[y]=sNW[y]*T[y];HA[y]=sHA[y]*T[y];CH[y]=T[y]-NW[y]-HA[y];}
+  const sh={},cr={};
+  for(let y=2023;y<=2028;y++){cr[y]=HIST.nvdaRev[y]*(y>=2026?h:1);sh[y]=cr[y]/CH[y];}
+  for(let y=2029;y<=Y1;y++){sh[y]=y===2029?P.s29:(y===2030?P.s30:P.s31);cr[y]=sh[y]*CH[y];}
+  const nw={};for(const y of YEARS)nw[y]=0;
+  nw[2025]=cr[2025]*.13;nw[2026]=cr[2026]*.19;
+  for(let y=2027;y<=Y1;y++)nw[y]=cr[y]*P.attach;
+  const ot={};for(const y of YEARS)ot[y]=y<=2028?HIST.others[y]:P.othersFlat;
+  const rev={};for(const y of YEARS)rev[y]=cr[y]+nw[y]+ot[y];
+  const gm={...HIST.gm};gm[2026]=P.gm26;gm[2027]=P.gm27;gm[2028]=P.gm28;
+  for(let y=2029;y<=Y1;y++)gm[y]=gm[y-1]-((y-2029)<4?P.gmStep:0);
+  const om={...HIST.opexMg};om[2026]=P.opex26;om[2027]=P.opex27;
+  for(let y=2028;y<=Y1;y++)om[y]=P.opex28;
+  const ebit={},earn={},gp={},opx={};
+  for(const y of YEARS){gp[y]=gm[y]*rev[y];opx[y]=-(om[y]*rev[y]);ebit[y]=gp[y]+opx[y];earn[y]=ebit[y]*(1-P.tax);}
+  const pay={2026:P.pay26,2027:P.pay27,2028:P.pay28};
+  for(let y=2029;y<=2044;y++)pay[y]=P.paySteady;pay[2045]=P.payTerminal;
+  const dist={},pv={};let npv=0;const ok=(P.ke-P.perp)>1e-6;
+  for(let i=1,y=2026;y<=2045;y++,i++){dist[y]=earn[y]*pay[y];pv[y]=dist[y]/Math.pow(1+P.ke,i);npv+=pv[y];}
+  const tv=ok?dist[2045]*(1+P.perp)/(P.ke-P.perp):NaN;
+  const tvPV=ok?tv/Math.pow(1+P.ke,21):NaN;
+  npv=ok?npv+tvPV:NaN;
+  const value=npv/P.shares;
+  const eps={};for(const y of YEARS)eps[y]=earn[y]/P.shares;
+  return {T,NW,HA,CH,sh,cr,nw,ot,rev,gm,gp,opx,om,ebit,earn,eps,pay,dist,pv,tv,tvPV,npv,value,ok,
+    pe27:value/eps[2027],pe28:value/eps[2028],tvShare:tvPV/npv,
+    sNWterm:sNW[Y1],sHAterm:sHA[Y1],gmFloor:gm[Y1]};
+}
+const BASE_R=run(BASE);
+
+/* ================= knob definitions ================= */
+const CARDS=[
+ {id:'presets',title:'Scenario'},
+ {id:'capex',title:'Capex engine',blurb:'Total AI capex: CY26–28 anchored to the bottom-up, then a growth path.'},
+ {id:'split',title:'Capex split',blurb:'Networking share ramps 5 yrs from CY28 (24.5%); hard assets fade 4 yrs from the CY29 start. Chips get the rest.'},
+ {id:'nvda',title:'NVDA capture',blurb:'Share of chips capex (CY28 actual: 67.7%), networking attach, other segments.'},
+ {id:'pl',title:'P&amp;L',blurb:'GM fades from CY28 over 4 yrs to the floor; opex % of revenue; flat tax.'},
+ {id:'val',title:'Payout & valuation'}
+];
+const KNOBS=[
+ {id:'haircut',card:'capex',lab:'CY26–28 capex realization',ref:'ext',min:60,max:120,step:1,pct:1,tip:'Scales the bottom-up anchors (and CY26–28 revenue with them)'},
+ {id:'g29',card:'capex',lab:'Capex growth CY29',ref:'J10',min:-10,max:30,step:.5,pct:1},
+ {id:'g30',card:'capex',lab:'Capex growth CY30',ref:'K10',min:-10,max:30,step:.5,pct:1},
+ {id:'g31',card:'capex',lab:'Capex growth CY31–45',ref:'L10',min:0,max:15,step:.25,pct:1},
+ {id:'nwStep',card:'split',lab:'Networking share ramp, pp/yr ×5',ref:'J13',min:0,max:4,step:.25,pct:1},
+ {id:'haStart',card:'split',lab:'Hard-assets share CY29',ref:'J14',min:20,max:45,step:.5,pct:1},
+ {id:'haStep',card:'split',lab:'Hard-assets fade, pp/yr ×4',ref:'K14',min:0,max:5,step:.25,pct:1},
+ {id:'s29',card:'nvda',lab:'NVDA share of chips CY29',ref:'J53',min:40,max:80,step:1,pct:1},
+ {id:'s30',card:'nvda',lab:'NVDA share CY30',ref:'K53',min:35,max:75,step:1,pct:1},
+ {id:'s31',card:'nvda',lab:'NVDA share CY31+',ref:'L53',min:30,max:70,step:1,pct:1},
+ {id:'attach',card:'nvda',lab:'Networking attach (% of chips rev)',ref:'row 56',min:10,max:35,step:.5,pct:1},
+ {id:'othersFlat',card:'nvda',lab:'Other segments CY29+, $mn',ref:'J57',min:0,max:80000,step:1000,pct:0},
+ {id:'gm26',card:'pl',lab:'Gross margin CY26',ref:'G61',min:60,max:82,step:.5,pct:1,adv:1},
+ {id:'gm27',card:'pl',lab:'Gross margin CY27',ref:'H61',min:60,max:82,step:.5,pct:1,adv:1},
+ {id:'gm28',card:'pl',lab:'Gross margin CY28',ref:'I61',min:60,max:82,step:.5,pct:1},
+ {id:'gmStep',card:'pl',lab:'GM fade, pp/yr ×4',ref:'J61',min:0,max:3,step:.25,pct:1},
+ {id:'opex28',card:'pl',lab:'Opex % of revenue CY28+',ref:'I67',min:3,max:12,step:.25,pct:1},
+ {id:'tax',card:'pl',lab:'Tax rate',ref:'D71',min:10,max:30,step:.5,pct:1},
+ {id:'opex26',card:'pl',lab:'Opex % CY26',ref:'G67',min:5,max:20,step:.25,pct:1,adv:1},
+ {id:'opex27',card:'pl',lab:'Opex % CY27',ref:'H67',min:3,max:15,step:.25,pct:1,adv:1},
+ {id:'paySteady',card:'val',lab:'Payout CY29–44',ref:'J78',min:50,max:100,step:2.5,pct:1},
+ {id:'payTerminal',card:'val',lab:'Payout CY45 (terminal)',ref:'Z78',min:60,max:100,step:5,pct:1},
+ {id:'ke',card:'val',lab:'Cost of equity (Ke)',ref:'D81',min:7,max:14,step:.1,pct:1},
+ {id:'perp',card:'val',lab:'Perpetuity growth',ref:'D83',min:0,max:5,step:.1,pct:1},
+ {id:'shares',card:'val',lab:'Shares out, mn',ref:'D86',min:20000,max:26000,step:50,pct:0},
+ {id:'price',card:'val',lab:'Current price (optional, for upside)',ref:'ext',min:0,max:500,step:1,pct:0},
+ {id:'pay26',card:'val',lab:'Payout CY26',ref:'G78',min:0,max:100,step:5,pct:1,adv:1},
+ {id:'pay27',card:'val',lab:'Payout CY27',ref:'H78',min:0,max:100,step:5,pct:1,adv:1},
+ {id:'pay28',card:'val',lab:'Payout CY28',ref:'I78',min:0,max:100,step:5,pct:1,adv:1},
+];
+
+/* ================= state ================= */
+let P={...BASE}, pins={A:null,B:null};
+try{
+  const s=JSON.parse(localStorage.getItem('dcf-sandbox-v1')||'null');
+  if(s&&s.P){ P={...BASE,...s.P}; pins=s.pins||pins; }
+}catch(e){}
+function persist(){try{localStorage.setItem('dcf-sandbox-v1',JSON.stringify({P,pins}));}catch(e){}}
+
+/* ================= formatting ================= */
+const fmt$=x=>!isFinite(x)?'—':'$'+x.toFixed(2);
+const fmtBn=x=>!isFinite(x)?'—':('$'+Math.round(x/1000).toLocaleString('en-US')+'bn');
+const fmtBn1=x=>!isFinite(x)?'—':('$'+(x/1000).toLocaleString('en-US',{maximumFractionDigits:x/1000<100?1:0})+'bn');
+const fmtX=x=>!isFinite(x)?'—':x.toFixed(1)+'x';
+const fmtP=(x,d=1)=>!isFinite(x)?'—':(x*100).toFixed(d)+'%';
+const fmtTick=v=>{const b=v/1000;return b>=1000?('$'+(b/1000).toFixed(b%1000===0?0:1)+'T'):('$'+Math.round(b)+'B');};
+
+/* ================= dials UI ================= */
+const dials=document.getElementById('dials');
+CARDS.forEach(c=>{
+  const el=document.createElement('div');el.className='card';el.id='card-'+c.id;
+  el.innerHTML='<h2>'+c.title+'</h2>'+(c.blurb?'<p class="blurb">'+c.blurb+'</p>':'');
+  if(c.id==='presets'){
+    el.innerHTML+='<div class="chips">'+
+      '<button class="chip" data-preset="base">Planilha (base)</button>'+
+      '<button class="chip" data-preset="bull">Bull</button>'+
+      '<button class="chip" data-preset="bear">Bear</button>'+
+      '<span class="chip" id="chip-custom" style="cursor:default;display:none">Custom</span></div>'+
+      '<div class="presetnote">Base = the sheet as saved. Bull/Bear are illustrative dial settings, not house calls.</div>';
+  }
+  dials.appendChild(el);
+});
+const advWrap={};
+['pl','val'].forEach(cid=>{
+  const d=document.createElement('details');d.className='adv';
+  d.innerHTML='<summary>Advanced</summary>';
+  advWrap[cid]=d;
+});
+KNOBS.forEach(k=>{
+  const host=k.adv?advWrap[k.card]:document.getElementById('card-'+k.card);
+  const div=document.createElement('div');div.className='knob';div.id='knob-'+k.id;
+  const baseV=BASE[k.id]*(k.pct?100:1);
+  const pos=Math.min(100,Math.max(0,(baseV-k.min)/(k.max-k.min)*100));
+  div.innerHTML=
+   '<div class="krow"><span class="klab">'+k.lab+'<span class="kref">'+k.ref+'</span></span>'+
+   '<button class="kreset" data-k="'+k.id+'" title="Reset to base">↺ base</button></div>'+
+   '<div class="kctrl"><span class="kslide"><input type="range" id="rg-'+k.id+'" min="'+k.min+'" max="'+k.max+'" step="'+k.step+'" aria-label="'+k.lab+'">'+
+   '<span class="basetick" style="left:'+pos+'%"></span></span>'+
+   '<input type="number" class="knum" id="nm-'+k.id+'" step="'+k.step+'" aria-label="'+k.lab+' value"></div>'+
+   (k.id==='gmStep'?'<div class="kout" id="out-gmfloor"></div>':'')+
+   (k.id==='haStep'?'<div class="kout" id="out-chipterm"></div>':'');
+  host.appendChild(div);
+});
+document.getElementById('card-pl').appendChild(advWrap.pl);
+document.getElementById('card-val').appendChild(advWrap.val);
+const rb=document.createElement('button');rb.className='resetall';rb.textContent='Reset everything to the sheet';
+rb.onclick=()=>{P={...BASE};syncInputs();recalc('base');};
+document.getElementById('card-val').appendChild(rb);
+
+function syncInputs(){
+  KNOBS.forEach(k=>{
+    const v=P[k.id]*(k.pct?100:1);
+    const r=document.getElementById('rg-'+k.id),n=document.getElementById('nm-'+k.id);
+    r.value=v;n.value=+v.toFixed(4);
+    paintRange(r,k);
+    const changed=Math.abs(P[k.id]-BASE[k.id])>1e-9;
+    document.querySelector('#knob-'+k.id+' .kreset').classList.toggle('show',changed);
+  });
+}
+function paintRange(r,k){
+  const p=(r.value-k.min)/(k.max-k.min)*100;
+  r.style.setProperty('--range-bg','linear-gradient(90deg,var(--accent) '+p+'%,var(--grid) '+p+'%)');
+}
+KNOBS.forEach(k=>{
+  const r=document.getElementById('rg-'+k.id),n=document.getElementById('nm-'+k.id);
+  const apply=v=>{if(!isFinite(v))return;P[k.id]=v/(k.pct?100:1);paintRange(r,k);recalc();};
+  r.addEventListener('input',()=>{n.value=r.value;apply(+r.value);});
+  n.addEventListener('input',()=>{if(n.value==='')return;r.value=n.value;apply(+n.value);});
+});
+dials.addEventListener('click',e=>{
+  const kr=e.target.closest('.kreset');
+  if(kr){const id=kr.dataset.k;P[id]=BASE[id];syncInputs();recalc();return;}
+  const ch=e.target.closest('[data-preset]');
+  if(ch){P={...(ch.dataset.preset==='bull'?BULL:ch.dataset.preset==='bear'?BEAR:BASE)};syncInputs();recalc(ch.dataset.preset);}
+});
+function markPreset(){
+  const eq=o=>KNOBS.every(k=>k.id==='price'||Math.abs(P[k.id]-o[k.id])<1e-9);
+  const which=eq(BASE)?'base':eq(BULL)?'bull':eq(BEAR)?'bear':'custom';
+  document.querySelectorAll('[data-preset]').forEach(b=>b.classList.toggle('on',b.dataset.preset===which));
+  document.getElementById('chip-custom').style.display=which==='custom'?'':'none';
+}
+
+/* ================= tiles ================= */
+function tiles(R){
+  const upside=P.price>0?R.value/P.price-1:NaN;
+  const upCls=upside>0?'up':'dn';
+  const trough=(()=>{let m=Infinity,my=null;for(let y=2029;y<=2035;y++)if(R.rev[y]<m){m=R.rev[y];my=y;}
+    return R.rev[my]<R.rev[2028]?{y:my,v:m}:null;})();
+  const t=[
+   {k:'EPS CY27 (H76)',n:fmt$(R.eps[2027]),s:'CY26 '+fmt$(R.eps[2026])},
+   {k:'EPS CY28 (I76)',n:fmt$(R.eps[2028]),s:'earnings '+fmtBn1(R.earn[2028])},
+   {k:'Revenue CY30',n:fmtBn1(R.rev[2030]),s:trough?('air pocket: trough CY'+String(trough.y).slice(2)):'no post-CY28 dip'},
+   {k:'Revenue CY45',n:fmtBn1(R.rev[2045]),s:'capex CY45 '+fmtBn1(R.T[2045])},
+   {k:'GM floor / NVDA share CY31+',n:fmtP(R.gmFloor,0)+' / '+fmtP(P.s31,0),s:'chips share of capex CY45 '+fmtP(1-R.sNWterm-R.sHAterm,0)},
+   {k:'Upside vs price',n:P.price>0?('<span class="'+upCls+'">'+(upside>0?'+':'')+fmtP(upside,1)+'</span>'):'—',s:P.price>0?('at $'+P.price.toFixed(0)):'type a price under Valuation'}
+  ];
+  document.getElementById('tiles').innerHTML=t.map(x=>'<div class="tile"><div class="k">'+x.k+'</div><div class="n">'+x.n+'</div><div class="s">'+x.s+'</div></div>').join('');
+}
+
+/* ================= hero ================= */
+function hero(R){
+  document.getElementById('h-fv').textContent=fmt$(R.value);
+  const d=R.value/BASE_R.value-1;
+  const dv=document.getElementById('h-dv');
+  dv.className='delta '+(Math.abs(d)<5e-4?'flat':d>0?'up':'dn');
+  dv.textContent=(Math.abs(d)<5e-4?'= planilha':(d>0?'▲ +':'▼ ')+fmtP(d,1)+' vs planilha');
+  document.getElementById('h-pe27').textContent=fmtX(R.pe27);
+  document.getElementById('h-pe28').textContent=fmtX(R.pe28);
+  document.getElementById('h-npv').textContent=fmtBn(R.npv);
+  document.getElementById('h-tv').textContent=fmtP(R.tvShare,1);
+  document.getElementById('h-warn').style.display=R.ok?'none':'inline-block';
+}
+
+/* ================= svg chart helpers ================= */
+const NS='http://www.w3.org/2000/svg';
+function svgEl(w,h){const s=document.createElementNS(NS,'svg');s.setAttribute('viewBox','0 0 '+w+' '+h);return s;}
+function add(p,tag,at){const e=document.createElementNS(NS,tag);for(const k in at)e.setAttribute(k,at[k]);p.appendChild(e);return e;}
+function txt(p,x,y,t,at){const e=add(p,'text',{x,y,...at});e.textContent=t;return e;}
+function niceMax(v){const p=Math.pow(10,Math.floor(Math.log10(v)));const n=v/p;
+  const steps=[1,1.2,1.5,2,2.5,3,4,5,6,8,10];const m=steps.find(s=>n<=s)||10;return m*p;}
+const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+
+function stackedChart(hostId,tipId,series,extraLine){
+  // series: [{key,color,vals:{y:v}}] bottom-up; extraLine: {vals,label}
+  const host=document.getElementById(hostId);host.innerHTML='';
+  const W=780,H=290,L=52,Rm=14,T=14,B=26,pw=W-L-Rm,ph=H-T-B;
+  let max=0;for(const y of YEARS){let s=0;series.forEach(sr=>s+=sr.vals[y]||0);if(extraLine)s=Math.max(s,extraLine.vals[y]||0);max=Math.max(max,s);}
+  max=niceMax(max*1.06);
+  const svg=svgEl(W,H);
+  const xs=y=>L+(y-Y0)/(Y1-Y0)*(pw-18)+2, bw=Math.min(24,(pw-18)/(YEARS.length)-4);
+  const ys=v=>T+ph-(v/max)*ph;
+  for(let i=1;i<=4;i++){const gy=T+ph-ph*i/4;
+    add(svg,'line',{x1:L,x2:W-Rm,y1:gy,y2:gy,stroke:css('--grid'),'stroke-width':1});
+    txt(svg,L-6,gy+3,fmtTick(max*i/4),{'text-anchor':'end','font-size':10,fill:css('--muted'),style:'font-variant-numeric:tabular-nums'});}
+  add(svg,'line',{x1:L,x2:W-Rm,y1:T+ph,y2:T+ph,stroke:css('--baseline'),'stroke-width':1});
+  for(const y of YEARS){
+    if((y-Y0)%2===0)txt(svg,xs(y)+bw/2,H-8,"'"+String(y).slice(2),{'text-anchor':'middle','font-size':10,fill:css('--muted')});
+    let acc=0;
+    series.forEach((sr,si)=>{
+      const v=sr.vals[y]||0;if(v<=0){acc+=v;return;}
+      const y1=ys(acc+v),y0=ys(acc);
+      const hgt=Math.max(0,y0-y1-(si<series.length-1?2:0)); // 2px surface gap between segments
+      const top=si===series.length-1;
+      if(hgt>0.4)add(svg,'path',{d:roundTopRect(xs(y),y1,bw,hgt,top?3:0),fill:sr.color});
+      acc+=v;
+    });
+  }
+  if(extraLine){
+    let d='';YEARS.forEach((y,i)=>{d+=(i?'L':'M')+(xs(y)+bw/2)+','+ys(Math.max(0,extraLine.vals[y]))+' ';});
+    add(svg,'path',{d,fill:'none',stroke:css('--ink'),'stroke-width':2,'stroke-linejoin':'round','stroke-linecap':'round'});
+    const ly=ys(extraLine.vals[Y1]);
+    add(svg,'circle',{cx:xs(Y1)+bw/2,cy:ly,r:4,fill:css('--ink'),stroke:css('--card'),'stroke-width':2});
+    txt(svg,xs(Y1)+bw/2-6,ly-9,fmtBn1(extraLine.vals[Y1]),{'text-anchor':'end','font-size':10.5,'font-weight':600,fill:css('--ink')});
+  }
+  // hover
+  const ov=add(svg,'rect',{x:L,y:T,width:pw,height:ph,fill:'transparent'});
+  const cross=add(svg,'line',{x1:0,x2:0,y1:T,y2:T+ph,stroke:css('--baseline'),'stroke-width':1,visibility:'hidden'});
+  const tip=document.getElementById(tipId);
+  ov.addEventListener('mousemove',e=>{
+    const r=svg.getBoundingClientRect();const mx=(e.clientX-r.left)*(W/r.width);
+    let bi=Math.round((mx-L-2-bw/2)/((pw-18)/(YEARS.length-0)));bi=Math.max(0,Math.min(YEARS.length-1,bi));
+    const y=YEARS[bi];const cx=xs(y)+bw/2;
+    cross.setAttribute('x1',cx);cross.setAttribute('x2',cx);cross.setAttribute('visibility','visible');
+    let rows='';[...series].reverse().forEach(sr=>{rows+='<div class="r"><span class="l"><span class="sw" style="background:'+sr.color+'"></span>'+sr.key+'</span><span class="v">'+fmtBn1(sr.vals[y]||0)+'</span></div>';});
+    let tot=0;series.forEach(sr=>tot+=sr.vals[y]||0);
+    rows+='<div class="r" style="border-top:1px solid var(--border-soft);margin-top:3px;padding-top:3px"><span class="l">Total</span><span class="v"><b>'+fmtBn1(tot)+'</b></span></div>';
+    if(extraLine)rows+='<div class="r"><span class="l"><span class="sw line"></span>'+extraLine.label+'</span><span class="v">'+fmtBn1(extraLine.vals[y])+'</span></div>';
+    tip.innerHTML='<div class="yy">CY'+String(y).slice(2)+'</div>'+rows;
+    tip.style.display='block';
+    const cardR=host.closest('.chart-card').getBoundingClientRect();
+    let tx=e.clientX-cardR.left+14;if(tx+180>cardR.width)tx=e.clientX-cardR.left-180;
+    tip.style.left=tx+'px';tip.style.top=(e.clientY-cardR.top+10)+'px';
+  });
+  ov.addEventListener('mouseleave',()=>{tip.style.display='none';cross.setAttribute('visibility','hidden');});
+  host.appendChild(svg);
+}
+function roundTopRect(x,y,w,h,r){
+  if(r<=0||h<r)return 'M'+x+','+y+'h'+w+'v'+h+'h'+(-w)+'Z';
+  return 'M'+x+','+(y+r)+'a'+r+','+r+' 0 0 1 '+r+','+(-r)+'h'+(w-2*r)+'a'+r+','+r+' 0 0 1 '+r+','+r+'v'+(h-r)+'h'+(-w)+'Z';
+}
+
+function pvChart(R){
+  // composition strip
+  const compHost=document.getElementById('ch-comp');compHost.innerHTML='';
+  let pvA=0,pvB=0;for(let y=2026;y<=2035;y++)pvA+=R.pv[y];for(let y=2036;y<=2045;y++)pvB+=R.pv[y];
+  const segs=[{k:'PV CY26–35',v:pvA,c:'#5598e7'},{k:'PV CY36–45',v:pvB,c:'#2a78d6'},{k:'Terminal value',v:R.tvPV,c:'#104281'}];
+  const tot=R.npv;
+  const W=780,H=52,svg=svgEl(W,H);let x=0;
+  if(isFinite(tot)&&tot>0){
+    segs.forEach((s,i)=>{
+      const w=Math.max(0,s.v/tot*W-(i<2?2:0));
+      add(svg,'rect',{x,y:6,width:w,height:22,rx:4,fill:s.c});
+      const pct=(s.v/tot*100).toFixed(0)+'%';
+      if(w>86)txt(svg,x+w/2,21,s.k+' · '+pct,{'text-anchor':'middle','font-size':10.5,'font-weight':600,fill:'#ffffff'});
+      else txt(svg,Math.min(W-30,x+w/2),44,pct,{'text-anchor':'middle','font-size':10,fill:css('--ink2')});
+      x+=s.v/tot*W;
+    });
+    txt(svg,0,44,'NPV '+fmtBn(tot)+' at Ke '+fmtP(P.ke,1),{'font-size':10.5,fill:css('--ink2')});
+  }
+  compHost.appendChild(svg);
+  // yearly PV bars
+  const host=document.getElementById('ch-pv');host.innerHTML='';
+  const W2=780,H2=200,L=52,Rm=14,T=8,B=26,pw=W2-L-Rm,ph=H2-T-B;
+  const yrs=[];for(let y=2026;y<=2045;y++)yrs.push(y);
+  let max=0;yrs.forEach(y=>max=Math.max(max,R.pv[y]));max=niceMax(max*1.08);
+  const s2=svgEl(W2,H2);
+  const xs=(y)=>L+(y-2026)/(2045-2026)*(pw-26)+3,bw=Math.min(24,(pw-26)/yrs.length-4);
+  const ys=v=>T+ph-(v/max)*ph;
+  for(let i=1;i<=3;i++){const gy=T+ph-ph*i/3;
+    add(s2,'line',{x1:L,x2:W2-Rm,y1:gy,y2:gy,stroke:css('--grid'),'stroke-width':1});
+    txt(s2,L-6,gy+3,fmtTick(max*i/3),{'text-anchor':'end','font-size':10,fill:css('--muted')});}
+  add(s2,'line',{x1:L,x2:W2-Rm,y1:T+ph,y2:T+ph,stroke:css('--baseline'),'stroke-width':1});
+  yrs.forEach(y=>{
+    const v=Math.max(0,R.pv[y]);
+    add(s2,'path',{d:roundTopRect(xs(y),ys(v),bw,ph-(ys(v)-T),3),fill:'var(--s1)'});
+    if((y-2026)%2===0)txt(s2,xs(y)+bw/2,H2-8,"'"+String(y).slice(2),{'text-anchor':'middle','font-size':10,fill:css('--muted')});
+  });
+  txt(s2,L+2,T+4,'PV of each year’s distribution (terminal value shown in the strip above)',{'font-size':10.5,fill:css('--muted')});
+  const ov=add(s2,'rect',{x:L,y:T,width:pw,height:ph,fill:'transparent'});
+  const tip=document.getElementById('tip-pv');
+  ov.addEventListener('mousemove',e=>{
+    const r=s2.getBoundingClientRect();const mx=(e.clientX-r.left)*(W2/r.width);
+    let bi=Math.round((mx-L-3-bw/2)/((pw-26)/(yrs.length-1)));bi=Math.max(0,Math.min(yrs.length-1,bi));
+    const y=yrs[bi];
+    tip.innerHTML='<div class="yy">CY'+String(y).slice(2)+'</div>'+
+      '<div class="r"><span class="l">Distribution</span><span class="v">'+fmtBn1(R.dist[y])+'</span></div>'+
+      '<div class="r"><span class="l">PV @ Ke</span><span class="v">'+fmtBn1(R.pv[y])+'</span></div>'+
+      '<div class="r"><span class="l">Payout</span><span class="v">'+fmtP(R.pay[y],0)+'</span></div>';
+    tip.style.display='block';
+    const cardR=host.closest('.chart-card').getBoundingClientRect();
+    let tx=e.clientX-cardR.left+14;if(tx+170>cardR.width)tx=e.clientX-cardR.left-170;
+    tip.style.left=tx+'px';tip.style.top=(e.clientY-cardR.top+10)+'px';
+  });
+  ov.addEventListener('mouseleave',()=>tip.style.display='none');
+  host.appendChild(s2);
+}
+
+/* ================= heatmaps ================= */
+const RAMP=['#cde2fb','#b7d3f6','#9ec5f4','#86b6ef','#6da7ec','#5598e7','#3987e5','#2a78d6','#256abf','#1c5cab','#184f95','#104281','#0d366b'];
+function lum(hex){const n=parseInt(hex.slice(1),16);const r=(n>>16)&255,g=(n>>8)&255,b=n&255;return .2126*r+.7152*g+.0722*b;}
+function heatmap(hostId,rows,cols,rowLab,colLab,calc,isCur,apply){
+  const host=document.getElementById(hostId);host.innerHTML='';
+  host.style.gridTemplateColumns='54px repeat('+cols.length+',1fr)';
+  const vals=[];let vmin=Infinity,vmax=-Infinity;
+  rows.forEach(r=>cols.forEach(c=>{const v=calc(r,c);vals.push(v);if(isFinite(v)){vmin=Math.min(vmin,v);vmax=Math.max(vmax,v);}}));
+  host.appendChild(Object.assign(document.createElement('div'),{className:'hd'}));
+  cols.forEach(c=>{const d=document.createElement('div');d.className='hd';d.textContent=colLab(c);host.appendChild(d);});
+  let i=0;
+  rows.forEach(r=>{
+    const rh=document.createElement('div');rh.className='rowhd';rh.textContent=rowLab(r);host.appendChild(rh);
+    cols.forEach(c=>{
+      const v=vals[i++];const b=document.createElement('button');b.className='cell';
+      if(!isFinite(v)){b.textContent='—';b.style.background='var(--card2)';b.style.color='var(--muted)';b.disabled=true;}
+      else{
+        const t=vmax>vmin?(v-vmin)/(vmax-vmin):0.5;
+        const col=RAMP[Math.round(t*(RAMP.length-1))];
+        b.style.background=col;b.style.color=lum(col)>150?'#0b0b0b':'#ffffff';
+        b.textContent='$'+Math.round(v);
+        b.title=rowLab(r)+' × '+colLab(c)+' → '+fmt$(v);
+        if(isCur(r,c))b.classList.add('cur');
+        b.onclick=()=>{apply(r,c);syncInputs();recalc();};
+      }
+      host.appendChild(b);
+    });
+  });
+}
+function heatmaps(){
+  const kes=[.085,.09,.095,.10,.105,.11,.115], gs=[.015,.02,.025,.03,.035,.04,.045];
+  heatmap('hm1',kes,gs,r=>(r*100).toFixed(1),c=>(c*100).toFixed(1)+'%',
+    (r,c)=>r-c<=.004?NaN:run({...P,ke:r,perp:c}).value,
+    (r,c)=>Math.abs(r-P.ke)<1e-9&&Math.abs(c-P.perp)<1e-9,
+    (r,c)=>{P.ke=r;P.perp=c;});
+  const shs=[.65,.60,.55,.50,.45,.40,.35], fls=[.58,.60,.62,.64,.66,.68,.70];
+  heatmap('hm2',shs,fls,r=>(r*100).toFixed(0)+'%',c=>(c*100).toFixed(0)+'%',
+    (r,c)=>{const st=Math.max(0,(P.gm28-c)/4);return run({...P,s31:r,gmStep:st}).value;},
+    (r,c)=>Math.abs(r-P.s31)<1e-9&&Math.abs(P.gm28-P.gmStep*4-c)<1e-9,
+    (r,c)=>{P.s31=r;P.gmStep=Math.max(0,(P.gm28-c)/4);});
+}
+
+/* ================= compare ================= */
+function snap(R){return {value:R.value,pe27:R.pe27,pe28:R.pe28,tvShare:R.tvShare,rev30:R.rev[2030],eps28:R.eps[2028],npv:R.npv};}
+function cmpTable(R){
+  const rows=[['Base (planilha)',snap(BASE_R)]];
+  if(pins.A)rows.push(['Pin A',pins.A]);
+  if(pins.B)rows.push(['Pin B',pins.B]);
+  rows.push(['Current',snap(R)]);
+  let h='<tr><th>Scenario</th><th>Value/sh</th><th>vs base</th><th>P/E 27</th><th>P/E 28</th><th>TV %</th><th>Rev CY30</th><th>EPS 28</th></tr>';
+  rows.forEach(([n,s])=>{
+    const d=s.value/BASE_R.value-1;
+    h+='<tr><td>'+n+'</td><td>'+fmt$(s.value)+'</td><td>'+(Math.abs(d)<5e-4?'—':(d>0?'+':'')+fmtP(d,1))+'</td><td>'+fmtX(s.pe27)+'</td><td>'+fmtX(s.pe28)+'</td><td>'+fmtP(s.tvShare,0)+'</td><td>'+fmtBn1(s.rev30)+'</td><td>'+fmt$(s.eps28)+'</td></tr>';
+  });
+  document.getElementById('cmp').innerHTML=h;
+}
+document.getElementById('pinA').onclick=()=>{pins.A=snap(run(P));persist();cmpTable(run(P));};
+document.getElementById('pinB').onclick=()=>{pins.B=snap(run(P));persist();cmpTable(run(P));};
+
+/* ================= year table ================= */
+function yrTable(R){
+  const bn=v=>!isFinite(v)?'—':(v/1000).toLocaleString('en-US',{maximumFractionDigits:Math.abs(v)/1000<100?1:0});
+  const pc=v=>!isFinite(v)?'':(v*100).toFixed(1)+'%';
+  const rows=[
+   {l:'Capex Total ($bn)',r:'6',f:y=>bn(R.T[y]),est:y=>y>=2026,sec:1,hl:1},
+   {l:'· growth',r:'10',f:y=>y>=2029?pc(y===2029?P.g29:y===2030?P.g30:P.g31):''},
+   {l:'Capex Chips',r:'7',f:y=>bn(R.CH[y]),est:y=>y>=2026},
+   {l:'Capex Networking+CPU',r:'8',f:y=>bn(R.NW[y]),est:y=>y>=2026},
+   {l:'Capex hard assets/other',r:'9',f:y=>bn(R.HA[y]),est:y=>y>=2026},
+   {l:'· share chips',r:'12',f:y=>pc(R.CH[y]/R.T[y])},
+   {l:'· share networking',r:'13',f:y=>pc(R.NW[y]/R.T[y])},
+   {l:'· share hard assets',r:'14',f:y=>pc(R.HA[y]/R.T[y])},
+   {l:'NVDA share of chips',r:'53',f:y=>pc(R.sh[y]),est:y=>y>=2029,sec:1},
+   {l:'NVDA chips revenue',r:'55',f:y=>bn(R.cr[y]),est:y=>y>=2026},
+   {l:'NVDA networking rev',r:'56',f:y=>y>=2025?bn(R.nw[y]):'',est:y=>y>=2027},
+   {l:'NVDA other segments',r:'57',f:y=>bn(R.ot[y]),est:y=>y>=2029},
+   {l:'NVDA revenue ($bn)',r:'59',f:y=>bn(R.rev[y]),hl:1},
+   {l:'Gross margin',r:'61',f:y=>pc(R.gm[y]),est:y=>y>=2026,sec:1},
+   {l:'Gross profit',r:'64',f:y=>bn(R.gp[y])},
+   {l:'Opex',r:'66',f:y=>bn(R.opx[y]),},
+   {l:'EBIT',r:'69',f:y=>bn(R.ebit[y])},
+   {l:'Tax @ '+fmtP(P.tax,0),r:'73',f:y=>bn(R.ebit[y]*P.tax)},
+   {l:'Earnings ($bn)',r:'75',f:y=>bn(R.earn[y]),hl:1},
+   {l:'EPS ($)',r:'76',f:y=>fmt$(R.eps[y]).slice(1)},
+   {l:'Payout',r:'78',f:y=>y>=2026?pc(R.pay[y]):'',est:y=>y>=2026,sec:1},
+   {l:'Distribution',r:'79',f:y=>y>=2026?bn(R.dist[y]):'',perp:()=>bn(R.tv)},
+   {l:'PV @ Ke '+fmtP(P.ke,1),r:'—',f:y=>y>=2026?bn(R.pv[y]):'',perp:()=>bn(R.tvPV)}
+  ];
+  let h='<thead><tr><th>Row</th>';
+  YEARS.forEach(y=>h+='<th>CY'+String(y).slice(2)+(y>=2026&&y<=2028?'E':'')+'</th>');
+  h+='<th>Perp</th></tr></thead><tbody>';
+  rows.forEach(rw=>{
+    h+='<tr class="'+(rw.sec?'sec ':'')+(rw.hl?'hl':'')+'"><td>'+rw.l+'<span class="ref">'+rw.r+'</span></td>';
+    YEARS.forEach(y=>{h+='<td'+(rw.est&&rw.est(y)?' class="est"':'')+'>'+rw.f(y)+'</td>';});
+    h+='<td>'+(rw.perp?rw.perp():'')+'</td></tr>';
+  });
+  document.getElementById('yrtbl').innerHTML=h+'</tbody>';
+}
+
+/* ================= context table (static) ================= */
+(function(){
+  const yrs=[2023,2024,2025,2026,2027,2028];
+  const D={
+   'Capex hyperscalers — Capstone models':[155825,244740,410130.117127141,738903.1539878694,1097752.8285741173,1425124.8605595836],
+   '· MSFT (total)':[43800,71950,117173.11712714098,191482.14105986932,257710.0000869115,321988.98398501397],
+   '· AMZN (AWS)':[52729,82999,131819,214052,330056.38641919586,378673.72171312454],
+   '· GOOGLE (total)':[32251,52535,91447,182674,310000,462972.4956279227],
+   '· META (total)':[27045,37256,69691,150695.012928,199986.44206801,261489.65923352237],
+   'Capex hyperscalers AI — bottom-up':[93757.2958534584,178767.7958534584,336421.31298059935,681879.4069133276,1125515.0682699257,1425124.8605595836],
+   '% bottom-up / models':[.6016832719618701,.7304396332984326,.8202794648126468,.9228264938824745,1.0252900643689244,1],
+   'Capex other players — bottom-up':[-4044.887647385942,55095.89560718631,59839.440205827705,219719.25407938368,759897.8702630228,1487973.6474287193],
+   '· ORCL':[7902.700960620421,20168.268192290965,31652.497889034144,65273.79607466728,119452.50036084713,197961.07663984163],
+   '· CRWV':[8128.49241663815,15064.46154771121,26006.37664396319,44292.93305066709,111850.97761061142,197961.07663984163],
+   '· SpaceX':[0,0,13687.56665471747,59678.89926826724,260623.6371509392,253796.25210236106],
+   '· OpenAI':[0,0,0,0,56691.795493188074,94938.29965872648],
+   '· Anthropic':[0,0,0,0,97387.4673375002,410275.92154560646],
+   '· Others (xAI, ByteDance, sovereign)':[-20076.08102464451,19863.16586718413,-11507.000981887104,50473.625685782055,113891.49230993679,333041.0208423422],
+   'Hyperscaler share of total':[NaN,NaN,NaN,.7563003766693039,.5969594486530341,.4892127254370575]
+  };
+  let h='<thead><tr><th>US$ bn (sheet rows 16–37)</th>';yrs.forEach(y=>h+='<th>CY'+String(y).slice(2)+'</th>');h+='</tr></thead><tbody>';
+  for(const k in D){
+    const isPct=k.startsWith('%')||k.startsWith('Hyperscaler');
+    h+='<tr'+(k.startsWith('·')?'':' class="sec hl"')+'><td>'+k+'</td>';
+    D[k].forEach(v=>h+='<td>'+(isNaN(v)?'':isPct?(v*100).toFixed(0)+'%':(v/1000).toLocaleString('en-US',{maximumFractionDigits:1}))+'</td>');
+    h+='</tr>';
+  }
+  document.getElementById('ctxtbl').innerHTML=h+'</tbody>';
+})();
+
+/* ================= main recalc ================= */
+function readouts(R){
+  const gf=document.getElementById('out-gmfloor');
+  if(gf)gf.innerHTML='GM path: '+fmtP(P.gm28,0)+' CY28 → floor <b>'+fmtP(R.gmFloor,1)+'</b> from CY32';
+  const ct=document.getElementById('out-chipterm');
+  if(ct)ct.innerHTML='Terminal split: chips <b>'+fmtP(1-R.sNWterm-R.sHAterm,1)+'</b> · networking '+fmtP(R.sNWterm,1)+' · hard assets '+fmtP(R.sHAterm,1);
+}
+let pending=null;
+function recalc(){
+  clearTimeout(pending);
+  pending=setTimeout(()=>{
+    const R=run(P);
+    hero(R);tiles(R);readouts(R);
+    stackedChart('ch-capex','tip-capex',[
+      {key:'Chips',color:css('--s1'),vals:R.CH},
+      {key:'Networking + CPU',color:css('--s2'),vals:R.NW},
+      {key:'Hard assets',color:css('--s3'),vals:R.HA}]);
+    stackedChart('ch-rev','tip-rev',[
+      {key:'Chips',color:css('--s1'),vals:R.cr},
+      {key:'Networking',color:css('--s2'),vals:R.nw},
+      {key:'Other segments',color:css('--dim'),vals:R.ot}],
+      {vals:R.earn,label:'Earnings'});
+    pvChart(R);heatmaps();cmpTable(R);yrTable(R);
+    KNOBS.forEach(k=>{
+      const changed=Math.abs(P[k.id]-BASE[k.id])>1e-9;
+      document.querySelector('#knob-'+k.id+' .kreset').classList.toggle('show',changed);
+    });
+    markPreset();persist();
+  },0);
+}
+syncInputs();recalc();
+const mq=window.matchMedia('(prefers-color-scheme: dark)');
+if(mq.addEventListener)mq.addEventListener('change',()=>recalc());
+new MutationObserver(()=>recalc()).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+</script>
+
+</body>
+</html>
