@@ -1,5 +1,5 @@
 {
- "asof": "2026-08-12",
+ "asof": "2026-08-28",
  "note": "Canonical-assumptions ledger — one entry per cross-page industry number that multiple pages/themes cite. Purpose: every page should reference ONE canonical framing per metric; when a new source disagrees, add a variant here (never silently replace). build_assumptions.py renders _meta/assumptions.md + _dashboards/assumptions.html and scans pages for citations of each metric not yet reconciled into the ledger. Edit variants by hand; keep scope labels precise (units vs dollars, IT-load vs facility GW).",
  "metrics": {
   "asic-vs-gpu-share": {
@@ -360,8 +360,8 @@
   "rev-per-gw": {
    "title": "AI compute revenue / rental rate per GW",
    "definition": "Annualized $ revenue (or rental rate) per GW of AI compute capacity — state chip type (ASIC vs merchant GPU) and whether it is a rental rate or realized revenue. Distinct from facility BUILD cost per GW.",
-   "canonical": "Rental/revenue per GW of compute: Trainium <$10B/GW (Anthropic/OpenAI); merchant GPU ~$12-13B/GW (neocloud & AWS, pre-2H26 shortage); premium GPU ~$25B/GW (~$25M/MW/yr, SpaceX–Google deal). MS pegs 1P merchant TPU at ~$20B rev/GW (20% GM base). Colocation POWER-ONLY rent: ~$60/kW-month historically -> ~$120-160 typical now, up to ~$200 (weak-credit tenant + good DC), as low as ~$80-100 (India / mid DC / poor grid). Rev/GW is a data-center-QUALITY metric: credit, utilization, networking and speed-to-market drive a ~2x spread — a top-operator GW ≈ 2x a generic GW.",
-   "scope_note": "THREE distinct bases — never mix: (a) compute rev/rental $/GW (ASIC vs GPU, the monetization/quality metric); (b) colocation $/kW-month = power+shell only, NOT compute; (c) facility BUILD cost ~$30-40B/GW (ASIC) vs ~$50B/GW (NVDA-GPU infra) — see custom-asic-tpu. A $/kW-month figure ×12×1e6 ≈ $/GW-year only for the power-shell layer, not the compute.",
+   "canonical": "Rental/revenue per GW of compute: Trainium <$10B/GW (Anthropic/OpenAI); merchant GPU ~$12-13B/GW (neocloud & AWS, pre-2H26 shortage); premium GPU ~$25B/GW (~$25M/MW/yr, SpaceX–Google deal). MS pegs 1P merchant TPU at ~$20B rev/GW (20% GM base). Colocation POWER-ONLY rent: ~$60/kW-month historically -> ~$120-160 typical now, up to ~$200 (weak-credit tenant + good DC), as low as ~$80-100 (India / mid DC / poor grid). Rev/GW is a data-center-QUALITY metric: credit, utilization, networking and speed-to-market drive a ~2x spread — a top-operator GW ≈ 2x a generic GW. NEW (08-28): lab INFERENCE MONETISATION ~$60-100bn/GW/yr (Baker/a16z) — a distinct, much larger basis than the rental rates; implies ~1yr REVENUE payback on a ~$50bn/GW build. Neocloud payback marked at ~9-10 months (50-60% collected upfront).",
+   "scope_note": "THREE distinct bases — never mix: (a) compute rev/rental $/GW (ASIC vs GPU, the monetization/quality metric); (b) colocation $/kW-month = power+shell only, NOT compute; (c) facility BUILD cost ~$30-40B/GW (ASIC) vs ~$50B/GW (NVDA-GPU infra) — see custom-asic-tpu. A $/kW-month figure ×12×1e6 ≈ $/GW-year only for the power-shell layer, not the compute. ⚠️ FOURTH BASIS ADDED 2026-08-28 — LAB MONETISATION per GW (~$60-100bn/GW/yr) is what the LAB EARNS on a GW, and is 3-10x the RENTAL rates above (~$10-25bn/GW/yr) and ~1-2x the ~$50bn/GW BUILD cost. Never compare it to a rental rate: renting a GW at ~$12-13bn and monetising at ~$60-100bn implies a 5-8x gross spread, which is either (a) list/aspirational rather than realised, (b) not utilisation-matched, or (c) evidence the rental marks are stale (they are flagged pre-2H26-shortage). UNRECONCILED — treat the spread as an open question, not a margin.",
    "patterns": [
     "/GW",
     "per GW",
@@ -422,10 +422,31 @@
       "themes/custom-asic-tpu.md",
       "GOOG.md"
      ]
+    },
+    {
+     "value": "LAB INFERENCE MONETISATION ~$60bn/GW/yr (illustrative) and \"people seem to think OpenAI and Anthropic are both monetizing at ~$100bn a gigawatt today\" -> ~1yr payback on a ~$50bn/GW build, on a REVENUE (not gross-profit) basis",
+     "source": "Gavin Baker (Atreides) on a16z podcast",
+     "date": "2026-08-28",
+     "scope": "LAB REVENUE MONETISED per GW — NOT a rental rate, NOT a build cost",
+     "cited_in": [
+      "ANTHROPIC.md",
+      "OPENAI.md",
+      "themes/macro-cycle.md"
+     ]
+    },
+    {
+     "value": "neocloud payback ~9-10 months: a ~$50bn GW with 50-60% collected upfront from customers leaves ~$25-30bn net; spot monetisation faster; \"true equity payback might be way inside of a year\"; SpaceX faster still on build speed + higher monetisation",
+     "source": "Gavin Baker (Atreides) on a16z podcast, citing NBIS/CRWV disclosures",
+     "date": "2026-08-28",
+     "scope": "neocloud payback period (derived, not a $/GW rate)",
+     "cited_in": [
+      "CRWV.md",
+      "NBIS.md"
+     ]
     }
    ],
    "status": "live",
-   "debate": "Rev/GW is emerging as a data-center-quality metric: ASIC (<$10B) < merchant GPU ($12-13B) < premium operator ($25B). The spread reflects credit quality, utilization, networking and speed-to-market — not just chip type. Watch whether the 2H26 GPU shortage pushes realized GPU rev/GW above the $12-13B pre-shortage mark."
+   "debate": "Rev/GW is emerging as a data-center-quality metric: ASIC (<$10B) < merchant GPU ($12-13B) < premium operator ($25B). The spread reflects credit quality, utilization, networking and speed-to-market — not just chip type. Watch whether the 2H26 GPU shortage pushes realized GPU rev/GW above the $12-13B pre-shortage mark. OPEN (08-28): the ~5-8x gap between what a lab is said to monetise per GW ($60-100bn) and what a GW rents for ($12-13bn merchant GPU) is unreconciled and is the single highest-value thing to verify in this metric — it is either the strongest ROI evidence in the corpus or a basis error."
   },
   "hbm-cycle": {
    "title": "HBM — capacity, pricing, allocation, sold-out claims",
