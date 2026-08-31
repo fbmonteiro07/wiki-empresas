@@ -26,7 +26,7 @@ NVDA 08-26 · MRVL 08-28 · AMD 08-05 · ANET 08-05 · AMAT 08-20 · ADI 08-19 �
 - **SPCX (SpaceX) is now an SEC filer and was missing from the fetch script's universe.** It was hard-coded into `fetch_sec_filings.py`'s "no SEC" exclusion list as a private company. It IPO'd in June 2026 (S-1 05-20, 424B4 06-12, both already on disk) and filed its **first 10-Q on 2026-08-04** — now archived at `SPCX/SPCX_10-Q_2026-08-04_0001628280-26-052535.html`. The exclusion has been removed from the sweep script. **`fetch_sec_filings.py` itself still carries the stale comment** — see §4.
 - **LITE has two FY26 10-K artifacts** for 08-17: the EDGAR inline-XBRL original pulled by this sweep (`…_0001628280-26-057358.html`) and a hand-pulled PDF from 08-17 (`…_FY2026-ended-2026-06-27.pdf`). Not an error — the HTML is the canonical archive copy per convention; the PDF predates it.
 
-### Transcripts — 49 of 56 covered prints, ~425,000 words
+### Transcripts — **56 of 56 covered prints**, ~470,000 words
 
 Everything below is **new this sweep**. Word counts are body text.
 
@@ -81,8 +81,15 @@ Everything below is **new this sweep**. Word counts are body text.
 | AKAM | 08-06 | 9,015 | MarketBeat/Quartr | folder created |
 | FSLY | 08-05 | 8,152 | MarketBeat/Quartr | folder created |
 | TSEM | 08-04 | 7,863 | MarketBeat/Quartr | folder created; call was **08-04**, not 08-13 |
+| ADVANTEST | 07-29 | 2,187 | **official Advantest IR** | issuer Q&A summary + deck + tanshin; no verbatim published. Results date **07-29**, not 07-28 |
+| TOKYOELEC | 07-30 | 2,789 | **official TEL IR** | issuer **prepared-remarks transcript** + Q&A summary — the best-sourced of the three |
+| DISCO | 07-23 | 1,848 | **official DISCO IR** | issuer "with notes" deck; **no Q&A published this quarter** — see §2.9 |
+| BESI | 07-23 | 6,681 | investing.com | full verbatim; source mis-transcribes names in the closing pleasantries |
+| SMIC | **08-14** | 3,591 EN + 6,633 zh | stockanalysis + investing.com | **composite, Mandarin call** — see §2.10; call was **08-14**, not 08-07 |
+| BE | 07-28 | 8,171 | investing.com | full verbatim; source has no inline speaker tags — mapping reconstructed, see §2.11 |
+| IFX | 08-05 | 9,291 | **official Infineon IR** + media call | **analyst Q&A is the one real gap** — see §2.11 |
 
-**11 tickers got a `transcripts/` folder for the first time:** ETN, APP, PLTR, VEEV, SNPS, POWI, AXTI, MP, AEIS, NET, AKAM, FSLY, TSEM.
+**14 tickers got a `transcripts/` folder for the first time:** BE, ETN, APP, PLTR, VEEV, SNPS, POWI, AXTI, MP, AEIS, NET, AKAM, FSLY, TSEM.
 
 ---
 
@@ -94,7 +101,42 @@ Everything below is **new this sweep**. Word counts are body text.
 4. **MRVL: analysts name Google as the warrant counterparty; management only ever says "key hyperscaler" / "TPU ecosystem."** Do not put Google in management's mouth.
 5. **AOSL's transcript starts mid-sentence.** The source feed begins at "I will now hand the call over to Steven Pelayo" — the operator's opening greeting and safe-harbor are missing. Everything from the IR hand-off onward is present. Labelled in the file.
 6. **The MarketBeat-sourced files (the last 16) are one continuous stream.** MarketBeat serves prepared remarks and Q&A under a single container, so those files do **not** assert a prepared-remarks/Q&A split — rather than invent a boundary. Speaker titles and analyst-name spellings are Quartr diarization labels, as-heard, not independently verified.
-7. **Call dates ≠ press-release dates, and three assumptions were wrong.** Verified from source: **SPOT 08-04** (not late July), **TSEM 08-04** (not 08-13), **WMB 08-04** (PR 08-03, call next morning), **MCHP 08-06** (Fool's 08-13 URL is its publication date). Filed by call date per repo convention.
+7. **Call dates ≠ press-release dates, and five assumptions were wrong.** Verified from source: **SPOT 08-04** (not late July), **TSEM 08-04** (not 08-13), **SMIC 08-14** (not 08-07 — investing.com stamps 08-13 21:43 ET, i.e. the morning of 08-14 HKT; filed under HKT to match the prior SMIC files), **ADVANTEST 07-29** (not 07-28), **WMB 08-04** (PR 08-03, call next morning), **MCHP 08-06** (Fool's 08-13 URL is its publication date). Filed by call date per repo convention. **Lesson for the next sweep: derive the call date from the source, never from the 8-K/PR date** — roughly one name in eight differs.
+
+### 2.9 — The three Japanese issuers: what they actually publish
+
+None of the three publishes a vendor-style verbatim transcript, and the files say so rather than implying more than exists:
+
+- **TOKYOELEC is the best-sourced** — TEL publishes an actual **prepared-remarks transcript** (`fy27q1transcript-e.pdf`, slide by slide, both presenters) plus a separate Q&A summary of 15 questions. ⚠ Slide 5's **text layer has GP/OI/NI series labels transposed**; the slide-4 table is authoritative and the file flags it. Q14/Q15 were submitted in writing and answered only in the document, never on the call.
+- **ADVANTEST** publishes an issuer-edited **Q&A summary** (10 Q&As) + briefing deck + tanshin — no verbatim. The agent deliberately **omitted the ship-to-region table**: the deck's region chart could not be reliably mapped to its legend from the PDF text layer, and the legend order provably does not match the series order. Only the two region facts stated in words are carried (Taiwan largest, China ≈19%). That is the right call — a mis-mapped region split would have been worse than no table.
+- **DISCO published no transcript and no Q&A at all this quarter.** Its "with notes" deck is its own slide-by-slide narration and is the primary source. The file states plainly that it contains **no analyst exchange**.
+
+**⚠ DISCO basis trap, stated by DISCO itself:** revenue books on an **inspection/acceptance basis**, so net sales are not a read on customer appetite — DISCO's own instruction is to use **shipment value**. Q1 sales fell 14.1% QoQ while **shipments hit a record ¥135.9bn**. Never quote the sales decline as a demand signal.
+
+**Archive correction made 2026-08-31:** `DISCO_Q4-FY26-results_2026-04-22.md` claimed DISCO labels the year ended Mar-2026 "FY2026" and flagged Quartr as the outlier. That is backwards — DISCO calls that year **FY2025** (Japanese convention: FY named for the year it *starts*), so Quartr matched the issuer. Verified against DISCO's own English notes deck, which discusses forward capex "From FY2026 onward" in a July-2026 document. The old note has been corrected in place with the superseded claim preserved; **no figure in that file changes.**
+
+### 2.10 — SMIC is a composite file, and its Q&A is a machine translation
+
+SMIC's call is held **in Mandarin**. Prepared remarks run through SMIC's live English interpreter, so `stockanalysis.com` carries them in English — but its Q&A is entirely `[Non-English content]` placeholders. `investing.com` carries the **Chinese original plus its own machine translation** of every Q&A turn. The archived file therefore merges two sources, says so in the header, and **keeps both the Chinese and the English** for each Q&A turn.
+
+- ⚠ **Do not quote the English Q&A as verbatim management language** — it is condensed, not word-for-word. Quote the Chinese, or the results release.
+- ⚠ **The "$600bn → $880bn" AI investment figure is NOT SMIC guidance.** Co-CEO Zhao is relaying a US analyst broadcast he had heard that morning. Very easy to misattribute to the company.
+- Full-year 2026 depreciation rendered inconsistently across extraction passes ("approaching $5bn" vs "$4.9–5.0bn"); the Chinese reads 接近50亿, so **~$5bn**.
+- Four answer turns (CICC ×2, Orient ×2) came back English-only and are individually marked in-line rather than left looking like dropped quotes.
+
+**BESI caveat:** investing.com is machine-generated from audio and garbles names in the closing pleasantries — Blickman is transcribed thanking "Olivier"/"Jose"/"Johan"/"Wouter", and once addresses Charles Shi as "Richard". These were **left verbatim rather than silently corrected**; the header flags that closing-pleasantry names are unreliable while operator-introduced analyst attributions are sound.
+
+**Deliberate deviation worth knowing:** the pre-existing `BESI_Q1-2026…` and `SMIC_Q1-2026…` files are **synthesized summary notes, not transcripts**. The new files use the transcript header convention rather than copying the neighbours' style, because copying it onto a 6,700-word verbatim transcript would mislabel the artifact type. This is the same stub problem as §3, seen up close.
+
+### 2.11 — IFX: the brief's premise was wrong, and the analyst Q&A is the gap
+
+**Correction, found by checking rather than assuming.** This sweep's brief asserted Q3 FY26 was Infineon's first print under the new three-division structure. **It was not.** The June quarter was still reported on the **old four divisions (ATV / GIP / PSS / CSS)**. The new **Automotive / Power Systems / Edge Systems** structure took effect **2026-07-01**, i.e. **Q4 FY26**. Infineon will publish four-division financials *alongside* the new cut for the September quarter so FY26 stays modellable, then switch with the FY27 outlook at the **November** call and restate history there. Composition disclosed: **ES = CSS + sensor & RF + USB connectivity carved out of PSS** — so PSS is being **split, not renamed**. Anyone modelling the transition off this quarter would have had the date and the mechanics wrong.
+
+**The file is two same-day events, both labelled:** Part A = the analyst call's **prepared remarks only**, verbatim from Infineon's own IR intro-statement PDF (primary source, not third-party). Part B = the **media/press call in full**, including Q&A with four journalists. **The analyst Q&A is archived nowhere** — Infineon publishes only the intro statement as text, and the vendors that carry the Q&A sit behind human-verification challenges that were correctly not bypassed. That is the one real hole left in the window.
+
+🔭 **Variant perception vs `_wiki/IFX.md`** (page not edited, per the no-`_wiki`-edits rule for this sweep): FY26 dedicated **AI-power revenue guided >EUR 1.6bn** (was 1.5bn) plus ~EUR 500m classic datacenter power, and management **pre-announced a "material" upgrade to the EUR 2.5bn FY27 figure in November** — Hanebeck on the media call: *"this effect of 2.5 would be turned into a three."* Also new: multi-year **capacity-reservation agreements** with cumulative sales volume in the **high-single-digit billion EUR** range, carrying prepayments; backlog **~EUR 30bn** (from ~25bn). The IFX page's Debate and Changelog are now behind these numbers.
+
+**BE caveat:** investing.com publishes BE's paragraphs **without inline speaker tags**. The speaker sequence (43 turns) was pulled in a second pass and mapped onto the 81 paragraphs; the mapping came out exact and paragraph text is verbatim, but it is a reconstruction and the header says so. Transcription artifacts left uncorrected and flagged ("Gus," for "Guys," opening Colin Rusch; "NEB" for Nebius).
 
 ### 2.8 — Source-channel notes for the next sweep
 
@@ -128,13 +170,7 @@ Examples: `ALAB_Q3-2025-earnings` **85 w** · `SHOP_Q2-2025-earnings` **117 w** 
 
 | Item | Status |
 |---|---|
-| **BE** Q2'26 transcript | Yahoo/Quartr has **no Q2-2026 call listed** for Bloom Energy at all (latest is Q1'26, 04-28); MarketBeat likewise. Needs another source. |
-| **IFX** FQ3'26 (08-05) transcript | German issuer, no SEC filing. Infineon IR publishes English transcripts — not yet pulled. First print under the new 3-division segmentation. |
-| **BESI** Q2'26 (~07-23) transcript | Amsterdam issuer; not in the Quartr feed. |
-| **SMIC** Q2'26 (~08-07) transcript | HK issuer; not in the Quartr feed. |
-| **ADVANTEST** Q1-FY26 (~07-28) | Japanese issuer; official English results Q&A exists on advantest.com. |
-| **TOKYOELEC** Q1-FY27 (~07-31) | Japanese issuer; tel.com publishes an English Q&A summary. |
-| **DISCO** Q1-FY27 (~07-23) | **Still the standing blocker from the July sweep** — disco.co.jp is unreachable behind the TLS proxy. `outcomes.md` already carries a FLAG that DISCO print figures are not sourced on-page. |
+| **IFX analyst-call Q&A** | The prepared remarks (Infineon's own IR PDF) and the *entire* media call are archived; the **analyst Q&A exists only in the webcast**. Seeking Alpha and GuruFocus carry it behind human-verification challenges (not bypassed); MarketScreener serves a paywalled stub. Needs a manual pull from the terminal or a broker copy. |
 | **NVDA official IR transcript** | q4cdn PDF still not posted as of 08-31; re-check and overwrite when it appears. |
 | **AMZN Q2'26 FINAL transcript** | Unchanged from the July sweep — the archived file is the vision-transcribed Bloomberg **live** feed. |
 | **SAMSUNG Q2'26 verbatim Q&A** | Unchanged — Samsung publishes none in English. |
