@@ -218,6 +218,16 @@ footer b{color:var(--ink2)}
     <div class="ctl" data-k="cloudRevG"><div class="lr"><label>Cloud revenue growth CY31+</label><span class="dot"></span><input type="number" step="0.01" min="-0.1" max="0.4"></div><input type="range" step="0.01" min="0" max="0.3"></div>
   </details>
 
+  <details class="group" open id="gGross"><summary>Labs → System gross-up<span class="arrow">›</span></summary><div class="body">
+    <div class="ctl" data-k="cloudMode"><div class="lr"><label>Model's cloud revenue source</label><span class="dot"></span>
+      <select id="selCloudMode"><option value="house">House vector (total cloud)</option><option value="derived">Derived (AI compute bill)</option></select></div></div>
+    <div class="ctl" data-k="sRev26"><div class="lr"><label>Big-2 share of system revenue, CY26</label><span class="dot"></span><input type="number" step="0.01" min="0.2" max="0.99"></div><input type="range" step="0.01" min="0.4" max="0.95"></div>
+    <div class="ctl" data-k="sRev35"><div class="lr"><label>…share by CY35 (path endpoint)</label><span class="dot"></span><input type="number" step="0.01" min="0.1" max="0.99"></div><input type="range" step="0.01" min="0.2" max="0.9"></div>
+    <div class="ctl" data-k="unitCost"><div class="lr"><label>Big-2 serving cost ($/Mtok)</label><span class="dot"></span><input type="number" step="0.01" min="0.05" max="1"></div><input type="range" step="0.01" min="0.15" max="0.6"></div>
+    <div class="ctl" data-k="rCost"><div class="lr"><label>Rest-of-system cost / big-2 cost</label><span class="dot"></span><input type="number" step="0.01" min="0.02" max="1.5"></div><input type="range" step="0.01" min="0.05" max="1"></div>
+    <p style="font-size:11px;color:var(--ink3);margin:0">Big-2 revenue / inference / training vectors are editable in <b>Inputs &amp; data</b>.</p>
+  </details>
+
   <details class="group" id="gLabs"><summary>AI Labs bridge<span class="arrow">›</span></summary><div class="body">
     <div class="ctl" data-k="labsYear"><div class="lr"><label>Focus year (EV &amp; detail)</label><span class="dot"></span><input type="number" step="1" min="2026" max="2045"></div><input type="range" step="1" min="2026" max="2045"></div>
     <div class="ctl" data-k="openShare"><div class="lr"><label>Open-source revenue share</label><span class="dot"></span><input type="number" step="0.05" min="0" max="1"></div><input type="range" step="0.05" min="0" max="0.8"></div>
@@ -246,6 +256,7 @@ footer b{color:var(--ink2)}
     <button role="tab" aria-selected="true" data-tab="val">Valuation</button>
     <button role="tab" aria-selected="false" data-tab="gw">Capex &amp; GW</button>
     <button role="tab" aria-selected="false" data-tab="roic">Cloud ROIC</button>
+    <button role="tab" aria-selected="false" data-tab="grossup">Labs → System</button>
     <button role="tab" aria-selected="false" data-tab="labs">AI Labs</button>
     <button role="tab" aria-selected="false" data-tab="inputs">Inputs &amp; data</button>
   </nav>
@@ -316,6 +327,32 @@ footer b{color:var(--ink2)}
     </div>
   </section>
 
+  <section class="tabpane" id="tab-grossup">
+    <div class="panelgrid">
+      <div class="panel wide"><h3>Labs → System → Cloud — the gross-up</h3>
+        <p class="note"><b>Direction:</b> the two frontier labs we model (OpenAI + adjusted Anthropic, house AI Model) are the <b>anchor</b>; the system is grossed up off their market share; the cloud bill then follows from the system. Revenue grosses at <b>1/s<sub>rev</sub></b>. Compute grosses on <b>tokens</b>, not revenue — because a served token costs the same whoever sells it — at <b>1+(1/s<sub>tok</sub>−1)·r<sub>cost</sub></b>, where r<sub>cost</sub> is the rest of the system's cost per token relative to the big-2. Since frontier labs earn far more per token than they cost, s<sub>rev</sub> ≫ s<sub>tok</sub> and <b>the cloud bill grosses up harder than revenue does</b>.</p>
+        <div class="scroller" id="chGross"></div>
+        <div class="legend" id="lgGross"></div>
+      </div>
+      <div class="panel"><h3>The monetisation asymmetry</h3>
+        <p class="note">Big-2 share of system <b>revenue</b> vs share of system <b>tokens</b>. The gap is the yield premium — and it is what makes the compute gross-up bigger than the revenue gross-up.</p>
+        <div class="scroller" id="chShares"></div></div>
+      <div class="panel"><h3>System cloud bill — inference vs training</h3>
+        <p class="note">Inference grosses on tokens; training grosses on revenue share (it scales with lab ambition, not with served tokens).</p>
+        <div class="scroller" id="chSysCloud"></div></div>
+      <div class="panel wide"><h3>Calibration — against two independent house builds</h3>
+        <p class="note">The share is the load-bearing input, so it is <b>calibrated, not guessed</b>. s<sub>rev</sub> comes from the AI Labs Revenue MAP's own share path (71.5% → 50% by 2035); the result is then checked against the LLM Market MAP v2, a separate house construction of the same system. r<sub>cost</sub> is back-solved from CY26 and validated against a number outside the fit — OpenRouter's observed commodity-open price.</p>
+        <div class="scroller"><table class="data" id="tblGross"></table></div>
+        <div class="statchips" id="grossChips"></div>
+      </div>
+      <div class="panel wide"><h3>Drive the model's cloud line from this</h3>
+        <p class="note">The DCF's cloud revenue is currently a hardcoded house vector that never responds to capex. Switching it to the derived bill closes that loop — and fixes a basis mismatch: the hardcoded line is <b>total cloud incl. non-AI</b>, while the ROIC fleet it is measured against is <b>AI capex only</b>.</p>
+        <div class="statchips" id="modeChips"></div>
+        <div class="kv cols3" id="kvMode"></div>
+      </div>
+    </div>
+  </section>
+
   <section class="tabpane" id="tab-labs">
     <div class="panelgrid">
       <div class="panel wide"><h3>AI Labs revenue — implied from the cloud pool (US$bn)</h3>
@@ -382,8 +419,20 @@ const FILE = {
  sgaOpen:0,sgaClosed:0.05,taxLabs:0.15,evMult:15,mapShare:1,trCov:1,
  cloudEbitM:0.38,labsYear:2030,densClosed:40000,densOpen:17500,
  allocAnth:0.4,allocOAI:0.3,allocGem:0.15,allocMeta:0.15,
- refPx:217.55
+ refPx:217.55,
+ // ---- LABS -> SYSTEM GROSS-UP (CY26-30). HARD: house AI Model via 'Labs Official Ref' 31-Aug-26
+ big2Rev:[96.46858838416958,215.91369450175986,371.2,544.0,767.5],
+ big2Inf:[45.75808698203816,97.27891732915768,156.73126032849163,211.29847774776943,280.37413289280875],
+ big2Trn:[42.85490346445185,71.0,110.0,145.0,200.0],
+ sRev26:0.715, sRev35:0.50,        // big-2 share of model layer (AI Labs Revenue MAP v1 path)
+ unitCost:0.30,                    // $/Mtok big-2 blended serving cost (ANT .283/OAI .306/SemiA .32)
+ rCost:0.29,                       // rest-of-system cost per token / big-2 (back-solved CY26)
+ cloudMode:'house'                 // 'house' = hardcoded total cloud | 'derived' = labs gross-up
 };
+// LLM Market MAP v2 Results_Snapshot (independent house build) - calibration reference, not editable
+const MAPREF={tok:[360,1089,2240,3428,4714],rev:[140,340.9995,563.9495,692.8484,763.6435],
+ gp:[76.3502,191.9454,326.5428,413.4703,469.3549],frontRev:[99.8346,246.9558,414.7397,517.3343,578.7957],
+ openPrice:0.1489};  // OpenRouter observed commodity-open blended $/Mtok (independent of the fit)
 const CHECKS = {px:296.7701392609193,pvFlows:3942694.7787533966,pvTV:2778507.1640597126,
  gwActive45:1607.8925291957737,rev29:961731.4280327586,sensI6:229.58812444741164,
  grid2_5_40:247.58016180369466,cohNet28:807293.1446165534,labsEV30:8163651.025961697,gwInf30:71.86887657909455};
@@ -458,10 +507,34 @@ function engine(S){
     for(let i=0;i<N;i++){const y=YRS[i];
       if(y===YRS[j])wip[i]+=cost/2;else if(y>YRS[j]&&y<svc)wip[i]+=cost;}}
   const avgNet=avgC.map((v,i)=>v+avgN2[i]+avgO[i]);
-  // cloud revenue
+  // ---- LABS -> SYSTEM GROSS-UP -------------------------------------------------
+  // Direction: big-2 labs are the ANCHOR; the system is grossed up off their share;
+  // the cloud bill follows TOKENS (not revenue), because compute scales with tokens.
+  // Revenue grosses at 1/s_rev; compute grosses at 1+(1/s_tok-1)*r_cost.
+  const L={yr:[2026,2027,2028,2029,2030],sRev:[],sTok:[],b2Tok:[],sysRev:[],sysTok:[],
+           guInf:[],sysInf:[],sysTrn:[],sysCloud:[],restUnit:[],mapRevX:[],ok:[]};
+  for(let k=0;k<5;k++){
+    const y=L.yr[k];
+    const sr=Math.min(0.999,S.sRev26+(S.sRev35-S.sRev26)*(y-2026)/9);
+    const b2t=S.unitCost>0?S.big2Inf[k]/S.unitCost:0;      // $bn/Q === $/Mtok (unit identity)
+    const st=MAPREF.tok[k]>0?b2t/MAPREF.tok[k]:0;
+    const gu=st>0?1+(1/st-1)*S.rCost:1;
+    const sysInf=S.big2Inf[k]*gu, sysTrn=sr>0?S.big2Trn[k]/sr:0;
+    const restTok=MAPREF.tok[k]-b2t, restCogs=(MAPREF.rev[k]-MAPREF.gp[k])-S.big2Inf[k];
+    const ru=restTok>0?restCogs/restTok:0;
+    L.sRev.push(sr);L.sTok.push(st);L.b2Tok.push(b2t);
+    L.sysRev.push(sr>0?S.big2Rev[k]/sr:0);L.sysTok.push(st>0?b2t/st:0);
+    L.guInf.push(gu);L.sysInf.push(sysInf);L.sysTrn.push(sysTrn);L.sysCloud.push(sysInf+sysTrn);
+    L.restUnit.push(ru);
+    L.mapRevX.push(MAPREF.rev[k]>0?(sr>0?S.big2Rev[k]/sr:0)/MAPREF.rev[k]:0);
+    // guardrail: back-solved rest-of-system unit cost must sit below the OBSERVED open price
+    // (OpenRouter feed - not used in the fit) at a sane host margin, and be positive.
+    L.ok.push(ru>0.02&&ru<MAPREF.openPrice?'OK':(ru<=0.02?'RED':'AMBER'));}
+  // cloud revenue: hardcoded house total-cloud line, or derived from the labs gross-up
   const cloudRev=new Array(N).fill(0);
   for(let i=0;i<N;i++){const y=YRS[i];
-    if(y>=2026&&y<=2030)cloudRev[i]=S.cloudRev[y-2026];
+    // L.sysCloud is US$bn; every other money series in the engine is US$mm -> x1000
+    if(y>=2026&&y<=2030)cloudRev[i]=(S.cloudMode==='derived')?L.sysCloud[y-2026]*1000:S.cloudRev[y-2026];
     else if(y>2030)cloudRev[i]=cloudRev[i-1]*(1+S.cloudRevG);}
   const fleetROIC=[],singleROIC=[],conROIC=[],hurdA=[],hurdB=[];
   for(let i=0;i<N;i++){
@@ -530,7 +603,7 @@ function engine(S){
     pvFlows,TV,pvTV,roll,pvDated,px,days,
     gwBuy,gwC,gwN,gwO,actC,actN,actO,sup,retGW,retVal,refC,refN,refO,
     avgC,avgN2,avgO,avgNet,dep,wip,vintDep,vintGross,cloudRev,fleetROIC,singleROIC,conROIC,hurdA,hurdB,mA,mB,dnaRate,
-    nvdaVsCloud,cloudGW,revPerCloudGW,capexPerCloud,
+    nvdaVsCloud,cloudGW,revPerCloudGW,capexPerCloud,L,
     mapped,infRatio,trRatio,labsRev,openRev,closedRev,openNopat,closedNopat,closedEV,gwClosed,gwOpen,
     grid1,grid2,grid2g,baseCagr,shareCases,floorCases,cagrCases,shareCases2};
 }
@@ -544,6 +617,7 @@ function persist(){try{localStorage.setItem('nvdaGwDcf.v1',JSON.stringify(S));}c
 
 /* ================= formatting ================= */
 const fBn=v=>{const b=v/1000;return (Math.abs(b)>=100?b.toFixed(0):Math.abs(b)>=10?b.toFixed(1):b.toFixed(2)).replace(/\B(?=(\d{3})+(?!\d))/g,',');};
+const fBn2=v=>fBn(v);
 const f$=v=>'$'+v.toFixed(2);
 const fPct=v=>(v*100).toFixed(1)+'%';
 const fGW=v=>Math.abs(v)>=100?v.toFixed(0):v.toFixed(1);
@@ -704,10 +778,12 @@ function render(){
    const LO=10,HI=25;
    const dens=[2026,2028,2035,2045].map(y=>[y,E.revPerCloudGW[IX(y)]]);
    const below=dens.filter(d=>d[1]<LO).map(d=>d[0]);
+   const derivedMode=S.cloudMode==='derived';
    $('cloudChips').innerHTML=
+     `<span class="schip ${derivedMode?'warn':''}">basis: ${derivedMode?'DERIVED — labs’ AI compute bill only (a SUBSET of fleet revenue; the ledger below does not apply like-for-like)':'HOUSE — total cloud revenue incl. non-AI'}</span>`+
      dens.map(d=>`<span class="schip ${d[1]>=LO&&d[1]<=HI?'ok':'warn'}">CY${d[0]} cloud rev/GW $${d[1].toFixed(1)}bn</span>`).join('')+
      `<span class="schip">realized ledger $10–25bn/GW-yr · Trainium &lt;10 · merchant 12–13 · MS TPU ~20 · premium ~25</span>`+
-     (below.length?`<span class="schip warn">below the Trainium floor in ${below.join(', ')} — cloud leg thin vs the GW the capex leg builds</span>`:'');}
+     (below.length&&!derivedMode?`<span class="schip warn">below the Trainium floor in ${below.join(', ')} — cloud leg thin vs the GW the capex leg builds</span>`:'');}
   // PV bridge
   {const el=$('chBridge');const items=[
     ['PV of CY26–45 flows',E.pvFlows],['PV of terminal value',E.pvTV],
@@ -814,6 +890,55 @@ function render(){
    $('tblLabsPL').innerHTML='<tr><th>CY'+S.labsYear+'</th><th>US$bn</th></tr>'+
      rows.map(r=>`<tr><td>${r[0]}</td><td class="num">${fBn(r[1])}</td></tr>`).join('');}
 
+  // ---- Labs -> System gross-up tab ----
+  {const L=E.L, yy=L.yr;
+   lineChart($('chGross'),{years:yy,minW:520,h:250,fmt:fBn2,series:[
+     {name:'Big-2 (anchor)',color:c1,vals:S.big2Rev.map(v=>v*1000),area:true},
+     {name:'System revenue',color:c2,vals:L.sysRev.map(v=>v*1000)},
+     {name:'LLM MAP check',color:c4,vals:MAPREF.rev.map(v=>v*1000),dash:'4 3'}],
+     extra:[{name:'gross-up 1/s_rev',vals:L.sRev.map(v=>1/v),fmt:v=>v.toFixed(2)+'x'},
+            {name:'vs LLM MAP',vals:L.mapRevX,fmt:v=>v.toFixed(2)+'x'}]});
+   $('lgGross').innerHTML=[['Big-2 (anchor)',c1],['System revenue (grossed up)',c2],['LLM Market MAP v2 — independent check',c4]]
+     .map(x=>`<span class="it"><span class="sw" style="background:${x[1]}"></span>${x[0]}</span>`).join('');
+   lineChart($('chShares'),{years:yy,minW:340,h:220,fmt:fPct,series:[
+     {name:'revenue share',color:c1,vals:L.sRev},
+     {name:'token share',color:c3,vals:L.sTok}],
+     extra:[{name:'yield premium',vals:L.sRev.map((v,i)=>L.sTok[i]>0?v/L.sTok[i]:0),fmt:v=>v.toFixed(2)+'x'},
+            {name:'compute gross-up',vals:L.guInf,fmt:v=>v.toFixed(2)+'x'}]});
+   stackChart($('chSysCloud'),{years:yy,minW:340,h:220,fmt:fBn2,series:[
+     {name:'System inference',color:c1,vals:L.sysInf.map(v=>v*1000)},
+     {name:'System training',color:c2,vals:L.sysTrn.map(v=>v*1000)}]});
+   let h='<tr><th>US$bn unless noted</th>'+yy.map(y=>`<th>CY${y}</th>`).join('')+'</tr>';
+   const row=(lab,vals,f)=>{h+=`<tr><td>${lab}</td>`+vals.map(v=>`<td class="num">${f(v)}</td>`).join('')+'</tr>';};
+   row('Big-2 revenue (HARD, house)',S.big2Rev,v=>v.toFixed(0));
+   row('÷ share of system revenue',L.sRev,fPct);
+   row('= SYSTEM revenue',L.sysRev,v=>v.toFixed(0));
+   row('LLM MAP system revenue (check)',MAPREF.rev,v=>v.toFixed(0));
+   row('ratio vs LLM MAP',L.mapRevX,v=>v.toFixed(2)+'x');
+   row('Big-2 tokens (Q, back-solved)',L.b2Tok,v=>v.toFixed(0));
+   row('÷ share of system tokens',L.sTok,fPct);
+   row('= SYSTEM tokens (Q)',L.sysTok,v=>v.toFixed(0));
+   row('Compute gross-up factor',L.guInf,v=>v.toFixed(2)+'x');
+   row('SYSTEM inference bill',L.sysInf,v=>v.toFixed(0));
+   row('SYSTEM training bill',L.sysTrn,v=>v.toFixed(0));
+   row('SYSTEM CLOUD BILL',L.sysCloud,v=>v.toFixed(0));
+   row('Rest-of-system $/Mtok (implied)',L.restUnit,v=>'$'+v.toFixed(3));
+   $('tblGross').innerHTML=h;
+   $('grossChips').innerHTML=yy.map((y,k)=>{
+     const st=L.ok[k];const cls=st==='OK'?'ok':'warn';
+     const msg=st==='OK'?`host GM ${fPct(1-L.restUnit[k]/MAPREF.openPrice)}`:(st==='RED'?'impossible — below any observed cost':'above open price');
+     return `<span class="schip ${cls}">CY${y} rest $${L.restUnit[k].toFixed(3)}/Mtok · ${msg}</span>`;}).join('')+
+     `<span class="schip">independent check: OpenRouter commodity-open $${MAPREF.openPrice.toFixed(3)}/Mtok (not used in the fit)</span>`;
+   // mode panel
+   const derived=S.cloudMode==='derived';
+   $('modeChips').innerHTML=
+     `<span class="schip ${derived?'ok':''}">${derived?'● DERIVED — cloud line = AI compute bill':'○ HOUSE — cloud line = hardcoded total-cloud vector'}</span>`+
+     `<span class="schip">switch it in the console (Labs → System gross-up)</span>`;
+   const hv=S.cloudRev, dv=L.sysCloud;
+   $('kvMode').innerHTML=yy.map((y,k)=>
+     `<span class="k">CY${y} house / derived</span><span class="v">${(hv[k]/1000).toFixed(0)} / ${dv[k].toFixed(0)}</span>`).join('')+
+     `<span class="k">implied AI share of cloud</span><span class="v">${fPct(dv[0]/(hv[0]/1000))} → ${fPct(dv[4]/(hv[4]/1000))}</span>`;}
+
   // outputs table
   {const rows=[['Capex total',E.total],['— Chips',E.chips],['— NW + CPU',E.nw],['— Hard assets',E.oth],
     ['NVDA share of chips',E.share.map(fPct)],['NVDA revenue',E.rev],['Gross margin',E.gm.map(fPct)],
@@ -841,8 +966,10 @@ function buildVecTable(){
       if(i>=n){h+='<td></td>';continue;}
       h+=`<td><input type="number" step="any" data-vec="${k}" data-i="${i}" value="${S[k][i]}"></td>`;}
     h+='</tr>';});
-  h+='<tr><th>Cloud revenue (AI Model)</th>'+[2026,2027,2028,2029,2030].map(y=>`<th>${y}</th>`).join('')+'<th></th></tr>';
-  h+='<tr><td>US$mm · then +growth CY31+</td>'+[0,1,2,3,4].map(j=>`<td><input type="number" step="any" data-vec="cloudRev" data-i="${j}" value="${S.cloudRev[j]}"></td>`).join('')+'<td></td></tr>';
+  h+='<tr><th>Cloud &amp; Labs vectors</th>'+[2026,2027,2028,2029,2030].map(y=>`<th>${y}</th>`).join('')+'<th></th></tr>';
+  h+='<tr><td>Cloud revenue (AI Model, US$mm)</td>'+[0,1,2,3,4].map(j=>`<td><input type="number" step="any" data-vec="cloudRev" data-i="${j}" value="${S.cloudRev[j]}"></td>`).join('')+'<td></td></tr>';
+  [['big2Rev','Big-2 revenue (US$bn)'],['big2Inf','Big-2 inference expense (US$bn)'],['big2Trn','Big-2 training expense (US$bn)']]
+    .forEach(([k,lab])=>{h+=`<tr><td>${lab}</td>`+[0,1,2,3,4].map(j=>`<td><input type="number" step="any" data-vec="${k}" data-i="${j}" value="${S[k][j]}"></td>`).join('')+'<td></td></tr>';});
   $('tblVec').innerHTML=h;
 }
 function buildCostTable(){
@@ -863,7 +990,13 @@ function bindVecInputs(){
 /* ================= scalar controls ================= */
 function bindCtl(){
   document.querySelectorAll('.ctl[data-k]').forEach(ct=>{
-    const k=ct.dataset.k,num=ct.querySelector('input[type=number],input[type=date]'),rng=ct.querySelector('input[type=range]');
+    const k=ct.dataset.k,sel=ct.querySelector('select');
+    if(sel){
+      sel.addEventListener('change',()=>{S[k]=sel.value;persist();
+        ct.classList.toggle('drift',S[k]!==FILE[k]);render();});
+      ct._sync=()=>{sel.value=S[k];ct.classList.toggle('drift',S[k]!==FILE[k]);};
+      ct._sync();return;}
+    const num=ct.querySelector('input[type=number],input[type=date]'),rng=ct.querySelector('input[type=range]');
     const set=v=>{
       if(k==='valDate'){S[k]=v;}else{const f=parseFloat(v);if(!isFinite(f))return;S[k]=f;}
       persist();sync();queue();};

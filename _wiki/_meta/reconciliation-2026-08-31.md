@@ -6,7 +6,7 @@ _Every NEW quantitative datapoint from this run, placed against three baselines:
 
 ---
 
-## 🔴 DIVERGES — the alpha
+## Where the new data DIVERGES
 
 ### 1. 🔴🔴 THE HEADLINE FINDING: Deutsche Bank's "bullish" hardware initiation is BELOW consensus on 5 of its 6 wiki-covered PTs — and its EPS sit ON consensus. It is a MULTIPLE call, not an estimate call.
 
@@ -25,7 +25,7 @@ _Every NEW quantitative datapoint from this run, placed against three baselines:
 
 🎯 **The one genuine outlier is [[LITE]], the only name where DB is above the Street on BOTH price and multiple.** Prior wiki marks for context: **R&Co Redburn Buy $1,270 (08-17) · DB Buy $1,200 (NEW, #2 on the page) · BofA Neutral $1,100 · MS EW $1,000 (08-24, raised from $900 on 08-03).** DB's $1,200 becomes the second-highest PT on the page and the highest from a house initiating fresh.
 
-### 2. 🔴🔴 [[COHR]] — the HOUSE is ~40% above both DB and consensus on CY28 EPS. This is the largest house-vs-Street gap in the batch and it needs a bridge.
+### 2. 🔴🔴 [[COHR]] — the HOUSE is +42.9% above consensus AND **+17.0% above the STREET HIGH** on CY28 EPS (re-measured live 2026-09-01). No analyst on the Street is at the house's number. Largest open house-vs-Street gap on the wiki; it needs a bridge.
 
 | CY28E EPS | Value | vs house |
 |---|--:|--:|
@@ -34,6 +34,21 @@ _Every NEW quantitative datapoint from this run, placed against three baselines:
 | BBG consensus (interpolating 2FY $14.38 / 3FY $18.66 across a June FY) | ~$16.5 | 🔴 **−30%** |
 
 🔴 **The house is carrying a CY28 Coherent number roughly 40-43% above where both the newest initiating house and the Street sit. That is a big enough gap to be either the position or the error, and it should not sit unexamined.** Note the house model is dated **2026-05-26 and is explicitly "built on Jefferies/Blayne Curtis"** — and Jefferies has since (08-07) turned notably more two-sided on the LITE/COHR pair and flagged the MPO risk to laser content. **Action: re-derive the house CY28 COHR bridge (revenue $19.6bn at ~41% GM) against DB's own build, which reaches only ~$19 of EPS by FY29E on a business it calls capacity-constrained-turning-cash-generative. The disagreement is most likely in the gross-margin path or the CPO/OCS attach, not the transceiver ramp.** ⚠️ **Per the standing rule, do NOT discard either number on plausibility — reconcile first. The house was right and the "implausible" broker model was right on Korea in August; the failure mode runs both ways.**
+
+✅🔴 **RESOLVED 2026-09-01 (`/wiki-consensus`, live ad-hoc `1FY/2FY/3FY` pull) — THE CONSENSUS SIDE OF THIS BRIDGE IS CONFIRMED TO THE CENT, AND THE GAP IS WORSE THAN "~40% vs THE MEDIAN": THE HOUSE IS 17% ABOVE THE STREET **HIGH**.** Coherent's last reported quarter is 2026-06-30, so `1FY` = FY2027 (ending Jun-27), `2FY` = FY2028, `3FY` = FY2029. The 08-31 interpolation is exact:
+
+| CY2028E EPS | Value | vs house $23.60 |
+|---|--:|--:|
+| **Capstone house** (`Modelo COHR.xlsx`, 2026-05-26, Jefferies-based) | **$23.60** | — |
+| **BBG consensus MEDIAN**, ½`2FY` $14.385 + ½`3FY` $18.656 | **$16.52** | 🔴 **house +42.9%** |
+| **BBG STREET HIGH**, ½`2FY_HI` $20.40 + ½`3FY_HI` $19.96 | **$20.18** | 🔴🔴 **house +17.0%** |
+| DB implied (PT $400 ÷ 24x) | ~$16.67 | +0.9% vs the median — **DB IS the consensus number** |
+
+🔴🔴 **THE SHARPENED FINDING: the house is not merely above the Street's average on Coherent CY28 — it is 17% above the single most bullish mark BBG carries. There is no analyst on the Street at the house's number. That moves this from "a big gap worth bridging" to "the house is outside the entire published range," which is a materially higher bar and confirms this as the largest open reconciliation item on the wiki.**
+
+➤ **Two things the fresh pull adds to the bridge brief: (1) the GM path is the likely culprit — BBG has COHR gross margin at 40.96% (`1FY`) → 41.96% (`2FY`) → 42.91% (`3FY`), i.e. the Street models ~2pp of expansion over three years against the house's ~41% on $19.6bn of revenue, so the disagreement is more likely in the REVENUE/mix line than in margin. (2) The consensus TP is **$418.62** against a **$271.37** spot (+54% implied) with DB at $400 — so the Street is bullish on the STOCK while sitting far below the house on the EARNINGS. If the house's CY28 number is right, the Street's targets are far too low; if the targets are right, the house's EPS is not what is driving them.**
+
+⚠️ **Still not resolved (and not a BBG question): WHY the house is there. The bridge against DB's own build remains the open task — `/wiki-consensus` can only establish where the Street is, which it now has, precisely.**
 
 ### 3. 🔴🔴 [[TXN]] — Goldman's SELL is 31.5% below consensus. The single widest single-name PT divergence this run.
 
@@ -77,7 +92,7 @@ _Every NEW quantitative datapoint from this run, placed against three baselines:
 
 **Same structure as NOW: identical earnings, a much higher multiple (30x P/E on forward NTM vs the ~24x implied by consensus TP). WF names MSFT and NOW as the two *"most (+)"* beneficiaries of open-weight model diffusion. The whole thesis lives in the terminal multiple.**
 
-### 6. 🔴 [[CRM]] — Wells Fargo's PT is now BELOW the share price, and its EPS is 16% below consensus. ⚠️ PERIOD-BASIS CHECK REQUIRED BEFORE TREATING AS A CALL.
+### 6. [[CRM]] — ✅ **RESOLVED 2026-09-01 → CONFIRMS** (struck as a basis artifact): the "16% below consensus" EPS gap FLIPS SIGN between BBG's own annual and quarterly panels; what survives is only that Wells Fargo's PT is STALE, not bearish
 
 | | Value |
 |---|--:|
@@ -89,6 +104,25 @@ _Every NEW quantitative datapoint from this run, placed against three baselines:
 | WF "FY2027E" EPS $14.09 vs BBG 1FY | $16.73 → 🔴 **−15.8%** |
 
 ⚠️ **DO NOT LOG THIS AS A HOUSE-VS-STREET DIVERGENCE UNTIL THE PERIOD IS CONFIRMED. Salesforce's fiscal year ends in January, so a note labelled "FY 2027E" may mean the year ending Jan-2027 (BBG's 1FY) or may be a calendar-2027 label. A ~16% gap is exactly the size a one-year offset produces here (BBG 1FY $16.73 → 2FY $16.07 → 3FY $18.35). This is the same failure mode that produced the 08-28 false "implausible scaling" rejection: CHECK THE PERIOD BASE BEFORE CALLING A DISAGREEMENT.** What IS unambiguous and actionable: **the stock has run 30% since 12-Aug and WF's $205 target is now 20% below spot — the PT is stale, not bearish, and the page should not carry it as a live view without that caveat.**
+
+✅🔴🔴 **RESOLVED 2026-09-01 — AND THE ANSWER IS NOT THE ONE THE CAVEAT ANTICIPATED. THE PERIOD LABEL IS FINE; IT IS THE *BASIS* THAT DECIDES THE SIGN, AND THE SIGN FLIPS.**
+
+**First, the period question is closed. Salesforce's last reported quarter ends 2026-07-31 — that is Q2 of FY2027 (FYE 31-Jan) — so BBG's `1FY` IS the year ending Jan-2027. WF's "FY2027E" and BBG `1FY` are the same period. No offset exists.**
+
+🔴 **But placing WF's $14.09 against the two BBG figures that BOTH claim to cover that period gives OPPOSITE ANSWERS:**
+
+| BBG figure for FY2027 (→Jan-27) | Value | WF $14.09 vs it |
+|---|--:|--:|
+| **Annual consensus line** (`BEST_EPS`, `1FY` override) | **$16.73** | 🔴 **−15.8%** |
+| **Sum of the four quarterly consensus marks** (`estimates.json` "CY2026" block) | **$13.38** | ✅ **+5.3%** |
+
+⚠️ **AND THE "CY2026" LABEL IS A RED HERRING THAT MAKES THIS EASY TO GET WRONG: because Salesforce's quarters end Apr/Jul/Oct/Jan, the four quarters the builder snaps into its `CY2026` bucket are those ending **Apr-26, Jul-26, Oct-26 and Jan-27** — i.e. that block IS fiscal 2027, not calendar 2026. So these two numbers describe the SAME twelve months and BBG's own panel disagrees with itself by **+25.1%** ($13.38 quarterly sum vs $16.73 annual line).**
+
+🔴🔴 **THE READ, AND IT IS A DO-NOT-TRADE VERDICT RATHER THAN A VIEW: Wells Fargo is 15.8% BELOW the annual consensus line and 5.3% ABOVE the sum of the quarterly consensus marks for the identical period. A "divergence" whose SIGN depends on which of two BBG series you pick is not a divergence — it is an artifact. The −15.8% must NOT be logged as a Wells Fargo call against the Street.** ➤ **This is the third distinct basis trap this backlog has hit in a month (the 08-28 "implausible scaling" false rejection, the [[STX]]/[[WDC]] FY28-labelled-as-2027 error resolved in `reconciliation-2026-08-29.md` §6, and now this) — and the first where the artifact is inside BBG itself rather than in our handling of it.**
+
+⚠️ **CARRIED FORWARD AS A DATA-QUALITY ITEM, NOT AN ALPHA ITEM: [[CRM]]'s BBG consensus panel needs a basis audit before ANY CRM estimate comparison is trusted. Two corroborating symptoms from the same pull: the annual series DECLINES from `1FY` $16.73 to `2FY` $16.07 before rising to `3FY` $18.35 (an implausible shape for Salesforce), and the annual-vs-quarterly wedge here is +25.1% against ~+4% for a clean name like [[META]]. Most likely a GAAP / non-GAAP contributor mix differing between the annual and quarterly panels.**
+
+✅ **What survives from §6 unchanged, because it needs no estimate basis at all: the stock is +30% since the 12-Aug note and WF's $205 target is now 20.4% below a $257.80 spot (consensus TP $270.62). The PT is STALE, not bearish, and the page should carry it with that caveat.**
 
 ### 7. 🔴 [[SAMSUNG]] — Citi cuts INTO an already-far-below-Street position. Consensus implies +90% upside; Citi implies +65%.
 
@@ -184,9 +218,13 @@ _Every NEW quantitative datapoint from this run, placed against three baselines:
 
 ## Items carried forward (not reconcilable this run)
 
-- **[[CRM]] period basis** (§6) — confirm whether WF's "FY2027E/FY2028E" labels are Salesforce fiscal years or calendar years before the −15.8% EPS gap is treated as a view.
-- **[[COHR]] CY28 bridge** (§2) — the ~40% house-vs-Street gap is the single largest open reconciliation item on the wiki after this run.
+- ✅ **RESOLVED 2026-09-01 — [[CRM]] period basis** (§6). The labels are fine (`1FY` = FY2027 = WF's "FY2027E"), but the −15.8% **flips to +5.3%** against the quarterly-sum basis for the same twelve months, because BBG's own annual and quarterly panels disagree by 25.1%. **Struck as a divergence; re-filed as a CRM consensus data-quality item.**
+- ⚠️ **STILL OPEN, AND BIGGER THAN LOGGED — [[COHR]] CY28 bridge** (§2). Consensus side now nailed live 2026-09-01: median **$16.52**, **street high $20.18**. The house's $23.60 is +42.9% over the median and **+17.0% over the street HIGH — outside the entire published range.** The bridge against DB's own build is still the open task; `/wiki-consensus` cannot close it.
 - **UBS's MTIA 400 internal inconsistency** — 288GB HBM3E / 9.4TB/s in the note text vs 432GB HBM4 in its own Figure 1. Both printed; unsettled; flagged on [[META]] and [[AVGO]].
 - **The DB-vs-Jefferies laser-content dispute** — qualitative, not reconcilable against consensus, but it is the load-bearing engineering question under every optical PT in §1. Tracked in `themes/optical-cpo.md`.
 - **The open-model contradiction** — Wells Fargo's CIO survey says customers are shifting to "good-enough" open-source models; UBS's CFO dinner the same month found *"hesitation to use open models, whether Chinese or even US,"* with buyers preferring cheaper CLOSED models. Both are survey/channel evidence, neither is consensus data. Logged in `themes/tokenmaxxing.md`.
 - **Private names** ([[ANTHROPIC]], [[OPENAI]], [[CEREBRAS]]) — no BBG, no house model; reconciled against prior wiki comments only. The Anthropic–Nscale **$45bn** figure came verbally on the UBS call with no terms, duration or structure; awaiting a primary before it is treated as a mark.
+
+---
+
+_BBG column resolved 2026-09-01 — `estimates.json` asof **2026-09-01** (99/99 live, 0 FAIL lines, 0 `error` keys, 0 null prices, 0 `carried_over` stamps, 0 records byte-identical to the 08-28 vintage), plus an ad-hoc live `BEST_FPERIOD_OVERRIDE=1FY/2FY/3FY` pull for **CRM** and **COHR**. This report carried **no `PENDING` cells** (its 08-31 column was already live); this layer closes two of its **carried-forward** items instead: **[[CRM]] §6 struck as a basis artifact whose sign flips between BBG's own annual and quarterly panels**, and **[[COHR]] §2 sharpened — the house is +17.0% above the STREET HIGH, not merely +43% above the median.** Canonical header `## Where the new data DIVERGES` applied (was `## 🔴 DIVERGES — the alpha`). **No web data was substituted at any point.**_
