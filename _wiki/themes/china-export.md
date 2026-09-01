@@ -1,6 +1,28 @@
 # Theme — China AI Buildout & Export Controls
 
 _Wiki · generated 2026-06-25 · cross-company theme · sources: equity calls, briefing roll-ups, earnings transcripts, research library, Twitter/X corpus (ported from research-wiki). Company pages: [../00_INDEX.md](../00_INDEX.md) · themes index: [00_THEMES.md](00_THEMES.md)._
+
+## 🆕🔴🔴 Recent signals (Aug 31, /run-inbox — **CXMT IS PRODUCING HBM3E, ONE GENERATION BEHIND THE MAJORS — AND ITS 2Q26 GROSS MARGIN IS 87.6%. THE DOMESTIC MEMORY CONSTRAINT ON CHINESE AI SILICON IS EASING, BUT THE WFE CAP THAT BOUNDS IT IS STILL IN PLACE.**)
+
+**Sources: (1) The Information Staff — "China's CXMT Makes Breakthrough in Advanced Memory Chips", 2026-08-31** ⚠️ *trade press, two unnamed sources familiar; no rating/PT* [Source](../../relat%C3%B3rios%20bons/Chinas_CXMT_Makes_Breakthrough_in_Advanced_Memory_Chips_The_Information.html) · **(2) Wells Fargo · Aaron Rakers — headlines flash (CXMT 2Q26 results), 2026-08-31** [Source](../../relat%C3%B3rios%20bons/MRVL_Purchase_Commits_Expansion_DRAM_Contract_Pricing_CXMT.html)
+
+🔴 **THE CLAIM, WITH ITS SOURCING INTACT:** CXMT *"has BEGUN PRODUCING advanced high-bandwidth memory IN SMALL QUANTITIES,"* specifically **HBM3E** — *"only ONE GENERATION BEHIND the memory entering mass production at the world's leading manufacturers, [[SAMSUNG]], [[SKHYNIX]] and [[MU]]."* **Expansion planned for 2027.** ⚠️ **Two people familiar with the matter; CXMT itself DID NOT MENTION HBM PROGRESS IN ITS EARNINGS RELEASE. A sourced report, not a disclosure.**
+
+🔴 **WHY IT MATTERS FOR THIS DOSSIER SPECIFICALLY — it attacks the binding constraint, not the headline one:** *"HBM3E production could ease a KEY CONSTRAINT for China's homegrown AI processors… U.S. export restrictions limit Chinese companies from buying the most advanced HBM from Western companies, **ONE OF THE MAJOR FACTORS HOLDING BACK CHINESE AI CHIP DESIGNERS**."* Washington restricted advanced HBM shipments to China in 2024, and *"Chinese companies need U.S. approval to buy less advanced memory."*
+
+🔴 **THE CUSTOMER EVIDENCE, which converts it from a process milestone into a supply-chain event:** *"Several Chinese chip designers are testing the memory with their processors, including **Alibaba Group's T-HEAD and Beijing-based CAMBRICON.** If all goes to plan, these companies will use CXMT's memory in products **AS EARLY AS NEXT YEAR**… Their orders could give CXMT the PRODUCTION EXPERIENCE AND CUSTOMER FEEDBACK it needs to make HBM on a larger scale."*
+
+⚠️ **AND THE CAP THAT STILL BINDS, which must travel with every version of this headline:** *"much remains uncertain, as **its ability to manufacture the chips is ALSO CONSTRAINED BY U.S. RESTRICTIONS THAT BLOCK CHINESE COMPANIES FROM BUYING SOME OF THE MOST SOPHISTICATED FOREIGN EQUIPMENT** used by leading memory manufacturers."* **This is the central mechanism this dossier tracks: the export-control regime has shifted the bottleneck from the memory PART to the TOOLS that make it. CXMT proving HBM3E does not prove it can scale HBM3E.**
+
+**SCALE AND PROFITABILITY — the numbers are the loudest part:**
+- **Shanghai IPO raised US$8.6bn; shares +472% on debut.**
+- **1H26 revenue up almost TENFOLD to RMB150.3bn (~US$22.3bn); net income RMB77.6bn (~US$11.5bn)**, reversing a year-earlier loss.
+- 🔴 **2Q26 gross margin 87.59%, up from ~79% in 1Q26 and ~41% in 2025** — pricing named as the lever, with **undersupply expected to persist through 2H26** (WF, off multiple reports of the half-year filing).
+- **Mix: LPDDR ~65.9% of revenue, DDR ~31.6% in 2Q26.** **LPDDR6 sampling with key customers and accelerated mass-production prep — Xiaomi's XRING O3 the first planned CXMT LPDDR6 platform.** Separately reported: *"China's CXMT BEATS WESTERN CHIPMAKERS to announcement of LPDDR6 mass production"* (Tom's Hardware, via WF).
+- **Customer concentration, from the IPO prospectus: five large customers accounted for 74.1% / 67.3% / 68.1% of 2023 / 2024 / 2025 revenue** — named customers include **Alibaba Cloud, ByteDance, Tencent, Lenovo, Xiaomi, Transsion, Honor, Oppo and vivo.**
+- **CXMT is now the world's FOURTH-LARGEST DRAM producer**, founded 2016 with local-government backing, *"a centerpiece of the Chinese government's plan to make China more self-reliant in advanced chips."*
+
+⚠️ **THE READ ACROSS TO WESTERN MEMORY, AND IT IS NOT THE OBVIOUS ONE: an 87.6% gross margin at the world's #4 DRAM maker is being earned in **LPDDR/DDR** — the commodity segments the Western majors are actively vacating for HBM. In the near term CXMT is a beneficiary of, not a threat to, the tightness this cycle. The threat is dated: HBM3E at scale in 2027+, into the domestic Chinese accelerator market, which is not the merchant market Samsung/Hynix/Micron sell into today. Cross-file [hbm-memory](hbm-memory.md).**
 ## 🆕 Recent signals (Aug 28, /run-inbox — **YMTC IS BUILDING A *DOMESTIC TOOL QUALIFICATION LOOP* AROUND ITS WUHAN FABS, AND UBS'S CXMT MODEL FILE PUTS A FAB-BY-FAB CAPACITY LADDER ON DISK**) — 🔴🔴 **THIS PAGE HAS TRACKED CHINESE MEMORY AS CAPACITY AND AS POLICY. TODAY IT GETS THE *MECHANISM* BY WHICH CAPACITY BECOMES LOCALISED TOOLING — AND A THIRD, MORE GRANULAR CAPACITY MODEL TO TEST THE EXISTING TWO AGAINST.**
 
 ### 🔴 (1) YMTC'S "WUTONG TREE" PLAN — NEW FABS AS *QUALIFICATION ENVIRONMENTS* FOR DOMESTIC TOOLS

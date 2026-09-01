@@ -4,6 +4,39 @@
 
 _Wiki · generated 2026-06-19 · cross-company theme · sources: equity calls (`../../../equity_calls_transcripts/Semis`), briefing roll-ups (`../_briefings/by-ticker`), earnings transcripts, company pages. Company pages: [../00_INDEX.md](../00_INDEX.md) · themes index: [00_THEMES.md](00_THEMES.md)._
 
+
+## 🆕🔴🔴 Recent signals (Aug 31, /run-inbox — **A NEW HOUSE INITIATES THE WHOLE SECTOR AND MAKES THE ARCHITECTURE-AGNOSTIC ARGUMENT THE CENTRAL CALL: *"WHICHEVER ARCHITECTURE WINS… THE LASER IS STILL NEEDED. SILICON CANNOT LASE."* AND TSMC PUTS ENGINEERING NUMBERS ON THE I/O WALL AT SEMICON.**)
+
+**Sources: (1) Deutsche Bank · Gianmarco Conti — "Necessity is the mother of invention — Initiating on the Hardware sector", 174pp INITIATION of coverage on 8 names, 2026-08-31** [Source](../../relat%C3%B3rios%20bons/883478bc_729b_4d0d_a75e_f4962a9e3e10_604.html) · **(2) Wells Fargo · Aaron Rakers — "MRVL Purchase Commits Expansion, DRAM Contract Pricing, CXMT 2Q26 Results, & More" (headlines flash), 2026-08-31** [Source](../../relat%C3%B3rios%20bons/MRVL_Purchase_Commits_Expansion_DRAM_Contract_Pricing_CXMT.html)
+
+🔴 **THE INITIATION AND ITS RATINGS — the first time this dossier can carry a full sector-wide rating set from one house on one day:** DB initiates **5 Buys — [[LITE]] PT $1,200, [[COHR]] PT $400, [[ANET]] PT $220, [[CSCO]] PT $135, [[HPE]] PT $62 — and 3 Holds — [[DELL]] PT $480, A10 Networks PT $28, Ingram Micro PT $30.** **LITE and COHR are named the two *"highest conviction Buys."***
+
+🔴 **THE CENTRAL ARGUMENT, AND IT IS THE STRONGEST STATEMENT OF THE LASER THESIS THIS PAGE CARRIES:** *"The critical conclusion is that **whichever architecture wins (pluggables, LPO, NPO or CPO) the laser is still needed. SILICON CANNOT LASE.** That is why Lumentum and Coherent are our highest conviction Buys."* On LITE specifically: *"it wins under every architecture. If pluggables persist, it sells EMLs, if CPO takes off, it sells CW lasers and the ELS, if NPO wins it sells the same laser families into a different package."*
+
+⚠️ **THIS IS A DIRECT, DATED COLLISION WITH THE JEFFERIES OBJECTION ALREADY ON THIS PAGE (Blayne Curtis, 08-07), AND THE PAGE SHOULD HOLD BOTH RATHER THAN PICK:** Curtis argued that as MPO fills the gap left by CPO's pushout, *"these are SHORTER SCALE-UP CONNECTIONS — YOU MIGHT NOT NEED A HIGH-POWERED LASER,"* and that management's claim that laser content is unchanged is *"a lot of debate as to whether that's actually true."* DB asserts content survives the architecture switch; Jefferies says the physics may not carry it. **This is a specific, testable engineering dispute about whether laser content is invariant to link length — it is the single most load-bearing unresolved question on this dossier, and two houses now sit on opposite sides of it in print.**
+
+🔴 **DB'S PHYSICS CASE FOR THE OPTICAL MIGRATION, with the marks:**
+- *"Copper survives INTRA RACK THROUGH 2028, but **every doubling of data rate roughly HALVES its usable reach**, there is **NO VISIBLE SerDes ROADMAP BEYOND 448G**, and **model sparsity is growing the required coherent domain FASTER THAN COPPER CAN FOLLOW**."* SerDes marks: **[[AVGO]] 224G today → 448G next.**
+- Power per port: **Meta/Broadcom 5.4W per 800G**, **[[NVDA]] ~4-5W**, versus ~15-17W for older generations.
+- *"The thermal wall does not destroy demand, it **RELOCATES VALUE** to whoever solves heat at each layer."*
+- 🔴 **CPO TIMING, and it lands on the LATE side of this page's range: *"CPO lands in SCALE OUT NOW as a supply chain pipe cleaner and in SCALE UP AROUND 2028-2029 (our channel checks say CLOSER TO 2029)."*** ⚠️ **Consistent with the Jefferies-conference read (2H C28 at the earliest, possibly C29/C30) and against the earlier DAMNANG "CPO is imminent" framing. The ladder holds.**
+
+**DB'S TAM MARKS (third-party, cited not derived):** **Dell'Oro — total AI back-end networking approaching $259bn by 2030, with SCALE-UP ALONE EXCEEDING $144bn.** **Yole — optical transceivers from c.$23bn in 2025 to MORE THAN $112bn by 2031, with AI OVER 90% OF THE MIX by then.** ⚠️ **Cross-check against the ~$100bn TAM mark this page took on Aug 25 from a different chain: Yole's $112bn/2031 is in the same neighbourhood on a longer horizon, so the two are broadly consistent rather than a raise.**
+
+**SUPPLY IS THE BINDING CONSTRAINT, and DB quantifies it per name:** [[LITE]] — **200G EML *"sold out for the foreseeable future"***, the 200G part at *"roughly 2x the ASP of 100G at a much smaller cost uplift,"* **InP output rising c.50% Q4/25→Q4/26**, **Greensboro fab built for c.$5bn of annual revenue capacity** adding from 2028. [[COHR]] — **datacenter book-to-bill above 4x for two consecutive quarters**, order duration into 2028, SKU-level forecasts to 2030, and the **6-inch InP transition doubling device output by September.** ⚠️ **The 6-inch transition is the same discriminator Jefferies named as the swing factor in the LITE-vs-COHR relative trade; DB now underwrites the COHR side of it.**
+
+**CPO SIZING FROM THE COHR SIDE:** DB characterises CPO as *"a c.**10x UNIT-VOLUME EXPANSION** with recent earnings confirming **NO PUSH-OUT ON DEMAND**"*; liquid-crystal OCS already in early revenue; multi-rail scale-across impacting from **H1/27**; advanced thermal materials — in aggregate **$20bn+ of incremental SAM on top of a $50bn+ existing one.**
+
+🔴 **THE FACEPLATE THERMAL WALL HAS AN ANSWER, AND IT EXTENDS THE PLUGGABLE ERA:** [[ANET]]'s **XPO (extra-dense pluggable optics)** — a **liquid-cooled 12.8T module reaching 204.8T per rack unit.** DB: this *"effectively extends the pluggable era that Arista is built on."* ⚠️ **Directly relevant to the CPO-timing debate: if faceplate density can be liquid-cooled upward, one of the strongest physical arguments for co-packaging weakens. DB simultaneously names *"CPO eventually bypassing the board level moats"* as the reason its ANET PT is *"disciplined"* — i.e. the same house that supplies the reprieve prices the eventual loss.**
+
+🔴 **AND THE FOUNDRY QUANTIFIES THE I/O WALL — [[TSM]] at SEMICON Taiwan (via Wells Fargo):**
+- **Compute performance is increasing 3x every 2 years against conventional I/O bandwidth growing only ~1.4x every 2 years.** ⚠️ **This is the same 3x-vs-1.4x ratio the page took on Aug 31 from the /wiki-ingest pass — now confirmed from a second independent write-up of the same TSMC presentation. Not a new datapoint; a corroborated one.**
+- **TSMC quantified CPO benefits at 4-10x energy efficiency and 10-20x lower latency vs copper.**
+- **COUPE** (Compact Universal Photonic Engine) uses **SoIC 3D bonding** for photonic integration, with **COUPE-GC (grating coupling)** or **COUPE-EC (edge coupling)**.
+- **The bandwidth-scaling path: (1) per-channel rates rising from the current 200 Gbps while LANE COUNTS GO FROM 16 TO 128+, and (2) WDM wavelengths going from 1 to 4, 8, or 16+.**
+- ⚠️ **The constraint this creates and the page should track: COUPE routes CPO volume through SoIC — the same 3D-stacking capacity that HBM base dies and advanced logic already compete for. Cross-read the Fubon SoIC cut already on this page (70K WPM by Q4-28, down from 90K). A CPO ramp and an HBM4E base-die migration are bidding for the same tool.**
+
+**Vendor colour also in the WF flash:** *"[[NVDA]] supplier Unimicron probed over allegedly relabeling China-made parts"* (NikkeiAsia).
 ## 🆕🔴🔴 2026-08-31 — THE CPO DATE IS NOT ONE DATE, IT IS A THREE-RUNG LADDER, AND THREE SOURCES SUPPLIED ALL THREE RUNGS IN 48 HOURS
 
 **The page has been carrying "CPO timing" as a single contested number. It is not. TSMC, Coherent and Jefferies each named a different date on 2026-08-30/31 and they are describing DIFFERENT EVENTS. Written as a ladder so the page stops treating them as a disagreement:**

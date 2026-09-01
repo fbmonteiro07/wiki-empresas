@@ -1,13 +1,11 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-08-31 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-09-01 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (39)
+## 📅 Upcoming (37)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-08-31 | AVGO | **🆕 VMware Explore 2026 — Day 1 keynote MONDAY 2026-08-31, 7:00pm ET.** The software leg of the story gets its annual airing 48 hours before the semis print; watch for any restatement of the VMware/VC |
-| 2026-08-31 | TXN | **CFO transition:** Rafael Lizardi out 2026-08-01 → **Julie Knecht** (CAO, 25-yr veteran), advisory through 2026-08-31 (DB/Seymore, briefing 2026-06-03). |
 | 2026-09-01 | AAPL | **🆕🔴🔴 CEO TRANSITION EFFECTIVE 2026-09-01 — John Ternus succeeds Tim Cook (Cook's last day was 2026-08-31).** ➜ **Watch: whether the September product event is used to reset the Siri/AI timeline, and  |
 | 2026-09-01 | CRDO | **🆕🔴 DATED — Q1 FY27 PRINT: TUESDAY 2026-09-01, release 4:15pm ET, call 5:00pm ET** (Jefferies · Curtis, 2026-08-27). **The bars to beat: July revenue $480m vs Street $472m; October guide $530m vs Str |
 | 2026-09-01 | CRDO | **🆕🔴🔴 F1Q27 PRINT — TUESDAY 2026-09-01, 4:15pm ET RELEASE. THE ONE NUMBER THAT ADJUDICATES THE QUARTER IS THE F27 ZEROFLAP OPTICAL OUTLOOK, AND THREE HOUSES HAVE PUBLISHED THREE DIFFERENT BARS FOR IT: |
@@ -46,12 +44,14 @@ _Generated 2026-08-31 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-11-19 | SKHYNIX | **🆕 2026-08-20 → 2026-11-19 — the buyback executes on-market** (SK Securities). Daily execution is observable; **the falsifier for the "most aggressive among peers" claim is whether the full W40trn ac |
 | 2026-11-21 | SAMSUNG | **🆕 2026-08-24 → 2026-11-21 — the 53.3mn-share PSU treasury purchase window is open.** A mechanical, non-discretionary bid in the market for three months; note it is **excluded** from the FCF payout b |
 
-## ⏰ Passed — need a post-mortem (1)
+## ⏰ Passed — need a post-mortem (3)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
+| 2026-08-31 | TXN | **CFO transition:** Rafael Lizardi out 2026-08-01 → **Julie Knecht** (CAO, 25-yr veteran), advisory through 2026-08-31 (DB/Seymore, briefing 2026-06-03). |
+| 2026-08-31 | AVGO | **🆕 VMware Explore 2026 — Day 1 keynote MONDAY 2026-08-31, 7:00pm ET.** The software leg of the story gets its annual airing 48 hours before the semis print; watch for any restatement of the VMware/VC |
 | 2026-07-10 | FSLY | 🆕 **09-22 — FSLY hosting Investor Day** (GS US TMT desk · Peter Callahan, September catalyst list, 2026-08-31). ⚠️ **This page's high-water mark is 2026-07-10 — the investor day is the natural point t |
 
 ## ✅ Resolved (105)

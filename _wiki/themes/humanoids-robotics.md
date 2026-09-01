@@ -2,6 +2,49 @@
 
 _Wiki · generated 2026-06-25 · cross-company theme · sources: equity calls, briefing roll-ups, earnings transcripts, research library, Twitter/X corpus (ported from research-wiki). Company pages: [../00_INDEX.md](../00_INDEX.md) · themes index: [00_THEMES.md](00_THEMES.md)._
 
+
+## 🆕🔴🔴 Recent signals (Aug 31, /run-inbox — **GOLDMAN RAISES THE HUMANOID FORECAST AND, MORE USEFULLY, PUBLISHES A FULL PER-UNIT SEMICONDUCTOR BOM WITH NAMED VENDORS PER LINE — THE FIRST WESTERN-BROKER DECOMPOSITION ON THIS PAGE TO SIT ALONGSIDE THE UNITREE PROSPECTUS TABLE**)
+
+**Source: Goldman Sachs · Eric Sheridan / Jacqueline Du / Mark Delaney, with 15 further contributing analysts across automotive, technology and industrials (Do Hyoung Kim, Yuichiro Isayama, Allen Chang, Kate McShane, Daniela Costa, Kota Yuzawa, Daiki Takayama, James Schneider, Gabriela Borges, Tina Hou, Joe Ritchie, Timothy Zhao, Will Bryant, Aman Gupta, Ayush Ghose) — "Global Physical AI: Framing the Forward Progress of Humanoids (with a Studied Focus on the Logistics Landscape)", 80pp, 2026-08-30.** [Source](../../relat%C3%B3rios%20bons/Global_Physical_AI__Framing_the_Forward_Progress_of_Humanoids_with_a_Studied_Focus_on_the_Logistics_Landscape.html)
+
+🔴 **THE FORECAST RAISE, AND IT IS THE NUMBER TO CARRY AGAINST THE MS $4.7T/2050 MARK ALREADY ON THIS PAGE:** GS *"rais[es] our humanoid robot market forecast. The global market is now projected to reach **approximately 890,000 units by 2030** and **6.5 million units by 2035 (representing a $138 billion market opportunity)**."* ⚠️ **Note the two forecasts are NOT in conflict and must not be blended — MS is a 2050 stock-and-revenue frame (0.9M / 134M / 1,019M units), GS is a 2030/2035 flow frame. GS's 6.5m units in 2035 sits between MS's 0.9M and 134M waypoints and is a materially more near-dated, more falsifiable claim.**
+
+🔴 **THE BOM TABLE (GS Exhibit 65, USD content per humanoid) — this is the substantive addition, because every line names its vendors:**
+
+| Category | Sub-category | Named vendors | Content/unit |
+|---|---|---|---|
+| Analog & mixed signal | Power semis (GaN + SiC motor-drive switches, current sensing) | ROHM, Wolfspeed, [[ON]], [[IFX]], STMicro, [[NXPI]], Renesas | **$350–500** |
+| | Communication ICs and FPGA | [[MCHP]], [[NXPI]], [[TXN]], [[ADI]], Altera | **$150–200** |
+| | Optical components (cameras, image sensors, radar) | STMicro, Omnivision, Hamamatsu, [[TXN]] | **$150–200** |
+| | Other sensors (positioning, proximity, audio, tactile) | Sony, Bosch, TDK, Hamamatsu, Honeywell, STMicro, Murata, MinebeaMitsumi, Safran | **$50–100** |
+| | MEMS precision timing | SiTime, [[MCHP]] | **$15–25** |
+| | Connectivity ICs, passives, misc. | [[NXPI]], [[MCHP]], STMicro, [[TXN]], [[ON]], [[IFX]] | **$25+** |
+| | **Total analog / mixed signal** | | **$750–$1,050+** |
+| Memory | DRAM (LPDDR5, HBM) | [[MU]], [[SKHYNIX]], [[SAMSUNG]] | **$250–350** |
+| | NAND flash | [[SNDK]], SK Hynix, Samsung, [[KIOXIA]] | **$350–450** |
+| | **Total memory** | | **$600–$800+** |
+| Digital ex-memory | GPUs / CPUs | [[NVDA]], [[QCOM]], [[AVGO]], [[INTC]], [[AMD]], [[TSLA]] | **$1,500–$4,000+** |
+| | Motor-control and embedded MCUs | Renesas, STMicro, [[TXN]], [[NXPI]], [[MCHP]], [[AMD]] | **$100–150** |
+| | **Total non-memory digital** | | **$1,600–$4,150+** |
+| | **TOTAL SEMICONDUCTOR CONTENT** | | **$2,950–$6,000+** |
+
+**GS's two worked build-ups, so the table can be stress-tested rather than just quoted:** *"In a **30-motor humanoid** robot using about **6 GaN-based switches per 2-phase motor**, we estimate a SAM of approximately **$250-$300 per unit for GaN motor switches alone**."* And the MCU line is built as **1 MCU per motor on a 30-motor robot** plus redundant/general-purpose parts. The GPU/CPU line: *"$1,500 for ENTRY LEVEL modules at higher unit orders… with an upper range of about $4,000+ for the LATEST GENERATIONS."*
+
+⚠️ **THE ARITHMETIC DISCIPLINE THIS PAGE SHOULD APPLY BEFORE ANYONE MULTIPLIES THE TABLE OUT — and it is the reason none of the analog names should be re-rated on this:** 890k units × $3,000–6,000 is roughly **$2.7–5.3bn of TOTAL industry semiconductor TAM in 2030**, spread across a dozen-plus named vendors, several of which are not covered here. Against the current revenue bases of [[TXN]], [[ADI]], [[NXPI]] or [[ON]] that is immaterial this decade. The value of the exhibit is **structural** — where the content sits, which categories carry the dollars (GPU/CPU is 50–70% of it), and who is named where — not a revenue line. GS itself presents this as a theme *"as this theme builds in scale over the next 3-5 years."*
+
+**THE ADOPTION SEQUENCE GS ARGUES:**
+- 🔴 **Logistics/warehouse is the first vertical, not autos:** *"Logistics and warehouse operations serve as the PRIMARY EARLY ADOPTERS for general-purpose humanoids. eCommerce/Retail companies (like Amazon and Walmart) are LEADING THIS TRANSITION."* For [[AMZN]], GS frames **~5.6% of leverage in total cost to serve via automation by 2030 → ~$72bn cost savings and a ~240bps EBIT margin tailwind — ⚠️ explicitly "IN OUR UPSIDE ANALYSIS", not the base case.**
+- **Autos second, and the wedge is narrow:** *"While automotive BODY WELDING IS HIGHLY AUTOMATED, FINAL ASSEMBLY AND PARTS SORTING REMAIN MANUAL."* Scenario: humanoids at **$20,000–$60,000** adopted at **10–50%** → **1–6% operating margin expansion on a GROSS basis** — ⚠️ *"although the net effect could be less if some savings are passed on in the form of lower vehicle prices."* **In a competitive volume industry a cost advantage available to every OEM tends to be competed away; treat the gross number as a ceiling.**
+
+🔴 **THE INCUMBENT-DISRUPTION CALL, which is new to this page and is a SHORT idea as much as a long one:** *"The mobility of humanoids is accelerating the shift from hardware-bound **Programmable Logic Controllers (PLCs)** to software-defined **virtual PLCs (vPLCs)**. The vPLC market is projected to grow **20% to 30% ANNUALLY**, which would **call into question the legacy hardware-software lock-in of dominant incumbents like Siemens, Rockwell Automation, and Schneider Electric."* ⚠️ **Note the tension inside GS's own report: it rates Siemens Buy (€319) and Schneider Buy (€352) while naming both as the lock-in most at risk. Logged as an internal inconsistency, not resolved.**
+
+**SURVEY (GS's new "Executive Perspectives" initiative, first survey — robotics and physical AI):** *"~40% of respondents expect **at least 10% of workflows to be automated in 3-5 years** with general purpose robotics."*
+
+**EMS AS A DOUBLE BENEFICIARY — build them AND use them:** GS argues Jabil and [[FLEX]] are *"in a unique position"* both to manufacture humanoids and to deploy them internally — **Jabil >134k employees, Flex ~150k, *"the majority… for manufacturing type roles."*** Flex-specific: warehouse automation named a **FY27 growth driver**, plus a partnership where **Flex manufactures key components for [[TER]]'s cobot and AMR products.** ⚠️ **GS's sizing for Flex spans *"$250-$45,000 of revenue per [unit]" by CY30* — a 180x range that spans component supply to full system assembly. That is a bounding exercise, not a forecast.**
+
+**GS RATINGS / PTs FROM THE REPORT (prices as of the 28-Aug close):** [[AMZN]] Buy $375 (+40.7%) · WMT Buy $130 (+26.1%) · [[NVDA]] Buy $300 (+37.9%) · [[ADI]] Buy $480 (+32.7%) · [[NXPI]] Buy $325 (+45.4%) · [[ON]] Neutral $95 (+30.8%) · 🔴 **[[TXN]] SELL $225 (−13.0%)** · [[TSLA]] Neutral $360 (**+3.2%, the lowest implied return in the table**) · [[TM]] Buy ¥3,900 (+25.2%) · Jabil Buy $482 (+59.9%) · [[FLEX]] Buy $154 · Renesas Buy ¥5,500 · Daifuku Buy ¥9,300 · MinebeaMitsumi Buy ¥5,500 · Hesai Buy $31 · Regal Rexnord Buy $240 · Siemens Buy €319 · Schneider Buy €352 · InnoScience Buy HK$114 (+146.3%) · Robotis Buy ₩630,000 (+160.3%) · HL Mando Buy ₩109,000 (+116.7%) · plus *BYD, *Hyundai Mobis, *Inovance (Conviction List), Sanhua, Shuanghuan, XPeng, Xiaomi, Lingyi.
+
+⚠️ **THE CLEANEST SIGNAL IN THE WHOLE DOCUMENT IS A RELATIVE ONE, AND IT CUTS AGAINST THE OBVIOUS TRADE: GS publishes a raised humanoid TAM and simultaneously assigns [[TSLA]] — the most-discussed Western humanoid story — the SMALLEST implied return of 30+ names (+3.2%), while putting a SELL on [[TXN]]. A house that is bullish the theme and neutral-to-negative on the two most obvious US ways to express it is saying the optionality is already priced in the household names and cheaper in the supply chain.**
 ## What it is / why it matters
 
 The emerging physical-AI hardware category: **humanoid robots** powered by foundation vision-language-action (VLA) models, initially targeting factory/warehouse automation before household deployment. A decade-long horizon but with an extremely steep ramp — 141 models launched since 2024, with industry revenue forecast at ~$5T annually by 2050 (MS). Humanoids are the downstream demand driver for AI silicon (VLA model inference), advanced sensors (6-axis F/T, encoders), and semiconductor manufacturing (actuator tolerances require precision fabrication). The BOM is today 45–48% actuators + 33–35% hands, with the China supply chain dominating at ~1/3 of non-China cost. The read-through for semicap names is years away, but the supply-chain visibility window is opening now.

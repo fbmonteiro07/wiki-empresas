@@ -2,6 +2,71 @@
 
 # Theme — HBM / Memory Super-Cycle
 _Wiki · generated 2026-06-19 · cross-company theme · sources: equity calls (`../_equity_calls/Semis`), briefing roll-ups (`../_briefings/by-ticker`), earnings transcripts, company pages. Company pages: [../00_INDEX.md](../00_INDEX.md) · themes index: [00_THEMES.md](00_THEMES.md)._
+
+## 🆕🔴🔴 Recent signals (Aug 31, /run-inbox — **THE CXMT PRIMARY ARRIVES AND NARROWS THE HEADLINE; THE BASE DIE GETS A SECOND FOUNDRY BIDDER *AND* A PRICE; AND THE DE-SPEC DEBATE GETS ITS FIRST FULLY-ARGUED BULL INVERSION**)
+
+**Sources: (1) The Information Staff — "China's CXMT Makes Breakthrough in Advanced Memory Chips", 2026-08-31** [Source](../../relat%C3%B3rios%20bons/Chinas_CXMT_Makes_Breakthrough_in_Advanced_Memory_Chips_The_Information.html) · **(2) Wells Fargo · Aaron Rakers — "MRVL Purchase Commits Expansion, DRAM Contract Pricing, CXMT 2Q26 Results, & More", 2026-08-31** [Source](../../relat%C3%B3rios%20bons/MRVL_Purchase_Commits_Expansion_DRAM_Contract_Pricing_CXMT.html) · **(3) @jukan05 — "Where Is Memory Headed?" (X thread), 2026-08-31** ⚠️ *independent FinTwit, unnamed sources, no rating/PT* [Source](../../relat%C3%B3rios%20bons/1_Jukan_on_X___Where_Is_Memory_Headed_____X.html) · **(4) Citi · Peter Lee — [[SAMSUNG]] 3Q26E Preview, 2026-08-31** [Source](../../relat%C3%B3rios%20bons/Citi_005930KS_Samsung_Electronics_005930KS_3Q26E_Preview_FX_and_B.html) · **(5) UBS · Timothy Arcuri — "Download From Hot Chips 2026", 2026-08-31** [Source](../../relat%C3%B3rios%20bons/ued50865.html)
+
+### 1. The CXMT primary — the headline this page took at 21h, with its qualifiers restored
+
+⚠️ **This dossier already carries "CXMT ships HBM3E" from today's /wiki-ingest pass. The primary NARROWS it in three ways that matter, and the narrowing should travel with the claim:**
+- **It is *"small quantities"*, sourced to *"two people familiar with the matter"* — and CXMT itself DID NOT MENTION HBM PROGRESS IN ITS EARNINGS RELEASE.** This is a sourced report, not a disclosure.
+- **Position: HBM3E is *"only ONE GENERATION BEHIND the memory entering mass production at the world's leading manufacturers, Samsung, SK Hynix and Micron."* Expansion planned for 2027.**
+- 🔴 **The customer evidence is the part that makes it a supply event rather than a lab claim: *"Several Chinese chip designers are testing the memory with their processors, including Alibaba Group's T-HEAD and Beijing-based CAMBRICON. If all goes to plan, these companies will use CXMT's memory in products AS EARLY AS NEXT YEAR."***
+- ⚠️ **AND THE CAP, WHICH IS THE REASON THIS IS NOT YET A WESTERN-SUPPLY EVENT: *"its ability to manufacture the chips is ALSO CONSTRAINED BY U.S. RESTRICTIONS THAT BLOCK CHINESE COMPANIES FROM BUYING SOME OF THE MOST SOPHISTICATED FOREIGN EQUIPMENT used by leading memory manufacturers."* HBM3E relieves the domestic Chinese accelerator bottleneck; it does not put bits into the merchant market the West buys from.**
+- **Scale context: CXMT is already the world's FOURTH-LARGEST DRAM producer; its Shanghai IPO raised $8.6bn with shares +472% on debut; 1H26 revenue rose almost tenfold to RMB150.3bn (~$22.3bn) with net income RMB77.6bn (~$11.5bn), reversing a year-earlier loss.** Per WF's read of the half-year filing: **2Q26 GM 87.59%, up from ~79% in 1Q26 and ~41% in 2025**, pricing named as the lever, undersupply expected through 2H26; **LPDDR ~65.9% of revenue, DDR ~31.6%**; **LPDDR6 sampling with mass production accelerating (Xiaomi XRING O3 the first planned platform).** ⚠️ **An 87.6% gross margin at the world's #4 DRAM maker is the single loudest statement of how tight this market is — and it is being earned in the segment (LPDDR/DDR) the Western majors are vacating for HBM.**
+
+### 2. The base die — now with a price AND a second foundry bidder
+
+🔴 **THE PRICE, which this page has not previously carried: HBM4 base dies cost 3-4x MORE than core dies on [[SKHYNIX]]'s 1b process** (WF). **The base die is now the expensive silicon in the stack** — which is exactly why the NVHBM value-transfer argument this dossier has run since 08-28 has teeth, and why the sourcing question below is a margin question.
+
+**THE SOURCING MAP AS IT NOW STANDS (WF):**
+| Supplier | HBM4 logic | HBM4E base die |
+|---|---|---|
+| [[MU]] | 12nm/10nm internal | → **[[TSM]] 3nm** |
+| [[SKHYNIX]] | 12nm/10nm internal | → **TSMC 3nm**, and 🔴 **reportedly considering [[INTC]] FOUNDRY for a PORTION, beginning with HBM4E** (Herald Business via TrendForce) |
+| [[SAMSUNG]] | internal | **internal 4nm node** — the only major keeping it in-house |
+
+⚠️ **Status discipline on the Intel item: a Korean press report of a CONSIDERATION, for a PORTION of one generation, with no confirmation from either party, no volume, no node, no date. Log as the first credible second-source option for the socket, not as a win.** WF's own read: *"another positive data point in the continued drumbeat on Intel's Foundry opportunity, which could provide incremental opportunity for advanced packaging and/or HBM stacking (**zHBM — 2029 focus**)."*
+
+🔴 **AND THE STRATEGIC FRAME THAT TIES IT TO THIS PAGE'S STANDING NVHBM THESIS — @jukan05 states the same risk from the supplier's side of the table:** *"If [memory makers] gradually cede ground, **STARTING WITH THINGS LIKE THE HBM BASE DIE**, they may lose the decommoditization opportunity that HBM finally won them. They would then **NEVER ESCAPE THE POSITION OF SUBCONTRACTOR**, and if they fail to deliver here, memory maker profits could well return to what they were before HBM."* He reads **Samsung's foundry-plus-memory pitch and SK Hynix's Intel exploration as two responses to the same threat**, and adds: *"the logic camp, [[NVDA]] included, DOES NOT WANT THE MEMORY MAKERS' ROLE TO EXPAND. **That is why they oppose HBF.** They want to avoid a repeat of HBM happening in NAND."* ⚠️ **This is the first source on this page to give a MOTIVE for the logic camp's HBF posture rather than a technical objection. Cross-read against Bernstein's 08-28 NVHBM conclusion — same risk, opposite vantage point.**
+
+### 3. The de-spec debate gets its first fully-argued bull inversion
+
+⚠️ **Source class: an independent FinTwit thread citing unnamed industry sources. It carries no estimates and cannot settle anything. It is logged because it is the most complete ARGUMENT on the page for why de-spec is not bearish, and because the page has carried the de-spec facts without this counter-mechanism.**
+
+**The trigger, as reported: Rubin Ultra *"might be downgraded to HBM4 or from 12-high to 8-high HBM"* — after the earlier 16-high → 12-high cut on yields — and 🔴 *"model developers like [[ANTHROPIC]] and [[OPENAI]] had gone as far as ASKING NVIDIA FOR 4-HIGH HBM4E."***
+
+🔴 **THE INVERSION, and the mechanism is specific:** HBM faces three yield limits — (1) packaging-stage stacking yield, (2) larger die area leaving fewer KGD per wafer, (3) TSV wafer-process loss. **Only (1) is elastic.** *"Stacking 4-High or 8-High is a FAR MORE MATURE PROCESS than stacking 12-High or 16-High, so simply LOWERING THE STACK HEIGHT YIELDS MORE HBM. That leads straight to MORE ACCELERATOR SHIPMENTS."* Net: *"if giving up capacity means selling HBM4 and HBM4E at 8-High, it also means securing higher packaging yields. That means more HBM, and in a larger sense **MORE RACKS SHIPPED, so TOTAL HBM DEMAND ACTUALLY INCREASES** compared with the world where everyone kept insisting on high capacity HBM."*
+
+**WHY BUYERS CAN AFFORD LESS CAPACITY — and this is the demand-side half:** *"The need to keep every piece of data in HBM is shrinking. Models are distributed across many GPUs, **PREFILL AND DECODE ARE BEING DISAGGREGATED**, and relatively cold KV cache and model state are moving down to the **LPDDR, CXL, and NAND tiers**."* Quantization and MLA cut the minimum working set further. *"Once enough capacity is secured for the minimum working set… **the additional value comes MORE FROM BANDWIDTH THAN FROM CAPACITY**."* 🔴 **AND BANDWIDTH DOES NOT RELIEVE THE WAFER SHORTAGE — IT WORSENS IT: *"Higher bandwidth HBM requires MORE WAFERS to make. Only a limited share of dies on a wafer passes SPEED BINNING, so the higher the speed demanded, the fewer good dies each wafer gives."*** ⚠️ **This is the cleanest available reconciliation of "de-spec" with "DRAM stays tight," and it is consistent with the ~1.63x-output arithmetic this page took on 08-27. Two independent routes to the same conclusion.**
+
+⚠️ **THE STRUCTURAL CLAIM TO TEST, because it is the one that would change how every downcycle scenario on this wiki is built:** *"Thanks to HBM, memory has become LESS CYCLICAL. Even if a downturn comes, HBM demand will not shrink. When DRAM prices fall, makers can raise HBM production and defend against the decline in DRAM prices. This is the biggest difference from every cycle so far. **Even in a downturn, memory prices will not crash 70% the way they used to.**"* **Falsifiable, and worth holding as a named prediction.** He also concedes: *"SK hynix, HBM's creator, has itself acknowledged that HBM is NOT A PERFECT ARCHITECTURE"* — heat, a chronic appetite for DRAM wafers, and allocation priority that shifts with whoever holds the capital advantage. His three conclusions: **(1) HBM will one day be replaced; (2) the ultimate direction is the combination of memory and logic — *"a MODIFIED VON NEUMANN ERA, where memory and logic invade each other's territory"*; (3) until then, *"memory makers' profits will be protected by HBM's structural characteristics."***
+
+### 4. Prices, and the second derivative
+
+**DRAM contract pricing, TrendForce August-ending, via WF: ~+3% m/m, tracking to ~24% q/q (DDR4) and ~20% q/q (DDR5) implied for C3Q26 QTD on $/Gb.**
+
+| $/GB | Feb-26 | Jun-26 | Jul-26 | Aug-26 | Y/Y (latest qtrly mark) |
+|---|--:|--:|--:|--:|--:|
+| Average DDR4 | $12.17 | $17.77 | $20.48 | **$21.16** | **+379.9%** |
+| Average DDR5 | $11.04 | $15.81 | $17.88 | **$18.44** | **+505.5%** |
+
+⚠️ **TWO THINGS THE PAGE SHOULD READ OFF THIS RATHER THAN THE HEADLINE. First, DDR4 NOW PRICES ABOVE DDR5 PER GB — a legacy node commanding a premium over the leading one, which is a supply-withdrawal signature, not a demand signature. Second, THE RATE IS DECELERATING WHILE THE LEVEL IS STILL EXTREME: DDR4 q/q ran 79.2% → 41.4% → 23.7% across the last three quarterly marks and DDR5 95.9% → 38.2% → 19.5%. WF's own header is *"moderating upward trend."* For any model built on ASP momentum rather than ASP level, the second derivative has already turned.**
+
+### 5. Hot Chips — the substitutes for HBM are now productised, not conceptual
+
+**From UBS's Hot Chips download, the memory-adjacent items this dossier should track as the *competing* tier rather than as HBM demand:**
+- 🔴 **[[SAMSUNG]]'s LPDDR5X-PIM is PRODUCTIZED — MAC compute inside DRAM banks, 614GB/s PIM bandwidth (8x conventional LPDDR5X), ~3x higher Llama-3.1-8B token throughput — explicitly *"positioning it as a LOWER-COST/LOWER-POWER INFERENCE ALTERNATIVE TO HBM."*** ⚠️ **Samsung is simultaneously chasing HBM4 share and selling the cheapest credible substitute for HBM in decode.**
+- **XCENA's CXL 3.0 MX1 (up to 2TB DDR5 + SSD-backed memory + 3,072 near-memory RISC-V cores), with Samsung demonstrating rack-scale CXL pooling and 3.35x higher LLM decode throughput at 100K context.**
+- **d-Matrix Raptor: TSMC N4 logic + stacked 3D-DRAM, face-to-face, 32GB/card, ~100TB/s memory bandwidth, 1M-token contexts in a 72-card rack — and d-Matrix put a [[META]] ENGINEER ON STAGE with its CTO.**
+- **[[CEREBRAS]] previewed CS-6 with 3D-stacked DRAM on the wafer (UBS infers ~2028 availability; no company timeline).**
+- **[[INTC]] Crescent Island: up to 480GB LPDDR5X at 350W air-cooled, pitched on tokens-per-watt and memory capacity rather than peak FLOPS.**
+- ⚠️ **The through-line UBS draws across every session: *"memory is JUST AS IMPORTANT — MAYBE MORE SO — THAN COMPUTE FOR AI INFERENCE,"* and the bottleneck is memory MOVEMENT. [[GOOG]] split its silicon on exactly this basis (TPU 8i inference: 288GB HBM3E, 384MB SRAM, prioritising bandwidth over compute density; TPU 8t for pre-training). Every one of these architectures either consumes HBM differently or displaces it — the page should stop treating "more inference" as monotonically bullish for HBM bits.**
+
+### 6. Samsung's memory P&L concentration, quantified
+
+🔴 **Citi projects [[SAMSUNG]]'s semiconductor division at 101% OF CONSOLIDATED OP in 3Q26E, up from 58% in 3Q25** — every non-memory division a net drag. **3Q26E OP by division: Semi W105.1tr · Display W1.4tr · Mobile −W1.7tr · CE −W0.6tr.** ⚠️ **Note the reflexive cost: Citi attributes part of the Mobile/CE weakness to *"rising costs driven by MEMORY PRICE HIKES"* — Samsung's own upcycle is taxing Samsung's own set business. **TP cut to W430,000 from W450,000, Buy maintained; 3Q26E OP W104.1tr vs consensus W114.4tr (−9%), on ~W5tr FX and ~W5tr bonus provisions.** Citi still expects SEC *"to secure its HBM m/s further in 2H26E"* on HBM4 leadership.
 ## 🆕🔴🔴 2026-08-31 — THE FOUR THINGS THAT CHANGED IN ONE DAY: CXMT SHIPS HBM3E (INVALIDATING A BULGE-BRACKET PREMISE HOURS AFTER IT WAS PUBLISHED), BARCLAYS SAYS THE CUSTOMISATION VALUE ACCRUES TO THE *ACCELERATOR* MAKERS NOT THE MEMORY MAKERS, SAMSUNG LOCKS ~70% OF CAPACITY TO 2031, AND RUBIN CPX COMES BACK ON HBM4
 
 **Read the four together: they move the debate from "how long does the shortage last" to "who captures the customisation rent, and what happens to commodity DRAM when the marginal Chinese supplier converts wafers to HBM."**

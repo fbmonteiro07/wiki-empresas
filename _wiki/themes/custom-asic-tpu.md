@@ -2,6 +2,48 @@
 
 _Wiki · generated 2026-06-19 · cross-company theme · sources: equity calls (`../_equity_calls/Semis`), briefing roll-ups (`../_briefings/by-ticker`), earnings transcripts, company pages. Company pages: [../00_INDEX.md](../00_INDEX.md)._
 
+
+## 🆕🔴🔴 Recent signals (Aug 31, /run-inbox — **UBS PUBLISHES THE FULL GPU-vs-ASIC SPEC EXHIBIT WITH IC PARTNER, FOUNDRY, NODE, DIE SIZE, HBM AND POWER FOR ELEVEN PARTS — AND USES OPENAI'S JALAPEÑO TO ARGUE THE MEDIATEK-OVER-[[AVGO]] TRADE IS WRONG**)
+
+**Source: UBS · Timothy Arcuri (w/ Natalia Winkler, Seth Cho, Stacy Che) — "Download From Hot Chips 2026", 17pp, 2026-08-31.** [Source](../../relat%C3%B3rios%20bons/ued50865.html)
+
+🔴 **THE EXHIBIT (UBS Figure 1) — the most complete side-by-side this dossier has carried, and the IC-partner column is the one to read first:**
+
+| | [[NVDA]] VR200 | NVDA VR300 | [[AMD]] MI450 | [[AMZN]] Trainium3 | [[GOOG]] TPU v7 | TPU v8t | TPU v8i | [[MSFT]] Maia 200 | Maia 300 | [[META]] MTIA 300 | MTIA 400 |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| **IC partner** | — | — | — | **Alchip, [[MRVL]]** | **Broadcom** | **Broadcom** | 🔴 **MediaTek** | **Broadcom** | **GUC** | **[[MRVL]]** | **Broadcom** |
+| Ramp year | 2026 | 2027 | 2026 | 2026 | 2026 | 2027 | 2027 | 2026 | 2026+ | 2025 | 2026+ |
+| Foundry / node | TSMC N3 | TSMC N3P | TSMC N2 | TSMC N3P | TSMC N3 | TSMC N3 | TSMC N3 | TSMC N3 | TSMC N2 | TSMC N3 | TSMC N2 |
+| Die size (mm²) | 1,628 | 1,628 | 840 | 1,600 | 750 | 800 | 1,600 | 820 | — | — | — |
+| Dies per GPU/XPU | 2 | 2 | 1 | 2 | 1 | 1 | 2 | 1 | — | — | — |
+| Dies per rack | 72 | 144 | 72 | 64 | 64 | 64 | 64 | — | — | — | — |
+| CoWoS type | CoWoS-L | CoWoS-L | CoWoS-L | **CoWoS-R** | CoWoS-L | CoWoS-L | CoWoS-L | CoWoS-L | CoWoS-L | — | — |
+| HBM type | HBM4 | HBM4 | HBM4 | HBM3E | HBM3E | HBM3E | HBM3E | HBM3E | HBM4 | HBM3E | HBM4 |
+| HBM capacity (GB) | 288 | 384 | **432** | 144 | 192 | 216 | 288 | 288 | 288 | 192 | **432** |
+| FP8 TFLOPS/package | 16,000 | **32,000** | 20,000 | 2,517 | 4,688 | 6,302 | 10,069 | 5,072 | — | 1,120 | — |
+| Power per die (W) | 1,150 | 1,200 | **2,500** | 700 | 550 | 800 | 600 | 750 | 667 | — | — |
+
+*(Source: UBS Research, "Press reports". ⚠️ These are UBS's compiled marks off press reports, NOT company disclosures — treat the numbers as a consistent framework rather than as verified specs. Note also an internal inconsistency in UBS's own note: the META section text puts MTIA 400 at 288GB of HBM3E at 9.4TB/s while this exhibit lists 432GB HBM4. Both are printed; the capacity figure is unsettled.)*
+
+⚠️ **THE MOST IMPORTANT SINGLE CELL IS THE TPU v8i / MEDIATEK ONE — IT CONFIRMS THE GOOGLE SOCKET IS SPLIT BY WORKLOAD, NOT WON OUTRIGHT.** Broadcom holds **v7 and v8t (pre-training)**; MediaTek is named on **v8i (inference)**. This page has carried the MediaTek ">50% of the whole Google TPU programme" claim (08-20) against UBS's own TPU unit cuts (08-24); the exhibit now gives the split a **product-level shape**: Broadcom on training silicon, MediaTek on the inference part. **Given Google's own Hot Chips message was that inference volumes are diverging upward from training, a MediaTek win on the inference SKU is a materially bigger claim than a unit-share footnote.**
+
+🔴 **JALAPEÑO — THE FIRST DETAILED PUBLIC DISCLOSURE, AND UBS USES IT AS AN AVGO ARGUMENT:** [[OPENAI]] presented its inference ASIC, *"purpose-built to optimize REAL-WORLD LLM INFERENCE EFFICIENCY rather than peak theoretical compute."*
+- **~700W versus ~1.2kW for GB200**; **multi-token prediction**; **memory-sliced architecture optimised around KV-cache locality**; **128-chip racks, 16 racks into 2,048-chip pods using ETHERNET scale-up.**
+- 🔴 **The timeline: *"OAI and AVGO were able to develop the chip in a VERY CONDENSED TIMELINE (9 MONTHS FOR INITIAL RTL) with compute chips developed FROM SCRATCH, while OAI suggested it RELIED ON AVGO FOR SOME INTERFACE IP AND I/O DIE."*** ⚠️ **Read the division of labour before sizing AVGO content: OpenAI did the compute silicon; Broadcom supplied interface IP and the I/O die. The win is Broadcom's; the content share is narrower than a classic full-XPU engagement.**
+- 🔴 **UBS's sector call off it: *"to us, the chip AGAIN HIGHLIGHTS THAT INVESTORS ARE OFTEN TOO QUICK TO SIDE WITH MEDIATEK (AND OTHER ASIC SUPPLIERS) OVER AVGO FOR ADVANCED ASIC DESIGN."*** ⚠️ **Note the tension with UBS's own exhibit two pages later, which hands MediaTek the TPU v8i socket. Both are UBS's, in the same document.**
+- ⚠️ **AND THE READ-THROUGH THAT CUTS AGAINST [[NVDA]]: the 9-month RTL cycle *"highlights how much timelines for new ASICs have accelerated — WHICH COULD BE READ AS PUTTING MORE PRESSURE ON NVDA'S HARDWARE ROADMAP."***
+
+🔴 **THE CEILING UBS REFUSES TO MOVE, AND IT IS THE NUMBER THIS DOSSIER SHOULD KEEP SCORING AGAINST: *"consistent with our LONG-HELD VIEW THAT ASICS ULTIMATELY SETTLE AT ROUGHLY 30% OF THE ACCELERATOR MARKET, with merchant GPU solutions retaining the majority share due to their SUPERIOR FLEXIBILITY, ABILITY TO SUPPORT RAPIDLY EVOLVING MODEL ARCHITECTURES, AND LOWER DEPLOYMENT RISK."*** UBS expects ASIC penetration *"highest among hyperscalers and frontier model developers running STABLE, LARGE-SCALE INFERENCE workloads,"* with GPUs preferred for the broadest set of applications and the open-source ecosystem.
+
+⚠️ **AND THE STRUCTURAL LIMITS, CONCEDED BY OPENAI ITSELF — this is the strongest version of the ASIC bear case because it comes from the ASIC's own designer:** *"many of the same limitations that have historically constrained ASIC adoption remain in place. OpenAI ACKNOWLEDGED THE NEED TO EXPLICITLY MAP WORKLOADS AND MODELS ONTO THE HARDWARE, while the architecture appears HIGHLY OPTIMIZED AROUND SPECIFIC INFERENCE CHARACTERISTICS AND ASSUMPTIONS REGARDING KV-CACHE GROWTH AND DATA MOVEMENT. This should create MEANINGFUL ONBOARDING AND SOFTWARE COMPLEXITY relative to GPUs."* **A chip tuned to today's inference shape is a bet that the shape holds — which is precisely the "model weights are fixed" argument this page carried on 08-28, now stated as a RISK rather than an enabler by the party taking it.**
+
+**PER-PROGRAMME COLOUR FROM THE SESSIONS:**
+- **[[GOOG]]:** UBS's takeaway was *"not the TPU 8 specifications… but rather the ARCHITECTURAL REASONING BEHIND GOOGLE'S GROWING SEPARATION OF TRAINING AND INFERENCE SILICON."* Reasoning, MoE and agentic inference are *"increasingly MEMORY-BANDWIDTH BOUND, requiring significantly more memory bandwidth per unit of compute than training."* **TPU 8i: 2-die, 384MB on-chip SRAM, 288GB HBM3E, 19.2Tb/s inter-chip. TPU 8t (Broadcom): 9,600 chips per Superpod, 121 Exaflops FP4, 2PB shared HBM.**
+- **[[META]]:** MTIA 300 was the **first TRAINING-focused** part (MTIA 200 was inference); **MTIA 400 is 5 chiplets — 2× 3nm compute, 1 SoC, 2 I/O dies, 2.5D packaging — at 72 chips per rack.** 🔴 **UBS's conclusion is the one that matters for the capex debate: *"MTIA 400 ramp will see GREATER VOLUMES AND LARGER REVENUES FOR AVGO, but as it will continue addressing more META-SPECIFIC RECOMMENDATION-BASED TASKS, WE DO NOT BELIEVE IT WILL REDUCE META'S RELIANCE ON GPUs."*** A bigger internal ASIC that is **additive to**, not substitutive for, merchant GPU spend.
+- **[[MSFT]]:** **Maia 200 at 750W TDP — 3nm, 272MB SRAM, 216GB HBM, 7TB/s bandwidth, up to 1,268 BF16 Tensor TOPS**, with a **Unified Ethernet Scale-Up Network at 1.4Tb/s backend bandwidth and a 28×400G configuration.** ⚠️ *"would also require the software ecosystem to mature hand in hand."* Note **Maia 300 is listed with GUC as IC partner** — a third merchant design house in the table.
+- **[[AMZN]]:** **Trainium3 is the only part in the exhibit on CoWoS-R rather than CoWoS-L**, with **Alchip and [[MRVL]]** as IC partners. ⚠️ **A different packaging path from every other program listed — worth watching as a capacity-contention differentiator.**
+
+⚠️ **BALANCE-SHEET CORROBORATION FROM THE SAME DAY, and it is the hardest number of the week for this dossier:** [[MRVL]]'s 10-Q discloses **purchase commitments to foundries and test & assembly partners of $8.519bn exiting F2Q27, up from $2.757bn exiting F1Q27 — a +3x q/q expansion** (Wells Fargo · Aaron Rakers, 2026-08-31). ⚠️ **A commitment to buy wafer/substrate/test capacity is NOT a customer backlog, and in a market where CoWoS and HBM allocation are the binding constraints, pre-committing is rational even without incremental design wins. But the size is hard to reconcile with a conservative custom-silicon unit forecast.** [Source](../../relat%C3%B3rios%20bons/MRVL_Purchase_Commits_Expansion_DRAM_Contract_Pricing_CXMT.html)
 ## 🆕🔴🔴 2026-08-31 — THE TPU SHARE FIGHT IS AN *ASIA-vs-US DESK* FIGHT, NOT A HOUSE-vs-HOUSE ONE; AND THE STRUCTURAL LIMIT OF ASICs GETS STATED CLEANLY
 
 - 🔴🔴 **RE-MAP THE DISAGREEMENT. Within 24 hours: **MS Asia (Charlie Chan, Taipei)** — *"**[[MEDIATEK]] remains the MAJOR COORDINATOR of TPU v10 Icefish… TPU should account for 65% of 2028e revenue, and the revenue dollar may further grow to US$70bn in 2029e**"*, OW / Top Pick / PT NT$5,588 — versus **MS US (Joseph Moore, New York)** — *"**[[AVGO]] to retain roughly 80% of its longer term TPU opportunity**"*, MediaTek *"likely a merchant chip."* **And JPM Asia (Gokul Hariharan) is already on the MediaTek side (*"pole position for TPUv10"*, *"majority unit share within TPUv8"*).** ➜ ⚠️⚠️ **The split is GEOGRAPHIC, not house-level: two Asia desks reading the Taiwan/Korea supply chain against a US desk reading Broadcom's own disclosure. That is a difference in EVIDENCE, not in modelling. **Stop filing this as "JPM vs MS".**

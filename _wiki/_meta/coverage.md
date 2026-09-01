@@ -1,12 +1,12 @@
 # Source-coverage audit
 
-_Generated 2026-08-31 · 95 public-company pages · flags inputs that exist on disk but the page never read. Rebuild: `py _wiki/_tools/build_coverage.py`._
+_Generated 2026-09-01 · 95 public-company pages · flags inputs that exist on disk but the page never read. Rebuild: `py _wiki/_tools/build_coverage.py`._
 
 **17 pages flagged** (severity > 0), worst first.
 
 | Sev | Ticker | Words | Cites | Density | Latest tx | tx read? | Calls used | Decks | What's unread |
 |--:|---|--:|--:|--:|---|:--:|---|---|---|
-| 5.0 | NOW | 4486 | 22 | 139.9 | 2026-07-22 | ✗ | 0/0 | 1/6 | latest transcript 2026-07-22 unread; latest 10-Q 2026-07-23 unread (no same-qtr transcript either) |
+| 5.0 | NOW | 5398 | 22 | 165.2 | 2026-07-22 | ✗ | 0/0 | 1/6 | latest transcript 2026-07-22 unread; latest 10-Q 2026-07-23 unread (no same-qtr transcript either) |
 | 5.0 | CEG | 4521 | 25 | 177.4 | 2026-08-06 | ✗ | 0/0 | 0/2 | latest transcript 2026-08-06 unread; latest 10-Q 2026-08-06 unread (no same-qtr transcript either) |
 | 5.0 | TEL | 3674 | 15 | 202.4 | 2026-07-22 | ✗ | 0/0 | 0/0 | latest transcript 2026-07-22 unread; latest 10-Q 2026-07-24 unread (no same-qtr transcript either) |
 | 5.0 | WMB | 6136 | 24 | 217.3 | 2026-08-04 | ✗ | 1/1 | 1/3 | latest transcript 2026-08-04 unread; latest 10-Q 2026-08-03 unread (no same-qtr transcript either) |
@@ -19,9 +19,9 @@ _Generated 2026-08-31 · 95 public-company pages · flags inputs that exist on d
 | 5.0 | FSLY | 2896 | 15 | — | 2026-08-05 | ✗ | 0/0 | 0/0 | latest transcript 2026-08-05 unread; latest 10-Q 2026-08-05 unread (no same-qtr transcript either) |
 | 5.0 | MP | 733 | 8 | — | 2026-08-06 | ✗ | 0/0 | 0/0 | latest transcript 2026-08-06 unread; latest 10-Q 2026-08-07 unread (no same-qtr transcript either) |
 | 5.0 | POWI | 720 | 12 | — | 2026-08-05 | ✗ | 0/0 | 0/0 | latest transcript 2026-08-05 unread; latest 10-Q 2026-08-06 unread (no same-qtr transcript either) |
-| 4.0 | TM | 2417 | 9 | 69.5 | 2026-08-04 | ✗ | 0/0 | 0/16 | latest transcript 2026-08-04 unread |
+| 4.0 | TM | 2765 | 9 | 78.7 | 2026-08-04 | ✗ | 0/0 | 0/16 | latest transcript 2026-08-04 unread |
 | 3.0 | WOLF | 9413 | 26 | 503.1 | 2026-08-19 | ✗ | 0/0 | 0/0 | latest transcript 2026-08-19 unread |
 | 3.0 | BESI | 8769 | 33 | 959.4 | 2026-07-23 | ✗ | 0/0 | 0/0 | latest transcript 2026-07-23 unread |
-| 2.0 | CSCO | 19917 | 50 | 294.0 | 2026-08-12 | ✓ | 1/2 | 2/17 | latest 10-Q 2026-05-19 unread (no same-qtr transcript either) |
+| 2.0 | CSCO | 20593 | 50 | 303.4 | 2026-08-12 | ✓ | 1/2 | 2/17 | latest 10-Q 2026-05-19 unread (no same-qtr transcript either) |
 
 _Density = (words + 25·citations) / (filings+transcripts+calls+briefings+decks). Low density + high material = thin synthesis. 'Calls used' = `_equity_calls` links / available (a low ratio is fine if the page links a representative subset)._
