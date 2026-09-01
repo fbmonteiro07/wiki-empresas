@@ -1,6 +1,6 @@
 # Source-coverage audit
 
-_Generated 2026-08-31 · 97 public-company pages · flags inputs that exist on disk but the page never read. Rebuild: `py _wiki/_tools/build_coverage.py`._
+_Generated 2026-08-31 · 95 public-company pages · flags inputs that exist on disk but the page never read. Rebuild: `py _wiki/_tools/build_coverage.py`._
 
 **17 pages flagged** (severity > 0), worst first.
 
@@ -16,7 +16,7 @@ _Generated 2026-08-31 · 97 public-company pages · flags inputs that exist on d
 | 5.0 | TLN | 4882 | 21 | 386.2 | 2026-08-05 | ✗ | 0/0 | 1/3 | latest transcript 2026-08-05 unread; latest 10-Q 2026-08-05 unread (no same-qtr transcript either) |
 | 5.0 | AOSL | 596 | 6 | — | 2026-08-12 | ✗ | 0/0 | 0/0 | latest transcript 2026-08-12 unread; latest 10-Q 2026-05-06 unread (no same-qtr transcript either) |
 | 5.0 | ETN | 5418 | 18 | — | 2026-07-31 | ✗ | 0/0 | 0/0 | latest transcript 2026-07-31 unread; latest 10-Q 2026-07-31 unread (no same-qtr transcript either) |
-| 5.0 | FSLY | 2858 | 13 | — | 2026-08-05 | ✗ | 0/0 | 0/0 | latest transcript 2026-08-05 unread; latest 10-Q 2026-08-05 unread (no same-qtr transcript either) |
+| 5.0 | FSLY | 2896 | 15 | — | 2026-08-05 | ✗ | 0/0 | 0/0 | latest transcript 2026-08-05 unread; latest 10-Q 2026-08-05 unread (no same-qtr transcript either) |
 | 5.0 | MP | 733 | 8 | — | 2026-08-06 | ✗ | 0/0 | 0/0 | latest transcript 2026-08-06 unread; latest 10-Q 2026-08-07 unread (no same-qtr transcript either) |
 | 5.0 | POWI | 720 | 12 | — | 2026-08-05 | ✗ | 0/0 | 0/0 | latest transcript 2026-08-05 unread; latest 10-Q 2026-08-06 unread (no same-qtr transcript either) |
 | 4.0 | TM | 2417 | 9 | 69.5 | 2026-08-04 | ✗ | 0/0 | 0/16 | latest transcript 2026-08-04 unread |

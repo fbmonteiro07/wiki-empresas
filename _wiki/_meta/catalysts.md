@@ -46,13 +46,13 @@ _Generated 2026-08-31 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-11-19 | SKHYNIX | **🆕 2026-08-20 → 2026-11-19 — the buyback executes on-market** (SK Securities). Daily execution is observable; **the falsifier for the "most aggressive among peers" claim is whether the full W40trn ac |
 | 2026-11-21 | SAMSUNG | **🆕 2026-08-24 → 2026-11-21 — the 53.3mn-share PSU treasury purchase window is open.** A mechanical, non-discretionary bid in the market for three months; note it is **excluded** from the FCF payout b |
 
-## ⏰ Passed — need a post-mortem (0)
+## ⏰ Passed — need a post-mortem (1)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| _none_ | | |
+| 2026-07-10 | FSLY | 🆕 **09-22 — FSLY hosting Investor Day** (GS US TMT desk · Peter Callahan, September catalyst list, 2026-08-31). ⚠️ **This page's high-water mark is 2026-07-10 — the investor day is the natural point t |
 
 ## ✅ Resolved (105)
 

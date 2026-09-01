@@ -1,0 +1,916 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NVDA GW-Replacement DCF</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Spline+Sans+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#f7f8f6; --surface:#fcfcfb; --surface2:#f0f2ee; --line:#dde1da; --line2:#e8ebe4;
+  --ink:#161c16; --ink2:#5a615a; --ink3:#8b928a;
+  --accent:#4f8a00; --accent-ink:#3c6a00; --accent-soft:#eaf3dc;
+  --good:#1e7d32; --bad:#c62f2e; --warn:#a86a00;
+  --pos:#2a78d6; --neg:#e34948;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#4a3aa7; --s5:#e87ba4;
+  --heat-ink-hi:#ffffff;
+  --shadow:0 1px 2px rgba(20,26,20,.05),0 4px 14px rgba(20,26,20,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#14171a; --surface:#1a1a19; --surface2:#20242a; --line:#31363d; --line2:#272c33;
+    --ink:#edf1ec; --ink2:#a9b0a9; --ink3:#767d76;
+    --accent:#8fd426; --accent-ink:#a5e04a; --accent-soft:#26330f;
+    --good:#4fbf63; --bad:#e66767; --warn:#d99b2b;
+    --pos:#3987e5; --neg:#e66767;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#9085e9; --s5:#d55181;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 16px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#14171a; --surface:#1a1a19; --surface2:#20242a; --line:#31363d; --line2:#272c33;
+  --ink:#edf1ec; --ink2:#a9b0a9; --ink3:#767d76;
+  --accent:#8fd426; --accent-ink:#a5e04a; --accent-soft:#26330f;
+  --good:#4fbf63; --bad:#e66767; --warn:#d99b2b;
+  --pos:#3987e5; --neg:#e66767;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#9085e9; --s5:#d55181;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 16px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font:14px/1.45 "Archivo",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.mono,input[type=number],input[type=date],td.num,.val{font-family:"Spline Sans Mono",ui-monospace,Consolas,monospace;font-variant-numeric:tabular-nums}
+h1,h2,h3{margin:0;text-wrap:balance}
+a{color:var(--accent-ink)}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:1px;border-radius:3px}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+
+/* ---------- hero ---------- */
+header.hero{padding:18px 22px 14px;border-bottom:1px solid var(--line);background:var(--surface)}
+.brandrow{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 16px}
+.brandrow h1{font-size:19px;font-weight:800;letter-spacing:-.015em}
+.brandrow .chip{background:var(--accent-soft);color:var(--accent-ink);font-weight:700;font-size:11px;padding:2px 8px;border-radius:999px;letter-spacing:.06em}
+.src{color:var(--ink3);font-size:12px}
+.heromets{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.met{background:var(--bg);border:1px solid var(--line2);border-radius:10px;padding:9px 14px;min-width:118px}
+.met .k{font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2);font-weight:600}
+.met .v{font-size:22px;font-weight:600;margin-top:2px}
+.met.big .v{font-size:34px;font-weight:700;color:var(--accent-ink);letter-spacing:-.01em}
+.met .sub{font-size:11px;color:var(--ink3);margin-top:1px}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:5px 10px;border-radius:999px}
+.badge.ok{background:color-mix(in srgb,var(--good) 12%,transparent);color:var(--good)}
+.badge.fail{background:color-mix(in srgb,var(--bad) 14%,transparent);color:var(--bad)}
+.delta-pos{color:var(--pos)} .delta-neg{color:var(--neg)}
+
+/* ---------- shell ---------- */
+.shell{display:grid;grid-template-columns:318px minmax(0,1fr);gap:0;align-items:start}
+@media (max-width:980px){.shell{grid-template-columns:1fr}}
+aside.console{position:sticky;top:0;max-height:100vh;overflow-y:auto;padding:14px;border-right:1px solid var(--line);background:var(--surface)}
+@media (max-width:980px){aside.console{position:static;max-height:none;border-right:none;border-bottom:1px solid var(--line)}}
+.console h2{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink2);font-weight:700;margin:4px 2px 8px}
+.group{border:1px solid var(--line2);border-radius:10px;margin-bottom:10px;background:var(--bg)}
+.group>summary{list-style:none;cursor:pointer;padding:9px 12px;font-weight:700;font-size:12.5px;display:flex;align-items:center;gap:8px}
+.group>summary::-webkit-details-marker{display:none}
+.group>summary .arrow{margin-left:auto;color:var(--ink3);transition:transform .15s}
+.group[open]>summary .arrow{transform:rotate(90deg)}
+.group .body{padding:2px 12px 11px;display:flex;flex-direction:column;gap:9px}
+.ctl{display:flex;flex-direction:column;gap:3px}
+.ctl .lr{display:flex;align-items:center;gap:8px}
+.ctl label{font-size:12px;color:var(--ink2);flex:1;min-width:0}
+.ctl .dot{width:6px;height:6px;border-radius:50%;background:var(--s2);flex:none;opacity:0;transition:opacity .15s}
+.ctl.drift .dot{opacity:1}
+.ctl input[type=number],.ctl input[type=date]{width:96px;background:var(--surface);border:1px solid var(--line);color:var(--ink);border-radius:6px;padding:4px 7px;font-size:12.5px;text-align:right}
+.ctl input[type=range]{width:100%;accent-color:var(--accent);margin:0;height:18px}
+.consolebtns{display:flex;gap:8px;margin:6px 0 14px}
+.consolebtns button{flex:1;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;padding:7px 0;font-size:12px;font-weight:600}
+.consolebtns button:hover{border-color:var(--accent)}
+
+/* ---------- main ---------- */
+main{padding:16px 22px 40px;min-width:0}
+@media (max-width:560px){main{padding:14px 12px 32px}header.hero{padding:14px 12px 12px}}
+nav.tabs{display:flex;gap:4px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin-bottom:16px}
+nav.tabs button{background:none;border:none;border-bottom:2px solid transparent;padding:9px 14px;font-size:13.5px;font-weight:600;color:var(--ink2);border-radius:6px 6px 0 0}
+nav.tabs button[aria-selected=true]{color:var(--ink);border-bottom-color:var(--accent)}
+nav.tabs button:hover{background:var(--surface2)}
+.tabpane{display:none}.tabpane.active{display:block}
+.panelgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(380px,100%),1fr));gap:14px}
+.panel{background:var(--surface);border:1px solid var(--line2);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow);min-width:0}
+.panel.wide{grid-column:1/-1}
+.panel h3{font-size:13px;font-weight:700;margin-bottom:2px}
+.panel .note{font-size:11.5px;color:var(--ink3);margin:0 0 8px}
+.panel .scroller{overflow-x:auto}
+svg text{font-family:"Archivo",sans-serif}
+svg .num{font-family:"Spline Sans Mono",ui-monospace,monospace}
+
+/* legend */
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:11.5px;color:var(--ink2);margin:6px 0 2px}
+.legend .it{display:inline-flex;align-items:center;gap:5px}
+.sw{width:10px;height:10px;border-radius:3px;flex:none}
+
+/* heatmap + tables */
+table.hm,{border-collapse:collapse}
+table.hm{border-collapse:separate;border-spacing:2px;margin-top:4px}
+table.hm th{font-size:11px;color:var(--ink2);font-weight:600;padding:3px 6px}
+table.hm td{font-size:12px;padding:6px 8px;border-radius:5px;text-align:right;min-width:62px}
+table.hm td.base{outline:2px solid var(--accent);outline-offset:-1px}
+table.data{border-collapse:collapse;width:100%;font-size:12px}
+table.data th{text-align:right;font-weight:600;color:var(--ink2);padding:5px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
+table.data th:first-child,table.data td:first-child{text-align:left;position:sticky;left:0;background:var(--surface)}
+table.data td{text-align:right;padding:4px 8px;border-bottom:1px solid var(--line2);white-space:nowrap}
+table.data td input{width:84px;background:var(--bg);border:1px solid var(--line);color:var(--ink);border-radius:5px;padding:3px 5px;font-size:11.5px;text-align:right;font-family:"Spline Sans Mono",monospace}
+table.data td input.drift{border-color:var(--s2)}
+.statchips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.schip{font-size:11.5px;font-weight:600;padding:4px 10px;border-radius:999px;border:1px solid var(--line)}
+.schip.ok{color:var(--good);border-color:color-mix(in srgb,var(--good) 45%,transparent)}
+.schip.warn{color:var(--warn);border-color:color-mix(in srgb,var(--warn) 45%,transparent)}
+.kv{display:grid;grid-template-columns:auto auto;gap:4px 18px;font-size:12.5px;margin-top:6px}
+.kv .k{color:var(--ink2)} .kv .v{text-align:right;font-weight:600}
+.kv.cols3{grid-template-columns:repeat(3,auto minmax(60px,auto));gap:4px 14px}
+@media (max-width:900px){.kv.cols3{grid-template-columns:auto auto}}
+.twocol{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:16px;align-items:start}
+.twocol>div{min-width:0}
+@media (max-width:900px){.twocol{grid-template-columns:minmax(0,1fr)}}
+.subh{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink2);font-weight:700;margin:2px 0 4px}
+.divider{border-top:1px solid var(--line2);margin:12px 0 8px}
+
+/* tooltip */
+#tip{position:fixed;pointer-events:none;background:var(--surface);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);padding:8px 10px;font-size:12px;display:none;z-index:50;max-width:280px}
+#tip .t{font-weight:700;margin-bottom:3px}
+#tip .r{display:flex;align-items:center;gap:6px;justify-content:space-between}
+#tip .r .n{display:inline-flex;align-items:center;gap:5px;color:var(--ink2)}
+#tip .r .v{font-family:"Spline Sans Mono",monospace;font-variant-numeric:tabular-nums}
+
+footer{padding:18px 22px 30px;border-top:1px solid var(--line);color:var(--ink3);font-size:11.5px;line-height:1.6;background:var(--surface)}
+footer b{color:var(--ink2)}
+</style>
+
+<header class="hero">
+  <div class="brandrow">
+    <h1>NVDA GW-Replacement DCF</h1>
+    <span class="chip">EDITABLE ENGINE</span>
+    <span class="src">Replica of <span class="mono">Template DCF NVDA - Corrected - AI Labs - GW - Replacement.xlsx</span> · P:\Modelos oficiais · saved 31-Aug-2026 · US$ mm</span>
+  </div>
+  <div class="heromets">
+    <div class="met big"><div class="k">Fair value / share</div><div class="v" id="mPx">—</div><div class="sub" id="mPxSub">dated 27-Aug-26 · Ke − g convention of the sheet</div></div>
+    <div class="met"><div class="k">vs ref price</div><div class="v" id="mUp">—</div><div class="sub" id="mRef">ref 217.55 · BBG close 31-Aug-26</div></div>
+    <div class="met"><div class="k">vs workbook</div><div class="v" id="mDelta">—</div><div class="sub">workbook saved: $296.77</div></div>
+    <div class="met"><div class="k">TV share of PV</div><div class="v" id="mTV">—</div><div class="sub">Gordon @ period 20</div></div>
+    <div class="met"><div class="k">P / NOPAT</div><div class="v" id="mPE">—</div><div class="sub">CY27 · CY28</div></div>
+    <div class="met"><div class="k">Engine fidelity</div><div class="v" style="font-size:13px;margin-top:6px"><span class="badge ok" id="mBadge">checking…</span></div><div class="sub">engine vs workbook at file inputs</div></div>
+  </div>
+</header>
+
+<div class="shell">
+<aside class="console">
+  <div class="consolebtns">
+    <button id="btnReset" title="Restore every input to the workbook's saved values">Reset to workbook</button>
+    <button id="btnCopy" title="Copy current scenario inputs as JSON">Copy scenario</button>
+  </div>
+  <h2>Assumption console</h2>
+
+  <details class="group" open id="gVal"><summary>Valuation<span class="arrow">›</span></summary><div class="body">
+    <div class="ctl" data-k="ke"><div class="lr"><label>Ke (cost of equity)</label><span class="dot"></span><input type="number" step="0.005" min="0.03" max="0.3"></div><input type="range" step="0.005" min="0.06" max="0.16"></div>
+    <div class="ctl" data-k="gPerp"><div class="lr"><label>Perpetuity growth</label><span class="dot"></span><input type="number" step="0.0025" min="-0.02" max="0.06"></div><input type="range" step="0.0025" min="0" max="0.05"></div>
+    <div class="ctl" data-k="shares"><div class="lr"><label>Shares (mm)</label><span class="dot"></span><input type="number" step="100" min="1000"></div></div>
+    <div class="ctl" data-k="valDate"><div class="lr"><label>Valuation date</label><span class="dot"></span><input type="date"></div></div>
+    <div class="ctl" data-k="payTerm"><div class="lr"><label>Terminal payout (CY45+)</label><span class="dot"></span><input type="number" step="0.05" min="0" max="1"></div><input type="range" step="0.05" min="0.5" max="1"></div>
+    <div class="ctl" data-k="refPx"><div class="lr"><label>Reference price ($)</label><span class="dot"></span><input type="number" step="0.05" min="0"></div></div>
+  </details>
+
+  <details class="group" open id="gCapex"><summary>Capex build<span class="arrow">›</span></summary><div class="body">
+    <div class="ctl" data-k="gCapex29"><div class="lr"><label>Capex growth CY29</label><span class="dot"></span><input type="number" step="0.01" min="-0.3" max="0.5"></div><input type="range" step="0.01" min="-0.1" max="0.3"></div>
+    <div class="ctl" data-k="gCapex30"><div class="lr"><label>Capex growth CY30+</label><span class="dot"></span><input type="number" step="0.01" min="-0.3" max="0.5"></div><input type="range" step="0.01" min="-0.1" max="0.25"></div>
+    <div class="ctl" data-k="nwStep"><div class="lr"><label>NW+CPU share, +/yr from CY28</label><span class="dot"></span><input type="number" step="0.005" min="-0.05" max="0.08"></div></div>
+    <div class="ctl" data-k="nwCapYr"><div class="lr"><label>NW share ramp ends (year)</label><span class="dot"></span><input type="number" step="1" min="2029" max="2045"></div></div>
+    <div class="ctl" data-k="haStart"><div class="lr"><label>Hard-asset share CY29</label><span class="dot"></span><input type="number" step="0.01" min="0.05" max="0.6"></div></div>
+    <div class="ctl" data-k="haStep"><div class="lr"><label>Hard-asset share, +/yr</label><span class="dot"></span><input type="number" step="0.005" min="-0.08" max="0.05"></div></div>
+    <div class="ctl" data-k="haCapYr"><div class="lr"><label>HA share ramp ends (year)</label><span class="dot"></span><input type="number" step="1" min="2029" max="2045"></div></div>
+  </details>
+
+  <details class="group" open id="gNvda"><summary>NVDA share &amp; P&amp;L<span class="arrow">›</span></summary><div class="body">
+    <div class="ctl" data-k="share29"><div class="lr"><label>NVDA chip share CY29</label><span class="dot"></span><input type="number" step="0.01" min="0.1" max="1"></div><input type="range" step="0.01" min="0.3" max="0.9"></div>
+    <div class="ctl" data-k="share30"><div class="lr"><label>NVDA chip share CY30</label><span class="dot"></span><input type="number" step="0.01" min="0.1" max="1"></div><input type="range" step="0.01" min="0.3" max="0.9"></div>
+    <div class="ctl" data-k="share31"><div class="lr"><label>NVDA chip share CY31+ (terminal)</label><span class="dot"></span><input type="number" step="0.01" min="0.1" max="1"></div><input type="range" step="0.01" min="0.3" max="0.8"></div>
+    <div class="ctl" data-k="attach27"><div class="lr"><label>Networking attach / chips, CY27+</label><span class="dot"></span><input type="number" step="0.01" min="0" max="0.6"></div><input type="range" step="0.01" min="0" max="0.5"></div>
+    <div class="ctl" data-k="gmFade"><div class="lr"><label>GM fade / yr from CY29</label><span class="dot"></span><input type="number" step="0.005" min="0" max="0.06"></div></div>
+    <div class="ctl" data-k="gmFloor"><div class="lr"><label>GM floor (terminal)</label><span class="dot"></span><input type="number" step="0.01" min="0.4" max="0.75"></div><input type="range" step="0.01" min="0.5" max="0.72"></div>
+    <div class="ctl" data-k="opexT"><div class="lr"><label>Opex % of revenue CY28+</label><span class="dot"></span><input type="number" step="0.005" min="0" max="0.25"></div></div>
+    <div class="ctl" data-k="tax"><div class="lr"><label>Tax rate</label><span class="dot"></span><input type="number" step="0.01" min="0" max="0.4"></div></div>
+    <div class="ctl" data-k="pay26"><div class="lr"><label>Payout CY26</label><span class="dot"></span><input type="number" step="0.05" min="0" max="1"></div></div>
+    <div class="ctl" data-k="pay27"><div class="lr"><label>Payout CY27</label><span class="dot"></span><input type="number" step="0.05" min="0" max="1"></div></div>
+    <div class="ctl" data-k="pay28"><div class="lr"><label>Payout CY28</label><span class="dot"></span><input type="number" step="0.05" min="0" max="1"></div></div>
+    <div class="ctl" data-k="payRun"><div class="lr"><label>Payout CY29–44</label><span class="dot"></span><input type="number" step="0.05" min="0" max="1"></div><input type="range" step="0.05" min="0.3" max="1"></div>
+  </details>
+
+  <details class="group" id="gGW"><summary>GW &amp; useful lives<span class="arrow">›</span></summary><div class="body">
+    <div class="ctl" data-k="lifeChip"><div class="lr"><label>Chip life (yrs) — NW follows</label><span class="dot"></span><input type="number" step="1" min="1" max="15"></div><input type="range" step="1" min="2" max="10"></div>
+    <div class="ctl" data-k="lifeOth"><div class="lr"><label>Hard-asset life (yrs)</label><span class="dot"></span><input type="number" step="1" min="5" max="40"></div><input type="range" step="1" min="10" max="35"></div>
+    <div class="ctl" data-k="gwLag"><div class="lr"><label>GW deployment lag (yrs)</label><span class="dot"></span><input type="number" step="1" min="0" max="4"></div></div>
+    <p style="font-size:11px;color:var(--ink3);margin:0">Full-build cost/GW is a per-year vector — edit it in <b>Inputs &amp; data</b>. Component cost shares stay pinned to the CY27 capex mix (the sheet's convention).</p>
+  </details>
+
+  <details class="group" id="gCloud"><summary>Cloud ROIC<span class="arrow">›</span></summary><div class="body">
+    <div class="ctl" data-k="cloudShare"><div class="lr"><label>Cloud share of AI capex</label><span class="dot"></span><input type="number" step="0.05" min="0.1" max="1"></div><input type="range" step="0.05" min="0.2" max="1"></div>
+    <div class="ctl" data-k="ebitdaM"><div class="lr"><label>Rental EBITDA margin</label><span class="dot"></span><input type="number" step="0.05" min="0.3" max="1"></div></div>
+    <div class="ctl" data-k="taxCloud"><div class="lr"><label>Cloud tax</label><span class="dot"></span><input type="number" step="0.01" min="0" max="0.4"></div></div>
+    <div class="ctl" data-k="roicA"><div class="lr"><label>ROIC target A</label><span class="dot"></span><input type="number" step="0.01" min="0" max="0.5"></div></div>
+    <div class="ctl" data-k="roicB"><div class="lr"><label>ROIC target B</label><span class="dot"></span><input type="number" step="0.01" min="0" max="0.5"></div></div>
+    <div class="ctl" data-k="lagCloud"><div class="lr"><label>Commissioning lag (yrs)</label><span class="dot"></span><input type="number" step="1" min="0" max="4"></div></div>
+    <div class="ctl" data-k="cloudRevG"><div class="lr"><label>Cloud revenue growth CY31+</label><span class="dot"></span><input type="number" step="0.01" min="-0.1" max="0.4"></div><input type="range" step="0.01" min="0" max="0.3"></div>
+  </details>
+
+  <details class="group" id="gLabs"><summary>AI Labs bridge<span class="arrow">›</span></summary><div class="body">
+    <div class="ctl" data-k="labsYear"><div class="lr"><label>Focus year (EV &amp; detail)</label><span class="dot"></span><input type="number" step="1" min="2026" max="2045"></div><input type="range" step="1" min="2026" max="2045"></div>
+    <div class="ctl" data-k="openShare"><div class="lr"><label>Open-source revenue share</label><span class="dot"></span><input type="number" step="0.05" min="0" max="1"></div><input type="range" step="0.05" min="0" max="0.8"></div>
+    <div class="ctl" data-k="openGM"><div class="lr"><label>Open inference GM</label><span class="dot"></span><input type="number" step="0.05" min="0" max="0.95"></div></div>
+    <div class="ctl" data-k="closedGM"><div class="lr"><label>Closed inference GM</label><span class="dot"></span><input type="number" step="0.05" min="0" max="0.95"></div><input type="range" step="0.05" min="0.3" max="0.9"></div>
+    <div class="ctl" data-k="trOpen"><div class="lr"><label>Open training / revenue</label><span class="dot"></span><input type="number" step="0.05" min="0" max="1"></div></div>
+    <div class="ctl" data-k="trClosed"><div class="lr"><label>Closed training / revenue</label><span class="dot"></span><input type="number" step="0.05" min="0" max="1"></div></div>
+    <div class="ctl" data-k="sgaOpen"><div class="lr"><label>Open SG&amp;A / revenue</label><span class="dot"></span><input type="number" step="0.01" min="0" max="0.5"></div></div>
+    <div class="ctl" data-k="sgaClosed"><div class="lr"><label>Closed SG&amp;A / revenue</label><span class="dot"></span><input type="number" step="0.01" min="0" max="0.5"></div></div>
+    <div class="ctl" data-k="taxLabs"><div class="lr"><label>Labs cash tax</label><span class="dot"></span><input type="number" step="0.01" min="0" max="0.4"></div></div>
+    <div class="ctl" data-k="evMult"><div class="lr"><label>Closed EV / NOPAT</label><span class="dot"></span><input type="number" step="1" min="1" max="60"></div><input type="range" step="1" min="5" max="40"></div>
+    <div class="ctl" data-k="mapShare"><div class="lr"><label>Cloud share mapped to Labs</label><span class="dot"></span><input type="number" step="0.05" min="0.1" max="1"></div></div>
+    <div class="ctl" data-k="trCov"><div class="lr"><label>Training paid to this pool</label><span class="dot"></span><input type="number" step="0.05" min="0" max="1"></div></div>
+    <div class="ctl" data-k="cloudEbitM"><div class="lr"><label>Cloud EBIT margin (own layer)</label><span class="dot"></span><input type="number" step="0.01" min="0" max="0.8"></div></div>
+    <div class="ctl" data-k="densClosed"><div class="lr"><label>Closed rev / GW-yr (US$mm)</label><span class="dot"></span><input type="number" step="1000" min="1000"></div><input type="range" step="1000" min="10000" max="80000"></div>
+    <div class="ctl" data-k="densOpen"><div class="lr"><label>Open rev / GW-yr (US$mm)</label><span class="dot"></span><input type="number" step="500" min="500"></div><input type="range" step="500" min="5000" max="40000"></div>
+    <div class="ctl" data-k="allocAnth"><div class="lr"><label>Anthropic share of closed pool</label><span class="dot"></span><input type="number" step="0.05" min="0" max="1"></div></div>
+    <div class="ctl" data-k="allocOAI"><div class="lr"><label>OpenAI share</label><span class="dot"></span><input type="number" step="0.05" min="0" max="1"></div></div>
+    <div class="ctl" data-k="allocGem"><div class="lr"><label>Gemini share</label><span class="dot"></span><input type="number" step="0.05" min="0" max="1"></div></div>
+    <div class="ctl" data-k="allocMeta"><div class="lr"><label>Meta / bucket share</label><span class="dot"></span><input type="number" step="0.05" min="0" max="1"></div></div>
+  </details>
+</aside>
+
+<main>
+  <nav class="tabs" role="tablist">
+    <button role="tab" aria-selected="true" data-tab="val">Valuation</button>
+    <button role="tab" aria-selected="false" data-tab="gw">Capex &amp; GW</button>
+    <button role="tab" aria-selected="false" data-tab="roic">Cloud ROIC</button>
+    <button role="tab" aria-selected="false" data-tab="labs">AI Labs</button>
+    <button role="tab" aria-selected="false" data-tab="inputs">Inputs &amp; data</button>
+  </nav>
+
+  <section class="tabpane active" id="tab-val">
+    <div class="panelgrid">
+      <div class="panel wide"><h3>Distributions to equity — NOPAT × payout, CY26–45 + terminal value</h3>
+        <p class="note">The sheet's cash-flow proxy: no working-capital, capex or financing bridge. Terminal value sits at period 20 (end-CY45), Gordon on the CY45 distribution.</p>
+        <div class="scroller" id="chDist"></div></div>
+      <div class="panel wide"><h3>Revenue path vs the AI cloud revenue pool</h3>
+        <p class="note">Share fade (67.7% → 62 → 55 → 50%) + chips-share compression outrun capex growth — the CY29–31 air pocket. The cloud pool is an <b>independent input</b> (house AI Model, hard CY26–30 then +15%/yr): it does not respond to capex, so this ratio is a real cross-check, not an identity. Hover any year for the cloud level and ratio.</p>
+        <div class="twocol">
+          <div><div class="subh">Revenue levels (US$bn)</div><div class="scroller" id="chRev"></div></div>
+          <div><div class="subh">NVDA revenue per $1 of AI cloud revenue</div><div class="scroller" id="chRatio"></div></div>
+        </div>
+        <div class="divider"></div>
+        <div class="kv cols3" id="kvCloud"></div>
+        <div class="statchips" id="cloudChips"></div>
+      </div>
+      <div class="panel"><h3>PV bridge — dated to valuation date</h3>
+        <p class="note">NPV at 1-Jan-26 of CY26–45 flows + PV(TV), rolled forward at Ke.</p>
+        <div class="scroller" id="chBridge"></div><div class="kv" id="kvBridge"></div></div>
+      <div class="panel"><h3>Sensitivity — terminal share × GM floor ($/share)</h3>
+        <p class="note">Live re-solve of the sheet's 36-case engine. Ring = current base.</p>
+        <div class="scroller" id="hm1"></div></div>
+      <div class="panel"><h3>Sensitivity — CY28–45 revenue CAGR × terminal share</h3>
+        <p class="note">Capex growth is solved so CY45 revenue hits each CAGR; base CAGR shown below.</p>
+        <div class="scroller" id="hm2"></div><div class="kv" id="kvCagr"></div></div>
+      <div class="panel"><h3>Margin &amp; payout path</h3>
+        <p class="note">GM fades to the floor; opex flat; payout steps 50/60/70/80% then terminal.</p>
+        <div class="scroller" id="chMargin"></div></div>
+    </div>
+  </section>
+
+  <section class="tabpane" id="tab-gw">
+    <div class="panelgrid">
+      <div class="panel wide"><h3>AI capex build — chips / networking+CPU / hard assets (US$bn)</h3>
+        <p class="note">CY23–25 actuals + CY26–28 bottom-up retained; CY29+ grows at the console rates with mix shifting to networking.</p>
+        <div class="scroller" id="chCapex"></div></div>
+      <div class="panel"><h3>Supported GW — MIN of the three component stocks</h3>
+        <p class="note">Component GW bought at CY27 reference cost shares; chips/NW retire on the short life, hard assets on the long one.</p>
+        <div class="scroller" id="chGW"></div></div>
+      <div class="panel"><h3>GW purchased per year vs cost/GW</h3>
+        <p class="note">Full-build $/GW is editable per year in Inputs &amp; data.</p>
+        <div class="scroller" id="chGWBuy"></div></div>
+      <div class="panel wide"><h3>Replacement wave — capacity retiring each year (GW) and its value</h3>
+        <p class="note">Retirement value = retired GW × that year's component cost/GW. Informational — actual capex already includes refresh; it is never double-counted into the DCF.</p>
+        <div class="scroller" id="chRetire"></div>
+        <div class="statchips" id="gwStatus"></div></div>
+    </div>
+  </section>
+
+  <section class="tabpane" id="tab-roic">
+    <div class="panelgrid">
+      <div class="panel wide"><h3>Cloud ROIC — fleet vs single-vintage vs construction-inclusive</h3>
+        <p class="note">Fleet = (EBITDA − D&amp;A)(1−tax) / average net assets in service. Single-vintage attributes all house demand to the newest commissioned vintage (not a sector return). Band = target A→B.</p>
+        <div class="scroller" id="chROIC"></div></div>
+      <div class="panel"><h3>Cloud revenue vs hurdle revenue</h3>
+        <p class="note">Hurdle = revenue needed on the in-service fleet to earn the target after the actual D&amp;A schedule.</p>
+        <div class="scroller" id="chHurdle"></div></div>
+      <div class="panel"><h3>Fleet balance sheet (US$bn)</h3>
+        <p class="note">Average net assets in service by class + construction in progress; straight-line by vintage, lives per console.</p>
+        <div class="scroller" id="chFleet"></div>
+        <div class="kv" id="kvRoic"></div></div>
+      <div class="panel wide"><h3>Rev/GW rule of thumb ($bn per GW-yr at target ROIC)</h3>
+        <p class="note">M = (target/(1−tax) + first-yr D&amp;A rate) / EBITDA margin, × build cost. Realized today (assumptions.md rev-per-GW ledger): Trainium &lt;10 · merchant 12–13 · MS TPU ~20 · GB300 IaaS 22.9 · premium ~25. Never mix facility-GW vs IT-GW bases.</p>
+        <div class="kv" id="kvRevGW"></div></div>
+    </div>
+  </section>
+
+  <section class="tabpane" id="tab-labs">
+    <div class="panelgrid">
+      <div class="panel wide"><h3>AI Labs revenue — implied from the cloud pool (US$bn)</h3>
+        <p class="note">Labs revenue = mapped cloud pool ÷ (inference cost + training)% of revenue. Revenue can exceed the cloud pool — it is a different layer of the stack.</p>
+        <div class="scroller" id="chLabs"></div></div>
+      <div class="panel"><h3>Closed-lab EV at focus year</h3>
+        <p class="note">Closed NOPAT × multiple, split by the hypothetical equal-economics shares.</p>
+        <div class="scroller" id="chEV"></div><div class="kv" id="kvLabs"></div></div>
+      <div class="panel"><h3>Inference GW implied by revenue densities</h3>
+        <p class="note">Annual-average inference capacity = revenue ÷ density. Not construction, training excluded.</p>
+        <div class="scroller" id="chLabsGW"></div></div>
+      <div class="panel"><h3>Focus-year P&amp;L (US$bn)</h3>
+        <p class="note">Open = monetized serving on open models; free weights carry no revenue.</p>
+        <div class="scroller"><table class="data" id="tblLabsPL"></table></div></div>
+    </div>
+  </section>
+
+  <section class="tabpane" id="tab-inputs">
+    <div class="panelgrid">
+      <div class="panel wide"><h3>Hard-copy vectors — every cell editable</h3>
+        <p class="note">Orange border = differs from the workbook. CY23–25 are reported actuals; CY26–28 are the retained commercial forecast (R:\Modelo Felipe NVDA, saved 27-Aug-26). Editing them re-derives everything, including the cohort stocks and reference cost shares.</p>
+        <div class="scroller"><table class="data" id="tblVec"></table></div></div>
+      <div class="panel wide"><h3>Full-build cost per GW (US$bn) — per year</h3>
+        <p class="note">Drives GW purchased and the component stocks (chips 40.7% / NW 23.1% / hard assets 36.2% of the build at CY27 reference shares).</p>
+        <div class="scroller"><table class="data" id="tblCost"></table></div></div>
+      <div class="panel wide"><h3>Model output table (US$mm)</h3>
+        <div class="scroller"><table class="data" id="tblOut"></table></div></div>
+    </div>
+  </section>
+</main>
+</div>
+
+<div id="tip"></div>
+
+<footer>
+  <b>Conventions preserved from the workbook:</b> NPV at 1-Jan-26 of CY26–45 end-of-year distributions; TV = CY45 distribution × (1+g)/(Ke−g) discounted 20 periods; the whole PV rolled to the valuation date at (1+Ke)^(days/365). Distribution = NOPAT × payout — a proxy, not FCFE. GW replacement: supported GW = MIN of chip / networking / hard-asset stocks (complements, never added); retirement value is informational and never re-enters capex. Cloud cohorts: straight-line by vintage, full-year depreciation from the commissioning year, 2-yr lag. <b>Retained scenario assumptions the sheet itself flags:</b> 100% terminal payout with positive perpetual growth (no reinvestment bridge); 90% cloud EBITDA margin; CY27 bottom-up capex exceeds the total-capex models (102.5%); negative CY23 residual retained; open/closed Labs economics are a user example, not broker forecasts. <b>Sources:</b> capex bottom-up + NVDA forecast = house AI Model (27-Aug-26 vintage); useful lives 5/5/25 user scenario 31-Aug-26; ref price BBG close 31-Aug-26. Engine verified against the workbook cell-for-cell (14,274 formulas re-evaluated; 44 checkpoint values reproduced bit-for-bit).
+</footer>
+
+<script>
+'use strict';
+/* ================= FILE CONSTANTS (exact workbook values) ================= */
+const FILE = {
+ chips:[42411.78429459569,114846.5079563297,190171.36087311106,399900.33876588667,767002.6163141985,1157436.3523740668],
+ nw:[12810.585642691623,34371.34178788408,65259.50252817853,178576.41748539842,435134.5910540439,715097.2059606818],
+ oth:[34490.038268785145,84645.84171643095,140829.88978513746,323121.9047414263,683275.731164706,1040564.949653554],
+ gCapex29:0.1,gCapex30:0.08,
+ costGW:[40,40,40,40,40,45,50,45,40,35,30,30,30,30,30,30,30,30,30,30,30,30,30],
+ nvdaRevChips:[38518.10659033064,102470.1886726464,158799.22567251758,311815.5170199417,578573.6453898079,783966.6825195056],
+ share29:0.62,share30:0.55,share31:0.5,
+ attach25:0.13,attach26:0.19,attach27:0.25,
+ othersRev:[13397,15311,22551.385200000004,27814.750627325513,31633.57971702217,31633.57971702217],
+ gm:[0.738,0.755,0.72,0.75,0.73,0.72],
+ gmFade:0.02,gmFloor:0.64,
+ opex:[0.4126566323125973,0.18595909523653195,0.12571170218472455,0.10686400726134353,0.07,0.06],
+ opexT:0.06,
+ tax:0.18,pay26:0.5,pay27:0.6,pay28:0.7,payRun:0.8,payTerm:1,
+ ke:0.1,gPerp:0.025,shares:24100,valDate:'2026-08-27',
+ nwStep:0.02,nwCapYr:2033,haStart:0.36,haStep:-0.03,haCapYr:2033,
+ lifeChip:5,lifeOth:25,gwLag:0,
+ cloudShare:0.6,ebitdaM:0.9,taxCloud:0.15,roicA:0.15,roicB:0.2,lagCloud:2,
+ cloudRev:[434709.3989200161,683635.5304593942,983456.4198291143,1271899.3628041218,1532113.7779816063],
+ cloudRevG:0.15,
+ openShare:0.2,openGM:0.2,closedGM:0.65,trOpen:0.15,trClosed:0.25,
+ sgaOpen:0,sgaClosed:0.05,taxLabs:0.15,evMult:15,mapShare:1,trCov:1,
+ cloudEbitM:0.38,labsYear:2030,densClosed:40000,densOpen:17500,
+ allocAnth:0.4,allocOAI:0.3,allocGem:0.15,allocMeta:0.15,
+ refPx:217.55
+};
+const CHECKS = {px:296.7701392609193,pvFlows:3942694.7787533966,pvTV:2778507.1640597126,
+ gwActive45:1607.8925291957737,rev29:961731.4280327586,sensI6:229.58812444741164,
+ grid2_5_40:247.58016180369466,cohNet28:807293.1446165534,labsEV30:8163651.025961697,gwInf30:71.86887657909455};
+
+const YRS=[];for(let y=2023;y<=2045;y++)YRS.push(y);
+const N=YRS.length, IX=y=>y-2023;
+
+/* ================= ENGINE (port of the verified Python replica) ================= */
+function engine(S){
+  // ---- capex build ----
+  const total=new Array(N).fill(0),chips=new Array(N).fill(0),nw=new Array(N).fill(0),oth=new Array(N).fill(0),
+        nwSh=new Array(N).fill(0),haSh=new Array(N).fill(0);
+  for(let i=0;i<N;i++){const y=YRS[i];
+    if(y<=2028){chips[i]=S.chips[i];nw[i]=S.nw[i];oth[i]=S.oth[i];
+      total[i]=chips[i]+nw[i]+oth[i];nwSh[i]=nw[i]/total[i];haSh[i]=oth[i]/total[i];}
+    else{
+      total[i]=total[i-1]*(1+(y===2029?S.gCapex29:S.gCapex30));
+      nwSh[i]=nwSh[IX(2028)]+S.nwStep*(Math.min(y,S.nwCapYr)-2028);
+      haSh[i]=(y===2029)?S.haStart:S.haStart+S.haStep*(Math.min(y,S.haCapYr)-2029);
+      nw[i]=nwSh[i]*total[i];oth[i]=haSh[i]*total[i];chips[i]=total[i]-nw[i]-oth[i];
+    }}
+  // ---- revenue ----
+  const share=new Array(N).fill(0),revChips=new Array(N).fill(0),nwRev=new Array(N).fill(0),othersRev=new Array(N).fill(0),rev=new Array(N).fill(0);
+  for(let i=0;i<N;i++){const y=YRS[i];
+    if(y<=2028){revChips[i]=S.nvdaRevChips[i];share[i]=chips[i]>0?revChips[i]/chips[i]:0;}
+    else{share[i]=y===2029?S.share29:y===2030?S.share30:S.share31;revChips[i]=share[i]*chips[i];}
+    nwRev[i]=y===2025?revChips[i]*S.attach25:y===2026?revChips[i]*S.attach26:y>=2027?revChips[i]*S.attach27:0;
+    othersRev[i]=y<=2028?S.othersRev[i]:S.othersRev[5];
+    rev[i]=revChips[i]+nwRev[i]+othersRev[i];}
+  // ---- P&L ----
+  const gm=new Array(N).fill(0),opx=new Array(N).fill(0),pay=new Array(N).fill(0),nopat=new Array(N).fill(0),dist=new Array(N).fill(0);
+  for(let i=0;i<N;i++){const y=YRS[i];
+    if(y<=2028){gm[i]=S.gm[i];opx[i]=(y===2028)?S.opexT:S.opex[i];}
+    else{gm[i]=Math.max(S.gmFloor,gm[i-1]-S.gmFade);opx[i]=S.opexT;}
+    pay[i]=y===2026?S.pay26:y===2027?S.pay27:y===2028?S.pay28:(y>=2029&&y<=2044)?S.payRun:y===2045?S.payTerm:0;
+    nopat[i]=(gm[i]*rev[i]-opx[i]*rev[i])*(1-S.tax);
+    dist[i]=nopat[i]*pay[i];}
+  // ---- valuation ----
+  const days=Math.round((new Date(S.valDate+'T00:00:00Z')-new Date('2026-01-01T00:00:00Z'))/86400000);
+  const roll=Math.pow(1+S.ke,days/365);
+  let pvFlows=0;for(let t=0;t<20;t++)pvFlows+=dist[IX(2026)+t]/Math.pow(1+S.ke,t+1);
+  const TV=(S.ke>S.gPerp)?dist[IX(2045)]*(1+S.gPerp)/(S.ke-S.gPerp):0;
+  const pvTV=TV/Math.pow(1+S.ke,20);
+  const pvDated=(pvFlows+pvTV)*roll;
+  const px=pvDated/S.shares;
+  // ---- GW replacement ----
+  const refC=chips[IX(2027)]/total[IX(2027)],refN=nw[IX(2027)]/total[IX(2027)],refO=oth[IX(2027)]/total[IX(2027)];
+  const gwBuy=total.map((t,i)=>t/S.costGW[i]/1000);
+  const gwC=chips.map((v,i)=>v/(S.costGW[i]*refC*1000)),gwN=nw.map((v,i)=>v/(S.costGW[i]*refN*1000)),gwO=oth.map((v,i)=>v/(S.costGW[i]*refO*1000));
+  const act=(p,life,i)=>{let s=0;for(let j=0;j<N;j++){const sv=YRS[j]+S.gwLag;if(sv<=YRS[i]&&sv>YRS[i]-life)s+=p[j];}return s;};
+  const actC=[],actN=[],actO=[],sup=[],retGW=[],retVal=[];
+  for(let i=0;i<N;i++){
+    actC.push(act(gwC,S.lifeChip,i));actN.push(act(gwN,S.lifeChip,i));actO.push(act(gwO,S.lifeOth,i));
+    sup.push(Math.min(actC[i],actN[i],actO[i]));
+    let rg=0,rv=0;
+    for(let j=0;j<N;j++){const sv=YRS[j]+S.gwLag;
+      if(sv===YRS[i]-S.lifeChip){rg+=gwC[j]+gwN[j];rv+=gwC[j]*(S.costGW[i]*refC*1000)+gwN[j]*(S.costGW[i]*refN*1000);}
+      if(sv===YRS[i]-S.lifeOth){rg+=gwO[j];rv+=gwO[j]*(S.costGW[i]*refO*1000);}}
+    retGW.push(rg);retVal.push(rv);}
+  // ---- cloud cohorts ----
+  const avgC=new Array(N).fill(0),avgN2=new Array(N).fill(0),avgO=new Array(N).fill(0),dep=new Array(N).fill(0),
+        vintDep=new Array(N).fill(0),vintGross=new Array(N).fill(0),wip=new Array(N).fill(0);
+  const classes=[[chips,S.lifeChip,avgC],[nw,S.lifeChip,avgN2],[oth,S.lifeOth,avgO]];
+  for(const[vec,life,acc]of classes){
+    for(let j=0;j<N;j++){const cost=S.cloudShare*vec[j],svc=YRS[j]+S.lagCloud;
+      for(let i=0;i<N;i++){const y=YRS[i];if(y<svc)continue;
+        const open=cost*Math.max(0,1-(y-svc)/life),d=Math.min(cost/life,open),close=Math.max(0,open-d);
+        acc[i]+=(open+close)/2;dep[i]+=d;}}}
+  for(let j=0;j<N;j++){const cost=S.cloudShare*total[j],svc=YRS[j]+S.lagCloud;
+    const si=IX(svc);if(si>=0&&si<N){vintGross[si]=cost;
+      vintDep[si]=S.cloudShare*(chips[j]/S.lifeChip+nw[j]/S.lifeChip+oth[j]/S.lifeOth);}
+    for(let i=0;i<N;i++){const y=YRS[i];
+      if(y===YRS[j])wip[i]+=cost/2;else if(y>YRS[j]&&y<svc)wip[i]+=cost;}}
+  const avgNet=avgC.map((v,i)=>v+avgN2[i]+avgO[i]);
+  // cloud revenue
+  const cloudRev=new Array(N).fill(0);
+  for(let i=0;i<N;i++){const y=YRS[i];
+    if(y>=2026&&y<=2030)cloudRev[i]=S.cloudRev[y-2026];
+    else if(y>2030)cloudRev[i]=cloudRev[i-1]*(1+S.cloudRevG);}
+  const fleetROIC=[],singleROIC=[],conROIC=[],hurdA=[],hurdB=[];
+  for(let i=0;i<N;i++){
+    fleetROIC.push(avgNet[i]>0?(S.ebitdaM*cloudRev[i]-dep[i])*(1-S.taxCloud)/avgNet[i]:0);
+    singleROIC.push(vintGross[i]>0?(S.ebitdaM*cloudRev[i]-vintDep[i])*(1-S.taxCloud)/vintGross[i]:0);
+    conROIC.push((avgNet[i]+wip[i])>0?(S.ebitdaM*cloudRev[i]-dep[i])*(1-S.taxCloud)/(avgNet[i]+wip[i]):0);
+    hurdA.push(S.ebitdaM>0?(S.roicA*avgNet[i]/(1-S.taxCloud)+dep[i])/S.ebitdaM:0);
+    hurdB.push(S.ebitdaM>0?(S.roicB*avgNet[i]/(1-S.taxCloud)+dep[i])/S.ebitdaM:0);}
+  // ---- NVDA revenue vs the cloud pool (independent legs — a true cross-check) ----
+  // BASIS: supported GW is built off 100% of AI capex; the cloud pool corresponds to the
+  // cloudShare slice only. Cloud GW = supported GW x cloudShare, else the density is understated 1/0.6x.
+  const nvdaVsCloud=[],cloudGW=[],revPerCloudGW=[],capexPerCloud=[];
+  for(let i=0;i<N;i++){
+    nvdaVsCloud.push(cloudRev[i]>0?rev[i]/cloudRev[i]:0);
+    cloudGW.push(sup[i]*S.cloudShare);
+    revPerCloudGW.push(cloudGW[i]>0?(cloudRev[i]/1000)/cloudGW[i]:0);
+    capexPerCloud.push(cloudRev[i]>0?total[i]/cloudRev[i]:0);}
+  const dnaRate=refC/S.lifeChip+refN/S.lifeChip+refO/S.lifeOth;
+  const mA=(S.roicA/(1-S.taxCloud)+dnaRate)/S.ebitdaM,mB=(S.roicB/(1-S.taxCloud)+dnaRate)/S.ebitdaM;
+  // ---- AI Labs ----
+  const infRatio=S.openShare*(1-S.openGM)+(1-S.openShare)*(1-S.closedGM);
+  const trRatio=(S.openShare*S.trOpen+(1-S.openShare)*S.trClosed)*S.trCov;
+  const mapped=infRatio+trRatio;
+  const labsRev=[],openRev=[],closedRev=[],closedNopat=[],openNopat=[],closedEV=[],gwClosed=[],gwOpen=[];
+  for(let i=0;i<N;i++){const y=YRS[i];
+    if(y<2026){labsRev.push(0);openRev.push(0);closedRev.push(0);closedNopat.push(0);openNopat.push(0);closedEV.push(0);gwClosed.push(0);gwOpen.push(0);continue;}
+    const L=mapped>0?cloudRev[i]*S.mapShare/mapped:0;
+    const oR=L*S.openShare,cR=L*(1-S.openShare);
+    const oE=oR*(S.openGM-S.trOpen-S.sgaOpen),cE=cR*(S.closedGM-S.trClosed-S.sgaClosed);
+    const oN=oE>0?oE*(1-S.taxLabs):oE,cN=cE>0?cE*(1-S.taxLabs):cE;
+    labsRev.push(L);openRev.push(oR);closedRev.push(cR);
+    openNopat.push(oN);closedNopat.push(cN);closedEV.push(cN*S.evMult);
+    gwClosed.push(S.densClosed>0?cR/S.densClosed:0);gwOpen.push(S.densOpen>0?oR/S.densOpen:0);}
+  // ---- sensitivity grids ----
+  const shareCases=[0.4,0.45,0.5,0.55,0.6,0.65],floorCases=[0.58,0.6,0.62,0.64,0.66,0.68];
+  const pv2628=dist[IX(2026)]/(1+S.ke)+dist[IX(2027)]/Math.pow(1+S.ke,2)+dist[IX(2028)]/Math.pow(1+S.ke,3);
+  function casePx(sh31,fl){
+    const flows=[];
+    for(let t=0;t<17;t++){const y=2029+t,i=IX(y);
+      const sh=y===2029?S.share29:y===2030?S.share30:sh31;
+      const g2=Math.max(fl,gm[IX(2028)]-(t+1)*S.gmFade);
+      const r=total[i]*(1-nwSh[i]-haSh[i])*sh*(1+S.attach27)+othersRev[i];
+      flows.push(r*(g2-opx[i])*(1-S.tax)*pay[i]);}
+    let pv=0;for(let t=0;t<17;t++)pv+=flows[t]/Math.pow(1+S.ke,t+1);
+    pv/=Math.pow(1+S.ke,3);
+    const tv=(S.ke>S.gPerp)?flows[16]*(1+S.gPerp)/(S.ke-S.gPerp):0;
+    return (pv2628+pv+tv/Math.pow(1+S.ke,20))*roll/S.shares;}
+  const grid1=shareCases.map(sh=>floorCases.map(fl=>casePx(sh,fl)));
+  const cagrCases=[0.05,0.075,0.10,0.125,0.15],shareCases2=[0.4,0.45,0.5,0.55,0.6];
+  function cagrPx(cagr,sh31){
+    const target=rev[IX(2028)]*Math.pow(1+cagr,17);
+    const zN=nwSh[IX(2045)],zH=haSh[IX(2045)];
+    const gSol=Math.pow((target-othersRev[N-1])/(sh31*(1+S.attach27)*(1-zN-zH))/total[IX(2028)],1/17)-1;
+    const flows=[];
+    for(let t=0;t<17;t++){const y=2029+t,i=IX(y);
+      const sh=y===2029?S.share29:y===2030?S.share30:sh31;
+      const r=total[IX(2028)]*Math.pow(1+gSol,t+1)*(1-nwSh[i]-haSh[i])*sh*(1+S.attach27)+othersRev[i];
+      flows.push(r*(gm[i]-opx[i])*(1-S.tax)*pay[i]);}
+    let pv=pv2628;for(let t=0;t<17;t++)pv+=flows[t]/Math.pow(1+S.ke,t+4);
+    const tv=(S.ke>S.gPerp)?flows[16]*(1+S.gPerp)/(S.ke-S.gPerp):0;
+    return{px:(pv+tv/Math.pow(1+S.ke,20))*roll/S.shares,g:gSol};}
+  const grid2=cagrCases.map(c=>shareCases2.map(sh=>cagrPx(c,sh).px));
+  const grid2g=cagrCases.map(c=>cagrPx(c,0.5).g);
+  const baseCagr=Math.pow(rev[IX(2045)]/rev[IX(2028)],1/17)-1;
+  return{total,chips,nw,oth,nwSh,haSh,share,revChips,nwRev,othersRev,rev,gm,opx,pay,nopat,dist,
+    pvFlows,TV,pvTV,roll,pvDated,px,days,
+    gwBuy,gwC,gwN,gwO,actC,actN,actO,sup,retGW,retVal,refC,refN,refO,
+    avgC,avgN2,avgO,avgNet,dep,wip,vintDep,vintGross,cloudRev,fleetROIC,singleROIC,conROIC,hurdA,hurdB,mA,mB,dnaRate,
+    nvdaVsCloud,cloudGW,revPerCloudGW,capexPerCloud,
+    mapped,infRatio,trRatio,labsRev,openRev,closedRev,openNopat,closedNopat,closedEV,gwClosed,gwOpen,
+    grid1,grid2,grid2g,baseCagr,shareCases,floorCases,cagrCases,shareCases2};
+}
+
+/* ================= state ================= */
+function clone(o){return JSON.parse(JSON.stringify(o));}
+let S=clone(FILE);
+try{const saved=localStorage.getItem('nvdaGwDcf.v1');if(saved){const p=JSON.parse(saved);
+  for(const k of Object.keys(FILE)){if(k in p)S[k]=p[k];}}}catch(e){}
+function persist(){try{localStorage.setItem('nvdaGwDcf.v1',JSON.stringify(S));}catch(e){}}
+
+/* ================= formatting ================= */
+const fBn=v=>{const b=v/1000;return (Math.abs(b)>=100?b.toFixed(0):Math.abs(b)>=10?b.toFixed(1):b.toFixed(2)).replace(/\B(?=(\d{3})+(?!\d))/g,',');};
+const f$=v=>'$'+v.toFixed(2);
+const fPct=v=>(v*100).toFixed(1)+'%';
+const fGW=v=>Math.abs(v)>=100?v.toFixed(0):v.toFixed(1);
+const fmm=v=>Math.round(v).toLocaleString('en-US');
+
+/* ================= chart helpers ================= */
+const css=k=>getComputedStyle(document.documentElement).getPropertyValue(k).trim();
+const tip=document.getElementById('tip');
+function showTip(html,x,y){tip.innerHTML=html;tip.style.display='block';
+  const r=tip.getBoundingClientRect();
+  tip.style.left=Math.min(x+14,window.innerWidth-r.width-8)+'px';
+  tip.style.top=Math.max(6,Math.min(y+14,window.innerHeight-r.height-8))+'px';}
+function hideTip(){tip.style.display='none';}
+
+function lineChart(el,{series,years,fmt=fBn,h=230,unit='',band=null,zeroLine=false,annot=null,extra=null,refLine=null,minW=560}){
+  const W=Math.max(minW,el.clientWidth-4),H=h,mL=54,mR=110,mT=14,mB=26;
+  const iw=W-mL-mR,ih=H-mT-mB;
+  let lo=Infinity,hi=-Infinity;
+  series.forEach(s=>s.vals.forEach(v=>{if(v<lo)lo=v;if(v>hi)hi=v;}));
+  if(band){lo=Math.min(lo,band[0]);hi=Math.max(hi,band[1]);}
+  if(refLine){lo=Math.min(lo,refLine.v);hi=Math.max(hi,refLine.v);}
+  if(zeroLine)lo=Math.min(lo,0);
+  if(lo===hi){hi=lo+1;}
+  const pad=(hi-lo)*0.07;lo-=pad;hi+=pad;
+  const X=i=>mL+iw*i/(years.length-1),Y=v=>mT+ih*(1-(v-lo)/(hi-lo));
+  const ink2=css('--ink2'),ink3=css('--ink3'),line=css('--line2');
+  let g='';
+  const ticks=4;
+  for(let t=0;t<=ticks;t++){const v=lo+(hi-lo)*t/ticks,y=Y(v);
+    g+=`<line x1="${mL}" x2="${W-mR}" y1="${y}" y2="${y}" stroke="${line}" stroke-width="1"/>`;
+    g+=`<text class="num" x="${mL-7}" y="${y+4}" text-anchor="end" font-size="10" fill="${ink3}">${fmt(v)}</text>`;}
+  if(band)g+=`<rect x="${mL}" y="${Y(band[1])}" width="${iw}" height="${Y(band[0])-Y(band[1])}" fill="${css('--accent')}" opacity="0.10"/>`;
+  if(zeroLine)g+=`<line x1="${mL}" x2="${W-mR}" y1="${Y(0)}" y2="${Y(0)}" stroke="${ink3}" stroke-width="1.2"/>`;
+  if(refLine){const yr=Y(refLine.v);
+    g+=`<line x1="${mL}" x2="${W-mR}" y1="${yr}" y2="${yr}" stroke="${ink2}" stroke-width="1.4" stroke-dasharray="5 3"/>`;
+    g+=`<text x="${W-mR-3}" y="${yr-5}" text-anchor="end" font-size="9.5" font-weight="600" fill="${ink2}">${refLine.label}</text>`;}
+  years.forEach((yy,i)=>{if((yy%5===0)||yy===2026){g+=`<text x="${X(i)}" y="${H-8}" text-anchor="middle" font-size="10" fill="${ink3}">${yy}</text>`;}});
+  if(annot)g+=annot({X,Y});
+  series.forEach(s=>{
+    const pts=s.vals.map((v,i)=>`${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join(' ');
+    if(s.area)g+=`<polygon points="${mL},${Y(Math.max(lo,0))} ${pts} ${W-mR},${Y(Math.max(lo,0))}" fill="${s.color}" opacity="0.10"/>`;
+    g+=`<polyline points="${pts}" fill="none" stroke="${s.color}" stroke-width="2" stroke-linejoin="round" ${s.dash?`stroke-dasharray="${s.dash}"`:''}/>`;
+    const li=s.vals.length-1;
+    g+=`<circle cx="${X(li)}" cy="${Y(s.vals[li])}" r="3.5" fill="${s.color}" stroke="${css('--surface')}" stroke-width="1.5"/>`;
+    g+=`<text x="${X(li)+7}" y="${Y(s.vals[li])+3.5}" font-size="10.5" font-weight="600" fill="${ink2}">${s.name}</text>`;});
+  g+=`<line id="ch" x1="0" x2="0" y1="${mT}" y2="${H-mB}" stroke="${ink3}" stroke-width="1" opacity="0" stroke-dasharray="3 3"/>`;
+  g+=`<rect x="${mL}" y="${mT}" width="${iw}" height="${ih}" fill="transparent" data-ov="1"/>`;
+  el.innerHTML=`<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img">${g}</svg>`;
+  const svg=el.querySelector('svg'),cross=svg.querySelector('#ch'),ov=svg.querySelector('[data-ov]');
+  ov.addEventListener('mousemove',e=>{
+    const r=svg.getBoundingClientRect(),mx=e.clientX-r.left;
+    let i=Math.round((mx-mL)/(iw/(years.length-1)));i=Math.max(0,Math.min(years.length-1,i));
+    cross.setAttribute('x1',X(i));cross.setAttribute('x2',X(i));cross.setAttribute('opacity','0.7');
+    let html=`<div class="t">CY${years[i]}</div>`;
+    series.forEach(s=>{html+=`<div class="r"><span class="n"><span class="sw" style="background:${s.color}"></span>${s.name}</span><span class="v">${fmt(s.vals[i])}${unit}</span></div>`;});
+    if(extra&&extra.length){html+=`<div style="border-top:1px solid var(--line2);margin:5px 0 4px"></div>`;
+      extra.forEach(x=>{html+=`<div class="r"><span class="n">${x.name}</span><span class="v">${x.fmt(x.vals[i])}</span></div>`;});}
+    showTip(html,e.clientX,e.clientY);});
+  ov.addEventListener('mouseleave',()=>{cross.setAttribute('opacity','0');hideTip();});
+}
+
+function stackChart(el,{series,years,fmt=fBn,h=250,unit='',lineOver=null}){
+  const W=Math.max(560,el.clientWidth-4),H=h,mL=54,mR=lineOver?110:24,mT=14,mB=26;
+  const iw=W-mL-mR,ih=H-mT-mB;
+  const totals=years.map((_,i)=>series.reduce((a,s)=>a+Math.max(0,s.vals[i]),0));
+  let hi=Math.max(...totals);if(lineOver)hi=Math.max(hi,...lineOver.vals);
+  hi*=1.06;const lo=0;
+  const bw=Math.min(26,iw/years.length*0.72);
+  const X=i=>mL+iw*(i+0.5)/years.length,Y=v=>mT+ih*(1-(v-lo)/(hi-lo));
+  const ink2=css('--ink2'),ink3=css('--ink3'),line=css('--line2'),surf=css('--surface');
+  let g='';
+  for(let t=0;t<=4;t++){const v=lo+(hi-lo)*t/4,y=Y(v);
+    g+=`<line x1="${mL}" x2="${W-mR}" y1="${y}" y2="${y}" stroke="${line}"/>`;
+    g+=`<text class="num" x="${mL-7}" y="${y+4}" text-anchor="end" font-size="10" fill="${ink3}">${fmt(v)}</text>`;}
+  years.forEach((yy,i)=>{if(yy%5===0||yy===2026)g+=`<text x="${X(i)}" y="${H-8}" text-anchor="middle" font-size="10" fill="${ink3}">${yy}</text>`;});
+  years.forEach((yy,i)=>{let acc=0;
+    series.forEach(s=>{const v=Math.max(0,s.vals[i]);if(v<=0)return;
+      const y1=Y(acc+v),hh=Math.max(0,Y(acc)-Y(acc+v)-1);
+      g+=`<rect x="${(X(i)-bw/2).toFixed(1)}" y="${y1.toFixed(1)}" width="${bw.toFixed(1)}" height="${hh.toFixed(1)}" fill="${s.color}" rx="${acc+v>=totals[i]-1e-9?3:0}"/>`;
+      acc+=v;});});
+  if(lineOver){
+    const pts=lineOver.vals.map((v,i)=>`${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join(' ');
+    g+=`<polyline points="${pts}" fill="none" stroke="${lineOver.color}" stroke-width="2.2"/>`;
+    const li=lineOver.vals.length-1;
+    g+=`<text x="${X(li)+8}" y="${Y(lineOver.vals[li])+3.5}" font-size="10.5" font-weight="600" fill="${ink2}">${lineOver.name}</text>`;}
+  g+=`<rect x="${mL}" y="${mT}" width="${iw}" height="${ih}" fill="transparent" data-ov="1"/>`;
+  el.innerHTML=`<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img">${g}</svg>`;
+  const svg=el.querySelector('svg'),ov=svg.querySelector('[data-ov]');
+  ov.addEventListener('mousemove',e=>{
+    const r=svg.getBoundingClientRect(),mx=e.clientX-r.left;
+    let i=Math.floor((mx-mL)/(iw/years.length));i=Math.max(0,Math.min(years.length-1,i));
+    let html=`<div class="t">CY${years[i]}</div>`;
+    series.forEach(s=>{html+=`<div class="r"><span class="n"><span class="sw" style="background:${s.color}"></span>${s.name}</span><span class="v">${fmt(s.vals[i])}${unit}</span></div>`;});
+    html+=`<div class="r"><span class="n">Total</span><span class="v">${fmt(totals[i])}${unit}</span></div>`;
+    if(lineOver)html+=`<div class="r"><span class="n"><span class="sw" style="background:${lineOver.color}"></span>${lineOver.name}</span><span class="v">${fmt(lineOver.vals[i])}${unit}</span></div>`;
+    showTip(html,e.clientX,e.clientY);});
+  ov.addEventListener('mouseleave',hideTip);
+}
+
+const RAMP=['#cde2fb','#b7d3f6','#9ec5f4','#86b6ef','#6da7ec','#5598e7','#3987e5','#2a78d6','#256abf','#1c5cab','#184f95','#104281','#0d366b'];
+function heatmap(el,{rows,cols,vals,rowLabel,colLabel,fmt,base}){
+  let lo=Infinity,hi=-Infinity;vals.forEach(r=>r.forEach(v=>{lo=Math.min(lo,v);hi=Math.max(hi,v);}));
+  let h=`<table class="hm"><tr><th style="text-align:left">${rowLabel} \\ ${colLabel}</th>`;
+  cols.forEach(c=>h+=`<th>${c}</th>`);h+='</tr>';
+  vals.forEach((r,i)=>{h+=`<tr><th style="text-align:left">${rows[i]}</th>`;
+    r.forEach((v,j)=>{const t=hi>lo?(v-lo)/(hi-lo):0.5;const ci=Math.round(t*(RAMP.length-1));
+      const fg=ci>=6?'#ffffff':'#10203a';
+      const b=(base&&base[0]===i&&base[1]===j)?' base':'';
+      h+=`<td class="num${b}" style="background:${RAMP[ci]};color:${fg}">${fmt(v)}</td>`;});
+    h+='</tr>';});
+  h+='</table>';el.innerHTML=h;
+}
+
+/* ================= render ================= */
+const $=id=>document.getElementById(id);
+let E=null;
+function render(){
+  E=engine(S);
+  // hero
+  $('mPx').textContent=f$(E.px);
+  $('mPxSub').textContent=`dated ${S.valDate} · Ke ${fPct(S.ke)} · g ${fPct(S.gPerp)}`;
+  const up=E.px/S.refPx-1;
+  $('mUp').innerHTML=`<span class="${up>=0?'delta-pos':'delta-neg'}">${up>=0?'+':''}${(up*100).toFixed(1)}%</span>`;
+  $('mRef').textContent=`ref $${S.refPx.toFixed(2)} · BBG close 31-Aug-26`;
+  const dd=E.px-CHECKS.px;
+  $('mDelta').innerHTML=Math.abs(dd)<0.005?'<span style="color:var(--ink3)">±0.00</span>':`<span class="${dd>=0?'delta-pos':'delta-neg'}">${dd>=0?'+':''}${dd.toFixed(2)}</span>`;
+  $('mTV').textContent=fPct(E.pvTV/(E.pvFlows+E.pvTV));
+  $('mPE').textContent=(E.px/(E.nopat[IX(2027)]/S.shares)).toFixed(1)+'x · '+(E.px/(E.nopat[IX(2028)]/S.shares)).toFixed(1)+'x';
+
+  const c1=css('--s1'),c2=css('--s2'),c3=css('--s3'),c4=css('--s4'),c5=css('--s5'),acc=css('--accent'),ink3=css('--ink3');
+
+  // valuation tab
+  stackChart($('chDist'),{years:YRS.slice(IX(2026)),series:[
+    {name:'Retained NOPAT',color:css('--line'),vals:E.nopat.slice(IX(2026)).map((v,i)=>v-E.dist[IX(2026)+i])},
+    {name:'Distribution',color:acc,vals:E.dist.slice(IX(2026))}],fmt:fBn,unit:' bn',h:240});
+  const naBn=v=>v>0?fBn(v):'n/a', naX=v=>v>0?v.toFixed(2)+'x':'n/a', naGW=v=>v>0?'$'+v.toFixed(1)+'bn':'n/a';
+  lineChart($('chRev'),{years:YRS,minW:420,series:[
+    {name:'NVDA revenue',color:c1,vals:E.rev,area:true},
+    {name:'NOPAT',color:c3,vals:E.nopat}],fmt:fBn,h:230,
+    extra:[{name:'AI cloud pool',vals:E.cloudRev,fmt:naBn},
+           {name:'NVDA / cloud',vals:E.nvdaVsCloud,fmt:naX},
+           {name:'cloud rev / cloud-GW',vals:E.revPerCloudGW,fmt:naGW}],
+    annot:({X,Y})=>{const i0=IX(2029),i1=IX(2031);
+      return `<rect x="${X(i0)}" y="14" width="${X(i1)-X(i0)}" height="8" fill="${c2}" opacity="0.5" rx="2"/><text x="${(X(i0)+X(i1))/2}" y="10" text-anchor="middle" font-size="9.5" fill="${ink3}">air pocket</text>`;}});
+  lineChart($('chRatio'),{years:YRS.slice(IX(2026)),minW:360,series:[
+    {name:'NVDA / cloud',color:c4,vals:E.nvdaVsCloud.slice(IX(2026)),area:true}],
+    fmt:v=>v.toFixed(2)+'x',h:230,refLine:{v:1,label:'parity — NVDA books the whole cloud pool'},
+    extra:[{name:'NVDA revenue',vals:E.rev.slice(IX(2026)),fmt:fBn},
+           {name:'AI cloud pool',vals:E.cloudRev.slice(IX(2026)),fmt:naBn},
+           {name:'AI capex / cloud rev',vals:E.capexPerCloud.slice(IX(2026)),fmt:naX}]});
+  {const yy=[2026,2028,2031,2035,2045];
+   let h='';yy.forEach(y=>{const i=IX(y);
+     h+=`<span class="k">CY${y} NVDA / cloud</span><span class="v">${E.nvdaVsCloud[i].toFixed(2)}x</span>`;});
+   const pk=E.nvdaVsCloud.indexOf(Math.max(...E.nvdaVsCloud));
+   h+=`<span class="k">peak ratio</span><span class="v">${E.nvdaVsCloud[pk].toFixed(2)}x CY${YRS[pk]}</span>`;
+   $('kvCloud').innerHTML=h;
+   // guardrail vs the realized rev-per-GW ledger (assumptions.md rev-per-gw), cloud-consistent basis
+   const LO=10,HI=25;
+   const dens=[2026,2028,2035,2045].map(y=>[y,E.revPerCloudGW[IX(y)]]);
+   const below=dens.filter(d=>d[1]<LO).map(d=>d[0]);
+   $('cloudChips').innerHTML=
+     dens.map(d=>`<span class="schip ${d[1]>=LO&&d[1]<=HI?'ok':'warn'}">CY${d[0]} cloud rev/GW $${d[1].toFixed(1)}bn</span>`).join('')+
+     `<span class="schip">realized ledger $10–25bn/GW-yr · Trainium &lt;10 · merchant 12–13 · MS TPU ~20 · premium ~25</span>`+
+     (below.length?`<span class="schip warn">below the Trainium floor in ${below.join(', ')} — cloud leg thin vs the GW the capex leg builds</span>`:'');}
+  // PV bridge
+  {const el=$('chBridge');const items=[
+    ['PV of CY26–45 flows',E.pvFlows],['PV of terminal value',E.pvTV],
+    ['Roll to '+S.valDate,(E.pvFlows+E.pvTV)*(E.roll-1)],['Equity PV (dated)',E.pvDated]];
+    const W=Math.max(380,el.clientWidth-4),H=170,mL=10,bw=(W-mL-20)/4-16;
+    const hi=E.pvDated*1.08;let x=mL,g='',accum=0;
+    items.forEach((it,k)=>{const v=it[1];const isTot=k===3;
+      const y0=isTot?H-30:H-30-(accum/hi)*(H-58),y1=isTot?H-30-(v/hi)*(H-58):H-30-((accum+v)/hi)*(H-58);
+      g+=`<rect x="${x}" y="${Math.min(y0,y1)}" width="${bw}" height="${Math.abs(y0-y1)}" fill="${isTot?acc:k===2?c4:c1}" opacity="${isTot?1:0.85}" rx="3"/>`;
+      g+=`<text class="num" x="${x+bw/2}" y="${Math.min(y0,y1)-5}" text-anchor="middle" font-size="10.5" font-weight="600" fill="${css('--ink2')}">${fBn(v)}</text>`;
+      g+=`<text x="${x+bw/2}" y="${H-16}" text-anchor="middle" font-size="9" fill="${ink3}">${it[0].split(' ').slice(0,2).join(' ')}</text>`;
+      g+=`<text x="${x+bw/2}" y="${H-6}" text-anchor="middle" font-size="9" fill="${ink3}">${it[0].split(' ').slice(2).join(' ')}</text>`;
+      if(!isTot)accum+=v;x+=bw+16;});
+    el.innerHTML=`<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">${g}</svg>`;
+    $('kvBridge').innerHTML=`<span class="k">US$bn · roll factor</span><span class="v">${E.roll.toFixed(4)} (${E.days} days)</span>
+      <span class="k">Terminal value (undiscounted)</span><span class="v">${fBn(E.TV)} bn</span>
+      <span class="k">Value / share</span><span class="v">${f$(E.px)}</span>`;}
+  heatmap($('hm1'),{rows:E.shareCases.map(fPct),cols:E.floorCases.map(fPct),vals:E.grid1,
+    rowLabel:'share CY31+',colLabel:'GM floor',fmt:v=>v.toFixed(0),
+    base:[E.shareCases.findIndex(v=>Math.abs(v-S.share31)<1e-9),E.floorCases.findIndex(v=>Math.abs(v-S.gmFloor)<1e-9)]});
+  heatmap($('hm2'),{rows:E.cagrCases.map(fPct),cols:E.shareCases2.map(fPct),vals:E.grid2,
+    rowLabel:'rev CAGR 28–45',colLabel:'share CY31+',fmt:v=>v.toFixed(0),base:null});
+  $('kvCagr').innerHTML=`<span class="k">Base CY28–45 revenue CAGR</span><span class="v">${fPct(E.baseCagr)}</span>
+    <span class="k">Implied capex CAGR @ 10% rev / 50% share</span><span class="v">${fPct(E.grid2g[2])}</span>`;
+  lineChart($('chMargin'),{years:YRS,series:[
+    {name:'Gross margin',color:c1,vals:E.gm},
+    {name:'Opex %',color:c2,vals:E.opx},
+    {name:'Payout',color:c3,vals:E.pay,dash:'4 3'}],fmt:fPct,h:210});
+
+  // capex & GW tab
+  stackChart($('chCapex'),{years:YRS,series:[
+    {name:'Chips',color:c1,vals:E.chips},
+    {name:'Networking + CPU',color:c2,vals:E.nw},
+    {name:'Hard assets',color:c3,vals:E.oth}],fmt:fBn,h:260});
+  lineChart($('chGW'),{years:YRS,series:[
+    {name:'Chip stock',color:c1,vals:E.actC},
+    {name:'NW stock',color:c2,vals:E.actN},
+    {name:'Hard-asset stock',color:c3,vals:E.actO},
+    {name:'SUPPORTED (MIN)',color:acc,vals:E.sup,area:true}],fmt:fGW,h:250,unit:' GW'});
+  lineChart($('chGWBuy'),{years:YRS,series:[
+    {name:'GW purchased/yr',color:c1,vals:E.gwBuy},
+    {name:'cost $bn/GW',color:c4,vals:S.costGW,dash:'4 3'}],fmt:fGW,h:220});
+  stackChart($('chRetire'),{years:YRS,series:[
+    {name:'GW retiring',color:c2,vals:E.retGW}],fmt:fGW,unit:' GW',h:210,
+    lineOver:{name:'value $bn',color:c4,vals:E.retVal.map(v=>v/1000)}});
+  {const shares3=[['Chip cost share',E.refC],['NW cost share',E.refN],['Hard-asset cost share',E.refO]];
+   const ok=Math.abs(E.refC+E.refN+E.refO-1)<1e-6;
+   $('gwStatus').innerHTML=shares3.map(s=>`<span class="schip">${s[0]} ${fPct(s[1])}</span>`).join('')+
+    `<span class="schip ${ok?'ok':'warn'}">${ok?'shares sum 100% ✓':'shares ≠ 100%'}</span>`+
+    `<span class="schip warn">SCENARIO ONLY — no external capacity anchor</span>`;}
+
+  // ROIC tab
+  lineChart($('chROIC'),{years:YRS.slice(IX(2025)),series:[
+    {name:'Fleet ROIC',color:c1,vals:E.fleetROIC.slice(IX(2025))},
+    {name:'Single-vintage',color:c2,vals:E.singleROIC.slice(IX(2025)),dash:'4 3'},
+    {name:'Incl. construction',color:c3,vals:E.conROIC.slice(IX(2025))}],
+    fmt:v=>(v*100).toFixed(0)+'%',h:250,band:[S.roicA,S.roicB],zeroLine:true});
+  lineChart($('chHurdle'),{years:YRS.slice(IX(2026)),series:[
+    {name:'Cloud revenue',color:c1,vals:E.cloudRev.slice(IX(2026)),area:true},
+    {name:'Hurdle @ A',color:c3,vals:E.hurdA.slice(IX(2026)),dash:'4 3'},
+    {name:'Hurdle @ B',color:c2,vals:E.hurdB.slice(IX(2026)),dash:'4 3'}],fmt:fBn,h:240});
+  stackChart($('chFleet'),{years:YRS,series:[
+    {name:'Chips (net)',color:c1,vals:E.avgC},
+    {name:'NW (net)',color:c2,vals:E.avgN2},
+    {name:'Hard assets (net)',color:c3,vals:E.avgO},
+    {name:'Construction',color:c4,vals:E.wip}],fmt:fBn,h:240});
+  $('kvRoic').innerHTML=`<span class="k">Avg net assets CY28</span><span class="v">${fBn(E.avgNet[IX(2028)])} bn</span>
+    <span class="k">Depreciation CY28</span><span class="v">${fBn(E.dep[IX(2028)])} bn</span>
+    <span class="k">Fleet ROIC CY26 → CY29</span><span class="v">${fPct(E.fleetROIC[IX(2026)])} → ${fPct(E.fleetROIC[IX(2029)])}</span>`;
+  {const b=[39,48,60];let h='';
+   b.forEach(x=>{h+=`<span class="k">Build $${x}bn/GW → rev needed @ ${fPct(S.roicA)}</span><span class="v">$${(x*E.mA).toFixed(1)}bn/GW-yr</span>`;});
+   h+=`<span class="k">idem @ ${fPct(S.roicB)} (build $39bn)</span><span class="v">$${(39*E.mB).toFixed(1)}bn/GW-yr</span>
+   <span class="k">First-year D&amp;A / gross capex</span><span class="v">${fPct(E.dnaRate)}</span>`;
+   $('kvRevGW').innerHTML=h;}
+
+  // Labs tab
+  lineChart($('chLabs'),{years:YRS.slice(IX(2026)),series:[
+    {name:'Cloud pool',color:c4,vals:E.cloudRev.slice(IX(2026)),dash:'4 3'},
+    {name:'Labs revenue',color:c1,vals:E.labsRev.slice(IX(2026)),area:true},
+    {name:'Closed',color:c2,vals:E.closedRev.slice(IX(2026))},
+    {name:'Open serving',color:c3,vals:E.openRev.slice(IX(2026))}],fmt:fBn,h:250});
+  {const i=IX(S.labsYear),ev=E.closedEV[i];
+   const alloc=[['Anthropic',S.allocAnth,c1],['OpenAI',S.allocOAI,c2],['Gemini',S.allocGem,c3],['Meta / bucket',S.allocMeta,c5]];
+   const el=$('chEV');const W=Math.max(380,el.clientWidth-4),H=88;let x=0,g='';
+   alloc.forEach(a=>{const w=(W-6)*a[1]/Math.max(1e-9,alloc.reduce((s,b)=>s+b[1],0));
+     g+=`<rect x="${x}" y="18" width="${Math.max(0,w-2)}" height="34" fill="${a[2]}" rx="4"/>`;
+     if(w>56)g+=`<text x="${x+w/2}" y="70" text-anchor="middle" font-size="10" fill="${ink3}">${a[0]} ${fPct(a[1])}</text>`;
+     x+=w;});
+   el.innerHTML=`<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">${g}</svg>`;
+   const sum=S.allocAnth+S.allocOAI+S.allocGem+S.allocMeta;
+   $('kvLabs').innerHTML=`<span class="k">Closed EV CY${S.labsYear} @ ${S.evMult}x</span><span class="v">$${(ev/1e6).toFixed(2)} tn</span>
+     <span class="k">Anthropic slice</span><span class="v">$${(ev*S.allocAnth/1e6).toFixed(2)} tn</span>
+     <span class="k">Allocation sum</span><span class="v" style="color:${Math.abs(sum-1)<1e-9?'inherit':'var(--warn)'}">${fPct(sum)}</span>`;}
+  stackChart($('chLabsGW'),{years:YRS.slice(IX(2026)),series:[
+    {name:'Closed GW',color:c1,vals:E.gwClosed.slice(IX(2026))},
+    {name:'Open GW',color:c3,vals:E.gwOpen.slice(IX(2026))}],fmt:fGW,unit:' GW',h:230});
+  {const i=IX(S.labsYear);const L=E.labsRev[i],oR=E.openRev[i],cR=E.closedRev[i];
+   const rows=[
+    ['Labs / serving revenue',L],['— Open serving',oR],['— Closed labs',cR],
+    ['Open EBIT',oR*(S.openGM-S.trOpen-S.sgaOpen)],['Closed EBIT',cR*(S.closedGM-S.trClosed-S.sgaClosed)],
+    ['Closed NOPAT',E.closedNopat[i]],['Closed EV @ '+S.evMult+'x',E.closedEV[i]],
+    ['Inference cloud bill',L*E.infRatio],['Training paid to cloud',L*E.trRatio],
+    ['Cloud EBIT (own layer)',E.cloudRev[i]*S.cloudEbitM]];
+   $('tblLabsPL').innerHTML='<tr><th>CY'+S.labsYear+'</th><th>US$bn</th></tr>'+
+     rows.map(r=>`<tr><td>${r[0]}</td><td class="num">${fBn(r[1])}</td></tr>`).join('');}
+
+  // outputs table
+  {const rows=[['Capex total',E.total],['— Chips',E.chips],['— NW + CPU',E.nw],['— Hard assets',E.oth],
+    ['NVDA share of chips',E.share.map(fPct)],['NVDA revenue',E.rev],['Gross margin',E.gm.map(fPct)],
+    ['NOPAT',E.nopat],['Payout',E.pay.map(fPct)],['Distribution',E.dist],
+    ['Supported GW',E.sup.map(fGW)],['Cloud revenue',E.cloudRev],['Fleet ROIC',E.fleetROIC.map(fPct)],
+    ['Labs revenue',E.labsRev],['Closed EV',E.closedEV]];
+   let h='<tr><th>US$mm unless noted</th>'+YRS.map(y=>`<th>${y}</th>`).join('')+'</tr>';
+   rows.forEach(r=>{h+=`<tr><td>${r[0]}</td>`+r[1].map(v=>`<td class="num">${typeof v==='string'?v:fmm(v)}</td>`).join('')+'</tr>';});
+   $('tblOut').innerHTML=h;}
+
+  markDrift();
+}
+
+/* ================= input tables ================= */
+const VEC_DEFS=[
+  ['chips','Capex — chips',6],['nw','Capex — NW + CPU',6],['oth','Capex — hard assets',6],
+  ['nvdaRevChips','NVDA chip revenue',6],['othersRev','NVDA other revenue',6],
+  ['gm','Gross margin',6],['opex','Opex % (CY23–27)',5]];
+function buildVecTable(){
+  let h='<tr><th>Vector · CY23–28 hard copies</th>';
+  for(let i=0;i<6;i++)h+=`<th>${2023+i}</th>`;h+='</tr>';
+  VEC_DEFS.forEach(([k,label,n])=>{
+    h+=`<tr><td>${label}</td>`;
+    for(let i=0;i<6;i++){
+      if(i>=n){h+='<td></td>';continue;}
+      h+=`<td><input type="number" step="any" data-vec="${k}" data-i="${i}" value="${S[k][i]}"></td>`;}
+    h+='</tr>';});
+  h+='<tr><th>Cloud revenue (AI Model)</th>'+[2026,2027,2028,2029,2030].map(y=>`<th>${y}</th>`).join('')+'<th></th></tr>';
+  h+='<tr><td>US$mm · then +growth CY31+</td>'+[0,1,2,3,4].map(j=>`<td><input type="number" step="any" data-vec="cloudRev" data-i="${j}" value="${S.cloudRev[j]}"></td>`).join('')+'<td></td></tr>';
+  $('tblVec').innerHTML=h;
+}
+function buildCostTable(){
+  let h='<tr>'+YRS.map(y=>`<th>${y}</th>`).join('')+'</tr><tr>'+
+    YRS.map((y,i)=>`<td><input type="number" step="1" data-vec="costGW" data-i="${i}" value="${S.costGW[i]}"></td>`).join('')+'</tr>';
+  $('tblCost').innerHTML=h;
+}
+function bindVecInputs(){
+  document.querySelectorAll('input[data-vec]').forEach(inp=>{
+    inp.addEventListener('input',()=>{
+      const k=inp.dataset.vec,i=+inp.dataset.i,v=parseFloat(inp.value);
+      if(!isFinite(v))return;
+      S[k][i]=v;persist();queue();
+      inp.classList.toggle('drift',Math.abs(v-FILE[k][i])>1e-12);});
+    inp.classList.toggle('drift',Math.abs(S[inp.dataset.vec][+inp.dataset.i]-FILE[inp.dataset.vec][+inp.dataset.i])>1e-12);});
+}
+
+/* ================= scalar controls ================= */
+function bindCtl(){
+  document.querySelectorAll('.ctl[data-k]').forEach(ct=>{
+    const k=ct.dataset.k,num=ct.querySelector('input[type=number],input[type=date]'),rng=ct.querySelector('input[type=range]');
+    const set=v=>{
+      if(k==='valDate'){S[k]=v;}else{const f=parseFloat(v);if(!isFinite(f))return;S[k]=f;}
+      persist();sync();queue();};
+    const sync=()=>{
+      if(k==='valDate'){num.value=S[k];}
+      else{num.value=+(+S[k]).toPrecision(10);if(rng)rng.value=S[k];}
+      ct.classList.toggle('drift',String(S[k])!==String(FILE[k]));};
+    num.addEventListener('input',()=>set(num.value));
+    if(rng)rng.addEventListener('input',()=>set(rng.value));
+    ct._sync=sync;sync();});
+}
+function syncAll(){document.querySelectorAll('.ctl[data-k]').forEach(ct=>ct._sync&&ct._sync());}
+function markDrift(){/* dots handled in sync; vector drift in bindVecInputs */}
+
+/* ================= boot ================= */
+let timer=null;
+function queue(){clearTimeout(timer);timer=setTimeout(render,120);}
+
+document.querySelectorAll('nav.tabs button').forEach(b=>{
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('nav.tabs button').forEach(x=>x.setAttribute('aria-selected',x===b));
+    document.querySelectorAll('.tabpane').forEach(p=>p.classList.toggle('active',p.id==='tab-'+b.dataset.tab));
+    render();});});
+
+$('btnReset').addEventListener('click',()=>{S=clone(FILE);persist();syncAll();
+  document.querySelectorAll('input[data-vec]').forEach(inp=>{inp.value=S[inp.dataset.vec][+inp.dataset.i];inp.classList.remove('drift');});
+  render();});
+$('btnCopy').addEventListener('click',()=>{
+  const txt=JSON.stringify(S,null,1);
+  try{navigator.clipboard.writeText(txt);$('btnCopy').textContent='Copied ✓';setTimeout(()=>$('btnCopy').textContent='Copy scenario',1200);}catch(e){prompt('Scenario JSON:',txt);}});
+
+// engine fidelity self-test at FILE inputs (independent of current state)
+(function(){
+  const T=engine(clone(FILE));
+  const tests=[[T.px,CHECKS.px],[T.pvFlows,CHECKS.pvFlows],[T.pvTV,CHECKS.pvTV],
+    [T.sup[IX(2045)],CHECKS.gwActive45],[T.rev[IX(2029)],CHECKS.rev29],
+    [T.grid1[0][0],CHECKS.sensI6],[T.grid2[0][0],CHECKS.grid2_5_40],
+    [T.avgNet[IX(2028)],CHECKS.cohNet28],[T.closedEV[IX(2030)],CHECKS.labsEV30],
+    [T.gwClosed[IX(2030)]+T.gwOpen[IX(2030)],CHECKS.gwInf30]];
+  const pass=tests.filter(([a,b])=>Math.abs(a-b)<=1e-6*Math.max(1,Math.abs(b))).length;
+  const b=$('mBadge');
+  if(pass===tests.length){b.textContent='engine ≡ workbook · '+pass+'/'+tests.length+' ✓';b.className='badge ok';}
+  else{b.textContent='engine drift · '+pass+'/'+tests.length;b.className='badge fail';}
+})();
+
+bindCtl();buildVecTable();buildCostTable();bindVecInputs();render();
+window.addEventListener('resize',queue);
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change',queue);
+new MutationObserver(queue).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+</script>
