@@ -8,8 +8,6 @@ _Generated 2026-09-01 · the standing view of where our model and the curated re
 
 | Ticker | Metric | Yr | House | Consensus | Δ |
 |---|---|---|--:|--:|--:|
-| COHR | EPS | 2027 | 19.21 | 11.88 | +62% |
-| COHR | Revenue $bn | 2027 | 16.60 | 12.70 | +31% |
 | GOOG | Revenue $bn | 2026 | 505.00 | 427.20 | +18% |
 | GOOG | Revenue $bn | 2027 | 641.00 | 548.30 | +17% |
 | AAPL | EPS | 2026 | 10.12 | 8.71 | +16% |

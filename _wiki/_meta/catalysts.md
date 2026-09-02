@@ -2,26 +2,31 @@
 
 _Generated 2026-09-01 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (37)
+## 📅 Upcoming (42)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
 | 2026-09-01 | AAPL | **🆕🔴🔴 CEO TRANSITION EFFECTIVE 2026-09-01 — John Ternus succeeds Tim Cook (Cook's last day was 2026-08-31).** ➜ **Watch: whether the September product event is used to reset the Siri/AI timeline, and  |
 | 2026-09-01 | CRDO | **🆕🔴 DATED — Q1 FY27 PRINT: TUESDAY 2026-09-01, release 4:15pm ET, call 5:00pm ET** (Jefferies · Curtis, 2026-08-27). **The bars to beat: July revenue $480m vs Street $472m; October guide $530m vs Str |
 | 2026-09-01 | CRDO | **🆕🔴🔴 F1Q27 PRINT — TUESDAY 2026-09-01, 4:15pm ET RELEASE. THE ONE NUMBER THAT ADJUDICATES THE QUARTER IS THE F27 ZEROFLAP OPTICAL OUTLOOK, AND THREE HOUSES HAVE PUBLISHED THREE DIFFERENT BARS FOR IT: |
+| 2026-09-01 | DELL | **✅ RESOLVED 2026-09-01 — F2Q27 PRINTED (AMC 16:05 ET, call 16:30). Outcome: beat on every line, FY27 revenue +$25bn to $192bn, FY27 EPS $17.90 → $25.50, FY27 AI-server $60bn → $74bn, orders $60.9bn,  |
 | 2026-09-01 | DELL | **🆕🔴🔴 F2Q27 PRINT — TUESDAY 2026-09-01, AFTER MARKET.** The four things that decide it, per BofA: **(1) the AI-server triple — revenue / orders / backlog, modelled at $15.6bn / $25bn / $60.6bn against |
 | 2026-09-01 | RDDT | **🆕 GS COMMUNACOPIA + TECHNOLOGY, SAN FRANCISCO — week of 2026-09-01.** Goldman explicitly frames its 08-30 r/bodega takeaways as setting up *"key debates into our Communacopia + Technology conference |
 | 2026-09-02 | AVGO | **🆕🔴 2026-09-02 — FQ3 FY26 print, and the bar is set by consensus rather than by the guide: ~$120bn of FY27 AI sales is in the Street's numbers versus management's ">$100bn" (BofA · Arya, 2026-08-19). |
 | 2026-09-02 | AVGO | **🆕🔴🔴 Q3 FY26 PRINT — WEDNESDAY 2026-09-02, ~4:15pm ET release / 5:00pm ET call. Implied move 6.3%; JPM positioning score +3 (−5/+5).** The four numbers that decide it, in order: **(1) the FY27 AI rev |
 | 2026-09-02 | CRWD | **🆕🔴🔴 FAL.CON 2026 — 2026-08-31 → 09-03, Las Vegas. THE INVESTOR BRIEFING IS 2026-09-02, 11:30am-3:00pm PST.** The five items MS is watching, in order of how much they move the model: **(1) AIDR sizin |
+| 2026-09-02 | DELL | **2026-09-02 — UBS "Dell Technologies (DELL) Recap Call"** (UBS TMT Analyst Marketing, NYC). |
 | 2026-09-02 | HPE | **🆕🔴🔴 F3Q26 PRINT — WEDNESDAY 2026-09-02, AFTER MARKET.** Bars: **revenue $12.3bn (BofA) vs Street $12.0bn vs guidance $11.5-12.1bn; EPS $0.95 vs Street $0.93 vs guidance $0.88-0.93; Networking $2.9bn |
 | 2026-09-02 | NVDA | **2026-08-26 (AMC) — Q2 FY27 print.** Street/house bogeys now on the page from three houses: **UBS/Arcuri report $110-111bn, guide bogey $107-108bn** (08-14) vs **MS/Moore July $91.1bn, October $102.3 |
 | 2026-09-03 | AVGO | **🆕 POST-PRINT BROKER CALLBACKS ALREADY SCHEDULED — the fastest read on how the Street re-rates the guide.** **Morgan Stanley Q3 group callback with Joseph Moore, 2026-09-03, 9:00am ET** (stream); **J |
 | 2026-09-03 | TSLA | **🆕 2026-09-03 — CYBERCAB EVENT, AND THE PRE-READ IS DELIBERATELY DEFLATIONARY.** *"Tesla will hold a **Cybercab event on Sept 3**, but it sounds like this will be **relatively anticlimactic, with the |
+| 2026-09-04 | DELL | **2026-09-04, 10:00am ET — JPM group takeaways call on the OEM results** (Joe Cardoso, "Ask Me Anything on OEM earnings", Friday). |
+| 2026-09-04 | DELL | **2026-09-04, 11:00am ET — BERNSTEIN DELL Q2 FY27 POST-EARNINGS CFO CALL.** First scheduled management access after the print (Bernstein · Tyler Seidman, 2026-09-01). |
 | 2026-09-04 | DELL | **🆕 BERNSTEIN DELL Q2 FY27 POST-EARNINGS CFO CALL — 2026-09-04, 11:00am ET.** First scheduled management access after the print. (Bernstein · Tyler Seidman, 2026-08-31) |
 | 2026-09-11 | TER | **Q3 CY26 print (~late Oct 2026)** — first test of the re-cut 2H, and of whether the merchant-GPU/second-hyperscaler correlation converts into guided revenue. Quiet period begins **2026-09-11**; manag |
 | 2026-09-14 | NVDA | **🆕 Post-print access, both dated:** **BofA fireside with Toshiya Hari, VP of IR & Strategic Finance, hosted by Vivek Arya — 2026-09-02, 11:00 ET (~1hr)** (BofA TMT Sales, 2026-08-14) · **UBS-arranged |
 | 2026-09-15 | AVGO | **🆕 BERNSTEIN 8th ANNUAL SEMIS BUS TOUR, 2026-09-15/16, San Jose — AVGO on the roster alongside [[ALAB]], [[AMAT]], AMBA, LSCC, MPWR, [[NVDA]], [[NXPI]].** First scheduled corporate-access window afte |
+| 2026-09-15 | DELL | **2026-09-15 — UBS David Vogt Boston marketing '26 #3, US Hardware.** |
 | 2026-09-16 | ON | **2026-09-16 — onsemi Analyst Day** (Citi exp. ~Sep 13 print first) — the key event; watch for a raised long-term target model + SiC/800V framing (Citi, briefing 2026-06-15). |
 | 2026-09-21 | CIEN | **🆕 ECOC 2026, 2026-09-21/22 (Spain) — Morgan Stanley hosts COHR, CIEN, [[CSCO]], KEYS and NOK.** First optical-systems corporate-access window after the print. (MS TMT desk, 2026-08-31) |
 | 2026-09-21 | COHR | **🆕 2026-09-21 — PHOTONLINK LAUNCH: establish the PLATFORM, LANE RATE AND MODULATION FORMAT, not just the positioning.** The FQ1 FY27 synthesis lists PhotonLink as a genuinely net-new BULL item (platf |

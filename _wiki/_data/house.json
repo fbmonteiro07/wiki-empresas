@@ -133,36 +133,26 @@
   },
   "COHR": {
    "years": {
-    "2024": {
-     "rev": 5.3,
-     "eps": 2.76,
-     "gm": 37.0
-    },
-    "2025": {
-     "rev": 6.3,
-     "eps": 4.35,
-     "gm": 39.0
-    },
     "2026": {
-     "rev": 9.1,
-     "eps": 8.27,
+     "rev": 8.7,
+     "eps": 7.3,
      "gm": 40.0
     },
     "2027": {
-     "rev": 16.6,
-     "eps": 19.21,
+     "rev": 12.6,
+     "eps": 11.3,
      "gm": 41.0
     },
     "2028": {
-     "rev": 19.6,
-     "eps": 23.6,
-     "gm": 41.0
+     "rev": 15.7,
+     "eps": 14.34,
+     "gm": 42.0
     }
    },
    "raw_header": [
     "",
-    "CY24",
-    "CY25",
+    "CY24A",
+    "CY25A",
     "CY26E",
     "CY27E",
     "CY28E"
@@ -172,28 +162,28 @@
      "Revenue ($bn)",
      "5.3",
      "6.3",
-     "9.1",
-     "16.6",
-     "19.6"
+     "8.7",
+     "12.6",
+     "15.7"
     ],
     [
-     "EPS — pro forma ($)",
+     "EPS — non-GAAP ($)",
      "2.76",
      "4.35",
-     "8.27",
-     "19.21",
-     "23.60"
+     "7.30",
+     "11.30",
+     "14.34"
     ],
     [
      "Gross margin",
      "~37%",
      "~39%",
      "~40%",
-     "~41%",
-     "~41%"
+     "41%",
+     "42%"
     ]
    ],
-   "source": "Capstone official model (`Modelo COHR.xlsx`, 2026-05-26). Built on Jefferies/Blayne Curtis."
+   "source": "**Capstone initiation of coverage, 2026-09-01 (Felipe Monteiro) — NEUTRAL, 12-month PT $285 (25x CY27E EPS)**. Model: session scratchpad `cohr"
   },
   "GOOG": {
    "years": {

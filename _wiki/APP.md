@@ -8,11 +8,11 @@ _Wiki · generated 2026-06-25 · synthesis-only (no local filings archive) · so
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $8.1bn | $10.4bn |
-| Gross profit | $7.1bn | $9.2bn |
+| Gross profit | $7.1bn | $9.1bn |
 | Gross margin | 88.1% | 87.7% |
 | EBITDA | $6.8bn | $8.7bn |
-| EPS | $15.77 | $20.71 |
-| Capex | $11m | $10m |
+| EPS | $15.76 | $20.66 |
+| Capex | $10m | $8m |
 | OCF (≈EBITDA) | $6.8bn | $8.7bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

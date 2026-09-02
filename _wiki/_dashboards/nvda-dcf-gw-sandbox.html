@@ -215,17 +215,26 @@ footer b{color:var(--ink2)}
     <div class="ctl" data-k="roicA"><div class="lr"><label>ROIC target A</label><span class="dot"></span><input type="number" step="0.01" min="0" max="0.5"></div></div>
     <div class="ctl" data-k="roicB"><div class="lr"><label>ROIC target B</label><span class="dot"></span><input type="number" step="0.01" min="0" max="0.5"></div></div>
     <div class="ctl" data-k="lagCloud"><div class="lr"><label>Commissioning lag (yrs)</label><span class="dot"></span><input type="number" step="1" min="0" max="4"></div></div>
+    <div class="ctl" data-k="aiShare26"><div class="lr"><label>AI share of total cloud, CY26</label><span class="dot"></span><input type="number" step="0.01" min="0.05" max="1"></div><input type="range" step="0.01" min="0.1" max="1"></div>
+    <div class="ctl" data-k="aiShare30"><div class="lr"><label>…AI share by CY30</label><span class="dot"></span><input type="number" step="0.01" min="0.05" max="1"></div><input type="range" step="0.01" min="0.1" max="1"></div>
+    <div class="ctl" data-k="cloudWacc"><div class="lr"><label>Cloud WACC (valuation)</label><span class="dot"></span><input type="number" step="0.005" min="0.03" max="0.25"></div><input type="range" step="0.005" min="0.05" max="0.16"></div>
+    <div class="ctl" data-k="cloudG"><div class="lr"><label>Cloud terminal growth</label><span class="dot"></span><input type="number" step="0.0025" min="0" max="0.06"></div></div>
     <div class="ctl" data-k="cloudRevG"><div class="lr"><label>Cloud revenue growth CY31+</label><span class="dot"></span><input type="number" step="0.01" min="-0.1" max="0.4"></div><input type="range" step="0.01" min="0" max="0.3"></div>
   </details>
 
   <details class="group" open id="gGross"><summary>Labs → System gross-up<span class="arrow">›</span></summary><div class="body">
     <div class="ctl" data-k="cloudMode"><div class="lr"><label>Model's cloud revenue source</label><span class="dot"></span>
-      <select id="selCloudMode"><option value="house">House vector (total cloud)</option><option value="derived">Derived (AI compute bill)</option></select></div></div>
+      <select id="selCloudMode"><option value="house">House vector (total cloud)</option><option value="aiCloud">AI cloud (total x AI share)</option>
+      <option value="derived">Derived (model-layer bill)</option></select></div></div>
     <div class="ctl" data-k="sRev26"><div class="lr"><label>Big-2 share of system revenue, CY26</label><span class="dot"></span><input type="number" step="0.01" min="0.2" max="0.99"></div><input type="range" step="0.01" min="0.4" max="0.95"></div>
     <div class="ctl" data-k="sRev35"><div class="lr"><label>…share by CY35 (path endpoint)</label><span class="dot"></span><input type="number" step="0.01" min="0.1" max="0.99"></div><input type="range" step="0.01" min="0.2" max="0.9"></div>
     <div class="ctl" data-k="unitCost"><div class="lr"><label>Big-2 serving cost ($/Mtok)</label><span class="dot"></span><input type="number" step="0.01" min="0.05" max="1"></div><input type="range" step="0.01" min="0.15" max="0.6"></div>
     <div class="ctl" data-k="rCost"><div class="lr"><label>Rest-of-system cost / big-2 cost</label><span class="dot"></span><input type="number" step="0.01" min="0.02" max="1.5"></div><input type="range" step="0.01" min="0.05" max="1"></div>
     <p style="font-size:11px;color:var(--ink3);margin:0">Big-2 revenue / inference / training vectors are editable in <b>Inputs &amp; data</b>.</p>
+    <div class="ctl" data-k="tokPerSecGPU"><div class="lr"><label>Tokens/sec per GPU (MS Byrd 2,750)</label><span class="dot"></span><input type="number" step="50" min="200" max="20000"></div><input type="range" step="50" min="500" max="8000"></div>
+    <div class="ctl" data-k="pue"><div class="lr"><label>Facility GW ÷ this = IT GW</label><span class="dot"></span><input type="number" step="0.05" min="1" max="2.2"></div><input type="range" step="0.05" min="1" max="2"></div>
+    <div class="ctl" data-k="chipsPerGW"><div class="lr"><label>Chips per GW</label><span class="dot"></span><input type="number" step="10000" min="50000"></div></div>
+    <div class="ctl" data-k="utilChip"><div class="lr"><label>Chip utilisation</label><span class="dot"></span><input type="number" step="0.05" min="0.2" max="1"></div><input type="range" step="0.05" min="0.3" max="1"></div>
   </details>
 
   <details class="group" id="gLabs"><summary>AI Labs bridge<span class="arrow">›</span></summary><div class="body">
@@ -321,6 +330,16 @@ footer b{color:var(--ink2)}
         <p class="note">Average net assets in service by class + construction in progress; straight-line by vintage, lives per console.</p>
         <div class="scroller" id="chFleet"></div>
         <div class="kv" id="kvRoic"></div></div>
+      <div class="panel wide"><h3>What is the Cloud layer worth?</h3>
+        <p class="note">The cloud buys NVDA's output as capex and rents it to the labs — so this is <b>quem paga a conta</b> in valuation form. FCF = NOPAT + D&amp;A − cloud capex, discounted at the cloud WACC. The terminal is <b>normalised</b>: a Gordon perpetuity must be fed a steady-state flow, so terminal reinvestment = g ÷ ROIC, not the 8%/yr growth capex the explicit period carries. Switch the cloud basis on the <b>Labs → System</b> tab to see the fork.</p>
+        <div class="twocol">
+          <div><div class="subh">Cloud FCF path (US$bn) — the build is cash-negative for years</div><div class="scroller" id="chCloudFcf"></div></div>
+          <div><div class="subh">Break-even rent vs what the model actually pays ($bn/GW-yr)</div><div class="scroller" id="chBreakeven"></div></div>
+        </div>
+        <div class="divider"></div>
+        <div class="kv cols3" id="kvCloudVal"></div>
+        <div class="statchips" id="cloudValChips"></div>
+      </div>
       <div class="panel wide"><h3>Rev/GW rule of thumb ($bn per GW-yr at target ROIC)</h3>
         <p class="note">M = (target/(1−tax) + first-yr D&amp;A rate) / EBITDA margin, × build cost. Realized today (assumptions.md rev-per-GW ledger): Trainium &lt;10 · merchant 12–13 · MS TPU ~20 · GB300 IaaS 22.9 · premium ~25. Never mix facility-GW vs IT-GW bases.</p>
         <div class="kv" id="kvRevGW"></div></div>
@@ -341,9 +360,19 @@ footer b{color:var(--ink2)}
         <p class="note">Inference grosses on tokens; training grosses on revenue share (it scales with lab ambition, not with served tokens).</p>
         <div class="scroller" id="chSysCloud"></div></div>
       <div class="panel wide"><h3>Calibration — against two independent house builds</h3>
-        <p class="note">The share is the load-bearing input, so it is <b>calibrated, not guessed</b>. s<sub>rev</sub> comes from the AI Labs Revenue MAP's own share path (71.5% → 50% by 2035); the result is then checked against the LLM Market MAP v2, a separate house construction of the same system. r<sub>cost</sub> is back-solved from CY26 and validated against a number outside the fit — OpenRouter's observed commodity-open price.</p>
+        <p class="note">The share is the load-bearing input, so it is <b>taken from house work, not guessed</b> — but be clear what the check is. s<sub>rev</sub> is the AI Labs Revenue MAP's share path (0.71 → 0.50 by 2035, a <i>mid-year ARR</i> share); the "LLM MAP" line is a second house construction that <b>shares the same $140bn mid-26 anchor</b> (0.71 = 100/140), so the CY26 ratio is a vintage check, not corroboration. The LLM MAP also holds the big-2 share <b>flat at 72.6%</b> where this path declines — the two house views disagree on the trend, so quote the range. r<sub>cost</sub> is back-solved on CY26 (that year is the fit); CY27–29 test it against OpenRouter's observed open price (weakly independent — the MAP's open <i>price</i> is a residual, but it takes IN_RATIO and K3 marks from OpenRouter); CY30 fails. The LLM MAP's own big-2 token line (162 → 1,201 Q) sits 6% above ours in CY26 and 22% above in CY30, because it embeds cost deflation we hold flat — the CY30 cloud bill differs ~10% between the two.</p>
         <div class="scroller"><table class="data" id="tblGross"></table></div>
         <div class="statchips" id="grossChips"></div>
+      </div>
+      <div class="panel wide"><h3>Token-consumption check — v2, rebuilt after audit</h3>
+        <p class="note"><b>What was wrong with v1:</b> it <i>calibrated</i> tokens-per-GW-year off the MAP token path and the house GW lines, then multiplied back — so the MAP tokens and the serving share cancelled algebraically and the "1.05–1.32x slack" was a GW-vs-GW ratio wearing a token costume. <b>v2:</b> the throughput is <b>exogenous</b> — MS Nowak/Byrd/Wood's 2,750 tok/s/GPU × 410,256 GB300/GW × 75% utilisation = <b>26.7 Q per IT-GW-year</b> (same note as the chip count; NVDA.md:977) — and both GW sides are <b>average</b> stocks, because the house r87/r98 lines are averages and the DCF r184 is year-end. Nothing in the constant comes from the token model or the DCF, so this is now a real check.</p>
+        <div class="twocol">
+          <div><div class="subh">Servable (from capex) vs modelled (from tokens) — Q/yr, average-stock basis</div><div class="scroller" id="chTok"></div></div>
+          <div><div class="subh">GW-basis reconciliation — DCF avg facility GW ÷ house avg industry GW (r87, ends CY28)</div><div class="scroller" id="chTps"></div></div>
+        </div>
+        <div class="divider"></div>
+        <div class="scroller"><table class="data" id="tblTok"></table></div>
+        <div class="statchips" id="tokChips"></div>
       </div>
       <div class="panel wide"><h3>Drive the model's cloud line from this</h3>
         <p class="note">The DCF's cloud revenue is currently a hardcoded house vector that never responds to capex. Switching it to the derived bill closes that loop — and fixes a basis mismatch: the hardcoded line is <b>total cloud incl. non-AI</b>, while the ROIC fleet it is measured against is <b>AI capex only</b>.</p>
@@ -427,7 +456,21 @@ const FILE = {
  sRev26:0.715, sRev35:0.50,        // big-2 share of model layer (AI Labs Revenue MAP v1 path)
  unitCost:0.30,                    // $/Mtok big-2 blended serving cost (ANT .283/OAI .306/SemiA .32)
  rCost:0.29,                       // rest-of-system cost per token / big-2 (back-solved CY26)
- cloudMode:'house'                 // 'house' = hardcoded total cloud | 'derived' = labs gross-up
+ cloudMode:'house',                // 'house' = hardcoded total cloud | 'derived' = labs gross-up
+ // ---- TOKEN CHECK. HARD: house AI Model 'Resumo | Labs' r98-r101/r106 (read live 01-Sep-26)
+ gwInfH:[3.84,7.45,12.01,16.13,21.41],   // r99  inference GW (IT basis)
+ gwApiH:[1.69,3.89,8.52,15.22,26.92],    // r101 API GW
+ gwTotH:[8.18,16.26,30.16,46.97,60.15],  // r98  total AI-Labs GW stock
+ indGwH:[22.485,47.187,91.396,0,0],      // 'Resumo | Total' r87 industry AI GW, AVG stock - the house series ENDS at CY28
+ pue:1.25,                               // facility GW -> IT GW divisor (DIAL)
+ tokPerSecGPU:2750,                      // MS Nowak/Byrd/Wood 2026-07-27 (NVDA.md:977) - EXOGENOUS throughput
+ chipsPerGW:410256,                      // same MS note, IT-load basis
+ utilChip:0.75,                          // same MS note
+ cloudWacc:0.09, cloudG:0.025,           // cloud-layer discount rate + terminal growth
+ // AI share of TOTAL cloud revenue - ESTIMATE. Disclosed marks CY26: AWS AI >$25bn / $150bn run-rate
+ // ~17% (AMZN.md Q2'26); MSFT AI ARR $37bn ~29% of Azure (Bernstein 06-22, incl. Copilot). The model-layer
+ // bill sets a FLOOR (28.5% CY26) that sits AT/ABOVE those marks - a real, unresolved tension.
+ aiShare26:0.29, aiShare30:0.70   // linear path sits at/just above the convex floor every year
 };
 // LLM Market MAP v2 Results_Snapshot (independent house build) - calibration reference, not editable
 const MAPREF={tok:[360,1089,2240,3428,4714],rev:[140,340.9995,563.9495,692.8484,763.6435],
@@ -530,11 +573,35 @@ function engine(S){
     // guardrail: back-solved rest-of-system unit cost must sit below the OBSERVED open price
     // (OpenRouter feed - not used in the fit) at a sane host margin, and be positive.
     L.ok.push(ru>0.02&&ru<MAPREF.openPrice?'OK':(ru<=0.02?'RED':'AMBER'));}
+  // ---- TOKEN CONSUMPTION CHECK ------------------------------------------------
+  // The only leg that does NOT touch the token model: capex -> GW -> servable tokens.
+  // tokens = serving GW x tokens/GW-year, with tokens/GW-yr CALIBRATED off the house's
+  // own GW lines and the MAP token path, then sanity-checked against chip physics.
+  const SEC_YR=31.536e6;
+  // v2 (post-audit): v1 CALIBRATED tokens/GW-yr off MAP tokens / house GW and multiplied back, so the MAP
+  // token line and the serving share CANCELLED and "slack" was a GW-vs-GW ratio. Now the throughput is
+  // EXOGENOUS (MS Byrd 2,750 tok/s/GPU) and both GW sides are AVERAGE stocks (house r87/r98 are averages).
+  const tokPerGW=S.tokPerSecGPU*S.chipsPerGW*S.utilChip*SEC_YR/1e15;   // Q per IT-GW-year (26.68 at defaults)
+  const T={servShare:[],avgFacGW:[],itGW:[],servable:[],slack:[],slackYE:[],gwRecon:[],mapTok:MAPREF.tok,tokPerGW};
+  for(let k=0;k<5;k++){
+    const i=IX(2026)+k;
+    const ss=S.gwTotH[k]>0?(S.gwInfH[k]+S.gwApiH[k])/S.gwTotH[k]:0;    // serving share of labs GW (house)
+    const avgFac=(sup[i]+sup[i-1])/2;                                    // AVG stock, like-for-like with r87
+    const itGW=S.pue>0?avgFac/S.pue:0;
+    const servable=itGW*ss*tokPerGW;
+    T.servShare.push(ss);T.avgFacGW.push(avgFac);T.itGW.push(itGW);T.servable.push(servable);
+    T.slack.push(MAPREF.tok[k]>0?servable/MAPREF.tok[k]:0);
+    T.slackYE.push(MAPREF.tok[k]>0?(sup[i]/S.pue)*ss*tokPerGW/MAPREF.tok[k]:0);   // v1 basis, memo
+    T.gwRecon.push(S.indGwH[k]>0?avgFac/S.indGwH[k]:0);}                 // DCF avg facility / house avg IT
   // cloud revenue: hardcoded house total-cloud line, or derived from the labs gross-up
   const cloudRev=new Array(N).fill(0);
   for(let i=0;i<N;i++){const y=YRS[i];
     // L.sysCloud is US$bn; every other money series in the engine is US$mm -> x1000
-    if(y>=2026&&y<=2030)cloudRev[i]=(S.cloudMode==='derived')?L.sysCloud[y-2026]*1000:S.cloudRev[y-2026];
+    if(y>=2026&&y<=2030){const k=y-2026;
+      const aish=S.aiShare26+(S.aiShare30-S.aiShare26)*k/4;
+      cloudRev[i]=(S.cloudMode==='derived')?L.sysCloud[k]*1000
+                 :(S.cloudMode==='aiCloud')?S.cloudRev[k]*aish
+                 :S.cloudRev[k];}
     else if(y>2030)cloudRev[i]=cloudRev[i-1]*(1+S.cloudRevG);}
   const fleetROIC=[],singleROIC=[],conROIC=[],hurdA=[],hurdB=[];
   for(let i=0;i<N;i++){
@@ -552,6 +619,58 @@ function engine(S){
     cloudGW.push(sup[i]*S.cloudShare);
     revPerCloudGW.push(cloudGW[i]>0?(cloudRev[i]/1000)/cloudGW[i]:0);
     capexPerCloud.push(cloudRev[i]>0?total[i]/cloudRev[i]:0);}
+  // ---- CLOUD LAYER VALUE -------------------------------------------------------
+  // The cloud buys NVDA's output as capex and rents it to the labs, so this is
+  // "quem paga a conta" in valuation form. FCF = NOPAT + D&A - cloud capex.
+  const cloudCapex=total.map(t=>t*S.cloudShare);
+  const cEbitda=[],cEbit=[],cNopat=[],cFcf=[];
+  for(let i=0;i<N;i++){
+    const e=S.ebitdaM*cloudRev[i], eb=e-dep[i], np=eb-(eb>0?S.taxCloud*eb:0);
+    cEbitda.push(e);cEbit.push(eb);cNopat.push(np);cFcf.push(np+dep[i]-cloudCapex[i]);}
+  let cPV=0;for(let t=0;t<20;t++)cPV+=cFcf[IX(2026)+t]/Math.pow(1+S.cloudWacc,t+1);
+  // NORMALISED terminal: a Gordon perpetuity must be fed a STEADY-STATE flow, so
+  // reinvestment = g / ROIC, NOT the 8%/yr growth capex the explicit period carries.
+  const icT=avgNet[IX(2045)], roicT=icT>0?cNopat[IX(2045)]/icT:0;
+  const reinv=(roicT>S.cloudG)?Math.min(0.95,Math.max(0,S.cloudG/roicT)):0.95;
+  const tFcf=cNopat[IX(2045)]*(1-reinv);
+  const cTV=(S.cloudWacc>S.cloudG)?tFcf*(1+S.cloudG)/(S.cloudWacc-S.cloudG):0;
+  const cPVTV=cTV/Math.pow(1+S.cloudWacc,20), cEV=cPV+cPVTV;
+  let fcfPos=0;for(let i=IX(2026);i<N;i++){if(cFcf[i]>0){fcfPos=YRS[i];break;}}
+  // break-even rental $/GW-yr, annuitised on the model's OWN component lives + cost mix.
+  // Capital recovery is tax-shielded; only the return leg is taxed.
+  const annf=(r,Lf)=>r/(1-Math.pow(1+r,-Lf));
+  function breakEven(C,r,m){
+    const charge=C*(refC*annf(r,S.lifeChip)+refN*annf(r,S.lifeChip)+refO*annf(r,S.lifeOth));
+    const rec=C*(refC/S.lifeChip+refN/S.lifeChip+refO/S.lifeOth);
+    return (rec+(charge-rec)/(1-S.taxCloud))/(m||S.ebitdaM);}
+  // FLEET-AVERAGE build cost: the fleet earning year-t rent was bought over the trailing 5 vintages
+  const fleetCost=YRS.map((y,i)=>{const a=S.costGW.slice(Math.max(0,i-4),i+1);return a.reduce((p,q)=>p+q,0)/a.length;});
+  // value ANY revenue vector on the same fleet (dep/capex/avgNet don't depend on revenue)
+  function valueVec(rv){
+    const eb=[],np=[],fc=[];
+    for(let i=0;i<N;i++){const e=S.ebitdaM*rv[i],b=e-dep[i],n=b-(b>0?S.taxCloud*b:0);
+      eb.push(e);np.push(n);fc.push(n+dep[i]-cloudCapex[i]);}
+    let pv=0;for(let t=0;t<20;t++)pv+=fc[IX(2026)+t]/Math.pow(1+S.cloudWacc,t+1);
+    const ic=avgNet[IX(2045)],rc=ic>0?np[IX(2045)]/ic:0;
+    const rr2=(rc>S.cloudG)?Math.min(0.95,Math.max(0,S.cloudG/rc)):0.95;
+    const tv=(S.cloudWacc>S.cloudG)?np[IX(2045)]*(1-rr2)*(1+S.cloudG)/(S.cloudWacc-S.cloudG):0;
+    return {ev:pv+tv/Math.pow(1+S.cloudWacc,20),pv:pv,ebitda28:eb[IX(2028)],roicT:rc};}
+  // the three bases, always computed so the fork is visible without switching
+  const basisVecs={};
+  {const h=new Array(N).fill(0),a=new Array(N).fill(0),d=new Array(N).fill(0);
+   for(let i=0;i<N;i++){const y=YRS[i];
+     if(y>=2026&&y<=2030){const k=y-2026;
+       h[i]=S.cloudRev[k]; a[i]=S.cloudRev[k]*(S.aiShare26+(S.aiShare30-S.aiShare26)*k/4);
+       d[i]=L.sysCloud[k]*1000;}
+     else if(y>2030){h[i]=h[i-1]*(1+S.cloudRevG);a[i]=a[i-1]*(1+S.cloudRevG);d[i]=d[i-1]*(1+S.cloudRevG);}}
+   basisVecs.house=h;basisVecs.aiCloud=a;basisVecs.derived=d;}
+  const basisEV={house:valueVec(basisVecs.house),aiCloud:valueVec(basisVecs.aiCloud),derived:valueVec(basisVecs.derived)};
+  // FLOOR guardrail: AI share can never imply less AI cloud revenue than the labs alone pay
+  const aiFloor=[0,1,2,3,4].map(k=>S.cloudRev[k]>0?(L.sysCloud[k]*1000)/S.cloudRev[k]:0);
+  const aiUsed=[0,1,2,3,4].map(k=>S.aiShare26+(S.aiShare30-S.aiShare26)*k/4);
+  const CV={cEbitda,cEbit,cNopat,cFcf,cPV,cTV,cPVTV,cEV,roicT,reinv,fcfPos,cloudCapex,breakEven,fleetCost,
+    basisEV,basisVecs,aiFloor,aiUsed,
+    cumCapex:cloudCapex.slice(IX(2026),IX(2046)).reduce((a,b)=>a+b,0)};
   const dnaRate=refC/S.lifeChip+refN/S.lifeChip+refO/S.lifeOth;
   const mA=(S.roicA/(1-S.taxCloud)+dnaRate)/S.ebitdaM,mB=(S.roicB/(1-S.taxCloud)+dnaRate)/S.ebitdaM;
   // ---- AI Labs ----
@@ -603,7 +722,7 @@ function engine(S){
     pvFlows,TV,pvTV,roll,pvDated,px,days,
     gwBuy,gwC,gwN,gwO,actC,actN,actO,sup,retGW,retVal,refC,refN,refO,
     avgC,avgN2,avgO,avgNet,dep,wip,vintDep,vintGross,cloudRev,fleetROIC,singleROIC,conROIC,hurdA,hurdB,mA,mB,dnaRate,
-    nvdaVsCloud,cloudGW,revPerCloudGW,capexPerCloud,L,
+    nvdaVsCloud,cloudGW,revPerCloudGW,capexPerCloud,L,T,CV,
     mapped,infRatio,trRatio,labsRev,openRev,closedRev,openNopat,closedNopat,closedEV,gwClosed,gwOpen,
     grid1,grid2,grid2g,baseCagr,shareCases,floorCases,cagrCases,shareCases2};
 }
@@ -853,6 +972,53 @@ function render(){
   $('kvRoic').innerHTML=`<span class="k">Avg net assets CY28</span><span class="v">${fBn(E.avgNet[IX(2028)])} bn</span>
     <span class="k">Depreciation CY28</span><span class="v">${fBn(E.dep[IX(2028)])} bn</span>
     <span class="k">Fleet ROIC CY26 → CY29</span><span class="v">${fPct(E.fleetROIC[IX(2026)])} → ${fPct(E.fleetROIC[IX(2029)])}</span>`;
+  // ---- cloud layer value ----
+  {const V=E.CV, yv=YRS.slice(IX(2026));
+   lineChart($('chCloudFcf'),{years:yv,minW:340,h:220,fmt:fBn,series:[
+     {name:'Cloud FCF',color:c1,vals:V.cFcf.slice(IX(2026)),area:true},
+     {name:'Cloud capex',color:c2,vals:V.cloudCapex.slice(IX(2026))}],zeroLine:true,
+     extra:[{name:'EBITDA',vals:V.cEbitda.slice(IX(2026)),fmt:fBn},
+            {name:'NOPAT',vals:V.cNopat.slice(IX(2026)),fmt:fBn}]});
+   // break-even on FLEET-AVERAGE cost (v2). v1 used the marginal vintage and mis-called CY29.
+   const be09=YRS.map((y,i)=>V.breakEven(V.fleetCost[i],0.09));
+   const be15=YRS.map((y,i)=>V.breakEven(V.fleetCost[i],0.15));
+   const be09m80=YRS.map((y,i)=>V.breakEven(V.fleetCost[i],0.09,0.80));
+   const be09m70=YRS.map((y,i)=>V.breakEven(V.fleetCost[i],0.09,0.70));
+   lineChart($('chBreakeven'),{years:yv,minW:340,h:220,fmt:v=>'$'+v.toFixed(1),
+     series:[
+      {name:'actual rev/GW',color:c1,vals:E.revPerCloudGW.slice(IX(2026)),area:true},
+      {name:'break-even @9% (90% m)',color:c3,vals:be09.slice(IX(2026)),dash:'4 3'},
+      {name:'break-even @9% (70% m)',color:c4,vals:be09m70.slice(IX(2026)),dash:'2 3'},
+      {name:'break-even @15%',color:c2,vals:be15.slice(IX(2026)),dash:'4 3'}],
+     extra:[{name:'fleet-avg build $/GW',vals:V.fleetCost.slice(IX(2026)),fmt:v=>'$'+v.toFixed(1)+'bn'},
+            {name:'this-vintage $/GW',vals:S.costGW.slice(IX(2026)),fmt:v=>'$'+v+'bn'},
+            {name:'vs 9% hurdle @90%',vals:E.revPerCloudGW.map((v,i)=>v-be09[i]).slice(IX(2026)),fmt:v=>v>=0?'clears +'+v.toFixed(1):'misses '+v.toFixed(1)},
+            {name:'vs 9% hurdle @80%',vals:E.revPerCloudGW.map((v,i)=>v-be09m80[i]).slice(IX(2026)),fmt:v=>v>=0?'clears +'+v.toFixed(1):'misses '+v.toFixed(1)}]});
+   const ev=V.cEV/1000, cum=V.cumCapex/1000;
+   $('kvCloudVal').innerHTML=
+     `<span class="k">Cloud EV (end-2025)</span><span class="v">$${ev.toLocaleString('en-US',{maximumFractionDigits:0})}bn</span>`+
+     `<span class="k">PV of FCF CY26–45</span><span class="v">$${(V.cPV/1000).toLocaleString('en-US',{maximumFractionDigits:0})}bn</span>`+
+     `<span class="k">PV of terminal</span><span class="v">$${(V.cPVTV/1000).toLocaleString('en-US',{maximumFractionDigits:0})}bn</span>`+
+     `<span class="k">terminal ROIC</span><span class="v">${fPct(V.roicT)}</span>`+
+     `<span class="k">terminal reinvestment</span><span class="v">${fPct(V.reinv)}</span>`+
+     `<span class="k">first FCF-positive year</span><span class="v">${V.fcfPos||'never'}</span>`+
+     `<span class="k">cumulative cloud capex 26–45</span><span class="v">$${cum.toLocaleString('en-US',{maximumFractionDigits:0})}bn</span>`+
+     `<span class="k">EV ÷ cumulative capex</span><span class="v">${(ev/cum).toFixed(2)}x</span>`+
+     `<span class="k">EV ÷ CY28 EBITDA</span><span class="v">${(V.cEbitda[IX(2028)]?V.cEV/V.cEbitda[IX(2028)]:0).toFixed(1)}x</span>`;
+   const evEb=V.cEbitda[IX(2028)]?V.cEV/V.cEbitda[IX(2028)]:0;
+   const evEb60=E.cloudRev[IX(2028)]>0?V.cEV/(0.60*E.cloudRev[IX(2028)]):0;   // realistic segment margin
+   const g28=E.revPerCloudGW[IX(2028)]-be09[IX(2028)], g28m80=E.revPerCloudGW[IX(2028)]-be09m80[IX(2028)];
+   const B=V.basisEV, nm={house:'House total cloud',aiCloud:'AI cloud (x AI share)',derived:'Model-layer bill'};
+   $('kvCloudVal').innerHTML+=
+     ['house','aiCloud','derived'].map(k=>
+       `<span class="k">EV — ${nm[k]}</span><span class="v" style="color:${B[k].ev>=0?'var(--pos)':'var(--neg)'}">$${(B[k].ev/1000).toLocaleString('en-US',{maximumFractionDigits:0})}bn</span>`).join('');
+   $('cloudValChips').innerHTML=
+     `<span class="schip ${ev>0?'ok':'warn'}">${ev>0?'value created':'VALUE DESTROYED at this basis'}</span>`+
+     `<span class="schip warn">EV/CY28 EBITDA ${evEb.toFixed(1)}x at the ${fPct(S.ebitdaM)} rental margin — but ${evEb60.toFixed(1)}x at a realistic 60% segment margin, ABOVE hyperscaler comps (15–20x). The 90% flatters the multiple.</span>`+
+     `<span class="schip ${g28>=0?'ok':'warn'}">CY28 rent ${g28>=0?'clears':'misses'} the 9% hurdle by $${Math.abs(g28).toFixed(1)}bn/GW-yr on fleet-avg cost @90% margin</span>`+
+     `<span class="schip ${g28m80>=0?'ok':'warn'}">@80% margin: ${g28m80>=0?'clears +':'misses '}$${Math.abs(g28m80).toFixed(1)}bn — the verdict dies below ~84%</span>`+
+     V.aiUsed.map((u,k)=>`<span class="schip ${u>=V.aiFloor[k]?'ok':'warn'}">CY${2026+k} AI share ${fPct(u)} vs floor ${fPct(V.aiFloor[k])}</span>`).join('')+
+     `<span class="schip warn">AI share is an ESTIMATE. Disclosed CY26 marks: AWS AI >$25bn on a $150bn run-rate ≈17% (AMZN.md, Q2'26); MSFT AI ARR $37bn ≈29% of Azure (Bernstein 06-22, incl. Copilot). The model-layer FLOOR (28.5%) sits AT/ABOVE them — so either the labs' bill is high vs what CSPs book as AI, or the CSP marks are narrow. Unresolved; default set at the floor.</span>`;}
   {const b=[39,48,60];let h='';
    b.forEach(x=>{h+=`<span class="k">Build $${x}bn/GW → rev needed @ ${fPct(S.roicA)}</span><span class="v">$${(x*E.mA).toFixed(1)}bn/GW-yr</span>`;});
    h+=`<span class="k">idem @ ${fPct(S.roicB)} (build $39bn)</span><span class="v">$${(39*E.mB).toFixed(1)}bn/GW-yr</span>
@@ -929,6 +1095,38 @@ function render(){
      const msg=st==='OK'?`host GM ${fPct(1-L.restUnit[k]/MAPREF.openPrice)}`:(st==='RED'?'impossible — below any observed cost':'above open price');
      return `<span class="schip ${cls}">CY${y} rest $${L.restUnit[k].toFixed(3)}/Mtok · ${msg}</span>`;}).join('')+
      `<span class="schip">independent check: OpenRouter commodity-open $${MAPREF.openPrice.toFixed(3)}/Mtok (not used in the fit)</span>`;
+   // ---- token check (v2) ----
+   const T=E.T;
+   lineChart($('chTok'),{years:yy,minW:340,h:220,fmt:v=>v.toFixed(0),unit:' Q',series:[
+     {name:'servable (capex)',color:c3,vals:T.servable,area:true},
+     {name:'modelled (tokens)',color:c1,vals:T.mapTok}],
+     extra:[{name:'slack (servable/modelled)',vals:T.slack,fmt:v=>v.toFixed(2)+'x'},
+            {name:'memo: slack on year-end GW (v1 basis)',vals:T.slackYE,fmt:v=>v.toFixed(2)+'x'},
+            {name:'serving IT-GW (avg)',vals:T.itGW.map((v,k)=>v*T.servShare[k]),fmt:v=>v.toFixed(0)+' GW'}]});
+   lineChart($('chTps'),{years:yy.slice(0,3),minW:300,h:220,fmt:v=>v.toFixed(2)+'x',
+     series:[{name:'DCF ÷ house GW',color:c2,vals:T.gwRecon.slice(0,3),area:true}],
+     refLine:{v:1,label:'parity'},
+     extra:[{name:'DCF avg facility GW',vals:T.avgFacGW.slice(0,3),fmt:v=>v.toFixed(1)+' GW'},
+            {name:'house avg industry GW (r87)',vals:S.indGwH.slice(0,3),fmt:v=>v.toFixed(1)+' GW'}]});
+   {let th='<tr><th>Token check (v2)</th>'+yy.map(y=>`<th>CY${y}</th>`).join('')+'</tr>';
+    const tr=(lab,vals,f)=>{th+=`<tr><td>${lab}</td>`+vals.map(v=>`<td class="num">${f(v)}</td>`).join('')+'</tr>';};
+    tr('House labs serving GW (IT, avg)',S.gwInfH.map((v,k)=>v+S.gwApiH[k]),v=>v.toFixed(1));
+    tr('Serving share of labs GW',T.servShare,fPct);
+    tr('Tokens per IT-GW-year (Q) — EXOGENOUS',T.servShare.map(()=>T.tokPerGW),v=>v.toFixed(2));
+    tr('DCF supported GW, year-end (facility)',[0,1,2,3,4].map(k=>E.sup[IX(2026)+k]),v=>v.toFixed(0));
+    tr('DCF supported GW, AVERAGE (facility)',T.avgFacGW,v=>v.toFixed(0));
+    tr('→ IT GW (÷ PUE) × serving share',T.itGW.map((v,k)=>v*T.servShare[k]),v=>v.toFixed(1));
+    tr('SERVABLE tokens (Q)',T.servable,v=>v.toFixed(0));
+    tr('Modelled system tokens (Q)',T.mapTok,v=>v.toFixed(0));
+    tr('SLACK — servable ÷ modelled',T.slack,v=>v.toFixed(2)+'x');
+    tr('House industry AI GW, avg (r87)',S.indGwH,v=>v>0?v.toFixed(1):'n/a — series ends CY28');
+    tr('DCF avg facility GW ÷ house avg GW',T.gwRecon,v=>v>0?v.toFixed(2)+'x':'n/a');
+    $('tblTok').innerHTML=th;}
+   const shortYrs=T.slack.map((s,k)=>s<0.9?yy[k]:null).filter(Boolean);
+   $('tokChips').innerHTML=
+     T.slack.map((s,k)=>`<span class="schip ${s>=0.9&&s<=1.5?'ok':'warn'}">CY${yy[k]} slack ${s.toFixed(2)}x</span>`).join('')+
+     (shortYrs.length?`<span class="schip warn">SHORT in ${shortYrs.join(', ')} — the fleet the capex leg builds serves only ${fPct(Math.min(...T.slack))}–${fPct(Math.max(...T.slack))} of the tokens the MAP models. v1 said 1.05–1.32x; that was circular.</span>`:`<span class="schip ok">fleet covers the modelled tokens every year</span>`)+
+     `<span class="schip">GW basis: DCF avg facility ÷ house avg IT = ${T.gwRecon.slice(0,3).map(v=>v.toFixed(2)+'x').join(' / ')} (CY26–28) — clean enough to read as PUE-plus-definition; v1's 1.4–1.6x was an avg-vs-exit artefact</span>`;
    // mode panel
    const derived=S.cloudMode==='derived';
    $('modeChips').innerHTML=
