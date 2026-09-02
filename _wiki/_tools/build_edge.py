@@ -122,10 +122,17 @@ def curated_diverges(rf):
         name, sep, tail = h.partition("—")          # em-dash separates name from headline
         if not sep:                                  # no em-dash: keep whole heading as the claim
             name, tail = "", h
-        name = re.sub(r"\*\*", "", name).strip() or "—"
-        claim = re.sub(r"\*\*", "", tail).strip()
+        name = re.sub(r"\*\*", "", name).strip()
+        # A heading whose first em-dash falls late ("THE HEADLINE: <one long sentence> — <clause>")
+        # would otherwise put the whole headline in the Name column and leave the claim a fragment.
+        if len(name) > 60:
+            name, claim_override = "—", h
+        else:
+            claim_override = None
+        name = name or "—"
+        claim = re.sub(r"\*\*", "", claim_override if claim_override else tail).strip()
         # prefer the explicit '➜ Action:' line as the read; fall back to the headline
-        a = re.search(r"➜\s*\*\*(.+?)\*\*", body, re.S)
+        a = re.search(r"[➜➤]\s*\*\*(.+?)\*\*", body, re.S)   # both arrowhead glyphs: reports use U+27A4, older ones U+279C
         read_txt = re.sub(r"\s+", " ", re.sub(r"\*\*", "", a.group(1))).strip() if a else claim
         if len(read_txt) > 400:
             read_txt = read_txt[:397] + "…"

@@ -3,13 +3,13 @@
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\MRVL` (filings + transcripts) · `_equity_calls` · `_briefings\by-ticker\MRVL.md` (none on disk). Master index: [00_INDEX.md](00_INDEX.md). Themes: [custom-asic-tpu](themes/custom-asic-tpu.md) · [optical-cpo](themes/optical-cpo.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-01 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-02 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $11.9bn | $18.1bn |
-| Gross profit | $7.0bn | $10.4bn |
-| Gross margin | 58.4% | 57.7% |
+| Gross profit | $7.0bn | $10.5bn |
+| Gross margin | 58.4% | 57.8% |
 | EBITDA | $4.6bn | $7.3bn |
 | EPS | $4.17 | $6.71 |
 | Capex | $499m | $678m |

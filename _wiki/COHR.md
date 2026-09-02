@@ -5,15 +5,15 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\COHR` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\COHR.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Snapshot — Capstone official model + BBG · asof 2026-09-01 · USD
+### 📊 Snapshot — Capstone official model + BBG · asof 2026-09-02 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | **$9.1bn** | **$16.6bn** |
-| Gross profit | $3.6bn | $6.8bn |
+| Revenue | **$8.7bn** | **$12.6bn** |
+| Gross profit | $3.5bn | $5.2bn |
 | Gross margin | **40.0%** | **41.0%** |
 | EBITDA | $2.2bn | $3.6bn |
-| EPS | **$8.27** | **$19.21** |
+| EPS | **$7.30** | **$11.30** |
 | Capex | $1.3bn | $1.7bn |
 | OCF (≈EBITDA) | $2.2bn | $3.6bn |
 

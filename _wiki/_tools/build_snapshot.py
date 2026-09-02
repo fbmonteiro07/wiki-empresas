@@ -199,11 +199,29 @@ def build_block(ticker, est_co, house_co):
     return "\n".join(lines)
 
 
+def _eol_of(md_path):
+    """The page's own EOL convention. build_snapshot used to hard-code "\n", which
+    silently normalised every CRLF page on EVERY run: a 1-line snapshot refresh showed
+    up as a 1,481-line diff on NVDA.md and buried the real change. Pages on this wiki
+    are a genuine mix (most company pages LF; NVDA/SPCX/CRWV/ANTHROPIC CRLF), so the
+    convention is read from the bytes and reused. MIXED files are left on LF and
+    reported, rather than being silently flattened one way or the other."""
+    b = open(md_path, "rb").read()
+    crlf = b.count(b"\r\n"); lone = b.count(b"\n") - crlf
+    if crlf and not lone:
+        return "\r\n"
+    if crlf and lone:
+        print(f"  ! {md_path.name if hasattr(md_path,'name') else md_path}: MIXED endings "
+              f"(crlf={crlf}, lone_lf={lone}) - written as LF")
+    return "\n"
+
+
 def inject(md_path, block):
+    eol = _eol_of(md_path)
     txt = open(md_path, encoding="utf-8").read()
     if START in txt and END in txt:
         new = re.sub(re.escape(START) + r".*?" + re.escape(END), block, txt, count=1, flags=re.S)
-        open(md_path, "w", encoding="utf-8", newline="\n").write(new)
+        open(md_path, "w", encoding="utf-8", newline=eol).write(new)
         return "updated"
     lines = txt.splitlines()
     ins = None
@@ -219,7 +237,7 @@ def inject(md_path, block):
     if ins is None:
         return "no-anchor"
     lines[ins:ins] = ["", block]
-    open(md_path, "w", encoding="utf-8", newline="\n").write("\n".join(lines) + "\n")
+    open(md_path, "w", encoding="utf-8", newline=eol).write("\n".join(lines) + "\n")
     return "inserted"
 
 

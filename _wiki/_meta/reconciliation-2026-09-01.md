@@ -18,13 +18,27 @@ _Every NEW quantitative datapoint from this run, placed against three baselines:
 > `ni` / `rev` / `ebit` / `capex` are **fine** on all three — only `eps` is broken. **Two of the three (TSM, BKNG) are names in this run.**
 > 🔴 **This nearly manufactured the run's headline.** Raw fields show TSM house NT$102.5 vs consensus NT$518.74 — a *5x* "divergence". Corrected to an ordinary-share basis, consensus CY2026 is **NT$103.75 vs house NT$102.50 = +1.2%, a CONFIRM.** An ADS-vs-ordinary artifact, one step from being written up as alpha. Same class as the SAMSUNG common-vs-preferred trap. Also: **TSM's `mktcap` reads as USD while its `ccy` says TWD** — don't mix it with the TWD fundamentals.
 
+🔴🔴 **CORRECTION 2026-09-02 — TWO OF THE THREE `eps` "DEFECTS" ABOVE ARE NOT DEFECTS. THEY ARE STOCK SPLITS, AND THE BOX'S "real count" COLUMN IS THE THING THAT WAS WRONG.** Settled with a live BBG `EQY_SH_OUT_ACTUAL` pull (2026-09-02), not from memory:
+
+| name | box claimed "real count" | **BBG `EQY_SH_OUT_ACTUAL`** | `mktcap`/`px` | `ni`/`eps` | implied P/E | verdict |
+|---|--:|--:|--:|--:|--:|---|
+| **TSM** | 25,930m ordinary | **5,186,474,000 ADS** | 5,186.5m | 5,173.1m | — | ✅ **BOX CORRECT** — per-ADS 5:1 |
+| **NOW** | ~208m | **1,034,000,000** | 1,034.0m | 1,028.2m | **34.1x** | ❌ **BOX REFUTED** — `eps` 4.06 is right |
+| **BKNG** | ~32m | **751,380,500** | 751.4m | 766.5m | **19.3x** | ❌ **BOX REFUTED** — `eps` 10.29 is right |
+
+➤ **The test was run backwards.** For NOW and BKNG, `mktcap/px` and `ni/eps` — two independent fields from the same pull — **agree to within 0.6% and 2.0%**, and the resulting P/Es (34.1x ServiceNow, 19.3x Booking) are ordinary. The box instead trusted a **remembered, pre-split** share count and declared the internally-consistent BBG data broken. Its "corrected" figures are the artifacts: **$20.04 for NOW is a 6.9x P/E** and **$246.6 for BKNG a 0.8x P/E**. The "447x P/E" cited as proof of breakage came from pairing a post-split EPS with a pre-split price anchor. ✅ **`eps` is USABLE for NOW and BKNG.** TSM's entry stands — and its true hazard is compound: **per-ADS *and* `ni`/`eps` in TWD while `px`/`mktcap` are USD** (so the raw pair prints a nonsense 0.8x P/E).
+
+⚠️ **A REAL trap was found while running the test, and it is the opposite of the one the box describes: `EQY_SH_OUT` IS THE UNRELIABLE FIELD ON MULTI-CLASS STRUCTURES.** For **DELL** it returns **325.0m — the Class C line only** — while `CUR_MKT_CAP`/`px` **(646.1m)** and `ni`/`eps` **(650.9m)** both give the all-class count. Had DELL been screened on `EQY_SH_OUT`, its EPS would have been declared 2x broken and this run's headline lost. **Standing rule: test `ni/eps` against `mktcap/px` — same pull, both all-class — never against a share count from memory, and never against `EQY_SH_OUT` alone.**
+
 **House-model coverage** (`_wiki\_data\house.json`, asof 2026-09-01): AAPL, AVGO, COHR, GOOG, LITE, META, NVDA, TSM. **Absent for this run's other names** — DELL, MSFT, ASML, SKHYNIX, SAMSUNG, MU, ORCL, CRM, NOW, MRVL, INTC, MEDIATEK, BKNG — so those get baselines (1) and (3) only.
 
 ---
 
 ## Where the new data DIVERGES — the alpha
 
-### 1. 🔴🔴 THE HEADLINE: DELL's own FY27 EPS guide is **ABOVE THE STREET HIGH**, while its revenue guide sits INSIDE it. The Street's error is the MARGIN, not the revenue — which adjudicates the "margin stacking on memory" fight this page has been running since 08-14.
+### 1. 🔴🔴 DELL — the Street's error was the MARGIN, not the revenue, and the guide sits **+6.5% above the FY27 consensus median** — but **NOT above the street high** (basis-corrected 09-02; the quarterly leg closed inside one session)
+➤ **The edge, correctly based: DELL's FY27 EPS guide of $25.50 is +6.5% above the BBG annual median of $23.94 with the street high still $2.7bn/share of EPS above it at $28.60 — so the bull case is NOT exhausted by the guide; and consensus models FY28 EPS +19.0% and FY29 +20.2%, i.e. the Street does not treat FY27 as peak earnings, which management declined to answer.**
+
 
 Management guide (Q2 FY27 call, 2026-09-01) vs pre-revision consensus:
 
@@ -38,6 +52,33 @@ Management guide (Q2 FY27 call, 2026-09-01) vs pre-revision consensus:
 ⚠️ **Period-basis caveat, and it matters:** `estimates.json` labels Dell's **fiscal Q3 FY27 as "Q3-26E"** and its **FY27 as "CY2026"** (`lrq 2026-07-31`). Dell's FY27 ends ~Jan-2027, so the CY2026 block is the closest available comparator but is a **mixed basis** (`n_actual = 2`). The quarterly row is the clean comparison; the FY row is directional. **Derive the period from `lrq`, never from the label.**
 
 🔴 **THE READ: on revenue the Street's most bullish analyst is already above Dell's own guide; on EPS not one analyst reaches it.** The whole distribution is mis-specified on margin, not on demand. Management then supplied the mechanism the bulls lacked — the ISG margin bridge is **scale**: *"just over **400 basis points**"* in Q3 and *"over **650 basis points**"* for the full-year guide, with the **ISG rate guided UP even as AI-server revenue triples to $74bn**.
+
+✅ **RESOLVED 2026-09-02 — THE STREET REVISED ONTO THE GUIDE INSIDE ONE TRADING DAY, AND THE 09-01 READ WAS RIGHT ABOUT *WHY*.** `estimates.json` refreshed **asof 2026-09-02** (99/99 live). The quarterly gap did not narrow — it **closed**:
+
+| Metric | **Dell guide** | median 09-01 (pre) | median 09-02 (post) | **guide vs post-median** | high 09-02 | **guide vs high** |
+|---|--:|--:|--:|--:|--:|--:|
+| F3Q27 revenue | **$49.0bn** | $41.91bn | **$49.21bn** | ✅ **−0.4%** | $49.72bn | inside (−1.5%) |
+| F3Q27 EPS | **$6.50** | $4.547 | **$6.515** | ✅ **−0.2%** | $6.63 | inside (−2.0%) |
+| F3Q27 gross margin | — | 17.60% | **19.07%** | **+147bp revised UP** | — | — |
+
+➤ **The +43.0% EPS gap became −0.2% in one session, and the mechanism was the one the 09-01 read named: MARGIN.** Consensus F3Q27 gross margin was revised **+147bp** (17.595% → 19.065%) and CY26 **+70bp** (17.6% → 18.3%). Meanwhile the revenue **street-high came DOWN 11.9%** ($56.45bn → $49.72bn) as the median rose **+17.4%** — i.e. **the distribution collapsed onto the guide from both sides.** The 09-01 finding was not wrong; it was **arbitraged within 24 hours**. Moved to **CONFIRMS** as a *closed* call, not a failed one.
+
+🔴🔴 **BUT THE FY LEG SURVIVES — AND ON THE CLEAN ANNUAL BASIS IT POINTS THE OPPOSITE WAY FROM THE CY-SUM.** The 09-01 table read FY27 off the **CY2026** block, which this report correctly flagged as mixed-basis (`n_actual=2`). An ad-hoc **`BEST_FPERIOD_OVERRIDE=1FY`** pull returns the genuine BBG **annual** line, and DELL's `EQY_FISCAL_YR_END` of `01/2026` confirms **1FY = FY27 (ending Jan-2027)** — corroborated by BBG annual revenue **$191.17bn** against the company's own **$192bn** FY27 guide (+0.4%):
+
+| FY27 metric | **Dell guide** | **BBG ANNUAL (1FY)** | vs annual | **BBG annual HIGH** | vs high | CY2026 CY-sum | vs CY-sum high |
+|---|--:|--:|--:|--:|--:|--:|--:|
+| Revenue | **$192.0bn** | **$191.17bn** | **+0.4%** | $200.65bn | ✅ **inside (−4.2%)** | $181.57bn (+5.8%) | 🔴 $188.15bn → **+2.1% ABOVE** |
+| EPS | **$25.50** | **$23.94** | **+6.5%** | **$28.60** | ✅ **−10.8% BELOW the high** | $21.40 (+19.2%) | 🔴 $23.85 → **+6.9% ABOVE** |
+
+🔴🔴 **THE CY-SUM-VS-ANNUAL WEDGE FLIPS THE SIGN OF THE STREET-HIGH COMPARISON ON BOTH LINES — a 17.8pp swing on EPS.** The CY-sum says the guide is **above** the street high on revenue *and* EPS (the shape of the 09-01 headline); the genuine annual line says it is **comfortably inside on both** (−4.2% and −10.8%). The CY-sum understates the annual line by **−5.0% on revenue, −10.6% on EPS and −16.6% on the EPS high**. ⚠️ **This is the third name on which this wedge has inverted a conclusion (after CRM and META) and the first where it did so on a company's own guide. Never place an off-calendar FYE against a `CY20xx` block — pull the `1FY` annual override.**
+
+➤ **The surviving, correctly-based edge is therefore NOT "the guide beats the street high" — it is that the guide sits 6.5% above the median with EPS headroom still above it.** The bull case is not exhausted by the guide.
+
+✅ **AND THE ANNUAL PULL ANSWERS THE ONE QUESTION MANAGEMENT DECLINED.** Melius asked whether FY27 is peak earnings and management **refused** (§1). Consensus answers it: **FY28 EPS $28.48 (+19.0% on FY27) and FY29 $34.23 (+20.2%)**, on revenue **$226.97bn (+18.7%)** then **$258.99bn (+14.1%)**. **The Street does not model FY27 as peak** — so "is FY27 peak earnings?" is a live short thesis *against consensus*, not a question consensus shares. FY29 EPS high **$53.61** is 57% above the FY29 median: the dispersion has moved out to FY29.
+
+✅ **Open item (d) was ALREADY CLOSED by the management primary on 09-01 — the carry-forward line listing it as open was itself stale, and consensus now independently corroborates the primary.** `DELL.md` records the CFO verbatim (*"For Q3, we expect revenue to be **$49 billion at the midpoint**"*, David Kennedy, Q2 FY27 call), which settled **Barclays $49.0bn right / UBS $46.76bn wrong** on the day. **The primary is the adjudicator; this layer only adds a second, independent check** — post-print consensus converged to **$49.21bn**, within **0.4%** of Barclays and **5.2% above** UBS. ⚠️ **Recorded because the order matters: convergence of consensus is corroboration, never a substitute for the company's own words.**
+
+⚠️ **DELL PT baseline, now on file:** consensus PT **$570.70** (high $735 · low $428) vs spot **$448.06** = **+27.4%** implied; 31 analysts, **21 buy / 10 hold / 0 sell**. This places the one DELL PT that reached the wiki through the DB relay — **$480** — at **−15.9% BELOW the consensus median** and only **65.3% of the street high**, i.e. a Buy rating carrying a bottom-quartile target.
 
 ⚠️ **But the bear is wounded, not killed:** management **conceded** *"a notion of inflation inside our growth"* and **refused to split price from volume**. And the **FY28-comp question was asked (Melius, against NVDA's ~+70%) and DECLINED** — "is FY27 peak earnings?" survives the call. Only anchor given: 2H **+68%** vs 1H **+71%**.
 
@@ -178,15 +219,61 @@ Bernstein EPS 2026E **$10.44** / 2027E **$12.05**. ⚠️ **Do NOT anchor these 
 | 10 | Samsung 2027 HBM step-up **+98%** | page's UBS +90% vs JPM +42% spread | ✅ corroborates the high side |
 | 11 | NVDA→LITE **$2bn**, NVDA→COHR **$2bn @ $257** (Mar-2026), Celestial AI **$3.25bn**, GOOG-MRVL warrant **$120bn = 240 × $500m / 58,970,907 sh @ $206.58**, MRVL **~$1bn** FY27 prepayments | page primaries (8-K, 10-Q, calls) | ✅ all corroborate; **primaries stand, nothing overwritten** |
 | 12 | SKT **2GW DSX** AI factory | page's 08-19 "SK Hyper" item | ✅ same commitment, **double-count guard written in** |
-| 13 | DELL FY27 revenue guide **$192bn** | consensus street-high **$194.88bn** | ✅ inside — the revenue line is NOT the disagreement |
+| 13 | DELL FY27 revenue guide **$192bn** | consensus street-high **$194.88bn** (pre-print CY-sum) | ✅ inside — the revenue line is NOT the disagreement. ⚠️ **BASIS CORRECTED 09-02: this baseline was the CY-sum high, which post-revision FELL to $188.15bn — on which the guide would read +2.1% ABOVE. The conclusion survives only on the genuine BBG ANNUAL high of $200.65bn (guide −4.2% inside).** ⇒ §1 |
+| **14** | ✅ **MOVED FROM DIVERGES 09-02** — DELL **F3Q27 revenue** guide **$49.0bn** | **post-revision** consensus median **$49.21bn** (asof 09-02) | ✅ **−0.4%** — was +16.9% against the pre-print median. **The Street revised onto the guide in one session.** ⇒ §1 |
+| **15** | ✅ **MOVED FROM DIVERGES 09-02** — DELL **F3Q27 EPS** guide **$6.50** | **post-revision** consensus median **$6.515** (asof 09-02) | ✅ **−0.2%** — was +43.0%, and the gap closed through a **+147bp gross-margin revision**, i.e. via exactly the mechanism the 09-01 read named. **Correct call, arbitraged inside 24h.** ⇒ §1 |
+| **16** | DELL **FY27 EPS** guide **$25.50** | **BBG ANNUAL (1FY)** high **$28.60** | ✅ **−10.8% INSIDE the street high** — the *opposite sign* to the CY-sum's "+6.9% above". **The 09-01 headline's street-high claim does not survive a correct-basis test; the +6.5%-above-median edge does.** ⇒ §1 |
+| **17** | **BKNG** Bernstein EPS **2026E $10.44 / 2027E $12.05** | BBG annual **FY2026 $10.461 / FY2027 $12.371** | ✅ **−0.2% / −2.6%** — essentially ON consensus, against a PT **21% below the median**. **Quantifies §13: the divergence is ~100% multiple, ~0% estimates.** Placeable only because the `eps` field was cleared of the false defect. |
+| **18** | **ASML** broker EPS ladder **€38.91 / €53.56** | BBG annual **FY2026 €37.84 / FY2027 €52.14** | ✅ **+2.8% / +2.7%** — the street-HIGH €2,500 PT rests on a **40x multiple**, not on above-Street earnings (€2,500÷40 = €62.50, between FY27 and FY28 ✓). ⚠️ *year-mapping inferred, not stated in the note.* |
+| **19** | **MSFT** BofA's stated **28x CY27E** | refreshed CY2027E EPS **$21.34** | ✅ **28.1x reproduces exactly** on the 09-02 vintage (was $21.32 → 28.1x). The multiple is confirmed; §5's read that **the $600 is financed entirely by it** stands. |
 
 ---
 
-## ⏳ PENDING — re-run when the Terminal is back
+## ✅ PENDING — RESOLVED 2026-09-02 (Terminal live, `estimates.json` asof 2026-09-02)
 
-1. **All broker-PT-vs-consensus-PT placements.** `estimates.json` has no `BEST_TARGET_PRICE`. Affects: **ASML** €2,500/$2,859 (reiterated) · **MSFT** BofA $600 · **BKNG** Bernstein $188 · **META** BofA $835 (superseded by same-analyst $810/$800) · **BofA MSFT prior $500**.
-2. **DELL post-print consensus.** The snapshot is pre-revision by ~85 minutes. The +43%/+47.7% gaps above measure *guide vs the Street's pre-print view*; re-measure after the Street revises to see how much closes.
-3. **A live re-pull will NOT fix the CY2026 pre-print-consensus defect** (already proven 08-03) nor the three broken `eps` fields — those need the fetch script corrected, not re-run.
+**1. ALL BROKER-PT-vs-CONSENSUS-PT PLACEMENTS — CLOSED.** `estimates.json` still carries **no `BEST_TARGET_PRICE`** (unchanged script defect), so these come from an ad-hoc live pull of `PX_LAST / BEST_TARGET_PRICE / BEST_TARGET_HI / BEST_TARGET_LO / BEST_ANALYST_RATING / TOT_{BUY,HOLD,SELL}_REC`, **2026-09-02**:
+
+| Name | Broker PT | **BBG cons. PT** | vs median | **street HIGH** | vs high | **street LOW** | spot | placement |
+|---|--:|--:|--:|--:|--:|--:|--:|---|
+| **ASML** (NA, EUR) | **€2,500** | €2,027.47 | **+23.3%** | **€2,500.00** | 🎯 **IS the high** | €1,291 | €1,440.60 | most bullish PT on the Street |
+| **ASML** (US ADR) | **$2,859** | $2,435.80 | **+17.4%** | **$2,859.00** | 🎯 **IS the high** | $2,100 | $1,669.65 | most bullish PT on the Street |
+| **MSFT** BofA | **$600** | $572.23 | **+4.9%** | $870 | only **69.0%** of high | $400 | $497.80 | ⚠️ barely above median |
+| **MSFT** BofA *prior* | **$500** | $572.23 | **−12.6%** | $870 | 57.5% of high | $400 | $497.80 | ⚠️ **+0.4% from spot** |
+| **META** BofA | **$835** | $745.22 | **+12.0%** | $1,000 | 83.5% of high | $580 | $595.33 | above-Street |
+| **META** BofA *superseded* | **$810 → $800** | $745.22 | **+8.7% → +7.4%** | $1,000 | 80.0% of high | $580 | $595.33 | a **−4.2% walk-down**, still above-Street |
+| **BKNG** Bernstein | **$188** | $238.03 | **−21.0%** | $301 | 62.5% of high | **$188.00** | $198.58 | 🎯 **IS the street LOW** |
+| **DELL** (DB relay) | **$480** | $570.70 | **−15.9%** | $735 | 65.3% of high | $428 | $448.06 | bottom-quartile Buy |
+
+🔴 **THE CROSS-CUTTING FINDING: THREE OF THESE FOUR CALLS ARE PURE MULTIPLE CALLS — THE ESTIMATES AGREE AND ONLY THE RATING DOES THE WORK.**
+
+- 🎯 **ASML — the €2,500 IS the street high to the decimal, on BOTH listings, yet the EPS is within 3% of consensus.** Matching the note's €24.72/38.91/53.56 ladder onto the live annual overrides (FYE 12/2025 ⇒ 1FY = FY2026) implies the three figures are **2025/2026/2027**: **€38.91 vs BBG FY2026 €37.84 = +2.8%** and **€53.56 vs FY2027 €52.14 = +2.7%**. And the stated **40x on Q5-8** reproduces: €2,500 ÷ 40 = **€62.50**, which sits between BBG FY2027 €52.14 and FY2028 €66.94 ✓. **The street-high target is financed entirely by a 40x multiple, not by above-Street earnings.** ⚠️ *The year-mapping is INFERRED from a two-year +2.7/+2.8% fit — the note does not label the years. Flagged, not adopted.*
+- 🔴 **MSFT — and here the resolution cuts AGAINST the note's framing.** The 09-01 write-up headlined BofA's $600 as a rare **multiple** upgrade (24x → 28x). Against the tape it is **+4.9% above the median and $270 below the street high** — a bull-case target only 69% of the way to the actual bull case. Set beside §5's finding that BofA sits **BELOW** consensus on the earnings, the note is **below-Street on numbers and barely above-Street on price**: materially less bullish than it reads. ⚠️ **And the prior $500 was 0.44% from spot — fully consumed by the tape.** A raise that restores 20.5% of upside from a PT the market had already reached follows price rather than leading it. The stated **28x reproduces exactly on refreshed data: $600 ÷ CY2027E EPS $21.34 = 28.1x** ✓ (was $21.32).
+- 🎯 **BKNG — Bernstein's $188 is not merely "the lowest PT on the page" (09-01 §13); it is the lowest PT ON THE STREET, equal to `BEST_TARGET_LO` to the cent.** And the estimate leg is now measurable, because the `eps` field is **not** broken (see the correction above): **2026E $10.44 vs BBG CY2026 $10.29 (+1.5%) / annual FY2026 $10.461 (−0.2%)**; **2027E $12.05 vs CY2027 $12.28 (−1.9%) / annual FY2027 $12.371 (−2.6%)**. 🔴 **So ~100% of a −21% PT divergence is MULTIPLE and ~0% is estimates** — the exact conclusion §13 could only assert as a caveat while believing the data unusable. ⚠️ Note also that with **41 analysts and ZERO sells**, Bernstein holds the tape's lowest target from inside the 9-name *hold* bucket.
+- **META — BofA stays above-Street throughout its own walk-down.** $835 → $810 → $800 is a **−4.2%** cut by the same analyst, ending **+7.4% above** a $745.22 median. Context: the street **low of $580 is BELOW the $595.33 spot**, so the Street's own bear is already in the money.
+
+⚠️ **NEW BASIS HAZARD FOUND WHILE RESOLVING THIS — ASML HAS TWO DIFFERENT ANALYST PANELS AND THEY DO NOT AGREE.** The Amsterdam line (`ASML NA`) carries **42 analysts, 36 buy / 4 hold / 2 SELL, rating 4.62**; the ADR (`ASML US`) carries **21 analysts, 21 buy / 0 hold / 0 sell, rating 4.95**. **The ADR panel is structurally more bullish and contains no sells at all.** Any "ASML consensus PT upside" quoted off the ADR is a different, smaller, more bullish poll than the primary listing's — **never net or substitute the two.** (The PT pair itself is coherent: $2,859/€2,500 implies EURUSD **1.1436** vs the spot-implied ADR/local ratio of **1.1590**, a 1.3% FX drift since the note; ASML's ADR is 1:1 with the local line.)
+
+**2. DELL POST-PRINT CONSENSUS — CLOSED.** ⇒ resolved in full under §1 above: the quarterly gap **closed from +43.0% to −0.2%** inside one session via a **+147bp** margin revision, while the FY leg **flipped sign** between the CY-sum and the genuine annual basis.
+
+**3. THE THREE `eps` FIELDS AND THE CY2026 PRE-PRINT DEFECT — PARTLY RETIRED, PARTLY STANDING.**
+- ✅ **RETIRED:** the NOW and BKNG `eps` entries were never defects (splits — see the correction block above). **No script change is needed for either.**
+- ⏳ **STANDING (script-level, a re-run genuinely will not fix these):** (a) `estimates.json` carries **no `BEST_TARGET_PRICE`** — every PT placement in this wiki still needs an ad-hoc pull, and that is now the **third** consecutive run to pay that cost (08-21, 09-01, 09-02); **worth adding to `fetch_estimates.py`.** (b) The **CY-sum defect is confirmed again and is worse than "understates"** — on DELL it **inverted** a street-high comparison, so the fix is to add the **`1FY/2FY/3FY` annual override** to the fetch for every off-calendar-FYE name. (c) TSM's `eps` remains per-ADS-in-TWD against a USD price.
+
+**4. NOT RESOLVABLE FROM BBG (unchanged, recorded so it is not re-attempted):** the BofA MSFT **FY-June** EPS line has no figure in the primary, so it cannot be placed against the now-on-file annual baselines (**FY27 $19.801 · FY28 $23.527 · FY29 $28.525**); the next MSFT note can be placed directly. ⚠️ **One suspicion raised by those baselines and explicitly NOT adopted:** the 07-07 MS credit action assumed *"~$190bn CY26 capex"*, which is **+23.6% above** BBG's true **calendar** CY2026 capex of **$153.69bn** but within **0.8%** of the **FY-June-2027** line (**$188.55bn**). That pattern is consistent with a **fiscal-labelled-as-calendar** mislabel, but MS's figure is its own estimate and may legitimately sit above consensus. **Both numbers logged; neither adopted; do not net them.**
+
+---
+
+## BBG consensus pull — live PT vs spot (2026-09-02)
+
+_Ad-hoc live pull (`PX_LAST` / `BEST_TARGET_PRICE` / `BEST_TARGET_HI` / `BEST_TARGET_LO` / `TOT_{BUY,HOLD,SELL}_REC`), because `estimates.json` still carries no `BEST_TARGET_PRICE`. Feeds the PT-vs-spot panel of `_meta/edge.md`._
+
+| Ticker | Spot | Cons PT | Street high | Street low | Buy/Hold/Sell | Read |
+|---|--:|--:|--:|--:|--:|---|
+| **DELL** | 448.06 | 570.70 | 735 | 428 | 21/10/0 | Widest consensus upside in this run. The lone relayed broker PT (**$480**, DB) sits **−15.9% below** this median. |
+| **ASML** | 1669.65 | 2435.80 | 2859 | 2100 | 21/0/0 | *(US ADR line.)* ⚠️ **ADR panel only — 21 analysts, ZERO holds or sells.** The Amsterdam line polls **42 analysts incl. 2 SELLS** (PT €2,027.47, high €2,500). **Never net the two panels.** The reiterated **€2,500 / $2,859 IS the street high on both lines.** |
+| **META** | 595.33 | 745.22 | 1000 | 580 | 71/7/0 | Street **low ($580) is BELOW spot**. BofA's $835→$810→$800 walk-down still ends **+7.4% above** this median. |
+| **BKNG** | 198.58 | 238.03 | 301 | 188 | 32/9/0 | Bernstein's **$188 IS `BEST_TARGET_LO`** — the lowest target on the Street, from inside the hold bucket, with **no sell ratings anywhere**. |
+| **MSFT** | 497.80 | 572.23 | 870 | 400 | 68/4/0 | BofA's raised **$600 is only +4.9%** above this median and **69% of the high**; its prior **$500 was 0.4% from spot**. |
 
 ---
 
@@ -202,3 +289,7 @@ Bernstein EPS 2026E **$10.44** / 2027E **$12.05**. ⚠️ **Do NOT anchor these 
 - **Unit hazard caught on NVDA:** Lumentum's **14.4 Tbps (one-way)** and NVDA's **3.6 TB/s (both-ways)** are the **same link**, carried from two sources.
 - **"Google is dropping HBM"** (08-01, theme page) is **refuted** — 8th-gen TPUs still use HBM3e.
 - **GS "Decoding the Agentic Economy" (05-05) logged as failed-or-unproven:** the cost leg (60-70% p.a. cost/token decline) held; the *"token prices stabilising / margin inflection in 1H26"* leg is contradicted by the page's own later measured series. **All nine of its PTs kept OUT of company pages.**
+
+---
+
+_BBG column resolved 2026-09-02 — `estimates.json` asof **2026-09-02** (**99/99 live, 0 FAIL lines, 0 `error` keys, 0 null/zero prices, 0 `carried_over` stamps**, and only **1 of 99** records byte-identical to the 09-01 vintage — **KIOXIA**, a thin-coverage Japanese listing, i.e. a genuinely unchanged record and not a silent carry-over). Plus two ad-hoc live pulls the same date: **PT/rating/dispersion** for ASML (both listings), MSFT, BKNG, META and DELL; and **`BEST_FPERIOD_OVERRIDE=1FY/2FY/3FY`** annual lines for DELL, MSFT, BKNG and ASML — the annual override being the only correct basis for DELL's off-calendar FY27, and the reason this layer could show that **the CY-sum had inverted the street-high comparison**. Shares outstanding settled with a live **`EQY_SH_OUT_ACTUAL`** pull. **Both `PENDING` items are closed** (item 1 in full, item 2 in full); item 3 is split into one **retired** half and one **standing script-level** half. **DELL's quarterly leg moved DIVERGES → CONFIRMS** (closed by revision inside 24h, not falsified), while **DELL's FY leg stays in DIVERGES with its sign corrected**. **Two claimed data defects (NOW, BKNG) were refuted and their `eps` fields readmitted** — which is what made the BKNG placement, the sharpest CONFIRMS in this layer, possible at all. **No web data was substituted at any point.**_
