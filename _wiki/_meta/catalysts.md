@@ -1,17 +1,11 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-09-01 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-09-02 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (42)
+## 📅 Upcoming (36)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-09-01 | AAPL | **🆕🔴🔴 CEO TRANSITION EFFECTIVE 2026-09-01 — John Ternus succeeds Tim Cook (Cook's last day was 2026-08-31).** ➜ **Watch: whether the September product event is used to reset the Siri/AI timeline, and  |
-| 2026-09-01 | CRDO | **🆕🔴 DATED — Q1 FY27 PRINT: TUESDAY 2026-09-01, release 4:15pm ET, call 5:00pm ET** (Jefferies · Curtis, 2026-08-27). **The bars to beat: July revenue $480m vs Street $472m; October guide $530m vs Str |
-| 2026-09-01 | CRDO | **🆕🔴🔴 F1Q27 PRINT — TUESDAY 2026-09-01, 4:15pm ET RELEASE. THE ONE NUMBER THAT ADJUDICATES THE QUARTER IS THE F27 ZEROFLAP OPTICAL OUTLOOK, AND THREE HOUSES HAVE PUBLISHED THREE DIFFERENT BARS FOR IT: |
-| 2026-09-01 | DELL | **✅ RESOLVED 2026-09-01 — F2Q27 PRINTED (AMC 16:05 ET, call 16:30). Outcome: beat on every line, FY27 revenue +$25bn to $192bn, FY27 EPS $17.90 → $25.50, FY27 AI-server $60bn → $74bn, orders $60.9bn,  |
-| 2026-09-01 | DELL | **🆕🔴🔴 F2Q27 PRINT — TUESDAY 2026-09-01, AFTER MARKET.** The four things that decide it, per BofA: **(1) the AI-server triple — revenue / orders / backlog, modelled at $15.6bn / $25bn / $60.6bn against |
-| 2026-09-01 | RDDT | **🆕 GS COMMUNACOPIA + TECHNOLOGY, SAN FRANCISCO — week of 2026-09-01.** Goldman explicitly frames its 08-30 r/bodega takeaways as setting up *"key debates into our Communacopia + Technology conference |
 | 2026-09-02 | AVGO | **🆕🔴 2026-09-02 — FQ3 FY26 print, and the bar is set by consensus rather than by the guide: ~$120bn of FY27 AI sales is in the Street's numbers versus management's ">$100bn" (BofA · Arya, 2026-08-19). |
 | 2026-09-02 | AVGO | **🆕🔴🔴 Q3 FY26 PRINT — WEDNESDAY 2026-09-02, ~4:15pm ET release / 5:00pm ET call. Implied move 6.3%; JPM positioning score +3 (−5/+5).** The four numbers that decide it, in order: **(1) the FY27 AI rev |
 | 2026-09-02 | CRWD | **🆕🔴🔴 FAL.CON 2026 — 2026-08-31 → 09-03, Las Vegas. THE INVESTOR BRIEFING IS 2026-09-02, 11:30am-3:00pm PST.** The five items MS is watching, in order of how much they move the model: **(1) AIDR sizin |
@@ -49,13 +43,21 @@ _Generated 2026-09-01 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-11-19 | SKHYNIX | **🆕 2026-08-20 → 2026-11-19 — the buyback executes on-market** (SK Securities). Daily execution is observable; **the falsifier for the "most aggressive among peers" claim is whether the full W40trn ac |
 | 2026-11-21 | SAMSUNG | **🆕 2026-08-24 → 2026-11-21 — the 53.3mn-share PSU treasury purchase window is open.** A mechanical, non-discretionary bid in the market for three months; note it is **excluded** from the FCF payout b |
 
-## ⏰ Passed — need a post-mortem (0)
+## ⏰ Passed — need a post-mortem (9)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| _none_ | | |
+| 2026-09-01 | RDDT | **🆕 GS COMMUNACOPIA + TECHNOLOGY, SAN FRANCISCO — week of 2026-09-01.** Goldman explicitly frames its 08-30 r/bodega takeaways as setting up *"key debates into our Communacopia + Technology conference |
+| 2026-09-01 | DELL | **🆕🔴🔴 F2Q27 PRINT — TUESDAY 2026-09-01, AFTER MARKET.** The four things that decide it, per BofA: **(1) the AI-server triple — revenue / orders / backlog, modelled at $15.6bn / $25bn / $60.6bn against |
+| 2026-09-01 | DELL | **🆕 PRIMARY-ONLY DATED ITEMS OUT OF THE Q2 FY27 CALL Dell Technologies, Q2 FY27 earnings call, 2026-09-01):** |
+| 2026-09-01 | DELL | **✅ RESOLVED 2026-09-01 — F2Q27 PRINTED (AMC 16:05 ET, call 16:30). Outcome: beat on every line, FY27 revenue +$25bn to $192bn, FY27 EPS $17.90 → $25.50, FY27 AI-server $60bn → $74bn, orders $60.9bn,  |
+| 2026-09-01 | DELL | **✅ RESOLVED 2026-09-01 (MANAGEMENT PRIMARY) — F3Q27 GUIDE RECONCILIATION, formerly an open data item: Barclays logged the F3Q revenue guide at $49.0bn, UBS at $46.76bn (both vs Street $41.37bn), same |
+| 2026-09-01 | CRDO | **🆕🔴🔴 F1Q27 PRINT — TUESDAY 2026-09-01, 4:15pm ET RELEASE. THE ONE NUMBER THAT ADJUDICATES THE QUARTER IS THE F27 ZEROFLAP OPTICAL OUTLOOK, AND THREE HOUSES HAVE PUBLISHED THREE DIFFERENT BARS FOR IT: |
+| 2026-09-01 | CRDO | **🆕🔴 DATED — Q1 FY27 PRINT: TUESDAY 2026-09-01, release 4:15pm ET, call 5:00pm ET** (Jefferies · Curtis, 2026-08-27). **The bars to beat: July revenue $480m vs Street $472m; October guide $530m vs Str |
+| 2026-09-01 | ASML | ~~High-NA HVM insertion (Intel A14A ~2029; first Logic layer adoption at TSMC A14 ~2028).~~ **🆕 SUPERSEDED 2026-09-01 — the whole High-NA insertion calendar has moved, in both directions: **[[INTC]] i |
+| 2026-09-01 | AAPL | **🆕🔴🔴 CEO TRANSITION EFFECTIVE 2026-09-01 — John Ternus succeeds Tim Cook (Cook's last day was 2026-08-31).** ➜ **Watch: whether the September product event is used to reset the Siri/AI timeline, and  |
 
 ## ✅ Resolved (108)
 

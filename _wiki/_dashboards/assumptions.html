@@ -21,7 +21,7 @@ td.r,th.r{text-align:right;white-space:nowrap}
 .pill.up{background:#e7f6ec;color:#1c7d3f} .pill.dn{background:#fdecea;color:#c0392b} .pill.due{background:#fff3cd;color:#8a6d1b}
 code{background:#eef1f6;padding:1px 5px;border-radius:4px;font-size:85%;font-family:ui-monospace,Consolas,monospace}
 </style></head><body>
-<header><h1>Canonical assumptions — one number per debate</h1><p>2026-09-01 · every cross-page number, all variants, scope traps flagged · <a href="../index.html">← back to wiki</a></p></header><main><h2>Custom-ASIC vs merchant-GPU share of AI accelerators <span class='pill due'>live debate</span></h2>
+<header><h1>Canonical assumptions — one number per debate</h1><p>2026-09-02 · every cross-page number, all variants, scope traps flagged · <a href="../index.html">← back to wiki</a></p></header><main><h2>Custom-ASIC vs merchant-GPU share of AI accelerators <span class='pill due'>live debate</span></h2>
 <p class='byline'>ASIC/XPU vs merchant-GPU split of AI accelerator shipments — ALWAYS state basis (units vs dollars) and horizon.</p>
 <p><b>Canonical:</b> Near-term unit share inflects to ASICs (JPM: 42% 2026E -&gt; 53% 2027E, units) while long-term dollar/unit share settles ~65-70% GPU (BofA AI 2030, UBS durable 70/30). These are horizons, not contradictions — the debate is whether the 2027 unit inflection sticks or plateaus.</p>
 <p style='background:#fff3cd;padding:8px 12px;border-radius:6px'>⚠️ <b>Scope:</b> Unit share ≠ dollar share (ASIC ASPs are far lower). NVDA-page &#x27;~70% defensible&#x27; framing = long-horizon accelerator share, consistent with BofA 65-70% by 2030, NOT a rebuttal of JPM&#x27;s 2027 unit-share call.</p>
@@ -200,16 +200,20 @@ code{background:#eef1f6;padding:1px 5px;border-radius:4px;font-size:85%;font-fam
 <li><code>GEV.md</code> — …s raised chip forecast (208GW of global IT load 2026-30 — AI-accelerator GW deployed/yr ~4x from ~15-17GW in CY25 to ~58-60GW by CY30 —…</li>
 <li><code>META.md</code> — …MOUNT OUTSTANDING and 960MW of CRITICAL IT LOAD. Facility GW ≠ critical IT-load GW, and deal size ≠ amount outstanding.…</li>
 <li><code>MSFT.md</code> — …ED/REQUESTED number, not energised, not IT-load, not facility GW; it is not comparable to any of the GW figures elsewhere on…</li>
+<li><code>MU.md</code> — …lity/datacenter GW — do NOT net against IT-load GW or against any HBM bit model on this page.** ⚠️ **Source gr…</li>
 <li><code>NVDA.md</code> — …ogram** (106 GW × ~$50bn ≈ $5.3T; JPM&#x27;s 138 GW-through-2030 gives the same answer). ⚠️ **Directional, not…</li>
 <li><code>OPENAI.md</code> — …*$105bn guarantee** across **~4.25GW of IT load with a ROFR on a further ~3.8GW** (UBS: 3.75GW, **8GW total**); **SB Energy owns and operat…</li>
+<li><code>SAMSUNG.md</code> — …lity/datacenter GW — do NOT net against IT-load GW or HBM bit models. Samsung&#x27;s &gt;50k-GPU AI factory is a compu…</li>
+<li><code>SKHYNIX.md</code> — …lity/datacenter GW — do NOT net against IT-load GW or against HBM bit models): Korea announced in July a US$91…</li>
 <li><code>SPCX.md</code> — …e the wiki rule: never mix facility GW, IT-load GW and 800V-subset GW — SIG does not state which basis it is haircutting.** - **🔴…</li>
 <li><code>TLN.md</code> — …ackdrop is supportive: JPM now models **138 GW US DC capacity growth through 2030** (up from 122 GW) withi…</li>
 <li><code>TSM.md</code> — …0-40GW PER YEAR from &#x27;25-30, reaching a 300GW INSTALLED BASE by &#x27;30**, as AI training scales toward multi…</li>
 <li><code>VST.md</code> — …&#x27;s load-growth thesis: JPM now models **138 GW of US DC capacity growth through 2030** (up from 122 GW) wi…</li>
 <li><code>themes/ai-datacenter-water.md</code> — …power](800v-dc-power.md): facility GW ≠ IT-load GW. Here: **m³/yr of withdrawal ≠ m³/yr of consumption ≠ $ of…</li>
 <li><code>themes/custom-asic-tpu.md</code> — …ding rule it must not be netted against IT-load GW, energized GW or the per-client GW in the Sizing table below (see [`../_m…</li>
-<li><code>themes/hbm-memory.md</code> — …physically impossible; treat this as an IT-load/compute-TDP GW card and never net it against facility-GW figures without r…</li>
+<li><code>themes/hbm-memory.md</code> — …TER GW. They must NOT be netted against IT-load GW, against 800V-subset GW, or chained into any HBM bit or memory-TAM model on this pa…</li>
 <li><code>themes/hyperscaler-capex.md</code> — …acity&quot; is not defined as facility GW or IT-load GW — per the standing GW-basis rule it must NOT be added to the facility-GW or criti…</li>
+<li><code>themes/secure-sovereign-infrastructure.md</code> — …RAMME/BUILD gigawatts as announced, not IT-load GW and not contracted compute. Do not net them against any per…</li>
 <li><code>themes/semicap-wfe.md</code> — …LENT-GW CONSTRUCT, NOT A FACILITY-GW OR IT-LOAD-GW FIGURE. It must not enter the canonical GW ledger in `../_m…</li>
 </ul>
 <h2>AI compute revenue / rental rate per GW <span class='pill due'>live</span></h2>
@@ -240,7 +244,7 @@ code{background:#eef1f6;padding:1px 5px;border-radius:4px;font-size:85%;font-fam
 <li><code>BESI.md</code> — …of growth (WFE) to **end-demand (compute/GW)**&quot;* — its own cross-check is that **$100bn+ of growth 2025…</li>
 <li><code>CEREBRAS.md</code> — …not about Cerebras). **⚠️ No $/watt or $M/MW figure from any of these sources has been chained into a ca…</li>
 <li><code>CRDO.md</code> — …-27). ⚠️ **UNIT GUARD RESTATED: every &quot;$/GW&quot; in the Jefferies SPCX frame is CREDO REVENUE per GW, never…</li>
-<li><code>DELL.md</code> — …capex ($1.2T 2027E / &gt;$1.4T 2028E; ~$50B/GW × 106GW 2026-30E ≈ &gt;$5.3T). A demand read-through only; no…</li>
+<li><code>DELL.md</code> — …be chained against any facility-GW or $/GW anchor elsewhere in the wiki. The inference-token sentence…</li>
 <li><code>GEV.md</code> — …DC **entitlement at 2–3x today&#x27;s ~$300M/GW** scope once UPS+SST are included (credibly in &#x27;27 orders,…</li>
 <li><code>IFX.md</code> — …materially higher content per GW ($190m/GW ’25 → $390m/GW ’28E, versus IFX&#x27;s own guided $100-250m/GW).…</li>
 <li><code>KLAC.md</code> — …of growth (WFE) to **end-demand (compute/GW)**&quot;* — its own cross-check is that **$100bn+ of growth 2025…</li>
@@ -310,6 +314,7 @@ code{background:#eef1f6;padding:1px 5px;border-radius:4px;font-size:85%;font-fam
 <li><code>themes/custom-asic-tpu.md</code> — …acklog, and in a market where CoWoS and HBM allocation are the binding constraints, pre-committing is rational eve…</li>
 <li><code>themes/cxl-memory-fabric.md</code> — …e AI memory bottleneck is shifting from HBM allocation to *fabric architecture*, which makes CXL a front-burner th…</li>
 <li><code>themes/hyperscaler-capex.md</code> — …d SKH cash-return sensitivity), and the HBM share / wallet-share / ASP-by-generation series. ⚠️ Note the top-line of this note was…</li>
+<li><code>themes/secure-sovereign-infrastructure.md</code> — …by SK Hynix offers a sweetheart deal on HBM to Nvidia, and Nvidia then gives SK Group priority GPU allocation&quot;*** — in a market where *&quot;it is the SUPPLIERS who hold the…</li>
 <li><code>themes/semicap-wfe.md</code> — …tal intensity (**adv logic $3.4B / DRAM-HBM $1.4B / NAND $1.3B per 10k WSPM**) ⇒ **~$7.5-8B WFE per incremental GW/yr**. Their publishe…</li>
 <li><code>themes/tokenmaxxing.md</code> — …memory compute = the &quot;detour around the HBM toll booth&quot;; Meta Muse blended token pricing ~$1; aggregate token spend &quot;growing rapidly&quot; (Citrini, 2026…</li>
 </ul>
