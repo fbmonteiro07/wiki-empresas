@@ -2,6 +2,36 @@
 
 # Theme — Optical / CPO (Co-Packaged Optics & AI Interconnect)
 
+## 🆕🔭 Recent signals (Sep 1, /newsletters-to-vault — **DAMNANG PUBLISHES THE CALL AND THEN ARGUES AGAINST THE NAIVE VERSION OF IT: "BANDWIDTH GROWTH IS NOT THE SAME THESIS AS OPTICAL REVENUE GROWTH"**)
+
+**DAMNANG (Substack)** — *"The AI Investment Map: From Tokens to Megawatts"*, **2026-09-01**. ⚠️ **INDEPENDENT SUBSTACK AUTHOR (damnang2.substack.com), NOT A BROKER — no rating, no price target, no house model.** Korean ex-Qualcomm engineer. **His own disclaimer, verbatim: *"This note is for information only and is not a recommendation to buy or sell any security… Third-party estimates vary by source, so they are better read for direction and structure than for absolute levels."*** He frames both calls as a **base case that changes if the conditions change**, and publishes an explicit falsification test for each. Same publisher as the March "War of Light" and the 08-20 HBM-density pieces already on this page — see the 📌 STANDING SOURCE NOTE below. [Source](../../Damnang/2026-09-01%20-%20The%20AI%20Investment%20Map-%20From%20Tokens%20to%20Megawatts.md)
+
+🔴🔴 **HIS CALL #2, STATED AS A BASE CASE: *"Data movement takes a larger share of AI system economics through 2028."*** Mechanism is the one this page already runs — cluster size growing, **copper reach shortening as electrical lane speed rises**, larger scale-up domains — with the OIF timeline as the anchor: *"OIF released the **CEI-448G framework document in November 2025** and launched the **CEI-448G-VSR and LR projects in the first quarter of 2026**. The open question is not whether 448G electrical is feasible. It is **how far electrical reach can hold in the generation after that**."*
+
+⚠️⚠️ **AND THEN THE PART THAT MAKES THIS WORTH LOGGING RATHER THAN JUST ANOTHER OPTICS BULL NOTE — HE REFUSES THE READ-ACROSS: *"**This should not be read as a simple optics bull case.** If CPO is adopted quickly, the same bandwidth can be delivered with **lower optical dollar content**."* And, twice more: *"**Bandwidth growth is not the same as optical revenue growth**"* · *"**Being long optics does not mean being long every optics company**… Within the same optical upcycle, growth and margin trajectories differ sharply by supplier."* ➤ **This is the CPO debate re-expressed as a BOM-content question rather than a timing question, and it is the cleanest statement on this page of why the CPO date and the optics P&L are two different bets.**
+
+### 🔴 THE STRUCTURAL CLAIM: THE BOTTLENECK SITS **ABOVE** THE MODULE, AND THE SUPPLIER COUNT COLLAPSES AS YOU GO UP
+
+*"Part of today’s optical scarcity shows up in **upstream components rather than the complete transceiver**… Moving up from the transceiver, the chain runs **module assembly → laser chip → epitaxy → InP substrate**. Effective suppliers thin out and substitution gets harder with each step up… **The supply numbers get worse the further up you go**."* The counts he gives:
+
+| Layer | Effective supplier set (his figures) |
+|---|---|
+| Module assembly | **dozens** of competitors; **7 of the top 10 are Chinese** |
+| Laser chip | **fewer than five firms at volume**; **200G/lane EML** (what 1.6T needs) narrower still |
+| Epitaxy | in-house at the laser makers or a **small set of specialist foundries**; **MOCVD tools export-controlled**, so expansion is gated by tool lead times |
+| InP substrate | **three firms hold 80-90%** |
+
+➤ **His conclusion, which maps directly onto this page’s "who captures the optical dollar" debate: the qualified-supplier test *"actually binds… **at the substrate and the light source, not at the module**."* ✅ **Corroborating marks he cites:** [[LITE]] **pump laser shipments +80% y/y** and **200G EML pricing above the prior generation**; **EML lead times beyond 2027** (TrendForce); **800G transceiver production 40-60% below demand through 2027**, **1.6T 30-40% short through 2029** (consulting estimates cited in public reporting); and the contract proof — the [[AXTI]]–[[LITE]] **InP supply-and-capacity-reservation agreement through end-2031, $43.5m deposit plus a second $43.5m settled in 2028** (AXT 8-K, 2026-07-29) — *"Buying several years of capacity in advance is what happens when the part cannot be sourced on demand."*
+
+⚠️ **ONE TECHNICAL DISTINCTION HE INSISTS ON, RELEVANT TO THE SiPh LEG OF THIS PAGE: *"The chain above also splits by light source. **EML and CW lasers sit on InP** and ride this chain directly. **VCSEL sits on GaAs** and follows a different one. **Moving to silicon photonics does not remove the need for a light source, so InP demand does not disappear**."* ➤ **i.e. a CPO/SiPh transition is a threat to MODULE and transceiver dollars, not to the InP/laser layer — which is exactly the split this page has been trying to price.**
+
+⚠️ **SCALE-UP vs SCALE-OUT, and he warns against the rack shorthand: *"Scale-up and scale-out should not be divided by the rack boundary. **Scale-up is the fabric inside a tightly coupled accelerator domain, and that domain can extend across multiple racks**. Scale-out connects multiple scale-up domains or clusters."* Economics differ: *"**Scale-out is Ethernet-centric with a broad supplier set. Scale-up ties protocol and architecture more deeply to a compute platform.** Switching cost and supplier concentration are generally higher on the scale-up side."*
+
+⚠️ **WHAT WOULD BREAK HIS OWN CALL (he publishes it): *"**scale-up domain size flattening for two consecutive generations**, **448G-class electrical connectivity achieving longer reach than expected** and delaying optical penetration, or **CPO cost reduction moving so fast that bandwidth rises while optical dollars per system fall**."* **What he tracks: interconnect+optics BOM / total system BOM · transceiver count per rack · scale-up domain size · optical component capacity converting into shipments.** ➤ **Nothing here dates the CPO transition — it does not supersede the three-rung ladder or the NPO/CPO timing rows above; it prices the CONSEQUENCE of either branch.**
+
+---
+
+
 _Wiki · generated 2026-06-19 · cross-company theme · sources: equity calls (`../../../equity_calls_transcripts/Semis`), briefing roll-ups (`../_briefings/by-ticker`), earnings transcripts, company pages. Company pages: [../00_INDEX.md](../00_INDEX.md) · themes index: [00_THEMES.md](00_THEMES.md)._
 
 
