@@ -1,5 +1,5 @@
 r"""
-Orchestrator — rebuild all six wiki feature artifacts in dependency order, then
+Orchestrator — rebuild the wiki feature artifacts in dependency order, then
 the dashboards hub. Safe to run anytime (read-only on pages; writes only to
 _meta / _data / _dashboards). Wire into the nightly routine after the ingest.
 
@@ -31,9 +31,12 @@ STEPS = [
     ("build_mgmt_comms.py", []),    # reads each page's commentary-evolution table
     ("build_search_index.py", []),  # incremental — unchanged files skipped
     ("build_graph.py", []),         # needs catalysts + search index + book + assumptions
+    ("build_analyst.py", []),       # belief ledger + ranked, attributed proactive signal queue
+    ("build_sentiment.py", ["--no-bbg"]),   # hot/cold × bull/bear indicator — tweets re-scanned, BBG history from cache (terminal-only refresh: run without --no-bbg)
 ]
 
 HUB = [
+    ("Analyst Inbox", "analyst-inbox.html", "Ranked daily ideas, model challenges, narrative shifts, catalysts and read-throughs — each with attribution, action and falsifier."),
     ("AI credit & funding monitor", "credit-monitor.html", "AI issuance, neocloud spreads, counterparty tiering, appetite scoreboard — manual refresh: fetch_funding.py + build_funding_monitor.py."),
     ("Edge tracker", "edge.html", "House vs Street divergences (the alpha) — programmatic + curated."),
     ("Read-through map", "readthrough.html", "Supply-chain & substitutes: who reads through to whom."),
@@ -44,7 +47,9 @@ HUB = [
     ("Canonical assumptions", "assumptions.html", "One number per debate — every cross-page figure, all variants, scope traps flagged."),
     ("Knowledge graph", "graph.html", "Interactive map of the whole repo — tickers, themes, debates, brokers, supply chain."),
     ("Book exposure", "book.html", "Positions × unresolved debates × catalysts — where the book is most exposed."),
+    ("Sentiment — hot/cold × bull/bear", "sentiment.html", "Hot/cold × bull/bear per name: own tweet corpus + Bloomberg Twitter/news sentiment (2024→) + sell-side e-mail flow (Outlook) × EPS revisions, rating drift, short interest — weekly ranking, quadrant map, 1w/15d/4w rank-IC backtests and a 1,000-print earnings event-window study (build_sentiment.py)."),
     ("Management communication", "mgmt-communication.html", "MSFT · AMZN · GOOG · META · NVDA · TSM · ASML · AVGO — how the discourse moved quarter by quarter, the capex-message vs tape cross-section, and who will and won't put a number on it."),
+    ("Ramp AI Index", "ramp-ai-index.html", "Enterprise alt-data, two series off one panel: model mix (who gets used — provider share, the Anthropic capability ladder, vintage turnover, launch curves) and AI spend per employee. Manual refresh: drop the new CSV in _data/ramp-ai-index/, then build_ramp_index.py + build_ramp_dash.py. ⚠ no Google/Gemini rows in the panel — not a market share."),
     ("Hyperscaler capex", "hyperscaler-capex/Capex_Cloud.html", "Consensus vs actual vs house cloud capex (existing)."),
     ("GW per player", "gw-per-player.html", "Highest GW estimate per player, all sources cited, SemiAnalysis highlighted (hand-curated 2026-07-01)."),
     ("Token fabric", "token-fabric.html", "Token supply vs demand 2026-2030 — calibrated tok/s/MW, per-user watts, malinvestment dial (hand-curated 2026-07-02)."),

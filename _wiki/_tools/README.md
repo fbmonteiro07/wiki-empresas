@@ -1,6 +1,6 @@
 # Wiki feature tools (`_wiki/_tools`)
 
-Six **additive** features layered on the empresas wiki. They are all read-only on
+An **additive** feature layer on the empresas wiki. The tools are read-only on
 the company pages — every script writes only to `_meta/`, `_data/`, or
 `_dashboards/`. Nothing rewrites a page's content. (Sole exception:
 `build_index.py` regenerates `00_INDEX.md` — and only that file — from the
@@ -14,7 +14,7 @@ py "E:/Wiki Felipe empresas/_wiki/_tools/refresh_features.py"
 py "E:/Wiki Felipe empresas/_wiki/_tools/refresh_features.py --run-estimates"   # also fetch missing BBG
 ```
 
-## The six
+## Core features
 
 | # | Script | Output | What it does |
 |---|---|---|---|
@@ -24,9 +24,15 @@ py "E:/Wiki Felipe empresas/_wiki/_tools/refresh_features.py --run-estimates"   
 | 4 | `build_diff.py` | `_meta/diff-latest.md`, `_dashboards/diff.html` | "What changed" digest from page `## Changelog`s + ingest log (rating/PT moves starred). Arg = window in days (default 7). |
 | 5 | `build_catalysts.py` | `_meta/catalysts.md`, `_meta/outcomes.md`, `_dashboards/catalysts.html` | Catalyst calendar; flags passed catalysts with no logged outcome for a post-mortem. Log verdicts in `outcomes.md` to build a hit-rate. |
 | 6 | `extract_house.py` | `_data/house.json` | Scrapes each page's "Capstone estimates (house model)" table into structured numbers (feeds #1). |
+| 7 | `build_analyst.py` | `_data/analyst/{beliefs,signals}.json`, `_meta/analyst-brief-latest.md`, `_dashboards/analyst-inbox.html` | Builds a dated belief ledger and a ranked proactive queue from reconciliations, house-vs-consensus gaps, catalysts, staleness and thesis changes. Every card includes attribution, an action and a falsifier; it never edits company pages. |
 
 `_wlib.py` = shared read-only helpers. `_data/graph.json` (feature 3) and
 `_meta/outcomes.md` (feature 5) are **hand-editable** — extend them over time.
+
+The Analyst Inbox feedback loop lives in `_meta/analyst-feedback.json`. Add a
+signal ID with `disposition` set to `useful`, `acted`, `watch`, `noise`, or
+`dismissed`. Noise and dismissed signals remain in the audit data but disappear
+from the default daily brief and dashboard.
 
 ## Rollback
 

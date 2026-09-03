@@ -131,6 +131,8 @@ table.data td input.drift{border-color:var(--s2)}
 @media (max-width:900px){.twocol{grid-template-columns:minmax(0,1fr)}}
 .subh{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink2);font-weight:700;margin:2px 0 4px}
 .divider{border-top:1px solid var(--line2);margin:12px 0 8px}
+.data tr.sec td{font-weight:700;color:var(--ink2);letter-spacing:.04em;padding-top:12px;border-top:2px solid var(--line2)}
+.data td.tag{color:var(--ink3);font-size:11px;white-space:nowrap}
 
 /* tooltip */
 #tip{position:fixed;pointer-events:none;background:var(--surface);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);padding:8px 10px;font-size:12px;display:none;z-index:50;max-width:280px}
@@ -147,12 +149,12 @@ footer b{color:var(--ink2)}
   <div class="brandrow">
     <h1>NVDA GW-Replacement DCF</h1>
     <span class="chip">EDITABLE ENGINE</span>
-    <span class="src">Replica of <span class="mono">Template DCF NVDA - Corrected - AI Labs - GW - Replacement.xlsx</span> · P:\Modelos oficiais · saved 31-Aug-2026 · US$ mm</span>
+    <span class="src">Replica of <span class="mono">Template DCF NVDA - Corrected - AI Labs - GW - Replacement - Labs Reference.xlsx</span> · P:\Modelos oficiais · saved 02-Sep-2026 · dashboard re-synced 15:03 · US$ mm</span>
   </div>
   <div class="heromets">
     <div class="met big"><div class="k">Fair value / share</div><div class="v" id="mPx">—</div><div class="sub" id="mPxSub">dated 27-Aug-26 · Ke − g convention of the sheet</div></div>
     <div class="met"><div class="k">vs ref price</div><div class="v" id="mUp">—</div><div class="sub" id="mRef">ref 217.55 · BBG close 31-Aug-26</div></div>
-    <div class="met"><div class="k">vs workbook</div><div class="v" id="mDelta">—</div><div class="sub">workbook saved: $296.77</div></div>
+    <div class="met"><div class="k">vs workbook</div><div class="v" id="mDelta">—</div><div class="sub">workbook saved: $258.43</div></div>
     <div class="met"><div class="k">TV share of PV</div><div class="v" id="mTV">—</div><div class="sub">Gordon @ period 20</div></div>
     <div class="met"><div class="k">P / NOPAT</div><div class="v" id="mPE">—</div><div class="sub">CY27 · CY28</div></div>
     <div class="met"><div class="k">Engine fidelity</div><div class="v" style="font-size:13px;margin-top:6px"><span class="badge ok" id="mBadge">checking…</span></div><div class="sub">engine vs workbook at file inputs</div></div>
@@ -262,7 +264,8 @@ footer b{color:var(--ink2)}
 
 <main>
   <nav class="tabs" role="tablist">
-    <button role="tab" aria-selected="true" data-tab="val">Valuation</button>
+    <button role="tab" aria-selected="true" data-tab="resumo">Resumo geral</button>
+    <button role="tab" aria-selected="false" data-tab="val">Valuation</button>
     <button role="tab" aria-selected="false" data-tab="gw">Capex &amp; GW</button>
     <button role="tab" aria-selected="false" data-tab="roic">Cloud ROIC</button>
     <button role="tab" aria-selected="false" data-tab="grossup">Labs → System</button>
@@ -270,7 +273,18 @@ footer b{color:var(--ink2)}
     <button role="tab" aria-selected="false" data-tab="inputs">Inputs &amp; data</button>
   </nav>
 
-  <section class="tabpane active" id="tab-val">
+  <section class="tabpane active" id="tab-resumo">
+    <div class="panelgrid">
+      <div class="panel wide"><h3>Resumo geral — one table across every block</h3>
+        <p class="note">US$bn unless noted. CY26–CY30, then CY35 / CY40 / CY45 for the DCF and cloud blocks only — the labs, gross-up and token blocks end at CY30, and the gross-up is hard-stopped at CY28 (the CY29–30 collision). Every cell is live: move a dial in the console and the whole table re-solves. Mirrors the <code>Resumo Geral</code> sheet in the workbook.</p>
+        <div class="scroller"><table class="data" id="tblResumo"></table></div>
+        <div class="divider"></div>
+        <div class="kv cols3" id="kvResumo"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tabpane" id="tab-val">
     <div class="panelgrid">
       <div class="panel wide"><h3>Distributions to equity — NOPAT × payout, CY26–45 + terminal value</h3>
         <p class="note">The sheet's cash-flow proxy: no working-capital, capex or financing bridge. Terminal value sits at period 20 (end-CY45), Gordon on the CY45 distribution.</p>
@@ -384,6 +398,14 @@ footer b{color:var(--ink2)}
 
   <section class="tabpane" id="tab-labs">
     <div class="panelgrid">
+      <div class="panel wide"><h3>Labs Official Ref → how much of the labs' spend is the clouds' required revenue?</h3>
+        <p class="note">Coverage = the two labs' compute bill (inference + training — the reference tab's row 19, what OpenAI + Anthropic <b>pay</b> for compute) ÷ the cloud fleet's <b>hurdle revenue</b> (<code>ROIC Cloud</code> r22/r23: what the in-service AI fleet must earn for after-tax EBIT on average net assets to hit 15% / 20% ROIC). The remainder is the gap the <i>rest</i> of the market — enterprises, Google/Meta first-party, everyone else — must pay for the fleet to clear its hurdle. <b>Caveat:</b> CY26–27 coverage above 1x is inflated by the workbook's 2-year commissioning lag (the in-service fleet is still small while the labs already rent capacity) — the trend is the message, not the early level.</p>
+        <div class="scroller" id="chCover"></div>
+        <div class="divider"></div>
+        <div class="scroller"><table class="data" id="tblCover"></table></div>
+        <div class="statchips" id="coverChips"></div>
+        <p class="note" style="margin-top:8px">The panels below are the workbook's original <code>AI Labs Bridge</code> — superseded for Labs <i>revenue</i> by the Labs → System tab (it maps 100% of total cloud into two labs, a 4.9x overstatement); kept for the GW and closed-EV mechanics.</p>
+      </div>
       <div class="panel wide"><h3>AI Labs revenue — implied from the cloud pool (US$bn)</h3>
         <p class="note">Labs revenue = mapped cloud pool ÷ (inference cost + training)% of revenue. Revenue can exceed the cloud pool — it is a different layer of the stack.</p>
         <div class="scroller" id="chLabs"></div></div>
@@ -417,7 +439,7 @@ footer b{color:var(--ink2)}
 <div id="tip"></div>
 
 <footer>
-  <b>Conventions preserved from the workbook:</b> NPV at 1-Jan-26 of CY26–45 end-of-year distributions; TV = CY45 distribution × (1+g)/(Ke−g) discounted 20 periods; the whole PV rolled to the valuation date at (1+Ke)^(days/365). Distribution = NOPAT × payout — a proxy, not FCFE. GW replacement: supported GW = MIN of chip / networking / hard-asset stocks (complements, never added); retirement value is informational and never re-enters capex. Cloud cohorts: straight-line by vintage, full-year depreciation from the commissioning year, 2-yr lag. <b>Retained scenario assumptions the sheet itself flags:</b> 100% terminal payout with positive perpetual growth (no reinvestment bridge); 90% cloud EBITDA margin; CY27 bottom-up capex exceeds the total-capex models (102.5%); negative CY23 residual retained; open/closed Labs economics are a user example, not broker forecasts. <b>Sources:</b> capex bottom-up + NVDA forecast = house AI Model (27-Aug-26 vintage); useful lives 5/5/25 user scenario 31-Aug-26; ref price BBG close 31-Aug-26. Engine verified against the workbook cell-for-cell (14,274 formulas re-evaluated; 44 checkpoint values reproduced bit-for-bit).
+  <b>Conventions preserved from the workbook:</b> NPV at 1-Jan-26 of CY26–45 end-of-year distributions; TV = CY45 distribution × (1+g)/(Ke−g) discounted 20 periods; the whole PV rolled to the valuation date at (1+Ke)^(days/365). Distribution = NOPAT × payout — a proxy, not FCFE. GW replacement: supported GW = MIN of chip / networking / hard-asset stocks (complements, never added); retirement value is informational and never re-enters capex. Cloud cohorts: straight-line by vintage, full-year depreciation from the commissioning year, 2-yr lag. <b>Retained scenario assumptions the sheet itself flags:</b> 100% terminal payout with positive perpetual growth (no reinvestment bridge); 90% cloud EBITDA margin; CY27 bottom-up capex exceeds the total-capex models (102.5%); negative CY23 residual retained; open/closed Labs economics are a user example, not broker forecasts. <b>Sources:</b> capex bottom-up + NVDA forecast = house AI Model (27-Aug-26 vintage); useful lives 5/5/25 user scenario 31-Aug-26; inputs re-synced 02-Sep-26 to the official file (CY29 capex growth 10%→0%, GM floor 64%→60%); ref price BBG close 31-Aug-26. Engine verified against the workbook cell-for-cell (14,274 formulas re-evaluated; 44 checkpoint values reproduced bit-for-bit).
 </footer>
 
 <script>
@@ -427,14 +449,14 @@ const FILE = {
  chips:[42411.78429459569,114846.5079563297,190171.36087311106,399900.33876588667,767002.6163141985,1157436.3523740668],
  nw:[12810.585642691623,34371.34178788408,65259.50252817853,178576.41748539842,435134.5910540439,715097.2059606818],
  oth:[34490.038268785145,84645.84171643095,140829.88978513746,323121.9047414263,683275.731164706,1040564.949653554],
- gCapex29:0.1,gCapex30:0.08,
+ gCapex29:0,gCapex30:0.08,
  costGW:[40,40,40,40,40,45,50,45,40,35,30,30,30,30,30,30,30,30,30,30,30,30,30],
  nvdaRevChips:[38518.10659033064,102470.1886726464,158799.22567251758,311815.5170199417,578573.6453898079,783966.6825195056],
  share29:0.62,share30:0.55,share31:0.5,
  attach25:0.13,attach26:0.19,attach27:0.25,
  othersRev:[13397,15311,22551.385200000004,27814.750627325513,31633.57971702217,31633.57971702217],
  gm:[0.738,0.755,0.72,0.75,0.73,0.72],
- gmFade:0.02,gmFloor:0.64,
+ gmFade:0.02,gmFloor:0.60,
  opex:[0.4126566323125973,0.18595909523653195,0.12571170218472455,0.10686400726134353,0.07,0.06],
  opexT:0.06,
  tax:0.18,pay26:0.5,pay27:0.6,pay28:0.7,payRun:0.8,payTerm:1,
@@ -453,7 +475,7 @@ const FILE = {
  big2Rev:[96.46858838416958,215.91369450175986,371.2,544.0,767.5],
  big2Inf:[45.75808698203816,97.27891732915768,156.73126032849163,211.29847774776943,280.37413289280875],
  big2Trn:[42.85490346445185,71.0,110.0,145.0,200.0],
- sRev26:0.715, sRev35:0.50,        // big-2 share of model layer (AI Labs Revenue MAP v1 path)
+ sRev26:0.71, sRev35:0.50,         // big-2 share of model layer - AI Labs Revenue MAP v1 Triangulation!A11 (0.71 mid-26 = 100/140, MID-YEAR ARR basis)
  unitCost:0.30,                    // $/Mtok big-2 blended serving cost (ANT .283/OAI .306/SemiA .32)
  rCost:0.29,                       // rest-of-system cost per token / big-2 (back-solved CY26)
  cloudMode:'house',                // 'house' = hardcoded total cloud | 'derived' = labs gross-up
@@ -476,9 +498,10 @@ const FILE = {
 const MAPREF={tok:[360,1089,2240,3428,4714],rev:[140,340.9995,563.9495,692.8484,763.6435],
  gp:[76.3502,191.9454,326.5428,413.4703,469.3549],frontRev:[99.8346,246.9558,414.7397,517.3343,578.7957],
  openPrice:0.1489};  // OpenRouter observed commodity-open blended $/Mtok (independent of the fit)
-const CHECKS = {px:296.7701392609193,pvFlows:3942694.7787533966,pvTV:2778507.1640597126,
- gwActive45:1607.8925291957737,rev29:961731.4280327586,sensI6:229.58812444741164,
- grid2_5_40:247.58016180369466,cohNet28:807293.1446165534,labsEV30:8163651.025961697,gwInf30:71.86887657909455};
+// workbook checkpoints re-read 2026-09-02 15:03 (official file after Felipe's 12:03 edit: J10 CY29 capex growth 0.10->0, D97 GM floor 0.64->0.60)
+const CHECKS = {px:258.427554552823,pvFlows:3498523.9249887047,pvTV:2354301.3830513335,
+ gwActive45:1461.7204810870674,rev29:877177.0781858733,sensI6:211.46240420795849,
+ grid2_5_40:235.09478481486804,cohNet28:807293.1446165534,labsEV30:8163651.025961697,gwInf30:71.86887657909455};
 
 const YRS=[];for(let y=2023;y<=2045;y++)YRS.push(y);
 const N=YRS.length, IX=y=>y-2023;
@@ -1137,6 +1160,107 @@ function render(){
      `<span class="k">CY${y} house / derived</span><span class="v">${(hv[k]/1000).toFixed(0)} / ${dv[k].toFixed(0)}</span>`).join('')+
      `<span class="k">implied AI share of cloud</span><span class="v">${fPct(dv[0]/(hv[0]/1000))} → ${fPct(dv[4]/(hv[4]/1000))}</span>`;}
 
+  // ---- Labs Official Ref: how much of the labs' spend is the clouds' REQUIRED revenue ----
+  {const yk=[2026,2027,2028,2029,2030];
+   const twoLab=yk.map((y,k)=>(S.big2Inf[k]+S.big2Trn[k])*1000);            // US$bn -> mm
+   const hA=yk.map(y=>E.hurdA[IX(y)]), hB=yk.map(y=>E.hurdB[IX(y)]);         // fleet hurdle (ROIC Cloud r22/r23), mm
+   const covA=twoLab.map((v,k)=>hA[k]>0?v/hA[k]:0), covB=twoLab.map((v,k)=>hB[k]>0?v/hB[k]:0);
+   const gap=hA.map((h,k)=>Math.max(0,h-twoLab[k]));
+   const ml=yk.map((y,k)=>y<=2028?E.L.sysCloud[k]*1000:NaN);                 // model layer, hard-stopped past CY28
+   const mlCov=ml.map((v,k)=>isNaN(v)?NaN:(hA[k]>0?v/hA[k]:0));
+   const naBnX=v=>isNaN(v)?'n/a — collision':fBn(v), naX=v=>isNaN(v)?'n/a':v.toFixed(2)+'x';
+   lineChart($('chCover'),{years:yk,minW:520,h:250,fmt:fBn,series:[
+     {name:'two-lab compute bill',color:c1,vals:twoLab,area:true},
+     {name:'cloud hurdle @15%',color:c3,vals:hA,dash:'4 3'},
+     {name:'cloud hurdle @20%',color:c2,vals:hB,dash:'2 3'}],
+     extra:[{name:'two-lab coverage @15%',vals:covA,fmt:v=>v.toFixed(2)+'x'},
+            {name:'gap the rest must pay',vals:gap,fmt:fBn},
+            {name:'model-layer bill',vals:ml,fmt:naBnX},
+            {name:'model-layer coverage @15%',vals:mlCov,fmt:naX}]});
+   let hc='<tr><th>US$bn</th>'+yk.map(y=>`<th>CY${y}</th>`).join('')+'</tr>';
+   const trc=(lab,vals,f)=>{hc+=`<tr><td>${lab}</td>`+vals.map(v=>`<td class="num">${f(v)}</td>`).join('')+'</tr>';};
+   trc('Cloud fleet hurdle @15% (ROIC Cloud r22)',hA,fBn);
+   trc('Cloud fleet hurdle @20% (r23)',hB,fBn);
+   trc('Two-lab compute bill (inference + training)',twoLab,fBn);
+   trc('TWO-LAB COVERAGE @15%',covA,v=>v.toFixed(2)+'x');
+   trc('Two-lab coverage @20%',covB,v=>v.toFixed(2)+'x');
+   trc('Gap the rest of the market must pay @15%',gap,fBn);
+   trc('Model-layer bill (Labs Gross-Up)',ml,naBnX);
+   trc('MODEL-LAYER COVERAGE @15%',mlCov,naX);
+   trc('Memo: actual total cloud ÷ hurdle @15% (what ROIC Cloud measures)',yk.map((y,k)=>hA[k]>0?E.cloudRev[IX(y)]/hA[k]:0),v=>v.toFixed(2)+'x');
+   $('tblCover').innerHTML=hc;
+   $('coverChips').innerHTML=
+     covA.map((v,k)=>`<span class="schip ${v>=1?'ok':(v>=0.5?'':'warn')}">CY${yk[k]} two labs cover ${fPct(v)} of the 15% hurdle</span>`).join('')+
+     `<span class="schip warn">CY30: the two labs cover ${fPct(covA[4])} — the rest of the market must pay $${fBn(gap[4])}bn for the fleet to earn 15%</span>`+
+     `<span class="schip">CY26–27 above 1x is a 2-yr commissioning-lag artefact (in-service fleet still small) — read the trend</span>`;}
+  // ---- RESUMO GERAL: one live table across every block ----
+  {const RY=[2026,2027,2028,2029,2030,2035,2040,2045];
+   const x2=v=>v.toFixed(2)+'x', mny=v=>'$'+v.toFixed(1), na='<span style="color:var(--ink3)">n/a</span>';
+   const kOf=y=>y-2026;                                          // labs-block index (valid <= 2030)
+   const L2=(y,arr)=>y<=2030?arr[kOf(y)]:null, L2s=(y,arr)=>y<=2028?arr[kOf(y)]:null;   // L2s = hard-stopped at CY28
+   const twoLab=y=>y<=2030?(S.big2Inf[kOf(y)]+S.big2Trn[kOf(y)]):null;                    // US$bn
+   let h='<tr><th>US$bn unless noted</th><th></th>'+RY.map(y=>`<th>CY${y}</th>`).join('')+'</tr>';
+   const sec=t=>{h+=`<tr class="sec"><td colspan="10">${t}</td></tr>`;};
+   const row=(lab,tag,fn,f,bold)=>{h+=`<tr${bold?' style="font-weight:700"':''}><td>${lab}</td><td class="tag">${tag}</td>`+
+     RY.map(y=>{const v=fn(y);return `<td class="num">${(v===null||v===undefined||Number.isNaN(v))?na:f(v)}</td>`;}).join('')+'</tr>';};
+   sec('A | NVDA — the DCF');
+   row('AI capex, total','LINK',y=>E.total[IX(y)],fBn);
+   row('NVDA share of AI-chip capex','LINK',y=>E.share[IX(y)],fPct);
+   row('NVDA modeled revenue','LINK',y=>E.rev[IX(y)],fBn,true);
+   row('Gross margin','LINK',y=>E.gm[IX(y)],fPct);
+   row('NOPAT (after-tax EBIT)','LINK',y=>E.nopat[IX(y)],fBn);
+   row('NVDA revenue ÷ AI cloud revenue','DERIVED',y=>E.nvdaVsCloud[IX(y)],x2);
+   sec('B | GW — what the capex builds');
+   row('Full-build cost per GW (US$bn)','INPUT',y=>S.costGW[IX(y)],v=>v.toFixed(0));
+   row('Supported GW, year-end (facility)','DERIVED',y=>E.sup[IX(y)],v=>v.toFixed(0),true);
+   row('Cloud GW (× cloud share of capex)','DERIVED',y=>E.cloudGW[IX(y)],v=>v.toFixed(0));
+   sec(`C | CLOUD FLEET — the buyer of NVDA output · cloud basis: ${S.cloudMode==='house'?'house total cloud':S.cloudMode==='aiCloud'?'AI cloud (× AI share)':'model-layer bill'}`);
+   row('Cloud capex (cloud share of AI capex)','DERIVED',y=>E.total[IX(y)]*S.cloudShare,fBn);
+   row('Cloud revenue (active basis)','LINK',y=>E.cloudRev[IX(y)],fBn,true);
+   row('Fleet average net assets in service','DERIVED',y=>E.avgNet[IX(y)],fBn);
+   row('Fleet depreciation','DERIVED',y=>E.dep[IX(y)],fBn);
+   row('Fleet ROIC','DERIVED',y=>E.fleetROIC[IX(y)],fPct,true);
+   row('Fleet revenue hurdle @ ROIC target A','DERIVED',y=>E.hurdA[IX(y)],fBn);
+   row('Fleet revenue hurdle @ ROIC target B','DERIVED',y=>E.hurdB[IX(y)],fBn);
+   row('Actual revenue per cloud GW-year','DERIVED',y=>E.revPerCloudGW[IX(y)],mny);
+   row('Break-even rent @9%, fleet-avg cost','DERIVED',y=>E.CV.breakEven(E.CV.fleetCost[IX(y)],0.09),mny);
+   row('Surplus / (deficit) vs break-even','DERIVED',y=>E.revPerCloudGW[IX(y)]-E.CV.breakEven(E.CV.fleetCost[IX(y)],0.09),mny,true);
+   sec('D | THE TWO LABS — house AI Model (Labs Official Ref)');
+   row('Big-2 revenue (OpenAI + adj. Anthropic)','HARD',y=>L2(y,S.big2Rev),v=>v.toFixed(0),true);
+   row('Big-2 inference expense','HARD',y=>L2(y,S.big2Inf),v=>v.toFixed(0));
+   row('Big-2 training expense','HARD',y=>L2(y,S.big2Trn),v=>v.toFixed(0));
+   row('Big-2 compute bill (what they pay the clouds)','DERIVED',y=>twoLab(y),v=>v.toFixed(0),true);
+   row('Two-lab compute ÷ house total cloud revenue','DERIVED',y=>y<=2030?twoLab(y)*1000/S.cloudRev[kOf(y)]:null,fPct);
+   row('TWO-LAB COVERAGE of cloud hurdle @ ROIC A','DERIVED',y=>y<=2030?twoLab(y)*1000/E.hurdA[IX(y)]:null,x2,true);
+   row('Gap the rest of the market must pay','DERIVED',y=>y<=2030?Math.max(0,E.hurdA[IX(y)]-twoLab(y)*1000):null,fBn);
+   sec('E | LABS → SYSTEM gross-up — usable through CY28');
+   row('Big-2 share of system revenue (path A)','ESTIMATE',y=>L2(y,E.L.sRev),fPct);
+   row('System model-layer revenue','DERIVED',y=>L2s(y,E.L.sysRev),v=>v.toFixed(0),true);
+   row('  vs LLM Market MAP (shared anchor — consistency only)','CHECK',y=>L2s(y,E.L.mapRevX),x2);
+   row('Big-2 share of system tokens','DERIVED',y=>L2(y,E.L.sTok),fPct);
+   row('Compute gross-up factor','DERIVED',y=>L2(y,E.L.guInf),x2);
+   row('SYSTEM CLOUD BILL (model layer)','DERIVED',y=>L2s(y,E.L.sysCloud),v=>v.toFixed(0),true);
+   row('  model-layer coverage of cloud hurdle @ ROIC A','DERIVED',y=>y<=2028?E.L.sysCloud[kOf(y)]*1000/E.hurdA[IX(y)]:null,x2);
+   row('Rest-of-system implied cost (US$/Mtok)','DERIVED',y=>L2(y,E.L.restUnit),v=>'$'+v.toFixed(3));
+   sec('F | TOKEN CHECK — capex → GW → servable tokens (exogenous throughput)');
+   row('Tokens per IT-GW-year (Q) — MS Byrd 2,750 tok/s/GPU','HARD',y=>y<=2030?E.T.tokPerGW:null,v=>v.toFixed(2));
+   row('Servable tokens (Q)','DERIVED',y=>L2(y,E.T.servable),v=>v.toFixed(0));
+   row('Modelled system tokens (Q) — LLM MAP','HARD COPY',y=>L2(y,E.T.mapTok),v=>v.toFixed(0));
+   row('SLACK — servable ÷ modelled','CHECK',y=>L2(y,E.T.slack),x2,true);
+   row('DCF avg facility GW ÷ house avg industry GW','CHECK',y=>y<=2028?E.T.gwRecon[kOf(y)]:null,x2);
+   $('tblResumo').innerHTML=h;
+   const B=E.CV.basisEV, cum=E.CV.cumCapex/1000, cov30=twoLab(2030)*1000/E.hurdA[IX(2030)];
+   const fev=v=>'$'+(v/1000).toLocaleString('en-US',{maximumFractionDigits:0})+'bn';
+   $('kvResumo').innerHTML=
+     `<span class="k">Cloud EV — house total cloud</span><span class="v">${fev(B.house.ev)}</span>`+
+     `<span class="k">Cloud EV — AI cloud (× AI share)</span><span class="v">${fev(B.aiCloud.ev)}</span>`+
+     `<span class="k">Cloud EV — model-layer bill only</span><span class="v">${fev(B.derived.ev)}</span>`+
+     `<span class="k">Cumulative cloud capex CY26–45</span><span class="v">$${cum.toLocaleString('en-US',{maximumFractionDigits:0})}bn</span>`+
+     `<span class="k">First cloud FCF-positive year</span><span class="v">${E.CV.fcfPos||'never'}</span>`+
+     `<span class="k">CY30 two-lab coverage of hurdle</span><span class="v">${fPct(cov30)}</span>`+
+     `<span class="k">Token slack CY26–30</span><span class="v">${Math.min(...E.T.slack).toFixed(2)}–${Math.max(...E.T.slack).toFixed(2)}x</span>`+
+     `<span class="k">Gross-up vs LLM MAP CY26–28</span><span class="v">${E.L.mapRevX.slice(0,3).map(v=>v.toFixed(2)).join(' / ')}x</span>`+
+     `<span class="k">Peak NVDA ÷ cloud revenue</span><span class="v">${Math.max(...E.nvdaVsCloud).toFixed(2)}x</span>`;}
   // outputs table
   {const rows=[['Capex total',E.total],['— Chips',E.chips],['— NW + CPU',E.nw],['— Hard assets',E.oth],
     ['NVDA share of chips',E.share.map(fPct)],['NVDA revenue',E.rev],['Gross margin',E.gm.map(fPct)],

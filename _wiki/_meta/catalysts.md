@@ -2,14 +2,16 @@
 
 _Generated 2026-09-02 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (36)
+## 📅 Upcoming (40)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
 | 2026-09-02 | AVGO | **🆕🔴 2026-09-02 — FQ3 FY26 print, and the bar is set by consensus rather than by the guide: ~$120bn of FY27 AI sales is in the Street's numbers versus management's ">$100bn" (BofA · Arya, 2026-08-19). |
+| 2026-09-02 | AVGO | **🆕🔴 RESOLVED 2026-09-02 — the FQ3 FY26 print landed. NEW FORWARD CLOCK, AND IT IS NOW A TWO-YEAR ONE:** |
 | 2026-09-02 | AVGO | **🆕🔴🔴 Q3 FY26 PRINT — WEDNESDAY 2026-09-02, ~4:15pm ET release / 5:00pm ET call. Implied move 6.3%; JPM positioning score +3 (−5/+5).** The four numbers that decide it, in order: **(1) the FY27 AI rev |
 | 2026-09-02 | CRWD | **🆕🔴🔴 FAL.CON 2026 — 2026-08-31 → 09-03, Las Vegas. THE INVESTOR BRIEFING IS 2026-09-02, 11:30am-3:00pm PST.** The five items MS is watching, in order of how much they move the model: **(1) AIDR sizin |
 | 2026-09-02 | DELL | **2026-09-02 — UBS "Dell Technologies (DELL) Recap Call"** (UBS TMT Analyst Marketing, NYC). |
+| 2026-09-02 | HPE | **🆕🔴 RESOLVED 2026-09-02 — F3Q26 printed and cleared every line of the bogey grid; FY26 EPS raised to $3.75-3.85 and the FY27 framework raised a quarter early. NEW FORWARD CLOCK:** |
 | 2026-09-02 | HPE | **🆕🔴🔴 F3Q26 PRINT — WEDNESDAY 2026-09-02, AFTER MARKET.** Bars: **revenue $12.3bn (BofA) vs Street $12.0bn vs guidance $11.5-12.1bn; EPS $0.95 vs Street $0.93 vs guidance $0.88-0.93; Networking $2.9bn |
 | 2026-09-02 | NVDA | **2026-08-26 (AMC) — Q2 FY27 print.** Street/house bogeys now on the page from three houses: **UBS/Arcuri report $110-111bn, guide bogey $107-108bn** (08-14) vs **MS/Moore July $91.1bn, October $102.3 |
 | 2026-09-03 | AVGO | **🆕 POST-PRINT BROKER CALLBACKS ALREADY SCHEDULED — the fastest read on how the Street re-rates the guide.** **Morgan Stanley Q3 group callback with Joseph Moore, 2026-09-03, 9:00am ET** (stream); **J |
@@ -17,6 +19,7 @@ _Generated 2026-09-02 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-09-04 | DELL | **2026-09-04, 10:00am ET — JPM group takeaways call on the OEM results** (Joe Cardoso, "Ask Me Anything on OEM earnings", Friday). |
 | 2026-09-04 | DELL | **2026-09-04, 11:00am ET — BERNSTEIN DELL Q2 FY27 POST-EARNINGS CFO CALL.** First scheduled management access after the print (Bernstein · Tyler Seidman, 2026-09-01). |
 | 2026-09-04 | DELL | **🆕 BERNSTEIN DELL Q2 FY27 POST-EARNINGS CFO CALL — 2026-09-04, 11:00am ET.** First scheduled management access after the print. (Bernstein · Tyler Seidman, 2026-08-31) |
+| 2026-09-09 | AAPL | **🆕🔴🔴 2026-09-09 "SURPRISE AND SHINE" — THE EVENT NOW HAS A SCORECARD WITH A 2x DISAGREEMENT ON IT. Score these five items on the day:** |
 | 2026-09-11 | TER | **Q3 CY26 print (~late Oct 2026)** — first test of the re-cut 2H, and of whether the merchant-GPU/second-hyperscaler correlation converts into guided revenue. Quiet period begins **2026-09-11**; manag |
 | 2026-09-14 | NVDA | **🆕 Post-print access, both dated:** **BofA fireside with Toshiya Hari, VP of IR & Strategic Finance, hosted by Vivek Arya — 2026-09-02, 11:00 ET (~1hr)** (BofA TMT Sales, 2026-08-14) · **UBS-arranged |
 | 2026-09-15 | AVGO | **🆕 BERNSTEIN 8th ANNUAL SEMIS BUS TOUR, 2026-09-15/16, San Jose — AVGO on the roster alongside [[ALAB]], [[AMAT]], AMBA, LSCC, MPWR, [[NVDA]], [[NXPI]].** First scheduled corporate-access window afte |
@@ -34,6 +37,7 @@ _Generated 2026-09-02 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-09-30 | HPE | **🆕🔴 HPE NETWORKING ANALYST DAY — 2026-09-30.** This is where the *"segment returns to HPE's historical margin profile of mid-20s"* claim gets defended, dated, or walked back. ➜ **It matters more than |
 | 2026-09-30 | SKHYNIX | **🆕🔴 By 2026-09-30 — HBM CONTRACT PRICE UPDATE.** Named by JPM (Kwon, 2026-08-19) as the #2 company-specific catalyst. **This is the one that moves earnings rather than the share count**, and it is th |
 | 2026-09-30 | SNPS | **🆕🔴 2026-09-30 — INVESTOR DAY is the real event, not the 08-26 print.** MS (Simpson, 2026-08-19) is explicit: none of the three things that matter — Design IP reacceleration, agentic-EDA monetisation |
+| 2026-10-01 | AAPL | **🆕🔴 2026-10-01 — THE EU APP STORE COMMISSION CHANGES TAKE EFFECT, AND THE RATES ARE NOW FINAL: 26% for App Store apps using Apple IAP (15% for certain programs and post-year-one auto-renewals), 20% f |
 | 2026-10-06 | MRVL | **🆕🔴 DATED, TWO-STEP: Q2 FY27 print THURSDAY 2026-08-27 (after market close) → INVESTOR DAY MONDAY 2026-10-06, NYC.** Jefferies (Curtis, 2026-08-20) splits the catalyst explicitly: the print is where  |
 | 2026-10-06 | MRVL | **🆕🔴 NEXT, AND IT IS NOW THE ONLY CATALYST THAT MATTERS ON THIS PAGE: INVESTOR DAY — MONDAY 2026-10-06, NYC.** Three desks stated on print night that management deliberately withheld the [[GOOG]] sizi |
 | 2026-10-15 | SMTC | **🔴 2026-10-15 — INVESTOR / ANALYST DAY, San Jose. The single most important dated event on this page, because management deferred the two questions that matter to it.** Promised content: *"an in-dept |

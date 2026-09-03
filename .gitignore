@@ -24,3 +24,19 @@ _wiki/_data/openrouter/openrouter.artifact.html
 _wiki/%TEMP%/
 # Excel/Office lock files (created while a workbook is open; never content)
 ~$*
+# Sentiment indicator (build_sentiment.py) — raw inputs and big caches stay untracked.
+# All are rebuildable: bodies/raw re-fetch from Outlook (sellside_mail_*.ps1), bbg_long
+# re-fetches from the Terminal, the parse cache rebuilds in ~10 min on a version bump.
+# The small derived panels (panel_weekly, events, sellside_daily, bbg_history,
+# earnings_dates) and _dashboards/sentiment.html ARE tracked.
+_wiki/_data/sentiment/sellside_mail_bodies.jsonl
+_wiki/_data/sentiment/sellside_mail_bodies.ids
+_wiki/_data/sentiment/sellside_mail_raw.json
+_wiki/_data/sentiment/sellside_mail_delta.json
+_wiki/_data/sentiment/sellside_parsed_cache.json
+_wiki/_data/sentiment/bbg_long.json
+_wiki/_data/sentiment/panel_long.json
+_wiki/_data/sentiment/picks.json
+_wiki/_data/sentiment/leadlag.json
+_wiki/_data/sentiment/*.docx
+_wiki/_tools/_rpt_tmp/

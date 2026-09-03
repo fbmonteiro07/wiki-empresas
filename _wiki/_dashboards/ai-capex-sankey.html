@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Follow the AI Capex Dollar</title>
+</head>
+<body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#F4F6F8; --panel:#FFFFFF; --panel2:#EDF0F3; --line:#D6DCE3; --line2:#C3CBD4;
+  --ink:#16202B; --ink2:#4B5866; --ink3:#7C8896;
+  --accent:#1F4E8C;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s0:#6B7A8F; --wfe:#5A6B80;
+  --hard:#1F7A4D; --derived:#8A5A00; --est:#A33A3A;
+  --shadow:0 1px 2px rgba(20,30,40,.06),0 8px 24px -12px rgba(20,30,40,.18);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0F1519; --panel:#151C22; --panel2:#1C252D; --line:#26313B; --line2:#33404C;
+    --ink:#E7ECF1; --ink2:#AEB9C4; --ink3:#7E8B98;
+    --accent:#7FB0F0;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s0:#8A99AD; --wfe:#8FA0B4;
+    --hard:#4FBF88; --derived:#E0A94A; --est:#E07A7A;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px -14px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0F1519; --panel:#151C22; --panel2:#1C252D; --line:#26313B; --line2:#33404C;
+  --ink:#E7ECF1; --ink2:#AEB9C4; --ink3:#7E8B98;
+  --accent:#7FB0F0;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s0:#8A99AD; --wfe:#8FA0B4;
+  --hard:#4FBF88; --derived:#E0A94A; --est:#E07A7A;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px -14px rgba(0,0,0,.7);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 "IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1240px;margin:0 auto;padding:28px 24px 64px}
+header{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.eyebrow{font:500 11px/1 "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin:0 0 10px}
+h1{font:600 34px/1.1 "Source Serif 4",Georgia,serif;margin:0;letter-spacing:-.01em;text-wrap:balance}
+.lede{margin:10px 0 0;max-width:68ch;color:var(--ink2)}
+.meta{font:12px/1.6 "IBM Plex Mono",ui-monospace,monospace;color:var(--ink3);text-align:right}
+.meta b{color:var(--ink2);font-weight:500}
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:18px 0 14px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line2);background:var(--panel);color:var(--ink2);border-radius:999px;padding:6px 12px;font:500 12.5px/1 "IBM Plex Sans",sans-serif;cursor:pointer;transition:background .15s,color .15s}
+.chip:hover{border-color:var(--accent)}
+.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.spacer{flex:1}
+.yr{display:none;gap:6px;align-items:center}
+.yr.show{display:flex}
+.yr .lbl{font:500 11px/1 "IBM Plex Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-right:4px}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:18px;align-items:start}
+@media (max-width:980px){.grid{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow)}
+.viz{padding:14px 14px 8px;overflow-x:auto}
+.viz svg{display:block;width:100%;height:auto;min-width:760px}
+.vizhead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:0 4px 6px}
+.vizhead h2{font:600 15px/1.3 "IBM Plex Sans",sans-serif;margin:0}
+.vizhead .sub{font:12px/1.4 "IBM Plex Sans",sans-serif;color:var(--ink3)}
+.legend{display:flex;flex-wrap:wrap;gap:12px 16px;padding:8px 6px 6px;border-top:1px solid var(--line);font-size:12px;color:var(--ink2)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:12px;height:12px;border-radius:3px;display:inline-block}
+.side{padding:16px}
+.side h3{font:600 13px/1.3 "IBM Plex Sans",sans-serif;margin:0 0 4px;color:var(--ink3);letter-spacing:.06em;text-transform:uppercase}
+.side .nodename{font:600 20px/1.2 "Source Serif 4",Georgia,serif;margin:2px 0 2px}
+.side .nodeval{font:500 13px/1.4 "IBM Plex Mono",monospace;color:var(--ink2);margin-bottom:12px}
+.ev{border-top:1px solid var(--line);padding:10px 0}
+.ev:last-child{padding-bottom:0}
+.ev q{display:block;font-size:13px;color:var(--ink);quotes:none;margin:0 0 6px}
+.ev .src{font:12px/1.5 "IBM Plex Mono",monospace;color:var(--ink3)}
+.tag{display:inline-block;font:500 10px/1 "IBM Plex Mono",monospace;letter-spacing:.08em;padding:3px 6px;border-radius:4px;border:1px solid;margin-right:6px;vertical-align:1px}
+.tag.HARD{color:var(--hard);border-color:var(--hard)}
+.tag.DERIVED{color:var(--derived);border-color:var(--derived)}
+.tag.EST{color:var(--est);border-color:var(--est)}
+.tag.BNP{color:var(--ink3);border-color:var(--line2)}
+.hint{font-size:12px;color:var(--ink3);margin-top:10px}
+section.block{margin-top:34px}
+section.block h2{font:600 22px/1.2 "Source Serif 4",Georgia,serif;margin:0 0 6px;letter-spacing:-.005em}
+section.block .sub{color:var(--ink2);max-width:78ch;margin:0 0 14px}
+.deltas{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.delta{padding:14px 16px}
+.delta .k{font:500 11px/1 "IBM Plex Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:8px}
+.delta .big{font:600 23px/1.25 "Source Serif 4",Georgia,serif;font-variant-numeric:tabular-nums;margin-bottom:6px}
+.delta .big small{font:500 11.5px/1 "IBM Plex Mono",monospace;color:var(--ink3);margin:0 2px 0 5px;white-space:nowrap}
+.delta p{margin:0;font-size:12.5px;color:var(--ink2)}
+.tblwrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13px;min-width:860px}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+th{font:500 11px/1.3 "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);background:var(--panel2);position:sticky;top:0}
+td.num{font:500 13px/1.4 "IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.sub{padding-left:24px;color:var(--ink2)}
+td .fn{display:block;font:11.5px/1.45 "IBM Plex Sans",sans-serif;color:var(--ink3);margin-top:2px}
+tr.grp td{font-weight:600}
+.anchors{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.anchor{padding:14px 16px}
+.anchor .v{font:600 22px/1.1 "Source Serif 4",Georgia,serif;font-variant-numeric:tabular-nums}
+.anchor .v small{font:500 12px/1 "IBM Plex Mono",monospace;color:var(--ink3);margin-left:4px}
+.anchor .w{font-size:12.5px;color:var(--ink);margin:4px 0 6px}
+.anchor .s{font:11.5px/1.5 "IBM Plex Mono",monospace;color:var(--ink3)}
+.method{padding:16px 18px;font-size:13px;color:var(--ink2)}
+.method ul{margin:8px 0 0;padding-left:18px}
+.method li{margin:4px 0}
+footer{margin-top:28px;padding-top:14px;border-top:1px solid var(--line);font:12px/1.6 "IBM Plex Mono",monospace;color:var(--ink3)}
+.tip{position:fixed;pointer-events:none;z-index:9;background:var(--ink);color:var(--bg);padding:8px 10px;border-radius:6px;font:12px/1.45 "IBM Plex Sans",sans-serif;max-width:280px;display:none;box-shadow:var(--shadow)}
+.tip b{display:block;font-weight:600}
+.tip .m{font:11px/1.4 "IBM Plex Mono",monospace;opacity:.8}
+svg text{font-family:"IBM Plex Sans",system-ui,sans-serif}
+.node rect{cursor:pointer}
+.lnk{fill:none;mix-blend-mode:normal;transition:opacity .15s}
+.dim{opacity:.12}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+<header>
+  <div>
+    <p class="eyebrow">Capstone · US Equities Research · AI Infrastructure</p>
+    <h1>Where does $100 of AI capex go?</h1>
+    <p class="lede">The BNP Paribas exhibit rebuilt on the wiki's own sources. Pick a source view, hover a ribbon, click a node to read the evidence behind the number. Every figure carries broker/analyst and date; house numbers come from the Capstone AI Model.</p>
+  </div>
+  <div class="meta">Built <b>2026-09-02</b><br>House base: <b>AI Model.xlsx (2026-08-17)</b><br>Units: <b>$ per $100 of AI capex</b></div>
+</header>
+
+<div class="controls">
+  <div class="chips" id="views" role="tablist" aria-label="Source view"></div>
+  <div class="spacer"></div>
+  <div class="yr" id="years"><span class="lbl">House year</span></div>
+</div>
+
+<div class="grid">
+  <div class="card viz">
+    <div class="vizhead"><h2 id="vizTitle"></h2><span class="sub" id="vizSub"></span></div>
+    <svg id="sankey" viewBox="0 0 1200 780" role="img" aria-label="Sankey diagram of AI capex flows"></svg>
+    <div class="legend" id="legend"></div>
+  </div>
+  <aside class="card side" id="side"></aside>
+</div>
+
+<section class="block">
+  <h2>Where the sources disagree</h2>
+  <p class="sub">Variant perception first. The wiki corpus is ahead of the BNP exhibit on memory, on total IT share and on the WFE conversion; it is close on the non-IT half. Bars are $ per $100 of AI capex.</p>
+  <div class="deltas" id="deltas"></div>
+</section>
+
+<section class="block">
+  <h2>Source-by-source comparison</h2>
+  <p class="sub">Same buckets, every source on disk. Blank cells mean the source does not split that far. Basis flags matter: JPM's memory share is of CSP <em>hardware</em> capex (no land, shell or most of the power stack), so it is structurally higher than a share of total capex.</p>
+  <div class="card tblwrap"><table id="cmp"></table></div>
+</section>
+
+<section class="block">
+  <h2>Dollars per gigawatt — the anchors behind the shares</h2>
+  <p class="sub">Build cost per GW, never revenue per GW. The standing wiki rule applies: facility GW, IT-load GW and 800V-subset GW are different bases and must not be mixed.</p>
+  <div class="anchors" id="anchors"></div>
+</section>
+
+<section class="block">
+  <h2>Method and tags</h2>
+  <div class="card method">
+    <b>HARD</b> — the source states the number in that form. <b>DERIVED</b> — arithmetic on two sourced numbers, shown in the evidence panel. <b>EST</b> — house judgement or a ratio borrowed from one source and applied to another's level. <b>BNP</b> — the pasted exhibit as read; the note date was not visible on the figure and is not confirmed.
+    <ul>
+      <li>House top level (chips · networking+CPU+memory/storage · shell/power/site) is the Capstone AI Model <code>Resumo | Total</code> split of all-player AI capex, CY26E–CY28E. Sub-splits inside each bucket are corpus ratios applied to those levels and are tagged DERIVED or EST.</li>
+      <li>The WFE leg uses Lam's August-2026 conversion ($9–10 of WFE per $100 of AI capex) and is drawn from the silicon nodes pro-rata; segment shares are industry-wide (litho, etch+dep, process control, WLP), not leading-edge-only.</li>
+      <li>The BNP exhibit does not label how the $8 of WFE splits across accelerator, memory and CPU; it is drawn pro-rata to those three nodes.</li>
+      <li>Memory is the fork: the AI Model carries HBM inside the chip bucket (~$8) while the house memory-capex model and the sell-side memory desks size total memory at 31–55% of the relevant denominator. Both are shown; neither is netted.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>Sources: Capstone AI Model (2026-08-17) · BNP Paribas Equity Research (Figure 11, pasted 2026-09-02) · Google Office of the CTO expert call (2026-06-23) · Morgan Stanley Nowak/Byrd/Wood (2026-07-27) · JPM Kwon/Sur (2026-08-09) · Lam Research CFO at JPM Forum (2026-08-12) · SemiAnalysis CPO Book (2026-01-01) · Bernstein Rasgon (2026-07-20, 2026-09-01) · Gartner via KLAC (CY25) · Lam Q3-FY26 call (2026-04-22) · BofA Post (2026-07-07) · BofA DC Primer (2025-09-15) · The Information (2026-08-02) · Capstone Semis MAP v9/v11 · Capstone memory-capex model. Internal research, not investment advice.</footer>
+</div>
+<div class="tip" id="tip"></div>
+
+<script>
+/* ============================== DATA ============================== */
+const GROUP_COLOR={semis:'var(--s1)',net:'var(--s2)',power:'var(--s3)',cool:'var(--s4)',fac:'var(--s5)',root:'var(--s0)',wfe:'var(--wfe)',other:'var(--s0)'};
+const GROUP_LABEL={semis:'Semis & servers',net:'Networking',power:'Power',cool:'Cooling',fac:'Facilities & construction',wfe:'Wafer-fab equipment (drawn from silicon)'};
+
+// ---------- Evidence library (reused across views) ----------
+const EV={
+  aiModel:(y,share,bn,bucket)=>({tag:'HARD',q:`${bucket}: ${share.toFixed(1)}% of all-player AI capex in ${y} (US$${bn.toFixed(0)}bn of US$${TOT[y].toFixed(0)}bn).`,src:'Capstone AI Model.xlsx, sheet "Resumo | Total" (categories of the model itself: chips / networking+CPU+memory-storage / shell-power-site) · 2026-08-17'}),
+  bnp:(t)=>({tag:'BNP',q:t,src:'BNP Paribas Equity Research, "Where does $100 of AI Capex flow?" (Figure 11, SankeyMATIC; "high level estimates subject to change") · pasted 2026-09-02, note date not confirmed'}),
+  khessin:(t)=>({tag:'HARD',q:t,src:'Arthur Khessin, Principal Architect / Office of the CTO, Google — expert call "Memory Cycle" · 2026-06-23 (Outlook forward via Fernanda Watkins; broker host not identified in the file)'}),
+  ms:(t)=>({tag:'HARD',q:t,src:'Morgan Stanley · Brian Nowak / Stephen Byrd / Adam Wood, "The Paths to 25-50% GenAI ROIC" · 2026-07-27 (reaffirmed 2026-08-12)'}),
+  lrcx:{tag:'HARD',q:'Lam CFO Doug Bettinger raised the AI-capex conversion from ~$8bn of WFE per $100bn of AI capex (Oct-2025 framework) to "closer to $9-10bn per $100bn", on inference mix pulling through memory and CPU content alongside GPU/XPU.',src:'Lam Research CFO, JPM Hardware & Semis Management Access Forum (Harlan Sur) · 2026-08-12 · assumptions.md wfe-tam'},
+  semisMapNet:{tag:'DERIVED',q:'Semis MAP v9 content-per-GW: networking ~US$4.2bn/GW against a blended house build cost of ~US$34→42bn/GW (CY26→28E) → networking ≈ 10-12% of capex.',src:'Capstone Semis MAP v9, mix sheet rows 39-46 · 2026-07-10; house $/GW from AI Model (US$30.5bn CY25 → 41.9bn CY28E)'},
+  saNet:{tag:'HARD',q:'Networking = 15% of total cluster cost on a 3-layer network (18% on 4-layer); transceivers = 60% of networking cost and 45% of networking power (GB300 NVL72, InfiniBand X800, LinkX). Cluster cost is IT-only, so ≈9-10% of total capex.',src:'SemiAnalysis · Dylan Patel et al., "Co-Packaged Optics (CPO) Book" · 2026-01-01 · themes/optical-cpo.md'},
+  semisMapHbm:{tag:'DERIVED',q:'Semis MAP v9 content-per-GW: HBM fading US$3.4→2.6bn/GW (CY26→28E) against ~US$34→42bn/GW build → HBM ≈ 10%→6% of capex. Excludes server DDR5, LPDDR and NAND, which sit in the networking+CPU+memory/storage bucket.',src:'Capstone Semis MAP v9, mix sheet rows 39-46 · 2026-07-10'},
+  memCapex:{tag:'EST',q:'House memory-capex model (supplier-side DC memory: HBM + LPDDR/SOCAMM + server DDR5 + DC NAND + nearline HDD): US$118bn (2025) → 406bn (2026) → 689bn (2027) = 19% → 37% → 45% of all-buyer DC capex. Semis MAP v11 bridge: US$272bn/496bn = 39%/55% of street AI capex CY26/27. Fork vs the AI Model chip bucket is open, not netted.',src:'Capstone memory-capex model (Bottom_Up_Capex_v3.xlsx) · 2026-07-17; Semis MAP v11 · 2026-07-16'},
+  jpmMem:{tag:'HARD',q:'Memory value share of CSP hardware capex: 7%/4%/8%/8% (2022-25) → 31% (26E) → 49% (27E) → 60% (28E). Denominator is OMDIA CSP HARDWARE capex (excludes land, shell and most of the power stack). JPM notes investors find "above 50%" stretched.',src:'JPM · Jay Kwon / Harlan Sur / Mio Shikanai, "Global Memory TAM and S&D update" · 2026-08-09 · MU.md, themes/hyperscaler-capex.md'},
+  kbMem:{tag:'HARD',q:'Memory\'s share of AI capex seen rising from 14% to 50% by 2027 (DRAM +308% / NAND +256% 2026 ASP).',src:'Jefferies/KB · Jeff Kim (Samsung) · 2026-07-01 · SAMSUNG.md, themes/hbm-memory.md'},
+  khessinShell:{tag:'EST',q:'Ratio only: Khessin\'s facility split (power 15-20% : cooling ~10% : shell/land 5-10%, i.e. 17.5 : 10 : 7.5 at midpoints) applied to the AI Model\'s shell/power/site level. MS gives non-IT 41% of a GB300 GW; The Information $19bn of $59bn per GW = 32%.',src:'Khessin call 2026-06-23 (ratio) × Capstone AI Model 2026-08-17 (level)'},
+  litho:{tag:'HARD',q:'Litho intensity 17% (2022) → 25% (2023) → 23-24% since; litho the 2nd largest WFE segment at US$29bn in 2025; ASML >90% litho share.',src:'Bernstein · Stacy Rasgon, "ASML: High-NA EUV Primer — The shrinking never stops" · 2026-09-01 · ASML.md'},
+  etch:{tag:'HARD',q:'Lam 2026 SAM (etch + deposition) "slightly more than the mid-30s percent" of WFE; medium-term goal "high 30s percent".',src:'Lam Research Q3-FY26 earnings call · 2026-04-22'},
+  pc:{tag:'HARD',q:'Process-control intensity at 8.1% of WFE (Gartner CY25; vs KLA\'s old 7.25% target); KLA 58% share of process control.',src:'Gartner CY25 data via KLAC briefing (JPM) · _briefings/by-ticker/KLAC.md'},
+  wlp:{tag:'HARD',q:'WFE incl. WLP ~US$9-11bn/yr on a US$148-198bn base (2026-28E) → wafer-level packaging ≈ 6% of WFE.',src:'Bernstein · Stacy Rasgon, "How much WFE to reach AI nirvana" · 2026-07-20 · assumptions.md wfe-tam'},
+  wfeOther:{tag:'DERIVED',q:'Residual after litho, etch+dep, process control and WLP: CMP, implant, clean, thermal, test/assembly and other. Not separately sourced on the wiki.',src:'Arithmetic residual'},
+  prorata:{tag:'DERIVED',q:'WFE is drawn from the silicon nodes pro-rata to their size; no source splits equipment pull-through by end chip.',src:'Layout convention, both views'},
+};
+
+// ---------- House totals (US$bn) ----------
+const YEARS=['CY26E','CY27E','CY28E'];
+const TOT={CY26E:901.6,CY27E:1885.4,CY28E:2913.1};
+const NCM={CY26E:178.6,CY27E:435.1,CY28E:715.1};   // networking + CPU + memory/storage
+const SHELL={CY26E:323.1,CY27E:683.3,CY28E:1040.6}; // shell, power, site
+const PGW={CY26E:34,CY27E:38,CY28E:41.9};           // blended house build $bn/GW (30.5 CY25 → 41.9 CY28E)
+const HBM_PGW={CY26E:3.4,CY27E:3.0,CY28E:2.6};
+const NET_PGW=4.2;
+const WFE_PER_100=9.5;
+const WFE_MIX={litho:.235,etch:.36,pc:.081,wlp:.06};
+
+function houseView(y){
+  const chips=TOT[y]-NCM[y]-SHELL[y];
+  const p=v=>v/TOT[y]*100;
+  const C=p(chips), N=p(NCM[y]), S=p(SHELL[y]);
+  const hbm=HBM_PGW[y]/PGW[y]*100, acc=C-hbm;
+  const net=NET_PGW/PGW[y]*100, cpu=N-net;
+  const opt=net*.6, netrest=net-opt;
+  const pw=S*17.5/35, cl=S*10/35, fa=S*7.5/35;
+  const w=WFE_PER_100, sil=acc+hbm+cpu;
+  const wl=w*WFE_MIX.litho,we=w*WFE_MIX.etch,wp=w*WFE_MIX.pc,ww=w*WFE_MIX.wlp,wo=w-wl-we-wp-ww;
+  const bn=v=>` (≈US$${(v/100*TOT[y]).toFixed(0)}bn)`;
+  return {
+    title:`Capstone house synthesis · ${y}`,
+    sub:`AI Model buckets at the top level, corpus ratios inside · total US$${TOT[y].toLocaleString('en-US',{maximumFractionDigits:0})}bn all-player AI capex`,
+    nodes:[
+      {id:'root',name:'AI CAPEX',col:0,g:'root',ev:[EV.aiModel(y,100,TOT[y],'All-player AI capex (hyperscalers + labs, neoclouds, Oracle, SpaceX, sovereigns)')]},
+      {id:'chips',name:'Chips (GPU/XPU + HBM)',col:1,g:'semis',ev:[EV.aiModel(y,C,chips,'Chips (GPU/XPU + HBM)')]},
+      {id:'ncm',name:'Networking + CPU + memory/storage',col:1,g:'net',ev:[EV.aiModel(y,N,NCM[y],'Networking + CPU + memory/storage')]},
+      {id:'shell',name:'Shell, power & site',col:1,g:'power',ev:[EV.aiModel(y,S,SHELL[y],'Rest — shell, power, site')]},
+      {id:'acc',name:'Accelerator ex-HBM',col:2,g:'semis',ev:[{tag:'DERIVED',q:`Chip bucket ${C.toFixed(1)} minus HBM ${hbm.toFixed(1)} = ${acc.toFixed(1)}${bn(acc)}.`,src:'Arithmetic on AI Model bucket and Semis MAP HBM content'},EV.semisMapHbm]},
+      {id:'hbm',name:'HBM (inside the chip)',col:2,g:'semis',ev:[EV.semisMapHbm,EV.memCapex,EV.jpmMem,EV.kbMem]},
+      {id:'net',name:'Networking',col:2,g:'net',ev:[EV.semisMapNet,EV.saNet,EV.khessin('Networking share of capex: 5-10%. Scale-up optical content "still in single digits of total capex share".')]},
+      {id:'cpu',name:'CPU + server DRAM/NAND/storage',col:2,g:'net',ev:[{tag:'DERIVED',q:`Bucket ${N.toFixed(1)} minus networking ${net.toFixed(1)} = ${cpu.toFixed(1)}${bn(cpu)}. This residual grows CY26→28E, which is the model's version of Lam's "inference pulls through memory and CPU".`,src:'Arithmetic on AI Model bucket and Semis MAP networking content'},EV.lrcx]},
+      {id:'opt',name:'Optical transceivers',col:3,g:'net',ev:[EV.saNet,{tag:'DERIVED',q:`60% of networking ${net.toFixed(1)} = ${opt.toFixed(1)}${bn(opt)}.`,src:'SemiAnalysis ratio × house networking level'}]},
+      {id:'netrest',name:'Switches, NICs & cabling',col:3,g:'net',ev:[{tag:'DERIVED',q:`Networking less transceivers = ${netrest.toFixed(1)}${bn(netrest)}. The wiki has no source splitting switches vs NICs vs cabling; BNP's split is 4.5 / 3 / 2 of 15.`,src:'Residual; see BNP view'}]},
+      {id:'pw',name:'Power',col:2,g:'power',ev:[EV.khessinShell,EV.khessin('Electrical power share of capex: 15-20%. Liquid cooling and 800V-class DC distribution driving up cooling and power costs per MW.'),EV.ms('All-in $39bn/GW for GB300: IT capex $23bn (5-yr life) + non-IT powered shell $16bn (15-yr life); ~$4mn per GB300 rack; 410,256 chips per GW.')]},
+      {id:'cl',name:'Cooling',col:2,g:'cool',ev:[EV.khessinShell,EV.khessin('Mechanical cooling share of capex: ~10%. Liquid cooling now in "almost every single" new deployment.'),{tag:'HARD',q:'Eaton addressable content ~$2.9mn/MW → $3.4mn/MW with liquid cooling; Vertiv ~$3.5mn discrete → ~$7mn/MW full-stack; nVent ~$1mn/MW.',src:'MS Capex Tracker · 2026-05-18 · ETN.md'}]},
+      {id:'fa',name:'Facilities & construction',col:2,g:'fac',ev:[EV.khessinShell,EV.khessin('Shell / land / build-outs share of capex: 5-10% maximum.'),{tag:'HARD',q:'Quanta frames the datacenter construction opportunity at ~$13mn/MW; BofA MEP study $15.0mn/MW MEP cost, 1,772 man-hours/MW.',src:'PWR.md (Quanta mgmt) · BofA "Who Makes the Data Center 2025" · NVT.md'}]},
+      {id:'wfe',name:'WFE',col:4,g:'wfe',ev:[EV.lrcx,EV.prorata,{tag:'HARD',q:'Separate card, different denominator: Bernstein ~$7.5-8bn of WFE per incremental GW/yr (compute-TDP basis). Never substitute the $/GW card for the $/capex card.',src:'Bernstein Rasgon · 2026-07-20 · assumptions.md'}]},
+      {id:'w_litho',name:'Lithography',col:5,g:'wfe',ev:[EV.litho]},
+      {id:'w_etch',name:'Etch & deposition',col:5,g:'wfe',ev:[EV.etch]},
+      {id:'w_pc',name:'Process control',col:5,g:'wfe',ev:[EV.pc]},
+      {id:'w_wlp',name:'Wafer-level packaging',col:5,g:'wfe',ev:[EV.wlp]},
+      {id:'w_oth',name:'Other WFE',col:5,g:'wfe',ev:[EV.wfeOther]},
+    ],
+    links:[
+      ['root','chips',C],['root','ncm',N],['root','shell',S],
+      ['chips','acc',acc],['chips','hbm',hbm],
+      ['ncm','net',net],['ncm','cpu',cpu],
+      ['net','opt',opt],['net','netrest',netrest],
+      ['shell','pw',pw],['shell','cl',cl],['shell','fa',fa],
+      ['acc','wfe',w*acc/sil],['hbm','wfe',w*hbm/sil],['cpu','wfe',w*cpu/sil],
+      ['wfe','w_litho',wl],['wfe','w_etch',we],['wfe','w_pc',wp],['wfe','w_wlp',ww],['wfe','w_oth',wo],
+    ],
+    legend:['semis','net','power','cool','fac','wfe'],
+  };
+}
+
+// ---------- BNP view (as pasted) ----------
+const BNP=(()=>{
+  const b=t=>[EV.bnp(t)];
+  const w=8, sil=50;
+  return {
+    title:'BNP Paribas · "Where does $100 of AI Capex flow?"',
+    sub:'Figure 11 as pasted (SankeyMATIC, "high level estimates") · note date not confirmed',
+    nodes:[
+      {id:'root',name:'AI CAPEX',col:0,g:'root',ev:b('$100 of AI capex, split across five first-level buckets.')},
+      {id:'semi',name:'Semi chips',col:1,g:'semis',ev:b('Semi chips $50 → Accelerator $25, Memory ICs $15, CPUs/other chips & server production $10.')},
+      {id:'net',name:'Networking equipment',col:1,g:'net',ev:b('Networking equipment $15 → Network processors $3, Cabling $2, Switches $4.5, Optical transceivers $5.5.')},
+      {id:'power',name:'Power',col:1,g:'power',ev:b('Power $20 → Power distribution $6.5, Grid connection & independent generation $10, On-site electrical routing $3.5.')},
+      {id:'cool',name:'Cooling',col:1,g:'cool',ev:b('Cooling $7.5 → Cold plates $1.5, Coolant distribution unit $2, Chillers & cooling towers $2.5, Other $1.5.')},
+      {id:'fac',name:'Facilities & Construction',col:1,g:'fac',ev:b('Facilities & Construction $7.5 → Land & site acquisition $1, Building shell & structural works $4, Interior fit-out & facilities support $2.5.')},
+      {id:'acc',name:'Accelerator',col:2,g:'semis',ev:b('Accelerator $25.').concat([EV.khessin('Compute hardware more than half of capex — roughly $20bn of a $30-40bn 1GW campus.')])},
+      {id:'mem',name:'Memory ICs',col:2,g:'semis',ev:b('Memory ICs $15.').concat([EV.jpmMem,EV.kbMem,EV.memCapex])},
+      {id:'cpu',name:'CPUs, other chips & server production',col:2,g:'semis',ev:b('CPUs, other chips & server production $10.')},
+      {id:'np',name:'Network processors',col:2,g:'net',ev:b('Network processors $3.')},
+      {id:'cab',name:'Cabling',col:2,g:'net',ev:b('Cabling $2.')},
+      {id:'sw',name:'Switches',col:2,g:'net',ev:b('Switches $4.5.')},
+      {id:'opt',name:'Optical transceivers',col:2,g:'net',ev:b('Optical transceivers $5.5 = 37% of networking.').concat([EV.saNet])},
+      {id:'pd',name:'Power distribution',col:2,g:'power',ev:b('Power distribution $6.5.')},
+      {id:'grid',name:'Grid connection & independent generation',col:2,g:'power',ev:b('Grid connection & independent generation $10.')},
+      {id:'route',name:'On-site electrical routing',col:2,g:'power',ev:b('On-site electrical routing $3.5.')},
+      {id:'cp',name:'Cold plates',col:2,g:'cool',ev:b('Cold plates $1.5.')},
+      {id:'cdu',name:'Coolant distribution unit',col:2,g:'cool',ev:b('Coolant distribution unit $2.')},
+      {id:'chil',name:'Chillers & cooling towers',col:2,g:'cool',ev:b('Chillers & cooling towers $2.5.')},
+      {id:'coth',name:'Other cooling',col:2,g:'cool',ev:b('Other $1.5.')},
+      {id:'land',name:'Land & site acquisition',col:2,g:'fac',ev:b('Land & site acquisition $1.')},
+      {id:'bld',name:'Building shell & structural works',col:2,g:'fac',ev:b('Building shell & structural works $4.')},
+      {id:'fit',name:'Interior fit-out & facilities support',col:2,g:'fac',ev:b('Interior fit-out & facilities support $2.5.')},
+      {id:'wfe',name:'WFE',col:4,g:'wfe',ev:b('WFE $8 → Deposition $2, Lithography $2, Etching $1, Inspection $1, Packaging & other $2. The exhibit draws WFE from the three semi nodes but does not label the split.').concat([EV.prorata,EV.lrcx])},
+      {id:'w_dep',name:'Deposition',col:5,g:'wfe',ev:b('Deposition $2.')},
+      {id:'w_litho',name:'Lithography',col:5,g:'wfe',ev:b('Lithography $2.').concat([EV.litho])},
+      {id:'w_etch',name:'Etching',col:5,g:'wfe',ev:b('Etching $1.').concat([EV.etch])},
+      {id:'w_insp',name:'Inspection',col:5,g:'wfe',ev:b('Inspection $1.').concat([EV.pc])},
+      {id:'w_pkg',name:'Packaging & other',col:5,g:'wfe',ev:b('Packaging & other $2.').concat([EV.wlp])},
+    ],
+    links:[
+      ['root','semi',50],['root','net',15],['root','power',20],['root','cool',7.5],['root','fac',7.5],
+      ['semi','acc',25],['semi','mem',15],['semi','cpu',10],
+      ['net','np',3],['net','cab',2],['net','sw',4.5],['net','opt',5.5],
+      ['power','pd',6.5],['power','grid',10],['power','route',3.5],
+      ['cool','cp',1.5],['cool','cdu',2],['cool','chil',2.5],['cool','coth',1.5],
+      ['fac','land',1],['fac','bld',4],['fac','fit',2.5],
+      ['acc','wfe',w*25/sil],['mem','wfe',w*15/sil],['cpu','wfe',w*10/sil],
+      ['wfe','w_dep',2],['wfe','w_litho',2],['wfe','w_etch',1],['wfe','w_insp',1],['wfe','w_pkg',2],
+    ],
+    legend:['semis','net','power','cool','fac','wfe'],
+  };
+})();
+
+// ---------- Khessin view ----------
+const KHESSIN={
+  title:'Google Office of the CTO · Arthur Khessin (expert call)',
+  sub:'1GW campus = US$30-40bn; shares quoted as ranges, midpoints drawn · 2026-06-23',
+  nodes:[
+    {id:'root',name:'AI CAPEX',col:0,g:'root',ev:[EV.khessin('1-gigawatt data center campus capex: $30-40 billion (hyperscaler perspective, total campus cost).')]},
+    {id:'comp',name:'Compute hardware (>50%)',col:1,g:'semis',ev:[EV.khessin('Compute hardware share of capex: more than half (depending on accelerator type), roughly $20 billion for compute within a 1GW campus. HBM a "huge cost driver".')]},
+    {id:'net',name:'Networking (5-10%)',col:1,g:'net',ev:[EV.khessin('Networking share of capex: 5-10%. Scale-up optical content a new cost item, "still in single digits of total capex share".')]},
+    {id:'pw',name:'Electrical power (15-20%)',col:1,g:'power',ev:[EV.khessin('Electrical power share of capex: 15-20%. Facility costs (building, power, cooling) 30-35% in total.')]},
+    {id:'cl',name:'Mechanical cooling (~10%)',col:1,g:'cool',ev:[EV.khessin('Mechanical cooling share of capex: ~10%; liquid cooling now in "almost every single" new deployment.')]},
+    {id:'fa',name:'Shell, land & build-outs (5-10%)',col:1,g:'fac',ev:[EV.khessin('Shell / land / built-outs share of capex: 5-10% maximum.')]},
+    {id:'res',name:'Unallocated (ranges do not sum to 100)',col:1,g:'other',ev:[{tag:'DERIVED',q:'Midpoints 55 + 7.5 + 17.5 + 10 + 7.5 = 97.5; the remaining 2.5 is range slack, not a category.',src:'Arithmetic'}]},
+  ],
+  links:[['root','comp',55],['root','net',7.5],['root','pw',17.5],['root','cl',10],['root','fa',7.5],['root','res',2.5]],
+  legend:['semis','net','power','cool','fac'],
+};
+
+// ---------- MS view ----------
+const MSV={
+  title:'Morgan Stanley · 1GW GB300 all-in capital cost',
+  sub:'US$39bn/GW = IT $23bn (5-yr life) + non-IT powered shell $16bn (15-yr life) · 2026-07-27',
+  nodes:[
+    {id:'root',name:'AI CAPEX ($39bn per GW)',col:0,g:'root',ev:[EV.ms('"We anchor to an all-in capital cost of $39bn/GW for GB300 as implied by our bottoms-up capex/capacity work, which flows through to ~$6bn of depreciation expense per year for owned infrastructure." ~$4mn per GB300 rack (MS Asia semis rack BoM); 410,256 GB300 chips per GW.')]},
+    {id:'it',name:'IT capex — chips, servers, networking ($23bn, 59%)',col:1,g:'semis',ev:[EV.ms('IT capex $23bn per GW on a 5-year useful life.'),{tag:'HARD',q:'Cross-check: "a gigawatt-scale campus requires roughly $40 billion in IT equipment, compared with $19 billion for the land, facilities, non-IT equipment and on-site power" → IT 68%.',src:'The Information · Ann Davis Vaughan · 2026-08-02 · themes/hyperscaler-capex.md'}]},
+    {id:'nonit',name:'Non-IT powered shell ($16bn, 41%)',col:1,g:'power',ev:[EV.ms('Non-IT capex (powered shell) $16bn per GW on a 15-year useful life; non-IT depreciation ~$1bn/yr per GW; energy + other opex ~$2bn/yr per GW inside total opex of $7.6bn/GW.')]},
+  ],
+  links:[['root','it',59],['root','nonit',41]],
+  legend:['semis','power'],
+};
+
+const VIEWS=[
+  {key:'house',label:'Capstone house (wiki)',get:()=>houseView(curYear)},
+  {key:'bnp',label:'BNP Paribas exhibit',get:()=>BNP},
+  {key:'khessin',label:'Google CTO office call',get:()=>KHESSIN},
+  {key:'ms',label:'MS 1GW GB300',get:()=>MSV},
+];
+let curView='house', curYear='CY27E', selected=null;
+
+/* ============================== SANKEY LAYOUT ============================== */
+const W=1200,H=780,NODE_W=14,GAP=10,MIN_SLOT=16;
+const COLX={0:110,1:330,2:580,3:790,4:830,5:990};
+function layout(view){
+  const nodes=view.nodes.map(n=>({...n,in:[],out:[]}));
+  const byId=Object.fromEntries(nodes.map(n=>[n.id,n]));
+  const links=view.links.map(([s,t,v])=>({s:byId[s],t:byId[t],v}));
+  links.forEach(l=>{l.s.out.push(l);l.t.in.push(l);});
+  nodes.forEach(n=>{n.v=Math.max(n.in.reduce((a,l)=>a+l.v,0),n.out.reduce((a,l)=>a+l.v,0));});
+  // pixels per $: fit the busiest column
+  const cols={};nodes.forEach(n=>{(cols[n.col]=cols[n.col]||[]).push(n);});
+  let k=Infinity;
+  Object.values(cols).forEach(c=>{const sum=c.reduce((a,n)=>a+n.v,0);const gaps=(c.length-1)*GAP+c.length*4;k=Math.min(k,(H-60-gaps)/Math.max(sum,1));});
+  k=Math.min(k,6.4);
+  const slot=h=>Math.max(GAP,MIN_SLOT-h);
+  // WFE columns are small; anchor them near the silicon nodes rather than centring
+  Object.entries(cols).forEach(([c,list])=>{
+    const total=list.reduce((a,n)=>a+Math.max(n.v*k,1.5),0)+list.slice(0,-1).reduce((a,n)=>a+slot(Math.max(n.v*k,1.5)),0);
+    let y;
+    if(+c>=4){
+      const srcNodes=list.flatMap(n=>n.in.map(l=>l.s));
+      const anchor=srcNodes.length?Math.min(...srcNodes.map(s=>s.y??40)):40;
+      y=Math.max(30,anchor);
+    } else y=(H-total)/2;
+    list.forEach(n=>{n.x=COLX[c];n.y=y;n.h=Math.max(n.v*k,1.5);y+=n.h+slot(n.h);});
+  });
+  // link offsets
+  nodes.forEach(n=>{let o=0;n.out.forEach(l=>{l.sy=n.y+o;o+=l.v*k;});o=0;n.in.forEach(l=>{l.ty=n.y+o;o+=l.v*k;});});
+  links.forEach(l=>{l.w=Math.max(l.v*k,1);});
+  return {nodes,links,byId,k};
+}
+function linkPath(l){
+  const x0=l.s.x+NODE_W,x1=l.t.x,y0=l.sy+l.w/2,y1=l.ty+l.w/2,xm=(x0+x1)/2;
+  return `M${x0},${y0} C${xm},${y0} ${xm},${y1} ${x1},${y1}`;
+}
+const fmt=v=>v>=10?`$${v.toFixed(0)}`:`$${v.toFixed(1).replace(/\.0$/,'')}`;
+
+function render(){
+  const view=VIEWS.find(v=>v.key===curView).get();
+  const L=layout(view);
+  document.getElementById('vizTitle').textContent=view.title;
+  document.getElementById('vizSub').textContent=view.sub;
+  const svg=document.getElementById('sankey');
+  let g='';
+  // links
+  L.links.forEach((l,i)=>{
+    const grp=l.t.g==='wfe'?'wfe':(l.s.g==='root'?l.t.g:l.s.g);
+    g+=`<path class="lnk" data-i="${i}" data-s="${l.s.id}" data-t="${l.t.id}" d="${linkPath(l)}" stroke="${GROUP_COLOR[grp]}" stroke-width="${l.w}" stroke-opacity="0.42"/>`;
+  });
+  // nodes
+  L.nodes.forEach(n=>{
+    const col=GROUP_COLOR[n.g];
+    const label=`${n.name} · ${fmt(n.v)}`;
+    const lx=n.x+NODE_W+7, ly=n.y+n.h/2;
+    const pill=n.out.length>0&&n.col>0;
+    const tw=label.length*6.3+10;
+    g+=`<g class="node" data-id="${n.id}">
+      <rect x="${n.x}" y="${n.y}" width="${NODE_W}" height="${n.h}" rx="2" fill="${col}"/>
+      ${n.col===0?`<text x="${n.x-8}" y="${ly}" text-anchor="end" font-size="13" font-weight="600" fill="var(--ink)" dominant-baseline="middle">${n.name}</text><text x="${n.x-8}" y="${ly+18}" text-anchor="end" font-size="12" fill="var(--ink3)" dominant-baseline="middle" font-family="IBM Plex Mono,monospace">${fmt(n.v)}</text>`
+      :`${pill?`<rect x="${lx-4}" y="${ly-9}" width="${tw}" height="18" rx="4" fill="var(--panel)" fill-opacity="0.88"/>`:''}<text x="${lx}" y="${ly}" font-size="${n.col===1?12.5:11.5}" font-weight="${n.col===1?600:500}" fill="var(--ink)" dominant-baseline="middle">${n.name} <tspan fill="var(--ink3)" font-family="IBM Plex Mono,monospace" font-size="11">${fmt(n.v)}</tspan></text>`}
+      <rect class="hit" x="${n.x-4}" y="${n.y-4}" width="${NODE_W+8}" height="${n.h+8}" fill="transparent"/>
+    </g>`;
+  });
+  svg.innerHTML=g;
+  // legend
+  document.getElementById('legend').innerHTML=view.legend.map(k=>`<span><i style="background:${GROUP_COLOR[k]}"></i>${GROUP_LABEL[k]}</span>`).join('')+`<span style="margin-left:auto;color:var(--ink3)">hover a ribbon · click a node for evidence</span>`;
+  // interactions
+  const tip=document.getElementById('tip');
+  const paths=[...svg.querySelectorAll('.lnk')];
+  function related(id){
+    const set=new Set([id]);
+    const walk=(nid,dir)=>{const n=L.byId[nid];(dir==='up'?n.in:n.out).forEach(l=>{const o=dir==='up'?l.s:l.t;if(!set.has(o.id)){set.add(o.id);walk(o.id,dir);}});};
+    walk(id,'up');walk(id,'down');return set;
+  }
+  function focus(id){
+    const set=id?related(id):null;
+    paths.forEach(p=>{p.classList.toggle('dim',!!set&&!(set.has(p.dataset.s)&&set.has(p.dataset.t)));});
+    svg.querySelectorAll('.node').forEach(nd=>nd.style.opacity=set&&!set.has(nd.dataset.id)?.35:1);
+  }
+  svg.querySelectorAll('.node').forEach(nd=>{
+    const n=L.byId[nd.dataset.id];
+    nd.addEventListener('mouseenter',e=>{focus(n.id);showTip(e,`<b>${n.name}</b>${fmt(n.v)} of $100${curView==='house'?` · ≈US$${(n.v/100*TOT[curYear]).toFixed(0)}bn ${curYear}`:''}<div class="m">${n.ev[0]?.tag||''} · click for evidence</div>`);});
+    nd.addEventListener('mousemove',moveTip);
+    nd.addEventListener('mouseleave',()=>{focus(selected);hideTip();});
+    nd.addEventListener('click',()=>{selected=n.id;focus(n.id);showSide(n);});
+  });
+  paths.forEach(p=>{
+    const l=L.links[+p.dataset.i];
+    p.addEventListener('mouseenter',e=>{paths.forEach(q=>q.classList.toggle('dim',q!==p));showTip(e,`<b>${l.s.name} → ${l.t.name}</b>${fmt(l.v)} of $100${curView==='house'?` · ≈US$${(l.v/100*TOT[curYear]).toFixed(0)}bn`:''}`);});
+    p.addEventListener('mousemove',moveTip);
+    p.addEventListener('mouseleave',()=>{focus(selected);hideTip();});
+    p.addEventListener('click',()=>{selected=l.t.id;focus(l.t.id);showSide(l.t);});
+  });
+  svg.addEventListener('click',e=>{if(e.target===svg){selected=null;focus(null);showSide(null);}});
+  function showTip(e,html){tip.innerHTML=html;tip.style.display='block';moveTip(e);}
+  function moveTip(e){tip.style.left=(e.clientX+14)+'px';tip.style.top=(e.clientY+14)+'px';}
+  function hideTip(){tip.style.display='none';}
+  // keep selection across re-render when possible
+  const keep=selected&&L.byId[selected];
+  if(keep){focus(selected);showSide(keep);}else{selected=null;showSide(null);}
+}
+
+function showSide(n){
+  const side=document.getElementById('side');
+  if(!n){side.innerHTML=`<h3>Evidence</h3><div class="nodename">Click a node</div><div class="nodeval">Each node lists the sources behind its number.</div>
+  <div class="ev"><span class="tag HARD">HARD</span><span class="src">source states the number</span></div>
+  <div class="ev"><span class="tag DERIVED">DERIVED</span><span class="src">arithmetic on two sourced numbers</span></div>
+  <div class="ev"><span class="tag EST">EST</span><span class="src">ratio from one source applied to another's level</span></div>
+  <div class="ev"><span class="tag BNP">BNP</span><span class="src">the pasted exhibit as read</span></div>
+  <p class="hint">Standing rule: numbers here are shares of build cost. Never net them against revenue-per-GW figures.</p>`;return;}
+  const bn=curView==='house'?` · ≈US$${(n.v/100*TOT[curYear]).toFixed(0)}bn ${curYear}`:'';
+  side.innerHTML=`<h3>Evidence</h3><div class="nodename">${n.name}</div><div class="nodeval">${fmt(n.v)} of $100${bn}</div>`+
+    n.ev.map(e=>`<div class="ev"><span class="tag ${e.tag}">${e.tag}</span><q>${e.q}</q><div class="src">${e.src}</div></div>`).join('');
+}
+
+/* ============================== CONTROLS ============================== */
+const viewsEl=document.getElementById('views');
+VIEWS.forEach(v=>{const b=document.createElement('button');b.className='chip'+(v.key===curView?' on':'');b.textContent=v.label;b.setAttribute('role','tab');b.onclick=()=>{curView=v.key;[...viewsEl.children].forEach(c=>c.classList.toggle('on',c===b));document.getElementById('years').classList.toggle('show',curView==='house');render();};viewsEl.appendChild(b);});
+const yearsEl=document.getElementById('years');yearsEl.classList.add('show');
+YEARS.forEach(y=>{const b=document.createElement('button');b.className='chip'+(y===curYear?' on':'');b.textContent=y;b.onclick=()=>{curYear=y;[...yearsEl.querySelectorAll('.chip')].forEach(c=>c.classList.toggle('on',c===b));render();};yearsEl.appendChild(b);});
+
+/* ============================== DELTAS ============================== */
+const h27=houseView('CY27E');const hv=id=>{const L=layout(h27);return L.byId[id].v;};
+const DELTAS=[
+  {k:'Memory',big:`$15 <small>BNP</small> vs 31–49% <small>JPM · hardware capex</small>`,p:`BNP's $15 of memory sits below every memory-desk figure on the wiki: JPM 31%/49% of CSP hardware capex for 2026E/27E (2026-08-09), Jefferies/KB 14%→50% by 2027 (2026-07-01), house memory-capex model 37%→45% of all-buyer capex. On a ~60% hardware share JPM's 49% is ≈$30 of $100. The AI Model itself carries only HBM (~$${hv('hbm').toFixed(0)}) inside the chip bucket, so this fork is open on the house side too.`},
+  {k:'Total silicon + servers',big:`$50 <small>BNP</small> vs $${(hv('chips')+hv('cpu')).toFixed(0)} <small>house CY27E</small>`,p:`Chips + CPU/server memory/storage are $${(hv('chips')+hv('cpu')).toFixed(0)} in the AI Model versus BNP's $50; MS has IT at 59% (incl. networking), Khessin ">50%" for compute alone. BNP is light on the IT half.`},
+  {k:'WFE per $100',big:`$8 <small>BNP</small> vs $9–10 <small>Lam, Aug-26</small>`,p:`BNP's $8 matches Lam's October-2025 framework. Lam's CFO raised it to $9-10 on 2026-08-12 on inference pulling through memory and CPU. Same denominator (dollars of AI capex), so the comparison is clean.`},
+  {k:'Networking',big:`$15 <small>BNP</small> vs $${hv('net').toFixed(0)} <small>house</small> · 5–10 <small>Khessin</small>`,p:`BNP is at the high end. Semis MAP content ~$4.2bn/GW ≈ 11% of capex; SemiAnalysis 15% of cluster (IT-only) cost ≈ 9-10% of total; Khessin 5-10%. Inside networking, BNP has optics at 37% of the bucket vs SemiAnalysis 60%.`},
+  {k:'Non-IT half',big:`$35 <small>BNP</small> · $${hv('shell').toFixed(0)} <small>house</small> · $41 <small>MS</small>`,p:`Power + cooling + facilities agree within a few dollars across BNP (20+7.5+7.5), the AI Model (${hv('shell').toFixed(1)}%), Khessin (30-35%) and MS ($16 of $39). The Information's $19 of $59 per GW (32%) is the low end. This is the settled part of the map.`},
+  {k:'Cooling',big:`$7.5 <small>BNP</small> vs ~$10 <small>Khessin</small>`,p:`Khessin has mechanical cooling at ~10% with liquid cooling in "almost every single" new deployment; BNP $7.5. Eaton's content ladder ($2.9→3.4mn/MW with liquid cooling) and Vertiv full-stack ~$7mn/MW point the same way.`},
+];
+document.getElementById('deltas').innerHTML=DELTAS.map(d=>`<div class="card delta"><div class="k">🔭 ${d.k}</div><div class="big">${d.big}</div><p>${d.p}</p></div>`).join('');
+
+/* ============================== COMPARISON TABLE ============================== */
+const h26=houseView('CY26E'),h28=houseView('CY28E');
+const HV=y=>{const L=layout(houseView(y));return id=>L.byId[id].v;};
+const v26=HV('CY26E'),v27=HV('CY27E'),v28=HV('CY28E');
+const r=(v)=>v==null?'':(v>=10?v.toFixed(0):v.toFixed(1));
+const ROWS=[
+  {grp:true,name:'Semis, servers & IT hardware (ex-network)',bnp:50,h:[v26('chips')+v26('cpu'),v27('chips')+v27('cpu'),v28('chips')+v28('cpu')],kh:'55 (">50%")',ms:'59 (IT incl. networking)',oth:'The Information: IT $40bn of $59bn/GW = 68% (2026-08-02)'},
+  {sub:true,name:'Accelerator (GPU/XPU)',bnp:25,h:[v26('acc'),v27('acc'),v28('acc')],kh:'',ms:'',oth:'House ex-HBM; BNP basis unclear (chip incl. HBM?)',fn:'AI Model chip bucket minus Semis MAP HBM content'},
+  {sub:true,name:'Memory',bnp:15,h:[v26('hbm'),v27('hbm'),v28('hbm')],kh:'"huge cost driver"',ms:'',oth:'JPM Kwon 31/49/60% of CSP hardware capex 26/27/28E (08-09) · Jefferies/KB 14→50% by 2027 (07-01) · house memory-capex 19/37/45% all-buyer 25-27 · Semis MAP v11 bridge 39/55% of street 26/27',fn:'House column = HBM only (inside the chip); server DDR5/NAND sit in the CPU row. Basis flags in the Method section.'},
+  {sub:true,name:'CPU, other chips, server DRAM/NAND, storage',bnp:10,h:[v26('cpu'),v27('cpu'),v28('cpu')],kh:'',ms:'',oth:'Lam: inference pulls memory + CPU content per $ of capex (08-12)',fn:'House residual of the networking+CPU+memory/storage bucket after networking'},
+  {grp:true,name:'Networking',bnp:15,h:[v26('net'),v27('net'),v28('net')],kh:'7.5 (5-10%)',ms:'in IT',oth:'SemiAnalysis 15% of cluster cost, 3-layer (≈9-10 of total) (01-01) · Semis MAP ~$4.2bn/GW (07-10)'},
+  {sub:true,name:'Optical transceivers',bnp:5.5,h:[v26('opt'),v27('opt'),v28('opt')],kh:'"single digits of total"',ms:'',oth:'SemiAnalysis: 60% of networking cost, 45% of networking power',fn:'House = 60% × networking'},
+  {sub:true,name:'Switches, NICs, cabling',bnp:9.5,h:[v26('netrest'),v27('netrest'),v28('netrest')],kh:'',ms:'',oth:'BNP: switches 4.5 / network processors 3 / cabling 2 — no wiki source splits these'},
+  {grp:true,name:'Power',bnp:20,h:[v26('pw'),v27('pw'),v28('pw')],kh:'17.5 (15-20%)',ms:'non-IT 41 in total',oth:'BNP: grid & generation 10 / distribution 6.5 / on-site routing 3.5 — no wiki source splits these',fn:'House = Khessin ratio × AI Model shell/power/site level'},
+  {grp:true,name:'Cooling',bnp:7.5,h:[v26('cl'),v27('cl'),v28('cl')],kh:'~10',ms:'',oth:'Eaton $2.9→3.4mn/MW with liquid cooling; Vertiv ~$7mn/MW full-stack (MS Capex Tracker 05-18) · BofA DC primer: electrical ~$18bn, thermal ~$10bn market 2024 (2025-09-15)',fn:'House = Khessin ratio × AI Model level'},
+  {grp:true,name:'Facilities & construction',bnp:7.5,h:[v26('fa'),v27('fa'),v28('fa')],kh:'7.5 (5-10% max)',ms:'',oth:'Quanta ~$13mn/MW construction · BofA MEP $15.0mn/MW · JPM APAC ex-China $6.4-13.2mn/MW (08-31)',fn:'House = Khessin ratio × AI Model level'},
+  {grp:true,name:'Non-IT total (power + cooling + facilities)',bnp:35,h:[v26('shell'),v27('shell'),v28('shell')],kh:'35 (30-35%)',ms:'41 ($16bn of $39bn)',oth:'The Information $19bn of $59bn/GW = 32%'},
+  {grp:true,name:'WFE pulled through per $100 of capex',bnp:8,h:[9.5,9.5,9.5],kh:'',ms:'',oth:'Lam CFO $9-10 (08-12), up from ~$8 (Oct-25) · separate card: Bernstein $7.5-8bn WFE per incremental GW/yr — different denominator',fn:'House holds Lam\'s current $9.5 midpoint in all three years'},
+  {sub:true,name:'Lithography',bnp:2,h:[9.5*WFE_MIX.litho,9.5*WFE_MIX.litho,9.5*WFE_MIX.litho],kh:'',ms:'',oth:'Litho intensity 23-24% of WFE (Bernstein High-NA primer, 09-01)'},
+  {sub:true,name:'Etch + deposition',bnp:3,h:[9.5*WFE_MIX.etch,9.5*WFE_MIX.etch,9.5*WFE_MIX.etch],kh:'',ms:'',oth:'Lam SAM "slightly more than mid-30s%" of WFE (04-22); BNP splits deposition 2 / etching 1'},
+  {sub:true,name:'Process control / inspection',bnp:1,h:[9.5*WFE_MIX.pc,9.5*WFE_MIX.pc,9.5*WFE_MIX.pc],kh:'',ms:'',oth:'8.1% of WFE, Gartner CY25 via KLAC'},
+  {sub:true,name:'Packaging & other',bnp:2,h:[9.5*(1-WFE_MIX.litho-WFE_MIX.etch-WFE_MIX.pc),9.5*(1-WFE_MIX.litho-WFE_MIX.etch-WFE_MIX.pc),9.5*(1-WFE_MIX.litho-WFE_MIX.etch-WFE_MIX.pc)],kh:'',ms:'',oth:'WLP ~6% of WFE (Bernstein 07-20) + residual CMP/implant/clean/thermal/test'},
+];
+document.getElementById('cmp').innerHTML=`<thead><tr><th>Bucket ($ per $100)</th><th>BNP Paribas</th><th>House CY26E</th><th>House CY27E</th><th>House CY28E</th><th>Khessin (Google CTO office)</th><th>MS 1GW GB300</th><th>Other corpus variants (source · date)</th></tr></thead><tbody>`+
+  ROWS.map(x=>`<tr class="${x.grp?'grp':''}"><td class="${x.sub?'sub':''}">${x.name}${x.fn?`<span class="fn">${x.fn}</span>`:''}</td><td class="num">${r(x.bnp)}</td><td class="num">${r(x.h[0])}</td><td class="num">${r(x.h[1])}</td><td class="num">${r(x.h[2])}</td><td>${x.kh}</td><td>${x.ms}</td><td>${x.oth}</td></tr>`).join('')+`</tbody>`;
+
+/* ============================== $/GW ANCHORS ============================== */
+const ANCHORS=[
+  {v:'$39bn',u:'/GW',w:'GB300 all-in: IT $23bn (5-yr) + non-IT powered shell $16bn (15-yr); ~$4mn/rack; 410,256 chips/GW',s:'Morgan Stanley · Nowak/Byrd/Wood · 2026-07-27'},
+  {v:'$30.5→41.9bn',u:'/GW',w:'House build cost per GW added, CY25→CY28E, blended across designers (NVDA-only basis runs $37→51bn)',s:'Capstone AI Model · 2026-08-17 · economics_1gw'},
+  {v:'$25 / $37 / $45bn',u:'/GW',w:'Incremental cost per GW 2026: AMZN (scale + own chips) / Google / Meta; specialised AI deals >$40 to ~$50bn/GW',s:'BofA · Justin Post, "Raising Internet capex ests" · 2026-07-07'},
+  {v:'$30–40bn',u:'/GW',w:'1GW campus, hyperscaler view; compute >50% (~$20bn); facility 30-35%',s:'Google Office of the CTO · Khessin · 2026-06-23'},
+  {v:'$40 + $19bn',u:'/GW',w:'IT equipment vs land, facilities, non-IT and on-site power; a 7% state sales tax adds ~$3bn/GW',s:'The Information · Ann Davis Vaughan · 2026-08-02'},
+  {v:'$6.4–13.2mn',u:'/MW',w:'Non-IT development cost across nine APAC ex-China markets (Taiwan low, Japan high), a 2.1x spread',s:'JPM credit desk, APAC DC capacity & funding · 2026-08-31'},
+  {v:'$2.9→3.4mn',u:'/MW',w:'Eaton addressable electrical content, rising with liquid cooling; Vertiv ~$3.5mn discrete → ~$7mn full-stack; Quanta ~$13mn/MW construction',s:'MS Capex Tracker · 2026-05-18 · ETN.md, PWR.md'},
+  {v:'$7.5–8bn',u:'WFE per GW/yr',w:'Equipment needed per incremental GW of DC additions capability (~46-50k WSPM/GW). Different denominator from the $9-10 per $100 card',s:'Bernstein · Rasgon · 2026-07-20 · assumptions.md'},
+];
+document.getElementById('anchors').innerHTML=ANCHORS.map(a=>`<div class="card anchor"><div class="v">${a.v}<small>${a.u}</small></div><div class="w">${a.w}</div><div class="s">${a.s}</div></div>`).join('');
+
+render();
+</script>
+
+</body>
+</html>
