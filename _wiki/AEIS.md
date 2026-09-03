@@ -2,6 +2,22 @@
 
 _Wiki · generated 2026-07-02 · sources: 9 broker reports ingested 2026-07-02 (HTML copies in `relatórios bons\`) — no filings/transcripts on disk yet. Master index: [../INDEX.md](../INDEX.md)._
 
+<!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
+### 📊 Consensus snapshot — BBG · asof 2026-09-03 · USD
+
+| Metric | CY2026E | CY2027E |
+|---|--:|--:|
+| Revenue | $2.4bn | $3.0bn |
+| Gross profit | $979m | $1.2bn |
+| Gross margin | 41.0% | 42.0% |
+| EBITDA | $564m | $787m |
+| EPS | $10.63 | $15.03 |
+| Capex | $171m | $163m |
+| OCF (≈EBITDA) | $564m | $787m |
+
+_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+<!-- SNAPSHOT:END -->
+
 ## Snapshot
 Power-conversion/control specialist: RF + DC power for semicap (etch/dep critical subsystem, ~30% share, sold into AMAT/LRCX et al.), plus Data Center Computing (server/rack power shelves), Industrial & Medical, and Telecom & Networking (BofA initiation 2023-11-30; BofA 2026-05-05). Q1 26 mix: Semi 43% of revs ($219M), DCC 38% ($194M, +102% y/y), rest I&M/T&N (Needham 2026-05-05). Two-engine story: WFE-upcycle leverage + AI data-center power content, with 800V as the optionality kicker.
 

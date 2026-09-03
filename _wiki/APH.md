@@ -5,7 +5,7 @@
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\APH` (filings + transcripts) · `_equity_calls` · `_briefings`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-02 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-03 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -13,7 +13,7 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\APH` (filings + transc
 | Gross profit | $13.4bn | $16.4bn |
 | Gross margin | 38.8% | 39.7% |
 | EBITDA | $11.1bn | $13.6bn |
-| EPS | $5.03 | $6.41 |
+| EPS | $2.52 | $3.21 |
 | Capex | $1.3bn | $1.4bn |
 | OCF (≈EBITDA) | $11.1bn | $13.6bn |
 

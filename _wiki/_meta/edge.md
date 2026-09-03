@@ -8,7 +8,7 @@ _Generated 2026-09-03 · the standing view of where our model and the curated re
 
 | Ticker | Metric | Yr | House | Consensus | Δ |
 |---|---|---|--:|--:|--:|
-| GOOG | Revenue $bn | 2026 | 505.00 | 427.20 | +18% |
+| GOOG | Revenue $bn | 2026 | 505.00 | 426.70 | +18% |
 | GOOG | Revenue $bn | 2027 | 641.00 | 548.30 | +17% |
 | AAPL | EPS | 2026 | 10.12 | 8.71 | +16% |
 
@@ -27,4 +27,15 @@ _Generated 2026-09-03 · the standing view of where our model and the curated re
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|
-| _no live pull_ | | | | |
+| SKHYNIX | 1,580,000 | 3,198,064 | +102% | street high 5,300,000 · low 680,000 below spot · 47/1/0 of 48 |
+| SAMSUNG | 248,000 | 491,782 | +98% | street high 725,000 · low 300,000 ABOVE spot · 44/0/0 of 44 |
+| CRDO | 168 | 283 | +68% | street high 350 · low 227 ABOVE spot · 22/1/0 of 23 |
+| MU | 950 | 1,578 | +66% | street high 2,200 · low 900 below spot · 57/4/0 of 61 |
+| AXTI | 57 | 95 | +66% | street high 125 · low 55 below spot · 5/1/0 of 6 |
+| COHR | 265 | 418 | +58% | street high 500 · low 280 ABOVE spot · 22/6/0 of 28 |
+| AVGO | 348 | 531 | +53% | street high 675 · low 400 ABOVE spot · 57/5/0 of 62 |
+| TSEM | 208 | 312 | +50% | street high 367 · low 260 ABOVE spot · 8/1/1 of 10 |
+| ON | 74 | 108 | +46% | street high 150 · low 85 ABOVE spot · 11/19/0 of 30 |
+| TSM | 412 | 551 | +34% | street high 700 · low 440 ABOVE spot · 29/1/0 of 30 |
+| LITE | 853 | 1,136 | +33% | street high 1,400 · low 820 below spot · 29/4/0 of 33 |
+| GOOG | 339 | 428 | +26% | street high 475 · low 379 ABOVE spot · 17/1/0 of 18 |

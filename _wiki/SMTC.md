@@ -3,7 +3,7 @@
 _Wiki · generated 2026-08-26 · **new page** — founding source is the Q2 FY2027 earnings call (2026-08-25). ⚠️ **No local filings archive for SMTC yet** (no `E:\Wiki Felipe empresas\SMTC\` folder, no 10-K/10-Q on disk); everything below is from the call transcript unless stated. Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-02 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-03 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|

@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\CRWV` (10-K FY2025, four 10-Qs, transcripts) · `E:\briefings\2026`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-02 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-03 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|

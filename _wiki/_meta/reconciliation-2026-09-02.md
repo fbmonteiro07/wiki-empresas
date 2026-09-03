@@ -27,7 +27,7 @@ All consensus figures below are `BEST_*` with `BEST_FPERIOD_OVERRIDE` in `1FY/2F
 
 ---
 
-## 🔴 DIVERGES — the alpha
+## Where the new data DIVERGES
 
 ### D1 · AVGO — consensus is AT the FY27 guide but ~18% BELOW the FY28 guide. The whole debate is FY27-vs-FY28 phasing, and it is a VOLUME gap, not a margin gap.
 
@@ -278,3 +278,115 @@ page's existing Q4-2025 mark. Consensus is recorded for context only: MU 1FY EPS
 4. **`BEST_CAPEX` is unreliable for GOOG** — needs a validated capex source before any capex variance is published.
 5. A **Bloomberg FINAL transcript for the AVGO call will supersede** tonight's LIVE version (which had no text
    layer); re-ingest and re-check the four wording corrections when it lands.
+
+---
+
+## ✅ BBG re-placement — `/wiki-consensus` 2026-09-03 (Terminal live, `estimates.json` asof 2026-09-03)
+
+**This report carried NO `PENDING` cell** — its 09-02 column was already live, and every historical `PENDING` in
+the 46-file backlog is already closed with a resolution note (re-verified this run by scanning literal table
+cells, not prose, and not by trusting the prior run's summary line). So this layer does the other half of the
+job: it **re-places this report's findings against a fresh 100-name pull one session later.** One name moved.
+
+### 🔴 D1 RE-GRADED — AVGO's FY28 gap has CLOSED BY A THIRD IN ONE SESSION. The direction holds; the magnitude does not.
+
+The Street revised **FY28 (3FY) up ~8% within one session of the Q3 print.** Nothing else in this report moved:
+CRDO, TSM, TSEM, AXTI, GOOG and MU all reproduce their 09-02 marks to **≤0.2%** on every line
+(spot, consensus PT, 1FY sales, 1FY EBIT, 1FY/2FY/3FY EPS). That isolation is what makes the AVGO move
+readable as a genuine post-print revision rather than a data artifact.
+
+| AVGO FY28 (3FY) | 09-02 | **09-03** | change |
+|---|--:|--:|--:|
+| BBG consensus revenue | $236.9bn | **$256.5bn** | **+8.3%** |
+| BBG consensus EPS | $26.175 | **$28.363** | **+8.4%** |
+| vs guide-implied ~$290bn | −18.3% | **−11.6%** | **gap narrowed 6.7pp** |
+| Management ">$30" vs consensus | +14.6% | **+5.8%** | **gap narrowed 8.8pp** |
+| Consensus FY28 EBIT margin | 65.2% | **64.8%** | −0.4pp |
+
+- ✅ **D1's CORE DECOMPOSITION SURVIVES INTACT, AND THAT IS THE POINT.** Consensus FY28 EBIT margin is
+  **$166,310m / $256,479m = 64.8%** — still essentially management's guided *"~66% operating margin sustained"*
+  (1.2pp below it) against a revenue gap of **11.6%**. **The FY28 shortfall is still AI-semiconductor VOLUME,
+  not margin.** The Street bought volume, not margin, exactly as D1 predicted it would have to.
+- 🔴 **But the trade is now materially smaller.** A −18% consensus gap has become **−11.6%**, and the ">$30"
+  cross-check has gone from ≥+15% to **≥+5.8%** above consensus. **D1 STAYS IN `DIVERGES` — the sign is
+  unchanged and the guide is still above the Street — but anyone sizing off the −18% figure is sizing off a
+  number the tape has already partly closed.** Re-mark before adding.
+- **FY27 (2FY) is unmoved and still CONFIRMS:** consensus **$173.5bn** vs guide-implied ~$170bn = **+2.1%**
+  (09-02: +2.5%), with FY27 EPS **$19.096** (−0.8%). The Street remains at, or fractionally through, the FY27
+  number. Nothing to beat there. **The debate remains FY27-vs-FY28 phasing.**
+
+### 🔴 D2 SHARPENED — the house's FY28 EPS is not merely above consensus, it is ABOVE THE STREET HIGH.
+
+D2 could only place the house's **FY28 EPS $35.96** against the median. With `eps_hi` now on file annually:
+
+| House FY28 EPS $35.96 vs | value | placement |
+|---|--:|---|
+| BBG consensus median | $28.363 | **+26.8%** |
+| **BBG street HIGH** | **$34.25** | **+5.0% — the house is the most bullish FY28 EPS on the Street** |
+
+- 🔴 **This is a materiality upgrade, not a new finding.** D2's recommendation is unchanged and still the right
+  one — split content-per-GW into (deployed GW) × (ship rate) × (content per shipped GW) — but the house should
+  know it is carrying **the single most bullish FY28 earnings number in the poll**, above 62 analysts' high mark,
+  while D2 has already shown the gap is *deployment timing* rather than physics. **A timing call held above the
+  street high is a position that needs its ship-rate assumption written down explicitly.**
+- ⚠️ **Note the tape's own shape on AVGO: spot $348.02 sits BELOW the street LOW of $400.** All 62 analysts
+  (57 buy / 5 hold / **0 sell**, rating 4.77) carry targets above spot; the most bearish implies **+14.9%**.
+  Consensus PT **$531.36** (09-02: $527.84, +0.7%) against a spot that fell **−5.2%** over the same session.
+  **The PT poll did not follow the price down.**
+
+### 🟡 OPEN ITEM 4 NARROWED — GOOG's `BEST_CAPEX` is NOT a calendarisation artifact.
+
+Open item 4 held that *"`BEST_CAPEX` is unreliable for GOOG"* without isolating why. The annual lines now on
+file settle the basis half of that question: **the CY sum and BBG's own annual line agree to 0.16%.**
+
+| GOOG capex | CY sum | annual line | wedge |
+|---|--:|--:|--:|
+| CY2026 vs 1FY | $201,180m | $201,509m | **−0.16%** |
+| CY2027 vs 2FY | $308,672m | $308,575m | **+0.03%** |
+
+- ➜ **So the two bases do NOT disagree, and the CY-sum defect is EXCLUDED as the explanation.** If the GOOG
+  capex number is still wrong it is wrong **at source**, not through calendarisation. **Open item 4 stays open
+  but is now a source question, to be settled against management's own guide** — which is the tiebreaker that
+  worked on META, where the CY sum breached the stated $130-145bn ceiling and the annual line sat inside it.
+  **Still no capex variance should be published on GOOG until that guide check is done.**
+- ✅ **And the below-the-line contamination is re-confirmed on fresh data, now measurable annually:** GOOG
+  **1FY net income $249,451m EXCEEDS 1FY EBIT $172,329m by $77.1bn**, which is why **1FY EPS $18.699 is HIGHER
+  than 2FY EPS $16.015 while EBIT RISES $172.3bn → $217.9bn (+26.5%)**. **Reconcile GOOG at EBIT. Never at EPS.**
+  (The 09-02 report's ⚠️ flag on that 18.699 was correct; the gap was $73bn then, $77.1bn now.)
+
+### ⚠️ NEW BASIS HAZARD FOUND WHILE REBUILDING THE PT PANEL — BBG's DISPERSION FIELDS ARE PER-**LINE**, NOT PER-COMPANY. On GOOG that INVERTS a read.
+
+The fetch uses `GOOG US Equity` (**Class C**). Pulled side by side, live 2026-09-03:
+
+| | `GOOG` (Class C) | `GOOGL` (Class A) | gap |
+|---|--:|--:|--:|
+| Spot | $339.23 | $342.64 | — |
+| Consensus PT (median) | **$427.91** | **$428.18** | **0.06% — interchangeable** |
+| Street **HIGH** | **$475** | **$515** | **8.4%** |
+| Street **LOW** | **$379** | **$340** | **11.5%** |
+| Analysts (buy/hold/sell) | **18** (17/1/0) | **74** (67/7/0) | **4.1x** |
+
+- ✅ **The MEDIAN is safe** — the two lines agree to 0.06%, so every GOOG consensus-PT placement already in this
+  wiki stands.
+- 🔴 **Everything about DISPERSION is not.** The analyst count is **4x too low** on the line we pull, and the
+  high/low band is 8-12% different. **And the qualitative read flips:** on Class C the street **low ($379) sits
+  ABOVE spot**, so "even the Street's bear case implies upside"; on Class A the low **($340) sits essentially AT
+  spot ($342.64)**, so it does not. **Same company, same day, opposite conclusion.**
+- ➜ **RULE: take GOOG's median from either line, but take counts, high, low and any "the Street's own bear case"
+  statement from `GOOGL`.** Note the auto-generated read in the PT panel of `_meta/edge.md` is computed from the
+  Class C line's own fields — internally consistent, but narrower than "Alphabet".
+- **This is the THIRD instance of one root cause, which is why it is written as a rule and not a note:** ASML's
+  two listings poll different panels (42 analysts incl. 2 sells vs 21 with none — §1), DELL's `EQY_SH_OUT`
+  returns the Class C line only (325m vs 646m all-class), and now GOOG's rec-counts and PT band. **BBG
+  dispersion and share-count fields describe a LISTING; only the company's economics are shared.**
+
+_BBG column resolved 2026-09-03 — `estimates.json` asof **2026-09-03** (**100/100 live, 0 FAIL lines, 0 `error`
+keys, 0 null/zero prices, 0 `carried_over` stamps, 0 period-level `err` blocks, and 0 of 100 records
+byte-identical to the earlier same-day 09:10 vintage**, so no silent carry-overs), plus one ad-hoc live pull of
+**both ASML listings** for the dual-panel placement. **No `PENDING` cell existed in this report.** Canonical
+header `## Where the new data DIVERGES` applied (was `## 🔴 DIVERGES — the alpha`). **D1 stays in `DIVERGES`
+with its magnitude cut by a third; D2 is sharpened from "above the median" to "above the street high"; open
+item 4 is narrowed from a data defect to a source question.** Two long-standing script defects were **fixed
+rather than re-logged** — consensus PT and BBG's own annual `1FY/2FY/3FY` lines are now written by
+`fetch_estimates.py` for all 100 names, so neither needs an ad-hoc pull again. **No web data was substituted at
+any point.**_

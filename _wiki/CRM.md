@@ -5,17 +5,17 @@
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\CRM` (filings + transcripts) · `E:\briefings\2026` (morning + company-specific). Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-02 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-03 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $46.2bn | $50.7bn |
 | Gross profit | $37.1bn | $40.8bn |
 | Gross margin | 80.3% | 80.5% |
-| EBITDA | $19.3bn | $21.1bn |
-| EPS | $13.38 | $16.00 |
+| EBITDA | $19.1bn | $20.8bn |
+| EPS | $13.39 | $16.00 |
 | Capex | $694m | $744m |
-| OCF (≈EBITDA) | $19.3bn | $21.1bn |
+| OCF (≈EBITDA) | $19.1bn | $20.8bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

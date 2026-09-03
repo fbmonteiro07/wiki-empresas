@@ -151,22 +151,92 @@ def curated_diverges(rf):
 
 
 def pt_vs_spot(rf):
-    """Parse the live 'BBG consensus pull' table -> upside (cons PT vs spot)."""
-    md = read(rf)
-    m = re.search(r"##\s*BBG consensus pull.*?(?=\n##\s|\Z)", md, re.S | re.I)
-    if not m:
+    r"""Consensus PT vs spot for the names the latest reconciliation discusses.
+
+    Sourced from `estimates.json`'s `pt` block, NOT from a transcribed markdown table.
+    This used to scrape a "## BBG consensus pull" heading, which silently returned ZERO
+    rows the moment a report titled that section differently ("## Consensus reference -
+    BBG pull, 2026-09-02" on 09-02) - and even when it matched, it re-read numbers a
+    human had retyped into the report rather than the pull itself. Since 2026-09-03
+    `fetch_estimates.py` writes consensus PT / high / low / rating / rec-counts per name,
+    so the panel is taken from the data and the report is used only for SCOPE (which
+    names to show) and for the hand-written 'Read' commentary when it can be found.
+
+    Upside is PT/spot - 1. Both legs come from the same BBG listing and are therefore in
+    the SAME currency, so this panel is safe for the five names whose trading currency
+    differs from their fundamentals currency (TSM/SMIC/ASML/SPOT/TM) - the hazard there
+    is px/eps, never PT/px. Dual-listed names resolve to whichever listing the fetch
+    uses (ASML = the US ADR panel: 21 analysts, zero sells, structurally more bullish
+    than Amsterdam's 42 incl. 2 sells). Never net the two panels.
+    """
+    est = load_estimates()
+    comps = (est.get("companies") or {}) if isinstance(est, dict) else {}
+    if not comps:
         return []
-    header, rows = parse_md_table(m.group(0))
+    md = read(rf) if rf else ""
+
+    # --- scope: tickers the report deliberately NAMES ---------------------------
+    # Only places where a ticker is named on purpose - wiki links, '###' headings and
+    # the first cell of a table row. Prose is excluded on purpose: several covered
+    # tickers are ordinary English words (ON, BE, NET, APP, ARM, TM, MP), and matching
+    # those in running text pulls in names the report never discussed.
+    def _tk_in(tk, text):
+        return re.search(r"(?<![A-Za-z0-9])" + re.escape(tk) + r"(?![A-Za-z0-9])", text)
+
+    named = set()
+    for tk in comps:
+        if re.search(r"\[\[" + re.escape(tk) + r"\]\]", md):
+            named.add(tk)
+    for line in md.splitlines():
+        ls = line.strip()
+        if ls.startswith("###"):
+            for tk in comps:
+                if _tk_in(tk, ls):
+                    named.add(tk)
+        elif ls.startswith("|") and ls.count("|") >= 2:
+            first = re.sub(r"\*\*|\s|\\", "", ls.split("|")[1])
+            for tk in comps:
+                if _tk_in(tk, first):
+                    named.add(tk)
+
+    # --- the hand-written 'Read' note, if the report still carries such a table ---
+    reads = {}
+    m = re.search(r"##[^\n]*(?:BBG consensus pull|Consensus reference)[^\n]*.*?(?=\n##\s|\Z)",
+                  md, re.S | re.I)
+    if m:
+        _hdr, rows = parse_md_table(m.group(0))
+        for cells in rows:
+            if len(cells) < 2:
+                continue
+            tk = re.sub(r"\*\*|\s|\\", "", cells[0]).split("(")[0]
+            if tk in comps and len(cells[-1].strip()) > 12:
+                reads[tk] = cells[-1].strip()
+
     out = []
-    for cells in rows:
-        if len(cells) < 4:
+    for tk in sorted(named):
+        c = comps.get(tk) or {}
+        ptb = c.get("pt")
+        if not isinstance(ptb, dict):
             continue
-        tk = re.sub(r"\*\*|\s", "", cells[0])
-        spot, conspt = num(cells[1]), num(cells[2])
+        spot, conspt = c.get("px"), ptb.get("cons")
         up = pct(conspt, spot)
-        if up is not None:
-            out.append({"tk": tk, "spot": spot, "conspt": conspt, "up": up,
-                        "read": cells[-1]})
+        if up is None:
+            continue
+        hi, lo = ptb.get("hi"), ptb.get("lo")
+        rd = reads.get(tk)
+        if not rd:
+            bits = []
+            if hi:
+                bits.append(f"street high {hi:,.0f}")
+            if lo and spot:
+                # whether the street's OWN bear case is already in the money is the
+                # single most useful unprompted read on a PT panel
+                bits.append(f"low {lo:,.0f} " + ("ABOVE spot" if lo > spot else "below spot"))
+            n, b, h_, sl = ptb.get("n"), ptb.get("buy"), ptb.get("hold"), ptb.get("sell")
+            if n:
+                bits.append(f"{int(b or 0)}/{int(h_ or 0)}/{int(sl or 0)} of {int(n)}")
+            rd = " · ".join(bits)
+        out.append({"tk": tk, "spot": spot, "conspt": conspt, "up": up, "read": rd})
     out.sort(key=lambda r: -abs(r["up"]))
     return out
 
