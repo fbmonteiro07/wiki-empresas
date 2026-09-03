@@ -1,5 +1,5 @@
 {
- "asof": "2026-08-28",
+ "asof": "2026-09-02",
  "note": "Canonical-assumptions ledger — one entry per cross-page industry number that multiple pages/themes cite. Purpose: every page should reference ONE canonical framing per metric; when a new source disagrees, add a variant here (never silently replace). build_assumptions.py renders _meta/assumptions.md + _dashboards/assumptions.html and scans pages for citations of each metric not yet reconciled into the ledger. Edit variants by hand; keep scope labels precise (units vs dollars, IT-load vs facility GW).",
  "metrics": {
   "asic-vs-gpu-share": {
@@ -361,7 +361,7 @@
    "title": "AI compute revenue / rental rate per GW",
    "definition": "Annualized $ revenue (or rental rate) per GW of AI compute capacity — state chip type (ASIC vs merchant GPU) and whether it is a rental rate or realized revenue. Distinct from facility BUILD cost per GW.",
    "canonical": "Rental/revenue per GW of compute: Trainium <$10B/GW (Anthropic/OpenAI); merchant GPU ~$12-13B/GW (neocloud & AWS, pre-2H26 shortage); premium GPU ~$25B/GW (~$25M/MW/yr, SpaceX–Google deal). MS pegs 1P merchant TPU at ~$20B rev/GW (20% GM base). Colocation POWER-ONLY rent: ~$60/kW-month historically -> ~$120-160 typical now, up to ~$200 (weak-credit tenant + good DC), as low as ~$80-100 (India / mid DC / poor grid). Rev/GW is a data-center-QUALITY metric: credit, utilization, networking and speed-to-market drive a ~2x spread — a top-operator GW ≈ 2x a generic GW. NEW (08-28): lab INFERENCE MONETISATION ~$60-100bn/GW/yr (Baker/a16z) — a distinct, much larger basis than the rental rates; implies ~1yr REVENUE payback on a ~$50bn/GW build. Neocloud payback marked at ~9-10 months (50-60% collected upfront).",
-   "scope_note": "THREE distinct bases — never mix: (a) compute rev/rental $/GW (ASIC vs GPU, the monetization/quality metric); (b) colocation $/kW-month = power+shell only, NOT compute; (c) facility BUILD cost ~$30-40B/GW (ASIC) vs ~$50B/GW (NVDA-GPU infra) — see custom-asic-tpu. A $/kW-month figure ×12×1e6 ≈ $/GW-year only for the power-shell layer, not the compute. ⚠️ FOURTH BASIS ADDED 2026-08-28 — LAB MONETISATION per GW (~$60-100bn/GW/yr) is what the LAB EARNS on a GW, and is 3-10x the RENTAL rates above (~$10-25bn/GW/yr) and ~1-2x the ~$50bn/GW BUILD cost. Never compare it to a rental rate: renting a GW at ~$12-13bn and monetising at ~$60-100bn implies a 5-8x gross spread, which is either (a) list/aspirational rather than realised, (b) not utilisation-matched, or (c) evidence the rental marks are stale (they are flagged pre-2H26-shortage). UNRECONCILED — treat the spread as an open question, not a margin.",
+   "scope_note": "THREE distinct bases — never mix: (a) compute rev/rental $/GW (ASIC vs GPU, the monetization/quality metric); (b) colocation $/kW-month = power+shell only, NOT compute; (c) facility BUILD cost ~$30-40B/GW (ASIC) vs ~$50B/GW (NVDA-GPU infra) — see custom-asic-tpu. A $/kW-month figure ×12×1e6 ≈ $/GW-year only for the power-shell layer, not the compute. ⚠️ FOURTH BASIS ADDED 2026-08-28 — LAB MONETISATION per GW (~$60-100bn/GW/yr) is what the LAB EARNS on a GW, and is 3-10x the RENTAL rates above (~$10-25bn/GW/yr) and ~1-2x the ~$50bn/GW BUILD cost. Never compare it to a rental rate: renting a GW at ~$12-13bn and monetising at ~$60-100bn implies a 5-8x gross spread, which is either (a) list/aspirational rather than realised, (b) not utilisation-matched, or (c) evidence the rental marks are stale (they are flagged pre-2H26-shortage). UNRECONCILED — treat the spread as an open question, not a margin. 🔴 FIFTH AND SIXTH BASES ADDED 2026-09-02 (Broadcom Q3 FY26 call, which produced THREE different per-GW numbers in one hour): (e) VENDOR SILICON CONTENT per GW = $20-30bn (AVGO's XPU + networking silicon into a rack someone else integrates) — this is NOT the same quantity as NVDA's $25-40bn+/GW, which is FULL-RACK REFERENCE-DESIGN revenue and only applies if the customer buys the whole design; and (f) VENDOR REVENUE per DEMAND-GW = $11-12bn (AVGO's guide divided by AVGO's own GW ladder). (e) and (f) differ by ~2x and BOTH come from the same company on the same call — the reconciliation is that demand GW ≠ shipped GW, so ~$345bn of FY27-28 revenue at $20-30bn/GW implies only ~12-17GW ships against ~30GW of demand. ⚠️ SIX bases now circulate: rental $/GW · colo $/kW-month · build cost $/GW · lab monetisation $/GW · vendor silicon content $/GW · vendor revenue per demand-GW. Never net or chain them.",
    "patterns": [
     "/GW",
     "per GW",
@@ -443,10 +443,39 @@
       "CRWV.md",
       "NBIS.md"
      ]
+    },
+    {
+     "value": "AVGO CHIP CONTENT ~$20-30bn per GW (\"what we are seeing per gigawatt is in the range of less than $30 billion — 20 to 30 billion per gigawatt\"), expected to be SUSTAINED: as each generation gets more performant its power per chip rises, so fewer chips fit in a gigawatt — ASP per XPU goes up while \"the content in dollars is relatively stable\"",
+     "source": "Broadcom mgmt (Hock Tan), Q3 FY26 earnings call (to Vijay Rakesh, Mizuho)",
+     "date": "2026-09-02",
+     "scope": "VENDOR SILICON CONTENT per GW (XPU + AI networking silicon only) — NOT a rental rate, NOT full-rack revenue, NOT a build cost",
+     "cited_in": [
+      "AVGO.md"
+     ]
+    },
+    {
+     "value": "~$11-12bn of AVGO revenue per GW IMPLIED by dividing the company's own guide by its own GW ladder (~10GW FY27 / ~20GW FY28 against $115bn / $230bn). Management did NOT bridge this against the $20-30bn content figure it stated in the same hour; it answered instead that not all 30GW of demand comes into production inside the two fiscal years. Our bridge: ~$345bn / $20-30bn per GW implies only ~12-17GW actually SHIPS vs ~30GW of demand",
+     "source": "Bernstein (Stacy Rasgon) question on the Broadcom Q3 FY26 call; bridge is Capstone's, not management's",
+     "date": "2026-09-02",
+     "scope": "VENDOR REALIZED REVENUE per DEMAND-GW (a ratio of two guided quantities, not a price) — the denominator is DEMAND GW, not SHIPPED GW, which is the whole reason it differs from the content figure",
+     "cited_in": [
+      "AVGO.md"
+     ]
+    },
+    {
+     "value": "LAB revenue ~$30bn per GW per year (\"every gigawatt of compute they deploy, they could achieve $30 billion of annual revenue per gigawatt — that's a hell of a business model\"), used by Broadcom to justify its own credit exposure to the two labs it finances",
+     "source": "Broadcom mgmt (Hock Tan), Q3 FY26 earnings call (to Vivek Arya, BofA)",
+     "date": "2026-09-02",
+     "scope": "LAB REVENUE MONETISED per GW — SAME BASIS as the 2026-08-28 Baker $60-100bn/GW entry, but 2-3x LOWER. A supplier's assumption about its customers, not a lab disclosure",
+     "cited_in": [
+      "AVGO.md",
+      "ANTHROPIC.md",
+      "OPENAI.md"
+     ]
     }
    ],
    "status": "live",
-   "debate": "Rev/GW is emerging as a data-center-quality metric: ASIC (<$10B) < merchant GPU ($12-13B) < premium operator ($25B). The spread reflects credit quality, utilization, networking and speed-to-market — not just chip type. Watch whether the 2H26 GPU shortage pushes realized GPU rev/GW above the $12-13B pre-shortage mark. OPEN (08-28): the ~5-8x gap between what a lab is said to monetise per GW ($60-100bn) and what a GW rents for ($12-13bn merchant GPU) is unreconciled and is the single highest-value thing to verify in this metric — it is either the strongest ROI evidence in the corpus or a basis error."
+   "debate": "Rev/GW is emerging as a data-center-quality metric: ASIC (<$10B) < merchant GPU ($12-13B) < premium operator ($25B). The spread reflects credit quality, utilization, networking and speed-to-market — not just chip type. Watch whether the 2H26 GPU shortage pushes realized GPU rev/GW above the $12-13B pre-shortage mark. OPEN (08-28): the ~5-8x gap between what a lab is said to monetise per GW ($60-100bn) and what a GW rents for ($12-13bn merchant GPU) is unreconciled and is the single highest-value thing to verify in this metric — it is either the strongest ROI evidence in the corpus or a basis error. 🔴 MATERIAL UPDATE 2026-09-02 — THE HIGHEST-VALUE OPEN QUESTION IN THIS METRIC JUST GOT AN INDEPENDENT MARK, AND IT IS 2-3x LOWER. Hock Tan put LAB revenue at ~$30bn/GW/yr — the SAME quantity Gavin Baker put at $60-100bn/GW on 08-28. Broadcom is a direct supplier with contractual visibility into these labs' deployment schedules and is using the figure to underwrite its OWN credit exposure, which argues for taking it seriously and probably argues it is conservative-to-realistic rather than aspirational. That narrows the unreconciled spread against the $12-13bn merchant-GPU rental mark from ~5-8x to ~2.3-2.5x — a plausible gross spread rather than a suspected basis error. ➤ REVISED READ: the Baker $60-100bn figure now looks like the outlier and should be treated as list/aspirational or not utilisation-matched, not as the canonical lab-monetisation rate. Keep both; lead with the $30bn mark."
   },
   "hbm-cycle": {
    "title": "HBM — capacity, pricing, allocation, sold-out claims",
