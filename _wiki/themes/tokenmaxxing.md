@@ -4,6 +4,103 @@
 
 _Wiki · generated 2026-06-19 · updated 2026-06-29 (gap-audit additions, tagged "audit add") · cross-company theme · sources: equity calls (`../../equity_calls_transcripts`), briefing roll-ups (`../_briefings/by-ticker`), morning briefings (`E:\briefings\2026`), research library (`E:\research_library`). Company pages: [../00_INDEX.md](../00_INDEX.md) · themes index: [00_THEMES.md](00_THEMES.md)._
 
+## 🆕🔴🔴 2026-09-03 (source 2026-09-02) — **JEFFERIES MAKES "WILL OPEN SOURCE COMMODITISE THE FRONTIER?" ITS DEBATE #1 AND PUBLISHES THE TOKEN-SHARE SERIES: OPEN-SOURCE **28% → 62%** OF AI TOKEN VOLUMES IN TWO MONTHS, CLOSED-SOURCE **72% → 38%**. THEN ARGUES THE FRONTIER WINS ANYWAY, ON [[ANTHROPIC]] ARR **$0.1bn → $65bn IN 30 MONTHS**.**
+
+**Source: Jefferies "AI Deep Dive: Addressing Key Debates Across Hyperscalers and Software" · Brent Thill (+ team), 58 pages, priced intraday 9-2-26.** [Source](../../relat%C3%B3rios%20bons/AI_Deep_Dive_Jeffries.html)
+
+⚠️⚠️ **EXTRACTION WARNING, VERIFIED AND MATERIAL: this deck's PDF text layer PAIRS CHART VALUES WITH THE WRONG LABELS on several slides. Every number in this block was read off the RENDERED PAGE IMAGE (`relatórios bons/_assets/AI_Deep_Dive_Jeffries/pNNN.jpg`), not off the text extraction, and the page number is given for each so it can be re-checked. Anyone quoting this deck from a text dump will get some of it backwards.**
+
+### 🔴🔴 (1) DEBATE #1 — THE TOKEN-SHARE SERIES, AND THE DIRECTION IS THE OPPOSITE OF WHAT A CARELESS READ GIVES (p25)
+
+**"Frontier Model Provider % Share of AI Token Volumes Is Declining" (Jefferies, sourced to **Vercel** — plain text, no wiki page):**
+
+| Share of AI token volumes | 6/24/2026 | 8/22/2026 |
+|---|--:|--:|
+| **Open-source** | **28%** | **62%** |
+| **Closed-source (frontier providers)** | **72%** | **38%** |
+
+- ⚠️ **READ THE ASSIGNMENT CAREFULLY — this is exactly the slide where the text layer misleads. The RISING series is OPEN-SOURCE (28→62); the FALLING series is CLOSED-SOURCE (72→38), which is the one Jefferies rings in red and the one the slide title is about. A 34-point swing in two months, not a 10-point one.**
+- ➤ 🔴🔴 **THIS IS THE MOST AGGRESSIVE OPEN-WEIGHT MIGRATION NUMBER ON THIS PAGE.** It is directionally consistent with the 08-24 "share rotating to open weights" synthesis and with the Ramp model-mix panel's structural blindness to open weights flagged on 09-02 — but the MAGNITUDE is far larger than anything else here. ⚠️ **Sourcing caveat that must travel with it: Vercel is a developer-deployment platform (plain text — no wiki page). Its token mix is the mix of what gets deployed THROUGH VERCEL, not of global inference. Treat as a directional panel with a known composition bias, exactly as this page treats the Ramp panel — not as a market share.**
+- ✅ **CORROBORATION FROM A COMPLETELY DIFFERENT CHANNEL, ON THE SAME SLIDE — and this one is an operator, not a panel: a WSJ interview with **[[CSCO]]'s VP of Operations, reported 8/27/2026**: *"Roughly **50% to 60% of Cisco's AI requests are routed through open-weight models**, and **20% to 30% rely on software automation**. The remainder is **'a very small percentage' that actually goes out to a foundation model.**"*** ➤ **Two independent readings, one from a deployment platform and one from a large enterprise's own production traffic, both put open-weight/non-frontier routing at a MAJORITY of volume. That is a stronger evidentiary position than this page has previously had for the open-weight thesis.**
+
+### (2) THE QUALITY GAP THAT UNDERWRITES IT — TOP-10 MODELS BY ARTIFICIAL ANALYSIS INDEX (p24)
+
+| Rank | Model | Index | Type |
+|--:|---|--:|---|
+| 1 | **Claude Fable 5.1** | **66** | closed |
+| 2 | **Claude Opus 5** | **63** | closed |
+| 3 | **Claude Fable 5** | **62** | closed |
+| 4 | **GPT-5.6 Sol** | **61** | closed |
+| 5 | **Grok 4.6** | **61** | closed |
+| 6 | **Kimi K3** | **60** | **open** |
+| 7 | **GLM-5.3** | **60** | **open** |
+| 8 | **Qwen3.8** | **58** | **open** |
+| 9 | **GLM-5.3-Flash** | **57** | **open** |
+| 10 | **Muse Spark 1.2** | **57** | **open** |
+
+- ➤ 🔴 **The whole open-source cohort sits at 57-60 against a frontier top of 66 — a **6-9 point** band, and the open models occupy exactly the bottom five of the top ten. Jefferies' caption is *"Open-Source Capabilities are Improving."*** **Three of the five open entries are Chinese (Kimi K3 / Moonshot, GLM-5.3 and GLM-5.3-Flash / Zhipu, Qwen3.8 / Alibaba) — all off-coverage, plain text, and all consistent with the Zhipu block at the top of this page.**
+
+### 🔴🔴 (3) JEFFERIES' ANSWER: THE FRONTIER STILL WINS, AND THE EVIDENCE IS MONETISATION SPEED NOT MODEL QUALITY
+
+- **[[ANTHROPIC]] total ARR ($bn), p26 — *"Anthropic ARR Set to 10x Again"*:**
+
+| Jan-24 | Jan-25 | Jan-26 | Feb-26 | May-26 | Jul-26 | **Dec-26E** |
+|--:|--:|--:|--:|--:|--:|--:|
+| **$0.1** | **$1** | **$10** | **$14** | **$47** | **$65** | **$100-120** |
+
+  *(Jefferies, sourced to Company Data / Bloomberg / Financial Times. **Dec-26E is Jefferies' estimate, flagged with an asterisk on the slide.**)* ➤ **Three consecutive 10x years on the actuals (0.1→1→10), and the Dec-26E bar is the fourth. The Feb-26 → Jul-26 leg alone — $14bn to $65bn in five months — is a 4.6x inside one half-year.**
+- **REPORTED quarterly revenue, p37 — the same story on a GAAP-shaped basis rather than ARR: **$787m in 2Q25 → $11,500m in 2Q26, >14x y/y.*** ⚠️ **Note the basis difference and do not mix the two series: p26 is ARR (an annualised run-rate), p37 is reported quarterly revenue. $11.5bn in a quarter against $65bn of Jul-26 ARR is internally coherent; against $47bn of May-26 ARR it is not, so pick a date, not a pair.**
+- **p6, the framing chart: *"Years to Estimated $200B Annual Revenue"* — **Anthropic 7 years vs AWS 25 years.*** ➤ ⚠️ **Both endpoints are ESTIMATES on Jefferies' construction ("Estimated $200B"); Anthropic has not reached $200bn. Read it as a slope comparison, not as an achieved fact.**
+- ✅ **AND THE GROSS-PROFIT LEG, FROM A COMPLETELY SEPARATE SOURCE THE SAME WEEK (JPM · Harlan Sur, "AVGO post-FQ3 group callback", 2026-09-03, relaying Hock Tan): [[ANTHROPIC]] is driving **~$30bn of ARR per gigawatt** of deployed capacity against a **fully-loaded cost of ~$5bn per year** on that gigawatt.** [Source](../../relat%C3%B3rios%20bons/2026_09_03_jpm_avgo_call.html) ➤ **JPM's read: *"very, very strong gross profit per token,"* with press reports that Anthropic was already operating-profit positive in the June quarter (press-reported, not disclosed).** ⚠️⚠️ **UNIT GUARD, MANDATORY: ~$30bn/GW is REVENUE PER GIGAWATT PER YEAR and ~$5bn/GW is COST PER GIGAWATT PER YEAR — two annual P&L flows on the same denominator, which is why they may legitimately be compared to each other. NEITHER is capex, build cost, or vendor content per GW, and neither may be netted against the $/GW bases on [custom-asic-tpu.md](custom-asic-tpu.md) or the $16M/MW/yr contract-revenue anchor on [ai-datacenter-power.md](ai-datacenter-power.md).**
+
+### 🔴 (4) THE TAM FRAME JEFFERIES OPENS ON — AND WHOSE ESTIMATE IT ACTUALLY IS (p3, p4)
+
+**"SpaceX Estimated Global AI TAM By Segment" — Jefferies labels the $26.5T explicitly as a [[SPCX]] estimate, not a Jefferies one:**
+
+| Segment | TAM |
+|---|--:|
+| **Total AI addressable market** | **$26.5T** *(~21% of current global GDP)* |
+| Enterprise Applications | **$22.7T** |
+| AI Infrastructure | **$2.4T** |
+| Consumer Subscriptions | **$760bn** |
+| Digital Advertising | **$600bn** |
+
+**And the scale check on p4: Total US GDP as of 2Q26 **$32.5T**; total 2026E IT spend **$6.4T** — i.e. the claimed AI TAM is **>4x total IT spend** and **~82% of US GDP**. Jefferies' own slide title concedes the problem: *"Skepticism is Rising At >4x Total IT Spend and Nearly the Size of U.S. GDP."***
+- ⚠️⚠️ **THESE THREE NUMBERS ARE THE EXACT ONES THE TEXT LAYER MIS-PAIRS. Verified off p003 and p004 images: $26.5T / $32.5T / $6.4T. Do not re-derive them from a text dump.**
+- ➤ **The honest read is that $22.7T of "Enterprise Applications" is doing ~86% of the work in a number sourced to a private launch company, and Jefferies presents it as the thing to be sceptical OF rather than as a forecast to underwrite. Carry it as a framing device with the source named, never as a wiki TAM anchor.**
+
+### 🔴🔴 (5) THE DEMAND-DIFFUSION EVIDENCE, AND IT IS THE BEST ARGUMENT ON THIS PAGE THAT TOKEN SPEND IS STILL *EARLY* (p11)
+
+**"Estimated Spend Per Employee Per Month as of 2Q26" (Jefferies, sourced to Ramp / Vertice):**
+
+| | Software | AI |
+|---|--:|--:|
+| **Average** | **$777** | — |
+| **Median** | — | **$12** |
+| **Top 10%** | — | **$650** |
+| **Top 1%** | — | **$7,401** |
+
+- ➤ 🔴 **Read the bars exactly as labelled, because the two annotations point in opposite directions and are easy to swap: the **MEDIAN** AI spender at **$12/employee/month is 65x LOWER than average software spend** ($777), while the **TOP 1%** at **$7,401 is ~10x GREATER than average software spend.** Jefferies' title — *"AI Spend Has the Potential to be 10x Larger Than Software"* — is an extrapolation from the top 1% to everyone, and should be labelled as such.**
+- ⚠️ **NOTE THE BASIS ASYMMETRY THE SLIDE ITSELF CREATES AND DOES NOT FLAG: the software bar is an **AVERAGE**, the headline AI bar is a **MEDIAN**. A median-vs-mean comparison on a distribution this skewed overstates the gap. The like-for-like comparison is not on the slide.** ➤ **What survives the caveats is still the useful fact: AI spend today is concentrated in a very thin tail (top 1% at ~617x the median), which is the diffusion runway this page has been arguing about.**
+
+### ⚠️ (6) THE FRICTIONS THAT SIT AGAINST IT — JEFFERIES' OWN ENTERPRISE-ADOPTION BOTTLENECKS (p20, p21, p22)
+
+- **SECURITY (p20, Jefferies' #1 enterprise-adoption bottleneck): *"AI-enabled malicious breaches grew **56% y/y & cost 20% more** than the global breach average of **~$5M**"* (IBM's 2026 Cost of a Data Breach Report). And *"**87% of organizations have delayed AI deployments** because they weren't ready to govern them"* (AvePoint's 2026 State of AI Report).**
+- 🔴 **UNCLEAR ROI (p21) — Jefferies' OWN proprietary survey, June 2026, N=40, *"Which AI use cases at your organization are not delivering the expected ROI vs. TCO?"*:**
+
+| Use case | % not delivering |
+|---|--:|
+| **Back-office (Finance and HR)** | **40%** |
+| Employee self-service (e.g. ITSM) | **28%** |
+| Line-of-business (LOB) applications | **25%** |
+| Customer service | **23%** |
+| Front-office (Sales and marketing) | **23%** |
+| **None** | **20%** |
+| Software development | **15%** |
+| All still playing out right now | **5%** |
+
+  ➤ **The two most useful readings are at the ends: **software development is the LEAST-disappointing use case at 15%** — consistent with every coding-token datapoint on this page — and **only 20% of respondents say NOTHING is disappointing**, i.e. 80% of enterprises have at least one AI use case underdelivering on TCO. ⚠️ **N=40. A small proprietary panel, not a market survey.**
+- **DATA / CONTEXT (p22): Ali Ghodsi, CEO of Databricks (plain text — no wiki page), Fortune Brainstorm AI Conference, December 2025: *"The **data architecture inside most organizations is an absolute mess** because they've been buying software for the last 30, 40 years from different vendors and just piled it on. **A lot of the data is siloed on-premises.**"*** ➤ **This is the constraint that makes the median-$12 bar above rational rather than merely early: the enterprise cannot feed the tokens even where it wants to.**
 ## 🆕🔴🔴 Recent signals (Sep 2, /run-inbox — **A CORROBORATION EVENT, WHICH IS RARE ENOUGH TO NAME: A BULGE-BRACKET NOTE AND AN INDEPENDENT NEWSLETTER, PUBLISHED ONE DAY APART FROM COMPLETELY DIFFERENT SOURCING, REPRODUCE THE *SAME SIX* ZHIPU/Z.AI NUMBERS — AND WHAT THEY SAY IS THAT TOKEN VOLUME GREW **40x** WHILE AVERAGE API PRICING WENT **UP 101%**. THAT IS THE LARGEST COUNTER-EXAMPLE THIS PAGE CARRIES TO ITS OWN TOKEN-DEFLATION SPINE — AND IT IS CHINESE OPEN-WEIGHT.**)
 
 **Sources: (1) MS · Gary Yu / Lydia Lin / Yang Liu, "Z.AI CO., LTD. — 1H26: ARR Guidance Raised", 2026-08-31 (10:59 PM GMT, Morgan Stanley Asia)** [Source](../../relat%C3%B3rios%20bons/ZAICO_20260831_2259.html) · **(2) FD (Robonomics), "China Open-Source LLM Tracker", 2026-09-01** [Source](../../relat%C3%B3rios%20bons/China_Open-Source_LLM_Tracker_-_by_FD_-_Robonomics.html) — ⚠️ **source (2) is an INDEPENDENT SUBSTACK NEWSLETTER, NOT A BROKER: no rating, no price target, no model. Logged at that evidentiary level throughout.** ⚠️ **The subject — Z.AI CO., LTD. / Zhipu AI (2513.HK) — is OFF-COVERAGE and has NO wiki page; nor do MiniMax, DeepSeek, Moonshot/Kimi or ByteDance. Plain text only. The listing-level marks are carried on [outros-asia.md](outros-asia.md).**

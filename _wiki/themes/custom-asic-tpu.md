@@ -2,6 +2,87 @@
 
 _Wiki · generated 2026-06-19 · cross-company theme · sources: equity calls (`../_equity_calls/Semis`), briefing roll-ups (`../_briefings/by-ticker`), earnings transcripts, company pages. Company pages: [../00_INDEX.md](../00_INDEX.md)._
 
+## 🆕🔴🔴🔴 2026-09-03 (JPM **group callback**, later the same day) — **THE TPU ROADMAP HAS BIFURCATED, AND JPM PUTS THE FIRST UNIT-SHARE NUMBERS ON THE SPLIT: TOTAL TPU UNITS (GOOGLE INTERNAL + EXTERNAL) **+115% IN 2027** AND **~+70% IN 2028**, WITH [[AVGO]] HOLDING **~TWO-THIRDS OF TOTAL TPU UNITS IN 2027 AND 75-80% IN 2028**. PLUS A **FIVE-YEAR LOCKED REVENUE AGREEMENT THROUGH TPU V11**, A FLAT DENIAL OF THE **V9 CANCELLATION RUMOUR** — AND A **FOUR-BASIS $/GW UNIT GUARD** THAT IS THE MOST IMPORTANT THING ON THIS PAGE.**
+
+_(JPM "AVGO post-FQ3 group callback" · **Harlan Sur** (with **Josh Meyers**, desk), 2026-09-03. Management readout AFTER Broadcom's F3Q26 call, i.e. a separate later event — same callback family as the four-house block below, this is the full JPM transcript of it.)_ [Source](../../relat%C3%B3rios%20bons/2026_09_03_jpm_avgo_call.html)
+
+⚠️ **ASR NOTE, APPLIES THROUGHOUT THIS BLOCK: the transcript renders COT (customer-owned tooling) as "CLT" / "customer on tooling" and Jalapeño as "Halapeno". Decoded here; the raw file is unedited.**
+
+### 🔴🔴 (1) THE BIFURCATION, STATED PRECISELY — AND WHICH HALF BROADCOM KEEPS IS THE POINT
+
+- **Google has split the TPU roadmap in two. The *training* chip — *"the lesser of the complex of the chips"* — goes to Google's own **COT team working with [[MEDIATEK]]**. The *inferencing* chip — the more complex one — **stays with [[AVGO]]** (JPM · Harlan Sur, group callback, 2026-09-03).** ➤ 🔴 **This inverts the intuition most of the Street has been running. The COT migration is not Google taking the hard part in-house; on JPM's account Google took the EASIER part in-house and left the harder one with the merchant designer.**
+- **2027 is explicitly a transition year: *"Broadcom's going from supplying 100% of Google's training and inferencing to now focusing more on inferencing."*** And the demand for the part Broadcom keeps is partly self-supplied: **Google's large installed base of **TPU V7 "Ironwood"** continues to serve inferencing** alongside the new part.
+- ✅ **CONFIRMED BY MANAGEMENT ON THE CALLBACK, NOT INFERRED: *"Broadcom will maintain majority share of TPUs, both internally and externally, and that's something that we got confirmation of from Hock last night post our group callback."***
+
+### 🔴🔴 (2) THE UNIT SHARE NUMBERS — THE FIRST ONES THIS PAGE HAS FOR *TOTAL* TPU RATHER THAN GOOGLE-INTERNAL
+
+| Metric (JPM · Harlan Sur, 2026-09-03) | 2027 | 2028 |
+|---|--:|--:|
+| **Total TPU units, Google internal + external, y/y** | **+115%** | **~+70%** |
+| **[[AVGO]] share of TOTAL TPU units** | **~two-thirds** | **75-80%** |
+
+- **JPM's method, stated: the share figures are triangulated off *"the gigawatt math that Hock gave us last night on the call"* cross-checked against *"our Asia team's internal CoWoS [data]… translated into TPU units."*** ⚠️ **So the share number is JPM's construction from two inputs, not a company disclosure — the company disclosure is only the qualitative *"majority share"* above.**
+- 🔴 **JPM'S CONCLUSION ON THE COT THREAT, WHICH IS THE ANSWER TO THE BEAR CASE THIS PAGE HAS CARRIED SINCE 08-26: *"it still doesn't seem like the COT team is going to be able to get anywhere near some 50% or majority market share… anytime in the horizon that we're looking at."***
+- **AND ON WHETHER THE LABS CAN FOLLOW GOOGLE INTO COT: *"can Open AI do this? Can Anthropic do this? The answer is, I don't think so… unless you can amass the type of massive R&D scale that Google has."*** ➤ **The barrier JPM names is R&D headcount scale, not IP and not foundry access. That is a testable claim and it dates the risk rather than dismissing it — *"Is it possible? Yeah, it's possible. Is it going to happen anytime soon? The answer is no."***
+- **THE NEXT STEP FOR THE LABS IS AN ASIC, NOT COT: *"[[ANTHROPIC]] will do their first custom ASIC with Broadcom… but that's not going to come to market until like calendar 29."* [[OPENAI]]'s Broadcom part is **Jalapeño**, already shipping.** ➤ **Anthropic's own silicon is therefore a ~2029 event, two full years beyond the 2027-28 ladder in the block below. Anyone modelling Anthropic ASIC displacement of Broadcom inside the guide window is modelling something JPM says does not exist yet.**
+
+### ⚠️🔴 (3) JPM CONTRADICTS ITSELF ON GOOGLE-INTERNAL FY27 GROWTH — *INSIDE THE SAME CALL*. THE RANGE IS LOGGED; NEITHER END IS ADOPTED.
+
+**Four different characterisations of the same number appear in one 30-minute call. They are not reconciled by the speaker and this wiki does not pick one:**
+
+| Where in the call | Google-internal TPU revenue at [[AVGO]], FY27 |
+|---|---|
+| Opening block, framing the **bears'** case | *"flat to maybe slightly up"* |
+| Opening block, JPM's own read off the call math | *"still growing slightly on a year-over-year basis"* / *"growing slightly sequentially"* |
+| Q&A, first answer | *"grow for Broadcom in 2027 by about **10, 12% year over year**"* |
+| Q&A, second answer, same paragraph | *"still growing **12 to 15%**"* |
+
+- ➤ 🔴 **A "flat" and a "+12-15%" are not the same call and the gap is the entire Google-share debate. Treat FY27 Google-internal as UNRESOLVED with a logged range of ~0% to +15%, sourced to one analyst on one day. Do not quote a point estimate from this call.**
+- **2028 is cleaner and both sides roughly agree: JPM's own read off the gigawatt math is **+30-35%**; the bear number he quotes earlier in the same call is **+33%**. That one converges.**
+
+### 🔴 (4) THE FIVE-YEAR AGREEMENT AND THE V9 DENIAL — TWO ITEMS THE ASIA RUMOUR FLOW HAS BEEN TRADING AGAINST
+
+- **Broadcom has a **five-year TPU revenue agreement with Google**, described as **guaranteed and increasing** revenue over the period, and it **locks multi-generation TPU V8, V9, V10 and V11**. *"I often feel like the market forgets about this."*** ➤ ⚠️ **Note the tension with the 08-26/08-31 COT thread on this page: a locked V10 and V11 revenue commitment sits awkwardly against reports that **TPU v10 moves to customer-owned tooling.** Both are on this page, both dated. COT changes Broadcom's dollars PER TPU; the agreement is about revenue. They can coexist, but nobody has bridged them and the bridge is worth chasing.**
+- ✅ **THE V9 2nm RUMOUR IS DENIED AGAIN, ON THE RECORD: *"there's been lots of rumors again out of Asia around Broadcom's next generation TPU V9 2 nanometer program being canceled or delayed… we've written at least two or three notes about this saying that this is not true. **Management again confirmed this with us last night. TPU V9 2 nanometer Broadcom still on track to ramp for calendar 28.**"* And the demand it serves is named: **[[ANTHROPIC]]'s 2028 inferencing requirements plus Google's own internal 2028 inferencing workloads.***
+
+### 🔴🔴 (5) THE AI CUSTOMER MIX LADDER — JPM'S % OF [[AVGO]] AI REVENUE BY CUSTOMER
+
+| Customer | 2026 | 2027 | 2028 |
+|---|--:|--:|--:|
+| **[[ANTHROPIC]]** | — | **49%** *(becomes largest)* | **48%** |
+| **[[GOOG]] internal** | **65%** | **29%** | **19%** |
+| **[[OPENAI]]** | — | **13%** | **24%** |
+| **[[META]]** | — | **10%** | **10%** |
+
+*(JPM · Harlan Sur, 2026-09-03. ⚠️ The 2027 and 2028 columns each sum to 101% as given on the call — reproduced as stated, not normalised.)*
+
+- **Context JPM supplies for the 65%: Google internal has been *"the only greater than 10% customer for Broadcom forever."* From 2027 there are **four >10% customers**.** ➤ **This is the concentration break the market has been asking for, and JPM's frustration is explicit: *"there's all this debate about Google internal and MediaTek and COT and all this nonsense, when the market has wanted customer diversification, the market's getting customer diversification."***
+- **AND THE CUSTOMERS *OUTSIDE* THE FOUR, WHICH ARE NOT IN THE 10GW MATH AT ALL:** customers 5 and 6 — **ByteDance and Alibaba — are *"already going to be driving 6 billion in revenues for Broadcom next year"*; **SoftBank [[ARM]] has already placed ~$3bn of purchase orders** for next-year shipments; **SambaNova** is named as a further customer (plain text — no wiki page). ⚠️ **None of these appear in the customer ladder above or in the gigawatt arithmetic below.**
+
+### 🔴🔴🔴 (6) **THE $/GW UNIT GUARD — FOUR DISTINCT BASES ARRIVE IN THIS ONE CALL. NEVER NET THEM, NEVER CHAIN THEM.**
+
+**This is the single most important discipline item on this page. Every one of these four is quoted in $ per gigawatt, all four come from the same 30 minutes, and they measure four different things:**
+
+| # | Basis | Figure | Exactly what it measures |
+|---|---|--:|---|
+| **1** | **TOTAL HARDWARE-INFRASTRUCTURE INVESTMENT per GW** | **$20-30bn** | The number **Hock Tan threw out on the earnings call** — and **explicitly clarified on the callback as NOT Broadcom content**: *"he did clarify that that's not a Broadcom content per gigawatt, that is more of a call it hardware infrastructure, which obviously **includes** the chip… that's his view of the hardware infrastructure investment required on a per gigawatt basis."* |
+| **2** | **[[AVGO]]'s OWN DOLLAR CONTENT per GW** | **$11-15bn**, customer-dependent | **$11-12bn** for **[[GOOG]] internal + [[ANTHROPIC]]** — *"Google has its own specialized cluster design, which uses **less Broadcom networking** and more of Google's own proprietary networking"*. **$13-15bn** for **[[META]] / [[OPENAI]] / SoftBank [[ARM]] / ByteDance / Alibaba** — *"those customers do take advantage of quite a bit of Broadcom networking capabilities."* **JPM's own working number: ~$13bn mix-adjusted.** |
+| **3** | **[[ANTHROPIC]] REVENUE (ARR) per GW** | **~$30bn/GW** | The **customer's** annual revenue on a gigawatt of deployed capacity. A flow, not a capex stock. |
+| **4** | **FULLY-LOADED COST per GW per YEAR** | **~$5bn/GW/yr** | The customer's annual all-in operating cost on that same gigawatt. |
+
+- ➤ 🔴🔴 **THE ONLY LEGITIMATE PAIRING IN THAT TABLE IS (3) AGAINST (4)** — Anthropic's ~$30bn of ARR per GW against ~$5bn/yr of fully-loaded cost on the same GW, which is what JPM uses to conclude *"very, very strong gross profit per token."* Rows 1 and 2 are capex/content bases and belong to the vendor; rows 3 and 4 are annual P&L bases and belong to the customer. **Netting row 2 against row 3, or subtracting row 2 from row 1 to "derive" a competitor's content, produces a number with no referent.**
+- 🔴 **JPM'S ACTUAL ARGUMENT, WHICH DEPENDS ON GETTING ROW 2 RIGHT:** the market back-solved **~$11-12bn/GW** by dividing the guide by the 10GW ladder, and JPM says that **understates** it — *"mix adjusted for their customer mix, it really should be around 13 billion"*, because *"it's not 100% Google and Anthropic next year."* ➤ **That gap is precisely why he calls the $115bn / $230bn guide *"extremely conservative."*** ⚠️ **AND THE SECOND HALF OF THE SAME ARGUMENT, WHICH IS EASY TO MISS: *"he's only talking about his **top four customers** in that 10 gigawatt math"* — ByteDance, Alibaba, SoftBank Arm and SambaNova are outside the GW count entirely. The denominator is incomplete, which biases any $/GW back-solve DOWNWARD.**
+- ✅ **CROSS-CHECK AGAINST THE FOUR-HOUSE BLOCK IMMEDIATELY BELOW (2026-09-03):** BofA, UBS, MS and JPM independently put AVGO content at **$10-15bn/GW**, and the guide ÷ allocated-GW arithmetic lands at **$11.5bn** in both FY27 and FY28. **This JPM transcript is the primary behind that block's JPM row, and it agrees with it — with one addition the summary version did not carry: the $20-30bn is *hardware infrastructure*, not *total datacenter build cost*.** ⚠️ **Those two renderings are NOT identical — BofA called it *"overall cost of $20-30bn per gigawatt"* for the datacenter build, UBS called it *"total system cost, encompassing power, cooling and other components"*, JPM calls it *"hardware infrastructure"*. Log the variance; the three descriptions imply different perimeters even though the number is the same.**
+
+### (7) THE SIZING, AND THE SUPPLY MOVES BEHIND IT
+
+- **FY27: order book **$140-150bn**, guided **$115bn** — *"they're only guiding to 80% of their order book."* The 80-85% ship rate is not an AVGO-specific assumption: *"using the same math as Nvidia… supply constraints only allowing Nvidia to ship 80 to 85% of total orders in their backlog. We heard the same thing from [[MRVL]]."* JPM had previewed **$130bn**; *"Broadcom opted for the lower end of the range."***
+- **FY28: guided **$230bn** vs **sell-side $180bn** and **buy-side ~$205-210bn**, which JPM makes *"about 85%"* of an order book he sizes at **$270-280bn**.**
+- **AND THE MERCHANT-SIDE READ-ACROSS, USEFUL FOR THE [[NVDA]] PAGE: *"[[NVDA]] is sitting with an order book that supports 15% to 20% more shipments next year than what they guided to."***
+- 🔴 **FOUNDRY SECOND SOURCE — NEW: *"Broadcom is bringing on [[SAMSUNG]] as a second source foundry for **2 nanometer and 3 nanometer wafers in second half of [next] year** [2H27]."*** ➤ **JPM treats this as the reason FY27 could beat: it was why he previewed $130bn against a supply-constrained $115-125bn. Cross-file [[SAMSUNG]] foundry and [[TSM]].**
+- 🔴 **SUBSTRATE + ADVANCED PACKAGING — THE UNDER-DISCUSSED ITEM: the **Singapore substrate facility is ramping now**, internal target *"to support about a third of their leading edge chip requirements, primarily XPU and networking."* Then the part *"Broadcom doesn't talk about too much"*: **over the next 18-24 months they augment it with full advanced packaging targeting packages that *"can support up to 15X logic compute die capability per package."*** ➤ **JPM's claim is that this puts *"even [[TSM]] and [[INTC]] with EMIB… slightly behind Broadcom's roadmap."* ⚠️ **That is an analyst characterisation of an unshipped capability, not a benchmark. Flag as a claim to falsify at the next packaging datapoint — this wiki already carries TSMC and Intel packaging roadmaps that would need re-reading if it is right.**
+- **DEMAND-SIDE COLOUR ON [[ANTHROPIC]]'s ECONOMICS (same call, corroborating [[NVDA]]'s own group call *"a couple nights ago"*): *"Anthropic is already driving strong gross profitability at the token level"*, with press reports that Anthropic was **already operating-profit positive in the June quarter**.** ⚠️ **Press-reported, not disclosed.**
+- **CLIENT POSITIONING ITEM WORTH LOGGING: *"I'm getting a lot of questions on **Celestica** as a play on TPU"* (JPM desk · Josh Meyers, same call).** ⚠️ **Celestica has no wiki page — plain text. It is already named on this page in the 09-01 Jalapeño block as a partner alongside [[AVGO]]; the new information is that it is now the client-flow expression of the TPU trade.**
 ## 🆕🔴🔴🔴 2026-09-03 — **THE $/GW SPREAD IS SETTLED, AND THE WIKI'S OWN 09-02 "CONSERVATISM BRIDGE" WAS AN ARTEFACT OF THE WRONG BASIS. FOUR HOUSES SAY AVGO CONTENT IS $10-15bn/GW, NOT $20-30bn — AND THE GUIDE'S OWN ARITHMETIC AGREES WITH THEM TO THE DECIMAL.**
 
 _(Four [[AVGO]] post-print callbacks, all 2026-09-03: **JPM**, **BofA · Vivek Arya**, **MS · Joe Moore**, **UBS · Nathalia Winkler**. All four are readouts of Broadcom management AFTER the F3Q26 call, i.e. a separate later event — not relays of the call itself.)_

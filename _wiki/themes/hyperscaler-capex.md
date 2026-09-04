@@ -2,6 +2,62 @@
 
 _Wiki · generated 2026-06-25 · cross-company theme · sources: the AI_Demand_Capex project (`E:\AI_Demand_Capex`, dashboard build 2026-06-11), BBG consensus, company 10-Ks, and the official Capstone models (`P:\Felipe Monteiro\US Equities\Modelos oficiais`). Company pages: [../00_INDEX.md](../00_INDEX.md) · themes index: [00_THEMES.md](00_THEMES.md)._
 
+## 🆕🔴🔴 2026-09-03 (source 2026-09-02) — **JEFFERIES PUTS CONSENSUS AT CY26E $818bn / CY27E $1,121bn FOR HYPERSCALERS + [[ORCL]] + [[META]] — AND THE "+73% / +123%" PRINTED ON THE SLIDE ARE **12-MONTH ESTIMATE REVISIONS, NOT CAPEX GROWTH.** THE SAME GROUP GOES **FCF-NEGATIVE IN AGGREGATE IN CY26E**, WHILE OPERATING CASH FLOW AND CLOUD MARGINS BOTH KEEP EXPANDING.**
+
+**Source: Jefferies "AI Deep Dive: Addressing Key Debates Across Hyperscalers and Software" · Brent Thill (+ team), 58 pages, priced intraday 9-2-26.** [Source](../../relat%C3%B3rios%20bons/AI_Deep_Dive_Jeffries.html)
+
+⚠️⚠️ **EXTRACTION WARNING: this deck's PDF text layer pairs chart values with the wrong labels on several slides. Every figure below was read off the RENDERED PAGE IMAGE (`relatórios bons/_assets/AI_Deep_Dive_Jeffries/pNNN.jpg`) with the page number cited, not off the text extraction.**
+
+### 🔴🔴🔴 (1) THE HEADLINE — AND THE MISREAD THAT IS BUILT INTO THE SLIDE (p13)
+
+**"Capex Estimates for Hyperscalers + ORCL + META ($B)" — source Visible Alpha, i.e. SELL-SIDE CONSENSUS, not Jefferies' own model:**
+
+| | Estimate as of 1YR AGO | Estimate TODAY | Printed on slide |
+|---|--:|--:|--:|
+| **CY26E** | **$473bn** | **$818bn** | **"+73%"** |
+| **CY27E** | **$503bn** | **$1,121bn** | **"+123%"** |
+
+- 🔴🔴 **THE GUARD, AND IT IS THE WHOLE POINT OF CARRYING THIS SLIDE: the +73% and +123% are the **12-MONTH REVISION IN THE ESTIMATE FOR THAT YEAR** — how much consensus for CY26 and CY27 has moved in a year. They are **NOT y/y capex growth.** Implied y/y growth from the "today" bars is CY26E → CY27E = **+37%**, a completely different number. Anyone quoting "+123% capex growth in 2027" off this deck is wrong by ~86 percentage points, and the slide's own title (*"The AI Race is Driving a Historic Capex Surge"*) invites exactly that error.**
+- ➤ **Where the levels sit against everything else on this page: **$818bn CY26** sits essentially on top of [[NVDA]]'s own ~$800bn 2026 aggregate (08-26 block) but on a WIDER perimeter (this one includes ORCL and META explicitly). **$1,121bn CY27** sits BELOW MS's ~$1.4trn (08-20/08-31 blocks) and below Citi's >$1trn big-four-only series (08-29), and roughly at NVDA's own $1.3trn.** ⚠️ **Perimeter discipline as always: "hyperscalers + ORCL + META" is not the same set as MS's (which now includes [[SPCX]]) nor Citi's big four. The convergence around ~$1.1-1.4trn for CY27 is real; the precision is not.**
+
+### 🔴🔴 (2) THE FUNDING SIDE — DEBT MORE THAN DOUBLES AND THE GROUP GOES CASH-FLOW NEGATIVE (p14, p15)
+
+| Same group (hyperscalers + [[ORCL]] + [[META]]), $bn | CY24 | CY25 | CY26E |
+|---|--:|--:|--:|
+| **Total debt** (p14) | **$226** | **$319** | **$502** |
+| **Total FCF** (p15) | **$238** | **$189** | **−$2** |
+
+- ➤ 🔴🔴 **THIS IS THE CLEANEST STATEMENT OF THE FUNDING GAP THIS PAGE HAS: on Jefferies' numbers the aggregate free cash flow of the largest cash generators in the market **crosses zero in 2026E**, while the debt stock **>2x in two years**. Every financing block on this page — GS's 35%-debt-financed-share path (08-19), the $300bn of 2027 project finance, the ~$3trn of off-balance-sheet obligations (08-17), the 300-600bp counterparty spread (08-20) — is downstream of this single crossing.**
+- ⚠️ **BASIS NOTE: p15 is FCF (post-capex), p14 is gross debt. The −$2bn is an AGGREGATE across the group and therefore hides enormous per-name dispersion — it does not say any individual name is FCF-negative. Do not attribute it to a company.**
+
+### ✅ (3) THE OFFSET JEFFERIES PUTS AGAINST IT — AND ALL THREE SERIES ARE STILL IMPROVING (p36, p35, p28)
+
+| Total hyperscaler | 1Q25 | 2Q25 | 3Q25 | 4Q25 | 1Q26 | 2Q26 |
+|---|--:|--:|--:|--:|--:|--:|
+| **Operating cash flow, $bn** (p36) | **$90** | **$103** | **$129** | **$143** | **$119** | **$140** |
+| **Cloud revenue growth, y/y** (p35) | **25%** | **28%** | **30%** | **35%** | **40%** | **49%** |
+| **Cloud operating margin** (p28) | **36.3%** | **33.8%** | **35.9%** | **36.7%** | **37.4%** | **38.9%** |
+
+- ⚠️⚠️ **READ THE OCF AND MARGIN ROWS OFF THE IMAGES, NOT OFF A SORTED LIST — BOTH SERIES ARE NON-MONOTONIC AND A TEXT DUMP RE-ORDERS THEM. OCF **falls** from $143bn in 4Q25 to $119bn in 1Q26 (seasonal) before recovering to $140bn; the margin series **starts at 36.3% in 1Q25, troughs at 33.8% in 2Q25**, and only then rises for four straight quarters. Jefferies' *"expanded for 4 straight quarters"* is measured from the 2Q25 trough, and the 2Q26 print of 38.9% is **+2.6pts above the 1Q25 starting point**, not +5.1pts.**
+- **Jefferies stamps 2Q26 OCF as **+36% y/y** ($140bn vs $103bn) and uses the margin series as its answer to Debate #2 (rising memory prices vs AI ROIC) — cross-filed to [hbm-memory.md](hbm-memory.md). The supporting quote on the same slide is the pass-through mechanism: **[[CRWV]] CFO, 2Q26 call — *"We're also passing through component price increases."***
+- ➤ **The bull framing that follows: cloud revenue growth **accelerated for five straight quarters to 49%** while margins expanded — i.e. the capex is being absorbed by an accelerating, margin-expanding revenue line, not by a flat one. That is the strongest single-page ROIC defence on this wiki, and it is worth noting it uses NO forecast: all six quarters are reported.**
+
+### 🔴🔴 (4) THE COMMITMENT SIDE — BACKLOG IS GROWING ~4x FASTER THAN CAPEX, AND IT SURVIVES STRIPPING OUT THE LABS (p33, p34)
+
+- **p33: *"Absolute Backlog Growth (in $B) Is Running Nearly 4x Ahead of Capex Since 2024"* — **capex CY24A vs CY26E = $453bn**, against **RPO Dec-24 vs Jun-26 = $1,666bn.*** ⚠️ **Both bars are CHANGES over a period, not levels, and the two periods are not identical (CY24→CY26E vs Dec-24→Jun-26). It is an order-of-magnitude comparison; do not compute a ratio to two decimals off it.**
+- 🔴 **p34, and this is the more useful slide — the backlog **decomposed by name into frontier-lab deals vs everything else**:**
+
+| | Latest RPO **ex**-frontier-lab deals | Total frontier-lab deals announced | **Frontier mix % of total backlog** |
+|---|--:|--:|--:|
+| **[[MSFT]]** | **$428bn** | **$250bn** | **37%** |
+| **[[ORCL]]** | **$338bn** | **$300bn** | **47%** |
+| **[[GOOG]]** (GOOGL on slide) | **$320bn** | **$200bn** | **38%** |
+| **[[AMZN]]** | **$258bn** | **$238bn** | **48%** |
+| **Sum of the four** | **$1,344bn** | **$988bn** | — |
+
+  *(Jefferies, sourced to Company Data/Disclosure. The four totals are this wiki's addition, not printed on the slide.)*
+- ➤ 🔴🔴 **THE ARGUMENT, AND IT IS A GOOD ONE: even if you write off **every announced frontier-lab deal to zero**, the four names still carry **$1.34 trillion of RPO** — which is more than the entire CY27E capex number on p13. The concentration risk this page has been documenting (OpenAI + Anthropic ≈ ~20% of NVDA end-consumption, 09-02) is real but it is **not** the majority of the backlog at any of the four.**
+- ⚠️ **THE TWO CAVEATS JEFFERIES DOES NOT PUT ON THE SLIDE. (a) The **frontier mix ranges from 37% to 48%** — [[ORCL]] and [[AMZN]] are close to half, so "ex-frontier is fine" is a much weaker statement for those two than for [[MSFT]]. (b) *"Total Frontier Lab Deals Announced"* is an **ANNOUNCEMENT** figure and RPO is a **CONTRACTED** figure; they are not the same evidentiary standard, and this wiki's own 09-01 power block documents how much announced pipeline never becomes real. The mix percentages should be read as upper bounds on lab exposure, not as measurements of it.**
 ## 🆕🔴🔴 2026-09-02 — THE END-DEMAND CONCENTRATION FINALLY GETS A NUMBER FROM THE VENDOR SIDE: **[[OPENAI]] + [[ANTHROPIC]] ≈ ~20% OF [[NVDA]]'s BUSINESS ON AN *END-CONSUMPTION* BASIS TODAY, → ~25% IN FY28** — AND **NEOCLOUDS ARE NOW >~50% OF ACIE**. PLUS THE OFF-BALANCE-SHEET STACK IS SIZED AT ALL THREE MAJOR NODES ON THE SAME DAY.
 
 - 🔴🔴 **THE CONCENTRATION DISCLOSURE, AND IT IS THE ONE THIS PAGE HAS BEEN MISSING.** From JPM's virtual NDR with NVDA VP IR **Toshiya Hari**: *"the two largest frontier model builders ([[OPENAI]] & [[ANTHROPIC]]) should represent **~20% of NVDA's business TODAY on an END-CONSUMPTION basis**, with that figure potentially moving toward **~25% in FY28**."* ⚠️ **The qualifier is essential and JPM states it: *"this isn't necessarily reflected in NVDA's DIRECT customer mix, since it sells compute to hyperscalers/neoclouds, who then sell capacity to model builders."*** (JPM · Harlan Sur, Mayur Ramdhani, Apoorva Kumar, 2026-09-02.) ➤ **Every prior concentration figure on this wiki has been a BILLED-CUSTOMER number, which systematically understates lab exposure because the labs buy through intermediaries. This is the first end-demand mark, it is management's own, and it RISES on management's own forecast.**

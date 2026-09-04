@@ -1,24 +1,24 @@
 {
   "asof": "2026-09-03",
-  "latest_reconciliation": "reconciliation-2026-09-02.md",
+  "latest_reconciliation": "reconciliation-2026-09-03.md",
   "book": {
     "asof": "2026-07-01",
     "seed": true,
     "positions": 8
   },
   "stats": {
-    "signals": 50,
-    "active": 50,
-    "high": 14,
+    "signals": 53,
+    "active": 53,
+    "high": 17,
     "belief_changes": 2,
-    "focus_names": 32
+    "focus_names": 33
   },
   "focus": [
     {
       "ticker": "NVDA",
       "focus_score": 109,
       "in_book": true,
-      "signal_count": 7,
+      "signal_count": 8,
       "high_count": 4,
       "sector": "AI — Semis & Compute",
       "thesis": "Full-stack AI-factory platform at +85% rev; debate is demand sustainability vs ASIC erosion.",
@@ -27,6 +27,21 @@
         "The HBM $/Gb anchor this wiki has been quoting is the WRONG VENDOR'S PRICE",
         "2027 DRAM bit supply — a three-way split with TWO LEGS INSIDE MORGAN STANLEY",
         "NVDA — the first BEARISH read of the 70% guide in the open window"
+      ]
+    },
+    {
+      "ticker": "AVGO",
+      "focus_score": 100,
+      "in_book": true,
+      "signal_count": 6,
+      "high_count": 4,
+      "sector": "AI — Semis & Compute",
+      "thesis": "#1 custom-ASIC/TPU partner; binary setup on the \">$100B\" FY27 guide vs $250-300B FY28 (JPM).",
+      "next_catalyst": "2026-09-03",
+      "why": [
+        "D-1 · 🔴 AVGO — the house FY28 EPS sits ABOVE the entire visible sell-side range",
+        "GOOG/AVGO/ANTHROPIC — the FT (08-04) SIZES a figure the wiki had marked unsizeable, and it is the EARLIER source",
+        "D-2 · 🔴 AVGO — the house implicitly assumes a ship rate the supply chain is not underwriting"
       ]
     },
     {
@@ -90,21 +105,6 @@
       ]
     },
     {
-      "ticker": "AVGO",
-      "focus_score": 89,
-      "in_book": true,
-      "signal_count": 5,
-      "high_count": 2,
-      "sector": "AI — Semis & Compute",
-      "thesis": "#1 custom-ASIC/TPU partner; binary setup on the \">$100B\" FY27 guide vs $250-300B FY28 (JPM).",
-      "next_catalyst": "2026-09-03",
-      "why": [
-        "GOOG/AVGO/ANTHROPIC — the FT (08-04) SIZES a figure the wiki had marked unsizeable, and it is the EARLIER source",
-        "AVGO — 2026-09-03: POST-PRINT BROKER CALLBACKS ALREADY SCHEDULED — the fastest read on how the Street…",
-        "D1 · AVGO — consensus is AT the FY27 guide but ~18% BELOW the FY28 guide. The whole debate is FY27-vs-FY28 phasing, and it is a VOLUME gap, not a margin gap."
-      ]
-    },
-    {
       "ticker": "AAPL",
       "focus_score": 87,
       "in_book": true,
@@ -117,6 +117,36 @@
         "AAPL — 2026-09-09: 2026-09-09 \"SURPRISE AND SHINE\" — THE EVENT NOW HAS A SCORECARD WITH A 2x DISAGREEMENT ON…",
         "AAPL — 2026 EPS house view is 16% above consensus",
         "AAPL — 2026-10-01: THE EU APP STORE COMMISSION CHANGES TAKE EFFECT, AND THE RATES ARE NOW FINAL: 26% for App…"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "focus_score": 85,
+      "in_book": true,
+      "signal_count": 3,
+      "high_count": 3,
+      "sector": "AI — Hyperscalers & Software",
+      "thesis": "AI ARR >$37B/+123%; swing is capex (CY27 ~$276B) vs Azure revenue + OpenAI concentration.",
+      "next_catalyst": "",
+      "why": [
+        "Rating-action DATING was wrong on two pages",
+        "D-7 · 🔴 MSFT — Jefferies' M365 series was published one day before the segment restatement and is now ~2pts low",
+        "MSFT — BofA raises to $600 while sitting BELOW consensus on the earnings it is paying 28x for"
+      ]
+    },
+    {
+      "ticker": "META",
+      "focus_score": 85,
+      "in_book": true,
+      "signal_count": 3,
+      "high_count": 2,
+      "sector": "AI — Hyperscalers & Software",
+      "thesis": "Fastest grower in Mag7 ex-GPU; bear = capital intensity and negative incremental ROIC.",
+      "next_catalyst": "2026-09-23",
+      "why": [
+        "Rating-action DATING was wrong on two pages",
+        "META — 2026-09-23: META CONNECT — 2026-09-23/24. Both UBS (exact dates) and MS (\"25 days away\" as of 08-30)…",
+        "D-9 · pre-existing house-vs-consensus gaps re-confirmed (not new tonight, but they frame the new sources)"
       ]
     },
     {
@@ -135,34 +165,6 @@
       ]
     },
     {
-      "ticker": "META",
-      "focus_score": 83,
-      "in_book": true,
-      "signal_count": 2,
-      "high_count": 2,
-      "sector": "AI — Hyperscalers & Software",
-      "thesis": "Fastest grower in Mag7 ex-GPU; bear = capital intensity and negative incremental ROIC.",
-      "next_catalyst": "2026-09-23",
-      "why": [
-        "Rating-action DATING was wrong on two pages",
-        "META — 2026-09-23: META CONNECT — 2026-09-23/24. Both UBS (exact dates) and MS (\"25 days away\" as of 08-30)…"
-      ]
-    },
-    {
-      "ticker": "MSFT",
-      "focus_score": 83,
-      "in_book": true,
-      "signal_count": 2,
-      "high_count": 2,
-      "sector": "AI — Hyperscalers & Software",
-      "thesis": "AI ARR >$37B/+123%; swing is capex (CY27 ~$276B) vs Azure revenue + OpenAI concentration.",
-      "next_catalyst": "",
-      "why": [
-        "Rating-action DATING was wrong on two pages",
-        "MSFT — BofA raises to $600 while sitting BELOW consensus on the earnings it is paying 28x for"
-      ]
-    },
-    {
       "ticker": "AMZN",
       "focus_score": 81,
       "in_book": true,
@@ -176,6 +178,20 @@
       ]
     },
     {
+      "ticker": "ORCL",
+      "focus_score": 78,
+      "in_book": false,
+      "signal_count": 2,
+      "high_count": 1,
+      "sector": "AI — Hyperscalers & Software",
+      "thesis": "Turned into an AI-infra hyperscaler (RPO $638B/+363%); bear = dot-com-peak capex/sales + dilution.",
+      "next_catalyst": "",
+      "why": [
+        "Rating-action DATING was wrong on two pages",
+        "D-5 · ORCL — the PT is 18% above consensus, and the stated downside case IS consensus"
+      ]
+    },
+    {
       "ticker": "ANTHROPIC",
       "focus_score": 76,
       "in_book": false,
@@ -186,19 +202,6 @@
       "next_catalyst": "",
       "why": [
         "GOOG/AVGO/ANTHROPIC — the FT (08-04) SIZES a figure the wiki had marked unsizeable, and it is the EARLIER source"
-      ]
-    },
-    {
-      "ticker": "ORCL",
-      "focus_score": 76,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 1,
-      "sector": "AI — Hyperscalers & Software",
-      "thesis": "Turned into an AI-infra hyperscaler (RPO $638B/+363%); bear = dot-com-peak capex/sales + dilution.",
-      "next_catalyst": "",
-      "why": [
-        "Rating-action DATING was wrong on two pages"
       ]
     },
     {
@@ -243,20 +246,6 @@
       ]
     },
     {
-      "ticker": "TSEM",
-      "focus_score": 64,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "AI — Semis & Compute",
-      "thesis": "Specialty foundry re-rating on SiPho/SiGe optical; $1.3B 2027 SiPho commit (NVDA-anchored per FinTwit); bear = ramp/concentration. SIG Positive $330.",
-      "next_catalyst": "",
-      "why": [
-        "TSEM — derived thesis/debate state changed since the prior daily snapshot",
-        "D5 · TSEM — the Street takes the company's FY28 MARGIN but not its FY28 VOLUME. And Stifel initiates Buy at the very bottom of the target range."
-      ]
-    },
-    {
       "ticker": "MRVL",
       "focus_score": 63,
       "in_book": false,
@@ -268,6 +257,19 @@
       "why": [
         "MRVL's Google block — a three-way conflict that decides whether the $120bn warrant is ADDITIVE or CANNIBAL",
         "MRVL — 2026-10-06: DATED, TWO-STEP: Q2 FY27 print THURSDAY 2026-08-27 (after market close) → INVESTOR DAY…"
+      ]
+    },
+    {
+      "ticker": "TSEM",
+      "focus_score": 62,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "AI — Semis & Compute",
+      "thesis": "Specialty foundry re-rating on SiPho/SiGe optical; $1.3B 2027 SiPho commit (NVDA-anchored per FinTwit); bear = ramp/concentration. SIG Positive $330.",
+      "next_catalyst": "",
+      "why": [
+        "TSEM — derived thesis/debate state changed since the prior daily snapshot"
       ]
     },
     {
@@ -284,6 +286,19 @@
       ]
     },
     {
+      "ticker": "CRWV",
+      "focus_score": 57,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Systems & neoclouds",
+      "thesis": "Highest-visibility GPU neocloud ($99B backlog) but ~$25B high-coupon debt + customer concentration.",
+      "next_catalyst": "",
+      "why": [
+        "D-4 · 🔴 CRWV — Jefferies is ~90% above consensus on CY28 EBIT, and the same gap shows up twice"
+      ]
+    },
+    {
       "ticker": "TSM",
       "focus_score": 57,
       "in_book": true,
@@ -294,6 +309,19 @@
       "next_catalyst": "2026-09-24",
       "why": [
         "TSM — 2026-09-24: TRUMP-XI, 2026-09-24 — UBS puts SPE and MEMORY as the most exposed verticals, with the…"
+      ]
+    },
+    {
+      "ticker": "GEV",
+      "focus_score": 51,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Power & Energy",
+      "thesis": "Cleanest AI-power earnings-revisions story (orders +71%); bear = order peak + Wind.",
+      "next_catalyst": "",
+      "why": [
+        "D-8 · GEV — a 4GW JV that contributes nothing inside the consensus horizon"
       ]
     },
     {
@@ -349,20 +377,6 @@
       "why": [
         "SMTC — latest earnings transcript absent",
         "SMTC — 2026-10-15: INVESTOR / ANALYST DAY, San Jose. The single most important dated event on this page,…"
-      ]
-    },
-    {
-      "ticker": "AXTI",
-      "focus_score": 43,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "AI — Semis & Compute",
-      "thesis": "Most direct InP-substrate bottleneck play (~80% non-China w/ Sumitomo); bull = optical supply oligopoly, bear = China-permit gate + trading-vehicle beta.",
-      "next_catalyst": "",
-      "why": [
-        "D4 · AXTI — management's \"revenue opportunity exiting 2026\" runs ~15-25% ABOVE the consensus-implied Q4. Flagged, deliberately not scored.",
-        "D6 · AXTI — management's FIRST-EVER capex path runs 40-90% ABOVE consensus. This is the cleanest hard divergence of the run."
       ]
     },
     {
@@ -629,6 +643,88 @@
       "feedback_note": "",
       "hidden": false,
       "carried_from": "2026-09-01"
+    },
+    {
+      "id": "reco-96db7d4d7c4c",
+      "asof": "2026-09-03",
+      "source_date": "2026-09-03",
+      "type": "model_check",
+      "priority": "high",
+      "score": 85,
+      "title": "D-1 · 🔴 AVGO — the house FY28 EPS sits ABOVE the entire visible sell-side range",
+      "tickers": [
+        "AVGO"
+      ],
+      "in_book": [
+        "AVGO"
+      ],
+      "impact": "high",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "The single most important line of the night. Four independent marks on AVGO's FY28 (fiscal, ending ~Nov 2028)",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the AVGO model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "NVDA",
+          "relation": "competitor",
+          "detail": "merchant vs custom ASIC",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "networking",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "customer",
+          "detail": "custom ASIC (TPU)",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "META",
+          "relation": "customer",
+          "detail": "custom ASIC",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "custom ASIC",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "TSM",
+          "relation": "supplier",
+          "detail": "foundry",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "MRVL",
+          "relation": "competitor",
+          "detail": "custom ASIC",
+          "from": "AVGO",
+          "in_book": false
+        }
+      ],
+      "source": "JPM · curated reconciliation 2026-09-03",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-03.md"
+      ],
+      "evidence_anchor": "D-1 · 🔴 AVGO — the house FY28 EPS sits ABOVE the entire visible sell-side range",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
     },
     {
       "id": "cata-d5bf4486ef85",
@@ -921,6 +1017,170 @@
       "feedback_note": "",
       "hidden": false,
       "carried_from": "2026-09-01"
+    },
+    {
+      "id": "reco-02bb8023a7cf",
+      "asof": "2026-09-03",
+      "source_date": "2026-09-03",
+      "type": "model_check",
+      "priority": "high",
+      "score": 75,
+      "title": "D-2 · 🔴 AVGO — the house implicitly assumes a ship rate the supply chain is not underwriting",
+      "tickers": [
+        "AVGO"
+      ],
+      "in_book": [
+        "AVGO"
+      ],
+      "impact": "high",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "JPM's framing, now on the page: AVGO's FY27 order book is $140-150bn, and the supply-constrained ship rate",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the AVGO model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "AVGO converts more of its backlog than the supply chain has been converting. That is a falsifiable assumption",
+      "readthrough": [
+        {
+          "ticker": "NVDA",
+          "relation": "competitor",
+          "detail": "merchant vs custom ASIC",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "networking",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "customer",
+          "detail": "custom ASIC (TPU)",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "META",
+          "relation": "customer",
+          "detail": "custom ASIC",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "custom ASIC",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "TSM",
+          "relation": "supplier",
+          "detail": "foundry",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "MRVL",
+          "relation": "competitor",
+          "detail": "custom ASIC",
+          "from": "AVGO",
+          "in_book": false
+        }
+      ],
+      "source": "management/company primary + JPM · curated reconciliation 2026-09-03",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-03.md"
+      ],
+      "evidence_anchor": "D-2 · 🔴 AVGO — the house implicitly assumes a ship rate the supply chain is not underwriting",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-cbb33ef6c48f",
+      "asof": "2026-09-03",
+      "source_date": "2026-09-03",
+      "type": "model_check",
+      "priority": "high",
+      "score": 75,
+      "title": "D-7 · 🔴 MSFT — Jefferies' M365 series was published one day before the segment restatement and is now ~2pts low",
+      "tickers": [
+        "MSFT"
+      ],
+      "in_book": [
+        "MSFT"
+      ],
+      "impact": "high",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "Jefferies models M365 Commercial Cloud y/y growth 13.9% (Sep-26E) → 14.7% → 15.6% → 16.6% (Jun-27E), published",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the MSFT model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "supplier",
+          "detail": "custom ASIC",
+          "from": "MSFT",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "MSFT",
+          "in_book": true
+        },
+        {
+          "ticker": "AAOI",
+          "relation": "supplier",
+          "detail": "optical transceivers",
+          "from": "MSFT",
+          "in_book": false
+        },
+        {
+          "ticker": "ALAB",
+          "relation": "supplier",
+          "detail": "scale-up fabric",
+          "from": "MSFT",
+          "in_book": false
+        },
+        {
+          "ticker": "AMD",
+          "relation": "supplier",
+          "detail": "MI GPUs",
+          "from": "MSFT",
+          "in_book": false
+        },
+        {
+          "ticker": "CEG",
+          "relation": "supplier",
+          "detail": "nuclear PPA",
+          "from": "MSFT",
+          "in_book": false
+        },
+        {
+          "ticker": "CIEN",
+          "relation": "supplier",
+          "detail": "DCI/optical",
+          "from": "MSFT",
+          "in_book": false
+        }
+      ],
+      "source": "BofA + Jefferies · curated reconciliation 2026-09-03",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-03.md"
+      ],
+      "evidence_anchor": "D-7 · 🔴 MSFT — Jefferies' M365 series was published one day before the segment restatement and is now ~2pts low",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
     },
     {
       "id": "reco-df1f585788a9",
@@ -1661,6 +1921,172 @@
       "carried_from": "2026-09-01"
     },
     {
+      "id": "reco-3760930b0430",
+      "asof": "2026-09-03",
+      "source_date": "2026-09-03",
+      "type": "model_check",
+      "priority": "medium",
+      "score": 66,
+      "title": "D-3 · ⚠️ AVGO — BBG consensus is internally inconsistent one day after the print",
+      "tickers": [
+        "AVGO"
+      ],
+      "in_book": [
+        "AVGO"
+      ],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "Subtracting the AI guide from BBG total revenue leaves a non-AI residual that cannot be right in both years:",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the AVGO model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "NVDA",
+          "relation": "competitor",
+          "detail": "merchant vs custom ASIC",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "networking",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "customer",
+          "detail": "custom ASIC (TPU)",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "META",
+          "relation": "customer",
+          "detail": "custom ASIC",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "custom ASIC",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "TSM",
+          "relation": "supplier",
+          "detail": "foundry",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "MRVL",
+          "relation": "competitor",
+          "detail": "custom ASIC",
+          "from": "AVGO",
+          "in_book": false
+        }
+      ],
+      "source": "JPM · curated reconciliation 2026-09-03",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-03.md"
+      ],
+      "evidence_anchor": "D-3 · ⚠️ AVGO — BBG consensus is internally inconsistent one day after the print",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-0e4c277cce6a",
+      "asof": "2026-09-03",
+      "source_date": "2026-09-03",
+      "type": "model_check",
+      "priority": "medium",
+      "score": 66,
+      "title": "D-9 · pre-existing house-vs-consensus gaps re-confirmed (not new tonight, but they frame the new sources)",
+      "tickers": [
+        "GOOG",
+        "META"
+      ],
+      "in_book": [
+        "GOOG",
+        "META"
+      ],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "GOOG — house 2026E revenue $505bn vs BBG 1FY $432bn (+16.9%). Large and long-standing. ✅ But house",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the GOOG/META model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "supplier",
+          "detail": "custom ASIC (TPU)",
+          "from": "GOOG",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "GOOG",
+          "in_book": true
+        },
+        {
+          "ticker": "ANTHROPIC",
+          "relation": "customer",
+          "detail": "TPU compute",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "BE",
+          "relation": "supplier",
+          "detail": "on-site fuel cells",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "CIEN",
+          "relation": "supplier",
+          "detail": "DCI/optical",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "COHR",
+          "relation": "supplier",
+          "detail": "optical",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "MRVL",
+          "relation": "supplier",
+          "detail": "optical DSP",
+          "from": "GOOG",
+          "in_book": false
+        }
+      ],
+      "source": "JPM · curated reconciliation 2026-09-03",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-03.md"
+      ],
+      "evidence_anchor": "D-9 · pre-existing house-vs-consensus gaps re-confirmed (not new tonight, but they frame the new sources)",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
       "id": "beli-0daebdf7cf4c",
       "asof": "2026-09-03",
       "source_date": "2026-09-03",
@@ -1968,246 +2394,141 @@
       "hidden": false
     },
     {
-      "id": "reco-91bf9105e47f",
+      "id": "reco-70a677f42888",
       "asof": "2026-09-03",
-      "source_date": "2026-09-02",
+      "source_date": "2026-09-03",
       "type": "model_check",
       "priority": "medium",
       "score": 59,
-      "title": "D1 · AVGO — consensus is AT the FY27 guide but ~18% BELOW the FY28 guide. The whole debate is FY27-vs-FY28 phasing, and it is a VOLUME gap, not a margin gap.",
+      "title": "D-6 · NVDA — both the house AND consensus sit below the company's own growth framing",
       "tickers": [
-        "AVGO"
+        "NVDA"
       ],
       "in_book": [
-        "AVGO"
+        "NVDA"
       ],
       "impact": "medium",
       "urgency": "immediate",
-      "confidence": "high",
-      "why_now": "Our bridge, with assumptions stated: management guided AI semis only ($115bn FY27, $230bn FY28). Adding the",
+      "confidence": "medium",
+      "why_now": "NVDA IR (via BTG, 09-02) re-states the ~70% FY28 growth guide and is explicit that it is a supply",
       "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the AVGO model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
-      "readthrough": [
-        {
-          "ticker": "NVDA",
-          "relation": "competitor",
-          "detail": "merchant vs custom ASIC",
-          "from": "AVGO",
-          "in_book": true
-        },
-        {
-          "ticker": "AMZN",
-          "relation": "customer",
-          "detail": "networking",
-          "from": "AVGO",
-          "in_book": true
-        },
-        {
-          "ticker": "GOOG",
-          "relation": "customer",
-          "detail": "custom ASIC (TPU)",
-          "from": "AVGO",
-          "in_book": true
-        },
-        {
-          "ticker": "META",
-          "relation": "customer",
-          "detail": "custom ASIC",
-          "from": "AVGO",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "customer",
-          "detail": "custom ASIC",
-          "from": "AVGO",
-          "in_book": true
-        },
-        {
-          "ticker": "TSM",
-          "relation": "supplier",
-          "detail": "foundry",
-          "from": "AVGO",
-          "in_book": true
-        },
-        {
-          "ticker": "MRVL",
-          "relation": "competitor",
-          "detail": "custom ASIC",
-          "from": "AVGO",
-          "in_book": false
-        }
-      ],
-      "source": "management/company primary · curated reconciliation 2026-09-02",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-09-02.md"
-      ],
-      "evidence_anchor": "D1 · AVGO — consensus is AT the FY27 guide but ~18% BELOW the FY28 guide. The whole debate is FY27-vs-FY28 phasing, and it is a VOLUME gap, not a margin gap.",
-      "origin": "curated_reconciliation",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "reco-d3b71d908905",
-      "asof": "2026-09-03",
-      "source_date": "2026-09-02",
-      "type": "model_check",
-      "priority": "medium",
-      "score": 59,
-      "title": "D2 · AVGO — the Capstone house model's GW ladder MATCHES management almost exactly, but the house books ~20% more AI revenue over FY27-28. The gap is entirely DEPLOYMENT TIMING, and the house should make it explicit.",
-      "tickers": [
-        "AVGO"
-      ],
-      "in_book": [
-        "AVGO"
-      ],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "high",
-      "why_now": "✅ The house's physical picture was right, two and a half months early. 9.9 / 19.6 GW versus the ~10 / ~20 GW",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the AVGO model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
-      "readthrough": [
-        {
-          "ticker": "NVDA",
-          "relation": "competitor",
-          "detail": "merchant vs custom ASIC",
-          "from": "AVGO",
-          "in_book": true
-        },
-        {
-          "ticker": "AMZN",
-          "relation": "customer",
-          "detail": "networking",
-          "from": "AVGO",
-          "in_book": true
-        },
-        {
-          "ticker": "GOOG",
-          "relation": "customer",
-          "detail": "custom ASIC (TPU)",
-          "from": "AVGO",
-          "in_book": true
-        },
-        {
-          "ticker": "META",
-          "relation": "customer",
-          "detail": "custom ASIC",
-          "from": "AVGO",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "customer",
-          "detail": "custom ASIC",
-          "from": "AVGO",
-          "in_book": true
-        },
-        {
-          "ticker": "TSM",
-          "relation": "supplier",
-          "detail": "foundry",
-          "from": "AVGO",
-          "in_book": true
-        },
-        {
-          "ticker": "MRVL",
-          "relation": "competitor",
-          "detail": "custom ASIC",
-          "from": "AVGO",
-          "in_book": false
-        }
-      ],
-      "source": "management/company primary + Bernstein · curated reconciliation 2026-09-02",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-09-02.md"
-      ],
-      "evidence_anchor": "D2 · AVGO — the Capstone house model's GW ladder MATCHES management almost exactly, but the house books ~20% more AI revenue over FY27-28. The gap is entirely DEPLOYMENT TIMING, and the house should make it explicit.",
-      "origin": "curated_reconciliation",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "reco-cc2659085f9c",
-      "asof": "2026-09-03",
-      "source_date": "2026-09-02",
-      "type": "model_check",
-      "priority": "medium",
-      "score": 59,
-      "title": "D3 · GOOG — the house's stated EPS edge has CLOSED. Consensus caught up; the page still claims the old gap.",
-      "tickers": [
-        "GOOG"
-      ],
-      "in_book": [
-        "GOOG"
-      ],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "high",
-      "why_now": "🔴 The GOOG page's house-read says \"EPS 2027E $16.20 above consensus (~$14.5)\". BBG now prints $16.015",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "action": "Open the NVDA model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
       "readthrough": [
         {
           "ticker": "AVGO",
+          "relation": "competitor",
+          "detail": "merchant vs custom ASIC",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "GPUs",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "customer",
+          "detail": "GPUs",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "META",
+          "relation": "customer",
+          "detail": "GPUs",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "GPUs",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "TSM",
           "relation": "supplier",
-          "detail": "custom ASIC (TPU)",
-          "from": "GOOG",
+          "detail": "foundry N3/N2 + CoWoS",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "AMD",
+          "relation": "competitor",
+          "detail": "AI accelerators",
+          "from": "NVDA",
+          "in_book": false
+        }
+      ],
+      "source": "management/company primary · curated reconciliation 2026-09-03",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-03.md"
+      ],
+      "evidence_anchor": "D-6 · NVDA — both the house AND consensus sit below the company's own growth framing",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-b25045854fb1",
+      "asof": "2026-09-03",
+      "source_date": "2026-09-03",
+      "type": "model_check",
+      "priority": "medium",
+      "score": 57,
+      "title": "D-4 · 🔴 CRWV — Jefferies is ~90% above consensus on CY28 EBIT, and the same gap shows up twice",
+      "tickers": [
+        "CRWV"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium-high",
+      "why_now": "Jefferies says Buy/$150 on \"7x our rolled forward CY28 EV/EBIT\". CRWV's EV in the same snapshot is $93.3bn",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the CRWV model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "neocloud compute",
+          "from": "CRWV",
           "in_book": true
         },
         {
           "ticker": "NVDA",
           "relation": "supplier",
           "detail": "GPUs",
-          "from": "GOOG",
+          "from": "CRWV",
           "in_book": true
         },
         {
-          "ticker": "ANTHROPIC",
+          "ticker": "AMD",
+          "relation": "supplier",
+          "detail": "MI GPUs",
+          "from": "CRWV",
+          "in_book": false
+        },
+        {
+          "ticker": "OPENAI",
           "relation": "customer",
-          "detail": "TPU compute",
-          "from": "GOOG",
-          "in_book": false
-        },
-        {
-          "ticker": "BE",
-          "relation": "supplier",
-          "detail": "on-site fuel cells",
-          "from": "GOOG",
-          "in_book": false
-        },
-        {
-          "ticker": "CIEN",
-          "relation": "supplier",
-          "detail": "DCI/optical",
-          "from": "GOOG",
-          "in_book": false
-        },
-        {
-          "ticker": "COHR",
-          "relation": "supplier",
-          "detail": "optical",
-          "from": "GOOG",
-          "in_book": false
-        },
-        {
-          "ticker": "MRVL",
-          "relation": "supplier",
-          "detail": "optical DSP",
-          "from": "GOOG",
+          "detail": "neocloud compute",
+          "from": "CRWV",
           "in_book": false
         }
       ],
-      "source": "management/company primary + Susquehanna · curated reconciliation 2026-09-02",
+      "source": "Jefferies · curated reconciliation 2026-09-03",
       "evidence_paths": [
-        "_meta/reconciliation-2026-09-02.md"
+        "_meta/reconciliation-2026-09-03.md"
       ],
-      "evidence_anchor": "D3 · GOOG — the house's stated EPS edge has CLOSED. Consensus caught up; the page still claims the old gap.",
+      "evidence_anchor": "D-4 · 🔴 CRWV — Jefferies is ~90% above consensus on CY28 EBIT, and the same gap shows up twice",
       "origin": "curated_reconciliation",
       "feedback": "",
       "feedback_note": "",
@@ -2599,6 +2920,44 @@
       "hidden": false
     },
     {
+      "id": "reco-b0a4b3eb8027",
+      "asof": "2026-09-03",
+      "source_date": "2026-09-03",
+      "type": "model_check",
+      "priority": "medium",
+      "score": 51,
+      "title": "D-8 · GEV — a 4GW JV that contributes nothing inside the consensus horizon",
+      "tickers": [
+        "GEV"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "The unattributed BTM call puts Chevron's GE Vernova JV at 4GW of turbines, but full capacity on the GEV",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the GEV model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "grid/power equip",
+          "from": "GEV",
+          "in_book": true
+        }
+      ],
+      "source": "underlying sources named in the finding · curated reconciliation 2026-09-03",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-03.md"
+      ],
+      "evidence_anchor": "D-8 · GEV — a 4GW JV that contributes nothing inside the consensus horizon",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
       "id": "cata-5092371282be",
       "asof": "2026-09-03",
       "source_date": "2026-09-04",
@@ -2880,90 +3239,59 @@
       "carried_from": "2026-09-01"
     },
     {
-      "id": "reco-f430b11ac914",
+      "id": "reco-653a456422d9",
       "asof": "2026-09-03",
-      "source_date": "2026-09-02",
+      "source_date": "2026-09-03",
       "type": "model_check",
       "priority": "watch",
       "score": 41,
-      "title": "D4 · AXTI — management's \"revenue opportunity exiting 2026\" runs ~15-25% ABOVE the consensus-implied Q4. Flagged, deliberately not scored.",
+      "title": "D-5 · ORCL — the PT is 18% above consensus, and the stated downside case IS consensus",
       "tickers": [
-        "AXTI"
+        "ORCL"
       ],
       "in_book": [],
       "impact": "watch",
       "urgency": "immediate",
       "confidence": "medium",
-      "why_now": "Management (AXT CFO Gary Fisher, BofA-hosted call, 2026-08-31): InP revenue $17.5m (Q4'25) → $30.691m (Q2'26),",
+      "why_now": "Jefferies Buy/$290 vs BBG PT consensus $245.49 → +18.1% (hi $400), px $154.04.",
       "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the AXTI model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "falsifier being the actual Q4 guide.",
-      "readthrough": [],
-      "source": "management/company primary + BofA · curated reconciliation 2026-09-02",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-09-02.md"
-      ],
-      "evidence_anchor": "D4 · AXTI — management's \"revenue opportunity exiting 2026\" runs ~15-25% ABOVE the consensus-implied Q4. Flagged, deliberately not scored.",
-      "origin": "curated_reconciliation",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "reco-91c794ac9c57",
-      "asof": "2026-09-03",
-      "source_date": "2026-09-02",
-      "type": "model_check",
-      "priority": "watch",
-      "score": 41,
-      "title": "D5 · TSEM — the Street takes the company's FY28 MARGIN but not its FY28 VOLUME. And Stifel initiates Buy at the very bottom of the target range.",
-      "tickers": [
-        "TSEM"
-      ],
-      "in_book": [],
-      "impact": "watch",
-      "urgency": "immediate",
-      "confidence": "medium",
-      "why_now": "and specific combination: consensus is not disputing the accretive mix, it is disputing whether the SiPho volume",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the TSEM model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "action": "Open the ORCL model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
-      "readthrough": [],
-      "source": "management/company primary + Bloomberg · curated reconciliation 2026-09-02",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "supplier",
+          "detail": "networking",
+          "from": "ORCL",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "ORCL",
+          "in_book": true
+        },
+        {
+          "ticker": "AMD",
+          "relation": "supplier",
+          "detail": "MI GPUs",
+          "from": "ORCL",
+          "in_book": false
+        },
+        {
+          "ticker": "OPENAI",
+          "relation": "customer",
+          "detail": "OCI compute",
+          "from": "ORCL",
+          "in_book": false
+        }
+      ],
+      "source": "management/company primary + Jefferies · curated reconciliation 2026-09-03",
       "evidence_paths": [
-        "_meta/reconciliation-2026-09-02.md"
+        "_meta/reconciliation-2026-09-03.md"
       ],
-      "evidence_anchor": "D5 · TSEM — the Street takes the company's FY28 MARGIN but not its FY28 VOLUME. And Stifel initiates Buy at the very bottom of the target range.",
-      "origin": "curated_reconciliation",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "reco-e39b6c9a97af",
-      "asof": "2026-09-03",
-      "source_date": "2026-09-02",
-      "type": "model_check",
-      "priority": "watch",
-      "score": 41,
-      "title": "D6 · AXTI — management's FIRST-EVER capex path runs 40-90% ABOVE consensus. This is the cleanest hard divergence of the run.",
-      "tickers": [
-        "AXTI"
-      ],
-      "in_book": [],
-      "impact": "watch",
-      "urgency": "immediate",
-      "confidence": "medium",
-      "why_now": "Unlike D4, this one is not hedged: it is a management capex plan, stated on the record, and it is the first",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the AXTI model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
-      "readthrough": [],
-      "source": "management/company primary · curated reconciliation 2026-09-02",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-09-02.md"
-      ],
-      "evidence_anchor": "D6 · AXTI — management's FIRST-EVER capex path runs 40-90% ABOVE consensus. This is the cleanest hard divergence of the run.",
+      "evidence_anchor": "D-5 · ORCL — the PT is 18% above consensus, and the stated downside case IS consensus",
       "origin": "curated_reconciliation",
       "feedback": "",
       "feedback_note": "",

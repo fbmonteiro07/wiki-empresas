@@ -1,6 +1,6 @@
 # Daily Analyst Brief
 
-_Generated 2026-09-03 · 50 active signals · latest reconciliation: reconciliation-2026-09-02.md._
+_Generated 2026-09-03 · 53 active signals · latest reconciliation: reconciliation-2026-09-03.md._
 
 > ⚠️ **Portfolio priority is provisional.** _data/book.json is still a seed with unknown weights. Book badges identify seeded names but do not represent real exposure.
 
@@ -8,18 +8,18 @@ _Generated 2026-09-03 · 50 active signals · latest reconciliation: reconciliat
 
 | Rank | Ticker | Book | Signals | Why focus now |
 |---:|---|---|---:|---|
-| 1 | **NVDA** | seed | 7 | The HBM $/Gb anchor this wiki has been quoting is the WRONG VENDOR'S PRICE; 2027 DRAM bit supply — a three-way split with TWO LEGS INSIDE MORGAN STANLEY |
-| 2 | **SKHYNIX** | — | 4 | The HBM $/Gb anchor this wiki has been quoting is the WRONG VENDOR'S PRICE; 2027 DRAM bit supply — a three-way split with TWO LEGS INSIDE MORGAN STANLEY |
-| 3 | **MU** | — | 3 | The HBM $/Gb anchor this wiki has been quoting is the WRONG VENDOR'S PRICE; 2027 DRAM bit supply — a three-way split with TWO LEGS INSIDE MORGAN STANLEY |
-| 4 | **SAMSUNG** | — | 3 | The HBM $/Gb anchor this wiki has been quoting is the WRONG VENDOR'S PRICE; 2027 DRAM bit supply — a three-way split with TWO LEGS INSIDE MORGAN STANLEY |
-| 5 | **GOOG** | seed | 6 | GOOG/AVGO/ANTHROPIC — the FT (08-04) SIZES a figure the wiki had marked unsizeable, and it is the EARLIER source; Rating-action DATING was wrong on two pages |
-| 6 | **AVGO** | seed | 5 | GOOG/AVGO/ANTHROPIC — the FT (08-04) SIZES a figure the wiki had marked unsizeable, and it is the EARLIER source; AVGO — 2026-09-03: POST-PRINT BROKER CALLBACKS ALREADY SCHEDULED — the fastest read on how the Street… |
+| 1 | **NVDA** | seed | 8 | The HBM $/Gb anchor this wiki has been quoting is the WRONG VENDOR'S PRICE; 2027 DRAM bit supply — a three-way split with TWO LEGS INSIDE MORGAN STANLEY |
+| 2 | **AVGO** | seed | 6 | D-1 · 🔴 AVGO — the house FY28 EPS sits ABOVE the entire visible sell-side range; GOOG/AVGO/ANTHROPIC — the FT (08-04) SIZES a figure the wiki had marked unsizeable, and it is the EARLIER source |
+| 3 | **SKHYNIX** | — | 4 | The HBM $/Gb anchor this wiki has been quoting is the WRONG VENDOR'S PRICE; 2027 DRAM bit supply — a three-way split with TWO LEGS INSIDE MORGAN STANLEY |
+| 4 | **MU** | — | 3 | The HBM $/Gb anchor this wiki has been quoting is the WRONG VENDOR'S PRICE; 2027 DRAM bit supply — a three-way split with TWO LEGS INSIDE MORGAN STANLEY |
+| 5 | **SAMSUNG** | — | 3 | The HBM $/Gb anchor this wiki has been quoting is the WRONG VENDOR'S PRICE; 2027 DRAM bit supply — a three-way split with TWO LEGS INSIDE MORGAN STANLEY |
+| 6 | **GOOG** | seed | 6 | GOOG/AVGO/ANTHROPIC — the FT (08-04) SIZES a figure the wiki had marked unsizeable, and it is the EARLIER source; Rating-action DATING was wrong on two pages |
 | 7 | **AAPL** | seed | 3 | AAPL — 2026-09-09: 2026-09-09 "SURPRISE AND SHINE" — THE EVENT NOW HAS A SCORECARD WITH A 2x DISAGREEMENT ON…; AAPL — 2026 EPS house view is 16% above consensus |
-| 8 | **DELL** | — | 4 | DELL — the Street's error was the MARGIN, not the revenue, and the guide sits +6.5% above the FY27 consensus median — but NOT above the street high (basis-corrected 09-02; the quarterly leg closed inside one session); Demand-side ceiling nobody on the wiki had priced: server units capped at ~+30% next year by NON-memory shortages |
-| 9 | **META** | seed | 2 | Rating-action DATING was wrong on two pages; META — 2026-09-23: META CONNECT — 2026-09-23/24. Both UBS (exact dates) and MS ("25 days away" as of 08-30)… |
-| 10 | **MSFT** | seed | 2 | Rating-action DATING was wrong on two pages; MSFT — BofA raises to $600 while sitting BELOW consensus on the earnings it is paying 28x for |
+| 8 | **MSFT** | seed | 3 | Rating-action DATING was wrong on two pages; D-7 · 🔴 MSFT — Jefferies' M365 series was published one day before the segment restatement and is now ~2pts low |
+| 9 | **META** | seed | 3 | Rating-action DATING was wrong on two pages; META — 2026-09-23: META CONNECT — 2026-09-23/24. Both UBS (exact dates) and MS ("25 days away" as of 08-30)… |
+| 10 | **DELL** | — | 4 | DELL — the Street's error was the MARGIN, not the revenue, and the guide sits +6.5% above the FY27 consensus median — but NOT above the street high (basis-corrected 09-02; the quarterly leg closed inside one session); Demand-side ceiling nobody on the wiki had priced: server units capped at ~+30% next year by NON-memory shortages |
 | 11 | **AMZN** | seed | 1 | Rating-action DATING was wrong on two pages |
-| 12 | **ANTHROPIC** | — | 1 | GOOG/AVGO/ANTHROPIC — the FT (08-04) SIZES a figure the wiki had marked unsizeable, and it is the EARLIER source |
+| 12 | **ORCL** | — | 2 | Rating-action DATING was wrong on two pages; D-5 · ORCL — the PT is 18% above consensus, and the stated downside case IS consensus |
 
 ## Highest-priority ideas
 
@@ -49,7 +49,20 @@ _CONTRADICTION · HIGH IMPACT · STANDING · MEDIUM CONFIDENCE_
 - **Attribution:** Morgan Stanley · Shawn Kim + Morgan Stanley semicap + UBS/Samsung IR · curated reconciliation 2026-09-01.
 - **Evidence:** [reconciliation-2026-09-01.md](reconciliation-2026-09-01.md) · signal reco-841e88f06461
 
-### 3. 🔴 DELL — the Street's error was the MARGIN, not the revenue, and the guide sits +6.5% above the FY27 consensus median — but NOT above the street high (basis-corrected 09-02; the quarterly leg closed inside one session)
+### 3. 🔴 D-1 · 🔴 AVGO — the house FY28 EPS sits ABOVE the entire visible sell-side range
+
+_MODEL CHECK · HIGH IMPACT · IMMEDIATE · MEDIUM CONFIDENCE_
+
+- **Tickers:** AVGO · seeded book: AVGO
+- **Why now:** The single most important line of the night. Four independent marks on AVGO's FY28 (fiscal, ending ~Nov 2028)
+- **Belief update:** This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.
+- **Action:** Open the AVGO model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
+- **Falsifier:** A like-for-like estimate bridge or company guide that closes the identified gap.
+- **Read-through:** NVDA (competitor: merchant vs custom ASIC); AMZN (customer: networking); GOOG (customer: custom ASIC (TPU)); META (customer: custom ASIC); MSFT (customer: custom ASIC); TSM (supplier: foundry); MRVL (competitor: custom ASIC)
+- **Attribution:** JPM · curated reconciliation 2026-09-03.
+- **Evidence:** [reconciliation-2026-09-03.md](reconciliation-2026-09-03.md) · signal reco-96db7d4d7c4c
+
+### 4. 🔴 DELL — the Street's error was the MARGIN, not the revenue, and the guide sits +6.5% above the FY27 consensus median — but NOT above the street high (basis-corrected 09-02; the quarterly leg closed inside one session)
 
 _MODEL CHECK · HIGH IMPACT · STANDING · HIGH CONFIDENCE_
 
@@ -62,7 +75,7 @@ _MODEL CHECK · HIGH IMPACT · STANDING · HIGH CONFIDENCE_
 - **Attribution:** management/company primary · curated reconciliation 2026-09-01.
 - **Evidence:** [reconciliation-2026-09-01.md](reconciliation-2026-09-01.md) · signal reco-232ac7c278b6
 
-### 4. 🔴 GOOG/AVGO/ANTHROPIC — the FT (08-04) SIZES a figure the wiki had marked unsizeable, and it is the EARLIER source
+### 5. 🔴 GOOG/AVGO/ANTHROPIC — the FT (08-04) SIZES a figure the wiki had marked unsizeable, and it is the EARLIER source
 
 _MODEL CHECK · HIGH IMPACT · STANDING · MEDIUM-HIGH CONFIDENCE_
 
@@ -75,7 +88,7 @@ _MODEL CHECK · HIGH IMPACT · STANDING · MEDIUM-HIGH CONFIDENCE_
 - **Attribution:** Financial Times · curated reconciliation 2026-09-01.
 - **Evidence:** [reconciliation-2026-09-01.md](reconciliation-2026-09-01.md) · signal reco-0b6826e2d689
 
-### 5. 🔴 Rating-action DATING was wrong on two pages
+### 6. 🔴 Rating-action DATING was wrong on two pages
 
 _DATA QUALITY · HIGH IMPACT · STANDING · MEDIUM CONFIDENCE_
 
@@ -88,7 +101,33 @@ _DATA QUALITY · HIGH IMPACT · STANDING · MEDIUM CONFIDENCE_
 - **Attribution:** J.P. Morgan IG TMT credit · Spear/Degen · curated reconciliation 2026-09-01.
 - **Evidence:** [reconciliation-2026-09-01.md](reconciliation-2026-09-01.md) · signal reco-f387735216ae
 
-### 6. 🔴 NVDA — the first BEARISH read of the 70% guide in the open window
+### 7. 🔴 D-2 · 🔴 AVGO — the house implicitly assumes a ship rate the supply chain is not underwriting
+
+_MODEL CHECK · HIGH IMPACT · IMMEDIATE · MEDIUM CONFIDENCE_
+
+- **Tickers:** AVGO · seeded book: AVGO
+- **Why now:** JPM's framing, now on the page: AVGO's FY27 order book is $140-150bn, and the supply-constrained ship rate
+- **Belief update:** This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.
+- **Action:** Open the AVGO model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
+- **Falsifier:** AVGO converts more of its backlog than the supply chain has been converting. That is a falsifiable assumption
+- **Read-through:** NVDA (competitor: merchant vs custom ASIC); AMZN (customer: networking); GOOG (customer: custom ASIC (TPU)); META (customer: custom ASIC); MSFT (customer: custom ASIC); TSM (supplier: foundry); MRVL (competitor: custom ASIC)
+- **Attribution:** management/company primary + JPM · curated reconciliation 2026-09-03.
+- **Evidence:** [reconciliation-2026-09-03.md](reconciliation-2026-09-03.md) · signal reco-02bb8023a7cf
+
+### 8. 🔴 D-7 · 🔴 MSFT — Jefferies' M365 series was published one day before the segment restatement and is now ~2pts low
+
+_MODEL CHECK · HIGH IMPACT · IMMEDIATE · MEDIUM CONFIDENCE_
+
+- **Tickers:** MSFT · seeded book: MSFT
+- **Why now:** Jefferies models M365 Commercial Cloud y/y growth 13.9% (Sep-26E) → 14.7% → 15.6% → 16.6% (Jun-27E), published
+- **Belief update:** This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.
+- **Action:** Open the MSFT model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
+- **Falsifier:** A like-for-like estimate bridge or company guide that closes the identified gap.
+- **Read-through:** AVGO (supplier: custom ASIC); NVDA (supplier: GPUs); AAOI (supplier: optical transceivers); ALAB (supplier: scale-up fabric); AMD (supplier: MI GPUs); CEG (supplier: nuclear PPA); CIEN (supplier: DCI/optical)
+- **Attribution:** BofA + Jefferies · curated reconciliation 2026-09-03.
+- **Evidence:** [reconciliation-2026-09-03.md](reconciliation-2026-09-03.md) · signal reco-cbb33ef6c48f
+
+### 9. 🔴 NVDA — the first BEARISH read of the 70% guide in the open window
 
 _NARRATIVE SHIFT · HIGH IMPACT · STANDING · MEDIUM CONFIDENCE_
 
@@ -101,7 +140,7 @@ _NARRATIVE SHIFT · HIGH IMPACT · STANDING · MEDIUM CONFIDENCE_
 - **Attribution:** Morgan Stanley · Charlie Chan · curated reconciliation 2026-09-01.
 - **Evidence:** [reconciliation-2026-09-01.md](reconciliation-2026-09-01.md) · signal reco-df1f585788a9
 
-### 7. 🔴 Demand-side ceiling nobody on the wiki had priced: server units capped at ~+30% next year by NON-memory shortages
+### 10. 🔴 Demand-side ceiling nobody on the wiki had priced: server units capped at ~+30% next year by NON-memory shortages
 
 _NARRATIVE SHIFT · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
@@ -114,7 +153,7 @@ _NARRATIVE SHIFT · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 - **Attribution:** Morgan Stanley · Shawn Kim · curated reconciliation 2026-09-01.
 - **Evidence:** [reconciliation-2026-09-01.md](reconciliation-2026-09-01.md) · signal reco-39a23068b901
 
-### 8. 🔴 GOOG — 2026 revenue house view is 18% above consensus
+### 11. 🔴 GOOG — 2026 revenue house view is 18% above consensus
 
 _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
@@ -127,7 +166,7 @@ _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 - **Attribution:** Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-03.
 - **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-69989dc65f5c
 
-### 9. 🔴 AAPL — 2026 EPS house view is 16% above consensus
+### 12. 🔴 AAPL — 2026 EPS house view is 16% above consensus
 
 _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
@@ -139,45 +178,6 @@ _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 - **Read-through:** TSM (supplier: foundry); ARM (supplier: IP)
 - **Attribution:** Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-09-03.
 - **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-e65d2d0925a1
-
-### 10. 🔴 GOOG — 2027 revenue house view is 17% above consensus
-
-_MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
-
-- **Tickers:** GOOG · seeded book: GOOG
-- **Why now:** Capstone carries 2027 revenue at $641.0bn versus Bloomberg consensus at $548.3bn as of 2026-09-03, a derived +16.9% gap. Revenue comparisons require a basis check.
-- **Belief update:** The house/Street disagreement requires an explicit driver bridge.
-- **Action:** Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
-- **Falsifier:** A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.
-- **Read-through:** AVGO (supplier: custom ASIC (TPU)); NVDA (supplier: GPUs); ANTHROPIC (customer: TPU compute); BE (supplier: on-site fuel cells); CIEN (supplier: DCI/optical); COHR (supplier: optical); MRVL (supplier: optical DSP)
-- **Attribution:** Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-03.
-- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-d55b6e41c233
-
-### 11. 🔴 MSFT — BofA raises to $600 while sitting BELOW consensus on the earnings it is paying 28x for
-
-_MODEL CHECK · HIGH IMPACT · STANDING · HIGH CONFIDENCE_
-
-- **Tickers:** MSFT · seeded book: MSFT
-- **Why now:** PO $500 → $600 (Buy reiterated, px $507.29, +18.3%), basis 24x → 28x CY27E ("a premium to the peer group of 18-25x"). PO is the only line changed in the Key Changes table — no estimate moved.
-- **Belief update:** This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.
-- **Action:** Open the MSFT model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
-- **Falsifier:** A like-for-like estimate bridge or company guide that closes the identified gap.
-- **Read-through:** AVGO (supplier: custom ASIC); NVDA (supplier: GPUs); AAOI (supplier: optical transceivers); ALAB (supplier: scale-up fabric); AMD (supplier: MI GPUs); CEG (supplier: nuclear PPA); CIEN (supplier: DCI/optical)
-- **Attribution:** BofA · curated reconciliation 2026-09-01.
-- **Evidence:** [reconciliation-2026-09-01.md](reconciliation-2026-09-01.md) · signal reco-ae3d6ef2126d
-
-### 12. 🟡 China memory — the derating argument, and the constraint is mis-located on the wiki
-
-_DATA QUALITY · HIGH IMPACT · STANDING · MEDIUM CONFIDENCE_
-
-- **Tickers:** MU, SKHYNIX, SAMSUNG, NVDA · seeded book: NVDA
-- **Why now:** CXMT wafer capacity may exceed Micron by 2028 → 3 DRAM (basis now stated: wafer capacity, rank CXMT 3 / MU 4); YMTC ≥100k wafers/yr → potentially 2 NAND above SK hynix by 2028-29. 2Q gross margin 87.6%, mature-product yield 90%; 3Q pricing at a 5-10% discount to global at the Chinese government's request (temporary).
-- **Belief update:** This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.
-- **Action:** Correct the source, unit or period mapping for MU/SKHYNIX/SAMSUNG/NVDA, then audit every dependent model, assumption and cross-page reference before adopting a new mark.
-- **Falsifier:** A primary-source check showing the current source, unit and period mapping was already correct.
-- **Read-through:** AVGO (customer: HBM); AMAT (supplier: WFE); AMD (customer: HBM); ASML (supplier: litho); KLAC (supplier: process control); LRCX (supplier: NAND/HBM WFE); TOKYOELEC (supplier: WFE)
-- **Attribution:** Morgan Stanley · Shawn Kim + Morgan Stanley · Charlie Chan + JPM + Jefferies · curated reconciliation 2026-09-01.
-- **Evidence:** [reconciliation-2026-09-01.md](reconciliation-2026-09-01.md) · signal reco-54860d1ca2e8
 
 ## Catalysts requiring preparation
 

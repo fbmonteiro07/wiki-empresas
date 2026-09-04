@@ -12,30 +12,27 @@ _Generated 2026-09-03 · the standing view of where our model and the curated re
 | GOOG | Revenue $bn | 2027 | 641.00 | 548.30 | +17% |
 | AAPL | EPS | 2026 | 10.12 | 8.71 | +16% |
 
-## Curated divergences — latest reconciliation (`reconciliation-2026-09-02.md`)
+## Curated divergences — latest reconciliation (`reconciliation-2026-09-03.md`)
 
 | Name | New datapoint | Read (the edge) |
 |---|---|---|
-| D1 · AVGO | consensus is AT the FY27 guide but ~18% BELOW the FY28 guide. The whole debate is FY27-vs-FY28 phasing, and it is a VOLUME gap, not a margin gap. | consensus is AT the FY27 guide but ~18% BELOW the FY28 guide. The whole debate is FY27-vs-FY28 phasing, and it is a VOLUME gap, not a margin gap. |
-| D2 · AVGO | the Capstone house model's GW ladder MATCHES management almost exactly, but the house books ~20% more AI revenue over FY27-28. The gap is entirely DEPLOYMENT TIMING, and the house should make it explicit. | MODEL BRIDGE TO RUN: the house is modelling ~29.5GW of demand as though ~29.5GW ships, at ~$14bn/GW. The same $413bn can be reached from ~15GW shipped at ~$27bn/GW. These are NOT the same model — they have opposite sensitivities. |
-| D3 · GOOG | the house's stated EPS edge has CLOSED. Consensus caught up; the page still claims the old gap. | the house's stated EPS edge has CLOSED. Consensus caught up; the page still claims the old gap. |
-| D4 · AXTI | management's "revenue opportunity exiting 2026" runs ~15-25% ABOVE the consensus-implied Q4. Flagged, deliberately not scored. | management's "revenue opportunity exiting 2026" runs ~15-25% ABOVE the consensus-implied Q4. Flagged, deliberately not scored. |
-| D5 · TSEM | the Street takes the company's FY28 MARGIN but not its FY28 VOLUME. And Stifel initiates Buy at the very bottom of the target range. | the Street takes the company's FY28 MARGIN but not its FY28 VOLUME. And Stifel initiates Buy at the very bottom of the target range. |
-| D6 · AXTI | management's FIRST-EVER capex path runs 40-90% ABOVE consensus. This is the cleanest hard divergence of the run. | Internally coherent with everything else AXT said: |
+| 🔴 D-1 · 🔴 AVGO | the house FY28 EPS sits ABOVE the entire visible sell-side range | The house is +5.0% ABOVE the street high and +24.2% above the median. |
+| 🔴 D-2 · 🔴 AVGO | the house implicitly assumes a ship rate the supply chain is not underwriting | The house is not merely above the guide — it is above the guide *for a specific mechanical reason*: it assumes AVGO converts more of its backlog than the supply chain has been converting. |
+| D-3 · ⚠️ AVGO | BBG consensus is internally inconsistent one day after the print | The most likely reading is that the FY28 total-revenue line has not yet fully absorbed the $230bn AI guide |
+| 🔴 D-4 · 🔴 CRWV | Jefferies is ~90% above consensus on CY28 EBIT, and the same gap shows up twice | This is the cleanest testable divergence of the night. |
+| D-5 · ORCL | the PT is 18% above consensus, and the stated downside case IS consensus | Jefferies' bear case for FY30 is approximately what consensus already expects for FY29 |
+| D-6 · NVDA | both the house AND consensus sit below the company's own growth framing | both the house AND consensus sit below the company's own growth framing |
+| 🔴 D-7 · 🔴 MSFT | Jefferies' M365 series was published one day before the segment restatement and is now ~2pts low | Any Sep-26 print scored against Jefferies' 13.9% would read as a large beat that is purely definitional. |
+| D-8 · GEV | a 4GW JV that contributes nothing inside the consensus horizon | The entire GEV contribution from the largest announced data-center turbine JV sits beyond the last year consensus forecasts. |
+| — | D-9 · pre-existing house-vs-consensus gaps re-confirmed (not new tonight, but they frame the new sources) | D-9 · pre-existing house-vs-consensus gaps re-confirmed (not new tonight, but they frame the new sources) |
 
-## Consensus PT vs spot — live pull in `reconciliation-2026-09-02.md` (upside ranked)
+## Consensus PT vs spot — live pull in `reconciliation-2026-09-03.md` (upside ranked)
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|
-| SKHYNIX | 1,580,000 | 3,198,064 | +102% | street high 5,300,000 · low 680,000 below spot · 46/1/0 of 47 |
-| SAMSUNG | 248,000 | 491,782 | +98% | street high 725,000 · low 300,000 ABOVE spot · 43/0/0 of 43 |
-| CRDO | 164 | 283 | +73% | street high 350 · low 227 ABOVE spot · 22/1/0 of 23 |
-| AXTI | 56 | 95 | +69% | street high 125 · low 55 below spot · 5/1/0 of 6 |
-| MU | 958 | 1,578 | +65% | street high 2,200 · low 900 below spot · 56/4/0 of 60 |
-| COHR | 264 | 418 | +58% | street high 500 · low 280 ABOVE spot · 22/6/0 of 28 |
-| TSEM | 206 | 312 | +51% | street high 367 · low 260 ABOVE spot · 8/1/1 of 10 |
+| CRWV | 85 | 146 | +72% | street high 317 · low 39 below spot · 29/11/3 of 43 |
+| ORCL | 154 | 245 | +59% | street high 400 · low 110 below spot · 42/8/1 of 51 |
 | AVGO | 357 | 532 | +49% | street high 675 · low 350 below spot · 58/4/0 of 62 |
-| ON | 74 | 108 | +47% | street high 150 · low 85 ABOVE spot · 11/19/0 of 30 |
-| LITE | 847 | 1,136 | +34% | street high 1,400 · low 820 below spot · 29/4/0 of 33 |
-| TSM | 417 | 551 | +32% | street high 700 · low 440 ABOVE spot · 29/1/0 of 30 |
-| GOOG | 339 | 428 | +26% | street high 475 · low 379 ABOVE spot · 17/1/0 of 18 |
+| NVDA | 228 | 323 | +41% | street high 515 · low 180 below spot · 79/2/1 of 82 |
+| GEV | 942 | 1,239 | +32% | street high 1,450 · low 827 below spot · 33/7/2 of 42 |
+| MSFT | 510 | 571 | +12% | street high 870 · low 400 below spot · 69/4/0 of 73 |
