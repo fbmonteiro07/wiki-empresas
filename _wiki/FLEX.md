@@ -7,11 +7,11 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\FLEX` (filings + trans
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $31.5bn | $42.0bn |
+| Revenue | $31.5bn | $42.1bn |
 | Gross profit | $3.1bn | $4.3bn |
 | Gross margin | 9.7% | 10.2% |
 | EBITDA | $2.7bn | $3.9bn |
-| EPS | $4.06 | $6.42 |
+| EPS | $4.07 | $6.43 |
 | Capex | $1.4bn | $1.3bn |
 | OCF (≈EBITDA) | $2.7bn | $3.9bn |
 

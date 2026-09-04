@@ -14,7 +14,7 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\NFLX` (10-K + transcri
 | Gross margin | 50.3% | 52.1% |
 | EBITDA | $16.8bn | $20.2bn |
 | EPS | $3.13 | $3.86 |
-| Capex | $727m | $805m |
+| Capex | $722m | $805m |
 | OCF (≈EBITDA) | $16.8bn | $20.2bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

@@ -149,12 +149,12 @@ footer b{color:var(--ink2)}
   <div class="brandrow">
     <h1>NVDA GW-Replacement DCF</h1>
     <span class="chip">EDITABLE ENGINE</span>
-    <span class="src">Replica of <span class="mono">Template DCF NVDA - Corrected - AI Labs - GW - Replacement - Labs Reference.xlsx</span> · P:\Modelos oficiais · saved 02-Sep-2026 · dashboard re-synced 15:03 · US$ mm</span>
+    <span class="src">Replica of <span class="mono">Template DCF NVDA - Corrected - AI Labs - GW - Replacement - Labs Reference.xlsx</span> · P:\Modelos oficiais · saved 03-Sep-2026 14:46 (14 sheets) · dashboard re-synced 03-Sep · US$ mm</span>
   </div>
   <div class="heromets">
     <div class="met big"><div class="k">Fair value / share</div><div class="v" id="mPx">—</div><div class="sub" id="mPxSub">dated 27-Aug-26 · Ke − g convention of the sheet</div></div>
-    <div class="met"><div class="k">vs ref price</div><div class="v" id="mUp">—</div><div class="sub" id="mRef">ref 217.55 · BBG close 31-Aug-26</div></div>
-    <div class="met"><div class="k">vs workbook</div><div class="v" id="mDelta">—</div><div class="sub">workbook saved: $258.43</div></div>
+    <div class="met"><div class="k">vs ref price</div><div class="v" id="mUp">—</div><div class="sub" id="mRef">ref 227.71 · BBG 03-Sep-26 snapshot</div></div>
+    <div class="met"><div class="k">vs workbook</div><div class="v" id="mDelta">—</div><div class="sub">workbook saved: $292.65</div></div>
     <div class="met"><div class="k">TV share of PV</div><div class="v" id="mTV">—</div><div class="sub">Gordon @ period 20</div></div>
     <div class="met"><div class="k">P / NOPAT</div><div class="v" id="mPE">—</div><div class="sub">CY27 · CY28</div></div>
     <div class="met"><div class="k">Engine fidelity</div><div class="v" style="font-size:13px;margin-top:6px"><span class="badge ok" id="mBadge">checking…</span></div><div class="sub">engine vs workbook at file inputs</div></div>
@@ -276,7 +276,7 @@ footer b{color:var(--ink2)}
   <section class="tabpane active" id="tab-resumo">
     <div class="panelgrid">
       <div class="panel wide"><h3>Resumo geral — one table across every block</h3>
-        <p class="note">US$bn unless noted. CY26–CY30, then CY35 / CY40 / CY45 for the DCF and cloud blocks only — the labs, gross-up and token blocks end at CY30, and the gross-up is hard-stopped at CY28 (the CY29–30 collision). Every cell is live: move a dial in the console and the whole table re-solves. Mirrors the <code>Resumo Geral</code> sheet in the workbook.</p>
+        <p class="note">US$bn unless noted. CY26–CY30, then CY35 / CY40 / CY45 for the DCF and cloud blocks only — the labs, gross-up and token blocks end at CY30, and the gross-up is hard-stopped at CY28 (the CY29–30 collision). Every cell is live: move a dial in the console and the whole table re-solves. Mirrors the <code>Resumo Geral</code> sheet in the workbook (its cloud block reads from <code>ROIC Cloud Simples</code> since 03-Sep; the coverage, shortfall and fleet-÷-vintage lines below are the same rows).</p>
         <div class="scroller"><table class="data" id="tblResumo"></table></div>
         <div class="divider"></div>
         <div class="kv cols3" id="kvResumo"></div>
@@ -439,7 +439,7 @@ footer b{color:var(--ink2)}
 <div id="tip"></div>
 
 <footer>
-  <b>Conventions preserved from the workbook:</b> NPV at 1-Jan-26 of CY26–45 end-of-year distributions; TV = CY45 distribution × (1+g)/(Ke−g) discounted 20 periods; the whole PV rolled to the valuation date at (1+Ke)^(days/365). Distribution = NOPAT × payout — a proxy, not FCFE. GW replacement: supported GW = MIN of chip / networking / hard-asset stocks (complements, never added); retirement value is informational and never re-enters capex. Cloud cohorts: straight-line by vintage, full-year depreciation from the commissioning year, 2-yr lag. <b>Retained scenario assumptions the sheet itself flags:</b> 100% terminal payout with positive perpetual growth (no reinvestment bridge); 90% cloud EBITDA margin; CY27 bottom-up capex exceeds the total-capex models (102.5%); negative CY23 residual retained; open/closed Labs economics are a user example, not broker forecasts. <b>Sources:</b> capex bottom-up + NVDA forecast = house AI Model (27-Aug-26 vintage); useful lives 5/5/25 user scenario 31-Aug-26; inputs re-synced 02-Sep-26 to the official file (CY29 capex growth 10%→0%, GM floor 64%→60%); ref price BBG close 31-Aug-26. Engine verified against the workbook cell-for-cell (14,274 formulas re-evaluated; 44 checkpoint values reproduced bit-for-bit).
+  <b>Conventions preserved from the workbook:</b> NPV at 1-Jan-26 of CY26–45 end-of-year distributions; TV = CY45 distribution × (1+g)/(Ke−g) discounted 20 periods; the whole PV rolled to the valuation date at (1+Ke)^(days/365). Distribution = NOPAT × payout — a proxy, not FCFE. GW replacement: supported GW = MIN of chip / networking / hard-asset stocks (complements, never added); retirement value is informational and never re-enters capex. Cloud cohorts: straight-line by vintage, full-year depreciation from the commissioning year, 2-yr lag. <b>Retained scenario assumptions the sheet itself flags:</b> 100% terminal payout with positive perpetual growth (no reinvestment bridge); 90% cloud EBITDA margin; CY27 bottom-up capex exceeds the total-capex models (102.5%); negative CY23 residual retained; open/closed Labs economics are a user example, not broker forecasts. <b>Sources:</b> capex bottom-up + NVDA forecast = house AI Model (27-Aug-26 vintage); useful lives 5/5/25 user scenario 31-Aug-26; inputs re-synced 02-Sep-26 to the official file (CY29 capex growth 10%→0%, GM floor 64%→60%) and again 03-Sep-26 (CY29 capex growth 0%→15%, Felipe's edit; the workbook also gained a <code>ROIC Cloud Simples</code> sheet — the closed-form fleet, same arithmetic as this engine's hurdle rows); ref price BBG 03-Sep-26 snapshot. Engine verified against the workbook cell-for-cell (14,274 formulas re-evaluated; 44 checkpoint values reproduced bit-for-bit).
 </footer>
 
 <script>
@@ -449,7 +449,7 @@ const FILE = {
  chips:[42411.78429459569,114846.5079563297,190171.36087311106,399900.33876588667,767002.6163141985,1157436.3523740668],
  nw:[12810.585642691623,34371.34178788408,65259.50252817853,178576.41748539842,435134.5910540439,715097.2059606818],
  oth:[34490.038268785145,84645.84171643095,140829.88978513746,323121.9047414263,683275.731164706,1040564.949653554],
- gCapex29:0,gCapex30:0.08,
+ gCapex29:0.15,gCapex30:0.08,
  costGW:[40,40,40,40,40,45,50,45,40,35,30,30,30,30,30,30,30,30,30,30,30,30,30],
  nvdaRevChips:[38518.10659033064,102470.1886726464,158799.22567251758,311815.5170199417,578573.6453898079,783966.6825195056],
  share29:0.62,share30:0.55,share31:0.5,
@@ -470,7 +470,7 @@ const FILE = {
  sgaOpen:0,sgaClosed:0.05,taxLabs:0.15,evMult:15,mapShare:1,trCov:1,
  cloudEbitM:0.38,labsYear:2030,densClosed:40000,densOpen:17500,
  allocAnth:0.4,allocOAI:0.3,allocGem:0.15,allocMeta:0.15,
- refPx:217.55,
+ refPx:227.71,
  // ---- LABS -> SYSTEM GROSS-UP (CY26-30). HARD: house AI Model via 'Labs Official Ref' 31-Aug-26
  big2Rev:[96.46858838416958,215.91369450175986,371.2,544.0,767.5],
  big2Inf:[45.75808698203816,97.27891732915768,156.73126032849163,211.29847774776943,280.37413289280875],
@@ -498,9 +498,9 @@ const FILE = {
 const MAPREF={tok:[360,1089,2240,3428,4714],rev:[140,340.9995,563.9495,692.8484,763.6435],
  gp:[76.3502,191.9454,326.5428,413.4703,469.3549],frontRev:[99.8346,246.9558,414.7397,517.3343,578.7957],
  openPrice:0.1489};  // OpenRouter observed commodity-open blended $/Mtok (independent of the fit)
-// workbook checkpoints re-read 2026-09-02 15:03 (official file after Felipe's 12:03 edit: J10 CY29 capex growth 0.10->0, D97 GM floor 0.64->0.60)
-const CHECKS = {px:258.427554552823,pvFlows:3498523.9249887047,pvTV:2354301.3830513335,
- gwActive45:1461.7204810870674,rev29:877177.0781858733,sensI6:211.46240420795849,
+// workbook checkpoints re-read 2026-09-03 (official file saved 14:46: J10 CY29 capex growth 0->0.15; ROIC Cloud Simples sheet added; D92 292.65)
+const CHECKS = {px:292.64625341023077,pvFlows:3924626.5664765565,pvTV:2703178.278971519,
+ gwActive45:1680.9785532501269,rev29:1004008.6029562008,sensI6:238.65098456713824,
  grid2_5_40:235.09478481486804,cohNet28:807293.1446165534,labsEV30:8163651.025961697,gwInf30:71.86887657909455};
 
 const YRS=[];for(let y=2023;y<=2045;y++)YRS.push(y);
@@ -883,7 +883,7 @@ function render(){
   $('mPxSub').textContent=`dated ${S.valDate} · Ke ${fPct(S.ke)} · g ${fPct(S.gPerp)}`;
   const up=E.px/S.refPx-1;
   $('mUp').innerHTML=`<span class="${up>=0?'delta-pos':'delta-neg'}">${up>=0?'+':''}${(up*100).toFixed(1)}%</span>`;
-  $('mRef').textContent=`ref $${S.refPx.toFixed(2)} · BBG close 31-Aug-26`;
+  $('mRef').textContent=`ref $${S.refPx.toFixed(2)} · BBG 03-Sep-26 snapshot`;
   const dd=E.px-CHECKS.px;
   $('mDelta').innerHTML=Math.abs(dd)<0.005?'<span style="color:var(--ink3)">±0.00</span>':`<span class="${dd>=0?'delta-pos':'delta-neg'}">${dd>=0?'+':''}${dd.toFixed(2)}</span>`;
   $('mTV').textContent=fPct(E.pvTV/(E.pvFlows+E.pvTV));
@@ -1222,6 +1222,9 @@ function render(){
    row('Fleet ROIC','DERIVED',y=>E.fleetROIC[IX(y)],fPct,true);
    row('Fleet revenue hurdle @ ROIC target A','DERIVED',y=>E.hurdA[IX(y)],fBn);
    row('Fleet revenue hurdle @ ROIC target B','DERIVED',y=>E.hurdB[IX(y)],fBn);
+   row('Cloud revenue ÷ hurdle @ A (x) — coverage','DERIVED',y=>E.hurdA[IX(y)]>0?E.cloudRev[IX(y)]/E.hurdA[IX(y)]:null,x2);
+   row('Revenue shortfall / (surplus) vs hurdle @ A','DERIVED',y=>E.hurdA[IX(y)]-E.cloudRev[IX(y)],v=>v>=0?fBn(v):'('+fBn(-v)+')');
+   row('Fleet hurdle ÷ single-vintage hurdle @ A (x) — installed-base weight','DERIVED',y=>{const i=IX(y),vA=E.vintGross[i]>0?(S.roicA*E.vintGross[i]/(1-S.taxCloud)+E.vintDep[i])/S.ebitdaM:0;return vA>0?E.hurdA[i]/vA:null;},x2);
    row('Actual revenue per cloud GW-year','DERIVED',y=>E.revPerCloudGW[IX(y)],mny);
    row('Break-even rent @9%, fleet-avg cost','DERIVED',y=>E.CV.breakEven(E.CV.fleetCost[IX(y)],0.09),mny);
    row('Surplus / (deficit) vs break-even','DERIVED',y=>E.revPerCloudGW[IX(y)]-E.CV.breakEven(E.CV.fleetCost[IX(y)],0.09),mny,true);
@@ -1369,3 +1372,5 @@ window.addEventListener('resize',queue);
 matchMedia('(prefers-color-scheme: dark)').addEventListener('change',queue);
 new MutationObserver(queue).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
 </script>
+
+

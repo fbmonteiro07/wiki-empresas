@@ -10,10 +10,10 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\ALAB` (filings + trans
 | Revenue | $1.9bn | $3.1bn |
 | Gross profit | $1.3bn | $2.2bn |
 | Gross margin | 72.2% | 70.8% |
-| EBITDA | $694m | $1.1bn |
-| EPS | $3.83 | $6.43 |
-| Capex | $63m | $93m |
-| OCF (≈EBITDA) | $694m | $1.1bn |
+| EBITDA | $712m | $1.2bn |
+| EPS | $3.85 | $6.54 |
+| Capex | $64m | $97m |
+| OCF (≈EBITDA) | $712m | $1.2bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

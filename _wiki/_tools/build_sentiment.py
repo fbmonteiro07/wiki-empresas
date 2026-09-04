@@ -1076,10 +1076,20 @@ def step_events(universe):
             rets = [bb[t]["PX_LAST"][d] / bb[t]["PX_LAST"][prev] - 1 for t in tickers if d in bb[t]["PX_LAST"] and prev in bb[t]["PX_LAST"]]
             if rets: lvl *= 1 + sum(rets) / len(rets)
         ew[d] = lvl; prev = d
+    _xs_cache = {}
+    def xs_mean(d0, d1):
+        """Cross-sectional mean buy-and-hold return of the universe over [d0, d1] — the right benchmark for a
+        cross-sectional study (a daily-rebalanced EW index carries a rebalancing premium that biased 15-day drifts)."""
+        k = (d0, d1)
+        if k not in _xs_cache:
+            rs = [bb[x]["PX_LAST"][d1] / bb[x]["PX_LAST"][d0] - 1 for x in tickers if d0 in bb[x]["PX_LAST"] and d1 in bb[x]["PX_LAST"]]
+            _xs_cache[k] = (sum(rs) / len(rs)) if len(rs) >= 20 else None
+        return _xs_cache[k]
     def rel(t, d0, d1):
         p0, p1 = bb[t]["PX_LAST"].get(d0), bb[t]["PX_LAST"].get(d1)
-        if p0 is None or p1 is None or d0 not in ew or d1 not in ew: return None, None
-        raw = p1 / p0 - 1; return raw, raw - (ew[d1] / ew[d0] - 1)
+        mu = xs_mean(d0, d1) if (p0 is not None and p1 is not None) else None
+        if p0 is None or p1 is None or mu is None: return None, None
+        raw = p1 / p0 - 1; return raw, raw - mu
     def win_mean(series, d0, d1, wts=None):
         num = den = 0.0
         for k, v in series.items():

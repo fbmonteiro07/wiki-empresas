@@ -4,6 +4,7 @@ _Generated 2026-06-19 · last updated 2026-08-28 (/run-inbox, 8 sources — fold
 
 | Theme | Page | What it is |
 |---|---|---|
+| Data infrastructure & observability in the AI stack | [ai-data-infra-observability](ai-data-infra-observability.md) | The "token path is data" layer: SNOW/Databricks as AI data repositories, MDB/Postgres/Redis as agent memory, ESTC as context plane; DDOG/DT/Splunk/New Relic/Grafana as the observability column (AI-native consumption, LLM/agent evals, security convergence, log-cost deflation). Built 2026-09-03 from the corpus; no company pages exist for these names, but 35 earnings-call transcripts (2024-11 → 2026-09) are archived in `SNOW/ MDB/ DDOG/ DT/ ESTC/transcripts/`. |
 | AI builder toolkit | [ai-builder-toolkit](ai-builder-toolkit.md) | Developer/data/design systems whose billable activity can rise as agents create more code, state, queries and variants. |
 | Secure & sovereign AI infrastructure | [secure-sovereign-infrastructure](secure-sovereign-infrastructure.md) | Cybersecurity, hardware identity, private/hybrid infrastructure and cloud repatriation as second-order AI beneficiaries. |
 | 800V DC power | [800v-dc-power](800v-dc-power.md) | The 48V/415V→800V DC data-center power transition; content-per-MW re-rating, SST/GaN/SiC, gated by the chip ramp. |

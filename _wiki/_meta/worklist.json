@@ -1,14 +1,13 @@
 {
  "asof": "2026-09-03",
- "bbg_missing": [
-  "AEIS"
- ],
+ "bbg_missing": [],
  "no_transcript": [
   "POET",
   "SMTC"
  ],
  "private_skipped": [
   "ANTHROPIC",
+  "AVGO",
   "CEREBRAS",
   "GOOG",
   "INTC",
@@ -18,7 +17,7 @@
   "SPCX"
  ],
  "actions": {
-  "fetch_estimates_cmd": "py \"E:\\.claude\\scripts\\fetch_estimates.py\" AEIS",
+  "fetch_estimates_cmd": null,
   "transcript_tasks": [
    {
     "agent": "transcript-fetcher",

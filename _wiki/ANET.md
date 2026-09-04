@@ -13,7 +13,7 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\ANET` (filings + trans
 | Gross profit | $7.7bn | $10.2bn |
 | Gross margin | 62.8% | 62.8% |
 | EBITDA | $6.0bn | $7.9bn |
-| EPS | $3.88 | $5.19 |
+| EPS | $3.89 | $5.19 |
 | Capex | $155m | $147m |
 | OCF (≈EBITDA) | $6.0bn | $7.9bn |
 

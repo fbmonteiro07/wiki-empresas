@@ -679,6 +679,41 @@ def dedupe_signals(signals: list[dict]) -> list[dict]:
     return sorted(best.values(), key=lambda signal: (-signal["score"], signal["title"]))
 
 
+def carry_forward_open_signals(signals: list[dict]) -> list[dict]:
+    """Keep unresolved curated findings visible after a new reconciliation lands."""
+    candidates = []
+    for path in HISTORY.glob("signals-*.json"):
+        date = iso_from_name(path)
+        if date < TODAY.isoformat():
+            candidates.append((date, path))
+    if not candidates:
+        return signals
+
+    prior = load_json(max(candidates)[1], {}).get("signals", [])
+    current_titles = {clean_heading(signal.get("title", "")).lower() for signal in signals}
+    for old in prior:
+        if old.get("origin") != "curated_reconciliation" or old.get("hidden"):
+            continue
+        title_key = clean_heading(old.get("title", "")).lower()
+        if not title_key or title_key in current_titles:
+            continue
+        try:
+            age = (TODAY - dt.date.fromisoformat(old.get("source_date", ""))).days
+        except ValueError:
+            continue
+        if age < 1 or age > 21:
+            continue
+        carried = dict(old)
+        carried["asof"] = TODAY.isoformat()
+        carried["urgency"] = "standing"
+        carried["score"] = max(35, int(carried.get("score", 35)) - 6)
+        carried["priority"] = priority_from_score(carried["score"])
+        carried["carried_from"] = old.get("source_date", "")
+        signals.append(carried)
+        current_titles.add(title_key)
+    return signals
+
+
 def focus_list(signals: list[dict], beliefs: dict, book_seed: bool) -> list[dict]:
     by_ticker = defaultdict(list)
     for signal in signals:
@@ -946,6 +981,7 @@ def main() -> None:
     signals += catalyst_signals(known, relations, book)
     signals += worklist_signals(known, book)
     signals += belief_change_signals(belief_changes, relations, book)
+    signals = carry_forward_open_signals(signals)
     signals = dedupe_signals(signals)
     apply_feedback(signals)
     signals.sort(key=lambda signal: (signal.get("hidden", False), -signal["score"], signal["title"]))

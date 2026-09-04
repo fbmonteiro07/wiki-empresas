@@ -1,8 +1,8 @@
 {
  "generated": "2026-09-03",
  "counts": {
-  "nodes": 167,
-  "edges": 1824
+  "nodes": 168,
+  "edges": 1832
  },
  "nodes": [
   {
@@ -72,8 +72,8 @@
    "thesis": "RF/DC power for semicap (~30% share) + AI-DC power shelves; EPS power to high-teens; debate = DCC lumpiness + 800V positioning.",
    "in_book": false,
    "docs": {
-    "wiki": 1,
-    "transcript": 1
+    "transcript": 1,
+    "wiki": 1
    },
    "next_catalyst": "",
    "last_chg": "2026-08-25"
@@ -295,7 +295,7 @@
     "wiki": 1
    },
    "next_catalyst": "2026-09-03",
-   "last_chg": "2026-09-02"
+   "last_chg": "2026-09-03"
   },
   {
    "id": "AXTI",
@@ -409,7 +409,7 @@
     "wiki": 1
    },
    "next_catalyst": "2026-09-21",
-   "last_chg": "2026-08-17"
+   "last_chg": ""
   },
   {
    "id": "COHR",
@@ -1360,7 +1360,7 @@
     "wiki": 1
    },
    "next_catalyst": "2026-09-03",
-   "last_chg": "2026-08-21"
+   "last_chg": "2026-09-02"
   },
   {
    "id": "TSM",
@@ -1519,6 +1519,12 @@
    "type": "theme",
    "label": "ai-builder-toolkit",
    "title": "Theme — AI Builder Toolkit"
+  },
+  {
+   "id": "theme:ai-data-infra-observability",
+   "type": "theme",
+   "label": "ai-data-infra-observability",
+   "title": "Theme — Data Infrastructure & Observability in the AI stack"
   },
   {
    "id": "theme:ai-datacenter-power",
@@ -3202,6 +3208,54 @@
   {
    "u": "theme:800v-dc-power",
    "v": "WOLF",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:ai-data-infra-observability",
+   "v": "AMZN",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:ai-data-infra-observability",
+   "v": "CRWD",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:ai-data-infra-observability",
+   "v": "CSCO",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:ai-data-infra-observability",
+   "v": "MSFT",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:ai-data-infra-observability",
+   "v": "NOW",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:ai-data-infra-observability",
+   "v": "ORCL",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:ai-data-infra-observability",
+   "v": "PANW",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:ai-data-infra-observability",
+   "v": "PLTR",
    "type": "exposes",
    "label": ""
   },
@@ -6504,21 +6558,21 @@
    "v": "ANTHROPIC",
    "type": "covers",
    "label": "",
-   "w": 87
+   "w": 91
   },
   {
    "u": "broker:UBS",
    "v": "ANTHROPIC",
    "type": "covers",
    "label": "",
-   "w": 140
+   "w": 145
   },
   {
    "u": "broker:JPM",
    "v": "ANTHROPIC",
    "type": "covers",
    "label": "",
-   "w": 134
+   "w": 137
   },
   {
    "u": "broker:MS",
@@ -7036,35 +7090,35 @@
    "v": "AVGO",
    "type": "covers",
    "label": "",
-   "w": 79
+   "w": 103
   },
   {
    "u": "broker:UBS",
    "v": "AVGO",
    "type": "covers",
    "label": "",
-   "w": 206
+   "w": 220
   },
   {
    "u": "broker:JPM",
    "v": "AVGO",
    "type": "covers",
    "label": "",
-   "w": 335
+   "w": 362
   },
   {
    "u": "broker:MS",
    "v": "AVGO",
    "type": "covers",
    "label": "",
-   "w": 144
+   "w": 146
   },
   {
    "u": "broker:Jefferies",
    "v": "AVGO",
    "type": "covers",
    "label": "",
-   "w": 125
+   "w": 130
   },
   {
    "u": "broker:Citi",
@@ -7106,7 +7160,7 @@
    "v": "AVGO",
    "type": "covers",
    "label": "",
-   "w": 25
+   "w": 27
   },
   {
    "u": "broker:Nomura",
@@ -7183,7 +7237,7 @@
    "v": "AXTI",
    "type": "covers",
    "label": "",
-   "w": 20
+   "w": 27
   },
   {
    "u": "broker:JPM",
@@ -7295,7 +7349,7 @@
    "v": "BESI",
    "type": "covers",
    "label": "",
-   "w": 25
+   "w": 32
   },
   {
    "u": "broker:JPM",
@@ -7330,7 +7384,7 @@
    "v": "BESI",
    "type": "covers",
    "label": "",
-   "w": 20
+   "w": 30
   },
   {
    "u": "broker:Redburn",
@@ -7603,7 +7657,7 @@
    "v": "CIEN",
    "type": "covers",
    "label": "",
-   "w": 9
+   "w": 15
   },
   {
    "u": "broker:UBS",
@@ -7617,14 +7671,14 @@
    "v": "CIEN",
    "type": "covers",
    "label": "",
-   "w": 63
+   "w": 105
   },
   {
    "u": "broker:MS",
    "v": "CIEN",
    "type": "covers",
    "label": "",
-   "w": 13
+   "w": 17
   },
   {
    "u": "broker:Citi",
@@ -7638,7 +7692,7 @@
    "v": "CIEN",
    "type": "covers",
    "label": "",
-   "w": 3
+   "w": 24
   },
   {
    "u": "broker:Redburn",
@@ -8009,21 +8063,21 @@
    "v": "CRWD",
    "type": "covers",
    "label": "",
-   "w": 49
+   "w": 50
   },
   {
    "u": "broker:JPM",
    "v": "CRWD",
    "type": "covers",
    "label": "",
-   "w": 41
+   "w": 43
   },
   {
    "u": "broker:MS",
    "v": "CRWD",
    "type": "covers",
    "label": "",
-   "w": 56
+   "w": 59
   },
   {
    "u": "broker:Jefferies",
@@ -8044,14 +8098,14 @@
    "v": "CRWD",
    "type": "covers",
    "label": "",
-   "w": 12
+   "w": 21
   },
   {
    "u": "broker:Barclays",
    "v": "CRWD",
    "type": "covers",
    "label": "",
-   "w": 25
+   "w": 35
   },
   {
    "u": "broker:Bernstein",
@@ -8471,7 +8525,7 @@
    "v": "DISCO",
    "type": "covers",
    "label": "",
-   "w": 5
+   "w": 9
   },
   {
    "u": "broker:MS",
@@ -8492,7 +8546,7 @@
    "v": "DISCO",
    "type": "covers",
    "label": "",
-   "w": 10
+   "w": 14
   },
   {
    "u": "broker:FinTwit",
@@ -8779,21 +8833,21 @@
    "v": "GOOG",
    "type": "covers",
    "label": "",
-   "w": 173
+   "w": 178
   },
   {
    "u": "broker:UBS",
    "v": "GOOG",
    "type": "covers",
    "label": "",
-   "w": 191
+   "w": 193
   },
   {
    "u": "broker:JPM",
    "v": "GOOG",
    "type": "covers",
    "label": "",
-   "w": 186
+   "w": 190
   },
   {
    "u": "broker:MS",
@@ -8926,7 +8980,7 @@
    "v": "HPE",
    "type": "covers",
    "label": "",
-   "w": 20
+   "w": 34
   },
   {
    "u": "broker:UBS",
@@ -8940,14 +8994,14 @@
    "v": "HPE",
    "type": "covers",
    "label": "",
-   "w": 67
+   "w": 80
   },
   {
    "u": "broker:MS",
    "v": "HPE",
    "type": "covers",
    "label": "",
-   "w": 18
+   "w": 20
   },
   {
    "u": "broker:Jefferies",
@@ -8961,7 +9015,7 @@
    "v": "HPE",
    "type": "covers",
    "label": "",
-   "w": 33
+   "w": 45
   },
   {
    "u": "broker:DB",
@@ -8975,7 +9029,7 @@
    "v": "HPE",
    "type": "covers",
    "label": "",
-   "w": 31
+   "w": 33
   },
   {
    "u": "broker:Bernstein",
@@ -9507,7 +9561,7 @@
    "v": "LITE",
    "type": "covers",
    "label": "",
-   "w": 40
+   "w": 43
   },
   {
    "u": "broker:UBS",
@@ -9521,7 +9575,7 @@
    "v": "LITE",
    "type": "covers",
    "label": "",
-   "w": 180
+   "w": 181
   },
   {
    "u": "broker:MS",
@@ -9850,14 +9904,14 @@
    "v": "MEDIATEK",
    "type": "covers",
    "label": "",
-   "w": 132
+   "w": 133
   },
   {
    "u": "broker:JPM",
    "v": "MEDIATEK",
    "type": "covers",
    "label": "",
-   "w": 237
+   "w": 239
   },
   {
    "u": "broker:MS",
@@ -9976,28 +10030,28 @@
    "v": "META",
    "type": "covers",
    "label": "",
-   "w": 286
+   "w": 288
   },
   {
    "u": "broker:UBS",
    "v": "META",
    "type": "covers",
    "label": "",
-   "w": 59
+   "w": 61
   },
   {
    "u": "broker:JPM",
    "v": "META",
    "type": "covers",
    "label": "",
-   "w": 221
+   "w": 225
   },
   {
    "u": "broker:MS",
    "v": "META",
    "type": "covers",
    "label": "",
-   "w": 133
+   "w": 134
   },
   {
    "u": "broker:Jefferies",
@@ -10130,14 +10184,14 @@
    "v": "MRVL",
    "type": "covers",
    "label": "",
-   "w": 139
+   "w": 140
   },
   {
    "u": "broker:JPM",
    "v": "MRVL",
    "type": "covers",
    "label": "",
-   "w": 122
+   "w": 124
   },
   {
    "u": "broker:MS",
@@ -10844,7 +10898,7 @@
    "v": "NVDA",
    "type": "covers",
    "label": "",
-   "w": 338
+   "w": 343
   },
   {
    "u": "broker:UBS",
@@ -11278,21 +11332,21 @@
    "v": "OPENAI",
    "type": "covers",
    "label": "",
-   "w": 52
+   "w": 53
   },
   {
    "u": "broker:UBS",
    "v": "OPENAI",
    "type": "covers",
    "label": "",
-   "w": 183
+   "w": 187
   },
   {
    "u": "broker:JPM",
    "v": "OPENAI",
    "type": "covers",
    "label": "",
-   "w": 72
+   "w": 75
   },
   {
    "u": "broker:MS",
@@ -11418,7 +11472,7 @@
    "v": "ORCL",
    "type": "covers",
    "label": "",
-   "w": 18
+   "w": 22
   },
   {
    "u": "broker:UBS",
@@ -11446,7 +11500,7 @@
    "v": "ORCL",
    "type": "covers",
    "label": "",
-   "w": 29
+   "w": 30
   },
   {
    "u": "broker:Citi",
@@ -11460,7 +11514,7 @@
    "v": "ORCL",
    "type": "covers",
    "label": "",
-   "w": 25
+   "w": 26
   },
   {
    "u": "broker:DB",
@@ -13357,14 +13411,14 @@
    "v": "TSLA",
    "type": "covers",
    "label": "",
-   "w": 48
+   "w": 49
   },
   {
    "u": "broker:MS",
    "v": "TSLA",
    "type": "covers",
    "label": "",
-   "w": 14
+   "w": 17
   },
   {
    "u": "broker:Jefferies",
@@ -13378,7 +13432,7 @@
    "v": "TSLA",
    "type": "covers",
    "label": "",
-   "w": 14
+   "w": 16
   },
   {
    "u": "broker:Bernstein",

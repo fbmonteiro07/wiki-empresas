@@ -14,7 +14,7 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AGX` (10-K + transcrip
 | Gross margin | 18.7% | 20.0% |
 | EBITDA | $211m | $350m |
 | EPS | $11.47 | $16.08 |
-| Capex | $9m | $6m |
+| Capex | $11m | $8m |
 | OCF (≈EBITDA) | $211m | $350m |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

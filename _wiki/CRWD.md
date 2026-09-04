@@ -13,8 +13,8 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\CRWD` (filings + trans
 | Gross profit | $4.7bn | $5.8bn |
 | Gross margin | 78.7% | 79.2% |
 | EBITDA | $1.8bn | $2.2bn |
-| EPS | $1.23 | $1.58 |
-| Capex | $421m | $533m |
+| EPS | $1.23 | $1.59 |
+| Capex | $422m | $562m |
 | OCF (≈EBITDA) | $1.8bn | $2.2bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
@@ -71,6 +71,18 @@ Cloud infra + telemetry feed the Falcon cloud-native platform, which fans out ac
 </svg>
 
 ## Current state (Q1 FY27, call 2026-06-03)
+
+**🆕🔴🔴 2026-09-02/03 — FAL.CON 26 INVESTOR DAY: A NEW FY28 MODEL, THREE AGENTIC-SECURITY PRODUCTS, AND THE FRONTIER-LAB COMPETITION FEAR ANSWERED BY THE FRONTIER LABS THEMSELVES.**
+- 🔴🔴 **THE STRATEGIC TAKEAWAY, AND IT IS THE ONE THAT BEARS ON THE BIGGEST BEAR CASE: *"two big frontier models are looking to PARTNER with CRWD, reminding us of the early days with hyperscalers."*** Barclays · Saket Kalia (2026-09-02): *"**[[OPENAI]] and [[ANTHROPIC]] both presented in Fal.Con separately** and talked about the need for CrowdStrike and third-party security companies to help fulfill their mission of growing AI adoption – **we have heard investor fears of potential competition from the frontier lab companies, which reminded us of the early days of hyperscalers, who ultimately relied on security companies to drive IaaS adoption.**"* ➤ **The "will the labs eat security?" bear is now answered by the labs appearing on the customer's stage. The hyperscaler analogy is the right frame and it has a 15-year track record behind it — but note it is an ANALOGY, not a contract.**
+- **THE NEW FY28 MODEL: ~20% NNARR growth and 32.5% FCF margins** (Barclays, 2026-09-02). **Deutsche Bank re-modelled off it the next day: FY28 revenue to $7,415m from $7,312m and FY28 FCF to $2,410m from $2,327m** (DB · Brad Zelnick / Nasr Islam, 2026-09-03). ➤ **A better FY28 NNARR guide than the Street carried, per Barclays' own title.**
+- **THE THREE PRODUCTS THE SELL-SIDE CALLS INVESTABLE** (Barclays): **① Guardian** — *"finds and protects agents at runtime"*; **② Safemind** — *"cybersecurity's frontier model"*; **③ Agentic Identity Provider** — *"brings agentic / just-in-time privilege."* ➤ **All three are agent-security primitives rather than endpoint extensions: CRWD is positioning the agent itself as the new protected asset. That is the product-level expression of the OpenAI/Anthropic partnership story above.**
+- **WHERE THE HOUSES LANDED — and the spread is narrow on price but split on rating:**
+  - **Morgan Stanley — Overweight, PT $238** (*"Plenty Of Room For The Fal.Con To Soar"*, IDEA note, 2026-09-03).
+  - **Barclays · Saket Kalia — Overweight, PT $235**, price ~$190 (2026-09-02).
+  - **Deutsche Bank · Brad Zelnick — HOLD, TP $240** (DCF: WACC 10.9%, terminal risk-free 4%, ERP 5.75%, growth 3.5%), closing price **$203.42** (2026-09-03).
+  - **JPM · Brian Essex — *"Fal.con 2026: From Mythos Moment To Fundamental Shift"*** (2026-09-03).
+  - ➤ ⚠️ **NOTE THE ODDITY WORTH KEEPING: DB carries the HIGHEST target ($240) on a HOLD rating, above two Overweights. The disagreement is about the starting price, not the destination — DB's own downside risks are the standard competitive list ([[MSFT]], SentinelOne, [[PANW]] in Cloud/Identity/SIEM), not anything Fal.Con revealed.**
+- **DB's stated upside risks are a usable checklist for the next two quarters:** *"(1) Continued defensibility within enterprise accounts and greater-than-expected share gains down-market; (2) CRWD wins more new logos than expected and continues to land with multiple modules; (3) **Falcon Flex drives greater than expected module adoption and current Flex customers re-Flex more quickly than expected**; (4) **Meaningful traction as an enterprise AI enabler.**"* ➤ **(3) and (4) are the two the Fal.Con announcements were designed to drive; they are the falsifiers for the FY28 NNARR guide.**
 
 **🆕🔴 2026-08-27 — THE UBS POST-PRINT CALLBACK WITH BERT (CFO) AND MIKE, AND THE MOST USEFUL LINE IS THE BEAT-RATE ARITHMETIC THE STREET SHOULD NOW ANCHOR ON.** (**UBS · Roger Boyd**, on the UBS software virtual event hosted by Karl Keirstead, 2026-08-27. **Buy-rated.**) [Source](../relat%C3%B3rios%20bons/2026_08_27_salesforce_crm_veeva_veev_crowdstrike_crwd_okta_ok.html)
 - 🔴 **THE FRAMING NUMBER: *"it's not lost on me that when you look at the **BLENDED BEAT ACROSS THE FIRST HALF OF THE YEAR, you get to roughly 10%**. So, if I had to guess, **that's kind of where people are going to continue to hold expectations for the rest of the year.**"*** ➤ **A ~10% blended H1 beat is now the working bar for H2 — which means an in-line quarter is a miss and a 5% beat is a disappointment. That is the single most actionable line for setting the next print's bogey.** **On guidance philosophy nothing changed: Bert *"chalked 2Q up as kind of a REALLY GOOD QUARTER"* and did not dispute that it *"looked like it was maybe NOT THAT DISTINCTIVELY BACK-END WEIGHTED, which was supported by the **DSOs again relatively LOW in the second quarter**."* Boyd: *"I'm inclined to think he's still being fairly CONSERVATIVE."***
@@ -325,6 +337,12 @@ _Source: CRWD earnings calls (dates above); management commentary, paraphrased._
 - **Outlook (2026-07-01):** Rothschild & Co Redburn (US Morning desk) — CRWD Sell, 4-for-1 split note, 33x EV/sales NTM / 1% FCF yield · Rothschild & Co TMT Daily (Rowan Adley) — 12-month relative high alongside SOX peers · JPMorgan Intl Market Intelligence (Federico Manicardi) — TENB Focus List add / QLYS upgrade on Chinese-AI vuln-discovery read-through.
 
 ## Changelog
+
+- **🔴 2026-09-03 (/wiki-ingest, scheduled — 5 sources: Barclays · Saket Kalia, MS IDEA note, Deutsche Bank · Brad Zelnick/Nasr Islam model update, JPM · Brian Essex, UBS/Barclays desk commentary). Added: 1 `## Current state` block on Fal.Con 26.**
+  🔴 **NET-NEW FY28 MODEL FROM THE INVESTOR DAY: ~20% NNARR growth and 32.5% FCF margins (Barclays).** DB re-modelled off it: **FY28 revenue $7,312m → $7,415m; FY28 FCF $2,327m → $2,410m** (the prior DB figures are the dated originals).
+  🔴 **THE STRATEGIC ITEM: [[OPENAI]] and [[ANTHROPIC]] BOTH presented at Fal.Con and argued for third-party security — answering, from the labs' own stage, the "frontier labs will compete with security vendors" bear. Barclays' analogy is the early hyperscaler era.** ⚠️ **An analogy, not a contract.**
+  **RATINGS/PTs ON FILE: MS Overweight $238 · Barclays Overweight $235 (px ~$190) · DB HOLD $240 (px $203.42).** ⚠️ **Note the oddity: DB carries the highest target on the lowest rating — the disagreement is about entry price, not destination.**
+  **NEW PRODUCTS: Guardian (agent protection at runtime), Safemind (cybersecurity frontier model), Agentic Identity Provider (agentic / just-in-time privilege).**
 
 - **2026-08-21 (/run-inbox — 2 Morgan Stanley sources: "Q2 Preview and Reseller Survey – Round 2: Healthy Checks, Higher Hurdles" (Marshall/Wood/Lountzis/Cerisola, 2026-08-21) and, 18 days stale, "Thinking Through Closed- vs. Open-Weights Model Adoption Impacts on Cyber / Networking" (Marshall et al., 2026-08-03). 2 Current-state blocks, 1 Debate bullet, 2 Full-log rows (08-21, 08-03), 4 Sinal-vs-management rows re-evaluated, quarter synthesis extended, 2 Sources links.**
   🔴 **NOTHING SUPERSEDED ON RATINGS OR PRICE TARGETS — AND THAT IS A FINDING: MS says **"Remain OW"** and the extracted text contains **NO CRWD PRICE TARGET**. The only PTs in the note are ZS $145, OKTA $180, SAIL $22, S $17 and NTSK $14. **NO PT WAS INVENTED.** So Barclays $235, Wells Fargo $230, JPM OW $235, MS OW $172, DB Hold $181 and Rothschild & Co Redburn Sell all stand as written. ⚠️ **FLAGGED IN TWO PLACES: MS’s own disclosure table prices CRWD at $190.34, so the split-adjusted MS $172 PT this page carries from 07-06 now sits BELOW spot — recorded as a staleness flag, not converted into a downside call.**
