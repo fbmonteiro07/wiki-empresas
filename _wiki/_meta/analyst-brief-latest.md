@@ -1,6 +1,6 @@
 # Daily Analyst Brief
 
-_Generated 2026-09-04 · 52 active signals · latest reconciliation: reconciliation-2026-09-03.md._
+_Generated 2026-09-04 · 53 active signals · latest reconciliation: reconciliation-2026-09-03.md._
 
 > ⚠️ **Portfolio priority is provisional.** _data/book.json is still a seed with unknown weights. Book badges identify seeded names but do not represent real exposure.
 
@@ -188,6 +188,7 @@ _NARRATIVE SHIFT · HIGH IMPACT · STANDING · MEDIUM CONFIDENCE_
 ## Research hygiene
 
 - **DT — catalyst passed without a logged outcome** — Write a source-attributed bull won|bear won|neutral outcome for DT in outcomes.md. _Source: Catalyst outcome ledger._ (post-ef49919603e3)
+- **DT — catalyst passed without a logged outcome** — Write a source-attributed bull won|bear won|neutral outcome for DT in outcomes.md. _Source: Catalyst outcome ledger._ (post-b68cffd10db5)
 - **POET — latest earnings transcript absent** — Fetch the latest POET earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-09-04._ (data-eb1807b4a288)
 - **SMTC — latest earnings transcript absent** — Fetch the latest SMTC earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-09-04._ (data-e886167926f7)
 

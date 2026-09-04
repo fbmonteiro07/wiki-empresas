@@ -68,10 +68,12 @@ ALIASES = {
  "TOKYOELEC": ["Tokyo Electron"], "TSEM": ["Tower Semiconductor"], "TSLA": ["Tesla"], "TSM": ["TSMC", "Taiwan Semi"],
  "TXN": ["Texas Instruments"], "UBER": ["Uber"], "VECO": ["Veeco"], "VEEV": ["Veeva"], "VRT": ["Vertiv"],
  "VST": ["Vistra"], "WDC": ["Western Digital"], "WMB": ["Williams Companies"], "WOLF": ["Wolfspeed"],
+ # data-infra / observability pages (added 2026-09-04)
+ "SNOW": ["Snowflake"], "MDB": ["MongoDB"], "DDOG": ["Datadog"], "DT": ["Dynatrace"], "ESTC": ["Elasticsearch", "Elastic N.V"],
 }
 CASE_SENSITIVE = {"Apple", "Meta", "Oracle", "Uber", "Intel", "Dell", "Eaton", "Corning", "Coherent", "Booking.com", "Reddit",
                   "Argan", "Samsung", "Micron", "Cadence", "Arista", "Credo", "Toyota", "Talen", "Flex Ltd", "KLA", "AMD",
-                  "ASML", "SMIC", "HPE", "AWS", "Azure", "Gemini", "Tesla", "Google", "Amazon", "Microsoft", "Netflix", "Spotify"}
+                  "ASML", "SMIC", "HPE", "AWS", "Azure", "Gemini", "Tesla", "Google", "Amazon", "Microsoft", "Netflix", "Spotify", "Snowflake"}
 # Cashtags that collide with English words are still fine because the '$' prefix disambiguates.
 PRIVATE = {"ANTHROPIC", "OPENAI", "CEREBRAS"}
 

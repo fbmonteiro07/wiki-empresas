@@ -218,15 +218,17 @@ _Adjacent: [PANW](../PANW.md) (Chronosphere), [CSCO](../CSCO.md) (Splunk, Galile
 1. ~~MDB F2Q27 and SNOW F2Q27~~ — **RESOLVED 2026-09-03** (transcripts) and **2026-09-04** (post-print notes from GS/JPM/DB/Barclays on SNOW, Barclays on MDB). Still open: MS, UBS and Bernstein post-print notes (UBS Neo and MS Matrix need a Chrome login — queued in `_inbox/PENDING_FULL_REPORTS.md`).
 2. ~~DDOG 2Q26~~ — **RESOLVED 2026-09-03/04** (transcript + Barclays/JPM/GS/Redburn notes).
 3. ~~Dynatrace / Arize~~ — **RESOLVED 2026-09-04** from Barclays' 08-13 note (§3.3). Open: the announcement date itself and on-call disclosure at Q2 FY27.
-4. **Databricks Postgres (Lakebase) and LakeWatch traction** — only Octahedron's qualitative claims; no numbers.
-5. **New Relic, Grafana, Redis** — no broker material. If the team wants these covered, an expert call is the only route.
+4. **Databricks Postgres (Lakebase) and LakeWatch traction** — only Octahedron's qualitative claims; no numbers. X adds (as posted, unverified): $5B at $190B (08-13), sales growth ">80%" with shrinking margins (CNBC 06-16), Lakebase named as a use of proceeds (Coatue 07-17) — still no Lakebase number (§9).
+5. **New Relic, Grafana, Redis** — no broker material. Grafana now has one datapoint (The Information 08-26: AI agents lifting revenue at ClickHouse/Cribl/Grafana — §9); New Relic and Redis still zero. An expert call is the only route.
 6. **Confirm the source of the stack diagram** before it is cited.
+7. ~~SEC filings and company decks~~ — **RESOLVED 2026-09-04**: 8 filings per name in `<TICKER>/`, 15 decks in `<TICKER>/apresentações/`, folded into §8 and each page's `## Primary-source datapoints`. Still open: MDB Investor Day 2026-09-29 and DT's post-Q2 investor day (both promised LT frameworks); filings are indexed by `search.py` only when `build_search_index.py --filings` is run.
+8. ~~Podcasts / expert calls in the corpus~~ — **RESOLVED 2026-09-04** (§10: 18 recorded sources + the Bernstein handbook). Still missing from the corpus: the Jefferies Snowflake expert dinner (2026-06-02) and Databricks expert week (2026-06-16) Thill advertised on the 06-01 call — ask Jefferies for the replays.
 
 ---
 
 ## 7. Transcript archive (added 2026-09-03)
 
-Full diarized earnings-call transcripts (MarketBeat / Quartr feed) now on disk, indexed for `search.py -t <TICKER> -k transcript`. Company folders were created for this purpose; none of the five has a wiki page yet.
+Full diarized earnings-call transcripts (MarketBeat / Quartr feed) now on disk, indexed for `search.py -t <TICKER> -k transcript`. Company folders were created for this purpose; all five now have wiki pages (2026-09-03) and, since 2026-09-04, filings and decks (§8).
 
 | Ticker | Folder | Calls on disk | Newest |
 |---|---|---|---|
@@ -241,6 +243,115 @@ Not archived: Databricks, Redis, New Relic, Grafana Labs (private, no calls); Sp
 **Sell-side notes archived 2026-09-04 (Outlook sweep April → September, pulled through Felipe's Chrome):** 60 documents in `relatórios bons/` — Barclays · Lenschow 32 (SNOW 7, MDB 7, DDOG 6, DT 6, ESTC 6; text captured from Barclays Live), J.P. Morgan 14 (Murphy/Chatterjee/Essex; 1 PDF + 13 text captures), Goldman Sachs · Borges 3 (PDFs), Deutsche Bank · Zelnick 5 (SNOW; full note text as emailed), Rothschild & Co Redburn 5 (SNOW "First Cracks" Sell PDF; DDOG Buy PDF; 3 desk notes), Octahedron August 2026 letter. Each company page carries them in an `## Intra-quarter — calls, commentary & reports` table. Not retrievable this pass: UBS · Keirstead (16 notes) and Morgan Stanley (12 notes) — both portals require a login; Redburn's 07-09 DDOG note and Bernstein's MDB 2Q27 note — all queued in `_inbox/PENDING_FULL_REPORTS.md`.
 
 ---
+
+## 8. Primary sources — filings & decks, cross-company read (added 2026-09-04)
+
+Two years of 10-K/10-Q for the five public names (8 filings each, `<TICKER>/`) plus 15 company decks (`<TICKER>/apresentações/`, HTML renders with extracted text in `relatórios bons/`) were pulled and folded into each page's `## Primary-source datapoints` section. This section keeps only what reads across the layer. Every figure is the company's own; period and document in the cell.
+
+### 8.1 The hyperscaler bill — contracted cloud commitments and the hosting-cost drag
+
+| | Non-cancelable cloud / hosting commitments | Hosting-cost pressure visible in the filing |
+|---|---|---|
+| SNOW | **$6.0B cumulative minimum over 5 yrs to 2031-03-31**, annual floors $900M–$1.25B (unnamed provider = the AWS deal announced 2026-05-27; 10-Q Q2 FY27 Note 11); plus an unnamed AI-model-provider agreement raised to **$390M over 3 yrs, $270M remaining** (the Anthropic deal); pre-amendment total $2,681.9M at 2026-01-31 | Third-party cloud infra incl. AI inference/GPUs = **75% of cost of product revenue vs 70% y/y** (1H 74% vs 69%); GAAP product GM 71% vs 72% on "newly launched product capabilities … not yet reached economies of scale" (10-Q Q2 FY27) |
+| MDB | Total non-cancelable other obligations **$897.9M** at 2026-01-31 (FY27 $382.1M, FY28 $392.6M), including a FY26 renewal with an unnamed cloud provider: **$300M non-cancelable, Oct-2025 → Oct-2028** (10-K FY26); Q2 FY27 10-Q: no material change | No hosting-driven GM call-out in the filings; SBC 19.3% of revenue (from 23.7%) is the cost line that moved (10-Q Q2 FY27) |
+| DDOG | **$1.4B at 2025-12-31**, "primarily related to cloud hosting and other software-based services", mostly within 5 yrs — unchanged from $1.4B a year earlier; no provider named (AWS/Azure/GCP appear only as competitors) (10-K FY25; Q2 10-Q) | Cost of revenue **+45% y/y incl. +$64.1M third-party cloud hosting/software**; GAAP GM 79% (10-Q Q2 2026) |
+| DT | **$719.8M** total non-cancelable contractual commitments at 2026-06-30 ($178.9M NTM), "primarily for cloud hosting support"; $525.3M non-lease purchase obligations at 2026-03-31; no vendor split (10-Q Q1 FY27; 10-K FY26) | Cost of subscription **+23% vs subscription revenue +16%**, "primarily … increased cloud-based hosting costs of $13.3M"; GAAP GM 81% vs 82% (10-Q Q1 FY27) |
+| ESTC | **$978.8M through FY2032** at 2026-07-31, up from **$613.6M at 2026-04-30** (rest-FY27 $185.5M · FY28 $242.2M · FY29 $225.1M · FY30 $198.4M); providers not named (10-Q Q1 FY27 Note 8) | GAAP subscription GM **82% → 80%** on cloud hosting costs +$16.0M y/y (10-Q Q1 FY27 MD&A) |
+
+**Read-across.** Roughly **$10B of contracted spend** now sits between these five and the three hyperscalers (SNOW's $6B alone), and four of the five filings name hosting cost as *the* gross-margin headwind this quarter. That is the same dollar seen from the other side in [hyperscaler-capex](hyperscaler-capex.md): the data/observability layer is a pass-through customer of AI compute, and the margin question in §4 (debate 3) is now filing-grade, not sell-side inference. SNOW is the outlier in both directions — the biggest commitment and the only one whose filing explicitly ties the GM drop to AI inference.
+
+### 8.2 Long-term frameworks the companies have put on paper
+
+| | Framework (company slides) | Horizon | Where |
+|---|---|---|---|
+| SNOW | TAM $225B (FY26) → **$460B (FY31)**; GAAP profitability targeted **Q4 FY28E** via op-margin leverage + SBC% decline; **no multi-year revenue or margin targets** | FY28 / FY31 | Investor Day 2026-06-02, slides 13, 42, 64 |
+| MDB | Atlas growth **20%+**; **100–200 bp/yr** non-GAAP OM expansion; **high-teens** revenue growth 3–5 yrs; **20%+** OM; **80%+** FCF conversion; "Rule of 40"; ~$2B → **$5B+** stage ambition; re-shown unchanged a year later | 3–5 yrs | Investor Day 2025-09-17 slides 10, 123–124 = Sep-2026 deck slides 34–35 |
+| DDOG | Non-GAAP OM **25%+** (undated; the only LT margin line); net dilution **2.5–3.0%** (tightened from 2.5–3.5% in 2024); observability TAM $28B 2026E (Gartner), DDOG ~14% share 2025E, 7% logo penetration of >470k accounts | undated | Investor Day 2026-02-12 slides 145, 177, 189, 200, 202 |
+| DT | No investor day; FY27 guide only (ARR +15.5–16.5% cc, OM 29.5–29.75%, adj FCF 26.5%); TAM re-based **$65B → $92B** ($64B core + $18B AppSec + $10B AI/LLM); FY29 "Rule of 50" path deferred to a post-Q2 investor day | FY27 | Q1 FY27 deck slides 12, 23; Q4 FY26 deck slide 12 |
+| ESTC | "Medium-term": sales-led subscription growth **20% = 15% base + 5% GenAI**; non-GAAP OM **20%** (Q1 FY27 deck lifts to **~25%**); adj FCF 20%; Rule of 40; net dilution 2.5%; TAM **$143B (2026) → $296B (2029)** | medium-term (no FY) | Analyst Day 2025-10-09 slides 27, 108–109; Q1 FY27 deck slide 29 |
+
+**Read-across.** MDB's FY27 guide (21–23% growth, 20.6–21.0% OM) already meets its own 3–5-year targets — the 2026-09-29 Investor Day has to raise or explain. SNOW is the only one that refuses a multi-year growth number even at an investor day. DDOG's 25%+ OM is the same line it has carried since 2024.
+
+### 8.3 What the companies disclose about AI revenue, and what is new in the risk factors
+
+| | Company-disclosed AI attach / AI revenue | New risk-factor language (vs prior 10-K) |
+|---|---|---|
+| SNOW | None quantified — only the GM drag (§8.1); $1M+ customers ≈ 68% of TTM product revenue (10-K FY26 MD&A) | FY26 10-K: "Frontier AI model providers may seek to **vertically integrate … developing their own database solutions**"; Q2 FY27 10-Q names "Anthropic and OpenAI … in certain cases also our competitors" |
+| MDB | **~30% of Atlas ARR** from customers with ≥1 AI use case — **the same ~30% at Sep-2025 (Investor Day slide 16) and Sep-2026 (deck slide 18)**; a year of "AI tailwind" has not moved the company's own attach share | FY26 10-K: "**agentic AI tools** … could affect how developers select databases"; Q2 FY27 10-Q adds "whether we are perceived as an AI beneficiary" and an EU digital-sovereignty risk |
+| DDOG | AI-native cohort = **11% of FY25 revenue** (1/1/2/5/11% FY21–25; Investor Day slide 175); contribution to y/y growth ~5 → 6 → 10 → 8 → 7 pts, then high-single-digits in Q1 and Q2 2026 (every 10-K/10-Q) | Q2 2026 10-Q: "**we saw a reduction in usage from our largest customer starting in the third quarter of 2026**, which may cause a deceleration in revenue growth" — the OpenAI watchpoint in the company's own words |
+| DT | None; Arize deck gives AI-observability segment ">$10B by 2030" and the deal's +~200 bp ARR / −175 bp OM (Arize deck slides 4, 8); customer count flat at ~4,100 (≥$10K ARR) at both Mar-2025 and Mar-2026 despite ~470 new logos (10-K FY26) | Nothing AI-specific flagged as new |
+| ESTC | GenAI customers' sales-led net expansion **16% vs 10%** for others (FY25); GenAI = 11% of the FY24 cohort but **62%** of its FY25 expansion; ARR-weighted GenAI penetration of $100K+ customers 4% → 11% → **21%** FY23–25 (Analyst Day slides 103–106) | Nothing AI-specific flagged as new; headcount **3,834 vs 4,019** a quarter earlier (−185) is the number to watch (10-Q Q1 FY27) |
+
+**Read-across.** Only DDOG and ESTC put a hard AI-revenue number on paper; MDB's is flat; SNOW's is a cost, not a revenue. That ordering is the inverse of what the stocks did after the last prints (SNOW +22%, DDOG −21%) — the market is paying for acceleration in the core meter, not for disclosed AI attach. The two new 10-K risk factors (SNOW: labs build databases; MDB: agents pick databases) are the §4 bear cases in SEC language.
+
+### 8.4 Balance-sheet and RPO snapshot (latest filing)
+
+| | RPO (total; NTM share) | Capital return / dilution |
+|---|---|---|
+| SNOW | $9,004.3M; 54% NTM; weighted-avg remaining life 2.4 yrs (10-Q Q2 FY27) | SBC **27% of revenue** (35% y/y) — already at the FY27 target; $0.8B of $4.5B buyback left, none executed in Q2; CEO PRSU hurdles $324–$531 |
+| MDB | $1,519.2M; ~52% NTM (vs $794.2M / 58% a year ago — duration-driven surge) | 1H FY27: 666k shares for $200.0M @ $300.10, $399.7M left of $1.0B; shares flat at 80.6M; cash + ST inv $2.41B, no debt |
+| DDOG | $3,471.4M at Jun-30 vs $3,484.4M Mar and $3,461.2M Dec — flat q/q; "substantially all" within 24 months, no NTM split | SBC 20.3% of revenue; shares 359.1M (+1.8% since Feb); **no buyback programme exists** |
+| DT | $3,441.5M (+17.9% y/y); 53% NTM (≈$1.82B cRPO, our arithmetic) | Shares **−3.8% y/y** (290.3M vs 301.7M); Q1 buyback 7.08M sh / $275.5M @ $38.88; $573.1M left of $1B |
+| ESTC | $1,854M; cRPO $1,153M (10-Q Q1 FY27) | Buyback only in May-2026 (804,601 sh @ $49.71), nothing at $55–80; $120M left; RSU overhang 9.94M + 3.72M granted |
+
+**M&A accounting now on record** (purchase price / goodwill): SNOW Observe $595.8M / $342.8M, Natoma $128.3M / $101.8M; MDB Voyage AI $160.9M consideration + $72.5M post-combination SBC (the call's "$220M"), goodwill $121.7M; DT Bindplane $99.7M / $61.4M (~7.7× the $13M ARR cited on the call); ESTC Jina AI $43.4M / $30.2M, **Deductive AI ~$70M cash, closed 2026-08-21** (a Q2 FY27 event, not Q1 as the page had it); DDOG 6M26 three deals $191.5M / $178.7M goodwill.
+
+### 8.5 Conflicts the filings surfaced (all logged on the company pages' Changelogs, bodies unchanged)
+
+- SNOW Q1 FY27 $1M+ customers **779 → 780** (10-Q key-metrics table; historical series shifted by one for acquisitions/consolidations — the filing series is canonical); total customers 13,912 → 13,862; Anthropic "$200M" → **$390M** unnamed 3-yr agreement.
+- MDB Voyage "$220M" → $160.9M + $72.5M SBC; Catalysts "80–100% FCF conversion" → decks say **"80%+"**; Atlas share ~74% (Berry) → **73.3%** (Barclays' 73% was right); Q1 FY27 OCF/FCF = **$202M / $198M** per deck slide 32 (Barclays' $197.5M the outlier).
+- DDOG "$1M+ customers 603 (+31%)" on the page as a Q2 2026 stat is the **Dec-2025** count (10-K; not in the Q2 10-Q); the HSD AI-native growth contribution is company disclosure, not an R&Co estimate; Redburn's ~10% penetration / 50% F500 vs company **7% / 48%**.
+- DT Arize "~$815M cash plus equity" → deck: "$815M cash **and replacement equity awards**" combined; the ~$40M Arize ARR is Barclays-only (deck discloses none); Q1 revenue "+15%" is cc (+16% reported); FY26 "$28M restructuring" = $28.1M transaction/restructuring/other incl. $18.5M impairments.
+- ESTC Deductive AI dated Q1 FY27 on the page → **2026-08-21, Q2 FY27** (10-Q Note 17); JPM "~$45B TAM" vs company $143B/$296B; the "600 AI customers" are Elastic *Cloud* $100K+ customers over an all-$100K denominator; sales-led NER 113% (deck) ≠ 10-K NER 112%.
+
+---
+
+## 9. Social / X read (corpus tweets 2026-05-01 → 09-03, added 2026-09-04)
+
+The firm's tweet corpus (`E:\.claude\data\twitter-briefing\tweets.sqlite`, ~141k tweets) was digested for the layer; each company page carries a `## Social / X signals` table with URLs, and the five names are now in the sentiment dashboard (`build_sentiment.py` aliases). **Everything below is as posted on X, unverified.**
+
+| | Material tweets | Tone (opinionated only) | What X adds that the notes don't |
+|---|---|---|---|
+| SNOW | 27 | ~18 bull / ~7 bear | FundaAI channel checks (6 sales partners; CoCo consumption "nearly tripling in May"; Cortex Code "taking spillover from Claude Code"); @ttunguz back-solves the 76→74% GM cut into ~$240–300M of AI-token ARR (his inference); the "coding agents are the biggest threat" quote; Gerstner exit (05-14) vs Altimeter 13F still long (08-14) — conflict |
+| MDB | 19 | 5 / 3 | FundaAI: "part of MDB's miss was actually caused by SNOW" — operational + analytical convergence pressuring MDB pricing (expert view); the −12% AH dissected as ~$30M of 2H raise and Atlas ~25.6% implied for Q3 |
+| DDOG | 20 | ~11 / 3 | JPM "Prepare for Liftoff" (NRR to low-120s); "hyperscalers come to us to replace things they built"; LLM-observability spans tripled q/q, 20% of customers = 80% of AI ARR (@ttunguz); bears are valuation only |
+| DT | 4 | 1 / 0 | MS upgrade to OW $65 on "healthiest observability demand since 2022"; the August print was **not captured** by the corpus |
+| ESTC | 4 | 0 / 0 | Nothing opinionated at all — Elastic is absent from the X debate; a datapoint for the under-followed leg |
+
+**Private names, as posted:** Databricks closed **$5B at $190B** (08-13), sales growth ">80%" with margins "shrinking from a swarm of AI agents" (CNBC 06-16), Ghodsi "running out of GPUs" hosting open-source models (07-19), Iceberg v3 GA / Lakeflow / ZeroBus at the Summit (@jaminball 06-16), Microsoft blocking a Databricks Power BI connector (The Information 05-25); The Information (08-26): AI agents lifting revenue at **ClickHouse, Cribl and Grafana** and making data-observability startups acquisition targets; ClickHouse CEO on 20VC: NDR >200%, "$500M+ expected this year", $1B ARR "before December 2027" (08-31); no Neon, PlanetScale, Splunk, New Relic or OpenTelemetry tweets in the window. **Cisco Observability segment $275M +6% y/y** (Q4 FY26, @wallstengine 08-12) — the Splunk transition in §3.4, in one number.
+
+---
+
+
+## 10. Podcasts, expert calls and the Bernstein handbook — what the recorded corpus adds (added 2026-09-04)
+
+Eighteen recorded sources in `relatórios bons/` and `_equity_calls/` mention the layer ≥3 times (mention-count sweep over 1,020 files; false positives such as the "Dylan next big thing" memory call, where "elastic" is price elasticity, excluded). Every line is the named speaker's claim. The full digest sits in the session scratch; only the deltas versus what the pages already carry are kept here.
+
+| Source (file · date) | Speaker | What it adds to the layer |
+|---|---|---|
+| UBS software team call `2026_06_18_karl_ubs` · 06-18 | Karl Keirstead (UBS) | Databricks growth "accelerated by … **25 points in the last six months**" partly because corporates "buy, call it, **$10 million of credits** … to acquire AI model access, to acquire compute on any of the hyperscalers … a de facto pass-through … lower gross margins" (attributed to Databricks' own Summit disclosure); Ghodsi corrected UBS's "small speed bump" on token-cost pushback to "**a big speed bump**"; for the AI-data catch-up trade he would "pitch Palantir … than MongoDB" |
+| UBS "State of AI & Software" `2026_08_31_ubs_the_state_of_ai_software` · 08-31 | Keirstead, Roddy Sultan (UBS) | Keirstead's SNOW bar into the print — "36–37% revs growth in July, exiting the year at close to 40" — **met** (product rev +37%, FY27 guide +36%); on MDB: database-capacity needs rising are "**almost always for Postgres-based databases**", "I'd rather be long Palantir"; Sultan: DT "cheaper than Elastic, for … **better growth** and a higher-quality business" — the opposite of Lenschow (Barclays 08-28: Elastic cloud +27% cc "better than DT") — basis differs (total ARR vs cloud sub-line), neither page flagged it until now |
+| UBS open-source/token-optimisation call `2026_07_22_ubs_open_source_models…` · 07-22 | Keirstead (UBS) | The sharpest version of the optimisation bear: the 2022–24 wave hit "AWS, Azure, **Snowflake, DataDog** … four quarters of growth deceleration. So we can't just shoulder-shrug this token-optimization risk"; ClickHouse's Claude spend "$20,000 in January … $1 million in June, 50×, 5% of run-rate revs … not throttling"; Fireworks >$1B revenue, ClickHouse >$250M (tripled YTD) |
+| Jefferies team call `2026_06_01_brent_jeff_ai` · 06-01 | Brent Thill, Samad Samana (Jefferies) + Jefferies CIO | "Every presenter mentioned [Snowflake] … you have to put your data somewhere to create AI"; the "Splunk of AI" bear — "I've heard from multiple clients … I don't see that"; CIO: five $5M SaaS renewals at risk from custom builds "on Snowflake or on Databricks"; M&A: IBM's remaining targets "Dynatrace, Elastic … Mongo … $40 billion … highly unlikely"; the Snowflake expert dinner (06-02) and Databricks expert week (06-16) Thill advertised are **not in the corpus** |
+| Jefferies/Archera cloud-expert call `2026_07_13_…cloud_expert_aran_k` · 07-13 | ex-AWS cloud strategist (Archera founder) | "**Data agents are the new coding agents**" — Cortex Code named as "the other big trend of Q2"; ISVs like Datadog run "a router architecture and … an open-source model that they own and control … to control their own margins"; Meta "need[s] to buy Databricks tomorrow" (opinion) |
+| BofA lightning round `_equity_calls/Overall/2026-06-08_BofA_conference-wrap.md` · 06-08 | Koji Ikeda (BofA) | "I don't hear a lot of bears on Datadog. That is something to think about"; MDB debate = "will the AI tailwinds come a year from now, or potentially sooner"; two buckets — execute-as-is (DDOG, MDB) vs "transition" names (Atlassian, GitLab, PagerDuty); Elastic in neither |
+| JPM specialist sales `_equity_calls/Semis/2026-06-11_JPM_AI-power-pitch.md` · 06-11 | JPM TMT desk | "long infrastructure, long security, short apps … I like snow the most … still trade at a discount to DataDog, which I think is somewhat unwarranted" |
+| WFC cloud/MSFT expert `2026_04_14_wfc_cloud_msft` · 04-14 vs cyber webinar `2026_08_20_the_future_of_cybersecurity…` · 08-20 | MSFT-ecosystem practitioner (unnamed) vs ex-Palo Alto founder of Dash Security (unnamed) + host | The pages carry only the WFC view ("the bigger threat to security vendors … is observability"). The August webinar disagrees from both chairs: the Datadog-in-security push "**doesn't seem to have really exploded yet**"; security stays with "a separate SOC and a separate CISO … It's all about focus". Same guest on the SIEM fork: data lakes (Databricks, Snowflake, Elastic) decoupling analytics from storage; Databricks' Panther "was … built on top of the Snowflake data lake … used the Snowflake compute" (hedged "I believe") |
+| Octahedron 2Q26 LP call `2026_07_15_octahedron_2q_review` · 07-15 | Ram Parameswaran (Octahedron; Databricks = largest position) | Databricks "accelerating revenues to 80%", warehouse "1.5 billion in annualized revenue"; LakeWatch "completely takes out the economics from … Splunk"; SNOW then a top-3 position and "very non-consensus" — but already "feels a little expensive" (the tell before the 09-02 letter dropped it from the top five) |
+| Bernstein "Scaling Intelligence" handbook `_inbox/_done/Bernstein on Gen AI Software.pdf` · 2026-06-23 (247 pp) | Moerdler / Valliji / Tang (Bernstein) | **No SNOW or MDB chapter.** Ticker table (16-Jun prices): SNOW Market-Perform PT $250, MDB Outperform PT $449; "MongoDB and Snowflake (to some extent) as beneficiaries from incremental database usage driven by AI" (p.18); new risk footnote — both "are focused on the three largest hyperscalers and are not building meaningful relationships with regional or smaller IaaS and PaaS providers" (p.122); "**AI directly does not create more data**" — database growth comes from vector/specialised stores and consolidation (p.125); "data federation paradox" delaying enterprise GenAI (p.234). The HTML render in `relatórios bons/` was a 77-character stub — extracted text appended 2026-09-04 so `search.py` now sees it |
+| BofA MSFT callback `2026_07_30_msft_2q26_callback_bofa` · 07-30 | BofA software (unnamed) | Cosmos DB "is Microsoft's comparable solution to MongoDB Atlas"; "PostgreSQL revenue grew **55%**. It's accelerating"; Fabric = "Microsoft's answer to combine together Snowflake, Databricks … OneLake"; Cobalt CPUs run "Adobe, Arm, **Elastic**, OpenAI" |
+| Stanford MS&E435 lecture `401_Stanford_MSE435_…vercel_ceo` · spring 2026 | Guillermo Rauch (Vercel CEO) | "The system of record or the database stays, but I can create a presentation layer … we kind of reinvented all of Salesforce … a team of two people"; the AI Gateway is "a CDN for tokens … need to be observed … failover … cached" — token observability as a gateway feature, not an observability-vendor feature |
+
+**Cross-source deltas worth carrying into the debates (§4):**
+1. *Databricks acceleration = product or pass-through?* Keirstead's "25 points / $10M of credits / lower GM" mechanism is the same one now visible in SNOW's 74% product-GM guide and in the hosting-cost lines of §8.1 — the layer is re-selling compute and model access at hyperscaler-style margins. Bear 2 in §4 should cite it.
+2. *MDB has a relative-value bear the page did not carry:* the lead UBS software analyst twice preferred Palantir over MDB for fresh money and reads database capacity growth as Postgres-led. BofA (Ikeda, Buy) and Bernstein (Outperform $449, stronger wording for MDB than SNOW) are on the other side.
+3. *DT vs ESTC "who grows faster"* is a live disagreement between UBS (Sultan) and Barclays (Lenschow) — resolve on basis before quoting either.
+4. *Observability-into-security* has a credible counterview (08-20 webinar) to the WFC expert the pages lean on; DDOG's security = 2% of $1M+ customers' ARR despite 70% attach (§8.3) sits closer to the sceptics.
+5. *Splunk economics:* "completely takes out the economics" (Octahedron, a Databricks holder) vs "billions of existing book of business … 16 vendors in the Magic Quadrant" and >1,000 new Splunk logos in FY26 (§3.4) — an architectural fork, not a price collapse.
+6. *"AI does not create more data"* (Bernstein) is about business records; "step-function in telemetry volume" (JPM expert on DDOG/DT) is about machine data — do not cite one against the other.
+
+---
+
 
 ## Sources
 
@@ -264,6 +375,8 @@ Not archived: Databricks, Redis, New Relic, Grafana Labs (private, no calls); Sp
 - Wiki pages: [../CSCO.md](../CSCO.md), [../MSFT.md](../MSFT.md), [../AMZN.md](../AMZN.md), [../ORCL.md](../ORCL.md), [../PLTR.md](../PLTR.md), [../PANW.md](../PANW.md), [tokenmaxxing.md](tokenmaxxing.md), [ai-builder-toolkit.md](ai-builder-toolkit.md), [internal-weekly-meeting.md](internal-weekly-meeting.md)
 
 ## Changelog
+- 2026-09-04 (podcasts/expert calls) — §10 added from 18 recorded corpus sources (UBS team calls 06-18/07-22/08-31, Jefferies 06-01/06-08/07-13, BofA 06-08/07-30, JPM desk 06-11, WFC expert 04-14, cyber webinar 08-20, Octahedron LP call 07-15, Vercel CEO lecture, Bernstein handbook 2026-06-23); six cross-source deltas listed; §6 item 8 resolved; Bernstein handbook HTML in `relatórios bons/` given an extracted-text block (was a 77-char stub). Nothing on this page superseded; the DT-vs-ESTC growth disagreement (UBS Sultan vs Barclays Lenschow) is flagged, not resolved.
+- 2026-09-04 (filings/decks/X) — §8 added: 40 SEC filings (2× 10-K + 6× 10-Q per name, 2024-11 → 2026-09) and 15 company decks (SNOW Investor Day 06-02; MDB Investor Day 2025-09-17 + Sep-2026 deck; DDOG Investor Day 02-12 + Aug-2026 deck + 2024 investor-day transcript; DT Q3/Q4 FY26 + Q1 FY27 decks + Arize deck; ESTC Analyst Day 2025-10-09 + Q4 FY26/Q1 FY27 decks) archived and folded in; §9 added (X corpus digest; five names registered in build_sentiment.py); §6 items 4–5 updated, 7–8 added; §7 wording fixed (pages exist). **Superseded on this page (old → new, both sourced):** SNOW–Anthropic "$200M" (call) → **$390M over 3 yrs, $270M remaining** (10-Q Q2 FY27 Note 11); DT Arize "$815M cash plus equity" → "$815M cash **and replacement equity awards**" (Arize deck slide 8); ESTC Deductive AI "Q1 FY27" → **closed 2026-08-21, Q2 FY27, ~$70M cash** (10-Q Note 17); MDB Voyage "$220M" → $160.9M consideration + $72.5M post-combination SBC (10-K FY26). Company-page Changelogs carry the full conflict lists (§8.5).
 - 2026-09-04 (later) — 60 sell-side notes archived and folded in (see §7). Superseded on this page: "Redburn (Sousa) went to Sell" → **Redburn · Alex Haissl maintained Sell, PT $170 → $110 (2026-05-14)**; Barclays SNOW rating "OW" (briefing 06-03) → **Equal Weight** throughout; DT "Arize terms unsourced" → **EV ~$915M / ~$40M FY27 ARR (Barclays 08-13)**; BofA "no bears on Datadog" now qualified by **GS Sell since 2026-01-11**; scorecard Street-stance column moved from pre-print to post-print marks (SNOW GS $436 / JPM $426 / DB $400 / Barclays EW $384; MDB Barclays $480; DDOG Barclays $290 / JPM $305 / GS Sell $158 / Redburn $300; DT Barclays $60; ESTC Barclays $118 / JPM $105). §6 items 1–3 closed; UBS/MS notes queued pending a portal login.
 - 2026-09-04 — corrections from the transcript re-read while building the company pages: MDB Q1 FY27 "Enterprise Advanced +20%" (briefing 05-29) → **EA & other +13%** (Q1 FY27 call); MDB Q2 FY27 "$127M sequential dollar add" → **$127M year-over-year dollar add**; SNOW "product GM fell to 74%" → **FY27 product gross-margin guide 74% (from 75%)**. Company pages created: [../SNOW.md](../SNOW.md), [../MDB.md](../MDB.md), [../DDOG.md](../DDOG.md), [../DT.md](../DT.md), [../ESTC.md](../ESTC.md).
 - 2026-09-03 (later) — 35 earnings-call transcripts archived to `SNOW/`, `MDB/`, `DDOG/`, `DT/`, `ESTC/` `transcripts/` folders (MarketBeat/Quartr; search index rebuilt); §2.2, §2.4, §2.7, §3.2, §3.3 and the scorecard gained the five newest prints; §6 items 1–2 marked resolved; §7 added. Superseded scorecard "latest datapoint" values (kept here): SNOW F1Q27 product rev +34% / FY27 guide +31% → F2Q27 +37% / +36%; MDB F1Q27 Atlas +29.4% / FY27 +19.5% → F2Q27 Atlas ~29% / FY27 +21–23%; DDOG 1Q26 +32% / FY26 high-end +27% → 2Q26 +36% / FY26 +30%; ESTC FY27 guide ~14% (Citrini, 07-20) → +15.2% (company, 08-27).

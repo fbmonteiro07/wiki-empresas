@@ -39,13 +39,14 @@ _Generated 2026-09-04 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-11-19 | SKHYNIX | **🆕 2026-08-20 → 2026-11-19 — the buyback executes on-market** (SK Securities). Daily execution is observable; **the falsifier for the "most aggressive among peers" claim is whether the full W40trn ac |
 | 2026-11-21 | SAMSUNG | **🆕 2026-08-24 → 2026-11-21 — the 53.3mn-share PSU treasury purchase window is open.** A mechanical, non-discretionary bid in the market for three months; note it is **excluded** from the FCF payout b |
 
-## ⏰ Passed — need a post-mortem (1)
+## ⏰ Passed — need a post-mortem (2)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
 | 2026-08-05 | DT | **CFO succession** — Benson retires by FYE (March 2027); search announced 2026-08-05. |
+| 2026-07-01 | DT | **Starboard** — stake disclosed late April 2026, two board seats added 2026-07-01 (J.P. Morgan · Chatterjee, 2026-07-01); further governance / capital-return asks are possible into the Investor Day. |
 
 ## ✅ Resolved (128)
 

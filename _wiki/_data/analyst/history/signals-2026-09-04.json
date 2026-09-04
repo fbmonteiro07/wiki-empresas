@@ -7,8 +7,8 @@
     "positions": 8
   },
   "stats": {
-    "signals": 52,
-    "active": 52,
+    "signals": 53,
+    "active": 53,
     "high": 14,
     "belief_changes": 0,
     "focus_names": 34
@@ -233,14 +233,15 @@
     },
     {
       "ticker": "DT",
-      "focus_score": 58,
+      "focus_score": 60,
       "in_book": false,
-      "signal_count": 1,
+      "signal_count": 2,
       "high_count": 0,
       "sector": "AI · Data infrastructure & observability",
       "thesis": "Cheaper way into observability (ARR +17%, logs ~$200M growing >100%); UBS Buy on Arize AI-observability optionality; FX caps ARR growth.",
       "next_catalyst": "",
       "why": [
+        "DT — catalyst passed without a logged outcome",
         "DT — catalyst passed without a logged outcome"
       ]
     },
@@ -1684,68 +1685,68 @@
       "score": 66,
       "title": "D-9 · pre-existing house-vs-consensus gaps re-confirmed (not new tonight, but they frame the new sources)",
       "tickers": [
-        "GOOG",
-        "META"
+        "META",
+        "GOOG"
       ],
       "in_book": [
-        "GOOG",
-        "META"
+        "META",
+        "GOOG"
       ],
       "impact": "medium",
       "urgency": "immediate",
       "confidence": "medium",
       "why_now": "GOOG — house 2026E revenue $505bn vs BBG 1FY $432bn (+16.9%). Large and long-standing. ✅ But house",
       "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the GOOG/META model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "action": "Open the META/GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
       "readthrough": [
         {
           "ticker": "AVGO",
           "relation": "supplier",
-          "detail": "custom ASIC (TPU)",
-          "from": "GOOG",
+          "detail": "custom ASIC",
+          "from": "META",
           "in_book": true
         },
         {
           "ticker": "NVDA",
           "relation": "supplier",
           "detail": "GPUs",
-          "from": "GOOG",
+          "from": "META",
           "in_book": true
         },
         {
-          "ticker": "SNOW",
-          "relation": "competitor",
-          "detail": "warehouse vs BigQuery",
-          "from": "GOOG",
-          "in_book": false
-        },
-        {
-          "ticker": "ANTHROPIC",
-          "relation": "customer",
-          "detail": "TPU compute",
-          "from": "GOOG",
-          "in_book": false
-        },
-        {
-          "ticker": "BE",
+          "ticker": "AMD",
           "relation": "supplier",
-          "detail": "on-site fuel cells",
-          "from": "GOOG",
+          "detail": "MI GPUs",
+          "from": "META",
           "in_book": false
         },
         {
-          "ticker": "CIEN",
+          "ticker": "GLW",
           "relation": "supplier",
-          "detail": "DCI/optical",
-          "from": "GOOG",
+          "detail": "optical fiber (LTA)",
+          "from": "META",
           "in_book": false
         },
         {
-          "ticker": "COHR",
+          "ticker": "SNDK",
           "relation": "supplier",
-          "detail": "optical",
-          "from": "GOOG",
+          "detail": "NAND/SSD",
+          "from": "META",
+          "in_book": false
+        },
+        {
+          "ticker": "STX",
+          "relation": "supplier",
+          "detail": "nearline HDD",
+          "from": "META",
+          "in_book": false
+        },
+        {
+          "ticker": "WDC",
+          "relation": "supplier",
+          "detail": "nearline HDD",
+          "from": "META",
           "in_book": false
         }
       ],
@@ -2207,6 +2208,38 @@
         "_meta/outcomes.md"
       ],
       "evidence_anchor": "CFO succession — Benson retires by FYE (March 2027); search announced 2026-08-05.",
+      "origin": "outcome_loop",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "post-b68cffd10db5",
+      "asof": "2026-09-04",
+      "source_date": "2026-07-01",
+      "event_date": "2026-07-01",
+      "type": "postmortem",
+      "priority": "medium",
+      "score": 58,
+      "title": "DT — catalyst passed without a logged outcome",
+      "tickers": [
+        "DT"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "overdue",
+      "confidence": "high",
+      "why_now": "Starboard — stake disclosed late April 2026, two board seats added 2026-07-01 (J.P. Morgan · Chatterjee, 2026-07-01); further governance / capital-return asks are possible into the Investor Day.",
+      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
+      "action": "Write a source-attributed bull won|bear won|neutral outcome for DT in outcomes.md.",
+      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
+      "readthrough": [],
+      "source": "Catalyst outcome ledger",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "_meta/outcomes.md"
+      ],
+      "evidence_anchor": "Starboard — stake disclosed late April 2026, two board seats added 2026-07-01 (J.P. Morgan · Chatterjee, 2026-07-01); further governance / capital-return asks are possible into the Investor Day.",
       "origin": "outcome_loop",
       "feedback": "",
       "feedback_note": "",
