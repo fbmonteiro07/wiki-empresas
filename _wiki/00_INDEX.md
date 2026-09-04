@@ -6,7 +6,7 @@
 >
 > 🔎 **Full-corpus search** (reports + calls + briefings + transcripts + Stratechery + DAMNANG, not just wiki pages): `py "_wiki/_tools/search.py" <query>` (index: `py "_wiki/_tools/build_search_index.py"`).
 
-_Generated 2026-09-03 by `_tools/build_index.py` from [`_data/index_meta.json`](_data/index_meta.json) (hand-edit the json, not this file) · **101 companies + 2 private AI labs (103 pages)** · one page per ticker synthesizing all co-located sources in `E:\Wiki Felipe`: filings (10-K/10-Q/20-F) + earnings transcripts + investor-day decks + thematic equity calls (`_equity_calls`) + per-ticker roll-up of the email briefings (`_briefings/by-ticker`) + BBG consensus & street-high estimates (`_data/estimates.json`)._
+_Generated 2026-09-04 by `_tools/build_index.py` from [`_data/index_meta.json`](_data/index_meta.json) (hand-edit the json, not this file) · **106 companies + 2 private AI labs (108 pages)** · one page per ticker synthesizing all co-located sources in `E:\Wiki Felipe`: filings (10-K/10-Q/20-F) + earnings transcripts + investor-day decks + thematic equity calls (`_equity_calls`) + per-ticker roll-up of the email briefings (`_briefings/by-ticker`) + BBG consensus & street-high estimates (`_data/estimates.json`)._
 
 Each page follows the [_TEMPLATE](_TEMPLATE.md): Snapshot · Current state (latest quarter) · Debate (bull/bear + where the sell-side stands, attributed + dated) · Catalysts · Risks · Consensus estimates (BBG) · Sources (links). Archive master index: [../INDEX.md](../INDEX.md). Thematic pages: [themes/00_THEMES.md](themes/00_THEMES.md).
 
@@ -132,6 +132,15 @@ Each page follows the [_TEMPLATE](_TEMPLATE.md): Snapshot · Current state (late
 | PLTR | [PLTR](PLTR.md) | Ontology/"action engine" moat (claimed 5-yr); momentum strong but valuation split (UBS Buy $200 vs DB Hold $200). |
 | APP | [APP](APP.md) | AXON AI ad engine; eCommerce inflection + fading META threat the bull, drawn-out eComm ramp the bear (DB Buy $660 / GS Neutral $585). |
 | VEEV | [VEEV](VEEV.md) | Life-sciences cloud; Vault CRM migration vs AI-disclosure overhang until Q4 Investor Day (MS EW $215). |
+
+## AI · Data infrastructure & observability
+| Ticker | Page | One-line thesis |
+|---|---|---|
+| SNOW | [SNOW](SNOW.md) | AI data repository: product rev +37% and FY27 guide raised to +36% (Q2 FY27); debate = Databricks share loss + AI gross-margin cost vs "token path is data". |
+| MDB | [MDB](MDB.md) | Agent-memory database; Atlas ~29% for 5 qtrs while total re-accelerated to +30% (Q2 FY27); debate = Postgres taking new AI apps vs Atlas vector/search attach. |
+| DDOG | [DDOG](DDOG.md) | Cleanest public proxy for AI-native cloud consumption (+36%, FY26 guide +30%); debate = 13-14x sales + AI-native concentration vs non-AI base accelerating. |
+| DT | [DT](DT.md) | Cheaper way into observability (ARR +17%, logs ~$200M growing >100%); UBS Buy on Arize AI-observability optionality; FX caps ARR growth. |
+| ESTC | [ESTC](ESTC.md) | Permission-aware search/context plane straddling observability + security; +15% with 37% of large customers on AI; stable at 4-5x sales, not inflecting. |
 
 ## CDN / Edge cloud
 | Ticker | Page | One-line thesis |

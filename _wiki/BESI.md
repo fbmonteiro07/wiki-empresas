@@ -6,7 +6,7 @@
 _Wiki · generated 2026-06-20 · **Dutch issuer — no SEC 10-K/10-Q/20-F**; sources: transcripts + Besi IR + BBG (EUR). Euronext Amsterdam: BESI (ADR: BESIY). Local sources: `E:\Wiki Felipe\BESI\transcripts` · `E:\briefings\2026\*-company-specific.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-03 · EUR
+### 📊 Consensus snapshot — BBG · asof 2026-09-04 · EUR
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|

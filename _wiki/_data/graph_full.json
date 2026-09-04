@@ -1,8 +1,8 @@
 {
- "generated": "2026-09-03",
+ "generated": "2026-09-04",
  "counts": {
-  "nodes": 168,
-  "edges": 1832
+  "nodes": 173,
+  "edges": 1898
  },
  "nodes": [
   {
@@ -294,7 +294,7 @@
     "transcript": 8,
     "wiki": 1
    },
-   "next_catalyst": "2026-09-03",
+   "next_catalyst": "2026-09-15",
    "last_chg": "2026-09-03"
   },
   {
@@ -502,6 +502,20 @@
    "last_chg": "2026-08-18"
   },
   {
+   "id": "DDOG",
+   "type": "ticker",
+   "label": "DDOG",
+   "sector": "AI · Data infrastructure & observability",
+   "thesis": "Cleanest public proxy for AI-native cloud consumption (+36%, FY26 guide +30%); debate = 13-14x sales + AI-native concentration vs non-AI base accelerating.",
+   "in_book": false,
+   "docs": {
+    "transcript": 7,
+    "wiki": 1
+   },
+   "next_catalyst": "",
+   "last_chg": "2026-09-04"
+  },
+  {
    "id": "DELL",
    "type": "ticker",
    "label": "DELL",
@@ -529,6 +543,34 @@
    },
    "next_catalyst": "",
    "last_chg": "2026-08-25"
+  },
+  {
+   "id": "DT",
+   "type": "ticker",
+   "label": "DT",
+   "sector": "AI · Data infrastructure & observability",
+   "thesis": "Cheaper way into observability (ARR +17%, logs ~$200M growing >100%); UBS Buy on Arize AI-observability optionality; FX caps ARR growth.",
+   "in_book": false,
+   "docs": {
+    "transcript": 6,
+    "wiki": 1
+   },
+   "next_catalyst": "",
+   "last_chg": "2026-09-04"
+  },
+  {
+   "id": "ESTC",
+   "type": "ticker",
+   "label": "ESTC",
+   "sector": "AI · Data infrastructure & observability",
+   "thesis": "Permission-aware search/context plane straddling observability + security; +15% with 37% of large customers on AI; stable at 4-5x sales, not inflecting.",
+   "in_book": false,
+   "docs": {
+    "transcript": 7,
+    "wiki": 1
+   },
+   "next_catalyst": "2026-09-22",
+   "last_chg": "2026-09-04"
   },
   {
    "id": "ETN",
@@ -736,6 +778,20 @@
    },
    "next_catalyst": "",
    "last_chg": "2026-08-26"
+  },
+  {
+   "id": "MDB",
+   "type": "ticker",
+   "label": "MDB",
+   "sector": "AI · Data infrastructure & observability",
+   "thesis": "Agent-memory database; Atlas ~29% for 5 qtrs while total re-accelerated to +30% (Q2 FY27); debate = Postgres taking new AI apps vs Atlas vector/search attach.",
+   "in_book": false,
+   "docs": {
+    "transcript": 8,
+    "wiki": 1
+   },
+   "next_catalyst": "2026-09-29",
+   "last_chg": "2026-09-04"
   },
   {
    "id": "MEDIATEK",
@@ -1205,6 +1261,20 @@
    "last_chg": "2026-08-25"
   },
   {
+   "id": "SNOW",
+   "type": "ticker",
+   "label": "SNOW",
+   "sector": "AI · Data infrastructure & observability",
+   "thesis": "AI data repository: product rev +37% and FY27 guide raised to +36% (Q2 FY27); debate = Databricks share loss + AI gross-margin cost vs \"token path is data\".",
+   "in_book": false,
+   "docs": {
+    "transcript": 7,
+    "wiki": 1
+   },
+   "next_catalyst": "",
+   "last_chg": "2026-09-04"
+  },
+  {
    "id": "SNPS",
    "type": "ticker",
    "label": "SNPS",
@@ -1359,7 +1429,7 @@
     "transcript": 1,
     "wiki": 1
    },
-   "next_catalyst": "2026-09-03",
+   "next_catalyst": "",
    "last_chg": "2026-09-02"
   },
   {
@@ -2960,6 +3030,96 @@
    "label": "TPU compute"
   },
   {
+   "u": "AMZN",
+   "v": "SNOW",
+   "type": "supplies",
+   "label": "cloud hosting (consumption runs on hyperscaler infra)"
+  },
+  {
+   "u": "AMZN",
+   "v": "MDB",
+   "type": "supplies",
+   "label": "cloud hosting (consumption runs on hyperscaler infra)"
+  },
+  {
+   "u": "AMZN",
+   "v": "DDOG",
+   "type": "supplies",
+   "label": "cloud hosting (consumption runs on hyperscaler infra)"
+  },
+  {
+   "u": "AMZN",
+   "v": "DT",
+   "type": "supplies",
+   "label": "cloud hosting (consumption runs on hyperscaler infra)"
+  },
+  {
+   "u": "AMZN",
+   "v": "ESTC",
+   "type": "supplies",
+   "label": "cloud hosting (consumption runs on hyperscaler infra)"
+  },
+  {
+   "u": "MSFT",
+   "v": "SNOW",
+   "type": "supplies",
+   "label": "cloud hosting (consumption runs on hyperscaler infra)"
+  },
+  {
+   "u": "MSFT",
+   "v": "MDB",
+   "type": "supplies",
+   "label": "cloud hosting (consumption runs on hyperscaler infra)"
+  },
+  {
+   "u": "MSFT",
+   "v": "DDOG",
+   "type": "supplies",
+   "label": "cloud hosting (consumption runs on hyperscaler infra)"
+  },
+  {
+   "u": "MSFT",
+   "v": "DT",
+   "type": "supplies",
+   "label": "cloud hosting (consumption runs on hyperscaler infra)"
+  },
+  {
+   "u": "MSFT",
+   "v": "ESTC",
+   "type": "supplies",
+   "label": "cloud hosting (consumption runs on hyperscaler infra)"
+  },
+  {
+   "u": "GOOG",
+   "v": "SNOW",
+   "type": "supplies",
+   "label": "cloud hosting (consumption runs on hyperscaler infra)"
+  },
+  {
+   "u": "GOOG",
+   "v": "MDB",
+   "type": "supplies",
+   "label": "cloud hosting (consumption runs on hyperscaler infra)"
+  },
+  {
+   "u": "GOOG",
+   "v": "DDOG",
+   "type": "supplies",
+   "label": "cloud hosting (consumption runs on hyperscaler infra)"
+  },
+  {
+   "u": "GOOG",
+   "v": "DT",
+   "type": "supplies",
+   "label": "cloud hosting (consumption runs on hyperscaler infra)"
+  },
+  {
+   "u": "GOOG",
+   "v": "ESTC",
+   "type": "supplies",
+   "label": "cloud hosting (consumption runs on hyperscaler infra)"
+  },
+  {
    "u": "NVDA",
    "v": "AMD",
    "type": "competes",
@@ -3090,6 +3250,78 @@
    "v": "FSLY",
    "type": "competes",
    "label": "edge/CDN"
+  },
+  {
+   "u": "DDOG",
+   "v": "DT",
+   "type": "competes",
+   "label": "observability"
+  },
+  {
+   "u": "DDOG",
+   "v": "ESTC",
+   "type": "competes",
+   "label": "observability/logs"
+  },
+  {
+   "u": "DT",
+   "v": "ESTC",
+   "type": "competes",
+   "label": "observability/logs"
+  },
+  {
+   "u": "DDOG",
+   "v": "CSCO",
+   "type": "competes",
+   "label": "observability vs Splunk"
+  },
+  {
+   "u": "DT",
+   "v": "CSCO",
+   "type": "competes",
+   "label": "observability vs Splunk"
+  },
+  {
+   "u": "ESTC",
+   "v": "CSCO",
+   "type": "competes",
+   "label": "SIEM/logs vs Splunk"
+  },
+  {
+   "u": "MDB",
+   "v": "ORCL",
+   "type": "competes",
+   "label": "operational database"
+  },
+  {
+   "u": "SNOW",
+   "v": "MSFT",
+   "type": "competes",
+   "label": "warehouse vs Fabric"
+  },
+  {
+   "u": "SNOW",
+   "v": "GOOG",
+   "type": "competes",
+   "label": "warehouse vs BigQuery"
+  },
+  {
+   "u": "SNOW",
+   "v": "AMZN",
+   "type": "competes",
+   "label": "warehouse vs Redshift"
+  },
+  {
+   "u": "MDB",
+   "v": "MSFT",
+   "type": "competes",
+   "label": "Atlas vs Cosmos DB"
+  },
+  {
+   "u": "MDB",
+   "v": "AMZN",
+   "type": "competes",
+   "label": "Atlas vs DynamoDB"
   },
   {
    "u": "theme:800v-dc-power",
@@ -3231,6 +3463,30 @@
   },
   {
    "u": "theme:ai-data-infra-observability",
+   "v": "DDOG",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:ai-data-infra-observability",
+   "v": "DT",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:ai-data-infra-observability",
+   "v": "ESTC",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:ai-data-infra-observability",
+   "v": "MDB",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:ai-data-infra-observability",
    "v": "MSFT",
    "type": "exposes",
    "label": ""
@@ -3256,6 +3512,12 @@
   {
    "u": "theme:ai-data-infra-observability",
    "v": "PLTR",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:ai-data-infra-observability",
+   "v": "SNOW",
    "type": "exposes",
    "label": ""
   },
@@ -8382,6 +8644,48 @@
   },
   {
    "u": "broker:BofA",
+   "v": "DDOG",
+   "type": "covers",
+   "label": "",
+   "w": 4
+  },
+  {
+   "u": "broker:UBS",
+   "v": "DDOG",
+   "type": "covers",
+   "label": "",
+   "w": 8
+  },
+  {
+   "u": "broker:JPM",
+   "v": "DDOG",
+   "type": "covers",
+   "label": "",
+   "w": 6
+  },
+  {
+   "u": "broker:MS",
+   "v": "DDOG",
+   "type": "covers",
+   "label": "",
+   "w": 4
+  },
+  {
+   "u": "broker:Jefferies",
+   "v": "DDOG",
+   "type": "covers",
+   "label": "",
+   "w": 3
+  },
+  {
+   "u": "broker:Barclays",
+   "v": "DDOG",
+   "type": "covers",
+   "label": "",
+   "w": 4
+  },
+  {
+   "u": "broker:BofA",
    "v": "DELL",
    "type": "covers",
    "label": "",
@@ -8561,6 +8865,83 @@
    "type": "covers",
    "label": "",
    "w": 3
+  },
+  {
+   "u": "broker:BofA",
+   "v": "DT",
+   "type": "covers",
+   "label": "",
+   "w": 7
+  },
+  {
+   "u": "broker:UBS",
+   "v": "DT",
+   "type": "covers",
+   "label": "",
+   "w": 16
+  },
+  {
+   "u": "broker:Jefferies",
+   "v": "DT",
+   "type": "covers",
+   "label": "",
+   "w": 6
+  },
+  {
+   "u": "broker:Citi",
+   "v": "DT",
+   "type": "covers",
+   "label": "",
+   "w": 3
+  },
+  {
+   "u": "broker:GS",
+   "v": "DT",
+   "type": "covers",
+   "label": "",
+   "w": 4
+  },
+  {
+   "u": "broker:Bernstein",
+   "v": "DT",
+   "type": "covers",
+   "label": "",
+   "w": 2
+  },
+  {
+   "u": "broker:Redburn",
+   "v": "DT",
+   "type": "covers",
+   "label": "",
+   "w": 2
+  },
+  {
+   "u": "broker:BofA",
+   "v": "ESTC",
+   "type": "covers",
+   "label": "",
+   "w": 2
+  },
+  {
+   "u": "broker:UBS",
+   "v": "ESTC",
+   "type": "covers",
+   "label": "",
+   "w": 10
+  },
+  {
+   "u": "broker:JPM",
+   "v": "ESTC",
+   "type": "covers",
+   "label": "",
+   "w": 2
+  },
+  {
+   "u": "broker:Jefferies",
+   "v": "ESTC",
+   "type": "covers",
+   "label": "",
+   "w": 6
   },
   {
    "u": "broker:BofA",
@@ -9891,6 +10272,62 @@
    "type": "covers",
    "label": "",
    "w": 4
+  },
+  {
+   "u": "broker:BofA",
+   "v": "MDB",
+   "type": "covers",
+   "label": "",
+   "w": 3
+  },
+  {
+   "u": "broker:UBS",
+   "v": "MDB",
+   "type": "covers",
+   "label": "",
+   "w": 17
+  },
+  {
+   "u": "broker:JPM",
+   "v": "MDB",
+   "type": "covers",
+   "label": "",
+   "w": 7
+  },
+  {
+   "u": "broker:MS",
+   "v": "MDB",
+   "type": "covers",
+   "label": "",
+   "w": 2
+  },
+  {
+   "u": "broker:Jefferies",
+   "v": "MDB",
+   "type": "covers",
+   "label": "",
+   "w": 4
+  },
+  {
+   "u": "broker:GS",
+   "v": "MDB",
+   "type": "covers",
+   "label": "",
+   "w": 4
+  },
+  {
+   "u": "broker:Barclays",
+   "v": "MDB",
+   "type": "covers",
+   "label": "",
+   "w": 4
+  },
+  {
+   "u": "broker:Bernstein",
+   "v": "MDB",
+   "type": "covers",
+   "label": "",
+   "w": 3
   },
   {
    "u": "broker:BofA",
@@ -12705,6 +13142,69 @@
    "type": "covers",
    "label": "",
    "w": 14
+  },
+  {
+   "u": "broker:BofA",
+   "v": "SNOW",
+   "type": "covers",
+   "label": "",
+   "w": 3
+  },
+  {
+   "u": "broker:UBS",
+   "v": "SNOW",
+   "type": "covers",
+   "label": "",
+   "w": 16
+  },
+  {
+   "u": "broker:JPM",
+   "v": "SNOW",
+   "type": "covers",
+   "label": "",
+   "w": 3
+  },
+  {
+   "u": "broker:MS",
+   "v": "SNOW",
+   "type": "covers",
+   "label": "",
+   "w": 3
+  },
+  {
+   "u": "broker:Jefferies",
+   "v": "SNOW",
+   "type": "covers",
+   "label": "",
+   "w": 5
+  },
+  {
+   "u": "broker:DB",
+   "v": "SNOW",
+   "type": "covers",
+   "label": "",
+   "w": 5
+  },
+  {
+   "u": "broker:Barclays",
+   "v": "SNOW",
+   "type": "covers",
+   "label": "",
+   "w": 6
+  },
+  {
+   "u": "broker:Bernstein",
+   "v": "SNOW",
+   "type": "covers",
+   "label": "",
+   "w": 4
+  },
+  {
+   "u": "broker:Redburn",
+   "v": "SNOW",
+   "type": "covers",
+   "label": "",
+   "w": 5
   },
   {
    "u": "broker:BofA",

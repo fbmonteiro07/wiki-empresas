@@ -2,7 +2,7 @@
 
 _Generated 2026-09-04 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (30)
+## 📅 Upcoming (32)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
@@ -19,11 +19,13 @@ _Generated 2026-09-04 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-09-21 | COHR | **🆕 2026-09-21 — PHOTONLINK LAUNCH: establish the PLATFORM, LANE RATE AND MODULATION FORMAT, not just the positioning.** The FQ1 FY27 synthesis lists PhotonLink as a genuinely net-new BULL item (platf |
 | 2026-09-22 | ADI | **2026-08-19 (7am ET, call 10am) — F3Q26 print.** Bogeys on the page from the JPM buy-side survey (guide/consensus: rev $3.9bn/$3.92bn, OPM 49%/49.2%, EPS $3.30/$3.34; F4Q guides $4.08bn / 49.9% / $3. |
 | 2026-09-22 | CRDO | **2026-09-22 — ECOC, JPM-hosted meeting with CEO Bill Brennan** (alongside [[CIEN]], [[LITE]] and Nokia; JPM · Cardoso / Deshpande, 2026-08-17). **JPM is also running an off-cycle hardware-reporter bu |
+| 2026-09-22 | ESTC | **Metrics webinar — 2026-09-22, 8:00 PT** (Kurtz, Q1 FY27 call): the observability-relaunch pitch (Columnar Mode, Prometheus/PromQL, Deductive AI). Observability is the lagging solution; this is manag |
 | 2026-09-22 | LITE | **2026-09-22 — ECOC (JPM-hosted meetings).** CEO **Michael Hurlston** meeting alongside [[CRDO]] (CEO Bill Brennan), [[CIEN]] and Nokia (JPM · Joe Cardoso / Sandeep Deshpande, 2026-08-17). The natural |
 | 2026-09-23 | GOOG | **🆕 Koray Kavukcuoglu's first public outing — The Information's AI Agenda Live, San Francisco, 2026-09-23.** Billed topics include integrating frontier models across Search and the multi-billion-user  |
 | 2026-09-23 | META | **🆕🔴🔴 META CONNECT — 2026-09-23/24.** Both UBS (exact dates) and MS (*"25 days away"* as of 08-30) name it as the product catalyst the whole re-rating argument depends on. **Watch for: the Watermelon  |
 | 2026-09-24 | NVDA | **🆕🔴 TRUMP-XI MEETING, 2026-09-24 — the dated headline-risk window, and UBS says the newsflow into it is not random.** *"As is usually the case before Trump-Xi meetings, headline risks likely to pick  |
 | 2026-09-24 | TSM | **🆕⚠️ TRUMP-XI, 2026-09-24 — UBS puts SPE and MEMORY as the most exposed verticals, with the ASML/Netherlands MATCH Act immersion-DUV headlines and new BIS measures on Chinese compute access via Thail |
+| 2026-09-29 | MDB | **Investor Day, NYC, 2026-09-29** (+ .local NYC 09-30): Berry promised a "financial session" and Desai "new product innovations"; watch for a refreshed long-term model (Sept-2025 Investor Day model =  |
 | 2026-09-30 | HPE | **🆕🔴 HPE NETWORKING ANALYST DAY — 2026-09-30.** This is where the *"segment returns to HPE's historical margin profile of mid-20s"* claim gets defended, dated, or walked back. ➜ **It matters more than |
 | 2026-09-30 | SKHYNIX | **🆕🔴 By 2026-09-30 — HBM CONTRACT PRICE UPDATE.** Named by JPM (Kwon, 2026-08-19) as the #2 company-specific catalyst. **This is the one that moves earnings rather than the share count**, and it is th |
 | 2026-09-30 | SNPS | **🆕🔴 2026-09-30 — INVESTOR DAY is the real event, not the 08-26 print.** MS (Simpson, 2026-08-19) is explicit: none of the three things that matter — Design IP reacceleration, agentic-EDA monetisation |
@@ -37,13 +39,13 @@ _Generated 2026-09-04 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-11-19 | SKHYNIX | **🆕 2026-08-20 → 2026-11-19 — the buyback executes on-market** (SK Securities). Daily execution is observable; **the falsifier for the "most aggressive among peers" claim is whether the full W40trn ac |
 | 2026-11-21 | SAMSUNG | **🆕 2026-08-24 → 2026-11-21 — the 53.3mn-share PSU treasury purchase window is open.** A mechanical, non-discretionary bid in the market for three months; note it is **excluded** from the FCF payout b |
 
-## ⏰ Passed — need a post-mortem (0)
+## ⏰ Passed — need a post-mortem (1)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| _none_ | | |
+| 2026-08-05 | DT | **CFO succession** — Benson retires by FYE (March 2027); search announced 2026-08-05. |
 
 ## ✅ Resolved (128)
 
