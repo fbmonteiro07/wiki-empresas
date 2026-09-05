@@ -93,7 +93,7 @@ _MODEL CHECK · HIGH IMPACT · IMMEDIATE · MEDIUM CONFIDENCE_
 _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
 - **Tickers:** GOOG · seeded book: GOOG
-- **Why now:** Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $426.7bn as of 2026-09-04, a derived +18.3% gap. Revenue comparisons require a basis check.
+- **Why now:** Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $426.8bn as of 2026-09-04, a derived +18.3% gap. Revenue comparisons require a basis check.
 - **Belief update:** The house/Street disagreement requires an explicit driver bridge.
 - **Action:** Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
 - **Falsifier:** A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.
@@ -114,20 +114,7 @@ _MODEL CHECK · HIGH IMPACT · STANDING · HIGH CONFIDENCE_
 - **Attribution:** management/company primary · curated reconciliation 2026-09-01.
 - **Evidence:** [reconciliation-2026-09-01.md](reconciliation-2026-09-01.md) · signal reco-232ac7c278b6
 
-### 8. 🔴 AAPL — 2026 EPS house view is 16% above consensus
-
-_MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
-
-- **Tickers:** AAPL · seeded book: AAPL
-- **Why now:** Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.71 as of 2026-09-04, a derived +16.2% gap.
-- **Belief update:** The house/Street disagreement requires an explicit driver bridge.
-- **Action:** Open the AAPL model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
-- **Falsifier:** A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.
-- **Read-through:** TSM (supplier: foundry); ARM (supplier: IP)
-- **Attribution:** Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-09-04.
-- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-b19972da6994
-
-### 9. 🔴 GOOG — 2027 revenue house view is 17% above consensus
+### 8. 🔴 GOOG — 2027 revenue house view is 17% above consensus
 
 _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
@@ -140,7 +127,7 @@ _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 - **Attribution:** Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-04.
 - **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-5789dfb22061
 
-### 10. 🔴 GOOG/AVGO/ANTHROPIC — the FT (08-04) SIZES a figure the wiki had marked unsizeable, and it is the EARLIER source
+### 9. 🔴 GOOG/AVGO/ANTHROPIC — the FT (08-04) SIZES a figure the wiki had marked unsizeable, and it is the EARLIER source
 
 _MODEL CHECK · HIGH IMPACT · STANDING · MEDIUM-HIGH CONFIDENCE_
 
@@ -153,7 +140,7 @@ _MODEL CHECK · HIGH IMPACT · STANDING · MEDIUM-HIGH CONFIDENCE_
 - **Attribution:** Financial Times · curated reconciliation 2026-09-01.
 - **Evidence:** [reconciliation-2026-09-01.md](reconciliation-2026-09-01.md) · signal reco-0b6826e2d689
 
-### 11. 🔴 Rating-action DATING was wrong on two pages
+### 10. 🔴 Rating-action DATING was wrong on two pages
 
 _DATA QUALITY · HIGH IMPACT · STANDING · MEDIUM CONFIDENCE_
 
@@ -165,6 +152,19 @@ _DATA QUALITY · HIGH IMPACT · STANDING · MEDIUM CONFIDENCE_
 - **Read-through:** AVGO (supplier: custom ASIC); NVDA (supplier: GPUs); AMD (supplier: MI GPUs); GLW (supplier: optical fiber (LTA)); SNDK (supplier: NAND/SSD); STX (supplier: nearline HDD); WDC (supplier: nearline HDD)
 - **Attribution:** J.P. Morgan IG TMT credit · Spear/Degen · curated reconciliation 2026-09-01.
 - **Evidence:** [reconciliation-2026-09-01.md](reconciliation-2026-09-01.md) · signal reco-f387735216ae
+
+### 11. 🔴 AAPL — 2026 EPS house view is 16% above consensus
+
+_MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
+
+- **Tickers:** AAPL · seeded book: AAPL
+- **Why now:** Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.73 as of 2026-09-04, a derived +15.9% gap.
+- **Belief update:** The house/Street disagreement requires an explicit driver bridge.
+- **Action:** Open the AAPL model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
+- **Falsifier:** A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.
+- **Read-through:** TSM (supplier: foundry); ARM (supplier: IP)
+- **Attribution:** Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-09-04.
+- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-b19972da6994
 
 ### 12. 🔴 NVDA — the first BEARISH read of the 70% guide in the open window
 

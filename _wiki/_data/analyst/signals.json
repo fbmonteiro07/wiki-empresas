@@ -969,7 +969,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $426.7bn as of 2026-09-04, a derived +18.3% gap. Revenue comparisons require a basis check.",
+      "why_now": "Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $426.8bn as of 2026-09-04, a derived +18.3% gap. Revenue comparisons require a basis check.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -1033,8 +1033,8 @@
       "origin": "house_vs_consensus",
       "values": {
         "house": 505.0,
-        "consensus": 426.74307,
-        "delta_pct": 18.34,
+        "consensus": 426.84261,
+        "delta_pct": 18.31,
         "unit": "$bn"
       },
       "feedback": "",
@@ -1107,60 +1107,6 @@
       "feedback_note": "",
       "hidden": false,
       "carried_from": "2026-09-01"
-    },
-    {
-      "id": "esti-b19972da6994",
-      "asof": "2026-09-04",
-      "source_date": "2026-09-04",
-      "type": "model_check",
-      "priority": "high",
-      "score": 70,
-      "title": "AAPL — 2026 EPS house view is 16% above consensus",
-      "tickers": [
-        "AAPL"
-      ],
-      "in_book": [
-        "AAPL"
-      ],
-      "impact": "high",
-      "urgency": "standing",
-      "confidence": "provisional",
-      "why_now": "Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.71 as of 2026-09-04, a derived +16.2% gap.",
-      "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
-      "action": "Open the AAPL model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
-      "readthrough": [
-        {
-          "ticker": "TSM",
-          "relation": "supplier",
-          "detail": "foundry",
-          "from": "AAPL",
-          "in_book": true
-        },
-        {
-          "ticker": "ARM",
-          "relation": "supplier",
-          "detail": "IP",
-          "from": "AAPL",
-          "in_book": false
-        }
-      ],
-      "source": "Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-09-04",
-      "evidence_paths": [
-        "_data/house.json",
-        "_data/estimates.json"
-      ],
-      "evidence_anchor": "AAPL 2026 EPS",
-      "origin": "house_vs_consensus",
-      "values": {
-        "house": 10.12,
-        "consensus": 8.71,
-        "delta_pct": 16.19,
-        "unit": ""
-      },
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
     },
     {
       "id": "esti-5789dfb22061",
@@ -1512,6 +1458,60 @@
       "carried_from": "2026-09-01"
     },
     {
+      "id": "esti-b19972da6994",
+      "asof": "2026-09-04",
+      "source_date": "2026-09-04",
+      "type": "model_check",
+      "priority": "high",
+      "score": 69,
+      "title": "AAPL — 2026 EPS house view is 16% above consensus",
+      "tickers": [
+        "AAPL"
+      ],
+      "in_book": [
+        "AAPL"
+      ],
+      "impact": "high",
+      "urgency": "standing",
+      "confidence": "provisional",
+      "why_now": "Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.73 as of 2026-09-04, a derived +15.9% gap.",
+      "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
+      "action": "Open the AAPL model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
+      "readthrough": [
+        {
+          "ticker": "TSM",
+          "relation": "supplier",
+          "detail": "foundry",
+          "from": "AAPL",
+          "in_book": true
+        },
+        {
+          "ticker": "ARM",
+          "relation": "supplier",
+          "detail": "IP",
+          "from": "AAPL",
+          "in_book": false
+        }
+      ],
+      "source": "Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-09-04",
+      "evidence_paths": [
+        "_data/house.json",
+        "_data/estimates.json"
+      ],
+      "evidence_anchor": "AAPL 2026 EPS",
+      "origin": "house_vs_consensus",
+      "values": {
+        "house": 10.12,
+        "consensus": 8.73,
+        "delta_pct": 15.92,
+        "unit": ""
+      },
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
       "id": "reco-df1f585788a9",
       "asof": "2026-09-04",
       "source_date": "2026-09-01",
@@ -1685,68 +1685,68 @@
       "score": 66,
       "title": "D-9 · pre-existing house-vs-consensus gaps re-confirmed (not new tonight, but they frame the new sources)",
       "tickers": [
-        "META",
-        "GOOG"
+        "GOOG",
+        "META"
       ],
       "in_book": [
-        "META",
-        "GOOG"
+        "GOOG",
+        "META"
       ],
       "impact": "medium",
       "urgency": "immediate",
       "confidence": "medium",
       "why_now": "GOOG — house 2026E revenue $505bn vs BBG 1FY $432bn (+16.9%). Large and long-standing. ✅ But house",
       "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the META/GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "action": "Open the GOOG/META model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
       "readthrough": [
         {
           "ticker": "AVGO",
           "relation": "supplier",
-          "detail": "custom ASIC",
-          "from": "META",
+          "detail": "custom ASIC (TPU)",
+          "from": "GOOG",
           "in_book": true
         },
         {
           "ticker": "NVDA",
           "relation": "supplier",
           "detail": "GPUs",
-          "from": "META",
+          "from": "GOOG",
           "in_book": true
         },
         {
-          "ticker": "AMD",
-          "relation": "supplier",
-          "detail": "MI GPUs",
-          "from": "META",
+          "ticker": "SNOW",
+          "relation": "competitor",
+          "detail": "warehouse vs BigQuery",
+          "from": "GOOG",
           "in_book": false
         },
         {
-          "ticker": "GLW",
-          "relation": "supplier",
-          "detail": "optical fiber (LTA)",
-          "from": "META",
+          "ticker": "ANTHROPIC",
+          "relation": "customer",
+          "detail": "TPU compute",
+          "from": "GOOG",
           "in_book": false
         },
         {
-          "ticker": "SNDK",
+          "ticker": "BE",
           "relation": "supplier",
-          "detail": "NAND/SSD",
-          "from": "META",
+          "detail": "on-site fuel cells",
+          "from": "GOOG",
           "in_book": false
         },
         {
-          "ticker": "STX",
+          "ticker": "CIEN",
           "relation": "supplier",
-          "detail": "nearline HDD",
-          "from": "META",
+          "detail": "DCI/optical",
+          "from": "GOOG",
           "in_book": false
         },
         {
-          "ticker": "WDC",
+          "ticker": "COHR",
           "relation": "supplier",
-          "detail": "nearline HDD",
-          "from": "META",
+          "detail": "optical",
+          "from": "GOOG",
           "in_book": false
         }
       ],

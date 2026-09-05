@@ -10,10 +10,10 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AMD` (filings + transc
 | Revenue | $50.5bn | $87.7bn |
 | Gross profit | $28.2bn | $48.8bn |
 | Gross margin | 55.8% | 55.6% |
-| EBITDA | $14.7bn | $31.3bn |
-| EPS | $7.50 | $15.46 |
-| Capex | $1.9bn | $2.9bn |
-| OCF (≈EBITDA) | $14.7bn | $31.3bn |
+| EBITDA | $14.8bn | $31.3bn |
+| EPS | $7.51 | $15.46 |
+| Capex | $1.8bn | $2.7bn |
+| OCF (≈EBITDA) | $14.8bn | $31.3bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

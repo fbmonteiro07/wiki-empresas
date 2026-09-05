@@ -10,12 +10,12 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AGX` (10-K + transcrip
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $1.3bn | $1.6bn |
-| Gross profit | $237m | $329m |
+| Gross profit | $238m | $329m |
 | Gross margin | 18.7% | 20.0% |
-| EBITDA | $211m | $350m |
-| EPS | $11.47 | $16.08 |
+| EBITDA | $212m | $345m |
+| EPS | $11.36 | $15.87 |
 | Capex | $11m | $8m |
-| OCF (≈EBITDA) | $211m | $350m |
+| OCF (≈EBITDA) | $212m | $345m |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
