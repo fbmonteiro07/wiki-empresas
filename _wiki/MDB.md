@@ -86,6 +86,13 @@ The central question is **whether new AI applications default to Postgres (Supab
 
 ## Intra-quarter — calls, commentary & reports
 
+**🆕 2026-09-04 (/wiki-ingest) — THE MISS WAS AGAINST THE BUY-SIDE BAR, NOT AGAINST THE HOUSE, AND MS SPELLS OUT BOTH NUMBERS.** (Morgan Stanley · **Sanjit Singh** (Small & Midcap Infrastructure Software & Analytics) — **stays OVERWEIGHT**, relayed via MS *Global Reflections* / Nick Savone and *Friday Five* / Skyler Risom, both 2026-09-04. ⚠️ **SALES COMMENTARY RELAYING RESEARCH; no PT is carried in either document and none is recorded here.**)
+
+- 🔴 **THE ARITHMETIC OF THE DISAPPOINTMENT: **Atlas grew 28.9% y/y against a ~30% BUY-SIDE BOGEY** — *"MongoDB (MDB) learned that 29% isn't always enough."* The *Friday Five* version adds the second leg: the print also **implied a 4Q DECELERATION from guidance.** ➤ **So the stock did not react to a fundamental miss; it reacted to a 1.1-point shortfall against an unpublished bar plus a guide that implies further deceleration. Worth recording precisely because the gap between the reported number and the number that mattered was ~1 point.**
+- ✅ **MS's position: Singh *"continues to be OVERWEIGHT at ~8x CY27 SALES, with expectations of a GROWTH INFLECTION STILL AHEAD"*, and calls it *"still a strong quarter"* with an *"UNDERAPPRECIATED EA [Enterprise Advanced] OPPORTUNITY FOR AI NATIVES NEXT YEAR."*** ⚠️ **The ~8x CY27 sales multiple is MS's characterisation, not a computed house figure — do not carry it as a valuation mark without deriving it.**
+- ➤ **Context from the same documents: MS's software team argues the sector is re-rating on NARRATIVE rather than numbers — large-cap SaaS with roughly flat CY27 revisions outperformed software by an average 18% after CY2Q26 prints, versus 4% underperformance on the same revisions a year ago. MDB is the counter-example in that set: the revision was not flat, and it was punished. Cross-ref [[CRM]], [[NOW]], [[SNOW]].**
+
+
 _Newest first. All seven are Barclays · Raimo Lenschow (with Sheldon McMeans; Eamon Coughlin / Becky Sun / Fan Gao on individual notes), text captured from Barclays Live; the date is the filename prefix. Street = Bloomberg consensus as quoted by Barclays. Archived 2026-09-04 in `relatórios bons/`._
 
 | Date | Source | Type | Rating · PT | Key datapoints / what changed |

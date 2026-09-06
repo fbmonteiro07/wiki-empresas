@@ -86,6 +86,13 @@ Cloud data platform (the "AI Data Cloud") sold on **consumption**, not seats: cu
 
 ## Intra-quarter — calls, commentary & reports
 
+**🆕 2026-09-04 (/wiki-ingest) — TWO HOUSES CALL THE PRINT A BLOWOUT, AND ONE OF THEM DESCRIBES A DIFFERENT COMPANY WHILE DOING IT.** (Morgan Stanley, via *Friday Five* / Skyler Risom and *Global Reflections* / Nick Savone, both 2026-09-04 — **SALES COMMENTARY, NOT RESEARCH**; no rating or PT is carried in either document.)
+
+- ✅ **THE VIEW, which corroborates rather than changes what the page already carries from the 09-03 print: *"In Infra, SNOW delivered a BLOWOUT… AI tools driving strength in the CORE business, cementing status as an AI winner in Software across BOTH AI NATIVES AND TRADITIONAL ENTERPRISES."* Separately, *Global Reflections*: *"Snowflake (SNOW) added to the case this week, RAISING ITS REVENUE OUTLOOK as adoption of its AI-POWERED CODING ASSISTANT accelerated"* — consistent with the Cortex Code figure already on this page (9,100 accounts, from 7,100).**
+- ⚠️⚠️ **SOURCE DEFECT, FLAGGED AND NOT ADOPTED: the *Friday Five* sentence continues *"— less surprising fundamentally given the state of the OBSERVABILITY MARKET."* **Snowflake is not an observability company.** That clause almost certainly belongs to a different name in the same paragraph block (the note covers MDB, DOCU, PATH, ASAN, IOT, PANW, CRWD and ZS in adjacent bullets). ➤ **The clause is DISCARDED; the rest of the sentence is retained because it is corroborated by the independent *Global Reflections* write-up. Logged because it is the second instance in a week of a sales-commentary document attaching the right verdict to the wrong business description — the same defect class as the AVGO wrong-transcript file rejected on 09-04. Treat unattributed category descriptions in desk notes as untrusted.**
+- ⚠️ **No number on this page is superseded. The Q2 FY27 marks (product revenue +37% to $1.49bn, FY target raised $230mn to $6.07bn, Cortex Code 9,100 accounts) stand as ingested on 09-04, and AI revenue remains UNDISCLOSED.**
+
+
 _Newest first. One row per archived note (`relatórios bons/`, links in § Sources). Dates are the archive `YYYYMMDD_` prefix. "Desk" = sales/trading product, not research._
 
 | Date | Source (house · analyst) | Type | Rating · PT | Key datapoints / what changed |

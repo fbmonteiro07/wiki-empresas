@@ -211,6 +211,13 @@ PANW sits between upstream infrastructure/threat-intelligence inputs and downstr
 - **Post-print sell-side reset** _(briefings, Jun-2026)_: PTs ~**$315–350** after a clean Q3; debate = organic vs M&A-flattered NGS ARR (CyberArk $21.1B + Chronosphere $3.0B).
 
 ## Intra-quarter — calls, commentary & reports (since the last print)
+
+**🆕🔴 2026-09-04 (/wiki-ingest) — TWO HARD F4Q NUMBERS THE PAGE DID NOT CARRY, FROM MS's OWN CYBERSECURITY ANALYST, AND A STRAIGHT EXPLANATION OF WHY A GOOD PRINT FADED.** (Morgan Stanley · **Meta Marshall**, Head of Cybersecurity and Telecom & Networking Equipment — **stays OVERWEIGHT** *"on the AI security and platformization opportunity"* — relayed via MS *Global Reflections* / Nick Savone and *Friday Five* / Skyler Risom, both 2026-09-04. ⚠️ **SALES COMMENTARY RELAYING RESEARCH, not the research note itself; no PT is carried in either document and none is recorded here.**)
+
+- 🔴 **THE TWO NUMBERS: **NGS ARR +63% Y/Y TO $9.1BN**, and **PRISMA AIRS ALREADY AT ~$120M ARR.** *(The percentage alone was in the 09-04 flow; the $9.1bn absolute and the Prisma AIRS $120M are net-new to this page.)* Also carried: **RPO +34% y/y.**
+- **THE FADE, stated plainly: the stock faded *"likely on seemingly CONSERVATIVE FY27 GUIDANCE, but F4Q numbers cleared most expects"* — and, in the *Global Reflections* framing, PANW *"was a reminder that even good AI stories can struggle when THE BAR GETS HIGH ENOUGH."*** ➤ **Consistent with the page's existing read; logged because it is a second house independently attributing the reaction to the guide rather than to the quarter.**
+- ⚠️ **Prisma AIRS at ~$120M ARR is the one to watch: it is the AI-security line that Marshall's Overweight rests on, and $120M against $9.1bn of NGS ARR is ~1.3% — a real product with a real number, and nowhere near large enough yet to carry the thesis. The falsifiable test is the AIRS growth rate at the next print, not the level.** ➤ **Read alongside [[CRWD]] the same week, where MS's own analyst calls the $20bn ARR target conservative at ~3.5% of an enlarged TAM: the house is bullish on the AI-security TAM at both names, and at both names the AI-native revenue is still a rounding error against the core.**
+
 _Q4 FY26 · Sep 1 → present, 2026 · window opened by the F4Q26 print (2026-09-01). Timeline visual: [timeline.html](timeline.html)._
 
 **Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):

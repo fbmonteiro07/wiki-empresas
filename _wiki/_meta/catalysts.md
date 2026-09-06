@@ -1,20 +1,18 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-09-04 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-09-05 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (32)
+## 📅 Upcoming (31)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-09-04 | DELL | **2026-09-04, 10:00am ET — JPM group takeaways call on the OEM results** (Joe Cardoso, "Ask Me Anything on OEM earnings", Friday). |
-| 2026-09-04 | DELL | **2026-09-04, 11:00am ET — BERNSTEIN DELL Q2 FY27 POST-EARNINGS CFO CALL.** First scheduled management access after the print (Bernstein · Tyler Seidman, 2026-09-01). |
-| 2026-09-04 | DELL | **🆕 BERNSTEIN DELL Q2 FY27 POST-EARNINGS CFO CALL — 2026-09-04, 11:00am ET.** First scheduled management access after the print. (Bernstein · Tyler Seidman, 2026-08-31) |
 | 2026-09-09 | AAPL | **🆕🔴🔴 2026-09-09 "SURPRISE AND SHINE" — THE EVENT NOW HAS A SCORECARD WITH A 2x DISAGREEMENT ON IT. Score these five items on the day:** |
 | 2026-09-11 | TER | **Q3 CY26 print (~late Oct 2026)** — first test of the re-cut 2H, and of whether the merchant-GPU/second-hyperscaler correlation converts into guided revenue. Quiet period begins **2026-09-11**; manag |
 | 2026-09-14 | NVDA | **🆕 Post-print access, both dated:** **BofA fireside with Toshiya Hari, VP of IR & Strategic Finance, hosted by Vivek Arya — 2026-09-02, 11:00 ET (~1hr)** (BofA TMT Sales, 2026-08-14) · **UBS-arranged |
 | 2026-09-15 | AVGO | **🆕 BERNSTEIN 8th ANNUAL SEMIS BUS TOUR, 2026-09-15/16, San Jose — AVGO on the roster alongside [[ALAB]], [[AMAT]], AMBA, LSCC, MPWR, [[NVDA]], [[NXPI]].** First scheduled corporate-access window afte |
 | 2026-09-15 | DELL | **2026-09-15 — UBS David Vogt Boston marketing '26 #3, US Hardware.** |
 | 2026-09-16 | ON | **2026-09-16 — onsemi Analyst Day** (Citi exp. ~Sep 13 print first) — the key event; watch for a raised long-term target model + SiC/800V framing (Citi, briefing 2026-06-15). |
+| 2026-09-21 | BE | **🆕🔴 2026-09-18 (close) / 2026-09-21 (open) — S&P QUARTERLY REBALANCE, BE ON THE ADD LIST.** A mechanical index-demand event independent of fundamentals (JPM Global Markets Strategy · Min Moon, "S&P I |
 | 2026-09-21 | CIEN | **🆕 ECOC 2026, 2026-09-21/22 (Spain) — Morgan Stanley hosts COHR, CIEN, [[CSCO]], KEYS and NOK.** First optical-systems corporate-access window after the print. (MS TMT desk, 2026-08-31) |
 | 2026-09-21 | COHR | **🆕 2026-09-21 — PHOTONLINK LAUNCH: establish the PLATFORM, LANE RATE AND MODULATION FORMAT, not just the positioning.** The FQ1 FY27 synthesis lists PhotonLink as a genuinely net-new BULL item (platf |
 | 2026-09-22 | ADI | **2026-08-19 (7am ET, call 10am) — F3Q26 print.** Bogeys on the page from the JPM buy-side survey (guide/consensus: rev $3.9bn/$3.92bn, OPM 49%/49.2%, EPS $3.30/$3.34; F4Q guides $4.08bn / 49.9% / $3. |
@@ -22,6 +20,7 @@ _Generated 2026-09-04 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-09-22 | ESTC | **Metrics webinar — 2026-09-22, 8:00 PT** (Kurtz, Q1 FY27 call): the observability-relaunch pitch (Columnar Mode, Prometheus/PromQL, Deductive AI). Observability is the lagging solution; this is manag |
 | 2026-09-22 | LITE | **2026-09-22 — ECOC (JPM-hosted meetings).** CEO **Michael Hurlston** meeting alongside [[CRDO]] (CEO Bill Brennan), [[CIEN]] and Nokia (JPM · Joe Cardoso / Sandeep Deshpande, 2026-08-17). The natural |
 | 2026-09-23 | GOOG | **🆕 Koray Kavukcuoglu's first public outing — The Information's AI Agenda Live, San Francisco, 2026-09-23.** Billed topics include integrating frontier models across Search and the multi-billion-user  |
+| 2026-09-23 | META | **🆕 2026-09-23/24 — META CONNECT.** MS flags it as the next scheduled product venue *"for more product updates"*, with **Hatch** expected to launch *"in the coming weeks"* and the next model, **'Water |
 | 2026-09-23 | META | **🆕🔴🔴 META CONNECT — 2026-09-23/24.** Both UBS (exact dates) and MS (*"25 days away"* as of 08-30) name it as the product catalyst the whole re-rating argument depends on. **Watch for: the Watermelon  |
 | 2026-09-24 | NVDA | **🆕🔴 TRUMP-XI MEETING, 2026-09-24 — the dated headline-risk window, and UBS says the newsflow into it is not random.** *"As is usually the case before Trump-Xi meetings, headline risks likely to pick  |
 | 2026-09-24 | TSM | **🆕⚠️ TRUMP-XI, 2026-09-24 — UBS puts SPE and MEMORY as the most exposed verticals, with the ASML/Netherlands MATCH Act immersion-DUV headlines and new BIS measures on Chinese compute access via Thail |
@@ -39,12 +38,15 @@ _Generated 2026-09-04 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-11-19 | SKHYNIX | **🆕 2026-08-20 → 2026-11-19 — the buyback executes on-market** (SK Securities). Daily execution is observable; **the falsifier for the "most aggressive among peers" claim is whether the full W40trn ac |
 | 2026-11-21 | SAMSUNG | **🆕 2026-08-24 → 2026-11-21 — the 53.3mn-share PSU treasury purchase window is open.** A mechanical, non-discretionary bid in the market for three months; note it is **excluded** from the FCF payout b |
 
-## ⏰ Passed — need a post-mortem (2)
+## ⏰ Passed — need a post-mortem (5)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
+| 2026-09-04 | DELL | **🆕 BERNSTEIN DELL Q2 FY27 POST-EARNINGS CFO CALL — 2026-09-04, 11:00am ET.** First scheduled management access after the print. (Bernstein · Tyler Seidman, 2026-08-31) |
+| 2026-09-04 | DELL | **2026-09-04, 11:00am ET — BERNSTEIN DELL Q2 FY27 POST-EARNINGS CFO CALL.** First scheduled management access after the print (Bernstein · Tyler Seidman, 2026-09-01). |
+| 2026-09-04 | DELL | **2026-09-04, 10:00am ET — JPM group takeaways call on the OEM results** (Joe Cardoso, "Ask Me Anything on OEM earnings", Friday). |
 | 2026-08-05 | DT | **CFO succession** — Benson retires by FYE (March 2027); search announced 2026-08-05. |
 | 2026-07-01 | DT | **Starboard** — stake disclosed late April 2026, two board seats added 2026-07-01 (J.P. Morgan · Chatterjee, 2026-07-01); further governance / capital-return asks are possible into the Investor Day. |
 

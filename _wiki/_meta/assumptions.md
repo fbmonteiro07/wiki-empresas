@@ -1,6 +1,6 @@
 # Canonical assumptions — one number per debate
 
-_Generated 2026-09-04 from `_data/assumptions.json` (asof 2026-09-02). Every cross-page industry number lives here once, with all sourced variants. When a new source disagrees, add a variant to the JSON — never silently rebase a page. Rebuild: `py _wiki/_tools/build_assumptions.py`._
+_Generated 2026-09-05 from `_data/assumptions.json` (asof 2026-09-02). Every cross-page industry number lives here once, with all sourced variants. When a new source disagrees, add a variant to the JSON — never silently rebase a page. Rebuild: `py _wiki/_tools/build_assumptions.py`._
 
 ## Custom-ASIC vs merchant-GPU share of AI accelerators  `asic-vs-gpu-share`
 
@@ -295,7 +295,7 @@ _Annualized $ revenue (or rental rate) per GW of AI compute capacity — state c
 - `themes/optical-cpo.md` — …capacity**, NOT build cost and NOT capex/GW. They must never be netted against a datacentre constructio…
 - `themes/outros-asia.md` — …investment projects" ([[SAMSUNG]] Yongin/Gwangju/Gumi plus Honam and Chungcheong advanced packaging; [[…
 - `themes/semicap-wfe.md` — …must NEVER be chained into a capex or $/GW build-cost series, and must never be netted against the fac…
-- `themes/tokenmaxxing.md` — ….** ⚠️⚠️ **UNIT GUARD, MANDATORY: ~$30bn/GW is REVENUE PER GIGAWATT PER YEAR and ~$5bn/GW is COST PER G…
+- `themes/tokenmaxxing.md` — …rst AUDITED denominator and the entire $/GW ladder on this wiki becomes checkable against a filed numbe…
 
 ## HBM — capacity, pricing, allocation, sold-out claims  `hbm-cycle`
 
