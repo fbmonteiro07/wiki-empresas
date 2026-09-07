@@ -1,20 +1,29 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-09-05 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-09-06 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (31)
+## 📅 Upcoming (40)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
+| 2026-09-06 | AVGO | **🆕🔴 2026-09-06 — THE SINGAPORE PARTNER NOW HAS A CANDIDATE NAME, AND THE WATCH ITEM CHANGES SHAPE ACCORDINGLY.** Morgan Stanley (Howard Kao / Irene Yen / Andy Meng, *"ABF Substrate: Risk to NYPCB and |
+| 2026-09-06 | MU | **🆕🔴🔴 THE RUBIN-GENERATION STACK-HEIGHT LADDER — NOW THE HIGHEST-VALUE SETTLEABLE ITEM ON THIS PAGE, BECAUSE IT IS A SPEC AND NOT A FORECAST.** As of 2026-09-06 the page carries **Rubin at 12-Hi HBM4* |
+| 2026-09-06 | SAMSUNG | **🆕🔴🔴 THE RUBIN-GENERATION STACK-HEIGHT LADDER — A SPEC, NOT A FORECAST, AND THEREFORE SETTLEABLE.** As of 2026-09-06 the wiki carries **Rubin at 12-Hi HBM4** (Jefferies Asia TMT specialist SALES · Co |
+| 2026-09-06 | SKHYNIX | **🆕🔴🔴 THE RUBIN-GENERATION STACK-HEIGHT LADDER — A SPEC, NOT A FORECAST, AND THEREFORE SETTLEABLE.** As of 2026-09-06 this page carries **Rubin at 12-Hi HBM4** (Jefferies Asia TMT specialist SALES · C |
 | 2026-09-09 | AAPL | **🆕🔴🔴 2026-09-09 "SURPRISE AND SHINE" — THE EVENT NOW HAS A SCORECARD WITH A 2x DISAGREEMENT ON IT. Score these five items on the day:** |
 | 2026-09-11 | TER | **Q3 CY26 print (~late Oct 2026)** — first test of the re-cut 2H, and of whether the merchant-GPU/second-hyperscaler correlation converts into guided revenue. Quiet period begins **2026-09-11**; manag |
 | 2026-09-14 | NVDA | **🆕 Post-print access, both dated:** **BofA fireside with Toshiya Hari, VP of IR & Strategic Finance, hosted by Vivek Arya — 2026-09-02, 11:00 ET (~1hr)** (BofA TMT Sales, 2026-08-14) · **UBS-arranged |
 | 2026-09-15 | AVGO | **🆕 BERNSTEIN 8th ANNUAL SEMIS BUS TOUR, 2026-09-15/16, San Jose — AVGO on the roster alongside [[ALAB]], [[AMAT]], AMBA, LSCC, MPWR, [[NVDA]], [[NXPI]].** First scheduled corporate-access window afte |
 | 2026-09-15 | DELL | **2026-09-15 — UBS David Vogt Boston marketing '26 #3, US Hardware.** |
 | 2026-09-16 | ON | **2026-09-16 — onsemi Analyst Day** (Citi exp. ~Sep 13 print first) — the key event; watch for a raised long-term target model + SiC/800V framing (Citi, briefing 2026-06-15). |
-| 2026-09-21 | BE | **🆕🔴 2026-09-18 (close) / 2026-09-21 (open) — S&P QUARTERLY REBALANCE, BE ON THE ADD LIST.** A mechanical index-demand event independent of fundamentals (JPM Global Markets Strategy · Min Moon, "S&P I |
+| 2026-09-18 | LITE | **🆕🔵 2026-09-18 (ON THE CLOSE) — LITE IS ADDED TO FTSE ALL-WORLD IN THE SEPTEMBER 2026 GLOBAL QUARTERLY REBALANCE. A DATED, MECHANICAL FLOW EVENT — NOT A FUNDAMENTAL DATAPOINT.** (**UBS Index Analytic |
+| 2026-09-18 | SKHYNIX | **🆕🔴 DATED FLOW CATALYST — 2026-09-18 (ON THE CLOSE, FRIDAY): 000660 KS IS AN UPWEIGHT IN THE FTSE GEIS SEPTEMBER GLOBAL REBALANCE *AND* AN ADDITION TO THE ICE SEMICONDUCTOR INDEX (ICESEMI) IN ITS ANN |
+| 2026-09-21 | AXTI | **🆕 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — **S&P 600 INDEX ADD**, a dated MECHANICAL flow event.** AXTI is named as one of five S&P SmallCap 600 additions in the Septe |
+| 2026-09-21 | BE | **🆕🔴🔴 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — THE INDEX TIER IS NOW NAMED: BE IS AN **S&P 500** ADD, *AND* A **FTSE ALL-WORLD** ADD. TWO INDEPENDENT INDEX EVENTS IN THE |
+| 2026-09-21 | CEREBRAS | **🆕 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — **ICE SEMICONDUCTOR INDEX (ICESEMI) ADD** in the annual reconstitution. A dated MECHANICAL flow event, not a fundamental one |
 | 2026-09-21 | CIEN | **🆕 ECOC 2026, 2026-09-21/22 (Spain) — Morgan Stanley hosts COHR, CIEN, [[CSCO]], KEYS and NOK.** First optical-systems corporate-access window after the print. (MS TMT desk, 2026-08-31) |
 | 2026-09-21 | COHR | **🆕 2026-09-21 — PHOTONLINK LAUNCH: establish the PLATFORM, LANE RATE AND MODULATION FORMAT, not just the positioning.** The FQ1 FY27 synthesis lists PhotonLink as a genuinely net-new BULL item (platf |
+| 2026-09-21 | TSEM | **🆕 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — **ICE SEMICONDUCTOR INDEX (ICESEMI) ADD**, a dated MECHANICAL flow event.** TSEM is one of three ICESEMI additions in the an |
 | 2026-09-22 | ADI | **2026-08-19 (7am ET, call 10am) — F3Q26 print.** Bogeys on the page from the JPM buy-side survey (guide/consensus: rev $3.9bn/$3.92bn, OPM 49%/49.2%, EPS $3.30/$3.34; F4Q guides $4.08bn / 49.9% / $3. |
 | 2026-09-22 | CRDO | **2026-09-22 — ECOC, JPM-hosted meeting with CEO Bill Brennan** (alongside [[CIEN]], [[LITE]] and Nokia; JPM · Cardoso / Deshpande, 2026-08-17). **JPM is also running an off-cycle hardware-reporter bu |
 | 2026-09-22 | ESTC | **Metrics webinar — 2026-09-22, 8:00 PT** (Kurtz, Q1 FY27 call): the observability-relaunch pitch (Columnar Mode, Prometheus/PromQL, Deductive AI). Observability is the lagging solution; this is manag |
