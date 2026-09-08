@@ -93,6 +93,10 @@ Record sales **$7.62B**, +58% USD / +57% local / **+33% organic** YoY; record ad
 - **Where the sell-side stands:** **JPM Overweight, PT $160 (Dec-26), on the Analyst Focus List** (Samik Chatterjee) — 34x CY27E EPS of $4.75; estimates FY25E rev $22.8B / EPS $3.30 → FY26E rev $26.65B / EPS $4.00 → FY27E rev $30.5B; implied ~24% upside vs $129.24 spot at note (JPM, 2025-12-15). This is the first attributable broker PT/rating captured in local sources. Constructive read-through also on 800V power and optical optionality (briefings 2026-06-09); JPM hosted a "super meeting with Adam Norwitt" that drew attention (JPM desk, 2026-06-11). CEO presenting at the BofA conference (briefing 2026-06-09).
 
 ## Catalysts / what to watch
+
+**🆕 CONFERENCE WEEK — 2026-09-08 to 09-10 (GS Communacopia, SF · Citi TMT, NYC · BofA Media/Entertainment/Communications, NYC).** BofA's desk sets the expectation bluntly: *“I will go out on a limb and predict that 85%-100% of the AI Infrastructure companies you meet with this week at conferences WILL SOUND PHENOMENAL”* (BofA TMT spec sales · Brian Fenske, 2026-09-07 — *sales commentary, not research*). This name's slot:
+- **Wed 09-09, 10:10AM ET — CEO at Citi TMT.**
+
 - **Q2-2026 print (late July 2026):** guide is $8.1–$8.2B / $1.14–$1.16; watch IT datacom organic deceleration vs the +80–130% run, book-to-bill normalization, and CommScope organic pace.
 - **Vera Rubin / Oberon content:** JPM flags lower per-rack content step-up on Oberon vs Blackwell — the key 2026 swing on AI revenue magnitude (JPM, 2025-12-15).
 - **800V / power content ramp** as hyperscalers shift to 800V DC and higher in-rack power (NVDA Rubin/Rubin Ultra cycle) — busbar/liquid-cooled-busbar attach is the swing variable; tracks [800v-dc-power](themes/800v-dc-power.md) / [ai-datacenter-power](themes/ai-datacenter-power.md).

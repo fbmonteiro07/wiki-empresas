@@ -2,11 +2,13 @@
 
 _Generated 2026-09-07 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (36)
+## 📅 Upcoming (38)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
 | 2026-09-09 | AAPL | **🆕🔴🔴 2026-09-09 "SURPRISE AND SHINE" — THE EVENT NOW HAS A SCORECARD WITH A 2x DISAGREEMENT ON IT. Score these five items on the day:** |
+| 2026-09-09 | MRVL | **Also presenting: MRVL CEO/CFO at GS Communacopia Wednesday 2026-09-09, 11:30AM EST. Vivek Arya has MRVL in NYC this week; a group debrief call follows the meetings.** |
+| 2026-09-10 | MRVL | **Wed 09-09, 11:30AM ET — CEO/CFO at GS Communacopia.** **🆕🔴 2026-09-10 (Thursday, NYC) — MARVELL CEO/CFO NDR HOSTED BY BofA, AHEAD OF THE 10/6 ANALYST DAY.** (BofA TMT spec sales · Nick Villani / Bri |
 | 2026-09-11 | TER | **Q3 CY26 print (~late Oct 2026)** — first test of the re-cut 2H, and of whether the merchant-GPU/second-hyperscaler correlation converts into guided revenue. Quiet period begins **2026-09-11**; manag |
 | 2026-09-14 | NVDA | **🆕 Post-print access, both dated:** **BofA fireside with Toshiya Hari, VP of IR & Strategic Finance, hosted by Vivek Arya — 2026-09-02, 11:00 ET (~1hr)** (BofA TMT Sales, 2026-08-14) · **UBS-arranged |
 | 2026-09-15 | AVGO | **🆕 BERNSTEIN 8th ANNUAL SEMIS BUS TOUR, 2026-09-15/16, San Jose — AVGO on the roster alongside [[ALAB]], [[AMAT]], AMBA, LSCC, MPWR, [[NVDA]], [[NXPI]].** First scheduled corporate-access window afte |

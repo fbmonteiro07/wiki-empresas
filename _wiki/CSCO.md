@@ -153,6 +153,10 @@ UBS also carried CSCO in its 08-08 earnings-preview slate (UBS / Tech Musings, 2
 - **Where the sell-side stood pre-print:** Net constructive — **OW/Buy: MS ($120), Citi ($112), UBS, JPM (OW, $77.80 close); GS positive; EW: Barclays ($121, valuation).** The open debates the whole desk converges on: (1) durability of the AI-order run-rate into FY27, (2) GM trajectory on hardware/optics mix + memory, (3) is the multiple stretched (briefing 2026-05-14/15; JPM 2025-12-15).
 
 ## Catalysts / what to watch
+
+**🆕 CONFERENCE WEEK — 2026-09-08 to 09-10 (GS Communacopia, SF · Citi TMT, NYC · BofA Media/Entertainment/Communications, NYC).** BofA's desk sets the expectation bluntly: *“I will go out on a limb and predict that 85%-100% of the AI Infrastructure companies you meet with this week at conferences WILL SOUND PHENOMENAL”* (BofA TMT spec sales · Brian Fenske, 2026-09-07 — *sales commentary, not research*). This name's slot:
+- **Tue 09-08, 2:30PM ET — CFO at GS Communacopia.**
+
 - **Q4 FY26 print — Wed Aug 12, 2026 (AMC)** — first formal FY27 guide; watch whether AI orders sustain a ~$2-3.7B/qtr run-rate and the FY27 ≥$6B AI-rev frame is confirmed (Sami Badri close, Q3 FY26).
 - Cisco Live Las Vegas content (May 31–Jun 4) already digested — Cloud Control, agentic ops, sovereign portfolio (briefing 2026-06-03/08).
 - Silicon One P200 **scale-across** ramp — early Q4 orders, "at scale" only in FY27 (Robbins, Q3 FY26). Switch + coherent-pluggable content here maps to JPM's $10B+ incremental DCI TAM / $300-500M per connection (JPM, 2025-12-05/15). CPO into Silicon One 102T/51.2T is the next milestone; OCP (~Oct) is the scale-up show (650 Group, 2026-06-04).
