@@ -5,15 +5,15 @@
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\HPE` (filings + transcripts) · `_equity_calls` · `_briefings\by-ticker\HPE.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-04 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-08 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $47.9bn | $53.3bn |
-| Gross profit | $17.2bn | $19.1bn |
-| Gross margin | 35.9% | 35.9% |
+| Revenue | $48.1bn | $53.4bn |
+| Gross profit | $17.4bn | $19.3bn |
+| Gross margin | 36.1% | 36.2% |
 | EBITDA | $9.5bn | $11.0bn |
-| EPS | $3.70 | $4.53 |
+| EPS | $3.72 | $4.53 |
 | Capex | $2.8bn | $3.2bn |
 | OCF (≈EBITDA) | $9.5bn | $11.0bn |
 

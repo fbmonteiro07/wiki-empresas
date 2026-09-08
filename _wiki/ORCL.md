@@ -3,13 +3,13 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\ORCL` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\ORCL.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-04 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-08 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $76.2bn | $107.3bn |
 | Gross profit | $48.9bn | $60.3bn |
-| Gross margin | 64.2% | 56.2% |
+| Gross margin | 64.1% | 56.2% |
 | EBITDA | $43.0bn | $60.6bn |
 | EPS | $7.32 | $9.18 |
 | Capex | $67.1bn | $102.1bn |

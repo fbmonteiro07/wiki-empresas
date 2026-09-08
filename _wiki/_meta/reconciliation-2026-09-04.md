@@ -18,7 +18,7 @@ _Variance pass on every NEW quantitative datapoint from tonight's ingest, agains
 
 ---
 
-## 🔴 DIVERGES (the alpha)
+## Where the new data DIVERGES
 
 ### 1. SNOW — consensus FY27 sits **exactly on the guide**, embedding **zero beat**, against a company that has beaten 5%+ twice running
 
@@ -132,3 +132,25 @@ BBG cons **$200.07** (n=35, hi $255, lo $80, 24 buy / 9 hold / 2 sell) ⇒ UBS *
 - **PLTR:** the ~Sep 9–10 customer/leadership event and Keirstead's dinner with the CFO/CRO — watch for the UBS note off it (§ Catalysts).
 - **Humanoids:** the mix contradiction stays open until a source publishes end-use bucket definitions.
 - **AVGO:** got nothing tonight — the inbox file was defective. Re-request the JPM/Harlan Sur recording from the desk.
+
+---
+
+## ✅ BBG column RE-PLACED — 2026-09-08 (`/wiki-consensus`, Terminal live)
+
+⚠️ **Provenance correction that matters more than the re-placement itself.** The 09-04 baseline table above records BBG as *"✅ NOT pending — `estimates.json` carries `asof: 2026-09-04`, a same-day snapshot."* That was **true for SNOW on 09-04 but would have silently stopped being true**: `SNOW` (with `DDOG`, `MDB`, `DT`, `ESTC`) was **ad-hoc pulled into `estimates.json` on 09-04 and never registered in `fetch_estimates.py`'s `TICKERS`**. Because that script **merges into the existing file and re-stamps a single global `asof`**, those five records would have carried 09-04 values forward under every later date stamp — and all five still had `pt: None`, having missed the 09-03 PT enrichment applied to "all 100 names". **Fixed at source:** added as batch 13 (`TICKERS` now 105) and fetched live. **This run is therefore the first genuine refresh of the SNOW consensus since this report was written** — spot had moved **−3.7%** ($347.45 → $334.47) in the interim.
+
+**Basis discipline unchanged:** SNOW's FYE is 31-Jan and `lrq = 2026-07-31`, so **`1FY` = fiscal FY27**. All figures below are `1FQ`/`2FQ`/`1FY` annual lines; the `CY2026`/`CY2027` calendar sums were **not** used for any fiscal comparison.
+
+| § | Row | 09-04 mark | 09-08 fresh | Verdict |
+|---|---|--:|--:|---|
+| 1 | FY27 (`1FY`) total revenue consensus | $6,294.7m | **$6,298.6m** (+0.06%) | **STANDS** |
+| 1 | Implied consensus **product** rev vs the $6,070m guide | −0.03% | **−0.12%** (ratio 96.26% off the Q3 guide/`1FQ` cross-check) | **STANDS — still zero beat embedded** |
+| 2 | Consensus `1FQ`→`2FQ` step vs the company's own +6.57% guided step | +4.43% | **+4.35%** (66% of the guided step) | **STANDS — deceleration marginally wider** |
+| 3 | Consensus PT / street high / street low | $430.56 / $525 / $280 | **$433.44** (+0.67%) / **$525** / **$280** — panel **56 / 50 / 5 / 1 unchanged** | **STANDS** |
+| 3 | Redburn bear PT $110 vs the panel | −$170 vs street low; −74.5% vs cons | **−$170 vs street low; −74.6% vs cons** | **STANDS — still outside the 56-analyst panel** |
+
+➤ **No row changed camp and no sign flipped.** All three findings stay in DIVERGES on a genuinely fresh pull, which is a stronger statement than it was on 09-04: the consensus product line has now sat **on the guide to within ~10bp for two independent pulls four days apart**, so the "zero beat embedded" reading is not a snapshot artifact.
+
+➤ **One number worth re-marking:** the de-rating in spot against a flat-to-higher consensus PT widens implied upside to consensus from **+23.9% to +29.6%**. The house view is unchanged; the entry is better.
+
+_BBG column resolved 2026-09-08 — `estimates.json` asof **2026-09-08** (**105/105 live, 0 FAIL lines, 0 `error` keys, 0 null/zero prices, 0 `carried_over` stamps, 0 records missing `pt`**, and only **1 of 105** byte-identical to the 09-04 vintage — **CSCO**, verified a genuine unchanged record rather than a carry-over: it appears in the fetch log at `[13/100] px=109.2`, i.e. it *was* re-pulled, and 09-04→09-08 spans only one trading session with Labor Day intervening). Canonical header `## Where the new data DIVERGES` applied (was `## 🔴 DIVERGES (the alpha)`). **No web data was substituted at any point.**_

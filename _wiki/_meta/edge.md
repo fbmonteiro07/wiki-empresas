@@ -8,9 +8,9 @@ _Generated 2026-09-08 · the standing view of where our model and the curated re
 
 | Ticker | Metric | Yr | House | Consensus | Δ |
 |---|---|---|--:|--:|--:|
-| GOOG | Revenue $bn | 2026 | 505.00 | 426.80 | +18% |
+| GOOG | Revenue $bn | 2026 | 505.00 | 428.10 | +18% |
 | GOOG | Revenue $bn | 2027 | 641.00 | 548.30 | +17% |
-| AAPL | EPS | 2026 | 10.12 | 8.73 | +16% |
+| AAPL | EPS | 2026 | 10.12 | 8.74 | +16% |
 
 ## Curated divergences — latest reconciliation (`reconciliation-2026-09-04.md`)
 
@@ -26,5 +26,5 @@ _Generated 2026-09-08 · the standing view of where our model and the curated re
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|
-| SNOW | 347 | 431 | +24% | street high 525 · low 280 below spot · 50/5/1 of 56 |
-| PLTR | 174 | 200 | +15% | street high 255 · low 80 below spot · 24/9/2 of 35 |
+| SNOW | 334 | 433 | +30% | street high 525 · low 280 below spot · 50/5/1 of 56 |
+| PLTR | 172 | 200 | +17% | street high 255 · low 80 below spot · 24/9/2 of 35 |
