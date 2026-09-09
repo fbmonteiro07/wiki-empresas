@@ -1,6 +1,6 @@
 # Edge tracker — house vs Street
 
-_Generated 2026-09-08 · the standing view of where our model and the curated reconciliation runs disagree with consensus. Divergence = candidate alpha; agreement is noise. Rebuild: `py _wiki/_tools/build_edge.py`._
+_Generated 2026-09-09 · the standing view of where our model and the curated reconciliation runs disagree with consensus. Divergence = candidate alpha; agreement is noise. Rebuild: `py _wiki/_tools/build_edge.py`._
 
 > ⚠️ Programmatic rows are auto-computed (house.json vs estimates.json, USD names only) — **verify the basis before trading** (revenue gross/net/TAC differences can masquerade as edge). Curated rows below are analyst-vetted.
 
@@ -26,5 +26,5 @@ _Generated 2026-09-08 · the standing view of where our model and the curated re
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|
-| SNOW | 334 | 433 | +30% | street high 525 · low 280 below spot · 50/5/1 of 56 |
-| PLTR | 172 | 200 | +17% | street high 255 · low 80 below spot · 24/9/2 of 35 |
+| SNOW | 336 | 433 | +29% | street high 525 · low 280 below spot · 50/5/1 of 56 |
+| PLTR | 170 | 200 | +17% | street high 255 · low 80 below spot · 24/9/2 of 35 |
