@@ -2,11 +2,12 @@
 
 _Generated 2026-09-09 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (38)
+## 📅 Upcoming (39)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
 | 2026-09-09 | AAPL | **🆕🔴🔴 2026-09-09 "SURPRISE AND SHINE" — THE EVENT NOW HAS A SCORECARD WITH A 2x DISAGREEMENT ON IT. Score these five items on the day:** |
+| 2026-09-09 | BKNG | **🆕⚠️ THE INDIRECT MIDDLE EAST CHANNEL — oil → jet fuel → airline capacity → ticket prices.** Management describes the DIRECT conflict impact as normalising and the INDIRECT one as continuing, with th |
 | 2026-09-09 | MRVL | **Also presenting: MRVL CEO/CFO at GS Communacopia Wednesday 2026-09-09, 11:30AM EST. Vivek Arya has MRVL in NYC this week; a group debrief call follows the meetings.** |
 | 2026-09-10 | MRVL | **Wed 09-09, 11:30AM ET — CEO/CFO at GS Communacopia.** **🆕🔴 2026-09-10 (Thursday, NYC) — MARVELL CEO/CFO NDR HOSTED BY BofA, AHEAD OF THE 10/6 ANALYST DAY.** (BofA TMT spec sales · Nick Villani / Bri |
 | 2026-09-11 | TER | **Q3 CY26 print (~late Oct 2026)** — first test of the re-cut 2H, and of whether the merchant-GPU/second-hyperscaler correlation converts into guided revenue. Quiet period begins **2026-09-11**; manag |
@@ -45,13 +46,14 @@ _Generated 2026-09-09 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-11-19 | SKHYNIX | **🆕 2026-08-20 → 2026-11-19 — the buyback executes on-market** (SK Securities). Daily execution is observable; **the falsifier for the "most aggressive among peers" claim is whether the full W40trn ac |
 | 2026-11-21 | SAMSUNG | **🆕 2026-08-24 → 2026-11-21 — the 53.3mn-share PSU treasury purchase window is open.** A mechanical, non-discretionary bid in the market for three months; note it is **excluded** from the FCF payout b |
 
-## ⏰ Passed — need a post-mortem (0)
+## ⏰ Passed — need a post-mortem (2)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| _none_ | | |
+| 2026-09-08 | SNOW | 🆕 **RE-TESTED 2026-09-08 AT GS COMMUNACOPIA AND STILL NOT ANSWERED — THE DISCLOSURE GAP IS NOW CONFIRMED TWICE.** Borges asked Robins directly how analysts should model CoCo and de-risk the forecast;  |
+| 2026-09-08 | AVGO | **🆕🗓️🔴 2026-09-08 (★ PRIMARY — MANAGEMENT) — A DATED CAPITAL-ALLOCATION DECISION, AND IT IS THE FIRST FORWARD CAPITAL-RETURNS CATALYST THIS PAGE HAS CARRIED.** Hock Tan at GS Communacopia: *"give me t |
 
 ## ✅ Resolved (137)
 
