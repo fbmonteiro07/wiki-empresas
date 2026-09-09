@@ -7,8 +7,43 @@ sources, not broker research** — the keyword router labelled every one of them
 **Baselines used.** (1) Prior wiki comments — on disk. (2) Capstone house models — on-page
 `## Capstone estimates` blocks. (3) **BBG consensus — `_data/estimates.json`, `asof 2026-09-08`, 105 names.**
 The Terminal was not queried live this run; the on-disk snapshot is one day old and is a valid baseline, so the
-BBG column is **NOT** marked PENDING. Cross-validated: the snapshot's META px `$613.48` matches the MS note's
-printed "Shr price, close (Sep 8, 2026) $613.48" exactly.
+BBG column is **NOT** marked PENDING.
+
+> ⚠️ **PROVENANCE CORRECTION — appended 2026-09-09 by `/wiki-consensus` (Terminal live, `asof 2026-09-09`).**
+> The cross-validation originally printed here — *"the snapshot's META px `$613.48` matches the MS note's printed
+> 'Shr price, close (Sep 8, 2026) $613.48' exactly"* — is **WRONG, and the match never existed.** Every 09-08
+> vintage of `estimates.json` (commits `a32d2871` and `ec6d2d25`) carries META px **`$617.67`**, not `$613.48`;
+> `$613.48` appears in **no vintage in the file's entire git history** (09-04 `$616.77`, 09-03 `$610.68`,
+> 09-02 `$592.85` …). `$613.48` is the **MS note's own printed close** and nothing else. The 09-08 fetch ran at
+> 12:36 BRT — **intraday**, not at the close — so the snapshot price and the note's closing price are different
+> quantities that were never going to agree; the 0.68% gap is the intraday-vs-close wedge, not a validation.
+> **Nothing downstream depended on it** (no placement in this report used `$613.48`), but the provenance claim
+> itself is retracted.
+>
+> ⚠️ **AND THE BBG COLUMN OF THIS REPORT STRADDLES TWO VINTAGES.** `/wiki-consensus` rewrote
+> `_data/estimates.json` to `asof 2026-09-09` at **18:21:12**; this report was written at **18:21:23** — **eleven
+> seconds later**, while the file was being replaced underneath the run. The straddle is visible in the numbers:
+> the META PT `$745.22` is the **09-08** value, while the BKNG PT `$239.36` is the **09-09** value (09-08 carried
+> `$238.36`). Both have now been re-placed against the live 09-09 snapshot below. **Lesson for the 21h/23h
+> ingest pair: stamp the `asof` you actually read AND re-read it once at write time — a header `asof` is not
+> proof the whole column came from that vintage.**
+>
+> ⚠️ **MECHANISM CORRECTED (this run, after checking its own read timestamps).** The straddle is real but the
+> 18:21 explanation is not: **this report's BBG numbers were read at ~17:47 and ~17:52, roughly half an hour
+> BEFORE `/wiki-consensus` wrote at 18:21:12** — so an 11-second race cannot be the cause. What the 17:47 read
+> actually hit was **a working-tree `estimates.json` in the middle of being rewritten by a concurrent fetch**:
+> the header still said `asof 2026-09-08` while parts of the body already carried 09-09 values (BKNG PT
+> `$239.36`), and the two spot prices captured — META `$613.48`, BKNG `$180.30` — **match no committed vintage
+> at all** (09-08 held `$617.67` / `$183.42`; 09-09 holds `$653.69` / `$173.43`), i.e. they were transient
+> intraday values written mid-fetch. That `$613.48` coincided exactly with the MS note's printed close is what
+> made a torn read look like a validation — the coincidence, not the data, produced the false claim.
+> **The sharper lesson: on a shared tree, a derived data file can be TORN, not merely stale. Re-read it once at
+> write time and compare against the committed blob, not just its own header.**
+>
+> ✅ **RE-VERIFIED against the committed `asof 2026-09-09` snapshot: every estimate line used in this report —
+> revenue, EBIT, EPS and capex for all ten names — is byte-identical across the two vintages.** Only spot
+> prices and consensus PTs moved. **No DIVERGES/CONFIRMS verdict in this report changes**, and the two that
+> moved (META, BKNG) both moved in the direction that strengthens the argument, not weakens it.
 
 ⚠️ **Alphabet is reconciled at EBIT, never EPS.** The recurring below-the-line artefact is present again:
 1FY net income `$249bn` exceeds 1FY EBIT `$172bn` by ~$77bn, and 2FY EPS *falls* `$18.70 → $16.02` while EBIT
@@ -148,8 +183,12 @@ acquisition for internal ultra-low-latency inference silicon via chiplets (spell
 
 ### META — PT level unchanged, PT *method* changed
 
-MS OW / Top Pick / **PT $775** vs BBG consensus **$745.22** (n=79, hi $1,000, lo $580) → **+4.0% above
+MS OW / Top Pick / **PT $775** vs BBG consensus **$746.66** (n=79, hi $1,000, lo $580) → **+3.8% above
 consensus, well below the Street high.** Not a Street-high call. **CONFIRMS.**
+_(Re-placed 2026-09-09 on the live snapshot: consensus PT $745.22 → **$746.66** (+0.19% d/d), n / hi / lo all
+unchanged; spot **$617.67 → $653.69, +5.83% in one session** on the settlement clearing event. The verdict is
+unchanged — but note the whole move was **spot converging on a static PT**, which is the same mechanism the
+options-implied series below already flagged, now with 5.8pts of it in a single day.)_
 
 🔴 But the derivation moved even though the number did not: now "~23X P/E applied to the average of our $34/$35
 EPS in '27/'28", where on 07-27 the identical $775 was a DCF at ~8% WACC and ~3% terminal growth that merely
@@ -176,8 +215,14 @@ record, run customer service, or clear payment volume across hundreds of currenc
 broker's structural claim and a company disclosure, recorded a day apart with neither citing the other, land on
 the same mechanism. **CONFIRMS from two directions.**
 
-Valuation: px $180.30 vs consensus PT $239.36 (+33%); **2FY P/E 14.6x, 3FY 12.6x** — consistent with Nowak's
-"priced as if it's going to be disrupted" and his growth-adjusted GDS (Sabre/Amadeus) comparison.
+Valuation: px **$173.43** vs consensus PT **$239.36** (**+38.0%**); **2FY P/E 14.0x, 3FY 12.1x** — consistent
+with Nowak's "priced as if it's going to be disrupted" and his growth-adjusted GDS (Sabre/Amadeus) comparison.
+_(Re-placed 2026-09-09 on the live snapshot. The original line read "px $180.30 … (+33%); 2FY P/E 14.6x, 3FY
+12.6x". **$180.30 was the broker note's price, not the snapshot's** — no vintage of `estimates.json` ever
+carried it (09-08 `$183.42`, 09-09 `$173.43`). BKNG fell **−5.45%** on the session, so on live marks the
+discount is **deeper, not shallower**: +38.0% to consensus PT against the +33% originally printed. Share-count
+sanity per the split-refutation test passes — implied shares `ni/eps` 766.6m vs `mktcap/px` 751.4m, ~2% apart,
+so BKNG `eps` is usable here.)_
 
 Thesis-drift applied: the bear's "supply +8% to **8.6M** listings" (Barclays, 2026-02-18) superseded by
 management's **9.1M**; the bear's *point* (supply growth hasn't converted to room nights) retained.
@@ -253,3 +298,30 @@ AI Guidebook", 09-08). This run holds the **99-page primary**.
   them needs a rewrite mandate.
 - `ingest_inbox.py`'s `SKIP` set omits `PENDING_FULL_REPORTS.md` and `_expert_calls_seen.json`, so every run
   proposes them as sources and `--archive` swallows them. Backed up and restored with md5 verified again today.
+
+---
+
+_BBG column resolved 2026-09-09 — `estimates.json` **asof 2026-09-09**, **105/105 live** (0 `error` keys, 0
+`carried_over` stamps, 0 null/zero prices, **0 records byte-identical to the 09-08 vintage**, every `px` moved,
+`pt` present on all 105). Orphan-ticker audit clean **both directions** (105 TICKERS = 105 companies, zero set
+difference) — the 5-name gap closed on 09-08 has held. `build_snapshot.py`: **105 injected, 3 skipped** —
+ANTHROPIC / OPENAI / CEREBRAS, all genuinely private or not on the wrapper, no silent absentees._
+
+_**Re-placement result: the report's conclusions survive the live refresh intact.** The headline DIVERGES table
+(§1, MS '27 DC-capex vs BBG '27 total capex) is **numerically identical** on the 09-09 pull — MSFT +14.9%,
+AMZN +26.5%, GOOG +53.4%, META +41.4%, so all four gaps (28.1 / 23.5 / 29.6 / 13.6pp) stand unchanged: **capex
+consensus did not move day-over-day; only prices and PTs did.** Also re-verified exact on live data: the AVGO
+revenue ladder ($106.0bn / $173.9bn / $276.4bn, so the FY28 non-AI inconsistency flag stands) and SNOW 2FY
+revenue $8.10bn (UBS's ~$300m = **3.70%**, as printed). Two placements moved and are corrected above: **META**
+(CONFIRMS, +4.0% → **+3.8%**) and **BKNG** (CONFIRMS, +33% → **+38.0%**). **No row changed section — nothing
+moved between DIVERGES and CONFIRMS.**_
+
+_✅ **The `§1` capex table's basis caveat gains one item, unstated in the original.** The report flags the
+**data-center-vs-total** mismatch, which is right, but for **MSFT** there is also a **period-basis** mismatch:
+`1FY`/`2FY` are Microsoft's **June** fiscal years, not calendar years, so "+14.9%" is FY27-over-FY26, not
+CY27-over-CY26. The CY blocks disagree materially — CY-sum capex growth is **+34.9%** against the annual line's
+**+14.9%**, a **20pp** wedge, and CY2026 capex sums to **$154.1bn** against the `1FY` annual **$188.9bn**
+(**−18.4%**). The annual line is the right one to use (and is what the table used), but the direction of the
+[[MSFT]] gap is **basis-sensitive in a way the other three are not** — GOOG's wedge is −0.2%, AMZN's −2.8%,
+META's **+8.0%** (the known META CY-sum overshoot, which is why META's own guide ceiling must break the tie).
+Stated, not netted; no number in the table changed._

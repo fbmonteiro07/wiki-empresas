@@ -1,15 +1,15 @@
 {
   "asof": "2026-09-09",
-  "latest_reconciliation": "reconciliation-2026-09-04.md",
+  "latest_reconciliation": "reconciliation-2026-09-09.md",
   "book": {
     "asof": "2026-07-01",
     "seed": true,
     "positions": 8
   },
   "stats": {
-    "signals": 66,
-    "active": 66,
-    "high": 6,
+    "signals": 73,
+    "active": 73,
+    "high": 8,
     "belief_changes": 0,
     "focus_names": 38
   },
@@ -31,9 +31,9 @@
     },
     {
       "ticker": "AVGO",
-      "focus_score": 89,
+      "focus_score": 91,
       "in_book": true,
-      "signal_count": 6,
+      "signal_count": 7,
       "high_count": 1,
       "sector": "AI — Semis & Compute",
       "thesis": "#1 custom-ASIC/TPU partner; binary setup on the \">$100B\" FY27 guide vs $250-300B FY28 (JPM).",
@@ -41,37 +41,67 @@
       "why": [
         "AVGO — catalyst passed without a logged outcome",
         "AVGO — 2026-09-15: BERNSTEIN 8th ANNUAL SEMIS BUS TOUR, 2026-09-15/16, San Jose — AVGO on the roster…",
-        "D-1 · 🔴 AVGO — the house FY28 EPS sits ABOVE the entire visible sell-side range"
+        "Cost to run 1GW: the relay carried HALF the primary's number"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "focus_score": 91,
+      "in_book": true,
+      "signal_count": 6,
+      "high_count": 1,
+      "sector": "AI — Hyperscalers & Software",
+      "thesis": "AI ARR >$37B/+123%; swing is capex (CY27 ~$276B) vs Azure revenue + OpenAI concentration.",
+      "next_catalyst": "",
+      "why": [
+        "MS's 2027 capex acceleration sits far above BBG consensus, on all four hyperscalers",
+        "MSFT — MS models Maia as a LATER ramp than the GOOG/AMZN custom-silicon story",
+        "The GW anchors on ai-datacenter-power do not agree — and the disagreement is the finding"
       ]
     },
     {
       "ticker": "GOOG",
-      "focus_score": 86,
+      "focus_score": 89,
       "in_book": true,
-      "signal_count": 6,
-      "high_count": 2,
+      "signal_count": 8,
+      "high_count": 3,
       "sector": "AI — Hyperscalers & Software",
       "thesis": "Full-stack compounder (Search +17%, Cloud +82%); debate is valuation and capital intensity, not demand.",
       "next_catalyst": "2026-09-23",
       "why": [
         "GOOG — 2026 revenue house view is 18% above consensus",
-        "GOOG — 2027 revenue house view is 17% above consensus",
-        "GOOG — 2026-09-23: Koray Kavukcuoglu's first public outing — The Information's AI Agenda Live, San Francisco,…"
+        "GOOG — 2027 revenue house view is 18% above consensus",
+        "GOOG silicon price/performance — company marketing vs independent measurement"
       ]
     },
     {
       "ticker": "META",
-      "focus_score": 79,
+      "focus_score": 89,
       "in_book": true,
-      "signal_count": 3,
-      "high_count": 1,
+      "signal_count": 5,
+      "high_count": 2,
       "sector": "AI — Hyperscalers & Software",
       "thesis": "Fastest grower in Mag7 ex-GPU; bear = capital intensity and negative incremental ROIC.",
       "next_catalyst": "2026-09-23",
       "why": [
+        "MS's 2027 capex acceleration sits far above BBG consensus, on all four hyperscalers",
         "META — 2026-09-23: META CONNECT — 2026-09-23/24. Both UBS (exact dates) and MS (\"25 days away\" as of 08-30)…",
-        "Rating-action DATING was wrong on two pages",
-        "D-9 · pre-existing house-vs-consensus gaps re-confirmed (not new tonight, but they frame the new sources)"
+        "The GW anchors on ai-datacenter-power do not agree — and the disagreement is the finding"
+      ]
+    },
+    {
+      "ticker": "AMZN",
+      "focus_score": 87,
+      "in_book": true,
+      "signal_count": 4,
+      "high_count": 1,
+      "sector": "AI — Hyperscalers & Software",
+      "thesis": "AWS re-acceleration (+28%) + in-house silicon (Trainium); debate = $200B capex/ROIC.",
+      "next_catalyst": "",
+      "why": [
+        "MS's 2027 capex acceleration sits far above BBG consensus, on all four hyperscalers",
+        "MSFT — MS models Maia as a LATER ramp than the GOOG/AMZN custom-silicon story",
+        "The GW anchors on ai-datacenter-power do not agree — and the disagreement is the finding"
       ]
     },
     {
@@ -91,17 +121,17 @@
     },
     {
       "ticker": "SNOW",
-      "focus_score": 66,
+      "focus_score": 68,
       "in_book": false,
-      "signal_count": 5,
+      "signal_count": 6,
       "high_count": 0,
       "sector": "AI · Data infrastructure & observability",
       "thesis": "AI data repository: product rev +37% and FY27 guide raised to +36% (Q2 FY27); debate = Databricks share loss + AI gross-margin cost vs \"token path is data\".",
       "next_catalyst": "",
       "why": [
         "SNOW — catalyst passed without a logged outcome",
-        "SNOW — UBS's 42–43% Q4 exit rate requires sequential growth to hold; consensus has it halving",
-        "SNOW — consensus FY27 sits exactly on the guide, embedding zero beat, against a company that has beaten 5%+ twice running"
+        "SNOW gross margin: there is no floor, only a communication guarantee",
+        "SNOW — UBS's 42–43% Q4 exit rate requires sequential growth to hold; consensus has it halving"
       ]
     },
     {
@@ -205,34 +235,6 @@
       ]
     },
     {
-      "ticker": "MSFT",
-      "focus_score": 49,
-      "in_book": true,
-      "signal_count": 3,
-      "high_count": 0,
-      "sector": "AI — Hyperscalers & Software",
-      "thesis": "AI ARR >$37B/+123%; swing is capex (CY27 ~$276B) vs Azure revenue + OpenAI concentration.",
-      "next_catalyst": "",
-      "why": [
-        "Rating-action DATING was wrong on two pages",
-        "D-7 · 🔴 MSFT — Jefferies' M365 series was published one day before the segment restatement and is now ~2pts low",
-        "MSFT — BofA raises to $600 while sitting BELOW consensus on the earnings it is paying 28x for"
-      ]
-    },
-    {
-      "ticker": "AMZN",
-      "focus_score": 45,
-      "in_book": true,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "AI — Hyperscalers & Software",
-      "thesis": "AWS re-acceleration (+28%) + in-house silicon (Trainium); debate = $200B capex/ROIC.",
-      "next_catalyst": "",
-      "why": [
-        "Rating-action DATING was wrong on two pages"
-      ]
-    },
-    {
       "ticker": "DELL",
       "focus_score": 45,
       "in_book": false,
@@ -259,6 +261,20 @@
       "why": [
         "SMTC — latest earnings transcript absent",
         "SMTC — 2026-10-15: INVESTOR / ANALYST DAY, San Jose. The single most important dated event on this page,…"
+      ]
+    },
+    {
+      "ticker": "CRWV",
+      "focus_score": 43,
+      "in_book": false,
+      "signal_count": 2,
+      "high_count": 0,
+      "sector": "Systems & neoclouds",
+      "thesis": "Highest-visibility GPU neocloud ($99B backlog) but ~$25B high-coupon debt + customer concentration.",
+      "next_catalyst": "",
+      "why": [
+        "CRWV's cost of capital: management's characterisation vs traded levels",
+        "D-4 · 🔴 CRWV — Jefferies is ~90% above consensus on CY28 EBIT, and the same gap shows up twice"
       ]
     },
     {
@@ -407,19 +423,6 @@
       "next_catalyst": "",
       "why": [
         "ASML — the wiki was carrying High-NA's WORST-CASE throughput, for the segment that adopts FIRST"
-      ]
-    },
-    {
-      "ticker": "CRWV",
-      "focus_score": 35,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Systems & neoclouds",
-      "thesis": "Highest-visibility GPU neocloud ($99B backlog) but ~$25B high-coupon debt + customer concentration.",
-      "next_catalyst": "",
-      "why": [
-        "D-4 · 🔴 CRWV — Jefferies is ~90% above consensus on CY28 EBIT, and the same gap shows up twice"
       ]
     },
     {
@@ -591,6 +594,92 @@
       "hidden": false
     },
     {
+      "id": "reco-fad5914394d1",
+      "asof": "2026-09-09",
+      "source_date": "2026-09-09",
+      "type": "model_check",
+      "priority": "high",
+      "score": 76,
+      "title": "MS's 2027 capex acceleration sits far above BBG consensus, on all four hyperscalers",
+      "tickers": [
+        "AMZN",
+        "META",
+        "MSFT"
+      ],
+      "in_book": [
+        "AMZN",
+        "META",
+        "MSFT"
+      ],
+      "impact": "high",
+      "urgency": "immediate",
+      "confidence": "medium-high",
+      "why_now": "The single most important number in the Guidebook, and consensus has not moved to it.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the AMZN/META/MSFT model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "falsifier is the pre-build mechanic — MS's own '28 deceleration depends on it reversing.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "supplier",
+          "detail": "networking",
+          "from": "AMZN",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "AMZN",
+          "in_book": true
+        },
+        {
+          "ticker": "MDB",
+          "relation": "competitor",
+          "detail": "Atlas vs DynamoDB",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "SNOW",
+          "relation": "competitor",
+          "detail": "warehouse vs Redshift",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "AAOI",
+          "relation": "supplier",
+          "detail": "optical transceivers",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "AGX",
+          "relation": "supplier",
+          "detail": "EPC gas power",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "ALAB",
+          "relation": "supplier",
+          "detail": "PCIe/CXL",
+          "from": "AMZN",
+          "in_book": false
+        }
+      ],
+      "source": "Susquehanna · curated reconciliation 2026-09-09",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-09.md"
+      ],
+      "evidence_anchor": "MS's 2027 capex acceleration sits far above BBG consensus, on all four hyperscalers",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
       "id": "post-019a765ce797",
       "asof": "2026-09-09",
       "source_date": "2026-09-08",
@@ -625,12 +714,12 @@
       "hidden": false
     },
     {
-      "id": "esti-7f3153ad3e35",
+      "id": "esti-f52ef7519e4e",
       "asof": "2026-09-09",
-      "source_date": "2026-09-08",
+      "source_date": "2026-09-09",
       "type": "model_check",
       "priority": "high",
-      "score": 71,
+      "score": 72,
       "title": "GOOG — 2026 revenue house view is 18% above consensus",
       "tickers": [
         "GOOG"
@@ -641,7 +730,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $428.1bn as of 2026-09-08, a derived +18.0% gap. Revenue comparisons require a basis check.",
+      "why_now": "Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $426.7bn as of 2026-09-09, a derived +18.3% gap. Revenue comparisons require a basis check.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -696,7 +785,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-08",
+      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-09",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -705,8 +794,8 @@
       "origin": "house_vs_consensus",
       "values": {
         "house": 505.0,
-        "consensus": 428.08419,
-        "delta_pct": 17.97,
+        "consensus": 426.74372999999997,
+        "delta_pct": 18.34,
         "unit": "$bn"
       },
       "feedback": "",
@@ -714,13 +803,13 @@
       "hidden": false
     },
     {
-      "id": "esti-971b792fb3b3",
+      "id": "esti-9f92a39860a9",
       "asof": "2026-09-09",
-      "source_date": "2026-09-08",
+      "source_date": "2026-09-09",
       "type": "model_check",
       "priority": "high",
-      "score": 70,
-      "title": "GOOG — 2027 revenue house view is 17% above consensus",
+      "score": 71,
+      "title": "GOOG — 2027 revenue house view is 18% above consensus",
       "tickers": [
         "GOOG"
       ],
@@ -730,7 +819,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2027 revenue at $641.0bn versus Bloomberg consensus at $548.3bn as of 2026-09-08, a derived +16.9% gap. Revenue comparisons require a basis check.",
+      "why_now": "Capstone carries 2027 revenue at $641.0bn versus Bloomberg consensus at $545.3bn as of 2026-09-09, a derived +17.6% gap. Revenue comparisons require a basis check.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -785,7 +874,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-08",
+      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-09",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -794,8 +883,8 @@
       "origin": "house_vs_consensus",
       "values": {
         "house": 641.0,
-        "consensus": 548.25257,
-        "delta_pct": 16.92,
+        "consensus": 545.25924,
+        "delta_pct": 17.56,
         "unit": "$bn"
       },
       "feedback": "",
@@ -887,9 +976,9 @@
       "hidden": false
     },
     {
-      "id": "esti-eb91c838ff1f",
+      "id": "esti-321472181b77",
       "asof": "2026-09-09",
-      "source_date": "2026-09-08",
+      "source_date": "2026-09-09",
       "type": "model_check",
       "priority": "high",
       "score": 69,
@@ -903,7 +992,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.74 as of 2026-09-08, a derived +15.8% gap.",
+      "why_now": "Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.74 as of 2026-09-09, a derived +15.8% gap.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the AAPL model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -923,7 +1012,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-09-08",
+      "source": "Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-09-09",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -936,6 +1025,260 @@
         "delta_pct": 15.79,
         "unit": ""
       },
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-b659796b0753",
+      "asof": "2026-09-09",
+      "source_date": "2026-09-09",
+      "type": "model_check",
+      "priority": "high",
+      "score": 69,
+      "title": "GOOG silicon price/performance — company marketing vs independent measurement",
+      "tickers": [
+        "GOOG"
+      ],
+      "in_book": [
+        "GOOG"
+      ],
+      "impact": "high",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "80% better price-performance for inference — Thomas Kurian, Google Cloud CEO, 2026-09-08. No baseline,",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "supplier",
+          "detail": "custom ASIC (TPU)",
+          "from": "GOOG",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "GOOG",
+          "in_book": true
+        },
+        {
+          "ticker": "SNOW",
+          "relation": "competitor",
+          "detail": "warehouse vs BigQuery",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "ANTHROPIC",
+          "relation": "customer",
+          "detail": "TPU compute",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "BE",
+          "relation": "supplier",
+          "detail": "on-site fuel cells",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "CIEN",
+          "relation": "supplier",
+          "detail": "DCI/optical",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "COHR",
+          "relation": "supplier",
+          "detail": "optical",
+          "from": "GOOG",
+          "in_book": false
+        }
+      ],
+      "source": "management/company primary + SemiAnalysis · curated reconciliation 2026-09-09",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-09.md"
+      ],
+      "evidence_anchor": "GOOG silicon price/performance — company marketing vs independent measurement",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-aec2df916ddb",
+      "asof": "2026-09-09",
+      "source_date": "2026-09-09",
+      "type": "model_check",
+      "priority": "medium",
+      "score": 66,
+      "title": "MSFT — MS models Maia as a LATER ramp than the GOOG/AMZN custom-silicon story",
+      "tickers": [
+        "AMZN",
+        "GOOG",
+        "MSFT"
+      ],
+      "in_book": [
+        "AMZN",
+        "GOOG",
+        "MSFT"
+      ],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "\"META and MSFT: ASIC and AMD deployments ramp over time, with 50% of incremental '27 capacity.\" This cuts",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the AMZN/GOOG/MSFT model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "supplier",
+          "detail": "networking",
+          "from": "AMZN",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "AMZN",
+          "in_book": true
+        },
+        {
+          "ticker": "MDB",
+          "relation": "competitor",
+          "detail": "Atlas vs DynamoDB",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "SNOW",
+          "relation": "competitor",
+          "detail": "warehouse vs Redshift",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "AAOI",
+          "relation": "supplier",
+          "detail": "optical transceivers",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "AGX",
+          "relation": "supplier",
+          "detail": "EPC gas power",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "ALAB",
+          "relation": "supplier",
+          "detail": "PCIe/CXL",
+          "from": "AMZN",
+          "in_book": false
+        }
+      ],
+      "source": "underlying sources named in the finding · curated reconciliation 2026-09-09",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-09.md"
+      ],
+      "evidence_anchor": "MSFT — MS models Maia as a LATER ramp than the GOOG/AMZN custom-silicon story",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-3a638df86a4e",
+      "asof": "2026-09-09",
+      "source_date": "2026-09-09",
+      "type": "contradiction",
+      "priority": "medium",
+      "score": 66,
+      "title": "The GW anchors on ai-datacenter-power do not agree — and the disagreement is the finding",
+      "tickers": [
+        "AMZN",
+        "META",
+        "MSFT"
+      ],
+      "in_book": [
+        "AMZN",
+        "META",
+        "MSFT"
+      ],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "Three different scopes. Not reconcilable as stated and not netted. Recorded as three anchors with bases.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Keep every sourced variant for AMZN/META/MSFT; identify the primary disclosure or named adjudicator that can resolve them. Do not average incompatible figures.",
+      "falsifier": "The next primary disclosure that puts the competing variants on one defined basis.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "supplier",
+          "detail": "networking",
+          "from": "AMZN",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "AMZN",
+          "in_book": true
+        },
+        {
+          "ticker": "MDB",
+          "relation": "competitor",
+          "detail": "Atlas vs DynamoDB",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "SNOW",
+          "relation": "competitor",
+          "detail": "warehouse vs Redshift",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "AAOI",
+          "relation": "supplier",
+          "detail": "optical transceivers",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "AGX",
+          "relation": "supplier",
+          "detail": "EPC gas power",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "ALAB",
+          "relation": "supplier",
+          "detail": "PCIe/CXL",
+          "from": "AMZN",
+          "in_book": false
+        }
+      ],
+      "source": "Morgan Stanley + Bernstein + Jefferies · curated reconciliation 2026-09-09",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-09.md"
+      ],
+      "evidence_anchor": "The GW anchors on ai-datacenter-power do not agree — and the disagreement is the finding",
+      "origin": "curated_reconciliation",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
@@ -1188,6 +1531,88 @@
       ],
       "evidence_anchor": "🆕 Post-print access, both dated: BofA fireside with Toshiya Hari, VP of IR & Strategic Finance, hosted by Vivek Arya — 2026-09-02, 11:00 ET (~1hr) (BofA TMT Sales, 2026-08-14) · UBS-arranged",
       "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-5a97d6cd2843",
+      "asof": "2026-09-09",
+      "source_date": "2026-09-09",
+      "type": "model_check",
+      "priority": "medium",
+      "score": 59,
+      "title": "Cost to run 1GW: the relay carried HALF the primary's number",
+      "tickers": [
+        "AVGO"
+      ],
+      "in_book": [
+        "AVGO"
+      ],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium-high",
+      "why_now": "page, not averaged. Action: work with $8-10bn/GW/yr and retire the $5bn mark unless JPM confirms its scope.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the AVGO model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "NVDA",
+          "relation": "competitor",
+          "detail": "merchant vs custom ASIC",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "networking",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "customer",
+          "detail": "custom ASIC (TPU)",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "META",
+          "relation": "customer",
+          "detail": "custom ASIC",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "custom ASIC",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "TSM",
+          "relation": "supplier",
+          "detail": "foundry",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "MRVL",
+          "relation": "competitor",
+          "detail": "custom ASIC",
+          "from": "AVGO",
+          "in_book": false
+        }
+      ],
+      "source": "management/company primary + Morgan Stanley + JPM · curated reconciliation 2026-09-09",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-09.md"
+      ],
+      "evidence_anchor": "Cost to run 1GW: the relay carried HALF the primary's number",
+      "origin": "curated_reconciliation",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
@@ -1972,6 +2397,65 @@
       "hidden": false
     },
     {
+      "id": "reco-3f54ed37230d",
+      "asof": "2026-09-09",
+      "source_date": "2026-09-09",
+      "type": "model_check",
+      "priority": "watch",
+      "score": 41,
+      "title": "CRWV's cost of capital: management's characterisation vs traded levels",
+      "tickers": [
+        "CRWV"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "Intrator: CoreWeave borrows \"at par or close to at par with many of the hyperscalers\" (2026-09-08).",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the CRWV model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "neocloud compute",
+          "from": "CRWV",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "CRWV",
+          "in_book": true
+        },
+        {
+          "ticker": "AMD",
+          "relation": "supplier",
+          "detail": "MI GPUs",
+          "from": "CRWV",
+          "in_book": false
+        },
+        {
+          "ticker": "OPENAI",
+          "relation": "customer",
+          "detail": "neocloud compute",
+          "from": "CRWV",
+          "in_book": false
+        }
+      ],
+      "source": "management/company primary · curated reconciliation 2026-09-09",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-09.md"
+      ],
+      "evidence_anchor": "CRWV's cost of capital: management's characterisation vs traded levels",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
       "id": "reco-232ac7c278b6",
       "asof": "2026-09-09",
       "source_date": "2026-09-01",
@@ -2252,6 +2736,79 @@
       ],
       "evidence_anchor": "🆕🔴 By 2026-09-30 — HBM CONTRACT PRICE UPDATE. Named by JPM (Kwon, 2026-08-19) as the 2 company-specific catalyst. This is the one that moves earnings rather than the share count, and it is th",
       "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-9d7de1ed5929",
+      "asof": "2026-09-09",
+      "source_date": "2026-09-09",
+      "type": "model_check",
+      "priority": "watch",
+      "score": 41,
+      "title": "SNOW gross margin: there is no floor, only a communication guarantee",
+      "tickers": [
+        "SNOW"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "The page carries a 74% FY27 product-GM guide. Asked directly about a CoCo-driven GM guardrail, Robins",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the SNOW model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "competitor",
+          "detail": "warehouse vs Redshift",
+          "from": "SNOW",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "competitor",
+          "detail": "warehouse vs BigQuery",
+          "from": "SNOW",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "competitor",
+          "detail": "warehouse vs Fabric",
+          "from": "SNOW",
+          "in_book": true
+        },
+        {
+          "ticker": "AMZN",
+          "relation": "supplier",
+          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
+          "from": "SNOW",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "supplier",
+          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
+          "from": "SNOW",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "supplier",
+          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
+          "from": "SNOW",
+          "in_book": true
+        }
+      ],
+      "source": "management/company primary · curated reconciliation 2026-09-09",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-09.md"
+      ],
+      "evidence_anchor": "SNOW gross margin: there is no floor, only a communication guarantee",
+      "origin": "curated_reconciliation",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
@@ -2990,326 +3547,6 @@
       "carried_from": "2026-09-01"
     },
     {
-      "id": "reco-af6d3dc1d448",
-      "asof": "2026-09-09",
-      "source_date": "2026-09-04",
-      "type": "contradiction",
-      "priority": "watch",
-      "score": 36,
-      "title": "Humanoids — the new source contradicts the data already on the theme page, twice, in the same direction",
-      "tickers": [],
-      "in_book": [],
-      "impact": "watch",
-      "urgency": "this week",
-      "confidence": "medium",
-      "why_now": "➤ Mirae's own figure captions read \"Source: Counterpoint Research, Mirae Asset\" — so it is citing Counterpoint and printing a materially lower unit number.",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Keep every sourced variant for the affected theme; identify the primary disclosure or named adjudicator that can resolve them. Do not average incompatible figures.",
-      "falsifier": "The next primary disclosure that puts the competing variants on one defined basis.",
-      "readthrough": [],
-      "source": "underlying sources named in the finding · curated reconciliation 2026-09-04",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-09-04.md"
-      ],
-      "evidence_anchor": "Humanoids — the new source contradicts the data already on the theme page, twice, in the same direction",
-      "origin": "curated_reconciliation",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "reco-50883f6d0de2",
-      "asof": "2026-09-09",
-      "source_date": "2026-09-04",
-      "type": "model_check",
-      "priority": "watch",
-      "score": 36,
-      "title": "SNOW — UBS's 42–43% Q4 exit rate requires sequential growth to hold; consensus has it halving",
-      "tickers": [
-        "SNOW"
-      ],
-      "in_book": [],
-      "impact": "watch",
-      "urgency": "this week",
-      "confidence": "medium-high",
-      "why_now": "➤ Keirstead: \"you can run pretty reasonable numbers and get to 42, 43\" for the 4Q FY27 exit — against the 39–40% January exit bogey heading into the print and the ~40% \"the bulls were modeling\" — and \"it wouldn't shock me if it's in the 43 to 45% zip code\" once the buy-side re-marks. Consensus embeds sequential dollar growth decelerating by a third into the quarter management itself has flagged as the renewal-heavy one.",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the SNOW model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
-      "readthrough": [
-        {
-          "ticker": "AMZN",
-          "relation": "competitor",
-          "detail": "warehouse vs Redshift",
-          "from": "SNOW",
-          "in_book": true
-        },
-        {
-          "ticker": "GOOG",
-          "relation": "competitor",
-          "detail": "warehouse vs BigQuery",
-          "from": "SNOW",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "competitor",
-          "detail": "warehouse vs Fabric",
-          "from": "SNOW",
-          "in_book": true
-        },
-        {
-          "ticker": "AMZN",
-          "relation": "supplier",
-          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
-          "from": "SNOW",
-          "in_book": true
-        },
-        {
-          "ticker": "GOOG",
-          "relation": "supplier",
-          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
-          "from": "SNOW",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "supplier",
-          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
-          "from": "SNOW",
-          "in_book": true
-        }
-      ],
-      "source": "management/company primary + UBS · curated reconciliation 2026-09-04",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-09-04.md"
-      ],
-      "evidence_anchor": "SNOW — UBS's 42–43% Q4 exit rate requires sequential growth to hold; consensus has it halving",
-      "origin": "curated_reconciliation",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "reco-4d789864369b",
-      "asof": "2026-09-09",
-      "source_date": "2026-09-04",
-      "type": "model_check",
-      "priority": "watch",
-      "score": 36,
-      "title": "SNOW — consensus FY27 sits exactly on the guide, embedding zero beat, against a company that has beaten 5%+ twice running",
-      "tickers": [
-        "SNOW"
-      ],
-      "in_book": [],
-      "impact": "watch",
-      "urgency": "this week",
-      "confidence": "medium",
-      "why_now": "➤ Consensus is on the guide to within three basis points. Cross-checked on the quarter and the ratio holds: the Q3 guide midpoint of $1,590m against BBG's 1FQ total of $1,648.2m implies 96.5% — the same ratio from an independent line, so this is a real relationship, not a fitted one.",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the SNOW model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
-      "readthrough": [
-        {
-          "ticker": "AMZN",
-          "relation": "competitor",
-          "detail": "warehouse vs Redshift",
-          "from": "SNOW",
-          "in_book": true
-        },
-        {
-          "ticker": "GOOG",
-          "relation": "competitor",
-          "detail": "warehouse vs BigQuery",
-          "from": "SNOW",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "competitor",
-          "detail": "warehouse vs Fabric",
-          "from": "SNOW",
-          "in_book": true
-        },
-        {
-          "ticker": "AMZN",
-          "relation": "supplier",
-          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
-          "from": "SNOW",
-          "in_book": true
-        },
-        {
-          "ticker": "GOOG",
-          "relation": "supplier",
-          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
-          "from": "SNOW",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "supplier",
-          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
-          "from": "SNOW",
-          "in_book": true
-        }
-      ],
-      "source": "management/company primary · curated reconciliation 2026-09-04",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-09-04.md"
-      ],
-      "evidence_anchor": "SNOW — consensus FY27 sits exactly on the guide, embedding zero beat, against a company that has beaten 5%+ twice running",
-      "origin": "curated_reconciliation",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "reco-17a7eb30fb6b",
-      "asof": "2026-09-09",
-      "source_date": "2026-09-04",
-      "type": "model_check",
-      "priority": "watch",
-      "score": 36,
-      "title": "SNOW — the CoCo estimate has no consensus counterpart to diverge from, which is itself the finding",
-      "tickers": [
-        "SNOW"
-      ],
-      "in_book": [],
-      "impact": "watch",
-      "urgency": "this week",
-      "confidence": "medium",
-      "why_now": "➤ Keirstead's bottom-up: ~$135m embedded from last quarter's $180m guide raise (75% of it CoCo) + ~$150m from this quarter's $230m raise (\"again said that that was mostly AI\") ⇒ ~$300m FY27, upside $350m, \"quickly marching towards being a half a billion dollar\" product. That is ~4.9% of the $6,070m FY27 product guide, and it attributes ~$285m of the $410m in cumulative FY27 raises (~70%) to one product.",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the SNOW model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "➤ BBG carries no product-line split, and management refused to size CoCo on this very call (\"Brian didn't want to size it in any way for me\"). The number is unfalsifiable against consensus today. ⚠️ Logged on the page as broker arithmetic, explicitly not as a company figure. The test is the composition of the next guide raise, or a first disclosure — both…",
-      "readthrough": [
-        {
-          "ticker": "AMZN",
-          "relation": "competitor",
-          "detail": "warehouse vs Redshift",
-          "from": "SNOW",
-          "in_book": true
-        },
-        {
-          "ticker": "GOOG",
-          "relation": "competitor",
-          "detail": "warehouse vs BigQuery",
-          "from": "SNOW",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "competitor",
-          "detail": "warehouse vs Fabric",
-          "from": "SNOW",
-          "in_book": true
-        },
-        {
-          "ticker": "AMZN",
-          "relation": "supplier",
-          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
-          "from": "SNOW",
-          "in_book": true
-        },
-        {
-          "ticker": "GOOG",
-          "relation": "supplier",
-          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
-          "from": "SNOW",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "supplier",
-          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
-          "from": "SNOW",
-          "in_book": true
-        }
-      ],
-      "source": "management/company primary · curated reconciliation 2026-09-04",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-09-04.md"
-      ],
-      "evidence_anchor": "SNOW — the CoCo estimate has no consensus counterpart to diverge from, which is itself the finding",
-      "origin": "curated_reconciliation",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "reco-7a982ea48ab9",
-      "asof": "2026-09-09",
-      "source_date": "2026-09-04",
-      "type": "model_check",
-      "priority": "watch",
-      "score": 36,
-      "title": "SNOW — the wiki's terminal-value bear is not in the consensus distribution at all",
-      "tickers": [
-        "SNOW"
-      ],
-      "in_book": [],
-      "impact": "watch",
-      "urgency": "this week",
-      "confidence": "medium",
-      "why_now": "➤ The page's standing bear — Rothschild & Co Redburn · Alex Haissl, Sell, PT $110 (2026-05-14) — sits $170 below BBG's street low, i.e. 74.5% below consensus. It is therefore not in the 56-analyst panel, or the panel's mark has moved and the wiki's has not.",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the SNOW model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
-      "readthrough": [
-        {
-          "ticker": "AMZN",
-          "relation": "competitor",
-          "detail": "warehouse vs Redshift",
-          "from": "SNOW",
-          "in_book": true
-        },
-        {
-          "ticker": "GOOG",
-          "relation": "competitor",
-          "detail": "warehouse vs BigQuery",
-          "from": "SNOW",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "competitor",
-          "detail": "warehouse vs Fabric",
-          "from": "SNOW",
-          "in_book": true
-        },
-        {
-          "ticker": "AMZN",
-          "relation": "supplier",
-          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
-          "from": "SNOW",
-          "in_book": true
-        },
-        {
-          "ticker": "GOOG",
-          "relation": "supplier",
-          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
-          "from": "SNOW",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "supplier",
-          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
-          "from": "SNOW",
-          "in_book": true
-        }
-      ],
-      "source": "underlying sources named in the finding · curated reconciliation 2026-09-04",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-09-04.md"
-      ],
-      "evidence_anchor": "SNOW — the wiki's terminal-value bear is not in the consensus distribution at all",
-      "origin": "curated_reconciliation",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
       "id": "reco-da8f6af5cee1",
       "asof": "2026-09-09",
       "source_date": "2026-09-01",
@@ -3911,6 +4148,35 @@
       "carried_from": "2026-09-03"
     },
     {
+      "id": "reco-af6d3dc1d448",
+      "asof": "2026-09-09",
+      "source_date": "2026-09-04",
+      "type": "contradiction",
+      "priority": "watch",
+      "score": 35,
+      "title": "Humanoids — the new source contradicts the data already on the theme page, twice, in the same direction",
+      "tickers": [],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "standing",
+      "confidence": "medium",
+      "why_now": "➤ Mirae's own figure captions read \"Source: Counterpoint Research, Mirae Asset\" — so it is citing Counterpoint and printing a materially lower unit number.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Keep every sourced variant for the affected theme; identify the primary disclosure or named adjudicator that can resolve them. Do not average incompatible figures.",
+      "falsifier": "The next primary disclosure that puts the competing variants on one defined basis.",
+      "readthrough": [],
+      "source": "underlying sources named in the finding · curated reconciliation 2026-09-04",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-04.md"
+      ],
+      "evidence_anchor": "Humanoids — the new source contradicts the data already on the theme page, twice, in the same direction",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-09-04"
+    },
+    {
       "id": "reco-d12c556a7d0e",
       "asof": "2026-09-09",
       "source_date": "2026-09-01",
@@ -4141,6 +4407,302 @@
       "feedback_note": "",
       "hidden": false,
       "carried_from": "2026-09-01"
+    },
+    {
+      "id": "reco-50883f6d0de2",
+      "asof": "2026-09-09",
+      "source_date": "2026-09-04",
+      "type": "model_check",
+      "priority": "watch",
+      "score": 35,
+      "title": "SNOW — UBS's 42–43% Q4 exit rate requires sequential growth to hold; consensus has it halving",
+      "tickers": [
+        "SNOW"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "standing",
+      "confidence": "medium-high",
+      "why_now": "➤ Keirstead: \"you can run pretty reasonable numbers and get to 42, 43\" for the 4Q FY27 exit — against the 39–40% January exit bogey heading into the print and the ~40% \"the bulls were modeling\" — and \"it wouldn't shock me if it's in the 43 to 45% zip code\" once the buy-side re-marks. Consensus embeds sequential dollar growth decelerating by a third into the quarter management itself has flagged as the renewal-heavy one.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the SNOW model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "competitor",
+          "detail": "warehouse vs Redshift",
+          "from": "SNOW",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "competitor",
+          "detail": "warehouse vs BigQuery",
+          "from": "SNOW",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "competitor",
+          "detail": "warehouse vs Fabric",
+          "from": "SNOW",
+          "in_book": true
+        },
+        {
+          "ticker": "AMZN",
+          "relation": "supplier",
+          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
+          "from": "SNOW",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "supplier",
+          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
+          "from": "SNOW",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "supplier",
+          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
+          "from": "SNOW",
+          "in_book": true
+        }
+      ],
+      "source": "management/company primary + UBS · curated reconciliation 2026-09-04",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-04.md"
+      ],
+      "evidence_anchor": "SNOW — UBS's 42–43% Q4 exit rate requires sequential growth to hold; consensus has it halving",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-09-04"
+    },
+    {
+      "id": "reco-4d789864369b",
+      "asof": "2026-09-09",
+      "source_date": "2026-09-04",
+      "type": "model_check",
+      "priority": "watch",
+      "score": 35,
+      "title": "SNOW — consensus FY27 sits exactly on the guide, embedding zero beat, against a company that has beaten 5%+ twice running",
+      "tickers": [
+        "SNOW"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "standing",
+      "confidence": "medium",
+      "why_now": "➤ Consensus is on the guide to within three basis points. Cross-checked on the quarter and the ratio holds: the Q3 guide midpoint of $1,590m against BBG's 1FQ total of $1,648.2m implies 96.5% — the same ratio from an independent line, so this is a real relationship, not a fitted one.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the SNOW model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "competitor",
+          "detail": "warehouse vs Redshift",
+          "from": "SNOW",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "competitor",
+          "detail": "warehouse vs BigQuery",
+          "from": "SNOW",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "competitor",
+          "detail": "warehouse vs Fabric",
+          "from": "SNOW",
+          "in_book": true
+        },
+        {
+          "ticker": "AMZN",
+          "relation": "supplier",
+          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
+          "from": "SNOW",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "supplier",
+          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
+          "from": "SNOW",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "supplier",
+          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
+          "from": "SNOW",
+          "in_book": true
+        }
+      ],
+      "source": "management/company primary · curated reconciliation 2026-09-04",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-04.md"
+      ],
+      "evidence_anchor": "SNOW — consensus FY27 sits exactly on the guide, embedding zero beat, against a company that has beaten 5%+ twice running",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-09-04"
+    },
+    {
+      "id": "reco-17a7eb30fb6b",
+      "asof": "2026-09-09",
+      "source_date": "2026-09-04",
+      "type": "model_check",
+      "priority": "watch",
+      "score": 35,
+      "title": "SNOW — the CoCo estimate has no consensus counterpart to diverge from, which is itself the finding",
+      "tickers": [
+        "SNOW"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "standing",
+      "confidence": "medium",
+      "why_now": "➤ Keirstead's bottom-up: ~$135m embedded from last quarter's $180m guide raise (75% of it CoCo) + ~$150m from this quarter's $230m raise (\"again said that that was mostly AI\") ⇒ ~$300m FY27, upside $350m, \"quickly marching towards being a half a billion dollar\" product. That is ~4.9% of the $6,070m FY27 product guide, and it attributes ~$285m of the $410m in cumulative FY27 raises (~70%) to one product.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the SNOW model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "➤ BBG carries no product-line split, and management refused to size CoCo on this very call (\"Brian didn't want to size it in any way for me\"). The number is unfalsifiable against consensus today. ⚠️ Logged on the page as broker arithmetic, explicitly not as a company figure. The test is the composition of the next guide raise, or a first disclosure — both…",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "competitor",
+          "detail": "warehouse vs Redshift",
+          "from": "SNOW",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "competitor",
+          "detail": "warehouse vs BigQuery",
+          "from": "SNOW",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "competitor",
+          "detail": "warehouse vs Fabric",
+          "from": "SNOW",
+          "in_book": true
+        },
+        {
+          "ticker": "AMZN",
+          "relation": "supplier",
+          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
+          "from": "SNOW",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "supplier",
+          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
+          "from": "SNOW",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "supplier",
+          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
+          "from": "SNOW",
+          "in_book": true
+        }
+      ],
+      "source": "management/company primary · curated reconciliation 2026-09-04",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-04.md"
+      ],
+      "evidence_anchor": "SNOW — the CoCo estimate has no consensus counterpart to diverge from, which is itself the finding",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-09-04"
+    },
+    {
+      "id": "reco-7a982ea48ab9",
+      "asof": "2026-09-09",
+      "source_date": "2026-09-04",
+      "type": "model_check",
+      "priority": "watch",
+      "score": 35,
+      "title": "SNOW — the wiki's terminal-value bear is not in the consensus distribution at all",
+      "tickers": [
+        "SNOW"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "standing",
+      "confidence": "medium",
+      "why_now": "➤ The page's standing bear — Rothschild & Co Redburn · Alex Haissl, Sell, PT $110 (2026-05-14) — sits $170 below BBG's street low, i.e. 74.5% below consensus. It is therefore not in the 56-analyst panel, or the panel's mark has moved and the wiki's has not.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the SNOW model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "competitor",
+          "detail": "warehouse vs Redshift",
+          "from": "SNOW",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "competitor",
+          "detail": "warehouse vs BigQuery",
+          "from": "SNOW",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "competitor",
+          "detail": "warehouse vs Fabric",
+          "from": "SNOW",
+          "in_book": true
+        },
+        {
+          "ticker": "AMZN",
+          "relation": "supplier",
+          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
+          "from": "SNOW",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "supplier",
+          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
+          "from": "SNOW",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "supplier",
+          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
+          "from": "SNOW",
+          "in_book": true
+        }
+      ],
+      "source": "underlying sources named in the finding · curated reconciliation 2026-09-04",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-04.md"
+      ],
+      "evidence_anchor": "SNOW — the wiki's terminal-value bear is not in the consensus distribution at all",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-09-04"
     },
     {
       "id": "cata-b89bcb2c7572",

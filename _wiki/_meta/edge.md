@@ -8,23 +8,33 @@ _Generated 2026-09-09 · the standing view of where our model and the curated re
 
 | Ticker | Metric | Yr | House | Consensus | Δ |
 |---|---|---|--:|--:|--:|
-| GOOG | Revenue $bn | 2026 | 505.00 | 428.10 | +18% |
-| GOOG | Revenue $bn | 2027 | 641.00 | 548.30 | +17% |
+| GOOG | Revenue $bn | 2026 | 505.00 | 426.70 | +18% |
+| GOOG | Revenue $bn | 2027 | 641.00 | 545.30 | +18% |
 | AAPL | EPS | 2026 | 10.12 | 8.74 | +16% |
 
-## Curated divergences — latest reconciliation (`reconciliation-2026-09-04.md`)
+## Curated divergences — latest reconciliation (`reconciliation-2026-09-09.md`)
 
 | Name | New datapoint | Read (the edge) |
 |---|---|---|
-| SNOW | consensus FY27 sits exactly on the guide, embedding zero beat, against a company that has beaten 5%+ twice running | Consensus is on the guide to within three basis points. |
-| SNOW | UBS's 42–43% Q4 exit rate requires sequential growth to hold; consensus has it halving | UBS's 42–43% Q4 exit rate requires sequential growth to hold; consensus has it halving |
-| SNOW | the wiki's terminal-value bear is not in the consensus distribution at all | Why it matters, and it cuts both ways: |
-| SNOW | the CoCo estimate has no consensus counterpart to diverge from, which is itself the finding | BBG carries no product-line split |
-| Humanoids | the new source contradicts the data already on the theme page, twice, in the same direction | Mirae's own figure captions read "Source: Counterpoint Research, Mirae Asset" |
+| — | MS's 2027 capex acceleration sits far above BBG consensus, on all four hyperscalers | MS's 2027 capex acceleration sits far above BBG consensus, on all four hyperscalers |
+| — | Cost to run 1GW: the relay carried HALF the primary's number | Cost to run 1GW: the relay carried HALF the primary's number |
+| GOOG silicon price/performance | company marketing vs independent measurement | company marketing vs independent measurement |
+| — | CRWV's cost of capital: management's characterisation vs traded levels | CRWV's cost of capital: management's characterisation vs traded levels |
+| — | SNOW gross margin: there is no floor, only a communication guarantee | SNOW gross margin: there is no floor, only a communication guarantee |
+| MSFT | MS models Maia as a LATER ramp than the GOOG/AMZN custom-silicon story | MS models Maia as a LATER ramp than the GOOG/AMZN custom-silicon story |
+| The GW anchors on `ai-datacenter-power` do not agree | and the disagreement is the finding | and the disagreement is the finding |
 
-## Consensus PT vs spot — live pull in `reconciliation-2026-09-04.md` (upside ranked)
+## Consensus PT vs spot — live pull in `reconciliation-2026-09-09.md` (upside ranked)
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|
-| SNOW | 336 | 433 | +29% | street high 525 · low 280 below spot · 50/5/1 of 56 |
-| PLTR | 170 | 200 | +17% | street high 255 · low 80 below spot · 24/9/2 of 35 |
+| CRWV | 95 | 146 | +53% | street high 317 · low 39 below spot · 29/11/3 of 43 |
+| AVGO | 364 | 532 | +46% | street high 715 · low 350 below spot · 57/4/0 of 61 |
+| NVDA | 224 | 325 | +45% | street high 515 · low 180 below spot · 79/2/1 of 82 |
+| BKNG | 173 | 239 | +38% | street high 301 · low 188 ABOVE spot · 33/9/0 of 42 |
+| SNOW | 331 | 433 | +31% | street high 525 · low 280 below spot · 50/5/1 of 56 |
+| AMZN | 252 | 330 | +31% | street high 405 · low 230 below spot · 77/4/0 of 81 |
+| GOOG | 328 | 428 | +30% | street high 475 · low 379 ABOVE spot · 17/1/0 of 18 |
+| AMD | 521 | 628 | +20% | street high 1,250 · low 465 below spot · 54/12/0 of 66 |
+| MSFT | 492 | 574 | +17% | street high 870 · low 400 below spot · 67/4/0 of 71 |
+| META | 654 | 747 | +14% | street high 1,000 · low 580 below spot · 71/8/0 of 79 |
