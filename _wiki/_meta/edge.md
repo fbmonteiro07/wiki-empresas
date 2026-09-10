@@ -32,9 +32,9 @@ _Generated 2026-09-09 · the standing view of where our model and the curated re
 | AVGO | 364 | 532 | +46% | street high 715 · low 350 below spot · 57/4/0 of 61 |
 | NVDA | 224 | 325 | +45% | street high 515 · low 180 below spot · 79/2/1 of 82 |
 | BKNG | 173 | 239 | +38% | street high 301 · low 188 ABOVE spot · 33/9/0 of 42 |
-| SNOW | 331 | 433 | +31% | street high 525 · low 280 below spot · 50/5/1 of 56 |
 | AMZN | 252 | 330 | +31% | street high 405 · low 230 below spot · 77/4/0 of 81 |
 | GOOG | 328 | 428 | +30% | street high 475 · low 379 ABOVE spot · 17/1/0 of 18 |
+| SNOW | 336 | 433 | +29% | street high 525 · low 280 below spot · 50/5/1 of 56 |
 | AMD | 521 | 628 | +20% | street high 1,250 · low 465 below spot · 54/12/0 of 66 |
 | MSFT | 492 | 574 | +17% | street high 870 · low 400 below spot · 67/4/0 of 71 |
 | META | 654 | 747 | +14% | street high 1,000 · low 580 below spot · 71/8/0 of 79 |

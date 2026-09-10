@@ -27,12 +27,12 @@ _Generated 2026-09-09 · 73 active signals · latest reconciliation: reconciliat
 
 _MODEL CHECK · HIGH IMPACT · IMMEDIATE · MEDIUM-HIGH CONFIDENCE_
 
-- **Tickers:** AMZN, META, MSFT · seeded book: AMZN, META, MSFT
+- **Tickers:** MSFT, META, AMZN · seeded book: MSFT, META, AMZN
 - **Why now:** The single most important number in the Guidebook, and consensus has not moved to it.
 - **Belief update:** This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.
-- **Action:** Open the AMZN/META/MSFT model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
+- **Action:** Open the MSFT/META/AMZN model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
 - **Falsifier:** falsifier is the pre-build mechanic — MS's own '28 deceleration depends on it reversing.
-- **Read-through:** AVGO (supplier: networking); NVDA (supplier: GPUs); MDB (competitor: Atlas vs DynamoDB); SNOW (competitor: warehouse vs Redshift); AAOI (supplier: optical transceivers); AGX (supplier: EPC gas power); ALAB (supplier: PCIe/CXL)
+- **Read-through:** AVGO (supplier: custom ASIC); NVDA (supplier: GPUs); MDB (competitor: Atlas vs Cosmos DB); SNOW (competitor: warehouse vs Fabric); AAOI (supplier: optical transceivers); ALAB (supplier: scale-up fabric); AMD (supplier: MI GPUs)
 - **Attribution:** Susquehanna · curated reconciliation 2026-09-09.
 - **Evidence:** [reconciliation-2026-09-09.md](reconciliation-2026-09-09.md) · signal reco-fad5914394d1
 
@@ -92,12 +92,12 @@ _MODEL CHECK · HIGH IMPACT · IMMEDIATE · MEDIUM CONFIDENCE_
 
 _MODEL CHECK · MEDIUM IMPACT · IMMEDIATE · MEDIUM CONFIDENCE_
 
-- **Tickers:** AMZN, GOOG, MSFT · seeded book: AMZN, GOOG, MSFT
+- **Tickers:** MSFT, GOOG, AMZN · seeded book: MSFT, GOOG, AMZN
 - **Why now:** "META and MSFT: ASIC and AMD deployments ramp over time, with 50% of incremental '27 capacity." This cuts
 - **Belief update:** This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.
-- **Action:** Open the AMZN/GOOG/MSFT model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
+- **Action:** Open the MSFT/GOOG/AMZN model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
 - **Falsifier:** A like-for-like estimate bridge or company guide that closes the identified gap.
-- **Read-through:** AVGO (supplier: networking); NVDA (supplier: GPUs); MDB (competitor: Atlas vs DynamoDB); SNOW (competitor: warehouse vs Redshift); AAOI (supplier: optical transceivers); AGX (supplier: EPC gas power); ALAB (supplier: PCIe/CXL)
+- **Read-through:** AVGO (supplier: custom ASIC); NVDA (supplier: GPUs); MDB (competitor: Atlas vs Cosmos DB); SNOW (competitor: warehouse vs Fabric); AAOI (supplier: optical transceivers); ALAB (supplier: scale-up fabric); AMD (supplier: MI GPUs)
 - **Attribution:** underlying sources named in the finding · curated reconciliation 2026-09-09.
 - **Evidence:** [reconciliation-2026-09-09.md](reconciliation-2026-09-09.md) · signal reco-aec2df916ddb
 
@@ -105,12 +105,12 @@ _MODEL CHECK · MEDIUM IMPACT · IMMEDIATE · MEDIUM CONFIDENCE_
 
 _CONTRADICTION · MEDIUM IMPACT · IMMEDIATE · MEDIUM CONFIDENCE_
 
-- **Tickers:** AMZN, META, MSFT · seeded book: AMZN, META, MSFT
+- **Tickers:** MSFT, META, AMZN · seeded book: MSFT, META, AMZN
 - **Why now:** Three different scopes. Not reconcilable as stated and not netted. Recorded as three anchors with bases.
 - **Belief update:** This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.
-- **Action:** Keep every sourced variant for AMZN/META/MSFT; identify the primary disclosure or named adjudicator that can resolve them. Do not average incompatible figures.
+- **Action:** Keep every sourced variant for MSFT/META/AMZN; identify the primary disclosure or named adjudicator that can resolve them. Do not average incompatible figures.
 - **Falsifier:** The next primary disclosure that puts the competing variants on one defined basis.
-- **Read-through:** AVGO (supplier: networking); NVDA (supplier: GPUs); MDB (competitor: Atlas vs DynamoDB); SNOW (competitor: warehouse vs Redshift); AAOI (supplier: optical transceivers); AGX (supplier: EPC gas power); ALAB (supplier: PCIe/CXL)
+- **Read-through:** AVGO (supplier: custom ASIC); NVDA (supplier: GPUs); MDB (competitor: Atlas vs Cosmos DB); SNOW (competitor: warehouse vs Fabric); AAOI (supplier: optical transceivers); ALAB (supplier: scale-up fabric); AMD (supplier: MI GPUs)
 - **Attribution:** Morgan Stanley + Bernstein + Jefferies · curated reconciliation 2026-09-09.
 - **Evidence:** [reconciliation-2026-09-09.md](reconciliation-2026-09-09.md) · signal reco-3a638df86a4e
 
