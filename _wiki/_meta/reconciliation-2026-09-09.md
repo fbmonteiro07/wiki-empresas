@@ -142,6 +142,88 @@ Three different scopes. **Not reconcilable as stated and not netted.** Recorded 
 
 ---
 
+### 8. `[23:00 second pass]` SNDK — the largest open edge on the wiki just got NARROWER AND SHARPER: consensus has adopted management's DOWNSIDE case as its BASE case
+
+**The disagreement, restated with tonight's numbers.** CFO Visoso re-affirmed the FY28-30 model a month after
+Investor Day: **revenue growth mid-to-high teens, 80% gross margin, 70% operating margin, 50% FCF margin**
+(*"That is a model we like"*). Against the BBG annual lines:
+
+| Metric (BBG annual lines, asof 09-09) | FY2027 (`1FY`) | FY2028 (`2FY`) | FY2029 (`3FY`) | Management FY28-30 guide |
+|---|--:|--:|--:|---|
+| Revenue, $m | 48,826 | 58,589 | **52,671** | growth **mid-to-high teens** |
+| Revenue y/y | — | **+20.0%** | **−10.1%** | ~+15-18% |
+| Gross margin | 84.38% | 83.68% | **80.58%** | **80%** |
+| Operating margin | 79.5% | 78.5% | **71.4%** | **70%** |
+| EPS, $ | 211.74 | 259.46 | **211.10** | — |
+| EPS y/y | — | +22.5% | **−18.6%** | — |
+
+🔴🔴🔴 **THE DIVERGENCE IS ENTIRELY IN THE TOP LINE, AND THE MARGINS AGREE ALMOST EXACTLY. THAT DECOMPOSITION IS
+THE FINDING.** Take management's guide at a ~16% mid-point off the consensus FY28 base: FY29 revenue would be
+≈ **$68.0bn**, against consensus **$52.7bn** — the Street sits **~22% below the guide-implied level**, and the
+y/y growth rates differ by **~26 points** (−10.1% vs ~+16%). But on the two margin lines the Street is *above*
+the guide, not below: **GM 80.58% vs 80% guided (+0.6pp)** and **OpM 71.4% vs 70% guided (+1.4pp)**.
+
+➤➤ **WHY THAT IS NEWS TONIGHT: the CFO put the downside case into arithmetic for the first time, and it is what
+consensus is already modelling.** Asked whether *"two-thirds of your business in a downside scenario being 80%
+gross margin and remaining one-third at prevailing prices"* was the right way to think about it, Visoso answered
+*"**Yes. That's an easy way to think about it. Totally agree.**"* **Consensus FY29 is a ~80.6% gross margin on a
+revenue base that FALLS ~10% — i.e. the Street has taken the NBM FLOOR as the outcome and assumed the
+non-contracted third re-prices DOWN.** So the argument is not "is the guide credible" in the abstract. It reduces
+to two testable questions: **(a) does the one-third at prevailing prices collapse, and (b) do the two-thirds under
+NBM step UP rather than sit at the floor?** Bernstein's 09-08 detail bears directly on (b) — *"CONTRACT VALUE
+INCREASES THROUGHOUT THE CONTRACT LIFE (2x IN 2 YEARS)"* — which is incompatible with a flat-at-the-floor FY29.
+**One of those two positions is wrong, and both are now specified well enough to be checked against the FY28
+prints.**
+
+⚠️ **What tonight did NOT do: management supplied no FY29 revenue number, no NBM price schedule and no
+non-contracted-mix assumption. The divergence is unresolved and stays OPEN. It also remains the largest open edge
+on this wiki** (prior vintages logged it as *"SNDK FY29 −10.1% vs guide mid-to-high-teens"* — **the −10.1% is
+unchanged in tonight's refresh, so the gap is not a stale-snapshot artifact and the guide did not drift**).
+
+**Street placement, for completeness:** consensus PT **$2,259.03** vs px **$1,764.17** = **+28.1%** upside;
+**27 buy / 4 hold / 0 sell**, rating 4.71/5; street high **$3,900**, low **$1,400**. No PT was carried by tonight's
+source, so nothing moved.
+
+### 9. `[23:00 second pass]` CRM — the Street is modelling FLAT-TO-RISING gross margin on the same product management just admitted it is subsidising
+
+**New tonight:** Slack's GM disclosed that **Slackbot is *"built on top of Anthropic"*** and that ***"one of the
+bets that we make is we actually take on the burden of token economics ourselves"*** — bundled into Salesforce's
+*"highest grade plan."* This is the product behind Mike Spencer's 08-27 admission that the FY27 margin guide was
+held *"because we're covering some of the token spend."*
+
+| BBG annual lines (asof 09-09) | FY2027 (`1FY`) | FY2028 (`2FY`) | FY2029 (`3FY`) |
+|---|--:|--:|--:|
+| Gross margin | 80.10% | **80.32%** | **80.19%** |
+| Operating margin | 34.4% | **34.8%** | **36.2%** |
+| Revenue y/y | — | +9.9% | +9.5% |
+
+🔴🔴 **CONSENSUS MODELS NO GROSS-MARGIN EROSION AT ALL — GM is flat-to-up across the whole forecast period, and
+OPERATING margin EXPANDS ~180bp by FY29, through exactly the years in which management says it is absorbing an
+uncapped variable inference cost on a growing product.** Consensus FY27 OpM (34.4%) also sits marginally *above*
+the reaffirmed **34%** guide.
+
+➤ **THE EDGE: this is an admitted cost that the Street has not put in the model.** It is asymmetric in a specific
+way — the exposure is **not** portfolio-wide. On **Agentforce, Piper and Fin the customer pays Anthropic
+directly** (*"you're not paying for Anthropic Tokens"*; *"you do that with them, with Anthropic"*), so the
+absorbed cost is **Slack-specific** and scales with Slackbot attach on the top plan, not with Agentforce. **That
+makes it modellable and falsifiable rather than a general worry: watch subscription gross margin against Slack
+seat/plan mix, not against Agentforce ARR.**
+
+⚠️ **Guards: management gave no Slackbot gross margin, no attach rate for the highest-grade plan, and no dollar
+token cost. The mitigations are real and stated (an *"opinionated harness out of the box"*, deliberate downtiering,
+and a claim that the premium comes *"at the expense of utilization of other tools"*). It is entirely possible the
+net effect is immaterial — but consensus is not modelling a cost the company says it is paying, and that gap is
+the position.**
+
+### 10. `[23:00 second pass]` NOW — a small, one-directional gross-margin disagreement
+
+The page carries BofA's 07-20 mark that 2Q gross margin stepped down ~150bp to **79.5%**, then **+100bp next
+year**. BBG consensus annual GM is **78.73% (FY26) → 78.84% (FY27) → 78.62% (FY28)** — **flat, and ~70-90bp
+BELOW the level BofA describes, with no recovery in it at all.** ⚠️ **Small, and possibly a basis difference
+(segment/subscription vs total company gross margin is not disclosed in the snapshot), so this is logged as a
+watch item rather than a position — but the direction is one-sided: if the +100bp recovery lands, consensus GM is
+too low; nothing in consensus is priced for it.**
+
 ## CONFIRMS — no action
 
 ### AVGO — the fireside reaffirms the guide and reframes what constrains it
@@ -325,3 +407,189 @@ CY27-over-CY26. The CY blocks disagree materially — CY-sum capex growth is **+
 [[MSFT]] gap is **basis-sensitive in a way the other three are not** — GOOG's wedge is −0.2%, AMZN's −2.8%,
 META's **+8.0%** (the known META CY-sum overshoot, which is why META's own guide ceiling must break the tie).
 Stated, not netted; no number in the table changed._
+
+
+---
+
+# Reconciliation — 2026-09-09, SECOND PASS (23:00 `/run-inbox`, 3 sources)
+
+_A second `/run-inbox` ran at 23:00 because the plan step's **P: sweep** pulled three new files after the 18:17
+run had archived its batch. All three are **Bloomberg transcripts of company firesides at the same Goldman Sachs
+Communacopia + Technology Conference** covered above — **[[SNDK]]** (Goeckeler + Visoso, *FINAL*), **[[NOW]]**
+(McDermott, *FINAL*) and **[[CRM]]** (Patterson + Seaman, *INITIAL DRAFT*). Same source class, same router
+mislabel ("Goldman" = the host and questioner). **MANAGEMENT sources: no rating, no PT, no estimates in any of
+them — so nothing in this pass supersedes a Street mark, and no `## Changelog` entry was required.**_
+
+**Baselines used.** (1) **Prior wiki comments** — on disk, and this pass is unusually rich in them because all
+three sessions were already on the wiki as *second-hand relays* from the 21:00 `/wiki-ingest`. (2) **Capstone
+house models — N/A: `_data/house.json` carries no SNDK, NOW or CRM node** (house coverage is NVDA/GOOG/AVGO/COHR/
+LITE/META/TSM/AAPL), so baseline 2 is genuinely absent rather than skipped. (3) **BBG consensus —
+`_data/estimates.json`, `asof 2026-09-09`, the live refresh `/wiki-consensus` wrote at 18:21 today. NOT PENDING.**
+
+> ⚠️ **VINTAGE NOTE, given the straddle documented above.** This pass reads the **post-refresh** `asof 2026-09-09`
+> file, written at 18:21:12 and unchanged since — so it is a single clean vintage, not a straddle. Every figure
+> below is quoted from it directly.
+>
+> ⚠️ **PERIOD BASIS — this matters more than usual here.** **SNDK** (`lrq 2026-07-03`) and **CRM**
+> (`lrq 2026-07-31`) both have **off-calendar fiscal years**, so the `CY20xx` blocks in `estimates.json` are
+> **NOT** the fiscal years management is guiding, and the `CY` label would lie. **Every SNDK and CRM figure below
+> is taken from the BBG ANNUAL lines (`1FY`/`2FY`/`3FY`), never the CY sums.** For SNDK, `1FY`=FY2027,
+> `2FY`=FY2028, `3FY`=FY2029. For CRM, `1FY`=FY2027 (Jan-27), `2FY`=FY2028, `3FY`=FY2029. NOW is a December
+> filer, so `1FY`=FY2026.
+
+## DIVERGES — the alpha (second pass)
+
+_The three divergences this pass produced — **#8 SNDK** (consensus has adopted management's DOWNSIDE case as its BASE case), **#9 CRM** (the Street models NO gross-margin erosion on a cost management admits it is absorbing) and **#10 NOW** (a one-directional gross-margin watch item) — are written up **in the first `## DIVERGES` section of this report, above**, numbered 8-10 and tagged `[23:00 second pass]`._
+
+> ⚠️ **THEY ARE FILED THERE DELIBERATELY, AND THIS IS A TOOLING CONSTRAINT WORTH KNOWING: `_wiki/_tools/build_edge.py` harvests the FIRST `## DIVERGES` block ONLY** — `re.search(r"##\s*[^\n]*DIVERGES[^\n]*.*?(?=\n##\s|\Z)", md, re.S|re.I)`, which stops at the next `##` heading and never iterates. **A second `## DIVERGES` section later in the same file is invisible to the edge tracker and to the `_dashboards/edge.html` hub.** A first attempt at this pass put items 8-10 in their own trailing section and `edge.md` harvested only items 1-7; they were relocated into the first block and `refresh_features.py` re-run. **Any future multi-pass day must append into the existing DIVERGES section, not open a new one** (or `build_edge.py` needs `finditer`).
+
+## CONFIRMS — no action
+
+### SNDK — the contract book, the market structure and the HBF calendar all reconcile
+
+**8 NBM customers** (*"eight very strong partnerships"* in *"only nine months since we signed the first deal"*),
+**~80% GM at floor pricing**, **third-party financial guarantees**, **two-thirds of FY28 bits covered** with FY29
+*"at that rough level or maybe moving higher"* — all consistent with the 08-05 print and the 08-19 Investor Day
+transcript already on the page. **HBF: *"just taping out the die"*, samples *"next year"*, *"a couple more years"*
+to commercial — consistent with the Investor Day mark (2027 samples, no commercial date, outside the FY28-30
+model). The goalposts did NOT move again this window**, which is itself worth recording given the page documents a
+~two-quarter slip between April and August. **Market structure: *"data center becomes more than half of the NAND
+market"* CONFIRMS the print's ~30% CY25 → 50% CY26 datacentre-share framing.** ⚠️ Unit guard held: that is the
+INDUSTRY mix, not SanDisk's own (~1/3).
+
+### SNDK — the "unquantified claim" the page flagged is now quantified, and it has NO consensus comparand
+
+The 08-19 Síntese named management's unsized productivity headroom *"the single most important unquantified claim
+on this page."* Goeckeler sized it: **~27% compounded bit growth over a 10-year period from nodal transitions,
+*"that's not new CapEx."*** **This cannot be reconciled against consensus — `estimates.json` carries no bit-supply
+or bit-shipment line, and no house model exists — so it is recorded as a management claim with a falsification
+test attached: it is a CAPABILITY CAGR, and the check is future bit-SHIPMENT disclosure against the guided
+mid-teens.** ⚠️ **Explicitly NOT netted against the industry bit-supply numbers on the theme page (MS 2027
+industry NAND bits +26%; YMTC *"+25% y-y"*) — those are shipment growth on a different base.** Its analytical
+value is that it **resolves the HBF-cannibalisation bear and kills the HBF-as-supply-sink bull in the same
+sentence** (written up on [[SNDK]] and `themes/hbm-memory`).
+
+### CRM — two numbers this wiki was carrying SECOND-HAND are now confirmed at source
+
+The page held **~5% premium-SKU penetration** and a **60-80% uplift** from a product webinar relayed by TMTB
+(09-01) and from MS's Adam Wood relay (09-04). Borges put both to management on stage and Patterson confirmed the
+uplift verbatim (*"**That's right.** That would be what that number would correlate to"*), with the 5% attributed
+to *"Miguel on the earnings call."* **Neither figure has a BBG comparand (no SKU-level consensus data), so this is
+a baseline-1 confirmation — but it closes the relay-vs-primary risk on two numbers the page's whole AI-monetisation
+row rests on. CONFIRMS.**
+
+**And the arithmetic those two numbers imply is a useful sizing check against consensus:** a **60-80% uplift on
+~5%** of the base is worth roughly **3-4% of that base's revenue** today (5% × ~70% mid-point) — against consensus
+FY28 revenue growth of **+9.9%**. ⚠️ **Inputs: 5% penetration (HARD, company), 60-80% uplift (HARD, company),
+"applies to the full comparable seat base" (ASSUMED). NOT a forecast and not adopted — the point is directional:
+on management's own two numbers the premium SKU is currently a low-single-digit contributor, so the FY28
+consensus growth rate does not depend on it, and the upside case is a PENETRATION case. That is the same
+conclusion the page's 09-05 note reached from the MS relay, now from the primary.**
+
+⚠️ **NOT reconciled, deliberately: the new absolute prices — Agentforce One at *"$550 US"* retail against
+*"about $1,300"* of average per-sales-professional spend on the surrounding stack — carry NO stated period in the
+draft transcript. Per-user-per-month and per-user-per-year are both readable and differ by 12x. The RATIO is
+usable; the LEVEL is not modellable until the FINAL transcript or the price list confirms the period. Flagged on
+the page, excluded from every calculation here.**
+
+### CRM — the FY28 consensus EPS DECLINE is a below-the-line artifact, not deterioration
+
+Worth stating explicitly because the raw snapshot invites a wrong read: **consensus FY28 EPS is $16.134 vs
+$16.731 in FY27 — a −3.6% DECLINE — while EBIT rises +11.4% ($15,899m → $17,714m) and revenue +9.9%.** The cause
+is visible in the same file: **NI/EBIT is 88.2% in FY27 and 75.3% in FY28**, a 12.9pp step down. FY27 carries the
+strategic-investment gains this page already flags (**$2.53/sh inside the Q2 FY27 non-GAAP print**, and
+*"essentially the ENTIRE FY27 EPS guidance raise is that realised mark"*); FY28 does not repeat them.
+➤ **RULE APPLIED (same trap logged on [[GOOG]]): reconcile Salesforce at EBIT, never at EPS. Any statement that
+"consensus has CRM earnings going backwards in FY28" is an artifact of non-operating gains in the base year.
+CONFIRMS the page's existing flag, and no divergence exists here.**
+
+### NOW — consensus is NOT the constraint on the 2030 target, and Bernstein is the Street high
+
+**The 2030 guide reconciles with room to spare.** Consensus annual revenue: **$16,211m (FY26) → $19,245m (+18.7%)
+→ $22,658m (+17.7%)**. Getting from the consensus FY28 level to management's **$30bn 2030 subscription-revenue
+target** requires roughly **+15.1% a year** — **below the +17.7% consensus already models for FY28.** ⚠️ **Basis
+caveat, stated rather than buried: $30bn is a SUBSCRIPTION line and $22,658m is TOTAL revenue. Subscription is the
+large majority of NOW's revenue, so the comparison is close but not exact and the true required CAGR is slightly
+higher. Even so, the sign of the conclusion is not in doubt: consensus's own trajectory reaches the target with
+growth DECELERATING. CONFIRMS — the 2030 algo is not where the disagreement lives.**
+
+**Placement of the two live Street marks on this page against consensus PT $144.78 (px $131.11, +10.4% upside;
+47 buy / 3 hold / 2 sell):** **Bernstein's Outperform PT $248 (09-09) is +71% above consensus PT and sits exactly
+ON the BBG street high of $248.00 — Bernstein IS the Street high on NOW.** Wells Fargo's $175 (08-12) is **+20.9%**
+above consensus. ➤ **Worth recording: NOW carries the LOWEST consensus upside of the three names in this pass
+(+10.4% vs CRM +13.0% and SNDK +28.1%) while carrying the widest single-house spread to consensus. The bull case
+on this page is a genuine outlier position, not a consensus one.**
+
+### NOW — the new product-level disclosures are confirmatory in scale, with an ACV caveat
+
+**ServiceNow's own CRM product *"doubling on a year-over-year basis"* and *"crossed $2 billion in ACV"*** is
+**~12.3% of consensus FY26 revenue ($16,211m)**, and the ~$1bn of ACV implied by the doubling is **~33% of the
+entire FY26→FY27 consensus revenue increment ($3,034m)**. ⚠️⚠️ **ACV IS NOT REVENUE — it is annualised contract
+value, recognised over a term, so this is a SCALE CHECK and explicitly not a revenue bridge; the conversion
+timing is undisclosed. But it establishes that the product management is now leading with is large enough to
+matter to the consensus growth rate, which the wiki previously had no way to judge. Similarly the $1.5bn 2026 AI
+ACV target ≈ 9.3% of consensus FY26 revenue.** CONFIRMS in direction, not adopted as an input.
+
+## Relay-vs-primary: what the primaries changed, and one bull mark NUANCED
+
+All three sessions were already on the wiki as broker write-ups or desk relays from the 21:00 `/wiki-ingest`.
+**The primaries won on every point of difference and none of the relayed numbers proved WRONG — but three were
+materially incomplete:**
+
+1. **SNDK** — the relay's third takeaway was the unfalsifiable *"efficient manufacturing at low capital intensity
+   enables cost-effective bit growth."* The primary is the **27% / no-capex** number, plus the Investor Day
+   **2.7x-per-petabyte** capital-efficiency comparison and the **mid-single-digit capital-intensity** target.
+2. **NOW** — the relay carried the AI-ACV metrics and the *"uneven adoption"* concession. The primary adds the
+   **$2bn CRM-product ACV**, **AI *"up ninefold in nine months"***, the **500,000 mid-market** target for the beta
+   AI help desk, and the security stack (**SecOps >$1bn**, *"eighth largest… ambition to be number one"*, **7bn
+   devices under management, +40bn coming**).
+3. **NOW — and the 4.5x seat claim this wiki explicitly REFUSED to adopt is now testable.** The page marked it
+   *"a vendor lifetime-value statistic with no cohort, no base period and no definition — NOT ADOPTED."* The
+   primary supplies the base and the window (**"the revenue of the original seat ON THE DATE THE CONTRACT WAS
+   SIGNED, THROUGHOUT THE FULFILLMENT OF THE CONTRACT"**) — and the verb is **"we predict."** **Still NOT ADOPTED,
+   but the objection moves from *undefined* to *undemonstrated*, which is a different and checkable complaint.**
+
+⚠️ **THE ONE EXISTING MARK THAT WAS NUANCED RATHER THAN CONFIRMED — [[CRM]]/[[ANTHROPIC]].** The 09-01 webinar row
+states the Anthropic economics are *"explicitly NOT shared."* **That is true for Agentforce, Piper and Fin and
+FALSE for Slack**, where Salesforce absorbs the token cost (see DIVERGES #9). **The partnership therefore runs two
+different commercial models at once — pass-through on the agent platform, absorption on the collaboration layer —
+and only the second one touches Salesforce's gross margin.** Written onto [[CRM]], [[ANTHROPIC]] and
+`themes/tokenmaxxing`.
+
+## Source-quality items carried onto the pages
+
+- **[[CRM]] — BBG *INITIAL DRAFT* mislabels the second speaker as "Robin Washington" (President & COO/CFO)
+  throughout.** The panel was **Bill Patterson + Rob Seaman (EVP & GM, Slack)** — established by the analyst's
+  introduction and her closing (*"thanking Bill and Rob"*). **Washington was not present. Every Slack quote was
+  re-attributed to Seaman; none of it may be carried to the CFO.** A FINAL transcript will supersede.
+- **[[CRM]] — a dollar/headcount garble that self-corrects inside the document:** *"the total TAM for knowledge
+  workers is around a $1 billion"* is rendered later as *"in excess of a billion PEOPLE."* **It is a headcount; the
+  $1bn "TAM" was not logged.**
+- **[[NOW]] — an internal contradiction inside a *FINAL* transcript, recorded not resolved:** platform scale given
+  as *"100 billion workflows doing 8 trillion transactions"* early and *"100 billion workflows, a trillion
+  transactions"* later — **an 8x discrepancy on the same metric from the same speaker in one sitting.** Neither
+  adopted; the CMDB-scale claim should be sourced to a filing.
+- **[[NOW]] — unsourced self-rankings flagged and not adopted:** *"fastest-growing enterprise security company in
+  the world"*, *"eighth largest"*, the *"5x to 10x TCO"* build-vs-buy ratio, *"90% of organizations"*, *"85% of
+  companies."* One customer name garbled (*"Grossman"*, a German drugstore chain with *"5,200 drug stores"*) —
+  **left unresolved rather than guessed.**
+- **[[SNDK]] — a quarter-label discrepancy between the primary and this wiki's own note.** The 08-19 Síntese
+  addendum attributes the **$5bn cash generated / $4.5bn repurchased** pair to **"Q1"**; the CFO says **"we
+  generated $5 billion in cash in Q4, and we bought $4.5 billion of that back,"** consistent with the Q4 FY26
+  print on 08-05. **Flagged on the page, not silently rewritten — one of the two labels is wrong and the primary is
+  the better authority.**
+
+## Housekeeping raised
+
+- **[[SNDK]] page — EIGHT ROWS ARE IN THE WRONG INTRA-QUARTER TABLE.** Rows dated **09-03 → 09-09** sit in the
+  page's **ARCHIVED (Q3-FY26-window)** full-log table, below a `Signal vs management` block whose reference print
+  is Q3 FY26 — including the 09-09 Goldman relay of tonight's session. The open **Q1 FY27** window opened
+  **2026-08-05**, so all eight belong in the FIRST log table. **Tonight's row was filed in the correct (open)
+  table; the misfiled rows were left in place** — re-filing eight dense rows is a separate operation with its own
+  risk of content loss. **Flagged for follow-up.**
+- **[[SNDK]] page — the `Signal vs management` table has two 5-cell rows in a 4-column table**
+  (`Pricing / peak margin`, `Demand / TAM`). **Pre-existing**; verified byte-identical before and after tonight's
+  edits, and appended-into rather than restructured.
+- **`ingest_inbox.py` — `--archive` still swallows `PENDING_FULL_REPORTS.md` and `_expert_calls_seen.json`**
+  (its `SKIP` list covers only `_readme.md`, `_routing-plan.md`, `_ingest-log.md`). Both were backed up before
+  and restored after, **md5-verified identical**. Recurring; a two-line fix to the SKIP list would end it.

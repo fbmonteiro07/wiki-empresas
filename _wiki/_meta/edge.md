@@ -23,6 +23,9 @@ _Generated 2026-09-09 · the standing view of where our model and the curated re
 | — | SNOW gross margin: there is no floor, only a communication guarantee | SNOW gross margin: there is no floor, only a communication guarantee |
 | MSFT | MS models Maia as a LATER ramp than the GOOG/AMZN custom-silicon story | MS models Maia as a LATER ramp than the GOOG/AMZN custom-silicon story |
 | The GW anchors on `ai-datacenter-power` do not agree | and the disagreement is the finding | and the disagreement is the finding |
+| `[23:00 second pass]` SNDK | the largest open edge on the wiki just got NARROWER AND SHARPER: consensus has adopted management's DOWNSIDE case as its BASE case | WHY THAT IS NEWS TONIGHT: the CFO put the downside case into arithmetic for the first time, and it is what consensus is already modelling. |
+| `[23:00 second pass]` CRM | the Street is modelling FLAT-TO-RISING gross margin on the same product management just admitted it is subsidising | THE EDGE: this is an admitted cost that the Street has not put in the model. |
+| `[23:00 second pass]` NOW | a small, one-directional gross-margin disagreement | a small, one-directional gross-margin disagreement |
 
 ## Consensus PT vs spot — live pull in `reconciliation-2026-09-09.md` (upside ranked)
 
@@ -35,6 +38,9 @@ _Generated 2026-09-09 · the standing view of where our model and the curated re
 | AMZN | 252 | 330 | +31% | street high 405 · low 230 below spot · 77/4/0 of 81 |
 | GOOG | 328 | 428 | +30% | street high 475 · low 379 ABOVE spot · 17/1/0 of 18 |
 | SNOW | 336 | 433 | +29% | street high 525 · low 280 below spot · 50/5/1 of 56 |
+| SNDK | 1,764 | 2,259 | +28% | street high 3,900 · low 1,400 below spot · 27/4/0 of 31 |
 | AMD | 521 | 628 | +20% | street high 1,250 · low 465 below spot · 54/12/0 of 66 |
 | MSFT | 492 | 574 | +17% | street high 870 · low 400 below spot · 67/4/0 of 71 |
 | META | 654 | 747 | +14% | street high 1,000 · low 580 below spot · 71/8/0 of 79 |
+| CRM | 244 | 276 | +13% | street high 475 · low 160 below spot · 44/16/2 of 62 |
+| NOW | 131 | 145 | +10% | street high 248 · low 72 below spot · 47/3/2 of 52 |

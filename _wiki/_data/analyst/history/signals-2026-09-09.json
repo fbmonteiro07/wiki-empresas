@@ -7,11 +7,11 @@
     "positions": 8
   },
   "stats": {
-    "signals": 73,
-    "active": 73,
+    "signals": 76,
+    "active": 76,
     "high": 8,
     "belief_changes": 0,
-    "focus_names": 38
+    "focus_names": 41
   },
   "focus": [
     {
@@ -319,6 +319,45 @@
       ]
     },
     {
+      "ticker": "CRM",
+      "focus_score": 41,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Software / security / internet",
+      "thesis": "Agentforce $0→$1B+ ARR is the AI-monetization test case; bear = ~10-13% growth + SaaS-seat-reset (BofA UW $160).",
+      "next_catalyst": "",
+      "why": [
+        "[23:00 second pass] CRM — the Street is modelling FLAT-TO-RISING gross margin on the same product management just admitted it is subsidising"
+      ]
+    },
+    {
+      "ticker": "NOW",
+      "focus_score": 41,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "AI — Hyperscalers & Software",
+      "thesis": "Beat-and-raise (cRPO +21%) + agentic pivot to consumption; on-disk transcripts are paraphrased (fidelity).",
+      "next_catalyst": "",
+      "why": [
+        "[23:00 second pass] NOW — a small, one-directional gross-margin disagreement"
+      ]
+    },
+    {
+      "ticker": "SNDK",
+      "focus_score": 41,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Memory & storage",
+      "thesis": "Post-spin pure-play NAND on AI storage; price-driven blowout + $42B LTA backlog vs blowoff-top risk.",
+      "next_catalyst": "",
+      "why": [
+        "[23:00 second pass] SNDK — the largest open edge on the wiki just got NARROWER AND SHARPER: consensus has adopted management's DOWNSIDE case as its BASE case"
+      ]
+    },
+    {
       "ticker": "SNPS",
       "focus_score": 41,
       "in_book": false,
@@ -603,20 +642,20 @@
       "title": "MS's 2027 capex acceleration sits far above BBG consensus, on all four hyperscalers",
       "tickers": [
         "MSFT",
-        "META",
-        "AMZN"
+        "AMZN",
+        "META"
       ],
       "in_book": [
         "MSFT",
-        "META",
-        "AMZN"
+        "AMZN",
+        "META"
       ],
       "impact": "high",
       "urgency": "immediate",
       "confidence": "medium-high",
       "why_now": "The single most important number in the Guidebook, and consensus has not moved to it.",
       "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the MSFT/META/AMZN model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "action": "Open the MSFT/AMZN/META model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "falsifier is the pre-build mechanic — MS's own '28 deceleration depends on it reversing.",
       "readthrough": [
         {
@@ -1121,20 +1160,20 @@
       "title": "MSFT — MS models Maia as a LATER ramp than the GOOG/AMZN custom-silicon story",
       "tickers": [
         "MSFT",
-        "GOOG",
-        "AMZN"
+        "AMZN",
+        "GOOG"
       ],
       "in_book": [
         "MSFT",
-        "GOOG",
-        "AMZN"
+        "AMZN",
+        "GOOG"
       ],
       "impact": "medium",
       "urgency": "immediate",
       "confidence": "medium",
       "why_now": "\"META and MSFT: ASIC and AMD deployments ramp over time, with 50% of incremental '27 capacity.\" This cuts",
       "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the MSFT/GOOG/AMZN model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "action": "Open the MSFT/AMZN/GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
       "readthrough": [
         {
@@ -1207,20 +1246,20 @@
       "title": "The GW anchors on ai-datacenter-power do not agree — and the disagreement is the finding",
       "tickers": [
         "MSFT",
-        "META",
-        "AMZN"
+        "AMZN",
+        "META"
       ],
       "in_book": [
         "MSFT",
-        "META",
-        "AMZN"
+        "AMZN",
+        "META"
       ],
       "impact": "medium",
       "urgency": "immediate",
       "confidence": "medium",
       "why_now": "Three different scopes. Not reconcilable as stated and not netted. Recorded as three anchors with bases.",
       "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Keep every sourced variant for MSFT/META/AMZN; identify the primary disclosure or named adjudicator that can resolve them. Do not average incompatible figures.",
+      "action": "Keep every sourced variant for MSFT/AMZN/META; identify the primary disclosure or named adjudicator that can resolve them. Do not average incompatible figures.",
       "falsifier": "The next primary disclosure that puts the competing variants on one defined basis.",
       "readthrough": [
         {
@@ -2891,6 +2930,132 @@
       ],
       "evidence_anchor": "🆕🔴 2026-09-30 — INVESTOR DAY is the real event, not the 08-26 print. MS (Simpson, 2026-08-19) is explicit: none of the three things that matter — Design IP reacceleration, agentic-EDA monetisation",
       "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-dcb34b275b2a",
+      "asof": "2026-09-09",
+      "source_date": "2026-09-09",
+      "type": "model_check",
+      "priority": "watch",
+      "score": 41,
+      "title": "[23:00 second pass] CRM — the Street is modelling FLAT-TO-RISING gross margin on the same product management just admitted it is subsidising",
+      "tickers": [
+        "CRM"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "\"highest grade plan.\" This is the product behind Mike Spencer's 08-27 admission that the FY27 margin guide was",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the CRM model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "makes it modellable and falsifiable rather than a general worry: watch subscription gross margin against Slack",
+      "readthrough": [],
+      "source": "management/company primary · curated reconciliation 2026-09-09",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-09.md"
+      ],
+      "evidence_anchor": "[23:00 second pass] CRM — the Street is modelling FLAT-TO-RISING gross margin on the same product management just admitted it is subsidising",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-18860cdae625",
+      "asof": "2026-09-09",
+      "source_date": "2026-09-09",
+      "type": "contradiction",
+      "priority": "watch",
+      "score": 41,
+      "title": "[23:00 second pass] NOW — a small, one-directional gross-margin disagreement",
+      "tickers": [
+        "NOW"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "The page carries BofA's 07-20 mark that 2Q gross margin stepped down ~150bp to 79.5%, then +100bp next",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Keep every sourced variant for NOW; identify the primary disclosure or named adjudicator that can resolve them. Do not average incompatible figures.",
+      "falsifier": "The next primary disclosure that puts the competing variants on one defined basis.",
+      "readthrough": [],
+      "source": "management/company primary + BofA · curated reconciliation 2026-09-09",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-09.md"
+      ],
+      "evidence_anchor": "[23:00 second pass] NOW — a small, one-directional gross-margin disagreement",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-2b4eb097698b",
+      "asof": "2026-09-09",
+      "source_date": "2026-09-09",
+      "type": "model_check",
+      "priority": "watch",
+      "score": 41,
+      "title": "[23:00 second pass] SNDK — the largest open edge on the wiki just got NARROWER AND SHARPER: consensus has adopted management's DOWNSIDE case as its BASE case",
+      "tickers": [
+        "SNDK"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "One of those two positions is wrong, and both are now specified well enough to be checked against the FY28",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the SNDK model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "NAND/SSD",
+          "from": "SNDK",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "customer",
+          "detail": "NAND/SSD",
+          "from": "SNDK",
+          "in_book": true
+        },
+        {
+          "ticker": "META",
+          "relation": "customer",
+          "detail": "NAND/SSD",
+          "from": "SNDK",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "NAND/SSD",
+          "from": "SNDK",
+          "in_book": true
+        },
+        {
+          "ticker": "KIOXIA",
+          "relation": "competitor",
+          "detail": "NAND",
+          "from": "SNDK",
+          "in_book": false
+        }
+      ],
+      "source": "management/company primary · curated reconciliation 2026-09-09",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-09.md"
+      ],
+      "evidence_anchor": "[23:00 second pass] SNDK — the largest open edge on the wiki just got NARROWER AND SHARPER: consensus has adopted management's DOWNSIDE case as its BASE case",
+      "origin": "curated_reconciliation",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
