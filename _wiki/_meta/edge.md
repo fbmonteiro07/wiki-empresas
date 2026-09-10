@@ -8,7 +8,7 @@ _Generated 2026-09-10 · the standing view of where our model and the curated re
 
 | Ticker | Metric | Yr | House | Consensus | Δ |
 |---|---|---|--:|--:|--:|
-| GOOG | Revenue $bn | 2026 | 505.00 | 426.70 | +18% |
+| GOOG | Revenue $bn | 2026 | 505.00 | 427.40 | +18% |
 | GOOG | Revenue $bn | 2027 | 641.00 | 545.30 | +18% |
 | AAPL | EPS | 2026 | 10.12 | 8.74 | +16% |
 
@@ -31,16 +31,16 @@ _Generated 2026-09-10 · the standing view of where our model and the curated re
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|
-| CRWV | 95 | 146 | +53% | street high 317 · low 39 below spot · 29/11/3 of 43 |
-| AVGO | 364 | 532 | +46% | street high 715 · low 350 below spot · 57/4/0 of 61 |
-| NVDA | 224 | 325 | +45% | street high 515 · low 180 below spot · 79/2/1 of 82 |
-| BKNG | 173 | 239 | +38% | street high 301 · low 188 ABOVE spot · 33/9/0 of 42 |
+| CRWV | 91 | 146 | +60% | street high 317 · low 39 below spot · 29/11/3 of 43 |
+| NVDA | 218 | 325 | +49% | street high 515 · low 180 below spot · 79/2/1 of 82 |
+| AVGO | 364 | 532 | +46% | street high 715 · low 350 below spot · 58/4/0 of 62 |
+| BKNG | 175 | 239 | +37% | street high 301 · low 188 ABOVE spot · 33/9/0 of 42 |
+| SNDK | 1,700 | 2,259 | +33% | street high 3,900 · low 1,400 below spot · 27/4/0 of 31 |
+| SNOW | 332 | 436 | +31% | street high 525 · low 280 below spot · 50/5/1 of 56 |
 | AMZN | 252 | 330 | +31% | street high 405 · low 230 below spot · 77/4/0 of 81 |
-| GOOG | 328 | 428 | +30% | street high 475 · low 379 ABOVE spot · 17/1/0 of 18 |
-| SNOW | 336 | 433 | +29% | street high 525 · low 280 below spot · 50/5/1 of 56 |
-| SNDK | 1,764 | 2,259 | +28% | street high 3,900 · low 1,400 below spot · 27/4/0 of 31 |
-| AMD | 521 | 628 | +20% | street high 1,250 · low 465 below spot · 54/12/0 of 66 |
-| MSFT | 492 | 574 | +17% | street high 870 · low 400 below spot · 67/4/0 of 71 |
-| META | 654 | 747 | +14% | street high 1,000 · low 580 below spot · 71/8/0 of 79 |
-| CRM | 244 | 276 | +13% | street high 475 · low 160 below spot · 44/16/2 of 62 |
-| NOW | 131 | 145 | +10% | street high 248 · low 72 below spot · 47/3/2 of 52 |
+| GOOG | 329 | 428 | +30% | street high 475 · low 379 ABOVE spot · 17/1/0 of 18 |
+| AMD | 509 | 628 | +23% | street high 1,250 · low 465 below spot · 56/12/0 of 68 |
+| MSFT | 491 | 574 | +17% | street high 870 · low 400 below spot · 67/4/0 of 71 |
+| META | 656 | 750 | +14% | street high 1,000 · low 580 below spot · 72/7/0 of 79 |
+| CRM | 245 | 276 | +13% | street high 475 · low 160 below spot · 44/16/2 of 62 |
+| NOW | 133 | 145 | +9% | street high 248 · low 72 below spot · 47/3/2 of 52 |

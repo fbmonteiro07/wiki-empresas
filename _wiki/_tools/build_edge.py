@@ -97,10 +97,15 @@ def curated_diverges(rf):
     md = read(rf)
     # isolate the DIVERGES section — match any header variant ("Where the new data DIVERGES",
     # "DIVERGES (the alpha)", "DIVERGES (potential alpha)", …) up to the next '##' or EOF.
-    m = re.search(r"##\s*[^\n]*DIVERGES[^\n]*.*?(?=\n##\s|\Z)", md, re.S | re.I)
-    if not m:
+    # NB: finditer, not search. A multi-pass day (two /run-inbox runs on the same date)
+    # can leave TWO "## DIVERGES" sections in one report; re.search harvested only the
+    # first and the later findings were invisible to edge.md and _dashboards/edge.html
+    # (documented in reconciliation-2026-09-09.md). Concatenate every DIVERGES section.
+    secs = [mm.group(0) for mm in
+            re.finditer(r"##\s*[^\n]*DIVERGES[^\n]*.*?(?=\n##\s|\Z)", md, re.S | re.I)]
+    if not secs:
         return []
-    section = m.group(0)
+    section = "\n".join(secs)
 
     # --- (a) narrative sub-sections ------------------------------------------------
     parts = re.split(r"\n###\s+", section)[1:]     # drop the text before the first '###'

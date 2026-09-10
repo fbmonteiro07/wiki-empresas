@@ -3,16 +3,16 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AMZN` (filings + transcripts) · `_equity_calls` · `_briefings\by-ticker\AMZN.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-09 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-10 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $820.7bn | $947.5bn |
-| Gross profit | $421.0bn | $503.1bn |
-| Gross margin | 51.3% | 53.1% |
+| Gross profit | $421.0bn | $504.1bn |
+| Gross margin | 51.3% | 53.2% |
 | EBITDA | $211.6bn | $278.6bn |
 | EPS | $9.60 | $12.70 |
-| Capex | $214.4bn | $283.9bn |
+| Capex | $214.5bn | $283.6bn |
 | OCF (≈EBITDA) | $211.6bn | $278.6bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
