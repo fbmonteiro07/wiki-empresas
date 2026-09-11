@@ -2,7 +2,7 @@
 
 _Generated 2026-09-10 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (36)
+## 📅 Upcoming (37)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
@@ -38,6 +38,7 @@ _Generated 2026-09-10 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-10-06 | MRVL | **🆕🔴 NEXT, AND IT IS NOW THE ONLY CATALYST THAT MATTERS ON THIS PAGE: INVESTOR DAY — MONDAY 2026-10-06, NYC.** Three desks stated on print night that management deliberately withheld the [[GOOG]] sizi |
 | 2026-10-15 | SMTC | **🔴 2026-10-15 — INVESTOR / ANALYST DAY, San Jose. The single most important dated event on this page, because management deferred the two questions that matter to it.** Promised content: *"an in-dept |
 | 2026-11-12 | SPCX | **🆕🔴🔴 2026-11-12 — [[OPENAI]] CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.** OpenAI's own post: *"**We're ending our partnership with Cursor following its acquisit |
+| 2026-11-17 | NVDA | **✅🔴 CLOSED 2026-09-10 — THE GS COMMUNACOPIA FIRESIDE HAPPENED. OUTCOME:** Jensen **reaffirmed the ~70% FY28 revenue growth** (*"we could grow 70% year-over-year, and we are confident about that"*), * |
 | 2026-11-17 | NVDA | **🆕🔴 NEXT THREE DATED COMPANY EVENTS, ALL STATED ON THE 08-26 CALL BY IR (Toshiya Hari):** **(1) 2026-09-10 — Jensen Huang keynote fireside chat at the Goldman Sachs Communacopia & Technology Conferen |
 | 2026-11-17 | NVDA | **🆕🔴 THE THREE THINGS THE 08-26 PRINT MADE FALSIFIABLE, AND WHEN THEY RESOLVE.** **(1) THE GM TROUGH — guided to 71-72% in FQ4 FY27 (reports ~Feb-2027) with recovery to 72-73% in FY28 "as executed pri |
 | 2026-11-19 | SKHYNIX | **🆕 2026-08-20 → 2026-11-19 — the buyback executes on-market** (SK Securities). Daily execution is observable; **the falsifier for the "most aggressive among peers" claim is whether the full W40trn ac |

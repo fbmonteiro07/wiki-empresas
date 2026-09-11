@@ -13,7 +13,7 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\NBIS` (20-F filings + 
 | Gross profit | $2.3bn | $8.8bn |
 | Gross margin | 71.9% | 72.9% |
 | EBITDA | $1.2bn | $6.7bn |
-| EPS | $-3.58 | $-4.84 |
+| EPS | $-3.60 | $-4.88 |
 | Capex | $22.8bn | $33.4bn |
 | OCF (≈EBITDA) | $1.2bn | $6.7bn |
 

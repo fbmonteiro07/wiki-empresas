@@ -7,12 +7,12 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AVGO` (filings + trans
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $123.7bn | $194.7bn |
-| Gross profit | $91.3bn | $139.2bn |
+| Revenue | $123.7bn | $194.4bn |
+| Gross profit | $91.3bn | $139.0bn |
 | Gross margin | 73.8% | 71.5% |
 | EBITDA | $83.5bn | $129.9bn |
 | EPS | **$12.89** | **$21.07** |
-| Capex | $2.1bn | $2.9bn |
+| Capex | $2.1bn | $2.8bn |
 | OCF (≈EBITDA) | $83.5bn | $129.9bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
