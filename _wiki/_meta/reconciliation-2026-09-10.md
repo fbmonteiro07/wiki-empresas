@@ -28,7 +28,7 @@ same-day snapshot is a valid baseline, so the BBG column is **NOT** marked PENDI
 
 ## DIVERGES — the alpha
 
-### 1. ORCL — the "guidance raise" is worth **+0.5% on revenue and +0.4% on EPS** against a Street that already had it
+### 1. ORCL — the "guidance raise" is worth **+0.5% on revenue and +0.4% on EPS** against a Street that already had it — ✅ **RESOLVED 2026-09-11 → CONFIRMS** (the Street revised **+0.45% / +0.68%** in 17 hours)
 
 | FY27 (Jun-26 → May-27) | Management, 2026-09-10 | BBG consensus `1FY`, pre-print | Delta |
 |---|--:|--:|--:|
@@ -44,6 +44,32 @@ sentiment/positioning (ORCL went into the print at `$152.94`, ~5.9% below the `$
 09-09, and sits on MS's tax-loss-harvesting basket), **not** estimate revision. Watch whether the Street's FY28
 line moves — that is where the +$26bn of new RPO, explicitly said not to touch revenue "until fiscal 28 or beyond",
 actually lands.
+
+
+✅ **2026-09-11 POST-PRINT RESOLUTION — the tape validated this finding to within 5 basis points, and it is now closed.**
+This report's BBG column was a **pre-print** snapshot (`estimates.json asof 2026-09-10`, fetched 18:35 BRT / 17:35 ET —
+after the 16:00 ET close and essentially concurrent with the call, so no analyst had revised). Today's live pull
+(`asof 2026-09-11`, fetched 11:07–11:29 ET — **an intraday mark, not a close**) is the first post-print consensus.
+Both vintages are git-verifiable: `git show HEAD:_wiki/_data/estimates.json` carries the pre-print figures below.
+
+| ORCL FY27 (`1FY`, Jun-26 → May-27) | Guide, 09-10 | Cons **pre-print** | Cons **post-print** | Street revision | Guide vs new cons |
+|---|--:|--:|--:|--:|--:|
+| Total revenue | **"at least $90bn"** | $89,595.2m | **$90,000.0m** | **+0.45%** | **−0.00%** |
+| Non-GAAP EPS | **$8.10** | $8.066 | **$8.121** | **+0.68%** | −0.26% (cons now **above** the guide) |
+| Capex | **$90–95bn** (mid $92.5bn) | $92,665.6m | **$91,559.3m** | **−1.19%** | mid **+1.03%** above cons |
+
+➤ **The Street moved to the guide and stopped there.** §1 sized the raise at **+0.5% revenue / +0.4% EPS**; the actual
+17-hour revision was **+0.45% / +0.68%**, and consensus FY27 revenue now sits at **$90,000.0m — the guided floor
+itself**, to within five basis points. A finding written against a pre-print snapshot has been confirmed by the
+revision tape at the size it named. **And the price agreed:** ORCL went **$152.94** (09-10 close, pre-print) →
+**$153.29** (09-11 intraday) = **+0.23%**. A ~45bp revision produced a ~20bp move — the corollary's central claim
+(*"anyone trading the words 'raising our guidance' is trading ~40bp of actual revision"*) held in the tape, not just
+in theory. Street-high FY27 also moved with the median, not ahead of it: rev_hi $90,953m → $91,445m, eps_hi $8.26 → $8.37.
+⚠️ **One leg moved the other way.** The consensus **target price FELL $245.04 → $242.60 (−0.99%)** on an **unchanged
+panel** — 49 analysts, high $400, low $110, rating 4.53, all four identical d/d. **Numbers up ~0.5%, targets down ~1%:
+a small de-rate on a beat, not an upgrade cycle.** Upside to the consensus target is **+58.3%** from spot, the widest
+in this report by a distance, and it is carried by the target, not by the estimates.
+**RESOLVED → CONFIRMS.** The forward question §1 raised is re-opened as **§8** below, where it is now answerable.
 
 ### 2. ORCL — management's RPO conversion pace contests the standing BofA bear, but the bases differ
 
@@ -68,6 +94,13 @@ Jensen, 2026-09-10: *"We could grow 70% year-over-year, and we are confident abo
 both the sell-side and the company, on the one number management chose to reaffirm in public. Either the house has a
 deliberate supply-constraint haircut it should state, or the model needs updating.
 
+✅ **2026-09-11 re-placement — the consensus side of this table is unchanged TO THE DECIMAL on the fresh pull**
+(`2FY` revenue **$693,718.1m**, growth **+69.3%**, EPS **$15.856**; every NVDA estimate field is byte-identical d/d, as
+are the consensus target **$324.61**, the panel of **82** and the **4.88/5** rating). **So the house's −4.7% revenue /
+−7.3pp growth gap stands exactly as written** — it did not narrow, and nothing in the Street's marks moved toward the
+house. Only the price moved: **$218.36 → $220.01 (+0.76%)**, leaving **+47.5%** of upside to the consensus target.
+**DIVERGES stands. The $32.7bn revenue bridge is still the house's to explain.**
+
 ### 4. META — JPM's PT went up 28% on **zero** change to earnings
 
 JPM upgraded Neutral → Overweight and took the Dec-27 PT **$640 → $820**. Both targets sit on the **same 2028E GAAP
@@ -87,6 +120,13 @@ is aggressive but not a Street high. **The house is the low man on 2026 (−5.3%
 consensus on revenue** ($257bn vs $254.1bn), i.e. the house is carrying a materially heavier 2026 margin/spend
 assumption than the Street. That is the real house-vs-Street gap on META, and tonight's upgrade widens it.
 
+✅ **2026-09-11 re-placement — consensus EPS did not move; the entry did.** BBG CY/annual EPS is unchanged to the
+decimal (**$34.534 / $37.845**, `1FY`/`2FY`), so JPM's **+5.6% / +8.5%** premium to the Street and the house's **−5.3%**
+2026 discount are both exactly as stated. The consensus **target** barely moved (**$749.71 → $750.64, +0.12%**, panel of
+79, rating 4.80) while **spot rose $644.38 → $651.18 (+1.06%)**. JPM's **$820** is therefore now **+9.2%** above the
+consensus target (was +9.4%) and **+25.9%** above spot (was +27.3%). **CONFIRMS the re-rate reading: a 28% PT move that
+produced no estimate revision anywhere in the panel, 24 hours on.**
+
 ### 5. PANW — Morgan Stanley calls it a **Top Pick** with a price target **below** the Street median
 
 MS PT **$387** vs BBG consensus PT **$400.59** = **−3.4%** (Street high $475; spot $338.49 ⇒ MS +14.3% vs consensus
@@ -96,12 +136,23 @@ vs +20.9%; NGS ARR +20.5% vs +22.9%) while the note argues the FY27 *guide* will
 contradictory — but the bull case is explicitly "guide beats MS's own model", which is a lower bar than "guide beats
 the Street".
 
+✅ **2026-09-11 re-placement — the tension is intact and the entry improved.** Consensus target **$400.59**
+unchanged (panel 60, hi $475, rating 4.52), MS's **$387** still **−3.4%** below it; consensus `2FY` EPS **$4.866** and
+revenue **$16,179.5m** moved <0.05% d/d. But **spot fell $338.49 → $327.29 (−3.31%)**, the largest one-session move of
+any name in this report, so MS's target now implies **+18.2%** (was +14.3%) against the Street's **+22.4%**.
+**DIVERGES stands — a Top Pick whose target still sits below the median it is being marketed against.**
+
 ### 6. NVDA — Morgan Stanley is Overweight on **below-consensus** numbers and a **below-consensus** target
 
 MS CY27e EPS **$15.01** vs BBG `2FY` **$15.856** = **−5.3%**. MS PT **$300** vs BBG consensus PT **$324.61** = **−7.6%**.
 So the Overweight does not rest on above-Street estimates at all — it rests on multiple plus un-modelled optionality,
 which MS says outright: revenue-sharing is *"upside not yet in numbers"* (+9.42% FY29 EPS at a $12/hr market GPU price,
 +15.14% at $18/hr, on 5GW). ➤ **Read the OW as an options position on rev-share, not as an earnings call.**
+
+✅ **2026-09-11 re-placement — unchanged on both legs.** MS CY27e EPS **$15.01** vs BBG `2FY` **$15.856** is still
+**−5.3%**; MS PT **$300** vs consensus **$324.61** still **−7.6%**. On the fresh spot ($220.01) MS implies **+36.4%**
+against the Street's **+47.5%**. **The Overweight still rests on multiple plus un-modelled rev-share optionality, not on
+estimates. DIVERGES stands.**
 
 ### 7. NVDA — the same house is Overweight the equity and **sidelined on the credit**, on one webcast
 
@@ -111,6 +162,37 @@ away from funded debt**: ~$40bn lease/ratings adjustments + ~$65bn residual-valu
 (RVS up to 25%, illustrative tail peaking **~$90bn shortly after CY28-end, ~$70bn tax-affected**) + ~$65bn rev-share
 credit support on 5GW. ⚠️ **The ~$65bn rev-share bucket and the +9.42%/+15.14% EPS upside grid run off the SAME 5GW** —
 they are two sides of one assumption. Do not count the upside without the contingent exposure.
+
+### 8. ORCL — the Street's post-print revision underwrites **~8%** of the new RPO, and almost none of it lands in FY28 _(opened 2026-09-11 out of §1's corollary)_
+
+§1 posed the forward question explicitly: *"Watch whether the Street's FY28 line moves — that is where the +$26bn of new
+RPO, explicitly said not to touch revenue 'until fiscal 28 or beyond', actually lands."* The first post-print pull
+answers it, and the answer is **barely**.
+
+| ORCL annual line | Cons pre-print (09-10) | Cons post-print (09-11) | Δ | Δ $m |
+|---|--:|--:|--:|--:|
+| FY27 `1FY` revenue | $89,595.2m | $90,000.0m | +0.45% | **+$405m** |
+| FY28 `2FY` revenue | $130,378.5m | $131,133.7m | +0.58% | **+$755m** |
+| FY29 `3FY` revenue | $182,241.7m | $183,160.9m | +0.50% | **+$919m** |
+| **FY27–FY29 cumulative** | | | | **+$2,079m** |
+
+➤ **$2.08bn of cumulative revenue added across three fiscal years against +$26bn of new RPO booked in the quarter —
+~8% of the gross backlog addition.** EPS followed and no further: FY28 **$10.799 → $10.926 (+1.18%)**, FY29 **$15.667 →
+$15.739 (+0.46%)**. ⚠️ **Dispersion NARROWED rather than widened:** the FY28 **street-high EPS fell $13.51 → $13.30**
+while the median rose — the most bullish model in the panel came *down* on a print management called an acceleration.
+The Street is converging on the guide, not extrapolating past it.
+⚠️⚠️ **Three limits, to be stated before this row is traded.** **(1) 17 hours is early** — a 49-analyst median refreshes
+over days, and a partially-updated panel understates the eventual revision; this is a first reading, not a settled one.
+**(2) The +$26bn cannot be placed against a base** — no absolute RPO total was disclosed this quarter (the page's $638bn
+Q4 FY26 mark stands), and management's *"about half of RPO converts over the next 36 months"* refers to **total** RPO,
+**not** to this $26bn. Chaining the two into an implied revenue schedule is exactly the units trap §2 flags. **(3) FY30+
+is not on the wrapper**, so a revision parked beyond FY29 — which is where "fiscal 28 or beyond" permits it to sit — is
+invisible here by construction. This row measures what the Street has written down, not what it believes.
+➤ **The testable claim, stated so it can be scored:** if management's conversion pace is underwritten, FY28 consensus
+revenue must move materially more than **+0.58%** over the coming weeks. **Re-test at each `/wiki-consensus` run and
+again after the October Investor Day** (management deferred gross-margin and other forward marks to it). **If FY28 is
+still up <1% a month from now, the Street is carrying the backlog as optionality rather than as revenue — and that,
+not the guidance raise, is the live ORCL divergence.**
 
 ---
 
@@ -165,3 +247,48 @@ they are two sides of one assumption. Do not count the upside without the contin
 
 _No house model exists for ORCL, CRWD, PANW or MSFT — those names were reconciled against prior wiki comments and BBG
 consensus only. ANTHROPIC and OPENAI are private: read-throughs only, reconciled against prior wiki comments._
+
+---
+
+## BBG column — resolved on the post-print pull (2026-09-11)
+
+_This report was written against a **pre-print** `estimates.json` (`asof 2026-09-10`, fetched 18:35 BRT / 17:35 ET) and
+said so in its header box: *"the ORCL consensus figures here will be stale the moment the Street revises."* They did
+revise. The `/wiki-consensus` run of **2026-09-11** (`estimates.json asof 2026-09-11`, **106/106 names fetched live, 0
+FAIL lines, 0 `error` keys, 0 `carried_over` stamps, 0 null prices, 0 records byte-identical to the 09-10 vintage**;
+orphan-ticker audit clean both ways, 106 = 106) is the **first post-print consensus** and every quantitative row above
+has been re-placed against it._
+
+**What moved.** **ORCL is the only name in this report whose estimates moved at all.** NVDA, META and MSFT are
+**byte-identical d/d on every estimate field**; PANW and CRWD moved by <0.05% on revenue and 0.00% on EPS. Of the 106
+names in the universe, **37 saw any change to their `periods` block** and only **five** moved a 1FY/2FY revenue or EPS
+line by more than 1%.
+
+| Row | Pre-print verdict | Post-print verdict |
+|---|---|---|
+| ① ORCL — the raise is worth +0.5% / +0.4% | DIVERGES | ✅ **RESOLVED → CONFIRMS** — the Street revised **+0.45% / +0.68%** and stopped at the guide ($90,000.0m) |
+| ② ORCL — RPO conversion vs the BofA bear | DIVERGES | **Stands** — a units mismatch, not a consensus question; no BBG line exists for RPO conversion |
+| ③ NVDA — house ~7pp below on FY28 growth | DIVERGES | **Stands, unchanged to the decimal** (cons `2FY` +69.3%, EPS $15.856) |
+| ④ META — JPM's PT +28% on zero earnings change | DIVERGES | **Stands** — consensus EPS unchanged; JPM now +9.2% vs cons PT, +25.9% vs spot |
+| ⑤ PANW — Top Pick, below-median target | DIVERGES | **Stands** — cons PT $400.59 unchanged; spot −3.31%, so MS implies +18.2% vs Street +22.4% |
+| ⑥ NVDA — MS OW on below-consensus numbers | DIVERGES | **Stands** — −5.3% on EPS, −7.6% on PT, both unchanged |
+| ⑦ NVDA — OW equity / Neutral credit | DIVERGES | **Stands** — a cross-asset read with no consensus line to place |
+| ⑧ ORCL — the Street underwrites ~8% of new RPO | — | 🆕 **OPENED 2026-09-11** out of ①'s corollary (see above) |
+| ORCL Q2 FY27 guide in line | CONFIRMS | **Holds** — cons `1FQ` EPS **$1.903 → $1.901**, still inside the (ASR-reconstructed) $1.85–$1.93; revenue $21,110.6m → $21,187.4m (+0.36%) |
+| ORCL capex exactly where the Street had it | CONFIRMS | **Holds, marginally wider** — cons FY27 capex $92,665.6m → **$91,559.3m (−1.19%)**, still inside the $90–95bn guide but now **1.03% below the mid** (was 0.18% above) |
+| CRWD — MS *is* the consensus | CONFIRMS | **Holds** — cons PT $238.58 and every EPS line unchanged; spot −2.04% to $204.59, so MS's $238 implies +16.3% |
+
+⚠️ **Vintage discipline for anyone quoting these numbers.** The 09-11 prices are **intraday** (the fetch ran
+11:07–11:29 ET, ~1.5h into the session), not closes; the 09-10 prices **are** closes. Do not mix the two into a
+"daily move" series without saying so. Both vintages are recoverable from git —
+`git show HEAD:_wiki/_data/estimates.json` was the pre-print file at the time this layer was written.
+
+⚠️ **Consensus movers outside this report's names, logged so they are not mistaken for alpha.** **AAOI** `1FY` EPS
+**$0.68 → $1.009 (+48.4%)** on an **unchanged revenue line** and an **8-analyst** panel — a single model entering or
+leaving the sample, not a revision cycle. **SPCX** `1FY` EPS **$0.044 → $0.057 (+29.5%)** is a near-zero base and the
+percentage is meaningless. **NBIS** is the one with content: `2FY` revenue **+3.75%** while `2FY` EPS goes **−$2.299 →
+−$2.919 (−27%)** — the Street is adding revenue and subtracting more earnings, i.e. marking up the spend, which is the
+same direction as everything else the wiki carries on neocloud unit economics. None of the three is adopted here; they
+are flagged for the next `/run-inbox` to route.
+
+_BBG column resolved 2026-09-11 — estimates.json asof 2026-09-11._

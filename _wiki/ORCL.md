@@ -3,17 +3,17 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\ORCL` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\ORCL.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-10 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-11 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $76.2bn | $107.3bn |
-| Gross profit | $48.9bn | $60.3bn |
-| Gross margin | 64.1% | 56.2% |
-| EBITDA | $43.0bn | $60.6bn |
-| EPS | $7.32 | $9.17 |
-| Capex | $67.1bn | $102.0bn |
-| OCF (≈EBITDA) | $43.0bn | $60.6bn |
+| Revenue | $76.3bn | $107.4bn |
+| Gross profit | $48.8bn | $59.8bn |
+| Gross margin | 63.9% | 55.7% |
+| EBITDA | $43.2bn | $61.1bn |
+| EPS | $7.32 | $9.16 |
+| Capex | $65.7bn | $97.1bn |
+| OCF (≈EBITDA) | $43.2bn | $61.1bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
@@ -360,7 +360,9 @@ _**WINDOW OPEN.** Q2 FY27 · **Sep 10, 2026 → Dec 14, 2026** — opened by the
 |---|---|---|---|---|
 | **09-10** | 🔴🔴 **Oracle FQ1 FY27 earnings call — MANAGEMENT (co-CEOs Clay Magouyrk & Mike Sicilia, CFO Hilary Maxson, IR Ken Bond)** · ⚠️ **BBG LIVE TRANSCRIPT — self-declared as possibly inaccurate; names garbled ("Claire McGurk" = Clay Magouyrk, "Hilary Jackson" = Hilary Maxson); a FINAL transcript supersedes it** | **resultado / guidance / capacidade / capital** | **bull (with the out-year funding and New Mexico questions left open)** | **THE WINDOW-OPENING PRINT — full detail in `## Current state (latest quarter)`.** Revenue **$19.3bn +30%**, first-ever sequentially-growing Q1 · OCI **$7.4bn +121%** (after +93%) · apps **+10%** · non-GAAP op income **$8.2bn +31%**, op margin **~flat 42%**, GM declined "as expected" · non-GAAP EPS **$1.92 +30%** · RPO **+$26bn q/q**, ~half to convert over 36 months · CFO **$23bn**, capex **$28bn**, FCF **−$5bn**, net cash capex **$18bn** · FY27 capex **held $90-95bn** / net cash **≤$70bn**, **not linear** · **$20bn ATM COMPLETED in entirety** · FY27 guide **RAISED to ≥$90bn (+34%) and $8.10 EPS** · Q2 guide **rev +30-34%, cloud +65-71%, EPS +21-25% ex-Ampere** (⚠️ absolute EPS range **garbled**, reconstructed **$1.85-$1.93, UNCONFIRMED**) · **850MW / >300,000 GPUs delivered "since the end of Q4"**, ~3x Q4 and 73% of all FY26 · **>$30bn new AI contracts, no incremental Oracle cash** · util **97.9%**, renewals at a **20% premium** on GPUs **four years or older** · Abilene **131,000 GPUs (1.9x Q4), 618MW / 75% delivered, 24-hour acceptance, GPT-6 Astra trained there** · **Vera Rubin better than expected, first customer systems in Q2** · multicloud DB **+353%**, customers **+180%**, 70 regions / 119 AZs, **Interconnect for AWS GA** · New Mexico & Wisconsin **ring-fenced from FY27 guidance**, NM air permit **still outstanding** · **Ken Bond retiring; Investor Day in October** |
 
-_No post-print sell-side flow has been ingested into this window yet — the row above is the print itself. Next scheduled catalyst inside the window: **Oracle Investor Day, October 2026**._
+| **09-11** | 📊 **BBG consensus — first POST-PRINT pull** (`_data/estimates.json asof 2026-09-11`, 106/106 live, intraday ~11:07–11:29 ET; the pre-print vintage is `git show HEAD:_wiki/_data/estimates.json` asof 2026-09-10) | **consenso / revisão pós-print / RPO** | **neutro (revisão confirma o tamanho do "raise", não o amplia)** | 🔴🔴 **THE STREET REVISED TO THE GUIDE AND STOPPED THERE — FY27 (`1FY`) consensus revenue went $89,595.2m → $90,000.0m (+0.45%), i.e. EXACTLY the guided "at least $90bn" floor, and non-GAAP EPS $8.066 → $8.121 (+0.68%), now 0.26% ABOVE the $8.10 guide.** This is the 17-hour revision against a raise the 09-10 reconciliation had sized, pre-print, at **+0.5% revenue / +0.4% EPS** — the call was right to within five basis points, and the price agreed: **$152.94 (09-10 close) → $153.29 (09-11 intraday) = +0.23%**. ⚠️ **The consensus TARGET went the other way: $245.04 → $242.60 (−0.99%) on an UNCHANGED panel** (49 analysts, hi $400 / lo $110, rating 4.53 — all four identical d/d). Numbers up ~0.5%, targets down ~1%: a small de-rate on a beat. Upside to the consensus target is **+58.3%** from spot. 🔴🔴 **AND THE FORWARD YEARS BARELY MOVED: FY28 (`2FY`) revenue +$755m (+0.58%) to $131,133.7m, FY29 (`3FY`) +$919m (+0.50%) to $183,160.9m — $2.08bn added across THREE fiscal years against the +$26bn of new RPO booked in the quarter (~8% of the gross backlog addition).** FY28 EPS $10.799 → $10.926 (+1.18%), FY29 $15.667 → $15.739 (+0.46%), and the FY28 **street-high EPS FELL $13.51 → $13.30** while the median rose — dispersion narrowed; the most bullish model in the panel came down. ⚠️ **Limits before this is traded: 17 hours is an early read on a 49-analyst median; no absolute RPO total was disclosed this quarter, so the +$26bn has no base and management's "about half of RPO converts over the next 36 months" refers to TOTAL RPO and must NOT be chained into it; and FY30+ is not on the wrapper, so a revision parked beyond FY29 — exactly where "fiscal 28 or beyond" permits it — is invisible here.** ➤ **Testable: if the conversion pace is underwritten, FY28 consensus has to move by materially more than +0.58% over the coming weeks. Re-test each `/wiki-consensus` run and again after the October Investor Day.** (BBG consensus via `E:\bloomberg_api`, 2026-09-11 · reconciliation-2026-09-10.md §1 / §8) |
+
+_Post-print sell-side flow has not yet been ingested into this window — the 09-10 row is the print itself and the 09-11 row is the consensus revision it produced, not a broker note. Next scheduled catalyst inside the window: **Oracle Investor Day, October 2026**._
 
 ## Management commentary — evolution (last 6 quarters)
 

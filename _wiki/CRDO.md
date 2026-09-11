@@ -3,16 +3,16 @@
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\CRDO` (filings + transcripts) · `_briefings\2026\*` (heavily covered, ~42 hits). Master index: [00_INDEX.md](00_INDEX.md). Themes: [optical-cpo](themes/optical-cpo.md) · [custom-asic-tpu](themes/custom-asic-tpu.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-10 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-11 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $2.1bn | $3.7bn |
 | Gross profit | $1.4bn | $2.5bn |
-| Gross margin | 67.3% | 67.2% |
+| Gross margin | 67.2% | 67.2% |
 | EBITDA | $1.1bn | $2.0bn |
-| EPS | $5.08 | $9.24 |
-| Capex | $394m | $144m |
+| EPS | $5.09 | $9.24 |
+| Capex | $399m | $147m |
 | OCF (≈EBITDA) | $1.1bn | $2.0bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

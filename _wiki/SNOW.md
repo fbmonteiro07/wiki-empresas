@@ -5,17 +5,17 @@
 _Wiki · generated 2026-09-04 · sources: `E:\Wiki Felipe empresas\SNOW\transcripts` (7 earnings calls, Q3 FY25 2024-11-20 → Q2 FY27 2026-09-02) · [themes/ai-data-infra-observability.md](themes/ai-data-infra-observability.md) (§2.2 + §1/§4/§5 carry the corpus sell-side/buy-side material) · morning briefings 2026-05-19 → 06-09 · 19 archived sell-side / buy-side notes 2026-05-14 → 09-03 (`relatórios bons/`, folded in 2026-09-04 — see § Intra-quarter). SEC filings (2× 10-K, 6× 10-Q, 2024-11 → 2026-09) in `SNOW/` and 3 company decks in `SNOW/apresentações/` (added 2026-09-04 — see § Primary-source datapoints); no `_briefings\by-ticker\SNOW.md` roll-up on disk. Fiscal year ends January 31 (Q2 FY27 = quarter ended 2026-07-31). Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-10 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-11 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $6.2bn | $8.1bn |
 | Gross profit | $4.4bn | $5.8bn |
-| Gross margin | 71.5% | 71.6% |
-| EBITDA | $1.1bn | $1.6bn |
-| EPS | $1.96 | $3.04 |
-| Capex | $76m | $87m |
-| OCF (≈EBITDA) | $1.1bn | $1.6bn |
+| Gross margin | 71.4% | 71.4% |
+| EBITDA | $1.1bn | $1.5bn |
+| EPS | $1.96 | $3.02 |
+| Capex | $75m | $86m |
+| OCF (≈EBITDA) | $1.1bn | $1.5bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
