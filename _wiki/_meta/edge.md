@@ -12,24 +12,24 @@ _Generated 2026-09-11 · the standing view of where our model and the curated re
 | GOOG | Revenue $bn | 2027 | 641.00 | 547.10 | +17% |
 | AAPL | EPS | 2026 | 10.12 | 8.74 | +16% |
 
-## Curated divergences — latest reconciliation (`reconciliation-2026-09-10.md`)
+## Curated divergences — latest reconciliation (`reconciliation-2026-09-11.md`)
 
 | Name | New datapoint | Read (the edge) |
 |---|---|---|
-| ORCL | management's RPO conversion pace contests the standing BofA bear, but the bases differ | management's RPO conversion pace contests the standing BofA bear, but the bases differ |
-| NVDA | the Capstone house model is ~7pp below both management and consensus on FY28 growth | the Capstone house model is ~7pp below both management and consensus on FY28 growth |
-| META | JPM's PT went up 28% on zero change to earnings | So the upgrade is a re-rate, not a revision. |
-| PANW | Morgan Stanley calls it a Top Pick with a price target below the Street median | Morgan Stanley calls it a Top Pick with a price target below the Street median |
-| NVDA | Morgan Stanley is Overweight on below-consensus numbers and a below-consensus target | Read the OW as an options position on rev-share, not as an earnings call. |
-| NVDA | the same house is Overweight the equity and sidelined on the credit, on one webcast | the same house is Overweight the equity and sidelined on the credit, on one webcast |
-| ORCL | the Street's post-print revision underwrites ~8% of the new RPO, and almost none of it lands in FY28 _(opened 2026-09-11 out of §1's corollary)_ | $2.08bn of cumulative revenue added across three fiscal years against +$26bn of new RPO booked in the quarter — ~8% of the gross backlog addition. |
+| NVDA | two houses, one disclosure, opposite postures — but it is a BASIS difference, not a disagreement | They agree on the two things that matter structurally |
+| AMD | management's headline EPS ambition is not above the Street, and the $100bn server goal sits past the Street's horizon | The Street already crosses $20 in FY2028 at $22.84. |
+| AMD | the number that actually drifted is the CPU:GPU ratio, and the bases may not be like-for-like | the number that actually drifted is the CPU:GPU ratio, and the bases may not be like-for-like |
+| MSFT | consensus capex decelerates hard while management says it must keep building ahead | The Street's FY28–FY29 capex line embeds a sharp deceleration to low-teens growth that management has not guided and whose stated logic points the other way. |
+| CRWV | the same $6.3bn is characterised two opposite ways, and the two readings are not compatible | the same $6.3bn is characterised two opposite ways, and the two readings are not compatible |
+| GOOG | SemiAnalysis's $75.5bn of "guarantees" is +$31.5bn above the disclosed line, with no stated scope | SemiAnalysis's $75.5bn of "guarantees" is +$31.5bn above the disclosed line, with no stated scope |
+| MSFT | management restated an older stake figure than the page already carries | management restated an older stake figure than the page already carries |
 
-## Consensus PT vs spot — live pull in `reconciliation-2026-09-10.md` (upside ranked)
+## Consensus PT vs spot — live pull in `reconciliation-2026-09-11.md` (upside ranked)
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|
-| ORCL | 153 | 243 | +58% | street high 400 · low 110 below spot · 40/8/1 of 49 |
-| NVDA | 220 | 325 | +48% | street high 515 · low 180 below spot · 79/2/1 of 82 |
-| PANW | 327 | 401 | +22% | street high 475 · low 190 below spot · 47/12/1 of 60 |
-| CRWD | 205 | 239 | +17% | street high 425 · low 119 below spot · 41/14/1 of 56 |
-| META | 651 | 751 | +15% | street high 1,000 · low 580 below spot · 72/7/0 of 79 |
+| CRWV | 89 | 146 | +64% | street high 317 · low 39 below spot · 29/11/3 of 43 |
+| NVDA | 218 | 325 | +49% | street high 515 · low 180 below spot · 79/2/1 of 82 |
+| GOOG | 335 | 426 | +27% | street high 475 · low 379 ABOVE spot · 16/1/0 of 17 |
+| AMD | 516 | 628 | +22% | street high 1,250 · low 465 below spot · 56/12/0 of 68 |
+| MSFT | 496 | 574 | +16% | street high 870 · low 400 below spot · 67/4/0 of 71 |

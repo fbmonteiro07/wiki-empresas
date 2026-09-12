@@ -1,6 +1,6 @@
 # Source-coverage audit
 
-_Generated 2026-09-10 · 99 public-company pages · flags inputs that exist on disk but the page never read. Rebuild: `py _wiki/_tools/build_coverage.py`._
+_Generated 2026-09-11 · 99 public-company pages · flags inputs that exist on disk but the page never read. Rebuild: `py _wiki/_tools/build_coverage.py`._
 
 **18 pages flagged** (severity > 0), worst first.
 
@@ -23,6 +23,6 @@ _Generated 2026-09-10 · 99 public-company pages · flags inputs that exist on d
 | 3.0 | WOLF | 9413 | 26 | 503.1 | 2026-08-19 | ✗ | 0/0 | 0/0 | latest transcript 2026-08-19 unread |
 | 3.0 | BESI | 14109 | 41 | 1513.4 | 2026-07-23 | ✗ | 0/0 | 0/0 | latest transcript 2026-07-23 unread |
 | 2.0 | AGX | 4022 | 15 | 146.6 | 2026-06-04 | ✓ | 0/0 | 1/1 | latest 10-Q 2026-09-02 unread (no same-qtr transcript either) |
-| 2.0 | CSCO | 23591 | 55 | 346.8 | 2026-08-12 | ✓ | 1/2 | 2/17 | latest 10-Q 2026-05-19 unread (no same-qtr transcript either) |
+| 2.0 | CSCO | 24760 | 57 | 363.7 | 2026-08-12 | ✓ | 1/2 | 2/17 | latest 10-Q 2026-05-19 unread (no same-qtr transcript either) |
 
 _Density = (words + 25·citations) / (filings+transcripts+calls+briefings+decks). Low density + high material = thin synthesis. 'Calls used' = `_equity_calls` links / available (a low ratio is fine if the page links a representative subset)._
