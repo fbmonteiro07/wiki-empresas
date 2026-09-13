@@ -1,13 +1,11 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-09-11 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-09-12 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (37)
+## 📅 Upcoming (35)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-09-11 | MSFT | **🆕 IGNITE 2026 — NOVEMBER 17-20, SAN FRANCISCO, AND MANAGEMENT SIGNALLED THE INVESTOR-FACING PROGRAMME AROUND IT IS LIKELY TO REPEAT** (Microsoft IR/management fireside hosted by Jefferies (London),  |
-| 2026-09-11 | TER | **Q3 CY26 print (~late Oct 2026)** — first test of the re-cut 2H, and of whether the merchant-GPU/second-hyperscaler correlation converts into guided revenue. Quiet period begins **2026-09-11**; manag |
 | 2026-09-14 | NVDA | **🆕 Post-print access, both dated:** **BofA fireside with Toshiya Hari, VP of IR & Strategic Finance, hosted by Vivek Arya — 2026-09-02, 11:00 ET (~1hr)** (BofA TMT Sales, 2026-08-14) · **UBS-arranged |
 | 2026-09-15 | AVGO | **🆕 BERNSTEIN 8th ANNUAL SEMIS BUS TOUR, 2026-09-15/16, San Jose — AVGO on the roster alongside [[ALAB]], [[AMAT]], AMBA, LSCC, MPWR, [[NVDA]], [[NXPI]].** First scheduled corporate-access window afte |
 | 2026-09-15 | DELL | **2026-09-15 — UBS David Vogt Boston marketing '26 #3, US Hardware.** |
@@ -44,13 +42,14 @@ _Generated 2026-09-11 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-11-19 | SKHYNIX | **🆕 2026-08-20 → 2026-11-19 — the buyback executes on-market** (SK Securities). Daily execution is observable; **the falsifier for the "most aggressive among peers" claim is whether the full W40trn ac |
 | 2026-11-21 | SAMSUNG | **🆕 2026-08-24 → 2026-11-21 — the 53.3mn-share PSU treasury purchase window is open.** A mechanical, non-discretionary bid in the market for three months; note it is **excluded** from the FCF payout b |
 
-## ⏰ Passed — need a post-mortem (0)
+## ⏰ Passed — need a post-mortem (2)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| _none_ | | |
+| 2026-09-11 | TER | **Q3 CY26 print (~late Oct 2026)** — first test of the re-cut 2H, and of whether the merchant-GPU/second-hyperscaler correlation converts into guided revenue. Quiet period begins **2026-09-11**; manag |
+| 2026-09-11 | MSFT | **🆕 IGNITE 2026 — NOVEMBER 17-20, SAN FRANCISCO, AND MANAGEMENT SIGNALLED THE INVESTOR-FACING PROGRAMME AROUND IT IS LIKELY TO REPEAT** (Microsoft IR/management fireside hosted by Jefferies (London),  |
 
 ## ✅ Resolved (143)
 
