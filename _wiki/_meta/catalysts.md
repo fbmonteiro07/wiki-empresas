@@ -2,16 +2,23 @@
 
 _Generated 2026-09-14 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (37)
+## 📅 Upcoming (47)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
 | 2026-09-14 | NVDA | **🆕 Post-print access, both dated:** **BofA fireside with Toshiya Hari, VP of IR & Strategic Finance, hosted by Vivek Arya — 2026-09-02, 11:00 ET (~1hr)** (BofA TMT Sales, 2026-08-14) · **UBS-arranged |
 | 2026-09-15 | AVGO | **🆕 BERNSTEIN 8th ANNUAL SEMIS BUS TOUR, 2026-09-15/16, San Jose — AVGO on the roster alongside [[ALAB]], [[AMAT]], AMBA, LSCC, MPWR, [[NVDA]], [[NXPI]].** First scheduled corporate-access window afte |
+| 2026-09-15 | CRM | **🆕🔴 2026-09-15 to 09-17 — DREAMFORCE (SF), INVESTOR DAY 09-16 at 4PM ET. THE NAMED FOCUS IS NOW "CLAUDEFORCE."** UBS · Karl Keirstead (09-14): much of the investor focus will be on the newly-announce |
 | 2026-09-15 | DELL | **2026-09-15 — UBS David Vogt Boston marketing '26 #3, US Hardware.** |
+| 2026-09-15 | META | **🆕 2026-09-15, 11AM ET — JPM INTERNET FALL SERIES (META, DASH, DUOL, TTWO, APP) with Doug Anmuth and Bryan Smilek** — first scheduled venue for Anmuth to defend the 09-10 upgrade to Overweight and th |
+| 2026-09-15 | MSFT | **🆕🔴 2026-09-15 — MICROSOFT PUBLISHES THE "CODE OF CONDUCT" UNDERLYING ITS FIRST-PARTY MAI MODELS, FOR PUBLIC CONSULTATION.** Committed to by Satya Nadella on X (09-13) in his response to the [[ANTHRO |
 | 2026-09-16 | ON | **2026-09-16 — onsemi Analyst Day** (Citi exp. ~Sep 13 print first) — the key event; watch for a raised long-term target model + SiC/800V framing (Citi, briefing 2026-06-15). |
+| 2026-09-16 | ON | **🆕🔴🔴 WED 2026-09-16 — ON SEMICONDUCTOR ANALYST DAY. THE SINGLE TEST: DOES THE 53% GROSS-MARGIN TARGET SURVIVE?** UBS · Arcuri preview (09-14) expects a LT model implying **CY30E revenue ~$10bn and EP |
+| 2026-09-18 | AVGO | **🆕 WED 2026-09-16 — AVGO CEO *AND* CFO ON THE JEFFERIES SEMIS BUS TOUR** (alongside [[NVDA]] CFO, [[LITE]] CEO, [[CRDO]] CFO, [[AMAT]], CBRS). **Jefferies · Blayne Curtis hosts a debrief call FRI 202 |
 | 2026-09-18 | LITE | **🆕🔵 2026-09-18 (ON THE CLOSE) — LITE IS ADDED TO FTSE ALL-WORLD IN THE SEPTEMBER 2026 GLOBAL QUARTERLY REBALANCE. A DATED, MECHANICAL FLOW EVENT — NOT A FUNDAMENTAL DATAPOINT.** (**UBS Index Analytic |
 | 2026-09-18 | SKHYNIX | **🆕🔴 DATED FLOW CATALYST — 2026-09-18 (ON THE CLOSE, FRIDAY): 000660 KS IS AN UPWEIGHT IN THE FTSE GEIS SEPTEMBER GLOBAL REBALANCE *AND* AN ADDITION TO THE ICE SEMICONDUCTOR INDEX (ICESEMI) IN ITS ANN |
+| 2026-09-18 | SPCX | **🆕🔴 2026-09-18 — STARSHIP LAUNCH 14** (scheduled; flagged by Bernstein ahead of its MVNO analysis). |
+| 2026-09-18 | SPCX | **🆕🔴🔴 FRI 2026-09-18 — NASDAQ-100 REBALANCE, ~110M SHARES TO BUY.** NASDAQ announced after the close on 09-11 that it will RAISE SPCX weighting in the Nasdaq 100, creating *"about 110mln shares to buy |
 | 2026-09-21 | AXTI | **🆕 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — **S&P 600 INDEX ADD**, a dated MECHANICAL flow event.** AXTI is named as one of five S&P SmallCap 600 additions in the Septe |
 | 2026-09-21 | BE | **🆕🔴🔴 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — THE INDEX TIER IS NOW NAMED: BE IS AN **S&P 500** ADD, *AND* A **FTSE ALL-WORLD** ADD. TWO INDEPENDENT INDEX EVENTS IN THE |
 | 2026-09-21 | CEREBRAS | **🆕 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — **ICE SEMICONDUCTOR INDEX (ICESEMI) ADD** in the annual reconstitution. A dated MECHANICAL flow event, not a fundamental one |
@@ -23,6 +30,7 @@ _Generated 2026-09-14 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-09-22 | CRDO | **2026-09-22 — ECOC, JPM-hosted meeting with CEO Bill Brennan** (alongside [[CIEN]], [[LITE]] and Nokia; JPM · Cardoso / Deshpande, 2026-08-17). **JPM is also running an off-cycle hardware-reporter bu |
 | 2026-09-22 | ESTC | **Metrics webinar — 2026-09-22, 8:00 PT** (Kurtz, Q1 FY27 call): the observability-relaunch pitch (Columnar Mode, Prometheus/PromQL, Deductive AI). Observability is the lagging solution; this is manag |
 | 2026-09-22 | LITE | **2026-09-22 — ECOC (JPM-hosted meetings).** CEO **Michael Hurlston** meeting alongside [[CRDO]] (CEO Bill Brennan), [[CIEN]] and Nokia (JPM · Joe Cardoso / Sandeep Deshpande, 2026-08-17). The natural |
+| 2026-09-22 | ON | **🆕 Tue 2026-09-22, Los Angeles — ON CEO/CFO/IR NDR hosted by Jefferies · Blayne Curtis.** |
 | 2026-09-23 | GOOG | **🆕 Koray Kavukcuoglu's first public outing — The Information's AI Agenda Live, San Francisco, 2026-09-23.** Billed topics include integrating frontier models across Search and the multi-billion-user  |
 | 2026-09-23 | META | **🆕 2026-09-23/24 — META CONNECT.** MS flags it as the next scheduled product venue *"for more product updates"*, with **Hatch** expected to launch *"in the coming weeks"* and the next model, **'Water |
 | 2026-09-23 | META | **🆕🔴🔴 META CONNECT — 2026-09-23/24.** Both UBS (exact dates) and MS (*"25 days away"* as of 08-30) name it as the product catalyst the whole re-rating argument depends on. **Watch for: the Watermelon  |
@@ -36,8 +44,10 @@ _Generated 2026-09-14 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-10-06 | MRVL | **🆕🔴 DATED, TWO-STEP: Q2 FY27 print THURSDAY 2026-08-27 (after market close) → INVESTOR DAY MONDAY 2026-10-06, NYC.** Jefferies (Curtis, 2026-08-20) splits the catalyst explicitly: the print is where  |
 | 2026-10-06 | MRVL | **🆕🔴 NEXT, AND IT IS NOW THE ONLY CATALYST THAT MATTERS ON THIS PAGE: INVESTOR DAY — MONDAY 2026-10-06, NYC.** Three desks stated on print night that management deliberately withheld the [[GOOG]] sizi |
 | 2026-10-15 | SMTC | **🔴 2026-10-15 — INVESTOR / ANALYST DAY, San Jose. The single most important dated event on this page, because management deferred the two questions that matter to it.** Promised content: *"an in-dept |
+| 2026-10-26 | MEDIATEK | **🆕🔴 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR "POTENTIAL UPWARD REVISIONS TO GOOGLE TPU-RELATED GUIDANCE."** Between them: **Google system-level validation of v9 in H |
 | 2026-10-28 | ORCL | **🆕🔴🔴 2026-10-28 — ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as "Investor Day in October").** First opportunity for **new CFO Hilary Maxson** to set long-term financial targ |
 | 2026-11-12 | SPCX | **🆕🔴🔴 2026-11-12 — [[OPENAI]] CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.** OpenAI's own post: *"**We're ending our partnership with Cursor following its acquisit |
+| 2026-11-17 | MSFT | **🆕 2026-11-17 to 11-20, SF — MSFT IGNITE.** |
 | 2026-11-17 | NVDA | **✅🔴 CLOSED 2026-09-10 — THE GS COMMUNACOPIA FIRESIDE HAPPENED. OUTCOME:** Jensen **reaffirmed the ~70% FY28 revenue growth** (*"we could grow 70% year-over-year, and we are confident about that"*), * |
 | 2026-11-17 | NVDA | **🆕🔴 NEXT THREE DATED COMPANY EVENTS, ALL STATED ON THE 08-26 CALL BY IR (Toshiya Hari):** **(1) 2026-09-10 — Jensen Huang keynote fireside chat at the Goldman Sachs Communacopia & Technology Conferen |
 | 2026-11-17 | NVDA | **🆕🔴 THE THREE THINGS THE 08-26 PRINT MADE FALSIFIABLE, AND WHEN THEY RESOLVE.** **(1) THE GM TROUGH — guided to 71-72% in FQ4 FY27 (reports ~Feb-2027) with recovery to 72-73% in FY28 "as executed pri |

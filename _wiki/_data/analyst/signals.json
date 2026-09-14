@@ -7,13 +7,28 @@
     "positions": 8
   },
   "stats": {
-    "signals": 85,
-    "active": 85,
-    "high": 6,
+    "signals": 92,
+    "active": 92,
+    "high": 8,
     "belief_changes": 0,
-    "focus_names": 43
+    "focus_names": 45
   },
   "focus": [
+    {
+      "ticker": "MSFT",
+      "focus_score": 95,
+      "in_book": true,
+      "signal_count": 9,
+      "high_count": 1,
+      "sector": "AI — Hyperscalers & Software",
+      "thesis": "AI ARR >$37B/+123%; swing is capex (CY27 ~$276B) vs Azure revenue + OpenAI concentration.",
+      "next_catalyst": "2026-09-15",
+      "why": [
+        "MSFT — 2026-09-15: MICROSOFT PUBLISHES THE \"CODE OF CONDUCT\" UNDERLYING ITS FIRST-PARTY MAI MODELS, FOR…",
+        "MSFT — consensus capex decelerates hard while management says it must keep building ahead",
+        "MS's 2027 capex acceleration sits far above BBG consensus, on all four hyperscalers"
+      ]
+    },
     {
       "ticker": "GOOG",
       "focus_score": 89,
@@ -27,6 +42,36 @@
         "GOOG — 2026 revenue house view is 18% above consensus",
         "GOOG — 2027 revenue house view is 17% above consensus",
         "GOOG — 2026-09-23: Koray Kavukcuoglu's first public outing — The Information's AI Agenda Live, San Francisco,…"
+      ]
+    },
+    {
+      "ticker": "META",
+      "focus_score": 87,
+      "in_book": true,
+      "signal_count": 7,
+      "high_count": 2,
+      "sector": "AI — Hyperscalers & Software",
+      "thesis": "Fastest grower in Mag7 ex-GPU; bear = capital intensity and negative incremental ROIC.",
+      "next_catalyst": "2026-09-15",
+      "why": [
+        "META — 2026-09-23: META CONNECT — 2026-09-23/24. Both UBS (exact dates) and MS (\"25 days away\" as of 08-30)…",
+        "META — 2026-09-15: 2026-09-15, 11AM ET — JPM INTERNET FALL SERIES (META, DASH, DUOL, TTWO, APP) with Doug…",
+        "MS's 2027 capex acceleration sits far above BBG consensus, on all four hyperscalers"
+      ]
+    },
+    {
+      "ticker": "AVGO",
+      "focus_score": 86,
+      "in_book": true,
+      "signal_count": 7,
+      "high_count": 1,
+      "sector": "AI — Semis & Compute",
+      "thesis": "#1 custom-ASIC/TPU partner; binary setup on the \">$100B\" FY27 guide vs $250-300B FY28 (JPM).",
+      "next_catalyst": "2026-09-15",
+      "why": [
+        "AVGO — 2026-09-15: BERNSTEIN 8th ANNUAL SEMIS BUS TOUR, 2026-09-15/16, San Jose — AVGO on the roster…",
+        "AVGO — 2026-09-18: WED 2026-09-16 — AVGO CEO AND CFO ON THE JEFFERIES SEMIS BUS TOUR (alongside NVDA CFO,…",
+        "Cost to run 1GW: the relay carried HALF the primary's number"
       ]
     },
     {
@@ -45,36 +90,6 @@
       ]
     },
     {
-      "ticker": "META",
-      "focus_score": 85,
-      "in_book": true,
-      "signal_count": 6,
-      "high_count": 1,
-      "sector": "AI — Hyperscalers & Software",
-      "thesis": "Fastest grower in Mag7 ex-GPU; bear = capital intensity and negative incremental ROIC.",
-      "next_catalyst": "2026-09-23",
-      "why": [
-        "META — 2026-09-23: META CONNECT — 2026-09-23/24. Both UBS (exact dates) and MS (\"25 days away\" as of 08-30)…",
-        "MS's 2027 capex acceleration sits far above BBG consensus, on all four hyperscalers",
-        "The GW anchors on ai-datacenter-power do not agree — and the disagreement is the finding"
-      ]
-    },
-    {
-      "ticker": "AVGO",
-      "focus_score": 84,
-      "in_book": true,
-      "signal_count": 6,
-      "high_count": 1,
-      "sector": "AI — Semis & Compute",
-      "thesis": "#1 custom-ASIC/TPU partner; binary setup on the \">$100B\" FY27 guide vs $250-300B FY28 (JPM).",
-      "next_catalyst": "2026-09-15",
-      "why": [
-        "AVGO — 2026-09-15: BERNSTEIN 8th ANNUAL SEMIS BUS TOUR, 2026-09-15/16, San Jose — AVGO on the roster…",
-        "Cost to run 1GW: the relay carried HALF the primary's number",
-        "D-1 · 🔴 AVGO — the house FY28 EPS sits ABOVE the entire visible sell-side range"
-      ]
-    },
-    {
       "ticker": "AAPL",
       "focus_score": 76,
       "in_book": true,
@@ -86,21 +101,6 @@
       "why": [
         "AAPL — 2026 EPS house view is 16% above consensus",
         "AAPL — 2026-10-01: THE EU APP STORE COMMISSION CHANGES TAKE EFFECT, AND THE RATES ARE NOW FINAL: 26% for App…"
-      ]
-    },
-    {
-      "ticker": "MSFT",
-      "focus_score": 71,
-      "in_book": true,
-      "signal_count": 8,
-      "high_count": 0,
-      "sector": "AI — Hyperscalers & Software",
-      "thesis": "AI ARR >$37B/+123%; swing is capex (CY27 ~$276B) vs Azure revenue + OpenAI concentration.",
-      "next_catalyst": "",
-      "why": [
-        "MSFT — consensus capex decelerates hard while management says it must keep building ahead",
-        "MS's 2027 capex acceleration sits far above BBG consensus, on all four hyperscalers",
-        "MSFT — management restated an older stake figure than the page already carries"
       ]
     },
     {
@@ -119,6 +119,34 @@
       ]
     },
     {
+      "ticker": "CRM",
+      "focus_score": 60,
+      "in_book": false,
+      "signal_count": 2,
+      "high_count": 0,
+      "sector": "Software / security / internet",
+      "thesis": "Agentforce $0→$1B+ ARR is the AI-monetization test case; bear = ~10-13% growth + SaaS-seat-reset (BofA UW $160).",
+      "next_catalyst": "2026-09-15",
+      "why": [
+        "CRM — 2026-09-15: 2026-09-15 to 09-17 — DREAMFORCE (SF), INVESTOR DAY 09-16 at 4PM ET. THE NAMED FOCUS IS…",
+        "[23:00 second pass] CRM — the Street is modelling FLAT-TO-RISING gross margin on the same product management just admitted it is subsidising"
+      ]
+    },
+    {
+      "ticker": "ON",
+      "focus_score": 60,
+      "in_book": false,
+      "signal_count": 2,
+      "high_count": 0,
+      "sector": "Analog & processors",
+      "thesis": "Bottoming auto/SiC power IDM + AI-DC-power (800V) kicker; share not TAM (Citi Neutral vs TXN).",
+      "next_catalyst": "2026-09-16",
+      "why": [
+        "ON — 2026-09-16: WED 2026-09-16 — ON SEMICONDUCTOR ANALYST DAY. THE SINGLE TEST: DOES THE 53% GROSS-MARGIN…",
+        "ON — 2026-09-22: Tue 2026-09-22, Los Angeles — ON CEO/CFO/IR NDR hosted by Jefferies · Blayne Curtis."
+      ]
+    },
+    {
       "ticker": "BE",
       "focus_score": 58,
       "in_book": false,
@@ -129,6 +157,19 @@
       "next_catalyst": "2026-09-21",
       "why": [
         "BE — 2026-09-21: 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — THE INDEX TIER IS…"
+      ]
+    },
+    {
+      "ticker": "SPCX",
+      "focus_score": 58,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Systems & neoclouds",
+      "thesis": "IPO'd Jun-2026 (~$75bn, largest ever); Starlink + Launch + AI (ex-xAI: Grok/X/COLOSSUS ~1GW, ~325k GPUs). FY25 rev $17.2bn, net loss ~$(4.9)bn; Musk ~82% vote. ",
+      "next_catalyst": "2026-09-18",
+      "why": [
+        "SPCX — 2026-09-18: FRI 2026-09-18 — NASDAQ-100 REBALANCE, ~110M SHARES TO BUY. NASDAQ announced after the…"
       ]
     },
     {
@@ -369,19 +410,6 @@
       ]
     },
     {
-      "ticker": "ON",
-      "focus_score": 40,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Analog & processors",
-      "thesis": "Bottoming auto/SiC power IDM + AI-DC-power (800V) kicker; share not TAM (Citi Neutral vs TXN).",
-      "next_catalyst": "2026-09-16",
-      "why": [
-        "ON — 2026-09-16: onsemi Analyst Day (Citi exp. ~Sep 13 print first) — the key event; watch for a raised…"
-      ]
-    },
-    {
       "ticker": "TSEM",
       "focus_score": 40,
       "in_book": false,
@@ -478,19 +506,6 @@
       ]
     },
     {
-      "ticker": "CRM",
-      "focus_score": 35,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Software / security / internet",
-      "thesis": "Agentforce $0→$1B+ ARR is the AI-monetization test case; bear = ~10-13% growth + SaaS-seat-reset (BofA UW $160).",
-      "next_catalyst": "",
-      "why": [
-        "[23:00 second pass] CRM — the Street is modelling FLAT-TO-RISING gross margin on the same product management just admitted it is subsidising"
-      ]
-    },
-    {
       "ticker": "GEV",
       "focus_score": 35,
       "in_book": false,
@@ -556,6 +571,19 @@
       ]
     },
     {
+      "ticker": "MEDIATEK",
+      "focus_score": 34,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "AI — Semis & Compute",
+      "thesis": "World's largest mobile-SoC vendor pivoting into a data-center custom-ASIC house (Google TPU v8t/v9/v10 roadmap); JPM sees DC ~30% of rev 2027 → ~60% 2028; GS PT",
+      "next_catalyst": "2026-10-26",
+      "why": [
+        "MEDIATEK — 2026-10-26: 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR \"POTENTIAL…"
+      ]
+    },
+    {
       "ticker": "ADI",
       "focus_score": 32,
       "in_book": false,
@@ -609,6 +637,90 @@
     }
   ],
   "signals": [
+    {
+      "id": "cata-2807be2e986f",
+      "asof": "2026-09-14",
+      "source_date": "2026-09-15",
+      "event_date": "2026-09-15",
+      "type": "catalyst",
+      "priority": "high",
+      "score": 78,
+      "title": "MSFT — 2026-09-15: MICROSOFT PUBLISHES THE \"CODE OF CONDUCT\" UNDERLYING ITS FIRST-PARTY MAI MODELS, FOR…",
+      "tickers": [
+        "MSFT"
+      ],
+      "in_book": [
+        "MSFT"
+      ],
+      "impact": "high",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "🆕🔴 2026-09-15 — MICROSOFT PUBLISHES THE \"CODE OF CONDUCT\" UNDERLYING ITS FIRST-PARTY MAI MODELS, FOR PUBLIC CONSULTATION. Committed to by Satya Nadella on X (09-13) in his response to the ANTHRO",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "supplier",
+          "detail": "custom ASIC",
+          "from": "MSFT",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "MSFT",
+          "in_book": true
+        },
+        {
+          "ticker": "MDB",
+          "relation": "competitor",
+          "detail": "Atlas vs Cosmos DB",
+          "from": "MSFT",
+          "in_book": false
+        },
+        {
+          "ticker": "OKTA",
+          "relation": "competitor",
+          "detail": "IAM (Entra bundling)",
+          "from": "MSFT",
+          "in_book": false
+        },
+        {
+          "ticker": "SNOW",
+          "relation": "competitor",
+          "detail": "warehouse vs Fabric",
+          "from": "MSFT",
+          "in_book": false
+        },
+        {
+          "ticker": "AAOI",
+          "relation": "supplier",
+          "detail": "optical transceivers",
+          "from": "MSFT",
+          "in_book": false
+        },
+        {
+          "ticker": "ALAB",
+          "relation": "supplier",
+          "detail": "scale-up fabric",
+          "from": "MSFT",
+          "in_book": false
+        }
+      ],
+      "source": "MSFT page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "MSFT.md"
+      ],
+      "evidence_anchor": "🆕🔴 2026-09-15 — MICROSOFT PUBLISHES THE \"CODE OF CONDUCT\" UNDERLYING ITS FIRST-PARTY MAI MODELS, FOR PUBLIC CONSULTATION. Committed to by Satya Nadella on X (09-13) in his response to the ANTHRO",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
     {
       "id": "esti-7a1d02964ad9",
       "asof": "2026-09-14",
@@ -1010,6 +1122,90 @@
       "hidden": false
     },
     {
+      "id": "cata-79fc9a5d6b00",
+      "asof": "2026-09-14",
+      "source_date": "2026-09-15",
+      "event_date": "2026-09-15",
+      "type": "catalyst",
+      "priority": "high",
+      "score": 69,
+      "title": "META — 2026-09-15: 2026-09-15, 11AM ET — JPM INTERNET FALL SERIES (META, DASH, DUOL, TTWO, APP) with Doug…",
+      "tickers": [
+        "META"
+      ],
+      "in_book": [
+        "META"
+      ],
+      "impact": "high",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "🆕 2026-09-15, 11AM ET — JPM INTERNET FALL SERIES (META, DASH, DUOL, TTWO, APP) with Doug Anmuth and Bryan Smilek — first scheduled venue for Anmuth to defend the 09-10 upgrade to Overweight and th",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "supplier",
+          "detail": "custom ASIC",
+          "from": "META",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "META",
+          "in_book": true
+        },
+        {
+          "ticker": "AMD",
+          "relation": "supplier",
+          "detail": "MI GPUs",
+          "from": "META",
+          "in_book": false
+        },
+        {
+          "ticker": "GLW",
+          "relation": "supplier",
+          "detail": "optical fiber (LTA)",
+          "from": "META",
+          "in_book": false
+        },
+        {
+          "ticker": "SNDK",
+          "relation": "supplier",
+          "detail": "NAND/SSD",
+          "from": "META",
+          "in_book": false
+        },
+        {
+          "ticker": "STX",
+          "relation": "supplier",
+          "detail": "nearline HDD",
+          "from": "META",
+          "in_book": false
+        },
+        {
+          "ticker": "WDC",
+          "relation": "supplier",
+          "detail": "nearline HDD",
+          "from": "META",
+          "in_book": false
+        }
+      ],
+      "source": "META page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "META.md"
+      ],
+      "evidence_anchor": "🆕 2026-09-15, 11AM ET — JPM INTERNET FALL SERIES (META, DASH, DUOL, TTWO, APP) with Doug Anmuth and Bryan Smilek — first scheduled venue for Anmuth to defend the 09-10 upgrade to Overweight and th",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
       "id": "cata-3688ce11b48d",
       "asof": "2026-09-14",
       "source_date": "2026-09-14",
@@ -1227,6 +1423,90 @@
       "hidden": false
     },
     {
+      "id": "cata-63f19a67ad78",
+      "asof": "2026-09-14",
+      "source_date": "2026-09-18",
+      "event_date": "2026-09-18",
+      "type": "catalyst",
+      "priority": "medium",
+      "score": 60,
+      "title": "AVGO — 2026-09-18: WED 2026-09-16 — AVGO CEO AND CFO ON THE JEFFERIES SEMIS BUS TOUR (alongside NVDA CFO,…",
+      "tickers": [
+        "AVGO"
+      ],
+      "in_book": [
+        "AVGO"
+      ],
+      "impact": "medium",
+      "urgency": "this week",
+      "confidence": "medium",
+      "why_now": "🆕 WED 2026-09-16 — AVGO CEO AND CFO ON THE JEFFERIES SEMIS BUS TOUR (alongside NVDA CFO, LITE CEO, CRDO CFO, AMAT, CBRS). Jefferies · Blayne Curtis hosts a debrief call FRI 202",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "NVDA",
+          "relation": "competitor",
+          "detail": "merchant vs custom ASIC",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "networking",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "customer",
+          "detail": "custom ASIC (TPU)",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "META",
+          "relation": "customer",
+          "detail": "custom ASIC",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "custom ASIC",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "TSM",
+          "relation": "supplier",
+          "detail": "foundry",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "MRVL",
+          "relation": "competitor",
+          "detail": "custom ASIC",
+          "from": "AVGO",
+          "in_book": false
+        }
+      ],
+      "source": "AVGO page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "AVGO.md"
+      ],
+      "evidence_anchor": "🆕 WED 2026-09-16 — AVGO CEO AND CFO ON THE JEFFERIES SEMIS BUS TOUR (alongside NVDA CFO, LITE CEO, CRDO CFO, AMAT, CBRS). Jefferies · Blayne Curtis hosts a debrief call FRI 202",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
       "id": "cata-2bc8be299987",
       "asof": "2026-09-14",
       "source_date": "2026-09-21",
@@ -1268,6 +1548,110 @@
         "BE.md"
       ],
       "evidence_anchor": "🆕🔴🔴 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — THE INDEX TIER IS NOW NAMED: BE IS AN S&P 500 ADD, AND A FTSE ALL-WORLD ADD. TWO INDEPENDENT INDEX EVENTS IN THE",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "cata-cce244a1f24e",
+      "asof": "2026-09-14",
+      "source_date": "2026-09-15",
+      "event_date": "2026-09-15",
+      "type": "catalyst",
+      "priority": "medium",
+      "score": 58,
+      "title": "CRM — 2026-09-15: 2026-09-15 to 09-17 — DREAMFORCE (SF), INVESTOR DAY 09-16 at 4PM ET. THE NAMED FOCUS IS…",
+      "tickers": [
+        "CRM"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "🆕🔴 2026-09-15 to 09-17 — DREAMFORCE (SF), INVESTOR DAY 09-16 at 4PM ET. THE NAMED FOCUS IS NOW \"CLAUDEFORCE.\" UBS · Karl Keirstead (09-14): much of the investor focus will be on the newly-announce",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [],
+      "source": "CRM page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "CRM.md"
+      ],
+      "evidence_anchor": "🆕🔴 2026-09-15 to 09-17 — DREAMFORCE (SF), INVESTOR DAY 09-16 at 4PM ET. THE NAMED FOCUS IS NOW \"CLAUDEFORCE.\" UBS · Karl Keirstead (09-14): much of the investor focus will be on the newly-announce",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "cata-82df7c507da2",
+      "asof": "2026-09-14",
+      "source_date": "2026-09-16",
+      "event_date": "2026-09-16",
+      "type": "catalyst",
+      "priority": "medium",
+      "score": 58,
+      "title": "ON — 2026-09-16: WED 2026-09-16 — ON SEMICONDUCTOR ANALYST DAY. THE SINGLE TEST: DOES THE 53% GROSS-MARGIN…",
+      "tickers": [
+        "ON"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "this week",
+      "confidence": "medium",
+      "why_now": "🆕🔴🔴 WED 2026-09-16 — ON SEMICONDUCTOR ANALYST DAY. THE SINGLE TEST: DOES THE 53% GROSS-MARGIN TARGET SURVIVE? UBS · Arcuri preview (09-14) expects a LT model implying CY30E revenue ~$10bn and EP",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "SiC power",
+          "from": "ON",
+          "in_book": true
+        }
+      ],
+      "source": "ON page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "ON.md"
+      ],
+      "evidence_anchor": "🆕🔴🔴 WED 2026-09-16 — ON SEMICONDUCTOR ANALYST DAY. THE SINGLE TEST: DOES THE 53% GROSS-MARGIN TARGET SURVIVE? UBS · Arcuri preview (09-14) expects a LT model implying CY30E revenue ~$10bn and EP",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "cata-885ba6c04504",
+      "asof": "2026-09-14",
+      "source_date": "2026-09-18",
+      "event_date": "2026-09-18",
+      "type": "catalyst",
+      "priority": "medium",
+      "score": 58,
+      "title": "SPCX — 2026-09-18: FRI 2026-09-18 — NASDAQ-100 REBALANCE, ~110M SHARES TO BUY. NASDAQ announced after the…",
+      "tickers": [
+        "SPCX"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "this week",
+      "confidence": "medium",
+      "why_now": "🆕🔴🔴 FRI 2026-09-18 — NASDAQ-100 REBALANCE, ~110M SHARES TO BUY. NASDAQ announced after the close on 09-11 that it will RAISE SPCX weighting in the Nasdaq 100, creating \"about 110mln shares to buy",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [],
+      "source": "SPCX page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "SPCX.md"
+      ],
+      "evidence_anchor": "🆕🔴🔴 FRI 2026-09-18 — NASDAQ-100 REBALANCE, ~110M SHARES TO BUY. NASDAQ announced after the close on 09-11 that it will RAISE SPCX weighting in the Nasdaq 100, creating \"about 110mln shares to buy",
       "origin": "catalyst_calendar",
       "feedback": "",
       "feedback_note": "",
@@ -3345,46 +3729,6 @@
         "OKTA.md"
       ],
       "evidence_anchor": "Oktane — week of 2026-09-21, Las Vegas — \"the AI security event of the year\", with an analyst/investor Q&A (McKinnon, Q2 FY27). Watch: agent-identity customer counts, any per-agent pricing const",
-      "origin": "catalyst_calendar",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "cata-fa1afba80331",
-      "asof": "2026-09-14",
-      "source_date": "2026-09-16",
-      "event_date": "2026-09-16",
-      "type": "catalyst",
-      "priority": "watch",
-      "score": 40,
-      "title": "ON — 2026-09-16: onsemi Analyst Day (Citi exp. ~Sep 13 print first) — the key event; watch for a raised…",
-      "tickers": [
-        "ON"
-      ],
-      "in_book": [],
-      "impact": "watch",
-      "urgency": "this week",
-      "confidence": "medium",
-      "why_now": "2026-09-16 — onsemi Analyst Day (Citi exp. ~Sep 13 print first) — the key event; watch for a raised long-term target model + SiC/800V framing (Citi, briefing 2026-06-15).",
-      "belief_update": "A dated event can resolve or reframe an open debate.",
-      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
-      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
-      "readthrough": [
-        {
-          "ticker": "NVDA",
-          "relation": "customer",
-          "detail": "SiC power",
-          "from": "ON",
-          "in_book": true
-        }
-      ],
-      "source": "ON page catalyst ledger; underlying source/date retained in the catalyst text",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "ON.md"
-      ],
-      "evidence_anchor": "2026-09-16 — onsemi Analyst Day (Citi exp. ~Sep 13 print first) — the key event; watch for a raised long-term target model + SiC/800V framing (Citi, briefing 2026-06-15).",
       "origin": "catalyst_calendar",
       "feedback": "",
       "feedback_note": "",
@@ -5984,6 +6328,53 @@
       "carried_from": "2026-09-09"
     },
     {
+      "id": "cata-d6253f9923ca",
+      "asof": "2026-09-14",
+      "source_date": "2026-10-26",
+      "event_date": "2026-10-26",
+      "type": "catalyst",
+      "priority": "watch",
+      "score": 34,
+      "title": "MEDIATEK — 2026-10-26: 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR \"POTENTIAL…",
+      "tickers": [
+        "MEDIATEK"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "calendar",
+      "confidence": "medium",
+      "why_now": "🆕🔴 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR \"POTENTIAL UPWARD REVISIONS TO GOOGLE TPU-RELATED GUIDANCE.\" Between them: Google system-level validation of v9 in H",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "TSM",
+          "relation": "supplier",
+          "detail": "foundry",
+          "from": "MEDIATEK",
+          "in_book": true
+        },
+        {
+          "ticker": "ARM",
+          "relation": "supplier",
+          "detail": "IP",
+          "from": "MEDIATEK",
+          "in_book": false
+        }
+      ],
+      "source": "MEDIATEK page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "MEDIATEK.md"
+      ],
+      "evidence_anchor": "🆕🔴 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR \"POTENTIAL UPWARD REVISIONS TO GOOGLE TPU-RELATED GUIDANCE.\" Between them: Google system-level validation of v9 in H",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
       "id": "cata-b89bcb2c7572",
       "asof": "2026-09-14",
       "source_date": "2026-10-06",
@@ -6404,6 +6795,46 @@
         "MDB.md"
       ],
       "evidence_anchor": "Investor Day, NYC, 2026-09-29 (+ .local NYC 09-30): Berry promised a \"financial session\" and Desai \"new product innovations\"; watch for a refreshed long-term model (Sept-2025 Investor Day model =",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "cata-c53fc2e21e86",
+      "asof": "2026-09-14",
+      "source_date": "2026-09-22",
+      "event_date": "2026-09-22",
+      "type": "catalyst",
+      "priority": "watch",
+      "score": 32,
+      "title": "ON — 2026-09-22: Tue 2026-09-22, Los Angeles — ON CEO/CFO/IR NDR hosted by Jefferies · Blayne Curtis.",
+      "tickers": [
+        "ON"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "upcoming",
+      "confidence": "medium",
+      "why_now": "🆕 Tue 2026-09-22, Los Angeles — ON CEO/CFO/IR NDR hosted by Jefferies · Blayne Curtis.",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "SiC power",
+          "from": "ON",
+          "in_book": true
+        }
+      ],
+      "source": "ON page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "ON.md"
+      ],
+      "evidence_anchor": "🆕 Tue 2026-09-22, Los Angeles — ON CEO/CFO/IR NDR hosted by Jefferies · Blayne Curtis.",
       "origin": "catalyst_calendar",
       "feedback": "",
       "feedback_note": "",
