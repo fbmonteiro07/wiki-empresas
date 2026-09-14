@@ -1,6 +1,6 @@
 # Read-through map — supply chain & substitutes
 
-_Generated 2026-09-12 · curated high-confidence edges from `_data/graph.json` (192 supply links, 34 compete links). A datapoint on a **supplier** reads through to its **customers** (and vice-versa). Edit the JSON to extend; rebuild: `py _wiki/_tools/build_readthrough.py`._
+_Generated 2026-09-14 · curated high-confidence edges from `_data/graph.json` (192 supply links, 37 compete links). A datapoint on a **supplier** reads through to its **customers** (and vice-versa). Edit the JSON to extend; rebuild: `py _wiki/_tools/build_readthrough.py`._
 
 | Ticker | ⬆ Suppliers (upstream) | ⬇ Customers (downstream) | ⚔ Competes |
 |---|---|---|---|
@@ -29,6 +29,7 @@ _Generated 2026-09-12 · curated high-confidence edges from `_data/graph.json` (
 | **CIEN** | — | AMZN (DCI/optical), GOOG (DCI/optical), MSFT (DCI/optical) | — |
 | **COHR** | AIXA (MOCVD tools) | AMZN (optical), ANET (optical), GOOG (optical), MSFT (optical), NVDA (optical/InP) | LITE (optical/InP) |
 | **CRDO** | TSM (foundry) | AMZN (AEC/connectivity), MSFT (connectivity), NVDA (AEC/SerDes) | — |
+| **CRWD** | — | — | OKTA (agentic identity) |
 | **CRWV** | AMD (MI GPUs), NVDA (GPUs) | MSFT (neocloud compute), OPENAI (neocloud compute) | — |
 | **CSCO** | — | — | ANET (AI networking), DDOG (observability vs Splunk), DT (observability vs Splunk), ESTC (SIEM/logs vs Splunk) |
 | **DDOG** | AMZN (cloud hosting (consumption runs on hyperscaler infra)), GOOG (cloud hosting (consumption runs on hyperscaler infra)), MSFT (cloud hosting (consumption runs on hyperscaler infra)) | — | CSCO (observability vs Splunk), DT (observability), ESTC (observability/logs) |
@@ -54,16 +55,18 @@ _Generated 2026-09-12 · curated high-confidence edges from `_data/graph.json` (
 | **META** | AMD (MI GPUs), AVGO (custom ASIC), GLW (optical fiber (LTA)), NVDA (GPUs), SNDK (NAND/SSD), STX (nearline HDD), WDC (nearline HDD) | — | — |
 | **MP** | — | NVDA (rare-earth magnets) | — |
 | **MRVL** | TSM (foundry) | AMZN (custom ASIC (Trainium)), GOOG (optical DSP), MSFT (custom ASIC (Maia)) | AVGO (custom ASIC) |
-| **MSFT** | AAOI (optical transceivers), ALAB (scale-up fabric), AMD (MI GPUs), AVGO (custom ASIC), CEG (nuclear PPA), CIEN (DCI/optical), COHR (optical), CRDO (connectivity), CRWV (neocloud compute), DELL (AI servers), ETN (electrical), KIOXIA (NAND), LITE (optical), MRVL (custom ASIC (Maia)), NVDA (GPUs), SMCI (rack integration), SNDK (NAND/SSD), STX (nearline HDD), WDC (nearline HDD) | DDOG (cloud hosting (consumption runs on hyperscaler infra)), DT (cloud hosting (consumption runs on hyperscaler infra)), ESTC (cloud hosting (consumption runs on hyperscaler infra)), MDB (cloud hosting (consumption runs on hyperscaler infra)), OPENAI (Azure compute), SNOW (cloud hosting (consumption runs on hyperscaler infra)) | MDB (Atlas vs Cosmos DB), SNOW (warehouse vs Fabric) |
+| **MSFT** | AAOI (optical transceivers), ALAB (scale-up fabric), AMD (MI GPUs), AVGO (custom ASIC), CEG (nuclear PPA), CIEN (DCI/optical), COHR (optical), CRDO (connectivity), CRWV (neocloud compute), DELL (AI servers), ETN (electrical), KIOXIA (NAND), LITE (optical), MRVL (custom ASIC (Maia)), NVDA (GPUs), SMCI (rack integration), SNDK (NAND/SSD), STX (nearline HDD), WDC (nearline HDD) | DDOG (cloud hosting (consumption runs on hyperscaler infra)), DT (cloud hosting (consumption runs on hyperscaler infra)), ESTC (cloud hosting (consumption runs on hyperscaler infra)), MDB (cloud hosting (consumption runs on hyperscaler infra)), OPENAI (Azure compute), SNOW (cloud hosting (consumption runs on hyperscaler infra)) | MDB (Atlas vs Cosmos DB), OKTA (IAM (Entra bundling)), SNOW (warehouse vs Fabric) |
 | **MU** | AMAT (WFE), ASML (litho), KLAC (process control), LRCX (NAND/HBM WFE), TOKYOELEC (WFE) | AMD (HBM), AVGO (HBM), NVDA (HBM/LPDDR) | SKHYNIX (HBM) |
 | **NBIS** | BE (fuel cells), NVDA (GPUs) | OPENAI (neocloud compute) | — |
 | **NET** | — | — | AKAM (edge/CDN), FSLY (edge/CDN) |
 | **NVDA** | ADI (power (Empower)), ALAB (retimers/fabric), AOSL (power MOSFET (800V)), APH (interconnect/busbar), ARM (CPU IP), CDNS (EDA), COHR (optical/InP), CRDO (AEC/SerDes), FLEX (power/EMS + cooling), GLW (optical fiber), IFX (power semis (800V)), KIOXIA (NAND (Super IO)), LITE (optical), MP (rare-earth magnets), MU (HBM/LPDDR), NVT (power+cooling (CDU)), NVTS (GaN/SiC (800V)), ON (SiC power), POET (optical engine/CPO), POWI (power-conversion ICs (800V)), SAMSUNG (HBM/foundry), SKHYNIX (HBM), SNPS (EDA/IP), TEL (connectors), TSM (foundry N3/N2 + CoWoS), TXN (power), VRT (power+cooling (800VDC)), WOLF (SiC (800V)) | AMZN (GPUs), ANTHROPIC (GPUs), CRWV (GPUs), DELL (GPUs), GOOG (GPUs), HPE (GPUs), META (GPUs), MSFT (GPUs), NBIS (GPUs), OPENAI (GPUs), ORCL (GPUs), SMCI (GPUs), TSLA (GPUs) | AMD (AI accelerators), AVGO (merchant vs custom ASIC) |
 | **NVT** | — | NVDA (power+cooling (CDU)) | — |
 | **NVTS** | — | NVDA (GaN/SiC (800V)) | — |
+| **OKTA** | — | — | CRWD (agentic identity), MSFT (IAM (Entra bundling)), PANW (identity (CyberArk vs Okta)) |
 | **ON** | — | NVDA (SiC power) | — |
 | **OPENAI** | AMD (MI GPUs), CRWV (neocloud compute), MSFT (Azure compute), NBIS (neocloud compute), NVDA (GPUs), ORCL (OCI compute) | — | ANTHROPIC (frontier models) |
 | **ORCL** | AMD (MI GPUs), AVGO (networking), NVDA (GPUs) | OPENAI (OCI compute) | MDB (operational database) |
+| **PANW** | — | — | OKTA (identity (CyberArk vs Okta)) |
 | **POET** | — | NVDA (optical engine/CPO) | — |
 | **POWI** | — | NVDA (power-conversion ICs (800V)) | — |
 | **PWR** | — | AMZN (grid construction) | — |

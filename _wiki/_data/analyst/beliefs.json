@@ -1,5 +1,5 @@
 {
-  "asof": "2026-09-12",
+  "asof": "2026-09-14",
   "note": "Derived belief ledger; company pages remain the source of truth.",
   "companies": {
     "AAOI": {
@@ -1555,6 +1555,27 @@
       "thesis_hash": "72eda184be26",
       "debate_hash": "9112b8478558"
     },
+    "OKTA": {
+      "ticker": "OKTA",
+      "sector": "Software / security / internet",
+      "thesis": "Neutral identity control plane for the agent era (cRPO re-accel to +14%, NRR turn); bear = seat model + MSFT Entra / PANW-CyberArk bundling.",
+      "debate_excerpt": "Capstone model: none — Okta is not on the comp sheet; no house estimates. Consensus only (BBG block below; px $166.50, EV ~$26.9bn, CY26E rev $3,199m / EPS $3.79, CY27E rev $3,518m / EPS $4.34, PT cons $182.4, 38 Buy / 9 Hold / 0 Sell — 2026-09-11). Implied ~8.4x CY26E / 7.6x CY27E EV/sales, ~33x CY26E EV/EBIT (house arithmetic on the BBG snapshot). Bull: Right layer for the agent era, and the multiple has not caught up. Every agent needs a credential, a scope and a revocation path — a per-identity SKU. MS sizes agentic identity at ~$60bn+, double the standalone market, \"a positive for PANW, OKTA and SAIL\" (MS · Marshall/Lountzis, 2026-08-20) and keeps OKTA among \"the four best positioned\" for AI (MS, 2026-04-20/04-27). The Glasswing-partner expert: \"identity is the new control plane for security, especially because of AI. Vendors that can provide real-time identity control… will be the winners\" (BTG Mythos expert call, 2026-06-18 — ⚠️ interested party). Citrini's sovereignty thesis: enterprises \"will not collapse their security architecture into the same model provider that may also enable attacks\" — Okta is on the Glasswing partner list with PANW, Cisco, CRWD, Cloudflare,…",
+      "risks_excerpt": "Platform bundling / hyperscaler encroachment — MSFT Entra ~31% IAM share; MS's January note names smaller best-of-breed as the structurally challenged cohort and records Okta share loss in its CIO survey (MS, 2026-01-26). Consolidator entry — PANW/CyberArk, CRWD Agentic IdP; Okta's 10-K lists Palo Alto Networks among companies it both partners and competes with (FY26 10-K, 2026-03-05). Seat-based monetisation in an era where agents may replace seats; per-agent pricing undefined (McKinnon, Q1 FY27; WFC, 2026-04-13). Execution on conversion — record pipeline vs \"how can we execute on turning this pipeline into real dollars\" (McKinnon). Guide/expectations mismatch — conservative \"closer to…",
+      "catalysts_excerpt": "Oktane — week of 2026-09-21, Las Vegas — \"the AI security event of the year\", with an analyst/investor Q&A (McKinnon, Q2 FY27). Watch: agent-identity customer counts, any per-agent pricing construct, Permiso integration, the \"industry blueprint / open standards\" for the secure agentic enterprise. Q3 FY27 print — ~early Dec 2026 (Q3 FY26 was 2025-12-02). Bogeys from the guide: revenue +10%, cRPO +11–12% (vs +14% in Q2 — the market will read a step-down as \"special quarter\" confirmed), OM 24–25%, FCF 21–23%. Beat cadence has been ~2–3%. NRR ≥107% and holding — the Q1 inflection was the first in four years; a second consecutive expansion would retire the seat-compression bear for a while. AI…",
+      "open_questions": [
+        "Seats. \"The big wrinkle is seats… this is a very seat-based model versus SailPoint has more of like an ELA. How do we get monetization out of this? How do we get a situation where the seats isn't serving as an offset?\" — Wells Fargo prefers SAIL over OKTA because \"if both win…",
+        "Oktane — week of 2026-09-21, Las Vegas — \"the AI security event of the year\", with an analyst/investor Q&A (McKinnon, Q2 FY27). Watch: agent-identity customer counts, any per-agent pricing construct, Permiso integration, the \"industry blueprint / open standards\" for the secure…"
+      ],
+      "last_change": "2026-09-14",
+      "latest_change_excerpt": "page created. Built from the Q2 FY27 / Q1 FY27 / Q4 FY26 transcripts and the Q2 FY27 10-Q pulled onto disk the same day, plus the cross-references previously scattered across PANW, CRWD and the ai-cybersecurity theme. BBG snapshot fetched 2026-09-11 (px $166.50). ⚠️ Correction to the Capstone initiation doc (2026-09-12): that document quoted WFC's 04-13 read that only CRWD and PANW were named on the Glasswing logo list; Okta's own Q1 FY27 call and Citrini (07-20) place Okta inside Glasswing as a Mythos tester.…",
+      "next_catalyst": "2026-09-21",
+      "in_book": false,
+      "book_side": "",
+      "book_weight": null,
+      "page": "OKTA.md",
+      "thesis_hash": "e57896cb6f86",
+      "debate_hash": "7537b3af53d4"
+    },
     "ON": {
       "ticker": "ON",
       "sector": "Analog & processors",
@@ -1605,18 +1626,18 @@
       "thesis": "Turned into an AI-infra hyperscaler (RPO $638B/+363%); bear = dot-com-peak capex/sales + dilution.",
       "debate_excerpt": "Bull: RPO/backlog is the entire bull case — $638B with contractual visibility, \"the big get bigger\" hyperscaler demand (Jefferies/GEV power call, 2026-05-08, noting Oracle's \"half a trillion\" backlog tracking Microsoft/Google). BYOH/prepaid model lets Oracle scale capacity without proportional cash capex or margin loss (Magouyrk, Q4 FY26). \"Halo effect\" — AI infra training colocated with apps/database drives multiproduct deals, sovereign/Alloy and multicloud DB at 60–80% margins (Sicilia, Q3 FY26). Execution proof point: DTE/Michigan site Oracle pulled a year ahead of a schedule DTE thought aggressive — a rare data-center acceleration vs an industry full of delays (Paul, Jefferies call 2026-05-08); SemiAnalysis corroborates — Oracle broke ground at Abilene in May 2024 and was operational by September, while Microsoft's competing Wisconsin Phase-1 was still not live two years after groundbreaking, so Microsoft's slow execution ceded the first ~$100B Stargate contract to Oracle (SemiAnalysis, Microsoft AI Strategy Deconstructed). Sell-side supportive: UBS (Keirstead) Buy, PT↑ to $285 \"positive ahead of print, long-compute thesis\" (briefing 2026-06-02) ⚠️ [PT SUPERSEDED — cut to…",
       "risks_excerpt": "Customer concentration — OpenAI: Barclays models OpenAI at ~76% of OCI's '28 AI capacity and $300B/5yr; gives OpenAI material pricing leverage over Oracle and ties OCI's ramp to a still-unprofitable, privately-funded counterparty (UBS OpenAI deep-dive; Barclays on OpenAI). 4 customers each $8B in Q4 FY26 (Magouyrk). Capex intensity / cash burn — reported capex well above the ~$70B net outlay; FCF –$9B/–$14B/–$20B FY26-28E; capex intensity to ~61% FY27E; funding via debt+equity + ATM dilution; capex-to-sales at dotcom-peak levels (MS, 2026-06-09; JPM AI Capex & Financing, 2025-11-10). Credit / leverage — most-indebted IG tech issuer ($100B debt), mid-BBB with Negative outlooks; growing…",
-      "catalysts_excerpt": "🆕🔴🔴 2026-09-10 (THURSDAY, POST-CLOSE) — FQ1 FY27 EARNINGS. THE SINGLE BIGGEST SCHEDULED EVENT ON THIS PAGE. ⚠️ DATE DISCREPANCY RESOLVED: BofA's TMT desk says \"Reports Thursday, 9/10, post-close\" and its own calendar line reads \"9/10: EARNINGS PM = ORCL, ADBE\"; Jefferies' weekly labels it \"ORCL (Thurs Sep 11th)\". September 10 2026 is the Thursday — Jefferies has the weekday right and the date wrong. USE 09-10. Implied move ~10% (both desks). Last quarter traded -9%. Stock $158, -21% YTD (BofA, 09-07 AM); The Information has it -19% YTD. 🔴 BUY-SIDE BOGEYS PICKED UP BY BofA's DESK (Brian Fenske, \"TMT Weekly Idea Bank\", 2026-09-07 — sales commentary, not research): Q1 Cloud Infra (IaaS)…",
+      "catalysts_excerpt": "🆕🔴🔴 2026-10-28 — ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as \"Investor Day in October\"). First opportunity for new CFO Hilary Maxson to set long-term financial targets and update the capex + financing strategy. Management deferred BOTH the gross-margin trajectory and further capex/margin detail to it (FQ1 FY27 call, 2026-09-10), and MS · Sanjit Singh has made GM-stabilisation evidence an explicit condition for moving off Equal-weight ($210) — so this event carries real content, not reiteration. Desk question set already on record (DB · Zelnick, MS · Singh, JPM · Chatterjee, 2026-09-11): (1) OCI build-out + growth strategy; (2) whether prepay / BYOHW /…",
       "open_questions": [
         "Bear — \"a massive blow\": Oracle left the premium short-tenor compute segment to SpaceX (SemiAnalysis \"Meta Compute: Everyone Wants To Be A Cloud\", 2026-07-02): the sharpest independent critique yet of ORCL's compute-monetisation execution — and note carefully that it is a…",
+        "🆕🔴 NOT YET DATED — a CONSOLIDATED POSITIVE FCF timeline. Management gave none on the FQ1 call (JPM · Chatterjee, 2026-09-11), offering only that \"each project is expected to convert ~100% of post-tax EBITDA to free cash flow once ramped\". GS · Borges names it as one of the…",
         "(a) 🔴🔴 THE ATM PROGRESS UPDATE — DB expects an OFFICIAL update on the $20bn ATM equity program WITH F1Q RESULTS. ➤ This is the single disclosure that adjudicates the unresolved sign conflict this page carries: JPM's IG credit desk lists \"a shift away from equity funding\" as a…",
         "(b) 🔴🔴 DID ~1GW OF CAPACITY ACTUALLY LAND? DB expects deliveries \"approaching 1GW\" in F1Q vs 400MW+ in EACH of the prior two quarters — a ~2.5x sequential step-up, with \"little spot or near-term capacity left to sell\" and linearity through the quarter a swing factor DB has…",
         "🆕 THE WARRANT-LINKED HPE GIGAWATT-SCALE NETWORKING AGREEMENT (2026-09-02) IS UNSIZED AND ITS TERMS ARE UNDISCLOSED. ➜ Watch the 10-Q for the warrant terms Oracle received; this is the first time Oracle is on the RECEIVING end of the equity-linked structure the AI complex has…",
-        "Q1 FY27 print: September 10, 2026 (AMC) — first look at the H2-weighted acceleration; watch cloud +58–64% guide delivery and capacity-online cadence.",
-        "🗓️🔴 Project Jupiter air-quality permit — formal public hearing scheduled for OCTOBER 19, 2026 (Oracle and its partners have filed to move it forward). The one dated, binary item on the New Mexico bear: UBS's channel check puts a 90% probability on the core 1.2 GW proceeding and…"
+        "Q1 FY27 print: September 10, 2026 (AMC) — first look at the H2-weighted acceleration; watch cloud +58–64% guide delivery and capacity-online cadence."
       ],
       "last_change": "2026-09-09",
       "latest_change_excerpt": "(/wiki-ingest) — NOTHING SUPERSEDED (Barclays holds Overweight and a $250 PT, both explicitly \"Unchanged\"), BUT THE PAGE NOW HAS A DATED, TWO-SIDED PREVIEW GOING INTO THE 09-10 1Q27 PRINT. 🔴 NET-NEW: (1) the two specifics behind the positive near-term set-up — expectations for NEARLY 1GW OF CAPACITY DELIVERED supporting Street estimates, and Barclays' belief that ORCL has finished its ATM, i.e. the $20bn equity funding programme is likely complete, \"creating a much clearer funding picture\" and warranting an…",
-      "next_catalyst": "",
+      "next_catalyst": "2026-10-28",
       "in_book": false,
       "book_side": "",
       "book_weight": null,

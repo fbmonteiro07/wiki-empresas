@@ -5,7 +5,7 @@
 _Wiki · generated 2026-09-04 · sources: `E:\Wiki Felipe empresas\SNOW\transcripts` (7 earnings calls, Q3 FY25 2024-11-20 → Q2 FY27 2026-09-02) · [themes/ai-data-infra-observability.md](themes/ai-data-infra-observability.md) (§2.2 + §1/§4/§5 carry the corpus sell-side/buy-side material) · morning briefings 2026-05-19 → 06-09 · 19 archived sell-side / buy-side notes 2026-05-14 → 09-03 (`relatórios bons/`, folded in 2026-09-04 — see § Intra-quarter). SEC filings (2× 10-K, 6× 10-Q, 2024-11 → 2026-09) in `SNOW/` and 3 company decks in `SNOW/apresentações/` (added 2026-09-04 — see § Primary-source datapoints); no `_briefings\by-ticker\SNOW.md` roll-up on disk. Fiscal year ends January 31 (Q2 FY27 = quarter ended 2026-07-31). Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-11 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-14 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|

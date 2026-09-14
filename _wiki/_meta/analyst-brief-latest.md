@@ -1,6 +1,6 @@
 # Daily Analyst Brief
 
-_Generated 2026-09-12 · 85 active signals · latest reconciliation: reconciliation-2026-09-11.md._
+_Generated 2026-09-14 · 85 active signals · latest reconciliation: reconciliation-2026-09-11.md._
 
 > ⚠️ **Portfolio priority is provisional.** _data/book.json is still a seed with unknown weights. Book badges identify seeded names but do not represent real exposure.
 
@@ -8,18 +8,18 @@ _Generated 2026-09-12 · 85 active signals · latest reconciliation: reconciliat
 
 | Rank | Ticker | Book | Signals | Why focus now |
 |---:|---|---|---:|---|
-| 1 | **MSFT** | seed | 9 | MSFT — catalyst passed without a logged outcome; MSFT — consensus capex decelerates hard while management says it must keep building ahead |
-| 2 | **GOOG** | seed | 9 | GOOG — 2026 revenue house view is 18% above consensus; GOOG — 2027 revenue house view is 17% above consensus |
+| 1 | **GOOG** | seed | 9 | GOOG — 2026 revenue house view is 18% above consensus; GOOG — 2027 revenue house view is 17% above consensus |
+| 2 | **NVDA** | seed | 12 | NVDA — 2026-09-14: Post-print access, both dated: BofA fireside with Toshiya Hari, VP of IR & Strategic…; NVDA — 2026-09-24: TRUMP-XI MEETING, 2026-09-24 — the dated headline-risk window, and UBS says the newsflow… |
 | 3 | **META** | seed | 6 | META — 2026-09-23: META CONNECT — 2026-09-23/24. Both UBS (exact dates) and MS ("25 days away" as of 08-30)…; MS's 2027 capex acceleration sits far above BBG consensus, on all four hyperscalers |
-| 4 | **NVDA** | seed | 12 | NVDA — 2026-09-24: TRUMP-XI MEETING, 2026-09-24 — the dated headline-risk window, and UBS says the newsflow…; NVDA — 2026-09-14: Post-print access, both dated: BofA fireside with Toshiya Hari, VP of IR & Strategic… |
+| 4 | **AVGO** | seed | 6 | AVGO — 2026-09-15: BERNSTEIN 8th ANNUAL SEMIS BUS TOUR, 2026-09-15/16, San Jose — AVGO on the roster…; Cost to run 1GW: the relay carried HALF the primary's number |
 | 5 | **AAPL** | seed | 2 | AAPL — 2026 EPS house view is 16% above consensus; AAPL — 2026-10-01: THE EU APP STORE COMMISSION CHANGES TAKE EFFECT, AND THE RATES ARE NOW FINAL: 26% for App… |
-| 6 | **AVGO** | seed | 6 | AVGO — 2026-09-15: BERNSTEIN 8th ANNUAL SEMIS BUS TOUR, 2026-09-15/16, San Jose — AVGO on the roster…; Cost to run 1GW: the relay carried HALF the primary's number |
+| 6 | **MSFT** | seed | 8 | MSFT — consensus capex decelerates hard while management says it must keep building ahead; MS's 2027 capex acceleration sits far above BBG consensus, on all four hyperscalers |
 | 7 | **AMZN** | seed | 4 | MS's 2027 capex acceleration sits far above BBG consensus, on all four hyperscalers; MSFT — MS models Maia as a LATER ramp than the GOOG/AMZN custom-silicon story |
-| 8 | **TER** | — | 1 | TER — catalyst passed without a logged outcome |
+| 8 | **BE** | — | 1 | BE — 2026-09-21: 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — THE INDEX TIER IS… |
 | 9 | **SKHYNIX** | — | 5 | SKHYNIX — 2026-09-18: DATED FLOW CATALYST — 2026-09-18 (ON THE CLOSE, FRIDAY): 000660 KS IS AN UPWEIGHT IN THE…; SKHYNIX — 2026-09-30: By 2026-09-30 — HBM CONTRACT PRICE UPDATE. Named by JPM (Kwon, 2026-08-19) as the 2… |
 | 10 | **TSM** | seed | 1 | TSM — 2026-09-24: TRUMP-XI, 2026-09-24 — UBS puts SPE and MEMORY as the most exposed verticals, with the… |
-| 11 | **AMD** | — | 2 | AMD — management's headline EPS ambition is not above the Street, and the $100bn server goal sits past the Street's horizon; AMD — the number that actually drifted is the CPU:GPU ratio, and the bases may not be like-for-like |
-| 12 | **BE** | — | 1 | BE — 2026-09-21: 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — THE INDEX TIER IS… |
+| 11 | **DELL** | — | 3 | DELL — 2026-09-15: UBS David Vogt Boston marketing '26 3, US Hardware.; DELL — the Street's error was the MARGIN, not the revenue, and the guide sits +6.5% above the FY27 consensus median — but NOT above the street high (basis-corrected 09-02; the quarterly leg closed inside one session) |
+| 12 | **ORCL** | — | 5 | ORCL — 2026-10-28: ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as "Investor Day in…; D-5 · ORCL — the PT is 18% above consensus, and the stated downside case IS consensus |
 
 ## Highest-priority ideas
 
@@ -28,56 +28,56 @@ _Generated 2026-09-12 · 85 active signals · latest reconciliation: reconciliat
 _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
 - **Tickers:** GOOG · seeded book: GOOG
-- **Why now:** Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $427.4bn as of 2026-09-11, a derived +18.2% gap. Revenue comparisons require a basis check.
+- **Why now:** Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $427.4bn as of 2026-09-14, a derived +18.2% gap. Revenue comparisons require a basis check.
 - **Belief update:** The house/Street disagreement requires an explicit driver bridge.
 - **Action:** Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
 - **Falsifier:** A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.
 - **Read-through:** AVGO (supplier: custom ASIC (TPU)); NVDA (supplier: GPUs); SNOW (competitor: warehouse vs BigQuery); ANTHROPIC (customer: TPU compute); BE (supplier: on-site fuel cells); CIEN (supplier: DCI/optical); COHR (supplier: optical)
-- **Attribution:** Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-11.
-- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-60b50348c0f0
+- **Attribution:** Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-14.
+- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-7a1d02964ad9
 
 ### 2. 🔴 GOOG — 2027 revenue house view is 17% above consensus
 
 _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
 - **Tickers:** GOOG · seeded book: GOOG
-- **Why now:** Capstone carries 2027 revenue at $641.0bn versus Bloomberg consensus at $547.1bn as of 2026-09-11, a derived +17.2% gap. Revenue comparisons require a basis check.
+- **Why now:** Capstone carries 2027 revenue at $641.0bn versus Bloomberg consensus at $547.1bn as of 2026-09-14, a derived +17.2% gap. Revenue comparisons require a basis check.
 - **Belief update:** The house/Street disagreement requires an explicit driver bridge.
 - **Action:** Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
 - **Falsifier:** A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.
 - **Read-through:** AVGO (supplier: custom ASIC (TPU)); NVDA (supplier: GPUs); SNOW (competitor: warehouse vs BigQuery); ANTHROPIC (customer: TPU compute); BE (supplier: on-site fuel cells); CIEN (supplier: DCI/optical); COHR (supplier: optical)
-- **Attribution:** Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-11.
-- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-a564eb4bcfe0
+- **Attribution:** Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-14.
+- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-7cc2eea64f1d
 
 ### 3. 🔴 AAPL — 2026 EPS house view is 16% above consensus
 
 _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
 - **Tickers:** AAPL · seeded book: AAPL
-- **Why now:** Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.74 as of 2026-09-11, a derived +15.8% gap.
+- **Why now:** Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.74 as of 2026-09-14, a derived +15.8% gap.
 - **Belief update:** The house/Street disagreement requires an explicit driver bridge.
 - **Action:** Open the AAPL model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
 - **Falsifier:** A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.
 - **Read-through:** TSM (supplier: foundry); ARM (supplier: IP)
-- **Attribution:** Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-09-11.
-- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-14c3c4172472
+- **Attribution:** Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-09-14.
+- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-ee99f2e4a5e1
 
 ### 4. 🟡 MSFT — consensus capex decelerates hard while management says it must keep building ahead
 
-_MODEL CHECK · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
+_MODEL CHECK · MEDIUM IMPACT · THIS WEEK · HIGH CONFIDENCE_
 
 - **Tickers:** MSFT · seeded book: MSFT
 - **Why now:** 2032" figure was wrong — "Those numbers are not right… He published anyway." No 2032 capacity number entered any
 - **Belief update:** This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.
 - **Action:** Open the MSFT model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
 - **Falsifier:** A like-for-like estimate bridge or company guide that closes the identified gap.
-- **Read-through:** AVGO (supplier: custom ASIC); NVDA (supplier: GPUs); MDB (competitor: Atlas vs Cosmos DB); SNOW (competitor: warehouse vs Fabric); AAOI (supplier: optical transceivers); ALAB (supplier: scale-up fabric); AMD (supplier: MI GPUs)
+- **Read-through:** AVGO (supplier: custom ASIC); NVDA (supplier: GPUs); MDB (competitor: Atlas vs Cosmos DB); OKTA (competitor: IAM (Entra bundling)); SNOW (competitor: warehouse vs Fabric); AAOI (supplier: optical transceivers); ALAB (supplier: scale-up fabric)
 - **Attribution:** management/company primary + Bloomberg · curated reconciliation 2026-09-11.
 - **Evidence:** [reconciliation-2026-09-11.md](reconciliation-2026-09-11.md) · signal reco-ca5fc077555d
 
 ### 5. 🟡 NVDA — two houses, one disclosure, opposite postures — but it is a BASIS difference, not a disagreement
 
-_CONTRADICTION · MEDIUM IMPACT · IMMEDIATE · MEDIUM CONFIDENCE_
+_CONTRADICTION · MEDIUM IMPACT · THIS WEEK · MEDIUM CONFIDENCE_
 
 - **Tickers:** NVDA · seeded book: NVDA
 - **Why now:** ➤ They agree on the two things that matter structurally: the residual-value cap at 25% (now a three-source
@@ -103,7 +103,7 @@ _MODEL CHECK · HIGH IMPACT · STANDING · MEDIUM-HIGH CONFIDENCE_
 
 ### 7. 🟡 GOOG — SemiAnalysis's $75.5bn of "guarantees" is +$31.5bn above the disclosed line, with no stated scope
 
-_RESEARCH IDEA · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
+_RESEARCH IDEA · MEDIUM IMPACT · THIS WEEK · HIGH CONFIDENCE_
 
 - **Tickers:** GOOG · seeded book: GOOG
 - **Why now:** The page carries $44bn as Google's own disclosed lease-payment guarantee (up from $6.5bn at end-September; The
@@ -116,20 +116,20 @@ _RESEARCH IDEA · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
 ### 8. 🟡 MSFT — management restated an older stake figure than the page already carries
 
-_RESEARCH IDEA · MEDIUM IMPACT · IMMEDIATE · MEDIUM CONFIDENCE_
+_RESEARCH IDEA · MEDIUM IMPACT · THIS WEEK · MEDIUM CONFIDENCE_
 
 - **Tickers:** MSFT · seeded book: MSFT
 - **Why now:** Management: "the last number we gave you was we had a 27% stake in OpenAI", equity method. The page already
 - **Belief update:** This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.
 - **Action:** Turn the finding into a bull/base/bear question for MSFT; identify the KPI and source that would make it investable.
 - **Falsifier:** No observable KPI or dated catalyst can be identified to test the hypothesis.
-- **Read-through:** AVGO (supplier: custom ASIC); NVDA (supplier: GPUs); MDB (competitor: Atlas vs Cosmos DB); SNOW (competitor: warehouse vs Fabric); AAOI (supplier: optical transceivers); ALAB (supplier: scale-up fabric); AMD (supplier: MI GPUs)
+- **Read-through:** AVGO (supplier: custom ASIC); NVDA (supplier: GPUs); MDB (competitor: Atlas vs Cosmos DB); OKTA (competitor: IAM (Entra bundling)); SNOW (competitor: warehouse vs Fabric); AAOI (supplier: optical transceivers); ALAB (supplier: scale-up fabric)
 - **Attribution:** management/company primary · curated reconciliation 2026-09-11.
 - **Evidence:** [reconciliation-2026-09-11.md](reconciliation-2026-09-11.md) · signal reco-b2aa9280e659
 
 ### 9. 🟡 AMD — management's headline EPS ambition is not above the Street, and the $100bn server goal sits past the Street's horizon
 
-_MODEL CHECK · MEDIUM IMPACT · IMMEDIATE · MEDIUM CONFIDENCE_
+_MODEL CHECK · MEDIUM IMPACT · THIS WEEK · MEDIUM CONFIDENCE_
 
 - **Tickers:** AMD
 - **Why now:** ➤ The Street already crosses $20 in FY2028 at $22.84. "Significantly more than $20" is therefore only a raise if
@@ -140,7 +140,7 @@ _MODEL CHECK · MEDIUM IMPACT · IMMEDIATE · MEDIUM CONFIDENCE_
 - **Attribution:** management/company primary · curated reconciliation 2026-09-11.
 - **Evidence:** [reconciliation-2026-09-11.md](reconciliation-2026-09-11.md) · signal reco-5cba7f6e40ed
 
-### 10. 🟡 GOOG silicon price/performance — company marketing vs independent measurement
+### 10. ⚪ GOOG silicon price/performance — company marketing vs independent measurement
 
 _MODEL CHECK · HIGH IMPACT · STANDING · MEDIUM CONFIDENCE_
 
@@ -153,7 +153,7 @@ _MODEL CHECK · HIGH IMPACT · STANDING · MEDIUM CONFIDENCE_
 - **Attribution:** management/company primary + SemiAnalysis · curated reconciliation 2026-09-09.
 - **Evidence:** [reconciliation-2026-09-09.md](reconciliation-2026-09-09.md) · signal reco-b659796b0753
 
-### 11. 🟡 MSFT — MS models Maia as a LATER ramp than the GOOG/AMZN custom-silicon story
+### 11. ⚪ MSFT — MS models Maia as a LATER ramp than the GOOG/AMZN custom-silicon story
 
 _MODEL CHECK · MEDIUM IMPACT · STANDING · MEDIUM CONFIDENCE_
 
@@ -166,7 +166,7 @@ _MODEL CHECK · MEDIUM IMPACT · STANDING · MEDIUM CONFIDENCE_
 - **Attribution:** underlying sources named in the finding · curated reconciliation 2026-09-09.
 - **Evidence:** [reconciliation-2026-09-09.md](reconciliation-2026-09-09.md) · signal reco-aec2df916ddb
 
-### 12. 🟡 The GW anchors on ai-datacenter-power do not agree — and the disagreement is the finding
+### 12. ⚪ The GW anchors on ai-datacenter-power do not agree — and the disagreement is the finding
 
 _CONTRADICTION · MEDIUM IMPACT · STANDING · MEDIUM CONFIDENCE_
 
@@ -183,17 +183,19 @@ _CONTRADICTION · MEDIUM IMPACT · STANDING · MEDIUM CONFIDENCE_
 
 - **AVGO — 2026-09-15: BERNSTEIN 8th ANNUAL SEMIS BUS TOUR, 2026-09-15/16, San Jose — AVGO on the roster…** — 🆕 BERNSTEIN 8th ANNUAL SEMIS BUS TOUR, 2026-09-15/16, San Jose — AVGO on the roster alongside ALAB, AMAT, AMBA, LSCC, MPWR, NVDA, NXPI. First scheduled corporate-access window afte _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-5652e30181c5)
 - **NVDA — 2026-09-14: Post-print access, both dated: BofA fireside with Toshiya Hari, VP of IR & Strategic…** — 🆕 Post-print access, both dated: BofA fireside with Toshiya Hari, VP of IR & Strategic Finance, hosted by Vivek Arya — 2026-09-02, 11:00 ET (~1hr) (BofA TMT Sales, 2026-08-14) · UBS-arranged _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-3688ce11b48d)
-- **SKHYNIX — 2026-09-18: DATED FLOW CATALYST — 2026-09-18 (ON THE CLOSE, FRIDAY): 000660 KS IS AN UPWEIGHT IN THE…** — 🆕🔴 DATED FLOW CATALYST — 2026-09-18 (ON THE CLOSE, FRIDAY): 000660 KS IS AN UPWEIGHT IN THE FTSE GEIS SEPTEMBER GLOBAL REBALANCE AND AN ADDITION TO THE ICE SEMICONDUCTOR INDEX (ICESEMI) IN ITS ANN _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-7f22803bf4a1)
+- **BE — 2026-09-21: 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — THE INDEX TIER IS…** — 🆕🔴🔴 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — THE INDEX TIER IS NOW NAMED: BE IS AN S&P 500 ADD, AND A FTSE ALL-WORLD ADD. TWO INDEPENDENT INDEX EVENTS IN THE _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-2bc8be299987)
 - **DELL — 2026-09-15: UBS David Vogt Boston marketing '26 3, US Hardware.** — 2026-09-15 — UBS David Vogt Boston marketing '26 3, US Hardware. _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-942fdbda8a30)
+- **SKHYNIX — 2026-09-18: DATED FLOW CATALYST — 2026-09-18 (ON THE CLOSE, FRIDAY): 000660 KS IS AN UPWEIGHT IN THE…** — 🆕🔴 DATED FLOW CATALYST — 2026-09-18 (ON THE CLOSE, FRIDAY): 000660 KS IS AN UPWEIGHT IN THE FTSE GEIS SEPTEMBER GLOBAL REBALANCE AND AN ADDITION TO THE ICE SEMICONDUCTOR INDEX (ICESEMI) IN ITS ANN _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-7f22803bf4a1)
+- **AXTI — 2026-09-21: 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — S&P 600 INDEX ADD,…** — 🆕 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — S&P 600 INDEX ADD, a dated MECHANICAL flow event. AXTI is named as one of five S&P SmallCap 600 additions in the Septe _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-fb1455b9b5d8)
+- **CEREBRAS — 2026-09-21: 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — ICE SEMICONDUCTOR…** — 🆕 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — ICE SEMICONDUCTOR INDEX (ICESEMI) ADD in the annual reconstitution. A dated MECHANICAL flow event, not a fundamental one _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-025236c759de)
+- **CIEN — 2026-09-21: ECOC 2026, 2026-09-21/22 (Spain) — Morgan Stanley hosts COHR, CIEN, CSCO, KEYS and NOK.…** — 🆕 ECOC 2026, 2026-09-21/22 (Spain) — Morgan Stanley hosts COHR, CIEN, CSCO, KEYS and NOK. First optical-systems corporate-access window after the print. (MS TMT desk, 2026-08-31) _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-193ccd0ee4cb)
+- **COHR — 2026-09-21: PHOTONLINK LAUNCH: establish the PLATFORM, LANE RATE AND MODULATION FORMAT, not just the…** — 🆕 2026-09-21 — PHOTONLINK LAUNCH: establish the PLATFORM, LANE RATE AND MODULATION FORMAT, not just the positioning. The FQ1 FY27 synthesis lists PhotonLink as a genuinely net-new BULL item (platf _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-3e0777d1698a)
 - **LITE — 2026-09-18: LITE IS ADDED TO FTSE ALL-WORLD IN THE SEPTEMBER 2026 GLOBAL QUARTERLY REBALANCE. A DATED,…** — 🆕🔵 2026-09-18 (ON THE CLOSE) — LITE IS ADDED TO FTSE ALL-WORLD IN THE SEPTEMBER 2026 GLOBAL QUARTERLY REBALANCE. A DATED, MECHANICAL FLOW EVENT — NOT A FUNDAMENTAL DATAPOINT. (UBS Index Analytic _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-96fb11710716)
-- **ON — 2026-09-16: onsemi Analyst Day (Citi exp. ~Sep 13 print first) — the key event; watch for a raised…** — 2026-09-16 — onsemi Analyst Day (Citi exp. ~Sep 13 print first) — the key event; watch for a raised long-term target model + SiC/800V framing (Citi, briefing 2026-06-15). _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-fa1afba80331)
 
 ## Research hygiene
 
-- **MSFT — catalyst passed without a logged outcome** — Write a source-attributed bull won|bear won|neutral outcome for MSFT in outcomes.md. _Source: Catalyst outcome ledger._ (post-d53d9fa01357)
-- **TER — catalyst passed without a logged outcome** — Write a source-attributed bull won|bear won|neutral outcome for TER in outcomes.md. _Source: Catalyst outcome ledger._ (post-61a68fd74624)
-- **POET — latest earnings transcript absent** — Fetch the latest POET earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-09-12._ (data-a85aea0ad1cd)
-- **SMTC — latest earnings transcript absent** — Fetch the latest SMTC earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-09-12._ (data-146c2714ebbe)
+- **POET — latest earnings transcript absent** — Fetch the latest POET earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-09-14._ (data-42d0b565b0d4)
+- **SMTC — latest earnings transcript absent** — Fetch the latest SMTC earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-09-14._ (data-929f048f1880)
 
 ## Feedback loop
 

@@ -6,7 +6,7 @@
 >
 > 🔎 **Full-corpus search** (reports + calls + briefings + transcripts + Stratechery + DAMNANG, not just wiki pages): `py "_wiki/_tools/search.py" <query>` (index: `py "_wiki/_tools/build_search_index.py"`).
 
-_Generated 2026-09-12 by `_tools/build_index.py` from [`_data/index_meta.json`](_data/index_meta.json) (hand-edit the json, not this file) · **106 companies + 2 private AI labs (108 pages)** · one page per ticker synthesizing all co-located sources in `E:\Wiki Felipe`: filings (10-K/10-Q/20-F) + earnings transcripts + investor-day decks + thematic equity calls (`_equity_calls`) + per-ticker roll-up of the email briefings (`_briefings/by-ticker`) + BBG consensus & street-high estimates (`_data/estimates.json`)._
+_Generated 2026-09-14 by `_tools/build_index.py` from [`_data/index_meta.json`](_data/index_meta.json) (hand-edit the json, not this file) · **107 companies + 2 private AI labs (109 pages)** · one page per ticker synthesizing all co-located sources in `E:\Wiki Felipe`: filings (10-K/10-Q/20-F) + earnings transcripts + investor-day decks + thematic equity calls (`_equity_calls`) + per-ticker roll-up of the email briefings (`_briefings/by-ticker`) + BBG consensus & street-high estimates (`_data/estimates.json`)._
 
 Each page follows the [_TEMPLATE](_TEMPLATE.md): Snapshot · Current state (latest quarter) · Debate (bull/bear + where the sell-side stands, attributed + dated) · Catalysts · Risks · Consensus estimates (BBG) · Sources (links). Archive master index: [../INDEX.md](../INDEX.md). Thematic pages: [themes/00_THEMES.md](themes/00_THEMES.md).
 
@@ -126,6 +126,7 @@ Each page follows the [_TEMPLATE](_TEMPLATE.md): Snapshot · Current state (late
 |---|---|---|
 | PANW | [PANW](PANW.md) | Cybersecurity platformization land-grab + agentic SecOps; debate = organic vs M&A-flattered NGS ARR. |
 | CRWD | [CRWD](CRWD.md) | Falcon consolidation flywheel + Charlotte AI; net-new ARR re-accel; valuation/crowding + 2024-outage tail the bear. |
+| OKTA | [OKTA](OKTA.md) | Neutral identity control plane for the agent era (cRPO re-accel to +14%, NRR turn); bear = seat model + MSFT Entra / PANW-CyberArk bundling. |
 | CRM | [CRM](CRM.md) | Agentforce $0→$1B+ ARR is the AI-monetization test case; bear = ~10-13% growth + SaaS-seat-reset (BofA UW $160). |
 | RDDT | [RDDT](RDDT.md) | Dual engine: ads + AI data-licensing; binary on Google AI-Overviews referral-traffic cannibalization. |
 | SHOP | [SHOP](SHOP.md) | Commerce OS at 30%+ GMV; agentic-commerce binary (TAM-expander vs LLM-storefront disintermediation). |

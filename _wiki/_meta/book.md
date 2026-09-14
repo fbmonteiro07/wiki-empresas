@@ -1,6 +1,6 @@
 # Book — positions × unresolved debates × catalysts
 
-_Generated 2026-09-12 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wiki/_tools/build_book.py`._
+_Generated 2026-09-14 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wiki/_tools/build_book.py`._
 
 > ⚠️ **SEED book** — initialized from the 8 house-model names, weights unknown. Edit `_data/book.json` to match the real Core Positions (weights, adds/drops), then remove the `"seed": true` flag.
 
@@ -12,7 +12,7 @@ _Generated 2026-09-12 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wi
 | AVGO | long | ? | EPS 2026 -5% | 2026-09-15 — 🆕 BERNSTEIN 8th ANNUAL SEMIS BUS TOUR, 2026-09-15/16, San Jose — AVGO on the roster alongside [[ALAB]], [[AMAT]], AMBA,  |  |  | 2026-09-09 | #1 custom-ASIC/TPU partner; binary setup on the ">$100B" FY27 guide vs $250-300B FY28 (JPM). |
 | META | long | ? | EPS 2027 +4% | 2026-09-23 — 🆕 2026-09-23/24 — META CONNECT. MS flags it as the next scheduled product venue *"for more product updates"*, with Hatch |  |  | 2026-09-10 | Fastest grower in Mag7 ex-GPU; bear = capital intensity and negative incremental ROIC. |
 | TSM | long | ? | — | 2026-09-24 — 🆕⚠️ TRUMP-XI, 2026-09-24 — UBS puts SPE and MEMORY as the most exposed verticals, with the ASML/Netherlands MATCH Act im |  |  | 2026-09-09 | Sole-source leading-edge foundry (~70% share); pricing headroom vs overseas-fab dilution. |
-| MSFT | long | ? | no house model | _none dated_ | 1 |  | 2026-09-11 | AI ARR >$37B/+123%; swing is capex (CY27 ~$276B) vs Azure revenue + OpenAI concentration. |
+| MSFT | long | ? | no house model | _none dated_ |  |  | 2026-09-11 | AI ARR >$37B/+123%; swing is capex (CY27 ~$276B) vs Azure revenue + OpenAI concentration. |
 | AMZN | long | ? | no house model | _none dated_ |  |  | 2026-09-09 | AWS re-acceleration (+28%) + in-house silicon (Trainium); debate = $200B capex/ROIC. |
 
 ## Not in book — house-vs-consensus divergence ≥ 10% (candidates)
