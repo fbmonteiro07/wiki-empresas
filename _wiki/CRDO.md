@@ -11,7 +11,7 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\CRDO` (filings + trans
 | Gross profit | $1.4bn | $2.5bn |
 | Gross margin | 67.2% | 67.2% |
 | EBITDA | $1.1bn | $2.0bn |
-| EPS | $5.09 | $9.24 |
+| EPS | $5.09 | $9.26 |
 | Capex | $399m | $147m |
 | OCF (≈EBITDA) | $1.1bn | $2.0bn |
 

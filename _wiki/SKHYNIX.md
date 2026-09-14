@@ -12,13 +12,13 @@ _Wiki · generated 2026-06-19 · **Korean issuer — NO SEC filings (no 10-K/10-
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | ₩349759.5bn | ₩541090.7bn |
-| Gross profit | ₩293798.0bn | ₩455057.3bn |
+| Revenue | ₩349537.7bn | ₩540600.7bn |
+| Gross profit | ₩293611.6bn | ₩454645.2bn |
 | Gross margin | 84.0% | 84.1% |
-| EBITDA | ₩287613.0bn | ₩434858.0bn |
-| EPS | ₩319850.80 | ₩570340.59 |
+| EBITDA | ₩287060.2bn | ₩434047.4bn |
+| EPS | ₩319318.04 | ₩569608.24 |
 | Capex | ₩49458.9bn | ₩63775.7bn |
-| OCF (≈EBITDA) | ₩287613.0bn | ₩434858.0bn |
+| OCF (≈EBITDA) | ₩287060.2bn | ₩434047.4bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

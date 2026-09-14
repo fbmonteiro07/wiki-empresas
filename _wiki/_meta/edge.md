@@ -9,8 +9,8 @@ _Generated 2026-09-14 · the standing view of where our model and the curated re
 | Ticker | Metric | Yr | House | Consensus | Δ |
 |---|---|---|--:|--:|--:|
 | GOOG | Revenue $bn | 2026 | 505.00 | 427.40 | +18% |
-| GOOG | Revenue $bn | 2027 | 641.00 | 547.10 | +17% |
-| AAPL | EPS | 2026 | 10.12 | 8.74 | +16% |
+| GOOG | Revenue $bn | 2027 | 641.00 | 545.30 | +18% |
+| AAPL | EPS | 2026 | 10.12 | 8.76 | +16% |
 
 ## Curated divergences — latest reconciliation (`reconciliation-2026-09-11.md`)
 
@@ -28,8 +28,8 @@ _Generated 2026-09-14 · the standing view of where our model and the curated re
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|
-| CRWV | 89 | 146 | +64% | street high 317 · low 39 below spot · 29/11/3 of 43 |
-| NVDA | 218 | 325 | +49% | street high 515 · low 180 below spot · 79/2/1 of 82 |
-| GOOG | 335 | 426 | +27% | street high 475 · low 379 ABOVE spot · 16/1/0 of 17 |
-| AMD | 516 | 628 | +22% | street high 1,250 · low 465 below spot · 56/12/0 of 68 |
-| MSFT | 496 | 574 | +16% | street high 870 · low 400 below spot · 67/4/0 of 71 |
+| CRWV | 84 | 146 | +74% | street high 317 · low 39 below spot · 29/11/3 of 43 |
+| NVDA | 211 | 325 | +54% | street high 515 · low 180 below spot · 79/2/1 of 82 |
+| AMD | 485 | 628 | +29% | street high 1,250 · low 465 below spot · 56/12/0 of 68 |
+| GOOG | 342 | 426 | +25% | street high 475 · low 379 ABOVE spot · 16/1/0 of 17 |
+| MSFT | 504 | 574 | +14% | street high 870 · low 400 below spot · 67/4/0 of 71 |

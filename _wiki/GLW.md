@@ -7,7 +7,7 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\GLW` (filings + transc
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $19.1bn | $22.7bn |
+| Revenue | $19.1bn | $22.8bn |
 | Gross profit | $7.5bn | $9.2bn |
 | Gross margin | 39.2% | 40.5% |
 | EBITDA | $5.5bn | $7.0bn |

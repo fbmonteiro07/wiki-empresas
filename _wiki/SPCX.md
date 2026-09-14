@@ -107,13 +107,13 @@ _Wiki · generated 2026-06-29 · sources: IPO prospectus (424B4 2026-06-12 / S-1
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $43.8bn | $104.4bn |
+| Revenue | $44.0bn | $104.4bn |
 | Gross profit | — | $66.6bn |
 | Gross margin | — | 63.8% |
-| EBITDA | $20.0bn | $66.4bn |
-| EPS | $-0.94 | $1.68 |
-| Capex | $47.4bn | $181.0bn |
-| OCF (≈EBITDA) | $20.0bn | $66.4bn |
+| EBITDA | $20.3bn | $66.4bn |
+| EPS | $-0.93 | $1.68 |
+| Capex | $47.9bn | $181.0bn |
+| OCF (≈EBITDA) | $20.3bn | $66.4bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

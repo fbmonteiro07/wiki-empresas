@@ -13,7 +13,7 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\MU` (filings + transcr
 | Gross profit | $135.5bn | $224.6bn |
 | Gross margin | 83.2% | 86.1% |
 | EBITDA | $140.2bn | $239.5bn |
-| EPS | $96.56 | $165.31 |
+| EPS | $96.57 | $165.36 |
 | Capex | $34.8bn | $51.9bn |
 | OCF (≈EBITDA) | $140.2bn | $239.5bn |
 
