@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\CIEN` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\CIEN.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-14 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-15 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -11,8 +11,8 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\CIEN` (filings + trans
 | Gross profit | $3.0bn | $4.1bn |
 | Gross margin | 44.8% | 45.7% |
 | EBITDA | $1.5bn | $2.6bn |
-| EPS | $7.64 | $13.19 |
-| Capex | $277m | $332m |
+| EPS | $7.63 | $13.19 |
+| Capex | $275m | $332m |
 | OCF (≈EBITDA) | $1.5bn | $2.6bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

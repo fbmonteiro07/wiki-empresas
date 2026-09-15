@@ -3,15 +3,15 @@
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\INTC` (filings + transcripts) · `E:\equity_calls_transcripts` · `E:\Wiki Felipe\_briefings`. Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-14 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-15 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $60.2bn | $72.5bn |
+| Revenue | $60.3bn | $72.5bn |
 | Gross profit | $24.1bn | $31.8bn |
 | Gross margin | 40.0% | 43.9% |
 | EBITDA | $20.0bn | $25.8bn |
-| EPS | $1.03 | $2.09 |
+| EPS | $1.03 | $2.07 |
 | Capex | $20.5bn | $26.1bn |
 | OCF (≈EBITDA) | $20.0bn | $25.8bn |
 
