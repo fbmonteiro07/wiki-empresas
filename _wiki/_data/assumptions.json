@@ -1,5 +1,5 @@
 {
- "asof": "2026-09-02",
+ "asof": "2026-09-14",
  "note": "Canonical-assumptions ledger — one entry per cross-page industry number that multiple pages/themes cite. Purpose: every page should reference ONE canonical framing per metric; when a new source disagrees, add a variant here (never silently replace). build_assumptions.py renders _meta/assumptions.md + _dashboards/assumptions.html and scans pages for citations of each metric not yet reconciled into the ledger. Edit variants by hand; keep scope labels precise (units vs dollars, IT-load vs facility GW).",
  "metrics": {
   "asic-vs-gpu-share": {
@@ -958,6 +958,268 @@
     }
    ],
    "debate": "The LOGIC leg. 55k N3 + 6k N5 = 61k foundry wafers/GW ⇒ 13.4 logic wafers/rack, against ~5.5-6.5 from a die-area bottom-up of the NVL144 BOM (144 Rubin dies ~750mm², 65-70 gross/wafer, 50-60% AI-die yield ⇒ ~4.0 wafers; + Vera CPU ~0.5, NVLink-6 switch ~1.0, CX9/BlueField ~1.0) and against Fubon's 4.6 wafers/rack on Blackwell. The DRAM leg pins the denominator at ~4,400-4,545 racks/GW (a facility-GW denominator of 3,130 racks would require ~480GB per HBM wafer = a ~5:1 displacement vs DDR5, worse than MU's own ~4:1 at HBM4E — unlikely, though not impossible), so the gap cannot be explained by the GW basis — it has to be extra silicon (Rubin CPX, standalone Vera CPU racks, LPU racks, Spectrum-6/CX9 CPO) or a much worse yield assumption. Note CPX cannot close it at JPM's assumption of 144 CPX/rack at only 10-15% attach in 2027/28. Unresolved: what Patel's 55k N3 actually covers — the NVL144 compute rack alone or the whole Rubin family — is not stated in the excerpt, and the figures are ~2Q26 vintage."
+  },
+  "cyber-spend-tam": {
+   "title": "Total cybersecurity spend — the MS/IDC ladder and the segment TAMs",
+   "definition": "Global cybersecurity spend (products + services) by year, and the seven segment TAMs with '24-'29 CAGRs — ALWAYS state whether a figure is total spend, security SOFTWARE only, or one segment.",
+   "canonical": "Total cyber spend $246.2bn (2024) → $275.9bn (2025) → $308.4bn (2026) → $345.0bn (2027) → $385.5bn (2028) → $430.5bn (2029), ~6.5-6.8% of IT spend throughout (MS 'Revisiting Cybersecurity 101', 2026-03-20, IDC data). Segment TAMs 2025E: Network & Web/App $43.1bn (+9.3%) · Identity & Access $29.7bn (+17.6%) · Security Analytics/SIEM $18.3bn (+14.0%) · Corporate Endpoint $17.9bn (+11.4%) · Email/Data $15.1bn (+16.4%) · Vulnerability Mgmt $9.2bn (+13.3%) · Cloud Security $7.1bn (+23.3%).",
+   "scope_note": "MS's 16 covered cyber names are only ~26% of the market; adding Microsoft and Cisco reaches ~40% — the ladder is TOTAL spend incl. services and legacy/private vendors, not the listed-vendor revenue pool. The hyperscaler ~14% share (see hyperscaler-cyber-share) is a share of the cyber SOFTWARE market, a different denominator. Firewall/UTM is a $17.5bn→$21.8bn (+4.5% CAGR) sub-market of Network — PANW's #1 position sits in the slowest segment.",
+   "patterns": [
+    "430\\.5",
+    "\\$?430bn",
+    "275\\.9",
+    "\\$276bn",
+    "308\\.4",
+    "385\\.5",
+    "7% of (overall )?IT spend",
+    "\\$29\\.7bn",
+    "\\$43\\.1bn"
+   ],
+   "variants": [
+    {
+     "value": "$246.2bn 2024 → $430.5bn 2029; 6.6/6.5/6.6/6.6/6.7/6.8% of IT spend",
+     "source": "MS Marshall/Weiss, 'Revisiting Cybersecurity 101' (IDC)",
+     "date": "2026-03-20",
+     "scope": "total spend",
+     "cited_in": [
+      "PANW.md",
+      "CRWD.md",
+      "CSCO.md",
+      "MSFT.md",
+      "themes/ai-cybersecurity.md"
+     ]
+    },
+    {
+     "value": "Cloud security ~$16bn by 2029 on a ~4% take rate of public-cloud spend",
+     "source": "MS, same deck",
+     "date": "2026-03-20",
+     "scope": "segment, 2029",
+     "cited_in": [
+      "PANW.md",
+      "CRWD.md"
+     ]
+    },
+    {
+     "value": "Firewall & UTM $17.5bn (2024) → $21.8bn (2029), +4.5% CAGR; PANW 26.2% share 2025",
+     "source": "MS / IDC",
+     "date": "2026-03-20",
+     "scope": "sub-segment",
+     "cited_in": [
+      "PANW.md"
+     ]
+    }
+   ],
+   "status": "consistent",
+   "debate": "None on the ladder itself; the debate is what AI does to it — see ai-cyber-net-effect. Keep the total-spend vs software-share denominators apart."
+  },
+  "ai-cyber-net-effect": {
+   "title": "AI × cyber — net additive or destructive to the vendor P&L",
+   "definition": "The size of the AI-driven incremental cyber opportunity vs the share of today's cyber market at risk of AI-native / frontier-lab disruption.",
+   "canonical": "~$220bn incremental cyber opportunity from greater AI threat vs ~10% of the cyber market at risk of disruption → a market ~10% LARGER in the out-years (MS Marshall/Weiss, 'AI-Natives: Challengers, or Creating Challenges, for Cyber', 2026-04-20). Disruption risk is concentrated in the PREVENTATIVE layer (vulnerability mgmt, AppSec testing, posture); control-point and runtime 'require low-latency, deterministic responses' — a claim about today's models.",
+   "scope_note": "The offset relies on an exhibit whose basis includes '35% of services can be automated with AI' — part of the disruption is assumed INTO services, not into vendor revenue. The stocks traded ~(25%) into the note. Do not net the $220bn against the spend ladder as if it were incremental vendor revenue: it is an opportunity sizing, not a forecast.",
+   "patterns": [
+    "\\$?220bn.{0,80}(cyber|threat|opportunit)",
+    "(cyber|threat).{0,80}\\$?220bn",
+    "10% of the (cyber )?market at risk",
+    "demand creation about cybersecurity",
+    "AI-Natives"
+   ],
+   "variants": [
+    {
+     "value": "~$220bn opportunity vs ~10% at risk; net ~+10%",
+     "source": "MS Marshall/Weiss",
+     "date": "2026-04-20",
+     "scope": "MS house view",
+     "cited_in": [
+      "themes/ai-cybersecurity.md"
+     ]
+    },
+    {
+     "value": "'AI-driven security demand will more than offset AI disruption risks'",
+     "source": "MS Sustainability desk",
+     "date": "2026-04-27",
+     "scope": "restatement",
+     "cited_in": [
+      "themes/ai-cybersecurity.md"
+     ]
+    },
+    {
+     "value": "'there is a lot of demand creation about cybersecurity today because new products are about to be launched'",
+     "source": "NVDA mgmt (Jensen Huang), GS Communacopia",
+     "date": "2026-09-10",
+     "scope": "the bear on the demand side",
+     "cited_in": [
+      "themes/ai-cybersecurity.md"
+     ]
+    },
+    {
+     "value": "'risk is generally higher toward the application layer and lower in infrastructure' — cyber classified as infrastructure",
+     "source": "JPM Chatterjee, Enterprise Software Fall Series",
+     "date": "2026-09-10",
+     "scope": "read-across",
+     "cited_in": [
+      "themes/ai-cybersecurity.md"
+     ]
+    }
+   ],
+   "status": "live-debate",
+   "debate": "Bull: threat surface compounds faster than budgets (BofA 09-01; board-mandate buying trigger). Bear: the one observed AI-native attack (Hugging Face 07-16) was detected by the victim's own LLM pipeline, not a vendor SIEM/XDR; and the arms supplier says part of the narrative is vendor-manufactured. Scored on the pre-registered tests in themes/ai-cybersecurity.md."
+  },
+  "agentic-identity-tam": {
+   "title": "Agentic identity — the non-human / agent identity opportunity",
+   "definition": "Size of the market for governing AI-agent identities (discovery, credentials, least-privilege, runtime authorisation) relative to the standalone human-identity market — and who is named as a winner.",
+   "canonical": "~$60bn+ over the coming years, DOUBLE the standalone identity market; named winners PANW, OKTA, SAIL — CRWD NOT on the list (MS Marshall/Lountzis, 2026-08-20, via digest; underlying report not read in full). The standalone base it doubles is the Identity & Access segment, $29.7bn 2025E growing +17.6% '24-'29 (MS, 2026-03-20).",
+   "scope_note": "$60bn is an OPPORTUNITY over 'the coming years', not a 2029 TAM — do not add it to the $29.7bn IAM segment or place it on the spend ladder's timeline. 'Agentic identity' is also a claimed category for CRWD (Agentic Identity Provider, Fal.Con 09-03) and PANW (CyberArk) — the MS omission of CRWD is a house view, not a market fact. Okta prices agents as an UPLIFT to named/monthly-active users, so the TAM has no per-agent price unit yet.",
+   "patterns": [
+    "agentic identity.{0,80}\\$?60bn",
+    "\\$?60bn.{0,80}(agentic|identity)",
+    "double the standalone",
+    "Agentic Identity Provider",
+    "Okta for AI Agents"
+   ],
+   "variants": [
+    {
+     "value": "~$60bn+, double the standalone market; positive for PANW, OKTA, SAIL",
+     "source": "MS Marshall/Lountzis (digest)",
+     "date": "2026-08-20",
+     "scope": "opportunity sizing",
+     "cited_in": [
+      "CRWD.md",
+      "OKTA.md",
+      "themes/ai-cybersecurity.md"
+     ]
+    },
+    {
+     "value": "CRWD 'the SOLE security provider for Anthropic and OpenAI implementation programs'",
+     "source": "UBS TECH previews (Ruple relaying UBS Research)",
+     "date": "2026-08-24",
+     "scope": "the counter-claim on who captures agent security",
+     "cited_in": [
+      "CRWD.md",
+      "ANTHROPIC.md"
+     ]
+    },
+    {
+     "value": "Okta: 91% of organisations already use AI agents, 10% have a governance strategy",
+     "source": "Okta 'AI at Work' report via Q4 FY26 call",
+     "date": "2026-03-04",
+     "scope": "adoption vs governance gap",
+     "cited_in": [
+      "OKTA.md"
+     ]
+    }
+   ],
+   "status": "live-debate",
+   "debate": "Does agent identity accrue to the identity control plane (OKTA/SAIL/PANW-CyberArk), route through the endpoint/runtime platform (CRWD), or default to the hyperscaler directory (MSFT Entra ~31% IAM)? Test: OKTA cRPO/NRR holding vs CRWD Agentic IdP attach through Dec-2026."
+  },
+  "hyperscaler-cyber-share": {
+   "title": "Hyperscaler share of the cybersecurity software market",
+   "definition": "Combined share of AMZN/MSFT/GOOG in cyber software, MSFT's franchise size and its segment shares — the encroachment vector that is not AI.",
+   "canonical": "Hyperscalers combined ~14% of the cybersecurity software market (~11% MSFT alone), more than tripled in 5 years — together the largest cyber vendor. MSFT: a ~$30bn cyber practice, more than doubled in 3 years; segment shares EDR 29% · SIEM 14% · IAM 31% · data security 19% (MS Marshall/Weiss/Nowak/Baer, 'Cybersecurity: Forecast as Large Clouds Move In', 2026-01-26). Enabler: 47% of workloads in cloud vs 25% three years earlier.",
+   "scope_note": "Share of cyber SOFTWARE — not of the total spend ladder (cyber-spend-tam). MSFT's EDR 29% is an IDC 2024 corporate-endpoint share (CRWD 17%, PANW 3%); IAM 31% is Entra's IAM share — both are segment shares, not company-wide. GOOG = Mandiant + pending $32bn Wiz; AMZN 'the quietest of the three… nothing external-facing'.",
+   "patterns": [
+    "14% of the overall cyber",
+    "largest cyber vendor",
+    "\\$30bn cyber",
+    "cyber franchise",
+    "Purview being the taker",
+    "31% of IAM",
+    "IAM 31%"
+   ],
+   "variants": [
+    {
+     "value": "~14% combined / ~11% MSFT; MSFT ~$30bn, >2x in 3 yrs; EDR 29 · SIEM 14 · IAM 31 · data 19",
+     "source": "MS Marshall/Weiss/Nowak/Baer",
+     "date": "2026-01-26",
+     "scope": "software share",
+     "cited_in": [
+      "themes/ai-cybersecurity.md",
+      "MSFT.md"
+     ]
+    },
+    {
+     "value": "MS's 16 covered names ~26% of market; +MSFT/CSCO → ~40%; >half with best-of-breed privates or legacy",
+     "source": "MS, same note",
+     "date": "2026-01-26",
+     "scope": "consolidation headroom",
+     "cited_in": [
+      "themes/ai-cybersecurity.md"
+     ]
+    },
+    {
+     "value": "VRNS downgraded to EW (Purview the taker); OKTA kept OW despite CIO-survey share loss to platforms",
+     "source": "MS, same note",
+     "date": "2026-01-26",
+     "scope": "named casualties/survivors",
+     "cited_in": [
+      "themes/ai-cybersecurity.md",
+      "OKTA.md"
+     ]
+    }
+   ],
+   "status": "consistent",
+   "debate": "Competitor or rising tide? The buying-process tell is whether the CISO reports to the CFO ('the included value proposition is hard to forego'). CRWD is 'the most effective at head-to-head battle with MSFT' in endpoint."
+  },
+  "ai-vuln-discovery-unit-cost": {
+   "title": "Unit cost of AI vulnerability discovery / remediation — the harness-vs-model economics",
+   "definition": "What a frontier model costs per unit of security work (per token, per critical finding, per remediation) versus the incumbents' harness and versus runtime products' per-transaction cost — THREE different units that must never be compared across.",
+   "canonical": "Frontier: Claude Mythos Preview $25 / $125 per million input/output tokens, 5x Opus 4.6's $5/$25 (WSJ via Stratechery, 2026-04-08). Finding cost: PANW burned '>$1 million worth of tokens' to find >24 critical vulnerabilities in ~3 weeks (~5x its normal tooling) → ~$40k per critical finding at preview pricing, BEFORE triage (The Information / Aaron Holmes, 2026-06-01; house arithmetic). Remediation cost: 'about $10' on a frontier model vs '$0.03 with the same results' on CRWD's Nemotron-based harness (Kurtz, GS Communacopia, 2026-09-10). Runtime products: 'fractions of a penny per transaction with near-zero latency' (MS, 2026-04-20).",
+   "scope_note": "Per-token price ≠ cost per FINDING ≠ cost per REMEDIATION ≠ cost per runtime TRANSACTION. The PANW figure is discovery only — 1,200 findings on its first test needed '3-4 months of cleaning to understand which ones are real' before returning to steady state (Arora, 2026-09-10) — so triage labour is outside the $1m. The CRWD $0.03 is a single-source management claim with no third-party verification. Mythos pricing is PREVIEW pricing for a gated model; expect it to fall.",
+   "patterns": [
+    "\\$25 */ *\\$125",
+    "\\$0\\.03",
+    "\\$10 for that remediation",
+    "\\$10 → \\$0\\.03",
+    "1,200 \\[?vulnerab",
+    "1,200 findings",
+    "24 critical vulnerab",
+    "fractions of a penny",
+    "burned through more than \\$1 million"
+   ],
+   "variants": [
+    {
+     "value": "$25/$125 per MTok (5x Opus 4.6 $5/$25; GPT-5.4 $2.5/$15)",
+     "source": "WSJ via Stratechery / Ben Thompson",
+     "date": "2026-04-08",
+     "scope": "per token, preview",
+     "cited_in": [
+      "themes/ai-cybersecurity.md"
+     ]
+    },
+    {
+     "value": ">24 criticals in ~3 weeks, ~5x normal tools, >$1m of tokens",
+     "source": "The Information / Aaron Holmes (Sam Rubin, SVP Unit 42)",
+     "date": "2026-06-01",
+     "scope": "per finding",
+     "cited_in": [
+      "PANW.md",
+      "themes/ai-cybersecurity.md"
+     ]
+    },
+    {
+     "value": "$10 (frontier) vs $0.03 (Nemotron harness) per remediation, 'same results'",
+     "source": "CRWD mgmt (Kurtz), GS Communacopia",
+     "date": "2026-09-10",
+     "scope": "per remediation, single-source",
+     "cited_in": [
+      "CRWD.md",
+      "ANTHROPIC.md",
+      "themes/ai-cybersecurity.md"
+     ]
+    },
+    {
+     "value": "1,200 vulnerabilities on PANW's first Mythos test → 3-4 months triage → steady state; find-mix 60% Mythos / 30% OpenAI / 10% other",
+     "source": "PANW mgmt (Arora), GS Communacopia (initial-draft transcript)",
+     "date": "2026-09-10",
+     "scope": "discovery ≠ exploitation, first-party",
+     "cited_in": [
+      "PANW.md",
+      "themes/ai-cybersecurity.md"
+     ]
+    }
+   ],
+   "status": "live-debate",
+   "debate": "If harness + multi-model stays 100-300x cheaper per unit of security work than a frontier model, capability gains TRANSFER to incumbents (the bull). If Mythos-class pricing falls ~10x while capability holds, the preventative layer (TENB/QLYS/RPD, pen-test services) is the first casualty and the harness advantage becomes a dependency. Watch: any packaged Anthropic security SKU with SOC-grade latency."
   }
  }
 }

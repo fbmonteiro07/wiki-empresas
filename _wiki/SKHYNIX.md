@@ -68,6 +68,10 @@ SK hynix converts silicon wafers and litho/etch/deposition tools (ASML EUV, AMAT
 ## Current state (latest quarter)
 
 
+**🆕🔴🔴 2026-09-13 — LOWER HBM STACKS ARE PRESENTED AS THE MEMORY SUPPLIERS' BEST WAY TO MAXIMIZE TOKENS PER WAFER, WITH 4-HI AS THE ECONOMIC ENDPOINT FOR MANY INFERENCE WORKLOADS.** **SemiAnalysis Weekly Ep. 030 / companion article, Myron Xie, Bryan Shan, Harrison Barclay et al., 2026-09-13** ([source](../_equity_calls/Overall/2026-09-13_SemiAnalysis_Why-4-hi-HBM-Wins.md); [raw transcript](../_equity_calls/Overall/2026-09-13_SemiAnalysis_Why-4-hi-HBM-Wins_raw.txt)). ⚠️ **Independent research view; no SK hynix estimate, rating or PT.**
+- 🔴 SemiAnalysis argues that **4-high / 8-high / 12-high HBM expose similar bandwidth per cube once the interface is fully utilized**, while suppliers are paid mainly for the DRAM capacity. Lower stacks therefore improve **$/bandwidth**, increase harvestable cubes per wafer and reduce compounded stacking/power-delivery yield loss. The direct offset is lower HBM GB per accelerator, so HBM bit demand per GPU is not the same as HBM wafer productivity.
+- 🔴 The proposed Rubin Ultra move to **192GB of 8-high HBM4** is framed as supply rationing that lets NVIDIA ship more logic against the HBM wafers it can secure. If the industry moves toward 4-high, HBM wafer pressure can ease at the margin and some DRAM capacity can return to server DRAM, although the bottleneck may migrate to logic, substrates, packaging, power or test. **Nothing here supersedes JPM's 09-09 8-high mix mark or the existing HBM4 ASP thesis; it adds the bandwidth/TCO mechanism.**
+
 
 
 **🆕🔴🔴 2026-09-09 — JPM RAISES ITS HBM ASP ASSUMPTION FROM +35% TO +48% FOR FY27 AND KEEPS OW WITH A W2.75M PT, BUT CUTS KRW SALES/OP BY 2-7% ON THE WON — AND ITS 2026 OP NOW SITS W5TRN BELOW CONSENSUS PURELY ON FX.** (J.P. Morgan · **Jay Kwon**, Sangsik Lee, "SK hynix 3Q preview: FX headwind offset by shareholder returns", **Overweight, PT W2,750,000 (Jun-27)**, px **W1,859,000**, **2026-09-09**)
@@ -693,6 +697,8 @@ _**🆕🔴🔴🔴 Síntese — addendum 2026-09-06 (five sources: one broker r
 _Source: SKHYNIX earnings calls (dates above); management commentary, paraphrased._
 
 ## Sources
+
+ - [SemiAnalysis Weekly Ep. 030 / “Long Live the Short King: Why 4-hi HBM Wins” (2026-09-13)](../_equity_calls/Overall/2026-09-13_SemiAnalysis_Why-4-hi-HBM-Wins.md) — shorter HBM stacks preserve bandwidth, reduce stacking yield loss and improve tokens/cubes per wafer; Rubin Ultra 192GB/8-high claim remains unconfirmed.
 - 🆕 **[Ingest run — 2026-09-06 · /wiki-ingest · 4 sources (+1 SALES-DESK INDEX NOTE, listed below — 5 in total on this page) · ⚠️ NOTHING ADOPTED — no estimate, rating or PT on this page was superseded]**
   - **Morgan Stanley · Charlie Chan, Daniel Yen, Daisy Dai, Tiffany Yeh, Lucas Wang, Henry Zhao, Ethan Jia — "Greater China Semiconductors: SEMICON Taiwan 2026 key takeaways — we need more" (2026-09-06, 11pp, Industry View Attractive)** — BROKER RESEARCH. Source of the *"Rubin Ultra CPU is highly likely to use 8-Hi HBM4, around one-third fewer than 12-Hi in Rubin"* supply-chain check and of the base-die/HBM4e/software offset. ⚠️ **"CPU" is MS's own wording, ambiguous, quoted verbatim and not corrected.**
   - **@jukan05 — X, 2026-09-06 05:29 UTC, replying to @insane_analyst** ([link](https://x.com/jukan05/status/2096470793756569640)) — ⚠️ **INDEPENDENT KOREA SEMI SUPPLY-CHAIN ACCOUNT ON X, NOT A BROKER — no rating, no price target, no house model.** Source of the supply-elasticity / pin-speed inversion and of the UNCONFIRMED Feynman-8-High question.

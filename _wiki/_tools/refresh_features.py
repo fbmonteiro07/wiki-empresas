@@ -29,6 +29,7 @@ STEPS = [
     ("build_assumptions.py", []),
     ("build_book.py", []),          # needs build_catalysts + extract_house first
     ("build_mgmt_comms.py", []),    # reads each page's commentary-evolution table
+    ("build_cyber_kpis.py", []),    # cyber KPI ledger (_data/cyber_kpis.json + estimates.json) -> cyber-kpis.html
     ("build_search_index.py", []),  # incremental — unchanged files skipped
     ("build_graph.py", []),         # needs catalysts + search index + book + assumptions
     ("build_analyst.py", []),       # belief ledger + ranked, attributed proactive signal queue
@@ -49,6 +50,7 @@ HUB = [
     ("Book exposure", "book.html", "Positions × unresolved debates × catalysts — where the book is most exposed."),
     ("Sentiment — hot/cold × bull/bear", "sentiment.html", "Hot/cold × bull/bear per name: own tweet corpus + Bloomberg Twitter/news sentiment (2024→) + sell-side e-mail flow (Outlook) × EPS revisions, rating drift, short interest — weekly ranking, quadrant map, 1w/15d/4w rank-IC backtests and a 1,000-print earnings event-window study (build_sentiment.py)."),
     ("Management communication", "mgmt-communication.html", "MSFT · AMZN · GOOG · META · NVDA · TSM · ASML · AVGO — how the discourse moved quarter by quarter, the capex-message vs tape cross-section, and who will and won't put a number on it."),
+    ("Cyber KPI ledger", "cyber-kpis.html", "PANW · CRWD · OKTA — the non-GAAP KPIs Bloomberg does not carry (net new ARR, NGS ARR, cRPO, NRR, Flex, module attach): sourced ledger, cross-company small multiples on a calendar axis, next-print guide vs consensus vs the buy-side bar (hand-curated _data/cyber_kpis.json)."),
     ("Ramp AI Index", "ramp-ai-index.html", "Enterprise alt-data, two series off one panel: model mix (who gets used — provider share, the Anthropic capability ladder, vintage turnover, launch curves) and AI spend per employee. Manual refresh: drop the new CSV in _data/ramp-ai-index/, then build_ramp_index.py + build_ramp_dash.py. ⚠ no Google/Gemini rows in the panel — not a market share."),
     ("Hyperscaler capex", "hyperscaler-capex/Capex_Cloud.html", "Consensus vs actual vs house cloud capex (existing)."),
     ("GW per player", "gw-per-player.html", "Highest GW estimate per player, all sources cited, SemiAnalysis highlighted (hand-curated 2026-07-01)."),

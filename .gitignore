@@ -41,3 +41,11 @@ _wiki/_data/sentiment/leadlag.json
 _wiki/_data/sentiment/*.docx
 _wiki/_tools/_rpt_tmp/
 _wiki/_data/sentiment/lab.json
+
+# Project research agent definitions and instructions.
+!/.codex/
+/.codex/*
+!/.codex/agents/
+/.codex/agents/*
+!/.codex/agents/*.toml
+!/.codex/agents/*.md
