@@ -1,5 +1,5 @@
 {
-  "asof": "2026-09-14",
+  "asof": "2026-09-15",
   "note": "Derived belief ledger; company pages remain the source of truth.",
   "companies": {
     "AAOI": {
@@ -73,22 +73,23 @@
       "ticker": "ADVANTEST",
       "sector": "Semiconductor equipment (semicap)",
       "thesis": "#1 ATE in a duopoly with Teradyne; ~80% of SoC test is HPC/AI and effectively sole SoC tester at the GPU/CoWoS leaders — levered to test intensity, not wafer st",
-      "debate_excerpt": "🟢 2026-08-17 (INGEST) — ADVANTEST IS THE ONLY TEST-EQUIPMENT VENDOR NAMED ON STAGE AT OCP APAC, AND CPO ADDS TEST INSERTIONS RATHER THAN REPLACING THEM. FundaAI attended the OCP APAC Summit in Taipei and reports that ASE counts FOUR test insertions for a co-packaged optics package — an EIC and PIC wafer test, a chip-on-wafer test, an optical engine unit test, and a CPO package test — with the chip-on-wafer stage requiring a double-sided wafer prober with active alignment. GlobalFoundries \"runs dual-sided optical electrical tests to deliver known good optical engines. It is built on existing Advantest 93K ExaScale tools, with 200 Gbps PAM4 electrical and optical, 1,024 or more source-measure units for complex CPO PICs, and up to 224 Gbps BER testing directly on wafer,\" and GF says the setup \"is easy to deploy to OSATs and mounts on a wafer prober or part handler.\" FundaAI's conclusion: \"Every CPO package goes through these test steps regardless of who builds it. ADVANTEST IS THE ONLY TEST EQUIPMENT VENDOR NAMED AT OCP, as part of GlobalFoundries' setup. We see TEST as a CPO play WITHOUT BETTING ON A SINGLE WINNER\" (FundaAI, \"Optics & Power: OCP APAC Summit Takeaways\", 2026-08-17).…",
+      "debate_excerpt": "🆕🔴🔴🔴 2026-09-14 — MANAGEMENT AT GS COMMUNACOPIA SHORTENS THE ASIC-vs-GPU TESTER CROSSOVER FROM \"2-3 YEARS\" TO \"ROUGHLY ONE YEAR\", PULLS THE 10k-TESTER CAPACITY TARGET FORWARD, AND PUTS A NUMBER ON TESTER PRICING FOR THE FIRST TIME ON THIS PAGE: ASP +10-15% PER YEAR OVER THE LAST 1-2 YEARS. ⚠️ MANAGEMENT SOURCE, NOT BROKER RESEARCH — no rating, no price target, no house estimate is attached to any line below; nothing on this page is superseded numerically except the capacity-ramp TIMING logged in Catalysts. 🔴🔴🔴 THE CROSSOVER, AND IT IS THE SINGLE MOST CONSEQUENTIAL LINE OF THE SESSION: \"ASIC demand has accelerated enough that management shortened the expected crossover versus GPU from 2-3 years to roughly one year\" (GS Communacopia 2026 — Advantest meeting, 2026-09-13). ➤ This page's whole competitive frame — the merchant-GPU incumbency at NVDA that TER is attacking (GS 07-05; Risks) — is built on GPU being the anchor pool. Management is now saying the LARGEST INCREMENTAL TESTER POOL becomes hyperscaler custom silicon inside ~12 months, i.e. the pool where Advantest's incumbency is weakest and where Teradyne has publicly claimed ~70% at one hyperscaler and a 2027 ramp at a second.…",
       "risks_excerpt": "Margin normalization — exceptional FY2025 mix; FY2026 op margin guided flat; BOM inflation + memory supply-chain constraints (Q4 FY2025 call). China exposure (~20–25% of revenue) — export-control / decoupling + rising domestic competition (Q3/Q4 FY2025 calls). Competitive entry at GPU customers (15–20% share target by an entrant) (Q4 FY2025 call); near-term sole-source position looks defensible at HPC/CoWoS (StoneX/John Su, 2025-08-20). GS (via its Teradyne 2Q Preview, 2026-07-05) names Teradyne as the merchant-GPU test challenger and flags the durability of Advantest's Nvidia GPU-test share as the key debate — the clearest sell-side framing of the entrant risk. ATE cyclicality and order…",
-      "catalysts_excerpt": "Q1 FY2026 print (late July 2026; AGM 2026-07-31) — first read on the flat-margin guide and whether AI/SoC orders push it up. June 16 2026 IR webinar — Jefferies (O'Mara) hosted; JEF BUY ¥30,000 (briefing, 2026-06-03). FY2025 final ATE market-share data (released ~April) confirming the high-60% SoC share (Q3 FY2025 call). SoC capacity ramp to 5,000 systems/yr (end-FY2026) → 10,000/yr (2028–29) — execution + foundry/packaging capacity gating (Q4 FY2025 call; JEF/Techknowledge, 2025-12-17). New hyperscaler ASIC customer ramping with FY26 contribution; HBM / high-performance DRAM test demand and custom-ASIC programs ramping to HVM in 2026 (Q3/Q4 FY2025 calls; JEF/Techknowledge, 2025-12-17).…",
+      "catalysts_excerpt": "Q1 FY2026 print (late July 2026; AGM 2026-07-31) — first read on the flat-margin guide and whether AI/SoC orders push it up. June 16 2026 IR webinar — Jefferies (O'Mara) hosted; JEF BUY ¥30,000 (briefing, 2026-06-03). FY2025 final ATE market-share data (released ~April) confirming the high-60% SoC share (Q3 FY2025 call). SoC capacity ramp to 5,000 systems/yr (end-FY2026) → 10,000/yr (2028–29) — execution + foundry/packaging capacity gating (Q4 FY2025 call; JEF/Techknowledge, 2025-12-17). ⚠️ TIMING SUPERSEDED 2026-09-14 — management says the ~10,000 SoC testers/yr FY28-29 target has been PULLED FORWARD, with further expansion under consideration (GS Communacopia 2026 — Advantest meeting,…",
       "open_questions": [
+        "SoC capacity ramp to 5,000 systems/yr (end-FY2026) → 10,000/yr (2028–29) — execution + foundry/packaging capacity gating (Q4 FY2025 call; JEF/Techknowledge, 2025-12-17). ⚠️ TIMING SUPERSEDED 2026-09-14 — management says the ~10,000 SoC testers/yr FY28-29 target has been PULLED…",
         "⚠️ The SOC-share contradiction — one of the two companies is wrong, and CY26 data will settle it. Advantest guided to gaining SOC share; Teradyne says its own SOC share is \"pretty flat, maybe a slight incremental gain,\" with UBS computing TER's overall test share at ~37%,…",
         "Memory-share loss is now consensual, not contested — Teradyne explicitly agreed with Advantest's own guidance that it loses memory share, while TER's memory revenue set a third straight quarter above $200M ($212M) at a book-to-bill over 2x, against a 2026 memory test TAM guided…"
       ],
-      "last_change": "2026-09-09",
-      "latest_change_excerpt": "(/wiki-ingest) — NOTHING SUPERSEDED ON THIS PAGE, BUT THE WFE DEBATE GAINED A RATIO, A CROSS-CHECK AND A FOUR-WAY INDUSTRY-FORECAST SPREAD. 🔴 NET-NEW: (1) MS's semicap team (Shane Brett, who prefers AEIS, MKSI and ONTO) frames \"WFE per GW: $7BN of WFE per $100BN of AI capex\", cross-checked against MS Internet's $1.2tn of 2027 hyperscale capex / 29GW of compute, which implies 2027 WFE of $204-242bn against MSe of $223bn. (2) Two contrarian legs named as underappreciated: Terafab at $2bn of WFE in 2027/2028 and…",
+      "last_change": "2026-09-14",
+      "latest_change_excerpt": "(/run-inbox — GS Communacopia 2026 management compiles, 2 source docs). 1 block em Debate / thesis, 1 supersede-marker + 2 bullets em Catalysts, 2 links em Sources, este registro. Esta página NÃO tem seção Intra-quarter e ela NÃO foi criada (mesma convenção registrada em 2026-08-25). ⚠️ TIMING SUPERSEDIDO — o mark antigo, preservado aqui: \"SoC capacity ramp to 5,000 systems/yr (end-FY2026) → 10,000/yr (2028–29) — execution + foundry/packaging capacity gating (Q4 FY2025 call; JEF/Techknowledge, 2025-12-17)\" —…",
       "next_catalyst": "",
       "in_book": false,
       "book_side": "",
       "book_weight": null,
       "page": "ADVANTEST.md",
       "thesis_hash": "27aa54fcd446",
-      "debate_hash": "e77e9cfc536b"
+      "debate_hash": "037914ad5100"
     },
     "AEIS": {
       "ticker": "AEIS",
@@ -165,8 +166,8 @@
         "$1.8B deal ramp — revenue begins Q4 2026 (~$20–25M), partial year 2027, then full ramp; watch RPO build over coming quarters (AKAM Q1 2026 call, 2026-05-07).",
         "Security re-acceleration into 2027 — management hints 2026 could be a growth-rate floor as AI-driven attack urgency builds; watch API Security / Guardicore penetration (AKAM Q1 2026 call, 2026-05-07)."
       ],
-      "last_change": "2026-08-13",
-      "latest_change_excerpt": "(wiki-ingest, scheduled) — 🔴 A RATING AND A PRICE TARGET SUPERSEDED. 1 Debate block.",
+      "last_change": "2026-09-14",
+      "latest_change_excerpt": "(/run-inbox — 1 source: the FundaAI independent cybersecurity note, 2026-09-14). NOTHING SUPERSEDED — no rating, PT or estimate moved; JPM Neutral Dec-27 $158, BofA Buy $175, MS OW and UBS Neutral $125 all stand. Added: 1 Debate / thesis bullet and 1 Sources entry. ⚠️ This page has no intra-quarter log table, so the datapoint was filed in Debate / thesis. 🆕 NET-NEW: the first third-party placement of Akamai in a cyber beneficiary ladder built off the agent-swarm incident — rung 3 of six, application & API…",
       "next_catalyst": "",
       "in_book": false,
       "book_side": "",
@@ -695,7 +696,7 @@
         "🆕🔴 2026-09-15 to 09-17 — DREAMFORCE (SF), INVESTOR DAY 09-16 at 4PM ET. THE NAMED FOCUS IS NOW \"CLAUDEFORCE.\" UBS · Karl Keirstead (09-14): much of the investor focus will be on the newly-announced Claudeforce, an expanded partnership and integration between the Salesforce CRM…"
       ],
       "last_change": "2026-09-14",
-      "latest_change_excerpt": "(tape/desk sweep) — NOTHING SUPERSEDED; NO NUMBER, RATING OR PT ON THIS PAGE CHANGED. Added 1 OPEN-WINDOW Full-log row (09-14, valuation/mixed): CRM rose nearly 5% inside a broad enterprise-software bid on the day Amodei's \"pace the AI frontier\" essay was priced against an AI-infra selloff (SOX −6%; NOW +7%, HUBS +11% / MNDY +10% / ADBE +5% vs ORCL −3.5% / DOCN −2.5%). Filed as a POSITIONING datapoint sizing the AI-disruption discount already argued on this page (BofA Underperform $160, \"mature platform facing…",
+      "latest_change_excerpt": "ingest: the analyst's own GS Communacopia 2026 conference-notes compile (§14 Salesforce broadcast, §16 SAP broadcast). Added 1 § Intra-quarter row (09-14) and 1 § Sources entry. NOTHING SUPERSEDED — no estimate, guide, rating, PT or disclosed metric on this page changed. ⚠️ DEDUP: the entire Salesforce section is a compile of the initial-draft Bloomberg transcript of the SAME session already ingested on 09-09 (Patterson/Seaman) — Agentforce One $550 vs $1,300, ~5% premium-edition penetration at a 60-80% uplift,…",
       "next_catalyst": "2026-09-15",
       "in_book": false,
       "book_side": "",
@@ -763,8 +764,8 @@
         "CSCO is named in two of MS's seven stated key debates as of March 2026: \"What is happening in the SIEM market?\" (CRWD, PANW, CSCO, MSFT, S) and \"What does quantum mean for cyber?\" (PANW, ZS, FTNT, CSCO). ➤ The SIEM debate is live on this page; QUANTUM is not addressed anywhere…",
         "Q4 FY26 print — Wed Aug 12, 2026 (AMC) — first formal FY27 guide; watch whether AI orders sustain a ~$2-3.7B/qtr run-rate and the FY27 ≥$6B AI-rev frame is confirmed (Sami Badri close, Q3 FY26)."
       ],
-      "last_change": "2026-09-09",
-      "latest_change_excerpt": "(/wiki-ingest) — NOTHING SUPERSEDED: management REITERATED the F2027 revenue outlook at GS Communacopia on 09-08, including 15% revenue growth at the midpoint with $7.5bn of hyperscale AI revenue — both figures intact. 🔴 NET-NEW IS THE BREADTH, NOT THE NUMBERS: Cisco framed itself as positioned for a \"multi-year, AI-driven networking SUPERCYCLE, with demand across ALL customer types and its ENTIRE product portfolio\", and named AI tailwinds across hyperscale, NEOCLOUD and enterprise and across data center…",
+      "last_change": "2026-09-14",
+      "latest_change_excerpt": "(/run-inbox — 1 source: the FundaAI independent cybersecurity note, 2026-09-14). NOTHING SUPERSEDED — no rating, PT, guide or estimate moved. Added: 1 intra-quarter row and 1 Sources entry. 🆕 NET-NEW AND ANALYTICALLY DISTINCT: the first note in this corpus to argue a POSITIVE Splunk vector off the agent-security theme, and it runs on different ground from the page's existing Splunk bear. MS's 2026-08-10 \"Black Hat 2026: Agent vs Agent\" put CSCO on the wrong side of the agentic-SOC fight and MS's 2026-06-01 read…",
       "next_catalyst": "",
       "in_book": false,
       "book_side": "",
@@ -787,8 +788,8 @@
         "Log-price cross-reads: Cisco F1Q27 (Nov; last hard Splunk comp) and UBS's pending Arize checks on Dynatrace (theme page, 2026-08-31).",
         "Customer-count volatility at the free/paid border (Kidron flagged the weakest net adds \"I ever remember\", Q2 2026) — management says immaterial to revenue; watch $100K+ and $1M+ counts instead."
       ],
-      "last_change": "2026-09-04",
-      "latest_change_excerpt": "page created from 7 archived transcripts (2025-02-13 → 2026-08-06) + corpus sell-side/buy-side material via themes/ai-data-infra-observability.md. No prior values superseded.",
+      "last_change": "2026-09-14",
+      "latest_change_excerpt": "(/run-inbox — 1 source: the FundaAI independent cybersecurity note, 2026-09-14). NOTHING SUPERSEDED — no rating, PT or estimate moved; JPM OW Dec-27 $305, Barclays OW $290, R&Co Redburn Buy $300 and GS Sell $158 all stand as dated. Added: 1 intra-quarter row and 1 Sources entry. 🆕 NET-NEW AND WORTH ITS OWN LINE BECAUSE IT CUTS ACROSS THE PAGE'S MAIN BEAR: a compliance-and-forensics demand vector for the log/telemetry layer that is independent of both the AI-observability growth story and the data-volume…",
       "next_catalyst": "",
       "in_book": false,
       "book_side": "",
@@ -877,8 +878,8 @@
         "J.P. Morgan · Brian Essex — Overweight, PT $105 (Dec-27) (2026-08-28). PT path: Dec-26 $99 → $80 (2026-05-27, \"peer multiple compression\"; 4.0x EV/CY26E sales = 20x EV/CY27E FCF of $383M — the 4.0x \"below our sub-20% growth coverage peers, due in part to inconsistent…",
         "Q2 FY27 print — ~late November 2026 (Q2 FY26 was 2025-11-20; quiet period begins 2026-10-16). Bogeys from the call: revenue $486–487M, sales-led $407.5–408.5M (17.1% cc — must tick up from 17%), OM ~19%. Watch cc cRPO holding ≥20%, NER stabilising at 111%, and whether the…"
       ],
-      "last_change": "2026-09-04",
-      "latest_change_excerpt": "page created from 7 archived transcripts (2025-02-27 → 2026-08-27) + corpus sell-side material via themes/ai-data-infra-observability.md. No prior values superseded.",
+      "last_change": "2026-09-14",
+      "latest_change_excerpt": "(/run-inbox — 1 source: the FundaAI independent cybersecurity note, 2026-09-14). NOTHING SUPERSEDED — no rating, PT or estimate moved; JPM OW $105 and Barclays OW $118 (both 2026-08-28) stand as dated. Added: 1 intra-quarter row and 1 Sources entry. 🆕 NET-NEW: a compliance-and-forensics demand vector for the security-data layer, evidenced by the logs themselves being attacked — ~7% of the transcripts METR evaluated had content successfully tampered with by the agents, which also researched how to falsify their…",
       "next_catalyst": "2026-09-22",
       "in_book": false,
       "book_side": "",
@@ -940,8 +941,8 @@
         "AI-software read-through — \"CDN for tokens\" (Vercel CEO Guillermo Rauch, Stanford MS&E435, 2026-06-29): Rauch's \"AI Gateway = CDN for tokens\" thesis extends edge-CDN primitives (routing/caching/observability/security) to inference traffic — directionally a Compute@Edge…",
         "Compute / edge-inference monetization — early \"co-innovation\" / design-partner stage; watch for productized AI inference offers leveraging the distributed network (FSLY Q1 2026 call, 2026-05-06)."
       ],
-      "last_change": "2026-08-04",
-      "latest_change_excerpt": "/run-inbox — READ-THROUGH ONLY (subject company is Cloudflare). Source: Barclays Research equity note, Saket Kalia, CFA & Ethan Sneckenberger — \"Cloudflare, Inc. — Traffic Continues to Inflect, We Wonder if 'The Check Is in the Mail' Given Volume and Rev. Lags; Latest 2025 Mkt Share Data\" (NET earnings preview, 2026-08-04). Added one Debate / thesis bullet carrying the note's Figure 3 — updated IDC global CDN revenue-share tracker through FY2025: FSLY 3.2% in 2025, +25bps y/y, on a slow climb 2.4% (2021) → 2.7% →…",
+      "last_change": "2026-09-14",
+      "latest_change_excerpt": "(/run-inbox — 1 source: the FundaAI independent cybersecurity note, 2026-09-14). NOTHING SUPERSEDED — no estimate moved, and this page still carries no sell-side rating or PT. Added: 1 Debate / thesis bullet and 1 Sources entry. ⚠️ This page has no intra-quarter log table, so the datapoint was filed in Debate / thesis. 🆕 NET-NEW: the first third-party note in the corpus to argue an incident-driven demand mechanism for the Security + Other line that the diversification thesis rests on — FSLY named in rung 3 of six…",
       "next_catalyst": "",
       "in_book": false,
       "book_side": "",
@@ -1273,7 +1274,7 @@
         "First disclosed Meta Compute / Muse API revenue (new, 2026-07-30). Management confirmed premium compute offers and a live public Muse API + OpenRouter distribution, but disclosed no revenue, no token volume, no enterprise logo and no signed compute contract — so the BofA…"
       ],
       "last_change": "2026-09-14",
-      "latest_change_excerpt": "(/wiki-ingest — 3 sources, all dated 2026-09-14: Barclays · Ross Sandler / Alex Hughes / Michael DiSanto / Alexander Kessinger, \"U.S. Internet: Compute Increases ~18% From Frontier Lab 'Pacing'\"; JPM · Mark Schilsky, US Internet Spec Sales; TMT Breakout, \"TMTB EOD Wrap\"). ✅ NOTHING SUPERSEDED — no rating, no price target, no house or Street estimate, no guide and no thesis on this page was replaced. Purely additive: one Full log row, a 🆕 dated clause appended to the Model quality vs the frontier Signal row (both…",
+      "latest_change_excerpt": "ingest: 2 sources. (a) Meeting notes with Justin Post, SELL-SIDE INTERNET ANALYST (BofA), from the GS Communacopia 2026 file — an analyst's view, NOT company guidance, with NO rating and NO price target stated and none inferred; (b) Morgan Stanley's \"Agentic Shoppers Are Coming…\", published 2025-11-17 and TEN MONTHS STALE. Added 2 § Intra-quarter rows (09-14 and 11-17, the latter marked explicitly as a 2025 historical anchor) and 1 § Sources entry. NOTHING SUPERSEDED BY EITHER — no estimate, rating, PT or…",
       "next_catalyst": "2026-09-15",
       "in_book": true,
       "book_side": "long",
@@ -1459,7 +1460,7 @@
         "Q2 FY26 print (~Jul/2026, by historical cadence — Q2-25 was 2025-07-23). Watch: traction of the $1.5bn AI commitments target and the non-seat-based mix (already at 50% of net new)."
       ],
       "last_change": "2026-09-14",
-      "latest_change_excerpt": "(tape/desk sweep) — NOTHING SUPERSEDED; NO NUMBER, RATING OR PT ON THIS PAGE CHANGED. Added 1 intra-quarter Full-log row (09-14, valuation/mixed) recording that NOW +7% was the single largest named move in the enterprise-software bid on the day Amodei's \"pace the AI frontier\" essay was priced against an AI-infra selloff (SOX −6%; HUBS +11% / MNDY +10% / ADBE +5% vs ORCL −3.5% / DOCN −2.5%, with the crowded longs SNOW/TWLO/MSFT +1-2% lagging). Filed explicitly as a POSITIONING datapoint against the existing \"AI…",
+      "latest_change_excerpt": "ingest: the analyst's own GS Communacopia 2026 conference-notes compile (§15 ServiceNow broadcast, §16 SAP broadcast, conference-level takeaways). Added 1 § Intra-quarter row (09-14) and 1 § Sources entry. NOTHING SUPERSEDED — no estimate, guide, rating, PT or disclosed metric on this page changed. ⚠️ DEDUP: the ServiceNow section is a compile of the SAME McDermott keynote already ingested on 09-09 and is duplicative end to end (SecOps $1bn, 7bn devices / 40bn more, eighth-largest security, ~500,000 mid-market…",
       "next_catalyst": "",
       "in_book": false,
       "book_side": "",
@@ -1485,7 +1486,7 @@
       ],
       "last_change": "2026-09-14",
       "latest_change_excerpt": "ingest: equitycalls/Semis/2026-09-09Communacopia-weekanalyst-callAI-infra-AVGO-NVDA-memory-semicap.md + equitycalls/Semis/2026-09-09expertNVDA-AI-chip-gross-margin-compression-in-house-design.md + equitycalls/Outros/2026-09-08CommunacopiaSoftBank-Group-IR-group-meeting.md (Communacopia-week Notion notes) — 1 Current state block (9 bullets), 1 Debate / thesis paragraph, 3 Full-log rows, 1 Sources entry. ✅ NOTHING SUPERSEDED: no rating, PT, estimate or thesis on this page was replaced. ⚠️⚠️ The broker behind the…",
-      "next_catalyst": "2026-09-14",
+      "next_catalyst": "2026-09-24",
       "in_book": true,
       "book_side": "long",
       "book_weight": null,
@@ -1870,7 +1871,7 @@
         "DotDev developer conference — July 21-22, 2026 — flagged in JPM's US Internet catalyst calendar; watch for agentic-commerce / dev-platform (UCP, Sidekick, checkout) announcements (JPM · Anmuth \"US Internet 2Q26 Preview\", 2026-07-14). Source"
       ],
       "last_change": "2026-09-14",
-      "latest_change_excerpt": "(tape/desk sweep) — NOTHING SUPERSEDED; NO NUMBER, RATING OR PT ON THIS PAGE CHANGED. Added 1 Q2 FY26-window Full-log row (09-14, valuation/mixed): Shopify was named among the enterprise-software gainers on the day Amodei's \"pace the AI frontier\" essay was priced against an AI-infra selloff (SOX −6%). ⚠️ NO SHOP PERCENTAGE EXISTS IN THE SOURCE AND NONE WAS CREATED — Peers quantifies only NOW (+7%) and CRM (~+5%); the row carries direction only. Cohort context logged from TMTB: HUBS +11% / MNDY +10% / ADBE +5% vs…",
+      "latest_change_excerpt": "ingest: 1 source, Morgan Stanley's \"Internet: Agentic Shoppers Are Coming… Who Could Win or Lose?\" (Feather/Nowak/Gutman et al.), published 2025-11-17 and TEN MONTHS STALE. Added 1 § Intra-quarter row logged at its own date (11-17) and marked explicitly as a 2025 historical anchor, plus 1 § Sources entry. NOTHING SUPERSEDED — no estimate, guide, rating, PT or current-state number on this page changed, and NOTHING was moved into this Changelog on its account. 🔴 Why it earns a row anyway: this page already carried…",
       "next_catalyst": "",
       "in_book": false,
       "book_side": "",
@@ -2006,7 +2007,7 @@
         "Q3 FY27 print (~early Dec 2026; Q3 FY26 was 2025-12-03). Bogey is the guide: $1.588–1.593B / +37–38%, op margin 15.5%. Watch (i) whether product GM holds 74% or slips further as AI mix rises; (ii) CoCo/CoWork account adds vs the +2,000 / +11% q/q pace; (iii) any disclosure of…"
       ],
       "last_change": "2026-09-14",
-      "latest_change_excerpt": "ingest: equitycalls/Internet/2026-09-08CommunacopiaDatabricks-CEO-fireside.md (Communacopia-week Notion notes) — COMPETITOR read-through only. Added one § Debate block (\"competitor read-through — Databricks @ Communacopia 09-08\", every item labelled as a Databricks statement), one § Risks bullet, one § Intra-quarter row (09-08) and one § Sources entry. NOTHING SUPERSEDED — no Snowflake estimate, guide, rating, PT or disclosed metric changed. What it does to the debate: ✅ CONFIRMS governance/catalog as the moat…",
+      "latest_change_excerpt": "ingest: the analyst's own GS Communacopia 2026 conference-notes compile (§13 Snowflake, broadcast session). Added 1 § Intra-quarter row (09-14) and 1 § Sources entry. NOTHING SUPERSEDED — no estimate, guide, rating, PT or disclosed metric on this page changed, and no row was re-dated. ⚠️ DEDUP: almost the whole section was already on disk from the 09-08 Bloomberg FINAL transcript ingested on 09-09 (Teradata under three quarters, 3–5 CFOs a week, two quarters of CoCo data, accepted GM dilution, steeper ramps,…",
       "next_catalyst": "",
       "in_book": false,
       "book_side": "",
@@ -2138,8 +2139,8 @@
         "CPO / silicon photonics insertion mix evolution; ramp weighted to H2 (UBS CPO call, 2026-05-04). Watch SemiAnalysis CPO skepticism noted in the tape (briefing, 2026-06-17).",
         "Networking share defence vs the reciprocal dual-source (new 2026-08-03). TER has very high share at both large networking customers and is sole-sourced at one, and the networking/VIP slice already hit ~$1bn in 2026 versus TER's own prior \"$800m+ by 2028\" — reached ~2 years…"
       ],
-      "last_change": "2026-09-09",
-      "latest_change_excerpt": "(/wiki-ingest) — NOTHING SUPERSEDED ON THIS PAGE, BUT THE WFE DEBATE GAINED A RATIO, A CROSS-CHECK AND A FOUR-WAY INDUSTRY-FORECAST SPREAD. 🔴 NET-NEW: (1) MS's semicap team (Shane Brett, who prefers AEIS, MKSI and ONTO) frames \"WFE per GW: $7BN of WFE per $100BN of AI capex\", cross-checked against MS Internet's $1.2tn of 2027 hyperscale capex / 29GW of compute, which implies 2027 WFE of $204-242bn against MSe of $223bn. (2) Two contrarian legs named as underappreciated: Terafab at $2bn of WFE in 2027/2028 and…",
+      "last_change": "2026-09-14",
+      "latest_change_excerpt": "(/run-inbox — GS Communacopia 2026 management compiles, 2 source docs). 1 linha no full log intra-quarter (09-13), 1 re-avaliação DENTRO da célula final da linha \"Merchant-GPU / second hyperscaler\" do Sinal vs gestão, 1 addendum na Síntese do quarter, 2 links em Sources, este registro. NADA SUPERSEDIDO: nenhum rating, PT ou estimativa de casa foi tocado — a fonte é MANAGEMENT e não tem rating nem PT em lugar nenhum. 🔴 NET-NEW, e o ponto é que a linha de 09-09 desta página registrou explicitamente \"NOTHING…",
       "next_catalyst": "",
       "in_book": false,
       "book_side": "",

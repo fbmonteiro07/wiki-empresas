@@ -1,12 +1,11 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-09-14 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-09-15 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (51)
+## 📅 Upcoming (50)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-09-14 | NVDA | **🆕 Post-print access, both dated:** **BofA fireside with Toshiya Hari, VP of IR & Strategic Finance, hosted by Vivek Arya — 2026-09-02, 11:00 ET (~1hr)** (BofA TMT Sales, 2026-08-14) · **UBS-arranged |
 | 2026-09-15 | AVGO | **🆕 BERNSTEIN 8th ANNUAL SEMIS BUS TOUR, 2026-09-15/16, San Jose — AVGO on the roster alongside [[ALAB]], [[AMAT]], AMBA, LSCC, MPWR, [[NVDA]], [[NXPI]].** First scheduled corporate-access window afte |
 | 2026-09-15 | CRM | **🆕🔴 2026-09-15 to 09-17 — DREAMFORCE (SF), INVESTOR DAY 09-16 at 4PM ET. THE NAMED FOCUS IS NOW "CLAUDEFORCE."** UBS · Karl Keirstead (09-14): much of the investor focus will be on the newly-announce |
 | 2026-09-15 | DELL | **2026-09-15 — UBS David Vogt Boston marketing '26 #3, US Hardware.** |
@@ -58,12 +57,14 @@ _Generated 2026-09-14 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-12-02 | OKTA | **🧪 PRE-REGISTERED TEST T3 — Q3 FY27 print ~2026-12-02:** cRPO growth **≥ 13%** (guide +11–12%; Q2 printed +14.1%) **AND dollar-based NRR ≥ 107%** = bull; cRPO ≤ 12% and/or NRR back to 106% = bear. ⚠️ |
 | 2027-01-01 | BKNG | **🆕 B2B STAND-ALONE LAUNCH ON 2027-01-01 with dedicated management (BKNG exec (likely CFO Steenbergen ⚠) @ Communacopia-week investor group mtg, 2026-09-09 — Capstone Notion transcript).** Watch for t |
 
-## ⏰ Passed — need a post-mortem (5)
+## ⏰ Passed — need a post-mortem (7)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
+| 2026-09-14 | NVDA | **🆕 Post-print access, both dated:** **BofA fireside with Toshiya Hari, VP of IR & Strategic Finance, hosted by Vivek Arya — 2026-09-02, 11:00 ET (~1hr)** (BofA TMT Sales, 2026-08-14) · **UBS-arranged |
+| 2026-09-14 | ADVANTEST | **SoC capacity ramp** to 5,000 systems/yr (end-FY2026) → 10,000/yr (2028–29) — execution + foundry/packaging capacity gating (Q4 FY2025 call; JEF/Techknowledge, 2025-12-17). ⚠️ **TIMING SUPERSEDED 202 |
 | 2026-09-11 | LITE | **🆕 2026-09-11 (Capstone IR meeting @ Communacopia week — Kathy Ta, VP IR; Notion transcript) — DATED ITEMS TO WATCH:** (1) **OCP, October — Meta *"going to shift to an external light source"*** per L |
 | 2026-09-10 | TSM | **🆕🔴 2026-08-18 — THE 2026-28 CAPEX FLOOR: "significantly higher" than the $101bn of 2023-25, with 2026 at $62-64bn.** ⚠️ **The call renders the 2026 figure both as "$62-64bn" and as "$62bn at the mid |
 | 2026-09-09 | MSFT | **🆕 2026-09-09 — FIVE THINGS THE IR INVESTOR-GROUP MEETING TELLS YOU TO WATCH INTO F1Q27** (Microsoft IR @ Communacopia week, 2026-09-09 — Capstone Notion transcript; **IR source, none of (i)-(v) is a |
