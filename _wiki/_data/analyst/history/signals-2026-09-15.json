@@ -7,10 +7,10 @@
     "positions": 8
   },
   "stats": {
-    "signals": 104,
-    "active": 104,
-    "high": 10,
-    "belief_changes": 1,
+    "signals": 101,
+    "active": 101,
+    "high": 7,
+    "belief_changes": 2,
     "focus_names": 51
   },
   "focus": [
@@ -18,30 +18,15 @@
       "ticker": "MSFT",
       "focus_score": 95,
       "in_book": true,
-      "signal_count": 10,
-      "high_count": 2,
+      "signal_count": 9,
+      "high_count": 1,
       "sector": "AI — Hyperscalers & Software",
       "thesis": "AI ARR >$37B/+123%; swing is capex (CY27 ~$276B) vs Azure revenue + OpenAI concentration.",
       "next_catalyst": "2026-09-15",
       "why": [
         "MSFT — 2026-09-15: MICROSOFT PUBLISHES THE \"CODE OF CONDUCT\" UNDERLYING ITS FIRST-PARTY MAI MODELS, FOR…",
-        "MSFT — catalyst passed without a logged outcome",
-        "MSFT — consensus capex decelerates hard while management says it must keep building ahead"
-      ]
-    },
-    {
-      "ticker": "NVDA",
-      "focus_score": 91,
-      "in_book": true,
-      "signal_count": 13,
-      "high_count": 1,
-      "sector": "AI — Semis & Compute",
-      "thesis": "Full-stack AI-factory platform at +85% rev; debate is demand sustainability vs ASIC erosion.",
-      "next_catalyst": "2026-09-24",
-      "why": [
-        "NVDA — catalyst passed without a logged outcome",
-        "The HBM de-spec chain now has vendors on BOTH sides, and one supplier has broken ranks",
-        "NVDA — 2026-09-24: TRUMP-XI MEETING, 2026-09-24 — the dated headline-risk window, and UBS says the newsflow…"
+        "MSFT — consensus capex decelerates hard while management says it must keep building ahead",
+        "MS's 2027 capex acceleration sits far above BBG consensus, on all four hyperscalers"
       ]
     },
     {
@@ -90,17 +75,18 @@
       ]
     },
     {
-      "ticker": "TSM",
-      "focus_score": 81,
+      "ticker": "NVDA",
+      "focus_score": 83,
       "in_book": true,
-      "signal_count": 2,
-      "high_count": 1,
+      "signal_count": 12,
+      "high_count": 0,
       "sector": "AI — Semis & Compute",
-      "thesis": "Sole-source leading-edge foundry (~70% share); pricing headroom vs overseas-fab dilution.",
+      "thesis": "Full-stack AI-factory platform at +85% rev; debate is demand sustainability vs ASIC erosion.",
       "next_catalyst": "2026-09-24",
       "why": [
-        "TSM — catalyst passed without a logged outcome",
-        "TSM — 2026-09-24: TRUMP-XI, 2026-09-24 — UBS puts SPE and MEMORY as the most exposed verticals, with the…"
+        "The HBM de-spec chain now has vendors on BOTH sides, and one supplier has broken ranks",
+        "NVDA — 2026-09-24: TRUMP-XI MEETING, 2026-09-24 — the dated headline-risk window, and UBS says the newsflow…",
+        "NVDA — two houses, one disclosure, opposite postures — but it is a BASIS difference, not a disagreement"
       ]
     },
     {
@@ -177,47 +163,32 @@
       ]
     },
     {
-      "ticker": "ADVANTEST",
+      "ticker": "TSEM",
       "focus_score": 66,
       "in_book": false,
       "signal_count": 3,
+      "high_count": 0,
+      "sector": "AI — Semis & Compute",
+      "thesis": "Specialty foundry re-rating on SiPho/SiGe optical; $1.3B 2027 SiPho commit (NVDA-anchored per FinTwit); bear = ramp/concentration. SIG Positive $330.",
+      "next_catalyst": "2026-09-15",
+      "why": [
+        "TSEM — derived thesis/debate state changed since the prior daily snapshot",
+        "TSEM — 2026-09-15: DELIVERED: the virtual fireside this page flagged on 09-07 as \"the venue to ask about the…",
+        "TSEM — 2026-09-21: 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — ICE SEMICONDUCTOR…"
+      ]
+    },
+    {
+      "ticker": "ADVANTEST",
+      "focus_score": 64,
+      "in_book": false,
+      "signal_count": 2,
       "high_count": 0,
       "sector": "Semiconductor equipment (semicap)",
       "thesis": "#1 ATE in a duopoly with Teradyne; ~80% of SoC test is HPC/AI and effectively sole SoC tester at the GPU/CoWoS leaders — levered to test intensity, not wafer st",
       "next_catalyst": "",
       "why": [
         "ADVANTEST — derived thesis/debate state changed since the prior daily snapshot",
-        "ADVANTEST — catalyst passed without a logged outcome",
         "ADVANTEST — a price mark this page has never carried, and the third vendor in one week to put price on the table"
-      ]
-    },
-    {
-      "ticker": "LITE",
-      "focus_score": 64,
-      "in_book": false,
-      "signal_count": 4,
-      "high_count": 0,
-      "sector": "Optical / Networking",
-      "thesis": "US photonics pure-play (rev +90%); demand isn't the question, supply/execution is.",
-      "next_catalyst": "2026-09-18",
-      "why": [
-        "LITE — catalyst passed without a logged outcome",
-        "LITE — 2026-09-18: LITE IS ADDED TO FTSE ALL-WORLD IN THE SEPTEMBER 2026 GLOBAL QUARTERLY REBALANCE. A DATED,…",
-        "LITE — 2026-09-22: ECOC (JPM-hosted meetings). CEO Michael Hurlston meeting alongside CRDO (CEO Bill…"
-      ]
-    },
-    {
-      "ticker": "ASML",
-      "focus_score": 60,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "AI — Semis & Compute",
-      "thesis": "Supply-chain chokepoint (EUV near-monopoly); Street \"behind the curve\" on 2027/28 vs a 2028 DRAM air-pocket.",
-      "next_catalyst": "",
-      "why": [
-        "ASML — catalyst passed without a logged outcome",
-        "ASML — the wiki was carrying High-NA's WORST-CASE throughput, for the segment that adopts FIRST"
       ]
     },
     {
@@ -232,19 +203,6 @@
       "why": [
         "CRM — 2026-09-15: 2026-09-15 to 09-17 — DREAMFORCE (SF), INVESTOR DAY 09-16 at 4PM ET. THE NAMED FOCUS IS…",
         "[23:00 second pass] CRM — the Street is modelling FLAT-TO-RISING gross margin on the same product management just admitted it is subsidising"
-      ]
-    },
-    {
-      "ticker": "AMAT",
-      "focus_score": 58,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Semiconductor equipment (semicap)",
-      "thesis": "Broadest-line front-end WFE; share-gainer into a $200B/$250B '27-'28 WFE cycle; bear = memory beta + crowded positioning.",
-      "next_catalyst": "",
-      "why": [
-        "AMAT — catalyst passed without a logged outcome"
       ]
     },
     {
@@ -289,6 +247,19 @@
       ]
     },
     {
+      "ticker": "TSM",
+      "focus_score": 57,
+      "in_book": true,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "AI — Semis & Compute",
+      "thesis": "Sole-source leading-edge foundry (~70% share); pricing headroom vs overseas-fab dilution.",
+      "next_catalyst": "2026-09-24",
+      "why": [
+        "TSM — 2026-09-24: TRUMP-XI, 2026-09-24 — UBS puts SPE and MEMORY as the most exposed verticals, with the…"
+      ]
+    },
+    {
       "ticker": "DELL",
       "focus_score": 53,
       "in_book": false,
@@ -304,6 +275,35 @@
       ]
     },
     {
+      "ticker": "PANW",
+      "focus_score": 53,
+      "in_book": false,
+      "signal_count": 3,
+      "high_count": 0,
+      "sector": "Software / security / internet",
+      "thesis": "Cybersecurity platformization land-grab + agentic SecOps; debate = organic vs M&A-flattered NGS ARR.",
+      "next_catalyst": "2026-09-15",
+      "why": [
+        "PANW — 2026-09-15: PRE-REGISTERED TEST T8 — the Dec-2026 / Jan-2027 CISO BUDGET RESET, scored at the Jan–Mar…",
+        "Cybersecurity — the beneficiary ladder is INVERSELY ranked against consensus implied upside",
+        "PANW — Morgan Stanley calls it a Top Pick with a price target below the Street median"
+      ]
+    },
+    {
+      "ticker": "CRWD",
+      "focus_score": 51,
+      "in_book": false,
+      "signal_count": 2,
+      "high_count": 0,
+      "sector": "Software / security / internet",
+      "thesis": "Falcon consolidation flywheel + Charlotte AI; net-new ARR re-accel; valuation/crowding + 2024-outage tail the bear.",
+      "next_catalyst": "2026-09-15",
+      "why": [
+        "CRWD — 2026-09-15: PRE-REGISTERED TEST T8 — the Dec-2026 / Jan-2027 CISO BUDGET RESET, scored at the Jan–Mar…",
+        "Cybersecurity — the beneficiary ladder is INVERSELY ranked against consensus implied upside"
+      ]
+    },
+    {
       "ticker": "ORCL",
       "focus_score": 51,
       "in_book": false,
@@ -316,34 +316,6 @@
         "ORCL — 2026-10-28: ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as \"Investor Day in…",
         "D-5 · ORCL — the PT is 18% above consensus, and the stated downside case IS consensus",
         "ORCL — management's RPO conversion pace contests the standing BofA bear, but the bases differ"
-      ]
-    },
-    {
-      "ticker": "ESTC",
-      "focus_score": 50,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "AI · Data infrastructure & observability",
-      "thesis": "Permission-aware search/context plane straddling observability + security; +15% with 37% of large customers on AI; stable at 4-5x sales, not inflecting.",
-      "next_catalyst": "2026-09-22",
-      "why": [
-        "Cybersecurity — the beneficiary ladder is INVERSELY ranked against consensus implied upside",
-        "ESTC — 2026-09-22: Metrics webinar — 2026-09-22, 8:00 PT (Kurtz, Q1 FY27 call): the observability-relaunch…"
-      ]
-    },
-    {
-      "ticker": "PANW",
-      "focus_score": 50,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "Software / security / internet",
-      "thesis": "Cybersecurity platformization land-grab + agentic SecOps; debate = organic vs M&A-flattered NGS ARR.",
-      "next_catalyst": "2026-11-18",
-      "why": [
-        "Cybersecurity — the beneficiary ladder is INVERSELY ranked against consensus implied upside",
-        "PANW — Morgan Stanley calls it a Top Pick with a price target below the Street median"
       ]
     },
     {
@@ -410,6 +382,21 @@
       "why": [
         "SMTC — latest earnings transcript absent",
         "SMTC — 2026-10-15: INVESTOR / ANALYST DAY, San Jose. The single most important dated event on this page,…"
+      ]
+    },
+    {
+      "ticker": "LITE",
+      "focus_score": 44,
+      "in_book": false,
+      "signal_count": 3,
+      "high_count": 0,
+      "sector": "Optical / Networking",
+      "thesis": "US photonics pure-play (rev +90%); demand isn't the question, supply/execution is.",
+      "next_catalyst": "2026-09-18",
+      "why": [
+        "LITE — 2026-09-18: LITE IS ADDED TO FTSE ALL-WORLD IN THE SEPTEMBER 2026 GLOBAL QUARTERLY REBALANCE. A DATED,…",
+        "LITE — 2026-09-22: ECOC (JPM-hosted meetings). CEO Michael Hurlston meeting alongside CRDO (CEO Bill…",
+        "InP routing INVERSION — cuts against the moat LITE and COHR both run on"
       ]
     },
     {
@@ -589,6 +576,19 @@
       ]
     },
     {
+      "ticker": "ESTC",
+      "focus_score": 40,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "AI · Data infrastructure & observability",
+      "thesis": "Permission-aware search/context plane straddling observability + security; +15% with 37% of large customers on AI; stable at 4-5x sales, not inflecting.",
+      "next_catalyst": "2026-09-22",
+      "why": [
+        "ESTC — 2026-09-22: Metrics webinar — 2026-09-22, 8:00 PT (Kurtz, Q1 FY27 call): the observability-relaunch…"
+      ]
+    },
+    {
       "ticker": "OKTA",
       "focus_score": 40,
       "in_book": false,
@@ -599,19 +599,6 @@
       "next_catalyst": "2026-09-21",
       "why": [
         "OKTA — 2026-09-21: Oktane — week of 2026-09-21, Las Vegas — \"the AI security event of the year\", with an…"
-      ]
-    },
-    {
-      "ticker": "TSEM",
-      "focus_score": 40,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "AI — Semis & Compute",
-      "thesis": "Specialty foundry re-rating on SiPho/SiGe optical; $1.3B 2027 SiPho commit (NVDA-anchored per FinTwit); bear = ramp/concentration. SIG Positive $330.",
-      "next_catalyst": "2026-09-21",
-      "why": [
-        "TSEM — 2026-09-21: 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — ICE SEMICONDUCTOR…"
       ]
     },
     {
@@ -640,6 +627,19 @@
       "next_catalyst": "",
       "why": [
         "GOOG/AVGO/ANTHROPIC — the FT (08-04) SIZES a figure the wiki had marked unsizeable, and it is the EARLIER source"
+      ]
+    },
+    {
+      "ticker": "ASML",
+      "focus_score": 35,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "AI — Semis & Compute",
+      "thesis": "Supply-chain chokepoint (EUV near-monopoly); Street \"behind the curve\" on 2027/28 vs a 2028 DRAM air-pocket.",
+      "next_catalyst": "",
+      "why": [
+        "ASML — the wiki was carrying High-NA's WORST-CASE throughput, for the segment that adopts FIRST"
       ]
     },
     {
@@ -807,111 +807,9 @@
       "hidden": false
     },
     {
-      "id": "post-dfe62941cf2b",
+      "id": "esti-27f2d33b262d",
       "asof": "2026-09-15",
-      "source_date": "2026-09-09",
-      "event_date": "2026-09-09",
-      "type": "postmortem",
-      "priority": "high",
-      "score": 74,
-      "title": "MSFT — catalyst passed without a logged outcome",
-      "tickers": [
-        "MSFT"
-      ],
-      "in_book": [
-        "MSFT"
-      ],
-      "impact": "high",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "🆕 2026-09-09 — FIVE THINGS THE IR INVESTOR-GROUP MEETING TELLS YOU TO WATCH INTO F1Q27 (Microsoft IR @ Communacopia week, 2026-09-09 — Capstone Notion transcript; IR source, none of (i)-(v) is a",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for MSFT in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "🆕 2026-09-09 — FIVE THINGS THE IR INVESTOR-GROUP MEETING TELLS YOU TO WATCH INTO F1Q27 (Microsoft IR @ Communacopia week, 2026-09-09 — Capstone Notion transcript; IR source, none of (i)-(v) is a",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "post-2447168cfd74",
-      "asof": "2026-09-15",
-      "source_date": "2026-09-14",
-      "event_date": "2026-09-14",
-      "type": "postmortem",
-      "priority": "high",
-      "score": 74,
-      "title": "NVDA — catalyst passed without a logged outcome",
-      "tickers": [
-        "NVDA"
-      ],
-      "in_book": [
-        "NVDA"
-      ],
-      "impact": "high",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "🆕 Post-print access, both dated: BofA fireside with Toshiya Hari, VP of IR & Strategic Finance, hosted by Vivek Arya — 2026-09-02, 11:00 ET (~1hr) (BofA TMT Sales, 2026-08-14) · UBS-arranged",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for NVDA in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "🆕 Post-print access, both dated: BofA fireside with Toshiya Hari, VP of IR & Strategic Finance, hosted by Vivek Arya — 2026-09-02, 11:00 ET (~1hr) (BofA TMT Sales, 2026-08-14) · UBS-arranged",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "post-1534fa8a9c57",
-      "asof": "2026-09-15",
-      "source_date": "2026-09-10",
-      "event_date": "2026-09-10",
-      "type": "postmortem",
-      "priority": "high",
-      "score": 74,
-      "title": "TSM — catalyst passed without a logged outcome",
-      "tickers": [
-        "TSM"
-      ],
-      "in_book": [
-        "TSM"
-      ],
-      "impact": "high",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "🆕🔴 2026-08-18 — THE 2026-28 CAPEX FLOOR: \"significantly higher\" than the $101bn of 2023-25, with 2026 at $62-64bn. ⚠️ The call renders the 2026 figure both as \"$62-64bn\" and as \"$62bn at the mid",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for TSM in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "🆕🔴 2026-08-18 — THE 2026-28 CAPEX FLOOR: \"significantly higher\" than the $101bn of 2023-25, with 2026 at $62-64bn. ⚠️ The call renders the 2026 figure both as \"$62-64bn\" and as \"$62bn at the mid",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "esti-7a1d02964ad9",
-      "asof": "2026-09-15",
-      "source_date": "2026-09-14",
+      "source_date": "2026-09-15",
       "type": "model_check",
       "priority": "high",
       "score": 72,
@@ -925,7 +823,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $427.4bn as of 2026-09-14, a derived +18.2% gap. Revenue comparisons require a basis check.",
+      "why_now": "Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $427.4bn as of 2026-09-15, a derived +18.2% gap. Revenue comparisons require a basis check.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -980,7 +878,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-14",
+      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-15",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -998,9 +896,9 @@
       "hidden": false
     },
     {
-      "id": "esti-ea07b41c8f44",
+      "id": "esti-a6fd010bf8e4",
       "asof": "2026-09-15",
-      "source_date": "2026-09-14",
+      "source_date": "2026-09-15",
       "type": "model_check",
       "priority": "high",
       "score": 71,
@@ -1014,7 +912,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2027 revenue at $641.0bn versus Bloomberg consensus at $545.3bn as of 2026-09-14, a derived +17.6% gap. Revenue comparisons require a basis check.",
+      "why_now": "Capstone carries 2027 revenue at $641.0bn versus Bloomberg consensus at $545.3bn as of 2026-09-15, a derived +17.6% gap. Revenue comparisons require a basis check.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -1069,7 +967,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-14",
+      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-15",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -1171,9 +1069,9 @@
       "hidden": false
     },
     {
-      "id": "esti-ee99f2e4a5e1",
+      "id": "esti-b14f4c62ea9b",
       "asof": "2026-09-15",
-      "source_date": "2026-09-14",
+      "source_date": "2026-09-15",
       "type": "model_check",
       "priority": "high",
       "score": 69,
@@ -1187,7 +1085,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.76 as of 2026-09-14, a derived +15.5% gap.",
+      "why_now": "Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.76 as of 2026-09-15, a derived +15.5% gap.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the AAPL model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -1207,7 +1105,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-09-14",
+      "source": "Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-09-15",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -1563,6 +1461,36 @@
       "hidden": false
     },
     {
+      "id": "beli-30bc8b6f60a3",
+      "asof": "2026-09-15",
+      "source_date": "2026-09-15",
+      "type": "narrative_shift",
+      "priority": "medium",
+      "score": 62,
+      "title": "TSEM — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "TSEM"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "ingest: TSEM/transcripts/TSEManalyst-hosted-investor-QA-call2026-09-15.md (Notion AI meeting note, archived same day) — 1 Current state block (13 bullets), 1 Debate / thesis bullet, 5 Catalysts items (incl. one ✅ delivered), 1 Risks bullet, 1 Full-log row (09-15), 1 Sources entry. NOTHING SUPERSEDED — no rating, PT, estimate, consensus or house number on this page was replaced. ✅ CONFIRMED FIRST-PARTY (previously second-hand on this page): the 85% utilisation denominator under the FY28 model (Stifel 09-01 flagged…",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the TSEM thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [],
+      "source": "TSEM page Changelog 2026-09-15",
+      "evidence_paths": [
+        "TSEM.md"
+      ],
+      "evidence_anchor": "ingest: TSEM/transcripts/TSEManalyst-hosted-investor-QA-call2026-09-15.md (Notion AI meeting note, archived same day) — 1 Current state block (13 bullets), 1 Debate / thesis bullet, 5 Catalysts items (incl. one ✅ delivered), 1 Risks bullet, 1 Full-log row (09-15), 1 Sources entry. NOTHING SUPERSEDED — no rating, PT, estimate, consensus or house number on this page was replaced. ✅ CONFIRMED FIRST-PARTY (previously second-hand on this page): the 85% utilisation denominator under the FY28 model (Stifel 09-01 flagged…",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
       "id": "cata-aff41b9df817",
       "asof": "2026-09-15",
       "source_date": "2026-10-01",
@@ -1862,102 +1790,6 @@
       "hidden": false
     },
     {
-      "id": "post-514510637e59",
-      "asof": "2026-09-15",
-      "source_date": "2026-09-14",
-      "event_date": "2026-09-14",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "ADVANTEST — catalyst passed without a logged outcome",
-      "tickers": [
-        "ADVANTEST"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "SoC capacity ramp to 5,000 systems/yr (end-FY2026) → 10,000/yr (2028–29) — execution + foundry/packaging capacity gating (Q4 FY2025 call; JEF/Techknowledge, 2025-12-17). ⚠️ TIMING SUPERSEDED 202",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for ADVANTEST in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "SoC capacity ramp to 5,000 systems/yr (end-FY2026) → 10,000/yr (2028–29) — execution + foundry/packaging capacity gating (Q4 FY2025 call; JEF/Techknowledge, 2025-12-17). ⚠️ TIMING SUPERSEDED 202",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "post-99443b0ca2db",
-      "asof": "2026-09-15",
-      "source_date": "2026-09-09",
-      "event_date": "2026-09-09",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "AMAT — catalyst passed without a logged outcome",
-      "tickers": [
-        "AMAT"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "✅ 09-09 — investor group meeting with Applied mgmt/IR (Capstone in the room): DELIVERED — \"now we're approaching 40%\" said out loud (verbal, not a printed guide); ~80% of incremental WFE in thre",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for AMAT in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "✅ 09-09 — investor group meeting with Applied mgmt/IR (Capstone in the room): DELIVERED — \"now we're approaching 40%\" said out loud (verbal, not a printed guide); ~80% of incremental WFE in thre",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "post-496b01db14e1",
-      "asof": "2026-09-15",
-      "source_date": "2026-09-09",
-      "event_date": "2026-09-09",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "ASML — catalyst passed without a logged outcome",
-      "tickers": [
-        "ASML"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "✅ 09-09 — investor group meeting with ASML IR (Capstone in the room): DELIVERED — see the 2026-09-09 block in Current state. Prep question 1 answered (the 85 and many 2028 slots are prepaid",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for ASML in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "✅ 09-09 — investor group meeting with ASML IR (Capstone in the room): DELIVERED — see the 2026-09-09 block in Current state. Prep question 1 answered (the 85 and many 2028 slots are prepaid",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
       "id": "cata-2bc8be299987",
       "asof": "2026-09-15",
       "source_date": "2026-09-21",
@@ -2032,38 +1864,6 @@
       ],
       "evidence_anchor": "🆕🔴 2026-09-15 to 09-17 — DREAMFORCE (SF), INVESTOR DAY 09-16 at 4PM ET. THE NAMED FOCUS IS NOW \"CLAUDEFORCE.\" UBS · Karl Keirstead (09-14): much of the investor focus will be on the newly-announce",
       "origin": "catalyst_calendar",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "post-bb61ea2066c9",
-      "asof": "2026-09-15",
-      "source_date": "2026-09-11",
-      "event_date": "2026-09-11",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "LITE — catalyst passed without a logged outcome",
-      "tickers": [
-        "LITE"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "🆕 2026-09-11 (Capstone IR meeting @ Communacopia week — Kathy Ta, VP IR; Notion transcript) — DATED ITEMS TO WATCH: (1) OCP, October — Meta \"going to shift to an external light source\" per L",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for LITE in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "🆕 2026-09-11 (Capstone IR meeting @ Communacopia week — Kathy Ta, VP IR; Notion transcript) — DATED ITEMS TO WATCH: (1) OCP, October — Meta \"going to shift to an external light source\" per L",
-      "origin": "outcome_loop",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
@@ -2269,6 +2069,46 @@
       "hidden": false
     },
     {
+      "id": "cata-3fd5e63d4e2b",
+      "asof": "2026-09-15",
+      "source_date": "2026-09-15",
+      "event_date": "2026-09-15",
+      "type": "catalyst",
+      "priority": "medium",
+      "score": 49,
+      "title": "CRWD — 2026-09-15: PRE-REGISTERED TEST T8 — the Dec-2026 / Jan-2027 CISO BUDGET RESET, scored at the Jan–Mar…",
+      "tickers": [
+        "CRWD"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "🧪 PRE-REGISTERED TEST T8 — the Dec-2026 / Jan-2027 CISO BUDGET RESET, scored at the Jan–Mar 2027 prints and the next MS/IDC spend-ladder update: cyber share of IT budgets printed or forecast ≥ 8",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "OKTA",
+          "relation": "competitor",
+          "detail": "agentic identity",
+          "from": "CRWD",
+          "in_book": false
+        }
+      ],
+      "source": "CRWD page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "CRWD.md"
+      ],
+      "evidence_anchor": "🧪 PRE-REGISTERED TEST T8 — the Dec-2026 / Jan-2027 CISO BUDGET RESET, scored at the Jan–Mar 2027 prints and the next MS/IDC spend-ladder update: cyber share of IT budgets printed or forecast ≥ 8",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
       "id": "cata-942fdbda8a30",
       "asof": "2026-09-15",
       "source_date": "2026-09-15",
@@ -2331,6 +2171,46 @@
         "DELL.md"
       ],
       "evidence_anchor": "2026-09-15 — UBS David Vogt Boston marketing '26 3, US Hardware.",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "cata-223e2d360ae7",
+      "asof": "2026-09-15",
+      "source_date": "2026-09-15",
+      "event_date": "2026-09-15",
+      "type": "catalyst",
+      "priority": "medium",
+      "score": 49,
+      "title": "PANW — 2026-09-15: PRE-REGISTERED TEST T8 — the Dec-2026 / Jan-2027 CISO BUDGET RESET, scored at the Jan–Mar…",
+      "tickers": [
+        "PANW"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "🧪 PRE-REGISTERED TEST T8 — the Dec-2026 / Jan-2027 CISO BUDGET RESET, scored at the Jan–Mar 2027 prints and the next MS/IDC spend-ladder update: cyber share of IT budgets printed or forecast ≥ 8",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "OKTA",
+          "relation": "competitor",
+          "detail": "identity (CyberArk vs Okta)",
+          "from": "PANW",
+          "in_book": false
+        }
+      ],
+      "source": "PANW page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "PANW.md"
+      ],
+      "evidence_anchor": "🧪 PRE-REGISTERED TEST T8 — the Dec-2026 / Jan-2027 CISO BUDGET RESET, scored at the Jan–Mar 2027 prints and the next MS/IDC spend-ladder update: cyber share of IT budgets printed or forecast ≥ 8",
       "origin": "catalyst_calendar",
       "feedback": "",
       "feedback_note": "",
@@ -2419,6 +2299,38 @@
       "hidden": false
     },
     {
+      "id": "cata-49c4c96c2b82",
+      "asof": "2026-09-15",
+      "source_date": "2026-09-15",
+      "event_date": "2026-09-15",
+      "type": "catalyst",
+      "priority": "medium",
+      "score": 49,
+      "title": "TSEM — 2026-09-15: DELIVERED: the virtual fireside this page flagged on 09-07 as \"the venue to ask about the…",
+      "tickers": [
+        "TSEM"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "✅ 🆕 2026-09-15 — DELIVERED: the virtual fireside this page flagged on 09-07 as \"the venue to ask about the prepayments directly\" happened, and the prepayment question was asked and answered — \"",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [],
+      "source": "TSEM page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "TSEM.md"
+      ],
+      "evidence_anchor": "✅ 🆕 2026-09-15 — DELIVERED: the virtual fireside this page flagged on 09-07 as \"the venue to ask about the prepayments directly\" happened, and the prepayment question was asked and answered — \"",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
       "id": "reco-90450968d9ca",
       "asof": "2026-09-15",
       "source_date": "2026-09-14",
@@ -2427,12 +2339,12 @@
       "score": 48,
       "title": "Cybersecurity — the beneficiary ladder is INVERSELY ranked against consensus implied upside",
       "tickers": [
-        "DDOG",
-        "FSLY",
-        "CSCO",
-        "ESTC",
+        "CRWD",
+        "AKAM",
         "PANW",
-        "AKAM"
+        "DDOG",
+        "CSCO",
+        "FSLY"
       ],
       "in_book": [],
       "impact": "medium",
@@ -2440,9 +2352,30 @@
       "confidence": "medium",
       "why_now": "FundaAI ranks the beneficiaries \"by the strength of the benefit case\". Placing each rung against the BBG consensus PT",
       "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the DDOG/FSLY/CSCO/ESTC model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "action": "Open the CRWD/AKAM/PANW/DDOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
       "readthrough": [
+        {
+          "ticker": "OKTA",
+          "relation": "competitor",
+          "detail": "agentic identity",
+          "from": "CRWD",
+          "in_book": false
+        },
+        {
+          "ticker": "NET",
+          "relation": "competitor",
+          "detail": "edge/CDN",
+          "from": "AKAM",
+          "in_book": false
+        },
+        {
+          "ticker": "OKTA",
+          "relation": "competitor",
+          "detail": "identity (CyberArk vs Okta)",
+          "from": "PANW",
+          "in_book": false
+        },
         {
           "ticker": "AMZN",
           "relation": "supplier",
@@ -2469,27 +2402,6 @@
           "relation": "competitor",
           "detail": "observability",
           "from": "DDOG",
-          "in_book": false
-        },
-        {
-          "ticker": "NET",
-          "relation": "competitor",
-          "detail": "edge/CDN",
-          "from": "FSLY",
-          "in_book": false
-        },
-        {
-          "ticker": "ANET",
-          "relation": "competitor",
-          "detail": "AI networking",
-          "from": "CSCO",
-          "in_book": false
-        },
-        {
-          "ticker": "DT",
-          "relation": "competitor",
-          "detail": "observability vs Splunk",
-          "from": "CSCO",
           "in_book": false
         }
       ],

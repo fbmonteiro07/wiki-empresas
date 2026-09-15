@@ -2,15 +2,18 @@
 
 _Generated 2026-09-15 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (50)
+## 📅 Upcoming (53)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
 | 2026-09-15 | AVGO | **🆕 BERNSTEIN 8th ANNUAL SEMIS BUS TOUR, 2026-09-15/16, San Jose — AVGO on the roster alongside [[ALAB]], [[AMAT]], AMBA, LSCC, MPWR, [[NVDA]], [[NXPI]].** First scheduled corporate-access window afte |
 | 2026-09-15 | CRM | **🆕🔴 2026-09-15 to 09-17 — DREAMFORCE (SF), INVESTOR DAY 09-16 at 4PM ET. THE NAMED FOCUS IS NOW "CLAUDEFORCE."** UBS · Karl Keirstead (09-14): much of the investor focus will be on the newly-announce |
+| 2026-09-15 | CRWD | **🧪 PRE-REGISTERED TEST T8 — the Dec-2026 / Jan-2027 CISO BUDGET RESET, scored at the Jan–Mar 2027 prints and the next MS/IDC spend-ladder update:** cyber share of IT budgets printed or forecast **≥ 8 |
 | 2026-09-15 | DELL | **2026-09-15 — UBS David Vogt Boston marketing '26 #3, US Hardware.** |
 | 2026-09-15 | META | **🆕 2026-09-15, 11AM ET — JPM INTERNET FALL SERIES (META, DASH, DUOL, TTWO, APP) with Doug Anmuth and Bryan Smilek** — first scheduled venue for Anmuth to defend the 09-10 upgrade to Overweight and th |
 | 2026-09-15 | MSFT | **🆕🔴 2026-09-15 — MICROSOFT PUBLISHES THE "CODE OF CONDUCT" UNDERLYING ITS FIRST-PARTY MAI MODELS, FOR PUBLIC CONSULTATION.** Committed to by Satya Nadella on X (09-13) in his response to the [[ANTHRO |
+| 2026-09-15 | PANW | **🧪 PRE-REGISTERED TEST T8 — the Dec-2026 / Jan-2027 CISO BUDGET RESET, scored at the Jan–Mar 2027 prints and the next MS/IDC spend-ladder update:** cyber share of IT budgets printed or forecast **≥ 8 |
+| 2026-09-15 | TSEM | **✅ 🆕 2026-09-15 — DELIVERED: the virtual fireside this page flagged on 09-07 as *"the venue to ask about the prepayments directly"* happened, and the prepayment question was asked and answered** — *" |
 | 2026-09-16 | ON | **2026-09-16 — onsemi Analyst Day** (Citi exp. ~Sep 13 print first) — the key event; watch for a raised long-term target model + SiC/800V framing (Citi, briefing 2026-06-15). |
 | 2026-09-16 | ON | **🆕🔴🔴 WED 2026-09-16 — ON SEMICONDUCTOR ANALYST DAY. THE SINGLE TEST: DOES THE 53% GROSS-MARGIN TARGET SURVIVE?** UBS · Arcuri preview (09-14) expects a LT model implying **CY30E revenue ~$10bn and EP |
 | 2026-09-18 | AVGO | **🆕 WED 2026-09-16 — AVGO CEO *AND* CFO ON THE JEFFERIES SEMIS BUS TOUR** (alongside [[NVDA]] CFO, [[LITE]] CEO, [[CRDO]] CFO, [[AMAT]], CBRS). **Jefferies · Blayne Curtis hosts a debrief call FRI 202 |
