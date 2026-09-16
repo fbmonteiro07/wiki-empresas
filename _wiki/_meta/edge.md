@@ -8,9 +8,9 @@ _Generated 2026-09-16 · the standing view of where our model and the curated re
 
 | Ticker | Metric | Yr | House | Consensus | Δ |
 |---|---|---|--:|--:|--:|
-| GOOG | Revenue $bn | 2026 | 505.00 | 427.40 | +18% |
-| GOOG | Revenue $bn | 2027 | 641.00 | 545.30 | +18% |
-| AAPL | EPS | 2026 | 10.12 | 8.76 | +16% |
+| GOOG | Revenue $bn | 2026 | 505.00 | 427.20 | +18% |
+| GOOG | Revenue $bn | 2027 | 641.00 | 544.10 | +18% |
+| AAPL | EPS | 2026 | 10.12 | 8.77 | +15% |
 
 ## Curated divergences — latest reconciliation (`reconciliation-2026-09-15.md`)
 
@@ -28,9 +28,9 @@ _Generated 2026-09-16 · the standing view of where our model and the curated re
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|
-| ASML | 1,591 | 2,459 | +55% | street high 2,859 · low 2,100 ABOVE spot · 21/0/0 of 21 |
-| NVDA | 212 | 325 | +53% | street high 515 · low 180 below spot · 79/2/1 of 82 |
-| LRCX | 271 | 377 | +39% | street high 475 · low 285 ABOVE spot · 31/6/0 of 37 |
-| AMZN | 248 | 330 | +33% | street high 405 · low 230 below spot · 77/4/0 of 81 |
-| DDOG | 230 | 289 | +26% | street high 340 · low 158 below spot · 46/3/1 of 50 |
-| NET | 327 | 342 | +5% | street high 400 · low 160 below spot · 27/7/3 of 37 |
+| ASML | 1,616 | 2,459 | +52% | street high 2,859 · low 2,100 ABOVE spot · 21/0/0 of 21 |
+| NVDA | 216 | 325 | +50% | street high 515 · low 180 below spot · 79/2/1 of 82 |
+| LRCX | 274 | 377 | +38% | street high 475 · low 285 ABOVE spot · 31/6/0 of 37 |
+| AMZN | 248 | 330 | +33% | street high 405 · low 230 below spot · 76/4/0 of 80 |
+| DDOG | 236 | 289 | +22% | street high 340 · low 158 below spot · 46/3/1 of 50 |
+| NET | 330 | 342 | +4% | street high 400 · low 160 below spot · 27/7/3 of 37 |

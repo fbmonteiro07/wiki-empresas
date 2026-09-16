@@ -150,3 +150,94 @@ Aggregating CY2027 consensus revenue for the four listed pure-plays against JPM'
 3. **No house model exists for MU, SKHYNIX, SAMSUNG or KIOXIA** — the entire memory complex, which is the single most active theme on this wiki, has no Capstone house numbers to reconcile against. **Raised as a structural gap, not a task artefact.**
 4. **`P:\US Equities\Relatórios para a wiki\20260726_Bernstein_NVDA_Global_Memory-_NVIDIA_-_Broadcom-_Quick_thoughts_on_stra.pdf` has been file-locked and skipped on at least two consecutive runs and has NEVER been ingested.** Needs a manual copy — it is a memory/NVDA/AVGO note and therefore directly relevant to divergence ①.
 5. **CXMT still has no wiki page** despite two houses now modelling it as a load-bearing input (third consecutive run raised). **KEYS** and **SMTC** also unpaged; KEYS was the MS note's only rating action (upgraded EW → OW, PT $350 → $400).
+
+---
+
+## ✅ Open item #2 CLOSED 2026-09-16 — the live re-pull the 08-10 run could not make
+
+_The 08-10 night run placed ⑨/⑩/⑪ against an on-disk snapshot (18:31, same-day) because the Terminal
+returned HTTP 503 at 23:37, and left open item #2: **"re-run `fetch_estimates.py` + `build_snapshot.py`
+when the Terminal is up, then re-check ⑨/⑩/⑪ against a live pull rather than the 18:31 snapshot."**
+That live pull now exists — `estimates.json` **asof 2026-09-16**, 107/107 names, 0 FAIL lines, 0 `error`
+keys, 0 null prices, 0 `carried_over` stamps and **0 records byte-identical to the 09-15 vintage**.
+No BBG cell in this report was ever marked `PENDING`; this closes the basis question instead._
+
+⚠️ **FX is held constant at the note's own assumed rates (1,380 KRW/USD, 150 JPY/USD) by construction.**
+The wrapper returns an empty frame for every FX ticker tried (`USDKRW / KRWUSD / KRW / USDKRW BGN /
+USDJPY Curncy`) — FX is not entitled on it — and per the standing rule no web rate was substituted.
+Holding FX flat is also the *right* method here: it isolates the **consensus** move from the **currency**
+move, which is what open item #2 actually asked.
+
+### ⑨ — re-checked live: the TAM reconciles to within 0.2% of the 08-10 placement. **STAYS CONFIRMS.**
+
+| CY2027E consensus revenue | 08-10 snapshot (US$bn) | **09-16 live (US$bn)** | Δ |
+|---|--:|--:|--:|
+| MU | 262 | **262.2** | ~0 |
+| SK hynix | 394 | **391.9** | −0.5% |
+| Kioxia | 84 | **89.3** | **+6.3%** |
+| Samsung (total co) | 717 | **713.0** | −0.6% |
+| Samsung memory @ the note's ~54% assumption | ~390 | **385.0** | −1.3% |
+| **Sum (Samsung memory portion assumed)** | **~1,130** | **1,128.4** | **−0.1%** |
+| **JPM 2027E memory TAM** | 1,442 | 1,442 | — |
+| **Implied residual for China / Taiwan / Solidigm / others** | ~312 ≈ 22% | **313.6 ≈ 21.8%** | +0.5 |
+
+**Five weeks and ~25 intervening live vintages later the bottom-up sum lands within $1.6bn of the
+snapshot figure.** The conclusion is unchanged and now rests on a live read: JPM's $1,442bn is **not a
+broker outlier**, and the ~22% residual for CXMT/YMTC/Nanya/Winbond/Powerchip/Solidigm still sits close
+to JPM's own China share assumptions. ⚠️ The soft input is unchanged and is still mine, not a disclosure:
+the **Samsung memory split (~54% of company revenue)**. Kioxia is the only component that moved
+materially (+6.3%), and it moves the sum by less than 0.5%.
+
+### ⑩ — re-checked live: memory capex is unchanged except Kioxia, revised up ~20%. **STAYS CONFIRMS.**
+
+| CY2027E consensus capex | 08-10 snapshot (US$bn) | **09-16 live (US$bn)** | Δ |
+|---|--:|--:|--:|
+| MU | 52.2 | **51.9** | −0.7% |
+| SK hynix | 46.2 | **46.2** | ~0 |
+| Samsung (⚠️ total co — foundry/logic/display included) | 66.0 | **66.5** | +0.8% |
+| Kioxia | 3.3 | **3.98** | **+19.9%** |
+| **MU + SK hynix alone** | **~98** | **98.1** | ~0 |
+
+**JPM's 2027E total memory capex of $172.1bn (DRAM $144.3bn) is still already embedded in consensus, not
+incremental news.** The one genuine revision since 08-10 is **Kioxia capex +19.9%** — small in absolute
+terms ($0.7bn) but the largest percentage move in the complex, and it pairs with Kioxia's +6.3% revenue
+line above: the Street marked Kioxia's whole ramp up, revenue and spend together.
+
+### ⑪ — re-checked live: the AMD ramp got *steeper*, not weaker. **STAYS CONFIRMS, strengthened.**
+
+| AMD | 08-10 snapshot | **09-16 live** |
+|---|--:|--:|
+| CY2026E revenue | $50.4bn | **$50.56bn** |
+| CY2027E revenue | $86.6bn | **$88.63bn** (+2.3% vs snapshot) |
+| **implied CY26→CY27 growth** | **+72%** | **+75.3%** |
+| CY2026E EPS | $7.50 | **$7.52** |
+| CY2027E EPS | $15.31 | **$15.49** (+1.2%) |
+
+Consensus did not fade the MI450/MI455 volume story in the five weeks after JPM's +50% 2027E HBM bit
+revision — it raised CY2027 revenue 2.3% and steepened the ramp by 3.3pp. The corroboration of JPM's
+bit call is **stronger** on live data than it was on the snapshot. ⚠️ **The unresolved half is still
+unresolved:** SemiAnalysis's Meta-custom MI450/MI455 content cut (12 stacks → 6, 12-Hi → 8-Hi) is still
+not reconciled against JPM's raised bits, and nothing in this pull speaks to content vs units. Still a
+**units call, not a content call**. Still **no house model for AMD**.
+
+### Method note that outlives this report — the Korean CY-sum wedge has drifted to ~zero for FY27
+
+The standing caveat says the CY-sum-vs-annual-line wedge on the Korean names is large and **inverts by
+year**. On the 09-16 vintage it has **collapsed**, which is exactly why the caveat says never to hard-code
+the factor:
+
+| | CY2026 vs `1FY` | CY2027 vs `2FY` |
+|---|--:|--:|
+| SK hynix | **+0.50%** | **+0.06%** |
+| Samsung | **−1.54%** | **+1.35%** |
+
+All four gaps are now inside ±1.6%, against the several-percent-to-+22% wedges logged on earlier
+vintages. **The direction of the bias is unchanged (CY26 sum below / CY27 sum above the annual line for
+Samsung), only its size.** ⑨ and ⑩ above use the **CY** basis deliberately — a calendar-year industry TAM
+is a calendar-year question — and at a <1.4% wedge the basis choice no longer moves either conclusion.
+**Re-measure it every run; do not carry this number forward either.**
+
+_BBG column resolved 2026-09-16 — estimates.json asof **2026-09-16** (107/107 live, 0 FAIL, 0 carry-overs,
+0 byte-identical records vs the 09-15 vintage). Open item #2 is closed; items #1, #3, #4 and #5 are
+untouched and remain open. All three re-checked rows stay in **CONFIRMS**. No web data was substituted at
+any point; FX was held at the note's own assumed rates because the wrapper carries no FX entitlement._
