@@ -12,27 +12,25 @@ _Generated 2026-09-15 · the standing view of where our model and the curated re
 | GOOG | Revenue $bn | 2027 | 641.00 | 545.30 | +18% |
 | AAPL | EPS | 2026 | 10.12 | 8.76 | +16% |
 
-## Curated divergences — latest reconciliation (`reconciliation-2026-09-14.md`)
+## Curated divergences — latest reconciliation (`reconciliation-2026-09-15.md`)
 
 | Name | New datapoint | Read (the edge) |
 |---|---|---|
-| AVGO | the house model sits ABOVE the company's own AI revenue path, on both years | The house is above the company's own guide on the AI line and above consensus on the total. That is a real position, but the first thing to check is staleness, not conviction: |
-| SNDK | the FY29 gap is UNCHANGED after 18 days, and management just made it harder to defend | This is the same open divergence first written up on 2026-08-27, and consensus has not moved a dollar: |
-| Cybersecurity | the beneficiary ladder is INVERSELY ranked against consensus implied upside | The note's three strongest-benefit names carry an average implied upside of ~+2%, and its weakest rung carries ~+28%. |
-| — | The HBM de-spec chain now has vendors on BOTH sides, and one supplier has broken ranks | And the supplier split is now named for the first time anywhere in the corpus: |
-| ADVANTEST | a price mark this page has never carried, and the third vendor in one week to put price on the table | This is the first pricing figure ever logged on the ADVANTEST page |
+| 🔴🔴🔴 — | The relay that reached the wiki at 21:00 carried a mechanism that is not in the primary — and it pointed the opposite way | This is the third run in which a desk relay reached the wiki before the primary and distorted it. |
+| 🔴🔴🔴 AMZN | Bernstein is +16% / +27% above consensus on FY27 / FY28 EBIT and still carries a PT below consensus | The tension is internal to Bernstein and it is large. |
+| 🔴🔴 ASML | the house EUV model takes the 110 as the number, which is exactly what tonight's note says it is not | Sizing the gap on the house model's own ASP: |
+| 🔴🔴 ASML | Bernstein's estimates are consensus, but its PT is +22.8% above consensus | On FY27 EBIT the two are within 0.1% of each other. |
+| 🔴🔴 NET | a Market-Perform whose PT implies ≈−50%, while the same analyst's estimates sit above the company's own guide | The estimates and the target contradict each other, and the estimates are the more testable half. |
+| 🔴 DDOG | above consensus on EPS in both years, 18% below on PT | above consensus on EPS in both years, 18% below on PT |
+| ASML | a vintage/basis conflict on "current" throughput, flagged and not resolved | a vintage/basis conflict on "current" throughput, flagged and not resolved |
 
-## Consensus PT vs spot — live pull in `reconciliation-2026-09-14.md` (upside ranked)
+## Consensus PT vs spot — live pull in `reconciliation-2026-09-15.md` (upside ranked)
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|
-| AVGO | 339 | 532 | +57% | street high 715 · low 350 ABOVE spot · 58/4/0 of 62 |
-| AMAT | 421 | 658 | +56% | street high 900 · low 358 below spot · 38/5/0 of 43 |
 | ASML | 1,591 | 2,459 | +55% | street high 2,859 · low 2,100 ABOVE spot · 21/0/0 of 21 |
-| SNDK | 1,531 | 2,259 | +48% | street high 3,900 · low 1,400 below spot · 27/4/0 of 31 |
-| ADVANTEST | 30,160 | 43,178 | +43% | street high 55,200 · low 34,000 ABOVE spot · 23/3/0 of 26 |
-| BKNG | 171 | 239 | +39% | street high 301 · low 188 ABOVE spot · 33/9/0 of 42 |
-| SMTC | 151 | 206 | +37% | street high 300 · low 155 ABOVE spot · 16/1/0 of 17 |
-| TSM | 414 | 550 | +33% | street high 700 · low 440 ABOVE spot · 31/1/0 of 32 |
-| GOOG | 341 | 426 | +25% | street high 475 · low 379 ABOVE spot · 16/1/0 of 17 |
-| CRWD | 242 | 239 | -2% | street high 425 · low 119 below spot · 41/14/1 of 56 |
+| NVDA | 212 | 325 | +53% | street high 515 · low 180 below spot · 79/2/1 of 82 |
+| LRCX | 271 | 377 | +39% | street high 475 · low 285 ABOVE spot · 31/6/0 of 37 |
+| AMZN | 248 | 330 | +33% | street high 405 · low 230 below spot · 77/4/0 of 81 |
+| DDOG | 230 | 289 | +26% | street high 340 · low 158 below spot · 46/3/1 of 50 |
+| NET | 327 | 342 | +5% | street high 400 · low 160 below spot · 27/7/3 of 37 |

@@ -1,19 +1,61 @@
 {
   "asof": "2026-09-15",
-  "latest_reconciliation": "reconciliation-2026-09-14.md",
+  "latest_reconciliation": "reconciliation-2026-09-15.md",
   "book": {
     "asof": "2026-07-01",
     "seed": true,
     "positions": 8
   },
   "stats": {
-    "signals": 107,
-    "active": 107,
-    "high": 8,
+    "signals": 109,
+    "active": 109,
+    "high": 13,
     "belief_changes": 3,
-    "focus_names": 54
+    "focus_names": 53
   },
   "focus": [
+    {
+      "ticker": "AMZN",
+      "focus_score": 115,
+      "in_book": true,
+      "signal_count": 6,
+      "high_count": 2,
+      "sector": "AI — Hyperscalers & Software",
+      "thesis": "AWS re-acceleration (+28%) + in-house silicon (Trainium); debate = $200B capex/ROIC.",
+      "next_catalyst": "",
+      "why": [
+        "AMZN — Bernstein is +16% / +27% above consensus on FY27 / FY28 EBIT and still carries a PT below consensus",
+        "The relay that reached the wiki at 21:00 carried a mechanism that is not in the primary — and it pointed the opposite way",
+        "MS's 2027 capex acceleration sits far above BBG consensus, on all four hyperscalers"
+      ]
+    },
+    {
+      "ticker": "DDOG",
+      "focus_score": 102,
+      "in_book": false,
+      "signal_count": 2,
+      "high_count": 1,
+      "sector": "AI · Data infrastructure & observability",
+      "thesis": "Cleanest public proxy for AI-native cloud consumption (+36%, FY26 guide +30%); debate = 13-14x sales + AI-native concentration vs non-AI base accelerating.",
+      "next_catalyst": "",
+      "why": [
+        "The relay that reached the wiki at 21:00 carried a mechanism that is not in the primary — and it pointed the opposite way",
+        "DDOG — above consensus on EPS in both years, 18% below on PT"
+      ]
+    },
+    {
+      "ticker": "OPENAI",
+      "focus_score": 100,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 1,
+      "sector": "AI labs (private)",
+      "thesis": "Private frontier lab (ChatGPT/GPT); scale + distribution vs cash burn + sub-50% share; Microsoft-anchored. No public financials.",
+      "next_catalyst": "",
+      "why": [
+        "The relay that reached the wiki at 21:00 carried a mechanism that is not in the primary — and it pointed the opposite way"
+      ]
+    },
     {
       "ticker": "MSFT",
       "focus_score": 97,
@@ -63,7 +105,7 @@
       "ticker": "AVGO",
       "focus_score": 86,
       "in_book": true,
-      "signal_count": 8,
+      "signal_count": 7,
       "high_count": 1,
       "sector": "AI — Semis & Compute",
       "thesis": "#1 custom-ASIC/TPU partner; binary setup on the \">$100B\" FY27 guide vs $250-300B FY28 (JPM).",
@@ -71,22 +113,37 @@
       "why": [
         "AVGO — 2026-09-15: BERNSTEIN 8th ANNUAL SEMIS BUS TOUR, 2026-09-15/16, San Jose — AVGO on the roster…",
         "AVGO — 2026-09-18: WED 2026-09-16 — AVGO CEO AND CFO ON THE JEFFERIES SEMIS BUS TOUR (alongside NVDA CFO,…",
-        "AVGO — the house model sits ABOVE the company's own AI revenue path, on both years"
+        "Cost to run 1GW: the relay carried HALF the primary's number"
+      ]
+    },
+    {
+      "ticker": "ASML",
+      "focus_score": 79,
+      "in_book": false,
+      "signal_count": 4,
+      "high_count": 2,
+      "sector": "AI — Semis & Compute",
+      "thesis": "Supply-chain chokepoint (EUV near-monopoly); Street \"behind the curve\" on 2027/28 vs a 2028 DRAM air-pocket.",
+      "next_catalyst": "",
+      "why": [
+        "ASML — Bernstein's estimates are consensus, but its PT is +22.8% above consensus",
+        "ASML — the house EUV model takes the 110 as the number, which is exactly what tonight's note says it is not",
+        "ASML — a vintage/basis conflict on \"current\" throughput, flagged and not resolved"
       ]
     },
     {
       "ticker": "NVDA",
-      "focus_score": 83,
+      "focus_score": 78,
       "in_book": true,
-      "signal_count": 12,
+      "signal_count": 11,
       "high_count": 0,
       "sector": "AI — Semis & Compute",
       "thesis": "Full-stack AI-factory platform at +85% rev; debate is demand sustainability vs ASIC erosion.",
       "next_catalyst": "2026-09-24",
       "why": [
-        "The HBM de-spec chain now has vendors on BOTH sides, and one supplier has broken ranks",
         "NVDA — 2026-09-24: TRUMP-XI MEETING, 2026-09-24 — the dated headline-risk window, and UBS says the newsflow…",
-        "NVDA — two houses, one disclosure, opposite postures — but it is a BASIS difference, not a disagreement"
+        "NVDA — two houses, one disclosure, opposite postures — but it is a BASIS difference, not a disagreement",
+        "2027 DRAM bit supply — a three-way split with TWO LEGS INSIDE MORGAN STANLEY"
       ]
     },
     {
@@ -104,48 +161,16 @@
       ]
     },
     {
-      "ticker": "SKHYNIX",
-      "focus_score": 76,
+      "ticker": "NET",
+      "focus_score": 73,
       "in_book": false,
-      "signal_count": 6,
-      "high_count": 0,
-      "sector": "Memory & storage",
-      "thesis": "#1 HBM, NVDA's primary supplier, sold out through 2026; bear = HBM4 commoditization. ₩, no SEC.",
-      "next_catalyst": "2026-09-18",
-      "why": [
-        "The HBM de-spec chain now has vendors on BOTH sides, and one supplier has broken ranks",
-        "SKHYNIX — 2026-09-18: DATED FLOW CATALYST — 2026-09-18 (ON THE CLOSE, FRIDAY): 000660 KS IS AN UPWEIGHT IN THE…",
-        "SKHYNIX — 2026-09-30: By 2026-09-30 — HBM CONTRACT PRICE UPDATE. Named by JPM (Kwon, 2026-08-19) as the 2…"
-      ]
-    },
-    {
-      "ticker": "MU",
-      "focus_score": 72,
-      "in_book": false,
-      "signal_count": 4,
-      "high_count": 0,
-      "sector": "AI — Semis & Compute",
-      "thesis": "Pure-play on AI memory intensity (HBM sold-out CY26); debate = peak earnings vs run-rate.",
+      "signal_count": 1,
+      "high_count": 1,
+      "sector": "CDN / Edge cloud",
+      "thesis": "Cloudflare — developer/edge platform + Zero Trust security, AI-inference-at-edge (Workers AI); +34% rev, \"agentic-AI-first\" ~20% RIF; bull = platform/RPO compou",
       "next_catalyst": "",
       "why": [
-        "The HBM de-spec chain now has vendors on BOTH sides, and one supplier has broken ranks",
-        "2027 DRAM bit supply — a three-way split with TWO LEGS INSIDE MORGAN STANLEY",
-        "China memory — the derating argument, and the constraint is mis-located on the wiki"
-      ]
-    },
-    {
-      "ticker": "SAMSUNG",
-      "focus_score": 72,
-      "in_book": false,
-      "signal_count": 4,
-      "high_count": 0,
-      "sector": "Memory & storage",
-      "thesis": "Cheapest way to own the memory super-cycle; HBM4 catch-up vs SK Hynix + foundry optionality. ₩, no SEC.",
-      "next_catalyst": "2026-11-21",
-      "why": [
-        "The HBM de-spec chain now has vendors on BOTH sides, and one supplier has broken ranks",
-        "2027 DRAM bit supply — a three-way split with TWO LEGS INSIDE MORGAN STANLEY",
-        "China memory — the derating argument, and the constraint is mis-located on the wiki"
+        "NET — a Market-Perform whose PT implies ≈−50%, while the same analyst's estimates sit above the company's own guide"
       ]
     },
     {
@@ -193,16 +218,15 @@
     },
     {
       "ticker": "ADVANTEST",
-      "focus_score": 64,
+      "focus_score": 62,
       "in_book": false,
-      "signal_count": 2,
+      "signal_count": 1,
       "high_count": 0,
       "sector": "Semiconductor equipment (semicap)",
       "thesis": "#1 ATE in a duopoly with Teradyne; ~80% of SoC test is HPC/AI and effectively sole SoC tester at the GPU/CoWoS leaders — levered to test intensity, not wafer st",
       "next_catalyst": "",
       "why": [
-        "ADVANTEST — derived thesis/debate state changed since the prior daily snapshot",
-        "ADVANTEST — a price mark this page has never carried, and the third vendor in one week to put price on the table"
+        "ADVANTEST — derived thesis/debate state changed since the prior daily snapshot"
       ]
     },
     {
@@ -247,18 +271,18 @@
       ]
     },
     {
-      "ticker": "AMZN",
+      "ticker": "SKHYNIX",
       "focus_score": 57,
-      "in_book": true,
-      "signal_count": 4,
+      "in_book": false,
+      "signal_count": 5,
       "high_count": 0,
-      "sector": "AI — Hyperscalers & Software",
-      "thesis": "AWS re-acceleration (+28%) + in-house silicon (Trainium); debate = $200B capex/ROIC.",
-      "next_catalyst": "",
+      "sector": "Memory & storage",
+      "thesis": "#1 HBM, NVDA's primary supplier, sold out through 2026; bear = HBM4 commoditization. ₩, no SEC.",
+      "next_catalyst": "2026-09-18",
       "why": [
-        "MS's 2027 capex acceleration sits far above BBG consensus, on all four hyperscalers",
-        "MSFT — MS models Maia as a LATER ramp than the GOOG/AMZN custom-silicon story",
-        "The GW anchors on ai-datacenter-power do not agree — and the disagreement is the finding"
+        "SKHYNIX — 2026-09-18: DATED FLOW CATALYST — 2026-09-18 (ON THE CLOSE, FRIDAY): 000660 KS IS AN UPWEIGHT IN THE…",
+        "SKHYNIX — 2026-09-30: By 2026-09-30 — HBM CONTRACT PRICE UPDATE. Named by JPM (Kwon, 2026-08-19) as the 2…",
+        "2027 DRAM bit supply — a three-way split with TWO LEGS INSIDE MORGAN STANLEY"
       ]
     },
     {
@@ -287,20 +311,6 @@
         "DELL — 2026-09-15: UBS David Vogt Boston marketing '26 3, US Hardware.",
         "DELL — the Street's error was the MARGIN, not the revenue, and the guide sits +6.5% above the FY27 consensus median — but NOT above the street high (basis-corrected 09-02; the quarterly leg closed inside one session)",
         "Demand-side ceiling nobody on the wiki had priced: server units capped at ~+30% next year by NON-memory shortages"
-      ]
-    },
-    {
-      "ticker": "CRWD",
-      "focus_score": 51,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "Software / security / internet",
-      "thesis": "Falcon consolidation flywheel + Charlotte AI; net-new ARR re-accel; valuation/crowding + 2024-outage tail the bear.",
-      "next_catalyst": "2026-09-15",
-      "why": [
-        "CRWD — 2026-09-15: PRE-REGISTERED TEST T8 — the Dec-2026 / Jan-2027 CISO BUDGET RESET, scored at the Jan–Mar…",
-        "Cybersecurity — the beneficiary ladder is INVERSELY ranked against consensus implied upside"
       ]
     },
     {
@@ -333,17 +343,16 @@
       ]
     },
     {
-      "ticker": "ESTC",
-      "focus_score": 50,
+      "ticker": "CRWD",
+      "focus_score": 49,
       "in_book": false,
-      "signal_count": 2,
+      "signal_count": 1,
       "high_count": 0,
-      "sector": "AI · Data infrastructure & observability",
-      "thesis": "Permission-aware search/context plane straddling observability + security; +15% with 37% of large customers on AI; stable at 4-5x sales, not inflecting.",
-      "next_catalyst": "2026-09-22",
+      "sector": "Software / security / internet",
+      "thesis": "Falcon consolidation flywheel + Charlotte AI; net-new ARR re-accel; valuation/crowding + 2024-outage tail the bear.",
+      "next_catalyst": "2026-09-15",
       "why": [
-        "Cybersecurity — the beneficiary ladder is INVERSELY ranked against consensus implied upside",
-        "ESTC — 2026-09-22: Metrics webinar — 2026-09-22, 8:00 PT (Kurtz, Q1 FY27 call): the observability-relaunch…"
+        "CRWD — 2026-09-15: PRE-REGISTERED TEST T8 — the Dec-2026 / Jan-2027 CISO BUDGET RESET, scored at the Jan–Mar…"
       ]
     },
     {
@@ -383,58 +392,6 @@
       "next_catalyst": "2026-09-15",
       "why": [
         "TXN — 2026-09-15: WATCH WHETHER BofA'S DEFENSIVE-ANALOG EXPRESSION ROTATES TOWARD TXN. On 2026-09-15 Vivek…"
-      ]
-    },
-    {
-      "ticker": "AKAM",
-      "focus_score": 48,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "CDN / Edge cloud",
-      "thesis": "Akamai — legacy CDN delivery (declining) pivoting to Security + Cloud Compute; $1.8B 7-yr frontier-model infra deal re-accelerates growth to double-digits 2027 ",
-      "next_catalyst": "",
-      "why": [
-        "Cybersecurity — the beneficiary ladder is INVERSELY ranked against consensus implied upside"
-      ]
-    },
-    {
-      "ticker": "CSCO",
-      "focus_score": 48,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Optical / Networking",
-      "thesis": "Incumbent re-rating to AI-infra (orders +35%); bear prefers ANET, flags pull-forward.",
-      "next_catalyst": "",
-      "why": [
-        "Cybersecurity — the beneficiary ladder is INVERSELY ranked against consensus implied upside"
-      ]
-    },
-    {
-      "ticker": "DDOG",
-      "focus_score": 48,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "AI · Data infrastructure & observability",
-      "thesis": "Cleanest public proxy for AI-native cloud consumption (+36%, FY26 guide +30%); debate = 13-14x sales + AI-native concentration vs non-AI base accelerating.",
-      "next_catalyst": "",
-      "why": [
-        "Cybersecurity — the beneficiary ladder is INVERSELY ranked against consensus implied upside"
-      ]
-    },
-    {
-      "ticker": "FSLY",
-      "focus_score": 48,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "CDN / Edge cloud",
-      "thesis": "Fastly — edge-delivery turnaround diversifying into Security + Compute (Sec +47%); first profitable year; bear = customer concentration (TikTok/top-10) + Cloudf",
-      "next_catalyst": "",
-      "why": [
-        "Cybersecurity — the beneficiary ladder is INVERSELY ranked against consensus implied upside"
       ]
     },
     {
@@ -505,20 +462,6 @@
       "next_catalyst": "",
       "why": [
         "POET — latest earnings transcript absent"
-      ]
-    },
-    {
-      "ticker": "SNDK",
-      "focus_score": 43,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "Memory & storage",
-      "thesis": "Post-spin pure-play NAND on AI storage; price-driven blowout + $42B LTA backlog vs blowoff-top risk.",
-      "next_catalyst": "",
-      "why": [
-        "SNDK — the FY29 gap is UNCHANGED after 18 days, and management just made it harder to defend",
-        "[23:00 second pass] SNDK — the largest open edge on the wiki just got NARROWER AND SHARPER: consensus has adopted management's DOWNSIDE case as its BASE case"
       ]
     },
     {
@@ -630,6 +573,19 @@
       ]
     },
     {
+      "ticker": "ESTC",
+      "focus_score": 40,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "AI · Data infrastructure & observability",
+      "thesis": "Permission-aware search/context plane straddling observability + security; +15% with 37% of large customers on AI; stable at 4-5x sales, not inflecting.",
+      "next_catalyst": "2026-09-22",
+      "why": [
+        "ESTC — 2026-09-22: Metrics webinar — 2026-09-22, 8:00 PT (Kurtz, Q1 FY27 call): the observability-relaunch…"
+      ]
+    },
+    {
       "ticker": "OKTA",
       "focus_score": 40,
       "in_book": false,
@@ -658,6 +614,36 @@
       ]
     },
     {
+      "ticker": "MU",
+      "focus_score": 39,
+      "in_book": false,
+      "signal_count": 3,
+      "high_count": 0,
+      "sector": "AI — Semis & Compute",
+      "thesis": "Pure-play on AI memory intensity (HBM sold-out CY26); debate = peak earnings vs run-rate.",
+      "next_catalyst": "",
+      "why": [
+        "2027 DRAM bit supply — a three-way split with TWO LEGS INSIDE MORGAN STANLEY",
+        "China memory — the derating argument, and the constraint is mis-located on the wiki",
+        "The HBM $/Gb anchor this wiki has been quoting is the WRONG VENDOR'S PRICE"
+      ]
+    },
+    {
+      "ticker": "SAMSUNG",
+      "focus_score": 39,
+      "in_book": false,
+      "signal_count": 3,
+      "high_count": 0,
+      "sector": "Memory & storage",
+      "thesis": "Cheapest way to own the memory super-cycle; HBM4 catch-up vs SK Hynix + foundry optionality. ₩, no SEC.",
+      "next_catalyst": "2026-11-21",
+      "why": [
+        "2027 DRAM bit supply — a three-way split with TWO LEGS INSIDE MORGAN STANLEY",
+        "China memory — the derating argument, and the constraint is mis-located on the wiki",
+        "The HBM $/Gb anchor this wiki has been quoting is the WRONG VENDOR'S PRICE"
+      ]
+    },
+    {
       "ticker": "ANTHROPIC",
       "focus_score": 35,
       "in_book": false,
@@ -668,19 +654,6 @@
       "next_catalyst": "",
       "why": [
         "GOOG/AVGO/ANTHROPIC — the FT (08-04) SIZES a figure the wiki had marked unsizeable, and it is the EARLIER source"
-      ]
-    },
-    {
-      "ticker": "ASML",
-      "focus_score": 35,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "AI — Semis & Compute",
-      "thesis": "Supply-chain chokepoint (EUV near-monopoly); Street \"behind the curve\" on 2027/28 vs a 2028 DRAM air-pocket.",
-      "next_catalyst": "",
-      "why": [
-        "ASML — the wiki was carrying High-NA's WORST-CASE throughput, for the segment that adopts FIRST"
       ]
     },
     {
@@ -736,6 +709,19 @@
       ]
     },
     {
+      "ticker": "SNDK",
+      "focus_score": 35,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Memory & storage",
+      "thesis": "Post-spin pure-play NAND on AI storage; price-driven blowout + $42B LTA backlog vs blowoff-top risk.",
+      "next_catalyst": "",
+      "why": [
+        "[23:00 second pass] SNDK — the largest open edge on the wiki just got NARROWER AND SHARPER: consensus has adopted management's DOWNSIDE case as its BASE case"
+      ]
+    },
+    {
       "ticker": "MEDIATEK",
       "focus_score": 34,
       "in_book": false,
@@ -763,6 +749,172 @@
     }
   ],
   "signals": [
+    {
+      "id": "reco-708d471ee0d3",
+      "asof": "2026-09-15",
+      "source_date": "2026-09-15",
+      "type": "model_check",
+      "priority": "high",
+      "score": 100,
+      "title": "AMZN — Bernstein is +16% / +27% above consensus on FY27 / FY28 EBIT and still carries a PT below consensus",
+      "tickers": [
+        "AMZN"
+      ],
+      "in_book": [
+        "AMZN"
+      ],
+      "impact": "high",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "Spot $248.42 → Bernstein's PT implies +28.8%, consensus +32.8%.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the AMZN model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "supplier",
+          "detail": "networking",
+          "from": "AMZN",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "AMZN",
+          "in_book": true
+        },
+        {
+          "ticker": "MDB",
+          "relation": "competitor",
+          "detail": "Atlas vs DynamoDB",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "SNOW",
+          "relation": "competitor",
+          "detail": "warehouse vs Redshift",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "AAOI",
+          "relation": "supplier",
+          "detail": "optical transceivers",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "AGX",
+          "relation": "supplier",
+          "detail": "EPC gas power",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "ALAB",
+          "relation": "supplier",
+          "detail": "PCIe/CXL",
+          "from": "AMZN",
+          "in_book": false
+        }
+      ],
+      "source": "Bernstein · curated reconciliation 2026-09-15",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-15.md"
+      ],
+      "evidence_anchor": "AMZN — Bernstein is +16% / +27% above consensus on FY27 / FY28 EBIT and still carries a PT below consensus",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-febc10b923f7",
+      "asof": "2026-09-15",
+      "source_date": "2026-09-15",
+      "type": "contradiction",
+      "priority": "high",
+      "score": 100,
+      "title": "The relay that reached the wiki at 21:00 carried a mechanism that is not in the primary — and it pointed the opposite way",
+      "tickers": [
+        "OPENAI",
+        "AMZN",
+        "DDOG"
+      ],
+      "in_book": [
+        "AMZN"
+      ],
+      "impact": "high",
+      "urgency": "immediate",
+      "confidence": "provisional",
+      "why_now": "PT $237. Both retired to the respective Changelogs.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Keep every sourced variant for OPENAI/AMZN/DDOG; identify the primary disclosure or named adjudicator that can resolve them. Do not average incompatible figures.",
+      "falsifier": "The next primary disclosure that puts the competing variants on one defined basis.",
+      "readthrough": [
+        {
+          "ticker": "MSFT",
+          "relation": "supplier",
+          "detail": "Azure compute",
+          "from": "OPENAI",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "OPENAI",
+          "in_book": true
+        },
+        {
+          "ticker": "ANTHROPIC",
+          "relation": "competitor",
+          "detail": "frontier models",
+          "from": "OPENAI",
+          "in_book": false
+        },
+        {
+          "ticker": "AMD",
+          "relation": "supplier",
+          "detail": "MI GPUs",
+          "from": "OPENAI",
+          "in_book": false
+        },
+        {
+          "ticker": "CRWV",
+          "relation": "supplier",
+          "detail": "neocloud compute",
+          "from": "OPENAI",
+          "in_book": false
+        },
+        {
+          "ticker": "NBIS",
+          "relation": "supplier",
+          "detail": "neocloud compute",
+          "from": "OPENAI",
+          "in_book": false
+        },
+        {
+          "ticker": "ORCL",
+          "relation": "supplier",
+          "detail": "OCI compute",
+          "from": "OPENAI",
+          "in_book": false
+        }
+      ],
+      "source": "management/company primary + Bernstein · curated reconciliation 2026-09-15",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-15.md"
+      ],
+      "evidence_anchor": "The relay that reached the wiki at 21:00 carried a mechanism that is not in the primary — and it pointed the opposite way",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
     {
       "id": "beli-ea54314b2141",
       "asof": "2026-09-15",
@@ -925,6 +1077,197 @@
       ],
       "evidence_anchor": "🆕🔴 2026-09-15 — MICROSOFT PUBLISHES THE \"CODE OF CONDUCT\" UNDERLYING ITS FIRST-PARTY MAI MODELS, FOR PUBLIC CONSULTATION. Committed to by Satya Nadella on X (09-13) in his response to the ANTHRO",
       "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-5e4b068a9dab",
+      "asof": "2026-09-15",
+      "source_date": "2026-09-15",
+      "type": "model_check",
+      "priority": "high",
+      "score": 73,
+      "title": "ASML — Bernstein's estimates are consensus, but its PT is +22.8% above consensus",
+      "tickers": [
+        "ASML"
+      ],
+      "in_book": [],
+      "impact": "high",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "Spot €1,378.80 → Bernstein's PT implies +81.3%, consensus +47.6%.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the ASML model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "call at all; it is a re-rating call, and it is falsifiable on the multiple alone.",
+      "readthrough": [
+        {
+          "ticker": "TSM",
+          "relation": "customer",
+          "detail": "EUV/DUV litho",
+          "from": "ASML",
+          "in_book": true
+        },
+        {
+          "ticker": "INTC",
+          "relation": "customer",
+          "detail": "litho",
+          "from": "ASML",
+          "in_book": false
+        },
+        {
+          "ticker": "MU",
+          "relation": "customer",
+          "detail": "litho",
+          "from": "ASML",
+          "in_book": false
+        },
+        {
+          "ticker": "SAMSUNG",
+          "relation": "customer",
+          "detail": "litho",
+          "from": "ASML",
+          "in_book": false
+        },
+        {
+          "ticker": "SKHYNIX",
+          "relation": "customer",
+          "detail": "litho",
+          "from": "ASML",
+          "in_book": false
+        },
+        {
+          "ticker": "SMIC",
+          "relation": "customer",
+          "detail": "DUV",
+          "from": "ASML",
+          "in_book": false
+        }
+      ],
+      "source": "Bernstein · curated reconciliation 2026-09-15",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-15.md"
+      ],
+      "evidence_anchor": "ASML — Bernstein's estimates are consensus, but its PT is +22.8% above consensus",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-501148415165",
+      "asof": "2026-09-15",
+      "source_date": "2026-09-15",
+      "type": "model_check",
+      "priority": "high",
+      "score": 73,
+      "title": "ASML — the house EUV model takes the 110 as the number, which is exactly what tonight's note says it is not",
+      "tickers": [
+        "ASML"
+      ],
+      "in_book": [],
+      "impact": "high",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "Ten extra tools would be ≈+€2.7bn, or +8.1%. The house model is not wrong to use the communicated number; it is",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the ASML model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "TSM",
+          "relation": "customer",
+          "detail": "EUV/DUV litho",
+          "from": "ASML",
+          "in_book": true
+        },
+        {
+          "ticker": "INTC",
+          "relation": "customer",
+          "detail": "litho",
+          "from": "ASML",
+          "in_book": false
+        },
+        {
+          "ticker": "MU",
+          "relation": "customer",
+          "detail": "litho",
+          "from": "ASML",
+          "in_book": false
+        },
+        {
+          "ticker": "SAMSUNG",
+          "relation": "customer",
+          "detail": "litho",
+          "from": "ASML",
+          "in_book": false
+        },
+        {
+          "ticker": "SKHYNIX",
+          "relation": "customer",
+          "detail": "litho",
+          "from": "ASML",
+          "in_book": false
+        },
+        {
+          "ticker": "SMIC",
+          "relation": "customer",
+          "detail": "DUV",
+          "from": "ASML",
+          "in_book": false
+        }
+      ],
+      "source": "management/company primary + JPM + Bernstein · curated reconciliation 2026-09-15",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-15.md"
+      ],
+      "evidence_anchor": "ASML — the house EUV model takes the 110 as the number, which is exactly what tonight's note says it is not",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-218f38206927",
+      "asof": "2026-09-15",
+      "source_date": "2026-09-15",
+      "type": "model_check",
+      "priority": "high",
+      "score": 73,
+      "title": "NET — a Market-Perform whose PT implies ≈−50%, while the same analyst's estimates sit above the company's own guide",
+      "tickers": [
+        "NET"
+      ],
+      "in_book": [],
+      "impact": "high",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "above consensus on both years — and, per the page work, above the top of the company's own raised FY26 guide.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the NET model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "cushions AWS and Datadog. That is a clean, dated, falsifiable divergence against this page's agentic-consumption",
+      "readthrough": [
+        {
+          "ticker": "AKAM",
+          "relation": "competitor",
+          "detail": "edge/CDN",
+          "from": "NET",
+          "in_book": false
+        },
+        {
+          "ticker": "FSLY",
+          "relation": "competitor",
+          "detail": "edge/CDN",
+          "from": "NET",
+          "in_book": false
+        }
+      ],
+      "source": "management/company primary + Bernstein · curated reconciliation 2026-09-15",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-15.md"
+      ],
+      "evidence_anchor": "NET — a Market-Perform whose PT implies ≈−50%, while the same analyst's estimates sit above the company's own guide",
+      "origin": "curated_reconciliation",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
@@ -1508,91 +1851,6 @@
       "hidden": false
     },
     {
-      "id": "reco-9e9f03ba27ad",
-      "asof": "2026-09-15",
-      "source_date": "2026-09-14",
-      "type": "contradiction",
-      "priority": "medium",
-      "score": 66,
-      "title": "The HBM de-spec chain now has vendors on BOTH sides, and one supplier has broken ranks",
-      "tickers": [
-        "MU",
-        "SKHYNIX",
-        "SAMSUNG",
-        "NVDA"
-      ],
-      "in_book": [
-        "NVDA"
-      ],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "provisional",
-      "why_now": "enter a digestion phase.\" For test the sign inverts — test scales with the number of stacks, not the height of one.",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Keep every sourced variant for MU/SKHYNIX/SAMSUNG/NVDA; identify the primary disclosure or named adjudicator that can resolve them. Do not average incompatible figures.",
-      "falsifier": "They are logged as a falsifiable counter-argument to a chain the wiki has been building since 09-08 — the falsifier",
-      "readthrough": [
-        {
-          "ticker": "AVGO",
-          "relation": "customer",
-          "detail": "HBM",
-          "from": "MU",
-          "in_book": true
-        },
-        {
-          "ticker": "AMAT",
-          "relation": "supplier",
-          "detail": "WFE",
-          "from": "MU",
-          "in_book": false
-        },
-        {
-          "ticker": "AMD",
-          "relation": "customer",
-          "detail": "HBM",
-          "from": "MU",
-          "in_book": false
-        },
-        {
-          "ticker": "ASML",
-          "relation": "supplier",
-          "detail": "litho",
-          "from": "MU",
-          "in_book": false
-        },
-        {
-          "ticker": "KLAC",
-          "relation": "supplier",
-          "detail": "process control",
-          "from": "MU",
-          "in_book": false
-        },
-        {
-          "ticker": "LRCX",
-          "relation": "supplier",
-          "detail": "NAND/HBM WFE",
-          "from": "MU",
-          "in_book": false
-        },
-        {
-          "ticker": "TOKYOELEC",
-          "relation": "supplier",
-          "detail": "WFE",
-          "from": "MU",
-          "in_book": false
-        }
-      ],
-      "source": "SemiAnalysis · curated reconciliation 2026-09-14",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-09-14.md"
-      ],
-      "evidence_anchor": "The HBM de-spec chain now has vendors on BOTH sides, and one supplier has broken ranks",
-      "origin": "curated_reconciliation",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
       "id": "beli-27199cc88557",
       "asof": "2026-09-15",
       "source_date": "2026-09-14",
@@ -1885,88 +2143,6 @@
       "hidden": false
     },
     {
-      "id": "reco-f9edc994971e",
-      "asof": "2026-09-15",
-      "source_date": "2026-09-14",
-      "type": "model_check",
-      "priority": "medium",
-      "score": 59,
-      "title": "AVGO — the house model sits ABOVE the company's own AI revenue path, on both years",
-      "tickers": [
-        "AVGO"
-      ],
-      "in_book": [
-        "AVGO"
-      ],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "high",
-      "why_now": "Management reiterated ~$115bn of AI revenue in FY2027 and ~$230bn in FY2028, explicitly framed as conservative and",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the AVGO model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
-      "readthrough": [
-        {
-          "ticker": "NVDA",
-          "relation": "competitor",
-          "detail": "merchant vs custom ASIC",
-          "from": "AVGO",
-          "in_book": true
-        },
-        {
-          "ticker": "AMZN",
-          "relation": "customer",
-          "detail": "networking",
-          "from": "AVGO",
-          "in_book": true
-        },
-        {
-          "ticker": "GOOG",
-          "relation": "customer",
-          "detail": "custom ASIC (TPU)",
-          "from": "AVGO",
-          "in_book": true
-        },
-        {
-          "ticker": "META",
-          "relation": "customer",
-          "detail": "custom ASIC",
-          "from": "AVGO",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "customer",
-          "detail": "custom ASIC",
-          "from": "AVGO",
-          "in_book": true
-        },
-        {
-          "ticker": "TSM",
-          "relation": "supplier",
-          "detail": "foundry",
-          "from": "AVGO",
-          "in_book": true
-        },
-        {
-          "ticker": "MRVL",
-          "relation": "competitor",
-          "detail": "custom ASIC",
-          "from": "AVGO",
-          "in_book": false
-        }
-      ],
-      "source": "management/company primary · curated reconciliation 2026-09-14",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-09-14.md"
-      ],
-      "evidence_anchor": "AVGO — the house model sits ABOVE the company's own AI revenue path, on both years",
-      "origin": "curated_reconciliation",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
       "id": "cata-2bc8be299987",
       "asof": "2026-09-15",
       "source_date": "2026-09-21",
@@ -2073,6 +2249,79 @@
       ],
       "evidence_anchor": "🆕🔴🔴 FRI 2026-09-18 — NASDAQ-100 REBALANCE, ~110M SHARES TO BUY. NASDAQ announced after the close on 09-11 that it will RAISE SPCX weighting in the Nasdaq 100, creating \"about 110mln shares to buy",
       "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-798a68d562a1",
+      "asof": "2026-09-15",
+      "source_date": "2026-09-15",
+      "type": "model_check",
+      "priority": "medium",
+      "score": 57,
+      "title": "DDOG — above consensus on EPS in both years, 18% below on PT",
+      "tickers": [
+        "DDOG"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "Spot $230.27 → Bernstein's PT implies +2.9% (consistent with the Market-Perform), consensus +25.6%.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the DDOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "supplier",
+          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
+          "from": "DDOG",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "supplier",
+          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
+          "from": "DDOG",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "supplier",
+          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
+          "from": "DDOG",
+          "in_book": true
+        },
+        {
+          "ticker": "CSCO",
+          "relation": "competitor",
+          "detail": "observability vs Splunk",
+          "from": "DDOG",
+          "in_book": false
+        },
+        {
+          "ticker": "DT",
+          "relation": "competitor",
+          "detail": "observability",
+          "from": "DDOG",
+          "in_book": false
+        },
+        {
+          "ticker": "ESTC",
+          "relation": "competitor",
+          "detail": "observability/logs",
+          "from": "DDOG",
+          "in_book": false
+        }
+      ],
+      "source": "Bernstein · curated reconciliation 2026-09-15",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-15.md"
+      ],
+      "evidence_anchor": "DDOG — above consensus on EPS in both years, 18% below on PT",
+      "origin": "curated_reconciliation",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
@@ -2620,85 +2869,73 @@
       "hidden": false
     },
     {
-      "id": "reco-90450968d9ca",
+      "id": "reco-ddeb8c2b7aa7",
       "asof": "2026-09-15",
-      "source_date": "2026-09-14",
-      "type": "model_check",
+      "source_date": "2026-09-15",
+      "type": "contradiction",
       "priority": "medium",
       "score": 48,
-      "title": "Cybersecurity — the beneficiary ladder is INVERSELY ranked against consensus implied upside",
+      "title": "ASML — a vintage/basis conflict on \"current\" throughput, flagged and not resolved",
       "tickers": [
-        "CRWD",
-        "ESTC",
-        "AKAM",
-        "FSLY",
-        "CSCO",
-        "DDOG"
+        "ASML"
       ],
       "in_book": [],
       "impact": "medium",
       "urgency": "immediate",
       "confidence": "medium",
-      "why_now": "FundaAI ranks the beneficiaries \"by the strength of the benefit case\". Placing each rung against the BBG consensus PT",
+      "why_now": "superseded; the conflict is logged on the ASML and semicap-wfe pages.",
       "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the CRWD/ESTC/AKAM/FSLY model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "action": "Keep every sourced variant for ASML; identify the primary disclosure or named adjudicator that can resolve them. Do not average incompatible figures.",
+      "falsifier": "The next primary disclosure that puts the competing variants on one defined basis.",
       "readthrough": [
         {
-          "ticker": "OKTA",
-          "relation": "competitor",
-          "detail": "agentic identity",
-          "from": "CRWD",
-          "in_book": false
-        },
-        {
-          "ticker": "AMZN",
-          "relation": "supplier",
-          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
-          "from": "ESTC",
+          "ticker": "TSM",
+          "relation": "customer",
+          "detail": "EUV/DUV litho",
+          "from": "ASML",
           "in_book": true
         },
         {
-          "ticker": "GOOG",
-          "relation": "supplier",
-          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
-          "from": "ESTC",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "supplier",
-          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
-          "from": "ESTC",
-          "in_book": true
-        },
-        {
-          "ticker": "DT",
-          "relation": "competitor",
-          "detail": "observability/logs",
-          "from": "ESTC",
+          "ticker": "INTC",
+          "relation": "customer",
+          "detail": "litho",
+          "from": "ASML",
           "in_book": false
         },
         {
-          "ticker": "NET",
-          "relation": "competitor",
-          "detail": "edge/CDN",
-          "from": "AKAM",
+          "ticker": "MU",
+          "relation": "customer",
+          "detail": "litho",
+          "from": "ASML",
           "in_book": false
         },
         {
-          "ticker": "ANET",
-          "relation": "competitor",
-          "detail": "AI networking",
-          "from": "CSCO",
+          "ticker": "SAMSUNG",
+          "relation": "customer",
+          "detail": "litho",
+          "from": "ASML",
+          "in_book": false
+        },
+        {
+          "ticker": "SKHYNIX",
+          "relation": "customer",
+          "detail": "litho",
+          "from": "ASML",
+          "in_book": false
+        },
+        {
+          "ticker": "SMIC",
+          "relation": "customer",
+          "detail": "DUV",
+          "from": "ASML",
           "in_book": false
         }
       ],
-      "source": "FundaAI · curated reconciliation 2026-09-14",
+      "source": "Bernstein · curated reconciliation 2026-09-15",
       "evidence_paths": [
-        "_meta/reconciliation-2026-09-14.md"
+        "_meta/reconciliation-2026-09-15.md"
       ],
-      "evidence_anchor": "Cybersecurity — the beneficiary ladder is INVERSELY ranked against consensus implied upside",
+      "evidence_anchor": "ASML — a vintage/basis conflict on \"current\" throughput, flagged and not resolved",
       "origin": "curated_reconciliation",
       "feedback": "",
       "feedback_note": "",
@@ -3252,51 +3489,6 @@
       "hidden": false
     },
     {
-      "id": "reco-94b336b664b5",
-      "asof": "2026-09-15",
-      "source_date": "2026-09-14",
-      "type": "model_check",
-      "priority": "watch",
-      "score": 41,
-      "title": "ADVANTEST — a price mark this page has never carried, and the third vendor in one week to put price on the table",
-      "tickers": [
-        "ADVANTEST"
-      ],
-      "in_book": [],
-      "impact": "watch",
-      "urgency": "immediate",
-      "confidence": "medium",
-      "why_now": "Management put tester ASP at +10-15% per year and shortened the ASIC-versus-GPU test-demand crossover from 2-3",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the ADVANTEST model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
-      "readthrough": [
-        {
-          "ticker": "TSM",
-          "relation": "customer",
-          "detail": "ATE test",
-          "from": "ADVANTEST",
-          "in_book": true
-        },
-        {
-          "ticker": "SAMSUNG",
-          "relation": "customer",
-          "detail": "ATE test",
-          "from": "ADVANTEST",
-          "in_book": false
-        }
-      ],
-      "source": "management/company primary · curated reconciliation 2026-09-14",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-09-14.md"
-      ],
-      "evidence_anchor": "ADVANTEST — a price mark this page has never carried, and the third vendor in one week to put price on the table",
-      "origin": "curated_reconciliation",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
       "id": "cata-5019bdd5c87f",
       "asof": "2026-09-15",
       "source_date": "2026-09-30",
@@ -3496,72 +3688,6 @@
       ],
       "evidence_anchor": "🆕🔴 By 2026-09-30 — HBM CONTRACT PRICE UPDATE. Named by JPM (Kwon, 2026-08-19) as the 2 company-specific catalyst. This is the one that moves earnings rather than the share count, and it is th",
       "origin": "catalyst_calendar",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "reco-47bebf79de5b",
-      "asof": "2026-09-15",
-      "source_date": "2026-09-14",
-      "type": "model_check",
-      "priority": "watch",
-      "score": 41,
-      "title": "SNDK — the FY29 gap is UNCHANGED after 18 days, and management just made it harder to defend",
-      "tickers": [
-        "SNDK"
-      ],
-      "in_book": [],
-      "impact": "watch",
-      "urgency": "immediate",
-      "confidence": "high",
-      "why_now": "➤ This is the same open divergence first written up on 2026-08-27, and consensus has not moved a dollar: the FY29",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the SNDK model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
-      "readthrough": [
-        {
-          "ticker": "AMZN",
-          "relation": "customer",
-          "detail": "NAND/SSD",
-          "from": "SNDK",
-          "in_book": true
-        },
-        {
-          "ticker": "GOOG",
-          "relation": "customer",
-          "detail": "NAND/SSD",
-          "from": "SNDK",
-          "in_book": true
-        },
-        {
-          "ticker": "META",
-          "relation": "customer",
-          "detail": "NAND/SSD",
-          "from": "SNDK",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "customer",
-          "detail": "NAND/SSD",
-          "from": "SNDK",
-          "in_book": true
-        },
-        {
-          "ticker": "KIOXIA",
-          "relation": "competitor",
-          "detail": "NAND",
-          "from": "SNDK",
-          "in_book": false
-        }
-      ],
-      "source": "management/company primary · curated reconciliation 2026-09-14",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-09-14.md"
-      ],
-      "evidence_anchor": "SNDK — the FY29 gap is UNCHANGED after 18 days, and management just made it harder to defend",
-      "origin": "curated_reconciliation",
       "feedback": "",
       "feedback_note": "",
       "hidden": false

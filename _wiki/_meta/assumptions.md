@@ -540,6 +540,7 @@ _Median monthly AI-tool spend per employee from the Ramp AI Index, by cohort (al
 
 **Unreconciled sightings** (pages matching this metric, not in the ledger's `cited_in`):
 - `ANTHROPIC.md` — …TOMER, NOT CUSTOMER COUNT*  _(Source: **Ramp AI Index — model share** — per-named-model share of usage, **Jan-202…
+- `themes/ai-cybersecurity.md` — …less services."** Annual cybersecurity spend per employee FY25E **~$370**, on an OECD combined workforce of **~660m a…
 
 ## Wafers per GW of AI compute — node split (N3 / N5 / DRAM)  `wafers-per-gw`
 
