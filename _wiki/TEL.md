@@ -10,7 +10,7 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\TEL` (10-K FY2025, 10-
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $20.2bn | $22.1bn |
-| Gross profit | $7.4bn | $8.1bn |
+| Gross profit | $7.4bn | $8.2bn |
 | Gross margin | 36.8% | 36.9% |
 | EBITDA | $5.4bn | $6.0bn |
 | EPS | $11.62 | $13.25 |

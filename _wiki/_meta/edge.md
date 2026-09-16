@@ -26,13 +26,13 @@ _Generated 2026-09-15 · the standing view of where our model and the curated re
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|
-| AMAT | 419 | 658 | +57% | street high 900 · low 358 below spot · 38/5/0 of 43 |
-| AVGO | 342 | 532 | +56% | street high 715 · low 350 ABOVE spot · 58/4/0 of 62 |
-| ASML | 1,585 | 2,459 | +55% | street high 2,859 · low 2,100 ABOVE spot · 21/0/0 of 21 |
-| SNDK | 1,537 | 2,259 | +47% | street high 3,900 · low 1,400 below spot · 27/4/0 of 31 |
+| AVGO | 339 | 532 | +57% | street high 715 · low 350 ABOVE spot · 58/4/0 of 62 |
+| AMAT | 421 | 658 | +56% | street high 900 · low 358 below spot · 38/5/0 of 43 |
+| ASML | 1,591 | 2,459 | +55% | street high 2,859 · low 2,100 ABOVE spot · 21/0/0 of 21 |
+| SNDK | 1,531 | 2,259 | +48% | street high 3,900 · low 1,400 below spot · 27/4/0 of 31 |
 | ADVANTEST | 30,160 | 43,178 | +43% | street high 55,200 · low 34,000 ABOVE spot · 23/3/0 of 26 |
-| BKNG | 171 | 239 | +40% | street high 301 · low 188 ABOVE spot · 33/9/0 of 42 |
-| SMTC | 152 | 206 | +36% | street high 300 · low 155 ABOVE spot · 16/1/0 of 17 |
+| BKNG | 171 | 239 | +39% | street high 301 · low 188 ABOVE spot · 33/9/0 of 42 |
+| SMTC | 151 | 206 | +37% | street high 300 · low 155 ABOVE spot · 16/1/0 of 17 |
 | TSM | 414 | 550 | +33% | street high 700 · low 440 ABOVE spot · 31/1/0 of 32 |
 | GOOG | 341 | 426 | +25% | street high 475 · low 379 ABOVE spot · 16/1/0 of 17 |
-| CRWD | 238 | 239 | +0% | street high 425 · low 119 below spot · 41/14/1 of 56 |
+| CRWD | 242 | 239 | -2% | street high 425 · low 119 below spot · 41/14/1 of 56 |

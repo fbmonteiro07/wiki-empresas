@@ -2,7 +2,7 @@
 
 _Generated 2026-09-15 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (53)
+## 📅 Upcoming (62)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
@@ -10,10 +10,15 @@ _Generated 2026-09-15 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-09-15 | CRM | **🆕🔴 2026-09-15 to 09-17 — DREAMFORCE (SF), INVESTOR DAY 09-16 at 4PM ET. THE NAMED FOCUS IS NOW "CLAUDEFORCE."** UBS · Karl Keirstead (09-14): much of the investor focus will be on the newly-announce |
 | 2026-09-15 | CRWD | **🧪 PRE-REGISTERED TEST T8 — the Dec-2026 / Jan-2027 CISO BUDGET RESET, scored at the Jan–Mar 2027 prints and the next MS/IDC spend-ladder update:** cyber share of IT budgets printed or forecast **≥ 8 |
 | 2026-09-15 | DELL | **2026-09-15 — UBS David Vogt Boston marketing '26 #3, US Hardware.** |
+| 2026-09-15 | FLEX | **🆕 SPIN MECHANICS NOW DATED AND NAMED — preliminary FORM 10 FILED 2026-09-15; entity **Axiom Solutions International, Inc.**; expected NASDAQ ticker **"AXM"**; separation targeted **Q1 CY2027** (unch |
 | 2026-09-15 | META | **🆕 2026-09-15, 11AM ET — JPM INTERNET FALL SERIES (META, DASH, DUOL, TTWO, APP) with Doug Anmuth and Bryan Smilek** — first scheduled venue for Anmuth to defend the 09-10 upgrade to Overweight and th |
 | 2026-09-15 | MSFT | **🆕🔴 2026-09-15 — MICROSOFT PUBLISHES THE "CODE OF CONDUCT" UNDERLYING ITS FIRST-PARTY MAI MODELS, FOR PUBLIC CONSULTATION.** Committed to by Satya Nadella on X (09-13) in his response to the [[ANTHRO |
 | 2026-09-15 | PANW | **🧪 PRE-REGISTERED TEST T8 — the Dec-2026 / Jan-2027 CISO BUDGET RESET, scored at the Jan–Mar 2027 prints and the next MS/IDC spend-ladder update:** cyber share of IT budgets printed or forecast **≥ 8 |
+| 2026-09-15 | PLTR | 🆕 ~~**The UBS client recap call off the AIPCon customer/leadership event — TUE 15 SEPTEMBER, 8:30am ET (Karl Keirstead)**~~ — **RESOLVED 2026-09-15: the note landed and the rating moved. Buy reiterate |
 | 2026-09-15 | TSEM | **✅ 🆕 2026-09-15 — DELIVERED: the virtual fireside this page flagged on 09-07 as *"the venue to ask about the prepayments directly"* happened, and the prepayment question was asked and answered** — *" |
+| 2026-09-15 | TXN | **🆕⚠️ WATCH WHETHER BofA'S DEFENSIVE-ANALOG EXPRESSION ROTATES TOWARD TXN.** On 2026-09-15 Vivek Arya named **[[ADI]] and [[ON]]** — not TXN — among the five names expected to show the best resilience |
+| 2026-09-16 | CIEN | **🆕🔴🔴 TOMORROW — 2026-09-16, 8:00am: AN INVITE-ONLY, IN-PERSON CIENA FACTORY TOUR IN CALGARY, WITH A SLIDE DECK EXPECTED AND THE BUY-SIDE POSITIONED FOR AN UPGRADE TO A THIRTEEN-DAY-OLD GUIDE.** (J.P. |
+| 2026-09-16 | CIEN | 🔴 **WHY IT IS THE SHARPEST NEAR-DATED EVENT ON THIS PAGE: the guide in question is THIRTEEN DAYS OLD. Management gave the F4Q26 guide and the early FY27 view on 2026-09-03 (revenue "at least +30%" to  |
 | 2026-09-16 | ON | **2026-09-16 — onsemi Analyst Day** (Citi exp. ~Sep 13 print first) — the key event; watch for a raised long-term target model + SiC/800V framing (Citi, briefing 2026-06-15). |
 | 2026-09-16 | ON | **🆕🔴🔴 WED 2026-09-16 — ON SEMICONDUCTOR ANALYST DAY. THE SINGLE TEST: DOES THE 53% GROSS-MARGIN TARGET SURVIVE?** UBS · Arcuri preview (09-14) expects a LT model implying **CY30E revenue ~$10bn and EP |
 | 2026-09-18 | AVGO | **🆕 WED 2026-09-16 — AVGO CEO *AND* CFO ON THE JEFFERIES SEMIS BUS TOUR** (alongside [[NVDA]] CFO, [[LITE]] CEO, [[CRDO]] CFO, [[AMAT]], CBRS). **Jefferies · Blayne Curtis hosts a debrief call FRI 202 |
@@ -21,9 +26,11 @@ _Generated 2026-09-15 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-09-18 | SKHYNIX | **🆕🔴 DATED FLOW CATALYST — 2026-09-18 (ON THE CLOSE, FRIDAY): 000660 KS IS AN UPWEIGHT IN THE FTSE GEIS SEPTEMBER GLOBAL REBALANCE *AND* AN ADDITION TO THE ICE SEMICONDUCTOR INDEX (ICESEMI) IN ITS ANN |
 | 2026-09-18 | SPCX | **🆕🔴 2026-09-18 — STARSHIP LAUNCH 14** (scheduled; flagged by Bernstein ahead of its MVNO analysis). |
 | 2026-09-18 | SPCX | **🆕🔴🔴 FRI 2026-09-18 — NASDAQ-100 REBALANCE, ~110M SHARES TO BUY.** NASDAQ announced after the close on 09-11 that it will RAISE SPCX weighting in the Nasdaq 100, creating *"about 110mln shares to buy |
+| 2026-09-18 | SPCX | **🆕🔴🔴 STARSHIP FLIGHT 14 — MS "estimated September 22nd" vs Bernstein's "scheduled 2026-09-18" (both logged, NEITHER adopted; track the FAA/company confirmation). Musk says Flight 14 is THE FINAL MISS |
 | 2026-09-21 | AXTI | **🆕 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — **S&P 600 INDEX ADD**, a dated MECHANICAL flow event.** AXTI is named as one of five S&P SmallCap 600 additions in the Septe |
 | 2026-09-21 | BE | **🆕🔴🔴 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — THE INDEX TIER IS NOW NAMED: BE IS AN **S&P 500** ADD, *AND* A **FTSE ALL-WORLD** ADD. TWO INDEPENDENT INDEX EVENTS IN THE |
 | 2026-09-21 | CEREBRAS | **🆕 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — **ICE SEMICONDUCTOR INDEX (ICESEMI) ADD** in the annual reconstitution. A dated MECHANICAL flow event, not a fundamental one |
+| 2026-09-21 | CIEN | **CALENDAR CONTEXT — TWO CORPORATE-ACCESS WINDOWS IN SIX DAYS: the Calgary tour (09-16) is followed by ECOC 2026 in Spain on 2026-09-21/22, where Morgan Stanley hosts CIEN alongside [[COHR]], [[CSCO]] |
 | 2026-09-21 | CIEN | **🆕 ECOC 2026, 2026-09-21/22 (Spain) — Morgan Stanley hosts COHR, CIEN, [[CSCO]], KEYS and NOK.** First optical-systems corporate-access window after the print. (MS TMT desk, 2026-08-31) |
 | 2026-09-21 | COHR | **🆕 2026-09-21 — PHOTONLINK LAUNCH: establish the PLATFORM, LANE RATE AND MODULATION FORMAT, not just the positioning.** The FQ1 FY27 synthesis lists PhotonLink as a genuinely net-new BULL item (platf |
 | 2026-09-21 | OKTA | **Oktane — week of 2026-09-21, Las Vegas** — *"the AI security event of the year"*, with an analyst/investor Q&A (McKinnon, Q2 FY27). Watch: agent-identity customer counts, any per-agent pricing const |
@@ -37,6 +44,7 @@ _Generated 2026-09-15 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-09-23 | META | **🆕 2026-09-23/24 — META CONNECT.** MS flags it as the next scheduled product venue *"for more product updates"*, with **Hatch** expected to launch *"in the coming weeks"* and the next model, **'Water |
 | 2026-09-23 | META | **🆕🔴🔴 META CONNECT — 2026-09-23/24.** Both UBS (exact dates) and MS (*"25 days away"* as of 08-30) name it as the product catalyst the whole re-rating argument depends on. **Watch for: the Watermelon  |
 | 2026-09-24 | NVDA | **🆕🔴 TRUMP-XI MEETING, 2026-09-24 — the dated headline-risk window, and UBS says the newsflow into it is not random.** *"As is usually the case before Trump-Xi meetings, headline risks likely to pick  |
+| 2026-09-24 | SPCX | **🆕 2026-09-24, NYC — MS event: "SPCX How to Play the Space Economy ft Adam Jonas, Sean Diffley, and William Tackett".** (Morgan Stanley TMT desk, 2026-09-15) |
 | 2026-09-24 | TSM | **🆕⚠️ TRUMP-XI, 2026-09-24 — UBS puts SPE and MEMORY as the most exposed verticals, with the ASML/Netherlands MATCH Act immersion-DUV headlines and new BIS measures on Chinese compute access via Thail |
 | 2026-09-29 | MDB | **Investor Day, NYC, 2026-09-29** (+ .local NYC 09-30): Berry promised a "financial session" and Desai "new product innovations"; watch for a refreshed long-term model (Sept-2025 Investor Day model =  |
 | 2026-09-30 | HPE | **🆕🔴 HPE NETWORKING ANALYST DAY — 2026-09-30.** This is where the *"segment returns to HPE's historical margin profile of mid-20s"* claim gets defended, dated, or walked back. ➜ **It matters more than |
@@ -48,6 +56,7 @@ _Generated 2026-09-15 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-10-15 | SMTC | **🔴 2026-10-15 — INVESTOR / ANALYST DAY, San Jose. The single most important dated event on this page, because management deferred the two questions that matter to it.** Promised content: *"an in-dept |
 | 2026-10-26 | MEDIATEK | **🆕🔴 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR "POTENTIAL UPWARD REVISIONS TO GOOGLE TPU-RELATED GUIDANCE."** Between them: **Google system-level validation of v9 in H |
 | 2026-10-28 | ORCL | **🆕🔴🔴 2026-10-28 — ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as "Investor Day in October").** First opportunity for **new CFO Hilary Maxson** to set long-term financial targ |
+| 2026-11-10 | FLEX | **🆕🔴 INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail lands.** Flex said *"more strategy details will be shared at an Innovation Day event on November 10, 2026  |
 | 2026-11-12 | SPCX | **🆕🔴🔴 2026-11-12 — [[OPENAI]] CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.** OpenAI's own post: *"**We're ending our partnership with Cursor following its acquisit |
 | 2026-11-17 | MSFT | **🆕 2026-11-17 to 11-20, SF — MSFT IGNITE.** |
 | 2026-11-17 | NVDA | **✅🔴 CLOSED 2026-09-10 — THE GS COMMUNACOPIA FIRESIDE HAPPENED. OUTCOME:** Jensen **reaffirmed the ~70% FY28 revenue growth** (*"we could grow 70% year-over-year, and we are confident about that"*), * |

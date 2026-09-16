@@ -56,6 +56,7 @@ HUB = [
     ("GW per player", "gw-per-player.html", "Highest GW estimate per player, all sources cited, SemiAnalysis highlighted (hand-curated 2026-07-01)."),
     ("Token fabric", "token-fabric.html", "Token supply vs demand 2026-2030 — calibrated tok/s/MW, per-user watts, malinvestment dial (hand-curated 2026-07-02)."),
     ("Memória — superciclo", "memoria-capstone.html", "Superciclo de memória (DRAM · NAND · HBM): KPIs, S/D por segmento, capacidade e conversão HBM, valuation e builds editáveis, dark mode (hand-built 2026-07-08)."),
+    ("Memory exports tracker", "memory-exports-tracker.html", "Weekly Monday routine (E:\korea-memory-monitor): Korea customs 10-day preliminaries and HS10 detail (DRAM, flash, multichip, SSD, destinations), MOTIE fixed DDR5/NAND prices, BOK export price indices, Japan flash exports (Kioxia/SanDisk) and the quarter read vs the Street; full monthly report in memory-exports-report.html."),
     ("Revenue das clouds", "rcloud.html", "AWS · Azure · GCP: resultado, RPO (split OpenAI/Anthropic), projeções Capstone vs consenso vs bogey, exposição aos labs, EBIT e capex/FCF — réplica do rcloud.html da Fernanda (sync_rcloud.py)."),
 ]
 

@@ -1,6 +1,6 @@
 # Daily Analyst Brief
 
-_Generated 2026-09-15 · 101 active signals · latest reconciliation: reconciliation-2026-09-14.md._
+_Generated 2026-09-15 · 107 active signals · latest reconciliation: reconciliation-2026-09-14.md._
 
 > ⚠️ **Portfolio priority is provisional.** _data/book.json is still a seed with unknown weights. Book badges identify seeded names but do not represent real exposure.
 
@@ -8,7 +8,7 @@ _Generated 2026-09-15 · 101 active signals · latest reconciliation: reconcilia
 
 | Rank | Ticker | Book | Signals | Why focus now |
 |---:|---|---|---:|---|
-| 1 | **MSFT** | seed | 9 | MSFT — 2026-09-15: MICROSOFT PUBLISHES THE "CODE OF CONDUCT" UNDERLYING ITS FIRST-PARTY MAI MODELS, FOR…; MSFT — consensus capex decelerates hard while management says it must keep building ahead |
+| 1 | **MSFT** | seed | 10 | MSFT — derived thesis/debate state changed since the prior daily snapshot; MSFT — 2026-09-15: MICROSOFT PUBLISHES THE "CODE OF CONDUCT" UNDERLYING ITS FIRST-PARTY MAI MODELS, FOR… |
 | 2 | **GOOG** | seed | 9 | GOOG — 2026 revenue house view is 18% above consensus; GOOG — 2027 revenue house view is 18% above consensus |
 | 3 | **META** | seed | 7 | META — 2026-09-23: META CONNECT — 2026-09-23/24. Both UBS (exact dates) and MS ("25 days away" as of 08-30)…; META — 2026-09-15: 2026-09-15, 11AM ET — JPM INTERNET FALL SERIES (META, DASH, DUOL, TTWO, APP) with Doug… |
 | 4 | **AVGO** | seed | 8 | AVGO — 2026-09-15: BERNSTEIN 8th ANNUAL SEMIS BUS TOUR, 2026-09-15/16, San Jose — AVGO on the roster…; AVGO — 2026-09-18: WED 2026-09-16 — AVGO CEO AND CFO ON THE JEFFERIES SEMIS BUS TOUR (alongside NVDA CFO,… |
@@ -17,13 +17,26 @@ _Generated 2026-09-15 · 101 active signals · latest reconciliation: reconcilia
 | 7 | **SKHYNIX** | — | 6 | The HBM de-spec chain now has vendors on BOTH sides, and one supplier has broken ranks; SKHYNIX — 2026-09-18: DATED FLOW CATALYST — 2026-09-18 (ON THE CLOSE, FRIDAY): 000660 KS IS AN UPWEIGHT IN THE… |
 | 8 | **MU** | — | 4 | The HBM de-spec chain now has vendors on BOTH sides, and one supplier has broken ranks; 2027 DRAM bit supply — a three-way split with TWO LEGS INSIDE MORGAN STANLEY |
 | 9 | **SAMSUNG** | — | 4 | The HBM de-spec chain now has vendors on BOTH sides, and one supplier has broken ranks; 2027 DRAM bit supply — a three-way split with TWO LEGS INSIDE MORGAN STANLEY |
-| 10 | **ON** | — | 2 | ON — 2026-09-16: WED 2026-09-16 — ON SEMICONDUCTOR ANALYST DAY. THE SINGLE TEST: DOES THE 53% GROSS-MARGIN…; ON — 2026-09-22: Tue 2026-09-22, Los Angeles — ON CEO/CFO/IR NDR hosted by Jefferies · Blayne Curtis. |
-| 11 | **TSEM** | — | 3 | TSEM — derived thesis/debate state changed since the prior daily snapshot; TSEM — 2026-09-15: DELIVERED: the virtual fireside this page flagged on 09-07 as "the venue to ask about the… |
-| 12 | **ADVANTEST** | — | 2 | ADVANTEST — derived thesis/debate state changed since the prior daily snapshot; ADVANTEST — a price mark this page has never carried, and the third vendor in one week to put price on the table |
+| 10 | **CIEN** | — | 2 | CIEN — 2026-09-16: TOMORROW — 2026-09-16, 8:00am: AN INVITE-ONLY, IN-PERSON CIENA FACTORY TOUR IN CALGARY,…; CIEN — 2026-09-21: CALENDAR CONTEXT — TWO CORPORATE-ACCESS WINDOWS IN SIX DAYS: the Calgary tour (09-16) is… |
+| 11 | **ON** | — | 2 | ON — 2026-09-16: WED 2026-09-16 — ON SEMICONDUCTOR ANALYST DAY. THE SINGLE TEST: DOES THE 53% GROSS-MARGIN…; ON — 2026-09-22: Tue 2026-09-22, Los Angeles — ON CEO/CFO/IR NDR hosted by Jefferies · Blayne Curtis. |
+| 12 | **TSEM** | — | 3 | TSEM — derived thesis/debate state changed since the prior daily snapshot; TSEM — 2026-09-15: DELIVERED: the virtual fireside this page flagged on 09-07 as "the venue to ask about the… |
 
 ## Highest-priority ideas
 
-### 1. 🔴 GOOG — 2026 revenue house view is 18% above consensus
+### 1. 🔴 MSFT — derived thesis/debate state changed since the prior daily snapshot
+
+_NARRATIVE SHIFT · HIGH IMPACT · IMMEDIATE · HIGH CONFIDENCE_
+
+- **Tickers:** MSFT · seeded book: MSFT
+- **Why now:** (/wiki-ingest, 21:00 — 5 sources, all desk relays or press: The Information (09-15) + CNBC (09-14) + Digitimes (09-15) on the kill-switch/shutdown-rule commitment; the MS TMT desk's relay of Nadella at the All-In Summit; Rothschild's summary of The Information's enterprise data-retention reporting; BofA's hyperscaler-credit initiation). Added 1 dated block under Debate / thesis and 1 intra-quarter log row. ✅ NOTHING SUPERSEDED — no rating, PT, estimate or guide moved. NET-NEW for this page: (i) the…
+- **Belief update:** The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.
+- **Action:** Re-grade the MSFT thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.
+- **Falsifier:** The fingerprint moved only because of formatting or a derived snapshot insertion.
+- **Read-through:** AVGO (supplier: custom ASIC); NVDA (supplier: GPUs); MDB (competitor: Atlas vs Cosmos DB); OKTA (competitor: IAM (Entra bundling)); SNOW (competitor: warehouse vs Fabric); AAOI (supplier: optical transceivers); ALAB (supplier: scale-up fabric)
+- **Attribution:** MSFT page Changelog 2026-09-15.
+- **Evidence:** [MSFT.md](../MSFT.md) · signal beli-ea54314b2141
+
+### 2. 🔴 GOOG — 2026 revenue house view is 18% above consensus
 
 _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
@@ -36,7 +49,7 @@ _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 - **Attribution:** Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-15.
 - **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-27f2d33b262d
 
-### 2. 🔴 GOOG — 2027 revenue house view is 18% above consensus
+### 3. 🔴 GOOG — 2027 revenue house view is 18% above consensus
 
 _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
@@ -49,7 +62,7 @@ _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 - **Attribution:** Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-15.
 - **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-a6fd010bf8e4
 
-### 3. 🔴 AAPL — 2026 EPS house view is 16% above consensus
+### 4. 🔴 AAPL — 2026 EPS house view is 16% above consensus
 
 _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
@@ -62,7 +75,7 @@ _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 - **Attribution:** Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-09-15.
 - **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-b14f4c62ea9b
 
-### 4. 🟡 The HBM de-spec chain now has vendors on BOTH sides, and one supplier has broken ranks
+### 5. 🟡 The HBM de-spec chain now has vendors on BOTH sides, and one supplier has broken ranks
 
 _CONTRADICTION · MEDIUM IMPACT · IMMEDIATE · PROVISIONAL CONFIDENCE_
 
@@ -75,7 +88,7 @@ _CONTRADICTION · MEDIUM IMPACT · IMMEDIATE · PROVISIONAL CONFIDENCE_
 - **Attribution:** SemiAnalysis · curated reconciliation 2026-09-14.
 - **Evidence:** [reconciliation-2026-09-14.md](reconciliation-2026-09-14.md) · signal reco-9e9f03ba27ad
 
-### 5. 🟡 ADVANTEST — derived thesis/debate state changed since the prior daily snapshot
+### 6. 🟡 ADVANTEST — derived thesis/debate state changed since the prior daily snapshot
 
 _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
@@ -88,7 +101,7 @@ _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 - **Attribution:** ADVANTEST page Changelog 2026-09-14.
 - **Evidence:** [ADVANTEST.md](../ADVANTEST.md) · signal beli-27199cc88557
 
-### 6. 🟡 TSEM — derived thesis/debate state changed since the prior daily snapshot
+### 7. 🟡 TSEM — derived thesis/debate state changed since the prior daily snapshot
 
 _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
@@ -101,7 +114,7 @@ _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 - **Attribution:** TSEM page Changelog 2026-09-15.
 - **Evidence:** [TSEM.md](../TSEM.md) · signal beli-30bc8b6f60a3
 
-### 7. 🟡 AVGO — the house model sits ABOVE the company's own AI revenue path, on both years
+### 8. 🟡 AVGO — the house model sits ABOVE the company's own AI revenue path, on both years
 
 _MODEL CHECK · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
@@ -114,20 +127,20 @@ _MODEL CHECK · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 - **Attribution:** management/company primary · curated reconciliation 2026-09-14.
 - **Evidence:** [reconciliation-2026-09-14.md](reconciliation-2026-09-14.md) · signal reco-f9edc994971e
 
-### 8. 🟡 Cybersecurity — the beneficiary ladder is INVERSELY ranked against consensus implied upside
+### 9. 🟡 Cybersecurity — the beneficiary ladder is INVERSELY ranked against consensus implied upside
 
 _MODEL CHECK · MEDIUM IMPACT · IMMEDIATE · MEDIUM CONFIDENCE_
 
-- **Tickers:** CRWD, AKAM, PANW, DDOG, CSCO, FSLY
+- **Tickers:** CRWD, ESTC, AKAM, FSLY, CSCO, DDOG
 - **Why now:** FundaAI ranks the beneficiaries "by the strength of the benefit case". Placing each rung against the BBG consensus PT
 - **Belief update:** This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.
-- **Action:** Open the CRWD/AKAM/PANW/DDOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
+- **Action:** Open the CRWD/ESTC/AKAM/FSLY model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
 - **Falsifier:** A like-for-like estimate bridge or company guide that closes the identified gap.
-- **Read-through:** OKTA (competitor: agentic identity); NET (competitor: edge/CDN); OKTA (competitor: identity (CyberArk vs Okta)); AMZN (supplier: cloud hosting (consumption runs on hyperscaler infra)); GOOG (supplier: cloud hosting (consumption runs on hyperscaler infra)); MSFT (supplier: cloud hosting (consumption runs on hyperscaler infra)); DT (competitor: observability)
+- **Read-through:** OKTA (competitor: agentic identity); AMZN (supplier: cloud hosting (consumption runs on hyperscaler infra)); GOOG (supplier: cloud hosting (consumption runs on hyperscaler infra)); MSFT (supplier: cloud hosting (consumption runs on hyperscaler infra)); DT (competitor: observability/logs); NET (competitor: edge/CDN); ANET (competitor: AI networking)
 - **Attribution:** FundaAI · curated reconciliation 2026-09-14.
 - **Evidence:** [reconciliation-2026-09-14.md](reconciliation-2026-09-14.md) · signal reco-90450968d9ca
 
-### 9. 🟡 MSFT — consensus capex decelerates hard while management says it must keep building ahead
+### 10. 🟡 MSFT — consensus capex decelerates hard while management says it must keep building ahead
 
 _MODEL CHECK · MEDIUM IMPACT · STANDING · HIGH CONFIDENCE_
 
@@ -140,7 +153,7 @@ _MODEL CHECK · MEDIUM IMPACT · STANDING · HIGH CONFIDENCE_
 - **Attribution:** management/company primary + Bloomberg · curated reconciliation 2026-09-11.
 - **Evidence:** [reconciliation-2026-09-11.md](reconciliation-2026-09-11.md) · signal reco-ca5fc077555d
 
-### 10. 🟡 NVDA — two houses, one disclosure, opposite postures — but it is a BASIS difference, not a disagreement
+### 11. 🟡 NVDA — two houses, one disclosure, opposite postures — but it is a BASIS difference, not a disagreement
 
 _CONTRADICTION · MEDIUM IMPACT · STANDING · MEDIUM CONFIDENCE_
 
@@ -153,7 +166,7 @@ _CONTRADICTION · MEDIUM IMPACT · STANDING · MEDIUM CONFIDENCE_
 - **Attribution:** Morgan Stanley + SemiAnalysis · curated reconciliation 2026-09-11.
 - **Evidence:** [reconciliation-2026-09-11.md](reconciliation-2026-09-11.md) · signal reco-2bbe1ae7ce8c
 
-### 11. 🟡 MS's 2027 capex acceleration sits far above BBG consensus, on all four hyperscalers
+### 12. 🟡 MS's 2027 capex acceleration sits far above BBG consensus, on all four hyperscalers
 
 _MODEL CHECK · HIGH IMPACT · STANDING · MEDIUM-HIGH CONFIDENCE_
 
@@ -166,31 +179,18 @@ _MODEL CHECK · HIGH IMPACT · STANDING · MEDIUM-HIGH CONFIDENCE_
 - **Attribution:** Susquehanna · curated reconciliation 2026-09-09.
 - **Evidence:** [reconciliation-2026-09-09.md](reconciliation-2026-09-09.md) · signal reco-fad5914394d1
 
-### 12. ⚪ GOOG — SemiAnalysis's $75.5bn of "guarantees" is +$31.5bn above the disclosed line, with no stated scope
-
-_RESEARCH IDEA · MEDIUM IMPACT · STANDING · HIGH CONFIDENCE_
-
-- **Tickers:** GOOG · seeded book: GOOG
-- **Why now:** The page carries $44bn as Google's own disclosed lease-payment guarantee (up from $6.5bn at end-September; The
-- **Belief update:** This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.
-- **Action:** Turn the finding into a bull/base/bear question for GOOG; identify the KPI and source that would make it investable.
-- **Falsifier:** No observable KPI or dated catalyst can be identified to test the hypothesis.
-- **Read-through:** AVGO (supplier: custom ASIC (TPU)); NVDA (supplier: GPUs); SNOW (competitor: warehouse vs BigQuery); ANTHROPIC (customer: TPU compute); BE (supplier: on-site fuel cells); CIEN (supplier: DCI/optical); COHR (supplier: optical)
-- **Attribution:** JPM + SemiAnalysis · curated reconciliation 2026-09-11.
-- **Evidence:** [reconciliation-2026-09-11.md](reconciliation-2026-09-11.md) · signal reco-e06178f22958
-
 ## Catalysts requiring preparation
 
 - **MSFT — 2026-09-15: MICROSOFT PUBLISHES THE "CODE OF CONDUCT" UNDERLYING ITS FIRST-PARTY MAI MODELS, FOR…** — 🆕🔴 2026-09-15 — MICROSOFT PUBLISHES THE "CODE OF CONDUCT" UNDERLYING ITS FIRST-PARTY MAI MODELS, FOR PUBLIC CONSULTATION. Committed to by Satya Nadella on X (09-13) in his response to the ANTHRO _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-2807be2e986f)
 - **AVGO — 2026-09-15: BERNSTEIN 8th ANNUAL SEMIS BUS TOUR, 2026-09-15/16, San Jose — AVGO on the roster…** — 🆕 BERNSTEIN 8th ANNUAL SEMIS BUS TOUR, 2026-09-15/16, San Jose — AVGO on the roster alongside ALAB, AMAT, AMBA, LSCC, MPWR, NVDA, NXPI. First scheduled corporate-access window afte _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-5652e30181c5)
 - **META — 2026-09-15: 2026-09-15, 11AM ET — JPM INTERNET FALL SERIES (META, DASH, DUOL, TTWO, APP) with Doug…** — 🆕 2026-09-15, 11AM ET — JPM INTERNET FALL SERIES (META, DASH, DUOL, TTWO, APP) with Doug Anmuth and Bryan Smilek — first scheduled venue for Anmuth to defend the 09-10 upgrade to Overweight and th _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-79fc9a5d6b00)
+- **CIEN — 2026-09-16: TOMORROW — 2026-09-16, 8:00am: AN INVITE-ONLY, IN-PERSON CIENA FACTORY TOUR IN CALGARY,…** — 🆕🔴🔴 TOMORROW — 2026-09-16, 8:00am: AN INVITE-ONLY, IN-PERSON CIENA FACTORY TOUR IN CALGARY, WITH A SLIDE DECK EXPECTED AND THE BUY-SIDE POSITIONED FOR AN UPGRADE TO A THIRTEEN-DAY-OLD GUIDE. (J.P. _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-69095329f59e)
 - **ON — 2026-09-16: WED 2026-09-16 — ON SEMICONDUCTOR ANALYST DAY. THE SINGLE TEST: DOES THE 53% GROSS-MARGIN…** — 🆕🔴🔴 WED 2026-09-16 — ON SEMICONDUCTOR ANALYST DAY. THE SINGLE TEST: DOES THE 53% GROSS-MARGIN TARGET SURVIVE? UBS · Arcuri preview (09-14) expects a LT model implying CY30E revenue ~$10bn and EP _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-82df7c507da2)
 - **AVGO — 2026-09-18: WED 2026-09-16 — AVGO CEO AND CFO ON THE JEFFERIES SEMIS BUS TOUR (alongside NVDA CFO,…** — 🆕 WED 2026-09-16 — AVGO CEO AND CFO ON THE JEFFERIES SEMIS BUS TOUR (alongside NVDA CFO, LITE CEO, CRDO CFO, AMAT, CBRS). Jefferies · Blayne Curtis hosts a debrief call FRI 202 _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-63f19a67ad78)
 - **BE — 2026-09-21: 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — THE INDEX TIER IS…** — 🆕🔴🔴 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — THE INDEX TIER IS NOW NAMED: BE IS AN S&P 500 ADD, AND A FTSE ALL-WORLD ADD. TWO INDEPENDENT INDEX EVENTS IN THE _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-2bc8be299987)
 - **CRM — 2026-09-15: 2026-09-15 to 09-17 — DREAMFORCE (SF), INVESTOR DAY 09-16 at 4PM ET. THE NAMED FOCUS IS…** — 🆕🔴 2026-09-15 to 09-17 — DREAMFORCE (SF), INVESTOR DAY 09-16 at 4PM ET. THE NAMED FOCUS IS NOW "CLAUDEFORCE." UBS · Karl Keirstead (09-14): much of the investor focus will be on the newly-announce _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-cce244a1f24e)
 - **SPCX — 2026-09-18: FRI 2026-09-18 — NASDAQ-100 REBALANCE, ~110M SHARES TO BUY. NASDAQ announced after the…** — 🆕🔴🔴 FRI 2026-09-18 — NASDAQ-100 REBALANCE, ~110M SHARES TO BUY. NASDAQ announced after the close on 09-11 that it will RAISE SPCX weighting in the Nasdaq 100, creating "about 110mln shares to buy _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-885ba6c04504)
 - **CRWD — 2026-09-15: PRE-REGISTERED TEST T8 — the Dec-2026 / Jan-2027 CISO BUDGET RESET, scored at the Jan–Mar…** — 🧪 PRE-REGISTERED TEST T8 — the Dec-2026 / Jan-2027 CISO BUDGET RESET, scored at the Jan–Mar 2027 prints and the next MS/IDC spend-ladder update: cyber share of IT budgets printed or forecast ≥ 8 _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-3fd5e63d4e2b)
-- **DELL — 2026-09-15: UBS David Vogt Boston marketing '26 3, US Hardware.** — 2026-09-15 — UBS David Vogt Boston marketing '26 3, US Hardware. _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-942fdbda8a30)
 
 ## Research hygiene
 
