@@ -13,7 +13,7 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\NFLX` (10-K + transcri
 | Gross profit | $25.7bn | $29.7bn |
 | Gross margin | 50.3% | 52.1% |
 | EBITDA | $16.8bn | $20.2bn |
-| EPS | $3.13 | $3.86 |
+| EPS | $3.13 | $3.81 |
 | Capex | $722m | $805m |
 | OCF (≈EBITDA) | $16.8bn | $20.2bn |
 

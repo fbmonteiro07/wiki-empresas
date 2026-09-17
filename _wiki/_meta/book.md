@@ -1,6 +1,6 @@
 # Book — positions × unresolved debates × catalysts
 
-_Generated 2026-09-16 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wiki/_tools/build_book.py`._
+_Generated 2026-09-17 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wiki/_tools/build_book.py`._
 
 > ⚠️ **SEED book** — initialized from the 8 house-model names, weights unknown. Edit `_data/book.json` to match the real Core Positions (weights, adds/drops), then remove the `"seed": true` flag.
 
@@ -19,4 +19,5 @@ _Generated 2026-09-16 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wi
 
 | Ticker | Metric | Δ | Thesis |
 |---|---|--:|---|
+| TER | EPS 2026 | +12% | Cleanest back-end proxy for AI test intensity (~70% AI); bear = ~2-customer concentration + H1-weighted book. |
 | LITE | EPS 2026 | -11% | US photonics pure-play (rev +90%); demand isn't the question, supply/execution is. |

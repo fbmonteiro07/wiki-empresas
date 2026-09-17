@@ -1,6 +1,6 @@
 # Edge tracker — house vs Street
 
-_Generated 2026-09-16 · the standing view of where our model and the curated reconciliation runs disagree with consensus. Divergence = candidate alpha; agreement is noise. Rebuild: `py _wiki/_tools/build_edge.py`._
+_Generated 2026-09-17 · the standing view of where our model and the curated reconciliation runs disagree with consensus. Divergence = candidate alpha; agreement is noise. Rebuild: `py _wiki/_tools/build_edge.py`._
 
 > ⚠️ Programmatic rows are auto-computed (house.json vs estimates.json, USD names only) — **verify the basis before trading** (revenue gross/net/TAC differences can masquerade as edge). Curated rows below are analyst-vetted.
 
@@ -28,9 +28,9 @@ _Generated 2026-09-16 · the standing view of where our model and the curated re
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|
-| ASML | 1,616 | 2,459 | +52% | street high 2,859 · low 2,100 ABOVE spot · 21/0/0 of 21 |
-| NVDA | 216 | 325 | +50% | street high 515 · low 180 below spot · 79/2/1 of 82 |
-| LRCX | 274 | 377 | +38% | street high 475 · low 285 ABOVE spot · 31/6/0 of 37 |
-| AMZN | 248 | 330 | +33% | street high 405 · low 230 below spot · 76/4/0 of 80 |
-| DDOG | 236 | 289 | +22% | street high 340 · low 158 below spot · 46/3/1 of 50 |
-| NET | 330 | 342 | +4% | street high 400 · low 160 below spot · 27/7/3 of 37 |
+| ASML | 1,602 | 2,459 | +53% | street high 2,859 · low 2,100 ABOVE spot · 21/0/0 of 21 |
+| NVDA | 214 | 325 | +52% | street high 515 · low 180 below spot · 79/2/1 of 82 |
+| LRCX | 269 | 377 | +40% | street high 475 · low 285 ABOVE spot · 31/6/0 of 37 |
+| AMZN | 246 | 330 | +34% | street high 405 · low 230 below spot · 76/4/0 of 80 |
+| DDOG | 231 | 289 | +25% | street high 340 · low 158 below spot · 46/3/1 of 50 |
+| NET | 325 | 342 | +5% | street high 400 · low 160 below spot · 27/7/3 of 37 |

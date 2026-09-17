@@ -9,13 +9,13 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\TM` (20-F + transcript
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | ¥52872.5bn | ¥54927.5bn |
+| Revenue | ¥53071.4bn | ¥55251.5bn |
 | Gross profit | — | — |
 | Gross margin | — | — |
-| EBITDA | ¥5989.1bn | ¥6732.5bn |
+| EBITDA | ¥5989.1bn | ¥6803.5bn |
 | EPS | — | — |
-| Capex | ¥2632.0bn | ¥2839.2bn |
-| OCF (≈EBITDA) | ¥5989.1bn | ¥6732.5bn |
+| Capex | ¥2632.0bn | ¥2969.7bn |
+| OCF (≈EBITDA) | ¥5989.1bn | ¥6803.5bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
