@@ -12,25 +12,21 @@ _Generated 2026-09-17 · the standing view of where our model and the curated re
 | GOOG | Revenue $bn | 2027 | 641.00 | 544.10 | +18% |
 | AAPL | EPS | 2026 | 10.12 | 8.77 | +15% |
 
-## Curated divergences — latest reconciliation (`reconciliation-2026-09-15.md`)
+## Curated divergences — latest reconciliation (`reconciliation-2026-09-17.md`)
 
 | Name | New datapoint | Read (the edge) |
 |---|---|---|
-| 🔴🔴🔴 — | The relay that reached the wiki at 21:00 carried a mechanism that is not in the primary — and it pointed the opposite way | This is the third run in which a desk relay reached the wiki before the primary and distorted it. |
-| 🔴🔴🔴 AMZN | Bernstein is +16% / +27% above consensus on FY27 / FY28 EBIT and still carries a PT below consensus | The tension is internal to Bernstein and it is large. |
-| 🔴🔴 ASML | the house EUV model takes the 110 as the number, which is exactly what tonight's note says it is not | Sizing the gap on the house model's own ASP: |
-| 🔴🔴 ASML | Bernstein's estimates are consensus, but its PT is +22.8% above consensus | On FY27 EBIT the two are within 0.1% of each other. |
-| 🔴🔴 NET | a Market-Perform whose PT implies ≈−50%, while the same analyst's estimates sit above the company's own guide | The estimates and the target contradict each other, and the estimates are the more testable half. |
-| 🔴 DDOG | above consensus on EPS in both years, 18% below on PT | above consensus on EPS in both years, 18% below on PT |
-| ASML | a vintage/basis conflict on "current" throughput, flagged and not resolved | a vintage/basis conflict on "current" throughput, flagged and not resolved |
+| ★ — | CIEN: the "$8.3–8.4B FY27 floor" is arithmetically EMPTY, and consensus had already cleared it before it was published | Where the asymmetry actually is: MARGIN, not revenue. |
+| ★★ — | META: Goldman publishes a BUY on top of a model 13% below consensus on 2027 EBIT and 18% below on EPS — while sitting 1.7% ABOVE on revenue | So the house already agrees with GS that the cash line goes deeply negative, and disagrees only about whether that shows up in EPS. |
+| — | CIEN 2029: the revenue target is already in the curve; the entire surprise is margin — but the comparison is a year offset and must be labelled as such | CIEN 2029: the revenue target is already in the curve; the entire surprise is margin — but the comparison is a year offset and must be labelled as such |
+| — | CIEN: management's own "~5x cash generated from operations" does not close against the published FY25 base | Either the base year is not FY25, or the multiple is rounded generously. |
 
-## Consensus PT vs spot — live pull in `reconciliation-2026-09-15.md` (upside ranked)
+## Consensus PT vs spot — live pull in `reconciliation-2026-09-17.md` (upside ranked)
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|
-| ASML | 1,602 | 2,459 | +53% | street high 2,859 · low 2,100 ABOVE spot · 21/0/0 of 21 |
-| NVDA | 214 | 325 | +52% | street high 515 · low 180 below spot · 79/2/1 of 82 |
-| LRCX | 269 | 377 | +40% | street high 475 · low 285 ABOVE spot · 31/6/0 of 37 |
-| AMZN | 246 | 330 | +34% | street high 405 · low 230 below spot · 76/4/0 of 80 |
-| DDOG | 231 | 289 | +25% | street high 340 · low 158 below spot · 46/3/1 of 50 |
-| NET | 325 | 342 | +5% | street high 400 · low 160 below spot · 27/7/3 of 37 |
+| CIEN | 340 | 495 | +45% | street high 660 · low 324 below spot · 15/5/1 of 21 |
+| BKNG | 171 | 239 | +39% | street high 301 · low 188 ABOVE spot · 33/9/0 of 42 |
+| META | 673 | 752 | +12% | street high 1,000 · low 580 below spot · 72/7/0 of 79 |
+| PANW | 376 | 401 | +7% | street high 475 · low 190 below spot · 47/12/1 of 60 |
+| CRWD | 241 | 239 | -1% | street high 425 · low 119 below spot · 41/14/1 of 56 |

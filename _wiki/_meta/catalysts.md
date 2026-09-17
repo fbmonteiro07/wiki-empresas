@@ -2,7 +2,7 @@
 
 _Generated 2026-09-17 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (48)
+## 📅 Upcoming (49)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
@@ -28,6 +28,7 @@ _Generated 2026-09-17 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-09-22 | ON | **🆕 Tue 2026-09-22, Los Angeles — ON CEO/CFO/IR NDR hosted by Jefferies · Blayne Curtis.** |
 | 2026-09-23 | GOOG | **🆕 Koray Kavukcuoglu's first public outing — The Information's AI Agenda Live, San Francisco, 2026-09-23.** Billed topics include integrating frontier models across Search and the multi-billion-user  |
 | 2026-09-23 | META | **🆕 2026-09-23/24 — META CONNECT.** MS flags it as the next scheduled product venue *"for more product updates"*, with **Hatch** expected to launch *"in the coming weeks"* and the next model, **'Water |
+| 2026-09-23 | META | **🆕🔴🔴 2026-09-23/24 — META CONNECT IS NOW A FORMALLY DATED, NAMED-WATCH-LIST CATALYST WITH A HOUSE POSITION ON IT: CITI HAS OPENED AN *UPSIDE* 90-DAY CATALYST WATCH ON META EXPLICITLY AHEAD OF IT.** ( |
 | 2026-09-23 | META | **🆕🔴🔴 META CONNECT — 2026-09-23/24.** Both UBS (exact dates) and MS (*"25 days away"* as of 08-30) name it as the product catalyst the whole re-rating argument depends on. **Watch for: the Watermelon  |
 | 2026-09-24 | NVDA | **🆕🔴 TRUMP-XI MEETING, 2026-09-24 — the dated headline-risk window, and UBS says the newsflow into it is not random.** *"As is usually the case before Trump-Xi meetings, headline risks likely to pick  |
 | 2026-09-24 | SPCX | **🆕 2026-09-24, NYC — MS event: "SPCX How to Play the Space Economy ft Adam Jonas, Sean Diffley, and William Tackett".** (Morgan Stanley TMT desk, 2026-09-15) |
