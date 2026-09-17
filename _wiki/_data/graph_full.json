@@ -1,8 +1,8 @@
 {
  "generated": "2026-09-17",
  "counts": {
-  "nodes": 180,
-  "edges": 2023
+  "nodes": 181,
+  "edges": 2026
  },
  "nodes": [
   {
@@ -208,7 +208,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-09-15"
+   "last_chg": "2026-09-17"
   },
   {
    "id": "AOSL",
@@ -954,7 +954,7 @@
     "wiki": 1
    },
    "next_catalyst": "2026-09-24",
-   "last_chg": "2026-09-15"
+   "last_chg": "2026-09-17"
   },
   {
    "id": "NVT",
@@ -1871,6 +1871,14 @@
    "title": "Unit cost of AI vulnerability discovery / remediation — the harness-vs-model economics",
    "status": "live-debate",
    "canonical": "Frontier: Claude Mythos Preview $25 / $125 per million input/output tokens, 5x Opus 4.6's $5/$25 (WSJ via Stratechery, 2026-04-08). Finding cost: PANW burned '>$1 million worth of tokens' to find >24 critical vulnerabilities in ~3 weeks (~5x its normal tooling) → ~$40k per critical finding at preview pricing, BEFORE triage (The Information / Aaron Holmes, 2026-06-01; house arithmetic). Remediation"
+  },
+  {
+   "id": "assum:gpu-rental-hourly",
+   "type": "assumption",
+   "label": "gpu-rental-hourly",
+   "title": "Merchant GPU rental rate per GPU-hour (GB300-class)",
+   "status": "live-debate",
+   "canonical": "GB300-class MERCHANT RENTAL marks on this wiki: ~$7-8/GPU-hr spot (CoreWeave, Cantor expert call, 2026-06-18) and $7.00-$10.00/hr (Morgan Stanley - Nowak, Exhibit 3, 2026-08-12). The widely-recirculated $4/GPU-hr figure is @zephyr_z9's ASSUMPTION inside a back-of-envelope, not a market observation - NOT ADOPTED. Because merchant rental carries neocloud margin (CoreWeave targets ~25% EBITDA), a fro"
   },
   {
    "id": "broker:BofA",
@@ -5858,6 +5866,24 @@
    "label": ""
   },
   {
+   "u": "assum:gpu-rental-hourly",
+   "v": "CRWV",
+   "type": "cites",
+   "label": ""
+  },
+  {
+   "u": "assum:gpu-rental-hourly",
+   "v": "OPENAI",
+   "type": "cites",
+   "label": ""
+  },
+  {
+   "u": "assum:gpu-rental-hourly",
+   "v": "theme:tokenmaxxing",
+   "type": "cites",
+   "label": ""
+  },
+  {
    "u": "broker:BofA",
    "v": "AAOI",
    "type": "covers",
@@ -7227,7 +7253,7 @@
    "v": "ANTHROPIC",
    "type": "covers",
    "label": "",
-   "w": 229
+   "w": 230
   },
   {
    "u": "broker:Stratechery",
@@ -12029,7 +12055,7 @@
    "v": "NVDA",
    "type": "covers",
    "label": "",
-   "w": 274
+   "w": 275
   },
   {
    "u": "broker:Jefferies",
@@ -12106,7 +12132,7 @@
    "v": "NVDA",
    "type": "covers",
    "label": "",
-   "w": 8
+   "w": 9
   },
   {
    "u": "broker:Mizuho",

@@ -25,8 +25,8 @@ _Generated 2026-09-17 · the standing view of where our model and the curated re
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|
-| CIEN | 355 | 502 | +41% | street high 660 · low 324 below spot · 15/5/1 of 21 |
-| BKNG | 169 | 239 | +41% | street high 301 · low 188 ABOVE spot · 33/9/0 of 42 |
-| META | 673 | 752 | +12% | street high 1,000 · low 580 below spot · 72/7/0 of 79 |
-| PANW | 378 | 403 | +7% | street high 475 · low 190 below spot · 46/13/1 of 60 |
-| CRWD | 245 | 239 | -3% | street high 425 · low 132 below spot · 41/14/1 of 56 |
+| CIEN | 344 | 502 | +46% | street high 660 · low 324 below spot · 15/5/1 of 21 |
+| BKNG | 171 | 239 | +40% | street high 301 · low 188 ABOVE spot · 33/9/0 of 42 |
+| META | 682 | 752 | +10% | street high 1,000 · low 580 below spot · 72/7/0 of 79 |
+| PANW | 375 | 403 | +7% | street high 475 · low 190 below spot · 46/13/1 of 60 |
+| CRWD | 246 | 239 | -3% | street high 425 · low 132 below spot · 41/14/1 of 56 |

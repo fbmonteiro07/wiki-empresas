@@ -13,8 +13,8 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\CRM` (filings + transc
 | Gross profit | $37.1bn | $40.8bn |
 | Gross margin | 80.3% | 80.3% |
 | EBITDA | $19.1bn | $20.6bn |
-| EPS | $13.40 | $16.00 |
-| Capex | $693m | $744m |
+| EPS | $13.40 | $16.01 |
+| Capex | $694m | $744m |
 | OCF (≈EBITDA) | $19.1bn | $20.6bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
