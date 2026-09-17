@@ -736,7 +736,7 @@
    "title": "Conventional DRAM pricing cadence Q3/Q4 2026",
    "definition": "QoQ contract-price growth for conventional DRAM, 2H26.",
    "canonical": "TrendForce REVISED (2026-06-30, supersedes 06-23): +15-20% Q3 / +3-8% Q4 — vs experts +20-25% Q3 (Redburn/Sherman/Edison) and market chatter +30-40%. Direction agreed; magnitude is the debate.",
-   "scope_note": "The 06-23 TrendForce +8-13% Q3 is SUPERSEDED — don't cite it as current.",
+   "scope_note": "The 06-23 TrendForce +8-13% Q3 is SUPERSEDED — don't cite it as current. — ⚠️⚠️ BASIS SPLIT ADDED 2026-09-17: the canonical and the first two variants are CONVENTIONAL-DRAM CONTRACT price q/q. The J.P. Morgan variant is a BLENDED INDUSTRY ASP on an 8Gb-equivalent WSTS basis (contains HBM and mix) and is transcribed from a chart, not a printed table. It reads BELOW the canonical on Q3-26 (+11% vs +15-20%), but the two are DIFFERENT QUANTITIES — the gap may be basis rather than view. Never average or chain across the two bases. JPM's own curve continues flat beyond 2026 (+1/+2/+3/+1 q/q through 2027E, 0/0/+2/+1 through 2028E), i.e. a DRAM ASP peak in 4Q26 and a two-year plateau; that shape validates against JPM Asia's published +235%/+29%/+7% annuals for 2026/27/28 (Gokul Hariharan, 2026-08-12).",
    "patterns": [
     "DRAM.{0,50}\\+\\d{1,2}.{0,5}%.{0,30}Q[34]",
     "contract price.{0,40}Q[34]"
@@ -748,6 +748,16 @@
      "date": "2026-06-30",
      "scope": "current base case",
      "cited_in": [
+      "themes/hbm-memory.md"
+     ]
+    },
+    {
+     "value": "+11% Q3-26 / +5% Q4-26 q/q — ⚠️ DIFFERENT BASIS: blended industry ASP, 8Gb-eq (WSTS), includes HBM/mix; NOT conventional-DRAM contract price",
+     "source": "J.P. Morgan · Harlan Sur (semis deck, week of 2026-09-15; pasted exhibit, chart-read)",
+     "date": "2026-09-17",
+     "scope": "blended industry ASP (8Gb-eq, WSTS basis) — do NOT merge with the contract-price series above",
+     "cited_in": [
+      "MU.md",
       "themes/hbm-memory.md"
      ]
     },
@@ -771,7 +781,7 @@
     }
    ],
    "status": "live-debate",
-   "debate": "Magnitude of 2H26 DRAM hikes: TrendForce conservative vs expert +20-25% vs chatter +30-40%."
+   "debate": "Magnitude of 2H26 DRAM hikes: TrendForce conservative vs expert +20-25% vs chatter +30-40%. — and from 2026-09-17 a SECOND, separable debate is live on the SHAPE beyond 2026: JPM's quarterly curve plateaus from 4Q26 (agreeing with MS Europe's 'late-cycle by 4Q26' and Samsung IR's 'broadly stable through 2027'), against UBS's +44% y/y 2027 blended ASP and undersupply through at least 2Q28."
   },
   "server-cpu-tam": {
    "title": "Server-CPU TAM / unidades — o leg agentic",

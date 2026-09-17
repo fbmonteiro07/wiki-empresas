@@ -982,9 +982,9 @@
       "hidden": false
     },
     {
-      "id": "esti-d4ea61f68455",
+      "id": "esti-bc8d42274893",
       "asof": "2026-09-17",
-      "source_date": "2026-09-16",
+      "source_date": "2026-09-17",
       "type": "model_check",
       "priority": "high",
       "score": 72,
@@ -998,7 +998,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $427.2bn as of 2026-09-16, a derived +18.2% gap. Revenue comparisons require a basis check.",
+      "why_now": "Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $427.2bn as of 2026-09-17, a derived +18.2% gap. Revenue comparisons require a basis check.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -1053,7 +1053,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-16",
+      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-17",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -1062,7 +1062,7 @@
       "origin": "house_vs_consensus",
       "values": {
         "house": 505.0,
-        "consensus": 427.22609,
+        "consensus": 427.24563,
         "delta_pct": 18.2,
         "unit": "$bn"
       },
@@ -1071,9 +1071,9 @@
       "hidden": false
     },
     {
-      "id": "esti-f53c475ad507",
+      "id": "esti-8c7b05a9ed9b",
       "asof": "2026-09-17",
-      "source_date": "2026-09-16",
+      "source_date": "2026-09-17",
       "type": "model_check",
       "priority": "high",
       "score": 71,
@@ -1087,7 +1087,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2027 revenue at $641.0bn versus Bloomberg consensus at $544.1bn as of 2026-09-16, a derived +17.8% gap. Revenue comparisons require a basis check.",
+      "why_now": "Capstone carries 2027 revenue at $641.0bn versus Bloomberg consensus at $544.1bn as of 2026-09-17, a derived +17.8% gap. Revenue comparisons require a basis check.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -1142,7 +1142,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-16",
+      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-17",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -1160,9 +1160,9 @@
       "hidden": false
     },
     {
-      "id": "esti-8390cacba844",
+      "id": "esti-93da1c738cf3",
       "asof": "2026-09-17",
-      "source_date": "2026-09-16",
+      "source_date": "2026-09-17",
       "type": "model_check",
       "priority": "high",
       "score": 69,
@@ -1176,7 +1176,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.77 as of 2026-09-16, a derived +15.4% gap.",
+      "why_now": "Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.77 as of 2026-09-17, a derived +15.4% gap.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the AAPL model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -1196,7 +1196,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-09-16",
+      "source": "Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-09-17",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
