@@ -407,17 +407,21 @@ _NVDA accelerator unit shipments and implied GW/yr — distinguish GPU units, Ve
 
 _NVDA's share of TSMC CoWoS capacity; TPU-substrate splits within Google._
 
-**Canonical:** NVDA ~50-55% of TSMC CoWoS 2027 (Fubon ~50%+; Nomura <55% vs NVDA's targeted ~60% — i.e. target likely missed on TPU squeeze). Within Google TPU: AVGO ~66-68% / MediaTek ~32-34% (Nomura).
+**Canonical:** NVDA ~50-55% of TSMC CoWoS 2027 — now THREE independent sources inside the band (Fubon ~50%+, 2026-06-05; Nomura <55%, 2026-06-30; JPM 52.8% of TSMC / 50.2% of industry, 2026-09-17). Industry CAPACITY 260k wfpm end-2027 (JPM 2026-09-17 and UBS 2026-09-16 agree exactly; the TSMC-vs-OSAT split does not). Within Google TPU: AVGO ~66-68% / MediaTek ~32-34% (Nomura) on a substrate/programme basis; on JPM's derived basis MediaTek is 43.2% of UNITS but 27.5% of COMPUTE DIES in 2027E, inverting to 40.4% / 51.8% in 2028E.
 
-> ⚠️ **Scope:** The 'targeted ~60%' is NVDA's ask, not an outcome — don't cite it as achieved share.
+> ⚠️ **Scope:** The 'targeted ~60%' is NVDA's ask, not an outcome — don't cite it as achieved share. UNIT vs DIE (standing rule, added 2026-09-17): every downstream quantity — CoWoS wafers, HBM stacks, substrate area — tracks COMPUTE DIES, not units. JPM's own Table 1 implies a die-count map of v6/v7=2, v8t=1, v8i=2, v9=4, which reconciles its unit and compute-die rows to within 0.1m in all three years, so the map is the source's, not an inference. Google TPU units go 4.6 -> 11.4m (2026-28E, +148%) while TPU compute dies go 8.6 -> 28.0m (+226%); AWS units +68% against dies +232% (Trainium 4 implied at ~3.95 dies/unit vs 2.00 for Trainium 3). A packaging or HBM number quoted against a UNIT count is wrong by a factor that grows every year. CAPACITY vs CONSUMPTION: 260k wfpm is capacity; JPM's 2,471k wafers is 2027E annual consumption — never compare the two directly. OUTSOURCED SHARE: JPM's 'Total TSMC' row INCLUDES oS sub-contracted to ASE/SPIL and interposer to Vanguard, so its OSAT share (6.8% 2026E -> 18.8% 2027E -> 25.8% 2028E) is NOT comparable with the 8%/46%/75%/85% series in themes/semicap-wfe, which counts that sub-contracting as outsourced.
 
 | Value | Source | Date | Scope |
 |---|---|---|---|
 | ~50%+ of TSMC CoWoS 2027 | Fubon | 2026-06-05 | NVDA share |
 | <55% 2027F, down from targeted ~60% (TPU squeeze) | Nomura | 2026-06-30 | NVDA share |
 | AVGO ~66-68% / MediaTek ~32-34% of Google TPU | Nomura | 2026-06-30 | TPU split |
+| NVDA 52.8% of TSMC (1,060/2,006 k wafers) · 50.2% of industry (1,240/2,471) — 2027E | JPM · Gokul Hariharan | 2026-09-17 | NVDA share 2027E — derived from the full Table 1 CoWoS allocation. THIRD independent source, inside the canonical band. |
+| NVDA 54.6% of TSMC (1,400/2,565) · 52.1% of industry (1,800/3,455) — 2028E | JPM · Gokul Hariharan | 2026-09-17 | NVDA share 2028E |
+| Industry CoWoS capacity 260k wfpm end-2027 (TSMC 200k + OSAT 60k); 320k end-2028 (225k + 95k) | JPM · Gokul Hariharan | 2026-09-17 | CAPACITY, not consumption. Matches UBS's 260k end-2027 (2026-09-16) exactly — two independent houses converged on the industry total. The TSMC-vs-OSAT SPLIT remains contested. |
+| MediaTek 43.2% of TPU UNITS but 27.5% of TPU COMPUTE DIES (2027E); 40.4% / 51.8% (2028E) | JPM · Gokul Hariharan | 2026-09-17 | TPU split — DIFFERENT METRIC from the Nomura ~32-34% row (a substrate/programme share). Derived unit and die share. The 1-die v8t Zebrafish -> 4-die v9 Humufish handover makes unit share and die share move in OPPOSITE directions across 2027->2028. DO NOT net against Nomura. |
 
-**Debate:** Does NVDA claw back toward 60% or does TPU keep the squeeze on?
+**Debate:** Does NVDA claw back toward 60% or does TPU keep the squeeze on? As of 2026-09-17 all three published houses sit in the 50-55% band, and the 'claw back to 60%' leg has no support in any current published table. The live question has moved to the TSMC-vs-OSAT split of the agreed 260k industry capacity.
 
 **Unreconciled sightings** (pages matching this metric, not in the ledger's `cited_in`):
 - `AMAT.md` — …e AP ~70% em 2026**, e o equipamento de CoWoS+HBM+SoIC **+59% / +56% em 2026/27** — 2026 puxado por CoWoS, 2027 por HBM e SoIC.…
@@ -440,7 +444,6 @@ _NVDA's share of TSMC CoWoS capacity; TPU-substrate splits within Google._
 - `SKHYNIX.md` — …48,618mn Gb in 2027 (+62%), built from CoWoS allocation × chips per wafer × stacks per chip × stack density.** S…
 - `SPCX.md` — …Google/AWS/Microsoft/Meta ASIC volumes, CoWoS allocation table and GUC/Alchip/MediaTek models (→ [[AVGO]], [[MRVL…
 - `TOKYOELEC.md` — …NG ~70% em 2026**, com o equipamento de CoWoS+HBM+SoIC crescendo **+59% / +56% em 2026/27** — 2026 puxado por adições de CoWoS, 2027 por *…
-- `TSM.md` — …to themes/semicap-wfe. - **➖ Neutral — CoWoS allocation is holding at the top:** **"Nvidia's CoWoS share at TSM will remain stable in 2027"**, with **460k CoWoS (AS…
 - `themes/hbm-memory.md` — …ation shows **Taiwan 27% (US$3.3bn, the CoWoS destination) vs 55% a year earlier and Hong Kong 33%**, the HBM-richest slice t…
 - `themes/optical-cpo.md` — …ynman) delayed with midplane headwinds; CoWoS +>75% y/y in 2027E; CSP capex +111%/+50% in 2026E/2027E to ~$1T/~$1.5T. Preferred names into 2027E:…
 - `themes/outros-asia.md` — …BS expects TSMC to lean on its existing CoWoS suppliers and sees **GPTC's share rising to 70-80% in CoPoS, from roughly 50% in CoWoS** — th…

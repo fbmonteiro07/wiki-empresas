@@ -2,7 +2,7 @@
  "generated": "2026-09-17",
  "counts": {
   "nodes": 180,
-  "edges": 2020
+  "edges": 2023
  },
  "nodes": [
   {
@@ -163,7 +163,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-09-15"
+   "last_chg": "2026-09-17"
   },
   {
    "id": "AMZN",
@@ -643,7 +643,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-09-15"
+   "last_chg": "2026-09-17"
   },
   {
    "id": "GOOG",
@@ -909,7 +909,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-09-15"
+   "last_chg": "2026-09-17"
   },
   {
    "id": "NFLX",
@@ -1012,7 +1012,7 @@
     "wiki": 1
    },
    "next_catalyst": "2026-09-21",
-   "last_chg": "2026-09-14"
+   "last_chg": "2026-09-17"
   },
   {
    "id": "ON",
@@ -1461,7 +1461,7 @@
     "wiki": 1
    },
    "next_catalyst": "2026-09-24",
-   "last_chg": "2026-09-15"
+   "last_chg": "2026-09-17"
   },
   {
    "id": "TXN",
@@ -1790,7 +1790,7 @@
    "label": "cowos-allocation",
    "title": "CoWoS capacity and NVDA allocation share",
    "status": "converging",
-   "canonical": "NVDA ~50-55% of TSMC CoWoS 2027 (Fubon ~50%+; Nomura <55% vs NVDA's targeted ~60% — i.e. target likely missed on TPU squeeze). Within Google TPU: AVGO ~66-68% / MediaTek ~32-34% (Nomura)."
+   "canonical": "NVDA ~50-55% of TSMC CoWoS 2027 — now THREE independent sources inside the band (Fubon ~50%+, 2026-06-05; Nomura <55%, 2026-06-30; JPM 52.8% of TSMC / 50.2% of industry, 2026-09-17). Industry CAPACITY 260k wfpm end-2027 (JPM 2026-09-17 and UBS 2026-09-16 agree exactly; the TSMC-vs-OSAT split does not). Within Google TPU: AVGO ~66-68% / MediaTek ~32-34% (Nomura) on a substrate/programme basis; on J"
   },
   {
    "id": "assum:ai-tam-2030",
@@ -5661,6 +5661,12 @@
   },
   {
    "u": "assum:cowos-allocation",
+   "v": "TSM",
+   "type": "cites",
+   "label": ""
+  },
+  {
+   "u": "assum:cowos-allocation",
    "v": "theme:cowos-packaging",
    "type": "cites",
    "label": ""
@@ -6703,14 +6709,14 @@
    "v": "AMD",
    "type": "covers",
    "label": "",
-   "w": 107
+   "w": 124
   },
   {
    "u": "broker:MS",
    "v": "AMD",
    "type": "covers",
    "label": "",
-   "w": 46
+   "w": 50
   },
   {
    "u": "broker:Jefferies",
@@ -8768,7 +8774,7 @@
    "v": "CRWD",
    "type": "covers",
    "label": "",
-   "w": 100
+   "w": 101
   },
   {
    "u": "broker:Jefferies",
@@ -8810,7 +8816,7 @@
    "v": "CRWD",
    "type": "covers",
    "label": "",
-   "w": 5
+   "w": 33
   },
   {
    "u": "broker:Redburn",
@@ -9692,14 +9698,14 @@
    "v": "GLW",
    "type": "covers",
    "label": "",
-   "w": 97
+   "w": 99
   },
   {
    "u": "broker:MS",
    "v": "GLW",
    "type": "covers",
    "label": "",
-   "w": 56
+   "w": 61
   },
   {
    "u": "broker:Jefferies",
@@ -10987,7 +10993,7 @@
    "v": "MEDIATEK",
    "type": "covers",
    "label": "",
-   "w": 253
+   "w": 259
   },
   {
    "u": "broker:MS",
@@ -11057,7 +11063,7 @@
    "v": "MEDIATEK",
    "type": "covers",
    "label": "",
-   "w": 206
+   "w": 208
   },
   {
    "u": "broker:SIG",
@@ -11547,7 +11553,7 @@
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 322
+   "w": 324
   },
   {
    "u": "broker:JPM",
@@ -11561,7 +11567,7 @@
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 98
+   "w": 100
   },
   {
    "u": "broker:Jefferies",
@@ -11582,21 +11588,21 @@
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 25
+   "w": 51
   },
   {
    "u": "broker:DB",
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 13
+   "w": 30
   },
   {
    "u": "broker:Barclays",
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 27
+   "w": 29
   },
   {
    "u": "broker:Bernstein",
@@ -11638,7 +11644,7 @@
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 22
+   "w": 23
   },
   {
    "u": "broker:Mizuho",
@@ -11666,7 +11672,7 @@
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 126
+   "w": 128
   },
   {
    "u": "broker:Barrons",
@@ -11834,7 +11840,7 @@
    "v": "NET",
    "type": "covers",
    "label": "",
-   "w": 23
+   "w": 50
   },
   {
    "u": "broker:BofA",
@@ -12366,21 +12372,21 @@
    "v": "OKTA",
    "type": "covers",
    "label": "",
-   "w": 8
+   "w": 10
   },
   {
    "u": "broker:JPM",
    "v": "OKTA",
    "type": "covers",
    "label": "",
-   "w": 8
+   "w": 10
   },
   {
    "u": "broker:MS",
    "v": "OKTA",
    "type": "covers",
    "label": "",
-   "w": 4
+   "w": 6
   },
   {
    "u": "broker:Jefferies",
@@ -12397,11 +12403,25 @@
    "w": 7
   },
   {
+   "u": "broker:DB",
+   "v": "OKTA",
+   "type": "covers",
+   "label": "",
+   "w": 3
+  },
+  {
    "u": "broker:Barclays",
    "v": "OKTA",
    "type": "covers",
    "label": "",
-   "w": 7
+   "w": 9
+  },
+  {
+   "u": "broker:Bernstein",
+   "v": "OKTA",
+   "type": "covers",
+   "label": "",
+   "w": 22
   },
   {
    "u": "broker:BofA",
@@ -12758,21 +12778,21 @@
    "v": "PANW",
    "type": "covers",
    "label": "",
-   "w": 52
+   "w": 55
   },
   {
    "u": "broker:JPM",
    "v": "PANW",
    "type": "covers",
    "label": "",
-   "w": 57
+   "w": 60
   },
   {
    "u": "broker:MS",
    "v": "PANW",
    "type": "covers",
    "label": "",
-   "w": 50
+   "w": 51
   },
   {
    "u": "broker:Jefferies",
@@ -12793,21 +12813,21 @@
    "v": "PANW",
    "type": "covers",
    "label": "",
-   "w": 23
+   "w": 25
   },
   {
    "u": "broker:Barclays",
    "v": "PANW",
    "type": "covers",
    "label": "",
-   "w": 38
+   "w": 40
   },
   {
    "u": "broker:Bernstein",
    "v": "PANW",
    "type": "covers",
    "label": "",
-   "w": 2
+   "w": 35
   },
   {
    "u": "broker:Redburn",
@@ -14851,21 +14871,21 @@
    "v": "TSM",
    "type": "covers",
    "label": "",
-   "w": 271
+   "w": 276
   },
   {
    "u": "broker:JPM",
    "v": "TSM",
    "type": "covers",
    "label": "",
-   "w": 167
+   "w": 190
   },
   {
    "u": "broker:MS",
    "v": "TSM",
    "type": "covers",
    "label": "",
-   "w": 84
+   "w": 86
   },
   {
    "u": "broker:Jefferies",
@@ -14914,14 +14934,14 @@
    "v": "TSM",
    "type": "covers",
    "label": "",
-   "w": 29
+   "w": 30
   },
   {
    "u": "broker:Fubon",
    "v": "TSM",
    "type": "covers",
    "label": "",
-   "w": 236
+   "w": 237
   },
   {
    "u": "broker:SIG",
