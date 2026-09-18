@@ -142,3 +142,118 @@ _This report was written on the **09-16** vintage, i.e. the evening of Ciena's I
 ➤ **Findings ③–⑥ and the CONFIRMS block are UNAFFECTED** — none of their names (META, BKNG) carried an estimate revision ≥0.5% on this vintage; META's 2027 EBIT/EPS consensus and BKNG's lines are unchanged, so the Goldman-vs-Citi depreciation dispute and the house's +22% EPS gap stand exactly as written.
 
 _BBG column resolved 2026-09-17 — estimates.json asof 2026-09-17. No cell in this report was ever marked PENDING (BBG was live at ingest); this layer re-places the report's quantitative rows against the first post-Forum vintage instead._
+
+
+---
+
+# SECOND PASS — 2026-09-17 (c), /run-inbox 23h (scheduled, unattended)
+
+_Appended to this same report rather than opened as `reconciliation-2026-09-18.md`: a new file on the same day evicts this one from the edge tracker's newest-report-only harvest. **§⑦ above ("CRWD / PANW — nothing to reconcile, by design") described the 10h pass and is NOT superseded — it was true of the JPM notes. Tonight's sources are three COMPANY PRIMARIES and there is a great deal to reconcile.**_
+
+**Baseline used.** `estimates.json` **asof 2026-09-17** (same-day vintage, 107 names) — **no BBG PENDING on this pass**. ⚠️ **Every figure below is the BBG ANNUAL line (`1FY`/`2FY`/`3FY`), never the `CY` block — see ③ under CONFIRMS for what the CY block would have done to PANW.**
+
+⚠️ **TWO LEGS OF THE THREE-LEG RECONCILIATION ARE STRUCTURALLY UNAVAILABLE TONIGHT, AND THAT IS A FINDING, NOT AN OMISSION.**
+- **No Capstone house model exists for [[CRWD]], [[PANW]] or SentinelOne.** `_data/house.json` (asof 2026-09-17) carries **nine** names: AAPL, AVGO, COHR, GOOG, LITE, META, NVDA, TER, TSM. **Leg (2) is absent, not skipped.**
+- **BBG carries no ARR, no net-new ARR and no segment ARR.** So CrowdStrike's **$695M / $585M** segment disclosures and its **≥$1,626M FY28 net-new-ARR guide**, and Palo Alto's **NGS ARR** guide, **cannot be scored against consensus at all** — only against the companies' own prior disclosures and the desks' bogeys. **This is a standing blind spot for every ARR-reporting name in this wiki, and tonight it covers the three headline numbers of the run.**
+- **SentinelOne is not in `estimates.json`** (107 names, S absent) and has no wiki page. Its Q2 FY27 primary has **no consensus baseline of any kind**.
+
+## Where the new data DIVERGES — second pass
+
+### ⑧ ★★ CRWD: the consensus price target has gone BELOW spot, and 41 of 56 analysts still say Buy
+
+BBG asof **2026-09-17**: **px $245.70**, **consensus PT $238.84** (n=**56**; **41 buy / 14 hold / 1 sell**; street high $425, low $132). ➤ **The average target is 2.79% BELOW the market price.**
+
+🔴 **This page recorded the opposite three sessions ago.** The 09-15 block carries *"consensus PT $238.58 (n=56) — consensus PT sits essentially at spot ($237.83), which is itself a positioning signal."* **Since then the stock has added 3.3% and the consensus target has added 0.11%.** The ratings distribution has not moved.
+
+➤ **The ratings and the targets are now saying different things about the same stock, and the gap is measurable rather than rhetorical.** That is the positioning constraint the 09-15 call named in words (*"people are positioned long those two… and it's worked, unfortunately"*) expressed as a number. ⚠️ **Not a valuation call: the targets are stale relative to the tape, which is the ordinary state of affairs after a fast move. The signal is the ABSENCE of target revisions after Fal.Con, not the level.**
+
+### ⑨ ★★ CRWD FY29: consensus underwrites only the FLOOR of the new operating-margin target — the cleanest quantified edge of the run
+
+The investor-briefing deck put a **FY29 target model** on the record for the first time: **non-GAAP operating margin 28–32%**, FCF margin 34–38%, against 1H27 actuals of 24% and 30%.
+
+| CRWD FY29 (BBG `3FY`) | Consensus | Company target | Implied EBIT | vs consensus |
+|---|--:|--:|--:|--:|
+| Revenue | **$8,979.5m** | — | — | — |
+| Operating income | **$2,514.2m** | — | — | — |
+| **Operating margin** | **28.00%** | **28–32%** | — | **at the FLOOR** |
+| … at the 30% midpoint | — | 30% | **$2,693.9m** | **+7.1%** |
+| … at the 32% top | — | 32% | **$2,873.5m** | **+14.3%** |
+
+➤ **Consensus FY29 operating margin is 28.00% — the bottom of management's band, to two decimals. The Street has taken the revenue ramp and declined the margin ramp.** If management delivers the midpoint, FY29 EBIT is 7.1% above where the Street sits; the top of the band is +14.3%. **That is a real, dated, falsifiable edge and it does not require believing any TAM number.**
+
+⚠️ **BASIS WARNING, because this is where the comparison breaks: do NOT score the company's 82–85% gross-margin target against BBG's `gm`.** The company's target is **SUBSCRIPTION** gross margin (1H27 actual 81%); BBG's `3FY` gm of **79.94%** is a company-level figure that includes professional services. **Different denominators. The margin comparison above is deliberately made at EBIT, which is like-for-like.**
+
+### ⑩ ★ CRWD FY28 free cash flow: the Street's published mark is the company's own guide applied to the analyst's own revenue
+
+Deutsche Bank's FY28 re-model (already on the CRWD page, 2026-09-03) reads **revenue $7,415m, FCF $2,410m**. **$2,410m ÷ $7,415m = 32.50%** — **exactly** the FY28 free-cash-flow-margin floor the company guided at the investor briefing (*"FY28 32.5%+"*).
+
+➤ **DB's FCF number is not an independent estimate; it is the guided margin identity applied to DB's own revenue line.** Applying the same **32.5% floor to BBG's `2FY` consensus revenue of $7,368.4m** gives **≥$2,394.7m** of FY28 FCF — a derived consensus-equivalent the wiki did not have. **Until a house publishes an FY28 FCF margin that is NOT 32.5%, treat the Street's FY28 FCF as a restatement of guidance and not as a view.** ✅ Separately, **DB's $7,415m revenue is +0.63% vs the $7,368.4m consensus** — in line, no edge.
+
+### ⑪ ★ The consolidation thesis has no independent survey support, and the one survey that exists is mildly against it
+
+UBS Evidence Lab, **n=100 enterprise security leaders, fielded November 2025** (from the 2026-01-13 outlook; the consolidation section was dropped when that note was first ingested on 09-15 off a mangled PDF): **35% expect to consolidate vendors · 43% no change · 20% expect to EXPAND**. UBS's own conclusion: *"2026 will see **less active consolidation**."* Preferred + 2nd-choice consolidation winners: **[[CRWD]] 52% · [[MSFT]] 45% · ZS 21% · [[PANW]] 15%.**
+
+➤ **Against MS · Cerisola's 09-15 framing** — budget-driven consolidation as *the* share-gain engine, PANW and CRWD as the winners, ZS on the short leg — **the only surveyed evidence in this corpus has the consolidating cohort at a MINORITY, ranks ZS ABOVE PANW, and puts PANW LAST of the four.**
+
+⚠️ **Dated, and the caveat is material: November 2025, ten months before the call and before the CyberArk close (2026-02-11).** PANW's own F4Q26 deck reports **~220 net new platformizations (+44% y/y)** and **NRR >120% among platformized customers** — the behaviour is visible in the book even though the intent survey did not anticipate it. **Logged as a counterweight and as a gap in the evidence base, NOT as a refutation, and no number was written to the assumptions ledger.**
+
+### ⑫ ★ CrowdStrike marks its own current AI cyber-spend attach at 1%; the sell-side uses 6–7%
+
+The deck's 2027 AI-security band runs **$36bn at a 1% cyber-spend attach to $291bn at 8%**, both computed on Gartner's **$3.64T "AI spend surge"** case (×1% = $36.4bn, ×8% = $291.2bn — the **$2.67T baseline shown beside it is never used**, so the low end is a low-ATTACH case, not a low-spend case). Cerisola's construction starts from *"security runs at roughly 6–7% of IT budget; assume a similar attach to the AI budget"*, rising to *"8, 9, 10%."*
+
+➤ **The two independent ladders AGREE at the ~8% ceiling and differ SIX-FOLD at the floor.** Since every AI-cyber TAM on `themes/ai-cybersecurity.md` — $120bn, $220bn, $215bn, $36–291bn — is an attach-rate assumption wearing a dollar sign, **the attach rate is the single highest-leverage number on that page and neither side has defined its numerator.** Logged as a corpus gap, not as a divergence to trade.
+
+## CONFIRMS — second pass
+
+### ⑬ PANW: the tightest guide-vs-consensus fit in this wiki — four marks, all inside the range
+
+| PANW mark | Company guide (2026-09-01) | BBG consensus (annual line, asof 09-17) | Δ vs guide midpoint |
+|---|---|--:|--:|
+| FY'27 revenue (`1FY`) | $14,100–14,200m | **$14,164.1m** | **+0.10%** |
+| FY'27 non-GAAP diluted EPS (`1FY`) | $4.16–4.19 | **$4.18** | **+0.12%** |
+| Q1'27 revenue (`1FQ`) | $3,300–3,310m | **$3,308.0m** | **+0.09%** |
+| Q1'27 non-GAAP diluted EPS (`1FQ`) | $0.96–0.98 | **$0.972** | **+0.21%** |
+
+➤ **All four sit inside the guided range and none is more than 21bp from the midpoint. There is no estimate edge anywhere in PANW's guided P&L.** Any PANW edge has to come from **NGS ARR, net new NGS ARR, platformizations or the Idira ramp — none of which BBG carries.** ✅ Also confirmed: BBG's FY26 actual revenue of **$11,480.0m** matches the deck's reported figure exactly.
+
+### ⑭ 🔴 BASIS TRAP CONFIRMED ON A FOURTH NAME — PANW's CY block is NOT its fiscal year, and the wedge is 8%
+
+| PANW | CY block | Annual line | Wedge |
+|---|--:|--:|--:|
+| 2026 | CY2026 **$13,021.7m** | `1FY` **$14,164.1m** | **−8.1%** |
+| 2027 | CY2027 **$15,094.3m** | `2FY` **$16,181.8m** | **−6.7%** |
+
+🔴 **Scoring the company's own $14,100–14,200m FY27 guide against the CY2026 block would have printed "consensus sits 8% BELOW management's guidance" — a fabricated story, on a July-31 fiscal year end.** Same class as the DELL and CRM traps already recorded; this is the fourth name it has been confirmed on.
+
+✅ **And the contrast that stops the rule being over-generalised: CRWD's January-31 FYE makes the wedge immaterial** — CY2026 $5,951.0m vs `1FY` $6,006.5m = **−0.92%**; CY2027 $7,362.2m vs `2FY` $7,368.4m = **−0.09%**. **The rule is FYE-specific, not universal: check the wedge before deciding whether it matters.**
+
+### ⑮ CrowdStrike's deck arithmetic closes on six independent checks
+
+| Claim | Check | Result |
+|---|---|--:|
+| ~3.5% of $565bn reaches $20bn ARR | 565 × 3.5% | **$19.78bn** ✅ |
+| Agentic SOC $695m → $1.8bn at 13% CAGR to CY34 | 695 × 1.13⁸ | **$1,848m** ✅ |
+| Agentic Identity $585m → $1.7bn at 14% CAGR | 585 × 1.14⁸ | **$1,669m** ✅ |
+| AI-security slice of the CY34 TAM = $215bn | 115 + 52 + 48 | **$215bn** ✅ |
+| CY29 TAM category split sums to the $260bn total | 6+11+13+26+27+30+32+33+40+42 | **$260bn** ✅ |
+| 2027 AI-security band off the surge case | 3,640 × 1% / × 8% | **$36.4bn / $291.2bn** ✅ |
+
+➤ **The deck's internal arithmetic is clean. Every argument therefore lives in the ASSUMPTIONS — the 3.5% capture rate, the 17% TAM CAGR and the attach rate — not in the sums.** ✅ One more: **FY28 net new ARR ≥$1,626m ÷ FY27 $1,355m = 1.2000 exactly**, confirming *"20%+"* is a floor at precisely +20.0% and not a rounded range.
+
+### ⑯ The $10bn-within-FY30 pull-forward is arithmetically CONSERVATIVE against the rate just delivered
+
+From the disclosed **2Q27 ending ARR of $5.8bn**, reaching **$10bn by the end of FY30** (31-Jan-2030, 3.5 years) requires a **~16.8% CAGR**. The company has just delivered **~21.9% over two years** ($3.9bn at 2Q25 → $5.8bn at 2Q27; the deck rounds it to 23%). **The pulled-forward target therefore requires deceleration of roughly five points, not acceleration.**
+
+⚠️ **And the "15% CAGR" label is being applied to the WRONG leg by anyone who reads it off the headline: it runs from $10bn to $20bn** (10 × 1.15⁵ = **$20.11bn** ✅), i.e. FY30→FY35 — **not from today's $5.8bn base.** Two different rates on one slide.
+
+### ⑰ PANW gross margin: the Street has already taken the mix-driven erosion the deck under-plays
+
+BBG `1FY` gross margin **75.36%**, sitting between the FY26 actual non-GAAP **75.8%** and the Q4'26 exit rate of **74.8%** (FY25 was 76.4%). ➤ **No edge — but it retires the question. The acquisition-mix gross-margin decline is absent from the company's highlights slide and present in consensus.**
+
+## DATA DEFECTS FOUND WHILE RECONCILING — second pass
+
+- 🔴 **The CrowdStrike deck's TAM slide returns its ten category values in REVERSE order against their labels in the PDF text layer.** A naive extraction prints **Secure Browser $42bn and Cloud Security $6bn**; the truth is exactly inverted. **The check that catches it is additivity — the correct pairing sums to exactly $260bn.** Read from the rendered image. Same class as the Jefferies chart-deck mispairing already in this wiki's memory.
+- 🔴 **Two further chart mispairings in the same batch.** The CRWD Flex slide's text layer emits a 4×2 table column-major (`>2,900 / >40% / $2.29B / >630`), and UBS's consolidation-winners prose lists the vendors *"Microsoft, CrowdStrike, Palo Alto Networks, and Zscaler"* — **which is not the rank order of its own chart**. **Three mispairing traps in one night across two houses and one company: for any number that lives inside a chart, read the pixels.**
+- ⚠️ **`themes/ai-cybersecurity.md` §2c is headed "SEVEN BACKFILL NOTES" and the Bernstein arc is now EIGHT** (a 2025-07-16 note arrived tonight). An addendum was inserted beside the list rather than rewriting the header; **the header should be re-cut on the next pass that touches §2c.**
+- ⚠️ **`PENDING_FULL_REPORTS.md` was absent from `_inbox` at the start of this run.** It was swallowed by `--archive` at 10h and, unlike `_expert_calls_seen.json`, appears not to have been restored. **The 10h record says both were restored and md5-verified, so either the restore did not land or something removed it afterwards.**
+- ✅ **`_expert_calls_seen.json` survived tonight's `--archive` intact** — md5 `bd9cf582…` identical before and after, verified rather than assumed.
