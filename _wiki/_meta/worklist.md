@@ -13,7 +13,7 @@ Spawn one `transcript-fetcher` task per name (paste into Claude Code):
 - **POET** — "get the latest POET earnings transcript -> `E:\Wiki Felipe empresas\POET\transcripts\`"
 - **SMTC** — "get the latest SMTC earnings transcript -> `E:\Wiki Felipe empresas\SMTC\transcripts\`"
 
-## ⚪ Private — intentionally skipped (10)
+## ⚪ Private — intentionally skipped (11)
 
-ANTHROPIC, AVGO, CEREBRAS, GOOG, INTC, MSFT, OPENAI, QCOM, SNOW, SPCX
+ANTHROPIC, AVGO, CEREBRAS, GOOG, INTC, MSFT, OKTA, OPENAI, QCOM, SNOW, SPCX
 

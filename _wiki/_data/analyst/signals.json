@@ -7,8 +7,8 @@
     "positions": 8
   },
   "stats": {
-    "signals": 102,
-    "active": 102,
+    "signals": 100,
+    "active": 100,
     "high": 10,
     "belief_changes": 1,
     "focus_names": 49
@@ -198,21 +198,6 @@
       "next_catalyst": "2026-09-24",
       "why": [
         "TSM — 2026-09-24: TRUMP-XI, 2026-09-24 — UBS puts SPE and MEMORY as the most exposed verticals, with the…"
-      ]
-    },
-    {
-      "ticker": "ON",
-      "focus_score": 62,
-      "in_book": false,
-      "signal_count": 3,
-      "high_count": 0,
-      "sector": "Analog & processors",
-      "thesis": "Bottoming auto/SiC power IDM + AI-DC-power (800V) kicker; share not TAM (Citi Neutral vs TXN).",
-      "next_catalyst": "2026-09-22",
-      "why": [
-        "ON — catalyst passed without a logged outcome",
-        "ON — catalyst passed without a logged outcome",
-        "ON — 2026-09-22: Tue 2026-09-22, Los Angeles — ON CEO/CFO/IR NDR hosted by Jefferies · Blayne Curtis."
       ]
     },
     {
@@ -488,6 +473,19 @@
       "next_catalyst": "2026-09-21",
       "why": [
         "OKTA — 2026-09-21: Oktane — week of 2026-09-21, Las Vegas — \"the AI security event of the year\", with an…"
+      ]
+    },
+    {
+      "ticker": "ON",
+      "focus_score": 40,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Analog & processors",
+      "thesis": "Bottoming auto/SiC power IDM + AI-DC-power (800V) kicker; share not TAM (Citi Neutral vs TXN).",
+      "next_catalyst": "2026-09-22",
+      "why": [
+        "ON — 2026-09-22: Tue 2026-09-22, Los Angeles — ON CEO/CFO/IR NDR hosted by Jefferies · Blayne Curtis."
       ]
     },
     {
@@ -2010,70 +2008,6 @@
         "_meta/outcomes.md"
       ],
       "evidence_anchor": "🆕🔴 2026-09-15 to 09-17 — DREAMFORCE (SF), INVESTOR DAY 09-16 at 4PM ET. THE NAMED FOCUS IS NOW \"CLAUDEFORCE.\" UBS · Karl Keirstead (09-14): much of the investor focus will be on the newly-announce",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "post-aa422bcd66f4",
-      "asof": "2026-09-17",
-      "source_date": "2026-09-16",
-      "event_date": "2026-09-16",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "ON — catalyst passed without a logged outcome",
-      "tickers": [
-        "ON"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "🆕🔴🔴 WED 2026-09-16 — ON SEMICONDUCTOR ANALYST DAY. THE SINGLE TEST: DOES THE 53% GROSS-MARGIN TARGET SURVIVE? UBS · Arcuri preview (09-14) expects a LT model implying CY30E revenue ~$10bn and EP",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for ON in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "🆕🔴🔴 WED 2026-09-16 — ON SEMICONDUCTOR ANALYST DAY. THE SINGLE TEST: DOES THE 53% GROSS-MARGIN TARGET SURVIVE? UBS · Arcuri preview (09-14) expects a LT model implying CY30E revenue ~$10bn and EP",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "post-a43580b5f5e6",
-      "asof": "2026-09-17",
-      "source_date": "2026-09-16",
-      "event_date": "2026-09-16",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "ON — catalyst passed without a logged outcome",
-      "tickers": [
-        "ON"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "2026-09-16 — onsemi Analyst Day (Citi exp. ~Sep 13 print first) — the key event; watch for a raised long-term target model + SiC/800V framing (Citi, briefing 2026-06-15).",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for ON in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "2026-09-16 — onsemi Analyst Day (Citi exp. ~Sep 13 print first) — the key event; watch for a raised long-term target model + SiC/800V framing (Citi, briefing 2026-06-15).",
       "origin": "outcome_loop",
       "feedback": "",
       "feedback_note": "",

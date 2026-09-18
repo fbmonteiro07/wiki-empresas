@@ -1,6 +1,6 @@
 # Daily Analyst Brief
 
-_Generated 2026-09-17 · 102 active signals · latest reconciliation: reconciliation-2026-09-17.md._
+_Generated 2026-09-17 · 100 active signals · latest reconciliation: reconciliation-2026-09-17.md._
 
 > ⚠️ **Portfolio priority is provisional.** _data/book.json is still a seed with unknown weights. Book badges identify seeded names but do not represent real exposure.
 
@@ -196,8 +196,6 @@ _MODEL CHECK · MEDIUM IMPACT · STANDING · MEDIUM CONFIDENCE_
 
 - **AVGO — catalyst passed without a logged outcome** — Write a source-attributed bull won|bear won|neutral outcome for AVGO in outcomes.md. _Source: Catalyst outcome ledger._ (post-b3639914a445)
 - **CRM — catalyst passed without a logged outcome** — Write a source-attributed bull won|bear won|neutral outcome for CRM in outcomes.md. _Source: Catalyst outcome ledger._ (post-1569a1eed2c2)
-- **ON — catalyst passed without a logged outcome** — Write a source-attributed bull won|bear won|neutral outcome for ON in outcomes.md. _Source: Catalyst outcome ledger._ (post-aa422bcd66f4)
-- **ON — catalyst passed without a logged outcome** — Write a source-attributed bull won|bear won|neutral outcome for ON in outcomes.md. _Source: Catalyst outcome ledger._ (post-a43580b5f5e6)
 - **POET — latest earnings transcript absent** — Fetch the latest POET earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-09-17._ (data-7a2ff9792f6d)
 - **SMTC — latest earnings transcript absent** — Fetch the latest SMTC earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-09-17._ (data-5ed7b8daf178)
 

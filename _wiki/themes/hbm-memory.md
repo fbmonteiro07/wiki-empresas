@@ -3,6 +3,19 @@
 # Theme — HBM / Memory Super-Cycle
 _Wiki · generated 2026-06-19 · cross-company theme · sources: equity calls (`../_equity_calls/Semis`), briefing roll-ups (`../_briefings/by-ticker`), earnings transcripts, company pages. Company pages: [../00_INDEX.md](../00_INDEX.md) · themes index: [00_THEMES.md](00_THEMES.md)._
 
+## 🆕🔴🔴 2026-09-17 (/wiki-ingest) — **THE SHARE OF MEMORY CAPACITY LOCKED INTO LONG-TERM AGREEMENTS IS NOW PUBLISHED BY VENDOR, AND IT IS 50-70%. THAT IS THE NUMBER THAT DECIDES WHETHER THE PRICE CYCLE IS A SPIKE OR A CONTRACT REPRICING.**
+
+(Digitimes, relayed by MS TMT desk · **Tom Wigg**, **2026-09-17** — *supply-chain sources via a trade publication, relayed by a SALES desk; no rating, PT or estimate attached to any of it.*)
+
+- 🔴 **LTA CAPACITY LOCK-UP, BY VENDOR: "[[KIOXIA]] has about 50% of its LTA capacity tied up, while SOUTH KOREA'S TWO MAJOR VENDORS ([[SAMSUNG]], [[SKHYNIX]]) RESERVE ABOUT 70% of capacity for LTAs. [[MU]] also has AROUND 60% of its capacity locked into such agreements."**
+  ➤ **Why this is the most useful memory datapoint of the week: a spot-price spike against 30-50% uncommitted capacity is a very different earnings event from the same spike against 100% merchant capacity. It caps the upside from spot but it also underwrites the durability — and it is the mechanism by which [[CIEN]]-style "supply-secured" framings are spreading across the AI supply chain this month.**
+- 🔴 **AND THE TWO PRODUCTS HAVE DECOUPLED: "DRAM DEMAND IS CLEARER THAN NAND FLASH DEMAND. While the days of SHARP MONTHLY SPIKES are likely EASING, DRAM PRICES ARE STILL EXPECTED TO RISE BY 20-30% EACH QUARTER."**
+- ⚠️ **NAND IS THE SOFTER SIDE, AND THE REASON IS CONSUMER: "NAND flash pricing for 4Q26 REMAINS UNCLEAR. Suppliers want to keep pushing prices higher, but WEAKER DEMAND FOR CONSUMER ELECTRONICS SUCH AS PCs AND SMARTPHONES IS SLOWING THE PACE, even as URGENT ORDERS FROM ENTERPRISE STORAGE customers still leave room for increases. Overall, NAND contract prices in 2H26 need to be viewed ON A QUARTERLY BASIS, with COMBINED GAINS ACROSS THE TWO QUARTERS EXPECTED TO REACH ABOUT 30-40%."**
+- ⚠️⚠️ **HOLD THIS AGAINST THE MOST BULLISH NUMBER IN CIRCULATION THE SAME DAY, BECAUSE THEY ARE NOT THE SAME CLAIM: @aleabitoreddit (anonymous, 2026-09-17) projects "SLC NAND +120-170% IN H2 VS H1". Digitimes' supply-chain sources have ALL NAND contract prices up ~30-40% across the two quarters of 2H26. SLC is a narrow, low-density niche and can plausibly move several times the blended contract price — but the two figures are routinely quoted as if they were the same series. They are not. Use ~30-40% for 2H26 NAND contract, and treat any three-digit figure as product-specific until its segment is named.**
+- ⚠️ **SOURCE CLASS: trade-press supply-chain sourcing, unnamed, relayed through a sales desk. Directionally consistent with everything else on this page, but none of these are company disclosures and no vendor has confirmed its own LTA percentage.**
+
+
+
 ## 🆕🔴🔴🔴 2026-09-17 — **JPM'S OWN QUARTERLY DRAM-ASP CURVE SAYS PRICING PEAKS IN 4Q26 AND PLATEAUS FOR EIGHT QUARTERS — WHICH PUTS THE HOUSE THIS WIKI READS AS A BULL ON THE SAME *SHAPE* AS THE MARK IT LABELLED "THE OUTLIER BEAR". AND THE TPU ROADMAP HANDS THE THEME ITS FIRST PER-PART HBM-STACK LADDER.**
 
 _Source: J.P. Morgan · **Harlan Sur** — **Fall Series 2026 Webinar — Semis & Semi Cap Equipment**, 2026-09-17 10:30am ET (w/ Mayur Ramdhani) (pasted exhibit; broker/analyst confirmed by Felipe 2026-09-17, deck identified from the Fall Series webinar invitations in Felipe's Outlook, 2026-09-15 / 09-16; deck PDF not on disk, NetRoadshow-gated) — slides *"AI-Driven Memory Upcycle Continues in 2026…"* and *"Near-Term Updates on AVGO and MRVL's ASIC Pipelines"*. ⚠️ **No rating, no price target, no company estimate on either slide. NOTHING ON THIS PAGE IS SUPERSEDED.**_
