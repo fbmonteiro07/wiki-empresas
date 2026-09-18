@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\WMB` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\WMB.md` (none — no briefing coverage for this name). Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-17 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-18 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|

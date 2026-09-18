@@ -8,13 +8,13 @@
 _Wiki · generated 2026-06-20 · **No SEC filings — Japanese issuer (TSE Prime: 8035); transcripts + IR + BBG (JPY).** Sources: `E:\Wiki Felipe\TOKYOELEC\transcripts` (IR results decks/scripts) + `E:\briefings\2026` roll-up + equity-call read-throughs (`E:\equity_calls_transcripts\Semis`) + BBG (JPY). Master index: [../INDEX.md](../INDEX.md). (Disambiguation: the US-wiki page [TEL](TEL.md) is **TE Connectivity** — unrelated.)_
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-17 · JPY
+### 📊 Consensus snapshot — BBG · asof 2026-09-18 · JPY
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | ¥3157.9bn | ¥4018.3bn |
-| Gross profit | ¥1462.1bn | ¥1997.1bn |
-| Gross margin | 46.3% | 49.7% |
+| Gross profit | ¥1465.3bn | ¥1997.1bn |
+| Gross margin | 46.4% | 49.7% |
 | EBITDA | ¥952.0bn | ¥1363.8bn |
 | EPS | ¥1585.11 | ¥2088.05 |
 | Capex | ¥203.7bn | — |

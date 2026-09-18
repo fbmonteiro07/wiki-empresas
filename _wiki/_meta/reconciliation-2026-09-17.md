@@ -159,13 +159,28 @@ _Appended to this same report rather than opened as `reconciliation-2026-09-18.m
 
 ## Where the new data DIVERGES — second pass
 
-### ⑧ ★★ CRWD: the consensus price target has gone BELOW spot, and 41 of 56 analysts still say Buy
+### ⑧ ★★ CRWD: the consensus price target has gone BELOW spot, and 41 of 56 analysts still say Buy — RESOLVED 2026-09-18 → CONFIRMS
 
 BBG asof **2026-09-17**: **px $245.70**, **consensus PT $238.84** (n=**56**; **41 buy / 14 hold / 1 sell**; street high $425, low $132). ➤ **The average target is 2.79% BELOW the market price.**
 
 🔴 **This page recorded the opposite three sessions ago.** The 09-15 block carries *"consensus PT $238.58 (n=56) — consensus PT sits essentially at spot ($237.83), which is itself a positioning signal."* **Since then the stock has added 3.3% and the consensus target has added 0.11%.** The ratings distribution has not moved.
 
 ➤ **The ratings and the targets are now saying different things about the same stock, and the gap is measurable rather than rhetorical.** That is the positioning constraint the 09-15 call named in words (*"people are positioned long those two… and it's worked, unfortunately"*) expressed as a number. ⚠️ **Not a valuation call: the targets are stale relative to the tape, which is the ordinary state of affairs after a fast move. The signal is the ABSENCE of target revisions after Fal.Con, not the level.**
+
+✅ **09-18 re-placement (BBG asof 2026-09-18) — the crossing CLOSED in one session, and it closed on the PRICE leg, exactly as this finding's own caveat said it would.**
+
+| CRWD | 2026-09-17 (post-close) | 2026-09-18 (mid-session) | Change |
+|---|--:|--:|--:|
+| Spot | $245.70 | **$237.45** | **−3.36%** |
+| Consensus PT | $238.84 | **$240.66** | **+0.76%** |
+| **PT vs spot** | **−2.79%** | **+1.35%** | **crossing reversed** |
+| Analysts (n) | 56 | 56 | unchanged |
+| Buy / hold / sell | 41 / 14 / 1 | 41 / 14 / 1 | unchanged |
+| Street high / low | $425 / $132 | $425 / $132 | unchanged |
+
+➤ **The anomaly was a staleness artifact and it mean-reverted inside a single session — which is the outcome this finding itself predicted** (*"Not a valuation call: the targets are stale relative to the tape… The signal is the ABSENCE of target revisions after Fal.Con, not the level"*). **The stock fell to the targets; the targets barely moved.** The panel is identical to the analyst — same 56 houses, same 41/14/1 split, same 4.3929 rating to four decimals — so the +$1.82 of target is revision inside an unchanged roster, not a composition effect. **Moved to CONFIRMS: there is no longer a measurable ratings-vs-targets gap to trade.**
+
+⚠️ **Basis guard: the $237.45 is an INTRADAY mark (11:28 ET) against a post-close $245.70.** The crossing can un-cross by tonight's close, so **re-test this resolution on the next post-close vintage before anything is built on it.**
 
 ### ⑨ ★★ CRWD FY29: consensus underwrites only the FLOOR of the new operating-margin target — the cleanest quantified edge of the run
 
@@ -182,6 +197,8 @@ The investor-briefing deck put a **FY29 target model** on the record for the fir
 ➤ **Consensus FY29 operating margin is 28.00% — the bottom of management's band, to two decimals. The Street has taken the revenue ramp and declined the margin ramp.** If management delivers the midpoint, FY29 EBIT is 7.1% above where the Street sits; the top of the band is +14.3%. **That is a real, dated, falsifiable edge and it does not require believing any TAM number.**
 
 ⚠️ **BASIS WARNING, because this is where the comparison breaks: do NOT score the company's 82–85% gross-margin target against BBG's `gm`.** The company's target is **SUBSCRIPTION** gross margin (1H27 actual 81%); BBG's `3FY` gm of **79.94%** is a company-level figure that includes professional services. **Different denominators. The margin comparison above is deliberately made at EBIT, which is like-for-like.**
+
+✅ **09-18 re-placement — UNCHANGED TO THE DECIMAL, and that is what strengthens it.** The `3FY` line is byte-identical to the 09-17 vintage: revenue **$8,979.5m**, operating income **$2,514.2m**, **operating margin 27.999%**. **CrowdStrike is now two consecutive vintages past the investor briefing with not one dollar of FY29 revenue or EBIT revised** — so "the Street has taken the revenue ramp and declined the margin ramp" is no longer a single-day reading of a stale tape; it has survived a session in which the stock moved 3.4%. **The edge stands exactly as written: +7.1% of FY29 EBIT at the band midpoint, +14.3% at the top.**
 
 ### ⑩ ★ CRWD FY28 free cash flow: the Street's published mark is the company's own guide applied to the analyst's own revenue
 
@@ -257,3 +274,36 @@ BBG `1FY` gross margin **75.36%**, sitting between the FY26 actual non-GAAP **75
 - ⚠️ **`themes/ai-cybersecurity.md` §2c is headed "SEVEN BACKFILL NOTES" and the Bernstein arc is now EIGHT** (a 2025-07-16 note arrived tonight). An addendum was inserted beside the list rather than rewriting the header; **the header should be re-cut on the next pass that touches §2c.**
 - ⚠️ **`PENDING_FULL_REPORTS.md` was absent from `_inbox` at the start of this run.** It was swallowed by `--archive` at 10h and, unlike `_expert_calls_seen.json`, appears not to have been restored. **The 10h record says both were restored and md5-verified, so either the restore did not land or something removed it afterwards.**
 - ✅ **`_expert_calls_seen.json` survived tonight's `--archive` intact** — md5 `bd9cf582…` identical before and after, verified rather than assumed.
+
+---
+
+# THIRD LAYER — 2026-09-18 12:28 BRT, /wiki-consensus (scheduled, unattended)
+
+_Re-places this report's quantitative findings against the first BBG vintage taken after the 09-17 close. `estimates.json` **asof 2026-09-18**, **107/107 names fetched, 0 FAIL lines, 0 null prices, 0 `error` keys, 0 `carried_over` stamps, 0 of 107 records byte-identical to the 09-17 vintage** (no silent carry-over, no phantom re-stamp), all 107 carry a consensus `pt`, orphan-ticker audit clean **both ways** (TICKERS 107 = estimates 107). **Baseline provenance verified by md5 against the committed HEAD blob (`6ec49798…`), not against a working copy** — so nothing below can be straddling two data vintages._
+
+⚠️ **PRICE BASIS — READ BEFORE USING ANY SPOT NUMBER IN THIS LAYER.** The 09-17 baseline was written **18:36 BRT / 17:36 ET — POST-CLOSE**. This vintage was written **12:28 BRT / 11:28 ET — MID-SESSION**. Every price comparison here is **intraday-against-close** and can un-cross by tonight's close. Estimate lines and consensus targets are daily-stamped and are not affected.
+
+## What moved
+
+**Exactly one finding in this report changed, and it inverted: ⑧ (CRWD consensus PT vs spot), now RESOLVED → CONFIRMS.** See the ✅ block under ⑧ above. Every other quantitative finding stands on a consensus that did not move at all:
+
+| Finding | Name | Line tested | 09-17 | 09-18 | Verdict |
+|---|---|---|--:|--:|---|
+| ① | CIEN | FY27 revenue (`2FY`) vs the $8.3–8.4bn floor | $8,447.7m | **$8,447.7m** | **unchanged — still +0.57% above the floor top; headline still empty** |
+| ② | CIEN | FY28 operating margin (`3FY`) vs the 25–27% band | 28.554% | **28.554%** | **unchanged — still ABOVE the band top; the deferral read stands** |
+| ② | CIEN | FY27 operating margin (`2FY`) | 25.584% | **25.584%** | **unchanged — the $119.6m gap to 27% is intact** |
+| ⑨ | CRWD | FY29 operating margin (`3FY`) vs the 28–32% target | 27.999% | **27.999%** | **unchanged — still at the FLOOR, to three decimals** |
+| ③–⑥ | META | 2027 EBIT / EPS (`2FY`) | $103,525.0m / $38.087 | **$103,525.0m / $38.087** | **unchanged — the Goldman-vs-Citi depreciation dispute is untouched** |
+| ⑬–⑮ | PANW | FY27/FY28/FY29 revenue, EBIT, EPS, GM | all lines | **all identical** | **unchanged — the four-mark guide fit holds** |
+
+➤ **Prices moved and estimates did not, for a second consecutive session — but the composition of the price move flipped to memory.** CRWD −3.36%, PANW −4.17%, ORCL −3.55%, NET −4.91%, QCOM −5.08%, NFLX −4.41%, against **KIOXIA +9.40%, SKHYNIX +6.42%, SNDK +6.35%, ADVANTEST +5.99%, LRCX +4.67%, MEDIATEK +4.67%, SMIC +4.41%**. **The whole memory/ATE complex re-rated on a tape with no estimate revision behind it.**
+
+## Method note — which names the Street actually touched
+
+**16 of 107 names carried any estimate field moving ≥0.5% overnight** (ASML, CRM, DISCO, FSLY, MEDIATEK, MU, NOW, NVDA, ORCL, SAMSUNG, SNOW, TLN, TM, TSEM, TSM, VST); **29 carried any change at all, and 78 were untouched. Not one name carrying an open curated divergence on this wiki is in either set** — which is why every row above reads "unchanged" rather than "re-confirmed".
+
+⚠️ **The one revision worth a second look is NVDA, and its SHAPE matters more than its size:** `2FQ` revenue **−1.69%** ($123,931m → $121,840m) and `2FQ` EBIT **−1.75%**, while `3FY` revenue went the other way, **+0.64%** ($921,481m → $927,359m). **The Street shaved the near quarter and raised the out-year on the same day** — a timing/mix re-cut, not a demand cut, and it should not be logged on the NVDA page as a negative revision. Spot was flat (−0.05%) and the consensus target moved −$0.65.
+
+⚠️ **ASML's 4–5% capex cut across all three annual lines (`1FY` −4.18%, `2FY` −5.41%, `3FY` −4.09%) is ASML's OWN capital spending, not WFE demand.** Logged here only so a later pass does not mistake it for a semicap-demand signal.
+
+_BBG column resolved 2026-09-18 — estimates.json asof 2026-09-18. No cell in this report was ever marked PENDING (BBG was live at both ingest passes); this layer re-places the report's quantitative rows against the first post-09-17-close vintage and retires finding ⑧._

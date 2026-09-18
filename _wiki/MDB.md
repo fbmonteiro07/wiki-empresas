@@ -5,7 +5,7 @@
 _Wiki · generated 2026-09-04 · sources: `E:\Wiki Felipe empresas\MDB\transcripts` (8 earnings calls, Q3 FY25 2024-12-09 → Q2 FY27 2026-09-01) · [themes/ai-data-infra-observability.md](themes/ai-data-infra-observability.md) (§2.4 MongoDB, §2.5 PostgreSQL, §1/§4/§5) · `_briefings/2026/2026-05-26*` and `2026-05-29*` (PT table) · 7 Barclays (Lenschow) notes 2026-05-27 → 2026-09-02 archived in `relatórios bons/` on 2026-09-04 (see Intra-quarter). SEC filings (2× 10-K, 6× 10-Q, 2024-12 → 2026-09) in `MDB/` and 2 company decks in `MDB/apresentações/` (added 2026-09-04 — see § Primary-source datapoints); **no** `_briefings/by-ticker/MDB.md` roll-up. Risks below were written from the calls and the debate; the 10-K risk-factor deltas are in the primary-source section. Fiscal year ends January 31 (Q2 FY27 = quarter ended 2026-07-31). Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-17 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-18 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
