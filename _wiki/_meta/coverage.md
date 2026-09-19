@@ -1,6 +1,6 @@
 # Source-coverage audit
 
-_Generated 2026-09-18 · 99 public-company pages · flags inputs that exist on disk but the page never read. Rebuild: `py _wiki/_tools/build_coverage.py`._
+_Generated 2026-09-18 · 96 public-company pages · flags inputs that exist on disk but the page never read. Rebuild: `py _wiki/_tools/build_coverage.py`._
 
 **18 pages flagged** (severity > 0), worst first.
 

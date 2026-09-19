@@ -1,6 +1,6 @@
 # Daily Analyst Brief
 
-_Generated 2026-09-18 · 108 active signals · latest reconciliation: reconciliation-2026-09-18.md._
+_Generated 2026-09-18 · 109 active signals · latest reconciliation: reconciliation-2026-09-18.md._
 
 > ⚠️ **Portfolio priority is provisional.** _data/book.json is still a seed with unknown weights. Book badges identify seeded names but do not represent real exposure.
 
@@ -194,6 +194,7 @@ _MODEL CHECK · MEDIUM IMPACT · STANDING · MEDIUM CONFIDENCE_
 
 ## Research hygiene
 
+- **NSCALE — catalyst passed without a logged outcome** — Write a source-attributed bull won|bear won|neutral outcome for NSCALE in outcomes.md. _Source: Catalyst outcome ledger._ (post-19705d8a7484)
 - **NSCALE — Bloomberg consensus missing** — Run the merge-safe Bloomberg estimate fetch for NSCALE, then rebuild the snapshot and Analyst Inbox. _Source: Wiki remediation worklist 2026-09-18._ (data-b6896aa41562)
 - **NSCALE — latest earnings transcript absent** — Fetch the latest NSCALE earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-09-18._ (data-6b54c66be99f)
 - **POET — latest earnings transcript absent** — Fetch the latest POET earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-09-18._ (data-172ce73969af)

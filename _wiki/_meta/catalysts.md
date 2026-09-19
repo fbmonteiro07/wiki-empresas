@@ -65,13 +65,13 @@ _Generated 2026-09-18 · parsed from every page's 'Catalysts / what to watch'. D
 | 2028-06-30 | NSCALE | 2028-06-30 — Monarch **2 GW gross / 1.37 GW IT online "by 1H28"** (Anthropic tranches; the wiki's first neocloud milestone tied to on-site gas turbines). |
 | 2031-12-31 | NSCALE | 2031-12-31 — Monarch expansion to ~8 GW gross planned. |
 
-## ⏰ Passed — need a post-mortem (0)
+## ⏰ Passed — need a post-mortem (1)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| _none_ | | |
+| 2026-09-16 | NSCALE | **IPO pricing and NYSE listing ("NSCL")** — no date set; press expected "as soon as October" (The Information, 07-30). Watch the price-range amendment for the first projection and for the Anyscale sha |
 
 ## ✅ Resolved (171)
 

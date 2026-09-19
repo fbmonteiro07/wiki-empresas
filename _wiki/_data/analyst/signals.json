@@ -7,8 +7,8 @@
     "positions": 8
   },
   "stats": {
-    "signals": 108,
-    "active": 108,
+    "signals": 109,
+    "active": 109,
     "high": 8,
     "belief_changes": 2,
     "focus_names": 51
@@ -202,6 +202,21 @@
       ]
     },
     {
+      "ticker": "NSCALE",
+      "focus_score": 62,
+      "in_book": false,
+      "signal_count": 3,
+      "high_count": 0,
+      "sector": "Systems & neoclouds",
+      "thesis": "UK GPU neocloud, S-1 filed 2026-09-18 (NYSE: NSCL): $103.4bn TCV / 5.7-yr WAL / 1.37 GW IT ⇒ ~$13bn rev per IT-GW/yr (Anthropic Monarch ~$16bn); Microsoft $43.8",
+      "next_catalyst": "2026-11-16",
+      "why": [
+        "NSCALE — catalyst passed without a logged outcome",
+        "NSCALE — Bloomberg consensus missing",
+        "NSCALE — latest earnings transcript absent"
+      ]
+    },
+    {
       "ticker": "TER",
       "focus_score": 62,
       "in_book": false,
@@ -238,20 +253,6 @@
       "next_catalyst": "2026-09-21",
       "why": [
         "BE — 2026-09-21: 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — THE INDEX TIER IS…"
-      ]
-    },
-    {
-      "ticker": "NSCALE",
-      "focus_score": 56,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "Systems & neoclouds",
-      "thesis": "UK GPU neocloud, S-1 filed 2026-09-18 (NYSE: NSCL): $103.4bn TCV / 5.7-yr WAL / 1.37 GW IT ⇒ ~$13bn rev per IT-GW/yr (Anthropic Monarch ~$16bn); Microsoft $43.8",
-      "next_catalyst": "2026-11-16",
-      "why": [
-        "NSCALE — Bloomberg consensus missing",
-        "NSCALE — latest earnings transcript absent"
       ]
     },
     {
@@ -2019,6 +2020,38 @@
       ],
       "evidence_anchor": "🆕🔴🔴 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — THE INDEX TIER IS NOW NAMED: BE IS AN S&P 500 ADD, AND A FTSE ALL-WORLD ADD. TWO INDEPENDENT INDEX EVENTS IN THE",
       "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "post-19705d8a7484",
+      "asof": "2026-09-18",
+      "source_date": "2026-09-16",
+      "event_date": "2026-09-16",
+      "type": "postmortem",
+      "priority": "medium",
+      "score": 58,
+      "title": "NSCALE — catalyst passed without a logged outcome",
+      "tickers": [
+        "NSCALE"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "overdue",
+      "confidence": "high",
+      "why_now": "IPO pricing and NYSE listing (\"NSCL\") — no date set; press expected \"as soon as October\" (The Information, 07-30). Watch the price-range amendment for the first projection and for the Anyscale sha",
+      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
+      "action": "Write a source-attributed bull won|bear won|neutral outcome for NSCALE in outcomes.md.",
+      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
+      "readthrough": [],
+      "source": "Catalyst outcome ledger",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "_meta/outcomes.md"
+      ],
+      "evidence_anchor": "IPO pricing and NYSE listing (\"NSCL\") — no date set; press expected \"as soon as October\" (The Information, 07-30). Watch the price-range amendment for the first projection and for the Anyscale sha",
+      "origin": "outcome_loop",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
