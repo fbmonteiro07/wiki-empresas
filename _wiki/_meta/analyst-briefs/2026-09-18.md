@@ -1,6 +1,6 @@
 # Daily Analyst Brief
 
-_Generated 2026-09-18 · 103 active signals · latest reconciliation: reconciliation-2026-09-17.md._
+_Generated 2026-09-18 · 108 active signals · latest reconciliation: reconciliation-2026-09-18.md._
 
 > ⚠️ **Portfolio priority is provisional.** _data/book.json is still a seed with unknown weights. Book badges identify seeded names but do not represent real exposure.
 
@@ -11,8 +11,8 @@ _Generated 2026-09-18 · 103 active signals · latest reconciliation: reconcilia
 | 1 | **AMZN** | seed | 6 | AMZN — Bernstein is +16% / +27% above consensus on FY27 / FY28 EBIT and still carries a PT below consensus; The relay that reached the wiki at 21:00 carried a mechanism that is not in the primary — and it pointed the opposite way |
 | 2 | **META** | seed | 7 | META — 2026-09-23: 2026-09-23/24 — META CONNECT IS NOW A FORMALLY DATED, NAMED-WATCH-LIST CATALYST WITH A…; META: Goldman publishes a BUY on top of a model 13% below consensus on 2027 EBIT and 18% below on EPS — while sitting 1.7% ABOVE on revenue |
 | 3 | **DDOG** | — | 2 | The relay that reached the wiki at 21:00 carried a mechanism that is not in the primary — and it pointed the opposite way; DDOG — above consensus on EPS in both years, 18% below on PT |
-| 4 | **GOOG** | seed | 9 | GOOG — 2026 revenue house view is 18% above consensus; GOOG — 2027 revenue house view is 18% above consensus |
-| 5 | **OPENAI** | — | 1 | The relay that reached the wiki at 21:00 carried a mechanism that is not in the primary — and it pointed the opposite way |
+| 4 | **OPENAI** | — | 2 | The relay that reached the wiki at 21:00 carried a mechanism that is not in the primary — and it pointed the opposite way; Cumulative burn: the company's own plan is 2.5x the number this page carried |
+| 5 | **GOOG** | seed | 9 | GOOG — 2026 revenue house view is 18% above consensus; GOOG — 2027 revenue house view is 18% above consensus |
 | 6 | **NVDA** | seed | 11 | NVDA — 2026-09-24: TRUMP-XI MEETING, 2026-09-24 — the dated headline-risk window, and UBS says the newsflow…; 2027 DRAM bit supply — a three-way split with TWO LEGS INSIDE MORGAN STANLEY |
 | 7 | **AVGO** | seed | 6 | AVGO — 2026-09-18: WED 2026-09-16 — AVGO CEO AND CFO ON THE JEFFERIES SEMIS BUS TOUR (alongside NVDA CFO,…; Cost to run 1GW: the relay carried HALF the primary's number |
 | 8 | **AAPL** | seed | 2 | AAPL — 2026 EPS house view is 16% above consensus; AAPL — 2026-10-01: THE EU APP STORE COMMISSION CHANGES TAKE EFFECT, AND THE RATES ARE NOW FINAL: 26% for App… |
@@ -88,9 +88,9 @@ _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 - **Attribution:** Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-09-18.
 - **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-213dc7bd6d95
 
-### 6. 🔴 META: Goldman publishes a BUY on top of a model 13% below consensus on 2027 EBIT and 18% below on EPS — while sitting 1.7% ABOVE on revenue
+### 6. 🟡 META: Goldman publishes a BUY on top of a model 13% below consensus on 2027 EBIT and 18% below on EPS — while sitting 1.7% ABOVE on revenue
 
-_MODEL CHECK · HIGH IMPACT · IMMEDIATE · MEDIUM CONFIDENCE_
+_MODEL CHECK · HIGH IMPACT · STANDING · MEDIUM CONFIDENCE_
 
 - **Tickers:** META · seeded book: META
 - **Why now:** All three houses are within ~1.7% of each other on 2027 revenue. They are 20 percentage points apart on what that revenue earns.
@@ -166,9 +166,9 @@ _MODEL CHECK · HIGH IMPACT · STANDING · MEDIUM CONFIDENCE_
 - **Attribution:** management/company primary + Bernstein · curated reconciliation 2026-09-15.
 - **Evidence:** [reconciliation-2026-09-15.md](reconciliation-2026-09-15.md) · signal reco-218f38206927
 
-### 12. 🟡 CIEN: the "$8.3–8.4B FY27 floor" is arithmetically EMPTY, and consensus had already cleared it before it was published
+### 12. ⚪ CIEN: the "$8.3–8.4B FY27 floor" is arithmetically EMPTY, and consensus had already cleared it before it was published
 
-_MODEL CHECK · MEDIUM IMPACT · IMMEDIATE · MEDIUM CONFIDENCE_
+_MODEL CHECK · MEDIUM IMPACT · STANDING · MEDIUM CONFIDENCE_
 
 - **Tickers:** CIEN
 - **Why now:** The headline read on the Investor Forum is that management hardened FY27 from a growth rate into a dollar range. It did not add information.

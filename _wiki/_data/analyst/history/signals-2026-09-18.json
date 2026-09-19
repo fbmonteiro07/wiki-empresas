@@ -1,15 +1,15 @@
 {
   "asof": "2026-09-18",
-  "latest_reconciliation": "reconciliation-2026-09-17.md",
+  "latest_reconciliation": "reconciliation-2026-09-18.md",
   "book": {
     "asof": "2026-07-01",
     "seed": true,
     "positions": 8
   },
   "stats": {
-    "signals": 103,
-    "active": 103,
-    "high": 9,
+    "signals": 108,
+    "active": 108,
+    "high": 8,
     "belief_changes": 2,
     "focus_names": 51
   },
@@ -34,7 +34,7 @@
       "focus_score": 95,
       "in_book": true,
       "signal_count": 7,
-      "high_count": 2,
+      "high_count": 1,
       "sector": "AI — Hyperscalers & Software",
       "thesis": "Fastest grower in Mag7 ex-GPU; bear = capital intensity and negative incremental ROIC.",
       "next_catalyst": "2026-09-23",
@@ -59,6 +59,20 @@
       ]
     },
     {
+      "ticker": "OPENAI",
+      "focus_score": 90,
+      "in_book": false,
+      "signal_count": 2,
+      "high_count": 1,
+      "sector": "AI labs (private)",
+      "thesis": "Private frontier lab (ChatGPT/GPT); scale + distribution vs cash burn + sub-50% share; Microsoft-anchored. No public financials.",
+      "next_catalyst": "",
+      "why": [
+        "The relay that reached the wiki at 21:00 carried a mechanism that is not in the primary — and it pointed the opposite way",
+        "Cumulative burn: the company's own plan is 2.5x the number this page carried"
+      ]
+    },
+    {
       "ticker": "GOOG",
       "focus_score": 89,
       "in_book": true,
@@ -71,19 +85,6 @@
         "GOOG — 2026 revenue house view is 18% above consensus",
         "GOOG — 2027 revenue house view is 18% above consensus",
         "GOOG — 2026-09-23: Koray Kavukcuoglu's first public outing — The Information's AI Agenda Live, San Francisco,…"
-      ]
-    },
-    {
-      "ticker": "OPENAI",
-      "focus_score": 88,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 1,
-      "sector": "AI labs (private)",
-      "thesis": "Private frontier lab (ChatGPT/GPT); scale + distribution vs cash burn + sub-50% share; Microsoft-anchored. No public financials.",
-      "next_catalyst": "",
-      "why": [
-        "The relay that reached the wiki at 21:00 carried a mechanism that is not in the primary — and it pointed the opposite way"
       ]
     },
     {
@@ -240,21 +241,6 @@
       ]
     },
     {
-      "ticker": "CIEN",
-      "focus_score": 57,
-      "in_book": false,
-      "signal_count": 4,
-      "high_count": 0,
-      "sector": "Optical / Networking",
-      "thesis": "Optical/DCI leader; demand outruns supply, debate purely valuation (~85x NTM).",
-      "next_catalyst": "2026-09-21",
-      "why": [
-        "CIEN: the \"$8.3–8.4B FY27 floor\" is arithmetically EMPTY, and consensus had already cleared it before it was published",
-        "CIEN 2029: the revenue target is already in the curve; the entire surprise is margin — but the comparison is a year offset and must be labelled as such",
-        "CIEN — 2026-09-21: CALENDAR CONTEXT — TWO CORPORATE-ACCESS WINDOWS IN SIX DAYS: the Calgary tour (09-16) is…"
-      ]
-    },
-    {
       "ticker": "NSCALE",
       "focus_score": 56,
       "in_book": false,
@@ -299,6 +285,21 @@
       ]
     },
     {
+      "ticker": "CIEN",
+      "focus_score": 51,
+      "in_book": false,
+      "signal_count": 4,
+      "high_count": 0,
+      "sector": "Optical / Networking",
+      "thesis": "Optical/DCI leader; demand outruns supply, debate purely valuation (~85x NTM).",
+      "next_catalyst": "2026-09-21",
+      "why": [
+        "CIEN: the \"$8.3–8.4B FY27 floor\" is arithmetically EMPTY, and consensus had already cleared it before it was published",
+        "CIEN — 2026-09-21: CALENDAR CONTEXT — TWO CORPORATE-ACCESS WINDOWS IN SIX DAYS: the Calgary tour (09-16) is…",
+        "CIEN 2029: the revenue target is already in the curve; the entire surprise is margin — but the comparison is a year offset and must be labelled as such"
+      ]
+    },
+    {
       "ticker": "ORCL",
       "focus_score": 51,
       "in_book": false,
@@ -311,6 +312,21 @@
         "ORCL — 2026-10-28: ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as \"Investor Day in…",
         "D-5 · ORCL — the PT is 18% above consensus, and the stated downside case IS consensus",
         "ORCL — management's RPO conversion pace contests the standing BofA bear, but the bases differ"
+      ]
+    },
+    {
+      "ticker": "ANTHROPIC",
+      "focus_score": 45,
+      "in_book": false,
+      "signal_count": 3,
+      "high_count": 0,
+      "sector": "AI labs (private)",
+      "thesis": "Private frontier lab (Claude); enterprise/coding leadership + Amazon/Google compute; $65B+ ARR (conflict-flagged vs >$70B, bases unknown pre-S1). IPO window lat",
+      "next_catalyst": "",
+      "why": [
+        "Revenue ladder: the company plan runs ~20% above the Barclays-relayed plan in 2026 and ends at $350bn in 2030",
+        "IPO: the autumn target is gone",
+        "GOOG/AVGO/ANTHROPIC — the FT (08-04) SIZES a figure the wiki had marked unsizeable, and it is the EARLIER source"
       ]
     },
     {
@@ -586,19 +602,6 @@
       "why": [
         "DELL — the Street's error was the MARGIN, not the revenue, and the guide sits +6.5% above the FY27 consensus median — but NOT above the street high (basis-corrected 09-02; the quarterly leg closed inside one session)",
         "Demand-side ceiling nobody on the wiki had priced: server units capped at ~+30% next year by NON-memory shortages"
-      ]
-    },
-    {
-      "ticker": "ANTHROPIC",
-      "focus_score": 35,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "AI labs (private)",
-      "thesis": "Private frontier lab (Claude); enterprise/coding leadership + Amazon/Google compute; $65B+ ARR (conflict-flagged vs >$70B, bases unknown pre-S1). IPO window lat",
-      "next_catalyst": "",
-      "why": [
-        "GOOG/AVGO/ANTHROPIC — the FT (08-04) SIZES a figure the wiki had marked unsizeable, and it is the EARLIER source"
       ]
     },
     {
@@ -1289,88 +1292,6 @@
       "hidden": false
     },
     {
-      "id": "reco-a0377513a64f",
-      "asof": "2026-09-18",
-      "source_date": "2026-09-17",
-      "type": "model_check",
-      "priority": "high",
-      "score": 69,
-      "title": "META: Goldman publishes a BUY on top of a model 13% below consensus on 2027 EBIT and 18% below on EPS — while sitting 1.7% ABOVE on revenue",
-      "tickers": [
-        "META"
-      ],
-      "in_book": [
-        "META"
-      ],
-      "impact": "high",
-      "urgency": "immediate",
-      "confidence": "medium",
-      "why_now": "All three houses are within ~1.7% of each other on 2027 revenue. They are 20 percentage points apart on what that revenue earns.",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the META model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
-      "readthrough": [
-        {
-          "ticker": "AVGO",
-          "relation": "supplier",
-          "detail": "custom ASIC",
-          "from": "META",
-          "in_book": true
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "supplier",
-          "detail": "GPUs",
-          "from": "META",
-          "in_book": true
-        },
-        {
-          "ticker": "AMD",
-          "relation": "supplier",
-          "detail": "MI GPUs",
-          "from": "META",
-          "in_book": false
-        },
-        {
-          "ticker": "GLW",
-          "relation": "supplier",
-          "detail": "optical fiber (LTA)",
-          "from": "META",
-          "in_book": false
-        },
-        {
-          "ticker": "SNDK",
-          "relation": "supplier",
-          "detail": "NAND/SSD",
-          "from": "META",
-          "in_book": false
-        },
-        {
-          "ticker": "STX",
-          "relation": "supplier",
-          "detail": "nearline HDD",
-          "from": "META",
-          "in_book": false
-        },
-        {
-          "ticker": "WDC",
-          "relation": "supplier",
-          "detail": "nearline HDD",
-          "from": "META",
-          "in_book": false
-        }
-      ],
-      "source": "JPM · curated reconciliation 2026-09-17",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-09-17.md"
-      ],
-      "evidence_anchor": "META: Goldman publishes a BUY on top of a model 13% below consensus on 2027 EBIT and 18% below on EPS — while sitting 1.7% ABOVE on revenue",
-      "origin": "curated_reconciliation",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
       "id": "cata-eb95103055e4",
       "asof": "2026-09-18",
       "source_date": "2026-09-24",
@@ -1485,6 +1406,89 @@
       "feedback": "",
       "feedback_note": "",
       "hidden": false
+    },
+    {
+      "id": "reco-a0377513a64f",
+      "asof": "2026-09-18",
+      "source_date": "2026-09-17",
+      "type": "model_check",
+      "priority": "medium",
+      "score": 63,
+      "title": "META: Goldman publishes a BUY on top of a model 13% below consensus on 2027 EBIT and 18% below on EPS — while sitting 1.7% ABOVE on revenue",
+      "tickers": [
+        "META"
+      ],
+      "in_book": [
+        "META"
+      ],
+      "impact": "high",
+      "urgency": "standing",
+      "confidence": "medium",
+      "why_now": "All three houses are within ~1.7% of each other on 2027 revenue. They are 20 percentage points apart on what that revenue earns.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the META model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "supplier",
+          "detail": "custom ASIC",
+          "from": "META",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "META",
+          "in_book": true
+        },
+        {
+          "ticker": "AMD",
+          "relation": "supplier",
+          "detail": "MI GPUs",
+          "from": "META",
+          "in_book": false
+        },
+        {
+          "ticker": "GLW",
+          "relation": "supplier",
+          "detail": "optical fiber (LTA)",
+          "from": "META",
+          "in_book": false
+        },
+        {
+          "ticker": "SNDK",
+          "relation": "supplier",
+          "detail": "NAND/SSD",
+          "from": "META",
+          "in_book": false
+        },
+        {
+          "ticker": "STX",
+          "relation": "supplier",
+          "detail": "nearline HDD",
+          "from": "META",
+          "in_book": false
+        },
+        {
+          "ticker": "WDC",
+          "relation": "supplier",
+          "detail": "nearline HDD",
+          "from": "META",
+          "in_book": false
+        }
+      ],
+      "source": "JPM · curated reconciliation 2026-09-17",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-17.md"
+      ],
+      "evidence_anchor": "META: Goldman publishes a BUY on top of a model 13% below consensus on 2027 EBIT and 18% below on EPS — while sitting 1.7% ABOVE on revenue",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-09-17"
     },
     {
       "id": "beli-f848247ea11a",
@@ -2132,58 +2136,6 @@
       "hidden": false
     },
     {
-      "id": "reco-a4f7799e3d50",
-      "asof": "2026-09-18",
-      "source_date": "2026-09-17",
-      "type": "model_check",
-      "priority": "medium",
-      "score": 51,
-      "title": "CIEN: the \"$8.3–8.4B FY27 floor\" is arithmetically EMPTY, and consensus had already cleared it before it was published",
-      "tickers": [
-        "CIEN"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "medium",
-      "why_now": "The headline read on the Investor Forum is that management hardened FY27 from a growth rate into a dollar range. It did not add information.",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the CIEN model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
-      "readthrough": [
-        {
-          "ticker": "AMZN",
-          "relation": "customer",
-          "detail": "DCI/optical",
-          "from": "CIEN",
-          "in_book": true
-        },
-        {
-          "ticker": "GOOG",
-          "relation": "customer",
-          "detail": "DCI/optical",
-          "from": "CIEN",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "customer",
-          "detail": "DCI/optical",
-          "from": "CIEN",
-          "in_book": true
-        }
-      ],
-      "source": "management/company primary · curated reconciliation 2026-09-17",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-09-17.md"
-      ],
-      "evidence_anchor": "CIEN: the \"$8.3–8.4B FY27 floor\" is arithmetically EMPTY, and consensus had already cleared it before it was published",
-      "origin": "curated_reconciliation",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
       "id": "cata-96fb11710716",
       "asof": "2026-09-18",
       "source_date": "2026-09-18",
@@ -2257,6 +2209,59 @@
       "feedback": "",
       "feedback_note": "",
       "hidden": false
+    },
+    {
+      "id": "reco-a4f7799e3d50",
+      "asof": "2026-09-18",
+      "source_date": "2026-09-17",
+      "type": "model_check",
+      "priority": "watch",
+      "score": 45,
+      "title": "CIEN: the \"$8.3–8.4B FY27 floor\" is arithmetically EMPTY, and consensus had already cleared it before it was published",
+      "tickers": [
+        "CIEN"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "standing",
+      "confidence": "medium",
+      "why_now": "The headline read on the Investor Forum is that management hardened FY27 from a growth rate into a dollar range. It did not add information.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the CIEN model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "DCI/optical",
+          "from": "CIEN",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "customer",
+          "detail": "DCI/optical",
+          "from": "CIEN",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "DCI/optical",
+          "from": "CIEN",
+          "in_book": true
+        }
+      ],
+      "source": "management/company primary · curated reconciliation 2026-09-17",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-17.md"
+      ],
+      "evidence_anchor": "CIEN: the \"$8.3–8.4B FY27 floor\" is arithmetically EMPTY, and consensus had already cleared it before it was published",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-09-17"
     },
     {
       "id": "reco-798a68d562a1",
@@ -2491,52 +2496,28 @@
       "hidden": false
     },
     {
-      "id": "reco-be4bf46a45f1",
+      "id": "reco-5abcf516f176",
       "asof": "2026-09-18",
-      "source_date": "2026-09-17",
+      "source_date": "2026-09-18",
       "type": "model_check",
       "priority": "watch",
       "score": 41,
-      "title": "CIEN 2029: the revenue target is already in the curve; the entire surprise is margin — but the comparison is a year offset and must be labelled as such",
-      "tickers": [
-        "CIEN"
-      ],
+      "title": "Compute + infrastructure spend: $856bn through 2030 vs the page's $650bn obligations / $450bn opex plan",
+      "tickers": [],
       "in_book": [],
       "impact": "watch",
       "urgency": "immediate",
       "confidence": "medium",
-      "why_now": "⚠️ The consensus column is FY28 and the company column is 2029 — one year apart. The gaps above are an upper bound on the disagreement, not a measurement of it; a year of consensus margin expansion closes part of it mechanically. Both sides are adjusted/non-GAAP. Do not compare either to a GAAP line.",
+      "why_now": "⚠️ BASIS GUARD: obligations (contract value over ~10 years), compute opex, \"capex forecast\" and the FT's \"spending on computing power and infrastructure\" are four different bases. Nothing was netted or averaged. The $856bn is carried as the company's own cumulative spend plan through 2030 and the older marks stay as dated context.",
       "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the CIEN model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
-      "readthrough": [
-        {
-          "ticker": "AMZN",
-          "relation": "customer",
-          "detail": "DCI/optical",
-          "from": "CIEN",
-          "in_book": true
-        },
-        {
-          "ticker": "GOOG",
-          "relation": "customer",
-          "detail": "DCI/optical",
-          "from": "CIEN",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "customer",
-          "detail": "DCI/optical",
-          "from": "CIEN",
-          "in_book": true
-        }
-      ],
-      "source": "management/company primary · curated reconciliation 2026-09-17",
+      "action": "Open the the affected theme model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "⚠️ BASIS GUARD: obligations (contract value over ~10 years), compute opex, \"capex forecast\" and the FT's \"spending on computing power and infrastructure\" are four different bases. Nothing was netted or averaged. The $856bn is carried as the company's own cumulative spend plan through 2030 and the older marks stay as dated context.",
+      "readthrough": [],
+      "source": "management/company primary + FT · curated reconciliation 2026-09-18",
       "evidence_paths": [
-        "_meta/reconciliation-2026-09-17.md"
+        "_meta/reconciliation-2026-09-18.md"
       ],
-      "evidence_anchor": "CIEN 2029: the revenue target is already in the curve; the entire surprise is margin — but the comparison is a year offset and must be labelled as such",
+      "evidence_anchor": "Compute + infrastructure spend: $856bn through 2030 vs the page's $650bn obligations / $450bn opex plan",
       "origin": "curated_reconciliation",
       "feedback": "",
       "feedback_note": "",
@@ -2660,6 +2641,72 @@
       ],
       "evidence_anchor": "🆕🔴 DATED, TWO-STEP: Q2 FY27 print THURSDAY 2026-08-27 (after market close) → INVESTOR DAY MONDAY 2026-10-06, NYC. Jefferies (Curtis, 2026-08-20) splits the catalyst explicitly: the print is where",
       "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-9ea6a03bcba3",
+      "asof": "2026-09-18",
+      "source_date": "2026-09-18",
+      "type": "model_check",
+      "priority": "watch",
+      "score": 41,
+      "title": "Revenue ladder: the company plan runs ~20% above the Barclays-relayed plan in 2026 and ends at $350bn in 2030",
+      "tickers": [
+        "ANTHROPIC"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "Internal consistency check: $36bn × ~1.58⁴ ≈ $225bn by 2030 at a 58% CAGR; reaching $350bn requires a ~77% CAGR from 2026. The Barclays-relayed 2029 of $184bn → $350bn in 2030 would be +90% y/y in the final year — so either the 2027–29 path in the company plan is materially above the Mar-2026 relay throughout, or the plan is back-end loaded. The FT prints only the endpoints; do not interpolate.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the ANTHROPIC model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "supplier",
+          "detail": "AWS Trainium compute",
+          "from": "ANTHROPIC",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "supplier",
+          "detail": "TPU compute",
+          "from": "ANTHROPIC",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "ANTHROPIC",
+          "in_book": true
+        },
+        {
+          "ticker": "OPENAI",
+          "relation": "competitor",
+          "detail": "frontier models",
+          "from": "ANTHROPIC",
+          "in_book": false
+        },
+        {
+          "ticker": "NSCALE",
+          "relation": "supplier",
+          "detail": "neocloud compute ($44.6bn, Monarch 460 MW)",
+          "from": "ANTHROPIC",
+          "in_book": false
+        }
+      ],
+      "source": "management/company primary + FT · curated reconciliation 2026-09-18",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-18.md"
+      ],
+      "evidence_anchor": "Revenue ladder: the company plan runs ~20% above the Barclays-relayed plan in 2026 and ends at $350bn in 2030",
+      "origin": "curated_reconciliation",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
@@ -3566,52 +3613,174 @@
       "carried_from": "2026-09-15"
     },
     {
-      "id": "reco-e69be9056a88",
+      "id": "reco-990109a3073d",
       "asof": "2026-09-18",
-      "source_date": "2026-09-17",
-      "type": "narrative_shift",
+      "source_date": "2026-09-18",
+      "type": "research_idea",
       "priority": "watch",
       "score": 36,
-      "title": "CIEN: management's own \"~5x cash generated from operations\" does not close against the published FY25 base",
+      "title": "Cumulative burn: the company's own plan is 2.5x the number this page carried",
       "tickers": [
-        "CIEN"
+        "OPENAI"
       ],
       "in_book": [],
       "impact": "watch",
       "urgency": "immediate",
       "confidence": "medium",
-      "why_now": "The deck claims operating cash flow quintuples 2026 → 2029. Against the 2029 target set (~20% FCF margin on ~$14bn, plus capex), OCF lands around $3.1–3.2bn — implying a base of roughly $0.6bn. FY25 actual OCF was $806m. ➤ Either the base year is not FY25, or the multiple is rounded generously. No base year is disclosed on the slide (the axis reads 2026 → 2029). Logged as UNVERIFIED, not adopted. Worth one question at ECOC on 09-21/22.",
+      "why_now": "🔴 The $111bn (Mar-2026 relay) is SUPERSEDED as \"the latest plan\" and moved to the OPENAI Changelog. Two caveats recorded so they are not re-derived: (a) the FT figure is free cash flow, 2026–30, while the Barclays relay was \"more cash burn through 2030\" from a Feb-2026 vantage — windows and definitions differ, so the 2.5x is indicative, not exact; (b) the May → current revision is an IMPROVEMENT of ~$27bn (−$305bn → −$278bn) — the direction of travel inside the company's own plan is less burn, even though the level is far above anything the page carried.",
       "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Re-grade the CIEN thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
-      "falsifier": "The next reported KPI or catalyst contradicting the proposed new frame.",
+      "action": "Turn the finding into a bull/base/bear question for OPENAI; identify the KPI and source that would make it investable.",
+      "falsifier": "No observable KPI or dated catalyst can be identified to test the hypothesis.",
+      "readthrough": [
+        {
+          "ticker": "MSFT",
+          "relation": "supplier",
+          "detail": "Azure compute",
+          "from": "OPENAI",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "OPENAI",
+          "in_book": true
+        },
+        {
+          "ticker": "ANTHROPIC",
+          "relation": "competitor",
+          "detail": "frontier models",
+          "from": "OPENAI",
+          "in_book": false
+        },
+        {
+          "ticker": "AMD",
+          "relation": "supplier",
+          "detail": "MI GPUs",
+          "from": "OPENAI",
+          "in_book": false
+        },
+        {
+          "ticker": "CRWV",
+          "relation": "supplier",
+          "detail": "neocloud compute",
+          "from": "OPENAI",
+          "in_book": false
+        },
+        {
+          "ticker": "NBIS",
+          "relation": "supplier",
+          "detail": "neocloud compute",
+          "from": "OPENAI",
+          "in_book": false
+        },
+        {
+          "ticker": "ORCL",
+          "relation": "supplier",
+          "detail": "OCI compute",
+          "from": "OPENAI",
+          "in_book": false
+        }
+      ],
+      "source": "management/company primary + JPM + FT · curated reconciliation 2026-09-18",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-18.md"
+      ],
+      "evidence_anchor": "Cumulative burn: the company's own plan is 2.5x the number this page carried",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-a553c00bd4fa",
+      "asof": "2026-09-18",
+      "source_date": "2026-09-18",
+      "type": "research_idea",
+      "priority": "watch",
+      "score": 36,
+      "title": "IPO: the autumn target is gone",
+      "tickers": [
+        "ANTHROPIC"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "🔴 The Q4-2026 watch item is superseded (moved to Changelog). Outcome logged in meta/outcomes.md as bear won on timing. ⚠️ No new date is given — do not write \"2027\" as the new target; the theme page's 06-25 \"leaning toward 2027\" is the nearest dated mark and stays as such. Anthropic \"is expected to go public this autumn in a listing that could be the largest ever\" — consistent with the ANTHROPIC page's late-Oct/early-Nov window (09-18), no change there.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Turn the finding into a bull/base/bear question for ANTHROPIC; identify the KPI and source that would make it investable.",
+      "falsifier": "No observable KPI or dated catalyst can be identified to test the hypothesis.",
       "readthrough": [
         {
           "ticker": "AMZN",
-          "relation": "customer",
-          "detail": "DCI/optical",
-          "from": "CIEN",
+          "relation": "supplier",
+          "detail": "AWS Trainium compute",
+          "from": "ANTHROPIC",
           "in_book": true
         },
         {
           "ticker": "GOOG",
-          "relation": "customer",
-          "detail": "DCI/optical",
-          "from": "CIEN",
+          "relation": "supplier",
+          "detail": "TPU compute",
+          "from": "ANTHROPIC",
           "in_book": true
         },
         {
-          "ticker": "MSFT",
-          "relation": "customer",
-          "detail": "DCI/optical",
-          "from": "CIEN",
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "ANTHROPIC",
           "in_book": true
+        },
+        {
+          "ticker": "OPENAI",
+          "relation": "competitor",
+          "detail": "frontier models",
+          "from": "ANTHROPIC",
+          "in_book": false
+        },
+        {
+          "ticker": "NSCALE",
+          "relation": "supplier",
+          "detail": "neocloud compute ($44.6bn, Monarch 460 MW)",
+          "from": "ANTHROPIC",
+          "in_book": false
         }
       ],
-      "source": "management/company primary · curated reconciliation 2026-09-17",
+      "source": "management/company primary + FT · curated reconciliation 2026-09-18",
       "evidence_paths": [
-        "_meta/reconciliation-2026-09-17.md"
+        "_meta/reconciliation-2026-09-18.md"
       ],
-      "evidence_anchor": "CIEN: management's own \"~5x cash generated from operations\" does not close against the published FY25 base",
+      "evidence_anchor": "IPO: the autumn target is gone",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-c4b319491017",
+      "asof": "2026-09-18",
+      "source_date": "2026-09-18",
+      "type": "research_idea",
+      "priority": "watch",
+      "score": 36,
+      "title": "Liquidity and valuation: the runway is now dated, and it changes the read on the $1.2tn round",
+      "tickers": [],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "Cash: raised $122bn in March 2026 (page anchor, unchanged) — FT: \"on track to exhaust that cash in 2028, the presentation suggests.\" New datapoint; nothing on the page dated the runway before.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Turn the finding into a bull/base/bear question for the affected theme; identify the KPI and source that would make it investable.",
+      "falsifier": "No observable KPI or dated catalyst can be identified to test the hypothesis.",
+      "readthrough": [],
+      "source": "management/company primary + Bernstein + FT · curated reconciliation 2026-09-18",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-18.md"
+      ],
+      "evidence_anchor": "Liquidity and valuation: the runway is now dated, and it changes the read on the $1.2tn round",
       "origin": "curated_reconciliation",
       "feedback": "",
       "feedback_note": "",
@@ -3969,6 +4138,112 @@
       "feedback_note": "",
       "hidden": false,
       "carried_from": "2026-09-01"
+    },
+    {
+      "id": "reco-be4bf46a45f1",
+      "asof": "2026-09-18",
+      "source_date": "2026-09-17",
+      "type": "model_check",
+      "priority": "watch",
+      "score": 35,
+      "title": "CIEN 2029: the revenue target is already in the curve; the entire surprise is margin — but the comparison is a year offset and must be labelled as such",
+      "tickers": [
+        "CIEN"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "standing",
+      "confidence": "medium",
+      "why_now": "⚠️ The consensus column is FY28 and the company column is 2029 — one year apart. The gaps above are an upper bound on the disagreement, not a measurement of it; a year of consensus margin expansion closes part of it mechanically. Both sides are adjusted/non-GAAP. Do not compare either to a GAAP line.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the CIEN model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "DCI/optical",
+          "from": "CIEN",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "customer",
+          "detail": "DCI/optical",
+          "from": "CIEN",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "DCI/optical",
+          "from": "CIEN",
+          "in_book": true
+        }
+      ],
+      "source": "management/company primary · curated reconciliation 2026-09-17",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-17.md"
+      ],
+      "evidence_anchor": "CIEN 2029: the revenue target is already in the curve; the entire surprise is margin — but the comparison is a year offset and must be labelled as such",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-09-17"
+    },
+    {
+      "id": "reco-e69be9056a88",
+      "asof": "2026-09-18",
+      "source_date": "2026-09-17",
+      "type": "narrative_shift",
+      "priority": "watch",
+      "score": 35,
+      "title": "CIEN: management's own \"~5x cash generated from operations\" does not close against the published FY25 base",
+      "tickers": [
+        "CIEN"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "standing",
+      "confidence": "medium",
+      "why_now": "The deck claims operating cash flow quintuples 2026 → 2029. Against the 2029 target set (~20% FCF margin on ~$14bn, plus capex), OCF lands around $3.1–3.2bn — implying a base of roughly $0.6bn. FY25 actual OCF was $806m. ➤ Either the base year is not FY25, or the multiple is rounded generously. No base year is disclosed on the slide (the axis reads 2026 → 2029). Logged as UNVERIFIED, not adopted. Worth one question at ECOC on 09-21/22.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Re-grade the CIEN thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The next reported KPI or catalyst contradicting the proposed new frame.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "DCI/optical",
+          "from": "CIEN",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "customer",
+          "detail": "DCI/optical",
+          "from": "CIEN",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "DCI/optical",
+          "from": "CIEN",
+          "in_book": true
+        }
+      ],
+      "source": "management/company primary · curated reconciliation 2026-09-17",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-17.md"
+      ],
+      "evidence_anchor": "CIEN: management's own \"~5x cash generated from operations\" does not close against the published FY25 base",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-09-17"
     },
     {
       "id": "reco-1374e75efad9",
