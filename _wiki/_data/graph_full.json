@@ -1,8 +1,8 @@
 {
- "generated": "2026-09-17",
+ "generated": "2026-09-18",
  "counts": {
-  "nodes": 181,
-  "edges": 2026
+  "nodes": 183,
+  "edges": 2040
  },
  "nodes": [
   {
@@ -62,7 +62,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-09-14"
+   "last_chg": "2026-09-18"
   },
   {
    "id": "AEIS",
@@ -208,7 +208,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-09-17"
+   "last_chg": "2026-09-18"
   },
   {
    "id": "AOSL",
@@ -280,7 +280,7 @@
     "transcript": 10,
     "wiki": 1
    },
-   "next_catalyst": "",
+   "next_catalyst": "2026-10-14",
    "last_chg": "2026-09-15"
   },
   {
@@ -861,7 +861,7 @@
    "in_book": true,
    "docs": {
     "briefing": 1,
-    "transcript": 10,
+    "transcript": 11,
     "wiki": 1
    },
    "next_catalyst": "2026-11-17",
@@ -880,7 +880,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-09-17"
+   "last_chg": "2026-09-18"
   },
   {
    "id": "NBIS",
@@ -940,6 +940,19 @@
    },
    "next_catalyst": "",
    "last_chg": "2026-09-14"
+  },
+  {
+   "id": "NSCALE",
+   "type": "ticker",
+   "label": "NSCALE",
+   "sector": "Systems & neoclouds",
+   "thesis": "UK GPU neocloud, S-1 filed 2026-09-18 (NYSE: NSCL): $103.4bn TCV / 5.7-yr WAL / 1.37 GW IT ⇒ ~$13bn rev per IT-GW/yr (Anthropic Monarch ~$16bn); Microsoft $43.8",
+   "in_book": false,
+   "docs": {
+    "wiki": 1
+   },
+   "next_catalyst": "2026-11-16",
+   "last_chg": "2026-09-18"
   },
   {
    "id": "NVDA",
@@ -1086,7 +1099,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-09-15"
+   "last_chg": "2026-09-18"
   },
   {
    "id": "POET",
@@ -1173,7 +1186,7 @@
     "wiki": 1
    },
    "next_catalyst": "2026-11-21",
-   "last_chg": "2026-09-15"
+   "last_chg": "2026-09-18"
   },
   {
    "id": "SANM",
@@ -1288,7 +1301,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-09-14"
+   "last_chg": "2026-09-18"
   },
   {
    "id": "SNPS",
@@ -1376,7 +1389,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-09-16"
+   "last_chg": "2026-09-18"
   },
   {
    "id": "TLN",
@@ -1461,7 +1474,7 @@
     "wiki": 1
    },
    "next_catalyst": "2026-09-24",
-   "last_chg": "2026-09-17"
+   "last_chg": "2026-09-18"
   },
   {
    "id": "TXN",
@@ -1879,6 +1892,14 @@
    "title": "Merchant GPU rental rate per GPU-hour (GB300-class)",
    "status": "live-debate",
    "canonical": "GB300-class MERCHANT RENTAL marks on this wiki: ~$7-8/GPU-hr spot (CoreWeave, Cantor expert call, 2026-06-18) and $7.00-$10.00/hr (Morgan Stanley - Nowak, Exhibit 3, 2026-08-12). The widely-recirculated $4/GPU-hr figure is @zephyr_z9's ASSUMPTION inside a back-of-envelope, not a market observation - NOT ADOPTED. Because merchant rental carries neocloud margin (CoreWeave targets ~25% EBITDA), a fro"
+  },
+  {
+   "id": "assum:ate-tam",
+   "type": "assumption",
+   "label": "ate-tam",
+   "title": "ATE (semiconductor tester) TAM CY26 / CY27 / CY28 and test intensity (ATE ÷ WFE)",
+   "status": "house-vs-street",
+   "canonical": "House (official models Template DCF ADVANTEST / TER, 2026-09-18): TAM on the Advantest basis CY24 $6.0bn / CY25 $9.0bn / CY26e $13.75bn (Advantest deck 2026-07-29 mid-point; range $13.0-14.5bn, raised ~19% from April) grown by WFE × intensity: CY26 8.7% (calibrated) → CY27 8.0% → CY28 8.3% → $16.4bn CY27 / $19.9bn CY28 (+19% / +21%). The CY27 dip is Teradyne management's lag caveat ('could revert "
   },
   {
    "id": "broker:BofA",
@@ -3191,6 +3212,30 @@
   },
   {
    "u": "NVDA",
+   "v": "NSCALE",
+   "type": "supplies",
+   "label": "GPUs (VR NVL72 / GB300) + >5% holder, lease guarantee"
+  },
+  {
+   "u": "DELL",
+   "v": "NSCALE",
+   "type": "supplies",
+   "label": "AI servers + DFS lease financing ($2.54bn initial-term rent)"
+  },
+  {
+   "u": "NSCALE",
+   "v": "MSFT",
+   "type": "supplies",
+   "label": "neocloud compute ($43.8bn SOWs to 2033)"
+  },
+  {
+   "u": "NSCALE",
+   "v": "ANTHROPIC",
+   "type": "supplies",
+   "label": "neocloud compute ($44.6bn, Monarch 460 MW)"
+  },
+  {
+   "u": "NVDA",
    "v": "AMD",
    "type": "competes",
    "label": "AI accelerators"
@@ -3410,6 +3455,18 @@
    "v": "OKTA",
    "type": "competes",
    "label": "IAM (Entra bundling)"
+  },
+  {
+   "u": "CRWV",
+   "v": "NSCALE",
+   "type": "competes",
+   "label": "GPU neocloud"
+  },
+  {
+   "u": "NBIS",
+   "v": "NSCALE",
+   "type": "competes",
+   "label": "GPU neocloud"
   },
   {
    "u": "theme:800v-dc-power",
@@ -5579,7 +5636,19 @@
   },
   {
    "u": "assum:rev-per-gw",
+   "v": "MSFT",
+   "type": "cites",
+   "label": ""
+  },
+  {
+   "u": "assum:rev-per-gw",
    "v": "NBIS",
+   "type": "cites",
+   "label": ""
+  },
+  {
+   "u": "assum:rev-per-gw",
+   "v": "NSCALE",
    "type": "cites",
    "label": ""
   },
@@ -5880,6 +5949,18 @@
   {
    "u": "assum:gpu-rental-hourly",
    "v": "theme:tokenmaxxing",
+   "type": "cites",
+   "label": ""
+  },
+  {
+   "u": "assum:ate-tam",
+   "v": "ADVANTEST",
+   "type": "cites",
+   "label": ""
+  },
+  {
+   "u": "assum:ate-tam",
+   "v": "TER",
    "type": "cites",
    "label": ""
   },
@@ -7197,7 +7278,7 @@
    "v": "ANTHROPIC",
    "type": "covers",
    "label": "",
-   "w": 25
+   "w": 28
   },
   {
    "u": "broker:Nomura",
@@ -7253,7 +7334,7 @@
    "v": "ANTHROPIC",
    "type": "covers",
    "label": "",
-   "w": 230
+   "w": 232
   },
   {
    "u": "broker:Stratechery",
@@ -7568,7 +7649,7 @@
    "v": "ASML",
    "type": "covers",
    "label": "",
-   "w": 35
+   "w": 37
   },
   {
    "u": "broker:Jefferies",
@@ -8926,7 +9007,7 @@
    "v": "CRWV",
    "type": "covers",
    "label": "",
-   "w": 56
+   "w": 57
   },
   {
    "u": "broker:Bernstein",
@@ -8940,7 +9021,7 @@
    "v": "CRWV",
    "type": "covers",
    "label": "",
-   "w": 5
+   "w": 6
   },
   {
    "u": "broker:Nomura",
@@ -9486,14 +9567,14 @@
    "v": "ESTC",
    "type": "covers",
    "label": "",
-   "w": 23
+   "w": 25
   },
   {
    "u": "broker:Bernstein",
    "v": "ESTC",
    "type": "covers",
    "label": "",
-   "w": 2
+   "w": 3
   },
   {
    "u": "broker:FinTwit",
@@ -11138,7 +11219,7 @@
    "v": "META",
    "type": "covers",
    "label": "",
-   "w": 342
+   "w": 348
   },
   {
    "u": "broker:UBS",
@@ -11159,7 +11240,7 @@
    "v": "META",
    "type": "covers",
    "label": "",
-   "w": 178
+   "w": 179
   },
   {
    "u": "broker:Jefferies",
@@ -11320,7 +11401,7 @@
    "v": "MRVL",
    "type": "covers",
    "label": "",
-   "w": 77
+   "w": 78
   },
   {
    "u": "broker:Citi",
@@ -11411,7 +11492,7 @@
    "v": "MRVL",
    "type": "covers",
    "label": "",
-   "w": 29
+   "w": 30
   },
   {
    "u": "independent:DAMNANG",
@@ -11439,7 +11520,7 @@
    "v": "MSFT",
    "type": "covers",
    "label": "",
-   "w": 213
+   "w": 214
   },
   {
    "u": "broker:MS",
@@ -11537,7 +11618,7 @@
    "v": "MSFT",
    "type": "covers",
    "label": "",
-   "w": 122
+   "w": 123
   },
   {
    "u": "broker:Stratechery",
@@ -11572,21 +11653,21 @@
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 209
+   "w": 210
   },
   {
    "u": "broker:UBS",
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 324
+   "w": 325
   },
   {
    "u": "broker:JPM",
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 226
+   "w": 227
   },
   {
    "u": "broker:MS",
@@ -11607,7 +11688,7 @@
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 28
+   "w": 29
   },
   {
    "u": "broker:GS",
@@ -11670,14 +11751,14 @@
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 23
+   "w": 24
   },
   {
    "u": "broker:Mizuho",
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 95
+   "w": 96
   },
   {
    "u": "broker:KeyBanc",
@@ -11712,7 +11793,7 @@
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 246
+   "w": 250
   },
   {
    "u": "independent:DAMNANG",
@@ -12006,7 +12087,7 @@
    "v": "NOW",
    "type": "covers",
    "label": "",
-   "w": 3
+   "w": 6
   },
   {
    "u": "broker:Barclays",
@@ -12028,6 +12109,34 @@
    "type": "covers",
    "label": "",
    "w": 3
+  },
+  {
+   "u": "broker:JPM",
+   "v": "NSCALE",
+   "type": "covers",
+   "label": "",
+   "w": 4
+  },
+  {
+   "u": "broker:GS",
+   "v": "NSCALE",
+   "type": "covers",
+   "label": "",
+   "w": 5
+  },
+  {
+   "u": "broker:Redburn",
+   "v": "NSCALE",
+   "type": "covers",
+   "label": "",
+   "w": 10
+  },
+  {
+   "u": "broker:SemiAnalysis",
+   "v": "NSCALE",
+   "type": "covers",
+   "label": "",
+   "w": 2
   },
   {
    "u": "broker:BofA",
@@ -12405,7 +12514,7 @@
    "v": "OKTA",
    "type": "covers",
    "label": "",
-   "w": 10
+   "w": 17
   },
   {
    "u": "broker:MS",
@@ -12447,7 +12556,7 @@
    "v": "OKTA",
    "type": "covers",
    "label": "",
-   "w": 28
+   "w": 29
   },
   {
    "u": "broker:BofA",
@@ -13252,7 +13361,7 @@
    "v": "SAMSUNG",
    "type": "covers",
    "label": "",
-   "w": 311
+   "w": 321
   },
   {
    "u": "broker:MS",
@@ -14022,7 +14131,7 @@
    "v": "SNOW",
    "type": "covers",
    "label": "",
-   "w": 49
+   "w": 51
   },
   {
    "u": "broker:DB",
@@ -14050,7 +14159,7 @@
    "v": "SNOW",
    "type": "covers",
    "label": "",
-   "w": 17
+   "w": 20
   },
   {
    "u": "broker:Wolfe",
@@ -14064,7 +14173,7 @@
    "v": "SNOW",
    "type": "covers",
    "label": "",
-   "w": 20
+   "w": 21
   },
   {
    "u": "broker:BofA",
@@ -14778,14 +14887,14 @@
    "v": "TSEM",
    "type": "covers",
    "label": "",
-   "w": 7
+   "w": 9
   },
   {
    "u": "broker:SIG",
    "v": "TSEM",
    "type": "covers",
    "label": "",
-   "w": 59
+   "w": 60
   },
   {
    "u": "broker:FinTwit",
@@ -14904,7 +15013,7 @@
    "v": "TSM",
    "type": "covers",
    "label": "",
-   "w": 190
+   "w": 196
   },
   {
    "u": "broker:MS",

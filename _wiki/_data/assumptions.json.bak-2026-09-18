@@ -1,0 +1,1319 @@
+{
+  "asof": "2026-09-14",
+  "note": "Canonical-assumptions ledger — one entry per cross-page industry number that multiple pages/themes cite. Purpose: every page should reference ONE canonical framing per metric; when a new source disagrees, add a variant here (never silently replace). build_assumptions.py renders _meta/assumptions.md + _dashboards/assumptions.html and scans pages for citations of each metric not yet reconciled into the ledger. Edit variants by hand; keep scope labels precise (units vs dollars, IT-load vs facility GW).",
+  "metrics": {
+    "asic-vs-gpu-share": {
+      "title": "Custom-ASIC vs merchant-GPU share of AI accelerators",
+      "definition": "ASIC/XPU vs merchant-GPU split of AI accelerator shipments — ALWAYS state basis (units vs dollars) and horizon.",
+      "canonical": "Near-term unit share inflects to ASICs (JPM: 42% 2026E -> 53% 2027E, units) while long-term dollar/unit share settles ~65-70% GPU (BofA AI 2030, UBS durable 70/30). These are horizons, not contradictions — the debate is whether the 2027 unit inflection sticks or plateaus.",
+      "scope_note": "Unit share ≠ dollar share (ASIC ASPs are far lower). NVDA-page '~70% defensible' framing = long-horizon accelerator share, consistent with BofA 65-70% by 2030, NOT a rebuttal of JPM's 2027 unit-share call.",
+      "patterns": [
+        "ASIC\\s+share",
+        "42%.{0,30}53%",
+        "70/30",
+        "ASIC.{0,40}(unit|share)",
+        "XPU.{0,30}share"
+      ],
+      "variants": [
+        {
+          "value": "42% ASIC / 58% GPU units 2026E -> 53% / 47% 2027E; ASIC units +109% y/y vs GPU +39% (2026)",
+          "source": "JPM Sur, AI Capex 2.0",
+          "date": "2026-06-16",
+          "scope": "unit share, near-term",
+          "cited_in": [
+            "themes/custom-asic-tpu.md",
+            "NVDA.md"
+          ]
+        },
+        {
+          "value": "~70/30 GPU/ASIC durable long-term",
+          "source": "UBS Arcuri",
+          "date": "2026-06-04",
+          "scope": "long-term split",
+          "cited_in": [
+            "themes/custom-asic-tpu.md"
+          ]
+        },
+        {
+          "value": "~65-70% GPU / 30-35% ASIC by 2030; NVDA ~68-77% of accelerators CY25->CY30, AVGO 8%->16%",
+          "source": "BofA Arya, AI 2030",
+          "date": "2026-05-13",
+          "scope": "share by 2030",
+          "cited_in": [
+            "themes/custom-asic-tpu.md",
+            "themes/ai-tam-bofa.md"
+          ]
+        }
+      ],
+      "status": "live-debate",
+      "debate": "Does the 2027 ASIC unit-share inflection (JPM) stick, or does GPU hold ~70% long-term (UBS/BofA)? Watch TPU v9 volumes, Trainium 3 ramp, MTIA."
+    },
+    "wfe-tam": {
+      "title": "WFE market size CY26 / CY27 / CY28",
+      "definition": "Total wafer-fab equipment market ($bn) by calendar year.",
+      "canonical": "CY26 ~$140-160B (all sources agree; Bernstein 148 incl WLP). CY27: house $180-215B vs MS ~$191B vs UBS $200B vs Bernstein base $175B (street low). CY28 is the genuine conflict: house top end $260B vs UBS $250B vs MS-implied ~$230-240B vs Bernstein base $198B; skeptic ceiling 'never $300B' (ex-Samsung foundry EVP) now directly challenged by Bernstein's GW-frame (50GW scenario: $245B/28, $291B/29, '$300B+ doable'). Swing variable = memory-capex intensity + EUV availability post-2027 + first NAND greenfield (CY28). Conversion card: ~$7.5-8B WFE per incremental GW/yr of DC additions capability (~46-50k WSPM/GW, compute-TDP basis). UPDATE 2026-07-15 (ASML 2Q26): Low-NA capacity plan 65/85/110 for CY26/27/28 — the ~110 CY28 is now the company plan under investigation, so house CY28  ~= the ASML path rather than an above-plan flex; the binding question moved to allocation (memory residual ~24-31 units in 2027 after TSMC 38-45 + Intel/Samsung ~16). 2026-08-12 - SECOND, SEPARATE CONVERSION CARD ON A DIFFERENT DENOMINATOR (do NOT mix with the $/GW card above): LRCX CFO Doug Bettinger raised the AI-capex conversion from ~$8B of WFE per $100B of AI capex (framework set Oct-2025) to 'closer to $9-10B per $100B', on inference mix pulling through memory and CPU content alongside GPU/XPU (JPM Mgmt Access Forum, 2026-08-12). The $7.5-8B-per-GW card and the $9-10B-per-$100B-capex card are DIFFERENT BASES - one denominated in datacenter GW, the other in dollars of AI capex - and must never be substituted for one another.",
+      "scope_note": "House CY28 top-of-range ($260B) sits ABOVE street — this is a deliberate house-vs-street edge, tracked, not an error.",
+      "patterns": [
+        "WFE.{0,40}\\$\\s?2\\d\\dB",
+        "\\$2\\d\\dB.{0,30}WFE",
+        "\\$200B.{0,20}\\$250B",
+        "never \\$300",
+        "WFE.{0,30}\\$1[4-9]\\dB",
+        "\\$1[4-9]\\dB.{0,30}WFE"
+      ],
+      "variants": [
+        {
+          "value": "$9-10B WFE per $100B of AI capex (raised from the ~$8B framework put out Oct-2025). Cause per LRCX: mix shift as inference becomes dominant, pulling through memory and CPU intensity alongside GPU/XPU -> rising semi content per dollar of AI infrastructure.",
+          "source": "Lam Research CFO Doug Bettinger, JPM 2026 Hardware & Semis Management Access Forum (JPM Semis / Harlan Sur)",
+          "date": "2026-08-12",
+          "scope": "company-guided (AI-capex denominator - NOT the $/GW card)",
+          "cited_in": [
+            "LRCX.md",
+            "themes/semicap-wfe.md"
+          ]
+        },
+        {
+          "value": "$148-158B CY26 / $180-215B CY27 / $202-260B CY28",
+          "source": "Capstone house model",
+          "date": "2026-06-15",
+          "scope": "house",
+          "cited_in": [
+            "themes/semicap-wfe.md"
+          ]
+        },
+        {
+          "value": "$147B CY26 / ~$191B CY27 / mid-teens growth CY28",
+          "source": "MS Moore-Shane",
+          "date": "2026-06-22",
+          "scope": "street",
+          "cited_in": [
+            "themes/semicap-wfe.md"
+          ]
+        },
+        {
+          "value": "~$150B CY26 / ~$170B CY27 base",
+          "source": "Tokyo Electron (SIG tour)",
+          "date": "2026-06-18",
+          "scope": "vendor view",
+          "cited_in": [
+            "themes/semicap-wfe.md"
+          ]
+        },
+        {
+          "value": "$200B CY27 / $250B CY28",
+          "source": "UBS Arcuri",
+          "date": "2026-05-15",
+          "scope": "street bull",
+          "cited_in": [
+            "themes/semicap-wfe.md"
+          ]
+        },
+        {
+          "value": "$272B by 2030 (18% CAGR)",
+          "source": "Redburn",
+          "date": "2026-06-17",
+          "scope": "2030 frame",
+          "cited_in": [
+            "themes/semicap-wfe.md"
+          ]
+        },
+        {
+          "value": "WFE<->EUV mapping: ~110 EUV slots ~= $225B WFE",
+          "source": "UBS Arcuri",
+          "date": "2026-06-15",
+          "scope": "unit reconciliation",
+          "cited_in": [
+            "themes/semicap-wfe.md",
+            "ASML.md"
+          ]
+        },
+        {
+          "value": "house CY28 $260B implies ASML ~110-120 EUV shipments 2028 (vs supply chain sized ~90; JPM: 110+ possible without new buildings)",
+          "source": "Capstone reconciliation (Memory_supply_demand.xlsx EUV tab, sec.9)",
+          "date": "2026-07-01",
+          "scope": "house-vs-street bridge",
+          "cited_in": [
+            "themes/semicap-wfe.md"
+          ]
+        },
+        {
+          "value": "'never $300B' ceiling",
+          "source": "former Samsung foundry EVP (expert call)",
+          "date": "2026-06-30",
+          "scope": "skeptic ceiling",
+          "cited_in": [
+            "themes/semicap-wfe.md"
+          ]
+        },
+        {
+          "value": "buy-side bottoms-up EUV units 65/100/112 (2026/27/28E) vs BBG ccs 65/89/101; ArFi 131/182/205 vs 123/145/156; DRAM the swing (incremental DRAM EUV tools 19/41/51)",
+          "source": "Bristlemoon Global Fund Quarterly",
+          "date": "2026-06-30",
+          "scope": "buy-side EUV/DUV units vs consensus",
+          "cited_in": [
+            "ASML.md"
+          ]
+        },
+        {
+          "value": "$148B CY26 / $175B CY27 / $198B CY28 base — street LOW, incl WLP ~$9-11B/yr (segments 28E: logic 93, DRAM 71, NAND 23, WLP 11)",
+          "source": "Bernstein Rasgon, 'How much WFE to reach AI nirvana'",
+          "date": "2026-07-20",
+          "scope": "street conservative base",
+          "cited_in": [
+            "themes/semicap-wfe.md"
+          ]
+        },
+        {
+          "value": "GW-frame: ~$7.5-8B WFE per incremental GW/yr (~46-50k WSPM/GW: DRAM 53%/NAND 20%/HBM 16%/logic 11%); 50GW scenario = $200/245/291B CY27-29 (cum $736B incl $120B/yr non-AI baseline), back-loaded (2027 capped at 200 in all scenarios); 100GW -> $542B CY29. '$300B+ doable'",
+          "source": "Bernstein Rasgon, 'How much WFE to reach AI nirvana'",
+          "date": "2026-07-20",
+          "scope": "GW-scenario frame (bull, compute-TDP GW basis)",
+          "cited_in": [
+            "themes/semicap-wfe.md"
+          ]
+        },
+        {
+          "value": "ASML 2Q26 capacity plan: Low-NA EUV 65 (2026) / ~85 (2027, +30%, close to fully order-covered) / ~110 (2028, further +30% under investigation, order-backed) + ~20 High-NA capacity 27-28; immersion +30%/+30% (units ~130/170/220). The ~110 for 2028 is now the COMPANY plan (was: supply chain sized ~90 + JPM capability view) — house CY28  no longer requires an above-plan ASML flex. 2027 squeeze intact: 85 came below buy-side 90-100; TSMC books 38-45, Intel+Samsung ~48 cum 26-28, memory residual ~24-31 units vs ~55-70 grossed-up need",
+          "source": "ASML 2Q26 transcript + London Roadshow + IR small-group (Memory_supply_demand.xlsx v4 EUV tab)",
+          "date": "2026-07-15",
+          "scope": "vendor capacity plan (Low-NA units)",
+          "cited_in": [
+            "ASML.md"
+          ]
+        }
+      ],
+      "status": "house-vs-street",
+      "debate": "CY28: house $260B top vs street $230-250B. Resolves on memory greenfield timing + EUV shipments. UNIT BRIDGE (2026-07-01): believing house $260B = believing ASML flexes to ~110-120 EUV ships in 2028 (above the ~90 supply-chain sizing; JPM says 110+ feasible). Base bottom-up demand supports ~88-95; the gap = faster DRAM node migration + 2029 pre-provisioning."
+    },
+    "euv-fab-intensity": {
+      "title": "EUV tools per fab & leading-edge capex intensity (per 10kwpm)",
+      "definition": "Conversion constants for capex<->wafers<->EUV-unit sizing: EUV tools required per kwpm of leading-edge/DRAM capacity, and $ capex per 10kwpm. ALWAYS state node + whether the EUV throughput is nameplate or real-world derated.",
+      "canonical": "N2 logic (Bristlemoon, Jun-2026): ~11 EUV tools per 25kwpm fab and ~US$4.7B TOTAL fab capex per 10kwpm, built on real EUV throughput ~1/3 of nameplate (NXE:3800E 220->165 wph @40mJ dose x 45% uptime -> 34% OEE -> 2,430 wpm/tool) and 25kwpm as the modern module size (no longer ~40kwpm); capex stack: tool $240M -> EUV 80% of litho -> litho 40% of WFE -> WFE 70% of fab total. Cross-check (former Samsung foundry EVP, Jun-2026): ~10-12 EUV machines per fab, each ~$400M incl. 5-10yr maintenance, ~100 wafers/hr; litho ~35-40% of advanced-node (<=4/3/2nm) equipment capex; ~$20B fab / ~$14B equipment. DRAM basis differs: ~57 EUV tools for HBM by 2028E on rising EUV layers/wafer (3->6, '25-'28).",
+      "scope_note": "Bristlemoon's $4.7B/10kwpm is TOTAL fab capex (litho+WFE+shell), NOT WFE-only or EUV-only. Real vs nameplate EUV throughput differ ~3x — never size tools off nameplate. Logic (22 EUV layers @ N2) vs DRAM (3-6 EUV layers/wafer) intensities are different bases.",
+      "patterns": [
+        "\\$?4\\.7\\s?(US\\$)?B.{0,20}10\\s?kwpm",
+        "per 10\\s?kwpm",
+        "\\d{1,2}\\s?EUV tools?.{0,20}(fab|kwpm)",
+        "1/3 of nameplate",
+        "capex per 10kwpm"
+      ],
+      "variants": [
+        {
+          "value": "N2 logic: ~11 EUV tools/25kwpm; ~US$4.7B fab capex/10kwpm (real EUV throughput ~1/3 nameplate; tool $240M; EUV 80% litho / litho 40% WFE / WFE 70% fab)",
+          "source": "Bristlemoon Global Fund Quarterly",
+          "date": "2026-06-30",
+          "scope": "N2 logic, total fab capex",
+          "cited_in": [
+            "ASML.md"
+          ]
+        },
+        {
+          "value": "~10-12 EUV machines/fab, each ~$400M incl. maintenance; litho ~35-40% of advanced-node equipment capex; ~$20B fab / ~$14B equipment",
+          "source": "former Samsung foundry EVP (expert call)",
+          "date": "2026-06-30",
+          "scope": "advanced-node, cross-check",
+          "cited_in": [
+            "ASML.md"
+          ]
+        }
+      ],
+      "status": "consistent",
+      "debate": "Two independent Jun-2026 sources converge on ~10-12 EUV tools/fab. Reusable levers: real-vs-nameplate throughput (~3x derate), OEE (34% logic / 45% memory), and the litho->WFE->fab capex stack. Use for capex<->wafer<->EUV-unit conversions; see memory euv-fab-capex-model + dram-euv-tool-demand-model."
+    },
+    "hyperscaler-capex": {
+      "title": "Hyperscaler / AI-datacenter capex CY25 / CY26 / CY27",
+      "definition": "Aggregate capex of the big US hyperscalers — ALWAYS state the basket (top-4 = MSFT/AMZN/GOOGL/META; five-name adds ORCL).",
+      "canonical": "Top-4: ~$410B 2025A -> ~$700-725B 2026E (+~75%) -> ~$1.1T 2027E (JPM AI Capex 2.0). Five-name consensus: ~$700B 2026 / ~$900B+ 2027. Buy-side 2027 bogey ~$1.2T ('could be 1.3-1.4', Jefferies). Constraint is power/physical buildout, not demand.",
+      "scope_note": "Top-4 vs five-name basket differences masquerade as revisions. GOOG-only: ~$350B 2027 / ~$375B 2028 (MS Nowak 2026-06-29).",
+      "patterns": [
+        "\\$?1\\.[0-4]\\s?T(rillion)?.{0,40}capex",
+        "capex.{0,40}\\$?1\\.[0-4]\\s?T(rillion)?",
+        "\\$7[02]\\dB",
+        "\\$410B",
+        "\\$900B\\+?"
+      ],
+      "variants": [
+        {
+          "value": "top-4: ~$410B 2025A / ~$700-725B 2026E / ~$1.1T 2027E",
+          "source": "JPM Sur, AI Capex 2.0",
+          "date": "2026-06-16",
+          "scope": "top-4",
+          "cited_in": [
+            "themes/hyperscaler-capex.md",
+            "themes/ai-datacenter-power.md"
+          ]
+        },
+        {
+          "value": "~$1.2T 2027 buy-side bogey ('could be 1.3-1.4')",
+          "source": "Jefferies power/hyperscalers",
+          "date": "2026-05-08",
+          "scope": "buy-side bogey",
+          "cited_in": [
+            "themes/ai-datacenter-power.md"
+          ]
+        },
+        {
+          "value": "five-name consensus ~$700B 2026 / ~$900B+ 2027",
+          "source": "BBG / house",
+          "date": "2026-06-11",
+          "scope": "five-name",
+          "cited_in": [
+            "themes/hyperscaler-capex.md"
+          ]
+        },
+        {
+          "value": "GOOG ~$350B 2027 / ~$375B 2028 (~9 GW incremental 2028)",
+          "source": "MS Nowak",
+          "date": "2026-06-29",
+          "scope": "GOOG only",
+          "cited_in": [
+            "themes/hyperscaler-capex.md"
+          ]
+        }
+      ],
+      "status": "consistent",
+      "debate": "Level agreed near-term; the debate is 2027+ durability (see macro-cycle: bubble vs supercycle)."
+    },
+    "ai-dc-power-gw": {
+      "title": "AI datacenter power (GW) — facility GW vs IT-load GW vs 800V-debate GW",
+      "definition": "THREE DISTINCT BASES — never mix: (1) facility GW deployed/added (grid + on-site); (2) IT-load GW (compute load in racks); (3) 800V-transition GW (subset of IT load moving to 800VDC).",
+      "canonical": "Facility: ~14-16 GW built 2026 / ~20 GW 2027 vs ~40-45 GW proposed (Jefferies satellite tracking, 50% haircut); ~138 GW capacity through 2030 (JPM). IT-load: ~300 GW by 2030 (+25% CAGR, JPM/Omdia) or ~240-280 GW global (JPM First Principles). 800V debate: Citi models 9 GW -> 21 GW 2025-30 — a SUBSET, not total deployment.",
+      "scope_note": "STANDING RULE: the 800V notes' GW figures (IT load ~300 GW, Citi 9->21 GW) must NOT be folded into total-GW-deployed answers. Citi's 9->21 GW is the AI-specific 800V-relevant increment.",
+      "patterns": [
+        "~?300\\s?GW",
+        "2[4-8]0\\s?GW",
+        "138\\s?GW",
+        "9\\s?GW.{0,15}21\\s?GW",
+        "9(\\.\\d)?\\s?(->|→|to)\\s?21\\s?GW",
+        "IT.?load.{0,30}GW"
+      ],
+      "variants": [
+        {
+          "value": "~14-16 GW built 2026 / ~20 GW 2027 vs ~40-45 GW proposed (50% haircut)",
+          "source": "Jefferies / SinMax / Industrial Info satellite tracking",
+          "date": "2026-06-22",
+          "scope": "facility GW added",
+          "cited_in": [
+            "themes/ai-datacenter-power.md"
+          ]
+        },
+        {
+          "value": "~138 GW DC capacity through 2030 (base case)",
+          "source": "JPM AI Capex 2.0",
+          "date": "2026-06-16",
+          "scope": "facility GW cumulative",
+          "cited_in": [
+            "themes/ai-datacenter-power.md"
+          ]
+        },
+        {
+          "value": "~9.4 GW US leased 1Q26 (5x y/y) / ~11 GW near-term pipeline",
+          "source": "TD Cowen",
+          "date": "2026-05-19",
+          "scope": "facility GW leased",
+          "cited_in": [
+            "themes/ai-datacenter-power.md"
+          ]
+        },
+        {
+          "value": "~21 GW built in prior 25 years vs ~40 GW of NVDA chips into US 2025-2030",
+          "source": "Cantor (CoreWeave)",
+          "date": "2026-06-18",
+          "scope": "historical context",
+          "cited_in": [
+            "themes/ai-datacenter-power.md"
+          ]
+        },
+        {
+          "value": "~300 GW IT load by 2030 (+25% CAGR, >35 GW/yr new)",
+          "source": "JPM 800V / Omdia",
+          "date": "2026-06-09",
+          "scope": "IT-LOAD — 800V debate, keep separate",
+          "cited_in": [
+            "themes/ai-datacenter-power.md",
+            "themes/800v-dc-power.md"
+          ]
+        },
+        {
+          "value": "~240-280 GW global by 2030 (US >160 GW, ~2x 2025's ~115 GW)",
+          "source": "JPM First Principles: AI Power Infrastructure",
+          "date": "2026-06-25",
+          "scope": "IT-LOAD — 800V debate, keep separate",
+          "cited_in": [
+            "themes/ai-datacenter-power.md"
+          ]
+        },
+        {
+          "value": "9 GW -> 21 GW 2025-30 (Citi model)",
+          "source": "Citi 800V power",
+          "date": "2026-06-15",
+          "scope": "800V-DEBATE GW — subset of IT load, keep separate",
+          "cited_in": [
+            "themes/ai-datacenter-power.md",
+            "themes/800v-dc-power.md"
+          ]
+        }
+      ],
+      "status": "scope-trap",
+      "debate": "No numeric conflict — the risk is basis conflation. Any new GW datapoint must be labeled facility / IT-load / 800V-subset before it enters a page."
+    },
+    "rev-per-gw": {
+      "title": "AI compute revenue / rental rate per GW",
+      "definition": "Annualized $ revenue (or rental rate) per GW of AI compute capacity — state chip type (ASIC vs merchant GPU) and whether it is a rental rate or realized revenue. Distinct from facility BUILD cost per GW.",
+      "canonical": "Rental/revenue per GW of compute: Trainium <$10B/GW (Anthropic/OpenAI); merchant GPU ~$12-13B/GW (neocloud & AWS, pre-2H26 shortage); premium GPU ~$25B/GW (~$25M/MW/yr, SpaceX–Google deal). MS pegs 1P merchant TPU at ~$20B rev/GW (20% GM base). Colocation POWER-ONLY rent: ~$60/kW-month historically -> ~$120-160 typical now, up to ~$200 (weak-credit tenant + good DC), as low as ~$80-100 (India / mid DC / poor grid). Rev/GW is a data-center-QUALITY metric: credit, utilization, networking and speed-to-market drive a ~2x spread — a top-operator GW ≈ 2x a generic GW. NEW (08-28): lab INFERENCE MONETISATION ~$60-100bn/GW/yr (Baker/a16z) — a distinct, much larger basis than the rental rates; implies ~1yr REVENUE payback on a ~$50bn/GW build. Neocloud payback marked at ~9-10 months (50-60% collected upfront).",
+      "scope_note": "THREE distinct bases — never mix: (a) compute rev/rental $/GW (ASIC vs GPU, the monetization/quality metric); (b) colocation $/kW-month = power+shell only, NOT compute; (c) facility BUILD cost ~$30-40B/GW (ASIC) vs ~$50B/GW (NVDA-GPU infra) — see custom-asic-tpu. A $/kW-month figure ×12×1e6 ≈ $/GW-year only for the power-shell layer, not the compute. ⚠️ FOURTH BASIS ADDED 2026-08-28 — LAB MONETISATION per GW (~$60-100bn/GW/yr) is what the LAB EARNS on a GW, and is 3-10x the RENTAL rates above (~$10-25bn/GW/yr) and ~1-2x the ~$50bn/GW BUILD cost. Never compare it to a rental rate: renting a GW at ~$12-13bn and monetising at ~$60-100bn implies a 5-8x gross spread, which is either (a) list/aspirational rather than realised, (b) not utilisation-matched, or (c) evidence the rental marks are stale (they are flagged pre-2H26-shortage). UNRECONCILED — treat the spread as an open question, not a margin. 🔴 FIFTH AND SIXTH BASES ADDED 2026-09-02 (Broadcom Q3 FY26 call, which produced THREE different per-GW numbers in one hour): (e) VENDOR SILICON CONTENT per GW = $20-30bn (AVGO's XPU + networking silicon into a rack someone else integrates) — this is NOT the same quantity as NVDA's $25-40bn+/GW, which is FULL-RACK REFERENCE-DESIGN revenue and only applies if the customer buys the whole design; and (f) VENDOR REVENUE per DEMAND-GW = $11-12bn (AVGO's guide divided by AVGO's own GW ladder). (e) and (f) differ by ~2x and BOTH come from the same company on the same call — the reconciliation is that demand GW ≠ shipped GW, so ~$345bn of FY27-28 revenue at $20-30bn/GW implies only ~12-17GW ships against ~30GW of demand. ⚠️ SIX bases now circulate: rental $/GW · colo $/kW-month · build cost $/GW · lab monetisation $/GW · vendor silicon content $/GW · vendor revenue per demand-GW. Never net or chain them.",
+      "patterns": [
+        "/GW",
+        "per GW",
+        "kW-month",
+        "kW/month",
+        "B/GW",
+        "M/MW"
+      ],
+      "variants": [
+        {
+          "value": "Trainium <$10B/GW rental to Anthropic/OpenAI (floor mechanism; cancellable if it underperforms)",
+          "source": "SemiAnalysis / Dylan Patel (Sequoia 'Training Data')",
+          "date": "2026-06-30",
+          "scope": "ASIC rental rate",
+          "cited_in": [
+            "themes/custom-asic-tpu.md"
+          ]
+        },
+        {
+          "value": "merchant GPU ~$12-13B/GW rental (neocloud & AWS, pre-2H26 shortage)",
+          "source": "SemiAnalysis / Dylan Patel (Sequoia 'Training Data')",
+          "date": "2026-06-30",
+          "scope": "GPU rental rate",
+          "cited_in": [
+            "themes/custom-asic-tpu.md"
+          ]
+        },
+        {
+          "value": "premium GPU ~$25B/GW (~$25M/MW/yr) — SpaceX–Google deal",
+          "source": "SemiAnalysis / Dylan Patel (Sequoia 'Training Data')",
+          "date": "2026-06-30",
+          "scope": "premium GPU rental",
+          "cited_in": [
+            "themes/custom-asic-tpu.md",
+            "SPCX.md"
+          ]
+        },
+        {
+          "value": "colo power-only ~$60/kW-mo historical -> ~$120-160 typical, up to ~$200 (weak credit + good DC), ~$80-100 (India / mid DC)",
+          "source": "SemiAnalysis / Dylan Patel (Sequoia 'Training Data')",
+          "date": "2026-06-30",
+          "scope": "colocation $/kW-month (power+shell only)",
+          "cited_in": []
+        },
+        {
+          "value": "data-center quality: a top-operator GW ~2x a generic GW; Google runs ~1.5 GW hardware in a 1 GW DC (power-sloshing + utility oversell)",
+          "source": "SemiAnalysis / Dylan Patel (Sequoia 'Training Data')",
+          "date": "2026-06-30",
+          "scope": "quality / utilization spread",
+          "cited_in": []
+        },
+        {
+          "value": "1P merchant TPU ~$20B rev/GW at 20% GM base case",
+          "source": "MS Nowak (ALPHABET)",
+          "date": "2026-06-29",
+          "scope": "merchant TPU realized rev/GW",
+          "cited_in": [
+            "themes/custom-asic-tpu.md",
+            "GOOG.md"
+          ]
+        },
+        {
+          "value": "LAB INFERENCE MONETISATION ~$60bn/GW/yr (illustrative) and \"people seem to think OpenAI and Anthropic are both monetizing at ~$100bn a gigawatt today\" -> ~1yr payback on a ~$50bn/GW build, on a REVENUE (not gross-profit) basis",
+          "source": "Gavin Baker (Atreides) on a16z podcast",
+          "date": "2026-08-28",
+          "scope": "LAB REVENUE MONETISED per GW — NOT a rental rate, NOT a build cost",
+          "cited_in": [
+            "ANTHROPIC.md",
+            "OPENAI.md",
+            "themes/macro-cycle.md"
+          ]
+        },
+        {
+          "value": "neocloud payback ~9-10 months: a ~$50bn GW with 50-60% collected upfront from customers leaves ~$25-30bn net; spot monetisation faster; \"true equity payback might be way inside of a year\"; SpaceX faster still on build speed + higher monetisation",
+          "source": "Gavin Baker (Atreides) on a16z podcast, citing NBIS/CRWV disclosures",
+          "date": "2026-08-28",
+          "scope": "neocloud payback period (derived, not a $/GW rate)",
+          "cited_in": [
+            "CRWV.md",
+            "NBIS.md"
+          ]
+        },
+        {
+          "value": "AVGO CHIP CONTENT ~$20-30bn per GW (\"what we are seeing per gigawatt is in the range of less than $30 billion — 20 to 30 billion per gigawatt\"), expected to be SUSTAINED: as each generation gets more performant its power per chip rises, so fewer chips fit in a gigawatt — ASP per XPU goes up while \"the content in dollars is relatively stable\"",
+          "source": "Broadcom mgmt (Hock Tan), Q3 FY26 earnings call (to Vijay Rakesh, Mizuho)",
+          "date": "2026-09-02",
+          "scope": "VENDOR SILICON CONTENT per GW (XPU + AI networking silicon only) — NOT a rental rate, NOT full-rack revenue, NOT a build cost",
+          "cited_in": [
+            "AVGO.md"
+          ]
+        },
+        {
+          "value": "~$11-12bn of AVGO revenue per GW IMPLIED by dividing the company's own guide by its own GW ladder (~10GW FY27 / ~20GW FY28 against $115bn / $230bn). Management did NOT bridge this against the $20-30bn content figure it stated in the same hour; it answered instead that not all 30GW of demand comes into production inside the two fiscal years. Our bridge: ~$345bn / $20-30bn per GW implies only ~12-17GW actually SHIPS vs ~30GW of demand",
+          "source": "Bernstein (Stacy Rasgon) question on the Broadcom Q3 FY26 call; bridge is Capstone's, not management's",
+          "date": "2026-09-02",
+          "scope": "VENDOR REALIZED REVENUE per DEMAND-GW (a ratio of two guided quantities, not a price) — the denominator is DEMAND GW, not SHIPPED GW, which is the whole reason it differs from the content figure",
+          "cited_in": [
+            "AVGO.md"
+          ]
+        },
+        {
+          "value": "LAB revenue ~$30bn per GW per year (\"every gigawatt of compute they deploy, they could achieve $30 billion of annual revenue per gigawatt — that's a hell of a business model\"), used by Broadcom to justify its own credit exposure to the two labs it finances",
+          "source": "Broadcom mgmt (Hock Tan), Q3 FY26 earnings call (to Vivek Arya, BofA)",
+          "date": "2026-09-02",
+          "scope": "LAB REVENUE MONETISED per GW — SAME BASIS as the 2026-08-28 Baker $60-100bn/GW entry, but 2-3x LOWER. A supplier's assumption about its customers, not a lab disclosure",
+          "cited_in": [
+            "AVGO.md",
+            "ANTHROPIC.md",
+            "OPENAI.md"
+          ]
+        }
+      ],
+      "status": "live",
+      "debate": "Rev/GW is emerging as a data-center-quality metric: ASIC (<$10B) < merchant GPU ($12-13B) < premium operator ($25B). The spread reflects credit quality, utilization, networking and speed-to-market — not just chip type. Watch whether the 2H26 GPU shortage pushes realized GPU rev/GW above the $12-13B pre-shortage mark. OPEN (08-28): the ~5-8x gap between what a lab is said to monetise per GW ($60-100bn) and what a GW rents for ($12-13bn merchant GPU) is unreconciled and is the single highest-value thing to verify in this metric — it is either the strongest ROI evidence in the corpus or a basis error. 🔴 MATERIAL UPDATE 2026-09-02 — THE HIGHEST-VALUE OPEN QUESTION IN THIS METRIC JUST GOT AN INDEPENDENT MARK, AND IT IS 2-3x LOWER. Hock Tan put LAB revenue at ~$30bn/GW/yr — the SAME quantity Gavin Baker put at $60-100bn/GW on 08-28. Broadcom is a direct supplier with contractual visibility into these labs' deployment schedules and is using the figure to underwrite its OWN credit exposure, which argues for taking it seriously and probably argues it is conservative-to-realistic rather than aspirational. That narrows the unreconciled spread against the $12-13bn merchant-GPU rental mark from ~5-8x to ~2.3-2.5x — a plausible gross spread rather than a suspected basis error. ➤ REVISED READ: the Baker $60-100bn figure now looks like the outlier and should be treated as list/aspirational or not utilisation-matched, not as the canonical lab-monetisation rate. Keep both; lead with the $30bn mark."
+    },
+    "hbm-cycle": {
+      "title": "HBM — capacity, pricing, allocation, sold-out claims",
+      "definition": "HBM wafer capacity, $/GB or $/Gb pricing (state which), allocation priority, sold-out horizon.",
+      "canonical": "Sold out CY26 incl. HBM4 (Micron Q1 FY26). Capacity ~473k wspm end-26E -> ~668k end-27E (SemiAnalysis). Pricing: NVDA HBM ~$17-18/GB 2026 -> $30-32/GB 2027, +70-80% (Redburn); blended ASP +~30% (JPM/Micron). Live tension: general-server DRAM overtook HBM as allocation priority #1 (Redburn/TrendForce) yet HBM pricing still marches higher. 2027 supply revised 60B -> 50B Gb-equiv on allocation, not demand (Redburn). Trade ratio: HBM3E consumes ~3:1 DRAM wafer capacity per bit -> ~4:1 at HBM4/4E (Micron Sadana 2026-08-10; BMO/Mizuho ~4:1) — DRAM->HBM conversion REDUCES net industry bit supply.",
+      "scope_note": "$/GB (stack) vs $/Gb (die) are ~8-16x apart — always state units. TAM frames: $35B'25 -> $100B'28 (Micron/JPM) vs $168B CY30 (BofA) are different horizons, both valid.",
+      "patterns": [
+        "HBM.{0,50}sold.?out",
+        "\\$\\d{1,2}(\\.\\d)?/G[Bb]",
+        "HBM.{0,60}(wspm|allocation|ASP|pricing)",
+        "HBM4.{0,40}(LTA|pric)"
+      ],
+      "variants": [
+        {
+          "value": "sold out CY26 on price and volume, incl. HBM4",
+          "source": "Micron Mehrotra, Q1 FY26",
+          "date": "2025-12-17",
+          "scope": "sold-out",
+          "cited_in": [
+            "themes/hbm-memory.md"
+          ]
+        },
+        {
+          "value": "trade ratio 3:1 at HBM3E -> ~4:1 at HBM4E ('100 bits of HBM = reduce 300 bits of DDR supply'); HBM absorbs ~24%/30% of industry DRAM wafer capacity end-26/27 (UBS Gaudois)",
+          "source": "Micron Sadana (EVP/CBO), KeyBanc Technology Leadership Forum; corrob. BMO ~4:1 (2026-08-20), Mizuho 4:1 (2026-05-27)",
+          "date": "2026-08-10",
+          "scope": "trade-ratio",
+          "cited_in": [
+            "themes/hbm-memory.md",
+            "themes/internal-weekly-meeting.md",
+            "MU.md"
+          ]
+        },
+        {
+          "value": "~123k -> ~331k -> ~473k -> ~668k wspm (end-23/25/26E/27E); HBM ~35% of DRAM wafer cap end-27E",
+          "source": "SemiAnalysis Memory Mania",
+          "date": "2026-02-06",
+          "scope": "capacity",
+          "cited_in": [
+            "themes/hbm-memory.md"
+          ]
+        },
+        {
+          "value": "NVDA HBM ~$17-18/GB 2026 -> $30-32/GB 2027 (+70-80%)",
+          "source": "Redburn Conor",
+          "date": "2026-06-23",
+          "scope": "$/GB stack pricing",
+          "cited_in": [
+            "themes/hbm-memory.md",
+            "NVDA.md"
+          ]
+        },
+        {
+          "value": "blended HBM ASP +~30% next year (~10% like-for-like + mix)",
+          "source": "JPM / Micron Jay",
+          "date": "2026-05-28",
+          "scope": "blended ASP",
+          "cited_in": [
+            "themes/hbm-memory.md"
+          ]
+        },
+        {
+          "value": "general-server DRAM now allocation #1, HBM #2 (4-yr reversal); 2027 HBM supply 60B -> 50B Gb-equiv",
+          "source": "Redburn / TrendForce",
+          "date": "2026-06-23",
+          "scope": "allocation",
+          "cited_in": [
+            "themes/hbm-memory.md"
+          ]
+        },
+        {
+          "value": "HBM TAM $35B 2025 -> $100B 2028 (~40% CAGR)",
+          "source": "Micron / JPM",
+          "date": "2026-05-28",
+          "scope": "TAM to 2028",
+          "cited_in": [
+            "themes/hbm-memory.md"
+          ]
+        },
+        {
+          "value": "HBM TAM $35B CY25 -> $168B CY30 (+37% CAGR)",
+          "source": "BofA Arya, AI 2030",
+          "date": "2026-05-13",
+          "scope": "TAM to 2030",
+          "cited_in": [
+            "themes/hbm-memory.md",
+            "themes/ai-tam-bofa.md"
+          ]
+        },
+        {
+          "value": "HBM demand 33.1B Gb 2026 (+90% y/y) / 58.7B Gb 2027 (+77%), REVISED UP from 32.9/58.0 on Google TPU units raised to 4.2M/9.1M 2026/27 — vs Redburn 2027 HBM supply 50B Gb-eq (unrevised) = ~-15% HBM rationing 2027; Memory_supply_demand.xlsx v4 base has allocation chasing to ~600K wspm exit-27 (52.9B Gb, still ~-10%)",
+          "source": "UBS Gaudois Memory Semis Monthly (via hbm-memory theme; model: Memory_supply_demand.xlsx v4)",
+          "date": "2026-07-03",
+          "scope": "HBM bit demand vs supply, Gb-equivalent",
+          "cited_in": [
+            "themes/hbm-memory.md",
+            "MU.md",
+            "SKHYNIX.md"
+          ]
+        }
+      ],
+      "status": "live-debate",
+      "debate": "Allocation deprioritization (Redburn) vs pricing-marches-higher (JPM/TrendForce). Watch HBM4 LTA finalization (~90-100% up vs last year's LTA)."
+    },
+    "nvda-units-gw": {
+      "title": "NVDA GPU units / GW shipped per year",
+      "definition": "NVDA accelerator unit shipments and implied GW/yr — distinguish GPU units, Vera standalone CPU, Vera-Rubin racks.",
+      "canonical": "GPU units: 6.2M 2025 -> 8.9M 2026E (+39%) -> 9.9M 2027E (JPM); Fubon '10M+ in 2027' consistent with JPM's 9.9M 2027E. Racks: 54.5k-62k NVL72 2027F (Nomura). Capstone GW frame: ~16 GW/yr sold 2026 -> ~25 GW 2027 (house, NVDA page 2026-06-17) — the bottoms-up cross-check vs JPM units. [Year labels corrected 2026-07-06 — a prior version showed 6.2M as 2026, shifted one year vs the JPM source quoted in NVDA.md.]",
+      "scope_note": "Vera standalone CPU (500k 2026 -> 3M 2027 JPM; 5.75M units 2027 to ASE FoCoS per MS) is NOT the same series as Vera-Rubin racks (~2.0-2.2M units 2026, cut from 2.8-2.9M on HBM4 issues).",
+      "patterns": [
+        "[6-9]\\.\\dM\\s?(GPU|unit)",
+        "10M\\+?\\s?GPU",
+        "16\\s?GW.{0,20}25\\s?GW",
+        "NVL72\\s?racks?"
+      ],
+      "variants": [
+        {
+          "value": "GPU units 6.2M 2025 -> 8.9M 2026E (+39%) -> 9.9M 2027E; total accelerators 10.1M -> 16.3M -> 23.3M",
+          "source": "JPM AI Capex 2.0 (per NVDA.md sec. 'Per-GW economics')",
+          "date": "2026-06-16",
+          "scope": "GPU units",
+          "cited_in": [
+            "themes/custom-asic-tpu.md"
+          ]
+        },
+        {
+          "value": "could ship 10M+ GPUs in 2027",
+          "source": "Fubon",
+          "date": "2026-06-05",
+          "scope": "GPU units",
+          "cited_in": [
+            "NVDA.md"
+          ]
+        },
+        {
+          "value": "~16 GW sold/yr 2026 -> ~25 GW 2027 (house estimate)",
+          "source": "Capstone model",
+          "date": "2026-06-17",
+          "scope": "GW shipped (house)",
+          "cited_in": [
+            "NVDA.md"
+          ]
+        },
+        {
+          "value": "54.5k -> 62k NVL72 racks 2027F",
+          "source": "Nomura",
+          "date": "2026-06-30",
+          "scope": "racks",
+          "cited_in": [
+            "NVDA.md"
+          ]
+        },
+        {
+          "value": "Vera CPU 500k 2026 -> 3M 2027; MS: 5.75M units 2027 (ASE FoCoS)",
+          "source": "JPM Jay / MS Asia AI Supply Chain",
+          "date": "2026-06-23",
+          "scope": "Vera standalone CPU",
+          "cited_in": [
+            "themes/hbm-memory.md",
+            "themes/cowos-packaging.md"
+          ]
+        }
+      ],
+      "status": "consistent",
+      "debate": "House 25 GW 2027 vs JPM 9.9M units 2027E — reconcile via W/unit assumptions when the Capstone GW model updates. AI Model.xlsx (2026-07-02 save) has 7.6M CY26 / 7.7M CY27 — BELOW JPM's 8.9M/9.9M; CY27 flatness is the open question."
+    },
+    "cowos-allocation": {
+      "title": "CoWoS capacity and NVDA allocation share",
+      "definition": "NVDA's share of TSMC CoWoS capacity; TPU-substrate splits within Google.",
+      "canonical": "NVDA ~50-55% of TSMC CoWoS 2027 — now THREE independent sources inside the band (Fubon ~50%+, 2026-06-05; Nomura <55%, 2026-06-30; JPM 52.8% of TSMC / 50.2% of industry, 2026-09-17). Industry CAPACITY 260k wfpm end-2027 (JPM 2026-09-17 and UBS 2026-09-16 agree exactly; the TSMC-vs-OSAT split does not). Within Google TPU: AVGO ~66-68% / MediaTek ~32-34% (Nomura) on a substrate/programme basis; on JPM's derived basis MediaTek is 43.2% of UNITS but 27.5% of COMPUTE DIES in 2027E, inverting to 40.4% / 51.8% in 2028E.",
+      "scope_note": "The 'targeted ~60%' is NVDA's ask, not an outcome — don't cite it as achieved share. UNIT vs DIE (standing rule, added 2026-09-17): every downstream quantity — CoWoS wafers, HBM stacks, substrate area — tracks COMPUTE DIES, not units. JPM's own Table 1 implies a die-count map of v6/v7=2, v8t=1, v8i=2, v9=4, which reconciles its unit and compute-die rows to within 0.1m in all three years, so the map is the source's, not an inference. Google TPU units go 4.6 -> 11.4m (2026-28E, +148%) while TPU compute dies go 8.6 -> 28.0m (+226%); AWS units +68% against dies +232% (Trainium 4 implied at ~3.95 dies/unit vs 2.00 for Trainium 3). A packaging or HBM number quoted against a UNIT count is wrong by a factor that grows every year. CAPACITY vs CONSUMPTION: 260k wfpm is capacity; JPM's 2,471k wafers is 2027E annual consumption — never compare the two directly. OUTSOURCED SHARE: JPM's 'Total TSMC' row INCLUDES oS sub-contracted to ASE/SPIL and interposer to Vanguard, so its OSAT share (6.8% 2026E -> 18.8% 2027E -> 25.8% 2028E) is NOT comparable with the 8%/46%/75%/85% series in themes/semicap-wfe, which counts that sub-contracting as outsourced.",
+      "patterns": [
+        "CoWoS.{0,60}(share|allocat|5\\d%|60%)"
+      ],
+      "variants": [
+        {
+          "value": "~50%+ of TSMC CoWoS 2027",
+          "source": "Fubon",
+          "date": "2026-06-05",
+          "scope": "NVDA share",
+          "cited_in": [
+            "themes/cowos-packaging.md"
+          ]
+        },
+        {
+          "value": "<55% 2027F, down from targeted ~60% (TPU squeeze)",
+          "source": "Nomura",
+          "date": "2026-06-30",
+          "scope": "NVDA share",
+          "cited_in": [
+            "themes/cowos-packaging.md"
+          ]
+        },
+        {
+          "value": "AVGO ~66-68% / MediaTek ~32-34% of Google TPU",
+          "source": "Nomura",
+          "date": "2026-06-30",
+          "scope": "TPU split",
+          "cited_in": [
+            "themes/custom-asic-tpu.md",
+            "themes/cowos-packaging.md"
+          ]
+        },
+        {
+          "value": "NVDA 52.8% of TSMC (1,060/2,006 k wafers) · 50.2% of industry (1,240/2,471) — 2027E",
+          "source": "JPM · Gokul Hariharan",
+          "date": "2026-09-17",
+          "scope": "NVDA share 2027E — derived from the full Table 1 CoWoS allocation. THIRD independent source, inside the canonical band.",
+          "cited_in": [
+            "TSM.md",
+            "themes/cowos-packaging.md"
+          ]
+        },
+        {
+          "value": "NVDA 54.6% of TSMC (1,400/2,565) · 52.1% of industry (1,800/3,455) — 2028E",
+          "source": "JPM · Gokul Hariharan",
+          "date": "2026-09-17",
+          "scope": "NVDA share 2028E",
+          "cited_in": [
+            "TSM.md",
+            "themes/cowos-packaging.md"
+          ]
+        },
+        {
+          "value": "Industry CoWoS capacity 260k wfpm end-2027 (TSMC 200k + OSAT 60k); 320k end-2028 (225k + 95k)",
+          "source": "JPM · Gokul Hariharan",
+          "date": "2026-09-17",
+          "scope": "CAPACITY, not consumption. Matches UBS's 260k end-2027 (2026-09-16) exactly — two independent houses converged on the industry total. The TSMC-vs-OSAT SPLIT remains contested.",
+          "cited_in": [
+            "TSM.md",
+            "themes/cowos-packaging.md"
+          ]
+        },
+        {
+          "value": "MediaTek 43.2% of TPU UNITS but 27.5% of TPU COMPUTE DIES (2027E); 40.4% / 51.8% (2028E)",
+          "source": "JPM · Gokul Hariharan",
+          "date": "2026-09-17",
+          "scope": "TPU split — DIFFERENT METRIC from the Nomura ~32-34% row (a substrate/programme share). Derived unit and die share. The 1-die v8t Zebrafish -> 4-die v9 Humufish handover makes unit share and die share move in OPPOSITE directions across 2027->2028. DO NOT net against Nomura.",
+          "cited_in": [
+            "themes/custom-asic-tpu.md"
+          ]
+        }
+      ],
+      "status": "converging",
+      "debate": "Does NVDA claw back toward 60% or does TPU keep the squeeze on? As of 2026-09-17 all three published houses sit in the 50-55% band, and the 'claw back to 60%' leg has no support in any current published table. The live question has moved to the TSMC-vs-OSAT split of the agreed 260k industry capacity."
+    },
+    "ai-tam-2030": {
+      "title": "AI TAM by 2030",
+      "definition": "AI datacenter TAM frames — ALWAYS state scope (systems-only vs total infra).",
+      "canonical": "BofA ~$1.7T CY30 AI-DC-systems TAM (accelerators ~$1.2T, networking ~$316B, optical ~$88B, HBM $168B). Jensen's '$3-4T end-of-decade AI infra' is a BROADER scope (adds power/grid/software) — not a conflict with BofA. NOVO 2026-07-23: AMD (Advancing AI) eleva accelerator TAM a $1.4T 2030 — ACIMA do BofA $1.2T; compute total $2T. House build CY30 ~$1.41T = trilho AMD (1.01x), 1.21x BofA.",
+      "scope_note": "Never compare $1.7T (systems) against $3-4T (infra) as if same quantity.",
+      "patterns": [
+        "\\$1\\.7\\s?T",
+        "\\$3.{0,3}4\\s?T(rillion)?.{0,30}(TAM|infra)"
+      ],
+      "variants": [
+        {
+          "value": "~$1.7T CY30 AI-DC-systems TAM (accel ~$1.2T / networking ~$316B / optical ~$88B)",
+          "source": "BofA Arya, AI 2030",
+          "date": "2026-05-13",
+          "scope": "systems TAM",
+          "cited_in": [
+            "themes/ai-tam-bofa.md",
+            "themes/ai-datacenter-power.md",
+            "themes/custom-asic-tpu.md"
+          ]
+        },
+        {
+          "value": "~$3-4T end-of-decade AI infra",
+          "source": "NVDA Jensen, Q1 FY27",
+          "date": "2026-05-20",
+          "scope": "broad infra TAM",
+          "cited_in": [
+            "themes/custom-asic-tpu.md"
+          ]
+        },
+        {
+          "value": "compute total $2T / AI accelerator $1.4T (de '>$1T' no FAD Nov-25) — alvo 2030; acima do preview (BofA esperava $1.5T/$200B)",
+          "source": "AMD Advancing AI 2026 (Lisa Su) via GS Schneider + MS roundtable",
+          "date": "2026-07-23",
+          "scope": "TAM de evento da empresa — viés alto-cima; accel $1.4T > BofA $1.2T"
+        },
+        {
+          "value": "global optical-module TAM $34.2bn 2025 -> $50.9bn 2026E -> $72.6bn 2027E (PEAK) -> $69.1bn 2028E (-5%); 800G+ AI pool FLAT 2027->28 (~$55.5bn); SiPh 62% of $ by 2028E (units: 18%)",
+          "source": "GS, \"Global Optical module market opportunity\" exhibit (user-ingested pasted exhibit; analyst not captured)",
+          "date": "2026-08-10",
+          "scope": "merchant optical-module market $ (modules only, incl. $16.9bn below-400G legacy in 2026E) -- NOT systems/networking TAM; closest canon is BofA optical ~$88B CY30 (+42% CAGR) which COMPOUNDS where GS rolls over in 2028 -- shape disagreement, log both, do not blend",
+          "cited_in": [
+            "themes/optical-cpo.md"
+          ]
+        }
+      ],
+      "status": "consistent",
+      "debate": "Scope discipline only — systems vs infra."
+    },
+    "dram-pricing-2026": {
+      "title": "Conventional DRAM pricing cadence Q3/Q4 2026",
+      "definition": "QoQ contract-price growth for conventional DRAM, 2H26.",
+      "canonical": "TrendForce REVISED (2026-06-30, supersedes 06-23): +15-20% Q3 / +3-8% Q4 — vs experts +20-25% Q3 (Redburn/Sherman/Edison) and market chatter +30-40%. Direction agreed; magnitude is the debate.",
+      "scope_note": "The 06-23 TrendForce +8-13% Q3 is SUPERSEDED — don't cite it as current. — ⚠️⚠️ BASIS SPLIT ADDED 2026-09-17: the canonical and the first two variants are CONVENTIONAL-DRAM CONTRACT price q/q. The J.P. Morgan variant is a BLENDED INDUSTRY ASP on an 8Gb-equivalent WSTS basis (contains HBM and mix) and is transcribed from a chart, not a printed table. It reads BELOW the canonical on Q3-26 (+11% vs +15-20%), but the two are DIFFERENT QUANTITIES — the gap may be basis rather than view. Never average or chain across the two bases. JPM's own curve continues flat beyond 2026 (+1/+2/+3/+1 q/q through 2027E, 0/0/+2/+1 through 2028E), i.e. a DRAM ASP peak in 4Q26 and a two-year plateau; that shape validates against JPM Asia's published +235%/+29%/+7% annuals for 2026/27/28 (Gokul Hariharan, 2026-08-12).",
+      "patterns": [
+        "DRAM.{0,50}\\+\\d{1,2}.{0,5}%.{0,30}Q[34]",
+        "contract price.{0,40}Q[34]"
+      ],
+      "variants": [
+        {
+          "value": "+15-20% Q3 / +3-8% Q4 (revised up)",
+          "source": "TrendForce",
+          "date": "2026-06-30",
+          "scope": "current base case",
+          "cited_in": [
+            "themes/hbm-memory.md"
+          ]
+        },
+        {
+          "value": "+11% Q3-26 / +5% Q4-26 q/q — ⚠️ DIFFERENT BASIS: blended industry ASP, 8Gb-eq (WSTS), includes HBM/mix; NOT conventional-DRAM contract price",
+          "source": "J.P. Morgan · Harlan Sur (semis deck, week of 2026-09-15; pasted exhibit, chart-read)",
+          "date": "2026-09-17",
+          "scope": "blended industry ASP (8Gb-eq, WSTS basis) — do NOT merge with the contract-price series above",
+          "cited_in": [
+            "MU.md",
+            "themes/hbm-memory.md"
+          ]
+        },
+        {
+          "value": "+20-25% Q3 / +20% Q4 (vs chatter +30-40%)",
+          "source": "Redburn / Sherman / Edison experts",
+          "date": "2026-06-23",
+          "scope": "expert view",
+          "cited_in": [
+            "themes/hbm-memory.md"
+          ]
+        },
+        {
+          "value": "+8-13% Q3 / +3-8% Q4 [SUPERSEDED 2026-06-30]",
+          "source": "TrendForce",
+          "date": "2026-06-23",
+          "scope": "superseded",
+          "cited_in": [
+            "themes/hbm-memory.md"
+          ]
+        }
+      ],
+      "status": "live-debate",
+      "debate": "Magnitude of 2H26 DRAM hikes: TrendForce conservative vs expert +20-25% vs chatter +30-40%. — and from 2026-09-17 a SECOND, separable debate is live on the SHAPE beyond 2026: JPM's quarterly curve plateaus from 4Q26 (agreeing with MS Europe's 'late-cycle by 4Q26' and Samsung IR's 'broadly stable through 2027'), against UBS's +44% y/y 2027 blended ASP and undersupply through at least 2Q28."
+    },
+    "server-cpu-tam": {
+      "title": "Server-CPU TAM / unidades — o leg agentic",
+      "definition": "TAM de CPU-silicio de servidor (merchant + captive + Grace/Vera) e unidades — SEMPRE declarar basis ($ TAM vs unidades; mercado total vs hyperscaler-only).",
+      "canonical": "TRES construcoes independentes convergem em CY26 (~$50-55bn) e divergem no timing do 1:1 agentic: (1) unidades bottom-up — JPM proprietario 26M (2025) -> 68M (2028), agentic 155% CAGR; house build (Bottom_Up_Capex v2, unidades x ASP c/ hikes Sherman) ~$55bn CY26 / ~$96bn CY27 (CPU-silicio total); (2) capex-ratio top-down — Bernstein/Rasgon 06-16: $37bn 2025 -> $137bn 2030 BASE, $223bn BULL (premissas: $3.5T AI-DC capex + pareamento 1:1 CPU:GPU em inferencia); (3) UBS bottoms-up: ~$175bn em 2030. House 2030 ~$180-200bn = entre base e bull do Rasgon. TSMC 2Q26 (C.C. Wei): 'agentic AI = resurgence of CPUs... x86, ARM ou RISC-V, quase todos clientes TSMC'. ATUALIZAÇÃO 07-23: AMD adota $220bn 2030 + share >50% — o bull do Bernstein virou guidance de empresa; house build ~0.8x do path AMD no terminal (gap = 1:1 pleno).",
+      "scope_note": "Basis traps: TAM $ total-mercado (Bernstein/UBS) vs hyperscaler-only (house ex-enterprise); unidades (JPM) precisam de ASP p/ virar $ (hikes Sherman +15-20% x2 em 2026); Vera/Grace CONTAM no TAM mas moram dentro da receita Compute da NVDA (nao somar 2x em contas de capex); ARM $22bn ate CY30 = ARM-as-CPU-maker (Bernstein), != royalties.",
+      "variants": [
+        {
+          "value": "26M (2025) -> 36M (2026E interp) -> 49M (2027E interp) -> 68M (2028), 38% CAGR; agentic-AI CPUs 155% CAGR",
+          "source": "JPM proprietary server-CPU model (Hung/Hariharan)",
+          "date": "2026-07-12",
+          "scope": "unidades, mercado total"
+        },
+        {
+          "value": "$37bn 2025 -> $137bn 2030 BASE; $223bn BULL (1:1 CPU:GPU @ $3.5T capex); ARM $22bn CY30; PTs ARM $500/AMD $600/INTC $100",
+          "source": "Bernstein Rasgon",
+          "date": "2026-06-16",
+          "scope": "$ TAM, mercado total"
+        },
+        {
+          "value": "~$175bn server-CPU market 2030 (bottoms-up)",
+          "source": "UBS (via ARM.md)",
+          "date": "2026-06",
+          "scope": "$ TAM 2030"
+        },
+        {
+          "value": "~$55bn CY26 / ~$96bn CY27 / ~$137bn CY28 (CPU-silicio total incl Vera+enterprise; motor por familia: JPM units x ASP)",
+          "source": "Capstone Bottom_Up_Capex v2 'BU | CPU & Servidores'",
+          "date": "2026-07-17",
+          "scope": "house build"
+        },
+        {
+          "value": "Vera standalone ~$20bn F2H27 (~4-5M un @ $4-5k, ~metade standalone); 500k 2026 -> 3M 2027 (JPM) / ate 5.5M (UBS)",
+          "source": "BofA Core Wars / JPM Jay / UBS Sunny Lin",
+          "date": "2026-07-13",
+          "scope": "NVDA Vera"
+        },
+        {
+          "value": "server CPUs podem exigir ~200 kwpm de leading edge; server-CPU-maker TAM $4bn'25 -> $44bn'30E (ARM-as-maker leg)",
+          "source": "Bernstein complex (briefing)",
+          "date": "2026-05-21",
+          "scope": "wafer/ARM-maker leg"
+        },
+        {
+          "value": "server-CPU TAM $220bn 2030 + share-alvo AMD >50% (~$110bn só de AMD); histórico da empresa: ~$60bn (FAD Nov-25) -> $120bn (mai-26) -> $220bn = 3.7x em 8 meses; ratio 4:1 -> >1:1",
+          "source": "AMD Advancing AI 2026 via GS/MS",
+          "date": "2026-07-23",
+          "scope": "empresa oficializa o cenário BULL do Bernstein ($223bn)"
+        }
+      ],
+      "debate": "Timing do 1:1 agentic: house build chega ao NIVEL do bull-2030 do Rasgon ja em 27-28 (ratio 1.31-1.35x vs bull path) — ou o house front-loada demais (hikes+unidades compostas), ou o path do Rasgon e back-loaded. Resolve nos prints de server CPU 2H26 (AMD guide >70% y/y; Intel 80-90% fulfillment) e na rampa Vera. Cross de wafer: CPUs ~5-9 kwpm N3/N2 no house CY26-27 vs '200 kwpm' do complexo Bernstein (basis a reconciliar — provavelmente all-leading-edge cumulativo).",
+      "cited_in": [
+        "AMD.md",
+        "ARM.md",
+        "INTC.md",
+        "themes/hbm-memory.md"
+      ]
+    },
+    "enterprise-ai-spend-per-employee": {
+      "title": "Enterprise AI spend per employee (Ramp AI Index)",
+      "definition": "Median monthly AI-tool spend per employee from the Ramp AI Index, by cohort (all companies / top 10% / top 1%). ALWAYS state the cohort AND the month -- the three cohort medians differ by ~2 orders of magnitude ($11.95 / $650 / $7,400 in Jul-26) and are routinely quoted without the label.",
+      "canonical": "PRIMARY SERIES on disk (_wiki/_data/ramp-ai-index/, 36 obs Aug-23 to Jul-26, CSV supplied 2026-08-20): median $2.32 -> $11.95 (5.15x, +4.79%/mo compound, +8.38%/mo last 12m); top decile $62.02 -> $650.00 (10.48x, +6.94%/mo, +10.75%/mo); top 1% $858.59 -> $7,400.50 (8.62x, +6.35%/mo, +12.08%/mo). The growth RATE steps up across three 12-month regimes -- median compound +2.25 -> +3.78 -> +8.79 %/mo (top decile +4.17 -> +5.48 -> +11.72; top 1% +3.65 -> +2.83 -> +13.46) -- and 63% of the median cohort's whole 3-yr dollar gain (74% for the top 1%) landed in the last six months. Quote LEVELS and COMPOUND RATES off the file; second-hand y/y figures on this index have not reproduced.",
+      "scope_note": "FOUR traps. (a) Cohort labels: 'top 10%/1%' are read off the column headers as the MEDIAN spend WITHIN that cohort -- Ramp's methodology note is NOT verified. (b) Cohorts are RE-CUT MONTHLY, so part of a cohort's step is re-ranking, not same-company growth (top-1% monthly sigma 16.4pp vs median 5.7pp) -- it is not a same-store series. (c) 'Start of the year' is ambiguous and load-bearing: GS's $5/$240 are the DEC-25 prints, giving +127%/+169% to Jul-26, against +140%/+171% implied by the rounded pair and +104%/+131% off a January base. (d) NOT a revenue proxy for any listed name -- panel is Ramp's US corporate-card/bill-pay customer base, and per-employee is a ratio a hiring freeze flatters. Jul-26 top decile prints exactly $650.00, which reads as rounded or preliminary.",
+      "patterns": [
+        "Ramp AI Index",
+        "AI spend per employee",
+        "spend per employee"
+      ],
+      "variants": [
+        {
+          "value": "median $11.95 / top decile $650.00 / top 1% $7,400.50 (Jul-26); 36-month compound +4.79 / +6.94 / +6.35 %/mo; regime ladder median +2.25 -> +3.78 -> +8.79 %/mo",
+          "source": "Ramp AI Index (primary CSV on disk, supplied by Felipe)",
+          "date": "2026-08-20",
+          "scope": "PRIMARY - full 36-month series, Aug-23 to Jul-26",
+          "cited_in": [
+            "themes/tokenmaxxing.md",
+            "themes/macro-cycle.md"
+          ]
+        },
+        {
+          "value": "median $5 at start of year -> $12 in July; top decile $240 -> $650",
+          "source": "Goldman Sachs, US Weekly Kickstart ('What Q2 earnings reports signaled...')",
+          "date": "2026-08-14",
+          "scope": "RECONCILED - basis pinned to the Dec-25 print ($5.26 / $241.46); real move +127% / +169%",
+          "cited_in": [
+            "themes/tokenmaxxing.md",
+            "themes/macro-cycle.md"
+          ]
+        },
+        {
+          "value": "median ~$11 in June +167% y/y; top decile $516, top 1% >$4,880, each +~240-250% y/y",
+          "source": "Morgan Stanley (via SPCX page)",
+          "date": "2026-08-17",
+          "scope": "PARTLY UNRECONCILED - levels tie ($10.93 / $520.48 / $4,973.62) but the y/y does not (file June: +154.8% / +215.4% / +200.9%); top decile's +240.6% is the JULY y/y",
+          "cited_in": [
+            "SPCX.md"
+          ]
+        },
+        {
+          "value": "median $11, top-10% $611 ('the 06-18 cut')",
+          "source": "unattributed mark carried on themes/tokenmaxxing.md",
+          "date": "2026-06-18",
+          "scope": "UNRECONCILED - $611 appears in no month of the primary series; newest print available on 2026-06-18 was May-26 ($10.50 / $465.39). Different cut or transcription error",
+          "cited_in": [
+            "themes/tokenmaxxing.md",
+            "themes/macro-cycle.md"
+          ]
+        }
+      ],
+      "status": "primary series on disk; two second-hand readings unreconciled",
+      "debate": "Not a bull/bear debate but a BASIS debate: the level series is now primary and unambiguous, while every second-hand GROWTH figure the wiki carried is either rounding-inflated (GS) or fails to reproduce (MS, the 06-18 cut). Forward question for the macro-cycle page: does the median cohort hold its +8.79%/mo step-change regime, or revert to the +3-4%/mo of 2024-25? Only Dec-23, Aug-24 and Nov-25 saw all three cohorts fall together in three years."
+    },
+    "wafers-per-gw": {
+      "title": "Wafers per GW of AI compute — node split (N3 / N5 / DRAM)",
+      "definition": "300mm wafer starts needed to BUILD 1 GW of AI compute, split by node/type. A one-time wafer BILL per GW, not a standing monthly capacity — never mix with the WSPM cards. Every figure must carry (a) its rack denominator (racks/GW and the kW/rack behind it), (b) its GW basis (compute-TDP / IT-load vs facility), and (c) whether it is logic-only (foundry) or all-wafer (logic + DRAM + NAND).",
+      "canonical": "Rack denominator for VR200 is FIRM at ~4,440-4,545 racks/GW on an IT-load/compute-TDP basis — TrendForce ~225kW/rack (2026-06-28) and Bernstein 220kW compute-TDP (2026-07-20) agree independently. On that denominator, 1 GW of Vera Rubin ≈ 230-295k total 300mm wafers: DRAM 141-205k (house bottom-up; central ~155-186k) and foundry logic 25-30k (house bottom-up) vs Patel's 61k. The DRAM leg is well-anchored; the LOGIC leg is the live dispute — Patel's 55k N3 + 6k N5 is ~2x a die-area bottom-up of the NVL144 rack BOM and ~2.9x Fubon's Blackwell card (33k TSMC wafers/GW at 7,200 NVL72 racks = 4.6 wafers/rack).",
+      "scope_note": "THREE traps. (1) Rack denominator: Blackwell GB300 ~150kW => 7,200 racks/GW (Fubon) vs VR200 ~220-225kW => ~4,440-4,545 racks/GW vs Redburn's FACILITY-GW frame (PUE 1.15, 90% to GPU racks, 250kW/rack) => 3,130 racks/GW. Wafers/GW scales inversely with kW/rack. (2) JPM's VR200 'rack design power' of 330-444kW is NAMEPLATE, not draw — do not build a rack count on it. (3) logic-only vs all-wafer: Fubon's 33k is foundry wafers only; Bernstein's 65 wafers/rack and the AlphaSense 350k are all-wafer.",
+      "status": "live-debate",
+      "patterns": [
+        "\\d{2,3},?0{3}\\s*(N3|N5|DRAM)\\s*wafers",
+        "wafers?\\s*(per|/)\\s*GW",
+        "wafer starts per GW",
+        "wafers?\\s*(per|/)\\s*rack"
+      ],
+      "variants": [
+        {
+          "value": "55,000 N3 + 6,000 N5 + 170,000 DRAM wafers per GW of Vera Rubin (= ~231k total) [~2Q26 VINTAGE — Patel dates the figures to an earlier interview, and the SOCAMM spec has been halved since]",
+          "source": "Dylan Patel (SemiAnalysis), in interview — relayed by Felipe",
+          "date": "2026-08-25",
+          "scope": "node-split, all-wafer, Vera Rubin; rack denominator not stated by the source (house work pins it at IT-load ~4,400-4,500 racks/GW)",
+          "cited_in": [
+            "TSM.md",
+            "NVDA.md",
+            "themes/hbm-memory.md",
+            "themes/semicap-wfe.md"
+          ]
+        },
+        {
+          "value": "House bottom-up cross-check: DRAM 141-205k wafers/GW (central ~155-186k) CONFIRMS the 170k; foundry logic ~25-30k/GW vs the quoted 61k — the quoted logic leg is ~2x the NVL144 rack BOM",
+          "source": "Capstone (house reconciliation on wiki inputs: 288/192GB HBM4 SKUs, 768GB SOCAMM, MU 3:1->4:1 HBM displacement, Fubon 50-60% AI-die yield)",
+          "date": "2026-08-25",
+          "scope": "house bottom-up at 4,545 racks/GW",
+          "cited_in": [
+            "TSM.md",
+            "themes/hbm-memory.md"
+          ]
+        },
+        {
+          "value": "each GW ≈ 7,200 NVL72 racks ≈ ~33k TSMC wafers (= 4.6 wafers/rack) and ~US$1.0-1.5bn of TSMC revenue (foundry + CoWoS + other BOM)",
+          "source": "Fubon / Jefferies",
+          "date": "2025-10-28",
+          "scope": "LOGIC-ONLY (TSMC wafers), Blackwell NVL72 basis (~139-150kW/rack)",
+          "cited_in": [
+            "TSM.md"
+          ]
+        },
+        {
+          "value": "~65 wafers/rack x 4,545 racks/GW ≈ 295k rack wafers/GW; ~46-50k WSPM per incremental GW/yr incl non-rack legs (DRAM 53% / NAND 20% / HBM 16% / logic 11%)",
+          "source": "Bernstein · Stacy Rasgon",
+          "date": "2026-07-20",
+          "scope": "ALL-WAFER, VR200 220kW compute-TDP; the WSPM figure is standing CAPACITY, not a per-GW bill",
+          "cited_in": [
+            "themes/semicap-wfe.md",
+            "themes/hbm-memory.md"
+          ]
+        },
+        {
+          "value": "~350,000 300mm wafer starts per GW of AI compute, HBM 60-70% of it",
+          "source": "AlphaSense expert (ex-Broadcom/Intel/Huawei/TI CTO)",
+          "date": "2026-07-17",
+          "scope": "ALL-WAFER, generic AI compute; rack/GW basis unstated",
+          "cited_in": [
+            "themes/hbm-memory.md"
+          ]
+        },
+        {
+          "value": "1GW facility -> 1.15 PUE -> 870MW IT -> 90% to GPU racks -> 783MW -> at 250kW/rack ⇒ ~3,130 racks/GW ⇒ 225,391 GPUs/GW",
+          "source": "Redburn",
+          "date": "2026-06-17",
+          "scope": "FACILITY-GW rack denominator (the low-rack-count end); PUE + 90% allocation + 250kW are Redburn assumptions",
+          "cited_in": [
+            "NVDA.md"
+          ]
+        }
+      ],
+      "debate": "The LOGIC leg. 55k N3 + 6k N5 = 61k foundry wafers/GW ⇒ 13.4 logic wafers/rack, against ~5.5-6.5 from a die-area bottom-up of the NVL144 BOM (144 Rubin dies ~750mm², 65-70 gross/wafer, 50-60% AI-die yield ⇒ ~4.0 wafers; + Vera CPU ~0.5, NVLink-6 switch ~1.0, CX9/BlueField ~1.0) and against Fubon's 4.6 wafers/rack on Blackwell. The DRAM leg pins the denominator at ~4,400-4,545 racks/GW (a facility-GW denominator of 3,130 racks would require ~480GB per HBM wafer = a ~5:1 displacement vs DDR5, worse than MU's own ~4:1 at HBM4E — unlikely, though not impossible), so the gap cannot be explained by the GW basis — it has to be extra silicon (Rubin CPX, standalone Vera CPU racks, LPU racks, Spectrum-6/CX9 CPO) or a much worse yield assumption. Note CPX cannot close it at JPM's assumption of 144 CPX/rack at only 10-15% attach in 2027/28. Unresolved: what Patel's 55k N3 actually covers — the NVL144 compute rack alone or the whole Rubin family — is not stated in the excerpt, and the figures are ~2Q26 vintage."
+    },
+    "cyber-spend-tam": {
+      "title": "Total cybersecurity spend — the MS/IDC ladder and the segment TAMs",
+      "definition": "Global cybersecurity spend (products + services) by year, and the seven segment TAMs with '24-'29 CAGRs — ALWAYS state whether a figure is total spend, security SOFTWARE only, or one segment.",
+      "canonical": "Total cyber spend $246.2bn (2024) → $275.9bn (2025) → $308.4bn (2026) → $345.0bn (2027) → $385.5bn (2028) → $430.5bn (2029), ~6.5-6.8% of IT spend throughout (MS 'Revisiting Cybersecurity 101', 2026-03-20, IDC data). Segment TAMs 2025E: Network & Web/App $43.1bn (+9.3%) · Identity & Access $29.7bn (+17.6%) · Security Analytics/SIEM $18.3bn (+14.0%) · Corporate Endpoint $17.9bn (+11.4%) · Email/Data $15.1bn (+16.4%) · Vulnerability Mgmt $9.2bn (+13.3%) · Cloud Security $7.1bn (+23.3%).",
+      "scope_note": "MS's 16 covered cyber names are only ~26% of the market; adding Microsoft and Cisco reaches ~40% — the ladder is TOTAL spend incl. services and legacy/private vendors, not the listed-vendor revenue pool. The hyperscaler ~14% share (see hyperscaler-cyber-share) is a share of the cyber SOFTWARE market, a different denominator. Firewall/UTM is a $17.5bn→$21.8bn (+4.5% CAGR) sub-market of Network — PANW's #1 position sits in the slowest segment.",
+      "patterns": [
+        "430\\.5",
+        "\\$?430bn",
+        "275\\.9",
+        "\\$276bn",
+        "308\\.4",
+        "385\\.5",
+        "7% of (overall )?IT spend",
+        "\\$29\\.7bn",
+        "\\$43\\.1bn"
+      ],
+      "variants": [
+        {
+          "value": "$246.2bn 2024 → $430.5bn 2029; 6.6/6.5/6.6/6.6/6.7/6.8% of IT spend",
+          "source": "MS Marshall/Weiss, 'Revisiting Cybersecurity 101' (IDC)",
+          "date": "2026-03-20",
+          "scope": "total spend",
+          "cited_in": [
+            "PANW.md",
+            "CRWD.md",
+            "CSCO.md",
+            "MSFT.md",
+            "themes/ai-cybersecurity.md"
+          ]
+        },
+        {
+          "value": "Cloud security ~$16bn by 2029 on a ~4% take rate of public-cloud spend",
+          "source": "MS, same deck",
+          "date": "2026-03-20",
+          "scope": "segment, 2029",
+          "cited_in": [
+            "PANW.md",
+            "CRWD.md"
+          ]
+        },
+        {
+          "value": "Firewall & UTM $17.5bn (2024) → $21.8bn (2029), +4.5% CAGR; PANW 26.2% share 2025",
+          "source": "MS / IDC",
+          "date": "2026-03-20",
+          "scope": "sub-segment",
+          "cited_in": [
+            "PANW.md"
+          ]
+        }
+      ],
+      "status": "consistent",
+      "debate": "None on the ladder itself; the debate is what AI does to it — see ai-cyber-net-effect. Keep the total-spend vs software-share denominators apart."
+    },
+    "ai-cyber-net-effect": {
+      "title": "AI × cyber — net additive or destructive to the vendor P&L",
+      "definition": "The size of the AI-driven incremental cyber opportunity vs the share of today's cyber market at risk of AI-native / frontier-lab disruption.",
+      "canonical": "~$220bn incremental cyber opportunity from greater AI threat vs ~10% of the cyber market at risk of disruption → a market ~10% LARGER in the out-years (MS Marshall/Weiss, 'AI-Natives: Challengers, or Creating Challenges, for Cyber', 2026-04-20). Disruption risk is concentrated in the PREVENTATIVE layer (vulnerability mgmt, AppSec testing, posture); control-point and runtime 'require low-latency, deterministic responses' — a claim about today's models.",
+      "scope_note": "The offset relies on an exhibit whose basis includes '35% of services can be automated with AI' — part of the disruption is assumed INTO services, not into vendor revenue. The stocks traded ~(25%) into the note. Do not net the $220bn against the spend ladder as if it were incremental vendor revenue: it is an opportunity sizing, not a forecast.",
+      "patterns": [
+        "\\$?220bn.{0,80}(cyber|threat|opportunit)",
+        "(cyber|threat).{0,80}\\$?220bn",
+        "10% of the (cyber )?market at risk",
+        "demand creation about cybersecurity",
+        "AI-Natives"
+      ],
+      "variants": [
+        {
+          "value": "~$220bn opportunity vs ~10% at risk; net ~+10%",
+          "source": "MS Marshall/Weiss",
+          "date": "2026-04-20",
+          "scope": "MS house view",
+          "cited_in": [
+            "themes/ai-cybersecurity.md"
+          ]
+        },
+        {
+          "value": "'AI-driven security demand will more than offset AI disruption risks'",
+          "source": "MS Sustainability desk",
+          "date": "2026-04-27",
+          "scope": "restatement",
+          "cited_in": [
+            "themes/ai-cybersecurity.md"
+          ]
+        },
+        {
+          "value": "'there is a lot of demand creation about cybersecurity today because new products are about to be launched'",
+          "source": "NVDA mgmt (Jensen Huang), GS Communacopia",
+          "date": "2026-09-10",
+          "scope": "the bear on the demand side",
+          "cited_in": [
+            "themes/ai-cybersecurity.md"
+          ]
+        },
+        {
+          "value": "'risk is generally higher toward the application layer and lower in infrastructure' — cyber classified as infrastructure",
+          "source": "JPM Chatterjee, Enterprise Software Fall Series",
+          "date": "2026-09-10",
+          "scope": "read-across",
+          "cited_in": [
+            "themes/ai-cybersecurity.md"
+          ]
+        }
+      ],
+      "status": "live-debate",
+      "debate": "Bull: threat surface compounds faster than budgets (BofA 09-01; board-mandate buying trigger). Bear: the one observed AI-native attack (Hugging Face 07-16) was detected by the victim's own LLM pipeline, not a vendor SIEM/XDR; and the arms supplier says part of the narrative is vendor-manufactured. Scored on the pre-registered tests in themes/ai-cybersecurity.md."
+    },
+    "agentic-identity-tam": {
+      "title": "Agentic identity — the non-human / agent identity opportunity",
+      "definition": "Size of the market for governing AI-agent identities (discovery, credentials, least-privilege, runtime authorisation) relative to the standalone human-identity market — and who is named as a winner.",
+      "canonical": "~$60bn+ over the coming years, DOUBLE the standalone identity market; named winners PANW, OKTA, SAIL — CRWD NOT on the list (MS Marshall/Lountzis, 2026-08-20, via digest; underlying report not read in full). The standalone base it doubles is the Identity & Access segment, $29.7bn 2025E growing +17.6% '24-'29 (MS, 2026-03-20).",
+      "scope_note": "$60bn is an OPPORTUNITY over 'the coming years', not a 2029 TAM — do not add it to the $29.7bn IAM segment or place it on the spend ladder's timeline. 'Agentic identity' is also a claimed category for CRWD (Agentic Identity Provider, Fal.Con 09-03) and PANW (CyberArk) — the MS omission of CRWD is a house view, not a market fact. Okta prices agents as an UPLIFT to named/monthly-active users, so the TAM has no per-agent price unit yet.",
+      "patterns": [
+        "agentic identity.{0,80}\\$?60bn",
+        "\\$?60bn.{0,80}(agentic|identity)",
+        "double the standalone",
+        "Agentic Identity Provider",
+        "Okta for AI Agents"
+      ],
+      "variants": [
+        {
+          "value": "~$60bn+, double the standalone market; positive for PANW, OKTA, SAIL",
+          "source": "MS Marshall/Lountzis (digest)",
+          "date": "2026-08-20",
+          "scope": "opportunity sizing",
+          "cited_in": [
+            "CRWD.md",
+            "OKTA.md",
+            "themes/ai-cybersecurity.md"
+          ]
+        },
+        {
+          "value": "CRWD 'the SOLE security provider for Anthropic and OpenAI implementation programs'",
+          "source": "UBS TECH previews (Ruple relaying UBS Research)",
+          "date": "2026-08-24",
+          "scope": "the counter-claim on who captures agent security",
+          "cited_in": [
+            "CRWD.md",
+            "ANTHROPIC.md"
+          ]
+        },
+        {
+          "value": "Okta: 91% of organisations already use AI agents, 10% have a governance strategy",
+          "source": "Okta 'AI at Work' report via Q4 FY26 call",
+          "date": "2026-03-04",
+          "scope": "adoption vs governance gap",
+          "cited_in": [
+            "OKTA.md"
+          ]
+        }
+      ],
+      "status": "live-debate",
+      "debate": "Does agent identity accrue to the identity control plane (OKTA/SAIL/PANW-CyberArk), route through the endpoint/runtime platform (CRWD), or default to the hyperscaler directory (MSFT Entra ~31% IAM)? Test: OKTA cRPO/NRR holding vs CRWD Agentic IdP attach through Dec-2026."
+    },
+    "hyperscaler-cyber-share": {
+      "title": "Hyperscaler share of the cybersecurity software market",
+      "definition": "Combined share of AMZN/MSFT/GOOG in cyber software, MSFT's franchise size and its segment shares — the encroachment vector that is not AI.",
+      "canonical": "Hyperscalers combined ~14% of the cybersecurity software market (~11% MSFT alone), more than tripled in 5 years — together the largest cyber vendor. MSFT: a ~$30bn cyber practice, more than doubled in 3 years; segment shares EDR 29% · SIEM 14% · IAM 31% · data security 19% (MS Marshall/Weiss/Nowak/Baer, 'Cybersecurity: Forecast as Large Clouds Move In', 2026-01-26). Enabler: 47% of workloads in cloud vs 25% three years earlier.",
+      "scope_note": "Share of cyber SOFTWARE — not of the total spend ladder (cyber-spend-tam). MSFT's EDR 29% is an IDC 2024 corporate-endpoint share (CRWD 17%, PANW 3%); IAM 31% is Entra's IAM share — both are segment shares, not company-wide. GOOG = Mandiant + pending $32bn Wiz; AMZN 'the quietest of the three… nothing external-facing'.",
+      "patterns": [
+        "14% of the overall cyber",
+        "largest cyber vendor",
+        "\\$30bn cyber",
+        "cyber franchise",
+        "Purview being the taker",
+        "31% of IAM",
+        "IAM 31%"
+      ],
+      "variants": [
+        {
+          "value": "~14% combined / ~11% MSFT; MSFT ~$30bn, >2x in 3 yrs; EDR 29 · SIEM 14 · IAM 31 · data 19",
+          "source": "MS Marshall/Weiss/Nowak/Baer",
+          "date": "2026-01-26",
+          "scope": "software share",
+          "cited_in": [
+            "themes/ai-cybersecurity.md",
+            "MSFT.md"
+          ]
+        },
+        {
+          "value": "MS's 16 covered names ~26% of market; +MSFT/CSCO → ~40%; >half with best-of-breed privates or legacy",
+          "source": "MS, same note",
+          "date": "2026-01-26",
+          "scope": "consolidation headroom",
+          "cited_in": [
+            "themes/ai-cybersecurity.md"
+          ]
+        },
+        {
+          "value": "VRNS downgraded to EW (Purview the taker); OKTA kept OW despite CIO-survey share loss to platforms",
+          "source": "MS, same note",
+          "date": "2026-01-26",
+          "scope": "named casualties/survivors",
+          "cited_in": [
+            "themes/ai-cybersecurity.md",
+            "OKTA.md"
+          ]
+        }
+      ],
+      "status": "consistent",
+      "debate": "Competitor or rising tide? The buying-process tell is whether the CISO reports to the CFO ('the included value proposition is hard to forego'). CRWD is 'the most effective at head-to-head battle with MSFT' in endpoint."
+    },
+    "ai-vuln-discovery-unit-cost": {
+      "title": "Unit cost of AI vulnerability discovery / remediation — the harness-vs-model economics",
+      "definition": "What a frontier model costs per unit of security work (per token, per critical finding, per remediation) versus the incumbents' harness and versus runtime products' per-transaction cost — THREE different units that must never be compared across.",
+      "canonical": "Frontier: Claude Mythos Preview $25 / $125 per million input/output tokens, 5x Opus 4.6's $5/$25 (WSJ via Stratechery, 2026-04-08). Finding cost: PANW burned '>$1 million worth of tokens' to find >24 critical vulnerabilities in ~3 weeks (~5x its normal tooling) → ~$40k per critical finding at preview pricing, BEFORE triage (The Information / Aaron Holmes, 2026-06-01; house arithmetic). Remediation cost: 'about $10' on a frontier model vs '$0.03 with the same results' on CRWD's Nemotron-based harness (Kurtz, GS Communacopia, 2026-09-10). Runtime products: 'fractions of a penny per transaction with near-zero latency' (MS, 2026-04-20).",
+      "scope_note": "Per-token price ≠ cost per FINDING ≠ cost per REMEDIATION ≠ cost per runtime TRANSACTION. The PANW figure is discovery only — 1,200 findings on its first test needed '3-4 months of cleaning to understand which ones are real' before returning to steady state (Arora, 2026-09-10) — so triage labour is outside the $1m. The CRWD $0.03 is a single-source management claim with no third-party verification. Mythos pricing is PREVIEW pricing for a gated model; expect it to fall.",
+      "patterns": [
+        "\\$25 */ *\\$125",
+        "\\$0\\.03",
+        "\\$10 for that remediation",
+        "\\$10 → \\$0\\.03",
+        "1,200 \\[?vulnerab",
+        "1,200 findings",
+        "24 critical vulnerab",
+        "fractions of a penny",
+        "burned through more than \\$1 million"
+      ],
+      "variants": [
+        {
+          "value": "$25/$125 per MTok (5x Opus 4.6 $5/$25; GPT-5.4 $2.5/$15)",
+          "source": "WSJ via Stratechery / Ben Thompson",
+          "date": "2026-04-08",
+          "scope": "per token, preview",
+          "cited_in": [
+            "themes/ai-cybersecurity.md"
+          ]
+        },
+        {
+          "value": ">24 criticals in ~3 weeks, ~5x normal tools, >$1m of tokens",
+          "source": "The Information / Aaron Holmes (Sam Rubin, SVP Unit 42)",
+          "date": "2026-06-01",
+          "scope": "per finding",
+          "cited_in": [
+            "PANW.md",
+            "themes/ai-cybersecurity.md"
+          ]
+        },
+        {
+          "value": "$10 (frontier) vs $0.03 (Nemotron harness) per remediation, 'same results'",
+          "source": "CRWD mgmt (Kurtz), GS Communacopia",
+          "date": "2026-09-10",
+          "scope": "per remediation, single-source",
+          "cited_in": [
+            "CRWD.md",
+            "ANTHROPIC.md",
+            "themes/ai-cybersecurity.md"
+          ]
+        },
+        {
+          "value": "1,200 vulnerabilities on PANW's first Mythos test → 3-4 months triage → steady state; find-mix 60% Mythos / 30% OpenAI / 10% other",
+          "source": "PANW mgmt (Arora), GS Communacopia (initial-draft transcript)",
+          "date": "2026-09-10",
+          "scope": "discovery ≠ exploitation, first-party",
+          "cited_in": [
+            "PANW.md",
+            "themes/ai-cybersecurity.md"
+          ]
+        }
+      ],
+      "status": "live-debate",
+      "debate": "If harness + multi-model stays 100-300x cheaper per unit of security work than a frontier model, capability gains TRANSFER to incumbents (the bull). If Mythos-class pricing falls ~10x while capability holds, the preventative layer (TENB/QLYS/RPD, pen-test services) is the first casualty and the harness advantage becomes a dependency. Watch: any packaged Anthropic security SKU with SOC-grade latency."
+    },
+    "gpu-rental-hourly": {
+      "title": "Merchant GPU rental rate per GPU-hour (GB300-class)",
+      "definition": "Hourly $ rate for ONE merchant AI GPU. Always state (a) chip generation, (b) whether the figure is a MERCHANT RENTAL price (carries neocloud margin), a CONTRACTED rate, or a first-party INTERNAL COST OF COMPUTE, and (c) spot vs term. This is the unit that converts a token count into a dollar cost; it is NOT derivable from, and must never be chained with, the $/GW ladder in `rev-per-gw`.",
+      "canonical": "GB300-class MERCHANT RENTAL marks on this wiki: ~$7-8/GPU-hr spot (CoreWeave, Cantor expert call, 2026-06-18) and $7.00-$10.00/hr (Morgan Stanley - Nowak, Exhibit 3, 2026-08-12). The widely-recirculated $4/GPU-hr figure is @zephyr_z9's ASSUMPTION inside a back-of-envelope, not a market observation - NOT ADOPTED. Because merchant rental carries neocloud margin (CoreWeave targets ~25% EBITDA), a frontier lab's INTERNAL cost of compute sits BELOW these marks, and no such mark exists anywhere in this corpus - that is the highest-value gap in this metric.",
+      "scope_note": "THREE traps. (1) BASIS: merchant rental != contracted rate != internal cost of compute. The spread between the first and the last is the neocloud's entire margin, so using a rental mark as a lab's cost overstates it. (2) NEVER CHAIN TO $/GW: a $/GPU-hr figure multiplied up to a GW silently double-counts networking, power, shell and utilisation - use `rev-per-gw`, which has its own six bases. (3) THE PAIRED UNKNOWN: any $/GPU-hr used to cost a token workload is meaningless without the effective tokens/sec/GPU it is paired with, and that is NOT a constant - it is a chosen operating point on a latency/throughput frontier. This wiki carries a ~50x spread in it (MS - Nowak: 2,000-3,500 tok/s/GPU for DeepSeek-V4-Pro 1.6T on GB300, 2026-08-12; SemiAnalysis premium-tier $/Mtok implying ~32-82 tok/s/GPU at $4/hr, 2026-09-13). Always name batch size, interactivity target and model size alongside the rate.",
+      "patterns": [
+        "\\$\\s?\\d{1,2}(\\.\\d{2})?\\s?/\\s?(GPU-)?hr",
+        "GPU-hour|GPU-hr|per GPU hour",
+        "GB300.{0,40}\\$\\d",
+        "\\$4/hr|\\$7-8/GPU-hr|\\$7\\.00-\\$10\\.00/hr"
+      ],
+      "variants": [
+        {
+          "value": "GB300 spot ~$7-8/GPU-hr",
+          "source": "CoreWeave, via Cantor expert call",
+          "date": "2026-06-18",
+          "scope": "MERCHANT RENTAL, spot - carries neocloud margin",
+          "cited_in": [
+            "themes/tokenmaxxing.md",
+            "CRWV.md"
+          ]
+        },
+        {
+          "value": "$7.00-$10.00/hr GB300 (rental ladder underpinning the revenue/GW build)",
+          "source": "Morgan Stanley - Brian Nowak, Exhibit 3",
+          "date": "2026-08-12",
+          "scope": "MERCHANT RENTAL ladder used to derive revenue/GW",
+          "cited_in": [
+            "themes/tokenmaxxing.md"
+          ]
+        },
+        {
+          "value": "$4/GPU-hr (1,500-3,000 GB300s) - NOT ADOPTED: an assumption inside a back-of-envelope, self-flagged (“I don't know what the effective throughput per GPU was”), not a market mark",
+          "source": "@zephyr_z9 (FinTwit), relayed with the Navier-Stokes cost estimate",
+          "date": "2026-09-09",
+          "scope": "ASSUMPTION - not a market observation; ~2x below the two rental marks above",
+          "cited_in": [
+            "OPENAI.md",
+            "themes/tokenmaxxing.md"
+          ]
+        }
+      ],
+      "status": "live-debate",
+      "debate": "OPENED 2026-09-17 by the Dwarkesh/Noam Brown ingest, which showed this number is load-bearing and that the wiki was carrying three unreconciled values. Brown's disclosure that the Navier-Stokes run consumed 130bn tokens over 88 hours with 10,000 agents (host-asserted, researcher-uncontested, NOT ADOPTED) implies 410,354 tokens/sec aggregate and 41 tok/s per agent. Costing that run at @zephyr_z9's own GPU counts but at THIS LEDGER's rental marks gives $0.92M-$2.11M - i.e. WSJ's “millions of dollars” - rather than his published $0.53M-$1.06M at $4/hr. => The 09-09 “order apart” cost dispute this wiki logged as a THROUGHPUT disagreement is at least as likely a $/GPU-HR disagreement, and it was resolvable from marks already on disk. WATCH: (a) any first-party or contracted cost-of-compute mark for a frontier lab - the single most valuable missing number in this metric; (b) whether 2H26 shortage pricing moves the $7-8 spot mark; (c) a paired tokens/sec/GPU benchmark with batch size and interactivity stated, without which no $/GPU-hr converts to $/token."
+    }
+  }
+}

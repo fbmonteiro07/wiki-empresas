@@ -29,10 +29,10 @@ _Generated 2026-09-18 · the standing view of where our model and the curated re
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|
-| ON | 69 | 105 | +52% | street high 150 · low 75 ABOVE spot · 11/19/0 of 30 |
-| CIEN | 344 | 502 | +46% | street high 660 · low 324 below spot · 15/5/1 of 21 |
-| BKNG | 170 | 239 | +41% | street high 301 · low 188 ABOVE spot · 33/9/0 of 42 |
-| MSFT | 493 | 574 | +16% | street high 870 · low 400 below spot · 67/4/0 of 71 |
-| PANW | 359 | 403 | +12% | street high 475 · low 190 below spot · 46/13/1 of 60 |
-| META | 677 | 752 | +11% | street high 1,000 · low 580 below spot · 72/7/0 of 79 |
-| CRWD | 237 | 241 | +1% | street high 425 · low 132 below spot · 41/14/1 of 56 |
+| ON | 70 | 105 | +49% | street high 150 · low 75 ABOVE spot · 11/19/0 of 30 |
+| CIEN | 349 | 502 | +44% | street high 660 · low 324 below spot · 15/5/1 of 21 |
+| BKNG | 168 | 239 | +42% | street high 301 · low 188 ABOVE spot · 33/9/0 of 42 |
+| MSFT | 494 | 574 | +16% | street high 870 · low 400 below spot · 67/4/0 of 71 |
+| META | 666 | 752 | +13% | street high 1,000 · low 580 below spot · 72/7/0 of 79 |
+| PANW | 364 | 403 | +11% | street high 475 · low 190 below spot · 46/13/1 of 60 |
+| CRWD | 238 | 241 | +1% | street high 425 · low 132 below spot · 41/14/1 of 56 |

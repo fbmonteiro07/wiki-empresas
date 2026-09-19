@@ -1,15 +1,24 @@
 # Wiki remediation worklist
 
-_Generated 2026-09-17 · closes the loop on `lint_wiki.py` / staleness.md. Rebuild: `py _wiki/_tools/remediate.py`._
+_Generated 2026-09-18 · closes the loop on `lint_wiki.py` / staleness.md. Rebuild: `py _wiki/_tools/remediate.py`._
 
-## 🔴 BBG estimates missing (0) — scriptable
+## 🔴 BBG estimates missing (1) — scriptable
 
-_none_
+Run (BBG Terminal must be logged in) — `fetch_estimates.py` merges, so this is safe:
 
-## 🟡 No transcript on disk (2) — needs the transcript-fetcher agent
+```
+py "E:\.claude\scripts\fetch_estimates.py" NSCALE
+```
+
+Or auto: `py _wiki/_tools/remediate.py --run-estimates`
+
+NSCALE
+
+## 🟡 No transcript on disk (3) — needs the transcript-fetcher agent
 
 Spawn one `transcript-fetcher` task per name (paste into Claude Code):
 
+- **NSCALE** — "get the latest NSCALE earnings transcript -> `E:\Wiki Felipe empresas\NSCALE\transcripts\`"
 - **POET** — "get the latest POET earnings transcript -> `E:\Wiki Felipe empresas\POET\transcripts\`"
 - **SMTC** — "get the latest SMTC earnings transcript -> `E:\Wiki Felipe empresas\SMTC\transcripts\`"
 

@@ -1,0 +1,196 @@
+# NSCALE — Nscale Limited (pre-IPO · NYSE: NSCL pending)
+
+_Wiki · generated 2026-09-18 · sources: `E:\Wiki Felipe empresas\NSCALE` (S-1 filed 2026-09-18 + 28 exhibits + four DRS drafts Feb–Aug 2026) · press/sell-side relays already on [[ANTHROPIC]], [[MSFT]], [[CRWV]], [[NBIS]]. No BBG consensus (private until pricing). Master index: [00_INDEX.md](00_INDEX.md)._
+
+## Snapshot
+UK "full-stack AI hyperscaler" — a GPU neocloud that owns its power and land. Spun out of Arkon Energy (May 2024), CEO/founder **Josh Payne (32)**. Sells dedicated NVIDIA GPU capacity on **long-term take-or-pay contracts priced per GPU-hour**, billed monthly regardless of utilisation; on-demand is "not a material component". As of **2026-08-31**: **~$103.4bn of active + contracted TCV** (weighted-average life **5.7 years**), **1.37 GW of IT capacity** active + contracted (1 GW owned / 200 MW leased / 165 MW colocation), **461k GPUs** active + contracted (only **25k active**), 5 active + 12 contracted sites, "line of sight" to **~10 GW** of power. Two customers are ~86% of the book: **Microsoft (up to $43.8bn through Dec-2033)** and **Anthropic (up to $44.6bn, Monarch WV, Vera Rubin NVL72, signed 2026-08-25)**. Revenue is still tiny — **$140.6m in 1H26** (from $10.4m), **$33.0m FY25** — against a **$1.02bn 1H26 net loss** and cost of revenue *above* revenue. The whole equity story is the conversion of the $103bn book into ~$18bn/yr of revenue from 2028 while financing ~$50bn/GW of build, with the Anthropic tranche's financing **not yet committed** (S-1 risk factor). Filed 2026-09-18; NYSE listing under **"NSCL"**; ≥$3.1bn of pre-IPO convertible notes (incl. a **$1.0bn NVIDIA** placement) convert at the offering. (All S-1 unless stated.)
+
+## At a glance — product · buyer · supplier
+| | |
+|---|---|
+| **Sells (top 3)** | 1) **Nscale Infrastructure** — dedicated GPU clusters (Vera Rubin NVL72, GB300) on 5-6 yr take-or-pay, $/GPU-hr · 2) **Nscale Cloud** — managed/serverless inference, NKS, Slurm; **Anyscale/Ray** acquisition (Jul-2026, equity, closes at IPO) is the control layer · 3) colocation space for customers' CPU/storage (e.g. 6 MW air-cooled for Microsoft at Kvandal North) |
+| **Main buyer(s)** | **Microsoft** — SOWs Sep-2025→Apr-2026, up to **$43.8bn** through Dec-2033, 5-6 yr tranche terms (Norway Kvandal North VR200, SINES Portugal 12,600 GB300 + >66,000 VR NVL72 from late-2027, Texas, UK; took OpenAI's Stargate Norway capacity after OpenAI withdrew Apr-2026) · **Anthropic** — up to **$44.6bn**, 4 tranches at Monarch (460 MW IT) · **Figure AI** — up to 100k VR GPUs from 2H27 (Nscale also takes equity) · legacy: an unnamed customer = 73% of FY25 revenue (→ <20% of FY26); Pega Nordic = 93% of FY24 (ended Dec-2024) |
+| **Key suppliers** | **[[NVDA]]** — GPUs; >5% shareholder (Series B, $400m); guarantees up to **$860.3m** of the Ward County TX lease for **$60m of warrants**; **$1.0bn "NVIDIA Sale"** at IPO · **[[DELL]]** — servers + **Dell Financial Services** lease framework (**$2.54bn** initial-term rent) · power: Monarch behind-the-meter gas (2 GW gross), Norwegian hydro (Aker JV, Glomfjord/Kvandal), Iceland, Portugal (SINES) · lenders: JPM/GS (Ward County **$1.85bn**, North Carolina **$1.2bn** GPU facilities, revolver), Macquarie, ABN/DNB/Nordea (Kvandal South **$790m**), Export Finance Norway |
+
+## Position in the value chain
+Nscale is the **power-first** variant of the neocloud model: it buys land + power in low-cost markets (Norway, Iceland, Portugal, West Virginia gas), builds modular liquid-cooled halls, fills them with NVIDIA racks and rents them wholesale to two counterparties with strong credit. Its edge is the **10 GW power pipeline** and the price it can charge for it; its fragility is that **86% of the book is two customers**, the flagship tranche (Anthropic/Monarch) is **unfinanced**, and the cash model depends on **customer prepayments** (deferred revenue **$6.5bn** at Jun-30-2026 vs **$137m** of drawn debt) plus asset-level facilities. Read-through: [[NVDA]] (backstop/warrant pattern, allocation), [[MSFT]] (off-balance-sheet capacity), [[ANTHROPIC]] (compute book), [[CRWV]]/[[NBIS]] (the listed comps — Nscale prices its capacity **below** both of their 2026 term marks, see the model below), [[DELL]], [[GEV]]/[[BE]]/[[WMB]] (behind-the-meter gas at Monarch).
+
+<svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="12">
+  <rect x="10" y="40" width="170" height="130" rx="8" fill="#eef4ff" stroke="#4477cc"/>
+  <text x="95" y="60" text-anchor="middle" font-weight="bold">Suppliers</text>
+  <text x="95" y="82" text-anchor="middle">NVIDIA (VR NVL72, GB300)</text>
+  <text x="95" y="100" text-anchor="middle">Dell / DFS leases $2.5bn</text>
+  <text x="95" y="120" text-anchor="middle">Power: BTM gas 2 GW, hydro</text>
+  <text x="95" y="138" text-anchor="middle">GPU facilities $1.85bn + $1.2bn</text>
+  <text x="95" y="156" text-anchor="middle">Prepayments $6.5bn deferred rev</text>
+  <rect x="270" y="40" width="180" height="130" rx="8" fill="#fff4e6" stroke="#dd8822"/>
+  <text x="360" y="62" text-anchor="middle" font-weight="bold">Nscale</text>
+  <text x="360" y="84" text-anchor="middle">power-first GPU neocloud</text>
+  <text x="360" y="104" text-anchor="middle">1.37 GW IT · 461k GPUs</text>
+  <text x="360" y="126" text-anchor="middle">TCV $103.4bn · 5.7 yrs</text>
+  <text x="360" y="146" text-anchor="middle">1H26 rev $141m · NL $(1.0)bn</text>
+  <rect x="540" y="40" width="170" height="130" rx="8" fill="#eafbea" stroke="#33aa55"/>
+  <text x="625" y="60" text-anchor="middle" font-weight="bold">Customers</text>
+  <text x="625" y="82" text-anchor="middle">Microsoft ≤$43.8bn</text>
+  <text x="625" y="100" text-anchor="middle">Anthropic ≤$44.6bn</text>
+  <text x="625" y="118" text-anchor="middle">Figure AI (100k VR)</text>
+  <text x="625" y="136" text-anchor="middle">sovereign / enterprise</text>
+  <line x1="180" y1="105" x2="268" y2="105" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="450" y1="105" x2="538" y2="105" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="360" y="195" text-anchor="middle" fill="#aa3333">$13bn/GW/yr contracted vs ~$50bn/GW to build — and the Anthropic tranche is not yet financed</text>
+  <defs><marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#333"/></marker></defs>
+</svg>
+
+Themes: [ai-datacenter-power](themes/ai-datacenter-power.md) · [hyperscaler-capex](themes/hyperscaler-capex.md) · [tokenmaxxing](themes/tokenmaxxing.md).
+
+## The S-1 in numbers (filed 2026-09-18, data as of 2026-08-31 unless stated)
+**Book and capacity**
+| Metric | Value | Note |
+|---|---|---|
+| TCV, active + contracted | **$103.4bn** | take-or-pay; measured at signing; **excludes** options, extensions, unexercised capacity and the significant financing component |
+| TCV, active | $2.6bn | contracts already generating revenue |
+| Weighted-average contract life | **~5.7 yrs** | 5.6 (Feb DRS) → 5.5 (May/Jun/Aug) → 5.7 (S-1, after Anthropic) |
+| Remaining performance obligations | **$56.4bn** at 2026-06-30 (incl. **$7.1bn** financing component) | $34.5bn at 2025-12-31 (incl. $4.6bn); recognised over ~7 years; 16%/40%/44% in yrs 1-2 / 3-4 / 5-7 (Dec-25 mix) |
+| Capacity, active + contracted | **~1.37 GW IT** = 1,005 MW owned + 200 MW leased + 165 MW colo | **IT megawatts** (glossary) — never compare to gross/facility MW |
+| Capacity, active | **81 MW IT** (5 sites) | 30 PT colo · 6 + 5 NO colo · 15 IS colo · 25 NO owned (Glomfjord) |
+| GPUs active / active + contracted | **~25,000 / ~461,000** | 172k GPUs added in August alone (Anthropic + one 70 MW US owned site) |
+| Power line of sight | **~10 GW** | owned / long-term control / power procurement, post-Monarch |
+| Microsoft SOWs | up to **$43.8bn** through Dec-2033 | 5-6 yr terms from acceptance of each tranche; only a 6-month optional extension |
+| Anthropic Services Agreements (2026-08-25) | up to **$44.6bn** | 4 agreements (one per tranche, each with a separate SPV, e.g. "Nscale GPU MCC B1.1 LLC"), VR NVL72 at Monarch; stricter SLAs; **financing "best efforts", no binding commitments** as of the S-1; longstop termination right for either party |
+| Purchase commitments, technology equipment | **$24.0bn** at 2026-06-30 | payable mostly 2026-27 — *before* the Anthropic tranche |
+
+**P&L ($m)** — cost of revenue **exceeds revenue** because colocation and power costs run ahead of the ramp:
+| | FY24 | FY25 | 1H25 | 1H26 |
+|---|--:|--:|--:|--:|
+| Revenue | 19.1 | 33.0 | 10.4 | **140.6** |
+| Cost of revenue (ex-D&A) | 12.8 | 45.6 | 7.8 | 189.6 |
+| Product & technology | 8.9 | 19.9 | 7.9 | 51.3 |
+| SG&A | 8.4 | 97.1 | 15.5 | 217.7 |
+| D&A | 5.1 | 40.2 | 3.9 | 174.0 |
+| Operating loss | (16.1) | (169.8) | (24.7) | **(492.0)** |
+| Loss on fair-value adjustments (warrants: Sandton, NVIDIA) | (40.2) | (527.8) | (348.9) | (457.1) |
+| Interest expense, net | (12.7) | (12.9) | (2.2) | (95.1) — mostly the imputed financing component on prepayments |
+| Net loss | (78.2) | **(761.8)** | (368.9) | **(1,020.1)** |
+| Adj. EBITDA | — | — | (15.3) | **(199.2)** (−142% margin) |
+
+**Balance sheet 2026-06-30 ($m):** cash 1,478.4 · PP&E 5,727.5 · goodwill + intangibles 4,070.2 (AIPCorp/Monarch, Future-tech) · ROU assets 2,650.2 · total assets **17,252.0** · deferred revenue **1,217.9 current + 5,274.7 non-current = 6,492.6** (customer prepayments; $2,038.7 at Dec-25) · lease liabilities 225.7 + 2,399.7 · AP/accrued 1,410.6 · drawn debt only **137.4** · deferred tax 971.8 · total liabilities 12,359.8 · equity 4,792.2. **Cash flow 1H26:** operating **+1,686.1** (prepayments; FY25 +1.4bn on $2,030.1 received in advance) · capex **(3,230.1)** · investing (3,285.8).
+
+**Capital stack (S-1):** series financing **>$3.3bn** cumulative — Series B (NVIDIA $400m for 63.2m shares ≈ $6.33/sh; Aker $285m), **Series C 2026-03-27: $1.64bn at $20.39/sh** (+$118.3m 2026-04-30; SAFE conversion $18.35) · **2026-09-15: ≥$3.1bn unsecured convertible loan notes** ($2.1bn + **$1.0bn NVIDIA Sale** closing ~2026-11-16), auto-convert at IPO (NVIDIA into non-voting shares) · debt: GPU Financing Facility **$1.4bn** (Feb-26), JPM revolver (May-26), Kvandal South DC **$790m** (Jul-26), Macquarie Iceland **$331.9m** (Jul-26), **Ward County GPU $1.85bn** and **North Carolina GPU $1.2bn** (both 2026-08-27, JPM/GS, floating SOFR+237.5bp), DFS **$2.54bn**, Macquarie Senior (Drift II), Sandton. **NVIDIA lease guarantee:** $60m of warrants (9.48m Series B, $0.01 strike) for guaranteeing up to **$860.34m** of the Ward County TX lease (Ionic Digital's S-1: 126-month triple-net, 234 MW, NVIDIA covers years 1-5 — ENC, 2026-09-11). Shareholders of note: Aker DC Holding, Sandton, NVIDIA, Josh Payne. Board: Nick Clegg, Susan Decker, Øyvind Eriksen (Aker), Jacob Leschly, Rael Nurick, Sheryl Sandberg, Fidji Simo. Auditor KPMG. IPO award: 40% of the CEO's grant vests on **megawatts deployed under the key commercial agreements**.
+
+**Concentration:** largest customer 52% of 1H26 revenue, 73% of FY25 (that customer → <20% of FY26), 93% of FY24. Geography 1H26: Portugal 52%, Norway 45%. Leased sites = ~15% of MW (Texas).
+
+## Site portfolio (S-1 "Facilities" table — site names are our mapping, the filing lists country/type/MW only)
+| # | Country | Type | IT MW | Status | Our mapping (inference from S-1 text, exhibits, press) |
+|--:|---|---|--:|---|---|
+| 1 | Portugal | Colo | 30 | Active | SINES building 1 — Microsoft 12,600 GB300 |
+| 2-3 | Norway | Colo | 6 + 5 | Active | legacy Norway colo |
+| 4 | Iceland | Colo | 15 | Active | Iceland III (Macquarie facility) |
+| 5 | Norway | Owned | 25 | Active | **Glomfjord** (refurbished 2025) |
+| 6 | Norway | Colo | 9 | Contracted | added Aug-26 |
+| 7 | UK | Colo (Tier 1) | 20 | Contracted | Stargate UK / Loughton-type sovereign capacity |
+| 8 | Iceland | Colo | 16 | Contracted | Iceland expansion |
+| 9 | US | Colo | 40 | Contracted | **North Carolina** ($1.2bn GPU facility) |
+| 10 | Indonesia | Colo | 24 | Contracted | APAC entry |
+| 11 | US | **Leased** | **200** | Contracted | **Ward County, TX** (Ionic lease, NVIDIA-guaranteed; Microsoft GB300 — Oct-2025 announcement, not named in the S-1) |
+| 12 | US | Owned | 70 | Contracted | new US owned site (Aug-26) — customer not disclosed |
+| 13 | Portugal | Owned | 200 | Contracted | **SIN02** — Microsoft >66,000 VR NVL72 from late-2027 (acquired 2026-04-24, €469m) |
+| 14 | UK | Owned (Tier 1) | 50 | Contracted | UK owned campus |
+| 15 | Norway | Owned | 100 | Contracted | **Kvandal North** (Narvik) — Microsoft VR200 SOW (exhibit 10.19) |
+| 16 | Norway | Owned | 100 | Contracted | **Kvandal South** — Stargate Norway ($790m DC facility); Microsoft took OpenAI's share |
+| 17 | US | Owned | **460** | Contracted | **Monarch Compute Campus, Mason County WV — Anthropic**, 4 tranches VR NVL72 |
+| | | | **1,370** | | 81 active + 1,289 contracted |
+
+**Monarch (AIPCorp, acquired 2026-03-31):** ~2,250 acres; **2 GW gross behind-the-meter generation = 1.37 GW IT** expected online **by 1H28**; runway **8 GW gross / 6.5 GW IT by 2031**; "one of the first state-certified AI micro-grids". Press: ~$71bn campus capex (~$47bn chips), first of three buildings totalling ~1.35 GW, off-grid gas + batteries; the site had been reserved by **Microsoft under a March LOI** before Microsoft walked away (Rothschild Redburn, 2026-08-27; corroborated by a Kodiak/OFS call relay, 2026-08-27). ⚠️ **Gross ≠ IT: Monarch's own numbers give a 0.685 IT/gross ratio — a $/GW quoted on gross MW is ~31% lower than the same contract on IT MW.**
+
+## Drift across the drafts (the DRS trail is the history)
+| Draft (data as of) | GPUs active / active + contracted | Sites | Capacity | TCV | WAL |
+|---|---|---|---|---|---|
+| DRS 2026-02-17 (Dec-31-2025) | — / ~242k | 11 active | **677 MW "active power"** (older, power-basis metric) + ~3 GW pipeline | $38.0bn; RPO $34.5bn | 5.6 |
+| DRS/A 2026-05-12 (Apr-30) | — / 284k | 13 operating | 807 MW active + contracted; **10 GW** line of sight (post-Monarch) | $50.2bn | 5.5 |
+| DRS/A 2026-06-26 (May-31) | 20k / 284k | 4 + 9 | 807 MW (475 owned / 200 leased / 132 colo) | $50.2bn | 5.5 |
+| DRS/A 2026-08-12 (Jul-31) | 25k / 289k | 5 + 9 | 831 MW (475 / 200 / 156) | $2.6bn active / $51.3bn; RPO $56.4bn (Jun-30) | 5.5 |
+| **S-1 2026-09-18 (Aug-31)** | **25k / 461k** | **5 + 12** | **1,370 MW (1,005 / 200 / 165)** | **$2.6bn / $103.4bn** | **5.7** |
+
+➤ The book **doubled in August** on one signature: +$52.1bn TCV, +172k GPUs, +539 MW (Monarch 460 + a 70 MW US owned site + 9 MW Norway colo). The metric definition also moved: "active power" (677 MW, Feb) became "active *and contracted* IT capacity" (May onwards) — the Feb figure is not comparable to the later series. Microsoft's $43.8bn was already in the Feb–Aug drafts; Anthropic is the only new large counterparty.
+
+## Revenue per GW — the model (Capstone, 2026-09-18 · skeptic-audited: PARTIAL → corrections folded in, see verdict)
+**Question:** what revenue does a gigawatt of Nscale capacity earn? **Answer (contract cash basis, per IT-GW per year): ~$13.2bn blended across the $103.4bn book · ~$16.4bn on the August cohort (Anthropic + two small sites; Anthropic alone ~$16.2bn) · ~$11.2bn on the pre-August book ($11.8bn excluding the legacy active fleet) · ~$5.6bn on the legacy fleet that is actually live today.** Equivalently **~$4.5/GPU-hr blended, ~$5.8/GPU-hr for Anthropic** on take-or-pay hours. GAAP revenue will print **~14% above** these because RPO carries a financing component on prepayments. ⚠️ The $13.2bn is a **Vera Rubin / GB300 forward book number, not a run-rate**: only 81 MW of the 1,370 MW is active, and realised 1H26 revenue annualises to only **~$3.5M/MW** on the ramping legacy fleet.
+
+**Inputs and how grounded they are** (🟢 HARD = in the S-1/exhibits · 🔵 PARTIAL = sourced range, point is ours · 🟡 ESTIMATE = ours):
+- 🟢 TCV **$103.4bn** (active $2.6bn), WAL **5.7 yrs**, capacity **1,370 MW IT** (Facilities table sums to 81 active + 1,289 contracted), GPUs **461k / 25k active**; Jul-31 draft **$51.3bn / 5.5 yrs / 831 MW / 289k GPUs**; RPO **$56.4bn incl. $7.1bn** financing component + **$2.0bn** of ASC 842 minimum lease payments (Jun-30); Dec-25 RPO run-off **16% / 40% / 44%** over yrs 1-2 / 3-4 / 5-7.
+- 🟢 Anthropic **$44.6bn** ("up to"); **460 MW IT** = the US-owned 460 MW contracted row (the only site of that size; matches the 460 MW press figure; the S-1 names Monarch as the Anthropic site). Microsoft **$43.8bn**, terms **5-6 yrs**. SIN02: **200 MW owned for >66,000 VR NVL72**.
+- 🟢→🔵 Anthropic term **~6 yrs**: press said six (Rothschild Redburn / The Information, 08-27); the filing implies it — the WAL moved 5.5 → 5.7 when $52.1bn was added, which back-solves the August cohort to **5.75-6.05 yrs** (allowing for rounding of both WALs).
+- 🔵 Monarch build cost **~$52.6bn/GW incl. GPUs** (Redburn: ~$71bn / 1.35 GW). 🟡 Microsoft MW attribution **550-650 MW** (TX 200 + SINES 30 + SIN02 200 + Kvandal N 100 + Kvandal S 100 + UK 20). 🟡 Whether the **Figure AI** agreement (2026-08-24, "potential" 100k VR GPUs from 2H27) sits inside the $103.4bn — see the bound below.
+
+**Arithmetic (one path, end to end):**
+1. Annualised contracted book = TCV ÷ WAL = **$103.4bn ÷ 5.7 = $18.1bn/yr** — the **full-deployment run-rate (2028+)**, not a near-term flow (the S-1 recognises the Jun-30 RPO "over the next 7 years").
+2. Blended revenue per IT-GW = **$18.1bn ÷ 1.37 GW = $13.2bn/GW/yr**.
+3. **Two filed cohorts, no allocation needed:** the Jul-31 book = **$51.3bn ÷ 5.5 ÷ 0.831 GW = $11.2bn/GW/yr** (Microsoft-heavy Blackwell + legacy; **$11.8bn** on the contracted-only part: $48.7bn ÷ 5.5 ÷ 0.75 GW); the August cohort = **$52.1bn ÷ 5.9 ÷ 0.539 GW = $16.4bn/GW/yr** (range $16.0-16.8 for the 5.75-6.05 life).
+4. Anthropic alone = **$44.6bn ÷ 6 ÷ 0.46 GW = $16.2bn/GW/yr**. The other **$7.5bn of August TCV** maps to the other August adds — a 70 MW US owned site + 9 MW Norway colo — at ~$16.7bn/GW/yr if fully attributed.
+5. Per GPU-hour: blended **$103.4bn ÷ 5.7 ÷ 461k ÷ 8,760 h = $4.49**. August adds were **172k GPUs over 539 MW = 3.13 kW/GPU** (Vera Rubin class); Anthropic's share ≈ 172k × 460/539 ≈ **147k GPUs** → **$44.6bn ÷ 6 ÷ 147k ÷ 8,760 = $5.78/GPU-hr**. (Redburn's 08-27 ~146.5k GPUs / $5.84 / ~$16.3bn is the *same* $45bn-6yr-460MW arithmetic — a replication from the filed inputs, not an independent confirmation.)
+6. **Vintage ladder** (why the blend is a forward number): legacy active fleet **$2.6bn ÷ 5.7 ÷ 0.081 GW ≈ $5.6bn/GW/yr** (H100/H200-era colo + the Glomfjord infrastructure contract), realised **1H26 $140.6m × 2 ÷ 81 MW ≈ $3.5M/MW** (still ramping) → Blackwell wholesale **$11.2-11.8bn** → Vera Rubin wholesale **$16.2-16.4bn**.
+
+**Guardrails (each uses a check that is *not* derived from the Nscale arithmetic being tested):**
+- 🟢 **Density, filing-internal:** SIN02 is **200 MW for >66,000 VR NVL72 = 330 GPU/MW = 3.03 kW/GPU**; the August adds imply **3.13 kW/GPU**; the whole book **336 GPU/MW = 2.97 kW/GPU** — consistent with a VR-heavy book (GB300 ~1.9-2.1 kW, VR ~2.6-3.2 kW incl. CPU/network).
+- 🟢 **Stock vs stock:** RPO (ASC 606) ex-financing $56.4bn − $7.1bn = $49.3bn **+ $2.0bn of lease-accounted (ASC 842) contracts = $51.3bn at Jun-30 — exactly the Jul-31 TCV of $51.3bn.** (TCV is a *stock*; the $/yr figures are *flows* — never compare TCV to annual revenue.)
+- 🟢 **Independent price anchors for the Blackwell wholesale cohort ($11.2-11.8bn):** [[NBIS]]'s **$12M/MW "2026 base capacity"** (Q2'26 letter, 2026-08-12 — its *legacy hyperscaler-backed* contracts, the like-for-like cohort, described by Nebius as "substantially lower economics"); SemiAnalysis's **~$12M/MW/yr** for Microsoft's IaaS to OpenAI (podcast, 2026-08-07, a round number); Redburn's Blackwell rental band **$10-15bn/GW/yr** (08-27). All three are contract-price bases (not GAAP), all round numbers — read as "consistent within ~10%", not as a precise match. The blended $13.2bn sits at the top of the wiki's canonical **$12-13bn/GW merchant-GPU** mark ([_meta/assumptions](_meta/assumptions.md) `rev-per-gw`). ⚠️ 22V's "$16M/MW/yr floor" (09-01) is **not** counted — it was derived *from* this Anthropic/Nscale deal and would be circular.
+- 🟢 **$/GPU-hr direction:** Anthropic's $5.78 is ~23% below GB300 merchant spot ($7-8 Cantor/CoreWeave 06-18; $7-10 MS Nowak 08-12; $7.80 SpaceX→Anthropic) — the expected discount for a 6-year take-or-pay wholesale contract with prepayments, on a newer chip.
+- 🟡 **Figure bound:** if the ~$7.5bn of non-Anthropic August TCV were Figure with **no** MW yet in the 1,370 MW, the blend would be **$12.3bn/GW/yr (−7%)**. The filing is silent; the evidence favours the MW being in the table (172k GPUs over 539 MW reconcile, and $7.5bn ≈ 25k VR GPUs ≈ the 79 MW of non-Anthropic adds), and Figure is described as "potential" capacity, which the TCV definition excludes.
+- ⚠️ **GAAP basis:** financing component ÷ ex-financing RPO = 7.1/49.3 = **14.4%** → reported revenue per GW ≈ **$15.1bn** blended, with the offset in interest expense (1H26 interest $95.1m was "primarily" this). Never compare a GAAP rev/GW to a contract $/MW mark without stripping it.
+- 🔵 **Capex cross-check (Redburn's $52.6bn/GW):** revenue payback **3.3 yrs**; TCV ÷ capex = 44.6 ÷ (0.46 × 52.6) = **1.84x**; revenue yield **$0.31 per $1 of capex per year** vs CoreWeave's illustrative **$0.40-0.44** on a 4-yr GB200-era contract (DB, 2025-06-16, on [[CRWV]]). Less revenue per capex dollar per year, over a longer term — the equity NPV is in years 5-6 and in re-contracting, exactly CoreWeave's structure.
+
+**Sensitivity (what moves the answer):**
+| Lever | Range | Blended $/GW/yr | Anthropic $/GW/yr |
+|---|---|--:|--:|
+| WAL 5.5 / 5.7 / 6.0 yrs | HARD point, ±0.3 | 13.7 / **13.2** / 12.6 | — |
+| Anthropic term 5.5 / 6 / 6.5 yrs (filing-implied 5.75-6.05) | | — | 17.6 / **16.2** / 14.9 |
+| "Up to" TCV realised at 90% | delivery/SLA haircut | 11.9 | 14.5 |
+| Figure TCV with no MW in the table | numerator | **12.3** | — |
+| **Gross-MW basis** (Monarch 2 GW gross ↔ 1.37 GW IT) | basis trap | ×0.685 | **11.1 per gross GW** |
+| Anthropic GPUs = all 172k Aug adds (not 147k) | attribution | — | $4.93/GPU-hr (vs 5.78) |
+The load-bearing input is the **term** (one year ≈ 15% on the Anthropic figure); the next is the Figure attribution (≤7% on the blend). Everything else is filed.
+
+**What it says about the neocloud pricing ladder (the useful read):** the 2H26 shortage did **not** lift *wholesale* pricing: Microsoft-heavy Blackwell at ~$11-12bn and even the new Vera Rubin lab tranche at ~$16bn both sit **far below** [[NBIS]]'s Q2'26 1-3 yr term deals (**$20-25M/MW**) and the 3-6 month spot marks (**$40-50M/MW**; [[CRWV]] ~$40M/MW short-dated, Barclays 09-17). The spread is **customer tier, not chip generation**: hyperscaler/lab 5-6 yr take-or-pay ~$11-16bn · merchant 1-3 yr term ~$20-25bn · spot ~$40-50bn per IT-GW. Model a neocloud by its customer tier first, chip second. The VR-vs-Blackwell step-up inside the wholesale tier is ~+40-45% per GW (fewer, pricier GPUs per MW).
+
+**2027 bound (filed run-off, not a guess):** of the Dec-25 RPO of $34.5bn, "approximately 16% is expected to be recognized in the next two years" = **~$5.5bn of GAAP revenue across 2026 + 2027 combined**; the Anthropic tranche (Monarch "by 1H28") adds ~nothing to 2027, and 2026 signings add only what goes live during the year. That puts **2027 revenue at roughly $4-7bn (GAAP, incl. the financing component)** against a **$18bn/yr run-rate only from 2028 once all 1,370 MW is active**. ⚠️ **The Information's (2026-07-30) "2027 revenue tripling to ~$30bn" is not supportable from the filed book** — unreconciled; treat it as a pre-S-1 pitch number until the price-range amendment shows a projection.
+
+⚠️ **Trap to carry:** "1.37 GW" appears twice in the S-1 with different meanings — the whole portfolio (active + contracted, 17 sites) and **Monarch's phase-1 IT load** (2 GW gross). Coincidence; Anthropic's 460 MW is one of three Monarch buildings.
+
+**Skeptic verdict (double-check agent, 2026-09-18): PARTIAL → all HARD inputs verified line-by-line (Facilities sum 1,370; row 17 = US owned 460; glossary IT-MW; TCV/WAL/GPU/RPO figures; DRS WAL series). Corrections adopted: Figure bound; RPO check completed with the $2.0bn ASC 842 line (now exact); 2027 bound rebuilt on the 16% run-off; vintage ladder (active $5.6bn/GW, realised $3.5M/MW) added to stop the blend reading as a run-rate; Anthropic term upgraded to filing-implied via the WAL blend; Redburn labelled replication. Pushed back on one point: the NBIS $12M/MW base and the SemiAnalysis $12M/MW are contract-price bases like TCV (no GAAP mismatch) and the base cohort *is* the like-for-like comparator — wording softened from "−1.6%" to "consistent within ~10%". No per-GPU-hour or $/MW price is recoverable from the exhibits (every figure is redacted).**
+
+## Debate / thesis
+- **Bull:** (1) **The book is filed, not rumoured** — $103.4bn TCV / 5.7 yrs with Microsoft and Anthropic as counterparties, take-or-pay, priced per GPU-hour regardless of utilisation; (2) **power is the moat** — 10 GW under ownership/control incl. a state-certified 8 GW gross BTM campus, electricity "~70% below major US markets" (company claim), and Anthropic chose Monarch over a hyperscaler LOI; (3) **the customer funds the build** — $6.5bn of prepayments on the balance sheet vs $137m of drawn debt, 1H26 operating cash flow +$1.7bn while EBITDA is −$199m; (4) **NVIDIA is inside the cap table and the credit** ($400m Series B, $1.0bn at IPO, $860m lease guarantee) — the backstop pattern this wiki logged on [[SMCI]]/[[NBIS]] (GS AI Project Pulse, 07-31); (5) 6-year terms from Anthropic are the best third-party evidence yet on GPU useful life (22V, 09-01).
+- **Bear:** (1) **Unfinanced flagship** — the S-1 states no binding commitments for the Anthropic tranche's GPUs or data centre; the contract has a financing longstop and site exclusivity until then; (2) **two customers = 86%**; Microsoft has already walked from one Nscale site (Monarch LOI) and OpenAI walked from Stargate Norway/UK; (3) **unit economics are wholesale, not merchant** — $12-16bn/GW/yr against ~$50bn/GW to build is a 3.3-yr revenue payback and 1.8x TCV/capex, thinner than NBIS's "<2-yr payback" Q2 cohort; (4) **P&L quality** — cost of revenue > revenue, D&A ramping ($174m in 1H26), $457m of warrant fair-value losses, and GAAP revenue inflated by an imputed financing component that is also booked as interest expense; (5) **execution** — 25k of 461k GPUs live; Monarch needs 2 GW of turbines/batteries by 1H28 in a market where [[GEV]] is sold out through 2030 and switchgear runs ~18 months ([ai-datacenter-power](themes/ai-datacenter-power.md)); Anthropic's SLA terms are "more stringent" than any other contract; (6) **valuation frame** — bankers floated ~$25bn (The Information, 07-30) vs Series C at $20.39/sh (~$14.6bn, Mar-26) while listed comps de-rated (CRWV −25% in the month to 07-30).
+- **Where the Street stands:** no initiations yet (quiet period). Pre-filing marks: Rothschild Redburn (08-27) $45bn/6yr/460MW → ~$16.3bn/GW/yr, ~$5.84/GPU-hr, campus capex ~$52.6bn/GW; 22V Research (09-01) reads the deal as a **$16M/MW/yr long-term floor, +60% vs the ~$10M/MW deals of the prior year**, bullish for [[CRWV]]/[[NBIS]]/[[SPCX]]; The Information (07-30, 09-03): ~$25bn floated valuation, "$103bn contracted revenue" (a person familiar called the projections "illustrative"); GS AI Project Pulse (07-31) on the NVIDIA backstop programme; ENC (09-11) on NVIDIA's $860m Ward County guarantee inside a $108.5bn guarantee line. A Kodiak/OFS call (btm, 08-27) puts Ward County at **240 MW scalable to 1.2 GW** (on-site gas gensets).
+
+## Customer concentration & the Microsoft / Anthropic web
+Microsoft's SOWs (exhibit 10.19 is the Kvandal North VR200 SOW): 3 tranches, per-GPU-hr price for years 1-5 and a separate year-6 price, **Upfront Payment 1 at signing + Upfront Payment 2 ninety days before each delivery**, monthly billing thereafter scaled down for the prepayment, **100% daily-bill delay credits**, Microsoft termination right if a tranche is >60 days late, **step-in rights** over the SPV/colocation operator on insolvency, and NVIDIA-caused delays extend the term "to maintain the 6-year weighted average duration" rather than shrink the TCV. Tranche 2's example delivery date is **2027-09-28**. Anthropic's order (exhibit 10.25): four SPVs at one site, single-tenant VR NVL72, fee = hours × GPUs × $/GPU-hr less SLA credits, late-delivery discounts stepping up with delay, a **next-generation GPU substitution option** priced off VR at launch, and **no third-party capacity sales at the site until Qualifying Financing** is in place. ➤ Both contracts push financing risk onto Nscale and prepayment risk onto the customer — which is why the deferred-revenue line, not debt, is the liability to watch.
+
+## Catalysts / what to watch
+- **IPO pricing and NYSE listing ("NSCL")** — no date set; press expected "as soon as October" (The Information, 07-30). Watch the price-range amendment for the first projection and for the Anyscale share count.
+- **Anthropic Qualifying Financing** — longstop date redacted; "no binding commitments" at filing. The single gating item for the $44.6bn tranche (and for the 2028 revenue).
+- 2026-11-16 — **NVIDIA Sale** ($1.0bn convertible notes / non-voting shares) expected to close on or around this date.
+- 2027-09-28 — Microsoft Kvandal North **Tranche 2 delivery date** (SOW example) — a filed, checkable milestone.
+- 2027-07-01 — Figure AI initial Vera Rubin GPUs targeted "2H27" (approximate).
+- 2027-12-31 — SIN02 Portugal: >66,000 VR NVL72 for Microsoft "starting late 2027".
+- 2028-06-30 — Monarch **2 GW gross / 1.37 GW IT online "by 1H28"** (Anthropic tranches; the wiki's first neocloud milestone tied to on-site gas turbines).
+- 2031-12-31 — Monarch expansion to ~8 GW gross planned.
+- Any Microsoft capacity release or OpenAI-style withdrawal (precedents: Monarch LOI, Stargate Norway/UK).
+
+## Risks
+- Financing: Anthropic tranche unfinanced; $24bn of equipment commitments due 2026-27; floating-rate facilities (SOFR); covenants restrict upstreaming cash.
+- Concentration: Microsoft + Anthropic ≈ 86% of TCV; a single Norway customer was 73% of FY25 revenue.
+- Delivery/SLA: "more stringent" Anthropic SLAs; 60-day termination triggers in the Microsoft SOWs; NVIDIA allocation is the only excused delay.
+- Power/permitting: 2 GW of BTM gas + batteries by 1H28; New York 50 MW moratorium and Texas audit regime cited in the filing.
+- Accounting: significant financing component inflates revenue and interest simultaneously; warrant fair-value swings; goodwill/intangibles $4.1bn from AIPCorp.
+- Governance: founder-CEO aged 32 with a MW-deployment-linked mega-grant; Aker and NVIDIA as strategic holders; UK plc re-registration.
+
+## Sources
+- **S-1 (2026-09-18):** [`../NSCALE/NSCALE_S-1_2026-09-18_0001193125-26-395475.html`](../NSCALE/NSCALE_S-1_2026-09-18_0001193125-26-395475.html) — Prospectus Summary, Risk Factors (customer concentration, Anthropic financing), MD&A (business model, RPO, liquidity), Business (Customers and Business Model, Facilities table), F-pages.
+- **Exhibits:** `../NSCALE/S-1_exhibits/` — 10.19 Microsoft SOW (Kvandal North, VR200), 10.25 Anthropic Order for GPU Services (VR NVL72), 10.23/10.24 Ward County and North Carolina GPU credit agreements, 10.21 Kvandal South facility, 10.14-10.17 GPU Financing Facility, 10.18 JPM revolver, 10.20 Dell Financial Services framework, 21.1 subsidiaries.
+- **DRS drafts:** `../NSCALE/DRS_drafts/` — 2026-02-17, 05-12, 06-26, 08-12 (the drift table above).
+- **Press / sell-side relays (on other pages):** Rothschild Redburn TMT Daily 2026-08-27 ([[ANTHROPIC]], [[MSFT]]); The Information 2026-07-30 (Valida Pau) and 2026-09-03 (Weinberg/Pau) ([[CRWV]], [[ANTHROPIC]]); 22V Research · Dauvin Peterson 2026-09-01 ([[NBIS]]); Susquehanna weekly 2026-09-05 ([[ANTHROPIC]]); ENC "Nvidia's Backstop Universe" 2026-09-11 ([`relatórios bons`](../relat%C3%B3rios%20bons/2026_09_11_ENC_Nvidias_Backstop_Universe_Heads_I_Win_Tails_Who_Loses_email.html)); Kodiak/OFS call relay 2026-08-27 ([btm](../relat%C3%B3rios%20bons/2026_08_27_btm.html)); GS AI Project Pulse 2026-07-31 ([[SMCI]]); "Nscale's People & Partners Bolster Pre-IPO Execution Credibility" 2026-08-28 (3-page PDF in `relatórios bons`, image-only render — body unread).
+- **Model:** the arithmetic above; script kept in the session scratchpad (`nscale_rev_per_gw.py`), inputs all cited inline.
+
+## Changelog
+- 2026-09-18 — page created from the S-1 filed the same day (+ 28 exhibits + 4 DRS drafts pulled to `NSCALE/`). Added to the "Systems & neoclouds" index section, graph edges (NVDA→NSCALE, DELL→NSCALE, NSCALE→MSFT, NSCALE→ANTHROPIC; competes CRWV/NBIS), and two variants in `rev-per-gw`. Supersedes press figures already on the wiki: Anthropic deal **$45bn → $44.6bn "up to"** (S-1); Anthropic MW **460 MW (press) → 460 MW IT (filed Facilities row)**; "$103bn contracted revenue" (The Information 09-03) → **$103.4bn TCV, 5.7-yr WAL**; "$100bn+ contracted revenue" headline confirmed. Skeptic (double-check agent) on the rev-per-GW model: PARTIAL — all filed inputs verified; corrections folded in (Figure-AI bound −7% worst case; RPO check completed with the $2.0bn ASC 842 line, now exact vs the Jul-31 TCV; 2027 bound rebuilt on the filed 16% RPO run-off → ~$4-7bn GAAP; vintage ladder added — active fleet ~$5.6bn/GW, realised ~$3.5M/MW; Anthropic 6-yr term upgraded to filing-implied 5.75-6.05 via the WAL blend; Redburn labelled replication). Headline unchanged: ~$13.2bn per IT-GW/yr blended · ~$16.2bn Anthropic · ~$11.2-11.8bn pre-August book.

@@ -139,7 +139,11 @@ def build_block(ticker, est_co, house_co):
     is_house = bool(house_co)
     if is_house:
         yrs = house_co.get("years", {})
-        usd_ok = ccy == "USD"  # house revenue is $bn; only overlay rev when page ccy is USD too
+        # house revenue is quoted in bn of the currency shown in the row label ("Revenue ($bn)", "Revenue (¥bn)");
+        # overlay only when that currency matches the page currency (2026-09-18: JPY pages, e.g. ADVANTEST, now overlay too)
+        rev_label = next((r[0] for r in house_co.get("raw_rows", []) if r and r[0].replace("*", "").strip().lower().startswith("revenue")), "")
+        rev_sym = next((sy for sy in ("NT$", "¥", "€", "₩", "$") if sy in rev_label), "$")
+        usd_ok = (rev_sym == sym)
         for c in cols:
             y = yrs.get(c[-4:], {})  # "CY2026" -> "2026"
             if usd_ok and y.get("rev") is not None:

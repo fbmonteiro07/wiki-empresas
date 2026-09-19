@@ -1,7 +1,10 @@
 {
- "asof": "2026-09-17",
- "bbg_missing": [],
+ "asof": "2026-09-18",
+ "bbg_missing": [
+  "NSCALE"
+ ],
  "no_transcript": [
+  "NSCALE",
   "POET",
   "SMTC"
  ],
@@ -19,8 +22,12 @@
   "SPCX"
  ],
  "actions": {
-  "fetch_estimates_cmd": null,
+  "fetch_estimates_cmd": "py \"E:\\.claude\\scripts\\fetch_estimates.py\" NSCALE",
   "transcript_tasks": [
+   {
+    "agent": "transcript-fetcher",
+    "prompt": "Get the latest earnings call transcript for NSCALE and save it to E:\\Wiki Felipe empresas\\NSCALE\\transcripts\\ as NSCALE_<quarter>_<YYYY-MM-DD>.md"
+   },
    {
     "agent": "transcript-fetcher",
     "prompt": "Get the latest earnings call transcript for POET and save it to E:\\Wiki Felipe empresas\\POET\\transcripts\\ as POET_<quarter>_<YYYY-MM-DD>.md"

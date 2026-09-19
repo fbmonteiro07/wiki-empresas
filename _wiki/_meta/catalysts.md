@@ -2,7 +2,7 @@
 
 _Generated 2026-09-18 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (49)
+## 📅 Upcoming (58)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
@@ -30,6 +30,8 @@ _Generated 2026-09-18 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-09-23 | META | **🆕 2026-09-23/24 — META CONNECT.** MS flags it as the next scheduled product venue *"for more product updates"*, with **Hatch** expected to launch *"in the coming weeks"* and the next model, **'Water |
 | 2026-09-23 | META | **🆕🔴🔴 2026-09-23/24 — META CONNECT IS NOW A FORMALLY DATED, NAMED-WATCH-LIST CATALYST WITH A HOUSE POSITION ON IT: CITI HAS OPENED AN *UPSIDE* 90-DAY CATALYST WATCH ON META EXPLICITLY AHEAD OF IT.** ( |
 | 2026-09-23 | META | **🆕🔴🔴 META CONNECT — 2026-09-23/24.** Both UBS (exact dates) and MS (*"25 days away"* as of 08-30) name it as the product catalyst the whole re-rating argument depends on. **Watch for: the Watermelon  |
+| 2026-09-23 | META | 🆕 **2026-09-23 (Wednesday) — Meta Connect 2026 developer conference, CEO keynote 4pm PT.** Expected: next-gen Ray-Ban smart glasses + a **four-model AI-glasses lineup**, a preview of **"Project Phoeni |
+| 2026-09-23 | OKTA | 🆕 **2026-09-23 (Tuesday) — Oktane 2026, Las Vegas; INVESTOR SESSION 11am-12pm PT.** JPM (Brian Essex, **OW**, px $190.02 on 17-Sep) previews it as *"largely product focused with **no new numbers or mi |
 | 2026-09-24 | NVDA | **🆕🔴 TRUMP-XI MEETING, 2026-09-24 — the dated headline-risk window, and UBS says the newsflow into it is not random.** *"As is usually the case before Trump-Xi meetings, headline risks likely to pick  |
 | 2026-09-24 | SPCX | **🆕 2026-09-24, NYC — MS event: "SPCX How to Play the Space Economy ft Adam Jonas, Sean Diffley, and William Tackett".** (Morgan Stanley TMT desk, 2026-09-15) |
 | 2026-09-24 | TSM | **🆕⚠️ TRUMP-XI, 2026-09-24 — UBS puts SPE and MEMORY as the most exposed verticals, with the ASML/Netherlands MATCH Act immersion-DUV headlines and new BIS measures on Chinese compute access via Thail |
@@ -40,11 +42,13 @@ _Generated 2026-09-18 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-10-01 | AAPL | **🆕🔴 2026-10-01 — THE EU APP STORE COMMISSION CHANGES TAKE EFFECT, AND THE RATES ARE NOW FINAL: 26% for App Store apps using Apple IAP (15% for certain programs and post-year-one auto-renewals), 20% f |
 | 2026-10-06 | MRVL | **🆕🔴 DATED, TWO-STEP: Q2 FY27 print THURSDAY 2026-08-27 (after market close) → INVESTOR DAY MONDAY 2026-10-06, NYC.** Jefferies (Curtis, 2026-08-20) splits the catalyst explicitly: the print is where  |
 | 2026-10-06 | MRVL | **🆕🔴 NEXT, AND IT IS NOW THE ONLY CATALYST THAT MATTERS ON THIS PAGE: INVESTOR DAY — MONDAY 2026-10-06, NYC.** Three desks stated on print night that management deliberately withheld the [[GOOG]] sizi |
+| 2026-10-14 | ASML | 🆕 **2026-10-14 (Wednesday) — 3Q26 results.** The Street's two focus items are set: (1) whether FY27 low-NA EUV capacity guidance goes to **90+ tools** (from ~85) and whether **2028 is reaffirmed at ≥1 |
 | 2026-10-15 | SMTC | **🔴 2026-10-15 — INVESTOR / ANALYST DAY, San Jose. The single most important dated event on this page, because management deferred the two questions that matter to it.** Promised content: *"an in-dept |
 | 2026-10-26 | MEDIATEK | **🆕🔴 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR "POTENTIAL UPWARD REVISIONS TO GOOGLE TPU-RELATED GUIDANCE."** Between them: **Google system-level validation of v9 in H |
 | 2026-10-28 | ORCL | **🆕🔴🔴 2026-10-28 — ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as "Investor Day in October").** First opportunity for **new CFO Hilary Maxson** to set long-term financial targ |
 | 2026-11-10 | FLEX | **🆕🔴 INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail lands.** Flex said *"more strategy details will be shared at an Innovation Day event on November 10, 2026  |
 | 2026-11-12 | SPCX | **🆕🔴🔴 2026-11-12 — [[OPENAI]] CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.** OpenAI's own post: *"**We're ending our partnership with Cursor following its acquisit |
+| 2026-11-16 | NSCALE | 2026-11-16 — **NVIDIA Sale** ($1.0bn convertible notes / non-voting shares) expected to close on or around this date. |
 | 2026-11-17 | MSFT | **🆕 2026-11-17 to 11-20, SF — MSFT IGNITE.** |
 | 2026-11-17 | NVDA | **✅🔴 CLOSED 2026-09-10 — THE GS COMMUNACOPIA FIRESIDE HAPPENED. OUTCOME:** Jensen **reaffirmed the ~70% FY28 revenue growth** (*"we could grow 70% year-over-year, and we are confident about that"*), * |
 | 2026-11-17 | NVDA | **🆕🔴 NEXT THREE DATED COMPANY EVENTS, ALL STATED ON THE 08-26 CALL BY IR (Toshiya Hari):** **(1) 2026-09-10 — Jensen Huang keynote fireside chat at the Goldman Sachs Communacopia & Technology Conferen |
@@ -55,6 +59,11 @@ _Generated 2026-09-18 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-12-02 | CRWD | **🧪 PRE-REGISTERED TEST T2 — F3Q27 print ~2026-12-02:** net new ARR **≥ ~$378m** (guide-implied $343–347m from the $6.184–6.188bn Q3 ARR guide × the ~10% blended H1 beat, UBS / Boyd) = bull; at or bel |
 | 2026-12-02 | OKTA | **🧪 PRE-REGISTERED TEST T3 — Q3 FY27 print ~2026-12-02:** cRPO growth **≥ 13%** (guide +11–12%; Q2 printed +14.1%) **AND dollar-based NRR ≥ 107%** = bull; cRPO ≤ 12% and/or NRR back to 106% = bear. ⚠️ |
 | 2027-01-01 | BKNG | **🆕 B2B STAND-ALONE LAUNCH ON 2027-01-01 with dedicated management (BKNG exec (likely CFO Steenbergen ⚠) @ Communacopia-week investor group mtg, 2026-09-09 — Capstone Notion transcript).** Watch for t |
+| 2027-07-01 | NSCALE | 2027-07-01 — Figure AI initial Vera Rubin GPUs targeted "2H27" (approximate). |
+| 2027-09-28 | NSCALE | 2027-09-28 — Microsoft Kvandal North **Tranche 2 delivery date** (SOW example) — a filed, checkable milestone. |
+| 2027-12-31 | NSCALE | 2027-12-31 — SIN02 Portugal: >66,000 VR NVL72 for Microsoft "starting late 2027". |
+| 2028-06-30 | NSCALE | 2028-06-30 — Monarch **2 GW gross / 1.37 GW IT online "by 1H28"** (Anthropic tranches; the wiki's first neocloud milestone tied to on-site gas turbines). |
+| 2031-12-31 | NSCALE | 2031-12-31 — Monarch expansion to ~8 GW gross planned. |
 
 ## ⏰ Passed — need a post-mortem (0)
 

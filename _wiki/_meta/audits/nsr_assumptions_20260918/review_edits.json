@@ -1,0 +1,832 @@
+{
+  "reviewDate": "2026-09-18",
+  "scope": "Commentary review only; no numeric inputs or formulas changed",
+  "cells": [
+    {
+      "sheet": "Comparison",
+      "cell": "I6",
+      "text": "NSR is higher, but the 2030 gap mixes vintages. Rebase before treating it as a house bear view."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I10",
+      "text": "House grows faster in 2026-27 from a lower starting level. Test timing as well as terminal demand."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I14",
+      "text": "Annual capex and cumulative spend answer different questions. Current house 2029-30 is missing."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I19",
+      "text": "This house series differs from the cash-flow series at row 123. Reconcile both before claiming a single gap."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I23",
+      "text": "NSR retains a growing non-AI allowance. House AI equals total capex in 2028 by construction."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I27",
+      "text": "Scope mismatch: NSR is cumulative total-DC spending; house is annual AI spending. No direct delta."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I32",
+      "text": "2030 XPUs: NSR $1,702bn; July house $1,414bn, near AMD's $1,400bn TAM. Units and scope matter."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I36",
+      "text": "Opposite mix trends need explanation, but a crossing is not demonstrated within matching house years."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I40",
+      "text": "NSR assumes more share loss for Nvidia by 2030. Compare XPU value with XPU value, not total DC revenue."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I44",
+      "text": "AI CPU slice: $171bn house versus $168bn NSR in 2030. This is not AMD's total server-CPU TAM."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I48",
+      "text": "CPU challenge: house $180-200bn (midpoint $190bn) < NSR $202bn < AMD $220bn in 2030."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I52",
+      "text": "Networking has no single house answer: $606bn top-down versus $306bn physical, around NSR's $465bn."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I56",
+      "text": "The physical networking build is below NSR. Reconcile port/content assumptions with the top-down line."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I60",
+      "text": "NSR front-loads shells and equipment; house scales 'Other' with deployment. Check cost and timing definitions."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I64",
+      "text": "Falling building share is a timing assumption. It does not by itself make financing easier."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I69",
+      "text": "Use the current HBM build as well: 2028 house $281.5bn versus NSR $332bn; no current 2030 forecast."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I73",
+      "text": "2030 HBM: $560bn NSR versus $283.4bn July house. Volume, content and margins all need a bridge."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I77",
+      "text": "Rising HBM content is plausible; 33% of XPU value makes memory economics central to the forecast."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I81",
+      "text": "Combined totals hide opposite views: 2030 DRAM $241bn NSR/$165bn house; NAND $182bn/$240bn."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I85",
+      "text": "Broader house storage/memory scope prevents a clean comparison with NSR's DRAM+NAND line."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I89",
+      "text": "House total includes HDD and other memory items. The displayed delta is not like-for-like."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I93",
+      "text": "Keep the memory numerator and capex denominator on the same scope and vintage."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I98",
+      "text": "NSR's 275 GW basis is unspecified. A numerical match with gross chip-content GW proves little."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I102",
+      "text": "Facility GW cannot be netted against NSR's unspecified installed-capacity figure."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I106",
+      "text": "Purchased, commissioned and utilized capacity are separate. House online forecast stops in 2028."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I110",
+      "text": "~$42bn/GW convergence is conditional on matching hardware mix, cost scope and power basis."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I114",
+      "text": "Similar ~$13bn/GW values have different revenue definitions. Neocloud ~$25bn/GW is a separate challenge."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I119",
+      "text": "Higher NSR cash generation partly reflects definitions and an aggressive operating model."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I123",
+      "text": "NSR spends more even with stronger OCF. Basket, leases and prebuild timing remain unresolved."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I127",
+      "text": "Both go FCF-negative in 2026. House is less negative in 2028; its later trough is unmodeled."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I131",
+      "text": "House capex/OCF peaks in 2027 within the available window. That is not its FCF trough."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I136",
+      "text": "AI-cloud endpoints are close, but scopes differ. Agreement is not independent demand validation."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I140",
+      "text": "The terminal cloud-revenue difference sits mainly in non-AI growth; 'Others' is not proven as its cause."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I144",
+      "text": "House non-AI cloud growth is the aggressive assumption: ~$630bn versus NSR's $370bn in 2030."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I148",
+      "text": "The higher NSR AI share mostly reflects a smaller non-AI denominator, not a much larger AI endpoint."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "I153",
+      "text": "Do not call the ~$2.9tn house residual external funding: other buyers' OCF and financing are missing."
+    },
+    {
+      "sheet": "Summary",
+      "cell": "A2",
+      "text": "NSR/Ferragu et al. (18-Sep-2026) versus Capstone. Reviewed assumption by assumption on 18-Sep-2026. Short conclusions are in Comparison column I; open cell Comments on metric labels and NSR input cells for the argument, counterargument, resolving evidence and dated sources. Numerical inputs and formulas are preserved."
+    },
+    {
+      "sheet": "Summary",
+      "cell": "A11",
+      "text": "1. Total capex: NSR $4.15tn in 2030 versus the July house extension $3.48tn. The current August house model stops at 2028 ($2.91tn). The old-base comparison cannot establish a current 2030 house bear case. (NSR 18-Sep; House 6/28.)",
+      "rowHeight": 32
+    },
+    {
+      "sheet": "Summary",
+      "cell": "A12",
+      "text": "2. CPU: total server TAM is $180-200bn for Capstone (displayed midpoint $190bn), $202bn for NSR and $220bn for AMD. House is above NSR in 2026-28 but below at the endpoint. The $171bn house AI slice is a different scope. (AMD call 4-Aug; NSR 18-Sep; House 38/116.)",
+      "rowHeight": 32
+    },
+    {
+      "sheet": "Summary",
+      "cell": "A13",
+      "text": "3. XPU/networking: house 2030 accelerators $1.41tn are near AMD's $1.4tn TAM, below NSR $1.70tn. Networking has conflicting house builds ($306bn physical / $606bn top-down) around NSR's $465bn. Reconcile content before choosing a side. (AMD 4-Aug; NSR 18-Sep; House 34/47/58.)",
+      "rowHeight": 32
+    },
+    {
+      "sheet": "Summary",
+      "cell": "A14",
+      "text": "4. Memory: NSR HBM $560bn versus July house $283bn needs a volume/content/margin bridge. Current house HBM is already $281.5bn in 2028. Similar combined DRAM/NAND totals hide house DRAM below NSR and NAND above it. (NSR 18-Sep; House 41-43/85.)",
+      "rowHeight": 32
+    },
+    {
+      "sheet": "Summary",
+      "cell": "A15",
+      "text": "5. Infrastructure: NSR front-loads buildings, whereas house Other stays near 36% through 2028. NSR's 275 GW lacks a stated power basis; chip purchases, facility power and online capacity are not interchangeable. (NSR 18-Sep; House 9/51/63/73-75.)",
+      "rowHeight": 32
+    },
+    {
+      "sheet": "Summary",
+      "cell": "A16",
+      "text": "6. Cash: BOTH models turn FCF-negative in 2026. NSR has deeper 2028 burn, but the house ends in 2028 and cannot establish an earlier full-cycle trough. Basket, leases and OCF definitions remain different. (NSR 18-Sep p.7; House 90-92.)",
+      "rowHeight": 32
+    },
+    {
+      "sheet": "Summary",
+      "cell": "A17",
+      "text": "7. Cloud: AI endpoints are close ($1,511bn NSR / $1,492bn house), subject to basket and gross/net revenue scope. House non-AI cloud is much higher ($630bn / $370bn): sustained traditional-cloud growth is the house's aggressive assumption. (NSR 18-Sep; House 102-106.)",
+      "rowHeight": 32
+    },
+    {
+      "sheet": "Summary",
+      "cell": "A18",
+      "text": "8. Funding: NSR's $3.7tn is a five-year net residual dependent on strong OCF. The earlier ~$2.9tn house comparison is NOT external funding need: other buyers' OCF/self-funding were not deducted. Guarantees transfer risk. (NSR 18-Sep pp.6-8; House 90-95.)",
+      "rowHeight": 32
+    },
+    {
+      "sheet": "Summary",
+      "cell": "A19",
+      "text": "9. Source checks: ASML's extra 2028 capacity was under investigation; NSR states it more firmly. NSR's 40% neocloud self-funding headline conflicts with its 50% table. Cumulative funding/industry EBITDA is not borrower leverage. (ASML 15-Jul; NSR 18-Sep pp.2/8.)",
+      "rowHeight": 32
+    },
+    {
+      "sheet": "Summary",
+      "cell": "A36",
+      "text": "Review: comments on Comparison metric labels and NSR assumption cells contain the full debate and sources. Short conclusions are in Comparison column I. Original numerical inputs, formulas and sheet order retained. House forecast dates and market definitions differ; read the scope comments before quoting a delta."
+    },
+    {
+      "sheet": "Summary",
+      "cell": "I23",
+      "text": "July extension; current house capex stops in 2028."
+    },
+    {
+      "sheet": "Summary",
+      "cell": "I24",
+      "text": "House endpoint near AMD TAM; NSR has higher terminal spend."
+    },
+    {
+      "sheet": "Summary",
+      "cell": "I25",
+      "text": "July series; current 2028 HBM is $281.5bn."
+    },
+    {
+      "sheet": "Summary",
+      "cell": "I26",
+      "text": "DRAM/NAND offsets hide different component views."
+    },
+    {
+      "sheet": "Summary",
+      "cell": "I27",
+      "text": "House includes HDD/other items: different perimeter."
+    },
+    {
+      "sheet": "Summary",
+      "cell": "I28",
+      "text": "House physical build gives the opposite comparison."
+    },
+    {
+      "sheet": "Summary",
+      "cell": "I29",
+      "text": "Different basket; leases and timing need reconciliation."
+    },
+    {
+      "sheet": "Summary",
+      "cell": "I30",
+      "text": "Both negative in 2026; house forecast ends in 2028."
+    },
+    {
+      "sheet": "Summary",
+      "cell": "I31",
+      "text": "Close endpoints; membership and gross/net scope differ."
+    },
+    {
+      "sheet": "Summary",
+      "cell": "I32",
+      "text": "Unspecified NSR basis; delta is not comparable."
+    },
+    {
+      "sheet": "Summary",
+      "cell": "I33",
+      "text": "Facility basis; cannot net against unspecified NSR GW."
+    },
+    {
+      "sheet": "Summary",
+      "cell": "I34",
+      "text": "Cost scope and hardware mix must match."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A2",
+      "text": "NSR and Capstone values are preserved. Column I gives the review conclusion; Comments on metric labels contain the full debate and dated sources. Delta = Capstone / NSR - 1 is arithmetic only where scope, years or vintages differ. Current house capex ends in 2028; the cloud demand scenario extends to 2030."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A27",
+      "text": "Non-hyperscaler share: NSR cumulative total-DC vs house annual AI"
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A68",
+      "text": "4. MEMORY — volume, pricing, content and scope"
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A89",
+      "text": "Memory comparison ($bn): NSR HBM/DRAM/NAND vs broader house bill"
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A93",
+      "text": "Memory-bill share of capex — differing product scope"
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A135",
+      "text": "7. CLOUD REVENUE — close AI endpoints, different non-AI growth"
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A152",
+      "text": "8. FUNDING — comparable external requirement not yet established"
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A153",
+      "text": "Funding ($tn): NSR all-buyer net 2026-30 vs house big-4 FCF burn 2026-28"
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A158",
+      "text": "Open Comments on metric labels for the full debate. Positive delta means a higher number, not necessarily a better outcome. Some displayed ratios compare different scopes. July component/capex extensions are not current house forecasts; the August cloud demand scenario is the exception."
+    },
+    {
+      "sheet": "NSR_Memory",
+      "cell": "J38",
+      "text": "Identical COGS-growth series as printed. Identity alone does not establish a copy error; see cell comment."
+    },
+    {
+      "sheet": "NSR_Memory",
+      "cell": "J44",
+      "text": "Printed growth does not match several years of this row, including the 2025 base. Keep the source values; classification is unresolved."
+    },
+    {
+      "sheet": "NSR_Memory",
+      "cell": "A51",
+      "text": "Check: p.5 other minus arithmetic mapping above (economic classification unresolved)"
+    },
+    {
+      "sheet": "NSR_HyperPL",
+      "cell": "K36",
+      "text": "Printed FCF retained. Roughly $980bn burn through 2029; ~$716bn is net 2026-30 burn after the recovery. See comment."
+    },
+    {
+      "sheet": "NSR_HyperPL",
+      "cell": "K44",
+      "text": "~184 GW is gross additions at constant midpoint cost. >100 GW is a lower bound, not a contradictory point estimate; scope/timing unresolved."
+    },
+    {
+      "sheet": "NSR_HyperPL",
+      "cell": "K45",
+      "text": "Ratio uses gross cumulative additions, not average revenue-producing GW. It cannot establish NSR's facility/IT-load basis."
+    },
+    {
+      "sheet": "NSR_Funding",
+      "cell": "E26",
+      "text": "Printed OCF/capex gives 50%; the slide heading says 40%. Unreconciled source discrepancy, not ordinary rounding."
+    },
+    {
+      "sheet": "NSR_Funding",
+      "cell": "E36",
+      "text": "p.8 totals $4.0tn, versus $3.7tn printed on p.6 and $3.8tn from its rounded inputs. No full reconciliation supplied."
+    },
+    {
+      "sheet": "NSR_Funding",
+      "cell": "E37",
+      "text": "NSR labels this ~2.2x Debt/EBITDA. Numerator includes equity/prepayments and cumulative funding; not conventional borrower leverage."
+    },
+    {
+      "sheet": "README",
+      "cell": "A2",
+      "text": "Assumption review added 2026-09-18 for Felipe Monteiro. Original numerical inputs and formulas retained. Earlier commentary is preserved in _wiki/_meta/audits/nsr_assumptions_20260918/original.json."
+    },
+    {
+      "sheet": "README",
+      "cell": "A12",
+      "text": "Comparison — short review conclusions in column I. Open Comments on metric labels for the argument, counterargument, resolving evidence and dated sources. NSR input-cell Comments cover additional margin, cost and funding assumptions."
+    },
+    {
+      "sheet": "README",
+      "cell": "A30",
+      "text": "6. Vintage: current house capex, chip and online-GW schedules stop at CY28. July Semis MAP/Bottom_Up CY29-30 extensions use an older base. Exception: the August AI Model cloud demand scenario reaches CY30. These are distinct schedules, not one integrated current forecast."
+    },
+    {
+      "sheet": "House",
+      "cell": "L102",
+      "text": "2026-08-31 — current AI Model cloud demand scenario extends to CY30; separate from capex/GW schedules that stop at CY28."
+    },
+    {
+      "sheet": "House",
+      "cell": "L103",
+      "text": "2026-08-31 — current AI Model cloud demand scenario extends to CY30; separate from capex/GW schedules that stop at CY28."
+    },
+    {
+      "sheet": "House",
+      "cell": "L104",
+      "text": "2026-08-31 — current AI Model cloud demand scenario extends to CY30; separate from capex/GW schedules that stop at CY28."
+    },
+    {
+      "sheet": "House",
+      "cell": "L105",
+      "text": "2026-08-31 — current AI Model cloud demand scenario extends to CY30; separate from capex/GW schedules that stop at CY28."
+    },
+    {
+      "sheet": "House",
+      "cell": "L106",
+      "text": "2026-08-31 — current AI Model cloud demand scenario extends to CY30; separate from capex/GW schedules that stop at CY28."
+    },
+    {
+      "sheet": "House",
+      "cell": "L110",
+      "text": "2026-08-31 — current AI Model cloud demand scenario extends to CY30; separate from capex/GW schedules that stop at CY28."
+    }
+  ],
+  "comments": [
+    {
+      "sheet": "Comparison",
+      "cell": "A6",
+      "text": "Research review, 2026-09-18.\n\nNSR has $4,150bn of annual AI capex in 2030 versus $3,481.9bn in the July house extension. The current August model stops at 2028 ($2,913.1bn). NSR's stronger supply outlook supports an upward review, but the gap is partly an old starting base. The ~$3.9tn rebase already mentioned here is a mechanical illustration, not an approved forecast. Resolve with one current units, ASP and commissioning schedule. Sources: NSR/Ferragu et al., 2026-09-18 pp.3-4; House rows 6/28/54, model vintages 2026-08-31/07-16/07-24."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A10",
+      "text": "Research review, 2026-09-18.\n\nNSR and Capstone both anticipate rapid near-term growth and deceleration. Capstone's faster 2026-27 percentage growth reflects its lower 2025 base; it does not establish a higher absolute demand view. The key debate is whether booked chips, commissioned power and customer cash collections ramp together. Tool capacity is an enabling condition, not a direct forecast of paid AI demand. Sources: NSR/Ferragu et al., 2026-09-18 pp.2-4; House rows 6/11, AI Model 2026-08-31."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A14",
+      "text": "Research review, 2026-09-18.\n\nNSR's $14.6tn cumulative AI spend for 2026-30 sits inside $16.5tn of total datacenter spend, which includes non-AI. Capstone's $5.7tn here covers only 2026-28. Do not subtract these as a funding or demand gap. A comparable five-year view needs a current house extension plus the same non-AI perimeter. The old model's $11tn anchor is labelled a scratch check, not an alternative forecast. Sources: NSR 2026-09-18 pp.4/6; House rows 23/24/28."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A19",
+      "text": "Research review, 2026-09-18.\n\nNSR's hyperscaler membership is not enumerated. This comparison uses House row 20, whereas row 123 uses House row 91: they are different totals even within the same model save. The company-model series also falls below the house AI-only series in 2027. These are reconciliation issues, not evidence that non-AI spend is negative. Do not infer Oracle membership or mix this numerator with another OCF series. Sources: NSR 2026-09-18 p.7; AI Model 2026-08-31 as transcribed in House rows 15/20/91."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A23",
+      "text": "Research review, 2026-09-18.\n\nNSR derives AI capex after allowing $125bn of non-AI spending in 2025, growing 13% annually. House row 15 is AI bottom-up; House row 20 is a separate company-model total. Their 2028 equality should be challenged: mature cloud, office, retail and logistics assets still need investment, unless those costs are already inside the AI bucket. Reconcile categories instead of assuming all capex becomes AI. Sources: NSR 2026-09-18 p.7; House rows 15/20, 2026-08-31."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A27",
+      "text": "Research review, 2026-09-18.\n\nBoth frameworks give non-hyperscalers a large role. However, the NSR percentage uses 2026-30 neocloud plus enterprise/government spend over total DC capex; Capstone uses annual other-player AI capex. Oracle, labs, sovereign buyers and leased infrastructure need a consistent owner/customer mapping. Otherwise the same deployment can appear as both provider capex and customer demand. Source: NSR 2026-09-18 p.6; House rows 21/22, AI Model 2026-08-31."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A32",
+      "text": "Research review, 2026-09-18.\n\nNear-term accelerator spending is close; the larger difference appears in the July 2029-30 extension. AMD's ~$1.4tn 2030 AI-accelerator TAM supports the scale of the house endpoint, but management TAM is a forecast, not independent demand validation. NSR has a larger unit market and substantial HBM content. Separate units, package ASP, HBM and networking before comparing vendor revenue with accelerator silicon. Sources: NSR 2026-09-18 pp.3-5; AMD/Lisa Su Q2 call 2026-08-04; House rows 7/34."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A36",
+      "text": "Research review, 2026-09-18.\n\nNSR's XPU share rises as building spend fades; the current house share falls as supporting infrastructure grows. The house share remains above NSR through its last fully modeled year, 2028. The prior wording that the trajectories 'cross' was too strong. Replacement of installed hardware could lift XPU share later, but new sites and power bottlenecks could delay that. Sources: NSR 2026-09-18 p.4; House rows 6-10, AI Model 2026-08-31."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A40",
+      "text": "Research review, 2026-09-18.\n\nNSR assumes roughly 60% Nvidia share versus the July house extension's roughly 64% in 2030. Custom silicon offers a plausible source of share loss, but customer design wins must translate into deployed, utilized systems. NSR's reference to a >$1tn Nvidia datacenter run rate is broader than XPU sales and uses a run-rate rather than annual-recognition basis. It is not a clean check on 2030 XPU revenue. Sources: NSR 2026-09-18 p.3; House rows 34/35; NVDA Q2 FY27 call 2026-08-26."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A44",
+      "text": "Research review, 2026-09-18.\n\nThe near-identical terminal AI slice hides different early paths: house is higher in 2025-28. Its BofA-mix AI-CPU line is also different from the capture-calibrated CPU build noted in House row 38. NSR's low 2025 AI allocation may reflect classification; there is no verified head-node count here proving it wrong. Separate head-node CPUs, agent sandboxes and ordinary servers before adopting a universal CPU/GPU ratio. Sources: NSR 2026-09-18 pp.4-5; Semis MAP 2026-07-16, House row 38."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A48",
+      "text": "Research review, 2026-09-18.\n\nThe house midpoint is $30bn below AMD's $220bn total server-CPU TAM. Capstone is above NSR in 2026-28 but below it in 2030: this is a front-loaded path with a lower endpoint. Agent orchestration, sandbox execution and general-purpose workloads support raising the endpoint; stronger cores, utilization and eventual ASP normalization support retaining a discount. AMD's TAM is management's opportunity estimate, not secured orders. Make the discount explicit and test units/ASP, not a mechanical 1:1 ratio. Sources: AMD/Lisa Su Q2 call 2026-08-04; NSR 2026-09-18 pp.2-5; Capstone CPU ledger/House 116, 2026-07-17."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A52",
+      "text": "Research review, 2026-09-18.\n\nNSR sits between two house methodologies with opposite conclusions. The top-down BofA mix may capture scale-up, optical and system content that the physical build omits, or may overlap with packaged accelerator revenue. Cluster size, ports per accelerator, optics reach, copper substitution and switch ASPs should explain the gap. Do not call the $606bn line a settled house forecast before reconciling it to the physical bill of materials. Sources: NSR 2026-09-18 p.4; House rows 47/58, 2026-07-16/07-24."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A56",
+      "text": "Research review, 2026-09-18.\n\nCapstone's physical networking estimate reaches $305.8bn in 2030, versus NSR's $465bn and the other house build's $606.3bn. The debate is partly methodology, not solely optimism. Audit scale-up versus scale-out, optical module counts, networking sold inside Nvidia systems and standalone switching before changing demand assumptions. A falling cost per port can coexist with rising networking content per cluster. Sources: NSR 2026-09-18 p.4; Bottom_Up v3 2026-07-24 and Semis MAP v11 2026-07-16, House 47/58."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A60",
+      "text": "Research review, 2026-09-18.\n\nNSR has more other equipment/building spend in 2025 and less by 2028 than the current house Other bucket. Prebuilding sites before installing chips supports NSR's timing. Power interconnection, cooling upgrades and scarce construction capacity could keep costs elevated longer. The house bucket is not proven identical to NSR's buildings/equipment line. Microsoft IR's staged land-to-kit discussion supports a lag, but not a fixed industry-wide percentage. Sources: NSR 2026-09-18 p.4; House row 9, 2026-08-31; MSFT IR notes 2026-09-09."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A64",
+      "text": "Research review, 2026-09-18.\n\nNSR's building/equipment share falls toward 24% while the house Other share stays near 36% through 2028. More reuse of installed sites supports NSR. More expensive power and continuous site additions support the house. A shift toward short-lived hardware can increase replacement needs and weaken collateral duration; it is not automatically financing-positive. The prior comment linking this mix mechanically to 'easy' financing was unsupported. Sources: NSR 2026-09-18 pp.4/8; House rows 9/10."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A69",
+      "text": "Research review, 2026-09-18.\n\nThe current units-by-spec house HBM build is materially closer to NSR in 2028 than the July repriced series ($224bn). It carries $127.8bn in 2027 and a large 2028 memory-content step. This is a timing/specification disagreement as well as pricing. Check GPU/ASIC units, GB per package, HBM generation and realized $/GB together. Do not present the stale 2030 $283.4bn as the endpoint of this current series. Sources: NSR 2026-09-18 p.5; AI Model HBM Model 2026-08-31, House 84-86."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A73",
+      "text": "Research review, 2026-09-18.\n\nNSR and the July repriced house line are close in 2027, then diverge. NSR does not disclose enough chip units, GB/package and $/GB detail here to assign the entire gap to price. Its HBM gross margin remains 76% in 2030 and content reaches 33% of XPU spend. Higher content and long-term supply contracts support persistence; added supply, yield improvement and memory-efficient architectures challenge it. Sources: NSR 2026-09-18 pp.3/5; Semis MAP 2026-07-16, House 41; MU Q3 FY26 call 2026-06-24."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A77",
+      "text": "Research review, 2026-09-18.\n\nNSR reaches 33% of XPU spending in HBM by 2030; the current house build reaches 24% in 2028 and then stops. Higher GB per accelerator supports the direction. But bandwidth, memory tiering and customer TCO constrain how far spending can shift to HBM without changing vendor ASPs or margins. AMD explicitly discussed modifying memory footprint where TCO benefits do not justify it. HBM is already inside XPU capex and must not be added twice. Sources: NSR 2026-09-18 p.5; AMD Q2 call 2026-08-04; House 87."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A81",
+      "text": "Research review, 2026-09-18.\n\nThe combined 2030 DRAM+NAND totals are close, but this is offsetting disagreement. NSR is higher on DRAM and lower on NAND than the house fleet-DDR5 and DC-NAND lines. NSR's combined dollar peak is 2028, not 2027. Agent databases and memory-intensive inference support DRAM; storage tiers and eSSD adoption support NAND. Normalize AI-only versus all-CSP fleet scope, then debate bits and prices separately. Sources: NSR 2026-09-18 p.5; House rows 42/43/45, Semis MAP 2026-07-16."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A85",
+      "text": "Research review, 2026-09-18.\n\nThe physical house 'memory bought direct' series is much higher, but includes broader content and the source model flags stacked bullish assumptions. It is an alternative build requiring reconciliation, not automatically a quantified upper bound for the same market. Remove HDD and other excluded products, confirm HBM/LPDDR embedded in accelerators, then reconcile fleet/server counts and memory capacity. Sources: NSR 2026-09-18 pp.4-5; Bottom_Up v3 2026-07-24, House 54/57/61."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A89",
+      "text": "Research review, 2026-09-18.\n\nNSR sums HBM, DRAM and NAND; House row 46 is a broader CSP memory bill including HDD and other mapped items. The $737bn house total is not simply the HBM line plus the DRAM+NAND comparison above. Treat the displayed ratio as arithmetic, not an investment conclusion. Reconcile the bill of materials before identifying the largest component gap. Supplier memory revenue remains a memo within total infrastructure capex where already embedded in chips. Sources: NSR 2026-09-18 p.5; Semis MAP 2026-07-16, House 39-46."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A93",
+      "text": "Research review, 2026-09-18.\n\nUsing the July house capex denominator avoids a vintage mismatch, but does not solve the numerator's wider product scope. NSR's memory share also includes HBM embedded in XPUs. Hardware-only memory ratios cannot be compared with total capex ratios that include land, shells and power. Resolve classification before attributing a share difference to pricing power. Sources: NSR 2026-09-18 pp.4-5; House rows 28/46, Semis MAP 2026-07-16."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A98",
+      "text": "Research review, 2026-09-18.\n\nNSR labels 275 GW as installed AI capacity but does not identify facility versus IT load, retirements or commissioning. The house July 298.7 GW is cumulative chip-content purchases, gross of retirements, and follows a different base from the current 2028 series. Price-derived chip GW is not independent physical validation of the revenue model. Treat the displayed delta as non-comparable pending a physical capacity bridge. Sources: NSR 2026-09-18 p.3; House 50/51/73."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A102",
+      "text": "Research review, 2026-09-18.\n\nThe house physical facility build reaches 241.7 GW in 2030. NSR's 275 GW could be a different power boundary or installed-stock definition. PUE changes facility power without changing useful compute in the same proportion. Commissioning delays, redundancy and retirements also matter. The apparent gap is not proof of Capstone being conservative, and the separate BofA-derived tokenomics bridge is not another house forecast. Sources: NSR 2026-09-18 p.3; Bottom_Up v3 2026-07-24, House 62/63/118."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A106",
+      "text": "Research review, 2026-09-18.\n\nCapstone shows 119.1 GW online in 2028 versus 171.4 GW purchased. That timing gap matters for revenue and financing. NSR's >100 GW statement covers hyperscalers at decade-end, while its 275 GW headline covers the wider AI market. Neither can be compared directly with all-player 2028 online capacity. Test site-by-site energization and average revenue-producing capacity, not just year-end equipment deliveries. Sources: NSR 2026-09-18 pp.3/7; AI Model 2026-08-31, House 73-75."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A110",
+      "text": "Research review, 2026-09-18.\n\nNSR states $40-45bn/GW; the sheet uses its $42.5bn midpoint across years, not a disclosed annual NSR path. The house blended $41.9bn in 2028 masks a $50.8bn Nvidia deployment and a $61bn physical-capex/facility-GW ratio in another build. These are different baskets. Memory inflation, accelerator mix, land/power costs and commissioning must be reconciled before using a common $/GW to infer capacity. Sources: NSR 2026-09-18 p.7; House 64/78/79."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A114",
+      "text": "Research review, 2026-09-18.\n\nNSR's hyperscaler AI-cloud revenue intensity resembles the house blended value, but the house includes internal-use value and uses average online capacity. NSR's $2.3tn neocloud revenue on 91 GW implies ~$25bn/GW in the existing sheet, above even the house's $20bn Nvidia deployment assumption. API/lab revenue, rental revenue and internal value must not be interchangeable. Ask what revenue layer and average capacity NSR uses before accepting the premium. Sources: NSR 2026-09-18 pp.6-7; House 76/80/81; NSR_Datapoints 35."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A119",
+      "text": "Research review, 2026-09-18.\n\nNSR reaches $1,489bn OCF in 2028 versus $1,202bn for house big-4. House GOOG/META OCF uses net income plus D&A, excluding SBC/working-capital effects; NSR's company basket is unspecified. Its growth and incremental cash margins are also stronger. Attribute the gap only after harmonizing accounting, leases, tax, interest and membership. Fast EBITDA growth alone does not establish cash available to fund capex. Sources: NSR 2026-09-18 pp.6-7; House 90, AI Model 2026-08-31."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A123",
+      "text": "Research review, 2026-09-18.\n\nUse this capex series with the OCF/FCF series immediately above and below. NSR's 2028 capex is $1,975bn versus house $1,463.3bn. Its lower FCF reflects larger investment, despite more OCF. The alternative house capex block at row 19 is different. Finance-lease additions versus cash payments and long-dated site prebuild can shift the apparent year of peak spending. Sources: NSR 2026-09-18 p.7; House 90-92, AI Model 2026-08-31; MSFT IR 2026-09-09."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A127",
+      "text": "Research review, 2026-09-18.\n\nThe prior wording 'house goes negative a year earlier' is incorrect: both series turn negative in 2026. Both are more negative in 2028 than in 2027. Capstone stops at 2028, so it does not establish an earlier full-cycle FCF trough. NSR's 2030 recovery depends on strong OCF and slower capex growth. Negative-denominator percentage deltas are not measures of economic upside. Sources: NSR 2026-09-18 p.7; House 90-92, AI Model 2026-08-31."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A131",
+      "text": "Research review, 2026-09-18.\n\nA ratio can improve while the dollar cash deficit worsens as the business grows. The house capex/OCF ratio peaks in 2027 within this schedule, but its FCF is more negative in 2028. NSR's return below 1x in 2030 depends on both OCF execution and investment moderation. Distinguish peak ratio, peak annual burn and maximum cumulative financing need. Sources: NSR 2026-09-18 p.7; House 90-93."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A136",
+      "text": "Research review, 2026-09-18.\n\nNSR has $1,511bn of AI-cloud revenue in 2030 and the current house demand scenario has $1,492bn. The house includes Azure on an API-gross basis, AWS, GCP and Others; NSR's hyperscaler basket is not enumerated. Lab demand, capacity and utilization assumptions may be shared across both models. Normalize resale and pass-through revenue before treating their proximity as corroboration of end-customer spending. Sources: NSR 2026-09-18 p.7; AI Model 2026-08-31, House 102-106."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A140",
+      "text": "Research review, 2026-09-18.\n\nCapstone reaches $2,121.9bn total cloud revenue versus NSR's $1,881bn. AI endpoints are close while non-AI is much higher in the house. The house also includes Others, but the workbook does not isolate how much of the difference comes from membership. Do not attribute the entire gap to neoclouds without a customer bridge. Check gross versus net API revenue and cloud-to-lab pass-through. Sources: NSR 2026-09-18 p.7; House 102-106."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A144",
+      "text": "Research review, 2026-09-18.\n\nNSR settles at roughly 10% growth; the house continues around 21-23%. Migration, databases and agent support workloads can sustain growth. However, constrained capacity and customer budgets could prioritize AI, and some activity may be reclassified from non-AI into AI. Debate whether the house is assuming simultaneous acceleration in both buckets without sufficient capacity. Define stable categories and test core consumption growth. Sources: NSR 2026-09-18 p.7; AI Model 2026-08-31, House 103."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A148",
+      "text": "Research review, 2026-09-18.\n\nNSR reaches roughly 80% AI share in 2030 versus roughly 70% for the house. Since their AI revenue endpoints are close, the non-AI forecast and classification explain much of the share divergence. Avoid reading this ratio alone as stronger NSR AI demand. AI cloud can also carry lower EBIT margin despite higher EBITDA margin as depreciation rises. Sources: NSR 2026-09-18 p.7; House 102-104."
+    },
+    {
+      "sheet": "Comparison",
+      "cell": "A153",
+      "text": "Research review, 2026-09-18.\n\nNSR's $3.7tn net funding estimate covers all buyers over 2026-30. The house $0.563tn figure is big-4 cumulative FCF burn through 2028. Adding 'capex faltante' gives a gross residual outside big-4 cash, not external capital required: it omits other buyers' OCF, existing cash and self-funding and mixes AI/all-capex scope. Annual timing, leases, prepayments and counterparty guarantees matter. The prior claim of a 'bigger, earlier hole' was unsupported. Sources: NSR 2026-09-18 pp.6-8; House 90-95."
+    },
+    {
+      "sheet": "NSR_Capex",
+      "cell": "H5",
+      "text": "Research review, 2026-09-18.\n\nThe $1,702bn XPU forecast is above the July house $1,414bn and AMD's ~$1.4tn TAM. NSR attributes the increase mainly to units, but does not show a full units/ASP bridge in this note. HBM is embedded in XPU value. Do not add HBM again or use Nvidia's broader DC run rate as a silicon-only anchor. Verdict: credible upside case; insufficient unit detail to adopt wholesale. Sources: NSR/Ferragu et al. 2026-09-18 pp.3-5; AMD Q2 call 2026-08-04; House 34."
+    },
+    {
+      "sheet": "NSR_Capex",
+      "cell": "H6",
+      "text": "Research review, 2026-09-18.\n\nThis $168bn is the AI CPU slice. Compare it with House 38 ($171.1bn), not directly with AMD's $220bn TOTAL server-CPU TAM. Total-market comparison: NSR $202bn (NSR_Memory H25), house $180-200bn with $190bn midpoint (House 116), AMD $220bn. The house discount is deliberate conservatism only if slower adoption, efficiency or ASP normalization are specified. Sources: NSR 2026-09-18 pp.2-5; AMD/Lisa Su Q2 call 2026-08-04; Capstone ledger, CPU build 2026-07-17."
+    },
+    {
+      "sheet": "NSR_Capex",
+      "cell": "H7",
+      "text": "Research review, 2026-09-18.\n\nThe combined total masks different economics. NSR has 2030 DRAM $241bn and NAND $182bn; the July house fleet-DDR5/DC-NAND lines are $164.9bn/$240bn. Normalize scope, then examine bits, ASP and timing independently. An apparently close combined endpoint is not agreement on either market. NSR's total peaks in 2028 at $459bn. Sources: NSR 2026-09-18 pp.4-5; House 42/43, Semis MAP 2026-07-16."
+    },
+    {
+      "sheet": "NSR_Capex",
+      "cell": "H8",
+      "text": "Research review, 2026-09-18.\n\nOther server content reaches $373bn while staying near 9% of total AI capex. A proportional rule is simple, but chassis, boards, power delivery, cooling and server integration need a defined perimeter: some may already be in XPU systems, networking or buildings. The house has no clean matching component in this workbook. NSR p.5 uses a different 'other' row ($744bn), which cannot be substituted or added to p.4. Verdict: unresolved bill-of-materials assumption. Source: NSR 2026-09-18 pp.4-5."
+    },
+    {
+      "sheet": "NSR_Capex",
+      "cell": "H9",
+      "text": "Research review, 2026-09-18.\n\nNSR's $465bn networking estimate is between the July house top-down $606.3bn and physical $305.8bn builds. The direction is plausible as scale-up and scale-out content grows. The challenge is whether optical/port counts, switch ASPs and networking inside rack systems are consistently counted. Reconcile the two house methods before calling NSR bullish or bearish. Sources: NSR 2026-09-18 p.4; House 47/58, 2026-07-16/07-24."
+    },
+    {
+      "sheet": "NSR_Capex",
+      "cell": "H10",
+      "text": "Research review, 2026-09-18.\n\nNSR front-loads sites and slows this line to 3% growth in 2030. Reusing powered shells supports that view; grid constraints, denser racks and cooling retrofits could keep costs rising. The current house Other bucket stays near 36% through 2028 but has a broader/uncertain perimeter. A falling long-lived-asset share does not itself prove easier financing because hardware replacement is faster. Sources: NSR 2026-09-18 p.4; House 9; Microsoft IR notes 2026-09-09."
+    },
+    {
+      "sheet": "NSR_Capex",
+      "cell": "K5",
+      "text": "Research review, 2026-09-18.\n\nThe printed 'up ~5pts as a % of technology spend' is ambiguous. In the workbook's 2025-to-2030 technology-spend definition, XPU share falls from about 63% to 54% (row 32), while its share of total AI capex rises from 35% to 41%. The statement could refer to a different denominator or prior forecast. Preserve the printed wording but do not treat it as reconciled. Source: NSR 2026-09-18 p.4; NSR_Capex rows 25/31/32."
+    },
+    {
+      "sheet": "NSR_Memory",
+      "cell": "H13",
+      "text": "Research review, 2026-09-18.\n\nNSR's $560bn HBM terminal value combines more accelerator deployment, higher memory content and high retained margins. It cannot be explained as only a pricing disagreement with the July $283.4bn house line. The current house 2028 HBM build is already $281.5bn and has no current 2030 extension. Reconcile all three drivers and vintages before adopting the headline gap. Sources: NSR 2026-09-18 pp.3/5; House 41/84-86."
+    },
+    {
+      "sheet": "NSR_Memory",
+      "cell": "H16",
+      "text": "Research review, 2026-09-18.\n\nCOGS growth is not bit-supply growth: unit cost, yields, generation mix, packaging and depreciation also move it. The revenue/GM arithmetic can reproduce this series without independently establishing physical supply. The missing external check is a vendor-level bits, capacity and yield bridge. Verdict: internally coherent economics is not independent volume validation. Source: NSR 2026-09-18 p.5; NSR_Memory rows 13/17-19."
+    },
+    {
+      "sheet": "NSR_Memory",
+      "cell": "H17",
+      "text": "Research review, 2026-09-18.\n\nCalling 76% HBM gross margin 'normalization' still embeds strong long-run pricing power. Near-term supply tightness and Micron's fixed/banded strategic contracts support persistence, but do not establish the 2030 industry HBM margin. More capacity, improved yields and alternate memory architectures are the countercase. Micron's company/segment gross margin is not a like-for-like HBM margin. Sources: NSR 2026-09-18 pp.3/5; MU management Q3 FY26 call 2026-06-24."
+    },
+    {
+      "sheet": "NSR_Memory",
+      "cell": "H25",
+      "text": "Research review, 2026-09-18.\n\nThe correct AMD comparison is total CPU silicon: NSR $202bn versus house $180-200bn (midpoint $190bn) versus AMD $220bn in 2030. AMD explicitly distinguishes high-frequency host nodes, high-density agentic servers and general-purpose workloads. A model tied only to accelerator head nodes risks missing the latter legs. Conversely, AMD's TAM is a vendor forecast, not an order book. Sources: NSR 2026-09-18 pp.2-5; AMD/Lisa Su Q2 call 2026-08-04; House 116."
+    },
+    {
+      "sheet": "NSR_Memory",
+      "cell": "H27",
+      "text": "Research review, 2026-09-18.\n\nNSR allocates about 83% of 2030 total CPU spending to AI. That assumption relies on how agent sandboxes and AI-enabled general-purpose servers are classified. A rising AI share can include relabeling of existing workloads rather than wholly incremental demand. Require separate host-node, sandbox and conventional-server units/ASPs. A uniform CPU/GPU ratio cannot establish the total market. Sources: NSR 2026-09-18 pp.3-5; AMD Q2 call 2026-08-04."
+    },
+    {
+      "sheet": "NSR_Memory",
+      "cell": "H30",
+      "text": "Research review, 2026-09-18.\n\nDRAM peaks at $273bn in 2028 and declines to $241bn in 2030 despite growing compute. NSR therefore assumes price normalization outweighs additional bits after the peak. House fleet DDR5 is lower at $164.9bn in 2030, but does not cover exactly the same AI-server memory perimeter. Agent working sets and databases support demand; supply additions and tiering challenge sustained value per workload. Sources: NSR 2026-09-18 p.5; Semis MAP 2026-07-16, House 42/45."
+    },
+    {
+      "sheet": "NSR_Memory",
+      "cell": "H34",
+      "text": "Research review, 2026-09-18.\n\nDRAM margin reaches 88% in 2026-27 and still ends at 75% in 2030. Current tightness and long-term agreements support high margins, but the terminal level requires structural discipline beyond a temporary shortage. High margins can also fund new supply. Test contracted versus uncontracted volumes, cost per bit and capacity commissioning. Do not infer the HBM margin from conventional DRAM or vice versa. Sources: NSR 2026-09-18 p.5; MU Q3 FY26 call 2026-06-24."
+    },
+    {
+      "sheet": "NSR_Memory",
+      "cell": "H35",
+      "text": "Research review, 2026-09-18.\n\nNSR's 2030 NAND $182bn is BELOW the July house DC-NAND $240bn. Thus Capstone is not uniformly conservative on memory. Enterprise SSD adoption and inference storage favor the house; price erosion, tiering to HDD and weaker non-AI demand favor NSR. Align AI-only versus total datacenter NAND and avoid counting storage-system revenue plus its NAND components as separate end-user capex. Sources: NSR 2026-09-18 p.5; Semis MAP 2026-07-16, House 43."
+    },
+    {
+      "sheet": "NSR_Memory",
+      "cell": "H38",
+      "text": "Research review, 2026-09-18.\n\nNSR prints the identical COGS-growth series for DRAM and NAND. That identity alone does not prove a copying error: revenue and margin arithmetic should be checked separately, allowing for rounded inputs. Still, the two products have different supply/cost curves, so the economic justification is missing. Treat the row as printed and request product-specific bits, cost/bit and margin assumptions. Source: NSR 2026-09-18 p.5, visually verified."
+    },
+    {
+      "sheet": "NSR_Memory",
+      "cell": "H39",
+      "text": "Research review, 2026-09-18.\n\nNAND margin is 80% in 2026-27 and 67% in 2030. This is a strong structural profitability assumption even after 'normalization'. Micron's strategic contracts support improved visibility, but do not establish the blended industry's margin or eliminate substitution and supply risks. Debate the margin alongside NAND bits and ASP, not as an independent dial. Sources: NSR 2026-09-18 p.5; MU Q3 FY26 call 2026-06-24."
+    },
+    {
+      "sheet": "NSR_Memory",
+      "cell": "H42",
+      "text": "Research review, 2026-09-18.\n\nThe p.5 'Other server content' series does not have a clean additive interpretation. Its near-match to p.4 Other plus both CPU rows in later years is an arithmetic identity, not proof of the economic category. The printed growth row also fails to track several annual changes, not only the 2025 base. Keep p.4 as the spending breakdown and do not add this row again. Source: NSR 2026-09-18 pp.4-5, visually verified."
+    },
+    {
+      "sheet": "NSR_HyperPL",
+      "cell": "H6",
+      "text": "Research review, 2026-09-18.\n\nCore revenue rises from $1,349bn to $2,673bn. Advertising, retail and software can benefit from AI monetization and productivity; competition and spending on inference can absorb those benefits. The workbook has no like-for-like house core-business aggregate, so there is no established numerical house disagreement. Require company/segment drivers rather than extrapolating a pooled core line. Source: NSR 2026-09-18 p.7."
+    },
+    {
+      "sheet": "NSR_HyperPL",
+      "cell": "H7",
+      "text": "Research review, 2026-09-18.\n\nCore EBITDA margin expands from 36% to 52%, while EBIT margin moves from 29% to 33%. This assumes AI shifts costs toward depreciating capital and produces cash operating efficiency. The countercase is inference expense, reinvestment and competitive price pass-through. EBITDA improvement is not the same as economic return once replacement capex is included. No directly comparable house margin series is supplied. Source: NSR 2026-09-18 p.7."
+    },
+    {
+      "sheet": "NSR_HyperPL",
+      "cell": "H16",
+      "text": "Research review, 2026-09-18.\n\nCloud EBITDA margin rises from 57% to 78% while EBIT margin falls from 39% to 32%. The large depreciation burden is central to NSR's case. Higher utilization and owned infrastructure support cash margins; power, network, staffing, leased capacity and price competition challenge them. Do not compare owned-asset EBITDA with a reseller paying rent or API fees. No matching house cloud-margin aggregate is available here. Source: NSR 2026-09-18 p.7."
+    },
+    {
+      "sheet": "NSR_HyperPL",
+      "cell": "H26",
+      "text": "Research review, 2026-09-18.\n\nD&A grows to $1,350bn in 2030, but the note does not disclose asset-class lives or a commissioning roll-forward. Those determine whether EBIT and replacement needs reflect physical obsolescence. Longer lives improve accounting earnings without generating cash; faster hardware replacement can prevent FCF recovery even if first-wave capex slows. Request separate land/shell, power, network and compute schedules. Source: NSR 2026-09-18 p.7."
+    },
+    {
+      "sheet": "NSR_HyperPL",
+      "cell": "H31",
+      "text": "Research review, 2026-09-18.\n\nNSR's cumulative OCF exceeds its cited consensus by ~$2tn, based on faster revenue growth and a 77% incremental OCF margin. The model also implies high OCF/EBITDA conversion. Taxes, working capital, interest, SBC treatment and customer prepayments need an explicit bridge. Capstone's big-4 OCF has a narrower accounting definition for GOOG/META. The financing conclusion is sensitive to these differences. Sources: NSR 2026-09-18 pp.6-7; House 90."
+    },
+    {
+      "sheet": "NSR_HyperPL",
+      "cell": "H33",
+      "text": "Research review, 2026-09-18.\n\nNon-AI capex starts at $125bn in 2025 and grows 13% per year. This differs from the current house comparison where AI and total hyperscaler capex coincide in 2028. Debate continuing traditional-cloud and non-DC investment explicitly. Also separate paid capex, finance-lease additions and leased capacity: these can move the apparent cash deficit between categories and years. Sources: NSR 2026-09-18 p.7; House 15/20/91; MSFT IR 2026-09-09."
+    },
+    {
+      "sheet": "NSR_HyperPL",
+      "cell": "H36",
+      "text": "Research review, 2026-09-18.\n\nBoth NSR and house FCF turn negative in 2026. NSR's rounded annual figures imply roughly $980bn cumulative burn through 2029; ~$716bn is the net 2026-30 deficit after the 2030 recovery, not the peak funding need. Pre-existing cash, maturities, buybacks and dividends are absent. A return to positive FCF requires both operating execution and moderating investment. Sources: NSR 2026-09-18 p.7; House 92/95."
+    },
+    {
+      "sheet": "NSR_HyperPL",
+      "cell": "H44",
+      "text": "Research review, 2026-09-18.\n\nThe model's ~184 GW is gross additions implied by cumulative capex divided by a constant midpoint cost. '>100 GW deployed' is only a lower-bound statement, so it is not contradicted by 184 GW. Reconciliation still requires purchase-to-online timing, average versus year-end capacity, replacements, retirements, non-revenue workloads and power basis. The note does not prove that $/GW 'must' mean facility capex. Source: NSR 2026-09-18 p.7; existing derived rows 41-45."
+    },
+    {
+      "sheet": "NSR_Funding",
+      "cell": "B8",
+      "text": "Research review, 2026-09-18.\n\nEnterprise/government direct investment diversifies buyers and reduces reliance on the named cloud providers. But calling it self-funded is a financing convention, not proof that these buyers need no borrowing. Governments, utilities and enterprises may also use debt and leases. Define whether NSR measures AI-provider financing or ultimate economy-wide external funding. Source: NSR 2026-09-18 p.6."
+    },
+    {
+      "sheet": "NSR_Funding",
+      "cell": "B17",
+      "text": "Research review, 2026-09-18.\n\nThe extra $2tn of hyperscaler OCF is a load-bearing forecast, not committed funding. NSR assumes 24% revenue CAGR versus its cited consensus 17%, and 77% incremental OCF margin versus 60%. AI-driven monetization supports upside, but these forecasts depend on the same infrastructure demand the cash is funding. Request a segment-level cash bridge and test weaker conversion before calling financing a minor issue. Source: NSR 2026-09-18 p.6."
+    },
+    {
+      "sheet": "NSR_Funding",
+      "cell": "B18",
+      "text": "Research review, 2026-09-18.\n\nThe $3.3tn neocloud OCF estimate rests on $2.3tn revenue in 2030, 91 GW deployed and 77% AI OCF margin. The existing model implies ~$25bn/GW, well above NSR's hyperscaler ~$13bn/GW. Premium hardware and higher-layer services might explain part, but training utilization and double-counted resale revenue could undermine it. Confirm whether these are rental providers, AI labs or both, and which cash flow survives consolidation. Source: NSR 2026-09-18 pp.6-7."
+    },
+    {
+      "sheet": "NSR_Funding",
+      "cell": "B20",
+      "text": "Research review, 2026-09-18.\n\nThe printed $3.7tn is a five-year net residual. The rounded p.6 waterfall produces $3.8tn, while p.8 totals $4.0tn. These should be reconciled rather than silently choosing one. More importantly, cumulative OCF cannot pay a project invoice before the cash is earned. Test annual funding peaks, commitments, refinancing and accessible cash at the actual borrower. Source: NSR 2026-09-18 pp.6-8."
+    },
+    {
+      "sheet": "NSR_Funding",
+      "cell": "B26",
+      "text": "Research review, 2026-09-18.\n\nThe table has $3.3tn OCF against $6.6tn capex, i.e. its existing formula reads 50%. The slide heading says 40%. Ten percentage points should not be dismissed as rounding. Preserve the printed values and flag an unreconciled inconsistency in the source. Scope and timing could explain it, but the note does not provide that bridge. Source: NSR 2026-09-18 p.8."
+    },
+    {
+      "sheet": "NSR_Funding",
+      "cell": "B27",
+      "text": "Research review, 2026-09-18.\n\nDebt financing at 50% of buildings and 40% of hardware assumes bankable collateral and contracts. Long-lived real estate fits longer debt; fast-depreciating GPUs require amortization and reliable offtake. Guarantees can improve credit access but transfer exposure to the guarantor rather than remove it. The aggregate industry can be solvent while a specific project fails its debt-service tests. Source: NSR 2026-09-18 p.8."
+    },
+    {
+      "sheet": "NSR_Funding",
+      "cell": "B28",
+      "text": "Research review, 2026-09-18.\n\nPrepayments and equity are different funding sources. Prepayments create future delivery obligations and can reduce future collections; equity dilutes owners and has a return requirement. If a hyperscaler pays the advance, it is not new outside capital for the consolidated ecosystem. Reconcile whether the payer's cash outflow is already captured in the hyperscaler schedule. Source: NSR 2026-09-18 p.8."
+    },
+    {
+      "sheet": "NSR_Funding",
+      "cell": "B37",
+      "text": "Research review, 2026-09-18.\n\nThe ~2.2x ratio divides cumulative funding by one year's EBITDA from hyperscalers, Nvidia and Broadcom. It is not conventional borrower debt/EBITDA: funding includes equity/prepayments, while numerator timing and EBITDA ownership differ. The ratio illustrates aggregate financing capacity, but does not establish loan-level creditworthiness or distributable guarantor cash. Require annual debt balances, legal guarantees, collateral values and interest coverage. Source: NSR 2026-09-18 p.8."
+    },
+    {
+      "sheet": "NSR_Datapoints",
+      "cell": "C6",
+      "text": "Research review, 2026-09-18.\n\nNvidia's ~70% FY28 revenue-growth outlook is corroborated in its Q2 FY27 call and described there as supply-constrained. It supports near-term orders, not an automatic 2030 demand forecast. Fiscal-year timing, DC versus total revenue and a run-rate versus full-year result must remain distinct. Capstone's current Nvidia chip series stops in CY28. Sources: NVDA/Colette Kress Q2 FY27 call 2026-08-26; NSR 2026-09-18 pp.2-3; House 67."
+    },
+    {
+      "sheet": "NSR_Datapoints",
+      "cell": "C7",
+      "text": "Research review, 2026-09-18.\n\nNSR cites $58bn/$115bn/$230bn AI semiconductor revenue for FY26-28 plus 30 GW demand and a financing platform enabling >20 GW. Capstone's $60.4bn/$125.5bn/$284.6bn series covers CY26-28 accelerator designers and is not the same fiscal calendar or product basket. Financing capacity and customer plans are not incremental deployed GW to add on top of the revenue schedule. Underlying guidance attribution remains NSR's in this review. Sources: NSR 2026-09-18 p.2; AI Model 2026-08-31, House 68."
+    },
+    {
+      "sheet": "NSR_Datapoints",
+      "cell": "C8",
+      "text": "Research review, 2026-09-18.\n\nTSMC's call supports stronger AI growth but explicitly withholds a revised numerical CAGR. This is directional confirmation, not a quantified new market forecast. Foundry revenue, end-market chip revenue and AI capex also have different value capture and timing. Do not count their correlated upward revisions as independent end-demand observations. Sources: TSMC/C.C. Wei Q2 call 2026-07-16; NSR 2026-09-18 p.2."
+    },
+    {
+      "sheet": "NSR_Datapoints",
+      "cell": "C9",
+      "text": "Research review, 2026-09-18.\n\nPrimary-source qualification: ASML planned ~30% additional low-NA EUV capacity in 2027, but said a further ~30% for 2028 was being investigated. NSR's 'will increase' wording is firmer. Tool capacity is not shipped/recognized systems or customer wafer output, and the one-year lag is NSR's heuristic. Verdict: supportive supply evidence, conditional 2028 execution. Sources: ASML Q2 release 2026-07-15, https://www.asml.com/en/news/press-releases/2026/q2-2026-financial-results ; NSR 2026-09-18 p.2."
+    },
+    {
+      "sheet": "NSR_Datapoints",
+      "cell": "C10",
+      "text": "Research review, 2026-09-18.\n\nAMD's $220bn server-CPU TAM is confirmed directly by Lisa Su on 2026-08-04. It is the TOTAL industry CPU market, not AMD revenue or the AI-only slice. The house $180-200bn range is below it and warrants an explicit conservative adoption/ASP rationale. Qualcomm/Nvidia $200bn claims remain attributed to NSR here, not independently revalidated management disclosures. Sources: AMD Q2 call 2026-08-04; NSR 2026-09-18 p.2; House 116."
+    },
+    {
+      "sheet": "NSR_Datapoints",
+      "cell": "C11",
+      "text": "Research review, 2026-09-18.\n\nThe 27%/32% capex revisions lack a fully specified basket and prior-date denominator in this note. AWS/Azure growth are near-term signals; AWS's 2036 aspiration is a different horizon from 2030 AI infrastructure. Strong cloud demand supports investment, but demand intentions are not powered, billable capacity. Microsoft's IR notes describe difficulty staging sites and kit at current demand. Sources: NSR 2026-09-18 p.2; MSFT IR meeting 2026-09-09."
+    },
+    {
+      "sheet": "NSR_Datapoints",
+      "cell": "B26",
+      "text": "Research review, 2026-09-18.\n\nThe 275 GW headline is not independent validation of the spending forecast if it is derived from the same XPU/CPU revenue assumptions. Its facility/IT-load and retirement boundaries are unspecified. Compare it only after defining gross purchases, online stock, average utilized capacity and customer universe. Sources: NSR 2026-09-18 p.3; House 51/63/73-75."
+    }
+  ]
+}
