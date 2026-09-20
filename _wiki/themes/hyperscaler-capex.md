@@ -2,6 +2,26 @@
 
 _Wiki · generated 2026-06-25 · cross-company theme · sources: the AI_Demand_Capex project (`E:\AI_Demand_Capex`, dashboard build 2026-06-11), BBG consensus, company 10-Ks, and the official Capstone models (`P:\Felipe Monteiro\US Equities\Modelos oficiais`). Company pages: [../00_INDEX.md](../00_INDEX.md) · themes index: [00_THEMES.md](00_THEMES.md)._
 
+## 🆕🔭 2026-09-19 (/wiki-ingest 21h) — **MICHAEL BURRY OPENS A FOOTNOTE-LEVEL ATTACK ON ALL FIVE HYPERSCALERS' 10-K/10-Q ACCOUNTING ("THE MISSING $3 TRILLION") — LOGGED AS A SIGNPOST ONLY, BECAUSE THE SUBSTANCE IS BEHIND A PAYWALL. AND IN THE SAME 24H, TWO INDEPENDENT PRICE DATAPOINTS CUT THE OTHER WAY: B200 RESIDUALS ABOVE LAUNCH PRICE, AND A NEOCLOUD RAISING SPOT GPU RATES.**
+
+**Source: Michael Burry, *Cassandra Unchained* Substack — "The Heretic's Guide to AI's Stars Part IV: The Big 5 Hyperscalers & the Missing $3 Trillion", published 2026-09-18, received 09-19. INDEPENDENT AUTHOR, NOT A BROKER: no rating, no price target, no house model.**
+
+⚠️⚠️ **READ THIS ENTRY AS A CALENDAR ITEM, NOT AS ANALYSIS. THE POST IS PAYWALLED AND ONLY THE TEASER WAS DELIVERED — NO NUMBER, NO FOOTNOTE, NO ARGUMENT AND NO DERIVATION OF THE "$3 TRILLION" IS AVAILABLE TO US. Nothing is adopted and nothing may be quoted from it beyond the framing below.**
+
+**WHAT IS ACTUALLY KNOWN FROM THE FREE PORTION:**
+- The subject is **[[AMZN]], [[META]], [[GOOG]], [[MSFT]] and [[ORCL]]** — described as *"a study of overlooked footnotes to the 10-K and 10-Q filings."*
+- The method is **filing footnotes**, and the framing leans on certification: *"The CEOs and CFOs of all five hyperscalers have certified the accuracy of their SEC Forms 10-K and 10-Q, with criminal penalties potentially attaching to knowingly false certifications."*
+- **Oracle's inclusion is new** (*"Oracle is now in, so I can do this right"*), and Parts V and VI are promised shortly — i.e. **expect follow-on posts on this dossier's core names.**
+- The thesis direction: *"The hyperscalers are entering a new paradigm across their historic existence, and they need to be studied in ways that Wall Street apparently cannot."*
+
+🔭 **WHY IT IS WORTH A SIGNPOST DESPITE BEING UNREADABLE.** The "$3 trillion" headline and the footnote method both point at the **useful-life / depreciation** leg — the same mechanism this dossier already tracks through Morgan Stanley Credit's uncommenced-lease work (>$800bn → >$1.1tn in one quarter, 2026-09-14) and the negative-FCF-for-four-straight-years finding in the New Street $4.15tn note (2026-09-18). **A sceptic with Burry's reach publishing a serial, filings-based case against hyperscaler capital accounting is a narrative risk to the whole complex regardless of whether the arithmetic survives contact.** Track Parts V and VI.
+
+⚠️ **AND THE SAME 24 HOURS PRODUCED TWO PRICE OBSERVATIONS POINTING THE OPPOSITE WAY — both logged this run, both third-party, neither strong on its own:** (1) **[[NVDA]] B200 residual values reportedly running ~58% ABOVE original launch price** (wccftech via the Susquehanna weekly); (2) **[[NBIS]] reportedly RAISING on-demand cloud GPU prices** (Yahoo Finance via the same weekly). **If used accelerators clear above new-issue price and spot rental rates are rising, the aggressive-useful-life critique is harder to run: the asset is not visibly depreciating in the second-hand market.** ⚠️ Both are single trade-press sources with no methodology disclosed — they are a counterweight to be tested, not a rebuttal.
+
+🔭 Adjacent, same window: @EugeneNg (corpus, 09-19) relaying a Michael Mauboussin chart — *"Alphabet and Meta are moving back to a growth stage with higher capex investments"* — the same observation from the corporate-life-cycle literature rather than from an accounting angle.
+
+Cross-filed [[AMZN]], [[META]], [[GOOG]], [[MSFT]], [[ORCL]], [[NVDA]], [[NBIS]].
+
 ## 🆕🔴🔴🔴 2026-09-18 (user-attached ingest) — **THE LARGEST SINGLE DEMAND ANCHOR PUTS ITS OWN NUMBER ON THE BILL: [[OPENAI]] PLANS ~$856bn OF COMPUTE + INFRASTRUCTURE SPEND BY END-2030, FUNDED THROUGH −$278bn OF CUMULATIVE FREE CASH FLOW AND A ~$1.2tn RAISE — AND THE MARCH $122bn RUNS OUT IN 2028**
 
 (Financial Times · George Hammond / James Fontanella-Khan, *"OpenAI expects to burn $280bn by 2030"*, 2026-09-18, relaying an OpenAI internal investor presentation *"seen by the FT"*. ⚠️ **Journalism relaying a company plan — not a disclosure, not broker research; no rating or PT anywhere in it.** [source](../../relat%C3%B3rios%20bons/20260918-FT-Hammond-OpenAI-expects-to-burn-280bn-by-2030.html) · reconciliation: [`../_meta/reconciliation-2026-09-18.md`](../_meta/reconciliation-2026-09-18.md))

@@ -1,4 +1,4 @@
-# Cyber KPI ledger — 2026-09-18
+# Cyber KPI ledger — 2026-09-19
 
 _Rendered from `_data/cyber_kpis.json` (asof 2026-09-14) by `_tools/build_cyber_kpis.py`. ° derived · ≈ approximate · ≥ company floor. Sources per cell in the JSON._
 
