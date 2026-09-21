@@ -1,5 +1,5 @@
 {
-  "asof": "2026-09-18",
+  "asof": "2026-09-21",
   "note": "Canonical-assumptions ledger — one entry per cross-page industry number that multiple pages/themes cite. Purpose: every page should reference ONE canonical framing per metric; when a new source disagrees, add a variant here (never silently replace). build_assumptions.py renders _meta/assumptions.md + _dashboards/assumptions.html and scans pages for citations of each metric not yet reconciled into the ledger. Edit variants by hand; keep scope labels precise (units vs dollars, IT-load vs facility GW).",
   "metrics": {
     "asic-vs-gpu-share": {
@@ -180,6 +180,19 @@
           "cited_in": [
             "ASML.md"
           ]
+        },
+        {
+          "value": "TWO SPOKEN CALLS, SAME WEEK, OPPOSITE TIMING. JPM (Sur): WFE +30% CY26 (“probably closer to 40%” when finalised), +38% CY27 (likewise “closer to 40%”), +17% CY28 called “a conservative starting point” — RATES ONLY, no dollar base given anywhere on the call; CY27 drivers TSMC 2nm + A14 pilot, Intel 14A pilot, Samsung 2nm, Rapidus 2nm, Terafab pilot; preference KLA > LAM > AMAT on process-control intensity inflecting up in 2027 and the 2.5D→3.5D packaging step. Jefferies (Curtis): equipment is “a FUNDING short”, and $300bn WFE is “more of a '29 storyline” — he needs ~$300bn to support a ~100 GW deployment level he does not think is reachable in 2028; KLA the “underdog… the cheapest one” after three weak quarters, the AMAT trade “played out”",
+          "source": "Harlan Sur + Mayur Ramdami (J.P. Morgan) Semiconductor Fall Series webinar 2026-09-17; Blayne Curtis (Jefferies) bus-tour recap call 2026-09-18 — Capstone notes (Notion transcripts)",
+          "date": "2026-09-18",
+          "scope": "⚠⚠ CONVERSION-CARD CONFLICT, ~2x, AND THE BASIS IS THE TRAP. Curtis's $300bn ⇔ ~100 GW implies ~$3.0bn WFE per GW on his FACILITY basis (≈$4.5bn/GW converted to compute-TDP at his own ≈60/≈30 split) against the canonical card above of ~$7.5-8bn per GW on a COMPUTE-TDP basis. He states the method against himself: revenue bottoms-up, WFE DERIVED by capital intensity, “a bit of a roundabout”, and no company has given him a GW number — it is a round-trip check on his own model, NOT an inversion-safe conversion. DO NOT use it to invert GW→WFE. Sur's rates carry no dollar base, so they cannot be differenced against the CY28 house/street ladder without one. On LEVEL the houses differ less than on TIMING — nobody in the raised cluster puts $300bn in CY28 (UBS 2029, Curtis 2029); the live question is whether the buy side's CY28 ~$300bn is a forecast or a front-run. Sur's CY27 path also implies ~$207-217bn off KLA's own “low $150bn” CY26 mark — ~9-14% ABOVE the ~$190bn consensus KLA management itself used on 2026-07-28 to justify “CY27 growth similar to CY26” (house arithmetic, not JPM's)",
+          "cited_in": [
+            "themes/semicap-wfe.md",
+            "KLAC.md",
+            "LRCX.md",
+            "AMAT.md",
+            "ASML.md"
+          ]
         }
       ],
       "status": "house-vs-street",
@@ -277,7 +290,7 @@
     "ai-dc-power-gw": {
       "title": "AI datacenter power (GW) — facility GW vs IT-load GW vs 800V-debate GW",
       "definition": "THREE DISTINCT BASES — never mix: (1) facility GW deployed/added (grid + on-site); (2) IT-load GW (compute load in racks); (3) 800V-transition GW (subset of IT load moving to 800VDC).",
-      "canonical": "Facility: ~14-16 GW built 2026 / ~20 GW 2027 vs ~40-45 GW proposed (Jefferies satellite tracking, 50% haircut); ~138 GW capacity through 2030 (JPM). IT-load: ~300 GW by 2030 (+25% CAGR, JPM/Omdia) or ~240-280 GW global (JPM First Principles). 800V debate: Citi models 9 GW -> 21 GW 2025-30 — a SUBSET, not total deployment.",
+      "canonical": "Facility: ~14-16 GW built 2026 / ~20 GW 2027 vs ~40-45 GW proposed (Jefferies satellite tracking, 50% haircut); ~138 GW capacity through 2030 (JPM). IT-load: ~300 GW by 2030 (+25% CAGR, JPM/Omdia) or ~240-280 GW global (JPM First Principles). 800V debate: Citi models 9 GW -> 21 GW 2025-30 — a SUBSET, not total deployment. 🆕 2026-09-18 — FIRST EXPLICIT DEMAND-vs-FEASIBLE GAP on a facility basis: Jefferies 2028 need ~90 GW total facility (≈60 compute + ≈30 cooling/infra) vs ~56 GW judged feasible behind-the-meter ⇒ 2H27-28 slippage. Facility basis — keep separate from IT-load, the 800V subset, and XPU-deployment GW.",
       "scope_note": "STANDING RULE: the 800V notes' GW figures (IT load ~300 GW, Citi 9->21 GW) must NOT be folded into total-GW-deployed answers. Citi's 9->21 GW is the AI-specific 800V-relevant increment.",
       "patterns": [
         "~?300\\s?GW",
@@ -352,6 +365,18 @@
             "themes/ai-datacenter-power.md",
             "themes/800v-dc-power.md"
           ]
+        },
+        {
+          "value": "2028 AI data-centre power need ~90 GW TOTAL FACILITY (≈60 GW semiconductor/compute + ≈30 GW cooling and infrastructure), walked up through the year 80 → 86 → 90. Against that, Jefferies' own infrastructure/utility work judges only ~56 GW of behind-the-meter capacity FEASIBLE — a gap the analyst expects to force deployment delays or outright misses in 2H27-2028. Supporting colour: virtually all planned AI DCs on gas turbines rather than grid; three calls with 400-500 utility investors with “no one's come back and said you're wrong”; 2027 “fully baked”, 2028 carrying “a lot of variability”. He also reports the Jefferies US DC analyst's ~30 GW North America figure grossed up globally is “way too low”",
+          "source": "Blayne Curtis (Jefferies), semis bus-tour recap call — Capstone notes (Notion transcript)",
+          "date": "2026-09-18",
+          "scope": "FACILITY GW (total data-centre power incl. cooling/infra) — NOT IT-load, NOT the 800V subset, and NOT the XPU-DEPLOYMENT GW used on the Broadcom customer ladder (Sur 14 GW / Curtis 20 GW for 2028), which must never be netted against this. ⚠ THE ~56 GW FEASIBLE FIGURE IS A JEFFERIES INTERNAL CROSS-TEAM ESTIMATE WITH NO METHOD SHOWN on the call — carried as the stated REASON for his timing call, not as an independent supply measurement. The ≈60/≈30 compute-vs-infra split implies a ~1.5x facility-to-compute gross-up; do not apply it to another house's GW without checking their basis",
+          "cited_in": [
+            "themes/ai-datacenter-power.md",
+            "NVDA.md",
+            "CRDO.md",
+            "themes/semicap-wfe.md"
+          ]
         }
       ],
       "status": "scope-trap",
@@ -360,7 +385,7 @@
     "rev-per-gw": {
       "title": "AI compute revenue / rental rate per GW",
       "definition": "Annualized $ revenue (or rental rate) per GW of AI compute capacity — state chip type (ASIC vs merchant GPU) and whether it is a rental rate or realized revenue. Distinct from facility BUILD cost per GW.",
-      "canonical": "Rental/revenue per GW of compute: Trainium <$10B/GW (Anthropic/OpenAI); merchant GPU ~$12-13B/GW (neocloud & AWS, pre-2H26 shortage); premium GPU ~$25B/GW (~$25M/MW/yr, SpaceX–Google deal). MS pegs 1P merchant TPU at ~$20B rev/GW (20% GM base). Colocation POWER-ONLY rent: ~$60/kW-month historically -> ~$120-160 typical now, up to ~$200 (weak-credit tenant + good DC), as low as ~$80-100 (India / mid DC / poor grid). Rev/GW is a data-center-QUALITY metric: credit, utilization, networking and speed-to-market drive a ~2x spread — a top-operator GW ≈ 2x a generic GW. NEW (08-28): lab INFERENCE MONETISATION ~$60-100bn/GW/yr (Baker/a16z) — a distinct, much larger basis than the rental rates; implies ~1yr REVENUE payback on a ~$50bn/GW build. Neocloud payback marked at ~9-10 months (50-60% collected upfront). 🆕 2026-09-18 — FIRST FILED (S-1) NEOCLOUD BOOK-LEVEL MARK: Nscale $103.4bn TCV / 5.7 yrs / 1.37 GW IT ⇒ ~$13.2bn per IT-GW per year blended; Anthropic Vera Rubin tranche ~$16.2bn; pre-Anthropic (Microsoft-heavy Blackwell) ~$11.8bn. Confirms the $12-13bn merchant mark for WHOLESALE 5-6 yr take-or-pay with hyperscaler/lab credit, and dates the VR step-up at ~+35-40% per GW. Basis: IT-MW, contract cash (ex financing component).",
+      "canonical": "Rental/revenue per GW of compute: Trainium <$10B/GW (Anthropic/OpenAI); merchant GPU ~$12-13B/GW (neocloud & AWS, pre-2H26 shortage); premium GPU ~$25B/GW (~$25M/MW/yr, SpaceX–Google deal). MS pegs 1P merchant TPU at ~$20B rev/GW (20% GM base). Colocation POWER-ONLY rent: ~$60/kW-month historically -> ~$120-160 typical now, up to ~$200 (weak-credit tenant + good DC), as low as ~$80-100 (India / mid DC / poor grid). Rev/GW is a data-center-QUALITY metric: credit, utilization, networking and speed-to-market drive a ~2x spread — a top-operator GW ≈ 2x a generic GW. NEW (08-28): lab INFERENCE MONETISATION ~$60-100bn/GW/yr (Baker/a16z) — a distinct, much larger basis than the rental rates; implies ~1yr REVENUE payback on a ~$50bn/GW build. Neocloud payback marked at ~9-10 months (50-60% collected upfront). 🆕 2026-09-18 — FIRST FILED (S-1) NEOCLOUD BOOK-LEVEL MARK: Nscale $103.4bn TCV / 5.7 yrs / 1.37 GW IT ⇒ ~$13.2bn per IT-GW per year blended; Anthropic Vera Rubin tranche ~$16.2bn; pre-Anthropic (Microsoft-heavy Blackwell) ~$11.8bn. Confirms the $12-13bn merchant mark for WHOLESALE 5-6 yr take-or-pay with hyperscaler/lab credit, and dates the VR step-up at ~+35-40% per GW. Basis: IT-MW, contract cash (ex financing component). 🔴 2026-09-21 — CONFLICT OPENED, NOT RESOLVED: CoreWeave management calls mid-teens $/W/yr the FLOOR (long-dated Vera Rubin clearing above it; Q3 short-dated ~$40M/MW), three days after the filed Nscale S-1 read the same mid-teens as the TOP of the contracted book. Neither adopted — see variants. Separately, the LAB-MONETISATION basis widened to a 5-10x spread (Azhar ~$10bn/GW vs Tan ~$30bn vs Baker ~$60-100bn).",
       "scope_note": "THREE distinct bases — never mix: (a) compute rev/rental $/GW (ASIC vs GPU, the monetization/quality metric); (b) colocation $/kW-month = power+shell only, NOT compute; (c) facility BUILD cost ~$30-40B/GW (ASIC) vs ~$50B/GW (NVDA-GPU infra) — see custom-asic-tpu. A $/kW-month figure ×12×1e6 ≈ $/GW-year only for the power-shell layer, not the compute. ⚠️ FOURTH BASIS ADDED 2026-08-28 — LAB MONETISATION per GW (~$60-100bn/GW/yr) is what the LAB EARNS on a GW, and is 3-10x the RENTAL rates above (~$10-25bn/GW/yr) and ~1-2x the ~$50bn/GW BUILD cost. Never compare it to a rental rate: renting a GW at ~$12-13bn and monetising at ~$60-100bn implies a 5-8x gross spread, which is either (a) list/aspirational rather than realised, (b) not utilisation-matched, or (c) evidence the rental marks are stale (they are flagged pre-2H26-shortage). UNRECONCILED — treat the spread as an open question, not a margin. 🔴 FIFTH AND SIXTH BASES ADDED 2026-09-02 (Broadcom Q3 FY26 call, which produced THREE different per-GW numbers in one hour): (e) VENDOR SILICON CONTENT per GW = $20-30bn (AVGO's XPU + networking silicon into a rack someone else integrates) — this is NOT the same quantity as NVDA's $25-40bn+/GW, which is FULL-RACK REFERENCE-DESIGN revenue and only applies if the customer buys the whole design; and (f) VENDOR REVENUE per DEMAND-GW = $11-12bn (AVGO's guide divided by AVGO's own GW ladder). (e) and (f) differ by ~2x and BOTH come from the same company on the same call — the reconciliation is that demand GW ≠ shipped GW, so ~$345bn of FY27-28 revenue at $20-30bn/GW implies only ~12-17GW ships against ~30GW of demand. ⚠️ SIX bases now circulate: rental $/GW · colo $/kW-month · build cost $/GW · lab monetisation $/GW · vendor silicon content $/GW · vendor revenue per demand-GW. Never net or chain them.",
       "patterns": [
         "/GW",
@@ -494,6 +519,30 @@
             "ANTHROPIC.md",
             "NBIS.md",
             "CRWV.md"
+          ]
+        },
+        {
+          "value": "COREWEAVE MANAGEMENT, DIRECTLY AGAINST THE FILED NSCALE READ: the ~$15-16 per watt per year benchmark (put to him as the Anthropic deal closed ~3 weeks earlier) is “probably the ABSOLUTE FLOOR… maybe it's even a bit low versus being the ceiling”, and CoreWeave's own long-dated Vera Rubin contracts are “clearing HIGHER than that mid-teens figure”. Short-dated contracts price “way, way higher” — Q3 short-dated signed at ~$40M per MW. Supporting economics given in the same answer: contract-level EBITDA margin mid-70s on a 5-yr deal and “meaningfully higher” on shorter terms; payback “approaching a year” to ~3 years depending on duration and prepayment; the historical 2:1 revenue-to-capex ratio on a 5-yr deal has “EXPANDED” since early 2026 as contract terms improved. He also prices the OTHER side, which this ledger has not been netting: financing short-dated is “way, way, way more expensive and way more dilutive”, and depth of financing is lower",
+          "source": "Nick Robbins (VP Corporate Development, CoreWeave), BTG Pactual Global Access websession — Capstone notes (Notion transcript)",
+          "date": "2026-09-21",
+          "scope": "MANAGEMENT CHARACTERISATION of the forward market, NOT a filed or audited figure, and from a seller of the capacity — weight accordingly. Unit is $/W/yr (the questioner's unit, which he adopts). ⚠ THE ~$40M/MW TERM IS NOT STATED IN WORDS — annual is strongly implied by the surrounding $/W/yr ladder (and on that reading it lands on the existing ~$40-50bn/IT-GW spot tier), but it is NOT confirmed; do not net it against the ~$16M/MW/yr base. ⚠ DIRECT CONFLICT WITH THE 2026-09-18 NSCALE S-1 MARK three days earlier, which concluded the 2H26 shortage had NOT pushed realised wholesale above ~$12-16bn/IT-GW and read ~$16.2bn as the top of the filed book. Same quantity, opposite side. NEITHER ADOPTED. If both are true the reconciliation is operator quality — the ~2x top-operator-vs-generic GW spread already carried above — plus contract duration, since his ladder is explicitly duration-priced while the Nscale book is 5.7-yr take-or-pay",
+          "cited_in": [
+            "CRWV.md",
+            "NSCALE.md",
+            "ANTHROPIC.md",
+            "NBIS.md"
+          ]
+        },
+        {
+          "value": "LAB MONETISATION basis, LOWEST MARK IN THE CORPUS: ~$10bn per energized GW “today”. Against the other marks on this same basis — Baker/a16z ~$60-100bn/GW/yr (2026-08-28), Hock Tan ~$30bn/GW (2026-09-02), and ~$50bn/GW attributed second-hand to Jensen Huang (~2026-09-16, primary NOT on disk) — the spread on one basis is now 5-10x. Given alongside his infrastructure-payback frame: ~$800bn/yr of infrastructure-level revenue needed by 2029 to cover depreciation + opex + a 15% ROIC",
+          "source": "Azeem Azhar (Exponential View) @ BofA-hosted expert call — Capstone notes (Notion transcript)",
+          "date": "2026-09-17",
+          "scope": "LAB MONETISATION per GW (the FOURTH basis in the scope note) — NOT a rental rate, NOT a build cost. Independent commentator hosted by BofA: NOT BofA Research, no rating, no PT, no house estimate, and must never be aggregated with BofA Research. Spoken, unsourced on the recording. ⚠ The 5-10x spread on this basis is now wide enough that the basis itself is suspect — treat as an OPEN QUESTION, not a margin",
+          "cited_in": [
+            "themes/tokenmaxxing.md",
+            "themes/ai-tam-bofa.md",
+            "ANTHROPIC.md",
+            "OPENAI.md"
           ]
         }
       ],

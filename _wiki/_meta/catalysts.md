@@ -59,13 +59,13 @@ _Generated 2026-09-21 · parsed from every page's 'Catalysts / what to watch'. D
 | 2028-06-30 | NSCALE | 2028-06-30 — Monarch **2 GW gross / 1.37 GW IT online "by 1H28"** (Anthropic tranches; the wiki's first neocloud milestone tied to on-site gas turbines). |
 | 2031-12-31 | NSCALE | 2031-12-31 — Monarch expansion to ~8 GW gross planned. |
 
-## ⏰ Passed — need a post-mortem (0)
+## ⏰ Passed — need a post-mortem (1)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| _none_ | | |
+| 2026-09-08 | CRWV | **🆕🔴 ZERO OF 2028 CAPACITY IS SOLD, DELIBERATELY, AND SOME 2027 REMAINS — SO THE NEXT LARGE CONTRACT ANNOUNCEMENT IS A CLEAN PRICE PRINT:** *"we still have some 2027 capacity left… we haven't sold any |
 
 ## ✅ Resolved (178)
 
