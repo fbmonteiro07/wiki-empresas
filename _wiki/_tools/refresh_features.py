@@ -37,6 +37,8 @@ STEPS = [
 ]
 
 HUB = [
+    ("Estudos · OpenRouter + Vercel", "openrouter.html", "AI model and lab adoption: gateway token share, requests, reported versus estimated spend, and weekly changes. Friday summary at 09:00 Brasília."),
+    ("AI gateways — weekly brief", "gateway-weekly.html", "Latest weekly summary covering OpenRouter and Vercel, with dated observations and source-specific methodology."),
     ("Analyst Inbox", "analyst-inbox.html", "Ranked daily ideas, model challenges, narrative shifts, catalysts and read-throughs — each with attribution, action and falsifier."),
     ("AI credit & funding monitor", "credit-monitor.html", "AI issuance, neocloud spreads, counterparty tiering, appetite scoreboard — manual refresh: fetch_funding.py + build_funding_monitor.py."),
     ("Edge tracker", "edge.html", "House vs Street divergences (the alpha) — programmatic + curated."),

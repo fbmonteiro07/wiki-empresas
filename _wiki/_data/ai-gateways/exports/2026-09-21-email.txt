@@ -1,0 +1,39 @@
+Felipe,
+
+O dashboard foi aprimorado com dez gráficos sobre crescimento de tokens e mudanças de participação. O pacote completo está anexado em HTML: basta salvar e abrir no navegador; os gráficos funcionam sem internet. Também estão no topo do dashboard da Wiki.
+
+Principais leituras desta edição, com dados até 2026-09-20:
+
+• OpenRouter: 128,90 trilhões de tokens em sete dias, +1,68% versus a janela encerrada em 2026-09-13 (intervalo de 7 dias). A participação de variantes marcadas como gratuitas é 9,25%. Outras variantes não são necessariamente pagas.
+
+• Share dos labs no OpenRouter: DeepSeek +6,52 pp; Z.ai +1,83 pp; OpenAI -5,80 pp; Tencent -2,84 pp. A expansão de volume do gateway foi moderada, mas a redistribuição entre labs foi relevante.
+
+• Variação de tokens por modelo no OpenRouter: DeepSeek V4.1 Flash · standard +10,83 trilhões; GLM 5.3 Flash · standard +2,18 trilhões; GPT-5.6 Luna (batch) · standard -8,46 trilhões; Hy4 preview · standard -4,30 trilhões. Os gráficos preservam cada variante e só comparam modelos observados nas duas janelas.
+
+• Vercel: DeepSeek +13,74 pp; Moonshot +0,46 pp; Anthropic -4,54 pp; stepfun -3,77 pp. Comparação entre as médias simples dos shares diários de 2026-09-14 a 2026-09-20 e 2026-09-07 a 2026-09-13. A Vercel publica shares, sem volumes absolutos para calcular crescimento de tokens.
+
+• DeepSeek ganhou participação nos dois gateways. Isso indica avanço dentro dessas duas bases de tráfego; não mede o mercado global. O gráfico de tokens versus spend estimado ajuda a distinguir adoção de modelos e diferenças de preço/mix. Spend estimado a preços de lista não é faturamento realizado.
+
+• Escala: o feed OpenRouter mostra 513,34 trilhões de tokens observados nos últimos 30 dias, no snapshot de 2026-09-21; não é extrapolação do ritmo semanal. A divulgação Vercel de 17/09 descreve dezenas de trilhões por mês, sem total exato. Essa comparação sugere uma base maior no OpenRouter, mas não sustenta um múltiplo preciso, dadas as diferenças de cobertura e período.
+
+Os dez gráficos incluem volume, ritmo de crescimento, mix gratuito, histórico de share dos labs, maiores ganhos/perdas por lab e modelo em ambos os gateways e tokens versus spend estimado da Vercel. O histórico OpenRouter começa em 2026-07-20; a Vercel agora tem 90 dias. Cada gráfico inclui datas, fonte, valores e tabela dos dados.
+
+Os gráficos OpenRouter usam todos os tokens prompt+completion do feed. Alguns indicadores antigos do dashboard filtram modelos de texto e, por isso, podem mostrar totais diferentes. Entradas ausentes são desconhecidas, nunca tratadas como zero; mudanças de share são em pontos percentuais.
+
+A rotina semanal foi atualizada: sexta-feira às 09:00, horário de Brasília, com resumo no corpo do e-mail e o pacote de gráficos atualizado em anexo. Próxima execução: 25/09/2026. A execução local depende do computador e do Codex disponíveis.
+
+Dashboard:
+http://DS-CAP-33:8080/wiki/_dashboards/openrouter.html#token-growth
+
+Pacote de gráficos:
+http://DS-CAP-33:8080/wiki/_dashboards/ai-gateways-charts.html
+
+Resumo semanal:
+http://DS-CAP-33:8080/wiki/_dashboards/gateway-weekly.html
+
+Fontes:
+OpenRouter rankings: https://openrouter.ai/rankings
+Vercel AI Gateway: https://vercel.com/ai-gateway/leaderboards/models
+Vercel metodologia: https://vercel.com/docs/ai-gateway/leaderboards
+Vercel Production Index, 17/09/2026: https://vercel.com/blog/ai-gateway-production-index-september-2026
+Vercel: CC BY 4.0; agregações e gráficos elaborados para o dashboard.
