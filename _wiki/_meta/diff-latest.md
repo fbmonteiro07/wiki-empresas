@@ -1,6 +1,6 @@
 # What changed — last 7 days
 
-_Generated 2026-09-20 (since 2026-09-13) · rolls up every page's `## Changelog` + the ingest run log. ⭐ = rating/PT move. Rebuild: `py _wiki/_tools/build_diff.py [days]`._
+_Generated 2026-09-21 (since 2026-09-14) · rolls up every page's `## Changelog` + the ingest run log. ⭐ = rating/PT move. Rebuild: `py _wiki/_tools/build_diff.py [days]`._
 
 | Date | Ticker | Change |
 |---|---|---|

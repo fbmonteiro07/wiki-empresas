@@ -1,8 +1,8 @@
 # Source-coverage audit
 
-_Generated 2026-09-20 · 96 public-company pages · flags inputs that exist on disk but the page never read. Rebuild: `py _wiki/_tools/build_coverage.py`._
+_Generated 2026-09-21 · 96 public-company pages · flags inputs that exist on disk but the page never read. Rebuild: `py _wiki/_tools/build_coverage.py`._
 
-**18 pages flagged** (severity > 0), worst first.
+**19 pages flagged** (severity > 0), worst first.
 
 | Sev | Ticker | Words | Cites | Density | Latest tx | tx read? | Calls used | Decks | What's unread |
 |--:|---|--:|--:|--:|---|:--:|---|---|---|
@@ -22,6 +22,7 @@ _Generated 2026-09-20 · 96 public-company pages · flags inputs that exist on d
 | 4.0 | TM | 2765 | 9 | 78.7 | 2026-08-04 | ✗ | 0/0 | 0/16 | latest transcript 2026-08-04 unread |
 | 3.0 | WOLF | 9413 | 26 | 503.1 | 2026-08-19 | ✗ | 0/0 | 0/0 | latest transcript 2026-08-19 unread |
 | 3.0 | BESI | 17499 | 45 | 1862.4 | 2026-07-23 | ✗ | 0/0 | 0/0 | latest transcript 2026-07-23 unread |
+| 3.0 | CRWV | 57975 | 83 | 3532.4 | 2026-09-21 | ✗ | 1/2 | 0/0 | latest transcript 2026-09-21 unread |
 | 2.0 | AGX | 4022 | 15 | 146.6 | 2026-06-04 | ✓ | 0/0 | 1/1 | latest 10-Q 2026-09-02 unread (no same-qtr transcript either) |
 | 2.0 | CSCO | 25730 | 60 | 378.2 | 2026-08-12 | ✓ | 1/2 | 2/17 | latest 10-Q 2026-05-19 unread (no same-qtr transcript either) |
 
