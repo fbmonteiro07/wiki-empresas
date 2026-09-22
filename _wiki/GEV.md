@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\GEV` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\GEV.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-18 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-21 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -109,6 +109,27 @@ GE Vernova is the GE spin-out (April 2024) holding the legacy electric-power fra
 
 ## Intra-quarter — calls, commentary & reports (since the last print)
 _Q2 FY26 · Jul 22 2026 → next print · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html). Prior-quarter (Q1'26) flow archived below._
+
+**🆕🔴🔴🔴 2026-09-21 (/wiki-ingest 21h) — MORGAN STANLEY TAKES THE 2026-28 US GROSS POWER SHORTFALL TO **57 GW FROM 38 GW** AND ADDS A **68 GW 2029** — AND NAMES GEV AMONG ITS OW BENEFICIARIES, WITH A SEPARATE POSITIVE READ-THROUGH FROM ITS LAGUNA CONFERENCE.**
+
+(Morgan Stanley · **Stephen Byrd** / **Dave Arcaro**, *"Power Shortfall Update"*, **2026-09-21**; relayed by MS TMT sales · Tom Wigg — ⚠️ **the relay is sales commentary, not research.**)
+
+| MS US data-center power model | Previous | **2026-09-21** | Δ |
+|---|--:|--:|--:|
+| Incremental US DC power demand **2026-28** | 68 GW | **97 GW** | **+43%** |
+| **Gross** shortfall through 2028 | 38 GW | **57 GW** | **+50%** |
+| **Net** shortfall after "time-to-power" remedies | — | **33 GW** = **34% of required US DC power** | — |
+| Incremental demand **2029 alone** | — | **68 GW** (+40% vs 2028) | — |
+| Cumulative **2026-29** | — | **165 GW** → **107 GW gross** / **72-82 GW net** = **44-49% of demand** | — |
+| [[NVDA]] **Vera Rubin** rack | 149 kW | **234 kW** | **+57%** |
+| [[NVDA]] **Rubin Ultra** rack | 415 kW | **600 kW** | **+45%** |
+
+- 🔴🔴🔴 THE DRIVER IS A RACK RE-SPEC, NOT A DEMAND UPGRADE. MS: *"the biggest model change is **RACK-LEVEL ARCHITECTURE**"* — the 8-GPU-server → NVL72-rack transition *"materially raises memory, networking, cooling and power-delivery requirements."* ➤ **The 2028 gap widened by 19 GW because the accelerator roadmap got denser, not because anyone raised a unit or capex forecast.**
+- 🔴 **THE OFFSET IS A JEVONS ARGUMENT: MS models a **94% reduction in all-in cost/TFLOP from Hopper to Rubin Ultra**, and argues cheaper compute stimulates more adoption, agentic workloads, tokens and model calls — so aggregate electricity consumption RISES despite much higher efficiency per token.** ⚠️ **Basis guard: 94% is a cost-per-TFLOP figure, not a price, not a $/W and not comparable to any $/GW mark on this wiki.**
+- ⚠️⚠️ **THE 234 kW / 600 kW FIGURES ARE MS MODEL ASSUMPTIONS, NOT NVIDIA DISCLOSURES — falsifiable at the Vera Rubin launch spec.**
+- **MS's named OW beneficiaries off the note: [[SPCX]], CIFR, HUT, RIOT, WULF, GLXY, EQIX, [[BE]], SEI, [[VST]], [[GEV]], INIO, WMB, LBRT, EROC, CMI — plus [[NVDA]], [[AVGO]], [[MU]], [[META]], [[AMZN]], [[MSFT]] on the AI side. And MS adds a separate positive read-through for power equipment from its Laguna 2026 conference (*"GEV INIO CMI CAT EROC BKR ENR — Positive Readthrough for Power Equipment Stocks"*, 2026-09-21).**
+- ⚠️ THE POLICY COUNTER-SIGNAL, SAME DAY AND IN THE LARGEST US DATA-CENTER MARKET: **Virginia's Governor signed an executive order to SLOW data-center approvals** and create an AI task force to evaluate workforce displacement (The Verge, via MS TMT desk, 2026-09-21). ➤ **Set it against SemiAnalysis's mapping of 400+ moratorium instruments across 17 states against a 3,500-project pipeline, which found only **3 campuses actually delayed**, **~80% of bans covering ZERO capacity**, and **New York's statewide freeze (~800 MW) as the one that bites** (⚠️ reaching the wiki via an AI-generated podcast brief — verify). A Virginia instrument would NOT be in the "covers zero capacity" bucket.**
+- 🔴 **AND THE EQUIPMENT LAYER SAYS THE CONSTRAINT HAS ALREADY MOVED: Jefferies on **Delta Electronics (2308 TT, off-coverage)** — *"demand exceeds supply, particularly in AI server power solutions"*, growth accelerating sharply in 4Q26 and *"well above seasonal"* into 1Q27 on **[[NVDA]] Vera Rubin power shelves, HVDC deployments and the release of delayed shipments**; Delta holds **>60% share in AI server power solutions**; 1Q27 modelled at **NT$234.4bn revenue (+2.5% q/q, above seasonality), GM 36.4%, OpM 18.9%, EPS NT$12.72 (+61% y/y)**; FY27 revenue **+40.6% to NT$1,082bn** (consensus NT$1,042bn / Fubon 1,078 / UBS 1,150). *"**If compute was yesterday's constraint, power may be tomorrow's**"* (Jefferies · **Cristina Titu** / Michelle Huang, 2026-09-21 — ⚠️ **market commentary, not research**).**
 
 **Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
@@ -229,6 +250,8 @@ _Source: GEV earnings calls (dates above); management commentary, paraphrased._
   - [Unattributed BTM power call — 2Q group review, speaker “Jean-Anne” (2026-08-27)](../relat%C3%B3rios%20bons/2026_08_27_btm.html) — ⚠️ **arrived via the `P:` drop folder with no email metadata, no cover page and no broker name in the text; the house is NOT identified and is deliberately not guessed from the speakers’ first names.** GEV content: **Chevron’s JV with GE Vernova covers 4 GW of turbines** (announced ~18 months ago); **Chevron starts the ramp on smaller Caterpillar turbines and does not reach full capacity on the GEV turbines until 2031** (“a later timeline than I had realized”); grid connection planned for **2030** — framed as a separate reliability/optionality decision — alongside a **20-year, 2.6 GW take-or-pay PPA with Microsoft** in West Texas, with a path to the full 4 GW from the JV; Texas data-center audit compliance.
 
 ## Changelog
+- **2026-09-21 (/wiki-ingest, 21h window) — 1 source: Morgan Stanley (Stephen Byrd / Dave Arcaro, via MS TMT sales — ⚠️ relay not research), plus Jefferies (Cristina Titu) on Delta Electronics.** ⚠️ **NOTHING SUPERSEDED — no rating, price target, estimate or guide on this page was replaced.** 🔴 **All material this run is NET-NEW to this page and each block says so in place; the run's dedup exclusions and the five documents deliberately NOT re-ingested are recorded in `_meta/changelog.md`.** Added 1 dated `## Intra-quarter` block, this record. ⚠️ **Run-level guards carried on this page: see `_meta/changelog.md` for the full list — the FIFTH incompatible $/GW basis (Redburn's $45bn/GW compute price), the ~20% inference-monitoring overhead as a THIRD relay of one lab's August estimate, and four items arriving only as AI-generated podcast briefs.** Post-run audits on this page's added lines: **0 EOL-class flips, 0 table-column anomalies, unbalanced bold found and repaired.**
+
 **2026-09-17 (/wiki-ingest) — 1 source (MS Laguna Industrials Conference 2026-09-16, relayed by MS TMT desk · Tom Wigg — SALES commentary, no rating or PT). 1 block in `## Current state`, 1 row in `## Intra-quarter`, this record. NOTHING SUPERSEDED — no rating, PT, guide or house estimate was replaced.**
 🔴 **THE DRIFT, SMALL IN WORDS AND MEANINGFUL IN TIMING: GEV now expects backlog to reach $200BN "VERY EARLY IN 2027", against the prior framing of "in 2027" / "sometime in 2027". A company narrowing a twelve-month window to its first weeks is describing order intake it can already see, not a pipeline.**
 **NET-NEW, same session: "20GW of GROSS NEW GAS-TURBINE CONTRACTS looks CONSERVATIVE", and the company "may EXIT 2026 ABOVE its 125GW CONTRACTED-TURBINE GUIDANCE." Stock +5% on the day.**

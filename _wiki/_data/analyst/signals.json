@@ -7,11 +7,11 @@
     "positions": 8
   },
   "stats": {
-    "signals": 102,
-    "active": 102,
+    "signals": 108,
+    "active": 108,
     "high": 7,
-    "belief_changes": 0,
-    "focus_names": 49
+    "belief_changes": 5,
+    "focus_names": 51
   },
   "focus": [
     {
@@ -117,6 +117,21 @@
       ]
     },
     {
+      "ticker": "ASML",
+      "focus_score": 72,
+      "in_book": false,
+      "signal_count": 6,
+      "high_count": 0,
+      "sector": "AI — Semis & Compute",
+      "thesis": "Supply-chain chokepoint (EUV near-monopoly); Street \"behind the curve\" on 2027/28 vs a 2028 DRAM air-pocket.",
+      "next_catalyst": "2026-10-14",
+      "why": [
+        "ASML — derived thesis/debate state changed since the prior daily snapshot",
+        "ASML — Bernstein's estimates are consensus, but its PT is +22.8% above consensus",
+        "ASML — the house EUV model takes the 110 as the number, which is exactly what tonight's note says it is not"
+      ]
+    },
+    {
       "ticker": "BE",
       "focus_score": 67,
       "in_book": false,
@@ -130,6 +145,36 @@
       ]
     },
     {
+      "ticker": "LITE",
+      "focus_score": 66,
+      "in_book": false,
+      "signal_count": 3,
+      "high_count": 0,
+      "sector": "Optical / Networking",
+      "thesis": "US photonics pure-play (rev +90%); demand isn't the question, supply/execution is.",
+      "next_catalyst": "2026-09-22",
+      "why": [
+        "LITE — derived thesis/debate state changed since the prior daily snapshot",
+        "LITE — 2026-09-22: ECOC (JPM-hosted meetings). CEO Michael Hurlston meeting alongside CRDO (CEO Bill…",
+        "InP routing INVERSION — cuts against the moat LITE and COHR both run on"
+      ]
+    },
+    {
+      "ticker": "OKTA",
+      "focus_score": 66,
+      "in_book": false,
+      "signal_count": 3,
+      "high_count": 0,
+      "sector": "Software / security / internet",
+      "thesis": "Neutral identity control plane for the agent era (cRPO re-accel to +14%, NRR turn); bear = seat model + MSFT Entra / PANW-CyberArk bundling.",
+      "next_catalyst": "2026-09-21",
+      "why": [
+        "OKTA — derived thesis/debate state changed since the prior daily snapshot",
+        "OKTA — 2026-09-21: Oktane — week of 2026-09-21, Las Vegas — \"the AI security event of the year\", with an…",
+        "OKTA — 2026-09-23: Oktane 2026, Las Vegas; INVESTOR SESSION 11am-12pm PT. JPM (Brian Essex, OW, px $190.02 on…"
+      ]
+    },
+    {
       "ticker": "TSM",
       "focus_score": 65,
       "in_book": true,
@@ -140,6 +185,47 @@
       "next_catalyst": "2026-09-24",
       "why": [
         "TSM — 2026-09-24: TRUMP-XI, 2026-09-24 — UBS puts SPE and MEMORY as the most exposed verticals, with the…"
+      ]
+    },
+    {
+      "ticker": "CRWV",
+      "focus_score": 64,
+      "in_book": false,
+      "signal_count": 4,
+      "high_count": 0,
+      "sector": "Systems & neoclouds",
+      "thesis": "Highest-visibility GPU neocloud ($99B backlog) but ~$25B high-coupon debt + customer concentration.",
+      "next_catalyst": "",
+      "why": [
+        "CRWV — catalyst passed without a logged outcome",
+        "CRWV — the same $6.3bn is characterised two opposite ways, and the two readings are not compatible",
+        "CRWV's cost of capital: management's characterisation vs traded levels"
+      ]
+    },
+    {
+      "ticker": "APP",
+      "focus_score": 62,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Software / security / internet",
+      "thesis": "AXON AI ad engine; eCommerce inflection + fading META threat the bull, drawn-out eComm ramp the bear (DB Buy $660 / GS Neutral $585).",
+      "next_catalyst": "",
+      "why": [
+        "APP — derived thesis/debate state changed since the prior daily snapshot"
+      ]
+    },
+    {
+      "ticker": "TSLA",
+      "focus_score": 62,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Consumer / Internet / Other",
+      "thesis": "Rotating from EV volume to autonomy/robotics re-rate (FSD, Optimus, Terafab); MS EW $415, JPM just to Neutral.",
+      "next_catalyst": "",
+      "why": [
+        "TSLA — derived thesis/debate state changed since the prior daily snapshot"
       ]
     },
     {
@@ -187,21 +273,6 @@
       ]
     },
     {
-      "ticker": "ASML",
-      "focus_score": 51,
-      "in_book": false,
-      "signal_count": 5,
-      "high_count": 0,
-      "sector": "AI — Semis & Compute",
-      "thesis": "Supply-chain chokepoint (EUV near-monopoly); Street \"behind the curve\" on 2027/28 vs a 2028 DRAM air-pocket.",
-      "next_catalyst": "2026-10-14",
-      "why": [
-        "ASML — Bernstein's estimates are consensus, but its PT is +22.8% above consensus",
-        "ASML — the house EUV model takes the 110 as the number, which is exactly what tonight's note says it is not",
-        "ASML — a vintage/basis conflict on \"current\" throughput, flagged and not resolved"
-      ]
-    },
-    {
       "ticker": "COHR",
       "focus_score": 51,
       "in_book": false,
@@ -213,34 +284,6 @@
       "why": [
         "COHR — 2026-09-21: PHOTONLINK LAUNCH: establish the PLATFORM, LANE RATE AND MODULATION FORMAT, not just the…",
         "InP routing INVERSION — cuts against the moat LITE and COHR both run on"
-      ]
-    },
-    {
-      "ticker": "LITE",
-      "focus_score": 51,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "Optical / Networking",
-      "thesis": "US photonics pure-play (rev +90%); demand isn't the question, supply/execution is.",
-      "next_catalyst": "2026-09-22",
-      "why": [
-        "LITE — 2026-09-22: ECOC (JPM-hosted meetings). CEO Michael Hurlston meeting alongside CRDO (CEO Bill…",
-        "InP routing INVERSION — cuts against the moat LITE and COHR both run on"
-      ]
-    },
-    {
-      "ticker": "OKTA",
-      "focus_score": 51,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "Software / security / internet",
-      "thesis": "Neutral identity control plane for the agent era (cRPO re-accel to +14%, NRR turn); bear = seat model + MSFT Entra / PANW-CyberArk bundling.",
-      "next_catalyst": "2026-09-21",
-      "why": [
-        "OKTA — 2026-09-21: Oktane — week of 2026-09-21, Las Vegas — \"the AI security event of the year\", with an…",
-        "OKTA — 2026-09-23: Oktane 2026, Las Vegas; INVESTOR SESSION 11am-12pm PT. JPM (Brian Essex, OW, px $190.02 on…"
       ]
     },
     {
@@ -501,21 +544,6 @@
       "next_catalyst": "2026-09-24",
       "why": [
         "SPCX — 2026-09-24: 2026-09-24, NYC — MS event: \"SPCX How to Play the Space Economy ft Adam Jonas, Sean…"
-      ]
-    },
-    {
-      "ticker": "CRWV",
-      "focus_score": 39,
-      "in_book": false,
-      "signal_count": 3,
-      "high_count": 0,
-      "sector": "Systems & neoclouds",
-      "thesis": "Highest-visibility GPU neocloud ($99B backlog) but ~$25B high-coupon debt + customer concentration.",
-      "next_catalyst": "",
-      "why": [
-        "CRWV — the same $6.3bn is characterised two opposite ways, and the two readings are not compatible",
-        "CRWV's cost of capital: management's characterisation vs traded levels",
-        "D-4 · 🔴 CRWV — Jefferies is ~90% above consensus on CY28 EBIT, and the same gap shows up twice"
       ]
     },
     {
@@ -780,9 +808,9 @@
       "hidden": false
     },
     {
-      "id": "esti-813472bcecbb",
+      "id": "esti-5a702ac17315",
       "asof": "2026-09-21",
-      "source_date": "2026-09-18",
+      "source_date": "2026-09-21",
       "type": "model_check",
       "priority": "high",
       "score": 72,
@@ -796,7 +824,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $427.2bn as of 2026-09-18, a derived +18.2% gap. Revenue comparisons require a basis check.",
+      "why_now": "Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $427.2bn as of 2026-09-21, a derived +18.2% gap. Revenue comparisons require a basis check.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -851,7 +879,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-18",
+      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-21",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -869,9 +897,9 @@
       "hidden": false
     },
     {
-      "id": "esti-861935e8e83f",
+      "id": "esti-f816acaabe55",
       "asof": "2026-09-21",
-      "source_date": "2026-09-18",
+      "source_date": "2026-09-21",
       "type": "model_check",
       "priority": "high",
       "score": 71,
@@ -885,7 +913,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2027 revenue at $641.0bn versus Bloomberg consensus at $544.1bn as of 2026-09-18, a derived +17.8% gap. Revenue comparisons require a basis check.",
+      "why_now": "Capstone carries 2027 revenue at $641.0bn versus Bloomberg consensus at $544.1bn as of 2026-09-21, a derived +17.8% gap. Revenue comparisons require a basis check.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -940,7 +968,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-18",
+      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-21",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -1126,9 +1154,9 @@
       "carried_from": "2026-09-15"
     },
     {
-      "id": "esti-213dc7bd6d95",
+      "id": "esti-1d04793b90a2",
       "asof": "2026-09-21",
-      "source_date": "2026-09-18",
+      "source_date": "2026-09-21",
       "type": "model_check",
       "priority": "high",
       "score": 69,
@@ -1142,7 +1170,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.76 as of 2026-09-18, a derived +15.5% gap.",
+      "why_now": "Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.76 as of 2026-09-21, a derived +15.5% gap.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the AAPL model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -1162,7 +1190,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-09-18",
+      "source": "Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-09-21",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -1306,6 +1334,272 @@
       ],
       "evidence_anchor": "🆕🔴🔴 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — THE INDEX TIER IS NOW NAMED: BE IS AN S&P 500 ADD, AND A FTSE ALL-WORLD ADD. TWO INDEPENDENT INDEX EVENTS IN THE",
       "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "beli-0370e2ff0d91",
+      "asof": "2026-09-21",
+      "source_date": "2026-09-21",
+      "type": "narrative_shift",
+      "priority": "medium",
+      "score": 62,
+      "title": "APP — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "APP"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "(/wiki-ingest, 21h window) — 1 source: an AI-GENERATED PODCAST BRIEF (Ethmos via TMTB Podcast Intel) summarising Adam Foroughi on All-In — ⚠️⚠️ A RELAY OF A RELAY, machine-written, no transcript on disk. ⚠️ NOTHING SUPERSEDED — no rating, price target, estimate or guide on this page was replaced. 🔴 All material this run is NET-NEW to this page and each block says so in place; the run's dedup exclusions and the five documents deliberately NOT re-ingested are recorded in meta/changelog.md. Added 1 dated…",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the APP thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [],
+      "source": "APP page Changelog 2026-09-21",
+      "evidence_paths": [
+        "APP.md"
+      ],
+      "evidence_anchor": "(/wiki-ingest, 21h window) — 1 source: an AI-GENERATED PODCAST BRIEF (Ethmos via TMTB Podcast Intel) summarising Adam Foroughi on All-In — ⚠️⚠️ A RELAY OF A RELAY, machine-written, no transcript on disk. ⚠️ NOTHING SUPERSEDED — no rating, price target, estimate or guide on this page was replaced. 🔴 All material this run is NET-NEW to this page and each block says so in place; the run's dedup exclusions and the five documents deliberately NOT re-ingested are recorded in meta/changelog.md. Added 1 dated…",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "beli-2786afaefcc4",
+      "asof": "2026-09-21",
+      "source_date": "2026-09-21",
+      "type": "narrative_shift",
+      "priority": "medium",
+      "score": 62,
+      "title": "ASML — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "ASML"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "notion-ingest: JPM's Fall Series webinar (Sur/Ramdami, 09-17) gives a WFE path of +30% CY26 / +38% CY27 — \"probably closer to 40%\" in BOTH — with CY28 +17% called a conservative starting point, and NO dollar base stated anywhere, plus a CY27 driver list that is effectively a litho list (TSMC 2nm + A14 pilot, Intel 14A pilot, Samsung 2nm, Rapidus 2nm, Terafab pilot) — customer-side corroboration of the programmes behind the company's demand-gated 2028 slot count, though he names no EUV unit count or litho…",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the ASML thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "TSM",
+          "relation": "customer",
+          "detail": "EUV/DUV litho",
+          "from": "ASML",
+          "in_book": true
+        },
+        {
+          "ticker": "INTC",
+          "relation": "customer",
+          "detail": "litho",
+          "from": "ASML",
+          "in_book": false
+        },
+        {
+          "ticker": "MU",
+          "relation": "customer",
+          "detail": "litho",
+          "from": "ASML",
+          "in_book": false
+        },
+        {
+          "ticker": "SAMSUNG",
+          "relation": "customer",
+          "detail": "litho",
+          "from": "ASML",
+          "in_book": false
+        },
+        {
+          "ticker": "SKHYNIX",
+          "relation": "customer",
+          "detail": "litho",
+          "from": "ASML",
+          "in_book": false
+        },
+        {
+          "ticker": "SMIC",
+          "relation": "customer",
+          "detail": "DUV",
+          "from": "ASML",
+          "in_book": false
+        }
+      ],
+      "source": "ASML page Changelog 2026-09-21",
+      "evidence_paths": [
+        "ASML.md"
+      ],
+      "evidence_anchor": "notion-ingest: JPM's Fall Series webinar (Sur/Ramdami, 09-17) gives a WFE path of +30% CY26 / +38% CY27 — \"probably closer to 40%\" in BOTH — with CY28 +17% called a conservative starting point, and NO dollar base stated anywhere, plus a CY27 driver list that is effectively a litho list (TSMC 2nm + A14 pilot, Intel 14A pilot, Samsung 2nm, Rapidus 2nm, Terafab pilot) — customer-side corroboration of the programmes behind the company's demand-gated 2028 slot count, though he names no EUV unit count or litho…",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "beli-51485071b56c",
+      "asof": "2026-09-21",
+      "source_date": "2026-09-21",
+      "type": "narrative_shift",
+      "priority": "medium",
+      "score": 62,
+      "title": "LITE — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "LITE"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "notion-ingest: the SPOKEN Jefferies bus-tour recap (Curtis, 09-18) makes LITE the only one of thirteen companies that materially raised buy-side expectations, and supplies the piece the 09-20 written desk relay lacked — what \"largest external OCS provider\" REPLACES: a live buy-side assumption that external OCS was \"10% or 20%\" of Google's OCS, now \"it could be the MAJORITY\", i.e. \"billions of dollars\" of addressable OCS revenue off the same TPU volume; plus the \"didn't have to raise to 40 bucks, but they did\"…",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the LITE thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": true
+        },
+        {
+          "ticker": "COHR",
+          "relation": "competitor",
+          "detail": "optical/InP",
+          "from": "LITE",
+          "in_book": false
+        },
+        {
+          "ticker": "AIXA",
+          "relation": "supplier",
+          "detail": "MOCVD tools",
+          "from": "LITE",
+          "in_book": false
+        },
+        {
+          "ticker": "ANET",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": false
+        }
+      ],
+      "source": "LITE page Changelog 2026-09-21",
+      "evidence_paths": [
+        "LITE.md"
+      ],
+      "evidence_anchor": "notion-ingest: the SPOKEN Jefferies bus-tour recap (Curtis, 09-18) makes LITE the only one of thirteen companies that materially raised buy-side expectations, and supplies the piece the 09-20 written desk relay lacked — what \"largest external OCS provider\" REPLACES: a live buy-side assumption that external OCS was \"10% or 20%\" of Google's OCS, now \"it could be the MAJORITY\", i.e. \"billions of dollars\" of addressable OCS revenue off the same TPU volume; plus the \"didn't have to raise to 40 bucks, but they did\"…",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "beli-d85e75db7c9b",
+      "asof": "2026-09-21",
+      "source_date": "2026-09-21",
+      "type": "narrative_shift",
+      "priority": "medium",
+      "score": 62,
+      "title": "OKTA — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "OKTA"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "notion-ingest: Jefferies' Stefan Schwarz (Capstone call 2026-09-16) makes OKTA the reasonably-valued way to own agentic identity and gives the first BUILD-COST argument on this page for why — SSO is buildable by others, IGA and PAM are not; the Capstone internal cyber session (2026-09-18, house framing only) independently states Bernstein's monetisation objection in its sharpest form. 🔴🔴 NOTHING SUPERSEDED. NO RATING, PT, ESTIMATE, GUIDE OR KPI MOVED — the ladder (MS OW $180 · Bernstein Market-Perform $174 · JPM…",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the OKTA thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "MSFT",
+          "relation": "competitor",
+          "detail": "IAM (Entra bundling)",
+          "from": "OKTA",
+          "in_book": true
+        },
+        {
+          "ticker": "CRWD",
+          "relation": "competitor",
+          "detail": "agentic identity",
+          "from": "OKTA",
+          "in_book": false
+        },
+        {
+          "ticker": "PANW",
+          "relation": "competitor",
+          "detail": "identity (CyberArk vs Okta)",
+          "from": "OKTA",
+          "in_book": false
+        }
+      ],
+      "source": "OKTA page Changelog 2026-09-21",
+      "evidence_paths": [
+        "OKTA.md"
+      ],
+      "evidence_anchor": "notion-ingest: Jefferies' Stefan Schwarz (Capstone call 2026-09-16) makes OKTA the reasonably-valued way to own agentic identity and gives the first BUILD-COST argument on this page for why — SSO is buildable by others, IGA and PAM are not; the Capstone internal cyber session (2026-09-18, house framing only) independently states Bernstein's monetisation objection in its sharpest form. 🔴🔴 NOTHING SUPERSEDED. NO RATING, PT, ESTIMATE, GUIDE OR KPI MOVED — the ladder (MS OW $180 · Bernstein Market-Perform $174 · JPM…",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "beli-e21988845037",
+      "asof": "2026-09-21",
+      "source_date": "2026-09-21",
+      "type": "narrative_shift",
+      "priority": "medium",
+      "score": 62,
+      "title": "TSLA — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "TSLA"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "(/wiki-ingest, 21h window) — 2 sources: TrendForce / 21st Century Business Herald via MS TMT sales (Tom Wigg) and Digitimes via MS/UBS desks — ⚠️ all relays are sales commentary, not research. ⚠️ NOTHING SUPERSEDED — no rating, price target, estimate or guide on this page was replaced. 🔴 All material this run is NET-NEW to this page and each block says so in place; the run's dedup exclusions and the five documents deliberately NOT re-ingested are recorded in meta/changelog.md. Added 1 dated Intra-quarter block,…",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the TSLA thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "TSLA",
+          "in_book": true
+        }
+      ],
+      "source": "TSLA page Changelog 2026-09-21",
+      "evidence_paths": [
+        "TSLA.md"
+      ],
+      "evidence_anchor": "(/wiki-ingest, 21h window) — 2 sources: TrendForce / 21st Century Business Herald via MS TMT sales (Tom Wigg) and Digitimes via MS/UBS desks — ⚠️ all relays are sales commentary, not research. ⚠️ NOTHING SUPERSEDED — no rating, price target, estimate or guide on this page was replaced. 🔴 All material this run is NET-NEW to this page and each block says so in place; the run's dedup exclusions and the five documents deliberately NOT re-ingested are recorded in meta/changelog.md. Added 1 dated Intra-quarter block,…",
+      "origin": "belief_diff",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
@@ -1523,6 +1817,38 @@
       ],
       "evidence_anchor": "🆕⚠️ TRUMP-XI, 2026-09-24 — UBS puts SPE and MEMORY as the most exposed verticals, with the ASML/Netherlands MATCH Act immersion-DUV headlines and new BIS measures on Chinese compute access via Thail",
       "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "post-41ea74cc69de",
+      "asof": "2026-09-21",
+      "source_date": "2026-09-08",
+      "event_date": "2026-09-08",
+      "type": "postmortem",
+      "priority": "medium",
+      "score": 58,
+      "title": "CRWV — catalyst passed without a logged outcome",
+      "tickers": [
+        "CRWV"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "overdue",
+      "confidence": "high",
+      "why_now": "🆕🔴 ZERO OF 2028 CAPACITY IS SOLD, DELIBERATELY, AND SOME 2027 REMAINS — SO THE NEXT LARGE CONTRACT ANNOUNCEMENT IS A CLEAN PRICE PRINT: \"we still have some 2027 capacity left… we haven't sold any",
+      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
+      "action": "Write a source-attributed bull won|bear won|neutral outcome for CRWV in outcomes.md.",
+      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
+      "readthrough": [],
+      "source": "Catalyst outcome ledger",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "_meta/outcomes.md"
+      ],
+      "evidence_anchor": "🆕🔴 ZERO OF 2028 CAPACITY IS SOLD, DELIBERATELY, AND SOME 2027 REMAINS — SO THE NEXT LARGE CONTRACT ANNOUNCEMENT IS A CLEAN PRICE PRINT: \"we still have some 2027 capacity left… we haven't sold any",
+      "origin": "outcome_loop",
       "feedback": "",
       "feedback_note": "",
       "hidden": false

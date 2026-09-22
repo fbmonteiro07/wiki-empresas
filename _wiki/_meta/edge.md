@@ -38,14 +38,14 @@ _Generated 2026-09-21 · the standing view of where our model and the curated re
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|
-| SAMSUNG | 261,000 | 490,018 | +88% | street high 725,000 · low 300,000 ABOVE spot · 44/0/0 of 44 |
-| ORCL | 148 | 240 | +63% | street high 400 · low 110 below spot · 40/8/1 of 49 |
-| MU | 1,016 | 1,578 | +55% | street high 2,200 · low 900 below spot · 57/4/0 of 61 |
-| AVGO | 358 | 532 | +49% | street high 715 · low 350 below spot · 58/4/0 of 62 |
-| WDC | 441 | 656 | +49% | street high 900 · low 525 ABOVE spot · 22/6/0 of 28 |
-| ASML | 1,680 | 2,459 | +46% | street high 2,859 · low 2,100 ABOVE spot · 21/0/0 of 21 |
-| NVDA | 222 | 323 | +45% | street high 515 · low 180 below spot · 79/2/1 of 82 |
-| UBER | 70 | 102 | +45% | street high 150 · low 70 below spot · 49/8/1 of 58 |
-| NFLX | 72 | 95 | +32% | street high 135 · low 57 below spot · 49/15/1 of 65 |
-| SNDK | 1,792 | 2,288 | +28% | street high 3,900 · low 1,400 below spot · 27/4/0 of 31 |
-| MRVL | 244 | 289 | +18% | street high 400 · low 143 below spot · 47/5/0 of 52 |
+| SAMSUNG | 274,000 | 490,018 | +79% | street high 725,000 · low 300,000 ABOVE spot · 43/0/0 of 43 |
+| ORCL | 149 | 240 | +62% | street high 400 · low 110 below spot · 40/8/1 of 49 |
+| MU | 1,044 | 1,578 | +51% | street high 2,200 · low 900 below spot · 57/4/0 of 61 |
+| AVGO | 363 | 532 | +47% | street high 715 · low 350 below spot · 58/4/0 of 62 |
+| WDC | 448 | 656 | +46% | street high 900 · low 525 ABOVE spot · 22/6/0 of 28 |
+| UBER | 71 | 102 | +44% | street high 150 · low 70 below spot · 49/8/1 of 58 |
+| ASML | 1,711 | 2,459 | +44% | street high 2,845 · low 2,100 ABOVE spot · 20/0/0 of 20 |
+| NVDA | 227 | 323 | +42% | street high 515 · low 180 below spot · 79/2/1 of 82 |
+| SNDK | 1,767 | 2,291 | +30% | street high 3,900 · low 1,400 below spot · 28/4/0 of 32 |
+| NFLX | 73 | 95 | +30% | street high 135 · low 57 below spot · 49/15/1 of 65 |
+| MRVL | 257 | 289 | +12% | street high 400 · low 143 below spot · 47/5/0 of 52 |

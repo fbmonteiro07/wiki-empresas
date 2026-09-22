@@ -10,7 +10,7 @@
 _Wiki · generated 2026-06-20 · **recent IPO (priced 2026-05-13, first trade 2026-05-14, Nasdaq: CBRS) — limited public disclosure; no pre-IPO SEC filing history.** ✅ **BBG CONSENSUS ADDED 2026-09-10 — 13 analysts; see the snapshot block below.** Sources: corpus (`E:\equity_calls_transcripts\Semis\2026-05-06_Cerebras_IPO-UBS.md`, `E:\briefings\2026\2026-05-12-company-specific.md`) + web (S-1/A, press). Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-18 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-21 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -197,6 +197,32 @@ Cerebras sits between a concentrated TSMC-based supply chain and a concentrated,
 ## Intra-quarter — calls, commentary & reports (since the last print)
 _intra-quarter (recent IPO) · May 06 → Jul 09, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
+**🆕🔴🔴 2026-09-21 (/wiki-ingest 21h) — AN INDEPENDENT PHOTONICS-LITERATE AUTHOR PUBLISHED A **POINT-BY-POINT ENGINEERING REBUTTAL** OF CEREBRAS'S OPTICAL-INTERCONNECT CLAIMS, ON **LINK-BUDGET AND THERMAL-BIAS** GROUNDS. THE REGISTER IS POLEMICAL AND IT IS NOT ADOPTED — BUT THE PHYSICS IT CITES IS CHECKABLE AND THE PAGE SHOULD CARRY THE TEST.**
+
+(**Irrational Analysis** (Substack), *"[Emergency Lunch-Hour Market Memo] Coherent admits their CPO/NPO Laser is garbage + Cerebras delusional bonus roast"*, **2026-09-21 16:44**, written off ECOC material supplied by third parties — ⚠️⚠️⚠️ **INDEPENDENT SUBSTACK AUTHOR, NOT A BROKER — no rating, no price target, no house model. The author states he is *"heavily invested in the semiconductor industry"*, that positions change over time, and that the newsletter is *"not financial advice."* He was NOT at ECOC. THE POLEMICAL LANGUAGE IS HIS OWN AND IS REPRODUCED ONLY WHERE IT CARRIES A TESTABLE CLAIM.**)
+
+### 🔴🔴 THE THREE OBJECTIONS, AND THE NUMBERS UNDER THEM
+
+- ① MODULATOR THERMAL BIAS: *"**E/O converters aka modulators (MZI, ring, EAM) are all THERMALLY SENSITIVE to some extent. No way you will bias the modulators in any stable way**"*, and *"even in the most optimistic scenario of an **MZI modulator with very low extinction ratio and thus wide linearity region, you still have to bias them all.** You do realize that **burning heat to bias the modulators is going to make system thermals so much worse**?"*
+- **② WAVEGUIDE LOSS — the numbers he offers for an ISO comparison at **32G NRZ**, and these are the checkable part:**
+
+| Medium (32G NRZ ISO comparison) | Loss |
+|---|--:|
+| Copper cable (30-36 AWG) | **0.1-0.2 dB/cm** |
+| **Si waveguide** | **~0.5-1 dB/cm** |
+| **SiN waveguide** | **0.2-0.5 dB/cm** |
+| Optical fibre | *"effectively free itself but you lose 0.5 dB on coupling twice, so call it **1.1 dB** for any reach under 100 m"* |
+
+  His conclusion: *"**WAVEGUIDES ARE NOT LOW LOSS, FIBERS ARE LOW LOSS**… Have you done any **LINK-BUDGET ANALYSIS**? **Laser loss and waveguide loss kill this.**"* ➤ **The structural point survives the tone: an on-die/on-substrate waveguide is 2.5-10x lossier PER CENTIMETRE than the copper it replaces, and fibre only wins because its loss is in the COUPLING (a fixed ~1.1 dB) rather than in the length. That is why coupling — not waveguide length — is where the engineering fight is.**
+- **③ INTEGRATED LASER: *"I can tell you [that an] integrated laser will never work in this situation."***
+
+### ⚠️⚠️ HOW TO USE THIS
+
+- **NOT ADOPTED. Single self-declared-long author; no access to the presentation; no rebuttal from Cerebras; and *"never work"* is a category claim that engineering rarely supports.**
+- 🔬 BUT THE FALSIFICATION IS CONCRETE AND THE COMPANY CAN SETTLE IT: publish a **link budget** for the claimed architecture — laser output power, waveguide length and loss, coupling loss, modulator insertion loss and bias power, receiver sensitivity — and the objection is answered or it is not. **Until then this page should treat Cerebras's optical-interconnect claims as UNVERIFIED rather than as roadmap.**
+- ✅ AND THE INDEPENDENT CORROBORATION OF THE UNDERLYING PHYSICS, FROM A COMPANY THAT IS BUILDING IT: Ayar Labs names **fiber-to-chip coupling as "the yield crunch"**, says **CPO requires NEW DUAL-SIDED PROBERS**, and reports it is working on testing **300mm COUPE wafers at scale** — i.e. the hard problems in optical interconnect are coupling and test, exactly where the memo above says the link budget breaks. (⚠️ The Ayar material reaches this wiki partly via an AI-generated podcast brief — see `themes/optical-cpo.md` for the guard.) ➤ **The physics is corroborated; the verdict on Cerebras is not.**
+- ⚠️ **CONTEXT: Cerebras presented in the **Compute track at the AI Infrastructure Summit** (Santa Clara) alongside d-Matrix, Etched, SambaNova and Rebellions, where UBS's overall takeaway was that *"[[NVDA]]'s flexibility and system-level expertise are UNDER-APPRECIATED by the market amid the focus on individual compute architectures (ASIC, fast inference, etc)"* (UBS · Timothy Arcuri, 2026-09-21).**
+
 **Signal vs management** — the company's positioning/guidance (State of play, recent IPO, no evolution table) × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
 | Theme | Management / guidance | Intra-quarter flow | Signal |
@@ -287,6 +313,8 @@ _intra-quarter (recent IPO) · May 06 → Jul 09, 2026 · sell-side / expert cal
 - **Consensus:** none — no BBG estimates file for this name.
 
 ## Changelog
+- **2026-09-21 (/wiki-ingest, 21h window) — 1 source: Irrational Analysis (⚠️⚠️ INDEPENDENT SUBSTACK AUTHOR, NOT A BROKER), plus UBS's AI Infrastructure Summit takeaways as context.** ⚠️ **NOTHING SUPERSEDED — no rating, price target, estimate or guide on this page was replaced.** 🔴 **All material this run is NET-NEW to this page and each block says so in place; the run's dedup exclusions and the five documents deliberately NOT re-ingested are recorded in `_meta/changelog.md`.** Added 1 dated `## Intra-quarter` block, this record. ⚠️ **Run-level guards carried on this page: see `_meta/changelog.md` for the full list — the FIFTH incompatible $/GW basis (Redburn's $45bn/GW compute price), the ~20% inference-monitoring overhead as a THIRD relay of one lab's August estimate, and four items arriving only as AI-generated podcast briefs.** Post-run audits on this page's added lines: **0 EOL-class flips, 0 table-column anomalies, unbalanced bold found and repaired.**
+
 - **2026-09-10 (`/wiki-consensus`, scheduled) — FIRST BBG CONSENSUS EVER ON THIS PAGE. CBRS was excluded from `fetch_estimates.py` on 2026-07-01 as a "recent IPO, no consensus on wrapper yet" and `build_snapshot.py` had been silently counting CEREBRAS.md among its "skipped (no BBG consensus)" pages ever since. The wrapper now returns 13 analysts, a consensus target and full annual estimate lines, so the name was registered (batch 14, `CEREBRAS -> CBRS US Equity`) and fetched. **Added:** the `SNAPSHOT` consensus block at the top of the page and one dated placement of the MS / UBS / Barclays models under `## Debate / thesis`. **Superseded:** four page assertions that "no BBG consensus" exists (header comment, byline, "where the Street stood before the print", inbox footer) — struck inline and dated, none deleted. **NOTHING ELSE SUPERSEDED:** no Cerebras specification, contract, capacity, rating, PT or broker estimate was overwritten.**
 - **2026-08-25 (second pass — 1 CURRENT source + a DAMNANG archive backfill). 1 intra-quarter row, 2 Signal-vs-management rows extended, 1 Quarter-synthesis addendum, 1 archive block under `## Debate / thesis`, 3 Sources links. NOTHING SUPERSEDED: no Cerebras specification, contract, capacity, rating, PT or estimate was overwritten — in particular the 750MW take-or-pay and the ~410MW of announced capacity are unchanged.**
   🔴🔴 **① THE ANCHOR-CUSTOMER RISK IS NOW BENCHMARKED RATHER THAN ANNOUNCED, AND IT SPLITS THE CONTRACT IN TWO. SemiAnalysis was inside [[OPENAI]]'s lab with the Jalapeño ASIC and wrote a section titled "Does OpenAI Still Need Cerebras?". What it AFFIRMS: "there is a firm obligation for OpenAI to use 750MW of Cerebras compute." What it puts explicitly at risk: "much of Cerebras's future rests on whether OpenAI decides to extend the deal by exercising the option to deploy an additional 1.25GW … that incremental 1.25GW may never materialize." That is the first time anyone on this page has named which half of the OpenAI relationship is contracted and which is optional.**

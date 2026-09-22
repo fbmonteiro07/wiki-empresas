@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-25 · synthesis-only (no local filings archive) · sources: sell-side notes + Twitter/X corpus, ported from research corpus. Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-18 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-21 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -126,6 +126,27 @@ No quarterly financials in the ported corpus. SIG/Susquehanna (Chuck Minervino) 
 _Q2 2026 · Jul 29, 2026 → open · sell-side / expert calls / reports since the 2026-07-28/29 print. Timeline visual: [timeline.html](timeline.html)._
 _**Section SCAFFOLDED BY HAND 2026-08-20** (`build_intraquarter.py` does not cover BE — its universe is the 79 tickers carrying timeline event data). BE has no `## Management commentary — evolution` table, so the "management said" column below is sourced from the **Q2 2026 print (2026-07-28/29)** and from **management's own intra-quarter messaging as relayed by Jefferies (James Snyder, "Energy/Power Rundown", 2026-08-02)** — each labelled inline. Two PRE-PRINT rows (07-14, 07-20) are retained in the log and marked BACK-DATED because they are the analytical basis for the numbers the post-print flow is arguing about._
 
+**🆕🔴🔴🔴 2026-09-21 (/wiki-ingest 21h) — MS RAISES THE NET US POWER SHORTFALL **AFTER** TIME-TO-POWER REMEDIES TO **33 GW (34% OF REQUIRED DEMAND) THROUGH 2028** AND **72-82 GW (44-49%) THROUGH 2029** — I.E. THE GAP ONSITE GENERATION IS BEING ASKED TO FILL IS NOW MEASURED IN TENS OF GIGAWATTS. BE IS ON THE NAMED OW LIST.**
+
+(Morgan Stanley · **Stephen Byrd** / **Dave Arcaro**, *"Power Shortfall Update"*, **2026-09-21**; relayed by MS TMT sales · Tom Wigg — ⚠️ **the relay is sales commentary, not research.**)
+
+| MS US data-center power model | Previous | **2026-09-21** | Δ |
+|---|--:|--:|--:|
+| Incremental US DC power demand **2026-28** | 68 GW | **97 GW** | **+43%** |
+| **Gross** shortfall through 2028 | 38 GW | **57 GW** | **+50%** |
+| **Net** shortfall after "time-to-power" remedies | — | **33 GW** = **34% of required US DC power** | — |
+| Incremental demand **2029 alone** | — | **68 GW** (+40% vs 2028) | — |
+| Cumulative **2026-29** | — | **165 GW** → **107 GW gross** / **72-82 GW net** = **44-49% of demand** | — |
+| [[NVDA]] **Vera Rubin** rack | 149 kW | **234 kW** | **+57%** |
+| [[NVDA]] **Rubin Ultra** rack | 415 kW | **600 kW** | **+45%** |
+
+- 🔴🔴🔴 THE DRIVER IS A RACK RE-SPEC, NOT A DEMAND UPGRADE. MS: *"the biggest model change is **RACK-LEVEL ARCHITECTURE**"* — the 8-GPU-server → NVL72-rack transition *"materially raises memory, networking, cooling and power-delivery requirements."* ➤ **The 2028 gap widened by 19 GW because the accelerator roadmap got denser, not because anyone raised a unit or capex forecast.**
+- 🔴 **THE OFFSET IS A JEVONS ARGUMENT: MS models a **94% reduction in all-in cost/TFLOP from Hopper to Rubin Ultra**, and argues cheaper compute stimulates more adoption, agentic workloads, tokens and model calls — so aggregate electricity consumption RISES despite much higher efficiency per token.** ⚠️ **Basis guard: 94% is a cost-per-TFLOP figure, not a price, not a $/W and not comparable to any $/GW mark on this wiki.**
+- ⚠️⚠️ **THE 234 kW / 600 kW FIGURES ARE MS MODEL ASSUMPTIONS, NOT NVIDIA DISCLOSURES — falsifiable at the Vera Rubin launch spec.**
+- **MS's named OW beneficiaries off the note: [[SPCX]], CIFR, HUT, RIOT, WULF, GLXY, EQIX, [[BE]], SEI, [[VST]], [[GEV]], INIO, WMB, LBRT, EROC, CMI — plus [[NVDA]], [[AVGO]], [[MU]], [[META]], [[AMZN]], [[MSFT]] on the AI side. And MS adds a separate positive read-through for power equipment from its Laguna 2026 conference (*"GEV INIO CMI CAT EROC BKR ENR — Positive Readthrough for Power Equipment Stocks"*, 2026-09-21).**
+- ⚠️ THE POLICY COUNTER-SIGNAL, SAME DAY AND IN THE LARGEST US DATA-CENTER MARKET: **Virginia's Governor signed an executive order to SLOW data-center approvals** and create an AI task force to evaluate workforce displacement (The Verge, via MS TMT desk, 2026-09-21). ➤ **Set it against SemiAnalysis's mapping of 400+ moratorium instruments across 17 states against a 3,500-project pipeline, which found only **3 campuses actually delayed**, **~80% of bans covering ZERO capacity**, and **New York's statewide freeze (~800 MW) as the one that bites** (⚠️ reaching the wiki via an AI-generated podcast brief — verify). A Virginia instrument would NOT be in the "covers zero capacity" bucket.**
+- 🔴 **AND THE EQUIPMENT LAYER SAYS THE CONSTRAINT HAS ALREADY MOVED: Jefferies on **Delta Electronics (2308 TT, off-coverage)** — *"demand exceeds supply, particularly in AI server power solutions"*, growth accelerating sharply in 4Q26 and *"well above seasonal"* into 1Q27 on **[[NVDA]] Vera Rubin power shelves, HVDC deployments and the release of delayed shipments**; Delta holds **>60% share in AI server power solutions**; 1Q27 modelled at **NT$234.4bn revenue (+2.5% q/q, above seasonality), GM 36.4%, OpM 18.9%, EPS NT$12.72 (+61% y/y)**; FY27 revenue **+40.6% to NT$1,082bn** (consensus NT$1,042bn / Fubon 1,078 / UBS 1,150). *"**If compute was yesterday's constraint, power may be tomorrow's**"* (Jefferies · **Cristina Titu** / Michelle Huang, 2026-09-21 — ⚠️ **market commentary, not research**).**
+
 **Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
 | Theme | Management said (Q2'26 print + 08-02 Jefferies relay) | Intra-quarter flow | Signal |
@@ -175,6 +196,8 @@ Synthesis ported from the research-wiki corpus (sell-side notes + Twitter/X). Ke
 - No local filings/transcripts archive for BE in this wiki.
 
 ## Changelog
+- **2026-09-21 (/wiki-ingest, 21h window) — 1 source: Morgan Stanley (Stephen Byrd / Dave Arcaro, via MS TMT sales — ⚠️ relay not research), plus Jefferies (Cristina Titu) on Delta Electronics.** ⚠️ **NOTHING SUPERSEDED — no rating, price target, estimate or guide on this page was replaced.** 🔴 **All material this run is NET-NEW to this page and each block says so in place; the run's dedup exclusions and the five documents deliberately NOT re-ingested are recorded in `_meta/changelog.md`.** Added 1 dated `## Intra-quarter` block, this record. ⚠️ **Run-level guards carried on this page: see `_meta/changelog.md` for the full list — the FIFTH incompatible $/GW basis (Redburn's $45bn/GW compute price), the ~20% inference-monitoring overhead as a THIRD relay of one lab's August estimate, and four items arriving only as AI-generated podcast briefs.** Post-run audits on this page's added lines: **0 EOL-class flips, 0 table-column anomalies, unbalanced bold found and repaired.**
+
 **2026-09-17 (/wiki-ingest) — 1 source (UBS · Manav Gupta / Shneur Gershuni, Buy) summarising BLOOM'S OWN 800VDC white paper. 1 block in `## Current state`, 1 row in `## Intra-quarter`, this record. NOTHING SUPERSEDED — no rating, PT, guide or estimate was replaced; UBS Buy carried forward, no PT in the note.**
 ⚠️ **SOURCE CLASS FIRST, BECAUSE IT GOVERNS EVERY NUMBER BELOW: this is a VENDOR ECONOMIC CASE, written by Bloom about Bloom's own product category, summarised by a Buy-rated analyst. UBS labels it as such throughout ("as per the report", "the company believes"). There is no third-party verification of any figure here.**
 🔴 **NET-NEW — THE 1GW ECONOMICS: five-year TCO LOWER BY ~$5.5bn (9%); NON-COMPUTE CAPEX (electrical infrastructure, cooling, building shell) LOWER BY ~27%; the resulting ~$3.6bn of capital savings buys ~8% MORE revenue-generating COMPUTE for the same total investment.**

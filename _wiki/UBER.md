@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\UBER` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\UBER.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-18 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-21 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -150,6 +150,16 @@ FY25 context (Q4 FY25 call): 5th straight year of >20% GB growth; **$8.7B adj. E
 
 ## Intra-quarter — calls, commentary & reports (since the last print)
 _**Q2 FY26 window · opened 2026-08-05** (print BMO 08-05). The Q1 FY26 window is closed and archived below. Timeline visual: [timeline.html](timeline.html)._
+
+🆕🔴🔴 2026-09-21 (/wiki-ingest 21h) — BofA PUBLISHES THE **AV DEFENCE** WITH A SHARE NUMBER ATTACHED: **UBER CAN HOLD 73% US RIDESHARE SHARE THROUGH 2028**, WITH **2029 THE CRITICAL SCALE-UP YEAR** — AND ARGUES THE STOCK **ALREADY FULLY DISCOUNTS US RIDESHARE DISRUPTION.**
+
+(BofA Securities · **Justin Post** and **Alex Perry**, joint note *"Addressing the overhang; A look at potential AV growth and market share"*, **2026-09-21**. **Reiterate BUY, PO $101** (23x P/E) — relayed by BofA TMT spec sales · Brian Fenske and by BofA's Nicholas Villani — ⚠️ **the relays are sales commentary; the note is BofA Global Research. PO and rating UNCHANGED — nothing on this page is superseded.**)
+
+- 🔴🔴🔴 THE STRUCTURE OF THE ARGUMENT: they model **AV vehicle deployments and market share through 2029 across [[TSLA]], Waymo and Zoox — 100k AV deployments in the US, or $15B in bookings.** *"Punchline: **UBER can maintain 73% market share through 2028, with significant time to build out its AV fleet.** **2029 will be a critical AV scale-up year across the board**, with UBER deployments scaling rapidly (**already indicated 120k AVs committed across partnerships**)."*
+- 🔴🔴 **THE VALUATION CLAIM, AND IT IS THE PART TO INTERROGATE: *"**The stock is FULLY DISCOUNTING US rideshare disruption**, with Justin's valuation (based on **DASH/LYFT comp analysis**) seeing **$100 implied valuation.** His **PO is $101 based on 23x P/E, 40% upside** for the stock."* ➤ **Note the construction: the comp-based floor ($100) and the target ($101) are essentially the same number arrived at two ways. That is a coherent "the downside is already in the price" argument, but it is NOT an upside case — the 40% upside comes from the gap between the current price and a valuation that assumes disruption is already discounted. **The bull case here is the absence of a bear case, which is a weaker thing.**
+- ⚠️ THE TWO NUMBERS THAT CARRY: **73% share through 2028** is falsifiable annually, and **120k AVs committed across partnerships** is a company-indicated figure that should be reconciled against the 100k US AV deployments BofA models for the whole market through 2029 — those two numbers are close enough that the split between UBER-platform AVs and competitor-owned fleets is doing most of the work. **Ask for the split.**
+- **Same-day desk colour: *"**UBER defend**"* appears in BofA's morning radar alongside the conference kick-offs (BofA · Nicholas Villani, 2026-09-21), and Uber features on the sell-side idea flow in BofA's TMT weekly. **Bernstein hosts a *"UBER/DASH/LYFT/CART: A discussion of driver earnings trends with Gridwise"* call on 2026-09-23** — a driver-supply read two days out, which is the other side of the AV substitution question.**
+- ⚠️ **Rothschild & Co Redburn's IDEAS screen lists **Uber Technologies** among the Buys that are *"significantly cheaper than their 5-year averages and have positive Estimates Momentum"* (2026-09-21) — a systematic screen, not a fundamental call.**
 
 **Signal vs management** — how the Q2 FY26 print scored against what management had been saying, and what the post-print flow says (✓ confirms · ⚠ nuances · ✗ contests):
 
@@ -301,6 +311,8 @@ _Source: UBER earnings calls (dates above); management commentary, paraphrased._
 - **Briefings:** [roll-up](../_briefings/by-ticker/UBER.md) — 36 datapoints / 29 days.
 
 ## Changelog
+- **2026-09-21 (/wiki-ingest, 21h window) — 1 source: BofA Securities (Justin Post and Alex Perry, joint AV note, Reiterate BUY / PO $101 — PO and rating UNCHANGED).** ⚠️ **NOTHING SUPERSEDED — no rating, price target, estimate or guide on this page was replaced.** 🔴 **All material this run is NET-NEW to this page and each block says so in place; the run's dedup exclusions and the five documents deliberately NOT re-ingested are recorded in `_meta/changelog.md`.** Added 1 dated `## Intra-quarter` block, this record. ⚠️ **Run-level guards carried on this page: see `_meta/changelog.md` for the full list — the FIFTH incompatible $/GW basis (Redburn's $45bn/GW compute price), the ~20% inference-monitoring overhead as a THIRD relay of one lab's August estimate, and four items arriving only as AI-generated podcast briefs.** Post-run audits on this page's added lines: **0 EOL-class flips, 0 table-column anomalies, unbalanced bold found and repaired.**
+
 **2026-09-18 (/run-inbox) — 2 sources on one framework, unequal weight: Morgan Stanley · Nowak / Cost / Feather / Woodring, "The Morgan Stanley Agentic Playbook", 2026-09-18 12:02 AM GMT, 15pp (PRIMARY), and MS TMT **sales** · Tom Wigg, "MS TMT: Muse Cases", same day (explicitly NOT research). 2 `Full log` rows + 1 `RE-EVALUATED` block + this record.** ⚠️ **NOTHING SUPERSEDED — no rating, price target, guide or estimate moved. MS's coverage table still prints "++" against Uber Technologies (rating and target SUPPRESSED) at a $70.87 reference price (09/17/2026), consistent with the NA this page has carried since 08-05.**
 🔴🔴 **NET-NEW AND IT IS A NEW VECTOR, NOT A NEW NUMBER: the disintermediation debate on this page has been entirely about AV — who supplies the vehicle. MS opens a second front about who owns the DEMAND REQUEST. Bull half: horizontal agents "will need UBER/LYFT/DASH's 'infrastructure' to build out consistent agentic delivery services." Bear half: "the rideshare industry faces more disruption risk than food delivery or travel, given rideshare is more of a commodity (where price matters)" versus categories requiring visual browsing, exploration and product discovery. Food delivery is better placed but NOT exempt ("repeat orders, etc.").**
 ⚠️ **NO SIGNAL WAS RE-SCORED. MS attaches no number, no timing and no estimate revision to any of it, and this page does not move a signal on a framework alone.**

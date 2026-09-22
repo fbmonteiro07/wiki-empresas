@@ -7,7 +7,7 @@
 _Wiki · generated 2026-06-20 · **Taiwan issuer — no SEC filings**; sources: transcripts (`E:\Wiki Felipe\MEDIATEK\transcripts`) + MediaTek IR + BBG (**TWD**) · `_equity_calls` · briefings roll-up. Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-18 · TWD
+### 📊 Consensus snapshot — BBG · asof 2026-09-21 · TWD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -387,6 +387,16 @@ See cross-company theme: [custom-asic-tpu](themes/custom-asic-tpu.md).
 
 ## Intra-quarter — calls, commentary & reports (since the last print)
 
+**🆕🔴🔴🔴 2026-09-21 (/wiki-ingest 21h) — UBS PUTS A **VOLUME AND A DATE** ON THE MEDIATEK TPU PROGRAMME FOR THE FIRST TIME: [[INTC]]'s **EMIB-T ROADMAP SUPPORTS ">2m SUBSTRATES FOR MEDIATEK TPU v9 DEMAND"**, WITH SILICON-BRIDGE YIELDS **TARGETED TO CROSS 50% IN 1H:27.** MEDIATEK **+6.4%** ON THE SESSION.**
+
+(UBS · **Timothy Arcuri**, *"SemiBytes Weekly"* — UBS Taiwan Summit (09-14→16) read-throughs, **2026-09-21**; relayed by UBS sector sales · Robert Ruple — ⚠️ **the relay is sales commentary; SemiBytes is UBS Research. No MediaTek rating, PT or estimate is carried.**)
+
+- 🔴🔴🔴 **VERBATIM: *"**INTC's EMIB-T roadmap is coming to the fore** as **yields (for silicon bridge) are targeted to cross over 50% in 1H:27** and it **supports >2m substrates for MediaTek TPU v9 demand.**"*** ➤ **THIS IS THE FIRST QUANTIFIED EXTERNAL PACKAGING COMMITMENT ATTACHED TO THE MEDIATEK TPU PROGRAMME ON THIS WIKI. >2m substrates for one TPU generation is a volume statement, not a design-win statement — and it puts Intel, not [[TSM]], on the critical path for TPU v9. ⚠️ *"Targeted to cross over"* is a PLAN, not an achieved yield.**
+- ⚠️⚠️ AND THE CONTRADICTING DETAIL FROM THE OTHER SIDE OF THE SAME WEEK, WHICH IS WHY THIS IS NOT A CLEAN POSITIVE: Intel's own management told Bernstein's bus tour that *"**EMIB yields are seemingly fine but SUBSTRATE YIELDS AREN'T GREAT right now** and they are attempting to work through this"* (⚠️ Bernstein spec sales relay, not research). **THE TWO STATEMENTS ARE ABOUT DIFFERENT LAYERS — UBS's >50% is the SILICON BRIDGE; management's complaint is the ORGANIC SUBSTRATE underneath it, which is exactly the ">2m substrates" that the MediaTek volume depends on.** Corroborating the substrate stress: Digitimes reports **ByteDance's China AI chip push has hit a SUBSTRATE SHORTAGE**, and [[AVGO]] and [[NVDA]] both name substrates among their constraints. ➤ **THE MEDIATEK TPU v9 VOLUME IS GATED ON THE ONE LAYER NOBODY HAS A PUBLISHED YIELD FOR.**
+- 🔴🔴 **AND IT SITS DIRECTLY ON THE PRODUCT-LINE FORK THIS WIKI OPENED THIS MORNING (09-21 notion-ingest, `themes/custom-asic-tpu.md`): JPM's **Harlan Sur** has [[ANTHROPIC]] running **Google TPU through CY28**, which is what keeps [[AVGO]] at ~75% of TPU units in 2028; Jefferies' **Blayne Curtis** has Anthropic already differentiating away from the Ironwood copy-exact inside the FY28 guide window — *"half their gigawatts"* off the **MediaTek-contested line**. ➤ **A >2m-substrate commitment on Intel packaging for TPU v9 is evidence that the MediaTek line is being TOOLED FOR VOLUME, which leans toward Curtis's reading. It is not decisive: tooling a line is not the same as filling it, and AVGO management said the same week that it is *"engaged with every generation going forward"* with Google revenue *"stable to growing."* **THE FORK STAYS OPEN; the falsifiable date is the 2nm TPU tape-out in 1H27, visible in TSMC planning by early 2027.**
+- ⚠️ FORMAT CONTEXT: the same UBS note has [[TSM]] *"targeting **CoPoS 310x310mm** process/equipment selection by **mid-C2027** (mass production in **C2028**)"* — i.e. TSMC's next-format answer arrives AFTER Intel's EMIB-T yield date. **Divergent roadmaps on different dates, not a head-to-head race on the same track.**
+- **TAPE: **MediaTek +6.4%** on the session, among the strongest in the Taiwan hardware complex alongside **AUO +9.9%** and **GUC +6.5%** (Jefferies · Conor O'Mara, 2026-09-21). Fubon's **Rita Tung** frames the broader shift MediaTek sits inside: *"the ASIC market focus this year has shifted **from accelerator to CPU/LPU**"*, with accelerator supply-demand fulfilment staying at **only 50-60% even in 2028** and *"the allocation of major ASIC projects scheduled for mass production **through 2029 largely determined.**"***
+
 **Window opened 2026-07-31 (Q2'26 print + analyst briefing). Prior-quarter flow is in `## Changelog`.**
 
 **Sinal vs gestão** — what management said on the 07-31 call × what the intra-quarter flow says (✓ confirma · ⚠ nuança · ✗ contesta):
@@ -560,6 +570,8 @@ _Source: MEDIATEK earnings calls (dates above); management commentary, paraphras
 - **Outlook:** attempted (`outlook.py --no-body --days 14`) — returned no data in this environment; no inbox notes incorporated.
 
 ## Changelog
+- **2026-09-21 (/wiki-ingest, 21h window) — 2 sources: UBS (Timothy Arcuri, *"SemiBytes Weekly"*) and Bernstein's bus-tour relay of [[INTC]] management.** ⚠️ **NOTHING SUPERSEDED — no rating, price target, estimate or guide on this page was replaced.** 🔴 **All material this run is NET-NEW to this page and each block says so in place; the run's dedup exclusions and the five documents deliberately NOT re-ingested are recorded in `_meta/changelog.md`.** Added 1 dated `## Intra-quarter` block, this record. ⚠️ **Run-level guards carried on this page: see `_meta/changelog.md` for the full list — the FIFTH incompatible $/GW basis (Redburn's $45bn/GW compute price), the ~20% inference-monitoring overhead as a THIRD relay of one lab's August estimate, and four items arriving only as AI-generated podcast briefs.** Post-run audits on this page's added lines: **0 EOL-class flips, 0 table-column anomalies, unbalanced bold found and repaired.**
+
 - **2026-09-15 (/wiki-ingest, 21:00 window) — 4 sources. 1 block in `## Current state`, 1 NEW theme row + 3 rows in the intra-quarter log, 1 Sources entry, this record. ⚠️ ZERO NUMBERS SUPERSEDED — BofA's PO NT$5,230 on 23x 2H27-1H28E P/E is re-affirmed, not changed; only the PRICE moved (NT$4,430 vs NT$4,720 in the same analyst's 09-10 note, ~-6% in three sessions).**
   ✅ **NET-NEW PRODUCT AND PRICE CONTENT: the Dimensity 9600 Pro (33bn+ transistors on TSMC 2nm, 2+3+3 All-Big-Core vs 1+3+4, -61% multi-core power, +15% performance vs the 9500, dual-NPU lifting LLM prefill 51% and supporting up to 30bn-parameter models on-device) plus a 3nm Dimensity 9600M sub-flagship — the first spec sheet and the first ASP on this page for the 2nm generation.**
   ⚠️ **ONE ASP LOGGED AS TWO NUMBERS ON PURPOSE: BofA estimates the 9600 Pro at ~US$210 (9600M at US$170-180, 9500-like); TrendForce the same day prints a record US$220 *"closing in on Qualcomm"*. Different methodologies, ~5% apart, MediaTek has disclosed neither. Both carried, NEITHER averaged.**

@@ -5,17 +5,17 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\META` (filings + transcripts) · `_equity_calls` · `_briefings\by-ticker\META.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Snapshot — Capstone official model + BBG · asof 2026-09-18 · USD
+### 📊 Snapshot — Capstone official model + BBG · asof 2026-09-21 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | **$257.0bn** | **$313.0bn** |
 | Gross profit | $205.9bn | $247.0bn |
 | Gross margin | 80.1% | 78.9% |
-| EBITDA | $119.9bn | $148.7bn |
+| EBITDA | $119.4bn | $148.7bn |
 | EPS | **$32.72** | **$38.24** |
-| Capex | $150.8bn | $214.6bn |
-| OCF (≈EBITDA) | $119.9bn | $148.7bn |
+| Capex | $150.8bn | $214.7bn |
+| OCF (≈EBITDA) | $119.4bn | $148.7bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 _**Bold** = Capstone official model; plain = BBG consensus._
@@ -358,6 +358,40 @@ _Source: Capstone official model (`Modelo Meta pós 2Q26.xlsm`, 2026-06-11)._
 
 ## Intra-quarter — calls, commentary & reports (since the last print)
 _Q2 FY26 · Jul 29, 2026 → open · sell-side / expert calls / reports since the 2026-07-29 AMC print. Prior window (Q1 FY26, Apr 29 → Jul 28) archived under `## Changelog`. Timeline visual: [timeline.html](timeline.html)._
+
+**🆕🔴🔴🔴 2026-09-21 (/wiki-ingest 21h) — MUSE HELD **#1 IN THE US APP STORE THROUGH THE WEEKEND, AHEAD OF CHATGPT**, INTO CONNECT (09-23/24) — AND THE SAME 48 HOURS PRODUCED THE FIRST **PLATFORM-LEVEL RETALIATION** ([[AMZN]] BLOCKED IT) AND THE FIRST **PLATFORM-LEVEL ALLIANCE** ([[SHOP]] JOINED IT). THE STOCK DID **+11.34% vs QQQ +2.77%** ON THE SESSION.**
+
+### 🔴🔴🔴 (A) THE PRODUCT SURFACE WIDENED IN FOUR WAYS OVER THE WEEKEND
+
+(Jefferies Asia TMT sales · **Rankie Wong**, *"Reading the Tech Leaves"*, **2026-09-21**; MS TMT sales · **Tom Wigg**, **2026-09-21**; UBS TMI · **Christina Dwyer**, **2026-09-21** — ⚠️ **ALL THREE ARE SALES COMMENTARY, NOT RESEARCH.**)
+
+- 🔴🔴 **DEVELOPER CONNECTORS OPENED.** META officially opened **developer access to build connectors for Muse** — *"this can potentially create a new ecosystem for META and help widen their moat in consumer AI… and also be a very powerful accelerator for wider consumer AI adoption"* (Jefferies). ➤ **This is the item that changes the shape of the thesis: an agent with a third-party connector ecosystem is a platform, not a feature. It is also the mechanism that makes the [[AMZN]] refusal and the [[SHOP]] partnership below the FIRST TWO DATAPOINTS OF A SERIES rather than one-offs.**
+- 🔴 **A MAC DESKTOP VERSION SHIPPED** — interacting with files, messages, calendars, notes and mail **within the native apps**. ⚠️ **Jefferies draws the distinction carefully and this page should keep it: Muse for Mac *"seems to only support several apps and REQUIRES THE USER TO OPT-IN"*, whereas [[OPENAI]]'s Astra Computer Use *"acts more like an actual human operating your entire desktop (think something like IT support remote access)."* DIFFERENT CAPABILITY CLASSES — do not treat the two as feature parity.**
+- **INTERNATIONAL LAUNCH BEGAN (Canada)** and Meta ran **its first nationwide Muse advertisement**; the app is being pushed across IG / FB / WhatsApp surfaces.
+- **Muse retained the No. 1 App Store slot through the weekend, ahead of ChatGPT**, having launched 2026-09-08 (Business Insider, via MS TMT desk).
+
+### 🔴🔴🔴 (B) THE TWO PLATFORM RESPONSES, SAME DAY, OPPOSITE SIGNS — THIS IS THE FINDING
+
+| Counterparty | Response to Muse agentic shopping | Source |
+|---|---|---|
+| **[[AMZN]]** | **BLOCKED.** Users attempting to shop Amazon via Muse see: *"Continued access by an unauthorized AI agent violates Amazon's Conditions of Use, to which our customers have agreed."* Cited grounds: ToS violation, security risk, merchant consent | GeekWire, via MS TMT desk · Wigg, 2026-09-21 |
+| **[[SHOP]]** | **PARTNERED.** CEO Tobi Lütke announced consumers can discover products from Shopify merchants and **complete purchases through Shop Pay inside the Muse experience**; Muse can search Shopify Catalog | Deutsche Bank · Bhavin Shah / Brad Zelnick, 2026-09-21 |
+
+- 🔴🔴 **BERNSTEIN ADDS THE TWO DETAILS THAT MAKE THE AMZN REFUSAL READ AS A NEGOTIATION RATHER THAN A DOCTRINE: *"META didn't alert AMZN that Muse would have access to the store"*, and *"AMZN is concerned about the agent CAPTURING CUSTOMER CREDENTIALS"*** (Bernstein TMT spec sales · **Tyler Seidman**, 2026-09-21 — ⚠️ **not research**). **MS's read is blunter: *"This is unsurprising given AMZN has been particular about not partnering with horizontal LLMs in the past… THEY NEED TO IRON OUT A DEAL."***
+- ➤ **THE STRUCTURAL POINT FOR THIS PAGE: Muse's consumer traction is now measurable, but its COMMERCE monetisation is contingent on counterparties who each get a veto. One of the two largest possible partners said no and one said yes on the same day. Until Connect gives adoption data, the agent's commercial value is a function of how many of these negotiations Meta wins — which is exactly the variable no model on this page currently carries.**
+
+### 🔴🔴 (C) INTO CONNECT (WED 09-23, KEYNOTE 7PM ET; 09-23/24) — THREE HOUSES, AND THE SETUP IS "SELL-THE-NEWS-ISH"
+
+- **UBS (Christina Dwyer, ⚠️ not research):** *"I wouldn't necessarily say the bar is too high, but based on conversations and flow this week, the setup does feel increasingly SELL-THE-NEWS-ISH. Having [[OPENAI]] DevDay just ONE WEEK LATER probably doesn't help either."* Four expectation buckets: **AI products (features, adoption stats, Muse + Business Agents), hardware (new glasses, pricing/timing), ad tools (WhatsApp + Business Agents), developers (model upgrades, APIs, monetisation).** ⚠️ **Explicitly NOT on her list: a full frontier-model launch — *"I've definitely heard that expectation floating around, but I'm not convinced it's the bar."*** 🔴 **AND THE POSITIONING POINT THAT CUTS AGAINST THE "CROWDED" READ: *"people continue to UNDERESTIMATE HOW LITTLE LO SPONSORSHIP there is in META while investors wait for more credible ROIC proof points"* — so *"any short-term/T+1 volatility gets bought."*** **Alexandr Wang is now confirmed to speak** (he confirmed it himself, @alexandr_wang, 2026-09-20).
+- **BofA (Justin Post, research; relayed by Brian Fenske):** event focus is **glasses innovation**, but *"the investor focus is squarely on integrated AI capabilities with the **Muse Spark** model, Agentic AI more tightly integrated across the app ecosystem, **data around traction of the Muse app**, the **Meta Business Agent Platform**, and the road ahead."* **Watermelon is *"rumored for an October release"* — i.e. BofA does NOT expect it at Connect.**
+- **Jefferies (Rankie Wong):** *"the biggest focus is likely around more details/progress for next-gen **Watermelon** model, as well as the future roadmap on Muse."*
+- **Morgan Stanley** published a video preview (**Brian Nowak / Matthew Cost / Nikhil Javeri**, *"Meta Connect Expects and the Agentic Playbook"*, 2026-09-21) debating what agentic offerings mean for online travel and others.
+- ➤ **RECONCILING THEM: three houses agree the AI/agentic content is what matters and TWO explicitly do not expect a frontier-model launch. The asymmetry is therefore in Muse ADOPTION DATA and the Business Agent platform, not in Watermelon.**
+
+### ⚠️ (D) ONE PRICE-TARGET MARK, AND AN IN-HOUSE MEASUREMENT OF THE DIFFUSION
+
+- 🔴 **Wells Fargo raised its META price target to **$796 from $640** before Monday's open (in-house sentiment tracker, 2026-09-21, citing Wells Fargo).** ⚠️ **The WFC note itself is NOT on disk — only the tracker's citation of it; no analyst name, no methodology, no estimate captured. Logged as a dated PT mark to be verified, NOT folded into this page's PT ladder.**
+- 📐 **AND THE HOUSE'S OWN MEASUREMENT OF THE MUSE DIFFUSION, WHICH IS DELIBERATELY DEFLATIONARY (Capstone in-house sentiment tracker, 2026-09-21).** Comparing Friday 16:00 → Monday 08:30 NY across the last two weekends in the tracked Twitter sample: original Muse posts **37 → 55 (+49%)**, share of the collected feed **1.68% → 2.38%**, authors outside company/partner/news profiles **5 → 12**. ⚠️⚠️ **BUT: 37 of the 55 posts came from ALEXANDR WANG ALONE, so *"raw volume by itself EXAGGERATES the dispersion of the thesis"*; and 42 of 55 did not mention META or Facebook at all, so a ticker-only search misses the product.** **Session marks: META +11.34% vs QQQ +2.77% (8.56pp), of which +2.18% was already in the open and +8.96% from open to the last mark.** ⚠️ **The tracker's own conclusion, carried verbatim as the discipline: *"houve difusão antes da segunda-feira, mas isso ainda NÃO demonstra um indicador leading validado de crowding"* — and it warns with two counter-examples that attention can front-run a gap and still be a bad entry AFTER it: [[NBIS]] on 09-17 gapped +4.12% then fell −5.23% open-to-mark; [[ORCL]] on 09-11 opened +7.51% and closed −1.74%. Four houses repeating the same App Store headline is not four independent catalysts.**
 
 **Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
@@ -709,6 +743,8 @@ _² Mizuho does not publish a standalone META capex model; the ~$200-300B FY27 f
   - **Capstone model:** `P:\Felipe Monteiro\US Equities\Modelos oficiais\Modelo Meta pós 2Q26.xlsm` (house estimates).
 
 ## Changelog
+- **2026-09-21 (/wiki-ingest, 21h window) — 4 sources: Jefferies Asia TMT sales (Rankie Wong), UBS TMI (Christina Dwyer), BofA (Justin Post via Brian Fenske) and MS TMT sales (Tom Wigg) — ⚠️ all four are SALES COMMENTARY, NOT RESEARCH — plus the Capstone in-house sentiment tracker.** ⚠️ **NOTHING SUPERSEDED — no rating, price target, estimate or guide on this page was replaced.** 🔴 **All material this run is NET-NEW to this page and each block says so in place; the run's dedup exclusions and the five documents deliberately NOT re-ingested are recorded in `_meta/changelog.md`.** Added 1 dated `## Intra-quarter` block, this record. ⚠️ **Run-level guards carried on this page: see `_meta/changelog.md` for the full list — the FIFTH incompatible $/GW basis (Redburn's $45bn/GW compute price), the ~20% inference-monitoring overhead as a THIRD relay of one lab's August estimate, and four items arriving only as AI-generated podcast briefs.** Post-run audits on this page's added lines: **0 EOL-class flips, 0 table-column anomalies, unbalanced bold found and repaired.**
+
 - **2026-09-20 (/wiki-ingest, 21h window) — 2 sources: J.P. Morgan TMT spec sales (Scott Silver, ⚠️ not research) and The Information Briefing (Martin Peers).** ⚠️ **NOTHING SUPERSEDED — no META rating, price target, capex figure, MTIA milestone or estimate was replaced.** 🔴🔴🔴 **NET-NEW — A CONSUMER-PRODUCT BULL VECTOR APPEARS FOR THE FIRST TIME, AND ITS SIGNIFICANCE IS SECTOR-WIDE RATHER THAN NAME-SPECIFIC: *"Meta/Muse has UNEXPECTEDLY EMERGED as one of the more interesting debates this week… One investor described it as POTENTIALLY TRANSFORMATIONAL for bringing AI into the everyday consumer experience. The argument is LESS about immediate incremental compute demand and MORE about providing something tangible around AI ADOPTION AND MONETISATION… some investors have consequently talked about owning the broader 'META UNIVERSE' — Meta itself alongside the compute ecosystem around it."*** ➤➤ **WHY IT MATTERS BEYOND THIS PAGE: Silver's framing is that the market is hunting for *"evidence that AI is broadening into something more tangible and monetisable"* after the Anthropic pacing letter stalled the re-grossing trade. Muse is the first candidate anyone has named. If the debate holds, META becomes the demand-side proof point for the whole AI-infra complex rather than just another capex payer.** ⚠⚠ **GUARD: this is investor chatter relayed by a sales desk. No MAU, revenue, pricing or rollout data exists here, and *"US clients I have spoken to with access"* is a self-selected sample of enthusiasts. NOT adopted — logged because the SHAPE of the debate is itself the datapoint.** 🔽 **CALENDAR, which goes to `## Catalysts`: Meta Connect with Zuckerberg's keynote on **Wednesday 2026-09-23**. The Information has scooped a camera-free pair of smart glasses going on sale in October plus new AR glasses, and makes a disclosure-silence bear point on the prior generation — after the Ray-Ban Display *"sold out in almost every store"* (Oct-25 call) and international expansion was suspended in January to fulfil US orders, executives have said nothing on earnings calls since a brief April mention, availability remains US-only and reviews are mixed.** ⚠️ **That last point is columnist INFERENCE (*"I have to bet that if this product had been a hit…"*), not reporting — but the disclosure silence is itself checkable at the keynote.** Added: 1 Full-log row, 1 `## Sources` entry, this record.
 **🔴 2026-09-18 (/run-inbox — 2 sources, one framework, unequal weight: Morgan Stanley · Nowak/Cost/Feather/Woodring, "The Morgan Stanley Agentic Playbook", 2026-09-18 12:02 AM GMT, 15pp, PRIMARY; and MS TMT **sales** · Tom Wigg, "MS TMT: Muse Cases", 2026-09-18 1:47 PM, explicitly NOT research). 2 `Full log` rows + 1 `RE-EVALUATED` block + this record.** ⚠️ **NOTHING SUPERSEDED — no rating, price target, guide, house estimate or consensus number on this page moved, and no prior mark was retired. MS carries META at OVERWEIGHT (rated O since 03/20/2023, reference price $682.31 as of 09/17/2026) and prints NO price target in this note, so the OW / PT $775 / TOP PICK mark of 09-09 stands untouched.**
 🔴 **NET-NEW: MUSE HAS A PUBLISHED SIZING FOR THE FIRST TIME. Every 100mn MAUs ≈ $1bn of annual revenue and ~+1% to '28 EPS — 5.0 queries/MAU/day × a 10% commercial-query rate (vs 20% at GOOGL) × $0.07 of monetisation per commercial query (20% of GOOGL's US $0.36), at 80% incremental margins; that base case is 0% upside to '28 revenue. The sensitivity runs to ~$20bn of revenue and +15% to '28 EPS, but only at 3bn MAUs AND 2.5 COMMERCIAL queries per user per day — a boundary of the grid, not a forecast.**

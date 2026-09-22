@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\CRWV` (10-K FY2025, four 10-Qs, transcripts) · `E:\briefings\2026`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-18 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-21 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -11,7 +11,7 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\CRWV` (10-K FY2025, fo
 | Gross profit | $8.7bn | $18.8bn |
 | Gross margin | 67.7% | 70.7% |
 | EBITDA | $7.5bn | $16.7bn |
-| EPS | $-3.88 | $-2.10 |
+| EPS | $-3.88 | $-2.06 |
 | Capex | $35.6bn | $47.5bn |
 | OCF (≈EBITDA) | $7.5bn | $16.7bn |
 
@@ -344,6 +344,31 @@ Hedgeye estimates 2026 CoreWeave revenue ~**$11.68B (+126%)** on ~477k average G
 ## Intra-quarter — calls, commentary & reports (since the last print)
 _Q1 FY26 · May 07 → Jul 20, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
+**🆕🔴🔴🔴 2026-09-21 (/wiki-ingest 21h) — COREWEAVE IS INITIATED **SELL, PT $54 (−40%)** IN A 148-PAGE ROTHSCHILD/REDBURN LAUNCH THAT NAMES IT *"THE CLEAREST EXAMPLE"* OF THE FUNDING RISK — WITH A HARD, CITEABLE SPREAD: **THE LATEST DELAYED-DRAW TERM LOANS PRICED AT SOFR + 450-550bp TO NON-INVESTMENT-GRADE OR UNDISCLOSED COUNTERPARTIES.** IT LANDS **THREE DAYS** AFTER MANAGEMENT ITSELF CALLED MID-TEENS $/kW-yr THE *FLOOR*.**
+
+(Rothschild & Co Redburn · **Alex Haissl** / **Luke Han**, *"AI Infrastructure: Capital Carousel"*, **2026-09-21**, **148 pages** — a 13-stock INITIATION built on *"3+ months"* of work including a **site-by-site data-center tracker**, **bottoms-up token economics** and a **compute pricing curve**. Relayed by Rothschild & Co spec sales · Madeleine Falkiner and Rowan Adley. ⚠️ **The full 148pp note is NOT on disk — a copy of the spec-sales summary is also sitting unprocessed in `_inbox\Capital Carousel.pdf`; if `/run-inbox` reaches it later, it is the SAME DOCUMENT. Every figure below is Redburn's estimate unless marked otherwise.**)
+
+**THE COVERAGE AND THE CALLS:** **BUY** — Digital Realty (+25%), Equinix (+24%), Iron Mountain (+18%), Z.ai (+32%). **NEUTRAL** — [[AMZN]], Applied Digital, Cipher Digital, Core Scientific, Hut 8, IREN, [[MSFT]], MiniMax, TeraWulf. **SELL** — **[[NBIS]] (−60%, PT $84)**, **[[CRWV]] (−40%, PT $54)**, **[[ORCL]] (−33%)**.
+
+### 🔴🔴🔴 (A) THE COREWEAVE-SPECIFIC ARGUMENT
+
+- 🔴🔴🔴 **THE SPREAD, WHICH IS THE HARDEST FACT IN THE NOTE: *"**CoreWeave is the clearest example.** Its **newer facilities carry WIDER SPREADS and WEAKER COUNTERPARTIES**, with the **latest delayed draw term loans priced at 4.50 to 5.50% over SOFR to NON-INVESTMENT GRADE OR UNDISCLOSED COUNTERPARTIES.**"*** ➤ **This is a priced, dated, market-observed number — not a model output — and it is the second priced credit signal on the AI build-out inside four days, after the [[ORCL]] New Mexico loans quoted at 89-91 cents. Both point the same way and both are on the debt side while the equity side re-rates upward.**
+- THE VALUATION MATH: at **$45bn/GW the compute gross-profit multiple over energy costs is ~63x**, leaving implied equity value per GW *"most stretched at **[[NBIS]] ($11.5bn) and CoreWeave ($9.2bn)** versus IREN ($3.4bn)."* Redburn's summary of the sector call: *"this is the team's **HIGHEST CONVICTION NEGATIVE VIEW**: current valuations assume **stronger demand, utilisation and pricing than the fundamentals support**"*, and *"much of the recent **compute repricing is being driven by the highest-risk customers rather than broad-based demand.**"*
+- **@wallstengine's relay of the initiation adds the stated upside/downside drivers: for CRWV, *"Redburn questions CoreWeave's **unit economics and ability to convert its pipeline into attractive returns**. Key risks include **hyperscalers or AI labs bringing capacity in-house, falling GPU pricing**…"* (2026-09-21).**
+
+### 🔴🔴🔴 (B) THE DIRECT COLLISION WITH THIS PAGE'S OWN 09-21 PRIMARY — LOGGED AS A FORK, NOT RESOLVED
+
+- ⚠️⚠️⚠️ **THIS NOTE AND COREWEAVE'S OWN MANAGEMENT ARE NOW ON OPPOSITE SIDES OF THE SAME QUESTION, WITHIN 24 HOURS AND ON THE SAME WIKI.** The BTG Pactual Global Access investor Q&A ingested earlier today has **Nick Robbins (VP Corporate Development)** describing a three-rung pricing ladder with **mid-teens $/kW-yr as the *"absolute floor"***, Vera Rubin long-dated above it, short-dated prior generations *"meaningfully above"*, **contract EBITDA in the mid-70s for five years** and payback *"as low as ~a year with prepayments."* Redburn's entire thesis is that this very repricing *"is being driven by precisely the riskier part of the market"* and is **harder and more expensive to finance** — which is not a denial of the price, it is a claim about who is paying it and on what terms.
+- ➤ **THESE ARE NOT THE SAME DISAGREEMENT AS THE NSCALE ONE (where the filed S-1 read mid-teens as a CEILING). There are now THREE readings of the same price level on this wiki inside four days: Nscale's filed book (ceiling), CoreWeave management (floor), and Redburn (a real price paid by the wrong counterparties). ALL THREE STAY ON THE PAGE. The falsification test is the credit, not the price: if Redburn is right, the next financing prices WIDER than SOFR+550 or the counterparty disclosure gets worse; if management is right, the next contract prints above mid-teens WITH an investment-grade or disclosed counterparty.**
+
+⚠️⚠️⚠️ **FOUR GUARDS BEFORE ANY OF THIS IS USED:**
+- **(a) THE $45bn/GW IS A *COMPUTE PRICE* BASIS AND IS THE FIFTH INCOMPATIBLE $/GW NUMBER NOW CIRCULATING ON THIS WIKI.** It is NOT [[NVDA]] management's *"DC opportunity progressing to $40B/GW"* (Bernstein, same day), NOT Hock Tan's ~$30bn ARR/GW, NOT Jefferies' $11.5→$15bn/GW of [[AVGO]] CONTENT per GW, and NOT the $40bn/GW in the Wells Fargo META arithmetic. **NEVER NET OR CHAIN THEM.**
+- **(b) THE ~700 MW CLAIM IS THE LOAD-BEARING ONE AND IT IS THE MOST CONTESTABLE.** It is derived from **OPEN-WEIGHT** models (Kimi K3, GLM-5.3, DeepSeek V4), not from the frontier closed models the buildout is actually sized for, and *"tuned to real world usage"* is doing unspecified work. If inference genuinely needs an order of magnitude less capacity than the market assumes, most of this note follows; if the open-weight proxy understates frontier inference cost, none of it does. **This is the single number to attack or defend.**
+- **(c) THE ④ ROUND-TRIPPING ARITHMETIC IS AN INFERENCE, NOT AN IDENTITY.** The 35% margin is Redburn's assumption; a multi-year contract's gross profit and a point-in-time equity stake are not commensurable without a term structure. The 70%-of-incremental-backlog figure IS testable against the next round of 10-Q RPO disclosures.
+- **(d) THE "ECONOMIC FCF" ADJUSTMENT IN ① IS A NON-GAAP CONSTRUCT OF REDBURN'S OWN DESIGN** — deducting the change in implied capital from leases that have not commenced. It is a defensible way to see through operating-lease treatment, and it is not a reported number.
+
+- ✅ **AND THE COUNTER-EVIDENCE ALREADY ON THIS PAGE, RESTATED SO THE FORK IS FAIR: [[NBIS]] raised GPU pricing ~+20% on 09-17 (two independent sources) on the same session CRWV raised ~$6.4bn of equity-leaning financing and the first public short-dated contract price printed at ~$40mn/MW. Redburn's note does not dispute those prints — it disputes what they are worth.**
+
 **Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
 > **🔴 WINDOW CLOSED 2026-08-11 (AMC).** Q2 FY26 printed. The Q1'26-scored rows below are retained as the closed-window audit trail; the new Q2'26 scoring is the block immediately above it.
@@ -542,6 +567,8 @@ _Source: CRWV earnings calls (dates above); management commentary, paraphrased._
 - **Outlook:** attempted (`outlook.py --no-body --days 14`); returned no data this session — sell-side stance sourced from briefing roll-ups instead.
 
 ## Changelog
+- **2026-09-21 (/wiki-ingest, 21h window) — 2 sources: Rothschild & Co Redburn (Alex Haissl / Luke Han, *"Capital Carousel"*, 148pp INITIATION — SELL) and @wallstengine's corpus relay of the price targets.** ⚠️ **NOTHING SUPERSEDED — no rating, price target, estimate or guide on this page was replaced.** 🔴 **All material this run is NET-NEW to this page and each block says so in place; the run's dedup exclusions and the five documents deliberately NOT re-ingested are recorded in `_meta/changelog.md`.** Added 1 dated `## Intra-quarter` block, this record. ⚠️ **Run-level guards carried on this page: see `_meta/changelog.md` for the full list — the FIFTH incompatible $/GW basis (Redburn's $45bn/GW compute price), the ~20% inference-monitoring overhead as a THIRD relay of one lab's August estimate, and four items arriving only as AI-generated podcast briefs.** Post-run audits on this page's added lines: **0 EOL-class flips, 0 table-column anomalies, unbalanced bold found and repaired.**
+
 
 - 2026-09-21 — notion-ingest: **THE FIRST COREWEAVE PRIMARY SOURCE IN THIS ARCHIVE** (Nick Robbins, VP Corporate Development, CoreWeave · BTG Pactual Global Access websession, 2026-09-21 — Capstone notes, Notion transcript). Inserted: 1 block at the head of `## Current state`, 2 bullets in `## Debate / thesis`, 3 bullets in `## Catalysts`, 1 `## Sources` entry, this record. ⚠️ **NOTHING SUPERSEDED — no rating, PT, guide, backlog, capex, power or margin figure on this page was replaced.**
   🔴🔴 **THE 09-17 UNIT HAZARD IS NOW LARGELY (NOT FULLY) RESOLVED, AND THIS IS THE MOST VALUABLE THING IN THE SOURCE.** This page has carried, since 09-17, an explicit instruction not to net Barclays' **~$40M/MW** short-dated mark against the **~$16M/MW/YEAR** base because *"the note does NOT state whether $40mn/MW is TOTAL CONTRACT VALUE or ANNUALISED."* Robbins puts the same ~$40M/MW figure **inside a single answer whose stated benchmark unit is "$16 per watt per year"**, as the top rung of a ladder — mid-teens $/W/yr floor ➜ long-dated Vera Rubin "directionally higher than mid-teens" ➜ short-dated "way, way higher" ➜ *"we had signed in Q3 short dated contracts at about 40 million a megawatt."* ➤ **The ANNUALISED reading is now far the more natural one, and on that reading $40M/MW/yr lands exactly on the spot tier already in [`_meta/assumptions.md`](_meta/assumptions.md) (`rev-per-gw`: wholesale 5-6yr ~$12-16bn/IT-GW · merchant 1-3yr term ~$20-25bn · 3-6 month spot ~$40-50bn).** ⚠️ **He still never states the term or the basis in words. Logged as STRONGLY IMPLIED ANNUAL, not as confirmed; the 09-17 four-basis guard stands.**

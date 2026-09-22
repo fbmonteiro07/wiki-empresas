@@ -5,17 +5,17 @@
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\NBIS` (20-F filings + transcripts) · `E:\briefings\2026`. Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-18 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-21 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $3.3bn | $12.3bn |
-| Gross profit | $2.4bn | $9.0bn |
-| Gross margin | 71.9% | 72.9% |
-| EBITDA | $1.3bn | $6.8bn |
-| EPS | $-3.57 | $-4.96 |
-| Capex | $23.2bn | $33.7bn |
-| OCF (≈EBITDA) | $1.3bn | $6.8bn |
+| Revenue | $3.3bn | $12.4bn |
+| Gross profit | $2.4bn | $9.1bn |
+| Gross margin | 72.1% | 73.3% |
+| EBITDA | $1.3bn | $7.0bn |
+| EPS | $-3.57 | $-4.95 |
+| Capex | $23.6bn | $33.9bn |
+| OCF (≈EBITDA) | $1.3bn | $7.0bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
@@ -261,6 +261,39 @@ Beat-and-raise, with the EBITDA inflection now the story. **Group revenue $399m 
 ## Intra-quarter — calls, commentary & reports (since the last print)
 _Q1 2026 · May 11 → Jul 14, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
+🆕🔴🔴🔴 2026-09-21 (/wiki-ingest 21h) — NEBIUS IS INITIATED **SELL, PT $84 (−60%)** — ROTHSCHILD/REDBURN'S **HIGHEST-CONVICTION SELL IN THE COMPUTE LAYER** AND THE LARGEST DOWNSIDE IN A 13-STOCK LAUNCH. THE STATED GROUNDS ARE **UNIT ECONOMICS AND THE MOST DEMANDING VALUATION IN THE GROUP — $11.5bn OF IMPLIED EQUITY VALUE PER GW, VERSUS $9.2bn FOR [[CRWV]] AND $3.4bn FOR IREN.**
+
+(Rothschild & Co Redburn · **Alex Haissl** / **Luke Han**, *"AI Infrastructure: Capital Carousel"*, **2026-09-21**, **148 pages** — a 13-stock INITIATION built on *"3+ months"* of work including a **site-by-site data-center tracker**, **bottoms-up token economics** and a **compute pricing curve**. Relayed by Rothschild & Co spec sales · Madeleine Falkiner and Rowan Adley. ⚠️ **The full 148pp note is NOT on disk — a copy of the spec-sales summary is also sitting unprocessed in `_inbox\Capital Carousel.pdf`; if `/run-inbox` reaches it later, it is the SAME DOCUMENT. Every figure below is Redburn's estimate unless marked otherwise.**)
+
+**THE COVERAGE AND THE CALLS:** **BUY** — Digital Realty (+25%), Equinix (+24%), Iron Mountain (+18%), Z.ai (+32%). **NEUTRAL** — [[AMZN]], Applied Digital, Cipher Digital, Core Scientific, Hut 8, IREN, [[MSFT]], MiniMax, TeraWulf. **SELL** — **[[NBIS]] (−60%, PT $84)**, **[[CRWV]] (−40%, PT $54)**, **[[ORCL]] (−33%)**.
+
+- 🔴🔴🔴 THE RANKING IS THE POINT: *"**Nebius (SELL, −60%): HIGHEST CONVICTION SELL in the compute layer, with the MOST DEMANDING VALUATION.**"* Ahead of [[CRWV]] (−40%) and [[ORCL]] (−33%). The per-GW valuation ladder at a **$45bn/GW compute price** (where the gross-profit multiple over energy cost is **~63x**) puts NBIS at **$11.5bn/GW — 25% above CoreWeave and 3.4x IREN.***
+- @wallstengine's relay of the initiation carries the balanced version, including the upside case Redburn concedes: *"**$NBIS: SELL, $84 PT.** Says Nebius has a **demanding valuation and questions the sustainability of its unit economics.** **Upside could come from newer-generation GPUs, faster growth of its Token Factory inference business and stronger capacity execution.** Risks include **customers bringing compute in-house and higher funding costs.**"* (2026-09-21.) ➤ **Note that Redburn's own stated upside path — Token Factory inference growth — is the part of Nebius's business least exposed to its compute-layer critique. That is the bull case's strongest foothold inside the bear note.**
+- **THE SECTOR FRAME THAT PRODUCES THE CALL:** **THE THESIS, VERBATIM WHERE IT MATTERS:** *"The equity narrative across the GenAI stack remains firmly bullish, but **credit markets are beginning to price risks that equities largely ignore. Our work suggests CREDIT IS SENDING THE MORE IMPORTANT SIGNAL.** The true economic leverage of the hyperscalers — which ultimately support much of the infrastructure buildout — is **materially higher once off-balance-sheet commitments are included.** This reduces their capacity to continue backstopping the next phase of investment **just as the underlying deals are becoming riskier**, increasingly shifting the financing burden elsewhere. Importantly, **the compute repricing that has excited equity markets is being driven by precisely this riskier part of the market: venture capital- and Big Tech-backed NEOLABS signing higher priced compute contracts.** While these deals offer better headline economics, they are also **harder and more expensive to finance**… Ultimately, **the infrastructure buildout is a FUNDING CYCLE**, and financial innovation can keep that cycle running **longer than fundamentals alone might suggest.** Rather than calling its end, we focus on **earnings quality, cyclicality and durability**."*
+
+**THE FIVE QUANTIFIED LEGS — each is testable, and each is an estimate:**
+
+| # | Redburn's claim | Figure |
+|---|---|---|
+| ① | Hyperscaler **reported** FCF, June-2026 TTM | **+$126bn** |
+| ① | Same on an **"economic"** basis after deducting the change in implied capital from **uncommenced leases** | **−$151bn** — *"a swing of nearly **$280bn**"* |
+| ② | [[CRWV]]'s latest **delayed-draw term loans**, priced to *"non-investment grade or undisclosed counterparties"* | **SOFR + 450-550bp** |
+| ③ | Blackwell capacity needed to serve *"a major lab's year-end token volume projection"*, bottom-up off **Kimi K3, GLM-5.3, DeepSeek V4** tuned to real-world usage | **~700 MW** |
+| ④ | [[AMZN]]'s **$138bn [[OPENAI]] contract** → gross profit at an assumed 35% margin, versus its ~$50bn equity investment | **~$48.3bn vs ~$50bn** |
+| ④ | Share of **incremental hyperscaler backlog** from OpenAI / [[ANTHROPIC]] / [[META]] agreements | **~70%** |
+| ⑤ | Compute gross-profit multiple over energy cost **at $45bn/GW** | **~63x** |
+| ⑤ | Implied **equity value per GW** | **[[NBIS]] $11.5bn · [[CRWV]] $9.2bn · IREN $3.4bn** |
+
+
+⚠️⚠️⚠️ **FOUR GUARDS BEFORE ANY OF THIS IS USED:**
+- **(a) THE $45bn/GW IS A *COMPUTE PRICE* BASIS AND IS THE FIFTH INCOMPATIBLE $/GW NUMBER NOW CIRCULATING ON THIS WIKI.** It is NOT [[NVDA]] management's *"DC opportunity progressing to $40B/GW"* (Bernstein, same day), NOT Hock Tan's ~$30bn ARR/GW, NOT Jefferies' $11.5→$15bn/GW of [[AVGO]] CONTENT per GW, and NOT the $40bn/GW in the Wells Fargo META arithmetic. **NEVER NET OR CHAIN THEM.**
+- **(b) THE ~700 MW CLAIM IS THE LOAD-BEARING ONE AND IT IS THE MOST CONTESTABLE.** It is derived from **OPEN-WEIGHT** models (Kimi K3, GLM-5.3, DeepSeek V4), not from the frontier closed models the buildout is actually sized for, and *"tuned to real world usage"* is doing unspecified work. If inference genuinely needs an order of magnitude less capacity than the market assumes, most of this note follows; if the open-weight proxy understates frontier inference cost, none of it does. **This is the single number to attack or defend.**
+- **(c) THE ④ ROUND-TRIPPING ARITHMETIC IS AN INFERENCE, NOT AN IDENTITY.** The 35% margin is Redburn's assumption; a multi-year contract's gross profit and a point-in-time equity stake are not commensurable without a term structure. The 70%-of-incremental-backlog figure IS testable against the next round of 10-Q RPO disclosures.
+- **(d) THE "ECONOMIC FCF" ADJUSTMENT IN ① IS A NON-GAAP CONSTRUCT OF REDBURN'S OWN DESIGN** — deducting the change in implied capital from leases that have not commenced. It is a defensible way to see through operating-lease treatment, and it is not a reported number.
+
+- ⚠️ **PROVENANCE ON THE TWO PRICE TARGETS: the $84 (NBIS) and $54 (CRWV) figures reach this wiki via **@wallstengine**, a corpus relay, NOT via the Redburn document itself — the spec-sales summaries on disk give percentages (−60% / −40%) but not the dollar targets. The percentages and the dollar targets are mutually consistent at plausible spot prices, but VERIFY THE PTs AGAINST THE PRIMARY BEFORE QUOTING THEM.** UBS's competitor-ratings screen independently confirms the direction: *"NBIS & [[CRWD]] initiated Sell at Redburn"* (UBS TECH · Ruple, 2026-09-21), as does BofA's (*"INITIATION: APDL, CORZ, CRWV (Rothschild at Hold), NBIS (Rothschild at Sell)"* — ⚠️ **BofA's screen mis-states CRWV as "Hold"; the Redburn primary and two other relays say SELL. Take the primary.**)
+- ⚠️ **AND THE PRICE-ACTION CAVEAT THIS PAGE ALREADY OWNS: NBIS on 09-17 gapped **+4.12%** against the prior close and then fell **−5.23% from the open to the last mark** — attention front-running a gap is not the same as a good entry after it (Capstone in-house sentiment tracker, 2026-09-21).**
+
 **Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
 > **🔴 WINDOW CLOSED 2026-08-12 (pre-open).** Q2'26 printed; the table and log below are the **closed Q1'26 run-up window**, retained in place for the audit trail. **New rows are added at the top of the Full log tagged `[Q3'26 window]`.** The Q1'26 Sinal rows are retained; a Q2'26 scoring block is added above them.
@@ -404,6 +437,8 @@ _Source: NBIS earnings calls (dates above); management commentary, paraphrased._
 - **Outlook:** attempted `outlook.py --no-body --days 7` — no output returned this session; unavailable.
 
 ## Changelog
+- **2026-09-21 (/wiki-ingest, 21h window) — 2 sources: Rothschild & Co Redburn (*"Capital Carousel"* INITIATION — SELL, highest conviction in the compute layer) and @wallstengine's corpus relay, cross-checked against UBS and BofA ratings screens.** ⚠️ **NOTHING SUPERSEDED — no rating, price target, estimate or guide on this page was replaced.** 🔴 **All material this run is NET-NEW to this page and each block says so in place; the run's dedup exclusions and the five documents deliberately NOT re-ingested are recorded in `_meta/changelog.md`.** Added 1 dated `## Intra-quarter` block, this record. ⚠️ **Run-level guards carried on this page: see `_meta/changelog.md` for the full list — the FIFTH incompatible $/GW basis (Redburn's $45bn/GW compute price), the ~20% inference-monitoring overhead as a THIRD relay of one lab's August estimate, and four items arriving only as AI-generated podcast briefs.** Post-run audits on this page's added lines: **0 EOL-class flips, 0 table-column anomalies, unbalanced bold found and repaired.**
+
 
 **2026-09-18 (Nscale S-1 ingest — 1 primary document: Nscale Limited S-1, EDGAR 2026-09-18). 1 row in `## Intra-quarter`, this record. NOTHING SUPERSEDED — no NBIS rating, PT, guide, ACV/MW mark or house number moved. NET-NEW: the ACV/MW ladder gets a filed wholesale rung (~$11-16M/MW for hyperscaler/lab 5-6 yr take-or-pay) that reconciles with Nebius's own $12M/MW 2026 base; the 22V $16M/MW floor is confirmed by the filing at $44.6bn / 460 MW IT; Nscale's Anthropic tranche is unfinanced. Page: [[NSCALE]].**
 **2026-09-17 (/wiki-ingest) — 2 independent sources on ONE datapoint (JPM TECH SKETCH · Mark Schilsky, specialist SALES not research; and @aleabitoreddit). 1 block in `## Current state`, 1 row in `## Intra-quarter`, this record. NOTHING SUPERSEDED — no rating, PT or estimate on this page was replaced; neither source carries one.**

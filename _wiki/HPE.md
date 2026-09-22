@@ -5,7 +5,7 @@
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\HPE` (filings + transcripts) · `_equity_calls` · `_briefings\by-ticker\HPE.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-18 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-21 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -250,6 +250,16 @@ Blowout print; stock +25–37% on the day (briefing, 2026-06-02). Revenue **$10.
 ## Intra-quarter — calls, commentary & reports (since the last print)
 _Q3 FY26 window · opens 2026-09-02 (F3Q26 print) · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
 
+**🆕🔴🔴 2026-09-21 (/wiki-ingest 21h) — MORGAN STANLEY EXPLICITLY **PREFERS HPE TO [[DELL]] DESPITE WEAKER EXECUTION**, ON THE GROUNDS THAT THE EARNINGS HANDOFF AFTER THE SERVER CYCLE IS BETTER — AND NAMES THE **SEP-30 NETWORKING INVESTOR DAY** AS THE PROOF POINT.**
+
+(Morgan Stanley · **Erik W Woodring** (w/ Dylan Liu, Maya C Neuman, Rauf Ural), *"IT Hardware: Monthly Data Tracker"*, **2026-09-20 23:57**, 70pp, industry view **In-Line**; and *"Enterprise hardware: growth vs duration"* relayed by MS TMT sales · Tom Wigg, **2026-09-21** — ⚠️ **the desk relay is sales commentary, not research.**)
+
+- 🔴🔴🔴 **THE CALL, VERBATIM: *"**HPE is preferred to DELL despite weaker execution** because MS sees **a better earnings handoff after the server cycle — from servers into higher-margin Networking, particularly Aruba + Juniper.** The **Sep. 30 Networking Investor Day** is important for demonstrating that **this becomes an actual GROWTH DRIVER rather than a FUTURE PROMISE.**"*** ➤ **MS is making a duration argument, not a growth argument, and it has dated its own falsification test nine days out. That is the cleanest near-term catalyst on this page.**
+- Preference order stated: *"**SNX & P are the most-preferred OWs, followed by HPE**"*; **[[STX]] remains the broader hardware Top Pick**; **HPQ is *"the clearest negative setup"*** (normalised Personal Systems operating margin only **~4.3%**, ~330bps below Dell; PC unit trends worse than peers; MS models **FY27 revenue −2% y/y and EPS −16% y/y** at ~11x Street FY27 EPS versus a historical ~7x during periods of declining revenue/profitability; **PT $19**).
+- THE SECTOR BACKDROP: traditional server revenue **+87% y/y**, storage **+34% y/y** (from +23%), PCs **+14% y/y** — all near 10+ year highs ex-COVID — *"yet the group has **de-rated ~1x P/E on average post-earnings despite ~12% upward revisions** to next-fiscal-year EPS, showing that **'beat and raise' is now table stakes.**"* ➤ **The same "upside is the baseline" pathology UBS documented in semis the same day. It is the reason a duration argument beats a growth argument in this group right now.**
+- ⚠️ AND THE HEADWIND UNDER THE HANDOFF: MS's own tracker has **August notebook ODM builds −35% y/y (worst in 40+ months)** and **CY26 PC shipments −~15% y/y — the worst ex-COVID year in PC history**, with CY27 likely down again; HPQ's 8-K independently guides industry PC units **down mid-single-digits in CY27**. **HPE's PC exposure is limited, which is precisely why the Networking handoff is the right thing to underwrite — but it also means the server comp gets harder into a decelerating hardware tape.**
+- 📅 DATED: **HPE Networking Investor Day, 2026-09-30.**
+
 **Signal vs management** — what management said on the last call (Q3 FY26, 2026-09-02) × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
 | Theme | Management said (Q3 FY26, 2026-09-02) | Intra-quarter flow | Signal |
@@ -310,6 +320,8 @@ _Source: HPE earnings calls (dates above); management commentary, paraphrased._
 - **Outlook:** attempted via `outlook.py --no-body --days 14` on 2026-06-20 — no MAPI session available in this environment (returned no data); sell-side desk notes sourced from the archived briefings corpus instead.
 
 ## Changelog
+- **2026-09-21 (/wiki-ingest, 21h window) — 1 source: Morgan Stanley (Erik W Woodring, enterprise-hardware note relayed by MS TMT sales · Tom Wigg — ⚠️ relay not research).** ⚠️ **NOTHING SUPERSEDED — no rating, price target, estimate or guide on this page was replaced.** 🔴 **All material this run is NET-NEW to this page and each block says so in place; the run's dedup exclusions and the five documents deliberately NOT re-ingested are recorded in `_meta/changelog.md`.** Added 1 dated `## Intra-quarter` block, this record. ⚠️ **Run-level guards carried on this page: see `_meta/changelog.md` for the full list — the FIFTH incompatible $/GW basis (Redburn's $45bn/GW compute price), the ~20% inference-monitoring overhead as a THIRD relay of one lab's August estimate, and four items arriving only as AI-generated podcast briefs.** Post-run audits on this page's added lines: **0 EOL-class flips, 0 table-column anomalies, unbalanced bold found and repaired.**
+
 
 - **🔴 2026-09-03 (/wiki-ingest, scheduled — 5 sources: JPM · Joseph Cardoso F3Q26 review, GS · Katherine Murphy/Michael Ng review, BofA · Wamsi Mohan PO change, MS · Erik Woodring PT change, BofA TMT desk). Added: 1 `## Current state` block.**
   ✅🔴 **CONFLICT RESOLVED, AND THE PAGE'S ADOPTED NUMBER WAS RIGHT — the FY27 revenue-growth PRIOR.** The 09-02 run logged a three-way disagreement (**JPM 12-16% vs GS 8-12% vs Barclays/TMTB implied ~10%**) and adopted **8-12%**, warning that *"JPM's version would make a 5-point raise look like a rounding change."* **JPM's own F3Q26 review now states: *"reported revenue growth of +13%-17% (from +8%-12% prior)."*** ➤ **JPM's earlier "12-16%" was the prior OPERATING-PROFIT growth guide, not revenue — the same note carries "(12-16% prior)" against the new 14-18% operating-profit range. A line-item mix-up, not a house disagreement. The conflict is RETIRED and the raise is a genuine 5 points.**

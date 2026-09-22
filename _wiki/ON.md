@@ -5,7 +5,7 @@
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\ON` (10-K/10-Q filings + transcripts) · equity calls `E:\equity_calls_transcripts` · briefings `E:\briefings\2026`. Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-18 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-21 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -174,6 +174,20 @@ UBS models the cyclical recovery as gradual rather than V-shaped: FY25 revenue *
 ## Intra-quarter — calls, commentary & reports (since the last print)
 _**Q2 FY26 window · opened 2026-08-03** (print AMC 08-03). The Q1 FY26 window is closed and archived below. Timeline visual: [timeline.html](timeline.html)._
 
+🆕🔴🔴 2026-09-21 (/wiki-ingest 21h) — A **THIRD** HOUSE CALLS THE ANALYST-DAY SELLOFF OVERDONE, AND BARCLAYS IS THE FIRST TO SAY WHY IN ESTIMATE TERMS: **ON NOW CARRIES THE LOWEST BAR IN THE ANALOG GROUP — +8% / +6% CY27 AUTO / INDUSTRIAL VERSUS A PEER-GROUP BLENDED +13% / +13%.**
+
+(Barclays · **Tom O'Malley** (w/ Kyle Bleustein, Matthew Pan, Trip Smith, Will Rosenblum), *"ON NDR: Soft Reset Before Powering Back On"*, **2026-09-21 02:54 GMT**, 3-minute read, off meetings with ON in **Boston at the end of the prior week**. **EQUAL WEIGHT, PT $100.00**, price **$69.98 (18-Sep-26)**, **+42.9% potential upside**. ⚠️ **NO RATING OR PT CHANGE — both stand; nothing on this page is superseded.**)
+
+- 🔴🔴 **THE HEADLINE JUDGEMENT: *"Analyst day pullback **OVERDONE** in our view as **DC targets will prove CONSERVATIVE** and **China EV could prove a tailwind to Auto in the NTM.**"*** ➤ **This is the THIRD voice on the 09-16 Analyst Day and the second to say overdone: GS said overdone, UBS did not, Barclays now does — and unlike GS it attaches a mechanism rather than a sentiment read.**
+- 🔴🔴🔴 **THE TWO SPECIFIC CLAIMS:**
+  - **① *"the DC LT CAGR is a **STARTING POINT NOT A DESTINATION** (implied **30% CAGR beyond 2027 likely beaten easily**)"*.** ➤ **This is the direct counter to the Analyst-Day complaint this page logged on 09-17 — that the ~$47bn 2030 AI-DC TAM was reiterated while its CAGR was re-cut from ON's own 72% to a Street-derived 40%. Barclays is saying the re-cut was sandbagging, and gives the post-2027 implied number (30%) that the framework produces.**
+  - **② *"**EPP is under-appreciated as a market advantage in the DC today** and ultimately across Auto/Industrial."***
+- 🔴🔴🔴 **THE BAR, AND IT IS THE MOST USEFUL NUMBER IN THE NOTE: *"When looking at Street estimates **ON has the LOWEST BAR IN THE ANALOG GROUP at +8%/+6% for CY27 Auto/Industrial respectively vs. peer group blended +13%/+13%.**"*** ➤ **A ~5pp expectations discount against the peer group on both end markets. That is a falsifiable, comparable statement — and it reframes the −9% Analyst-Day reaction as the market marking the EXPECTATIONS rather than the business.**
+- AND TWO FORWARD ITEMS: *"We also view **non-domestic China EV sales as a potential driver of above-model growth in the NTM** as the **content tradeoff is a positive** and we see **NO SHARE SHIFT IN CHINA today**"*; and *"commentary also suggests **mgmt isn't done with bolt-on M&A**."*
+- ✅ CORROBORATION FROM THE ANALOG COMPLEX, SAME DAY — THE INVENTORY CYCLE IS DONE AT A PEER: [[NXPI]] told Bernstein's bus tour that *"**auto inventory normalization appears LARGELY COMPLETE, with channel inventory returning to ~11 weeks — the FIRST TIME it has returned to PRE-COVID LEVELS**"*, with the long-term auto growth algorithm intact at **8-12%** and industrial *"tracking **a year ahead** of internal expectations given backlog visibility and growing demand for higher-performance edge processing."* (Bernstein · Stacy Rasgon via spec sales · Tyler Seidman, 2026-09-21 — ⚠️ **not research**.) ➤ **If channel inventory is back to pre-COVID at one analog peer, the +8%/+6% CY27 bar Barclays identifies at ON is being set against a NORMALISED base rather than a de-stocking one. That strengthens the "lowest bar" argument materially.**
+- ✅ AND A COST HEADWIND TO PRICE IN ON THE OTHER SIDE: mature-node foundries are raising prices — **Powerchip +40%, UMC "substantial"** — as [[TSM]] phases out legacy fabs (Commercial Times, via Jefferies/Redburn, 2026-09-21). ⚠️ **ON is substantially internally fabbed, so this is primarily a COMPETITOR cost event and a pricing umbrella, not an ON cost event — but it should be checked against ON's external-foundry mix before being read as a positive.**
+- 📅 **Jefferies hosts an **ON NDR (CEO, CFO, IR) in Los Angeles on 2026-09-22** with Blayne Curtis — i.e. the day after this note.**
+
 **Signal vs management** — what management said on the Q2 FY26 print × what the flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
 | Theme | Management said (Q2'26, 08-03) | Intra-quarter flow | Signal |
@@ -278,6 +292,8 @@ _Q1 FY26 print + intra-quarter · May 04 → Aug 02, 2026 · sell-side / expert 
 _Source: ON earnings calls (dates above); management commentary, paraphrased._
 
 ## Changelog
+- **2026-09-21 (/wiki-ingest, 21h window) — 2 sources: Barclays (Tom O'Malley et al., *"ON NDR: Soft Reset Before Powering Back On"*, EQUAL WEIGHT / PT $100, price $69.98) and Bernstein's bus-tour read on [[NXPI]] as corroboration.** ⚠️ **NOTHING SUPERSEDED — no rating, price target, estimate or guide on this page was replaced.** 🔴 **All material this run is NET-NEW to this page and each block says so in place; the run's dedup exclusions and the five documents deliberately NOT re-ingested are recorded in `_meta/changelog.md`.** Added 1 dated `## Intra-quarter` block, this record. ⚠️ **Run-level guards carried on this page: see `_meta/changelog.md` for the full list — the FIFTH incompatible $/GW basis (Redburn's $45bn/GW compute price), the ~20% inference-monitoring overhead as a THIRD relay of one lab's August estimate, and four items arriving only as AI-generated podcast briefs.** Post-run audits on this page's added lines: **0 EOL-class flips, 0 table-column anomalies, unbalanced bold found and repaired.**
+
 **2026-09-17 (/wiki-ingest) — 4 sources on ONE event: the 2026-09-16 Financial Analyst Day (company primary, read via UBS/Arcuri, Barclays/O'Malley, GS/Schneider and the MS desk). 1 block in `## Current state`, 4 rows in `## Intra-quarter`, 1 catalyst resolved, this record.**
 🔴 **SUPERSEDED, moved here per the thesis-drift rule — the LONG-TERM TARGET MODEL, which this page had carried unchanged since the Q4 FY25 call (2026-02-09) and repeated at both the Q1 and Q2 FY26 prints as *"53% GM / 40% op margin / 25–30% FCF margin"*:**
 - **Revenue CAGR 2026-30: +10–12% → NOW +12–14%** (raised).

@@ -1,5 +1,41 @@
 # Theme — AI Data-Center Power & Nuclear
 
+## 🆕🔴🔴🔴 2026-09-21 (/wiki-ingest 21h) — **THE US POWER SHORTFALL IS RE-CUT UPWARD BY HALF, AND THE INPUT THAT MOVED IS NOT DEMAND — IT IS [[NVDA]]'S RACK DENSITY. PLUS THE FIRST QUANTIFIED REBUTTAL OF THE "LOCAL BACKLASH SLOWS THE BUILD-OUT" NARRATIVE.**
+
+**① MORGAN STANLEY'S POWER-SHORTFALL UPDATE — AND THE DRIVER IS A RE-SPEC, NOT A RE-FORECAST.** (Morgan Stanley · **Stephen Byrd** / **Dave Arcaro**, *"Power Shortfall Update"*, **2026-09-21**; relayed same-day by MS TMT sales · Tom Wigg — ⚠️ **the relay is sales commentary, not research.**)
+
+| MS US data-center power model | Previous | **2026-09-21** | Δ |
+|---|--:|--:|--:|
+| Incremental US DC power demand **2026-28** | 68 GW | **97 GW** | **+43%** |
+| **Gross** shortfall through 2028 | 38 GW | **57 GW** | **+50%** |
+| **Net** shortfall after time-to-power remedies (onsite gen, nuclear, alternatives) | — | **33 GW** = **34% of required US DC power** | — |
+| Incremental demand **2029 alone** | — | **68 GW** (+40% vs 2028) | — |
+| Cumulative **2026-29** | — | **165 GW** demand → **107 GW gross** / **72-82 GW net** shortfall = **44-49% of demand** | — |
+| **NVDA Vera Rubin rack** | 149 kW | **234 kW** | **+57%** |
+| **NVDA Rubin Ultra rack** | 415 kW | **600 kW** | **+45%** |
+
+- 🔴🔴🔴 **MS states the mechanism explicitly: *"the biggest model change is RACK-LEVEL ARCHITECTURE"* — the transition from 8-GPU servers to NVL72-style racks *"materially raises memory, networking, cooling and power-delivery requirements."*** ➤ **So the 2028 gap widened by 19 GW because the accelerator roadmap got denser, NOT because anyone raised a unit or capex forecast. This page should treat NVIDIA's rack cadence as a first-order input to the US power balance from here.**
+- 🔴 **THE OFFSET IN THE SAME NOTE, AND IT IS A JEVONS ARGUMENT, NOT A HEDGE: MS models a **94% reduction in all-in cost/TFLOP from Hopper to Rubin Ultra**, and argues that substantially cheaper compute stimulates more adoption, agentic workloads, tokens and model calls — so aggregate electricity consumption RISES despite much higher efficiency per token.** ⚠️ **Basis guard: 94% is cost-per-TFLOP across two generations. It is not a price, not a $/W, and not comparable with any $/GW mark on this wiki.**
+- ⚠️⚠️ **THE 234 kW AND 600 kW FIGURES ARE MS MODEL ASSUMPTIONS, NOT NVIDIA DISCLOSURES. Falsifiable at the Vera Rubin launch spec or the next architecture briefing.** MS OW beneficiaries off the note: [[SPCX]], CIFR, HUT, RIOT, WULF, GLXY, EQIX, [[BE]], SEI, [[VST]], [[GEV]], INIO, WMB, LBRT, EROC, CMI.
+
+**② THE FIRST QUANTIFIED REBUTTAL OF THE MORATORIUM NARRATIVE — AND IT IS LARGELY A REBUTTAL.** SemiAnalysis's data-center/energy/industrials team (**Maya Barkin**, **Reyk Knühtsen**) mapped **400-plus moratorium instruments across 17 states** against a **3,500-project pipeline**:
+
+| SemiAnalysis moratorium mapping | Finding |
+|---|---|
+| Moratorium instruments mapped | **400+ across 17 states** |
+| Project pipeline mapped against | **3,500 projects** |
+| Campuses inside restricted jurisdictions | **77** |
+| Campuses **actually delayed** by a local moratorium | **3** |
+| Share of bans covering **zero capacity** | **~80%** |
+| The one that bites | **New York's statewide freeze — ~800 MW slowed** |
+
+➤ **The headline count of bans is almost entirely decorative: ~80% cover no capacity at all, and three projects out of 3,500 are actually delayed. Against the "300 local data-center bans" framing, the measured blast radius is ~800 MW in one state.** ⚠️⚠️ **SOURCE QUALITY: this reaches the wiki as an **AI-GENERATED PODCAST BRIEF** (Ethmos research agents, distributed via *TMTB Podcast Intel*, 2026-09-21) summarising the *SemiAnalysis Weekly* episode — a RELAY OF A RELAY. The underlying work is SemiAnalysis's own dataset and the numbers are specific enough to be checkable, but NO PRIMARY IS ON DISK. Verify against the SemiAnalysis piece before quoting the counts.** Also mentioned in the same brief: **[[SPCX]]'s Brownsville de-annexation.**
+⚠️ **Counter-signal the same day, and it runs the other way: Virginia's Governor signed an executive order to SLOW data-center approvals and create an AI task force to evaluate workforce displacement (The Verge, via MS TMT desk, 2026-09-21). Virginia is the largest US data-center market — a statewide instrument there would not be in the "~80% cover zero capacity" bucket. Watch it.**
+
+**③ THE POWER-EQUIPMENT LAYER SAYS THE CONSTRAINT IS MOVING FROM COMPUTE TO POWER.** Jefferies' Asia desk on **Delta Electronics (2308 TT, off-coverage)**: *"demand exceeds supply, particularly in AI server power solutions"*, with growth accelerating sharply in 4Q26 and *"well above seasonal"* into 1Q27 on **NVIDIA Vera Rubin power shelves, HVDC deployments and the release of delayed shipments**; Delta holds **>60% share in AI server power solutions**. 1Q27 modelled at **NT$234.4bn revenue (+2.5% QoQ, above seasonality), GM 36.4%, OpM 18.9%, EPS NT$12.72 (+61% y/y)**; FY27 revenue **+40.6% to NT$1,082bn**. (Jefferies · **Cristina Titu** / Michelle Huang, 2026-09-21 — ⚠️ **market commentary, not research.**) ➤ *"If compute was yesterday's constraint, power may be tomorrow's."* **Read with [[VRT]], [[GEV]], [[ETN]], [[NVT]], [[BE]], [[PWR]], [[AGX]] and `themes/800v-dc-power.md`.**
+
+**④ AND A DEMAND-SIDE EFFICIENCY ARGUMENT ARRIVING FROM THE OPTICS SIDE: *"tokens per watt was a major topic at HotChips as LACK OF DC POWER CAPACITY GROWTH IN THE US IS BECOMING A BIGGER CONSTRAINT FOR THE INDUSTRY, making this transition to optical even more important"*** (Ayar Labs management, Jefferies bus-tour dinner, relayed 2026-09-21). ➤ **The power ceiling is now being cited by suppliers as the REASON for an architectural transition, not merely as a risk to it — the same logic Jefferies' desk lists as one of its five AI drivers: *"an increasing debate amongst Utility and Tech folks on the gap in power in '28."***
+
 ## 🆕🔴🔴🔴 2026-09-21 — **AN OPERATOR WITH 1.5+ GW ALREADY ONLINE SAYS POWER IS *NOT* THE BINDING CONSTRAINT ON ITS OWN BUILDS — "THE ELECTRONS ARE THERE" — AND NAMES CONSTRUCTION, LABOUR AND EQUIPMENT INSTEAD, WITH MEMORY AND STORAGE AS THE THING THE WORLD MIGHT RUN SHORT OF A YEAR FROM NOW. PLUS THE TIME-VALUE ARGUMENT THIS PAGE'S GW ANCHORS HAVE NO ROOM FOR: A MEGAWATT IN THREE YEARS IS "WORTH FUNDAMENTALLY LESS AND FAR LESS SCARCE" THAN A MEGAWATT IN ONE.**
 
 _(Source: **Nick Robbins, Vice President of Corporate Development, CoreWeave** — investor Q&A hosted by **BTG Pactual Global Access** (Zoom websession, written question queue), **2026-09-21** · Capstone notes via Notion AI, archived [`CRWV/transcripts/CRWV_IR-hosted-investor-QA_2026-09-21.md`](../../CRWV/transcripts/CRWV_IR-hosted-investor-QA_2026-09-21.md); full single-name fold on [[CRWV]]. ⚠️ **MANAGEMENT SOURCE AT A BROKER'S ACCESS DESK — BTG is the venue, not the author: no rating, no price target, no estimate, no model.** ⚠️ **Machine transcription of an unlabelled multi-speaker room; proper nouns garble. Name and title confirmed from the Outlook invite.** ✅ **NOTHING ON THIS PAGE IS SUPERSEDED AND NO NEW $/GW OR $/MW BASIS ROW WAS CREATED.**)_

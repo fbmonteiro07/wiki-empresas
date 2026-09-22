@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-19 · **20-F filer (UK foreign private issuer)** — files annual 20-F, no 10-K/10-Q · sources: `E:\Wiki Felipe\ARM` (20-Fs FY24–FY26 + transcripts + equity calls) · `_briefings\2026` roll-up · theme [custom-asic-tpu](themes/custom-asic-tpu.md). Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-18 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-21 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -175,6 +175,8 @@ _(**SoftBank Group IR / finance executive (not named)**, investor group meeting 
 <!-- Consensus estimates (BBG) block auto-injected here by the HTML builder -->
 
 ## Changelog
+- **2026-09-21 (/wiki-ingest, 21h window) — 1 source: Jefferies Asia TMT sales (Rankie Wong and Jacky Chang — ⚠️ SALES COMMENTARY, NOT RESEARCH), plus Fubon (Rita Tung) relayed by the same desk.** ⚠️ **NOTHING SUPERSEDED — no rating, price target, estimate or guide on this page was replaced.** 🔴 **All material this run is NET-NEW to this page and each block says so in place; the run's dedup exclusions and the five documents deliberately NOT re-ingested are recorded in `_meta/changelog.md`.** Added 1 dated `## Intra-quarter` block, this record. ⚠️ **Run-level guards carried on this page: see `_meta/changelog.md` for the full list — the FIFTH incompatible $/GW basis (Redburn's $45bn/GW compute price), the ~20% inference-monitoring overhead as a THIRD relay of one lab's August estimate, and four items arriving only as AI-generated podcast briefs.** Post-run audits on this page's added lines: **0 EOL-class flips, 0 table-column anomalies, unbalanced bold found and repaired.**
+
 
 **2026-09-17 (/wiki-ingest) — 2 sources, both SALES desks (Bernstein Tech · Tyler Seidman relaying David Dai; MS TMT desk · Tom Wigg relaying CEO remarks on CNBC and a podcast). 1 block in `## Current state`, 1 row in `## Intra-quarter`, this record. NOTHING SUPERSEDED — no rating, PT or estimate anywhere in either source, and none recorded.**
 🔴 **NET-NEW, AND THE VALUE IS THE CADENCE RATHER THAN THE NUMBER: CEO Rene Haas reiterated the ~$2BN AGI CPU revenue goal and dated his own rising conviction — confidence "INCREASED SEQUENTIALLY FROM MAY TO JULY AND AGAIN FROM JULY TO SEPTEMBER", and he is "MORE CONFIDENT TODAY THAN AT THE JULY EARNINGS CALL." A company repeating a number is noise; a CEO timestamping three successive upgrades to his own confidence in it is not.**
@@ -282,6 +284,14 @@ _Q4 FY26 print + intra-quarter · May 06 → Jul 28, 2026 · sell-side / expert 
 
 ## Intra-quarter — calls, commentary & reports (since the last print)
 _F1Q27 · Jul 29, 2026 → open · sell-side / expert calls / reports since the 2026-07-29 AMC print. Prior window (Q4 FY26, May 06 → Jul 28) archived under `## Changelog`. Timeline visual: [timeline.html](timeline.html)._
+
+🆕🔴🔴 2026-09-21 (/wiki-ingest 21h) — JEFFERIES ARGUES CONSUMER-AGENT ADOPTION IS A **SERVER-CPU DEMAND EVENT** AND NAMES ARM ALONGSIDE [[AMD]] AND [[INTC]] — THE FIRST TIME ON THIS PAGE THAT MUSE-CLASS AGENT TRACTION IS TRANSLATED INTO A CPU THESIS. ARM **+4.2% PRE-MARKET.**
+
+- 🔴🔴 THE ARGUMENT, VERBATIM: *"All this recent traction with **Muse (and Instinct too)** is looking like it could **drive another leg of growth in agentic AI** — other than memory (DRAM + NAND), **CPU plays probably are worth a look here again… the obvious ones are [[AMD]]/[[INTC]], as well as ARM** (but don't forget [[NVDA]]/[[AMZN]] thru **Vera/Graviton**)."* The mechanism: *"As AI agents gain broader consumer adoption, **demand for SERVER CPUs should benefit from higher INFERENCE, ORCHESTRATION, and INFRASTRUCTURE workloads.**"* (Jefferies Asia TMT sales · **Rankie Wong** and China PCB/CCL analyst **Jacky Chang**, 2026-09-21 — ⚠️ **SALES COMMENTARY, NOT RESEARCH.**)
+- ➤ WHY IT IS WORTH LOGGING DESPITE HAVING NO NUMBERS: the agentic-AI debate on this wiki has been almost entirely about accelerators, memory and optics. This is the first articulation that the ORCHESTRATION layer — the part of an agent that is not a forward pass — runs on general-purpose CPUs. **[[AMZN]] Graviton and [[NVDA]] Vera are both Arm-architecture, so Arm participates on both the merchant and the hyperscaler-custom side of the same trade.** ⚠️⚠️ **NO SIZING, NO ROYALTY RATE, NO TIMING, NO UNIT FORECAST IS OFFERED ANYWHERE IN THIS CHAIN. It is a thesis, not a datapoint — and it is being made by a sales desk to sell Asian PCB and substrate names, not Arm.**
+- ✅ THE SUPPLY-CHAIN CORROBORATION IS THE ONLY EVIDENCE OFFERED, AND IT IS INDIRECT: Jefferies' China PCB/CCL analyst reiterates **Delton (1989 HK)** as *"a direct proxy for SERVER CPU demand globally, with its high exposure to the server (~90% rev exposure in 2026E) market, especially to **server CPU mainboard (~60% rev exposure)**"*; **GCE (2368 TT) and Tripod (3044 TT)** are the two other leading CPU PCB makers in Taiwan; **WUS / Shennan** secured substantial general-purpose-server orders in 1H26; and **ABF substrate manufacturers** benefit directly, with *"continued product iterations involving larger surface areas, higher layer counts, and more sophisticated designs"* squeezing out BT substrates. **Delton +14.3% and Victory Giant +12.9% on the session.** ➤ **If general-purpose server mainboards and ABF substrates are being ordered ahead of an agentic ramp, that is an order-flow signal that precedes any Arm royalty disclosure by several quarters. Track it.**
+- ✅ THE ASIC-STRUCTURE CORROBORATION IS BETTER SOURCED: Fubon's **Rita Tung** reports that *"the ASIC market focus this year has **shifted from accelerator to CPU/LPU**, as CSPs are **initiating a broader range of projects (LPU/NPU that do not require HBM)** and also **REVISING UP THEIR CPU FORECASTS for the following years**"* — with GUC's CPU exposure spanning **[[GOOG]] Axion, AWS Graviton and [[MSFT]] Cobalt** (relayed by Jefferies, 2026-09-21). ➤ **All three of those custom CPU programmes are Arm-architecture. A CSP-level upward revision to CPU forecasts is the single most direct read-through to Arm's royalty base in this batch, and it comes from a design-service vendor's order book rather than from a narrative.**
+- **TAPE: **ARM +4.2% pre-market on ~$71m notional** (Jefferies · Favuzza, 2026-09-21), among the AI-chip names that rallied with [[INTC]] +5.1% and [[AMD]] +2.4%.**
 
 **Signal vs management** — what management said on the last call × what the intra-quarter flow is saying (✓ confirms · ⚠ nuances · ✗ contests):
 
