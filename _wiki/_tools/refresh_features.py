@@ -37,6 +37,10 @@ STEPS = [
 ]
 
 HUB = [
+    ('Specialist sales - all companies', 'attention-sentiment/specialist-sales.html', '106-company coverage ledger, contextual desk views, expectations and reported positioning; source disagreements and dated evidence. Dark, offline dashboard.'),
+    ('Attention & sentiment', 'attention-sentiment/index.html', 'Price versus discussion, a 106-name stock radar, five rising/falling names, source breadth and specialist-sales evidence. Dark dashboards; retained snapshots.'),
+    ('Fear & Greed - extreme entries', 'attention-sentiment/cnn-next-week.html', 'SPY/QQQ performance over the next five trading sessions after new entries into fear or greed zones. Event-focused, with sample sizes and uncertainty.'),
+    ('Narratives & specialist sales', 'attention-sentiment/narrative-diffusion.html', 'META/Muse case study: product aliases, author diffusion and source-timed specialist-sales observations.'),
     ("Estudos · OpenRouter + Vercel", "openrouter.html", "AI model and lab adoption: gateway token share, requests, reported versus estimated spend, and weekly changes. Friday summary at 09:00 Brasília."),
     ("AI gateways — weekly brief", "gateway-weekly.html", "Latest weekly summary covering OpenRouter and Vercel, with dated observations and source-specific methodology."),
     ("Analyst Inbox", "analyst-inbox.html", "Ranked daily ideas, model challenges, narrative shifts, catalysts and read-throughs — each with attribution, action and falsifier."),

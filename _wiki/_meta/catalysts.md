@@ -1,31 +1,25 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-09-21 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-09-22 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (52)
+## 📅 Upcoming (46)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-09-21 | AXTI | **🆕 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — **S&P 600 INDEX ADD**, a dated MECHANICAL flow event.** AXTI is named as one of five S&P SmallCap 600 additions in the Septe |
-| 2026-09-21 | BE | **🆕🔴🔴 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — THE INDEX TIER IS NOW NAMED: BE IS AN **S&P 500** ADD, *AND* A **FTSE ALL-WORLD** ADD. TWO INDEPENDENT INDEX EVENTS IN THE |
-| 2026-09-21 | CEREBRAS | **🆕 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — **ICE SEMICONDUCTOR INDEX (ICESEMI) ADD** in the annual reconstitution. A dated MECHANICAL flow event, not a fundamental one |
-| 2026-09-21 | CIEN | **CALENDAR CONTEXT — TWO CORPORATE-ACCESS WINDOWS IN SIX DAYS: the Calgary tour (09-16) is followed by ECOC 2026 in Spain on 2026-09-21/22, where Morgan Stanley hosts CIEN alongside [[COHR]], [[CSCO]] |
-| 2026-09-21 | CIEN | **ECOC 2026, 2026-09-21/22 (Spain) — THE WITHIN-THE-WEEK RE-TEST.** MS hosts CIEN alongside [[COHR]], [[CSCO]], KEYS and NOK (MS TMT desk, 2026-08-31), and JPM meets **CSO David Rothenstein and CPTO B |
-| 2026-09-21 | CIEN | **🆕 ECOC 2026, 2026-09-21/22 (Spain) — Morgan Stanley hosts COHR, CIEN, [[CSCO]], KEYS and NOK.** First optical-systems corporate-access window after the print. (MS TMT desk, 2026-08-31) |
-| 2026-09-21 | COHR | **🆕 2026-09-21 — PHOTONLINK LAUNCH: establish the PLATFORM, LANE RATE AND MODULATION FORMAT, not just the positioning.** The FQ1 FY27 synthesis lists PhotonLink as a genuinely net-new BULL item (platf |
-| 2026-09-21 | OKTA | **Oktane — week of 2026-09-21, Las Vegas** — *"the AI security event of the year"*, with an analyst/investor Q&A (McKinnon, Q2 FY27). Watch: agent-identity customer counts, any per-agent pricing const |
-| 2026-09-21 | TSEM | **🆕 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — **ICE SEMICONDUCTOR INDEX (ICESEMI) ADD**, a dated MECHANICAL flow event.** TSEM is one of three ICESEMI additions in the an |
 | 2026-09-22 | ADI | **2026-08-19 (7am ET, call 10am) — F3Q26 print.** Bogeys on the page from the JPM buy-side survey (guide/consensus: rev $3.9bn/$3.92bn, OPM 49%/49.2%, EPS $3.30/$3.34; F4Q guides $4.08bn / 49.9% / $3. |
 | 2026-09-22 | CRDO | **2026-09-22 — ECOC, JPM-hosted meeting with CEO Bill Brennan** (alongside [[CIEN]], [[LITE]] and Nokia; JPM · Cardoso / Deshpande, 2026-08-17). **JPM is also running an off-cycle hardware-reporter bu |
 | 2026-09-22 | ESTC | **Metrics webinar — 2026-09-22, 8:00 PT** (Kurtz, Q1 FY27 call): the observability-relaunch pitch (Columnar Mode, Prometheus/PromQL, Deductive AI). Observability is the lagging solution; this is manag |
 | 2026-09-22 | LITE | **2026-09-22 — ECOC (JPM-hosted meetings).** CEO **Michael Hurlston** meeting alongside [[CRDO]] (CEO Bill Brennan), [[CIEN]] and Nokia (JPM · Joe Cardoso / Sandeep Deshpande, 2026-08-17). The natural |
 | 2026-09-22 | ON | **🆕 Tue 2026-09-22, Los Angeles — ON CEO/CFO/IR NDR hosted by Jefferies · Blayne Curtis.** |
+| 2026-09-23 | BKNG | **🆕🔴🔴 2026-09-23 (WEDNESDAY, TWO DAYS OUT) — [[META]] CONNECT, AND THE SPECIFIC THING TO WATCH FOR BKNG IS A ROUTE CHANGE, NOT A PRODUCT ANNOUNCEMENT: DOES HOTEL BOOKING MOVE FROM BROWSER AUTOMATION T |
 | 2026-09-23 | GOOG | **🆕 Koray Kavukcuoglu's first public outing — The Information's AI Agenda Live, San Francisco, 2026-09-23.** Billed topics include integrating frontier models across Search and the multi-billion-user  |
 | 2026-09-23 | META | **🆕 2026-09-23/24 — META CONNECT.** MS flags it as the next scheduled product venue *"for more product updates"*, with **Hatch** expected to launch *"in the coming weeks"* and the next model, **'Water |
 | 2026-09-23 | META | **🆕🔴🔴 2026-09-23/24 — META CONNECT IS NOW A FORMALLY DATED, NAMED-WATCH-LIST CATALYST WITH A HOUSE POSITION ON IT: CITI HAS OPENED AN *UPSIDE* 90-DAY CATALYST WATCH ON META EXPLICITLY AHEAD OF IT.** ( |
 | 2026-09-23 | META | **🆕🔴🔴 META CONNECT — 2026-09-23/24.** Both UBS (exact dates) and MS (*"25 days away"* as of 08-30) name it as the product catalyst the whole re-rating argument depends on. **Watch for: the Watermelon  |
+| 2026-09-23 | META | **🆕🔴🔴🔴 2026-09-23 (WEDNESDAY, TWO DAYS OUT) — META CONNECT, AND A SEVENTH HOUSE HAS NOW PRE-POSITIONED FOR IT WITH A PRICE TARGET RAISED 24.4% ON CUT ESTIMATES.** (Wells Fargo Securities · **Ken Gawre |
 | 2026-09-23 | META | 🆕 **2026-09-23 (Wednesday) — Meta Connect 2026 developer conference, CEO keynote 4pm PT.** Expected: next-gen Ray-Ban smart glasses + a **four-model AI-glasses lineup**, a preview of **"Project Phoeni |
 | 2026-09-23 | OKTA | 🆕 **2026-09-23 (Tuesday) — Oktane 2026, Las Vegas; INVESTOR SESSION 11am-12pm PT.** JPM (Brian Essex, **OW**, px $190.02 on 17-Sep) previews it as *"largely product focused with **no new numbers or mi |
+| 2026-09-23 | UBER | **🆕🔴 2026-09-23 (WEDNESDAY, TWO DAYS OUT) — [[META]] CONNECT, AND THE UBER-SPECIFIC THING TO WATCH IS A ROUTE CHANGE, NOT A PRODUCT LAUNCH: DOES FOOD DELIVERY MOVE FROM BROWSER AUTOMATION TO A CONNECT |
 | 2026-09-24 | NVDA | **🆕🔴 TRUMP-XI MEETING, 2026-09-24 — the dated headline-risk window, and UBS says the newsflow into it is not random.** *"As is usually the case before Trump-Xi meetings, headline risks likely to pick  |
 | 2026-09-24 | SPCX | **🆕 2026-09-24, NYC — MS event: "SPCX How to Play the Space Economy ft Adam Jonas, Sean Diffley, and William Tackett".** (Morgan Stanley TMT desk, 2026-09-15) |
 | 2026-09-24 | TSM | **🆕⚠️ TRUMP-XI, 2026-09-24 — UBS puts SPE and MEMORY as the most exposed verticals, with the ASML/Netherlands MATCH Act immersion-DUV headlines and new BIS measures on Chinese compute access via Thail |
@@ -59,12 +53,23 @@ _Generated 2026-09-21 · parsed from every page's 'Catalysts / what to watch'. D
 | 2028-06-30 | NSCALE | 2028-06-30 — Monarch **2 GW gross / 1.37 GW IT online "by 1H28"** (Anthropic tranches; the wiki's first neocloud milestone tied to on-site gas turbines). |
 | 2031-12-31 | NSCALE | 2031-12-31 — Monarch expansion to ~8 GW gross planned. |
 
-## ⏰ Passed — need a post-mortem (1)
+## ⏰ Passed — need a post-mortem (12)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
+| 2026-09-21 | TSEM | **🆕 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — **ICE SEMICONDUCTOR INDEX (ICESEMI) ADD**, a dated MECHANICAL flow event.** TSEM is one of three ICESEMI additions in the an |
+| 2026-09-21 | OKTA | **Oktane — week of 2026-09-21, Las Vegas** — *"the AI security event of the year"*, with an analyst/investor Q&A (McKinnon, Q2 FY27). Watch: agent-identity customer counts, any per-agent pricing const |
+| 2026-09-21 | NXPI | 🆕🔴 **UPDATED 2026-09-21 — the Kinara funnel is now ~$1.5bn.** Management to Bernstein: *"the recently acquired Kinara platform appears to be gaining traction, with management citing a roughly $1.5 bil |
+| 2026-09-21 | COHR | **🆕 2026-09-21 — PHOTONLINK LAUNCH: establish the PLATFORM, LANE RATE AND MODULATION FORMAT, not just the positioning.** The FQ1 FY27 synthesis lists PhotonLink as a genuinely net-new BULL item (platf |
+| 2026-09-21 | CIEN | **🆕 ECOC 2026, 2026-09-21/22 (Spain) — Morgan Stanley hosts COHR, CIEN, [[CSCO]], KEYS and NOK.** First optical-systems corporate-access window after the print. (MS TMT desk, 2026-08-31) |
+| 2026-09-21 | CIEN | **ECOC 2026, 2026-09-21/22 (Spain) — THE WITHIN-THE-WEEK RE-TEST.** MS hosts CIEN alongside [[COHR]], [[CSCO]], KEYS and NOK (MS TMT desk, 2026-08-31), and JPM meets **CSO David Rothenstein and CPTO B |
+| 2026-09-21 | CIEN | **CALENDAR CONTEXT — TWO CORPORATE-ACCESS WINDOWS IN SIX DAYS: the Calgary tour (09-16) is followed by ECOC 2026 in Spain on 2026-09-21/22, where Morgan Stanley hosts CIEN alongside [[COHR]], [[CSCO]] |
+| 2026-09-21 | CEREBRAS | **🆕 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — **ICE SEMICONDUCTOR INDEX (ICESEMI) ADD** in the annual reconstitution. A dated MECHANICAL flow event, not a fundamental one |
+| 2026-09-21 | BE | **🆕🔴🔴🔴 2026-09-21 — THE SCOREBOARD JUST MOVED, AND IT MOVED THE BULL'S WAY BY THE LARGEST MARGIN IT EVER HAS. THE BULLET ABOVE IS SUPERSEDED; ITS NUMBERS ARE PRESERVED THERE AND IN `## Changelog`.** ( |
+| 2026-09-21 | BE | **🆕🔴🔴 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — THE INDEX TIER IS NOW NAMED: BE IS AN **S&P 500** ADD, *AND* A **FTSE ALL-WORLD** ADD. TWO INDEPENDENT INDEX EVENTS IN THE |
+| 2026-09-21 | AXTI | **🆕 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — **S&P 600 INDEX ADD**, a dated MECHANICAL flow event.** AXTI is named as one of five S&P SmallCap 600 additions in the Septe |
 | 2026-09-08 | CRWV | **🆕🔴 ZERO OF 2028 CAPACITY IS SOLD, DELIBERATELY, AND SOME 2027 REMAINS — SO THE NEXT LARGE CONTRACT ANNOUNCEMENT IS A CLEAN PRICE PRINT:** *"we still have some 2027 capacity left… we haven't sold any |
 
 ## ✅ Resolved (178)

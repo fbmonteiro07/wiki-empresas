@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Muse memory requirement | Exhibit reconstruction</title>
+<style>
+:root{color-scheme:light;--ink:#18303b;--muted:#63757e;--line:#dce4e7;--blue:#3375cc;--blue-pale:#bcd4f2;--orange:#ec713b;--orange-pale:#f6ccb9;--paper:#fff;--wash:#f4f7f8;--amber:#926018;--green:#186246}
+*{box-sizing:border-box}body{margin:0;background:var(--wash);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}main{max-width:1080px;margin:auto;padding:38px 40px 64px;background:var(--paper)}header{border-bottom:1px solid var(--line);padding-bottom:22px}.eyebrow{font-size:11px;letter-spacing:1.5px;font-weight:700;color:var(--muted)}h1{font-size:32px;line-height:1.15;letter-spacing:-1.1px;margin:12px 0}h2{font-size:19px;margin:30px 0 12px}p{margin:9px 0}.subtitle{color:var(--muted);max-width:780px}.status{display:inline-block;color:var(--amber);background:#fff3db;padding:5px 9px;font-size:12px;font-weight:650;margin-top:9px}.source-line{font-size:12px;color:var(--muted)}a{color:#2468a9;text-underline-offset:3px}.legend{display:grid;grid-template-columns:1fr 1fr;gap:7px 18px;margin:22px 0 14px;font-size:12px}.legend span{display:flex;align-items:center;gap:8px}.swatch{width:13px;height:13px;flex:none}.dc{background:var(--blue-pale)}.dl{background:var(--blue)}.nc{background:var(--orange-pale)}.nl{background:var(--orange)}#chart{margin-top:5px}.group{display:grid;grid-template-columns:93px 1fr;gap:10px;align-items:center;margin-bottom:20px}.group-label{text-align:right;padding-right:9px}.group-label strong{font-size:20px}.group-label small{display:block;font-size:12px;color:var(--muted)}.lanes{position:relative;padding-right:65px}.bar-row{height:21px;position:relative;margin:3px 0}.bar-track{width:100%;height:100%;position:relative}.bar{height:17px;position:absolute;top:2px;left:0;min-width:0}.bar-value{position:absolute;left:100%;white-space:nowrap;margin-left:7px;top:-1px;font-size:12px;font-weight:650;color:var(--ink)}.axis{margin-left:103px;margin-right:65px;position:relative;border-top:1px solid var(--line);height:25px}.tick{position:absolute;top:4px;font-size:11px;color:var(--muted);transform:translateX(-50%)}.axis-title{font-size:12px;text-align:center;color:var(--muted);margin-left:103px}.chart-note{font-size:12px;border-left:3px solid var(--line);padding-left:12px;margin:18px 0;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px 22px}.control{display:flex;flex-direction:column;gap:5px}.control label{font-size:12px;font-weight:600}.control input{width:100%;font:600 17px system-ui;padding:8px 9px;border:1px solid #cfdae0;border-radius:3px;background:white;color:var(--ink)}.control small{font-size:11px;color:var(--muted)}.tag{display:inline-block;font-size:10px;font-weight:750;letter-spacing:.5px}.hard{color:var(--green)}.partial{color:#2468a9}.estimate{color:var(--amber)}.control input:focus{outline:2px solid #86afde;outline-offset:1px}table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums}th,td{padding:10px 9px;border-bottom:1px solid var(--line);text-align:right}th{font-size:11px;color:var(--muted);font-weight:650}th:first-child,td:first-child{text-align:left}tbody tr:hover{background:#f5f8fa}.table-wrap{overflow:auto}.work{background:var(--wash);padding:18px 20px;margin:18px 0}.work p{font-size:14px}.work .result{font-weight:700}.adopt{display:flex;align-items:center;gap:16px;margin:12px 0}.adopt input{flex:1;accent-color:var(--blue)}.adopt output{font-size:18px;font-weight:700;min-width:48px}.checks{display:grid;grid-template-columns:1fr 1fr;gap:10px 20px}.check{border-top:1px solid var(--line);padding-top:10px;font-size:13px}.check strong{display:block;font-size:11px;letter-spacing:.4px}.pass{color:var(--green)}.unverified{color:var(--amber)}details{border-top:1px solid var(--line);padding-top:14px;margin-top:24px}summary{cursor:pointer;font-weight:650}details p,details li{font-size:13px}.error{color:#a72022;background:#fff0ee;padding:10px;margin-top:12px}.source-table td{vertical-align:top;text-align:left}.source-table th{text-align:left}.sources{font-size:12px;color:var(--muted)}.nowrap{white-space:nowrap}footer{border-top:1px solid var(--line);margin-top:30px;padding-top:14px;font-size:12px;color:var(--muted)}@media(max-width:640px){main{padding:23px 18px 40px}h1{font-size:27px}.legend{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr;gap:13px}.group{grid-template-columns:69px 1fr;gap:5px}.group-label strong{font-size:18px}.group-label small{font-size:10px}.lanes{padding-right:52px}.axis{margin-left:74px;margin-right:52px}.axis-title{margin-left:74px;font-size:11px}.checks{grid-template-columns:1fr}.work{padding:13px}.bar-value{font-size:11px}.group-label{padding-right:5px}th,td{padding:9px 7px}}
+@media print{body{background:white}main{padding:15px;max-width:none}.grid{grid-template-columns:repeat(3,1fr)}details{display:block}a{color:inherit}.group,.work{break-inside:avoid}}
+</style>
+</head>
+<body><main>
+<header>
+<div class="eyebrow">CAPSTONE RESEARCH · RECONSTRUCTION · 21 SEP 2026</div>
+<h1>How much memory would Muse need?</h1>
+<p class="subtitle">Deployment capacity, expressed as a percentage of one year's assumed global output. Adoption is a scenario share of Meta's Family daily active people.</p>
+<div class="status">PARTIAL VALIDATION · Exhibit reproduced at defaults; industry denominators and usage unverified</div>
+<p class="source-line">Original exhibit author/date pending confirmation. No adoption forecast is implied.</p>
+</header>
+<section aria-label="Reconstructed chart">
+<div class="legend">
+<span><i class="swatch dc"></i><span id="legend-dc">DRAM · full allocation: 8 GB per user</span></span>
+<span><i class="swatch dl"></i><span id="legend-dl">DRAM · lower use: 25% resident, 2 GB each</span></span>
+<span><i class="swatch nc"></i><span id="legend-nc">NAND · full allocation: 100 GB per user</span></span>
+<span><i class="swatch nl"></i><span id="legend-nl">NAND · lower use: 5 GB × 2 total copies</span></span>
+</div>
+<div id="error" class="error" hidden role="alert"></div>
+<div id="results">
+<div id="chart" role="img" aria-label="Four adoption scenarios and their DRAM and NAND capacity requirements"></div>
+<div class="axis" id="axis" aria-hidden="true"></div>
+<div class="axis-title">Capacity ÷ one year's assumed global production (%)</div>
+<p class="chart-note">DRAM and NAND use separate denominators; their percentages cannot be added. “Full allocation” covers these VM assumptions only. Shared inference memory, HBM and host overhead are outside this model.</p>
+</div>
+</section>
+<section>
+<h2>Assumptions</h2>
+<p class="source-line">Green = sourced input · Blue = derived from exhibit · Amber = unverified scenario. Edits are local and update every result.</p>
+<div class="grid" id="inputs">
+<div class="control"><label for="people">Family DAP, billions <span class="tag hard" id="people-tag">HARD</span></label><input id="people" type="number" value="3.6" min="0.001" step="0.01"><small>Meta, 29 Jul 2026; June average. Editing makes this a scenario.</small></div>
+<div class="control"><label for="dram">Annual DRAM output, EB <span class="tag partial" id="dram-tag">DERIVED</span></label><input id="dram" type="number" value="35" min="0.001" step="1"><small id="dram-basis">Chart-implied; year and product scope unknown.</small></div>
+<div class="control"><label for="nand">Annual NAND output, EB <span class="tag partial" id="nand-tag">DERIVED</span></label><input id="nand" type="number" value="1000" min="0.001" step="10"><small id="nand-basis">Chart-implied; year and shipment/production basis unknown.</small></div>
+<div class="control"><label for="awake">Resident VM share, % <span class="tag estimate">ESTIMATE</span></label><input id="awake" type="number" value="25" min="0" max="100" step="5"><small>Exhibit's awake fraction, interpreted as physical RAM residency.</small></div>
+<div class="control"><label for="ram">RAM per resident VM, GB <span class="tag estimate">ESTIMATE</span></label><input id="ram" type="number" value="2" min="0" step="0.5"><small>Exhibit assumption; usage telemetry not verified.</small></div>
+<div class="control"><label for="idle">RAM per remaining VM, GB <span class="tag estimate">ESTIMATE</span></label><input id="idle" type="number" value="0" min="0" step="0.5"><small>Zero is implicit in the exhibit. Sleeping alone need not free RAM.</small></div>
+<div class="control"><label for="files">Primary files per user, GB <span class="tag estimate">ESTIMATE</span></label><input id="files" type="number" value="5" min="0" step="1"><small>Exhibit assumption; assumes all modeled storage is NAND.</small></div>
+<div class="control"><label for="copies">Total storage copies, × <span class="tag estimate">ESTIMATE</span></label><input id="copies" type="number" value="2" min="1" step="0.5"><small>2 = original + one copy. Chart-equivalent, not a Meta disclosure.</small></div>
+<div class="control"><label for="fullRam">Full allocation RAM, GB <span class="tag estimate">ESTIMATE</span></label><input id="fullRam" type="number" value="8" min="0" step="1"><small>Exhibit scenario; 100% of VMs resident.</small></div>
+<div class="control"><label for="fullStorage">Full allocation NAND, GB <span class="tag estimate">ESTIMATE</span></label><input id="fullStorage" type="number" value="100" min="0" step="10"><small>Total physical NAND-equivalent for this upper scenario.</small></div>
+</div>
+</section>
+<section id="worked-section">
+<h2>Follow the arithmetic</h2>
+<div class="adopt"><label for="adoption">Adoption scenario</label><input id="adoption" type="range" min="0" max="100" step="1" value="25"><output for="adoption" id="adoption-value">25%</output></div>
+<div class="work" id="worked" aria-live="polite"></div>
+<div class="table-wrap"><table aria-label="All scenario results"><thead><tr><th>Adoption / users</th><th>DRAM full<br>EB / %</th><th>DRAM lower<br>EB / %</th><th>NAND full<br>EB / %</th><th>NAND lower<br>EB / %</th></tr></thead><tbody id="numbers"></tbody></table></div>
+<h2>Which RAM assumption matters?</h2>
+<p class="source-line" id="sensitivity-label">Illustrative scenarios at the selected adoption. Values are % of one year's DRAM output.</p>
+<div class="table-wrap"><table aria-label="DRAM resident fraction and memory sensitivity"><thead><tr><th>Resident VM share</th><th>1 GB</th><th>2 GB</th><th>4 GB</th><th>8 GB</th></tr></thead><tbody id="sensitivity"></tbody></table></div>
+<p class="source-line">Scenario grid, not an observed range. Higher adoption, RAM or storage requirements raise the corresponding capacity requirement. A 25% smaller output denominator raises the ratio by 33.3%; a 25% larger denominator lowers it by 20%.</p>
+</section>
+<section>
+<h2>What has been checked?</h2>
+<div class="checks">
+<div class="check"><strong id="chart-status" class="pass">PASS · REPRODUCTION</strong><span id="chart-detail">16 of 16 exhibit labels match.</span></div>
+<div class="check"><strong class="unverified">NOT VALIDATED · ANNUAL OUTPUT</strong>Denominators are calibrated to the exhibit. No traceable source/year supplied.</div>
+<div class="check"><strong class="unverified">NOT VALIDATED · DEPLOYED STOCK</strong>No observed Muse physical memory stock or residency data.</div>
+<div class="check"><strong class="unverified">NOT VALIDATED · ANNUAL PURCHASES</strong>No rollout, starting capacity, reuse or replacement schedule.</div>
+<div class="check"><strong id="physical-status" class="pass">PASS · INPUT BOUNDS</strong><span id="physical-detail">Nonnegative capacities, valid resident fraction. Physical architecture remains conditional.</span></div>
+<div class="check"><strong class="unverified">SKEPTIC · PARTIAL</strong>Independent review: arithmetic passes. Usage and denominator evidence remain incomplete.</div>
+</div>
+</section>
+<details open><summary>Calibration, sources and scope</summary>
+<p><span class="tag partial">ANCHOR</span> Supplied exhibit's 50% row: 41.1% DRAM and 18.0% NAND. <strong>14.4 EB ÷ 41.1% = 35.0365 EB</strong>, consistent with rounded 35 EB. <strong>180 EB ÷ 18.0% = 1,000 EB.</strong> At original inputs, the lower NAND bar implies 10 GB/user; 5 GB × 2 total copies is a conditional interpretation.</p>
+<p>These are algebraic calibrations to displayed labels. They do not establish independently observed global output. Output year, HBM inclusion and eligible server-memory supply are not supplied. Decimal conversion: 1 EB = 1 billion GB.</p>
+<ul class="sources">
+<li><a href="https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Second-Quarter-2026-Results/">Meta Q2 2026 results, 29 Jul 2026</a>: 3.60bn Family DAP in June. This is a reference population, not Muse adoption.</li>
+<li><a href="https://research.meta.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse">Tarek Sheasha / Meta, 8 Sep 2026</a>: dedicated VMs, external inference and continuous backup. No quantified RAM, storage capacity, residency, copy count or NAND share in this disclosure.</li>
+<li><a href="../_data/muse-memory-original-2026-09-21.png">User-supplied exhibit</a>, received 21 Sep 2026: scenario inputs and target labels. Original author and date unconfirmed.</li>
+<li><a href="../_meta/muse-memory-replication-2026-09-21.md">Full calculation memo and input ledger</a>, prepared 21 Sep 2026.</li>
+</ul>
+<p><strong>To estimate annual purchases:</strong> closing capacity − opening capacity + retirements − net capacity transfers into the service + change in uninstalled inventory. That requires a deployment schedule and reuse assumptions. Capacity is not consumed again each year, and bytes written are not installed NAND capacity.</p>
+<p>Logical VM isolation does not establish physical resource reservation. Shared model inference, HBM, host overhead, storage tiering, OS/database/log copies and flash overprovisioning need separate treatment. This model does not establish incremental demand beyond existing forecasts or directly forecast supplier revenue.</p>
+</details>
+<footer>At exhibit defaults, all 16 original labels match. Empirical validation: partial. Company/wiki theses have not been changed.</footer>
+</main>
+<script src="../_data/muse-memory-model-2026-09-21.js"></script>
+<script>
+(function(){
+'use strict';
+const $=id=>document.getElementById(id), model=window.MuseMemory;
+const series=['DRAM full allocation','DRAM lower use','NAND full allocation','NAND lower use'],colors=['dc','dl','nc','nl'];
+const fmt=(v,d=2)=>v.toLocaleString('en-US',{maximumFractionDigits:d});
+function values(){return Object.fromEntries(Object.keys(model.defaults).map(k=>[k,$(k).value.trim()===''?NaN:Number($(k).value)]));}
+function update(){
+ const p=values(),errs=model.validate(p),valid=!errs.length;
+ $('error').hidden=valid;$('error').textContent=errs.join(' ');$('results').hidden=!valid;$('worked-section').hidden=!valid;
+ if(!valid){$('chart-status').textContent='UNAVAILABLE · INVALID INPUT';$('chart-status').className='unverified';$('chart-detail').textContent='Fix the input before reading results.';$('physical-status').textContent='FAIL · INPUT BOUNDS';$('physical-status').className='unverified';$('physical-detail').textContent=errs.join(' ');return;}
+ const rows=model.adoptions.map(a=>model.calculate(p,a));
+ const largest=Math.max(...rows.flatMap(r=>r.shares),1),power=10**Math.floor(Math.log10(largest)),step=power/2,maximum=Math.ceil(largest/step)*step;
+ $('chart').innerHTML=rows.map((r,i)=>'<div class="group"><div class="group-label"><strong>'+r.adoption+'%</strong><small>'+fmt(r.users*1000,0)+'m users</small></div><div class="lanes">'+r.shares.map((v,j)=>'<div class="bar-row" aria-label="'+series[j]+': '+fmt(v,3)+' percent, '+fmt(r.stocks[j],3)+' EB"><div class="bar-track"><div class="bar '+colors[j]+'" style="width:'+v/maximum*100+'%"><span class="bar-value">'+v.toFixed(model.targets[i][j].split('.')[1].length)+'%</span></div></div></div>').join('')+'</div></div>').join('');
+ $('axis').innerHTML=[0,.25,.5,.75,1].map(q=>'<span class="tick" style="left:'+q*100+'%">'+fmt(q*maximum,1)+'%</span>').join('');
+ $('legend-dc').textContent='DRAM · full allocation: '+fmt(p.fullRam)+' GB per user';
+ $('legend-dl').textContent='DRAM · lower use: '+fmt(p.awake)+'% resident × '+fmt(p.ram)+' GB; remainder '+fmt(p.idle)+' GB';
+ $('legend-nc').textContent='NAND · full allocation: '+fmt(p.fullStorage)+' GB per user';
+ $('legend-nl').textContent='NAND · lower use: '+fmt(p.files)+' GB × '+fmt(p.copies)+' total copies';
+ $('people-tag').textContent=p.people===3.6?'HARD':'ESTIMATE';$('people-tag').className='tag '+(p.people===3.6?'hard':'estimate');
+ for(const k of ['dram','nand']){const original=p[k]===model.defaults[k];$(k+'-tag').textContent=original?'DERIVED':'ESTIMATE';$(k+'-tag').className='tag '+(original?'partial':'estimate');$(k+'-basis').textContent=original?'Chart-implied; year and product scope unknown.':'Custom scenario denominator; no source or year verified.';}
+ const a=Number($('adoption').value),r=model.calculate(p,a);$('adoption-value').textContent=a+'%';
+ $('worked').innerHTML='<p>'+fmt(p.people)+'bn Family DAP × '+a+'% adoption = <strong>'+fmt(r.users*1000)+'m users</strong>.</p><p>Lower DRAM: '+fmt(r.users*1000)+'m × ['+fmt(p.awake)+'% × '+fmt(p.ram)+' GB + '+fmt(100-p.awake)+'% × '+fmt(p.idle)+' GB] = <strong>'+fmt(r.stocks[1],4)+' EB</strong>.</p><p class="result">'+fmt(r.stocks[1],4)+' EB ÷ '+fmt(p.dram)+' EB of annual output = '+fmt(r.shares[1],3)+'% of one year’s DRAM production.</p><p>Lower NAND: '+fmt(r.users*1000)+'m × '+fmt(p.files)+' GB × '+fmt(p.copies)+' copies = <strong>'+fmt(r.stocks[3],4)+' EB</strong>.</p><p class="result">'+fmt(r.stocks[3],4)+' EB ÷ '+fmt(p.nand)+' EB of annual output = '+fmt(r.shares[3],3)+'% of one year’s NAND production.</p>';
+ $('numbers').innerHTML=rows.map(r=>'<tr><td><strong>'+r.adoption+'%</strong><br>'+fmt(r.users*1000)+'m</td>'+r.shares.map((v,j)=>'<td class="nowrap">'+fmt(r.stocks[j],3)+' EB<br><strong>'+fmt(v,3)+'%</strong></td>').join('')+'</tr>').join('');
+ $('sensitivity-label').textContent='Illustrative scenarios at '+a+'% adoption; '+fmt(p.idle)+' GB RAM per remaining VM. Values are % of one year’s DRAM output.';
+ $('sensitivity').innerHTML=[10,25,50,100].map(awake=>'<tr><td>'+awake+'%</td>'+[1,2,4,8].map(ram=>'<td>'+fmt(model.calculate({...p,awake,ram},a).shares[1],2)+'%</td>').join('')+'</tr>').join('');
+ const matches=model.chartCheck(p);$('chart-status').textContent=(matches===16?'PASS · REPRODUCTION':'CUSTOM SCENARIO · REPRODUCTION');$('chart-status').className=matches===16?'pass':'unverified';$('chart-detail').textContent=matches+' of 16 original labels match. This checks arithmetic, not industry reality.';
+ const above=rows.some(r=>r.shares[1]>r.shares[0]||r.shares[3]>r.shares[2]);$('physical-status').textContent=above?'REVIEW · SCENARIO ORDER':'PASS · INPUT BOUNDS';$('physical-status').className=above?'unverified':'pass';$('physical-detail').textContent=above?'The edited lower-use scenario exceeds a full-allocation scenario. Interpret the labels accordingly.':'Nonnegative capacities, valid resident fraction. Physical architecture remains conditional.';
+}
+document.querySelectorAll('input').forEach(e=>e.addEventListener('input',update));update();
+})();
+</script>
+</body></html>

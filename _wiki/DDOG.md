@@ -5,7 +5,7 @@
 _Wiki · generated 2026-09-04 · sources: `E:\Wiki Felipe empresas\DDOG\transcripts` (7 earnings calls, Q4 2024 2025-02-13 → Q2 2026 2026-08-06) · 16 archived sell-side notes in `relatórios bons/` (Barclays, J.P. Morgan, Goldman Sachs, Rothschild & Co Redburn; 2026-05-01 → 2026-08-11, folded in 2026-09-04) · [themes/ai-data-infra-observability.md](themes/ai-data-infra-observability.md) (corpus sell-side / buy-side material). SEC filings (2× 10-K, 6× 10-Q, 2024-11 → 2026-08) in `DDOG/` and 3 company decks in `DDOG/apresentações/` (added 2026-09-04 — see § Primary-source datapoints); **no `_briefings/by-ticker/DDOG.md` roll-up.** Datadog reports on a calendar fiscal year. Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-18 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-21 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|

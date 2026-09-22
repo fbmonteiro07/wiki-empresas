@@ -3,7 +3,7 @@
 _Wiki · generated 2026-07-02 · sources: 9 broker reports ingested 2026-07-02 (HTML copies in `relatórios bons\`) — no filings/transcripts on disk yet. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-18 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-21 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|

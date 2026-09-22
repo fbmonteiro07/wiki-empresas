@@ -2,6 +2,55 @@
 
 _Wiki · generated 2026-06-19 · cross-company theme · sources: equity calls (`_equity_calls` / `E:\equity_calls_transcripts`), briefing roll-ups (`_briefings/by-ticker`), earnings transcripts, research library (`E:\research_library`). Company pages: [../00_INDEX.md](../00_INDEX.md) · themes index: [00_THEMES.md](00_THEMES.md)._
 
+## 🆕🔴🔴🔴 2026-09-21 (/run-inbox 23h) — **THE PRIMARY BEHIND THIS MORNING'S RELAY IS NOW ON DISK, AND IT CARRIES THE NUMBER THIS PAGE HAS NEVER HAD: A PER-RACK DOLLAR BOM FOR POWER SUPPLY. IT RISES ONLY +32% GB300→VR200 WHILE THE TOTAL RACK BOM RISES +95% AND MEMORY RISES +435%.**
+
+_Source: **Morgan Stanley** · **Stephen C Byrd** / **James E Faucette** (with David Arcaro CFA, Andrew S Percoco, Robert S Kad, Cameron McVeigh CFA, Angel Castillo, Joe Laetsch CFA, Joseph Moore), *"Powering AI: Racking Up the Power Shortfall"*, North America Insight, **2026-09-21**. [Source](../../relat%C3%B3rios%20bons/Morgan_Stanley_AMZN_Powering_AI_Racking_Up_the_Power_Shortfall.html)_ ⚠️ **The filename says AMZN — it is a POWER thematic, not an Amazon note; attribute it by its title.** ➤ **This is the PRIMARY behind the relay block immediately below. The 97 / 57 / 33 GW and 234 kW / 600 kW figures are confirmed verbatim in the primary, so that table stands. Everything in this block is net-new over the relay.**
+
+- 🔴🔴🔴 **THE CENTRAL MECHANISM, IN MS'S OWN COVER LINE: *"Rack-scale architecture drives CHEAPER INTELLIGENCE AND GREATER POWER USAGE than in our prior iteration of the Intelligence Factory model."*** ➤ **That is this page's thesis stated by a house that models both halves. The efficiency gain and the power-demand increase are not competing readings of the same data — MS has them as the SAME finding.** The note's own framing of why: *"Rack power is rising because system designers use efficiency gains to DEPLOY MORE COMPUTING CAPACITY RATHER THAN REDUCE ELECTRICITY CONSUMPTION."* (Morgan Stanley, *"Powering AI: Racking Up the Power Shortfall"*, 2026-09-21)
+
+- 🔴🔴 **THE RACK BILL-OF-MATERIALS, PER RACK, IN DOLLARS — the first hard content split this page has for the power-delivery layer** (MS Exhibit 30, sourced to MS analyst Howard Kao's rack BoM; Morgan Stanley, *"Powering AI: Racking Up the Power Shortfall"*, 2026-09-21):
+
+| Rack BoM line | GB200 | GB300 | VR200 | Δ GB300→VR200 |
+|---|--:|--:|--:|--:|
+| GPU | $2,160,000 | $2,520,000 | $3,960,000 | **+57%** |
+| CPU | $180,000 | $180,000 | $198,000 | +10% |
+| NVLink switch chip | $64,800 | $64,800 | $144,000 | **+122%** |
+| Other networking chips | $162,000 | $261,000 | $576,000 | **+121%** |
+| **Memory** | $232,992 | $373,939 | **$2,001,600** | **+435%** |
+| **Power supply** | $36,000 | $57,600 | **$76,000** | **+32%** |
+| PCB | $34,200 | $35,100 | $116,730 | **+233%** |
+| ABF substrate | $11,160 | $11,160 | $20,340 | +82% |
+| MLCC | $1,710 | $1,530 | $4,320 | **+182%** |
+| Others | $365,271 | $402,412 | $605,278 | +50% |
+| Rack assembly value-add | $25,600 | $22,400 | $28,800 | +29% |
+| **Total** | **$3,329,523** | **$3,994,551** | **$7,803,148** | **+95%** |
+
+  - ➤➤ **THIS IS THE MOST UNCOMFORTABLE NUMBER ON THIS PAGE AND IT SHOULD BE ARGUED WITH, NOT BURIED. Power supply is the SECOND-SLOWEST-GROWING line in the whole rack (+32%, ahead of only CPU at +10% and rack assembly at +29%) at exactly the generation where this page says the power-delivery architecture is being re-designed. On MS's own BoM, power supply falls from ~1.4% of a GB300 rack to ~1.0% of a VR200 rack while memory goes from ~9% to ~26%.** ⚠️ **TWO READINGS AND THE PAGE SHOULD HOLD BOTH: (1) the 800VDC content story is REAL but is NOT in the rack power shelf — it sits UPSTREAM of the rack, in row-level rectification, solid-state transformers and busbar, which this BoM does not cover at all; or (2) MS has simply not re-cut the power-supply line for HVDC and it is a stale assumption carried forward. The note gives no HVDC-specific commentary anywhere in the body, which is itself evidence for (2).** ⚠️ **Either way: do NOT read a +32% power-supply BoM as a refutation of the ~$15k→~$115k per-MW content step this page carries from [[ON]]'s Analyst Day (09-16) — those are different denominators and different scope (per-rack component BoM vs per-MW all-vendor analog content).**
+  - ⚠️ **BASIS GUARD: this is a RACK BoM in dollars of component cost, not a supplier revenue line, not a $/W, and not a TAM. It is also a modelled BoM, not a disclosed one.**
+
+- 🔴 **THE POWER-DENSITY ARGUMENT RESTATED AS A CONSTRAINT SHIFT, VERBATIM — and this is the cleanest one-line statement of why 800VDC exists that this page has from a broker: *"the principal data-center constraint shifts from AVAILABLE FLOOR SPACE to the amount of POWER AND COOLING THAT OPERATORS CAN DELIVER TO EACH RACK."*** Supporting: *"Rack-scale systems concentrate far more electricity and heat into each deployment position, requiring LARGER ELECTRICAL FEEDS, BACKUP-POWER SYSTEMS, AND COOLING LOOPS."* (Morgan Stanley, *"Powering AI: Racking Up the Power Shortfall"*, 2026-09-21)
+
+- 🔴 **AND THE EFFICIENCY PARADOX STATED SO IT CANNOT BE MIS-QUOTED: *"Higher absolute power does not imply weaker efficiency… A 600 kW system can consume substantially more electricity than a 200 kW system while delivering SEVERAL TIMES MORE usable compute, throughput, or tokens per megawatt."*** MS sizes the re-spec across the whole forward roadmap, not just Vera Rubin: **power demanded by sold chips rises 41-48% across Rubin, Rubin Ultra AND Feynman versus the prior model**, and MS is explicit that *"the increase in our power forecast reflects an ARCHITECTURAL CHANGE in how chip purchasers construct data centers, NOT SIMPLY A NEW CHIP GENERATION."* (Morgan Stanley, *"Powering AI: Racking Up the Power Shortfall"*, 2026-09-21)
+
+- 🔴 **THE COOLING LINE MOVES THE OPPOSITE WAY TO THE NARRATIVE, AND THAT IS WORTH RECORDING.** MS scaled its liquid-cooling cost assumption **up by 30%** and calls liquid cooling *"an ENABLING INVESTMENT, not simply an additional cost"* — yet on its own cost-share table, **cooling FALLS as a share of total data-center cost from 2.9% (Hopper) and 2.8% (Blackwell) to 1.6% (Vera Rubin) and 1.6% (Rubin Ultra)**, because the denominator (a 100MW facility at $4.73bn for Vera Rubin, $5.24bn for Rubin Ultra) grows faster. Full component shares of total DC cost (MS Exhibit 33, Morgan Stanley, *"Powering AI: Racking Up the Power Shortfall"*, 2026-09-21):
+
+| Component as % of total DC cost | Hopper | Blackwell | Vera Rubin | Rubin Ultra |
+|---|--:|--:|--:|--:|
+| Racks | 49.4% | 50.0% | **57.1%** | **58.9%** |
+| GPUs | 35.3% | 35.7% | 30.5% | 30.4% |
+| GPUs as % of rack | 71% | 71% | **53%** | **52%** |
+| Cooling | 2.9% | 2.8% | **1.6%** | **1.6%** |
+| **Powered shell** | 33.2% | 32.7% | **27.5%** | **24.8%** |
+| Networking | 4.2% | 3.9% | 4.9% | **6.1%** |
+| Memory | 5.0% | 7.1% | **14.1%** | **16.0%** |
+
+  - ⚠️ **MS's own note on this table: *"this number is not intended to sum 100%, as there is DOUBLE COUNTING with GPU and Rack % for illustrative purposes."* Do not treat these as a partition.**
+  - ➤ **THE POWERED-SHELL SHARE FALLING FROM 33.2% TO 24.8% IS THE LINE THIS PAGE SHOULD WATCH.** The electrical build — the thing 800VDC re-architects — is a SHRINKING share of an expanding total, because IT content is inflating faster. ⚠️ **That is a share statement, not a dollar statement: 24.8% of a $5.24bn Rubin Ultra 100MW facility is ~$1.30bn versus 33.2% of a $3.47bn Hopper facility at ~$1.15bn — the dollars still rise. Anyone quoting "powered-shell share is collapsing" as a bear case on electrical vendors is reading the wrong column.**
+
+- 🔭 **PUE, MODELLED, FOR ANYONE SIZING FACILITY OVERHEAD OFF THIS PAGE: 1.50 (2021-23) → 1.33 (2024) → 1.30 (2025) → 1.27 (2026) → 1.26 (2027) → 1.24 (2028) → 1.23 (2029).** (Morgan Stanley, *"Powering AI: Racking Up the Power Shortfall"*, 2026-09-21)
+
+- ⚠️⚠️ **A CORRECTION THAT APPLIES TO THE RELAY TABLE IN THE BLOCK BELOW AND DOES NOT APPEAR IN THE RELAY AT ALL.** The primary discloses that the shortfall revision is **not purely** the rack re-spec: *"it is important to acknowledge that part of the Net Shortfall increase was the ELIMINATION OF A DOUBLE-COUNTING OF PSP SITES, ARTIFICIALLY REDUCING THE SHORTFALL BY ~15GW IN THE PREVIOUS MODEL."* ➤ **So a material slice of the "+50% gross shortfall" step-up is a MODEL-ERROR FIX, not a new physical constraint. The rack-density argument this page is built on survives — MS still attributes the demand increase to rack architecture — but the SHORTFALL delta is part re-spec, part correction, and the relay conveyed it as if it were all re-spec.** (Morgan Stanley, *"Powering AI: Racking Up the Power Shortfall"*, 2026-09-21)
+
 ## 🆕🔴🔴🔴 2026-09-21 (/wiki-ingest 21h) — **THE RACK-DENSITY ASSUMPTION THAT DRIVES EVERY 800VDC ARGUMENT JUST MOVED: MORGAN STANLEY NOW MODELS [[NVDA]] VERA RUBIN AT 234 kW (FROM 149) AND RUBIN ULTRA AT 600 kW (FROM 415) — AND THE POWER-SHELF SUPPLIER SAYS DEMAND ALREADY EXCEEDS SUPPLY.**
 
 (Morgan Stanley · **Stephen Byrd** / **Dave Arcaro**, *"Power Shortfall Update"*, **2026-09-21**; relayed by MS TMT sales · Tom Wigg — ⚠️ **the relay is sales commentary, not research.**)

@@ -1,5 +1,91 @@
 # Theme — AI Data-Center Power & Nuclear
 
+## 🆕🔴🔴🔴 2026-09-21 (/run-inbox 23h) — **THE PRIMARY OF THIS MORNING'S SHORTFALL RELAY IS NOW ON DISK. THE HEADLINE NUMBERS SURVIVE INTACT — BUT THE PRIMARY DISCLOSES THAT ~15 GW OF THE REVISION IS A DOUBLE-COUNT FIX, NOT A NEW CONSTRAINT, AND IT CARRIES THE FULL SHORTFALL BRIDGE, THE PROBABILITY WEIGHTS AND THE TIME-TO-POWER ECONOMICS THE RELAY NEVER HAD.**
+
+_Source: **Morgan Stanley** · **Stephen C Byrd** / **James E Faucette**, with David Arcaro CFA, Andrew S Percoco, Robert S Kad, Cameron McVeigh CFA, Angel Castillo, Joe Laetsch CFA, Joseph Moore (and Brian Nowak CFA, Adam Jonas CFA, Mayank Maheshwari, Mason Wayne, William Tackett CFA), *"Powering AI: Racking Up the Power Shortfall"*, North America Insight, **2026-09-21**. [Source](../../relat%C3%B3rios%20bons/Morgan_Stanley_AMZN_Powering_AI_Racking_Up_the_Power_Shortfall.html)_ ⚠️ **The filename carries AMZN. It is a POWER thematic, not an Amazon note — attribute it by its title.** ➤ **THE RELAY BLOCK IMMEDIATELY BELOW IS CONFIRMED: 97 GW / 57 GW / 33 GW / 34% and the 234 kW & 600 kW rack assumptions all appear verbatim in the primary. The relay stands as provenance; everything in this block is net-new over it.**
+
+- 🔴🔴🔴 **THE ONE THING THE RELAY GOT STRUCTURALLY WRONG, AND IT IS A REAL CORRECTION TO THE "+50% SHORTFALL" HEADLINE.** The primary discloses, in its own words: *"it is important to acknowledge that part of the Net Shortfall increase was the **ELIMINATION OF A DOUBLE-COUNTING OF PSP SITES, ARTIFICIALLY REDUCING THE SHORTFALL BY ~15GW IN THE PREVIOUS MODEL.**"* ➤ **So the step from a 38 GW to a 57 GW gross shortfall is part rack re-spec and part MODEL-ERROR FIX. The demand side genuinely moved (68 GW → 97 GW, and MS attributes that to rack architecture), but anyone quoting "MS raised its shortfall 50% because racks got denser" is over-attributing. The correction is not in the relay at all.** (Morgan Stanley, *"Powering AI: Racking Up the Power Shortfall"*, 2026-09-21)
+
+- 🔴🔴 **THE FULL SHORTFALL BRIDGE WITH PROBABILITY WEIGHTS AND A RANGE — this is the note's load-bearing exhibit and the relay carried only the midpoint** (MS Exhibit 5; Morgan Stanley, *"Powering AI: Racking Up the Power Shortfall"*, 2026-09-21):
+
+| US DC power bridge, 2026-28 (GW) | Low end | **Midpoint** | High end | Prob. of success |
+|---|--:|--:|--:|--:|
+| Total US data-center power demand | **97** | **97** | **97** | — |
+| Less: data centers under construction | (21) | **(21)** | (21) | — |
+| Less: utility grid access | (19) | **(19)** | (19) | — |
+| **Shortfall before "time to power" solutions** | **57** | **57** | **57** | — |
+| Solution #1 — additional BTM turbines / engines | 11 | **19** | 49 | **90%** |
+| Solution #2 — **Bloom Energy fuel cells** | 5 | **6** | 8 | **90%** |
+| Solution #3 — site DC at an operational nuclear plant | 1 | **3** | 8 | **75%** |
+| Solution #4 — convert PSP sites *(counted inside turbines or DCs under construction)* | 8 | **13** | 19 | **90%** |
+| **Probability-weighted "time to power" through 2028** | 15 | **24** | 57 | — |
+| **Net shortfall through 2028** | **(42)** | **(33)** | **(0)** | — |
+| **Shortfall as % of 2026-28 US DC deployments** | **43%** | **34%** | **0%** | — |
+
+  - ➤ **THE RANGE IS THE NEWS, NOT THE MIDPOINT. MS's own "we believe this outcome is most likely" flag sits on the MIDPOINT column, but the high-end column solves the shortfall ENTIRELY (0 GW, 0%) — i.e. on MS's own numbers the whole bottleneck is inside the error bars of one input, "additional BTM turbines and engines" (11 GW low vs 49 GW high). Every power-scarcity trade on this page is, in MS's own framing, a bet on BTM gas turbine and reciprocating-engine deployment falling short of its high case.**
+  - ⚠️ **[[BE]] IS THE SMALLEST OF THE FOUR REMEDIES AND THE TIGHTEST-BOUNDED (5-8 GW, midpoint 6 GW) — but at a 90% probability of success. Do not read Bloom's prominence in the note's headline as size; read it as confidence.**
+
+- 🔴🔴 **AND THE YEAR-BY-YEAR PATH, WHICH THE RELAY COMPRESSED INTO A SINGLE CUMULATIVE LINE** (MS Exhibit 6, cumulative basis; Morgan Stanley, *"Powering AI: Racking Up the Power Shortfall"*, 2026-09-21):
+
+| Cumulative US shortfall build (GW) | 2026 | 2027 | 2028 | 2029 |
+|---|--:|--:|--:|--:|
+| Power needed | 18 | 49 | **97** | **165** |
+| Less: US DCs under construction | (7) | (17) | (21) | (22) |
+| Less: available / contractable US grid capacity | (3) | (7) | (19) | (36) |
+| **Shortfall before time-to-power solutions** | **8** | **25** | **57** | **107** |
+| Less: suitable nuclear power | (0) | (1) | (2) | (3) |
+| Less: Bloom fuel-cell potential | (1) | (2) | (5) | (9) |
+| Less: unannounced BTM turbines / engines | (2) | (10) | (17) | (23) |
+| Crypto sites available *(already counted above)* | (2) | (6) | (12) | (18) |
+| **Estimated midpoint NET shortfall** | **5** | **12** | **33** | **72** |
+| **Net shortfall as % of power needed** | **27.8%** | **24.6%** | **33.8%** | **43.9%** |
+
+  - ✅ **INTERNAL CROSS-CHECK PASSED: every column reconciles (97−21−19 = 57; 57−2−5−17 = 33; 165−22−36 = 107; 107−3−9−23 = 72). The crypto-sites line is explicitly NOT netted again.** On a year-alone basis MS has power needed of **18 / 31 / 48 / 68 GW** for 2026 / 2027 / 2028 / 2029 and a net shortfall of **5 / 7 / 21 / 40 GW**.
+  - ⚠️⚠️ **RELAY-VS-PRIMARY DISCREPANCY, AND THE PRIMARY WINS. The 21h relay block below carries the 2026-29 net shortfall as "72-82 GW = 44-49% of demand". THE PRIMARY GIVES A SINGLE MIDPOINT: 72 GW = 43.9%. There is no 82 GW / 49% figure anywhere in the primary's Exhibit 6. Use 72 GW / ~44%.**
+
+- 🔴🔴 **THE TIME-TO-POWER ECONOMICS — this is what makes the shortfall an investable number rather than a forecast, and none of it reached the relay.** MS: several ex-bitcoin miners *"recently signed agreements in which they will build data center 'powered shells' at **$10-12/watt, with 15- to 25-year, FIXED PRICE contracts (with escalators), at unlevered FCF yields of 15-19%**."* Against a renewable PPA at **$1.50-2/watt and a ~10% typical unlevered yield**:
+
+| Value creation at 15x EV/EBITDA | Renewable PPA | Data-center "powered shell" lease |
+|---|--:|--:|
+| Cost per watt to build | $1.50-2.00 | **$10-12** |
+| Unlevered FCF yield on capex | ~10% | **15-19%** |
+| Net value creation per watt | $1.00 | **$15.50** |
+| Net value creation on aggregate investment | 50% | **155%** |
+| **Net value creation per gigawatt ($m)** | **$1,000** | **$15,500** |
+| **Net value creation as % of equity invested (80% leverage)** | **250%** | **775%** |
+
+  - 🔴 **AND THE PRICE OF A YEAR: *"accelerating deployment by ONE YEAR creates value equal to nearly SIX YEARS of annual power expense."* Quantified — value of a 1-year time advantage at targeted return: **$4.5/watt = 5.9x annual power cost = $80/MWh**; on a bare depreciation-recovery basis: **$2.2/watt = 2.9x = $39/MWh.** Three stated reasons: *"(1) Delays in energization can leave BILLIONS OF DOLLARS OF HARDWARE IDLE, (2) delays defer compute revenue, and (3) rapid time-to-power ensures the current chip generation is competitive."*** ➤ **THIS IS THE CLEANEST ANSWER THIS PAGE HAS TO "WHY WOULD ANYONE PAY UP FOR OFF-GRID POWER": at MS's marks the option value of a year of earlier energization is roughly SIX TIMES the entire annual electricity bill. Power price is not the variable that matters; power DATE is.** ⚠️ **$/watt here is a CAPEX-and-value-creation basis. It is NOT the "$/watt = revenue per watt" convention that circulates in AI-infra notes — see the `$/watt` unit hazard. Never chain these against revenue-per-watt marks.**
+  - **Corroboration from deal flow: PSP transactions by year — **2 (2024) → 11 (2025) → 17 (2026 YTD)**, i.e. 2026 already exceeds all of 2025.** (Morgan Stanley, *"Powering AI: Racking Up the Power Shortfall"*, 2026-09-21)
+
+- 🔴 **THE BY-DEVELOPER LAYER THE NOTE ADDS, AND WHERE IT POINTS GEOGRAPHICALLY.** MS: *"We now factor in a more granular, **BY-DEVELOPER analysis** of US data center projects and 'time to power' solutions to help pinpoint the US power bottleneck"*, and *"we believe there will be a large number of **Behind-the-Meter (BTM) power generation deals** announced in the coming months, with an **especially large concentration in WEST TEXAS**."* On geography, MS names the states it expects to **surprise to the upside**: **Louisiana, West Virginia, Texas and several Upper Midwest states.** It also expects the shortfall to push capacity offshore — *"a bullish backdrop for many other key data center markets globally, such as the **Nordics, Iberia, Australia, ASEAN and India**."* (Morgan Stanley, *"Powering AI: Racking Up the Power Shortfall"*, 2026-09-21)
+
+- 🔴 **THE PER-NAME CONCLUSIONS, WHICH THE RELAY REDUCED TO A TICKER LIST.** (All Morgan Stanley, *"Powering AI: Racking Up the Power Shortfall"*, 2026-09-21. Names without a wiki page are plain text.)
+  - **[[BE]] Bloom Energy** — *"offers one of the most direct solutions to the time-to-power bottleneck. Its fuel cells allow data center developers to secure **onsite power BEFORE grid interconnections arrive**, an increasingly valuable capability as **interconnection timelines extend beyond FIVE YEARS**."*
+  - **[[WMB]] Williams** — *"an expanding power infrastructure business serving hyperscalers that integrates natural gas supply, pipeline infrastructure, and **onsite power generation that can be brought online in 18-24 MONTHS of contract execution**… one of the SAFEST expressions of a positive view on AI development"*, and *"on the cusp of what we believe will be a significant further acceleration in growth capex and EBITDA **beyond prevailing guidance and what is reflected in consensus estimates**."*
+  - **[[VST]] Vistra** — *"monetizes the power shortage… captures the value of rising power scarcity **WITHOUT ASSUMING THE TECHNOLOGY EXECUTION RISK** associated with solving the bottleneck."*
+  - **[[TLN]] Talen Energy** — *"can monetize both scarce electricity and the **PROXIMITY of its generation assets to large data center loads**… captures the value of the power shortfall **without depending on an unproven technology to eliminate it**."*
+  - **[[GEV]] GE Vernova** and Cummins sit with [[BE]] in MS's **BTM power-generation-equipment** bucket (US Overweights: BE, GEV, CMI); **BTM project developers** are SEI, [[VST]], LBRT, INIO, [[WMB]], EROC.
+  - **Equinix** (no wiki page) — the one data-center developer MS singles out: bull-case **2027/2028 interconnection revenue growth raised to 16.6% / 16.5%, from 14.5% / 16.3% previously**, on the argument that *"scale in interconnection [is] an underappreciated driver of value."*
+  - **[[SPCX]] SpaceX** — MS can identify *"**3-4 GW of likely accessible gas turbine power by YE27**"* via purchase agreements plus Musk's personal acquisition of mobile-power provider APR Energy, *"with **total reported commitments closer to 8 GW**"*; MS sees **terrestrial compute peaking at ~15 GW in 2031**. The named constraint is *"the **hot-section blades and vanes** inside each machine, a market controlled by a handful of casters already backlogged for years"*, with job postings pointing at a **greenfield foundry in Bastrop, TX**.
+  - **Powered Shell Providers** (no wiki pages): OW **Cipher Digital, Hut 8, Riot Platforms, Galaxy Digital, TeraWulf**; EW **Applied Digital**; UW **MARA**. MS: *"we believe **ALL of these companies will sign at least one significant data center lease transaction within the next 6 MONTHS**."* Named marks — **Riot**: 241 critical IT MW under contract across two Rockdale agreements and ~$9.7bn of contracted revenue = **$11.50/share** in base case, with a full-capacity deal at the 1,000 gross MW Corsicana site worth a further **$24/share**. **Hut 8**: three signed leases covering ~1 GW of critical IT load = **$137/share of equity value**, a >8 GW development pipeline, and a likely **~770 MW IT BTM expansion** in Louisiana. **Cipher**: Black Pearl tracking **2 months ahead of schedule**, **900 MW** of additional grid access secured via Apollo, and likely near-term transactions at **off-grid Texas (500 MW+), Reveille (70 MW) and Ulysses (200 MW)**.
+  - ⚠️⚠️ **DO NOT PAIR NAMES TO EV/WATT BARS FROM THIS NOTE. MS gives an EV/watt range of **$1.33-$7.24** for 100MW+ bitcoin sites across MARA, IREN, Riot, Cipher, BTDR, Galaxy, TeraWulf, Core Scientific, Applied Digital and Hut 8 — but the figure is a BAR CHART, and per-name values extracted from a chart deck are not reliably paired to their labels. **The RANGE is quoted verbatim from the exhibit title and is safe; the per-name attribution is not, and is deliberately not recorded here.** MS also excludes ERCOT studied-load sites from the calculation.**
+
+- 🔭 **THE GLOBAL POWER TABLE AND THE BASIS GUARD THAT GOES WITH IT — critical, because this page mixes US and global GW constantly.** MS states its method plainly: *"TWh actual for the year is the number that flows into the power summary for **GLOBAL** calculations. We then **convert to a US power demand at 60% of this number**, and our power shortfall is incremental capacity demanded by year."* The global annual figures (MS Exhibit 49; Morgan Stanley, *"Powering AI: Racking Up the Power Shortfall"*, 2026-09-21):
+
+| Global AI data-center power | 2025 | 2026 | 2027 | 2028 | 2029 |
+|---|--:|--:|--:|--:|--:|
+| TWh consumed in the year | 161 | **321** | **632** | **1,136** | **1,879** |
+| Assumed power cost incl. T&D ($/MWh) | 130 | 130 | 130 | 130 | 130 |
+| **AI DC operating power cost ($m)** | 20,964 | **41,750** | **82,128** | **147,684** | **244,335** |
+| Modelled PUE | 1.30 | 1.27 | 1.26 | 1.24 | 1.23 |
+
+  - ✅ **CROSS-CHECK PASSED: $147,684m ÷ $130/MWh = 1,136 TWh exactly; same identity holds in every year. The table is internally consistent.**
+  - ⚠️ **BUT THE EXHIBIT TITLE IS NOT. It reads *"We reach 1,180 TWh in 2028 from 422 TWh Today"* — neither figure is the annual series (1,136 TWh in 2028; 161 TWh in 2025 / 321 TWh in 2026). "422 TWh today" appears to be the CUMULATIVE consumption line (426 TWh through 2026), so the title pairs a cumulative base against an annual endpoint. **USE THE TABLE, NOT THE TITLE**, and never quote "422 → 1,180 TWh" as a like-for-like growth statement.**
+  - ⚠️ **AND THE 60% US CONVERSION IS THE SINGLE MOST IMPORTANT BASIS FACT IN THE NOTE: every GW on this page from this source is a US number derived from a global model at a flat 60% share. It is an assumption, not an observation, and the entire shortfall scales linearly with it.**
+
+- 🔴🔴 **AND A DIRECT, SAME-DAY CHALLENGE TO THE ECONOMICS OF MS'S OWN PREFERRED REMEDY — FROM A DIFFERENT HOUSE, IN THE OTHER PRIMARY INGESTED TONIGHT.** Rothschild & Co Redburn's *"AI Infrastructure: Capital Carousel"* prices the power sources MS is counting on, and argues the premium is a scarcity artefact: *"In today's **capacity-at-any-cost** environment, securing power through relatively expensive sources — such as **fuel cells at roughly $0.11-0.13/kWh** or **nuclear >$0.10** — may appear immaterial compared with cheaper alternatives such as **on-site gas generation or low-cost grid power at around $0.06/kWh**. However, as capacity constraints ease and the market shifts **from securing power to optimising unit economics**, these differences become increasingly important. **What looks like an acceptable premium during a period of scarcity can ultimately become a STRUCTURAL COST DISADVANTAGE once compute pricing and returns begin to normalise.**"* Redburn's levelised marks by firm-power source: **low-cost grid or existing nuclear 3.5c/kWh · on-site gas or low-cost grid 6.0c · nuclear 10.9c · fuel cell 12.2c.** (Rothschild & Co Redburn · **Alex Haissl** / **Luke Han**, *"AI Infrastructure: Capital Carousel"*, **2026-09-21**) [Source](../../relat%C3%B3rios%20bons/Capital_Carousel.html)
+  - ➤➤ **THIS IS THE SHARPEST CROSS-SOURCE TENSION ON THIS PAGE TODAY AND THE TWO NOTES ARE DATED THE SAME DAY. MS counts Bloom fuel cells as 5-8 GW of shortfall relief at a 90% probability of success and does not price the energy. Redburn prices exactly that energy at roughly DOUBLE on-site gas and shows the cash margin on compute collapsing as revenue per GW-year normalises. They are not contradicting each other on physics — MS is solving for TIME and Redburn is solving for the terminal cost curve — but they imply opposite holding periods on the same asset. ➤ THE FALSIFIABLE TEST: whether fuel-cell and premium-nuclear power contracts signed in 2026-27 are structured SHORT (bridging, consistent with MS's time-to-power framing) or LONG (consistent with an operator that has not priced Redburn's normalisation). Contract TENOR, not contract price, is the tell.** ⚠️ **Both sets of cents/kWh are broker estimates; MS never publishes a competing levelised cost, so this is Redburn's number standing unopposed rather than a resolved disagreement.**
+
 ## 🆕🔴🔴🔴 2026-09-21 (/wiki-ingest 21h) — **THE US POWER SHORTFALL IS RE-CUT UPWARD BY HALF, AND THE INPUT THAT MOVED IS NOT DEMAND — IT IS [[NVDA]]'S RACK DENSITY. PLUS THE FIRST QUANTIFIED REBUTTAL OF THE "LOCAL BACKLASH SLOWS THE BUILD-OUT" NARRATIVE.**
 
 **① MORGAN STANLEY'S POWER-SHORTFALL UPDATE — AND THE DRIVER IS A RE-SPEC, NOT A RE-FORECAST.** (Morgan Stanley · **Stephen Byrd** / **Dave Arcaro**, *"Power Shortfall Update"*, **2026-09-21**; relayed same-day by MS TMT sales · Tom Wigg — ⚠️ **the relay is sales commentary, not research.**)
