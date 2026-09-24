@@ -7,11 +7,11 @@
     "positions": 8
   },
   "stats": {
-    "signals": 117,
-    "active": 117,
+    "signals": 108,
+    "active": 108,
     "high": 7,
     "belief_changes": 0,
-    "focus_names": 53
+    "focus_names": 48
   },
   "focus": [
     {
@@ -120,17 +120,17 @@
     },
     {
       "ticker": "CRWV",
-      "focus_score": 74,
+      "focus_score": 72,
       "in_book": false,
-      "signal_count": 5,
+      "signal_count": 4,
       "high_count": 0,
       "sector": "Systems & neoclouds",
       "thesis": "Highest-visibility GPU neocloud ($99B backlog) but ~$25B high-coupon debt + customer concentration.",
       "next_catalyst": "",
       "why": [
         "Redburn holds the STREET LOW on three names at once, and BBG's own panel already proves it",
-        "CRWV — catalyst passed without a logged outcome",
-        "CRWV — the same $6.3bn is characterised two opposite ways, and the two readings are not compatible"
+        "CRWV — the same $6.3bn is characterised two opposite ways, and the two readings are not compatible",
+        "CRWV's cost of capital: management's characterisation vs traded levels"
       ]
     },
     {
@@ -217,101 +217,6 @@
       ]
     },
     {
-      "ticker": "COHR",
-      "focus_score": 62,
-      "in_book": false,
-      "signal_count": 3,
-      "high_count": 0,
-      "sector": "Optical / Networking",
-      "thesis": "InP chokepoint in AI interconnect; NVIDIA stake + CPO deal; bear is relative vs LITE.",
-      "next_catalyst": "",
-      "why": [
-        "COHR — catalyst passed without a logged outcome",
-        "Optical: a falsifiable engineering attack on COHR's laser — and the \"LITE wins\" read does not follow",
-        "InP routing INVERSION — cuts against the moat LITE and COHR both run on"
-      ]
-    },
-    {
-      "ticker": "BE",
-      "focus_score": 60,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "Power & Energy",
-      "thesis": "On-site SOFC fuel cells for DC power (Nebius/Google); bull = grid bottleneck, bear = Redburn Sell + Delta/Ceres competition.",
-      "next_catalyst": "",
-      "why": [
-        "BE — catalyst passed without a logged outcome",
-        "BE — catalyst passed without a logged outcome"
-      ]
-    },
-    {
-      "ticker": "OKTA",
-      "focus_score": 60,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "Software / security / internet",
-      "thesis": "Neutral identity control plane for the agent era (cRPO re-accel to +14%, NRR turn); bear = seat model + MSFT Entra / PANW-CyberArk bundling.",
-      "next_catalyst": "2026-09-23",
-      "why": [
-        "OKTA — catalyst passed without a logged outcome",
-        "OKTA — 2026-09-23: Oktane 2026, Las Vegas; INVESTOR SESSION 11am-12pm PT. JPM (Brian Essex, OW, px $190.02 on…"
-      ]
-    },
-    {
-      "ticker": "AXTI",
-      "focus_score": 58,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "AI — Semis & Compute",
-      "thesis": "Most direct InP-substrate bottleneck play (~80% non-China w/ Sumitomo); bull = optical supply oligopoly, bear = China-permit gate + trading-vehicle beta.",
-      "next_catalyst": "",
-      "why": [
-        "AXTI — catalyst passed without a logged outcome"
-      ]
-    },
-    {
-      "ticker": "CEREBRAS",
-      "focus_score": 58,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Systems & neoclouds",
-      "thesis": "Wafer-scale fast-inference vs NVDA; OpenAI take-or-pay; UAE concentration. Recent IPO, no public consensus.",
-      "next_catalyst": "",
-      "why": [
-        "CEREBRAS — catalyst passed without a logged outcome"
-      ]
-    },
-    {
-      "ticker": "NXPI",
-      "focus_score": 58,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Analog & processors",
-      "thesis": "Highest auto-beta analog/embedded; content-per-vehicle + datacenter doubling; concentration the risk.",
-      "next_catalyst": "",
-      "why": [
-        "NXPI — catalyst passed without a logged outcome"
-      ]
-    },
-    {
-      "ticker": "TSEM",
-      "focus_score": 58,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "AI — Semis & Compute",
-      "thesis": "Specialty foundry re-rating on SiPho/SiGe optical; $1.3B 2027 SiPho commit (NVDA-anchored per FinTwit); bear = ramp/concentration. SIG Positive $330.",
-      "next_catalyst": "",
-      "why": [
-        "TSEM — catalyst passed without a logged outcome"
-      ]
-    },
-    {
       "ticker": "UBER",
       "focus_score": 58,
       "in_book": false,
@@ -354,6 +259,20 @@
       ]
     },
     {
+      "ticker": "COHR",
+      "focus_score": 50,
+      "in_book": false,
+      "signal_count": 2,
+      "high_count": 0,
+      "sector": "Optical / Networking",
+      "thesis": "InP chokepoint in AI interconnect; NVIDIA stake + CPO deal; bear is relative vs LITE.",
+      "next_catalyst": "",
+      "why": [
+        "Optical: a falsifiable engineering attack on COHR's laser — and the \"LITE wins\" read does not follow",
+        "InP routing INVERSION — cuts against the moat LITE and COHR both run on"
+      ]
+    },
+    {
       "ticker": "ADI",
       "focus_score": 49,
       "in_book": false,
@@ -390,6 +309,19 @@
       "next_catalyst": "2026-09-22",
       "why": [
         "ESTC — 2026-09-22: Metrics webinar — 2026-09-22, 8:00 PT (Kurtz, Q1 FY27 call): the observability-relaunch…"
+      ]
+    },
+    {
+      "ticker": "OKTA",
+      "focus_score": 49,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Software / security / internet",
+      "thesis": "Neutral identity control plane for the agent era (cRPO re-accel to +14%, NRR turn); bear = seat model + MSFT Entra / PANW-CyberArk bundling.",
+      "next_catalyst": "2026-09-23",
+      "why": [
+        "OKTA — 2026-09-23: Oktane 2026, Las Vegas; INVESTOR SESSION 11am-12pm PT. JPM (Brian Essex, OW, px $190.02 on…"
       ]
     },
     {
@@ -836,9 +768,9 @@
       "hidden": false
     },
     {
-      "id": "esti-5a702ac17315",
+      "id": "esti-bf7122f00934",
       "asof": "2026-09-22",
-      "source_date": "2026-09-21",
+      "source_date": "2026-09-22",
       "type": "model_check",
       "priority": "high",
       "score": 72,
@@ -852,7 +784,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $427.2bn as of 2026-09-21, a derived +18.2% gap. Revenue comparisons require a basis check.",
+      "why_now": "Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $427.3bn as of 2026-09-22, a derived +18.2% gap. Revenue comparisons require a basis check.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -907,7 +839,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-21",
+      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-22",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -916,8 +848,8 @@
       "origin": "house_vs_consensus",
       "values": {
         "house": 505.0,
-        "consensus": 427.24563,
-        "delta_pct": 18.2,
+        "consensus": 427.26890000000003,
+        "delta_pct": 18.19,
         "unit": "$bn"
       },
       "feedback": "",
@@ -925,9 +857,9 @@
       "hidden": false
     },
     {
-      "id": "esti-f816acaabe55",
+      "id": "esti-56921f2baecc",
       "asof": "2026-09-22",
-      "source_date": "2026-09-21",
+      "source_date": "2026-09-22",
       "type": "model_check",
       "priority": "high",
       "score": 71,
@@ -941,7 +873,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2027 revenue at $641.0bn versus Bloomberg consensus at $544.1bn as of 2026-09-21, a derived +17.8% gap. Revenue comparisons require a basis check.",
+      "why_now": "Capstone carries 2027 revenue at $641.0bn versus Bloomberg consensus at $544.1bn as of 2026-09-22, a derived +17.8% gap. Revenue comparisons require a basis check.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -996,7 +928,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-21",
+      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-22",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -1014,9 +946,9 @@
       "hidden": false
     },
     {
-      "id": "esti-1d04793b90a2",
+      "id": "esti-b1a3e9a61c68",
       "asof": "2026-09-22",
-      "source_date": "2026-09-21",
+      "source_date": "2026-09-22",
       "type": "model_check",
       "priority": "high",
       "score": 69,
@@ -1030,7 +962,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.76 as of 2026-09-21, a derived +15.5% gap.",
+      "why_now": "Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.76 as of 2026-09-22, a derived +15.5% gap.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the AAPL model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -1050,7 +982,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-09-21",
+      "source": "Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-09-22",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -1358,71 +1290,71 @@
       "score": 66,
       "title": "Redburn holds the STREET LOW on three names at once, and BBG's own panel already proves it",
       "tickers": [
+        "MSFT",
         "ORCL",
         "NBIS",
-        "AMZN",
         "CRWV",
-        "MSFT"
+        "AMZN"
       ],
       "in_book": [
-        "AMZN",
-        "MSFT"
+        "MSFT",
+        "AMZN"
       ],
       "impact": "medium",
       "urgency": "immediate",
       "confidence": "medium",
       "why_now": "➤ This is not five independent calls; it is one thesis expressed five times — that credit is pricing a risk equities ignore, and that the compute layer is where it bites. ORCL's panel carries only one Sell among 49 analysts, and that Sell is now the street low. Treat the package as a single high-conviction position, and size any read-through accordingly — if Redburn is wrong, all five marks are wrong together.",
       "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the ORCL/NBIS/AMZN/CRWV model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "action": "Open the MSFT/ORCL/NBIS/CRWV model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
       "readthrough": [
         {
           "ticker": "AVGO",
           "relation": "supplier",
-          "detail": "networking",
-          "from": "ORCL",
+          "detail": "custom ASIC",
+          "from": "MSFT",
           "in_book": true
         },
         {
           "ticker": "NVDA",
           "relation": "supplier",
           "detail": "GPUs",
-          "from": "ORCL",
+          "from": "MSFT",
           "in_book": true
         },
         {
           "ticker": "MDB",
           "relation": "competitor",
-          "detail": "operational database",
-          "from": "ORCL",
+          "detail": "Atlas vs Cosmos DB",
+          "from": "MSFT",
           "in_book": false
         },
         {
-          "ticker": "AMD",
-          "relation": "supplier",
-          "detail": "MI GPUs",
-          "from": "ORCL",
-          "in_book": false
-        },
-        {
-          "ticker": "OPENAI",
-          "relation": "customer",
-          "detail": "OCI compute",
-          "from": "ORCL",
-          "in_book": false
-        },
-        {
-          "ticker": "NSCALE",
+          "ticker": "OKTA",
           "relation": "competitor",
-          "detail": "GPU neocloud",
-          "from": "NBIS",
+          "detail": "IAM (Entra bundling)",
+          "from": "MSFT",
           "in_book": false
         },
         {
-          "ticker": "BE",
+          "ticker": "SNOW",
+          "relation": "competitor",
+          "detail": "warehouse vs Fabric",
+          "from": "MSFT",
+          "in_book": false
+        },
+        {
+          "ticker": "AAOI",
           "relation": "supplier",
-          "detail": "fuel cells",
-          "from": "NBIS",
+          "detail": "optical transceivers",
+          "from": "MSFT",
+          "in_book": false
+        },
+        {
+          "ticker": "ALAB",
+          "relation": "supplier",
+          "detail": "scale-up fabric",
+          "from": "MSFT",
           "in_book": false
         }
       ],
@@ -1902,134 +1834,6 @@
       "hidden": false
     },
     {
-      "id": "post-72776eb9575c",
-      "asof": "2026-09-22",
-      "source_date": "2026-09-21",
-      "event_date": "2026-09-21",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "AXTI — catalyst passed without a logged outcome",
-      "tickers": [
-        "AXTI"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "🆕 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — S&P 600 INDEX ADD, a dated MECHANICAL flow event. AXTI is named as one of five S&P SmallCap 600 additions in the Septe",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for AXTI in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "🆕 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — S&P 600 INDEX ADD, a dated MECHANICAL flow event. AXTI is named as one of five S&P SmallCap 600 additions in the Septe",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "post-24d00d78adec",
-      "asof": "2026-09-22",
-      "source_date": "2026-09-21",
-      "event_date": "2026-09-21",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "BE — catalyst passed without a logged outcome",
-      "tickers": [
-        "BE"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "🆕🔴🔴🔴 2026-09-21 — THE SCOREBOARD JUST MOVED, AND IT MOVED THE BULL'S WAY BY THE LARGEST MARGIN IT EVER HAS. THE BULLET ABOVE IS SUPERSEDED; ITS NUMBERS ARE PRESERVED THERE AND IN Changelog. (",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for BE in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "🆕🔴🔴🔴 2026-09-21 — THE SCOREBOARD JUST MOVED, AND IT MOVED THE BULL'S WAY BY THE LARGEST MARGIN IT EVER HAS. THE BULLET ABOVE IS SUPERSEDED; ITS NUMBERS ARE PRESERVED THERE AND IN Changelog. (",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "post-38d0731f6dc6",
-      "asof": "2026-09-22",
-      "source_date": "2026-09-21",
-      "event_date": "2026-09-21",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "BE — catalyst passed without a logged outcome",
-      "tickers": [
-        "BE"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "🆕🔴🔴 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — THE INDEX TIER IS NOW NAMED: BE IS AN S&P 500 ADD, AND A FTSE ALL-WORLD ADD. TWO INDEPENDENT INDEX EVENTS IN THE",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for BE in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "🆕🔴🔴 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — THE INDEX TIER IS NOW NAMED: BE IS AN S&P 500 ADD, AND A FTSE ALL-WORLD ADD. TWO INDEPENDENT INDEX EVENTS IN THE",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "post-8e432b343443",
-      "asof": "2026-09-22",
-      "source_date": "2026-09-21",
-      "event_date": "2026-09-21",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "CEREBRAS — catalyst passed without a logged outcome",
-      "tickers": [
-        "CEREBRAS"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "🆕 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — ICE SEMICONDUCTOR INDEX (ICESEMI) ADD in the annual reconstitution. A dated MECHANICAL flow event, not a fundamental one",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for CEREBRAS in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "🆕 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — ICE SEMICONDUCTOR INDEX (ICESEMI) ADD in the annual reconstitution. A dated MECHANICAL flow event, not a fundamental one",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
       "id": "post-ba7e7d24bacf",
       "asof": "2026-09-22",
       "source_date": "2026-09-21",
@@ -2120,166 +1924,6 @@
         "_meta/outcomes.md"
       ],
       "evidence_anchor": "CALENDAR CONTEXT — TWO CORPORATE-ACCESS WINDOWS IN SIX DAYS: the Calgary tour (09-16) is followed by ECOC 2026 in Spain on 2026-09-21/22, where Morgan Stanley hosts CIEN alongside COHR, CSCO",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "post-a4948ca80234",
-      "asof": "2026-09-22",
-      "source_date": "2026-09-21",
-      "event_date": "2026-09-21",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "COHR — catalyst passed without a logged outcome",
-      "tickers": [
-        "COHR"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "🆕 2026-09-21 — PHOTONLINK LAUNCH: establish the PLATFORM, LANE RATE AND MODULATION FORMAT, not just the positioning. The FQ1 FY27 synthesis lists PhotonLink as a genuinely net-new BULL item (platf",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for COHR in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "🆕 2026-09-21 — PHOTONLINK LAUNCH: establish the PLATFORM, LANE RATE AND MODULATION FORMAT, not just the positioning. The FQ1 FY27 synthesis lists PhotonLink as a genuinely net-new BULL item (platf",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "post-41ea74cc69de",
-      "asof": "2026-09-22",
-      "source_date": "2026-09-08",
-      "event_date": "2026-09-08",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "CRWV — catalyst passed without a logged outcome",
-      "tickers": [
-        "CRWV"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "🆕🔴 ZERO OF 2028 CAPACITY IS SOLD, DELIBERATELY, AND SOME 2027 REMAINS — SO THE NEXT LARGE CONTRACT ANNOUNCEMENT IS A CLEAN PRICE PRINT: \"we still have some 2027 capacity left… we haven't sold any",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for CRWV in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "🆕🔴 ZERO OF 2028 CAPACITY IS SOLD, DELIBERATELY, AND SOME 2027 REMAINS — SO THE NEXT LARGE CONTRACT ANNOUNCEMENT IS A CLEAN PRICE PRINT: \"we still have some 2027 capacity left… we haven't sold any",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "post-47700ea9a611",
-      "asof": "2026-09-22",
-      "source_date": "2026-09-21",
-      "event_date": "2026-09-21",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "NXPI — catalyst passed without a logged outcome",
-      "tickers": [
-        "NXPI"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "🆕🔴 UPDATED 2026-09-21 — the Kinara funnel is now ~$1.5bn. Management to Bernstein: \"the recently acquired Kinara platform appears to be gaining traction, with management citing a roughly $1.5 bil",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for NXPI in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "🆕🔴 UPDATED 2026-09-21 — the Kinara funnel is now ~$1.5bn. Management to Bernstein: \"the recently acquired Kinara platform appears to be gaining traction, with management citing a roughly $1.5 bil",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "post-09a5c6b38bdf",
-      "asof": "2026-09-22",
-      "source_date": "2026-09-21",
-      "event_date": "2026-09-21",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "OKTA — catalyst passed without a logged outcome",
-      "tickers": [
-        "OKTA"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "Oktane — week of 2026-09-21, Las Vegas — \"the AI security event of the year\", with an analyst/investor Q&A (McKinnon, Q2 FY27). Watch: agent-identity customer counts, any per-agent pricing const",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for OKTA in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "Oktane — week of 2026-09-21, Las Vegas — \"the AI security event of the year\", with an analyst/investor Q&A (McKinnon, Q2 FY27). Watch: agent-identity customer counts, any per-agent pricing const",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "post-0281cd2f2718",
-      "asof": "2026-09-22",
-      "source_date": "2026-09-21",
-      "event_date": "2026-09-21",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "TSEM — catalyst passed without a logged outcome",
-      "tickers": [
-        "TSEM"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "🆕 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — ICE SEMICONDUCTOR INDEX (ICESEMI) ADD, a dated MECHANICAL flow event. TSEM is one of three ICESEMI additions in the an",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for TSEM in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "🆕 2026-09-18 (trade at the close) / 2026-09-21 (effective for the open) — ICE SEMICONDUCTOR INDEX (ICESEMI) ADD, a dated MECHANICAL flow event. TSEM is one of three ICESEMI additions in the an",
       "origin": "outcome_loop",
       "feedback": "",
       "feedback_note": "",
