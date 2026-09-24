@@ -19,6 +19,8 @@ __pycache__/
 _wiki/_data/search.db
 # OpenRouter raw weekly snapshots (~5 MB/week; P: mirror keeps them; history.jsonl is the durable record)
 _wiki/_data/openrouter/raw/
+# GPU source snapshots and downloaded source assets; compact normalized caches are retained.
+_wiki/_data/gpu-pricing/raw/
 # artifact fragment (claude.ai republish duplicate of _dashboards/openrouter.html)
 _wiki/_data/openrouter/openrouter.artifact.html
 _wiki/%TEMP%/
@@ -49,3 +51,11 @@ _wiki/_data/sentiment/lab.json
 /.codex/agents/*
 !/.codex/agents/*.toml
 !/.codex/agents/*.md
+# Raw Outlook dumps inside dated research folders (~25 MB/run, rebuildable from the
+# mailbox, and this repo is PUBLIC). The derived notes/sources .md stay tracked.
+_wiki/_data/research/*/emails_archive*.json
+_wiki/_data/research/*/emails_live.jsonl
+_wiki/_data/research/*/emails_review.txt
+# Broker client workbooks pulled for a single study — licensed source material, same
+# rule as `relatórios bons\` (archive stays off GitHub; P: mirror keeps them).
+_wiki/_data/retrieved/

@@ -30,6 +30,9 @@ STEPS = [
     ("build_book.py", []),          # needs build_catalysts + extract_house first
     ("build_mgmt_comms.py", []),    # reads each page's commentary-evolution table
     ("build_cyber_kpis.py", []),    # cyber KPI ledger (_data/cyber_kpis.json + estimates.json) -> cyber-kpis.html
+    ("gpu_pricing.py", []),        # Bloomberg + public SemiAnalysis; retain cache on source failure
+    ("build_gpu_pricing.py", []),  # render retained or refreshed observations
+    ("build_openrouter_dash.py", []),  # keep the embedded GPU tab in sync
     ("build_search_index.py", []),  # incremental — unchanged files skipped
     ("build_graph.py", []),         # needs catalysts + search index + book + assumptions
     ("build_analyst.py", []),       # belief ledger + ranked, attributed proactive signal queue
@@ -42,6 +45,7 @@ HUB = [
     ('Fear & Greed - extreme entries', 'attention-sentiment/cnn-next-week.html', 'SPY/QQQ performance over the next five trading sessions after new entries into fear or greed zones. Event-focused, with sample sizes and uncertainty.'),
     ('Narratives & specialist sales', 'attention-sentiment/narrative-diffusion.html', 'META/Muse case study: product aliases, author diffusion and source-timed specialist-sales observations.'),
     ("Estudos · OpenRouter + Vercel", "openrouter.html", "AI model and lab adoption: gateway token share, requests, reported versus estimated spend, and weekly changes. Friday summary at 09:00 Brasília."),
+    ("GPU rental pricing", "gpu-pricing.html", "H100, A100 and B200: Bloomberg rental benchmarks, SemiAnalysis public spot-contract indices and H100 one-year survey ranges, with dated source data."),
     ("AI gateways — weekly brief", "gateway-weekly.html", "Latest weekly summary covering OpenRouter and Vercel, with dated observations and source-specific methodology."),
     ("Analyst Inbox", "analyst-inbox.html", "Ranked daily ideas, model challenges, narrative shifts, catalysts and read-throughs — each with attribution, action and falsifier."),
     ("AI credit & funding monitor", "credit-monitor.html", "AI issuance, neocloud spreads, counterparty tiering, appetite scoreboard — manual refresh: fetch_funding.py + build_funding_monitor.py."),
