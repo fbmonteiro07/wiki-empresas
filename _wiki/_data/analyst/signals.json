@@ -7,18 +7,18 @@
     "positions": 8
   },
   "stats": {
-    "signals": 104,
-    "active": 104,
+    "signals": 114,
+    "active": 114,
     "high": 14,
     "belief_changes": 4,
-    "focus_names": 47
+    "focus_names": 49
   },
   "focus": [
     {
       "ticker": "NVDA",
       "focus_score": 97,
       "in_book": true,
-      "signal_count": 9,
+      "signal_count": 12,
       "high_count": 3,
       "sector": "AI — Semis & Compute",
       "thesis": "Full-stack AI-factory platform at +85% rev; debate is demand sustainability vs ASIC erosion.",
@@ -102,6 +102,36 @@
       ]
     },
     {
+      "ticker": "MU",
+      "focus_score": 72,
+      "in_book": false,
+      "signal_count": 4,
+      "high_count": 0,
+      "sector": "AI — Semis & Compute",
+      "thesis": "Pure-play on AI memory intensity (HBM sold-out CY26); debate = peak earnings vs run-rate.",
+      "next_catalyst": "2026-09-30",
+      "why": [
+        "DRAM 3Q26 pricing — the canonical is now the floor, not the central case.",
+        "HBM TAM — the ledger's canonical was 2.8x too low, on the same house's own name.",
+        "Hybrid bonding in memory — three sources in 24 hours, pointing two ways."
+      ]
+    },
+    {
+      "ticker": "SKHYNIX",
+      "focus_score": 72,
+      "in_book": false,
+      "signal_count": 4,
+      "high_count": 0,
+      "sector": "Memory & storage",
+      "thesis": "#1 HBM, NVDA's primary supplier, sold out through 2026; bear = HBM4 commoditization. ₩, no SEC.",
+      "next_catalyst": "2026-09-30",
+      "why": [
+        "DRAM 3Q26 pricing — the canonical is now the floor, not the central case.",
+        "HBM TAM — the ledger's canonical was 2.8x too low, on the same house's own name.",
+        "Hybrid bonding in memory — three sources in 24 hours, pointing two ways."
+      ]
+    },
+    {
       "ticker": "AMZN",
       "focus_score": 70,
       "in_book": true,
@@ -114,6 +144,21 @@
         "Redburn holds the STREET LOW on three names at once, and BBG's own panel already proves it",
         "AMZN — Bernstein is +16% / +27% above consensus on FY27 / FY28 EBIT and still carries a PT below consensus",
         "The relay that reached the wiki at 21:00 carried a mechanism that is not in the primary — and it pointed the opposite way"
+      ]
+    },
+    {
+      "ticker": "SAMSUNG",
+      "focus_score": 70,
+      "in_book": false,
+      "signal_count": 3,
+      "high_count": 0,
+      "sector": "Memory & storage",
+      "thesis": "Cheapest way to own the memory super-cycle; HBM4 catch-up vs SK Hynix + foundry optionality. ₩, no SEC.",
+      "next_catalyst": "2026-11-21",
+      "why": [
+        "DRAM 3Q26 pricing — the canonical is now the floor, not the central case.",
+        "HBM TAM — the ledger's canonical was 2.8x too low, on the same house's own name.",
+        "Hybrid bonding in memory — three sources in 24 hours, pointing two ways."
       ]
     },
     {
@@ -268,19 +313,6 @@
       ]
     },
     {
-      "ticker": "MU",
-      "focus_score": 58,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "AI — Semis & Compute",
-      "thesis": "Pure-play on AI memory intensity (HBM sold-out CY26); debate = peak earnings vs run-rate.",
-      "next_catalyst": "2026-09-30",
-      "why": [
-        "MU — 2026-09-30: F4Q26 (Aug) PRINT — DUE ~2026-09-30, AND THE BOGEY SET IS NOW EXPLICIT AND COMPARABLE…"
-      ]
-    },
-    {
       "ticker": "OKTA",
       "focus_score": 58,
       "in_book": false,
@@ -307,6 +339,20 @@
       ]
     },
     {
+      "ticker": "NBIS",
+      "focus_score": 57,
+      "in_book": false,
+      "signal_count": 2,
+      "high_count": 0,
+      "sector": "Systems & neoclouds",
+      "thesis": "Highest-octane listed neocloud (ARR→$7-9B, NVDA stake); capex burn + circular-financing scrutiny.",
+      "next_catalyst": "",
+      "why": [
+        "Redburn holds the STREET LOW on three names at once, and BBG's own panel already proves it",
+        "NBIS–Meta contract value."
+      ]
+    },
+    {
       "ticker": "NSCALE",
       "focus_score": 56,
       "in_book": false,
@@ -318,19 +364,6 @@
       "why": [
         "NSCALE — Bloomberg consensus missing",
         "NSCALE — latest earnings transcript absent"
-      ]
-    },
-    {
-      "ticker": "NBIS",
-      "focus_score": 55,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Systems & neoclouds",
-      "thesis": "Highest-octane listed neocloud (ARR→$7-9B, NVDA stake); capex burn + circular-financing scrutiny.",
-      "next_catalyst": "",
-      "why": [
-        "Redburn holds the STREET LOW on three names at once, and BBG's own panel already proves it"
       ]
     },
     {
@@ -362,6 +395,20 @@
       ]
     },
     {
+      "ticker": "PANW",
+      "focus_score": 50,
+      "in_book": false,
+      "signal_count": 2,
+      "high_count": 0,
+      "sector": "Software / security / internet",
+      "thesis": "Cybersecurity platformization land-grab + agentic SecOps; debate = organic vs M&A-flattered NGS ARR.",
+      "next_catalyst": "2026-11-18",
+      "why": [
+        "Morgan Stanley's four-note cyber package disagrees with itself.",
+        "PANW — Morgan Stanley calls it a Top Pick with a price target below the Street median"
+      ]
+    },
+    {
       "ticker": "HPE",
       "focus_score": 49,
       "in_book": false,
@@ -372,19 +419,6 @@
       "next_catalyst": "2026-09-30",
       "why": [
         "HPE — 2026-09-30: HPE NETWORKING ANALYST DAY — 2026-09-30. This is where the \"segment returns to HPE's…"
-      ]
-    },
-    {
-      "ticker": "SKHYNIX",
-      "focus_score": 49,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Memory & storage",
-      "thesis": "#1 HBM, NVDA's primary supplier, sold out through 2026; bear = HBM4 commoditization. ₩, no SEC.",
-      "next_catalyst": "2026-09-30",
-      "why": [
-        "SKHYNIX — 2026-09-30: By 2026-09-30 — HBM CONTRACT PRICE UPDATE. Named by JPM (Kwon, 2026-08-19) as the 2…"
       ]
     },
     {
@@ -411,6 +445,19 @@
       "next_catalyst": "2026-09-24",
       "why": [
         "SPCX — 2026-09-24: 2026-09-24, NYC — MS event: \"SPCX How to Play the Space Economy ft Adam Jonas, Sean…"
+      ]
+    },
+    {
+      "ticker": "CRWD",
+      "focus_score": 48,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Software / security / internet",
+      "thesis": "Falcon consolidation flywheel + Charlotte AI; net-new ARR re-accel; valuation/crowding + 2024-outage tail the bear.",
+      "next_catalyst": "2026-12-02",
+      "why": [
+        "Morgan Stanley's four-note cyber package disagrees with itself."
       ]
     },
     {
@@ -512,6 +559,20 @@
       ]
     },
     {
+      "ticker": "COHR",
+      "focus_score": 39,
+      "in_book": false,
+      "signal_count": 2,
+      "high_count": 0,
+      "sector": "Optical / Networking",
+      "thesis": "InP chokepoint in AI interconnect; NVIDIA stake + CPO deal; bear is relative vs LITE.",
+      "next_catalyst": "",
+      "why": [
+        "Optical: a falsifiable engineering attack on COHR's laser — and the \"LITE wins\" read does not follow",
+        "COHR's PhotonLink TAM — a machine summary against three earnings calls."
+      ]
+    },
+    {
       "ticker": "AMD",
       "focus_score": 37,
       "in_book": false,
@@ -537,19 +598,6 @@
       "why": [
         "IPO: the autumn target is gone",
         "Revenue ladder: the company plan runs ~20% above the Barclays-relayed plan in 2026 and ends at $350bn in 2030"
-      ]
-    },
-    {
-      "ticker": "COHR",
-      "focus_score": 37,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Optical / Networking",
-      "thesis": "InP chokepoint in AI interconnect; NVIDIA stake + CPO deal; bear is relative vs LITE.",
-      "next_catalyst": "",
-      "why": [
-        "Optical: a falsifiable engineering attack on COHR's laser — and the \"LITE wins\" read does not follow"
       ]
     },
     {
@@ -615,19 +663,6 @@
       "next_catalyst": "",
       "why": [
         "[23:00 second pass] NOW — a small, one-directional gross-margin disagreement"
-      ]
-    },
-    {
-      "ticker": "PANW",
-      "focus_score": 35,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Software / security / internet",
-      "thesis": "Cybersecurity platformization land-grab + agentic SecOps; debate = organic vs M&A-flattered NGS ARR.",
-      "next_catalyst": "2026-11-18",
-      "why": [
-        "PANW — Morgan Stanley calls it a Top Pick with a price target below the Street median"
       ]
     },
     {
@@ -1063,9 +1098,9 @@
       "hidden": false
     },
     {
-      "id": "esti-2541816846e2",
+      "id": "esti-7e30c01b2a8c",
       "asof": "2026-09-24",
-      "source_date": "2026-09-23",
+      "source_date": "2026-09-24",
       "type": "model_check",
       "priority": "high",
       "score": 72,
@@ -1079,7 +1114,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $427.3bn as of 2026-09-23, a derived +18.2% gap. Revenue comparisons require a basis check.",
+      "why_now": "Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $427.3bn as of 2026-09-24, a derived +18.2% gap. Revenue comparisons require a basis check.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -1134,7 +1169,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-23",
+      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-24",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -1152,9 +1187,9 @@
       "hidden": false
     },
     {
-      "id": "esti-59fe3c7e016c",
+      "id": "esti-4a3c9ff13452",
       "asof": "2026-09-24",
-      "source_date": "2026-09-23",
+      "source_date": "2026-09-24",
       "type": "model_check",
       "priority": "high",
       "score": 71,
@@ -1168,7 +1203,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2027 revenue at $641.0bn versus Bloomberg consensus at $544.1bn as of 2026-09-23, a derived +17.8% gap. Revenue comparisons require a basis check.",
+      "why_now": "Capstone carries 2027 revenue at $641.0bn versus Bloomberg consensus at $544.1bn as of 2026-09-24, a derived +17.8% gap. Revenue comparisons require a basis check.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -1223,7 +1258,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-23",
+      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-24",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -1241,9 +1276,9 @@
       "hidden": false
     },
     {
-      "id": "esti-79ff0536665f",
+      "id": "esti-79dbf4c88070",
       "asof": "2026-09-24",
-      "source_date": "2026-09-23",
+      "source_date": "2026-09-24",
       "type": "model_check",
       "priority": "high",
       "score": 69,
@@ -1257,7 +1292,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.76 as of 2026-09-23, a derived +15.5% gap.",
+      "why_now": "Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.76 as of 2026-09-24, a derived +15.5% gap.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the AAPL model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -1277,7 +1312,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-09-23",
+      "source": "Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-09-24",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -1423,6 +1458,261 @@
       ],
       "evidence_anchor": "🆕⚠️ TRUMP-XI, 2026-09-24 — UBS puts SPE and MEMORY as the most exposed verticals, with the ASML/Netherlands MATCH Act immersion-DUV headlines and new BIS measures on Chinese compute access via Thail",
       "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-6c54db7f7807",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-24",
+      "type": "model_check",
+      "priority": "medium",
+      "score": 66,
+      "title": "DRAM 3Q26 pricing — the canonical is now the floor, not the central case.",
+      "tickers": [
+        "MU",
+        "SKHYNIX",
+        "SAMSUNG",
+        "NVDA"
+      ],
+      "in_book": [
+        "NVDA"
+      ],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "Four of five new marks print at or above the top of TrendForce's +15-20%: BofA/Simon Woo +20-30% q/q, UBS +~26% incl. LTAs, UBS on SK hynix +23.1%, FundaAI 20-30% executed; only Mirae's +15.8% is inside. The likeliest source of the spread is LTA treatment — UBS is the only house that states its figure is LTA-inclusive.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the MU/SKHYNIX/SAMSUNG/NVDA model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "customer",
+          "detail": "HBM",
+          "from": "MU",
+          "in_book": true
+        },
+        {
+          "ticker": "AMAT",
+          "relation": "supplier",
+          "detail": "WFE",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "AMD",
+          "relation": "customer",
+          "detail": "HBM",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "ASML",
+          "relation": "supplier",
+          "detail": "litho",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "KLAC",
+          "relation": "supplier",
+          "detail": "process control",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "LRCX",
+          "relation": "supplier",
+          "detail": "NAND/HBM WFE",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "TOKYOELEC",
+          "relation": "supplier",
+          "detail": "WFE",
+          "from": "MU",
+          "in_book": false
+        }
+      ],
+      "source": "BofA + UBS + FundaAI · curated reconciliation 2026-09-24",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-24.md"
+      ],
+      "evidence_anchor": "DRAM 3Q26 pricing — the canonical is now the floor, not the central case.",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-6371413d27db",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-24",
+      "type": "contradiction",
+      "priority": "medium",
+      "score": 66,
+      "title": "HBM TAM — the ledger's canonical was 2.8x too low, on the same house's own name.",
+      "tickers": [
+        "MU",
+        "SKHYNIX",
+        "SAMSUNG",
+        "NVDA"
+      ],
+      "in_book": [
+        "NVDA"
+      ],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "meta/assumptions.md carried \"HBM TAM $35B 2025 → $100B 2028 (~40% CAGR) | Micron/JPM | 2026-05-28\". JPM's 2026-09-22 model prints HBM industry revenue at US$160.1bn (2027E) and US$282.2bn (2028E). BofA's $168bn CY30 frame now sits below JPM's CY28, so the two are no longer \"different horizons, both valid\" — they conflict on level. Ledger re-based this run; the scope note now tells readers to cite the dated row, never the retired $100bn framing.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Keep every sourced variant for MU/SKHYNIX/SAMSUNG/NVDA; identify the primary disclosure or named adjudicator that can resolve them. Do not average incompatible figures.",
+      "falsifier": "The next primary disclosure that puts the competing variants on one defined basis.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "customer",
+          "detail": "HBM",
+          "from": "MU",
+          "in_book": true
+        },
+        {
+          "ticker": "AMAT",
+          "relation": "supplier",
+          "detail": "WFE",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "AMD",
+          "relation": "customer",
+          "detail": "HBM",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "ASML",
+          "relation": "supplier",
+          "detail": "litho",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "KLAC",
+          "relation": "supplier",
+          "detail": "process control",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "LRCX",
+          "relation": "supplier",
+          "detail": "NAND/HBM WFE",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "TOKYOELEC",
+          "relation": "supplier",
+          "detail": "WFE",
+          "from": "MU",
+          "in_book": false
+        }
+      ],
+      "source": "BofA + JPM · curated reconciliation 2026-09-24",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-24.md"
+      ],
+      "evidence_anchor": "HBM TAM — the ledger's canonical was 2.8x too low, on the same house's own name.",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-8f7138a010de",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-24",
+      "type": "contradiction",
+      "priority": "medium",
+      "score": 66,
+      "title": "Hybrid bonding in memory — three sources in 24 hours, pointing two ways.",
+      "tickers": [
+        "MU",
+        "SKHYNIX",
+        "SAMSUNG",
+        "NVDA"
+      ],
+      "in_book": [
+        "NVDA"
+      ],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "Redburn (09-23): HBM4E is the insertion point, HVM 2027. UBS/ASMPT (09-22): TCB extended potentially to HBM5, volume adoption pushed out, \"in-line with comments from both Samsung and SK Hynix\". DAMNANG (09-23): Samsung has already delivered hybrid-bonded HBM4/HBM4E samples; SK hynix has not. (2) and (3) disagree on whether Samsung is the hybrid-bonding champion or the TCB extender. Both can be literally true. ➤ The test has been narrowed to a customer QUALIFICATION of a hybrid-bonded HBM4E part — not a sample, not an evaluation.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Keep every sourced variant for MU/SKHYNIX/SAMSUNG/NVDA; identify the primary disclosure or named adjudicator that can resolve them. Do not average incompatible figures.",
+      "falsifier": "The next primary disclosure that puts the competing variants on one defined basis.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "customer",
+          "detail": "HBM",
+          "from": "MU",
+          "in_book": true
+        },
+        {
+          "ticker": "AMAT",
+          "relation": "supplier",
+          "detail": "WFE",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "AMD",
+          "relation": "customer",
+          "detail": "HBM",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "ASML",
+          "relation": "supplier",
+          "detail": "litho",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "KLAC",
+          "relation": "supplier",
+          "detail": "process control",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "LRCX",
+          "relation": "supplier",
+          "detail": "NAND/HBM WFE",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "TOKYOELEC",
+          "relation": "supplier",
+          "detail": "WFE",
+          "from": "MU",
+          "in_book": false
+        }
+      ],
+      "source": "UBS · curated reconciliation 2026-09-24",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-24.md"
+      ],
+      "evidence_anchor": "Hybrid bonding in memory — three sources in 24 hours, pointing two ways.",
+      "origin": "curated_reconciliation",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
@@ -2634,6 +2924,52 @@
       "carried_from": "2026-09-21"
     },
     {
+      "id": "reco-9cee0d4abd41",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-24",
+      "type": "contradiction",
+      "priority": "medium",
+      "score": 48,
+      "title": "Morgan Stanley's four-note cyber package disagrees with itself.",
+      "tickers": [
+        "CRWD",
+        "PANW"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "The CRWD note says cyber spend moves to 2.5% of enterprise AI budgets \"from the ~1% it is today\"; the PANW and sector notes use ~1.5%. 1.5%→2.5% is a 1.67x step; 1%→2.5% is 2.5x. This is the third documented internal inconsistency in one package (the others: CRWD bull PT printed $309 in the body and $308.00 on the risk-reward page; PANW bear $250 vs $253.00). The theme keeps 1.5% and deliberately does not write it to meta/assumptions.md while the package is inconsistent.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Keep every sourced variant for CRWD/PANW; identify the primary disclosure or named adjudicator that can resolve them. Do not average incompatible figures.",
+      "falsifier": "The next primary disclosure that puts the competing variants on one defined basis.",
+      "readthrough": [
+        {
+          "ticker": "OKTA",
+          "relation": "competitor",
+          "detail": "agentic identity",
+          "from": "CRWD",
+          "in_book": false
+        },
+        {
+          "ticker": "OKTA",
+          "relation": "competitor",
+          "detail": "identity (CyberArk vs Okta)",
+          "from": "PANW",
+          "in_book": false
+        }
+      ],
+      "source": "Morgan Stanley · curated reconciliation 2026-09-24",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-24.md"
+      ],
+      "evidence_anchor": "Morgan Stanley's four-note cyber package disagrees with itself.",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
       "id": "reco-32e2a145dcb3",
       "asof": "2026-09-24",
       "source_date": "2026-09-21",
@@ -2875,6 +3211,62 @@
       "hidden": false
     },
     {
+      "id": "reco-b7e573bb3a52",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-24",
+      "type": "contradiction",
+      "priority": "watch",
+      "score": 41,
+      "title": "CXMT — the two China channels now say opposite things in the same month.",
+      "tickers": [],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "UBS's APAC tour reports large preliminary orders for CXMT G4 (1z nm) but NOT YET for G5 (1a nm). This wiki's own 2026-09-20 ingest carried the line that CXMT's G5 hit mass production two years early. Both are dated, both are sourced, and they cannot both describe the same quarter. Unresolved and flagged on themes/semicap-wfe. Separately, Bernstein's initiation has CXMT surpassing Micron on wafer capacity in 2028 (530k wpm 4Q28, \"nearly 20% globally\").",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Keep every sourced variant for the affected theme; identify the primary disclosure or named adjudicator that can resolve them. Do not average incompatible figures.",
+      "falsifier": "The next primary disclosure that puts the competing variants on one defined basis.",
+      "readthrough": [],
+      "source": "UBS + Bernstein · curated reconciliation 2026-09-24",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-24.md"
+      ],
+      "evidence_anchor": "CXMT — the two China channels now say opposite things in the same month.",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-dad19e7eafe2",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-24",
+      "type": "contradiction",
+      "priority": "watch",
+      "score": 41,
+      "title": "CoWoS 2027 — a convergence the wiki logged on 09-17 has re-split.",
+      "tickers": [],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "UBS puts industry CoWoS at 270kwpm end-'27 against JPM's 260k. Worse for anyone reusing it: no revised per-vendor split was published, so the 180 TSMC / 60 ASE / 20 Amkor decomposition is stale against the new total and must not be netted into it.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Keep every sourced variant for the affected theme; identify the primary disclosure or named adjudicator that can resolve them. Do not average incompatible figures.",
+      "falsifier": "The next primary disclosure that puts the competing variants on one defined basis.",
+      "readthrough": [],
+      "source": "JPM + UBS · curated reconciliation 2026-09-24",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-24.md"
+      ],
+      "evidence_anchor": "CoWoS 2027 — a convergence the wiki logged on 09-17 has re-split.",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
       "id": "cata-2f7870e9d8d7",
       "asof": "2026-09-24",
       "source_date": "2026-10-14",
@@ -3013,6 +3405,34 @@
       ],
       "evidence_anchor": "🆕🔴 DATED, TWO-STEP: Q2 FY27 print THURSDAY 2026-08-27 (after market close) → INVESTOR DAY MONDAY 2026-10-06, NYC. Jefferies (Curtis, 2026-08-20) splits the catalyst explicitly: the print is where",
       "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-3693103c2c31",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-24",
+      "type": "model_check",
+      "priority": "watch",
+      "score": 41,
+      "title": "Meta compute resale — the wiki's framing that \"no house has put Meta Compute revenue in a number\" is now false.",
+      "tickers": [],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "Wells Fargo's model carries 0.25 GW average 2027E and 1.00 GW 2028E of resold capacity at $20bn/GW ⇒ $5bn (2027E) and $20bn (2028E) of revenue, 1.78% / 5.38% of owned capacity. The What the NeoCloud is worth signal was re-scored ⚠ nuances → CONVERGED 09-17 → SPLIT AGAIN 09-24.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the the affected theme model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [],
+      "source": "underlying sources named in the finding · curated reconciliation 2026-09-24",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-24.md"
+      ],
+      "evidence_anchor": "Meta compute resale — the wiki's framing that \"no house has put Meta Compute revenue in a number\" is now false.",
+      "origin": "curated_reconciliation",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
@@ -3205,6 +3625,173 @@
       "feedback_note": "",
       "hidden": false,
       "carried_from": "2026-09-21"
+    },
+    {
+      "id": "reco-fa5b28fcf1e8",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-24",
+      "type": "research_idea",
+      "priority": "watch",
+      "score": 36,
+      "title": "COHR's PhotonLink TAM — a machine summary against three earnings calls.",
+      "tickers": [
+        "COHR"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "The page carries \"$15bn by 2030\" from the Q3 call, the FQ4 call and a Jefferies relay. A Bloomberg automated summary of the 09-21 conference presentation prints \"+$30bn by 2030 on top of the existing $60bn portfolio\". Logged as open drift, not a supersession — a generated summary does not overwrite a call. ➤ Pull the PhotonLink deck from Coherent IR; it settles the basis, the \"$15,000 per system or per 100 terabit I/O chip\" unit, and whether the two hyperscaler LTAs are additional to the NVIDIA agreement.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Turn the finding into a bull/base/bear question for COHR; identify the KPI and source that would make it investable.",
+      "falsifier": "No observable KPI or dated catalyst can be identified to test the hypothesis.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "COHR",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "COHR",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "COHR",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "optical/InP",
+          "from": "COHR",
+          "in_book": true
+        },
+        {
+          "ticker": "LITE",
+          "relation": "competitor",
+          "detail": "optical/InP",
+          "from": "COHR",
+          "in_book": false
+        },
+        {
+          "ticker": "AIXA",
+          "relation": "supplier",
+          "detail": "MOCVD tools",
+          "from": "COHR",
+          "in_book": false
+        },
+        {
+          "ticker": "ANET",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "COHR",
+          "in_book": false
+        }
+      ],
+      "source": "management/company primary + Jefferies + Bloomberg · curated reconciliation 2026-09-24",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-24.md"
+      ],
+      "evidence_anchor": "COHR's PhotonLink TAM — a machine summary against three earnings calls.",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-3ea04206441f",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-24",
+      "type": "research_idea",
+      "priority": "watch",
+      "score": 36,
+      "title": "CoreWeave contracted power.",
+      "tickers": [],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "UBS says \"~6 GW\" at end-2Q26; CoreWeave's own disclosure is ~3.7 GW (quarter-end) / ~4.2 GW (08-11). No bridge given — most likely a gross-facility vs IT-load basis gap, which is exactly the trap UBS itself documents three pages earlier.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Turn the finding into a bull/base/bear question for the affected theme; identify the KPI and source that would make it investable.",
+      "falsifier": "No observable KPI or dated catalyst can be identified to test the hypothesis.",
+      "readthrough": [],
+      "source": "UBS · curated reconciliation 2026-09-24",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-24.md"
+      ],
+      "evidence_anchor": "CoreWeave contracted power.",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-9d8f43988e59",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-24",
+      "type": "research_idea",
+      "priority": "watch",
+      "score": 36,
+      "title": "NBIS–Meta contract value.",
+      "tickers": [
+        "NBIS"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "UBS prints \"$12+bn / 5 yrs\"; the wiki carries a $20bn+ TCV from Barclays. Same deal, ~1.7x apart. Both retained, unreconciled.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Turn the finding into a bull/base/bear question for NBIS; identify the KPI and source that would make it investable.",
+      "falsifier": "No observable KPI or dated catalyst can be identified to test the hypothesis.",
+      "readthrough": [
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "NBIS",
+          "in_book": true
+        },
+        {
+          "ticker": "NSCALE",
+          "relation": "competitor",
+          "detail": "GPU neocloud",
+          "from": "NBIS",
+          "in_book": false
+        },
+        {
+          "ticker": "BE",
+          "relation": "supplier",
+          "detail": "fuel cells",
+          "from": "NBIS",
+          "in_book": false
+        },
+        {
+          "ticker": "OPENAI",
+          "relation": "customer",
+          "detail": "neocloud compute",
+          "from": "NBIS",
+          "in_book": false
+        }
+      ],
+      "source": "UBS · curated reconciliation 2026-09-24",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-24.md"
+      ],
+      "evidence_anchor": "NBIS–Meta contract value.",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
     },
     {
       "id": "reco-6a14ccc311b0",
