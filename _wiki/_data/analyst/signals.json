@@ -1,77 +1,62 @@
 {
-  "asof": "2026-09-23",
-  "latest_reconciliation": "reconciliation-2026-09-21.md",
+  "asof": "2026-09-24",
+  "latest_reconciliation": "reconciliation-2026-09-24.md",
   "book": {
     "asof": "2026-07-01",
     "seed": true,
     "positions": 8
   },
   "stats": {
-    "signals": 95,
-    "active": 95,
-    "high": 7,
-    "belief_changes": 0,
-    "focus_names": 44
+    "signals": 104,
+    "active": 104,
+    "high": 14,
+    "belief_changes": 4,
+    "focus_names": 47
   },
   "focus": [
     {
-      "ticker": "META",
-      "focus_score": 104,
-      "in_book": true,
-      "signal_count": 7,
-      "high_count": 1,
-      "sector": "AI — Hyperscalers & Software",
-      "thesis": "Fastest grower in Mag7 ex-GPU; bear = capital intensity and negative incremental ROIC.",
-      "next_catalyst": "2026-09-23",
-      "why": [
-        "META — 2026-09-23: 2026-09-23/24 — META CONNECT IS NOW A FORMALLY DATED, NAMED-WATCH-LIST CATALYST WITH A…",
-        "META: the PT went up 24% while the estimates went down — and the apparent size of the cut is mostly below the line",
-        "D-9 · pre-existing house-vs-consensus gaps re-confirmed (not new tonight, but they frame the new sources)"
-      ]
-    },
-    {
       "ticker": "NVDA",
-      "focus_score": 95,
+      "focus_score": 97,
       "in_book": true,
-      "signal_count": 7,
-      "high_count": 1,
+      "signal_count": 9,
+      "high_count": 3,
       "sector": "AI — Semis & Compute",
       "thesis": "Full-stack AI-factory platform at +85% rev; debate is demand sustainability vs ASIC erosion.",
       "next_catalyst": "2026-09-24",
       "why": [
+        "NVDA — derived thesis/debate state changed since the prior daily snapshot",
         "NVDA — 2026-09-24: TRUMP-XI MEETING, 2026-09-24 — the dated headline-risk window, and UBS says the newsflow…",
-        "NVDA: Redburn's own bull case quantifies the bear case — $126.5bn of FY27 demand is vendor-stimulated",
-        "D-6 · NVDA — both the house AND consensus sit below the company's own growth framing"
+        "NVDA — catalyst passed without a logged outcome"
+      ]
+    },
+    {
+      "ticker": "META",
+      "focus_score": 91,
+      "in_book": true,
+      "signal_count": 11,
+      "high_count": 5,
+      "sector": "AI — Hyperscalers & Software",
+      "thesis": "Fastest grower in Mag7 ex-GPU; bear = capital intensity and negative incremental ROIC.",
+      "next_catalyst": "",
+      "why": [
+        "META — catalyst passed without a logged outcome",
+        "META — catalyst passed without a logged outcome",
+        "META — catalyst passed without a logged outcome"
       ]
     },
     {
       "ticker": "GOOG",
-      "focus_score": 89,
+      "focus_score": 91,
       "in_book": true,
       "signal_count": 7,
       "high_count": 3,
       "sector": "AI — Hyperscalers & Software",
       "thesis": "Full-stack compounder (Search +17%, Cloud +82%); debate is valuation and capital intensity, not demand.",
-      "next_catalyst": "2026-09-23",
+      "next_catalyst": "",
       "why": [
+        "GOOG — catalyst passed without a logged outcome",
         "GOOG — 2026 revenue house view is 18% above consensus",
-        "GOOG — 2027 revenue house view is 18% above consensus",
-        "GOOG — 2026-09-23: Koray Kavukcuoglu's first public outing — The Information's AI Agenda Live, San Francisco,…"
-      ]
-    },
-    {
-      "ticker": "MSFT",
-      "focus_score": 78,
-      "in_book": true,
-      "signal_count": 8,
-      "high_count": 0,
-      "sector": "AI — Hyperscalers & Software",
-      "thesis": "AI ARR >$37B/+123%; swing is capex (CY27 ~$276B) vs Azure revenue + OpenAI concentration.",
-      "next_catalyst": "2026-11-17",
-      "why": [
-        "Redburn holds the STREET LOW on three names at once, and BBG's own panel already proves it",
-        "MSFT: a 45% price-target spread between two houses, 24 hours apart, with no new company disclosure in between",
-        "D-7 · 🔴 MSFT — Jefferies' M365 series was published one day before the segment restatement and is now ~2pts low"
+        "GOOG — 2027 revenue house view is 18% above consensus"
       ]
     },
     {
@@ -79,28 +64,13 @@
       "focus_score": 76,
       "in_book": true,
       "signal_count": 2,
-      "high_count": 1,
+      "high_count": 2,
       "sector": "Consumer / Internet / Other",
       "thesis": "Strong franchise + memory-dislocation advantage; bear = AI catch-up + price elasticity.",
       "next_catalyst": "2026-10-01",
       "why": [
         "AAPL — 2026 EPS house view is 16% above consensus",
         "AAPL — 2026-10-01: THE EU APP STORE COMMISSION CHANGES TAKE EFFECT, AND THE RATES ARE NOW FINAL: 26% for App…"
-      ]
-    },
-    {
-      "ticker": "AMZN",
-      "focus_score": 76,
-      "in_book": true,
-      "signal_count": 6,
-      "high_count": 0,
-      "sector": "AI — Hyperscalers & Software",
-      "thesis": "AWS re-acceleration (+28%) + in-house silicon (Trainium); debate = $200B capex/ROIC.",
-      "next_catalyst": "",
-      "why": [
-        "Redburn holds the STREET LOW on three names at once, and BBG's own panel already proves it",
-        "AMZN — Bernstein is +16% / +27% above consensus on FY27 / FY28 EBIT and still carries a PT below consensus",
-        "The relay that reached the wiki at 21:00 carried a mechanism that is not in the primary — and it pointed the opposite way"
       ]
     },
     {
@@ -117,8 +87,38 @@
       ]
     },
     {
+      "ticker": "MSFT",
+      "focus_score": 72,
+      "in_book": true,
+      "signal_count": 8,
+      "high_count": 0,
+      "sector": "AI — Hyperscalers & Software",
+      "thesis": "AI ARR >$37B/+123%; swing is capex (CY27 ~$276B) vs Azure revenue + OpenAI concentration.",
+      "next_catalyst": "2026-11-17",
+      "why": [
+        "Redburn holds the STREET LOW on three names at once, and BBG's own panel already proves it",
+        "MSFT: a 45% price-target spread between two houses, 24 hours apart, with no new company disclosure in between",
+        "D-7 · 🔴 MSFT — Jefferies' M365 series was published one day before the segment restatement and is now ~2pts low"
+      ]
+    },
+    {
+      "ticker": "AMZN",
+      "focus_score": 70,
+      "in_book": true,
+      "signal_count": 6,
+      "high_count": 0,
+      "sector": "AI — Hyperscalers & Software",
+      "thesis": "AWS re-acceleration (+28%) + in-house silicon (Trainium); debate = $200B capex/ROIC.",
+      "next_catalyst": "",
+      "why": [
+        "Redburn holds the STREET LOW on three names at once, and BBG's own panel already proves it",
+        "AMZN — Bernstein is +16% / +27% above consensus on FY27 / FY28 EBIT and still carries a PT below consensus",
+        "The relay that reached the wiki at 21:00 carried a mechanism that is not in the primary — and it pointed the opposite way"
+      ]
+    },
+    {
       "ticker": "ORCL",
-      "focus_score": 71,
+      "focus_score": 65,
       "in_book": false,
       "signal_count": 6,
       "high_count": 0,
@@ -128,40 +128,81 @@
       "why": [
         "Redburn holds the STREET LOW on three names at once, and BBG's own panel already proves it",
         "ORCL — 2026-10-28: ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as \"Investor Day in…",
-        "ORCL: the Sell rests entirely on out-year margin, and the only clean same-basis check says revenue is fine"
+        "D-5 · ORCL — the PT is 18% above consensus, and the stated downside case IS consensus"
       ]
     },
     {
       "ticker": "CIEN",
-      "focus_score": 68,
+      "focus_score": 64,
       "in_book": false,
-      "signal_count": 6,
+      "signal_count": 4,
       "high_count": 0,
       "sector": "Optical / Networking",
       "thesis": "Optical/DCI leader; demand outruns supply, debate purely valuation (~85x NTM).",
       "next_catalyst": "",
       "why": [
         "CIEN — catalyst passed without a logged outcome",
-        "CIEN — catalyst passed without a logged outcome",
-        "CIEN — catalyst passed without a logged outcome"
+        "CIEN 2029: the revenue target is already in the curve; the entire surprise is margin — but the comparison is a year offset and must be labelled as such",
+        "CIEN: management's own \"~5x cash generated from operations\" does not close against the published FY25 base"
       ]
     },
     {
-      "ticker": "BKNG",
-      "focus_score": 67,
+      "ticker": "LITE",
+      "focus_score": 64,
+      "in_book": false,
+      "signal_count": 4,
+      "high_count": 0,
+      "sector": "Optical / Networking",
+      "thesis": "US photonics pure-play (rev +90%); demand isn't the question, supply/execution is.",
+      "next_catalyst": "2026-10-14",
+      "why": [
+        "LITE — catalyst passed without a logged outcome",
+        "LITE — catalyst passed without a logged outcome",
+        "LITE — 2026-10-14: CITI'S CATALYST WATCH (UPSIDE) EXPIRES. A dated, mechanical sell-side event with a…"
+      ]
+    },
+    {
+      "ticker": "BESI",
+      "focus_score": 62,
       "in_book": false,
       "signal_count": 1,
       "high_count": 0,
-      "sector": "Consumer / Internet / Other",
-      "thesis": "World's #1 OTA; binary debate on agentic LLMs (TAM expander vs disintermediation).",
-      "next_catalyst": "2026-09-23",
+      "sector": "Semiconductor equipment (semicap)",
+      "thesis": "Hybrid-bonding / TCB leader for HBM and 2.5D/3D stacking (AI ~50% of 2025 orders, GM 63-66%); AMAT hardware partner on the high-end HB roadmap.",
+      "next_catalyst": "",
       "why": [
-        "BKNG — 2026-09-23: META CONNECT, AND THE SPECIFIC THING TO WATCH FOR BKNG IS A ROUTE CHANGE, NOT A PRODUCT…"
+        "BESI — derived thesis/debate state changed since the prior daily snapshot"
+      ]
+    },
+    {
+      "ticker": "CSCO",
+      "focus_score": 62,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Optical / Networking",
+      "thesis": "Incumbent re-rating to AI-infra (orders +35%); bear prefers ANET, flags pull-forward.",
+      "next_catalyst": "",
+      "why": [
+        "CSCO — derived thesis/debate state changed since the prior daily snapshot"
+      ]
+    },
+    {
+      "ticker": "RDDT",
+      "focus_score": 62,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Software / security / internet",
+      "thesis": "Dual engine: ads + AI data-licensing; binary on Google AI-Overviews referral-traffic cannibalization.",
+      "next_catalyst": "",
+      "why": [
+        "RDDT — derived thesis/debate state changed since the prior daily snapshot"
       ]
     },
     {
       "ticker": "CRWV",
-      "focus_score": 67,
+      "focus_score": 61,
       "in_book": false,
       "signal_count": 4,
       "high_count": 0,
@@ -175,71 +216,42 @@
       ]
     },
     {
-      "ticker": "NBIS",
-      "focus_score": 61,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Systems & neoclouds",
-      "thesis": "Highest-octane listed neocloud (ARR→$7-9B, NVDA stake); capex burn + circular-financing scrutiny.",
-      "next_catalyst": "",
-      "why": [
-        "Redburn holds the STREET LOW on three names at once, and BBG's own panel already proves it"
-      ]
-    },
-    {
-      "ticker": "DDOG",
-      "focus_score": 60,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "AI · Data infrastructure & observability",
-      "thesis": "Cleanest public proxy for AI-native cloud consumption (+36%, FY26 guide +30%); debate = 13-14x sales + AI-native concentration vs non-AI base accelerating.",
-      "next_catalyst": "",
-      "why": [
-        "The relay that reached the wiki at 21:00 carried a mechanism that is not in the primary — and it pointed the opposite way",
-        "DDOG — above consensus on EPS in both years, 18% below on PT"
-      ]
-    },
-    {
-      "ticker": "LITE",
-      "focus_score": 60,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "Optical / Networking",
-      "thesis": "US photonics pure-play (rev +90%); demand isn't the question, supply/execution is.",
-      "next_catalyst": "",
-      "why": [
-        "LITE — catalyst passed without a logged outcome",
-        "Optical: a falsifiable engineering attack on COHR's laser — and the \"LITE wins\" read does not follow"
-      ]
-    },
-    {
-      "ticker": "OPENAI",
-      "focus_score": 60,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "AI labs (private)",
-      "thesis": "Private frontier lab (ChatGPT/GPT); scale + distribution vs cash burn + sub-50% share; Microsoft-anchored. No public financials.",
-      "next_catalyst": "",
-      "why": [
-        "The relay that reached the wiki at 21:00 carried a mechanism that is not in the primary — and it pointed the opposite way",
-        "Cumulative burn: the company's own plan is 2.5x the number this page carried"
-      ]
-    },
-    {
-      "ticker": "ADI",
+      "ticker": "ADVANTEST",
       "focus_score": 58,
       "in_book": false,
       "signal_count": 1,
       "high_count": 0,
-      "sector": "Analog & processors",
-      "thesis": "Highest-quality large-cap analog; industrial recovery + datacenter-power (Empower); crowded/premium.",
+      "sector": "Semiconductor equipment (semicap)",
+      "thesis": "#1 ATE in a duopoly with Teradyne; ~80% of SoC test is HPC/AI and effectively sole SoC tester at the GPU/CoWoS leaders — levered to test intensity, not wafer st",
       "next_catalyst": "",
       "why": [
-        "ADI — catalyst passed without a logged outcome"
+        "ADVANTEST — catalyst passed without a logged outcome"
+      ]
+    },
+    {
+      "ticker": "APP",
+      "focus_score": 58,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Software / security / internet",
+      "thesis": "AXON AI ad engine; eCommerce inflection + fading META threat the bull, drawn-out eComm ramp the bear (DB Buy $660 / GS Neutral $585).",
+      "next_catalyst": "",
+      "why": [
+        "APP — catalyst passed without a logged outcome"
+      ]
+    },
+    {
+      "ticker": "BKNG",
+      "focus_score": 58,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Consumer / Internet / Other",
+      "thesis": "World's #1 OTA; binary debate on agentic LLMs (TAM expander vs disintermediation).",
+      "next_catalyst": "2027-01-01",
+      "why": [
+        "BKNG — catalyst passed without a logged outcome"
       ]
     },
     {
@@ -256,29 +268,29 @@
       ]
     },
     {
-      "ticker": "ESTC",
+      "ticker": "MU",
       "focus_score": 58,
       "in_book": false,
       "signal_count": 1,
       "high_count": 0,
-      "sector": "AI · Data infrastructure & observability",
-      "thesis": "Permission-aware search/context plane straddling observability + security; +15% with 37% of large customers on AI; stable at 4-5x sales, not inflecting.",
-      "next_catalyst": "",
+      "sector": "AI — Semis & Compute",
+      "thesis": "Pure-play on AI memory intensity (HBM sold-out CY26); debate = peak earnings vs run-rate.",
+      "next_catalyst": "2026-09-30",
       "why": [
-        "ESTC — catalyst passed without a logged outcome"
+        "MU — 2026-09-30: F4Q26 (Aug) PRINT — DUE ~2026-09-30, AND THE BOGEY SET IS NOW EXPLICIT AND COMPARABLE…"
       ]
     },
     {
-      "ticker": "ON",
+      "ticker": "OKTA",
       "focus_score": 58,
       "in_book": false,
       "signal_count": 1,
       "high_count": 0,
-      "sector": "Analog & processors",
-      "thesis": "Bottoming auto/SiC power IDM + AI-DC-power (800V) kicker; share not TAM (Citi Neutral vs TXN).",
-      "next_catalyst": "",
+      "sector": "Software / security / internet",
+      "thesis": "Neutral identity control plane for the agent era (cRPO re-accel to +14%, NRR turn); bear = seat model + MSFT Entra / PANW-CyberArk bundling.",
+      "next_catalyst": "2026-12-02",
       "why": [
-        "ON — catalyst passed without a logged outcome"
+        "OKTA — catalyst passed without a logged outcome"
       ]
     },
     {
@@ -289,9 +301,9 @@
       "high_count": 0,
       "sector": "Consumer / Internet / Other",
       "thesis": "Winner-take-most demand aggregator (~$10B FCF); everything hinges on the AV binary.",
-      "next_catalyst": "2026-09-23",
+      "next_catalyst": "",
       "why": [
-        "UBER — 2026-09-23: META CONNECT, AND THE UBER-SPECIFIC THING TO WATCH IS A ROUTE CHANGE, NOT A PRODUCT…"
+        "UBER — catalyst passed without a logged outcome"
       ]
     },
     {
@@ -309,6 +321,47 @@
       ]
     },
     {
+      "ticker": "NBIS",
+      "focus_score": 55,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Systems & neoclouds",
+      "thesis": "Highest-octane listed neocloud (ARR→$7-9B, NVDA stake); capex burn + circular-financing scrutiny.",
+      "next_catalyst": "",
+      "why": [
+        "Redburn holds the STREET LOW on three names at once, and BBG's own panel already proves it"
+      ]
+    },
+    {
+      "ticker": "DDOG",
+      "focus_score": 54,
+      "in_book": false,
+      "signal_count": 2,
+      "high_count": 0,
+      "sector": "AI · Data infrastructure & observability",
+      "thesis": "Cleanest public proxy for AI-native cloud consumption (+36%, FY26 guide +30%); debate = 13-14x sales + AI-native concentration vs non-AI base accelerating.",
+      "next_catalyst": "",
+      "why": [
+        "The relay that reached the wiki at 21:00 carried a mechanism that is not in the primary — and it pointed the opposite way",
+        "DDOG — above consensus on EPS in both years, 18% below on PT"
+      ]
+    },
+    {
+      "ticker": "OPENAI",
+      "focus_score": 54,
+      "in_book": false,
+      "signal_count": 2,
+      "high_count": 0,
+      "sector": "AI labs (private)",
+      "thesis": "Private frontier lab (ChatGPT/GPT); scale + distribution vs cash burn + sub-50% share; Microsoft-anchored. No public financials.",
+      "next_catalyst": "",
+      "why": [
+        "The relay that reached the wiki at 21:00 carried a mechanism that is not in the primary — and it pointed the opposite way",
+        "Cumulative burn: the company's own plan is 2.5x the number this page carried"
+      ]
+    },
+    {
       "ticker": "HPE",
       "focus_score": 49,
       "in_book": false,
@@ -319,19 +372,6 @@
       "next_catalyst": "2026-09-30",
       "why": [
         "HPE — 2026-09-30: HPE NETWORKING ANALYST DAY — 2026-09-30. This is where the \"segment returns to HPE's…"
-      ]
-    },
-    {
-      "ticker": "OKTA",
-      "focus_score": 49,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Software / security / internet",
-      "thesis": "Neutral identity control plane for the agent era (cRPO re-accel to +14%, NRR turn); bear = seat model + MSFT Entra / PANW-CyberArk bundling.",
-      "next_catalyst": "2026-09-23",
-      "why": [
-        "OKTA — 2026-09-23: Oktane 2026, Las Vegas; INVESTOR SESSION 11am-12pm PT. JPM (Brian Essex, OW, px $190.02 on…"
       ]
     },
     {
@@ -400,19 +440,6 @@
       "why": [
         "SMTC — latest earnings transcript absent",
         "SMTC — 2026-10-15: INVESTOR / ANALYST DAY, San Jose. The single most important dated event on this page,…"
-      ]
-    },
-    {
-      "ticker": "COHR",
-      "focus_score": 43,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Optical / Networking",
-      "thesis": "InP chokepoint in AI interconnect; NVIDIA stake + CPO deal; bear is relative vs LITE.",
-      "next_catalyst": "",
-      "why": [
-        "Optical: a falsifiable engineering attack on COHR's laser — and the \"LITE wins\" read does not follow"
       ]
     },
     {
@@ -513,8 +540,21 @@
       ]
     },
     {
+      "ticker": "COHR",
+      "focus_score": 37,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Optical / Networking",
+      "thesis": "InP chokepoint in AI interconnect; NVIDIA stake + CPO deal; bear is relative vs LITE.",
+      "next_catalyst": "",
+      "why": [
+        "Optical: a falsifiable engineering attack on COHR's laser — and the \"LITE wins\" read does not follow"
+      ]
+    },
+    {
       "ticker": "AMAT",
-      "focus_score": 36,
+      "focus_score": 35,
       "in_book": false,
       "signal_count": 1,
       "high_count": 0,
@@ -619,92 +659,90 @@
   ],
   "signals": [
     {
-      "id": "cata-a2fece2adf44",
-      "asof": "2026-09-23",
-      "source_date": "2026-09-23",
-      "event_date": "2026-09-23",
-      "type": "catalyst",
+      "id": "beli-4e4ac4f61067",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-24",
+      "type": "narrative_shift",
       "priority": "high",
-      "score": 87,
-      "title": "META — 2026-09-23: 2026-09-23/24 — META CONNECT IS NOW A FORMALLY DATED, NAMED-WATCH-LIST CATALYST WITH A…",
+      "score": 80,
+      "title": "NVDA — derived thesis/debate state changed since the prior daily snapshot",
       "tickers": [
-        "META"
+        "NVDA"
       ],
       "in_book": [
-        "META"
+        "NVDA"
       ],
       "impact": "high",
       "urgency": "immediate",
-      "confidence": "medium",
-      "why_now": "🆕🔴🔴 2026-09-23/24 — META CONNECT IS NOW A FORMALLY DATED, NAMED-WATCH-LIST CATALYST WITH A HOUSE POSITION ON IT: CITI HAS OPENED AN UPSIDE 90-DAY CATALYST WATCH ON META EXPLICITLY AHEAD OF IT. (",
-      "belief_update": "A dated event can resolve or reframe an open debate.",
-      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
-      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "confidence": "high",
+      "why_now": "(/run-inbox, WORK UNIT E) — 2 PRIMARIES, neither of which is a covering NVDA note with a rating action: Rothschild & Co Redburn · Nabeel Aziz (with Timm Schulze-Melander), \"Bondernomics\" (2026-09-23, 57pp — a BE SEMICONDUCTOR note: BESI Buy retained, PT €250 cut from €350; Redburn's NVIDIA Buy appears only as a footnote disclosure and matches the standing PT $325 call from 09-21) and UBS · Gaudois/Abrams/Lin/Arcuri et al., \"Global I/O: 3Q26 APAC Tech Tour\" (2026-09-22, 27pp, 40 company meetings; no NVDA rating or…",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the NVDA thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
       "readthrough": [
         {
           "ticker": "AVGO",
-          "relation": "supplier",
-          "detail": "custom ASIC",
-          "from": "META",
+          "relation": "competitor",
+          "detail": "merchant vs custom ASIC",
+          "from": "NVDA",
           "in_book": true
         },
         {
-          "ticker": "NVDA",
-          "relation": "supplier",
+          "ticker": "AMZN",
+          "relation": "customer",
           "detail": "GPUs",
-          "from": "META",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "customer",
+          "detail": "GPUs",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "META",
+          "relation": "customer",
+          "detail": "GPUs",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "GPUs",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "TSM",
+          "relation": "supplier",
+          "detail": "foundry N3/N2 + CoWoS",
+          "from": "NVDA",
           "in_book": true
         },
         {
           "ticker": "AMD",
-          "relation": "supplier",
-          "detail": "MI GPUs",
-          "from": "META",
-          "in_book": false
-        },
-        {
-          "ticker": "GLW",
-          "relation": "supplier",
-          "detail": "optical fiber (LTA)",
-          "from": "META",
-          "in_book": false
-        },
-        {
-          "ticker": "SNDK",
-          "relation": "supplier",
-          "detail": "NAND/SSD",
-          "from": "META",
-          "in_book": false
-        },
-        {
-          "ticker": "STX",
-          "relation": "supplier",
-          "detail": "nearline HDD",
-          "from": "META",
-          "in_book": false
-        },
-        {
-          "ticker": "WDC",
-          "relation": "supplier",
-          "detail": "nearline HDD",
-          "from": "META",
+          "relation": "competitor",
+          "detail": "AI accelerators",
+          "from": "NVDA",
           "in_book": false
         }
       ],
-      "source": "META page catalyst ledger; underlying source/date retained in the catalyst text",
+      "source": "NVDA page Changelog 2026-09-24",
       "evidence_paths": [
-        "_meta/catalysts.md",
-        "META.md"
+        "NVDA.md"
       ],
-      "evidence_anchor": "🆕🔴🔴 2026-09-23/24 — META CONNECT IS NOW A FORMALLY DATED, NAMED-WATCH-LIST CATALYST WITH A HOUSE POSITION ON IT: CITI HAS OPENED AN UPSIDE 90-DAY CATALYST WATCH ON META EXPLICITLY AHEAD OF IT. (",
-      "origin": "catalyst_calendar",
+      "evidence_anchor": "(/run-inbox, WORK UNIT E) — 2 PRIMARIES, neither of which is a covering NVDA note with a rating action: Rothschild & Co Redburn · Nabeel Aziz (with Timm Schulze-Melander), \"Bondernomics\" (2026-09-23, 57pp — a BE SEMICONDUCTOR note: BESI Buy retained, PT €250 cut from €350; Redburn's NVIDIA Buy appears only as a footnote disclosure and matches the standing PT $325 call from 09-21) and UBS · Gaudois/Abrams/Lin/Arcuri et al., \"Global I/O: 3Q26 APAC Tech Tour\" (2026-09-22, 27pp, 40 company meetings; no NVDA rating or…",
+      "origin": "belief_diff",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
     },
     {
       "id": "cata-eb95103055e4",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-24",
       "event_date": "2026-09-24",
       "type": "catalyst",
@@ -787,8 +825,246 @@
       "hidden": false
     },
     {
+      "id": "post-73c9691120c0",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-23",
+      "event_date": "2026-09-23",
+      "type": "postmortem",
+      "priority": "high",
+      "score": 74,
+      "title": "GOOG — catalyst passed without a logged outcome",
+      "tickers": [
+        "GOOG"
+      ],
+      "in_book": [
+        "GOOG"
+      ],
+      "impact": "high",
+      "urgency": "overdue",
+      "confidence": "high",
+      "why_now": "🆕 Koray Kavukcuoglu's first public outing — The Information's AI Agenda Live, San Francisco, 2026-09-23. Billed topics include integrating frontier models across Search and the multi-billion-user",
+      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
+      "action": "Write a source-attributed bull won|bear won|neutral outcome for GOOG in outcomes.md.",
+      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
+      "readthrough": [],
+      "source": "Catalyst outcome ledger",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "_meta/outcomes.md"
+      ],
+      "evidence_anchor": "🆕 Koray Kavukcuoglu's first public outing — The Information's AI Agenda Live, San Francisco, 2026-09-23. Billed topics include integrating frontier models across Search and the multi-billion-user",
+      "origin": "outcome_loop",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "post-42cb1ec8c906",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-23",
+      "event_date": "2026-09-23",
+      "type": "postmortem",
+      "priority": "high",
+      "score": 74,
+      "title": "META — catalyst passed without a logged outcome",
+      "tickers": [
+        "META"
+      ],
+      "in_book": [
+        "META"
+      ],
+      "impact": "high",
+      "urgency": "overdue",
+      "confidence": "high",
+      "why_now": "🆕 2026-09-23 (Wednesday) — Meta Connect 2026 developer conference, CEO keynote 4pm PT. Expected: next-gen Ray-Ban smart glasses + a four-model AI-glasses lineup, a preview of \"Project Phoeni",
+      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
+      "action": "Write a source-attributed bull won|bear won|neutral outcome for META in outcomes.md.",
+      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
+      "readthrough": [],
+      "source": "Catalyst outcome ledger",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "_meta/outcomes.md"
+      ],
+      "evidence_anchor": "🆕 2026-09-23 (Wednesday) — Meta Connect 2026 developer conference, CEO keynote 4pm PT. Expected: next-gen Ray-Ban smart glasses + a four-model AI-glasses lineup, a preview of \"Project Phoeni",
+      "origin": "outcome_loop",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "post-aa70dc6c742d",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-23",
+      "event_date": "2026-09-23",
+      "type": "postmortem",
+      "priority": "high",
+      "score": 74,
+      "title": "META — catalyst passed without a logged outcome",
+      "tickers": [
+        "META"
+      ],
+      "in_book": [
+        "META"
+      ],
+      "impact": "high",
+      "urgency": "overdue",
+      "confidence": "high",
+      "why_now": "🆕🔴🔴🔴 2026-09-23 (WEDNESDAY, TWO DAYS OUT) — META CONNECT, AND A SEVENTH HOUSE HAS NOW PRE-POSITIONED FOR IT WITH A PRICE TARGET RAISED 24.4% ON CUT ESTIMATES. (Wells Fargo Securities · Ken Gawre",
+      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
+      "action": "Write a source-attributed bull won|bear won|neutral outcome for META in outcomes.md.",
+      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
+      "readthrough": [],
+      "source": "Catalyst outcome ledger",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "_meta/outcomes.md"
+      ],
+      "evidence_anchor": "🆕🔴🔴🔴 2026-09-23 (WEDNESDAY, TWO DAYS OUT) — META CONNECT, AND A SEVENTH HOUSE HAS NOW PRE-POSITIONED FOR IT WITH A PRICE TARGET RAISED 24.4% ON CUT ESTIMATES. (Wells Fargo Securities · Ken Gawre",
+      "origin": "outcome_loop",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "post-7f3b0d7fa477",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-23",
+      "event_date": "2026-09-23",
+      "type": "postmortem",
+      "priority": "high",
+      "score": 74,
+      "title": "META — catalyst passed without a logged outcome",
+      "tickers": [
+        "META"
+      ],
+      "in_book": [
+        "META"
+      ],
+      "impact": "high",
+      "urgency": "overdue",
+      "confidence": "high",
+      "why_now": "🆕🔴🔴 META CONNECT — 2026-09-23/24. Both UBS (exact dates) and MS (\"25 days away\" as of 08-30) name it as the product catalyst the whole re-rating argument depends on. Watch for: the Watermelon",
+      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
+      "action": "Write a source-attributed bull won|bear won|neutral outcome for META in outcomes.md.",
+      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
+      "readthrough": [],
+      "source": "Catalyst outcome ledger",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "_meta/outcomes.md"
+      ],
+      "evidence_anchor": "🆕🔴🔴 META CONNECT — 2026-09-23/24. Both UBS (exact dates) and MS (\"25 days away\" as of 08-30) name it as the product catalyst the whole re-rating argument depends on. Watch for: the Watermelon",
+      "origin": "outcome_loop",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "post-254ddff27f41",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-23",
+      "event_date": "2026-09-23",
+      "type": "postmortem",
+      "priority": "high",
+      "score": 74,
+      "title": "META — catalyst passed without a logged outcome",
+      "tickers": [
+        "META"
+      ],
+      "in_book": [
+        "META"
+      ],
+      "impact": "high",
+      "urgency": "overdue",
+      "confidence": "high",
+      "why_now": "🆕🔴🔴 2026-09-23/24 — META CONNECT IS NOW A FORMALLY DATED, NAMED-WATCH-LIST CATALYST WITH A HOUSE POSITION ON IT: CITI HAS OPENED AN UPSIDE 90-DAY CATALYST WATCH ON META EXPLICITLY AHEAD OF IT. (",
+      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
+      "action": "Write a source-attributed bull won|bear won|neutral outcome for META in outcomes.md.",
+      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
+      "readthrough": [],
+      "source": "Catalyst outcome ledger",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "_meta/outcomes.md"
+      ],
+      "evidence_anchor": "🆕🔴🔴 2026-09-23/24 — META CONNECT IS NOW A FORMALLY DATED, NAMED-WATCH-LIST CATALYST WITH A HOUSE POSITION ON IT: CITI HAS OPENED AN UPSIDE 90-DAY CATALYST WATCH ON META EXPLICITLY AHEAD OF IT. (",
+      "origin": "outcome_loop",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "post-6af0bdeacada",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-23",
+      "event_date": "2026-09-23",
+      "type": "postmortem",
+      "priority": "high",
+      "score": 74,
+      "title": "META — catalyst passed without a logged outcome",
+      "tickers": [
+        "META"
+      ],
+      "in_book": [
+        "META"
+      ],
+      "impact": "high",
+      "urgency": "overdue",
+      "confidence": "high",
+      "why_now": "🆕 2026-09-23/24 — META CONNECT. MS flags it as the next scheduled product venue \"for more product updates\", with Hatch expected to launch \"in the coming weeks\" and the next model, 'Water",
+      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
+      "action": "Write a source-attributed bull won|bear won|neutral outcome for META in outcomes.md.",
+      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
+      "readthrough": [],
+      "source": "Catalyst outcome ledger",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "_meta/outcomes.md"
+      ],
+      "evidence_anchor": "🆕 2026-09-23/24 — META CONNECT. MS flags it as the next scheduled product venue \"for more product updates\", with Hatch expected to launch \"in the coming weeks\" and the next model, 'Water",
+      "origin": "outcome_loop",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "post-240b9f8fdf65",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-08",
+      "event_date": "2026-09-08",
+      "type": "postmortem",
+      "priority": "high",
+      "score": 74,
+      "title": "NVDA — catalyst passed without a logged outcome",
+      "tickers": [
+        "NVDA"
+      ],
+      "in_book": [
+        "NVDA"
+      ],
+      "impact": "high",
+      "urgency": "overdue",
+      "confidence": "high",
+      "why_now": "🆕⚠️ RACK POWER AS A DATED PRODUCT GATE — AND THE 800V BASIS GUARD THAT GOES WITH IT. \"Vendors note Rubin at 227kW TDP already approaching the limits of in-rack power with designs supporting 4",
+      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
+      "action": "Write a source-attributed bull won|bear won|neutral outcome for NVDA in outcomes.md.",
+      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
+      "readthrough": [],
+      "source": "Catalyst outcome ledger",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "_meta/outcomes.md"
+      ],
+      "evidence_anchor": "🆕⚠️ RACK POWER AS A DATED PRODUCT GATE — AND THE 800V BASIS GUARD THAT GOES WITH IT. \"Vendors note Rubin at 227kW TDP already approaching the limits of in-rack power with designs supporting 4",
+      "origin": "outcome_loop",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
       "id": "esti-2541816846e2",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-23",
       "type": "model_check",
       "priority": "high",
@@ -877,7 +1153,7 @@
     },
     {
       "id": "esti-59fe3c7e016c",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-23",
       "type": "model_check",
       "priority": "high",
@@ -966,7 +1242,7 @@
     },
     {
       "id": "esti-79ff0536665f",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-23",
       "type": "model_check",
       "priority": "high",
@@ -1019,84 +1295,49 @@
       "hidden": false
     },
     {
-      "id": "cata-dce3c37069bc",
-      "asof": "2026-09-23",
-      "source_date": "2026-09-23",
-      "event_date": "2026-09-23",
+      "id": "cata-aff41b9df817",
+      "asof": "2026-09-24",
+      "source_date": "2026-10-01",
+      "event_date": "2026-10-01",
       "type": "catalyst",
       "priority": "high",
       "score": 69,
-      "title": "GOOG — 2026-09-23: Koray Kavukcuoglu's first public outing — The Information's AI Agenda Live, San Francisco,…",
+      "title": "AAPL — 2026-10-01: THE EU APP STORE COMMISSION CHANGES TAKE EFFECT, AND THE RATES ARE NOW FINAL: 26% for App…",
       "tickers": [
-        "GOOG"
+        "AAPL"
       ],
       "in_book": [
-        "GOOG"
+        "AAPL"
       ],
       "impact": "high",
-      "urgency": "immediate",
+      "urgency": "this week",
       "confidence": "medium",
-      "why_now": "🆕 Koray Kavukcuoglu's first public outing — The Information's AI Agenda Live, San Francisco, 2026-09-23. Billed topics include integrating frontier models across Search and the multi-billion-user",
+      "why_now": "🆕🔴 2026-10-01 — THE EU APP STORE COMMISSION CHANGES TAKE EFFECT, AND THE RATES ARE NOW FINAL: 26% for App Store apps using Apple IAP (15% for certain programs and post-year-one auto-renewals), 20% f",
       "belief_update": "A dated event can resolve or reframe an open debate.",
       "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
       "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
       "readthrough": [
         {
-          "ticker": "AVGO",
+          "ticker": "TSM",
           "relation": "supplier",
-          "detail": "custom ASIC (TPU)",
-          "from": "GOOG",
+          "detail": "foundry",
+          "from": "AAPL",
           "in_book": true
         },
         {
-          "ticker": "NVDA",
+          "ticker": "ARM",
           "relation": "supplier",
-          "detail": "GPUs",
-          "from": "GOOG",
-          "in_book": true
-        },
-        {
-          "ticker": "SNOW",
-          "relation": "competitor",
-          "detail": "warehouse vs BigQuery",
-          "from": "GOOG",
-          "in_book": false
-        },
-        {
-          "ticker": "ANTHROPIC",
-          "relation": "customer",
-          "detail": "TPU compute",
-          "from": "GOOG",
-          "in_book": false
-        },
-        {
-          "ticker": "BE",
-          "relation": "supplier",
-          "detail": "on-site fuel cells",
-          "from": "GOOG",
-          "in_book": false
-        },
-        {
-          "ticker": "CIEN",
-          "relation": "supplier",
-          "detail": "DCI/optical",
-          "from": "GOOG",
-          "in_book": false
-        },
-        {
-          "ticker": "COHR",
-          "relation": "supplier",
-          "detail": "optical",
-          "from": "GOOG",
+          "detail": "IP",
+          "from": "AAPL",
           "in_book": false
         }
       ],
-      "source": "GOOG page catalyst ledger; underlying source/date retained in the catalyst text",
+      "source": "AAPL page catalyst ledger; underlying source/date retained in the catalyst text",
       "evidence_paths": [
         "_meta/catalysts.md",
-        "GOOG.md"
+        "AAPL.md"
       ],
-      "evidence_anchor": "🆕 Koray Kavukcuoglu's first public outing — The Information's AI Agenda Live, San Francisco, 2026-09-23. Billed topics include integrating frontier models across Search and the multi-billion-user",
+      "evidence_anchor": "🆕🔴 2026-10-01 — THE EU APP STORE COMMISSION CHANGES TAKE EFFECT, AND THE RATES ARE NOW FINAL: 26% for App Store apps using Apple IAP (15% for certain programs and post-year-one auto-renewals), 20% f",
       "origin": "catalyst_calendar",
       "feedback": "",
       "feedback_note": "",
@@ -1104,7 +1345,7 @@
     },
     {
       "id": "cata-c34f156a3a81",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-24",
       "event_date": "2026-09-24",
       "type": "catalyst",
@@ -1187,44 +1428,370 @@
       "hidden": false
     },
     {
-      "id": "cata-66b9fe421e93",
-      "asof": "2026-09-23",
+      "id": "beli-0cfefa5f2eb5",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-20",
+      "type": "narrative_shift",
+      "priority": "medium",
+      "score": 62,
+      "title": "BESI — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "BESI"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "(/wiki-ingest, 21h window) — 1 source: J.P. Morgan TMT spec sales (Scott Silver, \"Silver Linings Euro TMT Weekly\"). ⚠⚠ SALES COMMENTARY, NOT RESEARCH — no rating, no price target, no estimate, and no BESI order or management statement is cited.⚠️ NOTHING SUPERSEDED. 🔴🔴 NET-NEW — BESI IS NAMED AS ONE OF THE MOST NEGATIVELY DISCUSSED NAMES IN EUROPEAN SEMIS, AND THE OBJECTION IS STRUCTURAL: \"investors increasingly QUESTIONING WHETHER THE DE-SPACING OF MEMORY CREATES A STRUCTURALLY SMALLER HYBRID BONDING TAM,…",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the BESI thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "TSM",
+          "relation": "customer",
+          "detail": "hybrid bonding",
+          "from": "BESI",
+          "in_book": true
+        },
+        {
+          "ticker": "INTC",
+          "relation": "customer",
+          "detail": "advanced packaging",
+          "from": "BESI",
+          "in_book": false
+        }
+      ],
+      "source": "BESI page Changelog 2026-09-20",
+      "evidence_paths": [
+        "BESI.md"
+      ],
+      "evidence_anchor": "(/wiki-ingest, 21h window) — 1 source: J.P. Morgan TMT spec sales (Scott Silver, \"Silver Linings Euro TMT Weekly\"). ⚠⚠ SALES COMMENTARY, NOT RESEARCH — no rating, no price target, no estimate, and no BESI order or management statement is cited.⚠️ NOTHING SUPERSEDED. 🔴🔴 NET-NEW — BESI IS NAMED AS ONE OF THE MOST NEGATIVELY DISCUSSED NAMES IN EUROPEAN SEMIS, AND THE OBJECTION IS STRUCTURAL: \"investors increasingly QUESTIONING WHETHER THE DE-SPACING OF MEMORY CREATES A STRUCTURALLY SMALLER HYBRID BONDING TAM,…",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "beli-0c734042835b",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-24",
+      "type": "narrative_shift",
+      "priority": "medium",
+      "score": 62,
+      "title": "CSCO — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "CSCO"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "(/run-inbox — ECOC work unit; 1 CSCO source: Barclays · Tim Long / Alyssa Shreves / Mary Lenox / Clarisse Yu, \"ECOC 2026 — Optical Still a Hot End Market\", 2026-09-23, off a show-floor meeting with Acacia and Optical Systems product management + IR). Inserted: 1 Full-log row, 1 Sinal vs gestão row (price as a growth driver), 1 Debate / thesis bull bullet, 1 synthesis addendum, 1 Sources entry.",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the CSCO thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "ANET",
+          "relation": "competitor",
+          "detail": "AI networking",
+          "from": "CSCO",
+          "in_book": false
+        },
+        {
+          "ticker": "DDOG",
+          "relation": "competitor",
+          "detail": "observability vs Splunk",
+          "from": "CSCO",
+          "in_book": false
+        },
+        {
+          "ticker": "DT",
+          "relation": "competitor",
+          "detail": "observability vs Splunk",
+          "from": "CSCO",
+          "in_book": false
+        },
+        {
+          "ticker": "ESTC",
+          "relation": "competitor",
+          "detail": "SIEM/logs vs Splunk",
+          "from": "CSCO",
+          "in_book": false
+        }
+      ],
+      "source": "CSCO page Changelog 2026-09-24",
+      "evidence_paths": [
+        "CSCO.md"
+      ],
+      "evidence_anchor": "(/run-inbox — ECOC work unit; 1 CSCO source: Barclays · Tim Long / Alyssa Shreves / Mary Lenox / Clarisse Yu, \"ECOC 2026 — Optical Still a Hot End Market\", 2026-09-23, off a show-floor meeting with Acacia and Optical Systems product management + IR). Inserted: 1 Full-log row, 1 Sinal vs gestão row (price as a growth driver), 1 Debate / thesis bull bullet, 1 synthesis addendum, 1 Sources entry.",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "beli-a748149734a2",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-24",
+      "type": "narrative_shift",
+      "priority": "medium",
+      "score": 62,
+      "title": "RDDT — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "RDDT"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "notion-ingest: UBS Advertising Expert Call Series, Ben Legg (Digital People International), 2026-09-22 (Notion AI transcript, equitycalls/Internet/) — the September vintage of the same quarterly series the page already cites from 2026-06-17, so this is a REVISION record, not a new source. ⚠️ EXPERT VOICE, NOT UBS RESEARCH: Legg's own ~360-advertiser panel tracker; Stephen Ju hosts and reads a disclosure but attaches no rating, PT or UBS estimate. These forecasts must never aggregate with UBS Research marks. 🔴…",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the RDDT thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [],
+      "source": "RDDT page Changelog 2026-09-24",
+      "evidence_paths": [
+        "RDDT.md"
+      ],
+      "evidence_anchor": "notion-ingest: UBS Advertising Expert Call Series, Ben Legg (Digital People International), 2026-09-22 (Notion AI transcript, equitycalls/Internet/) — the September vintage of the same quarterly series the page already cites from 2026-06-17, so this is a REVISION record, not a new source. ⚠️ EXPERT VOICE, NOT UBS RESEARCH: Legg's own ~360-advertiser panel tracker; Stephen Ju hosts and reads a disclosure but attaches no rating, PT or UBS estimate. These forecasts must never aggregate with UBS Research marks. 🔴…",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "post-05b9aa2a7f90",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-22",
+      "event_date": "2026-09-22",
+      "type": "postmortem",
+      "priority": "medium",
+      "score": 58,
+      "title": "ADVANTEST — catalyst passed without a logged outcome",
+      "tickers": [
+        "ADVANTEST"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "overdue",
+      "confidence": "high",
+      "why_now": "SoC capacity ramp to 5,000 systems/yr (end-FY2026) → 10,000/yr (2028–29) — execution + foundry/packaging capacity gating (Q4 FY2025 call; JEF/Techknowledge, 2025-12-17). ⚠️ TIMING SUPERSEDED 202",
+      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
+      "action": "Write a source-attributed bull won|bear won|neutral outcome for ADVANTEST in outcomes.md.",
+      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
+      "readthrough": [],
+      "source": "Catalyst outcome ledger",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "_meta/outcomes.md"
+      ],
+      "evidence_anchor": "SoC capacity ramp to 5,000 systems/yr (end-FY2026) → 10,000/yr (2028–29) — execution + foundry/packaging capacity gating (Q4 FY2025 call; JEF/Techknowledge, 2025-12-17). ⚠️ TIMING SUPERSEDED 202",
+      "origin": "outcome_loop",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "post-dd740dbf2045",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-22",
+      "event_date": "2026-09-22",
+      "type": "postmortem",
+      "priority": "medium",
+      "score": 58,
+      "title": "APP — catalyst passed without a logged outcome",
+      "tickers": [
+        "APP"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "overdue",
+      "confidence": "high",
+      "why_now": "🆕🔴 Whether META re-enters the non-IDFA mobile-ad market — NO LONGER \"DORMANT\" (old framing in Changelog). Two dated marks now sit under it, both from Ben Legg (Digital People Internatio",
+      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
+      "action": "Write a source-attributed bull won|bear won|neutral outcome for APP in outcomes.md.",
+      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
+      "readthrough": [],
+      "source": "Catalyst outcome ledger",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "_meta/outcomes.md"
+      ],
+      "evidence_anchor": "🆕🔴 Whether META re-enters the non-IDFA mobile-ad market — NO LONGER \"DORMANT\" (old framing in Changelog). Two dated marks now sit under it, both from Ben Legg (Digital People Internatio",
+      "origin": "outcome_loop",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "post-acf0d87fc29d",
+      "asof": "2026-09-24",
       "source_date": "2026-09-23",
       "event_date": "2026-09-23",
-      "type": "catalyst",
+      "type": "postmortem",
       "priority": "medium",
-      "score": 67,
-      "title": "BKNG — 2026-09-23: META CONNECT, AND THE SPECIFIC THING TO WATCH FOR BKNG IS A ROUTE CHANGE, NOT A PRODUCT…",
+      "score": 58,
+      "title": "BKNG — catalyst passed without a logged outcome",
       "tickers": [
         "BKNG"
       ],
       "in_book": [],
       "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "medium",
+      "urgency": "overdue",
+      "confidence": "high",
       "why_now": "🆕🔴🔴 2026-09-23 (WEDNESDAY, TWO DAYS OUT) — META CONNECT, AND THE SPECIFIC THING TO WATCH FOR BKNG IS A ROUTE CHANGE, NOT A PRODUCT ANNOUNCEMENT: DOES HOTEL BOOKING MOVE FROM BROWSER AUTOMATION T",
-      "belief_update": "A dated event can resolve or reframe an open debate.",
-      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
-      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
+      "action": "Write a source-attributed bull won|bear won|neutral outcome for BKNG in outcomes.md.",
+      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
       "readthrough": [],
-      "source": "BKNG page catalyst ledger; underlying source/date retained in the catalyst text",
+      "source": "Catalyst outcome ledger",
       "evidence_paths": [
         "_meta/catalysts.md",
-        "BKNG.md"
+        "_meta/outcomes.md"
       ],
       "evidence_anchor": "🆕🔴🔴 2026-09-23 (WEDNESDAY, TWO DAYS OUT) — META CONNECT, AND THE SPECIFIC THING TO WATCH FOR BKNG IS A ROUTE CHANGE, NOT A PRODUCT ANNOUNCEMENT: DOES HOTEL BOOKING MOVE FROM BROWSER AUTOMATION T",
-      "origin": "catalyst_calendar",
+      "origin": "outcome_loop",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "post-e7156cdb84d3",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-23",
+      "event_date": "2026-09-23",
+      "type": "postmortem",
+      "priority": "medium",
+      "score": 58,
+      "title": "CIEN — catalyst passed without a logged outcome",
+      "tickers": [
+        "CIEN"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "overdue",
+      "confidence": "high",
+      "why_now": "✅🔴 RESOLVED 2026-09-23 — THE FRAMEWORK SURVIVED AND SUPPLY DID NOT LOOSEN. Barclays met Rothenstein at the show and reports the discussion \"similar to what was presented last week at the co",
+      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
+      "action": "Write a source-attributed bull won|bear won|neutral outcome for CIEN in outcomes.md.",
+      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
+      "readthrough": [],
+      "source": "Catalyst outcome ledger",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "_meta/outcomes.md"
+      ],
+      "evidence_anchor": "✅🔴 RESOLVED 2026-09-23 — THE FRAMEWORK SURVIVED AND SUPPLY DID NOT LOOSEN. Barclays met Rothenstein at the show and reports the discussion \"similar to what was presented last week at the co",
+      "origin": "outcome_loop",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "post-4757b71b41a9",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-22",
+      "event_date": "2026-09-22",
+      "type": "postmortem",
+      "priority": "medium",
+      "score": 58,
+      "title": "CRDO — catalyst passed without a logged outcome",
+      "tickers": [
+        "CRDO"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "overdue",
+      "confidence": "high",
+      "why_now": "2026-09-22 — ECOC, JPM-hosted meeting with CEO Bill Brennan (alongside CIEN, LITE and Nokia; JPM · Cardoso / Deshpande, 2026-08-17). JPM is also running an off-cycle hardware-reporter bu",
+      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
+      "action": "Write a source-attributed bull won|bear won|neutral outcome for CRDO in outcomes.md.",
+      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
+      "readthrough": [],
+      "source": "Catalyst outcome ledger",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "_meta/outcomes.md"
+      ],
+      "evidence_anchor": "2026-09-22 — ECOC, JPM-hosted meeting with CEO Bill Brennan (alongside CIEN, LITE and Nokia; JPM · Cardoso / Deshpande, 2026-08-17). JPM is also running an off-cycle hardware-reporter bu",
+      "origin": "outcome_loop",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "post-8ab0ce4dc047",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-22",
+      "event_date": "2026-09-22",
+      "type": "postmortem",
+      "priority": "medium",
+      "score": 58,
+      "title": "LITE — catalyst passed without a logged outcome",
+      "tickers": [
+        "LITE"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "overdue",
+      "confidence": "high",
+      "why_now": "✅ PARTIALLY RESOLVED 2026-09-22 — but by CITI, not JPM, and it produced a SUPPLY update rather than the CPO-timing update this line was opened for. Citi hosted CEO Michael Hurlston on day 2 of ECO",
+      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
+      "action": "Write a source-attributed bull won|bear won|neutral outcome for LITE in outcomes.md.",
+      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
+      "readthrough": [],
+      "source": "Catalyst outcome ledger",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "_meta/outcomes.md"
+      ],
+      "evidence_anchor": "✅ PARTIALLY RESOLVED 2026-09-22 — but by CITI, not JPM, and it produced a SUPPLY update rather than the CPO-timing update this line was opened for. Citi hosted CEO Michael Hurlston on day 2 of ECO",
+      "origin": "outcome_loop",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "post-6053094e0aec",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-22",
+      "event_date": "2026-09-22",
+      "type": "postmortem",
+      "priority": "medium",
+      "score": 58,
+      "title": "LITE — catalyst passed without a logged outcome",
+      "tickers": [
+        "LITE"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "overdue",
+      "confidence": "high",
+      "why_now": "2026-09-22 — ECOC (JPM-hosted meetings). CEO Michael Hurlston meeting alongside CRDO (CEO Bill Brennan), CIEN and Nokia (JPM · Joe Cardoso / Sandeep Deshpande, 2026-08-17). The natural",
+      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
+      "action": "Write a source-attributed bull won|bear won|neutral outcome for LITE in outcomes.md.",
+      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
+      "readthrough": [],
+      "source": "Catalyst outcome ledger",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "_meta/outcomes.md"
+      ],
+      "evidence_anchor": "2026-09-22 — ECOC (JPM-hosted meetings). CEO Michael Hurlston meeting alongside CRDO (CEO Bill Brennan), CIEN and Nokia (JPM · Joe Cardoso / Sandeep Deshpande, 2026-08-17). The natural",
+      "origin": "outcome_loop",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
     },
     {
       "id": "reco-ddd0bbcca0d3",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-21",
       "type": "model_check",
       "priority": "medium",
-      "score": 64,
+      "score": 58,
       "title": "META: the PT went up 24% while the estimates went down — and the apparent size of the cut is mostly below the line",
       "tickers": [
         "META"
@@ -1233,7 +1800,7 @@
         "META"
       ],
       "impact": "medium",
-      "urgency": "this week",
+      "urgency": "standing",
       "confidence": "medium",
       "why_now": "Wells Fargo (Gawrelski) raised its PT to $796 from $640 (+24.4%) while cutting EPS. The PT bridge is arithmetically pure multiple: 25.0× × $31.86 = $796.5 vs prior 20.0× × $32.07 = $641.4. Every dollar of the $156 increase is re-rating, none is earnings.",
       "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
@@ -1298,64 +1865,162 @@
       "origin": "curated_reconciliation",
       "feedback": "",
       "feedback_note": "",
-      "hidden": false
+      "hidden": false,
+      "carried_from": "2026-09-21"
     },
     {
-      "id": "cata-aff41b9df817",
-      "asof": "2026-09-23",
-      "source_date": "2026-10-01",
-      "event_date": "2026-10-01",
+      "id": "cata-94f58a36ef6b",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-30",
+      "event_date": "2026-09-30",
       "type": "catalyst",
       "priority": "medium",
-      "score": 61,
-      "title": "AAPL — 2026-10-01: THE EU APP STORE COMMISSION CHANGES TAKE EFFECT, AND THE RATES ARE NOW FINAL: 26% for App…",
+      "score": 58,
+      "title": "MU — 2026-09-30: F4Q26 (Aug) PRINT — DUE ~2026-09-30, AND THE BOGEY SET IS NOW EXPLICIT AND COMPARABLE…",
       "tickers": [
-        "AAPL"
+        "MU"
       ],
-      "in_book": [
-        "AAPL"
-      ],
+      "in_book": [],
       "impact": "medium",
-      "urgency": "upcoming",
+      "urgency": "this week",
       "confidence": "medium",
-      "why_now": "🆕🔴 2026-10-01 — THE EU APP STORE COMMISSION CHANGES TAKE EFFECT, AND THE RATES ARE NOW FINAL: 26% for App Store apps using Apple IAP (15% for certain programs and post-year-one auto-renewals), 20% f",
+      "why_now": "🆕🔴🔴🔴 F4Q26 (Aug) PRINT — DUE ~2026-09-30, AND THE BOGEY SET IS NOW EXPLICIT AND COMPARABLE (full tables in Intra-quarter, 09-23 block). Quarter: guide $50.0bn ± $1bn / ~86% GM / $31.00 ± $1",
       "belief_update": "A dated event can resolve or reframe an open debate.",
       "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
       "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
       "readthrough": [
         {
-          "ticker": "TSM",
-          "relation": "supplier",
-          "detail": "foundry",
-          "from": "AAPL",
+          "ticker": "AVGO",
+          "relation": "customer",
+          "detail": "HBM",
+          "from": "MU",
           "in_book": true
         },
         {
-          "ticker": "ARM",
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "HBM/LPDDR",
+          "from": "MU",
+          "in_book": true
+        },
+        {
+          "ticker": "SKHYNIX",
+          "relation": "competitor",
+          "detail": "HBM",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "AMAT",
           "relation": "supplier",
-          "detail": "IP",
-          "from": "AAPL",
+          "detail": "WFE",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "AMD",
+          "relation": "customer",
+          "detail": "HBM",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "ASML",
+          "relation": "supplier",
+          "detail": "litho",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "KLAC",
+          "relation": "supplier",
+          "detail": "process control",
+          "from": "MU",
           "in_book": false
         }
       ],
-      "source": "AAPL page catalyst ledger; underlying source/date retained in the catalyst text",
+      "source": "MU page catalyst ledger; underlying source/date retained in the catalyst text",
       "evidence_paths": [
         "_meta/catalysts.md",
-        "AAPL.md"
+        "MU.md"
       ],
-      "evidence_anchor": "🆕🔴 2026-10-01 — THE EU APP STORE COMMISSION CHANGES TAKE EFFECT, AND THE RATES ARE NOW FINAL: 26% for App Store apps using Apple IAP (15% for certain programs and post-year-one auto-renewals), 20% f",
+      "evidence_anchor": "🆕🔴🔴🔴 F4Q26 (Aug) PRINT — DUE ~2026-09-30, AND THE BOGEY SET IS NOW EXPLICIT AND COMPARABLE (full tables in Intra-quarter, 09-23 block). Quarter: guide $50.0bn ± $1bn / ~86% GM / $31.00 ± $1",
       "origin": "catalyst_calendar",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
     },
     {
+      "id": "post-7d2e1115d5a7",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-23",
+      "event_date": "2026-09-23",
+      "type": "postmortem",
+      "priority": "medium",
+      "score": 58,
+      "title": "OKTA — catalyst passed without a logged outcome",
+      "tickers": [
+        "OKTA"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "overdue",
+      "confidence": "high",
+      "why_now": "🆕 2026-09-23 (Tuesday) — Oktane 2026, Las Vegas; INVESTOR SESSION 11am-12pm PT. JPM (Brian Essex, OW, px $190.02 on 17-Sep) previews it as \"largely product focused with no new numbers or mi",
+      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
+      "action": "Write a source-attributed bull won|bear won|neutral outcome for OKTA in outcomes.md.",
+      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
+      "readthrough": [],
+      "source": "Catalyst outcome ledger",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "_meta/outcomes.md"
+      ],
+      "evidence_anchor": "🆕 2026-09-23 (Tuesday) — Oktane 2026, Las Vegas; INVESTOR SESSION 11am-12pm PT. JPM (Brian Essex, OW, px $190.02 on 17-Sep) previews it as \"largely product focused with no new numbers or mi",
+      "origin": "outcome_loop",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "post-aa354edb7fd9",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-23",
+      "event_date": "2026-09-23",
+      "type": "postmortem",
+      "priority": "medium",
+      "score": 58,
+      "title": "UBER — catalyst passed without a logged outcome",
+      "tickers": [
+        "UBER"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "overdue",
+      "confidence": "high",
+      "why_now": "🆕🔴 2026-09-23 (WEDNESDAY, TWO DAYS OUT) — META CONNECT, AND THE UBER-SPECIFIC THING TO WATCH IS A ROUTE CHANGE, NOT A PRODUCT LAUNCH: DOES FOOD DELIVERY MOVE FROM BROWSER AUTOMATION TO A CONNECT",
+      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
+      "action": "Write a source-attributed bull won|bear won|neutral outcome for UBER in outcomes.md.",
+      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
+      "readthrough": [],
+      "source": "Catalyst outcome ledger",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "_meta/outcomes.md"
+      ],
+      "evidence_anchor": "🆕🔴 2026-09-23 (WEDNESDAY, TWO DAYS OUT) — META CONNECT, AND THE UBER-SPECIFIC THING TO WATCH IS A ROUTE CHANGE, NOT A PRODUCT LAUNCH: DOES FOOD DELIVERY MOVE FROM BROWSER AUTOMATION TO A CONNECT",
+      "origin": "outcome_loop",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
       "id": "reco-3df2752f1ae2",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-21",
       "type": "model_check",
       "priority": "medium",
-      "score": 61,
+      "score": 55,
       "title": "Redburn holds the STREET LOW on three names at once, and BBG's own panel already proves it",
       "tickers": [
         "CRWV",
@@ -1369,7 +2034,7 @@
         "MSFT"
       ],
       "impact": "medium",
-      "urgency": "this week",
+      "urgency": "standing",
       "confidence": "medium",
       "why_now": "➤ This is not five independent calls; it is one thesis expressed five times — that credit is pricing a risk equities ignore, and that the compute layer is where it bites. ORCL's panel carries only one Sell among 49 analysts, and that Sell is now the street low. Treat the package as a single high-conviction position, and size any read-through accordingly — if Redburn is wrong, all five marks are wrong together.",
       "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
@@ -1434,47 +2099,46 @@
       "origin": "curated_reconciliation",
       "feedback": "",
       "feedback_note": "",
-      "hidden": false
+      "hidden": false,
+      "carried_from": "2026-09-21"
     },
     {
-      "id": "post-3cbb28426829",
-      "asof": "2026-09-23",
-      "source_date": "2026-09-22",
-      "event_date": "2026-09-22",
-      "type": "postmortem",
+      "id": "data-e0b58d469bbd",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-24",
+      "type": "data_gap",
       "priority": "medium",
-      "score": 58,
-      "title": "ADI — catalyst passed without a logged outcome",
+      "score": 54,
+      "title": "NSCALE — Bloomberg consensus missing",
       "tickers": [
-        "ADI"
+        "NSCALE"
       ],
       "in_book": [],
       "impact": "medium",
-      "urgency": "overdue",
+      "urgency": "this week",
       "confidence": "high",
-      "why_now": "2026-08-19 (7am ET, call 10am) — F3Q26 print. Bogeys on the page from the JPM buy-side survey (guide/consensus: rev $3.9bn/$3.92bn, OPM 49%/49.2%, EPS $3.30/$3.34; F4Q guides $4.08bn / 49.9% / $3.",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for ADI in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
+      "why_now": "The current consensus snapshot cannot support a house-vs-Street or revision analysis for this name.",
+      "belief_update": "Ranking confidence is reduced until the missing consensus series is restored.",
+      "action": "Run the merge-safe Bloomberg estimate fetch for NSCALE, then rebuild the snapshot and Analyst Inbox.",
+      "falsifier": "A valid, current estimate record already exists under a different Bloomberg identifier.",
       "readthrough": [],
-      "source": "Catalyst outcome ledger",
+      "source": "Wiki remediation worklist 2026-09-24",
       "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
+        "_meta/worklist.json"
       ],
-      "evidence_anchor": "2026-08-19 (7am ET, call 10am) — F3Q26 print. Bogeys on the page from the JPM buy-side survey (guide/consensus: rev $3.9bn/$3.92bn, OPM 49%/49.2%, EPS $3.30/$3.34; F4Q guides $4.08bn / 49.9% / $3.",
-      "origin": "outcome_loop",
+      "evidence_anchor": "NSCALE — Bloomberg consensus missing",
+      "origin": "worklist",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
     },
     {
       "id": "reco-708d471ee0d3",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-15",
       "type": "model_check",
       "priority": "medium",
-      "score": 58,
+      "score": 52,
       "title": "AMZN — Bernstein is +16% / +27% above consensus on FY27 / FY28 EBIT and still carries a PT below consensus",
       "tickers": [
         "AMZN"
@@ -1552,236 +2216,12 @@
       "carried_from": "2026-09-15"
     },
     {
-      "id": "post-ba7e7d24bacf",
-      "asof": "2026-09-23",
-      "source_date": "2026-09-21",
-      "event_date": "2026-09-21",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "CIEN — catalyst passed without a logged outcome",
-      "tickers": [
-        "CIEN"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "🆕 ECOC 2026, 2026-09-21/22 (Spain) — Morgan Stanley hosts COHR, CIEN, CSCO, KEYS and NOK. First optical-systems corporate-access window after the print. (MS TMT desk, 2026-08-31)",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for CIEN in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "🆕 ECOC 2026, 2026-09-21/22 (Spain) — Morgan Stanley hosts COHR, CIEN, CSCO, KEYS and NOK. First optical-systems corporate-access window after the print. (MS TMT desk, 2026-08-31)",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "post-5cb0792c4481",
-      "asof": "2026-09-23",
-      "source_date": "2026-09-21",
-      "event_date": "2026-09-21",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "CIEN — catalyst passed without a logged outcome",
-      "tickers": [
-        "CIEN"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "ECOC 2026, 2026-09-21/22 (Spain) — THE WITHIN-THE-WEEK RE-TEST. MS hosts CIEN alongside COHR, CSCO, KEYS and NOK (MS TMT desk, 2026-08-31), and JPM meets CSO David Rothenstein and CPTO B",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for CIEN in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "ECOC 2026, 2026-09-21/22 (Spain) — THE WITHIN-THE-WEEK RE-TEST. MS hosts CIEN alongside COHR, CSCO, KEYS and NOK (MS TMT desk, 2026-08-31), and JPM meets CSO David Rothenstein and CPTO B",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "post-41ff6c0e471d",
-      "asof": "2026-09-23",
-      "source_date": "2026-09-21",
-      "event_date": "2026-09-21",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "CIEN — catalyst passed without a logged outcome",
-      "tickers": [
-        "CIEN"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "CALENDAR CONTEXT — TWO CORPORATE-ACCESS WINDOWS IN SIX DAYS: the Calgary tour (09-16) is followed by ECOC 2026 in Spain on 2026-09-21/22, where Morgan Stanley hosts CIEN alongside COHR, CSCO",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for CIEN in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "CALENDAR CONTEXT — TWO CORPORATE-ACCESS WINDOWS IN SIX DAYS: the Calgary tour (09-16) is followed by ECOC 2026 in Spain on 2026-09-21/22, where Morgan Stanley hosts CIEN alongside COHR, CSCO",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "post-4757b71b41a9",
-      "asof": "2026-09-23",
-      "source_date": "2026-09-22",
-      "event_date": "2026-09-22",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "CRDO — catalyst passed without a logged outcome",
-      "tickers": [
-        "CRDO"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "2026-09-22 — ECOC, JPM-hosted meeting with CEO Bill Brennan (alongside CIEN, LITE and Nokia; JPM · Cardoso / Deshpande, 2026-08-17). JPM is also running an off-cycle hardware-reporter bu",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for CRDO in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "2026-09-22 — ECOC, JPM-hosted meeting with CEO Bill Brennan (alongside CIEN, LITE and Nokia; JPM · Cardoso / Deshpande, 2026-08-17). JPM is also running an off-cycle hardware-reporter bu",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "post-f0cc3f80fd07",
-      "asof": "2026-09-23",
-      "source_date": "2026-09-22",
-      "event_date": "2026-09-22",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "ESTC — catalyst passed without a logged outcome",
-      "tickers": [
-        "ESTC"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "Metrics webinar — 2026-09-22, 8:00 PT (Kurtz, Q1 FY27 call): the observability-relaunch pitch (Columnar Mode, Prometheus/PromQL, Deductive AI). Observability is the lagging solution; this is manag",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for ESTC in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "Metrics webinar — 2026-09-22, 8:00 PT (Kurtz, Q1 FY27 call): the observability-relaunch pitch (Columnar Mode, Prometheus/PromQL, Deductive AI). Observability is the lagging solution; this is manag",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "post-6053094e0aec",
-      "asof": "2026-09-23",
-      "source_date": "2026-09-22",
-      "event_date": "2026-09-22",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "LITE — catalyst passed without a logged outcome",
-      "tickers": [
-        "LITE"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "2026-09-22 — ECOC (JPM-hosted meetings). CEO Michael Hurlston meeting alongside CRDO (CEO Bill Brennan), CIEN and Nokia (JPM · Joe Cardoso / Sandeep Deshpande, 2026-08-17). The natural",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for LITE in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "2026-09-22 — ECOC (JPM-hosted meetings). CEO Michael Hurlston meeting alongside CRDO (CEO Bill Brennan), CIEN and Nokia (JPM · Joe Cardoso / Sandeep Deshpande, 2026-08-17). The natural",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "post-88860a67e4a8",
-      "asof": "2026-09-23",
-      "source_date": "2026-09-22",
-      "event_date": "2026-09-22",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "ON — catalyst passed without a logged outcome",
-      "tickers": [
-        "ON"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "🆕 Tue 2026-09-22, Los Angeles — ON CEO/CFO/IR NDR hosted by Jefferies · Blayne Curtis.",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for ON in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "🆕 Tue 2026-09-22, Los Angeles — ON CEO/CFO/IR NDR hosted by Jefferies · Blayne Curtis.",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
       "id": "reco-febc10b923f7",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-15",
       "type": "contradiction",
       "priority": "medium",
-      "score": 58,
+      "score": 52,
       "title": "The relay that reached the wiki at 21:00 carried a mechanism that is not in the primary — and it pointed the opposite way",
       "tickers": [
         "OPENAI",
@@ -1861,234 +2301,8 @@
       "carried_from": "2026-09-15"
     },
     {
-      "id": "cata-8d648bcd2fdd",
-      "asof": "2026-09-23",
-      "source_date": "2026-09-23",
-      "event_date": "2026-09-23",
-      "type": "catalyst",
-      "priority": "medium",
-      "score": 58,
-      "title": "UBER — 2026-09-23: META CONNECT, AND THE UBER-SPECIFIC THING TO WATCH IS A ROUTE CHANGE, NOT A PRODUCT…",
-      "tickers": [
-        "UBER"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "medium",
-      "why_now": "🆕🔴 2026-09-23 (WEDNESDAY, TWO DAYS OUT) — META CONNECT, AND THE UBER-SPECIFIC THING TO WATCH IS A ROUTE CHANGE, NOT A PRODUCT LAUNCH: DOES FOOD DELIVERY MOVE FROM BROWSER AUTOMATION TO A CONNECT",
-      "belief_update": "A dated event can resolve or reframe an open debate.",
-      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
-      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
-      "readthrough": [],
-      "source": "UBER page catalyst ledger; underlying source/date retained in the catalyst text",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "UBER.md"
-      ],
-      "evidence_anchor": "🆕🔴 2026-09-23 (WEDNESDAY, TWO DAYS OUT) — META CONNECT, AND THE UBER-SPECIFIC THING TO WATCH IS A ROUTE CHANGE, NOT A PRODUCT LAUNCH: DOES FOOD DELIVERY MOVE FROM BROWSER AUTOMATION TO A CONNECT",
-      "origin": "catalyst_calendar",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "reco-604281b7c03c",
-      "asof": "2026-09-23",
-      "source_date": "2026-09-21",
-      "type": "model_check",
-      "priority": "medium",
-      "score": 54,
-      "title": "MSFT: a 45% price-target spread between two houses, 24 hours apart, with no new company disclosure in between",
-      "tickers": [
-        "MSFT"
-      ],
-      "in_book": [
-        "MSFT"
-      ],
-      "impact": "medium",
-      "urgency": "this week",
-      "confidence": "medium",
-      "why_now": "➤ The two notes are not arguing about Azure demand — they are arguing about what the capex is worth. Goldman's NDR note is management-sourced (IR's Neilson and Criste, following CFO Amy Hood) and its whole argument is that front-loading long-dated capex bought Microsoft flexibility (long-dated mix ~50% → ~33% over three quarters; GPU dock-to-live −50%; the binding constraint now shell space, not chips). Redburn's is an accounting argument: $1trn of uncommenced leases across AMZN/MSFT/META/ORCL, with MSFT the most exposed at ~$330bn, which at ~19%…",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the MSFT model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "➤ The two notes are not arguing about Azure demand — they are arguing about what the capex is worth. Goldman's NDR note is management-sourced (IR's Neilson and Criste, following CFO Amy Hood) and its whole argument is that front-loading long-dated capex bought Microsoft flexibility (long-dated mix ~50% → ~33% over three quarters; GPU dock-to-live −50%; the…",
-      "readthrough": [
-        {
-          "ticker": "AVGO",
-          "relation": "supplier",
-          "detail": "custom ASIC",
-          "from": "MSFT",
-          "in_book": true
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "supplier",
-          "detail": "GPUs",
-          "from": "MSFT",
-          "in_book": true
-        },
-        {
-          "ticker": "MDB",
-          "relation": "competitor",
-          "detail": "Atlas vs Cosmos DB",
-          "from": "MSFT",
-          "in_book": false
-        },
-        {
-          "ticker": "OKTA",
-          "relation": "competitor",
-          "detail": "IAM (Entra bundling)",
-          "from": "MSFT",
-          "in_book": false
-        },
-        {
-          "ticker": "SNOW",
-          "relation": "competitor",
-          "detail": "warehouse vs Fabric",
-          "from": "MSFT",
-          "in_book": false
-        },
-        {
-          "ticker": "AAOI",
-          "relation": "supplier",
-          "detail": "optical transceivers",
-          "from": "MSFT",
-          "in_book": false
-        },
-        {
-          "ticker": "ALAB",
-          "relation": "supplier",
-          "detail": "scale-up fabric",
-          "from": "MSFT",
-          "in_book": false
-        }
-      ],
-      "source": "management/company primary · curated reconciliation 2026-09-21",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-09-21.md"
-      ],
-      "evidence_anchor": "MSFT: a 45% price-target spread between two houses, 24 hours apart, with no new company disclosure in between",
-      "origin": "curated_reconciliation",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "data-9ffc0dbc91ed",
-      "asof": "2026-09-23",
-      "source_date": "2026-09-23",
-      "type": "data_gap",
-      "priority": "medium",
-      "score": 54,
-      "title": "NSCALE — Bloomberg consensus missing",
-      "tickers": [
-        "NSCALE"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "this week",
-      "confidence": "high",
-      "why_now": "The current consensus snapshot cannot support a house-vs-Street or revision analysis for this name.",
-      "belief_update": "Ranking confidence is reduced until the missing consensus series is restored.",
-      "action": "Run the merge-safe Bloomberg estimate fetch for NSCALE, then rebuild the snapshot and Analyst Inbox.",
-      "falsifier": "A valid, current estimate record already exists under a different Bloomberg identifier.",
-      "readthrough": [],
-      "source": "Wiki remediation worklist 2026-09-23",
-      "evidence_paths": [
-        "_meta/worklist.json"
-      ],
-      "evidence_anchor": "NSCALE — Bloomberg consensus missing",
-      "origin": "worklist",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "reco-32e2a145dcb3",
-      "asof": "2026-09-23",
-      "source_date": "2026-09-21",
-      "type": "contradiction",
-      "priority": "medium",
-      "score": 54,
-      "title": "NVDA: Redburn's own bull case quantifies the bear case — $126.5bn of FY27 demand is vendor-stimulated",
-      "tickers": [
-        "NVDA"
-      ],
-      "in_book": [
-        "NVDA"
-      ],
-      "impact": "medium",
-      "urgency": "this week",
-      "confidence": "medium",
-      "why_now": "Redburn is Buy, PT $325 — which is +0.7% vs the consensus PT of $322.70, i.e. exactly at consensus, from a note whose entire thesis is that the build-out is credit-fragile. Bernstein the same day is Outperform $400 (+24.0% vs consensus).",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Keep every sourced variant for NVDA; identify the primary disclosure or named adjudicator that can resolve them. Do not average incompatible figures.",
-      "falsifier": "The next primary disclosure that puts the competing variants on one defined basis.",
-      "readthrough": [
-        {
-          "ticker": "AVGO",
-          "relation": "competitor",
-          "detail": "merchant vs custom ASIC",
-          "from": "NVDA",
-          "in_book": true
-        },
-        {
-          "ticker": "AMZN",
-          "relation": "customer",
-          "detail": "GPUs",
-          "from": "NVDA",
-          "in_book": true
-        },
-        {
-          "ticker": "GOOG",
-          "relation": "customer",
-          "detail": "GPUs",
-          "from": "NVDA",
-          "in_book": true
-        },
-        {
-          "ticker": "META",
-          "relation": "customer",
-          "detail": "GPUs",
-          "from": "NVDA",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "customer",
-          "detail": "GPUs",
-          "from": "NVDA",
-          "in_book": true
-        },
-        {
-          "ticker": "TSM",
-          "relation": "supplier",
-          "detail": "foundry N3/N2 + CoWoS",
-          "from": "NVDA",
-          "in_book": true
-        },
-        {
-          "ticker": "AMD",
-          "relation": "competitor",
-          "detail": "AI accelerators",
-          "from": "NVDA",
-          "in_book": false
-        }
-      ],
-      "source": "Bernstein · curated reconciliation 2026-09-21",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-09-21.md"
-      ],
-      "evidence_anchor": "NVDA: Redburn's own bull case quantifies the bear case — $126.5bn of FY27 demand is vendor-stimulated",
-      "origin": "curated_reconciliation",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
       "id": "cata-5019bdd5c87f",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-30",
       "event_date": "2026-09-30",
       "type": "catalyst",
@@ -2141,62 +2355,8 @@
       "hidden": false
     },
     {
-      "id": "cata-88650a914dd8",
-      "asof": "2026-09-23",
-      "source_date": "2026-09-23",
-      "event_date": "2026-09-23",
-      "type": "catalyst",
-      "priority": "medium",
-      "score": 49,
-      "title": "OKTA — 2026-09-23: Oktane 2026, Las Vegas; INVESTOR SESSION 11am-12pm PT. JPM (Brian Essex, OW, px $190.02 on…",
-      "tickers": [
-        "OKTA"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "medium",
-      "why_now": "🆕 2026-09-23 (Tuesday) — Oktane 2026, Las Vegas; INVESTOR SESSION 11am-12pm PT. JPM (Brian Essex, OW, px $190.02 on 17-Sep) previews it as \"largely product focused with no new numbers or mi",
-      "belief_update": "A dated event can resolve or reframe an open debate.",
-      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
-      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
-      "readthrough": [
-        {
-          "ticker": "MSFT",
-          "relation": "competitor",
-          "detail": "IAM (Entra bundling)",
-          "from": "OKTA",
-          "in_book": true
-        },
-        {
-          "ticker": "CRWD",
-          "relation": "competitor",
-          "detail": "agentic identity",
-          "from": "OKTA",
-          "in_book": false
-        },
-        {
-          "ticker": "PANW",
-          "relation": "competitor",
-          "detail": "identity (CyberArk vs Okta)",
-          "from": "OKTA",
-          "in_book": false
-        }
-      ],
-      "source": "OKTA page catalyst ledger; underlying source/date retained in the catalyst text",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "OKTA.md"
-      ],
-      "evidence_anchor": "🆕 2026-09-23 (Tuesday) — Oktane 2026, Las Vegas; INVESTOR SESSION 11am-12pm PT. JPM (Brian Essex, OW, px $190.02 on 17-Sep) previews it as \"largely product focused with no new numbers or mi",
-      "origin": "catalyst_calendar",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
       "id": "cata-2f8f8ad84d84",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-30",
       "event_date": "2026-09-30",
       "type": "catalyst",
@@ -2278,7 +2438,7 @@
     },
     {
       "id": "cata-db07131caadc",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-30",
       "event_date": "2026-09-30",
       "type": "catalyst",
@@ -2360,7 +2520,7 @@
     },
     {
       "id": "cata-79afef6bae7d",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-24",
       "event_date": "2026-09-24",
       "type": "catalyst",
@@ -2391,9 +2551,175 @@
       "hidden": false
     },
     {
-      "id": "data-f908b5b39874",
-      "asof": "2026-09-23",
-      "source_date": "2026-09-23",
+      "id": "reco-604281b7c03c",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-21",
+      "type": "model_check",
+      "priority": "medium",
+      "score": 48,
+      "title": "MSFT: a 45% price-target spread between two houses, 24 hours apart, with no new company disclosure in between",
+      "tickers": [
+        "MSFT"
+      ],
+      "in_book": [
+        "MSFT"
+      ],
+      "impact": "medium",
+      "urgency": "standing",
+      "confidence": "medium",
+      "why_now": "➤ The two notes are not arguing about Azure demand — they are arguing about what the capex is worth. Goldman's NDR note is management-sourced (IR's Neilson and Criste, following CFO Amy Hood) and its whole argument is that front-loading long-dated capex bought Microsoft flexibility (long-dated mix ~50% → ~33% over three quarters; GPU dock-to-live −50%; the binding constraint now shell space, not chips). Redburn's is an accounting argument: $1trn of uncommenced leases across AMZN/MSFT/META/ORCL, with MSFT the most exposed at ~$330bn, which at ~19%…",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the MSFT model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "➤ The two notes are not arguing about Azure demand — they are arguing about what the capex is worth. Goldman's NDR note is management-sourced (IR's Neilson and Criste, following CFO Amy Hood) and its whole argument is that front-loading long-dated capex bought Microsoft flexibility (long-dated mix ~50% → ~33% over three quarters; GPU dock-to-live −50%; the…",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "supplier",
+          "detail": "custom ASIC",
+          "from": "MSFT",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "MSFT",
+          "in_book": true
+        },
+        {
+          "ticker": "MDB",
+          "relation": "competitor",
+          "detail": "Atlas vs Cosmos DB",
+          "from": "MSFT",
+          "in_book": false
+        },
+        {
+          "ticker": "OKTA",
+          "relation": "competitor",
+          "detail": "IAM (Entra bundling)",
+          "from": "MSFT",
+          "in_book": false
+        },
+        {
+          "ticker": "SNOW",
+          "relation": "competitor",
+          "detail": "warehouse vs Fabric",
+          "from": "MSFT",
+          "in_book": false
+        },
+        {
+          "ticker": "AAOI",
+          "relation": "supplier",
+          "detail": "optical transceivers",
+          "from": "MSFT",
+          "in_book": false
+        },
+        {
+          "ticker": "ALAB",
+          "relation": "supplier",
+          "detail": "scale-up fabric",
+          "from": "MSFT",
+          "in_book": false
+        }
+      ],
+      "source": "management/company primary · curated reconciliation 2026-09-21",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-21.md"
+      ],
+      "evidence_anchor": "MSFT: a 45% price-target spread between two houses, 24 hours apart, with no new company disclosure in between",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-09-21"
+    },
+    {
+      "id": "reco-32e2a145dcb3",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-21",
+      "type": "contradiction",
+      "priority": "medium",
+      "score": 48,
+      "title": "NVDA: Redburn's own bull case quantifies the bear case — $126.5bn of FY27 demand is vendor-stimulated",
+      "tickers": [
+        "NVDA"
+      ],
+      "in_book": [
+        "NVDA"
+      ],
+      "impact": "medium",
+      "urgency": "standing",
+      "confidence": "medium",
+      "why_now": "Redburn is Buy, PT $325 — which is +0.7% vs the consensus PT of $322.70, i.e. exactly at consensus, from a note whose entire thesis is that the build-out is credit-fragile. Bernstein the same day is Outperform $400 (+24.0% vs consensus).",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Keep every sourced variant for NVDA; identify the primary disclosure or named adjudicator that can resolve them. Do not average incompatible figures.",
+      "falsifier": "The next primary disclosure that puts the competing variants on one defined basis.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "competitor",
+          "detail": "merchant vs custom ASIC",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "GPUs",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "customer",
+          "detail": "GPUs",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "META",
+          "relation": "customer",
+          "detail": "GPUs",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "GPUs",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "TSM",
+          "relation": "supplier",
+          "detail": "foundry N3/N2 + CoWoS",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "AMD",
+          "relation": "competitor",
+          "detail": "AI accelerators",
+          "from": "NVDA",
+          "in_book": false
+        }
+      ],
+      "source": "Bernstein · curated reconciliation 2026-09-21",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-21.md"
+      ],
+      "evidence_anchor": "NVDA: Redburn's own bull case quantifies the bear case — $126.5bn of FY27 demand is vendor-stimulated",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-09-21"
+    },
+    {
+      "id": "data-9024ccb7ee3c",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-24",
       "type": "data_gap",
       "priority": "watch",
       "score": 43,
@@ -2410,7 +2736,7 @@
       "action": "Fetch the latest NSCALE earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
       "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-09-23",
+      "source": "Wiki remediation worklist 2026-09-24",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -2422,7 +2748,7 @@
     },
     {
       "id": "cata-9f2e588078f2",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-10-28",
       "event_date": "2026-10-28",
       "type": "catalyst",
@@ -2489,25 +2815,85 @@
       "hidden": false
     },
     {
-      "id": "reco-fb938d359d36",
-      "asof": "2026-09-23",
-      "source_date": "2026-09-21",
-      "type": "model_check",
+      "id": "data-8b0ba5429cb9",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-24",
+      "type": "data_gap",
       "priority": "watch",
       "score": 43,
-      "title": "Optical: a falsifiable engineering attack on COHR's laser — and the \"LITE wins\" read does not follow",
+      "title": "POET — latest earnings transcript absent",
       "tickers": [
-        "LITE",
-        "COHR"
+        "POET"
       ],
       "in_book": [],
       "impact": "watch",
-      "urgency": "this week",
+      "urgency": "standing",
+      "confidence": "high",
+      "why_now": "The wiki cannot verify management wording or build a reliable commentary-evolution view without the transcript.",
+      "belief_update": "Narrative and management-credibility conclusions remain provisional.",
+      "action": "Fetch the latest POET earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
+      "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
+      "readthrough": [],
+      "source": "Wiki remediation worklist 2026-09-24",
+      "evidence_paths": [
+        "_meta/worklist.json"
+      ],
+      "evidence_anchor": "POET — latest earnings transcript absent",
+      "origin": "worklist",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "data-57fa599a2153",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-24",
+      "type": "data_gap",
+      "priority": "watch",
+      "score": 43,
+      "title": "SMTC — latest earnings transcript absent",
+      "tickers": [
+        "SMTC"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "standing",
+      "confidence": "high",
+      "why_now": "The wiki cannot verify management wording or build a reliable commentary-evolution view without the transcript.",
+      "belief_update": "Narrative and management-credibility conclusions remain provisional.",
+      "action": "Fetch the latest SMTC earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
+      "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
+      "readthrough": [],
+      "source": "Wiki remediation worklist 2026-09-24",
+      "evidence_paths": [
+        "_meta/worklist.json"
+      ],
+      "evidence_anchor": "SMTC — latest earnings transcript absent",
+      "origin": "worklist",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "cata-2f7870e9d8d7",
+      "asof": "2026-09-24",
+      "source_date": "2026-10-14",
+      "event_date": "2026-10-14",
+      "type": "catalyst",
+      "priority": "watch",
+      "score": 41,
+      "title": "LITE — 2026-10-14: CITI'S CATALYST WATCH (UPSIDE) EXPIRES. A dated, mechanical sell-side event with a…",
+      "tickers": [
+        "LITE"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "upcoming",
       "confidence": "medium",
-      "why_now": "An anonymous engineering newsletter (self-disclosed semis positions, did not attend ECOC) claims Coherent's UHP/CPO/NPO 400mW laser reports intrinsic/instantaneous linewidth rather than the effective beta-separation linewidth that governs link quality, and therefore \"catastrophically fails the 1 MHz effective linewidth spec of all standard NPO and CPO systems, including OCI MSA.\"",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the LITE/COHR model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "why_now": "🆕🔴 2026-10-14 — CITI'S CATALYST WATCH (UPSIDE) EXPIRES. A dated, mechanical sell-side event with a published clock: Citi opened a Catalyst Watch: Upside expiring 14-OCT-26 alongside Buy/TP $1,",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
       "readthrough": [
         {
           "ticker": "AMZN",
@@ -2531,6 +2917,13 @@
           "in_book": true
         },
         {
+          "ticker": "COHR",
+          "relation": "competitor",
+          "detail": "optical/InP",
+          "from": "LITE",
+          "in_book": false
+        },
+        {
           "ticker": "AIXA",
           "relation": "supplier",
           "detail": "MOCVD tools",
@@ -2543,95 +2936,22 @@
           "detail": "optical",
           "from": "LITE",
           "in_book": false
-        },
-        {
-          "ticker": "GOOG",
-          "relation": "customer",
-          "detail": "optical",
-          "from": "COHR",
-          "in_book": true
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "customer",
-          "detail": "optical/InP",
-          "from": "COHR",
-          "in_book": true
         }
       ],
-      "source": "underlying sources named in the finding · curated reconciliation 2026-09-21",
+      "source": "LITE page catalyst ledger; underlying source/date retained in the catalyst text",
       "evidence_paths": [
-        "_meta/reconciliation-2026-09-21.md"
+        "_meta/catalysts.md",
+        "LITE.md"
       ],
-      "evidence_anchor": "Optical: a falsifiable engineering attack on COHR's laser — and the \"LITE wins\" read does not follow",
-      "origin": "curated_reconciliation",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "data-477208d786ee",
-      "asof": "2026-09-23",
-      "source_date": "2026-09-23",
-      "type": "data_gap",
-      "priority": "watch",
-      "score": 43,
-      "title": "POET — latest earnings transcript absent",
-      "tickers": [
-        "POET"
-      ],
-      "in_book": [],
-      "impact": "watch",
-      "urgency": "standing",
-      "confidence": "high",
-      "why_now": "The wiki cannot verify management wording or build a reliable commentary-evolution view without the transcript.",
-      "belief_update": "Narrative and management-credibility conclusions remain provisional.",
-      "action": "Fetch the latest POET earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
-      "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
-      "readthrough": [],
-      "source": "Wiki remediation worklist 2026-09-23",
-      "evidence_paths": [
-        "_meta/worklist.json"
-      ],
-      "evidence_anchor": "POET — latest earnings transcript absent",
-      "origin": "worklist",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "data-9f5c5af9d299",
-      "asof": "2026-09-23",
-      "source_date": "2026-09-23",
-      "type": "data_gap",
-      "priority": "watch",
-      "score": 43,
-      "title": "SMTC — latest earnings transcript absent",
-      "tickers": [
-        "SMTC"
-      ],
-      "in_book": [],
-      "impact": "watch",
-      "urgency": "standing",
-      "confidence": "high",
-      "why_now": "The wiki cannot verify management wording or build a reliable commentary-evolution view without the transcript.",
-      "belief_update": "Narrative and management-credibility conclusions remain provisional.",
-      "action": "Fetch the latest SMTC earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
-      "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
-      "readthrough": [],
-      "source": "Wiki remediation worklist 2026-09-23",
-      "evidence_paths": [
-        "_meta/worklist.json"
-      ],
-      "evidence_anchor": "SMTC — latest earnings transcript absent",
-      "origin": "worklist",
+      "evidence_anchor": "🆕🔴 2026-10-14 — CITI'S CATALYST WATCH (UPSIDE) EXPIRES. A dated, mechanical sell-side event with a published clock: Citi opened a Catalyst Watch: Upside expiring 14-OCT-26 alongside Buy/TP $1,",
+      "origin": "catalyst_calendar",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
     },
     {
       "id": "cata-b89bcb2c7572",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-10-06",
       "event_date": "2026-10-06",
       "type": "catalyst",
@@ -2698,36 +3018,40 @@
       "hidden": false
     },
     {
-      "id": "reco-82c72d90ea99",
-      "asof": "2026-09-23",
-      "source_date": "2026-09-21",
-      "type": "research_idea",
+      "id": "cata-a479a74da5f9",
+      "asof": "2026-09-24",
+      "source_date": "2026-10-15",
+      "event_date": "2026-10-15",
+      "type": "catalyst",
       "priority": "watch",
       "score": 41,
-      "title": "MS raises its own US power shortfall 50% — but ~15 GW of the move is MS correcting its own double-count",
-      "tickers": [],
+      "title": "SMTC — 2026-10-15: INVESTOR / ANALYST DAY, San Jose. The single most important dated event on this page,…",
+      "tickers": [
+        "SMTC"
+      ],
       "in_book": [],
       "impact": "watch",
-      "urgency": "this week",
+      "urgency": "upcoming",
       "confidence": "medium",
-      "why_now": "Headline: '26-28 US DC incremental demand 97 GW (from 68); gross shortfall 57 GW from 38 GW; net of \"time to power\" solutions 33 GW = 34% of chip demand.",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Turn the finding into a bull/base/bear question for the affected theme; identify the KPI and source that would make it investable.",
-      "falsifier": "No observable KPI or dated catalyst can be identified to test the hypothesis.",
+      "why_now": "🔴 2026-10-15 — INVESTOR / ANALYST DAY, San Jose. The single most important dated event on this page, because management deferred the two questions that matter to it. Promised content: \"an in-dept",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
       "readthrough": [],
-      "source": "management/company primary · curated reconciliation 2026-09-21",
+      "source": "SMTC page catalyst ledger; underlying source/date retained in the catalyst text",
       "evidence_paths": [
-        "_meta/reconciliation-2026-09-21.md"
+        "_meta/catalysts.md",
+        "SMTC.md"
       ],
-      "evidence_anchor": "MS raises its own US power shortfall 50% — but ~15 GW of the move is MS correcting its own double-count",
-      "origin": "curated_reconciliation",
+      "evidence_anchor": "🔴 2026-10-15 — INVESTOR / ANALYST DAY, San Jose. The single most important dated event on this page, because management deferred the two questions that matter to it. Promised content: \"an in-dept",
+      "origin": "catalyst_calendar",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
     },
     {
       "id": "cata-c47ca6af6fc6",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-29",
       "event_date": "2026-09-29",
       "type": "catalyst",
@@ -2801,19 +3125,101 @@
       "hidden": false
     },
     {
-      "id": "reco-6a14ccc311b0",
-      "asof": "2026-09-23",
+      "id": "reco-fb938d359d36",
+      "asof": "2026-09-24",
       "source_date": "2026-09-21",
       "type": "model_check",
       "priority": "watch",
-      "score": 36,
+      "score": 37,
+      "title": "Optical: a falsifiable engineering attack on COHR's laser — and the \"LITE wins\" read does not follow",
+      "tickers": [
+        "LITE",
+        "COHR"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "standing",
+      "confidence": "medium",
+      "why_now": "An anonymous engineering newsletter (self-disclosed semis positions, did not attend ECOC) claims Coherent's UHP/CPO/NPO 400mW laser reports intrinsic/instantaneous linewidth rather than the effective beta-separation linewidth that governs link quality, and therefore \"catastrophically fails the 1 MHz effective linewidth spec of all standard NPO and CPO systems, including OCI MSA.\"",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the LITE/COHR model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": true
+        },
+        {
+          "ticker": "AIXA",
+          "relation": "supplier",
+          "detail": "MOCVD tools",
+          "from": "LITE",
+          "in_book": false
+        },
+        {
+          "ticker": "ANET",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": false
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "COHR",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "optical/InP",
+          "from": "COHR",
+          "in_book": true
+        }
+      ],
+      "source": "underlying sources named in the finding · curated reconciliation 2026-09-21",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-21.md"
+      ],
+      "evidence_anchor": "Optical: a falsifiable engineering attack on COHR's laser — and the \"LITE wins\" read does not follow",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-09-21"
+    },
+    {
+      "id": "reco-6a14ccc311b0",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-21",
+      "type": "model_check",
+      "priority": "watch",
+      "score": 35,
       "title": "AMAT: Bernstein's ~$300bn 2028 WFE is ~15-20% above the Street — but it is a derivation, not a company forecast",
       "tickers": [
         "AMAT"
       ],
       "in_book": [],
       "impact": "watch",
-      "urgency": "this week",
+      "urgency": "standing",
       "confidence": "medium-high",
       "why_now": "AMAT management (Chen/Haran/Parker) told the tour it is doubling quarterly output capacity by 2028 with customer discussions running to 2030, and that planned capacity \"would support a market of that magnitude based on current share.\" Bernstein frames that as ~$300bn vs Street ~$250-260bn for 2028.",
       "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
@@ -2878,77 +3284,12 @@
       "origin": "curated_reconciliation",
       "feedback": "",
       "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "reco-c77e0919e898",
-      "asof": "2026-09-23",
-      "source_date": "2026-09-21",
-      "type": "model_check",
-      "priority": "watch",
-      "score": 36,
-      "title": "ORCL: the Sell rests entirely on out-year margin, and the only clean same-basis check says revenue is fine",
-      "tickers": [
-        "ORCL"
-      ],
-      "in_book": [],
-      "impact": "watch",
-      "urgency": "this week",
-      "confidence": "medium",
-      "why_now": "The note's own internally-consistent comparison (vs Visible Alpha, same basis) is the one to use — and all 18 internal cross-checks recomputed and tied exactly:",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the ORCL model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
-      "readthrough": [
-        {
-          "ticker": "AVGO",
-          "relation": "supplier",
-          "detail": "networking",
-          "from": "ORCL",
-          "in_book": true
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "supplier",
-          "detail": "GPUs",
-          "from": "ORCL",
-          "in_book": true
-        },
-        {
-          "ticker": "MDB",
-          "relation": "competitor",
-          "detail": "operational database",
-          "from": "ORCL",
-          "in_book": false
-        },
-        {
-          "ticker": "AMD",
-          "relation": "supplier",
-          "detail": "MI GPUs",
-          "from": "ORCL",
-          "in_book": false
-        },
-        {
-          "ticker": "OPENAI",
-          "relation": "customer",
-          "detail": "OCI compute",
-          "from": "ORCL",
-          "in_book": false
-        }
-      ],
-      "source": "Visible Alpha · curated reconciliation 2026-09-21",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-09-21.md"
-      ],
-      "evidence_anchor": "ORCL: the Sell rests entirely on out-year margin, and the only clean same-basis check says revenue is fine",
-      "origin": "curated_reconciliation",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
+      "hidden": false,
+      "carried_from": "2026-09-21"
     },
     {
       "id": "reco-5cba7f6e40ed",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-11",
       "type": "model_check",
       "priority": "watch",
@@ -3029,7 +3370,7 @@
     },
     {
       "id": "reco-dda3608573cc",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-11",
       "type": "research_idea",
       "priority": "watch",
@@ -3110,7 +3451,7 @@
     },
     {
       "id": "reco-5e4b068a9dab",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-15",
       "type": "model_check",
       "priority": "watch",
@@ -3184,7 +3525,7 @@
     },
     {
       "id": "reco-ddeb8c2b7aa7",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-15",
       "type": "contradiction",
       "priority": "watch",
@@ -3258,7 +3599,7 @@
     },
     {
       "id": "reco-501148415165",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-15",
       "type": "model_check",
       "priority": "watch",
@@ -3332,7 +3673,7 @@
     },
     {
       "id": "reco-be4bf46a45f1",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-17",
       "type": "model_check",
       "priority": "watch",
@@ -3385,7 +3726,7 @@
     },
     {
       "id": "reco-e69be9056a88",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-17",
       "type": "narrative_shift",
       "priority": "watch",
@@ -3438,7 +3779,7 @@
     },
     {
       "id": "reco-a4f7799e3d50",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-17",
       "type": "model_check",
       "priority": "watch",
@@ -3491,7 +3832,7 @@
     },
     {
       "id": "reco-1374e75efad9",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-11",
       "type": "contradiction",
       "priority": "watch",
@@ -3551,7 +3892,7 @@
     },
     {
       "id": "reco-3f54ed37230d",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-09",
       "type": "model_check",
       "priority": "watch",
@@ -3611,7 +3952,7 @@
     },
     {
       "id": "reco-5abcf516f176",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-18",
       "type": "model_check",
       "priority": "watch",
@@ -3640,7 +3981,7 @@
     },
     {
       "id": "reco-5a97d6cd2843",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-09",
       "type": "model_check",
       "priority": "watch",
@@ -3723,7 +4064,7 @@
     },
     {
       "id": "reco-990109a3073d",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-18",
       "type": "research_idea",
       "priority": "watch",
@@ -3804,7 +4145,7 @@
     },
     {
       "id": "reco-96db7d4d7c4c",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-03",
       "type": "model_check",
       "priority": "watch",
@@ -3887,7 +4228,7 @@
     },
     {
       "id": "reco-02bb8023a7cf",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-03",
       "type": "model_check",
       "priority": "watch",
@@ -3970,7 +4311,7 @@
     },
     {
       "id": "reco-3760930b0430",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-03",
       "type": "model_check",
       "priority": "watch",
@@ -4053,7 +4394,7 @@
     },
     {
       "id": "reco-b25045854fb1",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-03",
       "type": "model_check",
       "priority": "watch",
@@ -4113,7 +4454,7 @@
     },
     {
       "id": "reco-653a456422d9",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-03",
       "type": "model_check",
       "priority": "watch",
@@ -4173,7 +4514,7 @@
     },
     {
       "id": "reco-70a677f42888",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-03",
       "type": "model_check",
       "priority": "watch",
@@ -4256,7 +4597,7 @@
     },
     {
       "id": "reco-cbb33ef6c48f",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-03",
       "type": "model_check",
       "priority": "watch",
@@ -4339,7 +4680,7 @@
     },
     {
       "id": "reco-b0a4b3eb8027",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-03",
       "type": "model_check",
       "priority": "watch",
@@ -4378,7 +4719,7 @@
     },
     {
       "id": "reco-0e4c277cce6a",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-03",
       "type": "model_check",
       "priority": "watch",
@@ -4463,7 +4804,7 @@
     },
     {
       "id": "reco-798a68d562a1",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-15",
       "type": "model_check",
       "priority": "watch",
@@ -4537,7 +4878,7 @@
     },
     {
       "id": "reco-b659796b0753",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-09",
       "type": "model_check",
       "priority": "watch",
@@ -4620,7 +4961,7 @@
     },
     {
       "id": "reco-e06178f22958",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-11",
       "type": "research_idea",
       "priority": "watch",
@@ -4703,7 +5044,7 @@
     },
     {
       "id": "reco-af6d3dc1d448",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-04",
       "type": "contradiction",
       "priority": "watch",
@@ -4732,7 +5073,7 @@
     },
     {
       "id": "reco-a553c00bd4fa",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-18",
       "type": "research_idea",
       "priority": "watch",
@@ -4799,7 +5140,7 @@
     },
     {
       "id": "reco-c4b319491017",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-18",
       "type": "research_idea",
       "priority": "watch",
@@ -4828,7 +5169,7 @@
     },
     {
       "id": "reco-388ec27a2413",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-10",
       "type": "model_check",
       "priority": "watch",
@@ -4911,7 +5252,7 @@
     },
     {
       "id": "reco-a0377513a64f",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-17",
       "type": "model_check",
       "priority": "watch",
@@ -4993,8 +5334,37 @@
       "carried_from": "2026-09-17"
     },
     {
+      "id": "reco-82c72d90ea99",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-21",
+      "type": "research_idea",
+      "priority": "watch",
+      "score": 35,
+      "title": "MS raises its own US power shortfall 50% — but ~15 GW of the move is MS correcting its own double-count",
+      "tickers": [],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "standing",
+      "confidence": "medium",
+      "why_now": "Headline: '26-28 US DC incremental demand 97 GW (from 68); gross shortfall 57 GW from 38 GW; net of \"time to power\" solutions 33 GW = 34% of chip demand.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Turn the finding into a bull/base/bear question for the affected theme; identify the KPI and source that would make it investable.",
+      "falsifier": "No observable KPI or dated catalyst can be identified to test the hypothesis.",
+      "readthrough": [],
+      "source": "management/company primary · curated reconciliation 2026-09-21",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-21.md"
+      ],
+      "evidence_anchor": "MS raises its own US power shortfall 50% — but ~15 GW of the move is MS correcting its own double-count",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-09-21"
+    },
+    {
       "id": "reco-fad5914394d1",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-09",
       "type": "model_check",
       "priority": "watch",
@@ -5081,7 +5451,7 @@
     },
     {
       "id": "reco-aec2df916ddb",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-09",
       "type": "model_check",
       "priority": "watch",
@@ -5168,7 +5538,7 @@
     },
     {
       "id": "reco-ca5fc077555d",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-11",
       "type": "model_check",
       "priority": "watch",
@@ -5251,7 +5621,7 @@
     },
     {
       "id": "reco-b2aa9280e659",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-11",
       "type": "research_idea",
       "priority": "watch",
@@ -5334,7 +5704,7 @@
     },
     {
       "id": "reco-218f38206927",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-15",
       "type": "model_check",
       "priority": "watch",
@@ -5380,7 +5750,7 @@
     },
     {
       "id": "reco-d6c0d4b02e7c",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-10",
       "type": "model_check",
       "priority": "watch",
@@ -5463,7 +5833,7 @@
     },
     {
       "id": "reco-b55fbf3e82ce",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-10",
       "type": "model_check",
       "priority": "watch",
@@ -5546,7 +5916,7 @@
     },
     {
       "id": "reco-7dab5f53cef0",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-10",
       "type": "model_check",
       "priority": "watch",
@@ -5629,7 +5999,7 @@
     },
     {
       "id": "reco-2bbe1ae7ce8c",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-11",
       "type": "contradiction",
       "priority": "watch",
@@ -5712,7 +6082,7 @@
     },
     {
       "id": "reco-19b5fca01766",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-10",
       "type": "research_idea",
       "priority": "watch",
@@ -5779,7 +6149,7 @@
     },
     {
       "id": "reco-bf2225b3ab5e",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-10",
       "type": "model_check",
       "priority": "watch",
@@ -5845,8 +6215,75 @@
       "carried_from": "2026-09-10"
     },
     {
+      "id": "reco-c77e0919e898",
+      "asof": "2026-09-24",
+      "source_date": "2026-09-21",
+      "type": "model_check",
+      "priority": "watch",
+      "score": 35,
+      "title": "ORCL: the Sell rests entirely on out-year margin, and the only clean same-basis check says revenue is fine",
+      "tickers": [
+        "ORCL"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "standing",
+      "confidence": "medium",
+      "why_now": "The note's own internally-consistent comparison (vs Visible Alpha, same basis) is the one to use — and all 18 internal cross-checks recomputed and tied exactly:",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the ORCL model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "supplier",
+          "detail": "networking",
+          "from": "ORCL",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "ORCL",
+          "in_book": true
+        },
+        {
+          "ticker": "MDB",
+          "relation": "competitor",
+          "detail": "operational database",
+          "from": "ORCL",
+          "in_book": false
+        },
+        {
+          "ticker": "AMD",
+          "relation": "supplier",
+          "detail": "MI GPUs",
+          "from": "ORCL",
+          "in_book": false
+        },
+        {
+          "ticker": "OPENAI",
+          "relation": "customer",
+          "detail": "OCI compute",
+          "from": "ORCL",
+          "in_book": false
+        }
+      ],
+      "source": "Visible Alpha · curated reconciliation 2026-09-21",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-21.md"
+      ],
+      "evidence_anchor": "ORCL: the Sell rests entirely on out-year margin, and the only clean same-basis check says revenue is fine",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-09-21"
+    },
+    {
       "id": "reco-35aac8762054",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-10",
       "type": "contradiction",
       "priority": "watch",
@@ -5877,7 +6314,7 @@
     },
     {
       "id": "reco-9ea6a03bcba3",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-18",
       "type": "model_check",
       "priority": "watch",
@@ -5944,7 +6381,7 @@
     },
     {
       "id": "reco-9d7de1ed5929",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-09",
       "type": "model_check",
       "priority": "watch",
@@ -6018,7 +6455,7 @@
     },
     {
       "id": "reco-50883f6d0de2",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-04",
       "type": "model_check",
       "priority": "watch",
@@ -6092,7 +6529,7 @@
     },
     {
       "id": "reco-4d789864369b",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-04",
       "type": "model_check",
       "priority": "watch",
@@ -6166,7 +6603,7 @@
     },
     {
       "id": "reco-17a7eb30fb6b",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-04",
       "type": "model_check",
       "priority": "watch",
@@ -6240,7 +6677,7 @@
     },
     {
       "id": "reco-7a982ea48ab9",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-04",
       "type": "model_check",
       "priority": "watch",
@@ -6314,7 +6751,7 @@
     },
     {
       "id": "reco-3a638df86a4e",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-09",
       "type": "contradiction",
       "priority": "watch",
@@ -6401,7 +6838,7 @@
     },
     {
       "id": "reco-dcb34b275b2a",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-09",
       "type": "model_check",
       "priority": "watch",
@@ -6432,7 +6869,7 @@
     },
     {
       "id": "reco-18860cdae625",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-09",
       "type": "contradiction",
       "priority": "watch",
@@ -6463,7 +6900,7 @@
     },
     {
       "id": "reco-2b4eb097698b",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-09-09",
       "type": "model_check",
       "priority": "watch",
@@ -6530,7 +6967,7 @@
     },
     {
       "id": "cata-d6253f9923ca",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-10-26",
       "event_date": "2026-10-26",
       "type": "catalyst",
@@ -6576,40 +7013,8 @@
       "hidden": false
     },
     {
-      "id": "cata-a479a74da5f9",
-      "asof": "2026-09-23",
-      "source_date": "2026-10-15",
-      "event_date": "2026-10-15",
-      "type": "catalyst",
-      "priority": "watch",
-      "score": 34,
-      "title": "SMTC — 2026-10-15: INVESTOR / ANALYST DAY, San Jose. The single most important dated event on this page,…",
-      "tickers": [
-        "SMTC"
-      ],
-      "in_book": [],
-      "impact": "watch",
-      "urgency": "calendar",
-      "confidence": "medium",
-      "why_now": "🔴 2026-10-15 — INVESTOR / ANALYST DAY, San Jose. The single most important dated event on this page, because management deferred the two questions that matter to it. Promised content: \"an in-dept",
-      "belief_update": "A dated event can resolve or reframe an open debate.",
-      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
-      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
-      "readthrough": [],
-      "source": "SMTC page catalyst ledger; underlying source/date retained in the catalyst text",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "SMTC.md"
-      ],
-      "evidence_anchor": "🔴 2026-10-15 — INVESTOR / ANALYST DAY, San Jose. The single most important dated event on this page, because management deferred the two questions that matter to it. Promised content: \"an in-dept",
-      "origin": "catalyst_calendar",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
       "id": "cata-9063aab68b04",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "source_date": "2026-10-14",
       "event_date": "2026-10-14",
       "type": "catalyst",

@@ -6,8 +6,8 @@ _Generated 2026-09-24 · 96 public-company pages · flags inputs that exist on d
 
 | Sev | Ticker | Words | Cites | Density | Latest tx | tx read? | Calls used | Decks | What's unread |
 |--:|---|--:|--:|--:|---|:--:|---|---|---|
-| 5.0 | CEG | 4521 | 25 | 177.4 | 2026-08-06 | ✗ | 0/0 | 0/2 | latest transcript 2026-08-06 unread; latest 10-Q 2026-08-06 unread (no same-qtr transcript either) |
 | 5.0 | TEL | 3674 | 15 | 202.4 | 2026-07-22 | ✗ | 0/0 | 0/0 | latest transcript 2026-07-22 unread; latest 10-Q 2026-07-24 unread (no same-qtr transcript either) |
+| 5.0 | CEG | 6586 | 27 | 250.4 | 2026-08-06 | ✗ | 0/0 | 0/2 | latest transcript 2026-08-06 unread; latest 10-Q 2026-08-06 unread (no same-qtr transcript either) |
 | 5.0 | VECO | 5082 | 17 | 262.2 | 2026-08-05 | ✗ | 0/0 | 0/0 | latest transcript 2026-08-05 unread; latest 10-Q 2026-08-05 unread (no same-qtr transcript either) |
 | 5.0 | NVT | 6422 | 20 | 346.1 | 2026-07-31 | ✗ | 0/0 | 0/0 | latest transcript 2026-07-31 unread; latest 10-Q 2026-07-31 unread (no same-qtr transcript either) |
 | 5.0 | WMB | 10724 | 26 | 366.9 | 2026-08-04 | ✗ | 1/1 | 1/3 | latest transcript 2026-08-04 unread; latest 10-Q 2026-08-03 unread (no same-qtr transcript either) |
@@ -21,8 +21,8 @@ _Generated 2026-09-24 · 96 public-company pages · flags inputs that exist on d
 | 5.0 | POWI | 720 | 12 | — | 2026-08-05 | ✗ | 0/0 | 0/0 | latest transcript 2026-08-05 unread; latest 10-Q 2026-08-06 unread (no same-qtr transcript either) |
 | 4.0 | TM | 2765 | 9 | 78.7 | 2026-08-04 | ✗ | 0/0 | 0/16 | latest transcript 2026-08-04 unread |
 | 3.0 | WOLF | 9413 | 26 | 503.1 | 2026-08-19 | ✗ | 0/0 | 0/0 | latest transcript 2026-08-19 unread |
-| 3.0 | BESI | 17499 | 45 | 1862.4 | 2026-07-23 | ✗ | 0/0 | 0/0 | latest transcript 2026-07-23 unread |
+| 3.0 | BESI | 27992 | 46 | 2914.2 | 2026-07-23 | ✗ | 0/0 | 0/0 | latest transcript 2026-07-23 unread |
 | 2.0 | AGX | 4022 | 15 | 146.6 | 2026-06-04 | ✓ | 0/0 | 1/1 | latest 10-Q 2026-09-02 unread (no same-qtr transcript either) |
-| 2.0 | CSCO | 25730 | 60 | 378.2 | 2026-08-12 | ✓ | 1/2 | 2/17 | latest 10-Q 2026-05-19 unread (no same-qtr transcript either) |
+| 2.0 | CSCO | 28021 | 61 | 410.4 | 2026-08-12 | ✓ | 1/2 | 2/17 | latest 10-Q 2026-05-19 unread (no same-qtr transcript either) |
 
 _Density = (words + 25·citations) / (filings+transcripts+calls+briefings+decks). Low density + high material = thin synthesis. 'Calls used' = `_equity_calls` links / available (a low ratio is fine if the page links a representative subset)._
