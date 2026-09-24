@@ -5,7 +5,7 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\NOW` (filings + transcripts + decks) · `_briefings\by-ticker\NOW.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-23 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-24 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|

@@ -19,27 +19,49 @@ This did not come from any single note. It only appears when the batch is reconc
 
 ---
 
-## DIVERGES — where a new source contradicts what the wiki, the house or consensus holds
+## Where the new data DIVERGES
 
-**1. HBM TAM — the ledger's canonical was 2.8x too low, on the same house's own name.** `_meta/assumptions.md` carried *"HBM TAM $35B 2025 → $100B 2028 (~40% CAGR) | Micron/JPM | 2026-05-28"*. JPM's 2026-09-22 model prints HBM industry revenue at **US$160.1bn (2027E) and US$282.2bn (2028E)**. BofA's $168bn **CY30** frame now sits *below* JPM's **CY28**, so the two are no longer "different horizons, both valid" — they conflict on level. **Ledger re-based this run**; the scope note now tells readers to cite the dated row, never the retired $100bn framing.
+_Canonical heading restored 2026-09-24 so `build_edge.py` harvests these rows; the original wording was "DIVERGES — where a new source contradicts what the wiki, the house or consensus holds". The findings are unchanged in substance — each numbered item was promoted from a bold paragraph to a `###` sub-section, which is the shape the edge parser reads._
 
-**2. CoWoS 2027 — a convergence the wiki logged on 09-17 has re-split.** UBS puts industry CoWoS at **270kwpm end-'27** against JPM's 260k. Worse for anyone reusing it: **no revised per-vendor split was published**, so the 180 TSMC / 60 ASE / 20 Amkor decomposition is stale against the new total and must not be netted into it.
+### 1. HBM TAM — the ledger's canonical was 2.8x too low, on the same house's own name.
 
-**3. CXMT — the two China channels now say opposite things in the same month.** UBS's APAC tour reports **large preliminary orders for CXMT G4 (1z nm) but NOT YET for G5 (1a nm)**. This wiki's own 2026-09-20 ingest carried the line that **CXMT's G5 hit mass production two years early**. Both are dated, both are sourced, and they cannot both describe the same quarter. Unresolved and flagged on `themes/semicap-wfe`. Separately, Bernstein's initiation has CXMT **surpassing Micron on wafer capacity in 2028** (530k wpm 4Q28, "nearly 20% globally").
+`_meta/assumptions.md` carried *"HBM TAM $35B 2025 → $100B 2028 (~40% CAGR) | Micron/JPM | 2026-05-28"*. JPM's 2026-09-22 model prints HBM industry revenue at **US$160.1bn (2027E) and US$282.2bn (2028E)**. BofA's $168bn **CY30** frame now sits *below* JPM's **CY28**, so the two are no longer "different horizons, both valid" — they conflict on level. **Ledger re-based this run**; the scope note now tells readers to cite the dated row, never the retired $100bn framing.
 
-**4. Hybrid bonding in memory — three sources in 24 hours, pointing two ways.** Redburn (09-23): HBM4E is the insertion point, HVM 2027. UBS/ASMPT (09-22): TCB extended **potentially to HBM5**, volume adoption pushed out, *"in-line with comments from both Samsung and SK Hynix"*. DAMNANG (09-23): **Samsung has already delivered hybrid-bonded HBM4/HBM4E samples; SK hynix has not**. (2) and (3) disagree on whether Samsung is the hybrid-bonding champion or the TCB extender. Both can be literally true. ➤ **The test has been narrowed to a customer QUALIFICATION of a hybrid-bonded HBM4E part — not a sample, not an evaluation.**
+### 2. CoWoS 2027 — a convergence the wiki logged on 09-17 has re-split.
 
-**5. COHR's PhotonLink TAM — a machine summary against three earnings calls.** The page carries *">$15bn by 2030"* from the Q3 call, the FQ4 call and a Jefferies relay. A **Bloomberg automated summary** of the 09-21 conference presentation prints *"+$30bn by 2030 on top of the existing $60bn portfolio"*. Logged as **open drift, not a supersession** — a generated summary does not overwrite a call. ➤ Pull the PhotonLink deck from Coherent IR; it settles the basis, the "$15,000 per system or per 100 terabit I/O chip" unit, and whether the two hyperscaler LTAs are additional to the NVIDIA agreement.
+UBS puts industry CoWoS at **270kwpm end-'27** against JPM's 260k. Worse for anyone reusing it: **no revised per-vendor split was published**, so the 180 TSMC / 60 ASE / 20 Amkor decomposition is stale against the new total and must not be netted into it.
 
-**6. Morgan Stanley's four-note cyber package disagrees with itself.** The CRWD note says cyber spend moves to 2.5% of enterprise AI budgets *"from the ~1% it is today"*; the PANW and sector notes use **~1.5%**. 1.5%→2.5% is a 1.67x step; 1%→2.5% is 2.5x. This is the **third** documented internal inconsistency in one package (the others: CRWD bull PT printed $309 in the body and $308.00 on the risk-reward page; PANW bear $250 vs $253.00). The theme keeps 1.5% and **deliberately does not write it to `_meta/assumptions.md` while the package is inconsistent.**
+### 3. CXMT — the two China channels now say opposite things in the same month.
 
-**7. Meta compute resale — the wiki's framing that "no house has put Meta Compute revenue in a number" is now false.** Wells Fargo's model carries **0.25 GW average 2027E and 1.00 GW 2028E of resold capacity at $20bn/GW ⇒ $5bn (2027E) and $20bn (2028E) of revenue**, 1.78% / 5.38% of owned capacity. The `What the NeoCloud is worth` signal was re-scored ⚠ nuances → CONVERGED 09-17 → **SPLIT AGAIN 09-24**.
+UBS's APAC tour reports **large preliminary orders for CXMT G4 (1z nm) but NOT YET for G5 (1a nm)**. This wiki's own 2026-09-20 ingest carried the line that **CXMT's G5 hit mass production two years early**. Both are dated, both are sourced, and they cannot both describe the same quarter. Unresolved and flagged on `themes/semicap-wfe`. Separately, Bernstein's initiation has CXMT **surpassing Micron on wafer capacity in 2028** (530k wpm 4Q28, "nearly 20% globally").
 
-**8. DRAM 3Q26 pricing — the canonical is now the floor, not the central case.** Four of five new marks print at or above the top of TrendForce's +15-20%: BofA/Simon Woo **+20-30% q/q**, UBS **+~26% incl. LTAs**, UBS on SK hynix **+23.1%**, FundaAI **20-30% executed**; only Mirae's **+15.8%** is inside. The likeliest source of the spread is LTA treatment — UBS is the only house that states its figure is LTA-inclusive.
+### 4. Hybrid bonding in memory — three sources in 24 hours, pointing two ways.
 
-**9. NBIS–Meta contract value.** UBS prints **"$12+bn / 5 yrs"**; the wiki carries a **$20bn+ TCV** from Barclays. Same deal, ~1.7x apart. Both retained, unreconciled.
+Redburn (09-23): HBM4E is the insertion point, HVM 2027. UBS/ASMPT (09-22): TCB extended **potentially to HBM5**, volume adoption pushed out, *"in-line with comments from both Samsung and SK Hynix"*. DAMNANG (09-23): **Samsung has already delivered hybrid-bonded HBM4/HBM4E samples; SK hynix has not**. (2) and (3) disagree on whether Samsung is the hybrid-bonding champion or the TCB extender. Both can be literally true. ➤ **The test has been narrowed to a customer QUALIFICATION of a hybrid-bonded HBM4E part — not a sample, not an evaluation.**
 
-**10. CoreWeave contracted power.** UBS says "~6 GW" at end-2Q26; CoreWeave's own disclosure is ~3.7 GW (quarter-end) / ~4.2 GW (08-11). No bridge given — most likely a gross-facility vs IT-load basis gap, which is exactly the trap UBS itself documents three pages earlier.
+### 5. COHR's PhotonLink TAM — a machine summary against three earnings calls.
+
+The page carries *">$15bn by 2030"* from the Q3 call, the FQ4 call and a Jefferies relay. A **Bloomberg automated summary** of the 09-21 conference presentation prints *"+$30bn by 2030 on top of the existing $60bn portfolio"*. Logged as **open drift, not a supersession** — a generated summary does not overwrite a call. ➤ Pull the PhotonLink deck from Coherent IR; it settles the basis, the "$15,000 per system or per 100 terabit I/O chip" unit, and whether the two hyperscaler LTAs are additional to the NVIDIA agreement.
+
+### 6. Morgan Stanley's four-note cyber package disagrees with itself.
+
+The CRWD note says cyber spend moves to 2.5% of enterprise AI budgets *"from the ~1% it is today"*; the PANW and sector notes use **~1.5%**. 1.5%→2.5% is a 1.67x step; 1%→2.5% is 2.5x. This is the **third** documented internal inconsistency in one package (the others: CRWD bull PT printed $309 in the body and $308.00 on the risk-reward page; PANW bear $250 vs $253.00). The theme keeps 1.5% and **deliberately does not write it to `_meta/assumptions.md` while the package is inconsistent.**
+
+### 7. Meta compute resale — the wiki's framing that "no house has put Meta Compute revenue in a number" is now false.
+
+Wells Fargo's model carries **0.25 GW average 2027E and 1.00 GW 2028E of resold capacity at $20bn/GW ⇒ $5bn (2027E) and $20bn (2028E) of revenue**, 1.78% / 5.38% of owned capacity. The `What the NeoCloud is worth` signal was re-scored ⚠ nuances → CONVERGED 09-17 → **SPLIT AGAIN 09-24**.
+
+### 8. DRAM 3Q26 pricing — the canonical is now the floor, not the central case.
+
+Four of five new marks print at or above the top of TrendForce's +15-20%: BofA/Simon Woo **+20-30% q/q**, UBS **+~26% incl. LTAs**, UBS on SK hynix **+23.1%**, FundaAI **20-30% executed**; only Mirae's **+15.8%** is inside. The likeliest source of the spread is LTA treatment — UBS is the only house that states its figure is LTA-inclusive.
+
+### 9. NBIS–Meta contract value.
+
+UBS prints **"$12+bn / 5 yrs"**; the wiki carries a **$20bn+ TCV** from Barclays. Same deal, ~1.7x apart. Both retained, unreconciled.
+
+### 10. CoreWeave contracted power.
+
+UBS says "~6 GW" at end-2Q26; CoreWeave's own disclosure is ~3.7 GW (quarter-end) / ~4.2 GW (08-11). No bridge given — most likely a gross-facility vs IT-load basis gap, which is exactly the trap UBS itself documents three pages earlier.
 
 ---
 
@@ -82,3 +104,69 @@ This did not come from any single note. It only appears when the batch is reconc
 4. **Meta–Oracle $20bn** sits in a published Wells Fargo model labelled "(Not Confirmed)" by Wells Fargo itself, unannounced by either party — recorded in `themes/ai-compute-deals.md` as a broker assumption, not a deal.
 5. **Anthropic–Lambda $35bn** is now twice-reported and still unconfirmed by Lambda.
 6. **BBG refresh owed** — the 12:03 `daily-wiki-consensus` run needs the Terminal up; this reconciliation used the 09-23 snapshot.
+
+---
+
+## BBG resolution layer — live pull, 2026-09-24 (`/wiki-consensus`)
+
+_BBG column resolved 2026-09-24 — estimates.json asof 2026-09-24._
+
+**Baseline.** Full live re-fetch: `estimates.json` **asof 2026-09-24, 107/107 names, 0 `error` keys, 0 null prices, 0 `carried_over` stamps.** No cell in this report was ever marked `PENDING` — the run used the one-day-old 09-23 snapshot and logged the refresh as owed (open item 6). This layer re-places its quantitative rows on the fresh vintage and **retires that open item**. No web data was substituted.
+
+⚠️ **Read the byte-identity count correctly: 71 of 107 records are identical to the 09-23 vintage, and that is NOT the silent-carry-over defect.** The fetch completed **09:04 BRT = 08:04 ET, before the US open**, so every US `PX_LAST` is legitimately still the 09-23 close. The two Korean names were checked directly against the Terminal rather than assumed: a live `bdp` returns `LAST_UPDATE_DT 2026-09-23` for **both** SAMSUNG (005930 KS) and SKHYNIX (000660 KS), i.e. **the staleness is on Bloomberg's side, not the script's** — Japan (8035 JP) returns 09-24 as expected. Estimates, not prices, are what this layer places, and those are current.
+
+### ① MU — UBS is a high bull on FY27, but it is NOT through the street high, and FY28 cannot be placed at all
+
+| | UBS (09-23) | BBG cons 09-24 | vs median | Street high | vs high |
+|---|--:|--:|--:|--:|--:|
+| FY27E EPS (`2FY`) | **$184.19** | $154.73 | **+19.0%** | **$193.17** | **−4.6%** |
+| FY28E EPS (`3FY`) | **$274.97** | $178.19 | **+54.3%** | **no `eps_hi` on the wrapper** | **cannot be placed** |
+| PT | $1,625 | $1,578.59 | +2.9% | $2,200 | −26.1% |
+
+➤ **This qualifies the headline table.** On FY27 UBS is a loud bull but **still inside the Street's own range** — somebody already carries $193.17. The "+54.4%" FY28 gap (now **+54.3%** on fresh data) is the one that looks extreme, and it is precisely the year where **BBG publishes no street high**, so there is no dispersion to place it against. **The FY28 claim is unfalsifiable against consensus dispersion and should not be quoted as "half again above the Street" without that caveat.**
+
+➤ **The memory-complex screen fired on MU and SKHYNIX and was cleared, not waived.** `MU 2FY` shows $251.9bn revenue at 86.3% GM / 83.2% EBIT margin, which trips the standing `growth>1.5 AND margin>60%` screen. Three checks cleared it: **(a)** an ad-hoc live `bdp` with `BEST_FPERIOD_OVERRIDE` reproduces `BEST_SALES` / `BEST_EBIT` / `BEST_GROSS_MARGIN` **exactly**, so the script is transcribing faithfully and the figures are Bloomberg's own; **(b)** the margins are internally coherent — GM 80.7% against EBIT margin 76.2% implies opex ≈4.5% of revenue, which is what a fixed ~$6bn cost base does against a price-driven revenue explosion, not a units error; **(c)** decisively, **BofA's own note prints consensus FY27E EPS at "~7x forward PE, up over 100% YoY", and $1,071.88 ÷ $154.73 = 6.93x with 1FY→2FY EPS +110.5%** — two independent broker marks reconcile to the snapshot to within rounding. **The memory complex is USABLE in this vintage.**
+
+### ② SKHYNIX — the sharper statement is not "+31% above the median", it is "level with the street high"
+
+| | UBS (09-22) | BBG cons 09-24 | vs median | Street high | vs high |
+|---|--:|--:|--:|--:|--:|
+| 2027E EPS (`2FY`) | **W610,284** | W466,029 | **+31.0%** | **W615,543** | **−0.9%** |
+| PT | W3,000,000 | W3,314,921 | −9.5% | W5,300,000 | −43.4% |
+
+➤ **UBS sits within 1% of the single most bullish 2027 EPS on the Street while pricing the stock 9.5% BELOW the consensus target.** That is a much stronger version of this report's own "above on the numbers, below on the price" pattern than the median comparison conveys — on earnings UBS is not merely above the Street, it is **at the ceiling of it**. Consensus, PT and dispersion are **unchanged to the decimal** from 09-23, for the Bloomberg-side reason given above.
+
+### ③ CRWV — consensus moved toward UBS overnight, and UBS's own "~6% above street" now reconciles more cleanly
+
+| | UBS (09-22) | BBG cons 09-23 | BBG cons 09-24 | vs median | Street high | vs high |
+|---|--:|--:|--:|--:|--:|--:|
+| FY28E revenue (`3FY`) | **$45,575mn** | $42,700mn | **$42,886mn** | **+6.3%** | $58,996mn | −22.7% |
+| PT | $120 | $142.05 | **$142.18** | **−15.6%** | $317.00 | −62.1% |
+
+➤ Consensus FY28 revenue rose **+0.44%** overnight, cutting the gap from +6.7% to **+6.3%** — i.e. **closer to UBS's own printed "~6% above street"**, so the report's figure was right and is now righter. The PT read is unchanged in sign and marginally wider.
+
+### ④ The three BASIS FLAGS are now resolved — and one resolves in the opposite direction to how it read
+
+The report declined to assert gaps on LITE and CSCO because the snapshot's `1FY/2FY/3FY` blocks carry **no period end-dates**, only labels. They resolve from the `lrq` (last reported quarter) field, which pins which fiscal year is still in progress:
+
+| Name | `lrq` | ⇒ `1FY` is | Broker mark | Correct comparator | Result |
+|---|---|---|--:|--:|---|
+| **LITE** | 2026-06-27 (FY26 **closed**) | FY2027 | Citi 2027E EPS **$23.03** | `1FY` = **$21.50** | **+7.1% ABOVE consensus** |
+| **CSCO** | 2026-07-25 (FY26 **closed**) | FY2027 | Barclays FY28 EPS **$5.58** | `2FY` = **$5.58** | **exact agreement, and it is real** |
+| **META** | 2026-06-30 (FY26 **in progress**) | FY2026 | KeyBanc 2027E EPS **$35.09** | `2FY` = **$38.11** | −7.9%, **basis flag stands** |
+
+➤ 🔴 **LITE inverts.** Measured against the `CY2027` block the report quoted, Citi looks **−18.1% below** consensus. Measured against the annual line — the correct basis — Citi is **+7.1% ABOVE** it. **The mapping is confirmed by Citi's own printed consensus comparator of $21.39, which sits 0.53% from the snapshot's `1FY` EPS of $21.504.** The report was right to refuse the CY27 comparison; the sign of the call is the opposite of what the flagged number suggested. Citi is nonetheless **−8.9% below the street high of $25.27**, so this is a mild bull, not an outlier.
+
+➤ **CSCO's exact match is genuine, not a coincidence.** Because FY2026 closed on 2026-07-25 and is reported, `1FY` = FY2027 and `2FY` = FY2028 — so Barclays' FY28 really does belong against `$5.58`. **Verified by mapping rather than assumed from numerical identity**, which is the trap this report correctly refused to walk into. Barclays sits **−11.6% below the street high of $6.31**.
+
+➤ **META's flag stands unchanged.** The GAAP-vs-adjusted / Visible-Alpha-vs-BBG basis difference is not resolved by a fresh pull: `2FY` EPS is **$38.112, unchanged to the decimal**. What moved is the price leg — consensus **PT $764.43 → $774.92 (+1.37%)**, rating 4.797 → 4.823, buy count 72 → 73, on an unchanged $744.10 spot. **Basis-match before quoting either number.**
+
+### ⑤ Names in this report with no BBG line — unchanged, and not resolvable by any re-run
+
+**ANTHROPIC**, **OPENAI**, **NSCALE**, **IREN**, **CXMT** and **Unitree** carry **no BBG consensus** and stay marked **"no BBG"**. This is a coverage boundary, not a PENDING cell, and re-running the fetch will never fill it.
+
+### ⑥ Backlog sweep — the whole `_meta` series is clean
+
+All 61 `reconciliation-*.md` plus the two `TSM_*` reports were scanned for unresolved BBG `PENDING` cells. **There are none.** Every historical `PENDING` carries a dated resolution note (07-01→07-13; 08-01 / 03 / 04 / 06 / 15 / 17-night→next-day `/wiki-consensus`; the 08-19 `## PENDING` section→08-20; the 09-01 `⏳ PENDING-PT`→struck, since `BEST_TARGET_PRICE` has shipped in the wrapper output since 09-03; 08-29 hazard (b)→closed via the `3FY` override). Residual "PENDING"-adjacent items are structural and stay **"no BBG"**: Unitree (688836.SS), the Korean small-caps (108490 / 058610 / 389500 KQ), TSEM, and the absent house models for SKHYNIX / SAMSUNG / KIOXIA / SNDK.
+
+➤ **Net effect of this layer: no row crosses DIVERGES ↔ CONFIRMS.** ① is qualified (FY28 unplaceable), ② is strengthened (UBS at the street high, not merely above the median), ③ is tightened, and ④ **re-signs LITE from an apparent −18.1% to a real +7.1%**.
