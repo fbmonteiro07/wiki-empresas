@@ -39,7 +39,7 @@ _Generated 2026-09-24 · parsed from every page's 'Catalysts / what to watch'. D
 | 2028-06-30 | NSCALE | 2028-06-30 — Monarch **2 GW gross / 1.37 GW IT online "by 1H28"** (Anthropic tranches; the wiki's first neocloud milestone tied to on-site gas turbines). |
 | 2031-12-31 | NSCALE | 2031-12-31 — Monarch expansion to ~8 GW gross planned. |
 
-## ⏰ Passed — need a post-mortem (11)
+## ⏰ Passed — need a post-mortem (12)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
@@ -56,6 +56,7 @@ _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_me
 | 2026-09-23 | BKNG | **🆕🔴🔴 2026-09-23 (WEDNESDAY, TWO DAYS OUT) — [[META]] CONNECT, AND THE SPECIFIC THING TO WATCH FOR BKNG IS A ROUTE CHANGE, NOT A PRODUCT ANNOUNCEMENT: DOES HOTEL BOOKING MOVE FROM BROWSER AUTOMATION T |
 | 2026-09-22 | LITE | **2026-09-22 — ECOC (JPM-hosted meetings).** CEO **Michael Hurlston** meeting alongside [[CRDO]] (CEO Bill Brennan), [[CIEN]] and Nokia (JPM · Joe Cardoso / Sandeep Deshpande, 2026-08-17). The natural |
 | 2026-09-22 | CRDO | **2026-09-22 — ECOC, JPM-hosted meeting with CEO Bill Brennan** (alongside [[CIEN]], [[LITE]] and Nokia; JPM · Cardoso / Deshpande, 2026-08-17). **JPM is also running an off-cycle hardware-reporter bu |
+| 2026-09-22 | APP | **🆕🔴 Whether **META** re-enters the non-IDFA mobile-ad market — NO LONGER "DORMANT" (old framing in `## Changelog`).** Two dated marks now sit under it, both from **Ben Legg (Digital People Internatio |
 
 ## ✅ Resolved (193)
 

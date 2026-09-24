@@ -1,8 +1,8 @@
 {
- "generated": "2026-09-23",
+ "generated": "2026-09-24",
  "counts": {
-  "nodes": 184,
-  "edges": 2071
+  "nodes": 185,
+  "edges": 2077
  },
  "nodes": [
   {
@@ -178,7 +178,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-09-21"
+   "last_chg": "2026-09-24"
   },
   {
    "id": "ANET",
@@ -251,7 +251,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-09-21"
+   "last_chg": "2026-09-24"
   },
   {
    "id": "ARM",
@@ -352,7 +352,7 @@
     "transcript": 10,
     "wiki": 1
    },
-   "next_catalyst": "2026-09-23",
+   "next_catalyst": "2027-01-01",
    "last_chg": "2026-09-21"
   },
   {
@@ -657,8 +657,8 @@
     "transcript": 9,
     "wiki": 1
    },
-   "next_catalyst": "2026-09-23",
-   "last_chg": "2026-09-21"
+   "next_catalyst": "",
+   "last_chg": "2026-09-24"
   },
   {
    "id": "HPE",
@@ -820,8 +820,8 @@
     "transcript": 9,
     "wiki": 1
    },
-   "next_catalyst": "2026-09-23",
-   "last_chg": "2026-09-21"
+   "next_catalyst": "",
+   "last_chg": "2026-09-24"
   },
   {
    "id": "MP",
@@ -1024,7 +1024,7 @@
     "transcript": 7,
     "wiki": 1
    },
-   "next_catalyst": "2026-09-23",
+   "next_catalyst": "2026-12-02",
    "last_chg": "2026-09-21"
   },
   {
@@ -1171,7 +1171,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-09-09"
+   "last_chg": "2026-09-24"
   },
   {
    "id": "SAMSUNG",
@@ -1503,7 +1503,7 @@
     "transcript": 9,
     "wiki": 1
    },
-   "next_catalyst": "2026-09-23",
+   "next_catalyst": "",
    "last_chg": "2026-09-21"
   },
   {
@@ -1906,6 +1906,14 @@
    "title": "ATE (semiconductor tester) TAM CY26 / CY27 / CY28 and test intensity (ATE ÷ WFE)",
    "status": "house-vs-street",
    "canonical": "House (official models Template DCF ADVANTEST / TER, 2026-09-18): TAM on the Advantest basis CY24 $6.0bn / CY25 $9.0bn / CY26e $13.75bn (Advantest deck 2026-07-29 mid-point; range $13.0-14.5bn, raised ~19% from April) grown by WFE × intensity: CY26 8.7% (calibrated) → CY27 8.0% → CY28 8.3% → $16.4bn CY27 / $19.9bn CY28 (+19% / +21%). The CY27 dip is Teradyne management's lag caveat ('could revert "
+  },
+  {
+   "id": "assum:digital-ad-growth",
+   "type": "assumption",
+   "label": "digital-ad-growth",
+   "title": "Digital advertising spend growth by platform (Legg/UBS panel)",
+   "status": "tracked",
+   "canonical": "SEPTEMBER 2026 VINTAGE (pre-3Q26), y/y ad-spend growth on Legg's panel, with his OWN three-months-ago mark in brackets where he restated it. TOTAL DIGITAL: Q3'26 +27% [+25%] · Q4'26 +27% [+24%] · Q1'27 +24% · FY26 “probably closer to 28%” [+27%]; Q2'26 came in at +32%. BY PLATFORM — META Q3 +29% [+28%] · Q4 +30% [+27%] · Q1'27 +27% · FY26 ~32% (⚠ Ju's arithmetic, Legg only half-confirmed: “Possibl"
   },
   {
    "id": "broker:BofA",
@@ -6025,6 +6033,42 @@
    "label": ""
   },
   {
+   "u": "assum:digital-ad-growth",
+   "v": "AMZN",
+   "type": "cites",
+   "label": ""
+  },
+  {
+   "u": "assum:digital-ad-growth",
+   "v": "APP",
+   "type": "cites",
+   "label": ""
+  },
+  {
+   "u": "assum:digital-ad-growth",
+   "v": "GOOG",
+   "type": "cites",
+   "label": ""
+  },
+  {
+   "u": "assum:digital-ad-growth",
+   "v": "META",
+   "type": "cites",
+   "label": ""
+  },
+  {
+   "u": "assum:digital-ad-growth",
+   "v": "RDDT",
+   "type": "cites",
+   "label": ""
+  },
+  {
+   "u": "assum:digital-ad-growth",
+   "v": "theme:macro-cycle",
+   "type": "cites",
+   "label": ""
+  },
+  {
    "u": "broker:BofA",
    "v": "AAOI",
    "type": "covers",
@@ -7016,7 +7060,7 @@
    "v": "AMZN",
    "type": "covers",
    "label": "",
-   "w": 130
+   "w": 149
   },
   {
    "u": "broker:JPM",
@@ -7513,21 +7557,21 @@
    "v": "APP",
    "type": "covers",
    "label": "",
-   "w": 6
+   "w": 22
   },
   {
    "u": "broker:JPM",
    "v": "APP",
    "type": "covers",
    "label": "",
-   "w": 39
+   "w": 42
   },
   {
    "u": "broker:MS",
    "v": "APP",
    "type": "covers",
    "label": "",
-   "w": 23
+   "w": 26
   },
   {
    "u": "broker:Jefferies",
@@ -7541,14 +7585,14 @@
    "v": "APP",
    "type": "covers",
    "label": "",
-   "w": 20
+   "w": 21
   },
   {
    "u": "broker:DB",
    "v": "APP",
    "type": "covers",
    "label": "",
-   "w": 21
+   "w": 22
   },
   {
    "u": "broker:Bernstein",
@@ -9991,7 +10035,7 @@
    "v": "GOOG",
    "type": "covers",
    "label": "",
-   "w": 235
+   "w": 243
   },
   {
    "u": "broker:JPM",
@@ -11335,7 +11379,7 @@
    "v": "META",
    "type": "covers",
    "label": "",
-   "w": 70
+   "w": 78
   },
   {
    "u": "broker:JPM",
@@ -13435,14 +13479,14 @@
    "v": "RDDT",
    "type": "covers",
    "label": "",
-   "w": 38
+   "w": 40
   },
   {
    "u": "broker:UBS",
    "v": "RDDT",
    "type": "covers",
    "label": "",
-   "w": 15
+   "w": 33
   },
   {
    "u": "broker:JPM",
