@@ -17,6 +17,7 @@ import math
 from pathlib import Path
 from vercel_gateway import render as render_vercel
 from gateway_charts import publish as publish_gateway_charts
+from build_gpu_pricing import render_fragment as render_gpu_pricing
 
 DATA = Path(__file__).resolve().parents[1] / "_data"
 DASH = Path(__file__).resolve().parents[1] / "_dashboards"
@@ -680,7 +681,7 @@ wow_tile_html = "".join(
         t, esc(v), s) for t, v, s in wow_tiles)
 
 tok_flags = {p["date"]: p["flag"] for p in sysg.get("token_points_meta", []) if p.get("flag")}
-gsvg = linechart(ts, "tokens_mo_T", "var(--s1)", lambda v: ("%.0fT" % v) if v >= 10 else ("%.1fT" % v), log=True, flags=tok_flags)
+gsvg = linechart(ts, "tokens_mo_T", "var(--s1)", lambda v: ("%.0fT" % v) if v >= 10 else ("%.1fT" % v), log=False, flags=tok_flags)
 csvg = linechart(cost_pts, "cost_mo_musd", "var(--s4)", lambda v: "$%.0fM" % v, pts2=realized_pts, color2="var(--good)")
 
 # ---------- SHARE BY PRODUCT ----------
@@ -702,7 +703,7 @@ GROWTH = (
     '<h2 id="growth">System growth — total tokens &amp; cost</h2>'
     + ('<p class="sub">OpenRouter\'s whole pie over time. <b>Left:</b> total tokens/mo (one point per weekly snapshot; May-2026 is a reported anchor ~8M users; Mar ~8.4T excluded as off-basis). <b>Right:</b> total cost/mo = those tokens priced at today\'s model blend ($%.2f/Mtok); the dashed green line is OpenRouter\'s reported <i>realized</i> spend.</p>' % blend_tok)
     + '<div class="tiles">' + gtiles_html + '</div>'
-    + '<div class="card"><div class="tlabel" style="margin-bottom:6px">Total token growth <span class="mut">(log scale)</span></div>' + gsvg
+    + '<div class="card"><div class="tlabel" style="margin-bottom:6px">Total token growth <span class="mut">(linear scale)</span></div>' + gsvg
     + '<div class="legend" style="margin-top:2px">'
       '<span><svg width="26" height="10"><circle cx="13" cy="5" r="4.2" fill="var(--s1)"/></svg>observed snapshot (ours)</span>'
       '<span><svg width="26" height="10"><circle cx="13" cy="5" r="4.5" fill="var(--surf)" stroke="var(--s1)" stroke-width="2.5"/></svg>reported anchor (press)</span>'
@@ -842,7 +843,7 @@ def scinsight():
 BODY = (
     '<header><h1>AI-Lab Traction Monitor <span style="font-weight:400;color:var(--headsub)">· OpenRouter + Vercel AI Gateway</span></h1>'
     '<p>OpenRouter: developer/API demand → implied inference spend · as of <b>' + asof + '</b> · trailing 7-day window · <a href="../index.html">← wiki</a></p></header>'
-    '<nav class="tabs"><a href="#token-growth">Token growth &amp; share</a><a href="#vercel">Vercel Gateway</a><a href="#weekly">Weekly brief</a><a href="#growth">System growth</a><a href="#value">Tokens ≠ $</a><a href="#labs">Lab leaderboard</a><a href="#cloud">Cross-cloud pricing</a><a href="#neo">Neocloud market</a><a href="#method">Method</a></nav><main>'
+    '<nav class="tabs"><a href="#token-growth">Token growth &amp; share</a><a href="#vercel">Vercel Gateway</a><a href="#gpu-pricing">GPU pricing</a><a href="#weekly">Weekly brief</a><a href="#growth">System growth</a><a href="#value">Tokens ≠ $</a><a href="#labs">Lab leaderboard</a><a href="#cloud">Cross-cloud pricing</a><a href="#neo">Neocloud market</a><a href="#method">Method</a></nav><main>'
     + publish_gateway_charts() +
     '<div class="callout warn"><b>Read this first.</b> This reconstructs an "AI-lab ARR" view from OpenRouter\'s public usage feed. It captures <b>developer/API traction routed through OpenRouter</b> — a real, high-frequency leading indicator, but a <i>slice</i> that excludes first-party enterprise API and consumer subscriptions (ChatGPT/Claude/Gemini), the bulk of frontier-lab ARR. '
     'Dollars are <b>tokens × list price with caching OFF</b>, so they are a <b>ceiling ≈ 3× realized</b> spend. <b>Lead with relative rank and share, not the absolute $.</b></div>'
@@ -906,6 +907,7 @@ BODY = (
     '<p class="note"><b>Refresh.</b> OpenRouter baseline: Windows task <b>"OpenRouter Weekly Refresh" — Mondays 08:05</b> runs <code>refresh_openrouter.bat</code> (fetch → build → dashboard → git commit+push; log <code>E:\\.claude\\scripts\\refresh_openrouter.log</code>). Both sources and weekly brief: <code>py _wiki/_tools/refresh_ai_gateways.py</code>. Friday summary: 09:00 America/Sao_Paulo, via Codex. The token API returns trailing 7/30-day totals only (no back-history); each snapshot appends one point to <code>history.jsonl</code> — the trend chart above builds itself weekly. ARR figures hand-edited &amp; attributed in <code>_data/openrouter/arr.json</code>.</p>'
     '<p class="note">Generated ' + gen + ' · data © OpenRouter (public). Implied-$ and ARR-bridge figures are estimates, not the labs\' reported revenue.</p></div>'
     + render_vercel(D)
+    + render_gpu_pricing()
     + '<section id="weekly"><h2>Weekly brief</h2><p>OpenRouter + Vercel · Fridays at 09:00 America/Sao_Paulo. <a href="gateway-weekly.html">Read the latest summary</a>.</p></section>'
     + '</main>'
 )

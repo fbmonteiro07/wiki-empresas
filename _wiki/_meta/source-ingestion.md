@@ -110,6 +110,8 @@ If the source resolves a logged catalyst, its result is recorded in `_wiki\_meta
 
 ### 8. Reconciles the new information
 
+**Standing compute-deal timeline rule (user request, 2026-09-23):** whenever an ingested source contains a compute agreement or a subsequent confirmation, amendment, financing milestone, delay, cancellation or delivery, update [AI compute deals — announcements and confirmations](../themes/ai-compute-deals.md). This applies across companies, including inbox, email, newsletter, transcript, filing and manual-exhibit updates. Match the existing deal ID before adding an event. Keep the original announcement and add later evidence under that ID; distinguish event date, publication date and recorded date, and separate contract evidence from financing/delivery. A repeat of the same report is not independent confirmation or incremental capacity. Reconcile the company pages, preserve superseded terms in their Changelogs and apply the timeline's source/basis rules.
+
 Every material datapoint is compared with:
 
 - the prior wiki view and debate;
@@ -147,6 +149,7 @@ A source is fully ingested only when all applicable checks are true:
 - [ ] Correct company and theme routes verified from substance
 - [ ] New datapoints added with source and date attribution
 - [ ] Superseded views preserved in `## Changelog`
+- [ ] Relevant compute-deal announcements or subsequent milestones appended to `themes/ai-compute-deals.md`, with existing deal IDs checked and duplicate/overlap treatment recorded
 - [ ] Relevant catalyst outcome recorded
 - [ ] Reconciliation completed or Bloomberg explicitly marked `PENDING`
 - [ ] Raw source/link preserved

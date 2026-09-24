@@ -122,6 +122,12 @@ def main():
             vg.build(vg.fetch())
         except Exception as exc:
             errors.append('Vercel refresh: '+str(exc))
+    if not args.offline:
+        try:
+            run('gpu_pricing.py')
+        except Exception as exc:
+            errors.append('GPU pricing refresh: '+str(exc))
+    run('build_gpu_pricing.py')
     errors=build_brief(errors)
     run('build_openrouter_dash.py')
     print('Weekly brief:',REPORTS/'weekly-latest.md')
