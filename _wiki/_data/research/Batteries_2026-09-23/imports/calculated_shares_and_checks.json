@@ -1,0 +1,299 @@
+{
+  "input_grounding": "HARD: official USITC DataWeb / Census values retrieved 2026-09-23",
+  "equation": "China share (%) = China customs import value / all-country customs import value * 100",
+  "calibration": "No estimated constants. This is descriptive arithmetic on reported flows, not a forecast.",
+  "sensitivity": "No assumed inputs; interpretation is sensitive to HTS scope, customs origin and valuation basis.",
+  "checks": {
+    "lithium_country_sums": true,
+    "bess_monthly_country_sums": true,
+    "bess_monthly_equals_annual_view": true,
+    "nonnegative": true,
+    "prior_ytd_country_sum": true,
+    "prior_ytd_monthly_equals_annual_view": true,
+    "prior_ytd_monthly_country_sums": true
+  },
+  "lithium": [
+    {
+      "period": "2024",
+      "world_usd": 23609047729,
+      "china_usd": 16316928237,
+      "china_share_pct": 69.11302998874123
+    },
+    {
+      "period": "2025",
+      "world_usd": 19727586939,
+      "china_usd": 11697088776,
+      "china_share_pct": 59.293053996764854
+    },
+    {
+      "period": "Jan-Jul 2026",
+      "world_usd": 9721366797,
+      "china_usd": 3825215075,
+      "china_share_pct": 39.34853148613276
+    }
+  ],
+  "bess_country": [
+    {
+      "country": "Japan",
+      "usd": 754431477,
+      "share_pct": 29.188058882111967
+    },
+    {
+      "country": "South Korea",
+      "usd": 679980758,
+      "share_pct": 26.307648883010653
+    },
+    {
+      "country": "China",
+      "usd": 401055914,
+      "share_pct": 15.516377550152555
+    },
+    {
+      "country": "Malaysia",
+      "usd": 202759049,
+      "share_pct": 7.844507077868154
+    },
+    {
+      "country": "Vietnam",
+      "usd": 175217561,
+      "share_pct": 6.778959578920175
+    },
+    {
+      "country": "Canada",
+      "usd": 100141750,
+      "share_pct": 3.8743655118697227
+    },
+    {
+      "country": "Taiwan",
+      "usd": 75285617,
+      "share_pct": 2.9127112123028898
+    },
+    {
+      "country": "Finland",
+      "usd": 66201621,
+      "share_pct": 2.561262183178049
+    },
+    {
+      "country": "Germany",
+      "usd": 43505160,
+      "share_pct": 1.6831630313268362
+    },
+    {
+      "country": "Thailand",
+      "usd": 25311519,
+      "share_pct": 0.979272643693916
+    },
+    {
+      "country": "Indonesia",
+      "usd": 15377305,
+      "share_pct": 0.5949296887412278
+    },
+    {
+      "country": "Philippines",
+      "usd": 11292163,
+      "share_pct": 0.4368803908620665
+    },
+    {
+      "country": "Cambodia",
+      "usd": 8597261,
+      "share_pct": 0.33261782937628515
+    },
+    {
+      "country": "United Kingdom",
+      "usd": 7969505,
+      "share_pct": 0.30833069442738237
+    },
+    {
+      "country": "Sweden",
+      "usd": 4241516,
+      "share_pct": 0.16409922243663227
+    },
+    {
+      "country": "Hong Kong",
+      "usd": 1584119,
+      "share_pct": 0.06128768490961616
+    },
+    {
+      "country": "Singapore",
+      "usd": 1533487,
+      "share_pct": 0.05932879289307971
+    },
+    {
+      "country": "Mexico",
+      "usd": 1449669,
+      "share_pct": 0.056085973904257416
+    },
+    {
+      "country": "Greece",
+      "usd": 1356046,
+      "share_pct": 0.05246381109685911
+    },
+    {
+      "country": "Australia",
+      "usd": 793620,
+      "share_pct": 0.03070421634862632
+    },
+    {
+      "country": "Romania",
+      "usd": 730368,
+      "share_pct": 0.028257071502877328
+    },
+    {
+      "country": "Czechia (Czech Republic)",
+      "usd": 704024,
+      "share_pct": 0.02723785339409956
+    },
+    {
+      "country": "Spain",
+      "usd": 696539,
+      "share_pct": 0.026948267623366128
+    },
+    {
+      "country": "Norway",
+      "usd": 689320,
+      "share_pct": 0.026668973077083605
+    },
+    {
+      "country": "Austria",
+      "usd": 651990,
+      "share_pct": 0.02522471966072034
+    },
+    {
+      "country": "India",
+      "usd": 466853,
+      "share_pct": 0.018061988754070262
+    },
+    {
+      "country": "Italy",
+      "usd": 452812,
+      "share_pct": 0.017518759120554145
+    },
+    {
+      "country": "Denmark",
+      "usd": 320893,
+      "share_pct": 0.012414969502733984
+    },
+    {
+      "country": "Poland",
+      "usd": 301732,
+      "share_pct": 0.011673653142944627
+    },
+    {
+      "country": "Cayman Islands",
+      "usd": 286297,
+      "share_pct": 0.011076491303095523
+    },
+    {
+      "country": "Netherlands",
+      "usd": 265647,
+      "share_pct": 0.010277567299669282
+    },
+    {
+      "country": "Israel",
+      "usd": 258422,
+      "share_pct": 0.00999804062050441
+    },
+    {
+      "country": "Switzerland",
+      "usd": 248787,
+      "share_pct": 0.009625273900261707
+    },
+    {
+      "country": "Brazil",
+      "usd": 214766,
+      "share_pct": 0.008309041768515258
+    },
+    {
+      "country": "France",
+      "usd": 157607,
+      "share_pct": 0.006097627864794169
+    },
+    {
+      "country": "Turkey",
+      "usd": 62300,
+      "share_pct": 0.002410313095082558
+    },
+    {
+      "country": "Croatia",
+      "usd": 62037,
+      "share_pct": 0.0024001379370728196
+    },
+    {
+      "country": "Hungary",
+      "usd": 30092,
+      "share_pct": 0.0011642237826199732
+    },
+    {
+      "country": "New Zealand",
+      "usd": 29196,
+      "share_pct": 0.0011295586055221566
+    },
+    {
+      "country": "North Macedonia",
+      "usd": 5342,
+      "share_pct": 0.00020667564292024118
+    },
+    {
+      "country": "Ireland",
+      "usd": 3881,
+      "share_pct": 0.00015015128606766305
+    },
+    {
+      "country": "Argentina",
+      "usd": 2424,
+      "share_pct": 9.378168446998589e-05
+    }
+  ],
+  "bess_monthly": [
+    {
+      "month": "2026-02",
+      "world_usd": 385549936,
+      "china_usd": 31040016,
+      "china_share_pct": 8.05084195371258
+    },
+    {
+      "month": "2026-03",
+      "world_usd": 282572178,
+      "china_usd": 29790133,
+      "china_share_pct": 10.542486245761959
+    },
+    {
+      "month": "2026-04",
+      "world_usd": 533544010,
+      "china_usd": 51259295,
+      "china_share_pct": 9.607322739880447
+    },
+    {
+      "month": "2026-05",
+      "world_usd": 326586127,
+      "china_usd": 34085786,
+      "china_share_pct": 10.436997527454679
+    },
+    {
+      "month": "2026-06",
+      "world_usd": 465982189,
+      "china_usd": 89301423,
+      "china_share_pct": 19.164127966272975
+    },
+    {
+      "month": "2026-07",
+      "world_usd": 590492006,
+      "china_usd": 165579261,
+      "china_share_pct": 28.04089798296101
+    }
+  ],
+  "bess_world_usd": 2584726446,
+  "lithium_prior_ytd": {
+    "period": "Jan-Jul 2025",
+    "world_usd": 12245047693,
+    "china_usd": 7590862881,
+    "china_share_pct": 61.99128881579931
+  },
+  "historical_external_check": {
+    "source": "CRS Michael Alan Havlin, R48538, November 26, 2025; 2024 lithium-ion import share",
+    "reported_share_pct": 69,
+    "our_revised_share_pct": 69.11302998874123,
+    "rounds_to_reported": true,
+    "limitation": "Published independent compilation of the same underlying Census system; not independent customs collection."
+  }
+}

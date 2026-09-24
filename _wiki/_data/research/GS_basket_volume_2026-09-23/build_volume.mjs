@@ -1,0 +1,85 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { Workbook, SpreadsheetFile } from '@oai/artifact-tool';
+
+const here = process.argv[2] ?? path.dirname(fileURLToPath(import.meta.url));
+const out = path.join(here, 'outputs', '01a0ce1e-ca64-7361-9785-03b2a6199e00');
+await fs.mkdir(out, { recursive: true });
+const read = async name => JSON.parse(await fs.readFile(path.join(here, name), 'utf8'));
+const hist = await read('history.json');
+const reference = await read('reference.json');
+const primary = await read('constituents_primary.json');
+const historical = Object.fromEntries(hist.messages.filter(m => m.type === 'HistoricalDataResponse').map(m => {
+  const s = m.data.securityData;
+  if (s.securityError || s.fieldExceptions.length) throw new Error(JSON.stringify(s));
+  return [s.security, s.fieldData];
+}));
+const ref = Object.fromEntries(reference.messages.flatMap(m => m.data.securityData ?? []).map(s => [s.security, s.fieldData]));
+const stocks = Object.fromEntries(primary.messages.flatMap(m => m.data.securityData ?? []).map(s => [s.security, s.fieldData]));
+const reconciliation = {};
+for (const ticker of Object.keys(ref)) {
+  const r = ref[ticker];
+  const volumes = r.INDX_MWEIGHT.map(m => stocks[m['Member Ticker and Exchange Code'] + ' Equity'].PX_VOLUME);
+  if (volumes.some(v => !Number.isFinite(v))) throw new Error('Missing constituent volume');
+  const sum = volumes.reduce((a, b) => a + b, 0);
+  if (sum !== r.PX_VOLUME) throw new Error('Constituent reconciliation failed');
+  reconciliation[ticker] = { index_snapshot_volume: r.PX_VOLUME, primary_exchange_constituent_sum: sum };
+}
+const dates = [...new Set(Object.values(historical).flatMap(rows => rows.filter(r => r.PX_VOLUME != null).map(r => r.date)))].sort();
+const maps = Object.fromEntries(Object.entries(historical).map(([ticker, rows]) => [ticker, Object.fromEntries(rows.map(r => [r.date, r]))]));
+const rows = dates.map(date => {
+  const a = maps['GSXUSWCH Index'][date] ?? {};
+  const b = maps['GSCBSWC2 Index'][date] ?? {};
+  return [new Date(date + 'T00:00:00Z'), a.PX_VOLUME ?? 'n.a.', b.PX_VOLUME ?? 'n.a.', a.TURNOVER ?? 'n.a.', b.TURNOVER ?? 'n.a.'];
+});
+if (rows.length !== 21 || historical['GSCBSWC2 Index'].filter(r => r.PX_VOLUME != null).length !== 3) throw new Error('Unexpected coverage');
+const wb = Workbook.create();
+const sheet = wb.worksheets.add('Daily volume');
+sheet.showGridLines = false;
+sheet.tabColor = '#19384C';
+sheet.getRange('A1:E37').format.font = { name: 'Arial', size: 10, color: '#182E3B' };
+sheet.getRange('A1:E37').format.rowHeight = 22;
+sheet.getRange('A1:E37').format.verticalAlignment = 'center';
+sheet.getRange('A1:A37').format.columnWidthPx = 115;
+sheet.getRange('B1:C37').format.columnWidthPx = 185;
+sheet.getRange('D1:E37').format.columnWidthPx = 195;
+sheet.getRange('A2').values = [['Goldman baskets: Bloomberg daily volume']];
+sheet.getRange('A2').format.font = { name: 'Arial', size: 15, bold: true, color: '#19384C' };
+sheet.getRange('A2:E2').format.rowHeight = 28;
+sheet.getRange('A2:E2').format.borders = { bottom: { style: 'thin', color: '#A9BBC7' } };
+sheet.getRange('A3').values = [['GSXUSWCH: Consumer Inertia. GSCBSWC2: Consumer Inertia ex-Fins.']];
+sheet.getRange('A4').values = [[`Source: Bloomberg Desktop API. Retrieved ${hist.retrieved_at.slice(0,19)} (BRT).`]];
+sheet.getRange('A5').values = [['Index volume reflects constituent exchange trading. It does not measure Goldman client basket flow.']];
+sheet.getRange('A6').values = [['Requested daily history: September 23, 2025 to September 23, 2026. Latest returned date: September 22, 2026.']];
+sheet.getRange('A7').values = [['Volume available from August 24 for GSXUSWCH (21 dates) and September 18 for GSCBSWC2 (3 dates).']];
+sheet.getRange('A8').values = [['n.a. = no volume returned by Bloomberg. Dates with no volume for either basket are omitted.']];
+sheet.getRange('A10:E10').values = [['Date', 'GSXUSWCH\nVolume (shares)', 'GSCBSWC2\nVolume (shares)', 'GSXUSWCH\nTurnover (USD thousands)', 'GSCBSWC2\nTurnover (USD thousands)']];
+sheet.getRange('A10:E10').format = { fill: '#19384C', font: { name: 'Arial', size: 10, bold: true, color: '#FFFFFF' }, wrapText: true, horizontalAlignment: 'center', verticalAlignment: 'center', rowHeight: 40 };
+sheet.getRange(`A11:E${10 + rows.length}`).values = rows;
+sheet.getRange(`A11:A${10 + rows.length}`).setNumberFormat('dd-mmm-yy');
+sheet.getRange(`B11:C${10 + rows.length}`).setNumberFormat('#,##0');
+sheet.getRange(`D11:E${10 + rows.length}`).setNumberFormat('#,##0.00');
+sheet.getRange(`B11:E${10 + rows.length}`).format.horizontalAlignment = 'right';
+for (let i = 0; i < rows.length; i++) {
+  if (i % 2 === 0) sheet.getRange(`A${i + 11}:E${i + 11}`).format.fill = '#F0F4F7';
+}
+sheet.getRange('A31:E31').format.font = { name: 'Arial', size: 10, bold: true, color: '#19384C' };
+sheet.getRange('A33').values = [['Fields: PX_VOLUME (shares) and TURNOVER (USD thousands). Values use the historical request throughout.']];
+sheet.getRange('A34').values = [['For September 22, GSXUSWCH history returns 153,964,035 shares; the reference snapshot returns 154,013,798.']];
+sheet.getRange('A35').values = [['The reference snapshots reconcile exactly to the sums of constituent volumes on their listed exchanges.']];
+sheet.getRange('A36').values = [['The difference between the historical and reference GSXUSWCH readings is retained, not adjusted.']];
+sheet.getRange('A33:E36').format.font = { name: 'Arial', size: 10, color: '#526674' };
+sheet.freezePanes.freezeRows(10);
+wb.recalculate();
+const inspection = await wb.inspect({ kind: 'table', range: "'Daily volume'!A27:E31", include: 'values,formulas', tableMaxRows: 5, tableMaxCols: 5, maxChars: 2500 });
+console.log(inspection.ndjson);
+const errors = await wb.inspect({ kind: 'match', searchTerm: '#REF!|#DIV/0!|#VALUE!|#NAME\\?|#NUM!|#NULL!|#SPILL!|#CALC!', options: { useRegex: true, maxResults: 20 }, maxChars: 1000 });
+console.log(errors.ndjson);
+const preview = await wb.render({ sheetName: 'Daily volume', range: 'A1:E36', scale: 1.5, format: 'png' });
+await fs.writeFile(path.join(here, 'preview.png'), new Uint8Array(await preview.arrayBuffer()));
+const output = await SpreadsheetFile.exportXlsx(wb);
+const final = path.join(out, 'GSXUSWCH_GSCBSWC2_Bloomberg_volume.xlsx');
+await output.save(final);
+await fs.writeFile(path.join(here, 'verification.json'), JSON.stringify({ source: 'Bloomberg Desktop API', historical_retrieved_at: hist.retrieved_at, displayed_rows: rows.length, reconciliation, final }, null, 2));
+console.log(final);

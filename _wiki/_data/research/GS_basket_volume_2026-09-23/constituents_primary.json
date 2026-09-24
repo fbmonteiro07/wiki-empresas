@@ -1,0 +1,734 @@
+{
+  "source": "Bloomberg Desktop API, localhost:8194",
+  "retrieved_at": "2026-09-23T08:59:17.321538-03:00",
+  "request": "ReferenceDataRequest = {\n    securities[] = {\n        \"ALL UN Equity\", \"AMP UN Equity\", \"ASB UN Equity\", \"AUB UN Equity\", \"BKNG UW Equity\", \"CFG UN Equity\", \"CFR UN Equity\", \"CHTR UW Equity\", \"CHWY UN Equity\", \"CMCSA UW Equity\", \"DIS UN Equity\", \"DKNG UW Equity\", \"EVER UQ Equity\", \"EXPE UW Equity\", \"FCNCA UW Equity\", \"FHN UN Equity\", \"FITB UN Equity\", \"FLG UN Equity\", \"FLUT UN Equity\", \"FNB UN Equity\", \"HBAN UW Equity\", \"HRB UN Equity\", \"HWC UW Equity\", \"INTU UW Equity\", \"KEY UN Equity\", \"LPLA UW Equity\", \"NFLX UW Equity\", \"NYT UN Equity\", \"ONB UW Equity\", \"OZK UW Equity\", \"PB UN Equity\", \"PGR UN Equity\", \"PLNT UN Equity\", \"PNC UN Equity\", \"PSKY UW Equity\", \"PTON UW Equity\", \"RF UN Equity\", \"RJF UN Equity\", \"ROOT UW Equity\", \"SCHW UN Equity\", \"SF UN Equity\", \"SIRI UW Equity\", \"SOFI UW Equity\", \"T UN Equity\", \"TFC UN Equity\", \"TMUS UW Equity\", \"TRIP UW Equity\", \"TRV UN Equity\", \"UPST UW Equity\", \"USB UN Equity\", \"VLY UW Equity\", \"VZ UN Equity\", \"W UN Equity\", \"XPOF UN Equity\", \"Z UW Equity\"\n    }\n    fields[] = {\n        \"NAME\", \"PX_VOLUME\", \"TURNOVER\", \"LAST_UPDATE_DT\"\n    }\n}\n",
+  "messages": [
+    {
+      "type": "SessionConnectionUp",
+      "data": {
+        "server": "localhost:8194",
+        "serverId": "bbcomm-DS-CAP-33-5555402",
+        "encryptionStatus": "Clear",
+        "compressionStatus": "Uncompressed"
+      }
+    },
+    {
+      "type": "SessionStarted",
+      "data": {
+        "initialEndpoints": [
+          {
+            "address": "localhost:8194"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ServiceOpened",
+      "data": {
+        "serviceName": "//blp/refdata"
+      }
+    },
+    {
+      "type": "ReferenceDataResponse",
+      "data": {
+        "securityData": [
+          {
+            "security": "VLY UW Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 50,
+            "fieldData": {
+              "NAME": "VALLEY NATIONAL BANCORP",
+              "PX_VOLUME": 2421359.0,
+              "TURNOVER": 31947380.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "VZ UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 51,
+            "fieldData": {
+              "NAME": "VERIZON COMMUNICATIONS INC",
+              "PX_VOLUME": 9668370.0,
+              "TURNOVER": 450244000.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "W UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 52,
+            "fieldData": {
+              "NAME": "WAYFAIR INC- CLASS A",
+              "PX_VOLUME": 408032.0,
+              "TURNOVER": 43782410.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "XPOF UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 53,
+            "fieldData": {
+              "NAME": "XPONENTIAL FITNESS INC-A",
+              "PX_VOLUME": 236534.0,
+              "TURNOVER": 934100.1,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "Z UW Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 54,
+            "fieldData": {
+              "NAME": "ZILLOW GROUP INC - C",
+              "PX_VOLUME": 966455.0,
+              "TURNOVER": 29755380.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ReferenceDataResponse",
+      "data": {
+        "securityData": [
+          {
+            "security": "ALL UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 0,
+            "fieldData": {
+              "NAME": "ALLSTATE CORP",
+              "PX_VOLUME": 1282691.0,
+              "TURNOVER": 294968500.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "AMP UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 1,
+            "fieldData": {
+              "NAME": "AMERIPRISE FINANCIAL INC",
+              "PX_VOLUME": 289673.0,
+              "TURNOVER": 148690100.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "ASB UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 2,
+            "fieldData": {
+              "NAME": "ASSOCIATED BANC-CORP",
+              "PX_VOLUME": 619272.0,
+              "TURNOVER": 18005200.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "AUB UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 3,
+            "fieldData": {
+              "NAME": "ATLANTIC UNION BANKSHARES CO",
+              "PX_VOLUME": 598918.0,
+              "TURNOVER": 23182090.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "BKNG UW Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 4,
+            "fieldData": {
+              "NAME": "BOOKING HOLDINGS INC",
+              "PX_VOLUME": 4058936.0,
+              "TURNOVER": 666296100.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "CFG UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 5,
+            "fieldData": {
+              "NAME": "CITIZENS FINANCIAL GROUP",
+              "PX_VOLUME": 1301553.0,
+              "TURNOVER": 85486900.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "CFR UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 6,
+            "fieldData": {
+              "NAME": "CULLEN/FROST BANKERS INC",
+              "PX_VOLUME": 259673.0,
+              "TURNOVER": 40589880.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "CHTR UW Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 7,
+            "fieldData": {
+              "NAME": "CHARTER COMMUNICATIONS INC-A",
+              "PX_VOLUME": 1294731.0,
+              "TURNOVER": 153566900.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "CHWY UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 8,
+            "fieldData": {
+              "NAME": "CHEWY INC - CLASS A",
+              "PX_VOLUME": 2677010.0,
+              "TURNOVER": 53199760.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "CMCSA UW Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 9,
+            "fieldData": {
+              "NAME": "COMCAST CORP-CLASS A",
+              "PX_VOLUME": 14677774.0,
+              "TURNOVER": 330200900.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ReferenceDataResponse",
+      "data": {
+        "securityData": [
+          {
+            "security": "SF UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 40,
+            "fieldData": {
+              "NAME": "STIFEL FINANCIAL CORP",
+              "PX_VOLUME": 509634.0,
+              "TURNOVER": 37365690.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "SIRI UW Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 41,
+            "fieldData": {
+              "NAME": "SIRIUS XM HOLDINGS INC",
+              "PX_VOLUME": 1664641.0,
+              "TURNOVER": 44305880.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "SOFI UW Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 42,
+            "fieldData": {
+              "NAME": "SOFI TECHNOLOGIES INC",
+              "PX_VOLUME": 14189649.0,
+              "TURNOVER": 245771100.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "T UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 43,
+            "fieldData": {
+              "NAME": "AT&T INC",
+              "PX_VOLUME": 8188266.0,
+              "TURNOVER": 206015500.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "TFC UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 44,
+            "fieldData": {
+              "NAME": "TRUIST FINANCIAL CORP",
+              "PX_VOLUME": 5165819.0,
+              "TURNOVER": 248456200.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "TMUS UW Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 45,
+            "fieldData": {
+              "NAME": "T-MOBILE US INC",
+              "PX_VOLUME": 2243806.0,
+              "TURNOVER": 365393400.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "TRIP UW Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 46,
+            "fieldData": {
+              "NAME": "TRIPADVISOR INC",
+              "PX_VOLUME": 1927637.0,
+              "TURNOVER": 16527720.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "TRV UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 47,
+            "fieldData": {
+              "NAME": "TRAVELERS COS INC/THE",
+              "PX_VOLUME": 575932.0,
+              "TURNOVER": 208722000.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "UPST UW Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 48,
+            "fieldData": {
+              "NAME": "UPSTART HOLDINGS INC",
+              "PX_VOLUME": 1406597.0,
+              "TURNOVER": 36455570.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "USB UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 49,
+            "fieldData": {
+              "NAME": "US BANCORP",
+              "PX_VOLUME": 2766729.0,
+              "TURNOVER": 164565000.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ReferenceDataResponse",
+      "data": {
+        "securityData": [
+          {
+            "security": "DIS UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 10,
+            "fieldData": {
+              "NAME": "WALT DISNEY CO/THE",
+              "PX_VOLUME": 2407816.0,
+              "TURNOVER": 250080200.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "DKNG UW Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 11,
+            "fieldData": {
+              "NAME": "DRAFTKINGS INC-CL A",
+              "PX_VOLUME": 5306809.0,
+              "TURNOVER": 118003400.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "EVER UQ Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 12,
+            "fieldData": {
+              "NAME": "EVERQUOTE INC - CLASS A",
+              "PX_VOLUME": 1052411.0,
+              "TURNOVER": 20590440.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "EXPE UW Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 13,
+            "fieldData": {
+              "NAME": "EXPEDIA GROUP INC",
+              "PX_VOLUME": 1739836.0,
+              "TURNOVER": 482344000.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "FCNCA UW Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 14,
+            "fieldData": {
+              "NAME": "FIRST CITIZENS BCSHS  -CL A",
+              "PX_VOLUME": 27356.0,
+              "TURNOVER": 56714530.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "FHN UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 15,
+            "fieldData": {
+              "NAME": "FIRST HORIZON CORP",
+              "PX_VOLUME": 2083495.0,
+              "TURNOVER": 48792360.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "FITB UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 16,
+            "fieldData": {
+              "NAME": "FIFTH THIRD BANCORP",
+              "PX_VOLUME": 2119517.0,
+              "TURNOVER": 111964300.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "FLG UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 17,
+            "fieldData": {
+              "NAME": "FLAGSTAR BANK NA",
+              "PX_VOLUME": 1959962.0,
+              "TURNOVER": 24657790.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "FLUT UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 18,
+            "fieldData": {
+              "NAME": "FLUTTER ENTERTAINMENT PLC-DI",
+              "PX_VOLUME": 921067.0,
+              "TURNOVER": 81976570.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "FNB UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 19,
+            "fieldData": {
+              "NAME": "FNB CORP",
+              "PX_VOLUME": 2050928.0,
+              "TURNOVER": 36226900.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ReferenceDataResponse",
+      "data": {
+        "securityData": [
+          {
+            "security": "PB UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 30,
+            "fieldData": {
+              "NAME": "PROSPERITY BANCSHARES INC",
+              "PX_VOLUME": 477353.0,
+              "TURNOVER": 33003320.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "PGR UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 31,
+            "fieldData": {
+              "NAME": "PROGRESSIVE CORP",
+              "PX_VOLUME": 856090.0,
+              "TURNOVER": 177063000.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "PLNT UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 32,
+            "fieldData": {
+              "NAME": "PLANET FITNESS INC - CL A",
+              "PX_VOLUME": 1362378.0,
+              "TURNOVER": 58379460.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "PNC UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 33,
+            "fieldData": {
+              "NAME": "PNC FINANCIAL SERVICES GROUP",
+              "PX_VOLUME": 824138.0,
+              "TURNOVER": 188107500.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "PSKY UW Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 34,
+            "fieldData": {
+              "NAME": "PARAMOUNT SKYDANCE CL B",
+              "PX_VOLUME": 8672014.0,
+              "TURNOVER": 88271780.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "PTON UW Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 35,
+            "fieldData": {
+              "NAME": "PELOTON INTERACTIVE INC-A",
+              "PX_VOLUME": 4024123.0,
+              "TURNOVER": 20325030.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "RF UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 36,
+            "fieldData": {
+              "NAME": "REGIONS FINANCIAL CORP",
+              "PX_VOLUME": 3773433.0,
+              "TURNOVER": 105571500.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "RJF UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 37,
+            "fieldData": {
+              "NAME": "RAYMOND JAMES FINANCIAL INC",
+              "PX_VOLUME": 550862.0,
+              "TURNOVER": 87698230.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "ROOT UW Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 38,
+            "fieldData": {
+              "NAME": "ROOT INC/OH -CLASS A",
+              "PX_VOLUME": 93341.0,
+              "TURNOVER": 4546042.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "SCHW UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 39,
+            "fieldData": {
+              "NAME": "SCHWAB (CHARLES) CORP",
+              "PX_VOLUME": 3448894.0,
+              "TURNOVER": 347456200.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ReferenceDataResponse",
+      "data": {
+        "securityData": [
+          {
+            "security": "HBAN UW Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 20,
+            "fieldData": {
+              "NAME": "HUNTINGTON BANCSHARES INC",
+              "PX_VOLUME": 9462571.0,
+              "TURNOVER": 148675600.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "HRB UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 21,
+            "fieldData": {
+              "NAME": "H&R BLOCK INC",
+              "PX_VOLUME": 763816.0,
+              "TURNOVER": 32849420.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "HWC UW Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 22,
+            "fieldData": {
+              "NAME": "HANCOCK WHITNEY CORP",
+              "PX_VOLUME": 659960.0,
+              "TURNOVER": 48719360.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "INTU UW Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 23,
+            "fieldData": {
+              "NAME": "INTUIT INC",
+              "PX_VOLUME": 1665308.0,
+              "TURNOVER": 487904200.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "KEY UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 24,
+            "fieldData": {
+              "NAME": "KEYCORP",
+              "PX_VOLUME": 4726114.0,
+              "TURNOVER": 97115490.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "LPLA UW Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 25,
+            "fieldData": {
+              "NAME": "LPL FINANCIAL HOLDINGS INC",
+              "PX_VOLUME": 550036.0,
+              "TURNOVER": 170120300.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "NFLX UW Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 26,
+            "fieldData": {
+              "NAME": "NETFLIX INC",
+              "PX_VOLUME": 9570687.0,
+              "TURNOVER": 691105600.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "NYT UN Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 27,
+            "fieldData": {
+              "NAME": "NEW YORK TIMES CO-A",
+              "PX_VOLUME": 1693974.0,
+              "TURNOVER": 110823800.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "ONB UW Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 28,
+            "fieldData": {
+              "NAME": "OLD NATIONAL BANCORP",
+              "PX_VOLUME": 1321847.0,
+              "TURNOVER": 33170640.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          },
+          {
+            "security": "OZK UW Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 29,
+            "fieldData": {
+              "NAME": "BANK OZK",
+              "PX_VOLUME": 447971.0,
+              "TURNOVER": 21130950.0,
+              "LAST_UPDATE_DT": "2026-09-22"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

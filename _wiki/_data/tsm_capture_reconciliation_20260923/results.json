@@ -1,0 +1,218 @@
+{
+  "asof": "2026-09-23",
+  "exhibit_source_and_column_dates": "unconfirmed",
+  "formula": "capture = TSMC invoice / customer product revenue = (TSMC invoice / product COGS) * (1 - product gross margin)",
+  "inputs": {
+    "exhibit": {
+      "tag": "ANCHOR",
+      "meaning": "exact transcription of user exhibit; not verified actuals",
+      "values_pct": {
+        "NVDA": [
+          "5.2",
+          "4.4",
+          "4.6",
+          "4.7",
+          "4.7"
+        ],
+        "AVGO": [
+          "10.3",
+          "8.8",
+          "9.2",
+          "9.4",
+          "9.4"
+        ],
+        "AMD": [
+          "10.3",
+          "8.8",
+          "9.2",
+          "9.4",
+          "9.4"
+        ],
+        "MRVL": [
+          "10.3",
+          "8.8",
+          "9.2",
+          "9.4",
+          "9.4"
+        ],
+        "MediaTek": [
+          "21.9",
+          "18.8",
+          "19.6",
+          "20.0",
+          "20.0"
+        ],
+        "Alchip": [
+          "21.9",
+          "18.8",
+          "19.6",
+          "20.0",
+          "20.0"
+        ]
+      }
+    },
+    "nvda_80pct_gm": {
+      "tag": "PARTIAL",
+      "source": "Unnamed expert, Capstone Notion transcript, 2026-09-09; approximate product illustration, not audited corporate GM"
+    },
+    "avgo_60pct_gm": {
+      "tag": "PARTIAL",
+      "source": "Same expert explicitly says 80% to 60%; transcript's earlier 16% is internally inconsistent"
+    },
+    "amd_mrvl_60pct_gm": {
+      "tag": "ESTIMATE",
+      "meaning": "assumed solely to reproduce shared rows; no product-specific validation"
+    },
+    "mediatek_alchip_15pct_gm": {
+      "tag": "ESTIMATE",
+      "meaning": "inferred conditional on NVDA 80%, a shared cost share, and observed ratios"
+    },
+    "tsmc_cogs_shares": {
+      "tag": "ESTIMATE",
+      "meaning": "inverse-fitted representative rounding-compatible values; same-column fit is not independent validation",
+      "values_pct": [
+        25.8,
+        22.1,
+        23.1,
+        23.5,
+        23.5
+      ]
+    }
+  },
+  "reconstructed_pct": {
+    "NVDA": [
+      "5.2",
+      "4.4",
+      "4.6",
+      "4.7",
+      "4.7"
+    ],
+    "AVGO": [
+      "10.3",
+      "8.8",
+      "9.2",
+      "9.4",
+      "9.4"
+    ],
+    "AMD": [
+      "10.3",
+      "8.8",
+      "9.2",
+      "9.4",
+      "9.4"
+    ],
+    "MRVL": [
+      "10.3",
+      "8.8",
+      "9.2",
+      "9.4",
+      "9.4"
+    ],
+    "MediaTek": [
+      "21.9",
+      "18.8",
+      "19.6",
+      "20.0",
+      "20.0"
+    ],
+    "Alchip": [
+      "21.9",
+      "18.8",
+      "19.6",
+      "20.0",
+      "20.0"
+    ]
+  },
+  "rounding_intervals": [
+    {
+      "lower_inclusive_pct": 25.75,
+      "upper_exclusive_pct": 25.823529411764707,
+      "selected_pct": 25.8,
+      "inside": true
+    },
+    {
+      "lower_inclusive_pct": 22.058823529411764,
+      "upper_exclusive_pct": 22.125,
+      "selected_pct": 22.1,
+      "inside": true
+    },
+    {
+      "lower_inclusive_pct": 23.0,
+      "upper_exclusive_pct": 23.11764705882353,
+      "selected_pct": 23.1,
+      "inside": true
+    },
+    {
+      "lower_inclusive_pct": 23.470588235294116,
+      "upper_exclusive_pct": 23.58823529411765,
+      "selected_pct": 23.5,
+      "inside": true
+    },
+    {
+      "lower_inclusive_pct": 23.470588235294116,
+      "upper_exclusive_pct": 23.58823529411765,
+      "selected_pct": 23.5,
+      "inside": true
+    }
+  ],
+  "all_30_cells_match": true,
+  "alternative_fits": [
+    {
+      "gm_pct": {
+        "NVDA": 78.0,
+        "AVGO": 56.0,
+        "AMD": 56.0,
+        "MRVL": 56.0,
+        "MediaTek": 6.5,
+        "Alchip": 6.5
+      },
+      "matches_all": true
+    },
+    {
+      "gm_pct": {
+        "NVDA": 82.0,
+        "AVGO": 64.0,
+        "AMD": 64.0,
+        "MRVL": 64.0,
+        "MediaTek": 23.5,
+        "Alchip": 23.5
+      },
+      "matches_all": true
+    }
+  ],
+  "sensitivity_last_column_pct": {
+    "NVDA_75pct_GM": 5.875,
+    "AVGO_AMD_MRVL_50pct_GM": 11.75,
+    "MediaTek_30pct_GM": 16.45,
+    "MediaTek_40pct_GM": 14.1,
+    "MediaTek_50pct_GM": 11.75
+  },
+  "cost_share_sensitivity_last_column_pct": {
+    "minus_10pct_relative": {
+      "NVDA": 4.23,
+      "AVGO": 8.46,
+      "AMD": 8.46,
+      "MRVL": 8.46,
+      "MediaTek": 17.9775,
+      "Alchip": 17.9775
+    },
+    "plus_10pct_relative": {
+      "NVDA": 5.17,
+      "AVGO": 10.34,
+      "AMD": 10.34,
+      "MRVL": 10.34,
+      "MediaTek": 21.9725,
+      "Alchip": 21.9725
+    }
+  },
+  "shared_share_nvda_min_gm_pct_conservative_rounding_bound": 76.19047619047619,
+  "guardrails": {
+    "arithmetic": "GREEN: all 30 rounded cells match",
+    "physical_bounds": "GREEN within model: all margins and invoice/COGS shares between zero and one",
+    "identification": "AMBER: multiple parameter families fit exactly; original formula unproven",
+    "independent_margin_check": "AMBER: Sep 9 expert supports approximate NVDA/AVGO illustrative margins; Aug 3 Fubon discussion contemplates much higher MediaTek margins, on unconfirmed comparable scope",
+    "independent_invoice_level": "UNVALIDATED: no matched product, generation, invoice scope or observed TSMC share of COGS",
+    "flow_and_timing": "UNVALIDATED: columns are unlabeled; cannot map procurement timing to recognized customer revenue",
+    "basis": "UNVALIDATED: wafer-only vs packaging and gross vs net HBM accounting unknown; must use matched product revenue, not automatically corporate sales"
+  }
+}

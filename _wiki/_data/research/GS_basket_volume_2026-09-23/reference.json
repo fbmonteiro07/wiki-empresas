@@ -1,0 +1,419 @@
+{
+  "source": "Bloomberg Desktop API, localhost:8194",
+  "retrieved_at": "2026-09-23T08:57:22.875134-03:00",
+  "request": "ReferenceDataRequest = {\n    securities[] = {\n        \"GSXUSWCH Index\", \"GSCBSWC2 Index\"\n    }\n    fields[] = {\n        \"NAME\", \"SECURITY_TYP\", \"SECURITY_DES\", \"CRNCY\", \"PX_LAST\", \"LAST_UPDATE_DT\", \"PX_VOLUME\", \"VOLUME\", \"TURNOVER\", \"VOLUME_AVG_20D\", \"VOLUME_AVG_30D\", \"INDX_VOLUME\", \"INDX_MWEIGHT\"\n    }\n}\n",
+  "messages": [
+    {
+      "type": "SessionConnectionUp",
+      "data": {
+        "server": "localhost:8194",
+        "serverId": "bbcomm-DS-CAP-33-5555402",
+        "encryptionStatus": "Clear",
+        "compressionStatus": "Uncompressed"
+      }
+    },
+    {
+      "type": "SessionStarted",
+      "data": {
+        "initialEndpoints": [
+          {
+            "address": "localhost:8194"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ServiceOpened",
+      "data": {
+        "serviceName": "//blp/refdata"
+      }
+    },
+    {
+      "type": "ReferenceDataResponse",
+      "data": {
+        "securityData": [
+          {
+            "security": "GSXUSWCH Index",
+            "eidData": [],
+            "fieldExceptions": [
+              {
+                "fieldId": "INDX_VOLUME",
+                "errorInfo": {
+                  "source": "19562:rsfrdsvc-slow3",
+                  "code": 9,
+                  "category": "BAD_FLD",
+                  "message": "Field not valid",
+                  "subcategory": "INVALID_FIELD"
+                }
+              }
+            ],
+            "sequenceNumber": 0,
+            "fieldData": {
+              "NAME": "Consumer Inertia",
+              "SECURITY_TYP": "Equity Index",
+              "SECURITY_DES": "GSXUSWCH",
+              "CRNCY": "USD",
+              "PX_LAST": 89.9,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "PX_VOLUME": 154013798.0,
+              "VOLUME": 154013798.0,
+              "TURNOVER": 8127815.5721,
+              "VOLUME_AVG_20D": 114249874.8,
+              "VOLUME_AVG_30D": 112757617.0,
+              "INDX_MWEIGHT": [
+                {
+                  "Member Ticker and Exchange Code": "ALL UN",
+                  "Percentage Weight": 2.943263
+                },
+                {
+                  "Member Ticker and Exchange Code": "AMP UN",
+                  "Percentage Weight": 2.944598
+                },
+                {
+                  "Member Ticker and Exchange Code": "ASB UN",
+                  "Percentage Weight": 0.997009
+                },
+                {
+                  "Member Ticker and Exchange Code": "AUB UN",
+                  "Percentage Weight": 0.778737
+                },
+                {
+                  "Member Ticker and Exchange Code": "BKNG UW",
+                  "Percentage Weight": 2.188955
+                },
+                {
+                  "Member Ticker and Exchange Code": "CFG UN",
+                  "Percentage Weight": 1.088549
+                },
+                {
+                  "Member Ticker and Exchange Code": "CFR UN",
+                  "Percentage Weight": 1.108759
+                },
+                {
+                  "Member Ticker and Exchange Code": "CHTR UW",
+                  "Percentage Weight": 2.574521
+                },
+                {
+                  "Member Ticker and Exchange Code": "CHWY UN",
+                  "Percentage Weight": 2.281151
+                },
+                {
+                  "Member Ticker and Exchange Code": "CMCSA UW",
+                  "Percentage Weight": 2.738215
+                },
+                {
+                  "Member Ticker and Exchange Code": "DIS UN",
+                  "Percentage Weight": 1.579171
+                },
+                {
+                  "Member Ticker and Exchange Code": "DKNG UW",
+                  "Percentage Weight": 2.333401
+                },
+                {
+                  "Member Ticker and Exchange Code": "EVER UQ",
+                  "Percentage Weight": 0.465115
+                },
+                {
+                  "Member Ticker and Exchange Code": "EXPE UW",
+                  "Percentage Weight": 2.353772
+                },
+                {
+                  "Member Ticker and Exchange Code": "FCNCA UW",
+                  "Percentage Weight": 1.114949
+                },
+                {
+                  "Member Ticker and Exchange Code": "FHN UN",
+                  "Percentage Weight": 1.110566
+                },
+                {
+                  "Member Ticker and Exchange Code": "FITB UN",
+                  "Percentage Weight": 1.122068
+                },
+                {
+                  "Member Ticker and Exchange Code": "FLG UN",
+                  "Percentage Weight": 1.090795
+                },
+                {
+                  "Member Ticker and Exchange Code": "FLUT UN",
+                  "Percentage Weight": 2.40215
+                },
+                {
+                  "Member Ticker and Exchange Code": "FNB UN",
+                  "Percentage Weight": 1.113078
+                },
+                {
+                  "Member Ticker and Exchange Code": "HBAN UW",
+                  "Percentage Weight": 1.074849
+                },
+                {
+                  "Member Ticker and Exchange Code": "HRB UN",
+                  "Percentage Weight": 2.664748
+                },
+                {
+                  "Member Ticker and Exchange Code": "HWC UW",
+                  "Percentage Weight": 1.147742
+                },
+                {
+                  "Member Ticker and Exchange Code": "INTU UW",
+                  "Percentage Weight": 2.639262
+                },
+                {
+                  "Member Ticker and Exchange Code": "KEY UN",
+                  "Percentage Weight": 1.093119
+                },
+                {
+                  "Member Ticker and Exchange Code": "LPLA UW",
+                  "Percentage Weight": 2.723122
+                },
+                {
+                  "Member Ticker and Exchange Code": "NFLX UW",
+                  "Percentage Weight": 1.517273
+                },
+                {
+                  "Member Ticker and Exchange Code": "NYT UN",
+                  "Percentage Weight": 3.199836
+                },
+                {
+                  "Member Ticker and Exchange Code": "ONB UW",
+                  "Percentage Weight": 1.133842
+                },
+                {
+                  "Member Ticker and Exchange Code": "OZK UW",
+                  "Percentage Weight": 1.112722
+                },
+                {
+                  "Member Ticker and Exchange Code": "PB UN",
+                  "Percentage Weight": 1.105069
+                },
+                {
+                  "Member Ticker and Exchange Code": "PGR UN",
+                  "Percentage Weight": 3.085975
+                },
+                {
+                  "Member Ticker and Exchange Code": "PLNT UN",
+                  "Percentage Weight": 2.609978
+                },
+                {
+                  "Member Ticker and Exchange Code": "PNC UN",
+                  "Percentage Weight": 1.093049
+                },
+                {
+                  "Member Ticker and Exchange Code": "PSKY UW",
+                  "Percentage Weight": 1.643217
+                },
+                {
+                  "Member Ticker and Exchange Code": "PTON UW",
+                  "Percentage Weight": 1.90531
+                },
+                {
+                  "Member Ticker and Exchange Code": "RF UN",
+                  "Percentage Weight": 1.063885
+                },
+                {
+                  "Member Ticker and Exchange Code": "RJF UN",
+                  "Percentage Weight": 1.053145
+                },
+                {
+                  "Member Ticker and Exchange Code": "ROOT UW",
+                  "Percentage Weight": 0.574186
+                },
+                {
+                  "Member Ticker and Exchange Code": "SCHW UN",
+                  "Percentage Weight": 2.84788
+                },
+                {
+                  "Member Ticker and Exchange Code": "SF UN",
+                  "Percentage Weight": 2.920461
+                },
+                {
+                  "Member Ticker and Exchange Code": "SIRI UW",
+                  "Percentage Weight": 3.077365
+                },
+                {
+                  "Member Ticker and Exchange Code": "SOFI UW",
+                  "Percentage Weight": 1.098192
+                },
+                {
+                  "Member Ticker and Exchange Code": "T UN",
+                  "Percentage Weight": 3.223889
+                },
+                {
+                  "Member Ticker and Exchange Code": "TFC UN",
+                  "Percentage Weight": 1.104485
+                },
+                {
+                  "Member Ticker and Exchange Code": "TMUS UW",
+                  "Percentage Weight": 2.934256
+                },
+                {
+                  "Member Ticker and Exchange Code": "TRIP UW",
+                  "Percentage Weight": 1.248334
+                },
+                {
+                  "Member Ticker and Exchange Code": "TRV UN",
+                  "Percentage Weight": 1.644449
+                },
+                {
+                  "Member Ticker and Exchange Code": "UPST UW",
+                  "Percentage Weight": 2.415109
+                },
+                {
+                  "Member Ticker and Exchange Code": "USB UN",
+                  "Percentage Weight": 1.112083
+                },
+                {
+                  "Member Ticker and Exchange Code": "VLY UW",
+                  "Percentage Weight": 1.086314
+                },
+                {
+                  "Member Ticker and Exchange Code": "VZ UN",
+                  "Percentage Weight": 3.056325
+                },
+                {
+                  "Member Ticker and Exchange Code": "W UN",
+                  "Percentage Weight": 2.957874
+                },
+                {
+                  "Member Ticker and Exchange Code": "XPOF UN",
+                  "Percentage Weight": 0.129394
+                },
+                {
+                  "Member Ticker and Exchange Code": "Z UW",
+                  "Percentage Weight": 2.374442
+                }
+              ]
+            }
+          },
+          {
+            "security": "GSCBSWC2 Index",
+            "eidData": [],
+            "fieldExceptions": [
+              {
+                "fieldId": "INDX_VOLUME",
+                "errorInfo": {
+                  "source": "19562:rsfrdsvc-slow3",
+                  "code": 9,
+                  "category": "BAD_FLD",
+                  "message": "Field not valid",
+                  "subcategory": "INVALID_FIELD"
+                }
+              }
+            ],
+            "sequenceNumber": 1,
+            "fieldData": {
+              "NAME": "Consumer Inertia ex-Fins",
+              "SECURITY_TYP": "Equity Index",
+              "SECURITY_DES": "GSCBSWC2",
+              "CRNCY": "USD",
+              "PX_LAST": 96.02,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "PX_VOLUME": 87192431.0,
+              "VOLUME": 87192431.0,
+              "TURNOVER": 4802875.9501,
+              "VOLUME_AVG_20D": 138112133.33333334,
+              "VOLUME_AVG_30D": 138112133.33333334,
+              "INDX_MWEIGHT": [
+                {
+                  "Member Ticker and Exchange Code": "BKNG UW",
+                  "Percentage Weight": 4.582938
+                },
+                {
+                  "Member Ticker and Exchange Code": "CHTR UW",
+                  "Percentage Weight": 4.856714
+                },
+                {
+                  "Member Ticker and Exchange Code": "CHWY UN",
+                  "Percentage Weight": 4.476363
+                },
+                {
+                  "Member Ticker and Exchange Code": "CMCSA UW",
+                  "Percentage Weight": 5.405834
+                },
+                {
+                  "Member Ticker and Exchange Code": "DIS UN",
+                  "Percentage Weight": 2.775263
+                },
+                {
+                  "Member Ticker and Exchange Code": "DKNG UW",
+                  "Percentage Weight": 4.514439
+                },
+                {
+                  "Member Ticker and Exchange Code": "EVER UQ",
+                  "Percentage Weight": 0.905159
+                },
+                {
+                  "Member Ticker and Exchange Code": "EXPE UW",
+                  "Percentage Weight": 4.694419
+                },
+                {
+                  "Member Ticker and Exchange Code": "FLUT UN",
+                  "Percentage Weight": 4.458049
+                },
+                {
+                  "Member Ticker and Exchange Code": "HRB UN",
+                  "Percentage Weight": 5.344094
+                },
+                {
+                  "Member Ticker and Exchange Code": "INTU UW",
+                  "Percentage Weight": 5.216563
+                },
+                {
+                  "Member Ticker and Exchange Code": "NFLX UW",
+                  "Percentage Weight": 2.698357
+                },
+                {
+                  "Member Ticker and Exchange Code": "NYT UN",
+                  "Percentage Weight": 5.169383
+                },
+                {
+                  "Member Ticker and Exchange Code": "PLNT UN",
+                  "Percentage Weight": 4.714943
+                },
+                {
+                  "Member Ticker and Exchange Code": "PSKY UW",
+                  "Percentage Weight": 2.680905
+                },
+                {
+                  "Member Ticker and Exchange Code": "PTON UW",
+                  "Percentage Weight": 3.488915
+                },
+                {
+                  "Member Ticker and Exchange Code": "SIRI UW",
+                  "Percentage Weight": 5.283019
+                },
+                {
+                  "Member Ticker and Exchange Code": "T UN",
+                  "Percentage Weight": 5.460875
+                },
+                {
+                  "Member Ticker and Exchange Code": "TMUS UW",
+                  "Percentage Weight": 5.389994
+                },
+                {
+                  "Member Ticker and Exchange Code": "TRIP UW",
+                  "Percentage Weight": 2.400928
+                },
+                {
+                  "Member Ticker and Exchange Code": "VZ UN",
+                  "Percentage Weight": 5.309118
+                },
+                {
+                  "Member Ticker and Exchange Code": "W UN",
+                  "Percentage Weight": 4.983915
+                },
+                {
+                  "Member Ticker and Exchange Code": "XPOF UN",
+                  "Percentage Weight": 0.296753
+                },
+                {
+                  "Member Ticker and Exchange Code": "Z UW",
+                  "Percentage Weight": 4.893058
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

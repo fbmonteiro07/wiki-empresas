@@ -1,0 +1,3739 @@
+{
+  "pricing_date": "2026-09-21",
+  "consensus_retrieved_at": "2026-09-22T14:14:26.556662",
+  "holdings_date": "2026-09-21",
+  "formula": "MSFT: close/EPS, equity market capitalization/FCF. IGV: covered equity weight / sum(weight * fundamental yield), negatives retained, missing excluded and weights renormalized.",
+  "source_fields": [
+    "BEST_EPS",
+    "BEST_ESTIMATE_FCF",
+    "BEST_FPERIOD_OVERRIDE=2026BC/2027BC/2028BC"
+  ],
+  "msft_price": 501.61,
+  "msft_mktcap_usd_mn": 3724727.8737405105,
+  "table": {
+    "MSFT": {
+      "2026": {
+        "pe": 26.99149806284976,
+        "pfcf": 83.50987362729207,
+        "eps": 18.584,
+        "fcf_usd_mn": 44602.245362795315
+      },
+      "2027": {
+        "pe": 23.560826679192104,
+        "pfcf": 111.52382683390984,
+        "eps": 21.290000000000003,
+        "fcf_usd_mn": 33398.494110928164
+      },
+      "2028": {
+        "pe": 19.537664563371504,
+        "pfcf": 59.18132276105459,
+        "eps": 25.674,
+        "fcf_usd_mn": 62937.55698532037
+      }
+    },
+    "IGV": {
+      "2026": {
+        "pe": 35.04728605638191,
+        "pe_coverage": 1.0,
+        "pe_unscaled_contribution": 0.02853287978964368,
+        "pe_missing": [],
+        "pe_negative": [
+          "MSTR",
+          "HUT",
+          "AUR",
+          "RIOT",
+          "WULF",
+          "QBTS",
+          "CIFR",
+          "CORZ",
+          "MARA",
+          "CLSK",
+          "SOUN",
+          "NN",
+          "AI",
+          "AIP"
+        ],
+        "pe_missing_zero_yield": 35.04728605638191,
+        "pfcf": 45.06630518674811,
+        "pfcf_coverage": 0.9924094390622369,
+        "pfcf_unscaled_contribution": 0.022021096137121488,
+        "pfcf_missing": [
+          "BMNR",
+          "ACIW"
+        ],
+        "pfcf_negative": [
+          "ORCL",
+          "HUT",
+          "AUR",
+          "RIOT",
+          "WULF",
+          "QBTS",
+          "CIFR",
+          "CORZ",
+          "MARA",
+          "CLSK",
+          "SOUN",
+          "NN",
+          "AI",
+          "VYX"
+        ],
+        "pfcf_missing_zero_yield": 45.41100015063628
+      },
+      "2027": {
+        "pe": 24.18047468018645,
+        "pe_coverage": 0.9994276508749171,
+        "pe_unscaled_contribution": 0.04133201122366101,
+        "pe_missing": [
+          "PRGS"
+        ],
+        "pe_negative": [
+          "HUT",
+          "AUR",
+          "RIOT",
+          "WULF",
+          "QBTS",
+          "CIFR",
+          "MARA",
+          "CLSK",
+          "SOUN",
+          "NN",
+          "AI"
+        ],
+        "pe_missing_zero_yield": 24.194322279375022,
+        "pfcf": 41.35798529724079,
+        "pfcf_coverage": 0.991837089937154,
+        "pfcf_unscaled_contribution": 0.02398175546533029,
+        "pfcf_missing": [
+          "BMNR",
+          "ACIW",
+          "PRGS"
+        ],
+        "pfcf_negative": [
+          "ORCL",
+          "MSTR",
+          "HUT",
+          "AUR",
+          "RIOT",
+          "WULF",
+          "QBTS",
+          "CIFR",
+          "CORZ",
+          "MARA",
+          "CLSK",
+          "SOUN",
+          "NN",
+          "AI"
+        ],
+        "pfcf_missing_zero_yield": 41.69836530297668
+      },
+      "2028": {
+        "pe": 20.33757489753525,
+        "pe_coverage": 0.990325781808367,
+        "pe_unscaled_contribution": 0.048694388922859544,
+        "pe_missing": [
+          "BMNR",
+          "ACIW",
+          "RAMP",
+          "NN",
+          "PRGS"
+        ],
+        "pe_negative": [
+          "HUT",
+          "AUR",
+          "RIOT",
+          "QBTS",
+          "MARA",
+          "CLSK",
+          "SOUN",
+          "AI"
+        ],
+        "pe_missing_zero_yield": 20.53624703216166,
+        "pfcf": 28.030651429092533,
+        "pfcf_coverage": 0.9827428604160794,
+        "pfcf_unscaled_contribution": 0.035059579792573334,
+        "pfcf_missing": [
+          "BMNR",
+          "IDCC",
+          "ACIW",
+          "CLSK",
+          "TTAN",
+          "ADEA",
+          "RAMP",
+          "NN",
+          "PRGS",
+          "BLKB",
+          "PD",
+          "VYX"
+        ],
+        "pfcf_negative": [
+          "ORCL",
+          "MSTR",
+          "HUT",
+          "AUR",
+          "RIOT",
+          "QBTS",
+          "CIFR",
+          "CORZ",
+          "MARA",
+          "SOUN",
+          "AI"
+        ],
+        "pfcf_missing_zero_yield": 28.52287465840734
+      }
+    }
+  },
+  "checks": [
+    {
+      "check": "PANW iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 371.76,
+      "bbg": 371.76
+    },
+    {
+      "check": "PLTR iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 183.09,
+      "bbg": 183.09
+    },
+    {
+      "check": "CRWD iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 249.35,
+      "bbg": 249.35
+    },
+    {
+      "check": "MSFT iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 501.61,
+      "bbg": 501.61
+    },
+    {
+      "check": "ORCL iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 148.56,
+      "bbg": 148.56
+    },
+    {
+      "check": "NOW iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 137.68,
+      "bbg": 137.68
+    },
+    {
+      "check": "CRM iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 236.42,
+      "bbg": 236.42
+    },
+    {
+      "check": "FTNT iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 175.23,
+      "bbg": 175.23
+    },
+    {
+      "check": "ADBE iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 249.52,
+      "bbg": 249.52
+    },
+    {
+      "check": "APP iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 330.17,
+      "bbg": 330.17
+    },
+    {
+      "check": "INTU iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 304.12,
+      "bbg": 304.12
+    },
+    {
+      "check": "DDOG iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 245.05,
+      "bbg": 245.05
+    },
+    {
+      "check": "CDNS iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 294.9,
+      "bbg": 294.9
+    },
+    {
+      "check": "SNPS iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 401.85,
+      "bbg": 401.85
+    },
+    {
+      "check": "MSTR iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 168.5,
+      "bbg": 168.5
+    },
+    {
+      "check": "ADSK iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 218.85,
+      "bbg": 218.85
+    },
+    {
+      "check": "WDAY iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 191.92,
+      "bbg": 191.92
+    },
+    {
+      "check": "TTWO iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 209.92,
+      "bbg": 209.92
+    },
+    {
+      "check": "ROP iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 365.4,
+      "bbg": 365.4
+    },
+    {
+      "check": "TEAM iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 195.67,
+      "bbg": 195.67
+    },
+    {
+      "check": "ZM iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 90.9,
+      "bbg": 90.9
+    },
+    {
+      "check": "ZS iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 207.13,
+      "bbg": 207.13
+    },
+    {
+      "check": "FICO iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 924.52,
+      "bbg": 924.52
+    },
+    {
+      "check": "CRCL iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 94.49,
+      "bbg": 94.49
+    },
+    {
+      "check": "NTNX iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 70.04,
+      "bbg": 70.04
+    },
+    {
+      "check": "RBRK iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 112.96,
+      "bbg": 112.96
+    },
+    {
+      "check": "BMNR iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 28.25,
+      "bbg": 28.25
+    },
+    {
+      "check": "DT iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 56.4,
+      "bbg": 56.4
+    },
+    {
+      "check": "GEN iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 29.15,
+      "bbg": 29.15
+    },
+    {
+      "check": "U iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 43.21,
+      "bbg": 43.21
+    },
+    {
+      "check": "PTC iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 135.28,
+      "bbg": 135.28
+    },
+    {
+      "check": "IOT iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 38.05,
+      "bbg": 38.05
+    },
+    {
+      "check": "TRMB iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 57.75,
+      "bbg": 57.75
+    },
+    {
+      "check": "DOCU iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 68.57,
+      "bbg": 68.57
+    },
+    {
+      "check": "TYL iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 332.46,
+      "bbg": 332.46
+    },
+    {
+      "check": "GWRE iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 149.38,
+      "bbg": 149.38
+    },
+    {
+      "check": "MANH iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 209.35,
+      "bbg": 209.35
+    },
+    {
+      "check": "HUT iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 103.42,
+      "bbg": 103.42
+    },
+    {
+      "check": "HUBS iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 213.86,
+      "bbg": 213.86
+    },
+    {
+      "check": "AUR iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 6.51,
+      "bbg": 6.51
+    },
+    {
+      "check": "IDCC iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 326.7,
+      "bbg": 326.7
+    },
+    {
+      "check": "RIOT iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 24.18,
+      "bbg": 24.18
+    },
+    {
+      "check": "ESTC iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 89.71,
+      "bbg": 89.71
+    },
+    {
+      "check": "S iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 23.8,
+      "bbg": 23.8
+    },
+    {
+      "check": "WULF iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 17.45,
+      "bbg": 17.45
+    },
+    {
+      "check": "GTLB iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 49.79,
+      "bbg": 49.79
+    },
+    {
+      "check": "ZETA iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 31.15,
+      "bbg": 31.15
+    },
+    {
+      "check": "DSGX iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 79.39,
+      "bbg": 79.39
+    },
+    {
+      "check": "QBTS iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 17.7,
+      "bbg": 17.7
+    },
+    {
+      "check": "CIFR iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 18.9,
+      "bbg": 18.9
+    },
+    {
+      "check": "SNAP iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 5.7,
+      "bbg": 5.7
+    },
+    {
+      "check": "PCOR iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 51.69,
+      "bbg": 51.69
+    },
+    {
+      "check": "QLYS iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 181.03,
+      "bbg": 181.03
+    },
+    {
+      "check": "CVLT iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 145.72,
+      "bbg": 145.72
+    },
+    {
+      "check": "CORZ iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 18.36,
+      "bbg": 18.36
+    },
+    {
+      "check": "RNG iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 77.3,
+      "bbg": 77.3
+    },
+    {
+      "check": "OTEX iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 23.08,
+      "bbg": 23.08
+    },
+    {
+      "check": "PATH iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 13.59,
+      "bbg": 13.59
+    },
+    {
+      "check": "VRNS iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 48.45,
+      "bbg": 48.455
+    },
+    {
+      "check": "MARA iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 13.28,
+      "bbg": 13.28
+    },
+    {
+      "check": "DBX iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 36.01,
+      "bbg": 36.01
+    },
+    {
+      "check": "BSY iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 31.96,
+      "bbg": 31.96
+    },
+    {
+      "check": "APPF iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 209.84,
+      "bbg": 209.84
+    },
+    {
+      "check": "BB iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 8.53,
+      "bbg": 8.53
+    },
+    {
+      "check": "ACIW iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 49.59,
+      "bbg": 49.59
+    },
+    {
+      "check": "BOX iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 33.61,
+      "bbg": 33.61
+    },
+    {
+      "check": "TENB iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 36.2,
+      "bbg": 36.2
+    },
+    {
+      "check": "BILL iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 47.06,
+      "bbg": 47.06
+    },
+    {
+      "check": "CLSK iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 14.76,
+      "bbg": 14.76
+    },
+    {
+      "check": "YOU iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 39.26,
+      "bbg": 39.26
+    },
+    {
+      "check": "WK iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 72.84,
+      "bbg": 72.84
+    },
+    {
+      "check": "QTWO iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 57.93,
+      "bbg": 57.93
+    },
+    {
+      "check": "CCC iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 6.5,
+      "bbg": 6.5
+    },
+    {
+      "check": "DLB iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 57.33,
+      "bbg": 57.33
+    },
+    {
+      "check": "TTAN iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 56.53,
+      "bbg": 56.53
+    },
+    {
+      "check": "LIF iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 41.07,
+      "bbg": 41.07
+    },
+    {
+      "check": "PEGA iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 34.97,
+      "bbg": 34.965
+    },
+    {
+      "check": "SPSC iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 81.65,
+      "bbg": 81.65
+    },
+    {
+      "check": "ADEA iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 25.53,
+      "bbg": 25.53
+    },
+    {
+      "check": "FIVN iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 37.01,
+      "bbg": 37.01
+    },
+    {
+      "check": "FRSH iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 12.45,
+      "bbg": 12.45
+    },
+    {
+      "check": "TDC iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 29.36,
+      "bbg": 29.36
+    },
+    {
+      "check": "ALRM iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 53.14,
+      "bbg": 53.14
+    },
+    {
+      "check": "SOUN iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 6.17,
+      "bbg": 6.17
+    },
+    {
+      "check": "AGYS iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 100.25,
+      "bbg": 100.25
+    },
+    {
+      "check": "BRZE iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 25.4,
+      "bbg": 25.4
+    },
+    {
+      "check": "RAMP iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 37.61,
+      "bbg": 37.61
+    },
+    {
+      "check": "NCNO iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 20.43,
+      "bbg": 20.43
+    },
+    {
+      "check": "NN iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 15.66,
+      "bbg": 15.66
+    },
+    {
+      "check": "AVPT iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 13.36,
+      "bbg": 13.36
+    },
+    {
+      "check": "KVYO iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 15.82,
+      "bbg": 15.82
+    },
+    {
+      "check": "ATEN iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 26.94,
+      "bbg": 26.94
+    },
+    {
+      "check": "INTA iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 36.7,
+      "bbg": 36.7
+    },
+    {
+      "check": "PRGS iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 40.41,
+      "bbg": 40.41
+    },
+    {
+      "check": "AI iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 10.84,
+      "bbg": 10.84
+    },
+    {
+      "check": "BLKB iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 43.04,
+      "bbg": 43.04
+    },
+    {
+      "check": "APPN iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 38.62,
+      "bbg": 38.62
+    },
+    {
+      "check": "BL iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 28.57,
+      "bbg": 28.57
+    },
+    {
+      "check": "ALKT iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 18.51,
+      "bbg": 18.51
+    },
+    {
+      "check": "LSPD iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 9.56,
+      "bbg": 9.56
+    },
+    {
+      "check": "PD iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 14.46,
+      "bbg": 14.46
+    },
+    {
+      "check": "VYX iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 7.29,
+      "bbg": 7.29
+    },
+    {
+      "check": "AIP iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 24.16,
+      "bbg": 24.16
+    },
+    {
+      "check": "ASAN iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 9.54,
+      "bbg": 9.54
+    },
+    {
+      "check": "VERX iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 12.08,
+      "bbg": 12.08
+    },
+    {
+      "check": "CXM iShares price vs Bloomberg previous close",
+      "pass": true,
+      "ishares": 5.39,
+      "bbg": 5.39
+    },
+    {
+      "check": "IGV 2026 pe ownership arithmetic",
+      "pass": true
+    },
+    {
+      "check": "IGV 2026 pfcf ownership arithmetic",
+      "pass": true
+    },
+    {
+      "check": "IGV 2027 pe ownership arithmetic",
+      "pass": true
+    },
+    {
+      "check": "IGV 2027 pfcf ownership arithmetic",
+      "pass": true
+    },
+    {
+      "check": "IGV 2028 pe ownership arithmetic",
+      "pass": true
+    },
+    {
+      "check": "IGV 2028 pfcf ownership arithmetic",
+      "pass": true
+    },
+    {
+      "check": "MSFT CY26 EPS equals actual Q1/Q2 plus estimated Q3/Q4",
+      "pass": true
+    },
+    {
+      "check": "MSFT CY26 FCF equals actual Q1/Q2 plus estimated Q3/Q4",
+      "pass": true
+    },
+    {
+      "check": "MSFT CY2027 eps four-quarter reconciliation",
+      "pass": true
+    },
+    {
+      "check": "MSFT CY2027 fcf_usd_mn four-quarter reconciliation",
+      "pass": true
+    },
+    {
+      "check": "MSFT CY2028 eps four-quarter reconciliation",
+      "pass": true
+    },
+    {
+      "check": "MSFT CY2028 fcf_usd_mn four-quarter reconciliation",
+      "pass": true
+    },
+    {
+      "check": "MSFT market cap scale vs independently reported shares",
+      "pass": true
+    }
+  ],
+  "components": [
+    {
+      "ticker": "PANW",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.08994266855832125,
+      "price_usd": 371.76,
+      "market_cap_usd_mn": 304099.68,
+      "years": {
+        "2026": {
+          "eps_usd": 3.86,
+          "fcf_usd_mn": 4581.040251816692,
+          "earnings_yield": 0.010383042823326877,
+          "fcf_yield": 0.01506427185920318
+        },
+        "2027": {
+          "eps_usd": 4.450333333333333,
+          "fcf_usd_mn": 5935.466601070366,
+          "earnings_yield": 0.011970984864787317,
+          "fcf_yield": 0.01951816128537316
+        },
+        "2028": {
+          "eps_usd": 5.152666666666667,
+          "fcf_usd_mn": 6887.303797394179,
+          "earnings_yield": 0.01386019654257227,
+          "fcf_yield": 0.022648178378202106
+        }
+      }
+    },
+    {
+      "ticker": "PLTR",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.08755725586162906,
+      "price_usd": 183.09,
+      "market_cap_usd_mn": 439773.88089647994,
+      "years": {
+        "2026": {
+          "eps_usd": 1.619,
+          "fcf_usd_mn": 4445.796491620332,
+          "earnings_yield": 0.008842645693374843,
+          "fcf_yield": 0.01010927816485501
+        },
+        "2027": {
+          "eps_usd": 2.338,
+          "fcf_usd_mn": 7073.650139199797,
+          "earnings_yield": 0.012769676115571577,
+          "fcf_yield": 0.016084743652306378
+        },
+        "2028": {
+          "eps_usd": 3.459,
+          "fcf_usd_mn": 10486.9960644123,
+          "earnings_yield": 0.0188923480255612,
+          "fcf_yield": 0.02384633676523612
+        }
+      }
+    },
+    {
+      "ticker": "CRWD",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.08307096774922496,
+      "price_usd": 249.35,
+      "market_cap_usd_mn": 255318.15285269998,
+      "years": {
+        "2026": {
+          "eps_usd": 1.2283333333333333,
+          "fcf_usd_mn": 1770.316193529149,
+          "earnings_yield": 0.0049261413007151925,
+          "fcf_yield": 0.006933765475541775
+        },
+        "2027": {
+          "eps_usd": 1.5593333333333335,
+          "fcf_usd_mn": 2327.2104587965364,
+          "earnings_yield": 0.006253592674286479,
+          "fcf_yield": 0.009114943190659724
+        },
+        "2028": {
+          "eps_usd": 1.9826666666666664,
+          "fcf_usd_mn": 2992.826925289968,
+          "earnings_yield": 0.00795134015105942,
+          "fcf_yield": 0.011721951188549495
+        }
+      }
+    },
+    {
+      "ticker": "MSFT",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.08271571281281119,
+      "price_usd": 501.61,
+      "market_cap_usd_mn": 3724727.8737405105,
+      "years": {
+        "2026": {
+          "eps_usd": 18.584,
+          "fcf_usd_mn": 44602.245362795315,
+          "earnings_yield": 0.03704870317577401,
+          "fcf_yield": 0.011974631939488261
+        },
+        "2027": {
+          "eps_usd": 21.290000000000003,
+          "fcf_usd_mn": 33398.494110928164,
+          "earnings_yield": 0.04244333246944838,
+          "fcf_yield": 0.00896669374060558
+        },
+        "2028": {
+          "eps_usd": 25.674,
+          "fcf_usd_mn": 62937.55698532037,
+          "earnings_yield": 0.05118319012778852,
+          "fcf_yield": 0.01689722286265067
+        }
+      }
+    },
+    {
+      "ticker": "ORCL",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0745167839065278,
+      "price_usd": 148.56,
+      "market_cap_usd_mn": 449206.22016,
+      "years": {
+        "2026": {
+          "eps_usd": 7.796333333333333,
+          "fcf_usd_mn": -32699.261244513116,
+          "earnings_yield": 0.05247935738646562,
+          "fcf_yield": -0.07279342933601
+        },
+        "2027": {
+          "eps_usd": 9.505666666666666,
+          "fcf_usd_mn": -31712.74054969153,
+          "earnings_yield": 0.06398537066953867,
+          "fcf_yield": -0.07059728722900578
+        },
+        "2028": {
+          "eps_usd": 13.691333333333333,
+          "fcf_usd_mn": -13563.038911608215,
+          "earnings_yield": 0.09216029438161909,
+          "fcf_yield": -0.030193346180240513
+        }
+      }
+    },
+    {
+      "ticker": "NOW",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.045071985938241216,
+      "price_usd": 137.68,
+      "market_cap_usd_mn": 142361.12,
+      "years": {
+        "2026": {
+          "eps_usd": 4.067,
+          "fcf_usd_mn": 5660.979395319394,
+          "earnings_yield": 0.029539511911679257,
+          "fcf_yield": 0.0397649259525311
+        },
+        "2027": {
+          "eps_usd": 5.021,
+          "fcf_usd_mn": 6932.843064715031,
+          "earnings_yield": 0.03646862289366647,
+          "fcf_yield": 0.04869899214557339
+        },
+        "2028": {
+          "eps_usd": 6.085,
+          "fcf_usd_mn": 8316.823015561284,
+          "earnings_yield": 0.04419668797210924,
+          "fcf_yield": 0.058420606803046254
+        }
+      }
+    },
+    {
+      "ticker": "CRM",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.041560250738958124,
+      "price_usd": 236.42,
+      "market_cap_usd_mn": 194573.66,
+      "years": {
+        "2026": {
+          "eps_usd": 16.862666666666666,
+          "fcf_usd_mn": 14924.642473335658,
+          "earnings_yield": 0.07132504300256605,
+          "fcf_yield": 0.0767043312714355
+        },
+        "2027": {
+          "eps_usd": 15.739666666666666,
+          "fcf_usd_mn": 16136.454030936986,
+          "earnings_yield": 0.06657502185376309,
+          "fcf_yield": 0.08293236623568156
+        },
+        "2028": {
+          "eps_usd": 18.276,
+          "fcf_usd_mn": 18307.47252171035,
+          "earnings_yield": 0.07730310464427714,
+          "fcf_yield": 0.09409018940030399
+        }
+      }
+    },
+    {
+      "ticker": "FTNT",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.03720765042138166,
+      "price_usd": 175.23,
+      "market_cap_usd_mn": 128568.12911513996,
+      "years": {
+        "2026": {
+          "eps_usd": 3.4530000000000003,
+          "fcf_usd_mn": 3064.8721432441343,
+          "earnings_yield": 0.019705529875021402,
+          "fcf_yield": 0.02383850620163703
+        },
+        "2027": {
+          "eps_usd": 3.793,
+          "fcf_usd_mn": 3307.339751824366,
+          "earnings_yield": 0.02164583690007419,
+          "fcf_yield": 0.025724413776469113
+        },
+        "2028": {
+          "eps_usd": 4.296,
+          "fcf_usd_mn": 3631.3112106211756,
+          "earnings_yield": 0.024516349940078758,
+          "fcf_yield": 0.028244256454639183
+        }
+      }
+    },
+    {
+      "ticker": "ADBE",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.034171171323787365,
+      "price_usd": 249.52,
+      "market_cap_usd_mn": 99184.20000000001,
+      "years": {
+        "2026": {
+          "eps_usd": 24.726666666666667,
+          "fcf_usd_mn": 10422.837098096474,
+          "earnings_yield": 0.09909693277759965,
+          "fcf_yield": 0.10508565979356059
+        },
+        "2027": {
+          "eps_usd": 27.967,
+          "fcf_usd_mn": 11551.179445807435,
+          "earnings_yield": 0.11208319974350753,
+          "fcf_yield": 0.11646189056127319
+        },
+        "2028": {
+          "eps_usd": 31.518000000000004,
+          "fcf_usd_mn": 12509.18402338381,
+          "earnings_yield": 0.12631452388586087,
+          "fcf_yield": 0.12612073317508038
+        }
+      }
+    },
+    {
+      "ticker": "APP",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.03082135994772642,
+      "price_usd": 330.17,
+      "market_cap_usd_mn": 110491.72067,
+      "years": {
+        "2026": {
+          "eps_usd": 15.684000000000001,
+          "fcf_usd_mn": 5165.629396994941,
+          "earnings_yield": 0.04750280158706121,
+          "fcf_yield": 0.046751280237755224
+        },
+        "2027": {
+          "eps_usd": 20.077,
+          "fcf_usd_mn": 6815.635344513368,
+          "earnings_yield": 0.06080806857073629,
+          "fcf_yield": 0.06168457965162186
+        },
+        "2028": {
+          "eps_usd": 25.122,
+          "fcf_usd_mn": 8192.090263770728,
+          "earnings_yield": 0.07608807583971892,
+          "fcf_yield": 0.07414211865011702
+        }
+      }
+    },
+    {
+      "ticker": "INTU",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.028660558007414624,
+      "price_usd": 304.12,
+      "market_cap_usd_mn": 81271.78438789467,
+      "years": {
+        "2026": {
+          "eps_usd": 23.368333333333332,
+          "fcf_usd_mn": 8664.123838003337,
+          "earnings_yield": 0.07683918628611512,
+          "fcf_yield": 0.1066067873771681
+        },
+        "2027": {
+          "eps_usd": 25.29733333333333,
+          "fcf_usd_mn": 8929.414391110013,
+          "earnings_yield": 0.08318207725020824,
+          "fcf_yield": 0.10987102668364739
+        },
+        "2028": {
+          "eps_usd": 29.402000000000005,
+          "fcf_usd_mn": 9501.949370959137,
+          "earnings_yield": 0.09667894252268842,
+          "fcf_yield": 0.11691572225863962
+        }
+      }
+    },
+    {
+      "ticker": "DDOG",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.028274730722870272,
+      "price_usd": 245.05,
+      "market_cap_usd_mn": 88235.39977525,
+      "years": {
+        "2026": {
+          "eps_usd": 2.5300000000000002,
+          "fcf_usd_mn": 1185.4188792452853,
+          "earnings_yield": 0.010324423587023058,
+          "fcf_yield": 0.01343473121065628
+        },
+        "2027": {
+          "eps_usd": 3.13,
+          "fcf_usd_mn": 1488.2140196927865,
+          "earnings_yield": 0.012772903489083859,
+          "fcf_yield": 0.01686640535979336
+        },
+        "2028": {
+          "eps_usd": 3.987,
+          "fcf_usd_mn": 1921.6323933583208,
+          "earnings_yield": 0.01627014894919404,
+          "fcf_yield": 0.021778474379365118
+        }
+      }
+    },
+    {
+      "ticker": "CDNS",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.027979610944740115,
+      "price_usd": 294.9,
+      "market_cap_usd_mn": 81214.04536469998,
+      "years": {
+        "2026": {
+          "eps_usd": 8.146,
+          "fcf_usd_mn": 1775.698298693365,
+          "earnings_yield": 0.027622923024754158,
+          "fcf_yield": 0.021864423705522978
+        },
+        "2027": {
+          "eps_usd": 9.52,
+          "fcf_usd_mn": 2364.3702117353596,
+          "earnings_yield": 0.032282129535435744,
+          "fcf_yield": 0.029112824033304993
+        },
+        "2028": {
+          "eps_usd": 11.120000000000001,
+          "fcf_usd_mn": 2666.7274622620303,
+          "earnings_yield": 0.03770769752458461,
+          "fcf_yield": 0.03283579152210455
+        }
+      }
+    },
+    {
+      "ticker": "SNPS",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.026510320614353426,
+      "price_usd": 401.85,
+      "market_cap_usd_mn": 77009.18619509999,
+      "years": {
+        "2026": {
+          "eps_usd": 15.470999999999998,
+          "fcf_usd_mn": 2451.2070991143178,
+          "earnings_yield": 0.03849944008958566,
+          "fcf_yield": 0.031830061064458896
+        },
+        "2027": {
+          "eps_usd": 18.039333333333335,
+          "fcf_usd_mn": 3234.5379643452866,
+          "earnings_yield": 0.04489071378209116,
+          "fcf_yield": 0.0420019756623671
+        },
+        "2028": {
+          "eps_usd": 20.75633333333333,
+          "fcf_usd_mn": 3616.86990694878,
+          "earnings_yield": 0.05165194309651196,
+          "fcf_yield": 0.046966733264594836
+        }
+      }
+    },
+    {
+      "ticker": "MSTR",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.021165450073041773,
+      "price_usd": 168.5,
+      "market_cap_usd_mn": 64742.0390435,
+      "years": {
+        "2026": {
+          "eps_usd": -21.38,
+          "fcf_usd_mn": 41.0,
+          "earnings_yield": -0.12688427299703264,
+          "fcf_yield": 0.0006332824947396576
+        },
+        "2027": {
+          "eps_usd": 23.901,
+          "fcf_usd_mn": -108.0,
+          "earnings_yield": 0.14184569732937685,
+          "fcf_yield": -0.0016681587666312933
+        },
+        "2028": {
+          "eps_usd": 18.353,
+          "fcf_usd_mn": -123.0,
+          "earnings_yield": 0.108919881305638,
+          "fcf_yield": -0.001899847484218973
+        }
+      }
+    },
+    {
+      "ticker": "ADSK",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.01590959679786503,
+      "price_usd": 218.85,
+      "market_cap_usd_mn": 45739.65,
+      "years": {
+        "2026": {
+          "eps_usd": 12.441333333333334,
+          "fcf_usd_mn": 2766.417605944631,
+          "earnings_yield": 0.056848678699261294,
+          "fcf_yield": 0.060481827166247025
+        },
+        "2027": {
+          "eps_usd": 13.951666666666668,
+          "fcf_usd_mn": 3065.082360593298,
+          "earnings_yield": 0.0637499048054223,
+          "fcf_yield": 0.06701149572839533
+        },
+        "2028": {
+          "eps_usd": 16.073333333333334,
+          "fcf_usd_mn": 3466.4583937067364,
+          "earnings_yield": 0.07344452060010663,
+          "fcf_yield": 0.07578672757020957
+        }
+      }
+    },
+    {
+      "ticker": "WDAY",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.013290132922577427,
+      "price_usd": 191.92,
+      "market_cap_usd_mn": 46252.72,
+      "years": {
+        "2026": {
+          "eps_usd": 10.944333333333333,
+          "fcf_usd_mn": 3118.161607692701,
+          "earnings_yield": 0.05702549673475059,
+          "fcf_yield": 0.06741574566193514
+        },
+        "2027": {
+          "eps_usd": 13.055333333333333,
+          "fcf_usd_mn": 3677.700432851201,
+          "earnings_yield": 0.06802487147422538,
+          "fcf_yield": 0.07951317096272827
+        },
+        "2028": {
+          "eps_usd": 15.544,
+          "fcf_usd_mn": 4299.501926449832,
+          "earnings_yield": 0.08099208003334724,
+          "fcf_yield": 0.09295673695406091
+        }
+      }
+    },
+    {
+      "ticker": "TTWO",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.01271176651229302,
+      "price_usd": 209.92,
+      "market_cap_usd_mn": 39250.93459455999,
+      "years": {
+        "2026": {
+          "eps_usd": 6.070733000000001,
+          "fcf_usd_mn": 548.5805046096774,
+          "earnings_yield": 0.028919269245426833,
+          "fcf_yield": 0.013976240573025954
+        },
+        "2027": {
+          "eps_usd": 8.847000000000001,
+          "fcf_usd_mn": 2038.9362017205817,
+          "earnings_yield": 0.04214462652439025,
+          "fcf_yield": 0.05194618224461767
+        },
+        "2028": {
+          "eps_usd": 10.601,
+          "fcf_usd_mn": 2031.6762706750394,
+          "earnings_yield": 0.050500190548780494,
+          "fcf_yield": 0.051761220252743254
+        }
+      }
+    },
+    {
+      "ticker": "ROP",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.012450264307190546,
+      "price_usd": 365.4,
+      "market_cap_usd_mn": 36138.379359599996,
+      "years": {
+        "2026": {
+          "eps_usd": 22.222,
+          "fcf_usd_mn": 2682.510077326812,
+          "earnings_yield": 0.06081554460864806,
+          "fcf_yield": 0.07422884271134907
+        },
+        "2027": {
+          "eps_usd": 24.271,
+          "fcf_usd_mn": 2900.437559338643,
+          "earnings_yield": 0.06642309797482211,
+          "fcf_yield": 0.08025920394706784
+        },
+        "2028": {
+          "eps_usd": 27.105,
+          "fcf_usd_mn": 3113.0620648171603,
+          "earnings_yield": 0.07417898193760264,
+          "fcf_yield": 0.08614282433199898
+        }
+      }
+    },
+    {
+      "ticker": "TEAM",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.010761383949189322,
+      "price_usd": 195.67,
+      "market_cap_usd_mn": 49714.648818149995,
+      "years": {
+        "2026": {
+          "eps_usd": 6.365,
+          "fcf_usd_mn": 1802.2920151339924,
+          "earnings_yield": 0.03252925844534165,
+          "fcf_yield": 0.03625273552120528
+        },
+        "2027": {
+          "eps_usd": 5.840000000000001,
+          "fcf_usd_mn": 2080.3001818988246,
+          "earnings_yield": 0.02984616957121685,
+          "fcf_yield": 0.041844812974709
+        },
+        "2028": {
+          "eps_usd": 7.609,
+          "fcf_usd_mn": 2731.6039817082196,
+          "earnings_yield": 0.0388869014156488,
+          "fcf_yield": 0.05494565579051131
+        }
+      }
+    },
+    {
+      "ticker": "ZM",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.00828822951670326,
+      "price_usd": 90.9,
+      "market_cap_usd_mn": 26536.4561799,
+      "years": {
+        "2026": {
+          "eps_usd": 6.097999999999999,
+          "fcf_usd_mn": 1805.326546784387,
+          "earnings_yield": 0.06708470847084706,
+          "fcf_yield": 0.0680319381964736
+        },
+        "2027": {
+          "eps_usd": 6.316000000000001,
+          "fcf_usd_mn": 1935.8120238071142,
+          "earnings_yield": 0.06948294829482948,
+          "fcf_yield": 0.07294915382383999
+        },
+        "2028": {
+          "eps_usd": 6.701666666666667,
+          "fcf_usd_mn": 2082.2304898182924,
+          "earnings_yield": 0.07372570590392373,
+          "fcf_yield": 0.07846678831951476
+        }
+      }
+    },
+    {
+      "ticker": "ZS",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.007501297832314422,
+      "price_usd": 207.13,
+      "market_cap_usd_mn": 33773.51959674,
+      "years": {
+        "2026": {
+          "eps_usd": 4.547999999999999,
+          "fcf_usd_mn": 755.1986908932319,
+          "earnings_yield": 0.021957224931202623,
+          "fcf_yield": 0.02236067486925845
+        },
+        "2027": {
+          "eps_usd": 5.148666666666666,
+          "fcf_usd_mn": 1047.304937719603,
+          "earnings_yield": 0.024857175043048647,
+          "fcf_yield": 0.031009647505636177
+        },
+        "2028": {
+          "eps_usd": 5.937666666666666,
+          "fcf_usd_mn": 1417.4144123481958,
+          "earnings_yield": 0.02866637699351454,
+          "fcf_yield": 0.04196821738664786
+        }
+      }
+    },
+    {
+      "ticker": "FICO",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.00688038145859377,
+      "price_usd": 924.52,
+      "market_cap_usd_mn": 19967.445510200003,
+      "years": {
+        "2026": {
+          "eps_usd": 46.263999999999996,
+          "fcf_usd_mn": 1033.4472889771798,
+          "earnings_yield": 0.05004110240989919,
+          "fcf_yield": 0.05175660995039462
+        },
+        "2027": {
+          "eps_usd": 54.754999999999995,
+          "fcf_usd_mn": 1186.0289329366976,
+          "earnings_yield": 0.05922532773763682,
+          "fcf_yield": 0.059398130438409684
+        },
+        "2028": {
+          "eps_usd": 63.101,
+          "fcf_usd_mn": 1321.3124408410567,
+          "earnings_yield": 0.06825271492233807,
+          "fcf_yield": 0.06617333399838696
+        }
+      }
+    },
+    {
+      "ticker": "CRCL",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.006570478056741518,
+      "price_usd": 94.49,
+      "market_cap_usd_mn": 23988.73199569,
+      "years": {
+        "2026": {
+          "eps_usd": 1.1280000000000001,
+          "fcf_usd_mn": 792.5689905577663,
+          "earnings_yield": 0.011937771192718808,
+          "fcf_yield": 0.03303921985956429
+        },
+        "2027": {
+          "eps_usd": 1.435,
+          "fcf_usd_mn": 762.792432163419,
+          "earnings_yield": 0.015186792253148482,
+          "fcf_yield": 0.031797947148705825
+        },
+        "2028": {
+          "eps_usd": 2.295,
+          "fcf_usd_mn": 1018.4819521728554,
+          "earnings_yield": 0.02428828447454757,
+          "fcf_yield": 0.04245668142675668
+        }
+      }
+    },
+    {
+      "ticker": "NTNX",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.006523008300940182,
+      "price_usd": 70.04,
+      "market_cap_usd_mn": 18950.73533716,
+      "years": {
+        "2026": {
+          "eps_usd": 2.280333333333333,
+          "fcf_usd_mn": 877.1665575797582,
+          "earnings_yield": 0.03255758614125261,
+          "fcf_yield": 0.046286676583981695
+        },
+        "2027": {
+          "eps_usd": 2.4076666666666666,
+          "fcf_usd_mn": 906.0664827924445,
+          "earnings_yield": 0.03437559489815343,
+          "fcf_yield": 0.04781167942416263
+        },
+        "2028": {
+          "eps_usd": 2.8976666666666664,
+          "fcf_usd_mn": 1066.6381889356383,
+          "earnings_yield": 0.041371597182562336,
+          "fcf_yield": 0.05628479159033451
+        }
+      }
+    },
+    {
+      "ticker": "RBRK",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.006264333334931632,
+      "price_usd": 112.96,
+      "market_cap_usd_mn": 23974.476209599998,
+      "years": {
+        "2026": {
+          "eps_usd": 0.49900000000000005,
+          "fcf_usd_mn": 325.32538785810584,
+          "earnings_yield": 0.004417492917847026,
+          "fcf_yield": 0.01356965570442107
+        },
+        "2027": {
+          "eps_usd": 0.7113333333333334,
+          "fcf_usd_mn": 434.80007933135613,
+          "earnings_yield": 0.006297214353163362,
+          "fcf_yield": 0.018135957404452115
+        },
+        "2028": {
+          "eps_usd": 1.1806666666666668,
+          "fcf_usd_mn": 600.4962702286973,
+          "earnings_yield": 0.010452077431539189,
+          "fcf_yield": 0.025047315527512676
+        }
+      }
+    },
+    {
+      "ticker": "BMNR",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.005871071315481693,
+      "price_usd": 28.25,
+      "market_cap_usd_mn": 17041.1456305,
+      "years": {
+        "2026": {
+          "eps_usd": 0.33999999999999997,
+          "fcf_usd_mn": null,
+          "earnings_yield": 0.012035398230088494,
+          "fcf_yield": null
+        },
+        "2027": {
+          "eps_usd": 1.6199999999999999,
+          "fcf_usd_mn": null,
+          "earnings_yield": 0.05734513274336283,
+          "fcf_yield": null
+        },
+        "2028": {
+          "eps_usd": null,
+          "fcf_usd_mn": null,
+          "earnings_yield": null,
+          "fcf_yield": null
+        }
+      }
+    },
+    {
+      "ticker": "DT",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.005615557143266918,
+      "price_usd": 56.4,
+      "market_cap_usd_mn": 16299.720019199996,
+      "years": {
+        "2026": {
+          "eps_usd": 1.88,
+          "fcf_usd_mn": 588.9091306723643,
+          "earnings_yield": 0.03333333333333333,
+          "fcf_yield": 0.03613001511551537
+        },
+        "2027": {
+          "eps_usd": 2.176,
+          "fcf_usd_mn": 686.0156964053394,
+          "earnings_yield": 0.03858156028368795,
+          "fcf_yield": 0.04208757546738583
+        },
+        "2028": {
+          "eps_usd": 2.558,
+          "fcf_usd_mn": 813.7529188196208,
+          "earnings_yield": 0.04535460992907801,
+          "fcf_yield": 0.04992434948950494
+        }
+      }
+    },
+    {
+      "ticker": "GEN",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.005410485995087224,
+      "price_usd": 29.15,
+      "market_cap_usd_mn": 17448.811982799998,
+      "years": {
+        "2026": {
+          "eps_usd": 2.8289999999999997,
+          "fcf_usd_mn": 1657.1878072834484,
+          "earnings_yield": 0.09704974271012007,
+          "fcf_yield": 0.09497424861457648
+        },
+        "2027": {
+          "eps_usd": 3.205,
+          "fcf_usd_mn": 1839.7078790816388,
+          "earnings_yield": 0.10994854202401373,
+          "fcf_yield": 0.10543456373391573
+        },
+        "2028": {
+          "eps_usd": 3.566,
+          "fcf_usd_mn": 1933.5785969565013,
+          "earnings_yield": 0.1223327615780446,
+          "fcf_yield": 0.11081434076213946
+        }
+      }
+    },
+    {
+      "ticker": "U",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0053723423906879945,
+      "price_usd": 43.21,
+      "market_cap_usd_mn": 19016.24279493,
+      "years": {
+        "2026": {
+          "eps_usd": 1.034,
+          "fcf_usd_mn": 656.7204089957344,
+          "earnings_yield": 0.023929645915297386,
+          "fcf_yield": 0.03453470888428209
+        },
+        "2027": {
+          "eps_usd": 1.635,
+          "fcf_usd_mn": 887.0338448911781,
+          "earnings_yield": 0.037838463318676234,
+          "fcf_yield": 0.0466461148217814
+        },
+        "2028": {
+          "eps_usd": 2.22,
+          "fcf_usd_mn": 1163.10498123302,
+          "earnings_yield": 0.05137699606572553,
+          "fcf_yield": 0.061163763724299956
+        }
+      }
+    },
+    {
+      "ticker": "PTC",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.005057255403031507,
+      "price_usd": 135.28,
+      "market_cap_usd_mn": 14678.726988079998,
+      "years": {
+        "2026": {
+          "eps_usd": 8.174999999999999,
+          "fcf_usd_mn": 912.3129596223054,
+          "earnings_yield": 0.06043021880544056,
+          "fcf_yield": 0.06215204904098005
+        },
+        "2027": {
+          "eps_usd": 9.106000000000002,
+          "fcf_usd_mn": 1058.1710133601193,
+          "earnings_yield": 0.06731224127735069,
+          "fcf_yield": 0.0720887454490718
+        },
+        "2028": {
+          "eps_usd": 10.278,
+          "fcf_usd_mn": 1272.583833591338,
+          "earnings_yield": 0.07597575399172088,
+          "fcf_yield": 0.0866957900793953
+        }
+      }
+    },
+    {
+      "ticker": "IOT",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.004886949014855561,
+      "price_usd": 38.05,
+      "market_cap_usd_mn": 22282.278202449997,
+      "years": {
+        "2026": {
+          "eps_usd": 0.761,
+          "fcf_usd_mn": 247.1660634071471,
+          "earnings_yield": 0.02,
+          "fcf_yield": 0.011092495173135866
+        },
+        "2027": {
+          "eps_usd": 0.9233333333333333,
+          "fcf_usd_mn": 348.3806302579673,
+          "earnings_yield": 0.024266316250547527,
+          "fcf_yield": 0.015634874813638306
+        },
+        "2028": {
+          "eps_usd": 0.978,
+          "fcf_usd_mn": 433.1287177904919,
+          "earnings_yield": 0.025703022339027597,
+          "fcf_yield": 0.01943826003136736
+        }
+      }
+    },
+    {
+      "ticker": "TRMB",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.004639556226522582,
+      "price_usd": 57.75,
+      "market_cap_usd_mn": 13466.136222,
+      "years": {
+        "2026": {
+          "eps_usd": 3.669,
+          "fcf_usd_mn": 824.203969149744,
+          "earnings_yield": 0.06353246753246754,
+          "fcf_yield": 0.06120567589411573
+        },
+        "2027": {
+          "eps_usd": 4.124,
+          "fcf_usd_mn": 935.8730297396295,
+          "earnings_yield": 0.07141125541125541,
+          "fcf_yield": 0.069498259508965
+        },
+        "2028": {
+          "eps_usd": 4.798,
+          "fcf_usd_mn": 1044.521587588242,
+          "earnings_yield": 0.08308225108225108,
+          "fcf_yield": 0.07756653953060257
+        }
+      }
+    },
+    {
+      "ticker": "DOCU",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.004510990259562209,
+      "price_usd": 68.57,
+      "market_cap_usd_mn": 12815.901133639998,
+      "years": {
+        "2026": {
+          "eps_usd": 4.564666666666667,
+          "fcf_usd_mn": 1185.369126037085,
+          "earnings_yield": 0.06656944241893929,
+          "fcf_yield": 0.09249206229639616
+        },
+        "2027": {
+          "eps_usd": 5.1336666666666675,
+          "fcf_usd_mn": 1256.1530562074213,
+          "earnings_yield": 0.07486753196247146,
+          "fcf_yield": 0.09801519558466243
+        },
+        "2028": {
+          "eps_usd": 5.607333333333333,
+          "fcf_usd_mn": 1351.1571046880053,
+          "earnings_yield": 0.08177531476350203,
+          "fcf_yield": 0.1054281779017007
+        }
+      }
+    },
+    {
+      "ticker": "TYL",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.004362067027572262,
+      "price_usd": 332.46,
+      "market_cap_usd_mn": 13614.993014039997,
+      "years": {
+        "2026": {
+          "eps_usd": 13.09,
+          "fcf_usd_mn": 687.6061638388093,
+          "earnings_yield": 0.03937315767310353,
+          "fcf_yield": 0.050503600195001115
+        },
+        "2027": {
+          "eps_usd": 15.283,
+          "fcf_usd_mn": 785.0073036790815,
+          "earnings_yield": 0.04596943993262347,
+          "fcf_yield": 0.057657561988432124
+        },
+        "2028": {
+          "eps_usd": 17.876,
+          "fcf_usd_mn": 885.882004338855,
+          "earnings_yield": 0.053768874451061786,
+          "fcf_yield": 0.06506665140594045
+        }
+      }
+    },
+    {
+      "ticker": "GWRE",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.00428451959567869,
+      "price_usd": 149.38,
+      "market_cap_usd_mn": 12248.064895219999,
+      "years": {
+        "2026": {
+          "eps_usd": 3.6856666666666666,
+          "fcf_usd_mn": 384.5681072981415,
+          "earnings_yield": 0.02467309322979426,
+          "fcf_yield": 0.03139827479590064
+        },
+        "2027": {
+          "eps_usd": 4.8533333333333335,
+          "fcf_usd_mn": 451.6812021460429,
+          "earnings_yield": 0.032489846922836615,
+          "fcf_yield": 0.03687776036542055
+        },
+        "2028": {
+          "eps_usd": 5.685666666666666,
+          "fcf_usd_mn": 597.9384253704079,
+          "earnings_yield": 0.03806176641228187,
+          "fcf_yield": 0.04881901185907031
+        }
+      }
+    },
+    {
+      "ticker": "MANH",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0042049150468622,
+      "price_usd": 209.35,
+      "market_cap_usd_mn": 12206.145888199999,
+      "years": {
+        "2026": {
+          "eps_usd": 5.479,
+          "fcf_usd_mn": 409.6263728829673,
+          "earnings_yield": 0.026171483162168618,
+          "fcf_yield": 0.03355902646378853
+        },
+        "2027": {
+          "eps_usd": 6.127,
+          "fcf_usd_mn": 446.15200807382985,
+          "earnings_yield": 0.029266778122760927,
+          "fcf_yield": 0.03655142353370827
+        },
+        "2028": {
+          "eps_usd": 7.046,
+          "fcf_usd_mn": 488.9635581430225,
+          "earnings_yield": 0.03365655600668737,
+          "fcf_yield": 0.04005880010132571
+        }
+      }
+    },
+    {
+      "ticker": "HUT",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.003996746316566787,
+      "price_usd": 103.42,
+      "market_cap_usd_mn": 12747.494180560001,
+      "years": {
+        "2026": {
+          "eps_usd": -5.005,
+          "fcf_usd_mn": -2655.5,
+          "earnings_yield": -0.048394894604525236,
+          "fcf_yield": -0.20831545105152133
+        },
+        "2027": {
+          "eps_usd": -3.801,
+          "fcf_usd_mn": -5155.0,
+          "earnings_yield": -0.03675304583252756,
+          "fcf_yield": -0.40439320285091035
+        },
+        "2028": {
+          "eps_usd": -3.5100000000000002,
+          "fcf_usd_mn": -4904.5,
+          "earnings_yield": -0.03393927673564108,
+          "fcf_yield": -0.3847422819364287
+        }
+      }
+    },
+    {
+      "ticker": "HUBS",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0036736917774618195,
+      "price_usd": 213.86,
+      "market_cap_usd_mn": 10664.385745860001,
+      "years": {
+        "2026": {
+          "eps_usd": 13.297,
+          "fcf_usd_mn": 748.8435404067238,
+          "earnings_yield": 0.06217619003086131,
+          "fcf_yield": 0.07021909730688716
+        },
+        "2027": {
+          "eps_usd": 16.891000000000002,
+          "fcf_usd_mn": 917.5997475184631,
+          "earnings_yield": 0.07898157673244179,
+          "fcf_yield": 0.08604337552912343
+        },
+        "2028": {
+          "eps_usd": 20.472,
+          "fcf_usd_mn": 1107.7520335151119,
+          "earnings_yield": 0.09572617600299262,
+          "fcf_yield": 0.10387396516908158
+        }
+      }
+    },
+    {
+      "ticker": "AUR",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.003216568860586122,
+      "price_usd": 6.51,
+      "market_cap_usd_mn": 13120.809094679998,
+      "years": {
+        "2026": {
+          "eps_usd": -0.492,
+          "fcf_usd_mn": -870.9070516242663,
+          "earnings_yield": -0.07557603686635944,
+          "fcf_yield": -0.06637601731263561
+        },
+        "2027": {
+          "eps_usd": -0.448,
+          "fcf_usd_mn": -610.2593416229677,
+          "earnings_yield": -0.06881720430107527,
+          "fcf_yield": -0.04651080106564504
+        },
+        "2028": {
+          "eps_usd": -0.327,
+          "fcf_usd_mn": -353.5239530961002,
+          "earnings_yield": -0.05023041474654378,
+          "fcf_yield": -0.026943761664777292
+        }
+      }
+    },
+    {
+      "ticker": "IDCC",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0029002004585996317,
+      "price_usd": 326.7,
+      "market_cap_usd_mn": 8430.822486899999,
+      "years": {
+        "2026": {
+          "eps_usd": 11.555,
+          "fcf_usd_mn": 294.1,
+          "earnings_yield": 0.03536883991429446,
+          "fcf_yield": 0.034883903730268215
+        },
+        "2027": {
+          "eps_usd": 11.588000000000001,
+          "fcf_usd_mn": 344.3333333333333,
+          "earnings_yield": 0.03546985001530457,
+          "fcf_yield": 0.04084219942578155
+        },
+        "2028": {
+          "eps_usd": 15.620000000000001,
+          "fcf_usd_mn": null,
+          "earnings_yield": 0.04781144781144782,
+          "fcf_yield": null
+        }
+      }
+    },
+    {
+      "ticker": "RIOT",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0028713003515457524,
+      "price_usd": 24.18,
+      "market_cap_usd_mn": 9073.7610483,
+      "years": {
+        "2026": {
+          "eps_usd": -2.2960000000000003,
+          "fcf_usd_mn": -937.3453116479077,
+          "earnings_yield": -0.09495450785773367,
+          "fcf_yield": -0.10330284285186488
+        },
+        "2027": {
+          "eps_usd": -1.108,
+          "fcf_usd_mn": -1802.7888552089717,
+          "earnings_yield": -0.04582299421009099,
+          "fcf_yield": -0.19868154402707466
+        },
+        "2028": {
+          "eps_usd": -1.004,
+          "fcf_usd_mn": -2809.440222024151,
+          "earnings_yield": -0.04152191894127378,
+          "fcf_yield": -0.3096224605287031
+        }
+      }
+    },
+    {
+      "ticker": "ESTC",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.002824055912234351,
+      "price_usd": 89.71,
+      "market_cap_usd_mn": 9418.767728800001,
+      "years": {
+        "2026": {
+          "eps_usd": 2.9963333333333333,
+          "fcf_usd_mn": 395.42172077996224,
+          "earnings_yield": 0.03340021550923346,
+          "fcf_yield": 0.04198231999828081
+        },
+        "2027": {
+          "eps_usd": 3.7376666666666667,
+          "fcf_usd_mn": 497.4633238815363,
+          "earnings_yield": 0.041663879909337495,
+          "fcf_yield": 0.05281617916539446
+        },
+        "2028": {
+          "eps_usd": 4.408,
+          "fcf_usd_mn": 595.2507545229066,
+          "earnings_yield": 0.04913610522795676,
+          "fcf_yield": 0.06319836858305716
+        }
+      }
+    },
+    {
+      "ticker": "S",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0027577495503873692,
+      "price_usd": 23.8,
+      "market_cap_usd_mn": 8293.9415006,
+      "years": {
+        "2026": {
+          "eps_usd": 0.30733333333333335,
+          "fcf_usd_mn": 87.0340586060273,
+          "earnings_yield": 0.012913165266106443,
+          "fcf_yield": 0.010493690918814786
+        },
+        "2027": {
+          "eps_usd": 0.45699999999999996,
+          "fcf_usd_mn": 177.4854091962899,
+          "earnings_yield": 0.019201680672268906,
+          "fcf_yield": 0.021399404515145215
+        },
+        "2028": {
+          "eps_usd": 0.6163333333333333,
+          "fcf_usd_mn": 265.3603002440712,
+          "earnings_yield": 0.025896358543417364,
+          "fcf_yield": 0.031994474548063125
+        }
+      }
+    },
+    {
+      "ticker": "WULF",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.00263662209425608,
+      "price_usd": 17.45,
+      "market_cap_usd_mn": 8707.003413650002,
+      "years": {
+        "2026": {
+          "eps_usd": -2.805,
+          "fcf_usd_mn": -219.81255815937698,
+          "earnings_yield": -0.16074498567335246,
+          "fcf_yield": -0.02524548891467942
+        },
+        "2027": {
+          "eps_usd": -0.29,
+          "fcf_usd_mn": -1726.1658835805183,
+          "earnings_yield": -0.0166189111747851,
+          "fcf_yield": -0.19825028216646862
+        },
+        "2028": {
+          "eps_usd": 0.28,
+          "fcf_usd_mn": 427.56409811475197,
+          "earnings_yield": 0.016045845272206306,
+          "fcf_yield": 0.04910576897724172
+        }
+      }
+    },
+    {
+      "ticker": "GTLB",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.002587241478170862,
+      "price_usd": 49.79,
+      "market_cap_usd_mn": 8295.014000000001,
+      "years": {
+        "2026": {
+          "eps_usd": 0.8993333333333333,
+          "fcf_usd_mn": 216.43396336284306,
+          "earnings_yield": 0.018062529289683337,
+          "fcf_yield": 0.026092055222913794
+        },
+        "2027": {
+          "eps_usd": 1.0056666666666667,
+          "fcf_usd_mn": 254.6601830415333,
+          "earnings_yield": 0.02019816562897503,
+          "fcf_yield": 0.030700392192410195
+        },
+        "2028": {
+          "eps_usd": 1.2329999999999999,
+          "fcf_usd_mn": 301.2431604325148,
+          "earnings_yield": 0.024764008837115884,
+          "fcf_yield": 0.03631617263485207
+        }
+      }
+    },
+    {
+      "ticker": "ZETA",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0024364193377056165,
+      "price_usd": 31.15,
+      "market_cap_usd_mn": 7819.07379575,
+      "years": {
+        "2026": {
+          "eps_usd": 0.963,
+          "fcf_usd_mn": 255.51678761922028,
+          "earnings_yield": 0.030914927768860352,
+          "fcf_yield": 0.03267865149937638
+        },
+        "2027": {
+          "eps_usd": 1.208,
+          "fcf_usd_mn": 321.88390412395285,
+          "earnings_yield": 0.0387800963081862,
+          "fcf_yield": 0.04116650034674318
+        },
+        "2028": {
+          "eps_usd": 1.56,
+          "fcf_usd_mn": 423.09388288819804,
+          "earnings_yield": 0.05008025682182986,
+          "fcf_yield": 0.05411048596550753
+        }
+      }
+    },
+    {
+      "ticker": "DSGX",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0023388255040204145,
+      "price_usd": 79.39,
+      "market_cap_usd_mn": 6791.69962267,
+      "years": {
+        "2026": {
+          "eps_usd": 2.4720000000000004,
+          "fcf_usd_mn": 310.8780306188085,
+          "earnings_yield": 0.031137422849225348,
+          "fcf_yield": 0.045773230250220336
+        },
+        "2027": {
+          "eps_usd": 2.985,
+          "fcf_usd_mn": 345.7472081577114,
+          "earnings_yield": 0.03759919385313012,
+          "fcf_yield": 0.0509073173677532
+        },
+        "2028": {
+          "eps_usd": 3.65525,
+          "fcf_usd_mn": 396.1148225726118,
+          "earnings_yield": 0.04604169290842675,
+          "fcf_yield": 0.058323371847957016
+        }
+      }
+    },
+    {
+      "ticker": "QBTS",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.002247277783138498,
+      "price_usd": 17.7,
+      "market_cap_usd_mn": 6535.9699149,
+      "years": {
+        "2026": {
+          "eps_usd": -0.289,
+          "fcf_usd_mn": -141.0753950776974,
+          "earnings_yield": -0.016327683615819207,
+          "fcf_yield": -0.02158446212490803
+        },
+        "2027": {
+          "eps_usd": -0.374,
+          "fcf_usd_mn": -159.15276063059002,
+          "earnings_yield": -0.02112994350282486,
+          "fcf_yield": -0.024350289659040614
+        },
+        "2028": {
+          "eps_usd": -0.354,
+          "fcf_usd_mn": -143.32402465001698,
+          "earnings_yield": -0.02,
+          "fcf_yield": -0.021928501280778896
+        }
+      }
+    },
+    {
+      "ticker": "CIFR",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.002238912031292291,
+      "price_usd": 18.9,
+      "market_cap_usd_mn": 7844.080645799998,
+      "years": {
+        "2026": {
+          "eps_usd": -1.129,
+          "fcf_usd_mn": -3784.77208795928,
+          "earnings_yield": -0.05973544973544974,
+          "fcf_yield": -0.48250040493729274
+        },
+        "2027": {
+          "eps_usd": -0.228,
+          "fcf_usd_mn": -2205.3945742020996,
+          "earnings_yield": -0.012063492063492064,
+          "fcf_yield": -0.2811539903510486
+        },
+        "2028": {
+          "eps_usd": 0.01,
+          "fcf_usd_mn": -3024.316338185568,
+          "earnings_yield": 0.0005291005291005291,
+          "fcf_yield": -0.38555395778661394
+        }
+      }
+    },
+    {
+      "ticker": "SNAP",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0021966985589157305,
+      "price_usd": 5.7,
+      "market_cap_usd_mn": 9639.825630300002,
+      "years": {
+        "2026": {
+          "eps_usd": 0.596,
+          "fcf_usd_mn": 883.5213608220711,
+          "earnings_yield": 0.10456140350877192,
+          "fcf_yield": 0.09165325128340261
+        },
+        "2027": {
+          "eps_usd": 0.725,
+          "fcf_usd_mn": 1214.4322766948744,
+          "earnings_yield": 0.12719298245614033,
+          "fcf_yield": 0.12598073069679375
+        },
+        "2028": {
+          "eps_usd": 0.8160000000000001,
+          "fcf_usd_mn": 1687.7296113658383,
+          "earnings_yield": 0.14315789473684212,
+          "fcf_yield": 0.17507885267768214
+        }
+      }
+    },
+    {
+      "ticker": "PCOR",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.002187717166725878,
+      "price_usd": 51.69,
+      "market_cap_usd_mn": 7854.571421219998,
+      "years": {
+        "2026": {
+          "eps_usd": 1.73,
+          "fcf_usd_mn": 295.72002548676505,
+          "earnings_yield": 0.0334687560456568,
+          "fcf_yield": 0.0376494158150812
+        },
+        "2027": {
+          "eps_usd": 2.49,
+          "fcf_usd_mn": 414.88227674562035,
+          "earnings_yield": 0.048171793383633206,
+          "fcf_yield": 0.052820485612336494
+        },
+        "2028": {
+          "eps_usd": 2.944,
+          "fcf_usd_mn": 503.56908793698426,
+          "earnings_yield": 0.05695492358289805,
+          "fcf_yield": 0.06411159322793047
+        }
+      }
+    },
+    {
+      "ticker": "QLYS",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0021530402249406236,
+      "price_usd": 181.03,
+      "market_cap_usd_mn": 6262.7330310299985,
+      "years": {
+        "2026": {
+          "eps_usd": 7.822,
+          "fcf_usd_mn": 304.36710349621666,
+          "earnings_yield": 0.04320830801524609,
+          "fcf_yield": 0.04859972507021571
+        },
+        "2027": {
+          "eps_usd": 8.457,
+          "fcf_usd_mn": 330.853170689469,
+          "earnings_yield": 0.0467160139203447,
+          "fcf_yield": 0.05282887982773478
+        },
+        "2028": {
+          "eps_usd": 8.945,
+          "fcf_usd_mn": 354.8488538774173,
+          "earnings_yield": 0.04941169971827874,
+          "fcf_yield": 0.05666038327344399
+        }
+      }
+    },
+    {
+      "ticker": "CVLT",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.002075336060174833,
+      "price_usd": 145.72,
+      "market_cap_usd_mn": 6039.30186608,
+      "years": {
+        "2026": {
+          "eps_usd": 5.318,
+          "fcf_usd_mn": 283.12677394762176,
+          "earnings_yield": 0.03649464726873456,
+          "fcf_yield": 0.046880712411117506
+        },
+        "2027": {
+          "eps_usd": 5.8950000000000005,
+          "fcf_usd_mn": 289.3137563279047,
+          "earnings_yield": 0.04045429590996432,
+          "fcf_yield": 0.04790516565380643
+        },
+        "2028": {
+          "eps_usd": 7.01,
+          "fcf_usd_mn": 337.1992122338647,
+          "earnings_yield": 0.0481059566291518,
+          "fcf_yield": 0.055834137738296985
+        }
+      }
+    },
+    {
+      "ticker": "CORZ",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.00202781070511498,
+      "price_usd": 18.36,
+      "market_cap_usd_mn": 5899.810496760001,
+      "years": {
+        "2026": {
+          "eps_usd": -4.219,
+          "fcf_usd_mn": -1963.7341163879585,
+          "earnings_yield": -0.2297930283224401,
+          "fcf_yield": -0.3328469816897309
+        },
+        "2027": {
+          "eps_usd": 0.20500000000000002,
+          "fcf_usd_mn": -4095.83202264233,
+          "earnings_yield": 0.011165577342047931,
+          "fcf_yield": -0.6942311155403446
+        },
+        "2028": {
+          "eps_usd": 0.482,
+          "fcf_usd_mn": -4453.797398642271,
+          "earnings_yield": 0.026252723311546843,
+          "fcf_yield": -0.7549051619688739
+        }
+      }
+    },
+    {
+      "ticker": "RNG",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.001958000445442014,
+      "price_usd": 77.3,
+      "market_cap_usd_mn": 6457.731822600002,
+      "years": {
+        "2026": {
+          "eps_usd": 5.069,
+          "fcf_usd_mn": 620.3616650616196,
+          "earnings_yield": 0.06557567917205692,
+          "fcf_yield": 0.09606494696644907
+        },
+        "2027": {
+          "eps_usd": 5.51,
+          "fcf_usd_mn": 656.5681947186124,
+          "earnings_yield": 0.07128072445019405,
+          "fcf_yield": 0.10167164149196056
+        },
+        "2028": {
+          "eps_usd": 6.097,
+          "fcf_usd_mn": 696.2599775477491,
+          "earnings_yield": 0.0788745148771022,
+          "fcf_yield": 0.10781803838788431
+        }
+      }
+    },
+    {
+      "ticker": "OTEX",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.001930054746192274,
+      "price_usd": 23.08,
+      "market_cap_usd_mn": 5588.285136119998,
+      "years": {
+        "2026": {
+          "eps_usd": 4.164,
+          "fcf_usd_mn": 755.1573031702545,
+          "earnings_yield": 0.1804159445407279,
+          "fcf_yield": 0.13513220688924396
+        },
+        "2027": {
+          "eps_usd": 4.068,
+          "fcf_usd_mn": 910.9531838385694,
+          "earnings_yield": 0.17625649913344887,
+          "fcf_yield": 0.16301122109009872
+        },
+        "2028": {
+          "eps_usd": 4.482,
+          "fcf_usd_mn": 922.0402500713479,
+          "earnings_yield": 0.1941941074523397,
+          "fcf_yield": 0.16499520472062557
+        }
+      }
+    },
+    {
+      "ticker": "PATH",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0019266845791662164,
+      "price_usd": 13.59,
+      "market_cap_usd_mn": 7082.50200831,
+      "years": {
+        "2026": {
+          "eps_usd": 0.7889999999999999,
+          "fcf_usd_mn": 407.0121295538868,
+          "earnings_yield": 0.05805739514348785,
+          "fcf_yield": 0.0574672805000738
+        },
+        "2027": {
+          "eps_usd": 0.8993333333333333,
+          "fcf_usd_mn": 472.1030975716815,
+          "earnings_yield": 0.06617610988471916,
+          "fcf_yield": 0.06665767224884034
+        },
+        "2028": {
+          "eps_usd": 1.0453333333333332,
+          "fcf_usd_mn": 530.8704176543398,
+          "earnings_yield": 0.07691930340936963,
+          "fcf_yield": 0.07495520891225474
+        }
+      }
+    },
+    {
+      "ticker": "VRNS",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0019122827244821665,
+      "price_usd": 48.45,
+      "market_cap_usd_mn": 5564.99049825,
+      "years": {
+        "2026": {
+          "eps_usd": 0.152,
+          "fcf_usd_mn": 107.08268955098474,
+          "earnings_yield": 0.003137254901960784,
+          "fcf_yield": 0.019242205280432842
+        },
+        "2027": {
+          "eps_usd": 0.40900000000000003,
+          "fcf_usd_mn": 161.4220804914064,
+          "earnings_yield": 0.008441692466460269,
+          "fcf_yield": 0.02900671268750021
+        },
+        "2028": {
+          "eps_usd": 0.715,
+          "fcf_usd_mn": 197.72026434725535,
+          "earnings_yield": 0.014757481940144477,
+          "fcf_yield": 0.03552930852432392
+        }
+      }
+    },
+    {
+      "ticker": "MARA",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0017718369534961132,
+      "price_usd": 13.28,
+      "market_cap_usd_mn": 5130.054664159999,
+      "years": {
+        "2026": {
+          "eps_usd": -4.926,
+          "fcf_usd_mn": -872.0,
+          "earnings_yield": -0.37093373493975906,
+          "fcf_yield": -0.1699786955667425
+        },
+        "2027": {
+          "eps_usd": -1.195,
+          "fcf_usd_mn": -556.5,
+          "earnings_yield": -0.08998493975903615,
+          "fcf_yield": -0.10847837624184886
+        },
+        "2028": {
+          "eps_usd": -1.47,
+          "fcf_usd_mn": -542.5,
+          "earnings_yield": -0.11069277108433735,
+          "fcf_yield": -0.10574936048733694
+        }
+      }
+    },
+    {
+      "ticker": "DBX",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0017695607992024491,
+      "price_usd": 36.01,
+      "market_cap_usd_mn": 8127.791352849999,
+      "years": {
+        "2026": {
+          "eps_usd": 3.0460000000000003,
+          "fcf_usd_mn": 937.9385776062664,
+          "earnings_yield": 0.08458761455151348,
+          "fcf_yield": 0.11539894872884249
+        },
+        "2027": {
+          "eps_usd": 3.281,
+          "fcf_usd_mn": 985.289633317673,
+          "earnings_yield": 0.091113579561233,
+          "fcf_yield": 0.12122476950299449
+        },
+        "2028": {
+          "eps_usd": 3.617,
+          "fcf_usd_mn": 969.446010818337,
+          "earnings_yield": 0.10044432102193836,
+          "fcf_yield": 0.1192754548846043
+        }
+      }
+    },
+    {
+      "ticker": "BSY",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.001754797518699597,
+      "price_usd": 31.96,
+      "market_cap_usd_mn": 9915.3466246,
+      "years": {
+        "2026": {
+          "eps_usd": 1.3960000000000001,
+          "fcf_usd_mn": 538.0806393317772,
+          "earnings_yield": 0.04367959949937422,
+          "fcf_yield": 0.05426745626792287
+        },
+        "2027": {
+          "eps_usd": 1.559,
+          "fcf_usd_mn": 605.9429345142489,
+          "earnings_yield": 0.04877972465581977,
+          "fcf_yield": 0.06111162397599928
+        },
+        "2028": {
+          "eps_usd": 1.7890000000000001,
+          "fcf_usd_mn": 678.9432457753536,
+          "earnings_yield": 0.055976220275344185,
+          "fcf_yield": 0.06847397993035298
+        }
+      }
+    },
+    {
+      "ticker": "APPF",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0017366740212679157,
+      "price_usd": 209.84,
+      "market_cap_usd_mn": 7778.494119440001,
+      "years": {
+        "2026": {
+          "eps_usd": 6.9,
+          "fcf_usd_mn": 275.18319746230407,
+          "earnings_yield": 0.03288219595882577,
+          "fcf_yield": 0.035377438516610384
+        },
+        "2027": {
+          "eps_usd": 8.472,
+          "fcf_usd_mn": 332.974493182958,
+          "earnings_yield": 0.040373617994662596,
+          "fcf_yield": 0.04280706368997421
+        },
+        "2028": {
+          "eps_usd": 10.895,
+          "fcf_usd_mn": 417.06956248820995,
+          "earnings_yield": 0.05192051086542127,
+          "fcf_yield": 0.05361829116073641
+        }
+      }
+    },
+    {
+      "ticker": "BB",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0017296183127318227,
+      "price_usd": 8.53,
+      "market_cap_usd_mn": 5007.38533987,
+      "years": {
+        "2026": {
+          "eps_usd": 0.19266666666666665,
+          "fcf_usd_mn": 84.79674815806173,
+          "earnings_yield": 0.02258694802657288,
+          "fcf_yield": 0.016934336465558128
+        },
+        "2027": {
+          "eps_usd": 0.21933333333333332,
+          "fcf_usd_mn": 128.90925632271993,
+          "earnings_yield": 0.025713169206721377,
+          "fcf_yield": 0.025743825883802786
+        },
+        "2028": {
+          "eps_usd": 0.27216666666666667,
+          "fcf_usd_mn": 141.47677616052252,
+          "earnings_yield": 0.03190699491989058,
+          "fcf_yield": 0.028253622710848827
+        }
+      }
+    },
+    {
+      "ticker": "ACIW",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0017194896222814619,
+      "price_usd": 49.59,
+      "market_cap_usd_mn": 5006.370401190002,
+      "years": {
+        "2026": {
+          "eps_usd": 3.59,
+          "fcf_usd_mn": null,
+          "earnings_yield": 0.07239362774752973,
+          "fcf_yield": null
+        },
+        "2027": {
+          "eps_usd": 3.89,
+          "fcf_usd_mn": null,
+          "earnings_yield": 0.07844323452308934,
+          "fcf_yield": null
+        },
+        "2028": {
+          "eps_usd": null,
+          "fcf_usd_mn": null,
+          "earnings_yield": null,
+          "fcf_yield": null
+        }
+      }
+    },
+    {
+      "ticker": "BOX",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0016080770989190542,
+      "price_usd": 33.61,
+      "market_cap_usd_mn": 4611.317980530001,
+      "years": {
+        "2026": {
+          "eps_usd": 1.5779999999999998,
+          "fcf_usd_mn": 392.61684847753685,
+          "earnings_yield": 0.046950312407021716,
+          "fcf_yield": 0.08514200281465117
+        },
+        "2027": {
+          "eps_usd": 1.7143333333333335,
+          "fcf_usd_mn": 393.31044358067464,
+          "earnings_yield": 0.051006644847763564,
+          "fcf_yield": 0.08529241428184262
+        },
+        "2028": {
+          "eps_usd": 1.9956666666666665,
+          "fcf_usd_mn": 424.0589517244601,
+          "earnings_yield": 0.05937716949320638,
+          "fcf_yield": 0.0919604662950875
+        }
+      }
+    },
+    {
+      "ticker": "TENB",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0013770677341411676,
+      "price_usd": 36.2,
+      "market_cap_usd_mn": 3987.0673846000004,
+      "years": {
+        "2026": {
+          "eps_usd": 1.982,
+          "fcf_usd_mn": 268.4254798637256,
+          "earnings_yield": 0.05475138121546961,
+          "fcf_yield": 0.0673240389416331
+        },
+        "2027": {
+          "eps_usd": 2.18,
+          "fcf_usd_mn": 301.01682756475304,
+          "earnings_yield": 0.06022099447513812,
+          "fcf_yield": 0.07549830452513216
+        },
+        "2028": {
+          "eps_usd": 2.454,
+          "fcf_usd_mn": 333.25076558888793,
+          "earnings_yield": 0.06779005524861878,
+          "fcf_yield": 0.08358292786223402
+        }
+      }
+    },
+    {
+      "ticker": "BILL",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.001311028176048014,
+      "price_usd": 47.06,
+      "market_cap_usd_mn": 4013.12536092,
+      "years": {
+        "2026": {
+          "eps_usd": 3.4090000000000003,
+          "fcf_usd_mn": 401.63636196091034,
+          "earnings_yield": 0.07243943901402465,
+          "fcf_yield": 0.10008069169033786
+        },
+        "2027": {
+          "eps_usd": 4.01,
+          "fcf_usd_mn": 476.42222150366456,
+          "earnings_yield": 0.08521036974075648,
+          "fcf_yield": 0.11871600776369613
+        },
+        "2028": {
+          "eps_usd": 4.682,
+          "fcf_usd_mn": 544.856333948026,
+          "earnings_yield": 0.09949001274968126,
+          "fcf_yield": 0.13576858058157418
+        }
+      }
+    },
+    {
+      "ticker": "CLSK",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.001309197027122069,
+      "price_usd": 14.76,
+      "market_cap_usd_mn": 3790.6199974799997,
+      "years": {
+        "2026": {
+          "eps_usd": -2.978,
+          "fcf_usd_mn": -1151.512356443868,
+          "earnings_yield": -0.20176151761517616,
+          "fcf_yield": -0.3037794232102907
+        },
+        "2027": {
+          "eps_usd": -1.4320000000000002,
+          "fcf_usd_mn": -6165.276671419555,
+          "earnings_yield": -0.0970189701897019,
+          "fcf_yield": -1.6264560086524698
+        },
+        "2028": {
+          "eps_usd": -1.064,
+          "fcf_usd_mn": null,
+          "earnings_yield": -0.07208672086720867,
+          "fcf_yield": null
+        }
+      }
+    },
+    {
+      "ticker": "YOU",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0012977836211379313,
+      "price_usd": 39.26,
+      "market_cap_usd_mn": 6048.7927149,
+      "years": {
+        "2026": {
+          "eps_usd": 2.483,
+          "fcf_usd_mn": 487.03738349584273,
+          "earnings_yield": 0.06324503311258278,
+          "fcf_yield": 0.08051811434968219
+        },
+        "2027": {
+          "eps_usd": 3.1350000000000002,
+          "fcf_usd_mn": 517.7845446777462,
+          "earnings_yield": 0.07985226693835966,
+          "fcf_yield": 0.08560130410855159
+        },
+        "2028": {
+          "eps_usd": 2.98,
+          "fcf_usd_mn": 579.47665149532,
+          "earnings_yield": 0.07590422822210902,
+          "fcf_yield": 0.09580038179650202
+        }
+      }
+    },
+    {
+      "ticker": "WK",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.001279084419687579,
+      "price_usd": 72.84,
+      "market_cap_usd_mn": 3963.69698592,
+      "years": {
+        "2026": {
+          "eps_usd": 3.357,
+          "fcf_usd_mn": 219.7522951868766,
+          "earnings_yield": 0.046087314662273476,
+          "fcf_yield": 0.05544124487000125
+        },
+        "2027": {
+          "eps_usd": 4.093,
+          "fcf_usd_mn": 274.0844153697305,
+          "earnings_yield": 0.05619165293794618,
+          "fcf_yield": 0.06914868022034579
+        },
+        "2028": {
+          "eps_usd": 4.918,
+          "fcf_usd_mn": 354.868713010391,
+          "earnings_yield": 0.06751784733662823,
+          "fcf_yield": 0.0895297279966076
+        }
+      }
+    },
+    {
+      "ticker": "QTWO",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0012475889515860057,
+      "price_usd": 57.93,
+      "market_cap_usd_mn": 3612.20748135,
+      "years": {
+        "2026": {
+          "eps_usd": 2.883,
+          "fcf_usd_mn": 220.97197025646128,
+          "earnings_yield": 0.04976696012428793,
+          "fcf_yield": 0.06117366496729497
+        },
+        "2027": {
+          "eps_usd": 3.448,
+          "fcf_usd_mn": 261.7296143112289,
+          "earnings_yield": 0.0595201104781633,
+          "fcf_yield": 0.07245697143991629
+        },
+        "2028": {
+          "eps_usd": 4.5920000000000005,
+          "fcf_usd_mn": 303.599399705176,
+          "earnings_yield": 0.07926808216813397,
+          "fcf_yield": 0.08404816203738966
+        }
+      }
+    },
+    {
+      "ticker": "CCC",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0012297315796365,
+      "price_usd": 6.5,
+      "market_cap_usd_mn": 3828.465576,
+      "years": {
+        "2026": {
+          "eps_usd": 0.45,
+          "fcf_usd_mn": 246.50992545020083,
+          "earnings_yield": 0.06923076923076923,
+          "fcf_yield": 0.0643887010491957
+        },
+        "2027": {
+          "eps_usd": 0.524,
+          "fcf_usd_mn": 309.4899175659687,
+          "earnings_yield": 0.08061538461538462,
+          "fcf_yield": 0.08083915381298147
+        },
+        "2028": {
+          "eps_usd": 0.6,
+          "fcf_usd_mn": 394.57544596200955,
+          "earnings_yield": 0.0923076923076923,
+          "fcf_yield": 0.10306360031954732
+        }
+      }
+    },
+    {
+      "ticker": "DLB",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0011763998621376138,
+      "price_usd": 57.33,
+      "market_cap_usd_mn": 5393.430912870001,
+      "years": {
+        "2026": {
+          "eps_usd": 4.378,
+          "fcf_usd_mn": 416.39903258850813,
+          "earnings_yield": 0.07636490493633351,
+          "fcf_yield": 0.07720485147865372
+        },
+        "2027": {
+          "eps_usd": 4.656000000000001,
+          "fcf_usd_mn": 476.0616043474348,
+          "earnings_yield": 0.08121402407116694,
+          "fcf_yield": 0.08826693287410789
+        },
+        "2028": {
+          "eps_usd": 5.123000000000001,
+          "fcf_usd_mn": 535.935755583321,
+          "earnings_yield": 0.08935984650270366,
+          "fcf_yield": 0.09936824337629906
+        }
+      }
+    },
+    {
+      "ticker": "TTAN",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0011632130941410346,
+      "price_usd": 56.53,
+      "market_cap_usd_mn": 5453.282788739999,
+      "years": {
+        "2026": {
+          "eps_usd": 1.3436666666666666,
+          "fcf_usd_mn": 142.34389812989875,
+          "earnings_yield": 0.02376909015861784,
+          "fcf_yield": 0.026102423740762548
+        },
+        "2027": {
+          "eps_usd": 1.6243333333333334,
+          "fcf_usd_mn": 154.4228811772688,
+          "earnings_yield": 0.028734005542779644,
+          "fcf_yield": 0.02831741671202582
+        },
+        "2028": {
+          "eps_usd": 1.971,
+          "fcf_usd_mn": null,
+          "earnings_yield": 0.03486644259685123,
+          "fcf_yield": null
+        }
+      }
+    },
+    {
+      "ticker": "LIF",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0011560235611288675,
+      "price_usd": 41.07,
+      "market_cap_usd_mn": 3329.0993726399997,
+      "years": {
+        "2026": {
+          "eps_usd": 0.885,
+          "fcf_usd_mn": 119.81986632054601,
+          "earnings_yield": 0.02154857560262966,
+          "fcf_yield": 0.03599167609873057
+        },
+        "2027": {
+          "eps_usd": 1.283,
+          "fcf_usd_mn": 168.80630283788673,
+          "earnings_yield": 0.03123934745556367,
+          "fcf_yield": 0.05070629739238517
+        },
+        "2028": {
+          "eps_usd": 1.7870000000000001,
+          "fcf_usd_mn": 222.37990111192516,
+          "earnings_yield": 0.043511078646213786,
+          "fcf_yield": 0.06679881740375214
+        }
+      }
+    },
+    {
+      "ticker": "PEGA",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0010521772742614038,
+      "price_usd": 34.97,
+      "market_cap_usd_mn": 5749.24092665,
+      "years": {
+        "2026": {
+          "eps_usd": 2.444,
+          "fcf_usd_mn": 520.4141599761517,
+          "earnings_yield": 0.06988847583643122,
+          "fcf_yield": 0.09051876006166776
+        },
+        "2027": {
+          "eps_usd": 2.622,
+          "fcf_usd_mn": 581.7342438266827,
+          "earnings_yield": 0.07497855304546755,
+          "fcf_yield": 0.10118453048821019
+        },
+        "2028": {
+          "eps_usd": 2.761,
+          "fcf_usd_mn": 652.3858053726226,
+          "earnings_yield": 0.07895338861881614,
+          "fcf_yield": 0.1134733808681694
+        }
+      }
+    },
+    {
+      "ticker": "SPSC",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0010156841963853717,
+      "price_usd": 81.65,
+      "market_cap_usd_mn": 2939.4142071000006,
+      "years": {
+        "2026": {
+          "eps_usd": 4.9030000000000005,
+          "fcf_usd_mn": 196.82653891108149,
+          "earnings_yield": 0.060048989589712186,
+          "fcf_yield": 0.06696114431088253
+        },
+        "2027": {
+          "eps_usd": 5.325,
+          "fcf_usd_mn": 214.34452784519559,
+          "earnings_yield": 0.06521739130434782,
+          "fcf_yield": 0.07292083141173424
+        },
+        "2028": {
+          "eps_usd": 6.0360000000000005,
+          "fcf_usd_mn": 238.82617695094166,
+          "earnings_yield": 0.07392529087568891,
+          "fcf_yield": 0.0812495824419946
+        }
+      }
+    },
+    {
+      "ticker": "ADEA",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0009723565082192304,
+      "price_usd": 25.53,
+      "market_cap_usd_mn": 2815.4522295,
+      "years": {
+        "2026": {
+          "eps_usd": 1.425,
+          "fcf_usd_mn": 181.352706730665,
+          "earnings_yield": 0.05581668625146886,
+          "fcf_yield": 0.0644133488860053
+        },
+        "2027": {
+          "eps_usd": 1.6,
+          "fcf_usd_mn": 172.344877230492,
+          "earnings_yield": 0.06267136701919311,
+          "fcf_yield": 0.06121392344174099
+        },
+        "2028": {
+          "eps_usd": 2.005,
+          "fcf_usd_mn": null,
+          "earnings_yield": 0.07853505679592636,
+          "fcf_yield": null
+        }
+      }
+    },
+    {
+      "ticker": "FIVN",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0009551119966152278,
+      "price_usd": 37.01,
+      "market_cap_usd_mn": 2765.51788231,
+      "years": {
+        "2026": {
+          "eps_usd": 3.259,
+          "fcf_usd_mn": 171.35612515063923,
+          "earnings_yield": 0.08805728181572549,
+          "fcf_yield": 0.061961676779145526
+        },
+        "2027": {
+          "eps_usd": 3.84,
+          "fcf_usd_mn": 234.55889930475362,
+          "earnings_yield": 0.10375574169143476,
+          "fcf_yield": 0.08481554243606254
+        },
+        "2028": {
+          "eps_usd": 4.2700000000000005,
+          "fcf_usd_mn": 306.317,
+          "earnings_yield": 0.11537422318292355,
+          "fcf_yield": 0.11076297931732683
+        }
+      }
+    },
+    {
+      "ticker": "FRSH",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0009476278521201572,
+      "price_usd": 12.45,
+      "market_cap_usd_mn": 3386.49241635,
+      "years": {
+        "2026": {
+          "eps_usd": 0.669,
+          "fcf_usd_mn": 264.3538780566983,
+          "earnings_yield": 0.05373493975903615,
+          "fcf_yield": 0.07806126385530841
+        },
+        "2027": {
+          "eps_usd": 0.8290000000000001,
+          "fcf_usd_mn": 311.58775966167013,
+          "earnings_yield": 0.06658634538152611,
+          "fcf_yield": 0.09200899377696022
+        },
+        "2028": {
+          "eps_usd": 0.98,
+          "fcf_usd_mn": 391.5183751232523,
+          "earnings_yield": 0.078714859437751,
+          "fcf_yield": 0.11561176786724811
+        }
+      }
+    },
+    {
+      "ticker": "TDC",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0009429956772218671,
+      "price_usd": 29.36,
+      "market_cap_usd_mn": 2730.4799999999996,
+      "years": {
+        "2026": {
+          "eps_usd": 2.709,
+          "fcf_usd_mn": 570.861262148018,
+          "earnings_yield": 0.09226839237057222,
+          "fcf_yield": 0.2090699298833971
+        },
+        "2027": {
+          "eps_usd": 2.911,
+          "fcf_usd_mn": 342.4945820638273,
+          "earnings_yield": 0.09914850136239782,
+          "fcf_yield": 0.12543383656493634
+        },
+        "2028": {
+          "eps_usd": 3.21,
+          "fcf_usd_mn": 357.0676847022475,
+          "earnings_yield": 0.1093324250681199,
+          "fcf_yield": 0.1307710309917112
+        }
+      }
+    },
+    {
+      "ticker": "ALRM",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0009008630635599635,
+      "price_usd": 53.14,
+      "market_cap_usd_mn": 2608.65471592,
+      "years": {
+        "2026": {
+          "eps_usd": 2.8930000000000002,
+          "fcf_usd_mn": 199.8817227936416,
+          "earnings_yield": 0.05444109898381634,
+          "fcf_yield": 0.07662252944930233
+        },
+        "2027": {
+          "eps_usd": 3.0700000000000003,
+          "fcf_usd_mn": 218.1326455374866,
+          "earnings_yield": 0.05777192322167859,
+          "fcf_yield": 0.0836188262886134
+        },
+        "2028": {
+          "eps_usd": 3.29,
+          "fcf_usd_mn": 249.0,
+          "earnings_yield": 0.061911930748965,
+          "fcf_yield": 0.0954514978469217
+        }
+      }
+    },
+    {
+      "ticker": "SOUN",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0008892159165716319,
+      "price_usd": 6.17,
+      "market_cap_usd_mn": 2775.7291387099995,
+      "years": {
+        "2026": {
+          "eps_usd": -0.178,
+          "fcf_usd_mn": -101.985516916135,
+          "earnings_yield": -0.028849270664505672,
+          "fcf_yield": -0.03674188359874769
+        },
+        "2027": {
+          "eps_usd": -0.145,
+          "fcf_usd_mn": -81.75076443883704,
+          "earnings_yield": -0.023500810372771474,
+          "fcf_yield": -0.029451996341700017
+        },
+        "2028": {
+          "eps_usd": -0.08,
+          "fcf_usd_mn": -59.0,
+          "earnings_yield": -0.012965964343598056,
+          "fcf_yield": -0.021255676275178575
+        }
+      }
+    },
+    {
+      "ticker": "AGYS",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0008865700739412515,
+      "price_usd": 100.25,
+      "market_cap_usd_mn": 2827.630247,
+      "years": {
+        "2026": {
+          "eps_usd": 2.2950000000000004,
+          "fcf_usd_mn": 81.58770962249733,
+          "earnings_yield": 0.022892768079800504,
+          "fcf_yield": 0.028853740586860164
+        },
+        "2027": {
+          "eps_usd": 3.034,
+          "fcf_usd_mn": 93.20348147199037,
+          "earnings_yield": 0.0302643391521197,
+          "fcf_yield": 0.03296169347844381
+        },
+        "2028": {
+          "eps_usd": 4.178000000000001,
+          "fcf_usd_mn": 134.68680483545992,
+          "earnings_yield": 0.04167581047381547,
+          "fcf_yield": 0.04763239641334192
+        }
+      }
+    },
+    {
+      "ticker": "BRZE",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0008166584524510377,
+      "price_usd": 25.4,
+      "market_cap_usd_mn": 2885.0444457999993,
+      "years": {
+        "2026": {
+          "eps_usd": 0.6060000000000001,
+          "fcf_usd_mn": 91.35969431258776,
+          "earnings_yield": 0.023858267716535438,
+          "fcf_yield": 0.031666650559088516
+        },
+        "2027": {
+          "eps_usd": 0.9476666666666667,
+          "fcf_usd_mn": 127.90916949386498,
+          "earnings_yield": 0.03730971128608924,
+          "fcf_yield": 0.044335250945639004
+        },
+        "2028": {
+          "eps_usd": 1.3346666666666667,
+          "fcf_usd_mn": 190.38852643719164,
+          "earnings_yield": 0.05254593175853019,
+          "fcf_yield": 0.06599154016998114
+        }
+      }
+    },
+    {
+      "ticker": "RAMP",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0007896831782179418,
+      "price_usd": 37.61,
+      "market_cap_usd_mn": 2286.4992730199997,
+      "years": {
+        "2026": {
+          "eps_usd": 2.77,
+          "fcf_usd_mn": 187.5046091566005,
+          "earnings_yield": 0.07365062483382079,
+          "fcf_yield": 0.08200510333377238
+        },
+        "2027": {
+          "eps_usd": 3.295,
+          "fcf_usd_mn": 225.913182239787,
+          "earnings_yield": 0.08760967827705397,
+          "fcf_yield": 0.09880308509409746
+        },
+        "2028": {
+          "eps_usd": null,
+          "fcf_usd_mn": null,
+          "earnings_yield": null,
+          "fcf_yield": null
+        }
+      }
+    },
+    {
+      "ticker": "NCNO",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0007731320821070361,
+      "price_usd": 20.43,
+      "market_cap_usd_mn": 2160.1900348199997,
+      "years": {
+        "2026": {
+          "eps_usd": 1.07415,
+          "fcf_usd_mn": 138.7015693449871,
+          "earnings_yield": 0.05257709251101322,
+          "fcf_yield": 0.06420804054701815
+        },
+        "2027": {
+          "eps_usd": 1.4833333333333334,
+          "fcf_usd_mn": 163.90287892730828,
+          "earnings_yield": 0.07260564529286996,
+          "fcf_yield": 0.07587428711611739
+        },
+        "2028": {
+          "eps_usd": 1.8163333333333334,
+          "fcf_usd_mn": 194.3204286083733,
+          "earnings_yield": 0.0889052047642356,
+          "fcf_yield": 0.08995524721257464
+        }
+      }
+    },
+    {
+      "ticker": "NN",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0007216249505691366,
+      "price_usd": 15.66,
+      "market_cap_usd_mn": 2615.18542272,
+      "years": {
+        "2026": {
+          "eps_usd": -0.515,
+          "fcf_usd_mn": -46.427,
+          "earnings_yield": -0.032886334610472544,
+          "fcf_yield": -0.017752852090966553
+        },
+        "2027": {
+          "eps_usd": -0.485,
+          "fcf_usd_mn": -57.563771120000006,
+          "earnings_yield": -0.030970625798212005,
+          "fcf_yield": -0.022011353619480305
+        },
+        "2028": {
+          "eps_usd": null,
+          "fcf_usd_mn": null,
+          "earnings_yield": null,
+          "fcf_yield": null
+        }
+      }
+    },
+    {
+      "ticker": "AVPT",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0007127443672959642,
+      "price_usd": 13.36,
+      "market_cap_usd_mn": 2826.51409136,
+      "years": {
+        "2026": {
+          "eps_usd": 0.453,
+          "fcf_usd_mn": 101.02400403531945,
+          "earnings_yield": 0.033907185628742516,
+          "fcf_yield": 0.03574155329496728
+        },
+        "2027": {
+          "eps_usd": 0.49,
+          "fcf_usd_mn": 129.2876465720197,
+          "earnings_yield": 0.036676646706586824,
+          "fcf_yield": 0.04574102318018585
+        },
+        "2028": {
+          "eps_usd": 0.604,
+          "fcf_usd_mn": 165.0751427075942,
+          "earnings_yield": 0.045209580838323354,
+          "fcf_yield": 0.058402377406215934
+        }
+      }
+    },
+    {
+      "ticker": "KVYO",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0006934788280329958,
+      "price_usd": 15.82,
+      "market_cap_usd_mn": 4508.393724799999,
+      "years": {
+        "2026": {
+          "eps_usd": 0.8250000000000001,
+          "fcf_usd_mn": 250.27838774494214,
+          "earnings_yield": 0.05214917825537295,
+          "fcf_yield": 0.0555138710197821
+        },
+        "2027": {
+          "eps_usd": 1.058,
+          "fcf_usd_mn": 312.96966303850104,
+          "earnings_yield": 0.06687737041719342,
+          "fcf_yield": 0.06941932806731181
+        },
+        "2028": {
+          "eps_usd": 1.328,
+          "fcf_usd_mn": 398.9602382218428,
+          "earnings_yield": 0.08394437420986094,
+          "fcf_yield": 0.08849276761859157
+        }
+      }
+    },
+    {
+      "ticker": "ATEN",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0006755999676205233,
+      "price_usd": 26.94,
+      "market_cap_usd_mn": 1956.08702574,
+      "years": {
+        "2026": {
+          "eps_usd": 1.041,
+          "fcf_usd_mn": 72.9093403721168,
+          "earnings_yield": 0.038641425389755006,
+          "fcf_yield": 0.03727305555054983
+        },
+        "2027": {
+          "eps_usd": 1.186,
+          "fcf_usd_mn": 88.14329907049222,
+          "earnings_yield": 0.044023756495916846,
+          "fcf_yield": 0.04506103149329312
+        },
+        "2028": {
+          "eps_usd": 1.353,
+          "fcf_usd_mn": 104.990328599351,
+          "earnings_yield": 0.05022271714922049,
+          "fcf_yield": 0.053673649085031125
+        }
+      }
+    },
+    {
+      "ticker": "INTA",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0006496960674828067,
+      "price_usd": 36.7,
+      "market_cap_usd_mn": 2807.9591316000005,
+      "years": {
+        "2026": {
+          "eps_usd": 1.4989999999999999,
+          "fcf_usd_mn": 171.17556584230564,
+          "earnings_yield": 0.040844686648501355,
+          "fcf_yield": 0.060960846586384704
+        },
+        "2027": {
+          "eps_usd": 1.7429999999999999,
+          "fcf_usd_mn": 172.3759415863409,
+          "earnings_yield": 0.047493188010899176,
+          "fcf_yield": 0.06138833704752659
+        },
+        "2028": {
+          "eps_usd": 2.2319999999999998,
+          "fcf_usd_mn": 231.75719250124473,
+          "earnings_yield": 0.06081743869209808,
+          "fcf_yield": 0.08253581396292879
+        }
+      }
+    },
+    {
+      "ticker": "PRGS",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0005723491250828372,
+      "price_usd": 40.41,
+      "market_cap_usd_mn": 1657.3329862199998,
+      "years": {
+        "2026": {
+          "eps_usd": 6.141,
+          "fcf_usd_mn": 264.9533372479778,
+          "earnings_yield": 0.15196733481811434,
+          "fcf_yield": 0.15986729248192674
+        },
+        "2027": {
+          "eps_usd": null,
+          "fcf_usd_mn": null,
+          "earnings_yield": null,
+          "fcf_yield": null
+        },
+        "2028": {
+          "eps_usd": null,
+          "fcf_usd_mn": null,
+          "earnings_yield": null,
+          "fcf_yield": null
+        }
+      }
+    },
+    {
+      "ticker": "AI",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0005234229552305779,
+      "price_usd": 10.84,
+      "market_cap_usd_mn": 1742.85363904,
+      "years": {
+        "2026": {
+          "eps_usd": -0.9946666666666666,
+          "fcf_usd_mn": -127.60787842292697,
+          "earnings_yield": -0.09175891758917588,
+          "fcf_yield": -0.07321778235676522
+        },
+        "2027": {
+          "eps_usd": -0.5566666666666666,
+          "fcf_usd_mn": -71.81807586626239,
+          "earnings_yield": -0.0513530135301353,
+          "fcf_yield": -0.04120717555251586
+        },
+        "2028": {
+          "eps_usd": -0.332,
+          "fcf_usd_mn": -29.076530009083726,
+          "earnings_yield": -0.030627306273062732,
+          "fcf_yield": -0.01668328846310909
+        }
+      }
+    },
+    {
+      "ticker": "BLKB",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.00050515084094355,
+      "price_usd": 43.04,
+      "market_cap_usd_mn": 1953.5897748799996,
+      "years": {
+        "2026": {
+          "eps_usd": 5.25,
+          "fcf_usd_mn": 289.620950073161,
+          "earnings_yield": 0.12197955390334572,
+          "fcf_yield": 0.14825064801076324
+        },
+        "2027": {
+          "eps_usd": 5.894,
+          "fcf_usd_mn": 309.95140570638347,
+          "earnings_yield": 0.13694237918215613,
+          "fcf_yield": 0.15865736486331805
+        },
+        "2028": {
+          "eps_usd": 5.98,
+          "fcf_usd_mn": null,
+          "earnings_yield": 0.13894052044609667,
+          "fcf_yield": null
+        }
+      }
+    },
+    {
+      "ticker": "APPN",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0004757588848137028,
+      "price_usd": 38.62,
+      "market_cap_usd_mn": 2766.26165814,
+      "years": {
+        "2026": {
+          "eps_usd": 1.081,
+          "fcf_usd_mn": 90.59361507456522,
+          "earnings_yield": 0.02799067840497152,
+          "fcf_yield": 0.03274947429791557
+        },
+        "2027": {
+          "eps_usd": 1.418,
+          "fcf_usd_mn": 116.08366040192962,
+          "earnings_yield": 0.036716727084412225,
+          "fcf_yield": 0.04196409260864457
+        },
+        "2028": {
+          "eps_usd": 1.68,
+          "fcf_usd_mn": 134.380989328329,
+          "earnings_yield": 0.04350077679958571,
+          "fcf_yield": 0.04857855327347635
+        }
+      }
+    },
+    {
+      "ticker": "BL",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.00047028708990384235,
+      "price_usd": 28.57,
+      "market_cap_usd_mn": 1660.6389639000004,
+      "years": {
+        "2026": {
+          "eps_usd": 2.485,
+          "fcf_usd_mn": 160.10733936021455,
+          "earnings_yield": 0.08697934896744837,
+          "fcf_yield": 0.09641309329765661
+        },
+        "2027": {
+          "eps_usd": 2.7800000000000002,
+          "fcf_usd_mn": 200.73668639549226,
+          "earnings_yield": 0.09730486524326216,
+          "fcf_yield": 0.12087918612006031
+        },
+        "2028": {
+          "eps_usd": 3.2600000000000002,
+          "fcf_usd_mn": 259.0638812413945,
+          "earnings_yield": 0.11410570528526427,
+          "fcf_yield": 0.15600253087702132
+        }
+      }
+    },
+    {
+      "ticker": "ALKT",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.000430609064579032,
+      "price_usd": 18.51,
+      "market_cap_usd_mn": 1979.4960498000007,
+      "years": {
+        "2026": {
+          "eps_usd": 0.769,
+          "fcf_usd_mn": 64.64415545399633,
+          "earnings_yield": 0.041545110750945434,
+          "fcf_yield": 0.032656875198375714
+        },
+        "2027": {
+          "eps_usd": 1.093,
+          "fcf_usd_mn": 99.94223568808314,
+          "earnings_yield": 0.0590491626148028,
+          "fcf_yield": 0.050488727016242775
+        },
+        "2028": {
+          "eps_usd": 1.377,
+          "fcf_usd_mn": 131.28266666666667,
+          "earnings_yield": 0.07439222042139383,
+          "fcf_yield": 0.06632125721085974
+        }
+      }
+    },
+    {
+      "ticker": "LSPD",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.00039346700539860706,
+      "price_usd": 9.56,
+      "market_cap_usd_mn": 1272.4635423600002,
+      "years": {
+        "2026": {
+          "eps_usd": 0.543,
+          "fcf_usd_mn": 5.767049400008268,
+          "earnings_yield": 0.05679916317991632,
+          "fcf_yield": 0.004532192246005173
+        },
+        "2027": {
+          "eps_usd": 0.874,
+          "fcf_usd_mn": 126.14866647501529,
+          "earnings_yield": 0.09142259414225941,
+          "fcf_yield": 0.09913735228991404
+        },
+        "2028": {
+          "eps_usd": 1.125,
+          "fcf_usd_mn": 149.2046312517231,
+          "earnings_yield": 0.11767782426778242,
+          "fcf_yield": 0.11725650777781634
+        }
+      }
+    },
+    {
+      "ticker": "PD",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.00038517187268940464,
+      "price_usd": 14.46,
+      "market_cap_usd_mn": 1137.2771635800002,
+      "years": {
+        "2026": {
+          "eps_usd": 1.3243333333333331,
+          "fcf_usd_mn": 108.95017452574017,
+          "earnings_yield": 0.09158598432457352,
+          "fcf_yield": 0.09579914027533906
+        },
+        "2027": {
+          "eps_usd": 1.4233333333333333,
+          "fcf_usd_mn": 112.57074510913466,
+          "earnings_yield": 0.09843245735361918,
+          "fcf_yield": 0.09898268312605225
+        },
+        "2028": {
+          "eps_usd": 1.3846666666666667,
+          "fcf_usd_mn": null,
+          "earnings_yield": 0.09575841401567542,
+          "fcf_yield": null
+        }
+      }
+    },
+    {
+      "ticker": "VYX",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.00034763159057263164,
+      "price_usd": 7.29,
+      "market_cap_usd_mn": 1006.52955642,
+      "years": {
+        "2026": {
+          "eps_usd": 0.916,
+          "fcf_usd_mn": -69.9999999999999,
+          "earnings_yield": 0.12565157750342937,
+          "fcf_yield": -0.06954589614732648
+        },
+        "2027": {
+          "eps_usd": 1.026,
+          "fcf_usd_mn": 70.0,
+          "earnings_yield": 0.14074074074074075,
+          "fcf_yield": 0.06954589614732658
+        },
+        "2028": {
+          "eps_usd": 1.03,
+          "fcf_usd_mn": null,
+          "earnings_yield": 0.1412894375857339,
+          "fcf_yield": null
+        }
+      }
+    },
+    {
+      "ticker": "AIP",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.00032815096383240227,
+      "price_usd": 24.16,
+      "market_cap_usd_mn": 1187.51478432,
+      "years": {
+        "2026": {
+          "eps_usd": -0.177,
+          "fcf_usd_mn": 3.1488144528815303,
+          "earnings_yield": -0.00732615894039735,
+          "fcf_yield": 0.0026516002111793653
+        },
+        "2027": {
+          "eps_usd": 0.113,
+          "fcf_usd_mn": 10.65405542664798,
+          "earnings_yield": 0.004677152317880795,
+          "fcf_yield": 0.008971724451202309
+        },
+        "2028": {
+          "eps_usd": 0.527,
+          "fcf_usd_mn": 37.70315950052505,
+          "earnings_yield": 0.021812913907284768,
+          "fcf_yield": 0.03174963377160377
+        }
+      }
+    },
+    {
+      "ticker": "ASAN",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.0003182246223119487,
+      "price_usd": 9.54,
+      "market_cap_usd_mn": 2184.3749161799997,
+      "years": {
+        "2026": {
+          "eps_usd": 0.36900000000000005,
+          "fcf_usd_mn": 125.04829498047219,
+          "earnings_yield": 0.03867924528301887,
+          "fcf_yield": 0.057246718067590095
+        },
+        "2027": {
+          "eps_usd": 0.44033333333333335,
+          "fcf_usd_mn": 147.32106830620634,
+          "earnings_yield": 0.04615653389238296,
+          "fcf_yield": 0.0674431239870851
+        },
+        "2028": {
+          "eps_usd": 0.5506666666666666,
+          "fcf_usd_mn": 180.66558767410692,
+          "earnings_yield": 0.05772187281621244,
+          "fcf_yield": 0.08270814059248219
+        }
+      }
+    },
+    {
+      "ticker": "VERX",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.00031056339538642973,
+      "price_usd": 12.08,
+      "market_cap_usd_mn": 1959.5975351200002,
+      "years": {
+        "2026": {
+          "eps_usd": 0.8200000000000001,
+          "fcf_usd_mn": 97.07943010489676,
+          "earnings_yield": 0.06788079470198675,
+          "fcf_yield": 0.0495404940887272
+        },
+        "2027": {
+          "eps_usd": 1.016,
+          "fcf_usd_mn": 152.510071543605,
+          "earnings_yield": 0.08410596026490066,
+          "fcf_yield": 0.07782724197714697
+        },
+        "2028": {
+          "eps_usd": 1.248,
+          "fcf_usd_mn": 205.43665168309,
+          "earnings_yield": 0.10331125827814569,
+          "fcf_yield": 0.10483614517840759
+        }
+      }
+    },
+    {
+      "ticker": "CXM",
+      "tag": "HARD (sourced consensus, not realized outcome)",
+      "weight": 0.00022052308711776277,
+      "price_usd": 5.39,
+      "market_cap_usd_mn": 1251.6469188299998,
+      "years": {
+        "2026": {
+          "eps_usd": 0.4716666666666666,
+          "fcf_usd_mn": 134.9979786001453,
+          "earnings_yield": 0.08750773036487322,
+          "fcf_yield": 0.10785627845138401
+        },
+        "2027": {
+          "eps_usd": 0.5336666666666666,
+          "fcf_usd_mn": 159.6741113853171,
+          "earnings_yield": 0.09901051329622758,
+          "fcf_yield": 0.12757120956649295
+        },
+        "2028": {
+          "eps_usd": 0.587,
+          "fcf_usd_mn": 176.3555041712725,
+          "earnings_yield": 0.10890538033395177,
+          "fcf_yield": 0.14089876427461195
+        }
+      }
+    }
+  ]
+}

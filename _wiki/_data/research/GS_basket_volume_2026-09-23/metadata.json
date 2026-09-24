@@ -1,0 +1,285 @@
+{
+  "source": "Bloomberg Desktop API, localhost:8194",
+  "retrieved_at": "2026-09-23T08:57:34.790283-03:00",
+  "request": "fieldInfoRequest = {\n    id[] = {\n        \"NAME\", \"SECURITY_TYP\", \"SECURITY_DES\", \"CRNCY\", \"PX_LAST\", \"LAST_UPDATE_DT\", \"PX_VOLUME\", \"VOLUME\", \"TURNOVER\", \"VOLUME_AVG_20D\", \"VOLUME_AVG_30D\", \"INDX_VOLUME\", \"INDX_MWEIGHT\"\n    }\n    returnFieldDocumentation = true\n}\n",
+  "messages": [
+    {
+      "type": "SessionConnectionUp",
+      "data": {
+        "server": "localhost:8194",
+        "serverId": "bbcomm-DS-CAP-33-5555402",
+        "encryptionStatus": "Clear",
+        "compressionStatus": "Uncompressed"
+      }
+    },
+    {
+      "type": "SessionStarted",
+      "data": {
+        "initialEndpoints": [
+          {
+            "address": "localhost:8194"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ServiceOpened",
+      "data": {
+        "serviceName": "//blp/apiflds"
+      }
+    },
+    {
+      "type": "fieldResponse",
+      "data": {
+        "fieldData": [
+          {
+            "id": "DS156",
+            "fieldInfo": {
+              "mnemonic": "SECURITY_DES",
+              "description": "Security Description",
+              "datatype": "String",
+              "documentation": "Bloomberg description of security.\n\nCorporate, Government and Preferred:\n    The ticker, coupon, and maturity will be returned.\n\nLoans:\n   Returns the loan ticker, and the following information when available: loan type, tranche, rank, and currency.\n\nMortgage:\n   The ticker, series and class will be returned.\n\nMunicipals:\n   The cusip number will be returned.\n\nEquity, Equity Indices, Funds, and Futures:\n   The ticker will be returned.\n\nNon-Equity Indices:\n   The name will be returned.\n\nEquity Options:\n   The ticker, exchange code, expiration month, option type(C for call, P for Put), and strike price will be returned.\n\nFuture Options:\n   The ticker, and strike price will be returned.\n\nCurrencies:\n   The ticker followed by 'Curncy' will be returned.\n",
+              "categoryName": [],
+              "property": [],
+              "overrides": [
+                "DY830",
+                "ID322",
+                "DY627"
+              ],
+              "ftype": "Character"
+            }
+          },
+          {
+            "id": "DS002",
+            "fieldInfo": {
+              "mnemonic": "NAME",
+              "description": "Name",
+              "datatype": "String",
+              "documentation": "Name of the company or brief description of the instrument. The Name of an instrument may change in conjunction with corporate actions.\n\nEquities:\nName of the company while the instrument is actively listed, limited to the first 28 characters. Long Company Name (DS520, LONG_COMP_NAME) may provide the full name.",
+              "categoryName": [],
+              "property": [],
+              "overrides": [],
+              "ftype": "Character"
+            }
+          },
+          {
+            "id": "DS424",
+            "fieldInfo": {
+              "mnemonic": "INDX_MWEIGHT",
+              "description": "Index Member Weights",
+              "datatype": "String",
+              "documentation": "Provides a list of the index members that constitute an index along with its percentage weight.\n\nEquity Indices:\nFor each constituent the output includes ticker with exchange code and member percentage weight. This field will return a maximum of 5,000 members.\n\nCommodity Indices:\nFor each constituent the output includes the commodity contract along with its weight within the index.",
+              "categoryName": [],
+              "property": [],
+              "overrides": [
+                "ID158"
+              ],
+              "ftype": "BulkFormat"
+            }
+          },
+          {
+            "id": "DS213",
+            "fieldInfo": {
+              "mnemonic": "SECURITY_TYP",
+              "description": "Security Type",
+              "datatype": "String",
+              "documentation": "Description of the specific instrument type within its market sector.\n\nCorps and Preferreds:\nThis returns the market issue type (DS061, MARKET_ISSUE) of the bond.\n\nLoans:\nFurther defines the class of debt of a loan.\n\nMunicipals: \nThis returns the Coupon Type (DS086, CPN_TYP) of the bond.\n\nMortgages and Cash Structured products:\nFurther classifies the type of instrument.",
+              "categoryName": [],
+              "property": [],
+              "overrides": [
+                "DT125"
+              ],
+              "ftype": "Character"
+            }
+          },
+          {
+            "id": "DS004",
+            "fieldInfo": {
+              "mnemonic": "CRNCY",
+              "description": "Currency",
+              "datatype": "String",
+              "documentation": "Currency in which the security was issued.\n\nEquities:\n   Trading currency for the security.\n\nFixed Income:\n   Provides the currency in which the bond was issued, not necessarily the currency in which the bond trades or pays its coupons. Use Trade Currency (DX028, TRADE_CRNCY) if values differ.\n\nLoans:\n   Specifies the primary currency in which the loan is denominated.\n\nFutures:\n   Provides the currency in which the contract value was issued, not necessarily the currency in which the price is quoted. Use Quoted Currency (PR467, QUOTED_CRNCY) if values differ.\n\nOTC FX Options:\n   Provides the notional currency of the currency pair.  The non-notional currency is in Non-Notional Currency (FX124, NON_NOTIONAL_CCY).",
+              "categoryName": [],
+              "property": [],
+              "overrides": [
+                "DT125"
+              ],
+              "ftype": "Character"
+            }
+          },
+          {
+            "id": "PR013",
+            "fieldInfo": {
+              "mnemonic": "PX_VOLUME",
+              "description": "Volume",
+              "datatype": "Int32",
+              "documentation": "Total number of shares traded on a security on the current day. If the security has not traded, then it is the total number of shares from the last day the security traded. If an exchange sends official closing price without a volume, the return will be '0'. If no closing price data is sent by the exchange, the return will reflect the last data received from the exchange. The pricing source in use must be set up to show volume, otherwise the field will return a blank. Expressed in units.\n\nMunicipal Bonds:\n   The total dollar value of all trades for an issue as reported on the last Municipal Securities Rulemaking Board (MSRB) transaction report. The value is scaled by a factor of 1000.\n\nFutures and Options:\n   Represents the volume reported on the day the security received its latest settlement or last trade price. CME (Chicago Mercantile Exchange) and CBOT (Chicago Board of Trade) traded securities, volume for Pit/Day session is not available from the exchange during market business hours. The exchange disseminates actual volume/open interest figures at approximately 8am EST, prior to market open the next trading day. For Electronic or Combined sessions, the current day's volume is returned.\n\nCorporate Bonds:\n   On FIMMDA:  The total amount traded in the security's currency. The total traded value/total traded amount represents all trade prices, multiplied by the number of bonds X their respective face value of the bond.  The number represents the total amount traded and reported on FIMMDA FTRAC platform managed by CCIL in India.  The value is scaled by a factor of 1000.  Value represented in millions.\n   On FINRA TRACE: The volumes are in notional amounts that represent the actual dollar amounts traded. The volume is scaled by a factor of 1000 unless otherwise indicated, and whether the number is alone or with an indicator of scale such as 1(M) = 1000 USD. \n\nFor Equity Indices: Volume is calculated once a day at the end of the day.\n\nMoneyMarketInstrument:\nProvides the total volume issued in the security's currency on the primary market on the Fixed Income Money Market and Derivatives Associations Trade Reporting and Confirmation System (FIMMDA FTRAC) platform managed by the Clearing Corporation of India Limited (CCIL) in India. The value is scaled by a factor of 1000. Only applies to Indian Money Markets.",
+              "categoryName": [],
+              "property": [],
+              "overrides": [
+                "FO009",
+                "PR092"
+              ],
+              "ftype": "String"
+            }
+          },
+          {
+            "id": "HS007",
+            "fieldInfo": {
+              "mnemonic": "VOLUME_AVG_20D",
+              "description": "Average Volume 20 Day",
+              "datatype": "Double",
+              "documentation": "Number of shares traded on average for the past 20 trading days. The average is calculated based on the total volume over the last 20 trading days divided by 20. The end date for past 20 days is always the prior business day.\n",
+              "categoryName": [],
+              "property": [],
+              "overrides": [
+                "PR092"
+              ],
+              "ftype": "Real"
+            }
+          },
+          {
+            "id": "HS020",
+            "fieldInfo": {
+              "mnemonic": "VOLUME_AVG_30D",
+              "description": "Average Volume 30 Day",
+              "datatype": "Double",
+              "documentation": "Number of shares traded on average for the past 30 trading days. The average is calculated based on the total volume over the last 30 trading days divided by 30. The end date for past 30 days is always the prior business day.\n\nEquity and Index Futures\nVolume traded on average for the past 200 business days using only days that have volume, up to 30 days worth of data. If less than 30 days, it will use all the available data points for the average.\n\nFixed Income: \nIf there is no volume from the prior business day, the end date will be the most recent date that has volume within the past 30 days. In such cases, the number of trading days used in the calculation could be less than 30. Days with zero volume are included in the average calculation.",
+              "categoryName": [],
+              "property": [],
+              "overrides": [
+                "PR092"
+              ],
+              "ftype": "Real"
+            }
+          },
+          {
+            "id": "PR371",
+            "fieldInfo": {
+              "mnemonic": "LAST_UPDATE_DT",
+              "description": "Date Of Last Update",
+              "datatype": "Datetime",
+              "documentation": "Date the security last traded/updated. All values are translated into the user's date and time. \n\nEquities:\n   The date is only available if a trade has occurred in the past six weeks. If the most recent trade occurred before this, blank will be returned.\nUse the following alternate fields for Equities:\nLocal Date Of Last Price Update (PR178, LOCAL_LAST_DATE).\nDate Of Last Update (PR026, DATE_OF_LAST_UPDATE).\n\nFutures: \n   Some futures electronic sessions start the day before the effective trading day. This will cause this field to display a date that is in the future (to reflect the effective trading date).",
+              "categoryName": [],
+              "property": [],
+              "overrides": [
+                "YL004",
+                "YL011",
+                "YL113",
+                "PR004",
+                "DZ880",
+                "YL016",
+                "YL018",
+                "SP021",
+                "SP041",
+                "DY628",
+                "DY629",
+                "DY630",
+                "YL026",
+                "PR002",
+                "PR043",
+                "PR045",
+                "YL110",
+                "SP023",
+                "YL112",
+                "YL013",
+                "DY719",
+                "YL024",
+                "YL002",
+                "SP120",
+                "QT002",
+                "QT004",
+                "SP122",
+                "SP039",
+                "YL115"
+              ],
+              "ftype": "Date"
+            }
+          },
+          {
+            "id": "PR093",
+            "fieldInfo": {
+              "mnemonic": "TURNOVER",
+              "description": "Turnover / Traded Value",
+              "datatype": "Double",
+              "documentation": "Total amount traded in the security's currency. This value represents all trade prices, multiplied by the number of shares relating to each price. This value is then summed.\n\nEquity Index:\nTotal amount traded in the index's currency. This value represents all trade prices for each security that belongs to the index, multiplied by the number of shares relating to each price. This value is then summed for each security and then totaled for the index. The value is scaled by a factor of 1000.",
+              "categoryName": [],
+              "property": [],
+              "overrides": [],
+              "ftype": "Real"
+            }
+          },
+          {
+            "id": "PR005",
+            "fieldInfo": {
+              "mnemonic": "PX_LAST",
+              "description": "Last Price",
+              "datatype": "Double",
+              "documentation": "Last price for the security.\n\nEquities:\n  Returns the last price provided by the exchange. For securities that trade Monday through Friday, this field will be populated only if such information has been provided by the exchange in the past 30 trading days. For initial public offerings (IPO), the day before the first actual trading day may return the IPO price. For all other securities, this field will be populated only if such information was provided by the exchange in the last 30 calendar days. This applies to common stocks, receipts, warrants, and real estate investment trusts (REITs).\n\nEquity Derivatives:\n  Equity Options, Spot Indices, Index Futures and Commodity Futures:\n    Returns the last trade price. No value is returned for expired contracts.\n\n  Synthetic Options:\n    Returns N.A.\n\nFixed Income:\n  Returns the last price received from the current pricing source. The last price will always come from the date and time in LAST_UPDATE/LAST_UPDATE_DT. If there was no contributed last at that time the first valid value from mid/bid/ask will be used. The value returned will be a discount if Pricing Source Quote Type (DS962, PCS_QUOTE_TYP) is 2 (Discount Quoted). For information specific to the last trade see the price (PR088, PX_LAST_ACTUAL), time (P2788, LAST_TRADE_TIME), and date (P2789, LAST_TRADE_DATE) fields.\n\nReturns the last price received from the current pricing source. If last price is not available, then a mid computed from bid and ask will be returned. If either bid or ask is not available to compute mid, the field returns whichever side that is received.\n\nEquity Indices:\n  Returns either the current quote price of the index or the last available close price of the index.\n\nCustom Indices:\n  Returns the value the custom index expression evaluates to. Since the expression is user defined, the value has no units.\n\nEconomic Statistics:\n  Provides the revision of the prior release. \n\nFutures and Options:\n  Returns the last traded price until settlement price is received, at which time the settlement price is returned. If no trade or settlement price is available for the current day, then the last settlement price received is provided. No value is returned for expired contracts.\nSettlement Price (PR277, PX_SETTLE) and Futures Trade Price (PR083, FUT_PX) can be used instead to return settlement price and closing price respectively at all times regardless of these parameters.\n\nSwaps and Credit Default Swaps:\n  Not supported for synthetics.\n\nMutual Funds:\n  Closed-End, Exchange Traded and Open-End Funds Receiving Intraday Pricing from Exchange Feeds:\n    Returns the most recent trade price.\n\n  Open-End and Hedge Funds:\n    Returns the net asset value (NAV). If no NAV is available, the bid is returned, and if no bid is available then the ask is returned.\n\nCurrencies:\n  Broken Date Type Currencies (e.g. USD/JPY 3M Curncy):\n    Returns the average of the bid and ask.\n\n  For All Other Currency Types:\n    Returns the last trade price if it is valid and available. If last trade is not available then mid price is returned. Mid price is the average of the bid and ask. If a valid bid and ask are not available, then a bid or ask is returned based on which is non-zero. If no data is available for the current day, then the previous day's last trade is returned.\n\nOTC FX Options:\n  Returns the premium of the option in nominal amount. Returns the price of the option expressed in a currency opposite of the notional currency.\n\nMortgages:\n  Returns the last price received from the current pricing source. If this field is empty for any reason, then last ask is returned and if no ask is available, then last bid is returned.\n\nMunicipals:\n  Returns the last price received from the current pricing source.\n\nPortfolio:\nNet asset value (NAV) as computed in the Portfolio & Risk Analytics function and used for Total Return computations. It is the cumulated daily total returns applied to the user-defined price/value at portfolio's inception date.",
+              "categoryName": [],
+              "property": [],
+              "overrides": [
+                "DT456",
+                "DZ066",
+                "SP750",
+                "SP751",
+                "SP752",
+                "SP753",
+                "FL023",
+                "FL026",
+                "DY628",
+                "DY629",
+                "DY630",
+                "SP162",
+                "DY719",
+                "DT455",
+                "DS170",
+                "DT454",
+                "YL112",
+                "FL021",
+                "SP754",
+                "PX628",
+                "PX342",
+                "DS028",
+                "CR032",
+                "DW473",
+                "SP749",
+                "FL235",
+                "DS029",
+                "FL037",
+                "FL024",
+                "FO009",
+                "FL039",
+                "PX957",
+                "AN175"
+              ],
+              "ftype": "Price"
+            }
+          },
+          {
+            "id": "RQ013",
+            "fieldInfo": {
+              "mnemonic": "VOLUME",
+              "description": "Volume - Realtime",
+              "datatype": "Int64",
+              "documentation": "Total number of shares traded on a security on the current day. If the security has not traded, then it is the total number of shares from the last day the security traded. If an exchange sends official closing price without a volume, the return will be '0'.  If no closing price data is sent by the exchange, the return will reflect the last data received from the exchange. The pricing source in use must be setup to show volume, otherwise the field will return a blank. Field updates in realtime.\n\nEquity Index:\nThis field is currently not supported in Launchpad for indices.  Please use non-realtime field PR013 or approach Equity Index team in Global Data via the Help Desk to find use real-time index volume tickers as an alternative. \n\nLaunchpad:\n  This field supports Credit Default Swap (CDS) overrides for time period and pricing source (PCS).\n",
+              "categoryName": [],
+              "property": [],
+              "overrides": [],
+              "ftype": "Real"
+            }
+          },
+          {
+            "id": "INDX_VOLUME",
+            "fieldError": {
+              "source": "apiflds@apigsp-rr-070",
+              "code": -103,
+              "category": "BAD_FLD",
+              "message": "Unknown Field Id/Mnemonic"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

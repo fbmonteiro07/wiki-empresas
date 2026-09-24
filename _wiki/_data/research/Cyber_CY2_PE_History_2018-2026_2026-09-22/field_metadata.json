@@ -1,0 +1,128 @@
+[
+  {
+    "server": "localhost:8194",
+    "serverId": "bbcomm-DS-CAP-33-5555402",
+    "encryptionStatus": "Clear",
+    "compressionStatus": "Uncompressed"
+  },
+  {
+    "initialEndpoints": [
+      {
+        "address": "localhost:8194"
+      }
+    ]
+  },
+  {
+    "serviceName": "//blp/refdata"
+  },
+  {
+    "serviceName": "//blp/apiflds"
+  },
+  {
+    "fieldData": [
+      {
+        "id": "BE008",
+        "fieldInfo": {
+          "mnemonic": "BEST_EPS",
+          "description": "BEst EPS",
+          "datatype": "Double",
+          "documentation": "BEst (Bloomberg Estimates) Earnings Per Share (EPS) reflects the consensus estimate for adjusted earnings per share. The consensus estimate is the mean of sell-side analyst estimates.\n\nNote:\nAvailable for Broker estimates and Consensus: Standard, 28 Days, Post Event, and Custom. Definition may differ based on certain industry or region specifications. The period can be shifted forward or backward by providing an offset to BEst Fiscal Period Override (BE997, BEST_FPERIOD_OVERRIDE) (3FQ, -2FY, etc.).\n\nEquity Indices:\nField returns the aggregate of all equity contributions. Each equity contribution is calculated as:\n(Estimated EPS value for each equity * Respective number of shares in the index * Fixed Income (FX) Rate) / (Index Divisor * Coverage Factor)\n\nWhere:\nFX Rate is applied to securities that have a different fundamental currency Currency Override (DS215, EQY_FUND_CRNCY) from the index's.\nIndex Divisor is IN018, INDX_DIVISOR.\nCoverage factor is defined as: 1 - (unused market cap / index market cap). \n Where:\n Unused market cap is the sum of securities' market cap that do not have an equity contribution to the index value.\n Index market cap is the sum of securities' market cap. Security market cap is Last Price (PR005, PX_LAST) * outstanding Basic Weighted Average Number of Shares (IS060, IS_AVG_NUM_SH_FOR_EPS).",
+          "categoryName": [],
+          "property": [],
+          "overrides": [
+            "BE046",
+            "BE995",
+            "BE997",
+            "DS215",
+            "BE998",
+            "BE999",
+            "DT175",
+            "BE994"
+          ],
+          "ftype": "Real"
+        }
+      },
+      {
+        "id": "BE995",
+        "fieldInfo": {
+          "mnemonic": "BEST_CONSENSUS_STAT_OVERRIDE",
+          "description": "BEst Consensus Statistic Override",
+          "datatype": "String",
+          "documentation": "Override that specifies the statistical value used for overriding Bloomberg Estimates (BEst) consensus fields. The default value is MEAN.\n\nThe values of NUM_UP, NUM_DN, NET_UP, NET_DN, NUM_UNCHG, NET_UNCHG, NUM_ADD, NUM_DROP, and NUM_CONF are dependent on the value of BEst Revision Interval Override (BE994, BEST_REVISION_INTERVAL_OVERRIDE).\n\nThe behavior of HIGH and LOW also depends on the value of BEst Revision Interval Override (BE994, BEST_REVISION_INTERVAL_OVERRIDE). If BEst Revision Interval Override (BE994, BEST_REVISION_INTERVAL_OVERRIDE) is set to 0D, HIGH and LOW represent the highest and lowest estimates within the consensus. For any BEst Revision Interval Override (BE994, BEST_REVISION_INTERVAL_OVERRIDE) values greater than 0D, HIGH and LOW represent the highest and lowest estimates within the period specified by BEst Revision Interval Override (BE994, BEST_REVISION_INTERVAL_OVERRIDE).",
+          "categoryName": [],
+          "property": [],
+          "overrides": [],
+          "ftype": "Character"
+        }
+      },
+      {
+        "id": "BE998",
+        "fieldInfo": {
+          "mnemonic": "BEST_DATA_SOURCE_OVERRIDE",
+          "description": "BEst Data Source Override",
+          "datatype": "String",
+          "documentation": "This field is used to specify the Data Source override for Bloomberg Estimates.",
+          "categoryName": [],
+          "property": [],
+          "overrides": [],
+          "ftype": "Character"
+        }
+      },
+      {
+        "id": "BE051",
+        "fieldInfo": {
+          "mnemonic": "BEST_PE_RATIO",
+          "description": "BEst P/E Ratio",
+          "datatype": "Double",
+          "documentation": "Bloomberg Estimates Price/Earnings Ratio is calculated by dividing the price of the security by BEst Earnings Per Share (EPS).\n\nWhere:\nPrice is PR005, PX_LAST\nBEst EPS is BE008, BEST_EPS\n\nDenominator Periodicity:\nPeriodicity of the default denominator is dependent on the user settings. If default is set to Quarterly, the consensus estimates for the next four quarters will be used. If BEst EPS for the next four upcoming quarters are not available, BEst P/E Ratio will return \"N.A.\". If user default is set to Semi-Annual or Yearly, the semi or annual BEst EPS will be used in the denominator instead. The period can be shifted forward or backward by providing an offset to BEst Fiscal Period Override (BE997, BEST_FPERIOD_OVERRIDE) (3FQ, -2FY, etc.).\n\nPortfolio:\nComputed as the total market value of Index Market Capitalization (IN089, INDX_MARKET_CAP) divided by the sum of BEst EPS Forward 12M contributions from holdings. Contributions are computed as the value of BEst EPS Forward 12M of the security multiplied by the number of shares held. BEst EPS Forward 12M is derived from BEst EPS and calculated by taking the weighted average of the current fiscal year (FY) and next fiscal year estimates in proportion to the amount of time between now and the end of the current fiscal year:\n\nFY1 Est * (Number of days remaining in current fiscal year / Total Number of days in year) + FY2 Est * (1 - Number of days remaining in current fiscal year / Total Number of days in year)\n\nEquity Indices:\nConsensus estimates for the current year (1GY) will be used by default.",
+          "categoryName": [],
+          "property": [],
+          "overrides": [
+            "BE997",
+            "BE999",
+            "BE998",
+            "BE046"
+          ],
+          "ftype": "Real"
+        }
+      },
+      {
+        "id": "BE994",
+        "fieldInfo": {
+          "mnemonic": "BEST_REVISION_INTERVAL_OVERRIDE",
+          "description": "BEst Revision Interval Override",
+          "datatype": "String",
+          "documentation": "Override specifying a time period spanning a number of days, weeks, months, or years, ending today.  The override value contains a positive integer and a single character for the time unit ('D' for 'Day', 'W' for 'Week', 'M' for 'Month', and 'Y' for 'Year'); an override of '2W' for example would denote the period spanning 2 weeks ending today.  The specified time period is the basis for calculation of certain consensus statistics.  The consensus statistic is specified by the BEst Consensus Statistic Override (BE995, BEST_CONSENSUS_STAT_OVERRIDE).",
+          "categoryName": [],
+          "property": [],
+          "overrides": [],
+          "ftype": "Character"
+        }
+      },
+      {
+        "id": "DY444",
+        "fieldInfo": {
+          "mnemonic": "REFERENCE_DATE",
+          "description": "Reference Date for Analytics",
+          "datatype": "Datetime",
+          "documentation": "Date override that enables the selection of data for a particular field on a single date. Format is YYYYMMDD.",
+          "categoryName": [],
+          "property": [],
+          "overrides": [
+            "RK726"
+          ],
+          "ftype": "Date"
+        }
+      },
+      {
+        "id": "BEST_AS_OF_OVERRIDE",
+        "fieldError": {
+          "source": "apiflds@apigsp-ob-861",
+          "code": -103,
+          "category": "BAD_FLD",
+          "message": "Unknown Field Id/Mnemonic"
+        }
+      }
+    ]
+  }
+]

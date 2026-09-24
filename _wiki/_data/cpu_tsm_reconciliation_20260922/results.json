@@ -1,0 +1,154 @@
+{
+  "asof": "2026-09-22",
+  "grounding": "PARTIAL: broker-calibrated scenario, not reported actual calibration",
+  "input_tags": {
+    "ubs": "HARD sourced broker estimates; all point inputs",
+    "target_tam": "ESTIMATE: user scenario, $200bn",
+    "holding_mix_intensity_asp": "ESTIMATE: explicit extension of UBS 2030 scenario",
+    "bernstein": "PARTIAL: sourced ranges / approximate estimates",
+    "bofa_and_ms": "HARD sourced independent forecasts; compatibility only"
+  },
+  "ubs": {
+    "tam_2030_bn": 173.0,
+    "units_2030_m": 63.0,
+    "tsmc_revenue_2025_bn": 3.667,
+    "tsmc_revenue_2030_bn": 44.068,
+    "tsmc_wafers_2025_kwpm": 18.0,
+    "tsmc_wafers_2030_kwpm": 122.4,
+    "wafer_asp_2025_usd": 17000.0,
+    "wafer_asp_2030_usd": 30000.0,
+    "units_2025_m": 23.0,
+    "amd_share_2025": 0.24,
+    "arm_share_2025": 0.16,
+    "amd_share_2030": 0.29,
+    "arm_share_2030": 0.42,
+    "amd_wafers_2025_kwpm": 11.8,
+    "arm_wafers_2025_kwpm": 6.1,
+    "amd_wafers_2030_kwpm": 56.7,
+    "arm_wafers_2030_kwpm": 65.7
+  },
+  "derived": {
+    "industry_cpu_asp_2030_usd": 2746.031746031746,
+    "tsmc_content_2025_usd": 398.58695652173907,
+    "tsmc_content_2030_usd": 985.2000894254417,
+    "served_units_2025_m": 9.200000000000001,
+    "served_units_2030_m": 44.73,
+    "wafer_intensity_ratio_2030_vs_2025": 1.3986139056561595,
+    "vendor_content_usd": {
+      "amd": {
+        "2025": 436.0869565217391,
+        "2030": 1117.2413793103449
+      },
+      "arm": {
+        "2025": 338.1521739130435,
+        "2030": 893.8775510204083
+      }
+    },
+    "revenue_increment_vs_2025_bn": 47.27866473988439,
+    "server_revenue_share_of_tam_2030": 0.25472832369942194,
+    "cross_broker_scope_vintage_gap_2025_bn": [
+      11.333,
+      12.333
+    ]
+  },
+  "base": {
+    "tam_bn": 200.0,
+    "industry_cpu_units_m": 72.83236994219654,
+    "served_cpu_units_m": 51.71098265895954,
+    "wafer_demand_kwpm": 141.50289017341044,
+    "annual_wafers_m": 1.6980346820809251,
+    "tsmc_revenue_bn": 50.94566473988439
+  },
+  "scenarios": {
+    "2025_wafer_intensity_with_2030_wafer_price": {
+      "tam_bn": 200.0,
+      "industry_cpu_units_m": 72.83236994219654,
+      "served_cpu_units_m": 51.71098265895954,
+      "wafer_demand_kwpm": 101.17366172405126,
+      "annual_wafers_m": 1.214083940688615,
+      "tsmc_revenue_bn": 36.425824549472964
+    },
+    "all_tam_uplift_from_cpu_price": {
+      "tam_bn": 200.0,
+      "industry_cpu_units_m": 63.0,
+      "served_cpu_units_m": 44.73,
+      "wafer_demand_kwpm": 122.4,
+      "annual_wafers_m": 1.4688,
+      "tsmc_revenue_bn": 44.068
+    },
+    "cpu_asp_plus20pct": {
+      "tam_bn": 200.0,
+      "industry_cpu_units_m": 60.69364161849712,
+      "served_cpu_units_m": 43.09248554913295,
+      "wafer_demand_kwpm": 117.9190751445087,
+      "annual_wafers_m": 1.4150289017341042,
+      "tsmc_revenue_bn": 42.45472061657033
+    },
+    "wafer_asp_minus20pct": {
+      "tam_bn": 200.0,
+      "industry_cpu_units_m": 72.83236994219654,
+      "served_cpu_units_m": 51.71098265895954,
+      "wafer_demand_kwpm": 141.50289017341044,
+      "annual_wafers_m": 1.6980346820809251,
+      "tsmc_revenue_bn": 40.75653179190752
+    },
+    "wafer_asp_plus20pct": {
+      "tam_bn": 200.0,
+      "industry_cpu_units_m": 72.83236994219654,
+      "served_cpu_units_m": 51.71098265895954,
+      "wafer_demand_kwpm": 141.50289017341044,
+      "annual_wafers_m": 1.6980346820809251,
+      "tsmc_revenue_bn": 61.134797687861266
+    },
+    "tsmc_served_share_61pct": {
+      "tam_bn": 200.0,
+      "industry_cpu_units_m": 72.83236994219654,
+      "served_cpu_units_m": 44.42774566473989,
+      "wafer_demand_kwpm": 121.57290564194417,
+      "annual_wafers_m": 1.45887486770333,
+      "tsmc_revenue_bn": 43.77021900187251
+    }
+  },
+  "checks": {
+    "arithmetic_revenue_rounding": {
+      "status": "PASS",
+      "difference_pct": -0.00907688118362282,
+      "kind": "identity only; not validation"
+    },
+    "independent_vendor_units_bofa_hybrid": {
+      "status": "PASS_ORDER_OF_MAGNITUDE",
+      "revenue_bn": 50.0181445994254,
+      "difference_vs_base_pct": -1.820606611366593,
+      "limitation": "BofA unit forecast independent; UBS content reused; not actual validation"
+    },
+    "independent_ms_venice_content": {
+      "status": "PASS_ORDER_OF_MAGNITUDE",
+      "usd_per_cpu": 1200.0,
+      "difference_vs_ubs_amd_pct": 7.407407407407396,
+      "limitation": "2027 product forecast vs 2030 average; compute-only scope"
+    },
+    "independent_ms_vera_content": {
+      "status": "PASS_ORDER_OF_MAGNITUDE",
+      "usd_per_cpu": 1083.304347826087,
+      "difference_vs_ubs_arm_pct": 21.191582291046252,
+      "limitation": "Vera is one Arm product, not custom Arm fleet; both forecasts"
+    },
+    "observed_cpu_level_and_flow": {
+      "status": "UNVALIDATED",
+      "reason": "No reported CPU-specific revenue / shipments or foundry invoice series to calibrate and back-test"
+    },
+    "physical_average_area": {
+      "status": "PARTIAL",
+      "wafer_area_mm2_per_cpu_2030": 2321.112318708596,
+      "reason": "Includes edge loss/yield/multi-die effects; no arbitrary yield plugged; not a physical die-size estimate"
+    },
+    "stock_flow": {
+      "status": "PASS",
+      "reason": "All revenues and units annual flows; kwpm monthly flow-equivalent requirement, never a cumulative installed base or new capex"
+    },
+    "scope": {
+      "status": "PASS",
+      "reason": "Server-only; Intel server wafers excluded; PCs and non-CPU GPUs/memory/packaging excluded; never incremental vs consensus"
+    }
+  }
+}

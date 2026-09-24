@@ -1,0 +1,874 @@
+{
+  "source": "Bloomberg Desktop API",
+  "retrieved_at": "2026-09-23T09:07:21.717845-03:00",
+  "request": "ReferenceDataRequest = {\n    securities[] = {\n        \"ALL US Equity\", \"AMP US Equity\", \"ASB US Equity\", \"AUB US Equity\", \"BKNG US Equity\", \"CFG US Equity\", \"CFR US Equity\", \"CHTR US Equity\", \"CHWY US Equity\", \"CMCSA US Equity\", \"DIS US Equity\", \"DKNG US Equity\", \"EVER US Equity\", \"EXPE US Equity\", \"FCNCA US Equity\", \"FHN US Equity\", \"FITB US Equity\", \"FLG US Equity\", \"FLUT US Equity\", \"FNB US Equity\", \"HBAN US Equity\", \"HRB US Equity\", \"HWC US Equity\", \"INTU US Equity\", \"KEY US Equity\", \"LPLA US Equity\", \"NFLX US Equity\", \"NYT US Equity\", \"ONB US Equity\", \"OZK US Equity\", \"PB US Equity\", \"PGR US Equity\", \"PLNT US Equity\", \"PNC US Equity\", \"PSKY US Equity\", \"PTON US Equity\", \"RF US Equity\", \"RJF US Equity\", \"ROOT US Equity\", \"SCHW US Equity\", \"SF US Equity\", \"SIRI US Equity\", \"SOFI US Equity\", \"T US Equity\", \"TFC US Equity\", \"TMUS US Equity\", \"TRIP US Equity\", \"TRV US Equity\", \"UPST US Equity\", \"USB US Equity\", \"VLY US Equity\", \"VZ US Equity\", \"W US Equity\", \"XPOF US Equity\", \"Z US Equity\"\n    }\n    fields[] = {\n        \"NAME\", \"CRNCY\", \"PX_LAST\", \"PX_VOLUME\", \"LAST_UPDATE_DT\", \"VOLUME_AVG_20D\", \"CUR_MKT_CAP\"\n    }\n}\n",
+  "messages": [
+    {
+      "type": "ReferenceDataResponse",
+      "data": {
+        "securityData": [
+          {
+            "security": "PB US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 30,
+            "fieldData": {
+              "NAME": "PROSPERITY BANCSHARES INC",
+              "CRNCY": "USD",
+              "PX_LAST": 68.86,
+              "PX_VOLUME": 1196108.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 955984.05,
+              "CUR_MKT_CAP": 8275372451.0599985
+            }
+          },
+          {
+            "security": "PGR US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 31,
+            "fieldData": {
+              "NAME": "PROGRESSIVE CORP",
+              "CRNCY": "USD",
+              "PX_LAST": 206.94,
+              "PX_VOLUME": 4808497.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 2201320.35,
+              "CUR_MKT_CAP": 120107976000.0
+            }
+          },
+          {
+            "security": "PLNT US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 32,
+            "fieldData": {
+              "NAME": "PLANET FITNESS INC - CL A",
+              "CRNCY": "USD",
+              "PX_LAST": 42.6,
+              "PX_VOLUME": 7466189.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 2094924.8,
+              "CUR_MKT_CAP": 3217704309.0
+            }
+          },
+          {
+            "security": "PNC US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 33,
+            "fieldData": {
+              "NAME": "PNC FINANCIAL SERVICES GROUP",
+              "CRNCY": "USD",
+              "PX_LAST": 227.96,
+              "PX_VOLUME": 2526583.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 1661028.45,
+              "CUR_MKT_CAP": 90943198329.32
+            }
+          },
+          {
+            "security": "PSKY US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 34,
+            "fieldData": {
+              "NAME": "PARAMOUNT SKYDANCE CL B",
+              "CRNCY": "USD",
+              "PX_LAST": 10.11,
+              "PX_VOLUME": 46405264.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 19840225.25,
+              "CUR_MKT_CAP": 11342871825.689999
+            }
+          },
+          {
+            "security": "PTON US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 35,
+            "fieldData": {
+              "NAME": "PELOTON INTERACTIVE INC-A",
+              "CRNCY": "USD",
+              "PX_LAST": 5.02,
+              "PX_VOLUME": 19349224.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 8832488.95,
+              "CUR_MKT_CAP": 2203136441.02
+            }
+          },
+          {
+            "security": "RF US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 36,
+            "fieldData": {
+              "NAME": "REGIONS FINANCIAL CORP",
+              "CRNCY": "USD",
+              "PX_LAST": 27.91,
+              "PX_VOLUME": 12022813.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 7825576.8,
+              "CUR_MKT_CAP": 23777352512.46
+            }
+          },
+          {
+            "security": "RJF US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 37,
+            "fieldData": {
+              "NAME": "RAYMOND JAMES FINANCIAL INC",
+              "CRNCY": "USD",
+              "PX_LAST": 159.39,
+              "PX_VOLUME": 2161243.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 1340946.9,
+              "CUR_MKT_CAP": 30660410545.379997
+            }
+          },
+          {
+            "security": "ROOT US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 38,
+            "fieldData": {
+              "NAME": "ROOT INC/OH -CLASS A",
+              "CRNCY": "USD",
+              "PX_LAST": 48.55,
+              "PX_VOLUME": 289480.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 188961.25,
+              "CUR_MKT_CAP": 752197384.5999999
+            }
+          },
+          {
+            "security": "SCHW US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 39,
+            "fieldData": {
+              "NAME": "SCHWAB (CHARLES) CORP",
+              "CRNCY": "USD",
+              "PX_LAST": 100.35,
+              "PX_VOLUME": 16922576.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 8732227.55,
+              "CUR_MKT_CAP": 173538838899.89996
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ReferenceDataResponse",
+      "data": {
+        "securityData": [
+          {
+            "security": "VLY US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 50,
+            "fieldData": {
+              "NAME": "VALLEY NATIONAL BANCORP",
+              "CRNCY": "USD",
+              "PX_LAST": 13.12,
+              "PX_VOLUME": 7079031.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 6744093.15,
+              "CUR_MKT_CAP": 7250180565.12
+            }
+          },
+          {
+            "security": "VZ US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 51,
+            "fieldData": {
+              "NAME": "VERIZON COMMUNICATIONS INC",
+              "CRNCY": "USD",
+              "PX_LAST": 46.45,
+              "PX_VOLUME": 32681053.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 21378591.3,
+              "CUR_MKT_CAP": 192989308132.90002
+            }
+          },
+          {
+            "security": "W US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 52,
+            "fieldData": {
+              "NAME": "WAYFAIR INC- CLASS A",
+              "CRNCY": "USD",
+              "PX_LAST": 107.35,
+              "PX_VOLUME": 1785792.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 2260022.65,
+              "CUR_MKT_CAP": 14703523387.999998
+            }
+          },
+          {
+            "security": "XPOF US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 53,
+            "fieldData": {
+              "NAME": "XPONENTIAL FITNESS INC-A",
+              "CRNCY": "USD",
+              "PX_LAST": 4.0,
+              "PX_VOLUME": 1018682.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 697448.65,
+              "CUR_MKT_CAP": 197296000.0
+            }
+          },
+          {
+            "security": "Z US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 54,
+            "fieldData": {
+              "NAME": "ZILLOW GROUP INC - C",
+              "CRNCY": "USD",
+              "PX_LAST": 30.95,
+              "PX_VOLUME": 3654789.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 3467895.55,
+              "CUR_MKT_CAP": 7086629488.07
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ReferenceDataResponse",
+      "data": {
+        "securityData": [
+          {
+            "security": "ALL US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 0,
+            "fieldData": {
+              "NAME": "ALLSTATE CORP",
+              "CRNCY": "USD",
+              "PX_LAST": 229.5,
+              "PX_VOLUME": 5257524.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 1802926.3,
+              "CUR_MKT_CAP": 58030899525.0
+            }
+          },
+          {
+            "security": "AMP US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 1,
+            "fieldData": {
+              "NAME": "AMERIPRISE FINANCIAL INC",
+              "CRNCY": "USD",
+              "PX_LAST": 512.37,
+              "PX_VOLUME": 1046351.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 558277.05,
+              "CUR_MKT_CAP": 45259291419.03
+            }
+          },
+          {
+            "security": "ASB US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 2,
+            "fieldData": {
+              "NAME": "ASSOCIATED BANC-CORP",
+              "CRNCY": "USD",
+              "PX_LAST": 29.02,
+              "PX_VOLUME": 1780526.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 2195946.8,
+              "CUR_MKT_CAP": 5480417104.18
+            }
+          },
+          {
+            "security": "AUB US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 3,
+            "fieldData": {
+              "NAME": "ATLANTIC UNION BANKSHARES CO",
+              "CRNCY": "USD",
+              "PX_LAST": 38.66,
+              "PX_VOLUME": 1253424.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 1255445.95,
+              "CUR_MKT_CAP": 5521223879.36
+            }
+          },
+          {
+            "security": "BKNG US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 4,
+            "fieldData": {
+              "NAME": "BOOKING HOLDINGS INC",
+              "CRNCY": "USD",
+              "PX_LAST": 164.22,
+              "PX_VOLUME": 14362132.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 7661326.95,
+              "CUR_MKT_CAP": 123391705710.0
+            }
+          },
+          {
+            "security": "CFG US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 5,
+            "fieldData": {
+              "NAME": "CITIZENS FINANCIAL GROUP",
+              "CRNCY": "USD",
+              "PX_LAST": 65.49,
+              "PX_VOLUME": 4895972.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 3497790.7,
+              "CUR_MKT_CAP": 27582867846.119995
+            }
+          },
+          {
+            "security": "CFR US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 6,
+            "fieldData": {
+              "NAME": "CULLEN/FROST BANKERS INC",
+              "CRNCY": "USD",
+              "PX_LAST": 156.15,
+              "PX_VOLUME": 470143.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 526561.5,
+              "CUR_MKT_CAP": 9704532777.75
+            }
+          },
+          {
+            "security": "CHTR US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 7,
+            "fieldData": {
+              "NAME": "CHARTER COMMUNICATIONS INC-A",
+              "CRNCY": "USD",
+              "PX_LAST": 117.26,
+              "PX_VOLUME": 4706140.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 2782018.6,
+              "CUR_MKT_CAP": 19178450388.24
+            }
+          },
+          {
+            "security": "CHWY US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 8,
+            "fieldData": {
+              "NAME": "CHEWY INC - CLASS A",
+              "CRNCY": "USD",
+              "PX_LAST": 19.66,
+              "PX_VOLUME": 11497921.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 9709279.5,
+              "CUR_MKT_CAP": 7901889715.340001
+            }
+          },
+          {
+            "security": "CMCSA US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 9,
+            "fieldData": {
+              "NAME": "COMCAST CORP-CLASS A",
+              "CRNCY": "USD",
+              "PX_LAST": 22.42,
+              "PX_VOLUME": 45147411.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 27865517.2,
+              "CUR_MKT_CAP": 79560431967.51524
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ReferenceDataResponse",
+      "data": {
+        "securityData": [
+          {
+            "security": "HBAN US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 20,
+            "fieldData": {
+              "NAME": "HUNTINGTON BANCSHARES INC",
+              "CRNCY": "USD",
+              "PX_LAST": 15.69,
+              "PX_VOLUME": 29302152.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 27047990.3,
+              "CUR_MKT_CAP": 31700308619.94
+            }
+          },
+          {
+            "security": "HRB US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 21,
+            "fieldData": {
+              "NAME": "H&R BLOCK INC",
+              "CRNCY": "USD",
+              "PX_LAST": 42.86,
+              "PX_VOLUME": 2608946.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 1810274.1,
+              "CUR_MKT_CAP": 5283177416.92
+            }
+          },
+          {
+            "security": "HWC US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 22,
+            "fieldData": {
+              "NAME": "HANCOCK WHITNEY CORP",
+              "CRNCY": "USD",
+              "PX_LAST": 73.57,
+              "PX_VOLUME": 1227143.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 791464.6,
+              "CUR_MKT_CAP": 5902010377.0599985
+            }
+          },
+          {
+            "security": "INTU US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 23,
+            "fieldData": {
+              "NAME": "INTUIT INC",
+              "CRNCY": "USD",
+              "PX_LAST": 292.35,
+              "PX_VOLUME": 4821781.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 4209740.8,
+              "CUR_MKT_CAP": 78126444600.0
+            }
+          },
+          {
+            "security": "KEY US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 24,
+            "fieldData": {
+              "NAME": "KEYCORP",
+              "CRNCY": "USD",
+              "PX_LAST": 20.48,
+              "PX_VOLUME": 16133965.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 13264156.0,
+              "CUR_MKT_CAP": 21854792785.92
+            }
+          },
+          {
+            "security": "LPLA US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 25,
+            "fieldData": {
+              "NAME": "LPL FINANCIAL HOLDINGS INC",
+              "CRNCY": "USD",
+              "PX_LAST": 307.5,
+              "PX_VOLUME": 2304132.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 697769.55,
+              "CUR_MKT_CAP": 24213254175.0
+            }
+          },
+          {
+            "security": "NFLX US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 26,
+            "fieldData": {
+              "NAME": "NETFLIX INC",
+              "CRNCY": "USD",
+              "PX_LAST": 72.16,
+              "PX_VOLUME": 34372510.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 32198306.5,
+              "CUR_MKT_CAP": 300469887020.16
+            }
+          },
+          {
+            "security": "NYT US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 27,
+            "fieldData": {
+              "NAME": "NEW YORK TIMES CO-A",
+              "CRNCY": "USD",
+              "PX_LAST": 65.45,
+              "PX_VOLUME": 8351765.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 2768623.8,
+              "CUR_MKT_CAP": 10556010703.699999
+            }
+          },
+          {
+            "security": "ONB US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 28,
+            "fieldData": {
+              "NAME": "OLD NATIONAL BANCORP",
+              "CRNCY": "USD",
+              "PX_LAST": 25.03,
+              "PX_VOLUME": 4307879.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 3770535.45,
+              "CUR_MKT_CAP": 9575727100.0
+            }
+          },
+          {
+            "security": "OZK US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 29,
+            "fieldData": {
+              "NAME": "BANK OZK",
+              "CRNCY": "USD",
+              "PX_LAST": 47.02,
+              "PX_VOLUME": 1147878.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 1054582.75,
+              "CUR_MKT_CAP": 5180085301.0199995
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ReferenceDataResponse",
+      "data": {
+        "securityData": [
+          {
+            "security": "SF US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 40,
+            "fieldData": {
+              "NAME": "STIFEL FINANCIAL CORP",
+              "CRNCY": "USD",
+              "PX_LAST": 73.18,
+              "PX_VOLUME": 1614796.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 1150882.3,
+              "CUR_MKT_CAP": 11050306894.12
+            }
+          },
+          {
+            "security": "SIRI US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 41,
+            "fieldData": {
+              "NAME": "SIRIUS XM HOLDINGS INC",
+              "CRNCY": "USD",
+              "PX_LAST": 26.53,
+              "PX_VOLUME": 6229311.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 4013083.55,
+              "CUR_MKT_CAP": 8942384618.23
+            }
+          },
+          {
+            "security": "SOFI US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 42,
+            "fieldData": {
+              "NAME": "SOFI TECHNOLOGIES INC",
+              "CRNCY": "USD",
+              "PX_LAST": 17.16,
+              "PX_VOLUME": 98867050.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 43105594.85,
+              "CUR_MKT_CAP": 22163346759.84
+            }
+          },
+          {
+            "security": "T US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 43,
+            "fieldData": {
+              "NAME": "AT&T INC",
+              "CRNCY": "USD",
+              "PX_LAST": 25.1,
+              "PX_VOLUME": 35588791.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 37117584.5,
+              "CUR_MKT_CAP": 171994879815.00003
+            }
+          },
+          {
+            "security": "TFC US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 44,
+            "fieldData": {
+              "NAME": "TRUIST FINANCIAL CORP",
+              "CRNCY": "USD",
+              "PX_LAST": 48.07,
+              "PX_VOLUME": 10234840.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 7402977.6,
+              "CUR_MKT_CAP": 58723570857.159996
+            }
+          },
+          {
+            "security": "TMUS US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 45,
+            "fieldData": {
+              "NAME": "T-MOBILE US INC",
+              "CRNCY": "USD",
+              "PX_LAST": 162.41,
+              "PX_VOLUME": 7031932.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 4800204.95,
+              "CUR_MKT_CAP": 174213641938.08997
+            }
+          },
+          {
+            "security": "TRIP US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 46,
+            "fieldData": {
+              "NAME": "TRIPADVISOR INC",
+              "CRNCY": "USD",
+              "PX_LAST": 8.55,
+              "PX_VOLUME": 6241602.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 4030926.25,
+              "CUR_MKT_CAP": 1002054374.1000001
+            }
+          },
+          {
+            "security": "TRV US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 47,
+            "fieldData": {
+              "NAME": "TRAVELERS COS INC/THE",
+              "CRNCY": "USD",
+              "PX_LAST": 362.01,
+              "PX_VOLUME": 1650237.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 1483117.15,
+              "CUR_MKT_CAP": 75506243714.21999
+            }
+          },
+          {
+            "security": "UPST US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 48,
+            "fieldData": {
+              "NAME": "UPSTART HOLDINGS INC",
+              "CRNCY": "USD",
+              "PX_LAST": 25.97,
+              "PX_VOLUME": 4048575.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 4007091.1,
+              "CUR_MKT_CAP": 2527219804.62
+            }
+          },
+          {
+            "security": "USB US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 49,
+            "fieldData": {
+              "NAME": "US BANCORP",
+              "CRNCY": "USD",
+              "PX_LAST": 59.44,
+              "PX_VOLUME": 9479038.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 7678738.1,
+              "CUR_MKT_CAP": 92610577950.23999
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ReferenceDataResponse",
+      "data": {
+        "securityData": [
+          {
+            "security": "DIS US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 10,
+            "fieldData": {
+              "NAME": "WALT DISNEY CO/THE",
+              "CRNCY": "USD",
+              "PX_LAST": 103.82,
+              "PX_VOLUME": 7282248.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 8100136.3,
+              "CUR_MKT_CAP": 179264634165.63998
+            }
+          },
+          {
+            "security": "DKNG US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 11,
+            "fieldData": {
+              "NAME": "DRAFTKINGS INC-CL A",
+              "CRNCY": "USD",
+              "PX_LAST": 21.8,
+              "PX_VOLUME": 22965614.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 11270544.1,
+              "CUR_MKT_CAP": 10822698246.400002
+            }
+          },
+          {
+            "security": "EVER US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 12,
+            "fieldData": {
+              "NAME": "EVERQUOTE INC - CLASS A",
+              "CRNCY": "USD",
+              "PX_LAST": 19.55,
+              "PX_VOLUME": 3467296.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 737935.4,
+              "CUR_MKT_CAP": 689848787.65
+            }
+          },
+          {
+            "security": "EXPE US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 13,
+            "fieldData": {
+              "NAME": "EXPEDIA GROUP INC",
+              "CRNCY": "USD",
+              "PX_LAST": 280.7,
+              "PX_VOLUME": 6271126.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 2076031.0,
+              "CUR_MKT_CAP": 33689429580.1
+            }
+          },
+          {
+            "security": "FCNCA US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 14,
+            "fieldData": {
+              "NAME": "FIRST CITIZENS BCSHS  -CL A",
+              "CRNCY": "USD",
+              "PX_LAST": 2068.01,
+              "PX_VOLUME": 69121.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 65603.7,
+              "CUR_MKT_CAP": 22984366959.350002
+            }
+          },
+          {
+            "security": "FHN US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 15,
+            "fieldData": {
+              "NAME": "FIRST HORIZON CORP",
+              "CRNCY": "USD",
+              "PX_LAST": 23.34,
+              "PX_VOLUME": 5803619.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 4750916.35,
+              "CUR_MKT_CAP": 11057958867.72
+            }
+          },
+          {
+            "security": "FITB US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 16,
+            "fieldData": {
+              "NAME": "FIFTH THIRD BANCORP",
+              "CRNCY": "USD",
+              "PX_LAST": 52.76,
+              "PX_VOLUME": 8069749.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 5216925.95,
+              "CUR_MKT_CAP": 47847651676.63999
+            }
+          },
+          {
+            "security": "FLG US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 17,
+            "fieldData": {
+              "NAME": "FLAGSTAR BANK NA",
+              "CRNCY": "USD",
+              "PX_LAST": 12.54,
+              "PX_VOLUME": 6668328.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 4237981.9,
+              "CUR_MKT_CAP": 5205264163.44
+            }
+          },
+          {
+            "security": "FLUT US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 18,
+            "fieldData": {
+              "NAME": "FLUTTER ENTERTAINMENT PLC-DI",
+              "CRNCY": "USD",
+              "PX_LAST": 88.62,
+              "PX_VOLUME": 2853474.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 2915350.4,
+              "CUR_MKT_CAP": 15379035219.239998
+            }
+          },
+          {
+            "security": "FNB US Equity",
+            "eidData": [],
+            "fieldExceptions": [],
+            "sequenceNumber": 19,
+            "fieldData": {
+              "NAME": "FNB CORP",
+              "CRNCY": "USD",
+              "PX_LAST": 17.62,
+              "PX_VOLUME": 5500434.0,
+              "LAST_UPDATE_DT": "2026-09-22",
+              "VOLUME_AVG_20D": 3786861.65,
+              "CUR_MKT_CAP": 6219877126.64
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

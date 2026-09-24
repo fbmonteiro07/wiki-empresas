@@ -1,0 +1,155 @@
+[
+  {
+    "server": "localhost:8194",
+    "serverId": "bbcomm-DS-CAP-33-5555402",
+    "encryptionStatus": "Clear",
+    "compressionStatus": "Uncompressed"
+  },
+  {
+    "initialEndpoints": [
+      {
+        "address": "localhost:8194"
+      }
+    ]
+  },
+  {
+    "serviceName": "//blp/refdata"
+  },
+  {
+    "serviceName": "//blp/apiflds"
+  },
+  {
+    "fieldData": [
+      {
+        "id": "BE997",
+        "fieldInfo": {
+          "mnemonic": "BEST_FPERIOD_OVERRIDE",
+          "description": "BEst Fiscal Period Override",
+          "datatype": "String",
+          "documentation": "Specifies the fiscal period override for Bloomberg Estimates at the company level. There are two valid formats, relative and fixed. This override can also be used on certain applicable Equity Index fields. \n\nRelative Overrides:\nFY, FS, FQ - Represents the forecast fiscal period value associated with a fiscal year, fiscal semi-annual, and fiscal quarter.\n\nGY, GS, GQ - Represents the forecast generic period value associated with a fiscal year, fiscal semi-annual, and fiscal quarter. Generic periods represent a concatenation of streams of successive periods. Generics reference the relative period on each historical date. For example, 1GY as of an historical date of 06/30/2013 for a company with a December fiscal year end, returns FY 2013 data regardless of today's date.\n\nTY - Forward 12 months is compiled by using the most frequent available periodicity (next 4 quarters or next 2 semi-annuals or next fiscal year)\n\nBF - Represents a blended forward 12 months and is restricted to fiscal year periodicity. Similar to GY, except uses the weighted average of 1FY and 2FY to smooth out fiscal year transitions. Weighted average is calculated as follows for 1BF:\n[((number of days until next fiscal year/trading days in a year) x FY1 data + (1 - (number of days until next fiscal year/trading days in a year)) x FY2 data]\n\nExample: AAPL US, Next Fiscal Year End date is 9/30/2017, Today's Date is 12/28/2016,\n    Measure is: BEst EPS GAAP (BE653, BEST_EPS_GAAP)\n                   1BF = [((197/261) x $9.001) + ((1 - (197/261)) x $9.985)] = $9.2423\n\nNote: Whether the combination of FY1 & FY2 or FY2 & FY3 is used is dependent upon whether the current point in time has/has not exceeded the FY1 reporting date (the date earnings are announced or the date the financials are reported in cases where there isn't an earnings announcement). If the current point in time is prior to the FY1 reporting date, then FY1 & FY2 are used. If the current point in time is after the FY1 reporting date, then FY2 & FY3 are used.\n\nThe following override examples apply to the relative format:\n   1FY - current fiscal year (where \"current\" represents the estimate\n           associated with the most recent period)\n   -0FS - last fiscal semi-annual period\n   2FQ - next fiscal quarter \n\nThe following override examples apply to the relative forward-looking format:\n1BF, 2BF, 3BF to return the next 12, 24, and 36 month estimated values only.\n\n1TY - returns the forward 12 months only using the most frequent available periodicity (next 4 quarters or next 2 semi-annuals or next fiscal year)\n\nFixed Overrides:\n   Y, S1, S2, Q1, Q2, Q3, Q4 - Returns the fixed period by specific year, semi-annual or quarter\n\nBC - Returns the blended calendar period for companies with non-December fiscal years. Blended calendar estimates will be the same as fiscal year estimates for companies with fiscal years ending in December. The blended value is derived in 1 of 3 ways depending upon when the company's fiscal month occurs and whether or not quarterly or semi-annual data is available:\n\n   1) If the fiscal month occurs at the end of March, June, or September,\n       and quarterly data is available, the calculation is simply the sum of\n       the 4 quarters ending in the requested calendar year.\n           Example: Company's fiscal month end is March 31st. Construct\n            calendar year 2015 by summing the following 4 quarters:\n\n      Fiscal Period    Calendar Period\n        Q4 2015         3/31/2015\n        Q1 2016         6/30/2015\n        Q2 2016         9/30/2015\n        Q3 2016         12/31/2015\n\n   2) If the fiscal month occurs at the end of January, February, April,\n       May, July, August, October, or November, and quarterly data is available,\n       the calculation must be prorated based upon the proportion of the\n       beginning and ending quarters falling into the requested calendar year.\n           Example: Company's fiscal month end is January 31st. Construct calendar\n           year 2015 by prorating and summing the following quarters:\n\n       Fiscal Period    Calendar Period    Multiplier\n         Q4 2015         1/31/2015         0.333*\n         Q1 2016         4/30/2015          1\n         Q2 2016         7/31/2015          1\n         Q3 2016         10/30/2015        1\n         Q4 2016         1/31/2016         0.667^\n\n      * Multiply by 0.333 since 1 of the 3 months of the quarter\n         was in calendar year 2015\n      ^ Multiply by 0.667 since 2 of the 3 months of the quarter\n         were in calendar year 2015\n\n   3) If the fiscal month is not December and interim data is not available, the\n       calculation must be prorated based upon the proportion of straddling fiscal\n       years falling into the requested calendar year. \n           Example: Company's fiscal month end is May 30th.\n           Calendar year 2015 is calculated as:\n               FY May 2015 (multiply by 5/12 since 5 of the 12 months were in 2015) +\n               FY May 2016 (multiply by 7/12 since 7 of the 12 months were in 2015)\n\nThe following override examples apply to the fixed format:\n   15Q1 - First fiscal quarter of 2015\n   16Y - Fiscal year 2016\n   16S2 - Second fiscal semi-annual of 2016\n   14BC - Blended Calendar Year 2014\n   15BC - Blended Calendar Year 2015\n\nEquity Index Relative Overrides (Fixed Period References don't apply to Indices):\n\nEquity Indices do not have designated fiscal years.  Therefore, any fixed period references such as 16Q1, 16Y, and 16BC do not apply to an index.  \n\nRelative fiscal period overrides can be used to return aggregated, weighted estimate values based upon each index constituent's weight in the index and relative fiscal period.  Relative override availability at the index level is as follows:\n  FY/GY - available out 3 years to 3FY and 3GY\n  FS/GS - available out 4 semis to 4FS and 4GS\n  FQ/GQ - available out 8 quarters to 8FQ and 8GQ\n  BF - only blends for the next 12 months to 1BF; no option for 24 or 36 months forward\n  1TY - returns the forward 12 months only using the most frequent available periodicity (next 4 quarters or next 2 semi-annuals or next fiscal year)\n\nAll index calculations are pending 50% or greater equity coverage by percent weight in the index. Index estimates will return N/A when more than 50% of companies by weight do not have data.",
+          "categoryName": [],
+          "property": [],
+          "overrides": [],
+          "ftype": "Character"
+        }
+      },
+      {
+        "id": "BE008",
+        "fieldInfo": {
+          "mnemonic": "BEST_EPS",
+          "description": "BEst EPS",
+          "datatype": "Double",
+          "documentation": "BEst (Bloomberg Estimates) Earnings Per Share (EPS) reflects the consensus estimate for adjusted earnings per share. The consensus estimate is the mean of sell-side analyst estimates.\n\nNote:\nAvailable for Broker estimates and Consensus: Standard, 28 Days, Post Event, and Custom. Definition may differ based on certain industry or region specifications. The period can be shifted forward or backward by providing an offset to BEst Fiscal Period Override (BE997, BEST_FPERIOD_OVERRIDE) (3FQ, -2FY, etc.).\n\nEquity Indices:\nField returns the aggregate of all equity contributions. Each equity contribution is calculated as:\n(Estimated EPS value for each equity * Respective number of shares in the index * Fixed Income (FX) Rate) / (Index Divisor * Coverage Factor)\n\nWhere:\nFX Rate is applied to securities that have a different fundamental currency Currency Override (DS215, EQY_FUND_CRNCY) from the index's.\nIndex Divisor is IN018, INDX_DIVISOR.\nCoverage factor is defined as: 1 - (unused market cap / index market cap). \n Where:\n Unused market cap is the sum of securities' market cap that do not have an equity contribution to the index value.\n Index market cap is the sum of securities' market cap. Security market cap is Last Price (PR005, PX_LAST) * outstanding Basic Weighted Average Number of Shares (IS060, IS_AVG_NUM_SH_FOR_EPS).",
+          "categoryName": [],
+          "property": [],
+          "overrides": [
+            "BE046",
+            "BE995",
+            "BE997",
+            "DS215",
+            "BE998",
+            "BE999",
+            "DT175",
+            "BE994"
+          ],
+          "ftype": "Real"
+        }
+      },
+      {
+        "id": "BE051",
+        "fieldInfo": {
+          "mnemonic": "BEST_PE_RATIO",
+          "description": "BEst P/E Ratio",
+          "datatype": "Double",
+          "documentation": "Bloomberg Estimates Price/Earnings Ratio is calculated by dividing the price of the security by BEst Earnings Per Share (EPS).\n\nWhere:\nPrice is PR005, PX_LAST\nBEst EPS is BE008, BEST_EPS\n\nDenominator Periodicity:\nPeriodicity of the default denominator is dependent on the user settings. If default is set to Quarterly, the consensus estimates for the next four quarters will be used. If BEst EPS for the next four upcoming quarters are not available, BEst P/E Ratio will return \"N.A.\". If user default is set to Semi-Annual or Yearly, the semi or annual BEst EPS will be used in the denominator instead. The period can be shifted forward or backward by providing an offset to BEst Fiscal Period Override (BE997, BEST_FPERIOD_OVERRIDE) (3FQ, -2FY, etc.).\n\nPortfolio:\nComputed as the total market value of Index Market Capitalization (IN089, INDX_MARKET_CAP) divided by the sum of BEst EPS Forward 12M contributions from holdings. Contributions are computed as the value of BEst EPS Forward 12M of the security multiplied by the number of shares held. BEst EPS Forward 12M is derived from BEst EPS and calculated by taking the weighted average of the current fiscal year (FY) and next fiscal year estimates in proportion to the amount of time between now and the end of the current fiscal year:\n\nFY1 Est * (Number of days remaining in current fiscal year / Total Number of days in year) + FY2 Est * (1 - Number of days remaining in current fiscal year / Total Number of days in year)\n\nEquity Indices:\nConsensus estimates for the current year (1GY) will be used by default.",
+          "categoryName": [],
+          "property": [],
+          "overrides": [
+            "BE997",
+            "BE999",
+            "BE998",
+            "BE046"
+          ],
+          "ftype": "Real"
+        }
+      },
+      {
+        "id": "BE248",
+        "fieldInfo": {
+          "mnemonic": "BEST_ESTIMATE_FCF",
+          "description": "BEst Estimate Free Cash Flow",
+          "datatype": "Double",
+          "documentation": "BEst (Bloomberg Estimates) estimation of cash from operations minus capital expenditures. This is the consensus of estimated FCF (free cash flow) as provided by the broker.",
+          "categoryName": [],
+          "property": [],
+          "overrides": [
+            "BE046",
+            "BE994",
+            "BE997",
+            "BE998",
+            "BE995",
+            "BE999",
+            "DS215"
+          ],
+          "ftype": "Real"
+        }
+      },
+      {
+        "id": "RR902",
+        "fieldInfo": {
+          "mnemonic": "CUR_MKT_CAP",
+          "description": "Current Market Cap",
+          "datatype": "Double",
+          "documentation": "Total current market value of all of a company's outstanding shares stated in the pricing currency. Capitalization is a measure of corporate size. For the fiscal period end market value, use Historical Market Cap (RR250, HISTORICAL_MARKET_CAP), returned in the fundamental currency.\n\nFor historical current market cap, currency override (DS215, EQY_FUND_CRNCY) can be used to change currency displayed. For current market cap value with currency adjusted, please refer to Currency Adj Market Cap (RR910, CRNCY_ADJ_MKT_CAP).\n\nMarket capitalization will be returned in the pricing currency of the security, except for securities where the pricing currency is not a basic currency unit (for example, if the pricing currency for a security is British pence - GBp, the market cap value for that security will be returned in the basic currency unit, i.e. British pound - GBP). \n\nFor currency adjusted current market cap, please refer to Current Market Cap (RR910, CRNCY_ADJ_MKT_CAP).\n\nNON MULITIPLE-SHARE COMPANIES:\n\nCurrent market capitalization is calculated as:\n\nCurrent Shares Outstanding * Last Price\n\nWhere:\nCurrent Shares Outstanding is DS124, EQY_SH_OUT\nLast Price is PR005, PX_LAST\n\nFor certain countries, DS124 excludes treasury shares.  Please see DS124, EQY_SH_OUT definition for details.\n\nIf the last price available is past more than 50 days, refer to Market Cap - Last Trade (RX066, MKT_CAP_LAST_TRD) (available to set as Market Cap Default on FPDF settings).\n\nFor companies which trade on multiple regional exchanges, the loaded ticker's price is used in the calculation of the market cap.\n\nINDEX:\nThis field returns the aggregate of all equity contributions. Each equity contribution is calculated as:\n\n(Last price * current shares outstanding of member )/1000000\n\nWhere:\nLast Price is  PR005, PX_LAST\nEach members' current shares outstanding is DS124, EQY_SH_OUT\n\nMULTIPLE-SHARE COMPANIES:\n\nCurrent market cap is the sum of the market capitalization of all classes of common stock, in millions. If only one class is listed, the price of the listed-class is applied to any unlisted shares to determine the total market value. If a class of shares has not traded for more than 50 days, the price of the listed-class is used. If there are two or more listed classes and one or more unlisted classes, the average price of the listed classes is applied to the unlisted shares to compute the total market value. 'Company Has Multiple Shares' (DS738, MULTIPLE_SHARE) indicates if the company has multiple shares.\n\nFor a single class of market capitalization, please refer to Current Market Capitalization of a Share Class (RR233, CURRENT_MARKET_CAP_SHARE_CLASS).\n\nFor companies with rights issue, market cap includes rights portion based on either rights trading price or the difference of underlying trading price and subscription price during the rights subscription period.\n\nFigure is reported in millions; the Scaling Format Override (DY339, SCALING_FORMAT) can be used to change the display units for the field. For BQL and excel API this field returns actual. \n\nEquity index market capitalization values are stated in pricing currency.\n\nThe related fields referenced herein may not be available in all enterprise products.",
+          "categoryName": [],
+          "property": [],
+          "overrides": [
+            "DT084",
+            "DT096",
+            "DT081",
+            "DT086",
+            "DT092",
+            "DT095",
+            "DT093",
+            "DT097",
+            "DT082",
+            "DT083",
+            "DT582",
+            "DT085",
+            "DY339",
+            "DT581",
+            "DT089"
+          ],
+          "ftype": "Real"
+        }
+      },
+      {
+        "id": "BEST_ESTIMATE_FCF_NUMEST",
+        "fieldError": {
+          "source": "apiflds@apigsp-ob-861",
+          "code": -103,
+          "category": "BAD_FLD",
+          "message": "Unknown Field Id/Mnemonic"
+        }
+      },
+      {
+        "id": "FUND_HOLDINGS",
+        "fieldError": {
+          "source": "apiflds@apigsp-ob-861",
+          "code": -103,
+          "category": "BAD_FLD",
+          "message": "Unknown Field Id/Mnemonic"
+        }
+      },
+      {
+        "id": "INDX_MEMBERS_WEIGHTS",
+        "fieldError": {
+          "source": "apiflds@apigsp-ob-861",
+          "code": -103,
+          "category": "BAD_FLD",
+          "message": "Unknown Field Id/Mnemonic"
+        }
+      }
+    ]
+  }
+]

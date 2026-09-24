@@ -1,0 +1,4161 @@
+{
+  "VD-Disclaimer": {},
+  "TSMC LT Growth Summary": {
+    "B2": {
+      "value": "TSMC growth drivers",
+      "formula": null
+    },
+    "C2": {
+      "value": "2015",
+      "formula": null
+    },
+    "D2": {
+      "value": "2016",
+      "formula": null
+    },
+    "E2": {
+      "value": "2017",
+      "formula": null
+    },
+    "F2": {
+      "value": "2018",
+      "formula": null
+    },
+    "G2": {
+      "value": "2019",
+      "formula": null
+    },
+    "H2": {
+      "value": "2020",
+      "formula": null
+    },
+    "I2": {
+      "value": "2021",
+      "formula": null
+    },
+    "J2": {
+      "value": "2022",
+      "formula": null
+    },
+    "K2": {
+      "value": "2023",
+      "formula": null
+    },
+    "L2": {
+      "value": "2024",
+      "formula": null
+    },
+    "M2": {
+      "value": "2025E",
+      "formula": null
+    },
+    "N2": {
+      "value": "2026E",
+      "formula": null
+    },
+    "P2": {
+      "value": "15-20 CAGR",
+      "formula": null
+    },
+    "Q2": {
+      "value": "20-26 CAGR",
+      "formula": null
+    },
+    "B3": {
+      "value": "HPC - TSMC",
+      "formula": null
+    },
+    "C3": {
+      "value": "5.8532954277154623",
+      "formula": "C22*0.22"
+    },
+    "D3": {
+      "value": "6.1222361580003524",
+      "formula": "D22*0.208"
+    },
+    "E3": {
+      "value": "8.1226203823404628",
+      "formula": "E22*0.253"
+    },
+    "F3": {
+      "value": "11.335250669841114",
+      "formula": "+F32/1000/F$28"
+    },
+    "G3": {
+      "value": "10.222498476002434",
+      "formula": "+G32/1000/G$28"
+    },
+    "H3": {
+      "value": "14.94393130695315",
+      "formula": null
+    },
+    "I3": {
+      "value": "21.039642654446954",
+      "formula": null
+    },
+    "J3": {
+      "value": "31.251515954647214",
+      "formula": null
+    },
+    "K3": {
+      "value": "29.966509523220179",
+      "formula": null
+    },
+    "L3": {
+      "value": "46.018370261891043",
+      "formula": null
+    },
+    "M3": {
+      "value": "69.87367058752271",
+      "formula": "+HPC!N48"
+    },
+    "N3": {
+      "value": "87.280112237068892",
+      "formula": "+HPC!O48"
+    },
+    "P3": {
+      "value": "0.20618211242537754",
+      "formula": "(H3/C3)^(1/5)-1"
+    },
+    "Q3": {
+      "value": "0.34196669899433907",
+      "formula": "(N3/H3)^(1/6)-1"
+    },
+    "B4": {
+      "value": "YoY growth",
+      "formula": null
+    },
+    "D4": {
+      "value": "4.5946891559829783E-2",
+      "formula": "+D3/C3-1"
+    },
+    "E4": {
+      "value": "0.32674078109941407",
+      "formula": "+E3/D3-1"
+    },
+    "F4": {
+      "value": "0.39551648806403539",
+      "formula": "+F3/E3-1"
+    },
+    "G4": {
+      "value": "-9.8167409460057198E-2",
+      "formula": "+G3/F3-1"
+    },
+    "H4": {
+      "value": "0.46186681680945174",
+      "formula": "+H3/G3-1"
+    },
+    "I4": {
+      "value": "0.40790547161158153",
+      "formula": "+I3/H3-1"
+    },
+    "J4": {
+      "value": "0.48536343833966544",
+      "formula": "+J3/I3-1"
+    },
+    "K4": {
+      "value": "-4.1118211138680749E-2",
+      "formula": "+K3/J3-1"
+    },
+    "L4": {
+      "value": "0.53566000825797699",
+      "formula": "+L3/K3-1"
+    },
+    "M4": {
+      "value": "0.51838646588027548",
+      "formula": "+M3/L3-1"
+    },
+    "N4": {
+      "value": "0.24911302788570611",
+      "formula": "+N3/M3-1"
+    },
+    "B5": {
+      "value": "HPC - Market",
+      "formula": null
+    },
+    "C5": {
+      "value": "34.376274176514208",
+      "formula": "HPC!D32"
+    },
+    "D5": {
+      "value": "35.74041691277089",
+      "formula": "HPC!E32"
+    },
+    "E5": {
+      "value": "40.116504669786522",
+      "formula": "HPC!F32"
+    },
+    "F5": {
+      "value": "44.014362327071098",
+      "formula": "HPC!G32"
+    },
+    "G5": {
+      "value": "42.828823028283139",
+      "formula": "HPC!H32"
+    },
+    "H5": {
+      "value": "48.828522730019444",
+      "formula": "HPC!I32"
+    },
+    "I5": {
+      "value": "59.014037896430054",
+      "formula": "HPC!J32"
+    },
+    "J5": {
+      "value": "56.392075441964494",
+      "formula": "HPC!K32"
+    },
+    "K5": {
+      "value": "54.200289408059341",
+      "formula": "HPC!L32"
+    },
+    "L5": {
+      "value": "65.338606996908624",
+      "formula": "HPC!M32"
+    },
+    "M5": {
+      "value": "89.521962438013389",
+      "formula": "HPC!N32"
+    },
+    "N5": {
+      "value": "109.63792263287831",
+      "formula": "HPC!O32"
+    },
+    "P5": {
+      "value": "7.2711548520657976E-2",
+      "formula": "(H5/C5)^(1/5)-1"
+    },
+    "Q5": {
+      "value": "0.14432100224637101",
+      "formula": "(N5/H5)^(1/6)-1"
+    },
+    "B6": {
+      "value": "TSMC share (%)",
+      "formula": null
+    },
+    "C6": {
+      "value": "0.17027137372887316",
+      "formula": "C3/C5"
+    },
+    "D6": {
+      "value": "0.17129727873467346",
+      "formula": null
+    },
+    "E6": {
+      "value": "0.20247577522520202",
+      "formula": null
+    },
+    "F6": {
+      "value": "0.25753526963786894",
+      "formula": null
+    },
+    "G6": {
+      "value": "0.23868268500518303",
+      "formula": null
+    },
+    "H6": {
+      "value": "0.30604922023917225",
+      "formula": null
+    },
+    "I6": {
+      "value": "0.35651928599381111",
+      "formula": "I3/I5"
+    },
+    "J6": {
+      "value": "0.55418275900856839",
+      "formula": null
+    },
+    "K6": {
+      "value": "0.55288467737894209",
+      "formula": null
+    },
+    "L6": {
+      "value": "0.70430595901850679",
+      "formula": null
+    },
+    "M6": {
+      "value": "0.78051987115345567",
+      "formula": null
+    },
+    "N6": {
+      "value": "0.79607593924709452",
+      "formula": null
+    },
+    "B7": {
+      "value": "Automotive - TSMC",
+      "formula": null
+    },
+    "C7": {
+      "value": "1.05",
+      "formula": null
+    },
+    "D7": {
+      "value": "1.34",
+      "formula": null
+    },
+    "E7": {
+      "value": "1.4",
+      "formula": null
+    },
+    "F7": {
+      "value": "1.7143197433147359",
+      "formula": "+F35/1000/F$28"
+    },
+    "G7": {
+      "value": "1.5508913403948561",
+      "formula": "+G35/1000/G$28"
+    },
+    "H7": {
+      "value": "1.5075278481740535",
+      "formula": null
+    },
+    "I7": {
+      "value": "2.4010040354196467",
+      "formula": null
+    },
+    "J7": {
+      "value": "3.9008427098453686",
+      "formula": null
+    },
+    "K7": {
+      "value": "4.2846454485708678",
+      "formula": null
+    },
+    "L7": {
+      "value": "4.3411624160655586",
+      "formula": "+L35/1000/L$28"
+    },
+    "M7": {
+      "value": "4.5582205368688369",
+      "formula": "+L7*(1+M8)"
+    },
+    "N7": {
+      "value": "4.8772959744496553",
+      "formula": "+M7*(1+N8)"
+    },
+    "P7": {
+      "value": "7.5016694979604281E-2",
+      "formula": "(H7/C7)^(1/5)-1"
+    },
+    "Q7": {
+      "value": "0.21614575421838622",
+      "formula": "(N7/H7)^(1/6)-1"
+    },
+    "B8": {
+      "value": "YoY growth",
+      "formula": null
+    },
+    "D8": {
+      "value": "0.27619047619047632",
+      "formula": "+D7/C7-1"
+    },
+    "E8": {
+      "value": "4.4776119402984982E-2",
+      "formula": "+E7/D7-1"
+    },
+    "F8": {
+      "value": "0.22451410236766867",
+      "formula": "+F7/E7-1"
+    },
+    "G8": {
+      "value": "-9.5331342683997566E-2",
+      "formula": "+G7/F7-1"
+    },
+    "H8": {
+      "value": "-2.7960367751980741E-2",
+      "formula": "+H7/G7-1"
+    },
+    "I8": {
+      "value": "0.59267640616243922",
+      "formula": "+I7/H7-1"
+    },
+    "J8": {
+      "value": "0.62467145090140619",
+      "formula": "+J7/I7-1"
+    },
+    "K8": {
+      "value": "9.8389698655835689E-2",
+      "formula": "+K7/J7-1"
+    },
+    "L8": {
+      "value": "1.3190582085045532E-2",
+      "formula": null
+    },
+    "M8": {
+      "value": "0.05",
+      "formula": null
+    },
+    "N8": {
+      "value": "7.0000000000000007E-2",
+      "formula": null
+    },
+    "B9": {
+      "value": "Automotive - Market",
+      "formula": null
+    },
+    "C9": {
+      "value": "10.1478237399",
+      "formula": "+Auto!C15"
+    },
+    "D9": {
+      "value": "11.498961312674998",
+      "formula": "+Auto!D15"
+    },
+    "E9": {
+      "value": "13.001475177225",
+      "formula": "+Auto!E15"
+    },
+    "F9": {
+      "value": "14.238202945612498",
+      "formula": "+Auto!F15"
+    },
+    "G9": {
+      "value": "13.667249947983379",
+      "formula": "+Auto!G15"
+    },
+    "H9": {
+      "value": "13.296880766730027",
+      "formula": "+Auto!H15"
+    },
+    "I9": {
+      "value": "17.987638367914933",
+      "formula": "+Auto!I15"
+    },
+    "J9": {
+      "value": "22.780229777698526",
+      "formula": "+Auto!J15"
+    },
+    "K9": {
+      "value": "26.990895855351397",
+      "formula": "+Auto!K15"
+    },
+    "L9": {
+      "value": "25.234463911417681",
+      "formula": "+Auto!L15"
+    },
+    "M9": {
+      "value": "23.380037787957956",
+      "formula": "+Auto!M15"
+    },
+    "N9": {
+      "value": "25.868988268995487",
+      "formula": "+Auto!N15"
+    },
+    "P9": {
+      "value": "5.5541643407325259E-2",
+      "formula": "(H9/C9)^(1/5)-1"
+    },
+    "Q9": {
+      "value": "0.11730466377444149",
+      "formula": "(N9/H9)^(1/6)-1"
+    },
+    "B10": {
+      "value": "TSMC share (%)",
+      "formula": null
+    },
+    "C10": {
+      "value": "0.10347046094932932",
+      "formula": "C7/C9"
+    },
+    "D10": {
+      "value": "0.1165322643987813",
+      "formula": null
+    },
+    "E10": {
+      "value": "0.10768008867581534",
+      "formula": null
+    },
+    "F10": {
+      "value": "0.12040281697508769",
+      "formula": null
+    },
+    "G10": {
+      "value": "0.11347501116153159",
+      "formula": null
+    },
+    "H10": {
+      "value": "0.11337454810800603",
+      "formula": null
+    },
+    "I10": {
+      "value": "0.13348078198538763",
+      "formula": "I7/I9"
+    },
+    "J10": {
+      "value": "0.17123807564330321",
+      "formula": null
+    },
+    "K10": {
+      "value": "0.15874409917821847",
+      "formula": null
+    },
+    "L10": {
+      "value": "0.17203307473876392",
+      "formula": null
+    },
+    "M10": {
+      "value": "0.19496206884732148",
+      "formula": null
+    },
+    "N10": {
+      "value": "0.18853833492573016",
+      "formula": null
+    },
+    "B11": {
+      "value": "IoT - TSMC",
+      "formula": null
+    },
+    "C11": {
+      "value": "1.1381104566976592",
+      "formula": "C13*0.175"
+    },
+    "D11": {
+      "value": "1.65",
+      "formula": null
+    },
+    "E11": {
+      "value": "1.8",
+      "formula": null
+    },
+    "F11": {
+      "value": "2.1579536714877374",
+      "formula": "+F34/1000/F$28"
+    },
+    "G11": {
+      "value": "2.794730327717172",
+      "formula": "+G34/1000/G$28"
+    },
+    "H11": {
+      "value": "3.7496655574737945",
+      "formula": null
+    },
+    "I11": {
+      "value": "4.7609608756448161",
+      "formula": null
+    },
+    "J11": {
+      "value": "6.5733564996348521",
+      "formula": null
+    },
+    "K11": {
+      "value": "5.1906680412774762",
+      "formula": null
+    },
+    "L11": {
+      "value": "5.157312664558245",
+      "formula": "+L34/1000/L$28"
+    },
+    "M11": {
+      "value": "6.1887751974698935",
+      "formula": "+L11*(1+M12)"
+    },
+    "N11": {
+      "value": "6.1887751974698935",
+      "formula": "+M11*(1+N12)"
+    },
+    "P11": {
+      "value": "0.26929223727766516",
+      "formula": "(H11/C11)^(1/5)-1"
+    },
+    "Q11": {
+      "value": "8.7097997288729578E-2",
+      "formula": "(N11/H11)^(1/6)-1"
+    },
+    "B12": {
+      "value": "YoY growth",
+      "formula": null
+    },
+    "D12": {
+      "value": "0.44977140864485077",
+      "formula": "+D11/C11-1"
+    },
+    "E12": {
+      "value": "9.090909090909105E-2",
+      "formula": "+E11/D11-1"
+    },
+    "F12": {
+      "value": "0.19886315082652084",
+      "formula": "+F11/E11-1"
+    },
+    "G12": {
+      "value": "0.29508356210002762",
+      "formula": "+G11/F11-1"
+    },
+    "H12": {
+      "value": "0.34169136831768854",
+      "formula": "+H11/G11-1"
+    },
+    "I12": {
+      "value": "0.26970280486890852",
+      "formula": "+I11/H11-1"
+    },
+    "J12": {
+      "value": "0.38067853765854953",
+      "formula": "+J11/I11-1"
+    },
+    "K12": {
+      "value": "-0.21034740142789821",
+      "formula": "+K11/J11-1"
+    },
+    "L12": {
+      "value": "-6.4260277201279026E-3",
+      "formula": null
+    },
+    "M12": {
+      "value": "0.2",
+      "formula": null
+    },
+    "N12": {
+      "value": "0",
+      "formula": null
+    }
+  },
+  "NVIDIA system content": {
+    "B105": {
+      "value": "TSMC % of Cloud Budget",
+      "formula": null
+    },
+    "C105": {
+      "value": "4.7586576912509913E-2",
+      "formula": "C101/C104"
+    },
+    "B107": {
+      "value": "TSMC's AMD Content",
+      "formula": null
+    },
+    "C107": {
+      "value": "CCD",
+      "formula": null
+    },
+    "D107": {
+      "value": "I/O",
+      "formula": null
+    },
+    "B108": {
+      "value": "Tech Node",
+      "formula": null
+    },
+    "C108": {
+      "value": "4nm",
+      "formula": null
+    },
+    "D108": {
+      "value": "6nm",
+      "formula": null
+    },
+    "B109": {
+      "value": "Die size (sq-mm)",
+      "formula": null
+    },
+    "C109": {
+      "value": "72",
+      "formula": null
+    },
+    "D109": {
+      "value": "397",
+      "formula": null
+    },
+    "B110": {
+      "value": "Wafer area (sq-mm)",
+      "formula": null
+    },
+    "C110": {
+      "value": "70685.83470577035",
+      "formula": "+$C$7"
+    },
+    "D110": {
+      "value": "70685.83470577035",
+      "formula": "C110"
+    },
+    "B111": {
+      "value": "Usable area (Edges/size)",
+      "formula": null
+    },
+    "C111": {
+      "value": "0.88519999999999999",
+      "formula": null
+    },
+    "D111": {
+      "value": "0.80300000000000005",
+      "formula": null
+    },
+    "B112": {
+      "value": "Usable area",
+      "formula": null
+    },
+    "C112": {
+      "value": "62571.100881547914",
+      "formula": "C111*C110"
+    },
+    "D112": {
+      "value": "56760.725268733593",
+      "formula": "D111*D110"
+    },
+    "B113": {
+      "value": "Total die per wafer",
+      "formula": null
+    },
+    "C113": {
+      "value": "869.04306779927663",
+      "formula": "C112/C109"
+    },
+    "D113": {
+      "value": "142.97411906482014",
+      "formula": "D112/D109"
+    },
+    "B114": {
+      "value": "Yield %",
+      "formula": null
+    },
+    "C114": {
+      "value": "0.75",
+      "formula": null
+    },
+    "D114": {
+      "value": "0.7",
+      "formula": null
+    },
+    "B115": {
+      "value": "Good die per wafer",
+      "formula": null
+    },
+    "C115": {
+      "value": "651.78230084945744",
+      "formula": "C113*C114"
+    },
+    "D115": {
+      "value": "100.0818833453741",
+      "formula": "D113*D114"
+    },
+    "B116": {
+      "value": "Wafer Price",
+      "formula": null
+    },
+    "C116": {
+      "value": "15000",
+      "formula": null
+    },
+    "D116": {
+      "value": "10000",
+      "formula": null
+    },
+    "B117": {
+      "value": "Cost per Die",
+      "formula": null
+    },
+    "C117": {
+      "value": "23.013819154725038",
+      "formula": "C116/C115"
+    },
+    "D117": {
+      "value": "99.918183648591494",
+      "formula": "D116/D115"
+    },
+    "B118": {
+      "value": "# of Die - High-end Genoa",
+      "formula": null
+    },
+    "C118": {
+      "value": "12",
+      "formula": null
+    },
+    "D118": {
+      "value": "1",
+      "formula": null
+    },
+    "B119": {
+      "value": "TSMC Content per system",
+      "formula": null
+    },
+    "C119": {
+      "value": "276.16582985670044",
+      "formula": "C118*C117"
+    },
+    "D119": {
+      "value": "99.918183648591494",
+      "formula": "D118*D117"
+    },
+    "B120": {
+      "value": "TSMC content per Genoa System",
+      "formula": null
+    },
+    "C120": {
+      "value": "376.08401350529192",
+      "formula": "SUM(C119:D119)"
+    },
+    "B121": {
+      "value": "Weighted Content (25% AMD Share)",
+      "formula": null
+    },
+    "C121": {
+      "value": "94.02100337632298",
+      "formula": "C120*0.25"
+    },
+    "B123": {
+      "value": "Lenovo V3 Think System",
+      "formula": null
+    },
+    "C123": {
+      "value": "13466",
+      "formula": null
+    },
+    "B124": {
+      "value": "TSMC % of Cloud Budget",
+      "formula": null
+    },
+    "C124": {
+      "value": "6.9821033251390892E-3",
+      "formula": "C121/C123"
+    }
+  },
+  "AMD": {
+    "B2": {
+      "value": "AMD model 0813",
+      "formula": null
+    },
+    "C3": {
+      "value": "AMD Sales",
+      "formula": null
+    },
+    "D3": {
+      "value": "2016",
+      "formula": null
+    },
+    "E3": {
+      "value": "2017",
+      "formula": null
+    },
+    "F3": {
+      "value": "2018",
+      "formula": null
+    },
+    "G3": {
+      "value": "2019",
+      "formula": null
+    },
+    "H3": {
+      "value": "2020",
+      "formula": null
+    },
+    "I3": {
+      "value": "2021",
+      "formula": null
+    },
+    "J3": {
+      "value": "2022",
+      "formula": null
+    },
+    "K3": {
+      "value": "2023",
+      "formula": null
+    },
+    "L3": {
+      "value": "2024",
+      "formula": null
+    },
+    "M3": {
+      "value": "2025E",
+      "formula": null
+    },
+    "N3": {
+      "value": "2026E",
+      "formula": null
+    },
+    "B4": {
+      "value": "Data center",
+      "formula": null
+    },
+    "C4": {
+      "value": "Server revenue",
+      "formula": null
+    },
+    "D4": {
+      "value": "16.80125",
+      "formula": null
+    },
+    "E4": {
+      "value": "50",
+      "formula": null
+    },
+    "F4": {
+      "value": "567.97644540531905",
+      "formula": "+F5+F6+F7+F8"
+    },
+    "G4": {
+      "value": "1109.845",
+      "formula": null
+    },
+    "H4": {
+      "value": "1763.4899999999998",
+      "formula": null
+    },
+    "I4": {
+      "value": "3693.2700899999995",
+      "formula": null
+    },
+    "J4": {
+      "value": "6042.0228367999989",
+      "formula": null
+    },
+    "K4": {
+      "value": "6494.9505877320053",
+      "formula": null
+    },
+    "L4": {
+      "value": "12578.902282596786",
+      "formula": "+L5+L6+L7+L8"
+    },
+    "M4": {
+      "value": "15936.068723255616",
+      "formula": "+M5+M6+M7+M8"
+    },
+    "N4": {
+      "value": "23137.388690791413",
+      "formula": null
+    },
+    "B5": {
+      "value": "CPU",
+      "formula": null
+    },
+    "C5": {
+      "value": "of which: Server MPU",
+      "formula": null
+    },
+    "D5": {
+      "value": "16.80125",
+      "formula": "+D4"
+    },
+    "E5": {
+      "value": "40.769999999999996",
+      "formula": null
+    },
+    "F5": {
+      "value": "367.97644540531905",
+      "formula": null
+    },
+    "G5": {
+      "value": "899.84500000000003",
+      "formula": null
+    },
+    "H5": {
+      "value": "1621.4899999999998",
+      "formula": null
+    },
+    "I5": {
+      "value": "3333.2700899999995",
+      "formula": null
+    },
+    "J5": {
+      "value": "5349.0228367999989",
+      "formula": null
+    },
+    "K5": {
+      "value": "5433.4705877320057",
+      "formula": null
+    },
+    "L5": {
+      "value": "6794.0859555967854",
+      "formula": null
+    },
+    "M5": {
+      "value": "8412.5445222008311",
+      "formula": null
+    },
+    "N5": {
+      "value": "8960.6107459681971",
+      "formula": null
+    },
+    "B6": {
+      "value": "GPU",
+      "formula": null
+    },
+    "C6": {
+      "value": "of which: Server GPU",
+      "formula": null
+    },
+    "E6": {
+      "value": "50",
+      "formula": null
+    },
+    "F6": {
+      "value": "200",
+      "formula": null
+    },
+    "G6": {
+      "value": "210",
+      "formula": null
+    },
+    "H6": {
+      "value": "142",
+      "formula": null
+    },
+    "I6": {
+      "value": "360",
+      "formula": null
+    },
+    "J6": {
+      "value": "315",
+      "formula": null
+    },
+    "K6": {
+      "value": "555",
+      "formula": null
+    },
+    "L6": {
+      "value": "5025",
+      "formula": null
+    },
+    "M6": {
+      "value": "6500",
+      "formula": null
+    },
+    "N6": {
+      "value": "12800",
+      "formula": null
+    },
+    "C7": {
+      "value": "of which: Xilinx FPGA",
+      "formula": null
+    },
+    "J7": {
+      "value": "333",
+      "formula": null
+    },
+    "K7": {
+      "value": "252.49",
+      "formula": null
+    },
+    "L7": {
+      "value": "318.48480000000001",
+      "formula": null
+    },
+    "M7": {
+      "value": "365.35628389478404",
+      "formula": null
+    },
+    "N7": {
+      "value": "413.13926882321454",
+      "formula": null
+    },
+    "C8": {
+      "value": "of which: Pensando",
+      "formula": null
+    },
+    "J8": {
+      "value": "45",
+      "formula": null
+    },
+    "K8": {
+      "value": "253.99",
+      "formula": null
+    },
+    "L8": {
+      "value": "441.33152699999988",
+      "formula": null
+    },
+    "M8": {
+      "value": "658.16791716000012",
+      "formula": null
+    },
+    "N8": {
+      "value": "963.63867600000049",
+      "formula": null
+    },
+    "C9": {
+      "value": "Server MPU market",
+      "formula": null
+    },
+    "D9": {
+      "value": "15732.734257516022",
+      "formula": "+Mercury!E5/1000"
+    },
+    "E9": {
+      "value": "18511.696912452408",
+      "formula": "+Mercury!F5/1000"
+    },
+    "F9": {
+      "value": "21624.38330913461",
+      "formula": "+Mercury!G5/1000"
+    },
+    "G9": {
+      "value": "22397.93552311285",
+      "formula": "+Mercury!H5/1000"
+    },
+    "H9": {
+      "value": "24606.236896149094",
+      "formula": "+Mercury!I5/1000"
+    },
+    "I9": {
+      "value": "26036.040028984473",
+      "formula": "+Mercury!J5/1000"
+    },
+    "J9": {
+      "value": "23649.436584700077",
+      "formula": "+Mercury!K5/1000"
+    },
+    "K9": {
+      "value": "18831.286029527331",
+      "formula": "+Mercury!L5/1000"
+    },
+    "L9": {
+      "value": "20757.312276890509",
+      "formula": "+Mercury!M5/1000"
+    },
+    "M9": {
+      "value": "22555.205124250002",
+      "formula": "+Mercury!N5/1000"
+    },
+    "N9": {
+      "value": "25113.858907999998",
+      "formula": "+Mercury!O5/1000"
+    },
+    "C10": {
+      "value": "AMD Server MPU share",
+      "formula": null
+    },
+    "D10": {
+      "value": "1.0679167222298637E-3",
+      "formula": "D5/D9"
+    },
+    "E10": {
+      "value": "2.202391287671468E-3",
+      "formula": "E5/E9"
+    },
+    "F10": {
+      "value": "1.7016737085393682E-2",
+      "formula": null
+    },
+    "G10": {
+      "value": "4.0175354512983263E-2",
+      "formula": null
+    },
+    "H10": {
+      "value": "6.589752048813953E-2",
+      "formula": null
+    },
+    "I10": {
+      "value": "0.12802523295744114",
+      "formula": null
+    },
+    "J10": {
+      "value": "0.22617971542969151",
+      "formula": null
+    },
+    "K10": {
+      "value": "0.28853422858175271",
+      "formula": null
+    },
+    "L10": {
+      "value": "0.32731048533488433",
+      "formula": null
+    },
+    "M10": {
+      "value": "0.37297574887298046",
+      "formula": "M5/M9"
+    },
+    "N10": {
+      "value": "0.35679943806301317",
+      "formula": null
+    },
+    "B11": {
+      "value": "Client",
+      "formula": null
+    },
+    "C11": {
+      "value": "Desktop/NB MPU revenue",
+      "formula": null
+    },
+    "D11": {
+      "value": "1137.97",
+      "formula": null
+    },
+    "E11": {
+      "value": "1604.8590912823729",
+      "formula": null
+    },
+    "F11": {
+      "value": "2821.6296537878766",
+      "formula": null
+    },
+    "G11": {
+      "value": "3656.8992804878053",
+      "formula": null
+    },
+    "H11": {
+      "value": "5421.196229993162",
+      "formula": null
+    },
+    "I11": {
+      "value": "6887.2650168904111",
+      "formula": null
+    },
+    "J11": {
+      "value": "6201.2421518038773",
+      "formula": null
+    },
+    "K11": {
+      "value": "4653.7685223167573",
+      "formula": null
+    },
+    "L11": {
+      "value": "7053.2629632872486",
+      "formula": null
+    },
+    "M11": {
+      "value": "10051.132779923097",
+      "formula": null
+    },
+    "N11": {
+      "value": "10861.71900592181",
+      "formula": null
+    },
+    "C12": {
+      "value": "Desktop/NB MPU market",
+      "formula": null
+    },
+    "D12": {
+      "value": "29177.424723052984",
+      "formula": "+(+Mercury!E8+Mercury!E11)/1000"
+    },
+    "E12": {
+      "value": "30324.350861201223",
+      "formula": "+(+Mercury!F8+Mercury!F11)/1000"
+    },
+    "F12": {
+      "value": "32472.463118308107",
+      "formula": "+(+Mercury!G8+Mercury!G11)/1000"
+    },
+    "G12": {
+      "value": "33168.868899172354",
+      "formula": "+(+Mercury!H8+Mercury!H11)/1000"
+    },
+    "H12": {
+      "value": "38096.68492826046",
+      "formula": "+(+Mercury!I8+Mercury!I11)/1000"
+    },
+    "I12": {
+      "value": "41505.963447917551",
+      "formula": "+(+Mercury!J8+Mercury!J11)/1000"
+    },
+    "J12": {
+      "value": "32877.958386773993",
+      "formula": "+(+Mercury!K8+Mercury!K11)/1000"
+    },
+    "K12": {
+      "value": "29332.506617298095",
+      "formula": "+(+Mercury!L8+Mercury!L11)/1000"
+    },
+    "L12": {
+      "value": "33151.595902857029",
+      "formula": "+(+Mercury!M8+Mercury!M11)/1000"
+    },
+    "M12": {
+      "value": "35745.723609034481",
+      "formula": "+(+Mercury!N8+Mercury!N11)/1000"
+    },
+    "N12": {
+      "value": "36569.177811897243",
+      "formula": "+(+Mercury!O8+Mercury!O11)/1000"
+    },
+    "C13": {
+      "value": "AMD Desktop/NB MPU share",
+      "formula": null
+    },
+    "D13": {
+      "value": "3.9001728589874274E-2",
+      "formula": "D11/D12"
+    },
+    "E13": {
+      "value": "5.292311445109036E-2",
+      "formula": "E11/E12"
+    },
+    "F13": {
+      "value": "8.6892997414693501E-2",
+      "formula": null
+    },
+    "G13": {
+      "value": "0.11025094921397981",
+      "formula": null
+    },
+    "H13": {
+      "value": "0.14230099653557179",
+      "formula": null
+    },
+    "I13": {
+      "value": "0.16593434882032501",
+      "formula": null
+    },
+    "J13": {
+      "value": "0.18861396680575174",
+      "formula": null
+    },
+    "K13": {
+      "value": "0.15865567109673184",
+      "formula": null
+    },
+    "L13": {
+      "value": "0.2127578709620852",
+      "formula": "L11/L12"
+    },
+    "M13": {
+      "value": "0.28118420233582131",
+      "formula": "M11/M12"
+    },
+    "N13": {
+      "value": "0.29701840883029396",
+      "formula": "N11/N12"
+    },
+    "B14": {
+      "value": "PC Gaming",
+      "formula": null
+    },
+    "C14": {
+      "value": "Discrete graphics",
+      "formula": null
+    },
+    "D14": {
+      "value": "850.03",
+      "formula": null
+    },
+    "E14": {
+      "value": "696.04353279861959",
+      "formula": null
+    },
+    "F14": {
+      "value": "1308.3453080349059",
+      "formula": null
+    },
+    "G14": {
+      "value": "841.95121951219494",
+      "formula": null
+    },
+    "H14": {
+      "value": "869.85365853658527",
+      "formula": null
+    },
+    "I14": {
+      "value": "2143",
+      "formula": null
+    },
+    "J14": {
+      "value": "1300",
+      "formula": null
+    },
+    "K14": {
+      "value": "858.19",
+      "formula": null
+    },
+    "L14": {
+      "value": "707",
+      "formula": null
+    },
+    "M14": {
+      "value": "1544.6",
+      "formula": null
+    },
+    "N14": {
+      "value": "1859.5007999999998",
+      "formula": null
+    },
+    "C15": {
+      "value": "Discrete graphics market",
+      "formula": null
+    },
+    "D15": {
+      "value": "4730.7866000000004",
+      "formula": "+Mercury!D26/1000"
+    },
+    "E15": {
+      "value": "5967.3095999999996",
+      "formula": "+Mercury!E26/1000"
+    },
+    "F15": {
+      "value": "6920.3188499999997",
+      "formula": "+Mercury!F26/1000"
+    },
+    "G15": {
+      "value": "6179.669100000001",
+      "formula": "+Mercury!G26/1000"
+    },
+    "H15": {
+      "value": "8220.8638499999997",
+      "formula": "+Mercury!H26/1000"
+    },
+    "I15": {
+      "value": "13104.02895",
+      "formula": "+Mercury!I26/1000"
+    },
+    "J15": {
+      "value": "10131.278749999999",
+      "formula": "+Mercury!J26/1000"
+    },
+    "K15": {
+      "value": "12279.469600000002",
+      "formula": "+Mercury!K26/1000"
+    },
+    "L15": {
+      "value": "14772.7189",
+      "formula": "+Mercury!L26/1000"
+    },
+    "M15": {
+      "value": "18646.617132719999",
+      "formula": "+Mercury!M26/1000"
+    },
+    "N15": {
+      "value": "18461.495039330002",
+      "formula": "+Mercury!N26/1000"
+    },
+    "C16": {
+      "value": "AMD discrete graphic share",
+      "formula": null
+    },
+    "D16": {
+      "value": "0.17968047850647076",
+      "formula": "D14/D15"
+    },
+    "E16": {
+      "value": "0.11664277194510231",
+      "formula": "E14/E15"
+    },
+    "F16": {
+      "value": "0.18905852987321617",
+      "formula": null
+    },
+    "G16": {
+      "value": "0.13624535648877945",
+      "formula": null
+    },
+    "H16": {
+      "value": "0.10581049320462659",
+      "formula": null
+    },
+    "I16": {
+      "value": "0.16353748974280158",
+      "formula": null
+    },
+    "J16": {
+      "value": "0.12831549028300104",
+      "formula": null
+    },
+    "K16": {
+      "value": "6.988819777688117E-2",
+      "formula": null
+    },
+    "L16": {
+      "value": "4.7858488663180342E-2",
+      "formula": "L14/L15"
+    },
+    "M16": {
+      "value": "8.2835400598729819E-2",
+      "formula": "M14/M15"
+    },
+    "N16": {
+      "value": "0.10072319690461451",
+      "formula": "N14/N15"
+    },
+    "B17": {
+      "value": "Semi custom",
+      "formula": null
+    },
+    "C17": {
+      "value": "Game console/Semi-Custom",
+      "formula": null
+    },
+    "D17": {
+      "value": "1866.21",
+      "formula": null
+    },
+    "E17": {
+      "value": "1996.1399999999999",
+      "formula": null
+    },
+    "F17": {
+      "value": "1685",
+      "formula": null
+    },
+    "G17": {
+      "value": "950",
+      "formula": null
+    },
+    "H17": {
+      "value": "1568",
+      "formula": null
+    },
+    "I17": {
+      "value": "3365",
+      "formula": null
+    },
+    "J17": {
+      "value": "5505",
+      "formula": null
+    },
+    "K17": {
+      "value": "5353.5",
+      "formula": null
+    },
+    "L17": {
+      "value": "1888",
+      "formula": null
+    },
+    "M17": {
+      "value": "2282",
+      "formula": null
+    },
+    "N17": {
+      "value": "2300",
+      "formula": null
+    },
+    "C18": {
+      "value": "Others/Crypto",
+      "formula": null
+    },
+    "D18": {
+      "value": "447.98874999999953",
+      "formula": "+D20-D4-D11-D14-D17-D19"
+    },
+    "E18": {
+      "value": "905.95737591900752",
+      "formula": null
+    },
+    "F18": {
+      "value": "92.048592771898257",
+      "formula": null
+    },
+    "G18": {
+      "value": "172.30449999999951",
+      "formula": null
+    },
+    "H18": {
+      "value": "0.4601114702529685",
+      "formula": null
+    },
+    "I18": {
+      "value": "99.664893109588945",
+      "formula": "+I20-I4-I11-I14-I17-I19"
+    },
+    "J18": {
+      "value": "8.5011396124173189E-2",
+      "formula": "+J20-J4-J11-J14-J17-J19"
+    },
+    "K18": {
+      "value": "-1.4091100487621588",
+      "formula": null
+    },
+    "L18": {
+      "value": "0.83475411596555205",
+      "formula": "+L20-L4-L11-L14-L17-L19"
+    },
+    "M18": {
+      "value": "-8.5278749311682986",
+      "formula": "+M20-M4-M11-M14-M17-M19"
+    },
+    "N18": {
+      "value": "8.1854523159563541E-12",
+      "formula": null
+    },
+    "C19": {
+      "value": "Embedded",
+      "formula": null
+    },
+    "H19": {
+      "value": "140",
+      "formula": null
+    },
+    "I19": {
+      "value": "245.8",
+      "formula": null
+    },
+    "J19": {
+      "value": "4552.6499999999996",
+      "formula": null
+    },
+    "K19": {
+      "value": "5321",
+      "formula": null
+    },
+    "L19": {
+      "value": "3557",
+      "formula": null
+    },
+    "M19": {
+      "value": "3608.5320000000002",
+      "formula": null
+    },
+    "N19": {
+      "value": "4192.0197255080011",
+      "formula": null
+    },
+    "C20": {
+      "value": "AMD total revenue (US$mn)",
+      "formula": null
+    },
+    "D20": {
+      "value": "4319",
+      "formula": null
+    },
+    "E20": {
+      "value": "5253",
+      "formula": null
+    },
+    "F20": {
+      "value": "6475",
+      "formula": null
+    },
+    "G20": {
+      "value": "6731",
+      "formula": null
+    },
+    "H20": {
+      "value": "9763",
+      "formula": null
+    },
+    "I20": {
+      "value": "16434",
+      "formula": null
+    },
+    "J20": {
+      "value": "23601",
+      "formula": null
+    },
+    "K20": {
+      "value": "22680",
+      "formula": null
+    },
+    "L20": {
+      "value": "25785",
+      "formula": null
+    },
+    "M20": {
+      "value": "33413.805628247545",
+      "formula": null
+    },
+    "N20": {
+      "value": "42350.628222221232",
+      "formula": null
+    },
+    "C21": {
+      "value": "   YoY Growth",
+      "formula": null
+    },
+    "E21": {
+      "value": "0.21625376244501049",
+      "formula": "E20/D20-1"
+    },
+    "F21": {
+      "value": "0.23262897391966497",
+      "formula": null
+    },
+    "G21": {
+      "value": "3.9536679536679609E-2",
+      "formula": null
+    },
+    "H21": {
+      "value": "0.45045312732134901",
+      "formula": null
+    },
+    "I21": {
+      "value": "0.68329406944586712",
+      "formula": null
+    },
+    "J21": {
+      "value": "0.43610806863818907",
+      "formula": null
+    },
+    "K21": {
+      "value": "-3.9023770179229644E-2",
+      "formula": null
+    },
+    "L21": {
+      "value": "0.13690476190476186",
+      "formula": null
+    },
+    "M21": {
+      "value": "0.29586215350969725",
+      "formula": null
+    },
+    "N21": {
+      "value": "0.26745898666563828",
+      "formula": null
+    },
+    "C22": {
+      "value": "AMD GMs",
+      "formula": null
+    },
+    "D22": {
+      "value": "2016",
+      "formula": "D3"
+    },
+    "E22": {
+      "value": "2017",
+      "formula": "E3"
+    },
+    "F22": {
+      "value": "2018",
+      "formula": null
+    },
+    "G22": {
+      "value": "2019",
+      "formula": null
+    },
+    "H22": {
+      "value": "2020",
+      "formula": null
+    },
+    "I22": {
+      "value": "2021",
+      "formula": null
+    },
+    "J22": {
+      "value": "2022",
+      "formula": null
+    },
+    "K22": {
+      "value": "2023",
+      "formula": null
+    },
+    "L22": {
+      "value": "2024",
+      "formula": "L3"
+    },
+    "M22": {
+      "value": "2025E",
+      "formula": "M3"
+    },
+    "N22": {
+      "value": "2026E",
+      "formula": "N3"
+    },
+    "C23": {
+      "value": "Server & AI",
+      "formula": null
+    },
+    "D23": {
+      "value": "0.45",
+      "formula": null
+    },
+    "E23": {
+      "value": "0.47",
+      "formula": null
+    },
+    "F23": {
+      "value": "0.5",
+      "formula": null
+    },
+    "G23": {
+      "value": "0.5",
+      "formula": null
+    },
+    "H23": {
+      "value": "0.51",
+      "formula": null
+    },
+    "I23": {
+      "value": "0.58099999999999996",
+      "formula": null
+    },
+    "J23": {
+      "value": "0.56830000000000003",
+      "formula": null
+    },
+    "K23": {
+      "value": "0.53400000000000003",
+      "formula": null
+    },
+    "L23": {
+      "value": "0.54",
+      "formula": null
+    },
+    "M23": {
+      "value": "0.53554999999999997",
+      "formula": null
+    },
+    "N23": {
+      "value": "0.56999999999999995",
+      "formula": null
+    },
+    "C24": {
+      "value": "Desktop/NB MPU",
+      "formula": null
+    },
+    "D24": {
+      "value": "0.45",
+      "formula": null
+    },
+    "E24": {
+      "value": "0.46600000000000003",
+      "formula": null
+    },
+    "F24": {
+      "value": "0.48",
+      "formula": null
+    },
+    "G24": {
+      "value": "0.49049999999999999",
+      "formula": null
+    },
+    "H24": {
+      "value": "0.51100000000000001",
+      "formula": null
+    },
+    "I24": {
+      "value": "0.56000000000000005",
+      "formula": null
+    },
+    "J24": {
+      "value": "0.54239999999999999",
+      "formula": null
+    },
+    "K24": {
+      "value": "0.5",
+      "formula": null
+    },
+    "L24": {
+      "value": "0.51475000000000004",
+      "formula": null
+    },
+    "M24": {
+      "value": "0.49",
+      "formula": null
+    },
+    "N24": {
+      "value": "0.51070000000000004",
+      "formula": null
+    },
+    "C25": {
+      "value": "Discrete graphic",
+      "formula": null
+    },
+    "D25": {
+      "value": "0.28399999999999997",
+      "formula": null
+    },
+    "E25": {
+      "value": "0.32",
+      "formula": null
+    },
+    "F25": {
+      "value": "0.28000000000000003",
+      "formula": null
+    },
+    "G25": {
+      "value": "0.28000000000000003",
+      "formula": null
+    },
+    "H25": {
+      "value": "0.28000000000000003",
+      "formula": null
+    },
+    "I25": {
+      "value": "0.4",
+      "formula": null
+    },
+    "J25": {
+      "value": "0.4",
+      "formula": null
+    },
+    "K25": {
+      "value": "0.39",
+      "formula": null
+    },
+    "L25": {
+      "value": "0.39500000000000002",
+      "formula": null
+    },
+    "M25": {
+      "value": "0.39",
+      "formula": null
+    },
+    "N25": {
+      "value": "0.40500000000000003",
+      "formula": null
+    },
+    "C26": {
+      "value": "Gaming",
+      "formula": null
+    },
+    "D26": {
+      "value": "0.28000000000000003",
+      "formula": null
+    },
+    "E26": {
+      "value": "0.33",
+      "formula": null
+    },
+    "F26": {
+      "value": "0.28349999999999997",
+      "formula": null
+    },
+    "G26": {
+      "value": "0.28000000000000003",
+      "formula": null
+    },
+    "H26": {
+      "value": "0.28000000000000003",
+      "formula": null
+    },
+    "I26": {
+      "value": "0.31480000000000002",
+      "formula": null
+    },
+    "J26": {
+      "value": "0.32129999999999997",
+      "formula": null
+    },
+    "K26": {
+      "value": "0.2954",
+      "formula": null
+    },
+    "L26": {
+      "value": "0.3",
+      "formula": null
+    },
+    "M26": {
+      "value": "0.29499999999999998",
+      "formula": null
+    },
+    "N26": {
+      "value": "0.33500000000000002",
+      "formula": null
+    },
+    "C27": {
+      "value": "Others",
+      "formula": null
+    },
+    "D27": {
+      "value": "0.13700000000000001",
+      "formula": null
+    },
+    "E27": {
+      "value": "0.15",
+      "formula": null
+    },
+    "F27": {
+      "value": "0.15",
+      "formula": "E27"
+    },
+    "G27": {
+      "value": "0.14000000000000001",
+      "formula": null
+    },
+    "H27": {
+      "value": "0.14000000000000001",
+      "formula": null
+    },
+    "I27": {
+      "value": "0.15",
+      "formula": null
+    },
+    "J27": {
+      "value": "0.15",
+      "formula": null
+    },
+    "K27": {
+      "value": "0.15",
+      "formula": null
+    },
+    "L27": {
+      "value": "0.15",
+      "formula": null
+    },
+    "M27": {
+      "value": "0.14499999999999999",
+      "formula": null
+    },
+    "N27": {
+      "value": "0.14499999999999999",
+      "formula": null
+    },
+    "C28": {
+      "value": "Embedded",
+      "formula": null
+    },
+    "H28": {
+      "value": "0.7",
+      "formula": null
+    },
+    "I28": {
+      "value": "0.7",
+      "formula": null
+    },
+    "J28": {
+      "value": "0.7",
+      "formula": null
+    },
+    "K28": {
+      "value": "0.7",
+      "formula": null
+    },
+    "L28": {
+      "value": "0.7",
+      "formula": null
+    },
+    "M28": {
+      "value": "0.69499999999999995",
+      "formula": null
+    },
+    "N28": {
+      "value": "0.7",
+      "formula": null
+    },
+    "C29": {
+      "value": "AMD GMs",
+      "formula": null
+    },
+    "D29": {
+      "value": "0.31140746498031951",
+      "formula": "D37/D20"
+    },
+    "E29": {
+      "value": "0.34051362524671525",
+      "formula": null
+    },
+    "F29": {
+      "value": "0.38551535624500366",
+      "formula": null
+    },
+    "G29": {
+      "value": "0.42705401404585985",
+      "formula": null
+    },
+    "H29": {
+      "value": "0.44579274951578257",
+      "formula": null
+    },
+    "I29": {
+      "value": "0.48278630070068568",
+      "formula": null
+    },
+    "J29": {
+      "value": "0.52001438807683065",
+      "formula": null
+    },
+    "K29": {
+      "value": "0.50422374376102097",
+      "formula": null
+    },
+    "L29": {
+      "value": "0.53360343440262825",
+      "formula": "L37/L20"
+    },
+    "M29": {
+      "value": "0.51601107808147417",
+      "formula": "M37/M20"
+    },
+    "N29": {
+      "value": "0.54765192526144102",
+      "formula": "N37/N20"
+    },
+    "C30": {
+      "value": "AMD Gross profit",
+      "formula": null
+    },
+    "D30": {
+      "value": "2016",
+      "formula": "D3"
+    },
+    "E30": {
+      "value": "2017",
+      "formula": "E3"
+    },
+    "F30": {
+      "value": "2018",
+      "formula": null
+    },
+    "G30": {
+      "value": "2019",
+      "formula": null
+    },
+    "H30": {
+      "value": "2020",
+      "formula": null
+    },
+    "I30": {
+      "value": "2021",
+      "formula": null
+    },
+    "J30": {
+      "value": "2022",
+      "formula": null
+    },
+    "K30": {
+      "value": "2023",
+      "formula": null
+    },
+    "L30": {
+      "value": "2024",
+      "formula": "L3"
+    },
+    "M30": {
+      "value": "2025E",
+      "formula": "M3"
+    },
+    "N30": {
+      "value": "2026E",
+      "formula": "N3"
+    },
+    "C31": {
+      "value": "Server & AI",
+      "formula": "C23"
+    },
+    "D31": {
+      "value": "7.5605624999999996",
+      "formula": "D4*D23"
+    },
+    "E31": {
+      "value": "23.5",
+      "formula": "E4*E23"
+    },
+    "F31": {
+      "value": "283.98822270265953",
+      "formula": null
+    },
+    "G31": {
+      "value": "554.92250000000001",
+      "formula": null
+    },
+    "H31": {
+      "value": "899.37989999999991",
+      "formula": null
+    },
+    "I31": {
+      "value": "2145.7899222899996",
+      "formula": null
+    },
+    "J31": {
+      "value": "3433.6815781534397",
+      "formula": null
+    },
+    "K31": {
+      "value": "3468.303613848891",
+      "formula": null
+    },
+    "L31": {
+      "value": "6792.607232602265",
+      "formula": "L4*L23"
+    },
+    "M31": {
+      "value": "8534.5616047395451",
+      "formula": "M4*M23"
+    },
+    "N31": {
+      "value": "13188.311553751104",
+      "formula": "N4*N23"
+    },
+    "C32": {
+      "value": "Desktop/NB MPU",
+      "formula": "C24"
+    },
+    "D32": {
+      "value": "512.0865",
+      "formula": "D11*D24"
+    },
+    "E32": {
+      "value": "747.86433653758581",
+      "formula": "E11*E24"
+    },
+    "F32": {
+      "value": "1354.3822338181808",
+      "formula": null
+    },
+    "G32": {
+      "value": "1793.7090970792685",
+      "formula": null
+    },
+    "H32": {
+      "value": "2770.2312735265059",
+      "formula": null
+    },
+    "I32": {
+      "value": "3856.8684094586306",
+      "formula": null
+    },
+    "J32": {
+      "value": "3363.5537431384232",
+      "formula": null
+    },
+    "K32": {
+      "value": "2326.8842611583786",
+      "formula": null
+    },
+    "L32": {
+      "value": "3630.6671103521116",
+      "formula": "L11*L24"
+    },
+    "M32": {
+      "value": "4925.055062162317",
+      "formula": "M11*M24"
+    },
+    "N32": {
+      "value": "5547.0798963242687",
+      "formula": "N11*N24"
+    },
+    "C33": {
+      "value": "Discrete graphic",
+      "formula": "C25"
+    },
+    "D33": {
+      "value": "241.40851999999998",
+      "formula": "D14*D25"
+    },
+    "E33": {
+      "value": "222.73393049555827",
+      "formula": "E14*E25"
+    },
+    "F33": {
+      "value": "366.33668624977366",
+      "formula": null
+    },
+    "G33": {
+      "value": "235.74634146341461",
+      "formula": null
+    },
+    "H33": {
+      "value": "243.55902439024391",
+      "formula": null
+    },
+    "I33": {
+      "value": "857.2",
+      "formula": null
+    },
+    "J33": {
+      "value": "520",
+      "formula": null
+    },
+    "K33": {
+      "value": "334.69410000000005",
+      "formula": null
+    },
+    "L33": {
+      "value": "279.26499999999999",
+      "formula": "L14*L25"
+    },
+    "M33": {
+      "value": "602.39400000000001",
+      "formula": "M14*M25"
+    },
+    "N33": {
+      "value": "753.09782399999995",
+      "formula": "N14*N25"
+    },
+    "C34": {
+      "value": "Gaming",
+      "formula": "C26"
+    },
+    "D34": {
+      "value": "522.53880000000004",
+      "formula": "D17*D26"
+    },
+    "E34": {
+      "value": "658.72619999999995",
+      "formula": null
+    },
+    "F34": {
+      "value": "477.69749999999993",
+      "formula": null
+    },
+    "G34": {
+      "value": "266",
+      "formula": null
+    },
+    "H34": {
+      "value": "439.04",
+      "formula": null
+    },
+    "I34": {
+      "value": "1059.3020000000001",
+      "formula": null
+    },
+    "J34": {
+      "value": "1768.7565",
+      "formula": null
+    },
+    "K34": {
+      "value": "1581.4239",
+      "formula": null
+    },
+    "L34": {
+      "value": "566.4",
+      "formula": null
+    },
+    "M34": {
+      "value": "673.18999999999994",
+      "formula": "M17*M26"
+    },
+    "N34": {
+      "value": "770.5",
+      "formula": null
+    },
+    "C35": {
+      "value": "Others",
+      "formula": "C27"
+    },
+    "D35": {
+      "value": "61.374458749999938",
+      "formula": null
+    },
+    "E35": {
+      "value": "135.89360638785112",
+      "formula": null
+    },
+    "F35": {
+      "value": "13.807288915784738",
+      "formula": null
+    },
+    "G35": {
+      "value": "24.122629999999933",
+      "formula": null
+    },
+    "H35": {
+      "value": "6.4415605835415599E-2",
+      "formula": null
+    },
+    "I35": {
+      "value": "14.949733966438341",
+      "formula": null
+    },
+    "J35": {
+      "value": "1.2751709418625978E-2",
+      "formula": null
+    },
+    "K35": {
+      "value": "-0.21136650731432383",
+      "formula": null
+    },
+    "L35": {
+      "value": "0.12521311739483279",
+      "formula": null
+    },
+    "M35": {
+      "value": "-1.2365418650194031",
+      "formula": "M18*M27"
+    },
+    "N35": {
+      "value": "1.1868905858136713E-12",
+      "formula": null
+    },
+    "C36": {
+      "value": "Embedded",
+      "formula": null
+    },
+    "H36": {
+      "value": "98",
+      "formula": "H19*H28"
+    },
+    "I36": {
+      "value": "172.06",
+      "formula": "I19*I28"
+    },
+    "J36": {
+      "value": "3186.8549999999996",
+      "formula": "J19*J28"
+    },
+    "K36": {
+      "value": "3724.7",
+      "formula": "K19*K28"
+    },
+    "L36": {
+      "value": "2489.8999999999996",
+      "formula": null
+    },
+    "M36": {
+      "value": "2507.92974",
+      "formula": "M19*M28"
+    },
+    "N36": {
+      "value": "2934.4138078556007",
+      "formula": null
+    },
+    "C37": {
+      "value": "AMD Gross Profit (US$mn)",
+      "formula": null
+    },
+    "D37": {
+      "value": "1344.96884125",
+      "formula": "SUM(D31:D35)"
+    },
+    "E37": {
+      "value": "1788.7180734209953",
+      "formula": null
+    },
+    "F37": {
+      "value": "2496.2119316863987",
+      "formula": null
+    },
+    "G37": {
+      "value": "2874.5005685426827",
+      "formula": null
+    },
+    "H37": {
+      "value": "4352.2746135225852",
+      "formula": null
+    },
+    "I37": {
+      "value": "7934.1100657150682",
+      "formula": null
+    },
+    "J37": {
+      "value": "12272.85957300128",
+      "formula": "SUM(J31:J36)"
+    },
+    "K37": {
+      "value": "11435.794508499956",
+      "formula": null
+    },
+    "L37": {
+      "value": "13758.964556071771",
+      "formula": "SUM(L31:L36)"
+    },
+    "M37": {
+      "value": "17241.893865036844",
+      "formula": "SUM(M31:M36)"
+    },
+    "N37": {
+      "value": "23193.403081930977",
+      "formula": null
+    },
+    "C38": {
+      "value": "Check: Non-GAAP in model",
+      "formula": null
+    },
+    "D38": {
+      "value": "1345",
+      "formula": null
+    },
+    "E38": {
+      "value": "1789",
+      "formula": null
+    },
+    "F38": {
+      "value": "2495.59",
+      "formula": null
+    },
+    "G38": {
+      "value": "2874",
+      "formula": null
+    },
+    "H38": {
+      "value": "4352",
+      "formula": null
+    },
+    "I38": {
+      "value": "7934",
+      "formula": null
+    },
+    "J38": {
+      "value": "12273",
+      "formula": null
+    },
+    "K38": {
+      "value": "11436",
+      "formula": null
+    },
+    "L38": {
+      "value": "13759",
+      "formula": null
+    },
+    "M38": {
+      "value": "17241.79705170785",
+      "formula": null
+    },
+    "N38": {
+      "value": "23193.331403741799",
+      "formula": null
+    },
+    "C39": {
+      "value": "AMD Foundry Production",
+      "formula": null
+    },
+    "D39": {
+      "value": "2016",
+      "formula": "D3"
+    },
+    "E39": {
+      "value": "2017",
+      "formula": null
+    },
+    "F39": {
+      "value": "2018",
+      "formula": null
+    },
+    "G39": {
+      "value": "2019",
+      "formula": null
+    },
+    "H39": {
+      "value": "2020",
+      "formula": null
+    },
+    "I39": {
+      "value": "2021",
+      "formula": null
+    },
+    "J39": {
+      "value": "2022",
+      "formula": null
+    },
+    "K39": {
+      "value": "2023",
+      "formula": null
+    },
+    "L39": {
+      "value": "2024",
+      "formula": null
+    },
+    "M39": {
+      "value": "2025E",
+      "formula": null
+    },
+    "N39": {
+      "value": "2026E",
+      "formula": null
+    },
+    "C40": {
+      "value": "Server & AI",
+      "formula": "C31"
+    },
+    "D40": {
+      "value": "7.854584375",
+      "formula": "D4*(1-D23)*85%"
+    },
+    "E40": {
+      "value": "19.875",
+      "formula": "E4*(1-E23)*75%"
+    },
+    "F40": {
+      "value": "218.04615739110199",
+      "formula": "F4*(1-F23)*76.78%"
+    },
+    "G40": {
+      "value": "416.19187499999998",
+      "formula": "G4*(1-G23)*75%"
+    },
+    "H40": {
+      "value": "648.08257499999991",
+      "formula": null
+    },
+    "I40": {
+      "value": "1160.6101257824998",
+      "formula": null
+    },
+    "J40": {
+      "value": "1956.2559439849194",
+      "formula": null
+    },
+    "K40": {
+      "value": "2269.9852304123356",
+      "formula": null
+    },
+    "L40": {
+      "value": "4339.7212874958905",
+      "formula": "L4*(1-L23)*75%"
+    },
+    "M40": {
+      "value": "5551.1303388870538",
+      "formula": "M4*(1-M23)*75%"
+    },
+    "N40": {
+      "value": "7461.8078527802318",
+      "formula": null
+    },
+    "C41": {
+      "value": "Desktop/NB MPU",
+      "formula": "C32"
+    },
+    "D41": {
+      "value": "532.00097500000004",
+      "formula": "D11*(1-D24)*85%"
+    },
+    "E41": {
+      "value": "642.74606605859037",
+      "formula": "E11*(1-E24)*75%"
+    },
+    "F41": {
+      "value": "1126.5525690527325",
+      "formula": "F11*(1-F24)*76.78%"
+    },
+    "G41": {
+      "value": "1397.3926375564029",
+      "formula": "G11*(1-G24)*75%"
+    },
+    "H41": {
+      "value": "1988.2237173499921",
+      "formula": null
+    },
+    "I41": {
+      "value": "2272.7974555738356",
+      "formula": null
+    },
+    "J41": {
+      "value": "2128.2663064990907",
+      "formula": null
+    },
+    "K41": {
+      "value": "1745.163195868784",
+      "formula": null
+    },
+    "L41": {
+      "value": "2566.9468897013526",
+      "formula": "L11*(1-L24)*75%"
+    },
+    "M41": {
+      "value": "3844.5582883205848",
+      "formula": null
+    },
+    "N41": {
+      "value": "3985.979332198156",
+      "formula": null
+    },
+    "C42": {
+      "value": "Discrete graphic",
+      "formula": "C33"
+    },
+    "D42": {
+      "value": "517.32825799999989",
+      "formula": "D14*(1-D25)*85%"
+    },
+    "E42": {
+      "value": "354.982201727296",
+      "formula": "E14*(1-E25)*75%"
+    },
+    "F42": {
+      "value": "723.2742198066245",
+      "formula": "F14*(1-F25)*76.78%"
+    },
+    "G42": {
+      "value": "454.65365853658523",
+      "formula": "G14*(1-G25)*75%"
+    },
+    "H42": {
+      "value": "469.72097560975607",
+      "formula": null
+    },
+    "I42": {
+      "value": "964.34999999999991",
+      "formula": null
+    },
+    "J42": {
+      "value": "585",
+      "formula": null
+    },
+    "K42": {
+      "value": "392.62192500000003",
+      "formula": null
+    },
+    "L42": {
+      "value": "320.80124999999998",
+      "formula": null
+    },
+    "M42": {
+      "value": "706.65449999999987",
+      "formula": null
+    },
+    "N42": {
+      "value": "829.80223199999989",
+      "formula": null
+    },
+    "C43": {
+      "value": "Gaming",
+      "formula": "C34"
+    },
+    "D43": {
+      "value": "1142.1205199999999",
+      "formula": "D17*(1-D26)*85%"
+    },
+    "E43": {
+      "value": "1003.0603499999999",
+      "formula": "E17*(1-E26)*75%"
+    },
+    "F43": {
+      "value": "926.96685950000006",
+      "formula": "F17*(1-F26)*76.78%"
+    },
+    "G43": {
+      "value": "513",
+      "formula": "G17*(1-G26)*75%"
+    },
+    "H43": {
+      "value": "846.72",
+      "formula": null
+    },
+    "I43": {
+      "value": "1729.2735000000002",
+      "formula": null
+    },
+    "J43": {
+      "value": "2802.1826250000004",
+      "formula": null
+    },
+    "K43": {
+      "value": "2829.0570750000002",
+      "formula": null
+    },
+    "L43": {
+      "value": "991.19999999999993",
+      "formula": null
+    },
+    "M43": {
+      "value": "1206.6075000000001",
+      "formula": null
+    },
+    "N43": {
+      "value": "1147.125",
+      "formula": null
+    },
+    "C44": {
+      "value": "Others",
+      "formula": "C35"
+    },
+    "D44": {
+      "value": "298.07961855374964",
+      "formula": "D18*(1-D27)*77.1%"
+    },
+    "E44": {
+      "value": "577.54782714836733",
+      "formula": "E18*(1-E27)*75%"
+    },
+    "F44": {
+      "value": "58.680977892085139",
+      "formula": "F18*(1-F27)*75%"
+    },
+    "G44": {
+      "value": "111.13640249999969",
+      "formula": null
+    },
+    "H44": {
+      "value": "0.29677189831316464",
+      "formula": null
+    },
+    "I44": {
+      "value": "63.53636935736295",
+      "formula": null
+    },
+    "J44": {
+      "value": "5.4194765029160402E-2",
+      "formula": null
+    },
+    "K44": {
+      "value": "-0.89830765608587626",
+      "formula": null
+    },
+    "L44": {
+      "value": "0.53215574892803941",
+      "formula": null
+    },
+    "M44": {
+      "value": "-5.4684997996116715",
+      "formula": null
+    },
+    "N44": {
+      "value": "5.2489212976070123E-12",
+      "formula": null
+    },
+    "C45": {
+      "value": "Embedded",
+      "formula": null
+    },
+    "D45": {
+      "value": "0",
+      "formula": "D19*(1-D28)*77.1%"
+    },
+    "E45": {
+      "value": "0",
+      "formula": "E19*(1-E28)*75%"
+    },
+    "F45": {
+      "value": "0",
+      "formula": "F19*(1-F28)*75%"
+    },
+    "G45": {
+      "value": "0",
+      "formula": null
+    },
+    "H45": {
+      "value": "31.500000000000007",
+      "formula": null
+    },
+    "I45": {
+      "value": "55.305000000000007",
+      "formula": null
+    },
+    "J45": {
+      "value": "1024.3462500000001",
+      "formula": null
+    },
+    "K45": {
+      "value": "1197.2250000000001",
+      "formula": null
+    },
+    "L45": {
+      "value": "800.32500000000005",
+      "formula": null
+    },
+    "M45": {
+      "value": "825.45169500000009",
+      "formula": null
+    },
+    "N45": {
+      "value": "943.20443823930032",
+      "formula": null
+    },
+    "C46": {
+      "value": "Total Foundry manufacturing (US$mn)",
+      "formula": null
+    },
+    "D46": {
+      "value": "2497.3839559287494",
+      "formula": "SUM(D40:D44)"
+    },
+    "E46": {
+      "value": "2598.2114449342534",
+      "formula": null
+    },
+    "F46": {
+      "value": "3053.5207836425443",
+      "formula": null
+    },
+    "G46": {
+      "value": "2892.3745735929879",
+      "formula": null
+    },
+    "H46": {
+      "value": "3953.0440398580608",
+      "formula": null
+    },
+    "I46": {
+      "value": "6190.5674507136982",
+      "formula": null
+    },
+    "J46": {
+      "value": "8496.1053202490402",
+      "formula": "SUM(J40:J45)"
+    },
+    "K46": {
+      "value": "8433.1541186250324",
+      "formula": null
+    },
+    "L46": {
+      "value": "9019.5265829461732",
+      "formula": null
+    },
+    "M46": {
+      "value": "12128.933822408027",
+      "formula": null
+    },
+    "N46": {
+      "value": "14367.918855217693",
+      "formula": null
+    },
+    "C47": {
+      "value": "   YoY Growth",
+      "formula": null
+    },
+    "E47": {
+      "value": "4.0373242875266113E-2",
+      "formula": "E46/D46-1"
+    },
+    "F47": {
+      "value": "0.17523952471074278",
+      "formula": "F46/E46-1"
+    },
+    "G47": {
+      "value": "-5.2773903132673383E-2",
+      "formula": null
+    },
+    "H47": {
+      "value": "0.36671234630149585",
+      "formula": null
+    },
+    "I47": {
+      "value": "0.56602541947293328",
+      "formula": null
+    },
+    "J47": {
+      "value": "0.37242755012216877",
+      "formula": null
+    },
+    "K47": {
+      "value": "-7.4094186984681176E-3",
+      "formula": null
+    },
+    "L47": {
+      "value": "6.9531809341194073E-2",
+      "formula": null
+    },
+    "M47": {
+      "value": "0.3447417345984678",
+      "formula": null
+    },
+    "N47": {
+      "value": "0.18459866840671291",
+      "formula": null
+    },
+    "C49": {
+      "value": "AMD Share and Production (US$mn)",
+      "formula": null
+    },
+    "D49": {
+      "value": "2016",
+      "formula": "D39"
+    },
+    "E49": {
+      "value": "2017",
+      "formula": null
+    },
+    "F49": {
+      "value": "2018",
+      "formula": null
+    },
+    "G49": {
+      "value": "2019",
+      "formula": null
+    },
+    "H49": {
+      "value": "2020",
+      "formula": null
+    },
+    "I49": {
+      "value": "2021",
+      "formula": null
+    },
+    "J49": {
+      "value": "2022",
+      "formula": null
+    },
+    "K49": {
+      "value": "2023",
+      "formula": null
+    },
+    "L49": {
+      "value": "2024",
+      "formula": "L39"
+    },
+    "M49": {
+      "value": "2025E",
+      "formula": "M39"
+    },
+    "N49": {
+      "value": "2026E",
+      "formula": "N39"
+    },
+    "C50": {
+      "value": "Server & AI share",
+      "formula": null
+    },
+    "D50": {
+      "value": "1.0679167222298637E-3",
+      "formula": "D10"
+    },
+    "E50": {
+      "value": "2.202391287671468E-3",
+      "formula": null
+    },
+    "F50": {
+      "value": "1.7016737085393682E-2",
+      "formula": null
+    },
+    "G50": {
+      "value": "4.0175354512983263E-2",
+      "formula": null
+    },
+    "H50": {
+      "value": "6.589752048813953E-2",
+      "formula": null
+    },
+    "I50": {
+      "value": "0.12802523295744114",
+      "formula": null
+    },
+    "J50": {
+      "value": "0.22617971542969151",
+      "formula": null
+    },
+    "K50": {
+      "value": "0.28853422858175271",
+      "formula": null
+    },
+    "L50": {
+      "value": "0.32731048533488433",
+      "formula": null
+    },
+    "M50": {
+      "value": "0.37297574887298046",
+      "formula": null
+    },
+    "N50": {
+      "value": "0.35679943806301317",
+      "formula": null
+    },
+    "C51": {
+      "value": "Desktop/Notebook share",
+      "formula": null
+    },
+    "D51": {
+      "value": "3.9001728589874274E-2",
+      "formula": "D13"
+    },
+    "E51": {
+      "value": "5.292311445109036E-2",
+      "formula": null
+    },
+    "F51": {
+      "value": "8.6892997414693501E-2",
+      "formula": null
+    },
+    "G51": {
+      "value": "0.11025094921397981",
+      "formula": null
+    },
+    "H51": {
+      "value": "0.14230099653557179",
+      "formula": null
+    },
+    "I51": {
+      "value": "0.16593434882032501",
+      "formula": null
+    },
+    "J51": {
+      "value": "0.18861396680575174",
+      "formula": null
+    },
+    "K51": {
+      "value": "0.15865567109673184",
+      "formula": null
+    },
+    "L51": {
+      "value": "0.2127578709620852",
+      "formula": null
+    },
+    "M51": {
+      "value": "0.28118420233582131",
+      "formula": null
+    },
+    "N51": {
+      "value": "0.29701840883029396",
+      "formula": null
+    },
+    "C52": {
+      "value": "Discrete graphic share",
+      "formula": null
+    },
+    "D52": {
+      "value": "0.17968047850647076",
+      "formula": "D16"
+    },
+    "E52": {
+      "value": "0.11664277194510231",
+      "formula": null
+    },
+    "F52": {
+      "value": "0.18905852987321617",
+      "formula": null
+    },
+    "G52": {
+      "value": "0.13624535648877945",
+      "formula": null
+    },
+    "H52": {
+      "value": "0.10581049320462659",
+      "formula": null
+    },
+    "I52": {
+      "value": "0.16353748974280158",
+      "formula": null
+    },
+    "J52": {
+      "value": "0.12831549028300104",
+      "formula": null
+    },
+    "K52": {
+      "value": "6.988819777688117E-2",
+      "formula": null
+    },
+    "L52": {
+      "value": "4.7858488663180342E-2",
+      "formula": null
+    },
+    "M52": {
+      "value": "8.2835400598729819E-2",
+      "formula": null
+    },
+    "N52": {
+      "value": "0.10072319690461451",
+      "formula": null
+    },
+    "C53": {
+      "value": "Server & AI Wafers",
+      "formula": null
+    },
+    "D53": {
+      "value": "7.854584375",
+      "formula": "D40"
+    },
+    "E53": {
+      "value": "19.875",
+      "formula": null
+    },
+    "F53": {
+      "value": "218.04615739110199",
+      "formula": null
+    },
+    "G53": {
+      "value": "416.19187499999998",
+      "formula": null
+    },
+    "H53": {
+      "value": "648.08257499999991",
+      "formula": null
+    },
+    "I53": {
+      "value": "1160.6101257824998",
+      "formula": null
+    },
+    "J53": {
+      "value": "1956.2559439849194",
+      "formula": null
+    },
+    "K53": {
+      "value": "2269.9852304123356",
+      "formula": null
+    },
+    "L53": {
+      "value": "4339.7212874958905",
+      "formula": null
+    },
+    "M53": {
+      "value": "5551.1303388870538",
+      "formula": null
+    },
+    "N53": {
+      "value": "7461.8078527802318",
+      "formula": null
+    },
+    "C54": {
+      "value": "Desktop/Notebook Wafers",
+      "formula": null
+    },
+    "D54": {
+      "value": "532.00097500000004",
+      "formula": null
+    },
+    "E54": {
+      "value": "642.74606605859037",
+      "formula": null
+    },
+    "F54": {
+      "value": "1126.5525690527325",
+      "formula": null
+    },
+    "G54": {
+      "value": "1397.3926375564029",
+      "formula": null
+    },
+    "H54": {
+      "value": "1988.2237173499921",
+      "formula": null
+    },
+    "I54": {
+      "value": "2272.7974555738356",
+      "formula": null
+    },
+    "J54": {
+      "value": "2128.2663064990907",
+      "formula": null
+    },
+    "K54": {
+      "value": "1745.163195868784",
+      "formula": null
+    },
+    "L54": {
+      "value": "2566.9468897013526",
+      "formula": null
+    },
+    "M54": {
+      "value": "3844.5582883205848",
+      "formula": null
+    },
+    "N54": {
+      "value": "3985.979332198156",
+      "formula": null
+    },
+    "C55": {
+      "value": "Graphic Wafers",
+      "formula": null
+    },
+    "D55": {
+      "value": "517.32825799999989",
+      "formula": null
+    },
+    "E55": {
+      "value": "354.982201727296",
+      "formula": null
+    },
+    "F55": {
+      "value": "723.2742198066245",
+      "formula": null
+    },
+    "G55": {
+      "value": "454.65365853658523",
+      "formula": null
+    },
+    "H55": {
+      "value": "469.72097560975607",
+      "formula": null
+    },
+    "I55": {
+      "value": "964.34999999999991",
+      "formula": null
+    },
+    "J55": {
+      "value": "585",
+      "formula": null
+    },
+    "K55": {
+      "value": "392.62192500000003",
+      "formula": null
+    },
+    "L55": {
+      "value": "320.80124999999998",
+      "formula": null
+    },
+    "M55": {
+      "value": "706.65449999999987",
+      "formula": null
+    },
+    "N55": {
+      "value": "829.80223199999989",
+      "formula": null
+    },
+    "C56": {
+      "value": "Gaming/Embedded Wafers",
+      "formula": null
+    },
+    "D56": {
+      "value": "1440.2001385537496",
+      "formula": "D44+D43"
+    },
+    "E56": {
+      "value": "1580.6081771483673",
+      "formula": null
+    },
+    "F56": {
+      "value": "985.64783739208519",
+      "formula": null
+    },
+    "G56": {
+      "value": "624.13640249999969",
+      "formula": null
+    },
+    "H56": {
+      "value": "847.01677189831321",
+      "formula": null
+    },
+    "I56": {
+      "value": "1792.8098693573631",
+      "formula": null
+    },
+    "J56": {
+      "value": "2802.2368197650294",
+      "formula": null
+    },
+    "K56": {
+      "value": "2828.1587673439144",
+      "formula": null
+    },
+    "L56": {
+      "value": "991.73215574892799",
+      "formula": "L44+L43"
+    },
+    "M56": {
+      "value": "1201.1390002003884",
+      "formula": "M44+M43"
+    },
+    "N56": {
+      "value": "1147.1250000000052",
+      "formula": "N44+N43"
+    },
+    "C57": {
+      "value": "Xilnx Wafers",
+      "formula": null
+    },
+    "D57": {
+      "value": "0",
+      "formula": "D45"
+    },
+    "E57": {
+      "value": "0",
+      "formula": null
+    },
+    "F57": {
+      "value": "0",
+      "formula": null
+    },
+    "G57": {
+      "value": "0",
+      "formula": null
+    },
+    "H57": {
+      "value": "31.500000000000007",
+      "formula": null
+    },
+    "I57": {
+      "value": "55.305000000000007",
+      "formula": null
+    },
+    "J57": {
+      "value": "1024.3462500000001",
+      "formula": null
+    },
+    "K57": {
+      "value": "1197.2250000000001",
+      "formula": null
+    },
+    "L57": {
+      "value": "800.32500000000005",
+      "formula": "L45"
+    },
+    "M57": {
+      "value": "825.45169500000009",
+      "formula": "M45"
+    },
+    "N57": {
+      "value": "943.20443823930032",
+      "formula": "N45"
+    },
+    "C58": {
+      "value": "Total Foundry Production",
+      "formula": null
+    },
+    "D58": {
+      "value": "2497.3839559287494",
+      "formula": "SUM(D56,D55,D54,D53,D57)"
+    },
+    "E58": {
+      "value": "2598.2114449342534",
+      "formula": null
+    },
+    "F58": {
+      "value": "3053.5207836425443",
+      "formula": null
+    },
+    "G58": {
+      "value": "2892.3745735929879",
+      "formula": null
+    },
+    "H58": {
+      "value": "3984.5440398580613",
+      "formula": null
+    },
+    "I58": {
+      "value": "6245.8724507136994",
+      "formula": null
+    },
+    "J58": {
+      "value": "8496.1053202490402",
+      "formula": null
+    },
+    "K58": {
+      "value": "8433.1541186250342",
+      "formula": "SUM(K56,K55,K54,K53,K57)"
+    },
+    "L58": {
+      "value": "9019.5265829461714",
+      "formula": "SUM(L56,L55,L54,L53,L57)"
+    },
+    "M58": {
+      "value": "12128.933822408027",
+      "formula": "SUM(M56,M55,M54,M53,M57)"
+    },
+    "N58": {
+      "value": "14367.918855217693",
+      "formula": "SUM(N56,N55,N54,N53,N57)"
+    },
+    "C60": {
+      "value": "TSMC Share and Production(US$mn)",
+      "formula": null
+    },
+    "D60": {
+      "value": "2016",
+      "formula": "D49"
+    },
+    "E60": {
+      "value": "2017",
+      "formula": "E49"
+    },
+    "F60": {
+      "value": "2018",
+      "formula": null
+    },
+    "G60": {
+      "value": "2019",
+      "formula": null
+    },
+    "H60": {
+      "value": "2020",
+      "formula": null
+    },
+    "I60": {
+      "value": "2021",
+      "formula": null
+    },
+    "J60": {
+      "value": "2022",
+      "formula": null
+    },
+    "K60": {
+      "value": "2023",
+      "formula": null
+    },
+    "L60": {
+      "value": "2024",
+      "formula": "L49"
+    },
+    "M60": {
+      "value": "2025E",
+      "formula": "M49"
+    },
+    "N60": {
+      "value": "2026E",
+      "formula": "N49"
+    },
+    "C61": {
+      "value": "TSMC Server & AI Share",
+      "formula": null
+    },
+    "D61": {
+      "value": "0",
+      "formula": null
+    },
+    "E61": {
+      "value": "0",
+      "formula": "E53*0%"
+    },
+    "F61": {
+      "value": "0",
+      "formula": "F53*0%"
+    },
+    "G61": {
+      "value": "0.1",
+      "formula": null
+    },
+    "H61": {
+      "value": "0.75",
+      "formula": null
+    },
+    "I61": {
+      "value": "0.85",
+      "formula": null
+    },
+    "J61": {
+      "value": "0.85",
+      "formula": null
+    },
+    "K61": {
+      "value": "0.9",
+      "formula": null
+    },
+    "L61": {
+      "value": "0.92",
+      "formula": null
+    },
+    "M61": {
+      "value": "0.93",
+      "formula": null
+    },
+    "N61": {
+      "value": "0.98",
+      "formula": null
+    },
+    "C62": {
+      "value": "TSMC Desktop/Notebook Share",
+      "formula": null
+    },
+    "D62": {
+      "value": "0",
+      "formula": null
+    },
+    "E62": {
+      "value": "0",
+      "formula": "E48"
+    },
+    "F62": {
+      "value": "0",
+      "formula": "F48"
+    },
+    "G62": {
+      "value": "0.2",
+      "formula": null
+    },
+    "H62": {
+      "value": "0.7",
+      "formula": null
+    },
+    "I62": {
+      "value": "0.8",
+      "formula": null
+    },
+    "J62": {
+      "value": "0.8",
+      "formula": null
+    },
+    "K62": {
+      "value": "0.84099999999999997",
+      "formula": null
+    },
+    "L62": {
+      "value": "0.9",
+      "formula": null
+    },
+    "M62": {
+      "value": "0.9",
+      "formula": null
+    },
+    "N62": {
+      "value": "0.92",
+      "formula": null
+    },
+    "C63": {
+      "value": "TSMC Graphic Share",
+      "formula": null
+    },
+    "D63": {
+      "value": "0.73799999999999999",
+      "formula": null
+    },
+    "E63": {
+      "value": "0.33900000000000002",
+      "formula": null
+    },
+    "F63": {
+      "value": "0.50490000000000002",
+      "formula": null
+    },
+    "G63": {
+      "value": "0.7",
+      "formula": null
+    },
+    "H63": {
+      "value": "0.9",
+      "formula": null
+    },
+    "I63": {
+      "value": "1",
+      "formula": null
+    },
+    "J63": {
+      "value": "1",
+      "formula": null
+    },
+    "K63": {
+      "value": "1",
+      "formula": null
+    },
+    "L63": {
+      "value": "1",
+      "formula": null
+    },
+    "M63": {
+      "value": "1",
+      "formula": null
+    },
+    "N63": {
+      "value": "1",
+      "formula": null
+    },
+    "C64": {
+      "value": "TSMC Gaming/Embedded Share",
+      "formula": null
+    },
+    "D64": {
+      "value": "0.95",
+      "formula": null
+    },
+    "E64": {
+      "value": "0.95",
+      "formula": null
+    },
+    "F64": {
+      "value": "0.95",
+      "formula": null
+    },
+    "G64": {
+      "value": "0.95",
+      "formula": null
+    },
+    "H64": {
+      "value": "1",
+      "formula": null
+    },
+    "I64": {
+      "value": "1",
+      "formula": null
+    },
+    "J64": {
+      "value": "1",
+      "formula": null
+    },
+    "K64": {
+      "value": "1",
+      "formula": null
+    },
+    "L64": {
+      "value": "1",
+      "formula": null
+    },
+    "M64": {
+      "value": "1",
+      "formula": null
+    },
+    "N64": {
+      "value": "1",
+      "formula": null
+    },
+    "C65": {
+      "value": "TSMC Xilinx Share",
+      "formula": null
+    },
+    "H65": {
+      "value": "0.7",
+      "formula": null
+    },
+    "I65": {
+      "value": "0.7",
+      "formula": null
+    },
+    "J65": {
+      "value": "0.8",
+      "formula": null
+    },
+    "K65": {
+      "value": "0.85",
+      "formula": null
+    },
+    "L65": {
+      "value": "0.9",
+      "formula": null
+    },
+    "M65": {
+      "value": "0.95",
+      "formula": null
+    },
+    "N65": {
+      "value": "0.95",
+      "formula": null
+    },
+    "C66": {
+      "value": "TSMC Share",
+      "formula": null
+    },
+    "D66": {
+      "value": "0.70072460499141165",
+      "formula": "D72/D58"
+    },
+    "E66": {
+      "value": "0.62424354947660698",
+      "formula": "E72/E58"
+    },
+    "F66": {
+      "value": "0.42624455221497815",
+      "formula": null
+    },
+    "G66": {
+      "value": "0.42604608324678755",
+      "formula": null
+    },
+    "H66": {
+      "value": "0.78994839857616739",
+      "formula": null
+    },
+    "I66": {
+      "value": "0.89049472025257437",
+      "formula": null
+    },
+    "J66": {
+      "value": "0.89124888780563361",
+      "formula": null
+    },
+    "K66": {
+      "value": "0.91888406027424752",
+      "formula": null
+    },
+    "L66": {
+      "value": "0.92417507884915906",
+      "formula": "L72/L58"
+    },
+    "M66": {
+      "value": "0.9328623975340905",
+      "formula": "M72/M58"
+    },
+    "N66": {
+      "value": "0.96413713560497305",
+      "formula": "N72/N58"
+    },
+    "C67": {
+      "value": "TSMC Server & AI Revenue",
+      "formula": null
+    },
+    "D67": {
+      "value": "0",
+      "formula": "D61*D53"
+    },
+    "E67": {
+      "value": "0",
+      "formula": null
+    },
+    "F67": {
+      "value": "0",
+      "formula": null
+    },
+    "G67": {
+      "value": "41.619187500000002",
+      "formula": null
+    },
+    "H67": {
+      "value": "486.06193124999993",
+      "formula": null
+    },
+    "I67": {
+      "value": "986.51860691512479",
+      "formula": null
+    },
+    "J67": {
+      "value": "1662.8175523871814",
+      "formula": null
+    },
+    "K67": {
+      "value": "2042.9867073711021",
+      "formula": null
+    },
+    "L67": {
+      "value": "3992.5435844962194",
+      "formula": null
+    },
+    "M67": {
+      "value": "5162.55121516496",
+      "formula": "M61*M53"
+    },
+    "N67": {
+      "value": "7312.5716957246268",
+      "formula": null
+    },
+    "C68": {
+      "value": "TSMC Desktop/Notebook Revenue",
+      "formula": null
+    },
+    "D68": {
+      "value": "0",
+      "formula": null
+    },
+    "E68": {
+      "value": "0",
+      "formula": null
+    },
+    "F68": {
+      "value": "0",
+      "formula": null
+    },
+    "G68": {
+      "value": "279.47852751128056",
+      "formula": null
+    },
+    "H68": {
+      "value": "1391.7566021449943",
+      "formula": null
+    },
+    "I68": {
+      "value": "1818.2379644590685",
+      "formula": null
+    },
+    "J68": {
+      "value": "1702.6130451992726",
+      "formula": null
+    },
+    "K68": {
+      "value": "1467.6822477256474",
+      "formula": null
+    },
+    "L68": {
+      "value": "2310.2522007312173",
+      "formula": null
+    },
+    "M68": {
+      "value": "3460.1024594885262",
+      "formula": null
+    },
+    "N68": {
+      "value": "3667.1009856223036",
+      "formula": null
+    },
+    "C69": {
+      "value": "TSMC Graphic Revenue",
+      "formula": null
+    },
+    "D69": {
+      "value": "381.78825440399993",
+      "formula": null
+    },
+    "E69": {
+      "value": "120.33896638555335",
+      "formula": null
+    },
+    "F69": {
+      "value": "365.18115358036471",
+      "formula": null
+    },
+    "G69": {
+      "value": "318.25756097560964",
+      "formula": null
+    },
+    "H69": {
+      "value": "422.74887804878045",
+      "formula": null
+    },
+    "I69": {
+      "value": "964.34999999999991",
+      "formula": null
+    },
+    "J69": {
+      "value": "585",
+      "formula": null
+    },
+    "K69": {
+      "value": "392.62192500000003",
+      "formula": null
+    },
+    "L69": {
+      "value": "320.80124999999998",
+      "formula": null
+    },
+    "M69": {
+      "value": "706.65449999999987",
+      "formula": null
+    },
+    "N69": {
+      "value": "829.80223199999989",
+      "formula": null
+    },
+    "C70": {
+      "value": "TSMC Gaming/Embedded Revenue",
+      "formula": null
+    },
+    "D70": {
+      "value": "1368.1901316260621",
+      "formula": null
+    },
+    "E70": {
+      "value": "1501.5777682909488",
+      "formula": null
+    },
+    "F70": {
+      "value": "936.36544552248085",
+      "formula": null
+    },
+    "G70": {
+      "value": "592.92958237499965",
+      "formula": null
+    },
+    "H70": {
+      "value": "847.01677189831321",
+      "formula": null
+    },
+    "I70": {
+      "value": "1792.8098693573631",
+      "formula": null
+    },
+    "J70": {
+      "value": "2802.2368197650294",
+      "formula": null
+    },
+    "K70": {
+      "value": "2828.1587673439144",
+      "formula": null
+    },
+    "L70": {
+      "value": "991.73215574892799",
+      "formula": null
+    },
+    "M70": {
+      "value": "1201.1390002003884",
+      "formula": null
+    },
+    "N70": {
+      "value": "1147.1250000000052",
+      "formula": null
+    },
+    "C71": {
+      "value": "TSMC Xilinx Revenue",
+      "formula": null
+    },
+    "D71": {
+      "value": "0",
+      "formula": null
+    },
+    "E71": {
+      "value": "0",
+      "formula": null
+    },
+    "F71": {
+      "value": "0",
+      "formula": null
+    },
+    "G71": {
+      "value": "0",
+      "formula": null
+    },
+    "H71": {
+      "value": "22.050000000000004",
+      "formula": null
+    },
+    "I71": {
+      "value": "38.713500000000003",
+      "formula": null
+    },
+    "J71": {
+      "value": "819.47700000000009",
+      "formula": null
+    },
+    "K71": {
+      "value": "1017.6412500000001",
+      "formula": "K65*K57"
+    },
+    "L71": {
+      "value": "720.29250000000002",
+      "formula": null
+    },
+    "M71": {
+      "value": "784.17911025000001",
+      "formula": null
+    },
+    "N71": {
+      "value": "896.04421632733522",
+      "formula": null
+    },
+    "C72": {
+      "value": "TSMC AMD Revenue",
+      "formula": null
+    },
+    "D72": {
+      "value": "1749.978386030062",
+      "formula": "SUM(D67:D70)"
+    },
+    "E72": {
+      "value": "1621.9167346765021",
+      "formula": null
+    },
+    "F72": {
+      "value": "1301.5465991028454",
+      "formula": null
+    },
+    "G72": {
+      "value": "1232.2848583618897",
+      "formula": null
+    },
+    "H72": {
+      "value": "3147.5841833420882",
+      "formula": null
+    },
+    "I72": {
+      "value": "5561.9164407315566",
+      "formula": null
+    },
+    "J72": {
+      "value": "7572.1444173514838",
+      "formula": "SUM(J67:J71)"
+    },
+    "K72": {
+      "value": "7749.0908974406648",
+      "formula": null
+    },
+    "L72": {
+      "value": "8335.6216909763643",
+      "formula": null
+    },
+    "M72": {
+      "value": "11314.626285103874",
+      "formula": null
+    },
+    "N72": {
+      "value": "13852.644129674271",
+      "formula": null
+    },
+    "C73": {
+      "value": "TSMC Sales (Actual / UBSE)",
+      "formula": null
+    },
+    "D73": {
+      "value": "29433.827682694002",
+      "formula": "Apple!F67"
+    },
+    "E73": {
+      "value": "32105.218902531476",
+      "formula": "Apple!G67"
+    },
+    "F73": {
+      "value": "34196.147113740335",
+      "formula": "Apple!H67"
+    },
+    "G73": {
+      "value": "34633.159946463638",
+      "formula": "Apple!I67"
+    },
+    "H73": {
+      "value": "45505.406030279031",
+      "formula": "Apple!J67"
+    },
+    "I73": {
+      "value": "56821.662765756329",
+      "formula": "Apple!K67"
+    },
+    "J73": {
+      "value": "75880.812406932193",
+      "formula": "Apple!L67"
+    },
+    "K73": {
+      "value": "69300.226744359214",
+      "formula": "Apple!M67"
+    },
+    "L73": {
+      "value": "90183.610357237456",
+      "formula": "Apple!N67"
+    },
+    "M73": {
+      "value": "121338.76714502653",
+      "formula": "Apple!O67"
+    },
+    "N73": {
+      "value": "144450.43345708691",
+      "formula": "Apple!P67"
+    },
+    "C74": {
+      "value": "TSMC share at AMD",
+      "formula": null
+    },
+    "D74": {
+      "value": "0.70072460499141165",
+      "formula": "D66"
+    },
+    "E74": {
+      "value": "0.62424354947660698",
+      "formula": null
+    },
+    "F74": {
+      "value": "0.42624455221497815",
+      "formula": null
+    },
+    "G74": {
+      "value": "0.42604608324678755",
+      "formula": null
+    },
+    "H74": {
+      "value": "0.78994839857616739",
+      "formula": null
+    },
+    "I74": {
+      "value": "0.89049472025257437",
+      "formula": null
+    },
+    "J74": {
+      "value": "0.89124888780563361",
+      "formula": null
+    },
+    "K74": {
+      "value": "0.91888406027424752",
+      "formula": null
+    },
+    "L74": {
+      "value": "0.92417507884915906",
+      "formula": "L66"
+    },
+    "M74": {
+      "value": "0.9328623975340905",
+      "formula": "M66"
+    },
+    "N74": {
+      "value": "0.96413713560497305",
+      "formula": "N66"
+    },
+    "C75": {
+      "value": "AMD as % of TSMC",
+      "formula": null
+    },
+    "D75": {
+      "value": "5.9454665730036341E-2",
+      "formula": "D72/D73"
+    },
+    "E75": {
+      "value": "5.0518787602741276E-2",
+      "formula": "E72/E73"
+    },
+    "F75": {
+      "value": "3.8061205982467886E-2",
+      "formula": null
+    },
+    "G75": {
+      "value": "3.5581069133361516E-2",
+      "formula": null
+    },
+    "H75": {
+      "value": "6.9169456069630583E-2",
+      "formula": null
+    },
+    "I75": {
+      "value": "9.7883732541587207E-2",
+      "formula": null
+    },
+    "J75": {
+      "value": "9.9789975583599852E-2",
+      "formula": null
+    },
+    "K75": {
+      "value": "0.11181912760583301",
+      "formula": null
+    },
+    "L75": {
+      "value": "9.24294520695845E-2",
+      "formula": null
+    },
+    "M75": {
+      "value": "9.3248238393426275E-2",
+      "formula": null
+    },
+    "N75": {
+      "value": "9.5898944697798985E-2",
+      "formula": "N72/N73"
+    },
+    "C77": {
+      "value": "TSMC Server CPU only revenue",
+      "formula": null
+    },
+    "G77": {
+      "value": "337.44187499999998",
+      "formula": "(G5+G8)*(1-G23)*0.75"
+    },
+    "H77": {
+      "value": "595.89757499999985",
+      "formula": null
+    },
+    "I77": {
+      "value": "1047.4801257825",
+      "formula": null
+    },
+    "J77": {
+      "value": "1746.4497439849197",
+      "formula": null
+    },
+    "K77": {
+      "value": "1987.7674754123357",
+      "formula": null
+    },
+    "L77": {
+      "value": "2496.2190314958907",
+      "formula": null
+    },
+    "M77": {
+      "value": "3159.6692943458543",
+      "formula": null
+    },
+    "N77": {
+      "value": "3200.5704385847439",
+      "formula": "(N5+N8)*(1-N23)*0.75"
+    }
+  }
+}

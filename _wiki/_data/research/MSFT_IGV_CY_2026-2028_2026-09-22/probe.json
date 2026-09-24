@@ -1,0 +1,276 @@
+{
+  "spot": {
+    "MSFT US Equity": {
+      "NAME": "MICROSOFT CORP",
+      "PX_LAST": 496.75,
+      "LAST_UPDATE_DT": "2026-09-22",
+      "CUR_MKT_CAP": 3688639722654.25,
+      "EQY_FUND_CRNCY": "USD",
+      "BEST_PE_RATIO": 25.26832494023094,
+      "BEST_EPS": 4.73,
+      "BEST_ESTIMATE_FCF": 7750.423620956432,
+      "_exceptions": [
+        {
+          "fieldId": "BEST_PX_FCF",
+          "errorInfo": {
+            "source": "23099:rsfrdsvc2",
+            "code": 9,
+            "category": "BAD_FLD",
+            "message": "Field not valid",
+            "subcategory": "INVALID_FIELD"
+          }
+        },
+        {
+          "fieldId": "BEST_PFCF_RATIO",
+          "errorInfo": {
+            "source": "23099:rsfrdsvc2",
+            "code": 9,
+            "category": "BAD_FLD",
+            "message": "Field not valid",
+            "subcategory": "INVALID_FIELD"
+          }
+        },
+        {
+          "fieldId": "ETF_UNDL_INDEX_TICKER",
+          "errorInfo": {
+            "source": "23099:rsfrdsvc2",
+            "code": 9,
+            "category": "BAD_FLD",
+            "message": "Field not applicable to security",
+            "subcategory": "NOT_APPLICABLE_TO_REF_DATA"
+          }
+        }
+      ]
+    },
+    "IGV US Equity": {
+      "NAME": "ISHARES EXPANDED TECH-SOFTWA",
+      "PX_LAST": 106.41,
+      "LAST_UPDATE_DT": "2026-09-22",
+      "CUR_MKT_CAP": 14125927734.375,
+      "ETF_UNDL_INDEX_TICKER": "SPNASEUT",
+      "_exceptions": [
+        {
+          "fieldId": "EQY_FUND_CRNCY",
+          "errorInfo": {
+            "source": "23099:rsfrdsvc2",
+            "code": 9,
+            "category": "BAD_FLD",
+            "message": "Field not applicable to security",
+            "subcategory": "NOT_APPLICABLE_TO_REF_DATA"
+          }
+        },
+        {
+          "fieldId": "BEST_PX_FCF",
+          "errorInfo": {
+            "source": "23099:rsfrdsvc2",
+            "code": 9,
+            "category": "BAD_FLD",
+            "message": "Field not valid",
+            "subcategory": "INVALID_FIELD"
+          }
+        },
+        {
+          "fieldId": "BEST_PFCF_RATIO",
+          "errorInfo": {
+            "source": "23099:rsfrdsvc2",
+            "code": 9,
+            "category": "BAD_FLD",
+            "message": "Field not valid",
+            "subcategory": "INVALID_FIELD"
+          }
+        }
+      ]
+    },
+    "SPNASEUT Index": {
+      "NAME": "SPNExpTecSofUT",
+      "PX_LAST": 1126.95,
+      "LAST_UPDATE_DT": "2026-09-21",
+      "CUR_MKT_CAP": 7009508027768.678,
+      "EQY_FUND_CRNCY": "USD",
+      "BEST_PE_RATIO": 42.249950691142494,
+      "BEST_EPS": 24.492477541920344,
+      "_exceptions": [
+        {
+          "fieldId": "BEST_PX_FCF",
+          "errorInfo": {
+            "source": "23099:rsfrdsvc2",
+            "code": 9,
+            "category": "BAD_FLD",
+            "message": "Field not valid",
+            "subcategory": "INVALID_FIELD"
+          }
+        },
+        {
+          "fieldId": "BEST_PFCF_RATIO",
+          "errorInfo": {
+            "source": "23099:rsfrdsvc2",
+            "code": 9,
+            "category": "BAD_FLD",
+            "message": "Field not valid",
+            "subcategory": "INVALID_FIELD"
+          }
+        },
+        {
+          "fieldId": "ETF_UNDL_INDEX_TICKER",
+          "errorInfo": {
+            "source": "23099:rsfrdsvc2",
+            "code": 9,
+            "category": "BAD_FLD",
+            "message": "Field not applicable to security",
+            "subcategory": "NOT_APPLICABLE_TO_REF_DATA"
+          }
+        }
+      ]
+    }
+  },
+  "2026": {
+    "MSFT US Equity": {
+      "BEST_EPS": 18.584,
+      "BEST_PE_RATIO": 26.725139905294878,
+      "BEST_ESTIMATE_FCF": 44602.245362795315,
+      "BEST_EPS_NUMEST": 82.0,
+      "_exceptions": [
+        {
+          "fieldId": "BEST_FCF_NUMEST",
+          "errorInfo": {
+            "source": "22090:rsfrdsvc2",
+            "code": 9,
+            "category": "BAD_FLD",
+            "message": "Field not valid",
+            "subcategory": "INVALID_FIELD"
+          }
+        }
+      ]
+    },
+    "IGV US Equity": {
+      "_exceptions": [
+        {
+          "fieldId": "BEST_FCF_NUMEST",
+          "errorInfo": {
+            "source": "22090:rsfrdsvc2",
+            "code": 9,
+            "category": "BAD_FLD",
+            "message": "Field not valid",
+            "subcategory": "INVALID_FIELD"
+          }
+        }
+      ]
+    },
+    "SPNASEUT Index": {
+      "BEST_EPS": 24.492477541920344,
+      "BEST_PE_RATIO": 42.249950691142494,
+      "_exceptions": [
+        {
+          "fieldId": "BEST_FCF_NUMEST",
+          "errorInfo": {
+            "source": "22090:rsfrdsvc2",
+            "code": 9,
+            "category": "BAD_FLD",
+            "message": "Field not valid",
+            "subcategory": "INVALID_FIELD"
+          }
+        }
+      ]
+    }
+  },
+  "2027": {
+    "MSFT US Equity": {
+      "BEST_EPS": 21.290000000000003,
+      "BEST_PE_RATIO": 23.328323156411457,
+      "BEST_ESTIMATE_FCF": 33398.494110928164,
+      "BEST_EPS_NUMEST": 148.0,
+      "_exceptions": [
+        {
+          "fieldId": "BEST_FCF_NUMEST",
+          "errorInfo": {
+            "source": "19435:rsfrdsvc3",
+            "code": 9,
+            "category": "BAD_FLD",
+            "message": "Field not valid",
+            "subcategory": "INVALID_FIELD"
+          }
+        }
+      ]
+    },
+    "IGV US Equity": {
+      "_exceptions": [
+        {
+          "fieldId": "BEST_FCF_NUMEST",
+          "errorInfo": {
+            "source": "19435:rsfrdsvc3",
+            "code": 9,
+            "category": "BAD_FLD",
+            "message": "Field not valid",
+            "subcategory": "INVALID_FIELD"
+          }
+        }
+      ]
+    },
+    "SPNASEUT Index": {
+      "BEST_EPS": 24.492477541920344,
+      "BEST_PE_RATIO": 42.249950691142494,
+      "_exceptions": [
+        {
+          "fieldId": "BEST_FCF_NUMEST",
+          "errorInfo": {
+            "source": "19435:rsfrdsvc3",
+            "code": 9,
+            "category": "BAD_FLD",
+            "message": "Field not valid",
+            "subcategory": "INVALID_FIELD"
+          }
+        }
+      ]
+    }
+  },
+  "2028": {
+    "MSFT US Equity": {
+      "BEST_EPS": 25.674,
+      "BEST_PE_RATIO": 19.344862506816234,
+      "BEST_ESTIMATE_FCF": 62937.55698532037,
+      "BEST_EPS_NUMEST": 100.0,
+      "_exceptions": [
+        {
+          "fieldId": "BEST_FCF_NUMEST",
+          "errorInfo": {
+            "source": "23010:rsfrdsvc3",
+            "code": 9,
+            "category": "BAD_FLD",
+            "message": "Field not valid",
+            "subcategory": "INVALID_FIELD"
+          }
+        }
+      ]
+    },
+    "IGV US Equity": {
+      "_exceptions": [
+        {
+          "fieldId": "BEST_FCF_NUMEST",
+          "errorInfo": {
+            "source": "23010:rsfrdsvc3",
+            "code": 9,
+            "category": "BAD_FLD",
+            "message": "Field not valid",
+            "subcategory": "INVALID_FIELD"
+          }
+        }
+      ]
+    },
+    "SPNASEUT Index": {
+      "BEST_EPS": 24.492477541920344,
+      "BEST_PE_RATIO": 42.249950691142494,
+      "_exceptions": [
+        {
+          "fieldId": "BEST_FCF_NUMEST",
+          "errorInfo": {
+            "source": "23010:rsfrdsvc3",
+            "code": 9,
+            "category": "BAD_FLD",
+            "message": "Field not valid",
+            "subcategory": "INVALID_FIELD"
+          }
+        }
+      ]
+    }
+  }
+}
