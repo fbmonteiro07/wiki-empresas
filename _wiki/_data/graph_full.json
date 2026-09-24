@@ -1,8 +1,8 @@
 {
- "generated": "2026-09-22",
+ "generated": "2026-09-23",
  "counts": {
-  "nodes": 183,
-  "edges": 2069
+  "nodes": 184,
+  "edges": 2071
  },
  "nodes": [
   {
@@ -47,7 +47,7 @@
     "transcript": 5,
     "wiki": 1
    },
-   "next_catalyst": "2026-09-22",
+   "next_catalyst": "",
    "last_chg": "2026-09-09"
   },
   {
@@ -208,7 +208,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-09-21"
+   "last_chg": "2026-09-23"
   },
   {
    "id": "AOSL",
@@ -439,7 +439,7 @@
     "transcript": 4,
     "wiki": 1
    },
-   "next_catalyst": "2026-09-22",
+   "next_catalyst": "",
    "last_chg": "2026-09-21"
   },
   {
@@ -570,7 +570,7 @@
     "transcript": 7,
     "wiki": 1
    },
-   "next_catalyst": "2026-09-22",
+   "next_catalyst": "",
    "last_chg": "2026-09-14"
   },
   {
@@ -747,7 +747,7 @@
     "transcript": 10,
     "wiki": 1
    },
-   "next_catalyst": "2026-09-22",
+   "next_catalyst": "",
    "last_chg": "2026-09-21"
   },
   {
@@ -952,7 +952,7 @@
     "wiki": 1
    },
    "next_catalyst": "2026-11-16",
-   "last_chg": "2026-09-18"
+   "last_chg": "2026-09-23"
   },
   {
    "id": "NVDA",
@@ -1039,7 +1039,7 @@
     "transcript": 5,
     "wiki": 1
    },
-   "next_catalyst": "2026-09-22",
+   "next_catalyst": "",
    "last_chg": "2026-09-21"
   },
   {
@@ -1618,6 +1618,12 @@
    "type": "theme",
    "label": "ai-builder-toolkit",
    "title": "Theme — AI Builder Toolkit"
+  },
+  {
+   "id": "theme:ai-compute-deals",
+   "type": "theme",
+   "label": "ai-compute-deals",
+   "title": "AI compute deals — announcements and confirmations"
   },
   {
    "id": "theme:ai-cybersecurity",
@@ -3585,6 +3591,18 @@
   {
    "u": "theme:800v-dc-power",
    "v": "WOLF",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:ai-compute-deals",
+   "v": "ANTHROPIC",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:ai-compute-deals",
+   "v": "NSCALE",
    "type": "exposes",
    "label": ""
   },
@@ -7250,7 +7268,7 @@
    "v": "ANTHROPIC",
    "type": "covers",
    "label": "",
-   "w": 110
+   "w": 111
   },
   {
    "u": "broker:UBS",

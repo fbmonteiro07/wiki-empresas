@@ -3,7 +3,7 @@
 _Wiki · generated 2026-09-14 · sources: `E:\Wiki Felipe empresas\OKTA` (10-K/10-Q ×12 + 7 earnings transcripts, MarketBeat/Quartr feed) · `_equity_calls` · briefings · `themes/ai-cybersecurity.md`. Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-21 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-23 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
