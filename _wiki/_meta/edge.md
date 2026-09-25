@@ -12,30 +12,17 @@ _Generated 2026-09-24 · the standing view of where our model and the curated re
 | GOOG | Revenue $bn | 2027 | 641.00 | 544.10 | +18% |
 | AAPL | EPS | 2026 | 10.12 | 8.76 | +16% |
 
-## Curated divergences — latest reconciliation (`reconciliation-2026-09-24.md`)
+## Curated divergences — latest reconciliation (`reconciliation-2026-09-24-night.md`)
 
 | Name | New datapoint | Read (the edge) |
 |---|---|---|
-| HBM TAM | the ledger's canonical was 2.8x too low, on the same house's own name. | the ledger's canonical was 2.8x too low, on the same house's own name. |
-| CoWoS 2027 | a convergence the wiki logged on 09-17 has re-split. | a convergence the wiki logged on 09-17 has re-split. |
-| CXMT | the two China channels now say opposite things in the same month. | the two China channels now say opposite things in the same month. |
-| Hybrid bonding in memory | three sources in 24 hours, pointing two ways. | The test has been narrowed to a customer QUALIFICATION of a hybrid-bonded HBM4E part — not a sample, not an evaluation. |
-| COHR's PhotonLink TAM | a machine summary against three earnings calls. | a machine summary against three earnings calls. |
-| — | Morgan Stanley's four-note cyber package disagrees with itself. | Morgan Stanley's four-note cyber package disagrees with itself. |
-| Meta compute resale | the wiki's framing that "no house has put Meta Compute revenue in a number" is now false. | the wiki's framing that "no house has put Meta Compute revenue in a number" is now false. |
-| DRAM 3Q26 pricing | the canonical is now the floor, not the central case. | the canonical is now the floor, not the central case. |
-| — | NBIS–Meta contract value. | NBIS–Meta contract value. |
-| — | CoreWeave contracted power. | CoreWeave contracted power. |
+| D1 | **DB rating history: Hold since 2024-11-12; Hold $105 on 2026-05-29; Hold $150 set 2026-08-27** (DB p.5 table) | 🔴 **The wiki was wrong, not the Street.** Corrected on the page with the old value in `## Changelog`. Any past "unanimous-ish Buy" reading of the OKTA ladder that counted DB as a Buy overstated bullishness by one house. |
+| D2 | **DB PT $150** (reaffirmed) | Lowest target on the wiki's ladder, but NOT the Street low — at least one un-ingested house sits at $127. **Recover who owns the $127.** |
+| D3 | **Agent-product price ≈ 75% uplift on core** (one Energy CISO: $1.5m/yr vs $2m core; beta since Dec) | ⚠️ Single account, beta pricing, a quote. Above mgmt's range — but DB uses it to argue pricing is **fragile** (competition coming), not conservative. Directional only; not written to any estimate. |
+| D4 | **Renewal pull-forward: Jan-2027 renewal pulled into Aug-2026** (VAR #3) | Qualitative but directly bears on the F3Q27 cRPO print (~2026-12-02): cRPO beat without sub-revenue acceleration = DB/Bernstein bear case. Adds a second, independent mechanism to the same-direction risk. |
 
-## Consensus PT vs spot — live pull in `reconciliation-2026-09-24.md` (upside ranked)
+## Consensus PT vs spot — live pull in `reconciliation-2026-09-24-night.md` (upside ranked)
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|
-| SKHYNIX | 1,862,000 | 3,314,921 | +78% | street high 5,300,000 · low 1,535,000 below spot · 47/1/0 of 48 |
-| CRWV | 86 | 142 | +65% | street high 317 · low 39 below spot · 31/10/4 of 45 |
-| MU | 1,056 | 1,579 | +49% | street high 2,200 · low 900 below spot · 57/4/0 of 61 |
-| COHR | 293 | 418 | +43% | street high 500 · low 280 below spot · 22/6/0 of 28 |
-| CSCO | 105 | 140 | +33% | street high 170 · low 115 ABOVE spot · 20/10/0 of 30 |
-| LITE | 920 | 1,136 | +24% | street high 1,400 · low 820 below spot · 29/4/0 of 33 |
-| NBIS | 240 | 290 | +21% | street high 415 · low 84 below spot · 17/7/1 of 25 |
-| META | 767 | 782 | +2% | street high 1,000 · low 580 below spot · 73/6/0 of 79 |
+| _no live pull_ | | | | |

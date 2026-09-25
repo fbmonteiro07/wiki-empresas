@@ -1,6 +1,6 @@
 # Daily Analyst Brief
 
-_Generated 2026-09-24 · 120 active signals · latest reconciliation: reconciliation-2026-09-24.md._
+_Generated 2026-09-24 · 110 active signals · latest reconciliation: reconciliation-2026-09-24-night.md._
 
 > ⚠️ **Portfolio priority is provisional.** _data/book.json is still a seed with unknown weights. Book badges identify seeded names but do not represent real exposure.
 
@@ -8,18 +8,18 @@ _Generated 2026-09-24 · 120 active signals · latest reconciliation: reconcilia
 
 | Rank | Ticker | Book | Signals | Why focus now |
 |---:|---|---|---:|---|
-| 1 | **NVDA** | seed | 12 | NVDA — derived thesis/debate state changed since the prior daily snapshot; NVDA — 2026-09-24: TRUMP-XI MEETING, 2026-09-24 — the dated headline-risk window, and UBS says the newsflow… |
+| 1 | **NVDA** | seed | 9 | NVDA — derived thesis/debate state changed since the prior daily snapshot; NVDA — 2026-09-24: TRUMP-XI MEETING, 2026-09-24 — the dated headline-risk window, and UBS says the newsflow… |
 | 2 | **META** | seed | 11 | META — catalyst passed without a logged outcome; META — catalyst passed without a logged outcome |
 | 3 | **GOOG** | seed | 8 | GOOG — catalyst passed without a logged outcome; GOOG — 2026 revenue house view is 18% above consensus |
 | 4 | **AAPL** | seed | 2 | AAPL — 2026 EPS house view is 16% above consensus; AAPL — 2026-10-01: THE EU APP STORE COMMISSION CHANGES TAKE EFFECT, AND THE RATES ARE NOW FINAL: 26% for App… |
 | 5 | **TSM** | seed | 1 | TSM — 2026-09-24: TRUMP-XI, 2026-09-24 — UBS puts SPE and MEMORY as the most exposed verticals, with the… |
 | 6 | **MSFT** | seed | 8 | Redburn holds the STREET LOW on three names at once, and BBG's own panel already proves it; MSFT: a 45% price-target spread between two houses, 24 hours apart, with no new company disclosure in between |
-| 7 | **MU** | — | 4 | DRAM 3Q26 pricing — the canonical is now the floor, not the central case.; HBM TAM — the ledger's canonical was 2.8x too low, on the same house's own name. |
-| 8 | **SKHYNIX** | — | 4 | DRAM 3Q26 pricing — the canonical is now the floor, not the central case.; HBM TAM — the ledger's canonical was 2.8x too low, on the same house's own name. |
-| 9 | **AMZN** | seed | 6 | Redburn holds the STREET LOW on three names at once, and BBG's own panel already proves it; AMZN — Bernstein is +16% / +27% above consensus on FY27 / FY28 EBIT and still carries a PT below consensus |
-| 10 | **SAMSUNG** | — | 3 | DRAM 3Q26 pricing — the canonical is now the floor, not the central case.; HBM TAM — the ledger's canonical was 2.8x too low, on the same house's own name. |
-| 11 | **ORCL** | — | 7 | Redburn holds the STREET LOW on three names at once, and BBG's own panel already proves it; ORCL — 2026-09-24: PROJECT JUPITER (2.45GW, New Mexico; developer STACK / Blue Owl) — FORCE-MAJEURE NOTICE… |
-| 12 | **NBIS** | — | 3 | NBIS — derived thesis/debate state changed since the prior daily snapshot; Redburn holds the STREET LOW on three names at once, and BBG's own panel already proves it |
+| 7 | **AMZN** | seed | 6 | Redburn holds the STREET LOW on three names at once, and BBG's own panel already proves it; AMZN — Bernstein is +16% / +27% above consensus on FY27 / FY28 EBIT and still carries a PT below consensus |
+| 8 | **ORCL** | — | 7 | Redburn holds the STREET LOW on three names at once, and BBG's own panel already proves it; ORCL — 2026-09-24: PROJECT JUPITER (2.45GW, New Mexico; developer STACK / Blue Owl) — FORCE-MAJEURE NOTICE… |
+| 9 | **CIEN** | — | 4 | CIEN — catalyst passed without a logged outcome; CIEN 2029: the revenue target is already in the curve; the entire surprise is margin — but the comparison is a year offset and must be labelled as such |
+| 10 | **LITE** | — | 4 | LITE — catalyst passed without a logged outcome; LITE — catalyst passed without a logged outcome |
+| 11 | **NBIS** | — | 2 | NBIS — derived thesis/debate state changed since the prior daily snapshot; Redburn holds the STREET LOW on three names at once, and BBG's own panel already proves it |
+| 12 | **OKTA** | — | 2 | OKTA — derived thesis/debate state changed since the prior daily snapshot; OKTA — catalyst passed without a logged outcome |
 
 ## Highest-priority ideas
 
@@ -75,46 +75,7 @@ _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 - **Attribution:** Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-09-24.
 - **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-79dbf4c88070
 
-### 5. 🟡 DRAM 3Q26 pricing — the canonical is now the floor, not the central case.
-
-_MODEL CHECK · MEDIUM IMPACT · IMMEDIATE · MEDIUM CONFIDENCE_
-
-- **Tickers:** MU, SKHYNIX, SAMSUNG, NVDA · seeded book: NVDA
-- **Why now:** Four of five new marks print at or above the top of TrendForce's +15-20%: BofA/Simon Woo +20-30% q/q, UBS +~26% incl. LTAs, UBS on SK hynix +23.1%, FundaAI 20-30% executed; only Mirae's +15.8% is inside. The likeliest source of the spread is LTA treatment — UBS is the only house that states its figure is LTA-inclusive.
-- **Belief update:** This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.
-- **Action:** Open the MU/SKHYNIX/SAMSUNG/NVDA model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
-- **Falsifier:** A like-for-like estimate bridge or company guide that closes the identified gap.
-- **Read-through:** AVGO (customer: HBM); AMAT (supplier: WFE); AMD (customer: HBM); ASML (supplier: litho); KLAC (supplier: process control); LRCX (supplier: NAND/HBM WFE); TOKYOELEC (supplier: WFE)
-- **Attribution:** BofA + UBS + FundaAI · curated reconciliation 2026-09-24.
-- **Evidence:** [reconciliation-2026-09-24.md](reconciliation-2026-09-24.md) · signal reco-6c54db7f7807
-
-### 6. 🟡 HBM TAM — the ledger's canonical was 2.8x too low, on the same house's own name.
-
-_CONTRADICTION · MEDIUM IMPACT · IMMEDIATE · MEDIUM CONFIDENCE_
-
-- **Tickers:** MU, SKHYNIX, SAMSUNG, NVDA · seeded book: NVDA
-- **Why now:** meta/assumptions.md carried "HBM TAM $35B 2025 → $100B 2028 (~40% CAGR) | Micron/JPM | 2026-05-28". JPM's 2026-09-22 model prints HBM industry revenue at US$160.1bn (2027E) and US$282.2bn (2028E). BofA's $168bn CY30 frame now sits below JPM's CY28, so the two are no longer "different horizons, both valid" — they conflict on level. Ledger re-based this run; the scope note now tells readers to cite the dated row, never the retired $100bn framing.
-- **Belief update:** This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.
-- **Action:** Keep every sourced variant for MU/SKHYNIX/SAMSUNG/NVDA; identify the primary disclosure or named adjudicator that can resolve them. Do not average incompatible figures.
-- **Falsifier:** The next primary disclosure that puts the competing variants on one defined basis.
-- **Read-through:** AVGO (customer: HBM); AMAT (supplier: WFE); AMD (customer: HBM); ASML (supplier: litho); KLAC (supplier: process control); LRCX (supplier: NAND/HBM WFE); TOKYOELEC (supplier: WFE)
-- **Attribution:** BofA + JPM · curated reconciliation 2026-09-24.
-- **Evidence:** [reconciliation-2026-09-24.md](reconciliation-2026-09-24.md) · signal reco-6371413d27db
-
-### 7. 🟡 Hybrid bonding in memory — three sources in 24 hours, pointing two ways.
-
-_CONTRADICTION · MEDIUM IMPACT · IMMEDIATE · MEDIUM CONFIDENCE_
-
-- **Tickers:** MU, SKHYNIX, SAMSUNG, NVDA · seeded book: NVDA
-- **Why now:** Redburn (09-23): HBM4E is the insertion point, HVM 2027. UBS/ASMPT (09-22): TCB extended potentially to HBM5, volume adoption pushed out, "in-line with comments from both Samsung and SK Hynix". DAMNANG (09-23): Samsung has already delivered hybrid-bonded HBM4/HBM4E samples; SK hynix has not. (2) and (3) disagree on whether Samsung is the hybrid-bonding champion or the TCB extender. Both can be literally true. ➤ The test has been narrowed to a customer QUALIFICATION of a hybrid-bonded HBM4E part — not a sample, not an evaluation.
-- **Belief update:** This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.
-- **Action:** Keep every sourced variant for MU/SKHYNIX/SAMSUNG/NVDA; identify the primary disclosure or named adjudicator that can resolve them. Do not average incompatible figures.
-- **Falsifier:** The next primary disclosure that puts the competing variants on one defined basis.
-- **Read-through:** AVGO (customer: HBM); AMAT (supplier: WFE); AMD (customer: HBM); ASML (supplier: litho); KLAC (supplier: process control); LRCX (supplier: NAND/HBM WFE); TOKYOELEC (supplier: WFE)
-- **Attribution:** UBS · curated reconciliation 2026-09-24.
-- **Evidence:** [reconciliation-2026-09-24.md](reconciliation-2026-09-24.md) · signal reco-8f7138a010de
-
-### 8. 🟡 BESI — derived thesis/debate state changed since the prior daily snapshot
+### 5. 🟡 BESI — derived thesis/debate state changed since the prior daily snapshot
 
 _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
@@ -127,7 +88,7 @@ _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 - **Attribution:** BESI page Changelog 2026-09-20.
 - **Evidence:** [BESI.md](../BESI.md) · signal beli-0cfefa5f2eb5
 
-### 9. 🟡 CSCO — derived thesis/debate state changed since the prior daily snapshot
+### 6. 🟡 CSCO — derived thesis/debate state changed since the prior daily snapshot
 
 _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
@@ -140,7 +101,7 @@ _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 - **Attribution:** CSCO page Changelog 2026-09-24.
 - **Evidence:** [CSCO.md](../CSCO.md) · signal beli-0c734042835b
 
-### 10. 🟡 NBIS — derived thesis/debate state changed since the prior daily snapshot
+### 7. 🟡 NBIS — derived thesis/debate state changed since the prior daily snapshot
 
 _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
@@ -153,7 +114,7 @@ _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 - **Attribution:** NBIS page Changelog 2026-09-24.
 - **Evidence:** [NBIS.md](../NBIS.md) · signal beli-2e9a0955db62
 
-### 11. 🟡 OKTA — derived thesis/debate state changed since the prior daily snapshot
+### 8. 🟡 OKTA — derived thesis/debate state changed since the prior daily snapshot
 
 _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
@@ -166,7 +127,7 @@ _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 - **Attribution:** OKTA page Changelog 2026-09-24.
 - **Evidence:** [OKTA.md](../OKTA.md) · signal beli-37c814e2fff0
 
-### 12. 🟡 RDDT — derived thesis/debate state changed since the prior daily snapshot
+### 9. 🟡 RDDT — derived thesis/debate state changed since the prior daily snapshot
 
 _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
@@ -178,6 +139,45 @@ _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 - **Read-through:** —
 - **Attribution:** RDDT page Changelog 2026-09-24.
 - **Evidence:** [RDDT.md](../RDDT.md) · signal beli-a748149734a2
+
+### 10. 🟡 SMCI — derived thesis/debate state changed since the prior daily snapshot
+
+_NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
+
+- **Tickers:** SMCI
+- **Why now:** (/wiki-ingest 21h, scheduled) — 1 Debate bullet (Vera Rubin NVL72 shipments begin, Digitimes relay). NOTHING SUPERSEDED. ⚠️ The intra-quarter log table on this page starts with a DATA row where its header should be (no | Date | Source |... line) — not repaired here; flagged.
+- **Belief update:** The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.
+- **Action:** Re-grade the SMCI thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.
+- **Falsifier:** The fingerprint moved only because of formatting or a derived snapshot insertion.
+- **Read-through:** AMZN (customer: rack integration); MSFT (customer: rack integration); NVDA (supplier: GPUs); DELL (competitor: AI servers)
+- **Attribution:** SMCI page Changelog 2026-09-24.
+- **Evidence:** [SMCI.md](../SMCI.md) · signal beli-b057b9881005
+
+### 11. 🟡 META: the PT went up 24% while the estimates went down — and the apparent size of the cut is mostly below the line
+
+_MODEL CHECK · MEDIUM IMPACT · STANDING · MEDIUM CONFIDENCE_
+
+- **Tickers:** META · seeded book: META
+- **Why now:** Wells Fargo (Gawrelski) raised its PT to $796 from $640 (+24.4%) while cutting EPS. The PT bridge is arithmetically pure multiple: 25.0× × $31.86 = $796.5 vs prior 20.0× × $32.07 = $641.4. Every dollar of the $156 increase is re-rating, none is earnings.
+- **Belief update:** This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.
+- **Action:** Open the META model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
+- **Falsifier:** A like-for-like estimate bridge or company guide that closes the identified gap.
+- **Read-through:** AVGO (supplier: custom ASIC); NVDA (supplier: GPUs); AMD (supplier: MI GPUs); GLW (supplier: optical fiber (LTA)); SNDK (supplier: NAND/SSD); STX (supplier: nearline HDD); WDC (supplier: nearline HDD)
+- **Attribution:** underlying sources named in the finding · curated reconciliation 2026-09-21.
+- **Evidence:** [reconciliation-2026-09-21.md](reconciliation-2026-09-21.md) · signal reco-ddd0bbcca0d3
+
+### 12. 🟡 Redburn holds the STREET LOW on three names at once, and BBG's own panel already proves it
+
+_MODEL CHECK · MEDIUM IMPACT · STANDING · MEDIUM CONFIDENCE_
+
+- **Tickers:** CRWV, NBIS, ORCL, AMZN, MSFT · seeded book: AMZN, MSFT
+- **Why now:** ➤ This is not five independent calls; it is one thesis expressed five times — that credit is pricing a risk equities ignore, and that the compute layer is where it bites. ORCL's panel carries only one Sell among 49 analysts, and that Sell is now the street low. Treat the package as a single high-conviction position, and size any read-through accordingly — if Redburn is wrong, all five marks are wrong together.
+- **Belief update:** This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.
+- **Action:** Open the CRWV/NBIS/ORCL/AMZN model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
+- **Falsifier:** A like-for-like estimate bridge or company guide that closes the identified gap.
+- **Read-through:** NVDA (supplier: GPUs); NSCALE (competitor: GPU neocloud); AMD (supplier: MI GPUs); OPENAI (customer: neocloud compute); BE (supplier: fuel cells); AVGO (supplier: networking); MDB (competitor: operational database)
+- **Attribution:** underlying sources named in the finding · curated reconciliation 2026-09-21.
+- **Evidence:** [reconciliation-2026-09-21.md](reconciliation-2026-09-21.md) · signal reco-3df2752f1ae2
 
 ## Catalysts requiring preparation
 
