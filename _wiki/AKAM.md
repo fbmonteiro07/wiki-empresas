@@ -5,16 +5,16 @@
 _Wiki · generated 2026-06-25 · sources: `E:\Wiki Felipe empresas\CDNs\_imported_from_E_root\` (AKAM filings + transcripts + decks + BofA note). Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-24 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-25 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $4.5bn | $5.1bn |
+| Revenue | $4.5bn | $5.2bn |
 | Gross profit | $3.2bn | $3.6bn |
-| Gross margin | 70.7% | 70.0% |
+| Gross margin | 70.6% | 69.6% |
 | EBITDA | $1.8bn | $2.1bn |
-| EPS | $6.69 | $7.24 |
-| Capex | $2.0bn | $1.7bn |
+| EPS | $6.65 | $6.86 |
+| Capex | $2.9bn | $2.7bn |
 | OCF (≈EBITDA) | $1.8bn | $2.1bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
