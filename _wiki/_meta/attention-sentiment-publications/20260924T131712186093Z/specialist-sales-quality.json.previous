@@ -1,0 +1,35 @@
+{
+  "status": "pass",
+  "source_anchors_verified": 155,
+  "universe_rows": 106,
+  "sources_exist": true,
+  "unknown_is_not_neutral": true,
+  "coverage": {
+    "reviewed_at": "2026-09-21T23:26:27.396208+00:00",
+    "window_start": "2026-09-07",
+    "window_end": "2026-09-21",
+    "universe": 106,
+    "screened_candidates": 248,
+    "screened_houses": 9,
+    "selected_sources_reviewed": 41,
+    "reviewed_observations": 155,
+    "companies_with_context": 90,
+    "companies_with_direct_view": 63,
+    "coverage_gaps": 16,
+    "new_email_bodies": 103,
+    "reused_deliveries": 241,
+    "scope": "Selected relevant passages across known specialist/sector-sales senders, including corroborating and contradictory views. Candidate screening is broader than contextual review; attachments, embedded images and every mailbox sender are not exhaustively reviewed.",
+    "dedup": "Same sender + normalized subject + UTC delivery date across caches; one source house per firm. Different days can repeat the same narrative and are not treated as independent votes.",
+    "time_rule": "Email receipt time is retained. Forwarded/prior-period remarks retain their described horizon; no historical knowledge-availability ledger exists. This snapshot is descriptive and cannot be used as a point-in-time backtest.",
+    "labels": "Desk tone is a categorical synthesis of reviewed direct views (recent 14–21 Sep where available, otherwise earlier window). Mixed preserves opposing arguments. Research/news/management relays cannot populate desk tone or positioning. No new numerical crowding score is fitted.",
+    "highlight_rule": "Five editorial research priorities per group, selected from explicit company-level passages. Not a quantitative rank, buy/sell recommendation or measured weekly change.",
+    "false_matches_rejected": [
+      "Meta Marshall ≠ META",
+      "Tokyo Electron / TEL ≠ TE Connectivity",
+      "Deutsche Telekom / DT ≠ Dynatrace",
+      "Eaton fire ≠ Eaton",
+      "BE Semiconductor ≠ Bloom Energy",
+      "Adobe C&MP ≠ MP Materials"
+    ]
+  }
+}

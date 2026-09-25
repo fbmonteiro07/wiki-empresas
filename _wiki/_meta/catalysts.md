@@ -2,11 +2,12 @@
 
 _Generated 2026-09-24 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (34)
+## 📅 Upcoming (38)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
 | 2026-09-24 | NVDA | **🆕🔴 TRUMP-XI MEETING, 2026-09-24 — the dated headline-risk window, and UBS says the newsflow into it is not random.** *"As is usually the case before Trump-Xi meetings, headline risks likely to pick  |
+| 2026-09-24 | ORCL | **🆕 PROJECT JUPITER (2.45GW, New Mexico; developer STACK / Blue Owl) — FORCE-MAJEURE NOTICE SENT 2026-09-24** to defer payment if the project slips (Bloomberg via MS TMT desk, 2026-09-24); company say |
 | 2026-09-24 | SPCX | **🆕 2026-09-24, NYC — MS event: "SPCX How to Play the Space Economy ft Adam Jonas, Sean Diffley, and William Tackett".** (Morgan Stanley TMT desk, 2026-09-15) |
 | 2026-09-24 | TSM | **🆕⚠️ TRUMP-XI, 2026-09-24 — UBS puts SPE and MEMORY as the most exposed verticals, with the ASML/Netherlands MATCH Act immersion-DUV headlines and new BIS measures on Chinese compute access via Thail |
 | 2026-09-29 | MDB | **Investor Day, NYC, 2026-09-29** (+ .local NYC 09-30): Berry promised a "financial session" and Desai "new product innovations"; watch for a refreshed long-term model (Sept-2025 Investor Day model =  |
@@ -15,13 +16,16 @@ _Generated 2026-09-24 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-09-30 | SKHYNIX | **🆕🔴 By 2026-09-30 — HBM CONTRACT PRICE UPDATE.** Named by JPM (Kwon, 2026-08-19) as the #2 company-specific catalyst. **This is the one that moves earnings rather than the share count**, and it is th |
 | 2026-09-30 | SNPS | **🆕🔴 2026-09-30 — INVESTOR DAY is the real event, not the 08-26 print.** MS (Simpson, 2026-08-19) is explicit: none of the three things that matter — Design IP reacceleration, agentic-EDA monetisation |
 | 2026-10-01 | AAPL | **🆕🔴 2026-10-01 — THE EU APP STORE COMMISSION CHANGES TAKE EFFECT, AND THE RATES ARE NOW FINAL: 26% for App Store apps using Apple IAP (15% for certain programs and post-year-one auto-renewals), 20% f |
+| 2026-10-01 | GOOG | **🆕 2026-10-01 — first Suncatcher TPU orbital test launches on Falcon 9 with Planet Labs** (NYT via 22V · Peterson, 2026-09-24). **Gemini 4 — "much earlier" than year-end, now in post-training** (Kavu |
 | 2026-10-06 | MRVL | **🆕🔴 DATED, TWO-STEP: Q2 FY27 print THURSDAY 2026-08-27 (after market close) → INVESTOR DAY MONDAY 2026-10-06, NYC.** Jefferies (Curtis, 2026-08-20) splits the catalyst explicitly: the print is where  |
 | 2026-10-06 | MRVL | **🆕🔴 NEXT, AND IT IS NOW THE ONLY CATALYST THAT MATTERS ON THIS PAGE: INVESTOR DAY — MONDAY 2026-10-06, NYC.** Three desks stated on print night that management deliberately withheld the [[GOOG]] sizi |
+| 2026-10-06 | TXN | **🆕 2026-10-06, 10am ET — BofA semi-distributor call with DigiKey's VP of Global Strategic Pricing (Stephane Bratu), who oversees pricing for TXN, ON, IFX, NVDA and 4,000+ suppliers** — MCU/analog/pow |
 | 2026-10-14 | ASML | 🆕 **2026-10-14 (Wednesday) — 3Q26 results.** The Street's two focus items are set: (1) whether FY27 low-NA EUV capacity guidance goes to **90+ tools** (from ~85) and whether **2028 is reaffirmed at ≥1 |
 | 2026-10-14 | LITE | **🆕🔴 2026-10-14 — CITI'S CATALYST WATCH (UPSIDE) EXPIRES.** A dated, mechanical sell-side event with a published clock: Citi opened a **Catalyst Watch: Upside expiring 14-OCT-26** alongside Buy/TP $1, |
 | 2026-10-15 | SMTC | **🔴 2026-10-15 — INVESTOR / ANALYST DAY, San Jose. The single most important dated event on this page, because management deferred the two questions that matter to it.** Promised content: *"an in-dept |
 | 2026-10-26 | MEDIATEK | **🆕🔴 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR "POTENTIAL UPWARD REVISIONS TO GOOGLE TPU-RELATED GUIDANCE."** Between them: **Google system-level validation of v9 in H |
 | 2026-10-28 | ORCL | **🆕🔴🔴 2026-10-28 — ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as "Investor Day in October").** First opportunity for **new CFO Hilary Maxson** to set long-term financial targ |
+| 2026-11-09 | QCOM | **🆕 APPLE LICENSING EXTENSION — announced 2026-09-24 ahead of the April 2027 expiry, terms not disclosed** (Bernstein desk · Seidman, 2026-09-24). Watch for duration/rate in the FQ4 print or 10-K. **B |
 | 2026-11-10 | FLEX | **🆕🔴 INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail lands.** Flex said *"more strategy details will be shared at an Innovation Day event on November 10, 2026  |
 | 2026-11-12 | SPCX | **🆕🔴🔴 2026-11-12 — [[OPENAI]] CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.** OpenAI's own post: *"**We're ending our partnership with Cursor following its acquisit |
 | 2026-11-16 | NSCALE | 2026-11-16 — **NVIDIA Sale** ($1.0bn convertible notes / non-voting shares) expected to close on or around this date. |

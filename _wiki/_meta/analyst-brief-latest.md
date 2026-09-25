@@ -1,6 +1,6 @@
 # Daily Analyst Brief
 
-_Generated 2026-09-24 · 114 active signals · latest reconciliation: reconciliation-2026-09-24.md._
+_Generated 2026-09-24 · 120 active signals · latest reconciliation: reconciliation-2026-09-24.md._
 
 > ⚠️ **Portfolio priority is provisional.** _data/book.json is still a seed with unknown weights. Book badges identify seeded names but do not represent real exposure.
 
@@ -10,7 +10,7 @@ _Generated 2026-09-24 · 114 active signals · latest reconciliation: reconcilia
 |---:|---|---|---:|---|
 | 1 | **NVDA** | seed | 12 | NVDA — derived thesis/debate state changed since the prior daily snapshot; NVDA — 2026-09-24: TRUMP-XI MEETING, 2026-09-24 — the dated headline-risk window, and UBS says the newsflow… |
 | 2 | **META** | seed | 11 | META — catalyst passed without a logged outcome; META — catalyst passed without a logged outcome |
-| 3 | **GOOG** | seed | 7 | GOOG — catalyst passed without a logged outcome; GOOG — 2026 revenue house view is 18% above consensus |
+| 3 | **GOOG** | seed | 8 | GOOG — catalyst passed without a logged outcome; GOOG — 2026 revenue house view is 18% above consensus |
 | 4 | **AAPL** | seed | 2 | AAPL — 2026 EPS house view is 16% above consensus; AAPL — 2026-10-01: THE EU APP STORE COMMISSION CHANGES TAKE EFFECT, AND THE RATES ARE NOW FINAL: 26% for App… |
 | 5 | **TSM** | seed | 1 | TSM — 2026-09-24: TRUMP-XI, 2026-09-24 — UBS puts SPE and MEMORY as the most exposed verticals, with the… |
 | 6 | **MSFT** | seed | 8 | Redburn holds the STREET LOW on three names at once, and BBG's own panel already proves it; MSFT: a 45% price-target spread between two houses, 24 hours apart, with no new company disclosure in between |
@@ -18,8 +18,8 @@ _Generated 2026-09-24 · 114 active signals · latest reconciliation: reconcilia
 | 8 | **SKHYNIX** | — | 4 | DRAM 3Q26 pricing — the canonical is now the floor, not the central case.; HBM TAM — the ledger's canonical was 2.8x too low, on the same house's own name. |
 | 9 | **AMZN** | seed | 6 | Redburn holds the STREET LOW on three names at once, and BBG's own panel already proves it; AMZN — Bernstein is +16% / +27% above consensus on FY27 / FY28 EBIT and still carries a PT below consensus |
 | 10 | **SAMSUNG** | — | 3 | DRAM 3Q26 pricing — the canonical is now the floor, not the central case.; HBM TAM — the ledger's canonical was 2.8x too low, on the same house's own name. |
-| 11 | **ORCL** | — | 6 | Redburn holds the STREET LOW on three names at once, and BBG's own panel already proves it; ORCL — 2026-10-28: ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as "Investor Day in… |
-| 12 | **CIEN** | — | 4 | CIEN — catalyst passed without a logged outcome; CIEN 2029: the revenue target is already in the curve; the entire surprise is margin — but the comparison is a year offset and must be labelled as such |
+| 11 | **ORCL** | — | 7 | Redburn holds the STREET LOW on three names at once, and BBG's own panel already proves it; ORCL — 2026-09-24: PROJECT JUPITER (2.45GW, New Mexico; developer STACK / Blue Owl) — FORCE-MAJEURE NOTICE… |
+| 12 | **NBIS** | — | 3 | NBIS — derived thesis/debate state changed since the prior daily snapshot; Redburn holds the STREET LOW on three names at once, and BBG's own panel already proves it |
 
 ## Highest-priority ideas
 
@@ -132,7 +132,7 @@ _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
 - **Tickers:** CSCO
-- **Why now:** (/run-inbox — ECOC work unit; 1 CSCO source: Barclays · Tim Long / Alyssa Shreves / Mary Lenox / Clarisse Yu, "ECOC 2026 — Optical Still a Hot End Market", 2026-09-23, off a show-floor meeting with Acacia and Optical Systems product management + IR). Inserted: 1 Full-log row, 1 Sinal vs gestão row (price as a growth driver), 1 Debate / thesis bull bullet, 1 synthesis addendum, 1 Sources entry.
+- **Why now:** (/wiki-ingest 21h, scheduled) — 1 row (Jeetu Patel FT interview: $10B hyperscaler/neocloud deals this FY, 450% agent bandwidth). NOTHING SUPERSEDED.
 - **Belief update:** The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.
 - **Action:** Re-grade the CSCO thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.
 - **Falsifier:** The fingerprint moved only because of formatting or a derived snapshot insertion.
@@ -140,7 +140,33 @@ _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 - **Attribution:** CSCO page Changelog 2026-09-24.
 - **Evidence:** [CSCO.md](../CSCO.md) · signal beli-0c734042835b
 
-### 10. 🟡 RDDT — derived thesis/debate state changed since the prior daily snapshot
+### 10. 🟡 NBIS — derived thesis/debate state changed since the prior daily snapshot
+
+_NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
+
+- **Tickers:** NBIS
+- **Why now:** (/wiki-ingest 21h, scheduled) — 🔴 A PRICE OBJECTIVE SUPERSEDED. OLD VALUE, RETAINED HERE: BofA · Tal Liani, BUY, PO $280 (as carried from the 07-20 preview / 08-10 relay). NEW (2026-09-24): BUY, PO $310, px $226.61, FY27/FY28 revenue $12.7bn / $27.3bn vs Street $12.2bn / $24.9bn. Also added: BNP Paribas upgrade to Outperform (no PT in source), SemiAnalysis ClusterMAX Platinum (X relay), preemptible spot pricing (X relay). 2 intra-quarter rows + 1 Debate bullet.
+- **Belief update:** The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.
+- **Action:** Re-grade the NBIS thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.
+- **Falsifier:** The fingerprint moved only because of formatting or a derived snapshot insertion.
+- **Read-through:** NVDA (supplier: GPUs); NSCALE (competitor: GPU neocloud); BE (supplier: fuel cells); OPENAI (customer: neocloud compute)
+- **Attribution:** NBIS page Changelog 2026-09-24.
+- **Evidence:** [NBIS.md](../NBIS.md) · signal beli-2e9a0955db62
+
+### 11. 🟡 OKTA — derived thesis/debate state changed since the prior daily snapshot
+
+_NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
+
+- **Tickers:** OKTA
+- **Why now:** (/wiki-ingest 21h, scheduled) — 1 primary flash (DB · Zelnick / Islam, Hold $150) + 1 desk relay (Jefferies · Gallo via Favuzza) + 1 title-only (SIG · Patil). NOTHING SUPERSEDED — DB is a NEW mark on this page, not a change. Added 1 Debate / thesis block. ⚠️ No Intra-quarter section exists on this page and buildintraquarter.py has no timeline JSON for OKTA, so none was scaffolded.
+- **Belief update:** The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.
+- **Action:** Re-grade the OKTA thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.
+- **Falsifier:** The fingerprint moved only because of formatting or a derived snapshot insertion.
+- **Read-through:** MSFT (competitor: IAM (Entra bundling)); CRWD (competitor: agentic identity); PANW (competitor: identity (CyberArk vs Okta))
+- **Attribution:** OKTA page Changelog 2026-09-24.
+- **Evidence:** [OKTA.md](../OKTA.md) · signal beli-37c814e2fff0
+
+### 12. 🟡 RDDT — derived thesis/debate state changed since the prior daily snapshot
 
 _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
@@ -153,43 +179,18 @@ _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 - **Attribution:** RDDT page Changelog 2026-09-24.
 - **Evidence:** [RDDT.md](../RDDT.md) · signal beli-a748149734a2
 
-### 11. 🟡 META: the PT went up 24% while the estimates went down — and the apparent size of the cut is mostly below the line
-
-_MODEL CHECK · MEDIUM IMPACT · STANDING · MEDIUM CONFIDENCE_
-
-- **Tickers:** META · seeded book: META
-- **Why now:** Wells Fargo (Gawrelski) raised its PT to $796 from $640 (+24.4%) while cutting EPS. The PT bridge is arithmetically pure multiple: 25.0× × $31.86 = $796.5 vs prior 20.0× × $32.07 = $641.4. Every dollar of the $156 increase is re-rating, none is earnings.
-- **Belief update:** This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.
-- **Action:** Open the META model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
-- **Falsifier:** A like-for-like estimate bridge or company guide that closes the identified gap.
-- **Read-through:** AVGO (supplier: custom ASIC); NVDA (supplier: GPUs); AMD (supplier: MI GPUs); GLW (supplier: optical fiber (LTA)); SNDK (supplier: NAND/SSD); STX (supplier: nearline HDD); WDC (supplier: nearline HDD)
-- **Attribution:** underlying sources named in the finding · curated reconciliation 2026-09-21.
-- **Evidence:** [reconciliation-2026-09-21.md](reconciliation-2026-09-21.md) · signal reco-ddd0bbcca0d3
-
-### 12. 🟡 Redburn holds the STREET LOW on three names at once, and BBG's own panel already proves it
-
-_MODEL CHECK · MEDIUM IMPACT · STANDING · MEDIUM CONFIDENCE_
-
-- **Tickers:** CRWV, NBIS, ORCL, AMZN, MSFT · seeded book: AMZN, MSFT
-- **Why now:** ➤ This is not five independent calls; it is one thesis expressed five times — that credit is pricing a risk equities ignore, and that the compute layer is where it bites. ORCL's panel carries only one Sell among 49 analysts, and that Sell is now the street low. Treat the package as a single high-conviction position, and size any read-through accordingly — if Redburn is wrong, all five marks are wrong together.
-- **Belief update:** This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.
-- **Action:** Open the CRWV/NBIS/ORCL/AMZN model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
-- **Falsifier:** A like-for-like estimate bridge or company guide that closes the identified gap.
-- **Read-through:** NVDA (supplier: GPUs); NSCALE (competitor: GPU neocloud); AMD (supplier: MI GPUs); OPENAI (customer: neocloud compute); BE (supplier: fuel cells); AVGO (supplier: networking); MDB (competitor: operational database)
-- **Attribution:** underlying sources named in the finding · curated reconciliation 2026-09-21.
-- **Evidence:** [reconciliation-2026-09-21.md](reconciliation-2026-09-21.md) · signal reco-3df2752f1ae2
-
 ## Catalysts requiring preparation
 
 - **NVDA — 2026-09-24: TRUMP-XI MEETING, 2026-09-24 — the dated headline-risk window, and UBS says the newsflow…** — 🆕🔴 TRUMP-XI MEETING, 2026-09-24 — the dated headline-risk window, and UBS says the newsflow into it is not random. "As is usually the case before Trump-Xi meetings, headline risks likely to pick _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-eb95103055e4)
 - **AAPL — 2026-10-01: THE EU APP STORE COMMISSION CHANGES TAKE EFFECT, AND THE RATES ARE NOW FINAL: 26% for App…** — 🆕🔴 2026-10-01 — THE EU APP STORE COMMISSION CHANGES TAKE EFFECT, AND THE RATES ARE NOW FINAL: 26% for App Store apps using Apple IAP (15% for certain programs and post-year-one auto-renewals), 20% f _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-aff41b9df817)
 - **TSM — 2026-09-24: TRUMP-XI, 2026-09-24 — UBS puts SPE and MEMORY as the most exposed verticals, with the…** — 🆕⚠️ TRUMP-XI, 2026-09-24 — UBS puts SPE and MEMORY as the most exposed verticals, with the ASML/Netherlands MATCH Act immersion-DUV headlines and new BIS measures on Chinese compute access via Thail _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-c34f156a3a81)
+- **GOOG — 2026-10-01: first Suncatcher TPU orbital test launches on Falcon 9 with Planet Labs (NYT via 22V ·…** — 🆕 2026-10-01 — first Suncatcher TPU orbital test launches on Falcon 9 with Planet Labs (NYT via 22V · Peterson, 2026-09-24). Gemini 4 — "much earlier" than year-end, now in post-training (Kavu _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-00a12a4ae7d5)
 - **MU — 2026-09-30: F4Q26 (Aug) PRINT — DUE ~2026-09-30, AND THE BOGEY SET IS NOW EXPLICIT AND COMPARABLE…** — 🆕🔴🔴🔴 F4Q26 (Aug) PRINT — DUE ~2026-09-30, AND THE BOGEY SET IS NOW EXPLICIT AND COMPARABLE (full tables in Intra-quarter, 09-23 block). Quarter: guide $50.0bn ± $1bn / ~86% GM / $31.00 ± $1 _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-94f58a36ef6b)
 - **HPE — 2026-09-30: HPE NETWORKING ANALYST DAY — 2026-09-30. This is where the "segment returns to HPE's…** — 🆕🔴 HPE NETWORKING ANALYST DAY — 2026-09-30. This is where the "segment returns to HPE's historical margin profile of mid-20s" claim gets defended, dated, or walked back. ➜ It matters more than _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-5019bdd5c87f)
+- **ORCL — 2026-09-24: PROJECT JUPITER (2.45GW, New Mexico; developer STACK / Blue Owl) — FORCE-MAJEURE NOTICE…** — 🆕 PROJECT JUPITER (2.45GW, New Mexico; developer STACK / Blue Owl) — FORCE-MAJEURE NOTICE SENT 2026-09-24 to defer payment if the project slips (Bloomberg via MS TMT desk, 2026-09-24); company say _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-36a5f7efa0e4)
 - **SKHYNIX — 2026-09-30: By 2026-09-30 — HBM CONTRACT PRICE UPDATE. Named by JPM (Kwon, 2026-08-19) as the 2…** — 🆕🔴 By 2026-09-30 — HBM CONTRACT PRICE UPDATE. Named by JPM (Kwon, 2026-08-19) as the 2 company-specific catalyst. This is the one that moves earnings rather than the share count, and it is th _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-2f8f8ad84d84)
 - **SNPS — 2026-09-30: INVESTOR DAY is the real event, not the 08-26 print. MS (Simpson, 2026-08-19) is explicit:…** — 🆕🔴 2026-09-30 — INVESTOR DAY is the real event, not the 08-26 print. MS (Simpson, 2026-08-19) is explicit: none of the three things that matter — Design IP reacceleration, agentic-EDA monetisation _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-db07131caadc)
 - **SPCX — 2026-09-24: 2026-09-24, NYC — MS event: "SPCX How to Play the Space Economy ft Adam Jonas, Sean…** — 🆕 2026-09-24, NYC — MS event: "SPCX How to Play the Space Economy ft Adam Jonas, Sean Diffley, and William Tackett". (Morgan Stanley TMT desk, 2026-09-15) _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-79afef6bae7d)
-- **MDB — 2026-09-29: Investor Day, NYC, 2026-09-29 (+ .local NYC 09-30): Berry promised a "financial session"…** — Investor Day, NYC, 2026-09-29 (+ .local NYC 09-30): Berry promised a "financial session" and Desai "new product innovations"; watch for a refreshed long-term model (Sept-2025 Investor Day model = _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-c47ca6af6fc6)
 
 ## Research hygiene
 
