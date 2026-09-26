@@ -1,4 +1,6 @@
 """Render cached GPU prices as an offline page and an embeddable dashboard tab."""
+import calendar
+import datetime as dt
 import html
 import json
 from pathlib import Path
@@ -20,6 +22,7 @@ CSS = """
 .gpu-monitor select,.gpu-monitor button{font:inherit;color:var(--gp-ink);background:#0e1725;border:1px solid #40546e;border-radius:6px;padding:9px 12px;min-height:42px}.gpu-monitor button{cursor:pointer;margin-left:auto;font-size:14px}.gpu-monitor select:focus-visible,.gpu-monitor button:focus-visible{outline:2px solid #73b6ff;outline-offset:3px}
 .gpu-monitor .gp-chart{width:100%;min-height:230px}.gpu-monitor svg{display:block;width:100%;height:auto}.gpu-monitor .gp-legend{display:flex;gap:20px;flex-wrap:wrap;font-size:14px;margin:12px 0}.gpu-monitor .gp-dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px}
 .gpu-monitor .gp-scroll{overflow-x:auto}.gpu-monitor table{width:100%;border-collapse:collapse;font-size:14px;white-space:nowrap;color:var(--gp-ink);background:none}.gpu-monitor th,.gpu-monitor td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--gp-line);background:none}.gpu-monitor th{font-size:13px;color:var(--gp-muted)}.gpu-monitor tbody tr:hover{background:#1b2b40}.gpu-monitor .gp-num{text-align:right;font-variant-numeric:tabular-nums}.gpu-monitor details{margin-top:18px}.gpu-monitor summary{cursor:pointer;color:#83bbff;font-size:15px}.gpu-monitor .gp-hover{min-height:26px;color:var(--gp-muted);font-size:14px;overflow-wrap:anywhere}.gpu-monitor .gp-method{max-width:1000px}
+.gpu-monitor .gp-axis-note{font-size:12px;color:var(--gp-muted);margin:4px 0 8px}.gpu-monitor .gp-change-table td{vertical-align:top}.gpu-monitor .gp-change-table small{display:block;color:var(--gp-muted);font-size:11px;font-weight:400;line-height:1.6}.gpu-monitor .gp-change-table .gp-change{font-size:17px;font-weight:600}.gpu-monitor .gp-rise{color:#ffd18b}.gpu-monitor .gp-fall{color:#68d6cb}.gpu-monitor .gp-flat{color:var(--gp-muted)}.gpu-monitor .gp-change-table .gp-group-start td{border-top:2px solid #40546e}.gpu-monitor .gp-change-table caption{text-align:left;color:var(--gp-muted);font-size:13px;padding:0 0 12px}
 @media(max-width:760px){.gpu-monitor{padding:16px}.gpu-monitor .gp-grid{grid-template-columns:1fr}.gpu-monitor .gp-header{display:block}.gpu-monitor .gp-unit{display:inline-block;margin-top:10px}.gpu-monitor .gp-panel{padding:12px}.gpu-monitor button{margin-left:0}.gpu-monitor .gp-controls{gap:12px}.gpu-monitor h2{font-size:23px}}
 """
 
@@ -30,6 +33,18 @@ const data=JSON.parse(root.querySelector('.gp-data').textContent);
 const query=s=>root.querySelector(s), esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const dollar=v=>'$'+v.toFixed(2), stamp=d=>Date.parse(d+'T00:00:00Z');
 const colors=['#73b6ff','#68d6cb','#e4b9ff'];
+function priceAxis(values,fromZero=false){
+ const low=Math.min(...values),high=Math.max(...values);
+ // Tight range with legible, even dollar increments; protect constant series.
+ const span=Math.max(high-low,high*.025,.04),pad=span*.08;
+ const rawLow=fromZero?0:Math.max(0,low-pad),rawHigh=high+pad;
+ const rough=(rawHigh-rawLow)/7,power=10**Math.floor(Math.log10(rough));
+ const step=[1,2,2.5,5,10].map(n=>n*power).find(n=>n>=rough);
+ const lo=fromZero?0:Math.floor(rawLow/step)*step,hi=Math.ceil(rawHigh/step)*step;
+ const ticks=Array.from({length:Math.round((hi-lo)/step)+1},(_,i)=>Number((lo+i*step).toPrecision(12)));
+ return {lo,hi,step,ticks,digits:Math.min(5,Math.max(2,-Math.floor(Math.log10(step))+(String(step/power).includes('.')?1:0)))};
+}
+function axisLabel(v,axis){return '$'+v.toFixed(axis.digits);}
 function selected(){
  const gpu=query('[data-filter="gpu"]').value, channel=query('[data-filter="source"]').value;
  return data.series.filter(s=>s.gpu===gpu && (channel==='bbg'?s.channel==='Bloomberg Desktop API':channel==='public'?s.channel==='Public API':s.publisher==='Silicon Data'||s.channel==='Public API'));
@@ -43,28 +58,30 @@ function windowed(series){
 }
 function draw(){
  const chosen=selected();
- if(!chosen.length){query('.gp-chart').innerHTML='<p>No observations are available for this selection.</p>';query('.gp-legend').innerHTML='';query('.gp-hover').textContent='';return;}
+ if(!chosen.length){query('.gp-chart').innerHTML='<p>No observations are available for this selection.</p>';query('.gp-legend').innerHTML='';query('.gp-hover').textContent='';query('.gp-axis-note').textContent='';return;}
  const w=windowed(chosen), values=w.series.flatMap(s=>s.points.map(p=>p[1]));
- if(!values.length){query('.gp-chart').innerHTML='<p>No observations in this window.</p>';return;}
- const W=1080,H=340,L=60,R=25,T=18,B=42, hi=Math.max(...values)*1.12;
- const X=d=>L+(stamp(d)-w.first)/Math.max(w.last-w.first,86400000)*(W-L-R),Y=v=>H-B-v/hi*(H-T-B);
- let svg=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="GPU rental price history in US dollars per GPU-hour"><title>${esc(query('[data-filter="gpu"]').value)} GPU rental benchmarks</title>`;
- for(let k=0;k<=4;k++){let v=hi*k/4,y=Y(v);svg+=`<line x1="${L}" x2="${W-R}" y1="${y}" y2="${y}" stroke="#2b3c52"/><text x="${L-12}" y="${y+5}" fill="#adbed2" font-size="14" text-anchor="end">${dollar(v)}</text>`;}
+ if(!values.length){query('.gp-chart').innerHTML='<p>No observations in this window.</p>';query('.gp-legend').innerHTML='';query('.gp-hover').textContent='';query('.gp-axis-note').textContent='';return;}
+ const W=1080,H=340,L=68,R=25,T=18,B=42,axis=priceAxis(values,query('[data-filter="scale"]').value==='zero');
+ const X=d=>L+(stamp(d)-w.first)/Math.max(w.last-w.first,86400000)*(W-L-R),Y=v=>H-B-(v-axis.lo)/(axis.hi-axis.lo)*(H-T-B);
+ let svg=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="GPU rental price history in US dollars per GPU-hour" data-y-min="${axis.lo}" data-y-max="${axis.hi}" data-y-step="${axis.step}"><title>${esc(query('[data-filter="gpu"]').value)} GPU rental benchmarks; Y-axis ${axisLabel(axis.lo,axis)} to ${axisLabel(axis.hi,axis)}</title>`;
+ for(const v of axis.ticks){const y=Y(v);svg+=`<line x1="${L}" x2="${W-R}" y1="${y}" y2="${y}" stroke="#2b3c52"/><text x="${L-12}" y="${y+5}" fill="#adbed2" font-size="14" text-anchor="end">${axisLabel(v,axis)}</text>`;}
  for(let k=0;k<=4;k++){const d=new Date(w.first+(w.last-w.first)*k/4).toISOString().slice(0,10),x=X(d);svg+=`<text x="${x}" y="${H-10}" fill="#adbed2" font-size="14" text-anchor="${k===0?'start':k===4?'end':'middle'}">${d}</text>`;}
  w.series.forEach((s,i)=>{let path='',prev=null;for(const p of s.points){const gap=prev && stamp(p[0])-stamp(prev)>7*86400000;path+=(!prev||gap?'M':'L')+X(p[0]).toFixed(2)+','+Y(p[1]).toFixed(2)+' ';prev=p[0];}svg+=`<path d="${path}" fill="none" stroke="${colors[i]}" stroke-width="2.5" ${i===2?'stroke-dasharray="5 4"':''}/>`;if(s.points.length){const p=s.points.at(-1);svg+=`<circle cx="${X(p[0])}" cy="${Y(p[1])}" r="4" fill="${colors[i]}"><title>${esc(name(s)+' · '+p[0]+' · '+dollar(p[1]))}</title></circle>`;}});
  svg+='</svg>';query('.gp-chart').innerHTML=svg;
+ query('.gp-axis-note').textContent=(axis.lo>0?'Y-axis zoomed to displayed prices; does not start at zero. ':'Y-axis starts at zero. ')+'Grid interval: '+axisLabel(axis.step,axis)+' / GPU-hour.';
  query('.gp-legend').innerHTML=w.series.map((s,i)=>`<span><i class="gp-dot" style="background:${colors[i]}"></i>${esc(name(s))}</span>`).join('');
  query('.gp-hover').textContent='Move over the chart for dated observations. Gaps over seven days are left open.';
  query('.gp-chart svg').addEventListener('pointermove',event=>{const rect=event.currentTarget.getBoundingClientRect(),fraction=Math.max(0,Math.min(1,((event.clientX-rect.left)/rect.width*W-L)/(W-L-R))),when=w.first+fraction*(w.last-w.first);query('.gp-hover').textContent=w.series.map(s=>{const closest=s.points.reduce((a,b)=>!a||Math.abs(stamp(b[0])-when)<Math.abs(stamp(a[0])-when)?b:a,null);return closest?name(s)+': '+dollar(closest[1])+' ('+closest[0]+')':name(s)+': no observations';}).join(' | ');});
 }
 function contracts(){
- const rows=data.contracts;if(!rows.length)return;
- const W=1080,H=280,L=60,R=25,T=20,B=45, hi=Math.max(...rows.flatMap(r=>r.one_year||[]))*1.15;
- const X=i=>L+(i+.5)/rows.length*(W-L-R),Y=v=>H-B-v/hi*(H-T-B);
- let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="H100 one-year contract price ranges by reported period"><title>SemiAnalysis H100 one-year contract survey, 25th to 75th percentile</title>`;
- for(let k=0;k<=4;k++){const v=hi*k/4,y=Y(v);s+=`<line x1="${L}" x2="${W-R}" y1="${y}" y2="${y}" stroke="#2b3c52"/><text x="${L-12}" y="${y+5}" fill="#adbed2" font-size="14" text-anchor="end">${dollar(v)}</text>`;}
+ const rows=data.contracts,values=rows.flatMap(r=>r.one_year||[]);if(!values.length){query('.gp-contract-chart').innerHTML='<p>No contract ranges available.</p>';query('.gp-contract-axis-note').textContent='';return;}
+ const W=1080,H=280,L=68,R=25,T=20,B=45,axis=priceAxis(values,query('[data-filter="scale"]').value==='zero');
+ const X=i=>L+(i+.5)/rows.length*(W-L-R),Y=v=>H-B-(v-axis.lo)/(axis.hi-axis.lo)*(H-T-B);
+ let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="H100 one-year contract price ranges by reported period" data-y-min="${axis.lo}" data-y-max="${axis.hi}" data-y-step="${axis.step}"><title>SemiAnalysis H100 one-year contract survey, 25th to 75th percentile; Y-axis ${axisLabel(axis.lo,axis)} to ${axisLabel(axis.hi,axis)}</title>`;
+ for(const v of axis.ticks){const y=Y(v);s+=`<line x1="${L}" x2="${W-R}" y1="${y}" y2="${y}" stroke="#2b3c52"/><text x="${L-12}" y="${y+5}" fill="#adbed2" font-size="14" text-anchor="end">${axisLabel(v,axis)}</text>`;}
  rows.forEach((r,i)=>{const x=X(i);if(r.one_year){const [lo,hi]=r.one_year;s+=`<g><title>${esc(r.period+': '+dollar(lo)+'–'+dollar(hi)+' / GPU-hour')}</title><line x1="${x}" x2="${x}" y1="${Y(lo)}" y2="${Y(hi)}" stroke="#68d6cb" stroke-width="10" stroke-linecap="round"/></g>`;}else{s+=`<text x="${x}" y="${H-B-8}" fill="#adbed2" font-size="16" text-anchor="middle">—</text>`;}if(i%3===0||i===rows.length-1)s+=`<text x="${x}" y="${H-10}" fill="#adbed2" font-size="13" text-anchor="middle">${esc(r.period)}</text>`;});
  query('.gp-contract-chart').innerHTML=s+'</svg>';
+ query('.gp-contract-axis-note').textContent=(axis.lo>0?'Y-axis zoomed to reported ranges; does not start at zero. ':'Y-axis starts at zero. ')+'Grid interval: '+axisLabel(axis.step,axis)+' / GPU-hour.';
 }
 query('[data-export]').addEventListener('click',()=>{
  const rows=[['Date','GPU','Publisher','Channel','Bloomberg ticker','Pricing basis','USD per GPU-hour','Retrieved UTC','Source URL']];
@@ -72,7 +89,7 @@ query('[data-export]').addEventListener('click',()=>{
  const csv=rows.map(r=>r.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(',')).join('\r\n');
  const url=URL.createObjectURL(new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download='gpu-pricing-'+query('[data-filter="gpu"]').value+'.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
 });
-root.querySelectorAll('[data-filter]').forEach(e=>e.addEventListener('change',draw));
+root.querySelectorAll('[data-filter]').forEach(e=>e.addEventListener('change',()=>{draw();contracts();}));
 // Age is evaluated when opened, including offline copies retained for weeks.
 root.querySelectorAll('[data-asof]').forEach(el=>{const age=Math.floor((Date.now()-stamp(el.dataset.asof))/86400000),limit=Number(el.dataset.limit||7);if(age>limit){el.classList.add('gp-warning');el.textContent+=' · '+age+' days old';}});
 draw();contracts();
@@ -89,6 +106,75 @@ def dataset():
 
 def price(value):
     return '${:.2f}'.format(value)
+
+
+def price_changes(points):
+    """Point-in-time changes within one index, with bounded holiday lookback.
+
+    MoM uses the same day in the prior calendar month (clamped at month-end),
+    not 30 days or a comparison between monthly averages. Never look forward
+    from the target date or bridge a missing baseline older than three days.
+    """
+    if not points:
+        return {'wow': None, 'mom': None}
+    points = sorted(points)
+    latest_date, current = points[-1]
+    latest = dt.date.fromisoformat(latest_date)
+    previous_month_end = latest.replace(day=1) - dt.timedelta(days=1)
+    month = previous_month_end.replace(day=min(latest.day, calendar.monthrange(
+        previous_month_end.year, previous_month_end.month)[1]))
+    results = {}
+    for label, target in [('wow', latest - dt.timedelta(days=7)), ('mom', month)]:
+        baseline = next((p for p in reversed(points) if p[0] <= target.isoformat()), None)
+        if baseline is None or baseline[1] <= 0:
+            results[label] = None
+            continue
+        date = dt.date.fromisoformat(baseline[0])
+        if (target - date).days > 3:
+            results[label] = None
+            continue
+        delta = current - baseline[1]
+        results[label] = {
+            'date': baseline[0], 'value': baseline[1], 'target': target.isoformat(),
+            'days': (latest - date).days, 'delta': delta,
+            'pct': delta / baseline[1] * 100,
+        }
+    return results
+
+
+def change_cell(change):
+    if change is None:
+        return '<td class="gp-num"><span class="gp-flat">—</span><small>No comparable observation</small></td>'
+    delta = change['delta']
+    cls = 'gp-rise' if delta > 1e-9 else 'gp-fall' if delta < -1e-9 else 'gp-flat'
+    sign = '+' if delta > 1e-9 else '−' if delta < -1e-9 else ''
+    pct = sign + f"{abs(change['pct']):.2f}%"
+    absolute = sign + price(abs(delta)) + ' / GPU-hour'
+    interval = f" · {change['days']}d" if change['date'] != change['target'] else ''
+    return (f'<td class="gp-num"><span class="gp-change {cls}">{pct}</span>'
+            f'<small>{absolute}</small><small>vs {change["date"]} · {price(change["value"])}{interval}</small></td>')
+
+
+def changes_table(series):
+    rows = []
+    prior_gpu = None
+    order = {'H100': 0, 'A100': 1, 'B200': 2}
+    ordered = sorted(series, key=lambda s: (order.get(s['gpu'], 99),
+                     s['publisher'] != 'Silicon Data', s['channel'] != 'Public API', s['id']))
+    for item in ordered:
+        if not item['points']:
+            continue
+        date, value = sorted(item['points'])[-1]
+        changes = price_changes(item['points'])
+        cls = ' class="gp-group-start"' if prior_gpu and item['gpu'] != prior_gpu else ''
+        delivery = item.get('ticker', 'Public API')
+        rows.append('<tr' + cls + '><td><b>' + html.escape(item['gpu']) + '</b></td><td><a href="' +
+                    html.escape(item['source_url']) + '">' + html.escape(item['publisher']) + '</a><small>' +
+                    html.escape(delivery) + '</small></td><td data-asof="' + date + '">' + date +
+                    '</td><td class="gp-num"><b>' + price(value) + '</b></td>' +
+                    change_cell(changes['wow']) + change_cell(changes['mom']) + '</tr>')
+        prior_gpu = item['gpu']
+    return ''.join(rows) or '<tr><td colspan="6">No price history available.</td></tr>'
 
 
 def render_fragment():
@@ -137,14 +223,19 @@ def render_fragment():
 <label>GPU<select data-filter="gpu"><option>H100</option><option>A100</option><option>B200</option></select></label>
 <label>Source<select data-filter="source"><option value="both">Both publishers</option><option value="bbg">Bloomberg only</option><option value="public">SemiAnalysis public</option></select></label>
 <label>History<select data-filter="range"><option value="90">3 months</option><option value="180">6 months</option><option value="365" selected>1 year</option><option value="all">All available</option></select></label>
+<label>Y-axis<select data-filter="scale"><option value="fit" selected>Fit to prices</option><option value="zero">Start at zero</option></select></label>
 <button type="button" data-export>Download selected data ↓</button></div>
-<div class="gp-chart"></div><div class="gp-legend"></div><div class="gp-hover" aria-live="polite"></div>
+<div class="gp-chart"></div><p class="gp-axis-note"></p><div class="gp-legend"></div><div class="gp-hover" aria-live="polite"></div>
 <noscript><p>Enable JavaScript for charts and filters. Prices and the source tables below remain available.</p></noscript></div>
-<div class="gp-panel"><h3>Latest observations</h3><p class="gp-muted">Daily PX_LAST history from Bloomberg; dated observations from the public API. The SemiAnalysis H100 Bloomberg series and public series share a publisher, so they are not independent signals.</p>
-<div class="gp-scroll"><table><thead><tr><th>GPU</th><th>Publisher</th><th>Delivery / ticker</th><th>Pricing basis</th><th class="gp-num">$/GPU-hour</th><th>Observation date</th><th>History starts</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div></div>
+<div class="gp-panel" id="gpu-price-changes"><h3>Price changes · WoW / MoM</h3>
+<p class="gp-muted">Latest price for each GPU and index, with increases and decreases in percent and US dollars per GPU-hour.</p>
+<div class="gp-scroll"><table class="gp-change-table"><caption>All GPUs and sources · comparison dates are shown under each change · independent of the chart filters</caption><thead><tr><th scope="col">GPU</th><th scope="col">Index / source</th><th scope="col">As of</th><th scope="col" class="gp-num">$/GPU-hour</th><th scope="col" class="gp-num">WoW · 7 days</th><th scope="col" class="gp-num">MoM · 1 month</th></tr></thead><tbody>{changes_table(data['series'])}</tbody></table></div>
+<p class="gp-muted">WoW compares with seven calendar days earlier; MoM with the same date in the previous month (or its final day). If that date is missing, use the last observation before it, at most three days earlier, and show the actual interval. Otherwise the change is unavailable. Each comparison stays within the same index and delivery channel.</p>
+<details><summary>Pricing basis and history coverage</summary><p class="gp-muted">Daily PX_LAST history from Bloomberg; dated observations from the public API. The SemiAnalysis H100 Bloomberg series and public series share a publisher, so they are not independent signals.</p>
+<div class="gp-scroll"><table><thead><tr><th>GPU</th><th>Publisher</th><th>Delivery / ticker</th><th>Pricing basis</th><th class="gp-num">$/GPU-hour</th><th>Observation date</th><th>History starts</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div></details></div>
 <div class="gp-panel"><h3>H100 · one-year contract ranges</h3>{contract_date}
 <p class="gp-muted">SemiAnalysis survey · 25th–75th percentile · typically 25% prepayment. Each bar is one reported period; periods have different lengths. Missing ranges stay blank.</p>
-<div class="gp-contract-chart"></div><details><summary>View contract survey observations</summary><div class="gp-scroll"><table><thead><tr><th>Reported period</th><th class="gp-num">One-year range ($/GPU-hour)</th><th class="gp-num">On-demand survey ($/GPU-hour)</th></tr></thead><tbody>{''.join(contract_rows)}</tbody></table></div></details></div>
+<div class="gp-contract-chart"></div><p class="gp-contract-axis-note gp-axis-note"></p><details><summary>View contract survey observations</summary><div class="gp-scroll"><table><thead><tr><th>Reported period</th><th class="gp-num">One-year range ($/GPU-hour)</th><th class="gp-num">On-demand survey ($/GPU-hour)</th></tr></thead><tbody>{''.join(contract_rows)}</tbody></table></div></details></div>
 <details class="gp-method"><summary>Sources and methodology</summary>
 <p class="gp-muted"><a href="{SD_URL}">Silicon Data</a> indices are delivered through the local Bloomberg Terminal: SDH100RT, SDA100RT and SDB200RT, field PX_LAST. <a href="{SA_URL}">SemiAnalysis</a> publishes its H100, A100 and B200 spot-contract composites and the public H100 one-year survey. SAH100SC is the H100 composite delivered through Bloomberg.</p>
 <p class="gp-muted">The public API supplies dated daily observations. We retain those values without filling missing days or smoothing. Bloomberg and public delivery times can differ. Contract period dates identify the reporting period, not a trading-day close. Older observations and publisher revisions remain in archived source snapshots. No access to subscriber-only GPU contract data is used.</p>

@@ -1,0 +1,29 @@
+{
+  "status": "summary_sent_attachment_missing",
+  "subject": "OpenRouter + Vercel — resumo semanal | 25/09/2026",
+  "recipient": "felipe.monteiro@capstone.com.br",
+  "attachment": "E:\\Wiki Felipe empresas\\_wiki\\_data\\ai-gateways\\exports\\2026-09-25-ai-gateways-charts.html",
+  "attachment_sha256": "bdc34f637ce7283f216b5f627f1e7c1ea385837df800e581612722a6b3c926c8",
+  "recorded_at": "2026-09-25T12:20:04.149459+00:00",
+  "attempts": [
+    {
+      "channel": "classic_outlook",
+      "outcome": "failed_before_submission",
+      "reason": "Local Outlook OST at maximum size. No matching Sent Items, Outbox or Drafts immediately after failure."
+    },
+    {
+      "channel": "outlook_web",
+      "outcome": "draft_saved_not_sent",
+      "reason": "File chooser timed out; chart upload not completed."
+    },
+    {
+      "channel": "new_outlook",
+      "outcome": "existing_draft_opened_not_sent",
+      "reason": "Native file dialog could not be targeted by supported UI control; no send action taken."
+    }
+  ],
+  "next_step": "Do not resend the weekly summary. If upload capability becomes available, send only a clearly labelled chart-attachment supplement after checking Sent Items. Chart pack is available on the dashboard and disk.",
+  "confirmation": "Outlook web Sent Items contains the exact subject at 09:17 America/Sao_Paulo on 2026-09-25. Received copy inspected; summary present, no chart attachment displayed.",
+  "sent_item_url": "https://outlook.cloud.microsoft/mail/sentitems/id/AAQkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQAQAJQ84uUKdxlBvQgmv2zIKCk%3D?culture=pt-br&country=br",
+  "attachment_status": "not_attached"
+}

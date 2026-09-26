@@ -9,7 +9,7 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\TXN` (10-K/10-Q + tran
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $21.4bn | $25.1bn |
+| Revenue | $21.4bn | $25.0bn |
 | Gross profit | $12.8bn | $15.5bn |
 | Gross margin | 59.8% | 61.9% |
 | EBITDA | $11.2bn | $14.0bn |

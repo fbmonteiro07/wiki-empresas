@@ -40,6 +40,7 @@ ENDPOINTS = {
     "rank_week":  FE + "/rankings/models?view=week",
     "rank_month": FE + "/rankings/models?view=month",
     "apps":       FE + "/rankings/apps?view=week",
+    "model_chart": FE + "/rankings/model-rankings-chart",
 }
 
 # Per-provider price watchlist (documented public API: /api/v1/models/{slug}/endpoints).
