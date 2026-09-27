@@ -3,6 +3,11 @@
 _Wiki · generated 2026-06-19 · cross-company theme · sources: equity calls (`../_equity_calls/Semis`), briefing roll-ups (`../_briefings/by-ticker`), earnings transcripts, company pages. Company pages: [../00_INDEX.md](../00_INDEX.md)._
 
 
+## 🆕 2026-09-26 (/wiki-ingest 21h) — **TWO NEW TPU LADDERS: FUBON'S UNIT SPLIT (AVGO DIPS IN 2027) AND UBS'S HIGHER MEDIATEK 2028-29 REVENUE**
+- **Fubon (Sherman via Jefferies sales, 09-26):** MediaTek + Broadcom TPU **4.5m / 9.2m / 12-15m** (2026/27/28); Google via [[AVGO]] **3.11m → 2.37m → 3.5m**, via [[MEDIATEK]] **0.5m → 3.54m → 4.5m**; **[[ANTHROPIC]] 1m → 3.4m → 5m** (the swing factor). Broadcom all-ASIC ~4m → ~7m. MediaTek V8 ASP ~$4K → V9 ~$15K.
+- **UBS (Sunny Lin, via Ruple's sales weekly, 09-26):** MediaTek TPU revenue **US$18bn 2027E (unchanged), 2028E/29E US$43.5bn/US$52.5bn from US$35bn/US$40bn**; PT NT$7,300.
+- ⚠️ **Basis:** Fubon's is an all-TPU unit ladder by year; UBS's 09-22 3.5mn/4.0mn is the v8 programme in 2027. Both put MediaTek above AVGO on Google TPU in 2027; do not net them.
+- **Wells Fargo power model** (via @SouthernValue95 / @QQ_Timmy, 09-25/26): ~**15GW of ASIC deployments in 2028**, ASIC TDP 450W → 1,250W and GPU 1.1kW → 2.6kW; the buy-side notes AVGO alone has customers asking for **>20GW in FY28**.
 ## 🆕🔴🔴🔴 2026-09-22 (/run-inbox Work Unit E) — **UBS'S 40-MEETING APAC TOUR PUTS A FULL SUPPLIER-BY-SUPPLIER UNIT LADDER ON THE ASIC COMPLEX FOR '26E-'30E — AND THE TPU v8 LINE HAS *MEDIATEK ABOVE BROADCOM* IN '27E (4.0mn vs 3.5mn UNITS), WITH *BOTH* CARRYING FOUR-DIE PARTS IN 2028. THE PRODUCT-LINE FORK STAYS OPEN; THIS IS EVIDENCE ADDED TO IT, NOT A RESOLUTION.**
 
 _(UBS · **Nicolas Gaudois / Randy Abrams / Sunny Lin / Timothy Arcuri / Jimmy Yu / Kenji Yasui / Jerry Su / Jimmy Yoon / Diana Chang / Luke Yoo / Atsuhiro Kinoshita / Shingo Hirata** — **"Global I/O: Tech Hardware & Semis — 3Q26 UBS APAC Tech Tour: AI strength unaltered, Semiscap noticeably bullish"**, **2026-09-22**, 27pp, off **40 company meetings across China/HK/Taiwan/Korea/Japan** plus the 2026 Taiwan Summit. Priced 21-Sep-2026. ⚠️ Document footer marks the copy as provided for Daniel Grozdea at Capstone.)_

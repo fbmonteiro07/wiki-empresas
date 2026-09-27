@@ -3,6 +3,12 @@
 _Wiki · generated 2026-06-19 · cross-company theme · sources: equity calls (`../_equity_calls/Semis`), briefing roll-ups (`../_briefings/by-ticker`), earnings transcripts, company pages. Company pages: [../00_INDEX.md](../00_INDEX.md)._
 
 
+## 🆕 2026-09-26 (/wiki-ingest 21h) — **FUBON HOLDS TSMC CoWoS AT 180K/220K, ADDS CoPoS 30K, AND SAYS OPENAI'S JALAPEÑO VOLUME PLAN DOESN'T FIT**
+- **Fubon (Sherman Shang via Jefferies sales, 09-26):** [[TSM]] CoWoS **180K wpm end-27 / 220K end-28, CoPoS 30K by end-28**, unchanged. ⚠️ UBS's 270kwpm end-27 (09-22) is **industry** capacity (TSMC 180K + ASE + Amkor in UBS's own earlier split), so the TSMC number is the same in both.
+- **Jalapeño ([[OPENAI]]):** package ~3-3.5", **15-18 per CoWoS wafer, 700W TDP**. OpenAI talks of **50K (2026) / 1.5m (2027)**; Sherman says his CoWoS numbers leave no room for that in 2027.
+- **[[INTC]] EMIB-T** capacity ramping toward **40K wpm** (the relay garbles the steps); even at ~50% substrate yield, enough for a lot of Google V9.
+- **Sherman's top picks:** **ASE**: LEAP momentum; ASE+SPIL capacity 50-60K by end-27; FOCoS for Vera, AMD Venice and Tomahawk 6; Sherman at US$8.4bn vs consensus $7bn; TSMC has only 30-35K OS capacity, the rest is ASE; CPO testing on [[TER]] testers could be $2-3bn in 2028; a US expansion is reportedly being considered (IR denies). **C Sun**: each +2-3K wpm of CoWoS ≈ US$2.5-3.0m revenue; content doubles on CoPoS. **KYEC**: Rubin test time only +20-30%; 2027 drivers are MediaTek burn-in share 50% → 70-80% and TSMC chip-probe outsourcing NT$1.7bn → NT$10bn; TSMC consigning 100 more [[ADVANTEST]] testers and asking KYEC to buy 200.
+- **Substrates:** AT&S confirms [[MRVL]] as the previously unnamed Kulim anchor customer alongside [[AMD]] (via @QQ_Timmy, 09-26).
 ## 🆕🔴 2026-09-25 (/wiki-ingest 21h) — **THE PACKAGING CONSTRAINT MOVES DOWN THE BILL OF MATERIALS: ABF, T-GLASS, COPPER FOIL**
 - **ABF substrates** swing from oversupply in 2025 to a **shortage from 2026, with the gap widening to 46% in 2028**, excluding the T-glass shortage (福邦投顧 via @QQ_Timmy, 09-25). @pcbanalysis (09-25): the bottleneck is not CoWoS/EMIB-T capacity but **T-glass cloth, carrier copper foil and good-yield substrates**.
 - **Jefferies (09-25): advanced packaging is now the binding constraint on DC delivery.** SynMax estimates **~13 gross GW of advanced-packaging capacity ≈ ~17.5 GW of DC-power equivalent**; panel-based packaging could lift output 3-5x, but only in 2028-30. Cross-filed to `ai-datacenter-power`.
