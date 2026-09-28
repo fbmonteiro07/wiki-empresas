@@ -35,6 +35,10 @@ def build_brief(errors=None):
            '## OpenRouter (existing text-model scope)', '', 'Source: https://openrouter.ai/rankings · snapshot '+od['asof']+' · trailing 7-day totals.', '',
            f"- Token volume: {p['tokens_week']/1e12:.2f}T/week; requests: {p['requests_week']/1e9:.2f}B/week; free-token mix: {p['free_token_pct']*100:.1f}%.",
            f"- Estimated spend at current list prices, caching off: ${p['revenue_week']/1e6:.1f}M/week. This is a ceiling, not realized revenue."]
+    oc=vg.read_json(OR/'open_closed.json') if (OR/'open_closed.json').exists() else None
+    lf=(oc or {}).get('latest_full')
+    if lf:
+        lines.append(f"- Open-weight vs proprietary (full feed, calendar week of {lf['x']}): open-weight {lf['open']*100:.1f}%, proprietary {lf['closed']*100:.1f}%, stealth/unattributed {lf['unattributed']*100:.1f}% of tokens. Classification: Hugging Face link on the OpenRouter listing; stealth previews unattributed.")
     if prior:
         gap=(date-dt.date.fromisoformat(prior['date'])).days
         lines.append(f"- Token change versus {prior['date']}: {(p['tokens_week']/prior['tokens_week']-1)*100:+.2f}%. Snapshot interval: {gap} days"+('.' if gap==7 else '; not a strict week-over-week comparison.'))

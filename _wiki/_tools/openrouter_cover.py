@@ -1,7 +1,8 @@
 """Opening Top Models chart, using OpenRouter's own calendar-week chart feed.
 
 Offline renderer: or_fetch.py captures model_chart.json during the normal refresh.
-The source's first-seen series colors and UTC weekly-pace formula are retained.
+The source's first-seen series order and UTC weekly-pace formula are retained.
+The dashboard applies a muted palette and identifies the latest complete mix.
 """
 import base64
 import datetime as dt
@@ -13,10 +14,10 @@ from pathlib import Path
 WIKI = Path(__file__).resolve().parents[1]
 SOURCE = 'https://openrouter.ai/rankings'
 ENDPOINT = 'https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart'
-COLORS = ['#0088fe', '#00c49f', '#ffbb28', '#ff8042', '#ff6347',
-          '#4682b4', '#9acd32', '#da70d6', '#40e0d0', '#ff69b4',
-          '#daa520', '#7b68ee', '#f08080', '#6b8e23', '#db7093',
-          '#3cb371', '#bdb76b', '#800080', '#ff4500', '#2e8b57']
+COLORS = ['#477ec0', '#269788', '#d9ac56', '#cc8268', '#b55d72',
+          '#658dab', '#8b9e65', '#9c82bc', '#60afb2', '#c587a5',
+          '#b69756', '#777caf', '#bd8c86', '#748d70', '#a37195',
+          '#509b81', '#a5a375', '#7d6c9b', '#bd7961', '#54857a']
 DAY_WEIGHTS = [.1431, .1483, .1525, .1515, .1484, .1257, .1305]
 
 
@@ -104,6 +105,7 @@ def chart_svg(rows, series, colors, forecast, mode):
            f'<defs><pattern id="or-cover-hatch-{mode}" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">'
            '<rect width="6" height="6" fill="#bbc4d1"/><rect width="3" height="6" fill="#ccd3dd"/></pattern></defs>']
     for tick in ticks:
+        out.append(f'<line class="or-cover-grid" x1="48" x2="1002" y1="{baseline - bar_height(tick):.3f}" y2="{baseline - bar_height(tick):.3f}"/>')
         out.append(f'<text class="or-cover-y" x="6" y="{baseline - bar_height(tick) + 4:.3f}">{compact(tick)}</text>')
     pitch = (1002 - 48) / len(rows)
     for index, row in enumerate(rows):
@@ -192,6 +194,7 @@ function resize(){
  const interval=Math.max(1,Math.round(110/pitch));
  for(const svg of plots){
   svg.setAttribute('viewBox',`0 0 ${width} 342`);
+  svg.querySelectorAll('.or-cover-grid').forEach(line=>line.setAttribute('x2',width-right));
   svg.querySelectorAll('[data-week]').forEach(g=>{
    const x=left+Number(g.dataset.week)*pitch;
    for(const r of g.querySelectorAll('rect')){
@@ -270,6 +273,7 @@ def render(wiki=None):
     rows = chart['data']
     series = list(dict.fromkeys(key for row in rows for key in row['ys']))
     colors = {key: COLORS[index % len(COLORS)] for index, key in enumerate(series)}
+    colors['Others'] = '#bcc9d6'
     names = {'Others': 'Others'}
     pointer = (wiki / '_data/openrouter/latest.txt').read_text(encoding='utf-8').strip()
     catalog = json.loads((wiki / '_data/openrouter/raw' / pointer / 'catalog.json').read_text(encoding='utf-8'))['data']
@@ -286,16 +290,25 @@ def render(wiki=None):
             + base64.b64encode(font_path.read_bytes()).decode() + ') format("woff2")}') if font_path.exists() else ''
     age = (dt.datetime.now(dt.timezone.utc).timestamp() * 1000 - chart['cachedAt']) / 86400000
     stale = ' · Last successful capture; awaiting refresh' if age > 3 else ''
+    stamp = dt.datetime.fromtimestamp(chart['cachedAt'] / 1000, dt.timezone.utc).date()
+    completed = [row for row in rows if dt.date.fromisoformat(row['x']) + dt.timedelta(days=7) <= stamp]
+    legend_row = completed[-1] if completed else rows[-1]
+    legend_items = ''.join('<span><i style="background:' + colors[key] + '"></i>' + html.escape(names.get(key, key)) + '</span>'
+                           for key in sorted(legend_row['ys'], key=lambda key: (key == 'Others', -legend_row['ys'][key])))
+    legend = ('<div class="or-cover-legend"><p>Model mix · week of ' + legend_row['x']
+              + (' (complete week)' if completed else ' (in progress)')
+              + ' · Hover or select any bar for its breakdown</p><div class="or-cover-legend-items">' + legend_items + '</div></div>')
     return ('<style>' + font + CSS + '</style><section class="or-cover" id="token-growth" aria-labelledby="or-cover-title">'
-            '<div class="or-cover-inner"><h1 class="or-cover-title" id="or-cover-title">'
-            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 3v16a2 2 0 0 0 2 2h16M8 17v-3M13 17V5M18 17V9"/></svg>Top Models</h1>'
-            '<p class="or-cover-subtitle">Weekly usage of models across OpenRouter</p>'
-            '<div class="or-cover-toolbar"><div class="or-cover-switch" role="group" aria-label="Y-axis scale">'
+            '<div class="or-cover-inner"><p class="or-cover-kicker">Model adoption / OpenRouter</p><h2 class="or-cover-title" id="or-cover-title">'
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 3v16a2 2 0 0 0 2 2h16M8 17v-3M13 17V5M18 17V9"/></svg>Top models</h2>'
+            '<p class="or-cover-subtitle">Weekly token usage by model. Follow demand and the changing model mix across OpenRouter.</p>'
+            '<div class="or-cover-toolbar"><span class="or-cover-unit">CALENDAR WEEKS · TRILLIONS OF TOKENS</span><div class="or-cover-switch" role="group" aria-label="Y-axis scale">'
             '<button type="button" data-cover-scale="linear" aria-pressed="true">Linear</button>'
             '<button type="button" data-cover-scale="log" aria-pressed="false">Log</button></div></div>'
             '<div class="or-cover-canvas">' + chart_svg(rows, series, colors, forecast, 'linear')
             + chart_svg(rows, series, colors, forecast, 'log')
             + '<div class="or-cover-tooltip" role="tooltip" hidden></div></div>'
+            + legend +
             '<p class="or-cover-credit">Source: <a href="' + SOURCE + '" target="_blank" rel="noopener">OpenRouter</a>, as of '
             + asof + '. Licensed under CC BY 4.0. · Hatched area: estimated weekly pace.' + stale + '</p></div>'
             '<script type="application/json" class="or-cover-data">' + json.dumps(data, ensure_ascii=True).replace('<', '\\u003c')

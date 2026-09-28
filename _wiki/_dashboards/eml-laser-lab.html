@@ -4,28 +4,35 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Laser Line Lab</title>
-<meta name="description" content="Interactive 3D production line: how Lumentum makes its EML lasers, from sulfur-doped InP wafer through MOCVD epitaxy, grating and modulator, wafer fab, probe, bars and facets, dice and test, to the transceiver or external laser source. Every number attributed to the Capstone wiki.">
+<meta name="description" content="Interactive 3D production line with an editable wafer-economics example: how Lumentum makes its EML lasers, from sulfur-doped InP wafer through MOCVD epitaxy, grating and modulator, wafer fab, probe, bars and facets, dice and test, to the transceiver or external laser source. Every sourced number attributed to the Capstone wiki; placeholder inputs labelled as such.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#f4f5f7; --panel:#ffffff; --panel-2:#eef0f3; --ink:#15181d; --ink-2:#4a515c; --ink-3:#7a828e;
   --line:#d9dde3; --accent:#0a84c6; --accent-2:#0f6fa3; --amber:#b86b00; --red:#c2372f; --copper:#a8612a;
-  --scene-bg:#e9ecf0; --chip:#e3e7ec; --good:#1d7a4f;
+  --chip:#e3e7ec; --good:#1d7a4f;
+  --green:#1c4d3a; --green-2:#2f6f52; --sage:#a9c7b6; --sage-2:#e3eee7;
+  --bar-on:#1c4d3a; --bar-off:#93b8a4;
+  --studio:#0c1712; --studio-2:#142219; --studio-ink:#e6efe9; --studio-ink-2:#a9c7b6; --studio-ink-3:#6f8f7f; --studio-line:#22382c; --studio-accent:#8fe0b3;
   --shadow:0 1px 2px rgba(0,0,0,.06),0 6px 24px rgba(0,0,0,.06);
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --bg:#0b0d10; --panel:#13161b; --panel-2:#1a1e25; --ink:#e9edf2; --ink-2:#aab2be; --ink-3:#737d8a;
     --line:#262b33; --accent:#4cc2ff; --accent-2:#8fd8ff; --amber:#ffb454; --red:#ff6b5e; --copper:#d98c4f;
-    --scene-bg:#0e1116; --chip:#1f242c; --good:#4fd18b;
+    --chip:#1f242c; --good:#4fd18b;
+    --green:#2f6f52; --green-2:#4fa77c; --sage:#2f5546; --sage-2:#1b2f26;
+    --bar-on:#6fd3a0; --bar-off:#3a6b57;
     --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 30px rgba(0,0,0,.35);
   }
 }
 :root[data-theme="dark"]{
   --bg:#0b0d10; --panel:#13161b; --panel-2:#1a1e25; --ink:#e9edf2; --ink-2:#aab2be; --ink-3:#737d8a;
   --line:#262b33; --accent:#4cc2ff; --accent-2:#8fd8ff; --amber:#ffb454; --red:#ff6b5e; --copper:#d98c4f;
-  --scene-bg:#0e1116; --chip:#1f242c; --good:#4fd18b;
+  --chip:#1f242c; --good:#4fd18b;
+  --green:#2f6f52; --green-2:#4fa77c; --sage:#2f5546; --sage-2:#1b2f26;
+  --bar-on:#6fd3a0; --bar-off:#3a6b57;
   --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 30px rgba(0,0,0,.35);
 }
 *{box-sizing:border-box}
@@ -35,86 +42,161 @@ body{overflow-x:hidden}
 .wrap{max-width:1280px;margin:0 auto;padding:20px 16px 60px}
 header.top{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:14px}
 h1{margin:0;font-size:clamp(28px,4.4vw,48px);line-height:.95;letter-spacing:-.03em;font-weight:800;text-transform:uppercase}
-h1 span{color:var(--accent)}
-.sub{color:var(--ink-2);font-size:14px;max-width:600px;margin-top:8px;line-height:1.45}
-.sub a{color:var(--accent)}
+h1 span{color:var(--green-2)}
+.sub{color:var(--ink-2);font-size:14px;max-width:620px;margin-top:8px;line-height:1.45}
+.sub a{color:var(--green-2)}
 .tabs{display:flex;gap:6px;background:var(--panel);border:1px solid var(--line);padding:4px;border-radius:12px;box-shadow:var(--shadow)}
-.tabs button,.seg button,.btn{font:inherit;border:0;background:transparent;color:var(--ink-2);padding:9px 14px;border-radius:9px;cursor:pointer;font-weight:600;font-size:14px}
-.tabs button.on{background:var(--accent);color:#fff}
-:root[data-theme="dark"] .tabs button.on,:root[data-theme="dark"] .steps button.on{color:#04121b}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tabs button.on,:root:not([data-theme="light"]) .steps button.on{color:#04121b}}
+.tabs a{font:600 14px Inter,sans-serif;color:var(--ink-2);text-decoration:none;padding:9px 14px;border-radius:9px}
+.tabs a:hover{background:var(--panel-2);color:var(--ink)}
 .themebtn{font:inherit;border:1px solid var(--line);background:var(--panel);color:var(--ink-2);border-radius:10px;padding:9px 11px;cursor:pointer}
-
-.stage{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:var(--scene-bg);box-shadow:var(--shadow);height:min(70vh,680px);min-height:440px}
-#glbox{position:absolute;inset:0}
-#gl{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none;cursor:grab}
-#gl:active{cursor:grabbing}
-#labels{position:absolute;inset:0;pointer-events:none}
-.lbl{position:absolute;transform:translate(-50%,-100%);font-size:11px;font-weight:600;color:var(--ink);background:color-mix(in srgb,var(--panel) 82%,transparent);border:1px solid var(--line);padding:3px 7px;border-radius:6px;white-space:nowrap;backdrop-filter:blur(4px)}
-.lbl small{display:block;font-weight:500;color:var(--ink-3);font-size:10px}
-.lbl::after{content:"";position:absolute;left:50%;bottom:-7px;width:1px;height:6px;background:var(--ink-3)}
-.lbl.hot{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 22%,var(--panel));z-index:2}
-
-.hud{position:absolute;left:14px;top:14px;width:330px;max-height:calc(100% - 28px);overflow:auto;background:color-mix(in srgb,var(--panel) 90%,transparent);border:1px solid var(--line);border-radius:14px;padding:14px;backdrop-filter:blur(8px);box-shadow:var(--shadow)}
-.hud h3,.ctrl h3{margin:0 0 4px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
-.hud .big{font-size:20px;font-weight:800;letter-spacing:-.02em;margin-bottom:8px;line-height:1.15}
-.hud p{margin:0 0 8px;font-size:12.5px;line-height:1.45;color:var(--ink-2)}
-.kv{display:grid;grid-template-columns:auto 1fr;gap:5px 10px;font-size:12.5px;align-items:baseline;margin:0}
-.kv dt{color:var(--ink-3);font-weight:600;text-transform:uppercase;font-size:10.5px;letter-spacing:.06em}
-.kv dd{margin:0;color:var(--ink)}
+.eyebrow{font:600 10.5px "JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
 .src{color:var(--ink-3);font-size:10.5px}
 .tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:5px;background:color-mix(in srgb,var(--amber) 18%,transparent);color:var(--amber);margin-left:4px;vertical-align:1px}
 .tag.d{background:color-mix(in srgb,var(--ink-3) 18%,transparent);color:var(--ink-3)}
 .tag.r{background:color-mix(in srgb,var(--red) 18%,transparent);color:var(--red)}
-.meter{margin-top:8px}
-.meter .row{display:flex;justify-content:space-between;font-size:11px;color:var(--ink-3);margin-bottom:4px}
-.bar{height:9px;border-radius:5px;background:var(--chip);overflow:hidden;position:relative;display:flex}
-.bar i{display:block;height:100%;transition:width .35s ease}
-.bar i.w{background:var(--accent)} .bar i.k{background:var(--amber)} .bar i.over{background:var(--red)}
-.verdict{font-weight:700;font-size:13px;margin-top:8px;padding:8px 10px;border-radius:9px;background:var(--chip)}
-.verdict.ok{color:var(--good)} .verdict.opt{color:var(--amber)} .verdict.bad{color:var(--red)}
 
-.ctrl{position:absolute;right:14px;top:14px;width:310px;max-height:calc(100% - 28px);overflow:auto;background:color-mix(in srgb,var(--panel) 90%,transparent);border:1px solid var(--line);border-radius:14px;padding:14px;backdrop-filter:blur(8px);box-shadow:var(--shadow)}
-.steps{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:8px}
-.steps button{font:700 12px "JetBrains Mono",monospace;padding:7px 0;border-radius:7px;border:1px solid var(--line);background:var(--chip);color:var(--ink-2);cursor:pointer}
-.steps button.on{background:var(--accent);border-color:var(--accent);color:#fff}
-.row2{display:flex;gap:6px;flex-wrap:wrap}
-.btn{border:1px solid var(--line);background:var(--chip);color:var(--ink);padding:7px 11px;font-size:13px}
-.btn:hover{border-color:var(--accent)}
-.seg{display:flex;background:var(--chip);border-radius:10px;padding:3px;gap:3px;border:1px solid var(--line);flex-wrap:wrap}
-.seg button{flex:1;padding:6px 6px;font-size:12px}
-.seg button.on{background:var(--panel);color:var(--ink);box-shadow:var(--shadow)}
-label.f{display:block;margin-top:10px;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
-label.f span{float:right;font-family:"JetBrains Mono",monospace;color:var(--ink);text-transform:none;letter-spacing:0}
-select{width:100%;margin-top:4px;font:inherit;font-size:12.5px;padding:6px 8px;border-radius:8px;border:1px solid var(--line);background:var(--chip);color:var(--ink)}
-input[type=range]{width:100%;accent-color:var(--accent);margin:6px 0 2px}
-.ticks{display:flex;justify-content:space-between;font-size:10.5px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;font-weight:700}
-.hint{font-size:11px;color:var(--ink-3);margin-top:8px;line-height:1.4}
-.help{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);font-size:11px;color:var(--ink-3);background:color-mix(in srgb,var(--panel) 80%,transparent);border:1px solid var(--line);padding:5px 10px;border-radius:20px;white-space:nowrap}
-#fallback{position:absolute;inset:0;display:none;align-items:center;justify-content:center;text-align:center;padding:30px;color:var(--ink-2)}
+/* ---------- stage: side panel | studio, KPI strip below ---------- */
+.stage{display:grid;grid-template-columns:400px 1fr;grid-template-rows:1fr auto;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);height:min(78vh,780px);min-height:620px;background:var(--panel)}
+.side{overflow:auto;padding:18px 20px 22px;border-right:1px solid var(--line);background:var(--panel);scrollbar-width:thin}
+.side .t{font-size:24px;font-weight:800;letter-spacing:-.025em;line-height:1.1;margin:6px 0 10px;color:var(--ink)}
+.side .t.s{font-size:20px;margin-top:4px}
+.side p{font-size:13px;line-height:1.5;color:var(--ink-2);margin:0 0 8px}
+.stepper{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:10px 0 8px}
+.stepper button,.dia button{font:inherit;border:1px solid var(--line);background:var(--panel-2);color:var(--ink-2);border-radius:10px;padding:8px 4px 7px;cursor:pointer;text-align:center;line-height:1.1}
+.stepper button b,.dia button b{display:block;font:700 15px Inter,sans-serif;color:var(--ink)}
+.stepper button small,.dia button small{display:block;font-size:10px;color:var(--ink-3);margin-top:3px;letter-spacing:.02em}
+.stepper button.on,.dia button.on{background:var(--green);border-color:var(--green)}
+.stepper button.on b,.stepper button.on small,.dia button.on b,.dia button.on small{color:#fff}
+.nav{display:flex;gap:6px;align-items:center;margin:0 0 14px}
+.nav button{font:600 12px Inter,sans-serif;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:8px;padding:6px 10px;cursor:pointer}
+.nav button:hover{border-color:var(--green-2)}
+.nav input[type=range]{flex:1;accent-color:var(--green-2);margin:0}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:5px 10px;font-size:12.5px;align-items:baseline;margin:0}
+.kv dt{color:var(--ink-3);font-weight:600;text-transform:uppercase;font-size:10.5px;letter-spacing:.06em}
+.kv dd{margin:0;color:var(--ink)}
+hr.sep{border:0;border-top:1px solid var(--line);margin:18px 0 14px}
+.f{margin-top:12px}
+.f label{display:flex;justify-content:space-between;align-items:baseline;font-size:12px;font-weight:600;color:var(--ink)}
+.f label span{font:500 11px "JetBrains Mono",monospace;color:var(--ink-3)}
+.f input[type=number]{width:100%;margin-top:6px;font:600 14px "JetBrains Mono",monospace;padding:8px 10px;border-radius:9px;border:1px solid var(--line);background:var(--panel-2);color:var(--ink)}
+.f input[type=number]:focus{outline:2px solid var(--green-2);outline-offset:0;border-color:transparent}
+.f input[type=range]{width:100%;accent-color:var(--green-2);margin:8px 0 0}
+.f .h,.hint{font-size:11px;color:var(--ink-3);margin-top:5px;line-height:1.45}
+.dia{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:8px}
+.formula{font:500 11.5px "JetBrains Mono",monospace;color:var(--ink-2);margin-top:12px;padding:9px 10px;background:var(--panel-2);border-radius:9px;line-height:1.5}
+.formula b{color:var(--ink);font-weight:600}
 
+.studio{position:relative;background:var(--studio);overflow:hidden}
+#glbox{position:absolute;inset:0}
+#gl{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none;cursor:grab}
+#gl:active{cursor:grabbing}
+#labels{position:absolute;inset:0;pointer-events:none}
+.lbl{position:absolute;transform:translate(-50%,-100%);font:600 10.5px "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--studio-ink);white-space:nowrap;text-align:center;padding-bottom:30px}
+.lbl small{display:block;font:500 10px "JetBrains Mono",monospace;letter-spacing:.03em;text-transform:none;color:var(--studio-ink-2);margin-top:2px}
+.lbl::after{content:"";position:absolute;left:50%;bottom:5px;width:1px;height:21px;background:var(--studio-ink-3)}
+.lbl::before{content:"";position:absolute;left:50%;bottom:0;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:var(--studio-ink-2)}
+.lbl.hot{color:var(--studio-accent)}
+.sh{position:absolute;left:18px;top:16px;pointer-events:none;max-width:70%}
+.sh .eyebrow{color:var(--studio-ink-3)}
+.sh .big{font-size:21px;font-weight:700;color:var(--studio-ink);letter-spacing:-.02em;margin-top:4px;line-height:1.15}
+.sh .vs{font:500 11px "JetBrains Mono",monospace;color:var(--studio-ink-2);margin-top:4px}
+.sc{position:absolute;left:18px;bottom:16px;display:flex;align-items:center;gap:14px}
+.sc .pill{font:600 12px Inter,sans-serif;padding:7px 13px;border-radius:999px;border:1px solid var(--studio-line);background:var(--studio-2);color:var(--studio-ink);cursor:pointer}
+.sc .pill:hover{border-color:var(--studio-ink-3)}
+.sc label{font:600 10.5px "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--studio-ink-3);display:flex;align-items:center;gap:8px}
+.sc input[type=range]{width:120px;accent-color:var(--studio-accent);margin:0}
+.snote{position:absolute;right:18px;bottom:16px;font:500 10.5px "JetBrains Mono",monospace;color:var(--studio-ink-3);letter-spacing:.04em;text-align:right;line-height:1.5}
+#fallback{position:absolute;inset:0;display:none;align-items:center;justify-content:center;text-align:center;padding:30px;color:var(--studio-ink-2)}
+.kpis{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);background:var(--panel)}
+.kpi{padding:14px 20px 13px;border-right:1px solid var(--line)}
+.kpi:last-child{border-right:0}
+.kpi .v{font-size:26px;font-weight:800;letter-spacing:-.03em;line-height:1.1;color:var(--ink)}
+.kpi .k{font:600 10.5px "JetBrains Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-top:5px}
+.kpi .s{font-size:11px;color:var(--ink-3);margin-top:2px;line-height:1.4}
+
+/* ---------- who does what ---------- */
+.who{margin-top:14px;border-top:1px solid var(--line);padding-top:10px}
+.who .r{display:grid;grid-template-columns:76px 1fr;gap:4px 8px;align-items:start;margin-top:7px}
+.role{font:600 10px "JetBrains Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);padding-top:4px;display:flex;align-items:center;gap:5px;white-space:nowrap}
+.role i{width:7px;height:7px;border-radius:50%;display:inline-block;background:var(--ink-3);flex:none}
+.role.buy i{background:var(--amber)} .role.make i{background:var(--green-2)} .role.peer i{background:var(--ink-3)} .role.sell i{background:var(--accent)}
+.chips{display:flex;flex-wrap:wrap;gap:4px 5px;align-items:baseline;font-size:11.5px;line-height:1.45;color:var(--ink-2)}
+.ent{display:block;width:100%}
+.co{display:inline-block;font:600 11px Inter,sans-serif;padding:2px 7px;border-radius:6px;border:1px solid var(--line);background:var(--panel-2);color:var(--ink-2);white-space:nowrap;vertical-align:1px;margin:1px 1px 1px 0}
+.co.cov{border-color:color-mix(in srgb,var(--green-2) 60%,var(--line));color:var(--green-2)}
+.chips .src{display:inline}
+.lbl.cl{font-size:10px;letter-spacing:.08em;color:var(--studio-ink-2);text-transform:none}
+.lbl.cl b{font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-right:6px}
+.lbl.cl.buy b{color:#ffcf7a} .lbl.cl.make b{color:var(--studio-accent)} .lbl.cl.peer b{color:#d9e2dd} .lbl.cl.sell b{color:#8fd8ff}
+.lbl.cl.buy::before{background:#ffcf7a} .lbl.cl.make::before{background:var(--studio-accent)} .lbl.cl.peer::before{background:#d9e2dd} .lbl.cl.sell::before{background:#8fd8ff}
+section.who-line{margin-top:26px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px 22px 14px;box-shadow:var(--shadow)}
+.who-line h3{margin:0;font-size:18px;font-weight:700;letter-spacing:-.01em}
+.who-line .hs{font-size:12px;color:var(--ink-3);margin-top:5px;line-height:1.45}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;margin:12px 0 8px}
+.legend .role{padding-top:0}
+.flow{overflow-x:auto;padding-bottom:6px;scrollbar-width:thin}
+.flow table{min-width:2000px;width:100%;border-collapse:separate;border-spacing:0;table-layout:fixed;font-size:11.5px}
+.flow th,.flow td{vertical-align:top;text-align:left;padding:8px 10px 8px 0;border-bottom:1px solid var(--line)}
+.flow th{cursor:pointer}
+.flow th .n{font:700 10.5px "JetBrains Mono",monospace;color:var(--ink-3);letter-spacing:.08em}
+.flow th .t{font-size:12.5px;font-weight:700;color:var(--ink);margin-top:3px;line-height:1.2}
+.flow th.on .n,.flow th.on .t{color:var(--green-2)}
+.flow th.fin{cursor:default} .flow th.fin .n{color:var(--accent)}
+.flow td{line-height:1.4;color:var(--ink-2)}
+.flow td.rl{width:82px}
+.flow th:first-child,.flow td:first-child{position:sticky;left:0;background:var(--panel);z-index:1;width:82px}
+.flow .none{color:var(--ink-3);font-style:italic}
+.flow .ent{margin-bottom:5px}
+
+/* ---------- comparison ---------- */
+section.how{margin-top:26px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px 22px 18px;box-shadow:var(--shadow)}
+.how h3{margin:0;font-size:18px;font-weight:700;letter-spacing:-.01em}
+.how .hs{font:500 11.5px "JetBrains Mono",monospace;color:var(--ink-3);margin-top:5px}
+.mtabs{display:inline-flex;gap:2px;background:var(--panel-2);border:1px solid var(--line);border-radius:10px;padding:3px;margin:14px 0 6px}
+.mtabs button{font:600 12px Inter,sans-serif;border:0;background:transparent;color:var(--ink-2);padding:6px 12px;border-radius:8px;cursor:pointer}
+.mtabs button.on{background:var(--green);color:#fff}
+.chart{position:relative}
+.chart svg{width:100%;height:300px;display:block}
+.chart .gl{stroke:var(--line);stroke-width:1}
+.chart .ax{stroke:var(--ink-3);stroke-width:1}
+.chart .tk,.chart .xs{font:500 10.5px "JetBrains Mono",monospace;fill:var(--ink-3)}
+.chart .xl{font:600 12px Inter,sans-serif;fill:var(--ink-2)}
+.chart .xl.on{fill:var(--ink)}
+.chart .val{font:600 12.5px Inter,sans-serif;fill:var(--ink-2)}
+.chart .val.on{fill:var(--ink);font-weight:700}
+.chart .bar{fill:var(--bar-off);cursor:pointer;transition:fill .2s}
+.chart .bar.on{fill:var(--bar-on)}
+.chart .bar:hover{opacity:.82}
+.chart .hit{fill:transparent;cursor:pointer}
+.tip{position:absolute;pointer-events:none;background:var(--ink);color:var(--bg);font:500 11.5px Inter,sans-serif;padding:6px 9px;border-radius:7px;display:none;white-space:nowrap;z-index:3}
+.take{font-size:14px;font-weight:600;margin-top:8px;color:var(--ink)}
+.cav{font-size:11.5px;color:var(--ink-3);margin-top:5px;line-height:1.5}
+
+/* ---------- cards below ---------- */
 section.explain{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 16px 14px;box-shadow:var(--shadow)}
-.card .n{font:700 11px "JetBrains Mono",monospace;color:var(--accent);letter-spacing:.08em}
+.card .n{font:700 11px "JetBrains Mono",monospace;color:var(--green-2);letter-spacing:.08em}
 .card h4{margin:4px 0 6px;font-size:16px;letter-spacing:-.01em}
 .card p{margin:0;color:var(--ink-2);font-size:13.5px;line-height:1.5}
+.seg{display:flex;background:var(--chip);border-radius:10px;padding:3px;gap:3px;border:1px solid var(--line);flex-wrap:wrap;margin-top:8px}
+.seg button{flex:1;font:600 12px Inter,sans-serif;border:0;background:transparent;color:var(--ink-2);padding:6px 8px;border-radius:8px;cursor:pointer}
+.seg button.on{background:var(--panel);color:var(--ink);box-shadow:var(--shadow)}
 h2{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin:34px 0 12px;font-weight:700}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 table{width:100%;border-collapse:collapse;font-size:13px}
 th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
 th{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
 td.v{font-weight:700;white-space:nowrap}
-.ladder{display:grid;grid-template-columns:150px 1fr auto;gap:6px 10px;align-items:center;font-size:12.5px}
-.ladder .b{height:12px;border-radius:6px;background:var(--accent);opacity:.85}
-.ladder .b.c{background:var(--copper)} .ladder .b.o{background:var(--amber)}
-.ladder .v{font-family:"JetBrains Mono",monospace;font-weight:600;white-space:nowrap}
 footer{margin-top:30px;color:var(--ink-3);font-size:12px;line-height:1.5;border-top:1px solid var(--line);padding-top:14px}
 @media (max-width:900px){section.explain{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}}
-@media (max-width:760px){
-  .stage{height:auto;min-height:0;display:flex;flex-direction:column}
-  #glbox{position:relative;inset:auto;height:56vh;min-height:340px;flex:none}
-  .hud,.ctrl{position:static;width:auto;max-height:none;margin:10px;backdrop-filter:none}
-  .help{display:none}.lbl{font-size:10px}
+@media (max-width:900px){
+  .stage{grid-template-columns:1fr;grid-template-rows:auto auto auto;height:auto;min-height:0}
+  .side{border-right:0;border-bottom:1px solid var(--line);max-height:none;order:2}
+  .studio{height:58vh;min-height:360px;order:1}
+  .kpis{order:3;grid-template-columns:1fr 1fr 1fr}
+  .kpi .v{font-size:20px}
+  .sh .big{font-size:17px}.sh{max-width:88%}
+  .snote{display:none}
 }
 </style>
 </head>
@@ -123,44 +205,81 @@ footer{margin-top:30px;color:var(--ink-3);font-size:12px;line-height:1.5;border-
   <header class="top">
     <div>
       <h1>The Laser <span>Line</span></h1>
-      <div class="sub">How Lumentum makes an EML laser: from a sulfur-doped InP wafer through MOCVD epitaxy, grating and modulator, wafer fab, probe, bars and facets, dice and test, into an 800G/1.6T transceiver or NVIDIA’s external laser source. Companion to <a href="ocs-cpo-lab.html">The Light Path</a> and <a href="token-path-lab.html">The Token Path</a>. Drag to orbit, scroll to zoom, ← → stations.</div>
+      <div class="sub">How Lumentum makes an EML laser: from a sulfur-doped InP wafer through MOCVD epitaxy, grating and modulator, wafer fab, probe, bars and facets, dice and test, into an 800G/1.6T transceiver or NVIDIA’s external laser source — with an editable wafer-diameter example. Companion to <a href="ocs-cpo-lab.html">The Light Path</a> and <a href="token-path-lab.html">The Token Path</a>.</div>
     </div>
     <div style="display:flex;gap:8px;align-items:center">
       <div class="tabs" role="tablist">
-        <a href="ocs-cpo-lab.html" style="font:600 14px Inter,sans-serif;color:var(--ink-2);text-decoration:none;padding:9px 14px">← The Light Path</a>
-        <a href="token-path-lab.html" style="font:600 14px Inter,sans-serif;color:var(--ink-2);text-decoration:none;padding:9px 14px">The Token Path</a>
+        <a href="ocs-cpo-lab.html">← The Light Path</a>
+        <a href="token-path-lab.html">The Token Path</a>
       </div>
       <button class="themebtn" id="themeBtn" title="Toggle theme" aria-label="Toggle theme">◐</button>
     </div>
   </header>
 
   <div class="stage" id="stage">
-    <div id="glbox">
-      <canvas id="gl"></canvas>
-      <div id="labels"></div>
-      <div id="fallback">The 3D scene needs WebGL and the three.js library from cdnjs. The steps, numbers and calculator below still work.</div>
-      <div class="help">drag to orbit · scroll to zoom · ← → stations</div>
-    </div>
-
-    <!-- HUD: EML -->
-    <div class="hud" id="hudEML">
-      <h3 id="emlStepN">Station 1 of 8</h3>
-      <div class="big" id="emlTitle"></div>
+    <aside class="side" id="side">
+      <div class="eyebrow" id="emlStepN">Production line · Station 1 of 8</div>
+      <div class="t" id="emlTitle"></div>
+      <div class="stepper" id="stepper"></div>
+      <div class="nav"><button id="emlPrev">← Prev</button><button id="emlNext">Next →</button><input type="range" id="emlStage" min="0" max="7" step="1" value="0" aria-label="Station"></div>
       <p id="emlBody"></p>
       <dl class="kv" id="emlKv"></dl>
+      <div class="who" id="who"></div>
+
+      <hr class="sep">
+      <div class="eyebrow">Editable example · USD</div>
+      <div class="t s">EML wafer economics.</div>
+      <p>Same sulfur-doped InP. Different wafer diameter. The diameter factor and the two comparators are sourced; the three free inputs are placeholders the wiki does not carry.</p>
+      <div class="f"><label>Wafer diameter <span id="diaFact"></span></label><div class="dia" id="dia"></div>
+        <div class="h">3→4-inch in 2025; 6-inch only with Greensboro (2028), ~4.36x the chips of 3-inch.<span class="src"> LITE IR 09-11; Citi 07-16</span> 4-inch is shown at the area ratio (1.78x), not a sourced chip count.</div></div>
+      <div class="f"><label>Good chips per 3-inch wafer <span>placeholder</span></label><input type="number" id="inChips" value="1000" min="1" step="50"><div class="h">Not in the wiki — a number to scale from.</div></div>
+      <div class="f"><label>6-inch yield vs 3/4-inch <span id="y6v">100%</span></label><input type="range" id="inY6" min="5" max="100" step="5" value="100"><div class="h">Today “very bad” on S-doped 6-inch; AXT ingot yield ~5%.<span class="src"> LITE IR 09-11</span> 100% = mature, same as 3/4-inch.</div></div>
+      <div class="f"><label>InP wafer starts / month <span>placeholder</span></label><input type="number" id="inStarts" value="5000" min="1" step="100"><div class="h">Not in the wiki — LITE discloses capacity steps (+40%, 8x in 2.5 years), not wafer starts.</div></div>
+      <div class="f"><label>ASP per EML chip, $ <span>placeholder</span></label><input type="number" id="inAsp" value="50" min="1" step="5"><div class="h">No chip price in the wiki. Module anchor: NVIDIA’s ELS ≈ $425 with 8 chips ⇒ ~$53 per chip-slot fully loaded, assembly included — not a chip price.<span class="src"> LITE IR 09-11</span> 200G ≈ 2x the 100G ASP.<span class="src"> LITE @ DB 08-27</span></div></div>
+      <div class="formula" id="formula"></div>
+      <div class="hint" style="margin-top:14px">Stations 4-7 follow the wafer-to-chip flow described by a laser-industry expert (call, 2026-07-23), not a Lumentum disclosure; items marked <span class="tag d">generic</span> are industry knowledge the wiki does not carry.</div>
+    </aside>
+
+    <div class="studio">
+      <div id="glbox">
+        <canvas id="gl"></canvas>
+        <div id="labels"></div>
+        <div id="fallback">The 3D scene needs WebGL and the three.js library from cdnjs. The stations, numbers and example still work.</div>
+      </div>
+      <div class="sh"><div class="eyebrow">EML · three dimensional view</div><div class="big" id="vTitle"></div><div class="vs" id="vSub"></div></div>
+      <div class="sc"><button class="pill" id="exBtn">Assemble</button><label>Layer spacing <input type="range" id="exRange" min="0" max="1" step="0.01" value="0.45" aria-label="Layer spacing"></label></div>
+      <div class="snote">geometry is schematic<br>drag to orbit · scroll to zoom · ← → stations</div>
     </div>
 
-    <!-- Controls: EML -->
-    <div class="ctrl" id="ctrlEML">
-      <h3>Production line</h3>
-      <input type="range" id="emlStage" min="0" max="7" step="1" value="0">
-      <div class="ticks"><span>InP wafer</span><span>Epi</span><span>Chip</span><span>Module</span></div>
-      <div class="row2" style="margin-top:8px"><button class="btn" id="emlPrev">← Prev</button><button class="btn" id="emlNext">Next →</button></div>
-      <h3 style="margin-top:14px">Sites</h3>
-      <div class="seg" id="siteSeg"></div>
-      <div id="siteBody" class="hint"></div>
-      <div class="hint">Stations 4-7 follow the wafer-to-chip flow described by a laser-industry expert (call, 2026-07-23), not a Lumentum disclosure; items marked <span class="tag d">generic</span> are industry knowledge the wiki does not carry.</div>
+    <div class="kpis">
+      <div class="kpi"><div class="v" id="k1">—</div><div class="k">Chips / month</div><div class="s" id="k1s"></div></div>
+      <div class="kpi"><div class="v" id="k2">—</div><div class="k">Revenue / year</div><div class="s" id="k2s"></div></div>
+      <div class="kpi"><div class="v" id="k3">—</div><div class="k">Share of 2028E laser-chip supply</div><div class="s" id="k3s"></div></div>
     </div>
+  </div>
+
+  <section class="how" id="how">
+    <h3>How does wafer diameter change the result?</h3>
+    <div class="hs" id="howSub"></div>
+    <div class="mtabs" id="mtabs"><button data-m="cpm" class="on">Chips / month</button><button data-m="rev">Revenue / year</button><button data-m="share">Share of 2028E supply</button></div>
+    <div class="chart" id="chart"><div class="tip" id="tip"></div></div>
+    <div class="take" id="take"></div>
+    <div class="cav">Same wafer starts and ASP across diameters; select a bar to view that diameter in the scene. The 6-inch bar is Citi’s 4.36x chips per wafer (2026-07-16) scaled by the yield input; today’s S-doped 6-inch yield is “very bad” and AXT’s ingot yield ~5% (LITE IR, 2026-09-11). Comparators: Citi’s ~1.1B laser chips of 2028E industry supply, EML+CW (07-16); Greensboro sized for ~$5B/yr (10-K FY26; call 08-11).</div>
+  </section>
+
+  <section class="who-line" id="wholine">
+    <h3>Who does what along the line</h3>
+    <div class="hs">Per station: who Lumentum buys from and what, which site does the step, who else does the same step, and who buys the output — through to the final product and the end customer. Click a station to view it in the scene. Chips outlined in green have a wiki page. Everything attributed; “not in the wiki” means exactly that.</div>
+    <div class="legend"><span class="role buy"><i></i>Buys from</span><span class="role make"><i></i>Made at</span><span class="role peer"><i></i>Peers</span><span class="role sell"><i></i>Sells to / next</span></div>
+    <div class="flow" id="flow"></div>
+  </section>
+
+  <div class="card" style="margin-top:26px">
+    <div class="n">WHERE IT IS MADE</div>
+    <div class="seg" id="siteSeg"></div>
+    <div id="siteBody" class="hint" style="font-size:12.5px;color:var(--ink-2)"></div>
+  </div>
+
   <!-- Explain: EML -->
   <section class="explain" id="explainEML">
     <div class="card"><div class="n">01 · THE PRODUCT</div><h4>What an EML is</h4><p>An electro-absorption modulated laser: a DFB laser (grating-defined single wavelength) and an electro-absorption modulator on the same InP chip. The DSP’s electrical signal drives the modulator, which switches the laser light on and off at 100G or 200G per lane. 200G per lane is “about 2x ASP” with “very little competition… Broadcom being the other main supplier”.<span class="src"> LITE @ DB conference, 2026-08-27</span></p></div>
@@ -178,6 +297,7 @@ footer{margin-top:30px;color:var(--ink-3);font-size:12px;line-height:1.5;border-
           <tr><td>Japan EML capacity</td><td class="v">8x in 2.5 years</td><td class="src">Aurelion paraphrase, 2026-07-29</td></tr>
           <tr><td>EML units</td><td class="v">&gt;50% growth, Dec-26 quarter y/y</td><td class="src">Q4 FY26 call, 2026-08-11</td></tr>
           <tr><td>Demand vs supply</td><td class="v">demand &gt; supply by more than 30%; 90%+ of output take-or-pay through CY27, extra units auctioned</td><td class="src">LITE, 2026-05-06 / 05-07</td></tr>
+          <tr><td>Industry supply</td><td class="v">laser chips ~280M (2025) → ~1.1B (2028E); EML gap ~33%/20%/11% 2026-28</td><td class="src">Citi InP supply model, 2026-07-16</td></tr>
           <tr><td>FY26 capex</td><td class="v">$451.3M</td><td class="src">10-K FY26</td></tr>
           <tr><td>Wafer size</td><td class="v">3→4-inch in 2025; 6-inch only with Greensboro (2028); 6-inch = 2.25x area, ~4.36x chips of 3-inch</td><td class="src">LITE 2025-08-12; IR 09-11; Citi 07-16</td></tr>
           <tr><td>6-inch yield</td><td class="v">AXT ingot ~5%; Sumitomo S-doped 6-inch “very bad”; COHR says every product yields better on 6-inch <span class="tag">disputed</span></td><td class="src">LITE IR 09-11; COHR 09-08</td></tr>
@@ -202,12 +322,12 @@ footer{margin-top:30px;color:var(--ink-3);font-size:12px;line-height:1.5;border-
     </div>
     <div class="card" style="margin-top:14px">
       <div class="n" style="color:var(--red)">NOT IN THE WIKI</div>
-      <p>Wafers per month, number of MOCVD reactors, fab cycle time, die per wafer, chip yield, per-EML ASP in dollars, EML share of LITE revenue or margin, which fab makes 100G vs 200G, and the actual DFB-grating, modulator-integration, cleaving and burn-in recipes. Stations 2-3 and the grating/modulator drawing are industry-generic; the wafer-to-chip flow (stations 4-7) is a laser-industry expert’s description (call, 2026-07-23), not Lumentum’s.</p>
+      <p>Wafers per month, number of MOCVD reactors, fab cycle time, die per wafer, chip yield, per-EML ASP in dollars, EML share of LITE revenue or margin, which fab makes 100G vs 200G, and the actual DFB-grating, modulator-integration, cleaving and burn-in recipes. The editable example’s three free inputs — good chips per 3-inch wafer, wafer starts per month and the per-chip ASP — are placeholders, not wiki data; only the diameter factor (4.36x), the ELS module anchor ($425 for 8 chips), Citi’s 2028E supply (~1.1B chips) and Greensboro’s ~$5B/yr sizing are sourced. Supply-chain gaps: vendors for litho, etch, metal and e-beam tools; probe, facet-coating and submount/die-bond/burn-in tools, sites and peers; which fab does epi or grating; LITE’s DSP supplier; where its TOSAs are assembled; Sumitomo and JX volumes or prices; Customer B; whose orders make up Veeco’s $250M+. Stations 2-3 and the grating/modulator drawing are industry-generic; the wafer-to-chip flow (stations 4-7) is a laser-industry expert’s description (call, 2026-07-23), not Lumentum’s.</p>
     </div>
   </section>
 
   <footer>
-    Sources: Capstone wiki pages LITE, AIXA, AXTI, COHR, AVGO; theme optical-cpo; LITE 10-K FY26, earnings and IR transcripts, the LITE/JPM follow-up call (2026-05-07) and a laser-industry expert call (2026-07-23), as dated. Scene geometry is schematic. Built 2026-09-28 (split out of The Token Path the same day).
+    Sources: Capstone wiki pages LITE, AIXA, AXTI, COHR, AVGO; theme optical-cpo; LITE 10-K FY26, earnings and IR transcripts, the LITE/JPM follow-up call (2026-05-07), Citi’s InP supply model (2026-07-16) and a laser-industry expert call (2026-07-23), as dated. The who-does-what layer draws on the LITE, AXTI, AIXA, VECO, COHR, AVGO, MRVL, GOOG and NVDA pages and the optical-cpo theme, sourced cell by cell. Scene geometry is schematic. Built 2026-09-28 (split out of The Token Path the same day; editable example and studio view added the same evening).
   </footer>
 </div>
 
@@ -219,10 +339,11 @@ const $=s=>document.querySelector(s);
 try{const t=localStorage.getItem("ll-theme"); if(t) document.documentElement.setAttribute("data-theme",t);}catch(e){}
 const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
 $("#themeBtn").onclick=()=>{ const isDark=css("--bg").toLowerCase()==="#0b0d10"; const nt=isDark?"light":"dark"; document.documentElement.setAttribute("data-theme",nt); try{localStorage.setItem("ll-theme",nt);}catch(e){} if(window.applyTheme) window.applyTheme(); };
-const fmtB=b=>b>=1e12?(b/1e12).toFixed(2)+" TB":b>=1e9?(b/1e9).toFixed(0)+" GB":b>=1e6?(b/1e6).toFixed(0)+" MB":(b/1e3).toFixed(0)+" kB";
-const fmtN=n=>n.toLocaleString("en-US");
+const fmtN=n=>Math.round(n).toLocaleString("en-US");
+const fmtBig=n=>n>=1e9?(n/1e9).toFixed(2)+"B":n>=1e6?(n/1e6).toFixed(1)+"M":n>=1e3?(n/1e3).toFixed(0)+"k":n.toFixed(0);
+const fmtUSD=n=>"$"+fmtBig(n);
+const fmtPct=n=>(n*100).toFixed(1)+"%";
 
-// =============================== DATA: EML ===============================
 const EML=[
   {t:"Sulfur-doped InP substrate",b:"Everything starts on an indium-phosphide wafer. Lasers need sulfur-doped InP, which yields worse than the iron-doped InP used for photodetectors.<span class='src'> LITE IR, 2026-09-11</span> Lumentum was still moving from 3- to 4-inch in 2025; 6-inch comes only with Greensboro in 2028 (2.25x the area, ~4.36x the chips of 3-inch, but planned on a smaller gain because of yield).<span class='src'> LITE 2025-08-12; IR 09-11; Citi 07-16</span>",kv:[["Suppliers","AXT ~40% · Sumitomo ~40% · JX ~10% (2024)","AXT, 2026-08-31"],["Allocation","shortage “&gt;18 months”; 3rd price hike this year, +10% more in 4Q26","AXT 08-31; UDN via Jefferies 08-17"],["LITE’s hedge","AXT capacity reserved through 2031: $43.5M deposit now, $43.5M in 2028; Sumitomo the primary","AXT, 2026-07-29"],["6-inch yield","AXT ingot ~5%; Sumitomo S-doped 6-inch “very bad”","LITE IR, 2026-09-11"]]},
   {t:"MOCVD epitaxy: growing the laser layers",b:"In a metal-organic chemical-vapour-deposition reactor, gases carrying indium, gallium, arsenic and phosphorus decompose on the hot wafer and grow the crystal layer by layer: the quantum-well gain stack that emits light, the layers that will become the modulator, cladding and contacts. Only two tool vendors: Aixtron for the “very difficult” steps, Veeco for the easier ones.<span class='src'> LITE IR, 2026-09-11</span>",kv:[["Tool share","Aixtron ~90-100% of InP MOCVD; ~100% (AIXA page)","AIXA Q3/25 call; Jefferies 2026-06-19"],["Lead time","customers reserving reactor slots into 2027; long-lead items are reactors and e-beam lithography","AIXA; LITE @ DB, 2026-08-27"],["Epi pricing","substrate and epi wafer prices +10%+ in 4Q26","UDN via Jefferies, 2026-08-17"],["Where","Sagamihara + Takao (Japan) qualifying CW and EML flows on the newest tools","Q4 FY26 call, 2026-08-11"]]},
@@ -241,61 +362,253 @@ const SITES=[
   ["Greensboro","North Carolina, ex-Qorvo GaAs fab, $38.0M (closed 2026-03-17), 148k sq ft; converting to 6-inch InP; first revenue early 2028, full end-2028; sized for ~$5B/yr. 10-K FY26; call 08-11; OFC 03-17"],
   ["Thailand","Back end, 1.173M sq ft owned: packaging and test; “not as differentiated”. 10-K FY26; IR 09-11. Fabrinet trained to co-build OCS in CY27 (IR 09-11)"]
 ];
-const E={stage:0,site:0};
+
+
+const E={stage:0,site:0,explode:0.45,explodeCur:0.45,diaCur:1.35};
+const STEP_SHORT=["InP","Epi","Chip","Fab","Probe","Bars","Dice","Module"];
+const stepper=$("#stepper"); STEP_SHORT.forEach((s,i)=>{ const b=document.createElement("button"); b.innerHTML="<b>"+(i+1)+"</b><small>"+s+"</small>"; b.onclick=()=>setEml(i); stepper.appendChild(b); });
 const siteSeg=$("#siteSeg"); SITES.forEach((s,i)=>{const b=document.createElement("button"); b.textContent=s[0]; if(!i) b.classList.add("on"); b.onclick=()=>{E.site=i; [...siteSeg.children].forEach((x,k)=>x.classList.toggle("on",k===i)); $("#siteBody").textContent=SITES[i][1];}; siteSeg.appendChild(b);}); $("#siteBody").textContent=SITES[0][1];
 function setEml(i){
   E.stage=Math.max(0,Math.min(EML.length-1,i)); $("#emlStage").value=E.stage;
-  const s=EML[E.stage]; $("#emlStepN").textContent="Station "+(E.stage+1)+" of "+EML.length; $("#emlTitle").textContent=s.t; $("#emlBody").innerHTML=s.b;
+  const s=EML[E.stage]; $("#emlStepN").textContent="Production line · Station "+(E.stage+1)+" of "+EML.length; $("#emlTitle").textContent=s.t; $("#emlBody").innerHTML=s.b;
   $("#emlKv").innerHTML=s.kv.map(([k,v,src])=>"<dt>"+k+"</dt><dd>"+v+'<span class="src"> '+src+"</span></dd>").join("");
+  [...stepper.children].forEach((b,k)=>b.classList.toggle("on",k===E.stage));
+  $("#vTitle").textContent="Station "+(E.stage+1)+". "+s.t+".";
+  if(typeof renderWho==="function"){ renderWho(); $("#flow").querySelectorAll("th[data-i]").forEach(th=>th.classList.toggle("on",+th.dataset.i===E.stage)); }
   if(window.syncEml) window.syncEml();
 }
 $("#emlStage").oninput=()=>setEml(+$("#emlStage").value); $("#emlPrev").onclick=()=>setEml(E.stage-1); $("#emlNext").onclick=()=>setEml(E.stage+1);
-
-// ---------- keys ----------
 window.addEventListener("keydown",e=>{ if(e.target.tagName==="INPUT"||e.target.tagName==="SELECT") return; if(e.key==="ArrowRight") setEml(E.stage+1); if(e.key==="ArrowLeft") setEml(E.stage-1); });
-setEml(0);
+
+// =============================== WHO DOES WHAT ===============================
+const PAGES=new Set(["LITE","AIXA","AXTI","VECO","COHR","AVGO","NVDA","GOOG","MRVL","META","MSFT","AMZN","AMD","TSM","TSEM","AAOI","ANET","CIEN"]);
+const CO={"AXT":"AXTI","Aixtron":"AIXA","Veeco":"VECO","Broadcom":"AVGO","Coherent":"COHR","NVIDIA":"NVDA","Google":"GOOG","Marvell":"MRVL","Lumentum":"LITE","Meta":"META","Microsoft":"MSFT","Amazon":"AMZN","AMD":"AMD","TSMC":"TSM","Tower":"TSEM","Arista":"ANET","Ciena":"CIEN"};
+const chip=n=>{ const t=CO[n]; const cov=t&&PAGES.has(t); return '<span class="co'+(cov?' cov':'')+'"'+(cov?' title="wiki page '+t+'"':'')+'>'+n+'</span>'; };
+const ROLES=[["buy","Buys from"],["make","Made at"],["peer","Peers"],["sell","Sells to / next"]];
+const CHAIN=[
+ { // 1 S-doped InP substrate
+  buy:[
+   {co:["AXT","Sumitomo","JX"],w:"S-doped InP substrates — 2024 share ~40% AXT / ~40% Sumitomo / ~10% JX (“Japan Energy”) / ~10% others incl. Freiburger; “only AXT and Sumitomo” can move the needle",src:"AXT mgmt (Fisher/Green), BofA-hosted call, 2026-08-31"},
+   {co:["Sumitomo"],w:"“very large volume agreement” (a 7-year deal); the only 6-inch supplier today, “struggling” on S-doped 6-inch — “we’re giving them two years”",src:"Kathy Ta (LITE IR), 2026-09-11; AXT 2Q26 notes 07-31; Wolfe 08-14"},
+   {co:["AXT"],w:"primarily 4-inch; minimum InP capacity reserved through 2031, $43.5M deposit + $43.5M in 2028 credited against wafers, “forced” by CPO demand; AXT 6-inch yield “like 5%”",src:"AXT 8-K 2026-07-29; Hurlston @ JPM 08-13; Kathy Ta 09-11"},
+   {co:["JX"],w:"“smaller… only do small size substrates”; “never even looked at by tier-one laser makers”",src:"Kathy Ta 09-11; AXT mgmt 08-31"},
+   {w:"6-inch price up ~250% to ~$5,000/wafer after China’s Feb-2025 controls; third hike this year, +10%+ more in 4Q26; “more substrates may be needed” despite both deals",src:"Citi (Sylla) 2026-07-16; UDN via Jefferies 08-17; LITE @ DB 08-27"}
+  ],
+  make:[{w:"bought in, not made. AXT grows in China: 3 substrate sites + a Beijing expansion",src:"AXT mgmt, 2026-08-31"}],
+  peer:[
+   {co:["Coherent"],w:"also on an AXT long-term agreement (focused on 6-inch); “Casela” (China, in the Amazon supply chain, spelling unverified) is the third",src:"AXT mgmt, 2026-08-31"},
+   {co:["Sumitomo"],w:"capacity 2.4x by 2028; the doubling finishes in 2028",src:"TD Cowen 2026-03-11; AXT mgmt 08-31"},
+   {w:"Sumitomo Chemical has started 4-inch InP epi-wafer mass production — not the same company as Sumitomo Electric; the wiki leaves this unresolved",src:"Jefferies Asia (O’Mara), 2026-09-04"}
+  ],
+  sell:[{w:"→ station 2, in-house epitaxy",src:""}]
+ },
+ { // 2 MOCVD epitaxy
+  buy:[
+   {co:["Aixtron"],w:"MOCVD reactors for “the very difficult process steps”; ~90-100% of InP MOCVD; LITE and Coherent are its two largest opto epi-tool customers; ~€4.0-4.2m per opto tool (wiki derivation); a customer went to Veeco after a price push",src:"Kathy Ta 2026-09-11; Jefferies 06-19 / 02-10; AIXTRON IR (Ludwig) @ Jefferies 08-25"},
+   {co:["Veeco"],w:"“easier process steps”; more than $250M of MOCVD + wet + ion-beam-deposition orders from InP laser makers shipping from Q3’26, plus a further LUMINA+ order — whose orders: not in the wiki",src:"Kathy Ta 09-11; Veeco CEO Miller 2026-05-05; Barclays (O’Malley) 08-13"},
+   {w:"reactor lead times are a constraint; MOCVD slots reserved into 2027",src:"LITE @ DB 2026-08-27; @crux_capital_ 07-31"}
+  ],
+  make:[{co:["Lumentum"],w:"in-house (follows from its own tool purchases — “correlate our tool purchases” with the vendors’ disclosures); which fab does epi: not in the wiki",src:"Kathy Ta, 2026-09-11"}],
+  peer:[
+   {w:"epi is in-house at the laser makers or at a small set of specialist foundries; MOCVD tools are export-controlled",src:"DAMNANG, 2026-09-01"},
+   {co:["IQE","Tower"],w:"IQE as an outsourced epi house is only a hypothesis; Tower buys epi’d InP from IQE",src:"@crux_capital_ 07-31; SIG (Hosseini) 2026-07-01"},
+   {w:"tool rival: AMEC (Chinese MOCVD)",src:"Jefferies, 2026-02-10"}
+  ],
+  sell:[{w:"→ station 3, the grating and modulator",src:""}]
+ },
+ { // 3 DFB grating + EAM
+  buy:[],
+  make:[{co:["Lumentum"],w:"~60% of the EML market; more than 50% of AI EML units at 100G/lane, ~50% expected at 200G; “two fabs in Japan produce most of the world’s supply of EML lasers… up eight-fold in 2.5 years”",src:"Aurelion 2026-07-29; Mizuho (Rakesh) 07-11"}],
+  peer:[
+   {co:["Broadcom"],w:"“the other main supplier” of 200G EMLs; “just one fab… relatively small… further behind on the high-power lasers” (LITE) vs its InP fabs in the US and Singapore “more than tripling” y/y (AVGO) — disputed",src:"LITE @ DB 08-27; Kathy Ta 09-11; AVGO Kawwas, Q3 FY26 call 2026-09-02"},
+   {co:["Sumitomo"],w:"200G EML = LITE / Broadcom / Sumitomo, sold out through 2028",src:"Jefferies expert call (Rick Li), 2026-07-14"},
+   {co:["Coherent"],w:"6-inch EMLs, CW and photodiodes in Texas and Sweden; Zurich online 1H CY27",src:"COHR Q4 FY26 call, 2026-08-13"},
+   {co:["Mitsubishi"],w:"shifting ~$1.5bn of capex toward optics",src:"TD Cowen, 2026-03-11"},
+   {co:["DSBJ","Zetta","Everbright","Source Photonics","Accelink","Yuanjie","Sanan"],w:"China: DSBJ targets 200G EML mass production in 2H26; Zetta showed 200G/lane (Nov-25); the others 1-2 years behind on qualification; China’s EML+CW share 16% (2025) → 28% (2028E); the gap is “3-5 yrs and will not close”",src:"Jefferies expert 07-14; PhotonCap 07-29; Citi 07-16; TrendForce via @QQ_Timmy 08-06; LITE SiPh director expert call 07-23"}
+  ],
+  sell:[{w:"→ station 4, the wafer fab loop",src:""}]
+ },
+ { // 4 wafer fab
+  buy:[{w:"litho, etch, metal and e-beam tool vendors: not in the wiki. Lead times on “reactors, E-beam litho”; “equipment (reactors, etch) now an inhibitor”; “the four-inch tools can go to six inch”",src:"LITE @ DB 08-27; Hurlston @ JPM 2026-05-18; Kathy Ta 09-11"}],
+  make:[
+   {co:["Lumentum"],w:"“five wafer fabs, including Greensboro”: Sagamihara (Japan, +40% front-loaded) · Takao (Japan) · Caswell (UK) · a California fab scaling ultra-high-power lasers for CPO (“Santa Fe” / “Rose Orchard”) · Greensboro NC (ex-Qorvo, closed 2026-03-17, ~$5B revenue capacity, first revenue FY28, full FY29, NVIDIA long-term agreement)",src:"Kathy Ta 09-11; JPM 2025-12-15; Q2 FY26 call 02-03; OFC briefing 03-17; DB 08-27; JPM mgmt call 05-07"},
+   {w:"high-power laser waves run California → UK → Virginia; a new ground-up US fab funded alongside the NVIDIA investment",src:"Hurlston @ JPM 08-13; Aurelion 07-29"}
+  ],
+  peer:[{co:["Coherent"],w:"6-inch = ~2.25x usable area while “Lumentum still runs 4 inch”; more than 75% of COHR capacity on 6-inch by CY27; an analyst on Nokia’s call put LITE “a bit behind” on the InP ramp",src:"Aurelion 07-29; BofA 08-13; FUNDA 08-12"}],
+  sell:[{w:"→ station 5, wafer-level screening",src:""}]
+ },
+ { // 5 wafer probe
+  buy:[{w:"probe / test tool vendors: not in the wiki. “wafer-level test coming would obsolete current tool players”",src:"LITE SiPh director expert call, 2026-07-23"}],
+  make:[],
+  peer:[],
+  sell:[{w:"→ station 6, bars and facets",src:""}]
+ },
+ { // 6 bars / facets
+  buy:[{w:"polish and coating tools: not in the wiki. Veeco’s InP-laser orders include ion-beam-deposition tools (step not stated); the expert calls it “archaic bar-level polish/coat”",src:"Veeco 2026-05-05; expert call 07-23"}],
+  make:[],
+  peer:[],
+  sell:[{w:"→ station 7, dice and test",src:""}]
+ },
+ { // 7 dice / submount / test
+  buy:[],
+  make:[
+   {co:["Lumentum"],w:"Thailand back end for packaging and test — “not eager to grow further… using contract manufacturers… not as differentiated”; Thailand/China/UK footprint cited as mitigation",src:"Kathy Ta 09-11; LITE @ DB 08-27; Q4 FY26 call 08-11"},
+   {co:["Nationgate"],w:"back-end assembly “likely to be outsourced” to Nationgate (Malaysia), ~500k sq ft, ~US$1bn at peak — JPM’s “Customer L”, which the wiki infers is LITE",src:"JPM (Samuel Tan et al.), 2026-08-25"}
+  ],
+  peer:[
+   {co:["MACOM"],w:"“MTSI useful early but scaling issues, MACOM lasers ‘not premium quality’”",src:"expert call, 2026-07-23"},
+   {w:"value step: EML bare die $10-20 → packaged TOSA $50-100+, eight per 800G DR8; where LITE assembles its TOSAs: not in the wiki",src:"DAMNANG, 2026-03-31"}
+  ],
+  sell:[
+   {co:["Innolight"],w:"“a big customer, probably their biggest customer in the laser”",src:"Papa Sylla call, 2026-08-11"},
+   {co:["Coherent"],w:"buys LITE EMLs",src:"Irrational Analysis, 2026-05-08"},
+   {w:"“significant Chinese laser-chip customers”; ~90%+ of output take-or-pay, extra units “auctioned off”; 200G EML carries ~2x the 100G ASP",src:"mgmt via BTG 08-13; JPM mgmt call 05-07; DB 08-27"},
+   {co:["Fabrinet"],w:"JPM doubts Fabrinet gets an immediate boost from LITE’s added 200G EML capacity (“reliance on AVGO”)",src:"JPM (Cardoso) callback, 2026-08-14"}
+  ]
+ },
+ { // 8 module / ELS
+  buy:[
+   {co:["Marvell","Broadcom"],w:"DSPs: more than 90% AVGO/MRVL, MRVL ~70% optical-DSP share — LITE’s own DSP vendor: not in the wiki",src:"Jefferies expert (Rick Li) 07-14; DAMNANG via the MRVL page"},
+   {co:["Tower"],w:"silicon-photonics PIC for LITE’s transceivers",src:"Irrational Analysis, 2026-08-04"}
+  ],
+  make:[
+   {co:["Lumentum"],w:"Cloud Light transceivers built in-house (more than $200M/quarter; Google and Microsoft “don’t want” contract manufacturers); 1.6T GM 30-35% vs 25% at 800G, transceivers capped ≤~25% of revenue; ~20% of the module mix uses LITE’s own CW lasers; 1.6T overtakes 800G in the March C27 quarter",src:"DB 08-27; JPM (Cardoso) 08-14; BTG 08-13; JPM mgmt call 05-07; Jefferies (Beavington) 09-20"},
+   {w:"ELS: “about $400 to $450 with eight laser chips… call it $425”; AMD higher (up to 16 wavelengths); first ELS module purchase for delivery by 2H CY27",src:"Kathy Ta 09-11; Q4 FY26 call 08-11"}
+  ],
+  peer:[
+   {co:["Innolight","Eoptolink"],w:"module makers: Innolight ~35-40% of the market (~27% of global DC transceivers); China ~56% of module contract manufacturing, Innolight/Eoptolink/Cambridge ~46%; ELS competition from Innolight/Eoptolink (lower packaging barrier) with LITE more than 50% of the content",src:"Sylla 08-11; DAMNANG 08-04; TrendForce 08-06; BTG 08-13"},
+   {co:["Sumitomo","Coherent"],w:"NVIDIA’s blog names three ELS vendors: Lumentum, Sumitomo, Coherent",src:"PhotonCap, 2026-07-29"}
+  ],
+  sell:[
+   {co:["NVIDIA"],w:"ELS → NVIDIA CPO: the X800-Q3450 switch = 18 ELS × 8 CW DFB lasers at ~350mW; NVIDIA’s 400mW lasers take ~half of future Greensboro capacity; ELS is “15 or 20%” of the NVIDIA opportunity",src:"CPO Book 2026-01-01; BTG 08-13; Kathy Ta 09-11"},
+   {co:["Google","Microsoft"],w:"transceivers go straight to the hyperscalers — see Product → customer",src:"FY26 10-K; JPM (Cardoso) 08-14"}
+  ]
+ }
+];
+const FINAL={
+  t:"800G/1.6T transceivers · ELS · CW lasers · OCS",
+  buy:[],
+  make:[{co:["Lumentum"],w:"800G/1.6T transceivers (Cloud Light) · ELS with 8 laser chips (~$425) · merchant CW lasers, 10-20% of chip output in 2027 ($8-10 per 70mW unit, 2-4 per 800G module) · OCS (R300 at Google), Fabrinet trained to co-build in CY27",src:"DB 08-27; Kathy Ta 09-11; JPM 08-14; DAMNANG 03-31"}],
+  peer:[{co:["Broadcom","Coherent","Furukawa","Yuanjie","Shijia"],w:"CW-laser peers; Yuanjie is displacing Sumitomo into Innolight / Eoptolink / Coherent",src:"CPO Book 2026-01-01; Jefferies expert 07-14"}],
+  sell:[
+   {co:["Google"],w:"Customer A = 26.6% of FY26 revenue (“transceivers, laser chips”); 100% share on a couple of 1.6T SKUs; Customer B = 15.0%, unnamed; #2 hyperscaler Microsoft (second-hand); FUNDA assumes ~$700 per 1.6T DR8",src:"FY26 10-K 2026-08-17; Kathy Ta 09-11; JPM mgmt call 05-07; JPM (Cardoso) 08-14; GOOG page"},
+   {co:["NVIDIA"],w:"laser chips → Innolight modules → NVIDIA (“NVIDIA is buying the modules”); ELS for scale-up from 2H CY27 (“more laser chips”); +$2.02B equity stake plus take-or-pay; low-single-digit % of revenue today, not top-ten; “NVIDIA is going to be half of the CPO and NPO market”",src:"AXT CFO Fisher 08-31; Kathy Ta 09-11; Q3 FY26 05-06; Citi 07-16"},
+   {co:["AMD","Amazon","Microsoft","Meta"],w:"near-packaged-optics (NPO) prospects",src:"Kathy Ta, 2026-09-11"}
+  ]
+};
+const entHTML=e=>'<span class="ent">'+(e.co||[]).map(chip).join(" ")+(e.w?' <span class="w">'+e.w+'</span>':'')+(e.src?' <span class="src">'+e.src+'</span>':'')+'</span>';
+function renderWho(){ const c=CHAIN[E.stage]||{}; $("#who").innerHTML=ROLES.map(([k,l])=>{ const arr=c[k]||[]; return '<div class="r"><div class="role '+k+'"><i></i>'+l+'</div><div class="chips">'+(arr.length?arr.map(entHTML).join(""):'<span class="none" style="color:var(--ink-3);font-style:italic">not in the wiki</span>')+'</div></div>'; }).join(""); }
+function renderFlow(){
+  let h='<table><thead><tr><th></th>'+EML.map((s,i)=>'<th data-i="'+i+'"'+(i===E.stage?' class="on"':'')+'><div class="n">STATION '+(i+1)+'</div><div class="t">'+STEP_LONG[i]+'</div></th>').join('')+'<th class="fin"><div class="n">PRODUCT → CUSTOMER</div><div class="t">'+(FINAL?FINAL.t:'Final product')+'</div></th></tr></thead><tbody>';
+  for(const [k,l] of ROLES){ h+='<tr><td class="rl"><div class="role '+k+'"><i></i>'+l+'</div></td>'+CHAIN.map(c=>{ const arr=(c&&c[k])||[]; return '<td>'+(arr.length?arr.map(entHTML).join(''):'<span class="none">not in the wiki</span>')+'</td>'; }).join('')+'<td>'+(FINAL&&FINAL[k]&&FINAL[k].length?FINAL[k].map(entHTML).join(''):'<span class="none">—</span>')+'</td></tr>'; }
+  h+='</tbody></table>'; $("#flow").innerHTML=h;
+  $("#flow").querySelectorAll("th[data-i]").forEach(th=>th.onclick=()=>{ setEml(+th.dataset.i); $("#stage").scrollIntoView({behavior:"smooth",block:"start"}); });
+}
+const STEP_LONG=["InP substrate","MOCVD epitaxy","Grating + EAM","Wafer fab","Wafer probe","Bars · facets","Dice · submount · test","Module / ELS"];
+
+// =============================== EDITABLE EXAMPLE ===============================
+// Sourced: 6-inch = ~4.36x chips of 3-inch (LITE IR 2026-09-11; Citi 2026-07-16). Citi 2026-07-16: industry laser-chip supply ~1.1B in 2028E (EML+CW).
+// Greensboro sized for ~$5B/yr (10-K FY26; call 2026-08-11). 4-inch factor = area ratio (4/3)^2 = 1.78, illustrative. Chips/wafer, wafer starts and ASP are placeholders.
+const X={dia:6,chips3:1000,y6:1,starts:5000,asp:50};
+const FACT={3:1,4:1.78,6:4.36}; const CITI28=1.1e9, GREENSBORO=5e9;
+const factor=d=>d===6?FACT[6]*X.y6:FACT[d];
+const calc=d=>{ const cpm=X.starts*X.chips3*factor(d); return {cpm,rev:cpm*12*X.asp,share:cpm*12/CITI28}; };
+const CH={metric:"cpm"};
+const dia=$("#dia"); [3,4,6].forEach(d=>{ const b=document.createElement("button"); b.dataset.d=d; b.innerHTML="<b>"+d+"-inch</b><small>×"+FACT[d].toFixed(2)+(d===6?" chips":d===4?" area":" base")+"</small>"; b.onclick=()=>{X.dia=d; renderCalc();}; dia.appendChild(b); });
+const num=(id,k,min)=>{ $(id).oninput=e=>{ const v=+e.target.value; if(isFinite(v)&&v>=(min||0)){ X[k]=v; renderCalc(); } }; };
+num("#inChips","chips3",1); num("#inStarts","starts",1); num("#inAsp","asp",0);
+$("#inY6").oninput=e=>{ X.y6=(+e.target.value)/100; renderCalc(); };
+$("#mtabs").onclick=e=>{ const b=e.target.closest("button"); if(!b) return; CH.metric=b.dataset.m; [...$("#mtabs").children].forEach(x=>x.classList.toggle("on",x===b)); renderChart(); };
+function renderCalc(){
+  [...dia.children].forEach(b=>b.classList.toggle("on",+b.dataset.d===X.dia));
+  const f=factor(X.dia); $("#diaFact").textContent="×"+f.toFixed(2)+" chips / wafer"; $("#y6v").textContent=Math.round(X.y6*100)+"%";
+  const r=calc(X.dia);
+  $("#formula").innerHTML="<b>"+fmtN(X.starts)+"</b> wafers / month × <b>"+f.toFixed(2)+"</b> ("+X.dia+"-inch) × <b>"+fmtN(X.chips3)+"</b> good chips = <b>"+fmtBig(r.cpm)+"</b> chips / month<br>× 12 × <b>$"+fmtN(X.asp)+"</b> = <b>"+fmtUSD(r.rev)+"</b> / year · <b>"+fmtPct(r.share)+"</b> of Citi’s ~1.1B-chip 2028E supply";
+  $("#k1").textContent=fmtBig(r.cpm); $("#k1s").textContent=fmtN(X.starts)+" wafers × "+f.toFixed(2)+" × "+fmtN(X.chips3)+" good chips";
+  $("#k2").textContent=fmtUSD(r.rev); $("#k2s").textContent=(r.rev/GREENSBORO).toFixed(1)+"x Greensboro’s ~$5B/yr sizing (10-K FY26; call 08-11)";
+  $("#k3").textContent=fmtPct(r.share); $("#k3s").textContent="of Citi’s ~1.1B laser chips 2028E, EML+CW (07-16)";
+  $("#vSub").textContent=X.dia+"-inch wafer · ×"+f.toFixed(2)+" chips per wafer · layer spacing "+Math.round(E.explode*100)+"%";
+  $("#howSub").textContent=fmtN(X.starts)+" InP wafers / month · "+fmtN(X.chips3)+" good chips per 3-inch wafer · $"+fmtN(X.asp)+" per chip · 6-inch yield "+Math.round(X.y6*100)+"%";
+  renderChart();
+}
+function renderChart(){
+  const m=CH.metric; const rows=[3,4,6].map(d=>({d,v:calc(d)[m]}));
+  const W=800,H=300,L=68,R=20,T=30,B=54,bw=112,rx=4; const max=(Math.max(...rows.map(r=>r.v))||1)*1.15;
+  const y=v=>T+(H-T-B)*(1-v/max); const slot=(W-L-R)/3;
+  const f=v=>m==="cpm"?fmtBig(v):m==="rev"?fmtUSD(v):fmtPct(v); const unit=m==="cpm"?" chips / month":m==="rev"?" / year":" of 2028E supply";
+  let s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+(m==="cpm"?"Chips per month":m==="rev"?"Revenue per year":"Share of 2028E supply")+' by wafer diameter">';
+  for(let i=0;i<=4;i++){ const v=max*i/4, yy=y(v).toFixed(1); s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+yy+'" y2="'+yy+'" class="gl"/><text x="'+(L-10)+'" y="'+(+yy+3.5)+'" class="tk" text-anchor="end">'+f(v)+'</text>'; }
+  rows.forEach((r,i)=>{ const x=L+slot*i+(slot-bw)/2, yy=y(r.v), h=Math.max(H-B-yy,rx+1), on=r.d===X.dia, top=H-B-h;
+    s+='<path class="bar'+(on?" on":"")+'" data-d="'+r.d+'" d="M'+x+','+(H-B)+' v'+(-(h-rx))+' a'+rx+','+rx+' 0 0 1 '+rx+','+(-rx)+' h'+(bw-2*rx)+' a'+rx+','+rx+' 0 0 1 '+rx+','+rx+' v'+(h-rx)+' z"/>';
+    s+='<text x="'+(x+bw/2)+'" y="'+(top-9)+'" class="val'+(on?" on":"")+'" text-anchor="middle">'+f(r.v)+'</text>';
+    s+='<text x="'+(x+bw/2)+'" y="'+(H-B+19)+'" class="xl'+(on?" on":"")+'" text-anchor="middle">'+r.d+'-inch</text><text x="'+(x+bw/2)+'" y="'+(H-B+35)+'" class="xs" text-anchor="middle">×'+factor(r.d).toFixed(2)+' chips / wafer</text>';
+    s+='<rect class="hit" data-d="'+r.d+'" x="'+(x-10)+'" y="'+T+'" width="'+(bw+20)+'" height="'+(H-T-B)+'"/>';
+  });
+  s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+(H-B)+'" y2="'+(H-B)+'" class="ax"/></svg>';
+  const box=$("#chart"); const tip=$("#tip"); box.querySelectorAll("svg").forEach(e=>e.remove()); box.insertAdjacentHTML("beforeend",s);
+  const svg=box.querySelector("svg");
+  svg.addEventListener("mousemove",e=>{ const t=e.target.closest("[data-d]"); if(!t){ tip.style.display="none"; return; } const d=+t.dataset.d, r=calc(d), b=box.getBoundingClientRect(); tip.textContent=d+"-inch · "+f(r[m])+unit+" · ×"+factor(d).toFixed(2)+" vs 3-inch"; tip.style.display="block"; tip.style.left=(e.clientX-b.left+14)+"px"; tip.style.top=(e.clientY-b.top-30)+"px"; });
+  svg.addEventListener("mouseleave",()=>tip.style.display="none");
+  svg.addEventListener("click",e=>{ const t=e.target.closest("[data-d]"); if(t){ X.dia=+t.dataset.d; renderCalc(); } });
+  const sel=rows.find(r=>r.d===X.dia), others=rows.filter(r=>r.d!==X.dia).sort((a,b)=>b.v-a.v), best=others[0];
+  const lead=sel.v-best.v; const dv=Math.abs(lead); const dtxt=m==="share"?(dv*100).toFixed(1)+" pp":f(dv)+(m==="cpm"?" chips / month":" / year");
+  $("#take").textContent=lead>=0?"At these inputs, "+X.dia+"-inch leads: "+dtxt+" above "+best.d+"-inch.":"At these inputs, "+X.dia+"-inch trails "+best.d+"-inch by "+dtxt+".";
+}
+renderFlow(); setEml(0); renderCalc();
+// deep links: ?station=1-8&dia=3|4|6&explode=0-1&theme=light|dark
+try{ const q=new URLSearchParams(location.search); const st=+q.get("station"); if(st>=1&&st<=8) setEml(st-1); const d=+q.get("dia"); if([3,4,6].includes(d)) X.dia=d; const exq=q.get("explode"); if(exq!==null&&isFinite(+exq)){ E.explode=Math.min(1,Math.max(0,+exq)); $("#exRange").value=E.explode; } const th=q.get("theme"); if(th==="light"||th==="dark") document.documentElement.setAttribute("data-theme",th); renderCalc(); }catch(e){}
 
 // =============================== 3D ===============================
 let ok=typeof THREE!=="undefined"; let renderer;
-if(ok){ try{ renderer=new THREE.WebGLRenderer({canvas:$("#gl"),antialias:true}); }catch(e){ ok=false; } }
+if(ok){ try{ renderer=new THREE.WebGLRenderer({canvas:$("#gl"),antialias:true,powerPreference:"high-performance"}); }catch(e){ ok=false; } }
 if(!ok){ $("#fallback").style.display="flex"; $("#gl").style.display="none"; return; }
-renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
-const scene=new THREE.Scene(), camera=new THREE.PerspectiveCamera(38,1,0.1,300);
-scene.add(new THREE.HemisphereLight(0xffffff,0x334455,0.75));
-const key=new THREE.DirectionalLight(0xffffff,0.9); key.position.set(6,14,8); scene.add(key);
-const rim=new THREE.DirectionalLight(0x88ccff,0.35); rim.position.set(-8,4,-6); scene.add(rim);
-const C=()=>({accent:new THREE.Color(css("--accent")),amber:new THREE.Color(css("--amber")),red:new THREE.Color(css("--red")),copper:new THREE.Color(css("--copper")),bg:new THREE.Color(css("--scene-bg")),good:new THREE.Color(css("--good"))});
-let col=C(); scene.background=col.bg;
+// ---- image quality: render supersampled (2x even on 1x screens, adaptive fallback), sRGB output + ACES tone mapping, soft shadows, studio reflections
+const QUAL={max:Math.min(2.5,Math.max(window.devicePixelRatio||1,2)),cur:0,slow:0};
+QUAL.cur=QUAL.max; renderer.setPixelRatio(QUAL.cur);
+renderer.outputEncoding=THREE.sRGBEncoding; renderer.toneMapping=THREE.ACESFilmicToneMapping; renderer.toneMappingExposure=1.1;
+renderer.shadowMap.enabled=true; renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+const scene=new THREE.Scene(), camera=new THREE.PerspectiveCamera(30,1,0.1,300);
+scene.background=new THREE.Color(css("--studio"));
+scene.add(new THREE.HemisphereLight(0xdfeee6,0x1a2a22,0.55));
+const key=new THREE.DirectionalLight(0xffffff,0.9); key.position.set(6,14,8); scene.add(key); scene.add(key.target);
+key.castShadow=true; key.shadow.mapSize.set(2048,2048); key.shadow.bias=-0.0004; key.shadow.normalBias=0.03; key.shadow.radius=3;
+{ const sc=key.shadow.camera; sc.left=-9; sc.right=9; sc.top=9; sc.bottom=-9; sc.near=1; sc.far=60; sc.updateProjectionMatrix(); }
+const KEY_DIR=new THREE.Vector3(6,14,8).normalize().multiplyScalar(24); let shadowHalf=9;
+const rim=new THREE.DirectionalLight(0x9fe0c0,0.35); rim.position.set(-8,4,-6); scene.add(rim);
+// studio light box -> PMREM environment (three r128 core has PMREMGenerator; the examples RoomEnvironment is not on cdnjs)
+{ const room=new THREE.Scene(); const g=new THREE.BoxGeometry(); const em=i=>{const m=new THREE.MeshBasicMaterial(); m.color.setScalar(i); return m;};
+  const box=new THREE.Mesh(g,new THREE.MeshStandardMaterial({side:THREE.BackSide,color:0x8fa098,roughness:1,metalness:0})); box.scale.set(30,30,30); box.position.set(0,12,0); room.add(box);
+  const lamp=new THREE.PointLight(0xffffff,5,28,2); lamp.position.set(0,14,0); room.add(lamp);
+  const panel=(i,p,sc)=>{ const m=new THREE.Mesh(g,em(i)); m.position.set(p[0],p[1],p[2]); m.scale.set(sc[0],sc[1],sc[2]); room.add(m); };
+  panel(50,[-14,12,6],[0.1,3,4]); panel(50,[-14,16,-6],[0.1,3,4]); panel(18,[14,10,-2],[0.15,5,7]); panel(40,[0,8,14],[5,6,0.1]); panel(20,[3,10,-12],[3,2.5,0.1]); panel(90,[0,26,0],[2,0.1,2]);
+  try{ const pm=new THREE.PMREMGenerator(renderer); scene.environment=pm.fromScene(room,0.04).texture; pm.dispose(); }catch(e){ console.warn("env map skipped",e); } }
+// ---- materials: PCB-green translucent layers with a fine grid, graphite InP, copper submounts, gold pads (the studio look)
+function gridTex(base,line,n,alpha){ const c=document.createElement("canvas"); c.width=c.height=256; const g=c.getContext("2d"); g.fillStyle=base; g.fillRect(0,0,256,256); g.strokeStyle=line; g.lineWidth=1; g.globalAlpha=alpha; const s=256/n; for(let i=0;i<=n;i++){ g.beginPath(); g.moveTo(i*s+0.5,0); g.lineTo(i*s+0.5,256); g.stroke(); g.beginPath(); g.moveTo(0,i*s+0.5); g.lineTo(256,i*s+0.5); g.stroke(); } const t=new THREE.CanvasTexture(c); t.wrapS=t.wrapT=THREE.RepeatWrapping; t.anisotropy=renderer.capabilities.getMaxAnisotropy(); t.encoding=THREE.sRGBEncoding; return t; }
+const TEX={pcb:gridTex("#2a6b4c","#9fe6bd",16,.5),pcb2:gridTex("#1f5a7a","#8fd8ff",16,.45),wafer:gridTex("#343f3a","#7d998b",28,.35)};
 const M={
-  dark:new THREE.MeshStandardMaterial({color:0x2a3038,metalness:.3,roughness:.6}),
+  dark:new THREE.MeshStandardMaterial({color:0x162a21,metalness:.15,roughness:.75}),
   metal:new THREE.MeshStandardMaterial({color:0x8a939e,metalness:.7,roughness:.35}),
-  frame:new THREE.MeshStandardMaterial({color:0x5a6470,metalness:.5,roughness:.5,transparent:true,opacity:.2,depthWrite:false}),
-  tray:new THREE.MeshStandardMaterial({color:0x6d7680,metalness:.6,roughness:.4}),
-  sw:new THREE.MeshStandardMaterial({color:0x3d6f8f,metalness:.5,roughness:.4}),
-  die:new THREE.MeshStandardMaterial({color:0x5a6b80,metalness:.8,roughness:.25}),
-  cpu:new THREE.MeshStandardMaterial({color:0x7a6a4a,metalness:.6,roughness:.4}),
-  ssd:new THREE.MeshStandardMaterial({color:0x4a5560,metalness:.5,roughness:.5}),
-  inp:new THREE.MeshStandardMaterial({color:0x3b3f46,metalness:.6,roughness:.25}),
-  epi:new THREE.MeshStandardMaterial({color:0xb06b3a,metalness:.4,roughness:.4}),
-  epi2:new THREE.MeshStandardMaterial({color:0x2c7fa8,metalness:.4,roughness:.4}),
-  glass:new THREE.MeshStandardMaterial({color:0x9fd0ff,metalness:0,roughness:.05,transparent:true,opacity:.28,depthWrite:false}),
+  inp:new THREE.MeshStandardMaterial({map:TEX.wafer,color:0xffffff,metalness:.5,roughness:.3}),
+  epi:new THREE.MeshStandardMaterial({map:TEX.pcb,color:0xffffff,metalness:.12,roughness:.42,transparent:true,opacity:.9,emissive:0x0e3d27,emissiveMap:TEX.pcb,emissiveIntensity:.4}),
+  epi2:new THREE.MeshStandardMaterial({map:TEX.pcb2,color:0xffffff,metalness:.12,roughness:.42,transparent:true,opacity:.9,emissive:0x0c2e44,emissiveMap:TEX.pcb2,emissiveIntensity:.4}),
+  glass:new THREE.MeshStandardMaterial({color:0xbfe3d2,metalness:0,roughness:.08,transparent:true,opacity:.22,depthWrite:false}),
   gold:new THREE.MeshStandardMaterial({color:0xd4a72c,metalness:.9,roughness:.3}),
-  ar:new THREE.MeshStandardMaterial({color:0x4cc2ff,emissive:0x2277aa,emissiveIntensity:.4}),
+  copper:new THREE.MeshStandardMaterial({color:0xc97c3a,metalness:.65,roughness:.35}),
+  die:new THREE.MeshStandardMaterial({color:0x3a4a44,metalness:.7,roughness:.3}),
+  ar:new THREE.MeshStandardMaterial({color:0x8fe0b3,emissive:0x2f8f5f,emissiveIntensity:.5}),
   hr:new THREE.MeshStandardMaterial({color:0xff6b5e,emissive:0x882222,emissiveIntensity:.4}),
-  module:new THREE.MeshStandardMaterial({color:0x9aa3ad,metalness:.75,roughness:.3}),
 };
-const glowMat=(c,op)=>new THREE.MeshBasicMaterial({color:c,transparent:true,opacity:op,blending:THREE.AdditiveBlending,depthWrite:false});
+const EDGE_C=new THREE.Color(0x9fe6bd).convertSRGBToLinear(), EDGE_C2=new THREE.Color(0x8fd8ff).convertSRGBToLinear(), EDGE_W=new THREE.Color(0x7d998b).convertSRGBToLinear();
+function edge(mesh,c,op){ const l=new THREE.LineSegments(new THREE.EdgesGeometry(mesh.geometry,30),new THREE.LineBasicMaterial({color:c||EDGE_C,transparent:true,opacity:op||.55})); l.material.toneMapped=false; mesh.add(l); return mesh; }
+const glowMat=(c,op)=>{ const m=new THREE.MeshBasicMaterial({color:c,transparent:true,opacity:op,blending:THREE.AdditiveBlending,depthWrite:false}); m.toneMapped=false; return m; };
 const coreMat=c=>new THREE.MeshBasicMaterial({color:c});
 function tubePath(pts,r,mat,seg){ const path=new THREE.CurvePath(); for(let i=0;i<pts.length-1;i++) path.add(new THREE.LineCurve3(pts[i],pts[i+1])); return new THREE.Mesh(new THREE.TubeGeometry(path,seg||Math.max(8,(pts.length-1)*6),r,8,false),mat); }
-function disposeGroup(g){ while(g.children.length){const c=g.children.pop(); c.geometry&&c.geometry.dispose(); if(c.material&&c.material.dispose) c.material.dispose();} }
 // labels
 const labels=[]; const v3=new THREE.Vector3();
-function addLabel(text,sub,getPos,group,show){ const el=document.createElement("div"); el.className="lbl"; el.innerHTML=text+(sub?"<small>"+sub+"</small>":""); $("#labels").appendChild(el); const L={el,getPos,group,show:show||(()=>true)}; labels.push(L); return L; }
-function drawLabels(){ const box=$("#glbox"), w=box.clientWidth, h=box.clientHeight; for(const L of labels){ let vis=L.group.visible&&L.show(); if(vis){ L.getPos(v3); v3.project(camera); vis=v3.z<1&&Math.abs(v3.x)<1.1&&Math.abs(v3.y)<1.1; } L.el.style.display=vis?"":"none"; if(vis){ L.el.style.left=((v3.x+1)/2*w)+"px"; L.el.style.top=((1-v3.y)/2*h-6)+"px"; } } }
+function addLabel(text,sub,getPos,group,show,cls){ const el=document.createElement("div"); el.className="lbl"+(cls?" "+cls:""); el.innerHTML=text+(sub?"<small>"+sub+"</small>":""); $("#labels").appendChild(el); const L={el,getPos,group,show:show||(()=>true)}; labels.push(L); return L; }
+function drawLabels(){ const box=$("#glbox"), w=box.clientWidth, h=box.clientHeight; for(const L of labels){ let vis=L.group.visible&&L.show(); if(vis){ L.getPos(v3); v3.project(camera); const py=(1-v3.y)/2*h; L.el.dataset.p=v3.x.toFixed(2)+","+v3.y.toFixed(2)+","+v3.z.toFixed(3)+","+py.toFixed(0)+"/"+h; vis=v3.z<1&&Math.abs(v3.x)<0.82&&py>=118&&py<=h-44; } L.el.style.display=vis?"":"none"; if(vis){ L.el.style.left=((v3.x+1)/2*w)+"px"; L.el.style.top=((1-v3.y)/2*h)+"px"; L.el.classList.toggle("hot",!!(L.hot&&L.hot())); } } }
 // orbit
-const VIEW_TOK={theta:0.5,phi:1.15,r:30,target:new THREE.Vector3(0,3.6,0)};
-const VIEW_TOK_NEAR={theta:0.42,phi:1.12,r:16,target:new THREE.Vector3(-3.6,3.0,0.4)};
-const orb={theta:VIEW_TOK.theta,phi:VIEW_TOK.phi,r:VIEW_TOK.r,target:VIEW_TOK.target.clone()}; let orbGoal=null;
+const orb={theta:0.62,phi:1.0,r:12.5,target:new THREE.Vector3(0,2.0,0)}; let orbGoal=null;
 function orbitTo(v){orbGoal={theta:v.theta,phi:v.phi,r:v.r,target:v.target.clone()};}
 (function(){ const cv=$("#gl"); let drag=null;
   cv.addEventListener("pointerdown",e=>{drag={x:e.clientX,y:e.clientY}; cv.setPointerCapture(e.pointerId); orbGoal=null;});
@@ -303,80 +616,100 @@ function orbitTo(v){orbGoal={theta:v.theta,phi:v.phi,r:v.r,target:v.target.clone
   cv.addEventListener("pointerup",()=>drag=null); cv.addEventListener("pointercancel",()=>drag=null);
   cv.addEventListener("wheel",e=>{e.preventDefault(); orbGoal=null; orb.r=Math.min(80,Math.max(4,orb.r*(1+Math.sign(e.deltaY)*0.08)));},{passive:false});
 })();
-function updateCamera(dt){ if(orbGoal){ const k=1-Math.exp(-6*(dt||0.016)); orb.theta+=(orbGoal.theta-orb.theta)*k; orb.phi+=(orbGoal.phi-orb.phi)*k; orb.r+=(orbGoal.r-orb.r)*k; orb.target.lerp(orbGoal.target,k); if(Math.abs(orbGoal.r-orb.r)<0.01&&Math.abs(orbGoal.theta-orb.theta)<0.001&&orb.target.distanceTo(orbGoal.target)<0.01) orbGoal=null; } const t=orb.target, s=Math.sin(orb.phi); camera.position.set(t.x+orb.r*s*Math.sin(orb.theta), t.y+orb.r*Math.cos(orb.phi), t.z+orb.r*s*Math.cos(orb.theta)); camera.lookAt(t); }
-const smooth=x=>x*x*(3-2*x);
-window.applyTheme=()=>{ col=C(); scene.background=col.bg; };
+function updateCamera(dt){ if(orbGoal){ const k=1-Math.exp(-6*(dt||0.016)); orb.theta+=(orbGoal.theta-orb.theta)*k; orb.phi+=(orbGoal.phi-orb.phi)*k; orb.r+=(orbGoal.r-orb.r)*k; orb.target.lerp(orbGoal.target,k); if(Math.abs(orbGoal.r-orb.r)<0.01&&Math.abs(orbGoal.theta-orb.theta)<0.001&&orb.target.distanceTo(orbGoal.target)<0.01) orbGoal=null; }
+  camera.position.set(orb.target.x+orb.r*Math.sin(orb.phi)*Math.sin(orb.theta),orb.target.y+orb.r*Math.cos(orb.phi),orb.target.z+orb.r*Math.sin(orb.phi)*Math.cos(orb.theta)); camera.lookAt(orb.target); }
+window.applyTheme=()=>{};
 
 // =============================== EML scene ===============================
 const emlG=new THREE.Group(); scene.add(emlG);
 const SX=[-21,-15,-9,-3,3,9,15,21]; // station x
-const EOBJ={};
+const EOBJ={}; const EX=[]; const WG={};
+const ex=(o,dy,dz,dx)=>{ o.userData.b=o.position.clone(); o.userData.e=new THREE.Vector3(dx||0,dy||0,dz||0); EX.push(o); return o; };
+const wg=i=>{ const g=new THREE.Group(); g.position.set(SX[i],0,0); emlG.add(g); WG[i]=g; return g; };
+const DIA_SCALE={3:0.72,4:0.96,6:1.35};
 {
   const fl=new THREE.Mesh(new THREE.BoxGeometry(48,0.2,8),M.dark); fl.position.set(0,-0.1,0); emlG.add(fl);
   const rail=new THREE.Mesh(new THREE.BoxGeometry(46,0.06,0.3),M.metal); rail.position.set(0,0.03,-2.2); emlG.add(rail);
-  // 0 wafer
-  const w0=new THREE.Mesh(new THREE.CylinderGeometry(1.6,1.6,0.08,48),M.inp); w0.position.set(SX[0],0.6,0); emlG.add(w0);
-  const flat=new THREE.Mesh(new THREE.BoxGeometry(1.2,0.1,0.15),M.dark); flat.position.set(SX[0],0.6,1.55); emlG.add(flat);
-  // 1 MOCVD: wafer + dome + layers
-  const w1=new THREE.Mesh(new THREE.CylinderGeometry(1.6,1.6,0.08,48),M.inp); w1.position.set(SX[1],0.6,0); emlG.add(w1);
-  const layers=[]; for(let i=0;i<8;i++){ const l=new THREE.Mesh(new THREE.CylinderGeometry(1.6,1.6,0.05,48),i%2?M.epi2:M.epi); l.position.set(SX[1],0.66+i*0.055,0); l.visible=false; emlG.add(l); layers.push(l); }
-  const dome=new THREE.Mesh(new THREE.SphereGeometry(2.3,32,16,0,Math.PI*2,0,Math.PI/2),M.glass); dome.position.set(SX[1],0.5,0); emlG.add(dome);
-  for(const a of [0,2.1,4.2]){ const pipe=new THREE.Mesh(new THREE.CylinderGeometry(0.08,0.08,1.6,10),M.metal); pipe.position.set(SX[1]+Math.cos(a)*2.0,2.2,Math.sin(a)*2.0); pipe.rotation.z=0.5*Math.cos(a); pipe.rotation.x=-0.5*Math.sin(a); emlG.add(pipe); }
-  EOBJ.layers=layers;
-  // 2 die close-up: ridge with grating + EAM section
-  const base=new THREE.Mesh(new THREE.BoxGeometry(3.4,0.5,1.6),M.inp); base.position.set(SX[2],0.35,0); emlG.add(base);
-  const ridge=new THREE.Mesh(new THREE.BoxGeometry(3.4,0.22,0.3),M.epi); ridge.position.set(SX[2],0.71,0); emlG.add(ridge);
-  for(let i=0;i<16;i++){ const g=new THREE.Mesh(new THREE.BoxGeometry(0.06,0.06,0.3),M.gold); g.position.set(SX[2]-1.6+i*0.13,0.85,0); emlG.add(g); }
-  const eam=new THREE.Mesh(new THREE.BoxGeometry(0.9,0.24,0.34),M.epi2); eam.position.set(SX[2]+1.2,0.72,0); emlG.add(eam);
-  const pad1=new THREE.Mesh(new THREE.BoxGeometry(0.7,0.04,0.7),M.gold); pad1.position.set(SX[2]-0.8,0.62,-0.55); emlG.add(pad1);
-  const pad2=new THREE.Mesh(new THREE.BoxGeometry(0.5,0.04,0.5),M.gold); pad2.position.set(SX[2]+1.2,0.62,0.55); emlG.add(pad2);
-  const beam=tubePath([new THREE.Vector3(SX[2]-1.7,0.72,0),new THREE.Vector3(SX[2]+1.7,0.72,0),new THREE.Vector3(SX[2]+3.2,0.72,0)],0.05,glowMat(0x4cc2ff,.5),8); emlG.add(beam); EOBJ.beam=beam;
-  // 3 wafer fab: wafer with die grid
-  const w3=new THREE.Mesh(new THREE.CylinderGeometry(1.6,1.6,0.1,48),M.epi); w3.position.set(SX[3],0.6,0); emlG.add(w3);
-  for(let i=-6;i<=6;i++){ const lx=new THREE.Mesh(new THREE.BoxGeometry(0.02,0.02,3.2),M.dark); lx.position.set(SX[3]+i*0.25,0.66,0); emlG.add(lx); const lz=new THREE.Mesh(new THREE.BoxGeometry(3.2,0.02,0.02),M.dark); lz.position.set(SX[3],0.66,i*0.25); emlG.add(lz); }
-  const stepper=new THREE.Mesh(new THREE.BoxGeometry(1.2,1.4,1.2),M.metal); stepper.position.set(SX[3],1.9,0); emlG.add(stepper);
-  const lens=new THREE.Mesh(new THREE.CylinderGeometry(0.3,0.3,0.2,20),M.glass); lens.position.set(SX[3],1.1,0); emlG.add(lens);
-  // 4 wafer probe
-  const w4=new THREE.Mesh(new THREE.CylinderGeometry(1.6,1.6,0.1,48),M.epi); w4.position.set(SX[4],0.6,0); emlG.add(w4);
-  const card=new THREE.Mesh(new THREE.BoxGeometry(1.4,0.12,1.4),M.gold); card.position.set(SX[4],1.5,0); emlG.add(card); EOBJ.card=card;
-  const pins=[]; for(let i=0;i<9;i++){ const p=new THREE.Mesh(new THREE.CylinderGeometry(0.02,0.02,0.7,6),M.metal); p.position.set(SX[4]-0.4+(i%3)*0.4,1.1,-0.4+Math.floor(i/3)*0.4); emlG.add(p); pins.push(p);} EOBJ.pins=pins;
-  // 5 bars: stacked strips with AR/HR facets
-  for(let i=0;i<6;i++){ const b=new THREE.Mesh(new THREE.BoxGeometry(3.0,0.14,0.36),M.epi); b.position.set(SX[5],0.5+i*0.17,-0.9+i*0.36); emlG.add(b);
-    const ar=new THREE.Mesh(new THREE.BoxGeometry(0.03,0.14,0.36),M.ar); ar.position.set(SX[5]+1.51,0.5+i*0.17,-0.9+i*0.36); emlG.add(ar);
-    const hr=new THREE.Mesh(new THREE.BoxGeometry(0.03,0.14,0.36),M.hr); hr.position.set(SX[5]-1.51,0.5+i*0.17,-0.9+i*0.36); emlG.add(hr); }
-  // 6 chips + submount + pogo pins
-  for(let i=0;i<10;i++){ const c=new THREE.Mesh(new THREE.BoxGeometry(0.42,0.1,0.26),M.epi); c.position.set(SX[6]-1.6+(i%5)*0.55,0.55,-0.9+Math.floor(i/5)*0.5); emlG.add(c); }
-  const sub=new THREE.Mesh(new THREE.BoxGeometry(1.1,0.16,0.8),M.metal); sub.position.set(SX[6]+0.4,0.6,0.9); emlG.add(sub);
-  const chip=new THREE.Mesh(new THREE.BoxGeometry(0.44,0.1,0.26),M.epi); chip.position.set(SX[6]+0.4,0.73,0.9); emlG.add(chip);
-  const arc=new THREE.Mesh(new THREE.BoxGeometry(0.03,0.1,0.26),M.ar); arc.position.set(SX[6]+0.62,0.73,0.9); emlG.add(arc);
-  const pogo=[]; for(let i=0;i<3;i++){ const p=new THREE.Mesh(new THREE.CylinderGeometry(0.02,0.02,0.6,6),M.gold); p.position.set(SX[6]+0.25+i*0.15,1.15,0.75); emlG.add(p); pogo.push(p);} EOBJ.pogo=pogo;
-  const cbeam=tubePath([new THREE.Vector3(SX[6]+0.63,0.73,0.9),new THREE.Vector3(SX[6]+2.2,0.73,0.9)],0.04,glowMat(0x4cc2ff,.5),6); emlG.add(cbeam); EOBJ.cbeam=cbeam;
-  // 7 module / ELS
-  const mod=new THREE.Mesh(new THREE.BoxGeometry(3.2,0.6,1.4),M.module); mod.position.set(SX[7],0.5,0); emlG.add(mod);
-  const lid=new THREE.Mesh(new THREE.BoxGeometry(2.0,0.06,1.0),M.glass); lid.position.set(SX[7]-0.3,0.83,0); emlG.add(lid);
-  for(let i=0;i<8;i++){ const c=new THREE.Mesh(new THREE.BoxGeometry(0.3,0.08,0.18),M.epi); c.position.set(SX[7]-1.1+(i%4)*0.4,0.84,-0.3+Math.floor(i/4)*0.5); emlG.add(c); }
-  const dsp=new THREE.Mesh(new THREE.BoxGeometry(0.5,0.1,0.5),M.die); dsp.position.set(SX[7]+0.9,0.85,0); emlG.add(dsp);
-  const fib=tubePath([new THREE.Vector3(SX[7]+1.6,0.6,0),new THREE.Vector3(SX[7]+3.5,0.6,0)],0.04,coreMat(0x4cc2ff),6); emlG.add(fib);
+  // 0 wafer (scaled with the diameter input)
+  { const g=wg(0); const w0=edge(new THREE.Mesh(new THREE.CylinderGeometry(1.6,1.6,0.08,64),M.inp),EDGE_W,.5); w0.position.set(0,0.6,0); g.add(w0);
+    const flat=new THREE.Mesh(new THREE.BoxGeometry(1.2,0.1,0.15),M.dark); flat.position.set(0,0.6,1.55); g.add(flat); }
+  // 1 MOCVD: wafer + layers (scaled) + dome + pipes (lift on explode)
+  { const g=wg(1); const w1=edge(new THREE.Mesh(new THREE.CylinderGeometry(1.6,1.6,0.08,64),M.inp),EDGE_W,.5); w1.position.set(0,0.6,0); g.add(w1);
+    const layers=[]; for(let i=0;i<8;i++){ const l=edge(new THREE.Mesh(new THREE.CylinderGeometry(1.6,1.6,0.05,64),i%2?M.epi2:M.epi),i%2?EDGE_C2:EDGE_C,.6); l.position.set(0,0.66+i*0.055,0); l.visible=false; g.add(l); ex(l,0.16+i*0.3,0); layers.push(l); }
+    EOBJ.layers=layers;
+    const dome=new THREE.Mesh(new THREE.SphereGeometry(2.3,48,24,0,Math.PI*2,0,Math.PI/2),M.glass); dome.position.set(SX[1],0.5,0); emlG.add(dome); ex(dome,2.2,0);
+    for(const a of [0,2.1,4.2]){ const pipe=new THREE.Mesh(new THREE.CylinderGeometry(0.08,0.08,1.6,16),M.metal); pipe.position.set(SX[1]+Math.cos(a)*2.0,2.2,Math.sin(a)*2.0); pipe.rotation.z=0.5*Math.cos(a); pipe.rotation.x=-0.5*Math.sin(a); emlG.add(pipe); ex(pipe,2.2,0); } }
+  // 2 die close-up: InP base, ridge with grating + EAM section, pads (lift in layers on explode)
+  { const base=edge(new THREE.Mesh(new THREE.BoxGeometry(3.4,0.5,1.6),M.inp),EDGE_W,.45); base.position.set(SX[2],0.35,0); emlG.add(base);
+    const ridge=edge(new THREE.Mesh(new THREE.BoxGeometry(3.4,0.22,0.3),M.epi)); ridge.position.set(SX[2],0.71,0); emlG.add(ridge); ex(ridge,0.45,0);
+    for(let i=0;i<16;i++){ const t=new THREE.Mesh(new THREE.BoxGeometry(0.06,0.06,0.3),M.gold); t.position.set(SX[2]-1.6+i*0.13,0.85,0); emlG.add(t); ex(t,0.9,0); }
+    const eam=edge(new THREE.Mesh(new THREE.BoxGeometry(0.9,0.24,0.34),M.epi2),EDGE_C2); eam.position.set(SX[2]+1.2,0.72,0); emlG.add(eam); ex(eam,0.6,0);
+    const pad1=new THREE.Mesh(new THREE.BoxGeometry(0.7,0.04,0.7),M.gold); pad1.position.set(SX[2]-0.8,0.62,-0.55); emlG.add(pad1); ex(pad1,0.2,0);
+    const pad2=new THREE.Mesh(new THREE.BoxGeometry(0.5,0.04,0.5),M.gold); pad2.position.set(SX[2]+1.2,0.62,0.55); emlG.add(pad2); ex(pad2,0.2,0);
+    const beam=tubePath([new THREE.Vector3(SX[2]-1.7,0.72,0),new THREE.Vector3(SX[2]+1.7,0.72,0),new THREE.Vector3(SX[2]+3.2,0.72,0)],0.05,glowMat(0x8fe0b3,.6),8); emlG.add(beam); ex(beam,0.45,0); EOBJ.beam=beam; }
+  // 3 wafer fab: patterned epi wafer (scaled) + stepper above (lifts on explode)
+  { const g=wg(3); const w3=edge(new THREE.Mesh(new THREE.CylinderGeometry(1.6,1.6,0.1,64),M.epi),EDGE_C,.6); w3.position.set(0,0.6,0); g.add(w3);
+    const stp=new THREE.Mesh(new THREE.BoxGeometry(1.2,1.4,1.2),M.metal); stp.position.set(SX[3],1.9,0); emlG.add(stp); ex(stp,0.9,0);
+    const lens=new THREE.Mesh(new THREE.CylinderGeometry(0.3,0.3,0.2,24),M.glass); lens.position.set(SX[3],1.1,0); emlG.add(lens); ex(lens,0.45,0); }
+  // 4 wafer probe (wafer scaled; card + pins animated)
+  { const g=wg(4); const w4=edge(new THREE.Mesh(new THREE.CylinderGeometry(1.6,1.6,0.1,64),M.epi),EDGE_C,.6); w4.position.set(0,0.6,0); g.add(w4);
+    const card=new THREE.Mesh(new THREE.BoxGeometry(1.4,0.12,1.4),M.gold); card.position.set(SX[4],1.5,0); emlG.add(card); EOBJ.card=card;
+    const pins=[]; for(let i=0;i<9;i++){ const p=new THREE.Mesh(new THREE.CylinderGeometry(0.02,0.02,0.7,10),M.metal); p.position.set(SX[4]-0.4+(i%3)*0.4,1.1,-0.4+Math.floor(i/3)*0.4); emlG.add(p); pins.push(p);} EOBJ.pins=pins; }
+  // 5 bars: stacked strips with AR/HR facets (fan out on explode)
+  for(let i=0;i<6;i++){ const b=edge(new THREE.Mesh(new THREE.BoxGeometry(3.0,0.14,0.36),M.epi)); b.position.set(SX[5],0.5+i*0.17,-0.9+i*0.36); emlG.add(b); ex(b,i*0.22,i*0.24);
+    const ar=new THREE.Mesh(new THREE.BoxGeometry(0.03,0.14,0.36),M.ar); ar.position.set(SX[5]+1.51,0.5+i*0.17,-0.9+i*0.36); emlG.add(ar); ex(ar,i*0.22,i*0.24);
+    const hr=new THREE.Mesh(new THREE.BoxGeometry(0.03,0.14,0.36),M.hr); hr.position.set(SX[5]-1.51,0.5+i*0.17,-0.9+i*0.36); emlG.add(hr); ex(hr,i*0.22,i*0.24); }
+  // 6 chips + copper submount + pogo pins
+  for(let i=0;i<10;i++){ const c=edge(new THREE.Mesh(new THREE.BoxGeometry(0.42,0.1,0.26),M.epi)); c.position.set(SX[6]-1.6+(i%5)*0.55,0.55,-0.9+Math.floor(i/5)*0.5); emlG.add(c); ex(c,0.25+0.06*(i%5),0); }
+  { const sub=edge(new THREE.Mesh(new THREE.BoxGeometry(1.1,0.16,0.8),M.copper),EDGE_W,.35); sub.position.set(SX[6]+0.4,0.6,0.9); emlG.add(sub);
+    const chip=edge(new THREE.Mesh(new THREE.BoxGeometry(0.44,0.1,0.26),M.epi)); chip.position.set(SX[6]+0.4,0.73,0.9); emlG.add(chip); ex(chip,0.4,0);
+    const arc=new THREE.Mesh(new THREE.BoxGeometry(0.03,0.1,0.26),M.ar); arc.position.set(SX[6]+0.62,0.73,0.9); emlG.add(arc); ex(arc,0.4,0);
+    const pogo=[]; for(let i=0;i<3;i++){ const p=new THREE.Mesh(new THREE.CylinderGeometry(0.02,0.02,0.6,10),M.gold); p.position.set(SX[6]+0.25+i*0.15,1.15,0.75); emlG.add(p); pogo.push(p);} EOBJ.pogo=pogo;
+    const cbeam=tubePath([new THREE.Vector3(SX[6]+0.63,0.73,0.9),new THREE.Vector3(SX[6]+2.2,0.73,0.9)],0.04,glowMat(0x8fe0b3,.6),6); emlG.add(cbeam); ex(cbeam,0.4,0); EOBJ.cbeam=cbeam; }
+  // 7 module / ELS: copper housing, glass lid, 8 chips, DSP, fibre
+  { const mod=edge(new THREE.Mesh(new THREE.BoxGeometry(3.2,0.6,1.4),M.copper),EDGE_W,.35); mod.position.set(SX[7],0.5,0); emlG.add(mod);
+    const lid=new THREE.Mesh(new THREE.BoxGeometry(2.0,0.06,1.0),M.glass); lid.position.set(SX[7]-0.3,0.83,0); emlG.add(lid); ex(lid,1.0,0);
+    for(let i=0;i<8;i++){ const c=edge(new THREE.Mesh(new THREE.BoxGeometry(0.3,0.08,0.18),M.epi)); c.position.set(SX[7]-1.1+(i%4)*0.4,0.84,-0.3+Math.floor(i/4)*0.5); emlG.add(c); ex(c,0.5,0); }
+    const dsp=edge(new THREE.Mesh(new THREE.BoxGeometry(0.5,0.1,0.5),M.die),EDGE_W,.5); dsp.position.set(SX[7]+0.9,0.85,0); emlG.add(dsp); ex(dsp,0.5,0);
+    const fib=tubePath([new THREE.Vector3(SX[7]+1.6,0.6,0),new THREE.Vector3(SX[7]+3.5,0.6,0)],0.04,coreMat(0x8fe0b3),6); emlG.add(fib); }
   // station markers
-  for(let i=0;i<8;i++){ const mk=new THREE.Mesh(new THREE.CylinderGeometry(2.4,2.4,0.04,40),new THREE.MeshBasicMaterial({color:0x4cc2ff,transparent:true,opacity:.0,depthWrite:false})); mk.position.set(SX[i],0.02,0); emlG.add(mk); EOBJ["mk"+i]=mk; }
+  for(let i=0;i<8;i++){ const mk=new THREE.Mesh(new THREE.CylinderGeometry(2.4,2.4,0.04,48),new THREE.MeshBasicMaterial({color:0x8fe0b3,transparent:true,opacity:.0,depthWrite:false})); mk.position.set(SX[i],0.02,0); emlG.add(mk); EOBJ["mk"+i]=mk; }
 }
+// quality pass: hex colours -> linear (so they survive the sRGB output), shadow flags, reflection strength
+{ const seen=new Set(); emlG.traverse(o=>{ if(!o.isMesh) return; const m=o.material; if(!seen.has(m)){ seen.add(m); if(m.color) m.color.convertSRGBToLinear(); if(m.emissive) m.emissive.convertSRGBToLinear(); if(m.isMeshStandardMaterial) m.envMapIntensity=0.75; }
+  const solid=m.isMeshStandardMaterial&&(!m.transparent||m.opacity>=0.8); o.castShadow=solid; o.receiveShadow=solid; }); }
 const EML_LBL=[["InP wafer","S-doped · 3→4-inch · 6-inch 2028"],["MOCVD epitaxy","Aixtron / Veeco reactors"],["DFB grating + EAM","one InP chip (generic)"],["Wafer fab","litho · etch · metal · e-beam"],["Wafer probe","electrical screen"],["Bars · facets · AR/HR","polish and coat"],["Dice · submount · test","pogo-pin"],["TOSA / module · ELS","Innolight · NVIDIA ELS 8 chips"]];
-EML_LBL.forEach((l,i)=>addLabel(l[0],l[1],v=>v.set(SX[i],2.9,0),emlG,()=>Math.abs(E.stage-i)<=2));
+EML_LBL.forEach((l,i)=>{ const L=addLabel(l[0],l[1],v=>v.set(SX[i],2.45+(i===1?1.0*E.explodeCur:i===5?0.6*E.explodeCur:0),0),emlG,()=>Math.abs(E.stage-i)<=2); L.hot=()=>E.stage===i; });
+// company labels in the scene: one per role, current station only
+const CL_POS={buy:[-2.4,1.8,-1.4],make:[-2.2,0.95,1.9],peer:[2.2,1.8,-1.4],sell:[2.4,1.6,0.2]};
+const CL_TXT={buy:"Buys",make:"Made at",peer:"Peers",sell:"Sells to"};
+CHAIN.forEach((c,i)=>{ if(!c) return; for(const k in CL_POS){ const arr=c[k]; if(!arr||!arr.length) continue; const all=[...new Set(arr.flatMap(e=>e.co||[]))]; const names=all.slice(0,3).join(" · ")+(all.length>3?" +"+(all.length-3):""); if(!names) continue; let sub=(arr[0].w||"").replace(/<[^>]+>/g,""); if(sub.length>42){ sub=sub.slice(0,42); sub=sub.slice(0,Math.max(20,sub.lastIndexOf(" ")))+"…"; } const o=CL_POS[k]; addLabel("<b>"+CL_TXT[k]+"</b>"+names,sub,v=>v.set(SX[i]+o[0],o[1],o[2]),emlG,()=>E.stage===i,"cl "+k); } });
 let emlT=0;
-window.syncEml=function(force){ const i=E.stage; orbitTo({theta:0.35,phi:1.05,r:9.5,target:new THREE.Vector3(SX[i],0.9,0)}); emlT=0; for(let k=0;k<8;k++) EOBJ["mk"+k].material.opacity=k===i?0.12:0; };
+window.syncEml=function(){ const i=E.stage; orbitTo({theta:0.62,phi:1.0,r:12.5,target:new THREE.Vector3(SX[i],2.0,0)}); emlT=0; for(let k=0;k<8;k++) EOBJ["mk"+k].material.opacity=k===i?0.14:0; };
 function layoutEml(dt){
   emlT+=dt; const i=E.stage;
   EOBJ.layers.forEach((l,k)=>l.visible=i>=1&&(i>1||emlT>k*0.35));
   EOBJ.card.position.y=1.5-(i===4?0.45*(0.5+0.5*Math.sin(emlT*2)):0); EOBJ.pins.forEach(p=>p.position.y=EOBJ.card.position.y-0.4);
   EOBJ.pogo.forEach(p=>p.position.y=1.15-(i===6?0.3*(0.5+0.5*Math.sin(emlT*2)):0));
   EOBJ.beam.visible=i===2; EOBJ.cbeam.visible=i===6;
+  const k=1-Math.exp(-6*dt);
+  E.explodeCur+=(E.explode-E.explodeCur)*k; for(const o of EX) o.position.copy(o.userData.b).addScaledVector(o.userData.e,E.explodeCur);
+  E.diaCur+=(DIA_SCALE[X.dia]-E.diaCur)*k; for(const key2 in WG) WG[key2].scale.set(E.diaCur,1,E.diaCur);
 }
+// explode controls
+const exBtn=$("#exBtn"), exRange=$("#exRange");
+function exLabel(){ exBtn.textContent=E.explode>0.05?"Assemble":"Explode"; $("#vSub").textContent=X.dia+"-inch wafer · ×"+factor(X.dia).toFixed(2)+" chips per wafer · layer spacing "+Math.round(E.explode*100)+"%"; }
+exRange.oninput=e=>{ E.explode=+e.target.value; exLabel(); };
+exBtn.onclick=()=>{ E.explode=E.explode>0.05?0:0.8; exRange.value=E.explode; exLabel(); };
+exLabel();
 // resize + loop
 function resize(){ const box=$("#glbox"); renderer.setSize(box.clientWidth,box.clientHeight,false); camera.aspect=box.clientWidth/box.clientHeight; camera.updateProjectionMatrix(); }
 new ResizeObserver(resize).observe($("#glbox")); resize();
 let last=performance.now();
-function tick(now){ const raw=(now-last)/1000, dt=Math.min(0.05,raw); last=now; updateCamera(Math.min(0.3,raw)); layoutEml(dt); renderer.render(scene,camera); drawLabels(); requestAnimationFrame(tick); }
-orb.r=9.5; orb.theta=0.35; orb.phi=1.05; orb.target.set(SX[0],0.9,0); syncEml(true);
+function trackLight(){ key.position.copy(orb.target).add(KEY_DIR); key.target.position.copy(orb.target); const h=Math.min(48,Math.max(8,orb.r)); if(Math.abs(h-shadowHalf)>0.5){ shadowHalf=h; const sc=key.shadow.camera; sc.left=-h; sc.right=h; sc.top=h; sc.bottom=-h; sc.updateProjectionMatrix(); } }
+function adaptQuality(raw){ if(document.visibilityState!=="visible"||raw>0.25||QUAL.cur<=1) return; if(raw>0.04) QUAL.slow++; else QUAL.slow=Math.max(0,QUAL.slow-2); if(QUAL.slow>90){ QUAL.slow=0; QUAL.cur=Math.max(1,+(QUAL.cur-0.5).toFixed(2)); renderer.setPixelRatio(QUAL.cur); resize(); } }
+function tick(now){ const raw=(now-last)/1000, dt=Math.min(0.05,raw); last=now; updateCamera(Math.min(0.3,raw)); layoutEml(dt); trackLight(); renderer.render(scene,camera); drawLabels(); adaptQuality(raw); requestAnimationFrame(tick); }
+orb.target.set(SX[E.stage],2.0,0); syncEml();
 requestAnimationFrame(tick);
 })();
 </script>

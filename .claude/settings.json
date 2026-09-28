@@ -6,12 +6,39 @@
           {
             "type": "command",
             "command": "py",
-            "args": ["E:\\Wiki Felipe empresas\\_wiki\\_tools\\graph_query.py", "--hook"],
+            "args": [
+              "E:\\Wiki Felipe empresas\\_wiki\\_tools\\graph_query.py",
+              "--hook"
+            ],
             "timeout": 15,
             "statusMessage": "Loading wiki knowledge-graph context…"
           }
         ]
       }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "Bash(py *)",
+      "Bash(PYTHONIOENCODING=utf-8 py *)",
+      "Bash(git *)",
+      "Bash(cd *)",
+      "PowerShell(py *)",
+      "PowerShell(git *)",
+      "PowerShell($env:PYTHONIOENCODING=*)",
+      "Edit",
+      "Write",
+      "Agent",
+      "ToolSearch",
+      "Read",
+      "Glob",
+      "Grep",
+      "mcp__e71cc704-2041-4248-a83d-bd31b956c190__notion-query-meeting-notes",
+      "mcp__e71cc704-2041-4248-a83d-bd31b956c190__notion-fetch",
+      "mcp__e71cc704-2041-4248-a83d-bd31b956c190__notion-search",
+      "mcp__6a330142-d137-4a7e-b1ff-652e3938b537__outlook_calendar_search",
+      "mcp__6a330142-d137-4a7e-b1ff-652e3938b537__outlook_email_search",
+      "mcp__6a330142-d137-4a7e-b1ff-652e3938b537__read_resource"
     ]
   }
 }

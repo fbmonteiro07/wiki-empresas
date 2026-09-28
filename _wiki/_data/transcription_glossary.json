@@ -1,0 +1,57 @@
+{
+ "_about": "Hand-edited ledger of machine-transcription garbles (Notion AI, Bloomberg ASR, auto-translation) seen in the archive, with the correct reading. Used by E:\\.claude\\scripts\\transcript_qa.py (source-file scan, page-diff scan) and by ingest_notion_meetings.py (writes a 'Transcription QA' block into every archived Notion file). Keys are matched with word boundaries, case-sensitive unless 'ci' is true. 'keep_when' = regex contexts (same line, ~80 chars around the hit) where the token is legitimate and must NOT be flagged. Add an entry the first time a garble is caught; never delete one. Standing rule (Felipe, 2026-09-28): ALWAYS double-check transcript content — acronyms, names, units, numbers — before it travels to a page.",
+ "_updated": "2026-09-28",
+ "terms": {
+  "MPO": {
+   "correct": "NPO (near-packaged optics)",
+   "domain": "optical",
+   "rule": "Notion/Bloomberg ASR hears 'NPO' as 'MPO'. When the token names an optical ARCHITECTURE (opportunity, TAM, ramp, projects, engagements, adoption, laser content, pricing, 'vs CPO', 'inside/outside the box', ELS/faceplate) it is NPO. MPO is only the multi-fibre push-on CONNECTOR (MPO/MTP, '144 MPO connectors', ferrules, US Conec/Senko) or Kolon's MPO resin for CCL.",
+   "keep_when": ["connector", "ferrule", "MTP", "US Conec", "Senko", "Broadex", "CCL", "specialty chemical", "resin", "modified poly", "fibers? per", "per Q3450", "X800"],
+   "first_seen": "2026-08-07 (Jefferies/Curtis LITE call), 2026-08-14 (JPM callback COHR/LITE), 2026-09-28 (JPM Fall Series networking webinar: 63x MPO vs 5x NPO in one transcript; the Notion summary even expanded it to 'Module-Pluggable Optics')"
+  },
+  "Module-Pluggable Optics": {
+   "correct": "near-packaged optics (NPO)",
+   "domain": "optical",
+   "rule": "Notion AI's invented expansion of the MPO garble. Does not exist.",
+   "first_seen": "2026-09-28 (JPM Fall Series networking webinar summary)"
+  },
+  "Lamentum": {"correct": "Lumentum (LITE)", "domain": "names", "rule": "ASR spelling.", "first_seen": "2026-09-28"},
+  "Sienna": {"correct": "Ciena (CIEN)", "domain": "names", "rule": "ASR spelling; in optical/networking context always Ciena.", "keep_when": ["Sienna\\s+(Miller|Wood)"], "first_seen": "2026-09-28"},
+  "Vixel": {"correct": "VCSEL", "domain": "optical", "rule": "ASR renders VCSEL/VCSELs as Vixel/Vixels.", "ci": true, "first_seen": "2026-09-28"},
+  "Vixels": {"correct": "VCSELs", "domain": "optical", "rule": "see Vixel", "ci": true, "first_seen": "2026-09-28"},
+  "Avicenna": {"correct": "Avicena (microLED optical links, private) — verify from context", "domain": "names", "rule": "Likely the company Avicena Tech; confirm before naming it on a page.", "first_seen": "2026-09-28"},
+  "Dave Geckler": {"correct": "David Goeckeler (SanDisk CEO)", "domain": "names", "rule": "ASR spelling.", "first_seen": "2026-09-11 (SNDK BTG Q&A)"},
+  "Sherry Hinton": {"correct": "Sherri Luther (Coherent CFO)", "domain": "names", "rule": "ASR spelling.", "first_seen": "2026-09-08 (COHR investor group meeting)"},
+  "Daedalus": {"correct": "Databricks", "domain": "names", "rule": "ASR hears Databricks as Daedalus in the Communacopia firesides.", "first_seen": "2026-09-08"},
+  "Benjarin": {"correct": "Ben Bajarin (Creative Strategies)", "domain": "names", "rule": "ASR spelling; also the Notion parent page title.", "first_seen": "2026-09-24 (BofA server-CPU call)"},
+  "Roddy": {"correct": "Radi Sultan (UBS)", "domain": "names", "rule": "ASR spelling in the UBS State of AI & Software calls.", "first_seen": "2026-09-25"},
+  "Avarenga": {"correct": "Marcelo Alvarenga (Anthropic LatAm FSI)", "domain": "names", "rule": "ASR spelling.", "first_seen": "2026-09-10"},
+  "Ryan Kuntz": {"correct": "Ryan Koontz (Needham)", "domain": "names", "rule": "Bloomberg ASR spelling on the COHR call.", "first_seen": "2026-08 (COHR FQ4 call)"},
+  "Casela": {"correct": "unresolved — Jefferies-relayed name on the AXT/LITE read-through; do not cite", "domain": "names", "rule": "Never verified.", "first_seen": "2026-08-31"},
+  "TechDogs": {"correct": "unresolved — SemiAnalysis team name garbled at the Communacopia dinner", "domain": "names", "rule": "Do not cite as a team name.", "first_seen": "2026-09-08"},
+  "emails": {
+   "correct": "EMLs (electro-absorption modulated lasers)",
+   "domain": "optical",
+   "rule": "Bloomberg ASR renders EMLs as 'emails' in laser-supply questions ('supply emails externally', 'selling emails commercially'). Only in optical-component context.",
+   "keep_when": ["e-?mail", "inbox", "Outlook", "sent", "forward", "newsletter", "subscri", "invite"],
+   "ci": true,
+   "first_seen": "2026-08 (COHR FQ4 call, George Notter question)"
+  },
+  "1.6 C": {"correct": "1.6T", "domain": "optical", "rule": "ASR renders 1.6T (terabit) as 1.60 / 1.6 C / 1.6 t.", "first_seen": "2026-08 (SMTC call)"},
+  "1.6 t": {"correct": "1.6T", "domain": "optical", "rule": "see '1.6 C'", "first_seen": "2026-08 (SMTC call)"},
+  "per meter": {
+   "correct": "per MW (megawatt) — Portuguese auto-translation of 'por MW'",
+   "domain": "units",
+   "rule": "In data-centre economics from a Portuguese-language meeting, 'per meter' / 'per megabit' = per MW; '0,07%' = 7 US cents/kWh.",
+   "keep_when": ["fibre", "fiber", "cable", "metre", "length", "reach"],
+   "ci": true,
+   "first_seen": "2026-09-24 (Scala Data Centers, PT auto-translated)"
+  },
+  "per megabit": {"correct": "per MW", "domain": "units", "rule": "see 'per meter'", "ci": true, "first_seen": "2026-09-24"},
+  "VGA [ph]": {"correct": "unresolved — JX Metals crystal-growth technique on the AXT call; do not cite the acronym", "domain": "semis", "rule": "Never verified.", "first_seen": "2026-08-31"}
+ },
+ "summary_traps": [
+  "The Notion AI summary inherits every transcript garble AND adds its own: it expanded 'MPO' to 'Module-Pluggable Optics' (2026-09-28), moved a guidance year (fiscal 2025 vs 2028, LITE 2026-09-18), invented a '<15% of industry TAM' sentence (2026-09-18), rendered 'funding short' as 'valuation short' (2026-09-18), hung Meta's $200-300bn figure on AppLovin (2026-09-22), credited the HOST's numbers to the guest (BofA/Bajarin 2026-09-24), and computed its own '~15% CAGR' (Scala 2026-09-24).",
+  "Speakers are unlabeled: questions (Capstone/other investors) and answers run together; the host's arithmetic assented with a 'yeah' is not the guest's number."
+ ]
+}

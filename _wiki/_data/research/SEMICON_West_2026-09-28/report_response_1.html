@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Morgan Stanley Access Verification</title>   
+   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=0"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<style>
+    a {
+        color: #3182C1;
+        text-decoration: none;
+    }
+
+   @font-face {
+  font-family: "Karla-Regular";
+  src: url("/public/login-email/webapp/static/Karla-Regular.ttf");
+  src: url("/public/login-email/webapp/static/karla-regular-webfont.eot");
+  src: url("/public/login-email/webapp/static/karla-regular-webfont.eot") format("embedded-opentype"),
+    url("/public/login-email/webapp/static/Karla-Regular.ttf") format('truetype');
+  }
+
+@font-face {
+  font-family: "MSGloriolaIIStd";
+  src: url("/public/login-email/webapp/static/MS_Gloriola_II_Std_Reg.ttf");
+  src: url("/public/login-email/webapp/static/MS_Gloriola_II_Standard_Medium.eot");
+  src: url("/public/login-email/webapp/static/MS_Gloriola_II_Standard_Medium.eot") format("embedded-opentype"),
+    url("/public/login-email/webapp/static/MS_Gloriola_II_Std_Reg.ttf") format('truetype');
+}
+   
+
+    @media (max-width : 767px) {
+        .desktop-only {
+            display: none;
+        }
+
+        .mobile-only {
+            display: block;
+        }
+
+        .inputSubmit {
+            width: 100%;
+            margin-top: 15px;
+            background: #3182C1;
+            border-radius: 100px;
+            border: 1px solid #3182C1;
+            font-family: "Karla-Regular";
+            font-size: 16px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            text-align: center;
+            line-height: 15px;
+            height: 45px;
+        }    
+
+    }
+    
+    .back-button-container {
+        width: 44px;
+        height: 44px;
+        position: absolute;
+        top: 0;
+        display: block;
+    }
+    .back-button {
+        height: 18px;
+        margin: 13px 15px;
+        display: inline-block;
+        width: 18px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url("/public/login-email/webapp/static/LeftShev.svg");
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        .back-button-container{
+            top: 13px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .header {
+            text-align: center;
+        }
+    }
+
+    @media (min-width: 1025px) {
+        .header {
+            text-align: left;
+        }
+
+        .back-button-container {
+            display: none;
+        }
+    }
+    
+    @media (min-width : 768px) {
+        .desktop-only {
+            display: block;
+        }
+
+        .mobile-only {
+            display: none;
+        }
+    }
+
+    .mobile-cookies-heading {
+        margin-top: 30px;
+        font-family: "MSGloriolaIIStd";
+        font-size: 20px;
+        color: #4C4C4C;
+        letter-spacing: 0;
+        text-align: center;
+    }
+    .mobile-login-intro {
+        margin-top: 20px;
+        font-family: "Karla-Regular";
+        font-size: 14px;
+        color: #4C4C4C;
+        letter-spacing: 0;
+        line-height: 17px;
+        text-align: center;
+    }
+    .mobile-cookies-intro {
+        margin-top: 20px;
+        font-family: "Karla-Regular";
+        font-size: 14px;
+        color: #333333;
+        letter-spacing: 0;
+        line-height: 17px;
+    }
+
+    .user-emailAddress {
+        margin-top: 28px;
+        font-family: "Karla-Regular";
+        font-weight: bold;
+        font-size: 16px;
+        color: #333330;
+        letter-spacing: 0;
+        text-align: center;
+        word-break: break-word;
+    }
+
+    .wrong-email {
+        margin-top: 30px;
+        font-family: "Karla-Regular";
+        font-size: 14px;
+        color: #3182C1;
+        letter-spacing: 0;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .input-fields-container {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .forgot-email-link {
+        font-family: "Karla-Regular";
+        font-size: 14px;
+        letter-spacing: 0;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .faqs-access-text {
+        font-family: Karla-Regular;
+        font-size: 14px;
+        color: #333333;
+        letter-spacing: 0;
+        text-align: center;
+        margin-top: 76px;
+    }
+    
+    .mobile-submit {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+        background: #3182C1;
+        border-radius: 100px;
+        border: 1px solid #3182C1;
+        font-family: "Karla-Regular";
+        font-size: 16px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        text-align: center;
+        line-height: 43px;
+        height: 43px;
+        cursor: pointer;
+        width: 100%;
+        padding: 0;
+        outline: none;
+    }
+
+    .mobile-submit: focus {
+        box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.50);
+    }
+
+    .error-text {
+        font-family: "Karla-Regular";
+        font-size: 14px;
+        color: #B4425D;
+        letter-spacing: 0;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .instruction-block {
+        margin-top: 30px;
+        font-family: "Karla-Regular";
+        font-size: 14px;
+        color: #333333;
+        letter-spacing: 0;
+        line-height: 22px;
+    }
+
+    .mobile-cookies-text {
+        margin-top: 20px;
+        font-family: "Karla-Regular";
+        font-size: 14px;
+        color: #333333;
+        letter-spacing: 0;
+        line-height: 22px;
+    }
+
+    .mobile-instruction-text {
+        margin-top: 20px;
+        font-family: "Karla-Regular";
+        font-size: 14px;
+        color: #333333;
+        letter-spacing: 0;
+        line-height: 22px;
+    }
+
+    .mobile-cookies-list-container > div {
+        display: flex;
+    }
+
+    .mobile-cookies-list-container > div >div:first-child{
+        font-size: 39px;
+        position: relative;
+        top: -2px;
+        left: -2px;
+    }
+
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(359deg);
+        }
+    }
+
+    .spinner {
+        height: 16px;
+        line-height: 20px;
+        width: 16px;
+        display: none;
+        margin-right: 11px;
+        position: relative;
+        top: 3px;
+        animation: rotation 2s infinite linear;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url("/public/login-email/webapp/static/SpinnerWhiteDisabled.png");
+    }
+
+    .mobile-why-asked {
+        font-family: "Karla-Regular";
+        font-weight: bold;
+        font-size: 14px;
+        color: #333333;
+        letter-spacing: 0;
+        line-height: 17px;
+        margin-top: 40px;
+    }
+    
+    .mobile-help-desk {
+        margin-top: 44px;
+        font-family: "Karla-Regular";
+        font-size: 14px;
+        color: #333333;
+        letter-spacing: 0;
+        line-height: 22px;
+    }
+
+    .service-desk-numbers {
+        margin-top: 30px;
+        font-family: "Karla-Regular";
+        font-size: 14px;
+        color: #333333;
+        letter-spacing: 0;
+    }
+
+    .service-desk-numbers .country-name,
+    .service-desk-numbers .country-contact-num {
+        font-family: "Karla-Regular";
+        font-size: 14px;
+        color: #333333;
+        letter-spacing: 0;
+        line-height: 17px;
+        padding-bottom: 10px;
+    }
+
+    .service-desk-numbers .country-contact-num {
+        text-align: right;
+    }
+
+    .service-desk-numbers>table {
+        max-width: unset !important;
+    }
+    
+    .contact-sales-representative {
+        margin-top: 30px;
+        font-family: "Karla-Regular";
+        font-size: 14px;
+        color: #333333;
+        letter-spacing: 0;
+        line-height: 17px;
+    }
+
+    .text-align-center {
+        text-align: center;
+    }
+
+
+
+    input[type=text] {
+
+        -webkit-box-sizing: border-box;
+        /* Safari/Chrome, other WebKit */
+
+        -moz-box-sizing: border-box;
+        /* Firefox, other Gecko */
+
+        box-sizing: border-box;
+        /* Opera/IE 8+ */
+
+    }
+
+
+
+    .main-body {
+
+        margin: 20px 30px;
+
+        font-family: Segoe UI, Arial, Helvetica, Verdana, sans-serif;
+
+    }
+
+    .app-offline-msg {
+            margin: 200px 30px 20px 30px;
+
+            font-family: "Karla-Regular";
+
+            font-size: 14px;
+
+            color: #4C4C4C;
+
+            letter-spacing: 0;
+
+            line-height: 17px;
+
+            text-align: center;
+    } 
+
+
+
+    .header {
+        height: 16px;
+        padding-top: 15px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+
+
+    .mslogo {
+        max-width: 14rem;
+        height: 16px;
+        width: 100%;
+    }
+
+
+
+    .inputOutlined {
+        font-family: "Karla-Regular";
+        background: #FFFFFF;
+        border: 1px solid #D9D9D9;
+        border-radius: 100px;
+        width: 100%;
+        height: 44px;
+        padding-left: 20px;
+        font-size: 14px;
+        color: #333333;
+        letter-spacing: 0;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+
+
+
+    .switch-language {
+        line-height: 20px;
+        font-size: 14px;
+        letter-spacing: 0;
+        text-align: center;
+        color: #3182C1;
+
+    }
+
+    .helpdesk-number {
+
+        font-size: 14px;
+
+    }
+
+
+    @media (min-width : 768px) {
+
+        .app-offline-msg {
+            font-family: "MS Gloriola II Std";
+            font-size: 18px;
+            color: #333333;
+            letter-spacing: 0;
+            padding: 10%; 
+            margin: auto;
+            text-align: center;
+            display: none;
+        } 
+
+        .main-body {
+
+            margin: 30px auto;
+
+            max-width: 600px;
+
+        }
+
+        .mslogo {
+            height: auto;
+            max-width: 16rem;
+
+        }
+
+        .header {
+            padding: 25px;
+            height: auto;
+        }
+
+        .inputSubmit {
+
+            width: 93px;
+
+            font-size: 14px;
+
+            font-family: Segoe UI Semibold, Arial, Helvetica, Verdana, sans-serif;
+
+            margin: 20px;
+
+            border: 1px solid #000;
+
+            border-radius: 3px;
+
+            height: 40px;
+
+        }
+
+        .mobile-instruction-text {
+            width: 300px;
+            padding-left: 17px;
+            margin: 20px auto 0 auto;
+        }
+
+        .instruction-block {
+            text-align: center;
+        }
+
+    }
+
+    .inputOutlined:focus {
+        outline: none;
+    }
+
+    @media (min-width : 1024px) {
+
+        .mslogo {
+            max-width: 20rem;
+        }
+
+        .input-fields-container {
+            justify-content: center;
+            display: flex;
+        }
+
+        .mobile-submit {
+            padding: 0 10px;
+            margin-left: 10px;
+            margin-top: 0;
+            height: 42px;
+            line-height: 42px;
+            width: 172px;
+        }
+
+        .spinner {
+            margin-right: 7px;
+        }
+        .error-text {
+            max-width: 352px;
+            word-break: break-all;   
+        }
+        .inputOutlined {            
+            width: 352px;
+        }
+
+        .verfiy-email-style{
+            width: 80px;
+            white-space: nowrap;
+            word-break: keep-all;
+        }
+
+    }
+</style></head>
+
+<body style="margin: 0px" onload="onLoad()">
+
+<div class="header" id="header">
+<img class="mslogo" src="/public/login-email/webapp/static/ms-research-logo.svg" alt="Morgan Stanley | Research">
+</div>
+<div style="background: rgba(0, 0, 0, 0.04); height: 2px;"> </div>
+
+<script>
+
+  (function () {
+      var isIOsDevice = (/iP(hone|ad|od)|AppleWebKit/).test(navigator.userAgent);
+      if (isIOsDevice && window.location.href.includes('native=true')) {
+        var url = '/cordova/cordova.js?_dc=' + Date.now();
+        document.write('<scr' + 'ipt type="text/javascript" src="' + url + '"></scr' + 'ipt>');
+      }
+  })();
+
+  function onLoad() {
+     if(window.location.href.includes('native=true')){
+     			document.addEventListener("deviceready", onDeviceReady, false);
+			}
+  }
+
+  // device APIs are available
+  //
+  function onDeviceReady() {
+      document.addEventListener("resume", function showScreen() {
+        if (window['Cordova']) {
+          window.msScreenContents.show();
+        }
+      });
+
+      var content = document.getElementsByClassName('app-offline-msg')[0];
+			var head = document.getElementsByClassName('header')[0];
+      var mainBody = document.getElementsByClassName('main-body')[0];
+
+			if(!window.navigator.onLine ){
+				  console.log('offline');
+          content.style.display = 'block';
+				  head.style.display = 'none';
+          mainBody.style.display = 'none';	
+			}
+
+			window.addEventListener('online', () => {
+          console.log('online');
+					
+          content.style.display = 'none';
+          head.style.display = 'block';
+          mainBody.style.display = 'block';
+      }, false);
+
+      window.addEventListener('offline', () => {
+          console.log('offline');
+          content.style.display = 'block';
+					head.style.display = 'none';
+          mainBody.style.display = 'none';
+        }, false);
+
+  }
+	
+	var Base64 = {
+	
+	  // private property
+      _keyStr : "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
+
+      // public method for decoding
+      decode : function (input) {
+        var output = "";
+        var chr1, chr2, chr3;
+        var enc1, enc2, enc3, enc4;
+        var i = 0;
+
+        input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
+
+        while (i < input.length) {
+            enc1 = this._keyStr.indexOf(input.charAt(i++));
+            enc2 = this._keyStr.indexOf(input.charAt(i++));
+            enc3 = this._keyStr.indexOf(input.charAt(i++));
+            enc4 = this._keyStr.indexOf(input.charAt(i++));
+
+            chr1 = (enc1 << 2) | (enc2 >> 4);
+            chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
+            chr3 = ((enc3 & 3) << 6) | enc4;
+
+            output = output + String.fromCharCode(chr1);
+
+            if (enc3 != 64) {
+                output = output + String.fromCharCode(chr2);
+            }
+            if (enc4 != 64) {
+                output = output + String.fromCharCode(chr3);
+            }
+        }
+
+        return output;
+
+      }	
+	  
+	}
+	
+</script> 
+
+    <script type="text/javascript">
+        window.onpageshow = function (event) {
+            if (event.persisted) {
+                var spinners = document.getElementsByClassName("spinner");
+                for (i = 0; i < spinners.length; i++) {
+  					spinners[i].style.display="none";
+				}
+
+                var inputBox = document.getElementById("emailAddressMobile");
+
+                inputBox.style.backgroundColor = "#FFFFFF";
+                inputBox.style.pointerEvents = "auto";
+				
+				if(inIframe()){
+					modifyButtonStyle("gen-code-button","gen-code-button-text");
+					modifyButtonStyle("not-gen-code-button","not-gen-code-button-text");
+				} else {
+					modifyButtonStyle("verify-button","verify-button-text");
+				}
+
+                
+            }
+        };
+        
+        function modifyButtonStyle(buttonId, buttonTextId){
+        	var verifyButton = document.getElementById(buttonId);
+        	
+			if(verifyButton){
+			  verifyButton.style.fontSize = "16px";
+        	  verifyButton.style.backgroundColor = "#3182C1";
+        	  verifyButton.style.borderColor = "#3182C1";
+        	  verifyButton.style.pointerEvents = "auto";
+			}
+
+            var verifyButtonText = document.getElementById(buttonTextId);
+        	if(verifyButtonText){
+        		verifyButtonText.style.opacity = "1";
+        	}
+
+        }
+
+        function validateEmail(email) {
+
+            var trimmed = email.replace(/^\s+|\s+$/g, '')
+
+            var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+            return re.test(trimmed);
+
+        }
+        
+       function inIframe() {
+    	    if (self !== top){
+    	        return true;
+    	    } else {
+    	    	return false;
+    	    }
+		}
+                
+        function validateForm(mode='email') {
+			
+            // check for data
+            var inputBox = document.getElementById("emailAddressMobile");
+            var inputEmail = inputBox.value.replace(/^\s+|\s+$/g, '');
+            
+            if(inIframe()){
+            	var iFrameBox = document.getElementById("iFrame");
+            	iFrameBox.value = true;
+            }
+            
+            var verifyButtonId = 'verify-button';
+            var verifyButtonTextId = 'verify-button-text';
+            
+            if(mode == 'code'){
+            	verifyButtonId = 'gen-code-button';
+            	verifyButtonTextId = 'gen-code-button-text';
+            } else if(mode == 'notCode'){
+            	var codeBox = document.getElementById("code");
+            	codeBox.value = false;
+            	verifyButtonId = 'not-gen-code-button';
+            	verifyButtonTextId = 'not-gen-code-button-text';
+            	
+            }	
+            
+            
+            if (validateEmail(inputEmail)) {
+                var spinners = document.getElementsByClassName("spinner");
+                for (i = 0; i < spinners.length; i++) {
+  					spinners[i].style.display="inline-block";
+				}
+
+                inputBox.style.backgroundColor = "#F2F2F2";
+                inputBox.style.pointerEvents = "none";
+
+                var verifyButton = document.getElementById(verifyButtonId);
+                var verifyButtonText = document.getElementById(verifyButtonTextId);
+
+                verifyButton.style.fontSize = "14px";
+                verifyButton.style.backgroundColor = "#225B87";
+                verifyButton.style.borderColor = "#225B87";
+                verifyButton.style.pointerEvents = "none";
+
+                verifyButtonText.style.opacity = "0.8";
+                setTimeout(function() { document.getElementById("inputFormMobile").submit() }, 600);
+
+                return false;
+            } else {
+                var target = document.getElementById("errorTextMobile");
+                var errorText = inputEmail.length ? 'Please enter a valid email address ' : 'Please enter an email address';
+                target.innerHTML = errorText;
+                target.style.display = "block";
+
+                inputBox.style.borderColor = "#B4425D";
+                return false;
+            }
+
+        }
+
+
+        function resetErrors() {
+            var target = document.getElementById("errorTextMobile");
+            target.innerHTML = "";
+            target.style.display = "none";
+
+            var inputBox = document.getElementById("emailAddressMobile");
+            inputBox.style.borderColor = "#D9D9D9";
+        }
+
+        function populateEmail() {
+            var inputBox = document.getElementById("emailAddressMobile");
+            if (sessionStorage.userEmailID != null) {
+                inputBox.value = sessionStorage.userEmailID;
+            } else {
+                var urlHash = location.hash.split('#');
+                if (urlHash[1]) {
+                    var hashParams = urlHash[1].split('&');
+                    var eParam = 'e=';
+                    var pattern = new RegExp('^' + eParam);
+                    for (i = 0; i < hashParams.length; ++i) {
+                        if (pattern.test(hashParams[i])) {
+                            var enEmail = hashParams[i].split(eParam)[1];
+                            if (enEmail) {
+                                var emailString = Base64.decode(enEmail);
+                                var emailDomain = emailString.split("@")[1];
+                                if (isInternalDomain(emailDomain)) {
+                                    break;
+                                }
+                                inputBox.value = emailString;
+                                if (typeof (Storage) !== "undefined") {
+                                    sessionStorage.userEmailID = inputBox.value;
+                                }
+                            }
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        function onLoad() {
+            enableIframeButtons();
+            populateEmail();
+            if(window.location.href.includes('native=true')){
+     			document.addEventListener("deviceready", onDeviceReady, false);
+			}
+			
+        }
+        
+        // hide the have a code button
+        function enableIframeButtons(){
+        	if(inIframe()){
+            	document.getElementById("verify-button").style.display='none';
+            	document.getElementById("not-gen-code-button").style.display='flex';
+            	document.getElementById("gen-code-button").style.display='flex';
+            }
+        }
+        
+		// device APIs are available
+  		//
+		function onDeviceReady() {
+			document.addEventListener("resume", function showScreen() {
+				if (window['Cordova']) {
+				window.msScreenContents.show();
+				}
+			});
+
+            var content = document.getElementsByClassName('app-offline-msg')[0];
+			var head = document.getElementsByClassName('header')[0];
+        	var mainBody = document.getElementsByClassName('main-body')[0];
+
+			if(!window.navigator.onLine ){
+				console.log('offline');
+                content.style.display = 'block';
+				head.style.display = 'none';
+                mainBody.style.display = 'none';	
+			}
+
+			window.addEventListener('online', () => {
+                console.log('online');
+                content.style.display = 'none';
+                head.style.display = 'block';
+                mainBody.style.display = 'block';
+						 
+
+        	}, false);
+
+        	window.addEventListener('offline', () => {
+                console.log('offline');
+                content.style.display = 'block';
+				head.style.display = 'none';
+                mainBody.style.display = 'none';
+        	}, false);
+		}
+
+        function isInternalDomain(domain) {
+
+            var InternalDomains = ['bW9yZ2Fuc3RhbmxleS5jb20=', 'bXVtc3MuY29t', 'bW9yZ2Fuc3RhbmxleXNtaXRoYmFybmV5LmNvbQ==', 'bW9yZ2Fuc3RhbmxleXB3bS5jb20=', 'bXNmdW5kc2VydmljZXMuY29t', 'bXNncmF5c3RvbmUuY29t',
+
+                'bW9yZ2Fuc3RhbmxleW11ZmcuY29t', 'c2MubXVmZy5qcA==', 'bXMuY29t', 'cm1ibW9yZ2Fuc3RhbmxleS5jb20=', 'cm1ibW9yZ2Fuc3RhbmxleS5jby56YQ==',
+
+                'ZXhjaGFuZ2UubXMuY29t', 'bXNhZC5tcy5jb20=', 'bW9yZ2Fuc3RhbmxleWh1YXhpbi5jb20=', 'bXMuc3RyZWV0Y29udHh0Lm5ldA=='];
+
+
+
+            for (var i = 0; i < InternalDomains.length; i++) {
+
+                if (domain == Base64.decode(InternalDomains[i])) {
+
+                    return true;
+
+                }
+
+            }
+
+            return false;
+
+        }
+
+    </script>
+
+    <div class="main-body">
+
+        <div> 
+            <div class="switch-language" id="switch-language"> <a href="?uri=/eqr/article/webapp/19f2e57a-b1df-11f1-b79c-85eb549cca22&lang=ja&query=t=1790544449:221:1648850:95722cac585c&amp;m=1&amp;ch=CDF%20Research%20ISG">
+                    日本語版を見る</a></div>
+
+            <div class="mobile-cookies-heading">
+Research Access Verification            </div>
+
+            <div class="mobile-login-intro">
+Please enter your registered email address to receive a one time verification email            </div>
+        </div>
+
+        <div>
+            <form action="" method="POST" id="inputFormMobile" novalidate>
+                <div class="input-fields-container">
+                    <div>
+                        <input type="email" value="" name="emailAddress" id="emailAddressMobile" class="inputOutlined" oninput="resetErrors()">
+            
+                        <input type="hidden" name="language" id="language" value="en" />
+                        
+                        <input type="hidden" name="iFrame" id="iFrame" value="false" />
+                        
+                        <input type="hidden" name="genCode" id="code" value="true" />
+            
+                        <div class="error-text" id="errorTextMobile" style="display: none;"> &nbsp; </div>
+                    </div>
+            
+                    <button id="verify-button" class="mobile-submit" onclick="return validateForm()">
+                        <div style="width:35px">&nbsp;<span id="spinner-email" class="spinner"></span> </div>
+                        <div class="verfiy-email-style"><span id="verify-button-text">
+                                Verify Email</span></div> 
+                        <div style="width:35px">&nbsp;</div>
+                    </button>
+                    
+                    <button style="display:none" id="gen-code-button" class="mobile-submit" onclick="return validateForm('code')">
+                        <div style="width:35px">&nbsp;<span id="spinner-code" class="spinner"></span> </div>
+                        <div class="verfiy-email-style"><span id="gen-code-button-text">
+                                Generate a code</span></div> 
+                        <div style="width:35px">&nbsp;</div>
+                    </button>
+                    
+                    <button style="display:none" id="not-gen-code-button" class="mobile-submit" onclick="return validateForm('notCode')">
+                        <div style="width:35px">&nbsp;<span id="spinner-notCode" class="spinner"></span> </div>
+                        <div class="verfiy-email-style"><span id="not-gen-code-button-text">
+                                I have a code</span></div> 
+                        <div style="width:35px">&nbsp;</div>
+                    </button>
+                    
+                    
+                </div>
+            </form>
+        </div>
+        
+        
+
+        <div class="forgot-email-link"><a href="./help?lang=en">
+                Forgotten your registered email address?</a></div>     
+
+        <div class="faqs-access-text">
+            <div>
+You will have access on this device for 12 months or until your browser cookies are cleared            </div>
+            <div style="margin-top: 20px;">
+                If you are asked to verify more often, see our <br> <a href="./cookies?lang=en">
+                    Cookie FAQs</a>
+            </div>
+        </div>
+
+</div>
+	<div class="app-offline-msg" style="display: none; font-family: 'Karla-Regular';font-size: 14px;color: #4C4C4C;letter-spacing: 0;line-height: 17px;text-align: center;margin: 200px 30px 20px 30px;">
+        No Internet connection. Please try again later.
+    </div>
+<script type="text/javascript"  src="/bjdoRf/xf/UQ/iV6L/eou00-UkZw/N9z3r6tbuNGNJm5f/ZHFXenIRVwc/cDBWA0/xaWiI"></script></body>
+</html>

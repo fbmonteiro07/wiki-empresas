@@ -2,10 +2,14 @@
 
 _Generated 2026-09-28 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (34)
+## 📅 Upcoming (38)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
+| 2026-09-28 | CIEN | 🆕 **SPOKEN-LAYER ADDENDUM, 2026-09-28 — THE SUPPLY HALF OF THIS TEST NOW HAS A CLOCK.** (Joseph Cardoso (J.P. Morgan, Hardware & Networking) @ JPM 'Takeaways from ECOC, All Stars & Other Investor Even |
+| 2026-09-28 | COHR | **🆕 THE 70mW QUESTION — PUT IT TO MANAGEMENT: is the in-box NPO light source an InP CW laser at 70mW or a VCSEL, and what link budget makes 70mW sufficient where Lumentum says 150mW?** JPM relayed *"t |
+| 2026-09-28 | CRDO | 🆕 **SPOKEN-LAYER READOUT, 2026-09-28** (Joseph Cardoso (J.P. Morgan, Hardware & Networking) @ JPM 'Takeaways from ECOC, All Stars & Other Investor Events' call, 2026-09-28 — Capstone notes (Notion tra |
+| 2026-09-28 | LITE | **🆕 2H-CY27 / CY28 — THE IN-BOX NPO LIGHT-SOURCE DECISION (CW at 70-150mW vs VCSEL), AND WHICH WAY THE REMAINING IN-BOX ENGAGEMENTS GO.** JPM: VCSELs *"being explored in that back half of calendar 27  |
 | 2026-09-29 | MDB | **Investor Day, NYC, 2026-09-29** (+ .local NYC 09-30): Berry promised a "financial session" and Desai "new product innovations"; watch for a refreshed long-term model (Sept-2025 Investor Day model =  |
 | 2026-09-30 | HPE | **🆕🔴 HPE NETWORKING ANALYST DAY — 2026-09-30.** This is where the *"segment returns to HPE's historical margin profile of mid-20s"* claim gets defended, dated, or walked back. ➜ **It matters more than |
 | 2026-09-30 | MU | **🆕🔴🔴🔴 F4Q26 (Aug) PRINT — DUE ~2026-09-30, AND THE BOGEY SET IS NOW EXPLICIT AND COMPARABLE (full tables in `## Intra-quarter`, 09-23 block).** Quarter: guide **$50.0bn ± $1bn / ~86% GM / $31.00 ± $1 |

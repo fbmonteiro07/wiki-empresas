@@ -18,7 +18,9 @@ from pathlib import Path
 from vercel_gateway import render as render_vercel
 from gateway_charts import publish as publish_gateway_charts
 from openrouter_cover import render as render_openrouter_cover
+from or_open_closed import render as render_open_closed
 from build_gpu_pricing import render_fragment as render_gpu_pricing
+from openrouter_presentation import shell as presentation_shell, overview as presentation_overview, CSS as PRESENTATION_CSS, JS as PRESENTATION_JS
 
 DATA = Path(__file__).resolve().parents[1] / "_data"
 DASH = Path(__file__).resolve().parents[1] / "_dashboards"
@@ -842,11 +844,10 @@ def scinsight():
 
 
 BODY = (
+    presentation_shell(asof) +
+    presentation_overview(render_open_closed()) +
     render_openrouter_cover() +
-    '<header><h1>AI-Lab Traction Monitor <span style="font-weight:400;color:var(--headsub)">· OpenRouter + Vercel AI Gateway</span></h1>'
-    '<p>OpenRouter: developer/API demand → implied inference spend · as of <b>' + asof + '</b> · trailing 7-day window · <a href="../index.html">← wiki</a></p></header>'
-    '<nav class="tabs"><a href="#token-growth">Top Models</a><a href="#gateway-pulse">Token growth &amp; share</a><a href="#vercel">Vercel Gateway</a><a href="#gpu-pricing">GPU pricing</a><a href="#weekly">Weekly brief</a><a href="#growth">System growth</a><a href="#value">Tokens ≠ $</a><a href="#labs">Lab leaderboard</a><a href="#cloud">Cross-cloud pricing</a><a href="#neo">Neocloud market</a><a href="#method">Method</a></nav><main>'
-    + publish_gateway_charts().replace('id="token-growth"', 'id="gateway-pulse"', 1) +
+    publish_gateway_charts().replace('id="token-growth"', 'id="gateway-pulse"', 1) +
     '<div class="callout warn"><b>Read this first.</b> This reconstructs an "AI-lab ARR" view from OpenRouter\'s public usage feed. It captures <b>developer/API traction routed through OpenRouter</b> — a real, high-frequency leading indicator, but a <i>slice</i> that excludes first-party enterprise API and consumer subscriptions (ChatGPT/Claude/Gemini), the bulk of frontier-lab ARR. '
     'Dollars are <b>tokens × list price with caching OFF</b>, so they are a <b>ceiling ≈ 3× realized</b> spend. <b>Lead with relative rank and share, not the absolute $.</b></div>'
     '<div class="tiles">' + tiles_html + '</div>'
@@ -906,16 +907,16 @@ BODY = (
     '<div class="card"><table><thead><tr><th>Check</th><th>Metric</th><th>Result</th></tr></thead><tbody>' + guard_html + '</tbody></table>'
     '<p class="note" style="margin-top:12px"><b>What OpenRouter\'s public feed does NOT expose:</b> tool-call counts, reasoning/cached tokens, and image/audio volume are all returned as 0; per-task ("Programming", "Roleplay") and "fastest-models" breakdowns are auth-gated. So those panels from openrouter.ai/rankings can\'t be reproduced from public data — omitted rather than faked.</p>'
     '<p class="note"><b>Method.</b> Implied $ = Σ (prompt×list-prompt + completion×list-completion) per model, caching off (the feed reports 0 cached), annualized from the trailing-7-day window; grouped by model author. Token counts &amp; prices are OpenRouter\'s own public JSON. Anchors: Menlo Ventures ("&gt;1 quadrillion tokens/yr"), Sacra (~$50M OR revenue @ ~5% take ⇒ ~$1B/yr spend), Jun-26 ~$76M/mo actual. ' + esc(orr.get("source", "")) + '</p>'
-    '<p class="note"><b>Refresh.</b> OpenRouter baseline: Windows task <b>"OpenRouter Weekly Refresh" — Mondays 08:05</b> runs <code>refresh_openrouter.bat</code> (fetch → build → dashboard → git commit+push; log <code>E:\\.claude\\scripts\\refresh_openrouter.log</code>). Both sources and weekly brief: <code>py _wiki/_tools/refresh_ai_gateways.py</code>. Friday summary: 09:00 America/Sao_Paulo, via Codex. The Top Models cover uses OpenRouter’s calendar-week history (top nine models per week + Others), with a separate hatched weekly-pace estimate. The remaining trend panels use captured trailing 7/30-day totals; each snapshot appends one point to <code>history.jsonl</code> — the trend chart above builds itself weekly. ARR figures hand-edited &amp; attributed in <code>_data/openrouter/arr.json</code>.</p>'
+    '<p class="note"><b>Refresh.</b> OpenRouter baseline: Windows task <b>"OpenRouter Weekly Refresh" — Mondays 08:05</b> runs <code>refresh_openrouter.bat</code> (fetch → build → dashboard → git commit+push; log <code>E:\\.claude\\scripts\\refresh_openrouter.log</code>). Both sources and weekly brief: <code>py _wiki/_tools/refresh_ai_gateways.py</code>. Friday summary: 09:00 America/Sao_Paulo, via Codex. The Top Models cover uses OpenRouter’s calendar-week history (top nine models per week + Others), with a separate hatched weekly-pace estimate. The opening <b>Open-weight vs proprietary</b> block (<code>or_open_closed.py</code> → <code>_data/openrouter/open_closed.json</code>) rebuilds on the same chain: weekly totals from that history, the exact split from each Monday’s full-feed capture, classification = Hugging Face link on the OpenRouter listing. The remaining trend panels use captured trailing 7/30-day totals; each snapshot appends one point to <code>history.jsonl</code> — the trend chart above builds itself weekly. ARR figures hand-edited &amp; attributed in <code>_data/openrouter/arr.json</code>.</p>'
     '<p class="note">Generated ' + gen + ' · data © OpenRouter (public). Implied-$ and ARR-bridge figures are estimates, not the labs\' reported revenue.</p></div>'
     + render_vercel(D)
     + render_gpu_pricing()
     + '<section id="weekly"><h2>Weekly brief</h2><p>OpenRouter + Vercel · Fridays at 09:00 America/Sao_Paulo. <a href="gateway-weekly.html">Read the latest summary</a>.</p></section>'
-    + '</main>'
+    + '</main></div></div><style>' + PRESENTATION_CSS + '</style><script>' + PRESENTATION_JS + '</script>'
 )
 
 # Full standalone page (local dashboard, links back to the wiki).
-FULL = ('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
+FULL = ('<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
         '<title>AI-Lab Traction — OpenRouter + Vercel</title><style>' + CSS + '</style></head><body>' + BODY + '<script>' + JS + '</script></body></html>')
 # Artifact fragment: no doctype/html/head/body (the Artifact host injects those); drop the wiki back-link.
 FRAG = '<style>' + CSS + '</style>' + BODY.replace(' · <a href="../index.html">← wiki</a>', '') + '<script>' + JS + '</script>'

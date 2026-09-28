@@ -25,7 +25,7 @@ _Wiki · generated 2026-06-19 · **No SEC filings — Japanese issuer (TSE Prime
 | Gross profit | ¥6489.9bn | ¥11210.4bn |
 | Gross margin | 79.7% | 83.7% |
 | EBITDA | ¥6542.3bn | ¥10517.1bn |
-| EPS | ¥8108.34 | ¥14530.90 |
+| EPS | ¥4332.61 | ¥4843.64 |
 | Capex | ¥398.6bn | ¥597.0bn |
 | OCF (≈EBITDA) | ¥6542.3bn | ¥10517.1bn |
 
