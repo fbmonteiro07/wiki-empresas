@@ -1,0 +1,1021 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Wafer Path Lab</title>
+<meta name="description" content="Interactive 3D explainer: how TSMC builds a leading-edge logic wafer, how the memory makers build a DRAM wafer, and what turns DRAM dies into an HBM stack, with attributed numbers from the Capstone wiki.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f5f7; --panel:#ffffff; --panel-2:#eef0f3; --ink:#15181d; --ink-2:#4a515c; --ink-3:#7a828e;
+  --line:#d9dde3; --accent:#0a84c6; --accent-2:#0f6fa3; --amber:#b86b00; --red:#c2372f; --copper:#a8612a; --violet:#6b4fbb;
+  --scene-bg:#e9ecf0; --chip:#e3e7ec; --good:#1d7a4f;
+  --shadow:0 1px 2px rgba(0,0,0,.06),0 6px 24px rgba(0,0,0,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0b0d10; --panel:#13161b; --panel-2:#1a1e25; --ink:#e9edf2; --ink-2:#aab2be; --ink-3:#737d8a;
+    --line:#262b33; --accent:#4cc2ff; --accent-2:#8fd8ff; --amber:#ffb454; --red:#ff6b5e; --copper:#d98c4f; --violet:#b39cff;
+    --scene-bg:#0e1116; --chip:#1f242c; --good:#4fd18b;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 30px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0b0d10; --panel:#13161b; --panel-2:#1a1e25; --ink:#e9edf2; --ink-2:#aab2be; --ink-3:#737d8a;
+  --line:#262b33; --accent:#4cc2ff; --accent-2:#8fd8ff; --amber:#ffb454; --red:#ff6b5e; --copper:#d98c4f; --violet:#b39cff;
+  --scene-bg:#0e1116; --chip:#1f242c; --good:#4fd18b;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+body{overflow-x:hidden}
+.mono{font-family:"JetBrains Mono",ui-monospace,Consolas,monospace}
+.wrap{max-width:1280px;margin:0 auto;padding:20px 16px 60px}
+header.top{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:14px}
+h1{margin:0;font-size:clamp(28px,4.4vw,48px);line-height:.95;letter-spacing:-.03em;font-weight:800;text-transform:uppercase}
+h1 span{color:var(--accent)}
+.sub{color:var(--ink-2);font-size:14px;max-width:600px;margin-top:8px;line-height:1.45}
+.tabs{display:flex;gap:6px;background:var(--panel);border:1px solid var(--line);padding:4px;border-radius:12px;box-shadow:var(--shadow)}
+.tabs button,.seg button,.btn{font:inherit;border:0;background:transparent;color:var(--ink-2);padding:9px 14px;border-radius:9px;cursor:pointer;font-weight:600;font-size:14px}
+.tabs button.on{background:var(--accent);color:#fff}
+:root[data-theme="dark"] .tabs button.on{color:#04121b}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tabs button.on{color:#04121b}}
+.themebtn{font:inherit;border:1px solid var(--line);background:var(--panel);color:var(--ink-2);border-radius:10px;padding:9px 11px;cursor:pointer}
+
+.stage{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:var(--scene-bg);box-shadow:var(--shadow);height:min(76vh,720px);min-height:460px}
+#glbox{position:absolute;inset:0}
+#gl{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none;cursor:grab}
+#gl:active{cursor:grabbing}
+#labels{position:absolute;inset:0;pointer-events:none}
+.lbl{position:absolute;transform:translate(-50%,-100%);font-size:11px;font-weight:600;color:var(--ink);background:color-mix(in srgb,var(--panel) 82%,transparent);border:1px solid var(--line);padding:3px 7px;border-radius:6px;white-space:nowrap;backdrop-filter:blur(4px)}
+.lbl small{display:block;font-weight:500;color:var(--ink-3);font-size:10px}
+.lbl::after{content:"";position:absolute;left:50%;bottom:-7px;width:1px;height:6px;background:var(--ink-3)}
+
+.hud{position:absolute;left:14px;top:14px;width:340px;background:color-mix(in srgb,var(--panel) 90%,transparent);border:1px solid var(--line);border-radius:14px;padding:14px;backdrop-filter:blur(8px);box-shadow:var(--shadow);max-height:calc(100% - 28px);overflow:auto}
+.hud h3,.ctrl h3{margin:0 0 4px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+.hud .big{font-size:22px;font-weight:800;letter-spacing:-.02em;margin-bottom:10px;line-height:1.1}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 10px;font-size:12px;align-items:baseline;margin:0}
+.kv dt{color:var(--ink-3);font-weight:600;text-transform:uppercase;font-size:10.5px;letter-spacing:.06em}
+.kv dd{margin:0;color:var(--ink);line-height:1.35}
+.src{color:var(--ink-3);font-size:10.5px}
+.meter{margin-top:12px}
+.meter .row{display:flex;justify-content:space-between;font-size:11px;color:var(--ink-3);margin-bottom:4px;gap:8px}
+.bar{height:8px;border-radius:5px;background:var(--chip);overflow:hidden;position:relative}
+.bar i{position:absolute;left:0;top:0;bottom:0;background:var(--accent);border-radius:5px;transition:width .4s ease}
+.bar.hatch i{background:repeating-linear-gradient(45deg,var(--ink-3) 0 4px,transparent 4px 8px);opacity:.6}
+.bar.dual i.b{background:var(--ink-3);opacity:.45}
+.steps{display:flex;gap:3px;margin-top:6px}
+.steps span{flex:1;height:6px;border-radius:3px;background:var(--chip)}
+.steps span.on{background:var(--accent)}
+.stepname{font-size:12.5px;font-weight:700;margin-top:6px}
+.stepname small{display:block;font-weight:500;color:var(--ink-2);font-size:11.5px;line-height:1.35;margin-top:2px}
+
+.ctrl{position:absolute;right:14px;top:14px;width:300px;background:color-mix(in srgb,var(--panel) 90%,transparent);border:1px solid var(--line);border-radius:14px;padding:14px;backdrop-filter:blur(8px);box-shadow:var(--shadow);max-height:calc(100% - 28px);overflow:auto}
+.ctrl h3{margin-top:12px}
+.ctrl h3:first-child{margin-top:0}
+.row2{display:flex;gap:6px;flex-wrap:wrap}
+.btn{border:1px solid var(--line);background:var(--chip);color:var(--ink)}
+.btn:hover{border-color:var(--accent)}
+.seg{display:flex;background:var(--chip);border-radius:10px;padding:3px;gap:3px;border:1px solid var(--line)}
+.seg button{flex:1;padding:7px 6px;font-size:12.5px;white-space:nowrap}
+.seg button.on{background:var(--panel);color:var(--ink);box-shadow:var(--shadow)}
+.seg.grid2x{display:grid;grid-template-columns:1fr 1fr}
+input[type=range]{width:100%;accent-color:var(--accent);margin:6px 0 2px}
+.ticks{display:flex;justify-content:space-between;font-size:10.5px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;font-weight:700}
+.hint{font-size:11px;color:var(--ink-3);margin-top:8px;line-height:1.4}
+.toggle{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--ink-2);margin-top:10px;cursor:pointer;user-select:none}
+.toggle input{accent-color:var(--accent);width:16px;height:16px}
+.calc{margin-top:8px;font-size:12px;color:var(--ink-2)}
+.calc b{color:var(--ink)}
+
+.help{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);font-size:11px;color:var(--ink-3);background:color-mix(in srgb,var(--panel) 80%,transparent);border:1px solid var(--line);padding:5px 10px;border-radius:20px;white-space:nowrap}
+#fallback{position:absolute;inset:0;display:none;align-items:center;justify-content:center;text-align:center;padding:30px;color:var(--ink-2)}
+
+.flow{margin-top:14px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px 14px;box-shadow:var(--shadow)}
+.flow h4{margin:0 0 8px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+.flow .lane{display:flex;align-items:stretch;gap:6px;overflow-x:auto;padding-bottom:4px}
+.flow .lane+.lane{margin-top:8px}
+.flow .st{flex:1 0 118px;border:1px solid var(--line);border-radius:9px;padding:7px 9px;font-size:11.5px;line-height:1.3;background:var(--panel-2);position:relative}
+.flow .st b{display:block;font-size:12px;margin-bottom:2px}
+.flow .st.hbm{border-color:color-mix(in srgb,var(--accent) 55%,var(--line))}
+.flow .st.share{border-style:dashed}
+.flow .st .src{display:block;margin-top:3px}
+.flow .lanename{flex:0 0 96px;font-size:11px;font-weight:700;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;align-self:center}
+
+section.explain{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 16px 14px;box-shadow:var(--shadow)}
+.card .n{font:700 11px "JetBrains Mono",monospace;color:var(--accent);letter-spacing:.08em}
+.card h4{margin:4px 0 6px;font-size:16px;letter-spacing:-.01em}
+.card p{margin:0;color:var(--ink-2);font-size:13.5px;line-height:1.5}
+h2{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin:34px 0 12px;font-weight:700}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+td.v{font-weight:700;min-width:140px}
+table{table-layout:auto}
+.card{overflow:hidden}
+td .src{display:block}
+.tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:5px;background:color-mix(in srgb,var(--amber) 18%,transparent);color:var(--amber);margin-left:6px}
+.tag.house{background:color-mix(in srgb,var(--violet) 18%,transparent);color:var(--violet)}
+.debates{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.debate h4{margin:0 0 6px;font-size:15px}
+.debate p{margin:0 0 6px;font-size:13.5px;color:var(--ink-2);line-height:1.5}
+footer{margin-top:30px;color:var(--ink-3);font-size:12px;line-height:1.5;border-top:1px solid var(--line);padding-top:14px}
+
+@media (max-width:900px){
+  section.explain{grid-template-columns:1fr}
+  .grid2,.debates{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .stage{height:auto;min-height:0;display:flex;flex-direction:column}
+  #glbox{position:relative;inset:auto;height:56vh;min-height:340px;flex:none}
+  .hud,.ctrl{position:static;width:auto;margin:10px;backdrop-filter:none;max-height:none}
+  .help{display:none}
+  .lbl{font-size:10px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div>
+      <h1>The Wafer <span>Path</span></h1>
+      <div class="sub">How TSMC builds a leading-edge logic wafer, how the memory makers build a DRAM wafer, and what turns DRAM dies into an HBM stack. Drag to orbit, scroll to zoom. Numbers are attributed to the source and date the Capstone wiki carries them with.</div>
+    </div>
+    <div style="display:flex;gap:8px;align-items:center">
+      <div class="tabs" role="tablist">
+        <button id="tabLOG" class="on" role="tab">Logic wafer · TSMC</button>
+        <button id="tabDRAM" role="tab">DRAM wafer · memory</button>
+        <button id="tabHBM" role="tab">HBM vs DRAM · the stack</button>
+      </div>
+      <button class="themebtn" id="themeBtn" title="Toggle theme" aria-label="Toggle theme">◐</button>
+    </div>
+  </header>
+
+  <div class="stage" id="stage">
+    <div id="glbox">
+      <canvas id="gl"></canvas>
+      <div id="labels"></div>
+      <div id="fallback">The 3D scene needs WebGL and the three.js library from cdnjs. The explanations and numbers below still apply.</div>
+      <div class="help">drag to orbit · scroll to zoom · keys 1 2 3</div>
+    </div>
+
+    <!-- ===== HUD: logic ===== -->
+    <div class="hud" id="hudLOG">
+      <h3>Node</h3>
+      <div class="big" id="logName">N2</div>
+      <dl class="kv">
+        <dt>Transistor</dt><dd id="logTr"></dd>
+        <dt>EUV layers</dt><dd id="logEuv"></dd>
+        <dt>Wafer price</dt><dd id="logAsp"></dd>
+        <dt>Fab capex</dt><dd id="logCapex"></dd>
+        <dt>Capacity</dt><dd id="logCap"></dd>
+        <dt>Status</dt><dd id="logStat"></dd>
+      </dl>
+      <div class="meter">
+        <div class="row"><span>The patterning loop, once per mask (&gt;80 masks at 7nm, IBS via DAMNANG)</span><span class="mono" id="logLoopN">layer 1</span></div>
+        <div class="steps" id="logSteps"></div>
+        <div class="stepname" id="logStep"></div>
+      </div>
+      <div class="meter">
+        <div class="row"><span>EUV tools per 25k-wpm fab</span><span class="mono" id="logTools"></span></div>
+        <div class="bar"><i id="logToolsBar" style="width:0%"></i></div>
+        <div class="src" id="logToolsSrc" style="margin-top:4px"></div>
+      </div>
+    </div>
+
+    <!-- ===== HUD: DRAM ===== -->
+    <div class="hud" id="hudDRAM" style="display:none">
+      <h3>DRAM node</h3>
+      <div class="big" id="drName">1b</div>
+      <dl class="kv">
+        <dt>Cell</dt><dd id="drCell"></dd>
+        <dt>EUV layers</dt><dd id="drEuv"></dd>
+        <dt>Who runs it</dt><dd id="drWho"></dd>
+        <dt>Bit gain</dt><dd id="drGain"></dd>
+        <dt>Capacity</dt><dd id="drCap"></dd>
+      </dl>
+      <div class="meter">
+        <div class="row"><span>EUV layers: DRAM vs logic (N2 = 22)</span><span class="mono" id="drEuvN"></span></div>
+        <div class="bar dual"><i class="b" style="width:100%"></i><i id="drEuvBar" style="width:0%"></i></div>
+        <div class="src" style="margin-top:4px">Grey = the 22 EUV layers of an N2 logic wafer (Bristlemoon, Jun-26). Blue = this DRAM node. Fewer, looser layers are why memory runs EUV at ~45% OEE vs ~34% for logic.</div>
+      </div>
+      <div class="meter">
+        <div class="row"><span>Wafer capacity, end-2026 exit (kwpm)</span><span class="mono" id="drCapN"></span></div>
+        <div class="bar"><i id="drCapBar" style="width:0%"></i></div>
+        <div class="src" id="drCapSrc" style="margin-top:4px"></div>
+      </div>
+    </div>
+
+    <!-- ===== HUD: HBM ===== -->
+    <div class="hud" id="hudHBM" style="display:none">
+      <h3>The stack</h3>
+      <div class="big" id="hbName">HBM3E · 12-Hi</div>
+      <dl class="kv">
+        <dt>Capacity</dt><dd id="hbCap"></dd>
+        <dt>Interface</dt><dd id="hbIf"></dd>
+        <dt>Base die</dt><dd id="hbBase"></dd>
+        <dt>Bond</dt><dd id="hbBond"></dd>
+        <dt>Height</dt><dd id="hbH"></dd>
+      </dl>
+      <div class="meter">
+        <div class="row"><span>Stack yield = (die × bond)<sup>n</sup></span><span class="mono" id="hbYield"></span></div>
+        <div class="bar"><i id="hbYieldBar" style="width:0%"></i></div>
+        <div class="src" style="margin-top:4px">Illustrative arithmetic only (house): every extra die multiplies in another die yield and another bond yield. Move the sliders on the right.</div>
+      </div>
+      <div class="meter">
+        <div class="row"><span>DRAM wafers per bit vs commodity DDR5</span><span class="mono" id="hbTrade"></span></div>
+        <div class="bar"><i id="hbTradeBar" style="width:0%"></i></div>
+        <div class="src" id="hbTradeSrc" style="margin-top:4px"></div>
+      </div>
+    </div>
+
+    <!-- ===== Controls: logic ===== -->
+    <div class="ctrl" id="ctrlLOG">
+      <h3>Pick a node</h3>
+      <div class="seg" id="nodeSeg"><button data-v="N7">N7</button><button data-v="N5">N5</button><button data-v="N3">N3</button><button data-v="N2" class="on">N2</button><button data-v="A16">A16</button><button data-v="A14">A14</button></div>
+      <h3>Show</h3>
+      <div class="seg" id="logView"><button data-v="full" class="on">Full stack</button><button data-v="feol">Transistors</button><button data-v="beol">Metal</button></div>
+      <label class="toggle"><input type="checkbox" id="logLoop" checked> Animate the patterning loop</label>
+      <label class="toggle"><input type="checkbox" id="logEuvOnly"> Highlight only EUV-patterned layers</label>
+      <div class="hint">FinFET (N7 to N3) wraps the gate around a vertical fin. N2 switches to gate-all-around nanosheets. A16 moves the power rails to the back of the wafer. Layer counts are drawn schematically: the metal stack shown is shorter than the real one.</div>
+    </div>
+
+    <!-- ===== Controls: DRAM ===== -->
+    <div class="ctrl" id="ctrlDRAM" style="display:none">
+      <h3>Pick a node</h3>
+      <div class="seg" id="drSeg"><button data-v="1a">1a</button><button data-v="1b" class="on">1b</button><button data-v="1c">1c / 1γ</button><button data-v="1d">1d</button></div>
+      <h3>Cell architecture</h3>
+      <div class="seg" id="drArch"><button data-v="6f2" class="on">6F² (today)</button><button data-v="4f2">4F² VCT</button><button data-v="3d">3D DRAM</button></div>
+      <h3>Maker</h3>
+      <div class="seg" id="drMaker"><button data-v="SAMSUNG" class="on">Samsung</button><button data-v="SKHYNIX">SK Hynix</button><button data-v="MU">Micron</button><button data-v="CXMT">CXMT</button></div>
+      <label class="toggle"><input type="checkbox" id="drEuvHl"> Highlight where EUV is used</label>
+      <div class="hint">A DRAM cell is one transistor and one capacitor. The capacitor is the tall pillar; shrinking the node packs the pillars closer while keeping their charge, so the etch gets deeper and narrower. The vertical-channel transistor (4F²) puts the transistor directly under the capacitor.</div>
+    </div>
+
+    <!-- ===== Controls: HBM ===== -->
+    <div class="ctrl" id="ctrlHBM" style="display:none">
+      <h3>Generation · height</h3>
+      <div class="seg grid2x" id="hbGen"><button data-v="3e8">HBM3E 8-Hi</button><button data-v="3e12" class="on">HBM3E 12-Hi</button><button data-v="412">HBM4 12-Hi</button><button data-v="416">HBM4 16-Hi</button></div>
+      <h3>Die-to-die bond</h3>
+      <div class="seg" id="hbBondSeg"><button data-v="muf" class="on">MR-MUF</button><button data-v="ncf">TC-NCF</button><button data-v="hyb">Hybrid</button></div>
+      <h3>Base die</h3>
+      <div class="seg" id="hbBaseSeg"><button data-v="mem" class="on">In-house DRAM process</button><button data-v="tsmc">TSMC logic</button></div>
+      <h3>Explode the stack</h3>
+      <input type="range" id="hbExplode" min="0" max="1" step="0.01" value="0">
+      <h3>Yield calculator (illustrative)</h3>
+      <div class="calc">Per-die yield <b id="hbDieYv">98%</b></div>
+      <input type="range" id="hbDieY" min="90" max="100" step="0.5" value="98">
+      <div class="calc">Per-bond yield <b id="hbBondYv">99%</b></div>
+      <input type="range" id="hbBondY" min="90" max="100" step="0.5" value="99">
+      <div class="hint">Left: a GPU and one HBM cube on a CoWoS interposer. Right: a commodity DDR5 package for contrast. TSVs run through every core die; the bond layer between dies is what MR-MUF, TC-NCF and hybrid bonding differ on. Schematic, not to scale.</div>
+    </div>
+  </div>
+
+  <!-- ===== process-flow strips ===== -->
+  <div class="flow" id="flowLOG">
+    <h4>One logic wafer, front end to package (schematic)</h4>
+    <div class="lane" id="flowLOGlane"></div>
+  </div>
+  <div class="flow" id="flowDRAM" style="display:none">
+    <h4>One DRAM wafer, front end to module (schematic)</h4>
+    <div class="lane" id="flowDRAMlane"></div>
+  </div>
+  <div class="flow" id="flowHBM" style="display:none">
+    <h4>Same DRAM wafer, two destinations</h4>
+    <div class="lane" id="flowHBMlaneA"></div>
+    <div class="lane" id="flowHBMlaneB"></div>
+  </div>
+
+  <section class="explain" id="explainLOG"></section>
+  <section class="explain" id="explainDRAM" style="display:none"></section>
+  <section class="explain" id="explainHBM" style="display:none"></section>
+
+  <h2>The numbers that matter</h2>
+  <div class="grid2" id="numbersA"></div>
+  <div class="card" style="margin-top:14px" id="numbersB"></div>
+
+  <h2>The open debates</h2>
+  <div class="debates" id="debates"></div>
+
+  <footer id="foot"></footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+"use strict";
+const $=s=>document.querySelector(s);
+const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+
+// ---------- theme ----------
+try{const t=localStorage.getItem("wp-theme"); if(t) document.documentElement.setAttribute("data-theme",t);}catch(e){}
+$("#themeBtn").onclick=()=>{
+  const isDark=css("--bg").toLowerCase()==="#0b0d10";
+  const nt=isDark?"light":"dark";
+  document.documentElement.setAttribute("data-theme",nt);
+  try{localStorage.setItem("wp-theme",nt);}catch(e){}
+  window.applyTheme&&window.applyTheme();
+};
+
+// =====================================================================
+// DATA (filled from the wiki; every string carries its source)
+// =====================================================================
+/*__DATA__*/
+const SRC=(t)=>`<span class="src"> ${t}</span>`;
+const H='<span class="tag house">house</span>', RELAY='<span class="tag">relay</span>', DISP='<span class="tag">disputed</span>';
+
+// ---------- LOGIC (TSMC) ----------
+const NODES={
+ N7:{name:"N7",gaa:false,bsp:false,euvN:5,maskN:80,
+  tr:`FinFET. N7+ was TSMC's first EUV node; N6 reaches 107.7 MTr/mm² "without needing quadruple patterning anywhere"`+SRC('SemiAnalysis STEEL, 2026-06-14'),
+  euv:`A few; the wiki carries no per-node count for N7. Mask count passed 80 at 7nm and the mask set cost ~$15M`+SRC('IBS via DAMNANG, 2026-04-06'),
+  asp:`No broker $/wafer on the wiki. House lifecycle model: ~$9.5k per 12" wafer ${H}`,
+  capex:`$12.5bn per 50k wpm`+SRC('Fubon/Jefferies, 2025-10-28'),
+  cap:`Mature. "TSMC is basically using their N7 fab to fulfill some of the backend metal layers for N3"`+SRC('JPM · Gokul Hariharan, 2026-04-02'),
+  stat:`Litho was ~20% of process cost at 10nm, peaking above 35% at 5/3nm`+SRC('Bernstein · Dai, 2026-07-30'),
+  tools:"n/a",toolsPct:0,toolsSrc:`No per-node EUV layer count on the wiki for N7, so no tool count is drawn.`},
+ N5:{name:"N5",gaa:false,bsp:false,euvN:14,maskN:80,
+  tr:`FinFET. N5-class density 137.8 MTr/mm²`+SRC('SemiAnalysis STEEL, 2026-06-14'),
+  euv:`~14 EUV layers ${H} (2026-07-14 bridge session). Advanced-logic average: 19–21 EUV exposures in 2025 → 25–30 by 2030, 4–6 of them High-NA`+SRC('ASML Investor Day, 2024-11-14'),
+  asp:`No broker $/wafer on the wiki. House lifecycle model: ~$16.5k per 12" wafer ${H}`,
+  capex:`$16bn per 50k wpm`+SRC('Fubon/Jefferies, 2025-10-28'),
+  cap:`N5 → N3 tool conversion under way`+SRC(`TSMC Q1'26 call, 2026-04-16`)+`. N4 so tight that "some 20 nanometer capacity" fulfils N4 layers`+SRC('JPM · Gokul, 2026-04-02'),
+  stat:`Blackwell runs here (N4). Hot-run wafers "usually cost 50 to 100% more"`+SRC('JPM · Gokul, 2026-04-02'),
+  tools:"~7",toolsPct:64,toolsSrc:`${H} 11 tools × 14/22 layers; scaled from Bristlemoon's N2 calibration, not a sourced count.`},
+ N3:{name:"N3",gaa:false,bsp:false,euvN:22,maskN:80,
+  tr:`FinFET, last generation. Mask set cost passes $100M at 3nm`+SRC('IBS via DAMNANG, 2026-04-06'),
+  euv:`~22 EUV layers, same as N2 ("unchanged vs N3")`+SRC('Bristlemoon, 2026-06-30')+`. "There is less immersion on N2 versus N3… similar on EUV"`+SRC('ASML callback, 2026-04-15'),
+  asp:`~$24k per 12" wafer ${H}, double-anchored to UBS's "revenue per wafer, front end" row. 2027 hike +8–10% on N3/N2`+SRC('JPM · Gokul, 2026-07-09'),
+  capex:`$20bn per 50k wpm`+SRC('Fubon/Jefferies, 2025-10-28'),
+  cap:`178k → 223k → 243k wpm end-26/27/28, ~600k-wafer gap in 2026`+SRC('JPM · Gokul, 2026-09-10')+`; 180–190k end-26`+SRC('MS · Charlie Chan, 2026-06-23'),
+  stat:`Utilization 102–110%`+SRC('UBS N3 model, 2026-06-28')+`. New N3 fabs: Tainan 1H27, Arizona Fab 2 2H27, Japan Fab 2 2028`+SRC(`TSMC Q1'26 call`),
+  tools:"~11",toolsPct:100,toolsSrc:`22 EUV layers ⇒ ~11 tools per 25k-wpm fab at 2,430 wpm per tool (34% OEE)`+SRC('Bristlemoon, 2026-06-30')},
+ N2:{name:"N2",gaa:true,bsp:false,euvN:22,maskN:80,
+  tr:`Gate-all-around nanosheet, first generation (A14 is the "second generation of nanosheet transistors")`+SRC(`TSMC Q2'26 call, 2026-07-16`)+`. vs N3E: +10–15% speed, −20–30% power, &gt;15% density`+SRC(`TSMC Q1'25 call, 2025-04-17`),
+  euv:`22 EUV layers`+SRC('Bristlemoon, 2026-06-30')+`; 21 masks at N2/A16`+SRC('Arete · Fontanelli, 2026-07-21')+`. Litho intensity ~32% at 2nm "as GAA added non-litho steps"`+SRC('Bernstein · Dai, 2026-07-30'),
+  asp:`$25k per wafer`+SRC('Arete · Venter, 2026-07-21')+` · house model $33,750 per 12" (= $15k per 8"-eq × 2.25) ${H}`,
+  capex:`~$28bn per 50k wpm`+SRC('Fubon/Jefferies, 2025-10-28')+` · ~$4.7bn total fab capex per 10k wpm`+SRC('Bristlemoon, 2026-06-30')+` · "substantially higher" than N3 per 1,000 wpm`+SRC(`TSMC Q4'25 call`),
+  cap:`90–100k end-26 → 150–170k end-27 → 210k end-28`+SRC('MS · Charlie Chan, 2026-06-23')+`. 210k end-28 vs 320k demand`+SRC('UBS · Sunny Lin, 2026-09-28'),
+  stat:`HVM since 4Q25 "with good yield" (Hsinchu, Kaohsiung)`+SRC(`TSMC Q4'25 call`)+`. ~90% yield vs Intel 18A 85%`+SRC('KeyBanc via UBS · Arcuri, 2026-08-01')+`. Dilutes GM 3–4pts in 2H26`+SRC(`TSMC Q2'26 call`),
+  tools:"~11",toolsPct:100,toolsSrc:`~11 EUV tools per 25k-wpm module (round-up of 10.3)`+SRC('Bristlemoon, 2026-06-30')+`; "10–12 per fab"`+SRC('ex-Samsung foundry EVP, 2026-06-30')},
+ A16:{name:"A16",gaa:true,bsp:true,euvN:27,maskN:80,
+  tr:`Nanosheet + Super Power Rail, "an innovative backside contact scheme". vs N2P: +8–10% speed, −15–20% power, +7–10% density; "best suited for specific HPC products"`+SRC(`TSMC Q2'24 → Q4'25 calls`),
+  euv:`"Probably in range of 25 to 30" EUV layers`+SRC('BofA litho call, 2026-04-16, flagged as assumption')+`. Conflict: 21 masks at A16/N2, first step-up only at A14`+SRC('Arete · Fontanelli, 2026-07-21'),
+  asp:`$33k per wafer`+SRC('Arete · Venter, 2026-07-21')+` · house lifecycle model ~$38k ${H}`,
+  capex:`"Higher capital intensity… because they are going to use the backside power rail"`+SRC('BofA TSMC 2Q preview, 2026-07-13')+`; N2's $28bn/50k is the floor`,
+  cap:`3–5k wpm today → 25–30k wpm by end-2027, for NVDA Feynman (1H28)`+SRC('BofA, 2026-07-13'),
+  stat:`Volume 2H26 per TSMC; "volume ramp pushed to 2027"`+SRC('Nutty Substack, 2026-04-25')+`. "N2 GAA + backside power requires net-new tooling"`+SRC('StoneX/Fubon, 2025'),
+  tools:"~13",toolsPct:118,toolsSrc:`${H} scaled from BofA's 25–30 layers; the house bridge uses 13.2 tools per 25k for A14 (TSM.md).`},
+ A14:{name:"A14",gaa:true,bsp:false,euvN:30,maskN:80,
+  tr:`Second-generation nanosheet. vs N2: +10–15% speed, −25–30% power, ~20% density; Super Power Rail comes with A12 (2029)`+SRC(`TSMC Q2'26 call, 2026-07-16`),
+  euv:`27 masks, "the first material EUV-layer step-up since N3"`+SRC('Arete · Fontanelli, 2026-07-21')+` vs "about 35 to 40 layers for low NA"`+SRC('BofA litho call, 2026-04-16')+`. High-NA insertion disputed (see debates)`,
+  asp:`House lifecycle model ~$40k ${H}; 2028 effective A14 $41.6k after +10% ${H}`,
+  capex:`+20% low-NA intensity ⇒ 13.2 EUV tools per 25k ${H} (bridge, TSM.md). "$20 billion these days gets you one fab"`+SRC('TSMC IR/CFO, 2026-09-09'),
+  cap:`20–40k end-27 → 60–80k end-28 → 120k end-29 (F20 Hsinchu P3/P4 + F25 Taichung)`+SRC('MS · Chan, 2026-06-23')+`; ~60k by end-28, tool move-in from 2H26`+SRC('UBS · Lin, 2026-09-28'),
+  stat:`Risk production 2027, volume 2028; test vehicles at ~90% 256Mb SRAM yield`+SRC(`TSMC Q2'26 call`)+`. A14 "will again dilute" in 2028`+SRC('TSMC IR, 2026-09-10'),
+  tools:"~13",toolsPct:120,toolsSrc:`13.2 tools per 25k-wpm module at +20% low-NA intensity ${H}; each High-NA exposure would replace three low-NA ones`+SRC('ASML IR, 2026-09-09')},
+};
+
+// ---------- DRAM ----------
+const DNODES={
+ "1a":{name:"1a · 1α",euvN:"~0–2",euvMid:1.5,pitch:0.92,euvPeri:1,euvCell:0,
+  euv:`~0–1 EUV layers`+SRC('BofA ASML callback, 2026-04-15')+`; ~2 exposures at ~14nm feature size`+SRC('Bernstein · Dai, 2026-07-30')+`; 3–4 in the same house's High-NA primer`+SRC('Bernstein, 2026-09-01')+` (two ladders on disk)`,
+  who:`Micron D4/LP4 stay on 1α`+SRC(`MU Q3FY25 call, 2025-06-25`)+`. Samsung's HBM3E core die is 1a, "designed for mobile"`+SRC('SemiAnalysis, 2025-08-11')+`. CXMT exits 2026 with ~60–80k wpm of D1a`+SRC('@zephyr_z9, 2026-07-14')+` and has 93% of bits on 16nm at 0.24 Gb/mm²`+SRC('WFC · Rakers, 2026-07-14'),
+  gain:`Model inputs: 0.31 Gb/mm², 24Gb die, ~2,340 GB per commodity wafer`+SRC('Bristlemoon, 2026-06-30')},
+ "1b":{name:"1b · 1β",euvN:"~3–6",euvMid:4,pitch:0.82,euvPeri:2,euvCell:1,
+  euv:`~3–4 layers`+SRC('BofA ASML callback, 2026-04-15')+`; 3 exposures`+SRC('Bernstein, 2026-07-30')+`; 4–6`+SRC('Bernstein, 2026-09-01')+`. "You don't need EUV until you get to 1b" (~12nm half-pitch)`+SRC('MS · Shawn Kim, 2026-09-01')+`; DUV carries DRAM up to 1b because Micron only adopted EUV at 1γ`+SRC('Bernstein CXMT initiation, 2026-09-21'),
+  who:`SK hynix and Micron HBM3E and HBM4 core dies (HBM4 stays 1b + TSMC N12 base)`+SRC('SemiAnalysis, 2025-08-11 · 2026-09-01')+`. Micron 1β/1γ serve only D5/LP5/HBM`+SRC('MU Q3FY25')+`. CXMT G5 is "broadly in line with global 1b-class": 11.95nm half-pitch, quadruple patterning, capacitor aspect ratio 45:1`+SRC('MS · Chan, 2026-09-20'),
+  gain:`Model inputs: 0.43 Gb/mm², 24Gb die ~56 mm², ~1,080 dies, ~3,240 GB per wafer`+SRC('Bristlemoon, 2026-06-30')},
+ "1c":{name:"1c · 1γ",euvN:"~5–7",euvMid:6,pitch:0.72,euvPeri:3,euvCell:2,
+  euv:`~6–7 layers, "current workhorse"`+SRC('BofA ASML callback, 2026-04-15')+`; 5 exposures`+SRC('Bernstein, 2026-07-30')+`. "A DRAM might have 80 to 100 layers. Currently, only five to seven of those are EUV"`+SRC('ASML IR, Communacopia, 2026-09-09')+`. Micron 1γ uses "a very small amount of the EUV layer"`+SRC('JPM memory/China call, 2026-05-28'),
+  who:`Samsung HBM4 core die (1a → 1c, skipped 1b); P4 "mainly 1c for HBM4/4E"`+SRC('DAMNANG ISSCC review, 2026-03-20 · GS/Samsung, 2026-09-18')+`. SK hynix 1c ~34% of output by 4Q26 as the HBM4E core die`+SRC('DIGITIMES, 2026-09-07')+`. Micron 1γ = majority of bits by mid-CY26`+SRC('MU Q2FY26, 2026-03-18')+`. ~30% of industry on 1c/1γ by end-26`+SRC('SemiAnalysis, 2026-02-06'),
+  gain:`Micron 1γ vs 1β: ~30% more bit density, &gt;20% lower power`+SRC('MU Q3FY25, 2025-06-25')+`. Samsung 1c: ~70% more bits per wafer than 1a`+SRC('SemiAnalysis, 2026-02-06')+`. Model: 0.56 Gb/mm², 32Gb die, ~4,320 GB per wafer`+SRC('Bristlemoon')},
+ "1d":{name:"1d · 1δ",euvN:"~8–10",euvMid:9,pitch:0.64,euvPeri:4,euvCell:2,
+  euv:`~10 layers, ~2028`+SRC('BofA ASML callback, 2026-04-15')+`; 8 exposures at ~10nm`+SRC('Bernstein, 2026-07-30')+`; double-patterned EUV or High-NA`+SRC('Bernstein, 2026-09-01')+`. Samsung "confirmed High-NA for DRAM in 2028"`+SRC('Bernstein SDC relay, 2026-09-15')+`; SK hynix assembled an EXE:5200B at M16 in Sep-25`+SRC('Bernstein, 2026-07-30'),
+  who:`Top-3 to 1d (sub-11nm) in 2H27`+SRC('UBS CXMT initiation, 2026-08-07')+`; "[2028] about the right year for 1D"`+SRC('ASML management, 2026-04-21')+`. "Beyond 1D it is practically difficult to scale down"`+SRC('ex-SK hynix executive, BTG call, 2026-07-30'),
+  gain:`Model: 0.70 Gb/mm², 40Gb die, ~5,400 GB per wafer`+SRC('Bristlemoon')+`. Density adds only 6–8%/yr of bits per wafer plus ~5%/yr from yield`+SRC('DB · Weathers, 2026-09-16')},
+};
+const ARCH={
+ "6f2":{cell:`1T1C in a 6F² cell: buried-word-line planar transistor beside a tall capacitor. ~60% of the die is array, ~40% periphery`+SRC('AMAT via Bernstein · Rasgon, 2026-09-21')},
+ "4f2":{cell:`4F² vertical-channel transistor: the transistor stands directly under its capacitor. Samsung pulling in to 2028`+SRC('UBS · Gaudois, 2026-08-07')+`, base case at 0a after 1d on 6F²`+SRC('UBS, 2026-09-22')+`; "not broad-based" in 2028`+SRC('ASM International, 2026-08-20')+`; CXMT 2.5D VCT "small production" end-28`+SRC('MS · Chan, 2026-09-01')},
+ "3d":{cell:`3D DRAM: capacitors turned sideways and stacked in tiers. Slipped 2025 → 2030 → 2035–37`+SRC('ASML management, 2026-07-17')+`; "maybe 2032 or 2033"`+SRC('ex-SK hynix executive, BTG, 2026-07-30')+`; needs SiGe and sideways high-aspect-ratio etch`+SRC('MS · Shawn Kim, 2026-09-01')},
+};
+const MAKERS={
+ SAMSUNG:{capN:"~740",capK:740,capSrc:`Exit-26 ~740k wspm, of which ~180k HBM`+SRC('StoneX/TrendForce, 2026-06-23')+`; DB bottom-up 735k`+SRC('DB · Weathers, 2026-09-16'),
+  cap:`655 → 735 → 775 → 875 kwspm (2025–28)`+SRC('DB · Weathers, 2026-09-16')+`. P4 +120k, "mainly 1c for HBM4/4E"; P5 first wafers 2028`+SRC('GS/Samsung, 2026-09-18')+`. Wafer share 34%`+SRC('Bernstein, 2026-09-21')},
+ SKHYNIX:{capN:"~610",capK:610,capSrc:`Exit-26 ~610k wspm`+SRC('StoneX/TrendForce, 2026-06-23')+`; DB 585k`+SRC('DB, 2026-09-16'),
+  cap:`545 → 585 → 700 → 825 kwspm (2025–28)`+SRC('DB · Weathers, 2026-09-16')+`. M15X 40k in 2H26 → 80k in 2027, "mainly used for HBM"`+SRC('DB · GS/SK hynix, 2026-09-22')+`. Yongin Y1: first cleanroom Feb-27, output "not until end-2027"`+SRC('GS/SK hynix, 2026-09-22')},
+ MU:{capN:"~365",capK:365,capSrc:`Exit-26 ~365k wspm`+SRC('StoneX/TrendForce, 2026-06-23')+`; DB 350k`+SRC('DB, 2026-09-16'),
+  cap:`340 → 350 → 450 kwspm (2025–27)`+SRC('DB · Weathers, 2026-09-16')+`. ID1 first production mid-27, ID2 end-28, NY 2030, Hiroshima +25k ~2028`+SRC('DB')+`. "Wafer growth needs are significantly increasing clean room space"`+SRC('MU Q3FY26, 2026-06-24')+`. First EUV at Hiroshima for 1γ`+SRC('MU Q4FY25')},
+ CXMT:{capN:"~350",capK:350,capSrc:`~350k wspm in 2026`+SRC('DB, 2026-09-16 · WFC · Rakers, 2026-07-14')+`; UBS 292k at 4Q26`+SRC('UBS initiation, 2026-08-07'),
+  cap:`300 → 350 → 450 kwspm (2025–27)`+SRC('DB · Weathers, 2026-09-16')+`; 380k (4Q27) → 530k (4Q28)`+SRC('Bernstein initiation, 2026-09-21')+`. ~20% of wafers but 6–7% of bits`+SRC('SK hynix ADS roadshow, 2026-07-06')+`. Cost ~$0.27/Gb vs ~$0.20–0.21 for the Big-3`+SRC('WFC · Rakers, 2026-07-14')},
+};
+
+// ---------- HBM ----------
+const GENS={
+ "3e8":{name:"HBM3E · 8-Hi",family:"hbm3e",n:8,iface2048:false,trade:3,
+  cap:`24 GB (8 × 24Gb). JEDEC HBM3E: 1024-bit, 9.6 Gb/s, 36GB max`+SRC('Atlas Peak, 2026-04-03')+`. Blackwell: 8 stacks × 8-Hi = 192GB`+SRC('JPM · Kwon, 2026-09-22'),
+  iface:`1024-bit, ~1,000 I/O on the base die`+SRC('Micron Hot Chips via newsletters, 2026-08-23'),
+  tradeSrc:`HBM3E consumes ~3:1 DRAM wafer capacity per bit vs DDR5`+SRC('Micron · Sadana, 2026-08-10 · BMO, 2026-08-20')},
+ "3e12":{name:"HBM3E · 12-Hi",family:"hbm3e",n:12,iface2048:false,trade:3,
+  cap:`36 GB (12 × 24Gb). B300: 8 × 12-Hi = 288GB`+SRC('JPM · Kwon, 2026-09-22')+`. Micron HVM 36GB 12-Hi for Rubin from Mar-26`+SRC('Atlas Peak, 2026-04-03'),
+  iface:`1024-bit; dies ~50 µm thick, "millions of TSVs" in a 12-layer stack`+SRC('DAMNANG, 2026-03-20'),
+  tradeSrc:`~3x the silicon of DDR5 for the same bits, "not improving… likely getting worse"`+SRC('Micron Hot Chips via newsletters, 2026-08-23')},
+ "412":{name:"HBM4 · 12-Hi",family:"hbm4",n:12,iface2048:true,trade:4,
+  cap:`36 GB with 24Gb dies (HBM4 uses 24Gb, HBM4E 32Gb)`+SRC('SemiAnalysis, 2026-08-24')+`; JEDEC max 64GB. Rubin: 8 stacks, 288GB`+SRC('JPM · Kwon, 2026-09-22'),
+  iface:`2048-bit (32 channels × 2 pseudo-channels), 8 Gb/s JEDEC; NVDA pushes 10.7 Gb/s, forcing rework and "a much higher-quality bin"`+SRC('Atlas Peak · SemiAnalysis, 2026-07-24')+`. Banks per die 128 → 256; ~2,000 I/O on the same shoreline`+SRC('Micron Hot Chips, 2026-08-23'),
+  tradeSrc:`"By 4E… closer to 4:1"`+SRC('Micron · Sadana, 2026-08-10')+`; HBM4 "approaching 4x"`+SRC('BMO, 2026-08-20')+`; 3–4:1 rising "driven by the increase in chip size"`+SRC('Samsung via GS, 2026-09-18')},
+ "416":{name:"HBM4/4E · 16-Hi",family:"hbm4",n:16,iface2048:true,trade:4,
+  cap:`48 GB (16 × 24Gb) or 64 GB (16 × 32Gb HBM4E). SK hynix: 48GB 16-Hi HBM3E done, 16-Hi HBM4 in customer qualification`+SRC('Mirae Asset, 2026-09-07')+`; JPM: 16-Hi "2029E at the earliest"`+SRC('JPM, 2026-09-22')+` ${DISP}`,
+  iface:`2048-bit; HBM4E 16 Gb/s (NVDA's ~16 Gbps target "proving hard for all three")`+SRC('DAMNANG, 2026-08-10/20')+`. HBM5 would go to 4096-bit with a 35–45% larger die`+SRC('@zephyr_z9, 2026-07-13'),
+  tradeSrc:`~4:1 at HBM4E`+SRC('Micron · Sadana, 2026-08-10')+`; Bristlemoon's 4.5x applies only to HBM5 / 2028`+SRC('Bristlemoon, 2026-06-30')},
+};
+const BONDS={
+ muf:{key:"muf",txt:`MR-MUF (mass reflow, molded underfill; SK hynix with NAMICS): place the whole stack, one reflow, mold fills every gap; better heat path than NCF`+SRC('SemiAnalysis, 2025-08-11 · Jasik Lee, SK hynix, Hot Chips 2026-08-23')+`. $0.33 per bond; 445 uph observed vs ~1,200 nameplate`+SRC('Redburn · Aziz, 2026-09-23')+`. Advanced MR-MUF carries 16-Hi; hybrid "beyond 16-Hi"`+SRC('SK hynix via Jefferies, 2026-08-26')},
+ ncf:{key:"ncf",txt:`TC-NCF (thermo-compression through a non-conductive film; Samsung and Micron): each die pressed with heat, one at a time`+SRC('SemiAnalysis, 2025-08-11')+`. $1.02 per bond`+SRC('Redburn, 2026-09-23')+`. ASMPT: TCB could last to HBM5 at both Samsung and SK hynix`+SRC('UBS APAC tour, 2026-09-22')+`; "traditional TCB likely used for 16-hi or even 20-hi"`+SRC('BofA Japan conference, 2026-09-03')},
+ hyb:{key:"hyb",txt:`Hybrid Cu-to-Cu bonding: no bumps; pitch ~40 µm → below 10 µm`+SRC('DAMNANG, 2026-03-28')+`. vs TCB: speed ~11.9x, heat dissipation &gt;100x, density 15x`+SRC('SK hynix via Jefferies, 2026-08-26')+`. $3.97 per bond observed, $1.48 at 200 uph`+SRC('Redburn, 2026-09-23')+`. Timing ${DISP}: "HBM4E or HBM5, &gt;20 layers" (SK hynix) · HBM5/2028 (Bernstein · Dai, 09-03) · base-die bonding 1H27, stacking 2H28 (Redburn)`},
+};
+const BASES={
+ mem:{hbm3e:`A DRAM-process base die made in-house (1b at SK hynix and Micron, 1a at Samsung)`+SRC('SemiAnalysis, 2025-08-11'),
+      hbm4:`Samsung: own 4nm FinFET base die (SF4), VDDQ 1.1V → 0.75V`+SRC('DAMNANG ISSCC review, 2026-03-20')+`; &gt;50% of its 4nm reportedly to HBM4 base dies ${RELAY}`+SRC('@jukan05, 2026-09-07')+`. Micron HBM4 logic "12nm/10nm internal"`+SRC('WFC · Rakers, 2026-08-31')+`. A base die costs 3–4x a core die`+SRC('WFC')},
+ tsmc:{hbm3e:`Not at HBM3E: the base die is still a DRAM-process die at every maker`+SRC('SemiAnalysis, 2025-08-11'),
+       hbm4:`TSMC N12 for HBM4 (SK hynix), N3P for custom HBM4E. The base wafer goes to the memory maker for TSV + stacking, then back to TSMC for CoWoS`+SRC('SemiAnalysis, 2025-08-11 · Atlas Peak, 2026-04-03')+`. Conflict ${DISP}: WFC has SK hynix "internal". HBM5 → N3`+SRC('UBS/BofA, 2026-08-31')+`; NVHBM puts NVDA's controller on a TSMC 3nm base die, late-2028`+SRC('JPM · Kwon, 2026-09-22')},
+};
+
+// ---------- flow strips ----------
+const FLOW={
+ log:[
+  {t:"Wafer start",d:"300 mm silicon. 18 fabs worldwide; a node now needs 8–10 fabs or phases vs 3–4 ten years ago.",src:"Symposium via @dnystedt, 2026-05-15 · TSMC IR, 2026-09-10"},
+  {t:"FEOL · transistors",d:"Fins (N7–N3) or nanosheets (N2 on). FinFET → nanosheet \"raises precision requirements on deposition, etch, clean and CMP\".",src:"@dnystedt/@QQ_Timmy, 2026-08-20"},
+  {t:"Patterning loop × N",d:"Deposit → coat → expose → develop → etch → strip → CMP → inspect, once per mask. 22 EUV layers on N2; &gt;80 masks at 7nm.",src:"Bristlemoon, 2026-06-30 · IBS via DAMNANG, 2026-04-06"},
+  {t:"BEOL · metal stack",d:"Tight lower metals on EUV, upper layers on immersion DUV. N7 fabs run some N3 upper metal; \"even N28 can support part of the N3\".",src:"JPM · Gokul, 2026-04-02 · CFO, 2026-09-09 (verify)"},
+  {t:"Backside power (A16)",d:"Super Power Rail moves the rails to the wafer back; \"net-new tooling\" and higher capital intensity.",src:"TSMC calls · StoneX/Fubon · BofA, 2026-07-13"},
+  {t:"Wafer probe",d:"Electrical test on the wafer. N2 yield ~90% vs Intel 18A 85%.",src:"KeyBanc via UBS, 2026-08-01"},
+  {t:"CoWoS · chip on wafer",d:"Logic dies + HBM stacks onto a silicon interposer (-S), RDL (-R) or LSI + RDL (-L). 5.5x reticle at 98% yield; 10 packages per CoWoS wafer.",src:"JPM glossary, 2026-09-17 · Symposium, 2026-06-26 · Arete, 2026-07-21"},
+  {t:"Wafer on substrate · test",d:"CoWoS is ~10% of TSMC wafer volume and priced ≈30% of a front-end wafer; the tightness \"is on the front-end wafer side\".",src:"House initiation, 2026-09-02 · Arete, 2026-07-21 · TSMC IR, 2026-08-18"},
+ ],
+ dram:[
+  {t:"Wafer start",d:"Industry 1,921k → 2,101k → 2,461k wspm (2025–27); Samsung 735 / SK hynix 585 / Micron 350 / CXMT 350 in 2026.",src:"DB · Weathers, 2026-09-16"},
+  {t:"Periphery · FEOL",d:"Sense amps, decoders, I/O: ~40% of the die, moving to FinFET periphery.",src:"AMAT via Bernstein · Rasgon, 2026-09-21"},
+  {t:"Cell array · 1T1C",d:"Buried word lines, bit lines, then the capacitor. ~80–100 layers, only 5–7 of them EUV.",src:"ASML IR, 2026-09-09"},
+  {t:"Capacitor HAR etch + fill",d:"Dep/etch-heavy: litho is 25% of DRAM WFE vs 30% for advanced logic. CXMT G5 capacitor at 45:1 aspect ratio.",src:"Bernstein, 2026-07-30 · MS · Chan, 2026-09-20"},
+  {t:"Probe + repair",d:"Redundancy tolerates stochastic defects, one reason DRAM suits High-NA better than logic.",src:"BofA litho expert Sivakumar, 2026-05-21"},
+  {t:"Assembly · ~700 steps",d:"Conventional DRAM packaging ~700 steps; Samsung moving commodity packaging to Vietnam to free HBM lines.",cls:"share",src:"Dealsite/Digitimes via Jefferies, 2026-08-17 (relay)"},
+  {t:"Module",d:"DDR5 DIMM, SOCAMM, LPDDR: one die per package, no TSV. Commodity DDR5 ~$18.44/GB in Aug-26.",src:"WFC/TrendForce, 2026-08-31"},
+ ],
+ hbmA:[
+  {t:"Same 1b/1c wafer",d:"D5, LP5 and HBM all start on the same node at Micron (1β/1γ).",cls:"share",src:"MU Q3FY25, 2025-06-25"},
+  {t:"Probe",d:"~1,080 dies per 1b wafer (model input).",cls:"share",src:"Bristlemoon, 2026-06-30"},
+  {t:"Dice · package",d:"~700 packaging steps, one die per package.",cls:"share",src:"via Jefferies, 2026-08-17 (relay)"},
+  {t:"Module · sell",d:"Commodity margin can exceed 80% in spikes vs HBM's 40–60%.",cls:"share",src:"BTG expert, 2026-07-30"},
+  {t:"1 bit = 1 unit of wafer",d:"Reference for the trade ratio: 100 bits of HBM cost ~300 bits of DDR supply.",cls:"share",src:"Micron · Sadana, 2026-08-10"},
+ ],
+ hbmB:[
+  {t:"TSV etch + Cu fill",d:"&gt;5,600 TSVs per die at HBM3 → &gt;20,000 at HBM4; one bad connection kills the die.",src:"Bernstein · Li, 2026-09-21 · DAMNANG, 2026-03-20"},
+  {t:"Thin to 30–50 µm",d:"12-Hi ~50 µm, 16-Hi ~30 µm \"where wafers crack and bow\".",src:"DAMNANG, 2026-03-20"},
+  {t:"Base die (logic)",d:"In-house (Samsung SF4, Micron 12nm) or TSMC N12/N3; the wafer visits the memory maker for TSV + stacking, then returns for CoWoS.",src:"WFC, 2026-08-31 · SemiAnalysis, 2025-08-11"},
+  {t:"Stack 8 / 12 / 16 dies",d:"MR-MUF (SK hynix) or TC-NCF (Samsung, Micron): ~19 extra materials steps on tools that cannot run commodity packaging.",src:"via Jefferies, 2026-08-17 (relay)"},
+  {t:"KGD sort · stack test",d:"Yield compounds: a 1% latent defect per die leaves only 88.6% of 12-Hi stacks clean.",src:"DAMNANG, 2026-08-30"},
+  {t:"Back to TSMC · CoWoS",d:"92 / 94 / 96% CoWoS yield haircut on HBM supply, 2026–28E.",src:"JPM · Kwon, 2026-09-22"},
+  {t:"~3–4 wafers per bit",d:"HBM3E ~3:1 → ~4:1 at HBM4/4E; HBM takes 24% / 30% of DRAM wafers end-26/27.",src:"Micron · Sadana, 2026-08-10 · UBS · Gaudois, 2026-08-07"},
+ ],
+};
+
+// ---------- explanation cards ----------
+const EXPLAIN={
+ log:[
+  {n:"01 · THE LOOP",h:"One mask layer at a time",p:`A wafer is built by repeating the same loop for every mask: deposit a film, coat resist, expose it on a scanner, develop, etch the pattern in, strip, polish flat, inspect. N2 runs 22 of those exposures on EUV and the rest on immersion DUV; the mask count passed 80 at 7nm and the mask set costs over $100M at 3nm. In the field an EUV tool prints ~2,430 wafers a month, about a third of nameplate, so ~11 tools serve a 25k-wpm fab.${SRC('Bristlemoon, 2026-06-30 · IBS via DAMNANG, 2026-04-06')}`},
+  {n:"02 · THE TRANSISTOR",h:"Fin → nanosheet → backside power",p:`N7 to N3 wrap the gate around a vertical fin. N2 is TSMC's first nanosheet node (gate all around the channel): +10–15% speed, −20–30% power, &gt;15% density vs N3E. A16 adds the Super Power Rail, a backside contact scheme that moves the power rails under the transistors, "best suited for specific HPC products". A14 is the second-generation nanosheet with ~20% more density; its Super Power Rail variant is A12 in 2029.${SRC('TSMC Q1&#39;25 · Q2&#39;24 · Q2&#39;26 calls')}`},
+  {n:"03 · THE CATCH",h:"Each node costs more and starts slower",p:`Capex per 50k wpm climbs $12.5bn (N7) → $16bn → $20bn → ~$28bn (N2), and "$20 billion these days gets you one fab". Wafer cost rises 30–40% per node for a 10–15% performance gain. More layers and longer cycle times mean fewer wafers in the first 90 days: "N2's debut is the fewest, most expensive wafers TSMC has ever sold", and it dilutes gross margin 3–4 points in 2H26. A new node now takes five to seven years.${SRC('Fubon/Jefferies, 2025-10-28 · TSMC IR, 2026-09-09 · DAMNANG, 2026-03-15 · Chipstrat, 2026-07-24 · C.C. Wei, Q2&#39;26')}`},
+ ],
+ dram:[
+  {n:"01 · THE CELL",h:"One transistor, one capacitor, repeated billions of times",p:`A DRAM bit is a transistor beside a tall capacitor that holds the charge. Shrinking the node packs the capacitors closer while each must keep its charge, so the etch gets deeper and narrower: CXMT's 1b-class G5 runs a 45:1 aspect-ratio capacitor. Density steps 0.31 → 0.43 → 0.56 → 0.70 Gb/mm² from 1a to 1d, and 1c gives ~70% more bits per wafer than 1a at Samsung.${SRC('MS · Chan, 2026-09-20 · Bristlemoon, 2026-06-30 · SemiAnalysis, 2026-02-06')}`},
+  {n:"02 · WHERE EUV GOES",h:"Few layers, mostly in the periphery",p:`"A DRAM might have 80 to 100 layers. Currently, only five to seven of those are EUV", against 22 on an N2 logic wafer. Litho is 25% of DRAM WFE vs 30% for advanced logic; the rest is deposition and etch, which is why Lam's DRAM share hit a record on capacitor scaling. Fewer, looser layers let memory run EUV at ~45% OEE vs ~34% for logic, and small dies with built-in redundancy make DRAM "eminently suitable" for High-NA: Samsung has it in DRAM production from 2028.${SRC('ASML IR, 2026-09-09 · Bernstein, 2026-07-30 · Bristlemoon · Sivakumar via BofA, 2026-05-21 · Bernstein SDC relay, 2026-09-15')}`},
+  {n:"03 · THE CATCH",h:"Scaling is running out, so wafers must grow",p:`Density now adds only 6–8% of bits per wafer a year, and "beyond 1D it is practically difficult to scale down". The 6F² → 4F² move is "slower than anyone anticipated" and 3D DRAM has slipped to 2035–37. So bit growth needs wafers: +930k wspm from end-2025 to end-2028, 58% of it for HBM, and a greenfield cleanroom takes ~3 years. Micron: technology transitions plus the HBM trade ratio "will actually increase DRAM bit costs here in the near term".${SRC('DB, 2026-09-16 · BTG expert, 2026-07-30 · ASML mgmt, 2026-07-17 · JPM · Kwon, 2026-09-22 · LRCX CFO, 2026-08-06 · MU Q3FY26')}`},
+ ],
+ hbm:[
+  {n:"01 · THE STACK",h:"DRAM dies drilled, thinned and piled on a logic die",p:`An HBM cube is 8, 12 or 16 DRAM core dies, each drilled with through-silicon vias (&gt;20,000 per die at HBM4), thinned to 30–50 µm and stacked on a base die that routes 1,024 (HBM3E) or 2,048 (HBM4) wires down to the interposer. The base die is the new battleground: Samsung uses its own 4nm, SK hynix and custom HBM4E go to TSMC N12/N3, and NVIDIA's NVHBM puts its controller there. The whole cube must stay under ~775 µm, "close to the practical limit".${SRC('Bernstein · Li, 2026-09-21 · DAMNANG, 2026-03-20 · WFC, 2026-08-31 · JPM · Kwon, 2026-09-22 · J. Lee, SK hynix, Hot Chips 2026-08-23')}`},
+  {n:"02 · THE BOND",h:"MR-MUF vs TC-NCF vs hybrid",p:`The layer between dies is where the makers differ. SK hynix mass-reflows the whole stack then moulds underfill into every gap at once ($0.33 per bond, better heat path). Samsung and Micron press each die through a non-conductive film ($1.02). Hybrid Cu-to-Cu bonding removes the bumps entirely, cutting pitch below 10 µm with ~12x speed and &gt;100x heat dissipation, but costs $3.97 per bond today and, per SK hynix, is only needed "at HBM4E or HBM5, where stack heights exceed 20 layers".${SRC('SemiAnalysis, 2025-08-11 · Redburn · Aziz, 2026-09-23 · SK hynix via Jefferies, 2026-08-26')}`},
+  {n:"03 · THE CATCH",h:"Yield compounds, wafers multiply, margins lag",p:`Every extra die multiplies in another die yield and another bond yield: a 1% latent defect per die leaves only 88.6% of 12-Hi stacks clean, and one failing die scraps the package. Larger dies, TSV area and that stacking loss mean HBM eats ~3 DRAM wafers per bit today and ~4 at HBM4/4E, so converting lines to HBM shrinks commodity supply. And HBM earns 40–60% against &gt;80% for server DRAM in a spike, which is why "general-server DRAM overtook HBM as allocation priority #1".${SRC('DAMNANG, 2026-08-30 · Micron · Sadana, 2026-08-10 · BTG expert, 2026-07-30 · Redburn/TrendForce, 2026-06-23')}`},
+ ],
+};
+
+// ---------- numbers ----------
+const NUMBERS=[
+ {h:"Logic wafer · TSMC",rows:[
+  ["EUV layers N2 / N3","22 / ~22","Bristlemoon, 2026-06-30 (\"unchanged vs N3\")"],
+  ["EUV layers A16 / A14","25–30 / 35–40 (assumptions)","BofA litho call, 2026-04-16 · Arete: 21 → 27 masks, 2026-07-21 <span class=\"tag\">disputed</span>"],
+  ["Wafers per EUV tool","2,430 wpm field (34% OEE) vs ~3,930 disclosed-lens","Bristlemoon · house audit, 2026-07-14"],
+  ["EUV tools per 25k-wpm N2 fab","~11","Bristlemoon, 2026-06-30 · ex-Samsung foundry EVP: 10–12, 2026-06-30"],
+  ["Capex per 50k wpm","N7 $12.5bn · N5 $16bn · N3 $20bn · N2 ~$28bn","Fubon/Jefferies, 2025-10-28"],
+  ["N2 total fab capex per 10k wpm","$4.7bn · $5.6bn","Bristlemoon, 2026-06-30 · Fubon"],
+  ["Wafer price","N2 $25k · A16 $33k","Arete · Venter, 2026-07-21 · house N2 $33.75k <span class=\"tag house\">house</span>"],
+  ["Mask set cost","$15M (7nm) → $40–50M (5nm) → &gt;$100M (3nm); &gt;80 masks at 7nm","IBS via DAMNANG, 2026-04-06"],
+  ["Overseas build premium","US +60% · Japan +10%; GM dilution 2–3 → 3–4 pts/yr","Fubon/Jefferies, 2025-10-28 · CFO, 2026-09-09"],
+  ["N2 capacity path","90–100k → 150–170k → 210k wpm (end-26/27/28); 2028 demand 320k","MS · Chan, 2026-06-23 · UBS · Lin, 2026-09-28"],
+  ["Litho share of process cost","~20% (10nm) → &gt;35% (5/3nm) → ~32% (2nm)","Bernstein · Dai, 2026-07-30"],
+  ["High-NA","HVM 2030; one exposure replaces three low-NA; A14 vs A10 insertion disputed","ASML/TSMC, 2026-09-08 · ASML IR, 2026-09-09"],
+ ]},
+ {h:"DRAM wafer · memory makers",rows:[
+  ["EUV layers by node","1a ~0–1 · 1b ~3–4 · 1c ~6–7 · 1d ~10","BofA ASML callback, 2026-04-15 (Bernstein: 2/3/5/8 exposures, 2026-07-30)"],
+  ["Layers per DRAM wafer","80–100, of which 5–7 EUV","ASML IR, 2026-09-09"],
+  ["EUV OEE","memory ~45% vs logic ~34%","Bristlemoon, 2026-06-30"],
+  ["Litho share of WFE (2026)","DRAM 25% vs advanced logic 30%","Bernstein, 2026-07-30"],
+  ["Density 1a → 1d","0.31 → 0.43 → 0.56 → 0.70 Gb/mm²; 2,340 → 5,400 GB per wafer","Bristlemoon model inputs, 2026-06-30"],
+  ["CXMT vs Big-3","0.24 Gb/mm² on 16nm vs 0.43–0.55; ~$0.27/Gb vs ~$0.20–0.21","WFC · Rakers, 2026-07-14"],
+  ["Tool-only capital intensity","DRAM/HBM $1.4bn per 10k wspm vs advanced logic $3.4bn","Bernstein · Rasgon, 2026-07-20"],
+  ["Industry capacity","1,921 → 2,101 → 2,461 → 2,944 kwspm (2025–28)","DB · Weathers, 2026-09-16"],
+  ["Adds 2025 → 2028","+930k wspm, 58% for HBM","JPM · Kwon/Lee, 2026-09-22"],
+  ["Node timing","1c/1γ ~30% of output end-26; 1d 2H27–2028","SemiAnalysis, 2026-02-06 · UBS, 2026-08-07 · ASML mgmt, 2026-04-21"],
+  ["4F² · 3D DRAM","Samsung 4F² 2028 pull-in vs 0a base case; 3D DRAM 2035–37","UBS, 2026-08-07 · UBS, 2026-09-22 · ASML mgmt, 2026-07-17"],
+  ["Greenfield cleanroom","~3 years regardless of geography","LRCX CFO via DB, 2026-08-06"],
+ ]},
+ {h:"HBM vs DRAM: the stack, the wafers, the money",rows:[
+  ["Interface","HBM3E 1024-bit · 9.6 Gb/s · 36GB max → HBM4 2048-bit · 8 Gb/s · 64GB → HBM4E 16 Gb/s","Atlas Peak (JEDEC), 2026-04-03"],
+  ["TSVs per die","&gt;5,600 (HBM3) → &gt;20,000 (HBM4) at SK hynix","Bernstein · Li, 2026-09-21"],
+  ["Package height","~720 µm to HBM3E → ~775 µm HBM4, \"close to the practical limit\"","Jasik Lee, SK hynix, Hot Chips via TMT Breakout, 2026-08-23"],
+  ["Die thickness","12-Hi ~50 µm · 16-Hi ~30 µm; 16-Hi HBM3E dies −20%, gaps −50%","DAMNANG, 2026-03-20 · Mirae Asset, 2026-09-07"],
+  ["Trade ratio (wafers per bit vs DDR5)","~3:1 HBM3E → ~4:1 HBM4/4E; Bristlemoon 3/3/4/4/4.5 (2024–28)","Micron · Sadana, 2026-08-10 · Bristlemoon, 2026-06-30"],
+  ["HBM share of DRAM wafers","24% / 30% end-26/27; 18% (2025) → 35% (2030)","UBS · Gaudois, 2026-08-07 · DB, 2026-09-16"],
+  ["HBM capacity","473k → 668k wspm end-26/27","SemiAnalysis, 2026-02-06 (canonical, assumptions.md)"],
+  ["Cost per bond","MR-MUF $0.33 · TC-NCF $1.02 · hybrid $3.97 observed","Redburn · Aziz, 2026-09-23"],
+  ["Back-end line per 10k sq ft","MR-MUF $100.6m · TC-NCF $162.1m · hybrid $168.2m","Redburn, 2026-09-23"],
+  ["Extra steps","~700 commodity packaging steps + ~19 HBM materials steps on dedicated tools","Dealsite/Digitimes via Jefferies, 2026-08-17 <span class=\"tag\">relay</span>"],
+  ["HBM4 yield","SK hynix ~80–85% vs Samsung ~60%; Samsung \"nearing 80%\"","BTG expert, 2026-07-30 · DIGITIMES, 2026-08-10"],
+  ["Base die","TSMC N12 (HBM4) → N3 (HBM5); a base die costs 3–4x a core die","UBS/BofA, 2026-08-31 · WFC · Rakers, 2026-08-31"],
+  ["Price","HBM ~$17–18/GB 2026 → $30–32/GB 2027 vs commodity DDR5 ~$18.44/GB (Aug-26); stack $300–400 (3E) → $500–600 (HBM4)","Redburn (canonical) · WFC/TrendForce, 2026-08-31 · BTG expert, 2026-07-30"],
+  ["Margin","HBM 40–60% vs server DRAM &gt;80% in spikes; HBM OPM mid-60s–low-70s vs LTA server &gt;80%","BTG expert, 2026-07-30 · JPM, 2026-09-22"],
+  ["Content per accelerator","Blackwell 8×8-Hi 192GB · B300 8×12-Hi 288GB · Rubin 8 stacks 288GB · MI455 12×12-Hi 432GB","JPM · Kwon, 2026-09-22 · SemiAnalysis, 2026-07-24"],
+  ["Silicon in an AI package","memory ≈ 90%: four 12-Hi stacks ≈ 8x the GPU silicon","Micron Hot Chips via newsletters, 2026-08-23"],
+  ["Wafers per GW (Vera Rubin)","~230–295k per GW: DRAM 141–205k, logic 25–30k (house) vs Patel 61k","assumptions.md canonical, 2026-08-25 <span class=\"tag house\">house</span>"],
+ ]},
+];
+
+// ---------- debates ----------
+const DEBATES=[
+ {h:"How many EUV layers do A16 and A14 add? <span class=\"tag\">disputed</span>",p:"Bristlemoon holds 22 flat from N3 to N2. Arete has 21 masks at N2/A16 and the first step-up only at A14 (27). BofA's litho call has A16 at 25–30 and A14 at 35–40 low-NA layers. Every tool count in this page scales with layers ÷ OEE, and the OEE fork (34% field vs ~55% disclosed-lens) is unresolved: the house audit of 2026-07-14 found the bridge brackets consensus rather than beating it."},
+ {h:"High-NA: A14 or A10, and does DRAM go first? <span class=\"tag\">disputed</span>",p:"TSMC and ASML say HVM from 2030. UBS said A14 insertion (09-14) and then \"base case is NOT to use it for A14\" (09-22); Bernstein has A10 in 2030. Samsung \"confirmed High-NA for DRAM in 2028\" (Bernstein SDC relay, 09-15). DRAM suits it (small dies, no stitching, redundancy), one High-NA exposure replaces three low-NA (ASML IR, 09-09), yet in logic double-exposure low-NA \"will still remain cheaper\" for five years (Bernstein, 09-01)."},
+ {h:"Who makes the HBM base die?",p:"SemiAnalysis and Atlas Peak put SK hynix's HBM4 base die on TSMC N12; Wells Fargo says \"12nm/10nm internal\". Samsung uses its own SF4 and reportedly sends more than half of its 4nm to HBM4 base dies (relay). NVHBM moves NVIDIA's controller onto a TSMC 3nm base die in late 2028 (JPM · Kwon, 09-22), and \"gross margin per Gb may shrink because the logic die carries lower gross margin\". Whoever owns the base die owns the stack's spec."},
+ {h:"When does hybrid bonding arrive? <span class=\"tag\">disputed</span>",p:"SK hynix: \"HBM4E or HBM5, where stack heights exceed 20 layers\". Bernstein: HBM5 in 2028. JPM: 16-Hi \"2029E at the earliest\", TCB stays mainstream. ASMPT via UBS: TCB could last to HBM5 at both Korean makers. Redburn: base-die bonding 1H27, DRAM stacking 2H28, 274 memory tools installed by 2030. DAMNANG's expert: Samsung has shipped hybrid-bonded HBM4/4E samples, SK hynix has not. AMAT: it is \"about I/O density, not stack height\"."},
+ {h:"Is the trade ratio 3, 4 or 4.5?",p:"Micron: 3:1 today, \"closer to 4:1\" by HBM4E. Samsung: 3–4:1 and rising with die size. Bristlemoon's 4.5 applies only to HBM5 in 2028. The counter-view on the MU page: the HBM4E → HBM4 de-spec is a \"20% smaller die\" with lower stacks, so \"the trade ratio starts to shrink\". The ratio decides how much commodity supply a line conversion removes, which is why the S/D model treats it as the swing input."},
+ {h:"6F² → 4F² → 3D: when does DRAM change shape?",p:"Samsung is pulling 4F² in to 2028 (UBS, 08-07) but its base case is 4F² at 0a after a 1d 6F² node (UBS, 09-22). SK hynix has made \"no final choice\" between 0a 4F² on low-NA and 0a 6F² on High-NA. Micron is reported to skip 4F² for 3D DRAM (DAMNANG, 04-11). ASML: the move is \"slower than anyone anticipated\" and 3D DRAM has slipped to 2035–37, so 4F² will stretch over 3–5 nodes; each step raises ALD, etch and litho intensity."},
+];
+
+const FOOT=`Sources: Capstone wiki <span class="mono">_wiki/TSM.md</span>, <span class="mono">MU.md</span>, <span class="mono">SKHYNIX.md</span>, <span class="mono">SAMSUNG.md</span>, <span class="mono">BESI.md</span>, <span class="mono">ASML.md</span>, themes <span class="mono">hbm-memory</span>, <span class="mono">cowos-packaging</span>, <span class="mono">semicap-wfe</span>, the canonical ledger <span class="mono">_meta/assumptions.md</span> (euv-fab-intensity, hbm-cycle, cowos-allocation, wafers-per-gw) and the Bristlemoon EUV model figure (Jun-26). Scene geometry is schematic: layer counts, pitches, die thicknesses and TSV counts are drawn for clarity, not to scale. Not on the wiki, so not drawn as numbers: TSMC per-node total step counts, mask totals and cycle times; Big-3 capacitor aspect ratios; a separate HBM-line vs DRAM-line capex per 10k wpm; known-good-stack test hours. The stack-yield calculator is illustrative arithmetic, not a sourced yield. DAMNANG is an independent author, never a broker; trade-press and desk relays are tagged. Hand-built 2026-09-28.`;
+
+// =====================================================================
+// UI state
+// =====================================================================
+let mode="log";
+const S={node:"N2",logView:"full",loop:true,euvOnly:false,
+         dnode:"1b",arch:"6f2",maker:"SAMSUNG",dEuv:false,
+         gen:"3e12",bond:"muf",base:"mem",explode:0,dieY:98,bondY:99};
+
+function segWire(id,key,cb){
+  [...$("#"+id).children].forEach(b=>b.onclick=()=>{
+    [...$("#"+id).children].forEach(x=>x.classList.toggle("on",x===b)); S[key]=b.dataset.v; cb&&cb();
+  });
+}
+segWire("nodeSeg","node",()=>{updateLog(); if(ok) layoutLog(true);});
+segWire("logView","logView",()=>{if(ok) layoutLog(true);});
+$("#logLoop").onchange=e=>{S.loop=e.target.checked;};
+$("#logEuvOnly").onchange=e=>{S.euvOnly=e.target.checked; if(ok) layoutLog(true);};
+segWire("drSeg","dnode",()=>{updateDram(); if(ok) buildDram();});
+segWire("drArch","arch",()=>{updateDram(); if(ok) buildDram();});
+segWire("drMaker","maker",()=>{updateDram();});
+$("#drEuvHl").onchange=e=>{S.dEuv=e.target.checked; if(ok) buildDram();};
+segWire("hbGen","gen",()=>{updateHbm(); if(ok) buildHbm();});
+segWire("hbBondSeg","bond",()=>{updateHbm(); if(ok) buildHbm();});
+segWire("hbBaseSeg","base",()=>{updateHbm(); if(ok) buildHbm();});
+$("#hbExplode").oninput=e=>{S.explode=+e.target.value; if(ok) orbitTo({theta:VIEW_HBM.theta,phi:VIEW_HBM.phi-0.15*S.explode,r:VIEW_HBM.r+5.5*S.explode,target:new THREE.Vector3(1.0,1.5+2.0*S.explode,0)});};
+$("#hbDieY").oninput=e=>{S.dieY=+e.target.value; $("#hbDieYv").textContent=S.dieY+"%"; updateHbm();};
+$("#hbBondY").oninput=e=>{S.bondY=+e.target.value; $("#hbBondYv").textContent=S.bondY+"%"; updateHbm();};
+
+// ---------- HUD writers ----------
+const STEPS=[
+  ["Deposit","Lay down the film to be patterned (dielectric, metal, poly)."],
+  ["Coat","Spin on photoresist; bake."],
+  ["Expose","Scanner prints the mask: EUV (13.5 nm) on the tight layers, immersion DUV (193 nm) elsewhere."],
+  ["Develop","Wash away exposed (or unexposed) resist to reveal the pattern."],
+  ["Etch","Transfer the pattern into the film (plasma etch)."],
+  ["Strip · clean","Remove the resist; wet clean."],
+  ["CMP","Polish the wafer flat so the next layer can be printed."],
+  ["Inspect · measure","Overlay, CD and defect check before the next layer."]
+];
+$("#logSteps").innerHTML=STEPS.map(()=>"<span></span>").join("");
+let stepI=2, stepT=0, layerN=1;
+function showStep(){
+  [...$("#logSteps").children].forEach((s,i)=>s.classList.toggle("on",i<=stepI));
+  $("#logStep").innerHTML=`${stepI+1}·${STEPS[stepI][0]}<small>${STEPS[stepI][1]}</small>`;
+  $("#logLoopN").textContent="layer "+layerN;
+}
+function updateLog(){
+  const n=NODES[S.node];
+  $("#logName").textContent=n.name; $("#logTr").innerHTML=n.tr; $("#logEuv").innerHTML=n.euv; $("#logAsp").innerHTML=n.asp;
+  $("#logCapex").innerHTML=n.capex; $("#logCap").innerHTML=n.cap; $("#logStat").innerHTML=n.stat;
+  $("#logTools").textContent=n.tools; $("#logToolsBar").style.width=(n.toolsPct||0)+"%"; $("#logToolsSrc").innerHTML=n.toolsSrc;
+  showStep();
+}
+function updateDram(){
+  const d=DNODES[S.dnode], m=MAKERS[S.maker], a=ARCH[S.arch];
+  $("#drName").textContent=d.name; $("#drCell").innerHTML=a.cell; $("#drEuv").innerHTML=d.euv; $("#drWho").innerHTML=d.who;
+  $("#drGain").innerHTML=d.gain; $("#drCap").innerHTML=m.cap;
+  $("#drEuvN").textContent=d.euvN; $("#drEuvBar").style.width=Math.min(100,d.euvMid/22*100)+"%";
+  $("#drCapN").textContent=m.capN; $("#drCapBar").style.width=Math.min(100,m.capK/900*100)+"%"; $("#drCapSrc").innerHTML=m.capSrc;
+}
+function updateHbm(){
+  const g=GENS[S.gen], b=BONDS[S.bond], base=BASES[S.base];
+  $("#hbName").textContent=g.name; $("#hbCap").innerHTML=g.cap; $("#hbIf").innerHTML=g.iface; $("#hbBase").innerHTML=base[g.family];
+  $("#hbBond").innerHTML=b.txt;
+  let ht;
+  if(g.n<=12) ht='~720 µm through HBM3E → ~775 µm at HBM4, "close to the practical limit"'+SRC('Jasik Lee, SK hynix, Hot Chips via TMT Breakout, 2026-08-23');
+  else if(b.key==="hyb") ht='<b style="color:var(--good)">Fits with room</b>: no bump gap, so at ~20-high the dies can be 20–24% thicker with ~35% better thermal conductivity'+SRC('J. Lee, SK hynix, Hot Chips 2026-08-23');
+  else ht='<b style="color:var(--amber)">Fits only by thinning</b>: 16-Hi HBM3E used dies ~20% thinner and gaps ~50% smaller inside the same 775 µm'+SRC('Mirae Asset, 2026-09-07 · J. Lee, Hot Chips 2026-08-23')+'. 16-layer needs ~30 µm dies "where wafers crack and bow"'+SRC('DAMNANG, 2026-03-20');
+  $("#hbH").innerHTML=ht;
+  const y=Math.pow((S.dieY/100)*(S.bondY/100),g.n)*100;
+  $("#hbYield").textContent=y.toFixed(1)+"% for "+g.n+"-Hi"; $("#hbYieldBar").style.width=y+"%";
+  $("#hbYieldBar").style.background=y<60?css("--red"):y<80?css("--amber"):css("--accent");
+  $("#hbTrade").textContent=g.trade+"×"; $("#hbTradeBar").style.width=(g.trade/4.5*100)+"%"; $("#hbTradeSrc").innerHTML=g.tradeSrc;
+}
+
+// ---------- tabs ----------
+function setMode(m){
+  mode=m;
+  const map={log:["hudLOG","ctrlLOG","explainLOG","flowLOG"],dram:["hudDRAM","ctrlDRAM","explainDRAM","flowDRAM"],hbm:["hudHBM","ctrlHBM","explainHBM","flowHBM"]};
+  for(const k of ["log","dram","hbm"]){
+    $("#tab"+k.toUpperCase()).classList.toggle("on",k===m);
+    for(const id of map[k]) $("#"+id).style.display=k===m?(id.startsWith("explain")?"grid":""):"none";
+  }
+  if(ok){ logG.visible=m==="log"; dramG.visible=m==="dram"; hbmG.visible=m==="hbm"; orbitTo(m==="log"?VIEW_LOG:m==="dram"?VIEW_DRAM:VIEW_HBM); }
+  try{localStorage.setItem("wp-mode",m);}catch(e){}
+}
+$("#tabLOG").onclick=()=>setMode("log"); $("#tabDRAM").onclick=()=>setMode("dram"); $("#tabHBM").onclick=()=>setMode("hbm");
+window.addEventListener("keydown",e=>{
+  if(e.target.tagName==="INPUT") return;
+  if(e.key==="1") setMode("log"); if(e.key==="2") setMode("dram"); if(e.key==="3") setMode("hbm");
+});
+
+// ---------- static sections ----------
+function renderStatic(){
+  const lane=(id,arr)=>$("#"+id).innerHTML=arr.map(s=>`<div class="st ${s.cls||""}"><b>${s.t}</b>${s.d}${s.src?`<span class="src">${s.src}</span>`:""}</div>`).join("");
+  lane("flowLOGlane",FLOW.log); lane("flowDRAMlane",FLOW.dram);
+  $("#flowHBMlaneA").innerHTML=`<div class="lanename">DDR5 module</div>`+FLOW.hbmA.map(s=>`<div class="st ${s.cls||""}"><b>${s.t}</b>${s.d}${s.src?`<span class="src">${s.src}</span>`:""}</div>`).join("");
+  $("#flowHBMlaneB").innerHTML=`<div class="lanename">HBM stack</div>`+FLOW.hbmB.map(s=>`<div class="st ${s.cls||"hbm"}"><b>${s.t}</b>${s.d}${s.src?`<span class="src">${s.src}</span>`:""}</div>`).join("");
+  const cards=(id,arr)=>$("#"+id).innerHTML=arr.map(c=>`<div class="card"><div class="n">${c.n}</div><h4>${c.h}</h4><p>${c.p}</p></div>`).join("");
+  cards("explainLOG",EXPLAIN.log); cards("explainDRAM",EXPLAIN.dram); cards("explainHBM",EXPLAIN.hbm);
+  const table=(t)=>`<div class="card"><h4 style="margin:0 0 8px">${t.h}</h4><table><tr><th>Metric</th><th>Value</th><th>Source</th></tr>${t.rows.map(r=>`<tr><td>${r[0]}</td><td class="v">${r[1]}</td><td class="src">${r[2]}</td></tr>`).join("")}</table></div>`;
+  $("#numbersA").innerHTML=table(NUMBERS[0])+table(NUMBERS[1]);
+  $("#numbersB").innerHTML=`<h4 style="margin:0 0 8px">${NUMBERS[2].h}</h4><table><tr><th>Metric</th><th>Value</th><th>Source</th></tr>${NUMBERS[2].rows.map(r=>`<tr><td>${r[0]}</td><td class="v">${r[1]}</td><td class="src">${r[2]}</td></tr>`).join("")}</table>`;
+  $("#debates").innerHTML=DEBATES.map(d=>`<div class="card debate"><h4>${d.h}</h4><p>${d.p}</p></div>`).join("");
+  $("#foot").innerHTML=FOOT;
+}
+renderStatic(); updateLog(); updateDram(); updateHbm();
+
+// =====================================================================
+// 3D
+// =====================================================================
+let ok=typeof THREE!=="undefined";
+let renderer;
+if(ok){ try{ renderer=new THREE.WebGLRenderer({canvas:$("#gl"),antialias:true}); }catch(e){ ok=false; } }
+if(!ok){ $("#fallback").style.display="flex"; $("#gl").style.display="none"; let m="log"; try{m=localStorage.getItem("wp-mode")||"log";}catch(e){} setMode(m); return; }
+
+renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+const scene=new THREE.Scene();
+const camera=new THREE.PerspectiveCamera(38,1,0.1,200);
+scene.add(new THREE.HemisphereLight(0xffffff,0x334455,0.8));
+const key=new THREE.DirectionalLight(0xffffff,0.85); key.position.set(6,12,8); scene.add(key);
+const rim=new THREE.DirectionalLight(0x88ccff,0.35); rim.position.set(-8,4,-6); scene.add(rim);
+
+const C=()=>({accent:new THREE.Color(css("--accent")),amber:new THREE.Color(css("--amber")),red:new THREE.Color(css("--red")),
+  copper:new THREE.Color(css("--copper")),bg:new THREE.Color(css("--scene-bg")),chip:new THREE.Color(css("--chip")),ink3:new THREE.Color(css("--ink-3")),violet:new THREE.Color(css("--violet"))});
+let col=C();
+const M={
+  si:new THREE.MeshStandardMaterial({color:0x5c6672,metalness:.55,roughness:.45}),
+  siLight:new THREE.MeshStandardMaterial({color:0x8a949f,metalness:.5,roughness:.5}),
+  oxide:new THREE.MeshStandardMaterial({color:0xaab4be,metalness:.1,roughness:.7,transparent:true,opacity:.35,depthWrite:false}),
+  metal:new THREE.MeshStandardMaterial({color:0xb8c0c8,metalness:.9,roughness:.3}),
+  metalDim:new THREE.MeshStandardMaterial({color:0x7d858e,metalness:.8,roughness:.4}),
+  gate:new THREE.MeshStandardMaterial({color:0xc9a227,metalness:.7,roughness:.35}),
+  fin:new THREE.MeshStandardMaterial({color:0x3f7fb0,metalness:.5,roughness:.4}),
+  cap:new THREE.MeshStandardMaterial({color:0x4a90c2,metalness:.55,roughness:.35}),
+  capHi:new THREE.MeshStandardMaterial({color:0x3f7fb0,metalness:.55,roughness:.35}),
+  wl:new THREE.MeshStandardMaterial({color:0xc9a227,metalness:.7,roughness:.4}),
+  bl:new THREE.MeshStandardMaterial({color:0xb8c0c8,metalness:.9,roughness:.3}),
+  interposer:new THREE.MeshStandardMaterial({color:0x6b7580,metalness:.5,roughness:.5}),
+  substrate:new THREE.MeshStandardMaterial({color:0x6b5a3a,metalness:.2,roughness:.6}),
+  gpu:new THREE.MeshStandardMaterial({color:0x5a6b80,metalness:.8,roughness:.25}),
+  dram:new THREE.MeshStandardMaterial({color:0x4a90c2,metalness:.6,roughness:.35}),
+  logic:new THREE.MeshStandardMaterial({color:0x5a6b80,metalness:.8,roughness:.25}),
+  bump:new THREE.MeshStandardMaterial({color:0xd8dde2,metalness:.6,roughness:.4}),
+  tsv:new THREE.MeshStandardMaterial({color:0xd0a060,metalness:.9,roughness:.3}),
+  mold:new THREE.MeshStandardMaterial({color:0x222831,metalness:.1,roughness:.8,transparent:true,opacity:.28,depthWrite:false}),
+  ncf:new THREE.MeshStandardMaterial({color:0xd6c99a,metalness:.1,roughness:.8,transparent:true,opacity:.7}),
+  pcb:new THREE.MeshStandardMaterial({color:0x1f3a33,metalness:.1,roughness:.8}),
+  plane:new THREE.MeshBasicMaterial({color:0xff6b5e,transparent:true,opacity:.18,side:THREE.DoubleSide,depthWrite:false}),
+};
+const glowMat=(c,op)=>new THREE.MeshBasicMaterial({color:c,transparent:true,opacity:op,blending:THREE.AdditiveBlending,depthWrite:false});
+const coreMat=c=>new THREE.MeshBasicMaterial({color:c});
+function applyTheme(){ col=C(); scene.background=col.bg; layoutLog(true); buildDram(); buildHbm(); }
+window.applyTheme=applyTheme;
+if(window.matchMedia) window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",applyTheme);
+scene.background=col.bg;
+
+// ---------- labels ----------
+const labels=[];
+function addLabel(text,sub,getPos,group){
+  const el=document.createElement("div"); el.className="lbl"; el.innerHTML=text+(sub?`<small>${sub}</small>`:"");
+  $("#labels").appendChild(el); const L={el,getPos,group,show:()=>true}; labels.push(L); return L;
+}
+const v3=new THREE.Vector3();
+function drawLabels(){
+  const box=$("#glbox"), w=box.clientWidth, h=box.clientHeight;
+  for(const L of labels){
+    let vis=L.group.visible && L.show();
+    if(vis){ L.getPos(v3); v3.project(camera); vis=v3.z<1 && Math.abs(v3.x)<1.1 && Math.abs(v3.y)<1.1; }
+    L.el.style.display=vis?"":"none";
+    if(vis){ L.el.style.left=((v3.x+1)/2*w)+"px"; L.el.style.top=((1-v3.y)/2*h-6)+"px"; }
+  }
+}
+
+// ---------- orbit ----------
+const VIEW_LOG={theta:0.55,phi:1.05,r:15,target:new THREE.Vector3(0,1.4,0)};
+const VIEW_DRAM={theta:0.5,phi:1.0,r:14,target:new THREE.Vector3(0,1.0,0)};
+const VIEW_HBM={theta:0.62,phi:1.02,r:10.5,target:new THREE.Vector3(1.0,1.5,0)};
+const orb={theta:VIEW_LOG.theta,phi:VIEW_LOG.phi,r:VIEW_LOG.r,target:VIEW_LOG.target.clone()};
+let orbGoal=null;
+function orbitTo(v){orbGoal={theta:v.theta,phi:v.phi,r:v.r,target:v.target.clone()};}
+(function(){
+  const cv=$("#gl"); let drag=null;
+  cv.addEventListener("pointerdown",e=>{drag={x:e.clientX,y:e.clientY}; cv.setPointerCapture(e.pointerId); orbGoal=null;});
+  cv.addEventListener("pointermove",e=>{ if(!drag) return; const dx=e.clientX-drag.x, dy=e.clientY-drag.y; drag={x:e.clientX,y:e.clientY};
+    orb.theta-=dx*0.006; orb.phi=Math.min(1.5,Math.max(0.12,orb.phi-dy*0.006)); });
+  cv.addEventListener("pointerup",()=>drag=null); cv.addEventListener("pointercancel",()=>drag=null);
+  cv.addEventListener("wheel",e=>{e.preventDefault(); orbGoal=null; orb.r=Math.min(40,Math.max(5,orb.r*(1+Math.sign(e.deltaY)*0.08)));},{passive:false});
+})();
+function updateCamera(){
+  if(orbGoal){ const k=0.08; orb.theta+=(orbGoal.theta-orb.theta)*k; orb.phi+=(orbGoal.phi-orb.phi)*k; orb.r+=(orbGoal.r-orb.r)*k; orb.target.lerp(orbGoal.target,k);
+    if(Math.abs(orbGoal.r-orb.r)<0.01 && Math.abs(orbGoal.theta-orb.theta)<0.001) orbGoal=null; }
+  const t=orb.target, s=Math.sin(orb.phi);
+  camera.position.set(t.x+orb.r*s*Math.sin(orb.theta), t.y+orb.r*Math.cos(orb.phi), t.z+orb.r*s*Math.cos(orb.theta));
+  camera.lookAt(t);
+}
+function disposeGroup(g){ while(g.children.length){const c=g.children.pop(); if(c.children&&c.children.length) disposeGroup(c); c.geometry&&c.geometry.dispose(); if(c.material&&c.material.dispose&&c.material.__own) c.material.dispose();} }
+const box=(w,h,d,m,x,y,z,g)=>{const b=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),m); b.position.set(x,y,z); (g||scene).add(b); return b;};
+const cyl=(r,h,m,x,y,z,g,seg)=>{const c=new THREE.Mesh(new THREE.CylinderGeometry(r,r,h,seg||12),m); c.position.set(x,y,z); (g||scene).add(c); return c;};
+const smooth=x=>x*x*(3-2*x);
+
+// =====================================================================
+// LOGIC scene
+// =====================================================================
+const logG=new THREE.Group(); scene.add(logG);
+const LW=9, LD=5.4;
+const logStatic=new THREE.Group(), logDyn=new THREE.Group(); logG.add(logStatic,logDyn);
+box(LW,0.7,LD,M.si,0,-0.35,0,logStatic);                       // substrate
+// FEOL: fins / nanosheets + gates
+const FINX=[-3.2,-2.4,-1.6,-0.8,0,0.8,1.6,2.4,3.2], GATEZ=[-1.5,-0.5,0.5,1.5];
+const fins=[], sheets=[], gates=[];
+for(const x of FINX){
+  fins.push(box(0.14,0.75,4.6,M.fin,x,0.375,0,logStatic));
+  const grp=new THREE.Group(); grp.position.set(x,0,0); logStatic.add(grp);
+  for(const y of [0.2,0.42,0.64]) box(0.42,0.07,4.6,M.fin,0,y,0,grp);
+  sheets.push(grp);
+}
+for(const z of GATEZ) gates.push(box(LW-1.2,0.95,0.32,M.gate,0,0.5,z,logStatic));
+// MOL contacts
+const molG=new THREE.Group(); logStatic.add(molG);
+for(const x of FINX) for(const z of [-1.0,0,1.0]) cyl(0.06,0.5,M.metal,x,1.05,z,molG,8);
+// BEOL: layers built dynamically (EUV highlight depends on node)
+const beolG=new THREE.Group(); logDyn.add(beolG);
+const NLAY=12;                       // drawn layers (schematic)
+const layerY=[]; { let y=1.32; for(let k=0;k<NLAY;k++){ const th=0.09+k*0.03; layerY.push({y:y+th/2,th}); y+=th+0.05; } }
+const bspG=new THREE.Group(), tprG=new THREE.Group(); logDyn.add(bspG,tprG);
+let morphFin=0, morphBsp=0, morphFinT=0, morphBspT=0;
+function buildBeol(){
+  disposeGroup(beolG);
+  const n=NODES[S.node];
+  const euvShare=Math.min(1,n.euvN/30);            // schematic: share of drawn layers to paint as EUV
+  const euvLayers=Math.round(euvShare*NLAY*0.75);   // EUV lives in the lower, tighter layers
+  const v=S.logView;
+  if(v==="feol") return;
+  for(let k=0;k<NLAY;k++){
+    const {y,th}=layerY[k];
+    const isEuv=k<euvLayers;
+    if(S.euvOnly&&!isEuv) continue;
+    const pitch=0.28+k*0.16, alongX=k%2===0;
+    const len=(alongX?LW-1.4:LD-0.8), span=(alongX?LD-0.8:LW-1.4);
+    const cnt=Math.max(2,Math.floor(span/pitch));
+    const mat=isEuv?new THREE.MeshStandardMaterial({color:col.accent,metalness:.8,roughness:.3,emissive:col.accent,emissiveIntensity:.35}):(k>=NLAY-2?new THREE.MeshStandardMaterial({color:col.copper,metalness:.85,roughness:.3}):M.metal);
+    mat.__own=isEuv||k>=NLAY-2;
+    for(let i=0;i<cnt;i++){
+      const off=-span/2+pitch/2+i*pitch;
+      const w=Math.min(0.9,pitch*0.45);
+      if(alongX) box(len*(0.75+0.25*Math.sin(i*1.7+k)),th,w,mat,0,y,off,beolG); else box(w,th,len*(0.75+0.25*Math.cos(i*1.3+k)),mat,off,y,0,beolG);
+    }
+    // vias to the layer below
+    if(k>0 && !(S.euvOnly&&!isEuv)) for(let i=0;i<Math.min(cnt,6);i++){ const off=-span/2+pitch/2+i*pitch*Math.max(1,Math.floor(cnt/6)); if(Math.abs(off)>span/2) continue; cyl(0.04,0.06,mat,alongX?(i-2.5)*1.1:off,y-th/2-0.025,alongX?off:(i-2.5)*0.7,beolG,6); }
+  }
+  // top power rails (front side) — hidden when backside power is on
+  disposeGroup(tprG); disposeGroup(bspG);
+  const cu=new THREE.MeshStandardMaterial({color:col.copper,metalness:.85,roughness:.3,emissive:col.copper,emissiveIntensity:.15}); cu.__own=true;
+  const topY=layerY[NLAY-1].y+layerY[NLAY-1].th/2+0.18;
+  for(const z of [-1.9,-0.63,0.63,1.9]) box(LW-1.0,0.16,0.5,cu,0,topY,z,tprG);
+  // backside rails + nano-TSVs
+  for(const z of [-1.9,-0.63,0.63,1.9]) box(LW-1.0,0.16,0.5,cu,0,-0.85,z,bspG);
+  for(const x of FINX) for(const z of [-1.9,-0.63,0.63,1.9]) cyl(0.05,0.75,M.tsv,x+0.25,-0.4,z,bspG,6);
+}
+function layoutLog(rebuild){
+  if(rebuild) buildBeol();
+  const n=NODES[S.node];
+  morphFinT=n.gaa?1:0; morphBspT=n.bsp?1:0;
+  const v=S.logView;
+  beolG.visible=v!=="feol"; molG.visible=v!=="feol"||true;
+  fins.forEach(f=>{f.scale.y=Math.max(0.001,1-morphFin); f.position.y=0.375*(1-morphFin)+0.001;});
+  sheets.forEach(s=>{s.scale.y=Math.max(0.001,morphFin); s.visible=morphFin>0.02;});
+  gates.forEach(g=>{g.scale.y=1+0.15*morphFin;});
+  tprG.visible=v!=="feol"; bspG.visible=v!=="feol";
+  tprG.children.forEach(c=>{c.scale.y=Math.max(0.001,1-morphBsp);});
+  bspG.children.forEach(c=>{c.scale.y=Math.max(0.001,morphBsp);});
+  logStatic.visible=v!=="beol";
+}
+// scanner head + beam
+const scanG=new THREE.Group(); logG.add(scanG);
+const head=box(0.9,0.35,0.9,M.siLight,0,0,0,scanG);
+const beam=new THREE.Mesh(new THREE.ConeGeometry(0.55,1,20,1,true),glowMat(0x4cc2ff,0.35)); beam.rotation.x=Math.PI; scanG.add(beam);
+const beamCore=new THREE.Mesh(new THREE.CylinderGeometry(0.03,0.03,1,6),coreMat(0xffffff)); scanG.add(beamCore);
+addLabel("Silicon substrate","the wafer itself; ~1,000+ steps happen on top",v=>v.set(-LW/2+0.6,-0.1,LD/2),logG).show=()=>S.logView!=="beol";
+const lFin=addLabel("FinFET","gate wraps a vertical fin (N7 to N3)",v=>v.set(FINX[1],1.0,-LD/2+0.2),logG); lFin.show=()=>S.logView!=="beol"&&morphFinT<0.5;
+const lGaa=addLabel("Gate-all-around nanosheets","gate wraps stacked sheets (N2)",v=>v.set(FINX[1],1.0,-LD/2+0.2),logG); lGaa.show=()=>S.logView!=="beol"&&morphFinT>=0.5;
+addLabel("Gate","metal gate over high-k dielectric",v=>v.set(LW/2-1.0,1.1,GATEZ[3]),logG).show=()=>S.logView!=="beol";
+const lEuv=addLabel("EUV-patterned metal","tightest pitches at the bottom of the stack",v=>v.set(-LW/2+1.2,layerY[2].y+0.2,LD/2-0.6),logG); lEuv.show=()=>S.logView!=="feol";
+const lDuv=addLabel("DUV-patterned metal","looser pitches higher up",v=>v.set(LW/2-1.4,layerY[NLAY-3].y+0.2,-LD/2+0.6),logG); lDuv.show=()=>S.logView!=="feol"&&!S.euvOnly;
+const lTpr=addLabel("Power rails (front side)","thick top metal",v=>v.set(0,layerY[NLAY-1].y+0.6,-1.9),logG); lTpr.show=()=>S.logView!=="feol"&&morphBspT<0.5;
+const lBsp=addLabel("Backside power (A16 Super Power Rail)","rails moved under the transistors",v=>v.set(0,-1.0,1.9),logG); lBsp.show=()=>S.logView!=="feol"&&morphBspT>=0.5;
+const lScan=addLabel("Scanner","one exposure per mask layer",v=>v.copy(scanG.position).add(new THREE.Vector3(0,0.35,0)),logG); lScan.show=()=>S.loop;
+layoutLog(true);
+
+// =====================================================================
+// DRAM scene
+// =====================================================================
+const dramG=new THREE.Group(); scene.add(dramG); dramG.visible=false;
+const dramStatic=new THREE.Group(), dramDyn=new THREE.Group(); dramG.add(dramStatic,dramDyn);
+const DW=9, DD=5.4;
+box(DW,0.7,DD,M.si,0,-0.35,0,dramStatic);
+// periphery block at the far edge
+const periG=new THREE.Group(); dramStatic.add(periG);
+box(2.2,0.5,DD-0.6,M.siLight,-DW/2+1.2,0.25,0,periG);
+const periLayers=[];
+for(let k=0;k<4;k++){ const l=box(1.9,0.05,DD-0.9,M.metal,-DW/2+1.2,0.55+k*0.12,0,periG); periLayers.push(l); }
+let capsG=new THREE.Group(); dramDyn.add(capsG);
+function buildDram(){
+  disposeGroup(capsG);
+  const d=DNODES[S.dnode], a=S.arch;
+  const pitch=d.pitch*(a==="4f2"?0.82:1);
+  const x0=-DW/2+2.6, x1=DW/2-0.4, z0=-DD/2+0.4, z1=DD/2-0.4;
+  const capMat=S.dEuv?M.capHi:M.cap;
+  const euvMat=new THREE.MeshStandardMaterial({color:col.accent,metalness:.8,roughness:.3,emissive:col.accent,emissiveIntensity:.4}); euvMat.__own=true;
+  periLayers.forEach((l,k)=>{ l.material=(S.dEuv&&k<d.euvPeri)?euvMat:M.metal; });
+  if(a==="3d"){
+    // horizontal cells stacked in tiers, like NAND
+    const tiers=6, cellsX=Math.floor((x1-x0)/(pitch*1.1)), cellsZ=Math.floor((z1-z0)/(pitch*1.6));
+    for(let t=0;t<tiers;t++){
+      const y=0.35+t*0.42;
+      box(x1-x0,0.06,z1-z0,M.oxide,(x0+x1)/2,y-0.2,0,capsG);
+      for(let i=0;i<cellsX;i++) for(let j=0;j<cellsZ;j++){
+        const c=cyl(pitch*0.22,pitch*1.05,capMat,x0+pitch*0.55+i*pitch*1.1,y,z0+pitch*0.8+j*pitch*1.6,capsG,10); c.rotation.x=Math.PI/2;
+      }
+      // vertical bit line pillars
+      for(let i=0;i<cellsX;i++) cyl(0.03,tiers*0.42,M.bl,x0+pitch*0.55+i*pitch*1.1-pitch*0.55,0.35+(tiers-1)*0.21,z0+0.05,capsG,6);
+    }
+    return;
+  }
+  // buried word lines (rows along x), bit lines (along z)
+  const nx=Math.floor((x1-x0)/pitch), nz=Math.floor((z1-z0)/pitch);
+  const wlMat=S.dEuv&&d.euvCell>0?euvMat:M.wl;
+  for(let j=0;j<nz;j++) box(x1-x0,0.06,pitch*0.28,wlMat,(x0+x1)/2,-0.08,z0+pitch/2+j*pitch,capsG);
+  const blMat=S.dEuv&&d.euvCell>1?euvMat:M.bl;
+  for(let i=0;i<nx;i++) box(pitch*0.22,0.05,z1-z0,blMat,x0+pitch/2+i*pitch,0.09,(z0+z1)/2,capsG);
+  const capH=2.3, capR=pitch*(a==="4f2"?0.3:0.27);
+  for(let i=0;i<nx;i++) for(let j=0;j<nz;j++){
+    const cx=x0+pitch/2+i*pitch+(a==="4f2"?0:(j%2?pitch*0.18:-pitch*0.18)), cz=z0+pitch/2+j*pitch;
+    // access transistor: planar (6F2) sits beside; VCT (4F2) is a pillar directly underneath
+    if(a==="4f2") cyl(pitch*0.14,0.5,M.fin,cx,0.28,cz,capsG,6);
+    else box(pitch*0.3,0.16,pitch*0.3,M.fin,cx-(j%2?pitch*0.18:-pitch*0.18),0.12,cz,capsG);
+    cyl(0.04,0.35,M.metal,cx,0.42,cz,capsG,6);                       // storage-node contact
+    cyl(capR,capH,capMat,cx,0.6+capH/2,cz,capsG,10);                   // the capacitor
+  }
+}
+buildDram();
+addLabel("Storage capacitor","one per bit; tall, narrow, high-aspect-ratio etch",v=>v.set(DW/2-1.6,3.2,-DD/2+0.6),dramG).show=()=>S.arch!=="3d";
+addLabel("3D DRAM","capacitors laid flat and stacked in tiers (research)",v=>v.set(DW/2-1.6,3.2,-DD/2+0.6),dramG).show=()=>S.arch==="3d";
+addLabel("Buried word line","in the silicon, one per row",v=>v.set(-0.4,-0.1,DD/2),dramG).show=()=>S.arch!=="3d";
+addLabel("Bit line","one per column, reads the charge",v=>v.set(DW/2-0.6,0.35,-DD/2+0.3),dramG).show=()=>S.arch!=="3d";
+addLabel("Access transistor","planar, buried channel (6F²)",v=>v.set(-1.2,0.15,-DD/2+0.9),dramG).show=()=>S.arch==="6f2";
+addLabel("Vertical-channel transistor","directly under the capacitor (4F²)",v=>v.set(-1.2,0.35,-DD/2+0.9),dramG).show=()=>S.arch==="4f2";
+addLabel("Periphery","sense amps, decoders, I/O: where the tight (EUV) layers live",v=>v.set(-DW/2+1.2,1.15,DD/2-0.4),dramG);
+addLabel("Silicon substrate","",v=>v.set(-DW/2+0.4,-0.1,DD/2),dramG);
+
+// =====================================================================
+// HBM scene
+// =====================================================================
+const hbmG=new THREE.Group(); scene.add(hbmG); hbmG.visible=false;
+const hbmStatic=new THREE.Group(), hbmDyn=new THREE.Group(); hbmG.add(hbmStatic,hbmDyn);
+box(10,0.25,5.4,M.substrate,0.2,-0.3,0,hbmStatic);              // package substrate
+box(7.2,0.16,4.2,M.interposer,-0.6,-0.1,0,hbmStatic);           // CoWoS silicon interposer
+box(3.0,0.32,3.0,M.gpu,-2.6,0.14,0,hbmStatic);                  // GPU / XPU die
+// DDR5 package for contrast
+box(2.0,0.1,3.4,M.pcb,4.3,-0.12,0,hbmStatic);
+box(1.5,0.12,2.1,M.substrate,4.3,-0.01,0,hbmStatic);
+box(1.15,0.1,1.7,M.dram,4.3,0.1,0,hbmStatic);
+const HX=1.2, HW=1.9;
+const stackG=new THREE.Group(); hbmDyn.add(stackG);
+const limitPlane=new THREE.Mesh(new THREE.PlaneGeometry(2.8,2.8),M.plane); limitPlane.rotation.x=-Math.PI/2; limitPlane.position.set(HX,0,0); hbmDyn.add(limitPlane);
+const HB={dieTh:0.16,gapBump:0.07,gapHyb:0.012,baseTh:0.14,baseY:0.02};
+const H_LIMIT=HB.baseY+HB.baseTh+12*(HB.dieTh+HB.gapBump)+0.02;
+let dieMeshes=[];
+function buildHbm(){
+  disposeGroup(stackG); dieMeshes=[];
+  const g=GENS[S.gen], bond=S.bond;
+  const thin=g.n>12&&bond!=="hyb";
+  const gap=bond==="hyb"?HB.gapHyb:(thin?HB.gapBump*0.5:HB.gapBump);
+  const dieTh=thin?HB.dieTh*0.8:HB.dieTh;
+  const baseMat=S.base==="tsmc"?M.logic:M.dram;
+  let y=HB.baseY;
+  const base=box(HW,HB.baseTh,HW,baseMat,HX,y+HB.baseTh/2,0,stackG); base.userData.k=0; dieMeshes.push(base); y+=HB.baseTh;
+  const tsvN=g.iface2048?6:4, tsvMat=M.tsv;
+  for(let k=0;k<g.n;k++){
+    // bond layer
+    if(bond==="hyb"){ const f=box(HW,gap,HW,M.metal,HX,y+gap/2,0,stackG); f.userData.k=k+1; f.userData.bond=true; dieMeshes.push(f); }
+    else{
+      const grp=new THREE.Group(); grp.position.set(HX,y+gap/2,0); grp.userData.k=k+1; grp.userData.bond=true; stackG.add(grp); dieMeshes.push(grp);
+      if(bond==="ncf") box(HW,gap*0.9,HW,M.ncf,0,0,0,grp);
+      for(let i=0;i<5;i++) for(let j=0;j<5;j++){ const s=new THREE.Mesh(new THREE.SphereGeometry(gap*0.42,8,6),M.bump); s.position.set((i-2)*HW/5.6,0,(j-2)*HW/5.6); grp.add(s); }
+    }
+    y+=gap;
+    const d=box(HW,dieTh,HW,M.dram,HX,y+dieTh/2,0,stackG); d.userData.k=k+1; dieMeshes.push(d);
+    // TSVs through this die
+    for(let i=0;i<tsvN;i++) for(let j=0;j<tsvN;j++){ const t=cyl(0.028,dieTh+gap,tsvMat,HX+(i-(tsvN-1)/2)*HW/(tsvN+1),y+dieTh/2-gap/2,(j-(tsvN-1)/2)*HW/(tsvN+1),stackG,6); t.userData.k=k+1; dieMeshes.push(t); }
+    y+=dieTh;
+  }
+  // mold
+  if(bond==="muf"){ const m=box(HW+0.25,y-HB.baseY+0.05,HW+0.25,M.mold,HX,HB.baseY+(y-HB.baseY)/2,0,stackG); m.userData.mold=true; m.userData.k=0; dieMeshes.push(m); }
+  const top=y;
+  limitPlane.position.y=H_LIMIT;
+  limitPlane.material.opacity=thin?0.28:(bond==="hyb"&&g.n>12?0.22:0.12);
+  limitPlane.material.color.copy(thin?col.amber:(bond==="hyb"&&g.n>12?new THREE.Color(css("--good")):col.ink3));
+  stackG.userData.top=top;
+}
+buildHbm();
+function layoutHbm(){
+  const ex=S.explode, g=GENS[S.gen];
+  for(const m of dieMeshes){
+    const k=m.userData.k||0;
+    m.position.y=(m.userData.baseY==null?(m.userData.baseY=m.position.y):m.userData.baseY)+ex*k*0.22;
+    if(m.userData.mold){ m.visible=ex<0.2; }
+  }
+  limitPlane.visible=ex<0.2;
+}
+addLabel("GPU / XPU die","TSMC N3 / N2 logic",v=>v.set(-3.2,0.45,1.3),hbmG);
+addLabel("Silicon interposer","CoWoS: joins HBM to the GPU",v=>v.set(-1.4,0.02,2.1),hbmG);
+addLabel("Base die","logic: routes 1024 or 2048 wires to the interposer",v=>v.set(HX+0.3,HB.baseY+0.12,HW/2+0.15),hbmG);
+const lCore=addLabel("Core DRAM dies","n-Hi, thinned, TSV-drilled",v=>v.set(HX-HW/2-0.15,stackG.userData.top*0.55+S.explode*GENS[S.gen].n*0.1,0.3),hbmG);
+const lTsv=addLabel("TSVs","through-silicon vias: the vertical wires",v=>v.set(HX-0.2,stackG.userData.top+0.3+S.explode*GENS[S.gen].n*0.22,-0.6),hbmG);
+const lBond=addLabel("Bond layer","micro-bumps + underfill / NCF film",v=>v.set(HX+HW/2+0.15,HB.baseY+HB.baseTh+0.75+S.explode*0.9,-0.7),hbmG); lBond.show=()=>S.bond!=="hyb";
+const lHyb=addLabel("Hybrid bond","Cu-to-Cu, no bumps, no gap",v=>v.set(HX+HW/2+0.15,HB.baseY+HB.baseTh+0.9+S.explode*0.9,-0.5),hbmG); lHyb.show=()=>S.bond==="hyb";
+const lLim=addLabel("Package-height ceiling","same height budget for 12-Hi and 16-Hi",v=>v.set(HX-1.35,H_LIMIT,1.35),hbmG); lLim.show=()=>S.explode<0.2;
+addLabel("DDR5 package","one die, no TSVs, no stacking",v=>v.set(4.3,0.3,-1.6),hbmG);
+const lMold=addLabel("Molded underfill (MR-MUF)","one mold fills every gap at once",v=>v.set(HX+HW/2+0.55,stackG.userData.top+0.05,0.4),hbmG); lMold.show=()=>S.bond==="muf"&&S.explode<0.2;
+
+// ---------- resize ----------
+function resize(){ const b=$("#glbox"); const w=b.clientWidth, h=b.clientHeight; renderer.setSize(w,h,false); camera.aspect=w/h; camera.updateProjectionMatrix(); }
+new ResizeObserver(resize).observe($("#glbox")); resize();
+
+// ---------- loop ----------
+let last=performance.now(), scanU=0;
+function tick(now){
+  const dt=Math.min(0.05,(now-last)/1000); last=now;
+  updateCamera();
+  if(mode==="log"){
+    morphFin+=(morphFinT-morphFin)*Math.min(1,dt*4); morphBsp+=(morphBspT-morphBsp)*Math.min(1,dt*4);
+    layoutLog(false);
+    scanG.visible=S.loop&&S.logView!=="feol";
+    if(S.loop){
+      stepT+=dt; if(stepT>1.1){ stepT=0; stepI=(stepI+1)%STEPS.length; if(stepI===0){ layerN=layerN%NODES[S.node].maskN+1; } showStep(); }
+      const topY=layerY[NLAY-1].y+0.9;
+      if(stepI===2){ scanU=(scanU+dt*0.9)%1; scanG.position.set(-LW/2+1+scanU*(LW-2),topY+0.9,Math.sin(scanU*6.28*2)*1.6); beam.visible=true; beamCore.visible=true; beam.material.color.copy(col.accent); beam.position.y=-0.55; beam.scale.set(1,1.6,1); beamCore.position.y=-0.55; beamCore.scale.y=1.6; }
+      else { scanG.position.set(-LW/2+1+scanU*(LW-2),topY+1.4,Math.sin(scanU*6.28*2)*1.6); beam.visible=false; beamCore.visible=false; }
+    }
+  }else if(mode==="hbm"){ layoutHbm(); }
+  renderer.render(scene,camera); drawLabels();
+  requestAnimationFrame(tick);
+}
+let m0="log"; try{m0=localStorage.getItem("wp-mode")||"log";}catch(e){}
+setMode(m0);
+requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>
