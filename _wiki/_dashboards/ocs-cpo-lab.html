@@ -866,9 +866,9 @@ function orbitTo(v){orbGoal={theta:v.theta,phi:v.phi,r:v.r,target:v.target.clone
   cv.addEventListener("pointerup",()=>drag=null); cv.addEventListener("pointercancel",()=>drag=null);
   cv.addEventListener("wheel",e=>{e.preventDefault(); orbGoal=null; orb.r=Math.min(40,Math.max(7,orb.r*(1+Math.sign(e.deltaY)*0.08)));},{passive:false});
 })();
-function updateCamera(){
-  if(orbGoal){ const k=0.08; orb.theta+=(orbGoal.theta-orb.theta)*k; orb.phi+=(orbGoal.phi-orb.phi)*k; orb.r+=(orbGoal.r-orb.r)*k; orb.target.lerp(orbGoal.target,k);
-    if(Math.abs(orbGoal.r-orb.r)<0.01 && Math.abs(orbGoal.theta-orb.theta)<0.001) orbGoal=null; }
+function updateCamera(dt){
+  if(orbGoal){ const k=1-Math.exp(-6*(dt||0.016)); orb.theta+=(orbGoal.theta-orb.theta)*k; orb.phi+=(orbGoal.phi-orb.phi)*k; orb.r+=(orbGoal.r-orb.r)*k; orb.target.lerp(orbGoal.target,k);
+    if(Math.abs(orbGoal.r-orb.r)<0.01&&Math.abs(orbGoal.theta-orb.theta)<0.001&&orb.target.distanceTo(orbGoal.target)<0.01) orbGoal=null; }
   const t=orb.target, s=Math.sin(orb.phi);
   camera.position.set(t.x+orb.r*s*Math.sin(orb.theta), t.y+orb.r*Math.cos(orb.phi), t.z+orb.r*s*Math.cos(orb.theta));
   camera.lookAt(t);
@@ -1259,8 +1259,8 @@ new ResizeObserver(resize).observe($("#glbox")); resize();
 rebuildBeams();
 let last=performance.now(), phot=0, lastStage=-1, lastEx=-1;
 function tick(now){
-  const dt=Math.min(0.05,(now-last)/1000); last=now;
-  updateCamera();
+  const raw=(now-last)/1000, dt=Math.min(0.05,raw); last=now;
+  updateCamera(Math.min(0.3,raw));
   if(ocsG.visible){
     if(retarget){
       retarget.t=Math.min(1,retarget.t+dt/0.75); const u=smooth(retarget.t);

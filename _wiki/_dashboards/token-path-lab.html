@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Token Path Lab</title>
+<meta name="description" content="Interactive 3D explainer: how one prompt is served across many GPUs (weights, KV cache, prefill, decode, all-to-all, the spill to NVL576 and scale-up optics) and how Lumentum makes the EML lasers that light the links. Every number attributed to the Capstone wiki.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f5f7; --panel:#ffffff; --panel-2:#eef0f3; --ink:#15181d; --ink-2:#4a515c; --ink-3:#7a828e;
+  --line:#d9dde3; --accent:#0a84c6; --accent-2:#0f6fa3; --amber:#b86b00; --red:#c2372f; --copper:#a8612a;
+  --scene-bg:#e9ecf0; --chip:#e3e7ec; --good:#1d7a4f;
+  --shadow:0 1px 2px rgba(0,0,0,.06),0 6px 24px rgba(0,0,0,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0b0d10; --panel:#13161b; --panel-2:#1a1e25; --ink:#e9edf2; --ink-2:#aab2be; --ink-3:#737d8a;
+    --line:#262b33; --accent:#4cc2ff; --accent-2:#8fd8ff; --amber:#ffb454; --red:#ff6b5e; --copper:#d98c4f;
+    --scene-bg:#0e1116; --chip:#1f242c; --good:#4fd18b;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 30px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0b0d10; --panel:#13161b; --panel-2:#1a1e25; --ink:#e9edf2; --ink-2:#aab2be; --ink-3:#737d8a;
+  --line:#262b33; --accent:#4cc2ff; --accent-2:#8fd8ff; --amber:#ffb454; --red:#ff6b5e; --copper:#d98c4f;
+  --scene-bg:#0e1116; --chip:#1f242c; --good:#4fd18b;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+body{overflow-x:hidden}
+.mono{font-family:"JetBrains Mono",ui-monospace,Consolas,monospace}
+.wrap{max-width:1280px;margin:0 auto;padding:20px 16px 60px}
+header.top{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:14px}
+h1{margin:0;font-size:clamp(28px,4.4vw,48px);line-height:.95;letter-spacing:-.03em;font-weight:800;text-transform:uppercase}
+h1 span{color:var(--accent)}
+.sub{color:var(--ink-2);font-size:14px;max-width:600px;margin-top:8px;line-height:1.45}
+.sub a{color:var(--accent)}
+.tabs{display:flex;gap:6px;background:var(--panel);border:1px solid var(--line);padding:4px;border-radius:12px;box-shadow:var(--shadow)}
+.tabs button,.seg button,.btn{font:inherit;border:0;background:transparent;color:var(--ink-2);padding:9px 14px;border-radius:9px;cursor:pointer;font-weight:600;font-size:14px}
+.tabs button.on{background:var(--accent);color:#fff}
+:root[data-theme="dark"] .tabs button.on,:root[data-theme="dark"] .steps button.on{color:#04121b}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tabs button.on,:root:not([data-theme="light"]) .steps button.on{color:#04121b}}
+.themebtn{font:inherit;border:1px solid var(--line);background:var(--panel);color:var(--ink-2);border-radius:10px;padding:9px 11px;cursor:pointer}
+
+.stage{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:var(--scene-bg);box-shadow:var(--shadow);height:min(70vh,680px);min-height:440px}
+#glbox{position:absolute;inset:0}
+#gl{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none;cursor:grab}
+#gl:active{cursor:grabbing}
+#labels{position:absolute;inset:0;pointer-events:none}
+.lbl{position:absolute;transform:translate(-50%,-100%);font-size:11px;font-weight:600;color:var(--ink);background:color-mix(in srgb,var(--panel) 82%,transparent);border:1px solid var(--line);padding:3px 7px;border-radius:6px;white-space:nowrap;backdrop-filter:blur(4px)}
+.lbl small{display:block;font-weight:500;color:var(--ink-3);font-size:10px}
+.lbl::after{content:"";position:absolute;left:50%;bottom:-7px;width:1px;height:6px;background:var(--ink-3)}
+.lbl.hot{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 22%,var(--panel));z-index:2}
+
+.hud{position:absolute;left:14px;top:14px;width:330px;max-height:calc(100% - 28px);overflow:auto;background:color-mix(in srgb,var(--panel) 90%,transparent);border:1px solid var(--line);border-radius:14px;padding:14px;backdrop-filter:blur(8px);box-shadow:var(--shadow)}
+.hud h3,.ctrl h3{margin:0 0 4px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+.hud .big{font-size:20px;font-weight:800;letter-spacing:-.02em;margin-bottom:8px;line-height:1.15}
+.hud p{margin:0 0 8px;font-size:12.5px;line-height:1.45;color:var(--ink-2)}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:5px 10px;font-size:12.5px;align-items:baseline;margin:0}
+.kv dt{color:var(--ink-3);font-weight:600;text-transform:uppercase;font-size:10.5px;letter-spacing:.06em}
+.kv dd{margin:0;color:var(--ink)}
+.src{color:var(--ink-3);font-size:10.5px}
+.tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:5px;background:color-mix(in srgb,var(--amber) 18%,transparent);color:var(--amber);margin-left:4px;vertical-align:1px}
+.tag.d{background:color-mix(in srgb,var(--ink-3) 18%,transparent);color:var(--ink-3)}
+.tag.r{background:color-mix(in srgb,var(--red) 18%,transparent);color:var(--red)}
+.meter{margin-top:8px}
+.meter .row{display:flex;justify-content:space-between;font-size:11px;color:var(--ink-3);margin-bottom:4px}
+.bar{height:9px;border-radius:5px;background:var(--chip);overflow:hidden;position:relative;display:flex}
+.bar i{display:block;height:100%;transition:width .35s ease}
+.bar i.w{background:var(--accent)} .bar i.k{background:var(--amber)} .bar i.over{background:var(--red)}
+.verdict{font-weight:700;font-size:13px;margin-top:8px;padding:8px 10px;border-radius:9px;background:var(--chip)}
+.verdict.ok{color:var(--good)} .verdict.opt{color:var(--amber)} .verdict.bad{color:var(--red)}
+
+.ctrl{position:absolute;right:14px;top:14px;width:310px;max-height:calc(100% - 28px);overflow:auto;background:color-mix(in srgb,var(--panel) 90%,transparent);border:1px solid var(--line);border-radius:14px;padding:14px;backdrop-filter:blur(8px);box-shadow:var(--shadow)}
+.steps{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:8px}
+.steps button{font:700 12px "JetBrains Mono",monospace;padding:7px 0;border-radius:7px;border:1px solid var(--line);background:var(--chip);color:var(--ink-2);cursor:pointer}
+.steps button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.row2{display:flex;gap:6px;flex-wrap:wrap}
+.btn{border:1px solid var(--line);background:var(--chip);color:var(--ink);padding:7px 11px;font-size:13px}
+.btn:hover{border-color:var(--accent)}
+.seg{display:flex;background:var(--chip);border-radius:10px;padding:3px;gap:3px;border:1px solid var(--line);flex-wrap:wrap}
+.seg button{flex:1;padding:6px 6px;font-size:12px}
+.seg button.on{background:var(--panel);color:var(--ink);box-shadow:var(--shadow)}
+label.f{display:block;margin-top:10px;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+label.f span{float:right;font-family:"JetBrains Mono",monospace;color:var(--ink);text-transform:none;letter-spacing:0}
+select{width:100%;margin-top:4px;font:inherit;font-size:12.5px;padding:6px 8px;border-radius:8px;border:1px solid var(--line);background:var(--chip);color:var(--ink)}
+input[type=range]{width:100%;accent-color:var(--accent);margin:6px 0 2px}
+.ticks{display:flex;justify-content:space-between;font-size:10.5px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;font-weight:700}
+.hint{font-size:11px;color:var(--ink-3);margin-top:8px;line-height:1.4}
+.help{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);font-size:11px;color:var(--ink-3);background:color-mix(in srgb,var(--panel) 80%,transparent);border:1px solid var(--line);padding:5px 10px;border-radius:20px;white-space:nowrap}
+#fallback{position:absolute;inset:0;display:none;align-items:center;justify-content:center;text-align:center;padding:30px;color:var(--ink-2)}
+
+section.explain{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 16px 14px;box-shadow:var(--shadow)}
+.card .n{font:700 11px "JetBrains Mono",monospace;color:var(--accent);letter-spacing:.08em}
+.card h4{margin:4px 0 6px;font-size:16px;letter-spacing:-.01em}
+.card p{margin:0;color:var(--ink-2);font-size:13.5px;line-height:1.5}
+h2{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin:34px 0 12px;font-weight:700}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+td.v{font-weight:700;white-space:nowrap}
+.ladder{display:grid;grid-template-columns:150px 1fr auto;gap:6px 10px;align-items:center;font-size:12.5px}
+.ladder .b{height:12px;border-radius:6px;background:var(--accent);opacity:.85}
+.ladder .b.c{background:var(--copper)} .ladder .b.o{background:var(--amber)}
+.ladder .v{font-family:"JetBrains Mono",monospace;font-weight:600;white-space:nowrap}
+footer{margin-top:30px;color:var(--ink-3);font-size:12px;line-height:1.5;border-top:1px solid var(--line);padding-top:14px}
+@media (max-width:900px){section.explain{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}}
+@media (max-width:760px){
+  .stage{height:auto;min-height:0;display:flex;flex-direction:column}
+  #glbox{position:relative;inset:auto;height:56vh;min-height:340px;flex:none}
+  .hud,.ctrl{position:static;width:auto;max-height:none;margin:10px;backdrop-filter:none}
+  .help{display:none}.lbl{font-size:10px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div>
+      <h1>The Token <span>Path</span></h1>
+      <div class="sub">One prompt, many GPUs: where the weights and the KV cache live, what crosses NVLink on every token, and the moment a job outgrows one rack and needs scale-up optics. Then the laser that lights those links, from InP wafer to chip. Companion to <a href="ocs-cpo-lab.html">The Light Path</a>. Drag to orbit, scroll to zoom.</div>
+    </div>
+    <div style="display:flex;gap:8px;align-items:center">
+      <div class="tabs" role="tablist">
+        <button id="tabTOK" class="on" role="tab">Prompt · step by step</button>
+        <button id="tabEML" role="tab">EML laser · how Lumentum makes it</button>
+      </div>
+      <button class="themebtn" id="themeBtn" title="Toggle theme" aria-label="Toggle theme">◐</button>
+    </div>
+  </header>
+
+  <div class="stage" id="stage">
+    <div id="glbox">
+      <canvas id="gl"></canvas>
+      <div id="labels"></div>
+      <div id="fallback">The 3D scene needs WebGL and the three.js library from cdnjs. The steps, numbers and calculator below still work.</div>
+      <div class="help">drag to orbit · scroll to zoom · ← → steps</div>
+    </div>
+
+    <!-- HUD: token path -->
+    <div class="hud" id="hudTOK">
+      <h3 id="tokStepN">Step 1 of 7</h3>
+      <div class="big" id="tokTitle"></div>
+      <p id="tokBody"></p>
+      <div class="meter">
+        <div class="row"><span>Memory needed vs one NVL72 (72 × HBM)</span><span class="mono" id="memTxt"></span></div>
+        <div class="bar"><i class="w" id="barW"></i><i class="k" id="barK"></i><i class="over" id="barO"></i></div>
+        <div class="src" style="margin-top:4px">blue = weights · amber = KV cache · red = beyond one rack</div>
+      </div>
+      <div class="verdict" id="verdict"></div>
+      <dl class="kv" style="margin-top:10px">
+        <dt>Weights</dt><dd id="oW"></dd>
+        <dt>KV cache</dt><dd id="oK"></dd>
+        <dt>GPUs (memory)</dt><dd id="oG"></dd>
+        <dt>Decode floor</dt><dd id="oT"></dd>
+        <dt>Check</dt><dd id="oC" class="src"></dd>
+      </dl>
+    </div>
+
+    <!-- HUD: EML -->
+    <div class="hud" id="hudEML" style="display:none">
+      <h3 id="emlStepN">Station 1 of 8</h3>
+      <div class="big" id="emlTitle"></div>
+      <p id="emlBody"></p>
+      <dl class="kv" id="emlKv"></dl>
+    </div>
+
+    <!-- Controls: token path -->
+    <div class="ctrl" id="ctrlTOK">
+      <h3>Walk the prompt</h3>
+      <div class="steps" id="stepBtns"></div>
+      <div class="row2"><button class="btn" id="prev">← Prev</button><button class="btn" id="next">Next →</button><button class="btn" id="play">▶ Auto</button></div>
+      <h3 style="margin-top:14px">What is being served</h3>
+      <label class="f">Model</label>
+      <select id="model"></select>
+      <label class="f">Precision <span id="precV"></span></label>
+      <div class="seg" id="precSeg"><button data-v="2">FP16</button><button data-v="1">FP8</button><button data-v="0.5" class="on">FP4</button></div>
+      <label class="f">KV cache per token <span id="kvV"></span></label>
+      <select id="kvsel"></select>
+      <label class="f">Context per user (tokens) <span id="ctxV"></span></label>
+      <input type="range" id="ctx" min="0" max="8" step="1" value="4">
+      <div class="ticks"><span>8k</span><span>128k</span><span>2M</span></div>
+      <label class="f">Concurrent users on the model <span id="usrV"></span></label>
+      <input type="range" id="usr" min="0" max="10" step="1" value="4">
+      <div class="ticks"><span>1</span><span>32</span><span>1,024</span></div>
+      <label class="f">GPU generation</label>
+      <select id="gpu"></select>
+      <div class="row2" style="margin-top:10px"><button class="btn" id="spill">▲ Push it past one rack</button><button class="btn" id="resetCalc">Reset</button></div>
+      <div class="hint">Derived arithmetic on sourced constants, excluding activations, overheads and compute limits; every constant carries its source in the tables below. Decode floor = bytes read per step ÷ aggregate HBM bandwidth [DER].</div>
+    </div>
+
+    <!-- Controls: EML -->
+    <div class="ctrl" id="ctrlEML" style="display:none">
+      <h3>Production line</h3>
+      <input type="range" id="emlStage" min="0" max="7" step="1" value="0">
+      <div class="ticks"><span>InP wafer</span><span>Epi</span><span>Chip</span><span>Module</span></div>
+      <div class="row2" style="margin-top:8px"><button class="btn" id="emlPrev">← Prev</button><button class="btn" id="emlNext">Next →</button></div>
+      <h3 style="margin-top:14px">Sites</h3>
+      <div class="seg" id="siteSeg"></div>
+      <div id="siteBody" class="hint"></div>
+      <div class="hint">Stations 4-7 follow the wafer-to-chip flow described by a laser-industry expert (call, 2026-07-23), not a Lumentum disclosure; items marked <span class="tag d">generic</span> are industry knowledge the wiki does not carry.</div>
+    </div>
+  </div>
+
+  <!-- Explain: token path -->
+  <section class="explain" id="explainTOK">
+    <div class="card"><div class="n">01 · THE TWO PHASES</div><h4>Prefill is compute, decode is memory</h4><p>Prefill runs every prompt token at once and is compute-bound; decode makes one token at a time and is memory-bound, because every new token re-reads the whole KV cache plus the active weights from HBM.<span class="src"> Bernstein, 2026-08-28 · Stratechery, 2026-05-11</span> The best decode batch is only ~1-5 per sequence slot.<span class="src"> SemiAnalysis · Bennett, 2026-09-21</span></p></div>
+    <div class="card"><div class="n">02 · WHY ONE RACK</div><h4>Experts are spread, tokens hop</h4><p>&gt;95% of an MoE’s weight memory sits in routed experts, which “divide naturally among sockets”: ~15,000 experts, 256 per layer, so each of 72 GPUs holds 3-4 per layer and there is “a lot of all-to-all”.<span class="src"> SemiAnalysis · Bennett, 2026-09-21</span> GB200 NVL72 runs a 64-GPU all-to-all 18x faster than 64 H100s; H100 utilisation on DeepSeek is 16.6% vs 54.5% on a dense model.<span class="src"> SemiAnalysis, 2025-08-20</span></p></div>
+    <div class="card"><div class="n">03 · WHY 576</div><h4>Range, not speed</h4><p>Local HBM is ~21-22 TB/s vs NVLink 6 at ~3.6 TB/s: “what NPO changes is not SPEED but RANGE”.<span class="src"> DAMNANG, 2026-08-10</span> The per-GPU HBM cut in Rubin Ultra “is absorbed by a scale-up domain that ties 576 of them together”.<span class="src"> DAMNANG, 2026-09-04</span> Scale-up is ~10% of system cost and buys room for 10-20T-parameter models or 2-4M-token contexts.<span class="src"> SemiAnalysis (Jalapeño), 2026-08-25</span></p></div>
+  </section>
+
+  <section id="moreTOK">
+    <h2>The bandwidth ladder a token climbs</h2>
+    <div class="card">
+      <div class="ladder" id="ladder"></div>
+      <div class="src" style="margin-top:8px">Per GPU, one direction, Rubin generation: FundaAI, 2026-09-01 (HBM4 local 176 Tb/s · NVLink scale-up 14.4 Tb/s · scale-out 1.6 Tb/s). NVLink 6 = 3.6 TB/s both ways = 14.4 Tb/s one way (unit trap flagged on NVDA page). Bars are log-scaled.</div>
+    </div>
+    <h2>The constants behind the calculator</h2>
+    <div class="grid2">
+      <div class="card">
+        <h4 style="margin:0 0 8px">GPU memory by generation</h4>
+        <table>
+          <tr><th>GPU</th><th>HBM per GPU</th><th>Bandwidth</th><th>Source</th></tr>
+          <tr><td>H100</td><td class="v">80 GB</td><td class="v">3.35 TB/s</td><td class="src">Stratechery, 2026-05-11</td></tr>
+          <tr><td>B200</td><td class="v">192 GB (8-Hi)</td><td class="v">8.0 TB/s</td><td class="src">UBS, May 2026; MS · Byrd, 09-21</td></tr>
+          <tr><td>GB300 / B300</td><td class="v">288 GB HBM3E (12-Hi)</td><td class="v">8.0 TB/s</td><td class="src">UBS, May 2026; MS · Byrd, 09-21 · NVL72 ≈ 21 TB (SemiAnalysis, 09-13)</td></tr>
+          <tr><td>Rubin VR200</td><td class="v">288 GB HBM4 (8×36 GB)</td><td class="v">~22 TB/s</td><td class="src">Mizuho 08-16; DAMNANG 08-10 · NVL72 = 20.7 TB HBM + 54 TB SOCAMM (NVDA)</td></tr>
+          <tr><td>Rubin Ultra</td><td class="v">192 GB <span class="tag">disputed: 1 TB → 768 → 576 → 384 → 256 → 192</span></td><td class="v">c. 61 TB/s</td><td class="src">DAMNANG 08-10 / SemiAnalysis 09-13 (192); UBS, JPM, Arete, Mizuho higher; MS · Byrd 09-21 (BW)</td></tr>
+          <tr><td>Feynman</td><td class="v">768 GB HBM4E (16-Hi)</td><td class="v">n/a on wiki</td><td class="src">Mizuho, 2026-08-16</td></tr>
+          <tr><td>NVL576 pool</td><td class="v">110.6 TB (192 GB) · 147.5 TB (256 GB)</td><td></td><td class="src">SemiAnalysis via Jefferies, ~2026-08-25</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <h4 style="margin:0 0 8px">Models and KV cache</h4>
+        <table>
+          <tr><th>Item</th><th>Value</th><th>Source</th></tr>
+          <tr><td>DeepSeek V3/R1</td><td class="v">671B total / 37B active (~5%); ~1.3 TB at FP16</td><td class="src">MS · Nowak, 08-14; DAMNANG, 05-30</td></tr>
+          <tr><td>DeepSeek V4 Pro</td><td class="v">1.6T; ~800 GB of weights at FP4</td><td class="src">SemiAnalysis, 2026-08-25</td></tr>
+          <tr><td>DeepSeek V4.1-Flash</td><td class="v">552B; 16B active decode; 1M context; 890 B/token KV (FP4)</td><td class="src">release, 2026-09-10</td></tr>
+          <tr><td>Kimi K3</td><td class="v">2.8T; 16 of 896 experts/token (~1.7%); MXFP4; weights ≈ 8% of GB300 NVL72 HBM</td><td class="src">FundaAI ~07-19; @zephyr_z9 ~07-20; SemiAnalysis 09-13</td></tr>
+          <tr><td>Llama 4 Maverick</td><td class="v">400B; ~800 GB (FP16)</td><td class="src">DAMNANG, 2026-05-30</td></tr>
+          <tr><td>KV per token</td><td class="v">classic attention “hundreds of kB”; MLA tens of kB; hybrids ~25 kB; 70 kB reference</td><td class="src">SemiAnalysis · Bennett, 2026-09-21</td></tr>
+          <tr><td>KV example</td><td class="v">128K context on a 70B model ≈ 40 GB</td><td class="src">NuttyCLD, 2026-08-27</td></tr>
+          <tr><td>Agentic KV</td><td class="v">up to ~10x the weights at 128K → 1M context <span class="tag">unconfirmed</span></td><td class="src">BofA expert via X, 2026-09-27</td></tr>
+          <tr><td>Claude Code trace</td><td class="v">median 142k input / 444 output tokens per turn; 65 turns per session</td><td class="src">SemiAnalysis, 2026-08-03</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h4 style="margin:0 0 8px">Reality checks for the derived decode floor</h4>
+      <table>
+        <tr><th>Mark</th><th>Value</th><th>Source</th></tr>
+        <tr><td>GB300 FP8 (frontier MoE)</td><td class="v">108 tok/s/user at ~$35/M</td><td class="src">SemiAnalysis, 2026-08-09</td></tr>
+        <tr><td>GB200 FP4</td><td class="v">176 tok/s/user at $13.4/M</td><td class="src">SemiAnalysis, 2026-08-09</td></tr>
+        <tr><td>TileRT on 8×B200</td><td class="v">340 tok/s/user at $13.56/M output</td><td class="src">SemiAnalysis, 2026-08-09</td></tr>
+        <tr><td>Kimi K3 on B300</td><td class="v">P90 30 tok/s/user; 4,844 input tok/s/GPU; $0.171/M</td><td class="src">SemiAnalysis, 2026-08-03</td></tr>
+        <tr><td>DeepSeek V4 on GB300 NVL72</td><td class="v">$0.156/M at 50 tok/s/user; all-to-all stays on NVLink</td><td class="src">SemiAnalysis, 2026-06-09</td></tr>
+        <tr><td>Per GPU at 50 tok/s/user</td><td class="v">2,000-3,500 tok/s/GPU</td><td class="src">MS, 2026-08-12</td></tr>
+        <tr><td>Disaggregated serving</td><td class="v">Splitwise 2.35x; DistServe up to 7.4x per GPU; idle KV to DDR/SSD “in less than a second”</td><td class="src">NuttyCLD 08-27; Bennett 09-21</td></tr>
+      </table>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <div class="n" style="color:var(--red)">NOT IN THE WIKI</div>
+      <p>An NVDA-confirmed Rubin Ultra HBM figure; NVL72 aggregate NVLink bandwidth (72 × 3.6 TB/s ≈ 259 TB/s is derived); NVLink bytes moved per token; KV bytes per token for GPT or Claude; the threshold at which a job spills from NVL72 to NVL576; whether the rack-to-rack link is NPO or CPO; the labs’ internal $/GPU-hour. The scene draws three racks for an eight-rack domain and 4 GPUs per tray for clarity; not to scale.</p>
+    </div>
+  </section>
+
+  <!-- Explain: EML -->
+  <section class="explain" id="explainEML" style="display:none">
+    <div class="card"><div class="n">01 · THE PRODUCT</div><h4>What an EML is</h4><p>An electro-absorption modulated laser: a DFB laser (grating-defined single wavelength) and an electro-absorption modulator on the same InP chip. The DSP’s electrical signal drives the modulator, which switches the laser light on and off at 100G or 200G per lane. 200G per lane is “about 2x ASP” with “very little competition… Broadcom being the other main supplier”.<span class="src"> LITE @ DB conference, 2026-08-27</span></p></div>
+    <div class="card"><div class="n">02 · THE CONSTRAINT</div><h4>Substrate and epi, not demand</h4><p>Lasers need sulfur-doped InP, which yields worse than the iron-doped InP used for photodetectors.<span class="src"> LITE IR, 2026-09-11</span> AXT ~40% / Sumitomo ~40% / JX ~10% of substrates, on allocation for “&gt;18 months”; third price hike this year, +10% more in 4Q26.<span class="src"> AXT, 2026-08-31; UDN via Jefferies, 08-17</span> Aixtron has ~90-100% of InP MOCVD, slots reserved into 2027.<span class="src"> AIXA Q3/25 call; Jefferies, 2026-06-19</span></p></div>
+    <div class="card"><div class="n">03 · THE MIX SHIFT</div><h4>EML share falls as 1.6T rises</h4><p>EML-based transceivers drop from 70-80% at 800G to 40-50% at 1.6T as silicon photonics with CW lasers gains.<span class="src"> LITE, 2026-08-27</span> So the same fabs are qualifying CW flows: ~15% of output to CW “given strong pricing” (Citi, 09-22) vs “doing it as a favour” (Jefferies, 09-18) <span class="tag">disputed</span>; JPM sees 10-20% of chip output in 2027 (08-14). NVIDIA’s ELS is ~$425 with 8 chips.<span class="src"> LITE IR, 2026-09-11</span></p></div>
+  </section>
+  <section id="moreEML" style="display:none">
+    <h2>Lumentum’s laser numbers</h2>
+    <div class="grid2">
+      <div class="card">
+        <h4 style="margin:0 0 8px">Capacity, supply, wafer size</h4>
+        <table>
+          <tr><th>Item</th><th>Value</th><th>Source</th></tr>
+          <tr><td>Capacity steps</td><td class="v">+40% Jun-24→Jun-25, another +40% by end-CY25</td><td class="src">Lowe, 2025-02-06</td></tr>
+          <tr><td>Japan EML capacity</td><td class="v">8x in 2.5 years</td><td class="src">Aurelion paraphrase, 2026-07-29</td></tr>
+          <tr><td>EML units</td><td class="v">&gt;50% growth, Dec-26 quarter y/y</td><td class="src">Q4 FY26 call, 2026-08-11</td></tr>
+          <tr><td>Demand vs supply</td><td class="v">demand &gt; supply by more than 30%; 90%+ of output take-or-pay through CY27, extra units auctioned</td><td class="src">LITE, 2026-05-06 / 05-07</td></tr>
+          <tr><td>FY26 capex</td><td class="v">$451.3M</td><td class="src">10-K FY26</td></tr>
+          <tr><td>Wafer size</td><td class="v">3→4-inch in 2025; 6-inch only with Greensboro (2028); 6-inch = 2.25x area, ~4.36x chips of 3-inch</td><td class="src">LITE 2025-08-12; IR 09-11; Citi 07-16</td></tr>
+          <tr><td>6-inch yield</td><td class="v">AXT ingot ~5%; Sumitomo S-doped 6-inch “very bad”; COHR says every product yields better on 6-inch <span class="tag">disputed</span></td><td class="src">LITE IR 09-11; COHR 09-08</td></tr>
+          <tr><td>Die size</td><td class="v">200G EML die ~22% larger than 100G; CW die ~60% of an EML</td><td class="src">Citi 07-16; TD Cowen 03-11</td></tr>
+          <tr><td>Requalification</td><td class="v">~6 months per recipe change; cycles 2-3 years; “one year for NVIDIA”</td><td class="src">Yuen 05-07; Citi 09-22; DB 08-27</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <h4 style="margin:0 0 8px">Market, customers, competitors</h4>
+        <table>
+          <tr><th>Item</th><th>Value</th><th>Source</th></tr>
+          <tr><td>EML share</td><td class="v">~50% (LITE); Broadcom the other main 200G supplier</td><td class="src">Citi 2025-08-29; LITE 08-27</td></tr>
+          <tr><td>200G mix</td><td class="v">&gt;25% of EML revenue; 50%+ of volume by mid-2027 (LITE) vs ~25% units / ~40% revenue (MS) <span class="tag">do not reconcile</span></td><td class="src">Q4 FY26 call 08-11; MS 08-12</td></tr>
+          <tr><td>Customers</td><td class="v">Google = Customer A, 26.6% of FY26 revenue; Innolight “probably their biggest customer in the laser” <span class="tag">unconfirmed</span>; NVIDIA low-single-digit %</td><td class="src">10-K; Papa Sylla call 08-11; Citi 07-16</td></tr>
+          <tr><td>Broadcom</td><td class="v">InP fabs “more than tripling” y/y (AVGO) vs “one fab, relatively small” (LITE) <span class="tag">disputed</span></td><td class="src">Kawwas 09-02; LITE IR 09-11</td></tr>
+          <tr><td>Sumitomo · Mitsubishi</td><td class="v">Sumitomo 2.4x capacity by 2028; Mitsubishi ~$1.5bn capex toward optics</td><td class="src">TD Cowen, 2026-03-11</td></tr>
+          <tr><td>China</td><td class="v">DSBJ targets 200G EML in 2H26; Everbright, Source, Accelink, Yuanjie, Sanan 1-2 years behind</td><td class="src">Jefferies 07-14; Citi 07-16</td></tr>
+          <tr><td>MACOM CW</td><td class="v">production late CY27 at the earliest</td><td class="src">FUNDA, 2026-08-12</td></tr>
+          <tr><td>Street on LITE</td><td class="v">JPM OW $1,280 · Redburn Buy $1,270 · Citi/DB/Jefferies Buy $1,200 · Mizuho OP $1,140 · BofA Neutral $1,100 · Barclays OW $1,000 · MS EW $1,000 · UBS Neutral $960 · TD Cowen Hold $800</td><td class="src">as dated on the LITE page (Aug-Sep 2026)</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <div class="n" style="color:var(--red)">NOT IN THE WIKI</div>
+      <p>Wafers per month, number of MOCVD reactors, fab cycle time, die per wafer, chip yield, per-EML ASP in dollars, EML share of LITE revenue or margin, which fab makes 100G vs 200G, and the actual DFB-grating, modulator-integration, cleaving and burn-in recipes. Stations 2-3 and the grating/modulator drawing are industry-generic; the wafer-to-chip flow (stations 4-7) is a laser-industry expert’s description (call, 2026-07-23), not Lumentum’s.</p>
+    </div>
+  </section>
+
+  <footer>
+    Sources: Capstone wiki pages NVDA, LITE, AIXA, AXTI, COHR, AVGO; themes hbm-memory, tokenmaxxing, optical-cpo; transcripts and expert calls as dated. [DER] = derived here from sourced constants; scene geometry is schematic. Built 2026-09-28.
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+"use strict";
+const $=s=>document.querySelector(s);
+try{const t=localStorage.getItem("tp-theme"); if(t) document.documentElement.setAttribute("data-theme",t);}catch(e){}
+const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+$("#themeBtn").onclick=()=>{ const isDark=css("--bg").toLowerCase()==="#0b0d10"; const nt=isDark?"light":"dark"; document.documentElement.setAttribute("data-theme",nt); try{localStorage.setItem("tp-theme",nt);}catch(e){} if(window.applyTheme) window.applyTheme(); };
+const fmtB=b=>b>=1e12?(b/1e12).toFixed(2)+" TB":b>=1e9?(b/1e9).toFixed(0)+" GB":b>=1e6?(b/1e6).toFixed(0)+" MB":(b/1e3).toFixed(0)+" kB";
+const fmtN=n=>n.toLocaleString("en-US");
+
+// =============================== DATA: token path ===============================
+const MODELS=[
+  {id:"v4pro",n:"DeepSeek V4 Pro · 1.6T (active ~5% [DER from V3])",p:1.6e12,a:0.05,src:"SemiAnalysis 2026-08-25 (1.6T, ~800 GB at FP4); active share assumed = V3’s 37/671 [DER]"},
+  {id:"v3",n:"DeepSeek V3/R1 · 671B / 37B active",p:671e9,a:37/671,src:"MS · Nowak 2026-08-14; ~1.3 TB at FP16 (DAMNANG 05-30)"},
+  {id:"k3",n:"Kimi K3 · 2.8T / ~1.7% active (MXFP4)",p:2.8e12,a:0.017,src:"FundaAI ~07-19; @zephyr_z9 ~07-20; weights ≈ 8% of GB300 NVL72 HBM (SemiAnalysis 09-13)"},
+  {id:"v41",n:"DeepSeek V4.1-Flash · 552B / 16B active",p:552e9,a:16/552,src:"release 2026-09-10"},
+  {id:"mav",n:"Llama 4 Maverick · 400B (active 17B [G])",p:400e9,a:17/400,src:"DAMNANG 05-30 (400B, ~800 GB FP16); active 17B is public spec, not on the wiki [G]"},
+  {id:"gpt",n:"10T-class frontier (illustrative) · 5% active",p:10e12,a:0.05,src:"“10-20T-parameter models” is what NVL576 buys room for (SemiAnalysis 08-25); Anthropic Mythos ~10T (Eurasia Group 07-01, unconfirmed); GPT-5.x has no count in the corpus"}
+];
+const KVS=[
+  {n:"70 kB · MLA-style reference",v:70e3,src:"SemiAnalysis · Bennett 2026-09-21"},
+  {n:"25 kB · newer hybrids",v:25e3,src:"SemiAnalysis · Bennett 2026-09-21"},
+  {n:"320 kB · classic attention, 70B-class (40 GB per 128K)",v:320e3,src:"NuttyCLD 2026-08-27 [DER: 40 GB ÷ 128K]"},
+  {n:"890 B · DeepSeek V4.1-Flash, FP4 KV",v:890,src:"release 2026-09-10"}
+];
+const CTX=[8e3,16e3,32e3,64e3,128e3,256e3,512e3,1e6,2e6];
+const USR=[1,2,4,8,16,32,64,128,256,512,1024];
+const GPUS=[
+  {n:"GB300 · 288 GB · 8 TB/s",cap:288e9,bw:8e12,src:"UBS May-26; MS · Byrd 09-21"},
+  {n:"Rubin VR200 · 288 GB HBM4 · 22 TB/s",cap:288e9,bw:22e12,src:"Mizuho 08-16; DAMNANG 08-10"},
+  {n:"Rubin Ultra · 192 GB (disputed) · ~61 TB/s",cap:192e9,bw:61e12,src:"DAMNANG 08-10 / SemiAnalysis 09-13; MS · Byrd 09-21"},
+  {n:"Rubin Ultra · 256 GB variant · ~61 TB/s",cap:256e9,bw:61e12,src:"Mizuho 08-16 (256); MS · Byrd 09-21"},
+  {n:"B200 · 192 GB · 8 TB/s",cap:192e9,bw:8e12,src:"UBS May-26; MS · Byrd 09-21"},
+  {n:"H100 · 80 GB · 3.35 TB/s",cap:80e9,bw:3.35e12,src:"Stratechery 2026-05-11"}
+];
+const STEPS=[
+  {t:"The prompt arrives at the head node",b:"The request is tokenised and scheduled on a CPU head node next to the GPUs (Vera: LPDDR5X ~1.2 TB/s). In an agentic session this is not one prompt but a loop: one task chains 20-50+ LLM calls, and the CPU runs the tools between them.<span class='src'> NVDA Hot Chips 08-25; Bajarin @ BofA, 2026-09-24</span> Claude Code traces: median 142k input / 444 output tokens per turn, 65 turns per session.<span class='src'> SemiAnalysis, 2026-08-03</span>"},
+  {t:"The weights are sharded across the GPUs",b:"A frontier MoE does not fit one GPU: DeepSeek V4 Pro is ~800 GB at FP4 against 288 GB of HBM.<span class='src'> SemiAnalysis 08-25</span> &gt;95% of the weight memory is routed experts, which “divide naturally among sockets” — ~15,000 experts, 256 per layer, 3-4 per layer on each of 72 GPUs.<span class='src'> Bennett, 2026-09-21</span> Blue bars = each GPU’s share of the weights."},
+  {t:"Prefill: the whole prompt at once, then the KV cache",b:"All prompt tokens run in parallel through the layers — compute-bound — and leave behind the KV cache: the attention state of every token, kept in HBM for the rest of the conversation.<span class='src'> Bernstein 08-28</span> Per token that is “hundreds of kB” for classic attention, tens of kB with MLA, ~25 kB for newer hybrids.<span class='src'> Bennett 09-21</span> Amber bars = KV cache. A 128K context on a 70B model is already ~40 GB.<span class='src'> NuttyCLD 08-27</span>"},
+  {t:"Decode: one token at a time, all-to-all on every token",b:"Each new token re-reads the active weights plus the full KV cache from HBM — memory-bandwidth-bound — and the token’s hidden state hops over NVLink to the GPUs holding its experts and back, every layer, every token.<span class='src'> Stratechery 05-11; Bennett 09-21</span> That is the NVL72 case: a 64-GPU all-to-all runs 18x faster on GB200 NVL72 than on 64 H100s, and H100 utilisation on DeepSeek is 16.6% vs 54.5% on a dense model.<span class='src'> SemiAnalysis, 2025-08-20</span> Copper beams = in-rack NVLink."},
+  {t:"Context and users grow — the job outgrows the rack",b:"KV grows with tokens and with concurrent users.<span class='src'> Bernstein 08-28</span> In agentic work it can reach ~10x the weights at 128K → 1M context <span class='tag'>unconfirmed</span>.<span class='src'> BofA expert via X, 09-27</span> When weights + KV exceed 72 × HBM, the domain has to span racks: copper reaches ~2 m, so a copper domain is 1-2 racks at most and the rack-to-rack NVLink hop becomes optical — the NVL576 case.<span class='src'> SemiAnalysis CPO Book 01-01; DAMNANG 09-04</span> Light beams = scale-up optics between racks."},
+  {t:"The agent loop: output → tool → new prompt, KV keeps growing",b:"The GPU reasons and returns an action; the CPU executes it (browser, code, database) and appends the result to the context; the next call re-uses the cached KV and adds to it. CPU speed sets task latency because the GPU waits.<span class='src'> Bajarin @ BofA, 09-24</span> Serving stacks split prefill and decode into separate pools (Splitwise 2.35x, DistServe up to 7.4x per GPU) and park idle KV in DDR/SSD “in less than a second”.<span class='src'> NuttyCLD 08-27; Bennett 09-21</span>"},
+  {t:"Where the light is",b:"Inside the rack the NVLink hop stays copper. Between racks of one NVL576 domain it is scale-up optics on the NVSwitch tray (CPO or NPO undecided; a yield race).<span class='src'> Fubon via Jefferies desk, 09-26</span> The KV hand-off between prefill and decode pools and the traffic between replicas ride the scale-out network (pluggables today, CPO switches first). OCS partitions 576+ clusters, software-gated, possibly late CY28.<span class='src'> LITE IR, 09-11</span> Per GPU the ladder is 176 Tb/s local HBM4 → 14.4 Tb/s scale-up → 1.6 Tb/s scale-out.<span class='src'> FundaAI, 2026-09-01</span> See <a href='ocs-cpo-lab.html' style='color:var(--accent)'>The Light Path</a> for the switch and the laser."}
+];
+
+// ---------- calculator ----------
+const S={step:0,model:0,bytes:0.5,kv:0,ctx:4,usr:4,gpu:1,play:false};
+const modelSel=$("#model"); MODELS.forEach((m,i)=>{const o=document.createElement("option"); o.value=i; o.textContent=m.n; modelSel.appendChild(o);});
+const kvSel=$("#kvsel"); KVS.forEach((k,i)=>{const o=document.createElement("option"); o.value=i; o.textContent=k.n; kvSel.appendChild(o);});
+const gpuSel=$("#gpu"); GPUS.forEach((g,i)=>{const o=document.createElement("option"); o.value=i; o.textContent=g.n; gpuSel.appendChild(o);}); gpuSel.value=1;
+modelSel.onchange=()=>{S.model=+modelSel.value; calc();}; kvSel.onchange=()=>{S.kv=+kvSel.value; calc();}; gpuSel.onchange=()=>{S.gpu=+gpuSel.value; calc();};
+$("#ctx").oninput=()=>{S.ctx=+$("#ctx").value; calc();}; $("#usr").oninput=()=>{S.usr=+$("#usr").value; calc();};
+[...$("#precSeg").children].forEach(b=>b.onclick=()=>{[...$("#precSeg").children].forEach(x=>x.classList.toggle("on",x===b)); S.bytes=+b.dataset.v; calc();});
+let R={};
+$("#spill").onclick=()=>{ let guard=0; while(R.racks<2&&guard<40){ if(S.usr<USR.length-1) S.usr++; else if(S.ctx<CTX.length-1) S.ctx++; else break; calc(); guard++; } $("#usr").value=S.usr; $("#ctx").value=S.ctx; if(S.step<4) setStep(4); };
+$("#resetCalc").onclick=()=>{ S.ctx=4; S.usr=4; S.model=0; S.kv=0; S.gpu=1; S.bytes=0.5; $("#ctx").value=4; $("#usr").value=4; modelSel.value=0; kvSel.value=0; gpuSel.value=1; [...$("#precSeg").children].forEach(x=>x.classList.toggle("on",x.dataset.v==="0.5")); calc(); };
+function calc(){
+  const m=MODELS[S.model], g=GPUS[S.gpu], kv=KVS[S.kv].v, ctx=CTX[S.ctx], usr=USR[S.usr];
+  const W=m.p*S.bytes, Wa=m.p*m.a*S.bytes, K=kv*ctx*usr, T=W+K;
+  const rackCap=72*g.cap, gpus=Math.max(1,Math.ceil(T/g.cap)), racks=Math.ceil(gpus/72);
+  const wStep=Math.min(W,usr*Wa), kStep=K, N=Math.min(gpus,576);
+  const stepS=(wStep+kStep)/(N*g.bw), tps=1/stepS, agg=usr/stepS;
+  R={W,Wa,K,T,rackCap,gpus,racks,stepS,tps,agg,g,m,kv,ctx,usr};
+  $("#precV").textContent=S.bytes===2?"2 B/param":S.bytes===1?"1 B/param":"0.5 B/param";
+  $("#kvV").textContent=fmtB(kv)+"/token"; $("#ctxV").textContent=fmtN(ctx); $("#usrV").textContent=fmtN(usr);
+  $("#oW").innerHTML=fmtB(W)+" total · active per token "+fmtB(Wa)+'<span class="src"> '+m.src+"</span>";
+  $("#oK").innerHTML=fmtB(K)+" = "+fmtB(kv)+" × "+fmtN(ctx)+" × "+fmtN(usr)+'<span class="src"> '+KVS[S.kv].src+"</span>";
+  $("#oG").innerHTML=fmtN(gpus)+" × "+fmtB(g.cap)+" → "+racks+(racks===1?" rack":" racks")+(gpus>576?" (beyond one NVL576 domain)":"")+'<span class="src"> '+g.src+"</span>";
+  $("#oT").innerHTML=(stepS*1e3).toFixed(1)+" ms/token → ≤ "+fmtN(Math.round(tps))+" tok/s/user, "+fmtN(Math.round(agg))+" tok/s aggregate on "+fmtN(N)+" GPUs [DER]";
+  let chk="Marks: GB300 FP8 108 tok/s/user, GB200 FP4 176, TileRT 8×B200 340 (SemiAnalysis 08-09); MS 2,000-3,500 tok/s/GPU at 50 tok/s/user (08-12). ";
+  chk+=tps>2000?"The floor is far above any observed mark — real serving is compute-, comms- and latency-bound long before HBM is.":tps<20?"Below the 30 tok/s P90 SemiAnalysis measured for Kimi K3 on B300 (08-03): at this context × users the KV read alone dominates — this is the case that spills to more GPUs or offloads KV.":"Within an order of magnitude of observed marks; the gap to them is compute, all-to-all and scheduling, which this floor ignores.";
+  $("#oC").textContent=chk;
+  const fW=Math.min(1,W/rackCap), fK=Math.min(1-fW,K/rackCap), fO=Math.max(0,Math.min(1,(T-rackCap)/rackCap));
+  const denom=Math.max(1,T/rackCap);
+  $("#barW").style.width=(100*fW/denom)+"%"; $("#barK").style.width=(100*fK/denom)+"%"; $("#barO").style.width=(100*Math.min(fO,denom-1)/denom)+"%";
+  $("#memTxt").textContent=fmtB(T)+" vs "+fmtB(rackCap);
+  const v=$("#verdict");
+  if(gpus<=72){ v.className="verdict ok"; v.textContent="Fits one NVL72: every NVLink hop is copper. Scale-up optics not needed."+(S.step>=4?" Use “Push it past one rack” to see the spill.":""); }
+  else if(gpus<=576){ v.className="verdict opt"; v.textContent="Needs "+racks+" racks in one NVLink domain: rack-to-rack hops go optical (NVL576-style, NPO/CPO on the switch tray)."; }
+  else { v.className="verdict bad"; v.textContent="Exceeds one 576-GPU domain: split across domains over scale-out, offload KV, or cut context / users."; }
+  if(window.syncScene) window.syncScene();
+}
+// ---------- stepper ----------
+const stepBtns=$("#stepBtns");
+STEPS.forEach((s,i)=>{const b=document.createElement("button"); b.textContent=i+1; b.onclick=()=>setStep(i); stepBtns.appendChild(b);});
+function setStep(i){
+  S.step=(i+STEPS.length)%STEPS.length;
+  [...stepBtns.children].forEach((b,k)=>b.classList.toggle("on",k===S.step));
+  $("#tokStepN").textContent="Step "+(S.step+1)+" of "+STEPS.length; $("#tokTitle").textContent=STEPS[S.step].t; $("#tokBody").innerHTML=STEPS[S.step].b;
+  if(window.syncScene) window.syncScene();
+}
+$("#prev").onclick=()=>setStep(S.step-1); $("#next").onclick=()=>setStep(S.step+1);
+let playT=null; $("#play").onclick=()=>{ S.play=!S.play; $("#play").textContent=S.play?"❚❚ Stop":"▶ Auto"; if(S.play){ playT=setInterval(()=>setStep(S.step+1),6000);} else clearInterval(playT); };
+window.addEventListener("keydown",e=>{ if(e.target.tagName==="INPUT"||e.target.tagName==="SELECT") return; if(mode==="tok"){ if(e.key==="ArrowRight") setStep(S.step+1); if(e.key==="ArrowLeft") setStep(S.step-1);} else { if(e.key==="ArrowRight") setEml(E.stage+1); if(e.key==="ArrowLeft") setEml(E.stage-1);} });
+
+// ladder
+(function(){ const L=[["Local HBM4 (per GPU)",176,"b"],["NVLink scale-up (in rack, copper)",14.4,"b c"],["NVLink scale-up (rack-to-rack, optics)",14.4,"b o"],["Scale-out NIC (pluggable / CPO switch)",1.6,"b"]];
+  const el=$("#ladder"); const mx=Math.log10(176)+0.3;
+  for(const [n,v,c] of L){ el.insertAdjacentHTML("beforeend",'<div>'+n+'</div><div class="'+c+'" style="width:'+(100*(Math.log10(v)+0.3)/mx)+'%"></div><div class="v">'+v+' Tb/s</div>'); }
+})();
+
+// =============================== DATA: EML ===============================
+const EML=[
+  {t:"Sulfur-doped InP substrate",b:"Everything starts on an indium-phosphide wafer. Lasers need sulfur-doped InP, which yields worse than the iron-doped InP used for photodetectors.<span class='src'> LITE IR, 2026-09-11</span> Lumentum was still moving from 3- to 4-inch in 2025; 6-inch comes only with Greensboro in 2028 (2.25x the area, ~4.36x the chips of 3-inch, but planned on a smaller gain because of yield).<span class='src'> LITE 2025-08-12; IR 09-11; Citi 07-16</span>",kv:[["Suppliers","AXT ~40% · Sumitomo ~40% · JX ~10% (2024)","AXT, 2026-08-31"],["Allocation","shortage “&gt;18 months”; 3rd price hike this year, +10% more in 4Q26","AXT 08-31; UDN via Jefferies 08-17"],["LITE’s hedge","AXT capacity reserved through 2031: $43.5M deposit now, $43.5M in 2028; Sumitomo the primary","AXT, 2026-07-29"],["6-inch yield","AXT ingot ~5%; Sumitomo S-doped 6-inch “very bad”","LITE IR, 2026-09-11"]]},
+  {t:"MOCVD epitaxy: growing the laser layers",b:"In a metal-organic chemical-vapour-deposition reactor, gases carrying indium, gallium, arsenic and phosphorus decompose on the hot wafer and grow the crystal layer by layer: the quantum-well gain stack that emits light, the layers that will become the modulator, cladding and contacts. Only two tool vendors: Aixtron for the “very difficult” steps, Veeco for the easier ones.<span class='src'> LITE IR, 2026-09-11</span>",kv:[["Tool share","Aixtron ~90-100% of InP MOCVD; ~100% (AIXA page)","AIXA Q3/25 call; Jefferies 2026-06-19"],["Lead time","customers reserving reactor slots into 2027; long-lead items are reactors and e-beam lithography","AIXA; LITE @ DB, 2026-08-27"],["Epi pricing","substrate and epi wafer prices +10%+ in 4Q26","UDN via Jefferies, 2026-08-17"],["Where","Sagamihara + Takao (Japan) qualifying CW and EML flows on the newest tools","Q4 FY26 call, 2026-08-11"]]},
+  {t:"Grating and modulator on one chip",b:"<span class='tag d'>generic</span> The DFB grating — a periodic corrugation written into a layer above the gain region — pins the laser to a single wavelength; the electro-absorption modulator section is formed next to it with a different band-gap so a voltage can switch the light off and on. The wiki carries no detail on how Lumentum writes the grating or integrates the modulator (zero hits for “regrowth”); e-beam lithography is named as a long-lead tool.<span class='src'> LITE @ DB, 2026-08-27</span>",kv:[["Die","200G EML die ~22% larger than 100G; CW die ~60% of an EML","Citi 07-16; TD Cowen 03-11"],["Design lever","shrinking die and cavity length to get more output per wafer","Yuen, 2026-02-03"],["Recipe change","~6 months of requalification","Yuen, 2026-05-07"]]},
+  {t:"Wafer fab: lithography, etch, metal",b:"<span class='tag d'>generic</span> The epi wafer goes through the front-end loop — pattern the ridge waveguide, etch, isolate the laser from the modulator, deposit the metal contacts — repeated across the wafer so every die is a complete laser-plus-modulator. Output is “relatively fixed given the cycle time of the fab”; the wiki has no wafers-per-month, die-per-wafer or yield figure.",kv:[["Main EML fab","Sagamihara, Japan — “outputs more EMLs than any other location”; bought for $42.2M (Jul-24); the +40% expansion was “all Sagamihara”","Hurlston 2025-08-12; 10-K FY25; call 2026-02-03"],["Second Japan fab","Takao — gain chips for ITLAs, “relatively underutilized”, moving into EML","LITE/JPM call, 2026-05-07"],["Capacity","Japan EML capacity 8x in 2.5 years; EML units &gt;50% y/y in Dec-26 quarter","Aurelion 07-29; Q4 FY26 call 08-11"],["Fab count","“five wafer fabs including Greensboro” vs “five plus one ramping”","IR 09-11 vs Aurelion 07-29 (disputed)"]]},
+  {t:"Wafer-level electrical screening",b:"Before any cutting, each die is probed electrically on the whole wafer to screen out bad devices — scrap cannot be reworked later, so catching it here is the cheapest point. Full wafer-level optical test is “coming”.<span class='src'> Laser-industry expert call, 2026-07-23</span>",kv:[["Why it matters","scrap cannot be reworked; screening before cleave saves the back-end cost","expert call, 2026-07-23"],["Take-or-pay","90%+ of fab output under take-or-pay through CY27; extra units auctioned","LITE, 2026-05-07"]]},
+  {t:"Bars, facets, coatings",b:"The wafer is cut into bars — rows of dies — and the bars are stacked so that their end faces can be polished together; those faces are the laser’s mirrors. One facet gets an anti-reflection coating (the light exits there), the other a high-reflection coating.<span class='src'> Laser-industry expert call, 2026-07-23 (he says polish, not cleave)</span> <span class='tag d'>generic</span> in most laser fabs the bar is cleaved along the crystal plane rather than polished.",kv:[["Facet flow","cut into bars → stack → polish facets → AR/HR coating","expert call, 2026-07-23"],["Where","back end in Thailand: 1.173M sq ft, packaging and test; “not as differentiated”, not eager to grow it","10-K FY26; call 08-11; IR 09-11"]]},
+  {t:"Dice, submount, test",b:"Bars are diced into single chips, each chip is mounted on a submount and tested with pogo-pin probes: wavelength, threshold, modulation.<span class='src'> Laser-industry expert call, 2026-07-23</span> Qualification with a customer then takes 2-3 years, “one year for NVIDIA”.<span class='src'> Citi 09-22; DB 08-27</span>",kv:[["Economics","100G → 200G is ~2x ASP; 10-K records only a “slight” laser-chip ASP increase","LITE @ DB 08-27; 10-K FY26 (do not reconcile)"],["Mix","200G &gt;25% of EML revenue, 50%+ of volume by mid-2027 (LITE) vs ~25% units / ~40% revenue (MS)","call 08-11; MS 08-12"],["Chip share","LITE ~50% of EMLs; Broadcom the other main 200G supplier","Citi 2025-08-29; LITE 08-27"]]},
+  {t:"Into a transceiver — or an external laser source",b:"The chip is packaged into a TOSA inside an 800G/1.6T module by the module makers (Innolight is “probably their biggest customer in the laser” <span class='tag'>unconfirmed</span>), where a DSP drives its modulator.<span class='src'> Papa Sylla call, 2026-08-11</span> The same fabs are now qualifying CW lasers for silicon photonics and ultra-high-power CW for NVIDIA’s external laser source (~$425 with 8 chips): San Jose covers NVIDIA through early 2027, Caswell enters in 2H27, Greensboro’s 6-inch InP fab reaches full output end-2028.<span class='src'> LITE IR 09-11; LITE/JPM 05-07; call 08-11</span>",kv:[["Customers","Google = Customer A, 26.6% of FY26 revenue; NVIDIA low-single-digit %","10-K FY26; Citi 07-16"],["Mix shift","EML modules 70-80% at 800G → 40-50% at 1.6T; ~15% of output to CW (Citi) vs “as a favour” (Jefferies)","LITE 08-27; Citi 09-22; Jefferies 09-18 (disputed)"],["UHP / ELS","LITE can meet only ~30% of 2027-28 NPO laser demand; considering licensing","Citi, 2026-09-22"],["Greensboro","ex-Qorvo GaAs fab, $38.0M, 148k sq ft, 6-inch InP only; first revenue early 2028; sized for ~$5B/yr","10-K FY26; call 08-11; OFC briefing 03-17"]]}
+];
+const SITES=[
+  ["Sagamihara","Main EML fab (Japan); more EMLs than any other site; bought Jul-24 for $42.2M; the +40% expansion was all here. Hurlston 2025-08-12; 10-K FY25; call 2026-02-03"],
+  ["Takao","Second Japan fab; ITLA gain chips, underutilised, moving into EML; qualifying CW + EML flows. LITE/JPM 05-07; call 08-11"],
+  ["Caswell","UK, bought Aug-23 for $23.3M, 183k sq ft; planned EML overflow, redirected to ultra-high-power CPO lasers from 2H27. 10-Q 2023-11-08; 10-K FY26; LITE/JPM 05-07"],
+  ["San Jose","California (“Rose Orchard”): pump lasers and phase-one CPO UHP lasers; covers all NVIDIA demand 2026 to early 2027. LITE/JPM 05-07; call 08-11"],
+  ["Greensboro","North Carolina, ex-Qorvo GaAs fab, $38.0M (closed 2026-03-17), 148k sq ft; converting to 6-inch InP; first revenue early 2028, full end-2028; sized for ~$5B/yr. 10-K FY26; call 08-11; OFC 03-17"],
+  ["Thailand","Back end, 1.173M sq ft owned: packaging and test; “not as differentiated”. 10-K FY26; IR 09-11. Fabrinet trained to co-build OCS in CY27 (IR 09-11)"]
+];
+const E={stage:0,site:0};
+const siteSeg=$("#siteSeg"); SITES.forEach((s,i)=>{const b=document.createElement("button"); b.textContent=s[0]; if(!i) b.classList.add("on"); b.onclick=()=>{E.site=i; [...siteSeg.children].forEach((x,k)=>x.classList.toggle("on",k===i)); $("#siteBody").textContent=SITES[i][1];}; siteSeg.appendChild(b);}); $("#siteBody").textContent=SITES[0][1];
+function setEml(i){
+  E.stage=Math.max(0,Math.min(EML.length-1,i)); $("#emlStage").value=E.stage;
+  const s=EML[E.stage]; $("#emlStepN").textContent="Station "+(E.stage+1)+" of "+EML.length; $("#emlTitle").textContent=s.t; $("#emlBody").innerHTML=s.b;
+  $("#emlKv").innerHTML=s.kv.map(([k,v,src])=>"<dt>"+k+"</dt><dd>"+v+'<span class="src"> '+src+"</span></dd>").join("");
+  if(window.syncEml) window.syncEml();
+}
+$("#emlStage").oninput=()=>setEml(+$("#emlStage").value); $("#emlPrev").onclick=()=>setEml(E.stage-1); $("#emlNext").onclick=()=>setEml(E.stage+1);
+
+// ---------- tabs ----------
+let mode="tok";
+function setMode(m){
+  mode=m;
+  const map={tok:["hudTOK","ctrlTOK","explainTOK","moreTOK"],eml:["hudEML","ctrlEML","explainEML","moreEML"]};
+  for(const k of ["tok","eml"]){ $("#tab"+k.toUpperCase()).classList.toggle("on",k===m); for(const id of map[k]) $("#"+id).style.display=k===m?(id.startsWith("explain")?"grid":""):"none"; }
+  if(ok){ tokG.visible=m==="tok"; emlG.visible=m==="eml"; if(m==="tok") orbitTo(S.step<=3?VIEW_TOK_NEAR:VIEW_TOK); else syncEml(true); }
+  try{localStorage.setItem("tp-mode",m);}catch(e){}
+}
+$("#tabTOK").onclick=()=>setMode("tok"); $("#tabEML").onclick=()=>setMode("eml");
+
+calc(); setStep(0); setEml(0);
+
+// =============================== 3D ===============================
+let ok=typeof THREE!=="undefined"; let renderer;
+if(ok){ try{ renderer=new THREE.WebGLRenderer({canvas:$("#gl"),antialias:true}); }catch(e){ ok=false; } }
+if(!ok){ $("#fallback").style.display="flex"; $("#gl").style.display="none"; let m="tok"; try{m=localStorage.getItem("tp-mode")||"tok";}catch(e){} setMode(m); return; }
+renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+const scene=new THREE.Scene(), camera=new THREE.PerspectiveCamera(38,1,0.1,300);
+scene.add(new THREE.HemisphereLight(0xffffff,0x334455,0.75));
+const key=new THREE.DirectionalLight(0xffffff,0.9); key.position.set(6,14,8); scene.add(key);
+const rim=new THREE.DirectionalLight(0x88ccff,0.35); rim.position.set(-8,4,-6); scene.add(rim);
+const C=()=>({accent:new THREE.Color(css("--accent")),amber:new THREE.Color(css("--amber")),red:new THREE.Color(css("--red")),copper:new THREE.Color(css("--copper")),bg:new THREE.Color(css("--scene-bg")),good:new THREE.Color(css("--good"))});
+let col=C(); scene.background=col.bg;
+const M={
+  dark:new THREE.MeshStandardMaterial({color:0x2a3038,metalness:.3,roughness:.6}),
+  metal:new THREE.MeshStandardMaterial({color:0x8a939e,metalness:.7,roughness:.35}),
+  frame:new THREE.MeshStandardMaterial({color:0x5a6470,metalness:.5,roughness:.5,transparent:true,opacity:.2,depthWrite:false}),
+  tray:new THREE.MeshStandardMaterial({color:0x6d7680,metalness:.6,roughness:.4}),
+  sw:new THREE.MeshStandardMaterial({color:0x3d6f8f,metalness:.5,roughness:.4}),
+  die:new THREE.MeshStandardMaterial({color:0x5a6b80,metalness:.8,roughness:.25}),
+  cpu:new THREE.MeshStandardMaterial({color:0x7a6a4a,metalness:.6,roughness:.4}),
+  ssd:new THREE.MeshStandardMaterial({color:0x4a5560,metalness:.5,roughness:.5}),
+  inp:new THREE.MeshStandardMaterial({color:0x3b3f46,metalness:.6,roughness:.25}),
+  epi:new THREE.MeshStandardMaterial({color:0xb06b3a,metalness:.4,roughness:.4}),
+  epi2:new THREE.MeshStandardMaterial({color:0x2c7fa8,metalness:.4,roughness:.4}),
+  glass:new THREE.MeshStandardMaterial({color:0x9fd0ff,metalness:0,roughness:.05,transparent:true,opacity:.28,depthWrite:false}),
+  gold:new THREE.MeshStandardMaterial({color:0xd4a72c,metalness:.9,roughness:.3}),
+  ar:new THREE.MeshStandardMaterial({color:0x4cc2ff,emissive:0x2277aa,emissiveIntensity:.4}),
+  hr:new THREE.MeshStandardMaterial({color:0xff6b5e,emissive:0x882222,emissiveIntensity:.4}),
+  module:new THREE.MeshStandardMaterial({color:0x9aa3ad,metalness:.75,roughness:.3}),
+};
+const glowMat=(c,op)=>new THREE.MeshBasicMaterial({color:c,transparent:true,opacity:op,blending:THREE.AdditiveBlending,depthWrite:false});
+const coreMat=c=>new THREE.MeshBasicMaterial({color:c});
+function tubePath(pts,r,mat,seg){ const path=new THREE.CurvePath(); for(let i=0;i<pts.length-1;i++) path.add(new THREE.LineCurve3(pts[i],pts[i+1])); return new THREE.Mesh(new THREE.TubeGeometry(path,seg||Math.max(8,(pts.length-1)*6),r,8,false),mat); }
+function disposeGroup(g){ while(g.children.length){const c=g.children.pop(); c.geometry&&c.geometry.dispose(); if(c.material&&c.material.dispose) c.material.dispose();} }
+// labels
+const labels=[]; const v3=new THREE.Vector3();
+function addLabel(text,sub,getPos,group,show){ const el=document.createElement("div"); el.className="lbl"; el.innerHTML=text+(sub?"<small>"+sub+"</small>":""); $("#labels").appendChild(el); const L={el,getPos,group,show:show||(()=>true)}; labels.push(L); return L; }
+function drawLabels(){ const box=$("#glbox"), w=box.clientWidth, h=box.clientHeight; for(const L of labels){ let vis=L.group.visible&&L.show(); if(vis){ L.getPos(v3); v3.project(camera); vis=v3.z<1&&Math.abs(v3.x)<1.1&&Math.abs(v3.y)<1.1; } L.el.style.display=vis?"":"none"; if(vis){ L.el.style.left=((v3.x+1)/2*w)+"px"; L.el.style.top=((1-v3.y)/2*h-6)+"px"; } } }
+// orbit
+const VIEW_TOK={theta:0.5,phi:1.15,r:30,target:new THREE.Vector3(0,3.6,0)};
+const VIEW_TOK_NEAR={theta:0.42,phi:1.12,r:16,target:new THREE.Vector3(-3.6,3.0,0.4)};
+const orb={theta:VIEW_TOK.theta,phi:VIEW_TOK.phi,r:VIEW_TOK.r,target:VIEW_TOK.target.clone()}; let orbGoal=null;
+function orbitTo(v){orbGoal={theta:v.theta,phi:v.phi,r:v.r,target:v.target.clone()};}
+(function(){ const cv=$("#gl"); let drag=null;
+  cv.addEventListener("pointerdown",e=>{drag={x:e.clientX,y:e.clientY}; cv.setPointerCapture(e.pointerId); orbGoal=null;});
+  cv.addEventListener("pointermove",e=>{ if(!drag) return; const dx=e.clientX-drag.x, dy=e.clientY-drag.y; drag={x:e.clientX,y:e.clientY}; orb.theta-=dx*0.006; orb.phi=Math.min(1.45,Math.max(0.15,orb.phi-dy*0.006)); });
+  cv.addEventListener("pointerup",()=>drag=null); cv.addEventListener("pointercancel",()=>drag=null);
+  cv.addEventListener("wheel",e=>{e.preventDefault(); orbGoal=null; orb.r=Math.min(80,Math.max(4,orb.r*(1+Math.sign(e.deltaY)*0.08)));},{passive:false});
+})();
+function updateCamera(dt){ if(orbGoal){ const k=1-Math.exp(-6*(dt||0.016)); orb.theta+=(orbGoal.theta-orb.theta)*k; orb.phi+=(orbGoal.phi-orb.phi)*k; orb.r+=(orbGoal.r-orb.r)*k; orb.target.lerp(orbGoal.target,k); if(Math.abs(orbGoal.r-orb.r)<0.01&&Math.abs(orbGoal.theta-orb.theta)<0.001&&orb.target.distanceTo(orbGoal.target)<0.01) orbGoal=null; } const t=orb.target, s=Math.sin(orb.phi); camera.position.set(t.x+orb.r*s*Math.sin(orb.theta), t.y+orb.r*Math.cos(orb.phi), t.z+orb.r*s*Math.cos(orb.theta)); camera.lookAt(t); }
+const smooth=x=>x*x*(3-2*x);
+window.applyTheme=()=>{ col=C(); scene.background=col.bg; buildLinks(); };
+
+// =============================== token-path scene ===============================
+const tokG=new THREE.Group(); scene.add(tokG);
+const RX=[-5.2,0,5.2], RH=7.6, RD=1.7, RW=2.5, NT=18, DIE=[];  // DIE[rack][i] = {die, bar, x,y,z}
+const TRY=k=>0.5+k*0.39;
+{
+  const fl=new THREE.Mesh(new THREE.BoxGeometry(24,0.2,9),M.dark); fl.position.set(0,-0.1,0); tokG.add(fl);
+  for(let r=0;r<3;r++){
+    DIE.push([]);
+    const fr=new THREE.Mesh(new THREE.BoxGeometry(RW,RH,RD),M.frame); fr.position.set(RX[r],RH/2,0); tokG.add(fr);
+    for(let k=0;k<NT;k++){
+      const sw=(k===8||k===9);
+      const t=new THREE.Mesh(new THREE.BoxGeometry(RW-0.2,0.16,RD-0.1),sw?M.sw:M.tray); t.position.set(RX[r],TRY(k),0); tokG.add(t);
+      if(sw) continue;
+      for(let d=0;d<4;d++){
+        const x=RX[r]-0.82+d*0.55, y=TRY(k)+0.14, z=0.15;
+        const die=new THREE.Mesh(new THREE.BoxGeometry(0.34,0.06,0.34),M.die); die.position.set(x,y,z); tokG.add(die);
+        const bar=new THREE.Group(); bar.position.set(x,y+0.03,z+0.38);
+        const bw=new THREE.Mesh(new THREE.BoxGeometry(0.34,1,0.09),new THREE.MeshBasicMaterial({color:col.accent})); bw.scale.y=0.001; bar.add(bw);
+        const bk=new THREE.Mesh(new THREE.BoxGeometry(0.34,1,0.09),new THREE.MeshBasicMaterial({color:col.amber})); bk.scale.y=0.001; bar.add(bk);
+        const bo=new THREE.Mesh(new THREE.BoxGeometry(0.36,0.34,0.11),new THREE.MeshBasicMaterial({color:0x000000,transparent:true,opacity:.3})); bo.position.y=0.17; bar.add(bo);
+        tokG.add(bar); DIE[r].push({die,bw,bk,x,y,z});
+      }
+    }
+  }
+  // head node + KV offload
+  const cpu=new THREE.Mesh(new THREE.BoxGeometry(2.2,0.9,1.4),M.cpu); cpu.position.set(-9.2,0.55,2.4); tokG.add(cpu);
+  const cd=new THREE.Mesh(new THREE.BoxGeometry(0.7,0.08,0.7),M.die); cd.position.set(-9.2,1.04,2.4); tokG.add(cd);
+  const tool=new THREE.Mesh(new THREE.BoxGeometry(1.6,0.7,1.1),M.metal); tool.position.set(-9.2,0.45,-1.6); tokG.add(tool);
+  const ssd=new THREE.Mesh(new THREE.BoxGeometry(1.8,1.6,1.2),M.ssd); ssd.position.set(9.3,0.9,2.2); tokG.add(ssd);
+}
+const linkG=new THREE.Group(); tokG.add(linkG);
+const partG=new THREE.Group(); tokG.add(partG);
+const PARTS=[]; for(let i=0;i<40;i++){ const p=new THREE.Mesh(new THREE.SphereGeometry(0.07,10,8),coreMat(0xffffff)); p.visible=false; partG.add(p); PARTS.push(p); }
+let paths=[]; // {pts,color,speed}
+function pointAlong(pts,u){ const segs=[]; let tot=0; for(let i=0;i<pts.length-1;i++){const l=pts[i].distanceTo(pts[i+1]); segs.push(l); tot+=l;} let d=u*tot; for(let i=0;i<segs.length;i++){ if(d<=segs[i]) return pts[i].clone().lerp(pts[i+1],d/segs[i]); d-=segs[i]; } return pts[pts.length-1].clone(); }
+function racksLit(){ return Math.min(3,Math.max(1,R.racks)); }
+function buildLinks(){
+  disposeGroup(linkG); paths=[];
+  const st=S.step, nR=racksLit();
+  const P=(x,y,z)=>new THREE.Vector3(x,y,z);
+  const cpuOut=P(-8.1,1.0,2.4), r0in=P(RX[0]-RW/2,TRY(9),0.6);
+  if(st===0||st===2||st===5){ // prompt / prefill / agent loop: CPU -> rack 0
+    const pts=[cpuOut,P(-6.9,1.4,2.4),P(RX[0]-RW/2-0.6,TRY(9),1.2),r0in];
+    linkG.add(tubePath(pts,0.03,coreMat(col.accent),20)); linkG.add(tubePath(pts,0.1,glowMat(col.accent,.2),20)); paths.push({pts,n:10,sp:.35});
+    if(st===5){ const back=[r0in,P(RX[0]-RW/2-0.6,TRY(9)-0.3,-0.6),P(-8.2,0.9,-1.6)]; linkG.add(tubePath(back,0.025,coreMat(col.amber),20)); paths.push({pts:back,n:6,sp:.3});
+      const t2=[P(-9.2,1.0,-1.0),P(-9.2,1.3,2.0)]; linkG.add(tubePath(t2,0.025,coreMat(col.amber),8)); paths.push({pts:t2,n:3,sp:.5}); }
+  }
+  if(st>=3){ // decode: all-to-all in rack(s) — copper
+    for(let r=0;r<nR;r++){ const ds=DIE[r]; for(let i=0;i<14;i++){ const a=ds[(i*11)%ds.length], b=ds[(i*29+7)%ds.length]; if(a===b) continue;
+      const pts=[P(a.x,a.y+0.05,a.z),P(RX[r]-RW/2-0.35,(a.y+b.y)/2,-0.5),P(b.x,b.y+0.05,b.z)];
+      linkG.add(tubePath(pts,0.014,coreMat(col.copper),12)); if(i<6) paths.push({pts,n:2,sp:.9}); } }
+  }
+  if(st>=4&&nR>1){ // rack-to-rack optical
+    for(let i=0;i<nR-1;i++) for(let s=0;s<3;s++){ const y=TRY(8.5)+(s-1)*0.14, z=RD/2+0.6+s*0.08;
+      const pts=[P(RX[i]+0.4,y,RD/2),P(RX[i]+0.4,y,z),P(RX[i+1]-0.4,y,z),P(RX[i+1]-0.4,y,RD/2)];
+      linkG.add(tubePath(pts,0.03,coreMat(col.accent),16)); linkG.add(tubePath(pts,0.1,glowMat(col.accent,.22),16)); if(s===1) paths.push({pts,n:6,sp:.6}); }
+    if(nR===3){ const y=TRY(8.5), z=RD/2+1.3; const pts=[P(RX[0]+0.6,y,RD/2),P(RX[0]+0.6,y,z),P(RX[2]-0.6,y,z),P(RX[2]-0.6,y,RD/2)]; linkG.add(tubePath(pts,0.03,coreMat(col.accent),16)); linkG.add(tubePath(pts,0.1,glowMat(col.accent,.22),16)); paths.push({pts,n:6,sp:.6}); }
+  }
+  if(st===5||st===6){ // KV offload to DDR/SSD
+    const pts=[P(RX[nR-1]+RW/2,TRY(4),0.4),P(RX[nR-1]+RW/2+0.8,TRY(4),1.6),P(8.4,1.0,2.2)]; linkG.add(tubePath(pts,0.025,coreMat(col.amber),16)); paths.push({pts,n:5,sp:.3});
+  }
+  if(st===6){ // scale-out to a second domain (off-scene), shown as a fibre leaving the racks upward
+    for(let r=0;r<nR;r++){ const pts=[P(RX[r],RH+0.1,0.4),P(RX[r],RH+1.6,0.4),P(RX[r]+2.2,RH+2.4,0.4)]; const oc=col.accent.clone().lerp(new THREE.Color(0xffffff),0.4); linkG.add(tubePath(pts,0.02,coreMat(oc),12)); linkG.add(tubePath(pts,0.07,glowMat(oc,.18),12)); }
+  }
+  let k=0; PARTS.forEach(p=>p.visible=false);
+  for(const ph of paths){ ph.parts=[]; for(let i=0;i<ph.n&&k<PARTS.length;i++){ ph.parts.push({m:PARTS[k],o:i/ph.n}); PARTS[k].visible=true; k++; } }
+}
+let fillW=0, fillK=0, tgtW=0, tgtK=0;
+window.syncScene=function(){
+  if(!R.W) return;
+  if(mode==="tok") orbitTo(S.step<=3?VIEW_TOK_NEAR:VIEW_TOK);
+  const st=S.step, nR=racksLit(), per=R.g.cap*72*nR;   // memory available across lit racks
+  tgtW=st>=1?Math.min(1,R.W/per):0; tgtK=st>=2?Math.min(1-tgtW,R.K/per):0;
+  if(st===2) tgtK*=0.5; // prefill of the first turn: half the context so far
+  buildLinks();
+};
+function layoutTok(dt){
+  fillW+=(tgtW-fillW)*Math.min(1,dt*3); fillK+=(tgtK-fillK)*Math.min(1,dt*3);
+  const nR=racksLit();
+  for(let r=0;r<3;r++){ const on=r<nR&&S.step>=1; for(const d of DIE[r]){
+    const w=on?fillW:0, k=on?fillK:0; const H=0.34;
+    d.bw.scale.y=Math.max(0.001,w*H); d.bw.position.y=w*H/2; d.bk.scale.y=Math.max(0.001,k*H); d.bk.position.y=w*H+k*H/2;
+    d.bw.material.color.copy(col.accent); d.bk.material.color.copy(col.amber);
+  } }
+}
+let phT=0;
+function animParts(dt){ phT+=dt; for(const ph of paths){ if(!ph.parts) continue; for(const q of ph.parts){ q.m.position.copy(pointAlong(ph.pts,(phT*ph.sp+q.o)%1)); } } }
+// labels
+const isTok=()=>mode==="tok";
+addLabel("Head node · CPU","tokenise, schedule, run the tools (Vera)",v=>v.set(-9.2,1.5,2.4),tokG,()=>true);
+addLabel("Tool runtime","browser · code · database",v=>v.set(-9.2,1.1,-1.6),tokG,()=>S.step===5);
+addLabel("KV offload · DDR / SSD","idle KV parked “in less than a second”",v=>v.set(9.3,2.1,2.2),tokG,()=>S.step>=5);
+addLabel("NVL72 rack","18 trays · 72 GPUs · NVSwitch trays (blue)",v=>v.set(RX[0],RH+0.5,0),tokG,()=>S.step<4||R.racks===1);
+addLabel("HBM per GPU","blue = weights · amber = KV",v=>v.set(RX[0]-0.82,TRY(17)+0.7,0.55),tokG,()=>S.step>=1);
+addLabel("In-rack NVLink · copper","all-to-all on every token",v=>v.set(RX[0]-RW/2-0.4,TRY(5),-0.5),tokG,()=>S.step>=3);
+addLabel("Rack-to-rack NVLink · optics","NVL576-style domain (NPO or CPO on the switch tray)",v=>v.set((RX[0]+RX[1])/2,TRY(8.5)+0.5,RD/2+1.3),tokG,()=>S.step>=4&&R.racks>1);
+addLabel("×8 racks = 576 GPUs","three drawn for clarity",v=>v.set(RX[2],RH+0.5,0),tokG,()=>S.step>=4&&R.racks>1);
+addLabel("Scale-out · to other domains / prefill pool","pluggables today, CPO switches first",v=>v.set(RX[1]+2.2,RH+2.6,0.4),tokG,()=>S.step===6);
+addLabel("Prompt tokens","",v=>v.set(-6.9,1.9,2.4),tokG,()=>S.step===0||S.step===2);
+
+// =============================== EML scene ===============================
+const emlG=new THREE.Group(); scene.add(emlG); emlG.visible=false;
+const SX=[-21,-15,-9,-3,3,9,15,21]; // station x
+const EOBJ={};
+{
+  const fl=new THREE.Mesh(new THREE.BoxGeometry(48,0.2,8),M.dark); fl.position.set(0,-0.1,0); emlG.add(fl);
+  const rail=new THREE.Mesh(new THREE.BoxGeometry(46,0.06,0.3),M.metal); rail.position.set(0,0.03,-2.2); emlG.add(rail);
+  // 0 wafer
+  const w0=new THREE.Mesh(new THREE.CylinderGeometry(1.6,1.6,0.08,48),M.inp); w0.position.set(SX[0],0.6,0); emlG.add(w0);
+  const flat=new THREE.Mesh(new THREE.BoxGeometry(1.2,0.1,0.15),M.dark); flat.position.set(SX[0],0.6,1.55); emlG.add(flat);
+  // 1 MOCVD: wafer + dome + layers
+  const w1=new THREE.Mesh(new THREE.CylinderGeometry(1.6,1.6,0.08,48),M.inp); w1.position.set(SX[1],0.6,0); emlG.add(w1);
+  const layers=[]; for(let i=0;i<8;i++){ const l=new THREE.Mesh(new THREE.CylinderGeometry(1.6,1.6,0.05,48),i%2?M.epi2:M.epi); l.position.set(SX[1],0.66+i*0.055,0); l.visible=false; emlG.add(l); layers.push(l); }
+  const dome=new THREE.Mesh(new THREE.SphereGeometry(2.3,32,16,0,Math.PI*2,0,Math.PI/2),M.glass); dome.position.set(SX[1],0.5,0); emlG.add(dome);
+  for(const a of [0,2.1,4.2]){ const pipe=new THREE.Mesh(new THREE.CylinderGeometry(0.08,0.08,1.6,10),M.metal); pipe.position.set(SX[1]+Math.cos(a)*2.0,2.2,Math.sin(a)*2.0); pipe.rotation.z=0.5*Math.cos(a); pipe.rotation.x=-0.5*Math.sin(a); emlG.add(pipe); }
+  EOBJ.layers=layers;
+  // 2 die close-up: ridge with grating + EAM section
+  const base=new THREE.Mesh(new THREE.BoxGeometry(3.4,0.5,1.6),M.inp); base.position.set(SX[2],0.35,0); emlG.add(base);
+  const ridge=new THREE.Mesh(new THREE.BoxGeometry(3.4,0.22,0.3),M.epi); ridge.position.set(SX[2],0.71,0); emlG.add(ridge);
+  for(let i=0;i<16;i++){ const g=new THREE.Mesh(new THREE.BoxGeometry(0.06,0.06,0.3),M.gold); g.position.set(SX[2]-1.6+i*0.13,0.85,0); emlG.add(g); }
+  const eam=new THREE.Mesh(new THREE.BoxGeometry(0.9,0.24,0.34),M.epi2); eam.position.set(SX[2]+1.2,0.72,0); emlG.add(eam);
+  const pad1=new THREE.Mesh(new THREE.BoxGeometry(0.7,0.04,0.7),M.gold); pad1.position.set(SX[2]-0.8,0.62,-0.55); emlG.add(pad1);
+  const pad2=new THREE.Mesh(new THREE.BoxGeometry(0.5,0.04,0.5),M.gold); pad2.position.set(SX[2]+1.2,0.62,0.55); emlG.add(pad2);
+  const beam=tubePath([new THREE.Vector3(SX[2]-1.7,0.72,0),new THREE.Vector3(SX[2]+1.7,0.72,0),new THREE.Vector3(SX[2]+3.2,0.72,0)],0.05,glowMat(0x4cc2ff,.5),8); emlG.add(beam); EOBJ.beam=beam;
+  // 3 wafer fab: wafer with die grid
+  const w3=new THREE.Mesh(new THREE.CylinderGeometry(1.6,1.6,0.1,48),M.epi); w3.position.set(SX[3],0.6,0); emlG.add(w3);
+  for(let i=-6;i<=6;i++){ const lx=new THREE.Mesh(new THREE.BoxGeometry(0.02,0.02,3.2),M.dark); lx.position.set(SX[3]+i*0.25,0.66,0); emlG.add(lx); const lz=new THREE.Mesh(new THREE.BoxGeometry(3.2,0.02,0.02),M.dark); lz.position.set(SX[3],0.66,i*0.25); emlG.add(lz); }
+  const stepper=new THREE.Mesh(new THREE.BoxGeometry(1.2,1.4,1.2),M.metal); stepper.position.set(SX[3],1.9,0); emlG.add(stepper);
+  const lens=new THREE.Mesh(new THREE.CylinderGeometry(0.3,0.3,0.2,20),M.glass); lens.position.set(SX[3],1.1,0); emlG.add(lens);
+  // 4 wafer probe
+  const w4=new THREE.Mesh(new THREE.CylinderGeometry(1.6,1.6,0.1,48),M.epi); w4.position.set(SX[4],0.6,0); emlG.add(w4);
+  const card=new THREE.Mesh(new THREE.BoxGeometry(1.4,0.12,1.4),M.gold); card.position.set(SX[4],1.5,0); emlG.add(card); EOBJ.card=card;
+  const pins=[]; for(let i=0;i<9;i++){ const p=new THREE.Mesh(new THREE.CylinderGeometry(0.02,0.02,0.7,6),M.metal); p.position.set(SX[4]-0.4+(i%3)*0.4,1.1,-0.4+Math.floor(i/3)*0.4); emlG.add(p); pins.push(p);} EOBJ.pins=pins;
+  // 5 bars: stacked strips with AR/HR facets
+  for(let i=0;i<6;i++){ const b=new THREE.Mesh(new THREE.BoxGeometry(3.0,0.14,0.36),M.epi); b.position.set(SX[5],0.5+i*0.17,-0.9+i*0.36); emlG.add(b);
+    const ar=new THREE.Mesh(new THREE.BoxGeometry(0.03,0.14,0.36),M.ar); ar.position.set(SX[5]+1.51,0.5+i*0.17,-0.9+i*0.36); emlG.add(ar);
+    const hr=new THREE.Mesh(new THREE.BoxGeometry(0.03,0.14,0.36),M.hr); hr.position.set(SX[5]-1.51,0.5+i*0.17,-0.9+i*0.36); emlG.add(hr); }
+  // 6 chips + submount + pogo pins
+  for(let i=0;i<10;i++){ const c=new THREE.Mesh(new THREE.BoxGeometry(0.42,0.1,0.26),M.epi); c.position.set(SX[6]-1.6+(i%5)*0.55,0.55,-0.9+Math.floor(i/5)*0.5); emlG.add(c); }
+  const sub=new THREE.Mesh(new THREE.BoxGeometry(1.1,0.16,0.8),M.metal); sub.position.set(SX[6]+0.4,0.6,0.9); emlG.add(sub);
+  const chip=new THREE.Mesh(new THREE.BoxGeometry(0.44,0.1,0.26),M.epi); chip.position.set(SX[6]+0.4,0.73,0.9); emlG.add(chip);
+  const arc=new THREE.Mesh(new THREE.BoxGeometry(0.03,0.1,0.26),M.ar); arc.position.set(SX[6]+0.62,0.73,0.9); emlG.add(arc);
+  const pogo=[]; for(let i=0;i<3;i++){ const p=new THREE.Mesh(new THREE.CylinderGeometry(0.02,0.02,0.6,6),M.gold); p.position.set(SX[6]+0.25+i*0.15,1.15,0.75); emlG.add(p); pogo.push(p);} EOBJ.pogo=pogo;
+  const cbeam=tubePath([new THREE.Vector3(SX[6]+0.63,0.73,0.9),new THREE.Vector3(SX[6]+2.2,0.73,0.9)],0.04,glowMat(0x4cc2ff,.5),6); emlG.add(cbeam); EOBJ.cbeam=cbeam;
+  // 7 module / ELS
+  const mod=new THREE.Mesh(new THREE.BoxGeometry(3.2,0.6,1.4),M.module); mod.position.set(SX[7],0.5,0); emlG.add(mod);
+  const lid=new THREE.Mesh(new THREE.BoxGeometry(2.0,0.06,1.0),M.glass); lid.position.set(SX[7]-0.3,0.83,0); emlG.add(lid);
+  for(let i=0;i<8;i++){ const c=new THREE.Mesh(new THREE.BoxGeometry(0.3,0.08,0.18),M.epi); c.position.set(SX[7]-1.1+(i%4)*0.4,0.84,-0.3+Math.floor(i/4)*0.5); emlG.add(c); }
+  const dsp=new THREE.Mesh(new THREE.BoxGeometry(0.5,0.1,0.5),M.die); dsp.position.set(SX[7]+0.9,0.85,0); emlG.add(dsp);
+  const fib=tubePath([new THREE.Vector3(SX[7]+1.6,0.6,0),new THREE.Vector3(SX[7]+3.5,0.6,0)],0.04,coreMat(0x4cc2ff),6); emlG.add(fib);
+  // station markers
+  for(let i=0;i<8;i++){ const mk=new THREE.Mesh(new THREE.CylinderGeometry(2.4,2.4,0.04,40),new THREE.MeshBasicMaterial({color:0x4cc2ff,transparent:true,opacity:.0,depthWrite:false})); mk.position.set(SX[i],0.02,0); emlG.add(mk); EOBJ["mk"+i]=mk; }
+}
+const EML_LBL=[["InP wafer","S-doped · 3→4-inch · 6-inch 2028"],["MOCVD epitaxy","Aixtron / Veeco reactors"],["DFB grating + EAM","one InP chip (generic)"],["Wafer fab","litho · etch · metal · e-beam"],["Wafer probe","electrical screen"],["Bars · facets · AR/HR","polish and coat"],["Dice · submount · test","pogo-pin"],["TOSA / module · ELS","Innolight · NVIDIA ELS 8 chips"]];
+EML_LBL.forEach((l,i)=>addLabel(l[0],l[1],v=>v.set(SX[i],2.9,0),emlG,()=>Math.abs(E.stage-i)<=2));
+let emlT=0;
+window.syncEml=function(force){ const i=E.stage; orbitTo({theta:0.35,phi:1.05,r:9.5,target:new THREE.Vector3(SX[i],0.9,0)}); emlT=0; for(let k=0;k<8;k++) EOBJ["mk"+k].material.opacity=k===i?0.12:0; };
+function layoutEml(dt){
+  emlT+=dt; const i=E.stage;
+  EOBJ.layers.forEach((l,k)=>l.visible=i>=1&&(i>1||emlT>k*0.35));
+  EOBJ.card.position.y=1.5-(i===4?0.45*(0.5+0.5*Math.sin(emlT*2)):0); EOBJ.pins.forEach(p=>p.position.y=EOBJ.card.position.y-0.4);
+  EOBJ.pogo.forEach(p=>p.position.y=1.15-(i===6?0.3*(0.5+0.5*Math.sin(emlT*2)):0));
+  EOBJ.beam.visible=i===2; EOBJ.cbeam.visible=i===6;
+}
+// resize + loop
+function resize(){ const box=$("#glbox"); renderer.setSize(box.clientWidth,box.clientHeight,false); camera.aspect=box.clientWidth/box.clientHeight; camera.updateProjectionMatrix(); }
+new ResizeObserver(resize).observe($("#glbox")); resize();
+let last=performance.now();
+function tick(now){ const raw=(now-last)/1000, dt=Math.min(0.05,raw); last=now; updateCamera(Math.min(0.3,raw));
+  if(tokG.visible){ layoutTok(dt); animParts(dt); } else { layoutEml(dt); }
+  renderer.render(scene,camera); drawLabels(); requestAnimationFrame(tick); }
+let m0="tok"; try{m0=localStorage.getItem("tp-mode")||"tok";}catch(e){} setMode(m0); syncScene();
+requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>
