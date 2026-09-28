@@ -1,6 +1,6 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-09-27 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-09-28 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
 ## 📅 Upcoming (34)
 
@@ -49,7 +49,7 @@ _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_me
 |---|---|---|
 | _none_ | | |
 
-## ✅ Resolved (214)
+## ✅ Resolved (213)
 
 | Date | Ticker | Verdict |
 |---|---|---|
@@ -266,4 +266,3 @@ _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_me
 | 2026-05-18 | LITE | neutral — NDX-100 inclusion effective (replaced CSGP); flow event only — the thesis remains EML supply/demand imbalance >30% + OCS backlog >$400M into 2027. |
 | 2026-05-11 | CEG | neutral — timing note, not an event (Q2 FY26 call lands ~Aug-2026); Calpine lockup 2026-06-30 passed with $5B buyback flexibility in place. |
 | 2026-05-04 | NOW | neutral — Financial Analyst Day delivered $30bn FY30 sub-rev guide (~17.5% CAGR, $32bn upside case, Rule of 60, 20-30% pricing uplift); UBS read-through measured — real inflection ~2028, debate open. |
-| 2026-03-31 | PWR | neutral — 2026 Investor Day held (deck on disk): multi-decade grid-buildout thesis confirmed, $500-700m HV-transformer plant investment, NiSource $5.7bn opportunity pending permits. |
