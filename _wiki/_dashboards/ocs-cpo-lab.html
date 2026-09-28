@@ -86,6 +86,21 @@ input[type=range]{width:100%;accent-color:var(--accent);margin:6px 0 2px}
 .toggle input{accent-color:var(--accent);width:16px;height:16px}
 
 .help{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);font-size:11px;color:var(--ink-3);background:color-mix(in srgb,var(--panel) 80%,transparent);border:1px solid var(--line);padding:5px 10px;border-radius:20px;white-space:nowrap}
+.lbl.hot{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 22%,var(--panel));z-index:2}
+.partname{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:700;margin:9px 0 4px}
+.chips{display:flex;flex-wrap:wrap;gap:4px}
+.chip{font:600 11px Inter,system-ui,sans-serif;padding:4px 7px;border-radius:6px;border:1px solid var(--line);background:var(--chip);color:var(--ink-2);cursor:pointer}
+.chip.cov{border-color:color-mix(in srgb,var(--accent) 55%,var(--line));color:var(--accent)}
+.chip.on,.chip.cov.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+:root[data-theme="dark"] .chip.on{color:#04121b}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .chip.on{color:#04121b}}
+.ctrl.scroll{max-height:calc(100% - 28px);overflow:auto}
+#whoSeg{flex-wrap:wrap}#whoSeg button{flex:1 1 31%;font-size:11.5px;padding:6px 4px}
+.legend{display:flex;gap:10px;font-size:11px;color:var(--ink-3);margin-top:8px;align-items:center}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;border:1px solid var(--line);background:var(--chip);margin-right:4px;vertical-align:-1px}
+.legend i.c{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 25%,transparent)}
+#whoMatrix td.cos span{display:inline-block;margin:1px 4px 1px 0;font-weight:600}
+#whoMatrix td.cos span.c{color:var(--accent)}
 #fallback{position:absolute;inset:0;display:none;align-items:center;justify-content:center;text-align:center;padding:30px;color:var(--ink-2)}
 
 section.explain{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
@@ -131,6 +146,7 @@ footer{margin-top:30px;color:var(--ink-3);font-size:12px;line-height:1.5;border-
         <button id="tabOCS" class="on" role="tab">OCS · optical switch</button>
         <button id="tabCPO" role="tab">CPO · optics on the chip</button>
         <button id="tabSYS" role="tab">Scale-up · scale-out</button>
+        <button id="tabWHO" role="tab">Who sits where</button>
       </div>
       <button class="themebtn" id="themeBtn" title="Toggle theme" aria-label="Toggle theme">◐</button>
     </div>
@@ -201,6 +217,12 @@ footer{margin-top:30px;color:var(--ink-3);font-size:12px;line-height:1.5;border-
       </dl>
     </div>
 
+    <div class="hud" id="hudWHO" style="display:none">
+      <h3 id="whoProduct">Pluggable transceiver</h3>
+      <div class="big" id="whoName" style="font-size:19px">Pick a company</div>
+      <div id="whoBody"></div>
+    </div>
+
     <!-- Controls -->
     <div class="ctrl" id="ctrlOCS">
       <h3>1 · Pick an input fibre</h3>
@@ -225,6 +247,14 @@ footer{margin-top:30px;color:var(--ink-3);font-size:12px;line-height:1.5;border-
       <h3 style="margin-top:12px">Show</h3>
       <div class="seg" id="showSeg"><button data-v="both" class="on">Both</button><button data-v="up">Scale-up</button><button data-v="out">Scale-out</button></div>
       <div class="hint">Scale-up joins GPUs into one memory-coherent domain (NVLink). Scale-out joins those domains into a cluster (InfiniBand / Ethernet) through NICs, leaf and spine switches. Three racks stand in for an NVL576-style eight-rack domain; schematic, not to scale.</div>
+    </div>
+
+    <div class="ctrl scroll" id="ctrlWHO" style="display:none">
+      <h3>Product</h3>
+      <div class="seg" id="whoSeg"></div>
+      <div class="legend"><span><i class="c"></i>has a wiki page</span><span><i></i>corpus mention only</span></div>
+      <div id="whoChips"></div>
+      <div class="hint">Labels in the scene mark the part each layer supplies; click a chip to see the role, the evidence and the Street’s marks. Names are as the wiki carries them (Innolight is not Lumentum).</div>
     </div>
 
     <div class="ctrl" id="ctrlCPO" style="display:none">
@@ -255,6 +285,60 @@ footer{margin-top:30px;color:var(--ink-3);font-size:12px;line-height:1.5;border-
     <div class="card"><div class="n">01 · SCALE-UP</div><h4>Make many GPUs act as one</h4><p>NVLink ties GPUs into one domain. Inside an NVL72 rack that is copper. NVDA's next step joins racks: "the NV576 Rubin Ultra in 2027 may use CPO switch trays to connect eight NVL72 server racks".<span class="src"> MS · Charlie Chan, 2026-09-06</span> Copper stays inside the rack; the new layer between racks is optical, CPO or NPO undecided.<span class="src"> Fubon · Shang via Jefferies desk, 2026-09-26</span></p></div>
     <div class="card"><div class="n">02 · SCALE-OUT</div><h4>Join the domains into a cluster</h4><p>Every GPU tray has NICs; each NIC port needs a transceiver to reach a leaf switch, and every leaf-to-spine link needs one at both ends. That is why AI transceivers run ~180M units in C27 (90M 800G + 80M+ 1.6T) and ~7x per XPU by C28, while TPUs sit at 1.5x.<span class="src"> Jefferies · Curtis, 2026-09-24</span></p></div>
     <div class="card"><div class="n">03 · WHERE NPO FITS</div><h4>The socketable middle step</h4><p>CPO lands in scale-out switches first (Quantum-X / Spectrum-X Photonics; COHR sees the Dec-26 quarter). Scale-up optics timing is the open fight: COHR 2H CY27 for scale-up CPO + NPO, four houses at ECOC see NPO volume in 2028, Jefferies C29. Innolight says NPO; the Taiwan chain says CPO.<span class="src"> COHR via JPM, 09-24/25 · ECOC 09-23/24 · Jefferies 09-24 · Fubon 09-26</span></p></div>
+  </section>
+
+  <section class="explain" id="explainWHO" style="display:none">
+    <div class="card"><div class="n">01 · THE LADDER</div><h4>The value sits in the light</h4><p>Gross margin: LITE 50.4% > COHR 40.2% > Fabrinet 12.2%.<span class="src"> Q4 FY26 prints, 2026-08-17</span> LITE line items: CPO/NPO ~55% GM, OCS ~45% operating margin, pumps ~90% GM.<span class="src"> LITE IR, 2026-09-11</span> The laser is 30-40% of a CPO BOM vs 10-15% in a pluggable — “own the light source”.<span class="src"> Rothschild, 2026-05-19</span></p></div>
+    <div class="card"><div class="n">02 · THE FRAMINGS</div><h4>Who controls their destiny</h4><p>Destiny control: LITE > GLW > COHR > CIEN.<span class="src"> MS, 2026-05-07</span> Weaker pure-play optics (LITE, AAOI, FN, CIEN, IQE) vs stronger copper-plus-optics (SMTC, GLW, ALAB, CRDO, MRVL).<span class="src"> @crux, 2026-06-19</span> DAMNANG: mispriced COHR, CRDO, Fabrinet; pay up for LITE and MRVL.<span class="src"> DAMNANG, 2026-09-04</span> TSEM is “agnostic” to whichever architecture wins.<span class="src"> Barclays, 2026-09-18</span></p></div>
+    <div class="card"><div class="n">03 · THE TRAPS</div><h4>Read the map with these open</h4><p>Jefferies’ vendor table carries LITE at zero modules through 2027E although CloudLight is ~¼ of LITE revenue; COHR’s “$15k per chip” and “+$30bn” come from a machine summary with an ambiguous basis; AXT’s “Sumitomo” may be Electric or Chemical; Kyber is “cancelled” (MS) vs “pushed out” (Jefferies) vs “renamed” (NVDA IR); and “Innolight” has been mis-routed to LITE on this wiki before.</p></div>
+  </section>
+  <section id="whoMatrixWrap" style="display:none">
+    <h2>Layer by layer: who the wiki places where</h2>
+    <div class="card"><table id="whoMatrix"><tr><th>Product</th><th>Layer</th><th>Companies (blue = wiki page)</th></tr></table></div>
+  </section>
+
+  <section id="nvlSYS" style="display:none">
+    <h2>NVL72 → NVL576: how the rack-to-rack link should work</h2>
+    <div class="grid2" style="margin-bottom:14px">
+      <div class="card">
+        <div class="n" style="font:700 11px 'JetBrains Mono',monospace;color:var(--accent);letter-spacing:.08em">WHAT THE CORPUS SAYS · 6 STEPS</div>
+        <ol style="margin:8px 0 0;padding-left:18px;color:var(--ink-2);font-size:13.5px;line-height:1.55">
+          <li><b>Copper stays inside the rack.</b> NVLink 6 runs 14.4 Tb/s per direction per GPU on 200G lanes, and copper reach is ≤ 2 m; Rubin Ultra keeps the Oberon NVL72 rack and its copper backplane.<span class="src"> SemiAnalysis CPO Book, 2026-01-01 · MS · Chan, 2026-08-10</span></li>
+          <li><b>The optics go on the NVSwitch tray, not the GPU.</b> “They’ll have to use CPO for the NV switch systems”; the first CPO sits on the NVLink switch chip, never on the GPU through Feynman.<span class="src"> Susquehanna networking expert call, 2026-05-19</span> NVIDIA itself says rack-to-rack is “copper and direct optical connections”, without saying CPO or NPO.<span class="src"> NVDA blog via Redburn, 2026-08-12</span></li>
+          <li><b>Eight NVL72 racks make one 576-GPU domain through a second switching tier.</b> “NV576 Rubin Ultra in 2027 may use CPO switch trays to connect eight NVL72 server racks”.<span class="src"> MS · Chan, 2026-09-06; MS · Moore, 08-17; SemiAnalysis, 07-06; FundaAI OCP APAC, 08-17</span> Two tiers of NVLink switching add latency; no performance data yet.<span class="src"> Susquehanna, 2026-05-19</span> One AI-written call summary says 16 racks <span class="tag">unconfirmed</span>.</li>
+          <li><b>The fibre count is scale-up’s, not scale-out’s.</b> “Scale-up fibres in VRU 576 will be 8x that of scale-out”.<span class="src"> JPM OCP APAC, 2026-08-23</span> Lumentum’s CEO: 8,000 lasers per rack, which Redburn turns into ~111 lasers per GPU vs ~5 for scale-out.<span class="src"> Hurlston via Redburn, 2026-08-12</span> An ELS is ~$425 with 8 laser chips, 15-20% of NVIDIA’s CPO opportunity.<span class="src"> LITE IR, 2026-09-11</span></li>
+          <li><b>CPO vs NPO on that tray is undecided, and it is a yield race.</b> Innolight says NPO, the Taiwan chain says CPO; the price gap is only ~$3K; FAU yields are FOCI ~30% and Corning + Largan ~50-60% against a 70-80% bar before June 2027; if yields are not fixed, NVIDIA may go NPO. Small volumes 2027, ramp 2028.<span class="src"> Fubon · Shang via Jefferies desk, 2026-09-26</span></li>
+          <li><b>Money and timing.</b> ~$4.6m of inter-rack scale-up optics “per rack” (~8% of BOM; $1.2m copper + $3.5m optical) <span class="tag">desk relay</span>; networking rises from 8.6% of rack BOM (GB300) to 22.4% (NVL576).<span class="src"> Fubon via Jefferies desk, 2026-09-26; Jefferies Asia, 09-27</span> Dates: COHR and LITE 2H27 (LITE: “very robust ramp in CY2028”), UBS hybrid 2028-29 / full 2029-30, Jefferies C29, Barclays turn of the decade, MS: Feynman is the catalyst.<span class="src"> as dated</span></li>
+        </ol>
+      </div>
+      <div>
+        <div class="card" style="margin-bottom:14px">
+          <div class="n" style="font:700 11px 'JetBrains Mono',monospace;color:var(--amber);letter-spacing:.08em">HOW IT SHOULD BE · SYNTHESIS (Capstone lab, 2026-09-28 — not a source)</div>
+          <p style="margin:8px 0 0;color:var(--ink-2);font-size:13.5px;line-height:1.55">
+            <b>1.</b> Keep the GPU package electrical. The GPU’s shoreline and thermal budget are spent on HBM and NVLink SerDes; a failed optical engine on the GPU takes out a $50k+ part, on a switch tray it takes out a tray. Every architect voice in the corpus (Susquehanna expert, DAMNANG, LITE, MS primer) lands here through Feynman.<br>
+            <b>2.</b> Put a <i>socketed</i> engine with an external laser on the NVSwitch tray first (NPO), because the binding constraint is fibre-attach yield, not $/engine: the ~$3K price gap is noise next to a 30-60% FAU yield on a part that must never be reworked in the field. DAMNANG’s framing holds: NPO “changes not speed but range”, which is exactly the rack-to-rack problem.<br>
+            <b>3.</b> Move the engine onto the NVSwitch package (true CPO) only when FAU yield clears the 70-80% bar and the socket is no longer needed for serviceability — the corpus puts that at Feynman (2029-30), consistent with UBS’s hybrid-then-full sequence.<br>
+            <b>4.</b> Size the optical egress to the full NVLink bisection. In a non-blocking two-tier domain every rack’s uplinks equal its downlinks, so the whole 72 × 14.4 Tb/s per direction leaves the rack (derived, see right). That is why scale-up fibres are ~8x scale-out’s and why the laser, not the engine, is the scarce part (LITE holds ~30% of 2027-28 NPO laser volume; NVDA has reserved the lion’s share of ELS capacity through 2H27).<br>
+            <b>5.</b> Expect OCS <i>above</i> the 576, not inside it: Lumentum already frames OCS as the way to partition 576+ clusters, software-gated, possibly late CY28.
+          </p>
+        </div>
+        <div class="card">
+          <div class="n" style="font:700 11px 'JetBrains Mono',monospace;color:var(--ink-3);letter-spacing:.08em">DERIVED ARITHMETIC · [H] not sourced, order-of-magnitude only</div>
+          <table style="margin-top:6px">
+            <tr><td>Bisection per rack</td><td class="v">72 × 14.4 Tb/s ≈ 1.04 Pb/s per direction</td><td class="src">NVLink 6 per-GPU rate × 72; full fat-tree</td></tr>
+            <tr><td>Lanes leaving the rack</td><td class="v">≈ 5,200 × 200G per direction</td><td class="src">1.04 Pb/s ÷ 200G</td></tr>
+            <tr><td>Engines per rack</td><td class="v">≈ 650 × 1.6T or ≈ 325 × 3.2T</td><td class="src">per direction; engine speed for scale-up is NOT in the wiki</td></tr>
+            <tr><td>Cross-check vs 8,000 lasers/rack</td><td class="v">≈ 1,000 ELS × 8 chips</td><td class="src">Hurlston via Redburn 08-12 · LITE 09-11: ~1.5 ELS per 1.6T-equivalent — same order</td></tr>
+            <tr><td>Fubon $4.6m “per rack”</td><td class="v">≈ $64k/GPU if per NVL72; ≈ $8k/GPU if per 576-system</td><td class="src">8% of BOM ⇒ BOM ≈ $57m, closer to an 8-rack system than one rack (VR200 rack ≈ $9m, Sherman 08-06) <span class="tag">basis unresolved</span></td></tr>
+            <tr><td>FundaAI content</td><td class="v">$3,812/GPU NVL72 → $11,265/GPU NVL576</td><td class="src">FundaAI industry discussion, 2026-08-17, unverified</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="n" style="font:700 11px 'JetBrains Mono',monospace;color:var(--red);letter-spacing:.08em">NOT IN THE WIKI</div>
+      <p style="margin:6px 0 0;color:var(--ink-2);font-size:13px;line-height:1.5">Where the second-tier NVLink switches physically sit (per rack vs a central switch rack), the switch radix and tray count, fibres or engines per scale-up tray, the engine speed for scale-up (3.2T appears only for scale-out), the primary Fubon email and whether its “$4.6m per rack” is one rack or the 576-system, a confirmed NVLink 7 lane rate, latency data for the two-tier domain, and Google-specific objections to scale-up CPO. Kyber itself is “cancelled” (MS 08-17) vs “pushed out” (Jefferies 08-20) vs “changed the name, still on the list” (NVDA IR).</p>
+    </div>
   </section>
 
   <h2>The numbers that matter</h2>
@@ -315,7 +399,7 @@ footer{margin-top:30px;color:var(--ink-3);font-size:12px;line-height:1.5;border-
   </div>
 
   <footer>
-    Sources: Capstone wiki <span class="mono">_wiki/themes/optical-cpo.md</span>, LITE/COHR/AVGO/NVDA pages and the Optical TAM Bridge (2026-08-17). Scene geometry is schematic: port counts, distances and mirror angles are drawn for clarity, not to scale. The ≈20 pJ/bit pluggable figure is derived here (16.5 W ÷ 800 Gb/s); the wiki carries no per-port NPO power figure, so the NPO meter is left blank rather than interpolated. Built 2026-09-27 (scale-up / scale-out view added the same day).
+    Sources: Capstone wiki <span class="mono">_wiki/themes/optical-cpo.md</span>, LITE/COHR/AVGO/NVDA pages and the Optical TAM Bridge (2026-08-17). Scene geometry is schematic: port counts, distances and mirror angles are drawn for clarity, not to scale. The ≈20 pJ/bit pluggable figure is derived here (16.5 W ÷ 800 Gb/s); the wiki carries no per-port NPO power figure, so the NPO meter is left blank rather than interpolated. Built 2026-09-27; scale-up / scale-out view added the same day; company map and the NVL576 walkthrough added 2026-09-28.
   </footer>
 </div>
 
@@ -324,6 +408,197 @@ footer{margin-top:30px;color:var(--ink-3);font-size:12px;line-height:1.5;border-
 (function(){
 "use strict";
 const $=s=>document.querySelector(s);
+// ---------- "Who sits where" data (every line attributed; Y = has a wiki page) ----------
+const CO={
+  LITE:{n:'Lumentum',cov:1},COHR:{n:'Coherent',cov:1},AVGO:{n:'Broadcom',cov:1},NVDA:{n:'NVIDIA',cov:1},MRVL:{n:'Marvell',cov:1},
+  CRDO:{n:'Credo',cov:1},ALAB:{n:'Astera Labs',cov:1},APH:{n:'Amphenol',cov:1},TEL:{n:'TE Connectivity',cov:1},GLW:{n:'Corning',cov:1},
+  AAOI:{n:'Applied Optoelectronics',cov:1},TSEM:{n:'Tower Semiconductor',cov:1},TSM:{n:'TSMC',cov:1},CIEN:{n:'Ciena',cov:1},ANET:{n:'Arista',cov:1},
+  CSCO:{n:'Cisco / Acacia',cov:1},AXTI:{n:'AXT',cov:1},AIXA:{n:'Aixtron',cov:1},GOOG:{n:'Google',cov:1},META:{n:'Meta',cov:1},INTC:{n:'Intel',cov:1},
+  AMD:{n:'AMD',cov:1},SMTC:{n:'Semtech',cov:1},TER:{n:'Teradyne',cov:1},ADV:{n:'Advantest',cov:1},MSFT:{n:'Microsoft',cov:1},AMZN:{n:'Amazon',cov:1},
+  OPENAI:{n:'OpenAI',cov:1},CRWV:{n:'CoreWeave',cov:1},ORCL:{n:'Oracle',cov:1},POET:{n:'POET Technologies',cov:1},
+  INNO:{n:'Innolight',cov:0},EOPT:{n:'Eoptolink',cov:0},FN:{n:'Fabrinet',cov:0},ACCE:{n:'Accelink',cov:0},MTSI:{n:'MACOM',cov:0},
+  SUMI:{n:'Sumitomo (Electric / Chemical)',cov:0},FURU:{n:'Furukawa',cov:0},FUJI:{n:'Fujikura',cov:0},YUAN:{n:'Yuanjie · Shijia',cov:0},
+  LAND:{n:'LandMark Optoelectronics',cov:0},IQE:{n:'IQE',cov:0},FOCI:{n:'FOCI',cov:0},LARG:{n:'Largan',cov:0},SENK:{n:'Senko',cov:0},
+  ASE:{n:'ASE / SPIL',cov:0},AMKR:{n:'Amkor',cov:0},SHUN:{n:'Shunsin',cov:0},BROW:{n:'Browave',cov:0},FOXC:{n:'Foxconn',cov:0},TFC:{n:'TFC',cov:0},
+  FICO:{n:'ficonTEC',cov:0},GFS:{n:'GlobalFoundries',cov:0},AYAR:{n:'Ayar Labs',cov:0},CELE:{n:'Celestial AI (Marvell)',cov:0},LMAT:{n:'Lightmatter',cov:0},
+  SIVE:{n:'Sivers',cov:0},NOK:{n:'Nokia',cov:0},HUAW:{n:'Huawei',cov:0},LAMB:{n:'Lambda',cov:0},DMAT:{n:'d-Matrix',cov:0},XAI:{n:'xAI',cov:0}
+};
+const RATINGS={
+  LITE:'Citi Buy $1,200 (09-22) · DB Buy $1,200 (08-31) · JPM OW $1,280 (08-12) · Mizuho OP $1,140 (08-16) · MS EW $1,000 (08-24) · UBS Neutral $960 (08-10)',
+  COHR:'Capstone NEUTRAL $285 (09-01, lowest on the Street) · MS EW $375 (09-24) · JPM OW $465 · BofA Neutral $400 · Barclays OW $350 (08-13)',
+  AVGO:'JPM OW $580 (09-01) · GS Buy $525 (post 09-02 print) · Wells OW $545 (08-17) · UBS Buy $470 (08-24)',
+  MRVL:'BofA Buy $365 (09-09) · Wells OW $310 (08-24) · MS EW $224 (08-23) · GS Neutral $195 (08-27)',
+  CRDO:'JPM OW $310 · Jefferies Buy $270 (09-02) · Mizuho OP $290 (08-16)',
+  ALAB:'Jefferies Buy $450 · MS OW $382 (08-04) · UBS Neutral $425 (08-05) · Northland OP $350 (08-17)',
+  AAOI:'Wolfe Peer Perform, no PT (08-06) — the only mark on the page',
+  TSEM:'Barclays OW PT $310 (09-18)'
+};
+// parts: {id, name, top (label names), cos:[[ticker, role, evidence]]}
+const WHO_PRODUCTS=[
+ {id:'plug',name:'Pluggable transceiver',scene:'cpo',stage:0,explode:0,parts:[
+  {id:'mod',name:'Module assembly',top:'Innolight · Eoptolink · COHR',cos:[
+    ['INNO','Module leader; ~40% share of 1.6T','MS · Meng, init OW HK$1,385, 2026-09-06; share 38.5% → 44.8% in 2027E (Jefferies · Curtis, 09-24)'],
+    ['EOPT','#2 module vendor; consensus sales $8.4 / 14.5 / 19.9bn 2026-28E','Jefferies · Curtis, 2026-09-24'],
+    ['COHR','Modules $7.1 / 9.4 / 12.7bn 2026-28E','Jefferies · Curtis, 2026-09-24'],
+    ['LITE','CloudLight modules ~¼ of revenue — yet Jefferies’ table carries LITE at zero through 2027E ⚠ disputed','GS conference, 2026-09-14 vs Jefferies · Curtis, 09-24'],
+    ['AAOI','Modules $0.70 / 2.07 / 3.58bn 2026-28E','Jefferies · Curtis, 2026-09-24'],
+    ['FN','Contract manufacturer; GM 12.2% (bottom of the ladder)','Q4 FY26 prints, 2026-08-17'],
+    ['ACCE','Chinese module vendor in the consensus table','Jefferies · Curtis, 2026-09-24'],
+    ['CSCO','Acacia coherent pluggables: 850k 400G, 75k 800G; orders > $1B','Barclays, 2026-09-23']]},
+  {id:'dsp',name:'DSP (the part CPO removes)',top:'AVGO · MRVL · CRDO',cos:[
+    ['AVGO','“Leader in optical DSP”; PAM4 DSPs sold out through 2027','AVGO Q3 call, 2026-09-02; Wolfe via TMTB, 09-24'],
+    ['MRVL','PAM4 DSPs sold out through 2027','Wolfe via TMTB, 2026-09-24'],
+    ['CRDO','Record optical DSP revenue; FY27 optical guide $600m+; AEC $1.77 / 2.35 / 2.94bn 2026-28E','Jefferies, 2026-09-02 / 09-24']]},
+  {id:'tia',name:'TIA / driver',top:'MACOM · Semtech',cos:[
+    ['MTSI','Barclays’ top pick in TIA/driver','Barclays · O’Malley, 2026-09-23'],
+    ['SMTC','4x TIA/driver content in NPO vs 200G/lane ⚠ sentence garbled in source','Barclays · O’Malley, 2026-09-23']]},
+  {id:'laser',name:'Lasers: EML · CW · VCSEL',top:'LITE · AVGO · Sumitomo',cos:[
+    ['LITE','200G EML a LITE/AVGO duopoly; shifting ~15% of output to CW on price (Citi) vs “as a favour” (Jefferies) ⚠','wiki 2026-08-27; Citi 09-22; Jefferies 09-20'],
+    ['AVGO','“Large share”; doubled EML, CW and VCSEL capacity (US + Singapore)','AVGO, 2026-09-02'],
+    ['COHR','EML/CW supplier; #2 ELS candidate','SemiAnalysis CPO Book, 2026-01-01'],
+    ['SUMI','Named CW laser supplier','SemiAnalysis CPO Book, 2026-01-01'],
+    ['FURU','Named CW laser supplier','SemiAnalysis CPO Book, 2026-01-01'],
+    ['YUAN','Named CW laser suppliers (China)','SemiAnalysis CPO Book, 2026-01-01'],
+    ['MTSI','Own CW laser late CY27 at the earliest','FUNDA, 2026-08-12']]},
+  {id:'inp',name:'InP substrate · epi · tools',top:'AXT · Sumitomo · Aixtron',cos:[
+    ['AXTI','~40% of InP substrates (Sumitomo ~40%, JX ~10%); LITE says AXT 6-inch yield ~5% ⚠','BofA / AXT CFO, 2026-09-03; LITE IR, 09-11'],
+    ['SUMI','~40% InP substrate; Sumitomo Chemical in mass production of 4-inch InP epi ⚠ Electric vs Chemical unresolved','BofA, 2026-09-03; Jefferies Asia, 09-04'],
+    ['LAND','Merchant InP foundry, 47% operating margin','@crux, 2026-08-30'],
+    ['IQE','Epi; appears only as a read-through','wiki, 2026-06-19'],
+    ['AIXA','~100% share of InP MOCVD tools','AIXA page']]},
+  {id:'fib',name:'Fibre · connectors',top:'Corning · Amphenol · Fujikura',cos:[
+    ['GLW','Meta LTA up to $6B + NVDA prepay','GLW page'],
+    ['APH','“Strongest in advanced optical interconnect for AI scale-out and scale-across”','CommScope via MS · Marshall, 2026-08-11'],
+    ['TEL','Connectors into NVDA (graph edge)','_data/graph.json'],
+    ['FUJI','Fibre supplier','MS panel, 2026-05-07'],
+    ['FURU','Fibre supplier','MS panel, 2026-05-07']]}
+ ]},
+ {id:'npo',name:'Near-packaged optics',scene:'cpo',stage:1,explode:1,parts:[
+  {id:'eng',name:'NPO engine (socketed)',top:'COHR · Innolight · MRVL',cos:[
+    ['COHR','NPO LTA ramping next year','MS, 2026-09-23'],
+    ['INNO','Chinese suppliers say NPO (Taiwan chain says CPO)','Fubon via Jefferies desk, 2026-09-26'],
+    ['MRVL','Own NPO light engine + NPO TIAs/drivers (plus Celestial CPO)','MRVL bus tour, 2026-09-14'],
+    ['ALAB','Optical revenue from end-C27, “could exceed 10%” of revenue in C28, mostly NPO','Jefferies, 2026-09-20'],
+    ['CRDO','Initial NPO design wins','JPM, 2026-09-02'],
+    ['FN','NPO before CPO','Fabrinet call, 2026-08-17'],
+    ['LMAT','NPO first, 2026/27','SemiAnalysis CPO Book, 2026-01-01'],
+    ['HUAW','7.2T NPO module','TrendForce, 2026-09-14']]},
+  {id:'els',name:'External laser source',top:'LITE · COHR · Nokia',cos:[
+    ['LITE','Five NPO customers; can supply only ~30% of 2027-28 NPO laser volume — considering licensing','Citi, Buy $1,200, 2026-09-22'],
+    ['COHR','ELS #2','SemiAnalysis CPO Book, 2026-01-01'],
+    ['NOK','ELSFP external-laser module','Jefferies, 2026-09-24']]},
+  {id:'tia',name:'TIA / driver',top:'Semtech · MACOM',cos:[
+    ['SMTC','4x TIA/driver content in NPO vs 200G/lane ⚠','Barclays · O’Malley, 2026-09-23'],
+    ['MTSI','TIA/driver top pick','Barclays · O’Malley, 2026-09-23']]},
+  {id:'buy',name:'Who is pursuing NPO',top:'AMZN · META · MSFT · AMD',cos:[
+    ['AMZN','NPO pursuer','Jefferies · Beavington, 2026-09-20'],
+    ['META','NPO pursuer; expected to lead NPO/CPO deployments by 2030','Jefferies 09-20; LightCounting via JPM, 08-06'],
+    ['MSFT','NPO pursuer','Jefferies · Beavington, 2026-09-20'],
+    ['AMD','MI500: NPO + ELS across 576 GPUs / 8 racks, 288 Tomahawk 6','SemiAnalysis, 2026-07-24'],
+    ['NVDA','Holds “the lion’s share” of ELS capacity through 2H27 — only 1-2 of the four get supply','Jefferies · Beavington, 2026-09-20']]}
+ ]},
+ {id:'cpo',name:'Co-packaged optics switch',scene:'cpo',stage:2,explode:1,parts:[
+  {id:'asic',name:'Switch ASIC + CPO integrator',top:'NVDA · AVGO · MRVL',cos:[
+    ['NVDA','Spectrum-X CPO in mass production; Spectrum-6 attach above plan; Quantum-X Q3450 “technically NPO” ⚠','Taiwan media relay 08-18; Stifel 09-25; SemiAnalysis CPO Book'],
+    ['AVGO','Humboldt → Bailly → TH6 Davisson (100T); 4th gen 2027; “CPO fits scale-out better than scale-up”','AVGO, 2026-08-17 / 09-04'],
+    ['MRVL','Celestial CPO; targeting $1B run-rate by end CY28; Trainium 4 link is SemiAnalysis’ inference ⚠','SemiAnalysis CPO Book'],
+    ['CSCO','Silicon One CPO','650 Group, 2026-06-04'],
+    ['CIEN','Nubis; $8bn CPO/NPO TAM in 2029','CIEN, 2026-09-16'],
+    ['INTC','OCI chiplet roadmap','SemiAnalysis CPO Book']]},
+  {id:'pic',name:'PIC foundry',top:'TSMC COUPE · Tower · GFS',cos:[
+    ['TSM','COUPE “the solution of choice”; <150k units/mo; PIC 10k → 15k wpm','SemiAnalysis CPO Book; Susquehanna · Hosseini, 2026-09-09'],
+    ['TSEM','“Agnostic” exposure; concedes TSM takes CPO share “because they control the ASIC”','Barclays OW $310, 09-18; TSEM, 09-15'],
+    ['GFS','SiGe capacity deal with MRVL','corpus, 2026-09-17'],
+    ['POET','Optical interposer; Mitsubishi partner','POET page']]},
+  {id:'els',name:'External laser source',top:'LITE · Sumitomo · COHR',cos:[
+    ['LITE','Sole initial NVDA supplier (Book); cannot meet NVDA’s Dec-Q ultra-high-power laser demand; ELS ~$425 with 8 laser chips','CPO Book 01-01; Stifel 09-25; LITE IR 09-11'],
+    ['SUMI','Named in NVDA’s own blog','PhotonCap, 2026-07-29'],
+    ['COHR','ELS #2; ~$15k content per 100T chip ⚠ basis','CPO Book; JPM · Cardoso, 2026-09-25'],
+    ['SIVE','Laser for Ayar Labs SuperNova','SemiAnalysis CPO Book']]},
+  {id:'fau',name:'Fibre-attach unit (the yield gate)',top:'FOCI · Corning+Largan · Senko',cos:[
+    ['FOCI','Yield ~30%; TSMC has moved away','Fubon · Shang, 2026-09-26'],
+    ['GLW','Corning + Largan ~50-60% yield; NVDA needs 70-80% before June 2027','Fubon · Shang, 2026-09-26'],
+    ['LARG','With Corning, ~50-60% yield','Fubon · Shang, 2026-09-26'],
+    ['SENK','Likely FAU for Spectrum-X and TH6','SemiAnalysis CPO Book']]},
+  {id:'osat',name:'Packaging · assembly · test',top:'ASE · Browave · Teradyne',cos:[
+    ['ASE','Packaging (with SPIL); Spectrum-X chain TSMC COUPE → ASE → Browave → Foxconn','CPO Book; Taiwan media relay, 2026-08-18'],
+    ['AMKR','Packaging','SemiAnalysis CPO Book'],
+    ['SHUN','Packaging','SemiAnalysis CPO Book'],
+    ['BROW','Assembly in the Spectrum-X chain','Taiwan media relay, 2026-08-18'],
+    ['FOXC','System assembly (+ TFC)','Taiwan media relay, 2026-08-18'],
+    ['TER','CPO test','Fubon, 2026-09-26'],
+    ['ADV','CPO test','Fubon, 2026-09-26'],
+    ['FICO','Photonics assembly/test tools','Fubon, 2026-09-26']]},
+  {id:'first',name:'First deployers',top:'CoreWeave · Lambda · Oracle',cos:[
+    ['CRWV','First Spectrum-X CPO deployer','Taiwan media relay, 2026-08-18'],
+    ['LAMB','First Spectrum-X CPO deployer','Taiwan media relay, 2026-08-18'],
+    ['ORCL','First Spectrum-X CPO deployer','Taiwan media relay, 2026-08-18'],
+    ['OPENAI','Chose AVGO partly for CPO','SemiAnalysis CPO Book'],
+    ['GOOG','Most CPO-hesitant hyperscaler; reliability “a deal breaker”','SemiAnalysis CPO Book / via AVGO'],
+    ['META','Bailly 15-switch reliability test','SemiAnalysis CPO Book']]},
+  {id:'start',name:'Optical I/O start-ups',top:'Ayar Labs · Lightmatter',cos:[
+    ['AYAR','$150M raise; NVDA, AMD and Intel among backers','LaPedus, 2026-09-25'],
+    ['LMAT','NPO first, 2026/27','SemiAnalysis CPO Book'],
+    ['CELE','Photonic Fabric — a memory play, not NVLink','SemiAnalysis CPO Book']]}
+ ]},
+ {id:'ocs',name:'Optical circuit switch',scene:'ocs',parts:[
+  {id:'mems',name:'Mirror array: MEMS vs liquid crystal',top:'LITE (MEMS) · COHR (LC)',cos:[
+    ['LITE','R300 MEMS; FY26 OCS > $90m; expects to be Google’s largest OCS supplier next year, newer designs sole-sourced; Google replacing in-house OCS with LITE’s','10-K 08-17; Jefferies 09-20; Citi 09-22'],
+    ['COHR','Liquid-crystal 320×320; OCS TAM $4bn by CY30; “eight or nine customers” (hedged); rumour Google rejected LC on insertion loss ⚠','COHR IR, 2026-09-08; desk 09-14; corpus rumour 08-17'],
+    ['INNO','Listed as an OCS vendor','FUNDA']]},
+  {id:'inh',name:'In-house',top:'Google Palomar',cos:[
+    ['GOOG','Palomar in-house OCS, now being displaced by Lumentum’s','Citi, 2026-09-22']]},
+  {id:'col',name:'Collimators · fibre',top:'Corning',cos:[
+    ['GLW','Fibre','GLW page']]},
+  {id:'buy',name:'Buyers',top:'Google · OpenAI (Jalapeño) · NVDA (late)',cos:[
+    ['GOOG','“By far remain the largest” OCS buyer; Virgo hands the spine to OCS across 130k+ TPUs','MS, 2026-09-23; wiki excerpt 08-18'],
+    ['OPENAI','Jalapeño puts an OCS in every rack (SemiAnalysis inference) ⚠','SemiAnalysis, 2026-08-25'],
+    ['NVDA','Rack partitioning of 576+ clusters is software-gated, possibly late CY28','LITE IR, 2026-09-11'],
+    ['META','No OCS buy named on the wiki','—'],
+    ['MSFT','No OCS buy named on the wiki','—']]}
+ ]},
+ {id:'up',name:'Scale-up fabric',scene:'sys',show:'up',parts:[
+  {id:'sw',name:'Scale-up switch silicon',top:'NVDA NVSwitch · AVGO Tomahawk Ultra · ALAB',cos:[
+    ['NVDA','NVLink 5 → 6: 7.2 → 14.4 Tb/s per GPU, copper reach ≤ 2 m','SemiAnalysis CPO Book, 2026-01-01'],
+    ['AVGO','Tomahawk Ultra in XPU and “some GPU” clusters; sole scale-up switch in AMD Helios','AVGO 09-02; SemiAnalysis 07-24'],
+    ['ALAB','Scorpio X ramping (~$1k per chip); NVLink Fusion at two engagements (AMZN, d-Matrix)','Jefferies, 2026-09-20'],
+    ['MRVL','Agnostic across UALink, ESUN and NVLink','MRVL bus tour, 2026-09-14'],
+    ['AMD','Helios near the limit of an all-electrical fabric; next generation goes optical','Hot Chips, ~2026-08-25']]},
+  {id:'cu',name:'In-rack copper · extenders',top:'Amphenol · TE · Credo AEC',cos:[
+    ['APH','Cable/backplane into NVDA','_data/graph.json'],
+    ['TEL','Connectors into NVDA','_data/graph.json'],
+    ['CRDO','Record retimer revenue from copper scale-up; AEC reach to 30 m; AEC share of XPUs 54% → 37% 2026-28','Jefferies 09-02 / 09-24'],
+    ['ALAB','Taurus AEC $295 / 364 / 455m 2026-28E','Jefferies · Curtis, 2026-09-24']]},
+  {id:'opt',name:'Inter-rack optics (NVL576)',top:'LITE · COHR · TSMC COUPE',cos:[
+    ['LITE','“Best global play” on NVL576 optics; rack-to-rack “100% optical”','Fubon 09-26; LITE IR 09-11'],
+    ['COHR','Scale-up CPO + NPO 2H CY27 (its own date)','COHR via JPM, 2026-09-24/25'],
+    ['TSM','COUPE PIC; NVLink-switch CPO is 2028 upside, not modelled, on COUPE ramp uncertainty','JPM · Hariharan, 2026-09-17'],
+    ['AYAR','Optical I/O; NVDA/AMD/Intel-backed','LaPedus, 2026-09-25']]},
+  {id:'ici',name:'Non-NVLink scale-up',top:'Google ICI/OCS · AMD UALink',cos:[
+    ['GOOG','~80% of scale-up still copper; OCS closes the torus','AVGO via Jefferies desk 09-04; Redburn Fig 49'],
+    ['AMD','MI500 = 8 racks, NPO + ELS, 288 Tomahawk 6','SemiAnalysis, 2026-07-24']]}
+ ]},
+ {id:'out',name:'Scale-out network',scene:'sys',show:'out',parts:[
+  {id:'nic',name:'NIC-side transceivers',top:'Innolight · Eoptolink · COHR',cos:[
+    ['INNO','~40% of 1.6T','MS · Meng, 2026-09-06'],
+    ['EOPT','#2 module vendor','Jefferies · Curtis, 2026-09-24'],
+    ['COHR','Modules $7.1bn 2026E','Jefferies · Curtis, 2026-09-24'],
+    ['AAOI','Modules $0.70bn 2026E','Jefferies · Curtis, 2026-09-24']]},
+  {id:'sw',name:'Leaf / spine switch silicon',top:'NVDA · AVGO · MRVL',cos:[
+    ['NVDA','Spectrum-6 takes pluggable or CPO optics','NVDA via Jefferies, 2026-08-26'],
+    ['AVGO','Tomahawk 6 sold out; Tomahawk 7 taped out','AVGO, 2026-09-02'],
+    ['MRVL','100T switch in C28','MRVL, 2026-09-20']]},
+  {id:'sys',name:'Switch systems',top:'Arista · Cisco · Ciena',cos:[
+    ['ANET','XPO pluggables, deliberately non-integrated','ANET call summary, 2026-08-26'],
+    ['CSCO','Optical systems share mid-single digits','Barclays, 2026-09-23'],
+    ['CIEN','“High 20s%” optical-systems share; DCI','Barclays, 2026-09-23']]},
+  {id:'ocs',name:'OCS spine',top:'LITE · COHR · Google',cos:[
+    ['LITE','R300 MEMS','LITE 10-K, 2026-08-17'],
+    ['COHR','LC OCS','COHR IR, 2026-09-08'],
+    ['GOOG','Virgo spine on OCS','wiki excerpt, 2026-08-18']]}
+ ]}
+];
+
 
 // ---------- theme ----------
 try{const t=localStorage.getItem("lp-theme"); if(t) document.documentElement.setAttribute("data-theme",t);}catch(e){}
@@ -396,15 +671,23 @@ $("#cmpElec").onchange=()=>{ updateOCSHud(); if(ok) setElec($("#cmpElec").checke
 let mode="ocs";
 function setMode(m){
   mode=m;
-  const map={ocs:["hudOCS","ctrlOCS","explainOCS"],cpo:["hudCPO","ctrlCPO","explainCPO"],sys:["hudSYS","ctrlSYS","explainSYS"]};
-  for(const k of ["ocs","cpo","sys"]){
+  const map={ocs:["hudOCS","ctrlOCS","explainOCS"],cpo:["hudCPO","ctrlCPO","explainCPO"],sys:["hudSYS","ctrlSYS","explainSYS","nvlSYS"],who:["hudWHO","ctrlWHO","explainWHO","whoMatrixWrap"]};
+  for(const k of ["ocs","cpo","sys","who"]){
     $("#tab"+k.toUpperCase()).classList.toggle("on",k===m);
     for(const id of map[k]) $("#"+id).style.display=k===m?(id.startsWith("explain")?"grid":""):"none";
   }
-  if(ok){ ocsG.visible=m==="ocs"; cpoG.visible=m==="cpo"; sysG.visible=m==="sys"; orbitTo(m==="ocs"?VIEW_OCS:m==="sys"?VIEW_SYS:(explodeTarget?VIEW_EXP:VIEW_CPO)); }
+  if(ok){
+    if(m==="who"){ applyWhoScene(); }
+    else{
+      ocsG.visible=m==="ocs"; cpoG.visible=m==="cpo"; sysG.visible=m==="sys";
+      if(m==="sys"){ SYS.show=$("#showSeg .on").dataset.v; SYS.sp=$("#spSeg .on").dataset.v; buildSys(); }
+      if(m==="cpo"){ stageTarget=Math.round(+slider.value); explodeTarget=+$("#viewSeg .on").dataset.v; }
+      orbitTo(m==="ocs"?VIEW_OCS:m==="sys"?VIEW_SYS:(explodeTarget?VIEW_EXP:VIEW_CPO));
+    }
+  }
   try{localStorage.setItem("lp-mode",m);}catch(e){}
 }
-$("#tabOCS").onclick=()=>setMode("ocs"); $("#tabCPO").onclick=()=>setMode("cpo"); $("#tabSYS").onclick=()=>setMode("sys");
+$("#tabOCS").onclick=()=>setMode("ocs"); $("#tabCPO").onclick=()=>setMode("cpo"); $("#tabSYS").onclick=()=>setMode("sys"); $("#tabWHO").onclick=()=>setMode("who");
 
 // ---------- scale-up / scale-out controls ----------
 const SYS={up:"cu",out:"plug",sp:"eps",show:"both"};
@@ -433,6 +716,53 @@ for(const [id,k] of [["upSeg","up"],["outSeg","out"],["spSeg","sp"],["showSeg","
   });
 }
 updateSysHud();
+
+// ---------- who sits where: UI ----------
+const WHO={product:'plug',sel:null};
+const whoSeg=$("#whoSeg");
+WHO_PRODUCTS.forEach((p,i)=>{const b=document.createElement("button"); b.textContent=p.name; b.dataset.v=p.id; if(i===0) b.classList.add("on"); b.onclick=()=>setWhoProduct(p.id); whoSeg.appendChild(b);});
+const chipText=t=>CO[t].cov?t:CO[t].n.split(" (")[0].split(" · ")[0];
+function setWhoProduct(id){
+  WHO.product=id; WHO.sel=null;
+  [...whoSeg.children].forEach(x=>x.classList.toggle("on",x.dataset.v===id));
+  renderChips(); renderWhoHud();
+  if(ok) applyWhoScene();
+}
+function renderChips(){
+  const p=WHO_PRODUCTS.find(x=>x.id===WHO.product); const box=$("#whoChips"); box.innerHTML="";
+  for(const part of p.parts){
+    const h=document.createElement("div"); h.className="partname"; h.textContent=part.name; box.appendChild(h);
+    const row=document.createElement("div"); row.className="chips";
+    for(const [t] of part.cos){
+      const c=document.createElement("button"); c.className="chip"+(CO[t].cov?" cov":""); c.textContent=chipText(t); c.title=CO[t].n;
+      if(WHO.sel&&WHO.sel.t===t&&WHO.sel.part===part.id) c.classList.add("on");
+      c.onclick=()=>{WHO.sel={part:part.id,t}; renderChips(); renderWhoHud(); if(ok) hiliteWhoLabel();};
+      row.appendChild(c);
+    }
+    box.appendChild(row);
+  }
+}
+function elsewhere(t){
+  const hits=[]; for(const p of WHO_PRODUCTS) for(const part of p.parts) if(!(p.id===WHO.product&&part.id===WHO.sel.part)&&part.cos.some(x=>x[0]===t)) hits.push(p.name+" › "+part.name);
+  return hits.length?'<div class="src" style="margin-top:8px"><b>Also sits in:</b> '+hits.join(" · ")+'</div>':"";
+}
+function renderWhoHud(){
+  const p=WHO_PRODUCTS.find(x=>x.id===WHO.product);
+  $("#whoProduct").textContent=p.name;
+  if(!WHO.sel){ $("#whoName").textContent="Pick a company"; $("#whoBody").innerHTML='<div class="src">Blue chips have a wiki page; grey ones are named in the corpus only. Click one for its role, the evidence and the Street’s marks. Labels in the scene show the top names per layer.</div>'; return; }
+  const part=p.parts.find(x=>x.id===WHO.sel.part); const row=part.cos.find(x=>x[0]===WHO.sel.t); const c=CO[WHO.sel.t];
+  $("#whoName").textContent=c.n+(c.cov?" · "+WHO.sel.t:"");
+  $("#whoBody").innerHTML='<dl class="kv"><dt>Layer</dt><dd>'+part.name+'</dd><dt>Role</dt><dd>'+row[1]+'</dd><dt>Source</dt><dd class="src">'+row[2]+'</dd><dt>Wiki</dt><dd>'+(c.cov?'<span class="mono">_wiki/'+WHO.sel.t+'.md</span>':'no page — corpus mention only')+'</dd>'+(RATINGS[WHO.sel.t]?'<dt>Street</dt><dd class="src">'+RATINGS[WHO.sel.t]+'</dd>':'')+'</dl>'+elsewhere(WHO.sel.t);
+}
+(function buildMatrix(){
+  const tb=$("#whoMatrix");
+  for(const p of WHO_PRODUCTS) for(const part of p.parts){
+    const tr=document.createElement("tr");
+    tr.innerHTML='<td>'+p.name+'</td><td>'+part.name+'</td><td class="cos">'+part.cos.map(([t])=>'<span class="'+(CO[t].cov?'c':'')+'" title="'+CO[t].n+'">'+chipText(t)+'</span>').join('')+'</td>';
+    tb.appendChild(tr);
+  }
+})();
+renderChips(); renderWhoHud();
 
 // ---------- CPO controls ----------
 let stageT=0, stageTarget=0, explode=0, explodeTarget=0;
@@ -513,7 +843,7 @@ const v3=new THREE.Vector3();
 function drawLabels(){
   const box=$("#glbox"), w=box.clientWidth, h=box.clientHeight;
   for(const L of labels){
-    let vis=L.group.visible && L.show();
+    let vis=L.group.visible && L.show() && (!!L.who===(mode==="who"));
     if(vis){ L.getPos(v3); v3.project(camera); vis=v3.z<1 && Math.abs(v3.x)<1.1 && Math.abs(v3.y)<1.1; }
     L.el.style.display=vis?"":"none";
     if(vis){ L.el.style.left=((v3.x+1)/2*w)+"px"; L.el.style.top=((1-v3.y)/2*h-6)+"px"; }
@@ -890,6 +1220,34 @@ sysLbl("Leaf switch","scale-out",v=>v.set(LX[0],LY+0.4,0),()=>SYS.show!=="up");
 sysLbl("Spine switch","packet switch, optics every port",v=>v.set(0,SY+0.45,0),()=>SYS.show!=="up"&&SYS.sp==="eps");
 sysLbl("OCS spine","mirrors, no O-E-O",v=>v.set(0,SY+0.5,0),()=>SYS.show!=="up"&&SYS.sp==="ocs");
 
+// ---------- who sits where: scene labels ----------
+const whoLabels={};
+function whoAnchor(p,part){
+  const o=(x,y,z)=>v=>v.set(x,y,z), up=(obj,dy)=>v=>v.copy(obj.position).add(new THREE.Vector3(0,dy,0));
+  const A={
+    plug:{mod:up(ENG[3].g,0.5),dsp:up(ENG[1].g,1.15),tia:up(ENG[5].g,1.15),laser:up(ENG[7].g,0.5),inp:up(ENG[0].g,1.8),fib:o(9.6,1.6,0)},
+    npo:{eng:up(ENG[3].g,0.4),els:up(ELS[1],0.5),tia:up(ENG[6].g,0.4),buy:o(-4,0.3,3.5)},
+    cpo:{asic:up(die,0.35),pic:up(ENG[3].g,0.4),els:up(ELS[1],0.5),fau:v=>v.copy(ENG[6].g.position).add(ENG[6].fau.position).add(new THREE.Vector3(0,0.3,0)),osat:o(-1.5,0.3,1.6),first:o(8.15,2.0,-4),start:o(-4.5,0.3,-3.5)},
+    ocs:{mems:v=>v.copy(P_A(0)).add(new THREE.Vector3(0,0.75,0)),inh:v=>v.copy(P_B(0)).add(new THREE.Vector3(0,0.75,0)),col:v=>v.copy(P_in(0)).add(new THREE.Vector3(0,0.7,0)),buy:v=>v.copy(P_out(0)).add(new THREE.Vector3(0,0.7,0))},
+    up:{sw:o(RX[2],TRY(5)+0.35,RD/2),cu:o(RX[1],TRY(8)+0.3,-RD/2),opt:o(0,SWY-0.4,RD/2+1.6),ici:o(RX[0],TRY(0)+0.3,RD/2)},
+    out:{nic:o(RX[2],RH+0.3,0.35),sw:o(LX[0],LY+0.4,0),sys:o(LX[1],LY+0.4,0),ocs:o(0,SY+0.5,0)}
+  };
+  return A[p.id][part.id];
+}
+for(const p of WHO_PRODUCTS){
+  const g=p.scene==="cpo"?cpoG:p.scene==="ocs"?ocsG:sysG;
+  whoLabels[p.id]=p.parts.map(part=>{ const L=addLabel(part.name,part.top,whoAnchor(p,part),g); L.who=true; L.partId=part.id; L.show=()=>WHO.product===p.id; return L; });
+}
+function hiliteWhoLabel(){ for(const id in whoLabels) for(const L of whoLabels[id]) L.el.classList.toggle("hot",!!WHO.sel&&id===WHO.product&&WHO.sel.part===L.partId); }
+function applyWhoScene(){
+  const p=WHO_PRODUCTS.find(x=>x.id===WHO.product);
+  ocsG.visible=p.scene==="ocs"; cpoG.visible=p.scene==="cpo"; sysG.visible=p.scene==="sys";
+  if(p.scene==="cpo"){ stageTarget=p.stage; explodeTarget=p.explode; orbitTo(p.explode?VIEW_EXP:VIEW_CPO); }
+  if(p.scene==="ocs"){ if(elecOn) setElec(false); orbitTo(VIEW_OCS); }
+  if(p.scene==="sys"){ SYS.show=p.show; SYS.sp=p.show==="out"?"ocs":SYS.sp; buildSys(); orbitTo(VIEW_SYS); }
+  hiliteWhoLabel();
+}
+
 // ---------- resize ----------
 function resize(){
   const box=$("#glbox"); const w=box.clientWidth, h=box.clientHeight;
@@ -903,7 +1261,7 @@ let last=performance.now(), phot=0, lastStage=-1, lastEx=-1;
 function tick(now){
   const dt=Math.min(0.05,(now-last)/1000); last=now;
   updateCamera();
-  if(mode==="ocs"){
+  if(ocsG.visible){
     if(retarget){
       retarget.t=Math.min(1,retarget.t+dt/0.75); const u=smooth(retarget.t);
       mirrorsA.concat(mirrorsB).forEach(m=>m.g.quaternion.copy(m.q0).slerp(m.q1,u));
@@ -913,7 +1271,7 @@ function tick(now){
       phot=(phot+dt*0.28)%1;
       photons.forEach((p,k)=>{ p.visible=true; p.position.copy(pointAlong(selPath,(phot+k/photons.length)%1)); p.material.color.copy(elecOn?new THREE.Color(0xffffff):new THREE.Color(0xffffff)); });
     }
-  }else{
+  }else if(cpoG.visible){
     stageT+=(stageTarget-stageT)*Math.min(1,dt*5); if(Math.abs(stageTarget-stageT)<0.002) stageT=stageTarget;
     explode+=(explodeTarget-explode)*Math.min(1,dt*5); if(Math.abs(explodeTarget-explode)<0.002) explode=explodeTarget;
     layoutCPO();
