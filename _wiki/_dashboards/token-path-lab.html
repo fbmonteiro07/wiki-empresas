@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Token Path Lab</title>
-<meta name="description" content="Interactive 3D explainer: how one prompt is served across many GPUs (weights, KV cache, prefill, decode, all-to-all, the spill to NVL576 and scale-up optics) and how Lumentum makes the EML lasers that light the links. Every number attributed to the Capstone wiki.">
+<meta name="description" content="Interactive 3D explainer: how one prompt is served across many GPUs (weights, KV cache, prefill, decode, all-to-all, the spill to NVL576 and scale-up optics), driven by a live memory calculator on sourced constants. Every number attributed to the Capstone wiki.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
@@ -123,12 +123,12 @@ footer{margin-top:30px;color:var(--ink-3);font-size:12px;line-height:1.5;border-
   <header class="top">
     <div>
       <h1>The Token <span>Path</span></h1>
-      <div class="sub">One prompt, many GPUs: where the weights and the KV cache live, what crosses NVLink on every token, and the moment a job outgrows one rack and needs scale-up optics. Then the laser that lights those links, from InP wafer to chip. Companion to <a href="ocs-cpo-lab.html">The Light Path</a>. Drag to orbit, scroll to zoom.</div>
+      <div class="sub">One prompt, many GPUs: where the weights and the KV cache live, what crosses NVLink on every token, and the moment a job outgrows one rack and needs scale-up optics. Companion to <a href="ocs-cpo-lab.html">The Light Path</a> (the switch and the optics) and <a href="eml-laser-lab.html">The Laser Line</a> (how Lumentum makes the EML that lights the link). Drag to orbit, scroll to zoom, ← → steps.</div>
     </div>
     <div style="display:flex;gap:8px;align-items:center">
       <div class="tabs" role="tablist">
-        <button id="tabTOK" class="on" role="tab">Prompt · step by step</button>
-        <button id="tabEML" role="tab">EML laser · how Lumentum makes it</button>
+        <a href="ocs-cpo-lab.html" style="font:600 14px Inter,sans-serif;color:var(--ink-2);text-decoration:none;padding:9px 14px">← The Light Path</a>
+        <a href="eml-laser-lab.html" style="font:600 14px Inter,sans-serif;color:var(--ink-2);text-decoration:none;padding:9px 14px">The Laser Line →</a>
       </div>
       <button class="themebtn" id="themeBtn" title="Toggle theme" aria-label="Toggle theme">◐</button>
     </div>
@@ -162,14 +162,6 @@ footer{margin-top:30px;color:var(--ink-3);font-size:12px;line-height:1.5;border-
       </dl>
     </div>
 
-    <!-- HUD: EML -->
-    <div class="hud" id="hudEML" style="display:none">
-      <h3 id="emlStepN">Station 1 of 8</h3>
-      <div class="big" id="emlTitle"></div>
-      <p id="emlBody"></p>
-      <dl class="kv" id="emlKv"></dl>
-    </div>
-
     <!-- Controls: token path -->
     <div class="ctrl" id="ctrlTOK">
       <h3>Walk the prompt</h3>
@@ -194,17 +186,6 @@ footer{margin-top:30px;color:var(--ink-3);font-size:12px;line-height:1.5;border-
       <div class="hint">Derived arithmetic on sourced constants, excluding activations, overheads and compute limits; every constant carries its source in the tables below. Decode floor = bytes read per step ÷ aggregate HBM bandwidth [DER].</div>
     </div>
 
-    <!-- Controls: EML -->
-    <div class="ctrl" id="ctrlEML" style="display:none">
-      <h3>Production line</h3>
-      <input type="range" id="emlStage" min="0" max="7" step="1" value="0">
-      <div class="ticks"><span>InP wafer</span><span>Epi</span><span>Chip</span><span>Module</span></div>
-      <div class="row2" style="margin-top:8px"><button class="btn" id="emlPrev">← Prev</button><button class="btn" id="emlNext">Next →</button></div>
-      <h3 style="margin-top:14px">Sites</h3>
-      <div class="seg" id="siteSeg"></div>
-      <div id="siteBody" class="hint"></div>
-      <div class="hint">Stations 4-7 follow the wafer-to-chip flow described by a laser-industry expert (call, 2026-07-23), not a Lumentum disclosure; items marked <span class="tag d">generic</span> are industry knowledge the wiki does not carry.</div>
-    </div>
   </div>
 
   <!-- Explain: token path -->
@@ -270,53 +251,8 @@ footer{margin-top:30px;color:var(--ink-3);font-size:12px;line-height:1.5;border-
     </div>
   </section>
 
-  <!-- Explain: EML -->
-  <section class="explain" id="explainEML" style="display:none">
-    <div class="card"><div class="n">01 · THE PRODUCT</div><h4>What an EML is</h4><p>An electro-absorption modulated laser: a DFB laser (grating-defined single wavelength) and an electro-absorption modulator on the same InP chip. The DSP’s electrical signal drives the modulator, which switches the laser light on and off at 100G or 200G per lane. 200G per lane is “about 2x ASP” with “very little competition… Broadcom being the other main supplier”.<span class="src"> LITE @ DB conference, 2026-08-27</span></p></div>
-    <div class="card"><div class="n">02 · THE CONSTRAINT</div><h4>Substrate and epi, not demand</h4><p>Lasers need sulfur-doped InP, which yields worse than the iron-doped InP used for photodetectors.<span class="src"> LITE IR, 2026-09-11</span> AXT ~40% / Sumitomo ~40% / JX ~10% of substrates, on allocation for “&gt;18 months”; third price hike this year, +10% more in 4Q26.<span class="src"> AXT, 2026-08-31; UDN via Jefferies, 08-17</span> Aixtron has ~90-100% of InP MOCVD, slots reserved into 2027.<span class="src"> AIXA Q3/25 call; Jefferies, 2026-06-19</span></p></div>
-    <div class="card"><div class="n">03 · THE MIX SHIFT</div><h4>EML share falls as 1.6T rises</h4><p>EML-based transceivers drop from 70-80% at 800G to 40-50% at 1.6T as silicon photonics with CW lasers gains.<span class="src"> LITE, 2026-08-27</span> So the same fabs are qualifying CW flows: ~15% of output to CW “given strong pricing” (Citi, 09-22) vs “doing it as a favour” (Jefferies, 09-18) <span class="tag">disputed</span>; JPM sees 10-20% of chip output in 2027 (08-14). NVIDIA’s ELS is ~$425 with 8 chips.<span class="src"> LITE IR, 2026-09-11</span></p></div>
-  </section>
-  <section id="moreEML" style="display:none">
-    <h2>Lumentum’s laser numbers</h2>
-    <div class="grid2">
-      <div class="card">
-        <h4 style="margin:0 0 8px">Capacity, supply, wafer size</h4>
-        <table>
-          <tr><th>Item</th><th>Value</th><th>Source</th></tr>
-          <tr><td>Capacity steps</td><td class="v">+40% Jun-24→Jun-25, another +40% by end-CY25</td><td class="src">Lowe, 2025-02-06</td></tr>
-          <tr><td>Japan EML capacity</td><td class="v">8x in 2.5 years</td><td class="src">Aurelion paraphrase, 2026-07-29</td></tr>
-          <tr><td>EML units</td><td class="v">&gt;50% growth, Dec-26 quarter y/y</td><td class="src">Q4 FY26 call, 2026-08-11</td></tr>
-          <tr><td>Demand vs supply</td><td class="v">demand &gt; supply by more than 30%; 90%+ of output take-or-pay through CY27, extra units auctioned</td><td class="src">LITE, 2026-05-06 / 05-07</td></tr>
-          <tr><td>FY26 capex</td><td class="v">$451.3M</td><td class="src">10-K FY26</td></tr>
-          <tr><td>Wafer size</td><td class="v">3→4-inch in 2025; 6-inch only with Greensboro (2028); 6-inch = 2.25x area, ~4.36x chips of 3-inch</td><td class="src">LITE 2025-08-12; IR 09-11; Citi 07-16</td></tr>
-          <tr><td>6-inch yield</td><td class="v">AXT ingot ~5%; Sumitomo S-doped 6-inch “very bad”; COHR says every product yields better on 6-inch <span class="tag">disputed</span></td><td class="src">LITE IR 09-11; COHR 09-08</td></tr>
-          <tr><td>Die size</td><td class="v">200G EML die ~22% larger than 100G; CW die ~60% of an EML</td><td class="src">Citi 07-16; TD Cowen 03-11</td></tr>
-          <tr><td>Requalification</td><td class="v">~6 months per recipe change; cycles 2-3 years; “one year for NVIDIA”</td><td class="src">Yuen 05-07; Citi 09-22; DB 08-27</td></tr>
-        </table>
-      </div>
-      <div class="card">
-        <h4 style="margin:0 0 8px">Market, customers, competitors</h4>
-        <table>
-          <tr><th>Item</th><th>Value</th><th>Source</th></tr>
-          <tr><td>EML share</td><td class="v">~50% (LITE); Broadcom the other main 200G supplier</td><td class="src">Citi 2025-08-29; LITE 08-27</td></tr>
-          <tr><td>200G mix</td><td class="v">&gt;25% of EML revenue; 50%+ of volume by mid-2027 (LITE) vs ~25% units / ~40% revenue (MS) <span class="tag">do not reconcile</span></td><td class="src">Q4 FY26 call 08-11; MS 08-12</td></tr>
-          <tr><td>Customers</td><td class="v">Google = Customer A, 26.6% of FY26 revenue; Innolight “probably their biggest customer in the laser” <span class="tag">unconfirmed</span>; NVIDIA low-single-digit %</td><td class="src">10-K; Papa Sylla call 08-11; Citi 07-16</td></tr>
-          <tr><td>Broadcom</td><td class="v">InP fabs “more than tripling” y/y (AVGO) vs “one fab, relatively small” (LITE) <span class="tag">disputed</span></td><td class="src">Kawwas 09-02; LITE IR 09-11</td></tr>
-          <tr><td>Sumitomo · Mitsubishi</td><td class="v">Sumitomo 2.4x capacity by 2028; Mitsubishi ~$1.5bn capex toward optics</td><td class="src">TD Cowen, 2026-03-11</td></tr>
-          <tr><td>China</td><td class="v">DSBJ targets 200G EML in 2H26; Everbright, Source, Accelink, Yuanjie, Sanan 1-2 years behind</td><td class="src">Jefferies 07-14; Citi 07-16</td></tr>
-          <tr><td>MACOM CW</td><td class="v">production late CY27 at the earliest</td><td class="src">FUNDA, 2026-08-12</td></tr>
-          <tr><td>Street on LITE</td><td class="v">JPM OW $1,280 · Redburn Buy $1,270 · Citi/DB/Jefferies Buy $1,200 · Mizuho OP $1,140 · BofA Neutral $1,100 · Barclays OW $1,000 · MS EW $1,000 · UBS Neutral $960 · TD Cowen Hold $800</td><td class="src">as dated on the LITE page (Aug-Sep 2026)</td></tr>
-        </table>
-      </div>
-    </div>
-    <div class="card" style="margin-top:14px">
-      <div class="n" style="color:var(--red)">NOT IN THE WIKI</div>
-      <p>Wafers per month, number of MOCVD reactors, fab cycle time, die per wafer, chip yield, per-EML ASP in dollars, EML share of LITE revenue or margin, which fab makes 100G vs 200G, and the actual DFB-grating, modulator-integration, cleaving and burn-in recipes. Stations 2-3 and the grating/modulator drawing are industry-generic; the wafer-to-chip flow (stations 4-7) is a laser-industry expert’s description (call, 2026-07-23), not Lumentum’s.</p>
-    </div>
-  </section>
-
   <footer>
-    Sources: Capstone wiki pages NVDA, LITE, AIXA, AXTI, COHR, AVGO; themes hbm-memory, tokenmaxxing, optical-cpo; transcripts and expert calls as dated. [DER] = derived here from sourced constants; scene geometry is schematic. Built 2026-09-28.
+    Sources: Capstone wiki pages NVDA, LITE, AVGO; themes hbm-memory, tokenmaxxing, optical-cpo; transcripts and expert calls as dated. [DER] = derived here from sourced constants; scene geometry is schematic. Built 2026-09-28.
   </footer>
 </div>
 
@@ -414,7 +350,7 @@ function setStep(i){
 }
 $("#prev").onclick=()=>setStep(S.step-1); $("#next").onclick=()=>setStep(S.step+1);
 let playT=null; $("#play").onclick=()=>{ S.play=!S.play; $("#play").textContent=S.play?"❚❚ Stop":"▶ Auto"; if(S.play){ playT=setInterval(()=>setStep(S.step+1),6000);} else clearInterval(playT); };
-window.addEventListener("keydown",e=>{ if(e.target.tagName==="INPUT"||e.target.tagName==="SELECT") return; if(mode==="tok"){ if(e.key==="ArrowRight") setStep(S.step+1); if(e.key==="ArrowLeft") setStep(S.step-1);} else { if(e.key==="ArrowRight") setEml(E.stage+1); if(e.key==="ArrowLeft") setEml(E.stage-1);} });
+window.addEventListener("keydown",e=>{ if(e.target.tagName==="INPUT"||e.target.tagName==="SELECT") return; if(e.key==="ArrowRight") setStep(S.step+1); if(e.key==="ArrowLeft") setStep(S.step-1); });
 
 // ladder
 (function(){ const L=[["Local HBM4 (per GPU)",176,"b"],["NVLink scale-up (in rack, copper)",14.4,"b c"],["NVLink scale-up (rack-to-rack, optics)",14.4,"b o"],["Scale-out NIC (pluggable / CPO switch)",1.6,"b"]];
@@ -422,52 +358,13 @@ window.addEventListener("keydown",e=>{ if(e.target.tagName==="INPUT"||e.target.t
   for(const [n,v,c] of L){ el.insertAdjacentHTML("beforeend",'<div>'+n+'</div><div class="'+c+'" style="width:'+(100*(Math.log10(v)+0.3)/mx)+'%"></div><div class="v">'+v+' Tb/s</div>'); }
 })();
 
-// =============================== DATA: EML ===============================
-const EML=[
-  {t:"Sulfur-doped InP substrate",b:"Everything starts on an indium-phosphide wafer. Lasers need sulfur-doped InP, which yields worse than the iron-doped InP used for photodetectors.<span class='src'> LITE IR, 2026-09-11</span> Lumentum was still moving from 3- to 4-inch in 2025; 6-inch comes only with Greensboro in 2028 (2.25x the area, ~4.36x the chips of 3-inch, but planned on a smaller gain because of yield).<span class='src'> LITE 2025-08-12; IR 09-11; Citi 07-16</span>",kv:[["Suppliers","AXT ~40% · Sumitomo ~40% · JX ~10% (2024)","AXT, 2026-08-31"],["Allocation","shortage “&gt;18 months”; 3rd price hike this year, +10% more in 4Q26","AXT 08-31; UDN via Jefferies 08-17"],["LITE’s hedge","AXT capacity reserved through 2031: $43.5M deposit now, $43.5M in 2028; Sumitomo the primary","AXT, 2026-07-29"],["6-inch yield","AXT ingot ~5%; Sumitomo S-doped 6-inch “very bad”","LITE IR, 2026-09-11"]]},
-  {t:"MOCVD epitaxy: growing the laser layers",b:"In a metal-organic chemical-vapour-deposition reactor, gases carrying indium, gallium, arsenic and phosphorus decompose on the hot wafer and grow the crystal layer by layer: the quantum-well gain stack that emits light, the layers that will become the modulator, cladding and contacts. Only two tool vendors: Aixtron for the “very difficult” steps, Veeco for the easier ones.<span class='src'> LITE IR, 2026-09-11</span>",kv:[["Tool share","Aixtron ~90-100% of InP MOCVD; ~100% (AIXA page)","AIXA Q3/25 call; Jefferies 2026-06-19"],["Lead time","customers reserving reactor slots into 2027; long-lead items are reactors and e-beam lithography","AIXA; LITE @ DB, 2026-08-27"],["Epi pricing","substrate and epi wafer prices +10%+ in 4Q26","UDN via Jefferies, 2026-08-17"],["Where","Sagamihara + Takao (Japan) qualifying CW and EML flows on the newest tools","Q4 FY26 call, 2026-08-11"]]},
-  {t:"Grating and modulator on one chip",b:"<span class='tag d'>generic</span> The DFB grating — a periodic corrugation written into a layer above the gain region — pins the laser to a single wavelength; the electro-absorption modulator section is formed next to it with a different band-gap so a voltage can switch the light off and on. The wiki carries no detail on how Lumentum writes the grating or integrates the modulator (zero hits for “regrowth”); e-beam lithography is named as a long-lead tool.<span class='src'> LITE @ DB, 2026-08-27</span>",kv:[["Die","200G EML die ~22% larger than 100G; CW die ~60% of an EML","Citi 07-16; TD Cowen 03-11"],["Design lever","shrinking die and cavity length to get more output per wafer","Yuen, 2026-02-03"],["Recipe change","~6 months of requalification","Yuen, 2026-05-07"]]},
-  {t:"Wafer fab: lithography, etch, metal",b:"<span class='tag d'>generic</span> The epi wafer goes through the front-end loop — pattern the ridge waveguide, etch, isolate the laser from the modulator, deposit the metal contacts — repeated across the wafer so every die is a complete laser-plus-modulator. Output is “relatively fixed given the cycle time of the fab”; the wiki has no wafers-per-month, die-per-wafer or yield figure.",kv:[["Main EML fab","Sagamihara, Japan — “outputs more EMLs than any other location”; bought for $42.2M (Jul-24); the +40% expansion was “all Sagamihara”","Hurlston 2025-08-12; 10-K FY25; call 2026-02-03"],["Second Japan fab","Takao — gain chips for ITLAs, “relatively underutilized”, moving into EML","LITE/JPM call, 2026-05-07"],["Capacity","Japan EML capacity 8x in 2.5 years; EML units &gt;50% y/y in Dec-26 quarter","Aurelion 07-29; Q4 FY26 call 08-11"],["Fab count","“five wafer fabs including Greensboro” vs “five plus one ramping”","IR 09-11 vs Aurelion 07-29 (disputed)"]]},
-  {t:"Wafer-level electrical screening",b:"Before any cutting, each die is probed electrically on the whole wafer to screen out bad devices — scrap cannot be reworked later, so catching it here is the cheapest point. Full wafer-level optical test is “coming”.<span class='src'> Laser-industry expert call, 2026-07-23</span>",kv:[["Why it matters","scrap cannot be reworked; screening before cleave saves the back-end cost","expert call, 2026-07-23"],["Take-or-pay","90%+ of fab output under take-or-pay through CY27; extra units auctioned","LITE, 2026-05-07"]]},
-  {t:"Bars, facets, coatings",b:"The wafer is cut into bars — rows of dies — and the bars are stacked so that their end faces can be polished together; those faces are the laser’s mirrors. One facet gets an anti-reflection coating (the light exits there), the other a high-reflection coating.<span class='src'> Laser-industry expert call, 2026-07-23 (he says polish, not cleave)</span> <span class='tag d'>generic</span> in most laser fabs the bar is cleaved along the crystal plane rather than polished.",kv:[["Facet flow","cut into bars → stack → polish facets → AR/HR coating","expert call, 2026-07-23"],["Where","back end in Thailand: 1.173M sq ft, packaging and test; “not as differentiated”, not eager to grow it","10-K FY26; call 08-11; IR 09-11"]]},
-  {t:"Dice, submount, test",b:"Bars are diced into single chips, each chip is mounted on a submount and tested with pogo-pin probes: wavelength, threshold, modulation.<span class='src'> Laser-industry expert call, 2026-07-23</span> Qualification with a customer then takes 2-3 years, “one year for NVIDIA”.<span class='src'> Citi 09-22; DB 08-27</span>",kv:[["Economics","100G → 200G is ~2x ASP; 10-K records only a “slight” laser-chip ASP increase","LITE @ DB 08-27; 10-K FY26 (do not reconcile)"],["Mix","200G &gt;25% of EML revenue, 50%+ of volume by mid-2027 (LITE) vs ~25% units / ~40% revenue (MS)","call 08-11; MS 08-12"],["Chip share","LITE ~50% of EMLs; Broadcom the other main 200G supplier","Citi 2025-08-29; LITE 08-27"]]},
-  {t:"Into a transceiver — or an external laser source",b:"The chip is packaged into a TOSA inside an 800G/1.6T module by the module makers (Innolight is “probably their biggest customer in the laser” <span class='tag'>unconfirmed</span>), where a DSP drives its modulator.<span class='src'> Papa Sylla call, 2026-08-11</span> The same fabs are now qualifying CW lasers for silicon photonics and ultra-high-power CW for NVIDIA’s external laser source (~$425 with 8 chips): San Jose covers NVIDIA through early 2027, Caswell enters in 2H27, Greensboro’s 6-inch InP fab reaches full output end-2028.<span class='src'> LITE IR 09-11; LITE/JPM 05-07; call 08-11</span>",kv:[["Customers","Google = Customer A, 26.6% of FY26 revenue; NVIDIA low-single-digit %","10-K FY26; Citi 07-16"],["Mix shift","EML modules 70-80% at 800G → 40-50% at 1.6T; ~15% of output to CW (Citi) vs “as a favour” (Jefferies)","LITE 08-27; Citi 09-22; Jefferies 09-18 (disputed)"],["UHP / ELS","LITE can meet only ~30% of 2027-28 NPO laser demand; considering licensing","Citi, 2026-09-22"],["Greensboro","ex-Qorvo GaAs fab, $38.0M, 148k sq ft, 6-inch InP only; first revenue early 2028; sized for ~$5B/yr","10-K FY26; call 08-11; OFC briefing 03-17"]]}
-];
-const SITES=[
-  ["Sagamihara","Main EML fab (Japan); more EMLs than any other site; bought Jul-24 for $42.2M; the +40% expansion was all here. Hurlston 2025-08-12; 10-K FY25; call 2026-02-03"],
-  ["Takao","Second Japan fab; ITLA gain chips, underutilised, moving into EML; qualifying CW + EML flows. LITE/JPM 05-07; call 08-11"],
-  ["Caswell","UK, bought Aug-23 for $23.3M, 183k sq ft; planned EML overflow, redirected to ultra-high-power CPO lasers from 2H27. 10-Q 2023-11-08; 10-K FY26; LITE/JPM 05-07"],
-  ["San Jose","California (“Rose Orchard”): pump lasers and phase-one CPO UHP lasers; covers all NVIDIA demand 2026 to early 2027. LITE/JPM 05-07; call 08-11"],
-  ["Greensboro","North Carolina, ex-Qorvo GaAs fab, $38.0M (closed 2026-03-17), 148k sq ft; converting to 6-inch InP; first revenue early 2028, full end-2028; sized for ~$5B/yr. 10-K FY26; call 08-11; OFC 03-17"],
-  ["Thailand","Back end, 1.173M sq ft owned: packaging and test; “not as differentiated”. 10-K FY26; IR 09-11. Fabrinet trained to co-build OCS in CY27 (IR 09-11)"]
-];
-const E={stage:0,site:0};
-const siteSeg=$("#siteSeg"); SITES.forEach((s,i)=>{const b=document.createElement("button"); b.textContent=s[0]; if(!i) b.classList.add("on"); b.onclick=()=>{E.site=i; [...siteSeg.children].forEach((x,k)=>x.classList.toggle("on",k===i)); $("#siteBody").textContent=SITES[i][1];}; siteSeg.appendChild(b);}); $("#siteBody").textContent=SITES[0][1];
-function setEml(i){
-  E.stage=Math.max(0,Math.min(EML.length-1,i)); $("#emlStage").value=E.stage;
-  const s=EML[E.stage]; $("#emlStepN").textContent="Station "+(E.stage+1)+" of "+EML.length; $("#emlTitle").textContent=s.t; $("#emlBody").innerHTML=s.b;
-  $("#emlKv").innerHTML=s.kv.map(([k,v,src])=>"<dt>"+k+"</dt><dd>"+v+'<span class="src"> '+src+"</span></dd>").join("");
-  if(window.syncEml) window.syncEml();
-}
-$("#emlStage").oninput=()=>setEml(+$("#emlStage").value); $("#emlPrev").onclick=()=>setEml(E.stage-1); $("#emlNext").onclick=()=>setEml(E.stage+1);
-
-// ---------- tabs ----------
-let mode="tok";
-function setMode(m){
-  mode=m;
-  const map={tok:["hudTOK","ctrlTOK","explainTOK","moreTOK"],eml:["hudEML","ctrlEML","explainEML","moreEML"]};
-  for(const k of ["tok","eml"]){ $("#tab"+k.toUpperCase()).classList.toggle("on",k===m); for(const id of map[k]) $("#"+id).style.display=k===m?(id.startsWith("explain")?"grid":""):"none"; }
-  if(ok){ tokG.visible=m==="tok"; emlG.visible=m==="eml"; if(m==="tok") orbitTo(S.step<=3?VIEW_TOK_NEAR:VIEW_TOK); else syncEml(true); }
-  try{localStorage.setItem("tp-mode",m);}catch(e){}
-}
-$("#tabTOK").onclick=()=>setMode("tok"); $("#tabEML").onclick=()=>setMode("eml");
-
-calc(); setStep(0); setEml(0);
+const mode="tok";
+calc(); setStep(0);
 
 // =============================== 3D ===============================
 let ok=typeof THREE!=="undefined"; let renderer;
 if(ok){ try{ renderer=new THREE.WebGLRenderer({canvas:$("#gl"),antialias:true}); }catch(e){ ok=false; } }
-if(!ok){ $("#fallback").style.display="flex"; $("#gl").style.display="none"; let m="tok"; try{m=localStorage.getItem("tp-mode")||"tok";}catch(e){} setMode(m); return; }
+if(!ok){ $("#fallback").style.display="flex"; $("#gl").style.display="none"; return; }
 renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
 const scene=new THREE.Scene(), camera=new THREE.PerspectiveCamera(38,1,0.1,300);
 scene.add(new THREE.HemisphereLight(0xffffff,0x334455,0.75));
@@ -616,78 +513,12 @@ addLabel("×8 racks = 576 GPUs","three drawn for clarity",v=>v.set(RX[2],RH+0.5,
 addLabel("Scale-out · to other domains / prefill pool","pluggables today, CPO switches first",v=>v.set(RX[1]+2.2,RH+2.6,0.4),tokG,()=>S.step===6);
 addLabel("Prompt tokens","",v=>v.set(-6.9,1.9,2.4),tokG,()=>S.step===0||S.step===2);
 
-// =============================== EML scene ===============================
-const emlG=new THREE.Group(); scene.add(emlG); emlG.visible=false;
-const SX=[-21,-15,-9,-3,3,9,15,21]; // station x
-const EOBJ={};
-{
-  const fl=new THREE.Mesh(new THREE.BoxGeometry(48,0.2,8),M.dark); fl.position.set(0,-0.1,0); emlG.add(fl);
-  const rail=new THREE.Mesh(new THREE.BoxGeometry(46,0.06,0.3),M.metal); rail.position.set(0,0.03,-2.2); emlG.add(rail);
-  // 0 wafer
-  const w0=new THREE.Mesh(new THREE.CylinderGeometry(1.6,1.6,0.08,48),M.inp); w0.position.set(SX[0],0.6,0); emlG.add(w0);
-  const flat=new THREE.Mesh(new THREE.BoxGeometry(1.2,0.1,0.15),M.dark); flat.position.set(SX[0],0.6,1.55); emlG.add(flat);
-  // 1 MOCVD: wafer + dome + layers
-  const w1=new THREE.Mesh(new THREE.CylinderGeometry(1.6,1.6,0.08,48),M.inp); w1.position.set(SX[1],0.6,0); emlG.add(w1);
-  const layers=[]; for(let i=0;i<8;i++){ const l=new THREE.Mesh(new THREE.CylinderGeometry(1.6,1.6,0.05,48),i%2?M.epi2:M.epi); l.position.set(SX[1],0.66+i*0.055,0); l.visible=false; emlG.add(l); layers.push(l); }
-  const dome=new THREE.Mesh(new THREE.SphereGeometry(2.3,32,16,0,Math.PI*2,0,Math.PI/2),M.glass); dome.position.set(SX[1],0.5,0); emlG.add(dome);
-  for(const a of [0,2.1,4.2]){ const pipe=new THREE.Mesh(new THREE.CylinderGeometry(0.08,0.08,1.6,10),M.metal); pipe.position.set(SX[1]+Math.cos(a)*2.0,2.2,Math.sin(a)*2.0); pipe.rotation.z=0.5*Math.cos(a); pipe.rotation.x=-0.5*Math.sin(a); emlG.add(pipe); }
-  EOBJ.layers=layers;
-  // 2 die close-up: ridge with grating + EAM section
-  const base=new THREE.Mesh(new THREE.BoxGeometry(3.4,0.5,1.6),M.inp); base.position.set(SX[2],0.35,0); emlG.add(base);
-  const ridge=new THREE.Mesh(new THREE.BoxGeometry(3.4,0.22,0.3),M.epi); ridge.position.set(SX[2],0.71,0); emlG.add(ridge);
-  for(let i=0;i<16;i++){ const g=new THREE.Mesh(new THREE.BoxGeometry(0.06,0.06,0.3),M.gold); g.position.set(SX[2]-1.6+i*0.13,0.85,0); emlG.add(g); }
-  const eam=new THREE.Mesh(new THREE.BoxGeometry(0.9,0.24,0.34),M.epi2); eam.position.set(SX[2]+1.2,0.72,0); emlG.add(eam);
-  const pad1=new THREE.Mesh(new THREE.BoxGeometry(0.7,0.04,0.7),M.gold); pad1.position.set(SX[2]-0.8,0.62,-0.55); emlG.add(pad1);
-  const pad2=new THREE.Mesh(new THREE.BoxGeometry(0.5,0.04,0.5),M.gold); pad2.position.set(SX[2]+1.2,0.62,0.55); emlG.add(pad2);
-  const beam=tubePath([new THREE.Vector3(SX[2]-1.7,0.72,0),new THREE.Vector3(SX[2]+1.7,0.72,0),new THREE.Vector3(SX[2]+3.2,0.72,0)],0.05,glowMat(0x4cc2ff,.5),8); emlG.add(beam); EOBJ.beam=beam;
-  // 3 wafer fab: wafer with die grid
-  const w3=new THREE.Mesh(new THREE.CylinderGeometry(1.6,1.6,0.1,48),M.epi); w3.position.set(SX[3],0.6,0); emlG.add(w3);
-  for(let i=-6;i<=6;i++){ const lx=new THREE.Mesh(new THREE.BoxGeometry(0.02,0.02,3.2),M.dark); lx.position.set(SX[3]+i*0.25,0.66,0); emlG.add(lx); const lz=new THREE.Mesh(new THREE.BoxGeometry(3.2,0.02,0.02),M.dark); lz.position.set(SX[3],0.66,i*0.25); emlG.add(lz); }
-  const stepper=new THREE.Mesh(new THREE.BoxGeometry(1.2,1.4,1.2),M.metal); stepper.position.set(SX[3],1.9,0); emlG.add(stepper);
-  const lens=new THREE.Mesh(new THREE.CylinderGeometry(0.3,0.3,0.2,20),M.glass); lens.position.set(SX[3],1.1,0); emlG.add(lens);
-  // 4 wafer probe
-  const w4=new THREE.Mesh(new THREE.CylinderGeometry(1.6,1.6,0.1,48),M.epi); w4.position.set(SX[4],0.6,0); emlG.add(w4);
-  const card=new THREE.Mesh(new THREE.BoxGeometry(1.4,0.12,1.4),M.gold); card.position.set(SX[4],1.5,0); emlG.add(card); EOBJ.card=card;
-  const pins=[]; for(let i=0;i<9;i++){ const p=new THREE.Mesh(new THREE.CylinderGeometry(0.02,0.02,0.7,6),M.metal); p.position.set(SX[4]-0.4+(i%3)*0.4,1.1,-0.4+Math.floor(i/3)*0.4); emlG.add(p); pins.push(p);} EOBJ.pins=pins;
-  // 5 bars: stacked strips with AR/HR facets
-  for(let i=0;i<6;i++){ const b=new THREE.Mesh(new THREE.BoxGeometry(3.0,0.14,0.36),M.epi); b.position.set(SX[5],0.5+i*0.17,-0.9+i*0.36); emlG.add(b);
-    const ar=new THREE.Mesh(new THREE.BoxGeometry(0.03,0.14,0.36),M.ar); ar.position.set(SX[5]+1.51,0.5+i*0.17,-0.9+i*0.36); emlG.add(ar);
-    const hr=new THREE.Mesh(new THREE.BoxGeometry(0.03,0.14,0.36),M.hr); hr.position.set(SX[5]-1.51,0.5+i*0.17,-0.9+i*0.36); emlG.add(hr); }
-  // 6 chips + submount + pogo pins
-  for(let i=0;i<10;i++){ const c=new THREE.Mesh(new THREE.BoxGeometry(0.42,0.1,0.26),M.epi); c.position.set(SX[6]-1.6+(i%5)*0.55,0.55,-0.9+Math.floor(i/5)*0.5); emlG.add(c); }
-  const sub=new THREE.Mesh(new THREE.BoxGeometry(1.1,0.16,0.8),M.metal); sub.position.set(SX[6]+0.4,0.6,0.9); emlG.add(sub);
-  const chip=new THREE.Mesh(new THREE.BoxGeometry(0.44,0.1,0.26),M.epi); chip.position.set(SX[6]+0.4,0.73,0.9); emlG.add(chip);
-  const arc=new THREE.Mesh(new THREE.BoxGeometry(0.03,0.1,0.26),M.ar); arc.position.set(SX[6]+0.62,0.73,0.9); emlG.add(arc);
-  const pogo=[]; for(let i=0;i<3;i++){ const p=new THREE.Mesh(new THREE.CylinderGeometry(0.02,0.02,0.6,6),M.gold); p.position.set(SX[6]+0.25+i*0.15,1.15,0.75); emlG.add(p); pogo.push(p);} EOBJ.pogo=pogo;
-  const cbeam=tubePath([new THREE.Vector3(SX[6]+0.63,0.73,0.9),new THREE.Vector3(SX[6]+2.2,0.73,0.9)],0.04,glowMat(0x4cc2ff,.5),6); emlG.add(cbeam); EOBJ.cbeam=cbeam;
-  // 7 module / ELS
-  const mod=new THREE.Mesh(new THREE.BoxGeometry(3.2,0.6,1.4),M.module); mod.position.set(SX[7],0.5,0); emlG.add(mod);
-  const lid=new THREE.Mesh(new THREE.BoxGeometry(2.0,0.06,1.0),M.glass); lid.position.set(SX[7]-0.3,0.83,0); emlG.add(lid);
-  for(let i=0;i<8;i++){ const c=new THREE.Mesh(new THREE.BoxGeometry(0.3,0.08,0.18),M.epi); c.position.set(SX[7]-1.1+(i%4)*0.4,0.84,-0.3+Math.floor(i/4)*0.5); emlG.add(c); }
-  const dsp=new THREE.Mesh(new THREE.BoxGeometry(0.5,0.1,0.5),M.die); dsp.position.set(SX[7]+0.9,0.85,0); emlG.add(dsp);
-  const fib=tubePath([new THREE.Vector3(SX[7]+1.6,0.6,0),new THREE.Vector3(SX[7]+3.5,0.6,0)],0.04,coreMat(0x4cc2ff),6); emlG.add(fib);
-  // station markers
-  for(let i=0;i<8;i++){ const mk=new THREE.Mesh(new THREE.CylinderGeometry(2.4,2.4,0.04,40),new THREE.MeshBasicMaterial({color:0x4cc2ff,transparent:true,opacity:.0,depthWrite:false})); mk.position.set(SX[i],0.02,0); emlG.add(mk); EOBJ["mk"+i]=mk; }
-}
-const EML_LBL=[["InP wafer","S-doped · 3→4-inch · 6-inch 2028"],["MOCVD epitaxy","Aixtron / Veeco reactors"],["DFB grating + EAM","one InP chip (generic)"],["Wafer fab","litho · etch · metal · e-beam"],["Wafer probe","electrical screen"],["Bars · facets · AR/HR","polish and coat"],["Dice · submount · test","pogo-pin"],["TOSA / module · ELS","Innolight · NVIDIA ELS 8 chips"]];
-EML_LBL.forEach((l,i)=>addLabel(l[0],l[1],v=>v.set(SX[i],2.9,0),emlG,()=>Math.abs(E.stage-i)<=2));
-let emlT=0;
-window.syncEml=function(force){ const i=E.stage; orbitTo({theta:0.35,phi:1.05,r:9.5,target:new THREE.Vector3(SX[i],0.9,0)}); emlT=0; for(let k=0;k<8;k++) EOBJ["mk"+k].material.opacity=k===i?0.12:0; };
-function layoutEml(dt){
-  emlT+=dt; const i=E.stage;
-  EOBJ.layers.forEach((l,k)=>l.visible=i>=1&&(i>1||emlT>k*0.35));
-  EOBJ.card.position.y=1.5-(i===4?0.45*(0.5+0.5*Math.sin(emlT*2)):0); EOBJ.pins.forEach(p=>p.position.y=EOBJ.card.position.y-0.4);
-  EOBJ.pogo.forEach(p=>p.position.y=1.15-(i===6?0.3*(0.5+0.5*Math.sin(emlT*2)):0));
-  EOBJ.beam.visible=i===2; EOBJ.cbeam.visible=i===6;
-}
 // resize + loop
 function resize(){ const box=$("#glbox"); renderer.setSize(box.clientWidth,box.clientHeight,false); camera.aspect=box.clientWidth/box.clientHeight; camera.updateProjectionMatrix(); }
 new ResizeObserver(resize).observe($("#glbox")); resize();
 let last=performance.now();
-function tick(now){ const raw=(now-last)/1000, dt=Math.min(0.05,raw); last=now; updateCamera(Math.min(0.3,raw));
-  if(tokG.visible){ layoutTok(dt); animParts(dt); } else { layoutEml(dt); }
-  renderer.render(scene,camera); drawLabels(); requestAnimationFrame(tick); }
-let m0="tok"; try{m0=localStorage.getItem("tp-mode")||"tok";}catch(e){} setMode(m0); syncScene();
+function tick(now){ const raw=(now-last)/1000, dt=Math.min(0.05,raw); last=now; updateCamera(Math.min(0.3,raw)); layoutTok(dt); animParts(dt); renderer.render(scene,camera); drawLabels(); requestAnimationFrame(tick); }
+orbitTo(VIEW_TOK_NEAR); syncScene();
 requestAnimationFrame(tick);
 })();
 </script>
