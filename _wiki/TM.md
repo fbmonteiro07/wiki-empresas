@@ -93,6 +93,7 @@ _FY26 full year · May 8 → Jun 10, 2026 · sell-side / expert calls / reports 
 | 05-08 | Toyota · FY26Q4 deck (6-K) | product | mixed | HEV remains the profit pillar: FY26 electrified retail of 5,040k units (48.1% of the Toyota+Lexus mix), of which HEV 4,620k (+4.4%), BEV 243k (+68%). BEV guided to 598k retail (+146%) in FY27 — an acceleration, but off a low base and with a track record of cuts (FY26 cut from 308k to 277k). |
 | 05-08 | Toyota · FY26Q4 deck (6-K) | capital | bull | Shareholder returns: FY26 dividend JPY95 (+5), FY27 forecast JPY100 (+5); record buyback of JPY3.657tn in FY26 (largely tied to the Toyota Industries take-private via tender offer); total FY26 return JPY4.895tn. Stated 20% ROE target via the value chain (+JPY2.1tn of OI by 2030). |
 | 06-10 | Toyota · 20-F FY26 | competition | bear | The FY26 20-F frames the industry as "highly volatile" with competition intensifying via CASE; warns that competing in "electrified vehicles...will be fundamental" with no guarantees — risk of falling behind in markets with rapid BEV adoption. China equity-method profit ~flat (JPY108.2bn FY26) under intense local competition (BYD et al.). |
+| 09-27 | 🆕 **JPMorgan · Jose M Asumendi (w/ Nick Lai, Akira Kishimoto, Rajat Gupta, Piyush Singla)** | capital | bull | JPM (09-27): Toyota Group will invest JPY1tn ($6.42bn) a year from 2028 on factory upgrades and 400,000 robots, including AI humanoids that learn master craftsmen's skills through cameras and sensors: 150,000 at Toyota Motor Corp and 250,000 at Denso, Aisin and other group companies. |
 
 **Quarter synthesis:** with no English-language sell-side flow (thin coverage, 0 equity calls), the "debate" is essentially the company's own read via the 6-K/20-F — the thesis has shifted to the permanent structure of the US tariff (N. America at an operating loss, break-even rising) and the margin compression over 3 consecutive years, with BEV below plan and China flat reinforcing the limited-upside case despite the record capital return.
 
@@ -117,3 +118,8 @@ _Source: TM earnings calls (dates above); management commentary, paraphrased._
   - [Morgan Stanley — Global Humanoid (Humanoid TAM model)](../relat%C3%B3rios%20bons/Humanoids.html)
 - **Equity calls:** 0 (see [INDEX §TM](../INDEX.md)).
 - **Briefings:** none (`_briefings/by-ticker/TM.md` does not exist).
+
+## Changelog
+<!-- One dated line per material change. Move superseded numbers/ratings/PTs/theses here
+     (with the old value + date) instead of deleting them. Newest first. -->
+- **2026-09-27 (/wiki-ingest 21h, scheduled)** — 1 log row. Nothing superseded. (Section created this run; the page had no ## Changelog.)

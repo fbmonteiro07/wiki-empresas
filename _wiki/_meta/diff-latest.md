@@ -1,9 +1,51 @@
 # What changed — last 7 days
 
-_Generated 2026-09-26 (since 2026-09-19) · rolls up every page's `## Changelog` + the ingest run log. ⭐ = rating/PT move. Rebuild: `py _wiki/_tools/build_diff.py [days]`._
+_Generated 2026-09-27 (since 2026-09-20) · rolls up every page's `## Changelog` + the ingest run log. ⭐ = rating/PT move. Rebuild: `py _wiki/_tools/build_diff.py [days]`._
 
 | Date | Ticker | Change |
 |---|---|---|
+| 2026-09-27 | WDC | (/wiki-ingest 21h, scheduled)** — 1 log row. Nothing superseded. |
+| 2026-09-27 | VST | (/wiki-ingest 21h, scheduled)** — 1 log row. Nothing superseded. |
+| 2026-09-27 | TSM | (/wiki-ingest 21h, scheduled)** — 7 log rows + Sinal note. **Superseded: UBS (Sunny Lin) capex 2026/27/28E US$60/80/95bn (06-28) → US$63/90/105bn (09-28); UBS 2027E USD sales growth 38% → 40%; UBS 2028 N2 demand ~220kwpm → 320kwpm and TSMC N2 capacity ~160 → 210kwpm; 3Q26 print date "~mid-Oct" → Oct 15.** OLD VALUES retained here: *"UBS: $60/$80/$95bn '26/27/28E"* (consensus-table Capex row) and *"3Q26 print (~mid-Oct 2026)"* (Catalysts); both body lines updated in place. |
+| 2026-09-27 | TSLA | (/wiki-ingest 21h, scheduled)** — 1 Debate bullet. Nothing superseded. |
+| 2026-09-27 | TM | (/wiki-ingest 21h, scheduled)** — 1 log row. Nothing superseded. (Section created this run; the page had no ## Changelog.) |
+| 2026-09-27 | TLN | (/wiki-ingest 21h, scheduled)** — 1 log row. Nothing superseded. |
+| 2026-09-27 | STX | (/wiki-ingest 21h, scheduled)** — 1 log row. Nothing superseded. |
+| 2026-09-27 | SPOT | (/wiki-ingest 21h, scheduled)** — 1 log row. Nothing superseded. |
+| 2026-09-27 | SNPS | (/wiki-ingest 21h, scheduled)** — 1 log row. Nothing superseded. |
+| 2026-09-27 | SMIC | (/wiki-ingest 21h, scheduled)** — 1 log row. Nothing superseded. |
+| 2026-09-27 | SHOP | (/wiki-ingest 21h, scheduled)** — 1 log row. Nothing superseded. |
+| 2026-09-27 | SAMSUNG | (/wiki-ingest 21h, scheduled)** — 4 log rows + Sinal note. **Drift (different panel, not a same-source revision): Q3 OP expectation KRW105.6T (FnGuide, 09-26) → KRW106-110T (Aju Press survey, 09-27).** |
+| 2026-09-27 | RDDT | (/wiki-ingest 21h, scheduled)** — 1 log row. Nothing superseded. |
+| 2026-09-27 | QCOM | (/wiki-ingest 21h, scheduled)** — 1 log row. Nothing superseded. |
+| 2026-09-27 | ORCL | (/wiki-ingest 21h, scheduled)** — 2 log rows. Nothing superseded. |
+| 2026-09-27 | OPENAI | (/wiki-ingest 21h, scheduled)** — 6 log rows. Nothing superseded. |
+| 2026-09-27 | NVDA | (/wiki-ingest 21h, scheduled)** — 5 log rows + Sinal note. Nothing superseded. |
+| 2026-09-27 | NSCALE | (/wiki-ingest 21h, scheduled)** — 1 Debate bullet. Nothing superseded. |
+| 2026-09-27 | NFLX | (/wiki-ingest 21h, scheduled)** — 1 log row. Nothing superseded. |
+| 2026-09-27 | NET | (/wiki-ingest 21h, scheduled)** — 1 Debate bullet. Nothing superseded. |
+| 2026-09-27 | NBIS | (/wiki-ingest 21h, scheduled)** — 1 log row. Nothing superseded. |
+| 2026-09-27 | ⭐ MU | (/wiki-ingest 21h, scheduled)** — 7 log rows + Sinal note. **Superseded: BofA desk buy-side poll 09-20 → 09-26: FQ1 revenue guide $59.6B → $60.0B; FQ1 GM guide 87.7% → 87.3%; FQ1 EPS guide $37.50 → $37.62; FY27 capex $48B → $48.6B; FY27 EPS $183 → $183.82; FY28 EPS $243 → $251.50 (FY28 capex $63B unchanged).** The 09-20 table stays in place as the dated record; the 09-26 values are in today's log row. |
+| 2026-09-27 | META | (/wiki-ingest 21h, scheduled)** — 7 log rows + Sinal note. Nothing superseded. |
+| 2026-09-27 | ⭐ MEDIATEK | (/wiki-ingest 21h, scheduled)** — 6 log rows + Sinal note. **Superseded: Morgan Stanley (Charlie Chan) PT NT$5,588 → NT$6,188, Overweight / Top Pick kept; MS AI ASIC revenue 2028E US$43.5bn → US$54bn (2027E US$13.5bn unchanged).** OLD VALUE retained here: *"**5,588** (42% upside)"* in the MS row of the PT table; that cell is updated in place. |
+| 2026-09-27 | MDB | (/wiki-ingest 21h, scheduled)** — 1 log row. Nothing superseded. |
+| 2026-09-27 | LITE | (/wiki-ingest 21h, scheduled)** — 1 log row. Nothing superseded. |
+| 2026-09-27 | INTC | (/wiki-ingest 21h, scheduled)** — 4 log rows. Nothing superseded. |
+| 2026-09-27 | GOOG | (/wiki-ingest 21h, scheduled)** — 4 log rows. Nothing superseded. |
+| 2026-09-27 | FLEX | (/wiki-ingest 21h, scheduled)** — 1 log row. Nothing superseded. |
+| 2026-09-27 | CRWV | (/wiki-ingest 21h, scheduled)** — 4 log rows + Sinal note. Nothing superseded. |
+| 2026-09-27 | CRDO | (/wiki-ingest 21h, scheduled)** — 1 log row. Nothing superseded. |
+| 2026-09-27 | COHR | (/wiki-ingest 21h, scheduled)** — 2 log rows. Nothing superseded. |
+| 2026-09-27 | CIEN | (/wiki-ingest 21h, scheduled)** — 1 log row. Nothing superseded. |
+| 2026-09-27 | BKNG | (/wiki-ingest 21h, scheduled)** — 1 log row. Nothing superseded. |
+| 2026-09-27 | BE | (/wiki-ingest 21h, scheduled)** — 1 log row. Nothing superseded. |
+| 2026-09-27 | AVGO | (/wiki-ingest 21h, scheduled)** — 3 log rows. Nothing superseded. |
+| 2026-09-27 | ANTHROPIC | (/wiki-ingest 21h, scheduled)** — 5 log rows + Sinal note. Nothing superseded. |
+| 2026-09-27 | AMD | (/wiki-ingest 21h, scheduled)** — 1 log row. Nothing superseded. |
+| 2026-09-27 | ⭐ AMAT | (/wiki-ingest 21h, scheduled)** — 3 log rows + Sinal note. **Superseded: Morgan Stanley (Brett / Moore) PT $642 → $563, Equal-weight kept; target multiple 26x → 22x; CY27 revenue/EPS $50.2bn/$20.44 → $50.7bn/$20.92.** The 08-14 post-print PT table stays as the dated record of that print; today's value is in the log row. |
+| 2026-09-27 | ADVANTEST | (/wiki-ingest 21h, scheduled)** — 1 Debate bullet. Nothing superseded. |
+| 2026-09-27 | ADI | (/wiki-ingest 21h, scheduled)** — 1 log row. Nothing superseded. |
+| 2026-09-27 | AAPL | (/wiki-ingest 21h, scheduled)** — 2 log rows. Nothing superseded. |
 | 2026-09-26 | ⭐ TSM | (/wiki-ingest 21h, scheduled)** — 1 log row (Fubon/Jefferies sales relay: 2028 capex $95-100bn, N2 150K, CoWoS 180K/220K + CoPoS 30K). Nothing superseded: no house rating, PT or adopted capacity figure changed (the 180K/220K CoWoS path is the same Fubon mark already on the page). |
 | 2026-09-26 | SNDK | (/wiki-ingest 21h, scheduled)** — 1 log row (crowding/positioning desk reads). Nothing superseded. |
 | 2026-09-26 | SKHYNIX | (/wiki-ingest 21h, scheduled)** — 1 log row (Solidigm IPO reports; Q3 OP consensus). Nothing superseded. |

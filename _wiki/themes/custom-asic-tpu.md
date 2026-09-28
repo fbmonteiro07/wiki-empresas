@@ -3,6 +3,8 @@
 _Wiki · generated 2026-06-19 · cross-company theme · sources: equity calls (`../_equity_calls/Semis`), briefing roll-ups (`../_briefings/by-ticker`), earnings transcripts, company pages. Company pages: [../00_INDEX.md](../00_INDEX.md)._
 
 
+## 🆕 2026-09-27 (/wiki-ingest 21h) — **TPU v9 GOES DUAL-SOURCE (MS 2.5mn EMIB-T + 0.5mn CoWoS-L); MS MEDIATEK AI-ASIC 2028E US$54bn**
+- **Morgan Stanley · Charlie Chan** (2026-09-27): TPU v9 dual sourcing (MS + UBS, 09-27/28): MS has Google's 2028 TPU v9 at 3mn units, split ~2.5mn EMIB-T + ~0.5mn TSMC CoWoS-L, against only ~2mn EMIB-T substrates (40-45k wafer-equivalent) in its supply tracker. Google is reportedly willing to pay the CoWoS-L premium (3 extra RDL photomask layers) to secure a second source. UBS sees >2mn EMIB-T substrates in 2028, with MediaTek exploring CoWoS for 2029. Read-through: TSMC regains share from Intel EMIB-T at the margin, and EMIB-T is no longer a single point of failure for the 2028 TPU ladder. MS MediaTek AI ASIC revenue: US$13.5bn (2027) / US$54bn (2028).
 ## 🆕 2026-09-26 (/wiki-ingest 21h) — **TWO NEW TPU LADDERS: FUBON'S UNIT SPLIT (AVGO DIPS IN 2027) AND UBS'S HIGHER MEDIATEK 2028-29 REVENUE**
 - **Fubon (Sherman via Jefferies sales, 09-26):** MediaTek + Broadcom TPU **4.5m / 9.2m / 12-15m** (2026/27/28); Google via [[AVGO]] **3.11m → 2.37m → 3.5m**, via [[MEDIATEK]] **0.5m → 3.54m → 4.5m**; **[[ANTHROPIC]] 1m → 3.4m → 5m** (the swing factor). Broadcom all-ASIC ~4m → ~7m. MediaTek V8 ASP ~$4K → V9 ~$15K.
 - **UBS (Sunny Lin, via Ruple's sales weekly, 09-26):** MediaTek TPU revenue **US$18bn 2027E (unchanged), 2028E/29E US$43.5bn/US$52.5bn from US$35bn/US$40bn**; PT NT$7,300.

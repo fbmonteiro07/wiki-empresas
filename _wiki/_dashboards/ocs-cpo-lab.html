@@ -1,0 +1,932 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Light Path Lab</title>
+<meta name="description" content="Interactive 3D explainer: how optical circuit switches (OCS) and co-packaged optics (CPO) work, with attributed numbers from the Capstone wiki.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f5f7; --panel:#ffffff; --panel-2:#eef0f3; --ink:#15181d; --ink-2:#4a515c; --ink-3:#7a828e;
+  --line:#d9dde3; --accent:#0a84c6; --accent-2:#0f6fa3; --amber:#b86b00; --red:#c2372f; --copper:#a8612a;
+  --scene-bg:#e9ecf0; --chip:#e3e7ec; --good:#1d7a4f;
+  --shadow:0 1px 2px rgba(0,0,0,.06),0 6px 24px rgba(0,0,0,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0b0d10; --panel:#13161b; --panel-2:#1a1e25; --ink:#e9edf2; --ink-2:#aab2be; --ink-3:#737d8a;
+    --line:#262b33; --accent:#4cc2ff; --accent-2:#8fd8ff; --amber:#ffb454; --red:#ff6b5e; --copper:#d98c4f;
+    --scene-bg:#0e1116; --chip:#1f242c; --good:#4fd18b;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 30px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0b0d10; --panel:#13161b; --panel-2:#1a1e25; --ink:#e9edf2; --ink-2:#aab2be; --ink-3:#737d8a;
+  --line:#262b33; --accent:#4cc2ff; --accent-2:#8fd8ff; --amber:#ffb454; --red:#ff6b5e; --copper:#d98c4f;
+  --scene-bg:#0e1116; --chip:#1f242c; --good:#4fd18b;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+body{overflow-x:hidden}
+.mono{font-family:"JetBrains Mono",ui-monospace,Consolas,monospace}
+.wrap{max-width:1280px;margin:0 auto;padding:20px 16px 60px}
+header.top{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:14px}
+h1{margin:0;font-size:clamp(28px,4.4vw,48px);line-height:.95;letter-spacing:-.03em;font-weight:800;text-transform:uppercase}
+h1 span{color:var(--accent)}
+.sub{color:var(--ink-2);font-size:14px;max-width:560px;margin-top:8px;line-height:1.45}
+.tabs{display:flex;gap:6px;background:var(--panel);border:1px solid var(--line);padding:4px;border-radius:12px;box-shadow:var(--shadow)}
+.tabs button,.seg button,.btn{font:inherit;border:0;background:transparent;color:var(--ink-2);padding:9px 14px;border-radius:9px;cursor:pointer;font-weight:600;font-size:14px}
+.tabs button.on{background:var(--accent);color:#fff}
+:root[data-theme="dark"] .tabs button.on{color:#04121b}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tabs button.on{color:#04121b}}
+.themebtn{font:inherit;border:1px solid var(--line);background:var(--panel);color:var(--ink-2);border-radius:10px;padding:9px 11px;cursor:pointer}
+
+.stage{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:var(--scene-bg);box-shadow:var(--shadow);height:min(68vh,640px);min-height:420px}
+#glbox{position:absolute;inset:0}
+#gl{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none;cursor:grab}
+#gl:active{cursor:grabbing}
+#labels{position:absolute;inset:0;pointer-events:none}
+.lbl{position:absolute;transform:translate(-50%,-100%);font-size:11px;font-weight:600;color:var(--ink);background:color-mix(in srgb,var(--panel) 82%,transparent);border:1px solid var(--line);padding:3px 7px;border-radius:6px;white-space:nowrap;backdrop-filter:blur(4px)}
+.lbl small{display:block;font-weight:500;color:var(--ink-3);font-size:10px}
+.lbl::after{content:"";position:absolute;left:50%;bottom:-7px;width:1px;height:6px;background:var(--ink-3)}
+
+.hud{position:absolute;left:14px;top:14px;width:300px;background:color-mix(in srgb,var(--panel) 90%,transparent);border:1px solid var(--line);border-radius:14px;padding:14px;backdrop-filter:blur(8px);box-shadow:var(--shadow)}
+.hud{max-height:calc(100% - 28px);overflow:auto}
+.hud h3{margin:0 0 2px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+.hud .big{font-size:22px;font-weight:800;letter-spacing:-.02em;margin-bottom:10px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 10px;font-size:12.5px;align-items:baseline}
+.kv dt{color:var(--ink-3);font-weight:600;text-transform:uppercase;font-size:10.5px;letter-spacing:.06em}
+.kv dd{margin:0;color:var(--ink)}
+.src{color:var(--ink-3);font-size:10.5px}
+.meter{margin-top:12px}
+.meter .row{display:flex;justify-content:space-between;font-size:11px;color:var(--ink-3);margin-bottom:4px}
+.bar{height:8px;border-radius:5px;background:var(--chip);overflow:hidden;position:relative}
+.bar i{position:absolute;left:0;top:0;bottom:0;background:var(--accent);border-radius:5px;transition:width .4s ease}
+.bar.hatch i{background:repeating-linear-gradient(45deg,var(--ink-3) 0 4px,transparent 4px 8px);opacity:.6}
+
+.ctrl{position:absolute;right:14px;top:14px;width:290px;background:color-mix(in srgb,var(--panel) 90%,transparent);border:1px solid var(--line);border-radius:14px;padding:14px;backdrop-filter:blur(8px);box-shadow:var(--shadow)}
+.ctrl h3{margin:0 0 8px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+.ports{display:grid;grid-template-columns:repeat(8,1fr);gap:4px;margin-bottom:10px}
+.ports button{font:600 12px "JetBrains Mono",monospace;padding:7px 0;border-radius:7px;border:1px solid var(--line);background:var(--chip);color:var(--ink-2);cursor:pointer}
+.ports button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.ports button.dest{outline:2px solid var(--amber);outline-offset:-2px}
+.row2{display:flex;gap:6px;flex-wrap:wrap}
+.btn{border:1px solid var(--line);background:var(--chip);color:var(--ink)}
+.btn:hover{border-color:var(--accent)}
+.seg{display:flex;background:var(--chip);border-radius:10px;padding:3px;gap:3px;border:1px solid var(--line)}
+.seg button{flex:1;padding:7px 8px;font-size:12.5px}
+.seg button.on{background:var(--panel);color:var(--ink);box-shadow:var(--shadow)}
+input[type=range]{width:100%;accent-color:var(--accent);margin:6px 0 2px}
+.ticks{display:flex;justify-content:space-between;font-size:10.5px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;font-weight:700}
+.hint{font-size:11px;color:var(--ink-3);margin-top:8px;line-height:1.4}
+.toggle{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--ink-2);margin-top:10px;cursor:pointer;user-select:none}
+.toggle input{accent-color:var(--accent);width:16px;height:16px}
+
+.help{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);font-size:11px;color:var(--ink-3);background:color-mix(in srgb,var(--panel) 80%,transparent);border:1px solid var(--line);padding:5px 10px;border-radius:20px;white-space:nowrap}
+#fallback{position:absolute;inset:0;display:none;align-items:center;justify-content:center;text-align:center;padding:30px;color:var(--ink-2)}
+
+section.explain{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 16px 14px;box-shadow:var(--shadow)}
+.card .n{font:700 11px "JetBrains Mono",monospace;color:var(--accent);letter-spacing:.08em}
+.card h4{margin:4px 0 6px;font-size:16px;letter-spacing:-.01em}
+.card p{margin:0;color:var(--ink-2);font-size:13.5px;line-height:1.5}
+h2{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin:34px 0 12px;font-weight:700}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+td.v{font-weight:700;white-space:nowrap}
+td .src{display:block}
+.tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:5px;background:color-mix(in srgb,var(--amber) 18%,transparent);color:var(--amber);margin-left:6px}
+.debates{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.debate h4{margin:0 0 6px;font-size:15px}
+.debate p{margin:0 0 6px;font-size:13.5px;color:var(--ink-2);line-height:1.5}
+footer{margin-top:30px;color:var(--ink-3);font-size:12px;line-height:1.5;border-top:1px solid var(--line);padding-top:14px}
+
+@media (max-width:900px){
+  section.explain{grid-template-columns:1fr}
+  .grid2,.debates{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .stage{height:auto;min-height:0;display:flex;flex-direction:column}
+  #glbox{position:relative;inset:auto;height:56vh;min-height:340px;flex:none}
+  .hud,.ctrl{position:static;width:auto;margin:10px;backdrop-filter:none}
+  .help{display:none}
+  .lbl{font-size:10px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div>
+      <h1>The Light <span>Path</span></h1>
+      <div class="sub">How optical circuit switches and co-packaged optics actually move bits, and why each one saves power. Drag to orbit, scroll to zoom. Numbers are attributed to the source and date the Capstone wiki carries them with.</div>
+    </div>
+    <div style="display:flex;gap:8px;align-items:center">
+      <div class="tabs" role="tablist">
+        <button id="tabOCS" class="on" role="tab">OCS · optical switch</button>
+        <button id="tabCPO" role="tab">CPO · optics on the chip</button>
+        <button id="tabSYS" role="tab">Scale-up · scale-out</button>
+      </div>
+      <button class="themebtn" id="themeBtn" title="Toggle theme" aria-label="Toggle theme">◐</button>
+    </div>
+  </header>
+
+  <div class="stage" id="stage">
+    <div id="glbox">
+      <canvas id="gl"></canvas>
+      <div id="labels"></div>
+      <div id="fallback">The 3D scene needs WebGL and the three.js library from cdnjs. The explanations and numbers below still apply.</div>
+      <div class="help">drag to orbit · scroll to zoom · keys 1 2 3</div>
+    </div>
+
+    <!-- HUD: readouts -->
+    <div class="hud" id="hudOCS">
+      <h3>Route</h3>
+      <div class="big mono" id="ocsRoute">In 3 → Out 6</div>
+      <dl class="kv">
+        <dt>O-E-O</dt><dd id="ocsConv"><b>0 conversions</b>: light stays light</dd>
+        <dt>Loss</dt><dd id="ocsLoss">~2 dB (Palomar) · 1.5–3 dB (LITE R300)<span class="src"> FUNDA, 2026-08-19</span></dd>
+        <dt>Rate</dt><dd id="ocsRate">Line-rate agnostic: the mirror does not care if it is 800G or 1.6T</dd>
+        <dt>Switches</dt><dd id="ocsSw">Whole circuits, not packets: it re-points a fibre, it does not read headers</dd>
+      </dl>
+      <div class="meter">
+        <div class="row"><span>Transceiver power in the switch hop</span><span class="mono" id="ocsW">0 W</span></div>
+        <div class="bar"><i id="ocsWbar" style="width:0%"></i></div>
+        <div class="src" id="ocsWsrc" style="margin-top:4px">No optics inside the OCS: nothing to convert, nothing to retime</div>
+      </div>
+    </div>
+
+    <div class="hud" id="hudCPO" style="display:none">
+      <h3>Where the optics live</h3>
+      <div class="big" id="cpoStage">Front-panel pluggable</div>
+      <dl class="kv">
+        <dt>Distance</dt><dd id="cpoDist"></dd>
+        <dt>Power</dt><dd id="cpoPow"></dd>
+        <dt>pJ / bit</dt><dd id="cpoPJ"></dd>
+        <dt>DSP</dt><dd id="cpoDSP"></dd>
+        <dt>Laser</dt><dd id="cpoLaser"></dd>
+        <dt>Service</dt><dd id="cpoSvc"></dd>
+      </dl>
+      <div class="meter">
+        <div class="row"><span>W per 800G port</span><span class="mono" id="cpoW"></span></div>
+        <div class="bar" id="cpoWbarWrap"><i id="cpoWbar"></i></div>
+      </div>
+      <div class="meter" id="clusterBox" style="display:none">
+        <div class="row"><span>Whole-cluster power, CPO vs pluggable</span><span class="mono">−2% (−4% flat)</span></div>
+        <div class="bar"><i style="width:98%;background:var(--ink-3)"></i></div>
+        <div class="src" style="margin-top:4px">Networking is ~9% of cluster power, so a −65–73% optics saving is ~−2% of the cluster on a 3-layer network (−4% flattened to 2). SemiAnalysis CPO Book, 2026-01-01</div>
+      </div>
+    </div>
+
+    <div class="hud" id="hudSYS" style="display:none">
+      <h3>Scale-up · inside the GPU domain</h3>
+      <div class="big" id="sysUpName" style="font-size:19px"></div>
+      <dl class="kv">
+        <dt>In rack</dt><dd>Copper NVLink spine: GPU trays ↔ switch trays, one rack</dd>
+        <dt>Racks</dt><dd id="sysUp"></dd>
+        <dt>Content</dt><dd id="sysUpC"></dd>
+      </dl>
+      <h3 style="margin-top:14px">Scale-out · across the cluster</h3>
+      <div class="big" id="sysOutName" style="font-size:19px"></div>
+      <dl class="kv">
+        <dt>NIC side</dt><dd>Pluggable transceivers, GPU tray → leaf</dd>
+        <dt>Switches</dt><dd id="sysOut"></dd>
+        <dt>Spine</dt><dd id="sysSpine"></dd>
+        <dt>Tx / XPU</dt><dd>Pushing 7.0x in C28 (TPU only 1.5)<span class="src"> Jefferies · Curtis, 2026-09-24</span></dd>
+      </dl>
+    </div>
+
+    <!-- Controls -->
+    <div class="ctrl" id="ctrlOCS">
+      <h3>1 · Pick an input fibre</h3>
+      <div class="ports" id="inPorts"></div>
+      <h3>2 · Send it to an output</h3>
+      <div class="ports" id="outPorts"></div>
+      <div class="row2">
+        <button class="btn" id="shuffle">Reconfigure all</button>
+        <button class="btn" id="reset">Straight-through</button>
+      </div>
+      <label class="toggle"><input type="checkbox" id="cmpElec"> Compare: electrical packet switch</label>
+      <div class="hint">An OCS is a permutation: every input is lit to exactly one output. Re-pointing one fibre swaps it with whichever input held that output. Two tilting MEMS mirrors steer each beam.</div>
+    </div>
+
+    <div class="ctrl" id="ctrlSYS" style="display:none">
+      <h3>Scale-up between racks</h3>
+      <div class="seg" id="upSeg"><button data-v="cu" class="on">Copper</button><button data-v="plug">Pluggable</button><button data-v="npo">NPO</button><button data-v="cpo">CPO</button></div>
+      <h3 style="margin-top:12px">Scale-out switch optics</h3>
+      <div class="seg" id="outSeg"><button data-v="plug" class="on">Pluggable</button><button data-v="npo">NPO</button><button data-v="cpo">CPO</button></div>
+      <h3 style="margin-top:12px">Spine</h3>
+      <div class="seg" id="spSeg"><button data-v="eps" class="on">Packet switch</button><button data-v="ocs">OCS</button></div>
+      <h3 style="margin-top:12px">Show</h3>
+      <div class="seg" id="showSeg"><button data-v="both" class="on">Both</button><button data-v="up">Scale-up</button><button data-v="out">Scale-out</button></div>
+      <div class="hint">Scale-up joins GPUs into one memory-coherent domain (NVLink). Scale-out joins those domains into a cluster (InfiniBand / Ethernet) through NICs, leaf and spine switches. Three racks stand in for an NVL576-style eight-rack domain; schematic, not to scale.</div>
+    </div>
+
+    <div class="ctrl" id="ctrlCPO" style="display:none">
+      <h3>Move the optics toward the chip</h3>
+      <input type="range" id="stageSlider" min="0" max="2" step="0.01" value="0">
+      <div class="ticks"><span>Pluggable</span><span>NPO</span><span>CPO</span></div>
+      <div class="seg" style="margin-top:12px" id="viewSeg">
+        <button class="on" data-v="0">Assembled</button>
+        <button data-v="1">Exploded</button>
+      </div>
+      <label class="toggle"><input type="checkbox" id="cluster"> Zoom out to the whole cluster</label>
+      <div class="hint">Copper loses signal fast at 200G per lane. The shorter the copper between the switch ASIC and the optics, the less power is spent pushing electrons, and the DSP that cleans up a long trace can go.</div>
+    </div>
+  </div>
+
+  <section class="explain" id="explainOCS">
+    <div class="card"><div class="n">01 · COLLIMATE</div><h4>Fibre in, beam out</h4><p>Each input fibre ends in a tiny lens that turns the light into a free-space beam. From here until the output fibre, the signal never becomes electrical.</p></div>
+    <div class="card"><div class="n">02 · STEER</div><h4>Two mirrors, two tilts</h4><p>The beam hits its own MEMS mirror, which tilts to aim at the right mirror on the second array; that one tilts to aim down the chosen output fibre. Re-pointing = re-tilting. No O-E-O conversion, so no transceivers inside the switch: the power and latency of a packet-switch hop disappear.<span class="src"> Lumentum mgmt via MS, 2026-05-07</span></p></div>
+    <div class="card"><div class="n">03 · THE CATCH</div><h4>Loss, and circuits not packets</h4><p>Every pass through an OCS costs light (~2 dB Palomar; 1.5–3 dB LITE R300), which eats the link budget and pulls coherent-lite optics forward. It also reconnects fibres rather than routing packets, so it fits links whose pattern changes slowly: TPU torus wrap-arounds, failover, and the spine.<span class="src"> FUNDA, 2026-08-12 / 08-19</span></p></div>
+  </section>
+  <section class="explain" id="explainCPO" style="display:none">
+    <div class="card"><div class="n">01 · THE PROBLEM</div><h4>Copper runs out of reach</h4><p>A front-panel pluggable sits 15–30 cm from the ASIC, so each lane needs a long-reach SerDes plus a DSP to clean the signal. Copper reach falls from ~10 m at 800G to ~2 m at 1.6T.<span class="src"> SemiAnalysis CPO Book, 2026-01-01 · LITE @ DB, 2026-08-27</span></p></div>
+    <div class="card"><div class="n">02 · THE FIX</div><h4>Put the light next to the silicon</h4><p>CPO mounts optical engines (photonic chip + driver) on the switch package and brings fibre straight to them through a fibre-attach unit. The DSP goes, cutting optics energy by more than 50% (some target 80%). The laser moves out to a hot-swappable external laser source (ELS) at the front panel.<span class="src"> SemiAnalysis CPO Book, 2026-01-01</span></p></div>
+    <div class="card"><div class="n">03 · THE CATCH</div><h4>Yield, service, timing</h4><p>Fibre-attach yield is the gate (FOCI ~30%, others 50–60%; NVDA wants 70–80% before June 2027), a failed engine means opening the chassis, and at cluster level the saving is only ~2%. NPO keeps the engine socketable as a middle step.<span class="src"> Fubon · Shang, 2026-09-26 · SemiAnalysis CPO Book</span></p></div>
+  </section>
+
+  <section class="explain" id="explainSYS" style="display:none">
+    <div class="card"><div class="n">01 · SCALE-UP</div><h4>Make many GPUs act as one</h4><p>NVLink ties GPUs into one domain. Inside an NVL72 rack that is copper. NVDA's next step joins racks: "the NV576 Rubin Ultra in 2027 may use CPO switch trays to connect eight NVL72 server racks".<span class="src"> MS · Charlie Chan, 2026-09-06</span> Copper stays inside the rack; the new layer between racks is optical, CPO or NPO undecided.<span class="src"> Fubon · Shang via Jefferies desk, 2026-09-26</span></p></div>
+    <div class="card"><div class="n">02 · SCALE-OUT</div><h4>Join the domains into a cluster</h4><p>Every GPU tray has NICs; each NIC port needs a transceiver to reach a leaf switch, and every leaf-to-spine link needs one at both ends. That is why AI transceivers run ~180M units in C27 (90M 800G + 80M+ 1.6T) and ~7x per XPU by C28, while TPUs sit at 1.5x.<span class="src"> Jefferies · Curtis, 2026-09-24</span></p></div>
+    <div class="card"><div class="n">03 · WHERE NPO FITS</div><h4>The socketable middle step</h4><p>CPO lands in scale-out switches first (Quantum-X / Spectrum-X Photonics; COHR sees the Dec-26 quarter). Scale-up optics timing is the open fight: COHR 2H CY27 for scale-up CPO + NPO, four houses at ECOC see NPO volume in 2028, Jefferies C29. Innolight says NPO; the Taiwan chain says CPO.<span class="src"> COHR via JPM, 09-24/25 · ECOC 09-23/24 · Jefferies 09-24 · Fubon 09-26</span></p></div>
+  </section>
+
+  <h2>The numbers that matter</h2>
+  <div class="grid2">
+    <div class="card">
+      <h4 style="margin:0 0 8px">OCS: market and who ships</h4>
+      <table>
+        <tr><th>Metric</th><th>Value</th><th>Source</th></tr>
+        <tr><td>OCS TAM</td><td class="v">$2.0bn '27 → $6.2bn '30</td><td class="src">Redburn · Harrison, 2026-05-01</td></tr>
+        <tr><td>OCS TAM</td><td class="v">$4bn by 2030</td><td class="src">COHR (doubled), via Jefferies, 2026-08-27</td></tr>
+        <tr><td>OCS TAM</td><td class="v">&gt;$8bn by 2030</td><td class="src">Cignal AI (~$2.5bn '29 in Dec), via Crux, 2026-09-09</td></tr>
+        <tr><td>OCS TAM</td><td class="v">"$8bn undercalled"</td><td class="src">LITE @ DB, 2026-08-27</td></tr>
+        <tr><td>LITE OCS revenue</td><td class="v">&gt;$90m FY26 → ~$400m 2H CY26</td><td class="src">10-K 2026-08-17; Q4FY26 call 2026-08-11</td></tr>
+        <tr><td>Ports per XPU</td><td class="v">1.5:1 today → 2–10:1 scale-up</td><td class="src">Lumentum via Redburn Fig 49 / FUNDA</td></tr>
+        <tr><td>6D torus (rumour)</td><td class="v">1.5 → 6 ports per TPU</td><td class="src">FUNDA + GF Securities, 2026-08-19 <span class="tag">unconfirmed</span></td></tr>
+        <tr><td>Reconfiguration use case</td><td class="v">~10x today's Google opportunity</td><td class="src">LITE via Citi, 2026-09-22; late-'28/early-'29</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h4 style="margin:0 0 8px">CPO: power, market, content</h4>
+      <table>
+        <tr><th>Metric</th><th>Value</th><th>Source</th></tr>
+        <tr><td>800G pluggable vs CPO</td><td class="v">16–17 W → 4–5 W (−73%)</td><td class="src">NVDA Q3450, SemiAnalysis CPO Book</td></tr>
+        <tr><td>Meta on AVGO Bailly</td><td class="v">15 W → 5.4 W (−65%)</td><td class="src">SemiAnalysis CPO Book</td></tr>
+        <tr><td>Cluster-level saving</td><td class="v">−2% (−4% flat)</td><td class="src">SemiAnalysis CPO Book</td></tr>
+        <tr><td>CPO TAM</td><td class="v">$2.3bn '27 → $14.8bn '30</td><td class="src">Redburn · Harrison, 2026-05-01</td></tr>
+        <tr><td>CPO + NPO TAM</td><td class="v">$18bn+ by 2030 (~40% scale-up)</td><td class="src">LightCounting via JPM · Cardoso, 2026-08-06</td></tr>
+        <tr><td>CPO + NPO TAM</td><td class="v">&gt;$39bn by 2030</td><td class="src">TrendForce, 2026-09-14</td></tr>
+        <tr><td>TSMC COUPE</td><td class="v">&lt;150k units/mo; PIC 10k wpm YE26 → 15k YE27</td><td class="src">Susquehanna · Hosseini, 2026-09-09</td></tr>
+        <tr><td>Laser share of BOM</td><td class="v">30–40% CPO vs 10–15% pluggable</td><td class="src">Rothschild, 2026-05-19</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <h4 style="margin:0 0 8px">Scale-up vs scale-out: optics content and units</h4>
+    <table>
+      <tr><th>Metric</th><th>Value</th><th>Source</th></tr>
+      <tr><td>Inter-rack scale-up optics (Rubin Ultra)</td><td class="v">~$4.6m per rack (~8% of BOM: $1.2m copper, $3.5m optical)</td><td class="src">Fubon · Shang via Jefferies desk, 2026-09-26 <span class="tag">desk relay</span></td></tr>
+      <tr><td>Scale-out optics</td><td class="v">~$7.4m (4 custom ASICs per CPO switch, 64 optical engines)</td><td class="src">Fubon · Shang via Jefferies desk, 2026-09-26 <span class="tag">desk relay</span></td></tr>
+      <tr><td>Optical engines 2027</td><td class="v">~40m; CPO small in '27, ramps '28</td><td class="src">Fubon, 2026-09-26</td></tr>
+      <tr><td>AI transceivers</td><td class="v">~180M units C27 (90M 800G + 80M+ 1.6T)</td><td class="src">Jefferies · Curtis, 2026-09-24</td></tr>
+      <tr><td>AI transceivers per XPU</td><td class="v">7.0x C28; TPU 1.5x</td><td class="src">Jefferies · Curtis, 2026-09-24</td></tr>
+      <tr><td>CPO + NPO mix</td><td class="v">~40% scale-up, of $18bn+ by 2030</td><td class="src">LightCounting via JPM · Cardoso, 2026-08-06</td></tr>
+      <tr><td>Copper reach</td><td class="v">~10 m at 800G → ~2 m at 1.6T</td><td class="src">LITE @ DB, 2026-08-27</td></tr>
+      <tr><td>OCS spine ports per XPU</td><td class="v">0.2:1 → 1:1</td><td class="src">Lumentum via Redburn Fig 49</td></tr>
+    </table>
+  </div>
+
+  <h2>The open debates</h2>
+  <div class="debates">
+    <div class="card debate"><h4>When does CPO ramp? <span class="tag">disputed</span></h4><p>COHR says scale-up CPO in 2H CY27. Four houses at ECOC agree NPO volume lands in 2028. Jefferies says 2029 (Curtis, 2026-09-24); Barclays says "turn of the decade (if not later)" (O'Malley, 2026-09-23). TSMC's COUPE inflection is "already a year late" (Susquehanna, 2026-09-09).</p></div>
+    <div class="card debate"><h4>How much content per switch? <span class="tag">disputed</span></h4><p>Redburn implies ~$19 per CW laser chip and $4.8–6.4k of non-laser optics per switch; the SemiAnalysis CPO Book implies ~$82 per chip and ~$36k. They are 4–7x apart. COHR's "up to $15,000 per system" (2026-09-21) argues against the low end, but has basis traps.</p></div>
+    <div class="card debate"><h4>Is the OCS TAM circular?</h4><p>Redburn calibrated its OCS model to LITE/COHR disclosures, so its Google-derived $1.27bn 2027 figure matching LITE's &gt;$1bn is not independent confirmation. The non-circular part points the TAM <b>up</b>: Google would need to buy ~40%+ of its OCS outside, vs Redburn's 25% (house bridge, 2026-08-17).</p></div>
+    <div class="card debate"><h4>Who wins the value?</h4><p>Follow the light source: an ELS is common to both CPO and NPO, so "track ELS, not the optical engine" (LITE @ DB, 2026-08-27). Transceiver assemblers lose leverage, since customers find it "much easier to squeeze" them than switch vendors (SemiAnalysis CPO Book). Gross margins: LITE 50.4% &gt; COHR 40.2% &gt; Fabrinet 12.2% (Q4FY26 prints).</p></div>
+    <div class="card debate"><h4>Is CPO reliable enough?</h4><p>Meta/AVGO measured 2.6M device-hours MTBF vs 0.5–1M for pluggables, but the "15M hours" are port-hours across only 15 switches, and one failure takes out 64 × 800G ports. Google is "most hesitant" to adopt (SemiAnalysis CPO Book).</p></div>
+    <div class="card debate"><h4>MEMS vs liquid crystal in OCS</h4><p>Lumentum: MEMS is "the lowest loss" and the only high-volume approach; piezo was dropped (LITE mgmt to Capstone, 2026-09-14). Coherent ships liquid-crystal OCS (320×320 per desk commentary, 2026-09-14, not research). A corpus rumour says Google rejected COHR's LC-OCS on insertion loss <span class="tag">rumour</span>.</p></div>
+  </div>
+
+  <footer>
+    Sources: Capstone wiki <span class="mono">_wiki/themes/optical-cpo.md</span>, LITE/COHR/AVGO/NVDA pages and the Optical TAM Bridge (2026-08-17). Scene geometry is schematic: port counts, distances and mirror angles are drawn for clarity, not to scale. The ≈20 pJ/bit pluggable figure is derived here (16.5 W ÷ 800 Gb/s); the wiki carries no per-port NPO power figure, so the NPO meter is left blank rather than interpolated. Built 2026-09-27 (scale-up / scale-out view added the same day).
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+"use strict";
+const $=s=>document.querySelector(s);
+
+// ---------- theme ----------
+try{const t=localStorage.getItem("lp-theme"); if(t) document.documentElement.setAttribute("data-theme",t);}catch(e){}
+$("#themeBtn").onclick=()=>{
+  const cur=getComputedStyle(document.documentElement).getPropertyValue("--bg").trim();
+  const isDark=cur.toLowerCase()==="#0b0d10";
+  const nt=isDark?"light":"dark";
+  document.documentElement.setAttribute("data-theme",nt);
+  try{localStorage.setItem("lp-theme",nt);}catch(e){}
+  applyTheme&&applyTheme();
+};
+const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+
+// ---------- data ----------
+const N=8;
+let perm=[...Array(N).keys()].map(i=>(i*5+2)%N); // start with a non-trivial permutation
+let selIn=2;
+const STAGES=[
+  {name:"Front-panel pluggable",dist:'15–30 cm of copper to the ASIC<span class="src"> SemiAnalysis CPO Book</span>',
+   pow:'~16–17 W per 800G (DR4)<span class="src"> SemiAnalysis CPO Book</span>',pj:'≈20 <span class="src">derived: 16.5 W ÷ 800 Gb/s</span>',
+   dsp:'Yes: 6–7 W of it at 800G (12–14 W at 1.6T)',laser:'Inside every module',svc:'Hot-swap from the front panel',w:16.5},
+  {name:"Near-packaged optics (NPO)",dist:'5–10 cm, on the board<span class="src"> Stifel · Singh, 2026-09-01</span>',
+   pow:'No canonical per-port figure on the wiki',pj:'—',
+   dsp:'Removed or reduced (design-dependent)',laser:'External laser source (ELS) at the faceplate',svc:'Engine stays socketable; price gap to CPO only ~$3K, so yield decides<span class="src"> Fubon, 2026-09-26</span>',w:null},
+  {name:"Co-packaged optics (CPO)",dist:'Millimetres, on the package',
+   pow:'~4–5 W per 800G (NVDA Q3450, −73%)<span class="src"> SemiAnalysis CPO Book</span>',pj:'5–10<span class="src"> Stifel · Singh, 2026-09-01</span>',
+   dsp:'Gone',laser:'ELS: lasers + coolers are ~70% of its power',svc:'Inside the chassis: a bad fibre-attach unit is not a hot-swap',w:4.5}
+];
+
+// ---------- ports UI ----------
+const inBox=$("#inPorts"), outBox=$("#outPorts");
+for(let i=0;i<N;i++){
+  const b=document.createElement("button"); b.textContent=i+1; b.onclick=()=>{selIn=i; refreshPorts(); updateOCSHud(); rebuildBeams(true);}; inBox.appendChild(b);
+  const o=document.createElement("button"); o.textContent=i+1; o.onclick=()=>routeTo(i); outBox.appendChild(o);
+}
+function refreshPorts(){
+  [...inBox.children].forEach((b,i)=>b.classList.toggle("on",i===selIn));
+  [...outBox.children].forEach((b,j)=>{b.classList.toggle("on",false);b.classList.toggle("dest",j===perm[selIn]);});
+}
+function updateOCSHud(){
+  $("#ocsRoute").textContent=`In ${selIn+1} → Out ${perm[selIn]+1}`;
+  const elec=$("#cmpElec").checked;
+  if(elec){
+    $("#ocsConv").innerHTML='<b>2 conversions per hop</b>: optical → electrical at the ingress port, electrical → optical at the egress port';
+    $("#ocsLoss").innerHTML='Signal is regenerated, so no optical loss budget, but every port burns power';
+    $("#ocsRate").innerHTML='Tied to the transceiver: a speed upgrade means new optics at every port';
+    $("#ocsSw").innerHTML='Reads every packet: flexible, but it costs power and latency on each hop';
+    $("#ocsW").textContent="~33 W"; $("#ocsWbar").style.width="100%"; $("#ocsWbar").style.background=css("--amber");
+    $("#ocsWsrc").innerHTML='Two 800G pluggables (~16–17 W each) per hop through the switch, before the switch ASIC itself. SemiAnalysis CPO Book';
+  }else{
+    $("#ocsConv").innerHTML='<b>0 conversions</b>: light stays light';
+    $("#ocsLoss").innerHTML='~2 dB (Palomar) · 1.5–3 dB (LITE R300)<span class="src"> FUNDA, 2026-08-19</span>';
+    $("#ocsRate").innerHTML='Line-rate agnostic: the mirror does not care if it is 800G or 1.6T';
+    $("#ocsSw").innerHTML='Whole circuits, not packets: it re-points a fibre, it does not read headers';
+    $("#ocsW").textContent="0 W"; $("#ocsWbar").style.width="0%";
+    $("#ocsWsrc").innerHTML='No optics inside the OCS: nothing to convert, nothing to retime';
+  }
+}
+function routeTo(j){
+  const prev=perm[selIn]; if(prev===j) return;
+  const other=perm.indexOf(j);
+  perm[other]=prev; perm[selIn]=j;
+  refreshPorts(); updateOCSHud(); startRetarget();
+}
+$("#shuffle").onclick=()=>{ for(let i=N-1;i>0;i--){const k=Math.floor(Math.random()*(i+1));[perm[i],perm[k]]=[perm[k],perm[i]];} refreshPorts(); updateOCSHud(); startRetarget(); };
+$("#reset").onclick=()=>{ perm=[...Array(N).keys()]; refreshPorts(); updateOCSHud(); startRetarget(); };
+$("#cmpElec").onchange=()=>{ updateOCSHud(); if(ok) setElec($("#cmpElec").checked); };
+
+// ---------- tabs ----------
+let mode="ocs";
+function setMode(m){
+  mode=m;
+  const map={ocs:["hudOCS","ctrlOCS","explainOCS"],cpo:["hudCPO","ctrlCPO","explainCPO"],sys:["hudSYS","ctrlSYS","explainSYS"]};
+  for(const k of ["ocs","cpo","sys"]){
+    $("#tab"+k.toUpperCase()).classList.toggle("on",k===m);
+    for(const id of map[k]) $("#"+id).style.display=k===m?(id.startsWith("explain")?"grid":""):"none";
+  }
+  if(ok){ ocsG.visible=m==="ocs"; cpoG.visible=m==="cpo"; sysG.visible=m==="sys"; orbitTo(m==="ocs"?VIEW_OCS:m==="sys"?VIEW_SYS:(explodeTarget?VIEW_EXP:VIEW_CPO)); }
+  try{localStorage.setItem("lp-mode",m);}catch(e){}
+}
+$("#tabOCS").onclick=()=>setMode("ocs"); $("#tabCPO").onclick=()=>setMode("cpo"); $("#tabSYS").onclick=()=>setMode("sys");
+
+// ---------- scale-up / scale-out controls ----------
+const SYS={up:"cu",out:"plug",sp:"eps",show:"both"};
+const OPT_C='~$4.6m per rack of inter-rack scale-up optics (~8% of BOM: $1.2m copper, $3.5m optical)<span class="src"> Fubon · Shang via Jefferies desk, 2026-09-26 (desk relay)</span>';
+const UP={
+  cu:{name:"Copper between racks",txt:'Reach falls from ~10 m at 800G to ~2 m at 1.6T<span class="src"> LITE @ DB, 2026-08-27</span>. Fine inside an NVL72 rack; the far rack of an NVL576-style domain is out of reach (red dashes).',c:'$1.2m of the ~$4.6m per rack stays copper even in the optical case<span class="src"> Fubon via Jefferies desk, 2026-09-26</span>'},
+  plug:{name:"Pluggable transceivers",txt:'Any reach, but every end carries a DSP (6–7 W at 800G) inside a ~16–17 W module<span class="src"> SemiAnalysis CPO Book</span>: the highest watts per bit of the optical options.',c:OPT_C},
+  npo:{name:"Near-packaged optics",txt:'NVL576 adds a scale-up optical layer between racks with copper inside the rack; <b>CPO or NPO undecided</b>. Innolight says NPO, the Taiwan chain says CPO; if fibre-attach yields are not fixed, NVDA may go NPO<span class="src"> Fubon · Shang via Jefferies desk, 2026-09-26</span>. Four houses: NPO volume 2028 (ECOC, 09-23/24).',c:OPT_C},
+  cpo:{name:"Co-packaged optics",txt:'"The NV576 Rubin Ultra in 2027 may use CPO switch trays to connect eight NVL72 server racks"; inter-rack CPO is NVDA&#39;s preferred direction<span class="src"> MS · Charlie Chan, 2026-09-06</span>. Timing split: COHR 2H CY27, Jefferies C29 (Curtis, 09-24). AVGO: CPO fits scale-out better than scale-up (09-03/04).',c:OPT_C}
+};
+const OUT={
+  plug:{name:"Pluggables at every port",txt:'Today&#39;s default at NIC, leaf and spine, 800G moving to 1.6T. AI transceivers ~180M units in C27 (90M 800G + 80M+ 1.6T)<span class="src"> Jefferies · Curtis, 2026-09-24</span>'},
+  npo:{name:"NPO on leaf & spine",txt:'Engine beside the switch ASIC, still socketable; the price gap to CPO is only ~$3K, so yield decides<span class="src"> Fubon, 2026-09-26</span>'},
+  cpo:{name:"CPO switches",txt:'Where CPO ships first: NVDA Quantum-X (InfiniBand, 1.6T engines) and Spectrum-X (Ethernet, 3.2T) Photonics<span class="src"> SemiAnalysis CPO Book</span>. COHR: scale-out CPO in the Dec-26 quarter (via JPM, 09-24/25). Scale-out optics ~$7.4m (4 custom ASICs per CPO switch, 64 engines)<span class="src"> Fubon via Jefferies desk, 2026-09-26</span>'}
+};
+const SP={eps:'Packet switch: transceivers at every port, O-E-O on every hop',
+  ocs:'OCS: no transceivers inside the spine. Google Virgo hands the spine to OCS across 130k+ TPUs; spine ports per XPU 0.2:1 → 1:1<span class="src"> wiki excerpt 2026-08-18 · Lumentum via Redburn Fig 49</span>'};
+function updateSysHud(){
+  const u=UP[SYS.up], o=OUT[SYS.out];
+  $("#sysUpName").textContent=u.name; $("#sysUp").innerHTML=u.txt; $("#sysUpC").innerHTML=u.c;
+  $("#sysOutName").textContent=o.name; $("#sysOut").innerHTML=o.txt; $("#sysSpine").innerHTML=SP[SYS.sp];
+}
+for(const [id,k] of [["upSeg","up"],["outSeg","out"],["spSeg","sp"],["showSeg","show"]]){
+  [...$("#"+id).children].forEach(b=>b.onclick=()=>{
+    [...$("#"+id).children].forEach(x=>x.classList.toggle("on",x===b)); SYS[k]=b.dataset.v; updateSysHud(); if(ok) buildSys();
+  });
+}
+updateSysHud();
+
+// ---------- CPO controls ----------
+let stageT=0, stageTarget=0, explode=0, explodeTarget=0;
+const slider=$("#stageSlider");
+slider.oninput=()=>{stageTarget=+slider.value; updateCPOHud();};
+slider.onchange=()=>{stageTarget=Math.round(+slider.value); slider.value=stageTarget; updateCPOHud();};
+[...$("#viewSeg").children].forEach(b=>b.onclick=()=>{[...$("#viewSeg").children].forEach(x=>x.classList.toggle("on",x===b)); explodeTarget=+b.dataset.v; if(ok) orbitTo(explodeTarget?VIEW_EXP:VIEW_CPO);});
+$("#cluster").onchange=()=>{$("#clusterBox").style.display=$("#cluster").checked?"":"none";};
+function updateCPOHud(){
+  const s=STAGES[Math.round(stageTarget)];
+  $("#cpoStage").textContent=s.name; $("#cpoDist").innerHTML=s.dist; $("#cpoPow").innerHTML=s.pow; $("#cpoPJ").innerHTML=s.pj;
+  $("#cpoDSP").innerHTML=s.dsp; $("#cpoLaser").innerHTML=s.laser; $("#cpoSvc").innerHTML=s.svc;
+  const wrap=$("#cpoWbarWrap");
+  if(s.w==null){wrap.classList.add("hatch"); $("#cpoWbar").style.width="100%"; $("#cpoW").textContent="n/a";}
+  else{wrap.classList.remove("hatch"); $("#cpoWbar").style.width=(s.w/17*100)+"%"; $("#cpoW").textContent="~"+s.w+" W";}
+}
+window.addEventListener("keydown",e=>{
+  if(e.target.tagName==="INPUT") return;
+  if(mode==="cpo" && ["1","2","3"].includes(e.key)){stageTarget=+e.key-1; slider.value=stageTarget; updateCPOHud();}
+  if(mode==="ocs" && /^[1-8]$/.test(e.key)){selIn=+e.key-1; refreshPorts(); updateOCSHud(); rebuildBeams(true);}
+});
+
+refreshPorts(); updateOCSHud(); updateCPOHud();
+
+// =====================================================================
+// 3D
+// =====================================================================
+let ok=typeof THREE!=="undefined";
+let renderer;
+if(ok){ try{ renderer=new THREE.WebGLRenderer({canvas:$("#gl"),antialias:true}); }catch(e){ ok=false; } }
+if(!ok){ $("#fallback").style.display="flex"; $("#gl").style.display="none"; let m="ocs"; try{m=localStorage.getItem("lp-mode")||"ocs";}catch(e){} setMode(m); return; }
+
+renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+const scene=new THREE.Scene();
+const camera=new THREE.PerspectiveCamera(38,1,0.1,200);
+scene.add(new THREE.HemisphereLight(0xffffff,0x334455,0.75));
+const key=new THREE.DirectionalLight(0xffffff,0.9); key.position.set(6,12,8); scene.add(key);
+const rim=new THREE.DirectionalLight(0x88ccff,0.35); rim.position.set(-8,4,-6); scene.add(rim);
+
+const C=()=>({accent:new THREE.Color(css("--accent")),amber:new THREE.Color(css("--amber")),red:new THREE.Color(css("--red")),
+  copper:new THREE.Color(css("--copper")),bg:new THREE.Color(css("--scene-bg")),chip:new THREE.Color(css("--chip")),ink3:new THREE.Color(css("--ink-3"))});
+let col=C();
+
+// materials
+const M={
+  metal:new THREE.MeshStandardMaterial({color:0x8a939e,metalness:.7,roughness:.35}),
+  dark:new THREE.MeshStandardMaterial({color:0x2a3038,metalness:.3,roughness:.6}),
+  mirror:new THREE.MeshStandardMaterial({color:0xdfe8f0,metalness:1,roughness:.08,emissive:0x223344,emissiveIntensity:.25}),
+  housing:new THREE.MeshStandardMaterial({color:0x3a414b,metalness:.4,roughness:.55,transparent:true,opacity:.92}),
+  board:new THREE.MeshStandardMaterial({color:0x1f3a33,metalness:.1,roughness:.8}),
+  substrate:new THREE.MeshStandardMaterial({color:0x6b5a3a,metalness:.2,roughness:.6}),
+  die:new THREE.MeshStandardMaterial({color:0x5a6b80,metalness:.8,roughness:.25}),
+  engine:new THREE.MeshStandardMaterial({color:0x2c7fa8,metalness:.5,roughness:.35}),
+  module:new THREE.MeshStandardMaterial({color:0x9aa3ad,metalness:.75,roughness:.3}),
+  fau:new THREE.MeshStandardMaterial({color:0xd8dde2,metalness:.2,roughness:.5}),
+  els:new THREE.MeshStandardMaterial({color:0x7a2b27,metalness:.4,roughness:.4}),
+  face:new THREE.MeshStandardMaterial({color:0x2b3037,metalness:.6,roughness:.45}),
+};
+const glowMat=(c,op)=>new THREE.MeshBasicMaterial({color:c,transparent:true,opacity:op,blending:THREE.AdditiveBlending,depthWrite:false});
+const coreMat=c=>new THREE.MeshBasicMaterial({color:c});
+
+function applyTheme(){
+  if(!ok) return;
+  col=C(); scene.background=col.bg;
+  rebuildBeams(true); if(elecBuilt) buildElec(); buildCPOTubes(true); if(sysBuilt) buildSys();
+}
+window.applyTheme=applyTheme;
+if(window.matchMedia) window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",applyTheme);
+scene.background=col.bg;
+
+// ---------- labels ----------
+const labels=[];
+function addLabel(text,sub,getPos,group){
+  const el=document.createElement("div"); el.className="lbl"; el.innerHTML=text+(sub?`<small>${sub}</small>`:"");
+  $("#labels").appendChild(el); const L={el,getPos,group,show:()=>true}; labels.push(L); return L;
+}
+const v3=new THREE.Vector3();
+function drawLabels(){
+  const box=$("#glbox"), w=box.clientWidth, h=box.clientHeight;
+  for(const L of labels){
+    let vis=L.group.visible && L.show();
+    if(vis){ L.getPos(v3); v3.project(camera); vis=v3.z<1 && Math.abs(v3.x)<1.1 && Math.abs(v3.y)<1.1; }
+    L.el.style.display=vis?"":"none";
+    if(vis){ L.el.style.left=((v3.x+1)/2*w)+"px"; L.el.style.top=((1-v3.y)/2*h-6)+"px"; }
+  }
+}
+
+// ---------- orbit ----------
+const VIEW_OCS={theta:0.35,phi:1.02,r:17,target:new THREE.Vector3(0,0,0.4)};
+const VIEW_CPO={theta:0.75,phi:0.9,r:19,target:new THREE.Vector3(2.2,0.4,0)};
+const VIEW_SYS={theta:0.42,phi:1.22,r:34,target:new THREE.Vector3(0,6.6,0)};
+const VIEW_EXP={theta:0.55,phi:1.12,r:11.5,target:new THREE.Vector3(0.6,1.6,0)};
+const orb={theta:VIEW_OCS.theta,phi:VIEW_OCS.phi,r:VIEW_OCS.r,target:VIEW_OCS.target.clone()};
+let orbGoal=null;
+function orbitTo(v){orbGoal={theta:v.theta,phi:v.phi,r:v.r,target:v.target.clone()};}
+(function(){
+  const cv=$("#gl"); let drag=null;
+  cv.addEventListener("pointerdown",e=>{drag={x:e.clientX,y:e.clientY}; cv.setPointerCapture(e.pointerId); orbGoal=null;});
+  cv.addEventListener("pointermove",e=>{ if(!drag) return; const dx=e.clientX-drag.x, dy=e.clientY-drag.y; drag={x:e.clientX,y:e.clientY};
+    orb.theta-=dx*0.006; orb.phi=Math.min(1.45,Math.max(0.15,orb.phi-dy*0.006)); });
+  cv.addEventListener("pointerup",()=>drag=null); cv.addEventListener("pointercancel",()=>drag=null);
+  cv.addEventListener("wheel",e=>{e.preventDefault(); orbGoal=null; orb.r=Math.min(40,Math.max(7,orb.r*(1+Math.sign(e.deltaY)*0.08)));},{passive:false});
+})();
+function updateCamera(){
+  if(orbGoal){ const k=0.08; orb.theta+=(orbGoal.theta-orb.theta)*k; orb.phi+=(orbGoal.phi-orb.phi)*k; orb.r+=(orbGoal.r-orb.r)*k; orb.target.lerp(orbGoal.target,k);
+    if(Math.abs(orbGoal.r-orb.r)<0.01 && Math.abs(orbGoal.theta-orb.theta)<0.001) orbGoal=null; }
+  const t=orb.target, s=Math.sin(orb.phi);
+  camera.position.set(t.x+orb.r*s*Math.sin(orb.theta), t.y+orb.r*Math.cos(orb.phi), t.z+orb.r*s*Math.cos(orb.theta));
+  camera.lookAt(t);
+}
+
+// helpers
+function tubePath(pts,r,mat,seg){
+  const path=new THREE.CurvePath(); for(let i=0;i<pts.length-1;i++) path.add(new THREE.LineCurve3(pts[i],pts[i+1]));
+  return new THREE.Mesh(new THREE.TubeGeometry(path,seg||Math.max(8,(pts.length-1)*6),r,8,false),mat);
+}
+function disposeGroup(g){ while(g.children.length){const c=g.children.pop(); c.geometry&&c.geometry.dispose(); if(c.material&&c.material.dispose) c.material.dispose();} }
+const Z=new THREE.Vector3(0,0,1), Y=new THREE.Vector3(0,1,0);
+
+// =====================================================================
+// OCS scene
+// =====================================================================
+const ocsG=new THREE.Group(); scene.add(ocsG);
+const ys=i=>((N-1)/2-i)*0.62;
+const P_in=i=>new THREE.Vector3(-5.4,ys(i),2.8);
+const P_A =i=>new THREE.Vector3(-1.7,ys(i),-1.7);
+const P_B =j=>new THREE.Vector3( 1.7,ys(j),-1.7);
+const P_out=j=>new THREE.Vector3( 5.4,ys(j),2.8);
+
+// base plate
+const base=new THREE.Mesh(new THREE.BoxGeometry(13.5,0.25,7.2),M.dark); base.position.set(0,ys(N-1)-0.75,0.5); ocsG.add(base);
+// collimators + fibre tails
+function collimator(pos,aimAt,sideSign){
+  const dir=aimAt.clone().sub(pos).normalize();
+  const g=new THREE.Mesh(new THREE.CylinderGeometry(0.13,0.13,0.7,20),M.metal);
+  g.quaternion.setFromUnitVectors(Y,dir); g.position.copy(pos); ocsG.add(g);
+  const lens=new THREE.Mesh(new THREE.SphereGeometry(0.1,16,12),new THREE.MeshStandardMaterial({color:0x99ddff,metalness:0,roughness:.05,transparent:true,opacity:.8}));
+  lens.position.copy(pos.clone().addScaledVector(dir,0.38)); ocsG.add(lens);
+  const tail=[pos.clone().addScaledVector(dir,-0.35), pos.clone().addScaledVector(dir,-0.9), pos.clone().add(new THREE.Vector3(sideSign*2.2,0,1.2))];
+  ocsG.add(tubePath(tail,0.04,new THREE.MeshStandardMaterial({color:0xf2c14e,roughness:.6}),20));
+}
+// housings behind mirror arrays (normal roughly bisecting)
+function housing(x,label){
+  const h=new THREE.Mesh(new THREE.BoxGeometry(1.1,N*0.62+0.5,0.35),M.housing);
+  h.position.set(x,0,-2.05); ocsG.add(h);
+  return h;
+}
+const hA=housing(-1.7), hB=housing(1.7);
+const mirrorsA=[], mirrorsB=[];
+function mkMirror(pos){
+  const g=new THREE.Group(); g.position.copy(pos);
+  const m=new THREE.Mesh(new THREE.BoxGeometry(0.44,0.44,0.05),M.mirror); g.add(m);
+  const ring=new THREE.Mesh(new THREE.TorusGeometry(0.33,0.025,6,28),M.metal); g.add(ring);
+  ocsG.add(g); return {g,q0:new THREE.Quaternion(),q1:new THREE.Quaternion()};
+}
+for(let i=0;i<N;i++){ mirrorsA.push(mkMirror(P_A(i))); mirrorsB.push(mkMirror(P_B(i))); }
+for(let i=0;i<N;i++){ collimator(P_in(i),P_A(i),-1); collimator(P_out(i),P_B(i),1); }
+
+function mirrorNormal(inFrom,at,outTo){
+  const din=at.clone().sub(inFrom).normalize(), dout=outTo.clone().sub(at).normalize();
+  return dout.sub(din).normalize();
+}
+function targetQuats(){
+  const inv=[]; perm.forEach((j,i)=>inv[j]=i);
+  const qa=[],qb=[];
+  for(let i=0;i<N;i++){ const n=mirrorNormal(P_in(i),P_A(i),P_B(perm[i])); qa.push(new THREE.Quaternion().setFromUnitVectors(Z,n)); }
+  for(let j=0;j<N;j++){ const n=mirrorNormal(P_A(inv[j]),P_B(j),P_out(j)); qb.push(new THREE.Quaternion().setFromUnitVectors(Z,n)); }
+  return {qa,qb};
+}
+{ const {qa,qb}=targetQuats(); mirrorsA.forEach((m,i)=>{m.g.quaternion.copy(qa[i]);m.q1.copy(qa[i]);}); mirrorsB.forEach((m,i)=>{m.g.quaternion.copy(qb[i]);m.q1.copy(qb[i]);}); }
+
+const beamG=new THREE.Group(); ocsG.add(beamG);
+let retarget=null; // {t}
+function startRetarget(){
+  if(!ok) return;
+  const {qa,qb}=targetQuats();
+  mirrorsA.forEach((m,i)=>{m.q0.copy(m.g.quaternion); m.q1.copy(qa[i]);});
+  mirrorsB.forEach((m,i)=>{m.q0.copy(m.g.quaternion); m.q1.copy(qb[i]);});
+  retarget={t:0}; disposeGroup(beamG); photons.forEach(p=>p.visible=false);
+}
+let selPath=null;
+function rebuildBeams(){
+  if(!ok) return;
+  disposeGroup(beamG);
+  if(elecOn) return;
+  for(let i=0;i<N;i++){
+    const pts=[P_in(i),P_A(i),P_B(perm[i]),P_out(perm[i])];
+    const sel=i===selIn;
+    beamG.add(tubePath(pts,sel?0.035:0.018,coreMat(sel?col.accent:col.accent.clone().multiplyScalar(0.55))));
+    beamG.add(tubePath(pts,sel?0.12:0.05,glowMat(col.accent,sel?0.28:0.08)));
+    if(sel) selPath=pts;
+  }
+}
+// photons along selected beam
+const photons=[]; for(let k=0;k<6;k++){ const p=new THREE.Mesh(new THREE.SphereGeometry(0.075,12,10),coreMat(0xffffff)); p.visible=false; ocsG.add(p); photons.push(p); }
+function pointAlong(pts,u){
+  const segs=[]; let tot=0; for(let i=0;i<pts.length-1;i++){const l=pts[i].distanceTo(pts[i+1]); segs.push(l); tot+=l;}
+  let d=u*tot; for(let i=0;i<segs.length;i++){ if(d<=segs[i]) return pts[i].clone().lerp(pts[i+1],d/segs[i]); d-=segs[i]; } return pts[pts.length-1].clone();
+}
+
+// electrical comparison: packet-switch box + transceivers
+const elecG=new THREE.Group(); ocsG.add(elecG); elecG.visible=false; let elecOn=false, elecBuilt=false;
+function buildElec(){
+  disposeGroup(elecG); elecBuilt=true;
+  const asic=new THREE.Mesh(new THREE.BoxGeometry(2.2,2.2,0.5),M.die); asic.position.set(0,0,-1.7); elecG.add(asic);
+  const pkg=new THREE.Mesh(new THREE.BoxGeometry(3.0,3.0,0.2),M.substrate); pkg.position.set(0,0,-2.0); elecG.add(pkg);
+  for(let i=0;i<N;i++){
+    for(const side of [-1,1]){
+      const t=new THREE.Mesh(new THREE.BoxGeometry(0.9,0.42,0.42),M.module); t.position.set(side*2.9,ys(i),-1.7); elecG.add(t);
+      const d=new THREE.Mesh(new THREE.BoxGeometry(0.3,0.3,0.1),new THREE.MeshStandardMaterial({color:0x111111,emissive:col.amber,emissiveIntensity:.35})); d.position.set(side*2.9,ys(i),-1.45); elecG.add(d);
+    }
+    const j=perm[i], sel=i===selIn;
+    const optIn=[P_in(i),new THREE.Vector3(-3.35,ys(i),-1.7)];
+    const el=[new THREE.Vector3(-2.45,ys(i),-1.7),new THREE.Vector3(-1.1,ys(i)*0.6,-1.45),new THREE.Vector3(1.1,ys(j)*0.6,-1.45),new THREE.Vector3(2.45,ys(j),-1.7)];
+    const optOut=[new THREE.Vector3(3.35,ys(j),-1.7),P_out(j)];
+    elecG.add(tubePath(optIn,sel?0.035:0.018,coreMat(sel?col.accent:col.accent.clone().multiplyScalar(.5))));
+    elecG.add(tubePath(optOut,sel?0.035:0.018,coreMat(sel?col.accent:col.accent.clone().multiplyScalar(.5))));
+    elecG.add(tubePath(el,sel?0.04:0.016,coreMat(sel?col.amber:col.amber.clone().multiplyScalar(.45))));
+    if(sel){ elecG.add(tubePath(el,0.13,glowMat(col.amber,.25))); selPath=[P_in(i),optIn[1],...el,optOut[0],P_out(j)]; }
+  }
+}
+function setElec(on){
+  elecOn=on; elecG.visible=on;
+  mirrorsA.concat(mirrorsB).forEach(m=>m.g.visible=!on); hA.visible=hB.visible=!on;
+  if(on) buildElec(); rebuildBeams();
+}
+
+// OCS labels
+addLabel("Input fibres","collimated into free-space beams",v=>v.copy(P_in(0)).add(new THREE.Vector3(0,0.7,0)),ocsG);
+addLabel("Output fibres","any input → any output",v=>v.copy(P_out(0)).add(new THREE.Vector3(0,0.7,0)),ocsG);
+const lA=addLabel("MEMS mirror array A","each mirror tilts on 2 axes",v=>v.copy(P_A(0)).add(new THREE.Vector3(0,0.75,0)),ocsG); lA.show=()=>!elecOn;
+const lB=addLabel("MEMS mirror array B","aims the beam into its output",v=>v.copy(P_B(0)).add(new THREE.Vector3(0,0.75,0)),ocsG); lB.show=()=>!elecOn;
+const lE=addLabel("Packet-switch ASIC","O→E at ingress, E→O at egress",v=>v.set(0,1.5,-1.7),ocsG); lE.show=()=>elecOn;
+const lT=addLabel("Pluggable transceivers","one per port, both sides",v=>v.set(-2.9,ys(0)+0.55,-1.7),ocsG); lT.show=()=>elecOn;
+
+// =====================================================================
+// CPO scene
+// =====================================================================
+const cpoG=new THREE.Group(); scene.add(cpoG); cpoG.visible=false;
+const board=new THREE.Mesh(new THREE.BoxGeometry(17,0.2,11.5),M.board); board.position.set(1.5,-0.1,0); cpoG.add(board);
+const face=new THREE.Mesh(new THREE.BoxGeometry(0.3,2.0,11.5),M.face); face.position.set(8.15,0.9,0); cpoG.add(face);
+const substrate=new THREE.Mesh(new THREE.BoxGeometry(3.4,0.22,3.4),M.substrate); substrate.position.set(0,0.11,0); cpoG.add(substrate);
+const die=new THREE.Mesh(new THREE.BoxGeometry(1.7,0.28,1.7),M.die); cpoG.add(die);
+// engines: sides -z(3), +x(2), +z(3)  → faceplate slots 0..7 by z order
+const ENG=[];
+const sidesDef=[[-1,[-0.9,0,0.9],"z"],[0,[-0.55,0.55],"x"],[1,[-0.9,0,0.9],"z"]];
+(function(){
+  const list=[];
+  // -z side
+  for(const o of [-0.9,0,0.9]) list.push({cpo:new THREE.Vector3(o,0,-1.32),edge:new THREE.Vector3(o,0,-0.85),npo:new THREE.Vector3(o*1.6,0,-3.3)});
+  for(const o of [-0.55,0.55]) list.push({cpo:new THREE.Vector3(1.32,0,o),edge:new THREE.Vector3(0.85,0,o),npo:new THREE.Vector3(3.4,0,o*2.2)});
+  for(const o of [-0.9,0,0.9]) list.push({cpo:new THREE.Vector3(o,0,1.32),edge:new THREE.Vector3(o,0,0.85),npo:new THREE.Vector3(o*1.6,0,3.3)});
+  // slots by z: sort by cpo z then x
+  const order=list.map((e,i)=>i).sort((a,b)=>{const A=list[a].npo,B=list[b].npo; return (A.z+A.x*0.01)-(B.z+B.x*0.01);});
+  order.forEach((idx,k)=>{ list[idx].slot=new THREE.Vector3(7.25,0,(k-3.5)*1.25); });
+  list.forEach(e=>{
+    const g=new THREE.Group();
+    const body=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),M.engine); g.add(body);
+    const dsp=new THREE.Mesh(new THREE.BoxGeometry(0.34,0.08,0.34),new THREE.MeshStandardMaterial({color:0x111418,emissive:0x331a00,transparent:true,opacity:1})); g.add(dsp);
+    const las=new THREE.Mesh(new THREE.SphereGeometry(0.07,10,8),new THREE.MeshBasicMaterial({color:0xff4b3e,transparent:true})); g.add(las);
+    const fau=new THREE.Mesh(new THREE.BoxGeometry(0.22,0.16,0.3),M.fau); g.add(fau);
+    const npoSub=new THREE.Mesh(new THREE.BoxGeometry(1.0,0.08,1.0),M.substrate); cpoG.add(npoSub);
+    cpoG.add(g);
+    ENG.push(Object.assign(e,{g,body,dsp,las,fau,npoSub}));
+  });
+})();
+// ELS modules at faceplate
+const ELS=[];
+for(const z of [-5.25,5.25]){ const m=new THREE.Mesh(new THREE.BoxGeometry(1.1,0.5,0.7),M.els); m.position.set(7.5,0.55,z); cpoG.add(m); ELS.push(m); }
+const cpoTubeG=new THREE.Group(); cpoG.add(cpoTubeG);
+const smooth=x=>x*x*(3-2*x);
+function engineState(e,t){
+  // t in [0,2]; returns pos, scale
+  let pos,scale;
+  const plug={pos:e.slot.clone().setY(0.55),scale:new THREE.Vector3(1.5,0.5,0.85)};
+  const npo={pos:e.npo.clone().setY(0.34),scale:new THREE.Vector3(0.62,0.22,0.62)};
+  const cpo={pos:e.cpo.clone().setY(0.33),scale:new THREE.Vector3(0.52,0.2,0.52)};
+  if(t<=1){ const u=smooth(t); pos=plug.pos.clone().lerp(npo.pos,u); scale=plug.scale.clone().lerp(npo.scale,u); }
+  else { const u=smooth(t-1); pos=npo.pos.clone().lerp(cpo.pos,u); scale=npo.scale.clone().lerp(cpo.scale,u); }
+  return {pos,scale};
+}
+function buildCPOTubes(){
+  disposeGroup(cpoTubeG);
+  const ex=explode;
+  const showWires=ex<0.15;
+  for(const e of ENG){
+    const {pos}=engineState(e,stageT);
+    const lift=ex*2.1;
+    if(showWires){
+      // copper trace from die edge to engine inner face
+      const inner=pos.clone(); const toDie=e.edge.clone().setY(pos.y).sub(pos); const len=toDie.length();
+      const edge=e.edge.clone().setY(0.25);
+      const endP=pos.clone().setY(0.25).addScaledVector(toDie.setY(0).normalize(),Math.min(len,stageT<1?0.75:0.3));
+      if(edge.distanceTo(endP)>0.05) cpoTubeG.add(tubePath([edge,endP],0.045,new THREE.MeshStandardMaterial({color:col.copper,metalness:.8,roughness:.3,emissive:col.copper,emissiveIntensity:.25}),12));
+      // fibre from engine to faceplate and out
+      const fStart=pos.clone().setY(pos.y+0.05);
+      const slotP=e.slot.clone().setY(0.62).setX(8.3);
+      const pts=stageT<0.15?[pos.clone().setX(8.0).setY(0.55),slotP.clone().setX(9.6)]:[fStart,fStart.clone().setY(0.75),new THREE.Vector3(7.0,0.75,e.slot.z),slotP,slotP.clone().setX(9.6)];
+      cpoTubeG.add(tubePath(pts,0.03,coreMat(col.accent),24));
+      cpoTubeG.add(tubePath(pts,0.09,glowMat(col.accent,.18),24));
+      // laser feed from ELS when external
+      const elsAmt=Math.max(0,Math.min(1,(stageT-0.35)/0.3));
+      if(elsAmt>0.02){
+        const src=ELS[e.slot.z<0?0:1].position.clone().setY(0.8);
+        const lp=[src,new THREE.Vector3(6.2,0.95,src.z*0.8),new THREE.Vector3(pos.x,0.95,pos.z),pos.clone().setY(pos.y+0.12)];
+        cpoTubeG.add(tubePath(lp,0.018,glowMat(col.red,0.55*elsAmt),24));
+      }
+    }
+  }
+}
+function layoutCPO(){
+  const ex=explode;
+  die.position.set(0,0.36+ex*1.7,0);
+  for(const e of ENG){
+    const {pos,scale}=engineState(e,stageT);
+    const lift=ex*3.0;
+    e.g.position.copy(pos).setY(pos.y+lift);
+    e.body.scale.copy(scale);
+    e.dsp.position.set(0,scale.y/2+0.04,0);
+    const dspA=Math.max(0,Math.min(1,1-(stageT-0.2)/0.3)); e.dsp.material.opacity=dspA; e.dsp.visible=dspA>0.02;
+    const lasA=Math.max(0,Math.min(1,1-(stageT-0.25)/0.25)); e.las.material.opacity=lasA; e.las.visible=lasA>0.02;
+    e.las.position.set(scale.x*0.3,scale.y/2+0.06,0);
+    // FAU at outer edge (towards fibre exit); explode lifts it further
+    const outward=pos.clone().sub(e.edge.clone().setY(pos.y)).setY(0).normalize();
+    e.fau.position.copy(outward.clone().multiplyScalar(stageT<0.5?0:scale.x*0.55)).setY(ex*1.3+0.02);
+    e.fau.visible=stageT>0.35;
+    // NPO sub-board
+    const npoA=Math.max(0,1-Math.abs(stageT-1)*1.6); e.npoSub.visible=npoA>0.05; e.npoSub.position.copy(pos).setY(0.05+lift*0.5); e.npoSub.scale.setScalar(Math.max(0.01,npoA));
+  }
+  const elsAmt=Math.max(0,Math.min(1,(stageT-0.35)/0.3));
+  ELS.forEach(m=>{m.visible=elsAmt>0.02; m.scale.setScalar(Math.max(0.01,elsAmt)); m.position.y=0.55;});
+}
+// CPO labels
+const lDie=addLabel("Switch ASIC","e.g. TH6 102.4T (AVGO Davisson)",v=>v.copy(die.position).add(new THREE.Vector3(0,0.35,0)),cpoG);
+const lEng=addLabel("Optical engine","PIC + driver; 6.4T each on Davisson",v=>v.copy(ENG[3].g.position).add(new THREE.Vector3(0,0.35,0)),cpoG);
+lEng.show=()=>stageT>0.4;
+const lPlug=addLabel("Pluggable transceiver","laser + DSP inside, 15–30 cm away",v=>v.copy(ENG[3].g.position).add(new THREE.Vector3(0,0.5,0)),cpoG);
+lPlug.show=()=>stageT<=0.4;
+const lCu=addLabel("Copper trace","shrinks from cm to mm",v=>{const e=ENG[4]; const p=engineState(e,stageT).pos; v.copy(e.edge).lerp(p,0.5).setY(0.35);},cpoG);
+lCu.show=()=>explode<0.15 && stageT<1.5;
+const lEls=addLabel("External laser source","hot-swappable at the faceplate",v=>v.copy(ELS[1].position).add(new THREE.Vector3(0,0.5,0)),cpoG);
+lEls.show=()=>stageT>0.5;
+const lFau=addLabel("Fibre-attach unit","20 fibres per 1.6T engine",v=>v.copy(ENG[6].g.position).add(ENG[6].fau.position).add(new THREE.Vector3(0,0.3,0)),cpoG);
+lFau.show=()=>explode>0.5 && stageT>0.5;
+const lSub=addLabel("Package substrate","engines and ASIC share it in CPO",v=>v.set(-1.5,0.3,1.6),cpoG);
+lSub.show=()=>explode>0.5;
+const lFace=addLabel("Front panel","fibre exits here",v=>v.set(8.15,2.0,-4),cpoG);
+
+// =====================================================================
+// Scale-up / scale-out scene
+// =====================================================================
+const sysG=new THREE.Group(); scene.add(sysG); sysG.visible=false;
+var sysBuilt=false;
+const RX=[-4.4,0,4.4], RH=6.6, RD=1.6, RW=2.3;
+const TRY=k=>0.55+k*0.6;          // tray k = 0..9; switch trays at 4 and 5
+const SWY=(TRY(4)+TRY(5))/2;
+const LX=[-2.8,2.8], LY=RH+2.3, SY=RH+4.6;
+M.sw=new THREE.MeshStandardMaterial({color:0x3d6f8f,metalness:.5,roughness:.4});
+M.frame=new THREE.MeshStandardMaterial({color:0x5a6470,metalness:.5,roughness:.5,transparent:true,opacity:.22,depthWrite:false});
+M.traySil=new THREE.MeshStandardMaterial({color:0x6d7680,metalness:.6,roughness:.4});
+{
+  const fl=new THREE.Mesh(new THREE.BoxGeometry(15.5,0.2,6),M.dark); fl.position.set(0,-0.1,0); sysG.add(fl);
+  for(let r=0;r<3;r++){
+    const fr=new THREE.Mesh(new THREE.BoxGeometry(RW,RH,RD),M.frame); fr.position.set(RX[r],RH/2,0); sysG.add(fr);
+    for(let k=0;k<10;k++){
+      const sw=(k===4||k===5);
+      const t=new THREE.Mesh(new THREE.BoxGeometry(RW-0.22,0.34,RD-0.12),sw?M.sw:M.traySil); t.position.set(RX[r],TRY(k),0); sysG.add(t);
+      if(!sw){ for(const dx of [-0.45,0.45]){ const d=new THREE.Mesh(new THREE.BoxGeometry(0.42,0.07,0.42),M.die); d.position.set(RX[r]+dx,TRY(k)+0.2,-0.1); sysG.add(d);} }
+      else { const d=new THREE.Mesh(new THREE.BoxGeometry(0.5,0.08,0.5),M.die); d.position.set(RX[r],TRY(k)+0.2,-0.05); sysG.add(d); }
+    }
+    // NIC-side pluggables on top of each rack (scale-out, always pluggable)
+    for(const dx of [-0.6,-0.2,0.2,0.6]){ const m=new THREE.Mesh(new THREE.BoxGeometry(0.28,0.16,0.42),M.module); m.position.set(RX[r]+dx,RH+0.1,0.35); sysG.add(m); }
+  }
+}
+const cuSpineG=new THREE.Group(), upG=new THREE.Group(), outG=new THREE.Group(); sysG.add(cuSpineG,upG,outG);
+function dashedPath(g,pts,r,mat,dash){
+  const path=new THREE.CurvePath(); for(let i=0;i<pts.length-1;i++) path.add(new THREE.LineCurve3(pts[i],pts[i+1]));
+  const n=Math.max(2,Math.floor(path.getLength()/dash));
+  for(let k=0;k<n;k+=2){ g.add(tubePath([path.getPointAt(k/n),path.getPointAt(Math.min(1,(k+1)/n))],r,mat.clone(),2)); }
+}
+const copperMat=()=>new THREE.MeshStandardMaterial({color:col.copper,metalness:.8,roughness:.3,emissive:col.copper,emissiveIntensity:.3});
+// modules / engines on a switch: centre c, top surface y, front z
+function switchOptics(g,c,y,halfW,frontZ,opt,n){
+  if(opt==="plug"||opt==="cu"){
+    for(let i=0;i<n;i++){ const x=c.x-halfW+0.25+i*(2*halfW-0.5)/Math.max(1,n-1);
+      const m=new THREE.Mesh(new THREE.BoxGeometry(0.26,0.16,0.4),opt==="cu"?copperMat():M.module.clone()); m.position.set(x,y-0.1,frontZ+0.18); g.add(m); }
+  }else if(opt==="npo"){
+    for(let i=0;i<n;i++){ const x=c.x-halfW+0.3+i*(2*halfW-0.6)/Math.max(1,n-1);
+      const sub=new THREE.Mesh(new THREE.BoxGeometry(0.34,0.04,0.34),M.substrate.clone()); sub.position.set(x,y+0.02,frontZ-0.28); g.add(sub);
+      const e=new THREE.Mesh(new THREE.BoxGeometry(0.24,0.1,0.24),M.engine.clone()); e.position.set(x,y+0.09,frontZ-0.28); g.add(e); }
+  }else{ // cpo: engines hugging the chip
+    for(const [dx,dz] of [[-0.38,0],[0.38,0],[0,0.36],[0,-0.36]]){
+      const e=new THREE.Mesh(new THREE.BoxGeometry(0.2,0.1,0.2),M.engine.clone()); e.position.set(c.x+dx,y+0.06,c.z+dz); g.add(e); }
+  }
+}
+function buildSys(){
+  sysBuilt=true;
+  disposeGroup(cuSpineG); disposeGroup(upG); disposeGroup(outG);
+  const showUp=SYS.show!=="out", showOut=SYS.show!=="up";
+  cuSpineG.visible=upG.visible=showUp; outG.visible=showOut;
+  // in-rack copper spine (scale-up, always copper)
+  for(let r=0;r<3;r++) for(const dx of [-0.75,-0.25,0.25,0.75]){
+    cuSpineG.add(tubePath([new THREE.Vector3(RX[r]+dx,TRY(0),-RD/2+0.1),new THREE.Vector3(RX[r]+dx,TRY(9),-RD/2+0.1)],0.035,copperMat(),4));
+  }
+  // scale-up links between racks
+  const opt=SYS.up, optical=opt!=="cu";
+  for(const [i,j] of [[0,1],[1,2],[0,2]]){
+    const far=(j-i)===2;
+    for(let s=0;s<3;s++){
+      const y=SWY+(s-1)*0.16, zOut=RD/2+0.45+(far?0.6:0)+s*0.06;
+      const A=new THREE.Vector3(RX[i]+0.35+s*0.12,y,RD/2+0.02), B=new THREE.Vector3(RX[j]-0.35-s*0.12,y,RD/2+0.02);
+      const pts=[A,new THREE.Vector3(A.x,y,zOut),new THREE.Vector3(B.x,y,zOut),B];
+      if(!optical){
+        if(far) dashedPath(upG,pts,0.03,new THREE.MeshBasicMaterial({color:col.red}),0.22);
+        else upG.add(tubePath(pts,0.035,copperMat(),24));
+      }else{
+        upG.add(tubePath(pts,0.03,coreMat(col.accent),24));
+        upG.add(tubePath(pts,0.09,glowMat(col.accent,.2),24));
+      }
+    }
+  }
+  for(let r=0;r<3;r++) for(const k of [4,5]){
+    switchOptics(upG,new THREE.Vector3(RX[r],TRY(k),-0.05),TRY(k)+0.17,RW/2-0.2,RD/2-0.06,opt,3);
+  }
+  // scale-out: NIC -> leaf -> spine
+  const oc=col.accent.clone().lerp(new THREE.Color(0xffffff),0.35);
+  for(let r=0;r<3;r++) for(let l=0;l<2;l++){
+    const A=new THREE.Vector3(RX[r]+(l?0.4:-0.4),RH+0.2,0.35), B=new THREE.Vector3(LX[l]+(r-1)*0.45,LY-0.25,0.3);
+    const pts=[A,new THREE.Vector3(A.x,A.y+0.7,A.z),new THREE.Vector3(B.x,B.y-0.6,B.z),B];
+    outG.add(tubePath(pts,0.028,coreMat(oc),20)); outG.add(tubePath(pts,0.08,glowMat(oc,.16),20));
+  }
+  for(let l=0;l<2;l++) for(let s=0;s<2;s++){
+    const A=new THREE.Vector3(LX[l]+(s-0.5)*0.4,LY+0.25,0.3), B=new THREE.Vector3((l?0.35:-0.35)+(s-0.5)*0.25,SY-0.25,0.3);
+    const pts=[A,new THREE.Vector3(A.x,A.y+0.6,A.z),new THREE.Vector3(B.x,B.y-0.6,B.z),B];
+    outG.add(tubePath(pts,0.03,coreMat(oc),20)); outG.add(tubePath(pts,0.09,glowMat(oc,.18),20));
+  }
+  const swBox=(x,y)=>{ const b=new THREE.Mesh(new THREE.BoxGeometry(2.5,0.45,1.3),M.face.clone()); b.position.set(x,y,0); outG.add(b);
+    const d=new THREE.Mesh(new THREE.BoxGeometry(0.5,0.08,0.5),M.die.clone()); d.position.set(x,y+0.27,-0.05); outG.add(d); };
+  for(const x of LX){ swBox(x,LY); switchOptics(outG,new THREE.Vector3(x,LY,-0.05),LY+0.3,1.05,0.65,SYS.out,5); }
+  if(SYS.sp==="ocs"){
+    const b=new THREE.Mesh(new THREE.BoxGeometry(2.5,0.5,1.3),M.housing.clone()); b.position.set(0,SY,0); outG.add(b);
+    for(let i=0;i<6;i++){ const m=new THREE.Mesh(new THREE.CylinderGeometry(0.13,0.13,0.04,20),M.mirror.clone()); m.position.set(-0.9+i*0.36,SY+0.28,0); m.rotation.x=0.35*(i%2?1:-1); outG.add(m); }
+  }else{ swBox(0,SY); switchOptics(outG,new THREE.Vector3(0,SY,-0.05),SY+0.3,1.05,0.65,SYS.out,5); }
+}
+buildSys();
+// labels
+const sysLbl=(t,sub,f,show)=>{const L=addLabel(t,sub,f,sysG); if(show) L.show=show; return L;};
+sysLbl("Rack · NVL72-class","GPU trays + NVLink switch trays",v=>v.set(RX[0],TRY(9)+0.35,RD/2),()=>SYS.show!=="out");
+sysLbl("NVLink switch trays","scale-up switches",v=>v.set(RX[2],TRY(5)+0.35,RD/2),()=>SYS.show!=="out");
+sysLbl("Copper spine","in-rack scale-up, stays copper",v=>v.set(RX[1],TRY(8)+0.3,-RD/2),()=>SYS.show!=="out");
+sysLbl("Scale-up between racks","NVL576-style domain",v=>v.set(0,SWY+0.3,RD/2+1.2),()=>SYS.show!=="out");
+sysLbl("Beyond copper reach","~2 m at 1.6T",v=>v.set(-2.2,SWY-0.1,RD/2+1.1),()=>SYS.show!=="out"&&SYS.up==="cu");
+sysLbl("NIC transceivers","GPU side: pluggable",v=>v.set(RX[2],RH+0.3,0.35),()=>SYS.show!=="up");
+sysLbl("Leaf switch","scale-out",v=>v.set(LX[0],LY+0.4,0),()=>SYS.show!=="up");
+sysLbl("Spine switch","packet switch, optics every port",v=>v.set(0,SY+0.45,0),()=>SYS.show!=="up"&&SYS.sp==="eps");
+sysLbl("OCS spine","mirrors, no O-E-O",v=>v.set(0,SY+0.5,0),()=>SYS.show!=="up"&&SYS.sp==="ocs");
+
+// ---------- resize ----------
+function resize(){
+  const box=$("#glbox"); const w=box.clientWidth, h=box.clientHeight;
+  renderer.setSize(w,h,false); camera.aspect=w/h; camera.updateProjectionMatrix();
+}
+new ResizeObserver(resize).observe($("#glbox")); resize();
+
+// ---------- loop ----------
+rebuildBeams();
+let last=performance.now(), phot=0, lastStage=-1, lastEx=-1;
+function tick(now){
+  const dt=Math.min(0.05,(now-last)/1000); last=now;
+  updateCamera();
+  if(mode==="ocs"){
+    if(retarget){
+      retarget.t=Math.min(1,retarget.t+dt/0.75); const u=smooth(retarget.t);
+      mirrorsA.concat(mirrorsB).forEach(m=>m.g.quaternion.copy(m.q0).slerp(m.q1,u));
+      if(retarget.t>=1){ retarget=null; if(elecOn) buildElec(); rebuildBeams(); }
+    }
+    if(!retarget && selPath){
+      phot=(phot+dt*0.28)%1;
+      photons.forEach((p,k)=>{ p.visible=true; p.position.copy(pointAlong(selPath,(phot+k/photons.length)%1)); p.material.color.copy(elecOn?new THREE.Color(0xffffff):new THREE.Color(0xffffff)); });
+    }
+  }else{
+    stageT+=(stageTarget-stageT)*Math.min(1,dt*5); if(Math.abs(stageTarget-stageT)<0.002) stageT=stageTarget;
+    explode+=(explodeTarget-explode)*Math.min(1,dt*5); if(Math.abs(explodeTarget-explode)<0.002) explode=explodeTarget;
+    layoutCPO();
+    if(Math.abs(stageT-lastStage)>0.004 || Math.abs(explode-lastEx)>0.004){ buildCPOTubes(); lastStage=stageT; lastEx=explode; }
+  }
+  renderer.render(scene,camera); drawLabels();
+  requestAnimationFrame(tick);
+}
+let m0="ocs"; try{m0=localStorage.getItem("lp-mode")||"ocs";}catch(e){}
+setMode(m0);
+if(m0==="ocs"){orb.theta=VIEW_OCS.theta;}
+requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>

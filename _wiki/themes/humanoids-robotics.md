@@ -3,6 +3,8 @@
 _Wiki · generated 2026-06-25 · cross-company theme · sources: equity calls, briefing roll-ups, earnings transcripts, research library, Twitter/X corpus (ported from research-wiki). Company pages: [../00_INDEX.md](../00_INDEX.md) · themes index: [00_THEMES.md](00_THEMES.md)._
 
 
+## 🆕 2026-09-27 (/wiki-ingest 21h) — **TOYOTA GROUP ¥1tn/YR FROM 2028 FOR 400,000 ROBOTS; HYUNDAI 25,000 ATLAS (JPM)**
+- **JPMorgan · Jose M Asumendi (w/ Nick Lai, Akira Kishimoto, Rajat Gupta, Piyush Singla)** (2026-09-27): JPM Humanoids & Robotaxi weekly (09-27). (1) Toyota Group plans to invest JPY1tn ($6.42bn) a year from 2028 to update factories and deploy 400,000 robots worldwide, including AI humanoids trained on veteran workers' movements: 150,000 at Toyota Motor and 250,000 at group companies such as Denso and Aisin. (2) Boston Dynamics opened RMAC inside Hyundai's Georgia plant to train Atlas; it started pilots in June and is moving to full scale. Hyundai plans to deploy 25,000 Atlas robots globally, expanding to 30,000 annually. (3) UBTech and Siemens launched a Liuzhou (Guangxi) smart factory with 10,000 humanoids a year of capacity; each robot gets 4 hours of testing.
 ## 🆕🔴🔴 2026-09-09 (/wiki-ingest, 21:00 window) — **BEIJING CURBED HUMANOID IPOs AFTER UNITREE'S VOLATILE DEBUT; MORGAN STANLEY NAMES *ACTUATORS* AS THE CHOKE POINT AND SAYS THE US HAS TO WORK *WITH* CHINA TO DIVERSIFY *AWAY* FROM IT; AND ADI BOUGHT THE EDGE-INFERENCE LAYER FOR $1.35bn.**
 
 _(The Information (Exclusive) · Jing Yang + Qianer Liu; Morgan Stanley "AI Sovereignty" webcast, 2026-09-09; Morgan Stanley · **Joseph Moore** PULSE on [[ADI]]/Alif, 2026-09-09; 資策會 MIC Forum Fall via @QQ_Timmy; Bloomberg *Big Take Asia*.)_

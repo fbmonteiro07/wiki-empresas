@@ -4,6 +4,8 @@
 
 
 
+## 🆕 2026-09-27 (/wiki-ingest 21h) — **SENATE BILL TO BAR EOPTOLINK/INNOLIGHT FROM US NATSEC SYSTEMS; NETWORKING SHARE OF RACK BOM 8.6%→22.4% (FUBON)**
+- **JPMorgan · Joshua Meyers (sales); Jefferies Asia (Sherman via Conor O'Mara/Favuzza)** (sales/desk relay — not research) (2026-09-27): Catalyst watch: a possible FCC transceiver ban is flagged as 'big for the optical names, if it happens' (JPM Europe marketing). Jefferies Asia (Sherman, relayed): networking share of AI rack BOM rises from 8.6% in GB300 to 18.5% in 'Taycann' and 22.4% in NVL576 as inter-rack optics and scale-out fabric expand. Blayne Curtis transceiver model (~180M C27 / 245M C28) already on page (09-25).
 ## 🆕🔴 2026-09-26 (/wiki-ingest 21h) — **STIFEL: LUMENTUM CAN'T MEET NVIDIA'S DEC-Q CPO LASER DEMAND. FUBON: CPO VS NPO IS A YIELD RACE WITH A JUNE-2027 DEADLINE**
 - **Stifel (via @firstadopter, 09-25):** [[LITE]] management says [[NVDA]]'s **Dec-quarter UHP-laser demand "has increased materially"** as **Spectrum-6 CPO attach runs above plan**; LITE cannot meet the incremental Dec-Q demand, and CY27 demand is also higher.
 - **Fubon · Sherman Shang (via Jefferies Asia TMT sales · O'Mara, 09-26):** no Oberon upgrade for Rubin Ultra; NVDA pushes **NVL576** (no NVL72 by 2028), adding a scale-up optical layer between racks (CPO or NPO undecided) with copper inside the rack. Rubin Ultra inter-rack scale-up optics **~$4.6m per rack (~8% of BOM; $1.2m copper, $3.5m optical)**; scale-out **~$7.4m** (4 custom ASICs per CPO switch, 64 optical engines). **LITE named the best global play.**

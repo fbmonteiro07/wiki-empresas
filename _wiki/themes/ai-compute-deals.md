@@ -6,6 +6,8 @@ Track when a deal first becomes public, what its original terms were, and what s
 
 Related pages: [Anthropic](../ANTHROPIC.md) · [Nscale](../NSCALE.md) · [Hyperscaler capex](hyperscaler-capex.md) · [AI datacenter power](ai-datacenter-power.md).
 
+## 🆕 2026-09-27 (/wiki-ingest 21h) — **22V: B200/B300 RENTAL RATES STILL PRESSING HIGHER; COMPUTE FUTURES BY YEAR-END**
+- **22V Research · Dauvin Peterson** (2026-09-27): 22V Compute Desk spot indexes (09-27): B200 and B300 rental rates 'continuing to press higher' and are now closer to parity. 22V expects compute futures later this year; per its 09-15 note, one or two cash-settled Nvidia compute contracts by year-end, with ICE/Nodal likely ahead of CME, whose CFTC comment window closes 10/20.
 ## Reading the timeline
 
 - **Event date** is the announcement/reporting or milestone date, at the precision supplied by the source. **Source date** is when the evidence was published. **Recorded date** is when it entered this timeline. Keep all three distinct; a filing can disclose an earlier signing date.
