@@ -125,6 +125,29 @@ td .src{display:block}
 .debate p{margin:0 0 6px;font-size:13.5px;color:var(--ink-2);line-height:1.5}
 footer{margin-top:30px;color:var(--ink-3);font-size:12px;line-height:1.5;border-top:1px solid var(--line);padding-top:14px}
 
+.walkbtn{width:100%;margin-bottom:10px;background:var(--accent);color:#fff;border-color:var(--accent)}
+:root[data-theme="dark"] .walkbtn{color:#04121b}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .walkbtn{color:#04121b}}
+.walkhud .step{font:700 11px "JetBrains Mono",monospace;color:var(--accent);letter-spacing:.08em}
+.walkhud h4{margin:4px 0 8px;font-size:18px;letter-spacing:-.01em;line-height:1.15}
+.walkhud p{margin:0;font-size:13px;line-height:1.5;color:var(--ink-2)}
+.walkhud .look{margin-top:10px;font-size:11.5px;color:var(--ink-3);border-top:1px solid var(--line);padding-top:8px}
+.walkhud .look b{color:var(--ink)}
+.walklist{list-style:none;margin:0;padding:0}
+.walklist li{display:flex;gap:8px;align-items:baseline;padding:6px 8px;border-radius:8px;font-size:12.5px;color:var(--ink-2);cursor:pointer}
+.walklist li span.n{font:700 10.5px "JetBrains Mono",monospace;color:var(--ink-3);min-width:16px}
+.walklist li.on{background:var(--chip);color:var(--ink);font-weight:600}
+.walklist li.on span.n{color:var(--accent)}
+.walklist li.done span.n{color:var(--good)}
+.walkbar{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);display:flex;align-items:center;gap:8px;background:color-mix(in srgb,var(--panel) 92%,transparent);border:1px solid var(--line);border-radius:30px;padding:6px 8px;backdrop-filter:blur(8px);box-shadow:var(--shadow);z-index:2}
+.walkbar .btn{padding:6px 11px;font-size:12.5px;border-radius:20px}
+.walkbar .btn.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.walkbar .dots{display:flex;gap:5px;padding:0 4px}
+.walkbar .dots i{width:9px;height:9px;border-radius:50%;background:var(--chip);border:1px solid var(--line);cursor:pointer;display:block}
+.walkbar .dots i.on{background:var(--accent);border-color:var(--accent)}
+.walkbar .dots i.done{background:var(--ink-3)}
+.walkbar .prog{height:3px;width:90px;background:var(--chip);border-radius:2px;overflow:hidden}
+.walkbar .prog i{display:block;height:100%;background:var(--accent);width:0}
 @media (max-width:900px){
   section.explain{grid-template-columns:1fr}
   .grid2,.debates{grid-template-columns:1fr}
@@ -133,6 +156,7 @@ footer{margin-top:30px;color:var(--ink-3);font-size:12px;line-height:1.5;border-
   .stage{height:auto;min-height:0;display:flex;flex-direction:column}
   #glbox{position:relative;inset:auto;height:56vh;min-height:340px;flex:none}
   .hud,.ctrl{position:static;width:auto;margin:10px;backdrop-filter:none;max-height:none}
+  .walkbar{position:static;transform:none;margin:10px auto;justify-content:center;flex-wrap:wrap;width:fit-content}
   .help{display:none}
   .lbl{font-size:10px}
 }
@@ -143,7 +167,7 @@ footer{margin-top:30px;color:var(--ink-3);font-size:12px;line-height:1.5;border-
   <header class="top">
     <div>
       <h1>The Wafer <span>Path</span></h1>
-      <div class="sub">How TSMC builds a leading-edge logic wafer, how the memory makers build a DRAM wafer, and what turns DRAM dies into an HBM stack. Drag to orbit, scroll to zoom. Numbers are attributed to the source and date the Capstone wiki carries them with.</div>
+      <div class="sub">How TSMC builds a leading-edge logic wafer, how the memory makers build a DRAM wafer, and what turns DRAM dies into an HBM stack. Drag to orbit, scroll to zoom, or press <b>Walk me through it</b> to build each drawing step by step. Numbers are attributed to the source and date the Capstone wiki carries them with.</div>
     </div>
     <div style="display:flex;gap:8px;align-items:center">
       <div class="tabs" role="tablist">
@@ -235,6 +259,7 @@ footer{margin-top:30px;color:var(--ink-3);font-size:12px;line-height:1.5;border-
 
     <!-- ===== Controls: logic ===== -->
     <div class="ctrl" id="ctrlLOG">
+      <button class="btn walkbtn" data-walk>▶ Walk me through it, step by step</button>
       <h3>Pick a node</h3>
       <div class="seg" id="nodeSeg"><button data-v="N7">N7</button><button data-v="N5">N5</button><button data-v="N3">N3</button><button data-v="N2" class="on">N2</button><button data-v="A16">A16</button><button data-v="A14">A14</button></div>
       <h3>Show</h3>
@@ -246,6 +271,7 @@ footer{margin-top:30px;color:var(--ink-3);font-size:12px;line-height:1.5;border-
 
     <!-- ===== Controls: DRAM ===== -->
     <div class="ctrl" id="ctrlDRAM" style="display:none">
+      <button class="btn walkbtn" data-walk>▶ Walk me through it, step by step</button>
       <h3>Pick a node</h3>
       <div class="seg" id="drSeg"><button data-v="1a">1a</button><button data-v="1b" class="on">1b</button><button data-v="1c">1c / 1γ</button><button data-v="1d">1d</button></div>
       <h3>Cell architecture</h3>
@@ -258,6 +284,7 @@ footer{margin-top:30px;color:var(--ink-3);font-size:12px;line-height:1.5;border-
 
     <!-- ===== Controls: HBM ===== -->
     <div class="ctrl" id="ctrlHBM" style="display:none">
+      <button class="btn walkbtn" data-walk>▶ Walk me through it, step by step</button>
       <h3>Generation · height</h3>
       <div class="seg grid2x" id="hbGen"><button data-v="3e8">HBM3E 8-Hi</button><button data-v="3e12" class="on">HBM3E 12-Hi</button><button data-v="412">HBM4 12-Hi</button><button data-v="416">HBM4 16-Hi</button></div>
       <h3>Die-to-die bond</h3>
@@ -272,6 +299,27 @@ footer{margin-top:30px;color:var(--ink-3);font-size:12px;line-height:1.5;border-
       <div class="calc">Per-bond yield <b id="hbBondYv">99%</b></div>
       <input type="range" id="hbBondY" min="90" max="100" step="0.5" value="99">
       <div class="hint">Left: a GPU and one HBM cube on a CoWoS interposer. Right: a commodity DDR5 package for contrast. TSVs run through every core die; the bond layer between dies is what MR-MUF, TC-NCF and hybrid bonding differ on. Schematic, not to scale.</div>
+    </div>
+
+    <!-- ===== Walkthrough panels ===== -->
+    <div class="hud walkhud" id="walkHud" style="display:none">
+      <div class="step" id="walkStepN">STEP 1 / 8</div>
+      <h4 id="walkTitle"></h4>
+      <p id="walkBody"></p>
+      <div class="look">Look for: <b id="walkLook"></b></div>
+    </div>
+    <div class="ctrl" id="walkCtrl" style="display:none">
+      <h3>Step by step</h3>
+      <ul class="walklist" id="walkList"></ul>
+      <div class="hint">← → to step, Esc to leave. The selection you made on this tab (node, architecture, bond, base die) is kept, and the text follows it.</div>
+    </div>
+    <div class="walkbar" id="walkBar" style="display:none">
+      <button class="btn" id="walkPrev">◀ Prev</button>
+      <div class="dots" id="walkDots"></div>
+      <button class="btn" id="walkNext">Next ▶</button>
+      <div class="prog"><i id="walkProg"></i></div>
+      <button class="btn" id="walkAuto" title="Play all steps">Auto</button>
+      <button class="btn" id="walkExit" title="Leave the walkthrough">✕</button>
     </div>
   </div>
 
@@ -567,6 +615,59 @@ const DEBATES=[
 
 const FOOT=`Sources: Capstone wiki <span class="mono">_wiki/TSM.md</span>, <span class="mono">MU.md</span>, <span class="mono">SKHYNIX.md</span>, <span class="mono">SAMSUNG.md</span>, <span class="mono">BESI.md</span>, <span class="mono">ASML.md</span>, themes <span class="mono">hbm-memory</span>, <span class="mono">cowos-packaging</span>, <span class="mono">semicap-wfe</span>, the canonical ledger <span class="mono">_meta/assumptions.md</span> (euv-fab-intensity, hbm-cycle, cowos-allocation, wafers-per-gw) and the Bristlemoon EUV model figure (Jun-26). Scene geometry is schematic: layer counts, pitches, die thicknesses and TSV counts are drawn for clarity, not to scale. Not on the wiki, so not drawn as numbers: TSMC per-node total step counts, mask totals and cycle times; Big-3 capacitor aspect ratios; a separate HBM-line vs DRAM-line capex per 10k wpm; known-good-stack test hours. The stack-yield calculator is illustrative arithmetic, not a sourced yield. DAMNANG is an independent author, never a broker; trade-press and desk relays are tagged. Hand-built 2026-09-28.`;
 
+// ---------- step-by-step walkthroughs (one per tab; text can depend on the current selection) ----------
+const WSTEPS={
+ log:[
+  {t:"Wafer start",look:"the bare grey slab",body:()=>`A bare 300 mm silicon wafer. Everything else is added on top, one mask layer at a time. TSMC runs 18 fabs, and a new node now needs "eight to 10" fabs or phases where ten years ago it took three or four.`+SRC('Symposium via @dnystedt, 2026-05-15 · TSMC IR, 2026-09-10')},
+  {t:"Front end: carve the channel",look:NODES_LOOK_CHAN,body:()=>NODES[S.node].gaa
+    ?`The transistor channel comes first. On N2 and later, stacked nanosheets are grown and released so the gate can wrap the channel on all four sides. FinFET → nanosheet "raises precision requirements on deposition, etch, clean and CMP".`+SRC('@dnystedt/@QQ_Timmy, 2026-08-20')+` A14 is the "second generation of nanosheet transistors".`+SRC(`TSMC Q2'26 call, 2026-07-16`)
+    :`The transistor channel comes first. From N7 to N3 it is a vertical fin etched out of the silicon, and the gate will wrap three of its sides. N6 reaches 107.7 MTr/mm² "without needing quadruple patterning anywhere"; N5-class density is 137.8 MTr/mm².`+SRC('SemiAnalysis STEEL, 2026-06-14')},
+  {t:"Gate",look:"the gold bars crossing the channels",body:()=>`A metal gate over a high-k dielectric is laid across every channel. This is where the node's headline numbers come from: N2 vs N3E gives +10–15% speed, −20–30% power and more than 15% density; A16 vs N2P adds +8–10% speed and −15–20% power with the backside rail.`+SRC(`TSMC Q1'25 call, 2025-04-17 · Q2'24 → Q4'25 calls`)},
+  {t:"Contacts (middle of line)",look:"the small silver plugs on the gates",body:()=>`Tiny metal plugs connect source, drain and gate up to the first metal level. Litho intensity peaks here and in the first metals: ~20% of process cost at 10nm, above 35% at 5/3nm, then ~32% at 2nm "as GAA added non-litho steps".`+SRC('Bernstein · Dai, 2026-07-30')},
+  {t:"Lower metal on EUV",look:"the blue layers, printed by the scanner",body:()=>`The first metal levels have the tightest pitch, so they are printed with EUV light (13.5 nm). ${NODES[S.node].name} is drawn with ${NODES[S.node].euvN} EUV layers here: N2 exposes 22, and "there is less immersion on N2 versus N3… similar on EUV". In the field an EUV tool prints ~2,430 wafers a month, about a third of nameplate, so ~11 tools serve a 25k-wpm fab.`+SRC('Bristlemoon, 2026-06-30 · ASML callback, 2026-04-15')},
+  {t:"Upper metal on immersion DUV",look:"the grey and copper layers on top",body:()=>`Looser pitches higher up go on 193 nm immersion tools, sometimes in older fabs: "TSMC is basically using their N7 fab to fulfill some of the backend metal layers for N3", and "even N28 can support part of the N3". The whole loop (deposit, coat, expose, develop, etch, strip, CMP, inspect) repeats more than 80 times per wafer at 7nm.`+SRC('JPM · Gokul, 2026-04-02 · CFO, 2026-09-09 (verify) · IBS via DAMNANG, 2026-04-06')},
+  {t:"Power delivery",look:NODES_LOOK_RAILS,body:()=>NODES[S.node].bsp
+    ?`A16's Super Power Rail, "an innovative backside contact scheme", moves the power rails to the back of the wafer and feeds the transistors through nano-TSVs, freeing the front side for signal wiring. It needs "net-new tooling" and "higher capital intensity… because they are going to use the backside power rail"; A16 ramps from 3–5k wpm to 25–30k wpm by end-2027 for NVDA Feynman.`+SRC(`TSMC Q2'24 call · StoneX/Fubon, 2025 · BofA, 2026-07-13`)
+    :`Thick top-metal rails carry power down through the whole stack to the transistors, competing with signal wires for the same layers. A16 moves them to the back of the wafer (pick A16 to see it): +8–10% speed, −15–20% power, +7–10% density vs N2P, "best suited for specific HPC products with complex signal routes and dense power delivery".`+SRC(`TSMC Q2'24 → Q4'25 calls`)},
+  {t:"Probe, then packaging",look:"the finished stack; tab 3 shows where it goes",body:()=>`Every die is tested on the wafer (N2 yield ~90% vs Intel 18A 85%). Good dies go to CoWoS, where they meet the HBM stacks from tab 3: a silicon interposer (-S), an RDL (-R) or LSI + RDL (-L) joins them; 5.5x reticle runs at 98% yield and gives 10 packages per CoWoS wafer. Each node costs more to build (N7 $12.5bn → N2 ~$28bn per 50k wpm) and "N2's debut is the fewest, most expensive wafers TSMC has ever sold".`+SRC('KeyBanc via UBS, 2026-08-01 · JPM glossary, 2026-09-17 · Symposium, 2026-06-26 · Arete, 2026-07-21 · Fubon/Jefferies, 2025-10-28 · Chipstrat, 2026-07-24')},
+ ],
+ dram:[
+  {t:"Wafer start",look:"the bare slab; the array will fill the right side",body:()=>`The industry starts ~2.1M DRAM wafers a month in 2026, rising to ~2.9M by 2028. About 60% of each die will be the memory array and ~40% the transistor periphery around it.`+SRC('DB · Weathers, 2026-09-16 · AMAT via Bernstein · Rasgon, 2026-09-21')},
+  {t:"Periphery first",look:"the block at the left edge with its blue layers",body:()=>`Sense amplifiers, decoders and I/O are built at the edge of the array and are moving to FinFET periphery. This is where most of DRAM's few EUV layers live: "a DRAM might have 80 to 100 layers. Currently, only five to seven of those are EUV". SK hynix will use logic-foundry processes for its periphery.`+SRC('AMAT via Bernstein, 2026-09-21 · ASML IR, 2026-09-09 · Future Forum via @jukan05, 2026-09-08')},
+  {t:"Buried word lines",look:"the gold lines sunk into the silicon",body:()=>`Word lines are trenched into the silicon below the surface, one per row of cells. "A DRAM cell uses a transistor and a capacitor"; the word line is what switches the transistor on so the capacitor can be read or written.`+SRC('DAMNANG masterclass, 2026-09-11')},
+  {t:"Access transistors + bit lines",look:()=>S.arch==="4f2"?"the pillars under each capacitor site":"the small blue blocks and the silver lines",body:()=>S.arch==="4f2"
+    ?`In a 4F² cell the transistor stands vertically under its own capacitor (vertical channel transistor), so the cell shrinks. Samsung is "trying to PULL IN the 4F² DRAM chip design rollout to 2028", its base case is 4F² at 0a, and ASM International expects "some of it in 2028 but it's not going to be broad-based".`+SRC('UBS · Gaudois, 2026-08-07 · UBS, 2026-09-22 · ASM International, 2026-08-20')
+    :`In today's 6F² cell a planar, buried-channel transistor sits beside each capacitor site, and bit lines run across the array to read the charge. The move to 4F² is "slower than anyone anticipated" and 3D DRAM has slipped to 2035–37, so 6F² carries through 1d.`+SRC('ASML management, 2026-07-17 · UBS, 2026-09-22')},
+  {t:"The capacitor: high-aspect-ratio etch",look:"the blue pillars rising from the array",body:()=>`Deep, narrow holes are etched and filled to form the storage capacitor: CXMT's 1b-class G5 runs a 45:1 aspect ratio. This is why DRAM equipment skews to etch and deposition: litho is 25% of DRAM WFE vs 30% for advanced logic, Lam's DRAM share hit a record 27% "on capacitor scaling", and ALD intensity rises even at 6F².`+SRC('MS · Chan, 2026-09-20 · Bernstein, 2026-07-30 · LRCX Q3 FY26 · ASM International, 2026-08-20')},
+  {t:"Where the EUV goes",look:"the blue highlights: periphery layers and, on 1b+, cell layers",body:()=>`${DNODES[S.dnode].name} carries ${DNODES[S.dnode].euvN} EUV layers against 22 on an N2 logic wafer. "You don't need EUV until you get to 1b"; 1c is the "current workhorse" at ~6–7, and 1d goes to ~10. Fewer, looser layers are why memory runs EUV at ~45% OEE vs ~34% for logic.`+SRC('MS · Shawn Kim, 2026-09-01 · BofA ASML callback, 2026-04-15 · Bristlemoon, 2026-06-30')},
+  {t:"Probe and repair",look:"the whole array",body:()=>`Redundant rows and columns replace bad cells, which is why DRAM tolerates stochastic defects and is "eminently suitable" for High-NA (small dies, no stitching); Samsung "confirmed High-NA for DRAM in 2028". 1c gives ~70% more bits per wafer than 1a at Samsung, but density now adds only 6–8% a year, so bit growth needs new wafers.`+SRC('Sivakumar via BofA, 2026-05-21 · Bernstein SDC relay, 2026-09-15 · SemiAnalysis, 2026-02-06 · DB, 2026-09-16')},
+  {t:"Two destinations",look:"same wafer, two lanes: tab 3 shows the HBM lane",body:()=>`A commodity die goes through ~700 packaging steps into a DDR5 or LPDDR package. An HBM core die from the same 1b/1c node goes to TSV etch, thinning and stacking instead, on ~19 extra materials steps and "none of the equipment… can also perform conventional DRAM or NAND packaging". That fork is why HBM eats ~3 wafers per bit and takes 24–30% of DRAM wafers by end-2027.`+SRC('Dealsite/Digitimes via Jefferies, 2026-08-17 (relay) · Micron · Sadana, 2026-08-10 · UBS · Gaudois, 2026-08-07')},
+ ],
+ hbm:[
+  {t:"A DRAM die with holes in it",look:"the single thick die with copper pins through it",body:()=>`An HBM core die is built on the same 1b/1c node as DDR5, then through-silicon vias are etched and copper-filled: more than 5,600 per die at HBM3 and more than 20,000 at HBM4 at SK hynix. "A 12-layer stack has millions of TSVs, and one bad connection kills the die."`+SRC('Bernstein · Li, 2026-09-21 · DAMNANG, 2026-03-20')},
+  {t:"Thin the wafer",look:"the die shrinking to a sliver",body:()=>`The wafer is ground down until the TSVs show through: ~50 µm for 12-Hi and ~30 µm for 16-Hi, "where wafers crack and bow". SK hynix's 16-Hi HBM3E used dies ~20% thinner and gaps ~50% smaller to fit the same package height. DISCO holds ~70–80% of HBM grinding.`+SRC('DAMNANG, 2026-03-20 · Mirae Asset, 2026-09-07 · DISCO page (low grade)')},
+  {t:"The base die",look:"the bottom die: darker when it is TSMC logic",body:()=>S.base==="tsmc"
+    ?`A logic base die routes 1,024 (HBM3E) or 2,048 (HBM4) wires down to the interposer. Here it is TSMC's: N12 for HBM4, N3P for custom HBM4E, N3 for HBM5. The base wafer is sent to the memory maker for TSV formation and stacking, then comes back to TSMC for CoWoS; the stacking IP stays with the memory makers. NVIDIA's NVHBM puts its own controller on a TSMC 3nm base die in late 2028.`+SRC('SemiAnalysis, 2025-08-11 · Atlas Peak, 2026-04-03 · UBS/BofA, 2026-08-31 · JPM · Kwon, 2026-09-22')
+    :`A base die routes 1,024 (HBM3E) or 2,048 (HBM4) wires down to the interposer. Made in-house it is a DRAM-process die at HBM3E, then Samsung's own 4nm FinFET at HBM4 (VDDQ 1.1V → 0.75V) or Micron's "12nm/10nm internal" logic. A base die costs 3–4x a core die, and Samsung's 4nm is "very tight" on HBM4 base-die demand.`+SRC('SemiAnalysis, 2025-08-11 · DAMNANG ISSCC review, 2026-03-20 · WFC · Rakers, 2026-08-31 · GS/Samsung, 2026-09-18')},
+  {t:"Stack, die by die",look:"the dies landing one at a time",body:()=>`${GENS[S.gen].n} thinned core dies are placed on the base die, TSVs aligned. Conventional DRAM packaging is ~700 steps; HBM adds ~19 materials-engineering steps (TSV, thinning, stacking, bonding of 12–16 dies) on entirely different equipment. Memory is ~90% of the silicon in a high-end AI package: four 12-Hi stacks are about 8x the GPU's area.`+SRC('Dealsite/Digitimes via Jefferies, 2026-08-17 (relay) · Micron Hot Chips via newsletters, 2026-08-23')},
+  {t:"Bond and fill",look:()=>S.bond==="muf"?"the dark mould around the stack":S.bond==="ncf"?"the film between every pair of dies":"the dies touching with no gap",body:()=>S.bond==="muf"
+    ?`SK hynix's MR-MUF places the whole stack, joins it in a single reflow, then moulds underfill into every gap at once: $0.33 per bond, better heat path than film, but warpage risk with dies ~50 µm or thinner. Advanced MR-MUF carries 16-Hi; hybrid bonding is the path "beyond 16-Hi".`+SRC('Jasik Lee, SK hynix, Hot Chips 2026-08-23 · Redburn · Aziz, 2026-09-23 · SK hynix via Jefferies, 2026-08-26')
+    :S.bond==="ncf"
+    ?`Samsung and Micron press each die down through a non-conductive film with heat (thermo-compression, TC-NCF): $1.02 per bond, one die at a time. ASMPT says TCB could last to HBM5 at both Korean makers, and BofA hears "traditional TCB likely used for 16-hi or even 20-hi".`+SRC('SemiAnalysis, 2025-08-11 · Redburn, 2026-09-23 · UBS APAC tour, 2026-09-22 · BofA, 2026-09-03')
+    :`Hybrid bonding joins copper pads directly, no bumps and no gap: pitch falls from ~40 µm to below 10 µm, with ~11.9x the speed, more than 100x the heat dissipation and 15x the density of TCB, but $3.97 per bond today. SK hynix wants it only "at HBM4E or HBM5, where stack heights exceed 20 layers"; Redburn has base-die bonding from 1H27 and DRAM stacking from 2H28.`+SRC('DAMNANG, 2026-03-28 · SK hynix via Jefferies, 2026-08-26 · Redburn, 2026-09-23')},
+  {t:"Test the stack",look:"the yield meter on the left, and the height ceiling",body:()=>`Dies are sorted before stacking, then the stack is tested as a whole. Yield compounds with height: a 1% latent defect per die leaves only 88.6% of 12-Hi stacks clean, and one failing die scraps the package. HBM4 yields run ~80–85% at SK hynix vs ~60% at Samsung; NVIDIA's push to 10.7 Gb/s means it "needs a much higher-quality bin". The cube must also stay under ~775 µm.`+SRC('DAMNANG, 2026-08-30 · BTG expert, 2026-07-30 · SemiAnalysis, 2026-07-24 · J. Lee, Hot Chips 2026-08-23')},
+  {t:"Ship to TSMC: CoWoS",look:"the GPU and interposer appearing under the cube",body:()=>`The finished cube goes to TSMC and is placed beside the GPU on the CoWoS interposer: Blackwell 8 × 8-Hi (192GB), B300 8 × 12-Hi (288GB), Rubin 8 stacks, MI455 12 × 12-Hi (432GB). JPM haircuts HBM bit supply by 92 / 94 / 96% for CoWoS yield in 2026–28.`+SRC('JPM · Kwon, 2026-09-22 · SemiAnalysis, 2026-07-24')},
+  {t:"Versus DDR5",look:"the small package on the right",body:()=>`The DDR5 package is one die, no TSVs, no stacking. Larger dies, TSV area and stacking loss mean HBM eats ~3 DRAM wafers per bit today and ~4 at HBM4/4E, so "100 bits of HBM… reduce 300 bits of DDR". HBM earns 40–60% against more than 80% for server DRAM in a spike, which is why general-server DRAM overtook HBM as allocation priority #1 while HBM pricing still marched from ~$17–18/GB to $30–32/GB.`+SRC('Micron · Sadana, 2026-08-10 · BTG expert, 2026-07-30 · Redburn/TrendForce, 2026-06-23')},
+ ],
+};
+function NODES_LOOK_CHAN(){ return NODES[S.node].gaa?"the stacked blue sheets":"the thin blue fins"; }
+function NODES_LOOK_RAILS(){ return NODES[S.node].bsp?"the copper rails under the wafer":"the copper rails on top"; }
+const WCAM={
+ log:[{theta:0.55,phi:1.05,r:15,tx:0,ty:0.6,tz:0},{theta:0.35,phi:1.15,r:8.5,tx:-0.5,ty:0.5,tz:0},{theta:0.5,phi:1.1,r:9,tx:0,ty:0.6,tz:0},{theta:0.55,phi:1.0,r:9.5,tx:0,ty:0.9,tz:0},{theta:0.6,phi:1.0,r:12,tx:0,ty:1.6,tz:0},{theta:0.6,phi:1.0,r:14,tx:0,ty:2.2,tz:0},{theta:0.6,phi:1.0,r:14,tx:0,ty:1.4,tz:0},{theta:0.55,phi:1.05,r:15,tx:0,ty:1.4,tz:0}],
+ dram:[{theta:0.5,phi:1.0,r:14,tx:0,ty:0.5,tz:0},{theta:0.9,phi:1.05,r:9,tx:-3.3,ty:0.6,tz:0},{theta:0.4,phi:1.15,r:9,tx:1.5,ty:0.2,tz:0},{theta:0.3,phi:1.1,r:8.5,tx:1.5,ty:0.4,tz:0},{theta:0.5,phi:1.05,r:10,tx:1.5,ty:1.6,tz:0},{theta:0.7,phi:1.0,r:13,tx:-0.5,ty:1.0,tz:0},{theta:0.5,phi:1.0,r:14,tx:0,ty:1.0,tz:0},{theta:0.5,phi:1.0,r:14,tx:0,ty:1.0,tz:0}],
+ hbm:[{theta:0.6,phi:1.05,r:6.5,tx:1.2,ty:0.4,tz:0},{theta:0.6,phi:1.1,r:6,tx:1.2,ty:0.3,tz:0},{theta:0.6,phi:1.1,r:6.5,tx:1.2,ty:0.3,tz:0},{theta:0.62,phi:1.02,r:9,tx:1.2,ty:1.4,tz:0},{theta:0.9,phi:1.1,r:7.5,tx:1.2,ty:1.4,tz:0},{theta:0.62,phi:1.02,r:9.5,tx:1.2,ty:1.5,tz:0},{theta:0.62,phi:1.02,r:11,tx:0.4,ty:1.3,tz:0},{theta:0.5,phi:1.0,r:13,tx:1.5,ty:1.0,tz:0}],
+};
+
 // =====================================================================
 // UI state
 // =====================================================================
@@ -580,7 +681,7 @@ function segWire(id,key,cb){
     [...$("#"+id).children].forEach(x=>x.classList.toggle("on",x===b)); S[key]=b.dataset.v; cb&&cb();
   });
 }
-segWire("nodeSeg","node",()=>{updateLog(); if(ok) layoutLog(true);});
+segWire("nodeSeg","node",()=>{updateLog(); if(ok) layoutLog(true); if(WALK.on) renderWalk();});
 segWire("logView","logView",()=>{if(ok) layoutLog(true);});
 $("#logLoop").onchange=e=>{S.loop=e.target.checked;};
 $("#logEuvOnly").onchange=e=>{S.euvOnly=e.target.checked; if(ok) layoutLog(true);};
@@ -642,6 +743,45 @@ function updateHbm(){
   $("#hbTrade").textContent=g.trade+"×"; $("#hbTradeBar").style.width=(g.trade/4.5*100)+"%"; $("#hbTradeSrc").innerHTML=g.tradeSrc;
 }
 
+// ---------- walkthrough ----------
+const WALK={on:false,i:0,p:0,auto:false,hold:0};
+const walkSteps=()=>WSTEPS[mode];
+function walkPanels(){
+  const on=WALK.on;
+  const hud={log:"hudLOG",dram:"hudDRAM",hbm:"hudHBM"}[mode], ctrl={log:"ctrlLOG",dram:"ctrlDRAM",hbm:"ctrlHBM"}[mode];
+  $("#"+hud).style.display=on?"none":""; $("#"+ctrl).style.display=on?"none":"";
+  $("#walkHud").style.display=on?"":"none"; $("#walkCtrl").style.display=on?"":"none"; $("#walkBar").style.display=on?"":"none";
+  $(".help").style.display=on?"none":"";
+}
+function renderWalk(){
+  const st=walkSteps(), i=WALK.i, cur=st[i];
+  $("#walkStepN").textContent=`STEP ${i+1} / ${st.length}`;
+  $("#walkTitle").textContent=cur.t; $("#walkBody").innerHTML=cur.body();
+  $("#walkLook").textContent=typeof cur.look==="function"?cur.look():cur.look;
+  $("#walkList").innerHTML=st.map((x,k)=>`<li class="${k===i?"on":k<i?"done":""}" data-i="${k}"><span class="n">${k<i?"✓":k+1}</span><span>${x.t}</span></li>`).join("");
+  [...$("#walkList").children].forEach(li=>li.onclick=()=>walkGo(+li.dataset.i));
+  $("#walkDots").innerHTML=st.map((x,k)=>`<i class="${k===i?"on":k<i?"done":""}" title="${x.t}"></i>`).join("");
+  [...$("#walkDots").children].forEach((d,k)=>d.onclick=()=>walkGo(k));
+  $("#walkPrev").disabled=i===0; $("#walkNext").textContent=i===st.length-1?"Done ✓":"Next ▶";
+  $("#walkAuto").classList.toggle("on",WALK.auto);
+  $("#walkProg").style.width=(WALK.p*100)+"%";
+}
+function walkGo(i){
+  const st=walkSteps(); WALK.i=Math.max(0,Math.min(st.length-1,i)); WALK.p=ok?0:1; WALK.hold=0;
+  renderWalk();
+  if(ok){ const c=WCAM[mode][WALK.i]; orbitTo({theta:c.theta,phi:c.phi,r:c.r,target:new THREE.Vector3(c.tx,c.ty,c.tz)}); if(mode==="dram") buildDram(); }
+}
+function walkStart(){ WALK.on=true; WALK.auto=false; walkPanels(); walkGo(0); }
+function walkStop(){
+  WALK.on=false; WALK.auto=false; walkPanels();
+  if(ok){ if(mode==="dram") buildDram(); orbitTo(mode==="log"?VIEW_LOG:mode==="dram"?VIEW_DRAM:VIEW_HBM); }
+}
+document.querySelectorAll("[data-walk]").forEach(b=>b.onclick=walkStart);
+$("#walkPrev").onclick=()=>walkGo(WALK.i-1);
+$("#walkNext").onclick=()=>{ if(WALK.i>=walkSteps().length-1) walkStop(); else walkGo(WALK.i+1); };
+$("#walkExit").onclick=walkStop;
+$("#walkAuto").onclick=()=>{ WALK.auto=!WALK.auto; WALK.hold=0; if(WALK.auto&&WALK.i>=walkSteps().length-1) walkGo(0); renderWalk(); };
+
 // ---------- tabs ----------
 function setMode(m){
   mode=m;
@@ -651,12 +791,18 @@ function setMode(m){
     for(const id of map[k]) $("#"+id).style.display=k===m?(id.startsWith("explain")?"grid":""):"none";
   }
   if(ok){ logG.visible=m==="log"; dramG.visible=m==="dram"; hbmG.visible=m==="hbm"; orbitTo(m==="log"?VIEW_LOG:m==="dram"?VIEW_DRAM:VIEW_HBM); }
+  if(WALK.on){ walkPanels(); walkGo(0); }
   try{localStorage.setItem("wp-mode",m);}catch(e){}
 }
 $("#tabLOG").onclick=()=>setMode("log"); $("#tabDRAM").onclick=()=>setMode("dram"); $("#tabHBM").onclick=()=>setMode("hbm");
 window.addEventListener("keydown",e=>{
   if(e.target.tagName==="INPUT") return;
   if(e.key==="1") setMode("log"); if(e.key==="2") setMode("dram"); if(e.key==="3") setMode("hbm");
+  if(WALK.on){
+    if(e.key==="ArrowRight"){ e.preventDefault(); if(WALK.i<walkSteps().length-1) walkGo(WALK.i+1); }
+    if(e.key==="ArrowLeft"){ e.preventDefault(); walkGo(WALK.i-1); }
+    if(e.key==="Escape") walkStop();
+  }
 });
 
 // ---------- static sections ----------
@@ -774,7 +920,7 @@ const smooth=x=>x*x*(3-2*x);
 const logG=new THREE.Group(); scene.add(logG);
 const LW=9, LD=5.4;
 const logStatic=new THREE.Group(), logDyn=new THREE.Group(); logG.add(logStatic,logDyn);
-box(LW,0.7,LD,M.si,0,-0.35,0,logStatic);                       // substrate
+const subMesh=box(LW,0.7,LD,M.si,0,-0.35,0,logStatic);         // substrate
 // FEOL: fins / nanosheets + gates
 const FINX=[-3.2,-2.4,-1.6,-0.8,0,0.8,1.6,2.4,3.2], GATEZ=[-1.5,-0.5,0.5,1.5];
 const fins=[], sheets=[], gates=[];
@@ -793,12 +939,14 @@ const beolG=new THREE.Group(); logDyn.add(beolG);
 const NLAY=12;                       // drawn layers (schematic)
 const layerY=[]; { let y=1.32; for(let k=0;k<NLAY;k++){ const th=0.09+k*0.03; layerY.push({y:y+th/2,th}); y+=th+0.05; } }
 const bspG=new THREE.Group(), tprG=new THREE.Group(); logDyn.add(bspG,tprG);
-let morphFin=0, morphBsp=0, morphFinT=0, morphBspT=0;
+let morphFin=0, morphBsp=0, morphFinT=0, morphBspT=0, euvLayersN=0;
+const LV={sub:true,chan:true,gate:true,mol:true,beol:12,rails:true};
 function buildBeol(){
   disposeGroup(beolG);
   const n=NODES[S.node];
   const euvShare=Math.min(1,n.euvN/30);            // schematic: share of drawn layers to paint as EUV
   const euvLayers=Math.round(euvShare*NLAY*0.75);   // EUV lives in the lower, tighter layers
+  euvLayersN=euvLayers;
   const v=S.logView;
   if(v==="feol") return;
   for(let k=0;k<NLAY;k++){
@@ -813,10 +961,10 @@ function buildBeol(){
     for(let i=0;i<cnt;i++){
       const off=-span/2+pitch/2+i*pitch;
       const w=Math.min(0.9,pitch*0.45);
-      if(alongX) box(len*(0.75+0.25*Math.sin(i*1.7+k)),th,w,mat,0,y,off,beolG); else box(w,th,len*(0.75+0.25*Math.cos(i*1.3+k)),mat,off,y,0,beolG);
+      const bm=alongX?box(len*(0.75+0.25*Math.sin(i*1.7+k)),th,w,mat,0,y,off,beolG):box(w,th,len*(0.75+0.25*Math.cos(i*1.3+k)),mat,off,y,0,beolG); bm.userData.layer=k;
     }
     // vias to the layer below
-    if(k>0 && !(S.euvOnly&&!isEuv)) for(let i=0;i<Math.min(cnt,6);i++){ const off=-span/2+pitch/2+i*pitch*Math.max(1,Math.floor(cnt/6)); if(Math.abs(off)>span/2) continue; cyl(0.04,0.06,mat,alongX?(i-2.5)*1.1:off,y-th/2-0.025,alongX?off:(i-2.5)*0.7,beolG,6); }
+    if(k>0 && !(S.euvOnly&&!isEuv)) for(let i=0;i<Math.min(cnt,6);i++){ const off=-span/2+pitch/2+i*pitch*Math.max(1,Math.floor(cnt/6)); if(Math.abs(off)>span/2) continue; const vm=cyl(0.04,0.06,mat,alongX?(i-2.5)*1.1:off,y-th/2-0.025,alongX?off:(i-2.5)*0.7,beolG,6); vm.userData.layer=k; }
   }
   // top power rails (front side) — hidden when backside power is on
   disposeGroup(tprG); disposeGroup(bspG);
@@ -827,34 +975,43 @@ function buildBeol(){
   for(const z of [-1.9,-0.63,0.63,1.9]) box(LW-1.0,0.16,0.5,cu,0,-0.85,z,bspG);
   for(const x of FINX) for(const z of [-1.9,-0.63,0.63,1.9]) cyl(0.05,0.75,M.tsv,x+0.25,-0.4,z,bspG,6);
 }
+function walkLogState(){
+  const i=WALK.i,p=WALK.p,e=euvLayersN;
+  return [ {chan:0,gate:0,mol:0,beol:0,rails:0},{chan:1,gate:0,mol:0,beol:0,rails:0},{chan:1,gate:1,mol:0,beol:0,rails:0},{chan:1,gate:1,mol:1,beol:0,rails:0},
+           {chan:1,gate:1,mol:1,beol:Math.ceil(e*p),rails:0},{chan:1,gate:1,mol:1,beol:e+Math.ceil((NLAY-e)*p),rails:0},{chan:1,gate:1,mol:1,beol:NLAY,rails:1},{chan:1,gate:1,mol:1,beol:NLAY,rails:1} ][i];
+}
 function layoutLog(rebuild){
   if(rebuild) buildBeol();
   const n=NODES[S.node];
   morphFinT=n.gaa?1:0; morphBspT=n.bsp?1:0;
   const v=S.logView;
-  beolG.visible=v!=="feol"; molG.visible=v!=="feol"||true;
-  fins.forEach(f=>{f.scale.y=Math.max(0.001,1-morphFin); f.position.y=0.375*(1-morphFin)+0.001;});
-  sheets.forEach(s=>{s.scale.y=Math.max(0.001,morphFin); s.visible=morphFin>0.02;});
-  gates.forEach(g=>{g.scale.y=1+0.15*morphFin;});
-  tprG.visible=v!=="feol"; bspG.visible=v!=="feol";
+  const w=(WALK.on&&mode==="log")?walkLogState():null;
+  if(w) Object.assign(LV,{sub:true,chan:!!w.chan,gate:!!w.gate,mol:!!w.mol,beol:w.beol,rails:!!w.rails});
+  else Object.assign(LV,{sub:v!=="beol",chan:v!=="beol",gate:v!=="beol",mol:v!=="beol",beol:v==="feol"?0:NLAY,rails:v!=="feol"});
+  logStatic.visible=true; subMesh.visible=LV.sub;
+  fins.forEach(f=>{f.scale.y=Math.max(0.001,1-morphFin); f.position.y=0.375*(1-morphFin)+0.001; f.visible=LV.chan&&morphFin<0.98;});
+  sheets.forEach(s=>{s.scale.y=Math.max(0.001,morphFin); s.visible=LV.chan&&morphFin>0.02;});
+  gates.forEach(g=>{g.scale.y=1+0.15*morphFin; g.visible=LV.gate;});
+  molG.visible=LV.mol;
+  beolG.visible=LV.beol>0; beolG.children.forEach(c=>{c.visible=(c.userData.layer||0)<LV.beol;});
+  tprG.visible=LV.rails; bspG.visible=LV.rails;
   tprG.children.forEach(c=>{c.scale.y=Math.max(0.001,1-morphBsp);});
   bspG.children.forEach(c=>{c.scale.y=Math.max(0.001,morphBsp);});
-  logStatic.visible=v!=="beol";
 }
 // scanner head + beam
 const scanG=new THREE.Group(); logG.add(scanG);
 const head=box(0.9,0.35,0.9,M.siLight,0,0,0,scanG);
 const beam=new THREE.Mesh(new THREE.ConeGeometry(0.55,1,20,1,true),glowMat(0x4cc2ff,0.35)); beam.rotation.x=Math.PI; scanG.add(beam);
 const beamCore=new THREE.Mesh(new THREE.CylinderGeometry(0.03,0.03,1,6),coreMat(0xffffff)); scanG.add(beamCore);
-addLabel("Silicon substrate","the wafer itself; ~1,000+ steps happen on top",v=>v.set(-LW/2+0.6,-0.1,LD/2),logG).show=()=>S.logView!=="beol";
-const lFin=addLabel("FinFET","gate wraps a vertical fin (N7 to N3)",v=>v.set(FINX[1],1.0,-LD/2+0.2),logG); lFin.show=()=>S.logView!=="beol"&&morphFinT<0.5;
-const lGaa=addLabel("Gate-all-around nanosheets","gate wraps stacked sheets (N2)",v=>v.set(FINX[1],1.0,-LD/2+0.2),logG); lGaa.show=()=>S.logView!=="beol"&&morphFinT>=0.5;
-addLabel("Gate","metal gate over high-k dielectric",v=>v.set(LW/2-1.0,1.1,GATEZ[3]),logG).show=()=>S.logView!=="beol";
-const lEuv=addLabel("EUV-patterned metal","tightest pitches at the bottom of the stack",v=>v.set(-LW/2+1.2,layerY[2].y+0.2,LD/2-0.6),logG); lEuv.show=()=>S.logView!=="feol";
-const lDuv=addLabel("DUV-patterned metal","looser pitches higher up",v=>v.set(LW/2-1.4,layerY[NLAY-3].y+0.2,-LD/2+0.6),logG); lDuv.show=()=>S.logView!=="feol"&&!S.euvOnly;
-const lTpr=addLabel("Power rails (front side)","thick top metal",v=>v.set(0,layerY[NLAY-1].y+0.6,-1.9),logG); lTpr.show=()=>S.logView!=="feol"&&morphBspT<0.5;
-const lBsp=addLabel("Backside power (A16 Super Power Rail)","rails moved under the transistors",v=>v.set(0,-1.0,1.9),logG); lBsp.show=()=>S.logView!=="feol"&&morphBspT>=0.5;
-const lScan=addLabel("Scanner","one exposure per mask layer",v=>v.copy(scanG.position).add(new THREE.Vector3(0,0.35,0)),logG); lScan.show=()=>S.loop;
+addLabel("Silicon substrate","the wafer itself, 300 mm",v=>v.set(-LW/2+0.6,-0.1,LD/2),logG).show=()=>LV.sub;
+const lFin=addLabel("FinFET","gate wraps a vertical fin (N7 to N3)",v=>v.set(FINX[1],1.0,-LD/2+0.2),logG); lFin.show=()=>LV.chan&&morphFinT<0.5;
+const lGaa=addLabel("Gate-all-around nanosheets","gate wraps stacked sheets (N2)",v=>v.set(FINX[1],1.0,-LD/2+0.2),logG); lGaa.show=()=>LV.chan&&morphFinT>=0.5;
+addLabel("Gate","metal gate over high-k dielectric",v=>v.set(LW/2-1.0,1.1,GATEZ[3]),logG).show=()=>LV.gate;
+const lEuv=addLabel("EUV-patterned metal","tightest pitches at the bottom of the stack",v=>v.set(-LW/2+1.2,layerY[2].y+0.2,LD/2-0.6),logG); lEuv.show=()=>LV.beol>0;
+const lDuv=addLabel("DUV-patterned metal","looser pitches higher up",v=>v.set(LW/2-1.4,layerY[NLAY-3].y+0.2,-LD/2+0.6),logG); lDuv.show=()=>LV.beol>euvLayersN&&!S.euvOnly;
+const lTpr=addLabel("Power rails (front side)","thick top metal",v=>v.set(0,layerY[NLAY-1].y+0.6,-1.9),logG); lTpr.show=()=>LV.rails&&morphBspT<0.5;
+const lBsp=addLabel("Backside power (A16 Super Power Rail)","rails moved under the transistors",v=>v.set(0,-1.0,1.9),logG); lBsp.show=()=>LV.rails&&morphBspT>=0.5;
+const lScan=addLabel("Scanner","one exposure per mask layer",v=>v.copy(scanG.position).add(new THREE.Vector3(0,0.35,0)),logG); lScan.show=()=>scanG.visible;
 layoutLog(true);
 
 // =====================================================================
@@ -870,52 +1027,70 @@ box(2.2,0.5,DD-0.6,M.siLight,-DW/2+1.2,0.25,0,periG);
 const periLayers=[];
 for(let k=0;k<4;k++){ const l=box(1.9,0.05,DD-0.9,M.metal,-DW/2+1.2,0.55+k*0.12,0,periG); periLayers.push(l); }
 let capsG=new THREE.Group(); dramDyn.add(capsG);
+const DV={peri:true,wl:true,bl:true,tr:true,cap:true,capP:1};
+const dEuvOn=()=>S.dEuv||(WALK.on&&mode==="dram"&&(WALK.i===1||WALK.i>=5));
 function buildDram(){
   disposeGroup(capsG);
   const d=DNODES[S.dnode], a=S.arch;
   const pitch=d.pitch*(a==="4f2"?0.82:1);
   const x0=-DW/2+2.6, x1=DW/2-0.4, z0=-DD/2+0.4, z1=DD/2-0.4;
-  const capMat=S.dEuv?M.capHi:M.cap;
+  const euvOn=dEuvOn();
+  const capMat=euvOn?M.capHi:M.cap;
   const euvMat=new THREE.MeshStandardMaterial({color:col.accent,metalness:.8,roughness:.3,emissive:col.accent,emissiveIntensity:.4}); euvMat.__own=true;
-  periLayers.forEach((l,k)=>{ l.material=(S.dEuv&&k<d.euvPeri)?euvMat:M.metal; });
+  periLayers.forEach((l,k)=>{ l.material=(euvOn&&k<d.euvPeri)?euvMat:M.metal; });
   if(a==="3d"){
     // horizontal cells stacked in tiers, like NAND
     const tiers=6, cellsX=Math.floor((x1-x0)/(pitch*1.1)), cellsZ=Math.floor((z1-z0)/(pitch*1.6));
     for(let t=0;t<tiers;t++){
       const y=0.35+t*0.42;
-      box(x1-x0,0.06,z1-z0,M.oxide,(x0+x1)/2,y-0.2,0,capsG);
+      box(x1-x0,0.06,z1-z0,M.oxide,(x0+x1)/2,y-0.2,0,capsG).userData.kind="cap";
       for(let i=0;i<cellsX;i++) for(let j=0;j<cellsZ;j++){
-        const c=cyl(pitch*0.22,pitch*1.05,capMat,x0+pitch*0.55+i*pitch*1.1,y,z0+pitch*0.8+j*pitch*1.6,capsG,10); c.rotation.x=Math.PI/2;
+        const c=cyl(pitch*0.22,pitch*1.05,capMat,x0+pitch*0.55+i*pitch*1.1,y,z0+pitch*0.8+j*pitch*1.6,capsG,10); c.rotation.x=Math.PI/2; c.userData.kind="cap";
       }
       // vertical bit line pillars
-      for(let i=0;i<cellsX;i++) cyl(0.03,tiers*0.42,M.bl,x0+pitch*0.55+i*pitch*1.1-pitch*0.55,0.35+(tiers-1)*0.21,z0+0.05,capsG,6);
+      for(let i=0;i<cellsX;i++) cyl(0.03,tiers*0.42,M.bl,x0+pitch*0.55+i*pitch*1.1-pitch*0.55,0.35+(tiers-1)*0.21,z0+0.05,capsG,6).userData.kind="bl";
     }
     return;
   }
   // buried word lines (rows along x), bit lines (along z)
   const nx=Math.floor((x1-x0)/pitch), nz=Math.floor((z1-z0)/pitch);
-  const wlMat=S.dEuv&&d.euvCell>0?euvMat:M.wl;
-  for(let j=0;j<nz;j++) box(x1-x0,0.06,pitch*0.28,wlMat,(x0+x1)/2,-0.08,z0+pitch/2+j*pitch,capsG);
-  const blMat=S.dEuv&&d.euvCell>1?euvMat:M.bl;
-  for(let i=0;i<nx;i++) box(pitch*0.22,0.05,z1-z0,blMat,x0+pitch/2+i*pitch,0.09,(z0+z1)/2,capsG);
+  const wlMat=euvOn&&d.euvCell>0?euvMat:M.wl;
+  for(let j=0;j<nz;j++) box(x1-x0,0.06,pitch*0.28,wlMat,(x0+x1)/2,-0.08,z0+pitch/2+j*pitch,capsG).userData.kind="wl";
+  const blMat=euvOn&&d.euvCell>1?euvMat:M.bl;
+  for(let i=0;i<nx;i++) box(pitch*0.22,0.05,z1-z0,blMat,x0+pitch/2+i*pitch,0.09,(z0+z1)/2,capsG).userData.kind="bl";
   const capH=2.3, capR=pitch*(a==="4f2"?0.3:0.27);
   for(let i=0;i<nx;i++) for(let j=0;j<nz;j++){
     const cx=x0+pitch/2+i*pitch+(a==="4f2"?0:(j%2?pitch*0.18:-pitch*0.18)), cz=z0+pitch/2+j*pitch;
     // access transistor: planar (6F2) sits beside; VCT (4F2) is a pillar directly underneath
-    if(a==="4f2") cyl(pitch*0.14,0.5,M.fin,cx,0.28,cz,capsG,6);
-    else box(pitch*0.3,0.16,pitch*0.3,M.fin,cx-(j%2?pitch*0.18:-pitch*0.18),0.12,cz,capsG);
-    cyl(0.04,0.35,M.metal,cx,0.42,cz,capsG,6);                       // storage-node contact
-    cyl(capR,capH,capMat,cx,0.6+capH/2,cz,capsG,10);                   // the capacitor
+    if(a==="4f2") cyl(pitch*0.14,0.5,M.fin,cx,0.28,cz,capsG,6).userData.kind="tr";
+    else box(pitch*0.3,0.16,pitch*0.3,M.fin,cx-(j%2?pitch*0.18:-pitch*0.18),0.12,cz,capsG).userData.kind="tr";
+    cyl(0.04,0.35,M.metal,cx,0.42,cz,capsG,6).userData.kind="ct";      // storage-node contact
+    const cm=cyl(capR,capH,capMat,cx,0.6+capH/2,cz,capsG,10); cm.userData.kind="cap"; cm.userData.h=capH; cm.userData.y0=0.6;   // the capacitor
   }
 }
 buildDram();
-addLabel("Storage capacitor","one per bit; tall, narrow, high-aspect-ratio etch",v=>v.set(DW/2-1.6,3.2,-DD/2+0.6),dramG).show=()=>S.arch!=="3d";
-addLabel("3D DRAM","capacitors laid flat and stacked in tiers (research)",v=>v.set(DW/2-1.6,3.2,-DD/2+0.6),dramG).show=()=>S.arch==="3d";
-addLabel("Buried word line","in the silicon, one per row",v=>v.set(-0.4,-0.1,DD/2),dramG).show=()=>S.arch!=="3d";
-addLabel("Bit line","one per column, reads the charge",v=>v.set(DW/2-0.6,0.35,-DD/2+0.3),dramG).show=()=>S.arch!=="3d";
-addLabel("Access transistor","planar, buried channel (6F²)",v=>v.set(-1.2,0.15,-DD/2+0.9),dramG).show=()=>S.arch==="6f2";
-addLabel("Vertical-channel transistor","directly under the capacitor (4F²)",v=>v.set(-1.2,0.35,-DD/2+0.9),dramG).show=()=>S.arch==="4f2";
-addLabel("Periphery","sense amps, decoders, I/O: where the tight (EUV) layers live",v=>v.set(-DW/2+1.2,1.15,DD/2-0.4),dramG);
+function walkDramState(){
+  const i=WALK.i,p=WALK.p, all={peri:1,wl:1,bl:1,tr:1,cap:1,capP:1};
+  return [ {peri:0,wl:0,bl:0,tr:0,cap:0,capP:0},{peri:1,wl:0,bl:0,tr:0,cap:0,capP:0},{peri:1,wl:1,bl:0,tr:0,cap:0,capP:0},{peri:1,wl:1,bl:1,tr:1,cap:0,capP:0},
+           {peri:1,wl:1,bl:1,tr:1,cap:1,capP:p},all,all,all ][i];
+}
+function layoutDram(){
+  const w=(WALK.on&&mode==="dram")?walkDramState():null;
+  Object.assign(DV, w?{peri:!!w.peri,wl:!!w.wl,bl:!!w.bl,tr:!!w.tr,cap:!!w.cap,capP:w.capP}:{peri:true,wl:true,bl:true,tr:true,cap:true,capP:1});
+  periG.visible=DV.peri;
+  capsG.children.forEach(c=>{
+    const k=c.userData.kind; if(!k) return;
+    if(k==="cap"){ c.visible=DV.cap; if(c.userData.h){ const sc=Math.max(0.02,DV.capP); c.scale.y=sc; c.position.y=c.userData.y0+c.userData.h*sc/2; } }
+    else if(k==="ct") c.visible=DV.tr; else c.visible=DV[k];
+  });
+}
+addLabel("Storage capacitor","one per bit; tall, narrow, high-aspect-ratio etch",v=>v.set(DW/2-1.6,3.2,-DD/2+0.6),dramG).show=()=>S.arch!=="3d"&&DV.cap&&DV.capP>0.5;
+addLabel("3D DRAM","capacitors laid flat and stacked in tiers (research)",v=>v.set(DW/2-1.6,3.2,-DD/2+0.6),dramG).show=()=>S.arch==="3d"&&DV.cap;
+addLabel("Buried word line","in the silicon, one per row",v=>v.set(-0.4,-0.1,DD/2),dramG).show=()=>S.arch!=="3d"&&DV.wl;
+addLabel("Bit line","one per column, reads the charge",v=>v.set(DW/2-0.6,0.35,-DD/2+0.3),dramG).show=()=>S.arch!=="3d"&&DV.bl;
+addLabel("Access transistor","planar, buried channel (6F²)",v=>v.set(-1.2,0.15,-DD/2+0.9),dramG).show=()=>S.arch==="6f2"&&DV.tr;
+addLabel("Vertical-channel transistor","directly under the capacitor (4F²)",v=>v.set(-1.2,0.35,-DD/2+0.9),dramG).show=()=>S.arch==="4f2"&&DV.tr;
+addLabel("Periphery","sense amps, decoders, I/O: where the tight (EUV) layers live",v=>v.set(-DW/2+1.2,1.15,DD/2-0.4),dramG).show=()=>DV.peri;
 addLabel("Silicon substrate","",v=>v.set(-DW/2+0.4,-0.1,DD/2),dramG);
 
 // =====================================================================
@@ -923,21 +1098,28 @@ addLabel("Silicon substrate","",v=>v.set(-DW/2+0.4,-0.1,DD/2),dramG);
 // =====================================================================
 const hbmG=new THREE.Group(); scene.add(hbmG); hbmG.visible=false;
 const hbmStatic=new THREE.Group(), hbmDyn=new THREE.Group(); hbmG.add(hbmStatic,hbmDyn);
-box(10,0.25,5.4,M.substrate,0.2,-0.3,0,hbmStatic);              // package substrate
-box(7.2,0.16,4.2,M.interposer,-0.6,-0.1,0,hbmStatic);           // CoWoS silicon interposer
-box(3.0,0.32,3.0,M.gpu,-2.6,0.14,0,hbmStatic);                  // GPU / XPU die
+const cowosG=new THREE.Group(), ddrG=new THREE.Group(); hbmStatic.add(cowosG,ddrG);
+box(10,0.25,5.4,M.substrate,0.2,-0.3,0,cowosG);                 // package substrate
+box(7.2,0.16,4.2,M.interposer,-0.6,-0.1,0,cowosG);              // CoWoS silicon interposer
+box(3.0,0.32,3.0,M.gpu,-2.6,0.14,0,cowosG);                     // GPU / XPU die
 // DDR5 package for contrast
-box(2.0,0.1,3.4,M.pcb,4.3,-0.12,0,hbmStatic);
-box(1.5,0.12,2.1,M.substrate,4.3,-0.01,0,hbmStatic);
-box(1.15,0.1,1.7,M.dram,4.3,0.1,0,hbmStatic);
+box(2.0,0.1,3.4,M.pcb,4.3,-0.12,0,ddrG);
+box(1.5,0.12,2.1,M.substrate,4.3,-0.01,0,ddrG);
+box(1.15,0.1,1.7,M.dram,4.3,0.1,0,ddrG);
 const HX=1.2, HW=1.9;
+const HV={solo:false,soloT:1,stack:true,nDies:99,fill:true,plane:true,cowos:true,ddr:true};
+// a single thick core die for the TSV + thinning steps of the walkthrough
+const soloG=new THREE.Group(); soloG.position.set(HX,0.02,0); soloG.visible=false; hbmDyn.add(soloG);
+box(HW,0.5,HW,M.dram,0,0.25,0,soloG);
+for(let i=0;i<4;i++) for(let j=0;j<4;j++) cyl(0.03,0.52,M.tsv,(i-1.5)*HW/5,0.25,(j-1.5)*HW/5,soloG,6);
+let ncfBoxes=[];
 const stackG=new THREE.Group(); hbmDyn.add(stackG);
 const limitPlane=new THREE.Mesh(new THREE.PlaneGeometry(2.8,2.8),M.plane); limitPlane.rotation.x=-Math.PI/2; limitPlane.position.set(HX,0,0); hbmDyn.add(limitPlane);
 const HB={dieTh:0.16,gapBump:0.07,gapHyb:0.012,baseTh:0.14,baseY:0.02};
 const H_LIMIT=HB.baseY+HB.baseTh+12*(HB.dieTh+HB.gapBump)+0.02;
 let dieMeshes=[];
 function buildHbm(){
-  disposeGroup(stackG); dieMeshes=[];
+  disposeGroup(stackG); dieMeshes=[]; ncfBoxes=[];
   const g=GENS[S.gen], bond=S.bond;
   const thin=g.n>12&&bond!=="hyb";
   const gap=bond==="hyb"?HB.gapHyb:(thin?HB.gapBump*0.5:HB.gapBump);
@@ -951,7 +1133,7 @@ function buildHbm(){
     if(bond==="hyb"){ const f=box(HW,gap,HW,M.metal,HX,y+gap/2,0,stackG); f.userData.k=k+1; f.userData.bond=true; dieMeshes.push(f); }
     else{
       const grp=new THREE.Group(); grp.position.set(HX,y+gap/2,0); grp.userData.k=k+1; grp.userData.bond=true; stackG.add(grp); dieMeshes.push(grp);
-      if(bond==="ncf") box(HW,gap*0.9,HW,M.ncf,0,0,0,grp);
+      if(bond==="ncf"){ const f=box(HW,gap*0.9,HW,M.ncf,0,0,0,grp); ncfBoxes.push(f); }
       for(let i=0;i<5;i++) for(let j=0;j<5;j++){ const s=new THREE.Mesh(new THREE.SphereGeometry(gap*0.42,8,6),M.bump); s.position.set((i-2)*HW/5.6,0,(j-2)*HW/5.6); grp.add(s); }
     }
     y+=gap;
@@ -969,25 +1151,40 @@ function buildHbm(){
   stackG.userData.top=top;
 }
 buildHbm();
+function walkHbmState(){
+  const i=WALK.i,p=WALK.p,n=GENS[S.gen].n;
+  return [ {solo:1,soloT:1,stack:0,nDies:0,fill:0,plane:0,cowos:0,ddr:0},{solo:1,soloT:1-0.68*p,stack:0,nDies:0,fill:0,plane:0,cowos:0,ddr:0},
+           {solo:0,soloT:1,stack:1,nDies:0,fill:0,plane:0,cowos:0,ddr:0},{solo:0,soloT:1,stack:1,nDies:Math.ceil(p*n),fill:0,plane:0,cowos:0,ddr:0},
+           {solo:0,soloT:1,stack:1,nDies:99,fill:1,plane:0,cowos:0,ddr:0},{solo:0,soloT:1,stack:1,nDies:99,fill:1,plane:1,cowos:0,ddr:0},
+           {solo:0,soloT:1,stack:1,nDies:99,fill:1,plane:1,cowos:1,ddr:0},{solo:0,soloT:1,stack:1,nDies:99,fill:1,plane:1,cowos:1,ddr:1} ][i];
+}
 function layoutHbm(){
   const ex=S.explode, g=GENS[S.gen];
+  const w=(WALK.on&&mode==="hbm")?walkHbmState():null;
+  Object.assign(HV, w?{solo:!!w.solo,soloT:w.soloT,stack:!!w.stack,nDies:w.nDies,fill:!!w.fill,plane:!!w.plane,cowos:!!w.cowos,ddr:!!w.ddr}:{solo:false,soloT:1,stack:true,nDies:99,fill:true,plane:true,cowos:true,ddr:true});
+  soloG.visible=HV.solo; soloG.scale.y=Math.max(0.05,HV.soloT);
+  stackG.visible=HV.stack; cowosG.visible=HV.cowos; ddrG.visible=HV.ddr;
   for(const m of dieMeshes){
     const k=m.userData.k||0;
     m.position.y=(m.userData.baseY==null?(m.userData.baseY=m.position.y):m.userData.baseY)+ex*k*0.22;
-    if(m.userData.mold){ m.visible=ex<0.2; }
+    if(m.userData.mold){ m.visible=ex<0.2&&HV.fill; continue; }
+    m.visible=k<=HV.nDies;
   }
-  limitPlane.visible=ex<0.2;
+  ncfBoxes.forEach(f=>f.visible=HV.fill);
+  limitPlane.visible=ex<0.2&&HV.plane;
 }
-addLabel("GPU / XPU die","TSMC N3 / N2 logic",v=>v.set(-3.2,0.45,1.3),hbmG);
-addLabel("Silicon interposer","CoWoS: joins HBM to the GPU",v=>v.set(-1.4,0.02,2.1),hbmG);
-addLabel("Base die","logic: routes 1024 or 2048 wires to the interposer",v=>v.set(HX+0.3,HB.baseY+0.12,HW/2+0.15),hbmG);
-const lCore=addLabel("Core DRAM dies","n-Hi, thinned, TSV-drilled",v=>v.set(HX-HW/2-0.15,stackG.userData.top*0.55+S.explode*GENS[S.gen].n*0.1,0.3),hbmG);
-const lTsv=addLabel("TSVs","through-silicon vias: the vertical wires",v=>v.set(HX-0.2,stackG.userData.top+0.3+S.explode*GENS[S.gen].n*0.22,-0.6),hbmG);
-const lBond=addLabel("Bond layer","micro-bumps + underfill / NCF film",v=>v.set(HX+HW/2+0.15,HB.baseY+HB.baseTh+0.75+S.explode*0.9,-0.7),hbmG); lBond.show=()=>S.bond!=="hyb";
-const lHyb=addLabel("Hybrid bond","Cu-to-Cu, no bumps, no gap",v=>v.set(HX+HW/2+0.15,HB.baseY+HB.baseTh+0.9+S.explode*0.9,-0.5),hbmG); lHyb.show=()=>S.bond==="hyb";
-const lLim=addLabel("Package-height ceiling","same height budget for 12-Hi and 16-Hi",v=>v.set(HX-1.35,H_LIMIT,1.35),hbmG); lLim.show=()=>S.explode<0.2;
-addLabel("DDR5 package","one die, no TSVs, no stacking",v=>v.set(4.3,0.3,-1.6),hbmG);
-const lMold=addLabel("Molded underfill (MR-MUF)","one mold fills every gap at once",v=>v.set(HX+HW/2+0.55,stackG.userData.top+0.05,0.4),hbmG); lMold.show=()=>S.bond==="muf"&&S.explode<0.2;
+addLabel("GPU / XPU die","TSMC N3 / N2 logic",v=>v.set(-3.2,0.45,1.3),hbmG).show=()=>HV.cowos;
+addLabel("Silicon interposer","CoWoS: joins HBM to the GPU",v=>v.set(-1.4,0.02,2.1),hbmG).show=()=>HV.cowos;
+addLabel("Base die","logic: routes 1024 or 2048 wires to the interposer",v=>v.set(HX+0.3,HB.baseY+0.12,HW/2+0.15),hbmG).show=()=>HV.stack;
+const lCore=addLabel("Core DRAM dies","n-Hi, thinned, TSV-drilled",v=>v.set(HX-HW/2-0.15,stackG.userData.top*0.55+S.explode*GENS[S.gen].n*0.1,0.3),hbmG); lCore.show=()=>HV.stack&&HV.nDies>0;
+const lTsv=addLabel("TSVs","through-silicon vias: the vertical wires",v=>v.set(HX-0.2,stackG.userData.top+0.3+S.explode*GENS[S.gen].n*0.22,-0.6),hbmG); lTsv.show=()=>HV.stack&&HV.nDies>0;
+addLabel("Core DRAM die, TSV-drilled","&gt;20,000 copper vias per die at HBM4",v=>v.set(HX,0.02+0.5*HV.soloT+0.2,0),hbmG).show=()=>HV.solo&&HV.soloT>0.6;
+addLabel("Thinned to 30–50 µm","TSVs now show through both faces",v=>v.set(HX,0.02+0.5*HV.soloT+0.2,0),hbmG).show=()=>HV.solo&&HV.soloT<=0.6;
+const lBond=addLabel("Bond layer","micro-bumps + underfill / NCF film",v=>v.set(HX+HW/2+0.15,HB.baseY+HB.baseTh+0.75+S.explode*0.9,-0.7),hbmG); lBond.show=()=>S.bond!=="hyb"&&HV.stack&&HV.nDies>0;
+const lHyb=addLabel("Hybrid bond","Cu-to-Cu, no bumps, no gap",v=>v.set(HX+HW/2+0.15,HB.baseY+HB.baseTh+0.9+S.explode*0.9,-0.5),hbmG); lHyb.show=()=>S.bond==="hyb"&&HV.stack&&HV.nDies>0;
+const lLim=addLabel("Package-height ceiling","same height budget for 12-Hi and 16-Hi",v=>v.set(HX-1.35,H_LIMIT,1.35),hbmG); lLim.show=()=>S.explode<0.2&&HV.plane;
+addLabel("DDR5 package","one die, no TSVs, no stacking",v=>v.set(4.3,0.3,-1.6),hbmG).show=()=>HV.ddr;
+const lMold=addLabel("Molded underfill (MR-MUF)","one mold fills every gap at once",v=>v.set(HX+HW/2+0.55,stackG.userData.top+0.05,0.4),hbmG); lMold.show=()=>S.bond==="muf"&&S.explode<0.2&&HV.fill&&HV.stack;
 
 // ---------- resize ----------
 function resize(){ const b=$("#glbox"); const w=b.clientWidth, h=b.clientHeight; renderer.setSize(w,h,false); camera.aspect=w/h; camera.updateProjectionMatrix(); }
@@ -998,11 +1195,21 @@ let last=performance.now(), scanU=0;
 function tick(now){
   const dt=Math.min(0.05,(now-last)/1000); last=now;
   updateCamera();
+  if(WALK.on){
+    if(WALK.p<1){ WALK.p=Math.min(1,WALK.p+dt/2.6); $("#walkProg").style.width=(WALK.p*100)+"%"; }
+    else if(WALK.auto){ WALK.hold+=dt; if(WALK.hold>3.2){ if(WALK.i<walkSteps().length-1) walkGo(WALK.i+1); else { WALK.auto=false; renderWalk(); } } }
+  }
+  if(mode==="dram") layoutDram();
   if(mode==="log"){
     morphFin+=(morphFinT-morphFin)*Math.min(1,dt*4); morphBsp+=(morphBspT-morphBsp)*Math.min(1,dt*4);
     layoutLog(false);
-    scanG.visible=S.loop&&S.logView!=="feol";
-    if(S.loop){
+    const walkLitho=WALK.on&&(WALK.i===4||WALK.i===5);
+    scanG.visible=WALK.on?walkLitho:(S.loop&&S.logView!=="feol");
+    if(walkLitho){
+      const k=Math.min(NLAY-1,Math.max(0,LV.beol-1)); const topY=layerY[k].y+0.5;
+      scanU=(scanU+dt*0.9)%1; scanG.position.set(-LW/2+1+scanU*(LW-2),topY+0.9,Math.sin(scanU*6.28*2)*1.6);
+      beam.visible=beamCore.visible=true; beam.material.color.copy(WALK.i===4?col.accent:col.amber); beam.position.y=-0.55; beam.scale.set(1,1.6,1); beamCore.position.y=-0.55; beamCore.scale.y=1.6;
+    }else if(S.loop&&!WALK.on){
       stepT+=dt; if(stepT>1.1){ stepT=0; stepI=(stepI+1)%STEPS.length; if(stepI===0){ layerN=layerN%NODES[S.node].maskN+1; } showStep(); }
       const topY=layerY[NLAY-1].y+0.9;
       if(stepI===2){ scanU=(scanU+dt*0.9)%1; scanG.position.set(-LW/2+1+scanU*(LW-2),topY+0.9,Math.sin(scanU*6.28*2)*1.6); beam.visible=true; beamCore.visible=true; beam.material.color.copy(col.accent); beam.position.y=-0.55; beam.scale.set(1,1.6,1); beamCore.position.y=-0.55; beamCore.scale.y=1.6; }
