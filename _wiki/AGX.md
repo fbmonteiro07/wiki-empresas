@@ -5,17 +5,17 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AGX` (10-K + transcripts + decks; deck InvestorDay 2025-04-08 not read) · Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-25 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-28 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $1.3bn | $1.7bn |
 | Gross profit | $241m | $346m |
 | Gross margin | 18.9% | 20.2% |
-| EBITDA | $211m | $334m |
+| EBITDA | $210m | $334m |
 | EPS | $11.27 | $16.52 |
 | Capex | $11m | $8m |
-| OCF (≈EBITDA) | $211m | $334m |
+| OCF (≈EBITDA) | $210m | $334m |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

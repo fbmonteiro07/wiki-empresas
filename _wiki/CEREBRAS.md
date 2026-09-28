@@ -10,17 +10,17 @@
 _Wiki · generated 2026-06-20 · **recent IPO (priced 2026-05-13, first trade 2026-05-14, Nasdaq: CBRS) — limited public disclosure; no pre-IPO SEC filing history.** ✅ **BBG CONSENSUS ADDED 2026-09-10 — 13 analysts; see the snapshot block below.** Sources: corpus (`E:\equity_calls_transcripts\Semis\2026-05-06_Cerebras_IPO-UBS.md`, `E:\briefings\2026\2026-05-12-company-specific.md`) + web (S-1/A, press). Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-25 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-28 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $861m | $3.0bn |
-| Gross profit | $341m | $1.5bn |
-| Gross margin | 39.6% | 49.0% |
-| EBITDA | $-126m | $950m |
+| Revenue | $861m | $2.9bn |
+| Gross profit | $349m | $1.5bn |
+| Gross margin | 40.5% | 51.1% |
+| EBITDA | $-95m | $950m |
 | EPS | $-0.68 | $1.28 |
 | Capex | $1.5bn | $4.0bn |
-| OCF (≈EBITDA) | $-126m | $950m |
+| OCF (≈EBITDA) | $-95m | $950m |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

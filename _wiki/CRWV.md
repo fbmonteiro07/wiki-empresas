@@ -3,13 +3,13 @@
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\CRWV` (10-K FY2025, four 10-Qs, transcripts) · `E:\briefings\2026`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-25 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-28 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $12.8bn | $26.6bn |
-| Gross profit | $8.6bn | $18.8bn |
-| Gross margin | 67.2% | 70.7% |
+| Revenue | $12.8bn | $26.4bn |
+| Gross profit | $8.6bn | $18.6bn |
+| Gross margin | 67.1% | 70.6% |
 | EBITDA | $7.5bn | $16.7bn |
 | EPS | $-3.91 | $-2.01 |
 | Capex | $35.8bn | $47.6bn |
