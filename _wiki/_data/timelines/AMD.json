@@ -158,6 +158,27 @@
    "theme": "supply",
    "lean": "bull",
    "text": "AMD's packaging allocation is raised materially and the driver named — verbatim: 'Thanks to agentic AI and strong server CPU demand, we see AMD is able to get more capacity from TSMC plus ASE. We estimate AMD's total allocation to significantly increase to 300k in 2027, with the majority of the increase coming from ASE.' So this is the server-CPU/Venice leg rather than an MI-series allocation win, which lines up with the >$120B-by-2030 server-CPU TAM raise rather than the accelerator story. The split is the part that changes the read: Fubon's Figure 5 has AMD at just 7.2% (2026) → 7.0% (2027) of TSMC CoWoS = 84,300 → 132,300 wafers, so against a 300k total roughly 170k wafers — well over half of AMD's 2027 packaging — sits OUTSIDE TSMC CoWoS, at ASE. Read the two bases carefully: 132,300 is TSMC-only CoWoS, 300k is TSMC + ASE, and neither is comparable to NVDA's 945,000 TSMC-CoWoS wafers (whose own total is 1.03mn once SPIL is counted). Corroborating the ASE leg, Fubon raises ASE's FoCoS capacity forecast to 50kwpm for 2027 'to support CPU and networking customers' demand' (from its own 45k, and 30k before that) — the same event seen from two sides, since Venice CPU packaging sits at ASE FoCoS. Field context for how favourable this is: NVDA holds flat at 50.0%, AVGO is trimmed to 22.3% from Fubon's own 24-25%, and only AMD and MediaTek (7.3% / 137,700) take incremental 2027 allocation; ASE is Fubon's top pick on Vera + Venice exposure and the house is explicitly more confident in the CPU/SPE/TPU chains than in the NVDA GPU chain. Cost item on the other side: HBM4 runs US$35-36/GB for 'other GPU and custom-ASIC projects' vs US$31-32/GB for NVDA."
+  },
+  {
+   "date": "2026-09-24",
+   "src": "Goldman Sachs · Eric Sheridan / Gabriela Borges / Jim Schneider (hyperscaler ROIC note)",
+   "theme": "demanda",
+   "lean": "neutral",
+   "text": "GS uses AMD's own $15-20bn revenue opportunity per GW at the $17.5bn midpoint and models 1/2/3 GW of AMD deployments in 2026/27/28 on datacenter GPU revenue of $15.7bn/$42.3bn/$56.0bn, at $35bn of capex per GW — ~5-6% of its ~20/35/57 GW industry build each year, with the merchant share shift going to AVGO and MediaTek. GPU-only line; not an AMD rating note."
+  },
+  {
+   "date": "2026-09-24",
+   "src": "Jefferies · Brent Thill et al. (AI Summit recap)",
+   "theme": "demanda",
+   "lean": "bull",
+   "text": "Notable Capital at Jefferies' AI Summit: 'With Nvidia and AMD sold out, companies raising $100M to $1B are not even relevant enough to make the customer list'; chip vendors 'largely sold out' and limited compute the largest growth headwind for AI-natives. AMD listed BUY $614.61; no rating action."
+  },
+  {
+   "date": "2026-09-28",
+   "src": "SemiAnalysis · Kimbo Chen / Dylan Patel et al. (InferenceX on GLM-5.3)",
+   "theme": "competicao",
+   "lean": "bear",
+   "text": "InferenceX (AgentX 09-17 snapshot) on GLM-5.3: MI355X (ATOM) $0.238 vs GB200 ~$0.044 per M total tokens at 150 tok/s (GB200 −82%); GB200 −52% at 100 tok/s and −62% at 125; $28.52 vs $5.92 per M output tokens. Offset: MI355X p90 TTFT 1.3-1.7s vs 14-19s for GB200; with TTFT <2s, MI355X (SGLang) $0.1265 vs B200 (Dynamo-SGLang) $0.0666 (−47%). Model-specific; contrasts the 09-16/09-19 Kimi K3 rows."
   }
  ],
  "evolution": {

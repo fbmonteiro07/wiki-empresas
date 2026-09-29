@@ -1,16 +1,14 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-09-28 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-09-29 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (38)
+## 📅 Upcoming (36)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-09-28 | CIEN | 🆕 **SPOKEN-LAYER ADDENDUM, 2026-09-28 — THE SUPPLY HALF OF THIS TEST NOW HAS A CLOCK.** (Joseph Cardoso (J.P. Morgan, Hardware & Networking) @ JPM 'Takeaways from ECOC, All Stars & Other Investor Even |
-| 2026-09-28 | COHR | **🆕 THE 70mW QUESTION — PUT IT TO MANAGEMENT: is the in-box NPO light source an InP CW laser at 70mW or a VCSEL, and what link budget makes 70mW sufficient where Lumentum says 150mW?** JPM relayed *"t |
-| 2026-09-28 | CRDO | 🆕 **SPOKEN-LAYER READOUT, 2026-09-28** (Joseph Cardoso (J.P. Morgan, Hardware & Networking) @ JPM 'Takeaways from ECOC, All Stars & Other Investor Events' call, 2026-09-28 — Capstone notes (Notion tra |
-| 2026-09-28 | LITE | **🆕 2H-CY27 / CY28 — THE IN-BOX NPO LIGHT-SOURCE DECISION (CW at 70-150mW vs VCSEL), AND WHICH WAY THE REMAINING IN-BOX ENGAGEMENTS GO.** JPM: VCSELs *"being explored in that back half of calendar 27  |
 | 2026-09-29 | MDB | **Investor Day, NYC, 2026-09-29** (+ .local NYC 09-30): Berry promised a "financial session" and Desai "new product innovations"; watch for a refreshed long-term model (Sept-2025 Investor Day model =  |
+| 2026-09-29 | MDB | 🆕🔴🔴 **CEO SUCCESSION — now the first item at the 2026-09-29 Investor Day.** META is hiring CJ Desai *"in their efforts to build an 'Enterprise Platform'"* (Bernstein · Peter Weed / Mark Moerdler "Quic |
+| 2026-09-29 | META | **🆕 THE "ENTERPRISE PLATFORM" — first hire, no product, no date.** CJ Desai (MongoDB CEO) hired *"in their efforts to build an 'Enterprise Platform'"* (Bernstein · Peter Weed / Mark Moerdler "Quick Ta |
 | 2026-09-30 | HPE | **🆕🔴 HPE NETWORKING ANALYST DAY — 2026-09-30.** This is where the *"segment returns to HPE's historical margin profile of mid-20s"* claim gets defended, dated, or walked back. ➜ **It matters more than |
 | 2026-09-30 | MU | **🆕🔴🔴🔴 F4Q26 (Aug) PRINT — DUE ~2026-09-30, AND THE BOGEY SET IS NOW EXPLICIT AND COMPARABLE (full tables in `## Intra-quarter`, 09-23 block).** Quarter: guide **$50.0bn ± $1bn / ~86% GM / $31.00 ± $1 |
 | 2026-09-30 | SKHYNIX | **🆕🔴 By 2026-09-30 — HBM CONTRACT PRICE UPDATE.** Named by JPM (Kwon, 2026-08-19) as the #2 company-specific catalyst. **This is the one that moves earnings rather than the share count**, and it is th |
@@ -45,13 +43,17 @@ _Generated 2026-09-28 · parsed from every page's 'Catalysts / what to watch'. D
 | 2028-06-30 | NSCALE | 2028-06-30 — Monarch **2 GW gross / 1.37 GW IT online "by 1H28"** (Anthropic tranches; the wiki's first neocloud milestone tied to on-site gas turbines). |
 | 2031-12-31 | NSCALE | 2031-12-31 — Monarch expansion to ~8 GW gross planned. |
 
-## ⏰ Passed — need a post-mortem (0)
+## ⏰ Passed — need a post-mortem (5)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| _none_ | | |
+| 2026-09-28 | RDDT | **🆕 Reddit Max adoption by performance advertisers — the expert says Reddit is "heavily reaching out to performance advertisers to encourage them to adopt Reddit Max" and that the down-funnel skew is  |
+| 2026-09-28 | LITE | **🆕 2H-CY27 / CY28 — THE IN-BOX NPO LIGHT-SOURCE DECISION (CW at 70-150mW vs VCSEL), AND WHICH WAY THE REMAINING IN-BOX ENGAGEMENTS GO.** JPM: VCSELs *"being explored in that back half of calendar 27  |
+| 2026-09-28 | CRDO | 🆕 **SPOKEN-LAYER READOUT, 2026-09-28** (Joseph Cardoso (J.P. Morgan, Hardware & Networking) @ JPM 'Takeaways from ECOC, All Stars & Other Investor Events' call, 2026-09-28 — Capstone notes (Notion tra |
+| 2026-09-28 | COHR | **🆕 THE 70mW QUESTION — PUT IT TO MANAGEMENT: is the in-box NPO light source an InP CW laser at 70mW or a VCSEL, and what link budget makes 70mW sufficient where Lumentum says 150mW?** JPM relayed *"t |
+| 2026-09-28 | CIEN | 🆕 **SPOKEN-LAYER ADDENDUM, 2026-09-28 — THE SUPPLY HALF OF THIS TEST NOW HAS A CLOCK.** (Joseph Cardoso (J.P. Morgan, Hardware & Networking) @ JPM 'Takeaways from ECOC, All Stars & Other Investor Even |
 
 ## ✅ Resolved (213)
 

@@ -1,6 +1,6 @@
 # Edge tracker — house vs Street
 
-_Generated 2026-09-28 · the standing view of where our model and the curated reconciliation runs disagree with consensus. Divergence = candidate alpha; agreement is noise. Rebuild: `py _wiki/_tools/build_edge.py`._
+_Generated 2026-09-29 · the standing view of where our model and the curated reconciliation runs disagree with consensus. Divergence = candidate alpha; agreement is noise. Rebuild: `py _wiki/_tools/build_edge.py`._
 
 > ⚠️ Programmatic rows are auto-computed (house.json vs estimates.json, USD names only) — **verify the basis before trading** (revenue gross/net/TAC differences can masquerade as edge). Curated rows below are analyst-vetted.
 
@@ -12,17 +12,32 @@ _Generated 2026-09-28 · the standing view of where our model and the curated re
 | GOOG | Revenue $bn | 2027 | 641.00 | 544.10 | +18% |
 | AAPL | EPS | 2026 | 10.12 | 8.76 | +16% |
 
-## Curated divergences — latest reconciliation (`reconciliation-2026-09-24-night.md`)
+## Curated divergences — latest reconciliation (`reconciliation-2026-09-28-inbox.md`)
 
 | Name | New datapoint | Read (the edge) |
 |---|---|---|
-| D1 | **DB rating history: Hold since 2024-11-12; Hold $105 on 2026-05-29; Hold $150 set 2026-08-27** (DB p.5 table) | 🔴 **The wiki was wrong, not the Street.** Corrected on the page with the old value in `## Changelog`. Any past "unanimous-ish Buy" reading of the OKTA ladder that counted DB as a Buy overstated bullishness by one house. |
-| D2 | **DB PT $150** (reaffirmed) | Lowest target on the wiki's ladder, but NOT the Street low — at least one un-ingested house sits at $127. **Recover who owns the $127.** |
-| D3 | **Agent-product price ≈ 75% uplift on core** (one Energy CISO: $1.5m/yr vs $2m core; beta since Dec) | ⚠️ Single account, beta pricing, a quote. Above mgmt's range — but DB uses it to argue pricing is **fragile** (competition coming), not conservative. Directional only; not written to any estimate. |
-| D4 | **Renewal pull-forward: Jan-2027 renewal pulled into Aug-2026** (VAR #3) | Qualitative but directly bears on the F3Q27 cRPO print (~2026-12-02): cRPO beat without sub-revenue acceleration = DB/Bernstein bear case. Adds a second, independent mechanism to the same-direction risk. |
+| META | house capex $301bn vs Street $333-337bn CY26-27 (−10%); GS Buy PT $725 sits BELOW the consensus PT | house capex $301bn vs Street $333-337bn CY26-27 (−10%); GS Buy PT $725 sits BELOW the consensus PT |
+| AVGO | house AI-semis revenue ABOVE Goldman's bottom-up AND above BBG total revenue | house AI-semis revenue ABOVE Goldman's bottom-up AND above BBG total revenue |
+| NVDA | same revenue, different GW × $/GW decomposition (GS fewer GW at higher $/GW than the house) | same revenue, different GW × $/GW decomposition (GS fewer GW at higher $/GW than the house) |
+| BKNG | Jefferies initiates the page's first HOLD, PT $200, near the Street LOW | Jefferies initiates the page's first HOLD, PT $200, near the Street LOW |
+| MEDIATEK | Goldman's 2027 datacenter-ASIC revenue is ABOVE the company's own guide | Goldman's 2027 datacenter-ASIC revenue is ABOVE the company's own guide |
+| MSFT and AMZN | the pages were carrying stale PTs (thesis-drift caught by the coverage tables, not by a rating action) | the pages were carrying stale PTs (thesis-drift caught by the coverage tables, not by a rating action) |
+| RDDT | the agency expert's wallet-share growth (+20-25%/yr) is BELOW the Street's revenue growth (+32%) | the agency expert's wallet-share growth (+20-25%/yr) is BELOW the Street's revenue growth (+32%) |
+| LRCX | DB's FY27/FY28 EPS are 1.5% / 4% above the snapshot; the printed 2026A P/E does not reconcile | DB's FY27/FY28 EPS are 1.5% / 4% above the snapshot; the printed 2026A P/E does not reconcile |
 
-## Consensus PT vs spot — live pull in `reconciliation-2026-09-24-night.md` (upside ranked)
+## Consensus PT vs spot — live pull in `reconciliation-2026-09-28-inbox.md` (upside ranked)
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|
-| _no live pull_ | | | | |
+| ORCL | 133 | 240 | +81% | street high 400 · low 110 below spot · 41/8/1 of 50 |
+| AVGO | 350 | 530 | +52% | street high 715 · low 350 ABOVE spot · 58/4/0 of 62 |
+| RDDT | 143 | 214 | +50% | street high 300 · low 130 below spot · 23/11/2 of 36 |
+| SPCX | 145 | 217 | +49% | street high 800 · low 75 below spot · 36/7/4 of 47 |
+| BKNG | 164 | 239 | +46% | street high 301 · low 188 ABOVE spot · 33/9/0 of 42 |
+| NVDA | 229 | 323 | +41% | street high 515 · low 180 below spot · 79/2/1 of 82 |
+| AMZN | 246 | 331 | +34% | street high 405 · low 230 below spot · 77/4/0 of 81 |
+| LRCX | 314 | 376 | +19% | street high 475 · low 285 below spot · 31/6/0 of 37 |
+| MSFT | 509 | 570 | +12% | street high 700 · low 400 below spot · 69/3/0 of 72 |
+| MEDIATEK | 5,285 | 5,915 | +12% | street high 10,369 · low 1,751 below spot · 31/1/0 of 32 |
+| META | 716 | 789 | +10% | street high 1,000 · low 580 below spot · 72/6/1 of 79 |
+| AMD | 608 | 632 | +4% | street high 1,250 · low 465 below spot · 56/12/0 of 68 |

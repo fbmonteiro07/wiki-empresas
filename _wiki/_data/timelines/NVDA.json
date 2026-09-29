@@ -242,6 +242,27 @@
    "theme": "produto",
    "lean": "mixed",
    "text": "The fullest account yet of what replaces Kyber, plus the HBM/ASP BOM. Kyber was cancelled/delayed in March/April on mid-plane bandwidth issues; it carried 576 compute dies per rack (144 GPUs × 4 compute dies) and Fubon's checks say NVDA still plans to preserve the same 576 compute dies, via one of two designs: (a) the conservative option, stay on the current Oberon rack with one system built from four racks connected by traditional scale-out (144 compute dies each, 4 × 144 = 576); or (b) a two-rack design Fubon calls 'Taycan' — each rack 144 GPUs × 2 compute dies, with NPO/CPO used for the scale-out connection BETWEEN the two racks and cable retained for scale-up inside each rack. Neither is finalised, so Fubon explicitly declines to name winners and losers ('difficult to say who will benefit and who will suffer'); the one directional call it makes is that 'we think nVidia is still aggressive in the NPO/CPO solution despite a lot of market noise.' On the BOM, a relative-advantage datapoint: HBM4 costs NVDA US$31-32/GB, up from US$17-18/GB for HBM3e in 2026, but 'for other GPU and custom-ASIC projects, we believe their HBM cost will be higher than nVidia's and may reach US$35-36 per GB, meaning the HBM cost will double in 2027' — so HBM inflation is real (~+80% for NVDA) but NVDA buys ~10-15% cheaper than the merchant/ASIC field, a scale edge that partly offsets the ASIC-TCO bear. On that BOM Fubon models the Rubin GPU price 'skyrocketing' to US$78-80K assuming NVDA holds a 75-80% chip gross margin."
+  },
+  {
+   "date": "2026-09-24",
+   "src": "Goldman Sachs · Eric Sheridan / Gabriela Borges / Jim Schneider (hyperscaler ROIC note)",
+   "theme": "competicao",
+   "lean": "mixed",
+   "text": "GS semis bottom-up (Exhibit 3): NVDA 14/18/22 GW of AI deployments in 2026/27/28 at $50bn/GW of total capex, inside an industry build of ~20/35/57 GW (~$1.3tn 2027, ~$2.0tn 2028) — NVDA's share of GW falls from ~70% to ~39% as AVGO (5→20 GW) and MediaTek (0.4→11 GW) ramp (house arithmetic). Revenue-per-GW ladder restated from the company: Blackwell ~$25bn, Rubin ~$40bn; GS assumes ~$45bn for Feynman. Not an NVDA rating note."
+  },
+  {
+   "date": "2026-09-24",
+   "src": "Jefferies · Brent Thill et al. (AI Summit recap)",
+   "theme": "demanda",
+   "lean": "bull",
+   "text": "Notable Capital at Jefferies' AI Summit: 'With Nvidia and AMD sold out, companies raising $100M to $1B are not even relevant enough to make the customer list'; stays bullish on NVDA 'which still trades at a discount to the market'. Jefferies: the compute imbalance could stretch beyond the 2028-29 many investors expect. Exa says AWS inference chips are 'good enough' though it still largely uses NVDA. NVDA listed BUY $225.51; no rating action."
+  },
+  {
+   "date": "2026-09-28",
+   "src": "SemiAnalysis · Kimbo Chen / Dylan Patel et al. (InferenceX on GLM-5.3)",
+   "theme": "competicao",
+   "lean": "bull",
+   "text": "InferenceX (AgentX 09-17 snapshot) on GLM-5.3: GB300 the lowest modelled serving cost at 150 tok/s; GB200 ~$0.044 vs $0.238 per M total tokens for AMD MI355X/ATOM at 150 tok/s (−82%), −52% at 100 and −62% at 125; $5.92 vs $28.52 per M output tokens. Caveat: GB200 p90 TTFT 14-19s vs 1.3-1.7s; with TTFT <2s, B200 $0.0666 vs MI355X $0.1265 (−47%)."
   }
  ],
  "evolution": {
