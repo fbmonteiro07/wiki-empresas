@@ -1,32 +1,62 @@
 {
   "asof": "2026-10-01",
-  "latest_reconciliation": "reconciliation-2026-09-28-inbox.md",
+  "latest_reconciliation": "reconciliation-2026-10-01-inbox.md",
   "book": {
     "asof": "2026-07-01",
     "seed": true,
     "positions": 8
   },
   "stats": {
-    "signals": 119,
-    "active": 119,
-    "high": 12,
-    "belief_changes": 21,
-    "focus_names": 53
+    "signals": 133,
+    "active": 133,
+    "high": 16,
+    "belief_changes": 22,
+    "focus_names": 56
   },
   "focus": [
     {
       "ticker": "NVDA",
       "focus_score": 97,
       "in_book": true,
-      "signal_count": 8,
-      "high_count": 1,
+      "signal_count": 9,
+      "high_count": 2,
       "sector": "AI — Semis & Compute",
       "thesis": "Full-stack AI-factory platform at +85% rev; debate is demand sustainability vs ASIC erosion.",
       "next_catalyst": "2026-10-20",
       "why": [
         "NVDA — derived thesis/debate state changed since the prior daily snapshot",
-        "NVDA — same revenue, different GW × $/GW decomposition (GS fewer GW at higher $/GW than the house)",
+        "NVDA — Fubon's 2027 GPU shipments are 53% above the house's chip count",
         "NVDA — 2026-10-20: 2026-10-20 to 10-22: NVIDIA GTC Berlin (JPM US Market Intelligence calendar, 09-29/09-30);…"
+      ]
+    },
+    {
+      "ticker": "GOOG",
+      "focus_score": 95,
+      "in_book": true,
+      "signal_count": 6,
+      "high_count": 4,
+      "sector": "AI — Hyperscalers & Software",
+      "thesis": "Full-stack compounder (Search +17%, Cloud +82%); debate is valuation and capital intensity, not demand.",
+      "next_catalyst": "2026-10-01",
+      "why": [
+        "GOOG — derived thesis/debate state changed since the prior daily snapshot",
+        "GOOG — 2026 revenue house view is 18% above consensus",
+        "GOOG — 2027 revenue house view is 18% above consensus"
+      ]
+    },
+    {
+      "ticker": "META",
+      "focus_score": 95,
+      "in_book": true,
+      "signal_count": 6,
+      "high_count": 2,
+      "sector": "AI — Hyperscalers & Software",
+      "thesis": "Fastest grower in Mag7 ex-GPU; bear = capital intensity and negative incremental ROIC.",
+      "next_catalyst": "",
+      "why": [
+        "META — derived thesis/debate state changed since the prior daily snapshot",
+        "META — house CY27 capex is $28bn (−14%) below the Street; Barclays gives Muse's cost per user",
+        "META — house capex $301bn vs Street $333-337bn CY26-27 (−10%); GS Buy PT $725 sits BELOW the consensus PT"
       ]
     },
     {
@@ -45,21 +75,6 @@
       ]
     },
     {
-      "ticker": "GOOG",
-      "focus_score": 93,
-      "in_book": true,
-      "signal_count": 5,
-      "high_count": 4,
-      "sector": "AI — Hyperscalers & Software",
-      "thesis": "Full-stack compounder (Search +17%, Cloud +82%); debate is valuation and capital intensity, not demand.",
-      "next_catalyst": "2026-10-01",
-      "why": [
-        "GOOG — derived thesis/debate state changed since the prior daily snapshot",
-        "GOOG — 2026 revenue house view is 18% above consensus",
-        "GOOG — 2027 revenue house view is 18% above consensus"
-      ]
-    },
-    {
       "ticker": "AMZN",
       "focus_score": 93,
       "in_book": true,
@@ -72,21 +87,6 @@
         "AMZN — derived thesis/debate state changed since the prior daily snapshot",
         "MSFT and AMZN — the pages were carrying stale PTs (thesis-drift caught by the coverage tables, not by a rating action)",
         "AMZN — Bernstein is +16% / +27% above consensus on FY27 / FY28 EBIT and still carries a PT below consensus"
-      ]
-    },
-    {
-      "ticker": "META",
-      "focus_score": 93,
-      "in_book": true,
-      "signal_count": 5,
-      "high_count": 1,
-      "sector": "AI — Hyperscalers & Software",
-      "thesis": "Fastest grower in Mag7 ex-GPU; bear = capital intensity and negative incremental ROIC.",
-      "next_catalyst": "",
-      "why": [
-        "META — derived thesis/debate state changed since the prior daily snapshot",
-        "META — house capex $301bn vs Street $333-337bn CY26-27 (−10%); GS Buy PT $725 sits BELOW the consensus PT",
-        "META — JPM's PT went up 28% on zero change to earnings"
       ]
     },
     {
@@ -106,17 +106,76 @@
     },
     {
       "ticker": "AVGO",
-      "focus_score": 89,
+      "focus_score": 91,
       "in_book": true,
-      "signal_count": 3,
+      "signal_count": 4,
       "high_count": 1,
       "sector": "AI — Semis & Compute",
       "thesis": "#1 custom-ASIC/TPU partner; binary setup on the \">$100B\" FY27 guide vs $250-300B FY28 (JPM).",
       "next_catalyst": "2026-10-06",
       "why": [
         "AVGO — derived thesis/debate state changed since the prior daily snapshot",
-        "AVGO — 2026-10-06: 2026-10-01 NDR and 2026-10-06 MRVL Investor Day as the read-through pair for the 09-29…",
-        "AVGO — house AI-semis revenue ABOVE Goldman's bottom-up AND above BBG total revenue"
+        "Celestica (no wiki page) — Bernstein 2027 EPS is +20% above consensus; PT near the Street high",
+        "AVGO — 2026-10-06: 2026-10-01 NDR and 2026-10-06 MRVL Investor Day as the read-through pair for the 09-29…"
+      ]
+    },
+    {
+      "ticker": "TSM",
+      "focus_score": 82,
+      "in_book": true,
+      "signal_count": 2,
+      "high_count": 2,
+      "sector": "AI — Semis & Compute",
+      "thesis": "Sole-source leading-edge foundry (~70% share); pricing headroom vs overseas-fab dilution.",
+      "next_catalyst": "2026-10-01",
+      "why": [
+        "TSM — JPM capex US$86 / 100bn for 2027/28 is +14% / +16% above consensus; house 2026 line stale",
+        "TSM — 2026-10-01: JPM's call bogeys for Oct-15 (Gokul Hariharan (J.P. Morgan) @ JPM 'TSMC: 3Q26 Preview'…"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "focus_score": 74,
+      "in_book": false,
+      "signal_count": 5,
+      "high_count": 0,
+      "sector": "AI — Semis & Compute",
+      "thesis": "AI-infra long with a server-CPU leg; risk concentrated in MI450 execution.",
+      "next_catalyst": "",
+      "why": [
+        "Celestica (no wiki page) — Bernstein 2027 EPS is +20% above consensus; PT near the Street high",
+        "AMD — catalyst passed without a logged outcome",
+        "AMD — catalyst passed without a logged outcome"
+      ]
+    },
+    {
+      "ticker": "LITE",
+      "focus_score": 74,
+      "in_book": false,
+      "signal_count": 6,
+      "high_count": 0,
+      "sector": "Optical / Networking",
+      "thesis": "US photonics pure-play (rev +90%); demand isn't the question, supply/execution is.",
+      "next_catalyst": "2026-10-01",
+      "why": [
+        "LITE / COHR (optics TAM) — Bernstein's transceiver market is 2.3x Goldman's for 2028; no \"2028 pause\"",
+        "LITE — derived thesis/debate state changed since the prior daily snapshot",
+        "LITE — 2026-10-01: CORROBORATED IN THE CEO'S OWN VOICE, 2026-10-01 ingest (Michael Hurlston (Lumentum CEO) @…"
+      ]
+    },
+    {
+      "ticker": "COHR",
+      "focus_score": 72,
+      "in_book": false,
+      "signal_count": 5,
+      "high_count": 0,
+      "sector": "Optical / Networking",
+      "thesis": "InP chokepoint in AI interconnect; NVIDIA stake + CPO deal; bear is relative vs LITE.",
+      "next_catalyst": "2026-10-08",
+      "why": [
+        "LITE / COHR (optics TAM) — Bernstein's transceiver market is 2.3x Goldman's for 2028; no \"2028 pause\"",
+        "COHR — house Neutral $285 is the Street's second-lowest PT; Bernstein OP $350 sits below the consensus median",
+        "COHR — 2026-10-08: MS Lunch \"Global Hardware & Optical\" with Andy Meng, Howard Kao, Derrick Yang, Meta…"
       ]
     },
     {
@@ -150,6 +209,21 @@
       ]
     },
     {
+      "ticker": "MU",
+      "focus_score": 68,
+      "in_book": false,
+      "signal_count": 4,
+      "high_count": 0,
+      "sector": "AI — Semis & Compute",
+      "thesis": "Pure-play on AI memory intensity (HBM sold-out CY26); debate = peak earnings vs run-rate.",
+      "next_catalyst": "2026-10-01",
+      "why": [
+        "MU — derived thesis/debate state changed since the prior daily snapshot",
+        "MU — FY27 consensus is post-print on the quarter but not on the year; capex consensus sits below the implied floor",
+        "MU — 2026-10-01: Dec 9 buyback start, now with a (UBS) pacing bogey. Management told UBS on a private…"
+      ]
+    },
+    {
       "ticker": "ANTHROPIC",
       "focus_score": 66,
       "in_book": false,
@@ -180,6 +254,21 @@
       ]
     },
     {
+      "ticker": "SKHYNIX",
+      "focus_score": 66,
+      "in_book": false,
+      "signal_count": 3,
+      "high_count": 0,
+      "sector": "Memory & storage",
+      "thesis": "#1 HBM, NVDA's primary supplier, sold out through 2026; bear = HBM4 commoditization. ₩, no SEC.",
+      "next_catalyst": "2026-11-19",
+      "why": [
+        "SKHYNIX — derived thesis/debate state changed since the prior daily snapshot",
+        "SKHYNIX — catalyst passed without a logged outcome",
+        "MU / SKHYNIX (memory price path) — Fubon's DRAM contract price falls 16% from the 2Q27 peak while Micron says supply stays constrained through CY28"
+      ]
+    },
+    {
       "ticker": "SNPS",
       "focus_score": 66,
       "in_book": false,
@@ -192,21 +281,6 @@
         "SNPS — derived thesis/debate state changed since the prior daily snapshot",
         "SNPS — catalyst passed without a logged outcome",
         "SNPS — 2026-10-01: BofA group call on MU print + SNPS Investor Day takeaways with Vivek Arya; BofA CFO/IR…"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "focus_score": 64,
-      "in_book": false,
-      "signal_count": 4,
-      "high_count": 0,
-      "sector": "AI — Semis & Compute",
-      "thesis": "AI-infra long with a server-CPU leg; risk concentrated in MI450 execution.",
-      "next_catalyst": "",
-      "why": [
-        "AMD — catalyst passed without a logged outcome",
-        "AMD — catalyst passed without a logged outcome",
-        "AMD — management's headline EPS ambition is not above the Street, and the $100bn server goal sits past the Street's horizon"
       ]
     },
     {
@@ -238,20 +312,6 @@
       ]
     },
     {
-      "ticker": "MU",
-      "focus_score": 64,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "AI — Semis & Compute",
-      "thesis": "Pure-play on AI memory intensity (HBM sold-out CY26); debate = peak earnings vs run-rate.",
-      "next_catalyst": "2026-10-01",
-      "why": [
-        "MU — derived thesis/debate state changed since the prior daily snapshot",
-        "MU — 2026-10-01: the post-print calendar, dated. (1) 10-01 8am ET BofA · Vivek Arya MU + SNPS takeaways…"
-      ]
-    },
-    {
       "ticker": "NET",
       "focus_score": 64,
       "in_book": false,
@@ -277,20 +337,6 @@
       "why": [
         "RDDT — derived thesis/debate state changed since the prior daily snapshot",
         "RDDT — the agency expert's wallet-share growth (+20-25%/yr) is BELOW the Street's revenue growth (+32%)"
-      ]
-    },
-    {
-      "ticker": "SKHYNIX",
-      "focus_score": 64,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "Memory & storage",
-      "thesis": "#1 HBM, NVDA's primary supplier, sold out through 2026; bear = HBM4 commoditization. ₩, no SEC.",
-      "next_catalyst": "2026-11-19",
-      "why": [
-        "SKHYNIX — derived thesis/debate state changed since the prior daily snapshot",
-        "SKHYNIX — catalyst passed without a logged outcome"
       ]
     },
     {
@@ -364,15 +410,16 @@
     },
     {
       "ticker": "GLW",
-      "focus_score": 58,
+      "focus_score": 60,
       "in_book": false,
-      "signal_count": 1,
+      "signal_count": 2,
       "high_count": 0,
       "sector": "Optical / Networking",
       "thesis": "Re-rate to AI-infra (Optical +36%, Meta/Nvidia LTAs); bear = valuation + CPO payoff 2028+.",
       "next_catalyst": "",
       "why": [
-        "GLW — catalyst passed without a logged outcome"
+        "GLW — catalyst passed without a logged outcome",
+        "CSCO / GLW — Bernstein's two Market-Performs are at or near the Street LOW on PT, with estimates in line"
       ]
     },
     {
@@ -429,18 +476,31 @@
       ]
     },
     {
-      "ticker": "LITE",
-      "focus_score": 45,
+      "ticker": "CSCO",
+      "focus_score": 48,
       "in_book": false,
-      "signal_count": 3,
+      "signal_count": 1,
       "high_count": 0,
       "sector": "Optical / Networking",
-      "thesis": "US photonics pure-play (rev +90%); demand isn't the question, supply/execution is.",
-      "next_catalyst": "2026-10-08",
+      "thesis": "Incumbent re-rating to AI-infra (orders +35%); bear prefers ANET, flags pull-forward.",
+      "next_catalyst": "",
       "why": [
-        "LITE — 2026-10-14: CITI'S CATALYST WATCH (UPSIDE) EXPIRES. A dated, mechanical sell-side event with a…",
-        "LITE — 2026-10-08: MS Lunch \"Global Hardware & Optical\" with Andy Meng, Howard Kao, Derrick Yang, Meta…",
-        "Optical: a falsifiable engineering attack on COHR's laser — and the \"LITE wins\" read does not follow"
+        "CSCO / GLW — Bernstein's two Market-Performs are at or near the Street LOW on PT, with estimates in line"
+      ]
+    },
+    {
+      "ticker": "CIEN",
+      "focus_score": 47,
+      "in_book": false,
+      "signal_count": 4,
+      "high_count": 0,
+      "sector": "Optical / Networking",
+      "thesis": "Optical/DCI leader; demand outruns supply, debate purely valuation (~85x NTM).",
+      "next_catalyst": "",
+      "why": [
+        "CIEN — Outperform with a PT 15% below consensus, on a PT basis that mislabels the year",
+        "CIEN 2029: the revenue target is already in the curve; the entire surprise is margin — but the comparison is a year offset and must be labelled as such",
+        "CIEN: management's own \"~5x cash generated from operations\" does not close against the published FY25 base"
       ]
     },
     {
@@ -455,21 +515,6 @@
       "why": [
         "SMTC — latest earnings transcript absent",
         "SMTC — 2026-10-15: INVESTOR / ANALYST DAY, San Jose. The single most important dated event on this page,…"
-      ]
-    },
-    {
-      "ticker": "COHR",
-      "focus_score": 44,
-      "in_book": false,
-      "signal_count": 3,
-      "high_count": 0,
-      "sector": "Optical / Networking",
-      "thesis": "InP chokepoint in AI interconnect; NVIDIA stake + CPO deal; bear is relative vs LITE.",
-      "next_catalyst": "2026-10-08",
-      "why": [
-        "COHR — 2026-10-08: MS Lunch \"Global Hardware & Optical\" with Andy Meng, Howard Kao, Derrick Yang, Meta…",
-        "Optical: a falsifiable engineering attack on COHR's laser — and the \"LITE wins\" read does not follow",
-        "COHR — 2026-11-12: 2026-11-12 → 11-20 — COHR Asia NDR with Jefferies (Blayne Curtis) (Jefferies trading desk…"
       ]
     },
     {
@@ -496,6 +541,19 @@
       "next_catalyst": "2026-11-12",
       "why": [
         "SPCX — 2026-11-12: OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.…"
+      ]
+    },
+    {
+      "ticker": "ANET",
+      "focus_score": 41,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Optical / Networking",
+      "thesis": "Best-positioned merchant AI-Ethernet name; risk = 2H26 backlog drawdown + rich multiple.",
+      "next_catalyst": "",
+      "why": [
+        "ANET — Bernstein 2027 revenue is +9-14% above consensus, but the note prints three different figures"
       ]
     },
     {
@@ -553,35 +611,6 @@
       ]
     },
     {
-      "ticker": "CIEN",
-      "focus_score": 39,
-      "in_book": false,
-      "signal_count": 3,
-      "high_count": 0,
-      "sector": "Optical / Networking",
-      "thesis": "Optical/DCI leader; demand outruns supply, debate purely valuation (~85x NTM).",
-      "next_catalyst": "",
-      "why": [
-        "CIEN 2029: the revenue target is already in the curve; the entire surprise is margin — but the comparison is a year offset and must be labelled as such",
-        "CIEN: management's own \"~5x cash generated from operations\" does not close against the published FY25 base",
-        "CIEN: the \"$8.3–8.4B FY27 floor\" is arithmetically EMPTY, and consensus had already cleared it before it was published"
-      ]
-    },
-    {
-      "ticker": "MEDIATEK",
-      "focus_score": 38,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "AI — Semis & Compute",
-      "thesis": "World's largest mobile-SoC vendor pivoting into a data-center custom-ASIC house (Google TPU v8t/v9/v10 roadmap); JPM sees DC ~30% of rev 2027 → ~60% 2028; GS PT",
-      "next_catalyst": "2026-10-26",
-      "why": [
-        "MEDIATEK — Goldman's 2027 datacenter-ASIC revenue is ABOVE the company's own guide",
-        "MEDIATEK — 2026-10-26: 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR \"POTENTIAL…"
-      ]
-    },
-    {
       "ticker": "AMAT",
       "focus_score": 37,
       "in_book": false,
@@ -610,16 +639,17 @@
       ]
     },
     {
-      "ticker": "BKNG",
-      "focus_score": 36,
+      "ticker": "MEDIATEK",
+      "focus_score": 37,
       "in_book": false,
-      "signal_count": 1,
+      "signal_count": 2,
       "high_count": 0,
-      "sector": "Consumer / Internet / Other",
-      "thesis": "World's #1 OTA; binary debate on agentic LLMs (TAM expander vs disintermediation).",
-      "next_catalyst": "2027-01-01",
+      "sector": "AI — Semis & Compute",
+      "thesis": "World's largest mobile-SoC vendor pivoting into a data-center custom-ASIC house (Google TPU v8t/v9/v10 roadmap); JPM sees DC ~30% of rev 2027 → ~60% 2028; GS PT",
+      "next_catalyst": "2026-10-26",
       "why": [
-        "BKNG — Jefferies initiates the page's first HOLD, PT $200, near the Street LOW"
+        "MEDIATEK — Goldman's 2027 datacenter-ASIC revenue is ABOVE the company's own guide",
+        "MEDIATEK — 2026-10-26: 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR \"POTENTIAL…"
       ]
     },
     {
@@ -637,8 +667,21 @@
       ]
     },
     {
+      "ticker": "BKNG",
+      "focus_score": 35,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Consumer / Internet / Other",
+      "thesis": "World's #1 OTA; binary debate on agentic LLMs (TAM expander vs disintermediation).",
+      "next_catalyst": "2027-01-01",
+      "why": [
+        "BKNG — Jefferies initiates the page's first HOLD, PT $200, near the Street LOW"
+      ]
+    },
+    {
       "ticker": "LRCX",
-      "focus_score": 36,
+      "focus_score": 35,
       "in_book": false,
       "signal_count": 1,
       "high_count": 0,
@@ -772,7 +815,7 @@
       "impact": "high",
       "urgency": "immediate",
       "confidence": "high",
-      "why_now": "(/wiki-ingest 21h run of 09-30, completed 10-01) — 6 log rows (MS Woodring PT $355 note; UBS Vogt Evidence Lab; BofA Mohan intent-layer; Jefferies Edison iPhone 18 tracking; press/tape/Ternus/Duo/Apple Pay; MS desk direct payments) + 1 Current-state block + 1 Debate block + 1 Catalysts bullet + Sinal note. Superseded: MS · Woodring PT $360 → $355; MS CY27 EPS $10.30 → $10.15; MS FY27 GM −20bps to 46.9% (prior level not stated on the page); MS iPhone Sep/Dec-quarter shipments raised 2-6% to 57M/76M (prior level…",
+      "why_now": "ingest (Notion, 2026-10-01JPMorganTSMC-3Q26-preview-call-Hariharan.md): added JPM/Gokul's supply-chain read of a possible 2H28 iPhone move to A14 (60-80k wafer starts by 2Q28, not in JPM numbers), Apple as a 2027 N2 driver and the +~10% like-for-like pricing (Intra-quarter). Nothing superseded.",
       "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
       "action": "Re-grade the AAPL thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
       "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
@@ -796,7 +839,7 @@
       "evidence_paths": [
         "AAPL.md"
       ],
-      "evidence_anchor": "(/wiki-ingest 21h run of 09-30, completed 10-01) — 6 log rows (MS Woodring PT $355 note; UBS Vogt Evidence Lab; BofA Mohan intent-layer; Jefferies Edison iPhone 18 tracking; press/tape/Ternus/Duo/Apple Pay; MS desk direct payments) + 1 Current-state block + 1 Debate block + 1 Catalysts bullet + Sinal note. Superseded: MS · Woodring PT $360 → $355; MS CY27 EPS $10.30 → $10.15; MS FY27 GM −20bps to 46.9% (prior level not stated on the page); MS iPhone Sep/Dec-quarter shipments raised 2-6% to 57M/76M (prior level…",
+      "evidence_anchor": "ingest (Notion, 2026-10-01JPMorganTSMC-3Q26-preview-call-Hariharan.md): added JPM/Gokul's supply-chain read of a possible 2H28 iPhone move to A14 (60-80k wafer starts by 2Q28, not in JPM numbers), Apple as a 2027 N2 driver and the +~10% like-for-like pricing (Intra-quarter). Nothing superseded.",
       "origin": "belief_diff",
       "feedback": "",
       "feedback_note": "",
@@ -819,7 +862,7 @@
       "impact": "high",
       "urgency": "immediate",
       "confidence": "high",
-      "why_now": "(/wiki-ingest 21h run of 09-30, completed 10-01) — 8 log rows (Anthropic S-1 relay; MS/BofA Constellation PPA; Gold Circuit stake; BMO cloud check + AWS price notice + JPM ROIC; OpenAI DevDay read-through; Amazon Ads DVA+ / Branded Conversations; Jefferies Energy desk on Generac / Amazon generator orders; The Information on Apache Ossie membership) + 1 Current-state block + 1 Debate block + Sinal note. Nothing superseded — no AMZN rating, PT or house estimate appears in the new sources (GS Conviction List add is…",
+      "why_now": "ingest (Notion, 2026-10-01JPMorganTSMC-3Q26-preview-call-Hariharan.md): added JPM/Gokul's Trainium 3 volume marks (unchanged after +15%/+5-10% revisions; ~5m+ lifecycle), CoWoS-R expansion and the PCB constraint (Intra-quarter). Nothing superseded.",
       "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
       "action": "Re-grade the AMZN thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
       "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
@@ -878,7 +921,7 @@
       "evidence_paths": [
         "AMZN.md"
       ],
-      "evidence_anchor": "(/wiki-ingest 21h run of 09-30, completed 10-01) — 8 log rows (Anthropic S-1 relay; MS/BofA Constellation PPA; Gold Circuit stake; BMO cloud check + AWS price notice + JPM ROIC; OpenAI DevDay read-through; Amazon Ads DVA+ / Branded Conversations; Jefferies Energy desk on Generac / Amazon generator orders; The Information on Apache Ossie membership) + 1 Current-state block + 1 Debate block + Sinal note. Nothing superseded — no AMZN rating, PT or house estimate appears in the new sources (GS Conviction List add is…",
+      "evidence_anchor": "ingest (Notion, 2026-10-01JPMorganTSMC-3Q26-preview-call-Hariharan.md): added JPM/Gokul's Trainium 3 volume marks (unchanged after +15%/+5-10% revisions; ~5m+ lifecycle), CoWoS-R expansion and the PCB constraint (Intra-quarter). Nothing superseded.",
       "origin": "belief_diff",
       "feedback": "",
       "feedback_note": "",
@@ -901,7 +944,7 @@
       "impact": "high",
       "urgency": "immediate",
       "confidence": "high",
-      "why_now": "(/wiki-ingest 21h run of 09-30, completed 10-01) — 9 log rows (Liberty Times MediaTek rumour + tape; JPM Hariharan/Sur via Meyers desk; Fubon Quickmail via O'Mara; MS Chan PULSE on MediaTek management; Reuters/TMTB Anthropic prospectus leases; BofA Lightning Round [Arya, Bhattacharya] + Bernstein CLS; BofA/Fenske AVGO rating line; Netlist ITC press; UBS powered-shell), 1 Sinal update, 1 Debate block, 1 Catalysts bullet. Nothing superseded (no AVGO rating, PT, guide or house number changed; BofA Buy restated).…",
+      "why_now": "ingest (Notion, 2026-09-30UBSSemiconductors-to-Powered-Shell-whats-baked-in-Arcuri-Fisher.md): added Arcuri's spoken 'Broadcom + frontier labs vs NVIDIA + neoclouds' framing and the Apollo/Blackstone bridge-financing remark (Intra-quarter); 'A and B' left as transcribed. Nothing superseded.",
       "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
       "action": "Re-grade the AVGO thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
       "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
@@ -960,7 +1003,7 @@
       "evidence_paths": [
         "AVGO.md"
       ],
-      "evidence_anchor": "(/wiki-ingest 21h run of 09-30, completed 10-01) — 9 log rows (Liberty Times MediaTek rumour + tape; JPM Hariharan/Sur via Meyers desk; Fubon Quickmail via O'Mara; MS Chan PULSE on MediaTek management; Reuters/TMTB Anthropic prospectus leases; BofA Lightning Round [Arya, Bhattacharya] + Bernstein CLS; BofA/Fenske AVGO rating line; Netlist ITC press; UBS powered-shell), 1 Sinal update, 1 Debate block, 1 Catalysts bullet. Nothing superseded (no AVGO rating, PT, guide or house number changed; BofA Buy restated).…",
+      "evidence_anchor": "ingest (Notion, 2026-09-30UBSSemiconductors-to-Powered-Shell-whats-baked-in-Arcuri-Fisher.md): added Arcuri's spoken 'Broadcom + frontier labs vs NVIDIA + neoclouds' framing and the Apollo/Blackstone bridge-financing remark (Intra-quarter); 'A and B' left as transcribed. Nothing superseded.",
       "origin": "belief_diff",
       "feedback": "",
       "feedback_note": "",
@@ -983,7 +1026,7 @@
       "impact": "high",
       "urgency": "immediate",
       "confidence": "high",
-      "why_now": "(/wiki-ingest 21h run of 09-30, completed 10-01) — 9 log rows (JPM Anmuth Argon note; Gemini 4 Argon launch desks/press; BofA Post; publisher payments; EU DMA appeals; TPU supply-chain rumours; Anthropic S-1 read-through; Bernstein/MS/webinar; The Information on Apache Ossie membership) + 1 Current-state block + 1 Debate block + 1 Catalysts bullet + Sinal note. Superseded (JPM · Anmuth, same house): PT $460 (Dec-26; 07-14 row) → $420 (Dec-27), OW held, ~25x 2028E GAAP EPS; 2028E GAAP EPS $17.31 → $16.66; 2027E…",
+      "why_now": "verification (transcription QA): the TPU v9 quote now marks the garble — \"CoWoS [transcribed \\\"co-op\\\"] path any longer\". No number changed.",
       "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
       "action": "Re-grade the GOOG thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
       "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
@@ -1042,7 +1085,7 @@
       "evidence_paths": [
         "GOOG.md"
       ],
-      "evidence_anchor": "(/wiki-ingest 21h run of 09-30, completed 10-01) — 9 log rows (JPM Anmuth Argon note; Gemini 4 Argon launch desks/press; BofA Post; publisher payments; EU DMA appeals; TPU supply-chain rumours; Anthropic S-1 read-through; Bernstein/MS/webinar; The Information on Apache Ossie membership) + 1 Current-state block + 1 Debate block + 1 Catalysts bullet + Sinal note. Superseded (JPM · Anmuth, same house): PT $460 (Dec-26; 07-14 row) → $420 (Dec-27), OW held, ~25x 2028E GAAP EPS; 2028E GAAP EPS $17.31 → $16.66; 2027E…",
+      "evidence_anchor": "verification (transcription QA): the TPU v9 quote now marks the garble — \"CoWoS [transcribed \\\"co-op\\\"] path any longer\". No number changed.",
       "origin": "belief_diff",
       "feedback": "",
       "feedback_note": "",
@@ -1131,9 +1174,9 @@
       "hidden": false
     },
     {
-      "id": "beli-f10257b5204a",
+      "id": "beli-7223b29002fc",
       "asof": "2026-10-01",
-      "source_date": "2026-09-25",
+      "source_date": "2026-10-01",
       "type": "narrative_shift",
       "priority": "high",
       "score": 80,
@@ -1147,7 +1190,7 @@
       "impact": "high",
       "urgency": "immediate",
       "confidence": "high",
-      "why_now": "ingest: UBS State of AI & Software call (2026-09-25) — 1 Full log row: UBS names MSFT (with PLTR as preferred) as a long on the enterprise fine-tuning / \"own the weights\" trend. This revises the 08-31 stance, which only relayed MSFT's claim. Also carries Keirstead's \"close to $30bn\" security revenue estimate (matches the MS ~$30bn sizing already on the page), Boyd on Project Perception and a Defender for Agents update (~09-24), and MAI-Cyber-1-Flash. NOTHING SUPERSEDED: no rating, PT or estimate on the call.",
+      "why_now": "ingest (Notion, 2026-10-01JPMorganTSMC-3Q26-preview-call-Hariharan.md): added JPM/Gokul's read that Maia 200/300 sit on CoWoS-R and that TSMC is expanding CoWoS-R capacity (Intra-quarter). Nothing superseded.",
       "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
       "action": "Re-grade the MSFT thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
       "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
@@ -1202,11 +1245,11 @@
           "in_book": false
         }
       ],
-      "source": "MSFT page Changelog 2026-09-25",
+      "source": "MSFT page Changelog 2026-10-01",
       "evidence_paths": [
         "MSFT.md"
       ],
-      "evidence_anchor": "ingest: UBS State of AI & Software call (2026-09-25) — 1 Full log row: UBS names MSFT (with PLTR as preferred) as a long on the enterprise fine-tuning / \"own the weights\" trend. This revises the 08-31 stance, which only relayed MSFT's claim. Also carries Keirstead's \"close to $30bn\" security revenue estimate (matches the MS ~$30bn sizing already on the page), Boyd on Project Perception and a Defender for Agents update (~09-24), and MAI-Cyber-1-Flash. NOTHING SUPERSEDED: no rating, PT or estimate on the call.",
+      "evidence_anchor": "ingest (Notion, 2026-10-01JPMorganTSMC-3Q26-preview-call-Hariharan.md): added JPM/Gokul's read that Maia 200/300 sit on CoWoS-R and that TSMC is expanding CoWoS-R capacity (Intra-quarter). Nothing superseded.",
       "origin": "belief_diff",
       "feedback": "",
       "feedback_note": "",
@@ -1344,9 +1387,255 @@
       "hidden": false
     },
     {
-      "id": "esti-b7c2a38bd60c",
+      "id": "reco-6e15fb3f3a1c",
       "asof": "2026-10-01",
-      "source_date": "2026-09-30",
+      "source_date": "2026-10-01",
+      "type": "model_check",
+      "priority": "high",
+      "score": 75,
+      "title": "META — house CY27 capex is $28bn (−14%) below the Street; Barclays gives Muse's cost per user",
+      "tickers": [
+        "META"
+      ],
+      "in_book": [
+        "META"
+      ],
+      "impact": "high",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "Barclays Sandler (09-30): hosting a persistent agent costs $4.07 per DAU per month, made up of a $3.66 VM (AWS m8a.large, 8 users per instance) and $0.41 of inference. That is \"~10x more expensive\" than ChatGPT's free tier. Barclays says Apple/OpenAI would need \"upwards of $40B+ in extra annual compute\" to win the free tier, which implies ~820m DAU at $48.84 a year (my arithmetic).",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the META model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "supplier",
+          "detail": "custom ASIC",
+          "from": "META",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "META",
+          "in_book": true
+        },
+        {
+          "ticker": "AMD",
+          "relation": "supplier",
+          "detail": "MI GPUs",
+          "from": "META",
+          "in_book": false
+        },
+        {
+          "ticker": "GLW",
+          "relation": "supplier",
+          "detail": "optical fiber (LTA)",
+          "from": "META",
+          "in_book": false
+        },
+        {
+          "ticker": "SNDK",
+          "relation": "supplier",
+          "detail": "NAND/SSD",
+          "from": "META",
+          "in_book": false
+        },
+        {
+          "ticker": "STX",
+          "relation": "supplier",
+          "detail": "nearline HDD",
+          "from": "META",
+          "in_book": false
+        },
+        {
+          "ticker": "WDC",
+          "relation": "supplier",
+          "detail": "nearline HDD",
+          "from": "META",
+          "in_book": false
+        }
+      ],
+      "source": "Bernstein · curated reconciliation 2026-10-01",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-10-01-inbox.md"
+      ],
+      "evidence_anchor": "META — house CY27 capex is $28bn (−14%) below the Street; Barclays gives Muse's cost per user",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-aefa03f61c43",
+      "asof": "2026-10-01",
+      "source_date": "2026-10-01",
+      "type": "model_check",
+      "priority": "high",
+      "score": 75,
+      "title": "NVDA — Fubon's 2027 GPU shipments are 53% above the house's chip count",
+      "tickers": [
+        "NVDA"
+      ],
+      "in_book": [
+        "NVDA"
+      ],
+      "impact": "high",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "Fubon (Sept-2026 deck, p.33), figures verified on the page text:",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the NVDA model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "competitor",
+          "detail": "merchant vs custom ASIC",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "GPUs",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "customer",
+          "detail": "GPUs",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "META",
+          "relation": "customer",
+          "detail": "GPUs",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "GPUs",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "TSM",
+          "relation": "supplier",
+          "detail": "foundry N3/N2 + CoWoS",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "AMD",
+          "relation": "competitor",
+          "detail": "AI accelerators",
+          "from": "NVDA",
+          "in_book": false
+        }
+      ],
+      "source": "Bernstein · curated reconciliation 2026-10-01",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-10-01-inbox.md"
+      ],
+      "evidence_anchor": "NVDA — Fubon's 2027 GPU shipments are 53% above the house's chip count",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-2dac6aa267b7",
+      "asof": "2026-10-01",
+      "source_date": "2026-10-01",
+      "type": "model_check",
+      "priority": "high",
+      "score": 75,
+      "title": "TSM — JPM capex US$86 / 100bn for 2027/28 is +14% / +16% above consensus; house 2026 line stale",
+      "tickers": [
+        "TSM"
+      ],
+      "in_book": [
+        "TSM"
+      ],
+      "impact": "high",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "JPM Hariharan (09-30): OW, PT NT$3,300 (from NT$3,200), which is 20x 12m-forward EPS, at px NT$2,475 on 09-29. JPM vs BBG (live):",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the TSM model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AAPL",
+          "relation": "customer",
+          "detail": "foundry",
+          "from": "TSM",
+          "in_book": true
+        },
+        {
+          "ticker": "AVGO",
+          "relation": "customer",
+          "detail": "foundry",
+          "from": "TSM",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "foundry N3/N2 + CoWoS",
+          "from": "TSM",
+          "in_book": true
+        },
+        {
+          "ticker": "INTC",
+          "relation": "competitor",
+          "detail": "foundry",
+          "from": "TSM",
+          "in_book": false
+        },
+        {
+          "ticker": "SAMSUNG",
+          "relation": "competitor",
+          "detail": "foundry",
+          "from": "TSM",
+          "in_book": false
+        },
+        {
+          "ticker": "SMIC",
+          "relation": "competitor",
+          "detail": "foundry",
+          "from": "TSM",
+          "in_book": false
+        },
+        {
+          "ticker": "ADVANTEST",
+          "relation": "supplier",
+          "detail": "ATE test",
+          "from": "TSM",
+          "in_book": false
+        }
+      ],
+      "source": "JPM · curated reconciliation 2026-10-01",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-10-01-inbox.md"
+      ],
+      "evidence_anchor": "TSM — JPM capex US$86 / 100bn for 2027/28 is +14% / +16% above consensus; house 2026 line stale",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "esti-1413b9b601e8",
+      "asof": "2026-10-01",
+      "source_date": "2026-10-01",
       "type": "model_check",
       "priority": "high",
       "score": 72,
@@ -1360,7 +1649,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $427.2bn as of 2026-09-30, a derived +18.2% gap. Revenue comparisons require a basis check.",
+      "why_now": "Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $427.2bn as of 2026-10-01, a derived +18.2% gap. Revenue comparisons require a basis check.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -1415,7 +1704,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-30",
+      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-10-01",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -1424,8 +1713,8 @@
       "origin": "house_vs_consensus",
       "values": {
         "house": 505.0,
-        "consensus": 427.17088,
-        "delta_pct": 18.22,
+        "consensus": 427.2326,
+        "delta_pct": 18.2,
         "unit": "$bn"
       },
       "feedback": "",
@@ -1433,9 +1722,9 @@
       "hidden": false
     },
     {
-      "id": "esti-be523fd4bd21",
+      "id": "esti-5af72342d9bf",
       "asof": "2026-10-01",
-      "source_date": "2026-09-30",
+      "source_date": "2026-10-01",
       "type": "model_check",
       "priority": "high",
       "score": 71,
@@ -1449,7 +1738,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2027 revenue at $641.0bn versus Bloomberg consensus at $545.0bn as of 2026-09-30, a derived +17.6% gap. Revenue comparisons require a basis check.",
+      "why_now": "Capstone carries 2027 revenue at $641.0bn versus Bloomberg consensus at $545.0bn as of 2026-10-01, a derived +17.6% gap. Revenue comparisons require a basis check.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -1504,7 +1793,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-30",
+      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-10-01",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -1522,9 +1811,9 @@
       "hidden": false
     },
     {
-      "id": "esti-349d09c7ffcd",
+      "id": "esti-5fc39ce9c101",
       "asof": "2026-10-01",
-      "source_date": "2026-09-30",
+      "source_date": "2026-10-01",
       "type": "model_check",
       "priority": "high",
       "score": 69,
@@ -1538,7 +1827,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.76 as of 2026-09-30, a derived +15.5% gap.",
+      "why_now": "Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.76 as of 2026-10-01, a derived +15.5% gap.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the AAPL model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -1558,7 +1847,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-09-30",
+      "source": "Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-10-01",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -1660,82 +1949,250 @@
       "hidden": false
     },
     {
-      "id": "reco-efc1dbae5cee",
+      "id": "cata-1c60e7cb5c6f",
       "asof": "2026-10-01",
-      "source_date": "2026-09-28",
-      "type": "model_check",
-      "priority": "medium",
-      "score": 64,
-      "title": "META — house capex $301bn vs Street $333-337bn CY26-27 (−10%); GS Buy PT $725 sits BELOW the consensus PT",
+      "source_date": "2026-10-01",
+      "event_date": "2026-10-01",
+      "type": "catalyst",
+      "priority": "high",
+      "score": 69,
+      "title": "TSM — 2026-10-01: JPM's call bogeys for Oct-15 (Gokul Hariharan (J.P. Morgan) @ JPM 'TSMC: 3Q26 Preview'…",
       "tickers": [
-        "META"
+        "TSM"
       ],
       "in_book": [
-        "META"
+        "TSM"
       ],
-      "impact": "medium",
-      "urgency": "this week",
+      "impact": "high",
+      "urgency": "immediate",
       "confidence": "medium",
-      "why_now": "Capex: see the headline table. Prior wiki comment: the page carried the 09-25 desk relay of the GS note without per-company numbers; nothing superseded, but the house/Street gap is new.",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the META model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "why_now": "🆕 JPM's call bogeys for Oct-15 (Gokul Hariharan (J.P. Morgan) @ JPM 'TSMC: 3Q26 Preview' webinar, 2026-10-01 - Capstone notes (Notion transcript); JPM model, not guidance): 3Q at the guide high en",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
       "readthrough": [
         {
+          "ticker": "AAPL",
+          "relation": "customer",
+          "detail": "foundry",
+          "from": "TSM",
+          "in_book": true
+        },
+        {
           "ticker": "AVGO",
-          "relation": "supplier",
-          "detail": "custom ASIC",
-          "from": "META",
+          "relation": "customer",
+          "detail": "foundry",
+          "from": "TSM",
           "in_book": true
         },
         {
           "ticker": "NVDA",
-          "relation": "supplier",
-          "detail": "GPUs",
-          "from": "META",
+          "relation": "customer",
+          "detail": "foundry N3/N2 + CoWoS",
+          "from": "TSM",
           "in_book": true
         },
         {
-          "ticker": "AMD",
-          "relation": "supplier",
-          "detail": "MI GPUs",
-          "from": "META",
+          "ticker": "INTC",
+          "relation": "competitor",
+          "detail": "foundry",
+          "from": "TSM",
           "in_book": false
         },
         {
-          "ticker": "GLW",
-          "relation": "supplier",
-          "detail": "optical fiber (LTA)",
-          "from": "META",
+          "ticker": "SAMSUNG",
+          "relation": "competitor",
+          "detail": "foundry",
+          "from": "TSM",
           "in_book": false
         },
         {
-          "ticker": "SNDK",
-          "relation": "supplier",
-          "detail": "NAND/SSD",
-          "from": "META",
+          "ticker": "SMIC",
+          "relation": "competitor",
+          "detail": "foundry",
+          "from": "TSM",
           "in_book": false
         },
         {
-          "ticker": "STX",
+          "ticker": "ADVANTEST",
           "relation": "supplier",
-          "detail": "nearline HDD",
-          "from": "META",
-          "in_book": false
-        },
-        {
-          "ticker": "WDC",
-          "relation": "supplier",
-          "detail": "nearline HDD",
-          "from": "META",
+          "detail": "ATE test",
+          "from": "TSM",
           "in_book": false
         }
       ],
-      "source": "management/company primary · curated reconciliation 2026-09-28",
+      "source": "TSM page catalyst ledger; underlying source/date retained in the catalyst text",
       "evidence_paths": [
-        "_meta/reconciliation-2026-09-28-inbox.md"
+        "_meta/catalysts.md",
+        "TSM.md"
       ],
-      "evidence_anchor": "META — house capex $301bn vs Street $333-337bn CY26-27 (−10%); GS Buy PT $725 sits BELOW the consensus PT",
+      "evidence_anchor": "🆕 JPM's call bogeys for Oct-15 (Gokul Hariharan (J.P. Morgan) @ JPM 'TSMC: 3Q26 Preview' webinar, 2026-10-01 - Capstone notes (Notion transcript); JPM model, not guidance): 3Q at the guide high en",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-6d19352f5bc7",
+      "asof": "2026-10-01",
+      "source_date": "2026-10-01",
+      "type": "model_check",
+      "priority": "medium",
+      "score": 66,
+      "title": "Celestica (no wiki page) — Bernstein 2027 EPS is +20% above consensus; PT near the Street high",
+      "tickers": [
+        "GOOG",
+        "AVGO",
+        "AMD"
+      ],
+      "in_book": [
+        "GOOG",
+        "AVGO"
+      ],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "Bernstein: OP, PT $520 (top pick), 2027E $40.0bn / $23.79 vs BBG (CLS US, FY-Dec) $35.66bn / $19.87, i.e. +12% / +20%. Bernstein's own consensus line ($35.5bn / $19.69) matches.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the GOOG/AVGO/AMD model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "GOOG",
+          "in_book": true
+        },
+        {
+          "ticker": "SNOW",
+          "relation": "competitor",
+          "detail": "warehouse vs BigQuery",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "ANTHROPIC",
+          "relation": "customer",
+          "detail": "TPU compute",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "BE",
+          "relation": "supplier",
+          "detail": "on-site fuel cells",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "CIEN",
+          "relation": "supplier",
+          "detail": "DCI/optical",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "COHR",
+          "relation": "supplier",
+          "detail": "optical",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "DDOG",
+          "relation": "customer",
+          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
+          "from": "GOOG",
+          "in_book": false
+        }
+      ],
+      "source": "Bernstein · curated reconciliation 2026-10-01",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-10-01-inbox.md"
+      ],
+      "evidence_anchor": "Celestica (no wiki page) — Bernstein 2027 EPS is +20% above consensus; PT near the Street high",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-461b7e89c24a",
+      "asof": "2026-10-01",
+      "source_date": "2026-10-01",
+      "type": "model_check",
+      "priority": "medium",
+      "score": 64,
+      "title": "LITE / COHR (optics TAM) — Bernstein's transceiver market is 2.3x Goldman's for 2028; no \"2028 pause\"",
+      "tickers": [
+        "LITE",
+        "COHR"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "Bernstein (Exhibit 29; text p.21): transceiver revenue $39bn (2025) → $57bn (2026E) → $99bn (2027E) → $158bn (2028E) → $295bn (2030E), a ~40% CAGR (\"from $57B in 2026 to ~$300B in 2030\").",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the LITE/COHR model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": true
+        },
+        {
+          "ticker": "AIXA",
+          "relation": "supplier",
+          "detail": "MOCVD tools",
+          "from": "LITE",
+          "in_book": false
+        },
+        {
+          "ticker": "ANET",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": false
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "COHR",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "optical/InP",
+          "from": "COHR",
+          "in_book": true
+        }
+      ],
+      "source": "Bernstein · curated reconciliation 2026-10-01",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-10-01-inbox.md"
+      ],
+      "evidence_anchor": "LITE / COHR (optics TAM) — Bernstein's transceiver market is 2.3x Goldman's for 2028; no \"2028 pause\"",
       "origin": "curated_reconciliation",
       "feedback": "",
       "feedback_note": "",
@@ -2022,6 +2479,79 @@
       "hidden": false
     },
     {
+      "id": "beli-3d46cbef9ec3",
+      "asof": "2026-10-01",
+      "source_date": "2026-10-01",
+      "type": "narrative_shift",
+      "priority": "medium",
+      "score": 62,
+      "title": "LITE — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "LITE"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "verification (transcription QA): in the 10-01 Intra-quarter source line, \"Keysight\" among the panelist companies is marked as inferred from \"Satish Dhanasekaran\" (company not in the transcript). No number changed.",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the LITE thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": true
+        },
+        {
+          "ticker": "COHR",
+          "relation": "competitor",
+          "detail": "optical/InP",
+          "from": "LITE",
+          "in_book": false
+        },
+        {
+          "ticker": "AIXA",
+          "relation": "supplier",
+          "detail": "MOCVD tools",
+          "from": "LITE",
+          "in_book": false
+        },
+        {
+          "ticker": "ANET",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": false
+        }
+      ],
+      "source": "LITE page Changelog 2026-10-01",
+      "evidence_paths": [
+        "LITE.md"
+      ],
+      "evidence_anchor": "verification (transcription QA): in the 10-01 Intra-quarter source line, \"Keysight\" among the panelist companies is marked as inferred from \"Satish Dhanasekaran\" (company not in the transcript). No number changed.",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
       "id": "beli-1f560757ab66",
       "asof": "2026-10-01",
       "source_date": "2026-10-01",
@@ -2109,7 +2639,7 @@
       "impact": "medium",
       "urgency": "immediate",
       "confidence": "high",
-      "why_now": "(/wiki-ingest 21h run of 09-30, completed 10-01) — 19 log rows in the live F1Q27 window (UBS · Arcuri, JPM · Sur, MS · Moore, DB · Weathers, SIG · Hosseini, Barclays · O'Malley, BofA · Arya, GS · Schneider, Bernstein · Li, JPM · Kwon, Itaú BBA; sales/desk: UBS · Ruple, JPM · Meyers, JPM · See, Jefferies · O'Mara / Titu, Rothschild · Adley; press: Vital Knowledge, TMT Breakout, The Information, EnerTuition) + Sinal update; 6 pre-print rows appended to the ARCHIVED F4Q26 window log (MS Global Tech webcast 09-29…",
+      "why_now": "verification (transcription QA): in the 10-01 callback block, the \"my crimes\" garble marker was moved to the instance that is actually garbled (\"what Micron [transcribed \\\"my crimes\\\"] does\"); \"a full-year average\" now carries its marker (transcript: \"four-year\"); the host name \"Rob\" is flagged as not present in the transcript (file-header inference, UNCONFIRMED) in the block header, the log row and the Sources entry. No number changed.",
       "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
       "action": "Re-grade the MU thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
       "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
@@ -2168,7 +2698,7 @@
       "evidence_paths": [
         "MU.md"
       ],
-      "evidence_anchor": "(/wiki-ingest 21h run of 09-30, completed 10-01) — 19 log rows in the live F1Q27 window (UBS · Arcuri, JPM · Sur, MS · Moore, DB · Weathers, SIG · Hosseini, Barclays · O'Malley, BofA · Arya, GS · Schneider, Bernstein · Li, JPM · Kwon, Itaú BBA; sales/desk: UBS · Ruple, JPM · Meyers, JPM · See, Jefferies · O'Mara / Titu, Rothschild · Adley; press: Vital Knowledge, TMT Breakout, The Information, EnerTuition) + Sinal update; 6 pre-print rows appended to the ARCHIVED F4Q26 window log (MS Global Tech webcast 09-29…",
+      "evidence_anchor": "verification (transcription QA): in the 10-01 callback block, the \"my crimes\" garble marker was moved to the instance that is actually garbled (\"what Micron [transcribed \\\"my crimes\\\"] does\"); \"a full-year average\" now carries its marker (transcript: \"four-year\"); the host name \"Rob\" is flagged as not present in the transcript (file-header inference, UNCONFIRMED) in the block header, the log row and the Sources entry. No number changed.",
       "origin": "belief_diff",
       "feedback": "",
       "feedback_note": "",
@@ -2440,7 +2970,7 @@
       "impact": "medium",
       "urgency": "immediate",
       "confidence": "high",
-      "why_now": "(/wiki-ingest 21h run of 09-30, completed 10-01) — 8 log rows (JPM · Kwon read-through; Rothschild sales + BofA Top 10 APAC; Jefferies sales · Titu; JPM sales · See; Bloomberg buyback-completion relay; Bernstein · Li/Newman 09-29 model update; MS · Shawn Kim webcast 09-29 transcript; DigiTimes/Chinatimes headlines) + Sinal update + 1 Debate bullet. Superseded: Bernstein SK Hynix TP KRW 3,300,000 (Outperform, 17-Jul ticker table / 07-06 ASML note) → KRW 2,700,000 (Outperform, as stated in the Bernstein AM Note of…",
+      "why_now": "ingest (Notion, 2026-10-01UBSMU-F4Q26-earnings-recap-call-Arcuri.md): added Micron management's relayed 'new shell every six months but no equipment slots' read on Korean capacity pull-ins and Arcuri's share-loss pushback (Intra-quarter). Nothing superseded.",
       "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
       "action": "Re-grade the SKHYNIX thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
       "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
@@ -2499,7 +3029,7 @@
       "evidence_paths": [
         "SKHYNIX.md"
       ],
-      "evidence_anchor": "(/wiki-ingest 21h run of 09-30, completed 10-01) — 8 log rows (JPM · Kwon read-through; Rothschild sales + BofA Top 10 APAC; Jefferies sales · Titu; JPM sales · See; Bloomberg buyback-completion relay; Bernstein · Li/Newman 09-29 model update; MS · Shawn Kim webcast 09-29 transcript; DigiTimes/Chinatimes headlines) + Sinal update + 1 Debate bullet. Superseded: Bernstein SK Hynix TP KRW 3,300,000 (Outperform, 17-Jul ticker table / 07-06 ASML note) → KRW 2,700,000 (Outperform, as stated in the Bernstein AM Note of…",
+      "evidence_anchor": "ingest (Notion, 2026-10-01UBSMU-F4Q26-earnings-recap-call-Arcuri.md): added Micron management's relayed 'new shell every six months but no equipment slots' read on Korean capacity pull-ins and Arcuri's share-loss pushback (Intra-quarter). Nothing superseded.",
       "origin": "belief_diff",
       "feedback": "",
       "feedback_note": "",
@@ -2581,90 +3111,6 @@
       ],
       "evidence_anchor": "(/wiki-ingest 21h run of 09-30, completed 10-01) — 6 log rows (GS Schneider, MS Simpson, JPM Sur, BofA Arya via Franco, Redburn sales note, TMTB/Vital press), 1 Current-state block, 1 debate block, 1 catalyst line, 1 Sinal; superseded: BofA Arya PO $500 → $600 (old value from the note itself); Investor Day 09-30 catalyst now held; MS PT $500 reiterated; JPM PT $600 (prior not on page).",
       "origin": "belief_diff",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "reco-e4ded3f50f21",
-      "asof": "2026-10-01",
-      "source_date": "2026-09-28",
-      "type": "model_check",
-      "priority": "medium",
-      "score": 61,
-      "title": "MSFT and AMZN — the pages were carrying stale PTs (thesis-drift caught by the coverage tables, not by a rating action)",
-      "tickers": [
-        "AMZN",
-        "MSFT"
-      ],
-      "in_book": [
-        "AMZN",
-        "MSFT"
-      ],
-      "impact": "medium",
-      "urgency": "this week",
-      "confidence": "medium",
-      "why_now": "MSFT: Bernstein's coverage table (Weed note p.3) prints Outperform, PT $660 (px $516.17; EPS $17.28 / $19.96 / $24.01); the page had $646 (06-22). Moved to Changelog. GS Sheridan Buy $640 (28x SNTM) is new to the page. Both vs BBG cons PT $570.05 (hi $700) — GS +12%, Bernstein +16% above the median; px $509.22.",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the AMZN/MSFT model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
-      "readthrough": [
-        {
-          "ticker": "AVGO",
-          "relation": "supplier",
-          "detail": "networking",
-          "from": "AMZN",
-          "in_book": true
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "supplier",
-          "detail": "GPUs",
-          "from": "AMZN",
-          "in_book": true
-        },
-        {
-          "ticker": "MDB",
-          "relation": "competitor",
-          "detail": "Atlas vs DynamoDB",
-          "from": "AMZN",
-          "in_book": false
-        },
-        {
-          "ticker": "SNOW",
-          "relation": "competitor",
-          "detail": "warehouse vs Redshift",
-          "from": "AMZN",
-          "in_book": false
-        },
-        {
-          "ticker": "AAOI",
-          "relation": "supplier",
-          "detail": "optical transceivers",
-          "from": "AMZN",
-          "in_book": false
-        },
-        {
-          "ticker": "AGX",
-          "relation": "supplier",
-          "detail": "EPC gas power",
-          "from": "AMZN",
-          "in_book": false
-        },
-        {
-          "ticker": "ALAB",
-          "relation": "supplier",
-          "detail": "PCIe/CXL",
-          "from": "AMZN",
-          "in_book": false
-        }
-      ],
-      "source": "Bernstein · curated reconciliation 2026-09-28",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-09-28-inbox.md"
-      ],
-      "evidence_anchor": "MSFT and AMZN — the pages were carrying stale PTs (thesis-drift caught by the coverage tables, not by a rating action)",
-      "origin": "curated_reconciliation",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
@@ -3042,6 +3488,89 @@
       "hidden": false
     },
     {
+      "id": "reco-efc1dbae5cee",
+      "asof": "2026-10-01",
+      "source_date": "2026-09-28",
+      "type": "model_check",
+      "priority": "medium",
+      "score": 58,
+      "title": "META — house capex $301bn vs Street $333-337bn CY26-27 (−10%); GS Buy PT $725 sits BELOW the consensus PT",
+      "tickers": [
+        "META"
+      ],
+      "in_book": [
+        "META"
+      ],
+      "impact": "medium",
+      "urgency": "standing",
+      "confidence": "medium",
+      "why_now": "Capex: see the headline table. Prior wiki comment: the page carried the 09-25 desk relay of the GS note without per-company numbers; nothing superseded, but the house/Street gap is new.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the META model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "supplier",
+          "detail": "custom ASIC",
+          "from": "META",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "META",
+          "in_book": true
+        },
+        {
+          "ticker": "AMD",
+          "relation": "supplier",
+          "detail": "MI GPUs",
+          "from": "META",
+          "in_book": false
+        },
+        {
+          "ticker": "GLW",
+          "relation": "supplier",
+          "detail": "optical fiber (LTA)",
+          "from": "META",
+          "in_book": false
+        },
+        {
+          "ticker": "SNDK",
+          "relation": "supplier",
+          "detail": "NAND/SSD",
+          "from": "META",
+          "in_book": false
+        },
+        {
+          "ticker": "STX",
+          "relation": "supplier",
+          "detail": "nearline HDD",
+          "from": "META",
+          "in_book": false
+        },
+        {
+          "ticker": "WDC",
+          "relation": "supplier",
+          "detail": "nearline HDD",
+          "from": "META",
+          "in_book": false
+        }
+      ],
+      "source": "management/company primary · curated reconciliation 2026-09-28",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-28-inbox.md"
+      ],
+      "evidence_anchor": "META — house capex $301bn vs Street $333-337bn CY26-27 (−10%); GS Buy PT $725 sits BELOW the consensus PT",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-09-28"
+    },
+    {
       "id": "post-d90fd45b8d56",
       "asof": "2026-10-01",
       "source_date": "2026-09-30",
@@ -3178,86 +3707,249 @@
       "hidden": false
     },
     {
-      "id": "reco-578189d1aec5",
+      "id": "reco-08afbb898b71",
       "asof": "2026-10-01",
-      "source_date": "2026-09-28",
+      "source_date": "2026-10-01",
       "type": "model_check",
       "priority": "medium",
-      "score": 54,
-      "title": "AVGO — house AI-semis revenue ABOVE Goldman's bottom-up AND above BBG total revenue",
+      "score": 57,
+      "title": "COHR — house Neutral $285 is the Street's second-lowest PT; Bernstein OP $350 sits below the consensus median",
       "tickers": [
-        "AVGO"
+        "COHR"
       ],
-      "in_book": [
-        "AVGO"
-      ],
+      "in_book": [],
       "impact": "medium",
-      "urgency": "this week",
+      "urgency": "immediate",
       "confidence": "medium",
-      "why_now": "GS Exhibit 3: AI revenue $57.8bn / $125.5bn / $240.3bn (2026/27/28; XPU $39.4 / $86.2 / $168.1bn + connectivity $18.5 / $39.3 / $72.2bn) on 5 / 10 / 20 GW at an assumed $25bn capex/GW. House (Modelo Avgo pós 2Q26, 06-10): AI semis $63 / $132 / $251bn → house +9% / +5% / +4% vs GS. House total revenue $115 / $190bn vs BBG FY1 $106.0bn / FY2 $173.9bn → house +8% / +9% vs consensus.",
+      "why_now": "Bernstein Zhu (09-29): Outperform, PT $350, which is ~22x \"$16 in FY 2028 EPS\" (p.68; model p.104).",
       "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the AVGO model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "action": "Open the COHR model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
       "readthrough": [
         {
-          "ticker": "NVDA",
-          "relation": "competitor",
-          "detail": "merchant vs custom ASIC",
-          "from": "AVGO",
-          "in_book": true
-        },
-        {
           "ticker": "AMZN",
           "relation": "customer",
-          "detail": "networking",
-          "from": "AVGO",
+          "detail": "optical",
+          "from": "COHR",
           "in_book": true
         },
         {
           "ticker": "GOOG",
           "relation": "customer",
-          "detail": "custom ASIC (TPU)",
-          "from": "AVGO",
-          "in_book": true
-        },
-        {
-          "ticker": "META",
-          "relation": "customer",
-          "detail": "custom ASIC",
-          "from": "AVGO",
+          "detail": "optical",
+          "from": "COHR",
           "in_book": true
         },
         {
           "ticker": "MSFT",
           "relation": "customer",
-          "detail": "custom ASIC",
-          "from": "AVGO",
+          "detail": "optical",
+          "from": "COHR",
           "in_book": true
         },
         {
-          "ticker": "TSM",
-          "relation": "supplier",
-          "detail": "foundry",
-          "from": "AVGO",
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "optical/InP",
+          "from": "COHR",
           "in_book": true
         },
         {
-          "ticker": "MRVL",
+          "ticker": "LITE",
           "relation": "competitor",
-          "detail": "custom ASIC",
-          "from": "AVGO",
+          "detail": "optical/InP",
+          "from": "COHR",
+          "in_book": false
+        },
+        {
+          "ticker": "AIXA",
+          "relation": "supplier",
+          "detail": "MOCVD tools",
+          "from": "COHR",
+          "in_book": false
+        },
+        {
+          "ticker": "ANET",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "COHR",
           "in_book": false
         }
       ],
-      "source": "underlying sources named in the finding · curated reconciliation 2026-09-28",
+      "source": "Bernstein · curated reconciliation 2026-10-01",
       "evidence_paths": [
-        "_meta/reconciliation-2026-09-28-inbox.md"
+        "_meta/reconciliation-2026-10-01-inbox.md"
       ],
-      "evidence_anchor": "AVGO — house AI-semis revenue ABOVE Goldman's bottom-up AND above BBG total revenue",
+      "evidence_anchor": "COHR — house Neutral $285 is the Street's second-lowest PT; Bernstein OP $350 sits below the consensus median",
       "origin": "curated_reconciliation",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
+    },
+    {
+      "id": "reco-f54e84974b26",
+      "asof": "2026-10-01",
+      "source_date": "2026-10-01",
+      "type": "model_check",
+      "priority": "medium",
+      "score": 57,
+      "title": "MU — FY27 consensus is post-print on the quarter but not on the year; capex consensus sits below the implied floor",
+      "tickers": [
+        "MU"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "Revenue $54.23bn, non-GAAP GM 87.0%, EPS $33.42, vs guide $50.0bn ± 1 / ~86% / $31.00 ± 1.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the MU model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "customer",
+          "detail": "HBM",
+          "from": "MU",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "HBM/LPDDR",
+          "from": "MU",
+          "in_book": true
+        },
+        {
+          "ticker": "SKHYNIX",
+          "relation": "competitor",
+          "detail": "HBM",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "AMAT",
+          "relation": "supplier",
+          "detail": "WFE",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "AMD",
+          "relation": "customer",
+          "detail": "HBM",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "ASML",
+          "relation": "supplier",
+          "detail": "litho",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "KLAC",
+          "relation": "supplier",
+          "detail": "process control",
+          "from": "MU",
+          "in_book": false
+        }
+      ],
+      "source": "management/company primary + BofA + UBS · curated reconciliation 2026-10-01",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-10-01-inbox.md"
+      ],
+      "evidence_anchor": "MU — FY27 consensus is post-print on the quarter but not on the year; capex consensus sits below the implied floor",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-e4ded3f50f21",
+      "asof": "2026-10-01",
+      "source_date": "2026-09-28",
+      "type": "model_check",
+      "priority": "medium",
+      "score": 55,
+      "title": "MSFT and AMZN — the pages were carrying stale PTs (thesis-drift caught by the coverage tables, not by a rating action)",
+      "tickers": [
+        "AMZN",
+        "MSFT"
+      ],
+      "in_book": [
+        "AMZN",
+        "MSFT"
+      ],
+      "impact": "medium",
+      "urgency": "standing",
+      "confidence": "medium",
+      "why_now": "MSFT: Bernstein's coverage table (Weed note p.3) prints Outperform, PT $660 (px $516.17; EPS $17.28 / $19.96 / $24.01); the page had $646 (06-22). Moved to Changelog. GS Sheridan Buy $640 (28x SNTM) is new to the page. Both vs BBG cons PT $570.05 (hi $700) — GS +12%, Bernstein +16% above the median; px $509.22.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the AMZN/MSFT model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "supplier",
+          "detail": "networking",
+          "from": "AMZN",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "AMZN",
+          "in_book": true
+        },
+        {
+          "ticker": "MDB",
+          "relation": "competitor",
+          "detail": "Atlas vs DynamoDB",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "SNOW",
+          "relation": "competitor",
+          "detail": "warehouse vs Redshift",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "AAOI",
+          "relation": "supplier",
+          "detail": "optical transceivers",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "AGX",
+          "relation": "supplier",
+          "detail": "EPC gas power",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "ALAB",
+          "relation": "supplier",
+          "detail": "PCIe/CXL",
+          "from": "AMZN",
+          "in_book": false
+        }
+      ],
+      "source": "Bernstein · curated reconciliation 2026-09-28",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-28-inbox.md"
+      ],
+      "evidence_anchor": "MSFT and AMZN — the pages were carrying stale PTs (thesis-drift caught by the coverage tables, not by a rating action)",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-09-28"
     },
     {
       "id": "data-348500050b75",
@@ -3285,88 +3977,6 @@
       ],
       "evidence_anchor": "NSCALE — Bloomberg consensus missing",
       "origin": "worklist",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "reco-1d1ffeaef8e0",
-      "asof": "2026-10-01",
-      "source_date": "2026-09-28",
-      "type": "model_check",
-      "priority": "medium",
-      "score": 54,
-      "title": "NVDA — same revenue, different GW × $/GW decomposition (GS fewer GW at higher $/GW than the house)",
-      "tickers": [
-        "NVDA"
-      ],
-      "in_book": [
-        "NVDA"
-      ],
-      "impact": "medium",
-      "urgency": "this week",
-      "confidence": "medium",
-      "why_now": "GS: 14 / 18 / 22 GW of NVDA deployments (2026/27/28: Blackwell 12/3/–, Rubin 2/15/19, Feynman –/–/3) with revenue per GW $25bn Blackwell → ~$40bn Rubin → ~$45bn Feynman (company statements + GS assumption). House (Modelo Felipe NVDA, 06-17): GW sold ~16.0 / ~24.8 (2026/27) at ~$24 / ~$25bn revenue per GW.",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the NVDA model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
-      "readthrough": [
-        {
-          "ticker": "AVGO",
-          "relation": "competitor",
-          "detail": "merchant vs custom ASIC",
-          "from": "NVDA",
-          "in_book": true
-        },
-        {
-          "ticker": "AMZN",
-          "relation": "customer",
-          "detail": "GPUs",
-          "from": "NVDA",
-          "in_book": true
-        },
-        {
-          "ticker": "GOOG",
-          "relation": "customer",
-          "detail": "GPUs",
-          "from": "NVDA",
-          "in_book": true
-        },
-        {
-          "ticker": "META",
-          "relation": "customer",
-          "detail": "GPUs",
-          "from": "NVDA",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "customer",
-          "detail": "GPUs",
-          "from": "NVDA",
-          "in_book": true
-        },
-        {
-          "ticker": "TSM",
-          "relation": "supplier",
-          "detail": "foundry N3/N2 + CoWoS",
-          "from": "NVDA",
-          "in_book": true
-        },
-        {
-          "ticker": "AMD",
-          "relation": "competitor",
-          "detail": "AI accelerators",
-          "from": "NVDA",
-          "in_book": false
-        }
-      ],
-      "source": "management/company primary · curated reconciliation 2026-09-28",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-09-28-inbox.md"
-      ],
-      "evidence_anchor": "NVDA — same revenue, different GW × $/GW decomposition (GS fewer GW at higher $/GW than the house)",
-      "origin": "curated_reconciliation",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
@@ -3564,6 +4174,81 @@
       "hidden": false
     },
     {
+      "id": "cata-36443afa9221",
+      "asof": "2026-10-01",
+      "source_date": "2026-10-01",
+      "event_date": "2026-10-01",
+      "type": "catalyst",
+      "priority": "medium",
+      "score": 49,
+      "title": "LITE — 2026-10-01: CORROBORATED IN THE CEO'S OWN VOICE, 2026-10-01 ingest (Michael Hurlston (Lumentum CEO) @…",
+      "tickers": [
+        "LITE"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "✅ CORROBORATED IN THE CEO'S OWN VOICE, 2026-10-01 ingest (Michael Hurlston (Lumentum CEO) @ ECOC 2026 Málaga - Global Photonics Economic Forum keynote + CEO panel (recording played 2026-09-30; event",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": true
+        },
+        {
+          "ticker": "COHR",
+          "relation": "competitor",
+          "detail": "optical/InP",
+          "from": "LITE",
+          "in_book": false
+        },
+        {
+          "ticker": "AIXA",
+          "relation": "supplier",
+          "detail": "MOCVD tools",
+          "from": "LITE",
+          "in_book": false
+        },
+        {
+          "ticker": "ANET",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": false
+        }
+      ],
+      "source": "LITE page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "LITE.md"
+      ],
+      "evidence_anchor": "✅ CORROBORATED IN THE CEO'S OWN VOICE, 2026-10-01 ingest (Michael Hurlston (Lumentum CEO) @ ECOC 2026 Málaga - Global Photonics Economic Forum keynote + CEO panel (recording played 2026-09-30; event",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
       "id": "cata-b89bcb2c7572",
       "asof": "2026-10-01",
       "source_date": "2026-10-06",
@@ -3632,14 +4317,14 @@
       "hidden": false
     },
     {
-      "id": "cata-ce96e7cb8767",
+      "id": "cata-ef4edc1bed22",
       "asof": "2026-10-01",
       "source_date": "2026-10-01",
       "event_date": "2026-10-01",
       "type": "catalyst",
       "priority": "medium",
       "score": 49,
-      "title": "MU — 2026-10-01: the post-print calendar, dated. (1) 10-01 8am ET BofA · Vivek Arya MU + SNPS takeaways…",
+      "title": "MU — 2026-10-01: Dec 9 buyback start, now with a (UBS) pacing bogey. Management told UBS on a private…",
       "tickers": [
         "MU"
       ],
@@ -3647,7 +4332,7 @@
       "impact": "medium",
       "urgency": "immediate",
       "confidence": "medium",
-      "why_now": "🆕 2026-10-01 — the post-print calendar, dated. (1) 10-01 8am ET BofA · Vivek Arya MU + SNPS takeaways call (BofA sales · Fenske, 09-30); (2) 10-06 UBS-hosted MU post-earnings IR NDR, New Y",
+      "why_now": "🆕 2026-10-01 — Dec 9 buyback start, now with a (UBS) pacing bogey. Management told UBS on a private callback that it will be at target cash by end-F1Q (Dec 9); Arcuri's run-rate is $35-40bn/qtr",
       "belief_update": "A dated event can resolve or reframe an open debate.",
       "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
       "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
@@ -3707,7 +4392,7 @@
         "_meta/catalysts.md",
         "MU.md"
       ],
-      "evidence_anchor": "🆕 2026-10-01 — the post-print calendar, dated. (1) 10-01 8am ET BofA · Vivek Arya MU + SNPS takeaways call (BofA sales · Fenske, 09-30); (2) 10-06 UBS-hosted MU post-earnings IR NDR, New Y",
+      "evidence_anchor": "🆕 2026-10-01 — Dec 9 buyback start, now with a (UBS) pacing bogey. Management told UBS on a private callback that it will be at target cash by end-F1Q (Dec 9); Arcuri's run-rate is $35-40bn/qtr",
       "origin": "catalyst_calendar",
       "feedback": "",
       "feedback_note": "",
@@ -3794,6 +4479,334 @@
       "feedback": "",
       "feedback_note": "",
       "hidden": false
+    },
+    {
+      "id": "reco-578189d1aec5",
+      "asof": "2026-10-01",
+      "source_date": "2026-09-28",
+      "type": "model_check",
+      "priority": "medium",
+      "score": 48,
+      "title": "AVGO — house AI-semis revenue ABOVE Goldman's bottom-up AND above BBG total revenue",
+      "tickers": [
+        "AVGO"
+      ],
+      "in_book": [
+        "AVGO"
+      ],
+      "impact": "medium",
+      "urgency": "standing",
+      "confidence": "medium",
+      "why_now": "GS Exhibit 3: AI revenue $57.8bn / $125.5bn / $240.3bn (2026/27/28; XPU $39.4 / $86.2 / $168.1bn + connectivity $18.5 / $39.3 / $72.2bn) on 5 / 10 / 20 GW at an assumed $25bn capex/GW. House (Modelo Avgo pós 2Q26, 06-10): AI semis $63 / $132 / $251bn → house +9% / +5% / +4% vs GS. House total revenue $115 / $190bn vs BBG FY1 $106.0bn / FY2 $173.9bn → house +8% / +9% vs consensus.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the AVGO model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "NVDA",
+          "relation": "competitor",
+          "detail": "merchant vs custom ASIC",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "networking",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "customer",
+          "detail": "custom ASIC (TPU)",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "META",
+          "relation": "customer",
+          "detail": "custom ASIC",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "custom ASIC",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "TSM",
+          "relation": "supplier",
+          "detail": "foundry",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "MRVL",
+          "relation": "competitor",
+          "detail": "custom ASIC",
+          "from": "AVGO",
+          "in_book": false
+        }
+      ],
+      "source": "underlying sources named in the finding · curated reconciliation 2026-09-28",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-28-inbox.md"
+      ],
+      "evidence_anchor": "AVGO — house AI-semis revenue ABOVE Goldman's bottom-up AND above BBG total revenue",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-09-28"
+    },
+    {
+      "id": "reco-5b10ab6f72fe",
+      "asof": "2026-10-01",
+      "source_date": "2026-10-01",
+      "type": "model_check",
+      "priority": "medium",
+      "score": 48,
+      "title": "CSCO / GLW — Bernstein's two Market-Performs are at or near the Street LOW on PT, with estimates in line",
+      "tickers": [
+        "CSCO",
+        "GLW"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "CSCO: MP, PT $110, which equals the BBG Street low ($110); consensus is $138.88 (hi $170, n=31) and px $108.76. Estimates are in line:",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the CSCO/GLW model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "ANET",
+          "relation": "competitor",
+          "detail": "AI networking",
+          "from": "CSCO",
+          "in_book": false
+        },
+        {
+          "ticker": "DDOG",
+          "relation": "competitor",
+          "detail": "observability vs Splunk",
+          "from": "CSCO",
+          "in_book": false
+        },
+        {
+          "ticker": "DT",
+          "relation": "competitor",
+          "detail": "observability vs Splunk",
+          "from": "CSCO",
+          "in_book": false
+        },
+        {
+          "ticker": "ESTC",
+          "relation": "competitor",
+          "detail": "SIEM/logs vs Splunk",
+          "from": "CSCO",
+          "in_book": false
+        },
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "optical fiber",
+          "from": "GLW",
+          "in_book": true
+        },
+        {
+          "ticker": "META",
+          "relation": "customer",
+          "detail": "optical fiber (LTA)",
+          "from": "GLW",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "optical fiber",
+          "from": "GLW",
+          "in_book": true
+        }
+      ],
+      "source": "Bernstein · curated reconciliation 2026-10-01",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-10-01-inbox.md"
+      ],
+      "evidence_anchor": "CSCO / GLW — Bernstein's two Market-Performs are at or near the Street LOW on PT, with estimates in line",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-13cc6859d7e2",
+      "asof": "2026-10-01",
+      "source_date": "2026-10-01",
+      "type": "model_check",
+      "priority": "medium",
+      "score": 48,
+      "title": "MU / SKHYNIX (memory price path) — Fubon's DRAM contract price falls 16% from the 2Q27 peak while Micron says supply stays constrained through CY28",
+      "tickers": [
+        "SKHYNIX",
+        "MU"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "Commodity DRAM contract (TrendForce-based): 1.45 → 1.81 → 2.10 → 2.17 → 2.25 (2Q27 peak) → 2.17 → 2.03 → 1.91 → 1.89 (2Q28). That is −3.2% / −6.7% / −5.7% / −1.5% q/q from 3Q27, and −16% from peak to 2Q28.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the SKHYNIX/MU model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "customer",
+          "detail": "HBM",
+          "from": "SKHYNIX",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "HBM",
+          "from": "SKHYNIX",
+          "in_book": true
+        },
+        {
+          "ticker": "SAMSUNG",
+          "relation": "competitor",
+          "detail": "HBM/DRAM",
+          "from": "SKHYNIX",
+          "in_book": false
+        },
+        {
+          "ticker": "AMAT",
+          "relation": "supplier",
+          "detail": "WFE",
+          "from": "SKHYNIX",
+          "in_book": false
+        },
+        {
+          "ticker": "AMD",
+          "relation": "customer",
+          "detail": "HBM",
+          "from": "SKHYNIX",
+          "in_book": false
+        },
+        {
+          "ticker": "ASML",
+          "relation": "supplier",
+          "detail": "litho",
+          "from": "SKHYNIX",
+          "in_book": false
+        },
+        {
+          "ticker": "LRCX",
+          "relation": "supplier",
+          "detail": "WFE",
+          "from": "SKHYNIX",
+          "in_book": false
+        }
+      ],
+      "source": "UBS · curated reconciliation 2026-10-01",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-10-01-inbox.md"
+      ],
+      "evidence_anchor": "MU / SKHYNIX (memory price path) — Fubon's DRAM contract price falls 16% from the 2Q27 peak while Micron says supply stays constrained through CY28",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-1d1ffeaef8e0",
+      "asof": "2026-10-01",
+      "source_date": "2026-09-28",
+      "type": "model_check",
+      "priority": "medium",
+      "score": 48,
+      "title": "NVDA — same revenue, different GW × $/GW decomposition (GS fewer GW at higher $/GW than the house)",
+      "tickers": [
+        "NVDA"
+      ],
+      "in_book": [
+        "NVDA"
+      ],
+      "impact": "medium",
+      "urgency": "standing",
+      "confidence": "medium",
+      "why_now": "GS: 14 / 18 / 22 GW of NVDA deployments (2026/27/28: Blackwell 12/3/–, Rubin 2/15/19, Feynman –/–/3) with revenue per GW $25bn Blackwell → ~$40bn Rubin → ~$45bn Feynman (company statements + GS assumption). House (Modelo Felipe NVDA, 06-17): GW sold ~16.0 / ~24.8 (2026/27) at ~$24 / ~$25bn revenue per GW.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the NVDA model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "competitor",
+          "detail": "merchant vs custom ASIC",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "GPUs",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "customer",
+          "detail": "GPUs",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "META",
+          "relation": "customer",
+          "detail": "GPUs",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "GPUs",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "TSM",
+          "relation": "supplier",
+          "detail": "foundry N3/N2 + CoWoS",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "AMD",
+          "relation": "competitor",
+          "detail": "AI accelerators",
+          "from": "NVDA",
+          "in_book": false
+        }
+      ],
+      "source": "management/company primary · curated reconciliation 2026-09-28",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-28-inbox.md"
+      ],
+      "evidence_anchor": "NVDA — same revenue, different GW × $/GW decomposition (GS fewer GW at higher $/GW than the house)",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-09-28"
     },
     {
       "id": "cata-68c774eb3829",
@@ -4030,6 +5043,110 @@
       ],
       "evidence_anchor": "🆕🔴🔴 2026-11-12 — OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset. OpenAI's own post: \"We're ending our partnership with Cursor following its acquisit",
       "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-32216e1d8ae9",
+      "asof": "2026-10-01",
+      "source_date": "2026-10-01",
+      "type": "model_check",
+      "priority": "watch",
+      "score": 41,
+      "title": "ANET — Bernstein 2027 revenue is +9-14% above consensus, but the note prints three different figures",
+      "tickers": [
+        "ANET"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "3Q26E is $3.324bn / $1.08 vs BBG 1FQ $3.327bn / $1.062, so Bernstein is in line for the current quarter.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the ANET model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "CSCO",
+          "relation": "competitor",
+          "detail": "AI networking",
+          "from": "ANET",
+          "in_book": false
+        },
+        {
+          "ticker": "COHR",
+          "relation": "supplier",
+          "detail": "optical",
+          "from": "ANET",
+          "in_book": false
+        },
+        {
+          "ticker": "LITE",
+          "relation": "supplier",
+          "detail": "optical",
+          "from": "ANET",
+          "in_book": false
+        }
+      ],
+      "source": "Bernstein · curated reconciliation 2026-10-01",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-10-01-inbox.md"
+      ],
+      "evidence_anchor": "ANET — Bernstein 2027 revenue is +9-14% above consensus, but the note prints three different figures",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "reco-ea86c1657228",
+      "asof": "2026-10-01",
+      "source_date": "2026-10-01",
+      "type": "model_check",
+      "priority": "watch",
+      "score": 41,
+      "title": "CIEN — Outperform with a PT 15% below consensus, on a PT basis that mislabels the year",
+      "tickers": [
+        "CIEN"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "Bernstein: OP, PT $440, described as \"16x our $28 in 2028 EPS\". In the model, FY28E EPS is $18.61 and FY29E is $27.70, so the PT is 16x FY29, not FY28.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the CIEN model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "DCI/optical",
+          "from": "CIEN",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "customer",
+          "detail": "DCI/optical",
+          "from": "CIEN",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "DCI/optical",
+          "from": "CIEN",
+          "in_book": true
+        }
+      ],
+      "source": "JPM + Bernstein · curated reconciliation 2026-10-01",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-10-01-inbox.md"
+      ],
+      "evidence_anchor": "CIEN — Outperform with a PT 15% below consensus, on a PT basis that mislabels the year",
+      "origin": "curated_reconciliation",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
@@ -4434,184 +5551,6 @@
       ],
       "evidence_anchor": "🆕 2026-10-06, 10am ET — BofA semi-distributor call with DigiKey's VP of Global Strategic Pricing (Stephane Bratu), who oversees pricing for TXN, ON, IFX, NVDA and 4,000+ suppliers — MCU/analog/pow",
       "origin": "catalyst_calendar",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "reco-d3c62027d3ff",
-      "asof": "2026-10-01",
-      "source_date": "2026-09-28",
-      "type": "model_check",
-      "priority": "watch",
-      "score": 36,
-      "title": "BKNG — Jefferies initiates the page's first HOLD, PT $200, near the Street LOW",
-      "tickers": [
-        "BKNG"
-      ],
-      "in_book": [],
-      "impact": "watch",
-      "urgency": "this week",
-      "confidence": "medium",
-      "why_now": "Jefferies Colantuoni Hold, PT $200 (+22% vs $163.95) vs BBG consensus PT $238.95 (hi $301 / lo $188, 42 analysts, rating 4.55); px $163.87. Jefferies is −16% vs the consensus PT and $12 above the Street low. Prior wiki board: MS OW $230 · JPM OW $236 · GS N $225 · Barclays OW $210 · Bernstein MP $188 — Jefferies is now the second-lowest mark. Net-new house, nothing superseded.",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the BKNG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
-      "readthrough": [],
-      "source": "JPM + Bernstein + Jefferies · curated reconciliation 2026-09-28",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-09-28-inbox.md"
-      ],
-      "evidence_anchor": "BKNG — Jefferies initiates the page's first HOLD, PT $200, near the Street LOW",
-      "origin": "curated_reconciliation",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "reco-1461d809d043",
-      "asof": "2026-10-01",
-      "source_date": "2026-09-28",
-      "type": "model_check",
-      "priority": "watch",
-      "score": 36,
-      "title": "LRCX — DB's FY27/FY28 EPS are 1.5% / 4% above the snapshot; the printed 2026A P/E does not reconcile",
-      "tickers": [
-        "LRCX"
-      ],
-      "in_book": [],
-      "impact": "watch",
-      "urgency": "this week",
-      "confidence": "medium",
-      "why_now": "DB Weathers (09-27): EPS 2026A $5.82 / 2027E $9.60 / 2028E $12.39, P/E 33.7 / 32.0 / 24.8, EV/EBITDA 27.9 / 25.7 / 20.5, Buy, px $307.16, Top Pick; no PT in the note (the page's standing DB PT $320 from 08-06 is untouched). BBG snapshot: 1FY EPS $9.46 / 2FY $11.90 / 3FY $14.09; cons PT $375.55 (hi $475 / lo $285), px $314.47. ⚠ Assumes the snapshot's 1FY = FY-Jun-27; the label is generic.",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the LRCX model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
-      "readthrough": [
-        {
-          "ticker": "TSM",
-          "relation": "customer",
-          "detail": "etch/dep",
-          "from": "LRCX",
-          "in_book": true
-        },
-        {
-          "ticker": "AMAT",
-          "relation": "competitor",
-          "detail": "WFE overlap",
-          "from": "LRCX",
-          "in_book": false
-        },
-        {
-          "ticker": "INTC",
-          "relation": "customer",
-          "detail": "WFE",
-          "from": "LRCX",
-          "in_book": false
-        },
-        {
-          "ticker": "MU",
-          "relation": "customer",
-          "detail": "NAND/HBM WFE",
-          "from": "LRCX",
-          "in_book": false
-        },
-        {
-          "ticker": "SAMSUNG",
-          "relation": "customer",
-          "detail": "etch/dep",
-          "from": "LRCX",
-          "in_book": false
-        },
-        {
-          "ticker": "SKHYNIX",
-          "relation": "customer",
-          "detail": "WFE",
-          "from": "LRCX",
-          "in_book": false
-        }
-      ],
-      "source": "underlying sources named in the finding · curated reconciliation 2026-09-28",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-09-28-inbox.md"
-      ],
-      "evidence_anchor": "LRCX — DB's FY27/FY28 EPS are 1.5% / 4% above the snapshot; the printed 2026A P/E does not reconcile",
-      "origin": "curated_reconciliation",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "reco-9c39b15fdd33",
-      "asof": "2026-10-01",
-      "source_date": "2026-09-28",
-      "type": "model_check",
-      "priority": "watch",
-      "score": 36,
-      "title": "MEDIATEK — Goldman's 2027 datacenter-ASIC revenue is ABOVE the company's own guide",
-      "tickers": [
-        "MEDIATEK"
-      ],
-      "in_book": [],
-      "impact": "watch",
-      "urgency": "this week",
-      "confidence": "medium",
-      "why_now": "GS Exhibit 3: DC ASIC revenue US$2.2bn / $20.25bn / $52.5bn (2026/27/28) on 0.4 / 4 / 11 GW at $5bn revenue per GW. Page carries the company's US$12-16bn 2027 guide and JPM/Nomura marks below GS; GS's 2028 is where UBS sits for 2029. BBG snapshot: FY2 revenue NT$1,153.8bn (+73% vs FY1) — consistent with a large ASIC step-up but not decomposable to the GS line. No house model. DIVERGES: GS above guide and above the page's broker marks.",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the MEDIATEK model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
-      "readthrough": [
-        {
-          "ticker": "TSM",
-          "relation": "supplier",
-          "detail": "foundry",
-          "from": "MEDIATEK",
-          "in_book": true
-        },
-        {
-          "ticker": "ARM",
-          "relation": "supplier",
-          "detail": "IP",
-          "from": "MEDIATEK",
-          "in_book": false
-        }
-      ],
-      "source": "management/company primary + JPM + UBS · curated reconciliation 2026-09-28",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-09-28-inbox.md"
-      ],
-      "evidence_anchor": "MEDIATEK — Goldman's 2027 datacenter-ASIC revenue is ABOVE the company's own guide",
-      "origin": "curated_reconciliation",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "reco-6bc20366d0f2",
-      "asof": "2026-10-01",
-      "source_date": "2026-09-28",
-      "type": "model_check",
-      "priority": "watch",
-      "score": 36,
-      "title": "RDDT — the agency expert's wallet-share growth (+20-25%/yr) is BELOW the Street's revenue growth (+32%)",
-      "tickers": [
-        "RDDT"
-      ],
-      "in_book": [],
-      "impact": "watch",
-      "urgency": "this week",
-      "confidence": "medium",
-      "why_now": "Horizon Media (Jefferies expert call, 09-28): Reddit wallet share growing ~20-25% annually, budgets 30-35% Google / 30-35% Meta / ~30% diversified (5-10% TikTok). BBG snapshot: FY2/FY1 revenue $4,477mn / $3,386mn = +32%; cons PT $213.91 (hi $300 / lo $130), px $143.08.",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the RDDT model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
-      "readthrough": [],
-      "source": "Jefferies · curated reconciliation 2026-09-28",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-09-28-inbox.md"
-      ],
-      "evidence_anchor": "RDDT — the agency expert's wallet-share growth (+20-25%/yr) is BELOW the Street's revenue growth (+32%)",
-      "origin": "curated_reconciliation",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
@@ -5163,6 +6102,37 @@
       "feedback_note": "",
       "hidden": false,
       "carried_from": "2026-09-15"
+    },
+    {
+      "id": "reco-d3c62027d3ff",
+      "asof": "2026-10-01",
+      "source_date": "2026-09-28",
+      "type": "model_check",
+      "priority": "watch",
+      "score": 35,
+      "title": "BKNG — Jefferies initiates the page's first HOLD, PT $200, near the Street LOW",
+      "tickers": [
+        "BKNG"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "standing",
+      "confidence": "medium",
+      "why_now": "Jefferies Colantuoni Hold, PT $200 (+22% vs $163.95) vs BBG consensus PT $238.95 (hi $301 / lo $188, 42 analysts, rating 4.55); px $163.87. Jefferies is −16% vs the consensus PT and $12 above the Street low. Prior wiki board: MS OW $230 · JPM OW $236 · GS N $225 · Barclays OW $210 · Bernstein MP $188 — Jefferies is now the second-lowest mark. Net-new house, nothing superseded.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the BKNG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [],
+      "source": "JPM + Bernstein + Jefferies · curated reconciliation 2026-09-28",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-28-inbox.md"
+      ],
+      "evidence_anchor": "BKNG — Jefferies initiates the page's first HOLD, PT $200, near the Street LOW",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-09-28"
     },
     {
       "id": "reco-be4bf46a45f1",
@@ -5718,6 +6688,80 @@
       "carried_from": "2026-09-18"
     },
     {
+      "id": "reco-1461d809d043",
+      "asof": "2026-10-01",
+      "source_date": "2026-09-28",
+      "type": "model_check",
+      "priority": "watch",
+      "score": 35,
+      "title": "LRCX — DB's FY27/FY28 EPS are 1.5% / 4% above the snapshot; the printed 2026A P/E does not reconcile",
+      "tickers": [
+        "LRCX"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "standing",
+      "confidence": "medium",
+      "why_now": "DB Weathers (09-27): EPS 2026A $5.82 / 2027E $9.60 / 2028E $12.39, P/E 33.7 / 32.0 / 24.8, EV/EBITDA 27.9 / 25.7 / 20.5, Buy, px $307.16, Top Pick; no PT in the note (the page's standing DB PT $320 from 08-06 is untouched). BBG snapshot: 1FY EPS $9.46 / 2FY $11.90 / 3FY $14.09; cons PT $375.55 (hi $475 / lo $285), px $314.47. ⚠ Assumes the snapshot's 1FY = FY-Jun-27; the label is generic.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the LRCX model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "TSM",
+          "relation": "customer",
+          "detail": "etch/dep",
+          "from": "LRCX",
+          "in_book": true
+        },
+        {
+          "ticker": "AMAT",
+          "relation": "competitor",
+          "detail": "WFE overlap",
+          "from": "LRCX",
+          "in_book": false
+        },
+        {
+          "ticker": "INTC",
+          "relation": "customer",
+          "detail": "WFE",
+          "from": "LRCX",
+          "in_book": false
+        },
+        {
+          "ticker": "MU",
+          "relation": "customer",
+          "detail": "NAND/HBM WFE",
+          "from": "LRCX",
+          "in_book": false
+        },
+        {
+          "ticker": "SAMSUNG",
+          "relation": "customer",
+          "detail": "etch/dep",
+          "from": "LRCX",
+          "in_book": false
+        },
+        {
+          "ticker": "SKHYNIX",
+          "relation": "customer",
+          "detail": "WFE",
+          "from": "LRCX",
+          "in_book": false
+        }
+      ],
+      "source": "underlying sources named in the finding · curated reconciliation 2026-09-28",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-28-inbox.md"
+      ],
+      "evidence_anchor": "LRCX — DB's FY27/FY28 EPS are 1.5% / 4% above the snapshot; the printed 2026A P/E does not reconcile",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-09-28"
+    },
+    {
       "id": "reco-c4b319491017",
       "asof": "2026-10-01",
       "source_date": "2026-09-18",
@@ -5745,6 +6789,52 @@
       "feedback_note": "",
       "hidden": false,
       "carried_from": "2026-09-18"
+    },
+    {
+      "id": "reco-9c39b15fdd33",
+      "asof": "2026-10-01",
+      "source_date": "2026-09-28",
+      "type": "model_check",
+      "priority": "watch",
+      "score": 35,
+      "title": "MEDIATEK — Goldman's 2027 datacenter-ASIC revenue is ABOVE the company's own guide",
+      "tickers": [
+        "MEDIATEK"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "standing",
+      "confidence": "medium",
+      "why_now": "GS Exhibit 3: DC ASIC revenue US$2.2bn / $20.25bn / $52.5bn (2026/27/28) on 0.4 / 4 / 11 GW at $5bn revenue per GW. Page carries the company's US$12-16bn 2027 guide and JPM/Nomura marks below GS; GS's 2028 is where UBS sits for 2029. BBG snapshot: FY2 revenue NT$1,153.8bn (+73% vs FY1) — consistent with a large ASIC step-up but not decomposable to the GS line. No house model. DIVERGES: GS above guide and above the page's broker marks.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the MEDIATEK model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "TSM",
+          "relation": "supplier",
+          "detail": "foundry",
+          "from": "MEDIATEK",
+          "in_book": true
+        },
+        {
+          "ticker": "ARM",
+          "relation": "supplier",
+          "detail": "IP",
+          "from": "MEDIATEK",
+          "in_book": false
+        }
+      ],
+      "source": "management/company primary + JPM + UBS · curated reconciliation 2026-09-28",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-28-inbox.md"
+      ],
+      "evidence_anchor": "MEDIATEK — Goldman's 2027 datacenter-ASIC revenue is ABOVE the company's own guide",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-09-28"
     },
     {
       "id": "reco-388ec27a2413",
@@ -7047,6 +8137,37 @@
       "feedback_note": "",
       "hidden": false,
       "carried_from": "2026-09-10"
+    },
+    {
+      "id": "reco-6bc20366d0f2",
+      "asof": "2026-10-01",
+      "source_date": "2026-09-28",
+      "type": "model_check",
+      "priority": "watch",
+      "score": 35,
+      "title": "RDDT — the agency expert's wallet-share growth (+20-25%/yr) is BELOW the Street's revenue growth (+32%)",
+      "tickers": [
+        "RDDT"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "standing",
+      "confidence": "medium",
+      "why_now": "Horizon Media (Jefferies expert call, 09-28): Reddit wallet share growing ~20-25% annually, budgets 30-35% Google / 30-35% Meta / ~30% diversified (5-10% TikTok). BBG snapshot: FY2/FY1 revenue $4,477mn / $3,386mn = +32%; cons PT $213.91 (hi $300 / lo $130), px $143.08.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the RDDT model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [],
+      "source": "Jefferies · curated reconciliation 2026-09-28",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-09-28-inbox.md"
+      ],
+      "evidence_anchor": "RDDT — the agency expert's wallet-share growth (+20-25%/yr) is BELOW the Street's revenue growth (+32%)",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-09-28"
     },
     {
       "id": "reco-3df2752f1ae2",

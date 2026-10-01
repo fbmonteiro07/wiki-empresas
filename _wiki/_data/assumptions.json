@@ -1,5 +1,5 @@
 {
-  "asof": "2026-09-24",
+  "asof": "2026-10-01",
   "note": "Canonical-assumptions ledger — one entry per cross-page industry number that multiple pages/themes cite. Purpose: every page should reference ONE canonical framing per metric; when a new source disagrees, add a variant here (never silently replace). build_assumptions.py renders _meta/assumptions.md + _dashboards/assumptions.html and scans pages for citations of each metric not yet reconciled into the ledger. Edit variants by hand; keep scope labels precise (units vs dollars, IT-load vs facility GW).",
   "metrics": {
     "asic-vs-gpu-share": {
@@ -193,6 +193,16 @@
             "AMAT.md",
             "ASML.md"
           ]
+        },
+        {
+          "value": "~$280bn C2028 = ~70 GW compute shipped x ~$4-4.5bn WFE per GW ('that is exactly where I'm at'); ceiling = ASML slotting ~120 EUV tools ('no slots to get beyond 280' barring capacity expansion); ~$400-450bn 2030 at ~100 GW ('conjecture'); buy side 'pretty close to... 280'",
+          "source": "UBS · Timothy Arcuri — UBS powered-shell call 2026-09-30 + MU F4Q26 recap call 2026-10-01 (Capstone notes, Notion transcripts); written report 2026-09-29 not yet on disk",
+          "date": "2026-10-01",
+          "scope": "spoken; $/GW = TOTAL WFE / TOTAL compute-shipment GW (global ex-China, ex-PUE) — NOT the Bernstein incremental ~$7.5-8bn/GW card, NOT the facility ~$3bn/GW card; 120 slots is above ASML's own ~110 Low-NA 2028 plan",
+          "cited_in": [
+            "themes/semicap-wfe.md",
+            "ASML.md"
+          ]
         }
       ],
       "status": "house-vs-street",
@@ -281,6 +291,16 @@
           "scope": "GOOG only",
           "cited_in": [
             "themes/hyperscaler-capex.md"
+          ]
+        },
+        {
+          "value": "2027 hyperscaler + NEOCLOUD capex 'one five, one six, one seven, at least... probably even higher' vs a client's $1.2tn; cross-check NVDA ~$800bn DC revenue next year / ~1/3 share of DC capex => ~$2.4tn",
+          "source": "UBS · Timothy Arcuri — powered-shell call 2026-09-30 (spoken; 'I don't control the Google CapEx model' — not the UBS hyperscaler models)",
+          "date": "2026-10-01",
+          "scope": "hyperscaler + neocloud basket, global — not top-4 / five-name",
+          "cited_in": [
+            "themes/hyperscaler-capex.md",
+            "NVDA.md"
           ]
         }
       ],
@@ -376,6 +396,25 @@
             "NVDA.md",
             "CRDO.md",
             "themes/semicap-wfe.md"
+          ]
+        },
+        {
+          "value": "~50 GW (2027) / ~70 GW (2028) / ~100 GW (2030) COMPUTE-SHIPMENT GW (NVIDIA + AMD + ASICs incl. embedded CPUs, before PUE 1.12, global ex-China) vs available powered shell => gap ~20 GW 2027 / 20-25 GW 2028 (written report: ~25-30 GW 2028 — unreconciled); relief: 50 GW early-stage on-grid (40-50% conversion closes it; construction not begun on most), ~100 GW BTM projects to 2030, 30-40 GW China shell excluded",
+          "source": "UBS · Timothy Arcuri — powered-shell call 2026-09-30 (Capstone notes, Notion transcript); written report 2026-09-29 figs 9-11 not yet on disk",
+          "date": "2026-10-01",
+          "scope": "COMPUTE-SHIPMENT GW — a FOURTH basis: not facility, not IT-load, not the 800V subset; nets against none of them without the 1.12 gross-up",
+          "cited_in": [
+            "themes/ai-datacenter-power.md",
+            "themes/semicap-wfe.md"
+          ]
+        },
+        {
+          "value": "Power-equipment MANUFACTURING capacity: CAT ~50 GW (Nov-25 investor day) -> 'north of 60 GW' by 2030 (turbines + recip, back-end loaded); CMI 35 -> 55 GW (May-26 investor day), ~95% diesel backup through 2030, lines fungible backup<->prime; INNIO ~single-digit GW/yr -> low double digits ('don't quote me'); for 2027-28 capacity = today's (CMI ~35, CAT 'guessing 30-40')",
+          "source": "UBS · Steve Fisher (machinery/E&C) on the UBS powered-shell call 2026-09-30 (Capstone notes, Notion transcript; speaker confirmed from the UBS sales mail, not the invite)",
+          "date": "2026-10-01",
+          "scope": "GW OF GENERATING EQUIPMENT per year — manufacturing capacity, not DC load; GS Exhibit 31 carries CMI 55 GW / INNIO ~10 GW/yr consistent",
+          "cited_in": [
+            "themes/ai-datacenter-power.md"
           ]
         }
       ],

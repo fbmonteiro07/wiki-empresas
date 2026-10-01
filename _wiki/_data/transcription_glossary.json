@@ -299,6 +299,397 @@
    "domain": "finance",
    "rule": "ASR split.",
    "first_seen": "2026-09-29"
+  },
+  "bid growth": {
+   "correct": "bit growth (memory supply/demand)",
+   "domain": "memory",
+   "rule": "ASR on memory calls hears 'bit' as 'bid'.",
+   "keep_when": [
+    "auction",
+    "tender",
+    "bid/ask",
+    "bidding"
+   ],
+   "ci": true,
+   "first_seen": "2026-10-01 (UBS Arcuri MU recap call)"
+  },
+  "incentive COG": {
+   "correct": "incentive comp (compensation) - the FY26 incentive-comp step-up that flows through COGS/inventory",
+   "domain": "memory",
+   "rule": "ASR on the MU F4Q26 recap; 'incentive COG effect' = incentive-comp effect on COGS.",
+   "ci": true,
+   "first_seen": "2026-10-01 (UBS Arcuri MU recap call)"
+  },
+  "SEAs": {
+   "correct": "SCAs (supply capacity agreements - Micron's long-term customer agreements; the MU page's term)",
+   "domain": "memory",
+   "rule": "ASR hears 'SCAs' as 'SEAs'/'SEA'. In Micron context = SCAs/LTAs.",
+   "keep_when": [
+    "ocean",
+    "Southeast Asia",
+    "SEA region",
+    "maritime"
+   ],
+   "first_seen": "2026-10-01 (UBS Arcuri MU recap call)"
+  },
+  "HVM": {
+   "correct": "HBM (high-bandwidth memory) when the sentence is about memory revenue/ASP/supply; HVM = high-volume manufacturing only in a fab-ramp context",
+   "domain": "memory",
+   "rule": "ASR on memory calls; check the sentence sense.",
+   "keep_when": [
+    "high-volume",
+    "high volume",
+    "volume manufacturing",
+    "ramp to HVM",
+    "enter HVM",
+    "HVM in",
+    "production"
+   ],
+   "first_seen": "2026-10-01 (UBS Arcuri MU recap call; also 'HPM' = HBM)"
+  },
+  "HPM": {
+   "correct": "HBM",
+   "domain": "memory",
+   "rule": "ASR ('HPM4 versus HPM3' = HBM4 vs HBM3).",
+   "first_seen": "2026-10-01 (UBS Arcuri MU recap call)"
+  },
+  "WFP": {
+   "correct": "WFE (wafer fab equipment)",
+   "domain": "semicap",
+   "rule": "ASR on semicap calls.",
+   "first_seen": "2026-10-01 (UBS Arcuri MU recap call)"
+  },
+  "Sentecast": {
+   "correct": "semicap (semiconductor capital equipment)",
+   "domain": "semicap",
+   "rule": "ASR ('what's your latest view on Sentecast... underperforming the Sente industry' = semicap vs semis).",
+   "ci": true,
+   "first_seen": "2026-10-01 (UBS Arcuri MU recap call)"
+  },
+  "XHBM": {
+   "correct": "ex-HBM (non-HBM DRAM/NAND costs)",
+   "domain": "memory",
+   "rule": "Analyst shorthand 'x-HBM' transcribed as one token.",
+   "first_seen": "2026-10-01 (UBS Arcuri MU recap call)"
+  },
+  "my crimes": {
+   "correct": "Micron",
+   "domain": "names",
+   "rule": "ASR ('what the Koreans are doing and what my crimes do' = what Micron does).",
+   "ci": true,
+   "first_seen": "2026-10-01 (UBS Arcuri MU recap call)"
+  },
+  "NAS": {
+   "correct": "NAND when the sentence pairs it with DRAM (bits/costs/pricing); NAS = network-attached storage only in a storage-systems context",
+   "domain": "memory",
+   "rule": "ASR on memory calls ('for both DRAM and NAS/NAD/NAN/band' = NAND).",
+   "keep_when": [
+    "network",
+    "attached",
+    "storage system",
+    "NetApp",
+    "filer"
+   ],
+   "first_seen": "2026-10-01 (UBS Arcuri MU recap call)"
+  },
+  "NAD": {
+   "correct": "NAND",
+   "domain": "memory",
+   "rule": "ASR ('is this D-RAM or NAD').",
+   "first_seen": "2026-10-01 (UBS Arcuri MU recap call)"
+  },
+  "CoaS": {
+   "correct": "CoWoS (TSMC chip-on-wafer-on-substrate advanced packaging)",
+   "domain": "packaging",
+   "rule": "ASR on TSMC/semis calls; variants 'CoVOS', 'Covox', 'Covax', 'CoWAS', 'CoaOS'; 'Covox L' = CoWoS-L; 'CoaPos' = CoPoS (CoWoS on panel).",
+   "ci": true,
+   "first_seen": "2026-10-01 (JPM Gokul TSMC 3Q26 preview call)"
+  },
+  "CoVOS": {
+   "correct": "CoWoS",
+   "domain": "packaging",
+   "rule": "ASR variant.",
+   "ci": true,
+   "first_seen": "2026-10-01 (JPM Gokul TSMC preview)"
+  },
+  "Covox": {
+   "correct": "CoWoS ('Covox L' = CoWoS-L)",
+   "domain": "packaging",
+   "rule": "ASR variant.",
+   "ci": true,
+   "first_seen": "2026-10-01 (JPM Gokul TSMC preview)"
+  },
+  "Covax": {
+   "correct": "CoWoS",
+   "domain": "packaging",
+   "rule": "ASR variant (not the vaccine programme in a semis call).",
+   "keep_when": [
+    "vaccine",
+    "WHO",
+    "Gavi"
+   ],
+   "first_seen": "2026-10-01 (JPM Gokul TSMC preview)"
+  },
+  "CoWAS": {
+   "correct": "CoWoS",
+   "domain": "packaging",
+   "rule": "ASR variant.",
+   "ci": true,
+   "first_seen": "2026-10-01 (JPM Gokul TSMC preview)"
+  },
+  "CoaOS": {
+   "correct": "CoWoS",
+   "domain": "packaging",
+   "rule": "ASR variant.",
+   "ci": true,
+   "first_seen": "2026-10-01 (JPM Gokul TSMC preview)"
+  },
+  "CoaPos": {
+   "correct": "CoPoS (CoWoS on panel substrate)",
+   "domain": "packaging",
+   "rule": "ASR variant.",
+   "ci": true,
+   "first_seen": "2026-10-01 (JPM Gokul TSMC preview)"
+  },
+  "Qantas Services": {
+   "correct": "Quanta Services (PWR)",
+   "domain": "names",
+   "rule": "ASR on the UBS powered-shell call (not the airline).",
+   "first_seen": "2026-09-30 (UBS Arcuri/Fisher powered-shell call)"
+  },
+  "DICOM": {
+   "correct": "Dycom Industries (DY) in a data-centre interconnection / E&C context (DICOM is otherwise the medical-imaging standard)",
+   "domain": "names",
+   "rule": "ASR on the UBS powered-shell call.",
+   "keep_when": [
+    "imaging",
+    "medical",
+    "radiology",
+    "PACS"
+   ],
+   "first_seen": "2026-09-30 (UBS Arcuri/Fisher powered-shell call)"
+  },
+  "Ineo": {
+   "correct": "INNIO (Jenbacher gas engines)",
+   "domain": "names",
+   "rule": "ASR on the UBS powered-shell call.",
+   "first_seen": "2026-09-30 (UBS Arcuri/Fisher powered-shell call)"
+  },
+  "Amit Maratra": {
+   "correct": "Amit Mehrotra (UBS multi-industry / electrical equipment analyst)",
+   "domain": "names",
+   "rule": "ASR.",
+   "first_seen": "2026-09-30 (UBS Arcuri/Fisher powered-shell call)"
+  },
+  "A6": {
+   "correct": "ASICs when listed with NVIDIA/AMD/Broadcom as compute suppliers",
+   "domain": "semis",
+   "rule": "ASR ('NVIDIA, AMD A6, what Broadcom's going to ship' = ASICs).",
+   "keep_when": [
+    "Audi",
+    "road",
+    "motorway",
+    "paper size",
+    "A6 chip",
+    "Apple A6"
+   ],
+   "first_seen": "2026-09-30 (UBS Arcuri/Fisher powered-shell call)"
+  },
+  "Michael Hudson": {
+   "correct": "Michael Hurlston (Lumentum CEO) when introduced 'from Lumentum'",
+   "domain": "names",
+   "rule": "ASR at the ECOC 2026 Global Photonics Economic Forum.",
+   "keep_when": [
+    "economist",
+    "Hudson Institute",
+    "Hudson Bay"
+   ],
+   "first_seen": "2026-09-30 (Hurlston ECOC GPEF recording)"
+  },
+  "Genoptic": {
+   "correct": "Jenoptik",
+   "domain": "names",
+   "rule": "ASR ('former CEO of Genoptic' = Stefan Traeger, ex-Jenoptik).",
+   "first_seen": "2026-09-30 (Hurlston ECOC GPEF recording)"
+  },
+  "Alda Kemper": {
+   "correct": "Aldo Kamper (ams OSRAM CEO)",
+   "domain": "names",
+   "rule": "ASR.",
+   "first_seen": "2026-09-30 (Hurlston ECOC GPEF recording)"
+  },
+  "Indian phosphide": {
+   "correct": "indium phosphide (InP)",
+   "domain": "optical",
+   "rule": "ASR.",
+   "ci": true,
+   "first_seen": "2026-09-30 (Hurlston ECOC GPEF recording)"
+  },
+  "wrappers per month": {
+   "correct": "wafers per month (wpm)",
+   "domain": "units",
+   "rule": "ASR ('30 thousand six-inch wrappers per month' = 6-inch InP wafers/month).",
+   "ci": true,
+   "first_seen": "2026-09-30 (Hurlston ECOC GPEF recording)"
+  },
+  "Coop": {
+   "correct": "COUPE (TSMC's Compact Universal Photonic Engine, CPO platform) when the sentence is about TSMC optics/CPO; elsewhere 'co-ops'/'co-host' may be CoWoS",
+   "domain": "optical",
+   "rule": "ASR on TSMC calls; check the sentence sense.",
+   "keep_when": [
+    "cooperative",
+    "chicken",
+    "co-op board",
+    "Co-op (retailer)"
+   ],
+   "first_seen": "2026-10-01 (JPM Gokul TSMC 3Q26 preview call)"
+  },
+  "Kube": {
+   "correct": "Kyber (NVIDIA rack architecture) — VERIFY per sentence",
+   "domain": "semis",
+   "rule": "ASR ('using the Kube architecture' at Feynman).",
+   "keep_when": [
+    "Kubernetes",
+    "kube-",
+    "kubectl"
+   ],
+   "first_seen": "2026-10-01 (JPM Gokul TSMC 3Q26 preview call)"
+  },
+  "Trinium": {
+   "correct": "Trainium (AWS)",
+   "domain": "names",
+   "rule": "ASR.",
+   "first_seen": "2026-10-01 (JPM Gokul TSMC 3Q26 preview call)"
+  },
+  "Ibden": {
+   "correct": "Ibiden (substrates)",
+   "domain": "names",
+   "rule": "ASR; also 'Ibude'.",
+   "first_seen": "2026-10-01 (JPM Gokul TSMC 3Q26 preview call)"
+  },
+  "Ibude": {
+   "correct": "Ibiden (substrates)",
+   "domain": "names",
+   "rule": "ASR.",
+   "first_seen": "2026-10-01 (JPM Gokul TSMC 3Q26 preview call)"
+  },
+  "Kinsos": {
+   "correct": "Kinsus (substrates)",
+   "domain": "names",
+   "rule": "ASR.",
+   "first_seen": "2026-10-01 (JPM Gokul TSMC 3Q26 preview call)"
+  },
+  "HUMU-FISH": {
+   "correct": "HumuFish (Google TPU v9 codename as used on the wiki) — verify",
+   "domain": "names",
+   "rule": "ASR.",
+   "ci": true,
+   "first_seen": "2026-10-01 (JPM Gokul TSMC 3Q26 preview call)"
+  },
+  "Spectrum X CPU": {
+   "correct": "Spectrum-X CPO (NVIDIA co-packaged-optics Ethernet switch)",
+   "domain": "optical",
+   "rule": "ASR ('Spectrum X CPU' in a COUPE/CPO sentence = the CPO switch).",
+   "first_seen": "2026-10-01 (JPM Gokul TSMC 3Q26 preview call)"
+  },
+  "E10": {
+   "correct": "TPU v10 when listed after 'V8… V9' in a Google TPU packaging sentence",
+   "domain": "semis",
+   "rule": "ASR.",
+   "keep_when": [
+    "Intel E10",
+    "error E10",
+    "E10 fuel",
+    "ethanol"
+   ],
+   "first_seen": "2026-10-01 (JPM Gokul TSMC 3Q26 preview call)"
+  },
+  "wafer-fed equipment": {
+   "correct": "wafer-fab equipment (WFE)",
+   "domain": "semicap",
+   "rule": "ASR.",
+   "ci": true,
+   "first_seen": "2026-10-01 (UBS Arcuri MU recap call)"
+  },
+  "Ombuds": {
+   "correct": "OpEx (in 'how to model Ombuds versus COGS')",
+   "domain": "memory",
+   "rule": "ASR on the MU recap call Q&A.",
+   "first_seen": "2026-10-01 (UBS Arcuri MU recap call)"
+  },
+  "Hong Hu": {
+   "correct": "Hong Hou (Semtech CEO) when introduced 'from Semtech'",
+   "domain": "names",
+   "rule": "ASR at the ECOC 2026 GPEF CEO panel.",
+   "first_seen": "2026-09-30 (Hurlston ECOC GPEF recording)"
+  },
+  "Stefan Trager": {
+   "correct": "Stefan Traeger (ex-Jenoptik CEO; GPEF CEO-panel moderator)",
+   "domain": "names",
+   "rule": "ASR spelling.",
+   "first_seen": "2026-09-30 (Hurlston ECOC GPEF recording)"
+  },
+  "certies": {
+   "correct": "SerDes",
+   "domain": "optical",
+   "rule": "ASR ('224G certies' = 224G SerDes); also 'surdees'.",
+   "ci": true,
+   "first_seen": "2026-09-30 (Hurlston ECOC GPEF recording)"
+  },
+  "surdees": {
+   "correct": "SerDes",
+   "domain": "optical",
+   "rule": "ASR.",
+   "ci": true,
+   "first_seen": "2026-09-30 (Hurlston ECOC GPEF recording)"
+  },
+  "Hide Man with Memory": {
+   "correct": "HBM (high-bandwidth memory)",
+   "domain": "memory",
+   "rule": "ASR.",
+   "ci": true,
+   "first_seen": "2026-09-30 (Hurlston ECOC GPEF recording)"
+  },
+  "Apply assurance": {
+   "correct": "supply assurance",
+   "domain": "units",
+   "rule": "ASR.",
+   "ci": true,
+   "first_seen": "2026-09-30 (Hurlston ECOC GPEF recording)"
+  },
+  "Cochrane": {
+   "correct": "Coherent (COHR) in an optics/InP sentence",
+   "domain": "names",
+   "rule": "ASR.",
+   "keep_when": [
+    "Cochrane review",
+    "Cochrane Collaboration",
+    "Mickey"
+   ],
+   "first_seen": "2026-09-30 (Hurlston ECOC GPEF recording)"
+  },
+  "Lubentum": {
+   "correct": "Lumentum (LITE)",
+   "domain": "names",
+   "rule": "ASR spelling.",
+   "first_seen": "2026-09-30 (Hurlston ECOC GPEF recording)"
+  },
+  "Mark Kitten": {
+   "correct": "Mark Gitin (IPG Photonics CEO) when introduced 'from IPG'",
+   "domain": "names",
+   "rule": "ASR.",
+   "first_seen": "2026-09-30 (Hurlston ECOC GPEF recording)"
+  },
+  "MCAS": {
+   "correct": "MKS (MKS Instruments) when the speaker is John Lee / the sentence is about semicap + PCB equipment",
+   "domain": "names",
+   "rule": "ASR.",
+   "keep_when": [
+    "Boeing",
+    "737",
+    "flight control"
+   ],
+   "first_seen": "2026-09-30 (Hurlston ECOC GPEF recording)"
   }
  },
  "summary_traps": [

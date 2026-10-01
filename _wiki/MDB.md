@@ -13,7 +13,7 @@ _Wiki · generated 2026-09-04 · sources: `E:\Wiki Felipe empresas\MDB\transcrip
 | Gross profit | $2.2bn | $2.7bn |
 | Gross margin | 74.8% | 75.0% |
 | EBITDA | $613m | $819m |
-| EPS | $6.12 | $7.82 |
+| EPS | $6.12 | $7.83 |
 | Capex | $11m | $12m |
 | OCF (≈EBITDA) | $613m | $819m |
 

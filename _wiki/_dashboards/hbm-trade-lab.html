@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Trade Ratio Lab</title>
+<meta name="description" content="Interactive 3D sketch, step by step: why the same DRAM wafer yields about three times fewer bits as HBM than as conventional DDR (bigger dies, TSV process loss, stack yield), how a wafer turns into gigabits, gigabytes, stacks and GPUs, and what a rising HBM wafer share does to total bit supply. Every sourced number attributed to the Capstone wiki; placeholder inputs labelled as such.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f5f7; --panel:#ffffff; --panel-2:#eef0f3; --ink:#15181d; --ink-2:#4a515c; --ink-3:#7a828e;
+  --line:#d9dde3; --accent:#0a84c6; --accent-2:#0f6fa3; --amber:#b86b00; --red:#c2372f; --copper:#a8612a;
+  --chip:#e3e7ec; --good:#1d7a4f;
+  --green:#1c4d3a; --green-2:#2f6f52; --sage:#a9c7b6; --sage-2:#e3eee7;
+  --bar-on:#1c4d3a; --bar-off:#93b8a4; --bar-lost:#c97c3a;
+  --studio:#0c1712; --studio-2:#142219; --studio-ink:#e6efe9; --studio-ink-2:#a9c7b6; --studio-ink-3:#6f8f7f; --studio-line:#22382c; --studio-accent:#8fe0b3;
+  --shadow:0 1px 2px rgba(0,0,0,.06),0 6px 24px rgba(0,0,0,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0b0d10; --panel:#13161b; --panel-2:#1a1e25; --ink:#e9edf2; --ink-2:#aab2be; --ink-3:#737d8a;
+    --line:#262b33; --accent:#4cc2ff; --accent-2:#8fd8ff; --amber:#ffb454; --red:#ff6b5e; --copper:#d98c4f;
+    --chip:#1f242c; --good:#4fd18b;
+    --green:#2f6f52; --green-2:#4fa77c; --sage:#2f5546; --sage-2:#1b2f26;
+    --bar-on:#6fd3a0; --bar-off:#3a6b57; --bar-lost:#d98c4f;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 30px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0b0d10; --panel:#13161b; --panel-2:#1a1e25; --ink:#e9edf2; --ink-2:#aab2be; --ink-3:#737d8a;
+  --line:#262b33; --accent:#4cc2ff; --accent-2:#8fd8ff; --amber:#ffb454; --red:#ff6b5e; --copper:#d98c4f;
+  --chip:#1f242c; --good:#4fd18b;
+  --green:#2f6f52; --green-2:#4fa77c; --sage:#2f5546; --sage-2:#1b2f26;
+  --bar-on:#6fd3a0; --bar-off:#3a6b57; --bar-lost:#d98c4f;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+body{overflow-x:hidden}
+.mono{font-family:"JetBrains Mono",ui-monospace,Consolas,monospace}
+.wrap{max-width:1280px;margin:0 auto;padding:20px 16px 60px}
+header.top{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:14px}
+h1{margin:0;font-size:clamp(28px,4.4vw,48px);line-height:.95;letter-spacing:-.03em;font-weight:800;text-transform:uppercase}
+h1 span{color:var(--green-2)}
+.sub{color:var(--ink-2);font-size:14px;max-width:640px;margin-top:8px;line-height:1.45}
+.sub a{color:var(--green-2)}
+.tabs{display:flex;gap:6px;background:var(--panel);border:1px solid var(--line);padding:4px;border-radius:12px;box-shadow:var(--shadow);flex-wrap:wrap}
+.tabs a{font:600 13px Inter,sans-serif;color:var(--ink-2);text-decoration:none;padding:8px 12px;border-radius:9px}
+.tabs a:hover{background:var(--panel-2);color:var(--ink)}
+.themebtn{font:inherit;border:1px solid var(--line);background:var(--panel);color:var(--ink-2);border-radius:10px;padding:9px 11px;cursor:pointer}
+.eyebrow{font:600 10.5px "JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.src{color:var(--ink-3);font-size:10.5px}
+.tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:5px;background:color-mix(in srgb,var(--amber) 18%,transparent);color:var(--amber);margin-left:4px;vertical-align:1px}
+.tag.d{background:color-mix(in srgb,var(--ink-3) 18%,transparent);color:var(--ink-3)}
+.tag.r{background:color-mix(in srgb,var(--red) 18%,transparent);color:var(--red)}
+.tag.g{background:color-mix(in srgb,var(--green-2) 18%,transparent);color:var(--green-2)}
+
+/* ---------- stage: side panel | studio, KPI strip below ---------- */
+.stage{display:grid;grid-template-columns:400px 1fr;grid-template-rows:1fr auto;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);height:min(80vh,800px);min-height:640px;background:var(--panel)}
+.side{overflow:auto;padding:18px 20px 22px;border-right:1px solid var(--line);background:var(--panel);scrollbar-width:thin}
+.side .t{font-size:23px;font-weight:800;letter-spacing:-.025em;line-height:1.1;margin:6px 0 10px;color:var(--ink)}
+.side .t.s{font-size:20px;margin-top:4px}
+.side p{font-size:13px;line-height:1.5;color:var(--ink-2);margin:0 0 8px}
+.stepper{display:grid;grid-template-columns:repeat(6,1fr);gap:5px;margin:10px 0 8px}
+.stepper button,.seg3 button{font:inherit;border:1px solid var(--line);background:var(--panel-2);color:var(--ink-2);border-radius:10px;padding:8px 2px 7px;cursor:pointer;text-align:center;line-height:1.1}
+.stepper button b,.seg3 button b{display:block;font:700 14px Inter,sans-serif;color:var(--ink)}
+.stepper button small,.seg3 button small{display:block;font-size:9.5px;color:var(--ink-3);margin-top:3px;letter-spacing:.02em}
+.stepper button.on,.seg3 button.on{background:var(--green);border-color:var(--green)}
+.stepper button.on b,.stepper button.on small,.seg3 button.on b,.seg3 button.on small{color:#fff}
+.nav{display:flex;gap:6px;align-items:center;margin:0 0 14px}
+.nav button{font:600 12px Inter,sans-serif;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:8px;padding:6px 10px;cursor:pointer}
+.nav button:hover{border-color:var(--green-2)}
+.nav button.walk{background:var(--green);color:#fff;border-color:var(--green)}
+.nav button.walk.on{background:var(--copper);border-color:var(--copper)}
+.nav input[type=range]{flex:1;accent-color:var(--green-2);margin:0}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:5px 10px;font-size:12.5px;align-items:baseline;margin:0}
+.kv dt{color:var(--ink-3);font-weight:600;text-transform:uppercase;font-size:10.5px;letter-spacing:.06em}
+.kv dd{margin:0;color:var(--ink)}
+hr.sep{border:0;border-top:1px solid var(--line);margin:18px 0 14px}
+.f{margin-top:12px}
+.f label{display:flex;justify-content:space-between;align-items:baseline;font-size:12px;font-weight:600;color:var(--ink)}
+.f label span{font:500 11px "JetBrains Mono",monospace;color:var(--ink-3)}
+.f input[type=number]{width:100%;margin-top:6px;font:600 14px "JetBrains Mono",monospace;padding:8px 10px;border-radius:9px;border:1px solid var(--line);background:var(--panel-2);color:var(--ink)}
+.f input[type=number]:focus{outline:2px solid var(--green-2);outline-offset:0;border-color:transparent}
+.f input[type=range]{width:100%;accent-color:var(--green-2);margin:8px 0 0}
+.f .h,.hint{font-size:11px;color:var(--ink-3);margin-top:5px;line-height:1.45}
+.seg3{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin-top:8px}
+.formula{font:500 11.5px "JetBrains Mono",monospace;color:var(--ink-2);margin-top:12px;padding:9px 10px;background:var(--panel-2);border-radius:9px;line-height:1.55}
+.formula b{color:var(--ink);font-weight:600}
+.formula .ok{color:var(--good);font-weight:600} .formula .off{color:var(--amber);font-weight:600}
+
+.studio{position:relative;background:var(--studio);overflow:hidden}
+#glbox{position:absolute;inset:0}
+#gl{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none;cursor:grab}
+#gl:active{cursor:grabbing}
+#labels{position:absolute;inset:0;pointer-events:none}
+.lbl{position:absolute;transform:translate(-50%,-100%);font:600 10.5px "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--studio-ink);white-space:nowrap;text-align:center;padding-bottom:30px}
+.lbl small{display:block;font:500 10px "JetBrains Mono",monospace;letter-spacing:.03em;text-transform:none;color:var(--studio-ink-2);margin-top:2px}
+.lbl::after{content:"";position:absolute;left:50%;bottom:5px;width:1px;height:21px;background:var(--studio-ink-3)}
+.lbl::before{content:"";position:absolute;left:50%;bottom:0;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:var(--studio-ink-2)}
+.lbl.hot{color:var(--studio-accent)}
+.lbl.cu{color:#f0c9a3} .lbl.cu::before{background:#f0c9a3}
+.lbl.bad{color:#ff9a8f} .lbl.bad::before{background:#ff9a8f}
+.sh{position:absolute;left:18px;top:16px;pointer-events:none;max-width:72%}
+.sh .eyebrow{color:var(--studio-ink-3)}
+.sh .big{font-size:21px;font-weight:700;color:var(--studio-ink);letter-spacing:-.02em;margin-top:4px;line-height:1.15}
+.sh .vs{font:500 11px "JetBrains Mono",monospace;color:var(--studio-ink-2);margin-top:4px}
+.sc{position:absolute;left:18px;bottom:16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.sc .pill{font:600 12px Inter,sans-serif;padding:7px 13px;border-radius:999px;border:1px solid var(--studio-line);background:var(--studio-2);color:var(--studio-ink);cursor:pointer}
+.sc .pill:hover{border-color:var(--studio-ink-3)}
+.sc label{font:600 10.5px "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--studio-ink-3);display:flex;align-items:center;gap:8px}
+.sc input[type=range]{width:110px;accent-color:var(--studio-accent);margin:0}
+.snote{position:absolute;right:18px;bottom:16px;font:500 10.5px "JetBrains Mono",monospace;color:var(--studio-ink-3);letter-spacing:.04em;text-align:right;line-height:1.5}
+#fallback{position:absolute;inset:0;display:none;align-items:center;justify-content:center;text-align:center;padding:30px;color:var(--studio-ink-2)}
+.prog{position:absolute;left:0;right:0;top:0;height:3px;background:var(--studio-line)}
+.prog i{display:block;height:100%;width:0;background:var(--studio-accent);transition:width .15s linear}
+.kpis{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);background:var(--panel)}
+.kpi{padding:14px 20px 13px;border-right:1px solid var(--line)}
+.kpi:last-child{border-right:0}
+.kpi .v{font-size:25px;font-weight:800;letter-spacing:-.03em;line-height:1.1;color:var(--ink)}
+.kpi .k{font:600 10.5px "JetBrains Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-top:5px}
+.kpi .s{font-size:11px;color:var(--ink-3);margin-top:2px;line-height:1.4}
+
+/* ---------- comparison ---------- */
+section.how{margin-top:26px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px 22px 18px;box-shadow:var(--shadow)}
+.how h3{margin:0;font-size:18px;font-weight:700;letter-spacing:-.01em}
+.how .hs{font:500 11.5px "JetBrains Mono",monospace;color:var(--ink-3);margin-top:5px}
+.mtabs{display:inline-flex;gap:2px;background:var(--panel-2);border:1px solid var(--line);border-radius:10px;padding:3px;margin:14px 0 6px;flex-wrap:wrap}
+.mtabs button{font:600 12px Inter,sans-serif;border:0;background:transparent;color:var(--ink-2);padding:6px 12px;border-radius:8px;cursor:pointer}
+.mtabs button.on{background:var(--green);color:#fff}
+.chart{position:relative}
+.chart svg{width:100%;height:300px;display:block}
+.chart .gl{stroke:var(--line);stroke-width:1}
+.chart .ax{stroke:var(--ink-3);stroke-width:1}
+.chart .tk,.chart .xs{font:500 10.5px "JetBrains Mono",monospace;fill:var(--ink-3)}
+.chart .xl{font:600 12px Inter,sans-serif;fill:var(--ink-2)}
+.chart .xl.on{fill:var(--ink)}
+.chart .val{font:600 12.5px Inter,sans-serif;fill:var(--ink-2)}
+.chart .val.on{fill:var(--ink);font-weight:700}
+.chart .bar{fill:var(--bar-off);cursor:pointer;transition:fill .2s}
+.chart .bar.on{fill:var(--bar-on)}
+.chart .bar.lost{fill:var(--bar-lost);opacity:.55}
+.chart .bar.lost.on{opacity:.9}
+.chart .bar:hover{opacity:.82}
+.chart .hit{fill:transparent;cursor:pointer}
+.chart .lg{font:500 11px Inter,sans-serif;fill:var(--ink-2)}
+.tip{position:absolute;pointer-events:none;background:var(--ink);color:var(--bg);font:500 11.5px Inter,sans-serif;padding:6px 9px;border-radius:7px;display:none;white-space:nowrap;z-index:3}
+.take{font-size:14px;font-weight:600;margin-top:8px;color:var(--ink)}
+.cav{font-size:11.5px;color:var(--ink-3);margin-top:5px;line-height:1.5}
+
+/* ---------- cards below ---------- */
+section.explain{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 16px 14px;box-shadow:var(--shadow)}
+.card .n{font:700 11px "JetBrains Mono",monospace;color:var(--green-2);letter-spacing:.08em}
+.card h4{margin:4px 0 6px;font-size:16px;letter-spacing:-.01em}
+.card p{margin:0;color:var(--ink-2);font-size:13.5px;line-height:1.5}
+.ladder{display:grid;grid-template-columns:auto 1fr auto;gap:6px 10px;font-size:12.5px;margin-top:10px;align-items:baseline}
+.ladder .k{font:600 10.5px "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.ladder .v{font:600 13px "JetBrains Mono",monospace;color:var(--ink);text-align:right;white-space:nowrap}
+.ladder .d{color:var(--ink-2)}
+h2{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin:34px 0 12px;font-weight:700}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+td.v{font-weight:600}
+td.src{white-space:nowrap;max-width:170px;white-space:normal}
+footer{margin-top:30px;color:var(--ink-3);font-size:12px;line-height:1.5;border-top:1px solid var(--line);padding-top:14px}
+@media (max-width:900px){section.explain{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}}
+@media (max-width:900px){
+  .stage{grid-template-columns:1fr;grid-template-rows:auto auto auto;height:auto;min-height:0}
+  .side{border-right:0;border-bottom:1px solid var(--line);max-height:none;order:2}
+  .studio{height:58vh;min-height:360px;order:1}
+  .kpis{order:3;grid-template-columns:1fr 1fr}
+  .kpi .v{font-size:20px}
+  .sh .big{font-size:17px}.sh{max-width:88%}
+  .snote{display:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div>
+      <h1>The Trade <span>Ratio</span></h1>
+      <div class="sub">Why the same DRAM wafer gives about three times fewer bits as HBM than as conventional DDR, built up step by step in 3D: one wafer, two fates, and how wafers turn into gigabits, gigabytes, stacks and GPUs. Companion to <a href="wafer-lab.html">The Wafer Path</a>; the rigorous version is the MU wafers-to-bits workbook on P:\Felipe Monteiro\Memória.</div>
+    </div>
+    <div style="display:flex;gap:8px;align-items:center">
+      <div class="tabs" role="tablist">
+        <a href="wafer-lab.html">← The Wafer Path</a>
+        <a href="ocs-cpo-lab.html">The Light Path</a>
+        <a href="eml-laser-lab.html">The Laser Line</a>
+      </div>
+      <button class="themebtn" id="themeBtn" title="Toggle theme" aria-label="Toggle theme">◐</button>
+    </div>
+  </header>
+
+  <div class="stage" id="stage">
+    <aside class="side" id="side">
+      <div class="eyebrow" id="stepN">Step 1 of 6</div>
+      <div class="t" id="stepTitle"></div>
+      <div class="stepper" id="stepper"></div>
+      <div class="nav"><button id="prevBtn">← Prev</button><button id="nextBtn">Next →</button><button id="walkBtn" class="walk">Walk me through it</button><input type="range" id="stepRange" min="0" max="5" step="1" value="0" aria-label="Step"></div>
+      <p id="stepBody"></p>
+      <dl class="kv" id="stepKv"></dl>
+
+      <hr class="sep">
+      <div class="eyebrow">Editable example · one 300 mm wafer</div>
+      <div class="t s">Same wafer. Two products.</div>
+      <p>Micron states the result (3:1 at HBM3E, closer to 4:1 at HBM4E). The split into die area, wafer yield and stack yield below is <b>illustrative</b>: move the sliders and the implied ratio updates against the stated one.</p>
+      <div class="f"><label>HBM generation <span id="genFact"></span></label><div class="seg3" id="genSeg"></div>
+        <div class="h" id="genHint"></div></div>
+      <div class="f"><label>DRAM cell density, Gb/mm² <span>sourced range</span></label><input type="number" id="inDens" value="0.43" min="0.2" max="0.8" step="0.01"><div class="h">Big-3 leading edge 0.43–0.55 Gb/mm² (CXMT’s 16nm 0.24).<span class="src"> Wells Fargo · Rakers, 2026-07-14</span> 1γ adds “&gt;30% bit density” over 1β.<span class="src"> Micron, 2025-03-20</span></div></div>
+      <div class="f"><label>Conventional die yield <span id="yDdrV">88%</span></label><input type="range" id="inYddr" min="60" max="98" step="1" value="88"><div class="h">Placeholder — the wiki has no die-yield figure. Edge exclusion fixed at 88% of the disc area in the formula (placeholder).</div></div>
+      <div class="f"><label>HBM die area vs a DDR die with the same bits <span id="areaV">2.10x</span></label><input type="range" id="inArea" min="120" max="320" step="5" value="210"><div class="h">Placeholder preset per generation. Sadana: the 3:1 “is made up of primarily factors of the die size growth… the die size is dedicated to providing high bandwidth capability”.<span class="src"> Micron Q4 FY24 callback, 2024-09-25</span></div></div>
+      <div class="f"><label>HBM wafer yield incl. TSV process <span id="yHbmV">78%</span></label><input type="range" id="inYhbm" min="50" max="98" step="1" value="78"><div class="h">Placeholder. “TSV wafer-process loss” is one of HBM’s three yield limits.<span class="src"> hbm-memory theme, 2026-08-31</span></div></div>
+      <div class="f"><label>Stack assembly yield per core die <span id="yStkV">98.0%</span></label><input type="range" id="inYstk" min="940" max="1000" step="2" value="980"><div class="h">98% per core die is the assumption the wiki carries in the 12-Hi → 8-Hi de-spec arithmetic (1.084x stack yield for four fewer layers).<span class="src"> hbm-memory, 2026-08-27</span> Compounds over the stack height.</div></div>
+      <div class="f"><label>Share of the fab’s wafers on HBM <span id="shareV">22%</span></label><input type="range" id="inShare" min="0" max="60" step="1" value="22"><div class="h">Micron TSV share 16% end-25 → 27% end-26 (⇒ ~22% average).<span class="src"> TrendForce via StoneX, 2026-06-23</span> Industry 19% → 23%; SK hynix ~33%.</div></div>
+      <div class="formula" id="formula"></div>
+      <div class="hint" style="margin-top:12px">Geometry is schematic: the die grid shows proportions, not real counts; stacks are drawn fewer than computed. Numbers in the labels and KPIs are the computed ones.</div>
+    </aside>
+
+    <div class="studio">
+      <div id="glbox">
+        <canvas id="gl"></canvas>
+        <div id="labels"></div>
+        <div id="fallback">The 3D scene needs WebGL and the three.js library from cdnjs. The steps, numbers and example still work.</div>
+      </div>
+      <div class="prog"><i id="prog"></i></div>
+      <div class="sh"><div class="eyebrow">Wafer → bits · three dimensional view</div><div class="big" id="vTitle"></div><div class="vs" id="vSub"></div></div>
+      <div class="sc"><button class="pill" id="exBtn">Explode stack</button><label>Layer spacing <input type="range" id="exRange" min="0" max="1" step="0.01" value="0" aria-label="Layer spacing"></label><button class="pill" id="replayBtn">Replay step</button></div>
+      <div class="snote">geometry is schematic<br>drag to orbit · scroll to zoom · ← → steps</div>
+    </div>
+
+    <div class="kpis">
+      <div class="kpi"><div class="v" id="k1">—</div><div class="k">Gb per wafer as DDR</div><div class="s" id="k1s"></div></div>
+      <div class="kpi"><div class="v" id="k2">—</div><div class="k">Gb per wafer as HBM</div><div class="s" id="k2s"></div></div>
+      <div class="kpi"><div class="v" id="k3">—</div><div class="k">Implied trade ratio</div><div class="s" id="k3s"></div></div>
+      <div class="kpi"><div class="v" id="k4">—</div><div class="k">Bits the fab gives up per HBM wafer</div><div class="s" id="k4s"></div></div>
+    </div>
+  </div>
+
+  <section class="how" id="how">
+    <h3>How does the HBM wafer share change the fab’s bit output?</h3>
+    <div class="hs" id="howSub"></div>
+    <div class="mtabs" id="mtabs"><button data-m="tot" class="on">Bits shipped (DDR-only = 100)</button><button data-m="hbm">HBM share of bits</button><button data-m="lost">Bits given up</button></div>
+    <div class="chart" id="chart"><div class="tip" id="tip"></div></div>
+    <div class="take" id="take"></div>
+    <div class="cav" id="cav"></div>
+  </section>
+
+  <section class="explain" id="explain">
+    <div class="card"><div class="n">01 · WHY AREA IS LOST</div><h4>The HBM die is bigger for the same bits</h4><p>Micron’s own decomposition: the 3:1 “is made up of primarily factors of the die size growth. HBM die size is larger than standard products in the same node in order to be able to provide the high bandwidth capability… and also based on the yields… in particular the assembly process.” 12-high carries “maybe a slightly higher trade ratio than 8-high”, and the ratio rises again with HBM4 as more of the die is dedicated to bandwidth.<span class="src"> Sumit Sadana, Micron Q4 FY24 callback, 2024-09-25</span> HBM4 doubles the interface to 2048 bits (banks per die 128 → 256, ~2,000 I/O on the same shoreline).<span class="src"> Micron Hot Chips via newsletters, 2026-08-23</span> Samsung: the ratio keeps rising each generation “driven by the increase in chip size”.<span class="src"> GS/Samsung mgmt, 2026-09-18</span></p></div>
+    <div class="card"><div class="n">02 · WHY YIELD COMPOUNDS</div><h4>Three yield limits, only one of them elastic</h4><p>HBM faces (1) packaging-stage stacking yield, (2) a larger die area leaving fewer known-good dies per wafer, (3) TSV wafer-process loss. “Only (1) is elastic”: stacking 4- or 8-high is “a far more mature process than stacking 12-high or 16-high, so simply lowering the stack height yields more HBM.”<span class="src"> hbm-memory theme, 2026-08-31 ingest</span> At 98% per core die, 12-Hi → 8-Hi lifts stack yield 1.084x; with stacking time it is up to ~1.63x effective output.<span class="src"> hbm-memory, 2026-08-27</span> When one die in a 12-high fails, twelve good dies are lost together — that is why the penalty compounds.</p></div>
+    <div class="card"><div class="n">03 · THE CONVERSION</div><h4>From wafer to GPU, in units</h4>
+      <div class="ladder" id="ladder"></div>
+      <p style="margin-top:10px">Stack specs: HBM3E 12-high = 36 GB (12 × 24Gb dies).<span class="src"> Micron, 2024-10-10</span> B300 and Rubin carry 8 stacks = 288 GB; HBM4 keeps 24Gb dies, HBM4E moves to 32Gb.<span class="src"> JPM · Kwon, 2026-09-22; SemiAnalysis, 2026-08-24</span> Dies ~50 µm thick, “millions of TSVs” in a 12-layer stack.<span class="src"> DAMNANG, 2026-03-20</span></p></div>
+  </section>
+
+  <section id="more">
+    <h2>The numbers behind the sketch</h2>
+    <div class="grid2">
+      <div class="card">
+        <h4 style="margin:0 0 8px">Trade ratio — what the sources say</h4>
+        <table>
+          <tr><th>Item</th><th>Value</th><th>Source</th></tr>
+          <tr><td>Micron, stated</td><td class="v">“100 bits of HBM… reduce 300 bits of DDR” — 3:1 at HBM3E, “closer to 4:1” by HBM4E</td><td class="src">Sadana, KeyBanc forum, 2026-08-10</td></tr>
+          <tr><td>Micron, decomposition</td><td class="v">“primarily… die size growth” + yields “in particular the assembly process”; 12-Hi slightly above 8-Hi; rises with HBM4</td><td class="src">Sadana, Q4 FY24 callback, 2024-09-25</td></tr>
+          <tr><td>Micron, trend</td><td class="v">~3x the silicon of DDR5 for the same bits, “not improving… likely getting worse”</td><td class="src">Hot Chips via newsletters, 2026-08-23</td></tr>
+          <tr><td>Brokers</td><td class="v">BMO 3:1 → 3.5-4:1 next gen (2026-08-20) · Mizuho 4:1 (2026-05-27) · Deutsche Bank ~3x → 4:1 (2026-09-16)</td><td class="src">as dated, on the MU and hbm-memory pages</td></tr>
+          <tr><td>Samsung</td><td class="v">“current 3-4:1”, rising each generation with chip size</td><td class="src">GS/Samsung mgmt, 2026-09-18</td></tr>
+          <tr><td>Independent models</td><td class="v">@zephyr_z9: ~2.7x (HBM3E) → 4x (HBM4E), worse for HBM5 (die 35-45% larger, bus 2048 → 4096-bit) · Bristlemoon: 3.0 → 4.0 → 4.5 (HBM5 only) <span class="tag">disputed direction vs the house engine</span></td><td class="src">2026-07-13; 2026-06-30</td></tr>
+          <tr><td>De-spec counter</td><td class="v">HBM4E → HBM4 is a “20% smaller die… the trade ratio starts to shrink”</td><td class="src">Communacopia analyst call, 2026-09-09 (broker unconfirmed)</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <h4 style="margin:0 0 8px">Wafers, shares and what it does to supply</h4>
+        <table>
+          <tr><th>Item</th><th>Value</th><th>Source</th></tr>
+          <tr><td>HBM share of DRAM wafers</td><td class="v">industry 19% end-25 → 23% end-26; Micron 16% → 27%, SK hynix 28% → 33%, Samsung 23% → 24%</td><td class="src">TrendForce via StoneX expert call, 2026-06-23</td></tr>
+          <tr><td>HBM share of DRAM bits</td><td class="v">~5% (2025) → ~10% (2030) while HBM takes 18% → 35% of wafers</td><td class="src">Deutsche Bank · Weathers, 2026-09-16</td></tr>
+          <tr><td>Same gap, one year</td><td class="v">“22% of global DRAM wafer capacity while producing only 9% of the memory capacity”</td><td class="src">corpus relay with the BMO initiation, 2026-08-20 (attribution unconfirmed)</td></tr>
+          <tr><td>Why conventional DRAM is short</td><td class="v">“cleanroom additions are required to augment node-transition supply growth”; industry DRAM bit shipments mid-20s % CY26, low-20s % CY27-28</td><td class="src">Micron F4Q26 prepared remarks, 2026-09-30</td></tr>
+          <tr><td>HBM wafer capacity</td><td class="v">~331k wspm end-25 → ~473k end-26E → ~668k end-27E</td><td class="src">SemiAnalysis Memory Mania, 2026-02-06 (ledger hbm-cycle)</td></tr>
+          <tr><td>Base die</td><td class="v">HBM3E: a DRAM-process die at every maker; HBM4: TSMC N12 for SK hynix and Micron (3-4x the cost of a core die), Samsung’s own SF4 — not on the DRAM wafer</td><td class="src">SemiAnalysis, 2025-08-11; WFC · Rakers, 2026-08-31; DAMNANG, 2026-03-20</td></tr>
+          <tr><td>The debate it feeds</td><td class="v">MS · Moore: 2027 wafer capacity +20% y/y, so the slowdown needs HBM mix to “entirely offset node migrations” — “not sure how comfortable we are” · JPM · Kwon: HBM 19% → 31% of wafer capacity by 2028E does exactly that</td><td class="src">both 2026-10-01, on the MU page</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <div class="n" style="color:var(--red)">NOT IN THE WIKI</div>
+      <p>The split of the 3:1 into die-area, TSV-process and stacking components; HBM core-die and DDR die areas in mm²; per-layer bond yield for 12-high; TSV wafer-process yield; known-good-stack test fallout; edge exclusion. The editable example’s area penalty, wafer yields and edge factor are placeholders chosen so that the HBM3E 12-Hi preset reproduces Micron’s stated 3:1 — they show <i>where</i> the bits go, not a measured decomposition. Sourced: the stated ratios by generation, the 98%-per-die assumption, the 0.43–0.55 Gb/mm² density, the 16Gb/24Gb/32Gb die capacities, 36 GB per 12-high stack and 8 stacks per GPU, and the wafer shares.</p>
+    </div>
+  </section>
+
+  <footer>
+    Sources: Capstone wiki pages MU, SKHYNIX, SAMSUNG and theme hbm-memory; Micron transcripts (Q4 FY24 callback 2024-09-25, Q4 FY24 2024-10-10, Q2 FY25 2025-03-20, F4Q26 prepared remarks 2026-09-30), Sadana at KeyBanc (2026-08-10), StoneX·TrendForce expert call (2026-06-23), Wells Fargo (2026-07-14), Deutsche Bank (2026-09-16), BMO (2026-08-20), SemiAnalysis, DAMNANG, as dated. Scene geometry is schematic. Built 2026-10-01 as the visual companion to the MU wafers-to-bits workbook.
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+"use strict";
+const $=s=>document.querySelector(s);
+try{const t=localStorage.getItem("tr-theme"); if(t) document.documentElement.setAttribute("data-theme",t);}catch(e){}
+const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+$("#themeBtn").onclick=()=>{ const isDark=css("--bg").toLowerCase()==="#0b0d10"; const nt=isDark?"light":"dark"; document.documentElement.setAttribute("data-theme",nt); try{localStorage.setItem("tr-theme",nt);}catch(e){} };
+const fmtN=n=>Math.round(n).toLocaleString("en-US");
+const fmtK=n=>n>=1e4?(n/1e3).toFixed(1)+"k":n>=1e3?(n/1e3).toFixed(2)+"k":Math.round(n).toString();
+const fmtPct=(n,d)=>(n*100).toFixed(d===undefined?0:d)+"%";
+
+/*__DATA__*/
+// HBM generation presets. Sourced: dieGb, n, stackGB, perGpu, stated ratio text. Placeholder: area (HBM die area vs a DDR die with the same bits), chosen so the 3E 12-Hi preset reproduces the stated 3:1.
+const GENS={
+ "3e8": {name:"HBM3E",sub:"8-Hi · 24GB",dieGb:24,n:8, area:2.10,stated:3.0,statedTxt:"3:1 (HBM3E)",perGpu:8,gpu:"B200 = 8 × 24GB = 192GB",src:"Micron · Sadana, 2026-08-10; JPM · Kwon, 2026-09-22",hint:"8-high carries “maybe a slightly” lower trade ratio than 12-high (Sadana, 2024-09-25): fewer layers, less compounding."},
+ "3e12":{name:"HBM3E",sub:"12-Hi · 36GB",dieGb:24,n:12,area:2.10,stated:3.0,statedTxt:"3:1 (HBM3E)",perGpu:8,gpu:"B300 = 8 × 36GB = 288GB",src:"Micron, 2024-10-10; JPM · Kwon, 2026-09-22",hint:"Micron’s HBM3E 12-high 36GB: “100 bits of HBM… reduce 300 bits of DDR supply” (Sadana, KeyBanc 2026-08-10)."},
+ "412": {name:"HBM4",sub:"12-Hi · 36GB",dieGb:24,n:12,area:2.60,stated:3.7,statedTxt:"≈3.5-4:1 (HBM4)",perGpu:8,gpu:"Rubin = 8 × 36GB = 288GB",src:"BMO, 2026-08-20; Samsung via GS, 2026-09-18; SemiAnalysis, 2026-08-24",hint:"2048-bit interface, banks per die 128 → 256 (Micron Hot Chips, 2026-08-23): more die for bandwidth. BMO 3.5-4:1; Sadana “increase as well”."},
+ "4e12":{name:"HBM4E",sub:"12-Hi · 48GB",dieGb:32,n:12,area:2.80,stated:4.0,statedTxt:"≈4:1 (HBM4E)",perGpu:8,gpu:"8 × 48GB = 384GB (VR300 first variant, UBS 2026-09-23)",src:"Micron · Sadana, 2026-08-10; UBS · Arcuri, 2026-09-23",hint:"“By the time you get to 4E, that trade ratio has worsened to closer to 4:1” (Sadana, 2026-08-10). 32Gb dies (SemiAnalysis, 2026-08-24)."},
+};
+const GEN_ORDER=["3e8","3e12","412","4e12"];
+const WAFER_MM2=Math.PI*150*150;   // 70,686 mm²
+const EDGE=0.88;                   // placeholder: usable share of the disc
+const DDR_GB=16;                   // 16Gb DDR5 die (Micron 1γ 16Gb DDR5 qualified, 2025-12-17)
+const X={gen:"3e12",dens:0.43,yDdr:0.88,area:2.10,yHbm:0.78,yStk:0.98,share:0.22};
+
+const STEPS=[
+ {short:"Wafer",t:"One 300 mm wafer",
+  b:()=>`A DRAM fab is counted in wafer starts per month. Each 300 mm wafer is <b>${fmtN(WAFER_MM2)} mm²</b> of silicon; the edge and the scribe lanes take some of it (we use ${fmtPct(EDGE)}, a placeholder). The same wafer can become conventional DDR5/LPDDR or the DRAM core dies of an HBM stack — and that choice is where the bits are won or lost. Micron: HBM “consumes a significant amount of wafers and puts pressure on non-HBM supply”.<span class="src"> Q3 FY26, 2026-06-24</span>`,
+  kv:()=>[["Wafer","300 mm · "+fmtN(WAFER_MM2)+" mm²","geometry"],["Usable area",fmtN(WAFER_MM2*EDGE)+" mm² at "+fmtPct(EDGE)+" (placeholder)","—"],["Micron starts","~340k wpm end-25 → ~365k end-26 (capacity)","TrendForce via StoneX, 2026-06-23"]]},
+ {short:"DDR",t:"Fate A: cut it into DDR dies",
+  b:()=>{const c=calc(); return `At <b>${X.dens.toFixed(2)} Gb/mm²</b> a 16Gb DDR5 die is ~${c.ddrDieMm2.toFixed(0)} mm², so the usable disc holds ~<b>${fmtN(c.ddrGross)}</b> dies; at ${fmtPct(X.yDdr)} die yield ~<b>${fmtN(c.ddrGood)}</b> are good. That is <b>${fmtK(c.ddrGb)} Gb ≈ ${(c.ddrGb/8/1000).toFixed(1)} TB</b> of DRAM from one wafer. Density is the node lever: 1γ gives “&gt;30% bit density improvement” over 1β.<span class="src"> Micron, 2025-03-20</span>`;},
+  kv:()=>{const c=calc(); return [["Die","16Gb · ~"+c.ddrDieMm2.toFixed(0)+" mm²","Wells Fargo density, 2026-07-14"],["Good dies",fmtN(c.ddrGood)+" of "+fmtN(c.ddrGross),"yield = placeholder"],["Bits",fmtK(c.ddrGb)+" Gb ≈ "+(c.ddrGb/8/1000).toFixed(2)+" TB","arithmetic"]];}},
+ {short:"HBM die",t:"Fate B: the same wafer as HBM core dies",
+  b:()=>{const c=calc(),g=GENS[X.gen]; return `An HBM core die holds ${g.dieGb}Gb but is drawn <b>×${X.area.toFixed(2)}</b> the area of a DDR die with the same bits (placeholder): the TSV field through the middle, the wide ${g.name==="HBM3E"?"1024":"2048"}-bit interface and the redundancy needed to stack it. Sadana: the trade ratio “is made up of primarily factors of the die size growth… more and more of the die size is dedicated to providing high bandwidth capability”.<span class="src"> Micron Q4 FY24 callback, 2024-09-25</span> Result: ~<b>${fmtN(c.hbmGross)}</b> gross dies instead of ~${fmtN(c.ddrGross)}.`;},
+  kv:()=>{const c=calc(),g=GENS[X.gen]; return [["Core die",g.dieGb+"Gb · ~"+c.hbmDieMm2.toFixed(0)+" mm² (placeholder)","Sadana, 2024-09-25"],["Gross dies",fmtN(c.hbmGross)+" vs "+fmtN(c.ddrGross)+" DDR","arithmetic"],["Area penalty","×"+X.area.toFixed(2)+" per bit","placeholder, preset per generation"]];}},
+ {short:"KGD",t:"TSV process and known-good dies",
+  b:()=>{const c=calc(); return `The HBM wafer goes through TSV etch, fill, thinning to ~50 µm and bump — steps a DDR wafer never sees — and “TSV wafer-process loss” is one of HBM’s three yield limits.<span class="src"> hbm-memory, 2026-08-31; DAMNANG, 2026-03-20</span> At <b>${fmtPct(X.yHbm)}</b> wafer yield (placeholder) ~<b>${fmtN(c.kgd)}</b> known-good dies leave the wafer. Only a known-good die may enter a stack: a bad die found later kills every good die bonded with it.`;},
+  kv:()=>{const c=calc(); return [["Wafer yield",fmtPct(X.yHbm)+" vs "+fmtPct(X.yDdr)+" DDR","placeholders"],["Known-good dies",fmtN(c.kgd)+" of "+fmtN(c.hbmGross),"arithmetic"],["Lost here",fmtN(c.hbmGross-c.kgd)+" dies","arithmetic"]];}},
+ {short:"Stack",t:"Stack "+"them "+"on a base die",
+  b:()=>{const c=calc(),g=GENS[X.gen]; return `Known-good dies are bonded ${g.n}-high onto a base die (HBM3E: a DRAM-process die; HBM4: TSMC N12 for Micron and SK hynix, Samsung’s own 4nm — made on another wafer entirely).<span class="src"> SemiAnalysis, 2025-08-11; DAMNANG, 2026-03-20</span> Each bond can fail: at <b>${fmtPct(X.yStk,1)}</b> per core die a ${g.n}-high stack yields <b>${fmtPct(c.stackYield,1)}</b> — and a failed stack takes ${g.n} good dies with it. ~<b>${c.stacks.toFixed(0)}</b> good ${g.sub.split(" · ")[1]} stacks per wafer, ${(c.stacks/g.perGpu).toFixed(1)} GPUs’ worth.<span class="src"> ${g.src}</span>`;},
+  kv:()=>{const c=calc(),g=GENS[X.gen]; return [["Stack yield",fmtPct(c.stackYield,1)+" = "+fmtPct(X.yStk,1)+"^"+g.n,"hbm-memory, 2026-08-27 (98% assumption)"],["Good stacks",c.stacks.toFixed(0)+" × "+g.n+" × "+g.dieGb+"Gb = "+fmtK(c.hbmGb)+" Gb","arithmetic"],["GPUs’ worth",(c.stacks/g.perGpu).toFixed(1)+" · "+g.gpu,g.src]];}},
+ {short:"Bits",t:"Count the bits: the trade ratio",
+  b:()=>{const c=calc(),g=GENS[X.gen]; return `Same wafer: <b>${fmtK(c.ddrGb)} Gb</b> as DDR, <b>${fmtK(c.hbmGb)} Gb</b> as HBM — an implied <b>${c.ratio.toFixed(2)}:1</b> against Micron’s stated ${g.statedTxt}. Every wafer moved to HBM gives up <b>${fmtK(c.lostGb)} Gb</b> the market would otherwise have had as DDR: “if we produce 100 bits of HBM, we have to reduce 300 bits of DDR supply”.<span class="src"> Sadana, KeyBanc 2026-08-10</span> With <b>${fmtPct(X.share)}</b> of wafers on HBM the fab ships <b>${c.idx.toFixed(0)}</b> bits where it would ship 100, and HBM is only <b>${fmtPct(c.hbmBitShare,1)}</b> of them. That is the mechanism under the conventional-DRAM shortage.`;},
+  kv:()=>{const c=calc(),g=GENS[X.gen]; return [["Implied ratio",c.ratio.toFixed(2)+":1 vs stated "+g.statedTxt,"Sadana, 2026-08-10"],["Fab at "+fmtPct(X.share)+" HBM",c.idx.toFixed(1)+" bits per 100 · "+c.lostIdx.toFixed(1)+" given up","arithmetic"],["HBM share of bits",fmtPct(c.hbmBitShare,1)+" of wafers → bits","cf. industry 22% → 9% (2026)"]];}},
+];
+
+function calc(){
+  const g=GENS[X.gen];
+  const usable=WAFER_MM2*EDGE;
+  const ddrDieMm2=DDR_GB/X.dens, ddrGross=usable/ddrDieMm2, ddrGood=ddrGross*X.yDdr, ddrGb=ddrGood*DDR_GB;
+  const hbmDieMm2=g.dieGb/X.dens*X.area, hbmGross=usable/hbmDieMm2, kgd=hbmGross*X.yHbm;
+  const stackYield=Math.pow(X.yStk,g.n), stacks=kgd/g.n*stackYield, hbmGb=stacks*g.n*g.dieGb;
+  const ratio=ddrGb/hbmGb, lostGb=ddrGb-hbmGb;
+  const h=X.share, idx=((1-h)+h/ratio)*100, lostIdx=h*(1-1/ratio)*100, hbmBitShare=(h/ratio)/((1-h)+h/ratio);
+  return {usable,ddrDieMm2,ddrGross,ddrGood,ddrGb,hbmDieMm2,hbmGross,kgd,stackYield,stacks,hbmGb,ratio,lostGb,idx,lostIdx,hbmBitShare,stackGB:g.n*g.dieGb/8};
+}
+
+// ---------- side panel ----------
+const S={step:0,walk:false,p:1,t:0,hold:0};
+const stepper=$("#stepper"); STEPS.forEach((s,i)=>{ const b=document.createElement("button"); b.innerHTML="<b>"+(i+1)+"</b><small>"+s.short+"</small>"; b.onclick=()=>{stopWalk(); setStep(i);}; stepper.appendChild(b); });
+const genSeg=$("#genSeg"); GEN_ORDER.forEach(k=>{ const g=GENS[k]; const b=document.createElement("button"); b.innerHTML="<b>"+g.name+"</b><small>"+g.sub+"</small>"; b.dataset.k=k; b.onclick=()=>{ X.gen=k; X.area=GENS[k].area; $("#inArea").value=Math.round(X.area*100); renderAll(); }; genSeg.appendChild(b); });
+function setStep(i,replay){
+  S.step=Math.max(0,Math.min(STEPS.length-1,i)); S.p=0; S.t=0; S.hold=0; if(replay!==false) scene3.onStep(S.step);
+  [...stepper.children].forEach((b,k)=>b.classList.toggle("on",k===S.step)); $("#stepRange").value=S.step;
+  renderStep();
+}
+function renderStep(){
+  const s=STEPS[S.step];
+  $("#stepN").textContent="Step "+(S.step+1)+" of "+STEPS.length+(S.walk?" · walking":"");
+  $("#stepTitle").textContent=s.t; $("#stepBody").innerHTML=s.b();
+  $("#stepKv").innerHTML=s.kv().map(r=>"<dt>"+r[0]+"</dt><dd>"+r[1]+(r[2]&&r[2]!=="—"&&r[2]!=="geometry"&&r[2]!=="arithmetic"?"<span class='src'> "+r[2]+"</span>":(r[2]==="arithmetic"?"<span class='src'> arithmetic</span>":""))+"</dd>").join("");
+  $("#vTitle").textContent=s.t;
+}
+$("#prevBtn").onclick=()=>{stopWalk(); setStep(S.step-1);};
+$("#nextBtn").onclick=()=>{stopWalk(); setStep(S.step+1);};
+$("#stepRange").oninput=e=>{stopWalk(); setStep(+e.target.value);};
+$("#replayBtn").onclick=()=>setStep(S.step);
+document.addEventListener("keydown",e=>{ if(e.target.tagName==="INPUT") return; if(e.key==="ArrowRight"){stopWalk(); setStep(S.step+1);} if(e.key==="ArrowLeft"){stopWalk(); setStep(S.step-1);} });
+function stopWalk(){ S.walk=false; $("#walkBtn").classList.remove("on"); $("#walkBtn").textContent="Walk me through it"; }
+$("#walkBtn").onclick=()=>{ if(S.walk){ stopWalk(); renderStep(); return; } S.walk=true; $("#walkBtn").classList.add("on"); $("#walkBtn").textContent="Stop"; setStep(0); };
+
+// inputs
+const inDens=$("#inDens"), inYddr=$("#inYddr"), inArea=$("#inArea"), inYhbm=$("#inYhbm"), inYstk=$("#inYstk"), inShare=$("#inShare");
+inDens.oninput=e=>{ const v=+e.target.value; if(v>=0.2&&v<=0.8) X.dens=v; renderAll(); };
+inYddr.oninput=e=>{ X.yDdr=+e.target.value/100; renderAll(); };
+inArea.oninput=e=>{ X.area=+e.target.value/100; renderAll(); };
+inYhbm.oninput=e=>{ X.yHbm=+e.target.value/100; renderAll(); };
+inYstk.oninput=e=>{ X.yStk=+e.target.value/1000; renderAll(); };
+inShare.oninput=e=>{ X.share=+e.target.value/100; renderAll(); };
+
+function renderCalc(){
+  const c=calc(), g=GENS[X.gen];
+  [...genSeg.children].forEach(b=>b.classList.toggle("on",b.dataset.k===X.gen));
+  $("#genFact").textContent=g.statedTxt; $("#genHint").textContent=g.hint;
+  $("#yDdrV").textContent=fmtPct(X.yDdr); $("#areaV").textContent=X.area.toFixed(2)+"x"; $("#yHbmV").textContent=fmtPct(X.yHbm); $("#yStkV").textContent=fmtPct(X.yStk,1); $("#shareV").textContent=fmtPct(X.share);
+  const ok=Math.abs(c.ratio-g.stated)/g.stated<0.08;
+  $("#formula").innerHTML="trade ratio = <b>area ×"+X.area.toFixed(2)+"</b> × <b>yield "+fmtPct(X.yDdr)+" ÷ "+fmtPct(X.yHbm)+"</b> × <b>1 ÷ "+fmtPct(X.yStk,1)+"^"+g.n+"</b><br>= "+X.area.toFixed(2)+" × "+(X.yDdr/X.yHbm).toFixed(3)+" × "+(1/c.stackYield).toFixed(3)+" = <b>"+c.ratio.toFixed(2)+":1</b> <span class='"+(ok?"ok":"off")+"'>"+(ok?"≈":"vs")+" stated "+g.statedTxt+"</span>";
+  $("#k1").textContent=fmtK(c.ddrGb); $("#k1s").textContent="≈ "+(c.ddrGb/8/1000).toFixed(2)+" TB · "+fmtN(c.ddrGood)+" good 16Gb dies";
+  $("#k2").textContent=fmtK(c.hbmGb); $("#k2s").textContent="≈ "+(c.hbmGb/8/1000).toFixed(2)+" TB · "+c.stacks.toFixed(0)+" stacks of "+c.stackGB+" GB · "+(c.stacks/g.perGpu).toFixed(1)+" GPUs";
+  $("#k3").textContent=c.ratio.toFixed(2)+"x"; $("#k3s").textContent="Micron states "+g.statedTxt+" · Sadana, 2026-08-10";
+  $("#k4").textContent=fmtK(c.lostGb); $("#k4s").textContent="≈ "+(c.lostGb/8/1000).toFixed(2)+" TB of DDR not shipped · "+fmtPct(1-1/c.ratio)+" of the wafer’s bits";
+  $("#vSub").textContent=g.name+" "+g.sub+" · implied "+c.ratio.toFixed(2)+":1 · "+fmtPct(X.share)+" of wafers on HBM";
+  // conversion ladder (card 03)
+  $("#ladder").innerHTML=[
+    ["Wafer",fmtN(WAFER_MM2)+" mm²","300 mm, "+fmtPct(EDGE)+" usable (placeholder)"],
+    ["DDR dies",fmtN(c.ddrGood),"good 16Gb dies at "+X.dens.toFixed(2)+" Gb/mm², "+fmtPct(X.yDdr)+" yield"],
+    ["DDR bits",fmtK(c.ddrGb)+" Gb","= "+(c.ddrGb/8/1000).toFixed(2)+" TB ≈ "+Math.round(c.ddrGb/8/128)+" RDIMMs of 128 GB"],
+    ["HBM dies",fmtN(c.kgd)+" KGD","of "+fmtN(c.hbmGross)+" gross "+g.dieGb+"Gb dies"],
+    ["Stacks",c.stacks.toFixed(0)+" × "+c.stackGB+" GB","at "+fmtPct(c.stackYield,1)+" stack yield"],
+    ["HBM bits",fmtK(c.hbmGb)+" Gb","= "+(c.hbmGb/8/1000).toFixed(2)+" TB ≈ "+(c.stacks/g.perGpu).toFixed(1)+" GPUs ("+g.perGpu+" stacks each)"],
+    ["Ratio",c.ratio.toFixed(2)+" : 1","DDR bits ÷ HBM bits from the same wafer"],
+  ].map(r=>"<div class='k'>"+r[0]+"</div><div class='d'>"+r[2]+"</div><div class='v'>"+r[1]+"</div>").join("");
+}
+function renderAll(){ renderCalc(); renderStep(); renderChart(); scene3.sync(); }
+
+// ---------- comparison chart: HBM wafer share -> bits ----------
+const CH={metric:"tot"};
+$("#mtabs").onclick=e=>{ const b=e.target.closest("button"); if(!b) return; CH.metric=b.dataset.m; [...$("#mtabs").children].forEach(x=>x.classList.toggle("on",x===b)); renderChart(); };
+function renderChart(){
+  const c=calc(), g=GENS[X.gen], m=CH.metric; const shares=[0,0.1,0.2,0.3,0.4,0.5]; const sel=shares.reduce((a,b)=>Math.abs(b-X.share)<Math.abs(a-X.share)?b:a);
+  const val=h=>{ const idx=((1-h)+h/c.ratio)*100, lost=h*(1-1/c.ratio)*100, hs=(h/c.ratio)/((1-h)+h/c.ratio); return m==="tot"?idx:m==="hbm"?hs*100:lost; };
+  const rows=shares.map(h=>({h,v:val(h),lost:h*(1-1/c.ratio)*100}));
+  const W=800,H=300,L=60,R=20,T=52,B=54,bw=76,rx=4; const max=m==="tot"?100:Math.max(...rows.map(r=>r.v))*1.25||1;
+  const y=v=>T+(H-T-B)*(1-v/max); const slot=(W-L-R)/shares.length;
+  const f=v=>m==="tot"?v.toFixed(0):m==="hbm"?v.toFixed(1)+"%":v.toFixed(0);
+  const title=m==="tot"?"Bits shipped per 100 wafers (all-DDR = 100)":m==="hbm"?"HBM share of bits shipped":"Bits given up per 100 wafers";
+  let s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+title+' by HBM wafer share">';
+  for(let i=0;i<=4;i++){ const v=max*i/4, yy=y(v).toFixed(1); s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+yy+'" y2="'+yy+'" class="gl"/><text x="'+(L-10)+'" y="'+(+yy+3.5)+'" class="tk" text-anchor="end">'+f(v)+'</text>'; }
+  rows.forEach((r,i)=>{ const x=L+slot*i+(slot-bw)/2, on=r.h===sel;
+    const bar=(v,cls,xo,w)=>{ const yy=y(v), h=Math.max(H-B-yy,rx+1), top=H-B-h; return '<path class="bar '+cls+(on?" on":"")+'" data-h="'+r.h+'" d="M'+(x+xo)+','+(H-B)+' v'+(-(h-rx))+' a'+rx+','+rx+' 0 0 1 '+rx+','+(-rx)+' h'+(w-2*rx)+' a'+rx+','+rx+' 0 0 1 '+rx+','+rx+' v'+(h-rx)+' z"/>'; };
+    if(m==="tot"){ s+=bar(r.v,"",0,bw); if(r.lost>0.5){ const yT=y(100), yB=y(r.v); s+='<rect class="bar lost'+(on?" on":"")+'" data-h="'+r.h+'" x="'+x+'" y="'+yT+'" width="'+bw+'" height="'+Math.max(0,yB-yT-2)+'" rx="3"/>'; } }
+    else s+=bar(r.v,m==="lost"?"lost":"",0,bw);
+    const top=y(r.v)-9;
+    s+='<text x="'+(x+bw/2)+'" y="'+(m==="tot"?y(100)-9:top)+'" class="val'+(on?" on":"")+'" text-anchor="middle">'+f(r.v)+(m==="tot"&&r.lost>0.5?' <tspan class="xs">(−'+r.lost.toFixed(0)+')</tspan>':'')+'</text>';
+    s+='<text x="'+(x+bw/2)+'" y="'+(H-B+19)+'" class="xl'+(on?" on":"")+'" text-anchor="middle">'+Math.round(r.h*100)+'% HBM</text><text x="'+(x+bw/2)+'" y="'+(H-B+35)+'" class="xs" text-anchor="middle">'+(r.h===0?"all DDR":r.h===0.2?"≈ Micron 2026":r.h===0.3?"≈ SK hynix 2026":r.h===0.5?"stress case":"")+'</text>';
+    s+='<rect class="hit" data-h="'+r.h+'" x="'+(x-8)+'" y="'+T+'" width="'+(bw+16)+'" height="'+(H-T-B)+'"/>';
+  });
+  if(m==="tot") s+='<rect x="'+(W-R-150)+'" y="12" width="10" height="10" rx="2" class="bar"/><text x="'+(W-R-136)+'" y="21" class="lg">shipped</text><rect x="'+(W-R-78)+'" y="12" width="10" height="10" rx="2" class="bar lost on"/><text x="'+(W-R-64)+'" y="21" class="lg">given up</text>';
+  s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+(H-B)+'" y2="'+(H-B)+'" class="ax"/></svg>';
+  const box=$("#chart"); const tip=$("#tip"); box.querySelectorAll("svg").forEach(e=>e.remove()); box.insertAdjacentHTML("beforeend",s);
+  const svg=box.querySelector("svg");
+  svg.addEventListener("mousemove",e=>{ const t=e.target.closest("[data-h]"); if(!t){ tip.style.display="none"; return; } const h=+t.dataset.h, idx=((1-h)+h/c.ratio)*100, lost=h*(1-1/c.ratio)*100, hs=(h/c.ratio)/((1-h)+h/c.ratio); const b=box.getBoundingClientRect(); tip.textContent=Math.round(h*100)+"% of wafers on HBM · ships "+idx.toFixed(1)+" of 100 bits · gives up "+lost.toFixed(1)+" · HBM = "+(hs*100).toFixed(1)+"% of bits"; tip.style.display="block"; tip.style.left=(e.clientX-b.left+14)+"px"; tip.style.top=(e.clientY-b.top-30)+"px"; });
+  svg.addEventListener("mouseleave",()=>tip.style.display="none");
+  svg.addEventListener("click",e=>{ const t=e.target.closest("[data-h]"); if(t){ X.share=+t.dataset.h; inShare.value=Math.round(X.share*100); renderAll(); } });
+  $("#howSub").textContent=g.name+" "+g.sub+" at an implied "+c.ratio.toFixed(2)+":1 · select a bar to set the share in the scene";
+  $("#take").textContent="At "+fmtPct(X.share)+" of wafers on HBM the fab ships "+c.idx.toFixed(0)+" bits where an all-DDR fab ships 100 — "+c.lostIdx.toFixed(0)+" given up — and HBM is "+fmtPct(c.hbmBitShare,1)+" of the bits shipped.";
+  $("#cav").innerHTML="Pure mix arithmetic: bits = (1 − share) + share ÷ trade ratio, with the trade ratio from the editable example above. Comparators: industry HBM 19% → 23% of DRAM wafer capacity end-25 → end-26; Micron 16% → 27%, SK hynix 28% → 33% (TrendForce via StoneX, 2026-06-23); HBM ~5% of DRAM bits in 2025 while taking 18% of wafers (Deutsche Bank, 2026-09-16); “22% of wafers… 9% of the memory capacity” in 2026 (corpus relay, 2026-08-20). Node migration and new wafers are not in this chart — it isolates the mix effect only.";
+}
+
+// =============================== 3D ===============================
+const scene3={onStep(){},sync(){}};
+let ok=typeof THREE!=="undefined"; let renderer;
+if(ok){ try{ renderer=new THREE.WebGLRenderer({canvas:$("#gl"),antialias:true,powerPreference:"high-performance"}); }catch(e){ ok=false; } }
+GEN_ORDER.forEach(()=>{}); renderCalc(); renderStep(); renderChart();
+if(!ok){ $("#fallback").style.display="flex"; $("#gl").style.display="none"; return; }
+const QUAL={max:Math.min(2.5,Math.max(window.devicePixelRatio||1,2)),cur:0,slow:0};
+QUAL.cur=QUAL.max; renderer.setPixelRatio(QUAL.cur);
+renderer.outputEncoding=THREE.sRGBEncoding; renderer.toneMapping=THREE.ACESFilmicToneMapping; renderer.toneMappingExposure=1.1;
+renderer.shadowMap.enabled=true; renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+const scene=new THREE.Scene(), camera=new THREE.PerspectiveCamera(30,1,0.1,400);
+scene.background=new THREE.Color(css("--studio"));
+scene.add(new THREE.HemisphereLight(0xdfeee6,0x1a2a22,0.55));
+const key=new THREE.DirectionalLight(0xffffff,0.9); key.position.set(6,14,8); scene.add(key); scene.add(key.target);
+key.castShadow=true; key.shadow.mapSize.set(2048,2048); key.shadow.bias=-0.0004; key.shadow.normalBias=0.03; key.shadow.radius=3;
+{ const sc=key.shadow.camera; sc.left=-14; sc.right=14; sc.top=14; sc.bottom=-14; sc.near=1; sc.far=80; sc.updateProjectionMatrix(); }
+const KEY_DIR=new THREE.Vector3(6,14,8).normalize().multiplyScalar(30); let shadowHalf=14;
+const rim=new THREE.DirectionalLight(0x9fe0c0,0.35); rim.position.set(-8,4,-6); scene.add(rim);
+{ const room=new THREE.Scene(); const g=new THREE.BoxGeometry(); const em=i=>{const m=new THREE.MeshBasicMaterial(); m.color.setScalar(i); return m;};
+  const box=new THREE.Mesh(g,new THREE.MeshStandardMaterial({side:THREE.BackSide,color:0x8fa098,roughness:1,metalness:0})); box.scale.set(30,30,30); box.position.set(0,12,0); room.add(box);
+  const lamp=new THREE.PointLight(0xffffff,5,28,2); lamp.position.set(0,14,0); room.add(lamp);
+  const panel=(i,p,sc)=>{ const m=new THREE.Mesh(g,em(i)); m.position.set(p[0],p[1],p[2]); m.scale.set(sc[0],sc[1],sc[2]); room.add(m); };
+  panel(50,[-14,12,6],[0.1,3,4]); panel(50,[-14,16,-6],[0.1,3,4]); panel(18,[14,10,-2],[0.15,5,7]); panel(40,[0,8,14],[5,6,0.1]); panel(20,[3,10,-12],[3,2.5,0.1]); panel(90,[0,26,0],[2,0.1,2]);
+  try{ const pm=new THREE.PMREMGenerator(renderer); scene.environment=pm.fromScene(room,0.04).texture; pm.dispose(); }catch(e){ console.warn("env map skipped",e); } }
+function gridTex(base,line,n,alpha){ const c=document.createElement("canvas"); c.width=c.height=256; const g=c.getContext("2d"); g.fillStyle=base; g.fillRect(0,0,256,256); g.strokeStyle=line; g.lineWidth=1; g.globalAlpha=alpha; const s=256/n; for(let i=0;i<=n;i++){ g.beginPath(); g.moveTo(i*s+0.5,0); g.lineTo(i*s+0.5,256); g.stroke(); g.beginPath(); g.moveTo(0,i*s+0.5); g.lineTo(256,i*s+0.5); g.stroke(); } const t=new THREE.CanvasTexture(c); t.wrapS=t.wrapT=THREE.RepeatWrapping; t.anisotropy=renderer.capabilities.getMaxAnisotropy(); t.encoding=THREE.sRGBEncoding; return t; }
+const TEX={pcb:gridTex("#2a6b4c","#9fe6bd",16,.5),wafer:gridTex("#343f3a","#7d998b",28,.35),tower:gridTex("#2a6b4c","#dff5e8",8,.55),towerCu:gridTex("#8a5a2f","#f6d9bd",8,.5)};
+const lin=h=>new THREE.Color(h).convertSRGBToLinear();
+const M={
+  wafer:new THREE.MeshStandardMaterial({map:TEX.wafer,color:0xffffff,metalness:.5,roughness:.3}),
+  waferEdge:new THREE.MeshStandardMaterial({color:lin(0x4a5a52),metalness:.6,roughness:.35}),
+  die:new THREE.MeshStandardMaterial({color:0xffffff,metalness:.12,roughness:.42,map:TEX.pcb,emissive:0x0e3d27,emissiveMap:TEX.pcb,emissiveIntensity:.35}),
+  dieHbm:new THREE.MeshStandardMaterial({color:0xffffff,metalness:.15,roughness:.4,map:TEX.pcb,emissive:0x0e3d27,emissiveMap:TEX.pcb,emissiveIntensity:.3}),
+  tsv:new THREE.MeshStandardMaterial({color:lin(0xd4a72c),metalness:.9,roughness:.3}),
+  base:new THREE.MeshStandardMaterial({color:lin(0xc97c3a),metalness:.65,roughness:.35}),
+  ghost:new THREE.MeshStandardMaterial({color:lin(0xbfe3d2),metalness:0,roughness:.1,transparent:true,opacity:.18,depthWrite:false}),
+  tower:new THREE.MeshStandardMaterial({map:TEX.tower,color:0xffffff,metalness:.1,roughness:.5,emissive:0x0e3d27,emissiveMap:TEX.tower,emissiveIntensity:.25}),
+  towerCu:new THREE.MeshStandardMaterial({map:TEX.towerCu,color:0xffffff,metalness:.3,roughness:.45,emissive:0x3a2210,emissiveMap:TEX.towerCu,emissiveIntensity:.25}),
+  floor:new THREE.ShadowMaterial({opacity:.35}),
+};
+const C_GOOD=lin(0x9fe6bd), C_BAD=lin(0xff6b5e), C_DIM=lin(0x3b5a4a), C_CU=lin(0xf0c9a3);
+const EDGE_C=lin(0x9fe6bd);
+function edge(mesh,c,op){ const l=new THREE.LineSegments(new THREE.EdgesGeometry(mesh.geometry,30),new THREE.LineBasicMaterial({color:c||EDGE_C,transparent:true,opacity:op||.5})); l.material.toneMapped=false; mesh.add(l); return mesh; }
+// labels
+const labels=[]; const v3=new THREE.Vector3();
+function addLabel(text,sub,getPos,show,cls){ const el=document.createElement("div"); el.className="lbl"+(cls?" "+cls:""); el.innerHTML=text+(sub?"<small>"+sub+"</small>":""); $("#labels").appendChild(el); const L={el,getPos,show:show||(()=>true),text,sub}; labels.push(L); return L; }
+function setLabel(L,text,sub){ if(L.text!==text||L.sub!==sub){ L.text=text; L.sub=sub; L.el.innerHTML=text+(sub?"<small>"+sub+"</small>":""); } }
+function drawLabels(){ const box=$("#glbox"), w=box.clientWidth, h=box.clientHeight; for(const L of labels){ let vis=L.show(); if(vis){ L.getPos(v3); v3.project(camera); const py=(1-v3.y)/2*h; L.el.dataset.p=v3.x.toFixed(2)+","+v3.y.toFixed(2)+","+v3.z.toFixed(3)+","+py.toFixed(0)+"/"+h; vis=v3.z<1&&Math.abs(v3.x)<0.86&&py>=118&&py<=h-44; } L.el.style.display=vis?"":"none"; if(vis){ L.el.style.left=((v3.x+1)/2*w)+"px"; L.el.style.top=((1-v3.y)/2*h)+"px"; } } }
+// orbit
+const orb={theta:0.55,phi:0.95,r:18,target:new THREE.Vector3(-7.5,0,0)}; let orbGoal=null;
+function orbitTo(v){orbGoal={theta:v.theta,phi:v.phi,r:v.r,target:new THREE.Vector3(v.target[0],v.target[1],v.target[2])};}
+(function(){ const cv=$("#gl"); let drag=null;
+  cv.addEventListener("pointerdown",e=>{drag={x:e.clientX,y:e.clientY}; cv.setPointerCapture(e.pointerId); orbGoal=null;});
+  cv.addEventListener("pointermove",e=>{ if(!drag) return; const dx=e.clientX-drag.x, dy=e.clientY-drag.y; drag={x:e.clientX,y:e.clientY}; orb.theta-=dx*0.006; orb.phi=Math.min(1.45,Math.max(0.15,orb.phi-dy*0.006)); });
+  cv.addEventListener("pointerup",()=>drag=null); cv.addEventListener("pointercancel",()=>drag=null);
+  cv.addEventListener("wheel",e=>{e.preventDefault(); orbGoal=null; orb.r=Math.min(90,Math.max(4,orb.r*(1+Math.sign(e.deltaY)*0.08)));},{passive:false});
+})();
+function updateCamera(dt){ if(orbGoal){ const k=1-Math.exp(-5*(dt||0.016)); orb.theta+=(orbGoal.theta-orb.theta)*k; orb.phi+=(orbGoal.phi-orb.phi)*k; orb.r+=(orbGoal.r-orb.r)*k; orb.target.lerp(orbGoal.target,k); if(Math.abs(orbGoal.r-orb.r)<0.01&&Math.abs(orbGoal.theta-orb.theta)<0.001&&orb.target.distanceTo(orbGoal.target)<0.01) orbGoal=null; }
+  camera.position.set(orb.target.x+orb.r*Math.sin(orb.phi)*Math.sin(orb.theta),orb.target.y+orb.r*Math.cos(orb.phi),orb.target.z+orb.r*Math.sin(orb.phi)*Math.cos(orb.theta)); camera.lookAt(orb.target); }
+
+// =============================== scene objects ===============================
+const WR=6; // wafer radius in scene units (300 mm)
+const LX=-7.5, RX=7.5;      // left (DDR) and right (HBM) wafer centres
+const STK=[RX+1.5,0,10.5];  // hero stack position
+const TRAY=[RX-6.5,0,8.5];  // tray of stacks (beside the hero stack, in front of the HBM wafer)
+const TOW=[0,0,-12];        // bit towers
+const floor=new THREE.Mesh(new THREE.PlaneGeometry(90,90),M.floor); floor.rotation.x=-Math.PI/2; floor.position.y=-0.09; floor.receiveShadow=true; scene.add(floor);
+function wafer(x){ const g=new THREE.Group(); g.position.set(x,0,0); const d=new THREE.Mesh(new THREE.CylinderGeometry(WR,WR,0.16,96),M.wafer); d.castShadow=true; d.receiveShadow=true; g.add(d); const ring=new THREE.Mesh(new THREE.TorusGeometry(WR,0.05,8,96),M.waferEdge); ring.rotation.x=Math.PI/2; ring.position.y=0.08; g.add(ring); const notch=new THREE.Mesh(new THREE.BoxGeometry(0.5,0.2,0.3),M.waferEdge); notch.position.set(0,0,WR-0.05); g.add(notch); scene.add(g); return g; }
+const WL=wafer(LX), WRg=wafer(RX);
+// die grids (instanced). Schematic proportions: DDR die d, HBM die d*sqrt(area*dieGb/16)
+const MAXI=2600;
+function dieGrid(mat){ const im=new THREE.InstancedMesh(new THREE.BoxGeometry(1,0.08,1),mat,MAXI); im.castShadow=true; im.receiveShadow=true; im.instanceMatrix.setUsage(THREE.DynamicDrawUsage); im.count=0; im.frustumCulled=false; return im; }
+const GL=dieGrid(M.die), GR=dieGrid(M.dieHbm); WL.add(GL); WRg.add(GR);
+const TSVg=new THREE.InstancedMesh(new THREE.BoxGeometry(1,0.02,1),M.tsv,MAXI); TSVg.count=0; TSVg.frustumCulled=false; TSVg.instanceMatrix.setUsage(THREE.DynamicDrawUsage); WRg.add(TSVg);
+// failed-die markers: separate meshes with their own materials (instance tints get lost on the dark PCB texture)
+M.bad=new THREE.MeshStandardMaterial({color:lin(0xff6b5e),emissive:lin(0x7a1f18),emissiveIntensity:.6,metalness:.1,roughness:.5});
+M.dim=new THREE.MeshStandardMaterial({color:lin(0x3b4a44),metalness:.2,roughness:.8});
+function markers(mat){ const im=new THREE.InstancedMesh(new THREE.BoxGeometry(1,0.05,1),mat,MAXI); im.count=0; im.frustumCulled=false; im.instanceMatrix.setUsage(THREE.DynamicDrawUsage); return im; }
+const GLbad=markers(M.dim), GRbad=markers(M.bad); WL.add(GLbad); WRg.add(GRbad);
+const dum=new THREE.Object3D(); const col=new THREE.Color();
+let GRID={ddr:[],hbm:[]}; // positions
+function buildGrid(size,gap){ const pts=[]; const step=size+gap; const n=Math.floor((WR*2*Math.sqrt(EDGE))/step); const off=-(n-1)*step/2; for(let i=0;i<n;i++) for(let j=0;j<n;j++){ const x=off+i*step, z=off+j*step; if(Math.hypot(x,z)+size*0.7<WR*Math.sqrt(EDGE)) pts.push([x,z]); } return pts; }
+let GSZ={ddr:0.46,hbm:0.7};
+function layoutGrids(){
+  const c=calc(), g=GENS[X.gen];
+  // schematic die size: DDR fixed; HBM scaled by area ratio per bit × bits per die
+  GSZ.ddr=0.46; GSZ.hbm=0.46*Math.sqrt(X.area*g.dieGb/DDR_GB);
+  GRID.ddr=buildGrid(GSZ.ddr,0.07).slice(0,MAXI); GRID.hbm=buildGrid(GSZ.hbm,0.09).slice(0,MAXI);
+  // deterministic "bad die" pattern: hash of index
+  const bad=(i,y)=>((i*2654435761)>>>0)%1000>=y*1000;
+  let kb=0;
+  GRID.ddr.forEach((p,i)=>{ dum.position.set(p[0],0.12,p[1]); dum.scale.set(GSZ.ddr,1,GSZ.ddr); dum.updateMatrix(); GL.setMatrixAt(i,dum.matrix); if(bad(i,X.yDdr)){ dum.position.y=0.17; dum.scale.set(GSZ.ddr*0.92,1,GSZ.ddr*0.92); dum.updateMatrix(); GLbad.setMatrixAt(kb++,dum.matrix); } });
+  GRID.nBadDdr=kb; kb=0;
+  GRID.badHbm=GRID.hbm.map((p,i)=>bad(i+7,X.yHbm));
+  GRID.hbm.forEach((p,i)=>{ dum.position.set(p[0],0.12,p[1]); dum.scale.set(GSZ.hbm,1,GSZ.hbm); dum.updateMatrix(); GR.setMatrixAt(i,dum.matrix); dum.position.set(p[0],0.17,p[1]); dum.scale.set(GSZ.hbm*0.28,1,GSZ.hbm*0.78); dum.updateMatrix(); TSVg.setMatrixAt(i,dum.matrix); if(GRID.badHbm[i]){ dum.position.set(p[0],0.2,p[1]); dum.scale.set(GSZ.hbm*0.92,1,GSZ.hbm*0.92); dum.updateMatrix(); GRbad.setMatrixAt(kb++,dum.matrix); } });
+  GRID.nBadHbm=kb;
+  GL.instanceMatrix.needsUpdate=true; GR.instanceMatrix.needsUpdate=true; TSVg.instanceMatrix.needsUpdate=true; GLbad.instanceMatrix.needsUpdate=true; GRbad.instanceMatrix.needsUpdate=true;
+}
+// hero stack
+const hero=new THREE.Group(); hero.position.set(STK[0],0,STK[2]); scene.add(hero);
+const HD=[]; const EX=[];
+const heroBase=new THREE.Mesh(new THREE.BoxGeometry(2.6,0.22,2.6),M.base); heroBase.position.y=0.11; heroBase.castShadow=true; heroBase.receiveShadow=true; edge(heroBase,lin(0xf0c9a3),.5); hero.add(heroBase);
+const heroCarrier=new THREE.Mesh(new THREE.BoxGeometry(3.4,0.12,3.4),M.waferEdge); heroCarrier.position.y=-0.03; heroCarrier.receiveShadow=true; hero.add(heroCarrier);
+for(let i=0;i<16;i++){ const d=new THREE.Mesh(new THREE.BoxGeometry(2.2,0.09,2.2),M.dieHbm.clone()); d.castShadow=true; d.receiveShadow=true; edge(d,EDGE_C,.45); d.userData.b=new THREE.Vector3(0,0.22+0.07+i*0.14,0); d.userData.e=new THREE.Vector3(0,i*0.26,0); d.position.copy(d.userData.b); hero.add(d); HD.push(d); EX.push(d); }
+const TSVcols=[]; for(let i=0;i<16;i++){ const t=new THREE.Mesh(new THREE.CylinderGeometry(0.035,0.035,1,8),M.tsv); t.userData.i=i; hero.add(t); TSVcols.push(t); }
+// tray of stacks (instanced tokens)
+const TR_MAX=400; const tray=new THREE.InstancedMesh(new THREE.BoxGeometry(0.6,0.5,0.6),M.dieHbm,TR_MAX); tray.castShadow=true; tray.receiveShadow=true; tray.count=0; tray.frustumCulled=false; tray.instanceMatrix.setUsage(THREE.DynamicDrawUsage); scene.add(tray);
+const trayBad=new THREE.InstancedMesh(new THREE.BoxGeometry(0.6,0.5,0.6),M.bad,TR_MAX); trayBad.castShadow=true; trayBad.count=0; trayBad.frustumCulled=false; trayBad.instanceMatrix.setUsage(THREE.DynamicDrawUsage); scene.add(trayBad);
+const trayBase=new THREE.InstancedMesh(new THREE.BoxGeometry(0.7,0.08,0.7),M.base,TR_MAX); trayBase.count=0; trayBase.frustumCulled=false; trayBase.instanceMatrix.setUsage(THREE.DynamicDrawUsage); scene.add(trayBase);
+let TRAYN=0, TRAYBAD=0, TRAYORDER=[];
+function layoutTray(){ const c=calc(); const n=Math.min(TR_MAX,Math.round(c.kgd/GENS[X.gen].n)); const cols=Math.ceil(Math.sqrt(n*1.6)); const step=0.9; const bad=i=>((i*2246822519)>>>0)%1000>=c.stackYield*1000; let kg=0,kb=0; TRAYORDER=[]; for(let i=0;i<n;i++){ const cx=TRAY[0]+((i%cols)-(cols-1)/2)*step, cz=TRAY[2]+(Math.floor(i/cols))*step-2; dum.position.set(cx,0.08+0.25,cz); dum.scale.set(1,1,1); dum.rotation.set(0,0,0); dum.updateMatrix(); const b=bad(i); if(b){ trayBad.setMatrixAt(kb++,dum.matrix); } else { tray.setMatrixAt(kg++,dum.matrix); } TRAYORDER.push(b); dum.position.set(cx,0.04,cz); dum.updateMatrix(); trayBase.setMatrixAt(i,dum.matrix); } TRAYN=n; TRAYBAD=kb; tray.instanceMatrix.needsUpdate=true; trayBad.instanceMatrix.needsUpdate=true; trayBase.instanceMatrix.needsUpdate=true; }
+// bit towers
+const towers=new THREE.Group(); towers.position.set(TOW[0],0,TOW[2]); scene.add(towers);
+function tower(mat,x){ const m=new THREE.Mesh(new THREE.BoxGeometry(2.2,1,2.2),mat); m.castShadow=true; m.receiveShadow=true; m.position.set(x,0.5,0); edge(m,EDGE_C,.35); towers.add(m); return m; }
+const T_DDR=tower(M.tower,-4), T_HBM=tower(M.towerCu,0), T_MIX=tower(M.tower,4);
+const T_LOST=new THREE.Mesh(new THREE.BoxGeometry(2.2,1,2.2),M.ghost); T_LOST.position.set(0,0.5,0); towers.add(T_LOST);
+const T_LOST2=new THREE.Mesh(new THREE.BoxGeometry(2.2,1,2.2),M.ghost); T_LOST2.position.set(4,0.5,0); towers.add(T_LOST2);
+const TOWH=10; // height for 100 bits
+// labels
+const V=(x,y,z)=>v=>v.set(x,y,z);
+const L_wafer=addLabel("300 mm wafer","70,686 mm²",V(LX,0.25,-WR*0.55),()=>S.step<=1);
+const L_waferR=addLabel("same wafer","as HBM core dies",V(RX,0.25,-WR*0.55),()=>S.step>=2&&S.step<=4);
+const L_ddr=addLabel("DDR dies","",V(LX+WR*0.45,0.25,WR*0.45),()=>S.step===1||S.step===5);
+const L_hbm=addLabel("HBM core dies","",V(RX+WR*0.45,0.25,WR*0.45),()=>S.step===2||S.step===3);
+const L_tsv=addLabel("TSV field","through every die",V(RX,0.3,0),()=>S.step===2,"cu");
+const L_kgd=addLabel("known-good dies","",V(RX-WR*0.5,0.25,-WR*0.2),()=>S.step===3);
+const L_bad=addLabel("failed dies","not stacked",V(RX+WR*0.55,0.25,-WR*0.45),()=>S.step===3,"bad");
+const L_stack=addLabel("12-high stack","",V(STK[0],2.6,STK[2]),()=>S.step===4);
+const L_base=addLabel("base die","another wafer (TSMC N12 / Samsung 4nm / DRAM-process at HBM3E)",V(STK[0]+1.5,0.2,STK[2]+1.4),()=>S.step===4,"cu");
+const L_tray=addLabel("good stacks","",V(TRAY[0]-1.2,0.9,TRAY[2]-2.6),()=>S.step===4);
+const L_tbad=addLabel("failed stacks","12 good dies lost each",V(TRAY[0]+2.4,0.9,TRAY[2]+2.2),()=>S.step===4,"bad");
+const L_tD=addLabel("as DDR","",V(TOW[0]-4,TOWH+0.4,TOW[2]),()=>S.step===5);
+const L_tH=addLabel("as HBM","",V(TOW[0],TOWH*0.34+0.4,TOW[2]),()=>S.step===5,"cu");
+const L_tL=addLabel("given up","",V(TOW[0],TOWH+0.4,TOW[2]),()=>S.step===5,"bad");
+const L_tM=addLabel("fab mix","",V(TOW[0]+4,TOWH+0.4,TOW[2]),()=>S.step===5);
+
+// camera presets per step
+const CAM=[
+ {theta:0.55,phi:0.95,r:19,target:[LX,0,0]},
+ {theta:0.35,phi:0.60,r:19.5,target:[LX,0,0]},
+ {theta:-0.35,phi:0.60,r:19.5,target:[RX,0,0]},
+ {theta:-0.55,phi:0.50,r:18.5,target:[RX,0,0]},
+ {theta:-0.45,phi:0.98,r:14.5,target:[RX-2.2,0.9,STK[2]-1.2]},
+ {theta:0.0,phi:1.05,r:21,target:[TOW[0],3.6,TOW[2]+0.5]},
+];
+window.__tr={S,X,calc,HD,hero,tray,trayBad,GL,GR,GLbad,GRbad,orb};
+scene3.onStep=i=>{ orbitTo(CAM[i]); };
+scene3.sync=()=>{ layoutGrids(); layoutTray(); };
+scene3.sync();
+// explode controls (hero stack)
+const E={explode:0,explodeCur:0};
+const exBtn=$("#exBtn"), exRange=$("#exRange");
+function exLabel(){ exBtn.textContent=E.explode>0.05?"Assemble stack":"Explode stack"; }
+exRange.oninput=e=>{ E.explode=+e.target.value; exLabel(); };
+exBtn.onclick=()=>{ E.explode=E.explode>0.05?0:0.8; exRange.value=E.explode; exLabel(); };
+exLabel();
+
+// =============================== animation ===============================
+let last=performance.now();
+function ease(t){ return t<0?0:t>1?1:t*t*(3-2*t); }
+function layout(dt){
+  const c=calc(), g=GENS[X.gen], i=S.step;
+  // step progress (?anim=0 jumps straight to the finished state — used for static captures)
+  if(NOANIM) S.p=1;
+  if(S.p<1){ S.p=Math.min(1,S.p+dt/2.8); } else if(S.walk){ S.hold+=dt; if(S.hold>3.4){ if(S.step<STEPS.length-1) setStep(S.step+1); else { stopWalk(); renderStep(); } } }
+  $("#prog").style.width=(S.p*100).toFixed(1)+"%";
+  const p=ease(S.p);
+  // wafers
+  WL.visible=true; WRg.visible=i>=2||i===5;
+  // DDR grid: appears in step 1, stays; in step 5 stays
+  const nD=GRID.ddr.length, nH=GRID.hbm.length;
+  GL.count=i===0?0:i===1?Math.round(nD*p):nD;
+  // HBM grid: appears in step 2; in step 3 bad dies colour red; in step 4 dies "leave" (count shrinks) as stacks fill; in step 5 full
+  if(i<2){ GR.count=0; TSVg.count=0; }
+  else if(i===2){ GR.count=Math.round(nH*p); TSVg.count=GR.count; }
+  else if(i===3){ GR.count=nH; TSVg.count=nH; }
+  else if(i===4){ const keep=Math.round(nH*(1-0.6*p)); GR.count=keep; TSVg.count=keep; }
+  else { GR.count=nH; TSVg.count=nH; }
+  // failed-die markers: DDR grid shows its yield loss from step 1 (dim); HBM wafer shows failed dies from step 3 (red)
+  GLbad.count=i>=1?Math.round(GRID.nBadDdr*(i===1?p:1)):0;
+  GRbad.count=i===3?Math.round(GRID.nBadHbm*p):(i>=4&&i!==4?GRID.nBadHbm:(i===4?Math.round(GRID.nBadHbm*(1-0.6*p)):0));
+  // hero stack
+  hero.visible=i===4||i===5; const nL=g.n; const dieH=0.14;
+  for(let k=0;k<16;k++){ const d=HD[k]; const on=k<nL; const show=on&&(i!==4||p>(k+1)/(nL+1)); d.visible=show; d.userData.b.y=0.22+0.07+k*dieH; d.userData.e.y=k*0.26; }
+  const kx=1-Math.exp(-6*dt); E.explodeCur+=(E.explode-E.explodeCur)*kx; for(const o of EX) o.position.copy(o.userData.b).addScaledVector(o.userData.e,E.explodeCur);
+  const stackTop=0.22+nL*dieH+E.explodeCur*(nL-1)*0.26;
+  TSVcols.forEach((t,k)=>{ t.visible=hero.visible&&k<12; const a=(k%4)/3*1.4-0.7, b=Math.floor(k/4)/2*1.4-0.7; t.position.set(a,0.22+(stackTop-0.22)/2,b); t.scale.y=stackTop-0.22; });
+  L_stack.getPos=v=>v.set(STK[0],stackTop+0.3,STK[2]);
+  // tray: fills during step 4 (good stacks green, failed stacks red)
+  tray.visible=trayBad.visible=trayBase.visible=i===4||i===5; const nT=TRAYN; const shown=i===4?Math.round(nT*p):nT; let kg=0,kb=0; for(let k=0;k<shown;k++){ if(TRAYORDER[k]) kb++; else kg++; } tray.count=kg; trayBad.count=kb; trayBase.count=shown;
+  // towers (step 5)
+  towers.visible=i===5; const tp=i===5?p:0;
+  const hD=TOWH*tp, hH=TOWH/c.ratio*tp, hM=TOWH*c.idx/100*tp;
+  T_DDR.scale.y=Math.max(0.01,hD); T_DDR.position.y=hD/2; T_HBM.scale.y=Math.max(0.01,hH); T_HBM.position.y=hH/2; T_MIX.scale.y=Math.max(0.01,hM); T_MIX.position.y=hM/2;
+  T_LOST.scale.y=Math.max(0.01,hD-hH); T_LOST.position.y=hH+(hD-hH)/2; T_LOST2.scale.y=Math.max(0.01,hD-hM); T_LOST2.position.y=hM+(hD-hM)/2;
+  L_tD.getPos=v=>v.set(TOW[0]-4,hD+0.4,TOW[2]); L_tH.getPos=v=>v.set(TOW[0],hH+0.4,TOW[2]); L_tL.getPos=v=>v.set(TOW[0]-1.3,hH+(hD-hH)*0.55,TOW[2]+1.2); L_tM.getPos=v=>v.set(TOW[0]+4,hM+0.4,TOW[2]);
+  // label texts
+  setLabel(L_ddr,fmtN(c.ddrGood)+" good dies",fmtK(c.ddrGb)+" Gb · 16Gb each"); setLabel(L_hbm,fmtN(c.hbmGross)+" dies","×"+X.area.toFixed(2)+" area per bit");
+  setLabel(L_kgd,fmtN(c.kgd)+" known-good dies",fmtPct(X.yHbm)+" wafer yield"); setLabel(L_bad,fmtN(c.hbmGross-c.kgd)+" failed dies","not stacked");
+  setLabel(L_stack,g.n+"-high · "+c.stackGB+" GB",g.n+" × "+g.dieGb+"Gb · "+fmtPct(c.stackYield,1)+" stack yield"); setLabel(L_tray,c.stacks.toFixed(0)+" good stacks",fmtK(c.hbmGb)+" Gb · "+(c.stacks/g.perGpu).toFixed(1)+" GPUs’ worth"); setLabel(L_tbad,Math.round(c.kgd/g.n-c.stacks)+" failed stacks",g.n+" good dies lost each");
+  setLabel(L_tD,"100 · as DDR",fmtK(c.ddrGb)+" Gb"); setLabel(L_tH,(100/c.ratio).toFixed(0)+" · as HBM",fmtK(c.hbmGb)+" Gb = 1 ÷ "+c.ratio.toFixed(2)); setLabel(L_tL,(100-100/c.ratio).toFixed(0)+" given up","per wafer moved to HBM"); setLabel(L_tM,c.idx.toFixed(0)+" · fab at "+fmtPct(X.share)+" HBM","HBM = "+fmtPct(c.hbmBitShare,1)+" of bits");
+}
+function resize(){ const box=$("#glbox"); renderer.setSize(box.clientWidth,box.clientHeight,false); camera.aspect=box.clientWidth/box.clientHeight; camera.updateProjectionMatrix(); }
+new ResizeObserver(resize).observe($("#glbox")); resize();
+function trackLight(){ key.position.copy(orb.target).add(KEY_DIR); key.target.position.copy(orb.target); const h=Math.min(60,Math.max(10,orb.r)); if(Math.abs(h-shadowHalf)>0.5){ shadowHalf=h; const sc=key.shadow.camera; sc.left=-h; sc.right=h; sc.top=h; sc.bottom=-h; sc.updateProjectionMatrix(); } }
+function adaptQuality(raw){ if(document.visibilityState!=="visible"||raw>0.25||QUAL.cur<=1) return; if(raw>0.04) QUAL.slow++; else QUAL.slow=Math.max(0,QUAL.slow-2); if(QUAL.slow>90){ QUAL.slow=0; QUAL.cur=Math.max(1,+(QUAL.cur-0.5).toFixed(2)); renderer.setPixelRatio(QUAL.cur); resize(); } }
+const DEBUG=/[?&]debug=1/.test(location.search); const NOANIM=/[?&]anim=0/.test(location.search);
+function tick(now){ const raw=(now-last)/1000, dt=Math.min(0.05,raw); last=now; updateCamera(Math.min(0.3,raw)); layout(dt); trackLight(); renderer.render(scene,camera); drawLabels(); adaptQuality(raw);
+  if(DEBUG){ const w=new THREE.Vector3(); HD[0].getWorldPosition(w); $("#vSub").textContent="DBG step="+S.step+" p="+S.p.toFixed(2)+" hd0vis="+HD[0].visible+" hd0y="+w.y.toFixed(2)+" hd11vis="+HD[11].visible+" heroVis="+hero.visible+" tray="+tray.count+"/"+trayBad.count+" grBad="+GRbad.count+"/"+GRID.nBadHbm+" glBad="+GLbad.count+"/"+GRID.nBadDdr+" nH="+GRID.hbm.length+" calls="+renderer.info.render.calls+" tris="+renderer.info.render.triangles+" sw="+document.documentElement.scrollWidth+"/"+document.documentElement.clientWidth; }
+  requestAnimationFrame(tick); }
+// deep links: ?step=1-6&gen=3e8|3e12|412|4e12&share=0-60&walk=1&theme=light|dark
+try{ const q=new URLSearchParams(location.search); const gq=q.get("gen"); if(gq&&GENS[gq]){ X.gen=gq; X.area=GENS[gq].area; inArea.value=Math.round(X.area*100); } const sq=+q.get("share"); if(q.get("share")!==null&&sq>=0&&sq<=60){ X.share=sq/100; inShare.value=sq; } const th=q.get("theme"); if(th==="light"||th==="dark") document.documentElement.setAttribute("data-theme",th); renderAll(); const st=+q.get("step"); if(st>=1&&st<=6){ S.step=st-1; } if(q.get("walk")==="1"){ S.walk=true; $("#walkBtn").classList.add("on"); $("#walkBtn").textContent="Stop"; S.step=0; } }catch(e){}
+orb.target.set(CAM[S.step].target[0],CAM[S.step].target[1],CAM[S.step].target[2]); orb.theta=CAM[S.step].theta; orb.phi=CAM[S.step].phi; orb.r=CAM[S.step].r;
+setStep(S.step);
+requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>

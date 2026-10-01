@@ -23,6 +23,9 @@ AXT manufactures compound-semiconductor substrates — principally indium phosph
 
 ## Current state (latest quarter)
 
+**🆕 2026-10-01 — FROM THE FLOOR AT ECOC (UNVERIFIED, NOT LUMENTUM's): VITAL MATERIALS CLAIMS TO BE "THE BIGGEST INDIUM PHOSPHIDE PRODUCER IN THE WORLD" AT 30k 6-INCH WAFERS/MONTH, EXPANDING TO 100k WITHIN THREE MONTHS.** _Source: Michael Hurlston (Lumentum CEO) @ ECOC 2026 Málaga — Global Photonics Economic Forum keynote + CEO panel (recording played 2026-09-30; event ~2026-09-21/22, date UNCONFIRMED) — Capstone notes (Notion transcript) (file `LITE/transcripts/LITE_CEO-Hurlston-ECOC-2026-Global-Photonics-Economic-Forum-keynote-and-CEO-panel_2026-09-30.md`). ⚠️ Company CEO at a PUBLIC industry forum — not an IR event, no financials, no guidance; a supplier's industry-level statement, not a disclosure about this company; machine transcript (Notion AI), quotes carry garble risk._
+- George Zhu (founder, Vital Materials), questioning Hurlston: *"we are the biggest indium phosphide [transcribed "Indian phosphide"] producer in the world. We are invisible because we are not in the solution… We have 30 thousand six-inch wafers [transcribed "wrappers"] per month. We're expanding within the next three months to 100 thousand six-inch. So we are more than enough to supply the whole world."* Hurlston's reply: *"We are trying to pull the supply chain along and we need all the help we can get."* ⚠️ A competitor's self-description from a conference floor — HOLD, DO NOT USE against AXTI's InP substrate position until verified (company materials, a broker, or a second source); if real it dwarfs every InP substrate figure on `_wiki/themes/optical-cpo.md`.
+
 
 **🆕🔴 2026-09-07 — BLOOMBERG PUTS INDIUM PHOSPHIDE ON THE INDUSTRY-RISK LIST BY NAME.**
 - 🔴 **"New report from Bloomberg on $IQE: 'INDIUM PHOSPHIDE SUBSTRATES IS EMERGING AS A KEY RISK FOR THE SEMICONDUCTOR INDUSTRY.'"** (@aleabitoreddit, 2026-09-07, relaying a Bloomberg report on IQE plc). ⚠️ *Headline relay of a report on a DIFFERENT company (IQE); the Bloomberg piece itself was not retrieved, and no volumes, prices or named shortages are carried in the relay.*
@@ -202,6 +205,7 @@ Synthesis ported from the research-wiki corpus (sell-side notes + Twitter/X). Ke
 
 ## Changelog
 
+- 2026-10-01 — ingest (Notion, LITE_CEO-Hurlston-ECOC-2026-Global-Photonics-Economic-Forum-keynote-and-CEO-panel_2026-09-30.md): logged Vital Materials' unverified ECOC floor claim of 30k→100k 6-inch InP wafers/month (competitor claim, hold) (Intra-quarter). Nothing superseded.
 - **2026-09-28 (/wiki-ingest 21h, scheduled)** — 1 Debate bullet (MS: substrate is the bottleneck, per COHR; JPM: COHR InP ×4 sold out, 6-inch). **Nothing superseded.**
 - **🔴🔴 2026-09-03 (/wiki-ingest, scheduled — 1 source: BofA · Matthew DeYoe, *"AXT Call: InP Capacity Accelerates Amid Strong AI-Driven Demand"*, hosting AXT CFO Gary Fisher). Added: 1 `## Current state` block.** ⚠️ **AXT is NOT COVERED by BofA — no rating, no price objective, no BofA model was created or changed. Every figure is management's own.**
   🔴🔴 **TARGET SUPERSEDED — THE InP QUARTERLY RUN-RATE AMBITION NEARLY DOUBLED.** Prior: *"the company **previously targeted a $35mn quarterly InP revenue run rate by year-end**."* **Now: *"it now sees a potential **$60-65mn quarterly opportunity exiting 2026**,"*** supported by capacity additions, yield improvements and migration to larger wafer sizes. ➤ **The prior $35mn/quarter target is retained here as the dated original.**

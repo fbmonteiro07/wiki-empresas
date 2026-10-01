@@ -2,7 +2,7 @@
 
 _Generated 2026-10-01 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (54)
+## 📅 Upcoming (57)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
@@ -10,8 +10,11 @@ _Generated 2026-10-01 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-10-01 | BE | **🆕 2026-10-01 — dated forward items:** (i) **"October"** is flagged by TMTB's bulls as effectively the deadline to sign for power delivered by end-2027 (press commentary, 09-29); (ii) **New Mexico (D |
 | 2026-10-01 | GOOG | **🆕 2026-10-01 — first Suncatcher TPU orbital test launches on Falcon 9 with Planet Labs** (NYT via 22V · Peterson, 2026-09-24). **Gemini 4 — "much earlier" than year-end, now in post-training** (Kavu |
 | 2026-10-01 | KIOXIA | 🆕 **2026-10-01/02 — 3D IC conference: Kioxia presents CBA bonding for next-gen QLC (claimed +60% bit density vs 8th gen).** (TrendForce Weekly Radar 003, 2026-09-28) |
+| 2026-10-01 | LITE | ✅ **CORROBORATED IN THE CEO'S OWN VOICE, 2026-10-01 ingest (Michael Hurlston (Lumentum CEO) @ ECOC 2026 Málaga - Global Photonics Economic Forum keynote + CEO panel (recording played 2026-09-30; event |
+| 2026-10-01 | MU | 🆕 **2026-10-01 — Dec 9 buyback start, now with a (UBS) pacing bogey.** Management told UBS on a private callback that it will be at target cash by end-F1Q (Dec 9); Arcuri's run-rate is **$35-40bn/qtr  |
 | 2026-10-01 | MU | 🆕 **2026-10-01 — the post-print calendar, dated.** (1) **10-01 8am ET** BofA · Vivek Arya MU + SNPS takeaways call (BofA sales · Fenske, 09-30); (2) **10-06** UBS-hosted MU post-earnings IR NDR, New Y |
 | 2026-10-01 | SNPS | 🆕 **2026-10-01 (08:00 ET) — BofA group call on MU print + SNPS Investor Day takeaways with Vivek Arya; BofA CFO/IR group lunch NYC 10-01** (BofA · Brian Fenske, sales commentary, 2026-09-30). **Invest |
+| 2026-10-01 | TSM | **🆕 JPM's call bogeys for Oct-15 (Gokul Hariharan (J.P. Morgan) @ JPM 'TSMC: 3Q26 Preview' webinar, 2026-10-01 - Capstone notes (Notion transcript); JPM model, not guidance):** 3Q at the guide high en |
 | 2026-10-02 | TSLA | **🆕🔴 FRIDAY 2026-10-02 — 3Q26 DELIVERIES + STORAGE DEPLOYMENTS (date now corroborated: Vital Knowledge, 09-29/10-01 — *"Tesla's Q3 deliveries"* on Friday's watch-list).** The marks to score against, s |
 | 2026-10-05 | SNDK | 🆕 **2026-10-05 — BofA HBF expert call (Thomas Coughlin).** A read on HBF timing and TAM; event only. (BofA sales · Brian Fenske, 2026-09-28) |
 | 2026-10-06 | AVGO | 🆕 **2026-10-01 NDR and 2026-10-06 MRVL Investor Day as the read-through pair for the 09-29 rumour.** JPM's desk expects Hock may address the MediaTek article on the 10-01 UBS-hosted NDR (already liste |
