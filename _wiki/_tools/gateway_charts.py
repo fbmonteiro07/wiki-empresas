@@ -386,8 +386,12 @@ def render(report):
 
 
 def publish(wiki=WIKI):
+    from token_economics_ui import publish as publish_economics
+    economics_fragment, economics = publish_economics(wiki)
     report = collect(wiki)
-    fragment = render(report)
+    report['token_economics'] = {k: economics[k] for k in ('history_start', 'asof', 'latest_snapshot', 'checks')}
+    report['token_economics']['file'] = '_data/ai-gateways/token-economics.json'
+    fragment = economics_fragment + render(report)
     page = '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>OpenRouter + Vercel · Token growth and share shifts</title><style>body{margin:0;padding:28px;background:#f3f6fa}main{max-width:1200px;margin:auto}@media(prefers-color-scheme:dark){body{background:#0c1521}}@media(max-width:520px){body{padding:12px}}</style></head><body><main>'+fragment+'</main></body></html>'
     reports = wiki / '_data' / 'ai-gateways'
     write(reports / 'charts.json', json.dumps(report, ensure_ascii=False, indent=2))
@@ -398,4 +402,4 @@ def publish(wiki=WIKI):
 
 if __name__ == '__main__':
     publish()
-    print('Published ten gateway charts and an offline HTML attachment.')
+    print('Published four token economics panels plus ten gateway charts and an offline HTML attachment.')

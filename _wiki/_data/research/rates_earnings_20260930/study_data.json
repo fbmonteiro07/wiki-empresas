@@ -1,0 +1,461 @@
+{
+  "as_of": "2026-09-30",
+  "sources": {
+    "rev22": [
+      "FactSet / John Butters, 2 Sep 2022",
+      "https://insight.factset.com/larger-cuts-than-average-to-eps-estimates-for-sp500-cos-in-july-august-for-q3"
+    ],
+    "rev26": [
+      "FactSet / John Butters, 4 Sep 2026",
+      "https://insight.factset.com/analysts-increasing-eps-estimates-for-sp-500-companies-for-2nd-straight-quarter"
+    ],
+    "q322": [
+      "FactSet / John Butters, 30 Sep 2022; data through 29 Sep",
+      "https://insight.factset.com/largest-cuts-to-eps-estimates-for-sp-500-companies-for-q3-2022-in-more-than-two-years"
+    ],
+    "q122": [
+      "FactSet / John Butters, 1 Apr 2022",
+      "https://insight.factset.com/analysts-lower-eps-estimates-for-q122-but-raise-eps-estimates-for-cy22"
+    ],
+    "q222": [
+      "FactSet / John Butters, 1 Jul 2022",
+      "https://insight.factset.com/analysts-lowered-eps-estimates-for-q222-but-raised-eps-estimates-for-cy22-during-q2"
+    ],
+    "q422": [
+      "FactSet / John Butters, 6 Jan 2023",
+      "https://insight.factset.com/have-analysts-lowered-eps-estimates-more-than-average-for-sp-500-companies-for-q4"
+    ],
+    "enter22": [
+      "FactSet / John Butters, 30 Dec 2021",
+      "https://insight.factset.com/2022-key-predictions-by-factset-experts?hs_amp=true"
+    ],
+    "late22": [
+      "FactSet / John Butters, 16 Dec 2022",
+      "https://insight.factset.com/sp-500-cy-2022-earnings-preview-ex-energy-sp-500-expected-to-report-decline-in-earnings?hs_amp=true"
+    ],
+    "exenergy22": [
+      "FactSet / John Butters, 11 Aug 2022",
+      "https://insight.factset.com/ex-energy-sp-500-reporting-a-year-over-year-decline-in-earnings-of-4-for-q2"
+    ],
+    "jan26": [
+      "FactSet / John Butters, 9 Jan 2026, pp. 15 and 32; chart as of 8 Jan",
+      "https://advantage.factset.com/hubfs/Website/Resources%20Section/Research%20Desk/Earnings%20Insight/EarningsInsight_010926.pdf"
+    ],
+    "jun26": [
+      "FactSet / John Butters, 26 Jun 2026, p. 25; chart as of 25 Jun",
+      "https://advantage.factset.com/hubfs/Website/Resources%20Section/Research%20Desk/Earnings%20Insight/EarningsInsight_062626.pdf"
+    ],
+    "sep26": [
+      "FactSet / John Butters, 25 Sep 2026, pp. 9-15, 30-31; chart as of 24 Sep",
+      "https://advantage.factset.com/hubfs/Website/Resources%20Section/Research%20Desk/Earnings%20Insight/EarningsInsight_092526.pdf"
+    ],
+    "sales26": [
+      "FactSet / John Butters, 10 Aug 2026",
+      "https://insight.factset.com/sp-500-reporting-highest-revenue-growth-since-q4-2021"
+    ],
+    "mag26": [
+      "FactSet / John Butters, 28 Aug 2026",
+      "https://insight.factset.com/mag-7-companies-reported-earnings-growth-above-100-boosted-by-investment-gains"
+    ],
+    "underlying26": [
+      "FactSet / John Butters, 7 Aug 2026; 88% reported",
+      "https://insight.factset.com/sp-500-earnings-season-update-august-7-2026"
+    ],
+    "sp22": [
+      "S&P DJI / Howard Silverblatt, 5 Jul 2022",
+      "https://www.spglobal.com/spdji/en/commentary/article/us-equities-market-attributes-june-2022/"
+    ],
+    "treasury26": [
+      "US Treasury, daily nominal par yields through 29 Sep 2026",
+      "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026"
+    ],
+    "real26": [
+      "US Treasury, daily real par yields through 29 Sep 2026",
+      "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_real_yield_curve&field_tdr_date_value=2026"
+    ],
+    "treasury22": [
+      "US Treasury, daily nominal par yields, Sep 2022",
+      "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value_month=202209"
+    ],
+    "real22": [
+      "US Treasury, daily real par yields, Sep 2022",
+      "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_real_yield_curve&field_tdr_date_value_month=202209"
+    ],
+    "fed26": [
+      "Federal Reserve, 16 Sep 2026",
+      "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm"
+    ],
+    "fed22": [
+      "Federal Reserve, 14 Dec 2022",
+      "https://www.federalreserve.gov/newsevents/pressreleases/monetary20221214a.htm"
+    ],
+    "nv21": [
+      "NVIDIA, 18 Aug 2021; fiscal Q2 ended 1 Aug",
+      "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2022"
+    ],
+    "nv22": [
+      "NVIDIA, 24 Aug 2022; fiscal Q2 ended 31 Jul",
+      "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2023"
+    ],
+    "nv26": [
+      "NVIDIA, 26 Aug 2026; fiscal Q2 ended 26 Jul",
+      "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2027/default.aspx"
+    ],
+    "ms22": [
+      "Microsoft, 26 Jul 2022; quarter ended 30 Jun",
+      "https://www.microsoft.com/en-us/Investor/earnings/FY-2022-Q4/press-release-webcast"
+    ],
+    "ms26": [
+      "Microsoft, 29 Jul 2026; quarter ended 30 Jun",
+      "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast"
+    ],
+    "fidelity": [
+      "Fidelity, user-confirmed source; exhibit reads 27 Sep 2026",
+      "fidelity_exhibit.png"
+    ]
+  },
+  "rates_2022": [
+    {
+      "date": "12/31/2021",
+      "nominal": 1.52,
+      "real": -1.04,
+      "nominal_minus_real": 2.56,
+      "tag": "HARD; spread DERIVED"
+    },
+    {
+      "date": "03/31/2022",
+      "nominal": 2.32,
+      "real": -0.52,
+      "nominal_minus_real": 2.84,
+      "tag": "HARD; spread DERIVED"
+    },
+    {
+      "date": "06/30/2022",
+      "nominal": 2.98,
+      "real": 0.65,
+      "nominal_minus_real": 2.33,
+      "tag": "HARD; spread DERIVED"
+    },
+    {
+      "date": "09/30/2022",
+      "nominal": 3.83,
+      "real": 1.68,
+      "nominal_minus_real": 2.15,
+      "tag": "HARD; spread DERIVED"
+    },
+    {
+      "date": "10/24/2022",
+      "nominal": 4.25,
+      "real": 1.66,
+      "nominal_minus_real": 2.59,
+      "tag": "HARD; spread DERIVED"
+    },
+    {
+      "date": "12/30/2022",
+      "nominal": 3.88,
+      "real": 1.58,
+      "nominal_minus_real": 2.3,
+      "tag": "HARD; spread DERIVED"
+    }
+  ],
+  "rates_2026": [
+    {
+      "date": "01/02/2026",
+      "nominal": 4.19,
+      "real": 1.94,
+      "nominal_minus_real": 2.25,
+      "tag": "HARD; spread DERIVED"
+    },
+    {
+      "date": "02/27/2026",
+      "nominal": 3.97,
+      "real": 1.72,
+      "nominal_minus_real": 2.25,
+      "tag": "HARD; spread DERIVED"
+    },
+    {
+      "date": "06/30/2026",
+      "nominal": 4.44,
+      "real": 2.2,
+      "nominal_minus_real": 2.24,
+      "tag": "HARD; spread DERIVED"
+    },
+    {
+      "date": "08/31/2026",
+      "nominal": 4.75,
+      "real": 2.44,
+      "nominal_minus_real": 2.31,
+      "tag": "HARD; spread DERIVED"
+    },
+    {
+      "date": "09/25/2026",
+      "nominal": 5.17,
+      "real": 2.83,
+      "nominal_minus_real": 2.34,
+      "tag": "HARD; spread DERIVED"
+    },
+    {
+      "date": "09/29/2026",
+      "nominal": 5.26,
+      "real": 2.91,
+      "nominal_minus_real": 2.35,
+      "tag": "HARD; spread DERIVED"
+    }
+  ],
+  "revisions": [
+    {
+      "target": "Q3 2022",
+      "window": "30 Jun-31 Aug 2022",
+      "start": 59.44,
+      "end": 56.21,
+      "reported_pct": -5.4,
+      "source": "rev22",
+      "calculated_pct": -5.434051144010765,
+      "input_tag": "HARD",
+      "result_tag": "DERIVED"
+    },
+    {
+      "target": "Q3 2026",
+      "window": "30 Jun-31 Aug 2026",
+      "start": 88.64,
+      "end": 89.69,
+      "reported_pct": 1.2,
+      "source": "rev26",
+      "calculated_pct": 1.1845667870036047,
+      "input_tag": "HARD",
+      "result_tag": "DERIVED"
+    },
+    {
+      "target": "CY 2022",
+      "window": "30 Jun-31 Aug 2022",
+      "start": 229.6,
+      "end": 226.15,
+      "reported_pct": -1.5,
+      "source": "rev22",
+      "calculated_pct": -1.5026132404181158,
+      "input_tag": "HARD",
+      "result_tag": "DERIVED"
+    },
+    {
+      "target": "CY 2026",
+      "window": "30 Jun-31 Aug 2026",
+      "start": 340.49,
+      "end": 361.38,
+      "reported_pct": 6.1,
+      "source": "rev26",
+      "calculated_pct": 6.135275632177151,
+      "input_tag": "HARD",
+      "result_tag": "DERIVED"
+    },
+    {
+      "target": "CY 2023",
+      "window": "30 Jun-29 Sep 2022",
+      "start": 250.6,
+      "end": 241.83,
+      "reported_pct": -3.5,
+      "source": "q322",
+      "calculated_pct": -3.4996009577015097,
+      "input_tag": "HARD",
+      "result_tag": "DERIVED"
+    },
+    {
+      "target": "CY 2027",
+      "window": "25 Jun-24 Sep 2026",
+      "start": 397.42,
+      "end": 416.97,
+      "reported_pct": null,
+      "source": "jun26 + sep26",
+      "calculated_pct": 4.919229027225613,
+      "input_tag": "HARD",
+      "result_tag": "DERIVED"
+    },
+    {
+      "target": "CY 2026",
+      "window": "8 Jan-24 Sep 2026",
+      "start": 310.84,
+      "end": 361.37,
+      "reported_pct": null,
+      "source": "jan26 + sep26",
+      "calculated_pct": 16.25595161497877,
+      "input_tag": "HARD",
+      "result_tag": "DERIVED"
+    },
+    {
+      "target": "CY 2027",
+      "window": "8 Jan-24 Sep 2026",
+      "start": 357.83,
+      "end": 416.97,
+      "reported_pct": null,
+      "source": "jan26 + sep26",
+      "calculated_pct": 16.527401279937415,
+      "input_tag": "HARD",
+      "result_tag": "DERIVED"
+    },
+    {
+      "target": "CY 2023",
+      "window": "30 Jun-31 Dec 2022",
+      "start": 250.6,
+      "end": 230.51,
+      "reported_pct": null,
+      "source": "q322 + q422",
+      "calculated_pct": -8.01675977653632,
+      "input_tag": "HARD",
+      "result_tag": "DERIVED"
+    }
+  ],
+  "model": {
+    "equation": "P1/P0 = (E1/E0)*(PE1/PE0); price only, same earnings definition; no causal yield/PE fit",
+    "inputs": {
+      "pe_current": {
+        "value": 19.2,
+        "tag": "HARD / ANCHOR",
+        "source": "sep26"
+      },
+      "pe_fidelity_midpoint": {
+        "value": 19.5,
+        "tag": "PARTIAL",
+        "source": "fidelity 19-20x range"
+      },
+      "pe_terminal": {
+        "value": 16,
+        "tag": "ESTIMATE / SCENARIO",
+        "source": "fidelity hypothesis, not independently validated"
+      },
+      "growth_30": {
+        "value": 30,
+        "tag": "SCENARIO",
+        "source": "fidelity; must mean change in chosen earnings denominator, not already realized CY growth"
+      },
+      "growth_15_4": {
+        "value": 15.4,
+        "tag": "HARD forecast / SCENARIO application",
+        "source": "sep26 aggregate CY2027 growth; NOT a measured future NTM denominator increase"
+      }
+    },
+    "calibration": "Accounting identity, no fitted constant. Current multiple anchored at 19.2x. No defensible calibrated causal mapping from 6% yields to 16x P/E; do not claim one.",
+    "guardrails": {
+      "units": "PASS: same EPS and P/E basis required; price excludes dividends",
+      "fixed_period": "PASS: revisions hold target year/quarter fixed; do not compound revisions for different quarters",
+      "vintage": "PASS: two-month pair exactly matched; three-month next-year pair has five-day date offset disclosed",
+      "independent_anchor": "PASS: Fidelity 19-20x range checked against separate FactSet 19.2x observation",
+      "causal_yield_fit": "NOT VALIDATED: 6% -> 16x is a stress assumption",
+      "horizon": "PASS: scenarios conditional; 2027 growth not asserted to equal NTM change",
+      "earnings_quality": "PARTIAL: exclusion of GOOG/AMZN is not a full recurring-earnings restatement",
+      "growth_vs_revision": "PASS: no adding +32% YoY to +16.3% same-year estimate revision"
+    },
+    "break_even_19_2_to_16_pct": 19.999999999999996,
+    "break_even_19_5_to_16_pct": 21.875,
+    "scenarios": [
+      {
+        "eps_change": -10,
+        "pe_start": 19.2,
+        "pe_end": 16,
+        "price_return": -25.0
+      },
+      {
+        "eps_change": 0,
+        "pe_start": 19.2,
+        "pe_end": 16,
+        "price_return": -16.666666666666664
+      },
+      {
+        "eps_change": 10,
+        "pe_start": 19.2,
+        "pe_end": 16,
+        "price_return": -8.333333333333325
+      },
+      {
+        "eps_change": 15.4,
+        "pe_start": 19.2,
+        "pe_end": 16,
+        "price_return": -3.833333333333333
+      },
+      {
+        "eps_change": 20,
+        "pe_start": 19.2,
+        "pe_end": 16,
+        "price_return": 0.0
+      },
+      {
+        "eps_change": 30,
+        "pe_start": 19.2,
+        "pe_end": 16,
+        "price_return": 8.333333333333348
+      },
+      {
+        "eps_change": -10,
+        "pe_start": 19.5,
+        "pe_end": 16,
+        "price_return": -26.15384615384615
+      },
+      {
+        "eps_change": 0,
+        "pe_start": 19.5,
+        "pe_end": 16,
+        "price_return": -17.948717948717952
+      },
+      {
+        "eps_change": 10,
+        "pe_start": 19.5,
+        "pe_end": 16,
+        "price_return": -9.74358974358973
+      },
+      {
+        "eps_change": 15.4,
+        "pe_start": 19.5,
+        "pe_end": 16,
+        "price_return": -5.312820512820515
+      },
+      {
+        "eps_change": 20,
+        "pe_start": 19.5,
+        "pe_end": 16,
+        "price_return": -1.538461538461544
+      },
+      {
+        "eps_change": 30,
+        "pe_start": 19.5,
+        "pe_end": 16,
+        "price_return": 6.666666666666665
+      }
+    ],
+    "multiple_scenarios": [
+      {
+        "eps_change": 30,
+        "pe_start": 19.2,
+        "pe_end": 14,
+        "price_return": -5.2083333333333375
+      },
+      {
+        "eps_change": 30,
+        "pe_start": 19.2,
+        "pe_end": 16,
+        "price_return": 8.333333333333348
+      },
+      {
+        "eps_change": 30,
+        "pe_start": 19.2,
+        "pe_end": 18,
+        "price_return": 21.87500000000002
+      },
+      {
+        "eps_change": 30,
+        "pe_start": 19.5,
+        "pe_end": 14,
+        "price_return": -6.666666666666665
+      },
+      {
+        "eps_change": 30,
+        "pe_start": 19.5,
+        "pe_end": 16,
+        "price_return": 6.666666666666665
+      },
+      {
+        "eps_change": 30,
+        "pe_start": 19.5,
+        "pe_end": 18,
+        "price_return": 20.000000000000018
+      }
+    ]
+  }
+}

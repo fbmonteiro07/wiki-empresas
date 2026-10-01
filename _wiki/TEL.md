@@ -5,7 +5,7 @@
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\TEL` (10-K FY2025, 10-Q FQ2 FY26, transcripts) · `E:\equity_calls_transcripts` · `E:\briefings\2026`. Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-29 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-09-30 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -125,6 +125,10 @@ _FQ2 FY26 · Apr 22 → Jun 22 2026 · sell-side / expert calls / reports betwee
 | 06-15 | Citi · 800V DC power | product | bull | TEL (with APH) favorably positioned. Citi cites TEL's own framing — higher power+data per rack drives 50%+ FY25-FY27 CAGR for the DDN segment, with power connectivity ~25% of segment revenue, and the transition to 800V could generate a 30%+ content increase vs today. 800V is also positive for TEL's energy business (grid hardening ~66% and DC power connections ~20%). Path: ±400V HVDC sidecar first, NVDA 800V w/ Rubin Ultra late-2H27, SST 800V from ~2029. |
 | 06-15 | briefing · @bubbleboi channel checks | product | bear | 800V opportunity timing contested: @bubbleboi channel checks argue rack-level GaN/SiC/connector content is '2-3 years before hitting earnings' without a near-term pull from DC construction (in the broader 800V basket). |
 | 06-18 | briefing · TE VP/Head of ICT (expert call) | product | bull | TE's VP/Head of ICT framed HVDC (400V→800V) as cutting energy loss 2-5% per conversion stage, with liquid cooling mainstream by 2030. |
+| 09-29 | 🆕 **ISI** (agentic-infrastructure note; as printed in the TMTB 09-29 relay — press) | demanda | bull | *"Networking/connectivity names including ANET/CSCO, CIEN/LITE and APH/TEL should also benefit as disaggregated inference drives more east-west traffic."* One-line read-through, no TE-specific numbers. |
+| 09-30 | 🆕 **Jefferies · Volkmann (Industrials, "Tracking Connectors")**, carried in the Jefferies Equity S&T energy/power note (James Snyder — sales, not research) | demanda | bull | Global connector **bookings +58.9% Y/Y in August (vs +38.7% in July)**, billings +23.9% (vs +26.8%); **book-to-bill 1.29x (vs 1.13x)**, significant acceleration in North America; **3Q bookings to date +49% Y/Y (2Q: +41%)**; recent checks with APH and TEL suggest *"positive momentum across all end markets with no signs of slowing anywhere."* ⚠️ Industry data, not TE-specific; "TEL" in the JPM APAC notes of the same days is Tokyo Electron, not TE Connectivity — excluded. |
+
+**🆕 Registro de ingest 2026-10-01 (/wiki-ingest 21h run of 09-30, completed 10-01; esta página não tem `## Changelog`, então o registro fica aqui).** 2 linhas no full log (ISI via TMTB; Jefferies Volkmann connector tracker); **nada superseded.** **🆕 Sinal update 2026-10-01:** ✓ confirms demand momentum across end-markets (connector bookings book-to-bill 1.29x), but no new TE-specific evidence on the NVDA-share or auto legs.
 
 **Quarter synthesis:** the flow is almost all in "product/AI" and endorses the copper-workhorse thesis and the DDN ramp; the debate has shifted to the timing of the 800V/HVDC upside — JPM/Citi/TE's own expert bullish on the magnitude of the content, against @bubbleboi's channel checks that the rack content is "2-3 years before hitting earnings".
 

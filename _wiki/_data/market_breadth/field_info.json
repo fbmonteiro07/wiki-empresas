@@ -1,0 +1,179 @@
+[
+  {
+    "fieldData": [
+      {
+        "id": "BE998",
+        "fieldInfo": {
+          "mnemonic": "BEST_DATA_SOURCE_OVERRIDE",
+          "description": "BEst Data Source Override",
+          "datatype": "String",
+          "documentation": "This field is used to specify the Data Source override for Bloomberg Estimates.",
+          "categoryName": [],
+          "property": [],
+          "overrides": [],
+          "ftype": "Character"
+        }
+      },
+      {
+        "id": "BE997",
+        "fieldInfo": {
+          "mnemonic": "BEST_FPERIOD_OVERRIDE",
+          "description": "BEst Fiscal Period Override",
+          "datatype": "String",
+          "documentation": "Specifies the fiscal period override for Bloomberg Estimates at the company level. There are two valid formats, relative and fixed. This override can also be used on certain applicable Equity Index fields. \n\nRelative Overrides:\nFY, FS, FQ - Represents the forecast fiscal period value associated with a fiscal year, fiscal semi-annual, and fiscal quarter.\n\nGY, GS, GQ - Represents the forecast generic period value associated with a fiscal year, fiscal semi-annual, and fiscal quarter. Generic periods represent a concatenation of streams of successive periods. Generics reference the relative period on each historical date. For example, 1GY as of an historical date of 06/30/2013 for a company with a December fiscal year end, returns FY 2013 data regardless of today's date.\n\nTY - Forward 12 months is compiled by using the most frequent available periodicity (next 4 quarters or next 2 semi-annuals or next fiscal year)\n\nBF - Represents a blended forward 12 months and is restricted to fiscal year periodicity. Similar to GY, except uses the weighted average of 1FY and 2FY to smooth out fiscal year transitions. Weighted average is calculated as follows for 1BF:\n[((number of days until next fiscal year/trading days in a year) x FY1 data + (1 - (number of days until next fiscal year/trading days in a year)) x FY2 data]\n\nExample: AAPL US, Next Fiscal Year End date is 9/30/2017, Today's Date is 12/28/2016,\n    Measure is: BEst EPS GAAP (BE653, BEST_EPS_GAAP)\n                   1BF = [((197/261) x $9.001) + ((1 - (197/261)) x $9.985)] = $9.2423\n\nNote: Whether the combination of FY1 & FY2 or FY2 & FY3 is used is dependent upon whether the current point in time has/has not exceeded the FY1 reporting date (the date earnings are announced or the date the financials are reported in cases where there isn't an earnings announcement). If the current point in time is prior to the FY1 reporting date, then FY1 & FY2 are used. If the current point in time is after the FY1 reporting date, then FY2 & FY3 are used.\n\nThe following override examples apply to the relative format:\n   1FY - current fiscal year (where \"current\" represents the estimate\n           associated with the most recent period)\n   -0FS - last fiscal semi-annual period\n   2FQ - next fiscal quarter \n\nThe following override examples apply to the relative forward-looking format:\n1BF, 2BF, 3BF to return the next 12, 24, and 36 month estimated values only.\n\n1TY - returns the forward 12 months only using the most frequent available periodicity (next 4 quarters or next 2 semi-annuals or next fiscal year)\n\nFixed Overrides:\n   Y, S1, S2, Q1, Q2, Q3, Q4 - Returns the fixed period by specific year, semi-annual or quarter\n\nBC - Returns the blended calendar period for companies with non-December fiscal years. Blended calendar estimates will be the same as fiscal year estimates for companies with fiscal years ending in December. The blended value is derived in 1 of 3 ways depending upon when the company's fiscal month occurs and whether or not quarterly or semi-annual data is available:\n\n   1) If the fiscal month occurs at the end of March, June, or September,\n       and quarterly data is available, the calculation is simply the sum of\n       the 4 quarters ending in the requested calendar year.\n           Example: Company's fiscal month end is March 31st. Construct\n            calendar year 2015 by summing the following 4 quarters:\n\n      Fiscal Period    Calendar Period\n        Q4 2015         3/31/2015\n        Q1 2016         6/30/2015\n        Q2 2016         9/30/2015\n        Q3 2016         12/31/2015\n\n   2) If the fiscal month occurs at the end of January, February, April,\n       May, July, August, October, or November, and quarterly data is available,\n       the calculation must be prorated based upon the proportion of the\n       beginning and ending quarters falling into the requested calendar year.\n           Example: Company's fiscal month end is January 31st. Construct calendar\n           year 2015 by prorating and summing the following quarters:\n\n       Fiscal Period    Calendar Period    Multiplier\n         Q4 2015         1/31/2015         0.333*\n         Q1 2016         4/30/2015          1\n         Q2 2016         7/31/2015          1\n         Q3 2016         10/30/2015        1\n         Q4 2016         1/31/2016         0.667^\n\n      * Multiply by 0.333 since 1 of the 3 months of the quarter\n         was in calendar year 2015\n      ^ Multiply by 0.667 since 2 of the 3 months of the quarter\n         were in calendar year 2015\n\n   3) If the fiscal month is not December and interim data is not available, the\n       calculation must be prorated based upon the proportion of straddling fiscal\n       years falling into the requested calendar year. \n           Example: Company's fiscal month end is May 30th.\n           Calendar year 2015 is calculated as:\n               FY May 2015 (multiply by 5/12 since 5 of the 12 months were in 2015) +\n               FY May 2016 (multiply by 7/12 since 7 of the 12 months were in 2015)\n\nThe following override examples apply to the fixed format:\n   15Q1 - First fiscal quarter of 2015\n   16Y - Fiscal year 2016\n   16S2 - Second fiscal semi-annual of 2016\n   14BC - Blended Calendar Year 2014\n   15BC - Blended Calendar Year 2015\n\nEquity Index Relative Overrides (Fixed Period References don't apply to Indices):\n\nEquity Indices do not have designated fiscal years.  Therefore, any fixed period references such as 16Q1, 16Y, and 16BC do not apply to an index.  \n\nRelative fiscal period overrides can be used to return aggregated, weighted estimate values based upon each index constituent's weight in the index and relative fiscal period.  Relative override availability at the index level is as follows:\n  FY/GY - available out 3 years to 3FY and 3GY\n  FS/GS - available out 4 semis to 4FS and 4GS\n  FQ/GQ - available out 8 quarters to 8FQ and 8GQ\n  BF - only blends for the next 12 months to 1BF; no option for 24 or 36 months forward\n  1TY - returns the forward 12 months only using the most frequent available periodicity (next 4 quarters or next 2 semi-annuals or next fiscal year)\n\nAll index calculations are pending 50% or greater equity coverage by percent weight in the index. Index estimates will return N/A when more than 50% of companies by weight do not have data.",
+          "categoryName": [],
+          "property": [],
+          "overrides": [],
+          "ftype": "Character"
+        }
+      },
+      {
+        "id": "DS184",
+        "fieldInfo": {
+          "mnemonic": "INDX_MWEIGHT_HIST",
+          "description": "Index Members Weights - Historical",
+          "datatype": "String",
+          "documentation": "Provides a list of all equity index members along with the percentage weight of each constituent within the index. Applies to indices with up to 5,000 members.\n\nBloomberg API and Terminal: Historical member weights can be retrieved by using this field in conjunction with the End Date (DS547, END_DT) or End Date Override (PX392, END_DATE_OVERRIDE).",
+          "categoryName": [],
+          "property": [],
+          "overrides": [
+            "PX392",
+            "DS547",
+            "PR429"
+          ],
+          "ftype": "BulkFormat"
+        }
+      },
+      {
+        "id": "DS004",
+        "fieldInfo": {
+          "mnemonic": "CRNCY",
+          "description": "Currency",
+          "datatype": "String",
+          "documentation": "Currency in which the security was issued.\n\nEquities:\n   Trading currency for the security.\n\nFixed Income:\n   Provides the currency in which the bond was issued, not necessarily the currency in which the bond trades or pays its coupons. Use Trade Currency (DX028, TRADE_CRNCY) if values differ.\n\nLoans:\n   Specifies the primary currency in which the loan is denominated.\n\nFutures:\n   Provides the currency in which the contract value was issued, not necessarily the currency in which the price is quoted. Use Quoted Currency (PR467, QUOTED_CRNCY) if values differ.\n\nOTC FX Options:\n   Provides the notional currency of the currency pair.  The non-notional currency is in Non-Notional Currency (FX124, NON_NOTIONAL_CCY).",
+          "categoryName": [],
+          "property": [],
+          "overrides": [
+            "DT125"
+          ],
+          "ftype": "Character"
+        }
+      },
+      {
+        "id": "DS276",
+        "fieldInfo": {
+          "mnemonic": "EQY_CONSOLIDATED",
+          "description": "Equity Parent / Consolidated Indicator",
+          "datatype": "String",
+          "documentation": "Applies to and provides a meaningful result for companies in the following markets: Brazil, Colombia, India, Japan, Romania, Russia, Serbia, South Korea, Taiwan and Turkey. For tickers in these markets the field is populated with 'Y' when the fundamental data presented is for the consolidated company and 'N' when data is for the parent company. The value is 'Y' when Consolidated Fundamentals Available (DX936, EQY_CONSOL_FUND_AVAIL) is set to 'Y'. For all other markets this field returns 'N' and the data presented is consolidated. Returns are based on the user's personal defaults which can be changed using the FPDF function.",
+          "categoryName": [],
+          "property": [],
+          "overrides": [],
+          "ftype": "Character"
+        }
+      },
+      {
+        "id": "DY262",
+        "fieldInfo": {
+          "mnemonic": "PERIODICITY_OVERRIDE",
+          "description": "Periodicity Override",
+          "datatype": "String",
+          "documentation": "Generic override for time periods. Current values include daily(d), weekly(w), monthly(m), quarterly(q), semi-annual(s) and yearly(y). For overrides of multiple time periods, use Calc Interval (PX393, CALC_INTERVAL).",
+          "categoryName": [],
+          "property": [],
+          "overrides": [],
+          "ftype": "Character"
+        }
+      },
+      {
+        "id": "PX393",
+        "fieldInfo": {
+          "mnemonic": "CALC_INTERVAL",
+          "description": "Calc Interval",
+          "datatype": "String",
+          "documentation": "Number and type of period that contains the data for the override's calculation. This field accepts overrides in a \"number/period\" format. Numbers may consist of any integer. Period consists of d(day), w(week), m(month), q(quarter), s(semi-annual), and y(year). Fifteen month would be entered as \"15m\" to override correctly. In addition, users can set the override to WTD (week to date), MTD (month to date), YTD (year to date), FWTD (first day of week to date), FMTD (first day of month to date), FYTD ( first day of year to date).",
+          "categoryName": [],
+          "property": [],
+          "overrides": [],
+          "ftype": "Character"
+        }
+      },
+      {
+        "id": "PY204",
+        "fieldInfo": {
+          "mnemonic": "USE_PREVIOUS_BUSINESS_DAY",
+          "description": "Use Previous Business Day",
+          "datatype": "Bool",
+          "documentation": "Override that, if turned on, selects the previous business day as the day that will be used as the end date for interval calculations. The valid values are \"Y\", \"y\", \"N\" and \"n\".",
+          "categoryName": [],
+          "property": [],
+          "overrides": [],
+          "ftype": "Boolean"
+        }
+      },
+      {
+        "id": "PX386",
+        "fieldInfo": {
+          "mnemonic": "INTERVAL_HIGH",
+          "description": "Interval High",
+          "datatype": "Double",
+          "documentation": "Maximum of all the data points returned within the interval or within the start-date / end-date range. If no Market Data Override (PX395, MARKET_DATA_OVERRIDE) is used, this will return the highest CLOSE on the period. For the highest HIGH, please override MARKET_DATA_OVERRIDE with PX_HIGH.  The start date will be moved forward to the Initial Public Offering (IPO) date, if it is within the requested interval.",
+          "categoryName": [],
+          "property": [],
+          "overrides": [
+            "DS004",
+            "PX392",
+            "PX395",
+            "DY262",
+            "PX393",
+            "PX391",
+            "BE997",
+            "PY204",
+            "DS276",
+            "BE998"
+          ],
+          "ftype": "Real"
+        }
+      },
+      {
+        "id": "PX395",
+        "fieldInfo": {
+          "mnemonic": "MARKET_DATA_OVERRIDE",
+          "description": "Market Data Override",
+          "datatype": "String",
+          "documentation": "Type of market data used in the calculation. Any historical field can be used for this override.",
+          "categoryName": [],
+          "property": [],
+          "overrides": [],
+          "ftype": "Character"
+        }
+      },
+      {
+        "id": "PX391",
+        "fieldInfo": {
+          "mnemonic": "START_DATE_OVERRIDE",
+          "description": "Start Date Override",
+          "datatype": "Datetime",
+          "documentation": "Start date for the date range for the data points used in the calculations, using YYYYMMDD date format.",
+          "categoryName": [],
+          "property": [],
+          "overrides": [],
+          "ftype": "Date"
+        }
+      },
+      {
+        "id": "PX392",
+        "fieldInfo": {
+          "mnemonic": "END_DATE_OVERRIDE",
+          "description": "End Date Override",
+          "datatype": "Datetime",
+          "documentation": "End date for the date range of the data points used in the calculation, using YYYYMMDD date format.",
+          "categoryName": [],
+          "property": [],
+          "overrides": [],
+          "ftype": "Date"
+        }
+      }
+    ]
+  }
+]

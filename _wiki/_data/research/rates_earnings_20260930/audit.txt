@@ -1,0 +1,68 @@
+## Double-check verdict: SPX rates/earnings study — PARTIAL
+
+Audit dated 2026-09-30. Scope: independent input, arithmetic, and basis review of study_data.json and build_rates_earnings_study.py, plus cited primary sources. PASS for verified historical inputs and conditional arithmetic; PARTIAL for economic inference. No causal yield-to-multiple model has been validated.
+
+### 1. Outlook email coverage
+- Not applicable to this bounded index-level model audit. No claim that broker/email coverage was audited or complete.
+
+### 2. SEC filings coverage (last 2 years)
+- Not applicable to this index-level arithmetic audit. No single-company filing coverage certification.
+- Primary evidence checked instead: original FactSet articles dated 2022-09-02, 2022-09-30, 2023-01-06, and 2026-09-04; saved Jan/Jun/Sep 2026 Earnings Insight charts and text; Treasury raw HTML tables.
+
+### 3. Bloomberg API cross-check (REFERENCE ONLY — not gabarito)
+- BBG pull run: No; outside this bounded index-level model audit. Market inputs were checked against the actual cited FactSet/Treasury sources, not described as independently Bloomberg-confirmed.
+- Treasury: independently parsed raw HTML, not the analyst's derived JSON, and matched all 24 nominal/real ten-year cells across 12 observation dates and all 12 nominal-minus-real spreads. Live Treasury tables also confirmed 2026-09-29 nominal 5.26%, real 2.91%.
+- Q3 comparison: 2022 nominal 2.98% -> 3.83% = +85bp; real 0.65% -> 1.68% = +103bp. 2026 nominal 4.44% -> 5.26% = +82bp; real 2.20% -> 2.91% = +71bp. End dates are 2022-09-30 versus 2026-09-29, not identical dates.
+- FactSet 2026-09-25 report, text lines 22 and 531-535: forward 12-month P/E 19.2x independently supports the exhibit's approximate 19-20x current range. It does not validate a 6% yield -> 16x relationship.
+
+### 4. Transcript coverage
+- Not applicable to this index-level model audit. No management-call coverage certification.
+- Visual evidence checked: jan_estimates-32.png (310.84 and 357.83), june_estimates-25.png (397.42), eps_sep-30.png and eps_sep-31.png (361.37 and 416.97), fidelity_exhibit.png (19-20x, scenario 16x, approximately 30% growth).
+
+### 5. Unsourced or weakly-sourced claims in prior work
+- No hard-input transcription or arithmetic errors found. All nine revision outputs and all twelve price-return scenarios independently recomputed.
+- FactSet fixed-target revisions: Q3 2022 59.44 -> 56.21 = -5.4341%; Q3 2026 88.64 -> 89.69 = +1.1846%; CY2022 229.60 -> 226.15 = -1.5026%; CY2026 340.49 -> 361.38 = +6.1353%. These two-month windows match exactly.
+- Next-year revisions: CY2023 250.60 -> 241.83 = -3.4996%; CY2027 397.42 -> 416.97 = +4.9192%. The five-day shift in both endpoints must remain explicit. CY2026 January-to-September +16.2560% and CY2027 +16.5274% also check. CY2023 June-to-December 250.60 -> 230.51 = -8.0168% checks.
+- The identity P1/P0=(E1/E0)*(PE1/PE0) is valid with the same earnings definition at both endpoints. No fitted constant is required. It does not forecast E1 or PE1, prove a causal yield relationship, or describe intra-period drawdowns.
+- 15.4% is a sourced CY2027 aggregate earnings-growth forecast (Sep25 report, line 527); its application to an NTM denominator remains hypothetical. CY2026 32.0% aggregate earnings growth is not a future additional return offset. It also is not the exact EPS ratio 361.37/274.72-1, which is 31.54%.
+- The terminal multiple is a load-bearing assumption. The existing scenarios vary EPS growth and starting P/E but hold terminal P/E fixed. Add sensitivity to terminal P/E before presenting the model as adequately tested.
+- model.guardrails contains manually assigned PASS descriptions, not automated validation logic. Existing assertions check reported revision rounding and selected identities. Do not call all guardrails executable or automatically validated.
+- Aggregate upgrades do not prove broad improvement: FactSet Sep4 reports four of eleven sectors with positive Q3 revisions and seven negative, led positively by Energy. Excluding Alphabet/Amazon is a change of company universe, not a full normalization of recurring index earnings.
+- Treasury nominal-minus-real par-yield subtraction is a rough spread measure; do not treat it as a pure observed inflation-expectations series.
+
+### 6. What the prior analyst MUST do before this work ships
+- Label 6% yields and 16x P/E as a conditional stress assumption, never a calibrated prediction. The independent current-multiple check only validates today's approximate valuation range.
+- Show terminal-multiple sensitivity. With +30% EPS, a 19.5x start and terminal 14/16/18x produce -6.6667%/+6.6667%/+20.0000%. With a 19.2x start they produce -5.2083%/+8.3333%/+21.8750%.
+- Keep dates and denominators prominent: matched two-month fixed-target revisions; shifted three-month next-year revisions; Treasury through Sep29; FactSet Sep24 observation. Do not imply they form a single precisely synchronized causal regression.
+- Retain forecast/actual, EPS/aggregate earnings, roll/revision, and earnings-quality caveats beside the model. Describe qualitative guardrails as reviewed disclosures, or implement actual checks.
+- Confirmed arithmetic for presentation: breakeven EPS = 19.5/16-1 = 21.875%; 19.2/16-1 = 20%. At 19.5x ->16x, +30% EPS gives +6.6667%, +15.4% gives -5.3128%, unchanged EPS gives -17.9487%. At 19.2x ->16x, corresponding returns are +8.3333%, -3.8333%, and -16.6667%. Price returns exclude dividends.
+
+### 7. Bottom line
+The historical input work and arithmetic hold up. The study can ship as a sourced historical comparison and conditional valuation exercise after terminal-P/E sensitivity is added; it cannot support a forecast that 6% yields imply 16x or that earnings will prevent a 2022-style drawdown. The largest uncertainty is the terminal valuation and future NTM earnings path, not the arithmetic.
+
+Primary URLs used:
+https://insight.factset.com/larger-cuts-than-average-to-eps-estimates-for-sp500-cos-in-july-august-for-q3
+https://insight.factset.com/analysts-increasing-eps-estimates-for-sp-500-companies-for-2nd-straight-quarter
+https://insight.factset.com/largest-cuts-to-eps-estimates-for-sp-500-companies-for-q3-2022-in-more-than-two-years
+https://insight.factset.com/have-analysts-lowered-eps-estimates-more-than-average-for-sp-500-companies-for-q4
+https://insight.factset.com/mag-7-companies-reported-earnings-growth-above-100-boosted-by-investment-gains
+https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026
+https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_real_yield_curve&field_tdr_date_value=2026
+FactSet PDFs and Treasury monthly historical URLs: source_manifest.json in this directory.
+
+
+FINAL ADJUDICATION — 2026-09-30, after review of study.html
+
+Read the final report and its embedded scenario/rendering calculations. Original audit above is preserved.
+
+Resolved findings:
+- The report adds terminal-P/E sensitivity at 14x/16x/18x for both 19.5x and 19.2x starting valuations. Its JavaScript implements the independently verified identity correctly.
+- The stated local sensitivities are correct: at a 19.5x start and +30% EPS, +1x terminal P/E changes the return by +6.6667 percentage points; at 16x terminal P/E, +10 points EPS growth changes it by +8.2051 points.
+- The report expressly distinguishes manual basis assessments from numerical reconciliation/assertions. It no longer presents every qualitative guardrail as an automated validation.
+- The observed June-to-September NTM bridge is faithfully stated as FactSet-reported price +2.7%, forward EPS +8.9%, and P/E 20.4x ->19.2x, with both roll and rounding caveats. That distinction is material and correct.
+- The report retains the five-day revision-window offset, rate and consensus observation dates, forecast-versus-realized distinctions, sector breadth weakness, and the limits of excluding two companies as an earnings-quality adjustment.
+- The 6% ->16x relationship is expressly a scenario; CY26 growth is not added to future returns; CY27 growth is not asserted to equal prospective NTM denominator growth.
+
+Adjudicated result: PASS to publish as a sourced historical comparison and conditional valuation exercise. PARTIAL remains the appropriate overall economic-validation label: neither the yield-to-P/E relationship nor a fully normalized recurring-earnings path is established. No material interpretive mistake found in the final presentation of the audited model.
+
+Scope remains bounded: this follow-up did not expand into new verification of the report's ancillary company results, Fed statements, broker emails, filings, or transcripts. The source-input PASS refers to inputs checked in the original quantitative audit, not a blanket audit of every number in the wider report. Browser interaction and visual QA remain with the report author.

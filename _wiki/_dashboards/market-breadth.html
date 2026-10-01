@@ -1,0 +1,1526 @@
+<!doctype html>
+<html lang="en" data-visualize-standalone>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Market Breadth.fragment</title>
+<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
+</head>
+<body>
+<iframe sandbox="allow-scripts" referrerpolicy="no-referrer" title="Market Breadth.fragment" srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot; data-visualize-standalone&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
+&lt;title&gt;Market Breadth.fragment&lt;/title&gt;
+&lt;style&gt;:root {
+  color-scheme: light dark;
+  background-color: var(
+    --background,
+    var(--color-background-primary, light-dark(rgb(255 255 255), rgb(24 24 24)))
+  ) !important;
+
+  /* Agent-facing contract; keep in sync with SKILL.md. */
+  --background: var(
+    --color-background-primary,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --card: color-mix(in oklab, var(--foreground) 5%, var(--background));
+  --card-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --popover: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255), rgb(45 45 45))
+  );
+  --popover-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --primary: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --primary-foreground: var(
+    --color-text-inverse,
+    light-dark(rgb(255 255 255), rgb(13 13 13))
+  );
+  --secondary: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%))
+  );
+  --secondary-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --muted: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --muted-foreground: var(
+    --color-text-secondary,
+    light-dark(rgb(26 28 31 / 49.4%), rgb(255 255 255 / 49.8%))
+  );
+  --accent: var(
+    --color-background-info,
+    light-dark(rgb(229 242 255), rgb(13 39 63))
+  );
+  --accent-foreground: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --destructive: var(
+    --color-text-warning,
+    light-dark(rgb(226 85 7), rgb(255 133 73))
+  );
+  --border: var(
+    --color-border-secondary,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+  --input: var(
+    --color-border-primary,
+    light-dark(
+      rgb(26 28 31 / 11.8%),
+      color-mix(in oklab, rgb(0 0 0) 10%, transparent)
+    )
+  );
+  --ring: var(
+    --color-ring-primary,
+    light-dark(rgb(51 156 255), rgb(131 195 255 / 76%))
+  );
+  --font-size-base: var(--font-text-md-size, 14px);
+  --blue: light-dark(rgb(51 156 255), rgb(51 156 255));
+  --orange: light-dark(rgb(226 85 7), rgb(251 106 34));
+  --green: light-dark(rgb(0 162 64), rgb(64 201 119));
+  --red: light-dark(rgb(224 46 42), rgb(255 103 100));
+  --purple: light-dark(rgb(146 79 247), rgb(173 123 249));
+  --yellow: light-dark(rgb(255 195 0), rgb(255 210 64));
+  --viz-series-1: var(--primary);
+  --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
+  --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
+  --viz-series-4: light-dark(rgb(235 119 177), rgb(240 143 192));
+  --viz-series-5: light-dark(rgb(155 121 236), rgb(170 145 239));
+  --viz-series-6: light-dark(rgb(58 185 177), rgb(90 203 194));
+
+  /* Internal implementation variables; not part of the agent contract. */
+  --font-sans: -apple-system, system-ui, &quot;Segoe UI&quot;, sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, &quot;Liberation Mono&quot;,
+    monospace;
+  --font-size-normal: max(11px, var(--font-size-base));
+  --font-size-tooltip: calc(var(--font-size-base) - 1px);
+  --font-size-small: max(11px, calc(var(--font-size-base) - 2px));
+  --font-size-h1: calc(var(--font-size-normal) * 1.7142857143);
+  --font-size-h2: calc(var(--font-size-normal) * 1.4285714286);
+  --font-size-h3: calc(var(--font-size-normal) * 1.2857142857);
+  --font-weight-normal: 430;
+  --font-weight-medium: 500;
+  --icon-size: 16px;
+  --line-height-normal: calc(var(--font-size-normal) * 1.5);
+  --line-height-tooltip: calc(var(--font-size-tooltip) * 1.4285714286);
+  --line-height-small: calc(var(--font-size-small) + 4px);
+  --corner-shape: round;
+  --radius: var(--border-radius-lg, 10px);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-2xl: calc(var(--radius) * 1.6);
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
+  --checkmark-image: url(&quot;data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 17 17&#x27;%3E%3Cpath d=&#x27;M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z&#x27;/%3E%3C/svg%3E&quot;);
+
+  /* Legacy aliases; not part of the current agent contract. */
+  --viz-bg: transparent;
+  --viz-panel: var(--card);
+  --viz-border: var(--border);
+  --viz-text: var(--foreground);
+  --viz-muted: var(--muted-foreground);
+  --viz-accent: var(--primary);
+  --viz-accent-text: var(--primary-foreground);
+  --viz-accent-bg: var(--accent);
+  --viz-font-size: var(--font-size-base);
+  --viz-warning: var(--destructive);
+}
+
+:root[data-theme=&quot;light&quot;] {
+  color-scheme: light;
+}
+
+:root[data-theme=&quot;dark&quot;] {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html &gt; body {
+  /* Preserve MCP aliases for older inline renderers without creating :root cycles. */
+  --color-background-primary: var(
+    --background,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --color-text-primary: var(
+    --foreground,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --color-border-secondary: var(
+    --border,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+
+  margin: 0;
+  padding: var(--visualize-paint-gutter, 0px);
+  color: var(--foreground);
+  background: transparent !important;
+  font-family: var(--font-sans) !important;
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+a {
+  color: color-mix(in srgb, var(--viz-accent) 80%, var(--viz-text) 20%);
+  cursor: pointer;
+  font-weight: var(--font-weight-medium, 500);
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+
+a:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+}
+
+b,
+strong,
+th {
+  font-weight: var(--font-weight-medium);
+}
+
+code:not(pre code) {
+  display: inline;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  corner-shape: var(--corner-shape);
+  background: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  word-break: break-word;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--foreground);
+  font: inherit;
+  text-align: start;
+}
+
+.table :is(th, td) {
+  padding-block: 10px;
+  padding-inline: 0 24px;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+}
+
+.table-responsive &gt; .table :is(th, td) {
+  overflow-wrap: break-word;
+}
+
+.table :is(th, td):last-child {
+  padding-inline-end: 0;
+}
+
+.table :is(caption, thead th) {
+  font-weight: 600;
+}
+
+.table thead th {
+  padding-block: 8px;
+  border-bottom-color: color-mix(in srgb, var(--foreground) 16%, transparent);
+}
+
+.table tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+
+.table.table-sm :is(th, td) {
+  padding-block: 6px;
+}
+
+.table.table-sm :is(th, td):not(:last-child) {
+  padding-inline-end: 16px;
+}
+
+.table :is(.text-end, [align=&quot;right&quot;]) {
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.table :is(.text-center, [align=&quot;center&quot;]) {
+  text-align: center;
+}
+
+.table .text-nowrap {
+  white-space: nowrap;
+}
+
+#widget {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  background: transparent !important;
+}
+
+.card {
+  min-width: 0;
+  padding: 12px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border-radius: var(--radius-2xl);
+  corner-shape: var(--corner-shape);
+  color: var(--card-foreground);
+  background: var(--card);
+}
+
+#widget &gt; :not(.card, .progress) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: max-content;
+  max-width: min(
+    20rem,
+    var(--tooltip-available-width, calc(100vw - 10px)),
+    calc(100vw - 10px)
+  );
+  max-height: min(
+    var(--tooltip-available-height, calc(100vh - 10px)),
+    calc(100vh - 10px)
+  );
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--popover-foreground);
+  background: var(--popover);
+  box-shadow: none;
+  font-size: var(--font-size-tooltip);
+  line-height: var(--line-height-tooltip);
+  overflow-wrap: break-word;
+  white-space: normal;
+  pointer-events: none;
+  user-select: none;
+}
+
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(180px, 24%), 1fr));
+  gap: 10px;
+}
+
+.viz-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.viz-stat-value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+.viz-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  margin-block: 6px;
+  border: 0;
+  background: var(--border);
+}
+
+.nav {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 4px;
+}
+
+.progress {
+  display: flex;
+  height: 8px;
+  margin-block: calc((var(--line-height-normal, 1.5em) - 8px) / 2);
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+}
+
+.progress-bar:only-child {
+  border-radius: var(--radius-full);
+}
+
+.progress-bar {
+  height: 100%;
+  flex-shrink: 0;
+  border: 0;
+  background: var(--viz-series-1);
+}
+
+.viz-badge {
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  color: var(--accent-foreground);
+  background: var(--accent);
+  font-weight: var(--font-weight-medium);
+}
+
+small,
+.text-small,
+.viz-badge {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.viz-controls &gt; .form-label {
+  display: grid;
+  min-width: min(100%, 260px);
+  flex: 1 1 280px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin-bottom: 0;
+}
+
+.viz-controls &gt; .form-label &gt; :is(.form-control, .form-range, .form-select) {
+  grid-column: 1 / -1;
+}
+
+.btn,
+.nav-link,
+.form-check-input,
+.form-control,
+.form-range,
+.form-select {
+  font: inherit;
+}
+
+.btn,
+.nav-link {
+  appearance: button;
+  display: inline-flex;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px;
+  -webkit-app-region: no-drag;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: var(--cursor-interaction, pointer);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn:is(.btn-block, .viz-tile) {
+  inline-size: 100%;
+}
+
+.btn.viz-tile {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+a.btn {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:not(:disabled):hover,
+.nav-link:not(:disabled):not([aria-disabled=&quot;true&quot;]):hover {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn-primary {
+  border-color: transparent;
+  color: var(--primary-foreground);
+  background: var(--foreground);
+  background-clip: padding-box;
+}
+
+.btn-primary .text-muted {
+  color: color-mix(in srgb, var(--primary-foreground) 50%, transparent);
+}
+
+.btn-primary:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 80%, transparent);
+  background-clip: padding-box;
+}
+
+.btn-ghost {
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.btn-ghost:not(:disabled):hover {
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.nav-pills .nav-link {
+  min-width: 0;
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.nav-justified .nav-link {
+  flex: 1 1 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.nav-pills .nav-link.active {
+  color: var(--foreground);
+  background: var(--muted);
+}
+
+.btn:disabled,
+.nav-link:disabled,
+.nav-link[aria-disabled=&quot;true&quot;] {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+[data-lucide] {
+  stroke-width: 1.6;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--foreground);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  background: var(--secondary);
+}
+
+.form-control::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-control[type=&quot;file&quot;] {
+  padding: 0;
+  overflow: hidden;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control[type=&quot;file&quot;]::file-selector-button {
+  min-height: 26px;
+  margin-right: 8px;
+  padding: 0 8px;
+  border: 0;
+  border-right: 1px solid var(--input);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: inherit;
+  font: inherit;
+}
+
+.form-control[type=&quot;file&quot;]:not(:disabled):hover::file-selector-button {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-control-color[type=&quot;color&quot;] {
+  width: 40px;
+  height: 28px;
+  padding: 3px;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--radius-lg) - 4px);
+  corner-shape: var(--corner-shape);
+}
+
+textarea.form-control {
+  height: auto;
+  min-height: 72px;
+  padding: 8px 10px;
+  resize: vertical;
+}
+
+.form-control:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-control:disabled,
+.form-select:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.form-select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  margin: 0;
+  padding: 0 32px 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  background-color: var(--secondary);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted-foreground) 50%),
+    linear-gradient(135deg, var(--muted-foreground) 50%, transparent 50%);
+  background-position:
+    calc(100% - 14px) 50%,
+    calc(100% - 10px) 50%;
+  background-repeat: no-repeat;
+  background-size: 4px 4px;
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-select:not(:disabled):hover {
+  background-color: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-select:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-check {
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-check-input {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--input);
+  color: var(--primary-foreground);
+  background-color: transparent;
+  cursor: var(--cursor-interaction, default);
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;] {
+  border-color: var(--input);
+  border-radius: var(--radius-sm);
+  corner-shape: var(--corner-shape);
+  background-color: var(--secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input:not(:disabled):not(:checked):hover {
+  background-color: var(--card);
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;]:checked {
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:checked::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-foreground);
+  content: &quot;&quot;;
+  mask: var(--checkmark-image) center / 12px 12px no-repeat;
+}
+
+.form-check-input[type=&quot;radio&quot;] {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+}
+
+.form-check-input[type=&quot;radio&quot;]:checked {
+  border: 2px solid var(--primary);
+  background:
+    radial-gradient(circle, var(--primary-foreground) 0 2.5px, transparent 3px),
+    var(--primary);
+}
+
+.form-check:not(.form-switch) .form-check-input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+}
+
+.form-switch .form-check-input:disabled,
+.form-switch .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-check-label {
+  color: var(--foreground);
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-switch .form-check-input {
+  position: relative;
+  width: 32px;
+  height: 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+  box-shadow: none;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid light-dark(var(--primary-foreground), var(--foreground));
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+  box-shadow: var(--shadow-sm);
+  content: &quot;&quot;;
+  transform: translate(2px, -50%);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input:checked {
+  background: var(--primary);
+}
+
+.form-switch .form-check-input:checked::before {
+  transform: translate(14px, -50%);
+}
+
+.form-switch .form-check-input:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.form-range {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 28px;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  accent-color: var(--primary);
+  background: linear-gradient(
+      color-mix(in srgb, var(--foreground) 7%, transparent),
+      color-mix(in srgb, var(--foreground) 7%, transparent)
+    )
+    center / 100% 2px no-repeat;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-webkit-slider-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range::-moz-range-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-moz-range-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.btn:not(.btn-primary, .viz-tile):is(
+  [aria-pressed=&quot;true&quot;],
+  [aria-selected=&quot;true&quot;],
+  .is-selected
+) {
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
+.btn.viz-tile:is([aria-pressed=&quot;true&quot;], [aria-selected=&quot;true&quot;], .is-selected) {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.btn:focus-visible,
+.nav-link:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+@media (pointer: coarse) {
+  .btn,
+  .nav-link,
+  .form-control,
+  .form-select {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Keep small-screen WebKit from zooming when a text field receives focus. */
+  .form-control,
+  .form-select {
+    font-size: max(16px, var(--font-size-normal));
+  }
+
+  .form-control[type=&quot;file&quot;]::file-selector-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .form-control-color[type=&quot;color&quot;] {
+    width: 44px;
+    height: 44px;
+  }
+
+  .form-control:is(
+    [type=&quot;date&quot;],
+    [type=&quot;datetime-local&quot;],
+    [type=&quot;month&quot;],
+    [type=&quot;time&quot;],
+    [type=&quot;week&quot;]
+  ) {
+    min-width: 0;
+    max-width: 100%;
+    padding-block: 8px;
+  }
+
+  .form-check {
+    min-height: 44px;
+    padding-inline: 15px;
+  }
+
+  .form-check-input {
+    position: relative;
+  }
+
+  .form-check-input::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    content: &quot;&quot;;
+    transform: translate(-50%, -50%);
+  }
+
+  .form-check-label {
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .form-range {
+    height: 44px;
+    touch-action: pan-y;
+  }
+
+  .form-range::-webkit-slider-runnable-track {
+    height: 44px;
+  }
+
+  .form-range::-moz-range-track {
+    height: 44px;
+  }
+
+  .form-range::-webkit-slider-thumb {
+    margin-top: 12px;
+  }
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#widget &gt; svg {
+  width: 100%;
+}
+
+/* Model-authored chart rules can otherwise stretch icons after these styles load. */
+svg.lucide {
+  display: block;
+  width: var(--icon-size) !important;
+  height: var(--icon-size) !important;
+  flex: none;
+  margin: 0 !important;
+  stroke-width: 1.6;
+}
+
+.text-warning,
+.text-destructive {
+  color: var(--destructive);
+}
+
+html&gt;body{padding:0}&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;breadth-20260929&quot;&gt;
+  &lt;style&gt;
+    #breadth-20260929{color:var(--foreground);position:relative;font-variant-numeric:tabular-nums}
+    #breadth-20260929 h2{font-size:22px;font-weight:650;line-height:1.2;margin:0 0 6px}
+    #breadth-20260929 .sub{font-size:13px;color:var(--muted-foreground);margin:0 0 16px}
+    #breadth-20260929 .legend{display:flex;gap:12px 22px;flex-wrap:wrap;margin:0 0 22px}
+    #breadth-20260929 .legend button{appearance:none;background:transparent;border:0;border-radius:0;color:var(--foreground);padding:4px 0;display:inline-flex;align-items:center;gap:7px;font:inherit;font-size:13px;cursor:pointer}
+    #breadth-20260929 .swatch{width:20px;height:3px;display:inline-block}
+    #breadth-20260929 .legend button[aria-pressed=&quot;false&quot;]{opacity:.4}
+    #breadth-20260929 .panels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+    #breadth-20260929 .panel{min-width:0}
+    #breadth-20260929 h3{font-size:17px;margin:0 0 5px;font-weight:650}
+    #breadth-20260929 .coverage{font-size:12px;color:var(--muted-foreground);line-height:1.55;min-height:40px;margin-bottom:5px}
+    #breadth-20260929 .chart{width:100%;min-width:0}
+    #breadth-20260929 svg{display:block;width:100%;overflow:visible}
+    #breadth-20260929 svg text{fill:var(--foreground);font-size:12px;font-family:inherit}
+    #breadth-20260929 svg .domain,#breadth-20260929 svg .tick line{stroke:var(--border)}
+    #breadth-20260929 table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+    #breadth-20260929 th{font-size:11px;font-weight:500;color:var(--muted-foreground)}
+    #breadth-20260929 td,#breadth-20260929 th{padding:8px 2px;border-bottom:1px solid var(--border);text-align:right;white-space:nowrap}
+    #breadth-20260929 td:first-child,#breadth-20260929 th:first-child{text-align:left}
+    #breadth-20260929 .row-key{display:flex;align-items:center;gap:6px}
+    #breadth-20260929 .row-key .swatch{width:14px}
+    #breadth-20260929 .sources{margin-top:20px;color:var(--muted-foreground);font-size:11px;line-height:1.65}
+    #breadth-20260929 .tooltip{position:absolute;z-index:5;pointer-events:none;background:var(--popover);color:var(--popover-foreground);padding:10px 12px;border:1px solid var(--border);font-size:12px;min-width:210px;max-width:min(290px,100%);box-sizing:border-box}
+    #breadth-20260929 .tip-title{font-weight:600;margin-bottom:6px}
+    #breadth-20260929 .tip-row{display:flex;justify-content:space-between;gap:16px;line-height:1.8}
+    #breadth-20260929 .tip-caption{font-size:11px;color:var(--muted-foreground);margin:4px 0}
+    @media(max-width:700px){#breadth-20260929 .panels{grid-template-columns:1fr;gap:28px}#breadth-20260929 .coverage{min-height:0}#breadth-20260929 table{font-size:14px}#breadth-20260929 h2{font-size:20px}}
+    @media(pointer:coarse){#breadth-20260929 .legend button{min-height:44px}}
+  &lt;/style&gt;
+  &lt;h2&gt;Stocks below their all-time highs&lt;/h2&gt;
+  &lt;div class=&quot;sub&quot;&gt;15 trading days · September 8–29, 2026 · Daily closes&lt;/div&gt;
+  &lt;div class=&quot;legend&quot; aria-label=&quot;Drawdown thresholds&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;panels&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;sources&quot;&gt;Source: Bloomberg Desktop API · September 29, 2026 close&lt;br&gt;Fixed September 29 constituent cohort · Share classes counted separately · Cumulative thresholds&lt;br&gt;ATH: highest available historical intraday price through each date · Split-adjusted; cash dividends unadjusted&lt;br&gt;Missing observations: last available close carried forward · Latest carried prices: Nasdaq 114; S&amp;P 500 0; Russell 1&lt;/div&gt;
+  &lt;div class=&quot;tooltip&quot; role=&quot;tooltip&quot; hidden&gt;&lt;/div&gt;
+  &lt;script type=&quot;application/json&quot; id=&quot;breadth-data&quot;&gt;{&quot;source&quot;:&quot;Bloomberg Desktop API&quot;,&quot;retrieved_at&quot;:&quot;2026-09-29T21:34:08.882961+00:00&quot;,&quot;asof&quot;:&quot;2026-09-29&quot;,&quot;baseline&quot;:&quot;2026-09-08&quot;,&quot;dates&quot;:[&quot;2026-09-08&quot;,&quot;2026-09-09&quot;,&quot;2026-09-10&quot;,&quot;2026-09-11&quot;,&quot;2026-09-14&quot;,&quot;2026-09-15&quot;,&quot;2026-09-16&quot;,&quot;2026-09-17&quot;,&quot;2026-09-18&quot;,&quot;2026-09-21&quot;,&quot;2026-09-22&quot;,&quot;2026-09-23&quot;,&quot;2026-09-24&quot;,&quot;2026-09-25&quot;,&quot;2026-09-28&quot;,&quot;2026-09-29&quot;],&quot;thresholds&quot;:[10,20,30,50],&quot;basis&quot;:&quot;Closing price / running intraday historical high; split-adjusted, cash dividends unadjusted&quot;,&quot;membership&quot;:&quot;September 29, 2026 constituent snapshot held fixed over the period; share classes counted separately&quot;,&quot;missing_observations&quot;:&quot;Last valid close carried forward. No baseline high/close -&gt; excluded from every date.&quot;,&quot;indices&quot;:[{&quot;ticker&quot;:&quot;CCMP Index&quot;,&quot;label&quot;:&quot;Nasdaq Composite&quot;,&quot;universe&quot;:3396,&quot;covered&quot;:3374,&quot;coverage_pct&quot;:99.35217903415783,&quot;excluded&quot;:[{&quot;ticker&quot;:&quot;ADRX US Equity&quot;,&quot;reason&quot;:&quot;No pre-window historical high (new listing or unavailable)&quot;},{&quot;ticker&quot;:&quot;BRTM US Equity&quot;,&quot;reason&quot;:&quot;No pre-window historical high (new listing or unavailable)&quot;},{&quot;ticker&quot;:&quot;CATL US Equity&quot;,&quot;reason&quot;:&quot;No pre-window historical high (new listing or unavailable)&quot;},{&quot;ticker&quot;:&quot;EFTY US Equity&quot;,&quot;reason&quot;:&quot;No valid closing price on/before baseline&quot;},{&quot;ticker&quot;:&quot;ETRA US Equity&quot;,&quot;reason&quot;:&quot;No pre-window historical high (new listing or unavailable)&quot;},{&quot;ticker&quot;:&quot;FJDI US Equity&quot;,&quot;reason&quot;:&quot;No pre-window historical high (new listing or unavailable)&quot;},{&quot;ticker&quot;:&quot;HCHL US Equity&quot;,&quot;reason&quot;:&quot;No valid closing price on/before baseline&quot;},{&quot;ticker&quot;:&quot;LAWR US Equity&quot;,&quot;reason&quot;:&quot;No valid closing price on/before baseline&quot;},{&quot;ticker&quot;:&quot;MAGH US Equity&quot;,&quot;reason&quot;:&quot;No valid closing price on/before baseline&quot;},{&quot;ticker&quot;:&quot;MAMK US Equity&quot;,&quot;reason&quot;:&quot;No valid closing price on/before baseline&quot;},{&quot;ticker&quot;:&quot;MCTA US Equity&quot;,&quot;reason&quot;:&quot;No valid closing price on/before baseline&quot;},{&quot;ticker&quot;:&quot;MFP US Equity&quot;,&quot;reason&quot;:&quot;No pre-window historical high (new listing or unavailable)&quot;},{&quot;ticker&quot;:&quot;MTAK US Equity&quot;,&quot;reason&quot;:&quot;No pre-window historical high (new listing or unavailable)&quot;},{&quot;ticker&quot;:&quot;OCLT US Equity&quot;,&quot;reason&quot;:&quot;No pre-window historical high (new listing or unavailable)&quot;},{&quot;ticker&quot;:&quot;OIG US Equity&quot;,&quot;reason&quot;:&quot;No pre-window historical high (new listing or unavailable)&quot;},{&quot;ticker&quot;:&quot;OST US Equity&quot;,&quot;reason&quot;:&quot;No valid closing price on/before baseline&quot;},{&quot;ticker&quot;:&quot;PC US Equity&quot;,&quot;reason&quot;:&quot;No valid closing price on/before baseline&quot;},{&quot;ticker&quot;:&quot;RNAQ US Equity&quot;,&quot;reason&quot;:&quot;No pre-window historical high (new listing or unavailable)&quot;},{&quot;ticker&quot;:&quot;SVA US Equity&quot;,&quot;reason&quot;:&quot;No valid closing price on/before baseline&quot;},{&quot;ticker&quot;:&quot;TLAC US Equity&quot;,&quot;reason&quot;:&quot;No pre-window historical high (new listing or unavailable)&quot;},{&quot;ticker&quot;:&quot;UCFI US Equity&quot;,&quot;reason&quot;:&quot;No valid closing price on/before baseline&quot;},{&quot;ticker&quot;:&quot;XIII US Equity&quot;,&quot;reason&quot;:&quot;No pre-window historical high (new listing or unavailable)&quot;}],&quot;points&quot;:[{&quot;date&quot;:&quot;2026-09-08&quot;,&quot;counts&quot;:[2932,2710,2514,2175],&quot;pct&quot;:[86.899822,80.320095,74.510966,64.463545],&quot;carried&quot;:100},{&quot;date&quot;:&quot;2026-09-09&quot;,&quot;counts&quot;:[2951,2729,2528,2190],&quot;pct&quot;:[87.462952,80.883225,74.925904,64.908121],&quot;carried&quot;:123},{&quot;date&quot;:&quot;2026-09-10&quot;,&quot;counts&quot;:[2960,2750,2544,2204],&quot;pct&quot;:[87.729698,81.505631,75.400119,65.323059],&quot;carried&quot;:98},{&quot;date&quot;:&quot;2026-09-11&quot;,&quot;counts&quot;:[2952,2736,2532,2201],&quot;pct&quot;:[87.49259,81.090694,75.044458,65.234143],&quot;carried&quot;:119},{&quot;date&quot;:&quot;2026-09-14&quot;,&quot;counts&quot;:[2945,2736,2550,2204],&quot;pct&quot;:[87.285122,81.090694,75.577949,65.323059],&quot;carried&quot;:78},{&quot;date&quot;:&quot;2026-09-15&quot;,&quot;counts&quot;:[2957,2753,2560,2219],&quot;pct&quot;:[87.640782,81.594547,75.874333,65.767635],&quot;carried&quot;:93},{&quot;date&quot;:&quot;2026-09-16&quot;,&quot;counts&quot;:[2963,2751,2562,2217],&quot;pct&quot;:[87.818613,81.53527,75.93361,65.708358],&quot;carried&quot;:105},{&quot;date&quot;:&quot;2026-09-17&quot;,&quot;counts&quot;:[2957,2741,2551,2204],&quot;pct&quot;:[87.640782,81.238886,75.607587,65.323059],&quot;carried&quot;:85},{&quot;date&quot;:&quot;2026-09-18&quot;,&quot;counts&quot;:[2958,2751,2550,2209],&quot;pct&quot;:[87.670421,81.53527,75.577949,65.471251],&quot;carried&quot;:104},{&quot;date&quot;:&quot;2026-09-21&quot;,&quot;counts&quot;:[2954,2742,2545,2201],&quot;pct&quot;:[87.551867,81.268524,75.429757,65.234143],&quot;carried&quot;:91},{&quot;date&quot;:&quot;2026-09-22&quot;,&quot;counts&quot;:[2962,2735,2538,2193],&quot;pct&quot;:[87.788975,81.061055,75.222288,64.997036],&quot;carried&quot;:101},{&quot;date&quot;:&quot;2026-09-23&quot;,&quot;counts&quot;:[2985,2770,2572,2208],&quot;pct&quot;:[88.470658,82.0984,76.229994,65.441612],&quot;carried&quot;:98},{&quot;date&quot;:&quot;2026-09-24&quot;,&quot;counts&quot;:[2977,2770,2575,2212],&quot;pct&quot;:[88.233551,82.0984,76.318909,65.560166],&quot;carried&quot;:97},{&quot;date&quot;:&quot;2026-09-25&quot;,&quot;counts&quot;:[2973,2763,2576,2215],&quot;pct&quot;:[88.114997,81.890931,76.348548,65.649081],&quot;carried&quot;:110},{&quot;date&quot;:&quot;2026-09-28&quot;,&quot;counts&quot;:[2980,2774,2574,2213],&quot;pct&quot;:[88.322466,82.216953,76.289271,65.589804],&quot;carried&quot;:125},{&quot;date&quot;:&quot;2026-09-29&quot;,&quot;counts&quot;:[2992,2785,2585,2209],&quot;pct&quot;:[88.678127,82.542976,76.615293,65.471251],&quot;carried&quot;:114}],&quot;delta_counts&quot;:[60,75,71,34],&quot;delta_pp&quot;:[1.7783050000000031,2.222881000000001,2.104326999999998,1.0077059999999989],&quot;index_return_pct&quot;:1.423580346393316},{&quot;ticker&quot;:&quot;SPX Index&quot;,&quot;label&quot;:&quot;S&amp;P 500 (SPY)&quot;,&quot;universe&quot;:503,&quot;covered&quot;:503,&quot;coverage_pct&quot;:100.0,&quot;excluded&quot;:[],&quot;points&quot;:[{&quot;date&quot;:&quot;2026-09-08&quot;,&quot;counts&quot;:[406,284,189,76],&quot;pct&quot;:[80.715706,56.461233,37.574553,15.109344],&quot;carried&quot;:0},{&quot;date&quot;:&quot;2026-09-09&quot;,&quot;counts&quot;:[411,294,201,78],&quot;pct&quot;:[81.709742,58.449304,39.960239,15.506958],&quot;carried&quot;:0},{&quot;date&quot;:&quot;2026-09-10&quot;,&quot;counts&quot;:[421,300,206,80],&quot;pct&quot;:[83.697813,59.642147,40.954274,15.904573],&quot;carried&quot;:0},{&quot;date&quot;:&quot;2026-09-11&quot;,&quot;counts&quot;:[408,290,199,79],&quot;pct&quot;:[81.11332,57.654076,39.562624,15.705765],&quot;carried&quot;:0},{&quot;date&quot;:&quot;2026-09-14&quot;,&quot;counts&quot;:[410,296,205,79],&quot;pct&quot;:[81.510934,58.846918,40.755467,15.705765],&quot;carried&quot;:0},{&quot;date&quot;:&quot;2026-09-15&quot;,&quot;counts&quot;:[415,301,212,80],&quot;pct&quot;:[82.50497,59.840954,42.147117,15.904573],&quot;carried&quot;:0},{&quot;date&quot;:&quot;2026-09-16&quot;,&quot;counts&quot;:[429,303,218,82],&quot;pct&quot;:[85.28827,60.238569,43.33996,16.302187],&quot;carried&quot;:0},{&quot;date&quot;:&quot;2026-09-17&quot;,&quot;counts&quot;:[428,302,212,82],&quot;pct&quot;:[85.089463,60.039761,42.147117,16.302187],&quot;carried&quot;:0},{&quot;date&quot;:&quot;2026-09-18&quot;,&quot;counts&quot;:[426,299,214,84],&quot;pct&quot;:[84.691849,59.44334,42.544732,16.699801],&quot;carried&quot;:0},{&quot;date&quot;:&quot;2026-09-21&quot;,&quot;counts&quot;:[421,295,210,84],&quot;pct&quot;:[83.697813,58.648111,41.749503,16.699801],&quot;carried&quot;:0},{&quot;date&quot;:&quot;2026-09-22&quot;,&quot;counts&quot;:[426,287,210,85],&quot;pct&quot;:[84.691849,57.057654,41.749503,16.898608],&quot;carried&quot;:0},{&quot;date&quot;:&quot;2026-09-23&quot;,&quot;counts&quot;:[426,302,216,86],&quot;pct&quot;:[84.691849,60.039761,42.942346,17.097416],&quot;carried&quot;:0},{&quot;date&quot;:&quot;2026-09-24&quot;,&quot;counts&quot;:[427,303,224,88],&quot;pct&quot;:[84.890656,60.238569,44.532803,17.49503],&quot;carried&quot;:0},{&quot;date&quot;:&quot;2026-09-25&quot;,&quot;counts&quot;:[425,294,218,88],&quot;pct&quot;:[84.493042,58.449304,43.33996,17.49503],&quot;carried&quot;:0},{&quot;date&quot;:&quot;2026-09-28&quot;,&quot;counts&quot;:[428,300,218,91],&quot;pct&quot;:[85.089463,59.642147,43.33996,18.091451],&quot;carried&quot;:0},{&quot;date&quot;:&quot;2026-09-29&quot;,&quot;counts&quot;:[432,302,219,92],&quot;pct&quot;:[85.884692,60.039761,43.538767,18.290258],&quot;carried&quot;:0}],&quot;delta_counts&quot;:[26,18,30,16],&quot;delta_pp&quot;:[5.168986000000004,3.5785279999999986,5.964213999999998,3.1809140000000014],&quot;index_return_pct&quot;:-0.03492530155652096},{&quot;ticker&quot;:&quot;RTY Index&quot;,&quot;label&quot;:&quot;Russell 2000&quot;,&quot;universe&quot;:1976,&quot;covered&quot;:1975,&quot;coverage_pct&quot;:99.9493927125506,&quot;excluded&quot;:[{&quot;ticker&quot;:&quot;2686628D US Equity&quot;,&quot;reason&quot;:&quot;No pre-window historical high (new listing or unavailable)&quot;}],&quot;points&quot;:[{&quot;date&quot;:&quot;2026-09-08&quot;,&quot;counts&quot;:[1751,1547,1352,1060],&quot;pct&quot;:[88.658228,78.329114,68.455696,53.670886],&quot;carried&quot;:0},{&quot;date&quot;:&quot;2026-09-09&quot;,&quot;counts&quot;:[1765,1569,1368,1070],&quot;pct&quot;:[89.367089,79.443038,69.265823,54.177215],&quot;carried&quot;:0},{&quot;date&quot;:&quot;2026-09-10&quot;,&quot;counts&quot;:[1771,1585,1376,1082],&quot;pct&quot;:[89.670886,80.253165,69.670886,54.78481],&quot;carried&quot;:0},{&quot;date&quot;:&quot;2026-09-11&quot;,&quot;counts&quot;:[1769,1572,1372,1082],&quot;pct&quot;:[89.56962,79.594937,69.468354,54.78481],&quot;carried&quot;:0},{&quot;date&quot;:&quot;2026-09-14&quot;,&quot;counts&quot;:[1772,1578,1379,1080],&quot;pct&quot;:[89.721519,79.898734,69.822785,54.683544],&quot;carried&quot;:0},{&quot;date&quot;:&quot;2026-09-15&quot;,&quot;counts&quot;:[1777,1591,1392,1085],&quot;pct&quot;:[89.974684,80.556962,70.481013,54.936709],&quot;carried&quot;:0},{&quot;date&quot;:&quot;2026-09-16&quot;,&quot;counts&quot;:[1784,1587,1395,1087],&quot;pct&quot;:[90.329114,80.35443,70.632911,55.037975],&quot;carried&quot;:0},{&quot;date&quot;:&quot;2026-09-17&quot;,&quot;counts&quot;:[1783,1586,1397,1085],&quot;pct&quot;:[90.278481,80.303797,70.734177,54.936709],&quot;carried&quot;:0},{&quot;date&quot;:&quot;2026-09-18&quot;,&quot;counts&quot;:[1785,1593,1406,1089],&quot;pct&quot;:[90.379747,80.658228,71.189873,55.139241],&quot;carried&quot;:0},{&quot;date&quot;:&quot;2026-09-21&quot;,&quot;counts&quot;:[1784,1592,1406,1083],&quot;pct&quot;:[90.329114,80.607595,71.189873,54.835443],&quot;carried&quot;:0},{&quot;date&quot;:&quot;2026-09-22&quot;,&quot;counts&quot;:[1791,1584,1398,1070],&quot;pct&quot;:[90.683544,80.202532,70.78481,54.177215],&quot;carried&quot;:0},{&quot;date&quot;:&quot;2026-09-23&quot;,&quot;counts&quot;:[1806,1613,1424,1083],&quot;pct&quot;:[91.443038,81.670886,72.101266,54.835443],&quot;carried&quot;:1},{&quot;date&quot;:&quot;2026-09-24&quot;,&quot;counts&quot;:[1803,1613,1431,1093],&quot;pct&quot;:[91.291139,81.670886,72.455696,55.341772],&quot;carried&quot;:0},{&quot;date&quot;:&quot;2026-09-25&quot;,&quot;counts&quot;:[1802,1610,1428,1084],&quot;pct&quot;:[91.240506,81.518987,72.303797,54.886076],&quot;carried&quot;:0},{&quot;date&quot;:&quot;2026-09-28&quot;,&quot;counts&quot;:[1808,1619,1428,1093],&quot;pct&quot;:[91.544304,81.974684,72.303797,55.341772],&quot;carried&quot;:0},{&quot;date&quot;:&quot;2026-09-29&quot;,&quot;counts&quot;:[1819,1629,1441,1092],&quot;pct&quot;:[92.101266,82.481013,72.962025,55.291139],&quot;carried&quot;:1}],&quot;delta_counts&quot;:[68,82,89,32],&quot;delta_pp&quot;:[3.4430380000000014,4.151899,4.506328999999994,1.6202529999999982],&quot;index_return_pct&quot;:-5.144307622042266}]}&lt;/script&gt;
+  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+  (()=&gt;{
+    const root=document.getElementById(&#x27;breadth-20260929&#x27;);
+    const data=JSON.parse(root.querySelector(&#x27;#breadth-data&#x27;).textContent);
+    if(typeof d3===&#x27;undefined&#x27;){root.querySelector(&#x27;.panels&#x27;).textContent=&#x27;Chart library could not load. Bloomberg data remains available in the accompanying CSV.&#x27;;return;}
+    const colors=data.thresholds.map((_,i)=&gt;`var(--viz-series-${i+1})`);
+    const shown=data.thresholds.map(()=&gt;true);
+    const tip=root.querySelector(&#x27;.tooltip&#x27;);
+    const fmt=d3.format(&#x27;,d&#x27;), pct=d3.format(&#x27;.1f&#x27;), signed=d3.format(&#x27;+d&#x27;), ret=d3.format(&#x27;+.2f&#x27;);
+    const dateLabel=d=&gt;`Sep ${Number(d.slice(-2))}`;
+    const legend=d3.select(root.querySelector(&#x27;.legend&#x27;));
+    const buttons=legend.selectAll(&#x27;button&#x27;).data(data.thresholds).join(&#x27;button&#x27;).attr(&#x27;type&#x27;,&#x27;button&#x27;).attr(&#x27;aria-pressed&#x27;,&#x27;true&#x27;).attr(&#x27;aria-label&#x27;,d=&gt;`Show stocks at least ${d}% below ATH`);
+    buttons.append(&#x27;span&#x27;).attr(&#x27;class&#x27;,&#x27;swatch&#x27;).style(&#x27;background&#x27;,(_,i)=&gt;colors[i]);
+    buttons.append(&#x27;span&#x27;).text(d=&gt;`≥${d}% below ATH`);
+    const panels=[];
+    const all=data.indices.flatMap(p=&gt;p.points.flatMap(d=&gt;d.pct));
+    const ext=d3.extent([...all,0,100]);
+    const yDomain=[Math.max(0,ext[0]-(ext[1]-ext[0])*.03),Math.min(100,ext[1]+(ext[1]-ext[0])*.03)];
+    data.indices.forEach((index,panelIndex)=&gt;{
+      const panel=d3.select(root.querySelector(&#x27;.panels&#x27;)).append(&#x27;section&#x27;).attr(&#x27;class&#x27;,&#x27;panel&#x27;);
+      panel.append(&#x27;h3&#x27;).text(index.label);
+      panel.append(&#x27;div&#x27;).attr(&#x27;class&#x27;,&#x27;coverage&#x27;).html(`${fmt(index.covered)} / ${fmt(index.universe)} stocks · ${pct(index.coverage_pct)}% coverage&lt;br&gt;Index return: ${ret(index.index_return_pct)}%`);
+      const container=panel.append(&#x27;div&#x27;).attr(&#x27;class&#x27;,&#x27;chart&#x27;).node();
+      const svg=d3.select(container).append(&#x27;svg&#x27;).attr(&#x27;role&#x27;,&#x27;img&#x27;).attr(&#x27;aria-label&#x27;,`${index.label}: share of constituent stocks at least 10, 20, 30 and 50 percent below historical highs, September 8 to 29, 2026.`);
+      const table=panel.append(&#x27;table&#x27;).attr(&#x27;aria-label&#x27;,`${index.label} closing counts and change over 15 trading days`);
+      table.append(&#x27;thead&#x27;).append(&#x27;tr&#x27;).selectAll(&#x27;th&#x27;).data([&#x27;Below ATH&#x27;,&#x27;Stocks&#x27;,&#x27;Share&#x27;,&#x27;Δ 15d&#x27;]).join(&#x27;th&#x27;).attr(&#x27;scope&#x27;,&#x27;col&#x27;).text(d=&gt;d);
+      const rows=table.append(&#x27;tbody&#x27;).selectAll(&#x27;tr&#x27;).data(data.thresholds).join(&#x27;tr&#x27;);
+      rows.append(&#x27;td&#x27;).html((t,i)=&gt;`&lt;span class=&quot;row-key&quot;&gt;&lt;span class=&quot;swatch&quot; style=&quot;background:${colors[i]}&quot;&gt;&lt;/span&gt;≥${t}%&lt;/span&gt;`);
+      rows.append(&#x27;td&#x27;).style(&#x27;font-weight&#x27;,&#x27;650&#x27;).text((_,i)=&gt;fmt(index.points.at(-1).counts[i]));
+      rows.append(&#x27;td&#x27;).text((_,i)=&gt;pct(index.points.at(-1).pct[i])+&#x27;%&#x27;);
+      rows.append(&#x27;td&#x27;).text((_,i)=&gt;signed(index.delta_counts[i]));
+      let pinned=false;
+      function draw(){
+        pinned=false;tip.hidden=true;
+        const width=Math.round(container.getBoundingClientRect().width);
+        if(!width)return;
+        const height=260,margin={left:64,right:12,top:19,bottom:54};
+        const L=margin.left,R=width-margin.right,T=margin.top,B=height-margin.bottom;
+        const x=d3.scaleLinear().domain(d3.extent(data.dates.map((_,i)=&gt;i))).range([L+4,R-4]);
+        const y=d3.scaleLinear().domain(yDomain).range([B-4,T+4]);
+        svg.attr(&#x27;viewBox&#x27;,`0 0 ${width} ${height}`).attr(&#x27;height&#x27;,height).selectAll(&#x27;*&#x27;).remove();
+        svg.append(&#x27;title&#x27;).text(`${index.label} market breadth`);
+        svg.append(&#x27;desc&#x27;).text(`Latest counts: ${data.thresholds.map((t,i)=&gt;`${index.points.at(-1).counts[i]} stocks at least ${t}% below ATH`).join(&#x27;; &#x27;)}. Positive changes mean more stocks below their highs.`);
+        svg.append(&#x27;rect&#x27;).attr(&#x27;data-chart-frame&#x27;,&#x27;&#x27;).attr(&#x27;x&#x27;,L).attr(&#x27;y&#x27;,T).attr(&#x27;width&#x27;,R-L).attr(&#x27;height&#x27;,B-T).attr(&#x27;fill&#x27;,&#x27;none&#x27;).attr(&#x27;stroke&#x27;,&#x27;var(--border)&#x27;);
+        svg.append(&#x27;g&#x27;).selectAll(&#x27;line&#x27;).data(y.ticks(5)).join(&#x27;line&#x27;).attr(&#x27;x1&#x27;,L).attr(&#x27;x2&#x27;,R).attr(&#x27;y1&#x27;,y).attr(&#x27;y2&#x27;,y).attr(&#x27;stroke&#x27;,&#x27;var(--border)&#x27;).attr(&#x27;stroke-opacity&#x27;,.45);
+        const yt=svg.append(&#x27;g&#x27;).attr(&#x27;transform&#x27;,`translate(${L},0)`).call(d3.axisLeft(y).ticks(5).tickSize(0).tickPadding(8).tickFormat(d=&gt;d+&#x27;%&#x27;));
+        yt.select(&#x27;.domain&#x27;).remove();
+        const ticks=width&lt;380?[0,5,10,15]:[0,3,6,9,12,15];
+        const xt=svg.append(&#x27;g&#x27;).attr(&#x27;transform&#x27;,`translate(0,${B})`).call(d3.axisBottom(x).tickValues(ticks).tickSize(3).tickPadding(7).tickFormat(d=&gt;Number(data.dates[d].slice(-2))));
+        xt.select(&#x27;.domain&#x27;).remove();
+        svg.append(&#x27;text&#x27;).attr(&#x27;class&#x27;,&#x27;axis-title&#x27;).attr(&#x27;data-axis&#x27;,&#x27;y&#x27;).attr(&#x27;transform&#x27;,`translate(13,${(T+B)/2}) rotate(-90)`).attr(&#x27;text-anchor&#x27;,&#x27;middle&#x27;).text(&#x27;Constituents (%)&#x27;);
+        svg.append(&#x27;text&#x27;).attr(&#x27;class&#x27;,&#x27;axis-title&#x27;).attr(&#x27;data-axis&#x27;,&#x27;x&#x27;).attr(&#x27;x&#x27;,(L+R)/2).attr(&#x27;y&#x27;,height-6).attr(&#x27;text-anchor&#x27;,&#x27;middle&#x27;).text(&#x27;September 2026 · trading days&#x27;);
+        const guide=svg.append(&#x27;line&#x27;).attr(&#x27;data-chart-hover-guide&#x27;,&#x27;&#x27;).attr(&#x27;y1&#x27;,T).attr(&#x27;y2&#x27;,B).attr(&#x27;stroke&#x27;,&#x27;var(--foreground)&#x27;).attr(&#x27;stroke-opacity&#x27;,.45).style(&#x27;display&#x27;,&#x27;none&#x27;);
+        const markers=[];
+        data.thresholds.forEach((t,j)=&gt;{
+          const g=svg.append(&#x27;g&#x27;).attr(&#x27;data-series&#x27;,t).style(&#x27;display&#x27;,shown[j]?null:&#x27;none&#x27;);
+          g.append(&#x27;path&#x27;).datum(index.points).attr(&#x27;fill&#x27;,&#x27;none&#x27;).attr(&#x27;stroke&#x27;,colors[j]).attr(&#x27;stroke-width&#x27;,2.2).attr(&#x27;d&#x27;,d3.line().x((_,i)=&gt;x(i)).y(d=&gt;y(d.pct[j])));
+          g.selectAll(&#x27;circle&#x27;).data(index.points).join(&#x27;circle&#x27;).attr(&#x27;cx&#x27;,(_,i)=&gt;x(i)).attr(&#x27;cy&#x27;,d=&gt;y(d.pct[j])).attr(&#x27;r&#x27;,2).attr(&#x27;fill&#x27;,colors[j]);
+          markers[j]=g.append(&#x27;circle&#x27;).attr(&#x27;data-chart-hover-marker&#x27;,&#x27;&#x27;).attr(&#x27;r&#x27;,4).attr(&#x27;fill&#x27;,colors[j]).style(&#x27;display&#x27;,&#x27;none&#x27;);
+        });
+        function hide(){guide.style(&#x27;display&#x27;,&#x27;none&#x27;);markers.forEach(m=&gt;m.style(&#x27;display&#x27;,&#x27;none&#x27;));tip.hidden=true;}
+        function hover(event){
+          const [mx]=d3.pointer(event,svg.node());
+          const cx=Math.max(x(0),Math.min(x(15),mx));
+          const u=x.invert(cx), lo=Math.floor(u),hi=Math.min(15,lo+1),f=u-lo;
+          const near=Math.round(u); const observation=index.points[near];
+          guide.attr(&#x27;x1&#x27;,cx).attr(&#x27;x2&#x27;,cx).style(&#x27;display&#x27;,null);
+          let html=`&lt;div class=&quot;tip-title&quot;&gt;${index.label}&lt;/div&gt;&lt;div class=&quot;tip-caption&quot;&gt;${dateLabel(observation.date)} close · nearest session&lt;/div&gt;`;
+          data.thresholds.forEach((t,j)=&gt;{
+            if(!shown[j]){markers[j].style(&#x27;display&#x27;,&#x27;none&#x27;);return;}
+            const v=index.points[lo].pct[j]*(1-f)+index.points[hi].pct[j]*f;
+            markers[j].attr(&#x27;cx&#x27;,cx).attr(&#x27;cy&#x27;,y(v)).style(&#x27;display&#x27;,null);
+            html+=`&lt;div class=&quot;tip-row&quot;&gt;&lt;span&gt;≥${t}% below ATH&lt;/span&gt;&lt;span&gt;${fmt(observation.counts[j])} · ${pct(observation.pct[j])}%&lt;/span&gt;&lt;/div&gt;`;
+          });
+          tip.innerHTML=html;tip.hidden=false;
+          const rr=root.getBoundingClientRect(), sr=svg.node().getBoundingClientRect();
+          const tw=tip.getBoundingClientRect().width,th=tip.getBoundingClientRect().height;
+          let tx=sr.left-rr.left+cx+12;if(tx+tw&gt;rr.width)tx=sr.left-rr.left+cx-tw-12;
+          tip.style.left=Math.max(0,Math.min(rr.width-tw,tx))+&#x27;px&#x27;;
+          tip.style.top=Math.max(0,sr.top-rr.top+T-th-8)+&#x27;px&#x27;;
+        }
+        svg.append(&#x27;rect&#x27;).attr(&#x27;data-chart-hit&#x27;,&#x27;&#x27;).attr(&#x27;data-chart-hover-overlay&#x27;,&#x27;cross-series&#x27;).attr(&#x27;x&#x27;,L).attr(&#x27;y&#x27;,T).attr(&#x27;width&#x27;,R-L).attr(&#x27;height&#x27;,B-T).attr(&#x27;fill&#x27;,&#x27;transparent&#x27;).on(&#x27;pointermove&#x27;,event=&gt;{if(!pinned)hover(event);}).on(&#x27;pointerleave&#x27;,()=&gt;{if(!pinned)hide();}).on(&#x27;click&#x27;,event=&gt;{pinned=!pinned;if(pinned)hover(event);else hide();});
+        // Verify bounds after rendering. Remove optional x ticks before any collision.
+        const labels=xt.selectAll(&#x27;.tick text&#x27;).nodes();
+        let lastRight=-Infinity;
+        labels.forEach((node,i)=&gt;{const b=node.getBoundingClientRect();if(b.left&lt;lastRight+4&amp;&amp;i!==labels.length-1)node.closest(&#x27;.tick&#x27;).style.display=&#x27;none&#x27;;else lastRight=b.right;});
+        xt.selectAll(&#x27;.tick text&#x27;).attr(&#x27;text-anchor&#x27;,(_,i)=&gt;i===0?&#x27;start&#x27;:i===ticks.length-1?&#x27;end&#x27;:&#x27;middle&#x27;);
+      }
+      panels.push({draw,svg});new ResizeObserver(draw).observe(container);draw();
+    });
+    buttons.on(&#x27;click&#x27;,function(_,threshold){const j=data.thresholds.indexOf(threshold);shown[j]=!shown[j];this.setAttribute(&#x27;aria-pressed&#x27;,String(shown[j]));tip.hidden=true;panels.forEach(p=&gt;p.draw());});
+  })();
+  &lt;/script&gt;
+&lt;/div&gt;
+
+&lt;script src=&quot;https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  if (window.FloatingUIDOM == null) {
+    return;
+  }
+  const { autoUpdate, computePosition, flip, offset, shift, size } =
+    window.FloatingUIDOM;
+  const tooltipPlacements = new Set([&quot;top&quot;, &quot;right&quot;, &quot;bottom&quot;, &quot;left&quot;]);
+  const tooltipId = `codex-visualization-tooltip-${
+    window.crypto?.randomUUID?.() ?? Date.now().toString(36)
+  }`;
+  const tooltipGap = 5;
+  const hoverDelay = 700;
+  const skipDelay = 300;
+  let activeTrigger = null;
+  let pendingTrigger = null;
+  let tooltip = null;
+  let openTimeout = null;
+  let autoUpdateCleanup = null;
+  let positionRequest = 0;
+  let skipDelayUntil = 0;
+  let lastPointerWasTouch = false;
+  let pinnedByTouch = false;
+
+  const getTrigger = (target) =&gt;
+    target?.nodeType === Node.ELEMENT_NODE
+      ? target.closest(&quot;[data-tooltip]&quot;)
+      : null;
+  const containsTarget = (trigger, target) =&gt;
+    target?.nodeType != null &amp;&amp; trigger.contains(target);
+  const getContent = (trigger) =&gt;
+    trigger.getAttribute(&quot;data-tooltip&quot;)?.trim() ?? &quot;&quot;;
+  const getPlacement = (trigger) =&gt; {
+    const placement = trigger.getAttribute(&quot;data-tooltip-placement&quot;);
+    return tooltipPlacements.has(placement) ? placement : &quot;top&quot;;
+  };
+  const getTooltip = () =&gt; {
+    if (tooltip == null) {
+      tooltip = document.createElement(&quot;div&quot;);
+      tooltip.id = tooltipId;
+      tooltip.className = &quot;tooltip&quot;;
+      tooltip.setAttribute(&quot;role&quot;, &quot;tooltip&quot;);
+    }
+    return tooltip;
+  };
+  const setDescribedBy = (trigger, described) =&gt; {
+    const ids = new Set(
+      (trigger.getAttribute(&quot;aria-describedby&quot;) ?? &quot;&quot;)
+        .split(/\s+/)
+        .filter(Boolean),
+    );
+    if (described) {
+      ids.add(tooltipId);
+    } else {
+      ids.delete(tooltipId);
+    }
+    if (ids.size === 0) {
+      trigger.removeAttribute(&quot;aria-describedby&quot;);
+    } else {
+      trigger.setAttribute(&quot;aria-describedby&quot;, [...ids].join(&quot; &quot;));
+    }
+  };
+  const clearOpenTimeout = () =&gt; {
+    if (openTimeout != null) {
+      window.clearTimeout(openTimeout);
+      openTimeout = null;
+    }
+    pendingTrigger = null;
+  };
+  const closeTooltip = (activateSkipDelay = true) =&gt; {
+    clearOpenTimeout();
+    pinnedByTouch = false;
+    positionRequest += 1;
+    autoUpdateCleanup?.();
+    autoUpdateCleanup = null;
+    if (activeTrigger == null) {
+      return;
+    }
+    setDescribedBy(activeTrigger, false);
+    activeTrigger = null;
+    tooltip?.remove();
+    if (activateSkipDelay) {
+      skipDelayUntil = Date.now() + skipDelay;
+    }
+  };
+  const updatePosition = (trigger, floating) =&gt; {
+    const request = ++positionRequest;
+    void computePosition(trigger, floating, {
+      middleware: [
+        offset(tooltipGap),
+        flip({ padding: tooltipGap }),
+        shift({ padding: tooltipGap }),
+        size({
+          padding: tooltipGap,
+          apply({ availableHeight, availableWidth, elements }) {
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-width&quot;,
+              `${Math.max(0, availableWidth)}px`,
+            );
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-height&quot;,
+              `${Math.max(0, availableHeight)}px`,
+            );
+          },
+        }),
+      ],
+      placement: getPlacement(trigger),
+      strategy: &quot;fixed&quot;,
+    })
+      .then(({ x, y }) =&gt; {
+        if (activeTrigger !== trigger || request !== positionRequest) {
+          return;
+        }
+        const scale = window.devicePixelRatio || 1;
+        floating.style.transform = `translate(${Math.round(x * scale) / scale}px, ${Math.round(y * scale) / scale}px)`;
+        floating.style.visibility = &quot;visible&quot;;
+      })
+      .catch(() =&gt; {
+        if (activeTrigger === trigger &amp;&amp; request === positionRequest) {
+          closeTooltip(false);
+        }
+      });
+  };
+  const openTooltip = (trigger) =&gt; {
+    const content = getContent(trigger);
+    if (!trigger.isConnected || content.length === 0) {
+      return;
+    }
+    clearOpenTimeout();
+    if (activeTrigger === trigger) {
+      return;
+    }
+    closeTooltip();
+    const floating = getTooltip();
+    floating.textContent = content;
+    floating.style.visibility = &quot;hidden&quot;;
+    floating.style.transform = &quot;translate(0, 0)&quot;;
+    document.body.appendChild(floating);
+    activeTrigger = trigger;
+    setDescribedBy(trigger, true);
+    autoUpdateCleanup = autoUpdate(trigger, floating, () =&gt; {
+      updatePosition(trigger, floating);
+    });
+  };
+  const requestOpen = (trigger, immediate = false) =&gt; {
+    if (
+      getContent(trigger).length === 0 ||
+      activeTrigger === trigger ||
+      pendingTrigger === trigger
+    ) {
+      return;
+    }
+    clearOpenTimeout();
+    pendingTrigger = trigger;
+    const delay =
+      immediate || activeTrigger != null || Date.now() &lt; skipDelayUntil
+        ? 0
+        : hoverDelay;
+    if (delay === 0) {
+      openTooltip(trigger);
+      return;
+    }
+    openTimeout = window.setTimeout(() =&gt; {
+      openTimeout = null;
+      pendingTrigger = null;
+      openTooltip(trigger);
+    }, delay);
+  };
+  const handlePointerOpen = (event) =&gt; {
+    if (event.pointerType === &quot;touch&quot;) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    requestOpen(trigger);
+  };
+  const handlePointer = (event) =&gt; {
+    lastPointerWasTouch =
+      event.type === &quot;pointerdown&quot; &amp;&amp; event.pointerType === &quot;touch&quot;;
+  };
+  const handleTouchClick = (event) =&gt; {
+    const isTouch = event.pointerType === &quot;touch&quot; || lastPointerWasTouch;
+    lastPointerWasTouch = false;
+    if (!isTouch || event.detail === 0) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (
+      trigger == null ||
+      !trigger.isConnected ||
+      getContent(trigger).length === 0 ||
+      (pinnedByTouch &amp;&amp; activeTrigger === trigger)
+    ) {
+      if (pinnedByTouch) {
+        closeTooltip();
+      }
+      return;
+    }
+    openTooltip(trigger);
+    pinnedByTouch = activeTrigger === trigger;
+    window.setTimeout(() =&gt; {
+      if (activeTrigger === trigger &amp;&amp; !trigger.isConnected) {
+        closeTooltip(false);
+      }
+    }, 0);
+  };
+  const handleLeave = (event) =&gt; {
+    if (pinnedByTouch) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const handleFocusIn = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (trigger?.matches(&quot;:focus-visible&quot;)) {
+      requestOpen(trigger, true);
+    }
+  };
+  const handleKeyDown = (event) =&gt; {
+    if (event.key === &quot;Escape&quot;) {
+      closeTooltip();
+    }
+  };
+  const handleContextMenu = (event) =&gt; {
+    lastPointerWasTouch = false;
+    const trigger = getTrigger(event.target);
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const destroy = () =&gt; {
+    closeTooltip(false);
+    lastPointerWasTouch = false;
+    document.removeEventListener(&quot;pointerover&quot;, handlePointerOpen);
+    document.removeEventListener(&quot;pointerdown&quot;, handlePointer);
+    document.removeEventListener(&quot;pointercancel&quot;, handlePointer);
+    document.removeEventListener(&quot;click&quot;, handleTouchClick);
+    document.removeEventListener(&quot;pointerout&quot;, handleLeave);
+    document.removeEventListener(&quot;focusin&quot;, handleFocusIn);
+    document.removeEventListener(&quot;focusout&quot;, handleLeave);
+    document.removeEventListener(&quot;keydown&quot;, handleKeyDown);
+    document.removeEventListener(&quot;contextmenu&quot;, handleContextMenu);
+    tooltip = null;
+  };
+
+  document.addEventListener(&quot;pointerover&quot;, handlePointerOpen);
+  document.addEventListener(&quot;pointerdown&quot;, handlePointer);
+  document.addEventListener(&quot;pointercancel&quot;, handlePointer);
+  document.addEventListener(&quot;click&quot;, handleTouchClick);
+  document.addEventListener(&quot;pointerout&quot;, handleLeave);
+  document.addEventListener(&quot;focusin&quot;, handleFocusIn);
+  document.addEventListener(&quot;focusout&quot;, handleLeave);
+  document.addEventListener(&quot;keydown&quot;, handleKeyDown);
+  document.addEventListener(&quot;contextmenu&quot;, handleContextMenu);
+  window.addEventListener(&quot;pagehide&quot;, destroy, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-tabs&quot;&gt;
+(() =&gt; {
+  const selector = &#x27;.nav[role=&quot;tablist&quot;] [role=&quot;tab&quot;]&#x27;;
+  const disabled = &#x27;:disabled,[aria-disabled=&quot;true&quot;]&#x27;;
+  const selectTab = (selected) =&gt; {
+    const panelId = selected.getAttribute(&quot;aria-controls&quot;);
+    for (const tab of selected.closest(&#x27;[role=&quot;tablist&quot;]&#x27;).querySelectorAll(&#x27;[role=&quot;tab&quot;]&#x27;)) {
+      const active = tab === selected;
+      tab.classList.toggle(&quot;active&quot;, active);
+      tab.setAttribute(&quot;aria-selected&quot;, String(active));
+      const id = tab.getAttribute(&quot;aria-controls&quot;);
+      const panel = id &amp;&amp; document.getElementById(id);
+      if (panel != null) {
+        panel.hidden = id !== panelId;
+        if (!panel.hidden &amp;&amp; selected.id) {
+          panel.setAttribute(&quot;aria-labelledby&quot;, selected.id);
+        }
+      }
+    }
+  };
+  const interact = (event) =&gt; {
+    const tab = event.target?.closest?.(selector);
+    if (event.defaultPrevented || tab == null || tab.matches(disabled)) {
+      return;
+    }
+    if (event.type === &quot;click&quot;) {
+      selectTab(tab);
+      return;
+    }
+    const tabs = Array.from(
+      tab.closest(&#x27;[role=&quot;tablist&quot;]&#x27;).querySelectorAll(&#x27;[role=&quot;tab&quot;]&#x27;),
+    ).filter((candidate) =&gt; !candidate.matches(disabled));
+    const current = tabs.indexOf(tab);
+    let next;
+    if (event.key === &quot;ArrowRight&quot; || event.key === &quot;ArrowDown&quot;) {
+      next = (current + 1) % tabs.length;
+    } else if (event.key === &quot;ArrowLeft&quot; || event.key === &quot;ArrowUp&quot;) {
+      next = (current + tabs.length - 1) % tabs.length;
+    } else if (event.key === &quot;Home&quot;) {
+      next = 0;
+    } else if (event.key === &quot;End&quot;) {
+      next = tabs.length - 1;
+    } else {
+      return;
+    }
+    event.preventDefault();
+    tabs[next].focus();
+    selectTab(tabs[next]);
+  };
+
+  for (const list of document.querySelectorAll(&#x27;.nav[role=&quot;tablist&quot;]&#x27;)) {
+    const selected =
+      list.querySelector(&#x27;[role=&quot;tab&quot;][aria-selected=&quot;true&quot;]&#x27;) ??
+      list.querySelector(&#x27;[role=&quot;tab&quot;].active&#x27;) ??
+      list.querySelector(&#x27;[role=&quot;tab&quot;]&#x27;);
+    if (selected != null) {
+      selectTab(selected);
+    }
+  }
+  document.addEventListener(&quot;click&quot;, interact);
+  document.addEventListener(&quot;keydown&quot;, interact);
+  window.addEventListener(&quot;pagehide&quot;, () =&gt; {
+    document.removeEventListener(&quot;click&quot;, interact);
+    document.removeEventListener(&quot;keydown&quot;, interact);
+  }, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-lucide&quot; async src=&quot;https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  const initialize = () =&gt; {
+    globalThis.lucide?.createIcons({ attrs: { width: 16, height: 16 } });
+  };
+  if (globalThis.lucide != null) {
+    initialize();
+    return;
+  }
+  document
+    .getElementById(&quot;codex-visualization-lucide&quot;)
+    ?.addEventListener(&quot;load&quot;, initialize, { once: true });
+})();
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe>
+</body>
+</html>

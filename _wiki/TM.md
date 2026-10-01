@@ -5,7 +5,7 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\TM` (20-F + transcripts/QA + decks). No briefings roll-up nor equity calls (thin coverage). Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-29 · JPY
+### 📊 Consensus snapshot — BBG · asof 2026-09-30 · JPY
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|

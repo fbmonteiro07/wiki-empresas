@@ -8,7 +8,7 @@ E:\bloomberg_api, localhost:8194 — raises loudly if the Terminal is closed)
 into _wiki/_data/funding_market.json. On any failure the previous JSON is
 left untouched and the script exits 1.
 
-MANUAL RUN BY DESIGN (2026-08-24 decision — NOT wired into refresh_features):
+Weekly routine authorized 2026-09-29; also supports a standalone refresh:
     py "E:/Wiki Felipe empresas/_wiki/_tools/fetch_funding.py"
     py "E:/Wiki Felipe empresas/_wiki/_tools/build_funding_monitor.py"
 
@@ -22,6 +22,7 @@ Instrument config lives in _data/funding_deals.json:
 import json
 import sys
 import datetime as dt
+import math
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -45,7 +46,8 @@ def main():
 
     from bloomberg import bdh  # local-terminal-only wrapper; raises if down
 
-    end = dt.date.today()
+    # A Friday morning brief must compare completed sessions, not intraday marks.
+    end = dt.date.today() - dt.timedelta(days=1)
     start = end - dt.timedelta(days=730)
     s, e = start.strftime("%Y%m%d"), end.strftime("%Y%m%d")
 
@@ -70,7 +72,8 @@ def main():
         for g in group:
             sub = df[df[c_tk] == g["ticker"]].sort_values(c_date)
             pts = [[str(r[c_date])[:10], round(float(r[c_val]), 4)]
-                   for _, r in sub.iterrows() if r[c_val] == r[c_val]]
+                   for _, r in sub.iterrows() if math.isfinite(float(r[c_val])) and str(r[c_date])[:10] <= str(end)]
+            pts = sorted(dict(pts).items())
             if not pts:
                 errors.append(f"{g['ticker']}: no data returned")
                 continue
@@ -82,16 +85,26 @@ def main():
             })
             print(f"  {g['ticker']:<18} {len(pts):>4} pts  last {pts[-1][1]} ({pts[-1][0]})")
 
-    if not series_out:
+    if errors or len(series_out) != len(instruments):
         sys.stderr.write("FETCH FAILED — keeping previous funding_market.json\n" +
                          "\n".join(errors) + "\n")
         return 1
 
-    OUT.write_text(json.dumps({
+    history = DATA / 'credit-monitor' / 'market-history'
+    history.mkdir(parents=True, exist_ok=True)
+    if OUT.exists():
+        previous = json.loads(OUT.read_text(encoding='utf-8'))
+        stamp = previous.get('fetched_at', 'unknown').replace(':', '-')
+        archive = history / (stamp + '.json')
+        if not archive.exists():
+            archive.write_text(json.dumps(previous, indent=1), encoding='utf-8')
+    temporary = OUT.with_suffix('.tmp')
+    temporary.write_text(json.dumps({
         "fetched_at": dt.datetime.now().isoformat(timespec="seconds"),
         "start": str(start), "end": str(end),
         "series": series_out, "errors": errors,
     }, indent=1), encoding="utf-8")
+    temporary.replace(OUT)
     print(f"-> {OUT}  ({len(series_out)} series{', ' + str(len(errors)) + ' errors' if errors else ''})")
     return 0
 

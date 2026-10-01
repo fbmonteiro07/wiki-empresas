@@ -1,0 +1,404 @@
+{
+  "asof": "2026-08-24",
+  "note": "HAND-EDIT source for the AI credit & funding monitor (_dashboards/credit-monitor.html). Every row carries source+date — keep it that way. Market series/bonds are fetched by _tools/fetch_funding.py (manual run, local BBG terminal) into funding_market.json; rebuild the page with _tools/build_funding_monitor.py. The bonds[] slot is EMPTY by design: paste Bloomberg tickers or /isin/ identifiers from SRCH and re-run the fetch — the page picks them up automatically.",
+  "meeting_thesis": "If AI credit trades poorly, it is hard for the equity to perform - it signals funding deceleration and a brake on capex. Hyperscalers can self-fund; neoclouds and sovereigns depend on the credit market. (internal weekly 2026-08-24; monitor owner: PM)",
+  "market_series": [
+    {
+      "ticker": "LF98OAS Index",
+      "label": "US High Yield OAS",
+      "unit": "%",
+      "decimals": 2
+    },
+    {
+      "ticker": "LUACOAS Index",
+      "label": "US IG Corporate OAS",
+      "unit": "%",
+      "decimals": 2
+    },
+    {
+      "ticker": "USGG10YR Index",
+      "label": "UST 10Y yield",
+      "unit": "%",
+      "decimals": 2
+    },
+    {
+      "ticker": "USGG30YR Index",
+      "label": "UST 30Y yield",
+      "unit": "%",
+      "decimals": 2
+    }
+  ],
+  "bonds": [],
+  "bonds_wishlist": [
+    "APLD 9.250 06/xx/30 (Ellendale ND, CRWV offtake) - get ISIN via SRCH",
+    "CORZ 7.750 xx/31 (TX/GA/OK/NC, CRWV offtake)",
+    "EDGCOM 7.500 xx/31 (Chicago/Atlanta, CRWV/Alibaba offtake)",
+    "ELKGVP 7.500 xx/31 (Chicago IL, CRWV offtake)",
+    "STNGRY 6.000 xx/31 (Wink TX + Andrews TX, AMZN offtake)",
+    "CRWV secured TL / unsecured 5yr",
+    "ORCL Feb-26 jumbo tranches",
+    "META Hyperion/SPV paper",
+    "Anthropic TPU SPV A2 5.75% if quoted"
+  ],
+  "project_bonds_snapshot": {
+    "title": "Counterparty quality, priced: same physical asset, different offtaker",
+    "source": "MS Global Credit Strategy (Lima/Campbell/Tirupattur/Patkar/Egan et al.), 'AI Debt Financing Tracker: The Summer Spreads Turned Wider', 2026-08-20",
+    "rows": [
+      {
+        "bond": "APLD 9.250 '30",
+        "site": "Ellendale, ND — 250MW",
+        "offtaker": "CRWV",
+        "yield_pct": 8.2
+      },
+      {
+        "bond": "CORZ 7.750 '31",
+        "site": "TX/GA/OK/NC — 589MW",
+        "offtaker": "CRWV",
+        "yield_pct": 11.5
+      },
+      {
+        "bond": "ELKGVP 7.500 '31",
+        "site": "Chicago, IL — 72MW",
+        "offtaker": "CRWV",
+        "yield_pct": 12.0
+      },
+      {
+        "bond": "EDGCOM 7.500 '31",
+        "site": "Chicago / Atlanta — 114MW",
+        "offtaker": "CRWV / Alibaba",
+        "yield_pct": 14.2
+      },
+      {
+        "bond": "STNGRY 6.000 '31",
+        "site": "Wink, TX — 216MW",
+        "offtaker": "AMZN",
+        "yield_pct": 7.9
+      },
+      {
+        "bond": "STNGRY 6.000 '31",
+        "site": "Andrews, TX — 70MW",
+        "offtaker": "AMZN",
+        "yield_pct": 8.8
+      }
+    ],
+    "takeaway": "~300-600bp premium for CoreWeave offtake vs Amazon offtake on physically comparable data-centre projects."
+  },
+  "repricing_path": {
+    "title": "Neocloud loan pricing through 2026 — the repricing the meeting should quote",
+    "rows": [
+      {
+        "date": "2026-03",
+        "issuer": "CRWV",
+        "instrument": "DDTL 4.0 $4.46bn (META offtake)",
+        "spread_bp": 225,
+        "note": "IG-offtaker pricing: floating S+225 with META Aa3/A as counterparty",
+        "source": "MS AI Debt Financing Tracker 2026-08-20 / Barclays Credit 2026-08-20"
+      },
+      {
+        "date": "2026-05",
+        "issuer": "CRWV",
+        "instrument": "DDTL",
+        "spread_bp": 450,
+        "note": "mid-year repricing step",
+        "source": "MS/Barclays credit trackers 2026-08-20"
+      },
+      {
+        "date": "2026-07-30",
+        "issuer": "CRWV",
+        "instrument": "secured term loan",
+        "spread_bp": 550,
+        "note": "S+550 = 9.15% all-in at pricing. DO NOT CHAIN with the ~10% 5yr UNSECURED (SemiAnalysis 07-06, ~600bp Z) — different instrument, seniority, date",
+        "source": "MS AI Debt Financing Tracker 2026-08-20"
+      },
+      {
+        "date": "2026-08",
+        "issuer": "IREN",
+        "instrument": "DDTL (MSFT offtake)",
+        "spread_bp": 219,
+        "note": "S+213/225 range vs MSFT as offtaker — IG-counterparty pricing",
+        "source": "MS/Barclays credit trackers 2026-08-20"
+      },
+      {
+        "date": "2026-08",
+        "issuer": "NBIS",
+        "instrument": "DDTL",
+        "spread_bp": 250,
+        "note": "S+250; company-confirmed $775M at SOFR+250, all-in 'mid single digit'",
+        "source": "MS credit tracker 2026-08-20 / NBIS Q2'26 call 2026-08-12"
+      }
+    ]
+  },
+  "spread_change_ytd_bp": {
+    "title": "YTD spread change by bucket — differentiation, not repricing",
+    "source": "MS US Credit Strategy, 2026-08-14 (relayed on hyperscaler-capex theme)",
+    "rows": [
+      {
+        "bucket": "HQ Hyperscalers",
+        "bp": 29
+      },
+      {
+        "bucket": "Hyperscalers incl. ORCL + SPCX",
+        "bp": 26
+      },
+      {
+        "bucket": "NVDA + AVGO",
+        "bp": 20
+      },
+      {
+        "bucket": "Tech",
+        "bp": 11
+      },
+      {
+        "bucket": "Semis",
+        "bp": 2
+      },
+      {
+        "bucket": "Broad IG",
+        "bp": 1
+      }
+    ],
+    "takeaway": "The hyperscaler bucket widened 26-29bp while broad IG widened 1bp - the credit market is differentiating within tech, not repricing tech (MS)."
+  },
+  "issuance": {
+    "ai_related_ytd_bn": 445,
+    "ai_related_ytd_note": "across credit channels YTD (MS 08-20); GS counts 'nearly $500bn' AI-related YTD of which hyperscalers only ~40% (GS credit, 08-03/08-19 block)",
+    "fy25_total_bn": 217,
+    "fy26e_low_bn": 500,
+    "fy26e_high_bn": 550,
+    "fy26e_note": "MS FY26E across channels; hyperscaler PUBLIC issuance FY26E $250-300bn (MS) = GS '2026 = 33% of capex' = UBS $275-285bn - three houses converge",
+    "monthly_recent": [
+      {
+        "label": "Jul-26",
+        "bn": 54
+      },
+      {
+        "label": "Aug-26 MTD",
+        "bn": 41
+      }
+    ],
+    "ig_monthly_record": "US IG supply set a third straight monthly record at $145.2bn while the 30Y hit a ~20-year high - the buildout itself now drives the duration selloff (macro-cycle theme, 2026-08-18 block)",
+    "ig_share_progression": [
+      {
+        "year": "2024",
+        "pct": 1,
+        "note": "$10bn"
+      },
+      {
+        "year": "2025",
+        "pct": 7,
+        "note": "$108bn"
+      },
+      {
+        "year": "2026 YTD",
+        "pct": 18,
+        "note": "~18% of IG supply"
+      }
+    ],
+    "ig_share_source": "GS Credit Notes / GS credit desk, 2026-08-03 + 2026-08-09 (jumbo = deal >= $10bn at announcement; today's jumbos are capex-driven, WITHOUT the ~5 months of advance warning M&A deals give the market)"
+  },
+  "deals": [
+    {
+      "date": "2026-02",
+      "issuer": "ORCL",
+      "category": "Hyperscaler IG",
+      "instrument": "Jumbo IG bond (sole YTD deal)",
+      "size": "n/a",
+      "pricing": "-",
+      "counterparty": "-",
+      "note": "Oracle's ENTIRE YTD issuance was one February deal; ~$40B FY27 raise planned incl. $20B ATM equity; MS single-name watch: 'ORCL and AVGO remain front and center' into September - the F1Q print (Sep-10) is now a credit event",
+      "source": "MS AI Debt Financing Tracker 2026-08-20; ORCL.md catalysts"
+    },
+    {
+      "date": "2026-03",
+      "issuer": "CRWV",
+      "category": "Neocloud",
+      "instrument": "DDTL 4.0, $4.46bn floating",
+      "size": "$4.46bn",
+      "pricing": "S+225",
+      "counterparty": "META (Aa3/A) offtake",
+      "note": "IG-offtaker pricing at the tight end of the neocloud book",
+      "source": "MS credit tracker 2026-08-20 / Barclays 2026-08-20"
+    },
+    {
+      "date": "2026-07-30",
+      "issuer": "CRWV",
+      "category": "Neocloud",
+      "instrument": "Secured term loan",
+      "size": "n/d",
+      "pricing": "S+550 (9.15% all-in)",
+      "counterparty": "-",
+      "note": "The repricing print: S+225 (Mar) -> S+450 (May) -> S+550 (Jul-30). Separate point: 5yr UNSECURED ~10% / ~600bp Z (SemiAnalysis 07-06) - different instrument, do not chain",
+      "source": "MS credit tracker 2026-08-20; SemiAnalysis 2026-07-06"
+    },
+    {
+      "date": "2026-08",
+      "issuer": "IREN",
+      "category": "Neocloud",
+      "instrument": "DDTL",
+      "size": "n/d",
+      "pricing": "S+213/225",
+      "counterparty": "MSFT offtake",
+      "note": "IG-counterparty pricing holds the tight end",
+      "source": "MS/Barclays credit trackers 2026-08-20"
+    },
+    {
+      "date": "2026-08",
+      "issuer": "NBIS",
+      "category": "Neocloud",
+      "instrument": "DDTL + facility",
+      "size": "$775M confirmed",
+      "pricing": "S+250 (mid-single-digit all-in)",
+      "counterparty": "-",
+      "note": "Company-confirmed at SOFR+250 on the Q2 call; same call disclosed $20-25M/MW/yr term pricing and 1yr10mo paybacks",
+      "source": "NBIS Q2'26 call 2026-08-12; MS credit tracker 2026-08-20"
+    },
+    {
+      "date": "2026-08-12",
+      "issuer": "Anthropic (SPV)",
+      "category": "Lab / SPV",
+      "instrument": "TPU SPV, 3 tranches, $34.5bn",
+      "size": "$34.5bn",
+      "pricing": "A1 $6bn T+100bp · A2 $24bn 5.75% (AVGO-backstopped) · B $4.5bn 8.5% (unbackstopped)",
+      "counterparty": "AVGO backstop on A2",
+      "note": "The backstop is worth ~275bp: 5.75% backstopped vs 8.5% unbackstopped inside the same structure",
+      "source": "Epoch AI · Hutcheson, 2026-08-12 (via ANTHROPIC.md)"
+    },
+    {
+      "date": "2026-08-12",
+      "issuer": "Anthropic (projects)",
+      "category": "Lab / SPV",
+      "instrument": "5 DC project financings",
+      "size": "$15.18bn",
+      "pricing": "~$10.6M/MW critical-IT debt (1,428MW)",
+      "counterparty": "-",
+      "note": "Project-level debt alongside the TPU SPV; total identified Anthropic debt stack ~$50bn",
+      "source": "Epoch AI · Hutcheson, 2026-08-12"
+    },
+    {
+      "date": "2026-08-16",
+      "issuer": "NVDA -> OpenAI/SB Energy",
+      "category": "Vendor guarantee",
+      "instrument": "Residual-value guarantee, Ohio (~8 GW-IT, first 800MW 2028)",
+      "size": "up to $105bn",
+      "pricing": "-",
+      "counterparty": "OpenAI 20-yr lease; NVDA +$1.5bn equity into SB Energy",
+      "note": "'Behind lease and power obligations, not silicon' (Redburn). Signed POST quarter-end -> must surface as a subsequent event in the 10-Q filed with Wednesday's print - the cleanest disclosure test",
+      "source": "Reuters 2026-08-17 via NVDA.md; Redburn 2026-08-18"
+    },
+    {
+      "date": "2025-09-09",
+      "issuer": "NVDA -> CRWV",
+      "category": "Vendor guarantee",
+      "instrument": "Order backstop: purchase of unsold capacity through 2032-04-13",
+      "size": "up to $6.3bn",
+      "pricing": "-",
+      "counterparty": "CRWV",
+      "note": "The precedent. Disclosed only by CRWV (8-K Order Form under the 2023 MSA); NVDA aggregates it in commitments footnotes. Parallel: $1.5bn Lambda deal",
+      "source": "CRWV 8-K Sep-2025; Bernstein 2026-07-01; UncoverAlpha 2026-08-13"
+    },
+    {
+      "date": "2026-Q1",
+      "issuer": "NVDA (program)",
+      "category": "Vendor guarantee",
+      "instrument": "Facility lease guarantees (land/power/shell), credit-derivative classification",
+      "size": "$3.5bn max gross ($712M escrow)",
+      "pricing": "in exchange for warrants",
+      "counterparty": "early-stage partners (Firmus, SharonAI $4.88bn take-or-pay first)",
+      "note": "Program origin $860M/one partner Q3 FY26 -> $3.5bn by Jan-26; SemiAnalysis models the program at 40-60% rev-share above a floor, ~$5.9bn contingent per 100MW",
+      "source": "NVDA 10-K FY26 + 10-Q Apr-26; SemiAnalysis 2026-07-06"
+    },
+    {
+      "date": "2026-08-10",
+      "issuer": "NVDA (platform)",
+      "category": "Vendor guarantee",
+      "instrument": "$500bn 6-partner compute-financing platform (Apollo/BlackRock/Blackstone/Brookfield/GS/KKR)",
+      "size": "$500bn MOU (not committed capital)",
+      "pricing": "NVDA support 'limited, residual value based', up to 25% = ~$125bn",
+      "counterparty": "neoclouds / OpenAI / Anthropic / SPCX expected, not top-3 hyperscalers",
+      "note": "Scale frame: ~$70bn equity + ~$230bn backstop committed vs $469bn CY26-27 NVDA FCF (BofA). MS's test: usage backstop (GPU floor $/hr) vs pure credit backing - judged deal by deal",
+      "source": "MS · Joe Moore 2026-08-11/14; BofA via Fenske 2026-08-24; @firstadopter 2026-08-11"
+    }
+  ],
+  "scoreboard": [
+    {
+      "signpost": "Index-level credit (the meeting's equity-read trigger)",
+      "status": "good",
+      "read": "HY OAS ~268bp / IG OAS ~80bp - benign vs history; the aggregate market is NOT flashing. The stress is relative, not systemic.",
+      "source": "BBG LF98OAS/LUACOAS, 2026-08-24"
+    },
+    {
+      "signpost": "AI-vs-market differentiation",
+      "status": "warning",
+      "read": "Hyperscaler buckets +26/29bp YTD vs broad IG +1bp; 'the credit market is differentiating within tech, not repricing tech'",
+      "source": "MS US Credit 2026-08-14"
+    },
+    {
+      "signpost": "Counterparty tiering",
+      "status": "serious",
+      "read": "300-600bp premium for CRWV offtake vs AMZN offtake on physically comparable DCs; CRWV loan path S+225 -> S+550 in 4 months",
+      "source": "MS tracker 2026-08-20"
+    },
+    {
+      "signpost": "Buy-side pushback",
+      "status": "serious",
+      "read": "Insurance 30Y orders halved; new-issue concessions 2-3bp -> ~20bp; the AI basket spread roughly doubled from 74bp",
+      "source": "GS credit desk 2026-08-03 (on-record 08-19 block)"
+    },
+    {
+      "signpost": "Supply absorption",
+      "status": "warning",
+      "read": "$445bn AI-related YTD vs $217bn all of 2025; $54bn Jul + $41bn Aug MTD; third straight monthly IG record $145.2bn; MS expects 'a busy fall and continued spread widening'",
+      "source": "MS tracker 2026-08-20; macro-cycle 08-18 block"
+    },
+    {
+      "signpost": "2027 funding pinch",
+      "status": "warning",
+      "read": "Debt-financed share of capex 27% -> 33% -> 35% PEAK 2027 (GS) + $300bn project finance 2027 (MS) + >$200bn funding gap 2027 (Barclays) - three houses converge on the date",
+      "source": "GS 08-03; MS 08-20; Barclays 08-13"
+    },
+    {
+      "signpost": "Vendor-backstop dependency",
+      "status": "warning",
+      "read": "Disclosed NVDA guarantees $3.5bn, committed frame ~$230bn, Ohio deal up to $105bn - Wednesday's 10-Q subsequent-events note is the disclosure test",
+      "source": "NVDA filings; Reuters 08-17; BofA 08-24"
+    },
+    {
+      "signpost": "Duration channel",
+      "status": "warning",
+      "read": "UST 30Y at ~20-year high with the AI buildout itself named a driver of the duration selloff - the discount rate is now endogenous to the capex",
+      "source": "macro-cycle theme, 2026-08-18 block"
+    },
+    {
+      "signpost": "Sovereign AI issuance",
+      "status": "gap",
+      "read": "Called out in the meeting as part of the monitor's scope; the corpus carries no dedicated sovereign-AI-bond tracking yet - genuine gap, needs an ingest source",
+      "source": "internal weekly 2026-08-24"
+    }
+  ],
+  "watch": [
+    {
+      "date": "2026-08-26",
+      "event": "NVDA FQ2 print + 10-Q - does the OpenAI/SB Energy Ohio guarantee (up to $105bn) appear as a subsequent event; Note 8 vs $3.5bn; cloud-agreements line vs $30bn"
+    },
+    {
+      "date": "2026-09-02",
+      "event": "AVGO print - MS single-name credit watch (with ORCL) into September; XPV/Anthropic SPV exposure"
+    },
+    {
+      "date": "2026-09-10",
+      "event": "ORCL F1Q - 'now a credit event as well as an equity one' (MS): ~$40B FY27 raise incl. $20B ATM lands into a market MS expects to keep widening"
+    },
+    {
+      "date": "2026-09-25",
+      "event": "SPCX: ~30% of shares tradable + full index weight on the late-Sept rebalance - peak supply meets peak passive demand (MS · Jonas; 22V)"
+    },
+    {
+      "date": "2026-10",
+      "event": "Anthropic IPO window (late-Sep/early-Oct per WSJ 08-11) - the transparency event for lab credit; S-1 shows the debt stack and ARR basis"
+    },
+    {
+      "date": "ongoing",
+      "event": "New-issue concessions + capex second derivative - GS's own two named signposts for when appetite turns"
+    }
+  ]
+}

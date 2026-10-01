@@ -1,0 +1,22 @@
+[
+  {
+    "securityData": {
+      "security": "AAPL US Equity",
+      "eidData": [],
+      "sequenceNumber": 0,
+      "fieldExceptions": [
+        {
+          "fieldId": "ALL_TIME_HIGH_PERCENT",
+          "errorInfo": {
+            "source": "53217:rsfhdsvc2",
+            "code": 1,
+            "category": "BAD_FLD",
+            "message": "Not valid historical field",
+            "subcategory": "NOT_APPLICABLE_TO_HIST_DATA"
+          }
+        }
+      ],
+      "fieldData": []
+    }
+  }
+]

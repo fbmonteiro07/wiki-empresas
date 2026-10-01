@@ -7,11 +7,11 @@
     "positions": 8
   },
   "stats": {
-    "signals": 89,
-    "active": 89,
+    "signals": 91,
+    "active": 91,
     "high": 7,
     "belief_changes": 3,
-    "focus_names": 44
+    "focus_names": 45
   },
   "focus": [
     {
@@ -145,47 +145,16 @@
     },
     {
       "ticker": "RDDT",
-      "focus_score": 66,
+      "focus_score": 64,
       "in_book": false,
-      "signal_count": 3,
+      "signal_count": 2,
       "high_count": 0,
       "sector": "Software / security / internet",
       "thesis": "Dual engine: ads + AI data-licensing; binary on Google AI-Overviews referral-traffic cannibalization.",
       "next_catalyst": "",
       "why": [
         "RDDT — derived thesis/debate state changed since the prior daily snapshot",
-        "RDDT — catalyst passed without a logged outcome",
         "RDDT — the agency expert's wallet-share growth (+20-25%/yr) is BELOW the Street's revenue growth (+32%)"
-      ]
-    },
-    {
-      "ticker": "CIEN",
-      "focus_score": 64,
-      "in_book": false,
-      "signal_count": 4,
-      "high_count": 0,
-      "sector": "Optical / Networking",
-      "thesis": "Optical/DCI leader; demand outruns supply, debate purely valuation (~85x NTM).",
-      "next_catalyst": "",
-      "why": [
-        "CIEN — catalyst passed without a logged outcome",
-        "CIEN 2029: the revenue target is already in the curve; the entire surprise is margin — but the comparison is a year offset and must be labelled as such",
-        "CIEN: management's own \"~5x cash generated from operations\" does not close against the published FY25 base"
-      ]
-    },
-    {
-      "ticker": "LITE",
-      "focus_score": 62,
-      "in_book": false,
-      "signal_count": 3,
-      "high_count": 0,
-      "sector": "Optical / Networking",
-      "thesis": "US photonics pure-play (rev +90%); demand isn't the question, supply/execution is.",
-      "next_catalyst": "2026-10-14",
-      "why": [
-        "LITE — catalyst passed without a logged outcome",
-        "LITE — 2026-10-14: CITI'S CATALYST WATCH (UPSIDE) EXPIRES. A dated, mechanical sell-side event with a…",
-        "Optical: a falsifiable engineering attack on COHR's laser — and the \"LITE wins\" read does not follow"
       ]
     },
     {
@@ -202,30 +171,17 @@
       ]
     },
     {
-      "ticker": "COHR",
+      "ticker": "SPCX",
       "focus_score": 60,
       "in_book": false,
       "signal_count": 2,
       "high_count": 0,
-      "sector": "Optical / Networking",
-      "thesis": "InP chokepoint in AI interconnect; NVIDIA stake + CPO deal; bear is relative vs LITE.",
-      "next_catalyst": "",
+      "sector": "Systems & neoclouds",
+      "thesis": "IPO'd Jun-2026 (~$75bn, largest ever); Starlink + Launch + AI (ex-xAI: Grok/X/COLOSSUS ~1GW, ~325k GPUs). FY25 rev $17.2bn, net loss ~$(4.9)bn; Musk ~82% vote. ",
+      "next_catalyst": "2026-11-12",
       "why": [
-        "COHR — catalyst passed without a logged outcome",
-        "Optical: a falsifiable engineering attack on COHR's laser — and the \"LITE wins\" read does not follow"
-      ]
-    },
-    {
-      "ticker": "CRDO",
-      "focus_score": 58,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Optical / Networking",
-      "thesis": "AI-connectivity pure-play — active-copper (AEC) + SerDes/optical DSP; ~68% GM, hyperscaler-concentrated.",
-      "next_catalyst": "",
-      "why": [
-        "CRDO — catalyst passed without a logged outcome"
+        "SPCX — catalyst passed without a logged outcome",
+        "SPCX — 2026-11-12: OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.…"
       ]
     },
     {
@@ -282,6 +238,36 @@
       ]
     },
     {
+      "ticker": "CRWV",
+      "focus_score": 55,
+      "in_book": false,
+      "signal_count": 4,
+      "high_count": 0,
+      "sector": "Systems & neoclouds",
+      "thesis": "Highest-visibility GPU neocloud ($99B backlog) but ~$25B high-coupon debt + customer concentration.",
+      "next_catalyst": "2026-09-29",
+      "why": [
+        "CRWV — 2026-09-29: 2026-09-29 → 10-01 — \"Fully Connected\" conference (dates per the JPM Tech Sketch calendar,…",
+        "CRWV — the same $6.3bn is characterised two opposite ways, and the two readings are not compatible",
+        "CRWV's cost of capital: management's characterisation vs traded levels"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "focus_score": 53,
+      "in_book": false,
+      "signal_count": 3,
+      "high_count": 0,
+      "sector": "AI — Semis & Compute",
+      "thesis": "AI-infra long with a server-CPU leg; risk concentrated in MI450 execution.",
+      "next_catalyst": "2026-09-30",
+      "why": [
+        "AMD — 2026-09-30: HPE Networking Day. BofA flags a possible financial update on the AMD Helios rack,…",
+        "AMD — management's headline EPS ambition is not above the Street, and the $100bn server goal sits past the Street's horizon",
+        "AMD — the number that actually drifted is the CPU:GPU ratio, and the bases may not be like-for-like"
+      ]
+    },
+    {
       "ticker": "ORCL",
       "focus_score": 51,
       "in_book": false,
@@ -324,6 +310,20 @@
       ]
     },
     {
+      "ticker": "LITE",
+      "focus_score": 43,
+      "in_book": false,
+      "signal_count": 2,
+      "high_count": 0,
+      "sector": "Optical / Networking",
+      "thesis": "US photonics pure-play (rev +90%); demand isn't the question, supply/execution is.",
+      "next_catalyst": "2026-10-14",
+      "why": [
+        "LITE — 2026-10-14: CITI'S CATALYST WATCH (UPSIDE) EXPIRES. A dated, mechanical sell-side event with a…",
+        "Optical: a falsifiable engineering attack on COHR's laser — and the \"LITE wins\" read does not follow"
+      ]
+    },
+    {
       "ticker": "MEDIATEK",
       "focus_score": 43,
       "in_book": false,
@@ -351,16 +351,17 @@
       ]
     },
     {
-      "ticker": "SPCX",
-      "focus_score": 43,
+      "ticker": "SNDK",
+      "focus_score": 42,
       "in_book": false,
-      "signal_count": 1,
+      "signal_count": 2,
       "high_count": 0,
-      "sector": "Systems & neoclouds",
-      "thesis": "IPO'd Jun-2026 (~$75bn, largest ever); Starlink + Launch + AI (ex-xAI: Grok/X/COLOSSUS ~1GW, ~325k GPUs). FY25 rev $17.2bn, net loss ~$(4.9)bn; Musk ~82% vote. ",
-      "next_catalyst": "2026-11-12",
+      "sector": "Memory & storage",
+      "thesis": "Post-spin pure-play NAND on AI storage; price-driven blowout + $42B LTA backlog vs blowoff-top risk.",
+      "next_catalyst": "2026-10-05",
       "why": [
-        "SPCX — 2026-11-12: OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.…"
+        "SNDK — 2026-10-05: BofA HBF expert call (Thomas Coughlin). A read on HBF timing and TAM; event only. (BofA…",
+        "[23:00 second pass] SNDK — the largest open edge on the wiki just got NARROWER AND SHARPER: consensus has adopted management's DOWNSIDE case as its BASE case"
       ]
     },
     {
@@ -405,6 +406,19 @@
       ]
     },
     {
+      "ticker": "KIOXIA",
+      "focus_score": 40,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Memory & storage",
+      "thesis": "Cleanest listed NAND/SSD-cycle proxy; no DRAM/HBM offset on the downturn. ¥, no SEC, IPO'd 2024.",
+      "next_catalyst": "2026-10-01",
+      "why": [
+        "KIOXIA — 2026-10-01: 2026-10-01/02 — 3D IC conference: Kioxia presents CBA bonding for next-gen QLC (claimed…"
+      ]
+    },
+    {
       "ticker": "TXN",
       "focus_score": 40,
       "in_book": false,
@@ -418,32 +432,18 @@
       ]
     },
     {
-      "ticker": "CRWV",
+      "ticker": "CIEN",
       "focus_score": 39,
       "in_book": false,
       "signal_count": 3,
       "high_count": 0,
-      "sector": "Systems & neoclouds",
-      "thesis": "Highest-visibility GPU neocloud ($99B backlog) but ~$25B high-coupon debt + customer concentration.",
+      "sector": "Optical / Networking",
+      "thesis": "Optical/DCI leader; demand outruns supply, debate purely valuation (~85x NTM).",
       "next_catalyst": "",
       "why": [
-        "CRWV — the same $6.3bn is characterised two opposite ways, and the two readings are not compatible",
-        "CRWV's cost of capital: management's characterisation vs traded levels",
-        "Redburn holds the STREET LOW on three names at once, and BBG's own panel already proves it"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "focus_score": 37,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "AI — Semis & Compute",
-      "thesis": "AI-infra long with a server-CPU leg; risk concentrated in MI450 execution.",
-      "next_catalyst": "",
-      "why": [
-        "AMD — management's headline EPS ambition is not above the Street, and the $100bn server goal sits past the Street's horizon",
-        "AMD — the number that actually drifted is the CPU:GPU ratio, and the bases may not be like-for-like"
+        "CIEN 2029: the revenue target is already in the curve; the entire surprise is margin — but the comparison is a year offset and must be labelled as such",
+        "CIEN: management's own \"~5x cash generated from operations\" does not close against the published FY25 base",
+        "CIEN: the \"$8.3–8.4B FY27 floor\" is arithmetically EMPTY, and consensus had already cleared it before it was published"
       ]
     },
     {
@@ -458,6 +458,20 @@
       "why": [
         "IPO: the autumn target is gone",
         "Revenue ladder: the company plan runs ~20% above the Barclays-relayed plan in 2026 and ends at $350bn in 2030"
+      ]
+    },
+    {
+      "ticker": "COHR",
+      "focus_score": 37,
+      "in_book": false,
+      "signal_count": 2,
+      "high_count": 0,
+      "sector": "Optical / Networking",
+      "thesis": "InP chokepoint in AI interconnect; NVIDIA stake + CPO deal; bear is relative vs LITE.",
+      "next_catalyst": "2026-11-12",
+      "why": [
+        "Optical: a falsifiable engineering attack on COHR's laser — and the \"LITE wins\" read does not follow",
+        "COHR — 2026-11-12: 2026-11-12 → 11-20 — COHR Asia NDR with Jefferies (Blayne Curtis) (Jefferies trading desk…"
       ]
     },
     {
@@ -567,19 +581,6 @@
       ]
     },
     {
-      "ticker": "SNDK",
-      "focus_score": 35,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Memory & storage",
-      "thesis": "Post-spin pure-play NAND on AI storage; price-driven blowout + $42B LTA backlog vs blowoff-top risk.",
-      "next_catalyst": "",
-      "why": [
-        "[23:00 second pass] SNDK — the largest open edge on the wiki just got NARROWER AND SHARPER: consensus has adopted management's DOWNSIDE case as its BASE case"
-      ]
-    },
-    {
       "ticker": "SNOW",
       "focus_score": 35,
       "in_book": false,
@@ -603,6 +604,19 @@
       "next_catalyst": "2026-11-10",
       "why": [
         "FLEX — 2026-11-10: INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail…"
+      ]
+    },
+    {
+      "ticker": "NFLX",
+      "focus_score": 32,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Consumer / Internet / Other",
+      "thesis": "Clean organic algorithm (12-14% rev, 31.5% margin); near-term setup is a catalyst vacuum.",
+      "next_catalyst": "2026-10-20",
+      "why": [
+        "NFLX — 2026-10-20: Q3 2026 earnings — Tue 2026-10-20 AMC (Vital Knowledge calendar, 2026-09-28) — replaces…"
       ]
     },
     {
@@ -703,9 +717,9 @@
       "hidden": false
     },
     {
-      "id": "esti-2b278ef3ae8c",
+      "id": "esti-31e54d6593a8",
       "asof": "2026-09-29",
-      "source_date": "2026-09-28",
+      "source_date": "2026-09-29",
       "type": "model_check",
       "priority": "high",
       "score": 72,
@@ -719,7 +733,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $427.3bn as of 2026-09-28, a derived +18.2% gap. Revenue comparisons require a basis check.",
+      "why_now": "Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $427.3bn as of 2026-09-29, a derived +18.2% gap. Revenue comparisons require a basis check.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -774,7 +788,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-28",
+      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-29",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -783,8 +797,8 @@
       "origin": "house_vs_consensus",
       "values": {
         "house": 505.0,
-        "consensus": 427.26890000000003,
-        "delta_pct": 18.19,
+        "consensus": 427.30796000000004,
+        "delta_pct": 18.18,
         "unit": "$bn"
       },
       "feedback": "",
@@ -792,9 +806,9 @@
       "hidden": false
     },
     {
-      "id": "esti-81ab39eaa563",
+      "id": "esti-dfcc77f11f06",
       "asof": "2026-09-29",
-      "source_date": "2026-09-28",
+      "source_date": "2026-09-29",
       "type": "model_check",
       "priority": "high",
       "score": 71,
@@ -808,7 +822,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2027 revenue at $641.0bn versus Bloomberg consensus at $544.1bn as of 2026-09-28, a derived +17.8% gap. Revenue comparisons require a basis check.",
+      "why_now": "Capstone carries 2027 revenue at $641.0bn versus Bloomberg consensus at $544.1bn as of 2026-09-29, a derived +17.8% gap. Revenue comparisons require a basis check.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -863,7 +877,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-28",
+      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-09-29",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -872,7 +886,7 @@
       "origin": "house_vs_consensus",
       "values": {
         "house": 641.0,
-        "consensus": 544.08335,
+        "consensus": 544.11931,
         "delta_pct": 17.81,
         "unit": "$bn"
       },
@@ -881,9 +895,9 @@
       "hidden": false
     },
     {
-      "id": "esti-d809726ff0b4",
+      "id": "esti-e8bae521d09d",
       "asof": "2026-09-29",
-      "source_date": "2026-09-28",
+      "source_date": "2026-09-29",
       "type": "model_check",
       "priority": "high",
       "score": 69,
@@ -897,7 +911,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.76 as of 2026-09-28, a derived +15.5% gap.",
+      "why_now": "Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.76 as of 2026-09-29, a derived +15.5% gap.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the AAPL model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -917,7 +931,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-09-28",
+      "source": "Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-09-29",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -1699,102 +1713,6 @@
       "hidden": false
     },
     {
-      "id": "post-baa0654da1a5",
-      "asof": "2026-09-29",
-      "source_date": "2026-09-28",
-      "event_date": "2026-09-28",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "CIEN — catalyst passed without a logged outcome",
-      "tickers": [
-        "CIEN"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "🆕 SPOKEN-LAYER ADDENDUM, 2026-09-28 — THE SUPPLY HALF OF THIS TEST NOW HAS A CLOCK. (Joseph Cardoso (J.P. Morgan, Hardware & Networking) @ JPM 'Takeaways from ECOC, All Stars & Other Investor Even",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for CIEN in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "🆕 SPOKEN-LAYER ADDENDUM, 2026-09-28 — THE SUPPLY HALF OF THIS TEST NOW HAS A CLOCK. (Joseph Cardoso (J.P. Morgan, Hardware & Networking) @ JPM 'Takeaways from ECOC, All Stars & Other Investor Even",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "post-52705a98f596",
-      "asof": "2026-09-29",
-      "source_date": "2026-09-28",
-      "event_date": "2026-09-28",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "COHR — catalyst passed without a logged outcome",
-      "tickers": [
-        "COHR"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "🆕 THE 70mW QUESTION — PUT IT TO MANAGEMENT: is the in-box NPO light source an InP CW laser at 70mW or a VCSEL, and what link budget makes 70mW sufficient where Lumentum says 150mW? JPM relayed \"t",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for COHR in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "🆕 THE 70mW QUESTION — PUT IT TO MANAGEMENT: is the in-box NPO light source an InP CW laser at 70mW or a VCSEL, and what link budget makes 70mW sufficient where Lumentum says 150mW? JPM relayed \"t",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "post-5f5e751a2a3b",
-      "asof": "2026-09-29",
-      "source_date": "2026-09-28",
-      "event_date": "2026-09-28",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "CRDO — catalyst passed without a logged outcome",
-      "tickers": [
-        "CRDO"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "🆕 SPOKEN-LAYER READOUT, 2026-09-28 (Joseph Cardoso (J.P. Morgan, Hardware & Networking) @ JPM 'Takeaways from ECOC, All Stars & Other Investor Events' call, 2026-09-28 — Capstone notes (Notion tra",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for CRDO in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "🆕 SPOKEN-LAYER READOUT, 2026-09-28 (Joseph Cardoso (J.P. Morgan, Hardware & Networking) @ JPM 'Takeaways from ECOC, All Stars & Other Investor Events' call, 2026-09-28 — Capstone notes (Notion tra",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
       "id": "cata-5019bdd5c87f",
       "asof": "2026-09-29",
       "source_date": "2026-09-30",
@@ -1844,70 +1762,6 @@
       ],
       "evidence_anchor": "🆕🔴 HPE NETWORKING ANALYST DAY — 2026-09-30. This is where the \"segment returns to HPE's historical margin profile of mid-20s\" claim gets defended, dated, or walked back. ➜ It matters more than",
       "origin": "catalyst_calendar",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "post-d67f4afeb0a2",
-      "asof": "2026-09-29",
-      "source_date": "2026-09-28",
-      "event_date": "2026-09-28",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "LITE — catalyst passed without a logged outcome",
-      "tickers": [
-        "LITE"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "🆕 2H-CY27 / CY28 — THE IN-BOX NPO LIGHT-SOURCE DECISION (CW at 70-150mW vs VCSEL), AND WHICH WAY THE REMAINING IN-BOX ENGAGEMENTS GO. JPM: VCSELs \"being explored in that back half of calendar 27",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for LITE in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "🆕 2H-CY27 / CY28 — THE IN-BOX NPO LIGHT-SOURCE DECISION (CW at 70-150mW vs VCSEL), AND WHICH WAY THE REMAINING IN-BOX ENGAGEMENTS GO. JPM: VCSELs \"being explored in that back half of calendar 27",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "post-2a806baa3672",
-      "asof": "2026-09-29",
-      "source_date": "2026-09-28",
-      "event_date": "2026-09-28",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "RDDT — catalyst passed without a logged outcome",
-      "tickers": [
-        "RDDT"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "🆕 Reddit Max adoption by performance advertisers — the expert says Reddit is \"heavily reaching out to performance advertisers to encourage them to adopt Reddit Max\" and that the down-funnel skew is",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for RDDT in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "🆕 Reddit Max adoption by performance advertisers — the expert says Reddit is \"heavily reaching out to performance advertisers to encourage them to adopt Reddit Max\" and that the down-funnel skew is",
-      "origin": "outcome_loop",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
@@ -2077,6 +1931,38 @@
       "hidden": false
     },
     {
+      "id": "post-745ffe9b307a",
+      "asof": "2026-09-29",
+      "source_date": "2026-09-28",
+      "event_date": "2026-09-28",
+      "type": "postmortem",
+      "priority": "medium",
+      "score": 58,
+      "title": "SPCX — catalyst passed without a logged outcome",
+      "tickers": [
+        "SPCX"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "overdue",
+      "confidence": "high",
+      "why_now": "🆕 ✅ Starship Flight 14 — RESOLVED 2026-09-28: first orbit, 26 Starlink V3 satellites deployed, mission ended early after an engine issue on ascent (@XHNews / @CNBC / The Information, 2026-09-28/29",
+      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
+      "action": "Write a source-attributed bull won|bear won|neutral outcome for SPCX in outcomes.md.",
+      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
+      "readthrough": [],
+      "source": "Catalyst outcome ledger",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "_meta/outcomes.md"
+      ],
+      "evidence_anchor": "🆕 ✅ Starship Flight 14 — RESOLVED 2026-09-28: first orbit, 26 Starlink V3 satellites deployed, mission ended early after an engine issue on ascent (@XHNews / @CNBC / The Information, 2026-09-28/29",
+      "origin": "outcome_loop",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
       "id": "data-c7a1b9eac383",
       "asof": "2026-09-29",
       "source_date": "2026-09-29",
@@ -2102,6 +1988,156 @@
       ],
       "evidence_anchor": "NSCALE — Bloomberg consensus missing",
       "origin": "worklist",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "cata-d5a20477f640",
+      "asof": "2026-09-29",
+      "source_date": "2026-09-30",
+      "event_date": "2026-09-30",
+      "type": "catalyst",
+      "priority": "medium",
+      "score": 49,
+      "title": "AMD — 2026-09-30: HPE Networking Day. BofA flags a possible financial update on the AMD Helios rack,…",
+      "tickers": [
+        "AMD"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "🆕 2026-09-30: HPE Networking Day. BofA flags a possible financial update on the AMD Helios rack, including a possible Helios Ethernet scale-up switch or full rack (BofA · Wamsi Mohan, 2026-09-28).",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "NVDA",
+          "relation": "competitor",
+          "detail": "AI accelerators",
+          "from": "AMD",
+          "in_book": true
+        },
+        {
+          "ticker": "META",
+          "relation": "customer",
+          "detail": "MI GPUs",
+          "from": "AMD",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "MI GPUs",
+          "from": "AMD",
+          "in_book": true
+        },
+        {
+          "ticker": "TSM",
+          "relation": "supplier",
+          "detail": "foundry",
+          "from": "AMD",
+          "in_book": true
+        },
+        {
+          "ticker": "INTC",
+          "relation": "competitor",
+          "detail": "server CPU",
+          "from": "AMD",
+          "in_book": false
+        },
+        {
+          "ticker": "ARM",
+          "relation": "supplier",
+          "detail": "IP",
+          "from": "AMD",
+          "in_book": false
+        },
+        {
+          "ticker": "CDNS",
+          "relation": "supplier",
+          "detail": "EDA",
+          "from": "AMD",
+          "in_book": false
+        }
+      ],
+      "source": "AMD page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "AMD.md"
+      ],
+      "evidence_anchor": "🆕 2026-09-30: HPE Networking Day. BofA flags a possible financial update on the AMD Helios rack, including a possible Helios Ethernet scale-up switch or full rack (BofA · Wamsi Mohan, 2026-09-28).",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "cata-c1c11b199fbb",
+      "asof": "2026-09-29",
+      "source_date": "2026-09-29",
+      "event_date": "2026-09-29",
+      "type": "catalyst",
+      "priority": "medium",
+      "score": 49,
+      "title": "CRWV — 2026-09-29: 2026-09-29 → 10-01 — \"Fully Connected\" conference (dates per the JPM Tech Sketch calendar,…",
+      "tickers": [
+        "CRWV"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "🆕 2026-09-29 → 10-01 — \"Fully Connected\" conference (dates per the JPM Tech Sketch calendar, 2026-09-28; resolves the ambiguous \"week of 9/28\" in the 09-27 row). Watch for any move in the 2027/202",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "neocloud compute",
+          "from": "CRWV",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "CRWV",
+          "in_book": true
+        },
+        {
+          "ticker": "NSCALE",
+          "relation": "competitor",
+          "detail": "GPU neocloud",
+          "from": "CRWV",
+          "in_book": false
+        },
+        {
+          "ticker": "AMD",
+          "relation": "supplier",
+          "detail": "MI GPUs",
+          "from": "CRWV",
+          "in_book": false
+        },
+        {
+          "ticker": "OPENAI",
+          "relation": "customer",
+          "detail": "neocloud compute",
+          "from": "CRWV",
+          "in_book": false
+        }
+      ],
+      "source": "CRWV page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "CRWV.md"
+      ],
+      "evidence_anchor": "🆕 2026-09-29 → 10-01 — \"Fully Connected\" conference (dates per the JPM Tech Sketch calendar, 2026-09-28; resolves the ambiguous \"week of 9/28\" in the 09-27 row). Watch for any move in the 2027/202",
+      "origin": "catalyst_calendar",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
@@ -2644,6 +2680,135 @@
         "SMTC.md"
       ],
       "evidence_anchor": "🔴 2026-10-15 — INVESTOR / ANALYST DAY, San Jose. The single most important dated event on this page, because management deferred the two questions that matter to it. Promised content: \"an in-dept",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "cata-8ac5e497f97b",
+      "asof": "2026-09-29",
+      "source_date": "2026-10-01",
+      "event_date": "2026-10-01",
+      "type": "catalyst",
+      "priority": "watch",
+      "score": 40,
+      "title": "KIOXIA — 2026-10-01: 2026-10-01/02 — 3D IC conference: Kioxia presents CBA bonding for next-gen QLC (claimed…",
+      "tickers": [
+        "KIOXIA"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "this week",
+      "confidence": "medium",
+      "why_now": "🆕 2026-10-01/02 — 3D IC conference: Kioxia presents CBA bonding for next-gen QLC (claimed +60% bit density vs 8th gen). (TrendForce Weekly Radar 003, 2026-09-28)",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "NAND",
+          "from": "KIOXIA",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "NAND",
+          "from": "KIOXIA",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "NAND (Super IO)",
+          "from": "KIOXIA",
+          "in_book": true
+        },
+        {
+          "ticker": "SNDK",
+          "relation": "competitor",
+          "detail": "NAND",
+          "from": "KIOXIA",
+          "in_book": false
+        }
+      ],
+      "source": "KIOXIA page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "KIOXIA.md"
+      ],
+      "evidence_anchor": "🆕 2026-10-01/02 — 3D IC conference: Kioxia presents CBA bonding for next-gen QLC (claimed +60% bit density vs 8th gen). (TrendForce Weekly Radar 003, 2026-09-28)",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "cata-25ae896a818a",
+      "asof": "2026-09-29",
+      "source_date": "2026-10-05",
+      "event_date": "2026-10-05",
+      "type": "catalyst",
+      "priority": "watch",
+      "score": 40,
+      "title": "SNDK — 2026-10-05: BofA HBF expert call (Thomas Coughlin). A read on HBF timing and TAM; event only. (BofA…",
+      "tickers": [
+        "SNDK"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "this week",
+      "confidence": "medium",
+      "why_now": "🆕 2026-10-05 — BofA HBF expert call (Thomas Coughlin). A read on HBF timing and TAM; event only. (BofA sales · Brian Fenske, 2026-09-28)",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "NAND/SSD",
+          "from": "SNDK",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "customer",
+          "detail": "NAND/SSD",
+          "from": "SNDK",
+          "in_book": true
+        },
+        {
+          "ticker": "META",
+          "relation": "customer",
+          "detail": "NAND/SSD",
+          "from": "SNDK",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "NAND/SSD",
+          "from": "SNDK",
+          "in_book": true
+        },
+        {
+          "ticker": "KIOXIA",
+          "relation": "competitor",
+          "detail": "NAND",
+          "from": "SNDK",
+          "in_book": false
+        }
+      ],
+      "source": "SNDK page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "SNDK.md"
+      ],
+      "evidence_anchor": "🆕 2026-10-05 — BofA HBF expert call (Thomas Coughlin). A read on HBF timing and TAM; event only. (BofA sales · Brian Fenske, 2026-09-28)",
       "origin": "catalyst_calendar",
       "feedback": "",
       "feedback_note": "",
@@ -6208,6 +6373,120 @@
         "ASML.md"
       ],
       "evidence_anchor": "🆕 2026-10-14 (Wednesday) — 3Q26 results. The Street's two focus items are set: (1) whether FY27 low-NA EUV capacity guidance goes to 90+ tools (from ~85) and whether 2028 is reaffirmed at ≥1",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "cata-d5929fe6e47a",
+      "asof": "2026-09-29",
+      "source_date": "2026-10-20",
+      "event_date": "2026-10-20",
+      "type": "catalyst",
+      "priority": "watch",
+      "score": 32,
+      "title": "NFLX — 2026-10-20: Q3 2026 earnings — Tue 2026-10-20 AMC (Vital Knowledge calendar, 2026-09-28) — replaces…",
+      "tickers": [
+        "NFLX"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "upcoming",
+      "confidence": "medium",
+      "why_now": "🆕 Q3 2026 earnings — Tue 2026-10-20 AMC (Vital Knowledge calendar, 2026-09-28) — replaces the \"~late Oct\" placeholder.",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [],
+      "source": "NFLX page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "NFLX.md"
+      ],
+      "evidence_anchor": "🆕 Q3 2026 earnings — Tue 2026-10-20 AMC (Vital Knowledge calendar, 2026-09-28) — replaces the \"~late Oct\" placeholder.",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "cata-c030b28ed093",
+      "asof": "2026-09-29",
+      "source_date": "2026-11-12",
+      "event_date": "2026-11-12",
+      "type": "catalyst",
+      "priority": "watch",
+      "score": 25,
+      "title": "COHR — 2026-11-12: 2026-11-12 → 11-20 — COHR Asia NDR with Jefferies (Blayne Curtis) (Jefferies trading desk…",
+      "tickers": [
+        "COHR"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "calendar",
+      "confidence": "medium",
+      "why_now": "🆕 2026-11-12 → 11-20 — COHR Asia NDR with Jefferies (Blayne Curtis) (Jefferies trading desk · Jeffrey Favuzza, 2026-09-28, corporate-access list).",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "COHR",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "COHR",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "COHR",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "optical/InP",
+          "from": "COHR",
+          "in_book": true
+        },
+        {
+          "ticker": "LITE",
+          "relation": "competitor",
+          "detail": "optical/InP",
+          "from": "COHR",
+          "in_book": false
+        },
+        {
+          "ticker": "AIXA",
+          "relation": "supplier",
+          "detail": "MOCVD tools",
+          "from": "COHR",
+          "in_book": false
+        },
+        {
+          "ticker": "ANET",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "COHR",
+          "in_book": false
+        }
+      ],
+      "source": "COHR page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "COHR.md"
+      ],
+      "evidence_anchor": "🆕 2026-11-12 → 11-20 — COHR Asia NDR with Jefferies (Blayne Curtis) (Jefferies trading desk · Jeffrey Favuzza, 2026-09-28, corporate-access list).",
       "origin": "catalyst_calendar",
       "feedback": "",
       "feedback_note": "",

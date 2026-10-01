@@ -15,7 +15,7 @@ def overview(fragment):
 def shell(asof):
     groups = [
         ("Demand & adoption", [("open-vs-closed", "Open vs closed"), ("token-growth", "Top models"), ("gateway-pulse", "Growth & share"), ("vercel", "Vercel Gateway")]),
-        ("Economics", [("growth", "System growth"), ("value", "Tokens & dollars"), ("labs", "Lab leaderboard"), ("cloud", "Cross-cloud pricing"), ("neo", "Neocloud market"), ("gpu-pricing", "GPU pricing")]),
+        ("Economics", [("token-economics", "Token economics"), ("growth", "System growth"), ("value", "Tokens & dollars"), ("labs", "Lab leaderboard"), ("cloud", "Cross-cloud pricing"), ("neo", "Neocloud market"), ("gpu-pricing", "GPU pricing")]),
         ("Research", [("weekly", "Weekly brief"), ("method", "Method & sources")]),
     ]
     links = []

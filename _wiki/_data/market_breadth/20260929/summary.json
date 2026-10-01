@@ -1,0 +1,966 @@
+{
+  "source": "Bloomberg Desktop API",
+  "retrieved_at": "2026-09-29T21:34:08.882961+00:00",
+  "asof": "2026-09-29",
+  "baseline": "2026-09-08",
+  "dates": [
+    "2026-09-08",
+    "2026-09-09",
+    "2026-09-10",
+    "2026-09-11",
+    "2026-09-14",
+    "2026-09-15",
+    "2026-09-16",
+    "2026-09-17",
+    "2026-09-18",
+    "2026-09-21",
+    "2026-09-22",
+    "2026-09-23",
+    "2026-09-24",
+    "2026-09-25",
+    "2026-09-28",
+    "2026-09-29"
+  ],
+  "thresholds": [
+    10,
+    20,
+    30,
+    50
+  ],
+  "basis": "Closing price / running intraday historical high; split-adjusted, cash dividends unadjusted",
+  "membership": "September 29, 2026 constituent snapshot held fixed over the period; share classes counted separately",
+  "missing_observations": "Last valid close carried forward. No baseline high/close -> excluded from every date.",
+  "indices": [
+    {
+      "ticker": "CCMP Index",
+      "label": "Nasdaq Composite",
+      "universe": 3396,
+      "covered": 3374,
+      "coverage_pct": 99.35217903415783,
+      "excluded": [
+        {
+          "ticker": "ADRX US Equity",
+          "reason": "No pre-window historical high (new listing or unavailable)"
+        },
+        {
+          "ticker": "BRTM US Equity",
+          "reason": "No pre-window historical high (new listing or unavailable)"
+        },
+        {
+          "ticker": "CATL US Equity",
+          "reason": "No pre-window historical high (new listing or unavailable)"
+        },
+        {
+          "ticker": "EFTY US Equity",
+          "reason": "No valid closing price on/before baseline"
+        },
+        {
+          "ticker": "ETRA US Equity",
+          "reason": "No pre-window historical high (new listing or unavailable)"
+        },
+        {
+          "ticker": "FJDI US Equity",
+          "reason": "No pre-window historical high (new listing or unavailable)"
+        },
+        {
+          "ticker": "HCHL US Equity",
+          "reason": "No valid closing price on/before baseline"
+        },
+        {
+          "ticker": "LAWR US Equity",
+          "reason": "No valid closing price on/before baseline"
+        },
+        {
+          "ticker": "MAGH US Equity",
+          "reason": "No valid closing price on/before baseline"
+        },
+        {
+          "ticker": "MAMK US Equity",
+          "reason": "No valid closing price on/before baseline"
+        },
+        {
+          "ticker": "MCTA US Equity",
+          "reason": "No valid closing price on/before baseline"
+        },
+        {
+          "ticker": "MFP US Equity",
+          "reason": "No pre-window historical high (new listing or unavailable)"
+        },
+        {
+          "ticker": "MTAK US Equity",
+          "reason": "No pre-window historical high (new listing or unavailable)"
+        },
+        {
+          "ticker": "OCLT US Equity",
+          "reason": "No pre-window historical high (new listing or unavailable)"
+        },
+        {
+          "ticker": "OIG US Equity",
+          "reason": "No pre-window historical high (new listing or unavailable)"
+        },
+        {
+          "ticker": "OST US Equity",
+          "reason": "No valid closing price on/before baseline"
+        },
+        {
+          "ticker": "PC US Equity",
+          "reason": "No valid closing price on/before baseline"
+        },
+        {
+          "ticker": "RNAQ US Equity",
+          "reason": "No pre-window historical high (new listing or unavailable)"
+        },
+        {
+          "ticker": "SVA US Equity",
+          "reason": "No valid closing price on/before baseline"
+        },
+        {
+          "ticker": "TLAC US Equity",
+          "reason": "No pre-window historical high (new listing or unavailable)"
+        },
+        {
+          "ticker": "UCFI US Equity",
+          "reason": "No valid closing price on/before baseline"
+        },
+        {
+          "ticker": "XIII US Equity",
+          "reason": "No pre-window historical high (new listing or unavailable)"
+        }
+      ],
+      "points": [
+        {
+          "date": "2026-09-08",
+          "counts": [
+            2932,
+            2710,
+            2514,
+            2175
+          ],
+          "pct": [
+            86.899822,
+            80.320095,
+            74.510966,
+            64.463545
+          ],
+          "carried": 100
+        },
+        {
+          "date": "2026-09-09",
+          "counts": [
+            2951,
+            2729,
+            2528,
+            2190
+          ],
+          "pct": [
+            87.462952,
+            80.883225,
+            74.925904,
+            64.908121
+          ],
+          "carried": 123
+        },
+        {
+          "date": "2026-09-10",
+          "counts": [
+            2960,
+            2750,
+            2544,
+            2204
+          ],
+          "pct": [
+            87.729698,
+            81.505631,
+            75.400119,
+            65.323059
+          ],
+          "carried": 98
+        },
+        {
+          "date": "2026-09-11",
+          "counts": [
+            2952,
+            2736,
+            2532,
+            2201
+          ],
+          "pct": [
+            87.49259,
+            81.090694,
+            75.044458,
+            65.234143
+          ],
+          "carried": 119
+        },
+        {
+          "date": "2026-09-14",
+          "counts": [
+            2945,
+            2736,
+            2550,
+            2204
+          ],
+          "pct": [
+            87.285122,
+            81.090694,
+            75.577949,
+            65.323059
+          ],
+          "carried": 78
+        },
+        {
+          "date": "2026-09-15",
+          "counts": [
+            2957,
+            2753,
+            2560,
+            2219
+          ],
+          "pct": [
+            87.640782,
+            81.594547,
+            75.874333,
+            65.767635
+          ],
+          "carried": 93
+        },
+        {
+          "date": "2026-09-16",
+          "counts": [
+            2963,
+            2751,
+            2562,
+            2217
+          ],
+          "pct": [
+            87.818613,
+            81.53527,
+            75.93361,
+            65.708358
+          ],
+          "carried": 105
+        },
+        {
+          "date": "2026-09-17",
+          "counts": [
+            2957,
+            2741,
+            2551,
+            2204
+          ],
+          "pct": [
+            87.640782,
+            81.238886,
+            75.607587,
+            65.323059
+          ],
+          "carried": 85
+        },
+        {
+          "date": "2026-09-18",
+          "counts": [
+            2958,
+            2751,
+            2550,
+            2209
+          ],
+          "pct": [
+            87.670421,
+            81.53527,
+            75.577949,
+            65.471251
+          ],
+          "carried": 104
+        },
+        {
+          "date": "2026-09-21",
+          "counts": [
+            2954,
+            2742,
+            2545,
+            2201
+          ],
+          "pct": [
+            87.551867,
+            81.268524,
+            75.429757,
+            65.234143
+          ],
+          "carried": 91
+        },
+        {
+          "date": "2026-09-22",
+          "counts": [
+            2962,
+            2735,
+            2538,
+            2193
+          ],
+          "pct": [
+            87.788975,
+            81.061055,
+            75.222288,
+            64.997036
+          ],
+          "carried": 101
+        },
+        {
+          "date": "2026-09-23",
+          "counts": [
+            2985,
+            2770,
+            2572,
+            2208
+          ],
+          "pct": [
+            88.470658,
+            82.0984,
+            76.229994,
+            65.441612
+          ],
+          "carried": 98
+        },
+        {
+          "date": "2026-09-24",
+          "counts": [
+            2977,
+            2770,
+            2575,
+            2212
+          ],
+          "pct": [
+            88.233551,
+            82.0984,
+            76.318909,
+            65.560166
+          ],
+          "carried": 97
+        },
+        {
+          "date": "2026-09-25",
+          "counts": [
+            2973,
+            2763,
+            2576,
+            2215
+          ],
+          "pct": [
+            88.114997,
+            81.890931,
+            76.348548,
+            65.649081
+          ],
+          "carried": 110
+        },
+        {
+          "date": "2026-09-28",
+          "counts": [
+            2980,
+            2774,
+            2574,
+            2213
+          ],
+          "pct": [
+            88.322466,
+            82.216953,
+            76.289271,
+            65.589804
+          ],
+          "carried": 125
+        },
+        {
+          "date": "2026-09-29",
+          "counts": [
+            2992,
+            2785,
+            2585,
+            2209
+          ],
+          "pct": [
+            88.678127,
+            82.542976,
+            76.615293,
+            65.471251
+          ],
+          "carried": 114
+        }
+      ],
+      "delta_counts": [
+        60,
+        75,
+        71,
+        34
+      ],
+      "delta_pp": [
+        1.7783050000000031,
+        2.222881000000001,
+        2.104326999999998,
+        1.0077059999999989
+      ],
+      "index_return_pct": 1.423580346393316
+    },
+    {
+      "ticker": "SPX Index",
+      "label": "S&P 500 (SPY)",
+      "universe": 503,
+      "covered": 503,
+      "coverage_pct": 100.0,
+      "excluded": [],
+      "points": [
+        {
+          "date": "2026-09-08",
+          "counts": [
+            406,
+            284,
+            189,
+            76
+          ],
+          "pct": [
+            80.715706,
+            56.461233,
+            37.574553,
+            15.109344
+          ],
+          "carried": 0
+        },
+        {
+          "date": "2026-09-09",
+          "counts": [
+            411,
+            294,
+            201,
+            78
+          ],
+          "pct": [
+            81.709742,
+            58.449304,
+            39.960239,
+            15.506958
+          ],
+          "carried": 0
+        },
+        {
+          "date": "2026-09-10",
+          "counts": [
+            421,
+            300,
+            206,
+            80
+          ],
+          "pct": [
+            83.697813,
+            59.642147,
+            40.954274,
+            15.904573
+          ],
+          "carried": 0
+        },
+        {
+          "date": "2026-09-11",
+          "counts": [
+            408,
+            290,
+            199,
+            79
+          ],
+          "pct": [
+            81.11332,
+            57.654076,
+            39.562624,
+            15.705765
+          ],
+          "carried": 0
+        },
+        {
+          "date": "2026-09-14",
+          "counts": [
+            410,
+            296,
+            205,
+            79
+          ],
+          "pct": [
+            81.510934,
+            58.846918,
+            40.755467,
+            15.705765
+          ],
+          "carried": 0
+        },
+        {
+          "date": "2026-09-15",
+          "counts": [
+            415,
+            301,
+            212,
+            80
+          ],
+          "pct": [
+            82.50497,
+            59.840954,
+            42.147117,
+            15.904573
+          ],
+          "carried": 0
+        },
+        {
+          "date": "2026-09-16",
+          "counts": [
+            429,
+            303,
+            218,
+            82
+          ],
+          "pct": [
+            85.28827,
+            60.238569,
+            43.33996,
+            16.302187
+          ],
+          "carried": 0
+        },
+        {
+          "date": "2026-09-17",
+          "counts": [
+            428,
+            302,
+            212,
+            82
+          ],
+          "pct": [
+            85.089463,
+            60.039761,
+            42.147117,
+            16.302187
+          ],
+          "carried": 0
+        },
+        {
+          "date": "2026-09-18",
+          "counts": [
+            426,
+            299,
+            214,
+            84
+          ],
+          "pct": [
+            84.691849,
+            59.44334,
+            42.544732,
+            16.699801
+          ],
+          "carried": 0
+        },
+        {
+          "date": "2026-09-21",
+          "counts": [
+            421,
+            295,
+            210,
+            84
+          ],
+          "pct": [
+            83.697813,
+            58.648111,
+            41.749503,
+            16.699801
+          ],
+          "carried": 0
+        },
+        {
+          "date": "2026-09-22",
+          "counts": [
+            426,
+            287,
+            210,
+            85
+          ],
+          "pct": [
+            84.691849,
+            57.057654,
+            41.749503,
+            16.898608
+          ],
+          "carried": 0
+        },
+        {
+          "date": "2026-09-23",
+          "counts": [
+            426,
+            302,
+            216,
+            86
+          ],
+          "pct": [
+            84.691849,
+            60.039761,
+            42.942346,
+            17.097416
+          ],
+          "carried": 0
+        },
+        {
+          "date": "2026-09-24",
+          "counts": [
+            427,
+            303,
+            224,
+            88
+          ],
+          "pct": [
+            84.890656,
+            60.238569,
+            44.532803,
+            17.49503
+          ],
+          "carried": 0
+        },
+        {
+          "date": "2026-09-25",
+          "counts": [
+            425,
+            294,
+            218,
+            88
+          ],
+          "pct": [
+            84.493042,
+            58.449304,
+            43.33996,
+            17.49503
+          ],
+          "carried": 0
+        },
+        {
+          "date": "2026-09-28",
+          "counts": [
+            428,
+            300,
+            218,
+            91
+          ],
+          "pct": [
+            85.089463,
+            59.642147,
+            43.33996,
+            18.091451
+          ],
+          "carried": 0
+        },
+        {
+          "date": "2026-09-29",
+          "counts": [
+            432,
+            302,
+            219,
+            92
+          ],
+          "pct": [
+            85.884692,
+            60.039761,
+            43.538767,
+            18.290258
+          ],
+          "carried": 0
+        }
+      ],
+      "delta_counts": [
+        26,
+        18,
+        30,
+        16
+      ],
+      "delta_pp": [
+        5.168986000000004,
+        3.5785279999999986,
+        5.964213999999998,
+        3.1809140000000014
+      ],
+      "index_return_pct": -0.03492530155652096
+    },
+    {
+      "ticker": "RTY Index",
+      "label": "Russell 2000",
+      "universe": 1976,
+      "covered": 1975,
+      "coverage_pct": 99.9493927125506,
+      "excluded": [
+        {
+          "ticker": "2686628D US Equity",
+          "reason": "No pre-window historical high (new listing or unavailable)"
+        }
+      ],
+      "points": [
+        {
+          "date": "2026-09-08",
+          "counts": [
+            1751,
+            1547,
+            1352,
+            1060
+          ],
+          "pct": [
+            88.658228,
+            78.329114,
+            68.455696,
+            53.670886
+          ],
+          "carried": 0
+        },
+        {
+          "date": "2026-09-09",
+          "counts": [
+            1765,
+            1569,
+            1368,
+            1070
+          ],
+          "pct": [
+            89.367089,
+            79.443038,
+            69.265823,
+            54.177215
+          ],
+          "carried": 0
+        },
+        {
+          "date": "2026-09-10",
+          "counts": [
+            1771,
+            1585,
+            1376,
+            1082
+          ],
+          "pct": [
+            89.670886,
+            80.253165,
+            69.670886,
+            54.78481
+          ],
+          "carried": 0
+        },
+        {
+          "date": "2026-09-11",
+          "counts": [
+            1769,
+            1572,
+            1372,
+            1082
+          ],
+          "pct": [
+            89.56962,
+            79.594937,
+            69.468354,
+            54.78481
+          ],
+          "carried": 0
+        },
+        {
+          "date": "2026-09-14",
+          "counts": [
+            1772,
+            1578,
+            1379,
+            1080
+          ],
+          "pct": [
+            89.721519,
+            79.898734,
+            69.822785,
+            54.683544
+          ],
+          "carried": 0
+        },
+        {
+          "date": "2026-09-15",
+          "counts": [
+            1777,
+            1591,
+            1392,
+            1085
+          ],
+          "pct": [
+            89.974684,
+            80.556962,
+            70.481013,
+            54.936709
+          ],
+          "carried": 0
+        },
+        {
+          "date": "2026-09-16",
+          "counts": [
+            1784,
+            1587,
+            1395,
+            1087
+          ],
+          "pct": [
+            90.329114,
+            80.35443,
+            70.632911,
+            55.037975
+          ],
+          "carried": 0
+        },
+        {
+          "date": "2026-09-17",
+          "counts": [
+            1783,
+            1586,
+            1397,
+            1085
+          ],
+          "pct": [
+            90.278481,
+            80.303797,
+            70.734177,
+            54.936709
+          ],
+          "carried": 0
+        },
+        {
+          "date": "2026-09-18",
+          "counts": [
+            1785,
+            1593,
+            1406,
+            1089
+          ],
+          "pct": [
+            90.379747,
+            80.658228,
+            71.189873,
+            55.139241
+          ],
+          "carried": 0
+        },
+        {
+          "date": "2026-09-21",
+          "counts": [
+            1784,
+            1592,
+            1406,
+            1083
+          ],
+          "pct": [
+            90.329114,
+            80.607595,
+            71.189873,
+            54.835443
+          ],
+          "carried": 0
+        },
+        {
+          "date": "2026-09-22",
+          "counts": [
+            1791,
+            1584,
+            1398,
+            1070
+          ],
+          "pct": [
+            90.683544,
+            80.202532,
+            70.78481,
+            54.177215
+          ],
+          "carried": 0
+        },
+        {
+          "date": "2026-09-23",
+          "counts": [
+            1806,
+            1613,
+            1424,
+            1083
+          ],
+          "pct": [
+            91.443038,
+            81.670886,
+            72.101266,
+            54.835443
+          ],
+          "carried": 1
+        },
+        {
+          "date": "2026-09-24",
+          "counts": [
+            1803,
+            1613,
+            1431,
+            1093
+          ],
+          "pct": [
+            91.291139,
+            81.670886,
+            72.455696,
+            55.341772
+          ],
+          "carried": 0
+        },
+        {
+          "date": "2026-09-25",
+          "counts": [
+            1802,
+            1610,
+            1428,
+            1084
+          ],
+          "pct": [
+            91.240506,
+            81.518987,
+            72.303797,
+            54.886076
+          ],
+          "carried": 0
+        },
+        {
+          "date": "2026-09-28",
+          "counts": [
+            1808,
+            1619,
+            1428,
+            1093
+          ],
+          "pct": [
+            91.544304,
+            81.974684,
+            72.303797,
+            55.341772
+          ],
+          "carried": 0
+        },
+        {
+          "date": "2026-09-29",
+          "counts": [
+            1819,
+            1629,
+            1441,
+            1092
+          ],
+          "pct": [
+            92.101266,
+            82.481013,
+            72.962025,
+            55.291139
+          ],
+          "carried": 1
+        }
+      ],
+      "delta_counts": [
+        68,
+        82,
+        89,
+        32
+      ],
+      "delta_pp": [
+        3.4430380000000014,
+        4.151899,
+        4.506328999999994,
+        1.6202529999999982
+      ],
+      "index_return_pct": -5.144307622042266
+    }
+  ]
+}

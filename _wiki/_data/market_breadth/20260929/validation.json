@@ -1,0 +1,49 @@
+{
+  "reference_validation_compared": 4500,
+  "reference_mismatch_tolerance_pp": 0.02,
+  "reference_mismatches": [],
+  "unique_eligible": 4501,
+  "unique_excluded": {
+    "ADRX US Equity": "No pre-window historical high (new listing or unavailable)",
+    "2686628D US Equity": "No pre-window historical high (new listing or unavailable)",
+    "BRTM US Equity": "No pre-window historical high (new listing or unavailable)",
+    "CATL US Equity": "No pre-window historical high (new listing or unavailable)",
+    "EFTY US Equity": "No valid closing price on/before baseline",
+    "ETRA US Equity": "No pre-window historical high (new listing or unavailable)",
+    "FJDI US Equity": "No pre-window historical high (new listing or unavailable)",
+    "HCHL US Equity": "No valid closing price on/before baseline",
+    "LAWR US Equity": "No valid closing price on/before baseline",
+    "MAMK US Equity": "No valid closing price on/before baseline",
+    "MAGH US Equity": "No valid closing price on/before baseline",
+    "MFP US Equity": "No pre-window historical high (new listing or unavailable)",
+    "MCTA US Equity": "No valid closing price on/before baseline",
+    "MTAK US Equity": "No pre-window historical high (new listing or unavailable)",
+    "OCLT US Equity": "No pre-window historical high (new listing or unavailable)",
+    "OIG US Equity": "No pre-window historical high (new listing or unavailable)",
+    "PC US Equity": "No valid closing price on/before baseline",
+    "OST US Equity": "No valid closing price on/before baseline",
+    "RNAQ US Equity": "No pre-window historical high (new listing or unavailable)",
+    "SVA US Equity": "No valid closing price on/before baseline",
+    "TLAC US Equity": "No pre-window historical high (new listing or unavailable)",
+    "UCFI US Equity": "No valid closing price on/before baseline",
+    "XIII US Equity": "No pre-window historical high (new listing or unavailable)"
+  },
+  "nesting": "PASS",
+  "denominator_constant": "PASS",
+  "future_highs": "Baseline through Sep 8, then cumulative max of observed highs through each date",
+  "source_field_errors": {},
+  "latest_carried": [
+    {
+      "index": "Nasdaq Composite",
+      "count": 114
+    },
+    {
+      "index": "S&P 500 (SPY)",
+      "count": 0
+    },
+    {
+      "index": "Russell 2000",
+      "count": 1
+    }
+  ]
+}

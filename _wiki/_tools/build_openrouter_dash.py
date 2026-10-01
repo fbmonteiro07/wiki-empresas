@@ -4,10 +4,10 @@ self-contained, theme-aware HTML dashboard at _wiki/_dashboards/openrouter.html
 (also publishable as an Artifact — no external assets).
 
 Framing hard-won from the estimate double-check:
-  * implied $ = tokens x LIST price with caching OFF  =>  a CEILING, ~3x realized.
+  * implied $ = tokens x LIST price with caching OFF  =>  an uncalibrated list-price scenario.
   * lead with RELATIVE RANK + PAID-token share (free tokens are excluded from the
     $-comparison base), and show a cache-sensitivity ladder that reconciles the
-    ceiling toward OpenRouter's reported actual spend.
+    scenario; historical spending is not a same-period calibration.
 
 Run (after or_fetch.py + or_build.py):
   py "E:\Wiki Felipe empresas\_wiki\_tools\build_openrouter_dash.py"
@@ -259,7 +259,7 @@ top_lab = labs[0]
 top_app = next((a for a in apps if a.get("title")), {})
 tiles = [
     ("Tokens / day", tok(plat["daily_tokens"]), "via OpenRouter · ~%s/mo · %s free" % (tok(plat["tokens_month_run_rate"]), pct(plat["free_token_pct"], 0))),
-    ("Implied $ / yr", dol(plat["revenue_annualized"]), "at LIST price, caching OFF — a ceiling (~3× realized)"),
+    ("Implied $ / yr", dol(plat["revenue_annualized"]), "LIST-price scenario, caching OFF — uncalibrated"),
     ("Input intensity", "%.1f:1" % plat["input_ratio"], "prompt : completion · ~97% of tokens are input"),
     ("#1 by implied $", esc(top_lab["display"]), "%s/yr · %s of $ vs %s of paid tokens" % (dol(top_lab["revenue_annualized"]), pct(top_lab["rev_share"], 0), pct(top_lab["paid_token_share"], 0))),
     ("#1 app", esc(top_app.get("title", "-")), "%s tokens/wk · coding agents lead" % tok(top_app.get("tokens_week", 0))),
@@ -268,7 +268,7 @@ tiles_html = "".join('<div class="tile"><div class="tlabel">%s</div><div class="
 
 # ---------- CACHE-SENSITIVITY LADDER ----------
 ladder = [
-    ("Implied at list, cache-OFF", plat["revenue_month_run_rate"], "var(--warn)", "ceiling"),
+    ("Implied at list, cache-OFF", plat["revenue_month_run_rate"], "var(--warn)", "scenario"),
     ("If 50% of input cached", plat["revenue_month_cache50"], "var(--s1)", ""),
     ("If 70% of input cached", plat["revenue_month_cache70"], "var(--s1)", ""),
     ("OpenRouter reported actual", (orr.get("reported_monthly_spend_musd") or 0) * 1e6, "var(--good)", "Jun-26"),
@@ -317,7 +317,7 @@ for l in sc:
     x, y = sx(l["paid_token_share"] * 100), sy(l["rev_share"] * 100)
     r = 5 + 20 * math.sqrt(l["revenue_annualized"] / maxrev)
     col = CAP_COLOR[l["capture"]]
-    s.append('<circle cx="%.1f" cy="%.1f" r="%.1f" fill="%s" fill-opacity=".5" stroke="%s" stroke-width="1.5"><title>%s\npaid tokens %s · $ %s · requests %s\n%s/yr (ceiling) · $%.2f/Mtok · %s:1 in:out</title></circle>' % (
+    s.append('<circle cx="%.1f" cy="%.1f" r="%.1f" fill="%s" fill-opacity=".5" stroke="%s" stroke-width="1.5"><title>%s\npaid tokens %s · $ %s · requests %s\n%s/yr (list-price scenario) · $%.2f/Mtok · %s:1 in:out</title></circle>' % (
         x, y, r, col, col, esc(l["display"]), pct(l["paid_token_share"]), pct(l["rev_share"]), pct(l["req_share"]),
         dol(l["revenue_annualized"]), l["blended_price_per_mtok"], ("%.0f" % l["input_ratio"]) if l["input_ratio"] else "n/a"))
     if l["display"] in LBL:
@@ -457,7 +457,7 @@ for l in bridge:
     brows.append(
         '<div class="barrow2"><div class="barname">%s%s</div>'
         '<div class="bartrack"><div class="barfill" style="width:%.2f%%;background:var(--arrbar)"></div>'
-        '<div class="barfill" style="width:%.2f%%;background:var(--s1)" title="OpenRouter list-$ (ceiling)"></div></div>'
+        '<div class="barfill" style="width:%.2f%%;background:var(--s1)" title="OpenRouter list-$ (list-price scenario)"></div></div>'
         '<div class="barval">$%.1fB <span class="mut">ARR · OR≈%s</span></div></div>' % (
             esc(l["display"]), note, aw, max(orw, 0.6), l["arr_busd"],
             ("%.1f%%" % l["or_pct_of_arr"]) if l.get("or_pct_of_arr") is not None else "—"))
@@ -737,7 +737,7 @@ GROWTH = (
       '<b>(2) The week-to-week segment is not compounded</b> into a %/week rate: the series is step-driven (promos start and end), so a compound rate would describe no real process. Only multi-month anchor segments are normalised to %/week. '
       '<b>(3) A fixed aggregation bug is now corrected:</b> the feed buckets each model by its <i>last active day</i> in the window, and we previously kept only the final bucket — silently deleting dormant models\' real volume (0.0% of the 07-21 week but 3.0% of the 07-27 week, an asymmetry that by itself manufactured ~3pp of a fake decline). All windows now sum every bucket; verified no model appears in two buckets. '
       '<b>(4) N=2.</b> This is one observed transition. Treat direction as informative and magnitude as provisional until several more Mondays land.</div>'
-    + ('<p class="note"><b>The tell:</b> at today\'s blend the cost curve tracks volume (~%.1f× since May), but reported spend is ~flat ($83M Mar → $76M Jun) — so the <b>blended price per token is collapsing</b> as free tiers and cheap open models eat the marginal token. The "cost @ blend" line is a <i>ceiling</i> scenario (list price, no caching); realized sits ~⅓ of it.</p>' % (mult_may or 0)))
+    + ('<p class="note">At today\'s blend the illustrative cost curve tracks volume (~%.1f× since May). Historical March/June spending anchors cover different periods and do not validate the current list-price model or establish a realized-price trend. See the token economics study for captured historical prices and coverage.</p>' % (mult_may or 0)))
 
 PRODUCT = (
     '<h2 id="product">What the system runs — share by product</h2>'
@@ -849,13 +849,12 @@ BODY = (
     render_openrouter_cover() +
     publish_gateway_charts().replace('id="token-growth"', 'id="gateway-pulse"', 1) +
     '<div class="callout warn"><b>Read this first.</b> This reconstructs an "AI-lab ARR" view from OpenRouter\'s public usage feed. It captures <b>developer/API traction routed through OpenRouter</b> — a real, high-frequency leading indicator, but a <i>slice</i> that excludes first-party enterprise API and consumer subscriptions (ChatGPT/Claude/Gemini), the bulk of frontier-lab ARR. '
-    'Dollars are <b>tokens × list price with caching OFF</b>, so they are a <b>ceiling ≈ 3× realized</b> spend. <b>Lead with relative rank and share, not the absolute $.</b></div>'
+    'Dollars are <b>tokens × list price with caching OFF</b>: an <b>uncalibrated list-price scenario</b>. Caching, fees, tiers, routing and coverage affect actual bills. These values are not realized revenue or a guaranteed ceiling.</div>'
     '<div class="tiles">' + tiles_html + '</div>'
     + GROWTH_PRODUCT +
-    '<h2>Is the $ real? — the ceiling vs reality</h2>'
-    '<p class="sub">Implied spend priced at list with no cache credit, then with 50%/70% of input re-priced at each model\'s cache-read rate, vs OpenRouter\'s reported <i>actual</i> monthly spend. The ceiling reconciles toward reality once caching &amp; provider discounts are applied.</p>'
-    '<div class="card">' + ladder_html + '<p class="note" style="margin-top:10px">OpenRouter spend was ~<b>flat</b> Mar→Jun 2026 (~$83M→$76M/mo) even as tokens ~2.7×\'d — the marginal token is cheap/free — so the gap is <b>list-vs-realized</b>, not platform growth. '
-    '<span class="mut">(Mar ~$83M is <b>derived</b>: Sacra\'s ~$50M annualized OR-revenue ÷ ~5% take ÷ 12 — estimate-on-estimate; Jun $76M is a reported snapshot.)</span></p></div>'
+    '<h2>List-price scenarios and historical spending context</h2>'
+    '<p class="sub">Current text-only run rate at list prices, then with hypothetical 50%/70% input cache reads. Cache writes, tiers and other fees are excluded. The June historical anchor is a different period and does not calibrate these scenarios.</p>'
+    '<div class="card">' + ladder_html + '<p class="note" style="margin-top:10px">Historical context: March ~$83M/month was <b>derived</b> from Sacra\'s ~$50M annualized OpenRouter revenue ÷ an assumed ~5% take rate ÷ 12; June $76M/month was a reported snapshot. These are different evidence bases and dates; they do not establish a current list-to-realized multiplier. See source details below.</p></div>'
     '<h2 id="value">Tokens ≠ dollars</h2>'
     '<p class="sub">Each lab by share of <b>paid</b> tokens (volume) vs share of implied dollars (value). Above the line = premium pricing; below = commodity volume. Bubble size = implied $/yr.</p>'
     '<div class="card">' + scatter_svg +
@@ -863,7 +862,7 @@ BODY = (
     '<span><span class="dot" style="background:var(--s2)"></span>Open-weight + own API</span>'
     '<span><span class="dot" style="background:var(--s3)"></span>Open-weight (hosted — $ to 3rd-party, not lab)</span></div></div>'
     '<div class="callout">' + scinsight() + '</div>'
-    '<h2>Implied annualized spend by lab <span class="mut" style="font-size:13px;font-weight:400">(ceiling — rank &gt; magnitude)</span></h2>'
+    '<h2>Implied annualized spend by lab <span class="mut" style="font-size:13px;font-weight:400">(uncalibrated list-price scenario)</span></h2>'
     '<p class="sub">Tokens × list price, annualized from the trailing-7-day run-rate. Momentum = 7-day daily rate vs 30-day daily rate.</p>'
     '<div class="card">' + bars_html + '</div>'
     + trend_html +
@@ -874,7 +873,7 @@ BODY = (
     '<p class="note">Sortable. <b>Capture</b> = how OpenRouter dollars map to the lab. <b>First-party</b>: OR routes to the lab\'s own API, so implied $ ≈ a thin slice of the lab\'s revenue. '
     '<b>Open-weight (hosted)</b>: served by third-party inference providers — dollars accrue to the host, not the model\'s author, so "OR % of ARR" is not meaningful there.</p></div>'
     '<div class="grid2">'
-    '<div><h2>Reported ARR bridge</h2><p class="sub">How thin the OpenRouter slice is vs each lab\'s <i>total</i> reported run-rate (blue tick = OR list-$ ceiling). <span class="mut">* open-weight: OR $ is host revenue, not the lab\'s.</span></p><div class="card">' + bridge_html + '</div></div>'
+    '<div><h2>Reported ARR bridge</h2><p class="sub">How thin the OpenRouter slice is vs each lab\'s <i>total</i> reported run-rate (blue tick = OR list-price scenario). <span class="mut">* open-weight: OR $ is host revenue, not the lab\'s.</span></p><div class="card">' + bridge_html + '</div></div>'
     '<div><h2>Top apps driving demand</h2><p class="sub">Trailing-7-day tokens by consuming app — coding agents dominate.</p><div class="card">' + apps_html + '</div></div>'
     '</div>'
     + newm_html +

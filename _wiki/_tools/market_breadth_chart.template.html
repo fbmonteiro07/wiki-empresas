@@ -1,0 +1,133 @@
+<div id="breadth-20260929">
+  <style>
+    #breadth-20260929{color:var(--foreground);position:relative;font-variant-numeric:tabular-nums}
+    #breadth-20260929 h2{font-size:22px;font-weight:650;line-height:1.2;margin:0 0 6px}
+    #breadth-20260929 .sub{font-size:13px;color:var(--muted-foreground);margin:0 0 16px}
+    #breadth-20260929 .legend{display:flex;gap:12px 22px;flex-wrap:wrap;margin:0 0 22px}
+    #breadth-20260929 .legend button{appearance:none;background:transparent;border:0;border-radius:0;color:var(--foreground);padding:4px 0;display:inline-flex;align-items:center;gap:7px;font:inherit;font-size:13px;cursor:pointer}
+    #breadth-20260929 .swatch{width:20px;height:3px;display:inline-block}
+    #breadth-20260929 .legend button[aria-pressed="false"]{opacity:.4}
+    #breadth-20260929 .panels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+    #breadth-20260929 .panel{min-width:0}
+    #breadth-20260929 h3{font-size:17px;margin:0 0 5px;font-weight:650}
+    #breadth-20260929 .coverage{font-size:12px;color:var(--muted-foreground);line-height:1.55;min-height:40px;margin-bottom:5px}
+    #breadth-20260929 .chart{width:100%;min-width:0}
+    #breadth-20260929 svg{display:block;width:100%;overflow:visible}
+    #breadth-20260929 svg text{fill:var(--foreground);font-size:12px;font-family:inherit}
+    #breadth-20260929 svg .domain,#breadth-20260929 svg .tick line{stroke:var(--border)}
+    #breadth-20260929 table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+    #breadth-20260929 th{font-size:11px;font-weight:500;color:var(--muted-foreground)}
+    #breadth-20260929 td,#breadth-20260929 th{padding:8px 2px;border-bottom:1px solid var(--border);text-align:right;white-space:nowrap}
+    #breadth-20260929 td:first-child,#breadth-20260929 th:first-child{text-align:left}
+    #breadth-20260929 .row-key{display:flex;align-items:center;gap:6px}
+    #breadth-20260929 .row-key .swatch{width:14px}
+    #breadth-20260929 .sources{margin-top:20px;color:var(--muted-foreground);font-size:11px;line-height:1.65}
+    #breadth-20260929 .tooltip{position:absolute;z-index:5;pointer-events:none;background:var(--popover);color:var(--popover-foreground);padding:10px 12px;border:1px solid var(--border);font-size:12px;min-width:210px;max-width:min(290px,100%);box-sizing:border-box}
+    #breadth-20260929 .tip-title{font-weight:600;margin-bottom:6px}
+    #breadth-20260929 .tip-row{display:flex;justify-content:space-between;gap:16px;line-height:1.8}
+    #breadth-20260929 .tip-caption{font-size:11px;color:var(--muted-foreground);margin:4px 0}
+    @media(max-width:700px){#breadth-20260929 .panels{grid-template-columns:1fr;gap:28px}#breadth-20260929 .coverage{min-height:0}#breadth-20260929 table{font-size:14px}#breadth-20260929 h2{font-size:20px}}
+    @media(pointer:coarse){#breadth-20260929 .legend button{min-height:44px}}
+  </style>
+  <h2>Stocks below their all-time highs</h2>
+  <div class="sub">15 trading days · September 8–29, 2026 · Daily closes</div>
+  <div class="legend" aria-label="Drawdown thresholds"></div>
+  <div class="panels"></div>
+  <div class="sources">Source: Bloomberg Desktop API · September 29, 2026 close<br>Fixed September 29 constituent cohort · Share classes counted separately · Cumulative thresholds<br>ATH: highest available historical intraday price through each date · Split-adjusted; cash dividends unadjusted<br>Missing observations: last available close carried forward · Latest carried prices: Nasdaq 114; S&P 500 0; Russell 1</div>
+  <div class="tooltip" role="tooltip" hidden></div>
+  <script type="application/json" id="breadth-data">__BREADTH_DATA__</script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script>
+  (()=>{
+    const root=document.getElementById('breadth-20260929');
+    const data=JSON.parse(root.querySelector('#breadth-data').textContent);
+    if(typeof d3==='undefined'){root.querySelector('.panels').textContent='Chart library could not load. Bloomberg data remains available in the accompanying CSV.';return;}
+    const colors=data.thresholds.map((_,i)=>`var(--viz-series-${i+1})`);
+    const shown=data.thresholds.map(()=>true);
+    const tip=root.querySelector('.tooltip');
+    const fmt=d3.format(',d'), pct=d3.format('.1f'), signed=d3.format('+d'), ret=d3.format('+.2f');
+    const dateLabel=d=>`Sep ${Number(d.slice(-2))}`;
+    const legend=d3.select(root.querySelector('.legend'));
+    const buttons=legend.selectAll('button').data(data.thresholds).join('button').attr('type','button').attr('aria-pressed','true').attr('aria-label',d=>`Show stocks at least ${d}% below ATH`);
+    buttons.append('span').attr('class','swatch').style('background',(_,i)=>colors[i]);
+    buttons.append('span').text(d=>`≥${d}% below ATH`);
+    const panels=[];
+    const all=data.indices.flatMap(p=>p.points.flatMap(d=>d.pct));
+    const ext=d3.extent([...all,0,100]);
+    const yDomain=[Math.max(0,ext[0]-(ext[1]-ext[0])*.03),Math.min(100,ext[1]+(ext[1]-ext[0])*.03)];
+    data.indices.forEach((index,panelIndex)=>{
+      const panel=d3.select(root.querySelector('.panels')).append('section').attr('class','panel');
+      panel.append('h3').text(index.label);
+      panel.append('div').attr('class','coverage').html(`${fmt(index.covered)} / ${fmt(index.universe)} stocks · ${pct(index.coverage_pct)}% coverage<br>Index return: ${ret(index.index_return_pct)}%`);
+      const container=panel.append('div').attr('class','chart').node();
+      const svg=d3.select(container).append('svg').attr('role','img').attr('aria-label',`${index.label}: share of constituent stocks at least 10, 20, 30 and 50 percent below historical highs, September 8 to 29, 2026.`);
+      const table=panel.append('table').attr('aria-label',`${index.label} closing counts and change over 15 trading days`);
+      table.append('thead').append('tr').selectAll('th').data(['Below ATH','Stocks','Share','Δ 15d']).join('th').attr('scope','col').text(d=>d);
+      const rows=table.append('tbody').selectAll('tr').data(data.thresholds).join('tr');
+      rows.append('td').html((t,i)=>`<span class="row-key"><span class="swatch" style="background:${colors[i]}"></span>≥${t}%</span>`);
+      rows.append('td').style('font-weight','650').text((_,i)=>fmt(index.points.at(-1).counts[i]));
+      rows.append('td').text((_,i)=>pct(index.points.at(-1).pct[i])+'%');
+      rows.append('td').text((_,i)=>signed(index.delta_counts[i]));
+      let pinned=false;
+      function draw(){
+        pinned=false;tip.hidden=true;
+        const width=Math.round(container.getBoundingClientRect().width);
+        if(!width)return;
+        const height=260,margin={left:64,right:12,top:19,bottom:54};
+        const L=margin.left,R=width-margin.right,T=margin.top,B=height-margin.bottom;
+        const x=d3.scaleLinear().domain(d3.extent(data.dates.map((_,i)=>i))).range([L+4,R-4]);
+        const y=d3.scaleLinear().domain(yDomain).range([B-4,T+4]);
+        svg.attr('viewBox',`0 0 ${width} ${height}`).attr('height',height).selectAll('*').remove();
+        svg.append('title').text(`${index.label} market breadth`);
+        svg.append('desc').text(`Latest counts: ${data.thresholds.map((t,i)=>`${index.points.at(-1).counts[i]} stocks at least ${t}% below ATH`).join('; ')}. Positive changes mean more stocks below their highs.`);
+        svg.append('rect').attr('data-chart-frame','').attr('x',L).attr('y',T).attr('width',R-L).attr('height',B-T).attr('fill','none').attr('stroke','var(--border)');
+        svg.append('g').selectAll('line').data(y.ticks(5)).join('line').attr('x1',L).attr('x2',R).attr('y1',y).attr('y2',y).attr('stroke','var(--border)').attr('stroke-opacity',.45);
+        const yt=svg.append('g').attr('transform',`translate(${L},0)`).call(d3.axisLeft(y).ticks(5).tickSize(0).tickPadding(8).tickFormat(d=>d+'%'));
+        yt.select('.domain').remove();
+        const ticks=width<380?[0,5,10,15]:[0,3,6,9,12,15];
+        const xt=svg.append('g').attr('transform',`translate(0,${B})`).call(d3.axisBottom(x).tickValues(ticks).tickSize(3).tickPadding(7).tickFormat(d=>Number(data.dates[d].slice(-2))));
+        xt.select('.domain').remove();
+        svg.append('text').attr('class','axis-title').attr('data-axis','y').attr('transform',`translate(13,${(T+B)/2}) rotate(-90)`).attr('text-anchor','middle').text('Constituents (%)');
+        svg.append('text').attr('class','axis-title').attr('data-axis','x').attr('x',(L+R)/2).attr('y',height-6).attr('text-anchor','middle').text('September 2026 · trading days');
+        const guide=svg.append('line').attr('data-chart-hover-guide','').attr('y1',T).attr('y2',B).attr('stroke','var(--foreground)').attr('stroke-opacity',.45).style('display','none');
+        const markers=[];
+        data.thresholds.forEach((t,j)=>{
+          const g=svg.append('g').attr('data-series',t).style('display',shown[j]?null:'none');
+          g.append('path').datum(index.points).attr('fill','none').attr('stroke',colors[j]).attr('stroke-width',2.2).attr('d',d3.line().x((_,i)=>x(i)).y(d=>y(d.pct[j])));
+          g.selectAll('circle').data(index.points).join('circle').attr('cx',(_,i)=>x(i)).attr('cy',d=>y(d.pct[j])).attr('r',2).attr('fill',colors[j]);
+          markers[j]=g.append('circle').attr('data-chart-hover-marker','').attr('r',4).attr('fill',colors[j]).style('display','none');
+        });
+        function hide(){guide.style('display','none');markers.forEach(m=>m.style('display','none'));tip.hidden=true;}
+        function hover(event){
+          const [mx]=d3.pointer(event,svg.node());
+          const cx=Math.max(x(0),Math.min(x(15),mx));
+          const u=x.invert(cx), lo=Math.floor(u),hi=Math.min(15,lo+1),f=u-lo;
+          const near=Math.round(u); const observation=index.points[near];
+          guide.attr('x1',cx).attr('x2',cx).style('display',null);
+          let html=`<div class="tip-title">${index.label}</div><div class="tip-caption">${dateLabel(observation.date)} close · nearest session</div>`;
+          data.thresholds.forEach((t,j)=>{
+            if(!shown[j]){markers[j].style('display','none');return;}
+            const v=index.points[lo].pct[j]*(1-f)+index.points[hi].pct[j]*f;
+            markers[j].attr('cx',cx).attr('cy',y(v)).style('display',null);
+            html+=`<div class="tip-row"><span>≥${t}% below ATH</span><span>${fmt(observation.counts[j])} · ${pct(observation.pct[j])}%</span></div>`;
+          });
+          tip.innerHTML=html;tip.hidden=false;
+          const rr=root.getBoundingClientRect(), sr=svg.node().getBoundingClientRect();
+          const tw=tip.getBoundingClientRect().width,th=tip.getBoundingClientRect().height;
+          let tx=sr.left-rr.left+cx+12;if(tx+tw>rr.width)tx=sr.left-rr.left+cx-tw-12;
+          tip.style.left=Math.max(0,Math.min(rr.width-tw,tx))+'px';
+          tip.style.top=Math.max(0,sr.top-rr.top+T-th-8)+'px';
+        }
+        svg.append('rect').attr('data-chart-hit','').attr('data-chart-hover-overlay','cross-series').attr('x',L).attr('y',T).attr('width',R-L).attr('height',B-T).attr('fill','transparent').on('pointermove',event=>{if(!pinned)hover(event);}).on('pointerleave',()=>{if(!pinned)hide();}).on('click',event=>{pinned=!pinned;if(pinned)hover(event);else hide();});
+        // Verify bounds after rendering. Remove optional x ticks before any collision.
+        const labels=xt.selectAll('.tick text').nodes();
+        let lastRight=-Infinity;
+        labels.forEach((node,i)=>{const b=node.getBoundingClientRect();if(b.left<lastRight+4&&i!==labels.length-1)node.closest('.tick').style.display='none';else lastRight=b.right;});
+        xt.selectAll('.tick text').attr('text-anchor',(_,i)=>i===0?'start':i===ticks.length-1?'end':'middle');
+      }
+      panels.push({draw,svg});new ResizeObserver(draw).observe(container);draw();
+    });
+    buttons.on('click',function(_,threshold){const j=data.thresholds.indexOf(threshold);shown[j]=!shown[j];this.setAttribute('aria-pressed',String(shown[j]));tip.hidden=true;panels.forEach(p=>p.draw());});
+  })();
+  </script>
+</div>

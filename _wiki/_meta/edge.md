@@ -1,6 +1,6 @@
 # Edge tracker — house vs Street
 
-_Generated 2026-09-29 · the standing view of where our model and the curated reconciliation runs disagree with consensus. Divergence = candidate alpha; agreement is noise. Rebuild: `py _wiki/_tools/build_edge.py`._
+_Generated 2026-10-01 · the standing view of where our model and the curated reconciliation runs disagree with consensus. Divergence = candidate alpha; agreement is noise. Rebuild: `py _wiki/_tools/build_edge.py`._
 
 > ⚠️ Programmatic rows are auto-computed (house.json vs estimates.json, USD names only) — **verify the basis before trading** (revenue gross/net/TAC differences can masquerade as edge). Curated rows below are analyst-vetted.
 
@@ -8,8 +8,8 @@ _Generated 2026-09-29 · the standing view of where our model and the curated re
 
 | Ticker | Metric | Yr | House | Consensus | Δ |
 |---|---|---|--:|--:|--:|
-| GOOG | Revenue $bn | 2026 | 505.00 | 427.30 | +18% |
-| GOOG | Revenue $bn | 2027 | 641.00 | 544.10 | +18% |
+| GOOG | Revenue $bn | 2026 | 505.00 | 427.20 | +18% |
+| GOOG | Revenue $bn | 2027 | 641.00 | 545.00 | +18% |
 | AAPL | EPS | 2026 | 10.12 | 8.76 | +16% |
 
 ## Curated divergences — latest reconciliation (`reconciliation-2026-09-28-inbox.md`)
@@ -29,15 +29,15 @@ _Generated 2026-09-29 · the standing view of where our model and the curated re
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|
-| ORCL | 139 | 240 | +73% | street high 400 · low 110 below spot · 41/8/1 of 50 |
-| BKNG | 161 | 239 | +48% | street high 301 · low 188 ABOVE spot · 33/9/0 of 42 |
-| AVGO | 359 | 530 | +48% | street high 715 · low 350 below spot · 58/4/0 of 62 |
-| RDDT | 145 | 214 | +47% | street high 300 · low 130 below spot · 23/11/2 of 36 |
-| SPCX | 148 | 217 | +47% | street high 800 · low 75 below spot · 36/7/4 of 47 |
-| NVDA | 230 | 323 | +41% | street high 515 · low 180 below spot · 79/2/1 of 82 |
-| AMZN | 246 | 331 | +35% | street high 405 · low 230 below spot · 77/4/0 of 81 |
-| MEDIATEK | 4,910 | 5,915 | +20% | street high 10,369 · low 1,751 below spot · 31/1/0 of 32 |
-| LRCX | 323 | 376 | +16% | street high 475 · low 285 below spot · 31/6/0 of 37 |
-| MSFT | 508 | 570 | +12% | street high 700 · low 400 below spot · 69/3/0 of 72 |
-| META | 720 | 790 | +10% | street high 1,000 · low 580 below spot · 72/6/1 of 79 |
-| AMD | 615 | 632 | +3% | street high 1,250 · low 465 below spot · 56/12/0 of 68 |
+| ORCL | 137 | 240 | +75% | street high 400 · low 110 below spot · 41/8/1 of 50 |
+| AVGO | 351 | 530 | +51% | street high 715 · low 350 below spot · 58/4/0 of 62 |
+| RDDT | 142 | 214 | +50% | street high 300 · low 130 below spot · 23/11/2 of 36 |
+| BKNG | 163 | 238 | +46% | street high 301 · low 188 ABOVE spot · 33/9/0 of 42 |
+| SPCX | 151 | 217 | +44% | street high 800 · low 75 below spot · 36/7/4 of 47 |
+| NVDA | 228 | 323 | +41% | street high 515 · low 180 below spot · 79/2/1 of 82 |
+| AMZN | 249 | 331 | +33% | street high 405 · low 230 below spot · 77/4/0 of 81 |
+| MEDIATEK | 4,920 | 5,924 | +20% | street high 10,369 · low 1,751 below spot · 31/1/0 of 32 |
+| LRCX | 329 | 376 | +14% | street high 475 · low 285 below spot · 31/6/0 of 37 |
+| MSFT | 513 | 571 | +11% | street high 700 · low 400 below spot · 69/3/0 of 72 |
+| META | 725 | 790 | +9% | street high 1,000 · low 580 below spot · 72/6/1 of 79 |
+| AMD | 612 | 632 | +3% | street high 1,250 · low 465 below spot · 56/12/0 of 68 |

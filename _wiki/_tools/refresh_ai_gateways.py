@@ -25,6 +25,7 @@ def build_brief(errors=None):
     vd=vg.read_json(vg.ROOT/'dashboard.json') if (vg.ROOT/'dashboard.json').exists() else None
     chart_fragment=gc.publish(WIKI)
     chart_report=vg.read_json(REPORTS/'charts.json')
+    economics=vg.read_json(REPORTS/'token-economics.json')
     errors.extend(w for w in chart_report['warnings'] if w not in errors)
     date=dt.date.fromisoformat(od['asof'])
     history=[json.loads(line) for line in (OR/'history.jsonl').read_text(encoding='utf-8').splitlines() if line.strip()]
@@ -34,7 +35,7 @@ def build_brief(errors=None):
     lines=['# OpenRouter + Vercel — weekly research brief', '', 'Generated: '+now, '',
            '## OpenRouter (existing text-model scope)', '', 'Source: https://openrouter.ai/rankings · snapshot '+od['asof']+' · trailing 7-day totals.', '',
            f"- Token volume: {p['tokens_week']/1e12:.2f}T/week; requests: {p['requests_week']/1e9:.2f}B/week; free-token mix: {p['free_token_pct']*100:.1f}%.",
-           f"- Estimated spend at current list prices, caching off: ${p['revenue_week']/1e6:.1f}M/week. This is a ceiling, not realized revenue."]
+           f"- Text-only spend scenario at current list prices, caching off: ${p['revenue_week']/1e6:.1f}M/week. Uncalibrated list-price estimate; not realized revenue or a guaranteed ceiling."]
     oc=vg.read_json(OR/'open_closed.json') if (OR/'open_closed.json').exists() else None
     lf=(oc or {}).get('latest_full')
     if lf:
@@ -75,9 +76,25 @@ def build_brief(errors=None):
     lines+=['','## Token growth and share charts (all public-feed tokens)','',
             f"- Trailing 7-day tokens: {pulse['tokens_7d']/1e12:.2f}T, window ending {pulse['asof']}; growth {gc.fmt(pulse['growth_pct'],'%',True)} versus {pulse['baseline']} ({pulse['interval_days']} days).",
             f"- Free-tagged share: {pulse['free_share_pct']:.2f}%. Other variants are not necessarily paid. This scope includes all feed tokens; text-only figures above can differ.",
-            '- Ten charts: demand, growth, free mix, lab share history, lab/model movers and Vercel token-versus-estimated-spend shares.',
+            '- Four token economics panels plus ten charts on demand, growth, free mix, lab share history, lab/model movers and Vercel token-versus-estimated-spend shares.',
             '- Chart pack: '+gc.LIVE+'ai-gateways-charts.html',
             '- Email attachment: '+str(REPORTS/'exports'/(dt.date.today().isoformat()+'-ai-gateways-charts.html'))]
+    ep=economics['history'][-1]
+    et=ep['buckets']['total']
+    lines+=['','## OpenRouter token economics — four-panel study','',
+            f"- Captured history: {economics['history_start']} through {economics['asof']}; prices captured {ep['snapshot']}. Source: OpenRouter ranking/model API, calculations by Capstone.",
+            f"- Weekly tokens (HARD): {et['tokens']/1e12:.2f}T; " + '; '.join(f"{label} {ep['buckets'][key]['tokens']/1e12:.2f}T" for key,label in [('open','open-weight'),('closed','closed-weight proxy'),('unknown','unclassified')])+'.',
+            f"- Average catalogue price index: ${gc.fmt(ep['average']['blend'])}/M tokens across {ep['average']['models']} models. Equal weights across models; 50:50 input/output convention; includes models without observed usage.",
+            f"- Volume-weighted list price (PARTIAL): ${gc.fmt(et['wap'])}/M matched tokens. Pricing coverage {et['coverage_pct']:.2f}% of total tokens.",
+            '- Pricing coverage by category: '+'; '.join(f"{label} {gc.fmt(ep['buckets'][key]['coverage_pct'])}%" for key,label in [('open','open-weight'),('closed','closed-weight proxy'),('unknown','unclassified')])+'.',
+            f"- Matched weekly spend (PARTIAL, cache off): ${gc.fmt(et['spend']/1e6 if et['spend'] is not None else None)}M. This is a list-price scenario, not realized spend or a guaranteed ceiling.",
+            f"- Illustrative input cache-read scenarios (ESTIMATE): 50% ${gc.fmt(et['cache50']/1e6 if et['cache50'] is not None else None)}M; 70% ${gc.fmt(et['cache70']/1e6 if et['cache70'] is not None else None)}M. These are not observed cache-hit rates and omit cache writes and other charges.",
+            '- Study: '+gc.LIVE+'openrouter.html#token-economics',
+            '- All four panels, coverage tables and derivation are included in the dated HTML chart attachment. No historical prices are backfilled from later captures. Vercel shares do not support absolute token/spend series.']
+    if ep['raw_diagnostics']['positive_total_usage_rows']:
+        lines+=['- Unresolved public-feed total_usage field: units and scope are unverified; not treated as billed dollars. Zero public cache counters do not establish zero real caching.']
+    if economics['warnings']:
+        lines+=['- Study coverage notes: '+' | '.join(economics['warnings'])]
     lines+=['','## Interpretation and data quality','',
             '- Compare direction within each source. Neither gateway is the overall AI market; the user and workload mix differs.',
             '- Vercel spend is estimated using labs’ published list prices (actual bills may differ); OpenRouter spend is our own list-price/cache-off estimate. Neither is realized lab revenue. Methodology: https://vercel.com/blog/ai-gateway-production-index-september-2026',

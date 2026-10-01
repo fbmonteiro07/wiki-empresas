@@ -7,7 +7,7 @@ Reads  _data/funding_deals.json   (hand-edit ledger + config, attributed)
        _data/funding_market.json  (BBG series written by fetch_funding.py)
 Writes _dashboards/credit-monitor.html  (self-contained, EN, light+dark)
 
-MANUAL RUN BY DESIGN (2026-08-24): not part of refresh_features.py.
+Weekly refresh: refresh_credit_monitor.py (Fridays 09:00 America/Sao_Paulo).
     py "E:/Wiki Felipe empresas/_wiki/_tools/fetch_funding.py"      # market data
     py "E:/Wiki Felipe empresas/_wiki/_tools/build_funding_monitor.py"
 """
@@ -15,6 +15,8 @@ import json
 import html as H
 import datetime as dt
 from pathlib import Path
+from funding_common import observations, change, change_text
+from funding_dashboard_ui import enhance
 
 ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "_wiki" / "_data"
@@ -28,6 +30,11 @@ except FileNotFoundError:
     market = {"fetched_at": "never", "series": [], "errors": ["funding_market.json missing — run fetch_funding.py"]}
 
 E = H.escape
+for series in market.get('series', []):
+    series['points'] = observations(series)
+    if series['points']:
+        series['last_date'], series['last'] = series['points'][-1]
+market['series'] = [s for s in market.get('series', []) if s['points']]
 
 # ---------------------------------------------------------------- helpers
 def sdate(iso):  # "2026-08-24" -> ordinal days
@@ -59,7 +66,7 @@ def line_panel(s, idx):
     lo, hi = min(ys), max(ys)
     pad = (hi - lo) * 0.12 or 0.1
     lo, hi = lo - pad, hi + pad
-    def X(x): return ml + (x - x0) / (x1 - x0) * iw
+    def X(x): return ml + (x - x0) / max(1, x1 - x0) * iw
     def Y(y): return mt + (hi - y) / (hi - lo) * ih
     poly = " ".join(f"{X(x):.1f},{Y(y):.1f}" for x, y in zip(xs, ys))
     # y gridlines: 3
@@ -80,7 +87,7 @@ def line_panel(s, idx):
                             "x0": x0, "x1": x1, "lo": lo, "hi": hi, "ml": ml, "mr": mr, "mt": mt, "mb": mb, "w": W, "h": HH}), quote=True)
     return f"""
 <figure class="lpanel">
- <figcaption><b>{E(s['label'])}</b> <span class="mut">· {E(s['ticker'])} · last <b class="num">{fmt(last_v,dec)}{E(s.get('unit',''))}</b> ({E(last_d)})</span></figcaption>
+ <figcaption><b>{E(s['label'])}</b><span class="chart-value num">{fmt(last_v,dec)}<small>{E(s.get('unit',''))}</small></span><span class="chart-source">Bloomberg · {E(s['ticker'])} · {E(last_d)}</span></figcaption>
  <svg viewBox="0 0 {W} {HH}" data-pts="{payload}" role="img" aria-label="{E(s['label'])} daily series, two years">
   {''.join(gl)}
   <line class="axis" x1="{ml}" x2="{W-mr}" y1="{HH-mb}" y2="{HH-mb}"/>
@@ -97,21 +104,23 @@ def hbar_chart(block):
     rows = block["rows"]
     W, rh, ml, mr = 560, 34, 236, 64
     HH = rh * len(rows) + 30
-    vmax = max(r["bp"] for r in rows) * 1.15
+    low = min(0, min((r['bp'] for r in rows), default=0)) * 1.15
+    high = max(0, max((r['bp'] for r in rows), default=0)) * 1.15
     iw = W - ml - mr
+    def X(value): return ml + (value - low) / (high - low or 1) * iw
     bars = []
     for i, r in enumerate(rows):
         y = 10 + i * rh
-        bw = max(2, r["bp"] / vmax * iw)
+        bw = max(1, abs(X(r['bp']) - X(0)))
+        left = min(X(0), X(r['bp']))
         bars.append(
             f'<text class="lbl" x="{ml-8}" y="{y+17}" text-anchor="end">{E(r["bucket"])}</text>'
-            f'<rect class="barfill" x="{ml}" y="{y+4}" width="{bw:.1f}" height="20" rx="4"/>'
-            f'<rect x="{ml}" y="{y+4}" width="{max(bw-4,1):.1f}" height="20" fill="var(--card)" opacity="0" />'
-            f'<text class="val num" x="{ml+bw+7:.1f}" y="{y+18}">+{r["bp"]}bp</text>'
-            f'<title>{E(r["bucket"])}: +{r["bp"]}bp YTD</title>')
+            f'<rect class="barfill" x="{left:.1f}" y="{y+4}" width="{bw:.1f}" height="20" rx="4"/>'
+            f'<text class="val num" x="{X(max(0,r["bp"]))+7:.1f}" y="{y+18}">{r["bp"]:+g}bp</text>'
+            f'<title>{E(r["bucket"])}: {r["bp"]:+g}bp YTD</title>')
         # wrap each row's marks in a group for hover
         bars[-1] = f'<g class="hrow"><rect class="hit" x="0" y="{y}" width="{W}" height="{rh}" fill="transparent"/>{bars[-1]}</g>'
-    base = f'<line class="axis" x1="{ml}" x2="{ml}" y1="6" y2="{HH-16}"/>'
+    base = f'<line class="axis" x1="{X(0):.1f}" x2="{X(0):.1f}" y1="6" y2="{HH-16}"/>'
     return f'<svg viewBox="0 0 {W} {HH}" role="img" aria-label="YTD spread change by bucket">{base}{"".join(bars)}</svg>'
 
 # ---------------------------------------------------------------- dot plot (project bonds)
@@ -119,7 +128,7 @@ def dot_plot(block):
     rows = block["rows"]
     W, rh, ml, mr = 620, 36, 250, 22
     HH = rh * len(rows) + 44
-    xmax = 15.5
+    xmax = max(15.5, max((r['yield_pct'] for r in rows), default=0) * 1.14)
     iw = W - ml - mr
     def X(v): return ml + v / xmax * iw
     grid, marks = [], []
@@ -144,18 +153,27 @@ def path_chart(block):
     rows = block["rows"]
     W, HH, ml, mr, mt, mb = 620, 210, 52, 118, 16, 30
     iw, ih = W - ml - mr, HH - mt - mb
-    mons = {"2026-03": 0, "2026-04": 1, "2026-05": 2, "2026-06": 3, "2026-07": 4, "2026-07-30": 4.95, "2026-08": 5}
-    def mx(d): return mons.get(d, 5)
-    ymax = 620
-    def X(m): return ml + m / 5 * iw
+    def mx(d): return sdate(d + '-01' if len(d) == 7 else d)
+    xmin = min((mx(r['date']) for r in rows), default=dt.date.today().toordinal())
+    xmax = max((mx(r['date']) for r in rows), default=xmin)
+    ymax = max(620, max((r['spread_bp'] for r in rows), default=0) * 1.18)
+    def X(m): return ml + (m - xmin) / max(1, xmax - xmin) * iw
     def Y(v): return mt + (ymax - v) / ymax * ih
     grid = []
-    for gv in (200, 400, 600):
+    for gv in (ymax / 3, ymax * 2 / 3, ymax):
         grid.append(f'<line class="grid" x1="{ml}" x2="{W-mr}" y1="{Y(gv):.1f}" y2="{Y(gv):.1f}"/>' \
-                    f'<text class="ax" x="{ml-6}" y="{Y(gv)+3:.1f}" text-anchor="end">S+{gv}</text>')
-    for lbl, m in (("Mar", 0), ("Apr", 1), ("May", 2), ("Jun", 3), ("Jul", 4), ("Aug", 5)):
-        grid.append(f'<text class="ax" x="{X(m):.1f}" y="{HH-8}" text-anchor="middle">{lbl} 26</text>')
-    crwv = [r for r in rows if r["issuer"] == "CRWV"]
+                    f'<text class="ax" x="{ml-6}" y="{Y(gv)+3:.1f}" text-anchor="end">S+{gv:.0f}</text>')
+    first, last = dt.date.fromordinal(xmin), dt.date.fromordinal(xmax)
+    first_month, last_month = first.year * 12 + first.month - 1, last.year * 12 + last.month - 1
+    tick_months = list(range(first_month, last_month + 1, max(1, (last_month - first_month + 5) // 6)))
+    if tick_months[-1] != last_month:
+        tick_months.append(last_month)
+    for month in tick_months:
+        tick = dt.date(month // 12, month % 12 + 1, 1)
+        m = max(xmin, tick.toordinal())
+        label = tick.strftime('%b %y')
+        grid.append(f'<text class="ax" x="{X(m):.1f}" y="{HH-8}" text-anchor="middle">{label}</text>')
+    crwv = sorted([r for r in rows if r["issuer"] == "CRWV"], key=lambda r: mx(r['date']))
     others = [r for r in rows if r["issuer"] != "CRWV"]
     line = " ".join(f"{X(mx(r['date'])):.1f},{Y(r['spread_bp']):.1f}" for r in crwv)
     marks = [f'<polyline class="ser2" points="{line}"/>']
@@ -178,7 +196,7 @@ def path_chart(block):
 def issuance_chart(iss):
     W, HH, ml, mb = 480, 210, 56, 40
     ih = HH - 24 - mb
-    vmax = iss["fy26e_high_bn"] * 1.12
+    vmax = max(iss["fy26e_high_bn"], iss['ai_related_ytd_bn'], iss['fy25_total_bn'], 1) * 1.12
     def Y(v): return 24 + (1 - v / vmax) * ih
     bars = [("FY2025", iss["fy25_total_bn"], "b250", f"${iss['fy25_total_bn']}bn"),
             ("2026 YTD", iss["ai_related_ytd_bn"], "b450", f"${iss['ai_related_ytd_bn']}bn"),
@@ -199,22 +217,21 @@ def issuance_chart(iss):
 by_ticker = {s["ticker"]: s for s in market.get("series", [])}
 
 def delta_bp(s, days):
-    pts = s["points"]
-    if len(pts) < days + 1:
-        return None
-    return (pts[-1][1] - pts[-1 - days][1]) * 100
+    result = change(s, days)
+    return result['value'] if result else None
 
 tiles = []
 for s in market.get("series", []):
-    d1m = delta_bp(s, 21)
-    dtxt = f'{"+" if d1m >= 0 else "−"}{abs(d1m):.0f}bp 1m' if d1m is not None else ""
+    weekly = change(s, 7)
+    monthly = change(s, 30)
+    dtxt = ' · '.join(f'{label}: {x["value"]:+.1f} {x["unit"]}' if x else f'{label}: unavailable' for label, x in [('1w', weekly), ('1m', monthly)])
     tiles.append(f'<div class="tile"><div class="tl">{E(s["label"])}</div>'
                  f'<div class="tv num">{fmt(s["last"], s.get("decimals",2))}<span class="tu">{E(s.get("unit",""))}</span></div>'
-                 f'<div class="td num">{dtxt} <span class="mut2">· {E(s["last_date"])}</span></div></div>')
+                 f'<div class="td num" title="1w: {E(change_text(s, 7))}; 1m: {E(change_text(s, 30))}">{dtxt}</div><div class="tile-source">Bloomberg · {E(s["last_date"])}</div></div>')
 iss = deals["issuance"]
 tiles.append(f'<div class="tile"><div class="tl">AI-related issuance YTD</div>'
              f'<div class="tv num">${iss["ai_related_ytd_bn"]}<span class="tu">bn</span></div>'
-             f'<div class="td">vs ${iss["fy25_total_bn"]}bn all of 2025 <span class="mut2">· MS 08-20</span></div></div>')
+             f'<div class="td">vs ${iss["fy25_total_bn"]}bn all of 2025</div><div class="tile-source">MS · 2026-08-20 · historical snapshot</div></div>')
 
 panels = "".join(line_panel(s, i) for i, s in enumerate(market.get("series", [])))
 
@@ -232,7 +249,7 @@ if market.get("series"):
 else:
     gauge_tbl = "<p class='mut'>No market data yet — run fetch_funding.py.</p>"
 
-cat_order = ["Hyperscaler IG", "Neocloud", "Lab / SPV", "Vendor guarantee"]
+cat_order = list(dict.fromkeys(["Hyperscaler IG", "Neocloud", "Lab / SPV", "Vendor guarantee"] + [d['category'] for d in deals['deals']]))
 ledger_rows = []
 for cat in cat_order:
     rows = [d for d in deals["deals"] if d["category"] == cat]
@@ -241,7 +258,7 @@ for cat in cat_order:
     ledger_rows.append(f'<tr class="cat"><td colspan="7">{E(cat)}</td></tr>')
     for d in rows:
         ledger_rows.append(
-            f'<tr><td class="num">{E(d["date"])}</td><td><b>{E(d["issuer"])}</b></td>'
+            f'<tr data-category="{E(cat)}"><td class="num">{E(d["date"])}</td><td><b>{E(d["issuer"])}</b></td>'
             f'<td>{E(d["instrument"])}</td><td class="num">{E(d["size"])}</td>'
             f'<td class="num">{E(d["pricing"])}</td><td>{E(d["counterparty"])}</td>'
             f'<td>{E(d["note"])} <span class="src">[{E(d["source"])}]</span></td></tr>')
@@ -260,7 +277,7 @@ pb = deals["project_bonds_snapshot"]
 sc = deals["spread_change_ytd_bp"]
 
 sc_tbl = "<table><thead><tr><th>Bucket</th><th>YTD Δ (bp)</th></tr></thead><tbody>" + "".join(
-    f"<tr><td>{E(r['bucket'])}</td><td class='num'>+{r['bp']}</td></tr>" for r in sc["rows"]) + "</tbody></table>"
+    f"<tr><td>{E(r['bucket'])}</td><td class='num'>{r['bp']:+g}</td></tr>" for r in sc["rows"]) + "</tbody></table>"
 
 bonds_note = ("<b>Live bond series slot:</b> `bonds[]` in <code>_data/funding_deals.json</code> is empty by design — "
               "paste Bloomberg tickers or <code>/isin/… Corp</code> rows from SRCH (wishlist inside the file: the six "
@@ -384,7 +401,7 @@ document.querySelectorAll('figure.lpanel svg').forEach(svg => {
     let lo = 0, hi = n - 1;
     while (hi - lo > 1){ const m = (lo + hi) >> 1; (dayOf(cfg.dates[m]) < target) ? lo = m : hi = m; }
     const i = (target - dayOf(cfg.dates[lo])) < (dayOf(cfg.dates[hi]) - target) ? lo : hi;
-    const x = cfg.ml + (dayOf(cfg.dates[i]) - d0) / (d1 - d0) * iw;
+    const x = cfg.ml + (dayOf(cfg.dates[i]) - d0) / Math.max(1, d1 - d0) * iw;
     const y = cfg.mt + (cfg.hi - cfg.vals[i]) / (cfg.hi - cfg.lo) * ih;
     cross.setAttribute('x1', x); cross.setAttribute('x2', x); cross.style.display = '';
     dot.setAttribute('cx', x); dot.setAttribute('cy', y); dot.style.display = '';
@@ -411,10 +428,10 @@ page = f"""<!doctype html>
 <header>
  <div class="eyebrow">Capstone · wiki feature dashboard · internal</div>
  <h1>AI Credit &amp; Funding Monitor</h1>
- <p class="dek">{E(deals["meeting_thesis"])} One-line state: <b>index-level credit is calm (HY {hy_bp}bp / IG {ig_bp}bp) — the stress is <i>relative</i>: AI buckets +20–29bp YTD vs broad IG +1bp, and 300–600bp of counterparty tiering on identical assets.</b></p>
+ <p class="dek">Track the cost and availability of capital behind the AI buildout. Compare broad credit conditions with issuer financing, counterparty quality and funding commitments.</p>
  <div class="meta"><span>market data <b>{E(market.get("fetched_at","never")[:16])}</b> (local BBG terminal)</span>
  <span>ledger asof <b>{E(deals["asof"])}</b> (hand-edit: <code>_data/funding_deals.json</code>)</span>
- <span>refresh: <b>manual by design</b> — <code>py _wiki/_tools/fetch_funding.py</code> → <code>py _wiki/_tools/build_funding_monitor.py</code></span>
+ <span>weekly refresh &amp; email: <b>Friday · 09:00 São Paulo</b></span>
  <span><a href="index.html">← dashboards hub</a></span></div>
 </header>
 
@@ -424,9 +441,9 @@ page = f"""<!doctype html>
 
 <section>
  <h2>Market gauges</h2>
- <p class="sub">Two years, daily, local terminal. The meeting's trigger reads off these: if AI credit trades poorly, equity struggles — but the aggregate gauges are benign; use the relative sections below for the actual signal.</p>
+ <p class="sub">Daily Bloomberg observations over two years. Weekly and monthly changes use calendar lookbacks with the actual comparison dates available on hover. Rates and OAS changes are in basis points.</p>
  <div class="gpanels">{panels}</div>
- <details class="card"><summary>Data table — month-end values</summary><div class="tscroll">{gauge_tbl}</div></details>
+ <details class="card"><summary>Data table — last available observation in each month</summary><div class="tscroll">{gauge_tbl}</div></details>
 </section>
 
 <section>
@@ -462,7 +479,7 @@ page = f"""<!doctype html>
 
 <section>
  <h2>Deal ledger</h2>
- <p class="sub">Every row attributed. Hand-edit in <code>_data/funding_deals.json</code>; new issues get added on ingest runs.</p>
+ <p class="sub">Attributed financing records · evidence through {E(deals['asof'])}. Announced capacity, guarantees and committed or funded debt are distinct; amounts must not be added together.</p>
  <div class="card tscroll"><table>
  <thead><tr><th>Date</th><th>Issuer</th><th>Instrument</th><th>Size</th><th>Pricing</th><th>Counterparty / offtake</th><th>Note · source</th></tr></thead>
  <tbody>{''.join(ledger_rows)}</tbody></table></div>
@@ -470,7 +487,7 @@ page = f"""<!doctype html>
 
 <section>
  <h2>Appetite scoreboard</h2>
- <p class="sub">The meeting's mechanism, made falsifiable. Status is a read on TODAY's evidence, not a forecast.</p>
+ <p class="sub">Research assessment recorded {E(deals['asof'])}. These dated judgments require source review before being treated as current signals.</p>
  <div class="card">{''.join(score_rows)}</div>
 </section>
 
@@ -486,5 +503,8 @@ page = f"""<!doctype html>
 <script>{JS}</script>
 </body></html>"""
 
-OUT.write_text(page, encoding="utf-8")
+page = enhance(page, deals, market)
+temporary = OUT.with_suffix('.tmp')
+temporary.write_text(page, encoding="utf-8")
+temporary.replace(OUT)
 print(f"credit monitor -> {OUT}  ({len(page)//1024} KB, {len(market.get('series',[]))} live series, {len(deals['deals'])} ledger rows)")

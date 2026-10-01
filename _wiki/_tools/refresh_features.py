@@ -50,7 +50,7 @@ HUB = [
     ("GPU rental pricing", "gpu-pricing.html", "H100, A100 and B200: Bloomberg rental benchmarks, SemiAnalysis public spot-contract indices and H100 one-year survey ranges, with dated source data."),
     ("AI gateways — weekly brief", "gateway-weekly.html", "Latest weekly summary covering OpenRouter and Vercel, with dated observations and source-specific methodology."),
     ("Analyst Inbox", "analyst-inbox.html", "Ranked daily ideas, model challenges, narrative shifts, catalysts and read-throughs — each with attribution, action and falsifier."),
-    ("AI credit & funding monitor", "credit-monitor.html", "AI issuance, neocloud spreads, counterparty tiering, appetite scoreboard — manual refresh: fetch_funding.py + build_funding_monitor.py."),
+    ("AI credit & funding monitor", "credit-monitor.html", "AI credit spreads, weekly market changes, financing evidence and appetite signals. Weekly refresh and email: Fridays at 09:00 São Paulo."),
     ("Edge tracker", "edge.html", "House vs Street divergences (the alpha) — programmatic + curated."),
     ("Read-through map", "readthrough.html", "Supply-chain & substitutes: who reads through to whom."),
     ("Catalyst loop", "catalysts.html", "Upcoming calendar + passed catalysts awaiting a post-mortem."),
