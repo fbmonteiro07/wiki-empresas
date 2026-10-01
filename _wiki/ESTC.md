@@ -5,7 +5,7 @@
 _Wiki · generated 2026-09-04 · sources: `E:\Wiki Felipe empresas\ESTC\transcripts` (7 earnings calls, Q3 FY25 2025-02-27 → Q1 FY27 2026-08-27) · [themes/ai-data-infra-observability.md](themes/ai-data-infra-observability.md) (corpus sell-side material) · 10 sell-side notes in `relatórios bons` (Barclays · Lenschow ×6, J.P. Morgan · Essex ×4; 2026-05-26 → 2026-08-28 — see Intra-quarter section). SEC filings (2× 10-K, 6× 10-Q, 2024-11 → 2026-08) in `ESTC/` and 3 company decks in `ESTC/apresentações/` (added 2026-09-04 — see § Primary-source datapoints). **Not on disk:** no `_briefings/by-ticker/ESTC.md`, no attributed equity calls. Fiscal year ends April 30 (Q1 FY27 = quarter ended 2026-07-31). Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-09-30 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-10-01 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|

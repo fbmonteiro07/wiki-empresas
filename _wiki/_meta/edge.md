@@ -29,15 +29,15 @@ _Generated 2026-10-01 · the standing view of where our model and the curated re
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|
-| ORCL | 137 | 240 | +75% | street high 400 · low 110 below spot · 41/8/1 of 50 |
-| AVGO | 351 | 530 | +51% | street high 715 · low 350 below spot · 58/4/0 of 62 |
-| RDDT | 142 | 214 | +50% | street high 300 · low 130 below spot · 23/11/2 of 36 |
-| BKNG | 163 | 238 | +46% | street high 301 · low 188 ABOVE spot · 33/9/0 of 42 |
-| SPCX | 151 | 217 | +44% | street high 800 · low 75 below spot · 36/7/4 of 47 |
+| ORCL | 136 | 240 | +76% | street high 400 · low 110 below spot · 41/8/1 of 50 |
+| AVGO | 347 | 530 | +53% | street high 715 · low 350 ABOVE spot · 58/4/0 of 62 |
+| BKNG | 160 | 238 | +49% | street high 301 · low 188 ABOVE spot · 33/9/0 of 42 |
+| RDDT | 144 | 214 | +48% | street high 300 · low 130 below spot · 23/11/2 of 36 |
+| SPCX | 152 | 217 | +43% | street high 800 · low 75 below spot · 36/7/4 of 47 |
 | NVDA | 228 | 323 | +41% | street high 515 · low 180 below spot · 79/2/1 of 82 |
-| AMZN | 249 | 331 | +33% | street high 405 · low 230 below spot · 77/4/0 of 81 |
-| MEDIATEK | 4,920 | 5,924 | +20% | street high 10,369 · low 1,751 below spot · 31/1/0 of 32 |
-| LRCX | 329 | 376 | +14% | street high 475 · low 285 below spot · 31/6/0 of 37 |
-| MSFT | 513 | 571 | +11% | street high 700 · low 400 below spot · 69/3/0 of 72 |
-| META | 725 | 790 | +9% | street high 1,000 · low 580 below spot · 72/6/1 of 79 |
-| AMD | 612 | 632 | +3% | street high 1,250 · low 465 below spot · 56/12/0 of 68 |
+| AMZN | 247 | 331 | +34% | street high 405 · low 230 below spot · 77/4/0 of 81 |
+| MEDIATEK | 4,980 | 5,970 | +20% | street high 10,369 · low 1,751 below spot · 31/1/0 of 32 |
+| LRCX | 335 | 377 | +13% | street high 475 · low 285 below spot · 31/6/0 of 37 |
+| MSFT | 515 | 572 | +11% | street high 725 · low 400 below spot · 69/3/0 of 72 |
+| META | 726 | 790 | +9% | street high 1,000 · low 580 below spot · 72/6/1 of 79 |
+| AMD | 608 | 633 | +4% | street high 1,250 · low 465 below spot · 56/12/0 of 68 |
