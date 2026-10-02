@@ -186,6 +186,12 @@ _Source: **Capstone official model — `P:\Felipe Monteiro\US Equities\Modelos o
 ## Intra-quarter — calls, commentary & reports (since the last print)
 _Q2 FY26 print (2026-07-28 AMC) → intra-quarter · Jul 28 → present. Prior window (Q1 FY26, Apr 29 → Jul 28) archived in [## Changelog](#changelog). **Earnings call (8:30am ET Wed 2026-07-29) transcript read and folded in 2026-08-01.** Timeline visual: [timeline.html](timeline.html)._
 
+**🆕🔭 2026-10-02 (newsletters-to-vault) — AN INDEPENDENT ENGINEER NAMES TERADYNE THE BIGGEST TEST BENEFICIARY IF microLED/VCSEL LIGHT SOURCES WIN SCALE-UP CPO — BUT KEEPS IT ON "WATCH" UNTIL OPTICAL REVENUE OR SCALE-UP ORDERS ARE DISCLOSED.**
+
+- 🔭 (**DAMNANG (Substack)** — "Co-Packaged, Near-Packaged, Always Tested", **2026-10-02**) — [Source](../Damnang/2026-10-02%20-%20Co-Packaged,%20Near-Packaged,%20Always%20Tested.md). ⚠️ **INDEPENDENT SUBSTACK AUTHOR, NOT A BROKER — no rating, no price target, no house model.** The author discloses he may hold the names discussed (states he holds FORM and VIAV, accumulates AEHR); prices as of the 2026-09-30 close.
+- 🔭 **THE ARGUMENT.** microLED and VCSEL arrays use hundreds of slow channels, so test moves from per-channel BER and sub-µm fiber alignment to imaging the whole array for brightness, wavelength and dead emitters. He cites **Iris 100** (released in September: spectrometer + high-resolution camera, combined with UltraFLEXplus for optical and electrical test together) as that tool. Both light-source approaches are still demo/early-product stage; adoption needs follow-on orders.
+- **THE CONDITION.** Teradyne "stays a company to watch" until optical test revenue is disclosed separately or wafer-stage ATE orders for scale-up CPO are confirmed. His scale-up CPO timing is 2028 introduction with the ramp from 2H29, so this is a 2029+ optionality leg, not a near-term driver. ⚠️ The author gives no Teradyne-specific estimate; treat as optionality, not a number.
+
 **🆕🔴🔴 2026-09-21 (/wiki-ingest 21h) — TERADYNE ANNOUNCED A **NEW OPTICAL TEST PLATFORM THAT GROUPS MicroLED TOGETHER WITH SiPh AND CPO** — AND IT LANDS IN THE SAME WEEK THAT **CPO's TESTING PROBLEM IS NAMED BY A SUPPLIER AS THE GATING ITEM** AND THAT UBS PUTS **TEST AND PROBE** INSIDE ITS WFE UPCYCLE.**
 
 - 🔴🔴 THE ANNOUNCEMENT: *"**TER also announced a new OPTICAL TEST PLATFORM that groups MicroLED together with SiPh and CPO.**"* It is reported alongside a burst of MicroLED activity: [[INTC]] *"is in touch with **AUO** for potential collaboration on **CPO and high-density compute chip integration solutions**, as they aggressively move into **MicroLED substrate advanced packaging**"*, and [[TSM]] has reportedly inspected two AUO plants for conversion to advanced packaging (**AUO +9.9% / limit-up**). Other MicroLED names named: **ams-Osram, [[CRDO]], Bizlink**. (Jefferies Asia TMT sales · **Rankie Wong**, *"Reading the Tech Leaves"*, 2026-09-21 — ⚠️ **sales commentary, not research**; underlying Digitimes/Taiwanese press.)
@@ -307,6 +313,7 @@ _Source: TER earnings calls (dates above); management commentary, paraphrased._
 
 ## Changelog
 
+- **2026-10-02 (newsletters-to-vault)** — 1 log block (DAMNANG "Co-Packaged, Near-Packaged, Always Tested": TER as the microLED/VCSEL array-test beneficiary, kept on watch). Independent author, not a broker. Superseded: nothing.
 - **2026-10-01 (/wiki-ingest 21h run of 09-30, completed 10-01)** — 1 log row (GS desk: TER +16% in September; Barclays flow-list mention) — price-tape only; no Sinal change; superseded: nothing.
 - **2026-10-01 (/run-inbox)** — 1 log row (Fubon/Sherman Sept-2026 deck, CPO test-insertion matrix) + Sinal note + Sources. Nothing superseded. **Relay correction (vs the 09-28 Jefferies/Titu row):** the primary's matrix has five numbered insertions (seven test points), with Teradyne #1 tester at Insertion 2 and Insertion 3; the ~5h test time, 40m optical engines and KYEC fleet split are not in the deck.
 - **2026-09-28 (/wiki-ingest 21h, scheduled)** — 3 log rows (Jefferies/Sherman CPO test insertions + KYEC fleet, UBS short-interest rise, UBS physical-AI ideas list) + Sinal note. **Nothing superseded.**
