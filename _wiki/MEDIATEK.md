@@ -7,15 +7,15 @@
 _Wiki · generated 2026-06-20 · **Taiwan issuer — no SEC filings**; sources: transcripts (`E:\Wiki Felipe\MEDIATEK\transcripts`) + MediaTek IR + BBG (**TWD**) · `_equity_calls` · briefings roll-up. Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-01 · TWD
+### 📊 Consensus snapshot — BBG · asof 2026-10-02 · TWD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | NT$659.0bn | NT$1158.6bn |
-| Gross profit | NT$301.2bn | NT$512.1bn |
+| Revenue | NT$659.0bn | NT$1161.1bn |
+| Gross profit | NT$301.2bn | NT$513.2bn |
 | Gross margin | 45.7% | 44.2% |
 | EBITDA | NT$129.7bn | NT$281.5bn |
-| EPS | NT$66.27 | NT$140.67 |
+| EPS | NT$66.27 | NT$140.89 |
 | Capex | NT$18.0bn | NT$25.9bn |
 | OCF (≈EBITDA) | NT$129.7bn | NT$281.5bn |
 
@@ -632,7 +632,9 @@ _Source: MEDIATEK earnings calls (dates above); management commentary, paraphras
 **🆕 Sinal update 2026-10-01 (/wiki-ingest):** ✓ confirma on **Data-center ASIC (>US$2bn 4Q26)**: management re-stated shipments have started and >US$2bn TPU revenue in 4Q26 after the 09-29 -7.1% day (MS Chan, Fubon, Jefferies, Liberty Times follow-up); ⚠ nuança on **Supply / EMIB-T dependency**: the same 09-29 article's v9 yield/SerDes claims are the exact risks JPM Sur has flagged (EMIB, 336G SerDes) and are not refuted by management beyond "tracking plan"; ⚠ nuança on **volume basis**: Fubon primary 0.5mn 2026 TPU units vs "2-2.5mn" in Jefferies sales relays. **Síntese do quarter:** price-action risk, not new fundamentals — shipments and the 4Q guide intact, v9 execution (EMIB-T, SerDes) remains the swing debate.
 
 ## Changelog
+- 2026-10-02 — verification (transcription QA): the Arcuri-relay line named 'Sonny Lin'; the transcript says only 'I would let Sonny comment on what MediaTek is doing' (first name, surname not in the source) — surname removed pending confirmation.
 
+- 2026-10-02 — ingest (Notion, AVGO_UBS-Arcuri-NDR-recap-call-Hock-Tan-CFO_2026-10-02.md): cross-page — Tim Arcuri (UBS) relaying the 2026-10-01 Broadcom NDR: Hock Tan said the MediaTek v9 part is 'not … until at least 2028 … TSMC's not getting allocation that far' (relayed, second-hand; Arcuri: 'MediaTek is not my stock', defers to 'Sonny' — surname not given in the transcript). Conflicts with MediaTek's own line (shipments started, >US$2bn intact for 4Q26: JPM Hariharan 2026-09-29, MS Chan 2026-09-30, Fubon 2026-09-29). Both marks kept; no page number changed. Source: AVGO page Debate block.
 - 2026-10-01 — ingest (Notion, 2026-10-01_JPMorgan_TSMC-3Q26-preview-call-Hariharan.md): added JPM/Gokul's TPU v9 EMIB supply arithmetic (demand ~4-4.5m vs MediaTek + Intel ~3-3.5m supportable) and substrate-vendor yields (Intra-quarter). Nothing superseded.
 - **2026-10-01 (/wiki-ingest 21h run of 09-30, completed 10-01)** — 5 log rows (Liberty Times/TMTB/MS desk press relay; JPM Sur via Tyler; Fubon Quickmail; MS Chan Pulse; Jefferies Silk Road sales) + Sinal; superseded: nothing (MS PT NT$6,188 and Fubon/Jefferies TP NT$6,000 both reiterated; MS OW unchanged). Relay conflict logged, not resolved by averaging: 2026 TPU units 0.5mn (Fubon primary) vs 2-2.5mn (Jefferies sales relays).
 - **2026-10-01 (/run-inbox)** — 2 log rows (Fubon/Sherman Sept-2026 deck; JPM TSMC preview read-through) + Sinal note + Sources. Nothing superseded: Fubon TP NT$6,000 is unchanged (last on this page 2026-07-22). **Relay correction (vs the 09-28 Jefferies/Titu row):** Anthropic TPU 2026/27/28 = 0.9mn / 3.3mn (3.33) / 5mn in the primary, not 1M / 3.4M / 5M; V9 ASP US$15-16k, not US$15K.

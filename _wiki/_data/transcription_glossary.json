@@ -1,6 +1,6 @@
 {
  "_about": "Hand-edited ledger of machine-transcription garbles (Notion AI, Bloomberg ASR, auto-translation) seen in the archive, with the correct reading. Used by E:\\.claude\\scripts\\transcript_qa.py (source-file scan, page-diff scan) and by ingest_notion_meetings.py (writes a 'Transcription QA' block into every archived Notion file). Keys are matched with word boundaries, case-sensitive unless 'ci' is true. 'keep_when' = regex contexts (same line, ~80 chars around the hit) where the token is legitimate and must NOT be flagged. Add an entry the first time a garble is caught; never delete one. Standing rule (Felipe, 2026-09-28): ALWAYS double-check transcript content — acronyms, names, units, numbers — before it travels to a page.",
- "_updated": "2026-10-01",
+ "_updated": "2026-10-02",
  "terms": {
   "Smolik": {
    "correct": "Shmulik (Mark Shmulik, Bernstein US Internet)",
@@ -690,10 +690,37 @@
     "flight control"
    ],
    "first_seen": "2026-09-30 (Hurlston ECOC GPEF recording)"
+  },
+  "Mark Wen": {
+   "correct": "Mark Lin (Semtech EVP & CFO) when the call is a Semtech / SMTC management call",
+   "domain": "names",
+   "rule": "ASR / AI-recap garble of the CFO's surname; the same recap renders the IR head's surname inconsistently (\"Haws\" vs the roster's \"Hawes\") — check the earnings-call roster, do not guess.",
+   "first_seen": "2026-10-02 (UBS-hosted SMTC management call recap, 2026-09-14, forwarded by D. Grozdea)"
+  },
+  "our chair": {
+   "correct": "Archera (the company's own name, spoken by CEO Aran Khanna)",
+   "domain": "names",
+   "rule": "Notion ASR rendered 'Archera' as 'chair' in the opening sentence of the Khanna call ('we really created our chair to help customers').",
+   "keep_when": "literal chair",
+   "first_seen": "2026-10-02 (DB/Archera expert call)"
+  },
+  "Kwok Le": {
+   "correct": "Quoc Le (Google researcher) - probable; verify",
+   "domain": "names",
+   "rule": "Notion ASR on the Archera call ('Jeff Dean and Kwok Le ... leave Google'); the departure claim is the expert's hearsay, not a Google disclosure.",
+   "first_seen": "2026-10-02 (DB/Archera expert call)"
+  },
+  "Neos": {
+   "correct": "NeoClouds (neocloud GPU rental providers)",
+   "domain": "terms",
+   "rule": "Notion ASR/summary plural for 'neoclouds' on the Archera call ('the Blackwell spot price and the Neos').",
+   "keep_when": "never a product",
+   "first_seen": "2026-10-02 (DB/Archera expert call)"
   }
  },
  "summary_traps": [
   "The Notion AI summary inherits every transcript garble AND adds its own: it expanded 'MPO' to 'Module-Pluggable Optics' (2026-09-28), moved a guidance year (fiscal 2025 vs 2028, LITE 2026-09-18), invented a '<15% of industry TAM' sentence (2026-09-18), rendered 'funding short' as 'valuation short' (2026-09-18), hung Meta's $200-300bn figure on AppLovin (2026-09-22), credited the HOST's numbers to the guest (BofA/Bajarin 2026-09-24), and computed its own '~15% CAGR' (Scala 2026-09-24).",
-  "Speakers are unlabeled: questions (Capstone/other investors) and answers run together; the host's arithmetic assented with a 'yeah' is not the guest's number."
+  "Speakers are unlabeled: questions (Capstone/other investors) and answers run together; the host's arithmetic assented with a 'yeah' is not the guest's number.",
+  "2026-10-02: Archera/Khanna call - the summary hangs the spoken commitment-growth marks on named clouds (Google 48.5%, AWS 38%, Azure 39.5%); the transcript speaks them as running rates (~45%->48.5% for one cloud, 36.5%->39.5% for another, consumption ~41%) with the cloud named in the surrounding sentence - map each figure to its cloud IN the transcript, never from the summary; the '300-400% mainframe migration volume' is ONE reseller PARTNER's volume (per Khanna), not Archera's total, and '$1 million minimum MAC/PPA' is spoken as a mid-quarter hyperscaler rule for GPU access. AVGO/Arcuri recap - the summary credits Arcuri's relayed statements to Broadcom management and adds 'Jalapeno', 'Sunfish v5', '440s and 430s' that grep does not find in the transcript."
  ]
 }

@@ -2,19 +2,24 @@
 
 _Generated 2026-10-02 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (48)
+## 📅 Upcoming (55)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
+| 2026-10-02 | MU | 🆕 **2026-10-02 — calendar adds.** **10-07, 07:30 (virtual; time zone not stated in the listing)** — Jefferies conference call with Micron IR: Satya Kumar (CVP, IR & Treasury) and Samir Patodia (Sr. Di |
 | 2026-10-02 | TSLA | **🆕🔴 FRIDAY 2026-10-02 — 3Q26 DELIVERIES + STORAGE DEPLOYMENTS (date now corroborated: Vital Knowledge, 09-29/10-01 — *"Tesla's Q3 deliveries"* on Friday's watch-list).** The marks to score against, s |
 | 2026-10-05 | SNDK | 🆕 **2026-10-05 — BofA HBF expert call (Thomas Coughlin).** A read on HBF timing and TAM; event only. (BofA sales · Brian Fenske, 2026-09-28) |
+| 2026-10-05 | SNDK | 🆕 **2026-10-05, 2pm ET — BofA HBF expert call: Thomas Coughlin (Coughlin Associates; former President of IEEE), hosted by Wamsi Mohan** — sizing the HBF market, the roadmap from samples to full-scale  |
 | 2026-10-06 | AVGO | 🆕 **2026-10-01 NDR and 2026-10-06 MRVL Investor Day as the read-through pair for the 09-29 rumour.** JPM's desk expects Hock may address the MediaTek article on the 10-01 UBS-hosted NDR (already liste |
+| 2026-10-06 | IFX | 🆕 **2026-10-06 (Tue, 10am ET) — BofA semi-distributor call with DigiKey's VP of Global Strategic Pricing, Stephane Bratu, who "oversees pricing for TXN, ON, IFX, NVDA etc." and pricing/volume for 4,00 |
 | 2026-10-06 | MRVL | **🆕🔴 DATED, TWO-STEP: Q2 FY27 print THURSDAY 2026-08-27 (after market close) → INVESTOR DAY MONDAY 2026-10-06, NYC.** Jefferies (Curtis, 2026-08-20) splits the catalyst explicitly: the print is where  |
 | 2026-10-06 | MRVL | **🆕🔴 NEXT, AND IT IS NOW THE ONLY CATALYST THAT MATTERS ON THIS PAGE: INVESTOR DAY — MONDAY 2026-10-06, NYC.** Three desks stated on print night that management deliberately withheld the [[GOOG]] sizi |
+| 2026-10-06 | ON | 🆕 **2026-10-06 (Tue, 10am ET) — BofA semi-distributor call with DigiKey's VP of Global Strategic Pricing, Stephane Bratu, who "oversees pricing for TXN, ON, IFX, NVDA etc." and 4,000+ suppliers** (hos |
 | 2026-10-06 | TXN | **🆕 2026-10-06, 10am ET — BofA semi-distributor call with DigiKey's VP of Global Strategic Pricing (Stephane Bratu), who oversees pricing for TXN, ON, IFX, NVDA and 4,000+ suppliers** — MCU/analog/pow |
 | 2026-10-08 | APP | **🆕 2026-10-08 — BOFA VIDEO-GAME BOGEY POLL RESULTS CALL (Omar Dessouky; APP among five names polled, BofA TMT desk 09-30)**; and the **APP v. Unity TRO application / arbitration track** (no hearing d |
 | 2026-10-08 | COHR | **🆕 2026-10-08 (NYC, 12 PM ET) — MS Lunch "Global Hardware & Optical"** with Andy Meng, Howard Kao, Derrick Yang, Meta Marshall and Erik Woodring; MS desk lists STX, WDC, COHR, LITE, Innolight and Hon |
 | 2026-10-08 | LITE | **🆕 2026-10-08 (NYC, 12 PM ET) — MS Lunch "Global Hardware & Optical"** with Andy Meng, Howard Kao, Derrick Yang, Meta Marshall and Erik Woodring; MS desk lists STX, WDC, COHR, LITE, Innolight and Hon |
+| 2026-10-08 | SAMSUNG | 🆕 **2026-10-08 — 3Q26 PRELIMINARY OPERATING PROFIT, NOW WITH THREE MARKS ON ONE BASIS:** GS **W106tn** (cut from W112tn on the KRW, 10-01), BofA **W107tn** (10-02), Street *"bullish consensus"* **~W11 |
 | 2026-10-13 | AMAT | 🆕 **2026-10-13 (Tue) — AMAT analyst meeting** (Vital Knowledge calendar, 2026-09-30/10-01, press); ASML reports 10-14 (Wed, before EU open) and TSMC 10-15 (Thu) the same week; UBS hosts SEMICON West c |
 | 2026-10-13 | CRDO | **🆕 2026-10-13 — OCP:** Jefferies hosts CRDO investor meetings; first demonstration of MicroLED-powered ALCs and a possible MicroVCSEL roadmap (Jefferies · Curtis, 2026-09-30); JPM's Joseph Cardoso al |
 | 2026-10-14 | ASML | 🆕 **2026-10-14 (Wednesday) — 3Q26 results.** The Street's two focus items are set: (1) whether FY27 low-NA EUV capacity guidance goes to **90+ tools** (from ~85) and whether **2028 is reaffirmed at ≥1 |
@@ -25,7 +30,9 @@ _Generated 2026-10-02 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-10-23 | AAPL | **🆕 2026-10-13 — SMART-HOME LAUNCH** (J490 hub, HomePod mini, Apple TV; Bloomberg via GS / JPM / BofA / Redburn desks, 2026-09-29→10-01); **2026-10-16 Duo pre-orders, 2026-10-23 on sale** (DigiTimes v |
 | 2026-10-26 | MEDIATEK | **🆕🔴 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR "POTENTIAL UPWARD REVISIONS TO GOOGLE TPU-RELATED GUIDANCE."** Between them: **Google system-level validation of v9 in H |
 | 2026-10-27 | FLEX | **🆕 2026-10-27 — Celestica (CLS) analyst day:** the EMS peer's rack/switching numbers (Bernstein top pick; BofA expects a late-October guidance raise) are the read-through for this page's EMS comp set |
+| 2026-10-27 | NXPI | 🆕 **2026-10-27 (Tue, after the US close) — Q3 FY26 print**, per the Vital Knowledge forward calendar (listed with ACGL, BKR, LOGI, PYPL, WM the same evening) (Vital Knowledge, "Vital Dawn", 2026-10-02 |
 | 2026-10-28 | ORCL | **🆕🔴🔴 2026-10-28 — ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as "Investor Day in October").** First opportunity for **new CFO Hilary Maxson** to set long-term financial targ |
+| 2026-10-29 | AIXA | 🆕 **2026-10-29 (Thu, before the EU open) — Q3 FY2026 results**, per the Vital Knowledge forward calendar (listed with Adidas, STM, Shell, VW et al. on the same morning) (Vital Knowledge, "Vital Dawn", |
 | 2026-11-02 | KIOXIA | 🆕 **2026-11-02 (Mon) 9am JST — BofA post-results "doko shuzai" with KIOXIA on FY3/27 2Q results** (BofA · Mikio Hirakawa, via BofA one-liners, 2026-10-01) — dates the Sep-quarter print to before 11-02 |
 | 2026-11-02 | STX | 🆕 **2026-10-08 (12pm ET, NYC) — Morgan Stanley Global Hardware & Optical lunch (Andy Meng, Howard Kao, Derrick Yang, Meta Marshall, Erik Woodring) covering STX/[[WDC]] among others; 2026-11-02/03 — MS |
 | 2026-11-03 | INTC | 🆕 **2026-10-01: Susquehanna "The AI Arms Race" session (Christopher Rolland; AMD, INTC, MRVL, NVDA, AVGO, ARM, QCOM) and 2026-11-03: Intel dinner NDR with CFO and IR, London** (Susquehanna index 09-30 |
@@ -55,12 +62,13 @@ _Generated 2026-10-02 · parsed from every page's 'Catalysts / what to watch'. D
 | 2028-06-30 | NSCALE | 2028-06-30 — Monarch **2 GW gross / 1.37 GW IT online "by 1H28"** (Anthropic tranches; the wiki's first neocloud milestone tied to on-site gas turbines). |
 | 2031-12-31 | NSCALE | 2031-12-31 — Monarch expansion to ~8 GW gross planned. |
 
-## ⏰ Passed — need a post-mortem (2)
+## ⏰ Passed — need a post-mortem (3)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
+| 2026-10-01 | ON | 🆕 **SYNA deal path after the 2026-10-01 re-cut:** any counter-bid from the unnamed "unsolicited competing proposal" party; the SYNA shareholder vote on the all-cash $123; the ~$2.45bn debt raise and i |
 | 2026-10-01 | KIOXIA | 🆕 **2026-10-01/02 — 3D IC conference: Kioxia presents CBA bonding for next-gen QLC (claimed +60% bit density vs 8th gen).** (TrendForce Weekly Radar 003, 2026-09-28) |
 | 2026-10-01 | GOOG | **🆕 2026-10-01 — first Suncatcher TPU orbital test launches on Falcon 9 with Planet Labs** (NYT via 22V · Peterson, 2026-09-24). **Gemini 4 — "much earlier" than year-end, now in post-training** (Kavu |
 

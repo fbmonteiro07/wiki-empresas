@@ -5,7 +5,7 @@
 _Wiki · generated 2026-06-19 · **German issuer (Prime Standard, Frankfurt; ticker AIXA GR) — NO SEC 10-K/10-Q/20-F.** Built from earnings transcripts + Aixtron IR + BBG estimates (EUR). **Internal coverage is thin** — name appears only in briefing read-across, not in our filings/equity-calls corpus. Sources: `E:\Wiki Felipe\AIXA\transcripts` · `E:\briefings\2026`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-01 · EUR
+### 📊 Consensus snapshot — BBG · asof 2026-10-02 · EUR
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -128,6 +128,7 @@ A textbook "weak P&L, strong bookings" quarter. **Revenue EUR 59m, -47% yoy** (w
 
 ## Catalysts / what to watch
 - 🆕 **GaN order intake — END-C26 / START-C27** is management's own window (Jefferies Semis conf, 2026-08-25), with **first shipments C27** and **the first 300mm GaN production tool shipping by end-C26**. The most datable item on the page: an intake event, in a named quarter, committed to in public.
+- 🆕 **2026-10-29 (Thu, before the EU open) — Q3 FY2026 results**, per the Vital Knowledge forward calendar (listed with Adidas, STM, Shell, VW et al. on the same morning) (Vital Knowledge, "Vital Dawn", 2026-10-02 — press calendar, unconfirmed against the company's IR page). The print that scores the ~€200m/quarter intake test above and the JPM "yield question" note of 10-01.
 - 🆕 **SiC utilisation crossing ~85%** — management's stated order-trigger level (2026-08-25). Run-rate is 50-70% (Q3/25) trending "gradually up" (Q1/26), so this is a **watch-item, not a 2027 event**; SiC is guided flat at ~€50m across C26 and C27.
 - 🆕 **The C28 opto tool-intensity question** — whether larger wafers + better 6-inch yields (deflationary to tool count) outrun ELS/UHP InP wafer area (inflationary). Management declined to call it; it is now the main swing factor in C28 opto revenue.
 - 🆕 **Kyber resolution ([[NVDA]] print 2026-08-26 and the next roadmap disclosure)** — reads directly on ~1/3 of management's GaN assumptions, which this wiki carries as cancelled-or-pushed-to-C29+.

@@ -19,7 +19,7 @@ RUN_EST = "--run-estimates" in sys.argv
 STEPS = [
     ("build_index.py", []),         # 00_INDEX.md from _data/index_meta.json (before search index)
     ("extract_house.py", []),
-    ("build_edge.py", []),
+    # ("build_edge.py", []),        # DISABLED 2026-10-02 (Felipe): wiki-edge routine retired; edge.md/edge.html frozen at 2026-10-01
     ("remediate.py", ["--run-estimates"] if RUN_EST else []),
     ("build_readthrough.py", []),
     ("build_diff.py", []),

@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-19 · **20-F filer (UK foreign private issuer)** — files annual 20-F, no 10-K/10-Q · sources: `E:\Wiki Felipe\ARM` (20-Fs FY24–FY26 + transcripts + equity calls) · `_briefings\2026` roll-up · theme [custom-asic-tpu](themes/custom-asic-tpu.md). Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-01 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-10-02 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -176,6 +176,7 @@ _(**SoftBank Group IR / finance executive (not named)**, investor group meeting 
 
 ## Changelog
 
+- 2026-10-02 — ingest (Notion, AVGO_UBS-Arcuri-NDR-recap-call-Hock-Tan-CFO_2026-10-02.md): cross-page — per Arcuri (UBS), relaying the 2026-10-01 Broadcom NDR: XPU customers beginning to add ARM cores inside the XPU for orchestration in the next generation or two, instead of external CPUs (relayed; Arcuri infers a server-TAM rethink). Cuts against the 'every ASIC still needs a host CPU' read on this page; second-hand, no number.
 - **2026-10-01 (/wiki-ingest 21h run of 09-30, completed 10-01)** — 2 log rows (Spear Invest/Delevska [buy-side, talking her book]; tape/positioning), 1 Sinal update. Nothing superseded.
 
 - **2026-10-01 (/run-inbox)** — 1 log row (Fubon/Sherman Sept-2026 deck: Arm server-CPU units and share) + Sinal note + Sources. Nothing superseded on the page; Fubon's own prior 2027 Arm share (20% units / 18% revenue) is cut to 18.4% / 16.8% in the deck.

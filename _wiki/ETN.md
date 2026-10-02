@@ -3,15 +3,15 @@
 _Wiki · generated 2026-06-25 · synthesis-only (no local filings archive) · sources: sell-side notes + Twitter/X corpus, ported from research corpus. Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-01 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-10-02 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $32.2bn | $36.6bn |
+| Revenue | $32.3bn | $36.6bn |
 | Gross profit | $12.1bn | $13.9bn |
 | Gross margin | 37.6% | 38.0% |
 | EBITDA | $7.5bn | $9.0bn |
-| EPS | $13.44 | $15.95 |
+| EPS | $13.45 | $15.95 |
 | Capex | $1.2bn | $1.1bn |
 | OCF (≈EBITDA) | $7.5bn | $9.0bn |
 
@@ -84,6 +84,10 @@ _Section scaffolded by hand 2026-07-30 (`build_intraquarter.py` does not cover E
 | 09-30 | 🆕 **MS TMT desk · Thomas Wigg** (sales commentary — not research; item sourced to a press release) | produto | bull | *"IFX ETN tie-up on SiC solid-state transformers for 800 VDC AI Data Center power architectures."* Infineon–Eaton, one line, no specs. |
 | 10-01 | 🆕 **Goldman Sachs · Daniela Costa / Ines Lefranc / Joe Ritchie / Mark Delaney / Jacqueline Du — "Multi-Industry: Takeaways from Data Center World"** (Research; email is summary only, no ratings/PTs) | demanda | bull | Booth tour with Eaton among ten OEMs at Data Center World Singapore: DC equipment demand strong, capacity tight but supply chains holding (some OEMs pre-ordering key components); **800VDC launches targeted 1H27, broad pickup by end-2027/early-2028**, liquid cooling crucial; modularisation rising; **hyperscalers bypassing facility managers to sign long-term service agreements directly with OEMs**; political/environmental scrutiny *"not yet a real impact on the ground."* Eaton-specific takeaways are in the full note (not read). |
 | 10-01 | 🆕 **22V Research · Dauvin Peterson — "Midterms and the AI Buildout"** (independent, no rating/PT) | produto | bull | Regulatory/public pushback is pushing DC builds toward lower water use: *"ECL, JCI and ETN all fit the list of top beneficiaries for single-phase and integrated liquid cooling exposure."* |
+| 10-01 | 🆕 **GS US Industrials & Materials sector specialist · Ryan Novak (GS FICC & Equities — desk commentary, not research)** + **Barclays Industrials desk · Matty Fuchs (desk-based analyst, sales & trading — not research)** | capital / valuation | bull (tactical) | **ETN is a GS desk LONG** — *"Desk ideas in this backdrop: Longs: ETN EXPD PCAR XPO TT; Sources of Funds: DOV OC GWW AAL CRH"* — in a tape where industrials sit at **1- and 5-year relative lows** and *"sentiment has soured across all the previously popular areas including AI/data center"*; Q3 earnings framed as *"topline strength vs. price/cost headwinds."* Barclays desk, post-conference-season: *"FPS earnings, GEV, ETN, etc. The electrical, power, AI/DC capex trade… money is ready to at least tactically go back into or defend these names again post the sell off while underlying fundamental momentum is still strong and still the best growth area in Industrials"*; margins (price/cost) the issue elsewhere, top lines fine. Tape: ETN among capital-goods outperformers on 10-01 (Vital Knowledge, press). Dated: GS **SuperCompute 11/17/26** with CARR, DOV, ETN, ECL, FLEX, NVT, VRT. (GS desk / Novak, 2026-10-01; Barclays desk / Fuchs, 2026-10-01) |
+| 10-02 | 🆕 **Rothschild & Co Redburn · Edward Hawney (global industrials specialist sales — sales relay of Richard Radbourne's 09-30 "Eaton (Neutral): Rising EPS Expectations are not Lost on the Market")** | valuation / guidance | mixed | Positioning read: *"**Huge consensus long** this one, likely being **funded with Vertiv**"* (the salesman is *"extremely bullish"* on VRT — his view, not the house's Neutral; see [[VRT]]). Radbourne stays Neutral *"despite our EPS CAGR of **+18% (FY26-28)**, 2pts ahead of cons, on the basis that the multiple (**28x NTM P/E**) is already pricing the beat and raise cycle."* ⚠️ Period mismatch vs the 09-30 research relay on this page (FY26-**30** CAGR 18%) — same 18% / +2pp, different window; both kept, neither superseded. New nuance: **Electrical Americas to deliver solid top line and margin in 2H**; in **FY27 *"Boyd's contribution is lost on consensus"* — the market forecasts a ~3pt deceleration in Electrical organic growth y/y, Redburn sees a similar rate of growth if not better.** (Rothschild & Co Redburn / Hawney sales, 2026-10-02) |
+
+**🆕 Sinal update 2026-10-02 (/wiki-ingest):** ⚠ nuança on **valuation / positioning** — the priced-in camp (Redburn Neutral 28x, MS +9% base) now comes with a positioning statement (*"huge consensus long… funded with Vertiv"*), while two desks (GS long idea; Barclays "money tactically going back in") say the capital is returning after the industrials de-rating. ✓ confirms demand/content: Redburn's FY27 Boyd-accretion-not-in-consensus point is the first explicit **FY27 Electrical organic growth** argument on the page (consensus ~3pt deceleration vs Redburn similar-or-better). The trimmed FY margin guide is still untested by third parties — Redburn's "solid 2H margin" is the first partial counter.
 
 **🆕 Sinal update 2026-10-01 (/wiki-ingest):** ⚠ nuança on valuation — Redburn's Neutral/$403 (28x NTM P/E, FY26-30 EPS CAGR 18% vs ~16% consensus) is another view that the content story is real but priced, in line with the MS OW/$500 +9%-base-case read logged 08-20 and against Bernstein's Outperform/$534 (08-12). ✓ confirms content/demand (GS Data Center World; 22V liquid cooling). The trimmed FY margin guide remains untested by third parties.
 
@@ -99,6 +103,7 @@ Synthesis ported from the research-wiki corpus (sell-side notes + Twitter/X). Ke
 
 ## Changelog
 
+- **2026-10-02 (/wiki-ingest 21h run of 10-01, completed 10-02)** — 2 log rows (GS industrials desk long + Barclays indu desk tactical read; Rothschild Redburn sales relay of the 09-30 Neutral with positioning and FY27 Boyd colour), 1 Sinal paragraph. **Nothing superseded** — Redburn Neutral/$403 unchanged; the sales mail's "+18% (FY26-28)" vs the research relay's "FY26-30" is logged as a period mismatch, not a revision. GS SuperCompute 11/17 date added in the row (already on [[VRT]]/[[NVT]]).
 - **2026-10-01 (/wiki-ingest 21h run of 09-30, completed 10-01)** — 4 log rows (Redburn Radbourne, MS desk Wigg, GS Data Center World, 22V), 1 Sinal paragraph; superseded: Redburn PT $386 → $403 (Neutral unchanged; the old $386 appears only in the note's own text, it was not previously on the page).
 - **2026-09-28 (/wiki-ingest 21h, scheduled)** — 1 log row (UBS Physical AI list add; CEO DC growth quote). Nothing superseded. Deliberately NOT used: UBS "228 GW backlog" (units problem).
 - **2026-09-25 (/wiki-ingest 21h, scheduled)** — 1 log row. Nothing superseded.
