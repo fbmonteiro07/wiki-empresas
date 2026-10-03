@@ -1,6 +1,6 @@
 # Daily Analyst Brief
 
-_Generated 2026-10-02 · 100 active signals · latest reconciliation: reconciliation-2026-10-01-inbox.md._
+_Generated 2026-10-02 · 100 active signals · latest reconciliation: reconciliation-2026-10-02.md._
 
 > ⚠️ **Portfolio priority is provisional.** _data/book.json is still a seed with unknown weights. Book badges identify seeded names but do not represent real exposure.
 
@@ -9,15 +9,15 @@ _Generated 2026-10-02 · 100 active signals · latest reconciliation: reconcilia
 | Rank | Ticker | Book | Signals | Why focus now |
 |---:|---|---|---:|---|
 | 1 | **NVDA** | seed | 6 | NVDA — derived thesis/debate state changed since the prior daily snapshot; NVDA — Fubon's 2027 GPU shipments are 53% above the house's chip count |
-| 2 | **AVGO** | seed | 4 | AVGO — derived thesis/debate state changed since the prior daily snapshot; Celestica (no wiki page) — Bernstein 2027 EPS is +20% above consensus; PT near the Street high |
+| 2 | **AVGO** | seed | 4 | AVGO — derived thesis/debate state changed since the prior daily snapshot; AVGO — 2026-10-06: 2026-10-01 NDR and 2026-10-06 MRVL Investor Day as the read-through pair for the 09-29… |
 | 3 | **GOOG** | seed | 5 | GOOG — catalyst passed without a logged outcome; GOOG — 2026 revenue house view is 18% above consensus |
 | 4 | **META** | seed | 4 | META — house CY27 capex is $28bn (−14%) below the Street; Barclays gives Muse's cost per user; META — house capex $301bn vs Street $333-337bn CY26-27 (−10%); GS Buy PT $725 sits BELOW the consensus PT |
-| 5 | **TSM** | seed | 1 | TSM — JPM capex US$86 / 100bn for 2027/28 is +14% / +16% above consensus; house 2026 line stale |
-| 6 | **AAPL** | seed | 2 | AAPL — 2026 EPS house view is 16% above consensus; AAPL — 2026-10-23: SMART-HOME LAUNCH (J490 hub, HomePod mini, Apple TV; Bloomberg via GS / JPM / BofA /… |
-| 7 | **COHR** | — | 5 | LITE / COHR (optics TAM) — Bernstein's transceiver market is 2.3x Goldman's for 2028; no "2028 pause"; COHR — house Neutral $285 is the Street's second-lowest PT; Bernstein OP $350 sits below the consensus median |
-| 8 | **AMD** | — | 3 | Celestica (no wiki page) — Bernstein 2027 EPS is +20% above consensus; PT near the Street high; AMD — management's headline EPS ambition is not above the Street, and the $100bn server goal sits past the Street's horizon |
-| 9 | **LITE** | — | 4 | LITE / COHR (optics TAM) — Bernstein's transceiver market is 2.3x Goldman's for 2028; no "2028 pause"; LITE — 2026-10-14: CITI'S CATALYST WATCH (UPSIDE) EXPIRES. A dated, mechanical sell-side event with a… |
-| 10 | **MU** | — | 4 | MU — derived thesis/debate state changed since the prior daily snapshot; MU — FY27 consensus is post-print on the quarter but not on the year; capex consensus sits below the implied floor |
+| 5 | **AAPL** | seed | 2 | AAPL — 2026 EPS house view is 16% above consensus; AAPL — 2026-10-23: SMART-HOME LAUNCH (J490 hub, HomePod mini, Apple TV; Bloomberg via GS / JPM / BofA /… |
+| 6 | **TSM** | seed | 1 | TSM — JPM capex US$86 / 100bn for 2027/28 is +14% / +16% above consensus; house 2026 line stale |
+| 7 | **MU** | — | 4 | MU — derived thesis/debate state changed since the prior daily snapshot; MU — FY27 consensus is post-print on the quarter but not on the year; capex consensus sits below the implied floor |
+| 8 | **COHR** | — | 5 | LITE / COHR (optics TAM) — Bernstein's transceiver market is 2.3x Goldman's for 2028; no "2028 pause"; COHR — house Neutral $285 is the Street's second-lowest PT; Bernstein OP $350 sits below the consensus median |
+| 9 | **AMD** | — | 3 | Celestica (no wiki page) — Bernstein 2027 EPS is +20% above consensus; PT near the Street high; AMD — management's headline EPS ambition is not above the Street, and the $100bn server goal sits past the Street's horizon |
+| 10 | **LITE** | — | 4 | LITE / COHR (optics TAM) — Bernstein's transceiver market is 2.3x Goldman's for 2028; no "2028 pause"; LITE — 2026-10-14: CITI'S CATALYST WATCH (UPSIDE) EXPIRES. A dated, mechanical sell-side event with a… |
 | 11 | **STX** | — | 2 | STX — derived thesis/debate state changed since the prior daily snapshot; STX — 2026-11-02: Morgan Stanley Global Hardware & Optical lunch (Andy Meng, Howard Kao, Derrick Yang, Meta… |
 | 12 | **ADVANTEST** | — | 1 | ADVANTEST — derived thesis/debate state changed since the prior daily snapshot |
 
@@ -49,46 +49,7 @@ _NARRATIVE SHIFT · HIGH IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 - **Attribution:** NVDA page Changelog 2026-10-02.
 - **Evidence:** [NVDA.md](../NVDA.md) · signal beli-6780b4d7b88c
 
-### 3. 🔴 META — house CY27 capex is $28bn (−14%) below the Street; Barclays gives Muse's cost per user
-
-_MODEL CHECK · HIGH IMPACT · IMMEDIATE · MEDIUM CONFIDENCE_
-
-- **Tickers:** META · seeded book: META
-- **Why now:** Barclays Sandler (09-30): hosting a persistent agent costs $4.07 per DAU per month, made up of a $3.66 VM (AWS m8a.large, 8 users per instance) and $0.41 of inference. That is "~10x more expensive" than ChatGPT's free tier. Barclays says Apple/OpenAI would need "upwards of $40B+ in extra annual compute" to win the free tier, which implies ~820m DAU at $48.84 a year (my arithmetic).
-- **Belief update:** This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.
-- **Action:** Open the META model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
-- **Falsifier:** A like-for-like estimate bridge or company guide that closes the identified gap.
-- **Read-through:** AVGO (supplier: custom ASIC); NVDA (supplier: GPUs); AMD (supplier: MI GPUs); GLW (supplier: optical fiber (LTA)); SNDK (supplier: NAND/SSD); STX (supplier: nearline HDD); WDC (supplier: nearline HDD)
-- **Attribution:** Bernstein · curated reconciliation 2026-10-01.
-- **Evidence:** [reconciliation-2026-10-01-inbox.md](reconciliation-2026-10-01-inbox.md) · signal reco-6e15fb3f3a1c
-
-### 4. 🔴 NVDA — Fubon's 2027 GPU shipments are 53% above the house's chip count
-
-_MODEL CHECK · HIGH IMPACT · IMMEDIATE · MEDIUM CONFIDENCE_
-
-- **Tickers:** NVDA · seeded book: NVDA
-- **Why now:** Fubon (Sept-2026 deck, p.33), figures verified on the page text:
-- **Belief update:** This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.
-- **Action:** Open the NVDA model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
-- **Falsifier:** A like-for-like estimate bridge or company guide that closes the identified gap.
-- **Read-through:** AVGO (competitor: merchant vs custom ASIC); AMZN (customer: GPUs); GOOG (customer: GPUs); META (customer: GPUs); MSFT (customer: GPUs); TSM (supplier: foundry N3/N2 + CoWoS); AMD (competitor: AI accelerators)
-- **Attribution:** Bernstein · curated reconciliation 2026-10-01.
-- **Evidence:** [reconciliation-2026-10-01-inbox.md](reconciliation-2026-10-01-inbox.md) · signal reco-aefa03f61c43
-
-### 5. 🔴 TSM — JPM capex US$86 / 100bn for 2027/28 is +14% / +16% above consensus; house 2026 line stale
-
-_MODEL CHECK · HIGH IMPACT · IMMEDIATE · MEDIUM CONFIDENCE_
-
-- **Tickers:** TSM · seeded book: TSM
-- **Why now:** JPM Hariharan (09-30): OW, PT NT$3,300 (from NT$3,200), which is 20x 12m-forward EPS, at px NT$2,475 on 09-29. JPM vs BBG (live):
-- **Belief update:** This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.
-- **Action:** Open the TSM model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
-- **Falsifier:** A like-for-like estimate bridge or company guide that closes the identified gap.
-- **Read-through:** AAPL (customer: foundry); AVGO (customer: foundry); NVDA (customer: foundry N3/N2 + CoWoS); INTC (competitor: foundry); SAMSUNG (competitor: foundry); SMIC (competitor: foundry); ADVANTEST (supplier: ATE test)
-- **Attribution:** JPM · curated reconciliation 2026-10-01.
-- **Evidence:** [reconciliation-2026-10-01-inbox.md](reconciliation-2026-10-01-inbox.md) · signal reco-2dac6aa267b7
-
-### 6. 🔴 GOOG — 2026 revenue house view is 18% above consensus
+### 3. 🔴 GOOG — 2026 revenue house view is 18% above consensus
 
 _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
@@ -101,7 +62,7 @@ _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 - **Attribution:** Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-10-02.
 - **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-6b1dba5606b4
 
-### 7. 🔴 GOOG — 2027 revenue house view is 18% above consensus
+### 4. 🔴 GOOG — 2027 revenue house view is 18% above consensus
 
 _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
@@ -114,7 +75,7 @@ _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 - **Attribution:** Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-10-02.
 - **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-1b8ed98f58ed
 
-### 8. 🔴 AAPL — 2026 EPS house view is 16% above consensus
+### 5. 🔴 AAPL — 2026 EPS house view is 16% above consensus
 
 _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
@@ -127,33 +88,46 @@ _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 - **Attribution:** Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-10-02.
 - **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-943b1f03fa0e
 
-### 9. 🟡 Celestica (no wiki page) — Bernstein 2027 EPS is +20% above consensus; PT near the Street high
+### 6. 🔴 META — house CY27 capex is $28bn (−14%) below the Street; Barclays gives Muse's cost per user
 
-_MODEL CHECK · MEDIUM IMPACT · IMMEDIATE · MEDIUM CONFIDENCE_
+_MODEL CHECK · HIGH IMPACT · STANDING · MEDIUM CONFIDENCE_
 
-- **Tickers:** GOOG, AVGO, AMD · seeded book: GOOG, AVGO
-- **Why now:** Bernstein: OP, PT $520 (top pick), 2027E $40.0bn / $23.79 vs BBG (CLS US, FY-Dec) $35.66bn / $19.87, i.e. +12% / +20%. Bernstein's own consensus line ($35.5bn / $19.69) matches.
+- **Tickers:** META · seeded book: META
+- **Why now:** Barclays Sandler (09-30): hosting a persistent agent costs $4.07 per DAU per month, made up of a $3.66 VM (AWS m8a.large, 8 users per instance) and $0.41 of inference. That is "~10x more expensive" than ChatGPT's free tier. Barclays says Apple/OpenAI would need "upwards of $40B+ in extra annual compute" to win the free tier, which implies ~820m DAU at $48.84 a year (my arithmetic).
 - **Belief update:** This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.
-- **Action:** Open the GOOG/AVGO/AMD model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
+- **Action:** Open the META model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
 - **Falsifier:** A like-for-like estimate bridge or company guide that closes the identified gap.
-- **Read-through:** NVDA (supplier: GPUs); SNOW (competitor: warehouse vs BigQuery); ANTHROPIC (customer: TPU compute); BE (supplier: on-site fuel cells); CIEN (supplier: DCI/optical); COHR (supplier: optical); DDOG (customer: cloud hosting (consumption runs on hyperscaler infra))
+- **Read-through:** AVGO (supplier: custom ASIC); NVDA (supplier: GPUs); AMD (supplier: MI GPUs); GLW (supplier: optical fiber (LTA)); SNDK (supplier: NAND/SSD); STX (supplier: nearline HDD); WDC (supplier: nearline HDD)
 - **Attribution:** Bernstein · curated reconciliation 2026-10-01.
-- **Evidence:** [reconciliation-2026-10-01-inbox.md](reconciliation-2026-10-01-inbox.md) · signal reco-6d19352f5bc7
+- **Evidence:** [reconciliation-2026-10-01-inbox.md](reconciliation-2026-10-01-inbox.md) · signal reco-6e15fb3f3a1c
 
-### 10. 🟡 LITE / COHR (optics TAM) — Bernstein's transceiver market is 2.3x Goldman's for 2028; no "2028 pause"
+### 7. 🔴 NVDA — Fubon's 2027 GPU shipments are 53% above the house's chip count
 
-_MODEL CHECK · MEDIUM IMPACT · IMMEDIATE · MEDIUM CONFIDENCE_
+_MODEL CHECK · HIGH IMPACT · STANDING · MEDIUM CONFIDENCE_
 
-- **Tickers:** COHR, LITE
-- **Why now:** Bernstein (Exhibit 29; text p.21): transceiver revenue $39bn (2025) → $57bn (2026E) → $99bn (2027E) → $158bn (2028E) → $295bn (2030E), a ~40% CAGR ("from $57B in 2026 to ~$300B in 2030").
+- **Tickers:** NVDA · seeded book: NVDA
+- **Why now:** Fubon (Sept-2026 deck, p.33), figures verified on the page text:
 - **Belief update:** This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.
-- **Action:** Open the COHR/LITE model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
+- **Action:** Open the NVDA model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
 - **Falsifier:** A like-for-like estimate bridge or company guide that closes the identified gap.
-- **Read-through:** AMZN (customer: optical); GOOG (customer: optical); MSFT (customer: optical); NVDA (customer: optical/InP); AIXA (supplier: MOCVD tools); ANET (customer: optical); NVDA (customer: optical)
+- **Read-through:** AVGO (competitor: merchant vs custom ASIC); AMZN (customer: GPUs); GOOG (customer: GPUs); META (customer: GPUs); MSFT (customer: GPUs); TSM (supplier: foundry N3/N2 + CoWoS); AMD (competitor: AI accelerators)
 - **Attribution:** Bernstein · curated reconciliation 2026-10-01.
-- **Evidence:** [reconciliation-2026-10-01-inbox.md](reconciliation-2026-10-01-inbox.md) · signal reco-461b7e89c24a
+- **Evidence:** [reconciliation-2026-10-01-inbox.md](reconciliation-2026-10-01-inbox.md) · signal reco-aefa03f61c43
 
-### 11. 🟡 ADVANTEST — derived thesis/debate state changed since the prior daily snapshot
+### 8. 🔴 TSM — JPM capex US$86 / 100bn for 2027/28 is +14% / +16% above consensus; house 2026 line stale
+
+_MODEL CHECK · HIGH IMPACT · STANDING · MEDIUM CONFIDENCE_
+
+- **Tickers:** TSM · seeded book: TSM
+- **Why now:** JPM Hariharan (09-30): OW, PT NT$3,300 (from NT$3,200), which is 20x 12m-forward EPS, at px NT$2,475 on 09-29. JPM vs BBG (live):
+- **Belief update:** This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.
+- **Action:** Open the TSM model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
+- **Falsifier:** A like-for-like estimate bridge or company guide that closes the identified gap.
+- **Read-through:** AAPL (customer: foundry); AVGO (customer: foundry); NVDA (customer: foundry N3/N2 + CoWoS); INTC (competitor: foundry); SAMSUNG (competitor: foundry); SMIC (competitor: foundry); ADVANTEST (supplier: ATE test)
+- **Attribution:** JPM · curated reconciliation 2026-10-01.
+- **Evidence:** [reconciliation-2026-10-01-inbox.md](reconciliation-2026-10-01-inbox.md) · signal reco-2dac6aa267b7
+
+### 9. 🟡 ADVANTEST — derived thesis/debate state changed since the prior daily snapshot
 
 _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
@@ -166,7 +140,7 @@ _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 - **Attribution:** ADVANTEST page Changelog 2026-10-02.
 - **Evidence:** [ADVANTEST.md](../ADVANTEST.md) · signal beli-6939dca3d907
 
-### 12. 🟡 MU — derived thesis/debate state changed since the prior daily snapshot
+### 10. 🟡 MU — derived thesis/debate state changed since the prior daily snapshot
 
 _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
@@ -178,6 +152,32 @@ _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 - **Read-through:** AVGO (customer: HBM); NVDA (customer: HBM/LPDDR); SKHYNIX (competitor: HBM); AMAT (supplier: WFE); AMD (customer: HBM); ASML (supplier: litho); KLAC (supplier: process control)
 - **Attribution:** MU page Changelog 2026-10-02.
 - **Evidence:** [MU.md](../MU.md) · signal beli-7f8a96e73b12
+
+### 11. 🟡 STX — derived thesis/debate state changed since the prior daily snapshot
+
+_NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
+
+- **Tickers:** STX
+- **Why now:** (/wiki-ingest 21h) — 2 log rows (Jefferies · Wong HDD buy-side feedback, 10-01; Nikkei / TrendForce Toshiba HDD capacity doubling via GS desk + UBS sales, 10-02) + Sinal update (first ✗ of the window, on the supply-discipline leg) + 1 Debate bullet. Nothing superseded — no STX rating / PT / estimate moved; management's "no unit adds" (08-07) left standing as CONTESTED. Skipped as duplicate: BofA former-STX-executive call 10-02, MS CFO NDR 11-02/03 and the 10-08 Hardware & Optical lunch (all on page), Vital…
+- **Belief update:** The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.
+- **Action:** Re-grade the STX thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.
+- **Falsifier:** The fingerprint moved only because of formatting or a derived snapshot insertion.
+- **Read-through:** AMZN (customer: nearline HDD); GOOG (customer: nearline HDD); META (customer: nearline HDD); MSFT (customer: nearline HDD); WDC (competitor: nearline HDD)
+- **Attribution:** STX page Changelog 2026-10-02.
+- **Evidence:** [STX.md](../STX.md) · signal beli-76f90b4a51c0
+
+### 12. 🟡 WDC — derived thesis/debate state changed since the prior daily snapshot
+
+_NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
+
+- **Tickers:** WDC
+- **Why now:** (/wiki-ingest 21h) — 2 log rows (Jefferies · Wong HDD buy-side feedback, 10-01; Nikkei / TrendForce Toshiba HDD capacity doubling via GS desk + UBS sales, 10-02) + first Sinal update of the window (✗ on unit capacity) + 1 Debate bullet. Nothing superseded — no WDC rating / PT / estimate moved; the Seagate-management "no unit adds" claim (08-07) is left standing and now CONTESTED by the Toshiba report rather than replaced. Skipped as duplicate: BofA former-STX-executive call (10-02, on page), MS 10-08 Hardware &…
+- **Belief update:** The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.
+- **Action:** Re-grade the WDC thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.
+- **Falsifier:** The fingerprint moved only because of formatting or a derived snapshot insertion.
+- **Read-through:** AMZN (customer: nearline HDD); GOOG (customer: nearline HDD); META (customer: nearline HDD); MSFT (customer: nearline HDD); STX (competitor: nearline HDD)
+- **Attribution:** WDC page Changelog 2026-10-02.
+- **Evidence:** [WDC.md](../WDC.md) · signal beli-55209b8efed3
 
 ## Catalysts requiring preparation
 

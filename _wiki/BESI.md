@@ -304,6 +304,7 @@ _Source: BESI earnings calls (dates above); management commentary, paraphrased._
 - 🆕 **[Ingest run — 2026-09-15 · /wiki-ingest 21h · BROKER NOTE, CONFERENCE MEETING WITH CEO + IR]** Bernstein · David Dai, CFA / Carmine Milano, CFA — "BESI: SDC Key Takeaways — HBM yield still being worked on but adoption trend unchanged" (2026-09-15; Bernstein's 23rd Strategic Decisions Conference, London). Outperform, PT €320.
 - 🆕 **[Ingest run — 2026-09-15 · /wiki-ingest 21h · BROKER NOTE, COMPANY VISIT]** J.P. Morgan · Sandeep Deshpande — "BE Semiconductor — Company visit notes" (2026-09-15; met CEO Richard Blickman and Head of IR Mark van der Geest in the Netherlands, 2026-09-11).
 - 🆕 **[Ingest run — 2026-09-15 · /wiki-ingest 21h · ⚠️ SPECIALIST SALES COMMENTARY, NOT RESEARCH]** Rothschild & Co · Rowan Adley — "TMT Daily" (2026-09-15): SPIL/ASE Arizona advanced-packaging plan, ASE 2026 capex +$2bn to $10.5bn ($6.5bn equipment), BESI at a 3-month relative low on the 2026-09-14 screen. House rating quoted: Buy.
+- 🆕 [Bernstein · Madison Rezaei et al. — "U.S. Data Center Capacity: Your seat is skewing your numbers. Five ways to forecast DC capacity" (2026-10-01)](../relat%C3%B3rios%20bons/BERN_260832.html) — thematic US-DC-capacity note; BESI in the ticker table only: Outperform, PT €320 (px €191.40; EPS 2025A/26E/27E €1.66/€4.28/€6.60) — same mark already logged (09-15), nothing superseded.
 
 ## Changelog
 

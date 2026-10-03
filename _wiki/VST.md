@@ -158,6 +158,7 @@ _Source: VST earnings calls (dates above); management commentary, paraphrased._
 - **Decks:** none on disk (Apresentações 0 per INDEX).
 - **Equity calls:** 0 attributed (see [INDEX](../INDEX.md) §VST).
 - **Briefings:** [roll-up](../_briefings/by-ticker/VST.md) — thin (1 datapoint / 1 day; MS Helix theme, 2026-06-12).
+- 🆕 [Bernstein · Madison Rezaei et al. — "U.S. Data Center Capacity: Your seat is skewing your numbers. Five ways to forecast DC capacity" (2026-10-01)](../relat%C3%B3rios%20bons/BERN_260832.html) — thematic US-DC-capacity note; VST in the ticker table + investment implications only: Outperform, PT $181 (px $139.75; reported EPS 2025A/26E/27E $2.18/$10.39/$11.45) — same mark already logged, nothing superseded.
 
 ## Changelog
 

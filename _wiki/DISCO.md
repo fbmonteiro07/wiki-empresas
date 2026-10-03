@@ -173,6 +173,7 @@ _Source: DISCO earnings calls (dates above); management commentary, paraphrased.
 - **Outlook:** attempted; mailbox not reachable this session (no messages returned).
 - **Cross-theme:** [cowos-packaging](themes/cowos-packaging.md) · [hbm-memory](themes/hbm-memory.md) · [semicap-wfe](themes/semicap-wfe.md).
 - **[Ingest run — 2026-08-11]** [Bernstein · David Dai / Stacy Rasgon / Qingyuan Lin / Mark Li / Juho Hwang / Carmine Milano — "Global Semiconductor Equipment: Equip this! Raising WFE growth to 75% in two years" (2026-08-11)](../relat%C3%B3rios%20bons/BERN_259278.html) — **DISCO appears in the coverage ticker table only: Outperform, PT ¥85,000 → ¥99,000, px ¥62,980; EPS ¥1,245.79 / 1,830.28 / 2,336.94 (FY25A/26E/27E).** No dedicated paragraph, no investment-implication line, and DISCO is absent from the Japan preference ranking (Kokusai > TEL > Screen). Sector context only: WFE CY26/27/28 to $154bn / $204bn / $259bn, DRAM WFE $69bn/$96bn 2027-28E.
+- 🆕 [Bernstein · Madison Rezaei et al. — "U.S. Data Center Capacity: Your seat is skewing your numbers. Five ways to forecast DC capacity" (2026-10-01)](../relat%C3%B3rios%20bons/BERN_260832.html) — thematic US-DC-capacity note; 6146.JP in the ticker table only: Outperform, PT ¥99,000 (px ¥60,440; EPS ¥1,245.79/1,830.28/2,336.94) — same mark already logged (08-11), nothing superseded.
 
 ## Changelog
 

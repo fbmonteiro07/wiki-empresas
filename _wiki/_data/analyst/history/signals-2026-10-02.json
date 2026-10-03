@@ -1,6 +1,6 @@
 {
   "asof": "2026-10-02",
-  "latest_reconciliation": "reconciliation-2026-10-01-inbox.md",
+  "latest_reconciliation": "reconciliation-2026-10-02.md",
   "book": {
     "asof": "2026-07-01",
     "seed": true,
@@ -40,8 +40,8 @@
       "next_catalyst": "2026-10-06",
       "why": [
         "AVGO — derived thesis/debate state changed since the prior daily snapshot",
-        "Celestica (no wiki page) — Bernstein 2027 EPS is +20% above consensus; PT near the Street high",
-        "AVGO — 2026-10-06: 2026-10-01 NDR and 2026-10-06 MRVL Investor Day as the read-through pair for the 09-29…"
+        "AVGO — 2026-10-06: 2026-10-01 NDR and 2026-10-06 MRVL Investor Day as the read-through pair for the 09-29…",
+        "Celestica (no wiki page) — Bernstein 2027 EPS is +20% above consensus; PT near the Street high"
       ]
     },
     {
@@ -61,7 +61,7 @@
     },
     {
       "ticker": "META",
-      "focus_score": 86,
+      "focus_score": 80,
       "in_book": true,
       "signal_count": 4,
       "high_count": 1,
@@ -72,19 +72,6 @@
         "META — house CY27 capex is $28bn (−14%) below the Street; Barclays gives Muse's cost per user",
         "META — house capex $301bn vs Street $333-337bn CY26-27 (−10%); GS Buy PT $725 sits BELOW the consensus PT",
         "META: Goldman publishes a BUY on top of a model 13% below consensus on 2027 EBIT and 18% below on EPS — while sitting 1.7% ABOVE on revenue"
-      ]
-    },
-    {
-      "ticker": "TSM",
-      "focus_score": 80,
-      "in_book": true,
-      "signal_count": 1,
-      "high_count": 1,
-      "sector": "AI — Semis & Compute",
-      "thesis": "Sole-source leading-edge foundry (~70% share); pricing headroom vs overseas-fab dilution.",
-      "next_catalyst": "",
-      "why": [
-        "TSM — JPM capex US$86 / 100bn for 2027/28 is +14% / +16% above consensus; house 2026 line stale"
       ]
     },
     {
@@ -102,48 +89,16 @@
       ]
     },
     {
-      "ticker": "COHR",
-      "focus_score": 72,
-      "in_book": false,
-      "signal_count": 5,
-      "high_count": 0,
-      "sector": "Optical / Networking",
-      "thesis": "InP chokepoint in AI interconnect; NVIDIA stake + CPO deal; bear is relative vs LITE.",
-      "next_catalyst": "2026-10-08",
-      "why": [
-        "LITE / COHR (optics TAM) — Bernstein's transceiver market is 2.3x Goldman's for 2028; no \"2028 pause\"",
-        "COHR — house Neutral $285 is the Street's second-lowest PT; Bernstein OP $350 sits below the consensus median",
-        "COHR — 2026-10-08: MS Lunch \"Global Hardware & Optical\" with Andy Meng, Howard Kao, Derrick Yang, Meta…"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "focus_score": 70,
-      "in_book": false,
-      "signal_count": 3,
-      "high_count": 0,
+      "ticker": "TSM",
+      "focus_score": 74,
+      "in_book": true,
+      "signal_count": 1,
+      "high_count": 1,
       "sector": "AI — Semis & Compute",
-      "thesis": "AI-infra long with a server-CPU leg; risk concentrated in MI450 execution.",
+      "thesis": "Sole-source leading-edge foundry (~70% share); pricing headroom vs overseas-fab dilution.",
       "next_catalyst": "",
       "why": [
-        "Celestica (no wiki page) — Bernstein 2027 EPS is +20% above consensus; PT near the Street high",
-        "AMD — management's headline EPS ambition is not above the Street, and the $100bn server goal sits past the Street's horizon",
-        "AMD — the number that actually drifted is the CPU:GPU ratio, and the bases may not be like-for-like"
-      ]
-    },
-    {
-      "ticker": "LITE",
-      "focus_score": 70,
-      "in_book": false,
-      "signal_count": 4,
-      "high_count": 0,
-      "sector": "Optical / Networking",
-      "thesis": "US photonics pure-play (rev +90%); demand isn't the question, supply/execution is.",
-      "next_catalyst": "2026-10-08",
-      "why": [
-        "LITE / COHR (optics TAM) — Bernstein's transceiver market is 2.3x Goldman's for 2028; no \"2028 pause\"",
-        "LITE — 2026-10-14: CITI'S CATALYST WATCH (UPSIDE) EXPIRES. A dated, mechanical sell-side event with a…",
-        "LITE — 2026-10-08: MS Lunch \"Global Hardware & Optical\" with Andy Meng, Howard Kao, Derrick Yang, Meta…"
+        "TSM — JPM capex US$86 / 100bn for 2027/28 is +14% / +16% above consensus; house 2026 line stale"
       ]
     },
     {
@@ -159,6 +114,51 @@
         "MU — derived thesis/debate state changed since the prior daily snapshot",
         "MU — FY27 consensus is post-print on the quarter but not on the year; capex consensus sits below the implied floor",
         "MU — 2026-10-02: calendar adds. 10-07, 07:30 (virtual; time zone not stated in the listing) — Jefferies…"
+      ]
+    },
+    {
+      "ticker": "COHR",
+      "focus_score": 66,
+      "in_book": false,
+      "signal_count": 5,
+      "high_count": 0,
+      "sector": "Optical / Networking",
+      "thesis": "InP chokepoint in AI interconnect; NVIDIA stake + CPO deal; bear is relative vs LITE.",
+      "next_catalyst": "2026-10-08",
+      "why": [
+        "LITE / COHR (optics TAM) — Bernstein's transceiver market is 2.3x Goldman's for 2028; no \"2028 pause\"",
+        "COHR — house Neutral $285 is the Street's second-lowest PT; Bernstein OP $350 sits below the consensus median",
+        "COHR — 2026-10-08: MS Lunch \"Global Hardware & Optical\" with Andy Meng, Howard Kao, Derrick Yang, Meta…"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "focus_score": 64,
+      "in_book": false,
+      "signal_count": 3,
+      "high_count": 0,
+      "sector": "AI — Semis & Compute",
+      "thesis": "AI-infra long with a server-CPU leg; risk concentrated in MI450 execution.",
+      "next_catalyst": "",
+      "why": [
+        "Celestica (no wiki page) — Bernstein 2027 EPS is +20% above consensus; PT near the Street high",
+        "AMD — management's headline EPS ambition is not above the Street, and the $100bn server goal sits past the Street's horizon",
+        "AMD — the number that actually drifted is the CPU:GPU ratio, and the bases may not be like-for-like"
+      ]
+    },
+    {
+      "ticker": "LITE",
+      "focus_score": 64,
+      "in_book": false,
+      "signal_count": 4,
+      "high_count": 0,
+      "sector": "Optical / Networking",
+      "thesis": "US photonics pure-play (rev +90%); demand isn't the question, supply/execution is.",
+      "next_catalyst": "2026-10-08",
+      "why": [
+        "LITE / COHR (optics TAM) — Bernstein's transceiver market is 2.3x Goldman's for 2028; no \"2028 pause\"",
+        "LITE — 2026-10-14: CITI'S CATALYST WATCH (UPSIDE) EXPIRES. A dated, mechanical sell-side event with a…",
+        "LITE — 2026-10-08: MS Lunch \"Global Hardware & Optical\" with Andy Meng, Howard Kao, Derrick Yang, Meta…"
       ]
     },
     {
@@ -301,60 +301,6 @@
       ]
     },
     {
-      "ticker": "CSCO",
-      "focus_score": 48,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Optical / Networking",
-      "thesis": "Incumbent re-rating to AI-infra (orders +35%); bear prefers ANET, flags pull-forward.",
-      "next_catalyst": "",
-      "why": [
-        "CSCO / GLW — Bernstein's two Market-Performs are at or near the Street LOW on PT, with estimates in line"
-      ]
-    },
-    {
-      "ticker": "GLW",
-      "focus_score": 48,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Optical / Networking",
-      "thesis": "Re-rate to AI-infra (Optical +36%, Meta/Nvidia LTAs); bear = valuation + CPO payoff 2028+.",
-      "next_catalyst": "",
-      "why": [
-        "CSCO / GLW — Bernstein's two Market-Performs are at or near the Street LOW on PT, with estimates in line"
-      ]
-    },
-    {
-      "ticker": "SKHYNIX",
-      "focus_score": 48,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Memory & storage",
-      "thesis": "#1 HBM, NVDA's primary supplier, sold out through 2026; bear = HBM4 commoditization. ₩, no SEC.",
-      "next_catalyst": "2026-11-19",
-      "why": [
-        "MU / SKHYNIX (memory price path) — Fubon's DRAM contract price falls 16% from the 2Q27 peak while Micron says supply stays constrained through CY28"
-      ]
-    },
-    {
-      "ticker": "CIEN",
-      "focus_score": 47,
-      "in_book": false,
-      "signal_count": 4,
-      "high_count": 0,
-      "sector": "Optical / Networking",
-      "thesis": "Optical/DCI leader; demand outruns supply, debate purely valuation (~85x NTM).",
-      "next_catalyst": "",
-      "why": [
-        "CIEN — Outperform with a PT 15% below consensus, on a PT basis that mislabels the year",
-        "CIEN 2029: the revenue target is already in the curve; the entire surprise is margin — but the comparison is a year offset and must be labelled as such",
-        "CIEN: management's own \"~5x cash generated from operations\" does not close against the published FY25 base"
-      ]
-    },
-    {
       "ticker": "ORCL",
       "focus_score": 47,
       "in_book": false,
@@ -410,6 +356,32 @@
       ]
     },
     {
+      "ticker": "CSCO",
+      "focus_score": 42,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Optical / Networking",
+      "thesis": "Incumbent re-rating to AI-infra (orders +35%); bear prefers ANET, flags pull-forward.",
+      "next_catalyst": "",
+      "why": [
+        "CSCO / GLW — Bernstein's two Market-Performs are at or near the Street LOW on PT, with estimates in line"
+      ]
+    },
+    {
+      "ticker": "GLW",
+      "focus_score": 42,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Optical / Networking",
+      "thesis": "Re-rate to AI-infra (Optical +36%, Meta/Nvidia LTAs); bear = valuation + CPO payoff 2028+.",
+      "next_catalyst": "",
+      "why": [
+        "CSCO / GLW — Bernstein's two Market-Performs are at or near the Street LOW on PT, with estimates in line"
+      ]
+    },
+    {
       "ticker": "IFX",
       "focus_score": 42,
       "in_book": false,
@@ -424,16 +396,16 @@
       ]
     },
     {
-      "ticker": "ANET",
-      "focus_score": 41,
+      "ticker": "SKHYNIX",
+      "focus_score": 42,
       "in_book": false,
       "signal_count": 1,
       "high_count": 0,
-      "sector": "Optical / Networking",
-      "thesis": "Best-positioned merchant AI-Ethernet name; risk = 2H26 backlog drawdown + rich multiple.",
-      "next_catalyst": "",
+      "sector": "Memory & storage",
+      "thesis": "#1 HBM, NVDA's primary supplier, sold out through 2026; bear = HBM4 commoditization. ₩, no SEC.",
+      "next_catalyst": "2026-11-19",
       "why": [
-        "ANET — Bernstein 2027 revenue is +9-14% above consensus, but the note prints three different figures"
+        "MU / SKHYNIX (memory price path) — Fubon's DRAM contract price falls 16% from the 2Q27 peak while Micron says supply stays constrained through CY28"
       ]
     },
     {
@@ -449,6 +421,21 @@
         "ASML — Bernstein's estimates are consensus, but its PT is +22.8% above consensus",
         "ASML — a vintage/basis conflict on \"current\" throughput, flagged and not resolved",
         "ASML — the house EUV model takes the 110 as the number, which is exactly what tonight's note says it is not"
+      ]
+    },
+    {
+      "ticker": "CIEN",
+      "focus_score": 41,
+      "in_book": false,
+      "signal_count": 4,
+      "high_count": 0,
+      "sector": "Optical / Networking",
+      "thesis": "Optical/DCI leader; demand outruns supply, debate purely valuation (~85x NTM).",
+      "next_catalyst": "",
+      "why": [
+        "CIEN 2029: the revenue target is already in the curve; the entire surprise is margin — but the comparison is a year offset and must be labelled as such",
+        "CIEN — Outperform with a PT 15% below consensus, on a PT basis that mislabels the year",
+        "CIEN: management's own \"~5x cash generated from operations\" does not close against the published FY25 base"
       ]
     },
     {
@@ -599,6 +586,19 @@
       "why": [
         "FLEX — 2026-11-10: INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail…",
         "FLEX — 2026-10-27: Celestica (CLS) analyst day: the EMS peer's rack/switching numbers (Bernstein top pick;…"
+      ]
+    },
+    {
+      "ticker": "ANET",
+      "focus_score": 35,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Optical / Networking",
+      "thesis": "Best-positioned merchant AI-Ethernet name; risk = 2H26 backlog drawdown + rich multiple.",
+      "next_catalyst": "",
+      "why": [
+        "ANET — Bernstein 2027 revenue is +9-14% above consensus, but the note prints three different figures"
       ]
     },
     {
@@ -911,252 +911,6 @@
       "hidden": false
     },
     {
-      "id": "reco-6e15fb3f3a1c",
-      "asof": "2026-10-02",
-      "source_date": "2026-10-01",
-      "type": "model_check",
-      "priority": "high",
-      "score": 75,
-      "title": "META — house CY27 capex is $28bn (−14%) below the Street; Barclays gives Muse's cost per user",
-      "tickers": [
-        "META"
-      ],
-      "in_book": [
-        "META"
-      ],
-      "impact": "high",
-      "urgency": "immediate",
-      "confidence": "medium",
-      "why_now": "Barclays Sandler (09-30): hosting a persistent agent costs $4.07 per DAU per month, made up of a $3.66 VM (AWS m8a.large, 8 users per instance) and $0.41 of inference. That is \"~10x more expensive\" than ChatGPT's free tier. Barclays says Apple/OpenAI would need \"upwards of $40B+ in extra annual compute\" to win the free tier, which implies ~820m DAU at $48.84 a year (my arithmetic).",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the META model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
-      "readthrough": [
-        {
-          "ticker": "AVGO",
-          "relation": "supplier",
-          "detail": "custom ASIC",
-          "from": "META",
-          "in_book": true
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "supplier",
-          "detail": "GPUs",
-          "from": "META",
-          "in_book": true
-        },
-        {
-          "ticker": "AMD",
-          "relation": "supplier",
-          "detail": "MI GPUs",
-          "from": "META",
-          "in_book": false
-        },
-        {
-          "ticker": "GLW",
-          "relation": "supplier",
-          "detail": "optical fiber (LTA)",
-          "from": "META",
-          "in_book": false
-        },
-        {
-          "ticker": "SNDK",
-          "relation": "supplier",
-          "detail": "NAND/SSD",
-          "from": "META",
-          "in_book": false
-        },
-        {
-          "ticker": "STX",
-          "relation": "supplier",
-          "detail": "nearline HDD",
-          "from": "META",
-          "in_book": false
-        },
-        {
-          "ticker": "WDC",
-          "relation": "supplier",
-          "detail": "nearline HDD",
-          "from": "META",
-          "in_book": false
-        }
-      ],
-      "source": "Bernstein · curated reconciliation 2026-10-01",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-10-01-inbox.md"
-      ],
-      "evidence_anchor": "META — house CY27 capex is $28bn (−14%) below the Street; Barclays gives Muse's cost per user",
-      "origin": "curated_reconciliation",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "reco-aefa03f61c43",
-      "asof": "2026-10-02",
-      "source_date": "2026-10-01",
-      "type": "model_check",
-      "priority": "high",
-      "score": 75,
-      "title": "NVDA — Fubon's 2027 GPU shipments are 53% above the house's chip count",
-      "tickers": [
-        "NVDA"
-      ],
-      "in_book": [
-        "NVDA"
-      ],
-      "impact": "high",
-      "urgency": "immediate",
-      "confidence": "medium",
-      "why_now": "Fubon (Sept-2026 deck, p.33), figures verified on the page text:",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the NVDA model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
-      "readthrough": [
-        {
-          "ticker": "AVGO",
-          "relation": "competitor",
-          "detail": "merchant vs custom ASIC",
-          "from": "NVDA",
-          "in_book": true
-        },
-        {
-          "ticker": "AMZN",
-          "relation": "customer",
-          "detail": "GPUs",
-          "from": "NVDA",
-          "in_book": true
-        },
-        {
-          "ticker": "GOOG",
-          "relation": "customer",
-          "detail": "GPUs",
-          "from": "NVDA",
-          "in_book": true
-        },
-        {
-          "ticker": "META",
-          "relation": "customer",
-          "detail": "GPUs",
-          "from": "NVDA",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "customer",
-          "detail": "GPUs",
-          "from": "NVDA",
-          "in_book": true
-        },
-        {
-          "ticker": "TSM",
-          "relation": "supplier",
-          "detail": "foundry N3/N2 + CoWoS",
-          "from": "NVDA",
-          "in_book": true
-        },
-        {
-          "ticker": "AMD",
-          "relation": "competitor",
-          "detail": "AI accelerators",
-          "from": "NVDA",
-          "in_book": false
-        }
-      ],
-      "source": "Bernstein · curated reconciliation 2026-10-01",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-10-01-inbox.md"
-      ],
-      "evidence_anchor": "NVDA — Fubon's 2027 GPU shipments are 53% above the house's chip count",
-      "origin": "curated_reconciliation",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "reco-2dac6aa267b7",
-      "asof": "2026-10-02",
-      "source_date": "2026-10-01",
-      "type": "model_check",
-      "priority": "high",
-      "score": 75,
-      "title": "TSM — JPM capex US$86 / 100bn for 2027/28 is +14% / +16% above consensus; house 2026 line stale",
-      "tickers": [
-        "TSM"
-      ],
-      "in_book": [
-        "TSM"
-      ],
-      "impact": "high",
-      "urgency": "immediate",
-      "confidence": "medium",
-      "why_now": "JPM Hariharan (09-30): OW, PT NT$3,300 (from NT$3,200), which is 20x 12m-forward EPS, at px NT$2,475 on 09-29. JPM vs BBG (live):",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the TSM model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
-      "readthrough": [
-        {
-          "ticker": "AAPL",
-          "relation": "customer",
-          "detail": "foundry",
-          "from": "TSM",
-          "in_book": true
-        },
-        {
-          "ticker": "AVGO",
-          "relation": "customer",
-          "detail": "foundry",
-          "from": "TSM",
-          "in_book": true
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "customer",
-          "detail": "foundry N3/N2 + CoWoS",
-          "from": "TSM",
-          "in_book": true
-        },
-        {
-          "ticker": "INTC",
-          "relation": "competitor",
-          "detail": "foundry",
-          "from": "TSM",
-          "in_book": false
-        },
-        {
-          "ticker": "SAMSUNG",
-          "relation": "competitor",
-          "detail": "foundry",
-          "from": "TSM",
-          "in_book": false
-        },
-        {
-          "ticker": "SMIC",
-          "relation": "competitor",
-          "detail": "foundry",
-          "from": "TSM",
-          "in_book": false
-        },
-        {
-          "ticker": "ADVANTEST",
-          "relation": "supplier",
-          "detail": "ATE test",
-          "from": "TSM",
-          "in_book": false
-        }
-      ],
-      "source": "JPM · curated reconciliation 2026-10-01",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-10-01-inbox.md"
-      ],
-      "evidence_anchor": "TSM — JPM capex US$86 / 100bn for 2027/28 is +14% / +16% above consensus; house 2026 line stale",
-      "origin": "curated_reconciliation",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
       "id": "post-9ce5315dc319",
       "asof": "2026-10-02",
       "source_date": "2026-10-01",
@@ -1423,77 +1177,74 @@
       "hidden": false
     },
     {
-      "id": "reco-6d19352f5bc7",
+      "id": "reco-6e15fb3f3a1c",
       "asof": "2026-10-02",
       "source_date": "2026-10-01",
       "type": "model_check",
-      "priority": "medium",
-      "score": 66,
-      "title": "Celestica (no wiki page) — Bernstein 2027 EPS is +20% above consensus; PT near the Street high",
+      "priority": "high",
+      "score": 69,
+      "title": "META — house CY27 capex is $28bn (−14%) below the Street; Barclays gives Muse's cost per user",
       "tickers": [
-        "GOOG",
-        "AVGO",
-        "AMD"
+        "META"
       ],
       "in_book": [
-        "GOOG",
-        "AVGO"
+        "META"
       ],
-      "impact": "medium",
-      "urgency": "immediate",
+      "impact": "high",
+      "urgency": "standing",
       "confidence": "medium",
-      "why_now": "Bernstein: OP, PT $520 (top pick), 2027E $40.0bn / $23.79 vs BBG (CLS US, FY-Dec) $35.66bn / $19.87, i.e. +12% / +20%. Bernstein's own consensus line ($35.5bn / $19.69) matches.",
+      "why_now": "Barclays Sandler (09-30): hosting a persistent agent costs $4.07 per DAU per month, made up of a $3.66 VM (AWS m8a.large, 8 users per instance) and $0.41 of inference. That is \"~10x more expensive\" than ChatGPT's free tier. Barclays says Apple/OpenAI would need \"upwards of $40B+ in extra annual compute\" to win the free tier, which implies ~820m DAU at $48.84 a year (my arithmetic).",
       "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the GOOG/AVGO/AMD model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "action": "Open the META model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
       "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "supplier",
+          "detail": "custom ASIC",
+          "from": "META",
+          "in_book": true
+        },
         {
           "ticker": "NVDA",
           "relation": "supplier",
           "detail": "GPUs",
-          "from": "GOOG",
+          "from": "META",
           "in_book": true
         },
         {
-          "ticker": "SNOW",
-          "relation": "competitor",
-          "detail": "warehouse vs BigQuery",
-          "from": "GOOG",
-          "in_book": false
-        },
-        {
-          "ticker": "ANTHROPIC",
-          "relation": "customer",
-          "detail": "TPU compute",
-          "from": "GOOG",
-          "in_book": false
-        },
-        {
-          "ticker": "BE",
+          "ticker": "AMD",
           "relation": "supplier",
-          "detail": "on-site fuel cells",
-          "from": "GOOG",
+          "detail": "MI GPUs",
+          "from": "META",
           "in_book": false
         },
         {
-          "ticker": "CIEN",
+          "ticker": "GLW",
           "relation": "supplier",
-          "detail": "DCI/optical",
-          "from": "GOOG",
+          "detail": "optical fiber (LTA)",
+          "from": "META",
           "in_book": false
         },
         {
-          "ticker": "COHR",
+          "ticker": "SNDK",
           "relation": "supplier",
-          "detail": "optical",
-          "from": "GOOG",
+          "detail": "NAND/SSD",
+          "from": "META",
           "in_book": false
         },
         {
-          "ticker": "DDOG",
-          "relation": "customer",
-          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
-          "from": "GOOG",
+          "ticker": "STX",
+          "relation": "supplier",
+          "detail": "nearline HDD",
+          "from": "META",
+          "in_book": false
+        },
+        {
+          "ticker": "WDC",
+          "relation": "supplier",
+          "detail": "nearline HDD",
+          "from": "META",
           "in_book": false
         }
       ],
@@ -1501,92 +1252,178 @@
       "evidence_paths": [
         "_meta/reconciliation-2026-10-01-inbox.md"
       ],
-      "evidence_anchor": "Celestica (no wiki page) — Bernstein 2027 EPS is +20% above consensus; PT near the Street high",
+      "evidence_anchor": "META — house CY27 capex is $28bn (−14%) below the Street; Barclays gives Muse's cost per user",
       "origin": "curated_reconciliation",
       "feedback": "",
       "feedback_note": "",
-      "hidden": false
+      "hidden": false,
+      "carried_from": "2026-10-01"
     },
     {
-      "id": "reco-461b7e89c24a",
+      "id": "reco-aefa03f61c43",
       "asof": "2026-10-02",
       "source_date": "2026-10-01",
       "type": "model_check",
-      "priority": "medium",
-      "score": 64,
-      "title": "LITE / COHR (optics TAM) — Bernstein's transceiver market is 2.3x Goldman's for 2028; no \"2028 pause\"",
+      "priority": "high",
+      "score": 69,
+      "title": "NVDA — Fubon's 2027 GPU shipments are 53% above the house's chip count",
       "tickers": [
-        "COHR",
-        "LITE"
+        "NVDA"
       ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
+      "in_book": [
+        "NVDA"
+      ],
+      "impact": "high",
+      "urgency": "standing",
       "confidence": "medium",
-      "why_now": "Bernstein (Exhibit 29; text p.21): transceiver revenue $39bn (2025) → $57bn (2026E) → $99bn (2027E) → $158bn (2028E) → $295bn (2030E), a ~40% CAGR (\"from $57B in 2026 to ~$300B in 2030\").",
+      "why_now": "Fubon (Sept-2026 deck, p.33), figures verified on the page text:",
       "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the COHR/LITE model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "action": "Open the NVDA model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
       "readthrough": [
         {
+          "ticker": "AVGO",
+          "relation": "competitor",
+          "detail": "merchant vs custom ASIC",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
           "ticker": "AMZN",
           "relation": "customer",
-          "detail": "optical",
-          "from": "COHR",
+          "detail": "GPUs",
+          "from": "NVDA",
           "in_book": true
         },
         {
           "ticker": "GOOG",
           "relation": "customer",
-          "detail": "optical",
-          "from": "COHR",
+          "detail": "GPUs",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "META",
+          "relation": "customer",
+          "detail": "GPUs",
+          "from": "NVDA",
           "in_book": true
         },
         {
           "ticker": "MSFT",
           "relation": "customer",
-          "detail": "optical",
-          "from": "COHR",
+          "detail": "GPUs",
+          "from": "NVDA",
           "in_book": true
         },
         {
-          "ticker": "NVDA",
-          "relation": "customer",
-          "detail": "optical/InP",
-          "from": "COHR",
-          "in_book": true
-        },
-        {
-          "ticker": "AIXA",
+          "ticker": "TSM",
           "relation": "supplier",
-          "detail": "MOCVD tools",
-          "from": "COHR",
-          "in_book": false
-        },
-        {
-          "ticker": "ANET",
-          "relation": "customer",
-          "detail": "optical",
-          "from": "COHR",
-          "in_book": false
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "customer",
-          "detail": "optical",
-          "from": "LITE",
+          "detail": "foundry N3/N2 + CoWoS",
+          "from": "NVDA",
           "in_book": true
+        },
+        {
+          "ticker": "AMD",
+          "relation": "competitor",
+          "detail": "AI accelerators",
+          "from": "NVDA",
+          "in_book": false
         }
       ],
       "source": "Bernstein · curated reconciliation 2026-10-01",
       "evidence_paths": [
         "_meta/reconciliation-2026-10-01-inbox.md"
       ],
-      "evidence_anchor": "LITE / COHR (optics TAM) — Bernstein's transceiver market is 2.3x Goldman's for 2028; no \"2028 pause\"",
+      "evidence_anchor": "NVDA — Fubon's 2027 GPU shipments are 53% above the house's chip count",
       "origin": "curated_reconciliation",
       "feedback": "",
       "feedback_note": "",
-      "hidden": false
+      "hidden": false,
+      "carried_from": "2026-10-01"
+    },
+    {
+      "id": "reco-2dac6aa267b7",
+      "asof": "2026-10-02",
+      "source_date": "2026-10-01",
+      "type": "model_check",
+      "priority": "high",
+      "score": 69,
+      "title": "TSM — JPM capex US$86 / 100bn for 2027/28 is +14% / +16% above consensus; house 2026 line stale",
+      "tickers": [
+        "TSM"
+      ],
+      "in_book": [
+        "TSM"
+      ],
+      "impact": "high",
+      "urgency": "standing",
+      "confidence": "medium",
+      "why_now": "JPM Hariharan (09-30): OW, PT NT$3,300 (from NT$3,200), which is 20x 12m-forward EPS, at px NT$2,475 on 09-29. JPM vs BBG (live):",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the TSM model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AAPL",
+          "relation": "customer",
+          "detail": "foundry",
+          "from": "TSM",
+          "in_book": true
+        },
+        {
+          "ticker": "AVGO",
+          "relation": "customer",
+          "detail": "foundry",
+          "from": "TSM",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "foundry N3/N2 + CoWoS",
+          "from": "TSM",
+          "in_book": true
+        },
+        {
+          "ticker": "INTC",
+          "relation": "competitor",
+          "detail": "foundry",
+          "from": "TSM",
+          "in_book": false
+        },
+        {
+          "ticker": "SAMSUNG",
+          "relation": "competitor",
+          "detail": "foundry",
+          "from": "TSM",
+          "in_book": false
+        },
+        {
+          "ticker": "SMIC",
+          "relation": "competitor",
+          "detail": "foundry",
+          "from": "TSM",
+          "in_book": false
+        },
+        {
+          "ticker": "ADVANTEST",
+          "relation": "supplier",
+          "detail": "ATE test",
+          "from": "TSM",
+          "in_book": false
+        }
+      ],
+      "source": "JPM · curated reconciliation 2026-10-01",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-10-01-inbox.md"
+      ],
+      "evidence_anchor": "TSM — JPM capex US$86 / 100bn for 2027/28 is +14% / +16% above consensus; house 2026 line stale",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-10-01"
     },
     {
       "id": "beli-6939dca3d907",
@@ -1930,6 +1767,92 @@
       "hidden": false
     },
     {
+      "id": "reco-6d19352f5bc7",
+      "asof": "2026-10-02",
+      "source_date": "2026-10-01",
+      "type": "model_check",
+      "priority": "medium",
+      "score": 60,
+      "title": "Celestica (no wiki page) — Bernstein 2027 EPS is +20% above consensus; PT near the Street high",
+      "tickers": [
+        "GOOG",
+        "AVGO",
+        "AMD"
+      ],
+      "in_book": [
+        "GOOG",
+        "AVGO"
+      ],
+      "impact": "medium",
+      "urgency": "standing",
+      "confidence": "medium",
+      "why_now": "Bernstein: OP, PT $520 (top pick), 2027E $40.0bn / $23.79 vs BBG (CLS US, FY-Dec) $35.66bn / $19.87, i.e. +12% / +20%. Bernstein's own consensus line ($35.5bn / $19.69) matches.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the GOOG/AVGO/AMD model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "GOOG",
+          "in_book": true
+        },
+        {
+          "ticker": "SNOW",
+          "relation": "competitor",
+          "detail": "warehouse vs BigQuery",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "ANTHROPIC",
+          "relation": "customer",
+          "detail": "TPU compute",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "BE",
+          "relation": "supplier",
+          "detail": "on-site fuel cells",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "CIEN",
+          "relation": "supplier",
+          "detail": "DCI/optical",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "COHR",
+          "relation": "supplier",
+          "detail": "optical",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "DDOG",
+          "relation": "customer",
+          "detail": "cloud hosting (consumption runs on hyperscaler infra)",
+          "from": "GOOG",
+          "in_book": false
+        }
+      ],
+      "source": "Bernstein · curated reconciliation 2026-10-01",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-10-01-inbox.md"
+      ],
+      "evidence_anchor": "Celestica (no wiki page) — Bernstein 2027 EPS is +20% above consensus; PT near the Street high",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-10-01"
+    },
+    {
       "id": "post-237d2547c683",
       "asof": "2026-10-02",
       "source_date": "2026-10-01",
@@ -1960,6 +1883,88 @@
       "feedback": "",
       "feedback_note": "",
       "hidden": false
+    },
+    {
+      "id": "reco-461b7e89c24a",
+      "asof": "2026-10-02",
+      "source_date": "2026-10-01",
+      "type": "model_check",
+      "priority": "medium",
+      "score": 58,
+      "title": "LITE / COHR (optics TAM) — Bernstein's transceiver market is 2.3x Goldman's for 2028; no \"2028 pause\"",
+      "tickers": [
+        "LITE",
+        "COHR"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "standing",
+      "confidence": "medium",
+      "why_now": "Bernstein (Exhibit 29; text p.21): transceiver revenue $39bn (2025) → $57bn (2026E) → $99bn (2027E) → $158bn (2028E) → $295bn (2030E), a ~40% CAGR (\"from $57B in 2026 to ~$300B in 2030\").",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the LITE/COHR model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": true
+        },
+        {
+          "ticker": "AIXA",
+          "relation": "supplier",
+          "detail": "MOCVD tools",
+          "from": "LITE",
+          "in_book": false
+        },
+        {
+          "ticker": "ANET",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": false
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "COHR",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "optical/InP",
+          "from": "COHR",
+          "in_book": true
+        }
+      ],
+      "source": "Bernstein · curated reconciliation 2026-10-01",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-10-01-inbox.md"
+      ],
+      "evidence_anchor": "LITE / COHR (optics TAM) — Bernstein's transceiver market is 2.3x Goldman's for 2028; no \"2028 pause\"",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-10-01"
     },
     {
       "id": "post-f8be264b66db",
@@ -2029,166 +2034,6 @@
       ],
       "evidence_anchor": "🆕🔴 FRIDAY 2026-10-02 — 3Q26 DELIVERIES + STORAGE DEPLOYMENTS (date now corroborated: Vital Knowledge, 09-29/10-01 — \"Tesla's Q3 deliveries\" on Friday's watch-list). The marks to score against, s",
       "origin": "catalyst_calendar",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "reco-08afbb898b71",
-      "asof": "2026-10-02",
-      "source_date": "2026-10-01",
-      "type": "model_check",
-      "priority": "medium",
-      "score": 57,
-      "title": "COHR — house Neutral $285 is the Street's second-lowest PT; Bernstein OP $350 sits below the consensus median",
-      "tickers": [
-        "COHR"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "medium",
-      "why_now": "Bernstein Zhu (09-29): Outperform, PT $350, which is ~22x \"$16 in FY 2028 EPS\" (p.68; model p.104).",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the COHR model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
-      "readthrough": [
-        {
-          "ticker": "AMZN",
-          "relation": "customer",
-          "detail": "optical",
-          "from": "COHR",
-          "in_book": true
-        },
-        {
-          "ticker": "GOOG",
-          "relation": "customer",
-          "detail": "optical",
-          "from": "COHR",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "customer",
-          "detail": "optical",
-          "from": "COHR",
-          "in_book": true
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "customer",
-          "detail": "optical/InP",
-          "from": "COHR",
-          "in_book": true
-        },
-        {
-          "ticker": "LITE",
-          "relation": "competitor",
-          "detail": "optical/InP",
-          "from": "COHR",
-          "in_book": false
-        },
-        {
-          "ticker": "AIXA",
-          "relation": "supplier",
-          "detail": "MOCVD tools",
-          "from": "COHR",
-          "in_book": false
-        },
-        {
-          "ticker": "ANET",
-          "relation": "customer",
-          "detail": "optical",
-          "from": "COHR",
-          "in_book": false
-        }
-      ],
-      "source": "Bernstein · curated reconciliation 2026-10-01",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-10-01-inbox.md"
-      ],
-      "evidence_anchor": "COHR — house Neutral $285 is the Street's second-lowest PT; Bernstein OP $350 sits below the consensus median",
-      "origin": "curated_reconciliation",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "reco-f54e84974b26",
-      "asof": "2026-10-02",
-      "source_date": "2026-10-01",
-      "type": "model_check",
-      "priority": "medium",
-      "score": 57,
-      "title": "MU — FY27 consensus is post-print on the quarter but not on the year; capex consensus sits below the implied floor",
-      "tickers": [
-        "MU"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "medium",
-      "why_now": "Revenue $54.23bn, non-GAAP GM 87.0%, EPS $33.42, vs guide $50.0bn ± 1 / ~86% / $31.00 ± 1.",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the MU model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
-      "readthrough": [
-        {
-          "ticker": "AVGO",
-          "relation": "customer",
-          "detail": "HBM",
-          "from": "MU",
-          "in_book": true
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "customer",
-          "detail": "HBM/LPDDR",
-          "from": "MU",
-          "in_book": true
-        },
-        {
-          "ticker": "SKHYNIX",
-          "relation": "competitor",
-          "detail": "HBM",
-          "from": "MU",
-          "in_book": false
-        },
-        {
-          "ticker": "AMAT",
-          "relation": "supplier",
-          "detail": "WFE",
-          "from": "MU",
-          "in_book": false
-        },
-        {
-          "ticker": "AMD",
-          "relation": "customer",
-          "detail": "HBM",
-          "from": "MU",
-          "in_book": false
-        },
-        {
-          "ticker": "ASML",
-          "relation": "supplier",
-          "detail": "litho",
-          "from": "MU",
-          "in_book": false
-        },
-        {
-          "ticker": "KLAC",
-          "relation": "supplier",
-          "detail": "process control",
-          "from": "MU",
-          "in_book": false
-        }
-      ],
-      "source": "management/company primary + BofA + UBS · curated reconciliation 2026-10-01",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-10-01-inbox.md"
-      ],
-      "evidence_anchor": "MU — FY27 consensus is post-print on the quarter but not on the year; capex consensus sits below the implied floor",
-      "origin": "curated_reconciliation",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
@@ -2440,6 +2285,168 @@
       "hidden": false
     },
     {
+      "id": "reco-08afbb898b71",
+      "asof": "2026-10-02",
+      "source_date": "2026-10-01",
+      "type": "model_check",
+      "priority": "medium",
+      "score": 51,
+      "title": "COHR — house Neutral $285 is the Street's second-lowest PT; Bernstein OP $350 sits below the consensus median",
+      "tickers": [
+        "COHR"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "standing",
+      "confidence": "medium",
+      "why_now": "Bernstein Zhu (09-29): Outperform, PT $350, which is ~22x \"$16 in FY 2028 EPS\" (p.68; model p.104).",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the COHR model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "COHR",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "COHR",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "COHR",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "optical/InP",
+          "from": "COHR",
+          "in_book": true
+        },
+        {
+          "ticker": "LITE",
+          "relation": "competitor",
+          "detail": "optical/InP",
+          "from": "COHR",
+          "in_book": false
+        },
+        {
+          "ticker": "AIXA",
+          "relation": "supplier",
+          "detail": "MOCVD tools",
+          "from": "COHR",
+          "in_book": false
+        },
+        {
+          "ticker": "ANET",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "COHR",
+          "in_book": false
+        }
+      ],
+      "source": "Bernstein · curated reconciliation 2026-10-01",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-10-01-inbox.md"
+      ],
+      "evidence_anchor": "COHR — house Neutral $285 is the Street's second-lowest PT; Bernstein OP $350 sits below the consensus median",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-10-01"
+    },
+    {
+      "id": "reco-f54e84974b26",
+      "asof": "2026-10-02",
+      "source_date": "2026-10-01",
+      "type": "model_check",
+      "priority": "medium",
+      "score": 51,
+      "title": "MU — FY27 consensus is post-print on the quarter but not on the year; capex consensus sits below the implied floor",
+      "tickers": [
+        "MU"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "standing",
+      "confidence": "medium",
+      "why_now": "Revenue $54.23bn, non-GAAP GM 87.0%, EPS $33.42, vs guide $50.0bn ± 1 / ~86% / $31.00 ± 1.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the MU model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "customer",
+          "detail": "HBM",
+          "from": "MU",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "HBM/LPDDR",
+          "from": "MU",
+          "in_book": true
+        },
+        {
+          "ticker": "SKHYNIX",
+          "relation": "competitor",
+          "detail": "HBM",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "AMAT",
+          "relation": "supplier",
+          "detail": "WFE",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "AMD",
+          "relation": "customer",
+          "detail": "HBM",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "ASML",
+          "relation": "supplier",
+          "detail": "litho",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "KLAC",
+          "relation": "supplier",
+          "detail": "process control",
+          "from": "MU",
+          "in_book": false
+        }
+      ],
+      "source": "management/company primary + BofA + UBS · curated reconciliation 2026-10-01",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-10-01-inbox.md"
+      ],
+      "evidence_anchor": "MU — FY27 consensus is post-print on the quarter but not on the year; capex consensus sits below the implied floor",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-10-01"
+    },
+    {
       "id": "cata-b89bcb2c7572",
       "asof": "2026-10-02",
       "source_date": "2026-10-06",
@@ -2670,168 +2677,6 @@
       ],
       "evidence_anchor": "🆕 2026-10-02 — calendar adds. 10-07, 07:30 (virtual; time zone not stated in the listing) — Jefferies conference call with Micron IR: Satya Kumar (CVP, IR & Treasury) and Samir Patodia (Sr. Di",
       "origin": "catalyst_calendar",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "reco-5b10ab6f72fe",
-      "asof": "2026-10-02",
-      "source_date": "2026-10-01",
-      "type": "model_check",
-      "priority": "medium",
-      "score": 48,
-      "title": "CSCO / GLW — Bernstein's two Market-Performs are at or near the Street LOW on PT, with estimates in line",
-      "tickers": [
-        "CSCO",
-        "GLW"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "medium",
-      "why_now": "CSCO: MP, PT $110, which equals the BBG Street low ($110); consensus is $138.88 (hi $170, n=31) and px $108.76. Estimates are in line:",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the CSCO/GLW model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
-      "readthrough": [
-        {
-          "ticker": "ANET",
-          "relation": "competitor",
-          "detail": "AI networking",
-          "from": "CSCO",
-          "in_book": false
-        },
-        {
-          "ticker": "DDOG",
-          "relation": "competitor",
-          "detail": "observability vs Splunk",
-          "from": "CSCO",
-          "in_book": false
-        },
-        {
-          "ticker": "DT",
-          "relation": "competitor",
-          "detail": "observability vs Splunk",
-          "from": "CSCO",
-          "in_book": false
-        },
-        {
-          "ticker": "ESTC",
-          "relation": "competitor",
-          "detail": "SIEM/logs vs Splunk",
-          "from": "CSCO",
-          "in_book": false
-        },
-        {
-          "ticker": "AMZN",
-          "relation": "customer",
-          "detail": "optical fiber",
-          "from": "GLW",
-          "in_book": true
-        },
-        {
-          "ticker": "META",
-          "relation": "customer",
-          "detail": "optical fiber (LTA)",
-          "from": "GLW",
-          "in_book": true
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "customer",
-          "detail": "optical fiber",
-          "from": "GLW",
-          "in_book": true
-        }
-      ],
-      "source": "Bernstein · curated reconciliation 2026-10-01",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-10-01-inbox.md"
-      ],
-      "evidence_anchor": "CSCO / GLW — Bernstein's two Market-Performs are at or near the Street LOW on PT, with estimates in line",
-      "origin": "curated_reconciliation",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "reco-13cc6859d7e2",
-      "asof": "2026-10-02",
-      "source_date": "2026-10-01",
-      "type": "model_check",
-      "priority": "medium",
-      "score": 48,
-      "title": "MU / SKHYNIX (memory price path) — Fubon's DRAM contract price falls 16% from the 2Q27 peak while Micron says supply stays constrained through CY28",
-      "tickers": [
-        "SKHYNIX",
-        "MU"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "medium",
-      "why_now": "Commodity DRAM contract (TrendForce-based): 1.45 → 1.81 → 2.10 → 2.17 → 2.25 (2Q27 peak) → 2.17 → 2.03 → 1.91 → 1.89 (2Q28). That is −3.2% / −6.7% / −5.7% / −1.5% q/q from 3Q27, and −16% from peak to 2Q28.",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the SKHYNIX/MU model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
-      "readthrough": [
-        {
-          "ticker": "AVGO",
-          "relation": "customer",
-          "detail": "HBM",
-          "from": "SKHYNIX",
-          "in_book": true
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "customer",
-          "detail": "HBM",
-          "from": "SKHYNIX",
-          "in_book": true
-        },
-        {
-          "ticker": "SAMSUNG",
-          "relation": "competitor",
-          "detail": "HBM/DRAM",
-          "from": "SKHYNIX",
-          "in_book": false
-        },
-        {
-          "ticker": "AMAT",
-          "relation": "supplier",
-          "detail": "WFE",
-          "from": "SKHYNIX",
-          "in_book": false
-        },
-        {
-          "ticker": "AMD",
-          "relation": "customer",
-          "detail": "HBM",
-          "from": "SKHYNIX",
-          "in_book": false
-        },
-        {
-          "ticker": "ASML",
-          "relation": "supplier",
-          "detail": "litho",
-          "from": "SKHYNIX",
-          "in_book": false
-        },
-        {
-          "ticker": "LRCX",
-          "relation": "supplier",
-          "detail": "WFE",
-          "from": "SKHYNIX",
-          "in_book": false
-        }
-      ],
-      "source": "UBS · curated reconciliation 2026-10-01",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-10-01-inbox.md"
-      ],
-      "evidence_anchor": "MU / SKHYNIX (memory price path) — Fubon's DRAM contract price falls 16% from the 2Q27 peak while Micron says supply stays constrained through CY28",
-      "origin": "curated_reconciliation",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
@@ -3110,6 +2955,170 @@
       "carried_from": "2026-09-28"
     },
     {
+      "id": "reco-5b10ab6f72fe",
+      "asof": "2026-10-02",
+      "source_date": "2026-10-01",
+      "type": "model_check",
+      "priority": "watch",
+      "score": 42,
+      "title": "CSCO / GLW — Bernstein's two Market-Performs are at or near the Street LOW on PT, with estimates in line",
+      "tickers": [
+        "CSCO",
+        "GLW"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "standing",
+      "confidence": "medium",
+      "why_now": "CSCO: MP, PT $110, which equals the BBG Street low ($110); consensus is $138.88 (hi $170, n=31) and px $108.76. Estimates are in line:",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the CSCO/GLW model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "ANET",
+          "relation": "competitor",
+          "detail": "AI networking",
+          "from": "CSCO",
+          "in_book": false
+        },
+        {
+          "ticker": "DDOG",
+          "relation": "competitor",
+          "detail": "observability vs Splunk",
+          "from": "CSCO",
+          "in_book": false
+        },
+        {
+          "ticker": "DT",
+          "relation": "competitor",
+          "detail": "observability vs Splunk",
+          "from": "CSCO",
+          "in_book": false
+        },
+        {
+          "ticker": "ESTC",
+          "relation": "competitor",
+          "detail": "SIEM/logs vs Splunk",
+          "from": "CSCO",
+          "in_book": false
+        },
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "optical fiber",
+          "from": "GLW",
+          "in_book": true
+        },
+        {
+          "ticker": "META",
+          "relation": "customer",
+          "detail": "optical fiber (LTA)",
+          "from": "GLW",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "optical fiber",
+          "from": "GLW",
+          "in_book": true
+        }
+      ],
+      "source": "Bernstein · curated reconciliation 2026-10-01",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-10-01-inbox.md"
+      ],
+      "evidence_anchor": "CSCO / GLW — Bernstein's two Market-Performs are at or near the Street LOW on PT, with estimates in line",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-10-01"
+    },
+    {
+      "id": "reco-13cc6859d7e2",
+      "asof": "2026-10-02",
+      "source_date": "2026-10-01",
+      "type": "model_check",
+      "priority": "watch",
+      "score": 42,
+      "title": "MU / SKHYNIX (memory price path) — Fubon's DRAM contract price falls 16% from the 2Q27 peak while Micron says supply stays constrained through CY28",
+      "tickers": [
+        "SKHYNIX",
+        "MU"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "standing",
+      "confidence": "medium",
+      "why_now": "Commodity DRAM contract (TrendForce-based): 1.45 → 1.81 → 2.10 → 2.17 → 2.25 (2Q27 peak) → 2.17 → 2.03 → 1.91 → 1.89 (2Q28). That is −3.2% / −6.7% / −5.7% / −1.5% q/q from 3Q27, and −16% from peak to 2Q28.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the SKHYNIX/MU model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "customer",
+          "detail": "HBM",
+          "from": "SKHYNIX",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "HBM",
+          "from": "SKHYNIX",
+          "in_book": true
+        },
+        {
+          "ticker": "SAMSUNG",
+          "relation": "competitor",
+          "detail": "HBM/DRAM",
+          "from": "SKHYNIX",
+          "in_book": false
+        },
+        {
+          "ticker": "AMAT",
+          "relation": "supplier",
+          "detail": "WFE",
+          "from": "SKHYNIX",
+          "in_book": false
+        },
+        {
+          "ticker": "AMD",
+          "relation": "customer",
+          "detail": "HBM",
+          "from": "SKHYNIX",
+          "in_book": false
+        },
+        {
+          "ticker": "ASML",
+          "relation": "supplier",
+          "detail": "litho",
+          "from": "SKHYNIX",
+          "in_book": false
+        },
+        {
+          "ticker": "LRCX",
+          "relation": "supplier",
+          "detail": "WFE",
+          "from": "SKHYNIX",
+          "in_book": false
+        }
+      ],
+      "source": "UBS · curated reconciliation 2026-10-01",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-10-01-inbox.md"
+      ],
+      "evidence_anchor": "MU / SKHYNIX (memory price path) — Fubon's DRAM contract price falls 16% from the 2Q27 peak while Micron says supply stays constrained through CY28",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-10-01"
+    },
+    {
       "id": "reco-1d1ffeaef8e0",
       "asof": "2026-10-02",
       "source_date": "2026-09-28",
@@ -3191,110 +3200,6 @@
       "feedback_note": "",
       "hidden": false,
       "carried_from": "2026-09-28"
-    },
-    {
-      "id": "reco-32216e1d8ae9",
-      "asof": "2026-10-02",
-      "source_date": "2026-10-01",
-      "type": "model_check",
-      "priority": "watch",
-      "score": 41,
-      "title": "ANET — Bernstein 2027 revenue is +9-14% above consensus, but the note prints three different figures",
-      "tickers": [
-        "ANET"
-      ],
-      "in_book": [],
-      "impact": "watch",
-      "urgency": "immediate",
-      "confidence": "medium",
-      "why_now": "3Q26E is $3.324bn / $1.08 vs BBG 1FQ $3.327bn / $1.062, so Bernstein is in line for the current quarter.",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the ANET model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
-      "readthrough": [
-        {
-          "ticker": "CSCO",
-          "relation": "competitor",
-          "detail": "AI networking",
-          "from": "ANET",
-          "in_book": false
-        },
-        {
-          "ticker": "COHR",
-          "relation": "supplier",
-          "detail": "optical",
-          "from": "ANET",
-          "in_book": false
-        },
-        {
-          "ticker": "LITE",
-          "relation": "supplier",
-          "detail": "optical",
-          "from": "ANET",
-          "in_book": false
-        }
-      ],
-      "source": "Bernstein · curated reconciliation 2026-10-01",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-10-01-inbox.md"
-      ],
-      "evidence_anchor": "ANET — Bernstein 2027 revenue is +9-14% above consensus, but the note prints three different figures",
-      "origin": "curated_reconciliation",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "reco-ea86c1657228",
-      "asof": "2026-10-02",
-      "source_date": "2026-10-01",
-      "type": "model_check",
-      "priority": "watch",
-      "score": 41,
-      "title": "CIEN — Outperform with a PT 15% below consensus, on a PT basis that mislabels the year",
-      "tickers": [
-        "CIEN"
-      ],
-      "in_book": [],
-      "impact": "watch",
-      "urgency": "immediate",
-      "confidence": "medium",
-      "why_now": "Bernstein: OP, PT $440, described as \"16x our $28 in 2028 EPS\". In the model, FY28E EPS is $18.61 and FY29E is $27.70, so the PT is 16x FY29, not FY28.",
-      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
-      "action": "Open the CIEN model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
-      "readthrough": [
-        {
-          "ticker": "AMZN",
-          "relation": "customer",
-          "detail": "DCI/optical",
-          "from": "CIEN",
-          "in_book": true
-        },
-        {
-          "ticker": "GOOG",
-          "relation": "customer",
-          "detail": "DCI/optical",
-          "from": "CIEN",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "customer",
-          "detail": "DCI/optical",
-          "from": "CIEN",
-          "in_book": true
-        }
-      ],
-      "source": "JPM + Bernstein · curated reconciliation 2026-10-01",
-      "evidence_paths": [
-        "_meta/reconciliation-2026-10-01-inbox.md"
-      ],
-      "evidence_anchor": "CIEN — Outperform with a PT 15% below consensus, on a PT basis that mislabels the year",
-      "origin": "curated_reconciliation",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
     },
     {
       "id": "cata-2f7870e9d8d7",
@@ -4189,6 +4094,59 @@
       "carried_from": "2026-09-15"
     },
     {
+      "id": "reco-32216e1d8ae9",
+      "asof": "2026-10-02",
+      "source_date": "2026-10-01",
+      "type": "model_check",
+      "priority": "watch",
+      "score": 35,
+      "title": "ANET — Bernstein 2027 revenue is +9-14% above consensus, but the note prints three different figures",
+      "tickers": [
+        "ANET"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "standing",
+      "confidence": "medium",
+      "why_now": "3Q26E is $3.324bn / $1.08 vs BBG 1FQ $3.327bn / $1.062, so Bernstein is in line for the current quarter.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the ANET model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "CSCO",
+          "relation": "competitor",
+          "detail": "AI networking",
+          "from": "ANET",
+          "in_book": false
+        },
+        {
+          "ticker": "COHR",
+          "relation": "supplier",
+          "detail": "optical",
+          "from": "ANET",
+          "in_book": false
+        },
+        {
+          "ticker": "LITE",
+          "relation": "supplier",
+          "detail": "optical",
+          "from": "ANET",
+          "in_book": false
+        }
+      ],
+      "source": "Bernstein · curated reconciliation 2026-10-01",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-10-01-inbox.md"
+      ],
+      "evidence_anchor": "ANET — Bernstein 2027 revenue is +9-14% above consensus, but the note prints three different figures",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-10-01"
+    },
+    {
       "id": "reco-5e4b068a9dab",
       "asof": "2026-10-02",
       "source_date": "2026-09-15",
@@ -4493,6 +4451,59 @@
       "feedback_note": "",
       "hidden": false,
       "carried_from": "2026-09-17"
+    },
+    {
+      "id": "reco-ea86c1657228",
+      "asof": "2026-10-02",
+      "source_date": "2026-10-01",
+      "type": "model_check",
+      "priority": "watch",
+      "score": 35,
+      "title": "CIEN — Outperform with a PT 15% below consensus, on a PT basis that mislabels the year",
+      "tickers": [
+        "CIEN"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "standing",
+      "confidence": "medium",
+      "why_now": "Bernstein: OP, PT $440, described as \"16x our $28 in 2028 EPS\". In the model, FY28E EPS is $18.61 and FY29E is $27.70, so the PT is 16x FY29, not FY28.",
+      "belief_update": "This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.",
+      "action": "Open the CIEN model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A like-for-like estimate bridge or company guide that closes the identified gap.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "DCI/optical",
+          "from": "CIEN",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "customer",
+          "detail": "DCI/optical",
+          "from": "CIEN",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "DCI/optical",
+          "from": "CIEN",
+          "in_book": true
+        }
+      ],
+      "source": "JPM + Bernstein · curated reconciliation 2026-10-01",
+      "evidence_paths": [
+        "_meta/reconciliation-2026-10-01-inbox.md"
+      ],
+      "evidence_anchor": "CIEN — Outperform with a PT 15% below consensus, on a PT basis that mislabels the year",
+      "origin": "curated_reconciliation",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false,
+      "carried_from": "2026-10-01"
     },
     {
       "id": "reco-e69be9056a88",
