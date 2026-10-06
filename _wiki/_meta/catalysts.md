@@ -1,13 +1,11 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-10-05 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-10-06 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (53)
+## 📅 Upcoming (51)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-10-05 | SNDK | 🆕 **2026-10-05 — BofA HBF expert call (Thomas Coughlin).** A read on HBF timing and TAM; event only. (BofA sales · Brian Fenske, 2026-09-28) |
-| 2026-10-05 | SNDK | 🆕 **2026-10-05, 2pm ET — BofA HBF expert call: Thomas Coughlin (Coughlin Associates; former President of IEEE), hosted by Wamsi Mohan** — sizing the HBF market, the roadmap from samples to full-scale  |
 | 2026-10-06 | AVGO | 🆕 **2026-10-01 NDR and 2026-10-06 MRVL Investor Day as the read-through pair for the 09-29 rumour.** JPM's desk expects Hock may address the MediaTek article on the 10-01 UBS-hosted NDR (already liste |
 | 2026-10-06 | IFX | 🆕 **2026-10-06 (Tue, 10am ET) — BofA semi-distributor call with DigiKey's VP of Global Strategic Pricing, Stephane Bratu, who "oversees pricing for TXN, ON, IFX, NVDA etc." and pricing/volume for 4,00 |
 | 2026-10-06 | MRVL | **🆕🔴 DATED, TWO-STEP: Q2 FY27 print THURSDAY 2026-08-27 (after market close) → INVESTOR DAY MONDAY 2026-10-06, NYC.** Jefferies (Curtis, 2026-08-20) splits the catalyst explicitly: the print is where  |
@@ -60,13 +58,14 @@ _Generated 2026-10-05 · parsed from every page's 'Catalysts / what to watch'. D
 | 2028-06-30 | NSCALE | 2028-06-30 — Monarch **2 GW gross / 1.37 GW IT online "by 1H28"** (Anthropic tranches; the wiki's first neocloud milestone tied to on-site gas turbines). |
 | 2031-12-31 | NSCALE | 2031-12-31 — Monarch expansion to ~8 GW gross planned. |
 
-## ⏰ Passed — need a post-mortem (0)
+## ⏰ Passed — need a post-mortem (2)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| _none_ | | |
+| 2026-10-05 | SNDK | 🆕 **2026-10-05, 2pm ET — BofA HBF expert call: Thomas Coughlin (Coughlin Associates; former President of IEEE), hosted by Wamsi Mohan** — sizing the HBF market, the roadmap from samples to full-scale  |
+| 2026-10-05 | SNDK | 🆕 **2026-10-05 — BofA HBF expert call (Thomas Coughlin).** A read on HBF timing and TAM; event only. (BofA sales · Brian Fenske, 2026-09-28) |
 
 ## ✅ Resolved (248)
 
