@@ -137,17 +137,17 @@ _(UBS Index Analytics · **Jason Irukulapati**, "The Daily Catch — S&P 1500/IC
 _Wiki · generated 2026-06-29 · sources: IPO prospectus (424B4 2026-06-12 / S-1 2026-05-20, archived in `../SPCX/`) + FinTwit. **Newly public — IPO'd June 2026 (Nasdaq: SPCX).** Master index: [../INDEX.md](../INDEX.md). Themes: [ai-datacenter-power](themes/ai-datacenter-power.md) · [custom-asic-tpu](themes/custom-asic-tpu.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-02 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-10-06 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $44.2bn | $110.8bn |
-| Gross profit | — | $69.5bn |
+| Revenue | $44.4bn | $111.2bn |
+| Gross profit | — | $69.7bn |
 | Gross margin | — | 62.7% |
-| EBITDA | $20.1bn | $66.5bn |
-| EPS | $-0.98 | $1.83 |
-| Capex | $49.3bn | $185.8bn |
-| OCF (≈EBITDA) | $20.1bn | $66.5bn |
+| EBITDA | $20.3bn | $66.8bn |
+| EPS | $-0.97 | $1.86 |
+| Capex | $49.5bn | $185.8bn |
+| OCF (≈EBITDA) | $20.3bn | $66.8bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

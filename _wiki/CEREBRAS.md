@@ -10,7 +10,7 @@
 _Wiki · generated 2026-06-20 · **recent IPO (priced 2026-05-13, first trade 2026-05-14, Nasdaq: CBRS) — limited public disclosure; no pre-IPO SEC filing history.** ✅ **BBG CONSENSUS ADDED 2026-09-10 — 13 analysts; see the snapshot block below.** Sources: corpus (`E:\equity_calls_transcripts\Semis\2026-05-06_Cerebras_IPO-UBS.md`, `E:\briefings\2026\2026-05-12-company-specific.md`) + web (S-1/A, press). Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-02 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-10-06 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|

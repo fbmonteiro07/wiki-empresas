@@ -5,17 +5,17 @@
 _Wiki · generated 2026-06-19 · **German issuer (Prime Standard, Frankfurt; ticker AIXA GR) — NO SEC 10-K/10-Q/20-F.** Built from earnings transcripts + Aixtron IR + BBG estimates (EUR). **Internal coverage is thin** — name appears only in briefing read-across, not in our filings/equity-calls corpus. Sources: `E:\Wiki Felipe\AIXA\transcripts` · `E:\briefings\2026`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-02 · EUR
+### 📊 Consensus snapshot — BBG · asof 2026-10-06 · EUR
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | €586m | €805m |
-| Gross profit | €250m | €362m |
-| Gross margin | 42.7% | 45.0% |
-| EBITDA | €138m | €198m |
-| EPS | €0.76 | €1.33 |
+| Gross profit | €251m | €362m |
+| Gross margin | 42.8% | 45.0% |
+| EBITDA | €138m | €199m |
+| EPS | €0.77 | €1.34 |
 | Capex | €34m | €34m |
-| OCF (≈EBITDA) | €138m | €198m |
+| OCF (≈EBITDA) | €138m | €199m |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

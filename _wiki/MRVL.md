@@ -3,13 +3,13 @@
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\MRVL` (filings + transcripts) · `_equity_calls` · `_briefings\by-ticker\MRVL.md` (none on disk). Master index: [00_INDEX.md](00_INDEX.md). Themes: [custom-asic-tpu](themes/custom-asic-tpu.md) · [optical-cpo](themes/optical-cpo.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-02 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-10-06 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $12.0bn | $18.2bn |
-| Gross profit | $7.0bn | $10.5bn |
-| Gross margin | 58.4% | 57.8% |
+| Revenue | $12.0bn | $19.4bn |
+| Gross profit | $7.0bn | $11.2bn |
+| Gross margin | 58.3% | 57.8% |
 | EBITDA | $4.7bn | $7.6bn |
 | EPS | $4.19 | $6.66 |
 | Capex | $502m | $693m |
@@ -70,6 +70,8 @@ MRVL is a fabless designer sitting between the foundry/IP/memory supply base and
 </svg>
 
 ## Current state (latest quarter)
+
+**2026-10-05 — Investor Day preview, research synthesis (no new house forecast or PT).** Event: **Tuesday 2026-10-06, 9am ET**, per [Marvell](https://www.marvell.com/company/events/investor-day-2026.html). JPM / **Harlan Sur et al.**, research email received **2026-10-05 UTC**, models **~$12.5bn FY29 custom revenue vs ~$10.3bn Street**, including **>$2.5bn incremental Google**, and sees **>$20 EPS by CY30** conditional on **low/mid-40s operating margins**. These are JPM scenarios. Compare with UBS / **Arcuri**, **2026-09-28** (via Ruple): **$40-45bn revenue and mid/high-teens EPS by CY30**, warning that a >$20 management slide is unlikely. **Basis correction:** MS / **Moore**, **2026-09-21**, says **FY30** in the $40bn-plus revenue discussion but **CY30** in its email opening summary; the prior on-page FY30-only framing requires that qualification. No numeric estimate/rating/PT is overwritten. [Full preview](../MRVL/research/2026-10-05-investor-day-preview.txt) · [source records](../MRVL/research/2026-10-05-investor-day-sources.json). The existing Google agreement is now tracked under **GOOG-MRVL-20260729** in [the deal timeline](themes/ai-compute-deals.md): discretionary purchase-linked warrant framework, not guaranteed backlog. No new deal or delivered capacity established.
 
 **🆕🔴🔴 2026-09-17 (J.P. Morgan · **Harlan Sur** — **Fall Series 2026 Webinar — Semis & Semi Cap Equipment**, 2026-09-17 10:30am ET (w/ Mayur Ramdhani); slide *"Near-Term Updates on AVGO and MRVL's ASIC Pipelines"*. ⚠️ **PASTED EXHIBIT — broker/analyst confirmed by Felipe 2026-09-17; deck identified from the Fall Series webinar invitations in Felipe's Outlook (2026-09-15 / 09-16); the relative claim *"last Qtr"* therefore reads against September 2026. ⚠️ **Deck PDF not on disk** (NetRoadshow-gated); queued in `_inbox/PENDING_FULL_REPORTS.md`. No rating, PT or MRVL estimate appears on the slide — NOTHING ON THIS PAGE IS SUPERSEDED.**) — **JPM PUTS MARVELL ON *TRAINIUM 4* AT 2H CY27, WHICH IS THE FIRST DIRECT ANSWER TO THE FUBON ALLOCATION-LOSS MODEL THIS PAGE HAS CARRIED SINCE 08-11 — AND IT NAMES MAIA AS A *FULL FE/BE* ENGAGEMENT, THE FIRST PROGRAMME-LEVEL COUNTER TO THE COT BEAR. THE COST IS A QUIET ONE-QUARTER MAIA SLIP INSIDE THE SAME HOUSE.**
 
@@ -637,6 +639,8 @@ _Source: MRVL earnings calls (dates above); management commentary, paraphrased._
 - **Outlook / sell-side notes:** UBS Arcuri CXL note (2026-06-29, PT $340) pulled from inbox; earlier sessions had no Outlook tool available.
 
 ## Changelog
+
+- **2026-10-05 — Investor Day preview:** added JPM / Sur's October 5 inbox forecast and an attributed comparison with UBS; saved the source-backed preview. **Prior interpretation preserved:** MS September 21 $40bn-plus revenue had been presented as FY30 only. **Current qualification:** direct research email body says FY30, opening summary says CY30; timing is unresolved within the source, with rating/PT/magnitude unchanged. Backfilled Google agreement ID **GOOG-MRVL-20260729** and prior management clarification in the cross-company timeline; no new commitment, no target adoption and no catalyst outcome recorded.
 
 - 2026-10-01 — ingest (Notion, 2026-09-30_UBS_Semiconductors-to-Powered-Shell-whats-baked-in-Arcuri-Fisher.md): added Arcuri's spoken relative-value remark on MRVL (Intra-quarter); 'be you attach' left as transcribed. Nothing superseded.
 - **2026-10-01 (/wiki-ingest 21h run of 09-30, completed 10-01)** — 2 log rows (MediaTek/TPU-v9 rumor via JPM/TMTB/MS desk/Jefferies sales; Barclays desk specialist colour). **Superseded: nothing.** The Jefferies 09-28 investor-day preview already on the page was re-seen in two sales relays (09-29) and not re-logged. Investor Day 2026-10-06 (Vital Knowledge calendar) and Jefferies NDR 10-07 are unchanged.

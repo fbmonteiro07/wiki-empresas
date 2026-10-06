@@ -1,12 +1,12 @@
 # Book — positions × unresolved debates × catalysts
 
-_Generated 2026-10-02 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wiki/_tools/build_book.py`._
+_Generated 2026-10-05 from `_data/book.json` (asof 2026-07-01). Rebuild: `py _wiki/_tools/build_book.py`._
 
 > ⚠️ **SEED book** — initialized from the 8 house-model names, weights unknown. Edit `_data/book.json` to match the real Core Positions (weights, adds/drops), then remove the `"seed": true` flag.
 
 | Ticker | Side | Wt % | House vs cons | Next catalyst | ⏰ due | Flags | Last chg | Thesis |
 |---|---|--:|---|---|--:|---|---|---|
-| GOOG | long | ? | REV 2026 +18% | _none dated_ | 1 |  | 2026-10-02 | Full-stack compounder (Search +17%, Cloud +82%); debate is valuation and capital intensity, not demand. |
+| GOOG | long | ? | REV 2026 +18% | _none dated_ |  |  | 2026-10-05 | Full-stack compounder (Search +17%, Cloud +82%); debate is valuation and capital intensity, not demand. |
 | AAPL | long | ? | EPS 2026 +16% | 2026-10-23 — 🆕 2026-10-13 — SMART-HOME LAUNCH (J490 hub, HomePod mini, Apple TV; Bloomberg via GS / JPM / BofA / Redburn desks, 2026- |  |  | 2026-10-01 | Strong franchise + memory-dislocation advantage; bear = AI catch-up + price elasticity. |
 | META | long | ? | EPS 2027 +7% | _none dated_ |  |  | 2026-10-02 | Fastest grower in Mag7 ex-GPU; bear = capital intensity and negative incremental ROIC. |
 | NVDA | long | ? | REV 2027 -6% | 2026-10-20 — 🆕 2026-10-20 to 10-22: NVIDIA GTC Berlin (JPM US Market Intelligence calendar, 09-29/09-30); BofA lists "multiple GTC tr |  |  | 2026-10-02 | Full-stack AI-factory platform at +85% rev; debate is demand sustainability vs ASIC erosion. |

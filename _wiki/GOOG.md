@@ -3,17 +3,17 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\GOOG` (filings + transcripts) · `_equity_calls` · `_briefings\by-ticker\GOOG.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Snapshot — Capstone official model + BBG · asof 2026-10-02 · USD
+### 📊 Snapshot — Capstone official model + BBG · asof 2026-10-06 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | **$505.0bn** | **$641.0bn** |
 | Gross profit | $343.9bn | $434.0bn |
 | Gross margin | 68.1% | 67.7% |
-| EBITDA | $229.5bn | $301.7bn |
+| EBITDA | $229.6bn | $302.0bn |
 | EPS | **$11.80** | **$16.20** |
 | Capex | $201.3bn | $313.9bn |
-| OCF (≈EBITDA) | $229.5bn | $301.7bn |
+| OCF (≈EBITDA) | $229.6bn | $302.0bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 _**Bold** = Capstone official model; plain = BBG consensus._
@@ -30,6 +30,8 @@ Alphabet is the full-stack AI franchise: Google Services (Search, YouTube, subsc
 | **Key suppliers** | TSMC foundry/CoWoS · Broadcom & MediaTek (TPU ASICs) · HBM/DRAM (SK Hynix/Micron/Samsung) · Hon Hai racks · own datacenters |
 
 ## Current state (Q2 FY26, 2026-07-22)
+
+**2026-10-05 — Marvell Investor Day cross-reference; existing agreement only.** The Google–Marvell commercial agreement signed **2026-07-29**, warrant issued **2026-08-18** and filed **2026-08-19**, is backfilled under stable ID **GOOG-MRVL-20260729** in [the compute-deal timeline](themes/ai-compute-deals.md). The filing specifies **discretionary purchases**; broker full-vesting revenue scenarios are not a Google purchase guarantee, backlog or delivered compute. Marvell / **Matt Murphy**, **2026-08-27**, said agreement revenue through FY28 was already in its custom outlook, with larger incremental opportunity from FY29. [MRVL preview](../MRVL/research/2026-10-05-investor-day-preview.txt) · [Marvell primary filing](https://investor.marvell.com/sec-filings/all-sec-filings/content/0001193125-26-356217/d412696d8k.htm). No GOOG estimate, rating, PT, original contract term or capacity figure changed.
 
 **🆕🔴🔴 2026-10-01 (/wiki-ingest 21h run of 09-30, completed 10-01) — GEMINI 4 "ARGON" LANDED (09-30, AFTER THE CLOSE): FRONTIER-LEVEL ON THE PUBLISHED BENCHMARKS AND ~60% OF ASTRA'S COST PER TASK, BUT ROLLED OUT ONLY TO CYBER PARTNERS AND THE US GOVERNMENT; JPM SIMULTANEOUSLY CUTS ITS PT TO $420 ON A DEC-27 BASIS.**
 - 🔴 **WHAT SHIPPED.** *"On Wednesday, Google announced its new frontier model, Gemini 4 Argon. The model shows frontier performance in complex workflows, cyber defense, and software engineering"*; DeepMind-provided benchmarks *"rank favorably compared to GPT-6 Astra, Claude Fable 5.1, & Claude Opus 5.5"*, the output limit is *"an industry-leading 1M tokens… compared to what we believe is 128K for other leading models"*, and *"Arena AI suggests that Argon's price per task is significantly lower than GPT-6.1 Sol & Claude Opus 5.5"* (J.P. Morgan · Doug Anmuth, 2026-10-01). Rolling out *"first to a set of trusted cyber defenders & the U.S. government through the voluntary process for pre-release model access"* — i.e. **not yet public**. Redburn's read (sales desk relaying its research view): Artificial Analysis Intelligence Index **53 (Argon high) = GPT-6 Astra (max), one point above GPT-6.1 Sol, still below Claude Opus 5.5 (58) and Sonnet 5.5 (56)** — *"returning Google to the top three labs"*; introductory price $2/$10 per million input/output tokens (cached input 95% off) works out at **~$1.99 per Index task, ~60% of Astra's, rising to $3.98 once the promo ends**; Google-reported SOTA on DeepSWE v1.1 (**77.9%**), #1 on AutomationBench, lowest hallucination rate of the leading models (**15% on AA-Omniscience vs Astra's 51%**) (Redburn · Rowan Adley, 2026-10-01; The Information AM, 2026-10-01: the rate will *"double that rate after the teaser period expires"*).
@@ -1103,6 +1105,8 @@ _Source: GOOG earnings calls (dates above); management commentary, paraphrased. 
 - **Briefings:** [GOOG roll-up](../_briefings/by-ticker/GOOG.md) — 33 datapoints / 32 dias
 
 ## Changelog
+
+- **2026-10-05 — MRVL Investor Day cross-reference:** added stable deal ID **GOOG-MRVL-20260729** and linked the preview. The 2026-08-19 filing and 2026-08-27 management clarification were backfilled in the timeline with today's recorded date. No new deal, purchase commitment, funding or delivery confirmation; no GOOG estimate/rating/PT/term superseded.
 - **2026-10-02 (/run-inbox)** — ⚠️ **THESIS DRIFT: Bernstein GOOGL PT. OLD: Market-Perform, TP $390** (Bernstein "Cloud in the Quarter", 2026-06-22). **NEW: Market-Perform, PT $385** (px $338.24, 1-Oct; ticker table in Bernstein · Rezaei et al., "U.S. Data Center Capacity: Your seat is skewing your numbers", 2026-10-01). The rating is unchanged and the note gives no reason. The 06-22 bullet under Current state is annotated as superseded. Also added 1 log row, 1 Sinal update and 1 Source. Exhibit 13 Alphabet capex including operating- and finance-lease ROU: $97bn / $207bn / $334bn / $337bn / $340bn / $343bn (2025-2030E), 75% US share. 2027E $334bn sits between the house model ($310B) and JPM ($378B). No house number changed.
 - 2026-10-02 — ingest (Notion, 2026-10-02_DeutscheBank_Public-Cloud-and-AI-expert-call-Archera-Aran-Khanna.md): added Archera-panel Google commit/consumption marks (45→48.5 / 45→48), capacity-reallocation delivery speed and TPU/Ironwood customer-count claim (Intra-quarter). Expert voice; nothing superseded. Hearsay on researcher departures deliberately not carried.
 
