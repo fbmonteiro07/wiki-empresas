@@ -1,17 +1,11 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-10-06 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-10-07 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (51)
+## 📅 Upcoming (45)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-10-06 | AVGO | 🆕 **2026-10-01 NDR and 2026-10-06 MRVL Investor Day as the read-through pair for the 09-29 rumour.** JPM's desk expects Hock may address the MediaTek article on the 10-01 UBS-hosted NDR (already liste |
-| 2026-10-06 | IFX | 🆕 **2026-10-06 (Tue, 10am ET) — BofA semi-distributor call with DigiKey's VP of Global Strategic Pricing, Stephane Bratu, who "oversees pricing for TXN, ON, IFX, NVDA etc." and pricing/volume for 4,00 |
-| 2026-10-06 | MRVL | **🆕🔴 DATED, TWO-STEP: Q2 FY27 print THURSDAY 2026-08-27 (after market close) → INVESTOR DAY MONDAY 2026-10-06, NYC.** Jefferies (Curtis, 2026-08-20) splits the catalyst explicitly: the print is where  |
-| 2026-10-06 | MRVL | **🆕🔴 NEXT, AND IT IS NOW THE ONLY CATALYST THAT MATTERS ON THIS PAGE: INVESTOR DAY — MONDAY 2026-10-06, NYC.** Three desks stated on print night that management deliberately withheld the [[GOOG]] sizi |
-| 2026-10-06 | ON | 🆕 **2026-10-06 (Tue, 10am ET) — BofA semi-distributor call with DigiKey's VP of Global Strategic Pricing, Stephane Bratu, who "oversees pricing for TXN, ON, IFX, NVDA etc." and 4,000+ suppliers** (hos |
-| 2026-10-06 | TXN | **🆕 2026-10-06, 10am ET — BofA semi-distributor call with DigiKey's VP of Global Strategic Pricing (Stephane Bratu), who oversees pricing for TXN, ON, IFX, NVDA and 4,000+ suppliers** — MCU/analog/pow |
 | 2026-10-08 | APP | **🆕 2026-10-08 — BOFA VIDEO-GAME BOGEY POLL RESULTS CALL (Omar Dessouky; APP among five names polled, BofA TMT desk 09-30)**; and the **APP v. Unity TRO application / arbitration track** (no hearing d |
 | 2026-10-08 | COHR | **🆕 2026-10-08 (NYC, 12 PM ET) — MS Lunch "Global Hardware & Optical"** with Andy Meng, Howard Kao, Derrick Yang, Meta Marshall and Erik Woodring; MS desk lists STX, WDC, COHR, LITE, Innolight and Hon |
 | 2026-10-08 | LITE | **🆕 2026-10-08 (NYC, 12 PM ET) — MS Lunch "Global Hardware & Optical"** with Andy Meng, Howard Kao, Derrick Yang, Meta Marshall and Erik Woodring; MS desk lists STX, WDC, COHR, LITE, Innolight and Hon |
@@ -58,19 +52,25 @@ _Generated 2026-10-06 · parsed from every page's 'Catalysts / what to watch'. D
 | 2028-06-30 | NSCALE | 2028-06-30 — Monarch **2 GW gross / 1.37 GW IT online "by 1H28"** (Anthropic tranches; the wiki's first neocloud milestone tied to on-site gas turbines). |
 | 2031-12-31 | NSCALE | 2031-12-31 — Monarch expansion to ~8 GW gross planned. |
 
-## ⏰ Passed — need a post-mortem (2)
+## ⏰ Passed — need a post-mortem (6)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-10-05 | SNDK | 🆕 **2026-10-05, 2pm ET — BofA HBF expert call: Thomas Coughlin (Coughlin Associates; former President of IEEE), hosted by Wamsi Mohan** — sizing the HBF market, the roadmap from samples to full-scale  |
-| 2026-10-05 | SNDK | 🆕 **2026-10-05 — BofA HBF expert call (Thomas Coughlin).** A read on HBF timing and TAM; event only. (BofA sales · Brian Fenske, 2026-09-28) |
+| 2026-10-06 | TXN | **🆕 2026-10-06, 10am ET — BofA semi-distributor call with DigiKey's VP of Global Strategic Pricing (Stephane Bratu), who oversees pricing for TXN, ON, IFX, NVDA and 4,000+ suppliers** — MCU/analog/pow |
+| 2026-10-06 | ON | 🆕 **2026-10-06 (Tue, 10am ET) — BofA semi-distributor call with DigiKey's VP of Global Strategic Pricing, Stephane Bratu, who "oversees pricing for TXN, ON, IFX, NVDA etc." and 4,000+ suppliers** (hos |
+| 2026-10-06 | MRVL | **🆕🔴 NEXT, AND IT IS NOW THE ONLY CATALYST THAT MATTERS ON THIS PAGE: INVESTOR DAY — MONDAY 2026-10-06, NYC.** Three desks stated on print night that management deliberately withheld the [[GOOG]] sizi |
+| 2026-10-06 | MRVL | **🆕🔴 DATED, TWO-STEP: Q2 FY27 print THURSDAY 2026-08-27 (after market close) → INVESTOR DAY MONDAY 2026-10-06, NYC.** Jefferies (Curtis, 2026-08-20) splits the catalyst explicitly: the print is where  |
+| 2026-10-06 | IFX | 🆕 **2026-10-06 (Tue, 10am ET) — BofA semi-distributor call with DigiKey's VP of Global Strategic Pricing, Stephane Bratu, who "oversees pricing for TXN, ON, IFX, NVDA etc." and pricing/volume for 4,00 |
+| 2026-10-06 | AVGO | 🆕 **2026-10-01 NDR and 2026-10-06 MRVL Investor Day as the read-through pair for the 09-29 rumour.** JPM's desk expects Hock may address the MediaTek article on the 10-01 UBS-hosted NDR (already liste |
 
-## ✅ Resolved (248)
+## ✅ Resolved (250)
 
 | Date | Ticker | Verdict |
 |---|---|---|
+| 2026-10-05 | SNDK | neutral — DUPLICATE of the 14:00 ET HBF expert-call line above (same event, second Catalysts bullet). (wiki-catalyst 2026-10-07) |
+| 2026-10-05 | SNDK | neutral — DUPLICATE of the 14:00 ET HBF expert-call line above (same event, second Catalysts bullet). (wiki-catalyst 2026-10-07) |
 | 2026-10-02 | TSLA | neutral — UNRESOLVED (DEFERRED ONE DAY; D+1): 3Q26 deliveries print (Fri 10-02) is NOT in the wiki corpus yet — TSLA page still carries only the pre-print marks (MS 441K, GS 435K, JPM 482K, Cantor ~422K vs cons ~450-463K). Logged neutral solely to clear the flag; the actual delivery/storage number must be scored vs those marks and routed via /run-inbox. If it is still absent on D+3, treat as a corpus gap. (wiki-catalyst 2026-10-03) |
 | 2026-10-02 | MU | neutral — NOT SCOREABLE: PARSER DATE = LISTING DATE. The bullet is the 'calendar adds' list; the dated events are 10-07 07:30 Jefferies call with Micron IR (Satya Kumar / Samir Patodia), the 10-06 UBS IR NDR and 10-15 Jefferies memory expert call — all still ahead. The post-F4Q26 readouts (BTGP websession 10-02, UBS recap 10-01) are already on the page. (wiki-catalyst 2026-10-03) |
 | 2026-10-01 | TSM | neutral — NOT SCOREABLE: PARSER DATE = SOURCE DATE. The bullet is JPM's bogey set for the 10-15 print (Gokul Hariharan (J.P. Morgan) @ JPM 'TSMC: 3Q26 Preview' webinar, 2026-10-01, Capstone Notion notes): 3Q at the guide high end (US$45.8bn / GM 66.8%), 4Q guide ~+11-12% q/q, GM 66-67% both quarters, no numerical LT update before January. The event is the 2026-10-15 3Q26 print (the parent bullet carries 'Oct 15' in month-name form, which the parser cannot read). Logged only to clear the flag; the print is prepped in the 10-02 report. (wiki-catalyst 2026-10-02) |
