@@ -1,6 +1,6 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-10-07 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-10-08 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
 ## 📅 Upcoming (45)
 
@@ -52,23 +52,24 @@ _Generated 2026-10-07 · parsed from every page's 'Catalysts / what to watch'. D
 | 2028-06-30 | NSCALE | 2028-06-30 — Monarch **2 GW gross / 1.37 GW IT online "by 1H28"** (Anthropic tranches; the wiki's first neocloud milestone tied to on-site gas turbines). |
 | 2031-12-31 | NSCALE | 2031-12-31 — Monarch expansion to ~8 GW gross planned. |
 
-## ⏰ Passed — need a post-mortem (6)
+## ⏰ Passed — need a post-mortem (0)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-10-06 | TXN | **🆕 2026-10-06, 10am ET — BofA semi-distributor call with DigiKey's VP of Global Strategic Pricing (Stephane Bratu), who oversees pricing for TXN, ON, IFX, NVDA and 4,000+ suppliers** — MCU/analog/pow |
-| 2026-10-06 | ON | 🆕 **2026-10-06 (Tue, 10am ET) — BofA semi-distributor call with DigiKey's VP of Global Strategic Pricing, Stephane Bratu, who "oversees pricing for TXN, ON, IFX, NVDA etc." and 4,000+ suppliers** (hos |
-| 2026-10-06 | MRVL | **🆕🔴 NEXT, AND IT IS NOW THE ONLY CATALYST THAT MATTERS ON THIS PAGE: INVESTOR DAY — MONDAY 2026-10-06, NYC.** Three desks stated on print night that management deliberately withheld the [[GOOG]] sizi |
-| 2026-10-06 | MRVL | **🆕🔴 DATED, TWO-STEP: Q2 FY27 print THURSDAY 2026-08-27 (after market close) → INVESTOR DAY MONDAY 2026-10-06, NYC.** Jefferies (Curtis, 2026-08-20) splits the catalyst explicitly: the print is where  |
-| 2026-10-06 | IFX | 🆕 **2026-10-06 (Tue, 10am ET) — BofA semi-distributor call with DigiKey's VP of Global Strategic Pricing, Stephane Bratu, who "oversees pricing for TXN, ON, IFX, NVDA etc." and pricing/volume for 4,00 |
-| 2026-10-06 | AVGO | 🆕 **2026-10-01 NDR and 2026-10-06 MRVL Investor Day as the read-through pair for the 09-29 rumour.** JPM's desk expects Hock may address the MediaTek article on the 10-01 UBS-hosted NDR (already liste |
+| _none_ | | |
 
-## ✅ Resolved (250)
+## ✅ Resolved (256)
 
 | Date | Ticker | Verdict |
 |---|---|---|
+| 2026-10-06 | TXN | neutral — UNRESOLVED (D+2): BofA/DigiKey (Stephane Bratu) distributor pricing call — only the event notice is on the page; no notes ingested. Thesis-immaterial unless notes show analog pricing/lead-time inflection. |
+| 2026-10-06 | ON | neutral — UNRESOLVED (D+2): same BofA/DigiKey pricing call as TXN; no readout in corpus. |
+| 2026-10-06 | MRVL | neutral — UNRESOLVED (D+2): Investor Day (NYC, 9am ET) readout NOT in the corpus — latest MRVL content is the 10-05 JPM/Sur and 09-28 UBS/Jefferies PREVIEWS (MS $40bn+ FY30 frame; UBS says >$20 EPS slide 'unlikely', crowded positioning). The GOOG-agreement sizing and C28 custom outlook that desks said were withheld cannot be scored yet. Logged to clear the flag only; MATERIAL — route to /run-inbox when the primary (deck/transcript/broker wraps) lands. |
+| 2026-10-06 | MRVL | neutral — UNRESOLVED (D+2): Investor Day (NYC, 9am ET) readout NOT in the corpus — latest MRVL content is the 10-05 JPM/Sur and 09-28 UBS/Jefferies PREVIEWS (MS $40bn+ FY30 frame; UBS says >$20 EPS slide 'unlikely', crowded positioning). The GOOG-agreement sizing and C28 custom outlook that desks said were withheld cannot be scored yet. Logged to clear the flag only; MATERIAL — route to /run-inbox when the primary (deck/transcript/broker wraps) lands. |
+| 2026-10-06 | IFX | neutral — UNRESOLVED (D+2): same BofA/DigiKey pricing call as TXN; no readout in corpus. |
+| 2026-10-06 | AVGO | neutral — UNRESOLVED (D+2): read-through leg of the MRVL Investor Day (09-29 MediaTek/TPU-v9 rumour); no post-event note in corpus. Resolves with the MRVL readout. |
 | 2026-10-05 | SNDK | neutral — DUPLICATE of the 14:00 ET HBF expert-call line above (same event, second Catalysts bullet). (wiki-catalyst 2026-10-07) |
 | 2026-10-05 | SNDK | neutral — DUPLICATE of the 14:00 ET HBF expert-call line above (same event, second Catalysts bullet). (wiki-catalyst 2026-10-07) |
 | 2026-10-02 | TSLA | neutral — UNRESOLVED (DEFERRED ONE DAY; D+1): 3Q26 deliveries print (Fri 10-02) is NOT in the wiki corpus yet — TSLA page still carries only the pre-print marks (MS 441K, GS 435K, JPM 482K, Cantor ~422K vs cons ~450-463K). Logged neutral solely to clear the flag; the actual delivery/storage number must be scored vs those marks and routed via /run-inbox. If it is still absent on D+3, treat as a corpus gap. (wiki-catalyst 2026-10-03) |

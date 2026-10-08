@@ -8,6 +8,11 @@ Format (ticker + the catalyst date, then the verdict):
 
 Add lines here after each catalyst resolves. Newest first.
 
+- MRVL 2026-10-06 — neutral — UNRESOLVED (D+2): Investor Day (NYC, 9am ET) readout NOT in the corpus — latest MRVL content is the 10-05 JPM/Sur and 09-28 UBS/Jefferies PREVIEWS (MS $40bn+ FY30 frame; UBS says >$20 EPS slide 'unlikely', crowded positioning). The GOOG-agreement sizing and C28 custom outlook that desks said were withheld cannot be scored yet. Logged to clear the flag only; MATERIAL — route to /run-inbox when the primary (deck/transcript/broker wraps) lands.
+- AVGO 2026-10-06 — neutral — UNRESOLVED (D+2): read-through leg of the MRVL Investor Day (09-29 MediaTek/TPU-v9 rumour); no post-event note in corpus. Resolves with the MRVL readout.
+- TXN 2026-10-06 — neutral — UNRESOLVED (D+2): BofA/DigiKey (Stephane Bratu) distributor pricing call — only the event notice is on the page; no notes ingested. Thesis-immaterial unless notes show analog pricing/lead-time inflection.
+- ON 2026-10-06 — neutral — UNRESOLVED (D+2): same BofA/DigiKey pricing call as TXN; no readout in corpus.
+- IFX 2026-10-06 — neutral — UNRESOLVED (D+2): same BofA/DigiKey pricing call as TXN; no readout in corpus.
 - TSLA 2026-10-02 — neutral — UNRESOLVED (DEFERRED ONE DAY; D+1): 3Q26 deliveries print (Fri 10-02) is NOT in the wiki corpus yet — TSLA page still carries only the pre-print marks (MS 441K, GS 435K, JPM 482K, Cantor ~422K vs cons ~450-463K). Logged neutral solely to clear the flag; the actual delivery/storage number must be scored vs those marks and routed via /run-inbox. If it is still absent on D+3, treat as a corpus gap. (wiki-catalyst 2026-10-03)
 - SNDK 2026-10-05 — neutral — UNRESOLVED (D+2): BofA HBF expert call (Thomas Coughlin / Coughlin Associates, hosted by Wamsi Mohan) — only the event notice is in the corpus (BofA sales · Brian Fenske, 09-28); no readout/notes ingested. Logged to clear the flag; thesis-immaterial unless notes arrive (HBF timing/TAM). (wiki-catalyst 2026-10-07)
 - SNDK 2026-10-05 — neutral — DUPLICATE of the 14:00 ET HBF expert-call line above (same event, second Catalysts bullet). (wiki-catalyst 2026-10-07)
