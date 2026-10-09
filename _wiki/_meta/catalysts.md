@@ -1,15 +1,11 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-10-08 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-10-09 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (45)
+## 📅 Upcoming (41)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-10-08 | APP | **🆕 2026-10-08 — BOFA VIDEO-GAME BOGEY POLL RESULTS CALL (Omar Dessouky; APP among five names polled, BofA TMT desk 09-30)**; and the **APP v. Unity TRO application / arbitration track** (no hearing d |
-| 2026-10-08 | COHR | **🆕 2026-10-08 (NYC, 12 PM ET) — MS Lunch "Global Hardware & Optical"** with Andy Meng, Howard Kao, Derrick Yang, Meta Marshall and Erik Woodring; MS desk lists STX, WDC, COHR, LITE, Innolight and Hon |
-| 2026-10-08 | LITE | **🆕 2026-10-08 (NYC, 12 PM ET) — MS Lunch "Global Hardware & Optical"** with Andy Meng, Howard Kao, Derrick Yang, Meta Marshall and Erik Woodring; MS desk lists STX, WDC, COHR, LITE, Innolight and Hon |
-| 2026-10-08 | SAMSUNG | 🆕 **2026-10-08 — 3Q26 PRELIMINARY OPERATING PROFIT, NOW WITH THREE MARKS ON ONE BASIS:** GS **W106tn** (cut from W112tn on the KRW, 10-01), BofA **W107tn** (10-02), Street *"bullish consensus"* **~W11 |
 | 2026-10-13 | AMAT | 🆕 **2026-10-13 (Tue) — AMAT analyst meeting** (Vital Knowledge calendar, 2026-09-30/10-01, press); ASML reports 10-14 (Wed, before EU open) and TSMC 10-15 (Thu) the same week; UBS hosts SEMICON West c |
 | 2026-10-13 | CRDO | **🆕 2026-10-13 — OCP:** Jefferies hosts CRDO investor meetings; first demonstration of MicroLED-powered ALCs and a possible MicroVCSEL roadmap (Jefferies · Curtis, 2026-09-30); JPM's Joseph Cardoso al |
 | 2026-10-14 | ASML | 🆕 **2026-10-14 (Wednesday) — 3Q26 results.** The Street's two focus items are set: (1) whether FY27 low-NA EUV capacity guidance goes to **90+ tools** (from ~85) and whether **2028 is reaffirmed at ≥1 |
@@ -52,18 +48,21 @@ _Generated 2026-10-08 · parsed from every page's 'Catalysts / what to watch'. D
 | 2028-06-30 | NSCALE | 2028-06-30 — Monarch **2 GW gross / 1.37 GW IT online "by 1H28"** (Anthropic tranches; the wiki's first neocloud milestone tied to on-site gas turbines). |
 | 2031-12-31 | NSCALE | 2031-12-31 — Monarch expansion to ~8 GW gross planned. |
 
-## ⏰ Passed — need a post-mortem (0)
+## ⏰ Passed — need a post-mortem (2)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| _none_ | | |
+| 2026-10-08 | SAMSUNG | 🆕 **2026-10-08 — 3Q26 PRELIMINARY OPERATING PROFIT, NOW WITH THREE MARKS ON ONE BASIS:** GS **W106tn** (cut from W112tn on the KRW, 10-01), BofA **W107tn** (10-02), Street *"bullish consensus"* **~W11 |
+| 2026-10-08 | APP | **🆕 2026-10-08 — BOFA VIDEO-GAME BOGEY POLL RESULTS CALL (Omar Dessouky; APP among five names polled, BofA TMT desk 09-30)**; and the **APP v. Unity TRO application / arbitration track** (no hearing d |
 
-## ✅ Resolved (256)
+## ✅ Resolved (258)
 
 | Date | Ticker | Verdict |
 |---|---|---|
+| 2026-10-08 | LITE | neutral — NOT SCOREABLE (D+1): same MS Global Hardware & Optical lunch as COHR; no readout in corpus. |
+| 2026-10-08 | COHR | neutral — NOT SCOREABLE (D+1): MS Global Hardware & Optical lunch (Meng/Kao/Yang/Marshall/Woodring) — a marketing event notice; no readout in corpus and no thesis-resolving output expected. |
 | 2026-10-06 | TXN | neutral — UNRESOLVED (D+2): BofA/DigiKey (Stephane Bratu) distributor pricing call — only the event notice is on the page; no notes ingested. Thesis-immaterial unless notes show analog pricing/lead-time inflection. |
 | 2026-10-06 | ON | neutral — UNRESOLVED (D+2): same BofA/DigiKey pricing call as TXN; no readout in corpus. |
 | 2026-10-06 | MRVL | neutral — UNRESOLVED (D+2): Investor Day (NYC, 9am ET) readout NOT in the corpus — latest MRVL content is the 10-05 JPM/Sur and 09-28 UBS/Jefferies PREVIEWS (MS $40bn+ FY30 frame; UBS says >$20 EPS slide 'unlikely', crowded positioning). The GOOG-agreement sizing and C28 custom outlook that desks said were withheld cannot be scored yet. Logged to clear the flag only; MATERIAL — route to /run-inbox when the primary (deck/transcript/broker wraps) lands. |

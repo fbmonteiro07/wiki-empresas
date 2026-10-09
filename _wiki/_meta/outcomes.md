@@ -8,6 +8,8 @@ Format (ticker + the catalyst date, then the verdict):
 
 Add lines here after each catalyst resolves. Newest first.
 
+- COHR 2026-10-08 — neutral — NOT SCOREABLE (D+1): MS Global Hardware & Optical lunch (Meng/Kao/Yang/Marshall/Woodring) — a marketing event notice; no readout in corpus and no thesis-resolving output expected.
+- LITE 2026-10-08 — neutral — NOT SCOREABLE (D+1): same MS Global Hardware & Optical lunch as COHR; no readout in corpus.
 - MRVL 2026-10-06 — neutral — UNRESOLVED (D+2): Investor Day (NYC, 9am ET) readout NOT in the corpus — latest MRVL content is the 10-05 JPM/Sur and 09-28 UBS/Jefferies PREVIEWS (MS $40bn+ FY30 frame; UBS says >$20 EPS slide 'unlikely', crowded positioning). The GOOG-agreement sizing and C28 custom outlook that desks said were withheld cannot be scored yet. Logged to clear the flag only; MATERIAL — route to /run-inbox when the primary (deck/transcript/broker wraps) lands.
 - AVGO 2026-10-06 — neutral — UNRESOLVED (D+2): read-through leg of the MRVL Investor Day (09-29 MediaTek/TPU-v9 rumour); no post-event note in corpus. Resolves with the MRVL readout.
 - TXN 2026-10-06 — neutral — UNRESOLVED (D+2): BofA/DigiKey (Stephane Bratu) distributor pricing call — only the event notice is on the page; no notes ingested. Thesis-immaterial unless notes show analog pricing/lead-time inflection.
