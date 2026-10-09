@@ -7,15 +7,15 @@
 _Wiki · generated 2026-06-20 · **No SEC filings — Japanese issuer (TSE Prime: 6146); thin English coverage.** Sources: `E:\Wiki Felipe\DISCO\transcripts` (IR results summaries / monthly-sales-driven disclosure) + `E:\briefings\2026` repo + BBG (JPY). Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-06 · JPY
+### 📊 Consensus snapshot — BBG · asof 2026-10-09 · JPY
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | ¥520.7bn | ¥648.6bn |
-| Gross profit | ¥367.6bn | ¥469.6bn |
+| Revenue | ¥521.6bn | ¥649.3bn |
+| Gross profit | ¥368.2bn | ¥470.1bn |
 | Gross margin | 70.6% | 72.4% |
 | EBITDA | ¥244.7bn | ¥297.3bn |
-| EPS | ¥1589.87 | ¥1887.14 |
+| EPS | ¥1590.17 | ¥1887.14 |
 | Capex | ¥41.3bn | — |
 | OCF (≈EBITDA) | ¥244.7bn | ¥297.3bn |
 

@@ -210,7 +210,7 @@ def issuance_chart(iss):
             out.append(f'<rect class="b200r" x="{x}" y="{Y(iss["fy26e_high_bn"]):.1f}" width="{bw}" height="{Y(v)-Y(iss["fy26e_high_bn"]):.1f}" rx="4"/>')
         out.append(f'<text class="val num" x="{x+bw/2}" y="{Y(max(v, iss["fy26e_high_bn"] if lbl=="FY2026E" else v))-7:.1f}" text-anchor="middle">{vl}</text>'
                    f'<text class="lbl" x="{x+bw/2}" y="{HH-18}" text-anchor="middle">{lbl}</text>'
-                   f'<title>{lbl}: {vl} AI-related issuance across credit channels (MS tracker 2026-08-20)</title></g>')
+                   f'<title>{lbl}: {vl} AI-related issuance across credit channels. {E(iss.get("forecast_source" if lbl == "FY2026E" else "actual_source", "MS tracker 2026-08-20"))}</title></g>')
     return f'<svg viewBox="0 0 {W} {HH}" role="img" aria-label="AI-related debt issuance">{"".join(out)}<line class="axis" x1="{ml-8}" x2="{W-10}" y1="{HH-mb}" y2="{HH-mb}"/></svg>'
 
 # ---------------------------------------------------------------- assemble pieces
@@ -231,7 +231,9 @@ for s in market.get("series", []):
 iss = deals["issuance"]
 tiles.append(f'<div class="tile"><div class="tl">AI-related issuance YTD</div>'
              f'<div class="tv num">${iss["ai_related_ytd_bn"]}<span class="tu">bn</span></div>'
-             f'<div class="td">vs ${iss["fy25_total_bn"]}bn all of 2025</div><div class="tile-source">MS · 2026-08-20 · historical snapshot</div></div>')
+             f'<div class="td">vs ${iss["fy25_total_bn"]}bn all of 2025</div><div class="tile-source">{E(iss.get("actual_source", "MS · 2026-08-20 · historical snapshot"))}</div></div>')
+
+recent_issuance = '; '.join(f'${m["bn"]}bn {m["label"]} [{m.get("source", "MS 2026-08-20")}]' for m in iss['monthly_recent'])
 
 panels = "".join(line_panel(s, i) for i, s in enumerate(market.get("series", [])))
 
@@ -472,7 +474,7 @@ page = f"""<!doctype html>
 
 <section>
  <h2>Issuance &amp; absorption</h2>
- <p class="sub">{E(iss["fy26e_note"])}. IG share of supply: 1% (2024) → 7% (2025) → ~18% (2026 YTD) <span class="src">[{E(iss["ig_share_source"])}]</span>. Recent pace: ${iss["monthly_recent"][0]["bn"]}bn {E(iss["monthly_recent"][0]["label"])} + ${iss["monthly_recent"][1]["bn"]}bn {E(iss["monthly_recent"][1]["label"])}. {E(iss["ig_monthly_record"])}.</p>
+ <p class="sub">{E(iss["fy26e_note"])}. Historical IG share of supply: 1% (2024) → 7% (2025) → ~18% (2026 YTD) <span class="src">[{E(iss["ig_share_source"])}]</span>. Reported pace: {E(recent_issuance)}. {E(iss["ig_monthly_record"])}.</p>
  <div class="card">{issuance_chart(iss)}
  <p class="note">{E(iss["ai_related_ytd_note"])}</p></div>
 </section>

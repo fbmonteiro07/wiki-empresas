@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-10-09T09:18:10",
+  "subject": "AI Credit & Funding | Weekly summary | 2026-10-09",
+  "recipient": "felipe.monteiro@capstone.com.br",
+  "status": "failed_not_sent",
+  "error": "Outlook COM rejected the send workflow because the local OST has reached its maximum size. No message submitted according to the subsequent sender -Verify check.",
+  "verification": {
+    "method": "send_credit_email.ps1 -Verify",
+    "result": "not_sent",
+    "matching_sent_items": 0,
+    "matching_outbox_items": 0,
+    "receipt_exists": false
+  },
+  "body": "\\\\CAPSRV01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\_data\\credit-monitor\\exports\\2026-10-09-email.txt",
+  "attachment": "\\\\CAPSRV01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\_data\\credit-monitor\\exports\\2026-10-09-credit-monitor.html",
+  "body_sha256": "eb666632818ce99bfeee1f94e88b760b077625cc4f929657938e7823aa544b45",
+  "attachment_sha256": "118dbef333806e4ca6928010370aa7d1d947a47265e41644ba3e7798fa951910",
+  "required_action": "Resolve the existing Outlook local cache capacity problem, then rerun -Verify before a single send attempt. No cache contents or mailbox items were deleted."
+}

@@ -1,5 +1,7 @@
 <!-- Per-company wiki page. Synthesizes the IPO prospectus (424B4 / S-1) + FinTwit. Every datapoint sourced.
-     THESIS-DRIFT RULE: move superseded numbers/views into ## Changelog with a date — don't overwrite. -->
+     THESIS-DRIFT RULE: move superseded numbers/views into ## Changelog
+
+- **2026-10-09 — weekly AI credit review:** Added reported ~$40bn financing proposal with no committed amount and no aggregation with Anthropic compute TCV. September 25 index/rebalance watch remains unreviewed in this credit run; no outcome inferred. [Dated evidence](_data/credit-monitor/research-sources/2026-10-09-primary.json). with a date — don't overwrite. -->
 
 ## 🆕🔴🔴 MUSK'S OWN COMPUTE LADDER, QUOTED AT LENGTH — >2GW ONLINE THIS YEAR, "CLOSER TO 10GW THAN 5GW" CUMULATIVE BY END-2027, AND A 20GW POWER-AND-COOLING TARGET HE DISOWNS IN THE SAME BREATH (~15GW REALISTIC); PLUS THE AUSTIN "TERAFAB" EQUIPMENT ORDERS ARE PLACED (2026-09-19)
 
@@ -123,7 +125,12 @@ _(UBS Index Analytics · **Jason Irukulapati**, "The Daily Catch — S&P 1500/IC
 - **Baker, same podcast, on the compute leg: *"[[CRWV]] & [[NBIS]] disclosures suggest roughly **9-10 month paybacks** for large deployments"*, and *"SPCX aggressive compute investment paying off and **GrokBot is producing a new ChatGPT-like productivity step-function**."* ⚠️ **Baker is a manager talking about names he may hold — logged as a named view, not as research.**
 
 
-- **2026-08-26 (2 CURRENT sources + a DAMNANG archive backfill). 3 dated blocks under `## Debate / thesis`, 3 Sources lines. NOTHING SUPERSEDED: no SPCX rating, PT, guide, reported number, capacity mark or lease rate was overwritten. This page has no `## Intra-quarter` section and none was created.**
+- **2026-08-26 (2 CURRENT sources + a DAMNANG archive backfill). 3 dated blocks under `## Debate / thesis
+
+### 2026-10-09 credit review — reported NVIDIA chip financing
+
+**Vital Knowledge / Adam Crisafulli, October 7**, relaying WSJ October 7 and the first FT report October 6: SpaceX is discussing roughly **$40bn** in financing for NVIDIA chip purchases. **SPCX-NVDA-FIN-20261006** remains press-reported talks; the reviewed evidence does not establish committed debt, closing, an NVIDIA guarantee, or delivered GPUs. Track final lender, collateral, amortization and recourse documents. Keep this financing proposal separate from **ANTH-SPCX-20260506**, the existing Anthropic compute contract. [Full source email](https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWUYZNKAAA%3D&exvsurl=1&viewmodel=ReadMessageItem).
+`, 3 Sources lines. NOTHING SUPERSEDED: no SPCX rating, PT, guide, reported number, capacity mark or lease rate was overwritten. This page has no `## Intra-quarter` section and none was created.**
   🔴🔴 **① THE 10GW CLAIM FINALLY GETS AN EXTERNAL BOUND, AND IT COMES FROM MORGAN STANLEY DISAGREEING WITH ITS OWN COVERED COMPANY'S STRETCH CASE IN PRINT. MS Asia: "SpaceX indicated plans to expand its computing capacity from 2GW by the end of this year to nearly 10GW under an ambitious scenario … Notably, Adam [Jonas] models only 3GW of incremental computing demand, reaching 5GW by end-2027." MS's own SPCX analyst underwrites HALF the ambition. And the foundry constraint is now sized: "the additional 8GW implied by SpaceX's target would equate to approximately 4mn Rubin GPUs, or roughly 20% of the AI accelerators that TSMC could produce in 2027." Against a global 2027 accelerator installed base MS Asia puts at ~19mn CoWoS-implied units and ~38GW at ~2kW average TDP, a 10GW single buyer is ~26% of the world's accelerator power.**
   ⚠️ **These are MS Asia estimates from Taiwan supply-chain checks, not SpaceX disclosure, and the ~4mn-Rubin conversion is labelled "a rough illustration". ⚠️ AND A UNIT GUARD-RAIL RECORDED DELIBERATELY: this is a units-and-power calculation (GPUs × TDP ⇒ GW) carrying NO $/W. It must not be chained into the $/GW or $M/MW marks elsewhere on this page.**
   🔴 **② SPACEX IS NOW A NAMED FAB IN MS'S WFE MODEL — AND THE NUMBER IS THE OPPOSITE OF AN ENDORSEMENT. It is one of five names in the leading-edge logic wafer model ("TSMC, Samsung, Intel, Rapidus, SpaceX"), present in the 3nm/2nm/1.4nm capacity-add exhibits. But on 2028 leading-logic WFE of $90bn, MS writes: "We don't reflect a meaningful contribution from SpaceX ($2bn)." Real enough to name, small enough to ignore through 2028. That is a useful calibration against the $55bn Grimes County filing already on this page: presence in the model is not volume in the model.**
@@ -137,17 +144,17 @@ _(UBS Index Analytics · **Jason Irukulapati**, "The Daily Catch — S&P 1500/IC
 _Wiki · generated 2026-06-29 · sources: IPO prospectus (424B4 2026-06-12 / S-1 2026-05-20, archived in `../SPCX/`) + FinTwit. **Newly public — IPO'd June 2026 (Nasdaq: SPCX).** Master index: [../INDEX.md](../INDEX.md). Themes: [ai-datacenter-power](themes/ai-datacenter-power.md) · [custom-asic-tpu](themes/custom-asic-tpu.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-06 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-10-09 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $44.4bn | $111.2bn |
-| Gross profit | — | $69.7bn |
-| Gross margin | — | 62.7% |
-| EBITDA | $20.3bn | $66.8bn |
-| EPS | $-0.97 | $1.86 |
-| Capex | $49.5bn | $185.8bn |
-| OCF (≈EBITDA) | $20.3bn | $66.8bn |
+| Revenue | $44.4bn | $111.3bn |
+| Gross profit | — | $70.2bn |
+| Gross margin | — | 63.1% |
+| EBITDA | $20.3bn | $66.9bn |
+| EPS | $-0.96 | $1.90 |
+| Capex | $49.5bn | $185.0bn |
+| OCF (≈EBITDA) | $20.3bn | $66.9bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

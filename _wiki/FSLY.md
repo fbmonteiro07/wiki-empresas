@@ -5,16 +5,16 @@
 _Wiki · generated 2026-06-25 · sources: `E:\Wiki Felipe empresas\CDNs\_imported_from_E_root\` (FSLY filings + transcripts + decks). Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-06 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-10-09 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $730m | $852m |
-| Gross profit | $469m | $559m |
-| Gross margin | 64.3% | 65.6% |
+| Revenue | $731m | $858m |
+| Gross profit | $470m | $563m |
+| Gross margin | 64.3% | 65.7% |
 | EBITDA | $128m | $183m |
-| EPS | $0.40 | $0.61 |
-| Capex | $67m | $85m |
+| EPS | $0.36 | $0.63 |
+| Capex | $67m | $86m |
 | OCF (≈EBITDA) | $128m | $183m |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

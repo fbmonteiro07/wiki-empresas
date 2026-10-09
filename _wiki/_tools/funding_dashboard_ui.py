@@ -46,6 +46,14 @@ def enhance(page, deals, market):
                 '<article class="weekly-card thesis-card"><p class="eyebrow">RESEARCH LENS</p><h2>Follow the financing constraint</h2><p>' + E(deals['meeting_thesis']) + '</p>'
                 f'<div class="evidence-note"><b>Research evidence · {E(review_date)}</b><p>Broker snapshots, deal terms and appetite judgments below retain their source dates. A market refresh does not update those claims.</p></div>'
                 '<a class="text-link" href="../themes/ai-compute-deals.md">Open the compute-deal timeline ↗</a></article></div>')
+    review = deals.get('weekly_review', {})
+    if review:
+        paragraphs = ''.join('<p>' + E(p) + '</p>' for p in review.get('summary', '').splitlines() if p)
+        sources = ''.join('<li>' + E(s) + '</li>' for s in review.get('sources', []))
+        overview += ('<article class="weekly-card"><p class="eyebrow">LATEST RESEARCH REVIEW · '
+                     + E(review.get('reviewed_at', 'undated')) + '</p>' + paragraphs
+                     + '<details><summary>Review sources and dates</summary><ul style="overflow-wrap:anywhere">'
+                     + sources + '</ul></details></article>')
     page = page.replace('<section id="overview">', freshness + '<section id="overview">' + overview)
     for section in ('spreads', 'counterparty', 'repricing', 'issuance', 'scoreboard'):
         page = page.replace(f'<section id="{section}">', f'<section id="{section}"><p class="section-kicker">DATED RESEARCH · LEDGER {E(review_date)}</p>')

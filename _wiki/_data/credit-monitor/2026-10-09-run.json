@@ -1,0 +1,37 @@
+{
+  "run_at": "2026-10-09T09:15:15",
+  "subject": "AI Credit & Funding | Weekly summary | 2026-10-09",
+  "status": "complete",
+  "errors": [],
+  "market_fetched_at": "2026-10-09T09:15:12",
+  "market_dates": {
+    "ok": true,
+    "issues": [],
+    "earliest": "2026-10-08",
+    "latest": "2026-10-08"
+  },
+  "research_asof": "2026-10-09",
+  "email_requested": true,
+  "body": "\\\\CAPSRV01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\_data\\credit-monitor\\exports\\2026-10-09-email.txt",
+  "attachment": "\\\\CAPSRV01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\_data\\credit-monitor\\exports\\2026-10-09-credit-monitor.html",
+  "input_sha256": {
+    "funding_deals.json": "ad53722815486a1c441714bb5ee1db14eadf0c835393b1436591b3874b8cf4c4",
+    "funding_market.json": "c5b9b31ee85147bc4653c507fc2b0ad5854ae963b151f7bf2dd0ca107c4f55a3"
+  },
+  "email_status": "failed_not_sent",
+  "email_error": "Outlook COM rejected the send workflow because the local OST has reached its maximum size. No message submitted according to the subsequent sender -Verify check.",
+  "email_verification": {
+    "method": "send_credit_email.ps1 -Verify",
+    "result": "not_sent",
+    "matching_sent_items": 0,
+    "matching_outbox_items": 0,
+    "receipt_exists": false
+  },
+  "email_failure_audit": "_wiki\\_data\\credit-monitor\\2026-10-09-email-failure.json",
+  "research_refresh_checks": {
+    "credit_tests": "8 passed",
+    "search_index": "2382 documents; 6 updated",
+    "offline_wiki": "110 companies; 23 themes",
+    "live_dashboard": "exact byte match verified"
+  }
+}

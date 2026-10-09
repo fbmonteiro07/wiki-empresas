@@ -1,6 +1,6 @@
 {
  "_about": "Hand-edited ledger of machine-transcription garbles (Notion AI, Bloomberg ASR, auto-translation) seen in the archive, with the correct reading. Used by E:\\.claude\\scripts\\transcript_qa.py (source-file scan, page-diff scan) and by ingest_notion_meetings.py (writes a 'Transcription QA' block into every archived Notion file). Keys are matched with word boundaries, case-sensitive unless 'ci' is true. 'keep_when' = regex contexts (same line, ~80 chars around the hit) where the token is legitimate and must NOT be flagged. Add an entry the first time a garble is caught; never delete one. Standing rule (Felipe, 2026-09-28): ALWAYS double-check transcript content — acronyms, names, units, numbers — before it travels to a page.",
- "_updated": "2026-10-02",
+ "_updated": "2026-10-08",
  "terms": {
   "Smolik": {
    "correct": "Shmulik (Mark Shmulik, Bernstein US Internet)",
@@ -716,6 +716,13 @@
    "rule": "Notion ASR/summary plural for 'neoclouds' on the Archera call ('the Blackwell spot price and the Neos').",
    "keep_when": "never a product",
    "first_seen": "2026-10-02 (DB/Archera expert call)"
+  },
+  "Tranium": {
+   "correct": "Trainium (AWS)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube automatic captions in the AWS custom-silicon/Bedrock context; do not treat the ordinary word training as a global replacement.",
+   "first_seen": "2026-10-08 (Matt Garman @ The a16z Show; mirrored YouTube captions)"
   }
  },
  "summary_traps": [
