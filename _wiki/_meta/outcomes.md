@@ -8,6 +8,8 @@ Format (ticker + the catalyst date, then the verdict):
 
 Add lines here after each catalyst resolves. Newest first.
 
+- NVDA 2026-10-08 — neutral — NOT SCOREABLE (D+4): IR investor call (Rothschild & Co Redburn TMT sales · Rowan Adley, 09-28 notice) — a marketing/access event; no readout in corpus. Parser files this bullet at 11-23 (latest date), so it never surfaced as ⏰; logged by hand from the Catalysts hand-scan. (wiki-catalyst 2026-10-12)
+- STX 2026-10-08 — neutral — NOT SCOREABLE (D+4): same MS Global Hardware & Optical lunch already logged for COHR/LITE; no readout in corpus. Parser files the bullet at 11-02 (the CFO NDR). (wiki-catalyst 2026-10-12)
 - SAMSUNG 2026-10-08 — neutral — UNRESOLVED (D+3): 3Q26 preliminary OP print is NOT in the corpus (SAMSUNG page last touched 10-02; no wiki ingest has landed since ~10-02-10-05 and _inbox is empty). Pre-event marks on one basis: GS W106tn (10-01), BofA W107tn (10-02, 'could readily meet'), Street ~W110tn (per BofA), Bernstein W114.8tn (09-29); Q2 W89.4tn. Logged to clear the flag only, deferred one day on 10-10. MATERIAL for the memory-durability debate (and MU/SKHYNIX read-across) — route to /run-inbox//wiki-ingest when the print lands; full results ~10-29.
 - APP 2026-10-08 — neutral — UNRESOLVED (D+3): BofA video-game bogey-poll results call (Omar Dessouky, BofA TMT desk 09-30) — no readout ingested; APP v. Unity TRO/arbitration track has no hearing date in sources. Deferred one day on 10-10; logged to clear the flag. Route the poll results to /run-inbox if they surface.
 - COHR 2026-10-08 — neutral — NOT SCOREABLE (D+1): MS Global Hardware & Optical lunch (Meng/Kao/Yang/Marshall/Woodring) — a marketing event notice; no readout in corpus and no thesis-resolving output expected.

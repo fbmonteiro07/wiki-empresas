@@ -1,8 +1,8 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-10-11 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-10-12 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (41)
+## 📅 Upcoming (42)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
@@ -13,6 +13,7 @@ _Generated 2026-10-11 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-10-15 | SMTC | **🔴 2026-10-15 — INVESTOR / ANALYST DAY, San Jose. The single most important dated event on this page, because management deferred the two questions that matter to it.** Promised content: *"an in-dept |
 | 2026-10-20 | NFLX | 🆕 **Q3 2026 earnings — Tue 2026-10-20 AMC** (Vital Knowledge calendar, 2026-09-28) — replaces the "~late Oct" placeholder. |
 | 2026-10-20 | NVDA | 🆕 **2026-10-20 to 10-22: NVIDIA GTC Berlin** (JPM US Market Intelligence calendar, 09-29/09-30); BofA lists "multiple GTC tradeshow events" with the enhanced buyback as the near-term NVDA catalysts (A |
+| 2026-10-22 | NOK | **2026-10-22 — Q3 results:** Optical/IP deliveries and new orders, supply constraints and MI software phasing. The July guide calls for revenue **+3–7% sequentially** and EBIT broadly flat on Q2. Trac |
 | 2026-10-23 | AAPL | **🆕 2026-10-13 — SMART-HOME LAUNCH** (J490 hub, HomePod mini, Apple TV; Bloomberg via GS / JPM / BofA / Redburn desks, 2026-09-29→10-01); **2026-10-16 Duo pre-orders, 2026-10-23 on sale** (DigiTimes v |
 | 2026-10-26 | MEDIATEK | **🆕🔴 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR "POTENTIAL UPWARD REVISIONS TO GOOGLE TPU-RELATED GUIDANCE."** Between them: **Google system-level validation of v9 in H |
 | 2026-10-27 | FLEX | **🆕 2026-10-27 — Celestica (CLS) analyst day:** the EMS peer's rack/switching numbers (Bernstein top pick; BofA expects a late-October guidance raise) are the read-through for this page's EMS comp set |
