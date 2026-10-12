@@ -24,79 +24,19 @@ STEPS = [
     ("build_readthrough.py", []),
     ("build_diff.py", []),
     ("build_catalysts.py", []),
-    ("build_gantt.py", []),
     ("build_coverage.py", []),
     ("build_assumptions.py", []),
-    ("build_book.py", []),          # needs build_catalysts + extract_house first
     ("build_mgmt_comms.py", []),    # reads each page's commentary-evolution table
-    ("build_cyber_kpis.py", []),    # cyber KPI ledger (_data/cyber_kpis.json + estimates.json) -> cyber-kpis.html
     ("gpu_pricing.py", []),        # Bloomberg + public SemiAnalysis; retain cache on source failure
     ("build_gpu_pricing.py", []),  # render retained or refreshed observations
     ("build_openrouter_dash.py", []),  # keep the embedded GPU tab in sync
     ("build_search_index.py", []),  # incremental — unchanged files skipped
-    ("build_graph.py", []),         # needs catalysts + search index + book + assumptions
+    ("build_graph.py", ["--no-html"]),  # graph_full.json only (graph_query hook + build_analyst); graph.html retired 2026-10-12
     ("build_analyst.py", []),       # belief ledger + ranked, attributed proactive signal queue
     ("build_sentiment.py", ["--no-bbg"]),   # hot/cold × bull/bear indicator — tweets re-scanned, BBG history from cache (terminal-only refresh: run without --no-bbg)
+    ("build_sentiment_monitor.py", []),  # daily sentiment monitor: CNN F&G (live, cached), movers, windows, map, daily note
+    ("build_dashboards_hub.py", []),  # hub from the hand-edited registry _data/dashboards.json (cadence sections, dates, stale flags)
 ]
-
-HUB = [
-    ("A daily wiki prompt — versão codex", "process-lab-codex/wiki-prompt.html", "Visual simulation of the daily wiki-edge workflow: follow local CPU tools, remote GPU inference, system RAM and HBM across eleven stages. Playback, component explanations and an activity map. Illustrative activity, no live telemetry."),
-    ("Process walkthroughs — versão codex", "process-lab-codex/index.html", "Eight interactive guides and simulations in Capstone colors: EML lasers, logic chips, DRAM, HBM stacking, optical switching, co-packaged optics, AI inference and a daily wiki prompt. Plain-language steps, primary sources and separate Claude versions."),
-    ('Specialist sales - all companies', 'attention-sentiment/specialist-sales.html', '106-company coverage ledger, contextual desk views, expectations and reported positioning; source disagreements and dated evidence. Dark, offline dashboard.'),
-    ('Attention & sentiment', 'attention-sentiment/index.html', 'Price versus discussion, a 106-name stock radar, five rising/falling names, source breadth and specialist-sales evidence. Dark dashboards; retained snapshots.'),
-    ('Fear & Greed - extreme entries', 'attention-sentiment/cnn-next-week.html', 'SPY/QQQ performance over the next five trading sessions after new entries into fear or greed zones. Event-focused, with sample sizes and uncertainty.'),
-    ('Narratives & specialist sales', 'attention-sentiment/narrative-diffusion.html', 'META/Muse case study: product aliases, author diffusion and source-timed specialist-sales observations.'),
-    ("Estudos · OpenRouter + Vercel", "openrouter.html", "Opens with open-weight vs proprietary share of tokens and weekly token traffic (NVIDIA-slide framing, weekly). Then gateway token share, requests, reported versus estimated spend, and weekly changes. Friday summary at 09:00 Brasília."),
-    ("GPU rental pricing", "gpu-pricing.html", "H100, A100 and B200: Bloomberg rental benchmarks, SemiAnalysis public spot-contract indices and H100 one-year survey ranges, with dated source data."),
-    ("AI gateways — weekly brief", "gateway-weekly.html", "Latest weekly summary covering OpenRouter and Vercel, with dated observations and source-specific methodology."),
-    ("Analyst Inbox", "analyst-inbox.html", "Ranked daily ideas, model challenges, narrative shifts, catalysts and read-throughs — each with attribution, action and falsifier."),
-    ("AI credit & funding monitor", "credit-monitor.html", "AI credit spreads, weekly market changes, financing evidence and appetite signals. Weekly refresh and email: Fridays at 09:00 São Paulo."),
-    ("Edge tracker", "edge.html", "House vs Street divergences (the alpha) — programmatic + curated."),
-    ("Read-through map", "readthrough.html", "Supply-chain & substitutes: who reads through to whom."),
-    ("Catalyst loop", "catalysts.html", "Upcoming calendar + passed catalysts awaiting a post-mortem."),
-    ("Catalyst timeline", "gantt.html", "Forward Gantt — every catalyst on one time axis (bar width = date precision)."),
-    ("What changed", "diff.html", "Recent page changelog + ingest deltas (rating/PT moves starred)."),
-    ("Coverage audit", "coverage.html", "Source material on disk that the page never read (decks, calls, latest filings)."),
-    ("Canonical assumptions", "assumptions.html", "One number per debate — every cross-page figure, all variants, scope traps flagged."),
-    ("Knowledge graph", "graph.html", "Interactive map of the whole repo — tickers, themes, debates, brokers, supply chain."),
-    ("Book exposure", "book.html", "Positions × unresolved debates × catalysts — where the book is most exposed."),
-    ("Sentiment — hot/cold × bull/bear", "sentiment.html", "Hot/cold × bull/bear per name: own tweet corpus + Bloomberg Twitter/news sentiment (2024→) + sell-side e-mail flow (Outlook) × EPS revisions, rating drift, short interest — weekly ranking, quadrant map, 1w/15d/4w rank-IC backtests and a 1,000-print earnings event-window study (build_sentiment.py)."),
-    ("Management communication", "mgmt-communication.html", "MSFT · AMZN · GOOG · META · NVDA · TSM · ASML · AVGO — how the discourse moved quarter by quarter, the capex-message vs tape cross-section, and who will and won't put a number on it."),
-    ("Cyber KPI ledger", "cyber-kpis.html", "PANW · CRWD · OKTA — the non-GAAP KPIs Bloomberg does not carry (net new ARR, NGS ARR, cRPO, NRR, Flex, module attach): sourced ledger, cross-company small multiples on a calendar axis, next-print guide vs consensus vs the buy-side bar (hand-curated _data/cyber_kpis.json)."),
-    ("Ramp AI Index", "ramp-ai-index.html", "Enterprise alt-data, two series off one panel: model mix (who gets used — provider share, the Anthropic capability ladder, vintage turnover, launch curves) and AI spend per employee. Manual refresh: drop the new CSV in _data/ramp-ai-index/, then build_ramp_index.py + build_ramp_dash.py. ⚠ no Google/Gemini rows in the panel — not a market share."),
-    ("Hyperscaler capex", "hyperscaler-capex/Capex_Cloud.html", "Consensus vs actual vs house cloud capex (existing)."),
-    ("GW per player", "gw-per-player.html", "Highest GW estimate per player, all sources cited, SemiAnalysis highlighted (hand-curated 2026-07-01)."),
-    ("Token fabric", "token-fabric.html", "Token supply vs demand 2026-2030 — calibrated tok/s/MW, per-user watts, malinvestment dial (hand-curated 2026-07-02)."),
-    ("The Light Path — OCS · CPO · scale-up/out — versão Claude", "ocs-cpo-lab.html", "Interactive 3D explainer: how an optical circuit switch re-routes light with MEMS mirrors (vs an electrical switch), how optics move from pluggable to NPO to CPO (power, pJ/bit, DSP, laser, service), where copper, pluggables, NPO, CPO and OCS sit in scale-up vs scale-out (with the NVL72 → NVL576 rack-to-rack walkthrough), and a 'Who sits where' map of every company the wiki places in each layer — every number attributed (hand-built 2026-09-27/28)."),
-    ("The Wafer Path — TSMC logic · DRAM · HBM — versão Claude", "wafer-lab.html", "Interactive 3D explainer with a step-by-step walkthrough per tab (the drawing builds itself stage by stage, camera follows, each step attributed): how TSMC builds a leading-edge logic wafer (FinFET to GAA to backside power, the EUV/DUV patterning loop, tools and capex per fab), how the memory makers build a DRAM wafer (1T1C cell, 6F² to 4F² VCT to 3D DRAM, where the few EUV layers sit, capacity by maker) and what turns DRAM dies into an HBM stack (TSVs, base die at TSMC, MR-MUF vs TC-NCF vs hybrid bonding, height ceiling, yield compounding, wafer trade ratio) — every number attributed (hand-built 2026-09-28)."),
-    ("The Trade Ratio — one wafer, two fates (DDR vs HBM) — versão Claude", "hbm-trade-lab.html", "Interactive 3D sketch in six build-it-up steps with a 'Walk me through it' mode: one 300 mm wafer → cut into 16Gb DDR dies → the same wafer as larger HBM core dies (TSV field) → TSV-process loss and known-good dies → 12-high stacking on a base die with compounding yield → count the bits (Micron's 3:1 → ~4:1 trade ratio, implied vs stated) and what a rising HBM wafer share does to the fab's bit output. Editable example (generation HBM3E/HBM4/HBM4E, density, yields, HBM share; placeholders labelled), KPI strip, share-vs-bits chart, sourced cards; deep links ?step=&gen=&share=&walk=1. Visual companion to the MU wafers-to-bits workbook (hand-built 2026-10-01)."),
-    ("The Token Path — one prompt across many GPUs — versão Claude", "token-path-lab.html", "Interactive 3D companion to The Light Path: a 7-step walk of one prompt (head node, weight sharding, prefill/KV cache, decode all-to-all, the spill from NVL72 to NVL576 and scale-up optics, the agent loop, where the light is) driven by a live memory calculator on sourced constants, every number attributed (hand-built 2026-09-28)."),
-    ("The Laser Line — how Lumentum makes an EML — versão Claude", "eml-laser-lab.html", "Interactive 3D production line in a studio view with an editable wafer-diameter example (3/4/6-inch → chips/month, revenue, share of Citi's 2028E supply; placeholder inputs labelled) a diameter comparison chart and a who-does-what layer (per station: who Lumentum buys from and what, which site, peers, who buys the output, through to the end customer); deep links ?station=&dia=&explode=&theme=. Line: sulfur-doped InP wafer → MOCVD epitaxy (Aixtron) → DFB grating + EAM → wafer fab (Sagamihara/Takao) → probe → bars, facets, AR/HR → dice, submount, test → transceiver or NVIDIA's external laser source; sites, capacity, wafer-size and supply numbers, every one attributed (hand-built 2026-09-28)."),
-    ("Memória — superciclo", "memoria-capstone.html", "Superciclo de memória (DRAM · NAND · HBM): KPIs, S/D por segmento, capacidade e conversão HBM, valuation e builds editáveis, dark mode (hand-built 2026-07-08)."),
-    ("Memory exports tracker", "memory-exports-tracker.html", "Weekly Monday routine (E:\korea-memory-monitor): Korea customs 10-day preliminaries and HS10 detail (DRAM, flash, multichip, SSD, destinations), MOTIE fixed DDR5/NAND prices, BOK export price indices, Japan flash exports (Kioxia/SanDisk) and the quarter read vs the Street; full monthly report in memory-exports-report.html."),
-    ("Revenue das clouds", "rcloud.html", "AWS · Azure · GCP: resultado, RPO (split OpenAI/Anthropic), projeções Capstone vs consenso vs bogey, exposição aos labs, EBIT e capex/FCF — réplica do rcloud.html da Fernanda (sync_rcloud.py)."),
-]
-
-
-def build_hub():
-    cards = []
-    for title, href, desc in HUB:
-        if (DASH / href).exists():
-            cards.append(f"<a class='card' href='{href}'><h3>{title}</h3><p>{html.escape(desc)}</p></a>")
-    body = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1"><title>Wiki dashboards</title>
-<style>
-body{{margin:0;font:15px/1.55 -apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#1a1f29;background:#f5f6f8}}
-header{{background:#0f1729;color:#fff;padding:20px 28px}}header h1{{margin:0;font-size:20px}}
-header a{{color:#7fb0ff;text-decoration:none}}header p{{margin:4px 0 0;color:#8492ad;font-size:13px}}
-main{{max-width:980px;margin:0 auto;padding:24px 28px;display:grid;grid-template-columns:1fr 1fr;gap:16px}}
-.card{{display:block;background:#fff;border:1px solid #e3e7ee;border-radius:10px;padding:16px 18px;text-decoration:none;color:inherit;transition:.12s}}
-.card:hover{{border-color:#4f8cff;box-shadow:0 2px 10px #0f172914}}
-.card h3{{margin:0 0 6px;color:#0f1729;font-size:16px}}.card p{{margin:0;color:#6b7280;font-size:13px}}
-</style></head><body>
-<header><h1>📊 Wiki dashboards</h1><p>Generated {TODAY.isoformat()} · <a href="../index.html">← back to the company wiki</a></p></header>
-<main>{''.join(cards)}</main></body></html>"""
-    (DASH / "index.html").write_text(body, encoding="utf-8")
 
 
 def main():
@@ -108,8 +48,6 @@ def main():
         if r.returncode != 0:
             sys.stderr.write(r.stderr[-1200:])
             print(f"[WARN] {script} exited {r.returncode}")
-    build_hub()
-    print(f"\nhub -> {DASH/'index.html'}")
     print("done.")
 
 

@@ -5,7 +5,7 @@ Run `py _wiki/_tools/refresh_ai_gateways.py` to collect both public sources, reb
 The existing Monday OpenRouter refresh remains in place. A Codex heartbeat named **OpenRouter + Vercel — resumo semanal** runs Friday at 09:00 America/Sao_Paulo in the originating task and delivers the summary there. The workstation and Codex app need to be running for the local automation. Its prompt contains the paths and methodology needed to recover context.
 
 - Dashboard: `_wiki/_dashboards/openrouter.html` (Vercel section: `#vercel`).
-- Studies entry: the dashboard hub's **Estudos · OpenRouter + Vercel** card, maintained in `refresh_features.py`.
+- Studies entry: the dashboard hub's **Estudos · OpenRouter + Vercel** card, maintained in `_data/dashboards.json` (the hub registry).
 - Weekly brief: `_wiki/_dashboards/gateway-weekly.html` and `_wiki/_data/ai-gateways/weekly-latest.md`.
 - Run status and failures: `_wiki/_data/ai-gateways/status.json`.
 - Original Vercel exports and collection manifest: `_wiki/_data/vercel/raw/<UTC timestamp>/`.

@@ -107,7 +107,7 @@ def main():
             sys.stderr.write(r.stderr[-1500:])
             print("\n[fetch failed — likely BBG Terminal not logged in. Worklist still written.]")
         else:
-            print("\n[fetch done — re-run build_edge.py / build_wiki_html.py to refresh derived views.]")
+            print("\n[fetch done — re-run build_wiki_html.py to refresh derived views (build_edge.py retired 2026-10-12).]")
     elif RUN_EST:
         print("[--run-estimates] nothing to fetch.")
 

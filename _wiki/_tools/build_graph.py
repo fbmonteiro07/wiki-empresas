@@ -178,6 +178,10 @@ def main():
     (DATA / "graph_full.json").write_text(json.dumps(out, ensure_ascii=False, indent=1),
                                           encoding="utf-8")
 
+    if "--no-html" in sys.argv:
+        print(f"  -> {DATA/'graph_full.json'} (graph.html skipped: --no-html; the page was retired 2026-10-12)")
+        return
+
     # ---------- self-contained interactive viz ----------
     by_type = {}
     for n in nodes.values():
