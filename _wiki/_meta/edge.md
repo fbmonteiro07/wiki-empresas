@@ -1,6 +1,6 @@
 # Edge tracker — house vs Street
 
-_Generated 2026-10-09 · the standing view of where our model and the curated reconciliation runs disagree with consensus. Divergence = candidate alpha; agreement is noise. Rebuild: `py _wiki/_tools/build_edge.py`._
+_Generated 2026-10-12 · the standing view of where our model and the curated reconciliation runs disagree with consensus. Divergence = candidate alpha; agreement is noise. Rebuild: `py _wiki/_tools/build_edge.py`._
 
 > ⚠️ Programmatic rows are auto-computed (house.json vs estimates.json, USD names only) — **verify the basis before trading** (revenue gross/net/TAC differences can masquerade as edge). Curated rows below are analyst-vetted.
 
@@ -8,9 +8,9 @@ _Generated 2026-10-09 · the standing view of where our model and the curated re
 
 | Ticker | Metric | Yr | House | Consensus | Δ |
 |---|---|---|--:|--:|--:|
-| GOOG | Revenue $bn | 2026 | 505.00 | 428.40 | +18% |
+| GOOG | Revenue $bn | 2026 | 505.00 | 427.80 | +18% |
 | GOOG | Revenue $bn | 2027 | 641.00 | 545.10 | +18% |
-| AAPL | EPS | 2026 | 10.12 | 8.77 | +15% |
+| AAPL | EPS | 2026 | 10.12 | 8.76 | +16% |
 
 ## Curated divergences — latest reconciliation (`reconciliation-2026-10-02.md`)
 
@@ -34,17 +34,17 @@ _Generated 2026-10-09 · the standing view of where our model and the curated re
 
 | Ticker | Spot | Cons PT | Upside | Read |
 |---|--:|--:|--:|---|
-| WDC | 391 | 659 | +69% | street high 900 · low 460 ABOVE spot · 21/7/0 of 28 |
-| BESI | 180 | 270 | +50% | street high 400 · low 159 below spot · 15/8/1 of 24 |
-| IFX | 59 | 88 | +49% | street high 124 · low 50 below spot · 27/4/0 of 31 |
-| STX | 776 | 1,147 | +48% | street high 1,588 · low 860 ABOVE spot · 23/4/0 of 27 |
-| ASML | 1,799 | 2,454 | +36% | street high 2,915 · low 2,100 ABOVE spot · 21/0/0 of 21 |
-| VRT | 247 | 333 | +35% | street high 400 · low 188 below spot · 30/6/1 of 37 |
+| WDC | 389 | 659 | +70% | street high 900 · low 460 ABOVE spot · 21/7/0 of 28 |
+| BESI | 176 | 270 | +53% | street high 400 · low 159 below spot · 15/8/1 of 24 |
+| IFX | 57 | 88 | +53% | street high 124 · low 50 below spot · 27/4/0 of 31 |
+| STX | 758 | 1,147 | +51% | street high 1,588 · low 860 ABOVE spot · 23/4/0 of 27 |
+| ASML | 1,763 | 2,456 | +39% | street high 2,915 · low 2,100 ABOVE spot · 20/0/0 of 20 |
+| VRT | 241 | 331 | +38% | street high 400 · low 188 below spot · 30/6/1 of 37 |
 | DISCO | 61,460 | 81,867 | +33% | street high 105,000 · low 63,000 ABOVE spot · 18/6/0 of 24 |
-| AMZN | 260 | 333 | +28% | street high 405 · low 230 below spot · 77/4/0 of 81 |
-| NVT | 167 | 211 | +27% | street high 260 · low 182 ABOVE spot · 19/1/0 of 20 |
-| APH | 87 | 108 | +24% | street high 198 · low 90 ABOVE spot · 17/3/0 of 20 |
-| SNOW | 359 | 438 | +22% | street high 525 · low 280 below spot · 51/5/1 of 57 |
+| NVT | 165 | 212 | +29% | street high 260 · low 182 ABOVE spot · 19/1/0 of 20 |
+| AMZN | 261 | 332 | +27% | street high 405 · low 230 below spot · 77/4/0 of 81 |
+| APH | 86 | 109 | +26% | street high 198 · low 90 ABOVE spot · 17/3/0 of 20 |
+| SNOW | 362 | 438 | +21% | street high 525 · low 280 below spot · 51/5/1 of 57 |
 | MDB | 381 | 459 | +21% | street high 565 · low 372 below spot · 37/8/0 of 45 |
-| TEL | 215 | 248 | +15% | street high 300 · low 215 below spot · 16/6/0 of 22 |
-| BE | 275 | 293 | +7% | street high 450 · low 105 below spot · 23/13/1 of 37 |
+| TEL | 217 | 250 | +16% | street high 300 · low 215 below spot · 16/6/0 of 22 |
+| BE | 259 | 294 | +14% | street high 450 · low 105 below spot · 23/13/1 of 37 |

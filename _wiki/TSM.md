@@ -3,17 +3,17 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\TSM` (20-F + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\TSM.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Snapshot — Capstone official model + BBG · asof 2026-10-09 · TWD
+### 📊 Snapshot — Capstone official model + BBG · asof 2026-10-12 · TWD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | NT$5447.4bn | NT$7437.8bn |
-| Gross profit | NT$3595.3bn | NT$4946.1bn |
-| Gross margin | **66.0%** | 66.5% |
-| EBITDA | NT$3983.1bn | NT$5477.0bn |
+| Revenue | NT$5461.0bn | NT$7482.2bn |
+| Gross profit | NT$3604.2bn | NT$4983.1bn |
+| Gross margin | **66.0%** | 66.6% |
+| EBITDA | NT$3988.1bn | NT$5479.5bn |
 | EPS | **NT$102.50** | **NT$143.50** |
-| Capex | NT$1968.8bn | NT$2490.8bn |
-| OCF (≈EBITDA) | NT$3983.1bn | NT$5477.0bn |
+| Capex | NT$1969.2bn | NT$2496.5bn |
+| OCF (≈EBITDA) | NT$3988.1bn | NT$5479.5bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 _**Bold** = Capstone official model; plain = BBG consensus._
