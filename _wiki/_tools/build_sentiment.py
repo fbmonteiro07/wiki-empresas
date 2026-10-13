@@ -232,6 +232,31 @@ def step_bbglong(universe):
     print(f"bbglong: {len(series)} tickers · twitter-count days {n:,}")
     return out
 
+# ----------------------------------------------------------------------------- step: etf (SPY / QQQ for the Fear & Greed and score studies)
+ETF_START = "20210101"
+ETFS = {"SPY": "SPY US Equity", "QQQ": "QQQ US Equity"}
+def step_etf(universe=None):
+    """SPY and QQQ daily close + gross total-return index since 2021 → etf_history.json. The whole window is pulled
+    every time and the file replaced: Bloomberg rebases TOT_RETURN_INDEX_GROSS_DVDS to the request window, so
+    splicing a short pull onto an old file would join two different bases."""
+    sys.path.insert(0, r"E:\bloomberg_api")
+    from bloomberg import bdh
+    end = TODAY.strftime("%Y%m%d")
+    df = bdh(list(ETFS.values()), ["PX_LAST", "TOT_RETURN_INDEX_GROSS_DVDS"], ETF_START, end)
+    inv = {v: k for k, v in ETFS.items()}
+    series = defaultdict(lambda: defaultdict(dict))
+    for _, r in df.iterrows():
+        v = r["value"]
+        if v is None or (isinstance(v, float) and math.isnan(v)): continue
+        fld = "TRI" if r["field"] == "TOT_RETURN_INDEX_GROSS_DVDS" else r["field"]
+        series[inv[r["ticker"]]][fld][str(r["date"])[:10]] = float(v)
+    if not all(len(series[k]["TRI"]) > 1000 for k in ETFS):
+        raise RuntimeError(f"etf pull came back short: { {k: len(series[k]['TRI']) for k in ETFS} }")
+    out = {"asof": TODAY.isoformat(), "start": ETF_START, "fields": {"PX_LAST": "close", "TRI": "TOT_RETURN_INDEX_GROSS_DVDS (base = first day of the pull)"}, "series": series}
+    (DATA / "etf_history.json").write_text(json.dumps(out), encoding="utf-8")
+    print(f"etf: " + " · ".join(f"{k} {min(series[k]['TRI'])} → {max(series[k]['TRI'])} ({len(series[k]['TRI'])} days)" for k in ETFS))
+    return out
+
 # ----------------------------------------------------------------------------- helpers
 def fridays(start, end):
     d = dt.date.fromisoformat(start); d += dt.timedelta((4 - d.weekday()) % 7)
@@ -1215,8 +1240,8 @@ def step_events(universe):
     return res
 
 # ----------------------------------------------------------------------------- step: dash
-def step_dash():
-    from _sentiment_dash import render
+def dash_inputs():
+    """Inputs of the hot/cold × bull/bear sections (also read by build_sentiment_monitor.py, which renders them as tabs)."""
     panel = json.load(open(DATA / "panel_weekly.json", encoding="utf-8"))
     daily = json.load(open(DATA / "tweet_daily.json", encoding="utf-8"))
     bbg = json.load(open(DATA / "bbg_history.json", encoding="utf-8"))["series"]
@@ -1238,14 +1263,26 @@ def step_dash():
     leadlag = json.load(open(DATA / "leadlag.json", encoding="utf-8")) if (DATA / "leadlag.json").exists() else None
     picks = json.load(open(DATA / "picks.json", encoding="utf-8")) if (DATA / "picks.json").exists() else None
     ss = json.load(open(DATA / "sellside_daily.json", encoding="utf-8")) if (DATA / "sellside_daily.json").exists() else None
-    html = render(panel, daily, bbg, long, events, ss, leadlag, picks)
-    (DASH / "sentiment.html").write_text(html, encoding="utf-8")
-    print("wrote", DASH / "sentiment.html", f"({len(html)/1024:.0f} KB)")
+    return panel, daily, bbg, long, events, ss, leadlag, picks
+
+REDIRECT = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sentiment — moved</title><meta http-equiv="refresh" content="0; url=sentiment-monitor.html#names">
+<style>body{font:14px/1.6 system-ui,Segoe UI,sans-serif;margin:48px;background:#f4f6f9;color:#192b40}a{color:#3778c9}
+@media (prefers-color-scheme: dark){body{background:#111c29;color:#e6edf5}a{color:#72a6ea}}</style></head>
+<body><p>The hot/cold × bull/bear dashboard is now part of the single <a href="sentiment-monitor.html#names">Sentiment</a> page 
+(ranking, map and stock charts in <b>Names</b>; ICs, picks, lead/lag and event windows in <b>Backtests</b>).</p>
+<script>location.replace("sentiment-monitor.html" + (location.hash || "#names"));</script></body></html>"""
+
+def step_dash():
+    """Since 2026-10-13 the sections render inside sentiment-monitor.html (build_sentiment_monitor.py, next chain step).
+    sentiment.html stays as a redirect so old links (Twitter wrap footer, P: hub, bookmarks) still land."""
+    (DASH / "sentiment.html").write_text(REDIRECT, encoding="utf-8")
+    print("wrote", DASH / "sentiment.html", "(redirect to sentiment-monitor.html)")
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(); ap.add_argument("--step", default="all"); ap.add_argument("--no-bbg", action="store_true")
     a = ap.parse_args(); uni = load_universe()
-    steps = ["tweets", "bbg", "bbglong", "mail_merge", "sellside", "panel", "long", "leadlag", "picks", "events_pull", "events", "dash"] if a.step == "all" else [a.step]
+    steps = ["tweets", "bbg", "bbglong", "etf", "mail_merge", "sellside", "panel", "long", "leadlag", "picks", "events_pull", "events", "dash"] if a.step == "all" else [a.step]
     for s in steps:
         if s == "tweets": step_tweets(uni)
         elif s == "bbg":
@@ -1263,6 +1300,14 @@ if __name__ == "__main__":
                 try: step_bbglong(uni)
                 except Exception as e:
                     if (DATA / "bbg_long.json").exists(): print("bbglong: terminal unavailable, using cache —", str(e)[:100])
+                    else: raise
+        elif s == "etf":
+            if a.no_bbg and (DATA / "etf_history.json").exists(): print("etf: skipped (--no-bbg), using cache")
+            elif not bbg_up() and (DATA / "etf_history.json").exists(): print("etf: Terminal not serving 127.0.0.1:8194 — keeping cache")
+            else:
+                try: step_etf(uni)
+                except Exception as e:
+                    if (DATA / "etf_history.json").exists(): print("etf: pull failed, keeping cache —", str(e)[:100])
                     else: raise
         elif s == "panel": step_panel(uni)
         elif s == "long": step_long(uni)

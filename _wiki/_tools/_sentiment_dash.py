@@ -289,7 +289,7 @@ init();
 
 def _bt(bt, k, h): return bt.get(f"{k}|rel_ret_{h}", {})
 
-def render(panel, daily, bbg, long=None, events=None, ss=None, leadlag=None, picks=None):
+def render_parts(panel, daily, bbg, long=None, events=None, ss=None, leadlag=None, picks=None):
     weeks = panel["weeks"]; last = weeks[-1]; row = panel["panel"][last]
     hs = sorted(r["HOT"] for r in row.values() if r["HOT"] is not None); bs = sorted(r["BULL"] for r in row.values() if r["BULL"] is not None)
     med_hot = hs[len(hs) // 2] if hs else 0; med_bull = bs[len(bs) // 2] if bs else 0
@@ -400,10 +400,9 @@ def render(panel, daily, bbg, long=None, events=None, ss=None, leadlag=None, pic
     top = lambda key, rev: sorted([(t, r) for t, r in row.items() if r[key] is not None], key=lambda x: (-1 if rev else 1) * x[1][key])[:5]
     a15, b15 = _bt(bt, "att", "15d"), _bt(bt, "BULL", "15d")
     def qv(k, h="15d"): v = q.get(f"{k}|rel_ret_{h}", {}); return f"{v.get('mean', 0)*100:+.2f}% (n={v.get('n', 0)}, hit {v.get('hit', 0):.0%})"
-    html = f"""<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Sentiment · hot/cold × bull/bear</title>
-<style>{CSS}</style>
-<div id="tip" class="tip"></div>
-<header><h1>Sentiment indicator — hot/cold × bull/bear</h1>
+    # sections, so the merged Sentiment page (build_sentiment_monitor.py) can place each one in its own tab
+    parts = {
+        "header": f"""<header><h1>Sentiment indicator — hot/cold × bull/bear</h1>
 <div class="sub">Generated {panel['asof']} · latest complete week ending <b>{last}</b> · {len(panel['tickers'])} names · own corpus {len(weeks)} weeks since {weeks[0]}{(' · Bloomberg track ' + str(len(long['weeks'])) + ' weeks since ' + long['weeks'][0]) if long else ''} · <a href="index.html">← dashboards hub</a> · rebuild: <code>py _wiki/_tools/build_sentiment.py</code></div>
 <div class="kpis">
  <div class="kpi"><b>{panel['tweets_matched']:,}</b><span>tweets mapped to a wiki ticker (of {panel['tweets_scanned']:,} scanned since {daily['start']}, ex-retweets)</span></div>
@@ -414,19 +413,15 @@ def render(panel, daily, bbg, long=None, events=None, ss=None, leadlag=None, pic
 </div>
 <div class="sub">Hottest now: {' · '.join(f"<b>{t}</b> {r_['HOT']:+.1f}" for t, r_ in top('HOT', True))} &nbsp;|&nbsp; Coldest: {' · '.join(f"<b>{t}</b> {r_['HOT']:+.1f}" for t, r_ in top('HOT', False))}<br>
 Most bullish: {' · '.join(f"<b>{t}</b> {r_['BULL']:+.1f}" for t, r_ in top('BULL', True))} &nbsp;|&nbsp; Most bearish: {' · '.join(f"<b>{t}</b> {r_['BULL']:+.1f}" for t, r_ in top('BULL', False))}</div>
-</header>
-<div class="wrap">
-<div class="warn">⚠ Read the own-corpus backtest as a <b>first look</b>: 14–17 weekly cross-sections, overlapping forward windows (t-stats overstate independence), one regime (the May–Aug 2026 AI up-leg), lexicon tone (not LLM-scored), and attention measured on the ~440 accounts the twitter-briefing routine follows. The Bloomberg track below is the longer, all-of-X check.</div>
-
-<section><h2>Ranking — week ending <select id="wk"></select></h2>
+</header>""",
+        "warn": f"""<div class="warn">⚠ Read the own-corpus backtest as a <b>first look</b>: 14–17 weekly cross-sections, overlapping forward windows (t-stats overstate independence), one regime (the May–Aug 2026 AI up-leg), lexicon tone (not LLM-scored), and attention measured on the ~440 accounts the twitter-briefing routine follows. The Bloomberg track below is the longer, all-of-X check.</div>""",
+        "ranking": f"""<section><h2>Ranking — week ending <select id="wk"></select></h2>
 <div class="legend"><span><i style="background:var(--orange)"></i>HOT z (attention above own trailing 4w)</span><span><i style="background:var(--ink3)"></i>cold</span><span><i style="background:var(--blue)"></i>BULL z</span><span><i style="background:var(--red)"></i>BEAR</span><span>Click a header to sort. z-scores are cross-sectional within the week, clipped ±3.</span></div>
-<div class="scroll"><table id="tbl"></table></div><div class="note" id="tblnote"></div></section>
-
-<section><h2>Map — where every name sits this week</h2>
+<div class="scroll"><table id="tbl"></table></div><div class="note" id="tblnote"></div></section>""",
+        "map": f"""<section><h2>Map — where every name sits this week</h2>
 <div class="legend"><span><i style="background:var(--orange)"></i>hot-bull</span><span><i style="background:var(--blue)"></i>cold-bear</span><span><i style="background:var(--ink3)"></i>mixed quadrants</span><span>Hover a dot for the components. Quadrant cuts are the week's medians.</span></div>
-<svg id="sc" height="440"></svg></section>
-
-<section><h2>Did it work? Own corpus, May–Aug 2026</h2>
+<svg id="sc" height="440"></svg></section>""",
+        "own_bt": f"""<section><h2>Did it work? Own corpus, May–Aug 2026</h2>
 <div class="hzbar"><b>Forward horizon</b> <select id="hz"><option value="1w">1 week</option><option value="15d" selected>15 days</option><option value="4w">4 weeks</option></select> <span class="note">(applies to every chart and the "sel." columns; the table always shows the IC for all three)</span></div>
 <div class="row"><div class="col">
 <div class="note">Rank IC = Spearman correlation each Friday between the component and the forward <b>universe-relative</b> return (stock minus equal-weight universe mean, local currency). Q5−Q1 = top-quintile minus bottom-quintile mean forward return. Positive IC means "high score → outperformed".</div>
@@ -435,15 +430,11 @@ Most bullish: {' · '.join(f"<b>{t}</b> {r_['BULL']:+.1f}" for t, r_ in top('BUL
 <div class="note" style="margin-top:10px"><b>Quadrant mean forward <span class="hzlab"></span> relative return</b> (hot/cold and bull/bear split at each week's median)</div><svg id="qbar" height="230"></svg></div></div>
 <div class="note" style="margin-top:8px"><b>IC through time, forward <span class="hzlab"></span></b> — <span style="color:var(--orange)">■</span> attention · <span style="color:var(--blue)">■</span> BULL composite</div><svg id="icts" height="230"></svg>
 <div class="note">Reading so far (15d): attention IC {a15.get('mean_ic', 0):+.3f} (hit {a15.get('hit', 0):.0%}); BULL composite IC {b15.get('mean_ic', 0):+.3f} — the most-upgraded, most-praised names lag. Quadrants at 15d: hot-bear {qv('hot-bear')}, cold-bear {qv('cold-bear')}, hot-bull {qv('hot-bull')}, cold-bull {qv('cold-bull')}.</div>
-</section>
-{long_html}
-{pk_html}
-{ll_html}
-{ev_html}
-<section><h2>Ticker explorer — <select id="tk"></select></h2>
-<svg id="tkc" height="420"></svg><div id="tkinfo"></div></section>
-
-<section><details><summary>Methodology, sources and what is deliberately left out</summary>
+</section>""",
+        "long": long_html, "picks": pk_html, "leadlag": ll_html, "events": ev_html,
+        "ticker": f"""<section><h2>Ticker explorer — <select id="tk"></select></h2>
+<svg id="tkc" height="420"></svg><div id="tkinfo"></div></section>""",
+        "method": f"""<section><details><summary>Methodology, sources and what is deliberately left out</summary>
 <dl>
 <dt>Own tweet corpus</dt><dd>twitter-briefing routine (daily 09:00, twitterapi.io) → <code>E:\\.claude\\data\\twitter-briefing\\tweets.sqlite</code>. ~440 handles curated by the briefing skill (semis, micro, AI/ML, hedge funds, wires). Retweets dropped; replies and quotes kept. Dense coverage from May 2026 only — earlier months are not backfilled (decision 2026-09-02).</dd>
 <dt>Bloomberg track</dt><dd>bdh fields TWITTER_SENTIMENT_DAILY_AVG, TWITTER_PUBLICATION_COUNT, TWITTER_POS/NEG_SENTIMENT_COUNT, NEWS_SENTIMENT_DAILY_AVG, NEWS_PUBLICATION_COUNT since 2023-12 for every name with a Bloomberg line. Bloomberg's own classifier; coverage of non-US lines is thinner.</dd>
@@ -457,9 +448,16 @@ Most bullish: {' · '.join(f"<b>{t}</b> {r_['BULL']:+.1f}" for t, r_ in top('BUL
 <dt>Event windows</dt><dd>Announcement dates, times and EPS actual/estimate from Bloomberg EARN_ANN_DT_TIME_HIST_WITH_EPS. After-close prints (or no time) use the day's close as base; pre-market prints use the prior close. Pre-window = 10 calendar days, baseline = the 30 days before that. Outcomes relative to an equal-weight index of the 99 names. |surprise| > 100% and |EPS revision| > 25% dropped as artefacts.</dd>
 <dt>Not yet in</dt><dd>Corpus report tone, house-tone leg from reconciliation deltas and the outcomes ledger, options skew / 13F positioning, LLM tone scorer, Jan–Apr 2026 own-corpus backfill.</dd>
 <dt>Files</dt><dd><code>_wiki/_data/sentiment/</code>: tweet_daily.json · bbg_history.json · bbg_long.json · panel_weekly.json · panel_long.json; builder <code>_wiki/_tools/build_sentiment.py</code> (steps tweets, bbg, bbglong, panel, long, dash; <code>--no-bbg</code> reuses cached history).</dd>
-</dl></details></section>
-</div>
-<script>window.__SENT__ = {json.dumps(payload, ensure_ascii=False).replace('</', '<\\/')};</script>
-<script>{JS}</script>
-"""
-    return html
+</dl></details></section>""",
+    }
+    parts["payload"] = json.dumps(payload, ensure_ascii=False).replace('</', '<\\/')
+    return parts
+
+
+def render(panel, daily, bbg, long=None, events=None, ss=None, leadlag=None, picks=None):
+    """The old standalone page (kept for reference; the chain now writes a redirect to sentiment-monitor.html)."""
+    p = render_parts(panel, daily, bbg, long, events, ss, leadlag, picks)
+    return ('<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Sentiment · hot/cold × bull/bear</title>'
+            f"<style>{CSS}</style><div id=\"tip\" class=\"tip\"></div>{p['header']}<div class=\"wrap\">{p['warn']}{p['ranking']}{p['map']}{p['own_bt']}"
+            f"{p['long']}{p['picks']}{p['leadlag']}{p['events']}{p['ticker']}{p['method']}</div>"
+            f"<script>window.__SENT__ = {p['payload']};</script><script>{JS}</script>")

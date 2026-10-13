@@ -7,11 +7,11 @@
     "positions": 8
   },
   "stats": {
-    "signals": 64,
-    "active": 64,
+    "signals": 62,
+    "active": 62,
     "high": 3,
     "belief_changes": 3,
-    "focus_names": 44
+    "focus_names": 43
   },
   "focus": [
     {
@@ -24,8 +24,8 @@
       "thesis": "Full-stack compounder (Search +17%, Cloud +82%); debate is valuation and capital intensity, not demand.",
       "next_catalyst": "",
       "why": [
-        "GOOG — 2026 revenue house view is 17% above consensus",
-        "GOOG — 2027 revenue house view is 18% above consensus",
+        "GOOG — 2026 revenue house view is 18% above consensus",
+        "GOOG — 2027 revenue house view is 17% above consensus",
         "Celestica (no wiki page) — Bernstein 2027 EPS is +20% above consensus; PT near the Street high"
       ]
     },
@@ -59,20 +59,6 @@
       ]
     },
     {
-      "ticker": "AKAM",
-      "focus_score": 64,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "CDN / Edge cloud",
-      "thesis": "Akamai — legacy CDN delivery (declining) pivoting to Security + Cloud Compute; $1.8B 7-yr frontier-model infra deal re-accelerates growth to double-digits 2027 ",
-      "next_catalyst": "",
-      "why": [
-        "AKAM — derived thesis/debate state changed since the prior daily snapshot",
-        "AKAM — catalyst passed without a logged outcome"
-      ]
-    },
-    {
       "ticker": "LITE",
       "focus_score": 64,
       "in_book": false,
@@ -102,6 +88,19 @@
       ]
     },
     {
+      "ticker": "AKAM",
+      "focus_score": 62,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "CDN / Edge cloud",
+      "thesis": "Akamai — legacy CDN delivery (declining) pivoting to Security + Cloud Compute; $1.8B 7-yr frontier-model infra deal re-accelerates growth to double-digits 2027 ",
+      "next_catalyst": "",
+      "why": [
+        "AKAM — derived thesis/debate state changed since the prior daily snapshot"
+      ]
+    },
+    {
       "ticker": "WDC",
       "focus_score": 62,
       "in_book": false,
@@ -112,6 +111,19 @@
       "next_catalyst": "",
       "why": [
         "WDC — derived thesis/debate state changed since the prior daily snapshot"
+      ]
+    },
+    {
+      "ticker": "AMAT",
+      "focus_score": 58,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Semiconductor equipment (semicap)",
+      "thesis": "Broadest-line front-end WFE; share-gainer into a $200B/$250B '27-'28 WFE cycle; bear = memory beta + crowded positioning.",
+      "next_catalyst": "2026-10-13",
+      "why": [
+        "AMAT — 2026-10-13: RESOLVED 2026-10-13 — see the Current state block; the margin target landed at ~54% (low…"
       ]
     },
     {
@@ -127,19 +139,6 @@
         "NOK — Bloomberg consensus missing",
         "NOK — latest earnings transcript absent",
         "NOK — 2026-10-22: Q3 results: Optical/IP deliveries and new orders, supply constraints and MI software…"
-      ]
-    },
-    {
-      "ticker": "NOW",
-      "focus_score": 58,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "AI — Hyperscalers & Software",
-      "thesis": "Beat-and-raise (cRPO +21%) + agentic pivot to consumption; on-disk transcripts are paraphrased (fidelity).",
-      "next_catalyst": "",
-      "why": [
-        "NOW — catalyst passed without a logged outcome"
       ]
     },
     {
@@ -196,19 +195,6 @@
       "next_catalyst": "2026-10-28",
       "why": [
         "ORCL — 2026-10-28: ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as \"Investor Day in…"
-      ]
-    },
-    {
-      "ticker": "AMAT",
-      "focus_score": 49,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Semiconductor equipment (semicap)",
-      "thesis": "Broadest-line front-end WFE; share-gainer into a $200B/$250B '27-'28 WFE cycle; bear = memory beta + crowded positioning.",
-      "next_catalyst": "2026-10-13",
-      "why": [
-        "AMAT — 2026-10-13: AMAT analyst meeting (Vital Knowledge calendar, 2026-09-30/10-01, press); ASML reports…"
       ]
     },
     {
@@ -612,13 +598,13 @@
   ],
   "signals": [
     {
-      "id": "esti-38820c40c7e3",
+      "id": "esti-ac2a795f82ba",
       "asof": "2026-10-13",
-      "source_date": "2026-10-12",
+      "source_date": "2026-10-13",
       "type": "model_check",
       "priority": "high",
       "score": 71,
-      "title": "GOOG — 2026 revenue house view is 17% above consensus",
+      "title": "GOOG — 2026 revenue house view is 18% above consensus",
       "tickers": [
         "GOOG"
       ],
@@ -628,7 +614,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $430.4bn as of 2026-10-12, a derived +17.3% gap. Revenue comparisons require a basis check.",
+      "why_now": "Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $428.9bn as of 2026-10-13, a derived +17.8% gap. Revenue comparisons require a basis check.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -683,7 +669,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-10-12",
+      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-10-13",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -692,8 +678,8 @@
       "origin": "house_vs_consensus",
       "values": {
         "house": 505.0,
-        "consensus": 430.39842,
-        "delta_pct": 17.33,
+        "consensus": 428.87093,
+        "delta_pct": 17.75,
         "unit": "$bn"
       },
       "feedback": "",
@@ -701,13 +687,13 @@
       "hidden": false
     },
     {
-      "id": "esti-d92e129a6cc5",
+      "id": "esti-e195ab1c1cec",
       "asof": "2026-10-13",
-      "source_date": "2026-10-12",
+      "source_date": "2026-10-13",
       "type": "model_check",
       "priority": "high",
       "score": 71,
-      "title": "GOOG — 2027 revenue house view is 18% above consensus",
+      "title": "GOOG — 2027 revenue house view is 17% above consensus",
       "tickers": [
         "GOOG"
       ],
@@ -717,7 +703,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2027 revenue at $641.0bn versus Bloomberg consensus at $545.1bn as of 2026-10-12, a derived +17.6% gap. Revenue comparisons require a basis check.",
+      "why_now": "Capstone carries 2027 revenue at $641.0bn versus Bloomberg consensus at $547.5bn as of 2026-10-13, a derived +17.1% gap. Revenue comparisons require a basis check.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -772,7 +758,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-10-12",
+      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-10-13",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -781,8 +767,8 @@
       "origin": "house_vs_consensus",
       "values": {
         "house": 641.0,
-        "consensus": 545.13198,
-        "delta_pct": 17.59,
+        "consensus": 547.54062,
+        "delta_pct": 17.07,
         "unit": "$bn"
       },
       "feedback": "",
@@ -790,9 +776,9 @@
       "hidden": false
     },
     {
-      "id": "esti-b2fc492d0d0b",
+      "id": "esti-ea0d94b243de",
       "asof": "2026-10-13",
-      "source_date": "2026-10-12",
+      "source_date": "2026-10-13",
       "type": "model_check",
       "priority": "high",
       "score": 69,
@@ -806,7 +792,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.76 as of 2026-10-12, a derived +15.5% gap.",
+      "why_now": "Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.76 as of 2026-10-13, a derived +15.5% gap.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the AAPL model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -826,7 +812,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-10-12",
+      "source": "Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-10-13",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -1098,33 +1084,83 @@
       "hidden": false
     },
     {
-      "id": "post-b3813dd6dd5f",
+      "id": "cata-2007aecca0eb",
       "asof": "2026-10-13",
-      "source_date": "2026-09-29",
-      "event_date": "2026-09-29",
-      "type": "postmortem",
+      "source_date": "2026-10-13",
+      "event_date": "2026-10-13",
+      "type": "catalyst",
       "priority": "medium",
       "score": 58,
-      "title": "AKAM — catalyst passed without a logged outcome",
+      "title": "AMAT — 2026-10-13: RESOLVED 2026-10-13 — see the Current state block; the margin target landed at ~54% (low…",
       "tickers": [
-        "AKAM"
+        "AMAT"
       ],
       "in_book": [],
       "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "🆕🔴 THE ONLY CIS METRIC THAT MATTERS IS NOW TCV PER DEAL, NOT AGGREGATE CIS REVENUE. MS's ladder: $50M TCV → ~35% OM / ~23% ROIC · $500M → ~25% / ~13% · $1B → ~20% / ~9%, because \"revenue/MW f",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for AKAM in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "✅ RESOLVED 2026-10-13 — see the Current state block; the margin target landed at ~54% (low end of the \"mid-50s\" bogey) and no WFE number was printed. Original entry: 🆕🔴 INVESTOR DAY — OCT",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "TSM",
+          "relation": "customer",
+          "detail": "WFE",
+          "from": "AMAT",
+          "in_book": true
+        },
+        {
+          "ticker": "LRCX",
+          "relation": "competitor",
+          "detail": "WFE overlap",
+          "from": "AMAT",
+          "in_book": false
+        },
+        {
+          "ticker": "INTC",
+          "relation": "customer",
+          "detail": "WFE",
+          "from": "AMAT",
+          "in_book": false
+        },
+        {
+          "ticker": "MU",
+          "relation": "customer",
+          "detail": "WFE",
+          "from": "AMAT",
+          "in_book": false
+        },
+        {
+          "ticker": "SAMSUNG",
+          "relation": "customer",
+          "detail": "WFE",
+          "from": "AMAT",
+          "in_book": false
+        },
+        {
+          "ticker": "SKHYNIX",
+          "relation": "customer",
+          "detail": "WFE",
+          "from": "AMAT",
+          "in_book": false
+        },
+        {
+          "ticker": "SMIC",
+          "relation": "customer",
+          "detail": "WFE",
+          "from": "AMAT",
+          "in_book": false
+        }
+      ],
+      "source": "AMAT page catalyst ledger; underlying source/date retained in the catalyst text",
       "evidence_paths": [
         "_meta/catalysts.md",
-        "_meta/outcomes.md"
+        "AMAT.md"
       ],
-      "evidence_anchor": "🆕🔴 THE ONLY CIS METRIC THAT MATTERS IS NOW TCV PER DEAL, NOT AGGREGATE CIS REVENUE. MS's ladder: $50M TCV → ~35% OM / ~23% ROIC · $500M → ~25% / ~13% · $1B → ~20% / ~9%, because \"revenue/MW f",
-      "origin": "outcome_loop",
+      "evidence_anchor": "✅ RESOLVED 2026-10-13 — see the Current state block; the margin target landed at ~54% (low end of the \"mid-50s\" bogey) and no WFE number was printed. Original entry: 🆕🔴 INVESTOR DAY — OCT",
+      "origin": "catalyst_calendar",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
@@ -1200,38 +1236,6 @@
       ],
       "evidence_anchor": "🆕🔴 2026-10-14 — CITI'S CATALYST WATCH (UPSIDE) EXPIRES. A dated, mechanical sell-side event with a published clock: Citi opened a Catalyst Watch: Upside expiring 14-OCT-26 alongside Buy/TP $1,",
       "origin": "catalyst_calendar",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "post-339c89411d8f",
-      "asof": "2026-10-13",
-      "source_date": "2026-09-08",
-      "event_date": "2026-09-08",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "NOW — catalyst passed without a logged outcome",
-      "tickers": [
-        "NOW"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "🆕 Q3 FY26 print — the cRPO bar is explicit: company guide cRPO +20% cc (Q3 subscription revenue $3.975-3.980bn, +20%; ServiceNow Q2 2026 call, 2026-07-22). UBS expects 21.0% cc (18.0% organi",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for NOW in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "🆕 Q3 FY26 print — the cRPO bar is explicit: company guide cRPO +20% cc (Q3 subscription revenue $3.975-3.980bn, +20%; ServiceNow Q2 2026 call, 2026-07-22). UBS expects 21.0% cc (18.0% organi",
-      "origin": "outcome_loop",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
@@ -1492,88 +1496,6 @@
         "ORCL.md"
       ],
       "evidence_anchor": "🆕🔴🔴 2026-10-28 — ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as \"Investor Day in October\"). First opportunity for new CFO Hilary Maxson to set long-term financial targ",
-      "origin": "catalyst_calendar",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "cata-9de610118b43",
-      "asof": "2026-10-13",
-      "source_date": "2026-10-13",
-      "event_date": "2026-10-13",
-      "type": "catalyst",
-      "priority": "medium",
-      "score": 49,
-      "title": "AMAT — 2026-10-13: AMAT analyst meeting (Vital Knowledge calendar, 2026-09-30/10-01, press); ASML reports…",
-      "tickers": [
-        "AMAT"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "medium",
-      "why_now": "🆕 2026-10-13 (Tue) — AMAT analyst meeting (Vital Knowledge calendar, 2026-09-30/10-01, press); ASML reports 10-14 (Wed, before EU open) and TSMC 10-15 (Thu) the same week; UBS hosts SEMICON West c",
-      "belief_update": "A dated event can resolve or reframe an open debate.",
-      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
-      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
-      "readthrough": [
-        {
-          "ticker": "TSM",
-          "relation": "customer",
-          "detail": "WFE",
-          "from": "AMAT",
-          "in_book": true
-        },
-        {
-          "ticker": "LRCX",
-          "relation": "competitor",
-          "detail": "WFE overlap",
-          "from": "AMAT",
-          "in_book": false
-        },
-        {
-          "ticker": "INTC",
-          "relation": "customer",
-          "detail": "WFE",
-          "from": "AMAT",
-          "in_book": false
-        },
-        {
-          "ticker": "MU",
-          "relation": "customer",
-          "detail": "WFE",
-          "from": "AMAT",
-          "in_book": false
-        },
-        {
-          "ticker": "SAMSUNG",
-          "relation": "customer",
-          "detail": "WFE",
-          "from": "AMAT",
-          "in_book": false
-        },
-        {
-          "ticker": "SKHYNIX",
-          "relation": "customer",
-          "detail": "WFE",
-          "from": "AMAT",
-          "in_book": false
-        },
-        {
-          "ticker": "SMIC",
-          "relation": "customer",
-          "detail": "WFE",
-          "from": "AMAT",
-          "in_book": false
-        }
-      ],
-      "source": "AMAT page catalyst ledger; underlying source/date retained in the catalyst text",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "AMAT.md"
-      ],
-      "evidence_anchor": "🆕 2026-10-13 (Tue) — AMAT analyst meeting (Vital Knowledge calendar, 2026-09-30/10-01, press); ASML reports 10-14 (Wed, before EU open) and TSMC 10-15 (Thu) the same week; UBS hosts SEMICON West c",
       "origin": "catalyst_calendar",
       "feedback": "",
       "feedback_note": "",

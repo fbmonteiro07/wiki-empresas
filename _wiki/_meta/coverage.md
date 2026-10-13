@@ -8,13 +8,13 @@ _Generated 2026-10-13 · 96 public-company pages · flags inputs that exist on d
 |--:|---|--:|--:|--:|---|:--:|---|---|---|
 | 5.0 | TEL | 4116 | 17 | 227.1 | 2026-07-22 | ✗ | 0/0 | 0/0 | latest transcript 2026-07-22 unread; latest 10-Q 2026-07-24 unread (no same-qtr transcript either) |
 | 5.0 | VECO | 5082 | 17 | 262.2 | 2026-08-05 | ✗ | 0/0 | 0/0 | latest transcript 2026-08-05 unread; latest 10-Q 2026-08-05 unread (no same-qtr transcript either) |
-| 5.0 | CEG | 7819 | 33 | 298.1 | 2026-08-06 | ✗ | 0/0 | 0/2 | latest transcript 2026-08-06 unread; latest 10-Q 2026-08-06 unread (no same-qtr transcript either) |
+| 5.0 | CEG | 7819 | 34 | 298.9 | 2026-08-06 | ✗ | 0/0 | 0/2 | latest transcript 2026-08-06 unread; latest 10-Q 2026-08-06 unread (no same-qtr transcript either) |
 | 5.0 | NVT | 6842 | 23 | 370.9 | 2026-07-31 | ✗ | 0/0 | 0/0 | latest transcript 2026-07-31 unread; latest 10-Q 2026-07-31 unread (no same-qtr transcript either) |
 | 5.0 | WMB | 11630 | 29 | 398.5 | 2026-08-04 | ✗ | 1/1 | 1/3 | latest transcript 2026-08-04 unread; latest 10-Q 2026-08-03 unread (no same-qtr transcript either) |
-| 5.0 | APH | 11695 | 35 | 483.5 | 2026-07-29 | ✗ | 3/0 | 0/0 | latest transcript 2026-07-29 unread; latest 10-Q 2026-07-31 unread (no same-qtr transcript either) |
+| 5.0 | APH | 12025 | 36 | 497.1 | 2026-07-29 | ✗ | 3/0 | 0/0 | latest transcript 2026-07-29 unread; latest 10-Q 2026-07-31 unread (no same-qtr transcript either) |
 | 5.0 | TLN | 7613 | 26 | 590.2 | 2026-08-05 | ✗ | 0/0 | 1/3 | latest transcript 2026-08-05 unread; latest 10-Q 2026-08-05 unread (no same-qtr transcript either) |
 | 5.0 | AOSL | 596 | 6 | — | 2026-08-12 | ✗ | 0/0 | 0/0 | latest transcript 2026-08-12 unread; latest 10-Q 2026-05-06 unread (no same-qtr transcript either) |
-| 5.0 | ETN | 6854 | 23 | — | 2026-07-31 | ✗ | 0/0 | 0/0 | latest transcript 2026-07-31 unread; latest 10-Q 2026-07-31 unread (no same-qtr transcript either) |
+| 5.0 | ETN | 6854 | 24 | — | 2026-07-31 | ✗ | 0/0 | 0/0 | latest transcript 2026-07-31 unread; latest 10-Q 2026-07-31 unread (no same-qtr transcript either) |
 | 5.0 | FSLY | 3898 | 18 | — | 2026-08-05 | ✗ | 0/0 | 0/0 | latest transcript 2026-08-05 unread; latest 10-Q 2026-08-05 unread (no same-qtr transcript either) |
 | 5.0 | MP | 733 | 8 | — | 2026-08-06 | ✗ | 0/0 | 0/0 | latest transcript 2026-08-06 unread; latest 10-Q 2026-08-07 unread (no same-qtr transcript either) |
 | 5.0 | POWI | 720 | 12 | — | 2026-08-05 | ✗ | 0/0 | 0/0 | latest transcript 2026-08-05 unread; latest 10-Q 2026-08-06 unread (no same-qtr transcript either) |
@@ -22,6 +22,6 @@ _Generated 2026-10-13 · 96 public-company pages · flags inputs that exist on d
 | 3.0 | WOLF | 9413 | 26 | 503.1 | 2026-08-19 | ✗ | 0/0 | 0/0 | latest transcript 2026-08-19 unread |
 | 3.0 | BESI | 28413 | 49 | 2963.8 | 2026-07-23 | ✗ | 0/0 | 0/0 | latest transcript 2026-07-23 unread |
 | 2.0 | AGX | 4022 | 15 | 146.6 | 2026-06-04 | ✓ | 0/0 | 1/1 | latest 10-Q 2026-09-02 unread (no same-qtr transcript either) |
-| 2.0 | CSCO | 30698 | 66 | 449.3 | 2026-08-12 | ✓ | 2/2 | 2/17 | latest 10-Q 2026-05-19 unread (no same-qtr transcript either) |
+| 2.0 | CSCO | 30986 | 66 | 453.3 | 2026-08-12 | ✓ | 3/2 | 2/17 | latest 10-Q 2026-05-19 unread (no same-qtr transcript either) |
 
 _Density = (words + 25·citations) / (filings+transcripts+calls+briefings+decks). Low density + high material = thin synthesis. 'Calls used' = `_equity_calls` links / available (a low ratio is fine if the page links a representative subset)._

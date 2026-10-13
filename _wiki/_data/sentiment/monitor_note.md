@@ -1,17 +1,17 @@
 == SENTIMENT MONITOR · 2026-10-13 ==
 
-**Market mood.** CNN Fear & Greed is at **46 (neutral)** — up from 44 a week ago and 33 a month ago (fear).
+**Market mood.** CNN Fear & Greed is at **45 (fear)** — down from 47 a week ago and 33 a month ago (fear).
 
-Since 2021, when the index sat in the 40–50 band, SPY's next five sessions averaged **+0.1%** (positive 58% of the time, n=249; QQQ +0.1% / 56%).
+Since 2021, readings in the 40 band (±5) were followed by SPY **+0.34%** over five sessions (up 59% of the time, n=255 overlapping readings; QQQ +0.30% / 58%).
 
-Components: fear in Price strength (52w hi/lo), Breadth (McClellan), Put/call; greed in S&P momentum (125d), Junk bond demand, Safe-haven demand.
+Last extreme crossing: down to ≤30 on 2026-10-01 (F&G 29); SPY +1.30% over the next five sessions.
 
-**Universe breadth (week ending 2026-10-09, 106 names).** EPS revisions up for 90% and down for 9% of the universe; analyst rating drift positive for 43%; 73% of names up over the past 4 weeks. Sell-side actions this week: 0 names with net upgrades vs 0 with net downgrades, PT raises in 0 vs cuts in 0 (sell-side mail through 2026-09-24, 19 days old — treat as stale).
+**Getting hotter on X (Bloomberg all-of-X count, 7 days vs the prior 4 weeks, through 2026-10-13).** **NBIS** (+3.1σ, 300 posts/day vs 4) · stock -17.2% over the week; **DELL** (+2.2σ, 113 posts/day vs 122) · stock -0.3% over the week; **WOLF** (+1.6σ, 111 posts/day vs 4) · stock -10.2% over the week; **MRVL** (+1.4σ, 306 posts/day vs 106) · stock -6.4% over the week; **SKHYNIX** (+1.4σ, 130 posts/day vs 91) · stock -18.6% over the week.
 
-**Getting hotter (7-day attention vs the prior 4 weeks, through 2026-09-29).** **SAMSUNG** (+1.9σ, 2.1 mentions/day vs 1.9) · tone 88% bull · stock -1.4% over the window; **NVDA** (+0.9σ, 8.0 mentions/day vs 14.6) · tone 67% bull · stock -0.7% over the window; **AVGO** (+0.7σ, 0.6 mentions/day vs 1.7) · tone 60% bull · stock -2.6% over the window; **MSFT** (+0.5σ, 2.5 mentions/day vs 2.4) · tone 82% bull · stock +2.2% over the window; **MU** (+0.4σ, 2.2 mentions/day vs 2.1) · tone 67% bull · stock -2.8% over the window. ⚠ The X corpus stops on 2026-09-29 (14 days ago), so these are the last valid movers, not today's.
+**Cooling off.** **SNPS** (-3.7σ, 16 posts/day vs 25) · stock -2.1% over the week; **MDB** (-2.7σ, 8 posts/day vs 66) · stock +3.4% over the week; **APP** (-2.2σ, 144 posts/day vs 193) · stock -2.3% over the week; **MU** (-1.7σ, 1652 posts/day vs 1319) · stock -8.8% over the week; **GLW** (-1.3σ, 19 posts/day vs 29) · stock -12.1% over the week.
 
-**Cooling off.** **DELL** (-2.1σ, 0.2 mentions/day vs 2.0) · tone 100% bull · stock -1.7% over the window; **INTC** (-1.5σ, 1.5 mentions/day vs 2.7) · tone 89% bull · stock -6.4% over the window; **MRVL** (-1.4σ, 1.2 mentions/day vs 1.8) · tone 57% bull · stock +0.3% over the window; **TSM** (-1.0σ, 1.6 mentions/day vs 2.1) · tone 94% bull · stock +1.1% over the window; **AAPL** (-0.7σ, 2.6 mentions/day vs 7.5) · tone 69% bull · stock -3.0% over the window.
+The curated-handle X corpus stops on 2026-09-29 (14 days ago); the own-corpus HOT axis and movers are frozen until it resumes.
 
-**What history says about these windows (Bloomberg track, 2024-01-05 → 2026-10-09).** Names that *turned hot* (from below the median to the top quintile in one week) went on to a mean **-0.1%** universe-relative return over the next 15 days (positive 44%, n=1112); names that *turned cold* returned +0.1% (positive 46%, n=942).
+**Universe breadth (week ending 2026-10-09, 106 names).** EPS revisions up for 90% and down for 9%; rating drift positive for 43%; 73% of names up over 4 weeks. Sell-side: 13 names with net upgrades vs 3 with net downgrades, PT raises in 4 vs cuts in 1.
 
-By quadrant on 15 days, cold-bull has been the best state (+0.3%, positive 46%, n=3236) and cold-bear the worst (-0.4%, positive 43%). The spreads are a few tenths of a percent: attention tells you where the crowd is, not where the stock goes next.
+**What history says (Bloomberg track, 2024-01-05 → 2026-10-09).** Names that *turned hot* returned **-0.1%** universe-relative over 15 days (positive 44%, n=1112); *turned cold* +0.1% (positive 46%, n=942). Attention says where the crowd is, not where the stock goes next.

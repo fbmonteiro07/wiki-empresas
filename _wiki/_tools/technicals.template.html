@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Technical Monitor</title>
+<style>
+:root,:root[data-theme=light]{color-scheme:light;--plane:#f4f6f9;--surf:#fff;--ink:#192b40;--ink2:#536478;--muted:#66788a;--grid:#e7edf3;--base:#c9d3de;--border:#dfe6ee;
+ --px:#192b40;--m20:#bd8730;--m50:#3778c9;--m200:#b6789c;--sup:#137a62;--res:#bf545f;--brk:#a56e19;--up:#2f7d6d;--dn:#bf545f;--band:#eef2f7;--sel:#147d71;--wash:#eaf5f2;--crit:#bf545f;--good:#137a62;--warn:#a56e19}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){color-scheme:dark;--plane:#111c29;--surf:#182636;--ink:#e6edf5;--ink2:#b3c0cf;--muted:#94a7bc;--grid:#293a4d;--base:#4d6075;--border:#304258;
+ --px:#e6edf5;--m20:#d6a956;--m50:#72a6ea;--m200:#d59cba;--sup:#66c8ad;--res:#ef939b;--brk:#e4b66c;--up:#4fbaa7;--dn:#ef939b;--band:#1d2d40;--sel:#70cfbe;--wash:#1e3a3d;--crit:#ef939b;--good:#66c8ad;--warn:#e4b66c}}
+:root[data-theme=dark]{color-scheme:dark;--plane:#111c29;--surf:#182636;--ink:#e6edf5;--ink2:#b3c0cf;--muted:#94a7bc;--grid:#293a4d;--base:#4d6075;--border:#304258;
+ --px:#e6edf5;--m20:#d6a956;--m50:#72a6ea;--m200:#d59cba;--sup:#66c8ad;--res:#ef939b;--brk:#e4b66c;--up:#4fbaa7;--dn:#ef939b;--band:#1d2d40;--sel:#70cfbe;--wash:#1e3a3d;--crit:#ef939b;--good:#66c8ad;--warn:#e4b66c}
+*{box-sizing:border-box}
+body{margin:0;background:var(--plane);color:var(--ink);font:13.5px/1.5 "Segoe UI",Arial,sans-serif}
+a{color:var(--m50)}
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;padding:22px 28px 10px}
+header h1{margin:0;font-size:22px;font-weight:650}
+header p{margin:2px 0 0;color:var(--muted);font-size:12px}
+.crumb{font-size:10px;letter-spacing:1.6px;color:var(--muted);text-transform:uppercase}
+.wrap{padding:0 28px 40px;max-width:1680px;margin:0 auto}
+.card{background:var(--surf);border:1px solid var(--border);border-radius:10px;padding:16px 18px;margin:0 0 16px}
+.card h2{margin:0 0 4px;font-size:15px;font-weight:650}
+.card .sub{margin:0 0 12px;color:var(--muted);font-size:12px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:16px}
+.kpi{background:var(--surf);border:1px solid var(--border);border-radius:10px;padding:12px 14px;cursor:default}
+.kpi[data-flag]{cursor:pointer}.kpi[data-flag]:hover{border-color:var(--sel)}
+.kpi b{display:block;font-size:24px;font-weight:650;font-variant-numeric:tabular-nums}
+.kpi span{font-size:11.5px;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:16px}
+@media (max-width:1100px){.grid2{grid-template-columns:1fr}}
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+select,input[type=search],button{font:inherit;font-size:12.5px;color:var(--ink);background:var(--surf);border:1px solid var(--border);border-radius:6px;padding:5px 9px}
+button{cursor:pointer}
+.chip{border-radius:999px;padding:4px 11px;font-size:12px}
+.chip[aria-pressed=true]{background:var(--wash);border-color:var(--sel);color:var(--ink)}
+.tbl-wrap{overflow:auto;max-height:640px;border-top:1px solid var(--border)}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:12.5px}
+th,td{padding:5px 8px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--grid)}
+th{position:sticky;top:0;background:var(--surf);color:var(--ink2);font-weight:600;cursor:pointer;user-select:none;font-size:11.5px;z-index:1}
+th:first-child,td:first-child,th.l,td.l{text-align:left}
+tbody tr{cursor:pointer}tbody tr:hover{background:var(--band)}
+tbody tr.on{background:var(--wash)}
+.pos{color:var(--good)}.neg{color:var(--crit)}
+.tag{display:inline-block;font-size:10.5px;border:1px solid var(--border);border-radius:4px;padding:0 5px;margin-right:3px;color:var(--ink2)}
+.tag.os,.tag.sup,.tag.div,.tag.golden,.tag.up{border-color:var(--good);color:var(--good)}
+.tag.ob,.tag.brk,.tag.death,.tag.dn{border-color:var(--crit);color:var(--crit)}
+.tag.tri{border-color:var(--good);background:var(--wash);color:var(--good);font-weight:600}
+.rsibar{display:inline-block;width:46px;height:6px;background:var(--band);border-radius:3px;position:relative;vertical-align:middle;margin-left:5px}
+.rsibar i{position:absolute;top:-2px;width:3px;height:10px;border-radius:2px;background:var(--ink2)}
+.chartbox{position:relative}
+canvas{display:block;width:100%}
+.tip{position:absolute;pointer-events:none;background:var(--surf);border:1px solid var(--border);border-radius:6px;padding:6px 9px;font-size:11.5px;box-shadow:0 3px 14px #0002;white-space:nowrap;display:none;z-index:5;font-variant-numeric:tabular-nums}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:11.5px;color:var(--ink2);margin:4px 0 8px}
+.legend i{display:inline-block;width:16px;height:2px;vertical-align:middle;margin-right:5px}
+.legend i.dash{background:none!important;border-top:2px dashed}
+.dhead{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-start}
+.dhead h2{font-size:20px;margin:0}
+.dhead .px{font-size:20px;font-weight:600;font-variant-numeric:tabular-nums}
+.read{background:var(--band);border-radius:8px;padding:10px 12px;margin:10px 0;font-size:12.5px}
+.read p{margin:3px 0}
+.lv{font-size:12px}.lv td,.lv th{padding:4px 6px}
+.note{color:var(--muted);font-size:11.5px}
+.seg button{border-radius:0;margin-left:-1px}.seg button:first-child{border-radius:6px 0 0 6px}.seg button:last-child{border-radius:0 6px 6px 0}
+.seg button[aria-pressed=true]{background:var(--wash);border-color:var(--sel)}
+details summary{cursor:pointer;color:var(--ink2);font-weight:600}
+@media (max-width:640px){header,.wrap{padding-left:16px;padding-right:16px}}
+</style>
+</head>
+<body>
+<header>
+ <div><div class="crumb">Research / Market technicals · <a href="index.html">Dashboards hub</a> · <a href="../index.html">Wiki</a></div>
+ <h1>Technical Monitor — wiki universe</h1>
+ <p id="asof"></p></div>
+ <button id="theme" type="button" aria-label="Toggle theme">◐ Theme</button>
+</header>
+<div class="wrap">
+ <div class="kpis" id="kpis"></div>
+ <div class="grid2">
+  <div>
+   <div class="card">
+    <h2>RSI × distance from 200-day average</h2>
+    <p class="sub">Each dot is a name. Bottom-left = oversold and stretched below trend; top-right = overbought and extended. Ringed dots sit on a 2x+ tested support. Click to open the chart.</p>
+    <div class="chartbox"><canvas id="map" height="430"></canvas><div class="tip" id="maptip"></div></div>
+   </div>
+   <div class="card">
+    <h2>Screener</h2>
+    <div class="controls">
+     <input type="search" id="q" placeholder="Ticker…" style="width:100px">
+     <select id="sector"></select>
+     <span id="chips"></span>
+    </div>
+    <div class="tbl-wrap"><table id="tbl"><thead></thead><tbody></tbody></table></div>
+    <p class="note" id="cnt"></p>
+   </div>
+  </div>
+  <div>
+   <div class="card" id="detail">
+    <div class="dhead"><div><h2 id="dname"></h2><div class="note" id="dsec"></div></div>
+     <div style="text-align:right"><div class="px" id="dpx"></div><div class="note" id="dchg"></div></div></div>
+    <div class="controls" style="margin-top:8px"><span class="seg" id="range"></span>
+     <label class="note"><input type="checkbox" id="showlv" checked> levels</label>
+     <label class="note"><input type="checkbox" id="logs"> log scale</label>
+     <a id="wikilink" class="note" target="_blank">wiki page ↗</a></div>
+    <div class="legend"><span><i style="background:var(--px)"></i>Price</span><span><i style="background:var(--m20)"></i>SMA 20</span><span><i style="background:var(--m50)"></i>SMA 50</span><span><i style="background:var(--m200)"></i>SMA 200</span><span><i class="dash" style="border-color:var(--sup)"></i>Support (swing lows, n = touches)</span><span><i class="dash" style="border-color:var(--res)"></i>Resistance</span><span><i class="dash" style="border-color:var(--brk)"></i>Broken support</span></div>
+    <div class="chartbox"><canvas id="cv" height="640"></canvas><div class="tip" id="tip"></div></div>
+    <div class="read" id="readout"></div>
+    <details open><summary>Tested levels (2x+ touches, last 2 years)</summary><table class="lv" id="lvtbl"></table></details>
+   </div>
+  </div>
+ </div>
+ <div class="card"><details><summary>Method &amp; definitions</summary>
+  <p class="note">Prices: Bloomberg daily OHLC (split-adjusted, local currency, primary listing) via the local Desktop API — <code>fetch_technicals_bbg.py</code> → <code>build_technicals.py</code>. Technical read only; it carries no Capstone or broker view.</p>
+  <ul class="note">
+   <li><b>RSI(14)</b>, Wilder smoothing. Signal = 9-day simple average of RSI; “RSI ↑ signal” = RSI crossed above its signal today. Oversold &lt; 30, overbought &gt; 70.</li>
+   <li><b>vs SMA</b> = % distance of the last close from its 20/50/200-day simple average. <b>200D pct</b> = where today's distance sits in the name's own 3-year history (0 = most stretched below trend ever seen in the window).</li>
+   <li><b>Trend</b> = SMA50 above/below SMA200; golden/death cross flagged for 20 sessions.</li>
+   <li><b>Support / resistance</b> = clusters of swing lows/highs (a bar whose low/high is the extreme of a ±5-day window) over the last 2 years. Swings join a level when within a tolerance of 0.75×ATR(14)% (floor 1.5%, cap 4%) and ≥10 sessions apart. <b>2 touches = double bottom, 3+ = triple</b>. “At support” = within max(2.5%, 0.6×ATR) (price may sit up to one tolerance below it) of the nearest 2x+ level below price.</li>
+   <li><b>Broken support</b> = a 2x+ swing-low level that price closed below in the last 10 sessions (now resistance-in-waiting).</li>
+   <li><b>Bull divergence</b> = the latest touch of that support printed a lower-or-equal low than the prior touch but with a higher RSI (selling momentum fading into the retest).</li>
+   <li>The last 5 sessions cannot confirm a swing yet, so a fresh low is visible on the chart before it counts as a touch.</li>
+  </ul></details></div>
+</div>
+<script>
+const D=/*__DATA__*/null;
+const $=s=>document.querySelector(s);
+const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const fmt=(v,d=1)=>v==null?'–':(+v).toFixed(d);
+const sg=(v,d=1)=>v==null?'–':(v>0?'+':'')+(+v).toFixed(d);
+const cls=v=>v==null?'':v>0?'pos':v<0?'neg':'';
+const FLAGS={oversold:['RSI<30','os'],overbought:['RSI>70','ob'],at_support:['At 2x+ support','sup'],triple:['3x+ bottom','tri'],broken:['Broke support','brk'],bull_div:['Bull divergence','div'],golden:['Golden cross','golden'],death:['Death cross','death'],x200_up:['Crossed ↑200D','up'],x200_dn:['Crossed ↓200D','dn'],rsi_up:['RSI ↑ signal','up'],rsi_dn:['RSI ↓ signal','dn']};
+let state={sel:null,sort:'rsi',dir:1,sector:'',flag:'',q:'',range:252};
+
+// theme
+(function(){try{const t=localStorage.getItem('tech-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}
+ $('#theme').onclick=()=>{const dark=document.documentElement.dataset.theme?document.documentElement.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
+  const n=dark?'light':'dark';document.documentElement.dataset.theme=n;try{localStorage.setItem('tech-theme',n)}catch(e){};drawAll()}})();
+
+const rows=D.rows, eq=rows.filter(r=>r.sector!=='Benchmarks');
+$('#asof').textContent=`Bloomberg closes as of ${D.asof} · ${D.breadth.n} names + benchmarks · built ${D.built}`;
+
+// KPIs
+const B=D.breadth;
+$('#kpis').innerHTML=[
+ [B.a50+'%','above 50-day avg',''],[B.a200+'%','above 200-day avg',''],[B.up+'%','in uptrend (50D > 200D)',''],
+ [B.os,'oversold (RSI < 30)','oversold'],[B.ob,'overbought (RSI > 70)','overbought'],
+ [B.sup,'at a 2x+ tested support','at_support'],[B.brk,'broke a tested support (10d)','broken'],[B.div,'bull RSI divergence at support','bull_div']
+].map(([v,l,f])=>`<div class="kpi" ${f?`data-flag="${f}" title="Filter the screener"`:''}><b>${v}</b><span>${l}</span></div>`).join('');
+document.querySelectorAll('.kpi[data-flag]').forEach(k=>k.onclick=()=>{state.flag=state.flag===k.dataset.flag?'':k.dataset.flag;renderChips();renderTable()});
+
+// controls
+const sectors=[...new Set(rows.map(r=>r.sector))];
+$('#sector').innerHTML='<option value="">All sectors</option>'+sectors.map(s=>`<option>${s}</option>`).join('');
+$('#sector').onchange=e=>{state.sector=e.target.value;renderTable();drawMap()};
+$('#q').oninput=e=>{state.q=e.target.value.toUpperCase();renderTable()};
+function renderChips(){$('#chips').innerHTML=['oversold','overbought','at_support','triple','broken','bull_div','golden','death','x200_up','x200_dn'].map(f=>`<button class="chip" aria-pressed="${state.flag===f}" data-f="${f}">${FLAGS[f][0]}</button>`).join(' ');
+ document.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{state.flag=state.flag===b.dataset.f?'':b.dataset.f;renderChips();renderTable()})}
+renderChips();
+
+// table
+const COLS=[['t','Name','l'],['last','Last'],['r1d','1D %'],['r1m','1M %'],['ytd','YTD %'],['rsi','RSI 14'],['v20','vs 20D'],['v50','vs 50D'],['v200','vs 200D'],['v200p','200D pct'],['trend','Trend','l'],['supd','Nearest 2x+ support','l'],['hi52','vs 52w hi'],['flags','Signals','l']];
+function val(r,k){if(k==='supd')return r.sup?Math.abs(r.sup.dist):1e9;if(k==='flags')return -r.flags.length;if(k==='trend')return r.trend==='up'?1:0;return r[k]}
+function renderTable(){
+ $('#tbl thead').innerHTML='<tr>'+COLS.map(([k,l,a])=>`<th class="${a||''}" data-k="${k}">${l}${state.sort===k?(state.dir>0?' ▲':' ▼'):''}</th>`).join('')+'</tr>';
+ document.querySelectorAll('#tbl th').forEach(th=>th.onclick=()=>{const k=th.dataset.k;state.dir=state.sort===k?-state.dir:1;state.sort=k;renderTable()});
+ let list=rows.filter(r=>(!state.sector||r.sector===state.sector)&&(!state.flag||r.flags.includes(state.flag))&&(!state.q||r.t.includes(state.q)));
+ list.sort((a,b)=>{const x=val(a,state.sort),y=val(b,state.sort);if(x==null)return 1;if(y==null)return -1;return (typeof x==='string'?x.localeCompare(y):x-y)*state.dir});
+ $('#tbl tbody').innerHTML=list.map(r=>{
+  const s=r.sup;const sup=s?`${fmt(s.px,2)} <span class="note">${s.n}x · ${sg(s.dist)}%</span>`:'<span class="note">none</span>';
+  return `<tr data-t="${r.t}" class="${r.t===state.sel?'on':''}"><td><b>${r.t}</b></td><td>${fmt(r.last,2)}</td><td class="${cls(r.r1d)}">${sg(r.r1d)}</td><td class="${cls(r.r1m)}">${sg(r.r1m)}</td><td class="${cls(r.ytd)}">${sg(r.ytd,0)}</td>
+  <td>${fmt(r.rsi,0)}<span class="rsibar"><i style="left:${Math.max(0,Math.min(100,r.rsi||0))*0.46-1}px;background:${r.rsi<30?css('--good'):r.rsi>70?css('--crit'):css('--ink2')}"></i></span></td>
+  <td class="${cls(r.v20)}">${sg(r.v20)}</td><td class="${cls(r.v50)}">${sg(r.v50)}</td><td class="${cls(r.v200)}">${sg(r.v200)}</td><td>${fmt(r.v200p,0)}</td>
+  <td class="l">${r.trend?`<span class="tag ${r.trend}">${r.trend==='up'?'50>200':'50<200'}</span>`:'–'}</td><td class="l">${sup}</td><td class="neg">${sg(r.hi52,0)}</td>
+  <td class="l">${r.flags.filter(f=>FLAGS[f]).map(f=>`<span class="tag ${FLAGS[f][1]}">${FLAGS[f][0]}</span>`).join('')}</td></tr>`}).join('');
+ $('#cnt').textContent=`${list.length} of ${rows.length} shown${state.flag?' · filter: '+FLAGS[state.flag][0]:''} · click a header to sort, a row to chart`;
+ document.querySelectorAll('#tbl tbody tr').forEach(tr=>tr.onclick=()=>select(tr.dataset.t));
+}
+
+// canvas helpers
+function setup(cv){const dpr=window.devicePixelRatio||1,w=cv.clientWidth,h=+cv.getAttribute('height');cv.width=w*dpr;cv.height=h*dpr;cv.style.height=h+'px';const c=cv.getContext('2d');c.setTransform(dpr,0,0,dpr,0,0);c.font='11px Segoe UI, Arial';return [c,w,h]}
+
+// scatter map
+let mapPts=[];
+function drawMap(){
+ const cv=$('#map');const [c,w,h]=setup(cv);const L=40,R=12,T=22,Bm=30;
+ const list=eq.filter(r=>r.rsi!=null&&r.v200!=null&&(!state.sector||r.sector===state.sector));
+ const ys=list.map(r=>r.v200);let y0=Math.min(-30,...ys),y1=Math.max(30,...ys);y0=Math.max(y0,-80);y1=Math.min(y1,150);
+ const X=v=>L+(v-10)/(90-10)*(w-L-R),Y=v=>T+(1-(Math.max(y0,Math.min(y1,v))-y0)/(y1-y0))*(h-T-Bm);
+ c.fillStyle=css('--band');c.fillRect(X(10),T,X(30)-X(10),h-T-Bm);c.fillRect(X(70),T,X(90)-X(70),h-T-Bm);
+ c.strokeStyle=css('--grid');c.lineWidth=1;c.fillStyle=css('--muted');c.textAlign='right';
+ const step=(y1-y0)>120?40:20;
+ for(let v=Math.ceil(y0/step)*step;v<=y1;v+=step){c.beginPath();c.moveTo(L,Y(v));c.lineTo(w-R,Y(v));c.stroke();c.fillText((v>0?'+':'')+v+'%',L-5,Y(v)+4)}
+ c.strokeStyle=css('--base');c.beginPath();c.moveTo(L,Y(0));c.lineTo(w-R,Y(0));c.stroke();
+ c.textAlign='center';[10,30,50,70,90].forEach(v=>{c.fillText(v,X(v),h-Bm+15)});
+ c.fillText('RSI 14  →',(L+w)/2,h-3);c.save();c.translate(10,(T+h-Bm)/2);c.rotate(-Math.PI/2);c.fillText('% vs 200-day avg',0,0);c.restore();
+ c.textAlign='left';c.fillStyle=css('--muted');c.fillText('oversold',X(10)+4,T+12);c.textAlign='right';c.fillText('overbought',X(90)-4,T+12);
+ mapPts=[];
+ list.forEach(r=>{const x=X(Math.max(10,Math.min(90,r.rsi))),y=Y(r.v200);mapPts.push([x,y,r]);
+  const on=r.t===state.sel;c.beginPath();c.arc(x,y,on?6:4.5,0,7);c.fillStyle=on?css('--sel'):css('--m50');c.globalAlpha=on?1:.75;c.fill();c.globalAlpha=1;
+  if(r.flags.includes('at_support')){c.strokeStyle=css('--sup');c.lineWidth=2;c.beginPath();c.arc(x,y,8,0,7);c.stroke()}
+  c.lineWidth=1});
+ // selective labels: extremes + selected
+ const lab=[...list].sort((a,b)=>Math.abs(b.rsi-50)+Math.abs(b.v200)/3-(Math.abs(a.rsi-50)+Math.abs(a.v200)/3)).slice(0,14).map(r=>r.t);
+ if(state.sel)lab.push(state.sel);
+ c.fillStyle=css('--ink2');c.textAlign='left';mapPts.forEach(([x,y,r])=>{if(lab.includes(r.t))c.fillText(r.t,x+7,y-5)});
+}
+$('#map').onmousemove=e=>{const b=e.target.getBoundingClientRect(),mx=e.clientX-b.left,my=e.clientY-b.top;let best=null,bd=144;
+ mapPts.forEach(p=>{const d=(p[0]-mx)**2+(p[1]-my)**2;if(d<bd){bd=d;best=p}});const tip=$('#maptip');
+ if(!best){tip.style.display='none';e.target.style.cursor='default';return}e.target.style.cursor='pointer';const r=best[2];
+ tip.innerHTML=`<b>${r.t}</b> · RSI ${fmt(r.rsi,0)} · vs 200D ${sg(r.v200)}%<br>${r.sup?`support ${fmt(r.sup.px,2)} (${r.sup.n}x, ${sg(r.sup.dist)}%)`:'no 2x+ support below'}`;
+ tip.style.display='block';tip.style.left=Math.min(best[0]+12,b.width-200)+'px';tip.style.top=(best[1]-10)+'px'};
+$('#map').onmouseleave=()=>$('#maptip').style.display='none';
+$('#map').onclick=()=>{const t=$('#maptip');if(t.style.display==='block'){const n=t.querySelector('b').textContent;select(n)}};
+
+// detail chart
+const RANGES=[[126,'6M'],[252,'1Y'],[504,'2Y']];
+$('#range').innerHTML=RANGES.map(([n,l])=>`<button data-n="${n}" aria-pressed="${state.range===n}">${l}</button>`).join('');
+document.querySelectorAll('#range button').forEach(b=>b.onclick=()=>{state.range=+b.dataset.n;document.querySelectorAll('#range button').forEach(x=>x.setAttribute('aria-pressed',x===b));drawChart()});
+$('#showlv').onchange=drawChart;$('#logs').onchange=drawChart;
+let geo=null;
+function drawChart(){
+ const t=state.sel;if(!t)return;const S=D.series[t];const cv=$('#cv');const [c,w,h]=setup(cv);
+ const n=S.c.length,a=Math.max(0,n-state.range),idx=[...Array(n-a).keys()].map(i=>i+a);
+ const L=8,R=62,P1=[8,370],P2=[392,500],P3=[522,620];
+ const log=$('#logs').checked,tf=v=>log?Math.log(v):v;
+ let lo=Infinity,hi=-Infinity;idx.forEach(i=>{lo=Math.min(lo,S.l[i]);hi=Math.max(hi,S.h[i]);['s20','s50','s200'].forEach(k=>{})});
+ const lvs=$('#showlv').checked?S.levels:[];lvs.forEach(z=>{if(z.px>lo*0.85&&z.px<hi*1.15){lo=Math.min(lo,z.px);hi=Math.max(hi,z.px)}});
+ const pad=(tf(hi)-tf(lo))*0.05,ylo=tf(lo)-pad,yhi=tf(hi)+pad;
+ const bw=(w-L-R)/idx.length,X=k=>L+(k+0.5)*bw,Y=v=>P1[0]+(1-(tf(v)-ylo)/(yhi-ylo))*(P1[1]-P1[0]);
+ // grid + y labels
+ c.strokeStyle=css('--grid');c.fillStyle=css('--muted');c.lineWidth=1;c.textAlign='left';
+ for(let k=0;k<=5;k++){const yv=ylo+(yhi-ylo)*k/5,v=log?Math.exp(yv):yv,y=Y(v);c.beginPath();c.moveTo(L,y);c.lineTo(w-R,y);c.stroke();c.fillText(v>=1000?v.toFixed(0):v.toFixed(v>=100?1:2),w-R+5,y+4)}
+ // month ticks
+ c.textAlign='center';let lastM='';idx.forEach((i,k)=>{const m=S.d[i].slice(0,7);if(m!==lastM){lastM=m;const mo=+m.slice(5);if(state.range<=252||mo%3===1){c.strokeStyle=css('--grid');c.beginPath();c.moveTo(X(k),P1[0]);c.lineTo(X(k),P3[1]);c.stroke();c.fillText(mo===1?m.slice(0,4):['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][mo],X(k),P3[1]+14)}}});
+ // levels
+ lvs.forEach(z=>{const y=Y(z.px);if(y<P1[0]||y>P1[1])return;const col=z.kind==='S'?css('--sup'):z.kind==='R'?css('--res'):css('--brk');
+  c.strokeStyle=col;c.setLineDash([5,4]);c.lineWidth=1.5;c.beginPath();c.moveTo(L,y);c.lineTo(w-R,y);c.stroke();c.setLineDash([]);
+  c.fillStyle=col;c.textAlign='left';c.fillText(`${z.kind==='B'?'broken ':''}${z.n}x ${fmt(z.px,2)}`,L+4,y-4);
+  z.touch.forEach(([d,p])=>{const i=S.d.indexOf(d);if(i<a)return;const x=X(i-a),yy=Y(p);c.beginPath();if(z.kind==='R'){c.moveTo(x,yy-10);c.lineTo(x-5,yy-18);c.lineTo(x+5,yy-18)}else{c.moveTo(x,yy+10);c.lineTo(x-5,yy+18);c.lineTo(x+5,yy+18)}c.fill()})});
+ // candles (thin) when few bars, else close line
+ if(idx.length<=260){idx.forEach((i,k)=>{const up=S.c[i]>=S.o[i];c.strokeStyle=c.fillStyle=up?css('--up'):css('--dn');const x=X(k);c.beginPath();c.moveTo(x,Y(S.h[i]));c.lineTo(x,Y(S.l[i]));c.stroke();
+  const y1=Y(Math.max(S.o[i],S.c[i])),y2=Y(Math.min(S.o[i],S.c[i]));c.fillRect(x-Math.max(1,bw*0.32),y1,Math.max(2,bw*0.64),Math.max(1,y2-y1))})}
+ else{line(c,idx.map((i,k)=>[X(k),Y(S.c[i])]),css('--px'),1.5)}
+ [['s20','--m20'],['s50','--m50'],['s200','--m200']].forEach(([k,v])=>line(c,idx.map((i,j)=>S[k][i]==null?null:[X(j),Y(S[k][i])]),css(v),1.6));
+ // RSI
+ const Yr=v=>P2[0]+(1-v/100)*(P2[1]-P2[0]);c.fillStyle=css('--band');c.fillRect(L,Yr(70),w-L-R,Yr(30)-Yr(70));
+ c.strokeStyle=css('--base');[30,70].forEach(v=>{c.setLineDash([3,3]);c.beginPath();c.moveTo(L,Yr(v));c.lineTo(w-R,Yr(v));c.stroke();c.setLineDash([]);c.fillStyle=css('--muted');c.textAlign='left';c.fillText(v,w-R+5,Yr(v)+4)});
+ line(c,idx.map((i,k)=>S.rsig[i]==null?null:[X(k),Yr(S.rsig[i])]),css('--m20'),1.2);
+ line(c,idx.map((i,k)=>S.rsi[i]==null?null:[X(k),Yr(S.rsi[i])]),css('--px'),1.5);
+ c.fillStyle=css('--ink2');c.textAlign='left';c.fillText('RSI 14 (dark) · 9d signal (amber)',L+4,P2[0]+11);
+ // % vs 200D / 50D
+ const dv=idx.map(i=>S.s200[i]?(S.c[i]/S.s200[i]-1)*100:null),d5=idx.map(i=>S.s50[i]?(S.c[i]/S.s50[i]-1)*100:null);
+ const all=[...dv,...d5].filter(v=>v!=null);const m=Math.max(10,...all.map(Math.abs));const Yd=v=>P3[0]+(1-(v+m)/(2*m))*(P3[1]-P3[0]);
+ c.strokeStyle=css('--base');c.beginPath();c.moveTo(L,Yd(0));c.lineTo(w-R,Yd(0));c.stroke();
+ c.fillStyle=css('--muted');[m,0,-m].forEach(v=>c.fillText((v>0?'+':'')+v.toFixed(0)+'%',w-R+5,Yd(v)+4));
+ // area for 200D deviation
+ c.globalAlpha=.18;idx.forEach((i,k)=>{const v=dv[k];if(v==null)return;c.fillStyle=v>=0?css('--up'):css('--dn');const y=Yd(v),y0=Yd(0);c.fillRect(X(k)-bw/2,Math.min(y,y0),bw+.5,Math.abs(y-y0))});c.globalAlpha=1;
+ line(c,dv.map((v,k)=>v==null?null:[X(k),Yd(v)]),css('--m200'),1.6);line(c,d5.map((v,k)=>v==null?null:[X(k),Yd(v)]),css('--m50'),1.2);
+ c.fillStyle=css('--ink2');c.fillText('Price vs 200D (pink, shaded) · vs 50D (blue)',L+4,P3[0]+11);
+ geo={a,idx,X,bw,L,R,w,P1,P2,P3,Y,Yr,Yd,S,dv,d5};
+}
+function line(c,pts,col,lw){c.strokeStyle=col;c.lineWidth=lw;c.beginPath();let pen=false;pts.forEach(p=>{if(!p){pen=false;return}pen?c.lineTo(p[0],p[1]):c.moveTo(p[0],p[1]);pen=true});c.stroke();c.lineWidth=1}
+$('#cv').onmousemove=e=>{if(!geo)return;const b=e.target.getBoundingClientRect(),mx=e.clientX-b.left;const k=Math.round((mx-geo.L)/geo.bw-0.5);if(k<0||k>=geo.idx.length)return;
+ drawChart();const c=$('#cv').getContext('2d');const x=geo.X(k);c.strokeStyle=css('--muted');c.setLineDash([2,3]);c.beginPath();c.moveTo(x,geo.P1[0]);c.lineTo(x,geo.P3[1]);c.stroke();c.setLineDash([]);
+ const i=geo.idx[k],S=geo.S;const tip=$('#tip');
+ tip.innerHTML=`<b>${S.d[i]}</b><br>O ${fmt(S.o[i],2)} H ${fmt(S.h[i],2)} L ${fmt(S.l[i],2)} C <b>${fmt(S.c[i],2)}</b><br>SMA20 ${fmt(S.s20[i],2)} · 50 ${fmt(S.s50[i],2)} · 200 ${fmt(S.s200[i],2)}<br>RSI ${fmt(S.rsi[i],0)} (sig ${fmt(S.rsig[i],0)}) · vs200D ${sg(geo.dv[k])}% · vs50D ${sg(geo.d5[k])}%`;
+ tip.style.display='block';tip.style.left=(x>geo.w/2?x-250:x+12)+'px';tip.style.top=(e.clientY-b.top+12)+'px'};
+$('#cv').onmouseleave=()=>{$('#tip').style.display='none';drawChart()};
+
+function select(t){state.sel=t;const r=rows.find(x=>x.t===t);if(!r)return;
+ try{localStorage.setItem('tech-sel',t)}catch(e){}
+ $('#dname').textContent=t+' · '+r.bbg;$('#dsec').textContent=r.sector+(r.thesis?' — '+r.thesis:'');
+ $('#dpx').textContent=fmt(r.last,2);$('#dchg').innerHTML=`<span class="${cls(r.r1d)}">${sg(r.r1d)}% 1D</span> · <span class="${cls(r.r1m)}">${sg(r.r1m)}% 1M</span> · ${r.date}`;
+ const wl=$('#wikilink');if(r.sector==='Benchmarks'){wl.style.display='none'}else{wl.style.display='';wl.href=`../index.html#${t}-s1`}
+ const p=[];
+ p.push(`<p><b>Momentum:</b> RSI ${fmt(r.rsi,0)} vs signal ${fmt(r.rsig,0)} — ${r.rsi<30?'oversold':r.rsi>70?'overbought':r.rsi<45?'weak':r.rsi>55?'firm':'neutral'}${r.flags.includes('rsi_up')?', just crossed above its signal':r.flags.includes('rsi_dn')?', just crossed below its signal':''}.</p>`);
+ p.push(`<p><b>Trend:</b> ${sg(r.v20)}% vs 20D, ${sg(r.v50)}% vs 50D, ${sg(r.v200)}% vs 200D (${fmt(r.v200p,0)}th pct of its own 3y range); 50D ${r.trend==='up'?'above':'below'} 200D${r.cross?` — last ${r.cross.type} cross ${r.cross.d} (${r.cross.ago} sessions ago)`:''}.</p>`);
+ if(r.sup){const s=r.sup,tt=s.touch.map(x=>`${x[0]} @ ${fmt(x[1],2)} (RSI ${fmt(x[2],0)})`).join(', ');
+  p.push(`<p><b>Bottom:</b> ${s.n>=3?'triple+':'double'} bottom zone at <b>${fmt(s.px,2)}</b>, price ${sg(s.dist)}% above it — touched ${s.n}x: ${tt}.${r.div?' <b>Bull divergence</b>: the latest retest made a lower-or-equal low on higher RSI.':''}</p>`)}
+ else p.push(`<p><b>Bottom:</b> no 2x-tested swing-low level below the price in the last 2 years${r.sup1?` (nearest single swing low ${fmt(r.sup1.px,2)}, ${sg(r.sup1.dist)}%)`:''}.</p>`);
+ if(r.broken)p.push(`<p><b>Broken:</b> lost the ${r.broken.n}x level at ${fmt(r.broken.px,2)} on ${r.broken.lost} (now ${sg(r.broken.dist)}% below it).</p>`);
+ if(r.res)p.push(`<p><b>Overhead:</b> nearest swing-high cluster ${fmt(r.res.px,2)} (${r.res.n}x, ${sg(-r.res.dist/(1+r.res.dist/100))}% away); ${sg(r.hi52,0)}% from the 52-week high.</p>`);
+ $('#readout').innerHTML=p.join('');
+ const lv=D.series[t].levels;$('#lvtbl').innerHTML='<tr><th class="l">Type</th><th>Level</th><th>Touches</th><th>Price vs level</th><th class="l">Touch dates (low · RSI)</th></tr>'+
+  (lv.length?lv.map(z=>`<tr><td class="l">${z.kind==='S'?'Support':z.kind==='R'?'Resistance':'Broken support'}</td><td>${fmt(z.px,2)}</td><td>${z.n}x</td><td class="${cls(z.dist)}">${sg(z.dist)}%</td><td class="l">${z.touch.map(x=>`${x[0]} · ${fmt(x[1],2)} · ${fmt(x[2],0)}`).join('<br>')}</td></tr>`).join(''):'<tr><td class="l" colspan="5">No 2x+ tested levels in the window.</td></tr>');
+ drawChart();drawMap();document.querySelectorAll('#tbl tbody tr').forEach(tr=>tr.classList.toggle('on',tr.dataset.t===t));
+}
+function drawAll(){drawMap();drawChart();renderTable()}
+renderTable();
+let first='NVDA';try{first=localStorage.getItem('tech-sel')||first}catch(e){}
+select(rows.find(r=>r.t===first)?first:rows[0].t);
+window.addEventListener('resize',()=>{drawMap();drawChart()});
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change',drawAll);
+</script>
+</body>
+</html>

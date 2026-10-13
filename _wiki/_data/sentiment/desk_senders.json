@@ -1,0 +1,152 @@
+{
+ "_doc": [
+  "Registered desk / specialist-sales senders for the 10:00 sentiment-radar desk review (sentiment-radar skill, desk_mail_collect.ps1).",
+  "Seeded 2026-10-13 from the retired Codex project (input/specialist/sources.json, 24 senders, 21-Sep review). Add senders as the review finds them: email -> [firm, author, role].",
+  "Desk / specialist-sales voices carry no ratings or PTs and never aggregate with rated research (wiki rule, broker-desk-vs-research).",
+  "priority_domains: always read (independent authors / internal forwards). DAMNANG is an independent author, never a broker."
+ ],
+ "senders": {
+  "mark.schilsky@jpmorgan.com": [
+   "JPMorgan",
+   "Mark Schilsky",
+   "Specialist sales"
+  ],
+  "joshua.meyers@jpmorgan.com": [
+   "JPMorgan",
+   "Joshua Meyers",
+   "Specialist sales"
+  ],
+  "scott.silver@jpmorgan.com": [
+   "JPMorgan",
+   "Scott Silver",
+   "Specialist sales"
+  ],
+  "thomas.wigg@morganstanley.com": [
+   "Morgan Stanley",
+   "Thomas Wigg",
+   "Specialist sales"
+  ],
+  "skyler.risom@morganstanley.com": [
+   "Morgan Stanley",
+   "Skyler Risom",
+   "Specialist sales"
+  ],
+  "tyler.seidman@bernsteinsg.com": [
+   "Bernstein",
+   "Tyler Seidman",
+   "Specialist sales"
+  ],
+  "christina.dwyer@ubs.com": [
+   "UBS",
+   "Christina Dwyer",
+   "Specialist sales"
+  ],
+  "robert.ruple@ubs.com": [
+   "UBS",
+   "Robert Ruple",
+   "Specialist sales"
+  ],
+  "brian.fenske@bofa.com": [
+   "BofA",
+   "Brian Fenske",
+   "Specialist sales"
+  ],
+  "jeffrey.rand@barclays.com": [
+   "Barclays",
+   "Jeffrey Rand",
+   "Specialist sales"
+  ],
+  "rowan.adley@spec-sales.gms.rothschildandco.com": [
+   "Rothschild & Co",
+   "Rowan Adley",
+   "Specialist sales"
+  ],
+  "edward.hawney@spec-sales.gms.rothschildandco.com": [
+   "Rothschild & Co",
+   "Edward Hawney",
+   "Specialist sales"
+  ],
+  "josh.chapman@spec-sales.gms.rothschildandco.com": [
+   "Rothschild & Co",
+   "Josh Chapman",
+   "Specialist sales"
+  ],
+  "peter.callahan@mail.marquee.gs.com": [
+   "Goldman Sachs",
+   "Peter Callahan",
+   "Specialist sales"
+  ],
+  "peter.bartlett@mail.marquee.gs.com": [
+   "Goldman Sachs",
+   "Peter Bartlett",
+   "TMT sales"
+  ],
+  "nelson.armbrust@mail.marquee.gs.com": [
+   "Goldman Sachs",
+   "Nelson Armbrust",
+   "Sales / desk relay"
+  ],
+  "jfavuzza@jefferies.com": [
+   "Jefferies",
+   "Joseph Favuzza",
+   "Specialist sales"
+  ],
+  "wbeavington@jefferies.com": [
+   "Jefferies",
+   "William Beavington",
+   "Specialist sales"
+  ],
+  "rwong7@jefferies.com": [
+   "Jefferies",
+   "Rankie Wong",
+   "Specialist sales"
+  ],
+  "comara@jefferies.com": [
+   "Jefferies",
+   "Conor O’Mara",
+   "Specialist sales"
+  ],
+  "jds@jefferies.com": [
+   "Jefferies",
+   "Julien Dumoulin-Smith team",
+   "Research / sector distribution"
+  ],
+  "amir.amerian@morganstanley.com": [
+   "Morgan Stanley",
+   "Amir Amerian",
+   "Sales / research relay"
+  ],
+  "michael.m.dick@bofa.com": [
+   "BofA",
+   "Michael Dick",
+   "Sales / market commentary"
+  ],
+  "matthieu.martal@bofa.com": [
+   "BofA",
+   "Matthieu Martal",
+   "Sales / market commentary"
+  ],
+  "tmtspecsales@spec-sales.gms.rothschildandco.com": [
+   "Rothschild & Co",
+   "Rowan Adley / George Shaw",
+   "Specialist sales"
+  ],
+  "nicholas.villani@bofa.com": [
+   "BofA",
+   "Nicholas Villani",
+   "Sales / market commentary"
+  ]
+ },
+ "priority_domains": [
+  "substack.com",
+  "semianalysis.com",
+  "capstone.com.br"
+ ],
+ "priority_authors": {
+  "damnang2@substack.com": [
+   "DAMNANG",
+   "DAMNANG (independent author)",
+   "Independent author"
+  ]
+ }
+}

@@ -593,6 +593,15 @@ _Source: Capstone official model (`Modelo consolidado incl. LITE .xlsx` — cons
 
 ## Intra-quarter — calls, commentary & reports
 
+**🆕🔭 2026-10-13 (notion-ingest) — AN EX-NVIDIA LINKX EXPERT DATES CPO LATER THAN HURLSTON DOES, AND CALLS THE CPO LASER-SOURCE QUESTION STILL OPEN.**
+
+_(Source: Brad Smith (ex-NVIDIA LinkX, expert) @ Bernstein Group VC 'Copper vs Optical' hosted by Daniel Zhu & Varun Govindaraj (Bernstein), 2026-10-13 - Capstone notes (Notion transcript) — [Source](../_equity_calls/Semis/2026-10-13_Bernstein_Copper-vs-Optical-former-NVIDIA-LinkX-expert-Brad-Smith.md). ⚠️ EXPERT VOICE (former NVIDIA employee), NOT Bernstein research and NOT company guidance: no rating/PT; never aggregate with Bernstein's own marks (Zhu initiation 09-29); his cost/power/timing figures are one person's recollection; transcript opens at his prepared remarks and is cut mid-Q&A.)_
+
+- 🔭 **Timing vs the CEO's (2026-10-01 block below):** CPO is *"just for network switches"* for now; NVIDIA CPO switches began shipping summer 2026, *"really a second half of '27, '28 when it really kicks in"*, top network layers first, *"well into 2035 before this thing really rolls out"*; scale-up stays copper/PCB to ~2030-32, optics into the package only at ≥4 reticle dies ('28-'29). Hurlston has scale-up CPO/NPO shipping *"as an industry"* in 2027 and scale-in 2028-29.
+- **Laser source:** the host framed the question as Lumentum high-power EML vs Coherent VCSELs (host's framing, not the expert's). His answer: in CPO it is either a module of very high-power lasers — *"the yield of that is much lower than traditional lasers ... more expensive"* — or *"the traditional lasers in a separate drawer"* fed by fibre; *"that debate's going on now"*. InP *"has become bottlenecked"* now that it is mainstream (indium ~70% from China, per him).
+- **OCS:** *"18 startups, but the big dogs are Coherent using liquid crystal display technology and Lumentum using a ... MEMS mirror approach"*; OCS is *"not going to replace electronic switching"* (a railroad switching yard, no packet decisions).
+- **Pluggable-displacement fear, rebutted:** the fear that CPO takes the ~$20bn/yr transceiver market sole-source to Broadcom/NVIDIA *"is just not true"*; *"for a conceivable future"* transceivers are how these companies build out.
+
 **🆕 2026-10-02 (newsletters-to-vault) — AN INDEPENDENT READ OF LUMENTUM'S SEMICON TAIWAN VCSEL PITCH FOR SCALE-UP.**
 
 - (**DAMNANG (Substack)** — "Co-Packaged, Near-Packaged, Always Tested", **2026-10-02**) — [Source](../Damnang/2026-10-02%20-%20Co-Packaged,%20Near-Packaged,%20Always%20Tested.md). ⚠️ **INDEPENDENT SUBSTACK AUTHOR, NOT A BROKER — no rating, no price target, no house model.** The author discloses he may hold the names discussed (states he holds FORM and VIAV, accumulates AEHR); prices as of the 2026-09-30 close.
@@ -948,6 +957,7 @@ _Source: LITE earnings calls (dates above); management commentary, paraphrased._
 
 ## Changelog
 
+- 2026-10-13 — ingest (Notion, 2026-10-13_Bernstein_Copper-vs-Optical-former-NVIDIA-LinkX-expert-Brad-Smith.md): 1 intra-quarter block (top of section): ex-NVIDIA LinkX expert Brad Smith — CPO switch-only, real ramp 2H27-28, broad rollout ~2035, scale-up copper to ~2030-32 (later than Hurlston's 2027 scale-up CPO/NPO); CPO laser-source debate (high-power module vs external 'drawer') still open; OCS = Coherent liquid-crystal vs Lumentum MEMS. Expert voice, not Bernstein research. Nothing superseded.
 - 2026-10-12 — Bernstein (Zhu) FY28E revenue / EPS $10.73bn / $34.96 (2026-09-29 initiation) → $11.70bn ($11,704.4m) / $40.26, GM 58.0%, OM 48.5%, capex $1,456m → $1,588m (2026-10-12); Outperform, PT $1,220 and FY27E ($6.50bn / $22.40) unchanged [run-inbox 2026-10-12]
 - 2026-10-12 — Deutsche Bank (Conti) LITE PT: OPEN ITEM on the 09-01 DB-initiation row ("PTs for the Buy-rated names were NOT carried in any of the three relays") → Buy, TP $1,200, Top Pick (set 2026-08-31; DB primary 2026-10-07). DB FY27/FY28 EPS $21.56 / $37.36 (prior, first carried on this page from the 10-07 note) → $21.60 / $38.04 (2026-10-07) [run-inbox 2026-10-12]
 - **2026-10-12 (/run-inbox)** — 3 log rows (Bernstein · Zhu investor feedback 10-12; MS · Marshall OCP preview 10-09; DB · Conti optical preview 10-07), 2 Catalysts bullets (Nov-5 F1Q27 print with DB bogeys; Oracle–Lumentum OCS session at OCP 10-15), 1 Sinal update + Síntese addendum, 3 Sources links, open item on the 09-01 row marked resolved, pointer added to the 09-29 row's FY28E. MS EW / PT $1,000 unchanged (basis now visible: 25x CY28 P/E on ~$40).

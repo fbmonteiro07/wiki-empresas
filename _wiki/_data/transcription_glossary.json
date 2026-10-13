@@ -1,6 +1,6 @@
 {
  "_about": "Hand-edited ledger of machine-transcription garbles (Notion AI, Bloomberg ASR, auto-translation) seen in the archive, with the correct reading. Used by E:\\.claude\\scripts\\transcript_qa.py (source-file scan, page-diff scan) and by ingest_notion_meetings.py (writes a 'Transcription QA' block into every archived Notion file). Keys are matched with word boundaries, case-sensitive unless 'ci' is true. 'keep_when' = regex contexts (same line, ~80 chars around the hit) where the token is legitimate and must NOT be flagged. Add an entry the first time a garble is caught; never delete one. Standing rule (Felipe, 2026-09-28): ALWAYS double-check transcript content — acronyms, names, units, numbers — before it travels to a page.",
- "_updated": "2026-10-12",
+ "_updated": "2026-10-13",
  "terms": {
   "Smolik": {
    "correct": "Shmulik (Mark Shmulik, Bernstein US Internet)",
@@ -831,11 +831,96 @@
     "UALink"
    ],
    "first_seen": "2026-10-06 (Citi Meta Muse note)"
+  },
+  "Megatron": {
+   "correct": "MEGTRON (Panasonic low-loss PCB laminate)",
+   "domain": "technology",
+   "rule": "ASR spelling of Panasonic's MEGTRON high-speed PCB laminate in scale-up/backplane copper-trace context ('printed circuit boards using a technology called Megatron').",
+   "keep_when": [
+    "(?i)transformer|nemo|language model|LLM"
+   ],
+   "first_seen": "2026-10-13 (Bernstein Group VC copper vs optical, Brad Smith)"
+  },
+  "Vidya": {
+   "correct": "NVIDIA",
+   "domain": "names",
+   "rule": "ASR drops the 'n' ('AMD and Vidya').",
+   "first_seen": "2026-10-13 (Bernstein Group VC copper vs optical, Brad Smith)"
+  },
+  "before Chad": {
+   "correct": "before ChatGPT",
+   "domain": "names",
+   "rule": "'August 2022 BC, which is before Chad' = before ChatGPT (Nov-2022 launch); only the phrase is flagged, 'Chad' alone is a real first name.",
+   "first_seen": "2026-10-13 (Bernstein Group VC copper vs optical, Brad Smith)"
+  },
+  "rotams": {
+   "correct": "ROADMs (reconfigurable optical add-drop multiplexers)",
+   "domain": "technology",
+   "rule": "'OCS ... 30 years old using a telecom industry called rotams' = ROADMs, the telecom optical-switching precursor of data-center OCS.",
+   "ci": true,
+   "first_seen": "2026-10-13 (Bernstein Group VC copper vs optical, Brad Smith)"
   }
  },
  "summary_traps": [
   "The Notion AI summary inherits every transcript garble AND adds its own: it expanded 'MPO' to 'Module-Pluggable Optics' (2026-09-28), moved a guidance year (fiscal 2025 vs 2028, LITE 2026-09-18), invented a '<15% of industry TAM' sentence (2026-09-18), rendered 'funding short' as 'valuation short' (2026-09-18), hung Meta's $200-300bn figure on AppLovin (2026-09-22), credited the HOST's numbers to the guest (BofA/Bajarin 2026-09-24), and computed its own '~15% CAGR' (Scala 2026-09-24).",
   "Speakers are unlabeled: questions (Capstone/other investors) and answers run together; the host's arithmetic assented with a 'yeah' is not the guest's number.",
   "2026-10-02: Archera/Khanna call - the summary hangs the spoken commitment-growth marks on named clouds (Google 48.5%, AWS 38%, Azure 39.5%); the transcript speaks them as running rates (~45%->48.5% for one cloud, 36.5%->39.5% for another, consumption ~41%) with the cloud named in the surrounding sentence - map each figure to its cloud IN the transcript, never from the summary; the '300-400% mainframe migration volume' is ONE reseller PARTNER's volume (per Khanna), not Archera's total, and '$1 million minimum MAC/PPA' is spoken as a mid-quarter hyperscaler rule for GPU access. AVGO/Arcuri recap - the summary credits Arcuri's relayed statements to Broadcom management and adds 'Jalapeno', 'Sunfish v5', '440s and 430s' that grep does not find in the transcript."
- ]
+ ],
+ "Fenyman": {
+  "correct": "Feynman (NVIDIA 2028 GPU generation)",
+  "domain": "products",
+  "rule": "Desk-note spelling.",
+  "first_seen": "2026-09-22 (Jefferies Asia TMT desk deck 'Q326 Techknowledge Tech Trip Takeaways', typed desk notes; ingested 2026-10-13)"
+ },
+ "Fukikura": {
+  "correct": "Fujikura (5803.T, optical cables / components)",
+  "domain": "names",
+  "rule": "Desk-note spelling.",
+  "first_seen": "2026-09-22 (Jefferies Asia TMT desk deck 'Q326 Techknowledge Tech Trip Takeaways', typed desk notes; ingested 2026-10-13)"
+ },
+ "PFTE": {
+  "correct": "PTFE (polytetrafluoroethylene laminate, CCL context)",
+  "domain": "acronyms",
+  "rule": "Letter transposition in typed notes.",
+  "first_seen": "2026-09-22 (Jefferies Asia TMT desk deck 'Q326 Techknowledge Tech Trip Takeaways', typed desk notes; ingested 2026-10-13)"
+ },
+ "D2Q": {
+  "correct": "D2W (direct-to-wafer hybrid bonding) when the sentence is about HBM hybrid bonding",
+  "domain": "acronyms",
+  "rule": "Typed-note slip; the body text says 'direct to wafer approach'.",
+  "first_seen": "2026-09-22 (Jefferies Asia TMT desk deck 'Q326 Techknowledge Tech Trip Takeaways', typed desk notes; ingested 2026-10-13)"
+ },
+ "NVL 572": {
+  "correct": "NVL576 (NVIDIA Rubin Ultra 576-GPU pod)",
+  "domain": "products",
+  "rule": "Typed-note slip; 572 is not an NVIDIA configuration.",
+  "first_seen": "2026-09-22 (Jefferies Asia TMT desk deck 'Q326 Techknowledge Tech Trip Takeaways', typed desk notes; ingested 2026-10-13)"
+ },
+ "Taycan": {
+  "correct": "Titan (NVIDIA two-rack Rubin Ultra option) in a rack-design sentence; the NVDA page already names it Titan",
+  "domain": "products",
+  "rule": "Relay/ASR spelling seen in the 07-28 / 08-03 Fubon relays and in the 09-22 desk deck; keep 'Taycan' only for the Porsche.",
+  "keep_when": [
+   "Porsche"
+  ],
+  "first_seen": "2026-07-28 (Fubon relays via Jefferies); also 2026-09-22 desk deck"
+ },
+ "Tycan": {
+  "correct": "Titan (NVIDIA two-rack Rubin Ultra option)",
+  "domain": "products",
+  "rule": "see 'Taycan'",
+  "first_seen": "2026-08-03 (Fubon / Sherman Shang call, machine transcript)"
+ },
+ "TELSA": {
+  "correct": "Tesla",
+  "domain": "names",
+  "rule": "Typed-note transposition.",
+  "first_seen": "2026-09-22 (Jefferies Asia TMT desk deck 'Q326 Techknowledge Tech Trip Takeaways', typed desk notes; ingested 2026-10-13)"
+ },
+ "100KJ": {
+  "correct": "100K (racks) — stray character in typed notes",
+  "domain": "units",
+  "rule": "Typed-note slip on the Google-TPU-rack slide ('135K cv 100KJ for Nvidia').",
+  "first_seen": "2026-09-22 (Jefferies Asia TMT desk deck 'Q326 Techknowledge Tech Trip Takeaways', typed desk notes; ingested 2026-10-13)"
+ }
 }

@@ -34,7 +34,8 @@ STEPS = [
     ("build_graph.py", ["--no-html"]),  # graph_full.json only (graph_query hook + build_analyst); graph.html retired 2026-10-12
     ("build_analyst.py", []),       # belief ledger + ranked, attributed proactive signal queue
     ("build_sentiment.py", ["--no-bbg"]),   # hot/cold × bull/bear indicator — tweets re-scanned, BBG history from cache (terminal-only refresh: run without --no-bbg)
-    ("build_sentiment_monitor.py", []),  # daily sentiment monitor: CNN F&G (live, cached), movers, windows, map, daily note
+    ("build_sentiment_monitor.py", []),  # the single Sentiment page (6 tabs): CNN F&G live + sentiment_studies.py (CNN extremes, HOT/BULL score bands, sell-side ledger, daily series, desk ledger)
+    ("build_technicals.py", []),  # technical monitor: RSI / SMA 20-50-200 / 2x+ tested supports from _data/technicals/prices.json (BBG pull = fetch_technicals_bbg.py in refresh_wiki.bat)
     ("build_dashboards_hub.py", []),  # hub from the hand-edited registry _data/dashboards.json (cadence sections, dates, stale flags)
 ]
 

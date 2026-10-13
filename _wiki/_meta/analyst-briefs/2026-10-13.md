@@ -1,6 +1,6 @@
 # Daily Analyst Brief
 
-_Generated 2026-10-13 · 64 active signals · latest reconciliation: reconciliation-2026-10-12-inbox.md._
+_Generated 2026-10-13 · 62 active signals · latest reconciliation: reconciliation-2026-10-12-inbox.md._
 
 > ⚠️ **Portfolio priority is provisional.** _data/book.json is still a seed with unknown weights. Book badges identify seeded names but do not represent real exposure.
 
@@ -8,59 +8,59 @@ _Generated 2026-10-13 · 64 active signals · latest reconciliation: reconciliat
 
 | Rank | Ticker | Book | Signals | Why focus now |
 |---:|---|---|---:|---|
-| 1 | **GOOG** | seed | 3 | GOOG — 2026 revenue house view is 17% above consensus; GOOG — 2027 revenue house view is 18% above consensus |
+| 1 | **GOOG** | seed | 3 | GOOG — 2026 revenue house view is 18% above consensus; GOOG — 2027 revenue house view is 17% above consensus |
 | 2 | **AAPL** | seed | 2 | AAPL — 2026 EPS house view is 16% above consensus; AAPL — 2026-10-23: SMART-HOME LAUNCH (J490 hub, HomePod mini, Apple TV; Bloomberg via GS / JPM / BofA /… |
 | 3 | **NVDA** | seed | 5 | NVDA — 2026-10-20: 2026-10-20 to 10-22: NVIDIA GTC Berlin (JPM US Market Intelligence calendar, 09-29/09-30);…; NVDA — 2026-11-17: CLOSED 2026-09-10 — THE GS COMMUNACOPIA FIRESIDE HAPPENED. OUTCOME: Jensen reaffirmed the… |
-| 4 | **AKAM** | — | 2 | AKAM — derived thesis/debate state changed since the prior daily snapshot; AKAM — catalyst passed without a logged outcome |
-| 5 | **LITE** | — | 4 | LITE — 2026-10-14: CITI'S CATALYST WATCH (UPSIDE) EXPIRES. A dated, mechanical sell-side event with a…; LITE — 2026-10-15: OCP San Jose: Oracle Cloud Infrastructure (Kannan Raj) + Lumentum (Michael DeMerchant),… |
-| 6 | **STX** | — | 2 | STX — derived thesis/debate state changed since the prior daily snapshot; STX — 2026-11-02: Morgan Stanley Global Hardware & Optical lunch (Andy Meng, Howard Kao, Derrick Yang, Meta… |
+| 4 | **LITE** | — | 4 | LITE — 2026-10-14: CITI'S CATALYST WATCH (UPSIDE) EXPIRES. A dated, mechanical sell-side event with a…; LITE — 2026-10-15: OCP San Jose: Oracle Cloud Infrastructure (Kannan Raj) + Lumentum (Michael DeMerchant),… |
+| 5 | **STX** | — | 2 | STX — derived thesis/debate state changed since the prior daily snapshot; STX — 2026-11-02: Morgan Stanley Global Hardware & Optical lunch (Andy Meng, Howard Kao, Derrick Yang, Meta… |
+| 6 | **AKAM** | — | 1 | AKAM — derived thesis/debate state changed since the prior daily snapshot |
 | 7 | **WDC** | — | 1 | WDC — derived thesis/debate state changed since the prior daily snapshot |
-| 8 | **NOK** | — | 3 | NOK — Bloomberg consensus missing; NOK — latest earnings transcript absent |
-| 9 | **NOW** | — | 1 | NOW — catalyst passed without a logged outcome |
+| 8 | **AMAT** | — | 1 | AMAT — 2026-10-13: RESOLVED 2026-10-13 — see the Current state block; the margin target landed at ~54% (low… |
+| 9 | **NOK** | — | 3 | NOK — Bloomberg consensus missing; NOK — latest earnings transcript absent |
 | 10 | **NSCALE** | — | 3 | NSCALE — Bloomberg consensus missing; NSCALE — latest earnings transcript absent |
 | 11 | **MSFT** | seed | 2 | MSFT — 2026-11-17: 2026-11-17 to 11-20, SF — MSFT IGNITE.; MSFT and AMZN — the pages were carrying stale PTs (thesis-drift caught by the coverage tables, not by a rating action) |
 | 12 | **SMTC** | — | 2 | SMTC — 2026-10-15: INVESTOR / ANALYST DAY, San Jose. The single most important dated event on this page,…; SMTC — latest earnings transcript absent |
 
 ## Highest-priority ideas
 
-### 1. 🔴 GOOG — 2026 revenue house view is 17% above consensus
+### 1. 🔴 GOOG — 2026 revenue house view is 18% above consensus
 
 _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
 - **Tickers:** GOOG · seeded book: GOOG
-- **Why now:** Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $430.4bn as of 2026-10-12, a derived +17.3% gap. Revenue comparisons require a basis check.
+- **Why now:** Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $428.9bn as of 2026-10-13, a derived +17.8% gap. Revenue comparisons require a basis check.
 - **Belief update:** The house/Street disagreement requires an explicit driver bridge.
 - **Action:** Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
 - **Falsifier:** A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.
 - **Read-through:** AVGO (supplier: custom ASIC (TPU)); NVDA (supplier: GPUs); SNOW (competitor: warehouse vs BigQuery); ANTHROPIC (customer: TPU compute); BE (supplier: on-site fuel cells); CIEN (supplier: DCI/optical); COHR (supplier: optical)
-- **Attribution:** Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-10-12.
-- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-38820c40c7e3
+- **Attribution:** Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-10-13.
+- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-ac2a795f82ba
 
-### 2. 🔴 GOOG — 2027 revenue house view is 18% above consensus
+### 2. 🔴 GOOG — 2027 revenue house view is 17% above consensus
 
 _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
 - **Tickers:** GOOG · seeded book: GOOG
-- **Why now:** Capstone carries 2027 revenue at $641.0bn versus Bloomberg consensus at $545.1bn as of 2026-10-12, a derived +17.6% gap. Revenue comparisons require a basis check.
+- **Why now:** Capstone carries 2027 revenue at $641.0bn versus Bloomberg consensus at $547.5bn as of 2026-10-13, a derived +17.1% gap. Revenue comparisons require a basis check.
 - **Belief update:** The house/Street disagreement requires an explicit driver bridge.
 - **Action:** Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
 - **Falsifier:** A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.
 - **Read-through:** AVGO (supplier: custom ASIC (TPU)); NVDA (supplier: GPUs); SNOW (competitor: warehouse vs BigQuery); ANTHROPIC (customer: TPU compute); BE (supplier: on-site fuel cells); CIEN (supplier: DCI/optical); COHR (supplier: optical)
-- **Attribution:** Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-10-12.
-- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-d92e129a6cc5
+- **Attribution:** Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-10-13.
+- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-e195ab1c1cec
 
 ### 3. 🔴 AAPL — 2026 EPS house view is 16% above consensus
 
 _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
 - **Tickers:** AAPL · seeded book: AAPL
-- **Why now:** Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.76 as of 2026-10-12, a derived +15.5% gap.
+- **Why now:** Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.76 as of 2026-10-13, a derived +15.5% gap.
 - **Belief update:** The house/Street disagreement requires an explicit driver bridge.
 - **Action:** Open the AAPL model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
 - **Falsifier:** A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.
 - **Read-through:** TSM (supplier: foundry); ARM (supplier: IP)
-- **Attribution:** Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-10-12.
-- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-b2fc492d0d0b
+- **Attribution:** Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-10-13.
+- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-ea0d94b243de
 
 ### 4. 🟡 AKAM — derived thesis/debate state changed since the prior daily snapshot
 
@@ -182,8 +182,8 @@ _MODEL CHECK · MEDIUM IMPACT · STANDING · MEDIUM CONFIDENCE_
 ## Catalysts requiring preparation
 
 - **NVDA — 2026-10-20: 2026-10-20 to 10-22: NVIDIA GTC Berlin (JPM US Market Intelligence calendar, 09-29/09-30);…** — 🆕 2026-10-20 to 10-22: NVIDIA GTC Berlin (JPM US Market Intelligence calendar, 09-29/09-30); BofA lists "multiple GTC tradeshow events" with the enhanced buyback as the near-term NVDA catalysts (A _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-f2d225a6997f)
+- **AMAT — 2026-10-13: RESOLVED 2026-10-13 — see the Current state block; the margin target landed at ~54% (low…** — ✅ RESOLVED 2026-10-13 — see the Current state block; the margin target landed at ~54% (low end of the "mid-50s" bogey) and no WFE number was printed. Original entry: 🆕🔴 INVESTOR DAY — OCT _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-2007aecca0eb)
 - **LITE — 2026-10-14: CITI'S CATALYST WATCH (UPSIDE) EXPIRES. A dated, mechanical sell-side event with a…** — 🆕🔴 2026-10-14 — CITI'S CATALYST WATCH (UPSIDE) EXPIRES. A dated, mechanical sell-side event with a published clock: Citi opened a Catalyst Watch: Upside expiring 14-OCT-26 alongside Buy/TP $1, _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-2f7870e9d8d7)
-- **AMAT — 2026-10-13: AMAT analyst meeting (Vital Knowledge calendar, 2026-09-30/10-01, press); ASML reports…** — 🆕 2026-10-13 (Tue) — AMAT analyst meeting (Vital Knowledge calendar, 2026-09-30/10-01, press); ASML reports 10-14 (Wed, before EU open) and TSMC 10-15 (Thu) the same week; UBS hosts SEMICON West c _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-9de610118b43)
 - **ASML — 2026-10-14: 3Q26 results. The Street's two focus items are set: (1) whether FY27 low-NA EUV capacity…** — 🆕 2026-10-14 (Wednesday) — 3Q26 results. The Street's two focus items are set: (1) whether FY27 low-NA EUV capacity guidance goes to 90+ tools (from ~85) and whether 2028 is reaffirmed at ≥1 _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-9063aab68b04)
 - **CRDO — 2026-10-13: OCP: Jefferies hosts CRDO investor meetings; first demonstration of MicroLED-powered ALCs…** — 🆕 2026-10-13 — OCP: Jefferies hosts CRDO investor meetings; first demonstration of MicroLED-powered ALCs and a possible MicroVCSEL roadmap (Jefferies · Curtis, 2026-09-30); JPM's Joseph Cardoso al _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-95995f9252f4)
 - **SMTC — 2026-10-15: INVESTOR / ANALYST DAY, San Jose. The single most important dated event on this page,…** — 🔴 2026-10-15 — INVESTOR / ANALYST DAY, San Jose. The single most important dated event on this page, because management deferred the two questions that matter to it. Promised content: "an in-dept _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-a479a74da5f9)
@@ -192,8 +192,6 @@ _MODEL CHECK · MEDIUM IMPACT · STANDING · MEDIUM CONFIDENCE_
 
 ## Research hygiene
 
-- **AKAM — catalyst passed without a logged outcome** — Write a source-attributed bull won|bear won|neutral outcome for AKAM in outcomes.md. _Source: Catalyst outcome ledger._ (post-b3813dd6dd5f)
-- **NOW — catalyst passed without a logged outcome** — Write a source-attributed bull won|bear won|neutral outcome for NOW in outcomes.md. _Source: Catalyst outcome ledger._ (post-339c89411d8f)
 - **NOK — Bloomberg consensus missing** — Run the merge-safe Bloomberg estimate fetch for NOK, then rebuild the snapshot and Analyst Inbox. _Source: Wiki remediation worklist 2026-10-13._ (data-7752f09ad9e9)
 - **NSCALE — Bloomberg consensus missing** — Run the merge-safe Bloomberg estimate fetch for NSCALE, then rebuild the snapshot and Analyst Inbox. _Source: Wiki remediation worklist 2026-10-13._ (data-788cd4ed577b)
 - **NOK — latest earnings transcript absent** — Fetch the latest NOK earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-10-13._ (data-2f6cebfe69e1)

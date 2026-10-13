@@ -1,8 +1,9 @@
 {
- "_doc": "Hand-written status lines shown on the Sources section of sentiment-monitor.html (one per feed key). Clear a line when the feed recovers.",
+ "_doc": "Hand-written status lines shown on the Sources section of sentiment-monitor.html and in the Sentiment Radar e-mail (one per feed key: tweets, sellside, bbg, cnn, desk, panel). Clear a line when the feed recovers.",
  "tweets": "twitterapi.io credits exhausted since 2026-09-30 (balance negative) - the 09:00 twitter-briefing task sends an outage notice daily. Top up, then backfill: fetch --force --since-hours 330 --max-pages 75.",
  "sellside": "Outlook desktop stopped syncing new mail on 2026-09-24 13:51 (cached mode reports connected, newest item 09-24; the Graph connector still sees new mail). Restart Outlook / Send-Receive All, then re-run refresh_sentiment.bat.",
- "bbg": "Bloomberg Terminal was logged out at the 17:40 sweeps since 2026-10-01 - prices and BEst fields keep the last cache.",
+ "bbg": "Terminal was logged out at most 17:40 sweeps 2026-10-01 → 10-09 (cache kept); back on 10-12. A missed sweep keeps the last cache.",
  "cnn": "",
- "panel": ""
+ "panel": "",
+ "desk": "Outlook desktop has not synced since 2026-09-24 (.ost at the 50 GB cap), so the 10:00 desk review reads mail through the M365 connector until Outlook is fixed."
 }
