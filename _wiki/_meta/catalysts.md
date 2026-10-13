@@ -1,8 +1,8 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-10-12 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-10-13 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (42)
+## 📅 Upcoming (44)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
@@ -10,6 +10,7 @@ _Generated 2026-10-12 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-10-13 | CRDO | **🆕 2026-10-13 — OCP:** Jefferies hosts CRDO investor meetings; first demonstration of MicroLED-powered ALCs and a possible MicroVCSEL roadmap (Jefferies · Curtis, 2026-09-30); JPM's Joseph Cardoso al |
 | 2026-10-14 | ASML | 🆕 **2026-10-14 (Wednesday) — 3Q26 results.** The Street's two focus items are set: (1) whether FY27 low-NA EUV capacity guidance goes to **90+ tools** (from ~85) and whether **2028 is reaffirmed at ≥1 |
 | 2026-10-14 | LITE | **🆕🔴 2026-10-14 — CITI'S CATALYST WATCH (UPSIDE) EXPIRES.** A dated, mechanical sell-side event with a published clock: Citi opened a **Catalyst Watch: Upside expiring 14-OCT-26** alongside Buy/TP $1, |
+| 2026-10-15 | LITE | **🆕 2026-10-15 — OCP San Jose: Oracle Cloud Infrastructure (Kannan Raj) + Lumentum (Michael DeMerchant), "Zero-Touch OCS Fabrics for AI Scale-Out Infrastructure at Hyperscale"** — first non-Google hyp |
 | 2026-10-15 | SMTC | **🔴 2026-10-15 — INVESTOR / ANALYST DAY, San Jose. The single most important dated event on this page, because management deferred the two questions that matter to it.** Promised content: *"an in-dept |
 | 2026-10-20 | NFLX | 🆕 **Q3 2026 earnings — Tue 2026-10-20 AMC** (Vital Knowledge calendar, 2026-09-28) — replaces the "~late Oct" placeholder. |
 | 2026-10-20 | NVDA | 🆕 **2026-10-20 to 10-22: NVIDIA GTC Berlin** (JPM US Market Intelligence calendar, 09-29/09-30); BofA lists "multiple GTC tradeshow events" with the enhanced buyback as the near-term NVDA catalysts (A |
@@ -23,6 +24,7 @@ _Generated 2026-10-12 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-11-02 | KIOXIA | 🆕 **2026-11-02 (Mon) 9am JST — BofA post-results "doko shuzai" with KIOXIA on FY3/27 2Q results** (BofA · Mikio Hirakawa, via BofA one-liners, 2026-10-01) — dates the Sep-quarter print to before 11-02 |
 | 2026-11-02 | STX | 🆕 **2026-10-08 (12pm ET, NYC) — Morgan Stanley Global Hardware & Optical lunch (Andy Meng, Howard Kao, Derrick Yang, Meta Marshall, Erik Woodring) covering STX/[[WDC]] among others; 2026-11-02/03 — MS |
 | 2026-11-03 | INTC | 🆕 **2026-10-01: Susquehanna "The AI Arms Race" session (Christopher Rolland; AMD, INTC, MRVL, NVDA, AVGO, ARM, QCOM) and 2026-11-03: Intel dinner NDR with CFO and IR, London** (Susquehanna index 09-30 |
+| 2026-11-05 | LITE | **🆕 2026-11-05 — F1Q27 earnings (date per Deutsche Bank · Conti, 2026-10-07; confirm against the LITE IR release).** DB's bogeys: **OCS > $100m for the first time** (path to $1bn in 2027), CPO toward  |
 | 2026-11-09 | QCOM | **🆕 APPLE LICENSING EXTENSION — announced 2026-09-24 ahead of the April 2027 expiry, terms not disclosed** (Bernstein desk · Seidman, 2026-09-24). Watch for duration/rate in the FQ4 print or 10-K. **B |
 | 2026-11-09 | QCOM | 🆕 **2026-11-09: Bernstein QCOM HQ visit** (Bernstein TMT sales · Tyler Seidman, event notice, 2026-09-28). |
 | 2026-11-09 | QCOM | 🆕 **2026-11-09: Bernstein Qualcomm HQ visit with CEO, CFO and Head of Data Center** (Bernstein · Tyler Seidman events list, 09-29/09-30); 2026-10-01 Susquehanna "The AI Arms Race" session lists QCOM a |
@@ -49,13 +51,14 @@ _Generated 2026-10-12 · parsed from every page's 'Catalysts / what to watch'. D
 | 2028-06-30 | NSCALE | 2028-06-30 — Monarch **2 GW gross / 1.37 GW IT online "by 1H28"** (Anthropic tranches; the wiki's first neocloud milestone tied to on-site gas turbines). |
 | 2031-12-31 | NSCALE | 2031-12-31 — Monarch expansion to ~8 GW gross planned. |
 
-## ⏰ Passed — need a post-mortem (0)
+## ⏰ Passed — need a post-mortem (2)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| _none_ | | |
+| 2026-09-29 | AKAM | **🆕🔴 THE ONLY CIS METRIC THAT MATTERS IS NOW TCV PER DEAL, NOT AGGREGATE CIS REVENUE.** MS's ladder: **$50M TCV → ~35% OM / ~23% ROIC · $500M → ~25% / ~13% · $1B → ~20% / ~9%**, because *"revenue/MW f |
+| 2026-09-08 | NOW | 🆕 **Q3 FY26 print — the cRPO bar is explicit:** company guide **cRPO +20% cc** (Q3 subscription revenue $3.975-3.980bn, +20%; ServiceNow Q2 2026 call, 2026-07-22). **UBS expects 21.0% cc (18.0% organi |
 
 ## ✅ Resolved (260)
 

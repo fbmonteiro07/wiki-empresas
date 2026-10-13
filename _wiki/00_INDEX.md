@@ -6,7 +6,7 @@
 >
 > 🔎 **Full-corpus search** (reports + calls + briefings + transcripts + Stratechery + DAMNANG, not just wiki pages): `py "_wiki/_tools/search.py" <query>` (index: `py "_wiki/_tools/build_search_index.py"`).
 
-_Generated 2026-10-08 by `_tools/build_index.py` from [`_data/index_meta.json`](_data/index_meta.json) (hand-edit the json, not this file) · **108 companies + 2 private AI labs (110 pages)** · one page per ticker synthesizing all co-located sources in `E:\Wiki Felipe`: filings (10-K/10-Q/20-F) + earnings transcripts + investor-day decks + thematic equity calls (`_equity_calls`) + per-ticker roll-up of the email briefings (`_briefings/by-ticker`) + BBG consensus & street-high estimates (`_data/estimates.json`)._
+_Generated 2026-10-13 by `_tools/build_index.py` from [`_data/index_meta.json`](_data/index_meta.json) (hand-edit the json, not this file) · **109 companies + 2 private AI labs (111 pages)** · one page per ticker synthesizing all co-located sources in `E:\Wiki Felipe`: filings (10-K/10-Q/20-F) + earnings transcripts + investor-day decks + thematic equity calls (`_equity_calls`) + per-ticker roll-up of the email briefings (`_briefings/by-ticker`) + BBG consensus & street-high estimates (`_data/estimates.json`)._
 
 Each page follows the [_TEMPLATE](_TEMPLATE.md): Snapshot · Current state (latest quarter) · Debate (bull/bear + where the sell-side stands, attributed + dated) · Catalysts · Risks · Consensus estimates (BBG) · Sources (links). Archive master index: [../INDEX.md](../INDEX.md). Thematic pages: [themes/00_THEMES.md](themes/00_THEMES.md).
 
@@ -86,6 +86,7 @@ Each page follows the [_TEMPLATE](_TEMPLATE.md): Snapshot · Current state (late
 |---|---|---|
 | ANET | [ANET](ANET.md) | Best-positioned merchant AI-Ethernet name; risk = 2H26 backlog drawdown + rich multiple. |
 | CIEN | [CIEN](CIEN.md) | Optical/DCI leader; demand outruns supply, debate purely valuation (~85x NTM). |
+| NOK | [NOK](NOK.md) | Optical/IP growth can lift earnings; telecom profit and cash conversion determine whether valuation is justified (research 2026-10-11). |
 | COHR | [COHR](COHR.md) | InP chokepoint in AI interconnect; NVIDIA stake + CPO deal; bear is relative vs LITE. |
 | LITE | [LITE](LITE.md) | US photonics pure-play (rev +90%); demand isn't the question, supply/execution is. |
 | AAOI | [AAOI](AAOI.md) | Volatile small-cap with in-house InP fab; 2027 projection trading on FinTwit conviction. |

@@ -1,9 +1,11 @@
 {
- "asof": "2026-10-08",
+ "asof": "2026-10-13",
  "bbg_missing": [
+  "NOK",
   "NSCALE"
  ],
  "no_transcript": [
+  "NOK",
   "NSCALE",
   "POET",
   "SMTC"
@@ -26,8 +28,12 @@
   "SPCX"
  ],
  "actions": {
-  "fetch_estimates_cmd": "py \"E:\\.claude\\scripts\\fetch_estimates.py\" NSCALE",
+  "fetch_estimates_cmd": "py \"E:\\.claude\\scripts\\fetch_estimates.py\" NOK NSCALE",
   "transcript_tasks": [
+   {
+    "agent": "transcript-fetcher",
+    "prompt": "Get the latest earnings call transcript for NOK and save it to E:\\Wiki Felipe empresas\\NOK\\transcripts\\ as NOK_<quarter>_<YYYY-MM-DD>.md"
+   },
    {
     "agent": "transcript-fetcher",
     "prompt": "Get the latest earnings call transcript for NSCALE and save it to E:\\Wiki Felipe empresas\\NSCALE\\transcripts\\ as NSCALE_<quarter>_<YYYY-MM-DD>.md"

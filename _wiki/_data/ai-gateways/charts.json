@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-10-08T21:23:39.286633+00:00",
+  "generated_at": "2026-10-13T03:37:54.341518+00:00",
   "schema_version": 1,
   "openrouter": {
-    "asof": "2026-10-04",
-    "snapshot": "2026-10-05",
+    "asof": "2026-10-11",
+    "snapshot": "2026-10-12",
     "history_start": "2026-07-20",
-    "baseline": "2026-09-27",
+    "baseline": "2026-10-04",
     "interval_days": 7,
-    "tokens_7d": 165855908206024.0,
-    "tokens_30d": 596984068562379.0,
-    "growth_pct": 13.72065145350858,
-    "free_share_pct": 5.6160325967981946,
-    "observations": 14
+    "tokens_7d": 171842498417318.0,
+    "tokens_30d": 646221530485637.0,
+    "growth_pct": 3.609512784951585,
+    "free_share_pct": 6.718812969294234,
+    "observations": 15
   },
   "vercel": {
     "asof": "2026-09-28",
@@ -31,7 +31,7 @@
       "title": "01 · Is token demand growing?",
       "subtitle": "OpenRouter · trailing 7-day volume · trillion tokens",
       "kind": "line",
-      "source": "OpenRouter · windows ending 2026-07-20 to 2026-10-04 · all prompt + completion tokens in the public feed.",
+      "source": "OpenRouter · windows ending 2026-07-20 to 2026-10-11 · all prompt + completion tokens in the public feed.",
       "unit": "T",
       "series": [
         {
@@ -94,6 +94,10 @@
             [
               "2026-10-04",
               165.855908206024
+            ],
+            [
+              "2026-10-11",
+              171.842498417318
             ]
           ]
         },
@@ -157,6 +161,10 @@
             [
               "2026-10-04",
               156.541386337458
+            ],
+            [
+              "2026-10-11",
+              160.296722346896
             ]
           ]
         },
@@ -220,6 +228,10 @@
             [
               "2026-10-04",
               9.314521868566
+            ],
+            [
+              "2026-10-11",
+              11.545776070422
             ]
           ]
         }
@@ -230,7 +242,7 @@
       "title": "02 · Is growth accelerating?",
       "subtitle": "OpenRouter · change in trailing 7-day volume · actual comparison intervals shown",
       "kind": "bars",
-      "source": "OpenRouter · windows ending 2026-07-20 to 2026-10-04 · all prompt + completion tokens in the public feed.",
+      "source": "OpenRouter · windows ending 2026-07-20 to 2026-10-11 · all prompt + completion tokens in the public feed.",
       "unit": "%",
       "rows": [
         {
@@ -284,6 +296,10 @@
         {
           "name": "09-27 → 10-04 (7d)",
           "value": 13.72065145350858
+        },
+        {
+          "name": "10-04 → 10-11 (7d)",
+          "value": 3.609512784951585
         }
       ],
       "signed": true
@@ -293,72 +309,9 @@
       "title": "03 · Who is taking token share?",
       "subtitle": "OpenRouter · six largest labs today, held fixed across history · %",
       "kind": "line",
-      "source": "OpenRouter · windows ending 2026-07-20 to 2026-10-04 · all prompt + completion tokens in the public feed.",
+      "source": "OpenRouter · windows ending 2026-07-20 to 2026-10-11 · all prompt + completion tokens in the public feed.",
       "unit": "%",
       "series": [
-        {
-          "key": "stealth",
-          "name": "stealth",
-          "color": "#0f766e",
-          "points": [
-            [
-              "2026-07-20",
-              null
-            ],
-            [
-              "2026-07-26",
-              null
-            ],
-            [
-              "2026-08-02",
-              null
-            ],
-            [
-              "2026-08-10",
-              null
-            ],
-            [
-              "2026-08-16",
-              null
-            ],
-            [
-              "2026-08-23",
-              12.3885899763259
-            ],
-            [
-              "2026-08-30",
-              13.877396418666377
-            ],
-            [
-              "2026-09-06",
-              null
-            ],
-            [
-              "2026-09-13",
-              null
-            ],
-            [
-              "2026-09-18",
-              0.7664821414358948
-            ],
-            [
-              "2026-09-20",
-              0.7583244398837031
-            ],
-            [
-              "2026-09-24",
-              2.1378839419602
-            ],
-            [
-              "2026-09-27",
-              9.50220816705171
-            ],
-            [
-              "2026-10-04",
-              23.310113048130052
-            ]
-          ]
-        },
         {
           "key": "deepseek",
           "name": "DeepSeek",
@@ -419,69 +372,10 @@
             [
               "2026-10-04",
               22.254184695293482
-            ]
-          ]
-        },
-        {
-          "key": "openai",
-          "name": "OpenAI",
-          "color": "#059669",
-          "points": [
-            [
-              "2026-07-20",
-              6.788572529131789
             ],
             [
-              "2026-07-26",
-              6.885070658912334
-            ],
-            [
-              "2026-08-02",
-              9.840203219178685
-            ],
-            [
-              "2026-08-10",
-              12.532804240006543
-            ],
-            [
-              "2026-08-16",
-              12.954200642117192
-            ],
-            [
-              "2026-08-23",
-              10.685350976091474
-            ],
-            [
-              "2026-08-30",
-              11.39242972473172
-            ],
-            [
-              "2026-09-06",
-              16.05429239897738
-            ],
-            [
-              "2026-09-13",
-              18.895957645820836
-            ],
-            [
-              "2026-09-18",
-              17.466128586853007
-            ],
-            [
-              "2026-09-20",
-              13.100701102421992
-            ],
-            [
-              "2026-09-24",
-              11.834778976159873
-            ],
-            [
-              "2026-09-27",
-              12.65584673943885
-            ],
-            [
-              "2026-10-04",
-              11.363277684212443
+              "2026-10-11",
+              29.99014729777073
             ]
           ]
         },
@@ -545,6 +439,77 @@
             [
               "2026-10-04",
               8.727131247460305
+            ],
+            [
+              "2026-10-11",
+              10.53689784366416
+            ]
+          ]
+        },
+        {
+          "key": "openai",
+          "name": "OpenAI",
+          "color": "#059669",
+          "points": [
+            [
+              "2026-07-20",
+              6.788572529131789
+            ],
+            [
+              "2026-07-26",
+              6.885070658912334
+            ],
+            [
+              "2026-08-02",
+              9.840203219178685
+            ],
+            [
+              "2026-08-10",
+              12.532804240006543
+            ],
+            [
+              "2026-08-16",
+              12.954200642117192
+            ],
+            [
+              "2026-08-23",
+              10.685350976091474
+            ],
+            [
+              "2026-08-30",
+              11.39242972473172
+            ],
+            [
+              "2026-09-06",
+              16.05429239897738
+            ],
+            [
+              "2026-09-13",
+              18.895957645820836
+            ],
+            [
+              "2026-09-18",
+              17.466128586853007
+            ],
+            [
+              "2026-09-20",
+              13.100701102421992
+            ],
+            [
+              "2026-09-24",
+              11.834778976159873
+            ],
+            [
+              "2026-09-27",
+              12.65584673943885
+            ],
+            [
+              "2026-10-04",
+              11.363277684212443
+            ],
+            [
+              "2026-10-11",
+              9.947178206085338
             ]
           ]
         },
@@ -608,6 +573,77 @@
             [
               "2026-10-04",
               7.291654560293049
+            ],
+            [
+              "2026-10-11",
+              7.968719141749848
+            ]
+          ]
+        },
+        {
+          "key": "anthropic",
+          "name": "Anthropic",
+          "color": "#dc6841",
+          "points": [
+            [
+              "2026-07-20",
+              11.341885638096544
+            ],
+            [
+              "2026-07-26",
+              9.106312669003973
+            ],
+            [
+              "2026-08-02",
+              8.039454223300162
+            ],
+            [
+              "2026-08-10",
+              6.912251002907602
+            ],
+            [
+              "2026-08-16",
+              8.491303771603171
+            ],
+            [
+              "2026-08-23",
+              5.230770350380363
+            ],
+            [
+              "2026-08-30",
+              4.242958568897657
+            ],
+            [
+              "2026-09-06",
+              4.937427093538486
+            ],
+            [
+              "2026-09-13",
+              3.807675917263537
+            ],
+            [
+              "2026-09-18",
+              3.600044811623012
+            ],
+            [
+              "2026-09-20",
+              3.59728969319037
+            ],
+            [
+              "2026-09-24",
+              3.4574694845276173
+            ],
+            [
+              "2026-09-27",
+              3.6137348252095087
+            ],
+            [
+              "2026-10-04",
+              3.8890434945336025
+            ],
+            [
+              "2026-10-11",
+              6.790798427599542
             ]
           ]
         },
@@ -671,6 +707,10 @@
             [
               "2026-10-04",
               5.177843404429947
+            ],
+            [
+              "2026-10-11",
+              6.285257673716712
             ]
           ]
         }
@@ -679,42 +719,42 @@
     {
       "id": "or-lab-movers",
       "title": "04 · Labs gaining / losing share",
-      "subtitle": "OpenRouter · 2026-09-27 → 2026-10-04 · 7 days · percentage points",
+      "subtitle": "OpenRouter · 2026-10-04 → 2026-10-11 · 7 days · percentage points",
       "kind": "bars",
-      "source": "OpenRouter · windows ending 2026-07-20 to 2026-10-04 · all prompt + completion tokens in the public feed.",
+      "source": "OpenRouter · windows ending 2026-07-20 to 2026-10-11 · all prompt + completion tokens in the public feed.",
       "unit": "pp",
       "rows": [
         {
-          "name": "stealth",
-          "value": 13.807904881078342
+          "name": "DeepSeek",
+          "value": 7.735962602477247
         },
         {
-          "name": "Xiaomi",
-          "value": 0.6791894731397052
+          "name": "stepfun",
+          "value": 5.174624861046394
         },
         {
           "name": "Anthropic",
-          "value": 0.2753086693240938
-        },
-        {
-          "name": "typesafe",
-          "value": 0.10303378316388301
-        },
-        {
-          "name": "InclusionAI",
-          "value": -0.7865304375824711
-        },
-        {
-          "name": "OpenAI",
-          "value": -1.2925690552264069
-        },
-        {
-          "name": "Tencent",
-          "value": -3.1991894040105944
+          "value": 2.9017549330659396
         },
         {
           "name": "Z.ai",
-          "value": -5.740700188503089
+          "value": 1.8097665962038558
+        },
+        {
+          "name": "Qwen",
+          "value": -0.15812982745353166
+        },
+        {
+          "name": "Google",
+          "value": -0.17130926726584672
+        },
+        {
+          "name": "OpenAI",
+          "value": -1.416099478127105
+        },
+        {
+          "name": "stealth",
+          "value": -20.8678617590368
         }
       ],
       "signed": true
@@ -722,42 +762,42 @@
     {
       "id": "or-model-movers",
       "title": "05 · Models adding / losing tokens",
-      "subtitle": "OpenRouter · 2026-09-27 → 2026-10-04 · 7 days · change in trillion tokens",
+      "subtitle": "OpenRouter · 2026-10-04 → 2026-10-11 · 7 days · change in trillion tokens",
       "kind": "bars",
-      "source": "OpenRouter · windows ending 2026-07-20 to 2026-10-04 · all prompt + completion tokens in the public feed.",
+      "source": "OpenRouter · windows ending 2026-07-20 to 2026-10-11 · all prompt + completion tokens in the public feed.",
       "unit": "T",
       "rows": [
         {
-          "name": "Space Bunny Alpha · standard",
-          "value": 24.802702185386
-        },
-        {
           "name": "DeepSeek V4.1 Flash (batch) · standard",
-          "value": 6.033773831059
+          "value": 15.363318872499
         },
         {
-          "name": "MiMo-V2.6-Flash · standard",
-          "value": 4.120255895971
-        },
-        {
-          "name": "GPT-6 Luna (batch) · standard",
-          "value": 3.323940171644
-        },
-        {
-          "name": "DeepSeek V4 Flash 0731 · standard",
-          "value": -1.833321828423
-        },
-        {
-          "name": "Hy4 preview · standard",
-          "value": -3.132309109831
-        },
-        {
-          "name": "GPT-5.6 Luna (batch) · standard",
-          "value": -4.152493066614
+          "name": "Claude Opus 5.5 · standard",
+          "value": 2.555736819523
         },
         {
           "name": "GLM 5.3 Flash (batch) · standard",
-          "value": -6.583487402551
+          "value": 2.50240817355
+        },
+        {
+          "name": "MiMo-V2.6-Flash · standard",
+          "value": 1.831887539263
+        },
+        {
+          "name": "GPT-6 Astra · standard",
+          "value": -0.826201962067
+        },
+        {
+          "name": "DeepSeek V4 Flash 0731 · standard",
+          "value": -1.074631097709
+        },
+        {
+          "name": "GPT-5.6 Luna (batch) · standard",
+          "value": -2.538450878066
+        },
+        {
+          "name": "Space Bunny Alpha · standard",
+          "value": -34.46437406702
         }
       ],
       "signed": true,
@@ -768,7 +808,7 @@
       "title": "06 · How much is free-tagged usage?",
       "subtitle": "OpenRouter · free-tagged tokens as a share of total · %",
       "kind": "line",
-      "source": "OpenRouter · windows ending 2026-07-20 to 2026-10-04 · all prompt + completion tokens in the public feed.",
+      "source": "OpenRouter · windows ending 2026-07-20 to 2026-10-11 · all prompt + completion tokens in the public feed.",
       "unit": "%",
       "series": [
         {
@@ -831,6 +871,10 @@
             [
               "2026-10-04",
               5.6160325967981946
+            ],
+            [
+              "2026-10-11",
+              6.718812969294234
             ]
           ]
         }
@@ -3201,13 +3245,12 @@
     }
   ],
   "warnings": [
-    "OpenRouter data is stale: 2026-10-04",
     "Vercel data is stale: 2026-09-28"
   ],
   "token_economics": {
     "history_start": "2026-07-20",
-    "asof": "2026-10-04",
-    "latest_snapshot": "2026-10-05",
+    "asof": "2026-10-11",
+    "latest_snapshot": "2026-10-12",
     "checks": [
       {
         "name": "Token categories reconcile to the ranking feed",
@@ -3223,28 +3266,22 @@
         "name": "Weekly volume vs OpenRouter chart endpoint",
         "status": "PASS",
         "kind": "Separate aggregation from the same provider; not an external spend validation.",
-        "chart_tokens": 165855870948919.0,
-        "ranking_tokens": 165855908206024.0,
-        "difference_pct": 2.2463543070116998e-05,
-        "window_start": "2026-09-28",
-        "window_end": "2026-10-04"
+        "chart_tokens": 171842498417318.0,
+        "ranking_tokens": 171842498417318.0,
+        "difference_pct": 0.0,
+        "window_start": "2026-10-05",
+        "window_end": "2026-10-11"
       },
       {
         "name": "Latest token pricing coverage",
         "status": "PARTIAL",
-        "value_pct": 97.68656211248697,
+        "value_pct": 95.05595310409326,
         "kind": "Priced-token subset / all feed tokens. Missing prices are not zero."
       },
       {
         "name": "Calibration to billed spend",
         "status": "UNAVAILABLE",
         "kind": "No comparable verified bill or realized-spend anchor. The raw total_usage field is disclosed separately with unverified units/scope; it is not silently equated to USD. No calibration factor fitted."
-      },
-      {
-        "name": "Raw total_usage needs a public ranking definition",
-        "status": "REVIEW",
-        "kind": "Cost-like field has positive values, including free-tagged rows. Cannot reconcile it to dollars until units, fees, variant attribution and scope are established.",
-        "raw_sum_unverified_units": 23635888.90060399
       }
     ],
     "file": "_data/ai-gateways/token-economics.json"
