@@ -13,7 +13,7 @@ _Baselines: (1) prior wiki marks (page intra-quarter tables, "where the sell-sid
 
 The NVDA/AMD/INTC/ARM/DELL/SMCI/CEREBRAS/tokenmaxxing pages were re-read after the concurrent patch landed (mtimes 00:07-00:23), and the values below match them.
 
-## DIVERGES (the alpha)
+## Where the new data DIVERGES
 
 _Ranked by materiality (row order)._
 
@@ -52,17 +52,19 @@ _Ranked by materiality (row order)._
 | **AVGO** (unit economics) | Wells net revenue/GW $10.9bn (31%); SPV price/GW $35bn; Bernstein Jalapeño rack BOM $5,032K | page $10-12bn/GW; $35bn deal; BOM $4,924K (09-29) | — | Consistent (+2% BOM). |
 | **STX / WDC** | SIG HDD blended ASP +20% / +25% q/q (3Q / 4Q26); MS Toshiba add <150EB (relayed) | mgmt ~20%+ implied; MS ~220EB (10-02) | STX px $753 / WDC $387 vs PT $1,147 / $659 | The bear headline is shrinking (Toshiba EB −30% vs the 10-02 relay). The stocks fell a further ~11% / ~7% since 10-02. |
 | **OPENAI / ANTHROPIC** | OpenAI ~$50bn net annualised (Sep-26), ~$30bn (Jul); MSFT → Anthropic >$2bn/yr | ~$70bn Axios (09-29) = **gross-up basis** | — | Not a divergence: $50bn net ≈ $70bn gross. Never net the two series. |
+| **TSM** (Taiwan listing) | Fubon PT NT$3,500 | — | BBG 2330 TT median PT NT$3,330 (+5%); Street-high NT$5,000; 41 analysts; px NT$2,490 | In line. _Resolved 2026-10-13 (was PENDING: the ADR panel only)._ |
+| **Nanya (2408 TT)** | MS OW PT NT$600 (from NT$580); 3Q26 revenue NT$134bn | — | PT vs BBG median NT$702 (−15%; high NT$850); **3Q26 actual NT$133.6bn (reported 10-12)**: MS ≈ actual (+0.3%). 4Q26 consensus NT$143.5bn; FY26/27 EPS NT$76.25 / NT$125.11 | Low-end bull (like CEG/VST); the revenue estimate was right. MS's EPS +22/+18/+19% are revision deltas, not levels, so they are not placed. _Resolved 2026-10-13 via a live bdp; not in estimates.json._ |
+| **CXMT (688825 CH)** | MS PT Rmb88 unchanged (bear Rmb70 → Rmb40) | — | BBG median PT Rmb82.9 (+6%; high Rmb129); px Rmb46.99; FY26/27 EPS Rmb2.96 / Rmb4.95 | In line on PT. MS's EPS +28/+29% are revision deltas, not levels. _Resolved 2026-10-13 via a live bdp; not in estimates.json._ |
 
 ## PENDING
 
-- **TSM PT (Fubon NT$3,500):** the snapshot carries only the ADR panel ($574.37); the Taiwan-listing panel needs a live pull.
-- **Nanya (2408.TW):** MS OW PT NT$600 (from NT$580); 3Q26 revenue NT$134bn (MS says +8% vs its consensus); EPS +22% / +18% / +19%. Not in the snapshot.
-- **CXMT (688825.SS):** MS PT Rmb88 unchanged (bear Rmb70 → Rmb40); EPS +28% / +29%. Not in the snapshot. MS prior multiple is 18.4x BVPS.
-- **ZS:** investor day FY31 ARR >$8bn base / $10bn scenario. Not in the snapshot.
+- **ZS:** investor day FY31 ARR >$8bn base / $10bn scenario. No BBG comparison possible: the consensus horizon ends at 3FY (FY28), and there is no ARR field. Context: BBG median PT $238.7 vs px $231.45 (2026-10-13).
 - **AAPL:** SIG iPhone builds 3Q26 / 4Q26 ~60M / 74M and foldable 1M / 6-8M. There is no quarterly unit consensus; the house is 267M FY26E (FY-Sep), so the bases differ.
 - **AMZN / GOOG segments:** AWS / Ads 2027E (Susquehanna), BofA 3Q26 Search +14% vs "Street 15%", Wells TPU revenue. There are no segment fields in the snapshot.
 - **Samsung HBM4E 12-Hi qualification:** qualitative; no estimate impact quantified.
 - **MRVL:** MS EW, no PT printed. **AMD/INTC CPU TAM** (Citi $300bn all-CPU 2030): different basis from the server-CPU TAMs, not reconciled.
+
+_The items still listed have no BBG field (segments, units, qualitative, out-of-horizon). They are not Terminal-offline gaps._
 
 ## Notes / basis traps
 
@@ -76,3 +78,5 @@ _Ranked by materiality (row order)._
 - **LITE house ~$60 FY28** is a 09-16 debrief conclusion (internal, derived), not an official-model output. The official model only reaches CY27 ($30.02).
 - **ANET and DELL implied EPS** are PT ÷ multiple (my arithmetic), not printed estimates.
 - FundaAI CRWD/PANW/NET security revenue figures are illustrative scenarios and were not reconciled vs consensus.
+
+_BBG column resolved 2026-10-13 — estimates.json asof 2026-10-13._

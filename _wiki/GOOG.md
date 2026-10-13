@@ -3,17 +3,17 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\GOOG` (filings + transcripts) · `_equity_calls` · `_briefings\by-ticker\GOOG.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Snapshot — Capstone official model + BBG · asof 2026-10-12 · USD
+### 📊 Snapshot — Capstone official model + BBG · asof 2026-10-13 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | **$505.0bn** | **$641.0bn** |
-| Gross profit | $343.9bn | $435.9bn |
-| Gross margin | 68.1% | 68.0% |
-| EBITDA | $229.5bn | $303.8bn |
+| Gross profit | $342.9bn | $435.2bn |
+| Gross margin | 67.9% | 67.9% |
+| EBITDA | $229.6bn | $304.7bn |
 | EPS | **$11.80** | **$16.20** |
-| Capex | $201.3bn | $316.3bn |
-| OCF (≈EBITDA) | $229.5bn | $303.8bn |
+| Capex | $201.3bn | $317.0bn |
+| OCF (≈EBITDA) | $229.6bn | $304.7bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 _**Bold** = Capstone official model; plain = BBG consensus._
