@@ -571,6 +571,50 @@ t7 = table(["Month", "All companies $", "Top 10% $", "Top 1% $", "p90 company $"
 CHARTS["idx"] = {"dates": [lab(d) for d in SPD], "unit": "$", "pre": True,
                  "rows": [{"n": n, "c": c, "v": SP["cohorts"][k]["level"]} for k, n, c in COH], "foot": None}
 
+# growth by percentile: y/y chart + open table (the three Ramp cohorts + the p90 / p99 company + the spend-weighted mean)
+GROW = [("median", "All companies (median)", SPMED, "var(--s1)"),
+        ("top10", "Top 10% cohort", SP["cohorts"]["top10"]["level"], "var(--s2)"),
+        ("top1", "Top 1% cohort", SP["cohorts"]["top1"]["level"], "var(--s3)"),
+        ("p90", "p90 company", SX["p90"], "var(--o2)"),
+        ("p99", "p99 company", SX["p99"], "var(--o4)"),
+        ("wt", "Spend-weighted mean (winsorised)", SX["winsorized_weighted"], "var(--s4)")]
+
+
+def yoy_series(lv):
+    return [None if (i < 12 or not lv[i - 12]) else (lv[i] / lv[i - 12] - 1) * 100 for i in range(len(lv))]
+
+
+def cmp_series(lv, w):
+    return [None if (i < w or not lv[i - w]) else ((lv[i] / lv[i - w]) ** (1.0 / w) - 1) * 100 for i in range(len(lv))]
+
+
+G_YOY = dict((k, yoy_series(lv)) for k, _, lv, _ in GROW)
+gy_max = nice_max(max(v for k in G_YOY for v in G_YOY[k] if v is not None), steps=(50, 100, 150, 200))[0]
+AXG = Ax(SPD, h=330, pt=18, pb=34)
+ch_g = (AXG.yaxis(gy_max, gy_max / 4, fmt="%g%%")
+        + AXG.lines([G_YOY[k] for k, _, _, _ in GROW], [c for _, _, _, c in GROW], [n for _, n, _, _ in GROW], gy_max, fmt=lambda v: "%+.0f%%" % v)
+        + AXG.annot(SPD.index(FLIP_M), "%s — the ladder flip" % lab(FLIP_M), dy=20) + AXG.ticks(3))
+ch_g = AXG.svg("yoy", ch_g, "Year-on-year growth of AI spend per employee by cohort")
+CHARTS["yoy"] = {"dates": [lab(d) for d in SPD], "unit": "%",
+                 "rows": [{"n": n, "c": c, "v": [None if v is None else round(v, 1) for v in G_YOY[k]]} for k, n, _, c in GROW], "foot": None}
+g_rows = []
+for k, n, lv, c in GROW:
+    c3, c12 = cmp_series(lv, 3), cmp_series(lv, 12)
+    mom = (lv[-1] / lv[-2] - 1) * 100 if lv[-2] else None
+    eras = []
+    for e in SP["eras"]:   # a..b-1 inclusive window, base = month a-1 (same convention as series.json)
+        a, b = e["a"], e["b"]
+        eras.append(((lv[b - 1] / lv[a - 1]) ** (1.0 / (b - a)) - 1) * 100 if (a >= 1 and lv[a - 1]) else None)
+    g_rows.append([('<span style="display:inline-flex;align-items:center;gap:7px"><i style="background:%s;width:10px;height:10px;border-radius:2px;display:inline-block"></i>%s</span>' % (c, esc(n)), ""),
+                   (money(lv[-1]), "r hl"), ("%+.1f%%" % mom if mom is not None else "—", "r"),
+                   ("%+.2f" % c3[-1] if c3[-1] is not None else "—", "r"), ("%+.2f" % c12[-1] if c12[-1] is not None else "—", "r"),
+                   ("%+.0f%%" % G_YOY[k][-1] if G_YOY[k][-1] is not None else "—", "r hl")]
+                  + [("%+.2f" % v if v is not None else "—", "r") for v in eras]
+                  + [("%.1fx" % (lv[-1] / lv[0]), "r")])
+t_g = ('<div class="tw tw-open"><table class="num"><thead><tr><th>Cohort / percentile</th><th class="r">%s</th><th class="r">m/m</th><th class="r">3-mo compound, %%/mo</th><th class="r">12-mo compound, %%/mo</th><th class="r">y/y</th>%s<th class="r">%s → %s</th></tr></thead><tbody>%s</tbody></table></div>'
+       % (lab(SPD[-1]), "".join('<th class="r">%s, %%/mo</th>' % esc(e["label"]) for e in SP["eras"]), lab(SPD[0]), lab(SPD[-1]),
+          "".join("<tr>" + "".join('<td class="%s">%s</td>' % (cl, v) for v, cl in r) + "</tr>" for r in g_rows)))
+
 # restatement table (latest common month, per cohort)
 rs_sp = (RS.get("spend_per_employee") or [None])[-1]
 rs_ms = (RS.get("model_share") or [None])[-1]
@@ -967,10 +1011,17 @@ def build(artifact=False):
     p.append('<section id="spend"><h2>6 \u00b7 The spend series in full<span class="k">three cohorts, indexed, %s = 100</span></h2>'
              '<p class="sub">Levels differ by ~%dx across cohorts (%s vs %s vs %s in %s), so the chart indexes each to its own %s base \u2014 never two y-axes. '
              'Cohorts are <b>re-cut every month</b>, so part of each step is re-ranking rather than same-company growth, which is why the top-1%% cohort is the noisiest line and the least safe to '
-             'quote month-to-month. The table also carries the p90 / p99 company and Ramp\u2019s spend-weighted (winsorised) mean, which is the series closest to \u201cdollars\u201d: %s per employee in %s.</p>%s%s%s%s</section>'
+             'quote month-to-month. The table also carries the p90 / p99 company and Ramp\u2019s spend-weighted (winsorised) mean, which is the series closest to \u201cdollars\u201d: %s per employee in %s.</p>%s%s%s'
+             '<h3>Growth by cohort and percentile<span class="k"> y/y, %% \u2014 and the compound rates behind it</span></h3>'
+             '<p class="sub">Year-on-year growth of each series (chart) and, in the table, the latest month-on-month step, trailing 3- and 12-month compound rates, the three 12-month regimes and the full-period multiple. '
+             'The top cohorts are re-cut monthly, so their y/y mixes re-ranking with same-company growth; the p90 / p99 company and the winsorised mean are the cleaner percentile reads. '
+             'Latest: median <b>%+.0f%% y/y</b>, top decile <b>%+.0f%%</b>, top 1%% <b>%+.0f%%</b>; regimes on the median <b>%s</b> \u2192 <b>%s</b> \u2192 <b>%s %%/mo</b>.</p>%s%s%s%s</section>'
              % (lab(SPD[0]), int(round(SP["cohorts"]["top1"]["level"][-1] / SPMED[-1])), money(SPMED[-1]), money(SP["cohorts"]["top10"]["level"][-1]), money(SP["cohorts"]["top1"]["level"][-1], 0), lab(SPD[-1]), lab(SPD[0]),
                 money(SX["winsorized_weighted"][-1]), lab(SPD[-1]),
-                ch7, legend([c for _, _, c in COH], [n for _, n, _ in COH], [money(SPMED[-1]), money(SP["cohorts"]["top10"]["level"][-1]), money(SP["cohorts"]["top1"]["level"][-1], 0)]), t7, rs_txt))
+                ch7, legend([c for _, _, c in COH], [n for _, n, _ in COH], [money(SPMED[-1]), money(SP["cohorts"]["top10"]["level"][-1]), money(SP["cohorts"]["top1"]["level"][-1], 0)]), t7,
+                G_YOY["median"][-1], G_YOY["top10"][-1], G_YOY["top1"][-1],
+                "%+.2f" % SP["cohorts"]["median"]["eras"][0]["compound_pct_mo"], "%+.2f" % SP["cohorts"]["median"]["eras"][1]["compound_pct_mo"], "%+.2f" % SP["cohorts"]["median"]["eras"][-1]["compound_pct_mo"],
+                ch_g, legend([c for _, _, _, c in GROW], [n for _, n, _, _ in GROW]), t_g, rs_txt))
 
     # 7 ---------------------------------------------------------------- segments
     big = [l for l in fte_labels if l == "Large"]
