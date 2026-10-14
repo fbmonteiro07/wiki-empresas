@@ -6,7 +6,7 @@
 >
 > 🔎 **Full-corpus search** (reports + calls + briefings + transcripts + Stratechery + DAMNANG, not just wiki pages): `py "_wiki/_tools/search.py" <query>` (index: `py "_wiki/_tools/build_search_index.py"`).
 
-_Generated 2026-10-13 by `_tools/build_index.py` from [`_data/index_meta.json`](_data/index_meta.json) (hand-edit the json, not this file) · **109 companies + 2 private AI labs (111 pages)** · one page per ticker synthesizing all co-located sources in `E:\Wiki Felipe`: filings (10-K/10-Q/20-F) + earnings transcripts + investor-day decks + thematic equity calls (`_equity_calls`) + per-ticker roll-up of the email briefings (`_briefings/by-ticker`) + BBG consensus & street-high estimates (`_data/estimates.json`)._
+_Generated 2026-10-14 by `_tools/build_index.py` from [`_data/index_meta.json`](_data/index_meta.json) (hand-edit the json, not this file) · **109 companies + 2 private AI labs (111 pages)** · one page per ticker synthesizing all co-located sources in `E:\Wiki Felipe`: filings (10-K/10-Q/20-F) + earnings transcripts + investor-day decks + thematic equity calls (`_equity_calls`) + per-ticker roll-up of the email briefings (`_briefings/by-ticker`) + BBG consensus & street-high estimates (`_data/estimates.json`)._
 
 Each page follows the [_TEMPLATE](_TEMPLATE.md): Snapshot · Current state (latest quarter) · Debate (bull/bear + where the sell-side stands, attributed + dated) · Catalysts · Risks · Consensus estimates (BBG) · Sources (links). Archive master index: [../INDEX.md](../INDEX.md). Thematic pages: [themes/00_THEMES.md](themes/00_THEMES.md).
 
@@ -157,7 +157,7 @@ Each page follows the [_TEMPLATE](_TEMPLATE.md): Snapshot · Current state (late
 | DELL | [DELL](DELL.md) | AI-server integration winner ($53B backlog, $60B FY27 guide); bear = thin AI-server margins + pull-forward. |
 | HPE | [HPE](HPE.md) | Multi-segment beat + Juniper synergies; durability debate (GS bull $79 vs MS/Bernstein EW). |
 | SMCI | [SMCI](SMCI.md) | Fastest NVIDIA rack integrator + DLC leader; thin assembly margin + governance overhang (Hold). |
-| CRWV | [CRWV](CRWV.md) | Highest-visibility GPU neocloud ($99B backlog) but ~$25B high-coupon debt + customer concentration. |
+| CRWV | [CRWV](CRWV.md) | Highest-visibility GPU neocloud ($104B backlog, 1.5 GW active, 8 GW 2030 target) but $35.6B principal at 9-11% + customer concentration; house DCF $59 @10% hinges on rev/GW and GPU replacement. |
 | SANM | [SANM](SANM.md) | EMS re-rating via ZT Systems AMD-rack integration (FY27 $16B+, ~2x FY25); bear = ZT margin/pull-forward (JPM/BofA/SIG all Neutral). |
 | NBIS | [NBIS](NBIS.md) | Highest-octane listed neocloud (ARR→$7-9B, NVDA stake); capex burn + circular-financing scrutiny. |
 | NSCALE | [Nscale](NSCALE.md) | UK GPU neocloud, S-1 filed 2026-09-18 (NYSE: NSCL): $103.4bn TCV / 5.7-yr WAL / 1.37 GW IT ⇒ ~$13bn rev per IT-GW/yr (Anthropic Monarch ~$16bn); Microsoft $43.8bn + Anthropic $44.6bn = 86% of book; Anthropic financing not yet committed. No BBG consensus (pre-IPO). |

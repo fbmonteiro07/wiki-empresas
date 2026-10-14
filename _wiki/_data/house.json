@@ -1,5 +1,5 @@
 {
- "asof": "2026-10-13",
+ "asof": "2026-10-14",
  "note": "House (Capstone) model figures scraped from each page's 'Capstone estimates (house model)' table. rev/fcf in the page's stated unit (usually $bn); eps absolute; gm/opm in %.",
  "companies": {
   "AAPL": {
@@ -261,6 +261,148 @@
    ],
    "source": "**Capstone initiation of coverage, 2026-09-01 (Felipe Monteiro) — NEUTRAL, 12-month PT $285 (25x CY27E EPS)**. Model: session scratchpad `cohr"
   },
+  "CRWV": {
+   "years": {
+    "2026": {
+     "rev": 12.8,
+     "fcf": -26.4,
+     "eps": -3.27
+    },
+    "2027": {
+     "rev": 26.7,
+     "fcf": -29.6,
+     "eps": -1.83
+    },
+    "2028": {
+     "rev": 44.69,
+     "fcf": -28.3,
+     "eps": 0.54
+    },
+    "2029": {
+     "rev": 65.28,
+     "fcf": -21.9,
+     "eps": 4.1
+    },
+    "2030": {
+     "rev": 87.42,
+     "fcf": -19.7,
+     "eps": 6.89
+    }
+   },
+   "raw_header": [
+    "",
+    "CY24A",
+    "CY25A",
+    "CY26E",
+    "CY27E",
+    "CY28E",
+    "CY29E",
+    "CY30E"
+   ],
+   "raw_rows": [
+    [
+     "Revenue ($bn)",
+     "1.92",
+     "5.13",
+     "12.80",
+     "26.70",
+     "44.69",
+     "65.28",
+     "87.42"
+    ],
+    [
+     "Active power, year-end (GW IT load)",
+     "0.36",
+     "0.85",
+     "1.90",
+     "3.20",
+     "4.70",
+     "6.30",
+     "8.00"
+    ],
+    [
+     "Revenue per billable GW ($bn/GW-yr)",
+     "13.4",
+     "10.6",
+     "11.4",
+     "12.0",
+     "12.5",
+     "12.8",
+     "13.0"
+    ],
+    [
+     "Adj. EBITDA ($bn)",
+     "1.23",
+     "3.10",
+     "7.36",
+     "16.55",
+     "28.60",
+     "41.78",
+     "55.08"
+    ],
+    [
+     "Adj. EBITDA margin",
+     "64.0%",
+     "60.4%",
+     "57.5%",
+     "62.0%",
+     "64.0%",
+     "64.0%",
+     "63.0%"
+    ],
+    [
+     "Adj. operating income (AOI, $bn)",
+     "0.36",
+     "0.64",
+     "1.03",
+     "4.31",
+     "8.85",
+     "14.28",
+     "19.33"
+    ],
+    [
+     "Capex ($bn)",
+     "8.7",
+     "10.3",
+     "37.0",
+     "50.9",
+     "60.8",
+     "67.0",
+     "74.9"
+    ],
+    [
+     "FCFF ($bn)",
+     "n/a",
+     "n/a",
+     "-26.4",
+     "-29.6",
+     "-28.3",
+     "-21.9",
+     "-19.7"
+    ],
+    [
+     "Net debt, year-end ($bn, memo roll, no equity after 2026)",
+     "n/a",
+     "18.5",
+     "45.4",
+     "80.4",
+     "117.2",
+     "150.6",
+     "184.7"
+    ],
+    [
+     "EPS ($) — CY24-25 GAAP diluted (10-K); CY26+ adjusted, ex-SBC (company/consensus basis), 603m diluted shares",
+     "-4.30",
+     "-2.81",
+     "-3.27",
+     "-1.83",
+     "0.54",
+     "4.10",
+     "6.89"
+    ]
+   ],
+   "source": "**Capstone official model — `P:\\Felipe Monteiro\\US Equities\\Modelos oficiais\\Template DCF CRWV.xlsx` (2026-10-14, Felipe Monteiro)**, first CRWV model in the official `Template DCF <TICKER>` family (same sheets and conventions as AMD/AVGO/ADVANTEST/TER, plus `History` and `Debt` sheets; labels in English). Build and verification pipeline in `"
+  },
   "GOOG": {
    "years": {
     "2025": {
@@ -273,13 +415,13 @@
      "rev": 505.0,
      "eps": 11.8,
      "opm": 36.0,
-     "fcf": 3.0
+     "fcf": -3.0
     },
     "2027": {
      "rev": 641.0,
      "eps": 16.2,
      "opm": 37.0,
-     "fcf": 55.0
+     "fcf": -55.0
     }
    },
    "raw_header": [
@@ -399,12 +541,12 @@
     "2026": {
      "rev": 257.0,
      "eps": 32.72,
-     "fcf": 17.0
+     "fcf": -17.0
     },
     "2027": {
      "rev": 313.0,
      "eps": 38.24,
-     "fcf": 23.0
+     "fcf": -23.0
     }
    },
    "raw_header": [

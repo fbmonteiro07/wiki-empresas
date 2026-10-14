@@ -583,6 +583,15 @@
             "ANTHROPIC.md",
             "OPENAI.md"
           ]
+        },
+        {
+          "value": "COREWEAVE'S OWN REALISED REVENUE PER BILLABLE GW, FROM THE FILINGS (Capstone official model, Template DCF CRWV.xlsx): quarterly revenue x4 ÷ average active IT-load power of the PRIOR quarter = ~$12.4bn (2Q25) → 12.3 (3Q25) → 11.9 (4Q25) → 11.5 (1Q26) → 11.1 (2Q26); FY26 guide midpoint $12.8bn ÷ 1,124 MW billable = ~$11.4bn/GW. The installed book's blended rate FELL ~10% over four quarters as the fleet scaled (legacy MSFT/OpenAI contracts). Model base path: 12.0 (2027) → 13.0 (2030) → 14.0 (2033 flat), i.e. BELOW management's mid-teens floor for new long-dated contracts; break-even for a new GW at $40bn build, 62% EBITDA margin, 6-yr replacement and 10% WACC = ~$15.0bn/GW-yr.",
+          "source": "Capstone official model (Template DCF CRWV.xlsx, Histórico sheet) built on 10-K FY25, 10-Qs 1Q25-2Q26 and the 2Q26 call guide; lag basis per UBS 09-22",
+          "date": "2026-10-14",
+          "scope": "REALISED, INSTALLED-BOOK AVERAGE in US$bn per CRITICAL-IT-LOAD GW per year (CoreWeave reports IT load, not facility power) — a different quantity from the forward marks (mgmt floor 15-16 for new long-dated; Nscale 13.2 blended / 16.2 VR; short-dated ~40). 1Q25 active power ~420 MW is an estimate (3Q25 call: 590 MW = +120 q/q); 2Q26 = 2,575 x 4 / 925 = 11.1 = UBS's figure. Do not net against build cost ($33-40bn/GW) or D&A per GW ($4.1-5.0bn).",
+          "cited_in": [
+            "CRWV.md"
+          ]
         }
       ],
       "status": "live",

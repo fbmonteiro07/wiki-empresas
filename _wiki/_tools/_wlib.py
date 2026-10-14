@@ -86,12 +86,14 @@ def num(cell):
     if cell is None:
         return None
     s = cell.replace("&nbsp;", " ").replace("*", "").replace("`", "").strip()
-    s = s.lstrip("—-– ").strip()
+    neg = bool(re.match(r"^[-−]\s*(?=[$€¥£]?\s*[0-9.])", s))   # leading minus right before a number = negative (2026-10-14: CRWV house EPS)
+    s = s.lstrip("—-–− ").strip()
     m = _NUM.search(s)
     if not m:
         return None
     try:
-        return float(m.group(1).replace(",", ""))
+        v = float(m.group(1).replace(",", ""))
+        return -v if neg else v
     except ValueError:
         return None
 
