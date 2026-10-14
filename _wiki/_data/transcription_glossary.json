@@ -1,6 +1,6 @@
 {
  "_about": "Hand-edited ledger of machine-transcription garbles (Notion AI, Bloomberg ASR, auto-translation) seen in the archive, with the correct reading. Used by E:\\.claude\\scripts\\transcript_qa.py (source-file scan, page-diff scan) and by ingest_notion_meetings.py (writes a 'Transcription QA' block into every archived Notion file). Keys are matched with word boundaries, case-sensitive unless 'ci' is true. 'keep_when' = regex contexts (same line, ~80 chars around the hit) where the token is legitimate and must NOT be flagged. Add an entry the first time a garble is caught; never delete one. Standing rule (Felipe, 2026-09-28): ALWAYS double-check transcript content — acronyms, names, units, numbers — before it travels to a page.",
- "_updated": "2026-10-13",
+ "_updated": "2026-10-14",
  "terms": {
   "Smolik": {
    "correct": "Shmulik (Mark Shmulik, Bernstein US Internet)",
@@ -893,12 +893,135 @@
     "(?i)catch (our|my|your|their) breath|out of breath|take a breath|deep breath|hold (our|my|your) breath"
    ],
    "first_seen": "2026-10-13 (Morgan Stanley midterm-elections client call, undated, staged 2026-10-13)"
+  },
+  "al-Saheed": {
+   "correct": "El-Sayed (Abdul El-Sayed, Michigan Democratic Senate candidate 2026)",
+   "domain": "names",
+   "rule": "'Abdullah al-Saheed' / 'El Saeed' = Abdul El-Sayed; the Notion AI summary rendered it 'Abdullah al-Saeed' and conflated it with the Maine (Susan Collins) race.",
+   "ci": true,
+   "first_seen": "2026-10-14 (Alec Phillips / Goldman Sachs meeting at the Capstone office, Notion transcript)"
+  },
+  "El Saeed": {
+   "correct": "El-Sayed (Abdul El-Sayed, Michigan Democratic Senate candidate 2026)",
+   "domain": "names",
+   "rule": "see 'al-Saheed'",
+   "ci": true,
+   "first_seen": "2026-10-14 (Alec Phillips / Goldman Sachs meeting at the Capstone office, Notion transcript)"
+  },
+  "al-Saeed": {
+   "correct": "El-Sayed (Abdul El-Sayed, Michigan Democratic Senate candidate 2026)",
+   "domain": "names",
+   "rule": "Notion AI summary spelling; see 'al-Saheed'",
+   "ci": true,
+   "first_seen": "2026-10-14 (Alec Phillips / Goldman Sachs meeting at the Capstone office, Notion transcript)"
+  },
+  "Hegsath": {
+   "correct": "Hegseth (Pete Hegseth, US Secretary of Defense)",
+   "domain": "names",
+   "rule": "ASR spellings 'Hegsath', 'Hegstaff', 'Hexeth' = Hegseth.",
+   "first_seen": "2026-10-14 (Alec Phillips / Goldman Sachs meeting at the Capstone office, Notion transcript)"
+  },
+  "Hegstaff": {
+   "correct": "Hegseth (Pete Hegseth, US Secretary of Defense)",
+   "domain": "names",
+   "rule": "see 'Hegsath'",
+   "first_seen": "2026-10-14 (Alec Phillips / Goldman Sachs meeting at the Capstone office, Notion transcript)"
+  },
+  "Hexeth": {
+   "correct": "Hegseth (Pete Hegseth, US Secretary of Defense)",
+   "domain": "names",
+   "rule": "see 'Hegsath'",
+   "first_seen": "2026-10-14 (Alec Phillips / Goldman Sachs meeting at the Capstone office, Notion transcript)"
+  },
+  "Ludnick": {
+   "correct": "Lutnick (Howard Lutnick, US Secretary of Commerce)",
+   "domain": "names",
+   "rule": "ASR spellings 'Ludnick', 'Lundinck', 'Lutnik' = Lutnick.",
+   "first_seen": "2026-10-14 (Alec Phillips / Goldman Sachs meeting at the Capstone office, Notion transcript)"
+  },
+  "Lundinck": {
+   "correct": "Lutnick (Howard Lutnick, US Secretary of Commerce)",
+   "domain": "names",
+   "rule": "see 'Ludnick'",
+   "first_seen": "2026-10-14 (Alec Phillips / Goldman Sachs meeting at the Capstone office, Notion transcript)"
+  },
+  "Lutnik": {
+   "correct": "Lutnick (Howard Lutnick, US Secretary of Commerce)",
+   "domain": "names",
+   "rule": "see 'Ludnick' (also appears in the Notion AI summary)",
+   "first_seen": "2026-10-14 (Alec Phillips / Goldman Sachs meeting at the Capstone office, Notion transcript)"
+  },
+  "Besant": {
+   "correct": "Bessent (Scott Bessent, US Treasury Secretary)",
+   "domain": "names",
+   "rule": "ASR homophone in macro/politics calls.",
+   "keep_when": [
+    "Annie Besant"
+   ],
+   "first_seen": "2026-10-14 (Alec Phillips / Goldman Sachs meeting at the Capstone office, Notion transcript)"
+  },
+  "Bashir": {
+   "correct": "Beshear (Andy Beshear, Governor of Kentucky)",
+   "domain": "names",
+   "rule": "'Andy Beshear from Kentucky' is transcribed correctly once, then 'Bashir' afterwards.",
+   "keep_when": [
+    "(?i)al-Bashir|Omar|Bashar"
+   ],
+   "first_seen": "2026-10-14 (Alec Phillips / Goldman Sachs meeting at the Capstone office, Notion transcript)"
+  },
+  "Besson": {
+   "correct": "Bessent (Scott Bessent, US Treasury Secretary)",
+   "domain": "names",
+   "rule": "see 'Besant'",
+   "keep_when": [
+    "Luc Besson"
+   ],
+   "first_seen": "2026-10-14 (Alec Phillips / Goldman Sachs meeting at the Capstone office, Notion transcript)"
+  },
+  "Ben Snyder": {
+   "correct": "Ben Snider (Goldman Sachs US equity strategist)",
+   "domain": "names",
+   "rule": "Spoken by the GS economist about his colleague; homophone.",
+   "first_seen": "2026-10-14 (Alec Phillips / Goldman Sachs meeting at the Capstone office, Notion transcript)"
+  },
+  "bookcase": {
+   "correct": "base case",
+   "domain": "terms",
+   "rule": "'the bookcase is' = the base case is (macro/politics calls).",
+   "ci": true,
+   "keep_when": [
+    "(?i)shelf|library|furniture"
+   ],
+   "first_seen": "2026-10-14 (Alec Phillips / Goldman Sachs meeting at the Capstone office, Notion transcript)"
+  },
+  "bull sweep": {
+   "correct": "blue sweep (Democratic sweep of Congress)",
+   "domain": "terms",
+   "rule": "ASR homophone in election discussions.",
+   "ci": true,
+   "first_seen": "2026-10-14 (Alec Phillips / Goldman Sachs meeting at the Capstone office, Notion transcript)"
+  },
+  "Hexet": {
+   "correct": "Hegseth (Pete Hegseth, US Secretary of Defense)",
+   "domain": "names",
+   "rule": "see 'Hegsath' (Camp David passage)",
+   "first_seen": "2026-10-14 (Alec Phillips / Goldman Sachs meeting at the Capstone office, Notion transcript)"
+  },
+  "Gantz": {
+   "correct": "Vance (J.D. Vance, US Vice President) when preceded by 'J.P.'",
+   "domain": "names",
+   "rule": "'let J.P. Gantz lose' = let JD Vance lose; the garble splits across a paragraph break in the archive, so match on the surname.",
+   "keep_when": [
+    "(?i)Benny|Israel|Knesset"
+   ],
+   "first_seen": "2026-10-14 (Alec Phillips / Goldman Sachs meeting at the Capstone office, Notion transcript)"
   }
  },
  "summary_traps": [
   "The Notion AI summary inherits every transcript garble AND adds its own: it expanded 'MPO' to 'Module-Pluggable Optics' (2026-09-28), moved a guidance year (fiscal 2025 vs 2028, LITE 2026-09-18), invented a '<15% of industry TAM' sentence (2026-09-18), rendered 'funding short' as 'valuation short' (2026-09-18), hung Meta's $200-300bn figure on AppLovin (2026-09-22), credited the HOST's numbers to the guest (BofA/Bajarin 2026-09-24), and computed its own '~15% CAGR' (Scala 2026-09-24).",
   "Speakers are unlabeled: questions (Capstone/other investors) and answers run together; the host's arithmetic assented with a 'yeah' is not the guest's number.",
-  "2026-10-02: Archera/Khanna call - the summary hangs the spoken commitment-growth marks on named clouds (Google 48.5%, AWS 38%, Azure 39.5%); the transcript speaks them as running rates (~45%->48.5% for one cloud, 36.5%->39.5% for another, consumption ~41%) with the cloud named in the surrounding sentence - map each figure to its cloud IN the transcript, never from the summary; the '300-400% mainframe migration volume' is ONE reseller PARTNER's volume (per Khanna), not Archera's total, and '$1 million minimum MAC/PPA' is spoken as a mid-quarter hyperscaler rule for GPU access. AVGO/Arcuri recap - the summary credits Arcuri's relayed statements to Broadcom management and adds 'Jalapeno', 'Sunfish v5', '440s and 430s' that grep does not find in the transcript."
+  "2026-10-02: Archera/Khanna call - the summary hangs the spoken commitment-growth marks on named clouds (Google 48.5%, AWS 38%, Azure 39.5%); the transcript speaks them as running rates (~45%->48.5% for one cloud, 36.5%->39.5% for another, consumption ~41%) with the cloud named in the surrounding sentence - map each figure to its cloud IN the transcript, never from the summary; the '300-400% mainframe migration volume' is ONE reseller PARTNER's volume (per Khanna), not Archera's total, and '$1 million minimum MAC/PPA' is spoken as a mid-quarter hyperscaler rule for GPU access. AVGO/Arcuri recap - the summary credits Arcuri's relayed statements to Broadcom management and adds 'Jalapeno', 'Sunfish v5', '440s and 430s' that grep does not find in the transcript.",
+  "2026-10-14 (GS Alec Phillips meeting): the summary wrote 'Michigan Senate race (Abdullah al-Saeed vs. Susan Collins-equivalent dynamic)' - conflating the Michigan (El-Sayed) and Maine (Collins) races - and 'expected to accelerate in 2025' for data-center deals pushed to January (next year = 2027). Check polling-error coefficients ('37 bp', '0.7') against the transcript before use."
  ],
  "Fenyman": {
   "correct": "Feynman (NVIDIA 2028 GPU generation)",
