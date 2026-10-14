@@ -7,6 +7,14 @@ _Wiki · generated 2026-09-10 · cross-company theme · sources: Morgan Stanley 
 ---
 
 
+## 🆕 2026-10-13 (/run-inbox) — **THE LAB-AS-VENDOR LEG ADDS AN M&A DATAPOINT: [[OPENAI]] IS IN EARLY TALKS TO BUY TRAIL OF BITS (OPEN-SOURCE VULNERABILITY FINDING AND FIXING), AFTER HIRING AN EX-WIZ EXECUTIVE AS CRO**
+
+_Source: **The Information · Valida Pau / Amir Efrati**, "OpenAI in Early Talks to Buy Security Startup Trail of Bits", **2026-10-13** ([article](../../relat%C3%B3rios%20bons/OpenAI_in_Early_Talks_to_Buy_Security_Startup_Trail_of_Bits_The_Information.html)). ⚠️ Press exclusive sourced to "people familiar with the matter". No company confirmation, no price, and the talks *"could fall apart"*._
+
+- **The deal:** OpenAI, *"trying to develop a substantial cybersecurity business"*, is in early talks to buy Trail of Bits. The size *"couldn't be learned"*; OpenAI has sometimes paid in the low hundreds of millions of dollars in stock for small startups, sometimes less. Trail of Bits was founded in 2012 and has **>40 employees, mostly security engineers**. Since June it has run the **"Patch the Planet"** open-source patching initiative with OpenAI on Codex tools, including cyber-specialised models (The Information, 2026-10-13).
+- **The competitive framing the article supplies:** OpenAI and [[ANTHROPIC]] *"have tried to one-up each other"* this year on specialised vulnerability-finding AI. Both, *"in coordination with the White House"*, let large businesses use their most advanced models to patch their own software while neutering those capabilities in public releases. Security vendors such as [[PANW]] use OpenAI and Anthropic models in their products. OpenAI recently hired **Dali Rajic, formerly of Wiz** (which the article describes as Google-owned), as **chief revenue officer**. The article also cites [[CRWD]] as saying last week that the perpetrator of a recent hack of South Korean financial institutions used an open-source Chinese AI agent and Chinese LLMs (The Information, 2026-10-13).
+- ➤ **Read for this page:** it is a small services/research team, not a product company with ARR, so it adds no revenue to the lab-as-vendor debate. It is directional evidence that OpenAI is building its own security capability (people plus a CRO from a cloud-security vendor) rather than only supplying models to [[CRWD]]/[[PANW]]. Treat it as a signpost until a deal is announced.
+
 ## 🆕🔴🔴 2026-10-12 (/run-inbox 23h) — **THE PLATFORM-CONSOLIDATION THESIS GETS BUYER-SIDE MECHANISM (FUNDAAI'S INTERVIEWS: CUT OVERLAPPING CSPM/VM/LOG CONTRACTS, FUND AI SECURITY); ZSCALER PUTS ITS FIRST DOLLAR ON SECURITY-FOR-AI (~$70M ARR) INSIDE A >$8bn FY31 ARR PLAN; AND SERVICENOW IS PITCHED AS A "SLEEPER" SECURITY NAME. MEANWHILE A BANK SAYS ITS BUDGET IS FLAT FOR TWO YEARS.**
 
 ### (A) FundaAI — "Deep|Cybersecurity: Enterprise AI Security Budgets Are Shifting Toward Large Platforms" (2026-10-05)
@@ -994,6 +1002,7 @@ _Also named, one mention each, and NOT adopted as picks: **Databricks, [[SNOW]] 
 ---
 
 ## Sources
+- 🆕 **Press (The Information):** [Valida Pau / Amir Efrati — "OpenAI in Early Talks to Buy Security Startup Trail of Bits" (2026-10-13)](../../relat%C3%B3rios%20bons/OpenAI_in_Early_Talks_to_Buy_Security_Startup_Trail_of_Bits_The_Information.html): OpenAI cyber M&A talks, Patch the Planet, CRO hire.
 - 🆕 **Independent research (FundaAI, not a broker):** [FundaAI — "Deep|Cybersecurity: Enterprise AI Security Budgets Are Shifting Toward Large Platforms" (2026-10-05)](../../relat%C3%B3rios%20bons/FundaCybersecurity.html) — enterprise-interview budget/consolidation mechanism; illustrative CRWD+PANW+NET sizing ($13.9b → $23.5b, 2026-28).
 - 🆕 **Primary — management (no ZS page):** [Zscaler Investor Day, New York — Bloomberg LIVE transcript, 2026-10-06 (67pp, image-only; ASR-garbled — ARR transcribed as "IRR"/"R", ZPA as "CPA"/"Xpa")](../../relat%C3%B3rios%20bons/ZS_inv_day.html)
 - 🆕 **Capstone internal (relaying UBS):** [Capstone · Fernanda Watkins — "NOW — o ângulo de security" (2026-10-06), relaying UBS · Keirstead FQ3 preview](../../relat%C3%B3rios%20bons/NOW_angulo_security_2026-10-06.html)
@@ -1043,6 +1052,7 @@ _Also named, one mention each, and NOT adopted as picks: **Databricks, [[SNOW]] 
 
 ## Changelog
 
+- 2026-10-13 — run-inbox: 1 dated top block from The Information (Pau / Efrati, 2026-10-13): OpenAI's early talks to buy Trail of Bits, the Patch the Planet partnership and the CRO hire (Dali Rajic, ex-Wiz). It is a signpost on the lab-as-vendor leg, not a closed deal. Nothing superseded.
 - 2026-10-12 — terminology correction (transcription QA): ZS garble legend rewritten as 30-40% [transcribed "3,040%"].
 - 2026-10-12 — content double-check (ZS investor day verifier): every ZS number/name/quote re-read against the page images (pp. 3, 9-11, 41-49, 53-59, 64-65); all confirmed (speakers: Speaker 7 = CEO Jay, Speaker 20 = CFO Kevin, Speaker 19 = CRO Ross Tackett, p. 3 intro). One fix: the p. 48 quote pair was spliced in reverse order ("this is not in guidance… we're not asking you…") — split into two quotes in source order.
 - **2026-10-12 (/run-inbox)** — 1 new dated top block with three sub-sections. (A) FundaAI "Deep|Cybersecurity: Enterprise AI Security Budgets Are Shifting Toward Large Platforms" (2026-10-05): interview-based budget/consolidation mechanism + illustrative CRWD/PANW/NET sizing; third "AI share of cyber budget" basis added to the guard. (B) ZS Investor Day 2026-10-06 (Bloomberg live transcript, image-only, numbers read from page images): FY31 >$8bn ARR base / $10bn scenario, first segment ARR break-out (security-for-AI ~$70M), capex elevated to FY28 on memory prices; 4th AI-security TAM construction added to the 09-17 §(3) table; ZS row in §6 updated. (C) UBS "sleeper" NOW security view via Capstone note. 3 Sources entries. **Nothing superseded** (no prior ZS long-term targets on page).

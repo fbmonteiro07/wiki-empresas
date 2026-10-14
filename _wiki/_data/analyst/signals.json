@@ -1,16 +1,16 @@
 {
   "asof": "2026-10-13",
-  "latest_reconciliation": "reconciliation-2026-10-12-inbox.md",
+  "latest_reconciliation": "reconciliation-2026-10-13-inbox.md",
   "book": {
     "asof": "2026-07-01",
     "seed": true,
     "positions": 8
   },
   "stats": {
-    "signals": 62,
-    "active": 62,
+    "signals": 63,
+    "active": 63,
     "high": 3,
-    "belief_changes": 3,
+    "belief_changes": 4,
     "focus_names": 43
   },
   "focus": [
@@ -56,6 +56,21 @@
         "NVDA — 2026-10-20: 2026-10-20 to 10-22: NVIDIA GTC Berlin (JPM US Market Intelligence calendar, 09-29/09-30);…",
         "NVDA — 2026-11-17: CLOSED 2026-09-10 — THE GS COMMUNACOPIA FIRESIDE HAPPENED. OUTCOME: Jensen reaffirmed the…",
         "NVDA — 2026-11-23: NVDA investor call (IR) (Rothschild & Co Redburn TMT sales · Rowan Adley, 2026-09-28).…"
+      ]
+    },
+    {
+      "ticker": "MU",
+      "focus_score": 66,
+      "in_book": false,
+      "signal_count": 3,
+      "high_count": 0,
+      "sector": "AI — Semis & Compute",
+      "thesis": "Pure-play on AI memory intensity (HBM sold-out CY26); debate = peak earnings vs run-rate.",
+      "next_catalyst": "2026-12-09",
+      "why": [
+        "MU — derived thesis/debate state changed since the prior daily snapshot",
+        "MU / SKHYNIX (memory price path) — Fubon's DRAM contract price falls 16% from the 2Q27 peak while Micron says supply stays constrained through CY28",
+        "MU — FY27 consensus is post-print on the quarter but not on the year; capex consensus sits below the implied floor"
       ]
     },
     {
@@ -343,20 +358,6 @@
         "COHR — house Neutral $285 is the Street's second-lowest PT; Bernstein OP $350 sits below the consensus median",
         "LITE / COHR (optics TAM) — Bernstein's transceiver market is 2.3x Goldman's for 2028; no \"2028 pause\"",
         "COHR — 2026-11-12: 2026-11-12 → 11-20 — COHR Asia NDR with Jefferies (Blayne Curtis) (Jefferies trading desk…"
-      ]
-    },
-    {
-      "ticker": "MU",
-      "focus_score": 37,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "AI — Semis & Compute",
-      "thesis": "Pure-play on AI memory intensity (HBM sold-out CY26); debate = peak earnings vs run-rate.",
-      "next_catalyst": "2026-12-09",
-      "why": [
-        "MU / SKHYNIX (memory price path) — Fubon's DRAM contract price falls 16% from the 2Q27 peak while Micron says supply stays constrained through CY28",
-        "MU — FY27 consensus is post-print on the quarter but not on the year; capex consensus sits below the implied floor"
       ]
     },
     {
@@ -862,6 +863,86 @@
         "AKAM.md"
       ],
       "evidence_anchor": "(/run-inbox) — 2 primary notes: MS (Singh/Wood, 2026-09-29) and JPM (Chatterjee, 2026-10-05). NOTHING SUPERSEDED. MS OW / PT $165 unchanged; first MS EPS marks on the page: FY26e $6.72 / FY27e $6.89 / FY28e $7.53 (estimates \"under review\"). JPM 10-05 IRR note: no rating/PT change (Neutral / Dec-27 $167 from 09-25 stands); warrant-offset basis on the $11.6bn recorded. Added 1 dated Debate block (both notes + Sinal line), 2 Sources entries, and a qualifier on the Catalysts $1bn+ falsifier (it now reads as GPU-basis…",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "beli-cc3c65ff6a7f",
+      "asof": "2026-10-13",
+      "source_date": "2026-10-13",
+      "type": "narrative_shift",
+      "priority": "medium",
+      "score": 62,
+      "title": "MU — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "MU"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "verification (transcription QA): CXMT/4F² expert-compile insert re-checked against the compile; one fix — \"Micron went CBA at 0a, then 4F²\" was set in quotation marks as a former SK hynix senior director's words, but it is the compile's own roadmap summary of call 193538, not a verbatim expert quote; quotation marks removed and labelled as the compile's paraphrase. All other expert roles, call IDs, interview dates and figures match the compile.",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the MU thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "customer",
+          "detail": "HBM",
+          "from": "MU",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "HBM/LPDDR",
+          "from": "MU",
+          "in_book": true
+        },
+        {
+          "ticker": "SKHYNIX",
+          "relation": "competitor",
+          "detail": "HBM",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "AMAT",
+          "relation": "supplier",
+          "detail": "WFE",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "AMD",
+          "relation": "customer",
+          "detail": "HBM",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "ASML",
+          "relation": "supplier",
+          "detail": "litho",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "KLAC",
+          "relation": "supplier",
+          "detail": "process control",
+          "from": "MU",
+          "in_book": false
+        }
+      ],
+      "source": "MU page Changelog 2026-10-13",
+      "evidence_paths": [
+        "MU.md"
+      ],
+      "evidence_anchor": "verification (transcription QA): CXMT/4F² expert-compile insert re-checked against the compile; one fix — \"Micron went CBA at 0a, then 4F²\" was set in quotation marks as a former SK hynix senior director's words, but it is the compile's own roadmap summary of call 193538, not a verbatim expert quote; quotation marks removed and labelled as the compile's paraphrase. All other expert roles, call IDs, interview dates and figures match the compile.",
       "origin": "belief_diff",
       "feedback": "",
       "feedback_note": "",

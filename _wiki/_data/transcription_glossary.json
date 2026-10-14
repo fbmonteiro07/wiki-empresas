@@ -859,6 +859,40 @@
    "rule": "'OCS ... 30 years old using a telecom industry called rotams' = ROADMs, the telecom optical-switching precursor of data-center OCS.",
    "ci": true,
    "first_seen": "2026-10-13 (Bernstein Group VC copper vs optical, Brad Smith)"
+  },
+  "Arya Salvador": {
+   "correct": "Ariana Salvatore (Morgan Stanley, head of US public policy strategy)",
+   "domain": "names",
+   "rule": "ASR renders the MS policy strategist as 'Arya Salvador' and later bare 'Arya'. Only the full phrase is flagged, because bare 'Arya' is legitimate for BofA's Vivek Arya.",
+   "first_seen": "2026-10-13 (Morgan Stanley midterm-elections client call, undated, staged 2026-10-13)"
+  },
+  "Chrisley": {
+   "correct": "Chris Metli (Morgan Stanley QDS)",
+   "domain": "names",
+   "rule": "'Chrisley from our QDS team' = Chris Metli, the MS QDS positioning strategist already on NVDA.md. Later turns say 'Chris'.",
+   "first_seen": "2026-10-13 (Morgan Stanley midterm-elections client call, undated, staged 2026-10-13)"
+  },
+  "Nimbism": {
+   "correct": "NIMBYism (local opposition to data-centre siting)",
+   "domain": "terms",
+   "rule": "'the AI safety issues and Nimbism around that' = NIMBYism.",
+   "ci": true,
+   "first_seen": "2026-10-13 (Morgan Stanley midterm-elections client call, undated, staged 2026-10-13)"
+  },
+  "OBBA": {
+   "correct": "OBBBA (One Big Beautiful Bill Act)",
+   "domain": "acronyms",
+   "rule": "'snap and Medicaid cuts from the OBBA' = OBBBA, the 2025 reconciliation act; ASR drops one B.",
+   "first_seen": "2026-10-13 (Morgan Stanley midterm-elections client call, undated, staged 2026-10-13)"
+  },
+  "breath": {
+   "correct": "breadth (market breadth)",
+   "domain": "terms",
+   "rule": "'deterioration in the breath', 'the narrow breath' = market breadth. ASR homophone in strategy calls.",
+   "keep_when": [
+    "(?i)catch (our|my|your|their) breath|out of breath|take a breath|deep breath|hold (our|my|your) breath"
+   ],
+   "first_seen": "2026-10-13 (Morgan Stanley midterm-elections client call, undated, staged 2026-10-13)"
   }
  },
  "summary_traps": [

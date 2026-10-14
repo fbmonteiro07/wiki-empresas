@@ -1,6 +1,6 @@
 # Daily Analyst Brief
 
-_Generated 2026-10-13 · 62 active signals · latest reconciliation: reconciliation-2026-10-12-inbox.md._
+_Generated 2026-10-13 · 63 active signals · latest reconciliation: reconciliation-2026-10-13-inbox.md._
 
 > ⚠️ **Portfolio priority is provisional.** _data/book.json is still a seed with unknown weights. Book badges identify seeded names but do not represent real exposure.
 
@@ -11,15 +11,15 @@ _Generated 2026-10-13 · 62 active signals · latest reconciliation: reconciliat
 | 1 | **GOOG** | seed | 3 | GOOG — 2026 revenue house view is 18% above consensus; GOOG — 2027 revenue house view is 17% above consensus |
 | 2 | **AAPL** | seed | 2 | AAPL — 2026 EPS house view is 16% above consensus; AAPL — 2026-10-23: SMART-HOME LAUNCH (J490 hub, HomePod mini, Apple TV; Bloomberg via GS / JPM / BofA /… |
 | 3 | **NVDA** | seed | 5 | NVDA — 2026-10-20: 2026-10-20 to 10-22: NVIDIA GTC Berlin (JPM US Market Intelligence calendar, 09-29/09-30);…; NVDA — 2026-11-17: CLOSED 2026-09-10 — THE GS COMMUNACOPIA FIRESIDE HAPPENED. OUTCOME: Jensen reaffirmed the… |
-| 4 | **LITE** | — | 4 | LITE — 2026-10-14: CITI'S CATALYST WATCH (UPSIDE) EXPIRES. A dated, mechanical sell-side event with a…; LITE — 2026-10-15: OCP San Jose: Oracle Cloud Infrastructure (Kannan Raj) + Lumentum (Michael DeMerchant),… |
-| 5 | **STX** | — | 2 | STX — derived thesis/debate state changed since the prior daily snapshot; STX — 2026-11-02: Morgan Stanley Global Hardware & Optical lunch (Andy Meng, Howard Kao, Derrick Yang, Meta… |
-| 6 | **AKAM** | — | 1 | AKAM — derived thesis/debate state changed since the prior daily snapshot |
-| 7 | **WDC** | — | 1 | WDC — derived thesis/debate state changed since the prior daily snapshot |
-| 8 | **AMAT** | — | 1 | AMAT — 2026-10-13: RESOLVED 2026-10-13 — see the Current state block; the margin target landed at ~54% (low… |
-| 9 | **NOK** | — | 3 | NOK — Bloomberg consensus missing; NOK — latest earnings transcript absent |
-| 10 | **NSCALE** | — | 3 | NSCALE — Bloomberg consensus missing; NSCALE — latest earnings transcript absent |
-| 11 | **MSFT** | seed | 2 | MSFT — 2026-11-17: 2026-11-17 to 11-20, SF — MSFT IGNITE.; MSFT and AMZN — the pages were carrying stale PTs (thesis-drift caught by the coverage tables, not by a rating action) |
-| 12 | **SMTC** | — | 2 | SMTC — 2026-10-15: INVESTOR / ANALYST DAY, San Jose. The single most important dated event on this page,…; SMTC — latest earnings transcript absent |
+| 4 | **MU** | — | 3 | MU — derived thesis/debate state changed since the prior daily snapshot; MU / SKHYNIX (memory price path) — Fubon's DRAM contract price falls 16% from the 2Q27 peak while Micron says supply stays constrained through CY28 |
+| 5 | **LITE** | — | 4 | LITE — 2026-10-14: CITI'S CATALYST WATCH (UPSIDE) EXPIRES. A dated, mechanical sell-side event with a…; LITE — 2026-10-15: OCP San Jose: Oracle Cloud Infrastructure (Kannan Raj) + Lumentum (Michael DeMerchant),… |
+| 6 | **STX** | — | 2 | STX — derived thesis/debate state changed since the prior daily snapshot; STX — 2026-11-02: Morgan Stanley Global Hardware & Optical lunch (Andy Meng, Howard Kao, Derrick Yang, Meta… |
+| 7 | **AKAM** | — | 1 | AKAM — derived thesis/debate state changed since the prior daily snapshot |
+| 8 | **WDC** | — | 1 | WDC — derived thesis/debate state changed since the prior daily snapshot |
+| 9 | **AMAT** | — | 1 | AMAT — 2026-10-13: RESOLVED 2026-10-13 — see the Current state block; the margin target landed at ~54% (low… |
+| 10 | **NOK** | — | 3 | NOK — Bloomberg consensus missing; NOK — latest earnings transcript absent |
+| 11 | **NSCALE** | — | 3 | NSCALE — Bloomberg consensus missing; NSCALE — latest earnings transcript absent |
+| 12 | **MSFT** | seed | 2 | MSFT — 2026-11-17: 2026-11-17 to 11-20, SF — MSFT IGNITE.; MSFT and AMZN — the pages were carrying stale PTs (thesis-drift caught by the coverage tables, not by a rating action) |
 
 ## Highest-priority ideas
 
@@ -75,7 +75,20 @@ _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 - **Attribution:** AKAM page Changelog 2026-10-12.
 - **Evidence:** [AKAM.md](../AKAM.md) · signal beli-d138b8dd6220
 
-### 5. 🟡 STX — derived thesis/debate state changed since the prior daily snapshot
+### 5. 🟡 MU — derived thesis/debate state changed since the prior daily snapshot
+
+_NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
+
+- **Tickers:** MU
+- **Why now:** verification (transcription QA): CXMT/4F² expert-compile insert re-checked against the compile; one fix — "Micron went CBA at 0a, then 4F²" was set in quotation marks as a former SK hynix senior director's words, but it is the compile's own roadmap summary of call 193538, not a verbatim expert quote; quotation marks removed and labelled as the compile's paraphrase. All other expert roles, call IDs, interview dates and figures match the compile.
+- **Belief update:** The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.
+- **Action:** Re-grade the MU thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.
+- **Falsifier:** The fingerprint moved only because of formatting or a derived snapshot insertion.
+- **Read-through:** AVGO (customer: HBM); NVDA (customer: HBM/LPDDR); SKHYNIX (competitor: HBM); AMAT (supplier: WFE); AMD (customer: HBM); ASML (supplier: litho); KLAC (supplier: process control)
+- **Attribution:** MU page Changelog 2026-10-13.
+- **Evidence:** [MU.md](../MU.md) · signal beli-cc3c65ff6a7f
+
+### 6. 🟡 STX — derived thesis/debate state changed since the prior daily snapshot
 
 _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
@@ -88,7 +101,7 @@ _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 - **Attribution:** STX page Changelog 2026-10-12.
 - **Evidence:** [STX.md](../STX.md) · signal beli-ffbefd31690a
 
-### 6. 🟡 WDC — derived thesis/debate state changed since the prior daily snapshot
+### 7. 🟡 WDC — derived thesis/debate state changed since the prior daily snapshot
 
 _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
@@ -101,7 +114,7 @@ _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 - **Attribution:** WDC page Changelog 2026-10-12.
 - **Evidence:** [WDC.md](../WDC.md) · signal beli-6c06b5cfa5bf
 
-### 7. ⚪ ANET — Bernstein 2027 revenue is +9-14% above consensus, but the note prints three different figures
+### 8. ⚪ ANET — Bernstein 2027 revenue is +9-14% above consensus, but the note prints three different figures
 
 _MODEL CHECK · WATCH IMPACT · STANDING · MEDIUM CONFIDENCE_
 
@@ -114,7 +127,7 @@ _MODEL CHECK · WATCH IMPACT · STANDING · MEDIUM CONFIDENCE_
 - **Attribution:** Bernstein · curated reconciliation 2026-10-01.
 - **Evidence:** [reconciliation-2026-10-01-inbox.md](reconciliation-2026-10-01-inbox.md) · signal reco-32216e1d8ae9
 
-### 8. ⚪ AVGO — house AI-semis revenue ABOVE Goldman's bottom-up AND above BBG total revenue
+### 9. ⚪ AVGO — house AI-semis revenue ABOVE Goldman's bottom-up AND above BBG total revenue
 
 _MODEL CHECK · MEDIUM IMPACT · STANDING · MEDIUM CONFIDENCE_
 
@@ -127,7 +140,7 @@ _MODEL CHECK · MEDIUM IMPACT · STANDING · MEDIUM CONFIDENCE_
 - **Attribution:** underlying sources named in the finding · curated reconciliation 2026-09-28.
 - **Evidence:** [reconciliation-2026-09-28-inbox.md](reconciliation-2026-09-28-inbox.md) · signal reco-578189d1aec5
 
-### 9. ⚪ BKNG — Jefferies initiates the page's first HOLD, PT $200, near the Street LOW
+### 10. ⚪ BKNG — Jefferies initiates the page's first HOLD, PT $200, near the Street LOW
 
 _MODEL CHECK · WATCH IMPACT · STANDING · MEDIUM CONFIDENCE_
 
@@ -140,7 +153,7 @@ _MODEL CHECK · WATCH IMPACT · STANDING · MEDIUM CONFIDENCE_
 - **Attribution:** JPM + Bernstein + Jefferies · curated reconciliation 2026-09-28.
 - **Evidence:** [reconciliation-2026-09-28-inbox.md](reconciliation-2026-09-28-inbox.md) · signal reco-d3c62027d3ff
 
-### 10. ⚪ CIEN — Outperform with a PT 15% below consensus, on a PT basis that mislabels the year
+### 11. ⚪ CIEN — Outperform with a PT 15% below consensus, on a PT basis that mislabels the year
 
 _MODEL CHECK · WATCH IMPACT · STANDING · MEDIUM CONFIDENCE_
 
@@ -153,7 +166,7 @@ _MODEL CHECK · WATCH IMPACT · STANDING · MEDIUM CONFIDENCE_
 - **Attribution:** JPM + Bernstein · curated reconciliation 2026-10-01.
 - **Evidence:** [reconciliation-2026-10-01-inbox.md](reconciliation-2026-10-01-inbox.md) · signal reco-ea86c1657228
 
-### 11. ⚪ COHR — house Neutral $285 is the Street's second-lowest PT; Bernstein OP $350 sits below the consensus median
+### 12. ⚪ COHR — house Neutral $285 is the Street's second-lowest PT; Bernstein OP $350 sits below the consensus median
 
 _MODEL CHECK · MEDIUM IMPACT · STANDING · MEDIUM CONFIDENCE_
 
@@ -165,19 +178,6 @@ _MODEL CHECK · MEDIUM IMPACT · STANDING · MEDIUM CONFIDENCE_
 - **Read-through:** AMZN (customer: optical); GOOG (customer: optical); MSFT (customer: optical); NVDA (customer: optical/InP); LITE (competitor: optical/InP); AIXA (supplier: MOCVD tools); ANET (customer: optical)
 - **Attribution:** Bernstein · curated reconciliation 2026-10-01.
 - **Evidence:** [reconciliation-2026-10-01-inbox.md](reconciliation-2026-10-01-inbox.md) · signal reco-08afbb898b71
-
-### 12. ⚪ CSCO / GLW — Bernstein's two Market-Performs are at or near the Street LOW on PT, with estimates in line
-
-_MODEL CHECK · MEDIUM IMPACT · STANDING · MEDIUM CONFIDENCE_
-
-- **Tickers:** CSCO, GLW
-- **Why now:** CSCO: MP, PT $110, which equals the BBG Street low ($110); consensus is $138.88 (hi $170, n=31) and px $108.76. Estimates are in line:
-- **Belief update:** This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.
-- **Action:** Open the CSCO/GLW model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
-- **Falsifier:** A like-for-like estimate bridge or company guide that closes the identified gap.
-- **Read-through:** ANET (competitor: AI networking); DDOG (competitor: observability vs Splunk); DT (competitor: observability vs Splunk); ESTC (competitor: SIEM/logs vs Splunk); AMZN (customer: optical fiber); META (customer: optical fiber (LTA)); NVDA (customer: optical fiber)
-- **Attribution:** Bernstein · curated reconciliation 2026-10-01.
-- **Evidence:** [reconciliation-2026-10-01-inbox.md](reconciliation-2026-10-01-inbox.md) · signal reco-5b10ab6f72fe
 
 ## Catalysts requiring preparation
 

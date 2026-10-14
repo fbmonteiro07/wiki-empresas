@@ -11,7 +11,7 @@ _Generated 2026-10-13 · 96 public-company pages · flags inputs that exist on d
 | 5.0 | CEG | 7819 | 34 | 298.9 | 2026-08-06 | ✗ | 0/0 | 0/2 | latest transcript 2026-08-06 unread; latest 10-Q 2026-08-06 unread (no same-qtr transcript either) |
 | 5.0 | NVT | 6842 | 23 | 370.9 | 2026-07-31 | ✗ | 0/0 | 0/0 | latest transcript 2026-07-31 unread; latest 10-Q 2026-07-31 unread (no same-qtr transcript either) |
 | 5.0 | WMB | 11630 | 29 | 398.5 | 2026-08-04 | ✗ | 1/1 | 1/3 | latest transcript 2026-08-04 unread; latest 10-Q 2026-08-03 unread (no same-qtr transcript either) |
-| 5.0 | APH | 12025 | 36 | 497.1 | 2026-07-29 | ✗ | 3/0 | 0/0 | latest transcript 2026-07-29 unread; latest 10-Q 2026-07-31 unread (no same-qtr transcript either) |
+| 5.0 | APH | 12183 | 36 | 503.2 | 2026-07-29 | ✗ | 3/0 | 0/0 | latest transcript 2026-07-29 unread; latest 10-Q 2026-07-31 unread (no same-qtr transcript either) |
 | 5.0 | TLN | 7613 | 26 | 590.2 | 2026-08-05 | ✗ | 0/0 | 1/3 | latest transcript 2026-08-05 unread; latest 10-Q 2026-08-05 unread (no same-qtr transcript either) |
 | 5.0 | AOSL | 596 | 6 | — | 2026-08-12 | ✗ | 0/0 | 0/0 | latest transcript 2026-08-12 unread; latest 10-Q 2026-05-06 unread (no same-qtr transcript either) |
 | 5.0 | ETN | 6854 | 24 | — | 2026-07-31 | ✗ | 0/0 | 0/0 | latest transcript 2026-07-31 unread; latest 10-Q 2026-07-31 unread (no same-qtr transcript either) |
