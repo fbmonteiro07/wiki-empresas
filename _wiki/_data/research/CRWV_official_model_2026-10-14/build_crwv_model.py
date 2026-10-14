@@ -543,7 +543,7 @@ def build(path):
     note(ws, rw + 17, "Reading the model: at the current price the DCF is a bet on revenue per GW and on replacement — a GW costs ~$40bn and generates ~$8-9bn of EBITDA a year; with replacement every 6 years the unlevered return sits near the WACC. The revenue/GW x margin grid is the answer.")
 
     build_history(wh, R)
-    build_debt(wd)
+    build_debt(wd, pl, mm)
 
     wb.save(path)
     lay = dict(R=R, pl=pl, dsc=dsc, val=val, mm=mm, rec=rc, wiki=rw)
@@ -656,7 +656,7 @@ DEBT = [
 PRINCIPAL = [("Remainder of 2026", 4413), ("2027", 6184), ("2028", 4416), ("2029", 2421), ("2030", 3221), ("Thereafter", 14896)]
 
 
-def build_debt(wd):
+def build_debt(wd, pl=None, mm=None):
     wd.sheet_view.showGridLines = False
     wd.column_dimensions["A"].width = 2.25; wd.column_dimensions["B"].width = 2.25; wd.column_dimensions["C"].width = 14
     wd.column_dimensions["D"].width = 66; wd.column_dimensions["E"].width = 16; wd.column_dimensions["F"].width = 14; wd.column_dimensions["G"].width = 14; wd.column_dimensions["H"].width = 14
@@ -689,6 +689,74 @@ def build_debt(wd):
     ]
     for t in notes:
         setc(wd, f"D{r}", t, F_NOTE); r += 1
+    if pl and mm: build_financing_map(wd, r + 1, pl, mm)
+
+
+POST_Q = [
+    ("Aug-2026", "DDTL 5.5 ($2.6bn facility; SOFR + 5.50%; matures Sep-2031; backed by shorter 3-yr contracts)", 2600, "10-Q 2Q26 note 16 (subsequent events); DB Zelnick 2026-10-14; Redburn 09-21 Fig 70."),
+    ("Aug-2026", "Revolving Credit Facility draw (within the $10.0bn undrawn availability at 30-Jun — not new capacity)", 1200, "10-Q 2Q26 note 16."),
+    ("Sep-2026", "2.875% Convertible Senior Notes due Apr-2033: $3.0bn + $0.5bn greenshoe indicative (coupon 2.375-2.875%, premium 22.5-27.5%, capped calls), priced $3.7bn on 09-18; DB counts $4.2bn", 4200, "GS bookrunner indicative terms 2026-09-17; The Information 2026-09-20 ($3.7bn priced, above target); DB Zelnick 2026-10-14 ($4.2bn 2.875%). Final conversion price not captured — out of the money at $65.78."),
+    ("Sep-2026", "ATM equity programme, 35m shares — registered, NOT used ('not at these prices', Robbins 09-21); ~$2.3bn at $65.78", 0, "Barclays Lenschow 2026-09-17 (structure); BTG websession 2026-09-21 (lock-up + blackout until after the 3Q26 call)."),
+]
+MKT_1014 = [
+    ("CoreWeave 9.25% Jun-2030 yield", 14.46, "%"), ("CoreWeave 9.00% Feb-2031 yield", 15.00, "%"), ("CoreWeave 9.75% Oct-2031 yield", 15.69, "%"),
+    ("CoreWeave 9.625% Jul-2032 yield", 15.56, "%"), ("CoreWeave 8.5% Jul-2032 EUR yield", 14.46, "%"),
+    ("Convertible 1.75% Dec-2031 yield", 6.56, "%"), ("Convertible 1.75% Oct-2032 yield", 7.78, "%"), ("Convertible 2.875% Apr-2033 yield", 5.75, "%"),
+    ("5Y CDS — Bloomberg D14 quote (bp)", 440, "bp"), ("5Y CDS — desks (Rothschild TMT daily 10-14, @zerohedge; 'almost 1,000bp', TMTB) (bp)", 1000, "bp"),
+    ("Equity close 2026-10-14 (BBG; −15.5% on the day per TMTB)", 65.78, "$"),
+]
+
+
+def build_financing_map(wd, r, pl, mm):
+    FCFF, INT = str(pl['fcff']), str(mm['int'])
+    setc(wd, f"D{r}", "Near-term financing map | 3Q26 → 2Q27 (NTM) — mapped 2026-10-14 (CRWV bonds at 14.5-15.7%, equity −15.5% on the day)", F_TXTB, fill=FILL_HDR)
+    for c in "EFGH": wd[f"{c}{r}"].fill = FILL_HDR
+    r += 1
+    setc(wd, f"D{r}", "Post-quarter financing (after the 30-Jun-26 balance sheet) — NOT in the model's net debt (valuation date 30-Jun-26; the convert is cash-neutral net of capped calls)", F_TXTB); r += 1
+    for j, h in enumerate(["Date", "Instrument", "US$ m", "Source"]):
+        setc(wd, f"{get_column_letter(3+j)}{r}", h, F_TXTB, fill=FILL_HDR, align="center")
+    r += 1
+    p0 = r
+    for dte, name, amt, src in POST_Q:
+        setc(wd, f"C{r}", dte, F_TXT, align="center"); setc(wd, f"D{r}", name, F_TXT); setc(wd, f"E{r}", amt, F_INPUT, nf=NF_NUM, align="right"); setc(wd, f"F{r}", src, F_NOTE); r += 1
+    setc(wd, f"D{r}", "New debt capital raised after 30-Jun (DDTL 5.5 + convert; revolver draw excluded as it sat inside the undrawn availability)", F_TXTB); setc(wd, f"E{r}", f"=E{p0}+E{p0+2}", F_TXTB, nf=NF_NUM, align="right"); newcap = r; r += 2
+
+    setc(wd, f"D{r}", "Sources vs uses, next twelve months (US$ m) — model basis unless noted; FCFF is pre-interest", F_TXTB); r += 1
+    for j, h in enumerate(["", "Line", "US$ m", "Basis / source"]):
+        setc(wd, f"{get_column_letter(3+j)}{r}", h, F_TXTB, fill=FILL_HDR, align="center")
+    r += 1
+    cov = f"'{SH_COVER}'!"
+    rows = {}
+    def line(key, text, formula_or_val, src, bold=False, inp=False):
+        nonlocal r
+        setc(wd, f"D{r}", text, F_TXTB if bold else F_TXT)
+        if isinstance(formula_or_val, str): formula_or_val = formula_or_val.replace("{FCFF}", FCFF).replace("{INT}", INT)
+        setc(wd, f"E{r}", formula_or_val, (F_INPUT if inp else (F_TXTB if bold else F_TXT)), nf=NF_NUM, align="right")
+        setc(wd, f"F{r}", src, F_NOTE); rows[key] = r; r += 1
+    line("liq", "Total liquidity at 30-Jun-26 (cash 5,524 + securities 15 + undrawn facilities 10,014)", 15553, "10-Q 2Q26 'Liquidity and Capital Resources' table: $15,553m.", inp=True)
+    line("new", "New debt capital after 30-Jun (DDTL 5.5 + 2033 convert)", f"=E{newcap}", "Table above.")
+    line("src", "Sources available (liquidity + new capital)", f"=E{rows['liq']}+E{rows['new']}", "", bold=True)
+    line("fcf1h", "1H26 free cash flow, company basis (EBITDA 2,710 − SBC 318 − capex 16,200 + NWC inflow ~2,135)", -11673, "10-Q 2Q26 cash flow + calls (capex company basis); double-check reconstruction 2026-10-14.", inp=True)
+    line("fcf2h", "2H26 FCFF = FY26 model FCFF − 1H26 actual", f"={cov}G{{FCFF}}-E{rows['fcf1h']}", "Model: FY26 FCFF (cover) less 1H26 actual.")
+    line("fcf1h27", "1H27 FCFF = half of the model's 2027 FCFF", f"={cov}H{{FCFF}}/2", "Model 2027 FCFF (cover) ÷ 2.")
+    line("int", "Cash interest NTM: 2H26 (3Q guide $860-940m + 4Q ~1,000) + 1H27 (half of model 2027)", f"=-(1900+{cov}H{{INT}}/2)", "Call 2026-08-11 (3Q guide); model 2027 net interest (cover memo block).")
+    line("prin", "Scheduled principal NTM: remainder of 2026 (4,413) + half of 2027 (6,184)", -(4413 + 3092), "10-Q 2Q26 note 10 principal schedule.", inp=True)
+    line("uses", "Uses NTM (FCFF 2H26 + 1H27 + interest + principal)", f"=SUM(E{rows['fcf2h']}:E{rows['prin']})", "", bold=True)
+    line("gap", "Residual to raise over the NTM (sources + uses; negative = still to fund)", f"=E{rows['src']}+E{rows['uses']}", "Funded in practice by project DDTLs drawn against backlog as capex lands (UBS: DDTLs fund ~90% of capex) — the gap is a flow, not a liquidity hole on day one.", bold=True)
+    r += 1
+    setc(wd, f"D{r}", "Cross-checks from other houses (same window, different bases)", F_TXTB); r += 1
+    line("db", "DB Zelnick 2026-10-14: NTM OCF ~$10bn vs required capex ~$45bn → ~$35bn pre-debt-service gap; 'available liquidity $15.5bn exiting C2Q'; Buy PT $150", -35000, "DB 2-page note (e-mail body archived to _inbox 2026-10-14). OCF basis = after interest; capex company basis.", inp=True)
+    line("ubs", "UBS Keirstead 2026-09-22: cumulative 2027-30 capex ~$260bn vs OCF ~$158bn → ~$102bn of additional financing 2027-30", -102000, "UBS initiation p.-; 4-year window, not NTM.", inp=True)
+    line("model2730", "Model: cumulative FCFF 2027-30 (pre-interest) + interest 2027-30", f"=SUM({cov}H{{FCFF}}:K{{FCFF}})-SUM({cov}H{{INT}}:K{{INT}})", "Cover rows; compare with UBS's $102bn (model is more punitive: smaller prepayment inflows, 9% on the whole balance).")
+    line("ft", "FT 2026-10-14 (co-founder McBee): courting insurers' 'unlimited' capital via investment-grade, chip-backed loans — the next funding pool after DDTLs", 0, "FT via Jefferies (Wong) / UBS desk (Ruple) / Vital Knowledge, 2026-10-14; TMTB EOD wrap. Reported, not a filed facility.", inp=True)
+    line("memo", "CEO staff memo 2026-10-14 (Bloomberg, via TMTB): backlog 'more than supports' the debt; market acting 'irrationally'", 0, "Management characterisation relayed by a newsletter — not a filing.", inp=True)
+    r += 1
+    setc(wd, f"D{r}", "Market levels 2026-10-14 (credit monitor, Bloomberg YLD_YTM_MID / PX_LAST; desks for the CDS print)", F_TXTB); r += 1
+    for name, v, u in MKT_1014:
+        setc(wd, f"D{r}", name, F_TXT); setc(wd, f"E{r}", v, F_INPUT, nf=(NF_NUM2 if u == "%" or u == "$" else NF_NUM), align="right"); setc(wd, f"F{r}", u, F_NOTE); r += 1
+    setc(wd, f"D{r}", "Basis warning: the Bloomberg D14 CDS quote (440bp) and the desk prints (~1,000bp, 'pricing a ~58% 5-year default probability' per TMTB) are different quotes/contracts — not reconciled here; the bonds at 14.5-15.7% are the cleaner observable. The 2032 unsecureds traded below 80c (TMTB).", F_NOTE); r += 1
+    setc(wd, f"D{r}", "No Barclays research on CoreWeave reached the mailbox on 2026-10-14 (only the TMT desk flow list names CRWV). Barclays' last CRWV note on file: Lenschow/McMeans 2026-09-17, EW PT $105 (the convert + ATM structure).", F_NOTE); r += 1
+    return r
 
 
 if __name__ == "__main__":
