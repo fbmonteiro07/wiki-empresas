@@ -28,7 +28,7 @@
   "themes": {
     "_doc": "Thematic groups across cadences. members = wiki hrefs or hub:<clone path>. A member leaves its cadence section (keeping its cadence badge, date and stale rule) and is listed under its theme. Temático renders as section 01, right after Home base.",
     "title": "Temático",
-    "kicker": "memória · optics · semicap · sentimento",
+    "kicker": "memória · optics · semicap · sentimento · AI setorial",
     "blurb": "One subject gathered across refresh rhythms. A card here keeps its cadence badge and stale rule; it just lives with its theme instead of in the daily / weekly / explainer lists.",
     "groups": [
       {"id": "memoria", "title": "Memória",
@@ -42,7 +42,10 @@
        "members": ["hub:semicap/", "hub:semicap/capex-flow.html", "hub:wfe/", "wafer-lab.html", "dram-cell-lab.html", "dram-process-lab.html", "dram-harder-three-lab.html", "logic-lithography-lab.html"]},
       {"id": "sentimento", "title": "Sentimento",
        "blurb": "One page since 2026-10-13, six tabs: Today (desk read, X movers, the note), Names (daily stock chart, ranking, HOT × BULL map), Market mood (CNN Fear & Greed, extreme entries → SPY/QQQ, index breadth vs all-time highs), Sell-side & desks (desk-view ledger, rating/PT actions), Backtests (score bands, ICs, picks, lead/lag, event windows) and Archive (the retired Codex Sentiment Radar pages).",
-       "members": ["sentiment-monitor.html"]}
+       "members": ["sentiment-monitor.html"]},
+      {"id": "ai-setorial", "title": "AI Setorial",
+       "blurb": "The AI sector read from outside the company filings: Ramp's enterprise alt-data (adoption vs Census, vendor penetration, model mix, spend per employee, share of business spend, the token sample with the price-vs-volume split) and the AI credit & funding monitor (hyperscaler / neocloud / lab issuance, spreads, CDS and the daily alerts lane).",
+       "members": ["ramp-ai-index.html", "credit-monitor.html"]}
     ]
   },
   "home": {
