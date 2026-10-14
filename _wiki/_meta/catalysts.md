@@ -1,14 +1,11 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-10-13 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-10-14 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (45)
+## 📅 Upcoming (42)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-10-13 | AMAT | ✅ **2026-10-13 — Investor Breakfast DELIVERED** (2030 targets: ~54% GM / ~40% OM non-GAAP, >2pp WFE share gain CY25→30, 80–100% FCF return; no WFE $ number). Stock ~−7% intraday. See the 2026-10-13 bl |
-| 2026-10-13 | AMAT | ✅ **RESOLVED 2026-10-13 — see the `## Current state` block; the margin target landed at ~54% (low end of the "mid-50s" bogey) and no WFE number was printed.** *Original entry:* **🆕🔴 INVESTOR DAY — OCT |
-| 2026-10-13 | CRDO | **🆕 2026-10-13 — OCP:** Jefferies hosts CRDO investor meetings; first demonstration of MicroLED-powered ALCs and a possible MicroVCSEL roadmap (Jefferies · Curtis, 2026-09-30); JPM's Joseph Cardoso al |
 | 2026-10-14 | ASML | 🆕 **2026-10-14 (Wednesday) — 3Q26 results.** The Street's two focus items are set: (1) whether FY27 low-NA EUV capacity guidance goes to **90+ tools** (from ~85) and whether **2028 is reaffirmed at ≥1 |
 | 2026-10-14 | LITE | **🆕🔴 2026-10-14 — CITI'S CATALYST WATCH (UPSIDE) EXPIRES.** A dated, mechanical sell-side event with a published clock: Citi opened a **Catalyst Watch: Upside expiring 14-OCT-26** alongside Buy/TP $1, |
 | 2026-10-15 | LITE | **🆕 2026-10-15 — OCP San Jose: Oracle Cloud Infrastructure (Kannan Raj) + Lumentum (Michael DeMerchant), "Zero-Touch OCS Fabrics for AI Scale-Out Infrastructure at Hyperscale"** — first non-Google hyp |
@@ -60,10 +57,13 @@ _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_me
 |---|---|---|
 | _none_ | | |
 
-## ✅ Resolved (262)
+## ✅ Resolved (265)
 
 | Date | Ticker | Verdict |
 |---|---|---|
+| 2026-10-13 | CRDO | neutral — NOT SCOREABLE (D+1): OCP access event (Jefferies-hosted investor meetings; MicroLED-ALC demo / possible MicroVCSEL roadmap, Jefferies · Curtis 09-30; JPM · Cardoso expected a 'proper demonstration'). No readout in corpus — the only 10-13 CRDO adds are the JPM capex thematic (roster only) and an ex-NVIDIA LinkX expert on the Bernstein copper-vs-optical call (AEC 'runs out after 200G/lane' — a bear voice, not an OCP readout). A named ALC/ZF customer beyond Oracle remains unproven; route any OCP demo/customer notes to /run-inbox. (wiki-catalyst 2026-10-14) |
+| 2026-10-13 | AMAT | bear won (preliminary, intraday) — Investor Breakfast set 2030 non-GAAP GM ~54% / OM ~40%, >2pp WFE share gain CY25→30, 80-100% FCF return, but no WFE $ number; GM target sits at the low end of the 'mid-50s' bogey (UBS desk/DB/MS) and ≈ today's Semi-Systems GM. Stock ~-7% by noon (Seeking Alpha) on a weak semis tape (SOX -2.7% 10-12) — event vs sector split unresolved until post-event notes. Source: AMAT press release 2026-10-13. |
+| 2026-10-13 | AMAT | bear won (preliminary, intraday) — Investor Breakfast set 2030 non-GAAP GM ~54% / OM ~40%, >2pp WFE share gain CY25→30, 80-100% FCF return, but no WFE $ number; GM target sits at the low end of the 'mid-50s' bogey (UBS desk/DB/MS) and ≈ today's Semi-Systems GM. Stock ~-7% by noon (Seeking Alpha) on a weak semis tape (SOX -2.7% 10-12) — event vs sector split unresolved until post-event notes. Source: AMAT press release 2026-10-13. |
 | 2026-10-08 | SAMSUNG | neutral — UNRESOLVED (D+3): 3Q26 preliminary OP print is NOT in the corpus (SAMSUNG page last touched 10-02; no wiki ingest has landed since ~10-02-10-05 and _inbox is empty). Pre-event marks on one basis: GS W106tn (10-01), BofA W107tn (10-02, 'could readily meet'), Street ~W110tn (per BofA), Bernstein W114.8tn (09-29); Q2 W89.4tn. Logged to clear the flag only, deferred one day on 10-10. MATERIAL for the memory-durability debate (and MU/SKHYNIX read-across) — route to /run-inbox//wiki-ingest when the print lands; full results ~10-29. |
 | 2026-10-08 | LITE | neutral — NOT SCOREABLE (D+1): same MS Global Hardware & Optical lunch as COHR; no readout in corpus. |
 | 2026-10-08 | COHR | neutral — NOT SCOREABLE (D+1): MS Global Hardware & Optical lunch (Meng/Kao/Yang/Marshall/Woodring) — a marketing event notice; no readout in corpus and no thesis-resolving output expected. |
