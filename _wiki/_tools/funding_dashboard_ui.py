@@ -7,7 +7,7 @@ from pathlib import Path
 from funding_common import change_text, market_health
 
 E = html.escape
-SECTIONS = [('overview', 'Overview'), ('market', 'Market gauges'), ('spreads', 'Relative spreads'),
+SECTIONS = [('overview', 'Overview'), ('alerts', 'Alerts & watch'), ('market', 'Market gauges'), ('yields', 'Issuer yields'), ('spreads', 'Relative spreads'),
             ('counterparty', 'Counterparty risk'), ('repricing', 'Loan pricing'), ('issuance', 'Issuance'),
             ('ledger', 'Deal ledger'), ('scoreboard', 'Appetite signals'), ('watch', 'Watchlist')]
 
@@ -24,7 +24,7 @@ def enhance(page, deals, market):
     nav = ''.join(f'<a href="#{key}"><span>{i:02d}</span>{title}</a>' for i, (key, title) in enumerate(SECTIONS, 1))
     sidebar = ('<aside class="credit-sidebar"><a class="credit-brand" href="index.html"><b>C</b><span>CAPSTONE<small>RESEARCH INTELLIGENCE</small></span></a>'
                '<p class="nav-label">AI CREDIT &amp; FUNDING</p><nav aria-label="Dashboard sections">' + nav + '</nav>'
-               '<div class="sidebar-foot"><p>WEEKLY MONITOR</p><strong>Friday · 09:00</strong><small>America/Sao_Paulo</small>'
+               '<div class="sidebar-foot"><p>WEEKLY MONITOR</p><strong>Friday · 09:00</strong><small>America/Sao_Paulo · daily alerts 09:30 / 18:30</small>'
                '<a href="openrouter.html">AI demand monitor ↗</a><a href="index.html">All dashboards ↗</a></div></aside>')
     topbar = ('<div class="credit-topbar"><div><span class="eyebrow">RESEARCH / CAPITAL MARKETS</span><p>AI credit &amp; funding</p></div>'
               '<div class="top-actions"><span class="top-date">MARKET OBSERVATIONS<b>' + E(health['latest']) + '</b></span>'

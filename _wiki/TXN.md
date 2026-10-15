@@ -5,7 +5,7 @@
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\TXN` (10-K/10-Q + transcripts) · `_equity_calls` · `E:\briefings\2026`. Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-13 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-10-14 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -13,7 +13,7 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\TXN` (10-K/10-Q + tran
 | Gross profit | $12.8bn | $15.5bn |
 | Gross margin | 59.8% | 61.9% |
 | EBITDA | $11.2bn | $14.0bn |
-| EPS | $8.05 | $10.66 |
+| EPS | $8.04 | $10.66 |
 | Capex | $2.8bn | $2.8bn |
 | OCF (≈EBITDA) | $11.2bn | $14.0bn |
 

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Credit Monitor · Capstone</title><meta name="description" content="Company CDS spreads and bond yields. One watchlist, daily moves and historical comparisons.">
+<script>try{const theme=localStorage.getItem("capstone-credit-theme");if(theme==="light"||theme==="dark")document.documentElement.dataset.theme=theme;}catch{}</script>
+<style>@@LEGACY_CSS@@
+@@CSS@@</style></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="masthead"><a class="brand" href="index.html"><span class="brand-mark">C</span>CAPSTONE<span class="brand-divider">/</span><span class="brand-label">Research</span></a>
+<nav aria-label="Views"><button type="button" data-view="monitor" aria-pressed="true">Market monitor</button><button type="button" data-view="research" aria-pressed="false">Research &amp; alerts</button></nav>
+<div class="masthead-actions"><button id="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="true"><span aria-hidden="true">◐</span> <span id="theme-label">Light mode</span></button><a class="hub-link" href="index.html">All dashboards <span>↗</span></a></div></header>
+<main id="main" tabindex="-1">
+<div class="page-heading"><div><p class="eyebrow">CREDIT / AI INFRASTRUCTURE</p><h1>AI credit monitor<span class="title-dot">.</span></h1><p class="intro">5Y CDS · daily, weekly &amp; monthly moves · bond yields</p></div>
+<div class="heading-meta"><span class="market-label">BLOOMBERG OBSERVATIONS</span><b id="observation-date">No issuer quotes yet</b><span>USD · 5-year CDS · bond YTM</span></div></div>
+<div id="feed-status" class="feed-status" role="status"></div>
+<div id="monitor-view">
+<section id="comparison" class="surface comparison" aria-labelledby="comparison-title">
+ <div class="chart-heading"><div><p class="eyebrow">COMPARE COMPANIES</p><h2 id="comparison-title">5-year CDS spreads</h2></div>
+ <div class="segmented metric-tabs" aria-label="Chart metric"><button type="button" data-metric="cds" aria-pressed="true">5Y CDS</button><button type="button" data-metric="yield" aria-pressed="false">Bond yields</button></div></div>
+ <div class="chart-toolbar"><div class="segmented" aria-label="Chart display"><button type="button" data-mode="level" aria-pressed="true">Level</button><button type="button" data-mode="change" aria-pressed="false">Change · bp</button></div>
+ <div class="segmented periods" aria-label="History period"><button type="button" data-period="1M" aria-pressed="false">1M</button><button type="button" data-period="3M" aria-pressed="false">3M</button><button type="button" data-period="6M" aria-pressed="false">6M</button><button type="button" data-period="1Y" aria-pressed="true">1Y</button></div></div>
+ <div id="company-filters" class="company-filters" aria-label="Companies to compare"></div>
+ <label class="convert-toggle" id="convert-control" hidden><input type="checkbox" id="include-convertibles"> Include convertible bonds <span>YTM includes an equity option</span></label>
+ <div id="chart" class="chart-area"></div><div id="chart-tooltip" class="chart-tooltip" hidden></div>
+ <div class="chart-footer"><span id="chart-range"></span><span id="chart-source">Source: Bloomberg · dates on hover</span></div>
+</section>
+<section id="company-board" class="surface company-board" aria-labelledby="board-title">
+ <div class="board-heading"><div><h2 id="board-title">Company watchlist <span id="company-count" class="count"></span></h2><p>One company, one main bond. Select a row to explore.</p></div>
+ <div class="board-tools"><label class="sr-only" for="company-search">Search companies</label><input id="company-search" type="search" placeholder="Find a company…"><label class="sr-only" for="universe">Company universe</label><select id="universe"><option value="focus">My watchlist</option><option value="all">All coverage</option></select></div></div>
+ <div class="table-scroll"><table class="issuer-table"><caption class="sr-only">Company 5-year CDS spreads, changes in basis points, and main bond yields</caption><thead><tr>
+ <th scope="col" aria-sort="none"><button type="button" data-sort="name">Company <span>↕</span></button></th>
+ <th scope="col" class="number" aria-sort="none"><button type="button" data-sort="cds">5Y CDS <small>bp</small> <span>↕</span></button></th>
+ <th scope="col" class="number" aria-sort="none"><button type="button" data-sort="1">CDS Δ 1D <small>bp</small> <span>↕</span></button></th>
+ <th scope="col" class="number" aria-sort="none"><button type="button" data-sort="7">CDS Δ 1W <small>bp</small> <span>↕</span></button></th>
+ <th scope="col" class="number" aria-sort="none"><button type="button" data-sort="30">CDS Δ 1M <small>bp</small> <span>↕</span></button></th>
+ <th scope="col" class="bond-column">Main bond <small>coupon · maturity</small></th>
+ <th scope="col" class="number" aria-sort="none"><button type="button" data-sort="yield">Yield <small>%</small> <span>↕</span></button></th><th scope="col"><span class="sr-only">Expand company</span></th>
+ </tr></thead><tbody id="issuer-rows"></tbody></table></div>
+ <p id="no-companies" class="no-results" hidden>No companies match your search.</p>
+ <div class="table-footer"><span><i class="key-up"></i> Widening / higher yield <i class="key-down"></i> Tightening / lower yield</span><span>— No matching observation</span></div>
+</section>
+<details id="data-details" class="data-details"><summary>Data &amp; methodology <span>Sources, quote dates and coverage</span></summary>
+<div class="method-grid"><div><h3>Reading the monitor</h3><p>CDS levels and changes are in basis points. Bond levels are yield to maturity in percent; yield changes are in basis points. Coupon rates identify bonds and are never used as missing yields.</p><p>1D compares with the prior available session, at most five calendar days back. 1W and 1M use the observation on or before seven and thirty calendar days before the latest quote, with four days of tolerance. Hover a change for its actual dates.</p><p>The comparison window ends today in São Paulo. Change mode uses a common start date and each series’ observation on or before it, within four days; new or sparse series without that baseline stay excluded. Gaps over seven days break the line.</p></div>
+<div><h3>Coverage &amp; freshness</h3><p id="coverage-detail"></p><p>Quotes more than four calendar days old, or retained after a failed fetch, are labeled stale. A refresh timestamp is not a quote date.</p><p>The main bond follows the configured headline, preferring USD straight debt and the shorter maturity when several headlines exist. Select another bond inside a company. Convertible and foreign-currency bonds retain their labels; convertibles enter comparison only when explicitly included.</p><p id="feed-detail"></p></div></div></details>
+</div>
+<section id="research-view" hidden aria-label="Research and alerts"><div class="research-heading"><h2>Research &amp; alerts</h2><p>Supporting evidence, on demand. Research ledger: @@RESEARCH_DATE@@.</p><a href="../themes/ai-compute-deals.md">Compute-deal timeline ↗</a></div>@@RESEARCH@@</section>
+<footer class="page-footer"><span>CAPSTONE <b>/</b> INTERNAL RESEARCH</span><span>Daily quotes · separately dated research</span></footer>
+<noscript><p class="no-results">Enable JavaScript to use the company watchlist and comparison chart.</p></noscript>
+</main><script id="credit-data" type="application/json">@@DATA@@</script><script>@@LEGACY_JS@@</script><script>@@JS@@</script></body></html>

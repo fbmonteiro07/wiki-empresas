@@ -1,0 +1,20 @@
+{
+  "retrieved_at": "2026-10-14T21:36:43.041082+00:00",
+  "request": {
+    "security": "CZ037664 Curncy",
+    "fields": [
+      "PX_LAST",
+      "CDS_5Y",
+      "CDS_FLAT_SPREAD",
+      "PAR_SPREAD_BID",
+      "PAR_SPREAD_ASK",
+      "CDS_QUOTED_PRICE",
+      "5_YR_UPFRONT_FEE"
+    ],
+    "start": "2026-10-12",
+    "end": "2026-10-14"
+  },
+  "responses": [
+    "CID: {[ valueType=AUTOGEN classId=0 internalClassId=0 value=3 ]}\nRequestId: a008a615-3173-464c-9d5a-90cd02c53a53\nHistoricalDataResponse = {\n    securityData = {\n        security = \"CZ037664 Curncy\"\n        eidData[] = {\n        }\n        sequenceNumber = 0\n        fieldExceptions[] = {\n        }\n        fieldData[] = {\n            fieldData = {\n                date = 2026-10-12\n                PX_LAST = 431.303000\n            }\n            fieldData = {\n                date = 2026-10-13\n                PX_LAST = 433.959000\n            }\n            fieldData = {\n                date = 2026-10-14\n                PX_LAST = 440.460000\n            }\n        }\n    }\n}\n"
+  ]
+}

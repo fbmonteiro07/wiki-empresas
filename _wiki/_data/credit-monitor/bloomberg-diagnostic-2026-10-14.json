@@ -1,0 +1,109 @@
+{
+  "recorded_at": "2026-10-14T17:12:23-03:00",
+  "host": "DS-CAP-33",
+  "probe": {
+    "method": "bdh",
+    "endpoint": "local Desktop API, localhost:8194",
+    "ticker": "CRWV CDS USD SR 5Y D14 Corp",
+    "field": "PX_LAST",
+    "start": "2026-10-13",
+    "end": "2026-10-14",
+    "error": "BloombergResponseError: blpapi responseError: LIMIT / WORKFLOW_REVIEW_NEEDED / Workflow review needed. [nid:53364]"
+  },
+  "confirmed": [
+    "Bloomberg Terminal wintrv and bbcomm are running.",
+    "The Desktop API session reached Bloomberg and returned a request-level restriction.",
+    "The existing historical fetch already stops further requests after a workflow/limit block."
+  ],
+  "not_confirmed": [
+    "The reason Bloomberg imposed this review, its expiry, and whether additional instrument-level entitlement gaps exist."
+  ],
+  "required_next_step": "Bloomberg support must review the workflow restriction and confirm permitted API access.",
+  "support_text": "My local Desktop API returns LIMIT / WORKFLOW_REVIEW_NEEDED, even for CRWV CDS USD SR 5Y D14 Corp / PX_LAST over October 13-14, 2026. Latest error: nid 53364. Please review/reactivate API access for our CDS and bond-yield dashboard and confirm the permitted workflow.",
+  "local_fixes": [
+    "Targeted --ids refreshes no longer snapshot unrelated retained bonds.",
+    "A probe fails when it receives no observations.",
+    "A valid one-point history can populate the quote while unavailable changes remain blank.",
+    "Unknown instrument IDs are rejected without writing the retained dataset."
+  ],
+  "recovery_after_support_clearance": [
+    "py _wiki/_tools/fetch_credit_watch.py --probe --ids CRWV_CDS5Y",
+    "If the probe succeeds, fetch the configured CDS/bond series and rebuild with build_funding_monitor.py; verify actual observations before marking recovered."
+  ],
+  "data_untouched": [
+    "credit_watch.json",
+    "funding_market.json",
+    "credit_watch_config.json"
+  ],
+  "technical_reference": "https://data.bloomberglp.com/professional/sites/10/2017/03/BLPAPI-Core-Developer-Guide.pdf",
+  "recovery": {
+    "verified_at": "2026-10-14T18:08:28-03:00",
+    "trigger": "User requested retry",
+    "probe": "CRWV_CDS5Y succeeded; 12 observations, latest 2026-10-14",
+    "full_refresh": {
+      "fetched_at": "2026-10-14T18:04:26",
+      "bbg_status": {
+        "state": "ok",
+        "detail": "",
+        "checked_at": "2026-10-14T18:03:01"
+      },
+      "series_count": 67,
+      "errors": []
+    },
+    "metadata_corrections": [
+      {
+        "company": "NBIS",
+        "maturity": "2034-02-15",
+        "field": "note",
+        "before": "type TBC — highest coupon, latest maturity",
+        "after": "Convertible; Bloomberg CV_CNVS_PX verified 2026-10-14"
+      },
+      {
+        "id_before": "SOFTBK_7_2032",
+        "id_after": "SOFTBK_7_2032_EUR",
+        "field": "ccy",
+        "before": "USD",
+        "after": "EUR",
+        "source": "Bloomberg CRNCY, 2026-10-14T18:04:26",
+        "note_before": "USD 2032 REGS"
+      },
+      {
+        "id_before": "SOFTBK_7.375_2034",
+        "id_after": "SOFTBK_7.375_2034_EUR",
+        "field": "ccy",
+        "before": "USD",
+        "after": "EUR",
+        "source": "Bloomberg CRNCY, 2026-10-14T18:04:26",
+        "note_before": "USD 2034 REGS"
+      }
+    ],
+    "restriction_cause": "Unknown; access responded successfully on retry. No account reset or alternate data route was used.",
+    "status": "Recovered; live dashboard and desktop/mobile UI verified",
+    "completed_at": "2026-10-14T18:10:17-03:00",
+    "verification": {
+      "verifiedAt": "2026-10-14T21:09:41.595Z",
+      "live": {
+        "status": 200,
+        "matches": true
+      },
+      "currentQuotes": "6 configured CDS and 8 main bond yields match Bloomberg observations dated 2026-10-14",
+      "realDataUI": "passed: watchlist, expansion, main selection, filters, periods, research, mobile overflow",
+      "fixtureUI": "passed: nonempty chart, shared lookbacks, zero baseline, bp conversion, currency/convertible eligibility, sort, keyboard tooltip, resize",
+      "consoleErrors": [],
+      "screenshots": "E:\\Wiki Felipe empresas\\_wiki\\_data\\credit-monitor\\ui-qa"
+    },
+    "remaining_coverage_limits": [
+      "No CDS configured for NBIS or IREN.",
+      "MSFT 1M CDS change is blank because no observation exists within four days before the September 14 baseline.",
+      "XAI historical quote dated March 4 is retained and marked stale outside the default watchlist."
+    ],
+    "snapshot_checks": "All configured bond coupons, maturities and currencies match Bloomberg reference snapshots."
+  },
+  "current_status": "API recovered; CRWV CDS validation pending",
+  "cds_validation_followup": {
+    "date": "2026-10-14",
+    "finding": "Same canonical CRWV CDS instrument returned conflicting PX_LAST and CDS_5Y levels; no CDS_5Y history returned. Correct benchmark not established.",
+    "evidence": "crwv-cds-canonical-check-2026-10-14.json",
+    "action": "Withhold CRWV CDS from displayed quotes and comparison; preserve original raw observations; show review warning. Main-bond daily yield moves now visible."
+  }
+}

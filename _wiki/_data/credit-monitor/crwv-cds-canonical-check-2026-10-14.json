@@ -1,0 +1,98 @@
+{
+  "asof": "2026-10-14T18:19:23-03:00",
+  "reference": [
+    {
+      "ticker": "CZ037664 Curncy",
+      "field": "NAME",
+      "value": "CRWV CDS USD SR 5Y D14"
+    },
+    {
+      "ticker": "CZ037664 Curncy",
+      "field": "SECURITY_DES",
+      "value": "CRWV CDS USD SR 5Y D14"
+    },
+    {
+      "ticker": "CZ037664 Curncy",
+      "field": "PARSEKYABLE_DES",
+      "value": "CZ037664 Curncy"
+    },
+    {
+      "ticker": "CZ037664 Curncy",
+      "field": "PX_LAST",
+      "value": 440.4603
+    },
+    {
+      "ticker": "CZ037664 Curncy",
+      "field": "CDS_5Y",
+      "value": 1150.1628369375
+    },
+    {
+      "ticker": "CZ037664 Curncy",
+      "field": "5Y_MID_CDS_SPREAD",
+      "value": 440.4603
+    },
+    {
+      "ticker": "CZ037664 Curncy",
+      "field": "LAST_UPDATE_DT",
+      "value": "2026-10-14"
+    },
+    {
+      "ticker": "CRWV CDS USD SR 5Y D14 Corp",
+      "field": "NAME",
+      "value": "CRWV CDS USD SR 5Y D14"
+    },
+    {
+      "ticker": "CRWV CDS USD SR 5Y D14 Corp",
+      "field": "SECURITY_DES",
+      "value": "CRWV CDS USD SR 5Y D14"
+    },
+    {
+      "ticker": "CRWV CDS USD SR 5Y D14 Corp",
+      "field": "PARSEKYABLE_DES",
+      "value": "CZ037664 Curncy"
+    },
+    {
+      "ticker": "CRWV CDS USD SR 5Y D14 Corp",
+      "field": "PX_LAST",
+      "value": 440.4603
+    },
+    {
+      "ticker": "CRWV CDS USD SR 5Y D14 Corp",
+      "field": "CDS_5Y",
+      "value": 1150.1628369375
+    },
+    {
+      "ticker": "CRWV CDS USD SR 5Y D14 Corp",
+      "field": "5Y_MID_CDS_SPREAD",
+      "value": 440.4603
+    },
+    {
+      "ticker": "CRWV CDS USD SR 5Y D14 Corp",
+      "field": "LAST_UPDATE_DT",
+      "value": "2026-10-14"
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-10-12",
+      "ticker": "CZ037664 Curncy",
+      "field": "PX_LAST",
+      "value": 431.303
+    },
+    {
+      "date": "2026-10-13",
+      "ticker": "CZ037664 Curncy",
+      "field": "PX_LAST",
+      "value": 433.959
+    },
+    {
+      "date": "2026-10-14",
+      "ticker": "CZ037664 Curncy",
+      "field": "PX_LAST",
+      "value": 440.46
+    }
+  ],
+  "field_documentation": [
+    "CID: {[ valueType=AUTOGEN classId=0 internalClassId=0 value=11 ]}\nRequestId: 4292e0b4-a328-445f-a8b6-afe6d09afbfc\nfieldResponse = {\n    fieldData[] = {\n        fieldData = {\n            id = \"SW192\"\n            fieldInfo = {\n                mnemonic = \"CDS_5Y\"\n                description = \"CDS 5 Year Spread\"\n                datatype = Double\n                documentation = \"5 year credit default swap spread in basis points.\n\nCurrencies:\n   Available for Credit Default Swaps (CDS) tickers. \n\nHistory is available for BVAL OTC deals only.\"\n                categoryName[] = {\n                }\n                property[] = {\n                }\n                overrides[] = {\n                    \"SW460\", \"SW248\", \"SW465\", \"SW195\", \"SW459\", \"SW463\", \"SW461\", \"SW458\", \"SW457\", \"SW464\", \"SW462\"\n                }\n                ftype = Real\n            }\n        }\n    }\n}\n"
+  ]
+}

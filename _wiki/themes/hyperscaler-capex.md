@@ -2,6 +2,26 @@
 
 _Wiki · generated 2026-06-25 · cross-company theme · sources: the AI_Demand_Capex project (`E:\AI_Demand_Capex`, dashboard build 2026-06-11), BBG consensus, company 10-Ks, and the official Capstone models (`P:\Felipe Monteiro\US Equities\Modelos oficiais`). Company pages: [../00_INDEX.md](../00_INDEX.md) · themes index: [00_THEMES.md](00_THEMES.md)._
 
+## 🆕🔴 2026-10-14 (/run-inbox) — **JEFFERIES' C3Q PREVIEW: CY26 CAPEX FOR HYPERSCALERS + [[ORCL]] + [[META]] ~$818bn (+84%), CY27 ~$1.17tn (+43%), "WITH UPSIDE RISK"; THE CY27 MARK IS ~$49bn ABOVE THE $1,121bn THE SAME HOUSE'S 09-02 DECK SHOWED**
+
+_Source: **Jefferies · Brent Thill / John Byun et al.**, "C3Q Previews for Hyperscalers + META & CRWV: Favor MSFT & GOOGL", **2026-10-14** (95pp deck; page numbers are the deck's printed numbers) ([report](../../relat%C3%B3rios%20bons/20261014_Jefferies_Thill_C3Q-Previews-Hyperscalers-META-CRWV.html)). Ratings: Buy on all five (MSFT $650 from $575, GOOGL $445, AMZN $330, META $875, CRWV $150); MSFT and GOOGL are the favoured names into prints._
+
+- 🔴 **The aggregate (p.1):** *"we model CY26 capex for hyperscalers, ORCL, & META of ~$818B (+84%) & CY27 of ~$1.17T (+43%), w/ upside risk as the buildout continues."* ⚠️ **Against the 09-03 block below:** the 09-02 "AI Deep Dive" slide showed **$818bn / $1,121bn** labelled as **Visible Alpha consensus**; this deck says "we model". CY26 is identical; CY27 is up ~$49bn (~4%) and the implied CY26→CY27 growth goes from +37% to +43%. Same perimeter, but the two marks are not a clean like-for-like revision of a Jefferies estimate. ➤ +84% on $818bn implies a CY25 base of ~$445bn (wiki arithmetic).
+- **Per-name Visible Alpha consensus capex, as of 10-13 (p.4):**
+
+| Name | 3Q26E capex | y/y | CY26E capex | y/y |
+|---|--:|--:|--:|--:|
+| [[AMZN]] | $57,902m | +65.0% | $222,748m | +69.0% |
+| [[GOOG]] (GOOGL) | $55,946m | +133.6% | $201,986m | +120.9% |
+| [[MSFT]] (FY1Q27E for the quarter) | $51,699m | +48.1% | $177,314m | +50.3% |
+| [[META]] | $41,675m | +115.1% | $142,040m | +97.3% |
+| [[CRWV]] | $12,120m | +555.1% | $37,689m | +153.2% |
+
+- ➤ **Wiki arithmetic (derived, not printed):** AMZN + GOOGL + MSFT + META CY26E sum to **~$744bn**, so ORCL would be the ~$74bn residual to Jefferies' $818bn if both use the same basis. ORCL's fiscal year (May) makes that a rough check only.
+- 🔴 **CY27 is where the houses expect the upside (pp.6, 10, 13, 17):** GOOGL CY27 consensus **$305bn, +52% from CY26e $201bn**, and AMZN **$277bn, +26% from CY26e $220bn**; Jefferies says both could *"rise well above consensus"*, with GOOGL FCF *"likely to turn negative in CY27, with ongoing need for creative financing"* and AMZN FCF already negative. META: Jefferies' FY27 capex incl. finance leases is **$216.7bn (+53.5%) vs Street $198.4bn (+39.7%)**. MSFT: Jefferies models **FY27 (June) capex $219bn, +51% vs +65% in FY26**, against the **$175bn CY26** guide. Near-term guides held: AMZN FY26 $220bn, GOOGL FY26 $195-205bn.
+- **The demand side Jefferies sets against it (p.1, p.4, p.13):** CY2Q26 cloud backlog growth **AWS +154%, Google Cloud +380%, Azure +84% y/y**; 3Q cloud revenue bogeys **AWS 40%+ (Street 37%), Google Cloud 100%+ (90%), Azure ~47% (45% CC)**; *"demand outpacing supply & pricing moving higher across hyperscalers & neoclouds"*. On AMZN, Jefferies argues backlog growing faster than capex plus quick payback and cloud pricing power *"reduces concerns on capex loads"*.
+- ⚠️ **Basis:** the deck does not define the aggregate's basis; it sits beside Visible Alpha total-capex consensus. It is not JPM Cardoso's data-center-IT capex in the block below and not Bernstein's lease-inclusive series (10-02). Do not net them.
+
 ## 🆕🔴 2026-10-13 (/run-inbox) — **J.P. MORGAN (CARDOSO) RAISES TOP-4 US CSP *DATA-CENTER* CAPEX GROWTH TO +85% (2026) / +70% (2027), FROM +80% / +50%: A >$270bn STEP-UP IN 2026 AND $400bn+ IN 2027, WITH DC CAPEX TAKING 80% / 111% OF THE FOUR'S OPERATING CASH FLOW**
 
 _Source: **J.P. Morgan · Joseph Cardoso (with Manmohanpreet Singh, Marc Vitenzon)**, "Cloud DC Capex Outlook Climbs Higher for 2026 and 2027, Supported by Rising Power Capacity", **2026-10-13** (13pp; capex data 650 Group + JPM estimates, power data Datacenter Hawk) ([report](../../relat%C3%B3rios%20bons/e228519b-0c4a-49c1-8e2e-8a1a88228ea0.html)). ⚠️ **BASIS: "data center capex" = data-center IT equipment only, a portion of reported total capex that excludes HVAC-type equipment and non-cloud items such as offices and fulfilment centres (p3).** It is NOT the total-capex basis of this page's 07-30 Cardoso ~$750bn mark or of the 09-07 JPM-tech-team "total CSP capex" relay ($950bn / $1.40tn / $1.55tn). Do not net them._
@@ -1384,6 +1404,7 @@ The dashboard's `capstone` line does **NOT** currently match the official Capsto
 Downstream read-throughs: [NVDA](../NVDA.md), [AVGO](../AVGO.md), [TSM](../TSM.md), [VRT](../VRT.md) and the [800v-dc-power](800v-dc-power.md) / [ai-datacenter-power](ai-datacenter-power.md) / [custom-asic-tpu](custom-asic-tpu.md) themes.
 
 ## Sources
+- 🆕 **[Ingest run — 2026-10-14 · /run-inbox · BROKER PRIMARY]** [Jefferies · Brent Thill et al. — "C3Q Previews for Hyperscalers + META & CRWV: Favor MSFT & GOOGL" (2026-10-14, 95pp)](../../relat%C3%B3rios%20bons/20261014_Jefferies_Thill_C3Q-Previews-Hyperscalers-META-CRWV.html) — CY26 ~$818bn (+84%) / CY27 ~$1.17tn (+43%) for hyperscalers + ORCL + META; per-name VA capex; CY27 upside risk.
 - 🆕 **[Ingest run — 2026-10-13 · /run-inbox · BROKER PRIMARY]** [J.P. Morgan · Joseph Cardoso, Manmohanpreet Singh, Marc Vitenzon — "Cloud DC Capex Outlook Climbs Higher for 2026 and 2027, Supported by Rising Power Capacity" (2026-10-13, 13pp)](../../relat%C3%B3rios%20bons/e228519b-0c4a-49c1-8e2e-8a1a88228ea0.html) — top-4 US CSP DC capex +85% / +70% (2026/27), per-CSP growth, Tier 2/neocloud sample, DC capex as % of OCF.
 - 🆕 **[Ingest run — 2026-10-12 · /run-inbox · BROKER PRIMARY]** [Jefferies · Jonathan Petersen et al. — "Data Center Pipeline-to-Online Model" (2026-10-09)](../../relat%C3%B3rios%20bons/7913a58c-eb91-4769-8994-eb43cb2104d5.html) — hyperscaler planned vs expected North America self-build deliveries by name 2026-30; leasing shift.
 - 🆕🔴 **[Ingest run — 2026-10-12 · /run-inbox · BROKER PRIMARY]** [Bernstein · Daniel Zhu — "AI Value Chain: What do we need to believe to believe the AI build is healthy?" (2026-10-07)](../../relat%C3%B3rios%20bons/BERN_260986.html) — BBG consensus cloud capex 2024-28E; 15%-ROI end-user-spend hurdle ($729bn 2027E / $1,469bn 2028E); its $1,166bn is unrelated to the 10-02 Rezaei $1,166bn.
@@ -1425,6 +1446,7 @@ Downstream read-throughs: [NVDA](../NVDA.md), [AVGO](../AVGO.md), [TSM](../TSM.m
 
 ## Changelog
 
+- 2026-10-14 — run-inbox: Jefferies · Thill et al., "C3Q Previews for Hyperscalers + META & CRWV: Favor MSFT & GOOGL" (2026-10-14). One dated block at the top. **Jefferies aggregate (hyperscalers + ORCL + META): CY26 $818bn unchanged; CY27 $1,121bn (09-02 deck, labelled Visible Alpha consensus) → ~$1.17tn (10-14, "we model"), implied CY27 growth +37% → +43%.** The 09-03 block is kept as written, since the two marks carry different labels and are not a clean like-for-like revision. Nothing else superseded.
 - 2026-10-13 — run-inbox: J.P. Morgan · Cardoso et al., "Cloud DC Capex Outlook Climbs Higher for 2026 and 2027" (2026-10-13). One dated block at the top. **Thesis drift (JPM top-4 US CSP data-center capex, 650 Group basis):** 2026 growth ~~+80%~~ → **+85%** ($ increase ~~$250bn+~~ → **>$270bn**); 2027 growth ~~+50%~~ → **+70%** ($ increase ~~$285bn+~~ → **$400bn+**). The priors come from the note itself, and the +80% / +50% (~$575B) pair matches JPM Semis · Harlan Sur (2026-05-29), which is logged on NVDA.md and not on this page. Not superseded because they are on other bases: the 07-30 Cardoso ~$750bn total-capex mark and the 09-07 JPM-tech-team total CSP capex ($950bn / $1.40tn / $1.55tn). Per-CSP DC capex numbers stay on this theme; the AMZN/MSFT/GOOG/META pages are untouched in this run.
 - **2026-10-13 (user-attached ingest):** Jefferies Asia TMT Specialist Sales (O'Mara / Wong / Liu), "Q326 Techknowledge Tech Trip Takeaways" (2026-09-22, 101pp; desk voice, not Research) — one dated 09-22 block added at the top: rack counts — GB300 2026 75K → 80K (Titan), NVIDIA 2027 ~100K (30K GB300 + 70K VR200), Google TPU racks 61K → 135K, AMD Helios 4K → 15K vs 'AVC 30K'; NVIDIA memory commitments +$150bn; SpaceX/CoreWeave halve Dell's VR200 allocation. Nothing superseded.
 

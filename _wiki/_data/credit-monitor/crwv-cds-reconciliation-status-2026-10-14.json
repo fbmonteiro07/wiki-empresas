@@ -1,0 +1,23 @@
+{
+  "recorded_at": "2026-10-14T21:37:42.162361+00:00",
+  "status": "awaiting_terminal_quote_and_pricing_source_confirmation",
+  "canonical_security": "CZ037664 Curncy",
+  "description": "CRWV CDS USD SR 5Y D14",
+  "source": "Bloomberg local Desktop API; observations 2026-10-14",
+  "findings": [
+    "Equity and bond reference metadata both map CoreWeave USD senior 5Y CDS to CZ037664.",
+    "BEST PX_LAST and 5Y_MID_CDS_SPREAD return approximately 440.46 bp and a historical series.",
+    "CDS_5Y and CDS_FLAT_SPREAD return approximately 1150.16 bp; the same value appears at all requested analytical tenors. This does not independently establish an executable or contributed market quote.",
+    "A historical request for PX_LAST, CDS_5Y, CDS_FLAT_SPREAD, PAR_SPREAD_BID, PAR_SPREAD_ASK, CDS_QUOTED_PRICE and 5_YR_UPFRONT_FEE returned only PX_LAST for October 12-14.",
+    "Source-specific CBIN, CBGN, CBIL, CBIT, CMA aliases and CBVAL probes did not establish a quoted history. The BVAL alias returned INVALID_SECURITY; empty responses are not proof of an entitlement block.",
+    "No verified source-consistent market CDS series has been found. The higher analytical snapshot must not be spliced onto the BEST history."
+  ],
+  "dashboard_action": "Retain source data, withhold CoreWeave CDS level, changes and chart pending source validation. Bond yields remain displayed.",
+  "required_information": "Exact Bloomberg Terminal 5Y CDS quote, source/contributor and security identifier, or vendor confirmation of the corresponding Desktop API historical series.",
+  "evidence": [
+    "crwv-cds-canonical-check-2026-10-14.json",
+    "crwv-cds-curve-list-2026-10-14.json",
+    "crwv-cds-source-errors-2026-10-14.json",
+    "crwv-cds-historical-field-errors-2026-10-14.json"
+  ]
+}

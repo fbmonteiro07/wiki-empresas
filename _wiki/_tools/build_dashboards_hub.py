@@ -54,91 +54,173 @@ TILE_COLOR = {"daily": "var(--accent)", "weekly": "var(--s1)", "ondemand": "var(
 
 HUB_CSS = r"""
 .hub-overview .oc-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin:24px 0 20px}
+
 @media(max-width:1300px){.hub-overview .oc-tiles{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
 @media(max-width:600px){.hub-overview .oc-tiles{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+
 .oc-tile .l i{width:8px;height:8px;border-radius:50%;display:inline-block;background:var(--c);margin-right:7px;vertical-align:1px}
+
 .oc-tile.is-crit .v{color:var(--crit)}.oc-tile.is-good .v{color:var(--good)}
+
 .hub-filter{margin:4px 0 8px}
+
 .hub-filter input{width:100%;padding:12px 16px;font:inherit;font-size:13px;color:var(--ink);background:var(--surf);border:1px solid var(--border);border-radius:10px;box-shadow:var(--shadow)}
+
 .hub-filter input::placeholder{color:var(--muted)}
+
 .hub-section{margin-top:44px}.hub-section .oc-kicker{display:block}
+
 .hub-section>h2,.hub-section>summary h2{margin:0 0 6px}.hub-section .sub{display:block;margin-bottom:18px}
+
 .hub-home{margin-top:8px;margin-bottom:36px}
+
 .hub-themes{margin-top:8px;margin-bottom:36px}
+
 .hub-group{margin-top:22px;padding-top:18px;border-top:1px solid var(--grid)}
+
 .hub-group:first-of-type{margin-top:0;padding-top:0;border-top:0}
+
 .hub-group-title{margin:0 0 4px;font-size:17px;font-weight:650;letter-spacing:-.35px}
+
 .hub-group-title small{font-weight:500;color:var(--muted);font-size:11px;margin-left:8px;font-variant-numeric:tabular-nums}
+
 .hub-group-sub{display:block;font-size:12px;color:var(--ink2);line-height:1.7;margin:0 0 14px;max-width:1050px}
+
 .hub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:16px}
+
 .hub-grid.hub-grid-home{grid-template-columns:repeat(2,minmax(0,1fr))}
+
 .hub-grid-home .hub-card{padding:24px 26px;border-color:color-mix(in srgb,var(--accent) 35%,var(--border))}
+
 .hub-grid-home .hub-card h3{font-size:19px;letter-spacing:-.5px}
+
 .hub-grid-home .hub-card p{font-size:13px}
+
 @media(max-width:760px){.hub-grid.hub-grid-home{grid-template-columns:1fr}}
+
 @media(max-width:600px){.hub-grid{grid-template-columns:1fr}}
+
 .hub-card{display:flex;flex-direction:column;gap:9px;min-width:0;background:var(--surf);border:1px solid var(--border);border-radius:12px;padding:20px 22px;box-shadow:var(--shadow);text-decoration:none!important;color:var(--ink);transition:border-color .15s,transform .15s}
+
 .hub-card:hover{border-color:var(--accent);transform:translateY(-1px)}
+
 .hub-card.is-stale{border-left:3px solid var(--crit)}
+
 .hub-card h3{margin:0;font-size:15px;font-weight:650;letter-spacing:-.25px;line-height:1.35;color:var(--ink)}
+
 .hub-card p{margin:0;font-size:12px;line-height:1.7;color:var(--ink2)}
+
 .hub-top{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;font-size:10px;font-weight:650;letter-spacing:.65px;text-transform:uppercase;color:var(--muted)}
+
 .hub-meta{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center;margin-top:auto;padding-top:10px;border-top:1px solid var(--grid);font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}
+
 .hub-routine{overflow-wrap:anywhere}.hub-routine::before{content:'\21BB  ';color:var(--base)}
+
 .pill{display:inline-block;padding:1px 8px;border-radius:9px;font-size:10px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;line-height:1.7}
+
 .pill.cad-daily{background:color-mix(in srgb,var(--accent) 14%,var(--surf));color:var(--accent)}
+
 .pill.cad-weekly{background:color-mix(in srgb,var(--s1) 14%,var(--surf));color:var(--s1)}
+
 .pill.cad-ondemand{background:color-mix(in srgb,var(--s4) 18%,var(--surf));color:var(--s4)}
+
 .pill.cad-explainer{background:color-mix(in srgb,var(--s3) 18%,var(--surf));color:var(--s3)}
+
 .pill.cad-archive{background:var(--grid);color:var(--ink2)}
+
 .pill.cad-unregistered,.hub-stale{background:color-mix(in srgb,var(--crit) 14%,var(--surf));color:var(--crit)}
+
 .hub-stale{padding:1px 8px;border-radius:9px;font-weight:700}
+
 .hub-file{border:1px dashed var(--base);border-radius:5px;padding:0 6px}
+
 .hub-surface{border:1px solid color-mix(in srgb,var(--s1) 45%,var(--border));color:var(--s1);border-radius:5px;padding:0 6px}
+
 details.hub-section{background:transparent;border:0;border-radius:0;padding:0;margin-top:44px;font-size:inherit}
+
 details.hub-section>summary{list-style:none;cursor:pointer;font-weight:inherit;color:inherit}
+
 details.hub-section>summary::-webkit-details-marker{display:none}
+
 details.hub-section>summary h2::before{content:'\25B8  ';color:var(--muted)}details[open].hub-section>summary h2::before{content:'\25BE  '}
+
 .hub-unreg h2,.hub-unreg .oc-kicker{color:var(--crit)}
+
 .hub-credit{margin-top:44px;font-size:10px;color:var(--muted);line-height:1.8;border-top:1px solid var(--grid);padding-top:14px;overflow-wrap:anywhere}
+
 .hub-credit code{background:var(--grid);padding:1px 5px;border-radius:4px}
+
 .or-nav-count{margin-left:auto;font-size:10px;color:#7791a8;font-variant-numeric:tabular-nums}
+
 .or-navigation a[aria-current=location] .or-nav-count{color:#8bd5c3}
+
 .or-navigation a.or-nav-sub{padding-left:38px;font-size:11px;margin-top:-2px}
+
 .or-sidebar-footer a+a{margin-top:8px}
+
 .hidden{display:none!important}
+
 @media(max-width:1020px){.or-navigation a.or-nav-sub{padding-left:12px}}
 """
 
 HUB_JS = r"""
 (function(){
+
   var root=document.documentElement, KEY='wiki-dash-theme';
+
   var btn=document.querySelector('.or-theme');
+
   if(btn){
+
     var isDark=root.dataset.theme==='dark';
+
     btn.setAttribute('aria-pressed',String(isDark));btn.setAttribute('aria-label',isDark?'Switch to light theme':'Switch to dark theme');
+
     btn.addEventListener('click',function(){try{localStorage.setItem(KEY,root.dataset.theme||'light');}catch(e){}});
+
   }
+
   var q=document.getElementById('q');if(!q)return;
+
   var cards=[].slice.call(document.querySelectorAll('.hub-card'));
+
   var secs=[].slice.call(document.querySelectorAll('.hub-section'));
+
   var groups=[].slice.call(document.querySelectorAll('.hub-group'));
+
   var autoOpened={};
+
   function apply(){
+
     var t=q.value.trim().toLowerCase();
+
     cards.forEach(function(c){c.classList.toggle('hidden',!!t&&c.getAttribute('data-s').indexOf(t)<0);});
+
     groups.forEach(function(g){g.classList.toggle('hidden',!g.querySelector('.hub-card:not(.hidden)'));});
+
     secs.forEach(function(s){
+
       var any=s.querySelector('.hub-card:not(.hidden)');
+
       s.classList.toggle('hidden',!any);
+
       if(s.tagName!=='DETAILS')return;
+
       if(t&&any&&!s.open){s.open=true;autoOpened[s.id]=true;}
+
       if(!t&&autoOpened[s.id]){s.open=false;delete autoOpened[s.id];}
+
     });
+
   }
+
   q.addEventListener('input',apply);
+
   function openHash(){try{var d=document.getElementById(location.hash.slice(1));if(d&&d.tagName==='DETAILS')d.open=true;}catch(e){}}
+
   window.addEventListener('hashchange',openHash);openHash();
+
 })();
 """
 
@@ -441,6 +523,7 @@ def main() -> int:
         parts.append("<section class='hub-section hub-themes' id='themes'>"
                      f"<span class='oc-kicker'>01 · {e(themes.get('kicker', ''))}</span><h2>{e(themes.get('title', 'Temático'))}</h2>"
                      f"<span class='sub'>{e(themes.get('blurb', ''))}</span>{''.join(gparts)}</section>")
+
     parts.append("<div class='hub-filter'><input id='q' type='search' placeholder='Filter by title, description, topic, theme or routine… (e.g. memória, 18:15, weekly, Bloomberg, Capstone hub)' autocomplete='off'></div>")
 
     # ---- cadence sections ----
@@ -467,6 +550,7 @@ def main() -> int:
                  + (f" (<code>{e(str(hub_dir))}</code>)" if hub_dir else " (clone not reachable at build time)") +
                  ". Thematic groups pull cards out of the cadence lists without changing their cadence. "
                  "Stale = daily older than 2 business days, weekly older than 9 days. Anything on disk without a card appears under Unregistered.</p>")
+
 
     page = (
         "<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'>"

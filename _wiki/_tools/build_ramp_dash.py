@@ -1092,7 +1092,8 @@ def build(artifact=False):
     if not artifact:
         p.append("</body></html>")
 
-    html = "".join(p)
+    from ramp_dashboard_ui import enhance
+    html = enhance("".join(p), META, LAT_A, labw(WK[-1]))
     dest = ART if artifact else OUT
     with io.open(dest, "w", encoding="utf-8") as f:
         f.write(html)

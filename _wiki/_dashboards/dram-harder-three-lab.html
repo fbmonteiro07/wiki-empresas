@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Harder Three Lab</title>
+<meta name="description" content="Interactive 3D explainer, step by step: of the twelve DRAM construction steps, which three get harder from 1a to 1d (more EUV layers, a narrower and deeper capacitor hole, a thinner high-k film on a taller wall), whose equipment is core at each one (ASML, Tokyo Electron, Lam, Applied, ASM), and what the scoreboard says once the ranking is derived from the equipment map instead of asserted. Every number attributed to the Capstone wiki; disputed pairs and corpus gaps named.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f5f7; --panel:#ffffff; --panel-2:#eef0f3; --ink:#15181d; --ink-2:#4a515c; --ink-3:#7a828e;
+  --line:#d9dde3; --accent:#0a84c6; --accent-2:#0f6fa3; --amber:#b86b00; --red:#c2372f; --copper:#a8612a;
+  --chip:#e3e7ec; --good:#1d7a4f;
+  --green:#1c4d3a; --green-2:#2f6f52; --sage:#a9c7b6; --sage-2:#e3eee7;
+  --bar-on:#1c4d3a; --bar-off:#93b8a4; --bar-ghost:#c9d8cf;
+  --euv:#8b5cf6; --etch:#2a78d6; --dep:#eb6834;
+  --studio:#0c1712; --studio-2:#142219; --studio-ink:#e6efe9; --studio-ink-2:#a9c7b6; --studio-ink-3:#6f8f7f; --studio-line:#22382c; --studio-accent:#8fe0b3;
+  --shadow:0 1px 2px rgba(0,0,0,.06),0 6px 24px rgba(0,0,0,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0b0d10; --panel:#13161b; --panel-2:#1a1e25; --ink:#e9edf2; --ink-2:#aab2be; --ink-3:#737d8a;
+    --line:#262b33; --accent:#4cc2ff; --accent-2:#8fd8ff; --amber:#ffb454; --red:#ff6b5e; --copper:#d98c4f;
+    --chip:#1f242c; --good:#4fd18b;
+    --green:#2f6f52; --green-2:#4fa77c; --sage:#2f5546; --sage-2:#1b2f26;
+    --bar-on:#6fd3a0; --bar-off:#3a6b57; --bar-ghost:#2a3f35;
+    --euv:#a78bfa; --etch:#5b9cf0; --dep:#f28a5e;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 30px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0b0d10; --panel:#13161b; --panel-2:#1a1e25; --ink:#e9edf2; --ink-2:#aab2be; --ink-3:#737d8a;
+  --line:#262b33; --accent:#4cc2ff; --accent-2:#8fd8ff; --amber:#ffb454; --red:#ff6b5e; --copper:#d98c4f;
+  --chip:#1f242c; --good:#4fd18b;
+  --green:#2f6f52; --green-2:#4fa77c; --sage:#2f5546; --sage-2:#1b2f26;
+  --bar-on:#6fd3a0; --bar-off:#3a6b57; --bar-ghost:#2a3f35;
+  --euv:#a78bfa; --etch:#5b9cf0; --dep:#f28a5e;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+body{overflow-x:hidden}
+.mono{font-family:"JetBrains Mono",ui-monospace,Consolas,monospace}
+.wrap{max-width:1280px;margin:0 auto;padding:20px 16px 60px}
+header.top{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:14px}
+h1{margin:0;font-size:clamp(28px,4.4vw,48px);line-height:.95;letter-spacing:-.03em;font-weight:800;text-transform:uppercase}
+h1 span{color:var(--green-2)}
+.sub{color:var(--ink-2);font-size:14px;max-width:660px;margin-top:8px;line-height:1.45}
+.sub a{color:var(--green-2)}
+.tabs{display:flex;gap:6px;background:var(--panel);border:1px solid var(--line);padding:4px;border-radius:12px;box-shadow:var(--shadow);flex-wrap:wrap}
+.tabs a{font:600 13px Inter,sans-serif;color:var(--ink-2);text-decoration:none;padding:8px 12px;border-radius:9px}
+.tabs a:hover{background:var(--panel-2);color:var(--ink)}
+.themebtn{font:inherit;border:1px solid var(--line);background:var(--panel);color:var(--ink-2);border-radius:10px;padding:9px 11px;cursor:pointer}
+.eyebrow{font:600 10.5px "JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.src{color:var(--ink-3);font-size:10.5px}
+.tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:5px;background:color-mix(in srgb,var(--amber) 18%,transparent);color:var(--amber);margin-left:4px;vertical-align:1px}
+.tag.d{background:color-mix(in srgb,var(--ink-3) 18%,transparent);color:var(--ink-3)}
+.tag.r{background:color-mix(in srgb,var(--red) 18%,transparent);color:var(--red)}
+.tag.g{background:color-mix(in srgb,var(--green-2) 18%,transparent);color:var(--green-2)}
+.m6{color:var(--euv);font-weight:700}.m7{color:var(--etch);font-weight:700}.m9{color:var(--dep);font-weight:700}
+
+/* ---------- stage: side panel | studio, KPI strip below ---------- */
+.stage{display:grid;grid-template-columns:400px 1fr;grid-template-rows:1fr auto;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);height:min(80vh,800px);min-height:640px;background:var(--panel)}
+.side{overflow:auto;padding:18px 20px 22px;border-right:1px solid var(--line);background:var(--panel);scrollbar-width:thin}
+.side .t{font-size:23px;font-weight:800;letter-spacing:-.025em;line-height:1.1;margin:6px 0 10px;color:var(--ink)}
+.side .t.s{font-size:20px;margin-top:4px}
+.side p{font-size:13px;line-height:1.5;color:var(--ink-2);margin:0 0 8px}
+.stepper{display:grid;grid-template-columns:repeat(6,1fr);gap:5px;margin:10px 0 8px}
+.stepper button,.seg button{font:inherit;border:1px solid var(--line);background:var(--panel-2);color:var(--ink-2);border-radius:10px;padding:8px 2px 7px;cursor:pointer;text-align:center;line-height:1.1}
+.stepper button b,.seg button b{display:block;font:700 14px Inter,sans-serif;color:var(--ink)}
+.stepper button small,.seg button small{display:block;font-size:9.5px;color:var(--ink-3);margin-top:3px;letter-spacing:.02em}
+.stepper button.on,.seg button.on{background:var(--green);border-color:var(--green)}
+.stepper button.on b,.stepper button.on small,.seg button.on b,.seg button.on small{color:#fff}
+.stepper button.m6.on{background:var(--euv);border-color:var(--euv)}.stepper button.m7.on{background:var(--etch);border-color:var(--etch)}.stepper button.m9.on{background:var(--dep);border-color:var(--dep)}
+.nav{display:flex;gap:6px;align-items:center;margin:0 0 14px}
+.nav button{font:600 12px Inter,sans-serif;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:8px;padding:6px 10px;cursor:pointer}
+.nav button:hover{border-color:var(--green-2)}
+.nav button.walk{background:var(--green);color:#fff;border-color:var(--green)}
+.nav button.walk.on{background:var(--copper);border-color:var(--copper)}
+.nav input[type=range]{flex:1;accent-color:var(--green-2);margin:0}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:5px 10px;font-size:12.5px;align-items:baseline;margin:0}
+.kv dt{color:var(--ink-3);font-weight:600;text-transform:uppercase;font-size:10.5px;letter-spacing:.06em}
+.kv dd{margin:0;color:var(--ink)}
+hr.sep{border:0;border-top:1px solid var(--line);margin:18px 0 14px}
+.f{margin-top:12px}
+.f label{display:flex;justify-content:space-between;align-items:baseline;font-size:12px;font-weight:600;color:var(--ink)}
+.f label span{font:500 11px "JetBrains Mono",monospace;color:var(--ink-3)}
+.f .h,.hint{font-size:11px;color:var(--ink-3);margin-top:5px;line-height:1.45}
+.seg{display:grid;grid-template-columns:repeat(2,1fr);gap:5px;margin-top:8px}
+.formula{font:500 11.5px "JetBrains Mono",monospace;color:var(--ink-2);margin-top:12px;padding:9px 10px;background:var(--panel-2);border-radius:9px;line-height:1.55}
+.formula b{color:var(--ink);font-weight:600}
+.who{display:grid;grid-template-columns:auto 1fr;gap:4px 8px;font-size:12px;margin:6px 0 2px;align-items:baseline}
+.who .r{font:700 9.5px "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase;padding:2px 6px;border-radius:5px;white-space:nowrap}
+.who .r.core{background:color-mix(in srgb,var(--green-2) 18%,transparent);color:var(--green-2)}
+.who .r.adj{background:color-mix(in srgb,var(--ink-3) 16%,transparent);color:var(--ink-3)}
+.who .v{color:var(--ink)}
+.who .v small{color:var(--ink-3)}
+
+.studio{position:relative;background:var(--studio);overflow:hidden}
+#glbox{position:absolute;inset:0}
+#gl{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none;cursor:grab}
+#gl:active{cursor:grabbing}
+#labels{position:absolute;inset:0;pointer-events:none}
+.lbl{position:absolute;transform:translate(-50%,-100%);font:600 10.5px "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--studio-ink);white-space:nowrap;text-align:center;padding-bottom:30px}
+.lbl small{display:block;font:500 10px "JetBrains Mono",monospace;letter-spacing:.03em;text-transform:none;color:var(--studio-ink-2);margin-top:2px}
+.lbl::after{content:"";position:absolute;left:50%;bottom:5px;width:1px;height:21px;background:var(--studio-ink-3)}
+.lbl::before{content:"";position:absolute;left:50%;bottom:0;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:var(--studio-ink-2)}
+.lbl.hot{color:var(--studio-accent)}
+.lbl.core{color:#fff} .lbl.core::before{background:#fff}
+.lbl.core.e6{color:#c7b2ff} .lbl.core.e6::before{background:#c7b2ff}
+.lbl.core.e7{color:#9ec5ff} .lbl.core.e7::before{background:#9ec5ff}
+.lbl.core.e9{color:#ffb48f} .lbl.core.e9::before{background:#ffb48f}
+.lbl.dim{color:var(--studio-ink-3)} .lbl.dim::before{background:var(--studio-ink-3)} .lbl.dim small{color:var(--studio-ink-3)}
+.lbl.bad{color:#ff9a8f} .lbl.bad::before{background:#ff9a8f}
+.sh{position:absolute;left:18px;top:16px;pointer-events:none;max-width:72%}
+.sh .eyebrow{color:var(--studio-ink-3)}
+.sh .big{font-size:21px;font-weight:700;color:var(--studio-ink);letter-spacing:-.02em;margin-top:4px;line-height:1.15}
+.sh .vs{font:500 11px "JetBrains Mono",monospace;color:var(--studio-ink-2);margin-top:4px}
+.sc{position:absolute;left:18px;bottom:16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.sc .pill{font:600 12px Inter,sans-serif;padding:7px 13px;border-radius:999px;border:1px solid var(--studio-line);background:var(--studio-2);color:var(--studio-ink);cursor:pointer}
+.sc .pill:hover{border-color:var(--studio-ink-3)}
+.sc .pill.on{border-color:var(--studio-accent);color:var(--studio-accent)}
+.sc label{font:600 10.5px "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--studio-ink-3);display:flex;align-items:center;gap:8px}
+.sc input[type=range]{width:110px;accent-color:var(--studio-accent);margin:0}
+.snote{position:absolute;right:18px;bottom:16px;font:500 10.5px "JetBrains Mono",monospace;color:var(--studio-ink-3);letter-spacing:.04em;text-align:right;line-height:1.5}
+#fallback{position:absolute;inset:0;display:none;align-items:center;justify-content:center;text-align:center;padding:30px;color:var(--studio-ink-2)}
+.prog{position:absolute;left:0;right:0;top:0;height:3px;background:var(--studio-line)}
+.prog i{display:block;height:100%;width:0;background:var(--studio-accent);transition:width .15s linear}
+.kpis{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);background:var(--panel)}
+.kpi{padding:14px 20px 13px;border-right:1px solid var(--line)}
+.kpi:last-child{border-right:0}
+.kpi .v{font-size:25px;font-weight:800;letter-spacing:-.03em;line-height:1.1;color:var(--ink)}
+.kpi .k{font:600 10.5px "JetBrains Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-top:5px}
+.kpi .s{font-size:11px;color:var(--ink-3);margin-top:2px;line-height:1.4}
+
+/* ---------- scoreboard ---------- */
+section.how{margin-top:26px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px 22px 18px;box-shadow:var(--shadow)}
+.how h3{margin:0;font-size:18px;font-weight:700;letter-spacing:-.01em}
+.how .hs{font:500 11.5px "JetBrains Mono",monospace;color:var(--ink-3);margin-top:5px}
+.mx{width:100%;border-collapse:separate;border-spacing:0;font-size:12px;margin-top:14px}
+.mx th,.mx td{padding:6px 4px;text-align:center;border-bottom:1px solid var(--line)}
+.mx th{font:600 9.5px "JetBrains Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);line-height:1.25;vertical-align:bottom}
+.mx th b{display:block;font-size:11px;color:var(--ink);letter-spacing:0}
+.mx td.v{text-align:left;font-weight:700;white-space:nowrap;padding-left:0}
+.mx td.v a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--ink-3)}
+.mx td.v a.gap{color:var(--amber)}
+.mx .h6{background:color-mix(in srgb,var(--euv) 10%,transparent)} .mx .h7{background:color-mix(in srgb,var(--etch) 10%,transparent)} .mx .h9{background:color-mix(in srgb,var(--dep) 12%,transparent)}
+.mx th.h6{color:var(--euv)} .mx th.h7{color:var(--etch)} .mx th.h9{color:var(--dep)}
+.dot{display:inline-block;width:11px;height:11px;border-radius:50%;background:var(--green-2)}
+.ring{display:inline-block;width:10px;height:10px;border-radius:50%;border:2px solid var(--ink-3);opacity:.7}
+.none{color:var(--line)}
+.mx td.sc{font-weight:800;font-size:14px}
+.mx td.sc.hot{color:var(--amber)}
+.mx tr.on td{background:color-mix(in srgb,var(--green-2) 8%,transparent)}
+.charts{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:16px}
+.chart{position:relative}
+.chart .ct{font-size:13px;font-weight:700;margin-bottom:4px}
+.chart .cs{font:500 10.5px "JetBrains Mono",monospace;color:var(--ink-3);margin-bottom:6px}
+.chart svg{width:100%;height:230px;display:block}
+.chart .gl{stroke:var(--line);stroke-width:1}
+.chart .ax{stroke:var(--ink-3);stroke-width:1}
+.chart .tk,.chart .xs{font:500 10.5px "JetBrains Mono",monospace;fill:var(--ink-3)}
+.chart .xl{font:600 11.5px Inter,sans-serif;fill:var(--ink-2)}
+.chart .xl.on{fill:var(--ink)}
+.chart .val{font:600 12.5px Inter,sans-serif;fill:var(--ink-2)}
+.chart .bar{fill:var(--bar-off);cursor:pointer;transition:fill .2s}
+.chart .bar.on{fill:var(--bar-on)}
+.chart .bar.ghost{fill:var(--bar-ghost)}
+.chart .bar:hover{opacity:.82}
+.chart .hit{fill:transparent;cursor:pointer}
+.tip{position:absolute;pointer-events:none;background:var(--ink);color:var(--bg);font:500 11.5px Inter,sans-serif;padding:6px 9px;border-radius:7px;display:none;white-space:nowrap;z-index:3}
+.take{font-size:14px;font-weight:600;margin-top:12px;color:var(--ink)}
+.cav{font-size:11.5px;color:var(--ink-3);margin-top:5px;line-height:1.5}
+
+/* ---------- cards below ---------- */
+section.explain{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 16px 14px;box-shadow:var(--shadow)}
+.card .n{font:700 11px "JetBrains Mono",monospace;color:var(--green-2);letter-spacing:.08em}
+.card .n.m6{color:var(--euv)}.card .n.m7{color:var(--etch)}.card .n.m9{color:var(--dep)}
+.card h4{margin:4px 0 6px;font-size:16px;letter-spacing:-.01em}
+.card p{margin:0 0 6px;color:var(--ink-2);font-size:13.5px;line-height:1.5}
+h2{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin:34px 0 12px;font-weight:700}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+table.nums{width:100%;border-collapse:collapse;font-size:13px}
+.nums th,.nums td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+.nums th{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+.nums td.v{font-weight:600}
+.nums td.src{max-width:170px;white-space:normal;color:var(--ink-3);font-size:11.5px}
+footer{margin-top:30px;color:var(--ink-3);font-size:12px;line-height:1.5;border-top:1px solid var(--line);padding-top:14px}
+@media (max-width:900px){section.explain{grid-template-columns:1fr}.grid2,.charts{grid-template-columns:1fr}}
+@media (max-width:900px){
+  .stage{grid-template-columns:1fr;grid-template-rows:auto auto auto;height:auto;min-height:0}
+  .side{border-right:0;border-bottom:1px solid var(--line);max-height:none;order:2}
+  .studio{height:58vh;min-height:360px;order:1}
+  .kpis{order:3;grid-template-columns:1fr 1fr}
+  .kpi .v{font-size:20px}
+  .sh .big{font-size:17px}.sh{max-width:88%}
+  .snote{display:none}
+  .mx{font-size:10px}.mx th{font-size:8px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div>
+      <h1>The Harder <span>Three</span></h1>
+      <div class="sub">Of the twelve DRAM construction steps, three get harder from 1a to 1d: more EUV layers, a narrower and deeper capacitor hole, a thinner high-k film on a taller wall. Walk through them in 3D, see whose tool is core at each one, and read the scoreboard the equipment map produces. Companion to <a href="dram-process-lab.html">The DRAM Process Lab</a> (its equipment map is the one scored here).</div>
+    </div>
+    <div style="display:flex;gap:8px;align-items:center">
+      <div class="tabs" role="tablist">
+        <a href="dram-process-lab.html">← The DRAM Process Lab</a>
+        <a href="dram-cell-lab.html">The DRAM Cell Lab</a>
+        <a href="wafer-lab.html">The Wafer Path</a>
+        <a href="logic-lithography-lab.html">Logic Lithography</a>
+      </div>
+      <button class="themebtn" id="themeBtn" title="Toggle theme" aria-label="Toggle theme">◐</button>
+    </div>
+  </header>
+
+  <div class="stage" id="stage">
+    <aside class="side" id="side">
+      <div class="eyebrow" id="stepN">Step 1 of 6</div>
+      <div class="t" id="stepTitle"></div>
+      <div class="stepper" id="stepper"></div>
+      <div class="nav"><button id="prevBtn">← Prev</button><button id="nextBtn">Next →</button><button id="walkBtn" class="walk">Walk me through it</button><input type="range" id="stepRange" min="0" max="5" step="1" value="0" aria-label="Step"></div>
+      <p id="stepBody"></p>
+      <div class="who" id="stepWho"></div>
+      <dl class="kv" id="stepKv"></dl>
+
+      <hr class="sep">
+      <div class="eyebrow">Editable example · the two choices that move the answer</div>
+      <div class="t s">Same map. Two dials.</div>
+      <p>The core / adjacent cells are the Process Lab’s own equipment map, unchanged. What you can change is which EUV-layer ladder the scene draws and how the three harder steps are weighted in the scoreboard.</p>
+      <div class="f"><label>EUV layers per DRAM node <span id="ladFact"></span></label><div class="seg" id="ladSeg"></div><div class="h" id="ladHint"></div></div>
+      <div class="f"><label>Weighting of the three harder steps <span id="wFact"></span></label><div class="seg" id="wSeg"></div><div class="h" id="wHint"></div></div>
+      <div class="formula" id="formula"></div>
+      <div class="hint" style="margin-top:12px">Geometry is schematic: hole counts, heights and film thickness show direction, not measured dimensions. Nothing in the scene is a manufacturer’s recipe.</div>
+    </aside>
+
+    <div class="studio">
+      <div id="glbox">
+        <canvas id="gl"></canvas>
+        <div id="labels"></div>
+        <div id="fallback">The 3D scene needs WebGL and the three.js library from cdnjs. The steps, scoreboard and numbers still work.</div>
+      </div>
+      <div class="prog"><i id="prog"></i></div>
+      <div class="sh"><div class="eyebrow">1a → 1d · three dimensional view</div><div class="big" id="vTitle"></div><div class="vs" id="vSub"></div></div>
+      <div class="sc"><button class="pill" id="cutBtn">Cutaway</button><button class="pill" id="tagBtn">Vendor tags</button><button class="pill" id="replayBtn">Replay step</button></div>
+      <div class="snote">geometry is schematic<br>drag to orbit · scroll to zoom · ← → steps</div>
+    </div>
+
+    <div class="kpis">
+      <div class="kpi"><div class="v" id="k1">—</div><div class="k" id="k1k"></div><div class="s" id="k1s"></div></div>
+      <div class="kpi"><div class="v" id="k2">—</div><div class="k" id="k2k"></div><div class="s" id="k2s"></div></div>
+      <div class="kpi"><div class="v" id="k3">—</div><div class="k" id="k3k"></div><div class="s" id="k3s"></div></div>
+      <div class="kpi"><div class="v" id="k4">—</div><div class="k" id="k4k"></div><div class="s" id="k4s"></div></div>
+    </div>
+  </div>
+
+  <section class="how" id="how">
+    <h3>Who is in the way of each harder step? The equipment map, scored</h3>
+    <div class="hs" id="howSub"></div>
+    <table class="mx" id="mx"></table>
+    <div class="charts">
+      <div class="chart" id="chartA"><div class="ct">Core matches in the three harder steps</div><div class="cs" id="csA"></div><div class="tip" id="tipA"></div></div>
+      <div class="chart" id="chartB"><div class="ct">Core matches across all twelve steps</div><div class="cs">breadth · the same map, every step counted once</div><div class="tip" id="tipB"></div></div>
+    </div>
+    <div class="take" id="take"></div>
+    <div class="cav" id="cav"></div>
+  </section>
+
+  <section class="explain" id="explain">
+    <div class="card"><div class="n m6">06 · EXPOSE — MORE EUV LAYERS</div><h4>The stencil gets drawn with EUV more often</h4><p>EUV layers per DRAM node climb ~2 at 1a → 3 at 1b → 5 at 1c → 8 at 1d, into the low teens at 0b/0c; total DRAM EUV exposures 3.4 MWPM (2025) → 26.3 MWPM (2030), lifting DRAM from 26% to 44% of all EUV exposures.<span class="src"> Bernstein · Dai, 2026-07-30</span> The variant ladder: 1a ~0-1 → 1b ~3-4 → 1c ~6-7 → 1d ~10 by about 2028.<span class="src"> BofA ASML callback, 2026-04-15</span> ASML: “for any of the three DRAM customers we do expect for the next few nodes the number of EUV layers to continue to grow”; 1d “about 2028”.<span class="src"> ASML management call, 2026-04-21</span></p><p><b>Core here:</b> ASML (scanner, the only EUV source) and Tokyo Electron (coat / develop track, 91% world share). EUV does not drill the hole: more exposures do not mean more deposited material, and EUV can remove DUV multi-patterning steps.</p></div>
+    <div class="card"><div class="n m7">07 · ETCH THE OPENING — NARROWER, DEEPER</div><h4>The hole the capacitor lives in gets a higher aspect ratio</h4><p>A narrow deep opening is harder to keep straight: bowing, incomplete etch and bottom clearing all get more demanding, and the mask has to survive longer (the Process Lab’s etch delta card; geometry qualitative). 4F² later makes it an etch story in the Z direction: “higher pillars… will bring about challenges for tilt/leaning that will require higher aspect ratio etching as well as conductor etching”.<span class="src"> UBS · Gaudois / Arcuri, 4F² note, 2026-01-14</span></p><p><b>Core here:</b> Lam (Flex dielectric etch, listed first in UBS’s key DRAM etch vendors with Tokyo Electron and AMAT) and Tokyo Electron (capacitor-etch PORs at all leading customers; FY27 etch guided +25-30%, &gt;50% dielectric-etch share).<span class="src"> TEL FY26 results, 2026-04-30; Kawai, Q1 FY27 call, 2026-07-30</span></p></div>
+    <div class="card"><div class="n m9">09 · ADD THE DIELECTRIC — THINNER FILM, TALLER WALL</div><h4>ALD has to coat the whole wall evenly</h4><p>The high-k film is deposited by repeated surface reactions down a taller, narrower cup; pinholes or thickness variation mean leakage, and a thinner film on a taller wall leaves less margin (the Process Lab’s deposition delta card). Incomplete conformality in high-aspect-ratio ALD is a modelled failure mode, not a slogan.<span class="src"> arXiv 2210.00749 (2022), via the Process Lab</span></p><p><b>Core here:</b> Tokyo Electron (batch high-k capacitor deposition on its DRAM roadmap)<span class="src"> TEL Investors’ Guide, 2025-05-09</span> and ASM International (ALD high-k / MIM capacitor portfolio; DRAM ALD and epi qualifications reported, with qualified-layer benefits expected in two to three years while growth today is capacity-led).<span class="src"> ASM management, BofA-hosted call, 2026-08-20</span></p></div>
+  </section>
+
+  <section id="more">
+    <h2>The numbers behind the sketch</h2>
+    <div class="grid2">
+      <div class="card">
+        <h4 style="margin:0 0 8px">Per vendor — the figure the wiki holds, and what limits it</h4>
+        <table class="nums">
+          <tr><th>Vendor</th><th>The number</th><th>Live limiter</th><th>Source</th></tr>
+          <tr><td class="v"><a href="../TOKYOELEC.md">Tokyo Electron</a></td><td>91% world coater / developer share (CY2025); FY27 track +50%+ on DRAM EUV adoption and logic EUV multi-patterning, etch +25-30% on DRAM capacitor PORs at all leading customers</td><td>FY26 GM −1.8 pts, OPM −3.1 pts; China ~34% of revenue</td><td class="src">TEL FY26 results, 2026-04-30; Kawai, 2026-07-30</td></tr>
+          <tr><td class="v"><a href="../ASML.md">ASML</a></td><td>EUV layers per DRAM node 2 / 3 / 5 / 8; DRAM 26% → 44% of EUV exposures 2025 → 2030; DRAM litho intensity ~20% (1Y/1Z) → 26% (1c) → ~30% (1d); Investor Day: DRAM EUV exposures ~5 (2025) → 7-10 (2030), 2-3 of them High-NA</td><td>4F² air-pocket bear vs ASML’s own rebuttal; High-NA at 1d / 2027 (Bernstein) vs 0a, choice open (ASML; UBS)</td><td class="src">Bernstein · Dai, 2026-07-30 and 2026-09-01; ASML Investor Day, 2024-11-14; UBS APAC tour, 2026-09-22</td></tr>
+          <tr><td class="v"><a href="../LRCX.md">Lam Research</a></td><td>Listed first among key DRAM etch vendors (with Tokyo Electron, AMAT); “C27 WFE growth led by DRAM, followed by F/L and NAND”</td><td>Morgan Stanley: DRAM pricing near a second-derivative peak, memory late-cycle by 4Q26, weighing on memory-levered semicap</td><td class="src">UBS, 2026-01-14; Lam mgmt, Jefferies conference, 2026-08-27; MS semicap, 2026-09-08</td></tr>
+          <tr><td class="v"><a href="../AMAT.md">Applied Materials</a></td><td>“DRAM, we’ve grown 10 points of wafer fab equipment share over a little over a decade”; JulQ new projects ~50% DRAM</td><td>Chinese DRAM-equipment localisation 40-50% in 2026 (from 20-30%) in etch, deposition, cleaning, CMP</td><td class="src">AMAT mgmt/IR, Communacopia week, 2026-09-09; Jefferies conference, 2026-08-27; UBS APAC tour, 2026-09-22</td></tr>
+          <tr><td class="v"><a href="themes/semicap-wfe.md" style="color:var(--amber)">ASM International</a> <span class="tag">no wiki page</span></td><td>DRAM ALD / epitaxy qualifications reported; qualified-layer benefits expected in two to three years; growth today capacity-led</td><td>No DRAM revenue-mix figure in the corpus; coverage is logic-led (1.4nm ALD share of wallet)</td><td class="src">ASM management, BofA-hosted call, 2026-08-20</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <h4 style="margin:0 0 8px">Disputed pairs and corpus gaps — shown, not silently resolved</h4>
+        <table class="nums">
+          <tr><th>Item</th><th>Side A</th><th>Side B</th><th>Status</th></tr>
+          <tr><td class="v">EUV layers per DRAM node</td><td>2 / 3 / 5 / 8 at 1a / 1b / 1c / 1d<span class="src"> Bernstein · Dai, 2026-07-30</span></td><td>~0-1 / 3-4 / 6-7 / ~10 by 2028<span class="src"> BofA ASML callback, 2026-04-15</span></td><td><span class="tag">both carried</span></td></tr>
+          <tr><td class="v">High-NA insertion node in DRAM</td><td>1d, 2027<span class="src"> Bernstein · Dai, 2026-07-06 and 2026-09-01</span></td><td>0a, choice still open<span class="src"> ASML framing; UBS APAC tour, 2026-09-22</span></td><td><span class="tag">open</span> this lab assumes no High-NA at 1d</td></tr>
+          <tr><td class="v">4F² and litho intensity</td><td>bear: 4F² around 0a creates an EUV demand air-pocket</td><td>ASML “pushed back on the idea that 4F² DRAM architectures create an EUV demand cliff”: more advanced litho, higher immersion and EUV intensity<span class="src"> Bernstein HNA primer, 2026-09-01</span></td><td><span class="tag">contested</span></td></tr>
+          <tr><td class="v">Dollar weight per harder step</td><td>DRAM litho intensity ~26% (1c) → ~30% (1d) of DRAM WFE<span class="src"> Bernstein, 2026-07-30</span></td><td>DRAM etch and deposition shares of WFE: not found in the corpus</td><td><span class="tag r">gap</span> why the scoreboard weights steps, not dollars</td></tr>
+          <tr><td class="v">ASM DRAM revenue mix · Lam DRAM etch share</td><td colspan="2">not found in the corpus; only ordinal vendor lists (UBS 2026-01-14) and Tokyo Electron’s own &gt;50% dielectric-etch share claim</td><td><span class="tag r">gap</span></td></tr>
+        </table>
+        <div class="n" style="color:var(--red);margin-top:14px">NOT IN THE WIKI</div>
+        <p style="margin:4px 0 0;color:var(--ink-2);font-size:13px;line-height:1.5">Capacitor aspect ratios per node at the Big 3 (only CXMT G5 45:1, MS 2026-09-20, on the Wafer Path); high-k film thickness per node; which mask each DRAM maker prints with EUV at 1d; chamber time or tool counts per step; any customer’s actual 1d tool selection. The scene draws direction (more planes, a narrower deeper hole, a thinner film), never magnitude. “Core” and “adjacent” are the Process Lab’s portfolio mapping, not a confirmed supplier list.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Sources: Capstone wiki pages ASML, LRCX, AMAT, TOKYOELEC and theme semicap-wfe; Bernstein (Dai, 2026-07-06, 2026-07-30, 2026-09-01), BofA ASML callback (2026-04-15), ASML management (2026-04-21) and Investor Day (2024-11-14), Tokyo Electron FY26 results (2026-04-30), Q1 FY27 (2026-07-30) and Investors’ Guide (2025-05-09), UBS (4F² note 2026-01-14; APAC tour 2026-09-22), Jefferies semiconductor conference (2026-08-27), AMAT at Communacopia week (2026-09-09), Morgan Stanley semicap (2026-09-08), ASM International BofA-hosted call (2026-08-20), as dated. The 5 × 12 core / adjacent map is the DRAM Process Lab’s supplierMap (versão codex), scored here unchanged. “TEL” on this page is Tokyo Electron (wiki TOKYOELEC), never TE Connectivity (wiki TEL). Scene geometry is schematic. Built 2026-10-14.
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+"use strict";
+const $=s=>document.querySelector(s);
+try{const t=localStorage.getItem("h3-theme"); if(t) document.documentElement.setAttribute("data-theme",t);}catch(e){}
+const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+$("#themeBtn").onclick=()=>{ const isDark=css("--bg").toLowerCase()==="#0b0d10"; const nt=isDark?"light":"dark"; document.documentElement.setAttribute("data-theme",nt); try{localStorage.setItem("h3-theme",nt);}catch(e){} };
+
+/*__DATA__*/
+// The twelve construction steps of the DRAM Process Lab (dram-process-lab.html), in its order.
+const STEPS12=[["01","Isolate"],["02","Transistor"],["03","Contacts"],["04","Mold"],["05","Coat resist"],["06","Expose"],["07","Etch opening"],["08","Electrode"],["09","Dielectric"],["10","Common plate"],["11","Wire"],["12","Test"]];
+const HARD=[5,6,8];                 // indices of the three steps that get harder at 1d (06, 07, 09) — the Process Lab's three delta cards
+const MECHCLS={5:"6",6:"7",8:"9"};
+// Vendor × step map, copied cell by cell from the Process Lab's supplierMap. 2 = core process match, 1 = adjacent / conditional, 0 = not directly assigned.
+const VEND=[
+ {id:"tel", name:"Tokyo Electron", short:"TEL", wiki:"../TOKYOELEC.md", wikiNote:"TOKYOELEC, never TEL = TE Connectivity", map:[2,2,2,2,2,2,2,1,2,1,2,2],
+  num:"91% coater / developer share · FY27 track +50%+, etch +25-30%", numSrc:"TEL FY26 results, 2026-04-30; Kawai, Q1 FY27, 2026-07-30",
+  lim:"Margins went the wrong way: FY26 GM −1.8 pts, OPM −3.1 pts; China ~34% of revenue", limSrc:"TEL FY26 results, 2026-04-30",
+  role:{5:"coat / develop track (CLEAN TRACK)",6:"capacitor / high-aspect-ratio dielectric etch",8:"batch high-k capacitor deposition"}},
+ {id:"asml", name:"ASML", short:"ASML", wiki:"../ASML.md", map:[1,1,1,0,1,2,1,0,0,0,2,0], sole:true,
+  num:"2 · 3 · 5 · 8 EUV layers per node (1a / 1b / 1c / 1d) · DRAM 26% → 44% of EUV exposures 2025 → 2030", numSrc:"Bernstein · Dai, 2026-07-30",
+  lim:"4F² air-pocket bear vs ASML’s rebuttal; High-NA at 1d / 2027 (Bernstein) vs 0a, open (ASML; UBS)", limSrc:"Bernstein, 2026-09-01; UBS APAC tour, 2026-09-22",
+  role:{5:"EUV and DUV scanners — the only EUV source",6:"mask patterned upstream; no EUV photons dig the hole"}},
+ {id:"lam", name:"Lam Research", short:"Lam", wiki:"../LRCX.md", map:[2,2,2,1,1,1,2,1,1,1,2,0],
+  num:"#1 in UBS’s key DRAM etch vendor list (with Tokyo Electron, AMAT) · “C27 WFE growth led by DRAM”", numSrc:"UBS 4F² note, 2026-01-14; Lam mgmt, Jefferies conference, 2026-08-27",
+  lim:"Late-cycle call: DRAM pricing near a second-derivative peak, memory late-cycle by 4Q26", limSrc:"Morgan Stanley semicap, 2026-09-08",
+  role:{5:"dry-resist / pattern-transfer etch (Aether)",6:"Flex dielectric etch — capacitor-cell applications",8:"Striker dielectric ALD — conformal capability"}},
+ {id:"asm", name:"ASM International", short:"ASM", wiki:"themes/semicap-wfe.md", wikiGap:"no ASMI page — theme only", map:[1,1,1,1,1,1,0,1,2,1,1,0],
+  num:"DRAM revenue mix: not found in the corpus · qualified-layer DRAM benefits 2–3 years out", numSrc:"ASM management, BofA-hosted call, 2026-08-20",
+  lim:"Logic-led coverage: the corpus has ASM on 1.4nm ALD share of wallet, not on DRAM", limSrc:"ASM management, 2026-08-20",
+  role:{5:"ALD underlayers and spacer films",8:"ALD high-k / MIM capacitor portfolio"}},
+ {id:"amat", name:"Applied Materials", short:"Applied", wiki:"../AMAT.md", map:[2,2,2,2,1,1,1,2,1,2,2,1],
+  num:"+10 pts of DRAM WFE share in about a decade · JulQ new projects ~50% DRAM", numSrc:"AMAT mgmt/IR, Communacopia week, 2026-09-09; Jefferies conference, 2026-08-27",
+  lim:"China: DRAM-equipment localisation 40-50% in 2026 (from 20-30%) in etch, deposition, cleaning, CMP", limSrc:"UBS APAC tour, 2026-09-22",
+  role:{5:"hard-mask and materials-engineering steps",6:"capacitor hard-mask engineering",8:"ALD / integrated materials portfolio — qualification required"}},
+];
+// EUV-layer ladders (planes drawn above each block). Two sources, both carried.
+const LADDERS={
+ bern:{name:"Bernstein",sub:"2 / 3 / 5 / 8",a:2,d:8,txt:"~2 at 1a → 3 at 1b → 5 at 1c → 8 at 1d, into the low teens at 0b/0c",src:"Bernstein · Dai, ASML Best Idea 3Q26, 2026-07-30"},
+ bofa:{name:"BofA / ASML",sub:"~0-1 / 3-4 / 6-7 / ~10",a:1,d:10,txt:"1a ~0-1 → 1b ~3-4 → 1c ~6-7 → 1d ~10 by about 2028",src:"BofA ASML callback, 2026-04-15 (ASML page)"},
+};
+const WEIGHTS={
+ eq:{name:"Equal",sub:"1 · 1 · 1",w:{5:1,6:1,8:1},txt:"each harder step counts once — a core match is one point, adjacent is zero",src:"the Process Lab’s map, unweighted"},
+ litho:{name:"Exposure ×3",sub:"3 · 1 · 1",w:{5:3,6:1,8:1},txt:"exposure counts three times, standing in for the step with a single-vendor tool (DRAM litho intensity ~26% → ~30% of DRAM WFE at 1c → 1d)",src:"Bernstein · Dai, 2026-07-30; the ×3 itself is a placeholder"},
+};
+const X={lad:"bern",w:"eq"};
+function scores(){ const w=WEIGHTS[X.w].w; return VEND.map(v=>({v,hard:HARD.reduce((a,i)=>a+(v.map[i]===2?w[i]:0),0),hardN:HARD.filter(i=>v.map[i]===2).length,all:v.map.filter(m=>m===2).length})).sort((a,b)=>b.hard-a.hard||b.all-a.all); }
+const maxHard=()=>HARD.reduce((a,i)=>a+WEIGHTS[X.w].w[i],0);
+
+const STEPS=[
+ {short:"12 → 3",cls:"",t:"Twelve steps. Three get harder.",
+  b:()=>`The Process Lab builds a DRAM cell in twelve construction steps and marks, for each one, which of five equipment vendors is a <b>core</b> process match and which is only <b>adjacent</b>. Its three “delta” cards say where 1d is harder than 1a: <span class="m6">06 expose</span> (more EUV layers), <span class="m7">07 etch the opening</span> (a narrower, deeper hole) and <span class="m9">09 add the dielectric</span> (a thinner film on a taller wall). The other nine steps still have to be done, but nothing in the lab says they get harder. Left block: 1a. Right block: 1d.`,
+  who:()=>[],
+  kv:()=>[["Steps","12 · the lab’s construction sequence","dram-process-lab.html"],["Harder at 1d","06 · 07 · 09","the lab’s three delta cards"],["Vendors mapped","ASML · Tokyo Electron · Lam · Applied · ASM","supplierMap, 5 × 12"]],
+  kpi:()=>[["12","construction steps","the Process Lab’s sequence"],["3","get harder at 1d","expose · etch · dielectric"],["5","vendors on the map","core / adjacent per step"],["0","new facts added","cells copied, not re-judged"]]},
+ {short:"06",cls:"m6",t:"06 · Expose: more EUV layers per node",
+  b:()=>{const L=LADDERS[X.lad]; return `Lithography draws the stencil; more of the critical layers get drawn with EUV at each node. The planes above each block are the EUV layers: <b>${L.a} at 1a</b>, <b>${L.d} at 1d</b> (${L.name}: ${L.txt}).<span class="src"> ${L.src}</span> DRAM goes from 26% to 44% of all EUV exposures between 2025 and 2030, and DRAM litho intensity from ~20% (1Y/1Z) to 26% (1c) to ~30% (1d).<span class="src"> Bernstein · Dai, 2026-07-30</span> ASML: “for any of the three DRAM customers we do expect for the next few nodes the number of EUV layers to continue to grow”; 1d “about 2028”.<span class="src"> ASML management, 2026-04-21</span> The scanner is the only EUV source; the coat / develop track beside it is Tokyo Electron’s at 91% world share.`;},
+  who:()=>whoAt(5),
+  kv:()=>{const L=LADDERS[X.lad]; return [["Layers 1a → 1d",L.a+" → "+L.d+" ("+L.sub+")",L.src],["DRAM share of EUV","26% → 44%, 2025 → 2030","Bernstein, 2026-07-30"],["Offsets","scanner productivity, fewer wafer starts, EUV removing DUV multi-patterning","the Process Lab"]];},
+  kpi:()=>{const L=LADDERS[X.lad]; return [[L.a+" → "+L.d,"EUV layers, 1a → 1d",L.name+" · "+L.src.split(",")[0]],["26% → 44%","DRAM share of EUV exposures","2025 → 2030 · Bernstein, 2026-07-30"],["~30%","DRAM litho intensity at 1d","from 26% at 1c · Bernstein, 2026-07-30"],["2028","1d in volume, per ASML","management call, 2026-04-21"]];}},
+ {short:"07",cls:"m7",t:"07 · Etch the opening: narrower and deeper",
+  b:()=>`The capacitor sits in a hole etched down through the mold to the storage contact. At 1d the hole is narrower and the mold is taller, so the aspect ratio rises: bowing, incomplete etch and bottom clearing all get harder, and the hard mask has to survive a longer etch (the lab’s etch delta card; drawn direction only). EUV does not dig this hole; plasma does. <b>Core here:</b> Lam’s Flex dielectric etch, listed first among UBS’s key DRAM etch vendors,<span class="src"> UBS, 2026-01-14</span> and Tokyo Electron, with capacitor-etch PORs at all leading customers and FY27 etch guided +25-30%.<span class="src"> TEL FY26 results, 2026-04-30; Kawai, 2026-07-30</span> Later, 4F² adds taller pillars and tilt / leaning: more etch in the Z direction.<span class="src"> UBS 4F² note, 2026-01-14</span>`,
+  who:()=>whoAt(6),
+  kv:()=>[["What changes","narrower hole, taller mold → higher aspect ratio","lab delta card, qualitative"],["Tokyo Electron","capacitor PORs at all leading customers · >50% dielectric-etch share","TEL FY26 results, 2026-04-30"],["Lam","Flex capacitor-cell applications · #1 in UBS’s DRAM etch list","UBS, 2026-01-14"]],
+  kpi:()=>[["AR ↑","aspect ratio of the hole","direction only · no Big-3 figure in the wiki"],["+25-30%","TEL FY27 etch guide","DRAM capacitor PORs, HBM, GAA · 2026-04-30"],[">50%","TEL dielectric-etch share","TEL FY26 deck, 2026-04-30"],["#1","Lam in UBS’s DRAM etch list","with Tokyo Electron, AMAT · 2026-01-14"]]},
+ {short:"09",cls:"m9",t:"09 · Add the dielectric: a thinner film on a taller wall",
+  b:()=>`Inside the hole the storage electrode is a cup; the high-k dielectric is an insulating film laid over it by atomic layer deposition, one surface reaction at a time, from the rim down to the bottom. At 1d the wall is taller and the film thinner, so pinholes or thickness variation — leakage — have less margin (the lab’s deposition delta card). <b>Core here:</b> Tokyo Electron, with batch high-k capacitor deposition on its DRAM roadmap,<span class="src"> TEL Investors’ Guide, 2025-05-09</span> and ASM International, whose ALD high-k / MIM portfolio is the most targeted fit — but a capability is not proof of 1d share: management puts qualified-layer DRAM benefits two to three years out and calls today’s growth capacity-led.<span class="src"> ASM, BofA-hosted call, 2026-08-20</span> The corpus has no ASM DRAM revenue mix.`,
+  who:()=>whoAt(8),
+  kv:()=>[["What changes","taller cup, thinner film → less margin for pinholes","lab delta card, qualitative"],["Tokyo Electron","batch high-k capacitor deposition","Investors’ Guide, 2025-05-09"],["ASM","ALD high-k / MIM · benefits 2–3 years out","BofA call, 2026-08-20"]],
+  kpi:()=>[["thinner","high-k film on a taller wall","direction only · no nm figure in the wiki"],["batch","TEL high-k capacitor deposition","Investors’ Guide, 2025-05-09"],["2–3 yrs","ASM’s lag to qualified-layer benefits","BofA-hosted call, 2026-08-20"],["n/a","ASM DRAM revenue mix","not found in the corpus"]]},
+ {short:"Score",cls:"",t:"Who is in the way: the scoreboard",
+  b:()=>{const s=scores(),W=WEIGHTS[X.w]; const top=s[0]; return `Count the core matches in the three harder steps and the order falls out of the map itself: <b>${top.v.name} ${top.hard} of ${maxHard()}</b>${X.w==="eq"?" — core in all three":" under the "+W.name+" weighting"}; ${s.slice(1).map(r=>r.v.short+" "+r.hard).join(" · ")}. The ghost pillars behind count core matches across <i>all</i> twelve steps: Applied 7 of 12, Tokyo Electron 10 of 12. <b>Breadth is not incremental benefit</b>: Applied is core in seven steps but in none of the three that get harder; ASML is core in one, but it is the only source for that one. Today the Process Lab’s text ranks ASML first without saying which weighting makes that true. Try the Exposure ×3 dial: Tokyo Electron still leads, because its track is core at exposure too.`;},
+  who:()=>[],
+  kv:()=>{const s=scores(); return s.map(r=>[r.v.short,r.hard+" of "+maxHard()+" harder · "+r.all+" of 12 overall",r.v.sole?"only EUV source":""]);},
+  kpi:()=>{const s=scores(); const f=s.find(r=>r.v.id==="tel"),a=s.find(r=>r.v.id==="asml"),m=s.find(r=>r.v.id==="amat"); return [[f.hard+" of "+maxHard(),"Tokyo Electron, harder steps","track · capacitor etch · batch high-k"],[a.hard+" of "+maxHard(),"ASML, harder steps","exposure only, but sole source"],[m.all+" of 12","Applied, all steps","0 of the three harder ones"],[WEIGHTS[X.w].name,"weighting in use",WEIGHTS[X.w].sub+" · dial in the side panel"]];}},
+ {short:"Assume",cls:"",t:"What the ranking assumes, and what the wiki does not have",
+  b:()=>`Two ladders for EUV layers per node are carried, not reconciled: Bernstein’s 2 / 3 / 5 / 8 and BofA’s ~0-1 / 3-4 / 6-7 / ~10 (ghost planes show the other one). High-NA: Bernstein pulls DRAM insertion to 1d in 2027, ASML’s own framing and UBS’s checks put it at 0a with the choice open — this lab draws no High-NA at 1d.<span class="src"> Bernstein, 2026-09-01; UBS APAC tour, 2026-09-22</span> 4F²: the air-pocket bear against ASML’s rebuttal that 4F² needs more advanced litho.<span class="src"> Bernstein HNA primer, 2026-09-01</span> A dollar weighting per step would need DRAM etch and deposition shares of WFE; the corpus only has litho (~26% → ~30%). Not in the corpus: ASM’s DRAM mix, Lam’s DRAM etch share, Big-3 capacitor aspect ratios, film thickness per node.`,
+  who:()=>[],
+  kv:()=>[["Ladder A vs B","2/3/5/8 vs ~0-1/3-4/6-7/~10","Bernstein 07-30 vs BofA 04-15"],["High-NA node","1d (2027) vs 0a (open)","Bernstein vs ASML / UBS"],["Dollar weights","litho ~26% → ~30% only","etch / dep shares: gap"]],
+  kpi:()=>[["2","EUV ladders carried","Bernstein · BofA/ASML"],["1d vs 0a","High-NA insertion node","Bernstein vs ASML / UBS"],["4F²","contested air-pocket","bear vs ASML rebuttal, 2026-09-01"],["2","gaps that block a $ ranking","etch / dep WFE shares; ASM DRAM mix"]]},
+];
+function whoAt(i){ return VEND.filter(v=>v.map[i]>0).sort((a,b)=>b.map[i]-a.map[i]).map(v=>[v.map[i]===2?"core":"adj",v.name,v.role[i]||""]); }
+
+// ---------- side panel ----------
+const S={step:0,walk:false,p:1,t:0,hold:0};
+const stepper=$("#stepper"); STEPS.forEach((s,i)=>{ const b=document.createElement("button"); b.className=s.cls; b.innerHTML="<b>"+(i+1)+"</b><small>"+s.short+"</small>"; b.onclick=()=>{stopWalk(); setStep(i);}; stepper.appendChild(b); });
+const ladSeg=$("#ladSeg"); Object.keys(LADDERS).forEach(k=>{ const L=LADDERS[k]; const b=document.createElement("button"); b.innerHTML="<b>"+L.name+"</b><small>"+L.sub+"</small>"; b.dataset.k=k; b.onclick=()=>{ X.lad=k; renderAll(); }; ladSeg.appendChild(b); });
+const wSeg=$("#wSeg"); Object.keys(WEIGHTS).forEach(k=>{ const W=WEIGHTS[k]; const b=document.createElement("button"); b.innerHTML="<b>"+W.name+"</b><small>"+W.sub+"</small>"; b.dataset.k=k; b.onclick=()=>{ X.w=k; renderAll(); }; wSeg.appendChild(b); });
+function setStep(i,replay){
+  S.step=Math.max(0,Math.min(STEPS.length-1,i)); S.p=0; S.t=0; S.hold=0; if(replay!==false) scene3.onStep(S.step);
+  [...stepper.children].forEach((b,k)=>b.classList.toggle("on",k===S.step)); $("#stepRange").value=S.step;
+  renderStep();
+}
+function renderStep(){
+  const s=STEPS[S.step];
+  $("#stepN").textContent="Step "+(S.step+1)+" of "+STEPS.length+(S.walk?" · walking":"");
+  $("#stepTitle").textContent=s.t; $("#stepBody").innerHTML=s.b();
+  $("#stepWho").innerHTML=s.who().map(r=>"<span class='r "+r[0]+"'>"+(r[0]==="core"?"core":"adjacent")+"</span><span class='v'>"+r[1]+(r[2]?" <small>· "+r[2]+"</small>":"")+"</span>").join("");
+  $("#stepKv").innerHTML=s.kv().map(r=>"<dt>"+r[0]+"</dt><dd>"+r[1]+(r[2]?"<span class='src'> "+r[2]+"</span>":"")+"</dd>").join("");
+  const k=s.kpi(); for(let j=0;j<4;j++){ $("#k"+(j+1)).textContent=k[j][0]; $("#k"+(j+1)+"k").textContent=k[j][1]; $("#k"+(j+1)+"s").textContent=k[j][2]; }
+  $("#vTitle").textContent=s.t;
+  if(!DEBUG) $("#vSub").textContent=S.step===4?"weighting: "+WEIGHTS[X.w].name+" · ladder: "+LADDERS[X.lad].name:S.step===1||S.step===5?"ladder: "+LADDERS[X.lad].name+" ("+LADDERS[X.lad].sub+")":"left block 1a · right block 1d · "+(S.step===2||S.step===3?"cutaway on":"schematic");
+}
+$("#prevBtn").onclick=()=>{stopWalk(); setStep(S.step-1);};
+$("#nextBtn").onclick=()=>{stopWalk(); setStep(S.step+1);};
+$("#stepRange").oninput=e=>{stopWalk(); setStep(+e.target.value);};
+$("#replayBtn").onclick=()=>setStep(S.step);
+document.addEventListener("keydown",e=>{ if(e.target.tagName==="INPUT") return; if(e.key==="ArrowRight"){stopWalk(); setStep(S.step+1);} if(e.key==="ArrowLeft"){stopWalk(); setStep(S.step-1);} });
+function stopWalk(){ S.walk=false; $("#walkBtn").classList.remove("on"); $("#walkBtn").textContent="Walk me through it"; }
+$("#walkBtn").onclick=()=>{ if(S.walk){ stopWalk(); renderStep(); return; } S.walk=true; $("#walkBtn").classList.add("on"); $("#walkBtn").textContent="Stop"; setStep(0); };
+
+function renderDials(){
+  const L=LADDERS[X.lad], W=WEIGHTS[X.w];
+  [...ladSeg.children].forEach(b=>b.classList.toggle("on",b.dataset.k===X.lad)); [...wSeg.children].forEach(b=>b.classList.toggle("on",b.dataset.k===X.w));
+  $("#ladFact").textContent=L.a+" → "+L.d+" planes"; $("#ladHint").innerHTML=L.txt+".<span class='src'> "+L.src+"</span>";
+  $("#wFact").textContent=W.sub; $("#wHint").innerHTML=W.txt+".<span class='src'> "+W.src+"</span>";
+  const s=scores();
+  $("#formula").innerHTML="score = Σ over 06 · 07 · 09 of (core ? weight : 0)<br>"+s.map(r=>"<b>"+r.v.short+"</b> "+r.hard).join(" · ")+" &nbsp;of "+maxHard()+"<br>breadth = core in all 12: "+s.slice().sort((a,b)=>b.all-a.all).map(r=>r.v.short+" "+r.all).join(" · ");
+}
+function renderAll(){ renderDials(); renderStep(); renderBoard(); scene3.sync(); }
+
+// ---------- scoreboard: matrix + two bar charts ----------
+function renderBoard(){
+  const s=scores(), W=WEIGHTS[X.w];
+  let h="<tr><th></th>"+STEPS12.map((st,i)=>"<th class='"+(HARD.includes(i)?"h"+MECHCLS[i]:"")+"'><b>"+st[0]+"</b>"+st[1]+(HARD.includes(i)?"<br>harder at 1d":"")+"</th>").join("")+"<th><b>harder</b>of "+maxHard()+"</th><th><b>all 12</b>core</th></tr>";
+  s.forEach((r,ri)=>{ const v=r.v; h+="<tr"+(ri===0?" class='on'":"")+"><td class='v'><a href='"+v.wiki+"' class='"+(v.wikiGap?"gap":"")+"' title='"+(v.wikiGap||v.wikiNote||v.wiki)+"'>"+v.name+"</a>"+(v.sole?" <span class='tag d'>sole EUV source</span>":"")+(v.wikiGap?" <span class='tag'>no page</span>":"")+"</td>";
+    v.map.forEach((m,i)=>{ const cls=HARD.includes(i)?" class='h"+MECHCLS[i]+"'":""; const t=v.name+" · "+STEPS12[i][0]+" "+STEPS12[i][1]+" · "+(m===2?"core":m===1?"adjacent / conditional":"not assigned")+(v.role[i]?" · "+v.role[i]:""); h+="<td"+cls+" title='"+t.replace(/'/g,"’")+"'>"+(m===2?"<span class='dot'></span>":m===1?"<span class='ring'></span>":"<span class='none'>·</span>")+"</td>"; });
+    h+="<td class='sc"+(ri===0?" hot":"")+"'>"+r.hard+"</td><td class='sc'>"+r.all+"</td></tr>"; });
+  $("#mx").innerHTML=h;
+  $("#howSub").textContent="cells = the Process Lab’s supplierMap, 5 vendors × 12 steps, unchanged · ● core · ○ adjacent · weighting "+W.name+" ("+W.sub+") · ladder "+LADDERS[X.lad].name;
+  $("#csA").textContent="weighting "+W.name+" · "+W.sub+" for 06 · 07 · 09 · max "+maxHard();
+  bars("#chartA","#tipA",s.map(r=>({k:r.v.short,v:r.hard,n:r.v.name,sub:HARD.map(i=>STEPS12[i][0]+" "+(r.v.map[i]===2?"core":r.v.map[i]===1?"adj":"—")).join(" · ")})),maxHard(),false);
+  bars("#chartB","#tipB",s.map(r=>({k:r.v.short,v:r.all,n:r.v.name,sub:r.all+" of 12 steps core"})),12,true);
+  const top=s[0];
+  $("#take").textContent=top.v.name+" leads the harder-step count ("+top.hard+" of "+maxHard()+(X.w==="eq"?", core in all three":", "+W.name+" weighting")+"); Applied has the breadth (7 of 12) but none of the three; ASML is core in one, the only single-source one. Breadth is not incremental benefit.";
+  $("#cav").textContent="The order is derived from the map, not asserted. To put ASML first you need a weighting the map does not contain — dollars per step, or a sole-source premium — and the corpus carries only the litho share of DRAM WFE (~26% → ~30%, Bernstein 2026-07-30), not etch or deposition shares. Hover a cell or bar for the role; click a vendor name for its wiki page.";
+}
+function bars(sel,tipSel,rows,max,ghost){
+  const W=560,H=230,L=36,R=12,T=26,B=42,bw=58,rx=4; const y=v=>T+(H-T-B)*(1-v/max); const slot=(W-L-R)/rows.length;
+  let s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="core matches by vendor">';
+  for(let i=0;i<=max;i+=(max>6?3:1)){ const yy=y(i).toFixed(1); s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+yy+'" y2="'+yy+'" class="gl"/><text x="'+(L-8)+'" y="'+(+yy+3.5)+'" class="tk" text-anchor="end">'+i+'</text>'; }
+  rows.forEach((r,i)=>{ const x=L+slot*i+(slot-bw)/2, on=i===0; const yy=y(r.v), hh=Math.max(H-B-yy,r.v>0?rx+1:0);
+    if(hh>0) s+='<path class="bar'+(ghost?" ghost":"")+(on&&!ghost?" on":"")+'" data-i="'+i+'" d="M'+x+','+(H-B)+' v'+(-(hh-rx))+' a'+rx+','+rx+' 0 0 1 '+rx+','+(-rx)+' h'+(bw-2*rx)+' a'+rx+','+rx+' 0 0 1 '+rx+','+rx+' v'+(hh-rx)+' z"/>';
+    s+='<text x="'+(x+bw/2)+'" y="'+(yy-7)+'" class="val" text-anchor="middle">'+r.v+'</text><text x="'+(x+bw/2)+'" y="'+(H-B+17)+'" class="xl'+(on?" on":"")+'" text-anchor="middle">'+r.k+'</text><rect class="hit" data-i="'+i+'" x="'+(x-6)+'" y="'+T+'" width="'+(bw+12)+'" height="'+(H-T-B)+'"/>'; });
+  s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+(H-B)+'" y2="'+(H-B)+'" class="ax"/></svg>';
+  const box=$(sel), tip=$(tipSel); box.querySelectorAll("svg").forEach(e=>e.remove()); box.insertAdjacentHTML("beforeend",s);
+  const svg=box.querySelector("svg");
+  svg.addEventListener("mousemove",e=>{ const t=e.target.closest("[data-i]"); if(!t){ tip.style.display="none"; return; } const r=rows[+t.dataset.i]; const b=box.getBoundingClientRect(); tip.textContent=r.n+" · "+r.v+" of "+max+" · "+r.sub; tip.style.display="block"; tip.style.left=(e.clientX-b.left+14)+"px"; tip.style.top=(e.clientY-b.top-30)+"px"; });
+  svg.addEventListener("mouseleave",()=>tip.style.display="none");
+}
+
+// =============================== 3D ===============================
+const scene3={onStep(){},sync(){}};
+const DEBUG=/[?&]debug=1/.test(location.search); const NOANIM=/[?&]anim=0/.test(location.search);
+let ok=typeof THREE!=="undefined"; let renderer;
+if(ok){ try{ renderer=new THREE.WebGLRenderer({canvas:$("#gl"),antialias:true,powerPreference:"high-performance"}); }catch(e){ ok=false; } }
+renderDials(); renderStep(); renderBoard();
+if(!ok){ $("#fallback").style.display="flex"; $("#gl").style.display="none"; return; }
+const QUAL={max:Math.min(2.5,Math.max(window.devicePixelRatio||1,2)),cur:0,slow:0};
+QUAL.cur=QUAL.max; renderer.setPixelRatio(QUAL.cur);
+renderer.outputEncoding=THREE.sRGBEncoding; renderer.toneMapping=THREE.ACESFilmicToneMapping; renderer.toneMappingExposure=1.1;
+renderer.shadowMap.enabled=true; renderer.shadowMap.type=THREE.PCFSoftShadowMap; renderer.localClippingEnabled=true;
+const scene=new THREE.Scene(), camera=new THREE.PerspectiveCamera(30,1,0.1,400);
+scene.background=new THREE.Color(css("--studio"));
+scene.add(new THREE.HemisphereLight(0xdfeee6,0x1a2a22,0.55));
+const key=new THREE.DirectionalLight(0xffffff,0.9); key.position.set(6,14,8); scene.add(key); scene.add(key.target);
+key.castShadow=true; key.shadow.mapSize.set(2048,2048); key.shadow.bias=-0.0004; key.shadow.normalBias=0.03; key.shadow.radius=3;
+{ const sc=key.shadow.camera; sc.left=-14; sc.right=14; sc.top=14; sc.bottom=-14; sc.near=1; sc.far=80; sc.updateProjectionMatrix(); }
+const KEY_DIR=new THREE.Vector3(6,14,8).normalize().multiplyScalar(30); let shadowHalf=14;
+const rim=new THREE.DirectionalLight(0x9fe0c0,0.35); rim.position.set(-8,4,-6); scene.add(rim);
+{ const room=new THREE.Scene(); const g=new THREE.BoxGeometry(); const em=i=>{const m=new THREE.MeshBasicMaterial(); m.color.setScalar(i); return m;};
+  const box=new THREE.Mesh(g,new THREE.MeshStandardMaterial({side:THREE.BackSide,color:0x8fa098,roughness:1,metalness:0})); box.scale.set(30,30,30); box.position.set(0,12,0); room.add(box);
+  const lamp=new THREE.PointLight(0xffffff,5,28,2); lamp.position.set(0,14,0); room.add(lamp);
+  const panel=(i,p,sc)=>{ const m=new THREE.Mesh(g,em(i)); m.position.set(p[0],p[1],p[2]); m.scale.set(sc[0],sc[1],sc[2]); room.add(m); };
+  panel(50,[-14,12,6],[0.1,3,4]); panel(50,[-14,16,-6],[0.1,3,4]); panel(18,[14,10,-2],[0.15,5,7]); panel(40,[0,8,14],[5,6,0.1]); panel(20,[3,10,-12],[3,2.5,0.1]); panel(90,[0,26,0],[2,0.1,2]);
+  try{ const pm=new THREE.PMREMGenerator(renderer); scene.environment=pm.fromScene(room,0.04).texture; pm.dispose(); }catch(e){ console.warn("env map skipped",e); } }
+function gridTex(base,line,n,alpha){ const c=document.createElement("canvas"); c.width=c.height=256; const g=c.getContext("2d"); g.fillStyle=base; g.fillRect(0,0,256,256); g.strokeStyle=line; g.lineWidth=1; g.globalAlpha=alpha; const s=256/n; for(let i=0;i<=n;i++){ g.beginPath(); g.moveTo(i*s+0.5,0); g.lineTo(i*s+0.5,256); g.stroke(); g.beginPath(); g.moveTo(0,i*s+0.5); g.lineTo(256,i*s+0.5); g.stroke(); } const t=new THREE.CanvasTexture(c); t.wrapS=t.wrapT=THREE.RepeatWrapping; t.anisotropy=renderer.capabilities.getMaxAnisotropy(); t.encoding=THREE.sRGBEncoding; return t; }
+const TEX={pcb:gridTex("#2a6b4c","#9fe6bd",16,.5),sub:gridTex("#343f3a","#7d998b",20,.3)};
+const lin=h=>new THREE.Color(h).convertSRGBToLinear();
+// cutaway plane: keeps z <= 0 (the back half) when active; constant animates between +40 (off) and 0 (on)
+const CLIP=new THREE.Plane(new THREE.Vector3(0,0,-1),40);
+const clipped=o=>{ o.clippingPlanes=[CLIP]; o.clipShadows=true; return o; };
+const M={
+  sub:new THREE.MeshStandardMaterial({map:TEX.sub,color:0xffffff,metalness:.5,roughness:.35}),
+  layer:new THREE.MeshStandardMaterial({map:TEX.pcb,color:0xffffff,metalness:.15,roughness:.45,emissive:0x0e3d27,emissiveMap:TEX.pcb,emissiveIntensity:.35}),
+  mold:clipped(new THREE.MeshPhysicalMaterial({color:lin(0xa9c7b6),metalness:0,roughness:.25,transparent:true,opacity:.9,depthWrite:false,side:THREE.DoubleSide})),
+  cap:new THREE.MeshStandardMaterial({color:lin(0xa9c7b6),metalness:0,roughness:.4,side:THREE.DoubleSide}),
+  plug:clipped(new THREE.MeshStandardMaterial({color:lin(0x9fb9ab),metalness:0,roughness:.5})),
+  hole:clipped(new THREE.MeshStandardMaterial({color:lin(0x0b1410),metalness:.1,roughness:.9,side:THREE.DoubleSide})),
+  rim:clipped(new THREE.MeshStandardMaterial({color:lin(0xe6efe9),emissive:lin(0x8fe0b3),emissiveIntensity:.35,metalness:.1,roughness:.6,side:THREE.DoubleSide})),
+  cup:clipped(new THREE.MeshStandardMaterial({color:lin(0x9aa5ad),metalness:.8,roughness:.3,side:THREE.DoubleSide})),   // graphite-metal electrode so the orange high-k film stands out
+  film:clipped(new THREE.MeshStandardMaterial({color:lin(0xeb8a4a),emissive:lin(0x7a3410),emissiveIntensity:.45,metalness:.3,roughness:.4,side:THREE.DoubleSide})),
+  plate:clipped(new THREE.MeshStandardMaterial({color:lin(0x5d6f66),metalness:.6,roughness:.4,side:THREE.DoubleSide})),
+  euv:new THREE.MeshStandardMaterial({color:lin(0x8b5cf6),emissive:lin(0x4b2aa0),emissiveIntensity:.5,transparent:true,opacity:.22,depthWrite:false,side:THREE.DoubleSide}),
+  euvGhost:new THREE.MeshStandardMaterial({color:lin(0x8b5cf6),emissive:lin(0x4b2aa0),emissiveIntensity:.2,transparent:true,opacity:.07,depthWrite:false,side:THREE.DoubleSide}),
+  tileOff:new THREE.MeshStandardMaterial({color:lin(0x2a3b33),metalness:.2,roughness:.7}),
+  tile6:new THREE.MeshStandardMaterial({color:lin(0x8b5cf6),emissive:lin(0x5b35c7),emissiveIntensity:.6,metalness:.2,roughness:.5}),
+  tile7:new THREE.MeshStandardMaterial({color:lin(0x2a78d6),emissive:lin(0x1a4f99),emissiveIntensity:.6,metalness:.2,roughness:.5}),
+  tile9:new THREE.MeshStandardMaterial({color:lin(0xeb6834),emissive:lin(0x9a3d16),emissiveIntensity:.6,metalness:.2,roughness:.5}),
+  pillar:new THREE.MeshStandardMaterial({map:TEX.pcb,color:0xffffff,metalness:.1,roughness:.5,emissive:0x0e3d27,emissiveMap:TEX.pcb,emissiveIntensity:.3}),
+  ghost:new THREE.MeshStandardMaterial({color:lin(0xbfe3d2),metalness:0,roughness:.1,transparent:true,opacity:.16,depthWrite:false}),
+  token:new THREE.MeshStandardMaterial({color:lin(0xe6efe9),emissive:lin(0x8fe0b3),emissiveIntensity:.5,metalness:.2,roughness:.4}),
+  floor:new THREE.ShadowMaterial({opacity:.35}),
+};
+const EDGE_C=lin(0x9fe6bd);
+function edge(mesh,c,op,clip){ const lm=new THREE.LineBasicMaterial({color:c||EDGE_C,transparent:true,opacity:op||.5}); if(clip){ lm.clippingPlanes=[CLIP]; } const l=new THREE.LineSegments(new THREE.EdgesGeometry(mesh.geometry,30),lm); l.material.toneMapped=false; mesh.add(l); return mesh; }
+// labels
+const labels=[]; const v3=new THREE.Vector3();
+function addLabel(text,sub,getPos,show,cls){ const el=document.createElement("div"); el.className="lbl"+(cls?" "+cls:""); el.innerHTML=text+(sub?"<small>"+sub+"</small>":""); $("#labels").appendChild(el); const L={el,getPos,show:show||(()=>true),text,sub}; labels.push(L); return L; }
+function setLabel(L,text,sub){ if(L.text!==text||L.sub!==sub){ L.text=text; L.sub=sub; L.el.innerHTML=text+(sub?"<small>"+sub+"</small>":""); } }
+function drawLabels(){ const box=$("#glbox"), w=box.clientWidth, h=box.clientHeight; for(const L of labels){ let vis=L.show(); if(vis){ L.getPos(v3); v3.project(camera); const py=(1-v3.y)/2*h; vis=v3.z<1&&Math.abs(v3.x)<0.88&&py>=118&&py<=h-44; } L.el.style.display=vis?"":"none"; if(vis){ L.el.style.left=((v3.x+1)/2*w)+"px"; L.el.style.top=((1-v3.y)/2*h)+"px"; } } }
+// orbit
+const orb={theta:0.5,phi:1.0,r:26,target:new THREE.Vector3(0,1.5,0)}; let orbGoal=null;
+function orbitTo(v){orbGoal={theta:v.theta,phi:v.phi,r:v.r,target:new THREE.Vector3(v.target[0],v.target[1],v.target[2])};}
+(function(){ const cv=$("#gl"); let drag=null;
+  cv.addEventListener("pointerdown",e=>{drag={x:e.clientX,y:e.clientY}; cv.setPointerCapture(e.pointerId); orbGoal=null;});
+  cv.addEventListener("pointermove",e=>{ if(!drag) return; const dx=e.clientX-drag.x, dy=e.clientY-drag.y; drag={x:e.clientX,y:e.clientY}; orb.theta-=dx*0.006; orb.phi=Math.min(1.45,Math.max(0.15,orb.phi-dy*0.006)); });
+  cv.addEventListener("pointerup",()=>drag=null); cv.addEventListener("pointercancel",()=>drag=null);
+  cv.addEventListener("wheel",e=>{e.preventDefault(); orbGoal=null; orb.r=Math.min(90,Math.max(3,orb.r*(1+Math.sign(e.deltaY)*0.08)));},{passive:false});
+})();
+function updateCamera(dt){ if(orbGoal){ const k=1-Math.exp(-5*(dt||0.016)); orb.theta+=(orbGoal.theta-orb.theta)*k; orb.phi+=(orbGoal.phi-orb.phi)*k; orb.r+=(orbGoal.r-orb.r)*k; orb.target.lerp(orbGoal.target,k); if(Math.abs(orbGoal.r-orb.r)<0.01&&Math.abs(orbGoal.theta-orb.theta)<0.001&&orb.target.distanceTo(orbGoal.target)<0.01) orbGoal=null; }
+  camera.position.set(orb.target.x+orb.r*Math.sin(orb.phi)*Math.sin(orb.theta),orb.target.y+orb.r*Math.cos(orb.phi),orb.target.z+orb.r*Math.sin(orb.phi)*Math.cos(orb.theta)); camera.lookAt(orb.target); }
+
+// =============================== scene objects ===============================
+const floor=new THREE.Mesh(new THREE.PlaneGeometry(90,90),M.floor); floor.rotation.x=-Math.PI/2; floor.position.y=-0.01; floor.receiveShadow=true; scene.add(floor);
+// two cell blocks: 1a (left) and 1d (right). Schematic: 1d has a taller mold, narrower holes, tighter pitch.
+const BLK={a:{x:-6.2,H:2.6,r:0.46,n:3,pitch:2.0,film:0.11,cup:0.07},d:{x:6.2,H:4.3,r:0.25,n:5,pitch:1.0,film:0.045,cup:0.05}};
+const BASE_Y=1.0;      // top of the transistor / contact layer = bottom of the mold
+const SZ=6.4;
+function annulus(ro,ri,H){ const sh=new THREE.Shape(); sh.absarc(0,0,ro,0,Math.PI*2,false); const hp=new THREE.Path(); hp.absarc(0,0,ri,0,Math.PI*2,true); sh.holes.push(hp); const g=new THREE.ExtrudeGeometry(sh,{depth:H,bevelEnabled:false,curveSegments:28}); g.rotateX(-Math.PI/2); g.translate(0,-H,0); return g; } // spans y∈[-H,0]: origin at the top, grows downward with scale.y
+function block(k){
+  const B=BLK[k], g=new THREE.Group(); g.position.set(B.x,0,0); scene.add(g);
+  const sub=new THREE.Mesh(new THREE.BoxGeometry(SZ,0.5,SZ),M.sub); sub.position.y=0.25; sub.castShadow=true; sub.receiveShadow=true; edge(sub,EDGE_C,.35); g.add(sub);
+  const lay=new THREE.Mesh(new THREE.BoxGeometry(SZ,0.5,SZ),M.layer); lay.position.y=0.75; lay.castShadow=true; lay.receiveShadow=true; edge(lay,EDGE_C,.35); g.add(lay);
+  const mold=new THREE.Mesh(new THREE.BoxGeometry(SZ,B.H,SZ),M.mold); mold.position.y=BASE_Y+B.H/2; mold.receiveShadow=true; edge(mold,EDGE_C,.45,true); g.add(mold);
+  // cut-face cap: an opaque plate on the clip plane with a vertical slot wherever a hole of the z=0 row is sliced open
+  const off=-(B.n-1)*B.pitch/2, jc=(B.n-1)/2;
+  const sh=new THREE.Shape(); sh.moveTo(-SZ/2,0); sh.lineTo(SZ/2,0); sh.lineTo(SZ/2,B.H); sh.lineTo(-SZ/2,B.H); sh.closePath();
+  for(let i=0;i<B.n;i++){ const x=off+i*B.pitch, w=B.r+0.01; const pth=new THREE.Path(); pth.moveTo(x-w,0.03); pth.lineTo(x+w,0.03); pth.lineTo(x+w,B.H-0.03); pth.lineTo(x-w,B.H-0.03); pth.closePath(); sh.holes.push(pth); }   // slots stay strictly inside the plate: a hole touching the outline breaks the triangulation
+  const cap=new THREE.Mesh(new THREE.ShapeGeometry(sh,8),M.cap); cap.position.set(0,BASE_Y,0.004); cap.visible=false; g.add(cap);
+  // per hole, concentric from the outside in: void wall (step 07) → storage-electrode cup → high-k film → inner void (step 09) → common plate (after); a dark disc on top marks the opening; a mold-coloured plug fills the un-etched depth during the etch
+  const holes=[], cups=[], films=[], cores=[], plates=[], rims=[], discs=[], plugs=[];
+  for(let i=0;i<B.n;i++) for(let j=0;j<B.n;j++){ const x=off+i*B.pitch, z=off+j*B.pitch;
+    const hg=new THREE.CylinderGeometry(B.r,B.r,B.H,28,1,true); hg.translate(0,-B.H/2,0); const hm=new THREE.Mesh(hg,M.hole); hm.position.set(x,BASE_Y+B.H,z); g.add(hm); holes.push(hm);
+    const dk=new THREE.Mesh(new THREE.CircleGeometry(B.r*0.98,28),M.hole); dk.rotation.x=-Math.PI/2; dk.position.set(x,BASE_Y+B.H+0.006,z); g.add(dk); discs.push(dk);
+    const rim=new THREE.Mesh(new THREE.RingGeometry(B.r,B.r*1.22,32),M.rim); rim.rotation.x=-Math.PI/2; rim.position.set(x,BASE_Y+B.H+0.012,z); g.add(rim); rims.push(rim);
+    const pgm=new THREE.CylinderGeometry(B.r*0.995,B.r*0.995,B.H,28,1,false); pgm.translate(0,B.H/2,0); const plug=new THREE.Mesh(pgm,M.plug); plug.position.set(x,BASE_Y,z); g.add(plug); plugs.push(plug);
+    const cm=new THREE.Mesh(annulus(B.r,B.r-B.cup,B.H*0.97),M.cup); cm.position.set(x,BASE_Y+B.H,z); g.add(cm); cups.push(cm);
+    const fr=B.r-B.cup; const fm=new THREE.Mesh(annulus(fr,fr-B.film,B.H*0.95),M.film); fm.position.set(x,BASE_Y+B.H,z); g.add(fm); films.push(fm);
+    const pr=fr-B.film; const cg=new THREE.CylinderGeometry(pr,pr,B.H*0.94,20,1,true); cg.translate(0,-B.H*0.47,0); const cr=new THREE.Mesh(cg,M.hole); cr.position.set(x,BASE_Y+B.H,z); g.add(cr); cores.push(cr);
+    const pg=new THREE.CylinderGeometry(pr,pr,B.H*0.94,20,1,false); pg.translate(0,-B.H*0.47,0); const pm=new THREE.Mesh(pg,M.plate); pm.position.set(x,BASE_Y+B.H,z); g.add(pm); plates.push(pm);
+  }
+  // EUV planes above the block
+  const planes=[], ghosts=[]; const top=BASE_Y+B.H+0.7;
+  for(let k2=0;k2<12;k2++){ const p=new THREE.Mesh(new THREE.PlaneGeometry(SZ*0.92,SZ*0.92),M.euv); p.rotation.x=-Math.PI/2; p.position.y=top+k2*0.42; g.add(p); planes.push(p); const q=new THREE.Mesh(new THREE.PlaneGeometry(SZ*0.92,SZ*0.92),M.euvGhost); q.rotation.x=-Math.PI/2; q.position.y=top+k2*0.42; g.add(q); ghosts.push(q); }
+  const scanner=new THREE.Mesh(new THREE.BoxGeometry(1.6,0.5,1.6),M.token); scanner.position.y=top+12*0.42; edge(scanner,lin(0xc7b2ff),.8); g.add(scanner);
+  const heroIdx=(jc-1)*B.n+jc; // the hole one column left of centre in the z=0 row: sliced open by the cut plane
+  return {B,g,mold,cap,holes,cups,films,cores,plates,rims,discs,plugs,planes,ghosts,scanner,top,hero:holes[heroIdx],heroI:heroIdx};
+}
+const A=block("a"), D=block("d");
+// twelve step tiles on the floor in front
+const tiles=[]; for(let i=0;i<12;i++){ const m=HARD.includes(i)?M["tile"+MECHCLS[i]]:M.tileOff; const t=new THREE.Mesh(new THREE.BoxGeometry(1.1,0.25,0.8),m); t.position.set(-7.7+i*1.4,0.125,7.2); t.castShadow=true; t.receiveShadow=true; edge(t,EDGE_C,.3); scene.add(t); tiles.push(t); }
+// scoreboard pillars behind the blocks
+// scoreboard pillars: viewed from behind the blocks (camera at -z), so rank 1 lands on the left; ghosts sit behind the solid pillars from that side
+const PX=[8,4,0,-4,-8], PZ=-7.4, PGZ=-5.8, PH=5.2; const pillars=[], ghostsP=[];
+for(let i=0;i<5;i++){ const p=new THREE.Mesh(new THREE.BoxGeometry(1.3,1,1.3),M.pillar); p.position.set(PX[i],0.5,PZ); p.castShadow=true; p.receiveShadow=true; edge(p,EDGE_C,.35); scene.add(p); pillars.push(p); const q=new THREE.Mesh(new THREE.BoxGeometry(1.3,1,1.3),M.ghost); q.position.set(PX[i],0.5,PGZ); scene.add(q); ghostsP.push(q); }
+// vendor tool tokens at the three harder steps (small emissive markers; the DOM label carries the name)
+function token(){ const t=new THREE.Mesh(new THREE.OctahedronGeometry(0.28,0),M.token); t.visible=false; scene.add(t); return t; }
+const TOK={asml:token(),telT:token(),lam:token(),telE:token(),telD:token(),asm:token()};
+// positions (world)
+const P06_ASML=[D.B.x+1.6,D.top+12*0.42+1.0,0.8], P06_TEL=[D.B.x-3.9,D.top+1.0,2.8], P06_ADJ=[D.B.x+3.8,D.top-0.3,3.0];
+const P07_LAM=[D.B.x-0.2,BASE_Y+D.B.H+0.4,2.6], P07_TEL=[D.B.x-3.4,BASE_Y+D.B.H+0.3,1.6], P07_ADJ=[D.B.x+0.6,BASE_Y+D.B.H*0.35,0.6];
+const HERO=()=>{ const h=D.hero; return [D.B.x+h.position.x, BASE_Y+D.B.H*0.5, h.position.z]; };
+const P09_TEL=()=>{const h=HERO(); return [h[0]-2.0,BASE_Y+D.B.H*0.80,h[2]+0.3];}, P09_ASM=()=>{const h=HERO(); return [h[0]+2.0,BASE_Y+D.B.H*0.80,h[2]+0.3];}, P09_ADJ=()=>{const h=HERO(); return [h[0]+2.2,BASE_Y+D.B.H*0.30,h[2]+0.3];};
+const V=(p)=>v=>v.set(p[0],p[1],p[2]); const VF=(f)=>v=>{const p=f(); v.set(p[0],p[1],p[2]);};
+const TAGS={on:true};
+// labels
+const L_a=addLabel("1a","earlier node · reference",V([A.B.x,BASE_Y+A.B.H+0.3,-2.6]),()=>S.step===0||S.step===5);
+const L_d=addLabel("1d","tighter geometry",V([D.B.x,BASE_Y+D.B.H+0.3,-2.6]),()=>S.step===0||S.step===5);
+const L_tiles=addLabel("12 construction steps","three lit = harder at 1d (06 · 07 · 09)",V([0,0.4,7.2]),()=>S.step===0);
+const L_plA=addLabel("2 EUV layers","1a",V([A.B.x,A.top+2*0.42,0]),()=>S.step===1||S.step===5,"core e6");
+const L_plD=addLabel("8 EUV layers","1d",V([D.B.x,D.top+8*0.42,0]),()=>S.step===1||S.step===5,"core e6");
+const L_plG=addLabel("ghost = the other ladder","",V([D.B.x+1.5,D.top+11*0.42,1.5]),()=>S.step===5,"dim");
+const L_asml=addLabel("ASML · scanner","core · the only EUV source",V(P06_ASML),()=>S.step===1&&TAGS.on,"core e6");
+const L_telT=addLabel("Tokyo Electron · track","core · coat / develop, 91% share",V(P06_TEL),()=>S.step===1&&TAGS.on,"core e6");
+const L_adj6=addLabel("adjacent","Lam dry resist · Applied hard mask · ASM underlayers",V(P06_ADJ),()=>S.step===1&&TAGS.on,"dim");
+const L_hole=addLabel("capacitor opening","narrower · deeper at 1d",VF(()=>{const h=HERO(); return [h[0],BASE_Y+D.B.H+0.25,h[2]];}),()=>S.step===2,"core e7");
+const L_holeA=addLabel("1a opening","wider · shorter",V([A.B.x,BASE_Y+A.B.H+0.25,0]),()=>S.step===2,"dim");
+const L_lam=addLabel("Lam · Flex dielectric etch","core · #1 in UBS’s DRAM etch list",V(P07_LAM),()=>S.step===2&&TAGS.on,"core e7");
+const L_telE=addLabel("Tokyo Electron · capacitor etch","core · PORs at all leading customers",V(P07_TEL),()=>S.step===2&&TAGS.on,"core e7");
+const L_adj7=addLabel("adjacent","ASML mask upstream · Applied hard mask",V(P07_ADJ),()=>S.step===2&&TAGS.on,"dim");
+const L_film=addLabel("high-k film","thinner · on a taller wall",VF(()=>{const h=HERO(); return [h[0],BASE_Y+D.B.H*0.25,h[2]];}),()=>S.step===3,"core e9");
+const L_cup=addLabel("storage electrode","the cup under the film",VF(()=>{const h=HERO(); return [h[0]-1.0,BASE_Y+D.B.H*0.55,h[2]+0.02];}),()=>S.step===3,"dim");
+const L_telD=addLabel("Tokyo Electron · batch high-k","core · on its DRAM roadmap",VF(P09_TEL),()=>S.step===3&&TAGS.on,"core e9");
+const L_asm=addLabel("ASM · ALD high-k / MIM","core · benefits 2–3 yrs out",VF(P09_ASM),()=>S.step===3&&TAGS.on,"core e9");
+const L_adj9=addLabel("adjacent","Lam Striker ALD · Applied ALD, qualification needed",VF(P09_ADJ),()=>S.step===3&&TAGS.on,"dim");
+const L_p=[]; for(let i=0;i<5;i++) L_p.push(addLabel("","",V([PX[i],1,PZ]),()=>S.step===4));
+const L_pg=addLabel("ghost pillars","core in all 12 steps",V([PX[4]-1.6,0.6,PGZ]),()=>S.step===4,"dim");
+const L_hna=addLabel("no High-NA drawn at 1d","Bernstein 1d/2027 vs ASML · UBS 0a",V([D.B.x,D.top+12*0.42+1.6,0]),()=>S.step===5,"dim");
+
+// camera presets per step
+const CAM=[
+ {theta:0.5,phi:1.0,r:27,target:[0,1.6,0]},
+ {theta:0.15,phi:0.95,r:27,target:[0,BASE_Y+D.B.H+1.6,0]},
+ {theta:0.0,phi:1.1,r:20,target:[0,BASE_Y+2.2,0]},
+ {theta:-0.2,phi:1.06,r:9.5,target:[D.B.x-1.0,BASE_Y+D.B.H*0.55,-0.2]},
+ {theta:Math.PI,phi:1.0,r:27,target:[0,3.2,PZ]},
+ {theta:0.35,phi:0.9,r:30,target:[0,3.5,0]},
+];
+window.__h3={S,X,scores,A,D,orb,CLIP,pillars,tiles};
+const CUT={want:0,cur:0,manual:null};
+scene3.onStep=i=>{ orbitTo(CAM[i]); CUT.manual=null; };
+scene3.sync=()=>{ renderStep(); };
+$("#cutBtn").onclick=()=>{ CUT.manual=CUT.manual===null?!(S.step===2||S.step===3):!CUT.manual; };
+$("#tagBtn").onclick=()=>{ TAGS.on=!TAGS.on; $("#tagBtn").classList.toggle("on",!TAGS.on); };
+
+// =============================== animation ===============================
+let last=performance.now();
+function ease(t){ return t<0?0:t>1?1:t*t*(3-2*t); }
+function layout(dt){
+  const i=S.step;
+  if(NOANIM) S.p=1;
+  if(S.p<1){ S.p=Math.min(1,S.p+dt/2.8); } else if(S.walk){ S.hold+=dt; if(S.hold>3.6){ if(S.step<STEPS.length-1) setStep(S.step+1); else { stopWalk(); renderStep(); } } }
+  $("#prog").style.width=(S.p*100).toFixed(1)+"%";
+  const p=ease(S.p), L=LADDERS[X.lad], other=LADDERS[X.lad==="bern"?"bofa":"bern"];
+  // cutaway
+  const autoCut=(i===2||i===3); const wantCut=CUT.manual===null?autoCut:CUT.manual; CUT.want=wantCut?1:0; CUT.cur+=(CUT.want-CUT.cur)*(1-Math.exp(-5*dt)); CLIP.constant=40*(1-CUT.cur); $("#cutBtn").classList.toggle("on",wantCut);
+  // EUV planes: 1a static; 1d appear progressively in step 1; ghosts show the other ladder in step 5
+  for(const [blk,na,nd] of [[A,L.a,other.a],[D,L.d,other.d]]){ const n=blk===A?na:na; const showN=(i===1&&blk===D)?Math.round(nd*0+n*p):n; blk.planes.forEach((pl,k)=>{ pl.visible=(i===1||i===5)&&k<showN; }); blk.ghosts.forEach((q,k)=>{ q.visible=i===5&&k<(blk===A?other.a:other.d)&&k>=n; }); blk.scanner.visible=(i===1)&&blk===D; }
+  // holes etch downward in step 2; cups / films / plates visible from step 3 (films grow in step 3)
+  for(const blk of [A,D]){ const etchP=i<2?0:i===2?p:1; const filmP=i<3?0:i===3?p:1; const showIn=i>=3;
+    blk.holes.forEach(h=>{ h.visible=i===2; h.scale.y=Math.max(0.02,etchP); });            // the etched void wall, step 07 only (the cup lines it afterwards)
+    blk.plugs.forEach(pl=>{ pl.visible=i===2&&etchP<0.995; pl.scale.y=Math.max(0.01,1-etchP); });
+    blk.discs.forEach(d=>{ d.visible=i>=2; }); blk.rims.forEach(r=>{ r.visible=i>=2; });
+    blk.cups.forEach(c=>{ c.visible=showIn; }); blk.films.forEach(f=>{ f.visible=showIn; f.scale.y=Math.max(0.02,filmP); });
+    blk.cores.forEach(c=>{ c.visible=i===3; }); blk.plates.forEach(pl=>{ pl.visible=i>=4; });
+    blk.cap.visible=CUT.cur>0.9; blk.mold.visible=true; }
+  // tiles
+  tiles.forEach(t=>t.visible=i===0||i===5);
+  // pillars
+  const s=scores(); const mh=maxHard();
+  pillars.forEach((pl,k)=>{ const r=s[k]; const h=Math.max(0.05,PH*(r.hard/mh)*(i===4?p:1)); pl.visible=i===4; pl.scale.y=h; pl.position.y=h/2; const g=ghostsP[k]; const hg=Math.max(0.05,PH*(r.all/12)*(i===4?p:1)); g.visible=i===4; g.scale.y=hg; g.position.y=hg/2; L_p[k].getPos=v=>v.set(PX[k],h+0.3,PZ); setLabel(L_p[k],r.v.short+" · "+r.hard+" of "+mh,(r.v.sole?"sole EUV · ":"")+"all steps "+r.all+"/12"); L_p[k].el.className="lbl"+(k===0?" hot":""); });
+  // tokens
+  const tv=(t,pos,on)=>{ t.visible=on&&TAGS.on; if(on){ t.position.set(pos[0],pos[1]-0.55,pos[2]); t.rotation.y+=dt*0.8; } };
+  tv(TOK.asml,P06_ASML,i===1); tv(TOK.telT,P06_TEL,i===1); tv(TOK.lam,P07_LAM,i===2); tv(TOK.telE,P07_TEL,i===2); tv(TOK.telD,P09_TEL(),i===3); tv(TOK.asm,P09_ASM(),i===3);
+  // label texts that depend on the ladder
+  setLabel(L_plA,L.a+" EUV layer"+(L.a===1?"":"s"),"1a · "+L.name); setLabel(L_plD,L.d+" EUV layers","1d · "+L.name); L_plA.getPos=v=>v.set(A.B.x-2.2,A.top+L.a*0.42,-1.2); L_plD.getPos=v=>v.set(D.B.x-2.6,D.top+L.d*0.42,-1.4);
+  setLabel(L_plG,"ghost = "+other.name+" ladder",other.a+" → "+other.d);
+}
+function resize(){ const box=$("#glbox"); renderer.setSize(box.clientWidth,box.clientHeight,false); camera.aspect=box.clientWidth/box.clientHeight; camera.updateProjectionMatrix(); }
+new ResizeObserver(resize).observe($("#glbox")); resize();
+function trackLight(){ key.position.copy(orb.target).add(KEY_DIR); key.target.position.copy(orb.target); const h=Math.min(60,Math.max(10,orb.r)); if(Math.abs(h-shadowHalf)>0.5){ shadowHalf=h; const sc=key.shadow.camera; sc.left=-h; sc.right=h; sc.top=h; sc.bottom=-h; sc.updateProjectionMatrix(); } }
+function adaptQuality(raw){ if(document.visibilityState!=="visible"||raw>0.25||QUAL.cur<=1) return; if(raw>0.04) QUAL.slow++; else QUAL.slow=Math.max(0,QUAL.slow-2); if(QUAL.slow>90){ QUAL.slow=0; QUAL.cur=Math.max(1,+(QUAL.cur-0.5).toFixed(2)); renderer.setPixelRatio(QUAL.cur); resize(); } }
+function tick(now){ const raw=(now-last)/1000, dt=Math.min(0.05,raw); last=now; updateCamera(Math.min(0.3,raw)); layout(dt); trackLight(); renderer.render(scene,camera); drawLabels(); adaptQuality(raw);
+  if(DEBUG){ $("#vSub").textContent="DBG step="+S.step+" p="+S.p.toFixed(2)+" clip="+CLIP.constant.toFixed(1)+" plA="+A.planes.filter(x=>x.visible).length+" plD="+D.planes.filter(x=>x.visible).length+" holeY="+D.holes[0].scale.y.toFixed(2)+" filmY="+D.films[0].scale.y.toFixed(2)+" cups="+D.cups[0].visible+" pill="+pillars.map(x=>x.scale.y.toFixed(1)).join("/")+" vis="+pillars[0].visible+" lbl="+labels.filter(l=>l.el.style.display!=="none").length+" calls="+renderer.info.render.calls+" tris="+renderer.info.render.triangles+" sw="+document.documentElement.scrollWidth+"/"+document.documentElement.clientWidth; }
+  requestAnimationFrame(tick); }
+// deep links: ?step=1-6&ladder=bern|bofa&w=eq|litho&walk=1&theme=light|dark&anim=0&debug=1
+try{ const q=new URLSearchParams(location.search); const lq=q.get("ladder"); if(lq&&LADDERS[lq]) X.lad=lq; const wq=q.get("w"); if(wq&&WEIGHTS[wq]) X.w=wq; const th=q.get("theme"); if(th==="light"||th==="dark") document.documentElement.setAttribute("data-theme",th); renderAll(); const st=+q.get("step"); if(st>=1&&st<=6){ S.step=st-1; } if(q.get("walk")==="1"){ S.walk=true; $("#walkBtn").classList.add("on"); $("#walkBtn").textContent="Stop"; S.step=0; } }catch(e){}
+orb.target.set(CAM[S.step].target[0],CAM[S.step].target[1],CAM[S.step].target[2]); orb.theta=CAM[S.step].theta; orb.phi=CAM[S.step].phi; orb.r=CAM[S.step].r;
+setStep(S.step);
+requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>

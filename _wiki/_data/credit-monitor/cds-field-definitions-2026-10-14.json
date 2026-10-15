@@ -1,0 +1,67 @@
+[
+  {
+    "mnemonic": "LU_PRICING_SOURCE",
+    "description": "Pricing Source Lookup",
+    "documentation": "Specifies potential return values for Pricing Source (PR092, PRICING_SOURCE).\n"
+  },
+  {
+    "mnemonic": "3_YR_UPFRONT_FEE",
+    "description": "3 Year Upfront Fee",
+    "documentation": "Payment that the swap counterparties will receive or pay at the beginning of the 3 year deal, expressed as a percentage of the deal value.\n\nCurrencies:\n   Available for Credit Default Swaps (CDS) tickers."
+  },
+  {
+    "mnemonic": "CDS_FLAT_SPREAD",
+    "description": "CDS Flat Spread",
+    "documentation": "A flat spread for all par credit default swap spreads in basis points.\n\nCurrencies:\n   Available for Credit Default Swaps (CDS) tickers. \n\nHistory is available for BVAL OTC deals only."
+  },
+  {
+    "mnemonic": "7_YR_UPFRONT_FEE",
+    "description": "7 Year Upfront Fee",
+    "documentation": "Payment that the swap counterparties will receive or pay at the beginning of the 7 year deal, expressed as a percentage of the deal value.\n\nCurrencies:\n   Available for Credit Default Swaps (CDS) tickers."
+  },
+  {
+    "mnemonic": "CDS_QUOTED_PRICE",
+    "description": "CDS Quoted Price",
+    "documentation": "CDS Quoted Price.\n\nCurrencies:\n   Available for Credit Default Swaps (CDS) tickers. \n\nHistory is available for BVAL OTC deals only."
+  },
+  {
+    "mnemonic": "1_YR_UPFRONT_FEE",
+    "description": "1 Year Upfront Fee",
+    "documentation": "Payment that the swap counterparties will receive or pay at the beginning of the 1 year deal, expressed as a percentage of the deal value.\n\nCurrencies:\n   Available for Credit Default Swaps (CDS) tickers."
+  },
+  {
+    "mnemonic": "2_YR_UPFRONT_FEE",
+    "description": "2 Year Upfront Fee",
+    "documentation": "Payment that the swap counterparties will receive or pay at the beginning of the 2 year deal, expressed as a percentage of the deal value.\n\nCurrencies:\n   Available for Credit Default Swaps (CDS) tickers."
+  },
+  {
+    "mnemonic": "10_YR_UPFRONT_FEE",
+    "description": "10 Year Upfront Fee",
+    "documentation": "Payment that the swap counterparties will receive or pay at the beginning of the 10 year deal, expressed as a percentage of the deal value.\n\nCurrencies:\n   Available for Credit Default Swaps (CDS) tickers."
+  },
+  {
+    "mnemonic": "6_MTH_UPFRONT_FEE",
+    "description": "6 Month Upfront Fee",
+    "documentation": "Payment that the swap counterparties will receive or pay at the beginning of the 6 month deal, expressed as a percentage of the deal value.\n\nCurrencies:\n   Available for Credit Default Swaps (CDS) tickers."
+  },
+  {
+    "mnemonic": "5_YR_UPFRONT_FEE",
+    "description": "5 Year Upfront Fee",
+    "documentation": "Payment that the swap counterparties will receive or pay at the beginning of the 5 year deal, expressed as a percentage of the deal value.\n\nCurrencies:\n   Available for Credit Default Swaps (CDS) tickers."
+  },
+  {
+    "mnemonic": "4_YR_UPFRONT_FEE",
+    "description": "4 Year Upfront Fee",
+    "documentation": "Payment that the swap counterparties will receive or pay at the beginning of the 4 year deal, expressed as a percentage of the deal value.\n\nCurrencies:\n   Available for Credit Default Swaps (CDS) tickers."
+  },
+  {
+    "mnemonic": "UPFRONT_RUNNING_SPREAD",
+    "description": "Upfront Running Spread",
+    "documentation": "Conventional annual deal spread after the initial upfront fee has been paid. This is for upfront quote only.\n\nCurrencies:\nAvailable for Credit Default Swaps (CDS) tickers."
+  },
+  {
+    "mnemonic": "CDS_SPREAD_SOURCE_FLAG",
+    "description": "CDS Spread Curve Source Flag",
+    "documentation": "Specifies the type of credit default spread used to price the deal. Swap realtime and fixing curve five year point difference.\n\nCurrencies:\n   Available for Credit Default Swaps (CDS) tickers."
+  }
+]

@@ -43,6 +43,10 @@ _wiki/_data/sentiment/leadlag.json
 _wiki/_data/sentiment/*.docx
 _wiki/_tools/_rpt_tmp/
 _wiki/_data/sentiment/lab.json
+# sentiment_studies.py: per-name daily series (1 MB, rebuilt every run, embedded in sentiment-monitor.html)
+_wiki/_data/sentiment/daily_series.json
+# live index-breadth panel: latest-session constituent table (~0.6 MB, rebuilt from the tracked increments)
+_wiki/_data/market_breadth/latest/constituents_latest.csv
 
 # Project research agent definitions and instructions.
 !/.codex/

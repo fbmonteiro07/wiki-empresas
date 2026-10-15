@@ -16,7 +16,7 @@ import html as H
 import datetime as dt
 from pathlib import Path
 from funding_common import observations, change, change_text
-from funding_dashboard_ui import enhance
+from credit_monitor_view import enhance
 
 ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "_wiki" / "_data"
@@ -286,6 +286,239 @@ bonds_note = ("<b>Live bond series slot:</b> `bonds[]` in <code>_data/funding_de
               "project bonds, CRWV TL/unsecured, ORCL Feb-26 jumbo, Anthropic SPV A2) and re-run the fetch; "
               "they render here automatically.")
 
+
+# ---------------------------------------------------------------- daily alerts & single-name watch (credit_alerts.py)
+ALERT_DIR = DATA / "credit-monitor" / "alerts"
+SEV_CHIP = {"high": ("critical", "✖", "High"), "medium": ("serious", "▲", "Medium"), "low": ("warning", "⚠", "Low")}
+
+def _alert_level(r):
+    if r.get("last") is None:
+        return "—"
+    if r.get("group") == "equity":
+        return f"{r['last']:,.2f}"
+    if r.get("unit") == "bp":
+        return f"{r['last']:,.0f} bp"
+    if r.get("unit") == "%":
+        return f"{r['last'] * 100:,.0f} bp" if r.get("group") == "index" else f"{r['last']:.2f}%"
+    return f"{r['last']:,.2f}"
+
+def _alert_chg(v, unit, dec=0):
+    return "—" if v is None else (f"{v:+.{dec}f}%" if unit == "%" else f"{v:+.{dec}f} bp")
+
+def alerts_section():
+    latest = None
+    try:
+        latest = json.loads((ALERT_DIR / "latest.json").read_text(encoding="utf-8"))
+    except Exception:
+        pass
+    if not latest:
+        return ('<section>\n <h2>Daily alerts &amp; single-name watch</h2>\n <p class="sub">No alert run recorded yet — '
+                '<code>py _wiki/_tools/credit_alerts.py --fetch --mail</code> (daily lane: 09:30 / 18:30 São Paulo).</p>\n</section>\n')
+    bbg = latest.get("bbg_status") or {}
+    bstate = bbg.get("state", "unknown")
+    bchip = ("good", "✓") if bstate == "ok" else ("critical", "✖") if bstate == "blocked" else ("warning", "⚠")
+    cov = latest.get("mail_coverage") or {}
+    status = (f'<div class="srow"><span class="chip chip-{bchip[0]}"><span class="ci">{bchip[1]}</span>Bloomberg {E(bstate)}</span>'
+              f'<div>Last run <b class="num">{E(latest.get("generated_at", "")[:16])}</b> · watch data fetched {E(str(latest.get("watch_fetched_at") or "never")[:16])}'
+              + (f' · <span class="src">{E(str(bbg.get("detail", ""))[:140])}</span>' if bstate != "ok" else "")
+              + (f' · mail window {cov.get("collected", 0)} messages, Outlook lag {cov.get("inbox_lag_hours", "?")} h' if cov else " · mail layer not run")
+              + '</div></div>')
+    fired = []
+    try:
+        cutoff = (dt.date.today() - dt.timedelta(days=14)).isoformat()
+        for line in (ALERT_DIR / "log.jsonl").read_text(encoding="utf-8").splitlines():
+            try:
+                row = json.loads(line)
+            except Exception:
+                continue
+            if row.get("fired") and row.get("date", "") >= cutoff:
+                fired.append(row)
+    except Exception:
+        pass
+    fired_rows = []
+    for row in reversed(fired[-40:]):
+        for m in row.get("market", []):
+            c = SEV_CHIP.get(m.get("severity"), ("warning", "•", m.get("severity", "")))
+            fired_rows.append(f'<tr><td class="num">{E(row["run"][:16].replace("T", " "))}</td><td><span class="chip chip-{c[0]}"><span class="ci">{c[1]}</span>{c[2]}</span></td><td>Market</td><td>{E(m.get("headline", ""))}</td></tr>')
+        for n in row.get("narrative", []):
+            c = SEV_CHIP.get(n.get("severity"), ("warning", "•", n.get("severity", "")))
+            fired_rows.append(f'<tr><td class="num">{E(row["run"][:16].replace("T", " "))}</td><td><span class="chip chip-{c[0]}"><span class="ci">{c[1]}</span>{c[2]}</span></td><td>Tape</td><td><b>{E(n.get("company", ""))}</b> — {n.get("n_msgs", 0)} message(s) · {E(", ".join(n.get("firms", [])))}</td></tr>')
+    fired_tbl = ("<table><thead><tr><th>Run</th><th>Severity</th><th>Layer</th><th>Alert</th></tr></thead><tbody>" + "".join(fired_rows) + "</tbody></table>"
+                 if fired_rows else '<p class="mut">Nothing fired in the last 14 days.</p>')
+    wrows = []
+    for r in latest.get("rows", []):
+        sev = r.get("severity", "none")
+        c = SEV_CHIP.get(sev)
+        chip = f'<span class="chip chip-{c[0]}"><span class="ci">{c[1]}</span>{c[2]}</span>' if c else ""
+        st = r.get("status") or "none"
+        note = {"ok": "fresh", "stale": "kept previous", "none": "no history"}.get(st, st)
+        if r.get("config_status") in ("unverified", "needs_isin"):
+            note += f" · ticker {r['config_status']}"
+        dec = 1 if r.get("group") == "equity" else 0
+        z = "—" if r.get("z1") is None else f"{r['z1']:+.1f}"
+        wrows.append(f'<tr><td><b>{E(r.get("label", ""))}</b><br><span class="src">{E(r.get("ticker") or "—")}</span></td>'
+                     f'<td class="num">{E(_alert_level(r))}</td><td class="num">{E(_alert_chg(r.get("d1"), r.get("alert_unit"), dec))}</td>'
+                     f'<td class="num">{E(_alert_chg(r.get("d5"), r.get("alert_unit"), dec))}</td><td class="num">{E(z)}</td>'
+                     f'<td class="num">{E(r.get("last_date") or "—")}</td><td>{chip} <span class="src">{E(note)}</span></td></tr>')
+    watch_tbl = "<table><thead><tr><th>Instrument · Bloomberg ticker</th><th>Level</th><th>1d</th><th>5-obs</th><th>z (60-obs σ)</th><th>Obs date</th><th>Status</th></tr></thead><tbody>" + "".join(wrows) + "</tbody></table>"
+    return f"""<section>
+ <h2>Daily alerts &amp; single-name watch</h2>
+ <p class="sub">Daily lane (09:30 / 18:30 São Paulo, <code>credit_alerts.py</code>): single-name 5Y CDS, CoreWeave bond yields, CDX / OAS index spreads and neocloud equity closes are tested against sigma-scaled rules (<code>_data/credit_watch_config.json</code>), and the broker tape is scanned for credit language near a watched name. Spreads in bp, yields in %, equities in % — never netted across units. Fired alerts are e-mailed as <b>AI Credit ALERT | date</b>; this block is the log.</p>
+ <div class="card">{status}</div>
+ <h3 style="margin:14px 0 6px;font-size:14px">Fired — last 14 days</h3>
+ <div class="card tscroll">{fired_tbl}</div>
+ <h3 style="margin:14px 0 6px;font-size:14px">Watch list state</h3>
+ <div class="card tscroll">{watch_tbl}</div>
+</section>
+"""
+
+alerts_html = alerts_section()
+
+
+# ---------------------------------------------------------------- issuer yield board (live: credit_watch.json, fetched daily by the credit-alerts lane)
+PALETTE = ["#2a78d6", "#eb6834", "#1baf7a", "#8e6bd6", "#d03b3b", "#0f8fa8", "#b5801a", "#6b6b6b", "#c2409a", "#3f7f3f"]
+
+def _wj(path):
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+
+def _lookback(points, days):
+    """value `days` calendar days before the last observation (nearest earlier obs within 4 days), else None"""
+    if len(points) < 2:
+        return None
+    end = dt.date.fromisoformat(points[-1][0])
+    target = end - dt.timedelta(days=days)
+    elig = [(d, v) for d, v in points if dt.date.fromisoformat(d) <= target]
+    if not elig or (target - dt.date.fromisoformat(elig[-1][0])).days > 4:
+        return None
+    return elig[-1][1]
+
+def _chg(points, days, unit, group):
+    v0 = _lookback(points, days)
+    if v0 is None:
+        return None
+    v1 = points[-1][1]
+    if group == "bond" or unit == "%":
+        return (v1 - v0) * 100.0       # yield / OAS in bp
+    return v1 - v0                     # CDS already in bp
+
+def _bp(v):
+    return "—" if v is None else f"{v:+.0f} bp"
+
+def multi_line_svg(series_list, w=960, h=320, ml=46, mr=14, mt=14, mb=28):
+    """Several (label, points[[date,val]], color) on one time axis; values in %"""
+    series_list = [x for x in series_list if len(x[1]) >= 2]
+    if not series_list:
+        return '<p class="mut">No yield history yet.</p>'
+    d0 = min(dt.date.fromisoformat(x[1][0][0]) for x in series_list).toordinal()
+    d1 = max(dt.date.fromisoformat(x[1][-1][0]) for x in series_list).toordinal()
+    lo = min(v for _, pts, _ in series_list for _, v in pts)
+    hi = max(v for _, pts, _ in series_list for _, v in pts)
+    pad = (hi - lo) * 0.08 or 0.5
+    lo, hi = lo - pad, hi + pad
+    iw, ih = w - ml - mr, h - mt - mb
+    X = lambda d: ml + (dt.date.fromisoformat(d).toordinal() - d0) / max(1, d1 - d0) * iw
+    Y = lambda v: mt + (hi - v) / (hi - lo) * ih
+    grid = ""
+    for k in range(5):
+        v = lo + (hi - lo) * k / 4
+        grid += f'<line x1="{ml}" x2="{w - mr}" y1="{Y(v):.1f}" y2="{Y(v):.1f}" stroke="var(--grid)" stroke-width="1"/><text x="{ml - 6}" y="{Y(v) + 4:.1f}" text-anchor="end" font-size="11" fill="var(--mut)">{v:.1f}%</text>'
+    paths, legend = "", ""
+    for i, (label, pts, color) in enumerate(series_list):
+        dpath = " ".join(f"{'M' if j == 0 else 'L'}{X(d):.1f},{Y(v):.1f}" for j, (d, v) in enumerate(pts))
+        paths += f'<path d="{dpath}" fill="none" stroke="{color}" stroke-width="1.8"><title>{E(label)} · last {pts[-1][1]:.2f}% ({E(pts[-1][0])})</title></path>'
+        legend += f'<span><span class="sw" style="background:{color}"></span>{E(label)} <b class="num">{pts[-1][1]:.2f}%</b></span>'
+    months = ""
+    cur = None
+    for x in series_list:
+        for d, _ in x[1]:
+            m = d[:7]
+            if m != cur:
+                cur = m
+                if d[5:7] in ("01", "04", "07", "10"):
+                    months += f'<text x="{X(d):.1f}" y="{h - 8}" font-size="11" fill="var(--mut)" text-anchor="middle">{d[:7]}</text>'
+        break
+    return (f'<svg viewBox="0 0 {w} {h}" width="100%" role="img" aria-label="Issuer yields, last year">{grid}{paths}{months}</svg>'
+            f'<div class="legend">{legend}</div>')
+
+def yields_section():
+    watch = _wj(DATA / "credit_watch.json") or {}
+    cfg = _wj(DATA / "credit_watch_config.json") or {}
+    board = cfg.get("board") or {}
+    issuers = board.get("issuers", [])
+    rows_by_issuer = {}
+    for sx in watch.get("series", []):
+        b = sx.get("board")
+        if b:
+            rows_by_issuer.setdefault(b["issuer"], []).append(sx)
+    bbg = watch.get("bbg_status") or {}
+    fetched = (watch.get("fetched_at") or "never")[:16]
+    live = any(sx.get("status") == "ok" and sx.get("points") for v in rows_by_issuer.values() for sx in v)
+    bchip = ("good", "✓") if bbg.get("state") == "ok" else ("critical", "✖") if bbg.get("state") == "blocked" else ("warning", "⚠")
+    banner = (f'<div class="srow"><span class="chip chip-{bchip[0]}"><span class="ci">{bchip[1]}</span>Bloomberg {E(bbg.get("state", "never fetched"))}</span>'
+              f'<div>Watch data fetched <b class="num">{E(fetched)}</b> · instruments resolved through the Bloomberg instrument lookup on <b>2026-10-14</b> (tickers below)'
+              + ("" if live else " · <b>no yields yet</b> — the first run after the Desktop API block clears fills this board (daily lane 09:30 / 18:30)")
+              + (f' · <span class="src">{E(str(bbg.get("detail", ""))[:120])}</span>' if bbg.get("state") not in ("ok", None) else "") + "</div></div>")
+    # table
+    trs = []
+    for iss in issuers:
+        comp = iss["company"]
+        sxs = rows_by_issuer.get(comp, [])
+        if not sxs:
+            continue
+        sxs.sort(key=lambda x: (x["group"] != "cds", not (x.get("board") or {}).get("headline"), (x.get("board") or {}).get("mty", "")))
+        trs.append(f'<tr class="cat"><td colspan="10">{E(iss.get("name", comp))} <span class="src">· {E(iss.get("tier", ""))}{(" · " + E(iss["note"])) if iss.get("note") else ""}</span></td></tr>')
+        for sx in sxs:
+            b = sx.get("board") or {}
+            pts = sx.get("points") or []
+            snap = sx.get("snapshot") or {}
+            last = sx.get("last")
+            if sx["group"] == "cds":
+                level = f"{last:,.0f} bp" if last is not None else "—"
+                kind = "5Y CDS"
+            else:
+                level = f"{last:.2f}%" if last is not None else "—"
+                kind = {"senior": "senior unsecured", "secured": "senior secured", "convertible": "convertible", "project": "project bond"}.get(b.get("kind", ""), b.get("kind", ""))
+                if b.get("ccy", "USD") != "USD":
+                    kind += f" · {b['ccy']}"
+            px = snap.get("PX_LAST"); z = snap.get("Z_SPRD_MID"); amt = snap.get("AMT_OUTSTANDING"); rt = " / ".join(str(snap[k]) for k in ("RTG_SP", "RTG_MOODY") if snap.get(k))
+            rng = ""
+            if len(pts) >= 20:
+                vals = [v for _, v in pts[-252:]]
+                rng = (f"{min(vals):,.0f}–{max(vals):,.0f} bp" if sx["group"] == "cds" else f"{min(vals):.2f}–{max(vals):.2f}%")
+            st = sx.get("status") or "none"
+            note = {"ok": "fresh", "stale": "kept previous", "none": "awaiting Bloomberg"}.get(st, st)
+            sev = sx.get("severity")
+            hl = ' <span class="chip chip-good"><span class="ci">★</span>headline</span>' if b.get("headline") else ""
+            trs.append(f'<tr><td><b>{E(sx["label"])}</b>{hl}<br><span class="src">{E(sx.get("ticker") or (sx.get("candidates") or [""])[0] if sx.get("ticker") else E(kind))}</span></td>'
+                       f'<td>{E(kind)}</td><td class="num">{E(level)}<br><span class="src">{E(sx.get("last_date") or "")}</span></td>'
+                       f'<td class="num">{"—" if px is None else f"{float(px):,.2f}"}</td><td class="num">{"—" if z is None else f"{float(z):,.0f} bp"}</td>'
+                       f'<td class="num">{E(_bp(_chg(pts, 1, sx.get("unit"), sx["group"])))}</td><td class="num">{E(_bp(_chg(pts, 7, sx.get("unit"), sx["group"])))}</td>'
+                       f'<td class="num">{E(_bp(_chg(pts, 30, sx.get("unit"), sx["group"])))}</td><td class="num">{E(rng) or "—"}</td>'
+                       f'<td><span class="src">{E(note)}{(" · " + E(rt)) if rt else ""}{(" · $" + f"{float(amt)/1e9:.1f}bn") if amt else ""}</span></td></tr>')
+    table = ("<table><thead><tr><th>Issuer · instrument</th><th>Type</th><th>Yield / spread</th><th>Price</th><th>Z-spread</th><th>1d</th><th>1w</th><th>1m</th><th>52w range</th><th>Status · rating · size</th></tr></thead>"
+             f"<tbody>{''.join(trs)}</tbody></table>") if trs else '<p class="mut">No board instruments configured — see <code>_data/credit_watch_config.json → board</code>.</p>'
+    # chart: headline bonds
+    lines = []
+    for i, iss in enumerate(issuers):
+        for sx in rows_by_issuer.get(iss["company"], []):
+            b = sx.get("board") or {}
+            if sx["group"] == "bond" and b.get("headline") and len(sx.get("points") or []) >= 2:
+                lines.append((sx["label"], sx["points"][-252:], PALETTE[len(lines) % len(PALETTE)]))
+    chart = multi_line_svg(lines)
+    return f"""<section>
+ <h2>Issuer yields — live board</h2>
+ <p class="sub">Yield to maturity of the benchmark bonds and the 5Y CDS of the AI-credit issuers, from the local Bloomberg terminal, refreshed by the daily <code>credit-alerts</code> lane (09:30 / 18:30 São Paulo). Changes in bp on the issuer's own instrument; CDS in bp, bond yields in %, never netted. Convertibles are shown for completeness — their yield is not comparable with straight debt. Hand-edit the universe in <code>_data/credit_watch_config.json → board</code>.</p>
+ <div class="card">{banner}</div>
+ <div class="card">{chart}</div>
+ <div class="card tscroll">{table}</div>
+</section>
+"""
+
+yields_html = yields_section()
+
 CSS = """
 :root{
  --paper:#f9f9f7; --card:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --mut:#898781;
@@ -434,12 +667,15 @@ page = f"""<!doctype html>
  <div class="meta"><span>market data <b>{E(market.get("fetched_at","never")[:16])}</b> (local BBG terminal)</span>
  <span>ledger asof <b>{E(deals["asof"])}</b> (hand-edit: <code>_data/funding_deals.json</code>)</span>
  <span>weekly refresh &amp; email: <b>Friday · 09:00 São Paulo</b></span>
+ <span>daily alerts: <b>09:30 / 18:30 São Paulo</b> (credit_alerts.py)</span>
  <span><a href="index.html">← dashboards hub</a></span></div>
 </header>
 
 <section>
  <div class="tiles">{''.join(tiles)}</div>
 </section>
+
+{alerts_html}
 
 <section>
  <h2>Market gauges</h2>
@@ -448,9 +684,11 @@ page = f"""<!doctype html>
  <details class="card"><summary>Data table — last available observation in each month</summary><div class="tscroll">{gauge_tbl}</div></details>
 </section>
 
+{yields_html}
+
 <section>
- <h2>Where the stress lives — YTD spread change by bucket</h2>
- <p class="sub">{E(sc["takeaway"])} <span class="src">[{E(sc["source"])}]</span></p>
+ <h2>Where the stress lives — YTD spread change by bucket <span class="src">(broker snapshot, static)</span></h2>
+ <p class="sub">{E(sc["takeaway"])} <span class="src">[{E(sc["source"])} — hand-entered research snapshot, not a live feed; live issuer yields are in the board above]</span></p>
  <div class="card">{hbar_chart(sc)}<details><summary>Data table</summary>{sc_tbl}</details></div>
 </section>
 

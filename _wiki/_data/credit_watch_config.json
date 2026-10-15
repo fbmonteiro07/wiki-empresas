@@ -1,0 +1,1065 @@
+{
+  "note": "HAND-EDIT config for the daily AI credit alerts (credit_alerts.py, created 2026-10-14 after the CoreWeave 5Y CDS blow-out of 2026-10-13 went unflagged). Two blocks: `instruments` (indices, equities) and `board` (issuer bonds + CDS, rendered as the live yield board). Instruments: each row has Bloomberg ticker CANDIDATES tried in order by fetch_credit_watch.py; the first that returns history is pinned as resolved_ticker in _data/credit_watch.json. status 'unverified' = ticker string never confirmed at the Terminal (the Desktop API was blocked WORKFLOW_REVIEW_NEEDED when this file was written) - confirm via CDSW / SRCH / RELS, or run fetch_credit_watch.py --probe. Rules: d1_abs = minimum 1-day move (in the instrument's unit, bp for spreads, % for equities), d1_z = minimum 1-day move in trailing-60-observation sigmas, d5_abs = 5-observation cumulative move, level_line = hand-set level whose upward crossing fires, high_60d / high_1y = fire on a new trailing high. Spreads alert on WIDENING only (tightening is logged, not mailed) unless both_sides is true; equities alert on DOWN moves. Keep units explicit - never mix CDS bp with bond-yield % or equity %.",
+  "delivery": {
+    "to": "felipe.monteiro@capstone.com.br",
+    "subject_prefix": "AI Credit ALERT |",
+    "min_severity_to_mail": "medium",
+    "lan_dashboard": "http://ds-cap-33:8080/wiki/_dashboards/credit-monitor.html"
+  },
+  "history_days": 400,
+  "sigma_window": 60,
+  "instruments": [
+    {
+      "id": "CDX_HY_5Y",
+      "group": "index",
+      "company": null,
+      "label": "CDX HY 5Y spread",
+      "unit": "bp",
+      "field": "PX_LAST",
+      "candidates": [
+        "CDX HY CDSI GEN 5Y SPRD Corp"
+      ],
+      "status": "verified-ticker",
+      "rules": {
+        "d1_abs": 20,
+        "d1_z": 2.5,
+        "d5_abs": 50,
+        "high_60d": true
+      }
+    },
+    {
+      "id": "CDX_IG_5Y",
+      "group": "index",
+      "company": null,
+      "label": "CDX IG 5Y spread",
+      "unit": "bp",
+      "field": "PX_LAST",
+      "candidates": [
+        "CDX IG CDSI GEN 5Y Corp"
+      ],
+      "status": "verified-ticker",
+      "rules": {
+        "d1_abs": 5,
+        "d1_z": 2.5,
+        "d5_abs": 12,
+        "high_60d": true
+      }
+    },
+    {
+      "id": "US_HY_OAS",
+      "group": "index",
+      "company": null,
+      "label": "US High Yield OAS",
+      "unit": "%",
+      "field": "PX_LAST",
+      "candidates": [
+        "LF98OAS Index"
+      ],
+      "status": "verified",
+      "rules": {
+        "d1_abs": 15,
+        "d1_z": 2.5,
+        "d5_abs": 40,
+        "high_60d": true
+      },
+      "context": "Same series as the weekly monitor (funding_market.json); the meeting's equity-read trigger (internal weekly 2026-08-24)."
+    },
+    {
+      "id": "US_IG_OAS",
+      "group": "index",
+      "company": null,
+      "label": "US IG Corporate OAS",
+      "unit": "%",
+      "field": "PX_LAST",
+      "candidates": [
+        "LUACOAS Index"
+      ],
+      "status": "verified",
+      "rules": {
+        "d1_abs": 5,
+        "d1_z": 2.5,
+        "d5_abs": 12,
+        "high_60d": true
+      }
+    },
+    {
+      "id": "CRWV_EQ",
+      "group": "equity",
+      "company": "CRWV",
+      "label": "CoreWeave equity",
+      "unit": "%",
+      "field": "PX_LAST",
+      "candidates": [
+        "CRWV US Equity"
+      ],
+      "status": "verified",
+      "price_source": "technicals",
+      "rules": {
+        "d1_abs": 6,
+        "d1_z": 2.5,
+        "d5_abs": 15
+      }
+    },
+    {
+      "id": "ORCL_EQ",
+      "group": "equity",
+      "company": "ORCL",
+      "label": "Oracle equity",
+      "unit": "%",
+      "field": "PX_LAST",
+      "candidates": [
+        "ORCL US Equity"
+      ],
+      "status": "verified",
+      "price_source": "technicals",
+      "rules": {
+        "d1_abs": 5,
+        "d1_z": 2.5,
+        "d5_abs": 12
+      }
+    },
+    {
+      "id": "NBIS_EQ",
+      "group": "equity",
+      "company": "NBIS",
+      "label": "Nebius equity",
+      "unit": "%",
+      "field": "PX_LAST",
+      "candidates": [
+        "NBIS US Equity"
+      ],
+      "status": "verified",
+      "price_source": "technicals",
+      "rules": {
+        "d1_abs": 7,
+        "d1_z": 2.5,
+        "d5_abs": 18
+      }
+    },
+    {
+      "id": "IREN_EQ",
+      "group": "equity",
+      "company": "IREN",
+      "label": "IREN equity",
+      "unit": "%",
+      "field": "PX_LAST",
+      "candidates": [
+        "IREN US Equity"
+      ],
+      "status": "unverified",
+      "rules": {
+        "d1_abs": 8,
+        "d1_z": 2.5,
+        "d5_abs": 20
+      }
+    },
+    {
+      "id": "APLD_EQ",
+      "group": "equity",
+      "company": "APLD",
+      "label": "Applied Digital equity",
+      "unit": "%",
+      "field": "PX_LAST",
+      "candidates": [
+        "APLD US Equity"
+      ],
+      "status": "unverified",
+      "rules": {
+        "d1_abs": 8,
+        "d1_z": 2.5,
+        "d5_abs": 20
+      }
+    },
+    {
+      "id": "CORZ_EQ",
+      "group": "equity",
+      "company": "CORZ",
+      "label": "Core Scientific equity",
+      "unit": "%",
+      "field": "PX_LAST",
+      "candidates": [
+        "CORZ US Equity"
+      ],
+      "status": "unverified",
+      "rules": {
+        "d1_abs": 8,
+        "d1_z": 2.5,
+        "d5_abs": 20
+      }
+    },
+    {
+      "id": "CIFR_EQ",
+      "group": "equity",
+      "company": "CIFR",
+      "label": "Cipher Mining equity",
+      "unit": "%",
+      "field": "PX_LAST",
+      "candidates": [
+        "CIFR US Equity"
+      ],
+      "status": "unverified",
+      "rules": {
+        "d1_abs": 8,
+        "d1_z": 2.5,
+        "d5_abs": 20
+      },
+      "context": "Rothschild 10-14: CIFR -13% on a proposed $850m zero-coupon convertible."
+    }
+  ],
+  "wishlist": [
+    "CRWV mid-June-2026 $1.25bn senior note (9.625% yield at print) - ISIN",
+    "CRWV 2032 unsecured notes (Jefferies / Favuzza 10-14 flags them) - ISIN",
+    "CRWV $3.7bn convertible due 2033 (priced 2026-09-18) - ISIN",
+    "APLD 9.250 06/xx/30, CORZ 7.750 xx/31, EDGCOM 7.500 xx/31, ELKGVP 7.500 xx/31, STNGRY 6.000 xx/31 (project bonds, MS 08-20 table)",
+    "ORCL Feb-26 jumbo tranches; META Hyperion/SPV paper; Anthropic TPU SPV A2 5.75%"
+  ],
+  "mail": {
+    "lookback_hours": 30,
+    "credit_terms": "\\b(CDS\\b|credit[- ]default|spreads? (?:widen|blow|gap|balloon)|spread widening|(?:bonds?|notes?|debt|paper|loans?) (?:sell|sold|selling|trade[sd]?|trading|fell|fall|falling|drop|dropp|slump|slid|under pressure)|bond (?:yields?|prices?|rout|sell-?off|selloff)|debt (?:sell-?off|selloff|rout)|yields? (?:spik|jump|surg|soar|blow)|\\d{2}(?:\\.\\d)?% yield|yield(?:s|ing)? (?:above|near|almost|of|at) \\d{2}|private credit (?:bubble|concern|fear|risk|stress|exposure)|credit (?:concern|stress|scare|bubble|event|fears?|risk|market)|distressed (?:debt|exchange|level|territory)|ratings? (?:downgrade|cut|action|outlook)|downgraded to (?:B\\b|CCC|junk|high[- ]yield)|covenant|refinancing (?:risk|wall|need)|DDTL|delayed.draw|term loan|junk bond|default risk|liquidity (?:crunch|squeeze|concern)|funding (?:gap|stress|crunch)|funding costs? (?:ris|surg|spik|jump)|GPU[- ]backed|zero-coupon|convertible (?:notes?|offering|bond)|insurers?['’]? capital|investment[- ]grade rating)",
+    "name_groups": {
+      "CRWV": "CoreWeave|CRWV",
+      "ORCL": "Oracle(?! Red Bull)|ORCL",
+      "NBIS": "Nebius|NBIS",
+      "IREN": "\\bIREN\\b|Iris Energy",
+      "APLD": "Applied Digital|APLD",
+      "CORZ": "Core Scientific|CORZ",
+      "CIFR": "Cipher Mining|\\bCIFR\\b",
+      "WULF": "TeraWulf|\\bWULF\\b",
+      "NSCALE": "Nscale",
+      "CRUSOE": "Crusoe",
+      "LAMBDA": "Lambda Labs|\\bLambda\\b",
+      "META": "\\bMeta\\b|Hyperion",
+      "AMZN": "Amazon|AMZN",
+      "GOOGL": "Alphabet|GOOGL|\\bGoogle\\b",
+      "MSFT": "Microsoft|MSFT",
+      "OPENAI": "OpenAI",
+      "ANTHROPIC": "Anthropic",
+      "XAI": "\\bxAI\\b",
+      "NEOCLOUD": "neocloud|neo-cloud|GPU[- ]backed|AI (?:debt|credit|financing|bond)"
+    },
+    "proximity_chars": 220,
+    "min_firms": {
+      "default": 2,
+      "CRWV": 1,
+      "ORCL": 1,
+      "NBIS": 1
+    },
+    "max_items": 1500,
+    "ignore_subjects": "^(Sentiment Radar \\||Twitter Briefing|Morning Briefing|Company specific Twitter|AI Credit ALERT \\||AI Credit & Funding \\|)",
+    "subject_adjacent_chars": 25,
+    "note": "credit_terms is deliberately NARROW (precision over recall): the quantitative side is the market layer; this layer exists to catch the tape when Bloomberg is blocked or the move is intraday. A hit = credit term within proximity_chars of a watched name in the body, or name followed by a credit term within subject_adjacent_chars in the subject. Hyperscalers / labs need min_firms distinct firms. Identical excerpts seen in the last 14 days (boilerplate risk lists) are ignored.",
+    "proximity_override": {
+      "META": 110,
+      "AMZN": 110,
+      "GOOGL": 110,
+      "MSFT": 110,
+      "OPENAI": 110,
+      "ANTHROPIC": 110,
+      "XAI": 110,
+      "NEOCLOUD": 160
+    }
+  },
+  "board": {
+    "note": "Issuer yield board rendered as section 'Issuer yields' on credit-monitor.html. Every bond becomes a daily YLD_YTM_MID series (id <company>_<cpn>_<year>) plus a bdp snapshot (price, Z-spread, size, ratings); every issuer CDS a PX_LAST series. Tickers were resolved through the Bloomberg instrument lookup (//blp/instruments) on 2026-10-14 — the fetch tries decimal / fraction / 2- and 4-digit-year spellings and pins the one that returns history. headline: true = plotted on the board chart (one or two per issuer). type: senior | secured | convertible | project. Convertible yields are not comparable with straight debt.",
+    "cds_rules": {
+      "d1_abs": 25,
+      "d1_z": 2.5,
+      "d5_abs": 75,
+      "high_60d": true,
+      "high_1y": true
+    },
+    "bond_rules": {
+      "d1_abs": 40,
+      "d1_z": 2.5,
+      "d5_abs": 100,
+      "high_60d": true,
+      "high_1y": true
+    },
+    "issuers": [
+      {
+        "company": "CRWV",
+        "name": "CoreWeave",
+        "ticker": "CRWV",
+        "tier": "neocloud · HY (S&P B+ pos.)",
+        "cds": "CRWV CDS USD SR 5Y D14 Corp",
+        "cds_rules": {
+          "d1_abs": 50,
+          "d1_z": 2.5,
+          "d5_abs": 150,
+          "level_line": 800,
+          "high_60d": true,
+          "high_1y": true
+        },
+        "note": "the 2032 9.625% notes are the line the tape quotes ('32s hit 14% yield, below 80c — TMT Breakout 10-14)",
+        "bonds": [
+          {
+            "cpn": 9.25,
+            "mty": "2030-06-01",
+            "suffix": "144A",
+            "note": "$2.0bn, May-2025"
+          },
+          {
+            "cpn": 9.0,
+            "mty": "2031-02-01",
+            "suffix": "144A",
+            "note": "$1.75bn, Jul-2025"
+          },
+          {
+            "cpn": 9.75,
+            "mty": "2031-10-01",
+            "suffix": "144A",
+            "note": "$2.75bn, Apr-2026"
+          },
+          {
+            "cpn": 9.625,
+            "mty": "2032-07-15",
+            "suffix": "144A",
+            "headline": true,
+            "note": "$1.3bn, Jun-2026, printed 9.625% / +530bp (UBS 09-22)"
+          },
+          {
+            "cpn": 8.5,
+            "mty": "2032-07-15",
+            "suffix": "144A",
+            "ccy": "EUR",
+            "note": "EUR 2.0bn, Jun-2026, inaugural eurobond"
+          },
+          {
+            "cpn": 1.75,
+            "mty": "2031-12-01",
+            "suffix": "144A",
+            "type": "convertible",
+            "rules": {
+              "d1_abs": 60,
+              "d1_z": 3.0,
+              "d5_abs": 150,
+              "high_60d": true,
+              "high_1y": true
+            },
+            "note": "$2.6bn convert"
+          },
+          {
+            "cpn": 1.75,
+            "mty": "2032-10-01",
+            "suffix": "144A",
+            "type": "convertible",
+            "rules": {
+              "d1_abs": 60,
+              "d1_z": 3.0,
+              "d5_abs": 150,
+              "high_60d": true,
+              "high_1y": true
+            },
+            "note": "$4.0bn convert"
+          },
+          {
+            "cpn": 2.875,
+            "mty": "2033-04-01",
+            "suffix": "144A",
+            "type": "convertible",
+            "rules": {
+              "d1_abs": 60,
+              "d1_z": 3.0,
+              "d5_abs": 150,
+              "high_60d": true,
+              "high_1y": true
+            },
+            "note": "$3.7bn convert priced 2026-09-18"
+          }
+        ],
+        "cds_validation_warning": "CoreWeave CDS source check (Bloomberg, 2026-10-14): PX_LAST/5Y_MID_CDS_SPREAD returns about 440 bp, while CDS_5Y on the same canonical instrument returns about 1,150 bp. The latter has no returned historical series. CDS levels and changes are withheld until the pricing basis is reconciled.",
+        "cds_validation_evidence": "credit-monitor/crwv-cds-canonical-check-2026-10-14.json"
+      },
+      {
+        "company": "NBIS",
+        "name": "Nebius",
+        "ticker": "NBIS",
+        "tier": "neocloud · unrated",
+        "cds": null,
+        "note": "No CDS configured; these bonds are convertibles. Bloomberg conversion prices verified 2026-10-14.",
+        "bonds": [
+          {
+            "cpn": 2.0,
+            "mty": "2029-06-05",
+            "suffix": "",
+            "type": "convertible",
+            "rules": {
+              "d1_abs": 60,
+              "d1_z": 3.0,
+              "d5_abs": 150,
+              "high_60d": true,
+              "high_1y": true
+            }
+          },
+          {
+            "cpn": 3.0,
+            "mty": "2031-06-05",
+            "suffix": "",
+            "type": "convertible",
+            "rules": {
+              "d1_abs": 60,
+              "d1_z": 3.0,
+              "d5_abs": 150,
+              "high_60d": true,
+              "high_1y": true
+            }
+          },
+          {
+            "cpn": 2.75,
+            "mty": "2032-09-15",
+            "suffix": "",
+            "type": "convertible",
+            "rules": {
+              "d1_abs": 60,
+              "d1_z": 3.0,
+              "d5_abs": 150,
+              "high_60d": true,
+              "high_1y": true
+            }
+          },
+          {
+            "cpn": 2.625,
+            "mty": "2033-03-15",
+            "suffix": "144A",
+            "type": "convertible",
+            "rules": {
+              "d1_abs": 60,
+              "d1_z": 3.0,
+              "d5_abs": 150,
+              "high_60d": true,
+              "high_1y": true
+            }
+          },
+          {
+            "cpn": 4.5,
+            "mty": "2034-02-15",
+            "suffix": "144A",
+            "headline": true,
+            "type": "convertible",
+            "rules": {
+              "d1_abs": 60,
+              "d1_z": 3.0,
+              "d5_abs": 150,
+              "high_60d": true,
+              "high_1y": true
+            },
+            "note": "Convertible; Bloomberg CV_CNVS_PX verified 2026-10-14"
+          }
+        ]
+      },
+      {
+        "company": "ORCL",
+        "name": "Oracle",
+        "ticker": "ORCL",
+        "tier": "hyperscaler · IG (BBB)",
+        "cds": "ORCLCP CDS USD SR 5Y D14 Corp",
+        "cds_rules": {
+          "d1_abs": 15,
+          "d1_z": 2.5,
+          "d5_abs": 40,
+          "level_line": 200,
+          "high_60d": true,
+          "high_1y": true
+        },
+        "note": "CDS ticker is ORCLCP, not ORCL; Feb-26 jumbo tranches are the live marks for the OpenAI-financing debate",
+        "bonds": [
+          {
+            "cpn": 4.95,
+            "mty": "2031-02-04",
+            "suffix": "",
+            "rules": {
+              "d1_abs": 15,
+              "d1_z": 3.0,
+              "d5_abs": 35,
+              "high_60d": true,
+              "high_1y": true
+            },
+            "note": "Feb-26 jumbo 5y"
+          },
+          {
+            "cpn": 5.7,
+            "mty": "2036-02-04",
+            "suffix": "",
+            "rules": {
+              "d1_abs": 15,
+              "d1_z": 3.0,
+              "d5_abs": 35,
+              "high_60d": true,
+              "high_1y": true
+            },
+            "headline": true,
+            "note": "Feb-26 jumbo 10y"
+          },
+          {
+            "cpn": 6.7,
+            "mty": "2056-02-04",
+            "suffix": "",
+            "rules": {
+              "d1_abs": 15,
+              "d1_z": 3.0,
+              "d5_abs": 35,
+              "high_60d": true,
+              "high_1y": true
+            },
+            "headline": true,
+            "note": "Feb-26 jumbo 30y"
+          },
+          {
+            "cpn": 6.85,
+            "mty": "2066-02-04",
+            "suffix": "",
+            "rules": {
+              "d1_abs": 15,
+              "d1_z": 3.0,
+              "d5_abs": 35,
+              "high_60d": true,
+              "high_1y": true
+            },
+            "note": "Feb-26 jumbo 40y"
+          },
+          {
+            "cpn": 5.2,
+            "mty": "2035-09-26",
+            "suffix": "",
+            "rules": {
+              "d1_abs": 15,
+              "d1_z": 3.0,
+              "d5_abs": 35,
+              "high_60d": true,
+              "high_1y": true
+            },
+            "note": "Sep-25 $18bn deal 10y"
+          },
+          {
+            "cpn": 5.95,
+            "mty": "2055-09-26",
+            "suffix": "",
+            "rules": {
+              "d1_abs": 15,
+              "d1_z": 3.0,
+              "d5_abs": 35,
+              "high_60d": true,
+              "high_1y": true
+            },
+            "note": "Sep-25 $18bn deal 30y"
+          }
+        ]
+      },
+      {
+        "company": "META",
+        "name": "Meta",
+        "ticker": "META",
+        "tier": "hyperscaler · IG (AA-)",
+        "cds": "META CDS USD SR 5Y D14 Corp",
+        "cds_rules": {
+          "d1_abs": 8,
+          "d1_z": 3.0,
+          "d5_abs": 20,
+          "high_60d": true,
+          "high_1y": true
+        },
+        "bonds": [
+          {
+            "cpn": 4.8,
+            "mty": "2030-05-15",
+            "suffix": "",
+            "rules": {
+              "d1_abs": 15,
+              "d1_z": 3.0,
+              "d5_abs": 35,
+              "high_60d": true,
+              "high_1y": true
+            }
+          },
+          {
+            "cpn": 5.25,
+            "mty": "2036-05-15",
+            "suffix": "",
+            "rules": {
+              "d1_abs": 15,
+              "d1_z": 3.0,
+              "d5_abs": 35,
+              "high_60d": true,
+              "high_1y": true
+            },
+            "headline": true,
+            "note": "May-26 10y"
+          },
+          {
+            "cpn": 6.3,
+            "mty": "2056-05-15",
+            "suffix": "",
+            "rules": {
+              "d1_abs": 15,
+              "d1_z": 3.0,
+              "d5_abs": 35,
+              "high_60d": true,
+              "high_1y": true
+            },
+            "headline": true,
+            "note": "May-26 30y"
+          },
+          {
+            "cpn": 6.45,
+            "mty": "2066-05-15",
+            "suffix": "",
+            "rules": {
+              "d1_abs": 15,
+              "d1_z": 3.0,
+              "d5_abs": 35,
+              "high_60d": true,
+              "high_1y": true
+            },
+            "note": "May-26 40y"
+          },
+          {
+            "cpn": 5.625,
+            "mty": "2055-11-15",
+            "suffix": "",
+            "rules": {
+              "d1_abs": 15,
+              "d1_z": 3.0,
+              "d5_abs": 35,
+              "high_60d": true,
+              "high_1y": true
+            },
+            "note": "Oct/Nov-25 $30bn deal 30y"
+          }
+        ]
+      },
+      {
+        "company": "AMZN",
+        "name": "Amazon",
+        "ticker": "AMZN",
+        "tier": "hyperscaler · IG (AA)",
+        "cds": "AMZN CDS USD SR 5Y D14 Corp",
+        "cds_rules": {
+          "d1_abs": 8,
+          "d1_z": 3.0,
+          "d5_abs": 20,
+          "high_60d": true,
+          "high_1y": true
+        },
+        "bonds": [
+          {
+            "cpn": 4.8,
+            "mty": "2031-07-09",
+            "suffix": "",
+            "rules": {
+              "d1_abs": 15,
+              "d1_z": 3.0,
+              "d5_abs": 35,
+              "high_60d": true,
+              "high_1y": true
+            }
+          },
+          {
+            "cpn": 5.3,
+            "mty": "2036-07-09",
+            "suffix": "",
+            "rules": {
+              "d1_abs": 15,
+              "d1_z": 3.0,
+              "d5_abs": 35,
+              "high_60d": true,
+              "high_1y": true
+            },
+            "headline": true,
+            "note": "Jul-26 10y"
+          },
+          {
+            "cpn": 6.1,
+            "mty": "2056-07-09",
+            "suffix": "",
+            "rules": {
+              "d1_abs": 15,
+              "d1_z": 3.0,
+              "d5_abs": 35,
+              "high_60d": true,
+              "high_1y": true
+            },
+            "headline": true,
+            "note": "Jul-26 30y"
+          },
+          {
+            "cpn": 5.8,
+            "mty": "2056-03-13",
+            "suffix": "",
+            "rules": {
+              "d1_abs": 15,
+              "d1_z": 3.0,
+              "d5_abs": 35,
+              "high_60d": true,
+              "high_1y": true
+            },
+            "note": "Mar-26 30y"
+          }
+        ]
+      },
+      {
+        "company": "GOOGL",
+        "name": "Alphabet",
+        "ticker": "GOOGL",
+        "tier": "hyperscaler · IG (AA+)",
+        "cds": "GOOGL CDS USD SR 5Y D14 Corp",
+        "cds_rules": {
+          "d1_abs": 8,
+          "d1_z": 3.0,
+          "d5_abs": 20,
+          "high_60d": true,
+          "high_1y": true
+        },
+        "bonds": [
+          {
+            "cpn": 4.875,
+            "mty": "2031-08-15",
+            "suffix": "",
+            "rules": {
+              "d1_abs": 15,
+              "d1_z": 3.0,
+              "d5_abs": 35,
+              "high_60d": true,
+              "high_1y": true
+            }
+          },
+          {
+            "cpn": 5.45,
+            "mty": "2036-08-15",
+            "suffix": "",
+            "rules": {
+              "d1_abs": 15,
+              "d1_z": 3.0,
+              "d5_abs": 35,
+              "high_60d": true,
+              "high_1y": true
+            },
+            "headline": true,
+            "note": "Aug-26 10y"
+          },
+          {
+            "cpn": 6.375,
+            "mty": "2056-08-15",
+            "suffix": "",
+            "rules": {
+              "d1_abs": 15,
+              "d1_z": 3.0,
+              "d5_abs": 35,
+              "high_60d": true,
+              "high_1y": true
+            },
+            "headline": true,
+            "note": "Aug-26 30y"
+          },
+          {
+            "cpn": 5.7,
+            "mty": "2075-11-15",
+            "suffix": "",
+            "rules": {
+              "d1_abs": 15,
+              "d1_z": 3.0,
+              "d5_abs": 35,
+              "high_60d": true,
+              "high_1y": true
+            },
+            "note": "Nov-25 50y"
+          }
+        ]
+      },
+      {
+        "company": "MSFT",
+        "name": "Microsoft",
+        "ticker": "MSFT",
+        "tier": "hyperscaler · IG (AAA)",
+        "cds": "MSFT CDS USD SR 5Y D14 Corp",
+        "cds_rules": {
+          "d1_abs": 8,
+          "d1_z": 3.0,
+          "d5_abs": 20,
+          "high_60d": true,
+          "high_1y": true
+        },
+        "bonds": [
+          {
+            "cpn": 4.2,
+            "mty": "2035-11-03",
+            "suffix": "",
+            "rules": {
+              "d1_abs": 15,
+              "d1_z": 3.0,
+              "d5_abs": 35,
+              "high_60d": true,
+              "high_1y": true
+            },
+            "headline": true,
+            "note": "10y"
+          },
+          {
+            "cpn": 4.75,
+            "mty": "2055-11-03",
+            "suffix": "",
+            "rules": {
+              "d1_abs": 15,
+              "d1_z": 3.0,
+              "d5_abs": 35,
+              "high_60d": true,
+              "high_1y": true
+            },
+            "headline": true,
+            "note": "30y"
+          }
+        ]
+      },
+      {
+        "company": "NVDA",
+        "name": "NVIDIA",
+        "ticker": "NVDA",
+        "tier": "vendor · IG (AA-) — reference",
+        "cds": "NVDA CDS USD SR 5Y D14 Corp",
+        "cds_rules": {
+          "d1_abs": 8,
+          "d1_z": 3.0,
+          "d5_abs": 20,
+          "high_60d": true,
+          "high_1y": true
+        },
+        "bonds": [
+          {
+            "cpn": 4.95,
+            "mty": "2036-06-15",
+            "suffix": "",
+            "rules": {
+              "d1_abs": 15,
+              "d1_z": 3.0,
+              "d5_abs": 35,
+              "high_60d": true,
+              "high_1y": true
+            },
+            "headline": true,
+            "note": "Jun-26 10y"
+          },
+          {
+            "cpn": 5.55,
+            "mty": "2046-06-15",
+            "suffix": "",
+            "rules": {
+              "d1_abs": 15,
+              "d1_z": 3.0,
+              "d5_abs": 35,
+              "high_60d": true,
+              "high_1y": true
+            },
+            "note": "Jun-26 20y"
+          }
+        ]
+      },
+      {
+        "company": "XAI",
+        "name": "xAI",
+        "ticker": "XAIXXX",
+        "tier": "AI lab · HY",
+        "cds": null,
+        "bonds": [
+          {
+            "cpn": 12.5,
+            "mty": "2030-06-30",
+            "suffix": "144A",
+            "headline": true,
+            "note": "$5bn 12.5% secured notes, Jun-2025 (X.AI LLC / X.AI Co Issuer)"
+          }
+        ]
+      },
+      {
+        "company": "APLD",
+        "name": "Applied Digital (ComputeCo)",
+        "ticker": "APLD",
+        "tier": "DC project · CRWV offtake",
+        "cds": null,
+        "bonds": [
+          {
+            "cpn": 9.25,
+            "mty": "2030-12-15",
+            "suffix": "144A",
+            "type": "project",
+            "headline": true,
+            "note": "Ellendale ND 250MW, CRWV offtake — MS 08-20 table 8.2%"
+          }
+        ]
+      },
+      {
+        "company": "CORZ",
+        "name": "Core Scientific (Finance I)",
+        "ticker": "CORZ",
+        "tier": "DC project · CRWV offtake",
+        "cds": null,
+        "bonds": [
+          {
+            "cpn": 7.75,
+            "mty": "2031-05-15",
+            "suffix": "144A",
+            "type": "project",
+            "headline": true,
+            "note": "TX/GA/OK/NC 589MW, CRWV offtake — MS 08-20 table 11.5%"
+          }
+        ]
+      },
+      {
+        "company": "CIFR",
+        "name": "Cipher (Compute LLC)",
+        "ticker": "CIFR",
+        "tier": "DC project / miner",
+        "cds": null,
+        "bonds": [
+          {
+            "cpn": 7.125,
+            "mty": "2030-11-15",
+            "suffix": "144A",
+            "type": "project",
+            "headline": true,
+            "note": "Cipher Compute secured notes"
+          },
+          {
+            "cpn": 1.75,
+            "mty": "2030-05-15",
+            "suffix": "",
+            "type": "convertible",
+            "rules": {
+              "d1_abs": 60,
+              "d1_z": 3.0,
+              "d5_abs": 150,
+              "high_60d": true,
+              "high_1y": true
+            },
+            "note": "Cipher Digital convert"
+          }
+        ]
+      },
+      {
+        "company": "WULF",
+        "name": "TeraWulf (WULF Compute)",
+        "ticker": "WULF",
+        "tier": "DC project / miner",
+        "cds": null,
+        "bonds": [
+          {
+            "cpn": 7.75,
+            "mty": "2030-10-15",
+            "suffix": "144A",
+            "type": "project",
+            "headline": true,
+            "note": "WULF Compute secured notes"
+          }
+        ]
+      },
+      {
+        "company": "IREN",
+        "name": "IREN",
+        "ticker": "IREN",
+        "tier": "neocloud / miner · converts",
+        "cds": null,
+        "bonds": [
+          {
+            "cpn": 3.25,
+            "mty": "2030-06-15",
+            "suffix": "",
+            "type": "convertible",
+            "rules": {
+              "d1_abs": 60,
+              "d1_z": 3.0,
+              "d5_abs": 150,
+              "high_60d": true,
+              "high_1y": true
+            }
+          },
+          {
+            "cpn": 3.5,
+            "mty": "2029-12-15",
+            "suffix": "",
+            "type": "convertible",
+            "rules": {
+              "d1_abs": 60,
+              "d1_z": 3.0,
+              "d5_abs": 150,
+              "high_60d": true,
+              "high_1y": true
+            },
+            "headline": true
+          }
+        ]
+      },
+      {
+        "company": "EDGCOM",
+        "name": "Edged Compute",
+        "ticker": "EDGCOM",
+        "tier": "DC project · CRWV/Alibaba offtake",
+        "cds": null,
+        "bonds": [
+          {
+            "cpn": 7.5,
+            "mty": "2031-04-30",
+            "suffix": "144A",
+            "type": "project",
+            "headline": true,
+            "note": "Chicago/Atlanta 114MW — MS 08-20 table 14.2%"
+          }
+        ]
+      },
+      {
+        "company": "STNGRY",
+        "name": "Stingray Compute",
+        "ticker": "STNGRY",
+        "tier": "DC project · AMZN offtake",
+        "cds": null,
+        "bonds": [
+          {
+            "cpn": 6.0,
+            "mty": "2031-06-15",
+            "suffix": "144A",
+            "type": "project",
+            "headline": true,
+            "note": "Wink/Andrews TX — MS 08-20 table 7.9% / 8.8%"
+          }
+        ]
+      },
+      {
+        "company": "HUT",
+        "name": "Hut 8 (HUT 8 DC LLC)",
+        "ticker": "HUTRBA",
+        "tier": "DC project · IG-rated",
+        "cds": null,
+        "bonds": [
+          {
+            "cpn": 6.192,
+            "mty": "2042-11-15",
+            "suffix": "144A",
+            "type": "project",
+            "note": "HUT 8 DC LLC 6.192% 2042 144A — the investment-grade project bond (22V 10-13)"
+          }
+        ]
+      },
+      {
+        "company": "SOFTBK",
+        "name": "SoftBank Group",
+        "ticker": "SOFTBK",
+        "tier": "AI financier · HY",
+        "cds": null,
+        "bonds": [
+          {
+            "cpn": 7.0,
+            "mty": "2032-04-22",
+            "suffix": "REGS",
+            "headline": true,
+            "note": "EUR 2032 REGS; currency verified Bloomberg CRNCY 2026-10-14",
+            "ccy": "EUR"
+          },
+          {
+            "cpn": 7.375,
+            "mty": "2034-04-22",
+            "suffix": "REGS",
+            "note": "EUR 2034 REGS; currency verified Bloomberg CRNCY 2026-10-14",
+            "ccy": "EUR"
+          }
+        ]
+      }
+    ]
+  }
+}
