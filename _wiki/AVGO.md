@@ -3,17 +3,17 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AVGO` (filings + transcripts) · `_equity_calls` · `_briefings\by-ticker\AVGO.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Snapshot — Capstone official model + BBG · asof 2026-10-14 · USD
+### 📊 Snapshot — Capstone official model + BBG · asof 2026-10-15 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $123.7bn | $195.1bn |
 | Gross profit | $91.3bn | $139.1bn |
 | Gross margin | 73.8% | 71.3% |
-| EBITDA | $83.5bn | $129.8bn |
+| EBITDA | $83.5bn | $129.9bn |
 | EPS | **$12.89** | **$21.07** |
 | Capex | $2.1bn | $2.8bn |
-| OCF (≈EBITDA) | $83.5bn | $129.8bn |
+| OCF (≈EBITDA) | $83.5bn | $129.9bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 _**Bold** = Capstone official model; plain = BBG consensus._
