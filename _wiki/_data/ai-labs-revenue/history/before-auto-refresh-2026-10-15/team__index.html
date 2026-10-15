@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capstone Wiki</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0; background: #0f1419; color: #e6edf3;
+      display: flex; min-height: 100vh; align-items: center; justify-content: center;
+    }
+    .wrap { max-width: 640px; width: 100%; padding: 48px 24px; }
+    h1 { font-size: 28px; margin: 0 0 8px; }
+    p.sub { color: #8b949e; margin: 0 0 32px; font-size: 15px; }
+    .card {
+      display: block; padding: 20px 24px; margin-bottom: 14px;
+      background: #161b22; border: 1px solid #30363d; border-radius: 10px;
+      text-decoration: none; color: inherit; transition: border-color .15s, transform .15s;
+    }
+    .card:hover { border-color: #58a6ff; transform: translateY(-2px); }
+    .card h2 { margin: 0 0 4px; font-size: 17px; }
+    .card span { color: #8b949e; font-size: 13px; }
+    .card.sub { margin-left: 32px; margin-top: -6px; padding: 14px 22px; background: #12171f; border-color: #262d36; }
+    .card.sub h2 { font-size: 15px; }
+    .card.sub h2::before { content: "↳  "; color: #6e7681; font-weight: 400; }
+    /* marcador de link externo (sai deste site — abre em aba nova) */
+    .card h2 .ext { color: #6e7681; font-weight: 400; font-size: 13px; }
+    footer { margin-top: 32px; color: #6e7681; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Capstone Wiki</h1>
+    <p class="sub">Buyside dashboards — semis, AI infrastructure &amp; AI labs</p>
+
+    <a class="card" href="https://fbmonteiro07.github.io/wiki-empresas/_wiki/" target="_blank" rel="noopener">
+      <h2>Research Wiki 📚 <span class="ext">↗</span></h2>
+      <span>A wiki de research em si — <b>uma página sintetizada por ticker</b> (~101 nomes) mais os temas cross-company, cada página com Thesis · Debate (bull vs bear) · Catalysts · Changelog, e <b>todo datapoint atribuído a broker/analista + data</b>. Em cima do acervo bruto (filings, transcripts, decks por ticker). Traz também o hub de dashboards da wiki: edge tracker (house vs Street), read-through da supply chain, catalyst loop &amp; timeline, what-changed, coverage audit, assumptions canônicas, knowledge graph, book exposure e management communication. Atualizada pela rotina diária das 18:15</span>
+    </a>
+    <a class="card sub" href="wiki-map/">
+      <h2>Wiki Map &amp; Repo State 🗺️</h2>
+      <span>Mapa da wiki de research — 101 páginas em 14 setores, grafo interativo da supply chain (142 supply + 23 compete edges, hover/click por ticker), inventário do acervo (~3.1k docs, tiers de cobertura), thesis drift dos últimos 7 dias e roadmap do repositório — snapshot 02-Jul-26</span>
+    </a>
+    <a class="card" href="openrouter-vercel/">
+      <h2>OpenRouter + Vercel</h2>
+      <span>AI model and lab adoption, gateway token share, requests, estimated spend and weekly changes. Includes the GPU pricing tab on the internal research wiki.</span>
+    </a>
+    <a class="card sub" href="gpu-pricing/">
+      <h2>GPU rental pricing</h2>
+      <span>H100, A100 and B200: Bloomberg rental benchmarks, SemiAnalysis public composites and H100 one-year contract ranges. Dated observations, history and source filters.</span>
+    </a>
+    <a class="card" href="ai-labs/">
+      <h2>AI Labs 🧪 — Revenue &amp; ARR</h2>
+      <span>OpenAI and Anthropic revenue and monthly ARR from the Capstone AI Model (15-Oct-2026), combined-system totals, net/gross selector and 22 dated news references. Includes the original WFS P&amp;L snapshot (11-Jun-2026).</span>
+    </a>
+    <a class="card" href="sensor-tower/">
+      <h2>AI Apps Monitor 📱</h2>
+      <span>Consumer AI apps (ChatGPT, Gemini, DeepSeek, Grok, Copilot, Meta AI, Perplexity, Claude, Sora) — Sensor Tower usage (MAU/DAU/stickiness), downloads &amp; share, time spent, chatbot market share (Statcounter WW/US), Sora launch/retention vs Threads, web traffic — toggle Global/U.S., ranges 12M-All</span>
+    </a>
+    <a class="card sub" href="sensor-tower/social-media-benchmark/">
+      <h2>Social Media Benchmark 📈</h2>
+      <span>Engagement benchmark — Facebook, Instagram, YouTube, TikTok, Pinterest, Reddit &amp; X — Sensor Tower time spent, time/user, MAU &amp; downloads (U.S. &amp; Int'l, through May-26) + ARPU &amp; rev/hour; scales Absolute/Indexed/Y-o-Y/Share %, KPI sparklines, hover-focus &amp; dark mode — excl. Yelp &amp; Snap</span>
+    </a>
+    <a class="card" href="modelos-capstone/">
+      <h2>Modelos Capstone 📐 — vs Street</h2>
+      <span>Modelos oficiais da casa (NVDA, AAPL, AVGO, COHR, GOOG, META, TSM, LITE, ASML) vs consenso Bloomberg BEst — Receita, margens &amp; EPS por ano fiscal (1FY/2FY/3FY), alinhados pela âncora no último real, com Δ Capstone vs Street. Resumo completo de cada modelo em PDF; mesma comparação aparece no card de cada empresa no Comp Sheet</span>
+    </a>
+    <a class="card" href="comp-sheet/">
+      <h2>Comp Sheet + GP Panel 📊</h2>
+      <span>Coverage comps (32 names — Core Tech, Optics/Networking, Internet/Software, Power/Infra) — Bloomberg BEst NTM &amp; 2Y-out EPS/P&#47;E, revision momentum, growth vs valuation, Capstone ests vs consensus, fundamentals card per name. Inclui o <b>GP Panel</b> (réplica GP/GF: preço &amp; P/E 10 anos, 6 séries BEst, bandas μ±1σ, base 100, comparação multi-ticker, fundamentos CY c/ street high) — links cruzados entre os dois</span>
+    </a>
+    <a class="card sub" href="comp-sheet/pe-panel.html">
+      <h2>Panels: P/E + revisão de EPS 📉</h2>
+      <span><b>Tab 1 — Forward P/E:</b> o gráfico de P/E do Comp Sheet para os 36 nomes de uma vez — 1Y e 2Y forward P/E (BEst 1BF/2BF, semanal 5a) contra a média de 5 anos e ±1σ, em small multiples. Ordena por <b>desconto/prêmio vs a própria história</b> (hoje: TLN −55%, NOW −53%, NVDA −47% na ponta barata; AGX +101%, GLW +82%, CIEN +73% na cara), filtra por setor ou só Core Positions, e troca para média±1σ → mediana+p16/p84 nos nomes onde o EPS passou perto de zero e distorceu o desvio (SPOT, MU, UBER, AAOI) — o card avisa qual base está usando e quantos pontos ficaram fora da escala.<br><br><b>Tab 2 — EPS CY2027 revisado desde 2025, com o preço sobreposto:</b> consenso de EPS do ano-calendário 2027 (BEst <code>2027BC</code>, base do Comp Sheet) e a ação, os dois indexados a 100 na primeira semana de cobertura — <b>o gap entre as linhas é a re-rating</b>. Hoje 21 nomes re-rateados vs 15 de-rateados: AMD +179%, AMAT +83%, CIEN +80% pagaram múltiplo; NOW −52% (EPS +9%, ação −48%), AAOI −39% e NVDA −37% (EPS +121%, ação +39%) entregaram número sem múltiplo. Ordena por re-rating, revisão, momentum de 3m ou P/E CY27; vista alternativa em nível (preço e EPS em moeda, eixo duplo). Janela é por nome (a cobertura do ano distante se forma com o tempo: AGX só desde jun-25, AAOI desde nov-25) e o card marca quando a série é esparsa</span>
+    </a>
+    <a class="card" href="semis-map/">
+      <h2>Semis MAP — Capex → Receita 🗺️ <small style="color:#d29922;font-size:12px">BETA</small></h2>
+      <span>O dólar de capex de IA virando TAM por linha de produto (aceleradores, switching, óptica, CPU, HBM, storage, NIC, cobre, power) e receita implícita por empresa vs consenso BBG — fluxo interativo, slider de capex (−60/+60%), GW implícitos, gargalos físicos (CoWoS/N3-N2/HBM) e 12 checks — do AI_Chip_Designers_TAM_v9.xlsx, cenário base 10-Jul-26</span>
+    </a>
+    <a class="card sub" href="bottom-up-capex/">
+      <h2>Bottom-Up AI Capex 🧮</h2>
+      <span>The inverse of the MAP: units × content × price summed into implied all-buyer total-DC capex ($528bn '25 → $1.18T '26 → $1.98T '27) vs street/JPM/house paths — six physical builds w/ confidence grades, memory share of the AI dollar, capex→GW conversion ($/GW ~$57bn, the $35bn ruler overestimates 40-60%), and commented checks: vendor revenue closures (NVDA 1.01×), SemiAnalysis GW cross (0.98×), GEV order book &amp; power-supply coverage (0.72× deficit '27-28), TAM rails — from Bottom_Up_Capex_v3.xlsx, 24-Jul-26</span>
+    </a>
+    <a class="card" href="capex-cloud/">
+      <h2>Capex Cloud ☁️</h2>
+      <span>Hyperscaler capex (MSFT/AMZN/GOOGL/META/ORCL) — BBG consensus &amp; street high, next 12/24 months, CY 2025-27 vs Capstone ests, yearly history since 2015, capex intensity w/ consensus fwd, weekly revision tracker + downloadable XLSX w/ PP&amp;E breakdown (Equipment vs LT assets, 10-K/XBRL)</span>
+    </a>
+    <a class="card sub" href="odm-csp/">
+      <h2>ODM - CSP</h2>
+      <span>ODM &harr; client flux 2026 — rack units, Sankey by quarter, SA vs MS comparison</span>
+    </a>
+    <a class="card" href="rcloud/">
+      <h2>Revenue das Clouds ☁️💰</h2>
+      <span>O outro lado do Capex Cloud: a <b>receita</b> de AWS · Azure · Google Cloud decomposta — resultado trimestral (YoY cc, Δ$ YoY, net new ARR), <b>RPO/backlog com o split OpenAI/Anthropic</b>, projeções Capstone vs consenso vs <b>bogey buyside</b>, e a <b>exposição das clouds aos labs</b> em 4 perguntas (quanto da receita é lab, quanto do <i>crescimento</i> é lab, e o mix API/inferência/treino). Mais Financials, EBIT (margem e margem incremental) e Capex · FCF com a análise de ratios das Big 3 (receita/capex, backlog/capex, book-to-bill). <b>Cuidado de base:</b> receita e EBIT são do segmento cloud, mas OCF/capex/FCF são consolidados da companhia, e o backlog do Azure é o <i>commercial RPO</i> da MSFT (inclui Office/Dynamics) — os ratios de backlog ficam inflados vs uma leitura pure-cloud. Réplica do dashboard da Fernanda, snapshot 03-Ago-26</span>
+    </a>
+    <a class="card" href="ai-funding/">
+      <h2>Quem Paga a Conta 💸</h2>
+      <span>O terceiro lado: o <b>funding</b> do AI capex. A conta-síntese Capstone (capex total de IA US$ 902 bi '26E → 2,9 tri '28E vs OCF dos hyperscalers — <b>51% da conta de 28E já não é dos hyperscalers</b>), decomposição por player (labs, neoclouds, Oracle, SpaceX, soberanos), <b>shell vs compute</b> (vidas 15–25 vs ~5 anos e o financiamento próprio de cada camada), OCF vs capex 2013–2027 por empresa, a escada de custo de capital (IG ~5% → SPV 6,5% → conv. 6,25% → neocloud 7–8% pós-plataforma NVDA), ledger de 14 estruturas (plataforma NVDA US$ 500 bi, Blue Owl/Hyperion, backstops de lease do Google, DDTLs CRWV, prepay NBIS) e o debate bull/bear — todo dado com fonte e data. Modelos oficiais + AI Model bottom-up, ago-26</span>
+    </a>
+    <!-- Claude WFE — oculto (hidden) a pedido. Para reexibir, descomente este bloco.
+    <a class="card" href="wfe/">
+      <h2>Claude WFE ✨</h2>
+      <span>Scenario-driven WFE — Capstone vs UBS vs live Street, revision tracker, quarterly run-rate, EUV cost model, scenario valuation</span>
+    </a>
+    -->
+    <a class="card" href="semicap/">
+      <h2>Semicap</h2>
+      <span>Peer overview, metrics and charts</span>
+    </a>
+    <a class="card sub" href="semicap/capex-flow.html">
+      <h2>Capex Flow</h2>
+      <span>Capital expenditure flow view</span>
+    </a>
+    <a class="card" href="accel-bom/">
+      <h2>Accelerator B.O.M 🔩</h2>
+      <span>HBM, wafer &amp; chip cost por acelerador (Jefferies AI Model abr-26) — B.O.M interativo, ASP implícito vs street, $/GW em base chip TDP ou all-in (SemiAnalysis), flags de auditoria</span>
+    </a>
+    <a class="card sub" href="rack-bom/">
+      <h2>NVL72 B.O.M. 🧱</h2>
+      <span>Bill of materials per rack — duas versões: Morgan Stanley (GB200/GB300/VR200, component mix, ODM value-add) e Bernstein (Vera Rubin $9.1M, HBM $/GB scenarios, SemiAnalysis cross-check)</span>
+    </a>
+    <a class="card" href="memoria/">
+      <h2>Memória — Superciclo 🧠</h2>
+      <span>Resumo executivo do complexo (DRAM ex-HBM · HBM · NAND) — S&amp;D em Gb por aplicação e por empresa (HBM por fornecedor UBS Fig 3&times;8: <b>Samsung ultrapassa a Hynix em 27E</b>), suficiência UBS vs house (o flip de 2027), canibalização de wafer HBM (penalidade ~3&times;), destruição de demanda smartphone (contrafactual), P&amp;L 27E &rarr; P/E por cenário + xlsx vivo p/ download — UBS Memory Semis 03-jul-26 · Bernstein/Mercury · builds Capstone (jul-26)</span>
+    </a>
+    <a class="card sub" href="memoria/dashboard.html">
+      <h2>Dashboard interativo</h2>
+      <span>6 abas — cenários UBS/Soft/House, sliders de ASP &rarr; P/E 27E, builds editáveis (CPU/HBM/smartphone), engine de capacidade &amp; canibalização, dark mode</span>
+    </a>
+    <a class="card" href="apple-memory-hit/">
+      <h2>Apple Memory Hit 🍎📉</h2>
+      <span>iPhone BOM &times; memory cost-per-GB &rarr; EPS, wired to the Capstone Apple model. Live BBG inSpectrum LPDDR5/NAND $/GB (mobile DRAM $12/GB, &times;4.8 off trough), Apple-realized vs market-spot tracks, forward sensitivity (TrendForce / Street / <b>Conor bull</b> / roll-over), 2026-vs-2027 model BOM, price-increase-to-offset, and FY27 EPS-hit matrix. Cross-checked vs TechInsights (~$270/Pro) &amp; BofA (C27 EPS held). Jun-26</span>
+    </a>
+    <a class="card" href="gw-designer-valuation/">
+      <h2>GW per Designer &amp; Valuation</h2>
+      <span>GW added per designer 2025-27 — Capstone NVDA/AVGO models vs SemiAnalysis bottom-up side by side, revenue &amp; unit cross-checks, P&amp;L/EPS summaries (Jun 26)</span>
+    </a>
+    <a class="card" href="ai-capacidade/">
+      <h2>AI: Capacidade &amp; Economics por GW ⚡</h2>
+      <span>Do AI Model Capstone (comentado, CY24-CY28E) — duas visões em abas: <b>economics de 1 GW</b> (chip · networking · power/land · receita · payback, conversor de deals: GW &harr; chips &harr; capex &harr; receita por designer/ano) e <b>como flui a capacidade</b> (designer &rarr; hyperscaler &rarr; cliente &rarr; uso, Sankey de GW, share de silício próprio TPU/Trainium/MTIA). Capex/GW ~US$37bn (NVDA CY26E)</span>
+    </a>
+    <footer>Published via GitHub Pages</footer>
+  </div>
+</body>
+</html>

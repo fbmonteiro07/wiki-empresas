@@ -1,0 +1,27 @@
+{
+  "recorded_at": "2026-10-15T21:02:00.483095+00:00",
+  "panel_url": "https://fbmonteiro07.github.io/Capstone-Wiki/",
+  "dashboard_url": "https://fbmonteiro07.github.io/Capstone-Wiki/ai-labs/",
+  "internal_panel_url": "http://DS-CAP-33:8080/dashboards/",
+  "commit": "0d8fbc86e04e83e04cfc0adae1e2bb3e3aa66a68",
+  "deployment_url": "https://github.com/fbmonteiro07/Capstone-Wiki/actions/runs/38806207327",
+  "deployment_attempt": 2,
+  "deployment_result": "success",
+  "hosting_repair": "Restored the existing documented GitHub Pages destination with build_type=workflow; the pre-existing workflow had failed because the Pages site was absent.",
+  "panel_changes": "Updated the existing AI Labs card and registry to reflect AI Model revenue, sources and combined-system totals. Preserved both hub layouts.",
+  "validation": [
+    "Internal panel and wiki hub each contain one AI Labs entry",
+    "Public panel and data download return HTTP 200",
+    "Public AI Labs link opens Revenue & sources",
+    "Combined net/gross selector checked on public deployment",
+    "No browser page errors",
+    "Git main synchronized with origin/main; worktree clean"
+  ],
+  "sha256": {
+    "P:\\Felipe Monteiro\\US Equities\\Capstone-Wiki\\index.html": "ef32eca49123870731ae18b6da5cb9cdec7bc8422e515d4464229ea353cc4538",
+    "P:\\Felipe Monteiro\\US Equities\\Capstone-Wiki\\ai-labs\\index.html": "430e808f26c5514ebd07fc8b133b49cc0ab9496e09549f826bd3960de6ddc8b5",
+    "P:\\Felipe Monteiro\\US Equities\\Capstone-Wiki\\ai-labs\\revenue-data.json": "f0b1a1af2ba452b07153405e97c8a7099bfab50776ccfb80268a871390874688",
+    "E:\\Wiki Felipe empresas\\_wiki\\_dashboards\\index.html": "37034d4a5ddcdd976b8943e5cc3fc8f464278d90c2cb90b88e274ec0daddb710",
+    "E:\\Wiki Felipe empresas\\_wiki\\_data\\dashboards.json": "ab5d7351dd4b674a09533887a9b6e863d16590579263b62259cb8d3c23170328"
+  }
+}

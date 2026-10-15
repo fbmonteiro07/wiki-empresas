@@ -71,3 +71,53 @@ a dispatch receipt and checks Sent Items; it does not equate submission with del
 
 The routine writes derived data, dashboards and metadata only. Research page edits
 require the separate evidence review above; feature scripts never edit company pages.
+
+## Daily alerts (added 2026-10-14)
+
+Why: on 2026-10-13 CoreWeave's 5Y CDS went back to its late-July high (~1,000bp; Rothschild & Co TMT Daily,
+Adley/Shaw, 2026-10-14; Susquehanna, Hearon, 2026-10-14: +79bp, briefly above 1,000bp intraday) and nothing
+flagged it: this monitor tracked four index-level series on Fridays, and the 2026-10-09 brief failed to send
+(Outlook OST at its size limit, no retry). The daily layer below sits on top of the weekly research brief.
+
+Files
+- `_data/credit_watch_config.json` — HAND-EDIT: instruments (Bloomberg ticker CANDIDATES tried in order; `status`
+  unverified / needs_isin until confirmed at the Terminal via CDSW / SRCH), sigma-scaled rules per instrument
+  (`d1_abs`, `d1_z`, `d5_abs`, `level_line`, `high_60d`, `high_1y`), the mail patterns and the delivery block.
+- `fetch_credit_watch.py` — fail-soft per instrument into `_data/credit_watch.json` (previous points kept on
+  failure; the first LIMIT / WORKFLOW_REVIEW_NEEDED answer marks `bbg_status` blocked and skips the rest).
+  Equities come from `_data/technicals/prices.json` (the 18:15 chain), no second Bloomberg pull.
+  `--probe` lists which candidate tickers resolve.
+- `credit_alerts.py` — the engine: MARKET layer (1d / 5-obs change in the instrument's own unit, trailing-60
+  sigma, new 60d / 1y highs, level lines; spreads on widening, equities on down moves and sigma-gated) and MAIL
+  layer (`credit_mail_collect.ps1`: credit terms attributed to the nearest watched name; hyperscalers and labs
+  need two distinct firms; boilerplate excerpts de-duplicated for 14 days). Writes `_data/credit-monitor/alerts/
+  {latest.json, log.jsonl, state.json, emails/, receipts/}`; `--send` e-mails "AI Credit ALERT | date | headline"
+  to Felipe only, confirmed in Sent Items, with the Outbox-backlog guard.
+- `test_credit_alerts.py` — rule-engine checks (units, sigma, highs, level lines, mail proximity, de-dup).
+- The dashboard section "Daily alerts & single-name watch" (02 in the sidebar) renders latest.json + the log.
+
+Lane: Claude task `credit-alerts`, Mon–Fri 09:30 and 18:30 São Paulo —
+`py _wiki/_tools/credit_alerts.py --fetch --mail --send`, then `fetch_funding.py` + `build_funding_monitor.py` so the
+four index gauges at the top of the page and section 02 both refresh daily (gauges = last completed session;
+the research ledger, scoreboard and watchlist stay weekly), push notification when something fired, and on
+Friday 09:30 a check that the weekly brief actually went out (retry `send_credit_email.ps1 -Verify` / `-Send`
+once if the 09:00 Codex heartbeat recorded an e-mail failure). Weekly brief unchanged.
+
+Open items: confirm the CDS / bond tickers once the Desktop API block clears (`fetch_credit_watch.py --probe`),
+paste ISINs for the CRWV 2026 notes, the 2032s and the 2033 convertible, re-base `level_line` on real history.
+
+## Issuer yield board (added 2026-10-14, Felipe: "quero um monitor com o yield de CRWV, ORCL, NBIS, hyperscalers e outros")
+
+Section "Issuer yields — live board" on the dashboard (sidebar 04), placed ahead of the static Morgan Stanley spread
+snapshots, which are now labelled as dated broker snapshots. Universe = `_data/credit_watch_config.json → board`:
+CoreWeave (8 notes incl. the 2032 9.625% headline, the EUR 8.5% and three converts, + 5Y CDS), Nebius (five
+converts, no CDS), Oracle (Feb-26 jumbo 5/10/30/40y + Sep-25 10/30y, CDS = ORCLCP), Meta, Amazon, Alphabet,
+Microsoft, NVIDIA (10y/30y points + 5Y CDS), xAI 12.5% 2030, the CRWV-offtake project bonds (APLD ComputeCo, Core
+Scientific Finance I, Edged Compute), Cipher Compute, WULF Compute, IREN converts, Stingray (AMZN offtake), HUT 8 DC
+(IG project bond) and SoftBank. Tickers were resolved with the Bloomberg instrument lookup (//blp/instruments),
+which answers even while the data service is blocked; the fetch tries decimal / fraction / 2- and 4-digit-year
+spellings and pins the first that returns history. Each bond = daily YLD_YTM_MID history + bdp snapshot (price,
+Z-spread, size, S&P / Moody's); each CDS = PX_LAST history. Alert rules per tier (HY bonds 40bp/2.5σ, IG 15bp/3σ,
+converts 60bp/3σ, CRWV CDS 50bp + 800bp line, ORCL CDS 15bp + 200bp line) — the board instruments are therefore
+also covered by the daily ALERT e-mail. Convertible YTMs are flagged and never compared with straight debt.
+Status 2026-10-14: instruments resolved, no yields yet (Desktop API block) — fills on the first unblocked run.

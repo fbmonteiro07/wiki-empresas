@@ -9,13 +9,13 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\NBIS` (20-F filings + 
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $3.3bn | $12.2bn |
-| Gross profit | $2.4bn | $9.0bn |
+| Revenue | $3.3bn | $12.4bn |
+| Gross profit | $2.4bn | $9.2bn |
 | Gross margin | 72.3% | 74.0% |
-| EBITDA | $1.3bn | $6.7bn |
+| EBITDA | $1.3bn | $6.8bn |
 | EPS | $-3.42 | $-4.25 |
-| Capex | $22.8bn | $31.9bn |
-| OCF (≈EBITDA) | $1.3bn | $6.7bn |
+| Capex | $23.0bn | $32.3bn |
+| OCF (≈EBITDA) | $1.3bn | $6.8bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

@@ -12,10 +12,10 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AAOI` (filings + trans
 | Revenue | $1.0bn | $2.6bn |
 | Gross profit | $318m | $887m |
 | Gross margin | 30.5% | 33.9% |
-| EBITDA | $90m | $667m |
+| EBITDA | $103m | $601m |
 | EPS | $0.68 | $4.60 |
-| Capex | $344m | $459m |
-| OCF (≈EBITDA) | $90m | $667m |
+| Capex | $378m | $434m |
+| OCF (≈EBITDA) | $103m | $601m |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

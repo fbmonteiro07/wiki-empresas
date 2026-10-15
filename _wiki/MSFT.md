@@ -10,10 +10,10 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\MSFT` (filings + trans
 | Revenue | $355.6bn | $427.6bn |
 | Gross profit | $237.5bn | $278.8bn |
 | Gross margin | 66.8% | 65.2% |
-| EBITDA | $214.7bn | $261.9bn |
+| EBITDA | $214.4bn | $261.9bn |
 | EPS | $17.87 | $21.34 |
 | Capex | $154.2bn | $206.4bn |
-| OCF (≈EBITDA) | $214.7bn | $261.9bn |
+| OCF (≈EBITDA) | $214.4bn | $261.9bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

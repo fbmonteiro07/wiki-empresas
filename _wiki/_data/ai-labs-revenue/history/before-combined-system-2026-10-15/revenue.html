@@ -1,0 +1,75 @@
+<!-- AI MODEL REVENUE UPDATE -->
+<div class="panel active" id="p-revenue">
+  <div class="rev-intro">
+    <div><div class="rev-kicker">CAPSTONE · AI MODEL</div><h2>Revenue growth, with the sources behind it</h2>
+    <p id="rev-vintage"></p></div>
+    <a class="rev-download" href="revenue-data.json" download>Download data &amp; sources</a>
+  </div>
+  <div class="rev-kpis" id="rev-kpis"></div>
+  <div class="rev-callout"><strong>Keep the accounting basis visible.</strong>
+    OpenAI's September news was clarified to approximately $50bn net; the earlier $70bn was an investor gross-up
+    (<a href="https://www.axios.com/2026/10/08/openai-50-billion-arr-anthropic-revenue-accounting" target="_blank" rel="noopener">Axios, October 8</a>).
+    Anthropic's reported figures include cloud-channel revenue on a gross basis.
+    Capstone's net/gross adjustments are model assumptions and do not replicate the investor gross-up.</div>
+  <div class="card">
+    <div class="card-head rev-controls"><div><div class="card-title">Monthly revenue run rate · AI Model</div>
+      <div class="card-sub">USD millions · points are monthly model estimates; dashed lines start in October 2026.</div></div>
+      <label>Basis <select id="rev-basis">
+        <option value="reported">Workbook basis: OpenAI net / Anthropic gross</option>
+        <option value="net">Both net · Anthropic adjusted by Capstone</option>
+        <option value="gross">Both gross · OpenAI adjusted by Capstone</option>
+      </select></label>
+    </div>
+    <p id="rev-basis-note" class="rev-caption"></p>
+    <div id="rev-model-chart" class="chart" style="height:400px"></div>
+    <div class="note">All curve points come from AI Model's saved calculations, including historical months.
+      A monthly estimate is not evidence that a news release occurred that month. Reported observations appear below.</div>
+  </div>
+  <div class="card">
+    <div class="card-head"><div class="card-title">Reported revenue milestones</div>
+      <div class="card-sub">Discrete observations · publisher date and revenue period are separate · click a marker to find its source.</div></div>
+    <div id="rev-news-chart" class="chart" style="height:370px"></div>
+    <div class="note">Filled diamonds: company or press run rates on the source's reporting basis.
+      Open diamonds: OpenAI investor gross-ups. Quarterly revenue is shown in its own table.
+      These are unaudited private-company disclosures or press reports. Month-only observations use an illustrative date within that month.</div>
+  </div>
+  <div class="rev-two">
+    <div class="card"><div class="card-head"><div class="card-title">Annual revenue in the model</div>
+      <div class="card-sub">USD millions · OpenAI net / Anthropic gross · E = Capstone forecast</div></div>
+      <div class="tbl-wrap"><table id="rev-annual"></table></div>
+      <div class="note">Revenue earned over a year differs from an annualized run rate. Historical model inputs retain the workbook's values; they are not newly verified results.</div>
+    </div>
+    <div class="card"><div class="card-head"><div class="card-title">Quarterly revenue checkpoints</div>
+      <div class="card-sub">USD millions · saved model versus available reported results</div></div>
+      <div class="tbl-wrap"><table id="rev-quarterly"></table></div>
+      <div class="note">Anthropic Q3 news: $16,800M (<a href="https://www.theinformation.com/briefings/anthropic-reports-16-8-billion-third-quarter-revenue" target="_blank" rel="noopener">The Information · Cory Weinberg, October 14</a>).
+      Missing source checks stay blank; no quarterly figure is annualized into an exit ARR.</div>
+    </div>
+  </div>
+  <div class="card" id="rev-source-card">
+    <div class="card-head rev-controls"><div><div class="card-title">News references, point by point</div>
+      <div class="card-sub" id="rev-source-count"></div></div>
+      <label>Company <select id="rev-company"><option value="all">Both companies</option><option>OpenAI</option><option>Anthropic</option></select></label>
+    </div>
+    <div class="tbl-wrap rev-source-wrap"><table id="rev-sources"></table></div>
+    <div class="note">“Verified” describes source access, not an audit of the company's financials. Earlier headlines are retained with their later clarification.</div>
+  </div>
+  <details class="card rev-details"><summary>Monthly values and workbook cells</summary>
+    <div class="tbl-wrap"><table id="rev-monthly"></table></div>
+    <div class="note">Source: Capstone AI Model, saved October 15, 2026. Gross/net conversions are copied from the workbook, not recalculated here.
+      Anthropic net uses the workbook's 20% CSP take and 55% third-party API share; OpenAI gross uses 20% and approximately 12.55%, respectively (ARR Tracker P29:P30 and P48:P49).
+      These adjustments are not company disclosures.</div>
+  </details>
+  <details class="card rev-details"><summary>Update history and data quality</summary>
+    <div class="rev-history">
+      <p><strong>October 15, 2026:</strong> added today's AI Model revenue curves and dated news references.
+      The June 11 WFS snapshot remains in its original tabs. Previous WFS 2026 revenue estimates were OpenAI net $30,500M and Anthropic $66,900M; they are a different forecast vintage and author.</p>
+      <p>Model inputs are saved Excel values. The workbook was not recalculated or edited.
+      Ancillary workbook cells contain pre-existing #REF! errors and the older chart sheet mixes bases in one total. This view reads the valid, explicitly labeled ARR Tracker series and does not use that mixed total.</p>
+      <p>The model's September OpenAI gross estimate is approximately $49,944M, while the investor gross-up was near $70,000M.
+      No public bridge between these methods was verified; both remain labeled. Anthropic's adjusted net figures are not press-reported net revenue.</p>
+      <p id="rev-hash"></p>
+    </div>
+  </details>
+</div>
+

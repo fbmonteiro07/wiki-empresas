@@ -1,0 +1,249 @@
+{
+  "asof": "2026-10-15",
+  "purpose": "Morning Analyst Inbox source checks; not a company-page ingest or a trading instruction",
+  "coverage": {
+    "rebuilt": true,
+    "generated_signal_count": 56,
+    "prior_signal_count": 59,
+    "prior_date": "2026-10-14",
+    "latest_reconciliation": "2026-10-14",
+    "consensus_vintage": "2026-10-14",
+    "book_seed": true,
+    "company_pages_edited": false,
+    "full_filings_or_transcript_audit": false
+  },
+  "observations": [
+    {
+      "signal_ids": [
+        "reco-2dac6aa267b7"
+      ],
+      "ticker": "TSM",
+      "source": "TSMC official Q3 results table",
+      "source_date": "2026-10-15",
+      "url": "https://investor.tsmc.com/english/quarterly-results/2026/q3",
+      "evidence_class": "company reported results and guidance",
+      "facts": {
+        "q3_revenue_usd_bn": 46.72,
+        "q3_gross_margin_pct": 66.4,
+        "q4_revenue_guide_usd_bn": [
+          52.3,
+          54.3
+        ],
+        "q4_gross_margin_guide_pct": [
+          65,
+          67
+        ],
+        "q4_operating_margin_guide_pct": [
+          56.5,
+          58.5
+        ]
+      },
+      "note": "Existing signal concerns capex reconciliation, not a newly generated earnings signal."
+    },
+    {
+      "signal_ids": [
+        "reco-2dac6aa267b7"
+      ],
+      "ticker": "TSM",
+      "source": "BofA / Haas Liu",
+      "source_date": "2026-10-15",
+      "url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAQqMvDhAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWZ2blMAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "evidence_class": "broker estimates / company-call relay",
+      "facts": {
+        "bofa_q4_gm_estimate_pct": 67.8,
+        "company_2026_capex_guide_usd_bn": [
+          60,
+          64
+        ],
+        "bofa_2027_capex_estimate_usd_bn": [
+          80,
+          85
+        ]
+      },
+      "note": "Do not present broker 2027 capex as company guidance. Jefferies Beavington October 15 relay contains erroneous Q4 operating-margin value 68.5%; official table is 56.5-58.5%."
+    },
+    {
+      "signal_ids": [
+        "esti-22e7e0197e69"
+      ],
+      "ticker": "CRWV",
+      "source": "Deutsche Bank / Brad Zelnick, Daniel Knauff, Yash Kejriwal",
+      "source_date": "2026-10-14",
+      "url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWY3uJBAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "evidence_class": "broker opinion / forecasts",
+      "facts": {
+        "rating": "Buy",
+        "target_usd": 150,
+        "ntm_operating_cash_flow_usd_bn": 10,
+        "ntm_capex_usd_bn": 45,
+        "unlevered_pretax_irr_scenario": "~20%+ on five-year contract with assumed 5 percentage point margin improvement"
+      },
+      "note": "Unlevered pre-tax project IRR is not equity return after financing. No new financing commitment inferred."
+    },
+    {
+      "signal_ids": [
+        "esti-22e7e0197e69"
+      ],
+      "ticker": "CRWV",
+      "source": "Rothschild & Co Redburn / Alex Haissl and Luke Han, Can't Buy the Frontier",
+      "source_date": "2026-10-15",
+      "url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWY3uLFAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "evidence_class": "broker opposing thesis",
+      "facts": {
+        "stance": "Sell on neoclouds; strategically funded marginal compute prices may not be sustainable"
+      },
+      "note": "No deal announcement or financing execution was adopted from this source."
+    },
+    {
+      "signal_ids": [
+        "esti-22e7e0197e69"
+      ],
+      "ticker": "CRWV",
+      "source": "Capstone model dated 2026-10-14, house.json and CRWV.md; Bloomberg consensus snapshot 2026-10-14",
+      "source_date": "2026-10-14",
+      "paths": [
+        "_wiki/CRWV.md",
+        "_wiki/_data/house.json",
+        "_wiki/_data/estimates.json",
+        "_wiki/_meta/reconciliation-2026-10-14-inbox.md"
+      ],
+      "facts": {
+        "house_eps_2026": -3.27,
+        "bbg_eps_2026": -3.92,
+        "house_dcf_usd": 59,
+        "existing_house_ntm_residual_funding_usd_bn": 19
+      },
+      "note": "The generated 'below consensus' direction is misleading: -3.27 is a smaller loss than -3.92. Basis must still be checked. Funding estimate is quoted existing house work, not recalculated."
+    },
+    {
+      "signal_ids": [
+        "esti-a0be3d728a59",
+        "esti-0069614b9a3f"
+      ],
+      "ticker": "GOOG",
+      "source": "JPM / Doug Anmuth et al.",
+      "source_date": "2026-10-15",
+      "url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWY3uLnAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "evidence_class": "broker forecast revision",
+      "facts": {
+        "google_cloud_growth_2027_prior_pct": 70,
+        "google_cloud_growth_2027_new_pct": 107,
+        "eps_2027_increase_pct": 3,
+        "eps_2027_gaap_usd": 14.05,
+        "target_prior_usd": 420,
+        "target_new_usd": 425
+      },
+      "note": "Driver is increased TPU sale inclusion; not a company growth guide."
+    },
+    {
+      "signal_ids": [
+        "esti-a0be3d728a59",
+        "esti-0069614b9a3f"
+      ],
+      "ticker": "GOOG",
+      "source": "Capstone house table / Google Modelo oficial.xlsx vintage 2026-06-05, as scraped in house.json; October 14 reconciliation",
+      "source_date": "2026-10-14",
+      "paths": [
+        "_wiki/GOOG.md",
+        "_wiki/_data/house.json",
+        "_wiki/_meta/reconciliation-2026-10-14-inbox.md"
+      ],
+      "facts": {
+        "house_revenue_2026_usd_bn": 505,
+        "house_revenue_2027_usd_bn": 641,
+        "bbg_revenue_2027_usd_bn": 548.43137,
+        "reconciliation_mislabelled_2027_revenue_usd_bn": 505
+      },
+      "note": "GOOG.md raw_header and house.json agree on year mapping; reconciliation carries the 2026 revenue as 2027, reversing the apparent gap. Original workbook not reopened."
+    },
+    {
+      "signal_ids": [
+        "cata-a479a74da5f9"
+      ],
+      "ticker": "SMTC",
+      "source": "Semtech management call hosted by UBS, Mark Lin / Mitch Hawes, as documented in SMTC.md",
+      "source_date": "2026-09-14",
+      "paths": [
+        "_wiki/SMTC.md"
+      ],
+      "evidence_class": "wiki-recorded management call, ASR caveat",
+      "facts": {
+        "content_per_1_6T_unit_usd": 20,
+        "long_term_gross_margin_ambition_pct": 70
+      },
+      "note": "August 25 post-divestiture gross-margin starting point was 64%; do not mix a starting point and an undated ambition. Older debate text still says high-single-digit 1.6T content despite September correction."
+    },
+    {
+      "signal_ids": [
+        "cata-a479a74da5f9"
+      ],
+      "ticker": "SMTC",
+      "source": "Semtech official analyst-day announcement",
+      "source_date": "2026-10-12",
+      "url": "https://www.semtech.com/company/press/semtech-corporation-to-host-data-center-analyst-day-on-october-15-2026",
+      "evidence_class": "company event schedule",
+      "facts": {
+        "event_date": "2026-10-15",
+        "event_time": "09:00 America/Los_Angeles"
+      }
+    },
+    {
+      "signal_ids": [
+        "supp-20261015-crdo-ocp"
+      ],
+      "ticker": "CRDO",
+      "source": "JPM / Joseph Cardoso, Manmohanpreet Singh, Marc Vitenzon; OCP meeting with CEO Bill Brennan",
+      "source_date": "2026-10-15",
+      "url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWZ2aO%2FAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "evidence_class": "broker-relayed management statements",
+      "facts": {
+        "zf_optics": "Passed Nvidia qualification",
+        "alc": "Microsoft participating; Oracle intends to join MSA; shipments anticipated in 2027",
+        "omni_connect_content_per_accelerator_usd": 3000,
+        "prior_content_in_this_note_usd": 1000
+      },
+      "note": "Supplemental manual signal, NOT present in generated signals.json. Qualification and MSA participation are not purchase orders. Prior content scope differs across wiki sources, so the note's old/new comparison is not yet a reconciled model revision."
+    },
+    {
+      "signal_ids": [
+        "cata-0fc16a577980"
+      ],
+      "ticker": "LITE",
+      "source": "Lumentum official OCP speaker lineup",
+      "source_date": "2026-10-01",
+      "url": "https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Announces-Speaker-Lineup-at-2026-OCP-Global-Summit/default.aspx",
+      "evidence_class": "company event schedule",
+      "facts": {
+        "event_date": "2026-10-15",
+        "local_time": "08:45-09:05 San Jose",
+        "session": "Oracle Cloud Infrastructure and Lumentum: Zero-Touch OCS Fabrics"
+      },
+      "note": "A joint presentation does not establish a second shipping OCS customer."
+    },
+    {
+      "signal_ids": [
+        "supp-20261015-memory-calendar"
+      ],
+      "ticker": "MU/KIOXIA",
+      "source": "Jefferies / William Beavington rescheduling notice; host Conor O'Mara; expert Harold Lee",
+      "source_date": "2026-10-15",
+      "url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWZ2aPFAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "evidence_class": "event organizer correction",
+      "facts": {
+        "prior_event_date": "2026-10-15",
+        "new_event_date": "2026-10-22",
+        "new_event_time": "09:00 America/New_York"
+      },
+      "note": "Supplemental manual calendar record, NOT present in generated signals.json; no company catalyst outcome inferred."
+    }
+  ],
+  "history": {
+    "added_signal_ids": [],
+    "removed_signal_ids": [
+      "beli-dc4aae88c77c",
+      "cata-2f7870e9d8d7",
+      "cata-9063aab68b04"
+    ],
+    "note": "CRWV one-day belief-change alert and dated LITE/ASML catalyst entries dropped out. Removal is not proof of thesis reversal. Fresh October 15 source checks are an overlay, not yet ingested into company pages."
+  }
+}

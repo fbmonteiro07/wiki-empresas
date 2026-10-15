@@ -1,0 +1,404 @@
+{
+  "asof": "2026-10-15",
+  "scope": "Bounded source and financial-model arithmetic audit; not equity thesis or filing/email/transcript review.",
+  "status": "PARTIAL",
+  "source": "P:\\Felipe Monteiro\\US Equities\\Modelos oficiais\\AI Model.xlsx",
+  "sha256_independently_verified": "a85ab8040330214536ff576f2d3de50f8eb5374d68a1dd5253c8ca95680e1247",
+  "raw_xlsx_value_formula_pairs_verified": 4095,
+  "units": "USD million; annual flow unless explicitly capacity stock or ARR run rate",
+  "source_confirmations": [
+    "AA71 master shared formula (AA3-AA16*0.25-AA65)/AA3 spans AA71:AF71. Explicit 25% deduction is outside inference cost.",
+    "row136 = row33-row35; row33=row35/row36; row35=training+inference; residual reproduces all source values.",
+    "row49 + row67 = row126 = avg capacity(row125)*cost/GW(row88), already included within training/inference. No additional provider capex or capacity expense should be added.",
+    "2026 monthly ARR/12 sums to annual source AB3 exactly; annual2027 source quarters are missing-derived zeros, not revenue forecasts.",
+    "External original reporting independently confirms all three quarterly revenue benchmarks. Annual-to-date accounting comparisons remain limited."
+  ],
+  "material_findings": [
+    {
+      "id": "REVSHARE_RATE_CONFLICT",
+      "status": "OPEN_DISCLOSED_SENSITIVITY",
+      "evidence": "Anthropic!AA71:AF71 uses25%; ARR Tracker!P48 uses20%; P49=55% 3P share in2026. Original Anthropic A71 comment2026-07-24 says20%; ARR Tracker B48 comment2026-10-09 says25%; comments and formulas genuinely conflict.",
+      "impact": "2030 operating surplus flips from -20,415.221 at25% to +209.779 at20%."
+    },
+    {
+      "id": "2024_REVSHARE_UNSOURCED",
+      "status": "MUST_TAG_ESTIMATE_OR_OMIT",
+      "evidence": "Anthropic!Z71 absent; shared formula starts AA71 (2025).",
+      "impact": "2024 net revenue375 and deficit-1279.321 require extrapolated25%."
+    },
+    {
+      "id": "HISTORICAL_EBIT_RECONCILIATION",
+      "status": "OPEN_DISCLOSE",
+      "evidence": "AA146=-2500 hardcoded; AA3=4500; AA33=11166.666667.",
+      "impact": "Rebuilt2025 gross less costs=-6666.666667; net25 less costs=-7060.416667. Not source historical EBIT."
+    },
+    {
+      "id": "OTHER_COSTS2027_COMPRESSION",
+      "status": "OPEN_PLAUSIBILITY_WARNING",
+      "evidence": "row36 70% in2026 to90% in2027; row136 falls9590.809 to7345.761 while revenue grows191.910%.",
+      "impact": "High2027 surplus is assumption-dependent; no external cost anchor."
+    },
+    {
+      "id": "COST_BASIS_UNVERIFIED",
+      "status": "PARTIAL",
+      "evidence": "row36 is only labeled % Total de Custos. AB70 comment quotes FT margins above80% excluding partner share and training; corroborates separate revenue-share deduction. Accounting basis of row36 remains undocumented.",
+      "impact": "Algebra excludes explicit revshare from row65, but accounting calibration of costshare and SBC/D&A inclusion remain undocumented."
+    },
+    {
+      "id": "SIGN_ERRORS_EXCLUDED",
+      "status": "MUST_ISOLATE",
+      "evidence": "AB146=AB3+AB33; AB138=(AB3+AB65)/AB3=118%.",
+      "impact": "Do not import rows138\u2013147 as validated gross margin, COGS or EBIT."
+    },
+    {
+      "id": "2025_ARR_ANNUAL_RECONCILIATION",
+      "status": "DISCLOSE_IF_BOTH_SHOWN",
+      "evidence": "ARR Tracker C40:N40 sum/12=4333.491399 vs Anthropic!AA3=4500.",
+      "impact": "Use annual source explicitly, do not claim complete historical monthly reconciliation."
+    },
+    {
+      "id": "EXTERNAL_VALIDATION",
+      "status": "PARTIAL",
+      "evidence": "Original Bloomberg reporting verified Q1~4730 and Q2>11500; Information and Bloomberg Q3 originals verified16800. Reported profitability bases and timing differ from model. ARR Tracker R51/U51/X51 comments timestamped2026-10-14 carry4.7/11.5/16.8: these benchmarks are explicitly embedded in the source workbook.",
+      "impact": "Revenue checks are in-sample reconciliations. Profit/cash model is not independently validated."
+    }
+  ],
+  "annual_checks": [
+    {
+      "year": 2024,
+      "gross_revenue": 400.0,
+      "net25": 375.0,
+      "inference": 600.0,
+      "training": 888.8888888888889,
+      "other_costs": 165.4320987654322,
+      "operating_surplus25": -1279.320987654321,
+      "operating_surplus20": -1274.320987654321,
+      "net_margin25": -3.411522633744856,
+      "gross_denominator_margin25": -3.1983024691358026,
+      "revshare25_source_status": "ESTIMATE extrapolated; Z71 absent",
+      "compute_share_sensitivity_minus5pp": -1376.6339869281046,
+      "compute_share_sensitivity_plus5pp": -1192.251461988304,
+      "margin_sensitivity_minus5pp": -1301.5432098765432,
+      "margin_sensitivity_plus5pp": -1257.0987654320988,
+      "training_sensitivity_minus20pct": -1081.7901234567903,
+      "training_sensitivity_plus20pct": -1476.851851851852
+    },
+    {
+      "year": 2025,
+      "gross_revenue": 4500.0,
+      "net25": 4106.25,
+      "inference": 2700.0,
+      "training": 4000.0,
+      "other_costs": 4466.666666666667,
+      "operating_surplus25": -7060.416666666668,
+      "operating_surplus20": -6981.666666666668,
+      "net_margin25": -1.7194317605276512,
+      "gross_denominator_margin25": -1.5689814814814818,
+      "revshare25_source_status": "HARD exact house formula; not externally verified contract",
+      "compute_share_sensitivity_minus5pp": -8075.568181818184,
+      "compute_share_sensitivity_plus5pp": -6201.442307692307,
+      "margin_sensitivity_minus5pp": -7435.416666666668,
+      "margin_sensitivity_plus5pp": -6685.416666666668,
+      "training_sensitivity_minus20pct": -5727.083333333334,
+      "training_sensitivity_plus20pct": -8393.75
+    },
+    {
+      "year": 2026,
+      "gross_revenue": 52909.17438341729,
+      "net25": 45634.16290569741,
+      "inference": 9523.651389015115,
+      "training": 12854.90346445185,
+      "other_costs": 9590.809222914415,
+      "operating_surplus25": 13664.79882931603,
+      "operating_surplus20": 15119.801124860005,
+      "net_margin25": 0.2994423028544254,
+      "gross_denominator_margin25": 0.25826898621194194,
+      "revshare25_source_status": "HARD exact house formula; not externally verified contract",
+      "compute_share_sensitivity_minus5pp": 11205.616977286692,
+      "compute_share_sensitivity_plus5pp": 15796.089767741458,
+      "margin_sensitivity_minus5pp": 9885.57208764337,
+      "margin_sensitivity_plus5pp": 17444.025570988695,
+      "training_sensitivity_minus20pct": 17337.62839058799,
+      "training_sensitivity_plus20pct": 9991.969268044071
+    },
+    {
+      "year": 2027,
+      "gross_revenue": 154447.38011563622,
+      "net25": 131280.27309829078,
+      "inference": 38611.845028909054,
+      "training": 27500.0,
+      "other_costs": 7345.760558767676,
+      "operating_surplus25": 57822.66751061406,
+      "operating_surplus20": 62456.08891408315,
+      "net_margin25": 0.44045206599564035,
+      "gross_denominator_margin25": 0.3743842560962943,
+      "revshare25_source_status": "HARD exact house formula; not externally verified contract",
+      "compute_share_sensitivity_minus5pp": 53501.63188780953,
+      "compute_share_sensitivity_plus5pp": 61688.857278386524,
+      "margin_sensitivity_minus5pp": 49242.25750418981,
+      "margin_sensitivity_plus5pp": 66403.0775170383,
+      "training_sensitivity_minus20pct": 63933.77862172517,
+      "training_sensitivity_plus20pct": 51711.55639950295
+    },
+    {
+      "year": 2028,
+      "gross_revenue": 260000.0,
+      "net25": 217750.0,
+      "inference": 78000.00000000001,
+      "training": 70000.0,
+      "other_costs": 37000.0,
+      "operating_surplus25": 32750.0,
+      "operating_surplus20": 41200.0,
+      "net_margin25": 0.15040183696900114,
+      "gross_denominator_margin25": 0.12596153846153846,
+      "revshare25_source_status": "HARD exact house formula; not externally verified contract",
+      "compute_share_sensitivity_minus5pp": 20416.666666666657,
+      "compute_share_sensitivity_plus5pp": 43632.352941176476,
+      "margin_sensitivity_minus5pp": 16500.0,
+      "margin_sensitivity_plus5pp": 49000.0,
+      "training_sensitivity_minus20pct": 50250.0,
+      "training_sensitivity_plus20pct": 15250.0
+    },
+    {
+      "year": 2029,
+      "gross_revenue": 400000.0,
+      "net25": 330000.0,
+      "inference": 121298.47774776943,
+      "training": 100000.0,
+      "other_costs": 104140.46011659736,
+      "operating_surplus25": 4561.062135633198,
+      "operating_surplus20": 18561.062135633198,
+      "net_margin25": 0.01382140041100969,
+      "gross_denominator_margin25": 0.011402655339082994,
+      "revshare25_source_status": "HARD exact house formula; not externally verified contract",
+      "compute_share_sensitivity_minus5pp": -21267.42499645945,
+      "compute_share_sensitivity_plus5pp": 26851.40034552134,
+      "margin_sensitivity_minus5pp": -24850.702570249094,
+      "margin_sensitivity_plus5pp": 33972.82684151555,
+      "training_sensitivity_minus20pct": 33972.82684151555,
+      "training_sensitivity_plus20pct": -24850.702570249152
+    },
+    {
+      "year": 2030,
+      "gross_revenue": 550000.0,
+      "net25": 446875.0,
+      "inference": 160374.13289280873,
+      "training": 120000.0,
+      "other_costs": 186916.08859520586,
+      "operating_surplus25": -20415.22148801462,
+      "operating_surplus20": 209.77851198537974,
+      "net_margin25": -0.04568441172143132,
+      "gross_denominator_margin25": -0.03711858452366294,
+      "revshare25_source_status": "HARD exact house formula; not externally verified contract",
+      "compute_share_sensitivity_minus5pp": -62896.150714197836,
+      "compute_share_sensitivity_plus5pp": 15530.18016490963,
+      "margin_sensitivity_minus5pp": -66248.55482134793,
+      "margin_sensitivity_plus5pp": 25418.111845318752,
+      "training_sensitivity_minus20pct": 19584.778511985438,
+      "training_sensitivity_plus20pct": -60415.22148801462
+    }
+  ],
+  "release_requirements": [
+    "Retain the disclosed source conflicts, missing cash inputs and PARTIAL economic-validation status in delivered model."
+  ],
+  "external_sources_verified": [
+    {
+      "publisher": "Bloomberg News via Bloomberg Law",
+      "authors": "Bailey Lipschultz and Rachel Metz",
+      "published": "2026-08-14",
+      "verified": "2026-10-15",
+      "url": "https://news.bloomberglaw.com/artificial-intelligence/anthropic-revenue-surges-to-over-11-5-billion-in-second-quarter",
+      "evidence": "Public article body independently opened. Q1 2026 revenue USD4.73bn; preliminary Q2 >USD11.5bn; Q2 2025 USD787m. Q2 2026 adjusted operating income positive; definitions not supplied."
+    },
+    {
+      "publisher": "The Information",
+      "author": "Cory Weinberg",
+      "published": "2026-10-14",
+      "verified": "2026-10-15",
+      "url": "https://www.theinformation.com/briefings/anthropic-reports-16-8-billion-third-quarter-revenue",
+      "evidence": "Q3 revenue $16.8bn; corrected 11% adjusted operating margin is YTD through Q3. Domain-filtered search retrieved original source; direct open failed."
+    },
+    {
+      "publisher": "Bloomberg News via Bloomberg Law",
+      "authors": "Bailey Lipschultz, Natasha Mascarenhas, Rebecca Torrence, Shirin Ghaffary",
+      "published": "2026-10-15T14:43:00Z",
+      "verified": "2026-10-15",
+      "url": "https://news.bloomberglaw.com/capital-markets/anthropic-revenue-hits-16-8-billion-in-quarter-before-ipo-1",
+      "evidence": "Corrected article: Q3 revenue USD16.8bn, gross margin85%, positive FCF, adjusted operating margin over11% as ofQ3. Timing and accounting basis do not match modeled full-year operating surplus."
+    }
+  ],
+  "raw_xlsx_mismatches": 0,
+  "original_comment_evidence": [
+    {
+      "xml": "xl/threadedComments/threadedComment15.xml",
+      "sheet": "Anthropic",
+      "ref": "P3",
+      "comment_timestamp": "2026-08-17T12:58:33.52",
+      "comment_id": "{BD9BB7BC-BB83-425F-A18D-CBFA06B6A941}",
+      "text": "$4.73 billion in the first quarter of this year, "
+    },
+    {
+      "xml": "xl/threadedComments/threadedComment15.xml",
+      "sheet": "Anthropic",
+      "ref": "Q3",
+      "comment_timestamp": "2026-08-17T12:10:00.64",
+      "comment_id": "{3AD52080-1AB1-4E03-BD66-94A7617C0402}",
+      "text": "Bloomberg\u00a0reported: \u201cClaude chatbot maker reported a preliminary revenue figure of more than $11.5 billion in its latest completed quarter.\u201d "
+    },
+    {
+      "xml": "xl/threadedComments/threadedComment15.xml",
+      "sheet": "Anthropic",
+      "ref": "AC3",
+      "comment_timestamp": "2026-06-24T20:39:05.85",
+      "comment_id": "{D62D1F9A-50B6-446F-B028-545FFB28440D}",
+      "text": "WFS abr/26"
+    },
+    {
+      "xml": "xl/threadedComments/threadedComment15.xml",
+      "sheet": "Anthropic",
+      "ref": "AD3",
+      "comment_timestamp": "2026-08-17T12:09:12.45",
+      "comment_id": "{9180411C-6589-4B9D-B720-91372C01BC24}",
+      "text": "\u00a0From\u00a0Reuters: \u201cAnthropic is projecting 2028 revenue of roughly $190 billion to $200 billion "
+    },
+    {
+      "xml": "xl/threadedComments/threadedComment15.xml",
+      "sheet": "Anthropic",
+      "ref": "A47",
+      "comment_timestamp": "2026-07-24T12:22:49.85",
+      "comment_id": "{87EEBA80-0E4A-4B92-847C-CC9D25D9DF95}",
+      "text": "Miramos um # como % da receita"
+    },
+    {
+      "xml": "xl/threadedComments/threadedComment15.xml",
+      "sheet": "Anthropic",
+      "ref": "B49",
+      "comment_timestamp": "2026-07-24T12:07:55.86",
+      "comment_id": "{935F5AD8-1174-4A12-86D3-1B800FC8BF39}",
+      "text": "Assumo que todos os deals de \"DC proprio\" que a Anthropic est\u00e1 fazendo canibaliza o gasto de treinamento com cloud que ela teria"
+    },
+    {
+      "xml": "xl/threadedComments/threadedComment15.xml",
+      "sheet": "Anthropic",
+      "ref": "B67",
+      "comment_timestamp": "2026-07-24T12:07:55.86",
+      "comment_id": "{3FEA074A-7269-4A14-B012-C9D75C5D87AB}",
+      "text": "Assumo que todos os deals de \"DC proprio\" que a Anthropic est\u00e1 fazendo canibaliza o gasto de treinamento com cloud que ela teria"
+    },
+    {
+      "xml": "xl/threadedComments/threadedComment15.xml",
+      "sheet": "Anthropic",
+      "ref": "AB70",
+      "comment_timestamp": "2026-09-14T12:47:16.34",
+      "comment_id": "{D30B3C07-4262-4B4E-9EB5-5655C3C718D9}",
+      "text": "\nhttps://www.ft.com/content/4564e6a5-69e9-40a6-bf0f-a888f2f4f002?syn-25a6b1a6=1\n\nAnthropic\u2019s gross margins are above 80 per cent before accounting for revenue shared with distribution partners, including Amazon, and the cost of training its models, according to two of the people. "
+    },
+    {
+      "xml": "xl/threadedComments/threadedComment15.xml",
+      "sheet": "Anthropic",
+      "ref": "A71",
+      "comment_timestamp": "2026-07-24T12:22:07.29",
+      "comment_id": "{A5A7FAEB-D878-442D-9B5A-F82A56EB434A}",
+      "text": "Anthropic paga 20% de comiss\u00e3o p amazon e registra essa receita. Estou excluindo isso p ficar comparavel com a mg bruta reportada da OAI"
+    },
+    {
+      "xml": "xl/threadedComments/threadedComment17.xml",
+      "sheet": "ARR Tracker",
+      "ref": "B48",
+      "comment_timestamp": "2026-10-09T12:33:02.18",
+      "comment_id": "{B50E424E-4148-4152-9F56-AC5434753324}",
+      "text": "Premissa nossa (09-out-26): a cloud retem 25% da receita de API vendida via CSP (3P). Input anual em O26 (2025) e AB26 (2026); os meses puxam do ano."
+    },
+    {
+      "xml": "xl/threadedComments/threadedComment17.xml",
+      "sheet": "ARR Tracker",
+      "ref": "R51",
+      "comment_timestamp": "2026-10-14T22:24:19.55",
+      "comment_id": "{696636A8-4AC6-424F-B14C-6CB817503147}",
+      "text": "4,7"
+    },
+    {
+      "xml": "xl/threadedComments/threadedComment17.xml",
+      "sheet": "ARR Tracker",
+      "ref": "U51",
+      "comment_timestamp": "2026-10-14T22:24:25.14",
+      "comment_id": "{CC4D9954-2790-495E-9A74-119915B422B9}",
+      "text": "11,5"
+    },
+    {
+      "xml": "xl/threadedComments/threadedComment17.xml",
+      "sheet": "ARR Tracker",
+      "ref": "X51",
+      "comment_timestamp": "2026-10-14T22:24:31.12",
+      "comment_id": "{2F81B5C5-E814-4800-9555-DAA005465448}",
+      "text": "16,8"
+    }
+  ],
+  "final_horizon": "2025\u20132030 per builder;2024 missing-share finding resolved by omission",
+  "arithmetic_verdict": "PASS",
+  "delivery_verdict": "Usable house projection model with explicit limitations; no unresolved formula error found in audited build. Not approval as GAAP financial statements, cash-flow forecast or independently calibrated profitability forecast.",
+  "reviewed_output": "\\\\CAPSRV01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\_data\\outputs\\anthropic-2026-10-15\\Anthropic_Financial_Model.xlsx",
+  "reviewed_output_sha256": "4b76bbf33c33d4fe2ecfa06e2c57efbeeee7c417a0b2212397422298bb0882f3",
+  "final_verification": {
+    "independent_annual_checks": 42,
+    "all_extracted_source_cells_verified": 4095,
+    "source_xml_mismatches": 0,
+    "formula_error_scan": "0 entries",
+    "xlsx_cached_errors": 0,
+    "xlsx_zip_integrity": "PASS",
+    "native_two_variable_data_tables": [
+      {
+        "t": "dataTable",
+        "ref": "G55:K59",
+        "dt2D": "1",
+        "r1": "G4",
+        "r2": "J4"
+      },
+      {
+        "t": "dataTable",
+        "ref": "G65:K69",
+        "dt2D": "1",
+        "r1": "G5",
+        "r2": "J5"
+      }
+    ],
+    "native_excel_record": {
+      "engine": "16.0",
+      "readonly": true,
+      "base2030": -20415.22148801462,
+      "sensitivityBase": -20415.22148801462,
+      "sensitivityCorner": -129665.51052374495,
+      "secondTableBase": -20415.22148801462,
+      "cashMissing": "n.a.",
+      "infeasibleSensitivity": "n.a.",
+      "selectedMissingInput": "n.a.",
+      "share20pct": 209.77851198537974,
+      "downside2030": -177589.64784408547,
+      "historyUnchanged": -7060.416666666667,
+      "cashZeroInputs": -20415.22148801462,
+      "status": "PASS"
+    },
+    "native_provenance": "Parent builder executed read-only Excel16 verification. Skeptic read script and recorded output; independent skeptic COM launch was denied before workbook open.",
+    "infeasible_sensitivity": "G59=n.a. confirmed in final model_results; native record also confirms.",
+    "scenario_missing_guard": "Direct-input ISNUMBER chosen before coercion; selected/unselected blank tests in builder and native record.",
+    "cash_inputs": "Blank cash bridge outputs remain n.a.; explicit zeros unlock bridge without auto financing."
+  },
+  "resolved_in_build": [
+    "2024 omitted rather than extrapolating revenue share.",
+    "Historical source EBIT conflict retained and flagged.",
+    "2027 other-cost compression flagged.",
+    "25% annual vs20% tracker and opposing comments disclosed.",
+    "Q1\u2013Q3 reused anchors explicitly identified as in-sample reconciliation.",
+    "Infeasible sensitivity cells return n.a. when embedded1P costs exceed available training or inference.",
+    "Selected missing scenario inputs return n.a.; unselected missing case inputs leave active result valid.",
+    "No double addition of capacity or provider capex.",
+    "No invented cash conversion."
+  ],
+  "remaining_limitations": [
+    "No independent calibration of compute cost-share, training forecast, future channel mix or contract revshare.",
+    "Row36 cost scope and SBC/D&A/lease treatment unverified.",
+    "85% gross margin /11% YTD adjusted operating margin in external reports differ in timing or basis from modeled annual operating surplus.",
+    "Cash flows and funding needs cannot be quantified until cash bridge inputs are supplied.",
+    "Capacity figures are cost/rental equivalents with unresolved facility-vs-IT basis, not verified delivered capacity."
+  ]
+}

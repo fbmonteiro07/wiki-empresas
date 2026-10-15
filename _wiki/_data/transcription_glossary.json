@@ -1,6 +1,6 @@
 {
  "_about": "Hand-edited ledger of machine-transcription garbles (Notion AI, Bloomberg ASR, auto-translation) seen in the archive, with the correct reading. Used by E:\\.claude\\scripts\\transcript_qa.py (source-file scan, page-diff scan) and by ingest_notion_meetings.py (writes a 'Transcription QA' block into every archived Notion file). Keys are matched with word boundaries, case-sensitive unless 'ci' is true. 'keep_when' = regex contexts (same line, ~80 chars around the hit) where the token is legitimate and must NOT be flagged. Add an entry the first time a garble is caught; never delete one. Standing rule (Felipe, 2026-09-28): ALWAYS double-check transcript content — acronyms, names, units, numbers — before it travels to a page.",
- "_updated": "2026-10-14",
+ "_updated": "2026-10-15",
  "terms": {
   "Smolik": {
    "correct": "Shmulik (Mark Shmulik, Bernstein US Internet)",
@@ -1015,6 +1015,86 @@
     "(?i)Benny|Israel|Knesset"
    ],
    "first_seen": "2026-10-14 (Alec Phillips / Goldman Sachs meeting at the Capstone office, Notion transcript)"
+  },
+  "Haslu": {
+   "correct": "Haas Liu (BofA / Merrill Lynch Taiwan semis analyst)",
+   "domain": "names",
+   "rule": "Notion ASR run-together of the BofA Taiwan analyst's name in the host introduction.",
+   "first_seen": "2026-10-15 (BofA TSMC 3Q26 results feedback call)"
+  },
+  "Hasif": {
+   "correct": "Haas (Haas Liu, BofA Taiwan semis)",
+   "domain": "names",
+   "rule": "see 'Haslu'",
+   "first_seen": "2026-10-15 (BofA TSMC 3Q26 results feedback call)"
+  },
+  "Samama": {
+   "correct": "Scemama (Didier Scemama, BofA European semis)",
+   "domain": "names",
+   "rule": "Notion ASR spelling of the BofA European semis analyst's surname; identity from the invite roster.",
+   "first_seen": "2026-10-15 (BofA TSMC 3Q26 results feedback call)"
+  },
+  "TerraFab": {
+   "correct": "Terafab (the Musk/Tesla-SpaceX-xAI fab initiative; wiki spelling 'Terafab')",
+   "domain": "companies",
+   "rule": "ASR doubles the r; wiki and press use 'Terafab'.",
+   "first_seen": "2026-10-15 (BofA TSMC 3Q26 results feedback call)"
+  },
+  "BigSight": {
+   "correct": "Super (TSMC 'Super Power Rail' backside power delivery on A16)",
+   "domain": "technology",
+   "rule": "'BigSight Power Rail' = Super Power Rail (SPR), A16's backside-power feature.",
+   "first_seen": "2026-10-15 (BofA TSMC 3Q26 results feedback call)"
+  },
+  "MMT": {
+   "correct": "EMIB-T (Intel embedded multi-die bridge with TSVs)",
+   "domain": "technology",
+   "rule": "Notion ASR for 'EMIB-T' in packaging context (TPU v9 / CoWoS backup).",
+   "keep_when": [
+    "[Mm]odern [Mm]onetary"
+   ],
+   "first_seen": "2026-10-15 (BofA TSMC 3Q26 results feedback call)"
+  },
+  "EMFT": {
+   "correct": "EMIB-T (Intel packaging)",
+   "domain": "technology",
+   "rule": "see 'MMT'",
+   "first_seen": "2026-10-15 (BofA TSMC 3Q26 results feedback call)"
+  },
+  "H16": {
+   "correct": "A16 (TSMC node)",
+   "domain": "technology",
+   "rule": "ASR for TSMC's A16 node.",
+   "first_seen": "2026-10-15 (BofA TSMC 3Q26 results feedback call)"
+  },
+  "Haf": {
+   "correct": "Haas (Haas Liu, BofA Taiwan semis)",
+   "domain": "names",
+   "rule": "see 'Haslu'",
+   "first_seen": "2026-10-15 (BofA TSMC 3Q26 results feedback call)"
+  },
+  "CoPAS": {
+   "correct": "CoPoS (TSMC chip-on-panel-on-substrate, panel-level CoWoS)",
+   "domain": "packaging",
+   "rule": "ASR variant; see 'CoaS'.",
+   "ci": true,
+   "first_seen": "2026-10-15 (BofA TSMC 3Q26 results feedback call; added by transcription-QA verifier)"
+  },
+  "radical": {
+   "correct": "reticle (as in '14 times reticle size')",
+   "domain": "packaging",
+   "rule": "ASR for 'reticle' in package-size context ('14 times radical size of the package').",
+   "keep_when": [
+    "[Rr]adical (?:change|shift|idea|new|departure|rethink)"
+   ],
+   "ci": true,
+   "first_seen": "2026-10-15 (BofA TSMC 3Q26 results feedback call; added by transcription-QA verifier)"
+  },
+  "RAM starts": {
+   "correct": "ramp starts (A14 ramp start)",
+   "domain": "technology",
+   "rule": "'RAM starts in '27' = ramp starts in 2027 (TSMC A14); not DRAM.",
+   "first_seen": "2026-10-15 (BofA TSMC 3Q26 results feedback call; added by transcription-QA verifier)"
   }
  },
  "summary_traps": [

@@ -13,7 +13,7 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\BKNG` (filings + trans
 | Gross profit | $29.0bn | $31.8bn |
 | Gross margin | 100.0% | 100.0% |
 | EBITDA | $10.7bn | $12.1bn |
-| EPS | $10.30 | $12.30 |
+| EPS | $10.30 | $12.29 |
 | Capex | $416m | $479m |
 | OCF (≈EBITDA) | $10.7bn | $12.1bn |
 
