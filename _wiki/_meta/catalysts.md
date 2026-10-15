@@ -1,13 +1,11 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-10-14 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-10-15 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (42)
+## 📅 Upcoming (40)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-10-14 | ASML | 🆕 **2026-10-14 (Wednesday) — 3Q26 results.** The Street's two focus items are set: (1) whether FY27 low-NA EUV capacity guidance goes to **90+ tools** (from ~85) and whether **2028 is reaffirmed at ≥1 |
-| 2026-10-14 | LITE | **🆕🔴 2026-10-14 — CITI'S CATALYST WATCH (UPSIDE) EXPIRES.** A dated, mechanical sell-side event with a published clock: Citi opened a **Catalyst Watch: Upside expiring 14-OCT-26** alongside Buy/TP $1, |
 | 2026-10-15 | LITE | **🆕 2026-10-15 — OCP San Jose: Oracle Cloud Infrastructure (Kannan Raj) + Lumentum (Michael DeMerchant), "Zero-Touch OCS Fabrics for AI Scale-Out Infrastructure at Hyperscale"** — first non-Google hyp |
 | 2026-10-15 | SMTC | **🔴 2026-10-15 — INVESTOR / ANALYST DAY, San Jose. The single most important dated event on this page, because management deferred the two questions that matter to it.** Promised content: *"an in-dept |
 | 2026-10-20 | NFLX | 🆕 **Q3 2026 earnings — Tue 2026-10-20 AMC** (Vital Knowledge calendar, 2026-09-28) — replaces the "~late Oct" placeholder. |
@@ -57,10 +55,12 @@ _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_me
 |---|---|---|
 | _none_ | | |
 
-## ✅ Resolved (265)
+## ✅ Resolved (267)
 
 | Date | Ticker | Verdict |
 |---|---|---|
+| 2026-10-14 | LITE | bear won — MECHANICAL TEST ONLY, THESIS UNTOUCHED: Citi's Catalyst Watch (Upside), opened 2026-09-22 at px $954.49 with Buy / TP $1,200 (Citi · Sylla/Malik, ECOC note), expired with the stock at $896.33 (BBG snapshot asof 10-14), ~−6% over its own 3-week clock — the predicted upside share-price impact did not occur (the >15%-against auto-removal was never triggered). No print inside the window, no Citi closing note in the corpus; Citi Buy / TP $1,200 and the page's debate (OCS doubling 2027, NPO incremental to the ~$40 EPS frame, InP capacity ~30% of 2027 CPO/NPO demand) are unchanged. Next dated items: OCP OCS session with Oracle Cloud 10-15, F1Q27 print ~11-05 (DB-dated, confirm vs IR). (wiki-catalyst 2026-10-15) |
+| 2026-10-14 | ASML | neutral — SPLIT (D+1): the 3Q26 print was a MARGIN beat but the CAPACITY bar was not met. Q3 sales €11,662m (−0.4% vs BBG €11,704m; below the €11.8bn buy-side bogey) / GM 57.5% (BBG 56.1%, bogey ~57%; +350bp q/q on IBM €3,289m vs ~€2.9bn guide, productivity-upgrade software) / EBIT €5,173m +5.3% vs cons; EPS €12.93 includes a €509.7m equity-investment gain, ex-gain ~€11.5-11.6 vs the €11.25 bogey. Q4 guide €14.2-15.2bn (mid €14.7bn) ABOVE BBG €13.97bn but BELOW the ≥€15bn Jefferies/buy-side bar, GM ~57% in line; FY26 narrowed to €44-45bn / ~56% (top of the prior range). The thesis item resolves nothing: 2027 Low-NA stays ~85 (the 90+ bar — MS 09-18 — not met), 2028 '>110, investigating ways to increase capacity beyond the 30%', update 'probably in January' (IR call-back via Jefferies sales 06:36; Didier Scemama (BofA) feedback call 10-14, partial capture); EUV ~7% light (UBS · Bouvignies relay) while ArFi (40 units vs 23) and China (23% of system sales vs 14%) carried the step-up. ADR −50bp pre-market, 'sell-the-news' (GS TMT desk). Research: BofA Buy, EPS +1.8-5.3%; UBS Buy €2,350 sees 5-10% upgrades to 2027-28 cons EPS; Jefferies Hold €1,650 'broadly in line', expects further de-rating. Sources: 6-K + Capstone first-read `ASML/ASML_3Q26_Review_first-read_2026-10-14.html` (pre-call v1; the 15:00 CET call is NOT covered). ⚠ The 6-K numbers, the Q4 guide and the FY26 narrowing are NOT folded into ASML.md (the page carries only the Scemama relay; BofA's written note and the post-call v2 review are not on disk) — route to /run-inbox. (wiki-catalyst 2026-10-15) |
 | 2026-10-13 | CRDO | neutral — NOT SCOREABLE (D+1): OCP access event (Jefferies-hosted investor meetings; MicroLED-ALC demo / possible MicroVCSEL roadmap, Jefferies · Curtis 09-30; JPM · Cardoso expected a 'proper demonstration'). No readout in corpus — the only 10-13 CRDO adds are the JPM capex thematic (roster only) and an ex-NVIDIA LinkX expert on the Bernstein copper-vs-optical call (AEC 'runs out after 200G/lane' — a bear voice, not an OCP readout). A named ALC/ZF customer beyond Oracle remains unproven; route any OCP demo/customer notes to /run-inbox. (wiki-catalyst 2026-10-14) |
 | 2026-10-13 | AMAT | bear won (preliminary, intraday) — Investor Breakfast set 2030 non-GAAP GM ~54% / OM ~40%, >2pp WFE share gain CY25→30, 80-100% FCF return, but no WFE $ number; GM target sits at the low end of the 'mid-50s' bogey (UBS desk/DB/MS) and ≈ today's Semi-Systems GM. Stock ~-7% by noon (Seeking Alpha) on a weak semis tape (SOX -2.7% 10-12) — event vs sector split unresolved until post-event notes. Source: AMAT press release 2026-10-13. |
 | 2026-10-13 | AMAT | bear won (preliminary, intraday) — Investor Breakfast set 2030 non-GAAP GM ~54% / OM ~40%, >2pp WFE share gain CY25→30, 80-100% FCF return, but no WFE $ number; GM target sits at the low end of the 'mid-50s' bogey (UBS desk/DB/MS) and ≈ today's Semi-Systems GM. Stock ~-7% by noon (Seeking Alpha) on a weak semis tape (SOX -2.7% 10-12) — event vs sector split unresolved until post-event notes. Source: AMAT press release 2026-10-13. |
