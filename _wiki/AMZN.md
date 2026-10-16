@@ -7,13 +7,13 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AMZN` (filings + trans
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $820.8bn | $949.8bn |
+| Revenue | $821.0bn | $949.8bn |
 | Gross profit | $421.1bn | $506.2bn |
 | Gross margin | 51.3% | 53.3% |
-| EBITDA | $211.9bn | $281.0bn |
-| EPS | $9.60 | $12.73 |
+| EBITDA | $212.0bn | $281.0bn |
+| EPS | $9.61 | $12.73 |
 | Capex | $215.6bn | $290.3bn |
-| OCF (≈EBITDA) | $211.9bn | $281.0bn |
+| OCF (≈EBITDA) | $212.0bn | $281.0bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

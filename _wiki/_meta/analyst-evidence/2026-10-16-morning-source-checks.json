@@ -1,0 +1,379 @@
+{
+  "asof": "2026-10-16",
+  "purpose": "Morning Analyst Inbox source checks; supplemental research, not automatic company-page ingestion or trading instructions.",
+  "coverage": {
+    "rebuilt": true,
+    "generated_signal_count": 54,
+    "prior_signal_count": 56,
+    "prior_date": "2026-10-15",
+    "high": 3,
+    "focus_names": 39,
+    "belief_changes": 0,
+    "added_generated_ids": [],
+    "removed_generated_ids": [
+      "cata-a479a74da5f9",
+      "cata-0fc16a577980"
+    ],
+    "matched_signal_value_changes": 0,
+    "latest_reconciliation": "2026-10-14",
+    "consensus_vintage": "2026-10-15",
+    "book_seed": true,
+    "book_asof": "2026-07-01",
+    "company_pages_edited": false,
+    "full_filings_or_transcript_audit": false,
+    "note": "Fresh evidence below is a manual supplement and is not yet in generated signals.json. Outlook subject inventory reviewed for Oct16, selected relevant bodies read; targeted Oct15 event search, not an exhaustive inbox or filings audit."
+  },
+  "observations": [
+    {
+      "signal_ids": [
+        "supp-20261016-smtc-analyst-day",
+        "cata-a479a74da5f9",
+        "data-93be62a8592a"
+      ],
+      "ticker": "SMTC",
+      "sources": [
+        {
+          "source": "Semtech Form 8-K, Item 7.01",
+          "source_date": "2026-10-15",
+          "url": "https://www.sec.gov/Archives/edgar/data/88941/000008894126000041/smtc-20261015.htm",
+          "access_note": "Indexed official filing text verifies Q3 updated guidance; full open returned internal error."
+        },
+        {
+          "source": "Semtech Analyst Day release",
+          "source_date": "2026-10-15",
+          "url": "https://www.semtech.com/company/press/semtech-outlines-data-center-growth-strategy-at-analyst-day",
+          "access_note": "Company explicitly distinguishes FY30 targets/goals from guidance or forecasts."
+        },
+        {
+          "source": "UBS Timothy Arcuri and Natalia Winkler",
+          "title": "UBS: Semtech Corp \"Conservative Topline But Margins Upside\" (Buy) Arcuri",
+          "source_date": "2026-10-16",
+          "received_at": "2026-10-16T07:28:38Z",
+          "outlook_url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWaaVkxAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "source": "Morgan Stanley Joseph Moore et al.",
+          "title": "Semtech Corp.: Investor Day highlights strong growth in data center",
+          "source_date": "2026-10-16",
+          "received_at": "2026-10-16T03:09:41Z",
+          "outlook_url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWZ4Jp7AAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        }
+      ],
+      "facts": {
+        "q3_fy27_revenue_mid_usd_m": {
+          "old": 410,
+          "new": 417.5
+        },
+        "q3_adjusted_eps": {
+          "old": 1.05,
+          "new": 1.14
+        },
+        "q3_adjusted_gm_pct": 59,
+        "q3_adjusted_gm_ex_held_for_sale_pct": 64,
+        "fy30_targets_ubs_management_relay": {
+          "total_revenue_usd_bn": 3.2,
+          "gross_margin_pct": 70,
+          "data_center_revenue_usd_bn": 2.1
+        },
+        "ubs_fy30_dc_revenue_usd_bn": 2.46,
+        "ubs_fy30_eps": {
+          "old": 13.4,
+          "new": 13.6
+        },
+        "ubs_rating": "Buy, PT $230 unchanged",
+        "ms_changes": {
+          "fy28_revenue_pct": 18,
+          "fy28_adjusted_eps_pct": 28,
+          "pt_old": 195,
+          "pt_new": 205,
+          "rating": "Equal-weight unchanged"
+        },
+        "ms_active_copper_comment": "smaller or more delayed than previously anticipated",
+        "ms_npo_volume_timing": "late CY2027"
+      },
+      "inference": "Test whether optical operating leverage justifies the selloff opportunity while copper is less central. FY30 framework is not near-term guidance.",
+      "next_action": "Separate optical, copper and acquired photonics; build yearly margin cadence and capacity/qualification milestones without editing company page.",
+      "falsifier": "FY27/FY28 doubling loses backlog/production support or profitable photonics qualification slips.",
+      "evidence_paths": [
+        "_wiki/SMTC.md",
+        "_wiki/_meta/outcomes.md"
+      ]
+    },
+    {
+      "signal_ids": [
+        "supp-20261016-crwv-funding",
+        "esti-75ee8da5ebea"
+      ],
+      "ticker": "CRWV",
+      "sources": [
+        {
+          "source": "J.P. Morgan Samik Chatterjee et al.",
+          "title": "JPM | Software | CRWV: Debt Concerns Reflect Sentiment Around Timing of Cash Flows, Contrary to Healthy Contract Economics, Returns and Execution Leadership in Scaling",
+          "source_date": "2026-10-16",
+          "received_at": "2026-10-16T09:03:52Z",
+          "outlook_url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWaaVk%2FAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "source": "Capstone/Felipe official model and financing map",
+          "source_date": "2026-10-14",
+          "path": "_wiki/CRWV.md"
+        }
+      ],
+      "facts": {
+        "jpm_rating": "Overweight",
+        "jpm_project_unlevered_irr": "mid-teens",
+        "jpm_blended_cost_of_capital_pct": [
+          9,
+          11
+        ],
+        "jpm_illustrative_self_funding_timing": "2030E, conditional on modeled capacity growth and cash EBITDA",
+        "house_dcf_usd": 59,
+        "house_ntm_funding_residual_usd_bn_quoted": 19,
+        "house_cy26_eps": -3.27,
+        "bbg_cy26_eps": -3.88,
+        "bbg_date": "2026-10-15"
+      },
+      "inference": "Contract-level returns do not prove parent-level liquidity; pass-through of higher funding costs on new contracts does not reset existing fixed-price contracts.",
+      "next_action": "Reconcile unrestricted and restricted cash, committed undrawn funding, draw conditions, parent needs and project distributions; test renewal and replacement assumptions.",
+      "falsifier": "Executable funding closes the residual at acceptable terms without a ramp cut or material dilution.",
+      "data_quality": "Generated below-consensus direction is economically misleading for negative EPS; house loss is smaller. Accounting basis still requires validation.",
+      "evidence_paths": [
+        "_wiki/CRWV.md",
+        "_wiki/_data/house.json",
+        "_wiki/_data/estimates.json"
+      ]
+    },
+    {
+      "signal_ids": [
+        "supp-20261016-aixa-preliminary",
+        "cata-67b3a6bd8c80"
+      ],
+      "ticker": "AIXA",
+      "sources": [
+        {
+          "source": "AIXTRON CEO Felix Grawert, company preliminary Q3 announcement",
+          "source_date": "2026-10-15",
+          "url": "https://www.aixtron.com/en/investors/news/AIXTRON%20Q3%202026%20Order%20intake%20and%20operating%20profitability%20significantly%20exceed%20market%20expectations_n5412642"
+        },
+        {
+          "source": "Morgan Stanley Lee Simpson et al.",
+          "title": "PULSE: Aixtron SE (AIXGn.DE): 3Q26 1st Take: Opto drives Orders",
+          "source_date": "2026-10-16",
+          "received_at": "2026-10-16T07:13:15Z",
+          "outlook_url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWaaVkvAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "source": "AIXTRON IR Christian Ludwig, Jefferies conference",
+          "source_date": "2026-08-25",
+          "path": "_wiki/AIXA.md"
+        }
+      ],
+      "facts": {
+        "preliminary_order_intake_eur_m": 275,
+        "company_consensus_order_intake_eur_m": 214.6,
+        "preliminary_revenue_eur_m": 184,
+        "preliminary_ebit_eur_m": 57,
+        "preliminary_gross_margin_pct": 48,
+        "fy26_guidance": "unchanged",
+        "full_results_date": "2026-10-29",
+        "ms_order_beat_pct_vs_its_panel": 31,
+        "ms_rating": "Equal-weight, PT EUR40 unchanged"
+      },
+      "inference": "Laser-tool orders strengthen near-term optical supply-chain demand evidence; not proof of customer production capacity or multi-year tool intensity.",
+      "next_action": "Ask how much intake is opto, the delivery/deposit schedule and whether larger wafers or improving yields reduce tools per unit of laser output.",
+      "falsifier": "Orders are pull-forward/cancelable or not converted; lower tool intensity offsets demand growth.",
+      "data_quality": "MS 31% beat uses its own panel; company reports EUR214.6m consensus. Keep panels separate.",
+      "evidence_paths": [
+        "_wiki/AIXA.md"
+      ]
+    },
+    {
+      "signal_ids": [
+        "supp-20261016-optics-ocp",
+        "reco-461b7e89c24a",
+        "cata-b395c83ce767"
+      ],
+      "tickers": [
+        "LITE",
+        "COHR",
+        "CRDO"
+      ],
+      "sources": [
+        {
+          "source": "Morgan Stanley Meta Marshall and Antonio Jaramillo",
+          "title": "IDEA: Telecom & Networking Equipment: OCP 2026: Still Plenty of Hard Problems to Solve, But Problems Largely Known",
+          "source_date": "2026-10-16",
+          "received_at": "2026-10-16T04:30:53Z",
+          "outlook_url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWaY7%2FwAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "source": "Morgan Stanley Andy Meng",
+          "title": "MS PULSE on Greater China Technology Hardware: Takeaways on Photonics from 2026 OCP Global Summit",
+          "source_date": "2026-10-16",
+          "received_at": "2026-10-16T00:33:28Z",
+          "outlook_url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWZ4JpjAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "source": "J.P. Morgan Joseph Cardoso, CEO meeting at OCP",
+          "source_date": "2026-10-15",
+          "path": "_wiki/_meta/analyst-evidence/2026-10-15-morning-source-checks.json"
+        },
+        {
+          "source": "Lumentum IR reporting-date announcement",
+          "source_date": "2026-10-05",
+          "url": "https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Announces-Reporting-Date-for-Fiscal-First-Quarter-2027-Financial-Results/default.aspx"
+        }
+      ],
+      "facts": {
+        "ms_ocp_view": "Less incremental than ECOC and prior conferences; favors LITE/COHR in selloff but OCP did not change view.",
+        "ms_lite_elsfp": "LITE said module in production; not an OCS order",
+        "crdo_jpm_zf": "Passed NVIDIA qualification, per CEO meeting relay",
+        "crdo_alc": "2027 shipping expectation; not current revenue",
+        "oracle_lite_ocs": "No confirmed order/customer shipment evidence identified in reviewed materials; joint session alone is not sufficient.",
+        "lite_earnings_date": "2026-11-05",
+        "db_conti_oct7_ocs_bogey_usd_m": 100
+      },
+      "inference": "Qualification is more incremental than generic TAM enthusiasm. Architecture adoption and supplier content must be separated.",
+      "next_action": "Track qualification to production awards to shipments to revenue by platform; keep Oracle OCS unconfirmed until named evidence.",
+      "falsifier": "Qualifications do not turn into production shipments, or platform changes reduce retained laser/cable content.",
+      "evidence_paths": [
+        "_wiki/LITE.md",
+        "_wiki/CRDO.md",
+        "_wiki/_meta/outcomes.md",
+        "_wiki/_meta/analyst-evidence/2026-10-15-morning-source-checks.json"
+      ]
+    },
+    {
+      "signal_ids": [
+        "supp-20261016-meta-preview",
+        "reco-6e15fb3f3a1c"
+      ],
+      "ticker": "META",
+      "sources": [
+        {
+          "source": "BofA Justin Post and Nitin Bansal",
+          "title": "META US: Meta Platforms Inc: Estimate Change - 3Q Preview: Back on offense with AI - BUY - United States",
+          "source_date": "2026-10-16",
+          "received_at": "2026-10-16T05:42:24Z",
+          "outlook_url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAQqMvDhAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWaaXpsAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        },
+        {
+          "source": "Meta IR reporting-date announcement",
+          "source_date": "2026-10-12",
+          "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-to-Announce-Third-Quarter-2026-Results/default.aspx"
+        },
+        {
+          "source": "Capstone house / Jefferies Thill reconciliation",
+          "source_date": "2026-10-14",
+          "path": "_wiki/_meta/reconciliation-2026-10-14-inbox.md"
+        }
+      ],
+      "facts": {
+        "bofa_q3_revenue_usd_bn": 63.8,
+        "bofa_quoted_street_revenue_usd_bn": 63.3,
+        "bofa_q3_gaap_eps": 3.79,
+        "bofa_quoted_street_eps": 6.08,
+        "bofa_modeled_one_time_legal_accrual_usd_bn": 10,
+        "bofa_cy27_capex_usd_bn": 205,
+        "house_cy27_capex_usd_bn": 170,
+        "jefferies_cy27_capex_including_finance_leases_usd_bn": 216.7,
+        "bofa_rating": "Buy, PT $810 unchanged",
+        "earnings_date": "2026-10-21"
+      },
+      "inference": "AI sentiment can improve while EPS/FCF weakens. BofA GAAP EPS gap is not a clean operating miss.",
+      "next_action": "Reconcile capex cash versus finance leases, depreciation and Muse serving costs; freeze legal-charge-adjusted operating bridge ahead of print.",
+      "falsifier": "Clean operating results and credible monetization cover incremental recurring AI costs without further capex/opex pressure.",
+      "evidence_paths": [
+        "_wiki/META.md",
+        "_wiki/_meta/reconciliation-2026-10-14-inbox.md"
+      ]
+    },
+    {
+      "signal_ids": [
+        "esti-fcc71c3823bd",
+        "esti-a9d0db07b62e"
+      ],
+      "ticker": "GOOG",
+      "sources": [
+        {
+          "source": "Capstone official model",
+          "source_date": "2026-06-05",
+          "path": "_wiki/_data/house.json"
+        },
+        {
+          "source": "Bloomberg consensus",
+          "source_date": "2026-10-15",
+          "path": "_wiki/_data/estimates.json"
+        },
+        {
+          "source": "Curated reconciliation with year-mapping error",
+          "source_date": "2026-10-14",
+          "path": "_wiki/_meta/reconciliation-2026-10-14-inbox.md"
+        }
+      ],
+      "facts": {
+        "house_cy26_revenue_usd_bn": 505,
+        "house_cy27_revenue_usd_bn": 641,
+        "bbg_cy26_revenue_usd_bn": 428.10067,
+        "bbg_cy27_revenue_usd_bn": 552.044
+      },
+      "data_quality": "Oct14 reconciliation assigns house $505bn to CY27; page and house.json assign it to CY26. Do not use that paragraph's below-Street conclusion. Gross/net revenue and TPU hardware classification still need bridge.",
+      "next_action": "Adjudicate year mapping and gross/net/TPU-sales bases before treating gap as alpha.",
+      "falsifier": "Like-for-like bridge eliminates apparent house/consensus disagreement."
+    },
+    {
+      "signal_ids": [
+        "reco-2dac6aa267b7"
+      ],
+      "ticker": "TSM",
+      "sources": [
+        {
+          "source": "Barclays Simon Coles / Thomas Wu",
+          "title": "Taiwan Semiconductor Manufacturing Company: Confidence growing",
+          "source_date": "2026-10-15",
+          "received_at": "2026-10-16T02:01:56Z",
+          "outlook_url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWZ4JpwAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+          "date_note": "Report dated Oct15, received Oct16."
+        }
+      ],
+      "facts": {
+        "cy27_usd_revenue_estimate_revision_pct": 5,
+        "cy27_usd_growth_forecast_pct": 34,
+        "cy27_gm_revision_bps": 50,
+        "cy27_gm_growth_forecast": "broadly flat year on year",
+        "pt_usd": {
+          "old": 665,
+          "new": 670
+        },
+        "rating": "Overweight unchanged"
+      },
+      "inference": "Revenue upgrades do not imply unlimited margin expansion; reconcile with BofA margin caution.",
+      "evidence_paths": [
+        "_wiki/TSM.md"
+      ]
+    },
+    {
+      "signal_ids": [
+        "cata-d5929fe6e47a"
+      ],
+      "ticker": "NFLX",
+      "sources": [
+        {
+          "source": "Netflix IR",
+          "source_date": "2026-09-14",
+          "url": "https://ir.netflix.net/investor-news-and-events/financial-releases/press-release-details/2026/Netflix-to-Announce-Third-Quarter-2026-Financial-Results/default.aspx"
+        }
+      ],
+      "facts": {
+        "earnings_date": "2026-10-20",
+        "release_time": "13:01 Pacific",
+        "interview_time": "13:45 Pacific"
+      },
+      "next_action": "Freeze advertising, engagement and margin expectations before release.",
+      "evidence_paths": [
+        "_wiki/NFLX.md",
+        "_wiki/_meta/catalysts.md"
+      ]
+    }
+  ]
+}

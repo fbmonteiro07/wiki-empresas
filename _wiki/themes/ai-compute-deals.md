@@ -122,6 +122,12 @@ _Added because a desk relay (Jefferies Asia TMT, 2026-09-22) and the 08-27 Jeffe
 | 2026-05 (announced by the Q1-2026 call) | META-AMD-202605 | Meta | AMD (Instinct GPUs) | Undisclosed | **Up to 6 GW of Instinct GPUs across several product generations** | Undisclosed (Helios 2026-27 per supply-chain checks) | AMD Q1-2026 call, 2026-05-06 ([transcript](../../AMD/transcripts/AMD_Q1-2026-earnings_2026-05-06.md)) |
 | ~2026-08-30 (announcement per the [[MEDIATEK]] page) | NVDA-MEDIATEK-CB-202608 | MediaTek (issuer) | NVIDIA US$3.5bn + Alphabet (remainder) | **US$3.9bn convertible bond** | None (supplier financing) | n/a | [[MEDIATEK]] page 09-01 block; use of proceeds per Jefferies Asia desk deck 2026-09-22 p.36 ([deck](../../relat%C3%B3rios%20bons/20260922__Jefferies_AsiaTMT_SpecSales__Q326_Techknowledge_Tech_Trip_Takeaways.html)) |
 
+### Added 2026-10-16 — CoreWeave convertible (historical financing backfill)
+
+| Event date | Deal ID | Borrower / buyer | Counterparty | Original amount / basis | Evidence and execution | Source date / link |
+|---|---|---|---|---|---|---|
+| 2026-09-18 (pricing) | CRWV-CONVERT-20260922 | CoreWeave | Institutional noteholders | $3.7bn base plus $500m option; 2.875% convertible senior notes due April 1, 2033 | Pricing announcement; subsequent close below. Financing dollars, no compute-contract TCV or MW. Recorded 2026-10-16. | CoreWeave release 2026-09-18, [SEC exhibit](https://www.sec.gov/Archives/edgar/data/1769628/000176962826000432/ex991pricing.htm) |
+
 ## Confirmations, revisions and execution history
 
 Append a dated event whenever the evidence or terms change, referencing the existing deal ID. Preserve the prior value in the event description and the affected company's Changelog. Historical evidence found later is a **backfill**, with its original source date and today's recorded date.
@@ -175,6 +181,14 @@ Append a dated event whenever the evidence or terms change, referencing the exis
 |---|---|---|---|---|---|---|
 | 2025-11-13 | 2026-10-11 | NVDA-NOK-EQUITY-20251028 | Company-confirmed completion; historical backfill | The October 28 directed issuance and **$1bn equity investment** completed; NVIDIA became an approximately **2.90% shareholder**. Original amount, share count and subscription terms preserved; no incremental commitment. | **Equity funded/completed.** This does not establish delivered networking equipment, AI-RAN revenue, purchased compute capacity or MW. Already embedded in subsequent Nokia cash/share balances. | Nokia **Q4/FY2025 release, source date 2026-01-29**, p.13, [archived original](../../NOK/sources/2026-01-29_Nokia_Q4-2025.pdf). |
 
+### Weekly credit evidence recorded 2026-10-16
+
+| Event date | Recorded date | Deal ID | Evidence level / event | Terms preserved or changed | Execution status / exclusions | Source |
+|---|---|---|---|---|---|---|
+| 2026-09-22 | 2026-10-16 | CRWV-CONVERT-20260922 | Filed closing, historical backfill | $4.2bn closed, including the fully exercised $500m option beyond the September 18 $3.7bn base. 2.875%, due April 1, 2033; senior unsecured with subsidiary guarantees. | Same issue, not a second tranche or October proceeds; no MW or delivery inferred. | CoreWeave 8-K filed 2026-09-22, [Item 1.01](https://www.sec.gov/Archives/edgar/data/1769628/000176962826000432/crwv-20260917.htm) |
+| 2026-10-16 | 2026-10-16 | ORCL-CHIP-LEASE-20261007 | Broker status review | MS still describes chip-financing reports as unconfirmed. Partner backstop is an upside scenario, not an announced guarantee; original amount remains undisclosed. | No signed financing, draw or delivery established. | MS / Lindsay Tyler and David Hamburger, 2026-10-16; [email archive](../_data/credit-monitor/research-sources/2026-10-16-outlook.json) |
+| 2026-10-16 (relay) | 2026-10-16 | ORCL-JUPITER-EXEC | Broker relay of regulatory request | UBS reports Oracle seeks expedited gas-pipeline approval. Existing September notice/company timetable retained; primary filing and decision not independently reviewed. | Request is not approval or commissioning; no whole-campus delay conclusion. | UBS / David Vogt et al., 2026-10-16; [email archive](../_data/credit-monitor/research-sources/2026-10-16-outlook.json) |
+
 ## Current follow-up points
 
 - **2026-10-09 credit review:** obtain closing documents for the three new financing proposals; no proposed amount enters completed issuance. Track APLD utilization after RFS, separately from site capacity. Lighthouse approval and timing remain unresolved: September refiling is not final approval. [Dated source register](../_data/credit-monitor/research-sources/2026-10-09-primary.json).
@@ -225,6 +239,8 @@ Append a dated event whenever the evidence or terms change, referencing the exis
 - **S7 — Goldman Sachs (Della Vigna et al.), "Carbonomics: Behind-the-meter power solutions for data centers", 2026-09-23**, 50pp. Source of the Generac-Amazon vendor agreement and the Oracle Project Jupiter fuel-cell pipeline entry. ⚠️ Its GW are INSTALLED GENERATION capacity — a different basis from every other GW on this page. [Archived render](../relat%C3%B3rios%20bons/Carbonomics__Behind-the-meter_power_solutions_for_data_centers__gas_turbines_fuel_cells_and_reciprocating_engines.html).
 
 ## Changelog
+
+- **2026-10-16 — weekly credit review:** Backfilled CRWV-CONVERT-20260922 from September 18 pricing and September 22 filed closing, preserving $3.7bn base versus $4.2bn including the exercised option. Added dated status/relay entries to the existing Oracle chip-lease and Jupiter IDs. Re-read FT October 5 and linked existing ANTH-AVGO-CHIP-FIN-20261005 into the funding ledger; no duplicate commitment/event row. No elapsed-date catalyst outcome inferred.
 
 - **2026-10-13 (user-attached ingest, Jefferies Asia TMT desk deck 2026-09-22):** searched the timeline for AMD and MediaTek before writing. Backfilled **OAI-AMD-20251006** (6 GW Instinct, first 1 GW MI450 2H26; AMD Q3-2025 call) and **META-AMD-202605** (up to 6 GW across generations; AMD Q1-2026 call), since the "OAI/META 6GW over 4 years" statement quoted on 08-27 and 09-22 had no row; recorded the 09-22 deck as a repeat relay of the 08-27 statement, not a confirmation. Added **NVDA-MEDIATEK-CB-202608** (US$3.9bn CB, NVIDIA US$3.5bn) as supplier financing with the issuer's stated use of proceeds. Added MediaTek's sequencing account under ANTH-AVGO-CHIP-FIN-20261005 as third-party colour. No original terms changed.
 

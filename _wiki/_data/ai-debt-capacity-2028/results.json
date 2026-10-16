@@ -1,0 +1,492 @@
+{
+  "asof": "2026-10-16",
+  "units": "USD billions unless ratio/rate",
+  "status": "PARTIAL UNDERWRITING DIAGNOSTIC; no validated ecosystem funded total",
+  "withdrawn_claim": "USD1.25tn financeable in 2028 derived from78.8% funding mix",
+  "companies": [
+    {
+      "ticker": "MSFT",
+      "rev": 517.0612211538462,
+      "ebit": 240.84575058962264,
+      "ebitda": 333.3221733212341,
+      "capex": 229.37951507321276,
+      "basis": "CY2028 approximation: 1/2 FY2028 + 1/2 FY2029; no quarterly seasonality",
+      "tag": "PARTIAL",
+      "source": "Bloomberg consensus cache, 2026-10-16; adjusted earnings basis",
+      "net_new_debt_capacity_2028": null,
+      "reason": "Opening debt, eligible cash flows and future loan amortization not fully reconciled",
+      "leverage_anchor": 1.0,
+      "closing_adjusted_net_debt_proxy": 333.3221733212341
+    },
+    {
+      "ticker": "AMZN",
+      "rev": 1093.2776041666666,
+      "ebit": 180.6796976744186,
+      "ebitda": 356.43073529411765,
+      "capex": 309.99904,
+      "basis": "CY2028 = FY2028",
+      "tag": "PARTIAL",
+      "source": "Bloomberg consensus cache, 2026-10-16; adjusted earnings basis",
+      "net_new_debt_capacity_2028": null,
+      "reason": "Opening debt, eligible cash flows and future loan amortization not fully reconciled",
+      "leverage_anchor": 1.5,
+      "closing_adjusted_net_debt_proxy": 534.6461029411764
+    },
+    {
+      "ticker": "GOOG",
+      "rev": 683.823,
+      "ebit": 273.72184444444446,
+      "ebitda": 403.068375,
+      "capex": 351.38632352941175,
+      "basis": "CY2028 = FY2028",
+      "tag": "PARTIAL",
+      "source": "Bloomberg consensus cache, 2026-10-16; adjusted earnings basis",
+      "net_new_debt_capacity_2028": null,
+      "reason": "Opening debt, eligible cash flows and future loan amortization not fully reconciled",
+      "leverage_anchor": 1.0,
+      "closing_adjusted_net_debt_proxy": 403.068375
+    },
+    {
+      "ticker": "META",
+      "rev": 364.2616875,
+      "ebit": 123.73944999999999,
+      "ebitda": 201.2167142857143,
+      "capex": 217.5546,
+      "basis": "CY2028 = FY2028",
+      "tag": "PARTIAL",
+      "source": "Bloomberg consensus cache, 2026-10-16; adjusted earnings basis",
+      "net_new_debt_capacity_2028": null,
+      "reason": "Opening debt, eligible cash flows and future loan amortization not fully reconciled",
+      "leverage_anchor": 1.0,
+      "closing_adjusted_net_debt_proxy": 201.2167142857143
+    },
+    {
+      "ticker": "ORCL",
+      "rev": 161.53670711759503,
+      "ebit": 60.437326210826214,
+      "ebitda": 94.24723504273504,
+      "capex": 98.85238770772239,
+      "basis": "CY2028 approximation: 5/12 FY2028 + 7/12 FY2029; no quarterly seasonality",
+      "tag": "PARTIAL",
+      "source": "Bloomberg consensus cache, 2026-10-16; adjusted earnings basis",
+      "net_new_debt_capacity_2028": null,
+      "reason": "Opening debt, eligible cash flows and future loan amortization not fully reconciled"
+    },
+    {
+      "ticker": "SPCX",
+      "rev": 186.8611904761905,
+      "ebit": 72.73162857142857,
+      "ebitda": 127.7905,
+      "capex": 185.94582142857146,
+      "basis": "CY2028 = FY2028",
+      "tag": "PARTIAL",
+      "source": "Bloomberg consensus cache, 2026-10-16; adjusted earnings basis",
+      "net_new_debt_capacity_2028": null,
+      "reason": "Opening debt, eligible cash flows and future loan amortization not fully reconciled"
+    },
+    {
+      "ticker": "CRWV",
+      "rev": 42.25710256410256,
+      "ebit": 7.3965555555555556,
+      "ebitda": 27.92929411764706,
+      "capex": 50.387966666666664,
+      "basis": "CY2028 = FY2028",
+      "tag": "PARTIAL",
+      "source": "Bloomberg consensus cache, 2026-10-16; adjusted earnings basis",
+      "net_new_debt_capacity_2028": null,
+      "reason": "Opening debt, eligible cash flows and future loan amortization not fully reconciled"
+    },
+    {
+      "ticker": "NBIS",
+      "rev": 24.516756943636363,
+      "ebit": 2.444650958181818,
+      "ebitda": 15.314658583333332,
+      "capex": 39.13499220923077,
+      "basis": "CY2028 = FY2028",
+      "tag": "PARTIAL",
+      "source": "Bloomberg consensus cache, 2026-10-16; adjusted earnings basis",
+      "net_new_debt_capacity_2028": null,
+      "reason": "Opening debt, eligible cash flows and future loan amortization not fully reconciled"
+    },
+    {
+      "ticker": "AKAM",
+      "rev": 6.293933333333333,
+      "ebit": 1.5847333333333333,
+      "ebitda": 2.686769230769231,
+      "capex": 2.0484,
+      "basis": "CY2028 = FY2028",
+      "tag": "PARTIAL",
+      "source": "Bloomberg consensus cache, 2026-10-16; adjusted earnings basis",
+      "net_new_debt_capacity_2028": null,
+      "reason": "Opening debt, eligible cash flows and future loan amortization not fully reconciled"
+    }
+  ],
+  "big_four": {
+    "closing_adjusted_net_debt_proxy": 1472.2533655481247,
+    "formula": "Maximum increase in adjusted net debt = proxy - opening2028 adjusted net debt. Net new financial borrowing additionally equals this headroom + change in qualifying cash - change in other agency debt adjustments. Reconcile agency EBITDA, leases and guarantees first.",
+    "anchor_source": "JPM / Erica Speer, hyperscaler equity-credit call 2026-07-20; Alphabet1x corroborated by S&P2026-02-09",
+    "sensitivity_opening_adjusted_net_debt": {
+      "400": 1072.2533655481247,
+      "600": 872.2533655481247,
+      "800": 672.2533655481247,
+      "1000": 472.25336554812475
+    },
+    "tag": "PARTIAL; does not establish annual issuance absorption or borrowers willingness"
+  },
+  "crwv": {
+    "source": "Capstone / Felipe Monteiro official model2026-10-14; CRWV10-Q2026-08-12; DDTL5.5 SEC8-K2026-08-10",
+    "sbc_addbacks": {
+      "2026": 0.6400000000000001,
+      "2027": 0.8009999999999999,
+      "2028": 1.11725
+    },
+    "opening2027_gross_debt_estimate": 50.2686,
+    "2027_net_borrowing_estimate": 34.89337591623037,
+    "2027_cash_interest_estimate": 6.094375916230366,
+    "2027_max_principal_under_same_screen": 10.27673519488074,
+    "opening2028_gross_debt_estimate": 85.16197591623038,
+    "2028_capex": 60.8,
+    "2028_preinterest_cash_gap": 27.182750000000002,
+    "2028_preinterest_cash_generation_proxy": 33.61725,
+    "known2028_principal_on_June2026_debt_only": 4.416,
+    "old_debt_cash_rate_estimate": 0.09,
+    "cases": [
+      {
+        "new_rate": 0.09,
+        "total_2028_principal": 10,
+        "opening_book_principal": 10,
+        "principal_on_2028_originations": 0,
+        "required_net_borrowing": 36.48934851566569,
+        "required_gross_borrowing": 46.48934851566569,
+        "interest": 9.306598515665687,
+        "adjusted_ebit_interest": 0.9509381956364508,
+        "after_sbc_ebit_interest": 0.8308889641025723,
+        "adjusted_ebitda_interest": 3.07308840623757,
+        "illustrative_debt_service_coverage": 1.7412311118772381,
+        "screen_supported_net": 36.48934851566569,
+        "capex_deferral_if_cash_generation_unchanged": 0.0,
+        "flag": "CONDITIONAL SCREEN ONLY"
+      },
+      {
+        "new_rate": 0.09,
+        "total_2028_principal": 15,
+        "opening_book_principal": 15,
+        "principal_on_2028_originations": 0,
+        "required_net_borrowing": 36.48934851566569,
+        "required_gross_borrowing": 51.48934851566569,
+        "interest": 9.306598515665687,
+        "adjusted_ebit_interest": 0.9509381956364508,
+        "after_sbc_ebit_interest": 0.8308889641025723,
+        "adjusted_ebitda_interest": 3.07308840623757,
+        "illustrative_debt_service_coverage": 1.3830503670982002,
+        "screen_supported_net": 36.48934851566569,
+        "capex_deferral_if_cash_generation_unchanged": 0.0,
+        "flag": "CONDITIONAL SCREEN ONLY"
+      },
+      {
+        "new_rate": 0.09,
+        "total_2028_principal": 16,
+        "opening_book_principal": 16,
+        "principal_on_2028_originations": 0,
+        "required_net_borrowing": 36.48934851566569,
+        "required_gross_borrowing": 52.48934851566569,
+        "interest": 9.306598515665687,
+        "adjusted_ebit_interest": 0.9509381956364508,
+        "after_sbc_ebit_interest": 0.8308889641025723,
+        "adjusted_ebitda_interest": 3.07308840623757,
+        "illustrative_debt_service_coverage": 1.3283985984599915,
+        "screen_supported_net": 27.490862982354002,
+        "capex_deferral_if_cash_generation_unchanged": 8.59355368431266,
+        "flag": "CONDITIONAL SCREEN ONLY"
+      },
+      {
+        "new_rate": 0.09,
+        "total_2028_principal": 17,
+        "opening_book_principal": 17,
+        "principal_on_2028_originations": 0,
+        "required_net_borrowing": 36.48934851566569,
+        "required_gross_borrowing": 53.48934851566569,
+        "interest": 9.306598515665687,
+        "adjusted_ebit_interest": 0.9509381956364508,
+        "after_sbc_ebit_interest": 0.8308889641025723,
+        "adjusted_ebitda_interest": 3.07308840623757,
+        "illustrative_debt_service_coverage": 1.2779018153936088,
+        "screen_supported_net": 5.268640760131779,
+        "capex_deferral_if_cash_generation_unchanged": 29.81577590653488,
+        "flag": "CONDITIONAL SCREEN ONLY"
+      },
+      {
+        "new_rate": 0.09,
+        "total_2028_principal": 20,
+        "opening_book_principal": 20,
+        "principal_on_2028_originations": 0,
+        "required_net_borrowing": 36.48934851566569,
+        "required_gross_borrowing": 56.48934851566569,
+        "interest": 9.306598515665687,
+        "adjusted_ebit_interest": 0.9509381956364508,
+        "after_sbc_ebit_interest": 0.8308889641025723,
+        "adjusted_ebitda_interest": 3.07308840623757,
+        "illustrative_debt_service_coverage": 1.1470880860509989,
+        "screen_supported_net": null,
+        "capex_deferral_if_cash_generation_unchanged": null,
+        "flag": "FAILS BEFORE NEW DEBT"
+      },
+      {
+        "new_rate": 0.11,
+        "total_2028_principal": 10,
+        "opening_book_principal": 10,
+        "principal_on_2028_originations": 0,
+        "required_net_borrowing": 36.98129929360925,
+        "required_gross_borrowing": 46.98129929360925,
+        "interest": 9.798549293609245,
+        "adjusted_ebit_interest": 0.903194925576595,
+        "after_sbc_ebit_interest": 0.789172944717787,
+        "adjusted_ebitda_interest": 2.9187994205074146,
+        "illustrative_debt_service_coverage": 1.6979653156128605,
+        "screen_supported_net": 36.98129929360925,
+        "capex_deferral_if_cash_generation_unchanged": 0.0,
+        "flag": "CONDITIONAL SCREEN ONLY"
+      },
+      {
+        "new_rate": 0.11,
+        "total_2028_principal": 15,
+        "opening_book_principal": 15,
+        "principal_on_2028_originations": 0,
+        "required_net_borrowing": 37.0342093465193,
+        "required_gross_borrowing": 52.0342093465193,
+        "interest": 9.851459346519295,
+        "adjusted_ebit_interest": 0.8983440613929824,
+        "after_sbc_ebit_interest": 0.78493446787984,
+        "adjusted_ebitda_interest": 2.903123181450768,
+        "illustrative_debt_service_coverage": 1.3527274004819536,
+        "screen_supported_net": 37.0342093465193,
+        "capex_deferral_if_cash_generation_unchanged": 0.0,
+        "flag": "CONDITIONAL SCREEN ONLY"
+      },
+      {
+        "new_rate": 0.11,
+        "total_2028_principal": 16,
+        "opening_book_principal": 16,
+        "principal_on_2028_originations": 0,
+        "required_net_borrowing": 37.0447913571013,
+        "required_gross_borrowing": 53.0447913571013,
+        "interest": 9.862041357101301,
+        "adjusted_ebit_interest": 0.8973801345527144,
+        "after_sbc_ebit_interest": 0.7840922299957629,
+        "adjusted_ebitda_interest": 2.9000081184415407,
+        "illustrative_debt_service_coverage": 1.2998683876425416,
+        "screen_supported_net": 19.583433349198724,
+        "capex_deferral_if_cash_generation_unchanged": 16.500983317467934,
+        "flag": "CONDITIONAL SCREEN ONLY"
+      },
+      {
+        "new_rate": 0.11,
+        "total_2028_principal": 17,
+        "opening_book_principal": 17,
+        "principal_on_2028_originations": 0,
+        "required_net_borrowing": 37.05537336768332,
+        "required_gross_borrowing": 54.05537336768332,
+        "interest": 9.872623367683321,
+        "adjusted_ebit_interest": 0.8964182740900722,
+        "after_sbc_ebit_interest": 0.7832517976237295,
+        "adjusted_ebitda_interest": 2.896899733217635,
+        "illustrative_debt_service_coverage": 1.2509850467531085,
+        "screen_supported_net": 1.2197969855623643,
+        "capex_deferral_if_cash_generation_unchanged": 33.86461968110431,
+        "flag": "CONDITIONAL SCREEN ONLY"
+      },
+      {
+        "new_rate": 0.11,
+        "total_2028_principal": 20,
+        "opening_book_principal": 20,
+        "principal_on_2028_originations": 0,
+        "required_net_borrowing": 37.087119399429355,
+        "required_gross_borrowing": 57.087119399429355,
+        "interest": 9.904369399429353,
+        "adjusted_ebit_interest": 0.8935450247352344,
+        "after_sbc_ebit_interest": 0.7807412757086309,
+        "adjusted_ebitda_interest": 2.8876144302178197,
+        "illustrative_debt_service_coverage": 1.124158464971393,
+        "screen_supported_net": null,
+        "capex_deferral_if_cash_generation_unchanged": null,
+        "flag": "FAILS BEFORE NEW DEBT"
+      },
+      {
+        "new_rate": 0.14,
+        "total_2028_principal": 10,
+        "opening_book_principal": 10,
+        "principal_on_2028_originations": 0,
+        "required_net_borrowing": 37.739062185441654,
+        "required_gross_borrowing": 47.739062185441654,
+        "interest": 10.556312185441652,
+        "adjusted_ebit_interest": 0.8383609583093943,
+        "after_sbc_ebit_interest": 0.7325238079510699,
+        "adjusted_ebitda_interest": 2.7092794810902463,
+        "illustrative_debt_service_coverage": 1.6353735872822721,
+        "screen_supported_net": 37.739062185441654,
+        "capex_deferral_if_cash_generation_unchanged": 0.0,
+        "flag": "CONDITIONAL SCREEN ONLY"
+      },
+      {
+        "new_rate": 0.14,
+        "total_2028_principal": 15,
+        "opening_book_principal": 15,
+        "principal_on_2028_originations": 0,
+        "required_net_borrowing": 37.87347078759219,
+        "required_gross_borrowing": 52.87347078759219,
+        "interest": 10.690720787592188,
+        "adjusted_ebit_interest": 0.8278207031907001,
+        "after_sbc_ebit_interest": 0.7233141856042808,
+        "adjusted_ebitda_interest": 2.675217187712319,
+        "illustrative_debt_service_coverage": 1.3085366610747673,
+        "screen_supported_net": 26.601269060084714,
+        "capex_deferral_if_cash_generation_unchanged": 10.483147606581952,
+        "flag": "CONDITIONAL SCREEN ONLY"
+      },
+      {
+        "new_rate": 0.14,
+        "total_2028_principal": 16,
+        "opening_book_principal": 16,
+        "principal_on_2028_originations": 0,
+        "required_net_borrowing": 37.900352508022294,
+        "required_gross_borrowing": 53.900352508022294,
+        "interest": 10.717602508022292,
+        "adjusted_ebit_interest": 0.8257443764475905,
+        "after_sbc_ebit_interest": 0.7214999804491644,
+        "adjusted_ebitda_interest": 2.6685072504408014,
+        "illustrative_debt_service_coverage": 1.2582435115540775,
+        "screen_supported_net": 11.95841191722757,
+        "capex_deferral_if_cash_generation_unchanged": 24.12600474943909,
+        "flag": "CONDITIONAL SCREEN ONLY"
+      },
+      {
+        "new_rate": 0.14,
+        "total_2028_principal": 17,
+        "opening_book_principal": 17,
+        "principal_on_2028_originations": 0,
+        "required_net_borrowing": 37.927234228452406,
+        "required_gross_borrowing": 54.927234228452406,
+        "interest": 10.744484228452404,
+        "adjusted_ebit_interest": 0.8236784392650852,
+        "after_sbc_ebit_interest": 0.7196948532459986,
+        "adjusted_ebitda_interest": 2.6618308884724793,
+        "illustrative_debt_service_coverage": 1.2116732725391586,
+        "screen_supported_net": null,
+        "capex_deferral_if_cash_generation_unchanged": null,
+        "flag": "FAILS BEFORE NEW DEBT"
+      },
+      {
+        "new_rate": 0.14,
+        "total_2028_principal": 20,
+        "opening_book_principal": 20,
+        "principal_on_2028_originations": 0,
+        "required_net_borrowing": 38.007879389742726,
+        "required_gross_borrowing": 58.007879389742726,
+        "interest": 10.825129389742724,
+        "adjusted_ebit_interest": 0.8175421910786356,
+        "after_sbc_ebit_interest": 0.7143332630580022,
+        "adjusted_ebitda_interest": 2.6420007530902803,
+        "illustrative_debt_service_coverage": 1.0905793638350914,
+        "screen_supported_net": null,
+        "capex_deferral_if_cash_generation_unchanged": null,
+        "flag": "FAILS BEFORE NEW DEBT"
+      }
+    ],
+    "max_principal_to_fund_full_plan": {
+      "0.09": 15.595068151000973,
+      "0.11": 15.04968158904635,
+      "0.14": 14.23160174611441
+    },
+    "limitations": [
+      "Cash bridge assumes SBC is noncash, no offsetting buybacks/withholding; keeps house cash taxes unchanged, no interest tax shield.",
+      "Opening2027 is a repaired house estimate, not committed financing;2027 must itself pass the path test.",
+      "Cash-generation proxy includes working-capital/customer-prepayment inflows. It is NOT verified covenant CFADS.",
+      "1.35x is DDTL5.5-specific, not a consolidated covenant or demonstrated origination threshold.",
+      "Principal10/15/16/17/20bn are sensitivity inputs, not forecasts; actual future loan schedules are unavailable.",
+      "Main cases assume all principal comes from the opening2028book, including2026-27originations;2028new loans start amortizing in2029. The function allows separate old-book and total principal inputs.",
+      "Fixed/hedged debt retains a separate9% weighted-rate estimate; only new/refinanced debt bears the scenario rate.",
+      "Capex reductions hold2028 operating cash constant; cuts that reduce commissioning/revenue would require a second operating-model iteration.",
+      "No unrestricted funds released from pledged SPVs or incremental collateral/DSRA availability are assumed proven."
+    ]
+  },
+  "nbis": {
+    "illustrative_total_amortizing_loan_stock": {
+      "3": 32.543179601844905,
+      "5": 49.21860955170564
+    },
+    "assumptions": "ESTIMATE:11% rate, annual end-year level debt service,100% of2028EBITDA unencumbered cash maintained3/5years;1.15x is actual July2026 facility covenant floor.",
+    "warning": "Not2028newborrowing. Adjust for existing claims, revenue already collected as customer prepayments, contractual refunds if any, cash tax/capex/reserves, and pledged cash flows. Deferred revenue is not automatically a future cash refund. Secured collateral cannot be pledged twice."
+  },
+  "amortization_evidence": {
+    "META": {
+      "2028": 1.5,
+      "source": "June2026 10-Q",
+      "tag": "HARD on outstanding stock only"
+    },
+    "SPCX": {
+      "2028": 2.867,
+      "source": "June2026 10-Q debt table; includes other financings, not just2031+notes",
+      "tag": "HARD on outstanding stock only"
+    },
+    "ORCL": {
+      "FY2028": 10.145,
+      "source": "May2026 10-K; not calendar2028",
+      "tag": "PARTIAL calendar bridge"
+    },
+    "AMZN": {
+      "CY2028_principal_plus_interest": 17.087,
+      "source": "June2026 10-Q commitments; includes interest",
+      "tag": "HARD; not principal-only"
+    },
+    "MSFT": {
+      "FY2028": 0,
+      "FY2029": 2.001,
+      "source": "June2026 10-K; do not equate FY2028zero with CY2028zero",
+      "tag": "PARTIAL calendar bridge"
+    },
+    "GOOG": {
+      "CY2028_at_Dec2025": 2.676,
+      "source": "2025 10-K; must add later2026issuances and FX",
+      "tag": "PARTIAL stale principal floor"
+    },
+    "IREN": {
+      "FY2028_at_June2026": 0.269927,
+      "source": "FY2026 10-K; excludes later2.4bn30-month Mackenzie facility",
+      "tag": "PARTIAL calendar/new draws"
+    },
+    "NSCALE": {
+      "CY2028_at_June2026": 0.0529,
+      "conditional_convert_face_due_June2028": 3.1,
+      "source": "S-1 September18; automatically converts at IPO; NVIDIA1bn may issue directly as shares",
+      "tag": "PARTIAL contingent issuance/conversion; excludes laterfacilities"
+    },
+    "CIFR": {
+      "CY2028": 0.296291,
+      "source": "June2026 10-Q",
+      "tag": "HARD outstanding stock only"
+    },
+    "WULF": {
+      "CY2028": 0.29729,
+      "source": "June2026 10-Q",
+      "tag": "HARD outstanding stock only"
+    }
+  },
+  "global_financeable_2028": null,
+  "global_capex_cut_2028": null,
+  "unassessed_names": [
+    "Lambda",
+    "Crusoe",
+    "Fluidstack",
+    "private projects",
+    "sovereign and regional clouds",
+    "APLD project-by-project borrowing base"
+  ],
+  "guardrails": [
+    "PASS: USD millions converted once to billions; calendar-year normalization explicit.",
+    "PASS: gross borrowing minus principal equals net borrowing in every CRWV case.",
+    "PASS: cash and economic FCFF separated; original house model preserved.",
+    "BLOCK: cannot sum corporate stock ceiling, project loanstock and annual financing need.",
+    "BLOCK: no company allocation of top-down1.25tn exists; residual is unassessed, not zero funding or capexcut.",
+    "BLOCK: future amortization, contract cash waterfalls, guarantees/leases and2026-27 financing not fully reconciled."
+  ]
+}

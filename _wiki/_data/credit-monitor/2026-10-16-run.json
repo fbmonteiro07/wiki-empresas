@@ -1,0 +1,43 @@
+{
+  "run_at": "2026-10-16T09:17:22",
+  "subject": "AI Credit & Funding | Weekly summary | 2026-10-16",
+  "status": "partial",
+  "errors": [
+    "Issuer board XAI_12.5_2030: stale observation 2026-03-04."
+  ],
+  "market_fetched_at": "2026-10-16T09:17:16",
+  "market_dates": {
+    "ok": true,
+    "issues": [],
+    "earliest": "2026-10-15",
+    "latest": "2026-10-15"
+  },
+  "research_asof": "2026-10-16",
+  "email_requested": true,
+  "body": "\\\\CAPSRV01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\_data\\credit-monitor\\exports\\2026-10-16-email.txt",
+  "attachment": "\\\\CAPSRV01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\_data\\credit-monitor\\exports\\2026-10-16-credit-monitor.html",
+  "input_sha256": {
+    "funding_deals.json": "2a1530503220ff75d83a0498d3fe7ce463767ceefb1f165a31580a95aefab00b",
+    "funding_market.json": "61bce9d7361a8d3a2086973051b90db8a5b2852084142cc698a52061e5198f36",
+    "credit_watch.json": "6ccce8ba32c095f5af9e70f70024d39c2c1ac0edc591e5c5cb2beff11b544142"
+  },
+  "email_delivery": {
+    "status": "sent_confirmed",
+    "method": "send_credit_email.ps1 -Send, followed by -Verify; Sent Items checked by both calls",
+    "recipient": "felipe.monteiro@capstone.com.br",
+    "receipt": "_wiki/_data/credit-monitor/email-receipts/c71b091ca355628bf6ec940670cf13652d1a2d27b6f65f0be0c88941dd7e6eca.json",
+    "verified_at": "2026-10-16T12:19:05.4868893Z",
+    "entry_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC0000000001090000C1A4BC1B9694F44D9FADFEFCFB028EAC000598E080C80000",
+    "attachment_sha256": "c368101dae69f7a296395413391d7ce9305918496209b48bea7812dd1a6b6ae1",
+    "body_sha256": "4fe33ff2ce23f619459155864e71b501b88b31181c177bd2af42973bb72f0fcd"
+  },
+  "validation": {
+    "monitor_tests": 11,
+    "view_tests": 10,
+    "live_dashboard_exact_match": true,
+    "attachment_self_contained": true,
+    "stale_xai_alert_row_checked": true,
+    "research_index_rebuilt": true,
+    "offline_wiki_rebuilt": true
+  }
+}

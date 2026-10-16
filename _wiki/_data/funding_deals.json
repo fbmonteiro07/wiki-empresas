@@ -1,6 +1,6 @@
 {
-  "asof": "2026-10-09",
-  "note": "HAND-EDIT source for the AI credit & funding monitor (_dashboards/credit-monitor.html). Every row carries source+date — keep it that way. Market series/bonds are fetched by _tools/fetch_funding.py (manual run, local BBG terminal) into funding_market.json; rebuild the page with _tools/build_funding_monitor.py. The bonds[] slot is EMPTY by design: paste Bloomberg tickers or /isin/ identifiers from SRCH and re-run the fetch — the page picks them up automatically.",
+  "asof": "2026-10-16",
+  "note": "HAND-EDIT research ledger for the AI credit and funding monitor. Preserve every source and date. Four index series are refreshed into funding_market.json; issuer bonds/CDS are maintained separately in credit_watch_config.json and credit_watch.json. The legacy bonds[] slot is empty, but this no longer means that the issuer board is disconnected. Historical broker snapshots retain their own dates.",
   "meeting_thesis": "If AI credit trades poorly, it is hard for the equity to perform - it signals funding deceleration and a brake on capex. Hyperscalers can self-fund; neoclouds and sovereigns depend on the credit market. (internal weekly 2026-08-24; monitor owner: PM)",
   "market_series": [
     {
@@ -356,11 +356,12 @@
       "size": "undisclosed",
       "pricing": "undisclosed",
       "counterparty": "Apollo / Goldman discussions reported by WSJ via Vital Knowledge",
-      "note": "MS October 8 explicitly knows of no company response or deal. A chip-lease SPV could diversify funding, but MS expects debt-like lease obligations in adjusted leverage. Timing as soon as 2026 is a reported possibility, not a funded milestone.",
-      "source": "Morgan Stanley / Lindsay Tyler, Nishant Satyam, Benjamin Guerrero, 2026-10-08, relaying WSJ 2026-10-07; no company confirmation; Vital Knowledge / Adam Crisafulli, 2026-10-07, relaying WSJ 2026-10-07 (SpaceX first reported by FT 2026-10-06)",
+      "note": "MS October 16 still describes the chip-financing press reports as unconfirmed. It expects shorter asset-backed financing may diversify funding but likely costs more than traditional BBB debt. A stronger partner backstop is an upside scenario, not an announced guarantee. No closing, funded amount or delivered capacity established.",
+      "source": "Morgan Stanley / Lindsay A. Tyler and David M. Hamburger, 2026-10-16, ORCL Credit: Higher Rates, Higher Stakes; original WSJ October 7 report via Vital Knowledge and MS October 8 retained in history",
       "evidence_status": "press-reported talks; not committed",
-      "source_date": "2026-10-08",
-      "recorded_at": "2026-10-09"
+      "source_date": "2026-10-16",
+      "recorded_at": "2026-10-09",
+      "reviewed_at": "2026-10-16"
     },
     {
       "deal_id": "SPCX-NVDA-FIN-20261006",
@@ -391,6 +392,36 @@
       "evidence_status": "filed issued debt; historical backfill",
       "source_date": "2026-10-07",
       "recorded_at": "2026-10-09"
+    },
+    {
+      "deal_id": "CRWV-CONVERT-20260922",
+      "date": "2026-09-22",
+      "issuer": "CRWV",
+      "category": "Neocloud",
+      "instrument": "2.875% convertible senior notes due April 1, 2033",
+      "size": "$4.2bn closed",
+      "pricing": "2.875% coupon; convertible, not straight-debt funding cost",
+      "counterparty": "Institutional noteholders; subsidiary senior-unsecured guarantees",
+      "note": "Historical backfill: September 22 SEC filing confirms the close, including a fully exercised $500m option. September 18 pricing was $3.7bn base plus that option; these are two stages of the same issue, not separate proceeds or October issuance. No compute MW implied.",
+      "source": "CoreWeave 8-K filed 2026-09-22, Item 1.01 — https://www.sec.gov/Archives/edgar/data/1769628/000176962826000432/crwv-20260917.htm",
+      "source_date": "2026-09-22",
+      "recorded_at": "2026-10-16",
+      "evidence_status": "filed completed debt issuance; historical backfill"
+    },
+    {
+      "deal_id": "ANTH-AVGO-CHIP-FIN-20261005",
+      "date": "2026-10-05",
+      "issuer": "Anthropic / AVGO",
+      "category": "Lab / SPV",
+      "instrument": "2027 chip-lease financing, senior syndication launched",
+      "size": "$60bn reported package",
+      "pricing": "undisclosed; ~$42bn supported senior / ~$18bn unguaranteed junior",
+      "counterparty": "BofA / Citi / MS reported committed bookrunners; AVGO supports senior; Blackstone ~$9bn junior commitment per FT",
+      "note": "Added to this ledger from the existing timeline ID, recorded there October 12. FT October 5 reports senior syndication started; junior launch follows later. Bank commitments are press-reported, not proof of funded draws or closing. Keep separate from the prior $35bn platform and the proposed $50bn OpenAI structure. Do not add the optional up-to-$42bn Anthropic convertible to the package; no MW disclosed.",
+      "source": "Financial Times / Michelle Chan, 2026-10-05, 3-page archived article — http://ds-cap-33:8080/relat%C3%B3rios%20bons/Wall_Street_banks_launch_record_60bn_chip_deal_for_Broadcom_and_Anthropic.html",
+      "source_date": "2026-10-05",
+      "recorded_at": "2026-10-16",
+      "evidence_status": "press-reported committed banks / syndication; no closing verified"
     }
   ],
   "scoreboard": [
@@ -409,8 +440,8 @@
     {
       "signpost": "Counterparty tiering",
       "status": "serious",
-      "read": "300-600bp premium for CRWV offtake vs AMZN offtake on physically comparable DCs; CRWV loan path S+225 -> S+550 in 4 months",
-      "source": "MS tracker 2026-08-20"
+      "read": "October 15 Bloomberg: CRWV 9.625% July-2032 straight-bond YTM 14.352%; Oracle 5.7% February-2036 YTM 7.734%. They are different issuers and maturities, not a matched spread comparison. CRWV D14 5Y CDS 482.326bp conflicts with the roughly 1,000bp desk quotes retained on the CRWV page; contract/convention reconciliation is open. JPM October 16 sees cash-flow timing pressure despite healthy contract economics; this is an analyst view, not a financing commitment.",
+      "source": "Bloomberg YLD_YTM_MID / PX_LAST, named instruments and observation 2026-10-15 in credit_watch.json; J.P. Morgan / Samik Chatterjee et al., 2026-10-16, CoreWeave debt concerns and contract economics"
     },
     {
       "signpost": "Buy-side pushback",
@@ -421,8 +452,8 @@
     {
       "signpost": "Supply absorption",
       "status": "warning",
-      "read": "MS reports ~$23bn September issuance and ~$466bn YTD through September 30 versus $216bn FY2025. MS attributes slower supply to front-loading, regulatory constraints and rates-driven renegotiations; it expects a busier Q4. This is a broker interpretation, not evidence that proposed chip financings have closed.",
-      "source": "Morgan Stanley / Fernanda Lima, Carolyn Campbell, Vishwanath Tirupattur et al., 2026-10-01 (observations through 2026-09-30)"
+      "read": "JPM October 16 reports $446bn YTD TMT supply, unchanged on its weekly basis, with issuers largely in blackout. This TMT universe is distinct from MS October 1's ~$466bn AI credit across channels through September 30; the latter remains the dated issuance headline. Quiet issuance does not itself prove that debt markets are closed.",
+      "source": "J.P. Morgan / Erica R. Spear and Quinn Degen, 2026-10-16, Weekly Investment Grade TMT Review; Morgan Stanley / Lima et al., 2026-10-01, observed through 2026-09-30"
     },
     {
       "signpost": "2027 funding pinch",
@@ -438,9 +469,9 @@
     },
     {
       "signpost": "Duration channel",
-      "status": "warning",
-      "read": "Jefferies sales highlights the funding constraint from higher Treasury yields; monitor current yields and spreads in the Bloomberg gauges. MS October 1 separately flags rates-driven project renegotiation risk. No fresh individual-bond price is inferred from either commentary.",
-      "source": "Jefferies / Cristina Titu 2026-10-09, relaying Chris Wood Asia Maxima; MS / Lima et al. 2026-10-01"
+      "status": "serious",
+      "read": "MS remains cautious on Oracle credit: higher rates raise the cost of its externally funded GPU business; asset-backed chip financing remains unconfirmed. Its Moody's Baa3 downgrade expectation is a forecast, not a completed rating action. Watch October 28 Analyst Day for funding and partner-support evidence.",
+      "source": "Morgan Stanley / Lindsay A. Tyler and David M. Hamburger, 2026-10-16, ORCL Credit: Higher Rates, Higher Stakes"
     },
     {
       "signpost": "Sovereign AI issuance",
@@ -451,8 +482,8 @@
     {
       "signpost": "Proposed chip financing versus funded execution",
       "status": "warning",
-      "read": "OpenAI/Broadcom ~$50bn, SpaceX/NVIDIA ~$40bn and unsized Oracle chip-lease discussions remain press-reported proposals. Closing documents, collateral, lease obligations and vendor support are next checks; do not add these to completed issuance.",
-      "source": "Vital Knowledge / Adam Crisafulli, 2026-10-07, relaying WSJ 2026-10-07 (SpaceX first reported by FT 2026-10-06); Morgan Stanley / Lindsay Tyler, Nishant Satyam, Benjamin Guerrero, 2026-10-08, relaying WSJ 2026-10-07; no company confirmation"
+      "read": "Oracle chip-lease financing remains unconfirmed in MS October 16. FT October 5 reports an Anthropic/Broadcom syndication launch and bank commitments, without closing evidence. OpenAI/Broadcom ~$50bn and SpaceX/NVIDIA ~$40bn remain October 6/7 press proposals in the ledger; no independent closing confirmation established in this bounded review. Keep all separate from completed issuance.",
+      "source": "Morgan Stanley / Lindsay A. Tyler and David M. Hamburger, 2026-10-16, ORCL Credit: Higher Rates, Higher Stakes; FT / Michelle Chan, 2026-10-05; prior Vital Knowledge / Crisafulli, 2026-10-07"
     }
   ],
   "watch": [
@@ -479,6 +510,22 @@
     {
       "date": "ongoing",
       "event": "Oracle Lighthouse: PSC September 2026 refiling and MS September 30 timing-risk note do not establish approval or confirmed delay; check new docket and company milestone against CY2H27 initial / 2028 full-campus source forecasts."
+    },
+    {
+      "date": "2026-10-28",
+      "event": "Oracle Analyst Day: funding cost, chip-financing terms, lease obligations and partner support. Date and credit watch per MS / Tyler and Hamburger, 2026-10-16; no new guarantee assumed."
+    },
+    {
+      "date": "ongoing",
+      "event": "CoreWeave: reconcile desk ~1,000bp CDS with Bloomberg CRWV CDS USD SR 5Y D14 Corp, 482.326bp on 2026-10-15. Check contract, tenor and quote convention before combining histories. JPM / Chatterjee 2026-10-16 contract economics are forecasts, not committed funding."
+    },
+    {
+      "date": "ongoing",
+      "event": "Anthropic/AVGO ANTH-AVGO-CHIP-FIN-20261005: obtain closing/draw documentation and junior pricing after FT / Chan 2026-10-05 senior syndication launch. Keep $42bn senior and $18bn junior distinct; no new MW inferred."
+    },
+    {
+      "date": "ongoing",
+      "event": "Oracle Jupiter: UBS / Vogt 2026-10-16 relays a request for expedited gas-pipeline approval. Obtain the specific FERC filing and decision; the request is not approval, commissioning or proof that the full campus timetable changed."
     }
   ],
   "history": [
@@ -631,6 +678,137 @@
           "source": "Reuters 2026-08-17 via NVDA.md; Redburn 2026-08-18"
         }
       ]
+    },
+    {
+      "recorded_at": "2026-10-16T09:08:47",
+      "reason": "Weekly research reconciliation; current broker views, closed convertible backfill and existing Anthropic financing linked without double-counting. Market observations do not determine research dates.",
+      "archive": "_wiki/_data/credit-monitor/research-history/2026-10-16T090846-pre-edit.json",
+      "sha256": "ad53722815486a1c441714bb5ee1db14eadf0c835393b1436591b3874b8cf4c4",
+      "previous_asof": "2026-10-09",
+      "previous_weekly_review": {
+        "reviewed_at": "2026-10-09T09:12:11",
+        "window_start": "2026-09-29",
+        "window_end": "2026-10-09",
+        "summary": "Review window: September 29 through October 9, 2026; previous retained review September 29.\nIssuance: MS / Lima, Campbell, Tirupattur et al. (October 1) reports about $466bn AI credit YTD through September 30 and $23bn in September, versus $216bn FY2025. The prior August 20 vintage was $445bn / $217bn. Its $500-550bn full-year forecast remains dated August 20 and is not reconfirmed; the new $25-30bn ABS/CMBS forecast is a subset.\nProposals: WSJ October 7 via Vital Knowledge / Crisafulli reports OpenAI-Broadcom ~$50bn and SpaceX-NVIDIA ~$40bn financing talks, plus unsized Oracle chip financing. MS / Tyler et al. October 8 explicitly has no Oracle company response or deal. These are not committed funding or incremental completed issuance.\nExecution: Applied Digital October 7 release confirms an October 1 ready-for-service milestone: another 75MW critical IT, taking Polaris Forge 1 to 250MW. Its $1.59bn 7% ELN-04 notes closed June 16 per the 10-Q; the new ledger row is historical backfill. RFS does not establish GPU delivery or cloud-service commencement.\nOlder disclosure checks: NVIDIA August 26 10-Q confirms a conditional $105bn SB Energy guarantee for ~4.25GW IT, not the whole up-to-8GW campus. Oracle September 11 10-Q confirms ATM completion ($19.9bn net) and $11.4bn financing-component customer prepayments already inside $23.1bn operating cash flow; do not add prepayments to that cash-flow total. These are reconciliations of old events, not October cash inflows.\nWatchpoints: MS / Tyler and Guerrero September 30 Lighthouse timing risk remains a forecast dispute, not confirmed delay. Oracle September 16 disclosure and the PSC new docket support a September refiling, not final approval. Jefferies / Titu October 9 flags the rate/funding constraint. Next checks: financing closings, collateral and guarantees; Lighthouse approvals; utilization after APLD RFS; current Anthropic filing/IPO status.\nCoverage limits: reviewed wiki graph/pages, full-corpus search, five selected full Outlook messages and relevant primary disclosure sections; linked broker PDFs were not separately read. Outlook date filtering returned older matches, so dates were screened manually; this is not an exhaustive mailbox audit. Individual project-bond marks and sovereign-AI issuance remain unconnected. August relative-spread, loan and appetite observations remain historical. AVGO September 2 and SPCX September 25 watchpoints remain unresolved in this review.",
+        "sources": [
+          "Morgan Stanley / Fernanda Lima, Carolyn Campbell, Vishwanath Tirupattur et al., 2026-10-01 (observations through 2026-09-30) — https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWP74oCAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+          "Morgan Stanley / Lindsay Tyler, Nishant Satyam, Benjamin Guerrero, 2026-10-08, relaying WSJ 2026-10-07; no company confirmation — https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWU7VmuAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+          "Vital Knowledge / Adam Crisafulli, 2026-10-07, relaying WSJ 2026-10-07 (SpaceX first reported by FT 2026-10-06) — https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWUYZNKAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+          "Applied Digital company release 2026-10-07 — https://ir.applieddigital.com/news-events/press-releases/detail/163/applied-digital-reports-fiscal-first-quarter-2027-results",
+          "Applied Digital 10-Q (2026-08-31 period; filed October 7) — https://www.sec.gov/Archives/edgar/data/1144879/000114487926000059/apld-20260831.htm",
+          "NVIDIA 10-Q filed 2026-08-26 — https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+          "Oracle 10-Q filed 2026-09-11 — https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm",
+          "MS / Tyler and Guerrero, Lighthouse, 2026-09-30 — https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWP7Je1AAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+          "Oracle / Julia Robin, 2026-09-16 — https://www.oracle.com/news/announcement/blog/a-responsible-path-forward-for-project-lighthouse-2026-09-16/",
+          "Wisconsin PSC Ozaukee project docket, September 2026 application; reviewed 2026-10-09 — https://psc.wi.gov/Pages/CommissionActions/CasePages/OzaukeeDIP.aspx",
+          "Jefferies sales / Cristina Titu, 2026-10-09, relaying Chris Wood — https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWU7VsnAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+        ]
+      },
+      "previous_scoreboard": [
+        {
+          "signpost": "Index-level credit (the meeting's equity-read trigger)",
+          "status": "good",
+          "read": "Historical August 24 snapshot only: HY OAS ~268bp / IG OAS ~80bp - benign vs history; the aggregate market is NOT flashing. The stress is relative, not systemic. Use the separately dated Bloomberg gauges for the latest reading.",
+          "source": "BBG LF98OAS/LUACOAS, 2026-08-24"
+        },
+        {
+          "signpost": "AI-vs-market differentiation",
+          "status": "warning",
+          "read": "Hyperscaler buckets +26/29bp YTD vs broad IG +1bp; 'the credit market is differentiating within tech, not repricing tech'",
+          "source": "MS US Credit 2026-08-14"
+        },
+        {
+          "signpost": "Counterparty tiering",
+          "status": "serious",
+          "read": "300-600bp premium for CRWV offtake vs AMZN offtake on physically comparable DCs; CRWV loan path S+225 -> S+550 in 4 months",
+          "source": "MS tracker 2026-08-20"
+        },
+        {
+          "signpost": "Buy-side pushback",
+          "status": "serious",
+          "read": "Insurance 30Y orders halved; new-issue concessions 2-3bp -> ~20bp; the AI basket spread roughly doubled from 74bp",
+          "source": "GS credit desk 2026-08-03 (on-record 08-19 block)"
+        },
+        {
+          "signpost": "Supply absorption",
+          "status": "warning",
+          "read": "MS reports ~$23bn September issuance and ~$466bn YTD through September 30 versus $216bn FY2025. MS attributes slower supply to front-loading, regulatory constraints and rates-driven renegotiations; it expects a busier Q4. This is a broker interpretation, not evidence that proposed chip financings have closed.",
+          "source": "Morgan Stanley / Fernanda Lima, Carolyn Campbell, Vishwanath Tirupattur et al., 2026-10-01 (observations through 2026-09-30)"
+        },
+        {
+          "signpost": "2027 funding pinch",
+          "status": "warning",
+          "read": "Debt-financed share of capex 27% -> 33% -> 35% PEAK 2027 (GS) + $300bn project finance 2027 (MS) + >$200bn funding gap 2027 (Barclays) - three houses converge on the date",
+          "source": "GS 08-03; MS 08-20; Barclays 08-13"
+        },
+        {
+          "signpost": "Vendor-backstop dependency",
+          "status": "warning",
+          "read": "NVIDIA August 26 filing confirms the conditional $105bn SB Energy guarantee tied to ~4.25 GW IT, separate from the $3.5bn existing program. Disclosure watch resolved; no cash funding or delivery implied. Older $230bn broker aggregate and $500bn MOU are not filed funded-debt totals.",
+          "source": "NVIDIA 10-Q 2026-08-26; historical backfill reviewed 2026-10-09"
+        },
+        {
+          "signpost": "Duration channel",
+          "status": "warning",
+          "read": "Jefferies sales highlights the funding constraint from higher Treasury yields; monitor current yields and spreads in the Bloomberg gauges. MS October 1 separately flags rates-driven project renegotiation risk. No fresh individual-bond price is inferred from either commentary.",
+          "source": "Jefferies / Cristina Titu 2026-10-09, relaying Chris Wood Asia Maxima; MS / Lima et al. 2026-10-01"
+        },
+        {
+          "signpost": "Sovereign AI issuance",
+          "status": "gap",
+          "read": "Called out in the meeting as part of the monitor's scope; the corpus carries no dedicated sovereign-AI-bond tracking yet - genuine gap, needs an ingest source",
+          "source": "internal weekly 2026-08-24"
+        },
+        {
+          "signpost": "Proposed chip financing versus funded execution",
+          "status": "warning",
+          "read": "OpenAI/Broadcom ~$50bn, SpaceX/NVIDIA ~$40bn and unsized Oracle chip-lease discussions remain press-reported proposals. Closing documents, collateral, lease obligations and vendor support are next checks; do not add these to completed issuance.",
+          "source": "Vital Knowledge / Adam Crisafulli, 2026-10-07, relaying WSJ 2026-10-07 (SpaceX first reported by FT 2026-10-06); Morgan Stanley / Lindsay Tyler, Nishant Satyam, Benjamin Guerrero, 2026-10-08, relaying WSJ 2026-10-07; no company confirmation"
+        }
+      ],
+      "previous_watch": [
+        {
+          "date": "2026-09-02",
+          "event": "AVGO print - MS single-name credit watch (with ORCL) into September; XPV/Anthropic SPV exposure — Unresolved in this bounded credit review; no outcome inferred from elapsed date."
+        },
+        {
+          "date": "2026-09-25",
+          "event": "SPCX: ~30% of shares tradable + full index weight on the late-Sept rebalance - peak supply meets peak passive demand (MS · Jonas; 22V) — Unresolved in this bounded credit review; no outcome inferred from elapsed date."
+        },
+        {
+          "date": "2026-10",
+          "event": "Anthropic IPO: the late-Sep/early-Oct window is an old WSJ August 11 expectation, not a confirmed listing. Obtain current issuer filing before moving or resolving the date; financing-stack transparency remains a next check."
+        },
+        {
+          "date": "ongoing",
+          "event": "New-issue concessions + capex second derivative - GS's own two named signposts for when appetite turns"
+        },
+        {
+          "date": "ongoing",
+          "event": "Reported chip financings (WSJ October 7 via Vital Knowledge; MS October 8): require signed debt/lease documents, pricing, vendor backstop and closing evidence before upgrading proposed status."
+        },
+        {
+          "date": "ongoing",
+          "event": "Oracle Lighthouse: PSC September 2026 refiling and MS September 30 timing-risk note do not establish approval or confirmed delay; check new docket and company milestone against CY2H27 initial / 2028 full-campus source forecasts."
+        }
+      ],
+      "previous_deals": [
+        {
+          "deal_id": "ORCL-CHIP-LEASE-20261007",
+          "date": "2026-10-07",
+          "issuer": "ORCL",
+          "category": "Financing talks",
+          "instrument": "Proposed third-party chip purchase and leaseback",
+          "size": "undisclosed",
+          "pricing": "undisclosed",
+          "counterparty": "Apollo / Goldman discussions reported by WSJ via Vital Knowledge",
+          "note": "MS October 8 explicitly knows of no company response or deal. A chip-lease SPV could diversify funding, but MS expects debt-like lease obligations in adjusted leverage. Timing as soon as 2026 is a reported possibility, not a funded milestone.",
+          "source": "Morgan Stanley / Lindsay Tyler, Nishant Satyam, Benjamin Guerrero, 2026-10-08, relaying WSJ 2026-10-07; no company confirmation; Vital Knowledge / Adam Crisafulli, 2026-10-07, relaying WSJ 2026-10-07 (SpaceX first reported by FT 2026-10-06)",
+          "evidence_status": "press-reported talks; not committed",
+          "source_date": "2026-10-08",
+          "recorded_at": "2026-10-09"
+        }
+      ]
     }
   ],
   "watch_history": [
@@ -650,22 +828,19 @@
     }
   ],
   "weekly_review": {
-    "reviewed_at": "2026-10-09T09:12:11",
-    "window_start": "2026-09-29",
-    "window_end": "2026-10-09",
-    "summary": "Review window: September 29 through October 9, 2026; previous retained review September 29.\nIssuance: MS / Lima, Campbell, Tirupattur et al. (October 1) reports about $466bn AI credit YTD through September 30 and $23bn in September, versus $216bn FY2025. The prior August 20 vintage was $445bn / $217bn. Its $500-550bn full-year forecast remains dated August 20 and is not reconfirmed; the new $25-30bn ABS/CMBS forecast is a subset.\nProposals: WSJ October 7 via Vital Knowledge / Crisafulli reports OpenAI-Broadcom ~$50bn and SpaceX-NVIDIA ~$40bn financing talks, plus unsized Oracle chip financing. MS / Tyler et al. October 8 explicitly has no Oracle company response or deal. These are not committed funding or incremental completed issuance.\nExecution: Applied Digital October 7 release confirms an October 1 ready-for-service milestone: another 75MW critical IT, taking Polaris Forge 1 to 250MW. Its $1.59bn 7% ELN-04 notes closed June 16 per the 10-Q; the new ledger row is historical backfill. RFS does not establish GPU delivery or cloud-service commencement.\nOlder disclosure checks: NVIDIA August 26 10-Q confirms a conditional $105bn SB Energy guarantee for ~4.25GW IT, not the whole up-to-8GW campus. Oracle September 11 10-Q confirms ATM completion ($19.9bn net) and $11.4bn financing-component customer prepayments already inside $23.1bn operating cash flow; do not add prepayments to that cash-flow total. These are reconciliations of old events, not October cash inflows.\nWatchpoints: MS / Tyler and Guerrero September 30 Lighthouse timing risk remains a forecast dispute, not confirmed delay. Oracle September 16 disclosure and the PSC new docket support a September refiling, not final approval. Jefferies / Titu October 9 flags the rate/funding constraint. Next checks: financing closings, collateral and guarantees; Lighthouse approvals; utilization after APLD RFS; current Anthropic filing/IPO status.\nCoverage limits: reviewed wiki graph/pages, full-corpus search, five selected full Outlook messages and relevant primary disclosure sections; linked broker PDFs were not separately read. Outlook date filtering returned older matches, so dates were screened manually; this is not an exhaustive mailbox audit. Individual project-bond marks and sovereign-AI issuance remain unconnected. August relative-spread, loan and appetite observations remain historical. AVGO September 2 and SPCX September 25 watchpoints remain unresolved in this review.",
+    "reviewed_at": "2026-10-16T09:12:11",
+    "window_start": "2026-10-09",
+    "window_end": "2026-10-16",
+    "summary": "Review since October 9: CoreWeave funding pressure and Oracle rate sensitivity are the central developments. JPM / Chatterjee et al. (October 16) maintains a constructive CoreWeave view based on contracted demand and project economics, while recognizing the timing gap between capex and cash flows. MS / Tyler and Hamburger (October 16) remains cautious on Oracle credit; chip-backed financing is still unconfirmed and a stronger partner guarantee is only an upside scenario. Its expected Moody's downgrade is not a rating action.\nLedger additions are historical reconciliations, not new money this week: CoreWeave's September 22 8-K confirms $4.2bn of 2.875% 2033 convertibles closed, including the $500m option beyond the September 18 $3.7bn base. FT / Chan (October 5) reports the $60bn Anthropic/Broadcom financing with ~$42bn supported senior and ~$18bn unguaranteed junior; senior syndication began and banks reportedly committed, but closing remains unverified. This uses the existing compute-deal ID and does not add optional Anthropic converts to the package.\nIssuance universes remain separate: JPM / Spear and Degen (October 16) reports $446bn YTD TMT supply; MS's $466bn AI-credit total remains observed through September 30, not refreshed by this different measure.\nNext checks: October 28 Oracle Analyst Day (MS); signed chip-financing terms and closing evidence; CoreWeave refinancing/liquidity; Jupiter pipeline approval request relayed by UBS / Vogt (October 16), with the original FERC filing still unverified. Previously past-dated AVGO/SPCX and Anthropic IPO watches remain unresolved.\nCoverage: graph/company pages, full-corpus search, five selected Outlook bodies, FT archive pages and relevant CoreWeave SEC sections reviewed; broker PDF attachments and embedded charts were not separately reviewed. Outlook dates were screened manually; this is not an exhaustive archive audit. The issuer board is now populated and quotes below retain instrument/date/convertible labels. Desk versus Bloomberg CoreWeave CDS conventions remain unreconciled. Sovereign-AI debt remains a gap; August broker snapshots stay historical. No tracked catalyst was resolved solely from an elapsed date.",
     "sources": [
-      "Morgan Stanley / Fernanda Lima, Carolyn Campbell, Vishwanath Tirupattur et al., 2026-10-01 (observations through 2026-09-30) — https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWP74oCAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
-      "Morgan Stanley / Lindsay Tyler, Nishant Satyam, Benjamin Guerrero, 2026-10-08, relaying WSJ 2026-10-07; no company confirmation — https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWU7VmuAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
-      "Vital Knowledge / Adam Crisafulli, 2026-10-07, relaying WSJ 2026-10-07 (SpaceX first reported by FT 2026-10-06) — https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWUYZNKAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
-      "Applied Digital company release 2026-10-07 — https://ir.applieddigital.com/news-events/press-releases/detail/163/applied-digital-reports-fiscal-first-quarter-2027-results",
-      "Applied Digital 10-Q (2026-08-31 period; filed October 7) — https://www.sec.gov/Archives/edgar/data/1144879/000114487926000059/apld-20260831.htm",
-      "NVIDIA 10-Q filed 2026-08-26 — https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
-      "Oracle 10-Q filed 2026-09-11 — https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm",
-      "MS / Tyler and Guerrero, Lighthouse, 2026-09-30 — https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWP7Je1AAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
-      "Oracle / Julia Robin, 2026-09-16 — https://www.oracle.com/news/announcement/blog/a-responsible-path-forward-for-project-lighthouse-2026-09-16/",
-      "Wisconsin PSC Ozaukee project docket, September 2026 application; reviewed 2026-10-09 — https://psc.wi.gov/Pages/CommissionActions/CasePages/OzaukeeDIP.aspx",
-      "Jefferies sales / Cristina Titu, 2026-10-09, relaying Chris Wood — https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWU7VsnAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+      "Morgan Stanley / Lindsay A. Tyler and David M. Hamburger, 2026-10-16, ORCL Credit: Higher Rates, Higher Stakes — https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWZ4Jp1AAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "J.P. Morgan / Erica R. Spear and Quinn Degen, 2026-10-16, Weekly Investment Grade TMT Review — https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWakJO1AAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "J.P. Morgan / Samik Chatterjee et al., 2026-10-16, CoreWeave debt concerns and contract economics — https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWaaVk%2FAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "UBS / David Vogt et al., 2026-10-16, Generating the latest updates on AI — https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWalIPjAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "CoreWeave 8-K filed 2026-09-22 — https://www.sec.gov/Archives/edgar/data/1769628/000176962826000432/crwv-20260917.htm",
+      "CoreWeave pricing release 2026-09-18 — https://www.sec.gov/Archives/edgar/data/1769628/000176962826000432/ex991pricing.htm",
+      "FT / Michelle Chan, 2026-10-05 — http://ds-cap-33:8080/relat%C3%B3rios%20bons/Wall_Street_banks_launch_record_60bn_chip_deal_for_Broadcom_and_Anthropic.html",
+      "Bloomberg issuer board, fetched 2026-10-15; each instrument retains its actual observation date — http://ds-cap-33:8080/wiki/_data/credit_watch.json"
     ]
   }
 }

@@ -8,10 +8,10 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\PWR` (filings + transc
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $37.7bn | $45.6bn |
-| Gross profit | $5.9bn | $7.3bn |
+| Gross profit | $5.9bn | $7.2bn |
 | Gross margin | 15.6% | 15.9% |
 | EBITDA | $3.8bn | $4.8bn |
-| EPS | $15.07 | $19.54 |
+| EPS | $15.07 | $19.52 |
 | Capex | $838m | $940m |
 | OCF (≈EBITDA) | $3.8bn | $4.8bn |
 

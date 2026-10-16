@@ -1,6 +1,6 @@
 {
  "_about": "Hand-edited ledger of machine-transcription garbles (Notion AI, Bloomberg ASR, auto-translation) seen in the archive, with the correct reading. Used by E:\\.claude\\scripts\\transcript_qa.py (source-file scan, page-diff scan) and by ingest_notion_meetings.py (writes a 'Transcription QA' block into every archived Notion file). Keys are matched with word boundaries, case-sensitive unless 'ci' is true. 'keep_when' = regex contexts (same line, ~80 chars around the hit) where the token is legitimate and must NOT be flagged. Add an entry the first time a garble is caught; never delete one. Standing rule (Felipe, 2026-09-28): ALWAYS double-check transcript content — acronyms, names, units, numbers — before it travels to a page.",
- "_updated": "2026-10-15",
+ "_updated": "2026-10-16",
  "terms": {
   "Smolik": {
    "correct": "Shmulik (Mark Shmulik, Bernstein US Internet)",
@@ -592,6 +592,12 @@
    "rule": "ASR ('Spectrum X CPU' in a COUPE/CPO sentence = the CPO switch).",
    "first_seen": "2026-10-01 (JPM Gokul TSMC 3Q26 preview call)"
   },
+  "In Spectrum": {
+   "correct": "Inspectrum (memory/semis consultant)",
+   "domain": "names",
+   "rule": "ASR (also 'InSpectrum'). Conor O'Mara (Jefferies) call: 'In Spectrum, the memory consultant'.",
+   "first_seen": "2026-06-23 (Jefferies O'Mara Asia-trip call, Capstone notes)"
+  },
   "E10": {
    "correct": "TPU v10 when listed after 'V8… V9' in a Google TPU packaging sentence",
    "domain": "semis",
@@ -1095,13 +1101,224 @@
    "domain": "technology",
    "rule": "'RAM starts in '27' = ramp starts in 2027 (TSMC A14); not DRAM.",
    "first_seen": "2026-10-15 (BofA TSMC 3Q26 results feedback call; added by transcription-QA verifier)"
+  },
+  "SoC-M": {
+   "correct": "SOCAMM (LPDDR-based memory module for NVIDIA Vera/Grace-class CPUs)",
+   "domain": "memory",
+   "rule": "Notion ASR hears 'SOCAMM' as 'SoC-M' / 'SoC M'; the context is Vera CPU memory alongside HBM on the GPU.",
+   "first_seen": "2026-10-16 (Notion: UBS Vella memory chat / BTGP TSMC expert Lluis Paris / ASML Rothschild webinar / MU UBS IR call)"
+  },
+  "SoC M": {
+   "correct": "SOCAMM",
+   "domain": "memory",
+   "rule": "see 'SoC-M'",
+   "first_seen": "2026-10-16 (Notion: UBS Vella memory chat / BTGP TSMC expert Lluis Paris / ASML Rothschild webinar / MU UBS IR call)"
+  },
+  "SEMCap": {
+   "correct": "semicap (semiconductor capital equipment)",
+   "domain": "semicap",
+   "rule": "ASR casing of 'semicap'; not an acronym.",
+   "first_seen": "2026-10-16 (Notion: UBS Vella memory chat / BTGP TSMC expert Lluis Paris / ASML Rothschild webinar / MU UBS IR call)"
+  },
+  "SEMCAPs": {
+   "correct": "semicaps (semicap names)",
+   "domain": "semicap",
+   "rule": "see 'SEMCap'",
+   "first_seen": "2026-10-16 (Notion: UBS Vella memory chat / BTGP TSMC expert Lluis Paris / ASML Rothschild webinar / MU UBS IR call)"
+  },
+  "Semi-Con West": {
+   "correct": "SEMICON West (SEMI trade show)",
+   "domain": "events",
+   "rule": "ASR split of 'SEMICON West'.",
+   "first_seen": "2026-10-16 (Notion: UBS Vella memory chat / BTGP TSMC expert Lluis Paris / ASML Rothschild webinar / MU UBS IR call)"
+  },
+  "co-wafer": {
+   "correct": "CoWoS (chip-on-wafer-on-substrate)",
+   "domain": "packaging",
+   "rule": "ASR hears 'CoWoS' as 'co-wafer' / 'co-waffle' in packaging-capacity sentences ('convert fabs from wafer to interposer to have co-wafer capacity').",
+   "first_seen": "2026-10-16 (Notion: UBS Vella memory chat / BTGP TSMC expert Lluis Paris / ASML Rothschild webinar / MU UBS IR call)"
+  },
+  "reticle side": {
+   "correct": "reticle size",
+   "domain": "semis",
+   "rule": "ASR 'side' for 'size' in 'the reticle size is smaller' (ex-TSMC expert on Intel delivering N5-class for its own products at a smaller reticle); page form: reticle size [transcribed \"side\"].",
+   "first_seen": "2026-10-16 (Notion: BTGP TSMC expert Lluis Paris)"
+  },
+  "CCWay": {
+   "correct": "C.C. Wei (TSMC Chairman & CEO)",
+   "domain": "names",
+   "rule": "ASR of 'C.C. Wei'; also 'CC Way', 'Seesee Way'.",
+   "first_seen": "2026-10-16 (Notion: UBS Vella memory chat / BTGP TSMC expert Lluis Paris / ASML Rothschild webinar / MU UBS IR call)"
+  },
+  "CC Way": {
+   "correct": "C.C. Wei (TSMC Chairman & CEO)",
+   "domain": "names",
+   "rule": "see 'CCWay'",
+   "first_seen": "2026-10-16 (Notion: UBS Vella memory chat / BTGP TSMC expert Lluis Paris / ASML Rothschild webinar / MU UBS IR call)"
+  },
+  "Fernando": {
+   "correct": "Fernanda (Fernanda Watkins, Capstone) when the room is the Capstone US-equities team",
+   "domain": "names",
+   "rule": "Notion ASR masculinises 'Fernanda'; check the invite roster - keep 'Fernando' for Fernando Barbosa (Capstone) or any Fernando actually on the invite.",
+   "keep_when": [
+    "Barbosa"
+   ],
+   "first_seen": "2026-10-16 (Notion: UBS Vella memory chat / BTGP TSMC expert Lluis Paris / ASML Rothschild webinar / MU UBS IR call)"
+  },
+  "Bernardo": {
+   "correct": "Fernanda (Fernanda Watkins, Capstone) in the 2026-10-16 UBS memory chat ('let Bernardo do the-' = Fernanda, who sent the question list); verify against the invite roster in any other file",
+   "domain": "names",
+   "rule": "No Bernardo on the invite; the name appears once, where the speaker hands over to Fernanda.",
+   "first_seen": "2026-10-16 (Notion: UBS Vella memory chat / BTGP TSMC expert Lluis Paris / ASML Rothschild webinar / MU UBS IR call)"
+  },
+  "Louis": {
+   "correct": "Lluis (Lluis Paris, former TSMC/Intel senior director, BTG Pactual Global Access expert) in the 2026-10-16 BTGP websession; elsewhere verify",
+   "domain": "names",
+   "rule": "ASR of the Catalan name 'Lluis'; also transcribed 'Luis'.",
+   "keep_when": [
+    "Vuitton",
+    "St. Louis",
+    "Saint Louis"
+   ],
+   "first_seen": "2026-10-16 (Notion: UBS Vella memory chat / BTGP TSMC expert Lluis Paris / ASML Rothschild webinar / MU UBS IR call)"
+  },
+  "Philippe": {
+   "correct": "Felipe (Felipe Monteiro, Capstone) when the room is Capstone",
+   "domain": "names",
+   "rule": "ASR of 'Felipe'; also 'Philip'. Keep for a real Philippe on the invite.",
+   "first_seen": "2026-10-16 (Notion: UBS Vella memory chat / BTGP TSMC expert Lluis Paris / ASML Rothschild webinar / MU UBS IR call)"
+  },
+  "1 Delta": {
+   "correct": "1-delta (1d) DRAM node",
+   "domain": "memory",
+   "rule": "ASR spelling of the node name; likewise '1 Alpha' = 1-alpha, '1 Beta' = 1-beta, '1 Gamma' = 1-gamma. Not a garble of a number.",
+   "first_seen": "2026-10-16 (Notion: UBS Vella memory chat / BTGP TSMC expert Lluis Paris / ASML Rothschild webinar / MU UBS IR call)"
+  },
+  "TeraFab": {
+   "correct": "Terafab (SpaceX/xAI fab project, as announced)",
+   "domain": "names",
+   "rule": "casing only; keep the project name as the press writes it.",
+   "first_seen": "2026-10-16 (Notion: UBS Vella memory chat / BTGP TSMC expert Lluis Paris / ASML Rothschild webinar / MU UBS IR call)"
+  },
+  "Wenanan": {
+   "correct": "probably Wayne Allan (ASML Board of Management, strategic sourcing & procurement - ex-Micron); UNCONFIRMED reading - verify before naming",
+   "domain": "names",
+   "rule": "Notion ASR of 'Wayne Allan' in 'We have Wenanan that joined the board ... to drive the performance of the suppliers' (ASML Rothschild webinar, 2026-10-16). Prefer the role ('the board member who owns supplier performance') if unverified.",
+   "first_seen": "2026-10-16 (ASML Rothschild webinar)"
+  },
+  "Lee Boo": {
+   "correct": "Lip-Bu Tan (Intel CEO)",
+   "domain": "names",
+   "rule": "Notion ASR of 'Lip-Bu' in the SpaceX Terafab / Intel 14A sentence.",
+   "first_seen": "2026-10-16 (BTGP TSMC expert websession, Lluis Paris)"
+  },
+  "CoreWave": {
+   "correct": "CoreWeave (CRWV)",
+   "domain": "names",
+   "rule": "ASR spelling of CoreWeave.",
+   "first_seen": "2026-10-16 (BTGP TSMC expert websession, Lluis Paris)"
+  },
+  "1 Alpha": {
+   "correct": "1-alpha (1a) DRAM node",
+   "domain": "memory",
+   "rule": "see '1 Delta'",
+   "first_seen": "2026-10-16 (UBS Vella memory chat)"
+  },
+  "1 Beta": {
+   "correct": "1-beta (1b) DRAM node",
+   "domain": "memory",
+   "rule": "see '1 Delta'",
+   "first_seen": "2026-10-16 (UBS Vella memory chat)"
+  },
+  "bids": {
+   "correct": "bits (memory bits) in a DRAM/HBM supply sentence ('50% of bids under coverage')",
+   "domain": "memory",
+   "rule": "ASR of 'bits'; keep the word in auction / bid-ask / order-book contexts.",
+   "keep_when": [
+    "auction",
+    "bid-ask",
+    "bid/ask",
+    "bidding",
+    "order book"
+   ],
+   "first_seen": "2026-10-16 (UBS Vella memory chat)"
+  },
+  "a mat": {
+   "correct": "probably AMAT (Applied Materials) - UNCONFIRMED reading",
+   "domain": "names",
+   "rule": "'it's like a mat that kind of missed it one point, operating margin got hammered' (Felipe's semicap aside); verify against the print before naming.",
+   "first_seen": "2026-10-16 (UBS Vella memory chat)"
+  },
+  "Valnevent": {
+   "correct": "Veldhoven (ASML HQ; the June 2027 event)",
+   "domain": "names",
+   "rule": "ASR of 'Veldhoven event'.",
+   "first_seen": "2026-10-16 (ASML Rothschild & Co Redburn webinar, Fouquet/Dassen)"
+  },
+  "9,600": {
+   "correct": "'90 EUV / 600 DUV' (ASML 2022 CMD capacity target) - the Notion summary turned it into '96 EUV' (invented)",
+   "domain": "semicap",
+   "rule": "ASR fused the two capacity numbers; never carry '96 EUV'.",
+   "keep_when": [
+    "9,600 wafers",
+    "9,600 units"
+   ],
+   "first_seen": "2026-10-16 (ASML Rothschild & Co Redburn webinar, Fouquet/Dassen)"
+  },
+  "HyperFOAM": {
+   "correct": "Hyper-NA (EUV, early 2030s)",
+   "domain": "semicap",
+   "rule": "ASR of 'Hyper-NA'.",
+   "first_seen": "2026-10-16 (ASML Rothschild & Co Redburn webinar, Fouquet/Dassen)"
+  },
+  "HyNA": {
+   "correct": "High-NA (EUV)",
+   "domain": "semicap",
+   "rule": "ASR of 'High-NA'; also 'HiNA', 'INA'.",
+   "first_seen": "2026-10-16 (ASML Rothschild & Co Redburn webinar, Fouquet/Dassen)"
+  },
+  "HiNA": {
+   "correct": "High-NA (EUV)",
+   "domain": "semicap",
+   "rule": "see 'HyNA'",
+   "first_seen": "2026-10-16 (ASML Rothschild & Co Redburn webinar, Fouquet/Dassen)"
+  },
+  "Lowney": {
+   "correct": "low-NA (EUV)",
+   "domain": "semicap",
+   "rule": "ASR of 'low-NA'.",
+   "first_seen": "2026-10-16 (ASML Rothschild & Co Redburn webinar, Fouquet/Dassen)"
+  },
+  "Trakistor": {
+   "correct": "track record",
+   "domain": "misc",
+   "rule": "ASR of 'track record' (ASML supply-chain sentence).",
+   "first_seen": "2026-10-16 (ASML Rothschild & Co Redburn webinar, Fouquet/Dassen)"
+  },
+  "KB Cache": {
+   "correct": "KV cache (key-value cache, LLM inference memory)",
+   "domain": "ai",
+   "rule": "ASR of 'KV cache'.",
+   "first_seen": "2026-10-16 (MU UBS IR call)"
+  },
+  "$45K": {
+   "correct": "45K wafers per month (CXMT 2025 capacity add) - not dollars",
+   "domain": "memory",
+   "rule": "ASR put a '$' on a wafer-capacity number; the Notion summary copied it. Check the unit from context (capacity grew by 45K wspm).",
+   "keep_when": [
+    "$45K/",
+    "per unit",
+    "salary"
+   ],
+   "first_seen": "2026-10-16 (UBS Vella memory chat)"
   }
  },
  "summary_traps": [
   "The Notion AI summary inherits every transcript garble AND adds its own: it expanded 'MPO' to 'Module-Pluggable Optics' (2026-09-28), moved a guidance year (fiscal 2025 vs 2028, LITE 2026-09-18), invented a '<15% of industry TAM' sentence (2026-09-18), rendered 'funding short' as 'valuation short' (2026-09-18), hung Meta's $200-300bn figure on AppLovin (2026-09-22), credited the HOST's numbers to the guest (BofA/Bajarin 2026-09-24), and computed its own '~15% CAGR' (Scala 2026-09-24).",
   "Speakers are unlabeled: questions (Capstone/other investors) and answers run together; the host's arithmetic assented with a 'yeah' is not the guest's number.",
   "2026-10-02: Archera/Khanna call - the summary hangs the spoken commitment-growth marks on named clouds (Google 48.5%, AWS 38%, Azure 39.5%); the transcript speaks them as running rates (~45%->48.5% for one cloud, 36.5%->39.5% for another, consumption ~41%) with the cloud named in the surrounding sentence - map each figure to its cloud IN the transcript, never from the summary; the '300-400% mainframe migration volume' is ONE reseller PARTNER's volume (per Khanna), not Archera's total, and '$1 million minimum MAC/PPA' is spoken as a mid-quarter hyperscaler rule for GPU access. AVGO/Arcuri recap - the summary credits Arcuri's relayed statements to Broadcom management and adds 'Jalapeno', 'Sunfish v5', '440s and 430s' that grep does not find in the transcript.",
-  "2026-10-14 (GS Alec Phillips meeting): the summary wrote 'Michigan Senate race (Abdullah al-Saeed vs. Susan Collins-equivalent dynamic)' - conflating the Michigan (El-Sayed) and Maine (Collins) races - and 'expected to accelerate in 2025' for data-center deals pushed to January (next year = 2027). Check polling-error coefficients ('37 bp', '0.7') against the transcript before use."
+  "2026-10-14 (GS Alec Phillips meeting): the summary wrote 'Michigan Senate race (Abdullah al-Saeed vs. Susan Collins-equivalent dynamic)' - conflating the Michigan (El-Sayed) and Maine (Collins) races - and 'expected to accelerate in 2025' for data-center deals pushed to January (next year = 2027). Check polling-error coefficients ('37 bp', '0.7') against the transcript before use.",
+  "2026-10-16: the Notion summary (a) retitled Micron's post-F4Q26 IR call 'Post-3Q FY26' (wrong fiscal quarter) and hung the reported '$33B free cash flow' on 'Fiscal Q1 27' (the transcript says 'the last quarter we reported' = F4Q26; FQ1'27 is only 'significantly stronger'); (b) wrote CXMT's 2025 capacity add as '$45K' - it is 45K wafers per month, not dollars; (c) fused an audience question ('$60 to $64 billion ... brokers see 2028 capex higher than $105') with the expert's conditional '$100 billion' arithmetic into one 'CapEx trajectory' bullet (BTGP TSMC expert)."
  ],
  "Fenyman": {
   "correct": "Feynman (NVIDIA 2028 GPU generation)",

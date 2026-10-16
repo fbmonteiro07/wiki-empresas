@@ -600,7 +600,7 @@
     "hbm-cycle": {
       "title": "HBM — capacity, pricing, allocation, sold-out claims",
       "definition": "HBM wafer capacity, $/GB or $/Gb pricing (state which), allocation priority, sold-out horizon.",
-      "canonical": "Sold out CY26 incl. HBM4 (Micron Q1 FY26). Capacity ~473k wspm end-26E -> ~668k end-27E (SemiAnalysis). Pricing: NVDA HBM ~$17-18/GB 2026 -> $30-32/GB 2027, +70-80% (Redburn); blended ASP +~30% (JPM/Micron). Live tension: general-server DRAM overtook HBM as allocation priority #1 (Redburn/TrendForce) yet HBM pricing still marches higher. 2027 supply revised 60B -> 50B Gb-equiv on allocation, not demand (Redburn). Trade ratio: HBM3E consumes ~3:1 DRAM wafer capacity per bit -> ~4:1 at HBM4/4E (Micron Sadana 2026-08-10; BMO/Mizuho ~4:1) — DRAM->HBM conversion REDUCES net industry bit supply.",
+      "canonical": "Sold out CY26 incl. HBM4 (Micron Q1 FY26). Capacity ~473k wspm end-26E -> ~668k end-27E (SemiAnalysis). Pricing: NVDA HBM ~$17-18/GB 2026 -> $30-32/GB 2027, +70-80% (Redburn); blended ASP +~30% (JPM/Micron). Live tension: general-server DRAM overtook HBM as allocation priority #1 (Redburn/TrendForce) yet HBM pricing still marches higher. 2027 supply revised 60B -> 50B Gb-equiv on allocation, not demand (Inspectrum memory consultant, relayed by Jefferies desk · O'Mara, 2026-06-23). Trade ratio: HBM3E consumes ~3:1 DRAM wafer capacity per bit -> ~4:1 at HBM4/4E (Micron Sadana 2026-08-10; BMO/Mizuho ~4:1) — DRAM->HBM conversion REDUCES net industry bit supply.",
       "scope_note": "$/GB (stack) vs $/Gb (die) are ~8-16x apart — always state units. TAM frames: $35B'25 -> $100B'28 (Micron/JPM) vs $168B CY30 (BofA) are different horizons, both valid.",
       "patterns": [
         "HBM.{0,50}sold.?out",
@@ -659,7 +659,7 @@
         },
         {
           "value": "general-server DRAM now allocation #1, HBM #2 (4-yr reversal); 2027 HBM supply 60B -> 50B Gb-equiv",
-          "source": "Redburn / TrendForce",
+          "source": "Jefferies desk · O'Mara call notes (60->50 = Inspectrum, relayed) / TrendForce",
           "date": "2026-06-23",
           "scope": "allocation",
           "cited_in": [

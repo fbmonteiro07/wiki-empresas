@@ -2,12 +2,13 @@
 
 _Generated 2026-10-16 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (38)
+## 📅 Upcoming (40)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
 | 2026-10-20 | NFLX | 🆕 **Q3 2026 earnings — Tue 2026-10-20 AMC** (Vital Knowledge calendar, 2026-09-28) — replaces the "~late Oct" placeholder. |
 | 2026-10-20 | NVDA | 🆕 **2026-10-20 to 10-22: NVIDIA GTC Berlin** (JPM US Market Intelligence calendar, 09-29/09-30); BofA lists "multiple GTC tradeshow events" with the enhanced buyback as the near-term NVDA catalysts (A |
+| 2026-10-21 | META | **🆕🔴🔴 2026-10-21 (WED, AFTER THE CLOSE) — Q3'26 PRINT, about a week earlier than normal** (JPM desk · Schilsky, 2026-10-13; BofA · Post, UBS desk · Dwyer and Vital Knowledge, 2026-10-16). The bar: 3Q  |
 | 2026-10-22 | NOK | **2026-10-22 — Q3 results:** Optical/IP deliveries and new orders, supply constraints and MI software phasing. The July guide calls for revenue **+3–7% sequentially** and EBIT broadly flat on Q2. Trac |
 | 2026-10-23 | AAPL | **🆕 2026-10-13 — SMART-HOME LAUNCH** (J490 hub, HomePod mini, Apple TV; Bloomberg via GS / JPM / BofA / Redburn desks, 2026-09-29→10-01); **2026-10-16 Duo pre-orders, 2026-10-23 on sale** (DigiTimes v |
 | 2026-10-26 | MEDIATEK | **🆕🔴 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR "POTENTIAL UPWARD REVISIONS TO GOOGLE TPU-RELATED GUIDANCE."** Between them: **Google system-level validation of v9 in H |
@@ -43,6 +44,7 @@ _Generated 2026-10-16 · parsed from every page's 'Catalysts / what to watch'. D
 | 2027-09-28 | NSCALE | 2027-09-28 — Microsoft Kvandal North **Tranche 2 delivery date** (SOW example) — a filed, checkable milestone. |
 | 2027-12-31 | NSCALE | 2027-12-31 — SIN02 Portugal: >66,000 VR NVL72 for Microsoft "starting late 2027". |
 | 2028-06-30 | NSCALE | 2028-06-30 — Monarch **2 GW gross / 1.37 GW IT online "by 1H28"** (Anthropic tranches; the wiki's first neocloud milestone tied to on-site gas turbines). |
+| 2029-12-08 | MU | 🆕 **2026-10-16 — the buyback now has a formula and a window, from Micron IR.** From **2026-12-09 through 2029-12-08** Micron may repurchase up to **trailing-12-month FCF − CHIPS proceeds received in t |
 | 2031-12-31 | NSCALE | 2031-12-31 — Monarch expansion to ~8 GW gross planned. |
 
 ## ⏰ Passed — need a post-mortem (0)

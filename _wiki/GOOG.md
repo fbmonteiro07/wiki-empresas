@@ -10,10 +10,10 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\GOOG` (filings + trans
 | Revenue | **$505.0bn** | **$641.0bn** |
 | Gross profit | $346.4bn | $434.0bn |
 | Gross margin | 68.6% | 67.7% |
-| EBITDA | $229.8bn | $305.6bn |
+| EBITDA | $229.8bn | $305.8bn |
 | EPS | **$11.80** | **$16.20** |
-| Capex | $201.5bn | $319.4bn |
-| OCF (≈EBITDA) | $229.8bn | $305.6bn |
+| Capex | $201.5bn | $319.5bn |
+| OCF (≈EBITDA) | $229.8bn | $305.8bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 _**Bold** = Capstone official model; plain = BBG consensus._

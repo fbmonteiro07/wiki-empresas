@@ -1,6 +1,6 @@
 # Canonical assumptions — one number per debate
 
-_Generated 2026-10-15 from `_data/assumptions.json` (asof 2026-10-01). Every cross-page industry number lives here once, with all sourced variants. When a new source disagrees, add a variant to the JSON — never silently rebase a page. Rebuild: `py _wiki/_tools/build_assumptions.py`._
+_Generated 2026-10-16 from `_data/assumptions.json` (asof 2026-10-01). Every cross-page industry number lives here once, with all sourced variants. When a new source disagrees, add a variant to the JSON — never silently rebase a page. Rebuild: `py _wiki/_tools/build_assumptions.py`._
 
 ## Custom-ASIC vs merchant-GPU share of AI accelerators  `asic-vs-gpu-share`
 
@@ -365,7 +365,7 @@ _Annualized $ revenue (or rental rate) per GW of AI compute capacity — state c
 
 _HBM wafer capacity, $/GB or $/Gb pricing (state which), allocation priority, sold-out horizon._
 
-**Canonical:** Sold out CY26 incl. HBM4 (Micron Q1 FY26). Capacity ~473k wspm end-26E -> ~668k end-27E (SemiAnalysis). Pricing: NVDA HBM ~$17-18/GB 2026 -> $30-32/GB 2027, +70-80% (Redburn); blended ASP +~30% (JPM/Micron). Live tension: general-server DRAM overtook HBM as allocation priority #1 (Redburn/TrendForce) yet HBM pricing still marches higher. 2027 supply revised 60B -> 50B Gb-equiv on allocation, not demand (Redburn). Trade ratio: HBM3E consumes ~3:1 DRAM wafer capacity per bit -> ~4:1 at HBM4/4E (Micron Sadana 2026-08-10; BMO/Mizuho ~4:1) — DRAM->HBM conversion REDUCES net industry bit supply.
+**Canonical:** Sold out CY26 incl. HBM4 (Micron Q1 FY26). Capacity ~473k wspm end-26E -> ~668k end-27E (SemiAnalysis). Pricing: NVDA HBM ~$17-18/GB 2026 -> $30-32/GB 2027, +70-80% (Redburn); blended ASP +~30% (JPM/Micron). Live tension: general-server DRAM overtook HBM as allocation priority #1 (Redburn/TrendForce) yet HBM pricing still marches higher. 2027 supply revised 60B -> 50B Gb-equiv on allocation, not demand (Inspectrum memory consultant, relayed by Jefferies desk · O'Mara, 2026-06-23). Trade ratio: HBM3E consumes ~3:1 DRAM wafer capacity per bit -> ~4:1 at HBM4/4E (Micron Sadana 2026-08-10; BMO/Mizuho ~4:1) — DRAM->HBM conversion REDUCES net industry bit supply.
 
 > ⚠️ **Scope:** $/GB (stack) vs $/Gb (die) are ~8-16x apart — always state units. TAM frames: $35B'25 -> $100B'28 (Micron/JPM) vs $168B CY30 (BofA) are different horizons, both valid.
 
@@ -376,7 +376,7 @@ _HBM wafer capacity, $/GB or $/Gb pricing (state which), allocation priority, so
 | ~123k -> ~331k -> ~473k -> ~668k wspm (end-23/25/26E/27E); HBM ~35% of DRAM wafer cap end-27E | SemiAnalysis Memory Mania | 2026-02-06 | capacity |
 | NVDA HBM ~$17-18/GB 2026 -> $30-32/GB 2027 (+70-80%) | Redburn Conor | 2026-06-23 | $/GB stack pricing |
 | blended HBM ASP +~30% next year (~10% like-for-like + mix) | JPM / Micron Jay | 2026-05-28 | blended ASP |
-| general-server DRAM now allocation #1, HBM #2 (4-yr reversal); 2027 HBM supply 60B -> 50B Gb-equiv | Redburn / TrendForce | 2026-06-23 | allocation |
+| general-server DRAM now allocation #1, HBM #2 (4-yr reversal); 2027 HBM supply 60B -> 50B Gb-equiv | Jefferies desk · O'Mara call notes (60->50 = Inspectrum, relayed) / TrendForce | 2026-06-23 | allocation |
 | HBM TAM $35B 2025 -> $100B 2028 (~40% CAGR) | Micron / JPM | 2026-05-28 | TAM to 2028 |
 | HBM TAM $35B CY25 -> $168B CY30 (+37% CAGR) | BofA Arya, AI 2030 | 2026-05-13 | TAM to 2030 |
 | HBM demand 33.1B Gb 2026 (+90% y/y) / 58.7B Gb 2027 (+77%), REVISED UP from 32.9/58.0 on Google TPU units raised to 4.2M/9.1M 2026/27 — vs Redburn 2027 HBM supply 50B Gb-eq (unrevised) = ~-15% HBM rationing 2027; Memory_supply_demand.xlsx v4 base has allocation chasing to ~600K wspm exit-27 (52.9B Gb, still ~-10%) | UBS Gaudois Memory Semis Monthly (via hbm-memory theme; model: Memory_supply_demand.xlsx v4) | 2026-07-03 | HBM bit demand vs supply, Gb-equivalent |
@@ -838,7 +838,7 @@ _Automated-test-equipment market in US$bn (SoC + memory testers) and its ratio t
 - `KLAC.md` — …OF HYBRID BONDING SLIPS, BUT INSPECTION/TEST INTENSITY RISES ANYWAY FOR A REASON THAT HAS NOTHING TO DO WITH STACK…
 - `LRCX.md` — …TER's improving AI test outlook implies test intensity sustaining at 7-8% of WFE = a $14bn+ ATE opportunity at $20…
 - `MEDIATEK.md` — …iaTek shipping 4m v8t units in 2027 = US$18bn = ~45% of MediaTek's business"*). **NOTHING IS SUPERSEDED ON THE MEDIATEK SID…
-- `META.md` — …Y CASE SETTLED BEFORE THE JURY GOT IT. ~$18BN OVER TEN YEARS, 52 STATE AGs, AND ONLY ~70% OF IT IS UNCONDITIONAL. THIS IS THE SING…
+- `META.md` — …Street $6.08**, both including the 1x **$10bn** State AG accrual (*"we are above ex 1x charge"*). 4Q revenue / EP…
 - `MRVL.md` — …ubling-class ramp that lands below the >$10bn FY29 line unless the rate holds, and GS models Marvell at ~2 GW by 2028 against [[MED…
 - `MSFT.md` — …e table stakes"*. ⚠️ MS sizes Bedrock (~$10bn run-rate, ~100% sequential growth) but gives **no Foundry revenue fi…
 - `MU.md` — …authorization number given). HBM FY26 ~$11bn+ / F4Q ~$3.5bn are his estimates called *"in the right ballpark"* by management — not a dis…

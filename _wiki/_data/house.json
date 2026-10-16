@@ -1,5 +1,5 @@
 {
- "asof": "2026-10-15",
+ "asof": "2026-10-16",
  "note": "House (Capstone) model figures scraped from each page's 'Capstone estimates (house model)' table. rev/fcf in the page's stated unit (usually $bn); eps absolute; gm/opm in %.",
  "companies": {
   "AAPL": {
@@ -534,66 +534,85 @@
   "META": {
    "years": {
     "2025": {
-     "rev": 201.0,
-     "eps": 29.06,
-     "fcf": 22.0
+     "rev": 200.6,
+     "eps": 28.4,
+     "fcf": 20.5
     },
     "2026": {
-     "rev": 257.0,
-     "eps": 32.72,
-     "fcf": -17.0
+     "rev": 256.8,
+     "eps": 31.96,
+     "fcf": -37.4
     },
     "2027": {
-     "rev": 313.0,
-     "eps": 38.24,
-     "fcf": -23.0
+     "rev": 308.1,
+     "eps": 35.63,
+     "fcf": -56.4
+    },
+    "2028": {
+     "rev": 369.7,
+     "eps": 39.34,
+     "fcf": -87.8
     }
    },
    "raw_header": [
     "",
     "2025E",
     "2026E",
-    "2027E"
+    "2027E",
+    "2028E"
    ],
    "raw_rows": [
     [
      "Revenue ($bn)",
-     "201",
-     "257",
-     "313"
+     "200.6",
+     "256.8",
+     "308.1",
+     "369.7"
     ],
     [
      "&nbsp;&nbsp;— y/y",
      "—",
      "+28%",
-     "+22%"
+     "+20%",
+     "+20%"
     ],
     [
-     "EPS ($)",
-     "29.06",
-     "32.72",
-     "38.24"
+     "Total expenses ($bn)",
+     "116.4",
+     "162.0",
+     "202.5",
+     "253.1"
     ],
     [
      "EBIT margin",
-     "~42%",
-     "~37%",
-     "~35%"
+     "42.0%",
+     "36.9%",
+     "34.3%",
+     "31.5%"
+    ],
+    [
+     "EPS ($)",
+     "28.40",
+     "31.96",
+     "35.63",
+     "39.34"
     ],
     [
      "Capex ($bn)",
-     "70",
-     "131",
-     "170"
+     "69.9",
+     "150.7",
+     "200.0",
+     "270.3"
     ],
     [
      "FCF ($bn)",
-     "22",
-     "-17",
-     "-23"
+     "20.5",
+     "-37.4",
+     "-56.4",
+     "-87.8"
     ]
    ],
-   "source": "Capstone official model (`Modelo Meta pós 2Q26.xlsm`, 2026-06-11)."
+   "source": "Capstone official model (`Modelo Meta pós 2Q26.xlsm`, saved 2026-10-12)."
   },
   "NVDA": {
    "years": {

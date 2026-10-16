@@ -73,6 +73,31 @@ class CreditMonitorTests(unittest.TestCase):
         self.assertIn('Research ledger as of 2026-08-24', body)
         self.assertIn('Bloomberg TEST Index', body)
 
+    def test_connected_issuer_board_retains_dates_and_convertible_warning(self):
+        config = {'asof': '2026-08-24', 'market_series': [{'ticker': 'TEST Index'}], 'deals': [], 'bonds': []}
+        bond = self.series(id='NBIS_4.5_2034', group='bond', status='ok', board={'kind': 'convertible'})
+        body = summary(config, {'series': [self.series()]}, today=TODAY,
+                       issuer_market={'series': [bond], 'fetched_at': '2026-09-28T18:30:00'})
+        self.assertIn('1/1 instruments', body)
+        self.assertIn('convertible; not comparable', body)
+        self.assertNotIn('not connected', body)
+        self.assertIn('2026-09-28', body)
+
+    def test_failed_issuer_source_is_partial_even_with_retained_points(self):
+        config = {'asof': '2026-08-24', 'market_series': [{'ticker': 'TEST Index'}], 'deals': []}
+        bond = self.series(id='CRWV_CDS5Y', group='cds', status='failed', error='Terminal unavailable')
+        body = summary(config, {'series': [self.series()]}, today=TODAY, issuer_market={'series': [bond]})
+        self.assertIn('PARTIAL / ATTENTION REQUIRED', body)
+        self.assertIn('Terminal unavailable', body)
+
+    def test_successful_fetch_does_not_make_old_issuer_observation_fresh(self):
+        config = {'asof': '2026-08-24', 'market_series': [{'ticker': 'TEST Index'}], 'deals': []}
+        bond = self.series(id='XAI_12.5_2030', group='bond', status='ok', points=[['2026-03-04', 12.5]])
+        body = summary(config, {'series': [self.series()]}, today=TODAY,
+                       issuer_market={'series': [bond], 'fetched_at': '2026-09-29T09:00:00'})
+        self.assertIn('PARTIAL / ATTENTION REQUIRED', body)
+        self.assertIn('stale observation 2026-03-04', body)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\CRWV` (10-K FY2025, four 10-Qs, transcripts) · `E:\briefings\2026`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Snapshot — Capstone official model + BBG · asof 2026-10-15 · USD
+### 📊 Snapshot — Capstone official model + BBG · asof 2026-10-16 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -61,6 +61,8 @@ CoreWeave is the financing-and-operating layer that turns GPUs + power + debt in
 Themes: [ai-datacenter-power](themes/ai-datacenter-power.md) · [custom-asic-tpu](themes/custom-asic-tpu.md).
 
 ## Current state (latest quarter — Q2 FY2026, printed 2026-08-11 AMC)
+
+**2026-10-16 — weekly credit review.** The September 18 pricing vintage of **$3.7bn** and DB's October 14 **$4.2bn** refer to the same 2.875% April-2033 convertible: the [September 22 8-K](https://www.sec.gov/Archives/edgar/data/1769628/000176962826000432/crwv-20260917.htm) confirms **$4.2bn closed including the fully exercised $500m option**. This resolves the amount/closing evidence; it is a historical financing backfill, not October proceeds or a straight-debt coupon comparison. Stable financing ID **CRWV-CONVERT-20260922**. JPM / Samik Chatterjee et al. (October 16) argues the pressure reflects cash-flow timing despite healthy contract economics; its project returns and funding assumptions are forecasts. Bloomberg October 15: **14.352% YTM** on CRWV 9.625% July-2032 (YLD_YTM_MID), and **482.326bp** on CRWV CDS USD SR 5Y D14 Corp (PX_LAST). The roughly 1,000bp desk-CDS vintage retained below is **not reconciled to that contract/convention**. [Email evidence](_data/credit-monitor/research-sources/2026-10-16-outlook.json); [dated issuer data](_data/credit_watch.json).
 
 **🆕🔴🔴🔴 2026-10-14 — THE CREDIT TAPE BROKE AND THE NEAR-TERM FINANCING NEED IS NOW MAPPED (model `Debt` sheet, "Near-term financing map"). Equity −15.5% on the day to $65.78 (TMT Breakout EOD wrap); unsecured bonds at 14.5-15.7% YTM (Bloomberg via the credit monitor: 9.25% 2030 14.46%, 9% 2031 15.00%, 9.75% 2031 15.69%, 9.625% 2032 15.56%, EUR 8.5% 2032 14.46%; converts 5.8-7.8%), the 2032s below 80c and 5-year CDS at ~1,000bp on the desks (Rothschild TMT daily 10-14; @zerohedge via the company-specific wrap; TMTB: "pricing a ~58% chance of default within five years") against 440bp on the Bloomberg D14 quote — two different contracts, not reconciled. Catalysts of the day: Chamath's "private credit bubble" post with Musk's "Yikes" (TMTB; GS desk 10-14), the FT report that co-founder McBee is courting insurers' "unlimited" capital for investment-grade, chip-backed loans (FT via Jefferies · Wong, UBS desk · Ruple, Vital Knowledge, 10-14), a CEO staff memo via Bloomberg that the backlog "more than supports" the debt and the market is acting "irrationally" (TMTB), and the Reuters record-CDS print for CRWV and ORCL. ⚠️ No Barclays research on CoreWeave reached the mailbox today (connector + desktop scan): only the Barclays TMT desk flow list names CRWV; Barclays' last CRWV note on file is Lenschow/McMeans 2026-09-17 (EW, PT $105).**
 
@@ -820,6 +822,8 @@ _Source: CRWV earnings calls (dates above); management commentary, paraphrased._
 - **Outlook:** attempted (`outlook.py --no-body --days 14`); returned no data this session — sell-side stance sourced from briefing roll-ups instead.
 
 ## Changelog
+
+- **2026-10-16 — weekly AI credit review:** Added filed confirmation of $4.2bn September 22 close. Preserved September 18 $3.7bn base and October 14 DB $4.2bn vintages; no model/rating/PT change. Added dated JPM view and Bloomberg observations, retaining CDS-basis conflict. [Review evidence](_data/credit-monitor/research-sources/2026-10-16-evidence.json).
 
 - 2026-10-14 — run-inbox: Jefferies · Thill et al. "C3Q Previews for Hyperscalers + META & CRWV: Favor MSFT & GOOGL" (2026-10-14) — 1 Current-state block + 1 Full-log row; DB · Zelnick "CoreWeave: Dislocation presenting buying opportunity" (2026-10-14) — 1 Full-log row (only the nuance not already in the evening block: +5pt margin assumption behind the ~20%+ IRR, cost-plus → value pricing, prepays, the credit caveat) + Sources link; 1 Sinal update. Nothing superseded: Jefferies Buy $150 (09-02) and DB Buy $150 (08-06/08-12) are both reiterations.
 - **2026-10-14 (evening) — FINANCING MAP after the credit sell-off (Felipe: "deixar isso mapeado no curto prazo de financial needs").** Added 1 dated block at the head of `## Current state` (tape: equity −15.5%, bonds 14.5-15.7%, CDS ~1,000bp desks / 440bp BBG; DB Zelnick Buy $150 note; the NTM sources-vs-uses map) and the `Near-term financing map` block in the model's `Debt` sheet (post-quarter DDTL 5.5 $2.6bn, $1.2bn revolver draw, 2.875% 2033 convert $3.7bn priced / $4.2bn per DB with the GS indicative terms, 35m-share ATM; NTM residual ~$19bn; DB/UBS cross-checks; 10-14 market levels). DB note archived to `_inbox/` (e-mail body = full 2pp note). **Nothing superseded.** ⚠️ Searched for a Barclays CoreWeave e-mail today (connector + Outlook COM, all folders): none — only the TMT desk flow list names CRWV; last Barclays CRWV note on file remains Lenschow/McMeans 2026-09-17 (EW $105).

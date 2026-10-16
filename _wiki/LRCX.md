@@ -214,6 +214,10 @@ _Source: Capstone peer model (`ASML_Peers_SemiCap_v16.xlsx` — Peer Comp, 2026-
 <!-- Consensus estimates (BBG) block auto-injected here by the HTML builder -->
 
 ## Intra-quarter — calls, commentary & reports (since the last print)
+**🆕 2026-10-16 (notion-ingest, cross-page from the UBS memory chat) — "LAM IS SAYING TO SUPPLIERS TO PREPARE FOR $500 BILLION IN WFE OUT IN 2030" — A RELAY OF LAM'S SUPPLIER MESSAGE, NOT A PUBLISHED LAM OR UBS FORECAST.** _(Source: Gianmarco Vella (UBS) @ UBS-Capstone memory chat, 2026-10-16 — Capstone notes (Notion transcript). Sell-side analyst voice, private Q&A, no rating/PT. File: `_equity_calls/Semis/2026-10-16_UBS_DRAM-supply-demand-memory-chat-Gianmarco-Vella.md`.)_
+- **The mark and its basis:** $500bn WFE in **2030** (a 2030 basis — not comparable with the CY26-28 `wfe-tam` canon on `themes/semicap-wfe.md`, where it is logged as a vendor-relayed variant; UBS's own 2030 mark is $400-450bn, Arcuri 10-01). UBS: *"we're super bullish on semi-cap … the numbers are going to be what they are. It's just, will the stock work given all these concerns around … is there enough power?"* — and the US trade he hears if power binds: *"long optical, short supply chain … It's not semi-cap."*
+- **Slot tightness read-through:** *"October is the first month when US suppliers are actually sold out on equipment, like there is actually shortages"* (said in the CXMT context — Chinese buyers cannot get slots even for older unrestricted tools).
+
 _F4Q26 · Jul 29, 2026 → open · sell-side / expert calls / reports since the 2026-07-29 AMC print. Prior window (FQ3 FY26, Apr 22 → Jul 22) archived under `## Changelog`. Timeline visual: [timeline.html](timeline.html)._
 
 🆕🔴🔴 2026-09-21 (/wiki-ingest 21h) — UBS PUTS GLOBAL WFE AT **~$226bn (2027) / ~$275bn (2028)** AND NAMES MEMORY AS THE DRIVER, WITH **DRAM FULFILMENT AT ~60% AND ENTERPRISE SSD AT ~30% OF UNCONSTRAINED DEMAND** — WHILE JEFFERIES CALLS THE GROUP **A TACTICAL FUNDING SHORT** AND LRCX SITS **8% FROM ITS 200DMA.**
@@ -397,6 +401,7 @@ _Source: LRCX earnings calls (dates above); management commentary, paraphrased._
 
 ## Changelog
 
+- 2026-10-16 — ingest (Notion, 2026-10-16_UBS_DRAM-supply-demand-memory-chat-Gianmarco-Vella.md): cross-page from the UBS memory chat — Lam's "$500bn WFE in 2030" supplier message (relay), "US suppliers sold out from October", and the long-optical/short-supply-chain desk trade added to Intra-quarter; nothing superseded.
 - **2026-10-12 (/run-inbox)** — 1 dated-background Bull sub-bullet (UBS 4F² note, 2026-01-14: Z-direction high-aspect-ratio / conductor etch) + Sources. Nothing superseded.
 - **2026-10-01 (/wiki-ingest 21h run of 09-30, completed 10-01)** — 4 log rows (Redburn/TMTB TSMC-Texas move; BofA Arya top pick via Fenske; Redburn MU read; JPM Wagner TEL-pricing vs LRCX) + Sinal; superseded: nothing (no LRCX rating/PT in any source).
 - **2026-09-28 (/wiki-ingest 21h, scheduled)** — 3 log rows (UBS SemiBytes WFE + valuation, Barclays WFE, Redburn Buy + TSMC 2nm read) + Sinal note. **Superseded:** UBS C2028 WFE ~US$275bn (09-21) → ~US$280B (UBS · Arcuri, 2026-09-28). Nothing else moved.
