@@ -656,7 +656,7 @@ def workbook_section():
  <div class="card"><div class="srow"><span class="chip chip-{chip[0]}"><span class="ci">{chip[1]}</span>values {E(rstate)}</span>
  <div>{E(wb["values_source"])} · asof <b>{E(wb.get("values_asof") or "—")}</b>{(" · refreshed " + E(wb["refreshed_at"])) if wb.get("refreshed_at") else ""}{(" · " + E(rf.get("detail", ""))) if rf.get("detail") else ""}
  · imported {E((wb.get("imported_at") or "")[:16])} from <code>{E(wb.get("source_file", ""))}</code> (workbook snapshot ref {E(wb.get("snapshot_ref") or "—")})
- · <a href="{xlsx_href}">download the workbook</a> (live =BDP formulas when opened in Excel with the Bloomberg add-in) · dossiers: <code>{E(briefing)}</code>{"" if live else " · <b>values are the workbook's cached quotes — run credit_workbook.py --refresh with the terminal up</b>"}</div></div></div>
+ · <a href="credit-live.html"><b>AI CREDIT LIVE — terminal view ↗</b></a> (yield ladder, Δ since 15-Sep, OAS pickup, principal vs par, CRWV CDS curve, desk marks, equity tape) · <a href="{xlsx_href}">download the workbook</a> (live =BDP formulas when opened in Excel with the Bloomberg add-in) · dossiers: <code>{E(briefing)}</code>{"" if live else " · <b>values are the workbook's cached quotes — run credit_workbook.py --refresh with the terminal up</b>"}</div></div></div>
  <div class="tiles" style="margin-top:12px">{''.join(tiles)}</div>
  <div class="card tscroll" style="margin-top:12px">{monitor_tbl}</div>
  <details class="card"><summary>Terms, call schedule, lease structure and project financials — Barclays Figures 7–9 (15-Sep-2026), static</summary><div class="tscroll">{terms_tbl}</div></details>
@@ -899,6 +899,15 @@ page = f"""<!doctype html>
 </body></html>"""
 
 page = enhance(page, deals, market)
+
+# the terminal-style companion page (credit-live.html) is rebuilt from the same workbook JSON, fail-soft
+try:
+    import subprocess, sys as _sys
+    _r = subprocess.run([_sys.executable, str(Path(__file__).with_name("build_credit_live.py"))], capture_output=True, text=True,
+                        encoding="utf-8", errors="replace", timeout=120)
+    print((_r.stdout or _r.stderr).strip().splitlines()[0] if (_r.stdout or _r.stderr).strip() else "credit live: no output")
+except Exception as _exc:  # noqa: BLE001
+    print(f"credit live: skipped — {type(_exc).__name__}: {_exc}")
 temporary = OUT.with_suffix('.tmp')
 temporary.write_text(page, encoding="utf-8")
 temporary.replace(OUT)

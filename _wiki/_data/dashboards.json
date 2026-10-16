@@ -45,7 +45,7 @@
        "members": ["sentiment-monitor.html"]},
       {"id": "ai-setorial", "title": "AI Setorial",
        "blurb": "The AI sector read from outside the company filings: Ramp's enterprise alt-data (adoption vs Census, vendor penetration, model mix, spend per employee, share of business spend, the token sample with the price-vs-volume split) and the AI credit & funding monitor (hyperscaler / neocloud / lab issuance, spreads, CDS and the daily alerts lane).",
-       "members": ["ramp-ai-index.html", "credit-monitor.html"]}
+       "members": ["ramp-ai-index.html", "credit-monitor.html", "credit-live.html"]}
     ]
   },
   "home": {
@@ -150,6 +150,8 @@
      "desc": "Ten static SVG charts — token growth, open-weight vs proprietary share, gateway share shifts — each with source/date, hover values and an expandable data table; a dated self-contained copy goes to _data/ai-gateways/exports/ for e-mail."},
     {"href": "token-economics.html", "title": "OpenRouter · Token economics", "cadence": "weekly", "routine": "refresh_ai_gateways.py (or_token_economics.py)", "topic": "Tokens & compute",
      "desc": "Vintage-matched OpenRouter token volumes, catalogue prices, weighted-average price and spend. Observed inputs are HARD; list price × a trailing week's usage is a PARTIAL estimate; no rate is backfilled from a later snapshot."},
+    {"href": "credit-live.html", "title": "AI Credit Live — terminal view", "cadence": "daily", "routine": "rebuilt by build_funding_monitor.py (credit-alerts lane 09:30 / 18:30, Friday brief) from _data/credit_workbook.json · e-mail edition: build_credit_live.py --send", "topic": "AI capex & funding",
+     "desc": "Bloomberg-terminal-style view of the official AI-credit workbook (AI_Credit_Live.xlsx, Daniel Grozdea): yield ladder of the 25 data-center project bonds against the 10% line, Δ yield since Barclays 15-Sep, OAS pickup vs the tenant's own bond (dumbbells), principal vs par per issue, CoreWeave CDS term structure, 5Y CDS now vs the MS desk marks of 24-Aug, the equity tape as heat tiles, and the full monitor / other-instruments / CDS tables. Same bases as the workbook; validated dark palette."},
     {"href": "credit-monitor.html", "title": "AI credit & funding monitor", "cadence": "daily", "routine": "credit-alerts 09:30 / 18:30 Mon–Fri (credit_alerts.py --fetch --mail --send, incl. credit_workbook.py --refresh) · Fri 09:00 research brief (refresh_credit_monitor.py --send) · new workbook versions: credit_workbook.py --import", "topic": "AI capex & funding",
      "desc": "OFFICIAL base since 2026-10-16: Daniel Grozdea's AI_Credit_Live.xlsx — 27 data-center project bonds (Barclays IG/HY comp-sheet layout: price, YTM, OAS, pickup vs tenant comp, change since 15-Sep, principal vs par), vendor/hyperscaler notes, neocloud converts and loans, CDS flat spreads (CRWV 1–10Y curve), equity tape and one sourced dossier per bond — refreshed through the local Bloomberg terminal in the daily lane. Plus the issuer yield board (CRWV, NBIS, ORCL, hyperscalers), index gauges, the deal ledger and the daily alert layer (sigma rules on single-name CDS/bonds/equities, workbook rules at the 10% yield line, credit language in the broker tape). Fired alerts e-mailed as 'AI Credit ALERT | date'; weekly research brief on Fridays 09:00 São Paulo."},
     {"href": "memory-exports-tracker.html", "title": "Memory exports tracker", "cadence": "weekly", "routine": "Mon 08:20 refresh_memory_exports.bat", "topic": "Memory",

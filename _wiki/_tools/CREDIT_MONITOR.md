@@ -156,3 +156,13 @@ from it. Module: `_wiki/_tools/credit_workbook.py`.
 - Bases (never mixed): price in points of par; yield = YTM %; spread = OAS bp; CDS = CDS_FLAT_SPREAD bp — NOT the
   issuer board's PX_LAST CDS series (CRWV 5Y on 2026-10-16: 1,164bp flat vs 469 PX_LAST); Barclays 15-Sep levels are YTW,
   so changes since 15-Sep are approximate; converts and loans are measured against par for comparability only.
+
+### Terminal view (added 2026-10-16, Felipe: "deixe esse dashboard bem visual estilo bbg e me mande por email")
+
+`_wiki/_tools/build_credit_live.py` renders `_dashboards/credit-live.html` from `credit_workbook.json`: a Bloomberg-terminal-style
+page (black surface, amber chrome, monospace, inline SVG) with the yield ladder vs the 10% line, Δ yield since 15-Sep,
+OAS pickup dumbbells, principal vs par, the CRWV CDS term structure, 5Y CDS now vs the MS desk marks, equity heat tiles and
+the full tables. Data palette validated with the dataviz validator on black (IG cyan #17a0c4, HY amber #c48300, widening red
+#d94444, tightening blue #3a80d6). build_funding_monitor.py rebuilds it at the end of every run (so the alerts lane and the
+Friday brief keep it current). `--send` e-mails Felipe an Outlook-safe table edition (inline styles, no SVG) with the page
+attached and a receipt in `_data/credit-monitor/exports/<date>-credit-live-receipt.json`.
