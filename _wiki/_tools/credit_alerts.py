@@ -44,6 +44,8 @@ import tempfile
 import time
 from pathlib import Path
 
+from credit_workbook import workbook_alerts, brief_lines as workbook_brief, load as load_workbook  # official AI-credit base
+
 ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "_wiki" / "_data"
 TOOLS = ROOT / "_wiki" / "_tools"
@@ -309,8 +311,9 @@ def fmt_chg(v, unit, dec=0):
     return "—" if v is None else (f"{v:+.{dec}f}%" if unit == "%" else f"{v:+.{dec}f} bp")
 
 
-def render_email(date, market_alerts, narrative, rows, bbg_status, cov, cfg):
+def render_email(date, market_alerts, narrative, rows, bbg_status, cov, cfg, workbook=None):
     lan = cfg["delivery"].get("lan_dashboard", "")
+    lookup = {r["id"]: r for r in list(rows) + list((workbook or {}).get("rows") or [])}
     TH = "text-align:left;font-size:10.5px;color:#66788a;text-transform:uppercase;letter-spacing:.4px;padding:5px 6px;border-bottom:1px solid #dfe6ee"
     TD = "padding:6px 6px;border-bottom:1px solid #eef2f6;vertical-align:top;font-size:12.5px"
     TDR = TD + ";text-align:right;white-space:nowrap"
@@ -325,7 +328,7 @@ def render_email(date, market_alerts, narrative, rows, bbg_status, cov, cfg):
         parts.append("<h3 style='margin:18px 0 6px;font-size:15px'>Market triggers (Bloomberg, completed observations)</h3>")
         parts.append(f"<table style='border-collapse:collapse;width:100%'><tr><th style='{TH}'>Instrument</th><th style='{TH}'>Level</th><th style='{TH}'>1d</th><th style='{TH}'>5-obs</th><th style='{TH}'>σ</th><th style='{TH}'>Why</th><th style='{TH}'>Source</th></tr>")
         for a in market_alerts:
-            st = next(r for r in rows if r["id"] == a["id"])
+            st = lookup[a["id"]]
             ztxt = "—" if a["z1"] is None else f"{a['z1']:+.1f}σ"
             parts.append(f"<tr><td style='{TD}'><b style='color:{color[a['severity']]}'>{E(a['severity'].upper())}</b> {E(a['headline'].split(' → ')[0])}</td>"
                          f"<td style='{TDR}'>{E(fmt_level(st))}<br><small>{E(a['last_date'])}</small></td>"
@@ -334,6 +337,10 @@ def render_email(date, market_alerts, narrative, rows, bbg_status, cov, cfg):
                          f"<td style='{TDR}'>{ztxt}</td>"
                          f"<td style='{TD}'>{E('; '.join(a['reasons']))}</td><td style='{TD}'><small>{E(a.get('source') or a.get('ticker') or '')}" + (" · <b>stale data</b>" if a.get("data_status") == "stale" else "") + "</small></td></tr>")
         parts.append("</table>")
+    if workbook and workbook.get("brief"):
+        # the official AI-credit base (AI_Credit_Live.xlsx, Daniel Grozdea): project bonds, comps, CDS flat spreads, equity tape
+        parts.append("<h3 style='margin:18px 0 6px;font-size:15px'>Official workbook — AI_Credit_Live.xlsx (data-center project bonds, comps, CDS, equities)</h3>")
+        parts.append("<ul style='margin:0 0 8px 18px;padding:0'>" + "".join(f"<li style='font-size:12.5px;margin:3px 0'>{E(line.lstrip('- '))}</li>" for line in workbook["brief"][1:]) + "</ul>")
     if narrative:
         parts.append("<h3 style='margin:18px 0 6px;font-size:15px'>Broker / desk tape (Outlook window)</h3>")
         for n in narrative:
@@ -439,9 +446,24 @@ def main():
         print(res.stdout.strip()[-2000:])
         if res.returncode and res.stderr:
             print(res.stderr.strip()[-800:], file=sys.stderr)
+    # official workbook (AI_Credit_Live.xlsx): re-pull its Bloomberg fields, fail-soft (previous values kept on any failure)
+    workbook_refresh = None
+    if a.fetch:
+        try:
+            wres = subprocess.run([sys.executable, str(TOOLS / "credit_workbook.py"), "--refresh"], cwd=ROOT, capture_output=True, text=True,
+                                  encoding="utf-8", errors="replace", timeout=600, env={**os.environ, "PYTHONIOENCODING": "utf-8"})
+            workbook_refresh = (wres.stdout.strip() or wres.stderr.strip())[-300:]
+            print(workbook_refresh)
+        except Exception as exc:  # noqa: BLE001
+            workbook_refresh = f"workbook refresh failed: {type(exc).__name__}: {exc}"[:300]
+            print(workbook_refresh, file=sys.stderr)
     watch = J(WATCH, {"series": [], "bbg_status": {"state": "never-fetched", "detail": "run fetch_credit_watch.py"}}) or {}
     bbg_status = watch.get("bbg_status", {"state": "unknown"})
     rows, market_alerts = market_layer(cfg, watch, a.asof)
+    wb = load_workbook()
+    wb_rows, wb_alerts = workbook_alerts(wb, today=a.asof or date) if wb else ([], [])
+    wb_brief = workbook_brief(wb) if wb else []
+    market_alerts += wb_alerts
 
     # de-dup market alerts on the observation date (one alert per instrument per observation; higher severity re-fires)
     fresh_market = []
@@ -472,13 +494,15 @@ def main():
 
     min_sev = SEV_RANK[cfg["delivery"].get("min_severity_to_mail", "medium")]
     firing = [m for m in fresh_market if SEV_RANK[m["severity"]] >= min_sev] + [n for n in narrative if SEV_RANK[n["severity"]] >= min_sev]
-    body, head = render_email(date, fresh_market, narrative, rows, bbg_status, cov, cfg)
+    body, head = render_email(date, fresh_market, narrative, rows, bbg_status, cov, cfg, workbook={"rows": wb_rows, "brief": wb_brief})
     html_path = ALERTS / "emails" / f"{stamp}.html"
     html_path.write_text(body, encoding="utf-8")
 
     latest = {"generated_at": dt.datetime.now().isoformat(timespec="seconds"), "date": date, "bbg_status": bbg_status,
               "watch_fetched_at": watch.get("fetched_at"), "rows": rows, "market_alerts": market_alerts, "narrative": narrative,
-              "mail_coverage": cov, "fired": bool(firing), "headline": head if firing else None, "email_html": str(html_path)}
+              "mail_coverage": cov, "fired": bool(firing), "headline": head if firing else None, "email_html": str(html_path),
+              "workbook": {"asof": wb.get("values_asof") if wb else None, "refresh": (wb or {}).get("refresh"), "refresh_output": workbook_refresh,
+                           "rows": wb_rows, "brief": wb_brief}}
     (ALERTS / "latest.json").write_text(json.dumps(latest, ensure_ascii=False, indent=1), encoding="utf-8")
 
     summary = {"date": date, "stamp": stamp, "fired": bool(firing), "headline": head if firing else None,
@@ -486,7 +510,9 @@ def main():
                "narrative": [{"company": n["company"], "severity": n["severity"], "firms": n["firms"], "n_msgs": n["n_msgs"]} for n in narrative],
                "suppressed": [m["id"] for m in market_alerts if m.get("suppressed")], "bbg_status": bbg_status.get("state"),
                "bbg_detail": (bbg_status.get("detail") or "")[:200], "mail_collected": cov.get("collected"), "mail_error": cov.get("error"),
-               "watch_series": len(rows), "watch_fresh": sum(1 for r in rows if r["status"] == "ok"), "email_html": str(html_path), "send": None}
+               "watch_series": len(rows), "watch_fresh": sum(1 for r in rows if r["status"] == "ok"), "email_html": str(html_path), "send": None,
+               "workbook": {"status": ((wb or {}).get("refresh") or {}).get("status", "not-imported"), "asof": (wb or {}).get("values_asof"),
+                            "instruments": len(wb_rows), "alerts": len(wb_alerts), "refresh_output": workbook_refresh}}
 
     with (ALERTS / "log.jsonl").open("a", encoding="utf-8") as fh:
         fh.write(json.dumps({"run": stamp, "date": date, "fired": bool(firing), "headline": head if firing else None,

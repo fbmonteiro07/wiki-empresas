@@ -23,10 +23,36 @@ REPORTS = DATA / 'credit-monitor'
 LIVE = 'http://ds-cap-33:8080/wiki/_dashboards/credit-monitor.html'
 
 
-def summary(config, market, prior=None, errors=(), today=None):
+def issuer_coverage(watch, today):
+    series = [s for s in (watch or {}).get('series', []) if s.get('group') in ('bond', 'cds')]
+    if not series:
+        return ['- Issuer yield/CDS board: no retained instrument data available.'], []
+    usable = [(s, observations(s, today)) for s in series]
+    dates = [pts[-1][0] for _, pts in usable if pts]
+    issues = []
+    for s, pts in usable:
+        if s.get('status') != 'ok' or not pts:
+            issues.append(f'Issuer board {s["id"]}: {s.get("error") or s.get("status") or "no observations"}; retained data only.')
+        elif (today - dt.date.fromisoformat(pts[-1][0])).days > 4:
+            issues.append(f'Issuer board {s["id"]}: stale observation {pts[-1][0]}.')
+    lines = [f'- Issuer yield/CDS board: {len(dates)}/{len(series)} instruments with retained observations '
+             f'({min(dates) if dates else "unavailable"} through {max(dates) if dates else "unavailable"}); '
+             f'last fetch {watch.get("fetched_at", "unknown")}. Individual source failures/staleness: {len(issues)}.']
+    for s, pts in usable:
+        if s.get('id') in ('CRWV_CDS5Y', 'CRWV_9.625_2032', 'ORCL_CDS5Y', 'ORCL_5.7_2036', 'NBIS_4.5_2034') and pts:
+            date, value = pts[-1]
+            kind = ' [convertible; not comparable with straight-debt YTM]' if s.get('board', {}).get('kind') == 'convertible' else ''
+            lines.append(f'- {s["label"]}{kind}: {value:.3f}{s.get("unit", "")} on {date}; '
+                         f'source: {s.get("source", "Bloomberg " + s.get("ticker", ""))}.')
+    lines.append('- Historical Morgan Stanley project-bond snapshots keep their original dates; the separate issuer board does not refresh those broker observations.')
+    return lines, issues
+
+
+def summary(config, market, prior=None, errors=(), today=None, issuer_market=None, workbook_lines=None):
     today = today or dt.date.today()
     health = market_health(market, config, today)
-    problems = list(errors) + health['issues']
+    coverage, issuer_issues = issuer_coverage(issuer_market, today) if issuer_market is not None else ([], [])
+    problems = list(errors) + health['issues'] + issuer_issues
     lines = [f'AI Credit & Funding — weekly brief — {today}', '',
              'Refresh status: ' + ('PARTIAL / ATTENTION REQUIRED' if problems else 'market refresh complete'),
              f'Market observations: {health["earliest"]} through {health["latest"]} (Bloomberg local terminal).',
@@ -40,6 +66,9 @@ def summary(config, market, prior=None, errors=(), today=None):
             lines += [f'- {s["label"]}: {last:.{s.get("decimals", 2)}f}{s.get("unit", "")} on {date}.',
                       f'  1w: {change_text(s, 7, today)}; 1m: {change_text(s, 30, today)}.',
                       f'  Source: Bloomberg {s["ticker"]}, {s.get("field", "PX_LAST")}, observation {date}.']
+    if workbook_lines:
+        # the official AI-credit base (AI_Credit_Live.xlsx, Daniel Grozdea) — every report in this lane reads from it
+        lines += [''] + list(workbook_lines)
     lines += ['', 'FINANCING EVIDENCE']
     if prior is None:
         lines.append('Initial retained baseline; no prior weekly review exists. Do not interpret the full ledger as new this week.')
@@ -64,8 +93,10 @@ def summary(config, market, prior=None, errors=(), today=None):
     overdue = [w for w in config.get('watch', []) if len(w['date']) == 10 and w['date'] < today.isoformat()]
     lines += ['', 'COVERAGE & NEXT CHECKS',
               f'- Research evidence date: {config["asof"]}. Older source observations remain explicitly dated.',
-              '- Individual-bond market coverage: ' + (f'{len(config["bonds"])} configured instruments.' if config.get('bonds') else 'not connected; project-bond yields are historical broker snapshots.'),
               f'- {len(overdue)} past-dated watchlist events need outcome review; elapsed dates alone do not establish outcomes.']
+    lines += coverage or ['- Individual-bond market coverage: ' + (f'{len(config["bonds"])} configured instruments.' if config.get('bonds') else 'issuer-board data unavailable in this brief; project-bond broker snapshots retain their source dates.')]
+    for item in config.get('watch', []):
+        lines.append(f'- Next check [{item["date"]}]: {item["event"]}')
     for error in problems:
         lines.append('- Refresh limitation: ' + error)
     lines += ['', 'Dashboard: ' + LIVE, 'Compute-deal timeline: http://ds-cap-33:8080/wiki/themes/ai-compute-deals.md',
@@ -74,8 +105,8 @@ def summary(config, market, prior=None, errors=(), today=None):
     return '\n'.join(lines) + '\n'
 
 
-def run_step(script, timeout=180):
-    result = subprocess.run([sys.executable, str(TOOLS / script)], cwd=ROOT,
+def run_step(script, timeout=180, args=()):
+    result = subprocess.run([sys.executable, str(TOOLS / script), *args], cwd=ROOT,
                             capture_output=True, text=True, encoding='utf-8', errors='replace', timeout=timeout,
                             env={**os.environ, 'PYTHONIOENCODING': 'utf-8'})
     if result.stdout:
@@ -122,6 +153,13 @@ def main():
                     errors.append('Bloomberg refresh failed; previous dataset retained. ' + stderr[-1500:])
             except subprocess.TimeoutExpired:
                 errors.append('Bloomberg refresh timed out; previous dataset retained.')
+            # official workbook (AI_Credit_Live.xlsx): same Bloomberg fields as its formulas, fail-soft
+            try:
+                code, stderr = run_step('credit_workbook.py', timeout=600, args=['--refresh'])
+                if code:
+                    errors.append('Official workbook refresh failed; previous workbook values retained. ' + stderr[-800:])
+            except subprocess.TimeoutExpired:
+                errors.append('Official workbook refresh timed out; previous workbook values retained.')
         config = json.loads((DATA / 'funding_deals.json').read_text(encoding='utf-8'))
         market = json.loads((DATA / 'funding_market.json').read_text(encoding='utf-8'))
         code, stderr = run_step('build_funding_monitor.py')
@@ -141,7 +179,10 @@ def main():
         archive = snapshots / f'{today}.json'
         if not archive.exists():
             archive.write_text(json.dumps(config, indent=2, ensure_ascii=False), encoding='utf-8')
-        body = summary(config, market, prior, errors)
+        watchpath = DATA / 'credit_watch.json'
+        issuer_market = json.loads(watchpath.read_text(encoding='utf-8')) if watchpath.exists() else None
+        from credit_workbook import brief_lines as workbook_brief
+        body = summary(config, market, prior, errors, issuer_market=issuer_market, workbook_lines=workbook_brief())
         bodypath.write_text(body, encoding='utf-8')
         export_html = re.sub(r'href="(?!#)([^"]+)"',
             lambda match: 'href="' + urllib.parse.urljoin(LIVE, match.group(1)) + '"',
@@ -149,13 +190,15 @@ def main():
         attachment.write_text(export_html, encoding='utf-8')
         (REPORTS / 'latest-brief.txt').write_text(body, encoding='utf-8')
         health = market_health(market, config)
+        _, issuer_issues = issuer_coverage(issuer_market, dt.date.today()) if issuer_market is not None else ([], [])
+        errors += issuer_issues
         audit = {'run_at': dt.datetime.now().isoformat(timespec='seconds'), 'subject': subject,
                  'status': 'complete' if not errors and health['ok'] else 'partial', 'errors': errors + health['issues'],
                  'market_fetched_at': market.get('fetched_at'), 'market_dates': health,
                  'research_asof': config['asof'], 'email_requested': args.send,
                  'body': str(bodypath), 'attachment': str(attachment),
                  'input_sha256': {name: hashlib.sha256((DATA / name).read_bytes()).hexdigest()
-                                  for name in ('funding_deals.json', 'funding_market.json')}}
+                                  for name in ('funding_deals.json', 'funding_market.json', 'credit_watch.json', 'credit_workbook.json') if (DATA / name).exists()}}
         auditpath = REPORTS / f'{today}-run.json'
         auditpath.write_text(json.dumps(audit, indent=2), encoding='utf-8')
         print(json.dumps(audit, indent=2))

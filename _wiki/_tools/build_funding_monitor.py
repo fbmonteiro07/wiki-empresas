@@ -352,13 +352,20 @@ def alerts_section():
         chip = f'<span class="chip chip-{c[0]}"><span class="ci">{c[1]}</span>{c[2]}</span>' if c else ""
         st = r.get("status") or "none"
         note = {"ok": "fresh", "stale": "kept previous", "none": "no history"}.get(st, st)
+        try:
+            aged = (dt.date.today() - dt.date.fromisoformat(r.get("last_date") or "")).days > 4
+        except ValueError:
+            aged = True
+        if aged:
+            note = "stale observation — retained; not a current quote"
+            chip = ""
         if r.get("config_status") in ("unverified", "needs_isin"):
             note += f" · ticker {r['config_status']}"
         dec = 1 if r.get("group") == "equity" else 0
-        z = "—" if r.get("z1") is None else f"{r['z1']:+.1f}"
+        z = "—" if aged or r.get("z1") is None else f"{r['z1']:+.1f}"
         wrows.append(f'<tr><td><b>{E(r.get("label", ""))}</b><br><span class="src">{E(r.get("ticker") or "—")}</span></td>'
-                     f'<td class="num">{E(_alert_level(r))}</td><td class="num">{E(_alert_chg(r.get("d1"), r.get("alert_unit"), dec))}</td>'
-                     f'<td class="num">{E(_alert_chg(r.get("d5"), r.get("alert_unit"), dec))}</td><td class="num">{E(z)}</td>'
+                     f'<td class="num">{E(_alert_level(r))}</td><td class="num">{E(_alert_chg(None if aged else r.get("d1"), r.get("alert_unit"), dec))}</td>'
+                     f'<td class="num">{E(_alert_chg(None if aged else r.get("d5"), r.get("alert_unit"), dec))}</td><td class="num">{E(z)}</td>'
                      f'<td class="num">{E(r.get("last_date") or "—")}</td><td>{chip} <span class="src">{E(note)}</span></td></tr>')
     watch_tbl = "<table><thead><tr><th>Instrument · Bloomberg ticker</th><th>Level</th><th>1d</th><th>5-obs</th><th>z (60-obs σ)</th><th>Obs date</th><th>Status</th></tr></thead><tbody>" + "".join(wrows) + "</tbody></table>"
     return f"""<section>
@@ -490,13 +497,20 @@ def yields_section():
                 rng = (f"{min(vals):,.0f}–{max(vals):,.0f} bp" if sx["group"] == "cds" else f"{min(vals):.2f}–{max(vals):.2f}%")
             st = sx.get("status") or "none"
             note = {"ok": "fresh", "stale": "kept previous", "none": "awaiting Bloomberg"}.get(st, st)
+            try:
+                aged = (dt.date.today() - dt.date.fromisoformat(sx.get("last_date") or "")).days > 4
+            except ValueError:
+                aged = True
+            if aged:
+                note = "stale observation — retained; not a current quote"
+            change_pts = [] if aged else pts
             sev = sx.get("severity")
             hl = ' <span class="chip chip-good"><span class="ci">★</span>headline</span>' if b.get("headline") else ""
             trs.append(f'<tr><td><b>{E(sx["label"])}</b>{hl}<br><span class="src">{E(sx.get("ticker") or (sx.get("candidates") or [""])[0] if sx.get("ticker") else E(kind))}</span></td>'
                        f'<td>{E(kind)}</td><td class="num">{E(level)}<br><span class="src">{E(sx.get("last_date") or "")}</span></td>'
                        f'<td class="num">{"—" if px is None else f"{float(px):,.2f}"}</td><td class="num">{"—" if z is None else f"{float(z):,.0f} bp"}</td>'
-                       f'<td class="num">{E(_bp(_chg(pts, 1, sx.get("unit"), sx["group"])))}</td><td class="num">{E(_bp(_chg(pts, 7, sx.get("unit"), sx["group"])))}</td>'
-                       f'<td class="num">{E(_bp(_chg(pts, 30, sx.get("unit"), sx["group"])))}</td><td class="num">{E(rng) or "—"}</td>'
+                       f'<td class="num">{E(_bp(_chg(change_pts, 1, sx.get("unit"), sx["group"])))}</td><td class="num">{E(_bp(_chg(change_pts, 7, sx.get("unit"), sx["group"])))}</td>'
+                       f'<td class="num">{E(_bp(_chg(change_pts, 30, sx.get("unit"), sx["group"])))}</td><td class="num">{E(rng) or "—"}</td>'
                        f'<td><span class="src">{E(note)}{(" · " + E(rt)) if rt else ""}{(" · $" + f"{float(amt)/1e9:.1f}bn") if amt else ""}</span></td></tr>')
     table = ("<table><thead><tr><th>Issuer · instrument</th><th>Type</th><th>Yield / spread</th><th>Price</th><th>Z-spread</th><th>1d</th><th>1w</th><th>1m</th><th>52w range</th><th>Status · rating · size</th></tr></thead>"
              f"<tbody>{''.join(trs)}</tbody></table>") if trs else '<p class="mut">No board instruments configured — see <code>_data/credit_watch_config.json → board</code>.</p>'
@@ -518,6 +532,143 @@ def yields_section():
 """
 
 yields_html = yields_section()
+
+
+# ---------------------------------------------------------------- OFFICIAL workbook: AI_Credit_Live.xlsx (credit_workbook.py)
+def _n(v, dec=2, suf=""):
+    return "—" if v is None else f"{v:,.{dec}f}{suf}"
+
+
+def _sgn(v, dec=0, suf=" bp"):
+    return "—" if v is None else f"{v:+,.{dec}f}{suf}"
+
+
+def workbook_section():
+    try:
+        wb = json.loads((DATA / "credit_workbook.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return ('<section>\n <h2 id="workbook-title">Data-center project bonds — official workbook</h2>\n <p class="sub">Not imported yet — '
+                '<code>py _wiki/_tools/credit_workbook.py --import &lt;AI_Credit_Live.xlsx&gt;</code>.</p>\n</section>\n')
+    T = wb.get("totals", {})
+    rf = wb.get("refresh") or {}
+    rstate = rf.get("status", "not-run")
+    chip = ("good", "✓") if rstate == "ok" else ("warning", "⚠") if rstate in ("partial", "not-run") else ("critical", "✖")
+    live = wb.get("values_source_key") == "bbg-api"
+    xlsx_href = "../_data/credit-monitor/workbook/AI_Credit_Live.xlsx"
+    hot = [b for b in wb["bonds"] if b["section"] in ("IG", "HY") and (b.get("yld") or 0) >= 10]
+    crwv5 = next((c for c in wb["cds"] if c["name"] == "CRWV CDS 5Y"), None)
+    tiles = []
+    for sec, lab in (("IG", "IG builders"), ("HY", "HY builders")):
+        t = T.get(sec) or {}
+        tiles.append(f'<div class="tile"><div class="tl">{lab} · {t.get("n", "—")} bonds · face ${_n((t.get("face_mn") or 0) / 1000, 1)}bn</div>'
+                     f'<div class="tv num">{_n(t.get("wavg_price"))}<span class="tu">w-avg px</span></div>'
+                     f'<div class="td num">principal vs par ${_n((t.get("par_mn") or 0) / 1000, 2)}bn ({_n((t.get("par_pct") or 0) * 100, 1, "%")}) · since 15-Sep ${_n((t.get("since_sep_mn") or 0) / 1000, 2)}bn</div></div>')
+    tiles.append(f'<div class="tile"><div class="tl">Bonds at or above the 10% yield line</div><div class="tv num">{len(hot)}<span class="tu">of 25</span></div>'
+                 f'<div class="td">{E("; ".join(f"{b['ticker']} {b['yld']:.1f}%" for b in sorted(hot, key=lambda b: -b['yld'])[:6]) or "none")}</div></div>')
+    if crwv5:
+        tiles.append(f'<div class="tile"><div class="tl">CRWV 5Y CDS · flat spread</div><div class="tv num">{_n(crwv5.get("spread_bp"), 0)}<span class="tu">bp</span></div>'
+                     f'<div class="td num">curve 1Y {_n(next((c["spread_bp"] for c in wb["cds"] if c["name"] == "CRWV CDS 1Y"), None), 0)} · 3Y {_n(next((c["spread_bp"] for c in wb["cds"] if c["name"] == "CRWV CDS 3Y"), None), 0)} · 10Y {_n(next((c["spread_bp"] for c in wb["cds"] if c["name"] == "CRWV CDS 10Y"), None), 0)} bp</div></div>')
+
+    # Monitor table (IG / HY / parent comps) — the Barclays comp-sheet layout
+    rows = []
+    for sec, lab in (("IG", "Investment-grade HPC data-center builders"), ("HY", "High-yield HPC data-center builders"), ("Parent", "Tenant / parent comparables")):
+        bs = [b for b in wb["bonds"] if b["section"] == sec]
+        if not bs:
+            continue
+        rows.append(f'<tr class="cat"><td colspan="14">{lab}</td></tr>')
+        for b in bs:
+            ycls = ' class="num wb-amber"' if (b.get("yld") or 0) >= 10 else ' class="num"'
+            dcls = ' class="num wb-pink"' if (b.get("dyld_since_sep_bp") or 0) >= 25 else ' class="num"'
+            pk = b.get("pickup_bp")
+            pkcls = ' class="num wb-neg"' if pk is not None and pk < 0 else ' class="num"'
+            stale = ' <span class="src">stale</span>' if b.get("stale") else ""
+            rows.append(f'<tr><td><b>{E(b["ticker"])}</b>{stale}<br><span class="src">{E(b["name"])} · {E(b["bbg"])}</span></td>'
+                        f'<td>{E(b.get("tenant") or "")}<br><span class="src">{E(b.get("location") or "")}</span></td>'
+                        f'<td class="num">{_n(b.get("mw"), 0)}</td><td><span class="src">{E(b.get("rating") or "")}</span></td>'
+                        f'<td class="num">{_n(b.get("amt_mn"), 0)}</td><td class="num">{_n(b.get("px"), 3)}</td>'
+                        f'<td class="num">{_sgn(b.get("chg_pct_1d"), 2, "%")}</td><td{ycls}>{_n(b.get("yld"), 2, "%")}</td>'
+                        f'<td class="num">{_n(b.get("oas_bp"), 0)}</td><td{dcls}>{_sgn(b.get("dyld_since_sep_bp"))}</td>'
+                        f'<td{pkcls}>{_sgn(pk)}<br><span class="src">vs {E(b.get("comp_name") or "—")} {_n(b.get("comp_oas_bp"), 0)} · 15-Sep {_sgn(b.get("pickup_sep_bp"))}</span></td>'
+                        f'<td class="num">{_n(b.get("par_mn"), 0)}<br><span class="src">since 15-Sep {_n(b.get("since_sep_mn"), 0)}</span></td>'
+                        f'<td>{E(b.get("barclays_rec") or "—")}</td><td class="num"><span class="src">{E(b.get("first_issued") or "")}</span></td></tr>')
+        if sec in T and sec != "Parent":
+            t = T[sec]
+            rows.append(f'<tr><td><b>{sec} total</b></td><td colspan="3"></td><td class="num"><b>{_n(t.get("face_mn"), 0)}</b></td>'
+                        f'<td class="num"><b>{_n(t.get("wavg_price"), 3)}</b></td><td colspan="5"></td>'
+                        f'<td class="num"><b>{_n(t.get("par_mn"), 0)}</b><br><span class="src">since 15-Sep {_n(t.get("since_sep_mn"), 0)}</span></td><td colspan="2"></td></tr>')
+    monitor_tbl = ("<table><thead><tr><th>Bond</th><th>Tenant · site</th><th>MW</th><th>Rating M/S/F</th><th>Amt $mn</th><th>Price</th><th>1d</th>"
+                   "<th>Yield</th><th>OAS bp</th><th>Δ yld vs 15-Sep</th><th>Pickup vs tenant comp</th><th>Principal vs par $mn</th><th>Barclays</th><th>Issued</th></tr></thead>"
+                   f"<tbody>{''.join(rows)}</tbody></table>")
+
+    # terms & financials (Barclays 15-Sep figures 7-9)
+    trows = []
+    for b in wb["bonds"]:
+        if b["section"] == "Parent":
+            continue
+        t, f = b.get("terms") or {}, b.get("financials") or {}
+        trows.append(f'<tr><td><b>{E(b["ticker"])}</b> <span class="src">{E(b.get("tenant") or "")}</span></td>'
+                     f'<td class="num">{E(t.get("next_call") or "—")} @ {_n(t.get("call_px"), 2)}</td><td class="num">{_n(t.get("px_to_call_pts"), 1)}</td>'
+                     f'<td>{E(t.get("amort_start") or "—")} · {_n((t.get("amort_before_mty_pct") or 0) * 100, 0, "%")}</td>'
+                     f'<td>{E(t.get("lease_type") or "—")}<br><span class="src">{E(t.get("lease_tenor") or "")}</span></td>'
+                     f'<td><span class="src">{E(t.get("construction_start") or "—")} → {E(t.get("lease_commencement") or "—")}</span></td>'
+                     f'<td class="num">{_n(f.get("facility_cost_mn"), 0)}</td><td class="num">{_n(f.get("cost_per_mw_mn"), 1)}</td>'
+                     f'<td class="num">{_n(f.get("base_rent_per_mw_mn"), 2)} · {E(str(f.get("escalator") or "—"))}</td>'
+                     f'<td class="num">{_n((f.get("pct_debt_financed") or 0) * 100, 0, "%")}</td>'
+                     f'<td class="num">{_n(f.get("gross_lev_issuance_x"), 1, "x")} → {_n(f.get("gross_lev_maturity_x"), 1, "x")}</td>'
+                     f'<td class="num">{_n((f.get("rent_yield_on_cost") or 0) * 100, 1, "%")}</td><td class="num">{_n(f.get("debt_per_mw_mn"), 1)}</td>'
+                     f'<td class="num">{_n(t.get("barclays_spread_sep_bp"), 0)} / {_n((b.get("barclays") or {}).get("spread_0803_bp"), 0)}</td></tr>')
+    terms_tbl = ("<table><thead><tr><th>Bond</th><th>Next call @ px</th><th>Px to call</th><th>Amort. start · % before mty</th><th>Lease</th><th>Construction → commencement</th>"
+                 "<th>Facility $mn</th><th>$mn/MW</th><th>Rent $mn/MW · esc.</th><th>Debt-funded</th><th>Gross lev. issue → mty</th><th>Rent yield on cost</th><th>Debt $mn/MW</th><th>Barclays spread 15-Sep / 3-Aug</th></tr></thead>"
+                 f"<tbody>{''.join(trows)}</tbody></table>")
+
+    # other instruments
+    orows, grp = [], None
+    for o in wb["other"]:
+        if o["group"] != grp:
+            grp = o["group"]
+            orows.append(f'<tr class="cat"><td colspan="9">{E(grp)}</td></tr>')
+        ycls = ' class="num wb-amber"' if o["kind"] != "convertible" and (o.get("yld") or 0) >= 10 else ' class="num"'
+        orows.append(f'<tr><td><b>{E(o["name"])}</b>{" <span class=src>stale</span>" if o.get("stale") else ""}<br><span class="src">{E(o["bbg"])}{(" · " + E(o["isin"])) if o.get("isin") else ""}</span></td>'
+                     f'<td>{E(o["kind"])}</td><td class="num">{_n(o.get("amt_mn"), 0)}</td><td class="num">{_n(o.get("px"), 3)}</td>'
+                     f'<td class="num">{_sgn(o.get("chg_pct_1d"), 2, "%")}</td><td{ycls}>{_n(o.get("yld"), 2, "%")}</td>'
+                     f'<td class="num">{_sgn(o.get("dyld_vs_snapshot_bp"))}<br><span class="src">snapshot {_n(o.get("yld_snapshot"), 2, "%")}</span></td>'
+                     f'<td class="num">{_n(o.get("par_mn"), 0)}</td><td><span class="src">{E(o.get("rating_sp") or "")}</span></td></tr>')
+    other_tbl = ("<table><thead><tr><th>Instrument</th><th>Type</th><th>Amt $mn</th><th>Price</th><th>1d</th><th>Yield</th><th>Δ yld vs snapshot</th><th>Principal vs par $mn</th><th>S&amp;P</th></tr></thead>"
+                 f"<tbody>{''.join(orows)}</tbody></table>")
+
+    crows = "".join(f'<tr><td><b>{E(c["name"])}</b><br><span class="src">{E(c["bbg"])}</span></td><td class="num">{_n(c.get("spread_bp"), 0)}</td>'
+                    f'<td class="num">{_sgn(c.get("d_snapshot_bp"))}</td><td class="num">{_n(c.get("ms_desk_0824_bp"), 0)}</td><td class="num">{_sgn(c.get("d_vs_ms_bp"))}</td></tr>' for c in wb["cds"])
+    cds_tbl = f"<table><thead><tr><th>CDS</th><th>Flat spread bp</th><th>Δ vs snapshot</th><th>MS desk 24-Aug bp</th><th>Δ vs MS</th></tr></thead><tbody>{crows}</tbody></table>"
+    erows = "".join(f'<tr><td><b>{E(e["name"])}</b><br><span class="src">{E(e["bbg"])}</span></td><td class="num">{_n(e.get("px"))}</td>'
+                    f'<td class="num">{_sgn(e.get("chg_pct_1d"), 2, "%")}</td><td class="num{" wb-amber" if (e.get("relvol") or 0) >= 1.5 else ""}">{_n(e.get("relvol"), 2, "x")}</td>'
+                    f'<td><span class="src">{E(e.get("why") or "")}</span></td></tr>' for e in wb["equities"])
+    eq_tbl = f"<table><thead><tr><th>Equity</th><th>Price</th><th>1d</th><th>Rel. volume</th><th>Why it matters</th></tr></thead><tbody>{erows}</tbody></table>"
+
+    drows = "".join(f'<tr><td><b>{E(r["ticker"])}</b> <span class="src">{E(r["section"])}</span></td><td>{E(r["bond"])}</td>'
+                    f'<td class="num">{int(r["sources"] or 0)} ({int(r["official_sources"] or 0)})</td><td class="num">{int(r["open_gaps"] or 0)}</td>'
+                    f'<td>{E(r["headline"] or "")}</td></tr>' for r in wb["deal_index"])
+    deal_tbl = f"<table><thead><tr><th>Ticker</th><th>Bond</th><th>Sources (official)</th><th>Open gaps</th><th>Headline</th></tr></thead><tbody>{drows}</tbody></table>"
+    briefing = f"_briefings/{(wb.get('values_asof') or '2026')[:4]}/{wb.get('values_asof')}-ai-credit-live-workbook-dossiers.md"
+
+    return f"""<section>
+ <h2 id="workbook-title">Data-center project bonds — official workbook <span class="src">AI_Credit_Live.xlsx · Daniel Grozdea</span></h2>
+ <p class="sub">The official AI-credit base since 2026-10-16: 27 data-center project bonds (7 IG · 18 HY) in the Barclays IG/HY comp-sheet layout (16-Sep-2026) plus tenant/parent comps, vendor and hyperscaler notes, neocloud converts and loans, CDS flat spreads and the equity tape. Every report in this lane (weekly brief, daily alerts) reads from it. Price in points of par; yield = YTM; spread = OAS; CDS = CDS_FLAT_SPREAD (a different basis from the issuer board's PX_LAST series below); Barclays 15-Sep levels are YTW, so changes since 15-Sep are approximate. Amber = yield ≥ 10% (MS: HY data-center deals get pulled near ~10%); pink = yield up ≥ 25bp since 15-Sep; negative pickup = the project bond trades tighter than the tenant's own unsecured bond.</p>
+ <div class="card"><div class="srow"><span class="chip chip-{chip[0]}"><span class="ci">{chip[1]}</span>values {E(rstate)}</span>
+ <div>{E(wb["values_source"])} · asof <b>{E(wb.get("values_asof") or "—")}</b>{(" · refreshed " + E(wb["refreshed_at"])) if wb.get("refreshed_at") else ""}{(" · " + E(rf.get("detail", ""))) if rf.get("detail") else ""}
+ · imported {E((wb.get("imported_at") or "")[:16])} from <code>{E(wb.get("source_file", ""))}</code> (workbook snapshot ref {E(wb.get("snapshot_ref") or "—")})
+ · <a href="{xlsx_href}">download the workbook</a> (live =BDP formulas when opened in Excel with the Bloomberg add-in) · dossiers: <code>{E(briefing)}</code>{"" if live else " · <b>values are the workbook's cached quotes — run credit_workbook.py --refresh with the terminal up</b>"}</div></div></div>
+ <div class="tiles" style="margin-top:12px">{''.join(tiles)}</div>
+ <div class="card tscroll" style="margin-top:12px">{monitor_tbl}</div>
+ <details class="card"><summary>Terms, call schedule, lease structure and project financials — Barclays Figures 7–9 (15-Sep-2026), static</summary><div class="tscroll">{terms_tbl}</div></details>
+ <details class="card"><summary>Vendor &amp; hyperscaler notes, neocloud converts / HY / loans, tenant comparator bonds ({len(wb["other"])} instruments; snapshot ref {E(wb.get("snapshot_ref") or "—")})</summary><div class="tscroll">{other_tbl}</div></details>
+ <details class="card"><summary>CDS flat spreads (incl. the CRWV 1–10Y curve) vs the workbook snapshot and the MS desk marks of 24-Aug-2026</summary><div class="tscroll">{cds_tbl}</div></details>
+ <details class="card"><summary>Issuer and tenant equities — price, day change, relative volume (amber ≥ 1.5x)</summary><div class="tscroll">{eq_tbl}</div></details>
+ <details class="card"><summary>Deal dossiers — one per bond, built from SEC filings, indentures, company and agency releases; sources counted, gaps listed</summary><div class="tscroll">{deal_tbl}</div><p class="note">Full dossiers (terms, structure, lease, power, construction, covenants, ratings, risks, timeline, sources, open gaps) are archived as a Capstone briefing at <code>{E(briefing)}</code> — searchable with <code>search.py -k briefing</code>. 'Seed, unverified' lines are Barclays comp-sheet leads, not verified facts.</p></details>
+</section>
+"""
+
+
+workbook_html = workbook_section()
 
 CSS = """
 :root{
@@ -613,6 +764,8 @@ ul.watch li:last-child{border-bottom:0}
 footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);color:var(--mut);font-size:12.5px}
 code{background:color-mix(in srgb,var(--card) 55%,var(--paper));border:1px solid var(--line);border-radius:4px;padding:0 5px;font-size:12px}
 .note{font-size:12.5px;color:var(--ink2);margin-top:10px}
+.wb-amber{background:color-mix(in srgb,#e0a106 22%,transparent)} .wb-pink{background:color-mix(in srgb,#d03b8a 18%,transparent)} .wb-neg{color:var(--s3)}
+.workbook-section>h2{font-size:19px;margin-bottom:4px} .workbook-section>.sub{max-width:none}
 """
 
 JS = """
@@ -676,6 +829,8 @@ page = f"""<!doctype html>
 </section>
 
 {alerts_html}
+
+{workbook_html}
 
 <section>
  <h2>Market gauges</h2>

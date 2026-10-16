@@ -121,3 +121,38 @@ Z-spread, size, S&P / Moody's); each CDS = PX_LAST history. Alert rules per tier
 converts 60bp/3σ, CRWV CDS 50bp + 800bp line, ORCL CDS 15bp + 200bp line) — the board instruments are therefore
 also covered by the daily ALERT e-mail. Convertible YTMs are flagged and never compared with straight debt.
 Status 2026-10-14: instruments resolved, no yields yet (Desktop API block) — fills on the first unblocked run.
+
+2026-10-16 review: the retained 2026-10-15 Bloomberg fetch is populated (67 series,
+including 49 bonds and 7 CDS). The weekly brief now reads this separate issuer dataset
+and records its input hash. Fetch success does not establish quote freshness: the xAI
+12.5% 2030 series still ends on 2026-03-04. The brief labels stale/failed issuer
+observations as partial, and the dashboard retains the dated level with a stale label
+and suppresses obsolete daily-change figures in the alerts table. CoreWeave desk CDS
+quotes and the Bloomberg D14 contract remain an explicit convention-reconciliation
+check; convertible yields remain separate from straight-debt yields.
+
+## Official workbook — AI_Credit_Live.xlsx (added 2026-10-16, Felipe: "use o arquivo do Daniel como nossa base de crédito pra frente")
+
+Daniel Grozdea's live Bloomberg workbook (layout = Barclays IG/HY Data Center Comp Sheets, 16-Sep-2026) is the
+OFFICIAL AI-credit base: every report in this lane (Friday brief, daily alerts, the dashboard, ad-hoc answers) reads
+from it. Module: `_wiki/_tools/credit_workbook.py`.
+
+- `--import <xlsx>`  parse (openpyxl, cached values) -> `_data/credit_workbook.json`; copy the file to
+  `_data/credit-monitor/workbook/AI_Credit_Live.xlsx`; write the 27 dossiers as a dated Capstone briefing
+  `_briefings/<year>/<asof>-ai-credit-live-workbook-dossiers.md` (search kind `briefing`); append `workbook/history.jsonl`.
+  Run it whenever Daniel drops a new version in `P:\US Equities\Relatórios para a wiki` (ingest_inbox.py does not route xlsx).
+- `--refresh`  re-pull the SAME Bloomberg fields the sheet formulas use (PX_LAST, YLD_YTM_MID, OAS_SPREAD_MID, CHG_PCT_1D,
+  PX_CLOSE_1D, CDS_FLAT_SPREAD, VOLUME, VOLUME_AVG_30D) through the local Desktop API, recompute the derived columns exactly
+  as the sheet (principal vs par, change since 15-Sep, OAS pickup vs tenant comp, totals), append history + `workbook/snapshots/`.
+  Fail-soft: blocked / absent terminal keeps the previous values and labels them. The xlsx is never written.
+  Called by `credit_alerts.py --fetch` (09:30 / 18:30 lane) and by `refresh_credit_monitor.py` (Friday brief).
+- `--print`  the brief block (`brief_lines()`), embedded in the Friday e-mail after MARKET MOVES and in the alerts e-mail.
+- `--alerts`  the workbook rule layer (`workbook_alerts()`, ids `WB_*`), merged into the market alerts of credit_alerts.py:
+  a project bond crossing the 10% yield line (high), yield +40 / +75bp vs the previous day's snapshot (medium / high),
+  price -3% / -5% on the day (medium / high); CDS flat spread +25 / +75bp (CRWV +50 / +150); equity -10% or -7% on
+  >= 1.5x volume (medium), -15% or -10% on >= 2x (high). Rules only fire on a same-day Bloomberg refresh, never on cached values.
+- Dashboard: section 'Data-center project bonds — official workbook' in the market-monitor view (credit_monitor_view.py
+  routes the `workbook` section key to the `@@WORKBOOK@@` placeholder of monitor.html, above the issuer board).
+- Bases (never mixed): price in points of par; yield = YTM %; spread = OAS bp; CDS = CDS_FLAT_SPREAD bp — NOT the
+  issuer board's PX_LAST CDS series (CRWV 5Y on 2026-10-16: 1,164bp flat vs 469 PX_LAST); Barclays 15-Sep levels are YTW,
+  so changes since 15-Sep are approximate; converts and loans are measured against par for comparability only.

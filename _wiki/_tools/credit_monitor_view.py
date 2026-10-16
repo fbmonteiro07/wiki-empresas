@@ -10,7 +10,7 @@ from funding_common import change, observations
 ROOT = Path(__file__).resolve().parents[2]
 ASSETS = Path(__file__).with_name('credit_monitor_ui')
 FOCUS = ('CRWV', 'ORCL', 'NBIS', 'IREN', 'MSFT', 'AMZN', 'GOOGL', 'META')
-SECTIONS = ('overview', 'alerts', 'market', 'yields', 'relative-spreads', 'counterparty',
+SECTIONS = ('overview', 'alerts', 'workbook', 'market', 'yields', 'relative-spreads', 'counterparty',
             'repricing', 'issuance', 'ledger', 'scoreboard', 'watch')
 COLORS = ('#3869d4', '#d27c39', '#8c5cbe', '#258f83', '#568aa0', '#bf5577', '#738446', '#646bc0')
 E = html.escape
@@ -93,8 +93,13 @@ def enhance(page, deals, market):
         research.append('<details class="research-item" id="research-review"><summary>Latest research review'
                         '<span>' + E(deals['asof']) + '</span></summary><div class="research-body">' + paragraphs
                         + '<details><summary>Sources and dates</summary><ul>' + sources + '</ul></details></div></details>')
+    workbook_html = ''
     for key, content in zip(SECTIONS, sections):
         if key == 'yields':
+            continue
+        if key == 'workbook':
+            # the official workbook (AI_Credit_Live.xlsx) renders in the market-monitor view, above the issuer board
+            workbook_html = '<section id="workbook" class="surface workbook-section" aria-labelledby="workbook-title">' + content + '</section>'
             continue
         title = re.search(r'<h2>(.*?)</h2>', content, re.S)
         label = re.sub('<[^>]+>', '', title[1]) if title else 'Market overview &amp; issuance'
@@ -110,7 +115,7 @@ def enhance(page, deals, market):
         'LEGACY_JS': re.search(r'<script>(.*?)</script>', page, re.S)[1],
         'CSS': (ASSETS / 'monitor.css').read_text(encoding='utf-8'),
         'JS': (ASSETS / 'monitor.js').read_text(encoding='utf-8'),
-        'RESEARCH': ''.join(research), 'RESEARCH_DATE': E(deals['asof']),
+        'RESEARCH': ''.join(research), 'RESEARCH_DATE': E(deals['asof']), 'WORKBOOK': workbook_html,
         'DATA': json_script(data),
     }
     template = (ASSETS / 'monitor.html').read_text(encoding='utf-8')
