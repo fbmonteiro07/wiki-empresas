@@ -1,47 +1,92 @@
 {
-  "asof": "2026-10-16",
-  "latest_reconciliation": "reconciliation-2026-10-14-inbox.md",
+  "asof": "2026-10-17",
+  "latest_reconciliation": "reconciliation-2026-10-16-inbox.md",
   "book": {
     "asof": "2026-07-01",
     "seed": true,
     "positions": 8
   },
   "stats": {
-    "signals": 57,
-    "active": 57,
-    "high": 5,
-    "belief_changes": 2,
-    "focus_names": 39
+    "signals": 66,
+    "active": 66,
+    "high": 8,
+    "belief_changes": 11,
+    "focus_names": 42
   },
   "focus": [
     {
-      "ticker": "META",
-      "focus_score": 91,
+      "ticker": "NVDA",
+      "focus_score": 95,
       "in_book": true,
-      "signal_count": 4,
-      "high_count": 2,
-      "sector": "AI — Hyperscalers & Software",
-      "thesis": "Fastest grower in Mag7 ex-GPU; bear = capital intensity and negative incremental ROIC.",
-      "next_catalyst": "2026-10-21",
+      "signal_count": 6,
+      "high_count": 1,
+      "sector": "AI — Semis & Compute",
+      "thesis": "Full-stack AI-factory platform at +85% rev; debate is demand sustainability vs ASIC erosion.",
+      "next_catalyst": "2026-10-20",
       "why": [
-        "META — derived thesis/debate state changed since the prior daily snapshot",
-        "META — 2026-10-21: Q3'26 PRINT, about a week earlier than normal (JPM desk · Schilsky, 2026-10-13; BofA ·…",
-        "META — house CY27 capex is $28bn (−14%) below the Street; Barclays gives Muse's cost per user"
+        "NVDA — derived thesis/debate state changed since the prior daily snapshot",
+        "NVDA — 2026-10-20: 2026-10-20 to 10-22: NVIDIA GTC Berlin (JPM US Market Intelligence calendar, 09-29/09-30);…",
+        "NVDA — 2026-11-17: CLOSED 2026-09-10 — THE GS COMMUNACOPIA FIRESIDE HAPPENED. OUTCOME: Jensen reaffirmed the…"
       ]
     },
     {
       "ticker": "GOOG",
-      "focus_score": 80,
+      "focus_score": 91,
       "in_book": true,
-      "signal_count": 3,
-      "high_count": 2,
+      "signal_count": 4,
+      "high_count": 3,
       "sector": "AI — Hyperscalers & Software",
       "thesis": "Full-stack compounder (Search +17%, Cloud +82%); debate is valuation and capital intensity, not demand.",
       "next_catalyst": "",
       "why": [
+        "GOOG — derived thesis/debate state changed since the prior daily snapshot",
         "GOOG — 2026 revenue house view is 18% above consensus",
-        "GOOG — 2027 revenue house view is 17% above consensus",
+        "GOOG — 2027 revenue house view is 17% above consensus"
+      ]
+    },
+    {
+      "ticker": "AVGO",
+      "focus_score": 89,
+      "in_book": true,
+      "signal_count": 3,
+      "high_count": 1,
+      "sector": "AI — Semis & Compute",
+      "thesis": "#1 custom-ASIC/TPU partner; binary setup on the \">$100B\" FY27 guide vs $250-300B FY28 (JPM).",
+      "next_catalyst": "",
+      "why": [
+        "AVGO — derived thesis/debate state changed since the prior daily snapshot",
+        "AVGO — house AI-semis revenue ABOVE Goldman's bottom-up AND above BBG total revenue",
         "Celestica (no wiki page) — Bernstein 2027 EPS is +20% above consensus; PT near the Street high"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "focus_score": 89,
+      "in_book": true,
+      "signal_count": 3,
+      "high_count": 1,
+      "sector": "AI — Hyperscalers & Software",
+      "thesis": "AI ARR >$37B/+123%; swing is capex (CY27 ~$276B) vs Azure revenue + OpenAI concentration.",
+      "next_catalyst": "2026-11-17",
+      "why": [
+        "MSFT — derived thesis/debate state changed since the prior daily snapshot",
+        "MSFT — 2026-11-17: 2026-11-17 to 11-20, SF — MSFT IGNITE.",
+        "MSFT and AMZN — the pages were carrying stale PTs (thesis-drift caught by the coverage tables, not by a rating action)"
+      ]
+    },
+    {
+      "ticker": "META",
+      "focus_score": 87,
+      "in_book": true,
+      "signal_count": 3,
+      "high_count": 1,
+      "sector": "AI — Hyperscalers & Software",
+      "thesis": "Fastest grower in Mag7 ex-GPU; bear = capital intensity and negative incremental ROIC.",
+      "next_catalyst": "2026-10-21",
+      "why": [
+        "META — 2026-10-21: Q3'26 PRINT, about a week earlier than normal (JPM desk · Schilsky, 2026-10-13; BofA ·…",
+        "META — house CY27 capex is $28bn (−14%) below the Street; Barclays gives Muse's cost per user",
+        "META — house capex $301bn vs Street $333-337bn CY26-27 (−10%); GS Buy PT $725 sits BELOW the consensus PT"
       ]
     },
     {
@@ -59,33 +104,99 @@
       ]
     },
     {
-      "ticker": "NVDA",
-      "focus_score": 73,
-      "in_book": true,
-      "signal_count": 5,
-      "high_count": 0,
-      "sector": "AI — Semis & Compute",
-      "thesis": "Full-stack AI-factory platform at +85% rev; debate is demand sustainability vs ASIC erosion.",
-      "next_catalyst": "2026-10-20",
-      "why": [
-        "NVDA — 2026-10-20: 2026-10-20 to 10-22: NVIDIA GTC Berlin (JPM US Market Intelligence calendar, 09-29/09-30);…",
-        "NVDA — 2026-11-17: CLOSED 2026-09-10 — THE GS COMMUNACOPIA FIRESIDE HAPPENED. OUTCOME: Jensen reaffirmed the…",
-        "NVDA — 2026-11-23: NVDA investor call (IR) (Rothschild & Co Redburn TMT sales · Rowan Adley, 2026-09-28).…"
-      ]
-    },
-    {
-      "ticker": "MU",
+      "ticker": "LITE",
       "focus_score": 66,
       "in_book": false,
       "signal_count": 3,
       "high_count": 0,
-      "sector": "AI — Semis & Compute",
-      "thesis": "Pure-play on AI memory intensity (HBM sold-out CY26); debate = peak earnings vs run-rate.",
-      "next_catalyst": "2026-12-09",
+      "sector": "Optical / Networking",
+      "thesis": "US photonics pure-play (rev +90%); demand isn't the question, supply/execution is.",
+      "next_catalyst": "2026-11-05",
       "why": [
-        "MU — derived thesis/debate state changed since the prior daily snapshot",
-        "MU / SKHYNIX (memory price path) — Fubon's DRAM contract price falls 16% from the 2Q27 peak while Micron says supply stays constrained through CY28",
-        "MU — FY27 consensus is post-print on the quarter but not on the year; capex consensus sits below the implied floor"
+        "LITE — derived thesis/debate state changed since the prior daily snapshot",
+        "LITE / COHR (optics TAM) — Bernstein's transceiver market is 2.3x Goldman's for 2028; no \"2028 pause\"",
+        "LITE — 2026-11-05: F1Q27 earnings (date per Deutsche Bank · Conti, 2026-10-07; confirm against the LITE IR…"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "focus_score": 64,
+      "in_book": false,
+      "signal_count": 2,
+      "high_count": 0,
+      "sector": "AI — Semis & Compute",
+      "thesis": "AI-infra long with a server-CPU leg; risk concentrated in MI450 execution.",
+      "next_catalyst": "",
+      "why": [
+        "AMD — derived thesis/debate state changed since the prior daily snapshot",
+        "Celestica (no wiki page) — Bernstein 2027 EPS is +20% above consensus; PT near the Street high"
+      ]
+    },
+    {
+      "ticker": "CSCO",
+      "focus_score": 64,
+      "in_book": false,
+      "signal_count": 2,
+      "high_count": 0,
+      "sector": "Optical / Networking",
+      "thesis": "Incumbent re-rating to AI-infra (orders +35%); bear prefers ANET, flags pull-forward.",
+      "next_catalyst": "",
+      "why": [
+        "CSCO — derived thesis/debate state changed since the prior daily snapshot",
+        "CSCO / GLW — Bernstein's two Market-Performs are at or near the Street LOW on PT, with estimates in line"
+      ]
+    },
+    {
+      "ticker": "ORCL",
+      "focus_score": 64,
+      "in_book": false,
+      "signal_count": 2,
+      "high_count": 0,
+      "sector": "AI — Hyperscalers & Software",
+      "thesis": "Turned into an AI-infra hyperscaler (RPO $638B/+363%); bear = dot-com-peak capex/sales + dilution.",
+      "next_catalyst": "2026-10-28",
+      "why": [
+        "ORCL — derived thesis/debate state changed since the prior daily snapshot",
+        "ORCL — 2026-10-28: ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as \"Investor Day in…"
+      ]
+    },
+    {
+      "ticker": "ANTHROPIC",
+      "focus_score": 62,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "AI labs (private)",
+      "thesis": "Private frontier lab (Claude); enterprise/coding leadership + Amazon/Google compute; $65B+ ARR (conflict-flagged vs >$70B, bases unknown pre-S1). IPO window lat",
+      "next_catalyst": "",
+      "why": [
+        "ANTHROPIC — derived thesis/debate state changed since the prior daily snapshot"
+      ]
+    },
+    {
+      "ticker": "ARM",
+      "focus_score": 62,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Analog & processors",
+      "thesis": "Upstream IP toll on every SoC; ARMv9/CSS royalty + >$100B server-CPU TAM; own-silicon pivot the risk. 20-F filer.",
+      "next_catalyst": "",
+      "why": [
+        "ARM — derived thesis/debate state changed since the prior daily snapshot"
+      ]
+    },
+    {
+      "ticker": "OPENAI",
+      "focus_score": 62,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "AI labs (private)",
+      "thesis": "Private frontier lab (ChatGPT/GPT); scale + distribution vs cash burn + sub-50% share; Microsoft-anchored. No public financials.",
+      "next_catalyst": "",
+      "why": [
+        "OPENAI — derived thesis/debate state changed since the prior daily snapshot"
       ]
     },
     {
@@ -119,20 +230,6 @@
       ]
     },
     {
-      "ticker": "MSFT",
-      "focus_score": 52,
-      "in_book": true,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "AI — Hyperscalers & Software",
-      "thesis": "AI ARR >$37B/+123%; swing is capex (CY27 ~$276B) vs Azure revenue + OpenAI concentration.",
-      "next_catalyst": "2026-11-17",
-      "why": [
-        "MSFT — 2026-11-17: 2026-11-17 to 11-20, SF — MSFT IGNITE.",
-        "MSFT and AMZN — the pages were carrying stale PTs (thesis-drift caught by the coverage tables, not by a rating action)"
-      ]
-    },
-    {
       "ticker": "CRWV",
       "focus_score": 51,
       "in_book": false,
@@ -143,19 +240,6 @@
       "next_catalyst": "",
       "why": [
         "CRWV — 2026 EPS house view is 16% below consensus"
-      ]
-    },
-    {
-      "ticker": "ORCL",
-      "focus_score": 50,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "AI — Hyperscalers & Software",
-      "thesis": "Turned into an AI-infra hyperscaler (RPO $638B/+363%); bear = dot-com-peak capex/sales + dilution.",
-      "next_catalyst": "2026-10-28",
-      "why": [
-        "ORCL — 2026-10-28: ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as \"Investor Day in…"
       ]
     },
     {
@@ -209,20 +293,6 @@
       "next_catalyst": "2026-11-12",
       "why": [
         "SPCX — 2026-11-12: OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.…"
-      ]
-    },
-    {
-      "ticker": "AVGO",
-      "focus_score": 42,
-      "in_book": true,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "AI — Semis & Compute",
-      "thesis": "#1 custom-ASIC/TPU partner; binary setup on the \">$100B\" FY27 guide vs $250-300B FY28 (JPM).",
-      "next_catalyst": "",
-      "why": [
-        "AVGO — house AI-semis revenue ABOVE Goldman's bottom-up AND above BBG total revenue",
-        "Celestica (no wiki page) — Bernstein 2027 EPS is +20% above consensus; PT near the Street high"
       ]
     },
     {
@@ -280,17 +350,17 @@
       ]
     },
     {
-      "ticker": "LITE",
+      "ticker": "MU",
       "focus_score": 37,
       "in_book": false,
       "signal_count": 2,
       "high_count": 0,
-      "sector": "Optical / Networking",
-      "thesis": "US photonics pure-play (rev +90%); demand isn't the question, supply/execution is.",
-      "next_catalyst": "2026-11-05",
+      "sector": "AI — Semis & Compute",
+      "thesis": "Pure-play on AI memory intensity (HBM sold-out CY26); debate = peak earnings vs run-rate.",
+      "next_catalyst": "2026-12-09",
       "why": [
-        "LITE / COHR (optics TAM) — Bernstein's transceiver market is 2.3x Goldman's for 2028; no \"2028 pause\"",
-        "LITE — 2026-11-05: F1Q27 earnings (date per Deutsche Bank · Conti, 2026-10-07; confirm against the LITE IR…"
+        "MU / SKHYNIX (memory price path) — Fubon's DRAM contract price falls 16% from the 2Q27 peak while Micron says supply stays constrained through CY28",
+        "MU — FY27 consensus is post-print on the quarter but not on the year; capex consensus sits below the implied floor"
       ]
     },
     {
@@ -319,19 +389,6 @@
       "why": [
         "FLEX — 2026-11-10: INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail…",
         "FLEX — 2026-10-27: Celestica (CLS) analyst day: the EMS peer's rack/switching numbers (Bernstein top pick;…"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "focus_score": 35,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "AI — Semis & Compute",
-      "thesis": "AI-infra long with a server-CPU leg; risk concentrated in MI450 execution.",
-      "next_catalyst": "",
-      "why": [
-        "Celestica (no wiki page) — Bernstein 2027 EPS is +20% above consensus; PT near the Street high"
       ]
     },
     {
@@ -371,19 +428,6 @@
       "next_catalyst": "",
       "why": [
         "CIEN — Outperform with a PT 15% below consensus, on a PT basis that mislabels the year"
-      ]
-    },
-    {
-      "ticker": "CSCO",
-      "focus_score": 35,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Optical / Networking",
-      "thesis": "Incumbent re-rating to AI-infra (orders +35%); bear prefers ANET, flags pull-forward.",
-      "next_catalyst": "",
-      "why": [
-        "CSCO / GLW — Bernstein's two Market-Performs are at or near the Street LOW on PT, with estimates in line"
       ]
     },
     {
@@ -545,82 +589,328 @@
   ],
   "signals": [
     {
-      "id": "beli-5bc412cec124",
-      "asof": "2026-10-16",
+      "id": "beli-8e1538e21a05",
+      "asof": "2026-10-17",
       "source_date": "2026-10-16",
       "type": "narrative_shift",
       "priority": "high",
       "score": 80,
-      "title": "META — derived thesis/debate state changed since the prior daily snapshot",
+      "title": "AVGO — derived thesis/debate state changed since the prior daily snapshot",
       "tickers": [
-        "META"
+        "AVGO"
       ],
       "in_book": [
-        "META"
+        "AVGO"
       ],
       "impact": "high",
       "urgency": "immediate",
       "confidence": "high",
-      "why_now": "preview sweep (Outlook since 10-01 + official model, folded from the Capstone META 3Q26 preview of 2026-10-16). Added: 1 Current-state block (print date, BofA / DB / JPM / Redburn / MS / UBS / Barclays / GS, desk bogey table, Muse datapoints), 1 Catalysts bullet, 8 Full-log rows, 1 Sinal update, 1 Sources entry, the Street-posture board update. SUPERSEDED (thesis drift): ① Capstone house model 2026-06-11 vintage → 2026-10-12 vintage. Old table (2025E / 2026E / 2027E): revenue $201 / $257 / $313bn; EPS $29.06 /…",
+      "why_now": "weekly AI credit review: Weekly credit ledger now links the already-recorded ANTH-AVGO-CHIP-FIN-20261005 (FT / Michelle Chan, October 5): $60bn package, ~$42bn supported senior / ~$18bn unguaranteed junior, reported bank commitments and syndication, no verified closing. Original October 12 page/timeline terms unchanged; no new commitment counted. Restored the October 9 changelog bullet from its accidental inline placement without changing its content. Review evidence.",
       "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
-      "action": "Re-grade the META thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "action": "Re-grade the AVGO thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "NVDA",
+          "relation": "competitor",
+          "detail": "merchant vs custom ASIC",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "networking",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "customer",
+          "detail": "custom ASIC (TPU)",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "META",
+          "relation": "customer",
+          "detail": "custom ASIC",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "custom ASIC",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "TSM",
+          "relation": "supplier",
+          "detail": "foundry",
+          "from": "AVGO",
+          "in_book": true
+        },
+        {
+          "ticker": "MRVL",
+          "relation": "competitor",
+          "detail": "custom ASIC",
+          "from": "AVGO",
+          "in_book": false
+        }
+      ],
+      "source": "AVGO page Changelog 2026-10-16",
+      "evidence_paths": [
+        "AVGO.md"
+      ],
+      "evidence_anchor": "weekly AI credit review: Weekly credit ledger now links the already-recorded ANTH-AVGO-CHIP-FIN-20261005 (FT / Michelle Chan, October 5): $60bn package, ~$42bn supported senior / ~$18bn unguaranteed junior, reported bank commitments and syndication, no verified closing. Original October 12 page/timeline terms unchanged; no new commitment counted. Restored the October 9 changelog bullet from its accidental inline placement without changing its content. Review evidence.",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "beli-2945a6e2b4e1",
+      "asof": "2026-10-17",
+      "source_date": "2026-10-16",
+      "type": "narrative_shift",
+      "priority": "high",
+      "score": 80,
+      "title": "GOOG — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "GOOG"
+      ],
+      "in_book": [
+        "GOOG"
+      ],
+      "impact": "high",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "verification (content double-check): cloud-checks Full-log row — the 04-09 Epic Games quote was a back-translation of the compilation's Portuguese (\"a good part of production\"); replaced with the primary transcript's wording (\"a big chunk of their production infrastructure to Google\", cause = no Bedrock tokens) and linked the primary; flagged the 10-08 quotes as translations (primary not on disk).",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the GOOG thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
       "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
       "readthrough": [
         {
           "ticker": "AVGO",
           "relation": "supplier",
-          "detail": "custom ASIC",
-          "from": "META",
+          "detail": "custom ASIC (TPU)",
+          "from": "GOOG",
           "in_book": true
         },
         {
           "ticker": "NVDA",
           "relation": "supplier",
           "detail": "GPUs",
-          "from": "META",
+          "from": "GOOG",
+          "in_book": true
+        },
+        {
+          "ticker": "SNOW",
+          "relation": "competitor",
+          "detail": "warehouse vs BigQuery",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "ANTHROPIC",
+          "relation": "customer",
+          "detail": "TPU compute",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "BE",
+          "relation": "supplier",
+          "detail": "on-site fuel cells",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "CIEN",
+          "relation": "supplier",
+          "detail": "DCI/optical",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "COHR",
+          "relation": "supplier",
+          "detail": "optical",
+          "from": "GOOG",
+          "in_book": false
+        }
+      ],
+      "source": "GOOG page Changelog 2026-10-16",
+      "evidence_paths": [
+        "GOOG.md"
+      ],
+      "evidence_anchor": "verification (content double-check): cloud-checks Full-log row — the 04-09 Epic Games quote was a back-translation of the compilation's Portuguese (\"a good part of production\"); replaced with the primary transcript's wording (\"a big chunk of their production infrastructure to Google\", cause = no Bedrock tokens) and linked the primary; flagged the 10-08 quotes as translations (primary not on disk).",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "beli-f59d5f82aa4d",
+      "asof": "2026-10-17",
+      "source_date": "2026-10-02",
+      "type": "narrative_shift",
+      "priority": "high",
+      "score": 80,
+      "title": "MSFT — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "MSFT"
+      ],
+      "in_book": [
+        "MSFT"
+      ],
+      "impact": "high",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "ingest (Notion, 2026-10-02DeutscheBankPublic-Cloud-and-AI-expert-call-Archera-Aran-Khanna.md): added Archera-panel Azure commit/consumption marks (36.5→39.5 / 39.5→41), $75M Rubin MACC example, GPU MAC/PPA gate and January convertibility change (Intra-quarter). Expert voice; nothing superseded — adds to the 04-09 / 07-13 Archera entries.",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the MSFT thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "supplier",
+          "detail": "custom ASIC",
+          "from": "MSFT",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "MSFT",
+          "in_book": true
+        },
+        {
+          "ticker": "MDB",
+          "relation": "competitor",
+          "detail": "Atlas vs Cosmos DB",
+          "from": "MSFT",
+          "in_book": false
+        },
+        {
+          "ticker": "OKTA",
+          "relation": "competitor",
+          "detail": "IAM (Entra bundling)",
+          "from": "MSFT",
+          "in_book": false
+        },
+        {
+          "ticker": "SNOW",
+          "relation": "competitor",
+          "detail": "warehouse vs Fabric",
+          "from": "MSFT",
+          "in_book": false
+        },
+        {
+          "ticker": "AAOI",
+          "relation": "supplier",
+          "detail": "optical transceivers",
+          "from": "MSFT",
+          "in_book": false
+        },
+        {
+          "ticker": "ALAB",
+          "relation": "supplier",
+          "detail": "scale-up fabric",
+          "from": "MSFT",
+          "in_book": false
+        }
+      ],
+      "source": "MSFT page Changelog 2026-10-02",
+      "evidence_paths": [
+        "MSFT.md"
+      ],
+      "evidence_anchor": "ingest (Notion, 2026-10-02DeutscheBankPublic-Cloud-and-AI-expert-call-Archera-Aran-Khanna.md): added Archera-panel Azure commit/consumption marks (36.5→39.5 / 39.5→41), $75M Rubin MACC example, GPU MAC/PPA gate and January convertibility change (Intra-quarter). Expert voice; nothing superseded — adds to the 04-09 / 07-13 Archera entries.",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "beli-14f33d04fe0c",
+      "asof": "2026-10-17",
+      "source_date": "2026-10-16",
+      "type": "narrative_shift",
+      "priority": "high",
+      "score": 80,
+      "title": "NVDA — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "NVDA"
+      ],
+      "in_book": [
+        "NVDA"
+      ],
+      "impact": "high",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "run-inbox: added Jefferies · Curtis et al. \"OCP Takeaways - Optical Innovation Accelerating\" (2026-10-16) datapoints (1 Debate block, 1 Q3 FY27 Full-log row, 1 Sources link). MaxLPS 40% was already on the page (Information / GS conf, 09-16/09-20), so only Jefferies' \"meaningful potential offset\" view was added and the claim stays NOT adopted. USFP is net-new. Nothing superseded.",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the NVDA thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "competitor",
+          "detail": "merchant vs custom ASIC",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "GPUs",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "customer",
+          "detail": "GPUs",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "META",
+          "relation": "customer",
+          "detail": "GPUs",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "GPUs",
+          "from": "NVDA",
+          "in_book": true
+        },
+        {
+          "ticker": "TSM",
+          "relation": "supplier",
+          "detail": "foundry N3/N2 + CoWoS",
+          "from": "NVDA",
           "in_book": true
         },
         {
           "ticker": "AMD",
-          "relation": "supplier",
-          "detail": "MI GPUs",
-          "from": "META",
-          "in_book": false
-        },
-        {
-          "ticker": "GLW",
-          "relation": "supplier",
-          "detail": "optical fiber (LTA)",
-          "from": "META",
-          "in_book": false
-        },
-        {
-          "ticker": "SNDK",
-          "relation": "supplier",
-          "detail": "NAND/SSD",
-          "from": "META",
-          "in_book": false
-        },
-        {
-          "ticker": "STX",
-          "relation": "supplier",
-          "detail": "nearline HDD",
-          "from": "META",
-          "in_book": false
-        },
-        {
-          "ticker": "WDC",
-          "relation": "supplier",
-          "detail": "nearline HDD",
-          "from": "META",
+          "relation": "competitor",
+          "detail": "AI accelerators",
+          "from": "NVDA",
           "in_book": false
         }
       ],
-      "source": "META page Changelog 2026-10-16",
+      "source": "NVDA page Changelog 2026-10-16",
       "evidence_paths": [
-        "META.md"
+        "NVDA.md"
       ],
-      "evidence_anchor": "preview sweep (Outlook since 10-01 + official model, folded from the Capstone META 3Q26 preview of 2026-10-16). Added: 1 Current-state block (print date, BofA / DB / JPM / Redburn / MS / UBS / Barclays / GS, desk bogey table, Muse datapoints), 1 Catalysts bullet, 8 Full-log rows, 1 Sinal update, 1 Sources entry, the Street-posture board update. SUPERSEDED (thesis drift): ① Capstone house model 2026-06-11 vintage → 2026-10-12 vintage. Old table (2025E / 2026E / 2027E): revenue $201 / $257 / $313bn; EPS $29.06 /…",
+      "evidence_anchor": "run-inbox: added Jefferies · Curtis et al. \"OCP Takeaways - Optical Innovation Accelerating\" (2026-10-16) datapoints (1 Debate block, 1 Q3 FY27 Full-log row, 1 Sources link). MaxLPS 40% was already on the page (Information / GS conf, 09-16/09-20), so only Jefferies' \"meaningful potential offset\" view was added and the claim stays NOT adopted. USFP is net-new. Nothing superseded.",
       "origin": "belief_diff",
       "feedback": "",
       "feedback_note": "",
@@ -628,7 +918,7 @@
     },
     {
       "id": "cata-1016fc453b03",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-10-21",
       "event_date": "2026-10-21",
       "type": "catalyst",
@@ -712,7 +1002,7 @@
     },
     {
       "id": "esti-d23368562caf",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-10-16",
       "type": "model_check",
       "priority": "high",
@@ -801,7 +1091,7 @@
     },
     {
       "id": "esti-66b1bc69bfa7",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-10-16",
       "type": "model_check",
       "priority": "high",
@@ -890,7 +1180,7 @@
     },
     {
       "id": "esti-55abe804aef0",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-10-16",
       "type": "model_check",
       "priority": "high",
@@ -943,80 +1233,504 @@
       "hidden": false
     },
     {
-      "id": "beli-68028b5092a9",
-      "asof": "2026-10-16",
+      "id": "beli-b4f4ecff0904",
+      "asof": "2026-10-17",
       "source_date": "2026-10-16",
       "type": "narrative_shift",
       "priority": "medium",
       "score": 62,
-      "title": "MU — derived thesis/debate state changed since the prior daily snapshot",
+      "title": "AMD — derived thesis/debate state changed since the prior daily snapshot",
       "tickers": [
-        "MU"
+        "AMD"
       ],
       "in_book": [],
       "impact": "medium",
       "urgency": "immediate",
       "confidence": "high",
-      "why_now": "verification (transcription QA): 'Semi-Con' garble inside the host's new-entrant quote rewritten as SEMICON [transcribed \"Semi-Con\"]; speaker status corrected — only the host (Arcuri) is CONFIRMED from the OpenExchange/Outlook record, Satya Kumar is identified by first name + the Micron IR title on this wiki (the invite names no Micron speaker); the ~12bn Gb CY27 reading of UBS's \"12 million gigabytes\" now marked explicitly as a Capstone inference. All other quotes, figures and host-vs-IR /…",
+      "why_now": "verification (transcription QA): the on-disk check narrowed — the Q1 FY26 call (2026-05-06) does contain \"sold out\" (an analyst's \"compute essentially sold out\", about Instinct), but no AMD \"Venice sold out\" statement; the relay stays second-hand. Quote re-checked against the BTGP transcript — matches; no other change.",
       "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
-      "action": "Re-grade the MU thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "action": "Re-grade the AMD thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
       "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
       "readthrough": [
         {
+          "ticker": "NVDA",
+          "relation": "competitor",
+          "detail": "AI accelerators",
+          "from": "AMD",
+          "in_book": true
+        },
+        {
+          "ticker": "META",
+          "relation": "customer",
+          "detail": "MI GPUs",
+          "from": "AMD",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "MI GPUs",
+          "from": "AMD",
+          "in_book": true
+        },
+        {
+          "ticker": "TSM",
+          "relation": "supplier",
+          "detail": "foundry",
+          "from": "AMD",
+          "in_book": true
+        },
+        {
+          "ticker": "INTC",
+          "relation": "competitor",
+          "detail": "server CPU",
+          "from": "AMD",
+          "in_book": false
+        },
+        {
+          "ticker": "ARM",
+          "relation": "supplier",
+          "detail": "IP",
+          "from": "AMD",
+          "in_book": false
+        },
+        {
+          "ticker": "CDNS",
+          "relation": "supplier",
+          "detail": "EDA",
+          "from": "AMD",
+          "in_book": false
+        }
+      ],
+      "source": "AMD page Changelog 2026-10-16",
+      "evidence_paths": [
+        "AMD.md"
+      ],
+      "evidence_anchor": "verification (transcription QA): the on-disk check narrowed — the Q1 FY26 call (2026-05-06) does contain \"sold out\" (an analyst's \"compute essentially sold out\", about Instinct), but no AMD \"Venice sold out\" statement; the relay stays second-hand. Quote re-checked against the BTGP transcript — matches; no other change.",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "beli-dfc42db7de52",
+      "asof": "2026-10-17",
+      "source_date": "2026-10-16",
+      "type": "narrative_shift",
+      "priority": "medium",
+      "score": 62,
+      "title": "ANTHROPIC — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "ANTHROPIC"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "weekly AI credit review: Weekly credit ledger now links existing ANTH-AVGO-CHIP-FIN-20261005 after reviewing all three FT / Michelle Chan October 5 archive pages. $60bn remains reported financing with senior syndication and bank commitments, not verified funded debt. Optional Anthropic convertibles are not added to that total. Existing October 12 page/timeline terms and private-company status unchanged. Review evidence.",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the ANTHROPIC thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "supplier",
+          "detail": "AWS Trainium compute",
+          "from": "ANTHROPIC",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "supplier",
+          "detail": "TPU compute",
+          "from": "ANTHROPIC",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "ANTHROPIC",
+          "in_book": true
+        },
+        {
+          "ticker": "OPENAI",
+          "relation": "competitor",
+          "detail": "frontier models",
+          "from": "ANTHROPIC",
+          "in_book": false
+        },
+        {
+          "ticker": "NSCALE",
+          "relation": "supplier",
+          "detail": "neocloud compute ($44.6bn, Monarch 460 MW)",
+          "from": "ANTHROPIC",
+          "in_book": false
+        }
+      ],
+      "source": "ANTHROPIC page Changelog 2026-10-16",
+      "evidence_paths": [
+        "ANTHROPIC.md"
+      ],
+      "evidence_anchor": "weekly AI credit review: Weekly credit ledger now links existing ANTH-AVGO-CHIP-FIN-20261005 after reviewing all three FT / Michelle Chan October 5 archive pages. $60bn remains reported financing with senior syndication and bank commitments, not verified funded debt. Optional Anthropic convertibles are not added to that total. Existing October 12 page/timeline terms and private-company status unchanged. Review evidence.",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "beli-ef396909cf18",
+      "asof": "2026-10-17",
+      "source_date": "2026-10-16",
+      "type": "narrative_shift",
+      "priority": "medium",
+      "score": 62,
+      "title": "ARM — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "ARM"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "run-inbox: added Jefferies · Curtis et al. \"OCP Takeaways - Optical Innovation Accelerating\" (2026-10-16) datapoints (1 Debate bullet, 1 Full-log row, 1 Sources link). Nothing superseded.",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the ARM thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "AAPL",
+          "relation": "customer",
+          "detail": "IP",
+          "from": "ARM",
+          "in_book": true
+        },
+        {
           "ticker": "AVGO",
           "relation": "customer",
-          "detail": "HBM",
-          "from": "MU",
+          "detail": "IP",
+          "from": "ARM",
           "in_book": true
         },
         {
           "ticker": "NVDA",
           "relation": "customer",
-          "detail": "HBM/LPDDR",
-          "from": "MU",
+          "detail": "CPU IP",
+          "from": "ARM",
           "in_book": true
-        },
-        {
-          "ticker": "SKHYNIX",
-          "relation": "competitor",
-          "detail": "HBM",
-          "from": "MU",
-          "in_book": false
-        },
-        {
-          "ticker": "AMAT",
-          "relation": "supplier",
-          "detail": "WFE",
-          "from": "MU",
-          "in_book": false
         },
         {
           "ticker": "AMD",
           "relation": "customer",
-          "detail": "HBM",
-          "from": "MU",
+          "detail": "IP",
+          "from": "ARM",
           "in_book": false
         },
         {
-          "ticker": "ASML",
+          "ticker": "CDNS",
           "relation": "supplier",
-          "detail": "litho",
-          "from": "MU",
+          "detail": "EDA",
+          "from": "ARM",
           "in_book": false
         },
         {
-          "ticker": "KLAC",
-          "relation": "supplier",
-          "detail": "process control",
-          "from": "MU",
+          "ticker": "MEDIATEK",
+          "relation": "customer",
+          "detail": "IP",
+          "from": "ARM",
+          "in_book": false
+        },
+        {
+          "ticker": "QCOM",
+          "relation": "customer",
+          "detail": "CPU IP",
+          "from": "ARM",
           "in_book": false
         }
       ],
-      "source": "MU page Changelog 2026-10-16",
+      "source": "ARM page Changelog 2026-10-16",
       "evidence_paths": [
-        "MU.md"
+        "ARM.md"
       ],
-      "evidence_anchor": "verification (transcription QA): 'Semi-Con' garble inside the host's new-entrant quote rewritten as SEMICON [transcribed \"Semi-Con\"]; speaker status corrected — only the host (Arcuri) is CONFIRMED from the OpenExchange/Outlook record, Satya Kumar is identified by first name + the Micron IR title on this wiki (the invite names no Micron speaker); the ~12bn Gb CY27 reading of UBS's \"12 million gigabytes\" now marked explicitly as a Capstone inference. All other quotes, figures and host-vs-IR /…",
+      "evidence_anchor": "run-inbox: added Jefferies · Curtis et al. \"OCP Takeaways - Optical Innovation Accelerating\" (2026-10-16) datapoints (1 Debate bullet, 1 Full-log row, 1 Sources link). Nothing superseded.",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "beli-88f364357553",
+      "asof": "2026-10-17",
+      "source_date": "2026-10-16",
+      "type": "narrative_shift",
+      "priority": "medium",
+      "score": 62,
+      "title": "CSCO — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "CSCO"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "run-inbox: added Jefferies · Curtis et al. \"OCP Takeaways - Optical Innovation Accelerating\" (2026-10-16) datapoints (1 Bull sub-bullet, 1 log row, 1 Sources link). Nothing superseded.",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the CSCO thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "ANET",
+          "relation": "competitor",
+          "detail": "AI networking",
+          "from": "CSCO",
+          "in_book": false
+        },
+        {
+          "ticker": "DDOG",
+          "relation": "competitor",
+          "detail": "observability vs Splunk",
+          "from": "CSCO",
+          "in_book": false
+        },
+        {
+          "ticker": "DT",
+          "relation": "competitor",
+          "detail": "observability vs Splunk",
+          "from": "CSCO",
+          "in_book": false
+        },
+        {
+          "ticker": "ESTC",
+          "relation": "competitor",
+          "detail": "SIEM/logs vs Splunk",
+          "from": "CSCO",
+          "in_book": false
+        }
+      ],
+      "source": "CSCO page Changelog 2026-10-16",
+      "evidence_paths": [
+        "CSCO.md"
+      ],
+      "evidence_anchor": "run-inbox: added Jefferies · Curtis et al. \"OCP Takeaways - Optical Innovation Accelerating\" (2026-10-16) datapoints (1 Bull sub-bullet, 1 log row, 1 Sources link). Nothing superseded.",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "beli-76b28b52cf6c",
+      "asof": "2026-10-17",
+      "source_date": "2026-10-16",
+      "type": "narrative_shift",
+      "priority": "medium",
+      "score": 62,
+      "title": "LITE — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "LITE"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "run-inbox: added Jefferies · Curtis et al. \"OCP Takeaways - Optical Innovation Accelerating\" (2026-10-16) datapoints (1 Debate block, 1 intra-quarter log row, 1 Sources link). The 80M 1.6T C27 units match the 09-24 model (80M+), so this is a reiteration. Nothing superseded.",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the LITE thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": true
+        },
+        {
+          "ticker": "COHR",
+          "relation": "competitor",
+          "detail": "optical/InP",
+          "from": "LITE",
+          "in_book": false
+        },
+        {
+          "ticker": "AIXA",
+          "relation": "supplier",
+          "detail": "MOCVD tools",
+          "from": "LITE",
+          "in_book": false
+        },
+        {
+          "ticker": "ANET",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": false
+        }
+      ],
+      "source": "LITE page Changelog 2026-10-16",
+      "evidence_paths": [
+        "LITE.md"
+      ],
+      "evidence_anchor": "run-inbox: added Jefferies · Curtis et al. \"OCP Takeaways - Optical Innovation Accelerating\" (2026-10-16) datapoints (1 Debate block, 1 intra-quarter log row, 1 Sources link). The 80M 1.6T C27 units match the 09-24 model (80M+), so this is a reiteration. Nothing superseded.",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "beli-b298218f87f5",
+      "asof": "2026-10-17",
+      "source_date": "2026-10-16",
+      "type": "narrative_shift",
+      "priority": "medium",
+      "score": 62,
+      "title": "OPENAI — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "OPENAI"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "verification (content double-check): cloud-checks Full-log row item (2) — the Archera 10-02 \"Codex and GPT tokens, 5.5 onward\" quote was a back-translation of the compilation's Portuguese; replaced with the primary transcript's wording, linked the primary, and added the same call's \"11%, 12%\" Bedrock share / \"2-horse race\" lines that corroborate the 10-08 item (10-08 primary not on disk). Item (3): the US$24bn / ~7% figure is Microsoft's own FY26 10-K disclosure relayed by UBS (07-30 callback), now labelled as…",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the OPENAI thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "MSFT",
+          "relation": "supplier",
+          "detail": "Azure compute",
+          "from": "OPENAI",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "OPENAI",
+          "in_book": true
+        },
+        {
+          "ticker": "ANTHROPIC",
+          "relation": "competitor",
+          "detail": "frontier models",
+          "from": "OPENAI",
+          "in_book": false
+        },
+        {
+          "ticker": "AMD",
+          "relation": "supplier",
+          "detail": "MI GPUs",
+          "from": "OPENAI",
+          "in_book": false
+        },
+        {
+          "ticker": "CRWV",
+          "relation": "supplier",
+          "detail": "neocloud compute",
+          "from": "OPENAI",
+          "in_book": false
+        },
+        {
+          "ticker": "NBIS",
+          "relation": "supplier",
+          "detail": "neocloud compute",
+          "from": "OPENAI",
+          "in_book": false
+        },
+        {
+          "ticker": "ORCL",
+          "relation": "supplier",
+          "detail": "OCI compute",
+          "from": "OPENAI",
+          "in_book": false
+        }
+      ],
+      "source": "OPENAI page Changelog 2026-10-16",
+      "evidence_paths": [
+        "OPENAI.md"
+      ],
+      "evidence_anchor": "verification (content double-check): cloud-checks Full-log row item (2) — the Archera 10-02 \"Codex and GPT tokens, 5.5 onward\" quote was a back-translation of the compilation's Portuguese; replaced with the primary transcript's wording, linked the primary, and added the same call's \"11%, 12%\" Bedrock share / \"2-horse race\" lines that corroborate the 10-08 item (10-08 primary not on disk). Item (3): the US$24bn / ~7% figure is Microsoft's own FY26 10-K disclosure relayed by UBS (07-30 callback), now labelled as…",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "beli-5aa26bdf7019",
+      "asof": "2026-10-17",
+      "source_date": "2026-10-16",
+      "type": "narrative_shift",
+      "priority": "medium",
+      "score": 62,
+      "title": "ORCL — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "ORCL"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "weekly AI credit review: Added MS October 16 credit caution, dated yield/CDS marks, Analyst Day watch and UBS Jupiter request relay. Prior October 8 unconfirmed chip-lease status retained in ledger history; no funded deal, vendor guarantee or rating action inferred. Restored the October 9 changelog bullet from its accidental inline placement without changing its content. Review evidence.",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the ORCL thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "supplier",
+          "detail": "networking",
+          "from": "ORCL",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "ORCL",
+          "in_book": true
+        },
+        {
+          "ticker": "MDB",
+          "relation": "competitor",
+          "detail": "operational database",
+          "from": "ORCL",
+          "in_book": false
+        },
+        {
+          "ticker": "AMD",
+          "relation": "supplier",
+          "detail": "MI GPUs",
+          "from": "ORCL",
+          "in_book": false
+        },
+        {
+          "ticker": "OPENAI",
+          "relation": "customer",
+          "detail": "OCI compute",
+          "from": "ORCL",
+          "in_book": false
+        }
+      ],
+      "source": "ORCL page Changelog 2026-10-16",
+      "evidence_paths": [
+        "ORCL.md"
+      ],
+      "evidence_anchor": "weekly AI credit review: Added MS October 16 credit caution, dated yield/CDS marks, Analyst Day watch and UBS Jupiter request relay. Prior October 8 unconfirmed chip-lease status retained in ledger history; no funded deal, vendor guarantee or rating action inferred. Restored the October 9 changelog bullet from its accidental inline placement without changing its content. Review evidence.",
       "origin": "belief_diff",
       "feedback": "",
       "feedback_note": "",
@@ -1024,7 +1738,7 @@
     },
     {
       "id": "cata-68c774eb3829",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-10-23",
       "event_date": "2026-10-23",
       "type": "catalyst",
@@ -1073,7 +1787,7 @@
     },
     {
       "id": "cata-f2d225a6997f",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-10-20",
       "event_date": "2026-10-20",
       "type": "catalyst",
@@ -1156,9 +1870,9 @@
       "hidden": false
     },
     {
-      "id": "data-d55c42d404e3",
-      "asof": "2026-10-16",
-      "source_date": "2026-10-16",
+      "id": "data-4bfbdbaab87f",
+      "asof": "2026-10-17",
+      "source_date": "2026-10-17",
       "type": "data_gap",
       "priority": "medium",
       "score": 54,
@@ -1175,7 +1889,7 @@
       "action": "Run the merge-safe Bloomberg estimate fetch for NOK, then rebuild the snapshot and Analyst Inbox.",
       "falsifier": "A valid, current estimate record already exists under a different Bloomberg identifier.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-10-16",
+      "source": "Wiki remediation worklist 2026-10-17",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -1186,9 +1900,9 @@
       "hidden": false
     },
     {
-      "id": "data-b1df6e3844f1",
-      "asof": "2026-10-16",
-      "source_date": "2026-10-16",
+      "id": "data-906e0b1c1565",
+      "asof": "2026-10-17",
+      "source_date": "2026-10-17",
       "type": "data_gap",
       "priority": "medium",
       "score": 54,
@@ -1205,7 +1919,7 @@
       "action": "Run the merge-safe Bloomberg estimate fetch for NSCALE, then rebuild the snapshot and Analyst Inbox.",
       "falsifier": "A valid, current estimate record already exists under a different Bloomberg identifier.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-10-16",
+      "source": "Wiki remediation worklist 2026-10-17",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -1217,7 +1931,7 @@
     },
     {
       "id": "cata-4dea9544cec3",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-11-17",
       "event_date": "2026-11-17",
       "type": "catalyst",
@@ -1301,7 +2015,7 @@
     },
     {
       "id": "esti-08e6f5129e62",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-10-16",
       "type": "model_check",
       "priority": "medium",
@@ -1374,7 +2088,7 @@
     },
     {
       "id": "cata-9f2e588078f2",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-10-28",
       "event_date": "2026-10-28",
       "type": "catalyst",
@@ -1442,7 +2156,7 @@
     },
     {
       "id": "cata-c9f20420ff39",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-11-17",
       "event_date": "2026-11-17",
       "type": "catalyst",
@@ -1526,7 +2240,7 @@
     },
     {
       "id": "cata-abf09cd99a69",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-11-23",
       "event_date": "2026-11-23",
       "type": "catalyst",
@@ -1609,9 +2323,9 @@
       "hidden": false
     },
     {
-      "id": "data-4351b8785d33",
-      "asof": "2026-10-16",
-      "source_date": "2026-10-16",
+      "id": "data-738d4d235623",
+      "asof": "2026-10-17",
+      "source_date": "2026-10-17",
       "type": "data_gap",
       "priority": "watch",
       "score": 43,
@@ -1628,7 +2342,7 @@
       "action": "Fetch the latest NOK earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
       "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-10-16",
+      "source": "Wiki remediation worklist 2026-10-17",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -1639,9 +2353,9 @@
       "hidden": false
     },
     {
-      "id": "data-d3e076707fd3",
-      "asof": "2026-10-16",
-      "source_date": "2026-10-16",
+      "id": "data-361533209d49",
+      "asof": "2026-10-17",
+      "source_date": "2026-10-17",
       "type": "data_gap",
       "priority": "watch",
       "score": 43,
@@ -1658,7 +2372,7 @@
       "action": "Fetch the latest NSCALE earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
       "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-10-16",
+      "source": "Wiki remediation worklist 2026-10-17",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -1669,9 +2383,9 @@
       "hidden": false
     },
     {
-      "id": "data-1e07d40b780e",
-      "asof": "2026-10-16",
-      "source_date": "2026-10-16",
+      "id": "data-80c40c44b1c7",
+      "asof": "2026-10-17",
+      "source_date": "2026-10-17",
       "type": "data_gap",
       "priority": "watch",
       "score": 43,
@@ -1688,7 +2402,7 @@
       "action": "Fetch the latest POET earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
       "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-10-16",
+      "source": "Wiki remediation worklist 2026-10-17",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -1699,9 +2413,9 @@
       "hidden": false
     },
     {
-      "id": "data-ef9d623862f3",
-      "asof": "2026-10-16",
-      "source_date": "2026-10-16",
+      "id": "data-a95bed1a3a63",
+      "asof": "2026-10-17",
+      "source_date": "2026-10-17",
       "type": "data_gap",
       "priority": "watch",
       "score": 43,
@@ -1718,7 +2432,7 @@
       "action": "Fetch the latest SMTC earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
       "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-10-16",
+      "source": "Wiki remediation worklist 2026-10-17",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -1730,7 +2444,7 @@
     },
     {
       "id": "cata-c76406c38a7d",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-11-12",
       "event_date": "2026-11-12",
       "type": "catalyst",
@@ -1762,7 +2476,7 @@
     },
     {
       "id": "cata-d6253f9923ca",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-10-26",
       "event_date": "2026-10-26",
       "type": "catalyst",
@@ -1809,7 +2523,7 @@
     },
     {
       "id": "cata-d5929fe6e47a",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-10-20",
       "event_date": "2026-10-20",
       "type": "catalyst",
@@ -1841,7 +2555,7 @@
     },
     {
       "id": "cata-3e8cb5a41612",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-10-22",
       "event_date": "2026-10-22",
       "type": "catalyst",
@@ -1873,7 +2587,7 @@
     },
     {
       "id": "reco-32216e1d8ae9",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-10-01",
       "type": "model_check",
       "priority": "watch",
@@ -1926,7 +2640,7 @@
     },
     {
       "id": "reco-578189d1aec5",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-09-28",
       "type": "model_check",
       "priority": "watch",
@@ -2009,7 +2723,7 @@
     },
     {
       "id": "reco-d3c62027d3ff",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-09-28",
       "type": "model_check",
       "priority": "watch",
@@ -2040,7 +2754,7 @@
     },
     {
       "id": "reco-ea86c1657228",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-10-01",
       "type": "model_check",
       "priority": "watch",
@@ -2093,7 +2807,7 @@
     },
     {
       "id": "reco-08afbb898b71",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-10-01",
       "type": "model_check",
       "priority": "watch",
@@ -2174,7 +2888,7 @@
     },
     {
       "id": "reco-5b10ab6f72fe",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-10-01",
       "type": "model_check",
       "priority": "watch",
@@ -2256,7 +2970,7 @@
     },
     {
       "id": "reco-6d19352f5bc7",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-10-01",
       "type": "model_check",
       "priority": "watch",
@@ -2342,7 +3056,7 @@
     },
     {
       "id": "reco-461b7e89c24a",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-10-01",
       "type": "model_check",
       "priority": "watch",
@@ -2424,7 +3138,7 @@
     },
     {
       "id": "reco-1461d809d043",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-09-28",
       "type": "model_check",
       "priority": "watch",
@@ -2498,7 +3212,7 @@
     },
     {
       "id": "reco-9c39b15fdd33",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-09-28",
       "type": "model_check",
       "priority": "watch",
@@ -2544,7 +3258,7 @@
     },
     {
       "id": "reco-6e15fb3f3a1c",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-10-01",
       "type": "model_check",
       "priority": "watch",
@@ -2627,7 +3341,7 @@
     },
     {
       "id": "reco-efc1dbae5cee",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-09-28",
       "type": "model_check",
       "priority": "watch",
@@ -2710,7 +3424,7 @@
     },
     {
       "id": "reco-e4ded3f50f21",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-09-28",
       "type": "model_check",
       "priority": "watch",
@@ -2795,7 +3509,7 @@
     },
     {
       "id": "reco-13cc6859d7e2",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-10-01",
       "type": "model_check",
       "priority": "watch",
@@ -2877,7 +3591,7 @@
     },
     {
       "id": "reco-f54e84974b26",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-10-01",
       "type": "model_check",
       "priority": "watch",
@@ -2958,7 +3672,7 @@
     },
     {
       "id": "reco-aefa03f61c43",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-10-01",
       "type": "model_check",
       "priority": "watch",
@@ -3041,7 +3755,7 @@
     },
     {
       "id": "reco-1d1ffeaef8e0",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-09-28",
       "type": "model_check",
       "priority": "watch",
@@ -3124,7 +3838,7 @@
     },
     {
       "id": "reco-6bc20366d0f2",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-09-28",
       "type": "model_check",
       "priority": "watch",
@@ -3155,7 +3869,7 @@
     },
     {
       "id": "reco-2dac6aa267b7",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-10-01",
       "type": "model_check",
       "priority": "watch",
@@ -3238,7 +3952,7 @@
     },
     {
       "id": "cata-30cf21294c0d",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-11-10",
       "event_date": "2026-11-10",
       "type": "catalyst",
@@ -3278,7 +3992,7 @@
     },
     {
       "id": "cata-67b3a6bd8c80",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-10-29",
       "event_date": "2026-10-29",
       "type": "catalyst",
@@ -3332,7 +4046,7 @@
     },
     {
       "id": "cata-9c6f028117f0",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-10-27",
       "event_date": "2026-10-27",
       "type": "catalyst",
@@ -3372,7 +4086,7 @@
     },
     {
       "id": "cata-c333d9a79742",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-11-03",
       "event_date": "2026-11-03",
       "type": "catalyst",
@@ -3454,7 +4168,7 @@
     },
     {
       "id": "cata-e20427bb0cce",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-11-02",
       "event_date": "2026-11-02",
       "type": "catalyst",
@@ -3515,7 +4229,7 @@
     },
     {
       "id": "cata-b395c83ce767",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-11-05",
       "event_date": "2026-11-05",
       "type": "catalyst",
@@ -3590,7 +4304,7 @@
     },
     {
       "id": "cata-5c0d70eeaf70",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-10-27",
       "event_date": "2026-10-27",
       "type": "catalyst",
@@ -3622,7 +4336,7 @@
     },
     {
       "id": "cata-396a1e21b245",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-11-02",
       "event_date": "2026-11-02",
       "type": "catalyst",
@@ -3690,7 +4404,7 @@
     },
     {
       "id": "cata-c030b28ed093",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-11-12",
       "event_date": "2026-11-12",
       "type": "catalyst",
@@ -3772,7 +4486,7 @@
     },
     {
       "id": "cata-ce699c62b4f0",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-11-10",
       "event_date": "2026-11-10",
       "type": "catalyst",
@@ -3812,7 +4526,7 @@
     },
     {
       "id": "cata-eb7d5753b962",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-11-16",
       "event_date": "2026-11-16",
       "type": "catalyst",
@@ -3887,7 +4601,7 @@
     },
     {
       "id": "cata-2c7b4a6f3c93",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-11-18",
       "event_date": "2026-11-18",
       "type": "catalyst",
@@ -3927,7 +4641,7 @@
     },
     {
       "id": "cata-172f6636a635",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-11-09",
       "event_date": "2026-11-09",
       "type": "catalyst",
@@ -3988,7 +4702,7 @@
     },
     {
       "id": "cata-09405b3ca0ba",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-11-21",
       "event_date": "2026-11-21",
       "type": "catalyst",
@@ -4070,7 +4784,7 @@
     },
     {
       "id": "cata-45aebd381da9",
-      "asof": "2026-10-16",
+      "asof": "2026-10-17",
       "source_date": "2026-11-19",
       "event_date": "2026-11-19",
       "type": "catalyst",
