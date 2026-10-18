@@ -1,6 +1,6 @@
 # Daily Analyst Brief
 
-_Generated 2026-10-17 · 66 active signals · latest reconciliation: reconciliation-2026-10-16-inbox.md._
+_Generated 2026-10-17 · 66 active signals · latest reconciliation: reconciliation-2026-10-17-inbox.md._
 
 > ⚠️ **Portfolio priority is provisional.** _data/book.json is still a seed with unknown weights. Book badges identify seeded names but do not represent real exposure.
 
@@ -41,13 +41,13 @@ _NARRATIVE SHIFT · HIGH IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 _NARRATIVE SHIFT · HIGH IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
 - **Tickers:** GOOG · seeded book: GOOG
-- **Why now:** verification (content double-check): cloud-checks Full-log row — the 04-09 Epic Games quote was a back-translation of the compilation's Portuguese ("a good part of production"); replaced with the primary transcript's wording ("a big chunk of their production infrastructure to Google", cause = no Bedrock tokens) and linked the primary; flagged the 10-08 quotes as translations (primary not on disk).
+- **Why now:** run-inbox: added Barclays Credit Digest (2026-09-16, Sept vintage) Full-log row: $600mn Google credit support for Fluidstack became effective on TeraWulf CB-3; CB-5 to 1Q27.
 - **Belief update:** The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.
 - **Action:** Re-grade the GOOG thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.
 - **Falsifier:** The fingerprint moved only because of formatting or a derived snapshot insertion.
 - **Read-through:** AVGO (supplier: custom ASIC (TPU)); NVDA (supplier: GPUs); SNOW (competitor: warehouse vs BigQuery); ANTHROPIC (customer: TPU compute); BE (supplier: on-site fuel cells); CIEN (supplier: DCI/optical); COHR (supplier: optical)
-- **Attribution:** GOOG page Changelog 2026-10-16.
-- **Evidence:** [GOOG.md](../GOOG.md) · signal beli-2945a6e2b4e1
+- **Attribution:** GOOG page Changelog 2026-10-17.
+- **Evidence:** [GOOG.md](../GOOG.md) · signal beli-99883a7bf62a
 
 ### 3. 🔴 MSFT — derived thesis/debate state changed since the prior daily snapshot
 
@@ -67,13 +67,13 @@ _NARRATIVE SHIFT · HIGH IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 _NARRATIVE SHIFT · HIGH IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
 - **Tickers:** NVDA · seeded book: NVDA
-- **Why now:** run-inbox: added Jefferies · Curtis et al. "OCP Takeaways - Optical Innovation Accelerating" (2026-10-16) datapoints (1 Debate block, 1 Q3 FY27 Full-log row, 1 Sources link). MaxLPS 40% was already on the page (Information / GS conf, 09-16/09-20), so only Jefferies' "meaningful potential offset" view was added and the claim stays NOT adopted. USFP is net-new. Nothing superseded.
+- **Why now:** run-inbox: added 3 rows to the live Q3 FY27 Full log: Redburn "Can't Buy the Frontier" (Buy $325 unchanged; NVDA c40% of neolab equity, Poolside $1bn equity), Barclays HY (Huang 10-15 Bloomberg quotes on CoreWeave), Barclays Credit Digest (2026-09-16; Beacon Point ~$19.6bn vs the ~$20bn lease-assignment disclosure). Nothing superseded.
 - **Belief update:** The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.
 - **Action:** Re-grade the NVDA thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.
 - **Falsifier:** The fingerprint moved only because of formatting or a derived snapshot insertion.
 - **Read-through:** AVGO (competitor: merchant vs custom ASIC); AMZN (customer: GPUs); GOOG (customer: GPUs); META (customer: GPUs); MSFT (customer: GPUs); TSM (supplier: foundry N3/N2 + CoWoS); AMD (competitor: AI accelerators)
-- **Attribution:** NVDA page Changelog 2026-10-16.
-- **Evidence:** [NVDA.md](../NVDA.md) · signal beli-14f33d04fe0c
+- **Attribution:** NVDA page Changelog 2026-10-17.
+- **Evidence:** [NVDA.md](../NVDA.md) · signal beli-00b8014cda42
 
 ### 5. 🔴 GOOG — 2026 revenue house view is 18% above consensus
 
@@ -132,13 +132,13 @@ _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
 - **Tickers:** ANTHROPIC
-- **Why now:** weekly AI credit review: Weekly credit ledger now links existing ANTH-AVGO-CHIP-FIN-20261005 after reviewing all three FT / Michelle Chan October 5 archive pages. $60bn remains reported financing with senior syndication and bank commitments, not verified funded debt. Optional Anthropic convertibles are not added to that total. Existing October 12 page/timeline terms and private-company status unchanged. Review evidence.
+- **Why now:** run-inbox: added Barclays Credit Digest (2026-09-16, Sept vintage) Full-log row: TeraWulf 401MW Justified Data lease, delivery 2H27-early 2028.
 - **Belief update:** The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.
 - **Action:** Re-grade the ANTHROPIC thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.
 - **Falsifier:** The fingerprint moved only because of formatting or a derived snapshot insertion.
 - **Read-through:** AMZN (supplier: AWS Trainium compute); GOOG (supplier: TPU compute); NVDA (supplier: GPUs); OPENAI (competitor: frontier models); NSCALE (supplier: neocloud compute ($44.6bn, Monarch 460 MW))
-- **Attribution:** ANTHROPIC page Changelog 2026-10-16.
-- **Evidence:** [ANTHROPIC.md](../ANTHROPIC.md) · signal beli-dfc42db7de52
+- **Attribution:** ANTHROPIC page Changelog 2026-10-17.
+- **Evidence:** [ANTHROPIC.md](../ANTHROPIC.md) · signal beli-15b0f634cdcf
 
 ### 10. 🟡 ARM — derived thesis/debate state changed since the prior daily snapshot
 
