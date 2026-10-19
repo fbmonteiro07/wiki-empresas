@@ -8,17 +8,17 @@
 _Wiki · generated 2026-06-19 · **Korean issuer — NO SEC filings (no 10-K/10-Q/20-F).** Sources: `E:\Wiki Felipe\SKHYNIX\transcripts` (4 earnings calls, SK hynix holds English calls) · SK hynix IR (news.skhynix.com) · `_equity_calls` · `E:\briefings\2026` · BBG (KRW). Master index: [00_INDEX.md](00_INDEX.md) · Theme: [hbm-memory](themes/hbm-memory.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-16 · KRW
+### 📊 Consensus snapshot — BBG · asof 2026-10-19 · KRW
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | ₩346605.8bn | ₩537859.1bn |
-| Gross profit | ₩290455.7bn | ₩451263.8bn |
+| Revenue | ₩346108.9bn | ₩538775.4bn |
+| Gross profit | ₩290039.2bn | ₩452032.5bn |
 | Gross margin | 83.8% | 83.9% |
-| EBITDA | ₩287046.3bn | ₩437302.7bn |
-| EPS | ₩300453.00 | ₩488486.58 |
-| Capex | ₩49512.5bn | ₩64277.1bn |
-| OCF (≈EBITDA) | ₩287046.3bn | ₩437302.7bn |
+| EBITDA | ₩287845.9bn | ₩441909.0bn |
+| EPS | ₩296743.31 | ₩478040.22 |
+| Capex | ₩49604.5bn | ₩64025.0bn |
+| OCF (≈EBITDA) | ₩287845.9bn | ₩441909.0bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
@@ -995,7 +995,7 @@ _Source: SKHYNIX earnings calls (dates above); management commentary, paraphrase
   - [BofA ASML call (2026-04-15)](../relat%C3%B3rios%20bons/2026_04_15_asml_baml_call_15_apr_26.html) — Korean DRAM EUV build-out anchoring 2027 EUV demand
   - [JPM Memory (2026-05-28)](../relat%C3%B3rios%20bons/2026_05_28_jpm_memory_28_may_26.html) — single-stock-ETF/passive flows; HBM4 progress; ADR catalyst
   - [GS Memory — longevity of cycle (2026-06-08)](../relat%C3%B3rios%20bons/2026_06_08_gs_memory_8_jun_26.html) — 9x "conservative"; bear-case still ~40% DRAM GM
-  - [Redburn "Conor O'Mara Asia Trip Takeaways" (2026-06-23)](../relat%C3%B3rios%20bons/77420a6c-61c1-4757-8047-3a24cced258c_Key_Takeaways_from_Conor_OMaras_recent_Management_Meetings_across_ASIA_1.html) — HBM for 2027 revised down (60→50bn Gb-eq) by Inspectrum (memory consultant, relayed by O'Mara, Jefferies Asia TMT specialist sales) as conventional DRAM more profitable; LTAs as call options; wafer shortage
+  - [Jefferies desk · Conor O'Mara "Asia Trip Takeaways" call (2026-06-23)](../relat%C3%B3rios%20bons/77420a6c-61c1-4757-8047-3a24cced258c_Key_Takeaways_from_Conor_OMaras_recent_Management_Meetings_across_ASIA_1.html) — HBM for 2027 revised down (60→50bn Gb-eq) by Inspectrum (memory consultant, relayed by O'Mara, Jefferies Asia TMT specialist sales) as conventional DRAM more profitable; LTAs as call options; wafer shortage
   - [StoneX/TrendForce "Memory expert call — Avril" (2026-06-23)](../relat%C3%B3rios%20bons/TrendForce.html) — dominant HBM (~200K cap end-2026); 2027 DRAM 710K narrows gap; Yongin FAB1 end-2027/output 2028; Samsung overtake risk; Anthropic deal
   - [Jefferies Christopher Wood "GREED & fear: The mother of all cycles" (2026-06-25)](../relat%C3%B3rios%20bons/Chris_Wood.html)
   - [SemiAnalysis "Memory Mania: How a Once-in-Four-Decades Shortage Is Fueling a Memory Boom" (2026-02-06)](../relat%C3%B3rios%20bons/Memory_Mania__How_a_Once-in-Four-Decades_Shortage_Is_Fueling_a_Memory_Boom.html) — Rubin HBM share split (SK hynix ~60%/Samsung ~30%/Micron ~0%); HBM4 engineering-sample specs; Yongin Phase 1 timing; 2026 DRAM WFE capex +34%
@@ -1031,6 +1031,7 @@ _Source: SKHYNIX earnings calls (dates above); management commentary, paraphrase
 
 ## Changelog
 
+- 2026-10-19 — attribution correction: the 2026-06-23 "Asia Trip Takeaways" source (Capstone notes, Fernanda Watkins, of an investor call hosted by **Conor O'Mara — Jefferies Asia TMT specialist sales, desk voice, no rating/PT** — and Sherman; primary `_inbox/_done/77420a6c-…ASIA (1).pdf`, 42pp, screen banner p.37 "Conor O'Mara - Jefferies") was credited to **"Redburn"** (in forms such as 'Redburn · Conor O'Mara', 'Redburn "Conor O'Mara Asia Trip Takeaways"', 'Redburn/O'Mara') on 1 line(s) of this page; relabelled to "Jefferies desk · O'Mara" (Sherman named where he is the speaker), each claim re-read in the primary. Old label preserved here; no number, rating or PT changed. Entries already in this Changelog keep the old label as recorded. Completes the 2026-10-16 60→50bn Gb-eq correction (Sources link label).
 - 2026-10-16 — run-inbox: added SemiAnalysis · Zhang / Wong / Lee / Patel "ASML Is Building a Hybrid Bonding Tool!" (2026-10-15) datapoints (1 Debate sub-bullet, 1 intra-quarter log row, 1 Sources link). Nothing superseded.
 - 2026-10-16 — ingest (Notion, 2026-10-16_UBS_DRAM-supply-demand-memory-chat-Gianmarco-Vella.md): new Intra-quarter block (top) — UBS model marks (out-year HBM bit share SK Hynix ~40% / Samsung >40% / Micron 25%; 2028 node mix 1c 50 / 1b 30 / 1d mid-teens; 4-6 quarters 70%→90% yield), HBM4/4E spec-issue rumours heard but not written by UBS after an Asia-team check with the Hynix HBM team ("shipping as normal") — Hynix HBM bit share NOT cut; relayed, explicitly unmodelled report that Hynix LTAs are floor-only with no ceiling (Vella's interpretation: HBM leverage) vs Samsung/Micron floor-and-ceiling "very confident"; no renegotiation observed; Samsung relay (via UBS) that Hynix/Micron over-allocate to DDR. Prior UBS 08-07 2027E share mark (40/38/22) kept alongside — recurring series, nothing superseded. No rating/PT on the call.
 - 2026-10-16 — correction: JPM HBM bit demand **3,770 / 6,618 / 9,986** (2026-28E, prior 3,579 / 6,268 / 10,751) was labelled **"mn Gb-eq"**; the primary prints **mn GB** ("unit mn, 1GB eqv", J.P. Morgan · Jay Kwon / Sangsik Lee, "Memory Market Update: HBM S-D update", 2026-09-22). Only GB reconciles with JPM's own **163bn Gb** three-year total (20,374 mn GB × 8). Old label preserved here; body relabelled, numbers unchanged (they are 8× larger in Gb: 30.2 / 52.9 / 79.9bn Gb). ASP stays US$ per Gb.

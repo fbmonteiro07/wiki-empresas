@@ -1,10 +1,10 @@
-== SENTIMENT MONITOR · 2026-10-17 ==
+== SENTIMENT MONITOR · 2026-10-19 ==
 
-**Market mood.** CNN Fear & Greed is at **18 (extreme fear)** — down from 46 a week ago and 27 a month ago (fear).
+**Market mood.** CNN Fear & Greed is at **26 (fear)** — down from 46 a week ago and 30 a month ago (fear).
 
-Since 2021, readings in the 20 band (±5) were followed by SPY **+0.90%** over five sessions (up 67% of the time, n=137 overlapping readings; QQQ +1.05% / 65%).
+Since 2021, readings in the 30 band (±5) were followed by SPY **+0.36%** over five sessions (up 64% of the time, n=211 overlapping readings; QQQ +0.57% / 62%).
 
-Last extreme crossing: down to ≤30 on 2026-10-16 (F&G 18); its five-session window matures after the next sessions.
+Last extreme crossing: down to ≤30 on 2026-10-16 (F&G 26); its five-session window matures after the next sessions.
 
 **Getting hotter on X (Bloomberg all-of-X count, 7 days vs the prior 4 weeks, through 2026-10-16).** **ASML** (+3.5σ, 477 posts/day vs 57) · stock -7.8% over the week; **CRWV** (+3.2σ, 314 posts/day vs 41) · stock -25.2% over the week; **CRM** (+1.5σ, 19 posts/day vs 24) · stock +5.1% over the week; **SKHYNIX** (+1.3σ, 198 posts/day vs 93) · stock -24.3% over the week; **AMAT** (+1.2σ, 56 posts/day vs 24) · stock -19.3% over the week.
 

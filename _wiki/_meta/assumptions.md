@@ -1,6 +1,6 @@
 # Canonical assumptions — one number per debate
 
-_Generated 2026-10-17 from `_data/assumptions.json` (asof 2026-10-01). Every cross-page industry number lives here once, with all sourced variants. When a new source disagrees, add a variant to the JSON — never silently rebase a page. Rebuild: `py _wiki/_tools/build_assumptions.py`._
+_Generated 2026-10-19 from `_data/assumptions.json` (asof 2026-10-01). Every cross-page industry number lives here once, with all sourced variants. When a new source disagrees, add a variant to the JSON — never silently rebase a page. Rebuild: `py _wiki/_tools/build_assumptions.py`._
 
 ## Custom-ASIC vs merchant-GPU share of AI accelerators  `asic-vs-gpu-share`
 
@@ -365,23 +365,23 @@ _Annualized $ revenue (or rental rate) per GW of AI compute capacity — state c
 
 _HBM wafer capacity, $/GB or $/Gb pricing (state which), allocation priority, sold-out horizon._
 
-**Canonical:** Sold out CY26 incl. HBM4 (Micron Q1 FY26). Capacity ~473k wspm end-26E -> ~668k end-27E (SemiAnalysis). Pricing: NVDA HBM ~$17-18/GB 2026 -> $30-32/GB 2027, +70-80% (Redburn); blended ASP +~30% (JPM/Micron). Live tension: general-server DRAM overtook HBM as allocation priority #1 (Redburn/TrendForce) yet HBM pricing still marches higher. 2027 supply revised 60B -> 50B Gb-equiv on allocation, not demand (Inspectrum memory consultant, relayed by Jefferies desk · O'Mara, 2026-06-23). Trade ratio: HBM3E consumes ~3:1 DRAM wafer capacity per bit -> ~4:1 at HBM4/4E (Micron Sadana 2026-08-10; BMO/Mizuho ~4:1) — DRAM->HBM conversion REDUCES net industry bit supply.
+**Canonical:** Sold out CY26 incl. HBM4 (Micron Q1 FY26). Capacity ~473k wspm end-26E -> ~668k end-27E (SemiAnalysis). Pricing: NVDA HBM ~$17-18/GB 2026 -> $30-32/GB 2027, +70-80% (Sherman, Taiwan ODM checks, on the O'Mara/Jefferies desk call, 2026-06-23); blended ASP +~30% (JPM/Micron). Live tension: general-server DRAM overtook HBM as allocation priority #1 (O'Mara on the O'Mara/Jefferies desk call / TrendForce, 2026-06-23) yet HBM pricing still marches higher. 2027 supply revised 60B -> 50B Gb-equiv on allocation, not demand (Inspectrum memory consultant, relayed by Jefferies desk · O'Mara, 2026-06-23). Trade ratio: HBM3E consumes ~3:1 DRAM wafer capacity per bit -> ~4:1 at HBM4/4E (Micron Sadana 2026-08-10; BMO/Mizuho ~4:1) — DRAM->HBM conversion REDUCES net industry bit supply.
 
-> ⚠️ **Scope:** $/GB (stack) vs $/Gb (die) are ~8-16x apart — always state units. TAM frames: $35B'25 -> $100B'28 (Micron/JPM) vs $168B CY30 (BofA) are different horizons, both valid.
+> ⚠️ **Scope:** $/GB (stack) vs $/Gb (die) are ~8-16x apart — always state units. TAM frames: $35B'25 -> $100B'28 (Micron/JPM) vs $168B CY30 (BofA) are different horizons, both valid. — ATTRIBUTION CORRECTED 2026-10-19: the 2026-06-23 source is Capstone's notes (Fernanda Watkins) of an investor call hosted by Conor O'Mara (Jefferies Asia TMT specialist sales — desk voice, no rating/PT) and Sherman, NOT Redburn. Old labels were: canonical '(Redburn)' on the NVDA $17-18 -> $30-32/GB mark and '(Redburn/TrendForce)' on the allocation flip; debate '(Redburn)'; variant source 'Redburn Conor'; UBS variant 'vs Redburn 2027 HBM supply 50B'. Numbers unchanged; $17-18 -> $30-32/GB re-read in the primary (pp.2, 15, 24 — Sherman, tier-one Taiwan ODM checks), allocation flip p.8 (O'Mara).
 
 | Value | Source | Date | Scope |
 |---|---|---|---|
 | sold out CY26 on price and volume, incl. HBM4 | Micron Mehrotra, Q1 FY26 | 2025-12-17 | sold-out |
 | trade ratio 3:1 at HBM3E -> ~4:1 at HBM4E ('100 bits of HBM = reduce 300 bits of DDR supply'); HBM absorbs ~24%/30% of industry DRAM wafer capacity end-26/27 (UBS Gaudois) | Micron Sadana (EVP/CBO), KeyBanc Technology Leadership Forum; corrob. BMO ~4:1 (2026-08-20), Mizuho 4:1 (2026-05-27) | 2026-08-10 | trade-ratio |
 | ~123k -> ~331k -> ~473k -> ~668k wspm (end-23/25/26E/27E); HBM ~35% of DRAM wafer cap end-27E | SemiAnalysis Memory Mania | 2026-02-06 | capacity |
-| NVDA HBM ~$17-18/GB 2026 -> $30-32/GB 2027 (+70-80%) | Redburn Conor | 2026-06-23 | $/GB stack pricing |
+| NVDA HBM ~$17-18/GB 2026 -> $30-32/GB 2027 (+70-80%) | Jefferies desk · O'Mara call (Sherman, Taiwan ODM checks) | 2026-06-23 | $/GB stack pricing |
 | blended HBM ASP +~30% next year (~10% like-for-like + mix) | JPM / Micron Jay | 2026-05-28 | blended ASP |
 | general-server DRAM now allocation #1, HBM #2 (4-yr reversal); 2027 HBM supply 60B -> 50B Gb-equiv | Jefferies desk · O'Mara call notes (60->50 = Inspectrum, relayed) / TrendForce | 2026-06-23 | allocation |
 | HBM TAM $35B 2025 -> $100B 2028 (~40% CAGR) | Micron / JPM | 2026-05-28 | TAM to 2028 |
 | HBM TAM $35B CY25 -> $168B CY30 (+37% CAGR) | BofA Arya, AI 2030 | 2026-05-13 | TAM to 2030 |
-| HBM demand 33.1B Gb 2026 (+90% y/y) / 58.7B Gb 2027 (+77%), REVISED UP from 32.9/58.0 on Google TPU units raised to 4.2M/9.1M 2026/27 — vs Redburn 2027 HBM supply 50B Gb-eq (unrevised) = ~-15% HBM rationing 2027; Memory_supply_demand.xlsx v4 base has allocation chasing to ~600K wspm exit-27 (52.9B Gb, still ~-10%) | UBS Gaudois Memory Semis Monthly (via hbm-memory theme; model: Memory_supply_demand.xlsx v4) | 2026-07-03 | HBM bit demand vs supply, Gb-equivalent |
+| HBM demand 33.1B Gb 2026 (+90% y/y) / 58.7B Gb 2027 (+77%), REVISED UP from 32.9/58.0 on Google TPU units raised to 4.2M/9.1M 2026/27 — vs Inspectrum 2027 HBM supply 50B Gb-eq (relayed on the O'Mara/Jefferies desk call; unrevised) = ~-15% HBM rationing 2027; Memory_supply_demand.xlsx v4 base has allocation chasing to ~600K wspm exit-27 (52.9B Gb, still ~-10%) | UBS Gaudois Memory Semis Monthly (via hbm-memory theme; model: Memory_supply_demand.xlsx v4) | 2026-07-03 | HBM bit demand vs supply, Gb-equivalent |
 
-**Debate:** Allocation deprioritization (Redburn) vs pricing-marches-higher (JPM/TrendForce). Watch HBM4 LTA finalization (~90-100% up vs last year's LTA).
+**Debate:** Allocation deprioritization (O'Mara/Jefferies desk call, 06-23) vs pricing-marches-higher (JPM/TrendForce). Watch HBM4 LTA finalization (~90-100% up vs last year's LTA).
 
 **Unreconciled sightings** (pages matching this metric, not in the ledger's `cited_in`):
 - `AAPL.md` — …CQ2'26** (LPDDR5 12GB discrete **$2.4 → $9.5/GB**), and **~50% higher wafer cost from N3 to N2**. Storage t…
@@ -558,15 +558,15 @@ _AI datacenter TAM frames — ALWAYS state scope (systems-only vs total infra)._
 
 _QoQ contract-price growth for conventional DRAM, 2H26._
 
-**Canonical:** TrendForce REVISED (2026-06-30, supersedes 06-23): +15-20% Q3 / +3-8% Q4 — vs experts +20-25% Q3 (Redburn/Sherman/Edison) and market chatter +30-40%. Direction agreed; magnitude is the debate.
+**Canonical:** TrendForce REVISED (2026-06-30, supersedes 06-23): +15-20% Q3 / +3-8% Q4 — vs experts +20-25% Q3 (O'Mara's experts on the 2026-06-23 Jefferies desk call; Sherman +30%/+40% and Edison +40-50% on the same call) and market chatter +30-40%. Direction agreed; magnitude is the debate.
 
-> ⚠️ **Scope:** The 06-23 TrendForce +8-13% Q3 is SUPERSEDED — don't cite it as current. — ⚠️⚠️ BASIS SPLIT ADDED 2026-09-17: the canonical and the first two variants are CONVENTIONAL-DRAM CONTRACT price q/q. The J.P. Morgan variant is a BLENDED INDUSTRY ASP on an 8Gb-equivalent WSTS basis (contains HBM and mix) and is transcribed from a chart, not a printed table. It reads BELOW the canonical on Q3-26 (+11% vs +15-20%), but the two are DIFFERENT QUANTITIES — the gap may be basis rather than view. Never average or chain across the two bases. JPM's own curve continues flat beyond 2026 (+1/+2/+3/+1 q/q through 2027E, 0/0/+2/+1 through 2028E), i.e. a DRAM ASP peak in 4Q26 and a two-year plateau; that shape validates against JPM Asia's published +235%/+29%/+7% annuals for 2026/27/28 (Gokul Hariharan, 2026-08-12).
+> ⚠️ **Scope:** The 06-23 TrendForce +8-13% Q3 is SUPERSEDED — don't cite it as current. — ⚠️⚠️ BASIS SPLIT ADDED 2026-09-17: the canonical and the first two variants are CONVENTIONAL-DRAM CONTRACT price q/q. The J.P. Morgan variant is a BLENDED INDUSTRY ASP on an 8Gb-equivalent WSTS basis (contains HBM and mix) and is transcribed from a chart, not a printed table. It reads BELOW the canonical on Q3-26 (+11% vs +15-20%), but the two are DIFFERENT QUANTITIES — the gap may be basis rather than view. Never average or chain across the two bases. ATTRIBUTION CORRECTED 2026-10-19: the 06-23 expert variant and the canonical's expert credit read 'Redburn / Sherman / Edison' / '(Redburn/Sherman/Edison)' — the source is Capstone's notes of Conor O'Mara's (Jefferies desk) Asia-trip call, not Redburn; number unchanged. JPM's own curve continues flat beyond 2026 (+1/+2/+3/+1 q/q through 2027E, 0/0/+2/+1 through 2028E), i.e. a DRAM ASP peak in 4Q26 and a two-year plateau; that shape validates against JPM Asia's published +235%/+29%/+7% annuals for 2026/27/28 (Gokul Hariharan, 2026-08-12).
 
 | Value | Source | Date | Scope |
 |---|---|---|---|
 | +15-20% Q3 / +3-8% Q4 (revised up) | TrendForce | 2026-06-30 | current base case |
 | +11% Q3-26 / +5% Q4-26 q/q — ⚠️ DIFFERENT BASIS: blended industry ASP, 8Gb-eq (WSTS), includes HBM/mix; NOT conventional-DRAM contract price | J.P. Morgan · Harlan Sur (semis deck, week of 2026-09-15; pasted exhibit, chart-read) | 2026-09-17 | blended industry ASP (8Gb-eq, WSTS basis) — do NOT merge with the contract-price series above |
-| +20-25% Q3 / +20% Q4 (vs chatter +30-40%) | Redburn / Sherman / Edison experts | 2026-06-23 | expert view |
+| +20-25% Q3 / +20% Q4 (vs chatter +30-40%) | Jefferies desk · O'Mara call (O'Mara's experts +20-25%; Sherman +30%/+40%, Edison +40-50% on the same call) | 2026-06-23 | expert view |
 | +8-13% Q3 / +3-8% Q4 [SUPERSEDED 2026-06-30] | TrendForce | 2026-06-23 | superseded |
 
 **Debate:** Magnitude of 2H26 DRAM hikes: TrendForce conservative vs expert +20-25% vs chatter +30-40%. — and from 2026-09-17 a SECOND, separable debate is live on the SHAPE beyond 2026: JPM's quarterly curve plateaus from 4Q26 (agreeing with MS Europe's 'late-cycle by 4Q26' and Samsung IR's 'broadly stable through 2027'), against UBS's +44% y/y 2027 blended ASP and undersupply through at least 2Q28.
