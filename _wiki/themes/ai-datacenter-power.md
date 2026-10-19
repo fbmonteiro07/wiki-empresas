@@ -1,5 +1,9 @@
 # Theme — AI Data-Center Power & Nuclear
 
+## 🆕 2026-10-19 (/run-inbox) — **[[MSFT]] CAPACITY TRACKER (MS SOFTWARE, MSe): ~3.25 GW ONLINE IN FY26, ~4.25 GW EXPECTED IN FY27 — BASIS UNSTATED**
+
+- Morgan Stanley's MSFT capacity tracker has Microsoft bringing **~3.25 GW of incremental capacity online in FY26** and **~4.25 GW in FY27E** (then 5.75 / 7.00 GW in FY28E / FY29E). Total capacity is **10.75 GW at FY26 → 15.00 GW FY27E → 27.75 GW FY29E** (Exhibit 7). Capex per incremental MW is **$44.7 (FY26) → $51.8 (FY27E)**, in $mm by the arithmetic (Exhibit 8). MS treats capacity availability as the next Azure growth lever (Morgan Stanley · Adam Wood, "Microsoft 1Q27 Preview", 2026-10-19, [render](../../relat%C3%B3rios%20bons/MICROSOFT_20261019_0401.html)). ⚠️ **GW BASIS: MS labels it "Total Data Center Capacity in GW (MSe)" without saying whether it is facility or IT-load GW. The years are MSFT fiscal years (June).** Keep it outside the facility / IT-load / 800V ladders on this page; it is a per-company variant (see the [hyperscaler-capex](hyperscaler-capex.md) 10-19 block).
+
 ## 🆕 2026-09-16 (/run-inbox 10-17 — Barclays Data Center Credit Digest, stranded on P: since 10-16) — **BARCLAYS CREDIT: ABBOTT's ORDER DOES NOT TOUCH THE EIGHT FINANCED TEXAS BONDS; ERCOT's QUEUE IS ~475GW (~421GW DATA CENTRES) vs A 91GW SYSTEM PEAK; GALAXY GETS BASE LOAD ON HELIOS I/II ONLY; PUSHBACK NOW RUNS THROUGH PERMITS, >300 LOCAL MORATORIA AND STATE LAW**
 
 _Source: Barclays FICC/Credit · Jeff Harlib / Andrew Keches / Joseph Mulherin / Remy Neuhaus, "IG/HY Technology — Data Center Credit Digest – September 2026", 2026-09-16 ([render](../../relat%C3%B3rios%20bons/Barclays_IG_HY_Technology_Data_Center_Credit_Digest_September_2026.html)). ⚠️ SEPT VINTAGE (prices as of 15-Sep; predates the October credit sell-off). Credit research — bond ratings only, no equity ratings/PTs. Comp-sheet numbers already live in `_data/credit_workbook.json` (Grozdea workbook, 10-16); this block adds only the narrative not yet on the pages._
@@ -1415,6 +1419,7 @@ _Source: member-company earnings calls; see each company page for quarter-by-qua
 
 ## Changelog
 
+- 2026-10-19 — run-inbox: added 1 dated top block from Morgan Stanley · Adam Wood, "Microsoft 1Q27 Preview" (2026-10-19). It covers the MSFT capacity tracker (MSe, fiscal-year): ~3.25 GW FY26 / ~4.25 GW FY27E incremental, 10.75 → 15.00 GW total, and capex per incremental MW of $44.7 → $51.8. The facility vs IT-load basis is not stated (flagged). Nothing superseded.
 - 2026-10-17 — run-inbox: added 1 dated top block from Barclays Credit Digest (2026-09-16, Sept vintage; stranded on P: until 10-17): ERCOT 475GW/421GW queue vs 91GW peak, Abbott order vs financed bonds, Galaxy Base/Studied split, NY EO 62 (50MW), >300 moratoria, WULF CB-5 → 1Q27 (conflicts with MS 'on schedule' — both kept), TXEDCI power gap. THESIS DRIFT: the GS July FY26 USD IG supply forecast of $2.1tn is superseded by $2,300bn (GS Global Credit Trader, 2026-10-15) — old value left in its dated bullet with an inline supersession marker.
 - 2026-10-16 — run-inbox: added Jefferies FI trading desk · Michael Haber, "A Survival Guide to Datacenter Credit" (2026-09-14) datapoints (Key debates: power ranked #2 credit factor, ERCOT Batch Zero ≥75 MW collective study, behind-the-meter ≠ outside interconnection). Nothing superseded.
 

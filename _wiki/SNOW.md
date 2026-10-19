@@ -13,7 +13,7 @@ _Wiki · generated 2026-09-04 · sources: `E:\Wiki Felipe empresas\SNOW\transcri
 | Gross profit | $4.4bn | $5.8bn |
 | Gross margin | 71.4% | 71.4% |
 | EBITDA | $1.1bn | $1.5bn |
-| EPS | $1.96 | $3.03 |
+| EPS | $1.96 | $3.02 |
 | Capex | $75m | $84m |
 | OCF (≈EBITDA) | $1.1bn | $1.5bn |
 

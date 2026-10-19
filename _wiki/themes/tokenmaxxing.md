@@ -5,6 +5,14 @@
 _Wiki · generated 2026-06-19 · updated 2026-06-29 (gap-audit additions, tagged "audit add") · cross-company theme · sources: equity calls (`../../equity_calls_transcripts`), briefing roll-ups (`../_briefings/by-ticker`), morning briefings (`E:\briefings\2026`), research library (`E:\research_library`). Company pages: [../00_INDEX.md](../00_INDEX.md) · themes index: [00_THEMES.md](00_THEMES.md)._
 
 
+## 🆕 2026-10-15 (/run-inbox 10-19 — JPM "US Internet: 3Q 2026 Preview") — **THE FIRST WEEKLY-USER COUNTS FOR THE THREE CONSUMER AGENTS SIDE BY SIDE (MUSE 4.61M, GROK BOT 980K, INSTINCT 100K ACTIVE), AND A SELL-SIDE MAP OF WHERE AI REVENUE IS ALREADY BOOKED**
+
+_Source: J.P. Morgan · Doug Anmuth / Dae Lee / Daniel Pfeiffer / Neeraj Kookada / Margaret Hoffman, "US Internet: 3Q 2026 Preview", 2026-10-15 ([render](../../relat%C3%B3rios%20bons/JPM_JPM_ANMUTH___US_Inte_2026-10-15_5489714.html)), pp.7, 12, 14. Ratings: META OW $920, GOOGL OW $425, AMZN OW $365, SPCX OW $240._
+
+- 🆕 **Agent usage, "growing quickly, but still small numbers":** **Muse 4.61M weekly average users**, with retail **30%** of Muse transactions and **3,000** Connector submissions, **~68** of them active; **Grok Bot 980k WAU**; **Instinct 100k active users**, a **$1B** annual run-rate of transaction volume, **80%** retention once a user shares personal or payment information, **40%** of users adding a credit card within 3 weeks, and **50%** of volume travel. Muse ranks first on the Assistant Benchmark Index (**9.3**) (J.P. Morgan · Anmuth, "US Internet 3Q 2026 Preview", 2026-10-15; Muse and Grok Bot WAUs from Sensor Tower as of 10/13). ⚠️ Different bases: WAU (Sensor Tower) for Muse/Grok Bot vs company-reported active users for Instinct; do not rank them on one scale. Not netted against the page's earlier Muse download/DAU marks.
+- 🆕 **Where the AI dollars already show up (JPM's layer map):** AWS **$169B** run-rate with AI and chips each **$25B+** (overlapping); Google Cloud **$100B** run-rate; SPCX expecting **$100B ARR by Dec-26**. Payback: Google **~2 yrs** on AI servers and **~1 yr** on its own TPUs; Amazon servers **3 years**, with each DC build yielding 5-6 generations of server economics; SPCX **<1 year** on new capex; under "compute demand > supply" JPM lists SPCX at *"$30-$50 per watt for Vera Rubin"* (basis not stated in the deck). Backlog across AMZN, GOOG, MSFT, ORCL and SPCX **$2.4T** (definitions differ by company) (J.P. Morgan · Anmuth, "US Internet 3Q 2026 Preview", 2026-10-15).
+- **Model frontier:** **33% (5 of 15)** of the top-15 Artificial Analysis Intelligence Index models are open-weight; the top 5 spots are held by Anthropic, Meta and OpenAI (J.P. Morgan · Anmuth, "US Internet 3Q 2026 Preview", 2026-10-15).
+
 ## 🆕🔴 2026-10-15 (/run-inbox 10-17 — Redburn "Can't Buy the Frontier") — **US NEOLABS TRAIL CHINESE OPEN-WEIGHT LABS BY c3-4 MONTHS DESPITE NEWER CHIPS AND MORE MONEY; DEEPSEEK V4.1 FLASH PROCESSED c900x INKLING'S OPENROUTER TOKENS; THE CONSTRAINT MAY BE TALENT, NOT COMPUTE**
 
 _Source: Rothschild & Co Redburn · Alex Haissl / Luke Han, "Digital Infrastructure: Can't Buy the Frontier", 2026-10-15 ([render](../../relat%C3%B3rios%20bons/20261015_Redburn_Haissl_Digital_Infrastructure_Cant_Buy_the_Frontier.html)); ratings NVDA Buy $325, NBIS Sell $84, CRWV Sell $54, ORCL Sell $110 — all unchanged._
@@ -1464,6 +1472,7 @@ _Source: member-company earnings calls; see each company page for quarter-by-qua
 
 ## Sources
 
+- **Ingested 2026-10-19 (/run-inbox):** [J.P. Morgan · Doug Anmuth et al. — "US Internet: 3Q 2026 Preview" (2026-10-15)](../../relat%C3%B3rios%20bons/JPM_JPM_ANMUTH___US_Inte_2026-10-15_5489714.html) — 48pp deck; consumer-agent usage (Muse 4.61M WAU, Grok Bot 980k WAU, Instinct 100k active / $1B run-rate volume), AI run-rates and payback by hyperscaler, open-weight share of the AA top 15.
 - **Ingested 2026-10-19; episode 2026-10-07:** [SemiAnalysis Weekly 036 subscription economics review](../../relat%C3%B3rios%20bons/20261007__SemiAnalysis__Episode_036__analytical-summary.html) — original analytical secondary summary supplied after full accessible-transcript review, not a transcript or broker research. Official October transcript forthcoming; accessible third-party text reviewed, with no independent audio verification. Earlier official Ep. 020 transcript supports the same-speaker comparison. Canonical episode: [publisher/source](https://semianalysis.com/weekly/episodes/ep-036/).
 - **Ingested 2026-10-19; episode 2026-10-16:** [Pitch The PM 55 / Carmen Li analytical review](../../relat%C3%B3rios%20bons/20261016__Pitch_The_PM__Episode_55_Carmen_Li__youtube-hwYMbEAwaxQ__analytical-summary.html) — original analytical secondary summary supplied after full accessible-transcript review, not a transcript or broker research. Cleaned third-party captions; no granular timestamps or audio verification; figures remain attributed recording-time claims. Canonical episode: [publisher/source](https://www.youtube.com/watch?v=hwYMbEAwaxQ).
 
@@ -1556,6 +1565,7 @@ _Source: member-company earnings calls; see each company page for quarter-by-qua
 
 ## Changelog
 
+- 2026-10-19 — run-inbox: added J.P. Morgan · Anmuth "US Internet 3Q 2026 Preview" (2026-10-15) — 1 dated block at the top (consumer-agent usage counts, AI run-rates and payback, open-weight share of the AA top 15) + 1 Sources link. No token price, ARR mark or estimate on this page superseded.
 - **2026-10-19 — podcast-summary ingestion:** added Ep. 036's explicitly qualified utilization/margin inference revision and Pitch The PM 55's model-mix/measurement framework to Key debates. No existing token-price series, margin, estimate, rating or thesis overwritten; no current market-product status inferred.
 
 

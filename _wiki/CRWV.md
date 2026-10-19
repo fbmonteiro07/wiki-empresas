@@ -860,6 +860,8 @@ _Source: CRWV earnings calls (dates above); management commentary, paraphrased._
 
 ## Changelog
 
+- **2026-10-19 — Meta source reconciliation:** [September 30, 2025 8-K](https://www.sec.gov/Archives/edgar/data/1769628/000176962825000050/crwv-20250925.htm) confirms the initial order's signing date and end date. [April 9, 2026 8-K](https://www.sec.gov/Archives/edgar/data/1769628/000176962826000154/crwv-20260331.htm) identifies the later order as signed March 31 and includes exercise of an existing option inside the approximately $21B. Do not count the option again. WFS / Gawrelski October 5 Model!BL592/BL593 quotes 0.164/0.224 GW, estimates rather than disclosed capacity. [Timeline](themes/ai-compute-deals.md) updated without superseding company contract values, ratings or PTs; APLD/Meta-SPV site exposure not added again.
+
 - 2026-10-19 — podcast ingestion: added All-In #293, SemiAnalysis Ep. 037, Pitch The PM #55 and TITV analytical-review links, attributed Debate additions, four active Intra-quarter rows, a signal qualification and a quarter-synthesis addendum. SemiAnalysis/Pitch are sector read-throughs; TITV is analysis-only pending primary re-verification. No financing/deal milestone, credit mark, rating, PT, model assumption or prior view superseded; global sources-through unchanged.
 
 

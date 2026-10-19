@@ -9,13 +9,13 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\AMAT` (10-K/10-Q + tra
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $37.7bn | $49.3bn |
-| Gross profit | $18.9bn | $25.1bn |
+| Revenue | $37.8bn | $49.4bn |
+| Gross profit | $19.0bn | $25.2bn |
 | Gross margin | 50.2% | 51.0% |
-| EBITDA | $13.5bn | $18.7bn |
-| EPS | $14.35 | $20.15 |
+| EBITDA | $13.5bn | $18.8bn |
+| EPS | $14.43 | $20.21 |
 | Capex | $2.5bn | $2.6bn |
-| OCF (≈EBITDA) | $13.5bn | $18.7bn |
+| OCF (≈EBITDA) | $13.5bn | $18.8bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
