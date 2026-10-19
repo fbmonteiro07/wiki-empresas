@@ -1,0 +1,841 @@
+{
+  "schema": "analytical_podcast_summary_staging_v1",
+  "status": "verified_downstream_ingestion_complete",
+  "target_directory": "E:\\Wiki Felipe empresas\\_inbox",
+  "supplied_payload_path": "C:\\Users\\Felipe.monteiro\\Documents\\Codex\\2026-10-19\\task\\podcast-source-preparation-2026-10-19\\analytical-reports-supplied.json",
+  "supplied_payload_sha256": "39579806aae8ddd36c4c76f95cebe0b61e8e07f6923772fd097c7f17f14f9311",
+  "source_record_count": 8,
+  "initial_records_preserved": true,
+  "existing_local_files_preserved_sha256": {
+    "analytical-reports-supplied.json": "39579806aae8ddd36c4c76f95cebe0b61e8e07f6923772fd097c7f17f14f9311",
+    "future-report-format.txt": "df3ccfdf85b40e9d3147c34a3447b9a6c5ba33c01a5fd10db3e9c70f0c7aae62",
+    "inspection.json": "94a4a519085d681cba73e99a938eaa6873022fa2587b5f093eb0d318cc4a448c",
+    "source-records.json": "31f4b1c4a2e42340b3f29e96d0e5683bdbd04498f4a3ec708088db45443ab514",
+    "summary-verification.json": "7d5a32090244040934474f7d2224b5276a7e938f8ccf93b8a57e871be89f40a3",
+    "verification.json": "6b195eda24f2baa49e37cedee9a359b37fc97db740e1b34d73e9efd40d03d0e8",
+    "wiki-copy-verification.json": "b18be83ebb75192b3f5b6c63993cf041481888c6b8e982232d1c3812659eb323",
+    "wiki-staging-manifest.json": "715cbaef773f597842cbcd0946ffad213cdb435501463487219799d10b42724f"
+  },
+  "full_transcripts_saved": 0,
+  "source_contents_independently_rereviewed_in_save_step": false,
+  "ingestion_run": false,
+  "files": [
+    {
+      "key": "allin",
+      "filename": "20261017__All-In__Episode_293__youtube-_b3LfMflIGs__analytical-summary.md",
+      "local_path": "C:\\Users\\Felipe.monteiro\\Documents\\Codex\\2026-10-19\\task\\podcast-source-preparation-2026-10-19\\analytical-summary-records\\20261017__All-In__Episode_293__youtube-_b3LfMflIGs__analytical-summary.md",
+      "target_path": "E:\\Wiki Felipe empresas\\_inbox\\20261017__All-In__Episode_293__youtube-_b3LfMflIGs__analytical-summary.md",
+      "canonical_source_id": "youtube:_b3LfMflIGs",
+      "source_url": "https://www.youtube.com/watch?v=_b3LfMflIGs",
+      "source_date": "2026-10-17",
+      "initial_record_path": "E:\\Wiki Felipe empresas\\_inbox\\20261017__All-In__Episode_293__initial-summary.md",
+      "initial_record_sha256": "6deb8b1283f4ff46c5354ed7663c269bb3ebbacebd1ca804a51206203910c6e7",
+      "body_characters": 8260,
+      "body_bytes": 8285,
+      "body_sha256": "58ba699f9cf3583d872605ec3dad9b9be59ad1f238d0609182038c049693efbf",
+      "metadata_block": "\n<!-- BEGIN LOCAL SOURCE METADATA -->\n- **Source type:** podcast\n- **Record type:** Original analytical secondary summary; not a full transcript\n- **Review status:** Analytical report supplied after review of the full accessible transcript; coverage and limitations are recorded in the report\n- **Original source / analyst / show:** All-In; episode 293\n- **Original publication date:** 2026-10-17 UTC; 2026-10-16 in Brasilia\n- **Source URL:** https://www.youtube.com/watch?v=_b3LfMflIGs\n- **Canonical source ID:** youtube:_b3LfMflIGs\n- **Companies / tickers:** Not assigned; manual routing review required\n- **Themes:** Not assigned; manual routing review required\n- **ChatGPT conversation:** Podcast analytical reports for wiki ingestion\n- **Report provenance:** Supplied by the requesting thread; source-review and verification statements belong to the report author\n- **Expands initial record:** [20261017__All-In__Episode_293__initial-summary.md](./20261017__All-In__Episode_293__initial-summary.md)\n- **Deduplication relationship:** Expanded review of the same canonical episode; preserve the initial record and do not count this as an independent source\n- **Ingestion status:** Pending wiki incorporation\n<!-- END LOCAL SOURCE METADATA -->\n",
+      "bytes": 9531,
+      "sha256": "f261a5d3a8fb2ac68dee2af79e283dc420ff8ff7322719f5885e758468800c36",
+      "supplied_body_preserved_exactly": true,
+      "local_readback": "passed",
+      "html_filename": "20261017__All-In__Episode_293__youtube-_b3LfMflIGs__analytical-summary.html",
+      "html_relative_path": "relatórios bons/20261017__All-In__Episode_293__youtube-_b3LfMflIGs__analytical-summary.html",
+      "archive_relative_path": "_inbox/_done/podcasts-2026-10-19/20261017__All-In__Episode_293__youtube-_b3LfMflIGs__analytical-summary.md",
+      "reviewed_routes": [
+        "_wiki/AMZN.md",
+        "_wiki/CRWV.md",
+        "_wiki/ANTHROPIC.md",
+        "_wiki/themes/ai-compute-deals.md"
+      ],
+      "ingestion_verification_note": "Selected passages checked through the identified transcript mirror. Preserve powered/cooled capacity, indirect Jassy attribution and uncertain late-2028 wording. Cash coupon and secondary-market yield are different quantities. No full audio verification.",
+      "record_classification": "user-supplied original analytical summary; secondary source, not a transcript",
+      "source_date_reviewed": "2026-10-17",
+      "title": "All-In #293: Investor review",
+      "html_sha256": "2cd1c7deb7ed748822724714814bf14c052b54c5cd9e7c2f1825c284378d46e0",
+      "html_preserves_source_record_exactly": true,
+      "downstream_pages": [
+        "_wiki/AMZN.md",
+        "_wiki/CRWV.md",
+        "_wiki/ANTHROPIC.md",
+        "_wiki/themes/ai-compute-deals.md"
+      ]
+    },
+    {
+      "key": "tbpn",
+      "filename": "20261016__TBPN__Episode_706__transistor-a2ded295__analytical-summary.md",
+      "local_path": "C:\\Users\\Felipe.monteiro\\Documents\\Codex\\2026-10-19\\task\\podcast-source-preparation-2026-10-19\\analytical-summary-records\\20261016__TBPN__Episode_706__transistor-a2ded295__analytical-summary.md",
+      "target_path": "E:\\Wiki Felipe empresas\\_inbox\\20261016__TBPN__Episode_706__transistor-a2ded295__analytical-summary.md",
+      "canonical_source_id": "transistor:a2ded295",
+      "source_url": "https://share.transistor.fm/s/a2ded295",
+      "source_date": "2026-10-16",
+      "initial_record_path": "E:\\Wiki Felipe empresas\\_inbox\\20261016__TBPN__Episode_706__initial-summary.md",
+      "initial_record_sha256": "b9e1e85c61eb83a71dcddc373a8931dacf1ad7b9cf114296b806f383e139b4c6",
+      "body_characters": 10676,
+      "body_bytes": 10718,
+      "body_sha256": "45d7cacbaaa29b16f04ec800c5bc5ed9ffca917b59218957d61305147b17bbcb",
+      "metadata_block": "\n<!-- BEGIN LOCAL SOURCE METADATA -->\n- **Source type:** podcast\n- **Record type:** Original analytical secondary summary; not a full transcript\n- **Review status:** Analytical report supplied after review of the full accessible transcript; coverage and limitations are recorded in the report\n- **Original source / analyst / show:** TBPN; episode 706\n- **Original publication date:** 2026-10-16\n- **Source URL:** https://share.transistor.fm/s/a2ded295\n- **Canonical source ID:** transistor:a2ded295\n- **Companies / tickers:** Not assigned; manual routing review required\n- **Themes:** Not assigned; manual routing review required\n- **ChatGPT conversation:** Podcast analytical reports for wiki ingestion\n- **Report provenance:** Supplied by the requesting thread; source-review and verification statements belong to the report author\n- **Expands initial record:** [20261016__TBPN__Episode_706__initial-summary.md](./20261016__TBPN__Episode_706__initial-summary.md)\n- **Deduplication relationship:** Expanded review of the same canonical episode; preserve the initial record and do not count this as an independent source\n- **Ingestion status:** Pending wiki incorporation\n<!-- END LOCAL SOURCE METADATA -->\n",
+      "bytes": 11925,
+      "sha256": "6a9c028db043a2a10926931893a1dfa0bfaea1de9d0aaff48b96f7f1d2d23563",
+      "supplied_body_preserved_exactly": true,
+      "local_readback": "passed",
+      "html_filename": "20261016__TBPN__Episode_706__transistor-a2ded295__analytical-summary.html",
+      "html_relative_path": "relatórios bons/20261016__TBPN__Episode_706__transistor-a2ded295__analytical-summary.html",
+      "archive_relative_path": "_inbox/_done/podcasts-2026-10-19/20261016__TBPN__Episode_706__transistor-a2ded295__analytical-summary.md",
+      "reviewed_routes": [
+        "_wiki/themes/ai-builder-toolkit.md"
+      ],
+      "ingestion_verification_note": "Supplied analytical review preserved. Independent primary fetch failed and browser initialization timed out. Downstream use is limited to explicitly attributed analytical questions; source claims have not been independently rechecked during ingestion.",
+      "record_classification": "user-supplied original analytical summary; secondary source, not a transcript",
+      "source_date_reviewed": "2026-10-16",
+      "title": "TBPN: full-episode investor review",
+      "html_sha256": "bb126a9593b6d56ece42ab0be16b3be1cfef4fbc4bf15948ec3b727e27a29c4c",
+      "html_preserves_source_record_exactly": true,
+      "downstream_pages": [
+        "_wiki/themes/ai-builder-toolkit.md"
+      ]
+    },
+    {
+      "key": "latent",
+      "filename": "undated__Latent_Space__High_Taste_Testers__youtube-ZOH8Q401vt0__analytical-summary.md",
+      "local_path": "C:\\Users\\Felipe.monteiro\\Documents\\Codex\\2026-10-19\\task\\podcast-source-preparation-2026-10-19\\analytical-summary-records\\undated__Latent_Space__High_Taste_Testers__youtube-ZOH8Q401vt0__analytical-summary.md",
+      "target_path": "E:\\Wiki Felipe empresas\\_inbox\\undated__Latent_Space__High_Taste_Testers__youtube-ZOH8Q401vt0__analytical-summary.md",
+      "canonical_source_id": "youtube:ZOH8Q401vt0",
+      "source_url": "https://www.youtube.com/watch?v=ZOH8Q401vt0",
+      "source_date": null,
+      "initial_record_path": "E:\\Wiki Felipe empresas\\_inbox\\undated__Latent_Space__High_Taste_Testers__initial-summary.md",
+      "initial_record_sha256": "be2c32b37e308a571ff1071428d673e76c5276f046531168d96b92fca79905ff",
+      "body_characters": 7277,
+      "body_bytes": 7288,
+      "body_sha256": "05cbca832f492318d7a60afd13ab50b2974b8b29c6d60049b95de3951aa119bc",
+      "metadata_block": "\n<!-- BEGIN LOCAL SOURCE METADATA -->\n- **Source type:** podcast\n- **Record type:** Original analytical secondary summary; not a full transcript\n- **Review status:** Analytical report supplied after review of the full accessible transcript; coverage and limitations are recorded in the report\n- **Original source / analyst / show:** Latent Space; High Taste Testers\n- **Original publication date:** Unresolved: official newsletter dated 2026-10-17; transcript mirror dated 2026-10-16\n- **Date handling:** Preserve the publication-date ambiguity; the review date is not the episode publication date\n- **Source URL:** https://www.youtube.com/watch?v=ZOH8Q401vt0\n- **Canonical source ID:** youtube:ZOH8Q401vt0\n- **Companies / tickers:** Not assigned; manual routing review required\n- **Themes:** Not assigned; manual routing review required\n- **ChatGPT conversation:** Podcast analytical reports for wiki ingestion\n- **Report provenance:** Supplied by the requesting thread; source-review and verification statements belong to the report author\n- **Expands initial record:** [undated__Latent_Space__High_Taste_Testers__initial-summary.md](./undated__Latent_Space__High_Taste_Testers__initial-summary.md)\n- **Deduplication relationship:** Expanded review of the same canonical episode; preserve the initial record and do not count this as an independent source\n- **Ingestion status:** Pending wiki incorporation\n<!-- END LOCAL SOURCE METADATA -->\n",
+      "bytes": 8731,
+      "sha256": "b48dc0b600cf43210ca768571b9bbb57af93f68d22d27e3f6c6098b14074c251",
+      "supplied_body_preserved_exactly": true,
+      "local_readback": "passed",
+      "html_filename": "undated__Latent_Space__High_Taste_Testers__youtube-ZOH8Q401vt0__analytical-summary.html",
+      "html_relative_path": "relatórios bons/undated__Latent_Space__High_Taste_Testers__youtube-ZOH8Q401vt0__analytical-summary.html",
+      "archive_relative_path": "_inbox/_done/podcasts-2026-10-19/undated__Latent_Space__High_Taste_Testers__youtube-ZOH8Q401vt0__analytical-summary.md",
+      "reviewed_routes": [
+        "_wiki/themes/ai-builder-toolkit.md"
+      ],
+      "ingestion_verification_note": "Selected passages checked through the identified third-party transcript mirror. Panel observations are anecdotes; no speaker identity inferred from generic labels. Publication date remains unresolved between October 16 and 17. No full audio verification.",
+      "record_classification": "user-supplied original analytical summary; secondary source, not a transcript",
+      "source_date_reviewed": null,
+      "title": "Latent Space: High Taste Testers",
+      "html_sha256": "b988c1a259e450b9319fc4ae3a023cc807f1295738492b40e007dced16ed4eaf",
+      "html_preserves_source_record_exactly": true,
+      "downstream_pages": [
+        "_wiki/themes/ai-builder-toolkit.md"
+      ]
+    },
+    {
+      "key": "pitch",
+      "filename": "20261016__Pitch_The_PM__Episode_55_Carmen_Li__youtube-hwYMbEAwaxQ__analytical-summary.md",
+      "local_path": "C:\\Users\\Felipe.monteiro\\Documents\\Codex\\2026-10-19\\task\\podcast-source-preparation-2026-10-19\\analytical-summary-records\\20261016__Pitch_The_PM__Episode_55_Carmen_Li__youtube-hwYMbEAwaxQ__analytical-summary.md",
+      "target_path": "E:\\Wiki Felipe empresas\\_inbox\\20261016__Pitch_The_PM__Episode_55_Carmen_Li__youtube-hwYMbEAwaxQ__analytical-summary.md",
+      "canonical_source_id": "youtube:hwYMbEAwaxQ",
+      "source_url": "https://www.youtube.com/watch?v=hwYMbEAwaxQ",
+      "source_date": "2026-10-16",
+      "initial_record_path": "E:\\Wiki Felipe empresas\\_inbox\\20261016__Pitch_The_PM__Episode_55_Carmen_Li__initial-summary.md",
+      "initial_record_sha256": "614f89f821b3c63ca1b1bc4619ff1eab5cc42f658489f418f4f59ae907199d33",
+      "body_characters": 7453,
+      "body_bytes": 7467,
+      "body_sha256": "aa78d7679c114c916539d965d53076aa2203d3012349ced787c42c1d2d2c259f",
+      "metadata_block": "\n<!-- BEGIN LOCAL SOURCE METADATA -->\n- **Source type:** podcast\n- **Record type:** Original analytical secondary summary; not a full transcript\n- **Review status:** Analytical report supplied after review of the full accessible transcript; coverage and limitations are recorded in the report\n- **Original source / analyst / show:** Pitch The PM; episode 55; Carmen Li\n- **Original publication date:** 2026-10-16\n- **Source URL:** https://www.youtube.com/watch?v=hwYMbEAwaxQ\n- **Canonical source ID:** youtube:hwYMbEAwaxQ\n- **Companies / tickers:** Not assigned; manual routing review required\n- **Themes:** Not assigned; manual routing review required\n- **ChatGPT conversation:** Podcast analytical reports for wiki ingestion\n- **Report provenance:** Supplied by the requesting thread; source-review and verification statements belong to the report author\n- **Expands initial record:** [20261016__Pitch_The_PM__Episode_55_Carmen_Li__initial-summary.md](./20261016__Pitch_The_PM__Episode_55_Carmen_Li__initial-summary.md)\n- **Deduplication relationship:** Expanded review of the same canonical episode; preserve the initial record and do not count this as an independent source\n- **Ingestion status:** Pending wiki incorporation\n<!-- END LOCAL SOURCE METADATA -->\n",
+      "bytes": 8731,
+      "sha256": "daec47b9eae13436ac9efdf10494647f2efce90088ef88a3046bc710e8b9f289",
+      "supplied_body_preserved_exactly": true,
+      "local_readback": "passed",
+      "html_filename": "20261016__Pitch_The_PM__Episode_55_Carmen_Li__youtube-hwYMbEAwaxQ__analytical-summary.html",
+      "html_relative_path": "relatórios bons/20261016__Pitch_The_PM__Episode_55_Carmen_Li__youtube-hwYMbEAwaxQ__analytical-summary.html",
+      "archive_relative_path": "_inbox/_done/podcasts-2026-10-19/20261016__Pitch_The_PM__Episode_55_Carmen_Li__youtube-hwYMbEAwaxQ__analytical-summary.md",
+      "reviewed_routes": [
+        "_wiki/CRWV.md",
+        "_wiki/themes/tokenmaxxing.md"
+      ],
+      "ingestion_verification_note": "Selected passages checked through the identified cleaned third-party transcript. Market prices and financing terms are Carmen Li interview claims with limited sample definition, not universal benchmarks. No full audio verification.",
+      "record_classification": "user-supplied original analytical summary; secondary source, not a transcript",
+      "source_date_reviewed": "2026-10-16",
+      "title": "Pitch the PM 55: Carmen Li",
+      "html_sha256": "fffd110376513e46b8a656a588f52d5f644efd7faa5a58b3831605d7d5e888ef",
+      "html_preserves_source_record_exactly": true,
+      "downstream_pages": [
+        "_wiki/CRWV.md",
+        "_wiki/themes/tokenmaxxing.md"
+      ]
+    },
+    {
+      "key": "titv",
+      "filename": "20261016__TITV__October_16__youtube-Eom8fkGK3wg__analytical-summary.md",
+      "local_path": "C:\\Users\\Felipe.monteiro\\Documents\\Codex\\2026-10-19\\task\\podcast-source-preparation-2026-10-19\\analytical-summary-records\\20261016__TITV__October_16__youtube-Eom8fkGK3wg__analytical-summary.md",
+      "target_path": "E:\\Wiki Felipe empresas\\_inbox\\20261016__TITV__October_16__youtube-Eom8fkGK3wg__analytical-summary.md",
+      "canonical_source_id": "youtube:Eom8fkGK3wg",
+      "source_url": "https://www.youtube.com/watch?v=Eom8fkGK3wg",
+      "source_date": "2026-10-16",
+      "initial_record_path": "E:\\Wiki Felipe empresas\\_inbox\\20261016__TITV__October_16__initial-summary.md",
+      "initial_record_sha256": "35fd665e256700b8d8327cb80af45e8828bf9a3c3b6e7a1eff9007ee4df042b7",
+      "body_characters": 8212,
+      "body_bytes": 8250,
+      "body_sha256": "1893d4b4ec700eebbd1964fece15eec12a49caf2929e338ae18dd723a765411f",
+      "metadata_block": "\n<!-- BEGIN LOCAL SOURCE METADATA -->\n- **Source type:** podcast\n- **Record type:** Original analytical secondary summary; not a full transcript\n- **Review status:** Analytical report supplied after review of the full accessible transcript; coverage and limitations are recorded in the report\n- **Original source / analyst / show:** TITV\n- **Original publication date:** 2026-10-16\n- **Source URL:** https://www.youtube.com/watch?v=Eom8fkGK3wg\n- **Canonical source ID:** youtube:Eom8fkGK3wg\n- **Companies / tickers:** Not assigned; manual routing review required\n- **Themes:** Not assigned; manual routing review required\n- **ChatGPT conversation:** Podcast analytical reports for wiki ingestion\n- **Report provenance:** Supplied by the requesting thread; source-review and verification statements belong to the report author\n- **Expands initial record:** [20261016__TITV__October_16__initial-summary.md](./20261016__TITV__October_16__initial-summary.md)\n- **Deduplication relationship:** Expanded review of the same canonical episode; preserve the initial record and do not count this as an independent source\n- **Ingestion status:** Pending wiki incorporation\n<!-- END LOCAL SOURCE METADATA -->\n",
+      "bytes": 9447,
+      "sha256": "2fae3fe97af7b2c85a6ce225fdad863c9b0eabc8e516455aaf87348935d830ef",
+      "supplied_body_preserved_exactly": true,
+      "local_readback": "passed",
+      "html_filename": "20261016__TITV__October_16__youtube-Eom8fkGK3wg__analytical-summary.html",
+      "html_relative_path": "relatórios bons/20261016__TITV__October_16__youtube-Eom8fkGK3wg__analytical-summary.html",
+      "archive_relative_path": "_inbox/_done/podcasts-2026-10-19/20261016__TITV__October_16__youtube-Eom8fkGK3wg__analytical-summary.md",
+      "reviewed_routes": [
+        "_wiki/CRWV.md",
+        "_wiki/OPENAI.md",
+        "_wiki/themes/agentic-commerce.md"
+      ],
+      "ingestion_verification_note": "Supplied analytical review preserved. Independent primary fetch failed. Downstream use is limited to explicitly attributed analytical questions; the report author's caption coverage is not an ingestion-stage audio verification.",
+      "record_classification": "user-supplied original analytical summary; secondary source, not a transcript",
+      "source_date_reviewed": "2026-10-16",
+      "title": "TITV — October 16, 2026",
+      "html_sha256": "4ead64900b3678ceaa95c699f408dafb346e2f4e57af28b16a2a21840203e173",
+      "html_preserves_source_record_exactly": true,
+      "downstream_pages": [
+        "_wiki/CRWV.md",
+        "_wiki/OPENAI.md",
+        "_wiki/themes/agentic-commerce.md"
+      ]
+    },
+    {
+      "key": "semianalysis_ep036.md",
+      "filename": "20261007__SemiAnalysis__Episode_036__analytical-summary.md",
+      "local_path": "C:\\Users\\Felipe.monteiro\\Documents\\Codex\\2026-10-19\\task\\podcast-source-preparation-2026-10-19\\analytical-summary-records\\20261007__SemiAnalysis__Episode_036__analytical-summary.md",
+      "target_path": "E:\\Wiki Felipe empresas\\_inbox\\20261007__SemiAnalysis__Episode_036__analytical-summary.md",
+      "canonical_source_id": "semianalysis:ep-036",
+      "source_url": "https://semianalysis.com/weekly/episodes/ep-036/",
+      "source_date": "2026-10-07",
+      "metadata_block": "\n<!-- BEGIN LOCAL SOURCE METADATA -->\n- **Source type:** podcast\n- **Record type:** Original analytical secondary summary; not a full transcript\n- **Original publication date:** 2026-10-07\n- **Source URL:** https://semianalysis.com/weekly/episodes/ep-036/\n- **Canonical source ID:** semianalysis:ep-036\n- **Report provenance:** Supplied by requesting thread; source-review statements belong to report author\n- **Review limitation:** Official transcript forthcoming; analytical report relies on identified third-party captions/transcript, without full audio verification\n- **Ingestion status:** Pending wiki incorporation\n<!-- END LOCAL SOURCE METADATA -->\n",
+      "sha256": "994b9b64405efda41ecd7597e90602a611efc7f03c66c36c3e9c1b4f5a641a7b",
+      "body_sha256": "b49f13e3b8641d3d14f3b997b5c70d940bea5aa6d98e27879a9849b8fa93e85b",
+      "html_filename": "20261007__SemiAnalysis__Episode_036__analytical-summary.html",
+      "html_relative_path": "relatórios bons/20261007__SemiAnalysis__Episode_036__analytical-summary.html",
+      "archive_relative_path": "_inbox/_done/podcasts-2026-10-19/20261007__SemiAnalysis__Episode_036__analytical-summary.md",
+      "reviewed_routes": [
+        "_wiki/OPENAI.md",
+        "_wiki/ANTHROPIC.md",
+        "_wiki/themes/tokenmaxxing.md"
+      ],
+      "ingestion_verification_note": "Official October transcript forthcoming. Selected passages checked through the identified third-party transcript and the official July ep020 transcript at 9:08. Comparison supports a changed utilization hypothesis, not measured improvement in margins; plans and conditions differ. No full audio verification.",
+      "record_classification": "user-supplied original analytical summary; secondary source, not a transcript",
+      "source_date_reviewed": "2026-10-07",
+      "title": "SemiAnalysis Weekly Ep. 036: Subscription economics and the utilization question",
+      "html_sha256": "2d33c41665b6b5741de5e03efb1b02e18c00b6c02dd85849ba31a5564ea6f080",
+      "html_preserves_source_record_exactly": true,
+      "downstream_pages": [
+        "_wiki/OPENAI.md",
+        "_wiki/ANTHROPIC.md",
+        "_wiki/themes/tokenmaxxing.md"
+      ]
+    },
+    {
+      "key": "semianalysis_ep037.md",
+      "filename": "20261009__SemiAnalysis__Episode_037__analytical-summary.md",
+      "local_path": "C:\\Users\\Felipe.monteiro\\Documents\\Codex\\2026-10-19\\task\\podcast-source-preparation-2026-10-19\\analytical-summary-records\\20261009__SemiAnalysis__Episode_037__analytical-summary.md",
+      "target_path": "E:\\Wiki Felipe empresas\\_inbox\\20261009__SemiAnalysis__Episode_037__analytical-summary.md",
+      "canonical_source_id": "semianalysis:ep-037",
+      "source_url": "https://semianalysis.com/weekly/episodes/ep-037/",
+      "source_date": "2026-10-09",
+      "metadata_block": "\n<!-- BEGIN LOCAL SOURCE METADATA -->\n- **Source type:** podcast\n- **Record type:** Original analytical secondary summary; not a full transcript\n- **Original publication date:** 2026-10-09\n- **Source URL:** https://semianalysis.com/weekly/episodes/ep-037/\n- **Canonical source ID:** semianalysis:ep-037\n- **Report provenance:** Supplied by requesting thread; source-review statements belong to report author\n- **Review limitation:** Official transcript forthcoming; analytical report relies on identified third-party captions/transcript, without full audio verification\n- **Ingestion status:** Pending wiki incorporation\n<!-- END LOCAL SOURCE METADATA -->\n",
+      "sha256": "9ddc29c1a0aad7f7256125f215a734da00781e754e97b6213d98a8f33badab16",
+      "body_sha256": "1f59b019d915767f549b45a1acc2ef03a2fa21edd1ec2c9b64fc7250b8cae4a2",
+      "html_filename": "20261009__SemiAnalysis__Episode_037__analytical-summary.html",
+      "html_relative_path": "relatórios bons/20261009__SemiAnalysis__Episode_037__analytical-summary.html",
+      "archive_relative_path": "_inbox/_done/podcasts-2026-10-19/20261009__SemiAnalysis__Episode_037__analytical-summary.md",
+      "reviewed_routes": [
+        "_wiki/CRWV.md",
+        "_wiki/themes/ai-compute-deals.md"
+      ],
+      "ingestion_verification_note": "Official October transcript forthcoming; selected passages checked in the identified third-party transcript. Selected July ep021 third-party transcript passages were also checked, with attribution cross-checked against the introduction and dialogue, not voice-verified. July funding requirement and October debt outstanding have different denominators/categories; broad thesis continuity is supported, not a precise numerical revision. No full audio verification.",
+      "record_classification": "user-supplied original analytical summary; secondary source, not a transcript",
+      "source_date_reviewed": "2026-10-09",
+      "title": "SemiAnalysis Weekly Ep. 037: Investor Research Note",
+      "html_sha256": "e72e5723cd4c3ab0e98628391d91a371becb9a8a443c78fc01b18234ecf107fe",
+      "html_preserves_source_record_exactly": true,
+      "downstream_pages": [
+        "_wiki/CRWV.md",
+        "_wiki/themes/ai-compute-deals.md"
+      ]
+    },
+    {
+      "key": "semianalysis_ep038.md",
+      "filename": "20261014__SemiAnalysis__Episode_038__analytical-summary.md",
+      "local_path": "C:\\Users\\Felipe.monteiro\\Documents\\Codex\\2026-10-19\\task\\podcast-source-preparation-2026-10-19\\analytical-summary-records\\20261014__SemiAnalysis__Episode_038__analytical-summary.md",
+      "target_path": "E:\\Wiki Felipe empresas\\_inbox\\20261014__SemiAnalysis__Episode_038__analytical-summary.md",
+      "canonical_source_id": "semianalysis:ep-038",
+      "source_url": "https://semianalysis.com/weekly/episodes/ep-038/",
+      "source_date": "2026-10-14",
+      "metadata_block": "\n<!-- BEGIN LOCAL SOURCE METADATA -->\n- **Source type:** podcast\n- **Record type:** Original analytical secondary summary; not a full transcript\n- **Original publication date:** 2026-10-14\n- **Source URL:** https://semianalysis.com/weekly/episodes/ep-038/\n- **Canonical source ID:** semianalysis:ep-038\n- **Report provenance:** Supplied by requesting thread; source-review statements belong to report author\n- **Review limitation:** Official transcript forthcoming; analytical report relies on identified third-party captions/transcript, without full audio verification\n- **Ingestion status:** Pending wiki incorporation\n<!-- END LOCAL SOURCE METADATA -->\n",
+      "sha256": "fb436366feecec95f73bd47c871d6210901a3ba895e1ad37989c966defafd20b",
+      "body_sha256": "c1c1e3bf1802daa844b2860a5b42aa5c600a99e1eaecee75fd0c1500b37e3272",
+      "html_filename": "20261014__SemiAnalysis__Episode_038__analytical-summary.html",
+      "html_relative_path": "relatórios bons/20261014__SemiAnalysis__Episode_038__analytical-summary.html",
+      "archive_relative_path": "_inbox/_done/podcasts-2026-10-19/20261014__SemiAnalysis__Episode_038__analytical-summary.md",
+      "reviewed_routes": [
+        "_wiki/themes/hbm-memory.md",
+        "_wiki/AMD.md",
+        "_wiki/NVDA.md"
+      ],
+      "ingestion_verification_note": "Official transcript forthcoming. Selected passages checked through the identified third-party transcript and official September ep028 transcript at 16:39–18:04. Wenyao's 150 tokens/second/user comparison and Jordan's separate 100 tokens/second/user discussion must stay separate. The HBM mechanism already appeared in the wiki's September 28 research. No full audio verification.",
+      "record_classification": "user-supplied original analytical summary; secondary source, not a transcript",
+      "source_date_reviewed": "2026-10-14",
+      "title": "SemiAnalysis Weekly 038: GLM 5.3 on AMD, NVIDIA, and Chinese Chips From Day One",
+      "html_sha256": "1df0079e5b7a33e09e433436b904b6f42d8570bdfd5d848e072cb50b0dde79b3",
+      "html_preserves_source_record_exactly": true,
+      "downstream_pages": [
+        "_wiki/themes/hbm-memory.md",
+        "_wiki/AMD.md",
+        "_wiki/NVDA.md"
+      ]
+    }
+  ],
+  "archive_evidence": [
+    {
+      "path": "E:\\Wiki Felipe empresas\\_inbox\\_done\\podcasts-2026-10-19\\20261017__All-In__Episode_293__youtube-_b3LfMflIGs__analytical-summary.md",
+      "sha256": "f261a5d3a8fb2ac68dee2af79e283dc420ff8ff7322719f5885e758468800c36",
+      "classification": "analytical"
+    },
+    {
+      "path": "E:\\Wiki Felipe empresas\\_inbox\\_done\\podcasts-2026-10-19\\20261017__All-In__Episode_293__initial-summary.md",
+      "sha256": "6deb8b1283f4ff46c5354ed7663c269bb3ebbacebd1ca804a51206203910c6e7",
+      "classification": "initial duplicate ancestor"
+    },
+    {
+      "path": "E:\\Wiki Felipe empresas\\_inbox\\_done\\podcasts-2026-10-19\\20261016__TBPN__Episode_706__transistor-a2ded295__analytical-summary.md",
+      "sha256": "6a9c028db043a2a10926931893a1dfa0bfaea1de9d0aaff48b96f7f1d2d23563",
+      "classification": "analytical"
+    },
+    {
+      "path": "E:\\Wiki Felipe empresas\\_inbox\\_done\\podcasts-2026-10-19\\20261016__TBPN__Episode_706__initial-summary.md",
+      "sha256": "b9e1e85c61eb83a71dcddc373a8931dacf1ad7b9cf114296b806f383e139b4c6",
+      "classification": "initial duplicate ancestor"
+    },
+    {
+      "path": "E:\\Wiki Felipe empresas\\_inbox\\_done\\podcasts-2026-10-19\\undated__Latent_Space__High_Taste_Testers__youtube-ZOH8Q401vt0__analytical-summary.md",
+      "sha256": "b48dc0b600cf43210ca768571b9bbb57af93f68d22d27e3f6c6098b14074c251",
+      "classification": "analytical"
+    },
+    {
+      "path": "E:\\Wiki Felipe empresas\\_inbox\\_done\\podcasts-2026-10-19\\undated__Latent_Space__High_Taste_Testers__initial-summary.md",
+      "sha256": "be2c32b37e308a571ff1071428d673e76c5276f046531168d96b92fca79905ff",
+      "classification": "initial duplicate ancestor"
+    },
+    {
+      "path": "E:\\Wiki Felipe empresas\\_inbox\\_done\\podcasts-2026-10-19\\20261016__Pitch_The_PM__Episode_55_Carmen_Li__youtube-hwYMbEAwaxQ__analytical-summary.md",
+      "sha256": "daec47b9eae13436ac9efdf10494647f2efce90088ef88a3046bc710e8b9f289",
+      "classification": "analytical"
+    },
+    {
+      "path": "E:\\Wiki Felipe empresas\\_inbox\\_done\\podcasts-2026-10-19\\20261016__Pitch_The_PM__Episode_55_Carmen_Li__initial-summary.md",
+      "sha256": "614f89f821b3c63ca1b1bc4619ff1eab5cc42f658489f418f4f59ae907199d33",
+      "classification": "initial duplicate ancestor"
+    },
+    {
+      "path": "E:\\Wiki Felipe empresas\\_inbox\\_done\\podcasts-2026-10-19\\20261016__TITV__October_16__youtube-Eom8fkGK3wg__analytical-summary.md",
+      "sha256": "2fae3fe97af7b2c85a6ce225fdad863c9b0eabc8e516455aaf87348935d830ef",
+      "classification": "analytical"
+    },
+    {
+      "path": "E:\\Wiki Felipe empresas\\_inbox\\_done\\podcasts-2026-10-19\\20261016__TITV__October_16__initial-summary.md",
+      "sha256": "35fd665e256700b8d8327cb80af45e8828bf9a3c3b6e7a1eff9007ee4df042b7",
+      "classification": "initial duplicate ancestor"
+    },
+    {
+      "path": "E:\\Wiki Felipe empresas\\_inbox\\_done\\podcasts-2026-10-19\\20261007__SemiAnalysis__Episode_036__analytical-summary.md",
+      "sha256": "994b9b64405efda41ecd7597e90602a611efc7f03c66c36c3e9c1b4f5a641a7b",
+      "classification": "analytical"
+    },
+    {
+      "path": "E:\\Wiki Felipe empresas\\_inbox\\_done\\podcasts-2026-10-19\\20261009__SemiAnalysis__Episode_037__analytical-summary.md",
+      "sha256": "9ddc29c1a0aad7f7256125f215a734da00781e754e97b6213d98a8f33badab16",
+      "classification": "analytical"
+    },
+    {
+      "path": "E:\\Wiki Felipe empresas\\_inbox\\_done\\podcasts-2026-10-19\\20261014__SemiAnalysis__Episode_038__analytical-summary.md",
+      "sha256": "fb436366feecec95f73bd47c871d6210901a3ba895e1ad37989c966defafd20b",
+      "classification": "analytical"
+    }
+  ],
+  "page_evidence": [
+    {
+      "relative_path": "_wiki/AMZN.md",
+      "baseline_sha256": "54072f775150ff4e4e9846870edae4692cb7429ecdb7b7405b0c88506e8ddede",
+      "after_sha256": "507c5badee6cc7c6cd5ef5410808c605758d4819855d24c0500cb12f999e798a",
+      "original_text_preserved": true
+    },
+    {
+      "relative_path": "_wiki/CRWV.md",
+      "baseline_sha256": "92f4d1f5be84b5269c57544c8a2c7b9cdf2ffd50a6db60be9653407ae2679444",
+      "after_sha256": "724c2a95246067a4c93f4c782953d94129bc4be00c0a15bf86e1629d10db5022",
+      "original_text_preserved": true
+    },
+    {
+      "relative_path": "_wiki/OPENAI.md",
+      "baseline_sha256": "db046032c9749480268646f0efe9b895282f80a870a2e903f06e90edba7882fa",
+      "after_sha256": "5942de6e032c36020563324a5edf360108bdf0d7c549ed4702fcff3fdc2e5c42",
+      "original_text_preserved": true
+    },
+    {
+      "relative_path": "_wiki/ANTHROPIC.md",
+      "baseline_sha256": "26741b825bd6be064e41c1c58ff8d3870ef04ba9e72ac45b1ca9dd975b35e7ba",
+      "after_sha256": "a78018c20b10a7fa9cb0cc7f5f167ef66029ac67ce0bb965d3ed0cb62b21e520",
+      "original_text_preserved": true
+    },
+    {
+      "relative_path": "_wiki/themes/tokenmaxxing.md",
+      "baseline_sha256": "0ff621c8d5e87865b1ebeeb7f8ee4cd18cebd6de26e80abb3328784d3f25b81a",
+      "after_sha256": "9e787264cf8f55a72a7812e77cc31142009a6200d3c6a0bded14fb5f7e90481e",
+      "original_text_preserved": true
+    },
+    {
+      "relative_path": "_wiki/themes/ai-builder-toolkit.md",
+      "baseline_sha256": "cb5b1370136e2c4a86acda569e00f6b662ae7fffc6b11d9b6d6b4d362aec6b54",
+      "after_sha256": "44fa8ea170906f17f7727c7e5ed609141996c8f7d971c7a6b3d4bf682eb8287e",
+      "original_text_preserved": true
+    },
+    {
+      "relative_path": "_wiki/themes/agentic-commerce.md",
+      "baseline_sha256": "3fbcff9a33ac0eefac355c5146ea4458ea674391bc5720e07e4aae436f879e22",
+      "after_sha256": "529048f87dbdf487051152591d076fcc648a50190920a88350f789220600c25b",
+      "original_text_preserved": true
+    },
+    {
+      "relative_path": "_wiki/themes/hbm-memory.md",
+      "baseline_sha256": "c2ea84d296ba2433f4e8db0ce7b62f7170f1fdaa208995043fa264d47cea6932",
+      "after_sha256": "0a793c02ee4f3f8f992245ed866d8fe6e8b79f6119699ab6679aa6fe306f2ed3",
+      "original_text_preserved": true
+    },
+    {
+      "relative_path": "_wiki/themes/ai-compute-deals.md",
+      "baseline_sha256": "7c437ae203fb76b9b2b047c5a6a0dd36c42612bb8c41270343d5bd84cfbc80f9",
+      "after_sha256": "444a2bf47076bf6e0d90cf28ce8bbf71a2d71cc87b746a1096a6cc319383505e",
+      "original_text_preserved": true
+    },
+    {
+      "relative_path": "_wiki/AMD.md",
+      "baseline_sha256": "4870a139d7f65b634e69109d86e335399e06d4f4cc835bf6802b58e2d9e4ab10",
+      "after_sha256": "6144e6e2977f4973a2a64ffb344dfdd1ec4f05c4b659b6d984b4ee0be930ab4d",
+      "original_text_preserved": true
+    },
+    {
+      "relative_path": "_wiki/NVDA.md",
+      "baseline_sha256": "aef04dc62a79259f0ddf6d14efeb528db3de1e7999f66b724e80c5c3d104c953",
+      "after_sha256": "8d19eac0598fb99263d31ec4f8a25b0eddb38e7d24e284352372ae032dca600e",
+      "original_text_preserved": true
+    }
+  ],
+  "unique_episode_count": 8,
+  "initial_summaries_excluded_from_evidence_count": 5,
+  "global_sources_through_advanced": false,
+  "new_compute_events": 0,
+  "primary_pending": [
+    "TBPN 706",
+    "TITV 2026-10-16"
+  ],
+  "independent_verifier": {
+    "approved": true,
+    "verifier": "/root/podcast_verifier",
+    "scope": "47 exact proposed additions across 11 pages; factual and attribution gate",
+    "reviewed_artifacts": {
+      "company-patch-reviewed.json": "433a213580babe08235adaf52d4a919048dfae7c07f793b4b1a87aebb8bdb7b0",
+      "theme-patch-reviewed.json": "000c2fc40ceff12b0d1b1d9996751d6679d14960cbf3764e40f4d7c7464ac860",
+      "semiconductor-patch-reviewed.json": "3ad98b9c71e98fda669e3bf7ef3d8b867cf24fda8315a7f1d655672d84f1738b"
+    },
+    "remaining_limits": [
+      "TBPN and TITV primary checks unavailable; additions use original analytical framework only",
+      "SemiAnalysis October official transcripts forthcoming; selected third-party passages checked, no full audio verification",
+      "Written-page fidelity, links, search indexing, glossary QA and scoped Git verification are execution-stage checks"
+    ]
+  },
+  "final_verification": {
+    "status": "verified_downstream_ingestion_complete",
+    "unique_episodes": 8,
+    "analytical_records_archived": 8,
+    "initial_summary_ancestors_preserved_and_excluded_from_evidence_count": 5,
+    "full_transcripts_saved": 0,
+    "wiki_pages_updated": 11,
+    "additions": 47,
+    "timeline_files_updated": 6,
+    "timeline_events_added": 11,
+    "new_compute_deal_events": 0,
+    "all_preexisting_page_bytes_preserved": true,
+    "all_supplied_report_bodies_preserved_exactly": true,
+    "all_local_added_links_resolve": true,
+    "distinct_local_link_targets": 9,
+    "all_eight_have_substantive_page_incorporation_and_catalog_and_search": true,
+    "transcription_qa_flags": 0,
+    "protected_file_hashes_unchanged": true,
+    "reports": [
+      {
+        "canonical_source_id": "youtube:_b3LfMflIGs",
+        "archived_path": "E:\\Wiki Felipe empresas\\_inbox\\_done\\podcasts-2026-10-19\\20261017__All-In__Episode_293__youtube-_b3LfMflIGs__analytical-summary.md",
+        "html_path": "E:\\Wiki Felipe empresas\\relatórios bons\\20261017__All-In__Episode_293__youtube-_b3LfMflIGs__analytical-summary.html",
+        "exact_supplied_body_preserved": true,
+        "summary_catalog_cards": 1,
+        "search_document_count": 1,
+        "fts_match_count": 1,
+        "substantive_downstream_pages": [
+          "_wiki/AMZN.md",
+          "_wiki/CRWV.md",
+          "_wiki/ANTHROPIC.md",
+          "_wiki/themes/ai-compute-deals.md"
+        ],
+        "primary_check_limit": "Selected passages checked through the identified transcript mirror. Preserve powered/cooled capacity, indirect Jassy attribution and uncertain late-2028 wording. Cash coupon and secondary-market yield are different quantities. No full audio verification."
+      },
+      {
+        "canonical_source_id": "transistor:a2ded295",
+        "archived_path": "E:\\Wiki Felipe empresas\\_inbox\\_done\\podcasts-2026-10-19\\20261016__TBPN__Episode_706__transistor-a2ded295__analytical-summary.md",
+        "html_path": "E:\\Wiki Felipe empresas\\relatórios bons\\20261016__TBPN__Episode_706__transistor-a2ded295__analytical-summary.html",
+        "exact_supplied_body_preserved": true,
+        "summary_catalog_cards": 1,
+        "search_document_count": 1,
+        "fts_match_count": 1,
+        "substantive_downstream_pages": [
+          "_wiki/themes/ai-builder-toolkit.md"
+        ],
+        "primary_check_limit": "Supplied analytical review preserved. Independent primary fetch failed and browser initialization timed out. Downstream use is limited to explicitly attributed analytical questions; source claims have not been independently rechecked during ingestion."
+      },
+      {
+        "canonical_source_id": "youtube:ZOH8Q401vt0",
+        "archived_path": "E:\\Wiki Felipe empresas\\_inbox\\_done\\podcasts-2026-10-19\\undated__Latent_Space__High_Taste_Testers__youtube-ZOH8Q401vt0__analytical-summary.md",
+        "html_path": "E:\\Wiki Felipe empresas\\relatórios bons\\undated__Latent_Space__High_Taste_Testers__youtube-ZOH8Q401vt0__analytical-summary.html",
+        "exact_supplied_body_preserved": true,
+        "summary_catalog_cards": 1,
+        "search_document_count": 1,
+        "fts_match_count": 1,
+        "substantive_downstream_pages": [
+          "_wiki/themes/ai-builder-toolkit.md"
+        ],
+        "primary_check_limit": "Selected passages checked through the identified third-party transcript mirror. Panel observations are anecdotes; no speaker identity inferred from generic labels. Publication date remains unresolved between October 16 and 17. No full audio verification."
+      },
+      {
+        "canonical_source_id": "youtube:hwYMbEAwaxQ",
+        "archived_path": "E:\\Wiki Felipe empresas\\_inbox\\_done\\podcasts-2026-10-19\\20261016__Pitch_The_PM__Episode_55_Carmen_Li__youtube-hwYMbEAwaxQ__analytical-summary.md",
+        "html_path": "E:\\Wiki Felipe empresas\\relatórios bons\\20261016__Pitch_The_PM__Episode_55_Carmen_Li__youtube-hwYMbEAwaxQ__analytical-summary.html",
+        "exact_supplied_body_preserved": true,
+        "summary_catalog_cards": 1,
+        "search_document_count": 1,
+        "fts_match_count": 1,
+        "substantive_downstream_pages": [
+          "_wiki/CRWV.md",
+          "_wiki/themes/tokenmaxxing.md"
+        ],
+        "primary_check_limit": "Selected passages checked through the identified cleaned third-party transcript. Market prices and financing terms are Carmen Li interview claims with limited sample definition, not universal benchmarks. No full audio verification."
+      },
+      {
+        "canonical_source_id": "youtube:Eom8fkGK3wg",
+        "archived_path": "E:\\Wiki Felipe empresas\\_inbox\\_done\\podcasts-2026-10-19\\20261016__TITV__October_16__youtube-Eom8fkGK3wg__analytical-summary.md",
+        "html_path": "E:\\Wiki Felipe empresas\\relatórios bons\\20261016__TITV__October_16__youtube-Eom8fkGK3wg__analytical-summary.html",
+        "exact_supplied_body_preserved": true,
+        "summary_catalog_cards": 1,
+        "search_document_count": 1,
+        "fts_match_count": 1,
+        "substantive_downstream_pages": [
+          "_wiki/CRWV.md",
+          "_wiki/OPENAI.md",
+          "_wiki/themes/agentic-commerce.md"
+        ],
+        "primary_check_limit": "Supplied analytical review preserved. Independent primary fetch failed. Downstream use is limited to explicitly attributed analytical questions; the report author's caption coverage is not an ingestion-stage audio verification."
+      },
+      {
+        "canonical_source_id": "semianalysis:ep-036",
+        "archived_path": "E:\\Wiki Felipe empresas\\_inbox\\_done\\podcasts-2026-10-19\\20261007__SemiAnalysis__Episode_036__analytical-summary.md",
+        "html_path": "E:\\Wiki Felipe empresas\\relatórios bons\\20261007__SemiAnalysis__Episode_036__analytical-summary.html",
+        "exact_supplied_body_preserved": true,
+        "summary_catalog_cards": 1,
+        "search_document_count": 1,
+        "fts_match_count": 1,
+        "substantive_downstream_pages": [
+          "_wiki/OPENAI.md",
+          "_wiki/ANTHROPIC.md",
+          "_wiki/themes/tokenmaxxing.md"
+        ],
+        "primary_check_limit": "Official October transcript forthcoming. Selected passages checked through the identified third-party transcript and the official July ep020 transcript at 9:08. Comparison supports a changed utilization hypothesis, not measured improvement in margins; plans and conditions differ. No full audio verification."
+      },
+      {
+        "canonical_source_id": "semianalysis:ep-037",
+        "archived_path": "E:\\Wiki Felipe empresas\\_inbox\\_done\\podcasts-2026-10-19\\20261009__SemiAnalysis__Episode_037__analytical-summary.md",
+        "html_path": "E:\\Wiki Felipe empresas\\relatórios bons\\20261009__SemiAnalysis__Episode_037__analytical-summary.html",
+        "exact_supplied_body_preserved": true,
+        "summary_catalog_cards": 1,
+        "search_document_count": 1,
+        "fts_match_count": 1,
+        "substantive_downstream_pages": [
+          "_wiki/CRWV.md",
+          "_wiki/themes/ai-compute-deals.md"
+        ],
+        "primary_check_limit": "Official October transcript forthcoming; selected passages checked in the identified third-party transcript. Selected July ep021 third-party transcript passages were also checked, with attribution cross-checked against the introduction and dialogue, not voice-verified. July funding requirement and October debt outstanding have different denominators/categories; broad thesis continuity is supported, not a precise numerical revision. No full audio verification."
+      },
+      {
+        "canonical_source_id": "semianalysis:ep-038",
+        "archived_path": "E:\\Wiki Felipe empresas\\_inbox\\_done\\podcasts-2026-10-19\\20261014__SemiAnalysis__Episode_038__analytical-summary.md",
+        "html_path": "E:\\Wiki Felipe empresas\\relatórios bons\\20261014__SemiAnalysis__Episode_038__analytical-summary.html",
+        "exact_supplied_body_preserved": true,
+        "summary_catalog_cards": 1,
+        "search_document_count": 1,
+        "fts_match_count": 1,
+        "substantive_downstream_pages": [
+          "_wiki/themes/hbm-memory.md",
+          "_wiki/AMD.md",
+          "_wiki/NVDA.md"
+        ],
+        "primary_check_limit": "Official transcript forthcoming. Selected passages checked through the identified third-party transcript and official September ep028 transcript at 16:39–18:04. Wenyao's 150 tokens/second/user comparison and Jordan's separate 100 tokens/second/user discussion must stay separate. The HBM mechanism already appeared in the wiki's September 28 research. No full audio verification."
+      }
+    ],
+    "pages": [
+      {
+        "path": "E:\\Wiki Felipe empresas\\_wiki\\AMZN.md",
+        "additions": 6,
+        "sha256": "507c5badee6cc7c6cd5ef5410808c605758d4819855d24c0500cb12f999e798a",
+        "all_preexisting_bytes_preserved": true
+      },
+      {
+        "path": "E:\\Wiki Felipe empresas\\_wiki\\CRWV.md",
+        "additions": 6,
+        "sha256": "724c2a95246067a4c93f4c782953d94129bc4be00c0a15bf86e1629d10db5022",
+        "all_preexisting_bytes_preserved": true
+      },
+      {
+        "path": "E:\\Wiki Felipe empresas\\_wiki\\OPENAI.md",
+        "additions": 6,
+        "sha256": "5942de6e032c36020563324a5edf360108bdf0d7c549ed4702fcff3fdc2e5c42",
+        "all_preexisting_bytes_preserved": true
+      },
+      {
+        "path": "E:\\Wiki Felipe empresas\\_wiki\\ANTHROPIC.md",
+        "additions": 6,
+        "sha256": "a78018c20b10a7fa9cb0cc7f5f167ef66029ac67ce0bb965d3ed0cb62b21e520",
+        "all_preexisting_bytes_preserved": true
+      },
+      {
+        "path": "E:\\Wiki Felipe empresas\\_wiki\\themes\\tokenmaxxing.md",
+        "additions": 3,
+        "sha256": "9e787264cf8f55a72a7812e77cc31142009a6200d3c6a0bded14fb5f7e90481e",
+        "all_preexisting_bytes_preserved": true
+      },
+      {
+        "path": "E:\\Wiki Felipe empresas\\_wiki\\themes\\ai-builder-toolkit.md",
+        "additions": 3,
+        "sha256": "44fa8ea170906f17f7727c7e5ed609141996c8f7d971c7a6b3d4bf682eb8287e",
+        "all_preexisting_bytes_preserved": true
+      },
+      {
+        "path": "E:\\Wiki Felipe empresas\\_wiki\\themes\\agentic-commerce.md",
+        "additions": 3,
+        "sha256": "529048f87dbdf487051152591d076fcc648a50190920a88350f789220600c25b",
+        "all_preexisting_bytes_preserved": true
+      },
+      {
+        "path": "E:\\Wiki Felipe empresas\\_wiki\\themes\\hbm-memory.md",
+        "additions": 3,
+        "sha256": "0a793c02ee4f3f8f992245ed866d8fe6e8b79f6119699ab6679aa6fe306f2ed3",
+        "all_preexisting_bytes_preserved": true
+      },
+      {
+        "path": "E:\\Wiki Felipe empresas\\_wiki\\themes\\ai-compute-deals.md",
+        "additions": 3,
+        "sha256": "444a2bf47076bf6e0d90cf28ce8bbf71a2d71cc87b746a1096a6cc319383505e",
+        "all_preexisting_bytes_preserved": true
+      },
+      {
+        "path": "E:\\Wiki Felipe empresas\\_wiki\\AMD.md",
+        "additions": 4,
+        "sha256": "6144e6e2977f4973a2a64ffb344dfdd1ec4f05c4b659b6d984b4ee0be930ab4d",
+        "all_preexisting_bytes_preserved": true
+      },
+      {
+        "path": "E:\\Wiki Felipe empresas\\_wiki\\NVDA.md",
+        "additions": 4,
+        "sha256": "8d19eac0598fb99263d31ec4f8a25b0eddb38e7d24e284352372ae032dca600e",
+        "all_preexisting_bytes_preserved": true
+      }
+    ],
+    "build_results": {
+      "build-reports-output.txt": "reports index: 1269 kept + 0 new = 1269 total",
+      "build-wiki-output.txt": "index.html written: 111 companies + 23 themes, 59111 KB",
+      "build-search-output.txt": "search index: 2479 docs (128 added/updated, 2351 unchanged, 0 removed) · 147 MB -> E:\\Wiki Felipe empresas\\_wiki\\_data\\search.db",
+      "build-graph-output.txt": "graph: 187 nodes ({'ticker': 111, 'theme': 23, 'assumption': 22, 'broker': 30, 'independent': 1}), 2195 edges\n  -> E:\\Wiki Felipe empresas\\_wiki\\_data\\graph_full.json\n  -> E:\\Wiki Felipe empresas\\_wiki\\_dashboards\\graph.html",
+      "build-timeline-output.txt": "timeline.html: 79 empresas, 835 eventos, 2813 KB"
+    },
+    "remaining_limits": [
+      "TBPN/TITV primary access remains unavailable; only original analytical framework adopted",
+      "SemiAnalysis October official transcripts forthcoming; selected third-party passages checked without full audio verification",
+      "Latent Space publication date remains October 16/17 unresolved"
+    ],
+    "external_sends": 0,
+    "schedules_created": 0,
+    "code_or_model_or_settings_edits": 0
+  },
+  "timeline_evidence": [
+    {
+      "relative_path": "_wiki/_data/timelines/AMZN.json",
+      "before_sha256": "9dc1dee7b06e2067429bf13d81bdb2035d60c5075343588f1f6e4d083d867a7a",
+      "after_sha256": "4730d5d17d05287749b3b51889c47ba2556b80ebdb6f4863aafb2abebc4838bd",
+      "added_events": [
+        {
+          "date": "2026-10-17",
+          "src": "All-In · Ben Horowitz, recounting Andy Jassy",
+          "theme": "supply",
+          "lean": "mixed",
+          "text": "Podcast backfill ingested 2026-10-19. Powered-and-cooled GPU scarcity is a secondhand account, with uncertain timing and unspecified scope (14:36). Our interpretation: test commissioning and contract enforceability before extrapolating AWS revenue. No new company guidance/backlog figure. Analytical review",
+          "source_urls": [
+            "../relat%C3%B3rios%20bons/20261017__All-In__Episode_293__youtube-_b3LfMflIGs__analytical-summary.html"
+          ]
+        }
+      ],
+      "old_event_count": 21,
+      "new_event_count": 22
+    },
+    {
+      "relative_path": "_wiki/_data/timelines/CRWV.json",
+      "before_sha256": "a7cc7b72922155b13941248c7da1692c2db05e414192ad2b35a4da734c000664",
+      "after_sha256": "76ed0a241011f6d641336f08cfc6ddca1731b6664bfd1a1f2688f49011753ee3",
+      "added_events": [
+        {
+          "date": "2026-10-17",
+          "src": "All-In · panel; David Sacks on coupon versus market yield",
+          "theme": "capital",
+          "lean": "mixed",
+          "text": "Podcast backfill ingested 2026-10-19. The review separates contractual interest from traded yield and industry demand from borrower cash generation. No podcast CDS/default probability or financing estimate is adopted. Analytical review",
+          "source_urls": [
+            "../relat%C3%B3rios%20bons/20261017__All-In__Episode_293__youtube-_b3LfMflIGs__analytical-summary.html"
+          ]
+        },
+        {
+          "date": "2026-10-09",
+          "src": "SemiAnalysis · Dan Nishball / Jordan Nanos",
+          "theme": "capital",
+          "lean": "mixed",
+          "text": "Podcast backfill ingested 2026-10-19. Sector read-through: financing constraints and site-specific underwriting, not a CRWV commitment. Broad framework continuity is supported by selected July Ep. 021 third-party transcript passages; speaker attribution was cross-checked against the dialogue, not voice-verified. Funding needs and debt stock are not comparable revisions. Analytical review",
+          "source_urls": [
+            "../relat%C3%B3rios%20bons/20261009__SemiAnalysis__Episode_037__analytical-summary.html"
+          ]
+        },
+        {
+          "date": "2026-10-16",
+          "src": "Pitch The PM · Carmen Li",
+          "theme": "capital",
+          "lean": "mixed",
+          "text": "Podcast backfill ingested 2026-10-19. Sector read-through only: compare equipment financing duration with contracted receipts and test residual values. General examples are not CRWV contract terms or independently validated asset prices. Analytical review",
+          "source_urls": [
+            "../relat%C3%B3rios%20bons/20261016__Pitch_The_PM__Episode_55_Carmen_Li__youtube-hwYMbEAwaxQ__analytical-summary.html"
+          ]
+        },
+        {
+          "date": "2026-10-16",
+          "src": "TITV · supplied original investor analysis",
+          "theme": "capital",
+          "lean": "neutral",
+          "text": "Podcast backfill ingested 2026-10-19. Analytical framework only: stress financing, utilization and replacement economics separately from demand growth. Primary episode reporting was not reverified in this pass; no new company factual claim is adopted. Analytical review",
+          "source_urls": [
+            "../relat%C3%B3rios%20bons/20261016__TITV__October_16__youtube-Eom8fkGK3wg__analytical-summary.html"
+          ]
+        }
+      ],
+      "old_event_count": 14,
+      "new_event_count": 18
+    },
+    {
+      "relative_path": "_wiki/_data/timelines/OPENAI.json",
+      "before_sha256": "d607f73cdbed3c8be5fae0a3fae116f75201c6205bbd4af55233b9007b072327",
+      "after_sha256": "ae0314ce89c5436458329f0934c4094d28e815cadc56e41cf7f3edaf3dae3dd5",
+      "added_events": [
+        {
+          "date": "2026-10-07",
+          "src": "SemiAnalysis · Max Kan / Andrew Megalaa / Jordan Nanos",
+          "theme": "margem",
+          "lean": "neutral",
+          "text": "Podcast backfill ingested 2026-10-19. Anthropic peer read-through: Max's changed Anthropic utilization/margin inference relative to July Ep. 020 does not establish a revised OpenAI margin or utilization view. Plan/model/workload changes limit comparisons. SemiAnalysis Ep. 036 analytical review",
+          "source_urls": [
+            "../relat%C3%B3rios%20bons/20261007__SemiAnalysis__Episode_036__analytical-summary.html"
+          ]
+        },
+        {
+          "date": "2026-10-16",
+          "src": "TITV · supplied original investor analysis",
+          "theme": "margem",
+          "lean": "neutral",
+          "text": "Podcast backfill ingested 2026-10-19. Analysis only: test retained advertiser returns and quality-adjusted inference economics. No reported advertiser count, price, run rate or company milestone adopted; primary re-verification unavailable. TITV analytical review",
+          "source_urls": [
+            "../relat%C3%B3rios%20bons/20261016__TITV__October_16__youtube-Eom8fkGK3wg__analytical-summary.html"
+          ]
+        }
+      ],
+      "old_event_count": 11,
+      "new_event_count": 13
+    },
+    {
+      "relative_path": "_wiki/_data/timelines/ANTHROPIC.json",
+      "before_sha256": "0c2b5531527305483fc796ecdd60bb6e1407b8cfcc68c688bc1e11e136a7c209",
+      "after_sha256": "dd36c7d1c9e2f2847b33b14596bde19b799f41394d9f1b26a96925b2b9f3da21",
+      "added_events": [
+        {
+          "date": "2026-10-07",
+          "src": "SemiAnalysis · Max Kan / Andrew Megalaa / Jordan Nanos",
+          "theme": "margem",
+          "lean": "mixed",
+          "text": "Podcast backfill ingested 2026-10-19. Relative to July Ep. 020, Max's more favorable subscription-margin inference follows revised utilization assumptions. It is not evidence of measured margin improvement; changing products and workload weights limit comparison. Analytical review",
+          "source_urls": [
+            "../relat%C3%B3rios%20bons/20261007__SemiAnalysis__Episode_036__analytical-summary.html"
+          ]
+        },
+        {
+          "date": "2026-10-17",
+          "src": "All-In · original investor review of panel discussion",
+          "theme": "capital",
+          "lean": "neutral",
+          "text": "Podcast backfill ingested 2026-10-19. Original analysis weighs cash flexibility against dilution. Panel fundraising preferences and leaked financial claims are not company commitments or verified current marks; no IPO/financing milestone is recorded. Analytical review",
+          "source_urls": [
+            "../relat%C3%B3rios%20bons/20261017__All-In__Episode_293__youtube-_b3LfMflIGs__analytical-summary.html"
+          ]
+        }
+      ],
+      "old_event_count": 14,
+      "new_event_count": 16
+    },
+    {
+      "relative_path": "_wiki/_data/timelines/AMD.json",
+      "before_sha256": "7f9a0e21d54b8a4baef91842d6603485504c7372e1d55bceba4b53531705c8eb",
+      "after_sha256": "1e7147703e32061484824d4cb01bc276e039b27e2d66845e8cef344f9605232d",
+      "added_events": [
+        {
+          "date": "2026-10-14",
+          "src": "SemiAnalysis ep038 analytical report — Kimbo Chen / Wenyao Gao / Jordan Nanos",
+          "theme": "produto",
+          "lean": "mixed",
+          "text": "Podcast backfill ingested 2026-10-19. GLM-5.3 benchmark economics depend on the serving operating point; sparse attention reduces bandwidth pressure without equivalently removing retained KV capacity. Commentary checked via a third-party transcript; official transcript forthcoming, no full audio verification.",
+          "source_urls": [
+            "../relat%C3%B3rios%20bons/20261014__SemiAnalysis__Episode_038__analytical-summary.html"
+          ]
+        }
+      ],
+      "old_event_count": 25,
+      "new_event_count": 26
+    },
+    {
+      "relative_path": "_wiki/_data/timelines/NVDA.json",
+      "before_sha256": "cc1d55e975d834b82346220b0d799cf56c0025db715bf031e150bc4248138d70",
+      "after_sha256": "1cc866e0876abd2b6f77773c5bb96d356cc8b6722b9b430f0d1e0e5b497a1e88",
+      "added_events": [
+        {
+          "date": "2026-10-14",
+          "src": "SemiAnalysis ep038 analytical report — Kimbo Chen / Wenyao Gao / Jordan Nanos",
+          "theme": "produto",
+          "lean": "mixed",
+          "text": "Podcast backfill ingested 2026-10-19. GLM-5.3 benchmark economics depend on the serving operating point; sparse attention reduces bandwidth pressure without equivalently removing retained KV capacity. Commentary checked via a third-party transcript; official transcript forthcoming, no full audio verification.",
+          "source_urls": [
+            "../relat%C3%B3rios%20bons/20261014__SemiAnalysis__Episode_038__analytical-summary.html"
+          ]
+        }
+      ],
+      "old_event_count": 37,
+      "new_event_count": 38
+    }
+  ],
+  "versioning_note": "The commit ID, when created, is recorded in the local completion receipt and Git history. No remote push is part of this batch."
+}

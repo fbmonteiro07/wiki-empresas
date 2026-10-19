@@ -1,1 +1,107 @@
-{"ticker":"OPENAI","name":"OpenAI","asof":"2026-06-23","coverage":"medium","window":"intra-quarter · Apr 23 → Jun 23, 2026","events":[{"date":"2026-04-23","src":"OpenAI (press)","theme":"produto","lean":"neutral","text":"GPT-5.5 (\"Spud\") shipped as a frontier release; GPT-5.5/5.5 Pro on the API the next day. Positioned as a frontier model for complex professional/agentic work, with leaderboard claims vs Claude Opus 4.7 and Gemini 3.1 Pro on Terminal-Bench / FrontierMath."},{"date":"2026-04-30","src":"UBS · Keirstead (MSFT recap)","theme":"capital","lean":"mixed","text":"UBS (MSFT print recap): the renegotiated deal removed the AGI clause (\"a very big win for Microsoft\"), made OpenAI's IP royalty-free for Microsoft through 2032, kept the rev-share % but with a cap (reported ~$38bn) guaranteed through 2030. The API is no longer Azure-exclusive. Weak commercial bookings in 1Q (+7% ex-OpenAI) attributed to OpenAI having just signed a ~$250bn Azure commit."},{"date":"2026-05-06","src":"BofA · Vivek Arya (AMD recap)","theme":"supply","lean":"bull","text":"BofA/Arya (AMD recap): on OpenAI's ~6 GW / ~$100bn / 160M-warrant deal (and the Meta parallel), AMD's CFO indicated they \"don't really need to do any more of these deals\" — not for lack of supply, but because the MI series is now a \"well-established product, demand far out-pacing supply.\" Warrants vest against POs + milestones (final tranche at $600/share)."},{"date":"2026-06-01","src":"Jefferies · Brent Thill","theme":"supply","lean":"bull","text":"Jefferies (Brian): Amazon flagged with \"a massive partnership and deal with OpenAI... $50 billion getting them for compute\" — new, on top of Amazon's large stake in Anthropic — read as Jassy solidifying both frontier labs on AWS."},{"date":"2026-06-03","src":"OpenAI · CFO Sarah Friar","theme":"demanda","lean":"mixed","text":"Friar (CFO interview): frames the company as \"constantly under compute\" — compute, not demand, is the binding constraint. IPO/compute context discussed."},{"date":"2026-06-04","src":"UBS · Tim Arcuri (AVGO callback)","theme":"supply","lean":"mixed","text":"UBS (Arcuri): OpenAI's XPU program with Broadcom tapes out late this year and begins shipping 2H27, with a much bigger ramp in 2028; of the ~20 GW Anthropic+OpenAI SPV, ~15 GW earmarked for the two through 2028. OpenAI's compute demand \"similar to Anthropic's,\" but Broadcom has lower revenue visibility on OpenAI."},{"date":"2026-06-12","src":"BG2Pod","theme":"competicao","lean":"mixed","text":"BG2Pod placed four labs on the coding Pareto frontier: OpenAI, Google, Anthropic, xAI. The frontier revenue-accrual thesis (value concentrates at the frontier even if open-source wins on token volume) favors OpenAI."},{"date":"2026-06-16","src":"JPM (\"AI Capex 2.0\")","theme":"supply","lean":"bull","text":"JPM: ChatGPT WAU from ~100M (Oct-2023) to >900M (Mar-2026, ~9x); API token processing from ~300M/min to >6B/min (~20x); revenue run-rate >$25bn as of Mar-2026. Nvidia+AMD+Broadcom capacity commitments aggregate \"well in excess of $1T\" over the next ~4-5 years: NVIDIA ≥10 GW (NVDA invests up to $100B), AMD 6 GW, Broadcom 10 GW, AWS $38bn/7yr + ~2 GW Trainium ~$100B+, Cerebras 750 MW initial."},{"date":"2026-06-18","src":"@EugeneNg / @Hesamation (briefing)","theme":"competicao","lean":"bear","text":"Briefing: ChatGPT fell below 50% AI market share for the first time — 46.4% ChatGPT vs 27.7% Gemini vs 10.3% Claude. By ARR, a FinTwit read claims Anthropic ($40bn) overtook OpenAI ($28bn); the two together ~89% of a ~$80bn AI-startup ARR pool. ~$34bn of spend in 2025 vs ~$28bn of ARR. MSFT reportedly evaluating DeepSeek to replace \"expensive\" OpenAI/Anthropic APIs."},{"date":"2026-06-19","src":"@OpenAI / The Information (briefing)","theme":"produto","lean":"bull","text":"Briefing: ChatGPT reported 230M+ weekly users; GPT-5.5 Instant brought free-tier users to \"frontier Thinking\" parity for health questions. Noam Shazeer (Gemini co-lead, co-author of \"Attention Is All You Need\") left Google for OpenAI — framed as resolving a \"pretraining scaling bottleneck.\""},{"date":"2026-06-22","src":"Bernstein (\"Cloud in the Quarter\")","theme":"supply","lean":"mixed","text":"Bernstein: OpenAI is the backbone of a two-hyperscaler AI economy — ~$300B of Oracle's $638B RPO is OpenAI, and MSFT discloses a $250B+ OpenAI commit within its $627B commercial RPO. Flags the open question of whether Oracle can \"rely on their OpenAI commitments.\""}],"evolution":null}
+{
+  "ticker": "OPENAI",
+  "name": "OpenAI",
+  "asof": "2026-06-23",
+  "coverage": "medium",
+  "window": "intra-quarter · Apr 23 → Jun 23, 2026",
+  "events": [
+    {
+      "date": "2026-04-23",
+      "src": "OpenAI (press)",
+      "theme": "produto",
+      "lean": "neutral",
+      "text": "GPT-5.5 (\"Spud\") shipped as a frontier release; GPT-5.5/5.5 Pro on the API the next day. Positioned as a frontier model for complex professional/agentic work, with leaderboard claims vs Claude Opus 4.7 and Gemini 3.1 Pro on Terminal-Bench / FrontierMath."
+    },
+    {
+      "date": "2026-04-30",
+      "src": "UBS · Keirstead (MSFT recap)",
+      "theme": "capital",
+      "lean": "mixed",
+      "text": "UBS (MSFT print recap): the renegotiated deal removed the AGI clause (\"a very big win for Microsoft\"), made OpenAI's IP royalty-free for Microsoft through 2032, kept the rev-share % but with a cap (reported ~$38bn) guaranteed through 2030. The API is no longer Azure-exclusive. Weak commercial bookings in 1Q (+7% ex-OpenAI) attributed to OpenAI having just signed a ~$250bn Azure commit."
+    },
+    {
+      "date": "2026-05-06",
+      "src": "BofA · Vivek Arya (AMD recap)",
+      "theme": "supply",
+      "lean": "bull",
+      "text": "BofA/Arya (AMD recap): on OpenAI's ~6 GW / ~$100bn / 160M-warrant deal (and the Meta parallel), AMD's CFO indicated they \"don't really need to do any more of these deals\" — not for lack of supply, but because the MI series is now a \"well-established product, demand far out-pacing supply.\" Warrants vest against POs + milestones (final tranche at $600/share)."
+    },
+    {
+      "date": "2026-06-01",
+      "src": "Jefferies · Brent Thill",
+      "theme": "supply",
+      "lean": "bull",
+      "text": "Jefferies (Brian): Amazon flagged with \"a massive partnership and deal with OpenAI... $50 billion getting them for compute\" — new, on top of Amazon's large stake in Anthropic — read as Jassy solidifying both frontier labs on AWS."
+    },
+    {
+      "date": "2026-06-03",
+      "src": "OpenAI · CFO Sarah Friar",
+      "theme": "demanda",
+      "lean": "mixed",
+      "text": "Friar (CFO interview): frames the company as \"constantly under compute\" — compute, not demand, is the binding constraint. IPO/compute context discussed."
+    },
+    {
+      "date": "2026-06-04",
+      "src": "UBS · Tim Arcuri (AVGO callback)",
+      "theme": "supply",
+      "lean": "mixed",
+      "text": "UBS (Arcuri): OpenAI's XPU program with Broadcom tapes out late this year and begins shipping 2H27, with a much bigger ramp in 2028; of the ~20 GW Anthropic+OpenAI SPV, ~15 GW earmarked for the two through 2028. OpenAI's compute demand \"similar to Anthropic's,\" but Broadcom has lower revenue visibility on OpenAI."
+    },
+    {
+      "date": "2026-06-12",
+      "src": "BG2Pod",
+      "theme": "competicao",
+      "lean": "mixed",
+      "text": "BG2Pod placed four labs on the coding Pareto frontier: OpenAI, Google, Anthropic, xAI. The frontier revenue-accrual thesis (value concentrates at the frontier even if open-source wins on token volume) favors OpenAI."
+    },
+    {
+      "date": "2026-06-16",
+      "src": "JPM (\"AI Capex 2.0\")",
+      "theme": "supply",
+      "lean": "bull",
+      "text": "JPM: ChatGPT WAU from ~100M (Oct-2023) to >900M (Mar-2026, ~9x); API token processing from ~300M/min to >6B/min (~20x); revenue run-rate >$25bn as of Mar-2026. Nvidia+AMD+Broadcom capacity commitments aggregate \"well in excess of $1T\" over the next ~4-5 years: NVIDIA ≥10 GW (NVDA invests up to $100B), AMD 6 GW, Broadcom 10 GW, AWS $38bn/7yr + ~2 GW Trainium ~$100B+, Cerebras 750 MW initial."
+    },
+    {
+      "date": "2026-06-18",
+      "src": "@EugeneNg / @Hesamation (briefing)",
+      "theme": "competicao",
+      "lean": "bear",
+      "text": "Briefing: ChatGPT fell below 50% AI market share for the first time — 46.4% ChatGPT vs 27.7% Gemini vs 10.3% Claude. By ARR, a FinTwit read claims Anthropic ($40bn) overtook OpenAI ($28bn); the two together ~89% of a ~$80bn AI-startup ARR pool. ~$34bn of spend in 2025 vs ~$28bn of ARR. MSFT reportedly evaluating DeepSeek to replace \"expensive\" OpenAI/Anthropic APIs."
+    },
+    {
+      "date": "2026-06-19",
+      "src": "@OpenAI / The Information (briefing)",
+      "theme": "produto",
+      "lean": "bull",
+      "text": "Briefing: ChatGPT reported 230M+ weekly users; GPT-5.5 Instant brought free-tier users to \"frontier Thinking\" parity for health questions. Noam Shazeer (Gemini co-lead, co-author of \"Attention Is All You Need\") left Google for OpenAI — framed as resolving a \"pretraining scaling bottleneck.\""
+    },
+    {
+      "date": "2026-06-22",
+      "src": "Bernstein (\"Cloud in the Quarter\")",
+      "theme": "supply",
+      "lean": "mixed",
+      "text": "Bernstein: OpenAI is the backbone of a two-hyperscaler AI economy — ~$300B of Oracle's $638B RPO is OpenAI, and MSFT discloses a $250B+ OpenAI commit within its $627B commercial RPO. Flags the open question of whether Oracle can \"rely on their OpenAI commitments.\""
+    },
+    {
+      "date": "2026-10-07",
+      "src": "SemiAnalysis · Max Kan / Andrew Megalaa / Jordan Nanos",
+      "theme": "margem",
+      "lean": "neutral",
+      "text": "Podcast backfill ingested 2026-10-19. Anthropic peer read-through: Max's changed Anthropic utilization/margin inference relative to July Ep. 020 does not establish a revised OpenAI margin or utilization view. Plan/model/workload changes limit comparisons. SemiAnalysis Ep. 036 analytical review",
+      "source_urls": [
+        "../relat%C3%B3rios%20bons/20261007__SemiAnalysis__Episode_036__analytical-summary.html"
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "src": "TITV · supplied original investor analysis",
+      "theme": "margem",
+      "lean": "neutral",
+      "text": "Podcast backfill ingested 2026-10-19. Analysis only: test retained advertiser returns and quality-adjusted inference economics. No reported advertiser count, price, run rate or company milestone adopted; primary re-verification unavailable. TITV analytical review",
+      "source_urls": [
+        "../relat%C3%B3rios%20bons/20261016__TITV__October_16__youtube-Eom8fkGK3wg__analytical-summary.html"
+      ]
+    }
+  ],
+  "evolution": null
+}
