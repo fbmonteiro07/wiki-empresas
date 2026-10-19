@@ -2,10 +2,11 @@
 
 _Generated 2026-10-19 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (40)
+## 📅 Upcoming (41)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
+| 2026-10-19 | AMZN | 🆕 **2026-10-19 — THE VERBAL LAYER ON JPM'S 10-15 DECK: THE BOGEYS, THE "CONSENSUS CAPEX IS WAY TOO LOW" CLAIM, THE AWS MARGIN PATH AND THE MUSE BLOCK** (Doug Anmuth (J.P. Morgan) @ JPM Internet 3Q26 P |
 | 2026-10-20 | NFLX | 🆕 **Q3 2026 earnings — Tue 2026-10-20 AMC** (Vital Knowledge calendar, 2026-09-28) — replaces the "~late Oct" placeholder. |
 | 2026-10-20 | NVDA | 🆕 **2026-10-20 to 10-22: NVIDIA GTC Berlin** (JPM US Market Intelligence calendar, 09-29/09-30); BofA lists "multiple GTC tradeshow events" with the enhanced buyback as the near-term NVDA catalysts (A |
 | 2026-10-21 | META | **🆕🔴🔴 2026-10-21 (WED, AFTER THE CLOSE) — Q3'26 PRINT, about a week earlier than normal** (JPM desk · Schilsky, 2026-10-13; BofA · Post, UBS desk · Dwyer and Vital Knowledge, 2026-10-16). The bar: 3Q  |

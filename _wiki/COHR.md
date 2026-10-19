@@ -237,6 +237,8 @@ _Source: **Capstone initiation of coverage, 2026-09-01 (Felipe Monteiro) — NEU
 
 ## Debate / thesis
 
+- 🔭 **2026-10-19 (notion-ingest · BofA Arya OCP call)** — BofA stance restated: "we have not been as positive on some of the optical names, Lumentum [transcribed "Momentum"] and Coherent [transcribed "Cohrent"], but … consistently been positive [on Credo]"; OCP: customers "only comfortable getting to NPO" while "only the suppliers were talking about CPO". Published ratings unchanged. — _Vivek Arya (BofA) @ BofA SEMICON West & OCP Takeaways call, 2026-10-19 - Capstone notes (Notion transcript)_ · [2026-10-19_BofA_SEMICON-West-OCP-takeaways-call-Vivek-Arya.md](../_equity_calls/Semis/2026-10-19_BofA_SEMICON-West-OCP-takeaways-call-Vivek-Arya.md)
+
 
 **🆕🔴 2026-09-28 — JPM'S SPOKEN ECOC DEBRIEF PUTS COHERENT AT THE LOW END OF THE NPO POWER LADDER (70mW IN-BOX) AND CALLS THAT THE CONTESTABLE TIER; VCSEL SCALE-UP ENGAGEMENTS AND MULTI-CORE FIBRE ARE THE COHR-SPECIFIC POSITIVES.**
 - **JPM · Joseph Cardoso — "Takeaways from ECOC, All Stars & Other Investor Events" call, 2026-09-28 (Capstone notes, Notion transcript; Cardoso relaying Coherent / Lumentum — no rating/PT on the call):** COHR's in-box NPO CW laser *"could be as low as 70 milliwatts"* vs Lumentum's 150mW; in-box priced *"potentially… 50% lower"* than the 400mW faceplate part, which Lumentum prices at *"roughly 1.4 to 1.5"* NVIDIA; JPM: 70mW is where *"competition could definitely potentially come in"*. COHR using VCSELs in live scale-up engagements and for scale-in (JPM: *"beyond 2030"*), >1bn VCSEL-array capacity restated, **multi-core fibre** capacity being added. Customers plan Japanese pump-laser second sources on a ~2-year clock. Full block in `## Intra-quarter`.
@@ -656,6 +658,8 @@ _Source: COHR earnings calls (dates above); management commentary, paraphrased._
   - 🆕 [Fabrinet Q4 FY26 earnings call (2026-08-17, Bloomberg INITIAL DRAFT transcript)](../relat%C3%B3rios%20bons/bfm807C.html) — **FN company primary, read-through only (no FN wiki page).** *"NPO… probably represents a more near-term opportunity than CPO"* and *"working on CPO today with a handful of customers… not yet at full-scale volumes"*; FY26 ≥10% customers **Cisco 20% / NVIDIA 16% / Nokia 11% (new) / Amazon 11% — Ciena NOT on the list**; data centers $669m (+68% y/y, 51% of total) with ECI >$1bn annualised; revenue-capacity ladder **$12.5–14bn** vs ~$11.5bn a quarter ago; **NVIDIA revenue DOWN 20%+ for the year.**
 
 ## Changelog
+
+- 2026-10-19 — ingest (Notion, 2026-10-19_BofA_SEMICON-West-OCP-takeaways-call-Vivek-Arya.md): Debate — BofA 'not as positive' on COHR/LITE vs Credo; customer NPO comfort vs supplier CPO push. Orchestrator (D) pass.
 
 - 2026-10-13 — run-inbox: Sources link only. J.P. Morgan · Cardoso et al., "Cloud DC Capex Outlook Climbs Higher for 2026 and 2027" (2026-10-13) is a thematic note; COHR appears only in the named supplier list and the p8 roster (OW). No log row, no Sinal change, nothing superseded.
 - 2026-10-13 — ingest (Notion, 2026-10-13_Bernstein_Copper-vs-Optical-former-NVIDIA-LinkX-expert-Brad-Smith.md): 1 intra-quarter block (top of section): ex-NVIDIA LinkX expert Brad Smith — Coherent's longer-wavelength VCSELs serve short reach/storage but do not replace CPO (multimode ~30 m vs ~500 m switch reach); CPO laser-source debate open; OCS = Coherent liquid-crystal vs Lumentum MEMS; CPO ramp 2H27-28, rollout ~2035. Expert voice, not Bernstein research. Nothing superseded.

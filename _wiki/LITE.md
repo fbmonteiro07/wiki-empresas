@@ -474,6 +474,8 @@ _Source: Capstone official model (`Modelo consolidado incl. LITE .xlsx` — cons
 
 ## Debate / thesis
 
+- 🔭 **2026-10-19 (notion-ingest · BofA Arya OCP call)** — BofA stance restated on the call: "we have not been as positive on some of the optical names, Lumentum [transcribed "Momentum"] and Coherent [transcribed "Cohrent"], but we have kind of consistently been positive [on Credo]"; OCP: "Everyone and their brother and sister and cousin had a CPO or NPO approach … only the suppliers were talking about CPO, whereas the customers were only comfortable getting to NPO" (~20 suppliers). Published ratings unchanged. — _Vivek Arya (BofA) @ BofA SEMICON West & OCP Takeaways call, 2026-10-19 - Capstone notes (Notion transcript)_ · [2026-10-19_BofA_SEMICON-West-OCP-takeaways-call-Vivek-Arya.md](../_equity_calls/Semis/2026-10-19_BofA_SEMICON-West-OCP-takeaways-call-Vivek-Arya.md)
+
 
 **🆕 2026-10-16 (/run-inbox) — JEFFERIES' OCP TAKEAWAYS HOLD 80M 1.6T UNITS IN C27 AND KEEP LITE "MOST LEVERED", BUT PUT MICRO-VCSEL ARRAYS ON THE TABLE AS A THREAT TO InP LASER CONTENT IN SHORT-REACH SCALE-UP.**
 - **Jefferies · Blayne Curtis / Crawford Clarke / Andrew Buller / Kevin Garrigan** (*"OCP Takeaways - Optical Innovation Accelerating"*, 2026-10-16, p1): scale-out transceiver demand *"remains very strong, and despite concerns of tightness at 3nm, we continue to expect 80M 1.6T units in C27"*; within coverage *"LITE and MTSI are most levered to the transition"*. ➤ A reiteration of the 09-24 model (80M+ 1.6T), not a raise. LITE is listed BUY in the roster (the $869.54 printed there is the close, not a PT).
@@ -963,6 +965,8 @@ _Source: LITE earnings calls (dates above); management commentary, paraphrased._
 - **Briefings:** [LITE roll-up](../_briefings/by-ticker/LITE.md) — 41 datapoints / 28 days.
 
 ## Changelog
+
+- 2026-10-19 — ingest (Notion, 2026-10-19_BofA_SEMICON-West-OCP-takeaways-call-Vivek-Arya.md): Debate — BofA 'not as positive' on LITE/COHR vs Credo; CPO supplier-push vs customer NPO comfort at OCP. Orchestrator (D) pass.
 
 - 2026-10-16 — run-inbox: added Jefferies · Curtis et al. "OCP Takeaways - Optical Innovation Accelerating" (2026-10-16) datapoints (1 Debate block, 1 intra-quarter log row, 1 Sources link). The 80M 1.6T C27 units match the 09-24 model (80M+), so this is a reiteration. Nothing superseded.
 - 2026-10-13 — run-inbox: Sources link only. J.P. Morgan · Cardoso et al., "Cloud DC Capex Outlook Climbs Higher for 2026 and 2027" (2026-10-13) is a thematic note; LITE appears only in the named supplier list and the p8 roster (OW). No log row, no Sinal change, nothing superseded.

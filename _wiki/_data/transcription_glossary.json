@@ -1,6 +1,6 @@
 {
  "_about": "Hand-edited ledger of machine-transcription garbles (Notion AI, Bloomberg ASR, auto-translation) seen in the archive, with the correct reading. Used by E:\\.claude\\scripts\\transcript_qa.py (source-file scan, page-diff scan) and by ingest_notion_meetings.py (writes a 'Transcription QA' block into every archived Notion file). Keys are matched with word boundaries, case-sensitive unless 'ci' is true. 'keep_when' = regex contexts (same line, ~80 chars around the hit) where the token is legitimate and must NOT be flagged. Add an entry the first time a garble is caught; never delete one. Standing rule (Felipe, 2026-09-28): ALWAYS double-check transcript content — acronyms, names, units, numbers — before it travels to a page.",
- "_updated": "2026-10-16",
+ "_updated": "2026-10-19",
  "terms": {
   "Smolik": {
    "correct": "Shmulik (Mark Shmulik, Bernstein US Internet)",
@@ -1311,6 +1311,281 @@
     "salary"
    ],
    "first_seen": "2026-10-16 (UBS Vella memory chat)"
+  },
+  "hosting ramp": {
+   "correct": "CoWoS ramp (TSMC advanced packaging)",
+   "domain": "products",
+   "rule": "ASR hears 'CoWoS' as 'hosting' in TSMC margin sentences ('the faster hosting ramp is also impacting margins'); physical sense = packaging mix dilution.",
+   "keep_when": [
+    "web hosting",
+    "cloud hosting",
+    "hosting provider"
+   ],
+   "first_seen": "2026-10-19 (Notion ingest: JPM TSMC replay / UBS Arcuri / BofA Arya OCP-SEMICON / JPM Anmuth Internet)"
+  },
+  "Helion": {
+   "correct": "Helion (AMD open rack-scale CPU platform — Venice 256-core; Jefferies OCP note 2026-10-16) — NOT a garble; distinct from Helios (MI400-generation GPU rack)",
+   "domain": "products",
+   "rule": "KEEP AS IS. Entered 2026-10-19 as 'Helios' and reversed the same day after the written Jefferies note on AMD.md confirmed Helion = CPU rack; the archived 2026-10-19 UBS/BofA file headers still carry the wrong 'Helion = Helios' line (immutable) — this entry overrides them.",
+   "keep_when": [
+    "Helion"
+   ],
+   "first_seen": "2026-10-19 (Notion ingest: BofA Arya OCP/SEMICON call; UBS Arcuri call)"
+  },
+  "Varano": {
+   "correct": "Verano (AMD EPYC generation after Venice, Zen 7)",
+   "domain": "products",
+   "rule": "AMD CPU codenames are Italian cities: Venice -> Verano; wiki usage is 'Verano' (AMD.md).",
+   "first_seen": "2026-10-19 (Notion ingest: JPM TSMC replay / UBS Arcuri / BofA Arya OCP-SEMICON / JPM Anmuth Internet)"
+  },
+  "Enscale": {
+   "correct": "Nscale (neocloud; _wiki/NSCALE.md)",
+   "domain": "companies",
+   "rule": "'Microsoft ... pulling back in London with Enscale' = Nscale.",
+   "first_seen": "2026-10-19 (Notion ingest: JPM TSMC replay / UBS Arcuri / BofA Arya OCP-SEMICON / JPM Anmuth Internet)"
+  },
+  "Maya": {
+   "correct": "Maia (Microsoft Maia accelerator)",
+   "domain": "products",
+   "rule": "Microsoft's in-house accelerator is Maia; 'Maya' in a semis call about Microsoft/Marvell volumes = Maia.",
+   "keep_when": [
+    "Maya Angelou",
+    "Riviera Maya",
+    "Autodesk Maya",
+    "Maya civilization"
+   ],
+   "first_seen": "2026-10-19 (Notion ingest: JPM TSMC replay / UBS Arcuri / BofA Arya OCP-SEMICON / JPM Anmuth Internet)"
+  },
+  "Training3": {
+   "correct": "Trainium 3 (AWS)",
+   "domain": "products",
+   "rule": "'slippage in Vera Rubin and Training3' = Trainium 3.",
+   "first_seen": "2026-10-19 (Notion ingest: JPM TSMC replay / UBS Arcuri / BofA Arya OCP-SEMICON / JPM Anmuth Internet)"
+  },
+  "Darrell Rubin": {
+   "correct": "Vera Rubin (NVIDIA)",
+   "domain": "products",
+   "rule": "ASR of the NVIDIA platform name in a host intro.",
+   "first_seen": "2026-10-19 (Notion ingest: JPM TSMC replay / UBS Arcuri / BofA Arya OCP-SEMICON / JPM Anmuth Internet)"
+  },
+  "NVL 7872": {
+   "correct": "NVL72 (NVIDIA 72-GPU rack)",
+   "domain": "products",
+   "rule": "see 'NVL 572'; the sentence itself says 'that has 72 GPUs'.",
+   "first_seen": "2026-10-19 (Notion ingest: JPM TSMC replay / UBS Arcuri / BofA Arya OCP-SEMICON / JPM Anmuth Internet)"
+  },
+  "GNP": {
+   "correct": "GMS (Etsy gross merchandise sales) in Internet/marketplace calls",
+   "domain": "metrics",
+   "rule": "'US GNP is going to grow right around 20% ... including Depop ... 3 points above the high end of the guide' = Etsy GMS; keep GNP only in macro context.",
+   "keep_when": [
+    "gross national product",
+    "economy",
+    "macro",
+    "GDP"
+   ],
+   "first_seen": "2026-10-19 (Notion ingest: JPM TSMC replay / UBS Arcuri / BofA Arya OCP-SEMICON / JPM Anmuth Internet)"
+  },
+  "EPOP": {
+   "correct": "Depop (Etsy's resale marketplace)",
+   "domain": "companies",
+   "rule": "'the assumed dilutive nature of EPOP' = Depop margin dilution at Etsy; also transcribed lowercase 'depop'.",
+   "first_seen": "2026-10-19 (Notion ingest: JPM TSMC replay / UBS Arcuri / BofA Arya OCP-SEMICON / JPM Anmuth Internet)"
+  },
+  "Camtex": {
+   "correct": "Camtek (inspection/metrology)",
+   "domain": "companies",
+   "rule": "'Camtex Analyst Day' at SEMICON West = Camtek.",
+   "first_seen": "2026-10-19 (Notion ingest: JPM TSMC replay / UBS Arcuri / BofA Arya OCP-SEMICON / JPM Anmuth Internet)"
+  },
+  "Vidy": {
+   "correct": "NVIDIA (clipped: 'And NVIDIA also discussed a Vera CPU rack')",
+   "domain": "companies",
+   "rule": "clipped company name after 'And'; never a person.",
+   "keep_when": [
+    "Vidya"
+   ],
+   "first_seen": "2026-10-19 (Notion ingest: JPM TSMC replay / UBS Arcuri / BofA Arya OCP-SEMICON / JPM Anmuth Internet)"
+  },
+  "DFA technology conferences": {
+   "correct": "BofA technology conferences",
+   "domain": "names",
+   "rule": "the speaker is the BofA team ('we have had him as a keynote speaker at several BofA technology conferences').",
+   "first_seen": "2026-10-19 (Notion ingest: JPM TSMC replay / UBS Arcuri / BofA Arya OCP-SEMICON / JPM Anmuth Internet)"
+  },
+  "OCT": {
+   "correct": "OCP (Open Compute Project Global Summit) when paired with SEMICON West",
+   "domain": "events",
+   "rule": "'out at Semi-Con West with some folks out of OCT' = OCP; keep OCT as the month.",
+   "keep_when": [
+    "October",
+    "Oct.",
+    "Oct-"
+   ],
+   "first_seen": "2026-10-19 (Notion ingest: JPM TSMC replay / UBS Arcuri / BofA Arya OCP-SEMICON / JPM Anmuth Internet)"
+  },
+  "TVK": {
+   "correct": "TDK (HDD heads; 'Seagate buy TDK')",
+   "domain": "companies",
+   "rule": "the same sentence continues 'TDK actually wanted to sell'.",
+   "first_seen": "2026-10-19 (Notion ingest: JPM TSMC replay / UBS Arcuri / BofA Arya OCP-SEMICON / JPM Anmuth Internet)"
+  },
+  "Brian Smilak": {
+   "correct": "Bryan Smilek (J.P. Morgan SMid Internet)",
+   "domain": "names",
+   "rule": "spelling from the JPM replay mail 'Hosted by Bryan Smilek & Mark Schilsky'.",
+   "first_seen": "2026-10-19 (Notion ingest: JPM TSMC replay / UBS Arcuri / BofA Arya OCP-SEMICON / JPM Anmuth Internet)"
+  },
+  "Shahara": {
+   "correct": "Sharada (J.P. Morgan sales host on the TSMC call; surname UNCONFIRMED)",
+   "domain": "names",
+   "rule": "also transcribed 'Sharada' in the same transcript; identity needs the invite.",
+   "first_seen": "2026-10-19 (Notion ingest: JPM TSMC replay / UBS Arcuri / BofA Arya OCP-SEMICON / JPM Anmuth Internet)"
+  },
+  "Daxun": {
+   "correct": "Dakshin (BofA semis team; surname UNCONFIRMED)",
+   "domain": "names",
+   "rule": "also 'Duxan', 'Dakshana' in the same BofA transcript; identity needs the invite.",
+   "first_seen": "2026-10-19 (Notion ingest: JPM TSMC replay / UBS Arcuri / BofA Arya OCP-SEMICON / JPM Anmuth Internet)"
+  },
+  "Duxan": {
+   "correct": "Dakshin (BofA semis team; surname UNCONFIRMED)",
+   "domain": "names",
+   "rule": "see 'Daxun'.",
+   "first_seen": "2026-10-19 (Notion ingest: JPM TSMC replay / UBS Arcuri / BofA Arya OCP-SEMICON / JPM Anmuth Internet)"
+  },
+  "Dakshana": {
+   "correct": "Dakshin (BofA semis team; surname UNCONFIRMED)",
+   "domain": "names",
+   "rule": "see 'Daxun'.",
+   "first_seen": "2026-10-19 (Notion ingest: JPM TSMC replay / UBS Arcuri / BofA Arya OCP-SEMICON / JPM Anmuth Internet)"
+  },
+  "L data": {
+   "correct": "alt data (alternative data)",
+   "domain": "metrics",
+   "rule": "'if you believe the L data' = alt data.",
+   "first_seen": "2026-10-19 (Notion ingest: JPM TSMC replay / UBS Arcuri / BofA Arya OCP-SEMICON / JPM Anmuth Internet)"
+  },
+  "Molexel": {
+   "correct": "UNRESOLVED ('Hynix, Samsung, Molexel' - possibly Micron) - do not carry to a page",
+   "domain": "companies",
+   "rule": "flag only.",
+   "first_seen": "2026-10-19 (Notion ingest: JPM TSMC replay / UBS Arcuri / BofA Arya OCP-SEMICON / JPM Anmuth Internet)"
+  },
+  "EMA": {
+   "correct": "UNRESOLVED packaging term ('already decided to use EMA when TSMC go off in 27 and 28', TPU v9 Plan B) - plausibly EMIB (Intel); the Notion summary's 'Amkor (EMA technology)' is NOT in the transcript",
+   "domain": "products",
+   "rule": "quote as `EMA [transcribed; unresolved]`; never write Amkor from this source; keep EMA in trading context.",
+   "keep_when": [
+    "moving average",
+    "exponential"
+   ],
+   "first_seen": "2026-10-19 (Notion ingest: JPM TSMC replay / UBS Arcuri / BofA Arya OCP-SEMICON / JPM Anmuth Internet)"
+  },
+  "RockBot": {
+   "correct": "Grok Bot (xAI/SpaceX agent; JPM 10-01 GOOG note: 'Muse, Grok Bot, Instinct')",
+   "domain": "products",
+   "rule": "'RockBot and Instinct' in an Internet call = Grok Bot and Instinct (agent products).",
+   "first_seen": "2026-10-19 (Notion ingest: JPM Anmuth Internet 3Q26 preview Zoom)"
+  },
+  "Samet": {
+   "correct": "Samik (Samik Chatterjee, J.P. Morgan IT hardware analyst - covers MSFT/ORCL capex in the JPM Internet capex table)",
+   "domain": "names",
+   "rule": "deck footnote attributes MSFT/ORCL to Samik Chatterjee; also transcribed 'Samek'.",
+   "first_seen": "2026-10-19 (Notion ingest: JPM Anmuth Internet 3Q26 preview Zoom)"
+  },
+  "credit long": {
+   "correct": "crowded long (positioning jargon)",
+   "domain": "metrics",
+   "rule": "host (sales) describing SPOT positioning; likely 'crowded long'.",
+   "keep_when": [
+    "credit",
+    "bond",
+    "spread"
+   ],
+   "first_seen": "2026-10-19 (Notion ingest: JPM Anmuth Internet 3Q26 preview Zoom)"
+  },
+  "Shenner": {
+   "correct": "Gilad Shainer (NVIDIA, SVP networking/optics; ex-Mellanox)",
+   "domain": "names",
+   "rule": "transcript: 'head of NVIDIA's optics business … used to work at Mellanox'; NVDA.md carries 'Senior VP Gilad Shainer'.",
+   "first_seen": "2026-10-19 (Notion ingest: BofA Arya OCP/SEMICON call; UBS Arcuri call)"
+  },
+  "Cohrent": {
+   "correct": "Coherent (COHR)",
+   "domain": "companies",
+   "rule": "spelling.",
+   "first_seen": "2026-10-19 (Notion ingest: BofA Arya OCP/SEMICON call; UBS Arcuri call)"
+  },
+  "Maycom": {
+   "correct": "MACOM (MTSI)",
+   "domain": "companies",
+   "rule": "'MRVL > CRDO > Maycom' networking order = MACOM.",
+   "first_seen": "2026-10-19 (Notion ingest: BofA Arya OCP/SEMICON call; UBS Arcuri call)"
+  },
+  "Marvin": {
+   "correct": "Marvell (MRVL) when the context is semis/networking",
+   "domain": "companies",
+   "rule": "'Marvin? That's our highest conviction idea' = Marvell.",
+   "keep_when": [
+    "Marvin Gaye",
+    "Lee Marvin",
+    "Marvin Ellison"
+   ],
+   "first_seen": "2026-10-19 (Notion ingest: BofA Arya OCP/SEMICON call; UBS Arcuri call)"
+  },
+  "Chemtech": {
+   "correct": "Camtek (probable; '$800 million plus' 2027 outlook after the Camtek Analyst Day)",
+   "domain": "companies",
+   "rule": "see 'Camtex'; probable, verify against the Camtek Analyst Day deck.",
+   "first_seen": "2026-10-19 (Notion ingest: BofA Arya OCP/SEMICON call; UBS Arcuri call)"
+  },
+  "Vamsee": {
+   "correct": "Vamsi (BofA; HBF expert-call host)",
+   "domain": "names",
+   "rule": "first name only, surname UNCONFIRMED.",
+   "first_seen": "2026-10-19 (Notion ingest: BofA Arya OCP/SEMICON call; UBS Arcuri call)"
+  },
+  "MTI": {
+   "correct": "MTIA (Meta Training and Inference Accelerator) when Meta's accelerator is meant",
+   "domain": "products",
+   "rule": "'MTI with an own open scale-up switch' = MTIA; keep MTI when it is a company/other acronym.",
+   "keep_when": [
+    "MTI Corp",
+    "mti.com"
+   ],
+   "first_seen": "2026-10-19 (Notion ingest: BofA Arya OCP/SEMICON call; UBS Arcuri call)"
+  },
+  "Momentum": {
+   "correct": "Lumentum (LITE) ONLY when listed with other optical names ('Momentum and Coherent')",
+   "domain": "companies",
+   "rule": "'momentum' is an ordinary word — apply only in a list of optical vendors; see 'Lamentum'.",
+   "keep_when": [
+    "momentum",
+    "Momentum investors",
+    "price momentum",
+    "earnings momentum",
+    "business momentum"
+   ],
+   "first_seen": "2026-10-19 (Notion ingest: BofA Arya OCP/SEMICON call; UBS Arcuri call)"
+  },
+  "Google Spark": {
+   "correct": "UNRESOLVED (host remark on Google's agent relaunch) — do not carry",
+   "domain": "products",
+   "rule": "flag only.",
+   "first_seen": "2026-10-19 (Notion ingest: BofA Arya OCP/SEMICON call; UBS Arcuri call)"
+  },
+  "OpenCLAW": {
+   "correct": "UNRESOLVED (early consumer agent named on the JPM Internet Zoom) — do not carry",
+   "domain": "products",
+   "rule": "flag only.",
+   "first_seen": "2026-10-19 (Notion ingest: BofA Arya OCP/SEMICON call; UBS Arcuri call)"
+  },
+  "Uber Cart": {
+   "correct": "UNRESOLVED (Anmuth: 'Dash and Uber Cart … shopper network' — possibly Uber Eats/Cornershop) — quote as transcribed",
+   "domain": "products",
+   "rule": "flag only.",
+   "first_seen": "2026-10-19 (Notion ingest: BofA Arya OCP/SEMICON call; UBS Arcuri call)"
   }
  },
  "summary_traps": [
@@ -1318,7 +1593,9 @@
   "Speakers are unlabeled: questions (Capstone/other investors) and answers run together; the host's arithmetic assented with a 'yeah' is not the guest's number.",
   "2026-10-02: Archera/Khanna call - the summary hangs the spoken commitment-growth marks on named clouds (Google 48.5%, AWS 38%, Azure 39.5%); the transcript speaks them as running rates (~45%->48.5% for one cloud, 36.5%->39.5% for another, consumption ~41%) with the cloud named in the surrounding sentence - map each figure to its cloud IN the transcript, never from the summary; the '300-400% mainframe migration volume' is ONE reseller PARTNER's volume (per Khanna), not Archera's total, and '$1 million minimum MAC/PPA' is spoken as a mid-quarter hyperscaler rule for GPU access. AVGO/Arcuri recap - the summary credits Arcuri's relayed statements to Broadcom management and adds 'Jalapeno', 'Sunfish v5', '440s and 430s' that grep does not find in the transcript.",
   "2026-10-14 (GS Alec Phillips meeting): the summary wrote 'Michigan Senate race (Abdullah al-Saeed vs. Susan Collins-equivalent dynamic)' - conflating the Michigan (El-Sayed) and Maine (Collins) races - and 'expected to accelerate in 2025' for data-center deals pushed to January (next year = 2027). Check polling-error coefficients ('37 bp', '0.7') against the transcript before use.",
-  "2026-10-16: the Notion summary (a) retitled Micron's post-F4Q26 IR call 'Post-3Q FY26' (wrong fiscal quarter) and hung the reported '$33B free cash flow' on 'Fiscal Q1 27' (the transcript says 'the last quarter we reported' = F4Q26; FQ1'27 is only 'significantly stronger'); (b) wrote CXMT's 2025 capacity add as '$45K' - it is 45K wafers per month, not dollars; (c) fused an audience question ('$60 to $64 billion ... brokers see 2028 capex higher than $105') with the expert's conditional '$100 billion' arithmetic into one 'CapEx trajectory' bullet (BTGP TSMC expert)."
+  "2026-10-16: the Notion summary (a) retitled Micron's post-F4Q26 IR call 'Post-3Q FY26' (wrong fiscal quarter) and hung the reported '$33B free cash flow' on 'Fiscal Q1 27' (the transcript says 'the last quarter we reported' = F4Q26; FQ1'27 is only 'significantly stronger'); (b) wrote CXMT's 2025 capacity add as '$45K' - it is 45K wafers per month, not dollars; (c) fused an audience question ('$60 to $64 billion ... brokers see 2028 capex higher than $105') with the expert's conditional '$100 billion' arithmetic into one 'CapEx trajectory' bullet (BTGP TSMC expert).",
+  "2026-10-19: the Notion summary of the JPM TSMC replay wrote 'Amkor (EMA technology)' / 'V9 locked in with Amkor' - the transcript says only 'use EMA when TSMC go off in 27 and 28' and never names Amkor (fabricated entity). Lesson for the lane itself: grep transcripts case-insensitively before declaring a summary figure absent - 'Backlog where we look at Google and Amazon both at $500 billion' IS in the JPM Internet transcript (capitalised).",
+  "2026-10-19: the JPM Internet Zoom host introduced 'eBay, slide 36' while the content (Depop dilution, 2-year GMS stack, Vinted) is Etsy — a HOST slip the Notion summary copied; ticker confusion is a trap even when the transcript is right."
  ],
  "Fenyman": {
   "correct": "Feynman (NVIDIA 2028 GPU generation)",
