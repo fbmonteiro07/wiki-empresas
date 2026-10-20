@@ -63,8 +63,8 @@
        "routine": "09:45 CompDashboard rotina",
        "desc": "Capstone Equity Panels: Bloomberg BEst P/E and EPS-revision panels for the coverage, six tabs, dated with the comp-sheet build. Index BEst works, ETF wrappers do not."},
       {"href": "/dashboards/modelos-capstone/#NVDA", "stat": "hub:modelos-capstone/index.html", "title": "Modelos Capstone — vs Street (opens at NVDA)", "cadence": "ondemand", "surface": "hub", "topic": "Models",
-       "routine": "hand-built from the official models",
-       "desc": "Twelve Capstone official models against Bloomberg consensus: modelos · valuation · tese per name (valuation snapshot 2026-06-23). The deep link lands on the NVDA block."}
+       "routine": "on demand: py P:/Felipe Monteiro/US Equities/Comp Dashboard/build_modelos.py --validate, then --render-img --publish (Excel COM + BBG terminal); re-verify the per-model row map against each summary sheet first",
+       "desc": "Thirteen Capstone official models against Bloomberg consensus: modelos · valuation · tese per name (models re-extracted 2026-10-20; CRWV added from the Template DCF family, TER/ADVANTEST configured but switched off; COHR = initiation 2026-09-01 house table; CY-basis names vs calendarised <yr>BC consensus; ASML in USD). The deep link lands on the NVDA block."}
     ]
   },
   "hub": {

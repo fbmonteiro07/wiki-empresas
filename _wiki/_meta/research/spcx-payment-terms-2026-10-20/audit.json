@@ -1,0 +1,41 @@
+{
+  "as_of": "2026-10-20",
+  "question": "SPCX capex payment timing to NVIDIA",
+  "verdict": "PARTIAL: structures verified, customer-specific invoice term unidentifiable",
+  "hard_inputs": {
+    "SPCX_Q2_capex_USDm": 18369,
+    "SPCX_Q3_capex_USDm": 19593,
+    "SPCX_Q2_AI_capex_USDm": 15828,
+    "SPCX_Q3_SI_capex_USDm": 16444,
+    "SPCX_June_AP_USDm": 8243,
+    "SPCX_September_AP_USDm": 13259,
+    "SPCX_H1_CFO_AP_adjustment_USDm": -88,
+    "SPCX_9M_CFO_AP_adjustment_USDm": -970,
+    "NVIDIA_certain_IG_terms": "90 days to one year; SPCX not named",
+    "Valor_III_tenor": "five years",
+    "Valor_III_undiscounted_lease_payments_USDm": 6587
+  },
+  "derived": {
+    "SPCX_Q3_AP_change_USDm": 5016
+  },
+  "rejected_estimates": [
+    "Quarter-end capex-payable/cash-capex day ratios: incomplete stock identification, cash vs accrual denominator, supplier/segment mismatch",
+    "Attributing the difference between AP balance-sheet change and operating cash-flow AP adjustment to capex or NVIDIA without acquisition/FX/noncash reconciliation",
+    "Applying five years to NVIDIA invoices or all Valor debt"
+  ],
+  "guardrails": {
+    "primary_source_values": "PASS",
+    "actual_NVIDIA_invoice_terms": "UNAVAILABLE",
+    "supplier_identity_in_AP": "UNAVAILABLE",
+    "quarter_alignment": "SPCX September30 versus latest NVDA July26; cannot directly match",
+    "acquisition_adjustments": "Cursor closed August14; AP reconciliation unavailable",
+    "Q3_10Q": "Not present in SEC recent-submissions response during review; Q3 8-K earnings release reviewed"
+  },
+  "skeptic": "Independent double-check agent verified values and rejected payment-day inference; findings accepted; no inferred invoice lag published",
+  "sources": {
+    "Q3": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066482/spaceexplorationtechnologi.htm",
+    "Q2": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026052535/spcx-20260630.htm",
+    "NVDA": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+    "Prospectus": "SPCX/SPCX_424B4_2026-06-12.html"
+  }
+}

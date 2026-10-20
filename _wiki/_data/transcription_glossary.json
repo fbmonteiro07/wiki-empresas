@@ -1194,6 +1194,30 @@
    "rule": "ASR spelling of the node name; likewise '1 Alpha' = 1-alpha, '1 Beta' = 1-beta, '1 Gamma' = 1-gamma. Not a garble of a number.",
    "first_seen": "2026-10-16 (Notion: UBS Vella memory chat / BTGP TSMC expert Lluis Paris / ASML Rothschild webinar / MU UBS IR call)"
   },
+  "NVHBN": {
+   "correct": "NVHBM (NVIDIA's custom HBM4E - memory controller moved into the HBM base die)",
+   "domain": "memory",
+   "rule": "ASR drops the final M; the same transcript also says 'NVHBM' correctly. Wiki term is NVHBM (hbm-memory.md).",
+   "first_seen": "2026-10-20 (Notion: Micron expert call, former DDR5 BLM 'Thomas')"
+  },
+  "SK Micron": {
+   "correct": "SK hynix, Micron (list of the three DRAM makers: 'SK [hynix], Micron and Samsung')",
+   "domain": "names",
+   "rule": "ASR drops 'hynix' in a three-maker list; read as two companies, never as one name.",
+   "first_seen": "2026-10-20 (Notion: Micron expert call, former DDR5 BLM 'Thomas')"
+  },
+  "Foursquare": {
+   "correct": "4F² (DRAM cell layout; '6F squared to 4F squared')",
+   "domain": "memory",
+   "rule": "ASR of '4F squared' in DRAM cell-architecture talk (CXMT 4F2). Keep for the company Foursquare only outside a memory context.",
+   "first_seen": "2026-10-20 (Notion: Micron expert call, former DDR5 BLM 'Thomas')"
+  },
+  "basins per megawatt": {
+   "correct": "basis per megawatt (all-in development cost basis, $/MW)",
+   "domain": "units",
+   "rule": "ASR of 'basis'; data-center real-estate cost-basis talk ('$7 million a megawatt' vs '$10 million and up').",
+   "first_seen": "2026-10-20 (Notion: Bernstein webinar, Jeff Moerdler / Haynes Boone, data-center contracts)"
+  },
   "TeraFab": {
    "correct": "Terafab (SpaceX/xAI fab project, as announced)",
    "domain": "names",
