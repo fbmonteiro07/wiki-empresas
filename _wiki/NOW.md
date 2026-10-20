@@ -5,7 +5,7 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\NOW` (filings + transcripts + decks) · `_briefings\by-ticker\NOW.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-19 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-10-20 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -14,7 +14,7 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\NOW` (filings + transc
 | Gross margin | 79.3% | 79.1% |
 | EBITDA | $6.0bn | $7.5bn |
 | EPS | $4.06 | $5.02 |
-| Capex | $891m | $952m |
+| Capex | $891m | $953m |
 | OCF (≈EBITDA) | $6.0bn | $7.5bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

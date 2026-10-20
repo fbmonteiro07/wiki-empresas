@@ -7,17 +7,17 @@
 _Wiki · generated 2026-06-20 · **Taiwan issuer — no SEC filings**; sources: transcripts (`E:\Wiki Felipe\MEDIATEK\transcripts`) + MediaTek IR + BBG (**TWD**) · `_equity_calls` · briefings roll-up. Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-19 · TWD
+### 📊 Consensus snapshot — BBG · asof 2026-10-20 · TWD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | NT$662.0bn | NT$1160.0bn |
-| Gross profit | NT$302.5bn | NT$512.7bn |
+| Revenue | NT$662.9bn | NT$1161.3bn |
+| Gross profit | NT$302.9bn | NT$513.3bn |
 | Gross margin | 45.7% | 44.2% |
-| EBITDA | NT$129.1bn | NT$282.1bn |
-| EPS | NT$66.59 | NT$141.32 |
-| Capex | NT$18.0bn | NT$25.9bn |
-| OCF (≈EBITDA) | NT$129.1bn | NT$282.1bn |
+| EBITDA | NT$129.6bn | NT$280.1bn |
+| EPS | NT$66.72 | NT$141.48 |
+| Capex | NT$18.7bn | NT$24.4bn |
+| OCF (≈EBITDA) | NT$129.6bn | NT$280.1bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
