@@ -1,0 +1,45 @@
+{
+  "_note": "Hand-edit. Podcast lane config read by E:\\.claude\\scripts\\podcasts_fetch.py. Transcript sources are tried in order: podscripts.co slugs, then YouTube captions (search by title, ANDROID innertube client). 'youtube' is the channel handle used to prefer the official upload. Added 2026-10-20 (Felipe: All-In, SemiAnalysis, BG2, a16z, Invest Like the Best).",
+  "shows": [
+    {
+      "id": "allin",
+      "name": "All-In",
+      "rss": "https://rss.libsyn.com/shows/254861/destinations/1928300.xml",
+      "podscripts": ["all-in-with-chamath-jason-sacks-friedberg"],
+      "youtube": "@allin",
+      "hosts": "Chamath Palihapitiya, Jason Calacanis, David Sacks, David Friedberg"
+    },
+    {
+      "id": "semianalysis",
+      "name": "SemiAnalysis Weekly",
+      "rss": "https://anchor.fm/s/10fbee758/podcast/rss",
+      "podscripts": [],
+      "youtube": "@SemiAnalysis",
+      "hosts": "Jordan Nanos, Doug O'Laughlin (SemiAnalysis)"
+    },
+    {
+      "id": "bg2",
+      "name": "BG2 Pod",
+      "rss": "https://anchor.fm/s/f06c2370/podcast/rss",
+      "podscripts": [],
+      "youtube": "@Bg2Pod",
+      "hosts": "Brad Gerstner (Altimeter), Bill Gurley"
+    },
+    {
+      "id": "a16z",
+      "name": "The a16z Show",
+      "rss": "https://feeds.simplecast.com/JGE3yC0V",
+      "podscripts": ["the-a16z-show", "a16z-podcast"],
+      "youtube": "@a16z",
+      "hosts": "Andreessen Horowitz partners (varies by episode)"
+    },
+    {
+      "id": "iltb",
+      "name": "Invest Like the Best",
+      "rss": "https://feeds.megaphone.fm/CLS2859450455",
+      "podscripts": ["invest-like-the-best-with-patrick-oshaughnessy"],
+      "youtube": "@JoinColossus",
+      "hosts": "Patrick O'Shaughnessy (Colossus)"
+    }
+  ]
+}

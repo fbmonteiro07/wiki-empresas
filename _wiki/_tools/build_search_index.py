@@ -35,7 +35,7 @@ WS_RE = re.compile(r"[ \t]+")
 
 # Non-ticker top-level dirs to skip when walking ticker folders
 NOT_TICKERS = {"_briefings", "_equity_calls", "_inbox", "_wiki", ".claude", ".git",
-               "Modelos oficiais", "relatórios bons", "Stratechery", "Damnang"}
+               "Modelos oficiais", "relatórios bons", "Stratechery", "Damnang", "_podcasts"}
 
 
 def strip_html(txt):
@@ -70,6 +70,10 @@ def corpus():
     for p in (ROOT / "Damnang").glob("*.md"):
         if p.name != "index.md":
             yield p, "damnang", ""
+    # Podcasts (All-In, SemiAnalysis, BG2, a16z, ILTB + Twitter-flagged) — machine transcripts and
+    # their summaries, archived by podcasts_fetch.py / the podcasts-to-wiki task (2026-10-20).
+    for p in (ROOT / "_podcasts").rglob("*.md"):
+        yield p, "podcast", ""
     for p in (ROOT / "relatórios bons").glob("*.html"):
         yield p, "report", ""
     for p in (WIKI / "_data" / "figures").glob("*.md"):
