@@ -1,12 +1,11 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-10-19 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-10-20 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (41)
+## 📅 Upcoming (40)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-10-19 | AMZN | 🆕 **2026-10-19 — THE VERBAL LAYER ON JPM'S 10-15 DECK: THE BOGEYS, THE "CONSENSUS CAPEX IS WAY TOO LOW" CLAIM, THE AWS MARGIN PATH AND THE MUSE BLOCK** (Doug Anmuth (J.P. Morgan) @ JPM Internet 3Q26 P |
 | 2026-10-20 | NFLX | 🆕 **Q3 2026 earnings — Tue 2026-10-20 AMC** (Vital Knowledge calendar, 2026-09-28) — replaces the "~late Oct" placeholder. |
 | 2026-10-20 | NVDA | 🆕 **2026-10-20 to 10-22: NVIDIA GTC Berlin** (JPM US Market Intelligence calendar, 09-29/09-30); BofA lists "multiple GTC tradeshow events" with the enhanced buyback as the near-term NVDA catalysts (A |
 | 2026-10-21 | META | **🆕🔴🔴 2026-10-21 (WED, AFTER THE CLOSE) — Q3'26 PRINT, about a week earlier than normal** (JPM desk · Schilsky, 2026-10-13; BofA · Post, UBS desk · Dwyer and Vital Knowledge, 2026-10-16). The bar: 3Q  |
@@ -48,13 +47,13 @@ _Generated 2026-10-19 · parsed from every page's 'Catalysts / what to watch'. D
 | 2029-12-08 | MU | 🆕 **2026-10-16 — the buyback now has a formula and a window, from Micron IR.** From **2026-12-09 through 2029-12-08** Micron may repurchase up to **trailing-12-month FCF − CHIPS proceeds received in t |
 | 2031-12-31 | NSCALE | 2031-12-31 — Monarch expansion to ~8 GW gross planned. |
 
-## ⏰ Passed — need a post-mortem (0)
+## ⏰ Passed — need a post-mortem (1)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| _none_ | | |
+| 2026-10-19 | AMZN | 🆕 **2026-10-19 — THE VERBAL LAYER ON JPM'S 10-15 DECK: THE BOGEYS, THE "CONSENSUS CAPEX IS WAY TOO LOW" CLAIM, THE AWS MARGIN PATH AND THE MUSE BLOCK** (Doug Anmuth (J.P. Morgan) @ JPM Internet 3Q26 P |
 
 ## ✅ Resolved (269)
 
