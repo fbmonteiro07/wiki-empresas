@@ -11,7 +11,7 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\TXN` (10-K/10-Q + tran
 |---|--:|--:|
 | Revenue | $21.4bn | $25.2bn |
 | Gross profit | $12.8bn | $15.6bn |
-| Gross margin | 59.9% | 62.0% |
+| Gross margin | 59.9% | 61.9% |
 | EBITDA | $11.2bn | $14.0bn |
 | EPS | $8.06 | $10.69 |
 | Capex | $2.7bn | $2.9bn |

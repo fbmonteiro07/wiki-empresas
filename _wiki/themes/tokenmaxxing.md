@@ -5,6 +5,10 @@
 _Wiki · generated 2026-06-19 · updated 2026-06-29 (gap-audit additions, tagged "audit add") · cross-company theme · sources: equity calls (`../../equity_calls_transcripts`), briefing roll-ups (`../_briefings/by-ticker`), morning briefings (`E:\briefings\2026`), research library (`E:\research_library`). Company pages: [../00_INDEX.md](../00_INDEX.md) · themes index: [00_THEMES.md](00_THEMES.md)._
 
 
+## 🆕 2026-10-21 (notion-ingest — Jefferies' Chris Wood at Capstone) — **AN OVERNIGHT "TOKENS-PER-TASK IS FALLING" THEORY USED TO EXPLAIN WEAK MEMORY STOCKS, VS JEVONS**
+
+- _Source: **Chris Wood (Jefferies) @ Jefferies <> Capstone meeting, 2026-10-21 — Capstone notes (Notion transcript)** — [archive](../../_equity_calls/Overall/2026-10-21_Jefferies_Chris-Wood-GREED-and-fear-macro-gold-AI-capex-memory-Capstone-room.md). Unlabelled transcript._ Wood: *"I heard this one theory though overnight"* — *"optimization"* is bringing *"token per task… down which is viewed as bearish for memory"*, with *"the Americans… trying to do this to counter the Chinese labs"*, so token-demand growth has to compensate. Counter (speaker not separable): *"I kind of believe in this Jevons paradox"*; the Capstone room: using Opus instead of Sonnet can spend fewer tokens and do more tasks. ➤ A sentiment tell, no data; Wood's own 06-25 line was the opposite (*"falling token prices should lead to rising DRAM prices"*, below). Same debate on [hbm-memory](hbm-memory.md) 10-21.
+
 ## 🆕 2026-10-20 (/run-inbox — Pichai on Big Technology Podcast, recording date unconfirmed) — **GOOGLE'S CEO PUTS A LAUNCH-WINDOW TOKEN COUNT ON GEMINI 4 ARGON: ~25T TOKENS IN THE FIRST 72 HOURS, ~3x GEMINI 3.0'S, AND "CAPACITY CONSTRAINED AS WE ARE SERVING IT"**
 
 _Source: **Sundar Pichai, CEO @ [[GOOG]]**, interviewed by host Alex Kantrowitz (show named in the outro as Big Technology Podcast), "Google CEO Sundar Pichai: AI's Infinite Possibilities, Compute Scarcity Dilemmas, Future AI Products" — pasted machine transcript, date unconfirmed, pasted 2026-10-20 ([render](../../relat%C3%B3rios%20bons/Sundar_Pichai_interview_Alex_Kantrowitz_transcript_pasted_20261020.html)). Management source, podcast, not broker research. Argon [transcribed "Argonne" / "Orgon" / "Oregon"]._
@@ -1574,6 +1578,7 @@ _Source: member-company earnings calls; see each company page for quarter-by-qua
 
 ## Changelog
 
+- 2026-10-21 — ingest (Notion, 2026-10-21_Jefferies_Chris-Wood-GREED-and-fear-macro-gold-AI-capex-memory-Capstone-room.md): 1 dated top block (1 bullet) — overnight tokens-per-task-falling bear theory for memory (Wood relays), Jevons counter (speaker not separable), Capstone room's Opus-vs-Sonnet fewer-tokens-per-task point. Nothing superseded.
 - 2026-10-20 — run-inbox: Sundar Pichai on Big Technology Podcast (pasted transcript, date unconfirmed); added 1 dated block at the top (Argon ~25T tokens in its first 72h, ~3x Gemini 3.0, capacity-constrained; house order-of-magnitude check vs the Q2'26 ~22B tokens/min API rate, not netted) + 1 Sources link. Nothing superseded.
 - 2026-10-19 — run-inbox: added J.P. Morgan · Anmuth "US Internet 3Q 2026 Preview" (2026-10-15) — 1 dated block at the top (consumer-agent usage counts, AI run-rates and payback, open-weight share of the AA top 15) + 1 Sources link. No token price, ARR mark or estimate on this page superseded.
 - **2026-10-19 — podcast-summary ingestion:** added Ep. 036's explicitly qualified utilization/margin inference revision and Pitch The PM 55's model-mix/measurement framework to Key debates. No existing token-price series, margin, estimate, rating or thesis overwritten; no current market-product status inferred.

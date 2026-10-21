@@ -12,7 +12,7 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\INTC` (filings + trans
 | Gross margin | 40.0% | 44.0% |
 | EBITDA | $20.2bn | $27.0bn |
 | EPS | $1.04 | $2.14 |
-| Capex | $23.0bn | $26.3bn |
+| Capex | $20.3bn | $26.3bn |
 | OCF (≈EBITDA) | $20.2bn | $27.0bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

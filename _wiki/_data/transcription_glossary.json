@@ -1,6 +1,6 @@
 {
  "_about": "Hand-edited ledger of machine-transcription garbles (Notion AI, Bloomberg ASR, auto-translation) seen in the archive, with the correct reading. Used by E:\\.claude\\scripts\\transcript_qa.py (source-file scan, page-diff scan) and by ingest_notion_meetings.py (writes a 'Transcription QA' block into every archived Notion file). Keys are matched with word boundaries, case-sensitive unless 'ci' is true. 'keep_when' = regex contexts (same line, ~80 chars around the hit) where the token is legitimate and must NOT be flagged. Add an entry the first time a garble is caught; never delete one. Standing rule (Felipe, 2026-09-28): ALWAYS double-check transcript content — acronyms, names, units, numbers — before it travels to a page.",
- "_updated": "2026-10-20",
+ "_updated": "2026-10-21",
  "terms": {
   "Smolik": {
    "correct": "Shmulik (Mark Shmulik, Bernstein US Internet)",
@@ -1753,6 +1753,102 @@
    "domain": "terms",
    "rule": "ASR on 'agentic coding takeoff'; reading is probable, not confirmed.",
    "first_seen": "2026-10-20 (Sundar Pichai interview, Big Technology Podcast, pasted machine transcript; run-inbox 2026-10-20)"
+  },
+  "Walsh": {
+   "correct": "Warsh (Kevin Warsh, Fed Chair)",
+   "domain": "people",
+   "rule": "Notion ASR of 'Warsh' in Fed context.",
+   "first_seen": "2026-10-21 (Jefferies Chris Wood meeting at Capstone, Notion transcript; notion-ingest 2026-10-21)",
+   "keep_when": [
+    "Joe Walsh",
+    "Walsh Brothers"
+   ]
+  },
+  "Betant": {
+   "correct": "Bessent (Scott Bessent, US Treasury Secretary)",
+   "domain": "people",
+   "rule": "see 'Besant'",
+   "first_seen": "2026-10-21 (Jefferies Chris Wood meeting at Capstone, Notion transcript; notion-ingest 2026-10-21)"
+  },
+  "Zerlos": {
+   "correct": "Zervos (David Zervos, ex-Jefferies)",
+   "domain": "people",
+   "rule": "Notion ASR of 'Zervos'.",
+   "first_seen": "2026-10-21 (Jefferies Chris Wood meeting at Capstone, Notion transcript; notion-ingest 2026-10-21)"
+  },
+  "Drucker Miller": {
+   "correct": "Druckenmiller (Stanley Druckenmiller)",
+   "domain": "people",
+   "rule": "Notion ASR split of 'Druckenmiller'.",
+   "first_seen": "2026-10-21 (Jefferies Chris Wood meeting at Capstone, Notion transcript; notion-ingest 2026-10-21)"
+  },
+  "Jerome Kyle": {
+   "correct": "Jerome Powell",
+   "domain": "people",
+   "rule": "Notion ASR in a Powell-2018 balance-sheet context.",
+   "first_seen": "2026-10-21 (Jefferies Chris Wood meeting at Capstone, Notion transcript; notion-ingest 2026-10-21)"
+  },
+  "Hynex": {
+   "correct": "SK Hynix",
+   "domain": "companies",
+   "rule": "Notion ASR of 'Hynix'; also 'HiMix', 'Ionex', 'Hylink', 'Heinz' in the same meeting.",
+   "first_seen": "2026-10-21 (Jefferies Chris Wood meeting at Capstone, Notion transcript; notion-ingest 2026-10-21)"
+  },
+  "HiMix": {
+   "correct": "SK Hynix",
+   "domain": "companies",
+   "rule": "see 'Hynex'",
+   "first_seen": "2026-10-21 (Jefferies Chris Wood meeting at Capstone, Notion transcript; notion-ingest 2026-10-21)"
+  },
+  "Ionex": {
+   "correct": "SK Hynix",
+   "domain": "companies",
+   "rule": "see 'Hynex'",
+   "first_seen": "2026-10-21 (Jefferies Chris Wood meeting at Capstone, Notion transcript; notion-ingest 2026-10-21)"
+  },
+  "Hylink": {
+   "correct": "SK Hynix",
+   "domain": "companies",
+   "rule": "see 'Hynex'",
+   "first_seen": "2026-10-21 (Jefferies Chris Wood meeting at Capstone, Notion transcript; notion-ingest 2026-10-21)"
+  },
+  "ADOs": {
+   "correct": "ADRs",
+   "domain": "terms",
+   "rule": "Notion ASR of 'ADRs' (local vs ADR discount context).",
+   "first_seen": "2026-10-21 (Jefferies Chris Wood meeting at Capstone, Notion transcript; notion-ingest 2026-10-21)"
+  },
+  "picks and troubles": {
+   "correct": "picks and shovels",
+   "domain": "terms",
+   "rule": "Notion ASR of the idiom.",
+   "first_seen": "2026-10-21 (Jefferies Chris Wood meeting at Capstone, Notion transcript; notion-ingest 2026-10-21)",
+   "ci": true
+  },
+  "Gentic AI": {
+   "correct": "agentic AI",
+   "domain": "terms",
+   "rule": "Notion ASR; the Notion summary wrongly expanded it to 'generative AI'.",
+   "first_seen": "2026-10-21 (Jefferies Chris Wood meeting at Capstone, Notion transcript; notion-ingest 2026-10-21)"
+  },
+  "Nan Flash": {
+   "correct": "NAND flash",
+   "domain": "terms",
+   "rule": "Notion ASR of 'NAND flash'.",
+   "first_seen": "2026-10-21 (Jefferies Chris Wood meeting at Capstone, Notion transcript; notion-ingest 2026-10-21)",
+   "ci": true
+  },
+  "EUB": {
+   "correct": "EUV",
+   "domain": "terms",
+   "rule": "Notion ASR of 'EUV' (ASML lead-time answer).",
+   "first_seen": "2026-10-21 (BTGP websession with ASML IR Ted Shafer, Notion transcript; notion-ingest 2026-10-21)"
+  },
+  "DPV": {
+   "correct": "DUV",
+   "domain": "terms",
+   "rule": "Notion ASR of 'DUV' (ASML immersion/DUV context).",
+   "first_seen": "2026-10-21 (BTGP websession with ASML IR Ted Shafer, Notion transcript; notion-ingest 2026-10-21)"
   }
  },
  "summary_traps": [

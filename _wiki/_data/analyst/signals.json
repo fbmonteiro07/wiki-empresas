@@ -1,5 +1,5 @@
 {
-  "asof": "2026-10-20",
+  "asof": "2026-10-21",
   "latest_reconciliation": "reconciliation-2026-10-20-inbox.md",
   "book": {
     "asof": "2026-07-01",
@@ -7,11 +7,11 @@
     "positions": 8
   },
   "stats": {
-    "signals": 55,
-    "active": 55,
-    "high": 7,
-    "belief_changes": 4,
-    "focus_names": 38
+    "signals": 49,
+    "active": 49,
+    "high": 6,
+    "belief_changes": 1,
+    "focus_names": 36
   },
   "focus": [
     {
@@ -31,17 +31,17 @@
     },
     {
       "ticker": "NVDA",
-      "focus_score": 93,
+      "focus_score": 85,
       "in_book": true,
-      "signal_count": 5,
-      "high_count": 2,
+      "signal_count": 4,
+      "high_count": 1,
       "sector": "AI — Semis & Compute",
       "thesis": "Full-stack AI-factory platform at +85% rev; debate is demand sustainability vs ASIC erosion.",
-      "next_catalyst": "2026-10-20",
+      "next_catalyst": "2026-11-17",
       "why": [
-        "NVDA — derived thesis/debate state changed since the prior daily snapshot",
-        "NVDA — 2026-10-20: 2026-10-20 to 10-22: NVIDIA GTC Berlin (JPM US Market Intelligence calendar, 09-29/09-30);…",
-        "NVDA — 2026-11-17: CLOSED 2026-09-10 — THE GS COMMUNACOPIA FIRESIDE HAPPENED. OUTCOME: Jensen reaffirmed the…"
+        "NVDA — catalyst passed without a logged outcome",
+        "NVDA — 2026-11-17: CLOSED 2026-09-10 — THE GS COMMUNACOPIA FIRESIDE HAPPENED. OUTCOME: Jensen reaffirmed the…",
+        "NVDA — 2026-11-23: NVDA investor call (IR) (Rothschild & Co Redburn TMT sales · Rowan Adley, 2026-09-28).…"
       ]
     },
     {
@@ -74,34 +74,6 @@
       ]
     },
     {
-      "ticker": "NFLX",
-      "focus_score": 64,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "Consumer / Internet / Other",
-      "thesis": "Clean organic algorithm (12-14% rev, 31.5% margin); near-term setup is a catalyst vacuum.",
-      "next_catalyst": "2026-10-20",
-      "why": [
-        "NFLX — derived thesis/debate state changed since the prior daily snapshot",
-        "NFLX — 2026-10-20: RESOLVED — Q3 2026 earnings, Tue 2026-10-20 AMC (date from Vital Knowledge calendar,…"
-      ]
-    },
-    {
-      "ticker": "TSLA",
-      "focus_score": 64,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "Consumer / Internet / Other",
-      "thesis": "Rotating from EV volume to autonomy/robotics re-rate (FSD, Optimus, Terafab); MS EW $415, JPM just to Neutral.",
-      "next_catalyst": "2026-10-20",
-      "why": [
-        "TSLA — derived thesis/debate state changed since the prior daily snapshot",
-        "TSLA — 2026-10-20: SPACEX-TESLA MERGER TALK REVIVED ON STAGE (All-In Summit, 2026-09-14) — still NO formal…"
-      ]
-    },
-    {
       "ticker": "NOK",
       "focus_score": 58,
       "in_book": false,
@@ -112,8 +84,8 @@
       "next_catalyst": "2026-10-22",
       "why": [
         "NOK — Bloomberg consensus missing",
-        "NOK — latest earnings transcript absent",
-        "NOK — 2026-10-22: Q3 results: Optical/IP deliveries and new orders, supply constraints and MI software…"
+        "NOK — 2026-10-22: Q3 results: Optical/IP deliveries and new orders, supply constraints and MI software…",
+        "NOK — latest earnings transcript absent"
       ]
     },
     {
@@ -132,6 +104,19 @@
       ]
     },
     {
+      "ticker": "ORCL",
+      "focus_score": 58,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "AI — Hyperscalers & Software",
+      "thesis": "Turned into an AI-infra hyperscaler (RPO $638B/+363%); bear = dot-com-peak capex/sales + dilution.",
+      "next_catalyst": "2026-10-28",
+      "why": [
+        "ORCL — 2026-10-28: ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as \"Investor Day in…"
+      ]
+    },
+    {
       "ticker": "CRWV",
       "focus_score": 52,
       "in_book": false,
@@ -145,20 +130,6 @@
       ]
     },
     {
-      "ticker": "SPCX",
-      "focus_score": 51,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "Systems & neoclouds",
-      "thesis": "IPO'd Jun-2026 (~$75bn, largest ever); Starlink + Launch + AI (ex-xAI: Grok/X/COLOSSUS ~1GW, ~325k GPUs). FY25 rev $17.2bn, net loss ~$(4.9)bn; Musk ~82% vote. ",
-      "next_catalyst": "2026-10-20",
-      "why": [
-        "SPCX — 2026-10-20: 2027 — Mobile V2 satellites start flying \"next year,\" with Starlink Mobile SERVICE…",
-        "SPCX — 2026-11-12: OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.…"
-      ]
-    },
-    {
       "ticker": "MSFT",
       "focus_score": 50,
       "in_book": true,
@@ -169,19 +140,6 @@
       "next_catalyst": "2026-11-17",
       "why": [
         "MSFT — 2026-11-17: 2026-11-17 to 11-20, SF — MSFT IGNITE."
-      ]
-    },
-    {
-      "ticker": "ORCL",
-      "focus_score": 50,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "AI — Hyperscalers & Software",
-      "thesis": "Turned into an AI-infra hyperscaler (RPO $638B/+363%); bear = dot-com-peak capex/sales + dilution.",
-      "next_catalyst": "2026-10-28",
-      "why": [
-        "ORCL — 2026-10-28: ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as \"Investor Day in…"
       ]
     },
     {
@@ -235,6 +193,19 @@
       "next_catalyst": "",
       "why": [
         "SMTC — latest earnings transcript absent"
+      ]
+    },
+    {
+      "ticker": "SPCX",
+      "focus_score": 43,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Systems & neoclouds",
+      "thesis": "IPO'd Jun-2026 (~$75bn, largest ever); Starlink + Launch + AI (ex-xAI: Grok/X/COLOSSUS ~1GW, ~325k GPUs). FY25 rev $17.2bn, net loss ~$(4.9)bn; Musk ~82% vote. ",
+      "next_catalyst": "2026-11-12",
+      "why": [
+        "SPCX — 2026-11-12: OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.…"
       ]
     },
     {
@@ -532,7 +503,7 @@
   "signals": [
     {
       "id": "cata-1016fc453b03",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-10-21",
       "event_date": "2026-10-21",
       "type": "catalyst",
@@ -615,9 +586,9 @@
       "hidden": false
     },
     {
-      "id": "beli-85344898fcc6",
-      "asof": "2026-10-20",
-      "source_date": "2026-10-20",
+      "id": "beli-37ce2f2c150d",
+      "asof": "2026-10-21",
+      "source_date": "2026-10-21",
       "type": "narrative_shift",
       "priority": "high",
       "score": 80,
@@ -631,7 +602,7 @@
       "impact": "high",
       "urgency": "immediate",
       "confidence": "high",
-      "why_now": "Debate: regional FX table added under the 4Q26 FX bullet (3Q26 closed quarter −0.2 to −0.5pt, 4Q26 −0.4 to −0.8pt; Europe drag doubles into 4Q, APAC improves, RoW the only tailwind region; 3Q FX at or slightly better than the ~1% guide headwind). Additive — nothing superseded.",
+      "why_now": "Debate: Q3'26 CFO 2027 revenue-outlook language (Susan Li, 2026-10-21, text pasted and attributed by Felipe) compared with prior next-year framings (Q3'24, Q4'24, Q3'25, Q4'25 calls): earlier timing, \"are delivering\" vs \"investments we're making\", new-AI revenue pulled into 2027, \"throughout 2027\" with no fade caveat, new \"overall\" qualifier; bar = BBG CY27 rev ≈ +21%. Additive — no prior number, rating, PT or thesis superseded. Verify the quote verbatim against the Q3'26 transcript when archived.",
       "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
       "action": "Re-grade the META thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
       "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
@@ -686,24 +657,25 @@
           "in_book": false
         }
       ],
-      "source": "META page Changelog 2026-10-20",
+      "source": "META page Changelog 2026-10-21",
       "evidence_paths": [
         "META.md"
       ],
-      "evidence_anchor": "Debate: regional FX table added under the 4Q26 FX bullet (3Q26 closed quarter −0.2 to −0.5pt, 4Q26 −0.4 to −0.8pt; Europe drag doubles into 4Q, APAC improves, RoW the only tailwind region; 3Q FX at or slightly better than the ~1% guide headwind). Additive — nothing superseded.",
+      "evidence_anchor": "Debate: Q3'26 CFO 2027 revenue-outlook language (Susan Li, 2026-10-21, text pasted and attributed by Felipe) compared with prior next-year framings (Q3'24, Q4'24, Q3'25, Q4'25 calls): earlier timing, \"are delivering\" vs \"investments we're making\", new-AI revenue pulled into 2027, \"throughout 2027\" with no fade caveat, new \"overall\" qualifier; bar = BBG CY27 rev ≈ +21%. Additive — no prior number, rating, PT or thesis superseded. Verify the quote verbatim against the Q3'26 transcript when archived.",
       "origin": "belief_diff",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
     },
     {
-      "id": "beli-06695bfa1c5a",
-      "asof": "2026-10-20",
+      "id": "post-8cd5d82dc530",
+      "asof": "2026-10-21",
       "source_date": "2026-10-20",
-      "type": "narrative_shift",
+      "event_date": "2026-10-20",
+      "type": "postmortem",
       "priority": "high",
-      "score": 80,
-      "title": "NVDA — derived thesis/debate state changed since the prior daily snapshot",
+      "score": 74,
+      "title": "NVDA — catalyst passed without a logged outcome",
       "tickers": [
         "NVDA"
       ],
@@ -711,77 +683,28 @@
         "NVDA"
       ],
       "impact": "high",
-      "urgency": "immediate",
+      "urgency": "overdue",
       "confidence": "high",
-      "why_now": "verifier correction (transcription QA): SemiAnalysis Ep. 039 row: the \"Jeremie, did you say... oversupply in twenty twenty eight\" aside was attributed to the host; in the transcript it comes from a co-guest mid-answer (\"before I continue... I'll just finish my thought\"), Reyk Knuhtsen by context (UNCONFIRMED). Ontiveros as the 2028-flip speaker stands, by context.",
-      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
-      "action": "Re-grade the NVDA thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
-      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
-      "readthrough": [
-        {
-          "ticker": "AVGO",
-          "relation": "competitor",
-          "detail": "merchant vs custom ASIC",
-          "from": "NVDA",
-          "in_book": true
-        },
-        {
-          "ticker": "AMZN",
-          "relation": "customer",
-          "detail": "GPUs",
-          "from": "NVDA",
-          "in_book": true
-        },
-        {
-          "ticker": "GOOG",
-          "relation": "customer",
-          "detail": "GPUs",
-          "from": "NVDA",
-          "in_book": true
-        },
-        {
-          "ticker": "META",
-          "relation": "customer",
-          "detail": "GPUs",
-          "from": "NVDA",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "customer",
-          "detail": "GPUs",
-          "from": "NVDA",
-          "in_book": true
-        },
-        {
-          "ticker": "TSM",
-          "relation": "supplier",
-          "detail": "foundry N3/N2 + CoWoS",
-          "from": "NVDA",
-          "in_book": true
-        },
-        {
-          "ticker": "AMD",
-          "relation": "competitor",
-          "detail": "AI accelerators",
-          "from": "NVDA",
-          "in_book": false
-        }
-      ],
-      "source": "NVDA page Changelog 2026-10-20",
+      "why_now": "🆕 2026-10-20 to 10-22: NVIDIA GTC Berlin (JPM US Market Intelligence calendar, 09-29/09-30); BofA lists \"multiple GTC tradeshow events\" with the enhanced buyback as the near-term NVDA catalysts (A",
+      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
+      "action": "Write a source-attributed bull won|bear won|neutral outcome for NVDA in outcomes.md.",
+      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
+      "readthrough": [],
+      "source": "Catalyst outcome ledger",
       "evidence_paths": [
-        "NVDA.md"
+        "_meta/catalysts.md",
+        "_meta/outcomes.md"
       ],
-      "evidence_anchor": "verifier correction (transcription QA): SemiAnalysis Ep. 039 row: the \"Jeremie, did you say... oversupply in twenty twenty eight\" aside was attributed to the host; in the transcript it comes from a co-guest mid-answer (\"before I continue... I'll just finish my thought\"), Reyk Knuhtsen by context (UNCONFIRMED). Ontiveros as the 2028-flip speaker stands, by context.",
-      "origin": "belief_diff",
+      "evidence_anchor": "🆕 2026-10-20 to 10-22: NVIDIA GTC Berlin (JPM US Market Intelligence calendar, 09-29/09-30); BofA lists \"multiple GTC tradeshow events\" with the enhanced buyback as the near-term NVDA catalysts (A",
+      "origin": "outcome_loop",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
     },
     {
-      "id": "esti-a90311ffc12f",
-      "asof": "2026-10-20",
-      "source_date": "2026-10-20",
+      "id": "esti-5a79fad25b6e",
+      "asof": "2026-10-21",
+      "source_date": "2026-10-21",
       "type": "model_check",
       "priority": "high",
       "score": 71,
@@ -795,7 +718,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $430.0bn as of 2026-10-20, a derived +17.5% gap. Revenue comparisons require a basis check.",
+      "why_now": "Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $430.5bn as of 2026-10-21, a derived +17.3% gap. Revenue comparisons require a basis check.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -850,7 +773,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-10-20",
+      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-10-21",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -859,8 +782,8 @@
       "origin": "house_vs_consensus",
       "values": {
         "house": 505.0,
-        "consensus": 429.95797999999996,
-        "delta_pct": 17.45,
+        "consensus": 430.49761,
+        "delta_pct": 17.31,
         "unit": "$bn"
       },
       "feedback": "",
@@ -868,9 +791,9 @@
       "hidden": false
     },
     {
-      "id": "esti-d95d4a31d508",
-      "asof": "2026-10-20",
-      "source_date": "2026-10-20",
+      "id": "esti-de85d0b82ebe",
+      "asof": "2026-10-21",
+      "source_date": "2026-10-21",
       "type": "model_check",
       "priority": "high",
       "score": 71,
@@ -884,7 +807,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2027 revenue at $641.0bn versus Bloomberg consensus at $547.9bn as of 2026-10-20, a derived +17.0% gap. Revenue comparisons require a basis check.",
+      "why_now": "Capstone carries 2027 revenue at $641.0bn versus Bloomberg consensus at $547.9bn as of 2026-10-21, a derived +17.0% gap. Revenue comparisons require a basis check.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -939,7 +862,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-10-20",
+      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-10-21",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -957,9 +880,9 @@
       "hidden": false
     },
     {
-      "id": "esti-5f6d15badafa",
-      "asof": "2026-10-20",
-      "source_date": "2026-10-20",
+      "id": "esti-e9eca9ba40fc",
+      "asof": "2026-10-21",
+      "source_date": "2026-10-21",
       "type": "model_check",
       "priority": "high",
       "score": 69,
@@ -973,7 +896,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.76 as of 2026-10-20, a derived +15.5% gap.",
+      "why_now": "Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.76 as of 2026-10-21, a derived +15.5% gap.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the AAPL model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -993,7 +916,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-10-20",
+      "source": "Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-10-21",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -1011,160 +934,8 @@
       "hidden": false
     },
     {
-      "id": "cata-f2d225a6997f",
-      "asof": "2026-10-20",
-      "source_date": "2026-10-20",
-      "event_date": "2026-10-20",
-      "type": "catalyst",
-      "priority": "high",
-      "score": 69,
-      "title": "NVDA — 2026-10-20: 2026-10-20 to 10-22: NVIDIA GTC Berlin (JPM US Market Intelligence calendar, 09-29/09-30);…",
-      "tickers": [
-        "NVDA"
-      ],
-      "in_book": [
-        "NVDA"
-      ],
-      "impact": "high",
-      "urgency": "immediate",
-      "confidence": "medium",
-      "why_now": "🆕 2026-10-20 to 10-22: NVIDIA GTC Berlin (JPM US Market Intelligence calendar, 09-29/09-30); BofA lists \"multiple GTC tradeshow events\" with the enhanced buyback as the near-term NVDA catalysts (A",
-      "belief_update": "A dated event can resolve or reframe an open debate.",
-      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
-      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
-      "readthrough": [
-        {
-          "ticker": "AVGO",
-          "relation": "competitor",
-          "detail": "merchant vs custom ASIC",
-          "from": "NVDA",
-          "in_book": true
-        },
-        {
-          "ticker": "AMZN",
-          "relation": "customer",
-          "detail": "GPUs",
-          "from": "NVDA",
-          "in_book": true
-        },
-        {
-          "ticker": "GOOG",
-          "relation": "customer",
-          "detail": "GPUs",
-          "from": "NVDA",
-          "in_book": true
-        },
-        {
-          "ticker": "META",
-          "relation": "customer",
-          "detail": "GPUs",
-          "from": "NVDA",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "customer",
-          "detail": "GPUs",
-          "from": "NVDA",
-          "in_book": true
-        },
-        {
-          "ticker": "TSM",
-          "relation": "supplier",
-          "detail": "foundry N3/N2 + CoWoS",
-          "from": "NVDA",
-          "in_book": true
-        },
-        {
-          "ticker": "AMD",
-          "relation": "competitor",
-          "detail": "AI accelerators",
-          "from": "NVDA",
-          "in_book": false
-        }
-      ],
-      "source": "NVDA page catalyst ledger; underlying source/date retained in the catalyst text",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "NVDA.md"
-      ],
-      "evidence_anchor": "🆕 2026-10-20 to 10-22: NVIDIA GTC Berlin (JPM US Market Intelligence calendar, 09-29/09-30); BofA lists \"multiple GTC tradeshow events\" with the enhanced buyback as the near-term NVDA catalysts (A",
-      "origin": "catalyst_calendar",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "beli-35a5c51e3649",
-      "asof": "2026-10-20",
-      "source_date": "2026-10-20",
-      "type": "narrative_shift",
-      "priority": "medium",
-      "score": 62,
-      "title": "NFLX — derived thesis/debate state changed since the prior daily snapshot",
-      "tickers": [
-        "NFLX"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "high",
-      "why_now": "run-inbox: Netflix Q3 2026 shareholder letter (2026-10-20; letter only, no interview transcript). Added: a Current-state print block (heading moved to Q3 2026), the Catalysts Q3 entry marked resolved (outcome pending the tape) plus 2 new catalyst bullets, an intra-quarter ROLL (the Q3-window block moved verbatim into this Changelog under \"Intra-quarter archive — Q3 2026 window\"; a fresh Q4'26 window opened with a new Sinal table, the letter as its first log row and a Síntese), and a Sources link. Superseded, OLD…",
-      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
-      "action": "Re-grade the NFLX thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
-      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
-      "readthrough": [],
-      "source": "NFLX page Changelog 2026-10-20",
-      "evidence_paths": [
-        "NFLX.md"
-      ],
-      "evidence_anchor": "run-inbox: Netflix Q3 2026 shareholder letter (2026-10-20; letter only, no interview transcript). Added: a Current-state print block (heading moved to Q3 2026), the Catalysts Q3 entry marked resolved (outcome pending the tape) plus 2 new catalyst bullets, an intra-quarter ROLL (the Q3-window block moved verbatim into this Changelog under \"Intra-quarter archive — Q3 2026 window\"; a fresh Q4'26 window opened with a new Sinal table, the letter as its first log row and a Síntese), and a Sources link. Superseded, OLD…",
-      "origin": "belief_diff",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "beli-31ddbacef479",
-      "asof": "2026-10-20",
-      "source_date": "2026-10-20",
-      "type": "narrative_shift",
-      "priority": "medium",
-      "score": 62,
-      "title": "TSLA — derived thesis/debate state changed since the prior daily snapshot",
-      "tickers": [
-        "TSLA"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "high",
-      "why_now": "run-inbox: Needham (Jamieson) \"Deep Dive into Humanoid Robotics and the Rise of Physical AI\" (2026-10-20); one dated-flow line (Optimus entry from the note's public-program matrix: Q1'26-call timeline + late-Sept ramp-constraint report; TSLA \"Hold Rated\") + one Sources entry; nothing superseded.",
-      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
-      "action": "Re-grade the TSLA thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
-      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
-      "readthrough": [
-        {
-          "ticker": "NVDA",
-          "relation": "supplier",
-          "detail": "GPUs",
-          "from": "TSLA",
-          "in_book": true
-        }
-      ],
-      "source": "TSLA page Changelog 2026-10-20",
-      "evidence_paths": [
-        "TSLA.md"
-      ],
-      "evidence_anchor": "run-inbox: Needham (Jamieson) \"Deep Dive into Humanoid Robotics and the Rise of Physical AI\" (2026-10-20); one dated-flow line (Optimus entry from the note's public-program matrix: Q1'26-call timeline + late-Sept ramp-constraint report; TSLA \"Hold Rated\") + one Sources entry; nothing superseded.",
-      "origin": "belief_diff",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
       "id": "cata-68c774eb3829",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-10-23",
       "event_date": "2026-10-23",
       "type": "catalyst",
@@ -1212,9 +983,77 @@
       "hidden": false
     },
     {
-      "id": "data-c51131b5b792",
-      "asof": "2026-10-20",
-      "source_date": "2026-10-20",
+      "id": "cata-9f2e588078f2",
+      "asof": "2026-10-21",
+      "source_date": "2026-10-28",
+      "event_date": "2026-10-28",
+      "type": "catalyst",
+      "priority": "medium",
+      "score": 58,
+      "title": "ORCL — 2026-10-28: ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as \"Investor Day in…",
+      "tickers": [
+        "ORCL"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "this week",
+      "confidence": "medium",
+      "why_now": "🆕🔴🔴 2026-10-28 — ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as \"Investor Day in October\"). First opportunity for new CFO Hilary Maxson to set long-term financial targ",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "supplier",
+          "detail": "networking",
+          "from": "ORCL",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "ORCL",
+          "in_book": true
+        },
+        {
+          "ticker": "MDB",
+          "relation": "competitor",
+          "detail": "operational database",
+          "from": "ORCL",
+          "in_book": false
+        },
+        {
+          "ticker": "AMD",
+          "relation": "supplier",
+          "detail": "MI GPUs",
+          "from": "ORCL",
+          "in_book": false
+        },
+        {
+          "ticker": "OPENAI",
+          "relation": "customer",
+          "detail": "OCI compute",
+          "from": "ORCL",
+          "in_book": false
+        }
+      ],
+      "source": "ORCL page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "ORCL.md"
+      ],
+      "evidence_anchor": "🆕🔴🔴 2026-10-28 — ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as \"Investor Day in October\"). First opportunity for new CFO Hilary Maxson to set long-term financial targ",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "data-b92bd621441b",
+      "asof": "2026-10-21",
+      "source_date": "2026-10-21",
       "type": "data_gap",
       "priority": "medium",
       "score": 54,
@@ -1231,7 +1070,7 @@
       "action": "Run the merge-safe Bloomberg estimate fetch for NOK, then rebuild the snapshot and Analyst Inbox.",
       "falsifier": "A valid, current estimate record already exists under a different Bloomberg identifier.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-10-20",
+      "source": "Wiki remediation worklist 2026-10-21",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -1242,9 +1081,9 @@
       "hidden": false
     },
     {
-      "id": "data-54ed22926bee",
-      "asof": "2026-10-20",
-      "source_date": "2026-10-20",
+      "id": "data-d69959785c1b",
+      "asof": "2026-10-21",
+      "source_date": "2026-10-21",
       "type": "data_gap",
       "priority": "medium",
       "score": 54,
@@ -1261,7 +1100,7 @@
       "action": "Run the merge-safe Bloomberg estimate fetch for NSCALE, then rebuild the snapshot and Analyst Inbox.",
       "falsifier": "A valid, current estimate record already exists under a different Bloomberg identifier.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-10-20",
+      "source": "Wiki remediation worklist 2026-10-21",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -1273,7 +1112,7 @@
     },
     {
       "id": "cata-4dea9544cec3",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-11-17",
       "event_date": "2026-11-17",
       "type": "catalyst",
@@ -1356,9 +1195,9 @@
       "hidden": false
     },
     {
-      "id": "esti-e1438aea276d",
-      "asof": "2026-10-20",
-      "source_date": "2026-10-20",
+      "id": "esti-d865f3088118",
+      "asof": "2026-10-21",
+      "source_date": "2026-10-21",
       "type": "model_check",
       "priority": "medium",
       "score": 52,
@@ -1370,7 +1209,7 @@
       "impact": "medium",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2026 EPS at $-3.27 versus Bloomberg consensus at $-3.91 as of 2026-10-20, a derived -16.4% gap.",
+      "why_now": "Capstone carries 2026 EPS at $-3.27 versus Bloomberg consensus at $-3.91 as of 2026-10-21, a derived -16.4% gap.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the CRWV model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -1411,7 +1250,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model — P:\\Felipe Monteiro\\US Equities\\Modelos oficiais\\Template DCF CRWV.xlsx (2026-10-14, Felipe Monteiro), first CRWV model in the official Template DCF <TICKER family (same sheets and conventions as AMD/AVGO/ADVANTEST/TER, plus History and Debt sheets; labels in English). Build and verification pipeline in · Bloomberg consensus 2026-10-20",
+      "source": "Capstone official model — P:\\Felipe Monteiro\\US Equities\\Modelos oficiais\\Template DCF CRWV.xlsx (2026-10-14, Felipe Monteiro), first CRWV model in the official Template DCF <TICKER family (same sheets and conventions as AMD/AVGO/ADVANTEST/TER, plus History and Debt sheets; labels in English). Build and verification pipeline in · Bloomberg consensus 2026-10-21",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -1429,76 +1268,8 @@
       "hidden": false
     },
     {
-      "id": "cata-9f2e588078f2",
-      "asof": "2026-10-20",
-      "source_date": "2026-10-28",
-      "event_date": "2026-10-28",
-      "type": "catalyst",
-      "priority": "medium",
-      "score": 50,
-      "title": "ORCL — 2026-10-28: ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as \"Investor Day in…",
-      "tickers": [
-        "ORCL"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "upcoming",
-      "confidence": "medium",
-      "why_now": "🆕🔴🔴 2026-10-28 — ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as \"Investor Day in October\"). First opportunity for new CFO Hilary Maxson to set long-term financial targ",
-      "belief_update": "A dated event can resolve or reframe an open debate.",
-      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
-      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
-      "readthrough": [
-        {
-          "ticker": "AVGO",
-          "relation": "supplier",
-          "detail": "networking",
-          "from": "ORCL",
-          "in_book": true
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "supplier",
-          "detail": "GPUs",
-          "from": "ORCL",
-          "in_book": true
-        },
-        {
-          "ticker": "MDB",
-          "relation": "competitor",
-          "detail": "operational database",
-          "from": "ORCL",
-          "in_book": false
-        },
-        {
-          "ticker": "AMD",
-          "relation": "supplier",
-          "detail": "MI GPUs",
-          "from": "ORCL",
-          "in_book": false
-        },
-        {
-          "ticker": "OPENAI",
-          "relation": "customer",
-          "detail": "OCI compute",
-          "from": "ORCL",
-          "in_book": false
-        }
-      ],
-      "source": "ORCL page catalyst ledger; underlying source/date retained in the catalyst text",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "ORCL.md"
-      ],
-      "evidence_anchor": "🆕🔴🔴 2026-10-28 — ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as \"Investor Day in October\"). First opportunity for new CFO Hilary Maxson to set long-term financial targ",
-      "origin": "catalyst_calendar",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
       "id": "cata-d6253f9923ca",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-10-26",
       "event_date": "2026-10-26",
       "type": "catalyst",
@@ -1544,104 +1315,32 @@
       "hidden": false
     },
     {
-      "id": "cata-32412ba42e30",
-      "asof": "2026-10-20",
-      "source_date": "2026-10-20",
-      "event_date": "2026-10-20",
+      "id": "cata-3e8cb5a41612",
+      "asof": "2026-10-21",
+      "source_date": "2026-10-22",
+      "event_date": "2026-10-22",
       "type": "catalyst",
       "priority": "medium",
       "score": 49,
-      "title": "NFLX — 2026-10-20: RESOLVED — Q3 2026 earnings, Tue 2026-10-20 AMC (date from Vital Knowledge calendar,…",
+      "title": "NOK — 2026-10-22: Q3 results: Optical/IP deliveries and new orders, supply constraints and MI software…",
       "tickers": [
-        "NFLX"
+        "NOK"
       ],
       "in_book": [],
       "impact": "medium",
       "urgency": "immediate",
       "confidence": "medium",
-      "why_now": "✅ RESOLVED — Q3 2026 earnings, Tue 2026-10-20 AMC (date from Vital Knowledge calendar, 2026-09-28; confirmed by the letter's own date). Outcome from the letter: a mixed print. Q3 was in line o",
+      "why_now": "2026-10-22 — Q3 results: Optical/IP deliveries and new orders, supply constraints and MI software phasing. The July guide calls for revenue +3–7% sequentially and EBIT broadly flat on Q2. Trac",
       "belief_update": "A dated event can resolve or reframe an open debate.",
       "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
       "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
       "readthrough": [],
-      "source": "NFLX page catalyst ledger; underlying source/date retained in the catalyst text",
+      "source": "NOK page catalyst ledger; underlying source/date retained in the catalyst text",
       "evidence_paths": [
         "_meta/catalysts.md",
-        "NFLX.md"
+        "NOK.md"
       ],
-      "evidence_anchor": "✅ RESOLVED — Q3 2026 earnings, Tue 2026-10-20 AMC (date from Vital Knowledge calendar, 2026-09-28; confirmed by the letter's own date). Outcome from the letter: a mixed print. Q3 was in line o",
-      "origin": "catalyst_calendar",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "cata-1d69cef73fb7",
-      "asof": "2026-10-20",
-      "source_date": "2026-10-20",
-      "event_date": "2026-10-20",
-      "type": "catalyst",
-      "priority": "medium",
-      "score": 49,
-      "title": "SPCX — 2026-10-20: 2027 — Mobile V2 satellites start flying \"next year,\" with Starlink Mobile SERVICE…",
-      "tickers": [
-        "SPCX"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "medium",
-      "why_now": "2027 — Mobile V2 satellites start flying \"next year,\" with Starlink Mobile SERVICE STARTING \"END OF NEXT YEAR\"; EchoStar's 65 MHz integrated \"later next year.\" ~1,000 V3 broadband satellites (the cr",
-      "belief_update": "A dated event can resolve or reframe an open debate.",
-      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
-      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
-      "readthrough": [],
-      "source": "SPCX page catalyst ledger; underlying source/date retained in the catalyst text",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "SPCX.md"
-      ],
-      "evidence_anchor": "2027 — Mobile V2 satellites start flying \"next year,\" with Starlink Mobile SERVICE STARTING \"END OF NEXT YEAR\"; EchoStar's 65 MHz integrated \"later next year.\" ~1,000 V3 broadband satellites (the cr",
-      "origin": "catalyst_calendar",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "cata-dc47b5b58c13",
-      "asof": "2026-10-20",
-      "source_date": "2026-10-20",
-      "event_date": "2026-10-20",
-      "type": "catalyst",
-      "priority": "medium",
-      "score": 49,
-      "title": "TSLA — 2026-10-20: SPACEX-TESLA MERGER TALK REVIVED ON STAGE (All-In Summit, 2026-09-14) — still NO formal…",
-      "tickers": [
-        "TSLA"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "medium",
-      "why_now": "🆕 SPACEX-TESLA MERGER TALK REVIVED ON STAGE (All-In Summit, 2026-09-14) — still NO formal process filed or announced. What to watch next, in order: any 8-K or board-process disclosure, further",
-      "belief_update": "A dated event can resolve or reframe an open debate.",
-      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
-      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
-      "readthrough": [
-        {
-          "ticker": "NVDA",
-          "relation": "supplier",
-          "detail": "GPUs",
-          "from": "TSLA",
-          "in_book": true
-        }
-      ],
-      "source": "TSLA page catalyst ledger; underlying source/date retained in the catalyst text",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "TSLA.md"
-      ],
-      "evidence_anchor": "🆕 SPACEX-TESLA MERGER TALK REVIVED ON STAGE (All-In Summit, 2026-09-14) — still NO formal process filed or announced. What to watch next, in order: any 8-K or board-process disclosure, further",
+      "evidence_anchor": "2026-10-22 — Q3 results: Optical/IP deliveries and new orders, supply constraints and MI software phasing. The July guide calls for revenue +3–7% sequentially and EBIT broadly flat on Q2. Trac",
       "origin": "catalyst_calendar",
       "feedback": "",
       "feedback_note": "",
@@ -1649,7 +1348,7 @@
     },
     {
       "id": "cata-c9f20420ff39",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-11-17",
       "event_date": "2026-11-17",
       "type": "catalyst",
@@ -1733,7 +1432,7 @@
     },
     {
       "id": "cata-abf09cd99a69",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-11-23",
       "event_date": "2026-11-23",
       "type": "catalyst",
@@ -1816,9 +1515,9 @@
       "hidden": false
     },
     {
-      "id": "data-ac99f558e9eb",
-      "asof": "2026-10-20",
-      "source_date": "2026-10-20",
+      "id": "data-666874f09e35",
+      "asof": "2026-10-21",
+      "source_date": "2026-10-21",
       "type": "data_gap",
       "priority": "watch",
       "score": 43,
@@ -1835,7 +1534,7 @@
       "action": "Fetch the latest NOK earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
       "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-10-20",
+      "source": "Wiki remediation worklist 2026-10-21",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -1846,9 +1545,9 @@
       "hidden": false
     },
     {
-      "id": "data-bc533b8aa9fc",
-      "asof": "2026-10-20",
-      "source_date": "2026-10-20",
+      "id": "data-f01deab20772",
+      "asof": "2026-10-21",
+      "source_date": "2026-10-21",
       "type": "data_gap",
       "priority": "watch",
       "score": 43,
@@ -1865,7 +1564,7 @@
       "action": "Fetch the latest NSCALE earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
       "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-10-20",
+      "source": "Wiki remediation worklist 2026-10-21",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -1876,9 +1575,9 @@
       "hidden": false
     },
     {
-      "id": "data-87cecf6eb938",
-      "asof": "2026-10-20",
-      "source_date": "2026-10-20",
+      "id": "data-0fac312ab154",
+      "asof": "2026-10-21",
+      "source_date": "2026-10-21",
       "type": "data_gap",
       "priority": "watch",
       "score": 43,
@@ -1895,7 +1594,7 @@
       "action": "Fetch the latest POET earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
       "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-10-20",
+      "source": "Wiki remediation worklist 2026-10-21",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -1906,9 +1605,9 @@
       "hidden": false
     },
     {
-      "id": "data-867c373e7ea8",
-      "asof": "2026-10-20",
-      "source_date": "2026-10-20",
+      "id": "data-f628d8e670a3",
+      "asof": "2026-10-21",
+      "source_date": "2026-10-21",
       "type": "data_gap",
       "priority": "watch",
       "score": 43,
@@ -1925,7 +1624,7 @@
       "action": "Fetch the latest SMTC earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
       "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-10-20",
+      "source": "Wiki remediation worklist 2026-10-21",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -1937,7 +1636,7 @@
     },
     {
       "id": "cata-c76406c38a7d",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-11-12",
       "event_date": "2026-11-12",
       "type": "catalyst",
@@ -1969,7 +1668,7 @@
     },
     {
       "id": "cata-30cf21294c0d",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-11-10",
       "event_date": "2026-11-10",
       "type": "catalyst",
@@ -2009,7 +1708,7 @@
     },
     {
       "id": "cata-9c6f028117f0",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-10-27",
       "event_date": "2026-10-27",
       "type": "catalyst",
@@ -2048,40 +1747,8 @@
       "hidden": false
     },
     {
-      "id": "cata-3e8cb5a41612",
-      "asof": "2026-10-20",
-      "source_date": "2026-10-22",
-      "event_date": "2026-10-22",
-      "type": "catalyst",
-      "priority": "watch",
-      "score": 40,
-      "title": "NOK — 2026-10-22: Q3 results: Optical/IP deliveries and new orders, supply constraints and MI software…",
-      "tickers": [
-        "NOK"
-      ],
-      "in_book": [],
-      "impact": "watch",
-      "urgency": "this week",
-      "confidence": "medium",
-      "why_now": "2026-10-22 — Q3 results: Optical/IP deliveries and new orders, supply constraints and MI software phasing. The July guide calls for revenue +3–7% sequentially and EBIT broadly flat on Q2. Trac",
-      "belief_update": "A dated event can resolve or reframe an open debate.",
-      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
-      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
-      "readthrough": [],
-      "source": "NOK page catalyst ledger; underlying source/date retained in the catalyst text",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "NOK.md"
-      ],
-      "evidence_anchor": "2026-10-22 — Q3 results: Optical/IP deliveries and new orders, supply constraints and MI software phasing. The July guide calls for revenue +3–7% sequentially and EBIT broadly flat on Q2. Trac",
-      "origin": "catalyst_calendar",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
       "id": "cata-5c0d70eeaf70",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-10-27",
       "event_date": "2026-10-27",
       "type": "catalyst",
@@ -2113,7 +1780,7 @@
     },
     {
       "id": "reco-32216e1d8ae9",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-10-01",
       "type": "model_check",
       "priority": "watch",
@@ -2166,7 +1833,7 @@
     },
     {
       "id": "reco-ea86c1657228",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-10-01",
       "type": "model_check",
       "priority": "watch",
@@ -2219,7 +1886,7 @@
     },
     {
       "id": "reco-08afbb898b71",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-10-01",
       "type": "model_check",
       "priority": "watch",
@@ -2300,7 +1967,7 @@
     },
     {
       "id": "reco-5b10ab6f72fe",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-10-01",
       "type": "model_check",
       "priority": "watch",
@@ -2382,7 +2049,7 @@
     },
     {
       "id": "reco-6d19352f5bc7",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-10-01",
       "type": "model_check",
       "priority": "watch",
@@ -2468,7 +2135,7 @@
     },
     {
       "id": "reco-461b7e89c24a",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-10-01",
       "type": "model_check",
       "priority": "watch",
@@ -2550,7 +2217,7 @@
     },
     {
       "id": "reco-6e15fb3f3a1c",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-10-01",
       "type": "model_check",
       "priority": "watch",
@@ -2633,7 +2300,7 @@
     },
     {
       "id": "reco-13cc6859d7e2",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-10-01",
       "type": "model_check",
       "priority": "watch",
@@ -2715,7 +2382,7 @@
     },
     {
       "id": "reco-f54e84974b26",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-10-01",
       "type": "model_check",
       "priority": "watch",
@@ -2796,7 +2463,7 @@
     },
     {
       "id": "reco-aefa03f61c43",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-10-01",
       "type": "model_check",
       "priority": "watch",
@@ -2879,7 +2546,7 @@
     },
     {
       "id": "reco-2dac6aa267b7",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-10-01",
       "type": "model_check",
       "priority": "watch",
@@ -2962,7 +2629,7 @@
     },
     {
       "id": "cata-67b3a6bd8c80",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-10-29",
       "event_date": "2026-10-29",
       "type": "catalyst",
@@ -3016,7 +2683,7 @@
     },
     {
       "id": "cata-ce699c62b4f0",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-11-10",
       "event_date": "2026-11-10",
       "type": "catalyst",
@@ -3056,7 +2723,7 @@
     },
     {
       "id": "cata-c333d9a79742",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-11-03",
       "event_date": "2026-11-03",
       "type": "catalyst",
@@ -3138,7 +2805,7 @@
     },
     {
       "id": "cata-e20427bb0cce",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-11-02",
       "event_date": "2026-11-02",
       "type": "catalyst",
@@ -3199,7 +2866,7 @@
     },
     {
       "id": "cata-b395c83ce767",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-11-05",
       "event_date": "2026-11-05",
       "type": "catalyst",
@@ -3274,7 +2941,7 @@
     },
     {
       "id": "cata-172f6636a635",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-11-09",
       "event_date": "2026-11-09",
       "type": "catalyst",
@@ -3335,7 +3002,7 @@
     },
     {
       "id": "cata-396a1e21b245",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-11-02",
       "event_date": "2026-11-02",
       "type": "catalyst",
@@ -3403,7 +3070,7 @@
     },
     {
       "id": "cata-c030b28ed093",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-11-12",
       "event_date": "2026-11-12",
       "type": "catalyst",
@@ -3485,7 +3152,7 @@
     },
     {
       "id": "cata-01a4718ff5c9",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-12-02",
       "event_date": "2026-12-02",
       "type": "catalyst",
@@ -3525,7 +3192,7 @@
     },
     {
       "id": "cata-eb7d5753b962",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-11-16",
       "event_date": "2026-11-16",
       "type": "catalyst",
@@ -3600,7 +3267,7 @@
     },
     {
       "id": "cata-44020bbb6eda",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-12-02",
       "event_date": "2026-12-02",
       "type": "catalyst",
@@ -3654,7 +3321,7 @@
     },
     {
       "id": "cata-2c7b4a6f3c93",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-11-18",
       "event_date": "2026-11-18",
       "type": "catalyst",
@@ -3694,7 +3361,7 @@
     },
     {
       "id": "cata-09405b3ca0ba",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-11-21",
       "event_date": "2026-11-21",
       "type": "catalyst",
@@ -3776,7 +3443,7 @@
     },
     {
       "id": "cata-45aebd381da9",
-      "asof": "2026-10-20",
+      "asof": "2026-10-21",
       "source_date": "2026-11-19",
       "event_date": "2026-11-19",
       "type": "catalyst",

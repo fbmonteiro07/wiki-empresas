@@ -1,0 +1,891 @@
+{
+  "asof": "2026-10-21",
+  "scope": "Morning triage and selected primary/broker sources; not a comprehensive filings, all-mail or full GTC keynote audit.",
+  "engine": {
+    "asof": "2026-10-21",
+    "stats": {
+      "signals": 48,
+      "active": 48,
+      "high": 5,
+      "belief_changes": 0,
+      "focus_names": 36
+    },
+    "book": {
+      "asof": "2026-07-01",
+      "seed": true,
+      "positions": 8
+    },
+    "latest_reconciliation": "reconciliation-2026-10-20-inbox.md",
+    "signals": [
+      {
+        "id": "cata-1016fc453b03",
+        "type": "catalyst",
+        "priority": "high",
+        "title": "META — 2026-10-21: Q3'26 PRINT, about a week earlier than normal (JPM desk · Schilsky, 2026-10-13; BofA ·…",
+        "source": "META page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-10-21",
+        "why_now": "🆕🔴🔴 2026-10-21 (WED, AFTER THE CLOSE) — Q3'26 PRINT, about a week earlier than normal (JPM desk · Schilsky, 2026-10-13; BofA · Post, UBS desk · Dwyer and Vital Knowledge, 2026-10-16). The bar: 3Q",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "META.md"
+        ]
+      },
+      {
+        "id": "post-8cd5d82dc530",
+        "type": "postmortem",
+        "priority": "high",
+        "title": "NVDA — catalyst passed without a logged outcome",
+        "source": "Catalyst outcome ledger",
+        "source_date": "2026-10-20",
+        "why_now": "🆕 2026-10-20 to 10-22: NVIDIA GTC Berlin (JPM US Market Intelligence calendar, 09-29/09-30); BofA lists \"multiple GTC tradeshow events\" with the enhanced buyback as the near-term NVDA catalysts (A",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "_meta/outcomes.md"
+        ]
+      },
+      {
+        "id": "esti-a90311ffc12f",
+        "type": "model_check",
+        "priority": "high",
+        "title": "GOOG — 2026 revenue house view is 17% above consensus",
+        "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-10-20",
+        "source_date": "2026-10-20",
+        "why_now": "Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $430.0bn as of 2026-10-20, a derived +17.5% gap. Revenue comparisons require a basis check.",
+        "evidence_paths": [
+          "_data/house.json",
+          "_data/estimates.json"
+        ]
+      },
+      {
+        "id": "esti-d95d4a31d508",
+        "type": "model_check",
+        "priority": "high",
+        "title": "GOOG — 2027 revenue house view is 17% above consensus",
+        "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-10-20",
+        "source_date": "2026-10-20",
+        "why_now": "Capstone carries 2027 revenue at $641.0bn versus Bloomberg consensus at $547.9bn as of 2026-10-20, a derived +17.0% gap. Revenue comparisons require a basis check.",
+        "evidence_paths": [
+          "_data/house.json",
+          "_data/estimates.json"
+        ]
+      },
+      {
+        "id": "esti-5f6d15badafa",
+        "type": "model_check",
+        "priority": "high",
+        "title": "AAPL — 2026 EPS house view is 16% above consensus",
+        "source": "Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-10-20",
+        "source_date": "2026-10-20",
+        "why_now": "Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.76 as of 2026-10-20, a derived +15.5% gap.",
+        "evidence_paths": [
+          "_data/house.json",
+          "_data/estimates.json"
+        ]
+      },
+      {
+        "id": "cata-68c774eb3829",
+        "type": "catalyst",
+        "priority": "medium",
+        "title": "AAPL — 2026-10-23: SMART-HOME LAUNCH (J490 hub, HomePod mini, Apple TV; Bloomberg via GS / JPM / BofA /…",
+        "source": "AAPL page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-10-23",
+        "why_now": "🆕 2026-10-13 — SMART-HOME LAUNCH (J490 hub, HomePod mini, Apple TV; Bloomberg via GS / JPM / BofA / Redburn desks, 2026-09-29→10-01); 2026-10-16 Duo pre-orders, 2026-10-23 on sale (DigiTimes v",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "AAPL.md"
+        ]
+      },
+      {
+        "id": "cata-9f2e588078f2",
+        "type": "catalyst",
+        "priority": "medium",
+        "title": "ORCL — 2026-10-28: ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as \"Investor Day in…",
+        "source": "ORCL page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-10-28",
+        "why_now": "🆕🔴🔴 2026-10-28 — ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as \"Investor Day in October\"). First opportunity for new CFO Hilary Maxson to set long-term financial targ",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "ORCL.md"
+        ]
+      },
+      {
+        "id": "data-c51131b5b792",
+        "type": "data_gap",
+        "priority": "medium",
+        "title": "NOK — Bloomberg consensus missing",
+        "source": "Wiki remediation worklist 2026-10-20",
+        "source_date": "2026-10-20",
+        "why_now": "The current consensus snapshot cannot support a house-vs-Street or revision analysis for this name.",
+        "evidence_paths": [
+          "_meta/worklist.json"
+        ]
+      },
+      {
+        "id": "data-54ed22926bee",
+        "type": "data_gap",
+        "priority": "medium",
+        "title": "NSCALE — Bloomberg consensus missing",
+        "source": "Wiki remediation worklist 2026-10-20",
+        "source_date": "2026-10-20",
+        "why_now": "The current consensus snapshot cannot support a house-vs-Street or revision analysis for this name.",
+        "evidence_paths": [
+          "_meta/worklist.json"
+        ]
+      },
+      {
+        "id": "cata-4dea9544cec3",
+        "type": "catalyst",
+        "priority": "medium",
+        "title": "NVDA — 2026-11-17: CLOSED 2026-09-10 — THE GS COMMUNACOPIA FIRESIDE HAPPENED. OUTCOME: Jensen reaffirmed the…",
+        "source": "NVDA page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-17",
+        "why_now": "✅🔴 CLOSED 2026-09-10 — THE GS COMMUNACOPIA FIRESIDE HAPPENED. OUTCOME: Jensen reaffirmed the ~70% FY28 revenue growth (\"we could grow 70% year-over-year, and we are confident about that\"),",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "NVDA.md"
+        ]
+      },
+      {
+        "id": "esti-e1438aea276d",
+        "type": "model_check",
+        "priority": "medium",
+        "title": "CRWV — 2026 EPS house view is 16% below consensus",
+        "source": "Capstone official model — P:\\Felipe Monteiro\\US Equities\\Modelos oficiais\\Template DCF CRWV.xlsx (2026-10-14, Felipe Monteiro), first CRWV model in the official Template DCF <TICKER family (same sheets and conventions as AMD/AVGO/ADVANTEST/TER, plus History and Debt sheets; labels in English). Build and verification pipeline in · Bloomberg consensus 2026-10-20",
+        "source_date": "2026-10-20",
+        "why_now": "Capstone carries 2026 EPS at $-3.27 versus Bloomberg consensus at $-3.91 as of 2026-10-20, a derived -16.4% gap.",
+        "evidence_paths": [
+          "_data/house.json",
+          "_data/estimates.json"
+        ]
+      },
+      {
+        "id": "cata-d6253f9923ca",
+        "type": "catalyst",
+        "priority": "medium",
+        "title": "MEDIATEK — 2026-10-26: 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR \"POTENTIAL…",
+        "source": "MEDIATEK page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-10-26",
+        "why_now": "🆕🔴 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR \"POTENTIAL UPWARD REVISIONS TO GOOGLE TPU-RELATED GUIDANCE.\" Between them: Google system-level validation of v9 in H",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "MEDIATEK.md"
+        ]
+      },
+      {
+        "id": "cata-3e8cb5a41612",
+        "type": "catalyst",
+        "priority": "medium",
+        "title": "NOK — 2026-10-22: Q3 results: Optical/IP deliveries and new orders, supply constraints and MI software…",
+        "source": "NOK page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-10-22",
+        "why_now": "2026-10-22 — Q3 results: Optical/IP deliveries and new orders, supply constraints and MI software phasing. The July guide calls for revenue +3–7% sequentially and EBIT broadly flat on Q2. Trac",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "NOK.md"
+        ]
+      },
+      {
+        "id": "cata-c9f20420ff39",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "MSFT — 2026-11-17: 2026-11-17 to 11-20, SF — MSFT IGNITE.",
+        "source": "MSFT page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-17",
+        "why_now": "🆕 2026-11-17 to 11-20, SF — MSFT IGNITE.",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "MSFT.md"
+        ]
+      },
+      {
+        "id": "cata-abf09cd99a69",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "NVDA — 2026-11-23: NVDA investor call (IR) (Rothschild & Co Redburn TMT sales · Rowan Adley, 2026-09-28).…",
+        "source": "NVDA page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-23",
+        "why_now": "🆕 2026-10-08: NVDA investor call (IR) (Rothschild & Co Redburn TMT sales · Rowan Adley, 2026-09-28). Also, NYC/Boston NDRs where the $40bn/GW Vera Rubin slides are being shown (BofA TMT sales · Br",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "NVDA.md"
+        ]
+      },
+      {
+        "id": "data-ac99f558e9eb",
+        "type": "data_gap",
+        "priority": "watch",
+        "title": "NOK — latest earnings transcript absent",
+        "source": "Wiki remediation worklist 2026-10-20",
+        "source_date": "2026-10-20",
+        "why_now": "The wiki cannot verify management wording or build a reliable commentary-evolution view without the transcript.",
+        "evidence_paths": [
+          "_meta/worklist.json"
+        ]
+      },
+      {
+        "id": "data-bc533b8aa9fc",
+        "type": "data_gap",
+        "priority": "watch",
+        "title": "NSCALE — latest earnings transcript absent",
+        "source": "Wiki remediation worklist 2026-10-20",
+        "source_date": "2026-10-20",
+        "why_now": "The wiki cannot verify management wording or build a reliable commentary-evolution view without the transcript.",
+        "evidence_paths": [
+          "_meta/worklist.json"
+        ]
+      },
+      {
+        "id": "data-87cecf6eb938",
+        "type": "data_gap",
+        "priority": "watch",
+        "title": "POET — latest earnings transcript absent",
+        "source": "Wiki remediation worklist 2026-10-20",
+        "source_date": "2026-10-20",
+        "why_now": "The wiki cannot verify management wording or build a reliable commentary-evolution view without the transcript.",
+        "evidence_paths": [
+          "_meta/worklist.json"
+        ]
+      },
+      {
+        "id": "data-867c373e7ea8",
+        "type": "data_gap",
+        "priority": "watch",
+        "title": "SMTC — latest earnings transcript absent",
+        "source": "Wiki remediation worklist 2026-10-20",
+        "source_date": "2026-10-20",
+        "why_now": "The wiki cannot verify management wording or build a reliable commentary-evolution view without the transcript.",
+        "evidence_paths": [
+          "_meta/worklist.json"
+        ]
+      },
+      {
+        "id": "cata-c76406c38a7d",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "SPCX — 2026-11-12: OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.…",
+        "source": "SPCX page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-12",
+        "why_now": "🆕🔴🔴 2026-11-12 — OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset. OpenAI's own post: \"We're ending our partnership with Cursor following its acquisit",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "SPCX.md"
+        ]
+      },
+      {
+        "id": "cata-30cf21294c0d",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "FLEX — 2026-11-10: INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail…",
+        "source": "FLEX page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-10",
+        "why_now": "🆕🔴 INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail lands. Flex said \"more strategy details will be shared at an Innovation Day event on November 10, 2026",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "FLEX.md"
+        ]
+      },
+      {
+        "id": "cata-9c6f028117f0",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "FLEX — 2026-10-27: Celestica (CLS) analyst day: the EMS peer's rack/switching numbers (Bernstein top pick;…",
+        "source": "FLEX page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-10-27",
+        "why_now": "🆕 2026-10-27 — Celestica (CLS) analyst day: the EMS peer's rack/switching numbers (Bernstein top pick; BofA expects a late-October guidance raise) are the read-through for this page's EMS comp set",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "FLEX.md"
+        ]
+      },
+      {
+        "id": "cata-5c0d70eeaf70",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "NXPI — 2026-10-27: Q3 FY26 print, per the Vital Knowledge forward calendar (listed with ACGL, BKR, LOGI,…",
+        "source": "NXPI page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-10-27",
+        "why_now": "🆕 2026-10-27 (Tue, after the US close) — Q3 FY26 print, per the Vital Knowledge forward calendar (listed with ACGL, BKR, LOGI, PYPL, WM the same evening) (Vital Knowledge, \"Vital Dawn\", 2026-10-02",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "NXPI.md"
+        ]
+      },
+      {
+        "id": "reco-32216e1d8ae9",
+        "type": "model_check",
+        "priority": "watch",
+        "title": "ANET — Bernstein 2027 revenue is +9-14% above consensus, but the note prints three different figures",
+        "source": "Bernstein · curated reconciliation 2026-10-01",
+        "source_date": "2026-10-01",
+        "why_now": "3Q26E is $3.324bn / $1.08 vs BBG 1FQ $3.327bn / $1.062, so Bernstein is in line for the current quarter.",
+        "evidence_paths": [
+          "_meta/reconciliation-2026-10-01-inbox.md"
+        ]
+      },
+      {
+        "id": "reco-ea86c1657228",
+        "type": "model_check",
+        "priority": "watch",
+        "title": "CIEN — Outperform with a PT 15% below consensus, on a PT basis that mislabels the year",
+        "source": "JPM + Bernstein · curated reconciliation 2026-10-01",
+        "source_date": "2026-10-01",
+        "why_now": "Bernstein: OP, PT $440, described as \"16x our $28 in 2028 EPS\". In the model, FY28E EPS is $18.61 and FY29E is $27.70, so the PT is 16x FY29, not FY28.",
+        "evidence_paths": [
+          "_meta/reconciliation-2026-10-01-inbox.md"
+        ]
+      },
+      {
+        "id": "reco-08afbb898b71",
+        "type": "model_check",
+        "priority": "watch",
+        "title": "COHR — house Neutral $285 is the Street's second-lowest PT; Bernstein OP $350 sits below the consensus median",
+        "source": "Bernstein · curated reconciliation 2026-10-01",
+        "source_date": "2026-10-01",
+        "why_now": "Bernstein Zhu (09-29): Outperform, PT $350, which is ~22x \"$16 in FY 2028 EPS\" (p.68; model p.104).",
+        "evidence_paths": [
+          "_meta/reconciliation-2026-10-01-inbox.md"
+        ]
+      },
+      {
+        "id": "reco-5b10ab6f72fe",
+        "type": "model_check",
+        "priority": "watch",
+        "title": "CSCO / GLW — Bernstein's two Market-Performs are at or near the Street LOW on PT, with estimates in line",
+        "source": "Bernstein · curated reconciliation 2026-10-01",
+        "source_date": "2026-10-01",
+        "why_now": "CSCO: MP, PT $110, which equals the BBG Street low ($110); consensus is $138.88 (hi $170, n=31) and px $108.76. Estimates are in line:",
+        "evidence_paths": [
+          "_meta/reconciliation-2026-10-01-inbox.md"
+        ]
+      },
+      {
+        "id": "reco-6d19352f5bc7",
+        "type": "model_check",
+        "priority": "watch",
+        "title": "Celestica (no wiki page) — Bernstein 2027 EPS is +20% above consensus; PT near the Street high",
+        "source": "Bernstein · curated reconciliation 2026-10-01",
+        "source_date": "2026-10-01",
+        "why_now": "Bernstein: OP, PT $520 (top pick), 2027E $40.0bn / $23.79 vs BBG (CLS US, FY-Dec) $35.66bn / $19.87, i.e. +12% / +20%. Bernstein's own consensus line ($35.5bn / $19.69) matches.",
+        "evidence_paths": [
+          "_meta/reconciliation-2026-10-01-inbox.md"
+        ]
+      },
+      {
+        "id": "reco-461b7e89c24a",
+        "type": "model_check",
+        "priority": "watch",
+        "title": "LITE / COHR (optics TAM) — Bernstein's transceiver market is 2.3x Goldman's for 2028; no \"2028 pause\"",
+        "source": "Bernstein · curated reconciliation 2026-10-01",
+        "source_date": "2026-10-01",
+        "why_now": "Bernstein (Exhibit 29; text p.21): transceiver revenue $39bn (2025) → $57bn (2026E) → $99bn (2027E) → $158bn (2028E) → $295bn (2030E), a ~40% CAGR (\"from $57B in 2026 to ~$300B in 2030\").",
+        "evidence_paths": [
+          "_meta/reconciliation-2026-10-01-inbox.md"
+        ]
+      },
+      {
+        "id": "reco-6e15fb3f3a1c",
+        "type": "model_check",
+        "priority": "watch",
+        "title": "META — house CY27 capex is $28bn (−14%) below the Street; Barclays gives Muse's cost per user",
+        "source": "Bernstein · curated reconciliation 2026-10-01",
+        "source_date": "2026-10-01",
+        "why_now": "Barclays Sandler (09-30): hosting a persistent agent costs $4.07 per DAU per month, made up of a $3.66 VM (AWS m8a.large, 8 users per instance) and $0.41 of inference. That is \"~10x more expensive\" than ChatGPT's free tier. Barclays says Apple/OpenAI would need \"upwards of $40B+ in extra annual compute\" to win the free tier, which implies ~820m DAU at $48.84 a year (my arithmetic).",
+        "evidence_paths": [
+          "_meta/reconciliation-2026-10-01-inbox.md"
+        ]
+      },
+      {
+        "id": "reco-13cc6859d7e2",
+        "type": "model_check",
+        "priority": "watch",
+        "title": "MU / SKHYNIX (memory price path) — Fubon's DRAM contract price falls 16% from the 2Q27 peak while Micron says supply stays constrained through CY28",
+        "source": "UBS · curated reconciliation 2026-10-01",
+        "source_date": "2026-10-01",
+        "why_now": "Commodity DRAM contract (TrendForce-based): 1.45 → 1.81 → 2.10 → 2.17 → 2.25 (2Q27 peak) → 2.17 → 2.03 → 1.91 → 1.89 (2Q28). That is −3.2% / −6.7% / −5.7% / −1.5% q/q from 3Q27, and −16% from peak to 2Q28.",
+        "evidence_paths": [
+          "_meta/reconciliation-2026-10-01-inbox.md"
+        ]
+      },
+      {
+        "id": "reco-f54e84974b26",
+        "type": "model_check",
+        "priority": "watch",
+        "title": "MU — FY27 consensus is post-print on the quarter but not on the year; capex consensus sits below the implied floor",
+        "source": "management/company primary + BofA + UBS · curated reconciliation 2026-10-01",
+        "source_date": "2026-10-01",
+        "why_now": "Revenue $54.23bn, non-GAAP GM 87.0%, EPS $33.42, vs guide $50.0bn ± 1 / ~86% / $31.00 ± 1.",
+        "evidence_paths": [
+          "_meta/reconciliation-2026-10-01-inbox.md"
+        ]
+      },
+      {
+        "id": "reco-aefa03f61c43",
+        "type": "model_check",
+        "priority": "watch",
+        "title": "NVDA — Fubon's 2027 GPU shipments are 53% above the house's chip count",
+        "source": "Bernstein · curated reconciliation 2026-10-01",
+        "source_date": "2026-10-01",
+        "why_now": "Fubon (Sept-2026 deck, p.33), figures verified on the page text:",
+        "evidence_paths": [
+          "_meta/reconciliation-2026-10-01-inbox.md"
+        ]
+      },
+      {
+        "id": "reco-2dac6aa267b7",
+        "type": "model_check",
+        "priority": "watch",
+        "title": "TSM — JPM capex US$86 / 100bn for 2027/28 is +14% / +16% above consensus; house 2026 line stale",
+        "source": "JPM · curated reconciliation 2026-10-01",
+        "source_date": "2026-10-01",
+        "why_now": "JPM Hariharan (09-30): OW, PT NT$3,300 (from NT$3,200), which is 20x 12m-forward EPS, at px NT$2,475 on 09-29. JPM vs BBG (live):",
+        "evidence_paths": [
+          "_meta/reconciliation-2026-10-01-inbox.md"
+        ]
+      },
+      {
+        "id": "cata-67b3a6bd8c80",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "AIXA — 2026-10-29: Q3 FY2026 results, per the Vital Knowledge forward calendar (listed with Adidas, STM,…",
+        "source": "AIXA page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-10-29",
+        "why_now": "🆕 2026-10-29 (Thu, before the EU open) — Q3 FY2026 results, per the Vital Knowledge forward calendar (listed with Adidas, STM, Shell, VW et al. on the same morning) (Vital Knowledge, \"Vital Dawn\",",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "AIXA.md"
+        ]
+      },
+      {
+        "id": "cata-ce699c62b4f0",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "IFX — 2026-11-10: FYQ4 print + FY27 guide (Jefferies · Janardan Menon, 2026-09-30, via sales relays).…",
+        "source": "IFX page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-10",
+        "why_now": "🆕 2026-11-10 — FYQ4 print + FY27 guide (Jefferies · Janardan Menon, 2026-09-30, via sales relays). Jefferies expects FYQ4 revenue €4.71bn / segment margin 23.7%; FY27 revenue ~€20bn (+22%), segmen",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "IFX.md"
+        ]
+      },
+      {
+        "id": "cata-c333d9a79742",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "INTC — 2026-11-03: Susquehanna \"The AI Arms Race\" session (Christopher Rolland; AMD, INTC, MRVL, NVDA, AVGO,…",
+        "source": "INTC page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-03",
+        "why_now": "🆕 2026-10-01: Susquehanna \"The AI Arms Race\" session (Christopher Rolland; AMD, INTC, MRVL, NVDA, AVGO, ARM, QCOM) and 2026-11-03: Intel dinner NDR with CFO and IR, London (Susquehanna index 09-30",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "INTC.md"
+        ]
+      },
+      {
+        "id": "cata-e20427bb0cce",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "KIOXIA — 2026-11-02: 2026-11-02 (Mon) 9am JST — BofA post-results \"doko shuzai\" with KIOXIA on FY3/27 2Q…",
+        "source": "KIOXIA page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-02",
+        "why_now": "🆕 2026-11-02 (Mon) 9am JST — BofA post-results \"doko shuzai\" with KIOXIA on FY3/27 2Q results (BofA · Mikio Hirakawa, via BofA one-liners, 2026-10-01) — dates the Sep-quarter print to before 11-02",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "KIOXIA.md"
+        ]
+      },
+      {
+        "id": "cata-b395c83ce767",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "LITE — 2026-11-05: F1Q27 earnings (date per Deutsche Bank · Conti, 2026-10-07; confirm against the LITE IR…",
+        "source": "LITE page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-05",
+        "why_now": "🆕 2026-11-05 — F1Q27 earnings (date per Deutsche Bank · Conti, 2026-10-07; confirm against the LITE IR release). DB's bogeys: OCS $100m for the first time (path to $1bn in 2027), CPO toward",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "LITE.md"
+        ]
+      },
+      {
+        "id": "cata-172f6636a635",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "QCOM — 2026-11-09: APPLE LICENSING EXTENSION — announced 2026-09-24 ahead of the April 2027 expiry, terms not…",
+        "source": "QCOM page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-09",
+        "why_now": "🆕 APPLE LICENSING EXTENSION — announced 2026-09-24 ahead of the April 2027 expiry, terms not disclosed (Bernstein desk · Seidman, 2026-09-24). Watch for duration/rate in the FQ4 print or 10-K. B",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "QCOM.md"
+        ]
+      },
+      {
+        "id": "cata-396a1e21b245",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "STX — 2026-11-02: Morgan Stanley Global Hardware & Optical lunch (Andy Meng, Howard Kao, Derrick Yang, Meta…",
+        "source": "STX page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-02",
+        "why_now": "🆕 2026-10-08 (12pm ET, NYC) — Morgan Stanley Global Hardware & Optical lunch (Andy Meng, Howard Kao, Derrick Yang, Meta Marshall, Erik Woodring) covering STX/WDC among others; 2026-11-02/03 — MS",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "STX.md"
+        ]
+      },
+      {
+        "id": "cata-c030b28ed093",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "COHR — 2026-11-12: 2026-11-12 → 11-20 — COHR Asia NDR with Jefferies (Blayne Curtis) (Jefferies trading desk…",
+        "source": "COHR page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-12",
+        "why_now": "🆕 2026-11-12 → 11-20 — COHR Asia NDR with Jefferies (Blayne Curtis) (Jefferies trading desk · Jeffrey Favuzza, 2026-09-28, corporate-access list).",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "COHR.md"
+        ]
+      },
+      {
+        "id": "cata-01a4718ff5c9",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "CRWD — 2026-12-02: PRE-REGISTERED TEST T2 — F3Q27 print ~2026-12-02: net new ARR ≥ ~$378m (guide-implied…",
+        "source": "CRWD page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-12-02",
+        "why_now": "🧪 PRE-REGISTERED TEST T2 — F3Q27 print ~2026-12-02: net new ARR ≥ ~$378m (guide-implied $343–347m from the $6.184–6.188bn Q3 ARR guide × the ~10% blended H1 beat, UBS / Boyd) = bull; at or bel",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "CRWD.md"
+        ]
+      },
+      {
+        "id": "cata-eb7d5753b962",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "NSCALE — 2026-11-16: NVIDIA Sale ($1.0bn convertible notes / non-voting shares) expected to close on or around…",
+        "source": "NSCALE page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-16",
+        "why_now": "2026-11-16 — NVIDIA Sale ($1.0bn convertible notes / non-voting shares) expected to close on or around this date.",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "NSCALE.md"
+        ]
+      },
+      {
+        "id": "cata-44020bbb6eda",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "OKTA — 2026-12-02: PRE-REGISTERED TEST T3 — Q3 FY27 print ~2026-12-02: cRPO growth ≥ 13% (guide +11–12%; Q2…",
+        "source": "OKTA page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-12-02",
+        "why_now": "🧪 PRE-REGISTERED TEST T3 — Q3 FY27 print ~2026-12-02: cRPO growth ≥ 13% (guide +11–12%; Q2 printed +14.1%) AND dollar-based NRR ≥ 107% = bull; cRPO ≤ 12% and/or NRR back to 106% = bear. ⚠️",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "OKTA.md"
+        ]
+      },
+      {
+        "id": "cata-2c7b4a6f3c93",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "PANW — 2026-11-18: PRE-REGISTERED TEST T1 — F1Q27 print ~2026-11-18: ORGANIC NGS ARR growth on the…",
+        "source": "PANW page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-18",
+        "why_now": "🧪 PRE-REGISTERED TEST T1 — F1Q27 print ~2026-11-18: ORGANIC NGS ARR growth on the re-segmented basis ≥ 28% y/y (the last disclosed organic rate, Q2 FY26) AND non-GAAP OM ≥ 30% = bull; orga",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "PANW.md"
+        ]
+      },
+      {
+        "id": "cata-09405b3ca0ba",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "SAMSUNG — 2026-11-21: 2026-08-24 → 2026-11-21 — the 53.3mn-share PSU treasury purchase window is open. A…",
+        "source": "SAMSUNG page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-21",
+        "why_now": "🆕 2026-08-24 → 2026-11-21 — the 53.3mn-share PSU treasury purchase window is open. A mechanical, non-discretionary bid in the market for three months; note it is excluded from the FCF payout b",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "SAMSUNG.md"
+        ]
+      },
+      {
+        "id": "cata-45aebd381da9",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "SKHYNIX — 2026-11-19: 2026-08-20 → 2026-11-19 — the buyback executes on-market (SK Securities). Daily execution…",
+        "source": "SKHYNIX page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-19",
+        "why_now": "🆕 2026-08-20 → 2026-11-19 — the buyback executes on-market (SK Securities). Daily execution is observable; the falsifier for the \"most aggressive among peers\" claim is whether the full W40trn ac",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "SKHYNIX.md"
+        ]
+      }
+    ]
+  },
+  "mail_triage": {
+    "pages": [
+      100,
+      60
+    ],
+    "unique_message_ids": 159,
+    "second_page_has_more": false
+  },
+  "mail_sources": [
+    {
+      "broker": "J.P. Morgan",
+      "analysts": "Doug Anmuth; Daniel Pfeiffer",
+      "source_date": "2026-10-21",
+      "subject": "JPM ANMUTH - Netflix Inc: Focused On Core TV and Film Execution; Remain Overweight w/$81 PT",
+      "message_id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWc_d1LAAA=",
+      "received_at": "2026-10-21T08:31:52Z",
+      "outlook_url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWc%2Bd1LAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "signal_ids": [
+        "supp-20261021-nflx-outcome"
+      ],
+      "findings": [
+        "OW retained; PT $85 to $81. Reported post-close decline approximately 6%, not a live quote.",
+        "2027/28 revenue, operating income and FCF forecasts reduced approximately 1-3%; subscription business stronger than prior expectations; precise 2027 comments deferred."
+      ],
+      "source_kind": "Connected Outlook message body; linked PDF not reviewed unless otherwise explicitly stated"
+    },
+    {
+      "broker": "Barclays",
+      "analysts": "Kannan Venkateshwar et al.",
+      "source_date": "2026-10-21",
+      "subject": "Netflix, Inc.: Operational volatility could sustain narrative pressure",
+      "message_id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWc_d0YAAA=",
+      "received_at": "2026-10-21T04:11:01Z",
+      "outlook_url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWc%2Bd0YAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "signal_ids": [
+        "supp-20261021-nflx-outcome"
+      ],
+      "findings": [
+        "EW retained; PT $70 to $65; advertising guide and limited 2027 visibility sustain narrative pressure. Email excerpt only, not full linked report."
+      ],
+      "source_kind": "Connected Outlook message body; linked PDF not reviewed unless otherwise explicitly stated"
+    },
+    {
+      "broker": "BofA",
+      "analysts": "Wamsi Mohan",
+      "source_date": "2026-10-21",
+      "subject": "WDC US: Western Digital Corporation: Price Objective Change - F1Q27 preview: pricing remains strong, some caution on EB growth; PO to $800 - BUY - United States",
+      "message_id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAQqMvDhAADBpLwblpT0TZ_t-vz7Ao6sAAWc_iX_AAA=",
+      "received_at": "2026-10-21T09:03:04Z",
+      "outlook_url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAQqMvDhAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWc%2BiX%2BAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "signal_ids": [
+        "supp-20261021-wdc-bogey"
+      ],
+      "findings": [
+        "WDC Buy; PT $720 to $800; F2Q27 December-quarter EPS guide expectation $5.00 +/- $0.15; own estimate $5.02.",
+        "F1Q27 EB shipment growth forecast 21% versus management long-term 25% ambition; production transition and supply constraints."
+      ],
+      "source_kind": "Connected Outlook message body; linked PDF not reviewed unless otherwise explicitly stated"
+    },
+    {
+      "broker": "J.P. Morgan",
+      "analysts": "Joseph Cardoso; Manmohanpreet Singh; Marc Vitenzon",
+      "source_date": "2026-10-21",
+      "subject": "JPM | Hardware & Networking | SpaceX 3Q26 Read-Through: Reinforces AI Infrastructure Momentum and Should Temper Constraint Concerns",
+      "message_id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWc_d0UAAA=",
+      "received_at": "2026-10-21T04:06:04Z",
+      "outlook_url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWc%2Bd0UAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "signal_ids": [
+        "supp-20261021-spcx-nvda-execution"
+      ],
+      "findings": [
+        "Relays Musk/Johnsen October 20 call: YE27 ~13GW nameplate compute, distinct from 20GW incremental power/cooling upside; Q4 capex $35-$40bn.",
+        "Broker interprets plans as easing power/financing constraints. Brief challenges that inference; no direct original call review claimed."
+      ],
+      "source_kind": "Connected Outlook message body; linked PDF not reviewed unless otherwise explicitly stated"
+    },
+    {
+      "broker": "Jefferies specialist sales",
+      "analysts": "William Beavington",
+      "source_date": "2026-10-21",
+      "subject": "Global SEMIS Daily - (1) Should Be A Better Day Today ? (2)  SPACEX - Key Points On A.I.I (3) NOKIA - Will They Raise Guidance Tomorrow ? |4| |4| Our 2 Calls on Thursday - MEMORY (Bull/Bear) + ASIA SUPPLY CHAIN",
+      "message_id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWc_d1FAAA=",
+      "received_at": "2026-10-21T07:43:58Z",
+      "outlook_url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWc%2Bd1FAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "signal_ids": [
+        "supp-20261021-nok-conversion"
+      ],
+      "findings": [
+        "Desk expects Nokia may prefer to wait for commercial wafer production in San Jose before increasing guidance, potentially at Q4 rather than Q3 results.",
+        "Desk positioning commentary is not a representative investor survey or company guidance."
+      ],
+      "source_kind": "Connected Outlook message body; linked PDF not reviewed unless otherwise explicitly stated"
+    },
+    {
+      "broker": "Rothschild & Co specialist sales",
+      "analysts": "Rowan Adley; George Shaw",
+      "source_date": "2026-10-21",
+      "subject": "TMT Daily | Rothschild & Co - Shopify Price Increases, Anthropic leaks, Firmus & NVDA, Neocloud newsflow, DeepSeek Inference open sourced, SPCX, SMCI, META Expectations, NFLX print",
+      "message_id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAETAADBpLwblpT0TZ_t-vz7Ao6sAAWc_ufdAAA=",
+      "received_at": "2026-10-21T08:07:59Z",
+      "outlook_url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAETAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWc%2BufdAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "signal_ids": [
+        "supp-20261021-meta-print"
+      ],
+      "findings": [
+        "Constructive ad checks contrasted with Muse retention/download softening; sales color, not independently verified channel data."
+      ],
+      "source_kind": "Connected Outlook message body; linked PDF not reviewed unless otherwise explicitly stated"
+    }
+  ],
+  "local_sources": [
+    {
+      "source": "Netflix company shareholder letter",
+      "source_date": "2026-10-20",
+      "path": "_inbox/_done/FINAL-Q3-26-Shareholder-Letter.pdf",
+      "rendered_pages_reviewed": [
+        1,
+        2,
+        6
+      ],
+      "render_directory": "relatórios bons/_assets/FINAL-Q3-26-Shareholder-Letter",
+      "findings": [
+        "Q3 revenue $12,874m, OM 34.6% primarily timing; Q4 revenue $13,442m, OM26.0%, EPS $0.67.",
+        "2026 advertising ~$2.7bn versus ~$3bn previously; lower than expected ad product rollout. Churn improved.",
+        "No direct video-interview review claimed."
+      ]
+    },
+    {
+      "source": "SpaceX filed Q3 release",
+      "source_date": "2026-10-20",
+      "path": "_wiki/_meta/research/spcx-payment-terms-2026-10-20/SPCX_Q3_earnings_2026-10-20.html",
+      "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066482/spaceexplorationtechnologi.htm",
+      "findings": [
+        "Q3 cash capex $19.593bn, SI $16.444bn. Consolidated AP $13.259bn not NVIDIA-specific; no defensible company-specific payment-day calculation."
+      ]
+    },
+    {
+      "source": "Capstone prior FX research",
+      "source_date": "2026-10-20",
+      "path": "_wiki/META.md",
+      "section": "Debate; Changelog",
+      "findings": [
+        "Existing study points to Q4 FX headwind; poor historical fit; skeptic PARTIAL. No new FX model or estimate built in this run.",
+        "October 29 date inside FX research conflicts with official October 21 company notice; official notice adopted."
+      ]
+    },
+    {
+      "source": "Capstone saved META model",
+      "source_date": "2026-10-12",
+      "path": "_wiki/_data/house.json",
+      "findings": [
+        "CY2027 capex $200bn, not superseded $170bn."
+      ]
+    },
+    {
+      "source": "Bloomberg snapshot",
+      "source_date": "2026-10-20",
+      "path": "_wiki/_data/estimates.json",
+      "findings": [
+        "META Q3 revenue $63,323.545m; Q4 $73,570.889m.",
+        "GOOG CY2026/27 revenue approximately $430.0bn/$547.9bn vs house June 5 $505bn/$641bn.",
+        "CRWV CY26 EPS -$3.91 vs Capstone October14 -$3.27; engine directional label wrong."
+      ]
+    },
+    {
+      "source": "Morgan Stanley Erik Woodring",
+      "source_date": "2026-10-20",
+      "path": "_wiki/_meta/analyst-evidence/2026-10-20-morning-source-checks.json",
+      "findings": [
+        "WDC December EPS $5.25; buy-side range $5.20-$5.60, as reviewed in October20 brief."
+      ]
+    },
+    {
+      "source": "Compute-deal timeline",
+      "path": "_wiki/themes/ai-compute-deals.md",
+      "reviewed_date": "2026-10-21",
+      "findings": [
+        "SPCX October20 history reviewed: cloud activation not assigned to named counterparties; NVIDIA-linked financing proposal not confirmed.",
+        "Existing NVDA-NOK-EQUITY-20251028 equity completion reviewed before related technical milestone; no duplicated $1bn proceeds."
+      ]
+    },
+    {
+      "source": "NVIDIA company announcement",
+      "source_date": "2026-10-21",
+      "path": "_wiki/_meta/analyst-evidence/2026-10-21-nvidia-nokia-primary.json",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-nokia-and-leading-telecom-operators-turn-networks-into-distributed-intelligence-platforms",
+      "findings": [
+        "T-Mobile commercial-network call and Elisa field trial completed; BT/DTE field trials planned2027. No new order dollars, revenue guide or MW disclosed."
+      ]
+    }
+  ],
+  "calendar": [
+    {
+      "company": "META",
+      "source_date": "2026-10-12",
+      "event": "2026-10-21 after close; conference call4:30pmET",
+      "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-to-Announce-Third-Quarter-2026-Results/default.aspx"
+    },
+    {
+      "company": "NVDA",
+      "checked_date": "2026-10-21",
+      "event": "GTC throughOctober22; keynoteOctober21 11am-1pmCEST",
+      "url": "https://www.nvidia.com/en-eu/gtc/keynote/"
+    },
+    {
+      "company": "WDC",
+      "source_date": "2026-10-08",
+      "event": "October22 afterclose",
+      "url": "https://www.westerndigital.com/en-in/company/newsroom/press-releases/2026/2026-10-08-wd-to-announce-first-quarter-fiscal-year-2027-financial-results"
+    },
+    {
+      "company": "NOK",
+      "checked_date": "2026-10-21",
+      "event": "October22 Q3results",
+      "url": "https://www.nokia.com/about-us/investors/investor-relations-events/"
+    }
+  ],
+  "comparison": {
+    "prior_saved_daily": {
+      "asof": "2026-10-20",
+      "active": 55,
+      "high": 7,
+      "belief_changes": 4,
+      "focus_names": 38
+    },
+    "prior_published_morning": {
+      "asof": "2026-10-20",
+      "active": 50,
+      "high": 6
+    },
+    "current": {
+      "signals": 48,
+      "active": 48,
+      "high": 5,
+      "belief_changes": 0,
+      "focus_names": 36
+    },
+    "removed_belief_flags": 4,
+    "removed_calendar_ids": [
+      "cata-f2d225a6997f",
+      "cata-32412ba42e30",
+      "cata-1d69cef73fb7",
+      "cata-dc47b5b58c13"
+    ],
+    "added_id": "post-8cd5d82dc530",
+    "interpretation": "Four belief flags plus four calendar entries removed, one premature NVDA postmortem added. Not all departures are genuine resolved catalysts."
+  },
+  "quality_overrides": [
+    "Premature GTC postmortem excluded: event spansOctober20-22.",
+    "Legacy closed NVDA fireside remains future calendar noise.",
+    "Table-form divergence extractor gap persists; October20 reconciliation reviewed manually.",
+    "CRWV smaller negative EPS incorrectly labeled below consensus.",
+    "GOOG legacyyear-mapping error remains unresolved."
+  ],
+  "edits": {
+    "company_pages": false,
+    "house_models": false,
+    "theme": "Added technical milestone related to existing NVDA-NOK partnership; no economic amount changed.",
+    "outcomes": "Appended narrow NFLX near-term bear-won assessment with old pending verdict preserved.",
+    "source_record": "NVIDIA primary text archived via apply_patch.",
+    "derived": "Search index, catalyst views, analyst signal layer, offline wiki."
+  }
+}

@@ -1,0 +1,352 @@
+{
+  "source": "\\\\CAPSRV01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\_data\\technicals\\prices.json",
+  "source_asof": "2026-10-19",
+  "field": "Bloomberg PX_LAST; split-adjusted, not dividend-adjusted",
+  "input_quality": "HARD: observed closing prices; no estimated inputs",
+  "formula": "100 * (close_next_session / close_before_release - 1)",
+  "events": [
+    {
+      "quarter": "Q3 2025",
+      "release_date": "2025-10-29",
+      "reaction_date": "2025-10-30",
+      "stocks": {
+        "ANET": {
+          "close_before_release": 162.03,
+          "next_close": 158.44,
+          "return_pct": -2.2156390791828673,
+          "display": "-2.22%"
+        },
+        "AVGO": {
+          "close_before_release": 385.98,
+          "next_close": 376.47,
+          "return_pct": -2.4638582309964248,
+          "display": "-2.46%"
+        },
+        "NVDA": {
+          "close_before_release": 207.04,
+          "next_close": 202.89,
+          "return_pct": -2.0044435857805256,
+          "display": "-2.00%"
+        },
+        "MU": {
+          "close_before_release": 226.63,
+          "next_close": 224.01,
+          "return_pct": -1.1560693641618498,
+          "display": "-1.16%"
+        },
+        "CRDO": {
+          "close_before_release": 171.52,
+          "next_close": 166.62,
+          "return_pct": -2.856809701492537,
+          "display": "-2.86%"
+        },
+        "NET": {
+          "close_before_release": 227.38,
+          "next_close": 222.5,
+          "return_pct": -2.1461869997361247,
+          "display": "-2.15%"
+        },
+        "AMD": {
+          "close_before_release": 264.33,
+          "next_close": 254.84,
+          "return_pct": -3.590209208186736,
+          "display": "-3.59%"
+        }
+      },
+      "other_hyperscalers_reporting_same_evening": [
+        {
+          "ticker": "MSFT",
+          "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q1/press-release-webcast"
+        },
+        {
+          "ticker": "GOOGL",
+          "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2025/q3/2025q3-alphabet-earnings-release.pdf"
+        }
+      ]
+    },
+    {
+      "quarter": "Q4 2025",
+      "release_date": "2026-01-28",
+      "reaction_date": "2026-01-29",
+      "stocks": {
+        "ANET": {
+          "close_before_release": 150.15,
+          "next_close": 148.15,
+          "return_pct": -1.332001332001332,
+          "display": "-1.33%"
+        },
+        "AVGO": {
+          "close_before_release": 333.24,
+          "next_close": 330.73,
+          "return_pct": -0.7532108990517344,
+          "display": "-0.75%"
+        },
+        "NVDA": {
+          "close_before_release": 191.52,
+          "next_close": 192.51,
+          "return_pct": 0.5169172932330827,
+          "display": "+0.52%"
+        },
+        "MU": {
+          "close_before_release": 435.28,
+          "next_close": 435.79,
+          "return_pct": 0.11716596213931263,
+          "display": "+0.12%"
+        },
+        "CRDO": {
+          "close_before_release": 129.66,
+          "next_close": 129.47,
+          "return_pct": -0.14653709702298318,
+          "display": "-0.15%"
+        },
+        "NET": {
+          "close_before_release": 184.88,
+          "next_close": 180.39,
+          "return_pct": -2.4286023366508007,
+          "display": "-2.43%"
+        },
+        "AMD": {
+          "close_before_release": 252.74,
+          "next_close": 252.18,
+          "return_pct": -0.22157157553216744,
+          "display": "-0.22%"
+        }
+      },
+      "other_hyperscalers_reporting_same_evening": [
+        {
+          "ticker": "MSFT",
+          "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q2/press-release-webcast"
+        }
+      ]
+    },
+    {
+      "quarter": "Q1 2026",
+      "release_date": "2026-04-29",
+      "reaction_date": "2026-04-30",
+      "stocks": {
+        "ANET": {
+          "close_before_release": 168.68,
+          "next_close": 172.71,
+          "return_pct": 2.3891391984823334,
+          "display": "+2.39%"
+        },
+        "AVGO": {
+          "close_before_release": 405.45,
+          "next_close": 417.43,
+          "return_pct": 2.9547416450857074,
+          "display": "+2.95%"
+        },
+        "NVDA": {
+          "close_before_release": 209.25,
+          "next_close": 199.57,
+          "return_pct": -4.626045400238949,
+          "display": "-4.63%"
+        },
+        "MU": {
+          "close_before_release": 518.46,
+          "next_close": 517.16,
+          "return_pct": -0.25074258380588665,
+          "display": "-0.25%"
+        },
+        "CRDO": {
+          "close_before_release": 175.77,
+          "next_close": 174.01,
+          "return_pct": -1.0013085281902485,
+          "display": "-1.00%"
+        },
+        "NET": {
+          "close_before_release": 211.97,
+          "next_close": 204.97,
+          "return_pct": -3.302354106713214,
+          "display": "-3.30%"
+        },
+        "AMD": {
+          "close_before_release": 337.11,
+          "next_close": 354.49,
+          "return_pct": 5.15558719705734,
+          "display": "+5.16%"
+        }
+      },
+      "other_hyperscalers_reporting_same_evening": [
+        {
+          "ticker": "MSFT",
+          "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q3/press-release-webcast"
+        },
+        {
+          "ticker": "GOOGL",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000043/googexhibit991q12026.htm"
+        },
+        {
+          "ticker": "AMZN",
+          "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-First-Quarter-Results/"
+        }
+      ]
+    },
+    {
+      "quarter": "Q2 2026",
+      "release_date": "2026-07-29",
+      "reaction_date": "2026-07-30",
+      "stocks": {
+        "ANET": {
+          "close_before_release": 157.97,
+          "next_close": 171.02,
+          "return_pct": 8.261062227005128,
+          "display": "+8.26%"
+        },
+        "AVGO": {
+          "close_before_release": 370.32,
+          "next_close": 387.84,
+          "return_pct": 4.731043421905379,
+          "display": "+4.73%"
+        },
+        "NVDA": {
+          "close_before_release": 190.01,
+          "next_close": 195.04,
+          "return_pct": 2.647229093205621,
+          "display": "+2.65%"
+        },
+        "MU": {
+          "close_before_release": 739.0,
+          "next_close": 874.66,
+          "return_pct": 18.35723951285521,
+          "display": "+18.36%"
+        },
+        "CRDO": {
+          "close_before_release": 177.45,
+          "next_close": 201.08,
+          "return_pct": 13.31642716258101,
+          "display": "+13.32%"
+        },
+        "NET": {
+          "close_before_release": 270.38,
+          "next_close": 283.39,
+          "return_pct": 4.811746430949035,
+          "display": "+4.81%"
+        },
+        "AMD": {
+          "close_before_release": 429.56,
+          "next_close": 485.39,
+          "return_pct": 12.997020206723159,
+          "display": "+13.00%"
+        }
+      },
+      "other_hyperscalers_reporting_same_evening": [
+        {
+          "ticker": "MSFT",
+          "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q4/press-release-webcast"
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "all_20_price_pairs_complete": true,
+    "consecutive_sessions": true,
+    "positive_prices": true,
+    "calibration": "N/A: exact historical-return identity; no unknown constants or estimates",
+    "independent_skeptic_verdict": "PASS: all 28 returns independently recomputed and verified across original table plus NET/AMD extension",
+    "external_spot_checks": [
+      {
+        "ticker": "NVDA",
+        "dates": [
+          "2026-04-29",
+          "2026-04-30"
+        ],
+        "closes": [
+          209.25,
+          199.57
+        ],
+        "source": "https://sg.finance.yahoo.com/quote/NVDA/history/"
+      },
+      {
+        "ticker": "CRDO",
+        "dates": [
+          "2026-07-29",
+          "2026-07-30"
+        ],
+        "closes": [
+          177.45,
+          201.08
+        ],
+        "source": "https://www.financecharts.com/stocks/CRDO/summary/price"
+      },
+      {
+        "ticker": "AVGO",
+        "dates": [
+          "2026-01-28",
+          "2026-01-29"
+        ],
+        "closes": [
+          333.24,
+          330.73
+        ],
+        "source": "https://finance.yahoo.com/quote/AVGO/history/?p=AVGO"
+      },
+      {
+        "ticker": "NET",
+        "dates": [
+          "2026-07-29",
+          "2026-07-30"
+        ],
+        "closes": [
+          270.38,
+          283.39
+        ],
+        "source": "https://ca.finance.yahoo.com/quote/NET/history/"
+      },
+      {
+        "ticker": "AMD",
+        "dates": [
+          "2025-10-29",
+          "2025-10-30"
+        ],
+        "closes": [
+          264.33,
+          254.84
+        ],
+        "source": "https://ca.finance.yahoo.com/quote/AMD/history/"
+      },
+      {
+        "ticker": "NET",
+        "dates": [
+          "2026-01-28",
+          "2026-01-29"
+        ],
+        "closes": [
+          184.88,
+          180.39
+        ],
+        "source": "https://uk.finance.yahoo.com/quote/NET/history/"
+      },
+      {
+        "ticker": "AMD",
+        "dates": [
+          "2026-04-29",
+          "2026-04-30"
+        ],
+        "closes": [
+          337.11,
+          354.49
+        ],
+        "source": "https://es-us.finanzas.yahoo.com/quote/AMD/history/"
+      }
+    ],
+    "all_28_price_pairs_complete": true,
+    "NET_AMD_extension": "PASS: all 8 additions independently recomputed; positive prices, consecutive sessions, correct rounding; NET January and AMD April independently checked against Yahoo history"
+  },
+  "meta_event_calendar": "https://investor.atmeta.com/investor-events/default.aspx?ShowEvents=PAST",
+  "basis_note": "Regular-session close-to-close price returns, no benchmark adjustment. Same-evening hyperscaler reports overlap the window; this is not a causal estimate of Meta impact.",
+  "excluded_later_releases": [
+    {
+      "ticker": "AMZN",
+      "date": "2025-10-30",
+      "reason": "After reaction-session close",
+      "source": "https://ir.aboutamazon.com/news-release/news-release-details/2025/Amazon-com-to-Webcast-Third-Quarter-2025-Financial-Results-Conference-Call/default.aspx"
+    },
+    {
+      "ticker": "AMZN",
+      "date": "2026-07-30",
+      "reason": "After reaction-session close",
+      "source": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-to-Webcast-Second-Quarter-2026-Financial-Results-Conference-Call/default.aspx"
+    }
+  ]
+}

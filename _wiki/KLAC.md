@@ -12,10 +12,10 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\KLAC` (10-K/10-Q + tra
 | Revenue | $15.5bn | $20.1bn |
 | Gross profit | $9.7bn | $12.6bn |
 | Gross margin | 62.2% | 62.8% |
-| EBITDA | $7.3bn | $10.2bn |
+| EBITDA | $7.3bn | $10.0bn |
 | EPS | $4.46 | $6.29 |
 | Capex | $404m | $459m |
-| OCF (≈EBITDA) | $7.3bn | $10.2bn |
+| OCF (≈EBITDA) | $7.3bn | $10.0bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
