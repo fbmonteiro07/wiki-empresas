@@ -2,12 +2,19 @@
 
 _Generated 2026-10-20 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (40)
+## 📅 Upcoming (47)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-10-20 | NFLX | 🆕 **Q3 2026 earnings — Tue 2026-10-20 AMC** (Vital Knowledge calendar, 2026-09-28) — replaces the "~late Oct" placeholder. |
+| 2026-10-20 | NFLX | **✅ RESOLVED — Q3 2026 earnings, Tue 2026-10-20 AMC** (date from Vital Knowledge calendar, 2026-09-28; confirmed by the letter's own date). **Outcome from the letter: a mixed print.** Q3 was in line o |
 | 2026-10-20 | NVDA | 🆕 **2026-10-20 to 10-22: NVIDIA GTC Berlin** (JPM US Market Intelligence calendar, 09-29/09-30); BofA lists "multiple GTC tradeshow events" with the enhanced buyback as the near-term NVDA catalysts (A |
+| 2026-10-20 | SPCX | **2027 — Mobile V2 satellites start flying "next year," with Starlink Mobile SERVICE STARTING "END OF NEXT YEAR"; EchoStar's 65 MHz integrated "later next year." ~1,000 V3 broadband satellites (the cr |
+| 2026-10-20 | SPCX | **DECEMBER 2026 — the $100bn ARR test itself**, since management defined it as December-month revenue annualized. **Also: >2 GW of nameplate compute exiting 2026.** ⏪ **SUPERSEDED 2026-10-20 (old valu |
+| 2026-10-20 | SPCX | **Q3-26 / OCTOBER 2026 — the [[GOOG]] and [[ANTHROPIC]] cloud agreements "start to ramp either later this quarter or in October," plus the additional $6.7bn of cloud services revenue contracted in ear |
+| 2026-10-20 | SPCX | **~AUG 2027 — "probably a year from now, we will be doing at least ONE FLIGHT A DAY, possibly more"** (Musk, on Starship cadence). ⚠️ **The single most falsifiable claim on this page, and the one that |
+| 2026-10-20 | SPCX | **🆕 STARSHIP FLIGHT 15 — ~LATE OCT / EARLY NOV (MS · Jonas, 2026-09-29): Booster 22 / Ship 42; the next stock catalyst is whether it includes a SHIP catch** (*"the stock's most significant catalyst si |
+| 2026-10-20 | SPCX | ~~**Q3 2026 earnings (2026-10-20 AMC)**~~ — **✅ RESOLVED 2026-10-20: revenue $14.575bn vs BBG $12.87bn; adj. EBITDA $8.809bn vs $6.59bn; SI $7.560bn; nameplate 1.7GW (in line); subs 13.6M (miss); guid |
+| 2026-10-20 | TSLA | **🆕 SPACEX-TESLA MERGER TALK REVIVED ON STAGE (All-In Summit, 2026-09-14) — still NO formal process filed or announced.** What to watch next, in order: any **8-K or board-process disclosure**, further |
 | 2026-10-21 | META | **🆕🔴🔴 2026-10-21 (WED, AFTER THE CLOSE) — Q3'26 PRINT, about a week earlier than normal** (JPM desk · Schilsky, 2026-10-13; BofA · Post, UBS desk · Dwyer and Vital Knowledge, 2026-10-16). The bar: 3Q  |
 | 2026-10-22 | NOK | **2026-10-22 — Q3 results:** Optical/IP deliveries and new orders, supply constraints and MI software phasing. The July guide calls for revenue **+3–7% sequentially** and EBIT broadly flat on Q2. Trac |
 | 2026-10-23 | AAPL | **🆕 2026-10-13 — SMART-HOME LAUNCH** (J490 hub, HomePod mini, Apple TV; Bloomberg via GS / JPM / BofA / Redburn desks, 2026-09-29→10-01); **2026-10-16 Duo pre-orders, 2026-10-23 on sale** (DigiTimes v |

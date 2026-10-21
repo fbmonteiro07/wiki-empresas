@@ -1,6 +1,6 @@
 {
  "_about": "Hand-edited ledger of machine-transcription garbles (Notion AI, Bloomberg ASR, auto-translation) seen in the archive, with the correct reading. Used by E:\\.claude\\scripts\\transcript_qa.py (source-file scan, page-diff scan) and by ingest_notion_meetings.py (writes a 'Transcription QA' block into every archived Notion file). Keys are matched with word boundaries, case-sensitive unless 'ci' is true. 'keep_when' = regex contexts (same line, ~80 chars around the hit) where the token is legitimate and must NOT be flagged. Add an entry the first time a garble is caught; never delete one. Standing rule (Felipe, 2026-09-28): ALWAYS double-check transcript content — acronyms, names, units, numbers — before it travels to a page.",
- "_updated": "2026-10-19",
+ "_updated": "2026-10-20",
  "terms": {
   "Smolik": {
    "correct": "Shmulik (Mark Shmulik, Bernstein US Internet)",
@@ -1610,6 +1610,149 @@
    "domain": "products",
    "rule": "flag only.",
    "first_seen": "2026-10-19 (Notion ingest: BofA Arya OCP/SEMICON call; UBS Arcuri call)"
+  },
+  "GV300s": {
+   "correct": "GB300s",
+   "domain": "products",
+   "rule": "Bloomberg ASR on NVIDIA Blackwell Ultra rack naming.",
+   "first_seen": "2026-10-20 (SpaceX Q3 2026 earnings call, Bloomberg INITIAL DRAFT transcript; run-inbox 2026-10-20)"
+  },
+  "VeriRubin": {
+   "correct": "Vera Rubin",
+   "domain": "products",
+   "rule": "Bloomberg ASR run-together of NVIDIA Vera Rubin.",
+   "first_seen": "2026-10-20 (SpaceX Q3 2026 earnings call, Bloomberg INITIAL DRAFT transcript; run-inbox 2026-10-20)"
+  },
+  "Starmine": {
+   "correct": "Starmind",
+   "domain": "products",
+   "rule": "SpaceX call: Starmind misheard.",
+   "first_seen": "2026-10-20 (SpaceX Q3 2026 earnings call, Bloomberg INITIAL DRAFT transcript; run-inbox 2026-10-20)"
+  },
+  "direct-to-sell": {
+   "correct": "direct-to-cell",
+   "domain": "products",
+   "rule": "Starlink D2C service name.",
+   "first_seen": "2026-10-20 (SpaceX Q3 2026 earnings call, Bloomberg INITIAL DRAFT transcript; run-inbox 2026-10-20)"
+  },
+  "direct-to-sale": {
+   "correct": "direct-to-cell",
+   "domain": "products",
+   "rule": "Starlink D2C service name.",
+   "first_seen": "2026-10-20 (SpaceX Q3 2026 earnings call, Bloomberg INITIAL DRAFT transcript; run-inbox 2026-10-20)"
+  },
+  "South Haven": {
+   "correct": "Southaven (MS)",
+   "domain": "names",
+   "rule": "xAI/SpaceX Southaven, Mississippi site.",
+   "first_seen": "2026-10-20 (SpaceX Q3 2026 earnings call, Bloomberg INITIAL DRAFT transcript; run-inbox 2026-10-20)",
+   "keep_when": [
+    "Michigan"
+   ]
+  },
+  "data hauls": {
+   "correct": "data halls",
+   "domain": "terms",
+   "rule": "Homophone.",
+   "first_seen": "2026-10-20 (SpaceX Q3 2026 earnings call, Bloomberg INITIAL DRAFT transcript; run-inbox 2026-10-20)"
+  },
+  "XPremium": {
+   "correct": "X Premium",
+   "domain": "products",
+   "rule": "Run-together of the X subscription tier.",
+   "first_seen": "2026-10-20 (SpaceX Q3 2026 earnings call, Bloomberg INITIAL DRAFT transcript; run-inbox 2026-10-20)"
+  },
+  "AIOSI": {
+   "correct": "AI/SI",
+   "domain": "terms",
+   "rule": "SpaceX segment shorthand (AI / Solutions & Infrastructure) run together.",
+   "first_seen": "2026-10-20 (SpaceX Q3 2026 earnings call, Bloomberg INITIAL DRAFT transcript; run-inbox 2026-10-20)"
+  },
+  "Argonne": {
+   "correct": "Argon (Gemini 4)",
+   "domain": "products",
+   "rule": "Gemini 4 Argon model name; Argonne is only the US national lab.",
+   "first_seen": "2026-10-20 (Sundar Pichai interview, Big Technology Podcast, pasted machine transcript; run-inbox 2026-10-20)",
+   "keep_when": [
+    "National Lab",
+    "laboratory"
+   ]
+  },
+  "Orgon": {
+   "correct": "Argon (Gemini 4)",
+   "domain": "products",
+   "rule": "Gemini 4 Argon model name.",
+   "first_seen": "2026-10-20 (Sundar Pichai interview, Big Technology Podcast, pasted machine transcript; run-inbox 2026-10-20)"
+  },
+  "ChatGPD": {
+   "correct": "ChatGPT",
+   "domain": "products",
+   "rule": "ASR d/t swap.",
+   "first_seen": "2026-10-20 (Sundar Pichai interview, Big Technology Podcast, pasted machine transcript; run-inbox 2026-10-20)"
+  },
+  "GPD models": {
+   "correct": "GPT models",
+   "domain": "products",
+   "rule": "ASR d/t swap.",
+   "first_seen": "2026-10-20 (Sundar Pichai interview, Big Technology Podcast, pasted machine transcript; run-inbox 2026-10-20)"
+  },
+  "research pets": {
+   "correct": "research bets",
+   "domain": "terms",
+   "rule": "Homophone.",
+   "first_seen": "2026-10-20 (Sundar Pichai interview, Big Technology Podcast, pasted machine transcript; run-inbox 2026-10-20)"
+  },
+  "overbills": {
+   "correct": "overbuild",
+   "domain": "terms",
+   "rule": "Homophone (capex overbuild debate).",
+   "first_seen": "2026-10-20 (Sundar Pichai interview, Big Technology Podcast, pasted machine transcript; run-inbox 2026-10-20)"
+  },
+  "Metamuse": {
+   "correct": "Meta Muse",
+   "domain": "products",
+   "rule": "Run-together of Meta's Muse product.",
+   "first_seen": "2026-10-20 (Sundar Pichai interview, Big Technology Podcast, pasted machine transcript; run-inbox 2026-10-20)"
+  },
+  "a Tario": {
+   "correct": "Aterio",
+   "domain": "names",
+   "rule": "Data-center project-data vendor name split by ASR.",
+   "first_seen": "2026-10-20 (Aterio @ Goldman Sachs-hosted call, machine transcript; run-inbox 2026-10-20)"
+  },
+  "Otarria": {
+   "correct": "Aterio",
+   "domain": "names",
+   "rule": "Data-center project-data vendor name garbled by ASR.",
+   "first_seen": "2026-10-20 (Aterio @ Goldman Sachs-hosted call, machine transcript; run-inbox 2026-10-20)"
+  },
+  "Ferme America": {
+   "correct": "Fermi America",
+   "domain": "names",
+   "rule": "Fermi America (Texas power/DC campus).",
+   "first_seen": "2026-10-20 (Aterio @ Goldman Sachs-hosted call, machine transcript; run-inbox 2026-10-20)"
+  },
+  "bad zero": {
+   "correct": "Batch Zero (ERCOT)",
+   "domain": "terms",
+   "rule": "ERCOT large-load interconnection 'Batch Zero'.",
+   "first_seen": "2026-10-20 (Aterio @ Goldman Sachs-hosted call, machine transcript; run-inbox 2026-10-20)"
+  },
+  "Brock": {
+   "correct": "Grok",
+   "domain": "products",
+   "rule": "Bloomberg ASR on xAI/SpaceX Grok model name.",
+   "first_seen": "2026-10-20 (SpaceX Q3 2026 earnings call, Bloomberg INITIAL DRAFT transcript; run-inbox 2026-10-20)",
+   "keep_when": [
+    "Brockman",
+    "Brock Purdy"
+   ]
+  },
+  "agent recording": {
+   "correct": "agentic coding (likely)",
+   "domain": "terms",
+   "rule": "ASR on 'agentic coding takeoff'; reading is probable, not confirmed.",
+   "first_seen": "2026-10-20 (Sundar Pichai interview, Big Technology Podcast, pasted machine transcript; run-inbox 2026-10-20)"
   }
  },
  "summary_traps": [

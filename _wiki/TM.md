@@ -94,8 +94,11 @@ _FY26 full year · May 8 → Jun 10, 2026 · sell-side / expert calls / reports 
 | 05-08 | Toyota · FY26Q4 deck (6-K) | capital | bull | Shareholder returns: FY26 dividend JPY95 (+5), FY27 forecast JPY100 (+5); record buyback of JPY3.657tn in FY26 (largely tied to the Toyota Industries take-private via tender offer); total FY26 return JPY4.895tn. Stated 20% ROE target via the value chain (+JPY2.1tn of OI by 2030). |
 | 06-10 | Toyota · 20-F FY26 | competition | bear | The FY26 20-F frames the industry as "highly volatile" with competition intensifying via CASE; warns that competing in "electrified vehicles...will be fundamental" with no guarantees — risk of falling behind in markets with rapid BEV adoption. China equity-method profit ~flat (JPY108.2bn FY26) under intense local competition (BYD et al.). |
 | 09-27 | 🆕 **JPMorgan · Jose M Asumendi (w/ Nick Lai, Akira Kishimoto, Rajat Gupta, Piyush Singla)** | capital | bull | JPM (09-27): Toyota Group will invest JPY1tn ($6.42bn) a year from 2028 on factory upgrades and 400,000 robots, including AI humanoids that learn master craftsmen's skills through cameras and sensors: 150,000 at Toyota Motor Corp and 250,000 at Denso, Aisin and other group companies. |
+| 10-20 | 🆕 **[Needham & Co. · Robert Jamieson — "Deep Dive into Humanoid Robotics and the Rise of Physical AI"](../relat%C3%B3rios%20bons/Deep_Dive_into_Humanoid_Robotics_and_the_Rise_of_Physical_AI.html)** (Industrial Tech industry update; Toyota not a rated name in it; Fig. 29 is an image table, read from the page render) | capital / produto | neutral | ✅ **Confirms the JPM 09-27 row above and adds the product spec:** *"Toyota plans to spend ~$6.4B annually starting in 2028 to integrate up to 400,000 total factory robots - including a mix of humanoid and non-humanoid machines"*, with *"150k robots at its own plants and 250k across group company facilities."* **New here:** the flagship humanoid on the **ELEY Platform**, *"named Eley, weighs 50 kg, uses two-fingered hands rather than a full humanoid grip, and moves on wheels"*. Same programme, same numbers as JPM, so not an independent second source on the spend; no P&L effect estimated. (Needham · Robert Jamieson, "Deep Dive into Humanoid Robotics and the Rise of Physical AI", 2026-10-20) |
 
 **Quarter synthesis:** with no English-language sell-side flow (thin coverage, 0 equity calls), the "debate" is essentially the company's own read via the 6-K/20-F — the thesis has shifted to the permanent structure of the US tariff (N. America at an operating loss, break-even rising) and the margin compression over 3 consecutive years, with BEV below plan and China flat reinforcing the limited-upside case despite the record capital return.
+
+**🆕 Sinal update 2026-10-20 (/run-inbox hand-off — Needham robotics deep dive):** no row moves. The Signal table has no automation/robotics row, and the ~$6.4bn/yr robot programme from 2028 sits inside the **Capital** row's value-chain and ROE framing without changing its score. Needham restates the JPM numbers and adds the Eley spec. **Quarter synthesis:** unchanged.
 
 ## Management commentary — evolution (last 5 quarters)
 
@@ -116,10 +119,12 @@ _Source: TM earnings calls (dates above); management commentary, paraphrased._
 - **Decks:** FY presentations (EX-99.2) embedded in the summaries above; PDFs in `../TM/` and `../TM/apresentações/`.
 - **Research reports (relatórios bons):**
   - [Morgan Stanley — Global Humanoid (Humanoid TAM model)](../relat%C3%B3rios%20bons/Humanoids.html)
+  - 🆕 **2026-10-20 (/run-inbox hand-off):** [Needham & Co. · Robert Jamieson — "Deep Dive into Humanoid Robotics and the Rise of Physical AI" (2026-10-20)](../relat%C3%B3rios%20bons/Deep_Dive_into_Humanoid_Robotics_and_the_Rise_of_Physical_AI.html) — Fig. 29 Toyota row (~$6.4bn/yr from 2028, up to 400k robots, Eley humanoid).
 - **Equity calls:** 0 (see [INDEX §TM](../INDEX.md)).
 - **Briefings:** none (`_briefings/by-ticker/TM.md` does not exist).
 
 ## Changelog
 <!-- One dated line per material change. Move superseded numbers/ratings/PTs/theses here
      (with the old value + date) instead of deleting them. Newest first. -->
+- **2026-10-20 (/run-inbox, hand-off unit)** — Needham (Jamieson) "Deep Dive into Humanoid Robotics and the Rise of Physical AI" (2026-10-20): 1 log row (Fig. 29 confirms JPM 09-27: ~$6.4bn/yr from 2028, up to 400k factory robots, 150k own plants / 250k group; adds the Eley humanoid, 50kg, two-fingered hands, wheels), 1 Sinal update, 1 Sources line. Nothing superseded.
 - **2026-09-27 (/wiki-ingest 21h, scheduled)** — 1 log row. Nothing superseded. (Section created this run; the page had no ## Changelog.)

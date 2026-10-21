@@ -1,17 +1,17 @@
 {
   "asof": "2026-10-20",
-  "latest_reconciliation": "reconciliation-2026-10-19-inbox.md",
+  "latest_reconciliation": "reconciliation-2026-10-20-inbox.md",
   "book": {
     "asof": "2026-07-01",
     "seed": true,
     "positions": 8
   },
   "stats": {
-    "signals": 51,
-    "active": 51,
+    "signals": 55,
+    "active": 55,
     "high": 7,
-    "belief_changes": 2,
-    "focus_names": 37
+    "belief_changes": 4,
+    "focus_names": 38
   },
   "focus": [
     {
@@ -74,6 +74,34 @@
       ]
     },
     {
+      "ticker": "NFLX",
+      "focus_score": 64,
+      "in_book": false,
+      "signal_count": 2,
+      "high_count": 0,
+      "sector": "Consumer / Internet / Other",
+      "thesis": "Clean organic algorithm (12-14% rev, 31.5% margin); near-term setup is a catalyst vacuum.",
+      "next_catalyst": "2026-10-20",
+      "why": [
+        "NFLX — derived thesis/debate state changed since the prior daily snapshot",
+        "NFLX — 2026-10-20: RESOLVED — Q3 2026 earnings, Tue 2026-10-20 AMC (date from Vital Knowledge calendar,…"
+      ]
+    },
+    {
+      "ticker": "TSLA",
+      "focus_score": 64,
+      "in_book": false,
+      "signal_count": 2,
+      "high_count": 0,
+      "sector": "Consumer / Internet / Other",
+      "thesis": "Rotating from EV volume to autonomy/robotics re-rate (FSD, Optimus, Terafab); MS EW $415, JPM just to Neutral.",
+      "next_catalyst": "2026-10-20",
+      "why": [
+        "TSLA — derived thesis/debate state changed since the prior daily snapshot",
+        "TSLA — 2026-10-20: SPACEX-TESLA MERGER TALK REVIVED ON STAGE (All-In Summit, 2026-09-14) — still NO formal…"
+      ]
+    },
+    {
       "ticker": "NOK",
       "focus_score": 58,
       "in_book": false,
@@ -117,6 +145,20 @@
       ]
     },
     {
+      "ticker": "SPCX",
+      "focus_score": 51,
+      "in_book": false,
+      "signal_count": 2,
+      "high_count": 0,
+      "sector": "Systems & neoclouds",
+      "thesis": "IPO'd Jun-2026 (~$75bn, largest ever); Starlink + Launch + AI (ex-xAI: Grok/X/COLOSSUS ~1GW, ~325k GPUs). FY25 rev $17.2bn, net loss ~$(4.9)bn; Musk ~82% vote. ",
+      "next_catalyst": "2026-10-20",
+      "why": [
+        "SPCX — 2026-10-20: 2027 — Mobile V2 satellites start flying \"next year,\" with Starlink Mobile SERVICE…",
+        "SPCX — 2026-11-12: OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.…"
+      ]
+    },
+    {
       "ticker": "MSFT",
       "focus_score": 50,
       "in_book": true,
@@ -153,19 +195,6 @@
       "next_catalyst": "2026-10-26",
       "why": [
         "MEDIATEK — 2026-10-26: 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR \"POTENTIAL…"
-      ]
-    },
-    {
-      "ticker": "NFLX",
-      "focus_score": 49,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Consumer / Internet / Other",
-      "thesis": "Clean organic algorithm (12-14% rev, 31.5% margin); near-term setup is a catalyst vacuum.",
-      "next_catalyst": "2026-10-20",
-      "why": [
-        "NFLX — 2026-10-20: Q3 2026 earnings — Tue 2026-10-20 AMC (Vital Knowledge calendar, 2026-09-28) — replaces…"
       ]
     },
     {
@@ -206,19 +235,6 @@
       "next_catalyst": "",
       "why": [
         "SMTC — latest earnings transcript absent"
-      ]
-    },
-    {
-      "ticker": "SPCX",
-      "focus_score": 43,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Systems & neoclouds",
-      "thesis": "IPO'd Jun-2026 (~$75bn, largest ever); Starlink + Launch + AI (ex-xAI: Grok/X/COLOSSUS ~1GW, ~325k GPUs). FY25 rev $17.2bn, net loss ~$(4.9)bn; Musk ~82% vote. ",
-      "next_catalyst": "2026-11-12",
-      "why": [
-        "SPCX — 2026-11-12: OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.…"
       ]
     },
     {
@@ -697,7 +713,7 @@
       "impact": "high",
       "urgency": "immediate",
       "confidence": "high",
-      "why_now": "verification (transcription QA): attribution string aligned to the file header; '[base die]' inside the quote marked as the wiki's gloss for his word 'interposer'; the 2026-10-20 ingest changelog line was misplaced in Current state and is moved here. NVHBM and DDR6 quotes re-checked in the transcript.",
+      "why_now": "verifier correction (transcription QA): SemiAnalysis Ep. 039 row: the \"Jeremie, did you say... oversupply in twenty twenty eight\" aside was attributed to the host; in the transcript it comes from a co-guest mid-answer (\"before I continue... I'll just finish my thought\"), Reyk Knuhtsen by context (UNCONFIRMED). Ontiveros as the 2028-flip speaker stands, by context.",
       "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
       "action": "Re-grade the NVDA thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
       "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
@@ -756,7 +772,7 @@
       "evidence_paths": [
         "NVDA.md"
       ],
-      "evidence_anchor": "verification (transcription QA): attribution string aligned to the file header; '[base die]' inside the quote marked as the wiki's gloss for his word 'interposer'; the 2026-10-20 ingest changelog line was misplaced in Current state and is moved here. NVHBM and DDR6 quotes re-checked in the transcript.",
+      "evidence_anchor": "verifier correction (transcription QA): SemiAnalysis Ep. 039 row: the \"Jeremie, did you say... oversupply in twenty twenty eight\" aside was attributed to the host; in the transcript it comes from a co-guest mid-answer (\"before I continue... I'll just finish my thought\"), Reyk Knuhtsen by context (UNCONFIRMED). Ontiveros as the 2028-flip speaker stands, by context.",
       "origin": "belief_diff",
       "feedback": "",
       "feedback_note": "",
@@ -1074,6 +1090,74 @@
       ],
       "evidence_anchor": "🆕 2026-10-20 to 10-22: NVIDIA GTC Berlin (JPM US Market Intelligence calendar, 09-29/09-30); BofA lists \"multiple GTC tradeshow events\" with the enhanced buyback as the near-term NVDA catalysts (A",
       "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "beli-35a5c51e3649",
+      "asof": "2026-10-20",
+      "source_date": "2026-10-20",
+      "type": "narrative_shift",
+      "priority": "medium",
+      "score": 62,
+      "title": "NFLX — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "NFLX"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "run-inbox: Netflix Q3 2026 shareholder letter (2026-10-20; letter only, no interview transcript). Added: a Current-state print block (heading moved to Q3 2026), the Catalysts Q3 entry marked resolved (outcome pending the tape) plus 2 new catalyst bullets, an intra-quarter ROLL (the Q3-window block moved verbatim into this Changelog under \"Intra-quarter archive — Q3 2026 window\"; a fresh Q4'26 window opened with a new Sinal table, the letter as its first log row and a Síntese), and a Sources link. Superseded, OLD…",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the NFLX thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [],
+      "source": "NFLX page Changelog 2026-10-20",
+      "evidence_paths": [
+        "NFLX.md"
+      ],
+      "evidence_anchor": "run-inbox: Netflix Q3 2026 shareholder letter (2026-10-20; letter only, no interview transcript). Added: a Current-state print block (heading moved to Q3 2026), the Catalysts Q3 entry marked resolved (outcome pending the tape) plus 2 new catalyst bullets, an intra-quarter ROLL (the Q3-window block moved verbatim into this Changelog under \"Intra-quarter archive — Q3 2026 window\"; a fresh Q4'26 window opened with a new Sinal table, the letter as its first log row and a Síntese), and a Sources link. Superseded, OLD…",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "beli-31ddbacef479",
+      "asof": "2026-10-20",
+      "source_date": "2026-10-20",
+      "type": "narrative_shift",
+      "priority": "medium",
+      "score": 62,
+      "title": "TSLA — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "TSLA"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "run-inbox: Needham (Jamieson) \"Deep Dive into Humanoid Robotics and the Rise of Physical AI\" (2026-10-20); one dated-flow line (Optimus entry from the note's public-program matrix: Q1'26-call timeline + late-Sept ramp-constraint report; TSLA \"Hold Rated\") + one Sources entry; nothing superseded.",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the TSLA thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "TSLA",
+          "in_book": true
+        }
+      ],
+      "source": "TSLA page Changelog 2026-10-20",
+      "evidence_paths": [
+        "TSLA.md"
+      ],
+      "evidence_anchor": "run-inbox: Needham (Jamieson) \"Deep Dive into Humanoid Robotics and the Rise of Physical AI\" (2026-10-20); one dated-flow line (Optimus entry from the note's public-program matrix: Q1'26-call timeline + late-Sept ramp-constraint report; TSLA \"Hold Rated\") + one Sources entry; nothing superseded.",
+      "origin": "belief_diff",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
@@ -1460,14 +1544,14 @@
       "hidden": false
     },
     {
-      "id": "cata-d5929fe6e47a",
+      "id": "cata-32412ba42e30",
       "asof": "2026-10-20",
       "source_date": "2026-10-20",
       "event_date": "2026-10-20",
       "type": "catalyst",
       "priority": "medium",
       "score": 49,
-      "title": "NFLX — 2026-10-20: Q3 2026 earnings — Tue 2026-10-20 AMC (Vital Knowledge calendar, 2026-09-28) — replaces…",
+      "title": "NFLX — 2026-10-20: RESOLVED — Q3 2026 earnings, Tue 2026-10-20 AMC (date from Vital Knowledge calendar,…",
       "tickers": [
         "NFLX"
       ],
@@ -1475,7 +1559,7 @@
       "impact": "medium",
       "urgency": "immediate",
       "confidence": "medium",
-      "why_now": "🆕 Q3 2026 earnings — Tue 2026-10-20 AMC (Vital Knowledge calendar, 2026-09-28) — replaces the \"~late Oct\" placeholder.",
+      "why_now": "✅ RESOLVED — Q3 2026 earnings, Tue 2026-10-20 AMC (date from Vital Knowledge calendar, 2026-09-28; confirmed by the letter's own date). Outcome from the letter: a mixed print. Q3 was in line o",
       "belief_update": "A dated event can resolve or reframe an open debate.",
       "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
       "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
@@ -1485,7 +1569,79 @@
         "_meta/catalysts.md",
         "NFLX.md"
       ],
-      "evidence_anchor": "🆕 Q3 2026 earnings — Tue 2026-10-20 AMC (Vital Knowledge calendar, 2026-09-28) — replaces the \"~late Oct\" placeholder.",
+      "evidence_anchor": "✅ RESOLVED — Q3 2026 earnings, Tue 2026-10-20 AMC (date from Vital Knowledge calendar, 2026-09-28; confirmed by the letter's own date). Outcome from the letter: a mixed print. Q3 was in line o",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "cata-1d69cef73fb7",
+      "asof": "2026-10-20",
+      "source_date": "2026-10-20",
+      "event_date": "2026-10-20",
+      "type": "catalyst",
+      "priority": "medium",
+      "score": 49,
+      "title": "SPCX — 2026-10-20: 2027 — Mobile V2 satellites start flying \"next year,\" with Starlink Mobile SERVICE…",
+      "tickers": [
+        "SPCX"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "2027 — Mobile V2 satellites start flying \"next year,\" with Starlink Mobile SERVICE STARTING \"END OF NEXT YEAR\"; EchoStar's 65 MHz integrated \"later next year.\" ~1,000 V3 broadband satellites (the cr",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [],
+      "source": "SPCX page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "SPCX.md"
+      ],
+      "evidence_anchor": "2027 — Mobile V2 satellites start flying \"next year,\" with Starlink Mobile SERVICE STARTING \"END OF NEXT YEAR\"; EchoStar's 65 MHz integrated \"later next year.\" ~1,000 V3 broadband satellites (the cr",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "cata-dc47b5b58c13",
+      "asof": "2026-10-20",
+      "source_date": "2026-10-20",
+      "event_date": "2026-10-20",
+      "type": "catalyst",
+      "priority": "medium",
+      "score": 49,
+      "title": "TSLA — 2026-10-20: SPACEX-TESLA MERGER TALK REVIVED ON STAGE (All-In Summit, 2026-09-14) — still NO formal…",
+      "tickers": [
+        "TSLA"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "🆕 SPACEX-TESLA MERGER TALK REVIVED ON STAGE (All-In Summit, 2026-09-14) — still NO formal process filed or announced. What to watch next, in order: any 8-K or board-process disclosure, further",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "TSLA",
+          "in_book": true
+        }
+      ],
+      "source": "TSLA page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "TSLA.md"
+      ],
+      "evidence_anchor": "🆕 SPACEX-TESLA MERGER TALK REVIVED ON STAGE (All-In Summit, 2026-09-14) — still NO formal process filed or announced. What to watch next, in order: any 8-K or board-process disclosure, further",
       "origin": "catalyst_calendar",
       "feedback": "",
       "feedback_note": "",

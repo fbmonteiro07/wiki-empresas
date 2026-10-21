@@ -2,7 +2,7 @@
  "generated": "2026-10-20",
  "counts": {
   "nodes": 187,
-  "edges": 2196
+  "edges": 2201
  },
  "nodes": [
   {
@@ -33,7 +33,7 @@
     "wiki": 1
    },
    "next_catalyst": "2026-10-23",
-   "last_chg": "2026-10-19"
+   "last_chg": "2026-10-20"
   },
   {
    "id": "ADI",
@@ -178,7 +178,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-10-19"
+   "last_chg": "2026-10-20"
   },
   {
    "id": "ANET",
@@ -208,7 +208,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-10-19"
+   "last_chg": "2026-10-20"
   },
   {
    "id": "AOSL",
@@ -324,7 +324,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-10-12"
+   "last_chg": "2026-10-20"
   },
   {
    "id": "BESI",
@@ -353,7 +353,7 @@
     "wiki": 1
    },
    "next_catalyst": "2027-01-01",
-   "last_chg": "2026-10-19"
+   "last_chg": "2026-10-20"
   },
   {
    "id": "CDNS",
@@ -628,7 +628,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-10-12"
+   "last_chg": "2026-10-20"
   },
   {
    "id": "GLW",
@@ -924,7 +924,7 @@
     "wiki": 1
    },
    "next_catalyst": "2026-10-20",
-   "last_chg": "2026-10-19"
+   "last_chg": "2026-10-20"
   },
   {
    "id": "NOK",
@@ -1342,7 +1342,7 @@
     "transcript": 1,
     "wiki": 1
    },
-   "next_catalyst": "2026-11-12",
+   "next_catalyst": "2026-10-20",
    "last_chg": "2026-10-20"
   },
   {
@@ -1430,7 +1430,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-09-27"
+   "last_chg": "2026-10-20"
   },
   {
    "id": "TOKYOELEC",
@@ -1471,8 +1471,8 @@
     "transcript": 1,
     "wiki": 1
    },
-   "next_catalyst": "",
-   "last_chg": "2026-10-15"
+   "next_catalyst": "2026-10-20",
+   "last_chg": "2026-10-20"
   },
   {
    "id": "TSM",
@@ -5321,6 +5321,12 @@
   },
   {
    "u": "theme:outros-asia",
+   "v": "SKHYNIX",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:outros-asia",
    "v": "TOKYOELEC",
    "type": "exposes",
    "label": ""
@@ -7243,7 +7249,7 @@
    "v": "AMZN",
    "type": "covers",
    "label": "",
-   "w": 196
+   "w": 199
   },
   {
    "u": "broker:Jefferies",
@@ -7264,7 +7270,7 @@
    "v": "AMZN",
    "type": "covers",
    "label": "",
-   "w": 146
+   "w": 149
   },
   {
    "u": "broker:DB",
@@ -7327,7 +7333,7 @@
    "v": "AMZN",
    "type": "covers",
    "label": "",
-   "w": 92
+   "w": 98
   },
   {
    "u": "broker:Stratechery",
@@ -8359,6 +8365,13 @@
    "w": 37
   },
   {
+   "u": "broker:GS",
+   "v": "BE",
+   "type": "covers",
+   "label": "",
+   "w": 6
+  },
+  {
    "u": "broker:Barclays",
    "v": "BE",
    "type": "covers",
@@ -8510,28 +8523,28 @@
    "v": "BKNG",
    "type": "covers",
    "label": "",
-   "w": 52
+   "w": 53
   },
   {
    "u": "broker:JPM",
    "v": "BKNG",
    "type": "covers",
    "label": "",
-   "w": 59
+   "w": 62
   },
   {
    "u": "broker:MS",
    "v": "BKNG",
    "type": "covers",
    "label": "",
-   "w": 92
+   "w": 93
   },
   {
    "u": "broker:Jefferies",
    "v": "BKNG",
    "type": "covers",
    "label": "",
-   "w": 44
+   "w": 64
   },
   {
    "u": "broker:Citi",
@@ -8545,7 +8558,7 @@
    "v": "BKNG",
    "type": "covers",
    "label": "",
-   "w": 70
+   "w": 71
   },
   {
    "u": "broker:DB",
@@ -8559,14 +8572,14 @@
    "v": "BKNG",
    "type": "covers",
    "label": "",
-   "w": 55
+   "w": 56
   },
   {
    "u": "broker:Bernstein",
    "v": "BKNG",
    "type": "covers",
    "label": "",
-   "w": 69
+   "w": 70
   },
   {
    "u": "broker:Redburn",
@@ -10260,7 +10273,7 @@
    "v": "GEV",
    "type": "covers",
    "label": "",
-   "w": 51
+   "w": 55
   },
   {
    "u": "broker:Barclays",
@@ -10442,35 +10455,35 @@
    "v": "GOOG",
    "type": "covers",
    "label": "",
-   "w": 358
+   "w": 361
   },
   {
    "u": "broker:MS",
    "v": "GOOG",
    "type": "covers",
    "label": "",
-   "w": 249
+   "w": 250
   },
   {
    "u": "broker:Jefferies",
    "v": "GOOG",
    "type": "covers",
    "label": "",
-   "w": 189
+   "w": 192
   },
   {
    "u": "broker:Citi",
    "v": "GOOG",
    "type": "covers",
    "label": "",
-   "w": 60
+   "w": 62
   },
   {
    "u": "broker:GS",
    "v": "GOOG",
    "type": "covers",
    "label": "",
-   "w": 131
+   "w": 137
   },
   {
    "u": "broker:DB",
@@ -10519,7 +10532,7 @@
    "v": "GOOG",
    "type": "covers",
    "label": "",
-   "w": 33
+   "w": 34
   },
   {
    "u": "broker:TDCowen",
@@ -12248,14 +12261,14 @@
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 408
+   "w": 409
   },
   {
    "u": "broker:UBS",
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 797
+   "w": 802
   },
   {
    "u": "broker:JPM",
@@ -12269,7 +12282,7 @@
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 134
+   "w": 135
   },
   {
    "u": "broker:Jefferies",
@@ -12290,14 +12303,14 @@
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 106
+   "w": 112
   },
   {
    "u": "broker:DB",
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 71
+   "w": 75
   },
   {
    "u": "broker:Barclays",
@@ -12311,7 +12324,7 @@
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 154
+   "w": 161
   },
   {
    "u": "broker:Redburn",
@@ -12370,18 +12383,25 @@
    "w": 3
   },
   {
+   "u": "broker:NewStreet",
+   "v": "MU",
+   "type": "covers",
+   "label": "",
+   "w": 5
+  },
+  {
    "u": "broker:TrendForce",
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 145
+   "w": 148
   },
   {
    "u": "broker:SemiAnalysis",
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 141
+   "w": 145
   },
   {
    "u": "broker:Barrons",
@@ -12402,7 +12422,7 @@
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 52
+   "w": 54
   },
   {
    "u": "broker:BofA",
@@ -12507,7 +12527,7 @@
    "v": "NBIS",
    "type": "covers",
    "label": "",
-   "w": 35
+   "w": 39
   },
   {
    "u": "broker:FinTwit",
@@ -12584,14 +12604,14 @@
    "v": "NFLX",
    "type": "covers",
    "label": "",
-   "w": 15
+   "w": 18
   },
   {
    "u": "broker:JPM",
    "v": "NFLX",
    "type": "covers",
    "label": "",
-   "w": 86
+   "w": 102
   },
   {
    "u": "broker:MS",
@@ -12619,7 +12639,7 @@
    "v": "NFLX",
    "type": "covers",
    "label": "",
-   "w": 7
+   "w": 8
   },
   {
    "u": "broker:Barclays",
@@ -12633,14 +12653,14 @@
    "v": "NFLX",
    "type": "covers",
    "label": "",
-   "w": 35
+   "w": 36
   },
   {
    "u": "broker:Redburn",
    "v": "NFLX",
    "type": "covers",
    "label": "",
-   "w": 15
+   "w": 17
   },
   {
    "u": "broker:Wolfe",
@@ -12990,7 +13010,7 @@
    "v": "NVDA",
    "type": "covers",
    "label": "",
-   "w": 272
+   "w": 282
   },
   {
    "u": "broker:Stratechery",
@@ -13578,7 +13598,7 @@
    "v": "ORCL",
    "type": "covers",
    "label": "",
-   "w": 80
+   "w": 81
   },
   {
    "u": "broker:Jefferies",
@@ -13599,7 +13619,7 @@
    "v": "ORCL",
    "type": "covers",
    "label": "",
-   "w": 97
+   "w": 102
   },
   {
    "u": "broker:DB",
@@ -13655,7 +13675,7 @@
    "v": "ORCL",
    "type": "covers",
    "label": "",
-   "w": 57
+   "w": 67
   },
   {
    "u": "broker:FinTwit",
@@ -14173,14 +14193,14 @@
    "v": "SAMSUNG",
    "type": "covers",
    "label": "",
-   "w": 291
+   "w": 292
   },
   {
    "u": "broker:UBS",
    "v": "SAMSUNG",
    "type": "covers",
    "label": "",
-   "w": 296
+   "w": 297
   },
   {
    "u": "broker:JPM",
@@ -14274,6 +14294,13 @@
    "w": 4
   },
   {
+   "u": "broker:NewStreet",
+   "v": "SAMSUNG",
+   "type": "covers",
+   "label": "",
+   "w": 4
+  },
+  {
    "u": "broker:TrendForce",
    "v": "SAMSUNG",
    "type": "covers",
@@ -14285,7 +14312,7 @@
    "v": "SAMSUNG",
    "type": "covers",
    "label": "",
-   "w": 185
+   "w": 186
   },
   {
    "u": "broker:FinTwit",
@@ -14540,6 +14567,13 @@
    "w": 2
   },
   {
+   "u": "broker:NewStreet",
+   "v": "SKHYNIX",
+   "type": "covers",
+   "label": "",
+   "w": 4
+  },
+  {
    "u": "broker:TrendForce",
    "v": "SKHYNIX",
    "type": "covers",
@@ -14551,7 +14585,7 @@
    "v": "SKHYNIX",
    "type": "covers",
    "label": "",
-   "w": 129
+   "w": 130
   },
   {
    "u": "broker:Barrons",
@@ -15146,14 +15180,14 @@
    "v": "SPCX",
    "type": "covers",
    "label": "",
-   "w": 138
+   "w": 144
   },
   {
    "u": "broker:MS",
    "v": "SPCX",
    "type": "covers",
    "label": "",
-   "w": 103
+   "w": 116
   },
   {
    "u": "broker:Jefferies",
@@ -15167,21 +15201,21 @@
    "v": "SPCX",
    "type": "covers",
    "label": "",
-   "w": 16
+   "w": 30
   },
   {
    "u": "broker:GS",
    "v": "SPCX",
    "type": "covers",
    "label": "",
-   "w": 64
+   "w": 66
   },
   {
    "u": "broker:DB",
    "v": "SPCX",
    "type": "covers",
    "label": "",
-   "w": 50
+   "w": 64
   },
   {
    "u": "broker:Barclays",
@@ -15230,7 +15264,7 @@
    "v": "SPCX",
    "type": "covers",
    "label": "",
-   "w": 2
+   "w": 4
   },
   {
    "u": "broker:Mizuho",
@@ -15251,7 +15285,7 @@
    "v": "SPCX",
    "type": "covers",
    "label": "",
-   "w": 23
+   "w": 24
   },
   {
    "u": "broker:MoffettNathanson",
@@ -15286,7 +15320,7 @@
    "v": "SPCX",
    "type": "covers",
    "label": "",
-   "w": 9
+   "w": 10
   },
   {
    "u": "broker:BofA",
@@ -15699,7 +15733,7 @@
    "v": "TM",
    "type": "covers",
    "label": "",
-   "w": 2
+   "w": 6
   },
   {
    "u": "broker:MS",
