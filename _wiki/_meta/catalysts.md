@@ -2,11 +2,13 @@
 
 _Generated 2026-10-21 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (38)
+## 📅 Upcoming (41)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
 | 2026-10-21 | META | **🆕🔴🔴 2026-10-21 (WED, AFTER THE CLOSE) — Q3'26 PRINT, about a week earlier than normal** (JPM desk · Schilsky, 2026-10-13; BofA · Post, UBS desk · Dwyer and Vital Knowledge, 2026-10-16). The bar: 3Q  |
+| 2026-10-21 | META | ✅ **OUTCOME 2026-10-21 (press release only; call not ingested):** 3Q revenue **$64.60bn**, above the guide top and the ~$64B bar; 4Q guide **$73-76bn**, above BofA's $71.5-74.5bn and the $74.5-75B des |
+| 2026-10-21 | MU | 🆕 **2026-10-21 — roadmap dates from the CTO (technology webinar).** **1-delta DRAM volume ramp 2H CY27** (Boise, US-manufactured plus other sites) and **G11 NAND ramp 2H CY27** (>400 layers; *"more sp |
 | 2026-10-22 | NOK | **2026-10-22 — Q3 results:** Optical/IP deliveries and new orders, supply constraints and MI software phasing. The July guide calls for revenue **+3–7% sequentially** and EBIT broadly flat on Q2. Trac |
 | 2026-10-23 | AAPL | **🆕 2026-10-13 — SMART-HOME LAUNCH** (J490 hub, HomePod mini, Apple TV; Bloomberg via GS / JPM / BofA / Redburn desks, 2026-09-29→10-01); **2026-10-16 Duo pre-orders, 2026-10-23 on sale** (DigiTimes v |
 | 2026-10-26 | MEDIATEK | **🆕🔴 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR "POTENTIAL UPWARD REVISIONS TO GOOGLE TPU-RELATED GUIDANCE."** Between them: **Google system-level validation of v9 in H |
@@ -38,6 +40,7 @@ _Generated 2026-10-21 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-12-02 | OKTA | **🧪 PRE-REGISTERED TEST T3 — Q3 FY27 print ~2026-12-02:** cRPO growth **≥ 13%** (guide +11–12%; Q2 printed +14.1%) **AND dollar-based NRR ≥ 107%** = bull; cRPO ≤ 12% and/or NRR back to 106% = bear. ⚠️ |
 | 2026-12-09 | MU | **🆕🔴 F4Q26 PRINT — REPORTED 2026-09-30 (✅ resolved: beat on revenue / GM / EPS, FQ1 revenue guide $61.5bn above every bogey, FQ1 GM guide ~86.25% below every buy-side bar; scored post-mortem in `## In |
 | 2027-01-01 | BKNG | **🆕 B2B STAND-ALONE LAUNCH ON 2027-01-01 with dedicated management (BKNG exec (likely CFO Steenbergen ⚠) @ Communacopia-week investor group mtg, 2026-09-09 — Capstone Notion transcript).** Watch for t |
+| 2027-01-19 | META | **🆕🔴 2027-01-19 — CLASS C COMMON STOCK TAKES EFFECT** (the Restated Charter's effective date). The one-for-one Class C dividend follows, with **record and payment dates still to be set** by the Board; |
 | 2027-07-01 | NSCALE | 2027-07-01 — Figure AI initial Vera Rubin GPUs targeted "2H27" (approximate). |
 | 2027-09-28 | NSCALE | 2027-09-28 — Microsoft Kvandal North **Tranche 2 delivery date** (SOW example) — a filed, checkable milestone. |
 | 2027-12-31 | NSCALE | 2027-12-31 — SIN02 Portugal: >66,000 VR NVL72 for Microsoft "starting late 2027". |

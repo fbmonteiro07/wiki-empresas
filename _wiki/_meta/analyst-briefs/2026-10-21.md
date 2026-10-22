@@ -1,6 +1,6 @@
 # Daily Analyst Brief
 
-_Generated 2026-10-21 · 49 active signals · latest reconciliation: reconciliation-2026-10-20-inbox.md._
+_Generated 2026-10-21 · 51 active signals · latest reconciliation: reconciliation-2026-10-21-inbox.md._
 
 > ⚠️ **Portfolio priority is provisional.** _data/book.json is still a seed with unknown weights. Book badges identify seeded names but do not represent real exposure.
 
@@ -9,26 +9,39 @@ _Generated 2026-10-21 · 49 active signals · latest reconciliation: reconciliat
 | Rank | Ticker | Book | Signals | Why focus now |
 |---:|---|---|---:|---|
 | 1 | **META** | seed | 3 | META — 2026-10-21: Q3'26 PRINT, about a week earlier than normal (JPM desk · Schilsky, 2026-10-13; BofA ·…; META — derived thesis/debate state changed since the prior daily snapshot |
-| 2 | **NVDA** | seed | 4 | NVDA — catalyst passed without a logged outcome; NVDA — 2026-11-17: CLOSED 2026-09-10 — THE GS COMMUNACOPIA FIRESIDE HAPPENED. OUTCOME: Jensen reaffirmed the… |
-| 3 | **GOOG** | seed | 3 | GOOG — 2026 revenue house view is 17% above consensus; GOOG — 2027 revenue house view is 17% above consensus |
-| 4 | **AAPL** | seed | 2 | AAPL — 2026 EPS house view is 16% above consensus; AAPL — 2026-10-23: SMART-HOME LAUNCH (J490 hub, HomePod mini, Apple TV; Bloomberg via GS / JPM / BofA /… |
-| 5 | **NOK** | — | 3 | NOK — Bloomberg consensus missing; NOK — 2026-10-22: Q3 results: Optical/IP deliveries and new orders, supply constraints and MI software… |
-| 6 | **NSCALE** | — | 3 | NSCALE — Bloomberg consensus missing; NSCALE — latest earnings transcript absent |
-| 7 | **ORCL** | — | 1 | ORCL — 2026-10-28: ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as "Investor Day in… |
-| 8 | **CRWV** | — | 1 | CRWV — 2026 EPS house view is 16% below consensus |
-| 9 | **MSFT** | seed | 1 | MSFT — 2026-11-17: 2026-11-17 to 11-20, SF — MSFT IGNITE. |
-| 10 | **MEDIATEK** | — | 1 | MEDIATEK — 2026-10-26: 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR "POTENTIAL… |
-| 11 | **FLEX** | — | 2 | FLEX — 2026-11-10: INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail…; FLEX — 2026-10-27: Celestica (CLS) analyst day: the EMS peer's rack/switching numbers (Bernstein top pick;… |
-| 12 | **POET** | — | 1 | POET — latest earnings transcript absent |
+| 2 | **AMZN** | seed | 1 | AMZN — derived thesis/debate state changed since the prior daily snapshot |
+| 3 | **NVDA** | seed | 4 | NVDA — catalyst passed without a logged outcome; NVDA — 2026-11-17: CLOSED 2026-09-10 — THE GS COMMUNACOPIA FIRESIDE HAPPENED. OUTCOME: Jensen reaffirmed the… |
+| 4 | **GOOG** | seed | 3 | GOOG — 2026 revenue house view is 17% above consensus; GOOG — 2027 revenue house view is 17% above consensus |
+| 5 | **AAPL** | seed | 2 | AAPL — 2026 EPS house view is 16% above consensus; AAPL — 2026-10-23: SMART-HOME LAUNCH (J490 hub, HomePod mini, Apple TV; Bloomberg via GS / JPM / BofA /… |
+| 6 | **NOK** | — | 3 | NOK — Bloomberg consensus missing; NOK — 2026-10-22: Q3 results: Optical/IP deliveries and new orders, supply constraints and MI software… |
+| 7 | **NSCALE** | — | 3 | NSCALE — Bloomberg consensus missing; NSCALE — latest earnings transcript absent |
+| 8 | **ORCL** | — | 1 | ORCL — 2026-10-28: ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as "Investor Day in… |
+| 9 | **MU** | — | 3 | MU — 2026-10-21: roadmap dates from the CTO (technology webinar). 1-delta DRAM volume ramp 2H CY27 (Boise,…; MU / SKHYNIX (memory price path) — Fubon's DRAM contract price falls 16% from the 2Q27 peak while Micron says supply stays constrained through CY28 |
+| 10 | **CRWV** | — | 1 | CRWV — 2026 EPS house view is 16% below consensus |
+| 11 | **MSFT** | seed | 1 | MSFT — 2026-11-17: 2026-11-17 to 11-20, SF — MSFT IGNITE. |
+| 12 | **MEDIATEK** | — | 1 | MEDIATEK — 2026-10-26: 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR "POTENTIAL… |
 
 ## Highest-priority ideas
 
-### 1. 🔴 META — derived thesis/debate state changed since the prior daily snapshot
+### 1. 🔴 AMZN — derived thesis/debate state changed since the prior daily snapshot
+
+_NARRATIVE SHIFT · HIGH IMPACT · IMMEDIATE · HIGH CONFIDENCE_
+
+- **Tickers:** AMZN · seeded book: AMZN
+- **Why now:** Meta Graviton evidence review (historical backfill): AWS’s June 10, 2026 Graviton5 release announces M9g/M9gd general availability and repeats Meta’s tens of millions of CPU cores commitment from April 24. Platform availability supplies no Meta-specific deployment date, delivered-core count or MW. Preserve META-AWS-202604; this is a platform milestone / relationship confirmation, not another compute commitment. CPU cores remain unconverted to GW. Deal history. No forecast, rating, price target or prior contract…
+- **Belief update:** The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.
+- **Action:** Re-grade the AMZN thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.
+- **Falsifier:** The fingerprint moved only because of formatting or a derived snapshot insertion.
+- **Read-through:** AVGO (supplier: networking); NVDA (supplier: GPUs); MDB (competitor: Atlas vs DynamoDB); SNOW (competitor: warehouse vs Redshift); AAOI (supplier: optical transceivers); AGX (supplier: EPC gas power); ALAB (supplier: PCIe/CXL)
+- **Attribution:** AMZN page Changelog 2026-10-21.
+- **Evidence:** [AMZN.md](../AMZN.md) · signal beli-a78b7a2c2212
+
+### 2. 🔴 META — derived thesis/debate state changed since the prior daily snapshot
 
 _NARRATIVE SHIFT · HIGH IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
 - **Tickers:** META · seeded book: META
-- **Why now:** Debate: Q3'26 CFO 2027 revenue-outlook language (Susan Li, 2026-10-21, text pasted and attributed by Felipe) compared with prior next-year framings (Q3'24, Q4'24, Q3'25, Q4'25 calls): earlier timing, "are delivering" vs "investments we're making", new-AI revenue pulled into 2027, "throughout 2027" with no fade caveat, new "overall" qualifier; bar = BBG CY27 rev ≈ +21%. Additive — no prior number, rating, PT or thesis superseded. Verify the quote verbatim against the Q3'26 transcript when archived.
+- **Why now:** run-inbox: Q3 FY26 print, PRESS RELEASE + 8-K ONLY (no call transcript on disk; the call was at 4:30pm ET), plus the Bernstein 10-20 and BofA 10-16 PDFs. Sources: press release, 8-K, Bernstein, BofA. Inserted: a new top block in Current state (quarter, charge, segments, cash, a 14-row actual-vs-guide-vs-Street table, guidance, 2027 language, Class C and the Founder Alignment Agreement, the BofA PDF flag, the house read); a PDF-verification sub-bullet under the 10-16 BofA bullet; 1 Debate bullet (Class C vs the…
 - **Belief update:** The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.
 - **Action:** Re-grade the META thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.
 - **Falsifier:** The fingerprint moved only because of formatting or a derived snapshot insertion.
@@ -36,7 +49,7 @@ _NARRATIVE SHIFT · HIGH IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 - **Attribution:** META page Changelog 2026-10-21.
 - **Evidence:** [META.md](../META.md) · signal beli-37ce2f2c150d
 
-### 2. 🔴 GOOG — 2026 revenue house view is 17% above consensus
+### 3. 🔴 GOOG — 2026 revenue house view is 17% above consensus
 
 _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
@@ -49,7 +62,7 @@ _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 - **Attribution:** Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-10-21.
 - **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-5a79fad25b6e
 
-### 3. 🔴 GOOG — 2027 revenue house view is 17% above consensus
+### 4. 🔴 GOOG — 2027 revenue house view is 17% above consensus
 
 _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
@@ -62,7 +75,7 @@ _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 - **Attribution:** Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-10-21.
 - **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-de85d0b82ebe
 
-### 4. 🔴 AAPL — 2026 EPS house view is 16% above consensus
+### 5. 🔴 AAPL — 2026 EPS house view is 16% above consensus
 
 _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
@@ -75,7 +88,7 @@ _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 - **Attribution:** Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-10-21.
 - **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-e9eca9ba40fc
 
-### 5. 🟡 CRWV — 2026 EPS house view is 16% below consensus
+### 6. 🟡 CRWV — 2026 EPS house view is 16% below consensus
 
 _MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
@@ -88,7 +101,7 @@ _MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 - **Attribution:** Capstone official model — P:\Felipe Monteiro\US Equities\Modelos oficiais\Template DCF CRWV.xlsx (2026-10-14, Felipe Monteiro), first CRWV model in the official Template DCF <TICKER family (same sheets and conventions as AMD/AVGO/ADVANTEST/TER, plus History and Debt sheets; labels in English). Build and verification pipeline in · Bloomberg consensus 2026-10-21.
 - **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-d865f3088118
 
-### 6. ⚪ ANET — Bernstein 2027 revenue is +9-14% above consensus, but the note prints three different figures
+### 7. ⚪ ANET — Bernstein 2027 revenue is +9-14% above consensus, but the note prints three different figures
 
 _MODEL CHECK · WATCH IMPACT · STANDING · MEDIUM CONFIDENCE_
 
@@ -101,7 +114,7 @@ _MODEL CHECK · WATCH IMPACT · STANDING · MEDIUM CONFIDENCE_
 - **Attribution:** Bernstein · curated reconciliation 2026-10-01.
 - **Evidence:** [reconciliation-2026-10-01-inbox.md](reconciliation-2026-10-01-inbox.md) · signal reco-32216e1d8ae9
 
-### 7. ⚪ CIEN — Outperform with a PT 15% below consensus, on a PT basis that mislabels the year
+### 8. ⚪ CIEN — Outperform with a PT 15% below consensus, on a PT basis that mislabels the year
 
 _MODEL CHECK · WATCH IMPACT · STANDING · MEDIUM CONFIDENCE_
 
@@ -114,7 +127,7 @@ _MODEL CHECK · WATCH IMPACT · STANDING · MEDIUM CONFIDENCE_
 - **Attribution:** JPM + Bernstein · curated reconciliation 2026-10-01.
 - **Evidence:** [reconciliation-2026-10-01-inbox.md](reconciliation-2026-10-01-inbox.md) · signal reco-ea86c1657228
 
-### 8. ⚪ COHR — house Neutral $285 is the Street's second-lowest PT; Bernstein OP $350 sits below the consensus median
+### 9. ⚪ COHR — house Neutral $285 is the Street's second-lowest PT; Bernstein OP $350 sits below the consensus median
 
 _MODEL CHECK · MEDIUM IMPACT · STANDING · MEDIUM CONFIDENCE_
 
@@ -127,7 +140,7 @@ _MODEL CHECK · MEDIUM IMPACT · STANDING · MEDIUM CONFIDENCE_
 - **Attribution:** Bernstein · curated reconciliation 2026-10-01.
 - **Evidence:** [reconciliation-2026-10-01-inbox.md](reconciliation-2026-10-01-inbox.md) · signal reco-08afbb898b71
 
-### 9. ⚪ CSCO / GLW — Bernstein's two Market-Performs are at or near the Street LOW on PT, with estimates in line
+### 10. ⚪ CSCO / GLW — Bernstein's two Market-Performs are at or near the Street LOW on PT, with estimates in line
 
 _MODEL CHECK · MEDIUM IMPACT · STANDING · MEDIUM CONFIDENCE_
 
@@ -140,7 +153,7 @@ _MODEL CHECK · MEDIUM IMPACT · STANDING · MEDIUM CONFIDENCE_
 - **Attribution:** Bernstein · curated reconciliation 2026-10-01.
 - **Evidence:** [reconciliation-2026-10-01-inbox.md](reconciliation-2026-10-01-inbox.md) · signal reco-5b10ab6f72fe
 
-### 10. ⚪ Celestica (no wiki page) — Bernstein 2027 EPS is +20% above consensus; PT near the Street high
+### 11. ⚪ Celestica (no wiki page) — Bernstein 2027 EPS is +20% above consensus; PT near the Street high
 
 _MODEL CHECK · MEDIUM IMPACT · STANDING · MEDIUM CONFIDENCE_
 
@@ -153,7 +166,7 @@ _MODEL CHECK · MEDIUM IMPACT · STANDING · MEDIUM CONFIDENCE_
 - **Attribution:** Bernstein · curated reconciliation 2026-10-01.
 - **Evidence:** [reconciliation-2026-10-01-inbox.md](reconciliation-2026-10-01-inbox.md) · signal reco-6d19352f5bc7
 
-### 11. ⚪ LITE / COHR (optics TAM) — Bernstein's transceiver market is 2.3x Goldman's for 2028; no "2028 pause"
+### 12. ⚪ LITE / COHR (optics TAM) — Bernstein's transceiver market is 2.3x Goldman's for 2028; no "2028 pause"
 
 _MODEL CHECK · MEDIUM IMPACT · STANDING · MEDIUM CONFIDENCE_
 
@@ -166,25 +179,13 @@ _MODEL CHECK · MEDIUM IMPACT · STANDING · MEDIUM CONFIDENCE_
 - **Attribution:** Bernstein · curated reconciliation 2026-10-01.
 - **Evidence:** [reconciliation-2026-10-01-inbox.md](reconciliation-2026-10-01-inbox.md) · signal reco-461b7e89c24a
 
-### 12. ⚪ META — house CY27 capex is $28bn (−14%) below the Street; Barclays gives Muse's cost per user
-
-_MODEL CHECK · HIGH IMPACT · STANDING · MEDIUM CONFIDENCE_
-
-- **Tickers:** META · seeded book: META
-- **Why now:** Barclays Sandler (09-30): hosting a persistent agent costs $4.07 per DAU per month, made up of a $3.66 VM (AWS m8a.large, 8 users per instance) and $0.41 of inference. That is "~10x more expensive" than ChatGPT's free tier. Barclays says Apple/OpenAI would need "upwards of $40B+ in extra annual compute" to win the free tier, which implies ~820m DAU at $48.84 a year (my arithmetic).
-- **Belief update:** This curated divergence challenges the standing thesis or model framing; keep it open until the named falsifier is observed.
-- **Action:** Open the META model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
-- **Falsifier:** A like-for-like estimate bridge or company guide that closes the identified gap.
-- **Read-through:** AVGO (supplier: custom ASIC); NVDA (supplier: GPUs); AMD (supplier: MI GPUs); GLW (supplier: optical fiber (LTA)); SNDK (supplier: NAND/SSD); STX (supplier: nearline HDD); WDC (supplier: nearline HDD)
-- **Attribution:** Bernstein · curated reconciliation 2026-10-01.
-- **Evidence:** [reconciliation-2026-10-01-inbox.md](reconciliation-2026-10-01-inbox.md) · signal reco-6e15fb3f3a1c
-
 ## Catalysts requiring preparation
 
 - **META — 2026-10-21: Q3'26 PRINT, about a week earlier than normal (JPM desk · Schilsky, 2026-10-13; BofA ·…** — 🆕🔴🔴 2026-10-21 (WED, AFTER THE CLOSE) — Q3'26 PRINT, about a week earlier than normal (JPM desk · Schilsky, 2026-10-13; BofA · Post, UBS desk · Dwyer and Vital Knowledge, 2026-10-16). The bar: 3Q _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-1016fc453b03)
 - **AAPL — 2026-10-23: SMART-HOME LAUNCH (J490 hub, HomePod mini, Apple TV; Bloomberg via GS / JPM / BofA /…** — 🆕 2026-10-13 — SMART-HOME LAUNCH (J490 hub, HomePod mini, Apple TV; Bloomberg via GS / JPM / BofA / Redburn desks, 2026-09-29→10-01); 2026-10-16 Duo pre-orders, 2026-10-23 on sale (DigiTimes v _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-68c774eb3829)
 - **ORCL — 2026-10-28: ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as "Investor Day in…** — 🆕🔴🔴 2026-10-28 — ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as "Investor Day in October"). First opportunity for new CFO Hilary Maxson to set long-term financial targ _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-9f2e588078f2)
 - **MEDIATEK — 2026-10-26: 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR "POTENTIAL…** — 🆕🔴 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR "POTENTIAL UPWARD REVISIONS TO GOOGLE TPU-RELATED GUIDANCE." Between them: Google system-level validation of v9 in H _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-d6253f9923ca)
+- **MU — 2026-10-21: roadmap dates from the CTO (technology webinar). 1-delta DRAM volume ramp 2H CY27 (Boise,…** — 🆕 2026-10-21 — roadmap dates from the CTO (technology webinar). 1-delta DRAM volume ramp 2H CY27 (Boise, US-manufactured plus other sites) and G11 NAND ramp 2H CY27 (400 layers; "more sp _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-155eadb07243)
 - **NOK — 2026-10-22: Q3 results: Optical/IP deliveries and new orders, supply constraints and MI software…** — 2026-10-22 — Q3 results: Optical/IP deliveries and new orders, supply constraints and MI software phasing. The July guide calls for revenue +3–7% sequentially and EBIT broadly flat on Q2. Trac _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-3e8cb5a41612)
 - **FLEX — 2026-10-27: Celestica (CLS) analyst day: the EMS peer's rack/switching numbers (Bernstein top pick;…** — 🆕 2026-10-27 — Celestica (CLS) analyst day: the EMS peer's rack/switching numbers (Bernstein top pick; BofA expects a late-October guidance raise) are the read-through for this page's EMS comp set _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-9c6f028117f0)
 - **NXPI — 2026-10-27: Q3 FY26 print, per the Vital Knowledge forward calendar (listed with ACGL, BKR, LOGI,…** — 🆕 2026-10-27 (Tue, after the US close) — Q3 FY26 print, per the Vital Knowledge forward calendar (listed with ACGL, BKR, LOGI, PYPL, WM the same evening) (Vital Knowledge, "Vital Dawn", 2026-10-02 _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-5c0d70eeaf70)

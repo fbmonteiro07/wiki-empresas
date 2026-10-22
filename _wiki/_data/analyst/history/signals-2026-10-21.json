@@ -1,17 +1,17 @@
 {
   "asof": "2026-10-21",
-  "latest_reconciliation": "reconciliation-2026-10-20-inbox.md",
+  "latest_reconciliation": "reconciliation-2026-10-21-inbox.md",
   "book": {
     "asof": "2026-07-01",
     "seed": true,
     "positions": 8
   },
   "stats": {
-    "signals": 49,
-    "active": 49,
-    "high": 6,
-    "belief_changes": 1,
-    "focus_names": 36
+    "signals": 51,
+    "active": 51,
+    "high": 7,
+    "belief_changes": 2,
+    "focus_names": 37
   },
   "focus": [
     {
@@ -27,6 +27,19 @@
         "META — 2026-10-21: Q3'26 PRINT, about a week earlier than normal (JPM desk · Schilsky, 2026-10-13; BofA ·…",
         "META — derived thesis/debate state changed since the prior daily snapshot",
         "META — house CY27 capex is $28bn (−14%) below the Street; Barclays gives Muse's cost per user"
+      ]
+    },
+    {
+      "ticker": "AMZN",
+      "focus_score": 85,
+      "in_book": true,
+      "signal_count": 1,
+      "high_count": 1,
+      "sector": "AI — Hyperscalers & Software",
+      "thesis": "AWS re-acceleration (+28%) + in-house silicon (Trainium); debate = $200B capex/ROIC.",
+      "next_catalyst": "",
+      "why": [
+        "AMZN — derived thesis/debate state changed since the prior daily snapshot"
       ]
     },
     {
@@ -114,6 +127,21 @@
       "next_catalyst": "2026-10-28",
       "why": [
         "ORCL — 2026-10-28: ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as \"Investor Day in…"
+      ]
+    },
+    {
+      "ticker": "MU",
+      "focus_score": 53,
+      "in_book": false,
+      "signal_count": 3,
+      "high_count": 0,
+      "sector": "AI — Semis & Compute",
+      "thesis": "Pure-play on AI memory intensity (HBM sold-out CY26); debate = peak earnings vs run-rate.",
+      "next_catalyst": "2026-10-21",
+      "why": [
+        "MU — 2026-10-21: roadmap dates from the CTO (technology webinar). 1-delta DRAM volume ramp 2H CY27 (Boise,…",
+        "MU / SKHYNIX (memory price path) — Fubon's DRAM contract price falls 16% from the 2Q27 peak while Micron says supply stays constrained through CY28",
+        "MU — FY27 consensus is post-print on the quarter but not on the year; capex consensus sits below the implied floor"
       ]
     },
     {
@@ -274,20 +302,6 @@
       "why": [
         "LITE / COHR (optics TAM) — Bernstein's transceiver market is 2.3x Goldman's for 2028; no \"2028 pause\"",
         "LITE — 2026-11-05: F1Q27 earnings (date per Deutsche Bank · Conti, 2026-10-07; confirm against the LITE IR…"
-      ]
-    },
-    {
-      "ticker": "MU",
-      "focus_score": 37,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "AI — Semis & Compute",
-      "thesis": "Pure-play on AI memory intensity (HBM sold-out CY26); debate = peak earnings vs run-rate.",
-      "next_catalyst": "2026-12-09",
-      "why": [
-        "MU / SKHYNIX (memory price path) — Fubon's DRAM contract price falls 16% from the 2Q27 peak while Micron says supply stays constrained through CY28",
-        "MU — FY27 consensus is post-print on the quarter but not on the year; capex consensus sits below the implied floor"
       ]
     },
     {
@@ -586,6 +600,88 @@
       "hidden": false
     },
     {
+      "id": "beli-a78b7a2c2212",
+      "asof": "2026-10-21",
+      "source_date": "2026-10-21",
+      "type": "narrative_shift",
+      "priority": "high",
+      "score": 80,
+      "title": "AMZN — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "AMZN"
+      ],
+      "in_book": [
+        "AMZN"
+      ],
+      "impact": "high",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "Meta Graviton evidence review (historical backfill): AWS’s June 10, 2026 Graviton5 release announces M9g/M9gd general availability and repeats Meta’s tens of millions of CPU cores commitment from April 24. Platform availability supplies no Meta-specific deployment date, delivered-core count or MW. Preserve META-AWS-202604; this is a platform milestone / relationship confirmation, not another compute commitment. CPU cores remain unconverted to GW. Deal history. No forecast, rating, price target or prior contract…",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the AMZN thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "supplier",
+          "detail": "networking",
+          "from": "AMZN",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "AMZN",
+          "in_book": true
+        },
+        {
+          "ticker": "MDB",
+          "relation": "competitor",
+          "detail": "Atlas vs DynamoDB",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "SNOW",
+          "relation": "competitor",
+          "detail": "warehouse vs Redshift",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "AAOI",
+          "relation": "supplier",
+          "detail": "optical transceivers",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "AGX",
+          "relation": "supplier",
+          "detail": "EPC gas power",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "ALAB",
+          "relation": "supplier",
+          "detail": "PCIe/CXL",
+          "from": "AMZN",
+          "in_book": false
+        }
+      ],
+      "source": "AMZN page Changelog 2026-10-21",
+      "evidence_paths": [
+        "AMZN.md"
+      ],
+      "evidence_anchor": "Meta Graviton evidence review (historical backfill): AWS’s June 10, 2026 Graviton5 release announces M9g/M9gd general availability and repeats Meta’s tens of millions of CPU cores commitment from April 24. Platform availability supplies no Meta-specific deployment date, delivered-core count or MW. Preserve META-AWS-202604; this is a platform milestone / relationship confirmation, not another compute commitment. CPU cores remain unconverted to GW. Deal history. No forecast, rating, price target or prior contract…",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
       "id": "beli-37ce2f2c150d",
       "asof": "2026-10-21",
       "source_date": "2026-10-21",
@@ -602,7 +698,7 @@
       "impact": "high",
       "urgency": "immediate",
       "confidence": "high",
-      "why_now": "Debate: Q3'26 CFO 2027 revenue-outlook language (Susan Li, 2026-10-21, text pasted and attributed by Felipe) compared with prior next-year framings (Q3'24, Q4'24, Q3'25, Q4'25 calls): earlier timing, \"are delivering\" vs \"investments we're making\", new-AI revenue pulled into 2027, \"throughout 2027\" with no fade caveat, new \"overall\" qualifier; bar = BBG CY27 rev ≈ +21%. Additive — no prior number, rating, PT or thesis superseded. Verify the quote verbatim against the Q3'26 transcript when archived.",
+      "why_now": "run-inbox: Q3 FY26 print, PRESS RELEASE + 8-K ONLY (no call transcript on disk; the call was at 4:30pm ET), plus the Bernstein 10-20 and BofA 10-16 PDFs. Sources: press release, 8-K, Bernstein, BofA. Inserted: a new top block in Current state (quarter, charge, segments, cash, a 14-row actual-vs-guide-vs-Street table, guidance, 2027 language, Class C and the Founder Alignment Agreement, the BofA PDF flag, the house read); a PDF-verification sub-bullet under the 10-16 BofA bullet; 1 Debate bullet (Class C vs the…",
       "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
       "action": "Re-grade the META thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
       "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
@@ -661,7 +757,7 @@
       "evidence_paths": [
         "META.md"
       ],
-      "evidence_anchor": "Debate: Q3'26 CFO 2027 revenue-outlook language (Susan Li, 2026-10-21, text pasted and attributed by Felipe) compared with prior next-year framings (Q3'24, Q4'24, Q3'25, Q4'25 calls): earlier timing, \"are delivering\" vs \"investments we're making\", new-AI revenue pulled into 2027, \"throughout 2027\" with no fade caveat, new \"overall\" qualifier; bar = BBG CY27 rev ≈ +21%. Additive — no prior number, rating, PT or thesis superseded. Verify the quote verbatim against the Q3'26 transcript when archived.",
+      "evidence_anchor": "run-inbox: Q3 FY26 print, PRESS RELEASE + 8-K ONLY (no call transcript on disk; the call was at 4:30pm ET), plus the Bernstein 10-20 and BofA 10-16 PDFs. Sources: press release, 8-K, Bernstein, BofA. Inserted: a new top block in Current state (quarter, charge, segments, cash, a 14-row actual-vs-guide-vs-Street table, guidance, 2027 language, Class C and the Founder Alignment Agreement, the BofA PDF flag, the house read); a PDF-verification sub-bullet under the 10-16 BofA bullet; 1 Debate bullet (Class C vs the…",
       "origin": "belief_diff",
       "feedback": "",
       "feedback_note": "",
@@ -1309,6 +1405,88 @@
         "MEDIATEK.md"
       ],
       "evidence_anchor": "🆕🔴 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR \"POTENTIAL UPWARD REVISIONS TO GOOGLE TPU-RELATED GUIDANCE.\" Between them: Google system-level validation of v9 in H",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "cata-155eadb07243",
+      "asof": "2026-10-21",
+      "source_date": "2026-10-21",
+      "event_date": "2026-10-21",
+      "type": "catalyst",
+      "priority": "medium",
+      "score": 49,
+      "title": "MU — 2026-10-21: roadmap dates from the CTO (technology webinar). 1-delta DRAM volume ramp 2H CY27 (Boise,…",
+      "tickers": [
+        "MU"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "🆕 2026-10-21 — roadmap dates from the CTO (technology webinar). 1-delta DRAM volume ramp 2H CY27 (Boise, US-manufactured plus other sites) and G11 NAND ramp 2H CY27 (400 layers; \"more sp",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "customer",
+          "detail": "HBM",
+          "from": "MU",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "HBM/LPDDR",
+          "from": "MU",
+          "in_book": true
+        },
+        {
+          "ticker": "SKHYNIX",
+          "relation": "competitor",
+          "detail": "HBM",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "AMAT",
+          "relation": "supplier",
+          "detail": "WFE",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "AMD",
+          "relation": "customer",
+          "detail": "HBM",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "ASML",
+          "relation": "supplier",
+          "detail": "litho",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "KLAC",
+          "relation": "supplier",
+          "detail": "process control",
+          "from": "MU",
+          "in_book": false
+        }
+      ],
+      "source": "MU page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "MU.md"
+      ],
+      "evidence_anchor": "🆕 2026-10-21 — roadmap dates from the CTO (technology webinar). 1-delta DRAM volume ramp 2H CY27 (Boise, US-manufactured plus other sites) and G11 NAND ramp 2H CY27 (400 layers; \"more sp",
       "origin": "catalyst_calendar",
       "feedback": "",
       "feedback_note": "",

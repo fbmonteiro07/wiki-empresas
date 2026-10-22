@@ -1849,6 +1849,401 @@
    "domain": "terms",
    "rule": "Notion ASR of 'DUV' (ASML immersion/DUV context).",
    "first_seen": "2026-10-21 (BTGP websession with ASML IR Ted Shafer, Notion transcript; notion-ingest 2026-10-21)"
+  },
+  "8 p.m.": {
+   "correct": "HBM",
+   "domain": "memory",
+   "rule": "Bloomberg ASR hears 'HBM' as '8 p.m.' ('spans the portfolio from 8 p.m. today in terms of ultra high performance memory').",
+   "keep_when": [
+    "transcribed",
+    "\\b(at|by|until|after|before|from|around|about|till) 8 p\\.m\\.",
+    "8 p\\.m\\.\\s*(ET|EST|EDT|PT|PST|CET|BRT|GMT|UTC|local|tonight|today|tomorrow)"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "HBM for": {
+   "correct": "HBM4",
+   "domain": "memory",
+   "rule": "ASR spells the generation number as the preposition ('high volume manufacturing with HBM for now', 'our HBM for didn't'). Legit when followed by a noun phrase.",
+   "keep_when": [
+    "transcribed",
+    "HBM for (training|inference|AI|the|a|an|GPU|GPUs|ASIC|ASICs|accelerators?|NVIDIA|Nvidia|AMD|Google|customers?|both|each|every|this|that|those|these|them|us|our|their|its|all|data|which|example|instance|Rubin|Blackwell|MI\\d+)\\b"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "HBM for e": {
+   "correct": "HBM4E",
+   "domain": "memory",
+   "rule": "see 'HBM for' ('for HBM for e the performance... does require more advanced CMOS').",
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "HBM four": {
+   "correct": "HBM4",
+   "domain": "memory",
+   "rule": "Spelled-out generation number (like '1 Delta'); write HBM4.",
+   "ci": true,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "HBM 55E": {
+   "correct": "HBM5/HBM5E (ambiguous ASR of 'HBM5, 5E' or 'HBM5E')",
+   "domain": "memory",
+   "rule": "Hosseini Q&A answer: 'for many systems will be... HBM 55E in combination with vertical HBM'. Ambiguous: write 'HBM5/HBM5E [transcribed \"HBM 55E\"]'.",
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "for f squared": {
+   "correct": "4F² (DRAM cell architecture)",
+   "domain": "memory",
+   "rule": "ASR of 'four-F-squared' in DRAM-cell sentences; variants 'four squared', 'Forest Court', 'RF squared', 'for us core Dram'.",
+   "ci": true,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "four squared": {
+   "correct": "4F²",
+   "domain": "memory",
+   "rule": "see 'for f squared' (drops the F).",
+   "ci": true,
+   "keep_when": [
+    "transcribed",
+    "four squared (meters|metres|feet|miles|inches|kilometers)"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "Forest Court": {
+   "correct": "4F²",
+   "domain": "memory",
+   "rule": "see 'for f squared' ('a bit of a myth that Forest Court actually provides anything versus six f squared').",
+   "ci": true,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "RF squared": {
+   "correct": "4F²",
+   "domain": "memory",
+   "rule": "see 'for f squared' (Arcuri question: 'no viable scaling path for RF squared').",
+   "keep_when": [
+    "transcribed",
+    "RF squared (error|deviation|power)"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "for us core Dram": {
+   "correct": "4F² DRAM (likely; 'Micron invented for us core Dram')",
+   "domain": "memory",
+   "rule": "see 'for f squared'; the reading is probable, not certain, so do not quote the 'invented' claim without the slide.",
+   "ci": true,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "six f squared": {
+   "correct": "6F²",
+   "domain": "memory",
+   "rule": "Spelled-out cell-size notation; write 6F². Also 'eight x squared' = 8F².",
+   "ci": true,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "eight x squared": {
+   "correct": "8F²",
+   "domain": "memory",
+   "rule": "see 'six f squared'.",
+   "ci": true,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "scam modules": {
+   "correct": "SOCAMM modules",
+   "domain": "memory",
+   "rule": "ASR of 'SOCAMM' (LPDDR-based CPU memory module); cf. 'SoC-M'.",
+   "ci": true,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "SOC two": {
+   "correct": "SOCAMM2",
+   "domain": "memory",
+   "rule": "ASR of 'SOCAMM2' ('We've been a leader, of course, in SOC two and driven the highest densities'). Also 'SoC, two modules'.",
+   "ci": true,
+   "keep_when": [
+    "transcribed",
+    "SOC two (report|audit|compliance|type)"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "SoC, two": {
+   "correct": "SOCAMM2",
+   "domain": "memory",
+   "rule": "see 'SOC two'.",
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "Lpcm": {
+   "correct": "LPCAMM or LPDDR (ambiguous; 'SoC, two modules leveraging Lpcm or LP, Dram')",
+   "domain": "memory",
+   "rule": "Ambiguous ASR in the SOCAMM2 sentence; SOCAMM2 is LPDDR-based, so prefer 'LPDDR' unless the slide says LPCAMM.",
+   "ci": true,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "Lpdr": {
+   "correct": "LPDDR",
+   "domain": "memory",
+   "rule": "ASR drops a D ('optimizing lpdr for the data center', Meta white paper).",
+   "ci": true,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "rdm": {
+   "correct": "RDIMM",
+   "domain": "memory",
+   "rule": "ASR of RDIMM ('512 gigabyte ddr5 rdm', 'one terabyte RDM').",
+   "ci": true,
+   "keep_when": [
+    "transcribed",
+    "RDM (protocol|software|framework|platform)",
+    "Remote Device Management"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "five 12 terabyte": {
+   "correct": "512GB (speaker slip: he said '512 gigabyte ddr5 rdm' earlier; the next generation is the 1TB RDIMM)",
+   "domain": "units",
+   "rule": "Unit slip, not ASR. Never write 512TB.",
+   "ci": true,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "China EV roadmap": {
+   "correct": "High-NA EUV roadmap (likely; Albany NanoTech advanced-lithography sentence)",
+   "domain": "semicap",
+   "rule": "ASR of 'High-NA EUV' inside 'driving China EV roadmap for Dram... at Albany'. Mark as [transcribed \"China EV\"; likely High-NA EUV]. Keep for genuine Chinese electric-vehicle roadmaps.",
+   "keep_when": [
+    "transcribed",
+    "(BYD|NIO|Xpeng|Li Auto|electric vehicle|battery|batteries|automaker|carmaker)"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "diaper wafer": {
+   "correct": "die per wafer",
+   "domain": "memory",
+   "rule": "ASR ('inherently reduces the diaper wafer on the dram').",
+   "ci": true,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "Ada Angstrom": {
+   "correct": "1-eta (1η) DRAM node",
+   "domain": "memory",
+   "rule": "ASR of the node name in the pathfinding sentence ('our one zeta Angstrom node and our Ada Angstrom nodes'); whether 'Angstrom' is literal on the slide is unconfirmed, so write 1-zeta / 1-eta.",
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "zeta Angstrom": {
+   "correct": "1-zeta (1ζ) DRAM node",
+   "domain": "memory",
+   "rule": "see 'Ada Angstrom'.",
+   "ci": true,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "Tief": {
+   "correct": "Atif (Atif Malik, Citi)",
+   "domain": "names",
+   "rule": "Operator's 'Citi, Atif' run together as 'Citi Tief'.",
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "with serum": {
+   "correct": "with Futurum (Daniel Newman, Futurum Group)",
+   "domain": "names",
+   "rule": "Operator line 'Daniel Newman with serum'. Bare 'serum' is too generic to flag (biotech pages), so only the operator phrase is keyed.",
+   "ci": true,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "Adi, your line": {
+   "correct": "Mehdi, your line (Mehdi Hosseini, Susquehanna)",
+   "domain": "names",
+   "rule": "Operator's 'Mehdi' clipped to 'Adi'. Bare 'Adi' is too generic to key.",
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "Weka": {
+   "correct": "WEKA (AI data-storage software company; Micron Ventures investee)",
+   "domain": "names",
+   "rule": "The company styles itself WEKA; not the Weka machine-learning toolkit.",
+   "keep_when": [
+    "transcribed",
+    "(machine learning|toolkit|Waikato|bird)"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "vertical Aim": {
+   "correct": "vertical EIM (vertical edge inference memory: LPDDR stacked on a logic base die)",
+   "domain": "memory",
+   "rule": "ASR of 'EIM' read as a word. Variants in the same transcript: 'vertical AME', 'vertical IEM', 'vertical M', 'edge inference memory aim'. Bare 'aim' / 'AME' / 'IEM' are too generic to key (ordinary verb; other acronyms).",
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "vertical AME": {
+   "correct": "vertical EIM",
+   "domain": "memory",
+   "rule": "see 'vertical Aim'.",
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "vertical IEM": {
+   "correct": "vertical EIM",
+   "domain": "memory",
+   "rule": "see 'vertical Aim'.",
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "vertical M": {
+   "correct": "vertical EIM",
+   "domain": "memory",
+   "rule": "see 'vertical Aim' ('our HBM five, our vertical HBM and our vertical M products').",
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "inference memory aim": {
+   "correct": "inference memory (EIM)",
+   "domain": "memory",
+   "rule": "see 'vertical Aim' (Malik question).",
+   "ci": true,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "2222 nodes": {
+   "correct": "22 nodes (stutter)",
+   "domain": "units",
+   "rule": "ASR stutter of 'twenty-two nodes of DRAM technology since 1995'.",
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "for nodes of Dram": {
+   "correct": "four nodes of DRAM",
+   "domain": "memory",
+   "rule": "ASR of 'four' as 'for' ('for nodes of Dram, consecutive leadership').",
+   "ci": true,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "I class Nand": {
+   "correct": "AI-class NAND",
+   "domain": "memory",
+   "rule": "ASR drops the A ('high IOPs, I class Nand').",
+   "ci": true,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "5XIO": {
+   "correct": "1.5x I/O (speed target, G11 NAND)",
+   "domain": "units",
+   "rule": "ASR run-together ('a one point 5XIO speed target').",
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "lp6": {
+   "correct": "LPDDR6",
+   "domain": "memory",
+   "rule": "Spoken shorthand 'LP6' / 'LP six' / 'LP five' = LPDDR6 / LPDDR5.",
+   "ci": true,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "LP six": {
+   "correct": "LPDDR6",
+   "domain": "memory",
+   "rule": "see 'lp6'.",
+   "ci": true,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "KB cache": {
+   "correct": "KV cache",
+   "domain": "memory",
+   "rule": "ASR hears 'KV' as 'KB' ('a number of calculations through the KB cache').",
+   "ci": true,
+   "keep_when": [
+    "transcribed",
+    "\\d\\s?KB cache",
+    "KB cache (size|line)"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "standard genetic design": {
+   "correct": "standard generic design (probable; i.e. the standard/JEDEC HBM base die)",
+   "domain": "memory",
+   "rule": "ASR in the base-die answer ('both our standard genetic design products and our custom products').",
+   "ci": true,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
   }
  },
  "summary_traps": [
