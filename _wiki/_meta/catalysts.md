@@ -2,12 +2,16 @@
 
 _Generated 2026-10-22 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (46)
+## 📅 Upcoming (50)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
+| 2026-10-22 | AMAT | 🆕 **Supply-chain read-through from Lam's 10-21 guide (Joe Quatrochi (Wells Fargo) @ Wells Fargo TXN/LRCX 3Q26 EPS recap call, 2026-10-22 - Capstone notes (Notion transcript)):** AMAT and Lam have *"ov |
 | 2026-10-22 | ASML | **Capital Markets Day** — ✓ **2026-10-22: dated June 10, 2027 in the Q3'26 presentation (ASML 6-K Ex. 99.2, 2026-10-14). This supersedes "expected early/Q1 2027" (old value in Changelog) and matches t |
 | 2026-10-22 | LRCX | **10-Q for the September 2026 quarter:** not yet filed as of 2026-10-22. Check RPO, customer concentration, China detail and the ASR terms. |
+| 2026-10-22 | LRCX | Quatrochi did not ask the ASR size; his prior is *"historically … multibillion-dollar kind of … ASRs … probably similar to what they've done in the past"* (Joe Quatrochi (Wells Fargo) @ Wells Fargo TX |
+| 2026-10-22 | META | 🆕 **2026-10-22 — sell-side timing read (Ken [Gawrelski - surname unconfirmed] (Wells Fargo) @ Wells Fargo META 3Q26 EPS recap call, 2026-10-22 - Capstone notes (Notion transcript)):** an A-share offer |
+| 2026-10-22 | META | 🆕 **2026-10-22 — the covering analyst's bar did not move:** 2027 capex **$250bn** (*"we're at $250, buy side $250"*; sell-side $195bn by his count) and OpEx **$210-215bn** (Ken [Gawrelski - surname un |
 | 2026-10-22 | NFLX | **✅ RESOLVED — Q3 2026 earnings, Tue 2026-10-20 AMC** (date from Vital Knowledge calendar, 2026-09-28; confirmed by the letter's own date). **Outcome from the letter: a mixed print.** Q3 was in line o |
 | 2026-10-22 | NOK | **✅ RESOLVED 2026-10-22 — Q3 results:** revenue +7.0% q/q (top of +3–7%), comparable EBIT €605m vs a "largely flat" €434m guide (part MI pull-forward from Q4), Optical +18% / IP +43% cc, AI & Cloud sa |
 | 2026-10-22 | NOK | _(Original pre-print entry, 2026-10-11:)_ **2026-10-22 — Q3 results:** Optical/IP deliveries and new orders, supply constraints and MI software phasing. The July guide calls for revenue **+3–7% sequen |

@@ -1,0 +1,210 @@
+{
+ "hyper_share": {
+  "2026": 0.32876901798063624,
+  "2027": 0.33,
+  "2028": 0.3
+ },
+ "big4_total_jpm": {
+  "2027": 1229.3,
+  "2028": 1356.3393846760675
+ },
+ "legs": {
+  "2027_central_house_jpm": {
+   "hyper": 406,
+   "nonhyper": 520,
+   "total": 926,
+   "resid": 693,
+   "hyper_total": 1229
+  },
+  "2027_house_consensus": {
+   "hyper": 335,
+   "nonhyper": 520,
+   "total": 855,
+   "resid": 693,
+   "hyper_total": 1014
+  },
+  "2027_lo": {
+   "hyper": 335,
+   "nonhyper": 416,
+   "total": 751,
+   "resid": 693,
+   "hyper_total": 1014
+  },
+  "2027_hi": {
+   "hyper": 406,
+   "nonhyper": 624,
+   "total": 1030,
+   "resid": 693,
+   "hyper_total": 1229
+  },
+  "2028_central_house_jpm": {
+   "hyper": 407,
+   "nonhyper": 1022,
+   "total": 1429,
+   "resid": 1363,
+   "hyper_total": 1356
+  },
+  "2028_house_consensus": {
+   "hyper": 336,
+   "nonhyper": 1022,
+   "total": 1358,
+   "resid": 1363,
+   "hyper_total": 1119
+  },
+  "2028_lo": {
+   "hyper": 336,
+   "nonhyper": 818,
+   "total": 1153,
+   "resid": 1363,
+   "hyper_total": 1119
+  },
+  "2028_hi": {
+   "hyper": 407,
+   "nonhyper": 1226,
+   "total": 1633,
+   "resid": 1363,
+   "hyper_total": 1356
+  },
+  "2027_gs_ai_infra_1300": {
+   "hyper": 406,
+   "nonhyper": 81,
+   "total": 487,
+   "resid": 108,
+   "hyper_total": 1229
+  },
+  "2028_gs_ai_infra_2000": {
+   "hyper": 407,
+   "nonhyper": 337,
+   "total": 744,
+   "resid": 450,
+   "hyper_total": 1356
+  },
+  "2027_nsr_2190": {
+   "hyper": 406,
+   "nonhyper": 748,
+   "total": 1154,
+   "resid": 998,
+   "hyper_total": 1229
+  },
+  "2028_nsr_3330": {
+   "hyper": 407,
+   "nonhyper": 1335,
+   "total": 1742,
+   "resid": 1780,
+   "hyper_total": 1356
+  }
+ },
+ "marks_4name": {
+  "BofA 09-15": {
+   "2027": 215,
+   "2028": 125
+  },
+  "JPM 10-15": {
+   "2027": 255,
+   "2028": 300
+  },
+  "GS scaled 5->4 names (skeptic)": {
+   "2027": 384
+  },
+  "MS Nowak 09-07 \"$290bn debt needed\" (cum 27-28?)": {
+   "2027": 145,
+   "2028": 145
+  }
+ },
+ "nsr_rescaled": {
+  "2027": {
+   "nsr_ocf_3.7tn": 491,
+   "consensus_ocf_5.7tn": 757
+  },
+  "2028": {
+   "nsr_ocf_3.7tn": 747,
+   "consensus_ocf_5.7tn": 1150
+  }
+ },
+ "reconciliation": {
+  "2027": {
+   "ai_capex_minus_ocf": 271,
+   "non_ai_capex": 37,
+   "returns_est": 100,
+   "sum": 408,
+   "modelled_debt": 406
+  },
+  "2028": {
+   "ai_capex_minus_ocf": 354,
+   "non_ai_capex": -194,
+   "returns_est": 100,
+   "sum": 259,
+   "modelled_debt": 407
+  }
+ },
+ "system_usd_bn": {
+  "OECD sovereign+corporate borrowing 2026 (as reported, gross)": 29000,
+  "OECD sovereign gross 2026": 18000,
+  "OECD corporate bonds 2025": 6800,
+  "OECD corp bonds + syndicated loans 2025": 13800,
+  "US LT fixed-income issuance 2025 (SIFMA)": 11500,
+  "USD IG gross 2027 (GS)": 2400,
+  "US Treasury net marketable borrowing CY2026 (~Q2 190 + Q3 739 + Q4 628 + Q1 EST ~550)": 2100,
+  "US Treasury net >=10y supply after Fed holdings (Exante via Nascimento 09-11)": 400,
+  "Europe sovereign+EU gross 2026 (FR 310 + DE cap-mkt 349.5 + IT ~330 + ES MLT 176.9 + EU 180) EUR + UK 246.2 GBP": 1903,
+  "China govt net 2026 ex hidden-debt swap (5.89 + 1.3 + 4.6 CNY tn)": 1661,
+  "Japan JGB gross FY26": 1205,
+  "Japan JGB new money FY26": 191,
+  "Private credit AUM (STOCK)": 1850,
+  "Private credit dry powder (STOCK)": 500,
+  "Private capital dry powder all strategies (STOCK, GS)": 4500,
+  "IEA energy investment 2026 (spend, compare with AI CAPEX not financing)": 3400,
+  "World gross saving (~27% x 118tn GDP)": 31860,
+  "World GDP 2026": 118000,
+  "US GDP 2026": 31800
+ },
+ "ratios_2027_central": {
+  "OECD sovereign+corporate borrowing 2026 (as reported, gross)": 3.2,
+  "OECD sovereign gross 2026": 5.1,
+  "OECD corporate bonds 2025": 13.6,
+  "OECD corp bonds + syndicated loans 2025": 6.7,
+  "US LT fixed-income issuance 2025 (SIFMA)": 8.1,
+  "USD IG gross 2027 (GS)": 38.6,
+  "US Treasury net marketable borrowing CY2026 (~Q2 190 + Q3 739 + Q4 628 + Q1 EST ~550)": 44.1,
+  "US Treasury net >=10y supply after Fed holdings (Exante via Nascimento 09-11)": 231.5,
+  "Europe sovereign+EU gross 2026 (FR 310 + DE cap-mkt 349.5 + IT ~330 + ES MLT 176.9 + EU 180) EUR + UK 246.2 GBP": 48.7,
+  "China govt net 2026 ex hidden-debt swap (5.89 + 1.3 + 4.6 CNY tn)": 55.8,
+  "Japan JGB gross FY26": 76.9,
+  "Japan JGB new money FY26": 485.7,
+  "Private credit AUM (STOCK)": 50.1,
+  "Private credit dry powder (STOCK)": 185.2,
+  "Private capital dry powder all strategies (STOCK, GS)": 20.6,
+  "IEA energy investment 2026 (spend, compare with AI CAPEX not financing)": 27.2,
+  "World gross saving (~27% x 118tn GDP)": 2.9,
+  "World GDP 2026": 0.8,
+  "US GDP 2026": 2.9
+ },
+ "ratios_2028_central": {
+  "OECD sovereign+corporate borrowing 2026 (as reported, gross)": 4.9,
+  "OECD sovereign gross 2026": 7.9,
+  "OECD corporate bonds 2025": 21.0,
+  "OECD corp bonds + syndicated loans 2025": 10.4,
+  "US LT fixed-income issuance 2025 (SIFMA)": 12.4,
+  "USD IG gross 2027 (GS)": 59.5,
+  "US Treasury net marketable borrowing CY2026 (~Q2 190 + Q3 739 + Q4 628 + Q1 EST ~550)": 68.0,
+  "US Treasury net >=10y supply after Fed holdings (Exante via Nascimento 09-11)": 357.2,
+  "Europe sovereign+EU gross 2026 (FR 310 + DE cap-mkt 349.5 + IT ~330 + ES MLT 176.9 + EU 180) EUR + UK 246.2 GBP": 75.1,
+  "China govt net 2026 ex hidden-debt swap (5.89 + 1.3 + 4.6 CNY tn)": 86.1,
+  "Japan JGB gross FY26": 118.6,
+  "Japan JGB new money FY26": 749.5,
+  "Private credit AUM (STOCK)": 77.2,
+  "Private credit dry powder (STOCK)": 285.8,
+  "Private capital dry powder all strategies (STOCK, GS)": 31.8,
+  "IEA energy investment 2026 (spend, compare with AI CAPEX not financing)": 42.0,
+  "World gross saving (~27% x 118tn GDP)": 4.5,
+  "World GDP 2026": 1.2,
+  "US GDP 2026": 4.5
+ },
+ "exante_duration_crowding": {
+  "hyper >10y issuance 2026": 200,
+  "hyper >10y issuance 2027": 300,
+  "UST net >=10y after Fed": 400,
+  "share_2026": 0.5,
+  "share_2027": 0.75
+ }
+}

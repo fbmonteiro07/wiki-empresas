@@ -1,6 +1,6 @@
 {
  "_about": "Hand-edited ledger of machine-transcription garbles (Notion AI, Bloomberg ASR, auto-translation) seen in the archive, with the correct reading. Used by E:\\.claude\\scripts\\transcript_qa.py (source-file scan, page-diff scan) and by ingest_notion_meetings.py (writes a 'Transcription QA' block into every archived Notion file). Keys are matched with word boundaries, case-sensitive unless 'ci' is true. 'keep_when' = regex contexts (same line, ~80 chars around the hit) where the token is legitimate and must NOT be flagged. Add an entry the first time a garble is caught; never delete one. Standing rule (Felipe, 2026-09-28): ALWAYS double-check transcript content — acronyms, names, units, numbers — before it travels to a page.",
- "_updated": "2026-10-21",
+ "_updated": "2026-10-22",
  "terms": {
   "Smolik": {
    "correct": "Shmulik (Mark Shmulik, Bernstein US Internet)",
@@ -2244,6 +2244,158 @@
     "transcribed"
    ],
    "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
+  },
+  "Petracchi": {
+   "correct": "Quatrochi (Joe Quatrochi, Wells Fargo semiconductors & semicap analyst)",
+   "domain": "names",
+   "rule": "ASR of the analyst's own introduction ('my name is Joe Petracchi'); the Wells Fargo invite spells Quatrochi.",
+   "ci": true,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-22 (Notion: Wells Fargo ASML callback notes call, replay)"
+  },
+  "Vaneeja": {
+   "correct": "Vinija (Vinija Jain, Google / Alphabet machine-learning leader)",
+   "domain": "names",
+   "rule": "ASR of the StoneX corporate-access guest's first name; the invite says 'Vinija Jain'.",
+   "ci": true,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-22 (Notion: StoneX Google ML-leader group call)"
+  },
+  "Vanija": {
+   "correct": "Vinija (Vinija Jain)",
+   "domain": "names",
+   "rule": "see 'Vaneeja'.",
+   "ci": true,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-22 (Notion: StoneX Google ML-leader group call)"
+  },
+  "Benija": {
+   "correct": "Vinija (Vinija Jain)",
+   "domain": "names",
+   "rule": "see 'Vaneeja' (host's address).",
+   "ci": true,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-22 (Notion: StoneX Google ML-leader group call)"
+  },
+  "Venetia": {
+   "correct": "Vinija (Vinija Jain) when the sentence addresses the StoneX guest; Venetia is otherwise a real name",
+   "domain": "names",
+   "rule": "see 'Vaneeja'.",
+   "ci": false,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-22 (Notion: StoneX Google ML-leader group call)"
+  },
+  "Vineet": {
+   "correct": "Vinija (Vinija Jain) when the host addresses the StoneX guest; Vineet is otherwise a real name",
+   "domain": "names",
+   "rule": "see 'Vaneeja'.",
+   "ci": false,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-22 (Notion: StoneX Google ML-leader group call)"
+  },
+  "Blaine": {
+   "correct": "Blayne (Blayne Curtis, Jefferies US semiconductors)",
+   "domain": "names",
+   "rule": "ASR of the Jefferies analyst's first name on every Jefferies semis call; the Zoom registration spells Blayne.",
+   "ci": false,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-22 (Notion: Jefferies Semis Update Call; also 2026-09-18 bus-tour recap)"
+  },
+  "MicroVexels": {
+   "correct": "micro-VCSELs (micro vertical-cavity surface-emitting lasers)",
+   "domain": "optical",
+   "rule": "ASR of 'micro-VCSELs' in the OCP / optical scale-up sentence.",
+   "ci": true,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-22 (Notion: Jefferies Semis Update Call, Curtis)"
+  },
+  "ALCs": {
+   "correct": "ALCs = Active Light Cables (Credo's micro-VCSEL-based optical cable line, 30-50 m reach, demoed at OCP Oct-26, revenue from FY28 per CRDO.md) — a REAL product term, not a garble; distinct from Credo's copper AECs",
+   "domain": "optical",
+   "rule": "Jefferies Semis Update Call: 'they use these ALCs, which are VCSEL-based'. First flagged UNRESOLVED on 2026-10-22, resolved the same run from the CRDO page (Jefferies OCP Takeaways 10-16, BofA 10-19).",
+   "ci": false,
+   "keep_when": [
+    "ALC",
+    "Active Light",
+    "transcribed"
+   ],
+   "first_seen": "2026-10-22 (Notion: Jefferies Semis Update Call, Curtis)"
+  },
+  "EEV tools": {
+   "correct": "EUV tools",
+   "domain": "semicap",
+   "rule": "ASR of 'EUV' in the ASML services sentence ('a growing number of EEV tools coming off 1-year warranty').",
+   "ci": true,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-22 (Notion: Wells Fargo ASML callback notes call, Quatrochi)"
+  },
+  "WP+": {
+   "correct": "WFE+ (process control grows faster than wafer fab equipment)",
+   "domain": "semicap",
+   "rule": "ASR of 'WFE-plus' in the KLA sentence ('It should be a WP+ end market').",
+   "ci": false,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-22 (Notion: Jefferies Semis Update Call, Curtis)"
+  },
+  "4-term premium": {
+   "correct": "4-turn premium (four P/E turns above the group)",
+   "domain": "valuation",
+   "rule": "ASR of 'four-turn' in the KLA valuation sentence ('historically has traded at a 4-term premium'); a multiple premium is counted in turns.",
+   "ci": false,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-22 (Notion: Jefferies Semis Update Call, Curtis)"
+  },
+  "TexSense Instruments": {
+   "correct": "Texas Instruments (TXN)",
+   "domain": "names",
+   "rule": "ASR; 'Texan' is the analysts' spoken shorthand for TI and is left as is.",
+   "ci": true,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-22 (Notion: Wells Fargo TXN/LRCX EPS recap call, Quatrochi)"
+  },
+  "Shiba news": {
+   "correct": "UNRESOLVED - an HDD-negative news item ~mid-October 2026 named by the Jefferies host; do not resolve from memory",
+   "domain": "storage",
+   "rule": "Jefferies Semis Update Call host: 'HDDs 4 weeks ago were super consensus before like the Shiba news'.",
+   "ci": false,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-22 (Notion: Jefferies Semis Update Call, host)"
+  },
+  "Kimi-K": {
+   "correct": "Kimi K2 (Moonshot AI open-weight model) — probable; the speaker said 'Moonshot Kimi-K'",
+   "domain": "ai-labs",
+   "rule": "ASR clipped the model version in the Chinese open-weight list ('DeepSeek, Moonshot Kimi-K, Z.AI's GLM'); quote as transcribed, read as Kimi K2.",
+   "ci": false,
+   "keep_when": [
+    "transcribed"
+   ],
+   "first_seen": "2026-10-22 (Notion: StoneX Google ML-leader group call, Vinija Jain)"
   }
  },
  "summary_traps": [
@@ -2253,7 +2405,8 @@
   "2026-10-14 (GS Alec Phillips meeting): the summary wrote 'Michigan Senate race (Abdullah al-Saeed vs. Susan Collins-equivalent dynamic)' - conflating the Michigan (El-Sayed) and Maine (Collins) races - and 'expected to accelerate in 2025' for data-center deals pushed to January (next year = 2027). Check polling-error coefficients ('37 bp', '0.7') against the transcript before use.",
   "2026-10-16: the Notion summary (a) retitled Micron's post-F4Q26 IR call 'Post-3Q FY26' (wrong fiscal quarter) and hung the reported '$33B free cash flow' on 'Fiscal Q1 27' (the transcript says 'the last quarter we reported' = F4Q26; FQ1'27 is only 'significantly stronger'); (b) wrote CXMT's 2025 capacity add as '$45K' - it is 45K wafers per month, not dollars; (c) fused an audience question ('$60 to $64 billion ... brokers see 2028 capex higher than $105') with the expert's conditional '$100 billion' arithmetic into one 'CapEx trajectory' bullet (BTGP TSMC expert).",
   "2026-10-19: the Notion summary of the JPM TSMC replay wrote 'Amkor (EMA technology)' / 'V9 locked in with Amkor' - the transcript says only 'use EMA when TSMC go off in 27 and 28' and never names Amkor (fabricated entity). Lesson for the lane itself: grep transcripts case-insensitively before declaring a summary figure absent - 'Backlog where we look at Google and Amazon both at $500 billion' IS in the JPM Internet transcript (capitalised).",
-  "2026-10-19: the JPM Internet Zoom host introduced 'eBay, slide 36' while the content (Depop dilution, 2-year GMS stack, Vinted) is Etsy — a HOST slip the Notion summary copied; ticker confusion is a trap even when the transcript is right."
+  "2026-10-19: the JPM Internet Zoom host introduced 'eBay, slide 36' while the content (Depop dilution, 2-year GMS stack, Vinted) is Etsy — a HOST slip the Notion summary copied; ticker confusion is a trap even when the transcript is right.",
+  "2026-10-22: (a) the Notion summary of the Wells Fargo TXN/LRCX recap wrote 'Lam's CEO Doug' - Doug Bettinger is Lam's CFO (CEO Tim Archer); it also presented a QUESTIONER's premise ('AI is contributing about 10% to their growth') as TI's statement; (b) the ASML callback summary turned the analyst's estimates into 'guidance' ('Gross margin guidance of 57%+', 'ASP guidance') and wrote 'likely 7-9 units' for High-NA 2028 where the transcript says 'high single digit'; (c) the META recap summary stated the analyst's guesses ('credit spreads tighten', 'raise within next week') as conclusions and dropped the unit on '$31-32 to $32-33' (2027 EPS, buy-side); (d) the StoneX Jain summary credited the HOST's '$50 billion per gigawatt' data-center cost to the discussion and extrapolated 'labs hire aggressively for AI-native chip design' from one job-postings remark; (e) the Jefferies Curtis summary credited the HOST's flow colour ('long-only selling and hedge fund shorting ~12 weeks', 'WFE $300B in 2028') to Blayne and wrote 'AEC/VCSEL-based' where the transcript says 'ALCs' (unresolved)."
  ],
  "Fenyman": {
   "correct": "Feynman (NVIDIA 2028 GPU generation)",
