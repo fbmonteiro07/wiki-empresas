@@ -8,7 +8,29 @@ _Wiki · initiated 2026-10-11 · EUR unless stated · [Master index](00_INDEX.md
 
 **Working view, 2026-10-11:** constructive on the optical opportunity, valuation-sensitive on the equity. The base research scenario produces **€0.37 normalized 2027 EPS**, implying **24.9x earnings** and **3.3% FCF yield after lease principal** at the **$10.36 ADR close on 2026-10-09**. Those are model outputs, not broker targets. The optical order book must become deliveries, margin and cash to justify a stronger conclusion. [Workbook](../outputs/nok-2026-10-11/NOK_simplified_model.xlsx) · [Worked model and limitations](../outputs/nok-2026-10-11/model-methodology.md).
 
-## Current state (latest quarter)
+## Current state (latest quarter — Q3 2026, reported 2026-10-22)
+
+**🆕 Q3 2026 (2026-10-22): revenue at the top of the July guide, EBIT far above it, 2027 Optical+IP guided +25–30% — but the cash-conversion assumption was cut to 35–55%.** (Nokia 6-K, interim report Q3 2026, 2026-10-22, S15. Webcast 15:00 EEST the same day — **transcript not yet on MarketBeat/Yahoo; pending.**)
+
+| EURm, comparable | Q3 2026 | Q2 2026 | Q3 2025 | q/q | y/y (cc) |
+|---|---:|---:|---:|---:|---:|
+| Group net sales | **5,154** | 4,815 | 4,705 | **+7.0%** | +10% (+9% cc & portfolio) |
+| Group comparable EBIT | **605** (11.7%) | 434 | 448 (9.5%) | **+39%** | +35% |
+| NI net sales / EBIT | **2,158 / 216** (10.0%) | 2,037 / 166 | 1,850 / 143 | | +15% cc |
+| — Optical / IP / Fixed sales | **933 / 839 / 386** | | 782 / 578 / 490 | | **+18% / +43% / −22% cc** |
+| MI net sales / EBIT | **2,902 / 420** (14.5%) | 2,680 / 310 | 2,755 / 355 | | +5% cc |
+| AI & Cloud net sales | **631** | 446 | 279 | +41% | **+123% cc** |
+| Comparable diluted EPS (cont. ops), € | **0.09** | | 0.06 | | +50% |
+| Company-definition FCF | **(99)** | (732) | | | 9M: **(205)** |
+
+- **Graded vs the July guide (Nokia, 2026-07-23, S1):** revenue **+3–7% q/q → actual +7.0%** (top end); comparable EBIT **"largely flat from Q2 into Q3" → actual +39% (€605m vs €434m)**. ⚠️ Part of it is pulled forward: MI net sales grew *"in part due to acceleration of revenue from Q4 into Q3"* (Radio Networks +10% cc). Reported EBIT only **€196m (3.8%)** after **€357m restructuring** charges; reported diluted EPS €0.03.
+- **AI & Cloud:** sales **€631m (+123% cc)**; order intake **+118% y/y**, with Hotard citing **€1.5bn of new AI & Cloud orders** in Q3 — ⚠️ below Q2's €2.8bn, so the y/y rate is strong but the sequential order figure fell; backlog not quantified. NI gross margin **fell 150bps to 41.2%** on *"product mix and a ramp-up of new products for AI & Cloud customers in IP Networks"*, with recovery expected in Q4. MI **Core Software −13% cc**, partly on *"supply chain constraints for server infrastructure."*
+- **Outlook — FY2026 comparable EBIT €2.1–2.6bn unchanged**; Q4 net sales assumed **+20–24% q/q** and FY EBIT **"above the mid-point."** Assumption changes vs July (old → new): Optical+IP 2026 growth **18–20% → "somewhat above" 18–20%** (NI 12–14% unchanged); comparable financial income **+€150–250m → +€300–400m** (venture-fund gains); tax **~26–27% → ~26%**; capex **€800–900m → €750–850m** (some manufacturing cash timing to 2027; expansion "on-track"); **FCF conversion 55–75% → 35–55%**, with an **extra €400m of working capital** to secure supply for 2027; restructuring charges **€800m → €1,100m**, cash **€700–800m → €800–900m**. Net cash **€2,584m** (Q2 €2,776m).
+- **2027, new:** *"We expect our combined Optical and IP Networks businesses to grow between 25% and 30% in 2027"*; Infinera integration *"by the end of 2026, one year ahead of plan with EUR 200 million of net synergies"*; Google partnership supporting Google's **€13bn Finland investment**; first live-network AI-RAN call with T-Mobile and NVIDIA (Hotard, 6-K, 2026-10-22).
+- **Distribution:** €0.03 dividend, record 2026-10-27, paid 2026-11-05; €0.03 of the €0.14 authorisation remains. **Next print: Q4/FY2026 on 2027-01-28.**
+- **Against the page's 2026-10-11 research model (model NOT changed; deltas only):** (1) **Revenue** — 9M comparable €14.405bn plus the company's +20–24% Q4 assumption gives **FY €20.59–20.80bn**, a little below the model's **€20.85bn** (model now implies Q4 €6.45bn vs the company's €6.18–6.39bn). (2) **EBIT** — model **€2.40bn** sits inside "above the €2.35bn midpoint"; it now needs Q4 ≈ **€1.06bn** (was €1.23bn at the Q3 guide midpoints). (3) **FCF** — model **€1.56bn** 2026E (~65% of €2.40bn EBIT) is **above the new 35–55% conversion range** (≈€0.84–1.32bn at €2.40bn EBIT); 9M FCF is −€205m. (4) **2027 growth** — model base Optical **+20%** / IP **+15%** are both below the company's new **+25–30% combined** guide (bull scenario's Jefferies ~31% Optical is now closer to the company). (5) **Financial income** — model's €200m 2027 assumption vs a 2026 guide raised to €300–400m.
+
+**Q2 2026 context (July recast) — below as originally recorded.**
 
 **Use the July recast.** FWA CPE and Enterprise Campus Edge became discontinued operations; earlier segment allocations also changed. **FY2025 comparable sales €19,480m / EBIT €2,092m** and **NI EBIT €760m / MI €1,531m** are the matched historical base. Nokia's **2026 EBIT guide of €2.1–2.6bn** replaced **€2.0–2.5bn** solely for the perimeter change; it was not an operational upgrade. CEO Justin Hotard expected somewhat above the new midpoint. (Nokia, **2026-07-23**, S1/S2.)
 
@@ -106,7 +128,9 @@ Source: **research sensitivity, 2026-10-12**, using the source inputs above and 
 
 ## Catalysts / what to watch
 
-- **2026-10-22 — Q3 results:** Optical/IP deliveries and new orders, supply constraints and MI software phasing. The July guide calls for revenue **+3–7% sequentially** and EBIT broadly flat on Q2. Track order-to-sales conversion separately. (Nokia **2026-07-23**, S1 pp.2,30.)
+- **✅ RESOLVED 2026-10-22 — Q3 results:** revenue +7.0% q/q (top of +3–7%), comparable EBIT €605m vs a "largely flat" €434m guide (part MI pull-forward from Q4), Optical +18% / IP +43% cc, AI & Cloud sales +123% cc; FY EBIT guide unchanged with "above the mid-point", 2027 Optical+IP +25–30% — **bull on the P&L and the 2027 guide; bear on cash** (FCF conversion cut to 35–55%, +€400m working capital, restructuring charges raised to €1.1bn). Call transcript pending; stock reaction not checked. (Nokia 6-K, 2026-10-22, S15.)
+- **2027-01-28 — Q4/FY2026 results:** Q4 net sales +20–24% q/q; FY comparable EBIT above €2.35bn; FCF inside 35–55% conversion; first formal 2027 outlook against the +25–30% Optical+IP framing; NI gross-margin recovery.
+- _(Original pre-print entry, 2026-10-11:)_ **2026-10-22 — Q3 results:** Optical/IP deliveries and new orders, supply constraints and MI software phasing. The July guide calls for revenue **+3–7% sequentially** and EBIT broadly flat on Q2. Track order-to-sales conversion separately. (Nokia **2026-07-23**, S1 pp.2,30.)
 - **Q4 2026 — profit and cash conversion:** At Q3 guide midpoints, the base requires Q4 revenue **€6.55bn**, EBIT **€1.23bn**, margin **18.9%**, and H2 FCF **€1.67bn**. These are research requirements. Check software recognition, NI profitability and the cash release. (Research scenario **2026-10-11**, using Nokia **2026-07-23**, S1.)
 - **2027 — capacity conversion:** Check San Jose/Pennsylvania output, yield, customer qualification and commercial shipments. Growth without NI margin progress would weaken the base case; a ramp announcement does not close this test. (Nokia ramp plans **2026-07-23**, S1 p.3; research tests **2026-10-11**.)
 
@@ -131,9 +155,12 @@ Customer spending, optical supply and integration execution; patent-licensing va
 - **S11 — Ciena / David Rothenstein, 2026-09-16:** [Investor Forum CSO deck](../relat%C3%B3rios%20bons/260916-Ciena-Investor-Forum-David-Rothenstein-CSO-Preso-Final.html), slide 12 AI-WAN TAM.
 - **S12 — Nokia, 2026-03-18:** [OFC briefing](../NOK/sources/dci-2026-10-12/2026-03-18_Nokia_OFC.pdf), slides 4 and 7.
 - **S13 — 650 Group / Alan Weckel, 2026-07-14, notes by Fernanda Watkins:** [Archived call](../relat%C3%B3rios%20bons/5455e244-9c8c-4c65-9884-6e6d1ffa28b4_Alan_Weckel_-_Group_VC.html), pp.1,3–4.
+- **S15 — Nokia / Justin Hotard, 2026-10-22:** [6-K — Interim report Q3 2026 (stock exchange release + full report)](../NOK/NOK_6-K_2026-10-22_0001104659-26-117972.html). Also [6-K 2026-10-15](../NOK/NOK_6-K_2026-10-15_0001104659-26-116141.html) — managers' transactions (Hammarén, Heard, Mahajan, Owczarek; share-based incentive receipts, 2026-10-15) + share settlement; no financial content. Q3 call transcript pending.
 - **S14 — Dell'Oro / Jimmy Yu, 2026-06-16:** [Disaggregated WDM and IPoDWDM forecast](https://www.delloro.com/news/ipodwdm-market-forecast-to-grow-at-27-percent-cagr/). Redburn/Arista/GS and Jefferies relay provenance retained in the [optical theme](themes/optical-cpo.md) and [CIEN page](CIEN.md).
 
 ## Changelog
+
+- **2026-10-22 — print ingest (Q3'26 6-K; call transcript pending; no desk e-mails):** added Q3 block to `## Current state` (comparable P&L table, NI/MI, Optical/IP/Fixed cc growth, AI & Cloud sales/orders, FCF, outlook assumption changes, 2027 Optical+IP +25–30%, dividend, deltas vs the research model); Catalysts: Q3 resolved + Q4 print 2027-01-28; Sources S15. **Superseded (old → new, company assumptions):** Q3 seasonality guide (+3–7% sales, EBIT flat) → actual +7.0% / +39%; Optical+IP 2026 18–20% → "somewhat above"; financial income +€150–250m → +€300–400m; tax ~26–27% → ~26%; capex €800–900m → €750–850m; FCF conversion 55–75% → 35–55%; restructuring charges €800m → €1,100m, cash €700–800m → €800–900m; heading "(latest quarter)" → "(latest quarter — Q3 2026, reported 2026-10-22)"; the July Q2 block is kept below as context. **Research model unchanged** (2026E revenue €20.85bn / EBIT €2.40bn / FCF €1.56bn; 2027 Optical/IP +20%/+15%) — deltas logged in Current state: FCF above the new conversion range, revenue slightly above the company's Q4-implied FY, 2027 growth below the new company framing.
 
 - **2026-10-12 — Optical TAM/share/EPS extension:** added historical MS/Dell'Oro DCI share charts, 650 Group's ~$30bn2030 DCI thirds, distinct market-scope references and optics-only 2028 EPS sensitivities. Original 2026-10-11 forecast retained unchanged: 2028 Optical €5.371995bn, NI margin14%, group EPS€0.423535; new conditional group outcomes €0.395546/€0.450757/€0.531739 hold other businesses at that Base. Standalone Optical margin and residual allocation are assumptions. Independent review PARTIAL; bullNI19.4%stretch flagged. Earlier DCI workbook remains a separate dated illustration. No rating, price target or approved estimate changed.
 

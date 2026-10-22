@@ -30,7 +30,39 @@ World's largest audio-streaming platform: **761M MAU** and **293M Premium Subscr
 | **Main buyer(s)** | Consumers (293M Premium subs / 761M MAU); advertisers & podcast/biddable demand on the ad tier |
 | **Key suppliers** | Music majors — Universal, Sony, Warner (licenses + minimum-guarantee royalties); cloud/compute (Google Cloud) for streaming + AI inference |
 
-## Current state (latest quarter)
+## Current state (latest quarter — Q3 2026, reported 2026-10-22 BMO)
+
+**🆕 2026-10-22 (BMO) — Q3 2026: IN LINE ON THE QUARTER, AND THE Q4 GROSS-MARGIN GUIDE (33.8%) CLEARED THE BAR THE PAGE WAS WORRIED ABOUT.** (Spotify 6-K EX-99.1 "Q3 2026 Update", 2026-10-22; € basis, IFRS. Q&A session 8:00am ET with co-CEOs Alex Norström / Gustav Söderström and CFO Christian Luiga — **transcript not yet on disk; pending.**)
+
+| Q3 2026 | Actual | Company guide (08-04) | Cons / JPMe (JPM 10-15) | Read |
+|---|---:|---:|---:|---|
+| MAUs | **788M** (+11M q/q, +11% y/y) | 788M | 789M / 788M | in line |
+| Premium subs | **306M** (+6M, +9% y/y) | 305M (+5M) | 305M / 305M | **+1M beat** |
+| Revenue | **€4,969M** (+16% y/y, **+14% cc**) | €5.0B | €4,984M / €4,966M | "in-line" per company; ~€15M below cons |
+| Gross margin | **33.0%** (+136bps y/y) | 32.9% | 32.9% / 33.0% | +10bps |
+| Operating income | **€672M** (13.5%) | €670M | €672M / €677M | in line — **incl. €22M Social Charges, €13M above forecast** |
+| FCF | **€735M** (LTM €3.2bn) | — | — | −9% y/y on working capital |
+
+- **Segments:** Premium revenue **€4,487M, +17% (+15% cc)**; Premium ARPU **€4.95, +9.3% y/y (+7.5% cc)**, "price increase benefits, partially offset by product/market mix"; Premium GM **34.5%** (+130bps). **Ad-Supported €482M, +10% (+9% cc)** — impressions up, "softness in pricing" in music ads; automated channels the largest growth contributor; Ad GM **18.7%** (+105bps). ⚠️ Segment figures are on the **Jan-2026 reclassified** basis (some Ad-Supported activities moved into Premium; priors recast) (6-K, 2026-10-22).
+- **Opex +26% y/y; +19% ex-FX and Social Charges**, "driven by an increase in marketing alongside cloud and AI spend" — the reinvestment the page has been tracking. Headcount **7,284**. FX aided revenue growth **~190bps vs ~200bps guided**.
+- **Below the line:** net income **€518M**, diluted EPS **€2.48** (Q3'25: €899M / €3.28, which carried a tax benefit). Cash + ST investments **€9.9bn**.
+- **Capital return:** **$1.1bn repurchased YTD through 10-21** — "full neutralization of the dilution from our employee equity programs in 2026 and additional returns"; ~3M shares (~1.5% of outstanding) bought back since the August-2025 restart (6-K, 2026-10-22).
+- **Product:** audiobooks to **180+ markets by YE26** (from 22); Creator Memberships (34 markets); Partner Program +35 markets; **Spotify integration with [[META]]'s Muse agent**; Managed Accounts; Taste Profile (US Premium). No AI-music tier / Remix launch date in the release.
+
+**Q4 2026 guide (company, 2026-10-22) vs consensus / JPMe (JPM · Anmuth, 2026-10-15):**
+
+| Q4'26 | Guide | Cons | JPMe | Buyside bar |
+|---|---:|---:|---:|---|
+| MAUs | **818M** (+~30M) | 820M | 820M | 820M+ (JPM) — **slightly light** |
+| Premium subs | **316M** (+~10M) | 315M | 314M | 315M+ (JPM); ~9M adds (UBS desk) — **beat** |
+| Revenue | **€5.2bn** (assumes ~230bps FX tailwind) | €5,246M | €5,201M | — in line / slightly light vs cons |
+| Gross margin | **33.8%** | 33.8% | **33.4%** | 33.3–33.5% (JPM) · 33.5–33.6% (UBS desk) · 33.7% (Bernstein desk) — **cleared** |
+| Operating income | **€820M** (incl. €6M Social Charges at $487.38) | €808M | €770M | €775M+ (JPM) — **beat** |
+
+- 🔭 **AGAINST JPM's "4Q GM below consensus, but known" (Anmuth, 10-15 deck and 10-19 Zoom, *"the Street consensus number seems to be too high and we're at 33.4"*):** the company guided **33.8% — exactly the consensus JPM called too high**, and €820M OI vs JPMe €770M. The $200M incremental-investment drag JPM baked into 4Q did not show up in the guide. Page's "Q4 GM is the stated investor worry" (09-14 row) — resolved favourably on the guide.
+- **Bernstein Tech desk (Tyler Seidman, 2026-10-22 — desk commentary, not research):** *"Good print Q3 subs in-line with Ian's 306M (+1M vs. cons). Guided Q4 subs to 316M, we are at 317M & street was 315M, so cleared the bar"*; *"Q4 GMs guided at 33.8% 10bps ahead of our 33.7% and the buy side bogie"*; *"Nitpick around MAU guidance"*; *"the market will lean into GM upside > MAU movements."* (Ian = Bernstein's SPOT analyst as named by the desk; surname not given.)
+- **UBS TMI desk (Christina Dwyer, 2026-10-22 — sales commentary, not research):** *"SPOT (+) only +4% here vs options pricing ~9%, despite results coming in better than feared. 4Q GM guide is 33.8% vs 33.5-33.6% bogey… 4Q premium sub adds are guided to 10M vs ~9M bogey"*; the call *"has historically proven to be more of a swing factor"* as investors await monetization signposts and *"a more official AI remix roll out."*
+- ⚠️ **Open until the transcript lands:** AI-music tier / Remix timing (Wells Fargo had moved it to Q2'27, JPM "more 1Q"), WMG/Sony AI deals, 2027 framework, buyback size, the MAU-guide "nitpick."
 
 **🆕🔴 2026-09-09 — BARCLAYS BUILT THE FIRST QUANTITATIVE FRAMEWORK FOR AUDIO-STREAMING INFERENCE COSTS AND CONCLUDES THE SHAPE OF THE CURVE MATTERS MORE THAN ITS LEVEL: THE TWO COST BUCKETS WITH REVENUE ATTACHED ARE "SELF-LIMITING BY CONSTRUCTION", AND THE ONE WITHOUT A REVENUE OFFSET IS THE SMALLEST AND THE MOST EXPOSED TO UNIT-COST DEFLATION.** (Barclays · **Kannan Venkateshwar** et al., "Spotify: Why inference costs are unlikely to derail the margin story", **Overweight, PT $565**, px **$542.43**, **2026-09-09**)
 - 🔴 **THE MECHANISM: "New offerings such as REMIX and PERSONAL PODCASTS are being monetized through PAID ADD-ONS OR USAGE-BASED CREDITS, providing a DIRECT MECHANISM TO OFFSET inference costs. In contrast, features such as AI DJ and TALK TO SPOTIFY are BUNDLED WITHIN THE PREMIUM SUBSCRIPTION, meaning the associated inference expense is ABSORBED BY SPOTIFY and therefore has DIFFERENT GROSS MARGIN IMPLICATIONS."**
@@ -77,7 +109,9 @@ World's largest audio-streaming platform: **761M MAU** and **293M Premium Subscr
 **🆕 CONFERENCE WEEK — 2026-09-08 to 09-10 (GS Communacopia, SF · Citi TMT, NYC · BofA Media/Entertainment/Communications, NYC).** BofA's desk sets the expectation bluntly: *“I will go out on a limb and predict that 85%-100% of the AI Infrastructure companies you meet with this week at conferences WILL SOUND PHENOMENAL”* (BofA TMT spec sales · Brian Fenske, 2026-09-07 — *sales commentary, not research*). This name's slot:
 - **Wed 09-09, 6:45PM ET — Co-CEO at GS Communacopia.** ➤ *BofA's desk flags this one specifically: “not much history with the new co-CEOs at conferences, so will be paying attention.”*
 
-- **Q2 FY26 print** (late July) — watch MAU vs 778M guide, ARPU +7–7.5% delivery, and whether OI troughs as guided on AI reinvestment.
+- **✅ RESOLVED 2026-10-22 — Q3 2026 print:** Q3 in line (MAU 788M = guide, subs 306M vs 305M, GM 33.0% vs 32.9%, OI €672M vs €670M, revenue €4,969M vs €5.0B); **Q4 guide GM 33.8% / OI €820M / subs 316M cleared the buyside bars** (33.3–33.7% GM; ~9M adds), MAU 818M slightly light. Stock +4% vs ~9% implied (UBS desk). See `## Current state`.
+- **Next:** Q3 call transcript (pending); Q4/FY26 print ~early Feb 2027 (date not given) — Q4 GM 33.8% / OI €820M delivery; AI-music tier / Remix launch date and WMG/Sony AI deals; 2027 framework (JPM: "a bigger margin year").
+- **Q2 FY26 print** (late July) — watch MAU vs 778M guide, ARPU +7–7.5% delivery, and whether OI troughs as guided on AI reinvestment. _(Historical; resolved 2026-08-04 — see Current state.)_
 - **AI licensing / Remix monetization** — Universal AI remix framework (announced at/around Investor Day); Bernstein expects further label deals (WMG AI M&A read-through). The binary: does Remix become a real add-on revenue line or stay <2% of Premium (Redburn).
 - **Ad business inflection** — biddable >30% of ad rev; management's "2H26 improvement" claim is a show-me.
 - **Price increases / ARPU** — January U.S. hike churned cleanly; further pricing is the near-term lever.
@@ -140,18 +174,19 @@ _Q1 FY26 · 28 Apr → 20 Jul 2026 · sell-side / expert calls / reports between
 
 ## Management commentary — evolution (last 6 quarters)
 
-| Theme | Q4'24 (2025-02-04) | Q1'25 (2025-04-29) | Q2'25 (2025-07-29) | Q3'25 (2025-11-18) | Q4'25 (2026-02-10) | Q1'26 (2026-04-28) |
-|---|---|---|---|---|---|---|
-| MAU growth | 675M, +35M, record Q4 net-adds | 678M, +3M (seasonal low) | 696M, +18M, beat guide 7M | 713M, +17M, crossed 700M | Record-ever net-adds, >750M | 761M, +10M, +12% y/y accel |
-| Subscribers / pricing | 263M, +11M; ARPU up on price hikes | 268M, +5M, +12% y/y | 276M, +8M; hit 100M in Europe | 281M, +5M; pricing in 150+ markets | 289M; record single-day Subs (Wrapped) | 293M, +3M; clean US-hike churn |
-| Ads business | +6% cc; early automated progress | +5% cc; low-DD ex-initiatives | +5% cc; "moving too slowly," execution | Flat y/y; transition year, improve 2H26 | +4% (7% like-for-like); biddable scaling | +3%; biddable >30% of ad rev |
-| Gross margin | 32.2%, record, +40bp vs guide | 31.6%, +~400bp y/y | 31.5%, in line, +230bp y/y | 31.6%, +50bp vs guide | 33.1%, +80bp y/y | 33.0%, +133bp y/y, 2nd-highest ever |
-| FCF / capital return | Record €877M; €7.5B cash | €534M; notes become current | €700M; $2B buyback authorized | €806M; $410M YTD buyback | €834M; FY record €2.9B; $433M buyback | €824M; $361M buyback; settled notes, €8.8B |
-| AI / product cycle | Video podcasts 330k; Partner Program | SPP 9 markets, $100M payouts; +44% video | DJ usage doubled; AI Playlist 40+ markets | 30+ features; lossless, ChatGPT, free-tier | 50+ features; Prompted Playlists; "Honk"/Claude | DJ 94M users; Taste Profile; Fitness/Peloton |
+| Theme | Q4'24 (2025-02-04) | Q1'25 (2025-04-29) | Q2'25 (2025-07-29) | Q3'25 (2025-11-18) | Q4'25 (2026-02-10) | Q1'26 (2026-04-28) | Q3'26 (2026-10-22, release only) |
+|---|---|---|---|---|---|---|---|
+| MAU growth | 675M, +35M, record Q4 net-adds | 678M, +3M (seasonal low) | 696M, +18M, beat guide 7M | 713M, +17M, crossed 700M | Record-ever net-adds, >750M | 761M, +10M, +12% y/y accel | 788M, +11M, in line; Q4 guide 818M (+30M) |
+| Subscribers / pricing | 263M, +11M; ARPU up on price hikes | 268M, +5M, +12% y/y | 276M, +8M; hit 100M in Europe | 281M, +5M; pricing in 150+ markets | 289M; record single-day Subs (Wrapped) | 293M, +3M; clean US-hike churn | 306M, +6M (+1M vs guide); ARPU €4.95 +7.5% cc; Q4 guide 316M |
+| Ads business | +6% cc; early automated progress | +5% cc; low-DD ex-initiatives | +5% cc; "moving too slowly," execution | Flat y/y; transition year, improve 2H26 | +4% (7% like-for-like); biddable scaling | +3%; biddable >30% of ad rev | +9% cc; music-ad pricing soft; automated the largest contributor |
+| Gross margin | 32.2%, record, +40bp vs guide | 31.6%, +~400bp y/y | 31.5%, in line, +230bp y/y | 31.6%, +50bp vs guide | 33.1%, +80bp y/y | 33.0%, +133bp y/y, 2nd-highest ever | 33.0%, +136bp y/y, +10bp vs guide; Q4 guide 33.8% |
+| FCF / capital return | Record €877M; €7.5B cash | €534M; notes become current | €700M; $2B buyback authorized | €806M; $410M YTD buyback | €834M; FY record €2.9B; $433M buyback | €824M; $361M buyback; settled notes, €8.8B | €735M; $1.1bn buyback YTD to 10-21; €9.9B |
+| AI / product cycle | Video podcasts 330k; Partner Program | SPP 9 markets, $100M payouts; +44% video | DJ usage doubled; AI Playlist 40+ markets | 30+ features; lossless, ChatGPT, free-tier | 50+ features; Prompted Playlists; "Honk"/Claude | DJ 94M users; Taste Profile; Fitness/Peloton | Audiobooks to 180+ mkts; Creator Memberships; Muse integration |
 
 _Source: SPOT earnings calls (dates above); management commentary, paraphrased._
 
 ## Sources
+- 🆕 **Q3 2026 (2026-10-22):** [6-K cover](../SPOT/SPOT_6-K_2026-10-22_0001140361-26-040435.html) · [EX-99.1 "Q3 2026 Update" shareholder deck](../SPOT/SPOT_6-K_ex991_pressrelease_2026-10-22_0001140361-26-040435.html) (KPIs vs guide, segments, Q4 outlook, IFRS statements). Desk e-mails (not research): Bernstein Tech (Seidman) 10-22, UBS TMI (Dwyer) 10-22. **Call transcript pending.**
 - **Filings:** [SPOT 20-F FY2025 (2026-02-10)](../SPOT/SPOT_20-F_2026-02-10_0001628280-26-006874.html); prior: [20-F FY2024 (2025-02-05)](../SPOT/SPOT_20-F_2025-02-05_0001639920-25-000003.html).
 - **Transcripts (prepared-remarks-only):** [Q1 FY26 (2026-04-28)](../SPOT/transcripts/SPOT_Q1-2026-earnings_2026-04-28.md) · [Q4 FY25 (2026-02-10)](../SPOT/transcripts/SPOT_Q4-2025-earnings_2026-02-10.md).
 - **Decks:** Investor Day 2022 transcript on file ([INDEX](../INDEX.md) §SPOT); the 2026-05-21 Investor Day is captured via sell-side recaps in the briefings roll-up (no SPOT deck on disk).
@@ -166,6 +201,7 @@ _Source: SPOT earnings calls (dates above); management commentary, paraphrased._
 
 ## Changelog
 
+- 2026-10-22 — print ingest (Q3'26 6-K EX-99.1 + desk e-mails; call transcript pending): new `## Current state` block (Q3 actual vs guide vs cons/JPMe table, segments, opex, NI/EPS, $1.1bn YTD buyback, product; Q4 guide vs cons/JPMe/bogeys table; Bernstein + UBS desk takes; 🔭 vs JPM's "4Q GM 33.4%, Street too high"); Catalysts: Q3 print resolved + next items; evolution table Q3'26 column; Sources links. **Superseded:** Current-state heading "(latest quarter)" → "(latest quarter — Q3 2026, reported 2026-10-22 BMO)"; Q3 guide (MAU 788M / subs 305M / rev €5.0B / GM 32.9% / OI €670M) → actuals 788M / 306M / €4,969M / 33.0% / €672M; JPM's 4Q GM 33.4% expectation vs company guide 33.8% (JPM figures left in place as dated history). No rating/PT changed.
 - 2026-10-19 — run-inbox: added J.P. Morgan · Anmuth "US Internet 3Q 2026 Preview" (2026-10-15) — 1 log row, 1 Sinal update, 1 Sources link. **Rating/PT unchanged: OW, PT $650, Top Pick #3.** **Estimate drift (old → new):** JPM GAAP EPS **$14.40 / $18.11 / $22.58 ('26/'27/'28E, "US Internet 2Q26 Preview", 2026-07-14) → $14.05 / $18.25 / $22.78 (2026-10-15)**; FY26 revenue on the comp sheet **$22,602M → $22,560M** (USD comp-sheet basis; the company page of the deck shows €19,477M).
 - 2026-10-19 — ingest (Notion, 2026-10-19_JPMorgan_US-Internet-3Q26-preview-Zoom-Anmuth-Schilsky.md): added the private Q&A layer of the JPM 3Q26 preview (Anmuth, host Schilsky) — 1 Debate bullet (4Q GM 33.4% vs a Street "too high", the $200M investment and its '27 partial roll-off, AI tier more 1Q27, MAU/subs growth comparable-to-slightly-higher in '27; host: users/subs are the stock's binary). Rating/PT = JPM's published OW, $650, Top Pick #3 — no new rating/PT on the call. Nothing superseded.
 - **2026-10-01 (/wiki-ingest 21h run of 09-30, completed 10-01)** — 4 log rows (Evercore PT $700; BofA Reif Ehrlich top pick + WMG AI-music deal; Wells Fargo '27 view and AI-tier timing; Ek podcast headline) + Sinal note. **Superseded:** Wells Fargo AI-music tier launch **Q1'27 → Q2'27** (Wells' prior view is as stated in the TMT Breakout relay; no Wells mark was on the page). New first marks (nothing to supersede): Evercore PT $700. ⚠️ This page's `## Intra-quarter` header still reads "Q1 FY26 · 28 Apr → 20 Jul 2026" although the Q2 print was 08-04/05 — not reset by this run.

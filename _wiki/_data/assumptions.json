@@ -1,5 +1,5 @@
 {
-  "asof": "2026-10-01",
+  "asof": "2026-10-22",
   "note": "Canonical-assumptions ledger — one entry per cross-page industry number that multiple pages/themes cite. Purpose: every page should reference ONE canonical framing per metric; when a new source disagrees, add a variant here (never silently replace). build_assumptions.py renders _meta/assumptions.md + _dashboards/assumptions.html and scans pages for citations of each metric not yet reconciled into the ledger. Edit variants by hand; keep scope labels precise (units vs dollars, IT-load vs facility GW).",
   "metrics": {
     "asic-vs-gpu-share": {
@@ -202,6 +202,16 @@
           "cited_in": [
             "themes/semicap-wfe.md",
             "ASML.md"
+          ]
+        },
+        {
+          "value": "CY26 'mid $150 billion range'; preliminary CY27 'more than $200 billion' (~+30%), growth led by DRAM; described as supply-constrained ('unconstrained ... would be higher', no number). Same call restates the AI-capex card at '$100 billion of AI CapEx being about $10 billion in WFE'. Tape read it as below the buy-side bar (LRCX -5% AH / -7-8% pre-mkt 10-22); it sits below every published sell-side CY27 mark ($204-226bn on LRCX.md/semicap-wfe.md).",
+          "source": "Lam Research (Archer / Bettinger), F1Q27 earnings call 2026-10-21 (Quartr transcript, LRCX/transcripts/LRCX_Q1-FY27-earnings_2026-10-21.md)",
+          "date": "2026-10-21",
+          "scope": "company-guided, Lam's own WFE definition (not reconciled to JPM ex-bonder/WLP or Bernstein incl-WLP bases); first vendor-guided CY27 level; a constrained supply-side read, not a demand estimate",
+          "cited_in": [
+            "themes/semicap-wfe.md",
+            "LRCX.md"
           ]
         }
       ],
