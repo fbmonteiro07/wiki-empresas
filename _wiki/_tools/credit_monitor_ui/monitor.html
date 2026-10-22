@@ -6,7 +6,7 @@
 @@CSS@@</style></head><body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="masthead"><a class="brand" href="index.html"><span class="brand-mark">C</span>CAPSTONE<span class="brand-divider">/</span><span class="brand-label">Research</span></a>
-<nav aria-label="Views"><button type="button" data-view="monitor" aria-pressed="true">Market monitor</button><button type="button" data-view="research" aria-pressed="false">Research &amp; alerts</button></nav>
+<nav aria-label="Views"><button type="button" data-view="monitor" aria-pressed="true">Market monitor</button><button type="button" data-view="hyperscalers" aria-pressed="false">Hyperscaler CDS</button><button type="button" data-view="research" aria-pressed="false">Research &amp; alerts</button></nav>
 <div class="masthead-actions"><button id="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="true"><span aria-hidden="true">◐</span> <span id="theme-label">Light mode</span></button><a class="hub-link" href="index.html">All dashboards <span>↗</span></a></div></header>
 <main id="main" tabindex="-1">
 <div class="page-heading"><div><p class="eyebrow">CREDIT / AI INFRASTRUCTURE</p><h1>AI credit monitor<span class="title-dot">.</span></h1><p class="intro">5Y CDS · daily, weekly &amp; monthly moves · bond yields</p></div>
@@ -42,6 +42,37 @@
 <details id="data-details" class="data-details"><summary>Data &amp; methodology <span>Sources, quote dates and coverage</span></summary>
 <div class="method-grid"><div><h3>Reading the monitor</h3><p>CDS levels and changes are in basis points. Bond levels are yield to maturity in percent; yield changes are in basis points. Coupon rates identify bonds and are never used as missing yields.</p><p>1D compares with the prior available session, at most five calendar days back. 1W and 1M use the observation on or before seven and thirty calendar days before the latest quote, with four days of tolerance. Hover a change for its actual dates.</p><p>The comparison window ends today in São Paulo. Change mode uses a common start date and each series’ observation on or before it, within four days; new or sparse series without that baseline stay excluded. Gaps over seven days break the line.</p></div>
 <div><h3>Coverage &amp; freshness</h3><p id="coverage-detail"></p><p>Quotes more than four calendar days old, or retained after a failed fetch, are labeled stale. A refresh timestamp is not a quote date.</p><p>The main bond follows the configured headline, preferring USD straight debt and the shorter maturity when several headlines exist. Select another bond inside a company. Convertible and foreign-currency bonds retain their labels; convertibles enter comparison only when explicitly included.</p><p id="feed-detail"></p></div></div></details>
+</div>
+<div id="hyperscalers-view" hidden>
+<section class="surface hs-official" aria-labelledby="hs-official-title">
+ <div class="board-heading"><div><h2 id="hs-official-title">Hyperscaler 5Y CDS · official base <span id="hs-count" class="count"></span></h2><p>CDS_FLAT_SPREAD from AI_Credit_Live.xlsx, the official AI-credit workbook. Daily history kept since the workbook import (16-Oct-2026).</p></div></div>
+ <div class="table-scroll"><table class="issuer-table"><caption class="sr-only">Hyperscaler 5-year CDS flat spreads in basis points, changes and Morgan Stanley desk marks</caption><thead><tr>
+ <th scope="col">Company <small>rating</small></th>
+ <th scope="col" class="number">5Y CDS <small>flat · bp</small></th>
+ <th scope="col" class="number">Δ 1D <small>bp</small></th>
+ <th scope="col" class="number">Δ vs 16-Oct <small>bp</small></th>
+ <th scope="col" class="number">MS desk 24-Aug <small>bp</small></th>
+ <th scope="col" class="number">Δ vs MS <small>bp</small></th>
+ <th scope="col" class="hs-bar-column">Level <small>bp, common scale</small></th>
+ <th scope="col">Since 16-Oct</th>
+ </tr></thead><tbody id="hs-official-rows"></tbody></table></div>
+ <div class="table-footer"><span><i class="key-up"></i> Widening <i class="key-down"></i> Tightening</span><span id="hs-official-source"></span></div>
+</section>
+<section class="surface comparison hs-history" aria-labelledby="hs-history-title">
+ <div class="chart-heading"><div><p class="eyebrow">HISTORY · ISSUER BOARD</p><h2 id="hs-history-title">Hyperscaler 5Y CDS · PX_LAST</h2></div>
+ <div class="segmented" aria-label="Chart display"><button type="button" data-hs-mode="level" aria-pressed="true">Level</button><button type="button" data-hs-mode="change" aria-pressed="false">Change · bp</button></div></div>
+ <div class="chart-toolbar"><div id="hs-filters" class="company-filters" aria-label="Hyperscalers to compare"></div>
+ <div class="segmented periods" aria-label="History period"><button type="button" data-hs-period="1M" aria-pressed="false">1M</button><button type="button" data-hs-period="3M" aria-pressed="false">3M</button><button type="button" data-hs-period="6M" aria-pressed="true">6M</button><button type="button" data-hs-period="1Y" aria-pressed="false">1Y</button></div></div>
+ <div id="hs-chart" class="chart-area"></div><div id="hs-tooltip" class="chart-tooltip" hidden></div>
+ <div class="chart-footer"><span id="hs-range"></span><span>Source: Bloomberg · PX_LAST · dates on hover</span></div>
+</section>
+<section class="surface hs-board" aria-labelledby="hs-board-title">
+ <div class="board-heading"><div><h2 id="hs-board-title">Issuer board · PX_LAST</h2><p>The series behind the history chart and the daily alert rules. Same Bloomberg tickers, different field from the official base above.</p></div></div>
+ <div class="table-scroll"><table class="issuer-table"><caption class="sr-only">Hyperscaler 5-year CDS PX_LAST levels and changes in basis points</caption><thead><tr>
+ <th scope="col">Company</th><th scope="col" class="number">5Y CDS <small>PX_LAST · bp</small></th><th scope="col" class="number">Δ 1D <small>bp</small></th><th scope="col" class="number">Δ 1W <small>bp</small></th><th scope="col" class="number">Δ 1M <small>bp</small></th><th scope="col">Source</th>
+ </tr></thead><tbody id="hs-board-rows"></tbody></table></div>
+</section>
+<div id="hs-notes" class="hs-notes"></div>
 </div>
 <section id="research-view" hidden aria-label="Research and alerts"><div class="research-heading"><h2>Research &amp; alerts</h2><p>Supporting evidence, on demand. Research ledger: @@RESEARCH_DATE@@.</p><a href="../themes/ai-compute-deals.md">Compute-deal timeline ↗</a></div>@@RESEARCH@@</section>
 <footer class="page-footer"><span>CAPSTONE <b>/</b> INTERNAL RESEARCH</span><span>Daily quotes · separately dated research</span></footer>

@@ -47,8 +47,53 @@ def instrument_view(config, stored, today):
     }
 
 
-def model(config, watch, today=None):
+def flat_view(entry, history, today, refreshed):
+    """Official workbook CDS (CDS_FLAT_SPREAD, bp). A different basis from the board's PX_LAST — never netted with it."""
+    if not entry:
+        return None
+    rows = sorted((r for r in history if r.get('kind') == 'cds' and r.get('id') == entry['bbg']),
+                  key=lambda r: (r.get('date', ''), r.get('time', '')))
+    daily = {'unit': 'bp', 'points': [[r['date'], r.get('spread')] for r in rows]}  # last pull of each day wins
+    points = []
+    for date, value in observations(daily, today):
+        if not points or value != points[-1][1]:  # a morning pull that repeats the prior close is a carried mark, not a print
+            points.append((date, value))
+    return {'bbg': entry['bbg'], 'field': 'CDS_FLAT_SPREAD', 'last': entry.get('spread_bp'),
+            'quoted': refreshed, 'stale': bool(entry.get('stale')),
+            'snapshot': entry.get('spread_snapshot_bp'), 'dSnapshot': entry.get('d_snapshot_bp'),
+            'msDesk': entry.get('ms_desk_0824_bp'), 'dMsDesk': entry.get('d_vs_ms_bp'),
+            'points': points, 'markDate': points[-1][0] if points else None,
+            'change1': change({'unit': 'bp', 'points': points}, 1, today)}
+
+
+def step_breaks(issuers, floor=50, ratio=0.5):
+    """One-session CDS moves of at least `floor` bp and `ratio` of the prior level: check for a ticker or convention break."""
+    notes = []
+    for c in issuers:
+        pts = (c['cds'] or {}).get('points', [])
+        for (d0, v0), (d1, v1) in zip(pts, pts[1:]):
+            if abs(v1 - v0) >= floor and v0 and abs(v1 - v0) / abs(v0) >= ratio:
+                notes.append({'id': c['id'], 'from': [d0, v0], 'to': [d1, v1]})
+    return notes
+
+
+def twin_histories(issuers, minimum=10):
+    """Flag issuer CDS series that print the same value on the same day — a proxy curve, not two markets."""
+    notes = []
+    for i, a in enumerate(issuers):
+        for b in issuers[i + 1:]:
+            if not (a['cds'] and b['cds']):
+                continue
+            other = dict(b['cds']['points'])
+            same = sorted(d for d, v in a['cds']['points'] if other.get(d) == v)
+            if len(same) >= minimum:
+                notes.append({'pair': [a['id'], b['id']], 'days': len(same), 'first': same[0], 'last': same[-1]})
+    return notes
+
+
+def model(config, watch, today=None, workbook=None, history=()):
     today = today or dt.datetime.now(dt.timezone(dt.timedelta(hours=-3))).date()
+    flat = {c['bbg']: c for c in (workbook or {}).get('cds', [])}
     stored = {s['id']: s for s in watch.get('series', [])}
     warnings = {i['company'] + '_CDS5Y': i.get('cds_validation_warning', '')
                 for i in config.get('board', {}).get('issuers', [])}
@@ -65,14 +110,31 @@ def model(config, watch, today=None):
         main = min(bonds, key=lambda s: (s['board'].get('ccy', 'USD') != 'USD',
                                         s['board']['kind'] == 'convertible',
                                         not s['board'].get('headline'), s['board']['mty']), default=None)
-        issuers.append({'id': company, 'name': issuer.get('name', company),
+        issuers.append({'id': company, 'name': issuer.get('name', company), 'tier': issuer.get('tier', ''),
                         'focus': company in FOCUS, 'color': COLORS[index % len(COLORS)],
                         'cds': next((s for s in own if s['group'] == 'cds'), None),
+                        'flat': flat_view(flat.get(issuer.get('cds')), history, today, (workbook or {}).get('refreshed_at')),
                         'bonds': bonds, 'main': main['id'] if main else None})
     dates = [s['date'] for s in instruments if s['date']]
+    hyperscalers = [c for c in issuers if c['tier'].startswith('hyperscaler')]
     return {'today': today.isoformat(), 'fetched': watch.get('fetched_at'),
             'feed': watch.get('bbg_status', {}), 'issuers': issuers,
+            'twins': twin_histories(hyperscalers), 'steps': step_breaks(hyperscalers),
             'latest': max(dates) if dates else None}
+
+
+def read_jsonl(path):
+    try:
+        lines = path.read_text(encoding='utf-8').splitlines()
+    except OSError:
+        return []
+    rows = []
+    for line in lines:
+        try:
+            rows.append(json.loads(line))
+        except ValueError:
+            continue
+    return rows
 
 
 def json_script(data):
@@ -81,7 +143,9 @@ def json_script(data):
 
 def enhance(page, deals, market):
     data = model(read_json(ROOT / '_wiki/_data/credit_watch_config.json'),
-                 read_json(ROOT / '_wiki/_data/credit_watch.json'))
+                 read_json(ROOT / '_wiki/_data/credit_watch.json'),
+                 workbook=read_json(ROOT / '_wiki/_data/credit_workbook.json'),
+                 history=read_jsonl(ROOT / '_wiki/_data/credit-monitor/workbook/history.jsonl'))
     sections = re.findall(r'<section>(.*?)</section>', page, re.S)
     if len(sections) != len(SECTIONS):
         raise ValueError('Credit research section layout changed; refusing to mislabel source sections.')

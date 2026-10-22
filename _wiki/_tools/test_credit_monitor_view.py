@@ -97,6 +97,40 @@ class CreditViewTests(unittest.TestCase):
         self.assertEqual(c['bonds'][0]['board']['kind'],'convertible')
         self.assertIn('(convertible)',c['bonds'][0]['label'])
 
+    def test_flat_spread_stays_on_its_own_basis(self):
+        wb={'refreshed_at':'2026-10-14T09:34','cds':[{'name':'ORCL CDS 5Y','bbg':'ORCLCP CDS USD SR 5Y D14 Corp',
+            'spread_bp':320.0,'spread_snapshot_bp':300.0,'d_snapshot_bp':20.0,'ms_desk_0824_bp':217.0,'d_vs_ms_bp':103.0}]}
+        hist=[{'kind':'cds','id':'ORCLCP CDS USD SR 5Y D14 Corp','date':'2026-10-13','time':'09:34','spread':300.0},
+              {'kind':'cds','id':'ORCLCP CDS USD SR 5Y D14 Corp','date':'2026-10-13','time':'18:34','spread':310.0},
+              {'kind':'cds','id':'ORCLCP CDS USD SR 5Y D14 Corp','date':'2026-10-14','time':'09:34','spread':320.0},
+              {'kind':'bond','id':'ORCLCP CDS USD SR 5Y D14 Corp','date':'2026-10-14','time':'09:34','spread':1.0}]
+        watch={'series':[{'id':'ORCL_CDS5Y','points':[['2026-10-13',240],['2026-10-14',245]]}]}
+        rows={c['id']:c for c in model(self.config(),watch,TODAY,workbook=wb,history=hist)['issuers']}
+        f=rows['ORCL']['flat']
+        self.assertEqual((f['last'],f['field'],f['msDesk']),(320.0,'CDS_FLAT_SPREAD',217.0))
+        self.assertEqual(f['points'],[('2026-10-13',310.0),('2026-10-14',320.0)])  # last pull of the day
+        carried=model(self.config(),watch,TODAY,workbook=wb,history=hist+[
+            {'kind':'cds','id':'ORCLCP CDS USD SR 5Y D14 Corp','date':'2026-10-15','time':'09:34','spread':320.0}])
+        self.assertEqual(next(c for c in carried['issuers'] if c['id']=='ORCL')['flat']['markDate'],'2026-10-14')
+        self.assertEqual(f['change1']['value'],10)
+        self.assertEqual(rows['ORCL']['cds']['last'],245)  # board PX_LAST untouched
+        self.assertIsNone(rows['CRWV']['flat'])
+
+    def test_identical_cds_histories_are_flagged(self):
+        cfg={'board':{'issuers':[{'company':c,'name':c,'tier':'hyperscaler · IG','cds':c+' CDS','bonds':[]} for c in ('META','GOOGL','MSFT')]}}
+        same=[[f'2026-09-{d:02d}',22.5+d] for d in range(1,13)]
+        watch={'series':[{'id':'META_CDS5Y','points':same},{'id':'GOOGL_CDS5Y','points':same},
+                         {'id':'MSFT_CDS5Y','points':[[d,v+1] for d,v in same]}]}
+        twins=model(cfg,watch,TODAY)['twins']
+        self.assertEqual([sorted(t['pair']) for t in twins],[['GOOGL','META']])
+        self.assertEqual((twins[0]['days'],twins[0]['first']),(12,'2026-09-01'))
+
+    def test_one_day_cds_step_is_flagged(self):
+        cfg={'board':{'issuers':[{'company':'ORCL','name':'Oracle','tier':'hyperscaler · IG (BBB)','cds':'X','bonds':[]}]}}
+        watch={'series':[{'id':'ORCL_CDS5Y','points':[['2026-08-10',88.433],['2026-08-11',203.433],['2026-08-12',210]]}]}
+        steps=model(cfg,watch,TODAY)['steps']
+        self.assertEqual([(s['id'],s['to'][0]) for s in steps],[('ORCL','2026-08-11')])
+
     def test_script_data_cannot_break_out(self):
         text=json_script({'name':'</script><script>alert(1)</script>'})
         self.assertNotIn('<',text)
