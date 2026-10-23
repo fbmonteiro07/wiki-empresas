@@ -3,17 +3,17 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AMZN` (filings + transcripts) · `_equity_calls` · `_briefings\by-ticker\AMZN.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-21 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-10-23 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $821.0bn | $950.1bn |
+| Revenue | $821.0bn | $950.0bn |
 | Gross profit | $421.2bn | $505.4bn |
 | Gross margin | 51.3% | 53.2% |
-| EBITDA | $212.1bn | $280.4bn |
-| EPS | $9.64 | $12.67 |
-| Capex | $215.7bn | $291.1bn |
-| OCF (≈EBITDA) | $212.1bn | $280.4bn |
+| EBITDA | $212.2bn | $280.7bn |
+| EPS | $9.63 | $12.62 |
+| Capex | $216.1bn | $290.8bn |
+| OCF (≈EBITDA) | $212.2bn | $280.7bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
@@ -308,6 +308,8 @@ Three reportable segments: **North America** (Q1'26 $104.1B rev, +12%, 7.9% OI m
   - 📜 **2022 HISTORICAL ANALOG (pre-split; the $4,200 PT is a 2022 pre-split mark, NOT a current PT):** in the last diesel spike MS estimated **fuel at ~20% of AMZN's shipping costs (~$0.78 per fulfilled unit in 2021)**, raised '22/'23 fuel costs by **~$6bn / ~$3bn** (diesel tied to MS's crude forecast, **$4.62/gal into '23 vs $4.19** previously assumed) and **cut '22/'23 EBIT by ~$5.6bn / ~$1.1bn (~15% / ~2%)**. The offset argument: the r-squared between y/y shipping-cost growth and y/y diesel was **~0.3**, and **every 1% y/y non-fuel shipping efficiency ≈ ~$700mn of annual savings** (Morgan Stanley · Brian Nowak, "Amazon.com Inc: Sizing The Impact of Rising Fuel Costs", 2022-03-23; OW, Top Pick, PT $4,200 pre-split). ➤ *Same analyst house, same mechanism — the 2022 episode is the template for how quickly the surcharge/efficiency offsets closed the gap.*
 
 ## Intra-quarter — calls, commentary & reports (since the last print)
+
+**🆕 2026-10-23 — private developer relays an Amazon land decision in Ashburn (UNVERIFIED relay).** John Day (CCO, CleanArc Data Centers) hosted by Ryan Gravett / John Hodulik (UBS US Communications) @ UBS Expert Call 'Keeping up with the AI Infrastructure Build', 2026-10-23 — Capstone notes (Notion transcript). [source](../_equity_calls/Overall/2026-10-23_UBS_Expert-call-AI-infrastructure-build-DC-demand-higher-rates-CleanArc-John-Day.md). Answering an audience question on community pushback, Day said that "yesterday or the day before" (≈2026-10-21/22), "and again, this is just all public", Amazon decided not to keep trying to develop data centres on land it bought from George Washington University near Data Center Alley in Ashburn and moved to a mixed-use development. He was relaying news, with no AWS source. **Not verified against a primary source.** Treat it as a local-opposition datapoint, not as a capacity signal.
 
 **2026-10-08 — AWS CEO Matt Garman @ The a16z Show with Raghu Raghuram.** [Official episode](https://www.youtube.com/watch?v=rn_afJaPldg) · [research notes and caption provenance](../AMZN/transcripts/AMZN_a16z-Matt-Garman_2026-10-08.md). Management interview, published **2026-10-08**; recording date undisclosed. Readings use mirrored English YouTube automatic captions.
 
@@ -691,6 +693,7 @@ _Source: AMZN earnings calls (dates above); management commentary, paraphrased._
 
 ## Changelog
 
+- 2026-10-23 — ingest (Notion, 2026-10-23_UBS_Expert-call-AI-infrastructure-build-DC-demand-higher-rates-CleanArc-John-Day.md; orchestrator (D) pass): intra-quarter row — CleanArc CCO relays the reported Amazon/GWU Ashburn land decision (switch to mixed use). Unverified relay.
 - **2026-10-22 — AWS broker-cost omission corrected:** preserved the prior workbook's AWS `ND` and partial WFS `$6.249bn / $10.264bn` (2026/27) as historical. The official-price-undisclosed statement remains valid, but omitting an available estimate was incomplete. Verified MS / Brian Nowak et al. (2026-09-30, p.4) directly in the PDF: **AWS ~$4–5bn in the 2027 forecast**, broader third-party compute **$17bn / $26bn**. WFS scoped increment **+$4.015bn** and MS broader increment **+$9bn** are shown separately; no unsupported AWS 2026 allocation or hybrid total. No contract, capacity, delivery, rating or PT change. [Primary](../_inbox/_done/META_20260930_2255.pdf); [corrected workbook](../outputs/meta-cloud-cost-20261022/Meta_Cloud_2025-2030_AWS_Cost_Bridge_2026-10-22.xlsx); original October 21 file retained.
 
 - **2026-10-21 — Meta Graviton evidence review (historical backfill):** [AWS’s June 10, 2026 Graviton5 release](https://www.aboutamazon.com/news/aws/aws-graviton-5-cpu-amazon-ec2) announces M9g/M9gd general availability and repeats Meta’s **tens of millions of CPU cores** commitment from April 24. Platform availability supplies no Meta-specific deployment date, delivered-core count or MW. Preserve **META-AWS-202604**; this is a platform milestone / relationship confirmation, not another compute commitment. CPU cores remain unconverted to GW. [Deal history](themes/ai-compute-deals.md#recorded-2026-10-21--meta-capacity-and-delivery-gap-review). No forecast, rating, price target or prior contract term changed.

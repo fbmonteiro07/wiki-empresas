@@ -48,11 +48,36 @@ def issuer_coverage(watch, today):
     return lines, issues
 
 
-def summary(config, market, prior=None, errors=(), today=None, issuer_market=None, workbook_lines=None):
+def workbook_issues(workbook, today):
+    if not workbook:
+        return ['Official workbook data unavailable; no fresh workbook coverage established.']
+    issues = []
+    refresh = workbook.get('refresh', {})
+    if refresh.get('status') != 'ok':
+        missing = ', '.join(refresh.get('missing', []))
+        issues.append('Official workbook refresh ' + str(refresh.get('status', 'unknown')) + ': '
+                      + str(refresh.get('detail') or 'refresh not confirmed')
+                      + ('; unavailable instruments: ' + missing if missing else '')
+                      + '. Retained values are not fresh quotes.')
+    try:
+        aged = (today - dt.date.fromisoformat(workbook.get('values_asof') or '')).days > 4
+    except ValueError:
+        aged = True
+    if aged:
+        issues.append('Official workbook values are stale or undated: ' + str(workbook.get('values_asof') or 'unknown') + '.')
+    for group in ('bonds', 'other', 'cds', 'equities'):
+        for row in workbook.get(group, []):
+            if row.get('stale'):
+                issues.append(f'Official workbook {row.get("name") or row.get("ticker") or row.get("bbg")}: retained earlier value; '
+                              'individual observation date unavailable. Do not treat the overall refresh date as its quote date.')
+    return issues
+
+
+def summary(config, market, prior=None, errors=(), today=None, issuer_market=None, workbook_lines=None, workbook=None):
     today = today or dt.date.today()
     health = market_health(market, config, today)
     coverage, issuer_issues = issuer_coverage(issuer_market, today) if issuer_market is not None else ([], [])
-    problems = list(errors) + health['issues'] + issuer_issues
+    problems = list(errors) + health['issues'] + issuer_issues + (workbook_issues(workbook, today) if workbook is not None else [])
     lines = [f'AI Credit & Funding — weekly brief — {today}', '',
              'Refresh status: ' + ('PARTIAL / ATTENTION REQUIRED' if problems else 'market refresh complete'),
              f'Market observations: {health["earliest"]} through {health["latest"]} (Bloomberg local terminal).',
@@ -182,7 +207,9 @@ def main():
         watchpath = DATA / 'credit_watch.json'
         issuer_market = json.loads(watchpath.read_text(encoding='utf-8')) if watchpath.exists() else None
         from credit_workbook import brief_lines as workbook_brief
-        body = summary(config, market, prior, errors, issuer_market=issuer_market, workbook_lines=workbook_brief())
+        workbook_path = DATA / 'credit_workbook.json'
+        workbook = json.loads(workbook_path.read_text(encoding='utf-8')) if workbook_path.exists() else {}
+        body = summary(config, market, prior, errors, issuer_market=issuer_market, workbook_lines=workbook_brief(workbook), workbook=workbook)
         bodypath.write_text(body, encoding='utf-8')
         export_html = re.sub(r'href="(?!#)([^"]+)"',
             lambda match: 'href="' + urllib.parse.urljoin(LIVE, match.group(1)) + '"',
@@ -192,6 +219,7 @@ def main():
         health = market_health(market, config)
         _, issuer_issues = issuer_coverage(issuer_market, dt.date.today()) if issuer_market is not None else ([], [])
         errors += issuer_issues
+        errors += workbook_issues(workbook, dt.date.today())
         audit = {'run_at': dt.datetime.now().isoformat(timespec='seconds'), 'subject': subject,
                  'status': 'complete' if not errors and health['ok'] else 'partial', 'errors': errors + health['issues'],
                  'market_fetched_at': market.get('fetched_at'), 'market_dates': health,

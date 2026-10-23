@@ -5,17 +5,17 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\META` (filings + transcripts) · `_equity_calls` · `_briefings\by-ticker\META.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Snapshot — Capstone official model + BBG · asof 2026-10-21 · USD
+### 📊 Snapshot — Capstone official model + BBG · asof 2026-10-23 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | **$256.8bn** | **$308.1bn** |
-| Gross profit | $205.7bn | $242.8bn |
-| Gross margin | 80.1% | 78.8% |
-| EBITDA | $120.5bn | $147.7bn |
+| Gross profit | $205.4bn | $241.6bn |
+| Gross margin | 80.0% | 78.4% |
+| EBITDA | $120.0bn | $152.0bn |
 | EPS | **$31.96** | **$35.63** |
-| Capex | $151.0bn | $216.6bn |
-| OCF (≈EBITDA) | $120.5bn | $147.7bn |
+| Capex | $156.4bn | $224.7bn |
+| OCF (≈EBITDA) | $120.0bn | $152.0bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 _**Bold** = Capstone official model; plain = BBG consensus._
@@ -574,6 +574,8 @@ The [current one-sheet cloud-deal register](../outputs/meta-cloud-cost-20261022/
 ## Intra-quarter — calls, commentary & reports (since the last print)
 _Q3 FY26 · Oct 21, 2026 → open · sell-side / expert calls / reports since the 2026-10-21 AMC print. The prior window (Jul 29 → Oct 21, 2026) was rolled intact into `## Changelog` → "### [ARCHIVED Q3 FY26 (Jul 29 → Oct 21, 2026)] Intra-quarter — calls, commentary & reports (since the last print)" on 2026-10-21. Timeline visual: [timeline.html](timeline.html)._
 
+**🆕 2026-10-23 (notion-ingest; orchestrator (D) pass) — a private DC developer cites Meta's tents as the 'good enough' build model.** John Day (CCO, CleanArc Data Centers) hosted by Ryan Gravett / John Hodulik (UBS US Communications) @ UBS Expert Call 'Keeping up with the AI Infrastructure Build', 2026-10-23 — Capstone notes (Notion transcript). [source](../_equity_calls/Overall/2026-10-23_UBS_Expert-call-AI-infrastructure-build-DC-demand-higher-rates-CleanArc-John-Day.md). Day said "the tents that Meta has used for a couple deployments" show that frontier-lab workloads do not have to be built to cloud five-nines availability, which allows faster and cheaper builds. This is anecdotal, with no MW or cost figure.
+
 **🆕 2026-10-22 (notion-ingest — StoneX corporate-access call with a Google ML leader who previously worked at Meta; orchestrator (D) pass) — AN EX-EMPLOYEE'S DESCRIPTION OF META AI'S ADVERTISER-FACING AGENT PIPELINE (RAG, 24/7, INVENTORY QUERIES, TRANSACTIONS) — RECOLLECTION, NO DATES OR NUMBERS** — *"Prior to this at Meta, I was working on something pretty similar where I was working on a RAG-based agentic pipeline. For the Meta AI use case for the advertising customers. So what they would do is they would onboard onto Meta AI and be able to have a conversational space that is available 24/7 for their customers ... Is this, you know, product available in the inventory? When will it come back? The agent is still there, able to respond to them ... be able to get through transactions going."* She also groups Muse with Dots as consumer agents *"converging into personal assistants"* — Muse *"pitched kind of as a personal agent"*. ➤ Expert/employee voice in a personal capacity (Google now; Meta and Amazon before), not Meta disclosure, and undated — useful only as a description of the advertiser-agent plumbing that precedes Muse's merchant side on [agentic-commerce](themes/agentic-commerce.md). (Vinija Jain (Google ML leader, personal capacity) @ StoneX corporate-access group call, 2026-10-22 - Capstone notes (Notion transcript)) [Source](../_equity_calls/Internet/2026-10-22_StoneX_Google-ML-leader-Vinija-Jain-AI-fireside-group-call.md)
 
 **Sinal vs gestão**: what management said at the Q3 FY26 print (press release, 2026-10-21; the call transcript is not on disk yet) against what the intra-quarter flow says (✓ confirma · ⚠ nuança · ✗ contesta):
@@ -847,6 +849,9 @@ _² Mizuho does not publish a standalone META capex model; the ~$200-300B FY27 f
 **Conditional year-end paths, not physical bounds:** 2026 **0.341–0.565**, 2027 **0.565–1.126**, 2028 **0.967–2.435**, 2029–30 **2.007–2.435 GW-equivalent**, including contingent backstop. These house paths assume WFS GW is IT-equivalent, map the full Childress 1 GW campus into the reported Meta agreement, use Crusoe's target PUE rather than measured site performance and model construction-to-IT readiness. Lower outcomes remain possible. Unknown AWS/OCI/TPU capacity, unconfirmed Oracle expansion, WFS Other 3P and Meta-owned campuses are excluded; 2029–30 is a house extension; YE2030 assumes original Nebius capacity is retained. Its late-2025 start under a five-year term raises late-2030 expiry risk, but exact expiry, renewal and MW by tranche remain undisclosed. The expiry-adjusted outcome is ND. Focused skeptic **PARTIAL**: arithmetic and source anchors pass, independent physical-stock and annual-delivery validation unavailable. Original reported/official figures and the separate broker views remain unchanged.
 
 ## Changelog
+
+- 2026-10-23 — ingest (Notion, 2026-10-23_UBS_Expert-call-AI-infrastructure-build-DC-demand-higher-rates-CleanArc-John-Day.md; orchestrator (D) pass): intra-quarter row — the CleanArc CCO cites Meta's tent deployments as an example of 'good enough' builds for frontier workloads.
+- **2026-10-23 — weekly credit review:** Rechecked PRE 14C selected sections and Susan Li official Q3 transcript p.14; linked existing META-CLASSC-FIN-20261021 into the funding ledger. No offering/proceeds announced. January 19, 2027 is the filed charter effective date, not a financing close. Existing October 21/22 earnings outcomes unchanged. [Evidence](_data/credit-monitor/research-sources/2026-10-23-evidence.json).
 
 - 2026-10-22 — verification (transcription QA): 7 GW sub-bullet softened from "traced"/"is the analyst's own model line" to "likely source" (the WFC model carries 7.04 GW since 10-05, but the recap-call transcript does not attribute the number); Sinal update: "UBS's perceived buy-side ~$250bn" → "Ju's perception of the buy side ... (not a UBS estimate)"; UBS Full-log row: flagged that the $700bn Ju attributes to the "AK" (8-K) is in the PRE 14C on disk, not the 10-21 8-K. All other UBS figures and quotes and all WFC model figures checked against the transcript / both model files.
 - 2026-10-22 — run-inbox: UBS · Stephen Ju META group callback (2026-10-22, machine transcript) + WFC post-print model `META_WFS_Distribution_102126.xlsx`. Added 2 Full-log rows, 1 Sinal update, 1 sub-bullet under the 10-22 Current-state "COMPANY COLOUR AS RELAYED" bullet (the "7 gigawatts" traced to WFC's model), 2 Sources lines. **SUPERSEDED (model-vs-model, WFC 10-05 → 10-21):** 2027E diluted EPS $31.18 → $32.62; 2026E $29.44 → $29.32; 2028E $40.02 → $39.83; 2027E revenue $309,253mn → $314,930mn; 2027E capex incl. lease principal $246,239mn → $249,333mn; 2026E $141,245mn → $136,737mn; 2028E capacity-resale revenue $20,000mn → $10,000mn. The live WFC rating/PT (OW $1,000, 10-05) is not restated in the model. House lines unchanged.

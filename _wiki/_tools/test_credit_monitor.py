@@ -98,6 +98,21 @@ class CreditMonitorTests(unittest.TestCase):
         self.assertIn('PARTIAL / ATTENTION REQUIRED', body)
         self.assertIn('stale observation 2026-03-04', body)
 
+    def test_partial_workbook_reported_even_when_refresh_process_succeeds(self):
+        config = {'asof': '2026-08-24', 'market_series': [{'ticker': 'TEST Index'}], 'deals': []}
+        workbook = {'values_asof': '2026-09-29', 'refresh': {'status': 'partial', 'detail': 'previous values kept',
+                    'missing': ['BL097034 Corp']}, 'other': [{'name': 'SPCX revolver 2031', 'stale': True}]}
+        body = summary(config, {'series': [self.series()]}, today=TODAY, workbook=workbook)
+        self.assertIn('PARTIAL / ATTENTION REQUIRED', body)
+        self.assertIn('BL097034 Corp', body)
+        self.assertIn('SPCX revolver 2031: retained earlier value', body)
+
+    def test_old_workbook_date_cannot_be_called_current_despite_ok_status(self):
+        config = {'asof': '2026-08-24', 'market_series': [{'ticker': 'TEST Index'}], 'deals': []}
+        body = summary(config, {'series': [self.series()]}, today=TODAY,
+                       workbook={'values_asof': '2026-09-01', 'refresh': {'status': 'ok'}})
+        self.assertIn('Official workbook values are stale or undated: 2026-09-01', body)
+
 
 if __name__ == '__main__':
     unittest.main()

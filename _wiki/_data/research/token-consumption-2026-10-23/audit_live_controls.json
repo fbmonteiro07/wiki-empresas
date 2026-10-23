@@ -1,0 +1,589 @@
+{
+  "source": "R:/AI_Token_Consumption_and_Minimum_Price_with_References.xlsx",
+  "read_only": true,
+  "baseline": {
+    "anth_price": 0.8020841167396822,
+    "anth_full": 8.302613458054802,
+    "anth_api": 7.057221439346582,
+    "oai_price": 0.500902950820763,
+    "oai_full": 10.793728458927687,
+    "oai_api": 2.85805710352202,
+    "anth_dec_price": 0.8020841167396822,
+    "oai_dec_price": 0.500902950820763,
+    "anth_ref": 0.4592454180448148,
+    "oai_ref": 0.45952610629590185
+  },
+  "cases": [
+    {
+      "name": "ARR basis",
+      "cell": "D4",
+      "input": 2,
+      "result": {
+        "anth_price": 0.8020841167396822,
+        "anth_full": 7.389325977668773,
+        "anth_api": 6.143933958960552,
+        "oai_price": 0.500902950820763,
+        "oai_full": 10.53390508588023,
+        "oai_api": 2.598233730474563,
+        "anth_dec_price": 0.8020841167396822,
+        "oai_dec_price": 0.500902950820763,
+        "anth_ref": 0.4592454180448148,
+        "oai_ref": 0.45952610629590185
+      }
+    },
+    {
+      "name": "ARR basis",
+      "cell": "D4",
+      "input": 0,
+      "result": {
+        "anth_price": 0.8020841167396822,
+        "anth_full": "n.a.",
+        "anth_api": "n.a.",
+        "oai_price": 0.500902950820763,
+        "oai_full": "n.a.",
+        "oai_api": "n.a.",
+        "anth_dec_price": 0.8020841167396822,
+        "oai_dec_price": 0.500902950820763,
+        "anth_ref": 0.4592454180448148,
+        "oai_ref": 0.45952610629590185
+      }
+    },
+    {
+      "name": "ARR basis",
+      "cell": "D4",
+      "input": 3,
+      "result": {
+        "anth_price": 0.8020841167396822,
+        "anth_full": "n.a.",
+        "anth_api": "n.a.",
+        "oai_price": 0.500902950820763,
+        "oai_full": "n.a.",
+        "oai_api": "n.a.",
+        "anth_dec_price": 0.8020841167396822,
+        "oai_dec_price": 0.500902950820763,
+        "anth_ref": 0.4592454180448148,
+        "oai_ref": 0.45952610629590185
+      }
+    },
+    {
+      "name": "ARR basis",
+      "cell": "D4",
+      "input": "invalid",
+      "result": {
+        "anth_price": 0.8020841167396822,
+        "anth_full": "n.a.",
+        "anth_api": "n.a.",
+        "oai_price": 0.500902950820763,
+        "oai_full": "n.a.",
+        "oai_api": "n.a.",
+        "anth_dec_price": 0.8020841167396822,
+        "oai_dec_price": 0.500902950820763,
+        "anth_ref": 0.4592454180448148,
+        "oai_ref": 0.45952610629590185
+      }
+    },
+    {
+      "name": "Anth API share",
+      "cell": "N10",
+      "input": 0,
+      "result": {
+        "anth_price": 0.8020841167396822,
+        "anth_full": 8.302613458054802,
+        "anth_api": 0,
+        "oai_price": 0.500902950820763,
+        "oai_full": 10.793728458927687,
+        "oai_api": 2.85805710352202,
+        "anth_dec_price": 0.8020841167396822,
+        "oai_dec_price": 0.500902950820763,
+        "anth_ref": 0.4592454180448148,
+        "oai_ref": 0.45952610629590185
+      }
+    },
+    {
+      "name": "Anth API share",
+      "cell": "N10",
+      "input": 1,
+      "result": {
+        "anth_price": 0.8020841167396822,
+        "anth_full": 8.302613458054802,
+        "anth_api": 8.302613458054802,
+        "oai_price": 0.500902950820763,
+        "oai_full": 10.793728458927687,
+        "oai_api": 2.85805710352202,
+        "anth_dec_price": 0.8020841167396822,
+        "oai_dec_price": 0.500902950820763,
+        "anth_ref": 0.4592454180448148,
+        "oai_ref": 0.45952610629590185
+      }
+    },
+    {
+      "name": "Anth API share",
+      "cell": "N10",
+      "input": -0.1,
+      "result": {
+        "anth_price": 0.8020841167396822,
+        "anth_full": 8.302613458054802,
+        "anth_api": -0.8302613458054803,
+        "oai_price": 0.500902950820763,
+        "oai_full": 10.793728458927687,
+        "oai_api": 2.85805710352202,
+        "anth_dec_price": 0.8020841167396822,
+        "oai_dec_price": 0.500902950820763,
+        "anth_ref": 0.4592454180448148,
+        "oai_ref": 0.45952610629590185
+      }
+    },
+    {
+      "name": "Anth API share",
+      "cell": "N10",
+      "input": 1.1,
+      "result": {
+        "anth_price": 0.8020841167396822,
+        "anth_full": 8.302613458054802,
+        "anth_api": 9.132874803860282,
+        "oai_price": 0.500902950820763,
+        "oai_full": 10.793728458927687,
+        "oai_api": 2.85805710352202,
+        "anth_dec_price": 0.8020841167396822,
+        "oai_dec_price": 0.500902950820763,
+        "anth_ref": 0.4592454180448148,
+        "oai_ref": 0.45952610629590185
+      }
+    },
+    {
+      "name": "Anth API share",
+      "cell": "N10",
+      "input": "invalid",
+      "result": {
+        "anth_price": 0.8020841167396822,
+        "anth_full": 8.302613458054802,
+        "anth_api": "n.a.",
+        "oai_price": 0.500902950820763,
+        "oai_full": 10.793728458927687,
+        "oai_api": 2.85805710352202,
+        "anth_dec_price": 0.8020841167396822,
+        "oai_dec_price": 0.500902950820763,
+        "anth_ref": 0.4592454180448148,
+        "oai_ref": 0.45952610629590185
+      }
+    },
+    {
+      "name": "OpenAI API share",
+      "cell": "N16",
+      "input": 0,
+      "result": {
+        "anth_price": 0.8020841167396822,
+        "anth_full": 8.302613458054802,
+        "anth_api": 7.057221439346582,
+        "oai_price": 0.500902950820763,
+        "oai_full": 10.793728458927687,
+        "oai_api": 0.25982337304745745,
+        "anth_dec_price": 0.8020841167396822,
+        "oai_dec_price": 0.500902950820763,
+        "anth_ref": 0.4592454180448148,
+        "oai_ref": 0.45952610629590185
+      }
+    },
+    {
+      "name": "OpenAI API share",
+      "cell": "N16",
+      "input": 1,
+      "result": {
+        "anth_price": 0.8020841167396822,
+        "anth_full": 8.302613458054802,
+        "anth_api": 7.057221439346582,
+        "oai_price": 0.500902950820763,
+        "oai_full": 10.793728458927687,
+        "oai_api": 10.793728458927687,
+        "anth_dec_price": 0.8020841167396822,
+        "oai_dec_price": 0.500902950820763,
+        "anth_ref": 0.4592454180448148,
+        "oai_ref": 0.45952610629590185
+      }
+    },
+    {
+      "name": "OpenAI API share",
+      "cell": "N16",
+      "input": -0.1,
+      "result": {
+        "anth_price": 0.8020841167396822,
+        "anth_full": 8.302613458054802,
+        "anth_api": 7.057221439346582,
+        "oai_price": 0.500902950820763,
+        "oai_full": 10.793728458927687,
+        "oai_api": -0.7935671355405655,
+        "anth_dec_price": 0.8020841167396822,
+        "oai_dec_price": 0.500902950820763,
+        "anth_ref": 0.4592454180448148,
+        "oai_ref": 0.45952610629590185
+      }
+    },
+    {
+      "name": "OpenAI API share",
+      "cell": "N16",
+      "input": 1.1,
+      "result": {
+        "anth_price": 0.8020841167396822,
+        "anth_full": 8.302613458054802,
+        "anth_api": 7.057221439346582,
+        "oai_price": 0.500902950820763,
+        "oai_full": 10.793728458927687,
+        "oai_api": 11.84711896751571,
+        "anth_dec_price": 0.8020841167396822,
+        "oai_dec_price": 0.500902950820763,
+        "anth_ref": 0.4592454180448148,
+        "oai_ref": 0.45952610629590185
+      }
+    },
+    {
+      "name": "OpenAI API share",
+      "cell": "N16",
+      "input": "invalid",
+      "result": {
+        "anth_price": 0.8020841167396822,
+        "anth_full": 8.302613458054802,
+        "anth_api": 7.057221439346582,
+        "oai_price": 0.500902950820763,
+        "oai_full": 10.793728458927687,
+        "oai_api": "n.a.",
+        "anth_dec_price": 0.8020841167396822,
+        "oai_dec_price": 0.500902950820763,
+        "anth_ref": 0.4592454180448148,
+        "oai_ref": 0.45952610629590185
+      }
+    },
+    {
+      "name": "Forecast price change",
+      "cell": "D5",
+      "input": -1,
+      "result": {
+        "anth_price": 0,
+        "anth_full": "n.a.",
+        "anth_api": "n.a.",
+        "oai_price": 0,
+        "oai_full": "n.a.",
+        "oai_api": "n.a.",
+        "anth_dec_price": 0,
+        "oai_dec_price": 0,
+        "anth_ref": "n.a.",
+        "oai_ref": "n.a."
+      }
+    },
+    {
+      "name": "Forecast price change",
+      "cell": "D5",
+      "input": -1.01,
+      "result": {
+        "anth_price": "n.a.",
+        "anth_full": "n.a.",
+        "anth_api": "n.a.",
+        "oai_price": "n.a.",
+        "oai_full": "n.a.",
+        "oai_api": "n.a.",
+        "anth_dec_price": "n.a.",
+        "oai_dec_price": "n.a.",
+        "anth_ref": "n.a.",
+        "oai_ref": "n.a."
+      }
+    },
+    {
+      "name": "Forecast price change",
+      "cell": "D5",
+      "input": "invalid",
+      "result": {
+        "anth_price": "n.a.",
+        "anth_full": "n.a.",
+        "anth_api": "n.a.",
+        "oai_price": "n.a.",
+        "oai_full": "n.a.",
+        "oai_api": "n.a.",
+        "anth_dec_price": "n.a.",
+        "oai_dec_price": "n.a.",
+        "anth_ref": "n.a.",
+        "oai_ref": "n.a."
+      }
+    },
+    {
+      "name": "Forecast price change",
+      "cell": "D5",
+      "input": -0.1,
+      "result": {
+        "anth_price": 0.721875705065714,
+        "anth_full": 9.225126064505334,
+        "anth_api": 7.841357154829535,
+        "oai_price": 0.4508126557386867,
+        "oai_full": 11.993031621030763,
+        "oai_api": 3.175619003913355,
+        "anth_dec_price": 0.6496881345591425,
+        "oai_dec_price": 0.40573139016481796,
+        "anth_ref": 0.4133208762403333,
+        "oai_ref": 0.4135734956663117
+      }
+    },
+    {
+      "name": "Forecast price change",
+      "cell": "D5",
+      "input": 0.1,
+      "result": {
+        "anth_price": 0.8822925284136505,
+        "anth_full": 7.547830416413455,
+        "anth_api": 6.415655853951438,
+        "oai_price": 0.5509932459028393,
+        "oai_full": 9.812480417206988,
+        "oai_api": 2.5982337304745635,
+        "anth_dec_price": 0.9705217812550155,
+        "oai_dec_price": 0.6060925704931232,
+        "anth_ref": 0.5051699598492962,
+        "oai_ref": 0.5054787169254921
+      }
+    },
+    {
+      "name": "Anth input weight",
+      "cell": "N27",
+      "input": 0,
+      "result": {
+        "anth_price": 0.8020841167396822,
+        "anth_full": 8.302613458054802,
+        "anth_api": 7.057221439346582,
+        "oai_price": 0.500902950820763,
+        "oai_full": 10.793728458927687,
+        "oai_api": 2.85805710352202,
+        "anth_dec_price": 0.8020841167396822,
+        "oai_dec_price": 0.500902950820763,
+        "anth_ref": 0.4592454180448148,
+        "oai_ref": 0.45952610629590185
+      }
+    },
+    {
+      "name": "Anth input weight",
+      "cell": "N27",
+      "input": 1,
+      "result": {
+        "anth_price": "n.a.",
+        "anth_full": "n.a.",
+        "anth_api": "n.a.",
+        "oai_price": 0.500902950820763,
+        "oai_full": 10.793728458927687,
+        "oai_api": 2.85805710352202,
+        "anth_dec_price": "n.a.",
+        "oai_dec_price": 0.500902950820763,
+        "anth_ref": 0.4592454180448148,
+        "oai_ref": 0.45952610629590185
+      }
+    },
+    {
+      "name": "Anth input weight",
+      "cell": "N27",
+      "input": -0.1,
+      "result": {
+        "anth_price": "n.a.",
+        "anth_full": "n.a.",
+        "anth_api": "n.a.",
+        "oai_price": 0.500902950820763,
+        "oai_full": 10.793728458927687,
+        "oai_api": 2.85805710352202,
+        "anth_dec_price": "n.a.",
+        "oai_dec_price": 0.500902950820763,
+        "anth_ref": 0.4592454180448148,
+        "oai_ref": 0.45952610629590185
+      }
+    },
+    {
+      "name": "Anth input weight",
+      "cell": "N27",
+      "input": 1.1,
+      "result": {
+        "anth_price": "n.a.",
+        "anth_full": "n.a.",
+        "anth_api": "n.a.",
+        "oai_price": 0.500902950820763,
+        "oai_full": 10.793728458927687,
+        "oai_api": 2.85805710352202,
+        "anth_dec_price": "n.a.",
+        "oai_dec_price": 0.500902950820763,
+        "anth_ref": 0.4592454180448148,
+        "oai_ref": 0.45952610629590185
+      }
+    },
+    {
+      "name": "Anth input weight",
+      "cell": "N27",
+      "input": "invalid",
+      "result": {
+        "anth_price": "n.a.",
+        "anth_full": "n.a.",
+        "anth_api": "n.a.",
+        "oai_price": 0.500902950820763,
+        "oai_full": 10.793728458927687,
+        "oai_api": 2.85805710352202,
+        "anth_dec_price": "n.a.",
+        "oai_dec_price": 0.500902950820763,
+        "anth_ref": 0.4592454180448148,
+        "oai_ref": 0.45952610629590185
+      }
+    },
+    {
+      "name": "OpenAI output weight",
+      "cell": "N68",
+      "input": 0,
+      "result": {
+        "anth_price": 0.8020841167396822,
+        "anth_full": 8.302613458054802,
+        "anth_api": 7.057221439346582,
+        "oai_price": 0.500902950820763,
+        "oai_full": 10.793728458927687,
+        "oai_api": 2.85805710352202,
+        "anth_dec_price": 0.8020841167396822,
+        "oai_dec_price": 0.500902950820763,
+        "anth_ref": 0.4592454180448148,
+        "oai_ref": 0.45952610629590185
+      }
+    },
+    {
+      "name": "OpenAI output weight",
+      "cell": "N68",
+      "input": 1,
+      "result": {
+        "anth_price": 0.8020841167396822,
+        "anth_full": 8.302613458054802,
+        "anth_api": 7.057221439346582,
+        "oai_price": "n.a.",
+        "oai_full": "n.a.",
+        "oai_api": "n.a.",
+        "anth_dec_price": 0.8020841167396822,
+        "oai_dec_price": "n.a.",
+        "anth_ref": 0.4592454180448148,
+        "oai_ref": 0.45952610629590185
+      }
+    },
+    {
+      "name": "OpenAI output weight",
+      "cell": "N68",
+      "input": -0.1,
+      "result": {
+        "anth_price": 0.8020841167396822,
+        "anth_full": 8.302613458054802,
+        "anth_api": 7.057221439346582,
+        "oai_price": "n.a.",
+        "oai_full": "n.a.",
+        "oai_api": "n.a.",
+        "anth_dec_price": 0.8020841167396822,
+        "oai_dec_price": "n.a.",
+        "anth_ref": 0.4592454180448148,
+        "oai_ref": 0.45952610629590185
+      }
+    },
+    {
+      "name": "OpenAI output weight",
+      "cell": "N68",
+      "input": 1.1,
+      "result": {
+        "anth_price": 0.8020841167396822,
+        "anth_full": 8.302613458054802,
+        "anth_api": 7.057221439346582,
+        "oai_price": "n.a.",
+        "oai_full": "n.a.",
+        "oai_api": "n.a.",
+        "anth_dec_price": 0.8020841167396822,
+        "oai_dec_price": "n.a.",
+        "anth_ref": 0.4592454180448148,
+        "oai_ref": 0.45952610629590185
+      }
+    },
+    {
+      "name": "OpenAI output weight",
+      "cell": "N68",
+      "input": "invalid",
+      "result": {
+        "anth_price": 0.8020841167396822,
+        "anth_full": 8.302613458054802,
+        "anth_api": 7.057221439346582,
+        "oai_price": "n.a.",
+        "oai_full": "n.a.",
+        "oai_api": "n.a.",
+        "anth_dec_price": 0.8020841167396822,
+        "oai_dec_price": "n.a.",
+        "anth_ref": 0.4592454180448148,
+        "oai_ref": 0.45952610629590185
+      }
+    },
+    {
+      "name": "Valid residual-heavy forecast mix",
+      "active": {
+        "anth": [
+          [
+            0.01
+          ],
+          [
+            0.00888965621383916
+          ],
+          [
+            0.99
+          ]
+        ],
+        "oai": [
+          [
+            0.01
+          ],
+          [
+            0.027116133026081905
+          ],
+          [
+            0.99
+          ]
+        ]
+      },
+      "result": {
+        "anth_price": "n.a.",
+        "anth_full": "n.a.",
+        "anth_api": "n.a.",
+        "oai_price": "n.a.",
+        "oai_full": "n.a.",
+        "oai_api": "n.a.",
+        "anth_dec_price": "n.a.",
+        "oai_dec_price": "n.a.",
+        "anth_ref": 0.4592454180448148,
+        "oai_ref": 0.45952610629590185
+      }
+    },
+    {
+      "name": "ISBLANK zero override test",
+      "active": {
+        "anth": [
+          [
+            0.01
+          ],
+          [
+            0
+          ],
+          [
+            0.99
+          ]
+        ],
+        "oai": [
+          [
+            0.01
+          ],
+          [
+            0
+          ],
+          [
+            0.99
+          ]
+        ]
+      },
+      "result": {
+        "anth_price": 0.5893092083353122,
+        "anth_full": 11.300339936900734,
+        "anth_api": 9.605288946365626,
+        "oai_price": 0.23284009592152283,
+        "oai_full": 23.220272324819806,
+        "oai_api": 6.1484652422190065,
+        "anth_dec_price": 0.5893092083353122,
+        "oai_dec_price": 0.23284009592152283,
+        "anth_ref": 0.4592454180448148,
+        "oai_ref": 0.45952610629590185
+      }
+    }
+  ]
+}

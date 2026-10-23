@@ -886,3 +886,539 @@
 {"date": "2026-10-22", "time": "09:34", "src": "bbg-api", "kind": "equity", "id": "MSFT US Equity", "tk": "Microsoft", "px": 532.95, "chg1d": 0.2030571, "relvol": 0.655}
 {"date": "2026-10-22", "time": "09:34", "src": "bbg-api", "kind": "equity", "id": "AMZN US Equity", "tk": "Amazon", "px": 262.37, "chg1d": -0.09899859, "relvol": 0.869}
 {"date": "2026-10-22", "time": "09:34", "src": "bbg-api", "kind": "equity", "id": "9984 JT Equity", "tk": "SoftBank", "px": 4305.0, "chg1d": -6.858503, "relvol": 0.789}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "bond", "id": "HUTBPA 6.129 11/30/42 144A Corp", "tk": "HUTBPA", "px": 92.07, "yld": 6.954780903194603, "oas": 210.71390987117556, "chg1d": -0.44064672449177095}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "bond", "id": "HUTRBA 6.192 11/15/42 144A Corp", "tk": "HUTRBA", "px": 93.499, "yld": 6.865946487328993, "oas": 203.349531801964, "chg1d": -0.4291055246670726}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "bond", "id": "RPLDCI 6.581 05/30/49 144A Corp", "tk": "RPLDCI", "px": 91.6, "yld": 7.5223066584137595, "oas": 237.46523287339573, "chg1d": -0.5281901210779124}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "bond", "id": "TXEDCI 7.534 11/30/48 144A Corp", "tk": "TXEDCI", "px": 98.997, "yld": 7.647935988307056, "oas": 251.00550551448217, "chg1d": -0.5125890631788138}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "bond", "id": "RDMICH 7.5 03/30/45 144A Corp", "tk": "RDMICH", "px": 86.042, "yld": 9.064813450901527, "oas": 422.5168260483048, "chg1d": -0.48462037839042577}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "bond", "id": "QTSODY 6.625 09/01/31 144A Corp", "tk": "QTSODY", "px": 96.76, "yld": 7.429678947704464, "oas": 237.65612799169395, "chg1d": -0.23478351065221548}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "bond", "id": "QTSQST 5.7 04/15/36 144A Corp", "tk": "QTSQST", "px": 87.242, "yld": 7.614807290234115, "oas": 262.2348363339026, "chg1d": -0.4978282670970931}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "bond", "id": "APLD 9.25 12/15/30 144A Corp", "tk": "APLD", "px": 102.429, "yld": 8.535062286091746, "oas": 337.60101709355587, "chg1d": -0.1320146171576143}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "bond", "id": "PFORGE 6.75 03/15/31 144A Corp", "tk": "PFORGE", "px": 95.22, "yld": 8.062064195011398, "oas": 337.4893483896681, "chg1d": 0.0012077384739957034}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "bond", "id": "ELNFOR 7 06/15/31 144A Corp", "tk": "ELNFOR", "px": 92.185, "yld": 9.099726635883517, "oas": 442.98196980426104, "chg1d": 0.14730210848753864}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "bond", "id": "CIFR 7.125 11/15/30 144A Corp", "tk": "CIFR", "px": 99.381, "yld": 7.302591970909371, "oas": 230.70783071089875, "chg1d": -0.20155352164343077}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "bond", "id": "BLKPRL 6.125 02/15/31 144A Corp", "tk": "BLKPRL", "px": 97.772, "yld": 6.726669144439401, "oas": 178.1491161095087, "chg1d": -0.12137028182095295}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "bond", "id": "STNGRY 6 06/15/31 144A Corp", "tk": "STNGRY", "px": 95.269, "yld": 7.216076621239126, "oas": 233.57676746043714, "chg1d": -0.209106212611252}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "bond", "id": "CORZ 7.75 05/15/31 144A Corp", "tk": "CORZ", "px": 93.018, "yld": 9.679799537755008, "oas": 497.6168583978781, "chg1d": -0.14461253106066793}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "bond", "id": "EDGCOM 7.5 04/30/31 144A Corp", "tk": "EDGCOM", "px": 85.187, "yld": 11.830312619782969, "oas": 766.3194504038286, "chg1d": -0.28232930396503364}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "bond", "id": "TRACTC 5.875 03/01/31 144A Corp", "tk": "TRACTC", "px": 86.75, "yld": 9.676557229362903, "oas": 498.701038036326, "chg1d": -0.058098516097299914}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "bond", "id": "TRACTD 6.5 05/01/31 144A Corp", "tk": "TRACTD", "px": 88.109, "yld": 9.823999118423256, "oas": 507.95786955962205, "chg1d": -0.7989562520730518}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "bond", "id": "FLASHC 7.25 12/31/30 144A Corp", "tk": "FLASHC", "px": 98.774, "yld": 7.593696747487265, "oas": 282.4458817386451, "chg1d": -0.1908099586165766}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "bond", "id": "MERIDI 6.25 04/30/31 144A Corp", "tk": "MERIDI", "px": 89.962, "yld": 9.00635494491073, "oas": 419.0182413728179, "chg1d": -0.15420520501943932}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "bond", "id": "ZENARC 8.875 08/31/31 144A Corp", "tk": "ZENARC", "px": 84.84, "yld": 13.181841389693746, "oas": 836.2850265225585, "chg1d": -0.2505144146019883}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "bond", "id": "GALAXY 9.875 08/01/31 144A Corp", "tk": "GALAXY", "px": 90.328, "yld": 12.626721260559686, "oas": 780.587131849369, "chg1d": -0.2685282979870312}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "bond", "id": "ELKGVP 7.5 06/15/31 144A Corp", "tk": "ELKGVP", "px": 92.962, "yld": 9.402593173782968, "oas": 481.2721045862901, "chg1d": 0.08226244659563078}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "bond", "id": "SECMOS 8.875 05/01/31 144A Corp", "tk": "SECMOS", "px": 96.169, "yld": 9.948463392889847, "oas": 506.97030283538396, "chg1d": -0.30545285965143887}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "bond", "id": "WULF 7.75 10/15/30 144A Corp", "tk": "WULF", "px": 102.158, "yld": 7.115277240628858, "oas": 193.47093972344177, "chg1d": -0.16330320058637177}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "bond", "id": "YNDRDC 6.875 06/30/31 144A Corp", "tk": "YNDRDC", "px": 88.326, "yld": 10.059385562016912, "oas": 552.5438668396977, "chg1d": 0.19518062886141593}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "bond", "id": "CRWV 9.75 10/01/2031 144A Corp", "tk": "CRWV", "px": 80.239, "yld": 15.640711427207254, "oas": 1082.4419397561026, "chg1d": 0.04009612097457314}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "bond", "id": "ORCL 4.95 02/04/31 Corp", "tk": "ORCL", "px": 91.104, "yld": 7.414269771835468, "oas": 259.2787420445016, "chg1d": -0.13436840928323612}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "NVDA 4.25 06/15/28 Corp", "tk": "NVDA 4.25 '28", "px": 98.88, "yld": 4.968030448336954, "chg1d": -0.0744388913395207}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "NVDA 4.35 06/15/29 Corp", "tk": "NVDA 4.35 '29", "px": 97.8, "yld": 5.252369528582799, "chg1d": -0.1589186143138034}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "NVDA 4.5 06/15/31 Corp", "tk": "NVDA 4.5 '31", "px": 95.617, "yld": 5.584679950126551, "chg1d": -0.26290041619292354}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "NVDA 4.75 06/15/33 Corp", "tk": "NVDA 4.75 '33", "px": 94.34, "yld": 5.7880354053269585, "chg1d": -0.454946610565439}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "NVDA 4.95 06/15/36 Corp", "tk": "NVDA 4.95 '36", "px": 92.898, "yld": 5.927125449181973, "chg1d": -0.3097126757915255}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "NVDA 5.55 06/15/46 Corp", "tk": "NVDA 5.55 '46", "px": 89.439, "yld": 6.509758566625713, "chg1d": -0.3608284002442499}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "NVDA 5.625 06/15/56 Corp", "tk": "NVDA 5.625 '56", "px": 86.839, "yld": 6.646228831465718, "chg1d": -0.4422278340650021}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "AVGO 4.6 01/15/2033 Corp", "tk": "AVGO 4.6 2033", "px": 92.285, "yld": 6.108018526613264, "chg1d": -0.6364639170762083}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "AVGO 4.8 10/15/2034 Corp", "tk": "AVGO 4.8 2034", "px": 90.548, "yld": 6.328146840650533, "chg1d": -0.3908342288851088}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "AVGO 5.2 07/15/2035 Corp", "tk": "AVGO 5.2 2035", "px": 91.991, "yld": 6.4118295095871165, "chg1d": -0.4546097423546211}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "AVGO 4.95 01/15/2036 Corp", "tk": "AVGO 4.95 2036", "px": 89.714, "yld": 6.445801973708855, "chg1d": -0.4272084655445789}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "AVGO 4.8 02/15/2036 Corp", "tk": "AVGO 4.8 2036", "px": 88.503, "yld": 6.462395537739605, "chg1d": -0.37795384431301515}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "AVGO 5.7 01/15/2056 Corp", "tk": "AVGO 5.7 2056", "px": 86.043, "yld": 6.805465697156361, "chg1d": -0.6761982554459017}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "AMD 5 08/17/2031 Corp", "tk": "AMD 5 2031", "px": 97.799, "yld": 5.525454330655991, "chg1d": -0.17604075792145554}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "AMD 5.5 08/17/2036 Corp", "tk": "AMD 5.5 2036", "px": 96.428, "yld": 5.985517171380786, "chg1d": -0.37274017807882565}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "SPCX 6.65 07/15/2056 144A Corp", "tk": "SPCX 6.65 2056 144A", "px": 83.409, "yld": 8.13722972912366, "chg1d": -0.9497986957828632}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "BL570250 Corp", "tk": "SPCX bridge TL (guaranteed)", "px": 99.063, "yld": 6.083822957879321, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "BL097034 Corp", "tk": "SPCX revolver 2031", "px": null, "yld": null, "chg1d": null}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "CRWV 1.75 12/01/2031 144A Corp", "tk": "CRWV 1.75 12/2031 (cv)", "px": 75.652, "yld": 7.600011178528186, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "CRWV 1.75 10/01/2032 144A Corp", "tk": "CRWV 1.75 10/2032 (cv)", "px": 69.216, "yld": 8.457137385747112, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "CRWV 2.875 04/01/2033 144A Corp", "tk": "CRWV 2.875 04/2033 (cv, Sep-26)", "px": 77.559, "yld": 7.31024151387886, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "CRWV 9.25 06/01/2030 144A Corp", "tk": "CRWV 9.25 06/2030", "px": 84.097, "yld": 15.134274595039585, "chg1d": -0.4415640594628726}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "CRWV 9 02/01/2031 144A Corp", "tk": "CRWV 9 02/2031", "px": 80.306, "yld": 15.46392267387417, "chg1d": -0.41986754704103685}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "CRWV 9.625 07/15/2032 144A Corp", "tk": "CRWV 9.625 07/2032", "px": 78.891, "yld": 15.2723531299267, "chg1d": 0.5540411238005581}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "BL567281 Corp", "tk": "CRWV GPU DDTL 11/2031", "px": 99.162, "yld": 8.640749861570155, "chg1d": -0.017725396106653524}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "BL577043 Corp", "tk": "CRWV DDTL 09/2031", "px": 98.0, "yld": 8.6263576515952, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "NBIS 1.25 03/15/2031 144A Corp", "tk": "NBIS 1.25 03/2031 (cv)", "px": 108.947, "yld": 3.315293299705765, "chg1d": 0.14109337715960943}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "NBIS 2.625 03/15/2033 144A Corp", "tk": "NBIS 2.625 03/2033 (cv)", "px": 110.901, "yld": 3.5234462273906098, "chg1d": -1.18786898157966}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "NBIS 4.5 02/15/2034 144A Corp", "tk": "NBIS 4.5 02/2034 (cv, Aug-26)", "px": 80.25, "yld": 10.813121546174683, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "CIFR 1.75 05/15/2030 Corp", "tk": "CIFR 1.75 05/2030 (cv)", "px": 193.878, "yld": -16.574512400932175, "chg1d": 0.06332746337123464}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "CIFR 0 10/01/2031 144A Corp", "tk": "CIFR 0 10/2031 (cv)", "px": 88.38, "yld": 2.521042216082847, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "CIFR 0 11/01/2032 144A Corp", "tk": "CIFR 0 11/2032 (cv, NEW 16-Oct)", "px": 86.0, "yld": 2.523699438427718, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "SOFTBK 9.75 04/01/2034 144A Corp", "tk": "SOFTBK 9.75 04/2034 (Sep-26)", "px": 97.752, "yld": 10.185464685065812, "chg1d": -0.22538917960460556}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "US67066GAN43 Corp", "tk": "NVDA 2 06/2031 (comp)", "px": 86.35, "yld": 5.363989730233126, "chg1d": -0.23474606917603555}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "US02079KBM80 Corp", "tk": "GOOGL 4.8 02/2036 (comp)", "px": 93.355, "yld": 5.730346024564583, "chg1d": -0.36784543981367684}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "US02079KBK25 Corp", "tk": "GOOGL 4.1 02/2031 (comp)", "px": 95.606, "yld": 5.252573161932541, "chg1d": -0.16675046480556238}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "US30303MAH51 Corp", "tk": "META 5.25 05/2036 (comp)", "px": 92.833, "yld": 6.257349484158035, "chg1d": -0.5599625092053346}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "US68389XBW48 Corp", "tk": "ORCL 3.6 04/2040 (comp)", "px": 63.073, "yld": 8.181325819979383, "chg1d": -0.5856259909184219}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "US68389XDX03 Corp", "tk": "ORCL 4.95 02/2031 (comp)", "px": 91.104, "yld": 7.414269771835468, "chg1d": -0.13436840928323612}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "US594918BS26 Corp", "tk": "MSFT 3.45 08/2036 (comp)", "px": 85.744, "yld": 5.338977080841548, "chg1d": -0.4258825772765045}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "US023135DD51 Corp", "tk": "AMZN 4.25 03/2031 (comp)", "px": 95.674, "yld": 5.369933046912292, "chg1d": -0.1714236584056171}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "USU47015AH24 Corp", "tk": "JANEST 7.294 08/2031 (comp)", "px": 99.834, "yld": 7.3324538569657, "chg1d": -0.03136221353941786}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "XS3344488864 Corp", "tk": "SOFTBK 8.25 10/2031 (comp)", "px": 96.15, "yld": 9.230152158832894, "chg1d": -0.16733325857535739}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "BABA 2.125 02/09/2031 Corp", "tk": "BABA 2.125 02/2031 (comp)", "px": 87.647, "yld": 5.390290333374393, "chg1d": -0.12765595722483297}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "XS3333139288 Corp", "tk": "CRWV 8.5 07/2032 EUR", "px": 75.951, "yld": 14.87718553521188, "chg1d": -0.7700795948374145}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "NBIS 2 06/05/2029 Corp", "tk": "NBIS 2 06/2029 (cv)", "px": 311.973, "yld": -32.49368663887692, "chg1d": 0.06463064628080621}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "NBIS 3 06/05/2031 Corp", "tk": "NBIS 3 06/2031 (cv)", "px": 314.028, "yld": -17.53912589860071, "chg1d": -0.12387987309866601}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "NBIS 2.75 09/15/2032 Corp", "tk": "NBIS 2.75 09/2032 (cv)", "px": 130.085, "yld": 0.1519320179992271, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "IREN 3.25 06/15/2030 Corp", "tk": "IREN 3.25 06/2030 (cv)", "px": 176.084, "yld": -12.592327237130466, "chg1d": 0.4996330088819917}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "other", "id": "IREN 3.5 12/15/2029 Corp", "tk": "IREN 3.5 12/2029 (cv)", "px": 207.347, "yld": -19.61708808940687, "chg1d": -0.5128214970472509}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "cds", "id": "AVGO B CDS USD SR 5Y D14 Corp", "tk": "AVGO B CDS 5Y", "spread": 167.83000000000004}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "cds", "id": "AVAGO CDS USD SR 5Y D14 Corp", "tk": "AVAGO CDS 5Y", "spread": 102.1256}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "cds", "id": "AMD CDS USD SR 5Y D14 Corp", "tk": "AMD CDS 5Y", "spread": 115.33019999999999}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "cds", "id": "SPCX CDS USD SR 5Y D14 Corp", "tk": "SPCX CDS 5Y", "spread": 248.36}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "cds", "id": "NVDA CDS USD SR 5Y D14 Corp", "tk": "NVDA CDS 5Y", "spread": 118.93}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "cds", "id": "ORCLCP CDS USD SR 5Y D14 Corp", "tk": "ORCL CDS 5Y", "spread": 321.44}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "cds", "id": "CRWV CDS USD SR 1Y D14 Corp", "tk": "CRWV CDS 1Y", "spread": 875.1625466117725}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "cds", "id": "CRWV CDS USD SR 3Y D14 Corp", "tk": "CRWV CDS 3Y", "spread": 1121.9091853012274}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "cds", "id": "CRWV CDS USD SR 5Y D14 Corp", "tk": "CRWV CDS 5Y", "spread": 1186.326451320508}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "cds", "id": "CRWV CDS USD SR 7Y D14 Corp", "tk": "CRWV CDS 7Y", "spread": 1199.788549342751}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "cds", "id": "CRWV CDS USD SR 10Y D14 Corp", "tk": "CRWV CDS 10Y", "spread": 1224.3181573343334}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "cds", "id": "META CDS USD SR 5Y D14 Corp", "tk": "META CDS 5Y", "spread": 120.93}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "cds", "id": "GOOGL CDS USD SR 5Y D14 Corp", "tk": "GOOGL CDS 5Y", "spread": 85.67}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "cds", "id": "MSFT CDS USD SR 5Y D14 Corp", "tk": "MSFT CDS 5Y", "spread": 57.561}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "cds", "id": "AMZN CDS USD SR 5Y D14 Corp", "tk": "AMZN CDS 5Y", "spread": 84.8313}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "equity", "id": "CRWV US Equity", "tk": "CoreWeave", "px": 55.6, "chg1d": -10.06147, "relvol": 1.792}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "equity", "id": "NBIS US Equity", "tk": "Nebius", "px": 159.17, "chg1d": -7.227371, "relvol": 1.365}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "equity", "id": "IREN US Equity", "tk": "IREN", "px": 25.51, "chg1d": -8.369253, "relvol": 1.455}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "equity", "id": "APLD US Equity", "tk": "Applied Digital", "px": 19.09, "chg1d": -9.00858, "relvol": 1.15}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "equity", "id": "CORZ US Equity", "tk": "Core Scientific", "px": 13.2, "chg1d": -7.368421, "relvol": 0.932}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "equity", "id": "CIFR US Equity", "tk": "Cipher Digital", "px": 8.32, "chg1d": -8.871851, "relvol": 1.003}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "equity", "id": "WULF US Equity", "tk": "TeraWulf", "px": 11.32, "chg1d": -11.28527, "relvol": 1.429}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "equity", "id": "GLXY US Equity", "tk": "Galaxy Digital", "px": 15.29, "chg1d": -9.686946, "relvol": 1.312}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "equity", "id": "HUT US Equity", "tk": "Hut 8", "px": 63.97, "chg1d": -10.63146, "relvol": 0.816}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "equity", "id": "ORCL US Equity", "tk": "Oracle", "px": 125.54, "chg1d": -2.780144, "relvol": 1.121}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "equity", "id": "AVGO US Equity", "tk": "Broadcom", "px": 323.24, "chg1d": -4.310243, "relvol": 1.214}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "equity", "id": "NVDA US Equity", "tk": "NVIDIA", "px": 212.21, "chg1d": -4.396991, "relvol": 1.184}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "equity", "id": "AMD US Equity", "tk": "AMD", "px": 507.93, "chg1d": -8.103561, "relvol": 1.292}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "equity", "id": "SPCX US Equity", "tk": "SpaceX", "px": 144.75, "chg1d": -9.139414, "relvol": 1.971}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "equity", "id": "META US Equity", "tk": "Meta", "px": 648.85, "chg1d": -6.977578, "relvol": 1.858}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "equity", "id": "GOOGL US Equity", "tk": "Alphabet", "px": 324.22, "chg1d": -3.148524, "relvol": 1.087}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "equity", "id": "MSFT US Equity", "tk": "Microsoft", "px": 521.08, "chg1d": -2.227226, "relvol": 0.991}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "equity", "id": "AMZN US Equity", "tk": "Amazon", "px": 250.38, "chg1d": -4.569882, "relvol": 1.33}
+{"date": "2026-10-23", "time": "09:15", "src": "bbg-api", "kind": "equity", "id": "9984 JT Equity", "tk": "SoftBank", "px": 4276.0, "chg1d": -0.6736353, "relvol": 1.138}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "bond", "id": "HUTBPA 6.129 11/30/42 144A Corp", "tk": "HUTBPA", "px": 92.143, "yld": 6.946736987528686, "oas": 211.97225878375198, "chg1d": -0.3616655299963711}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "bond", "id": "HUTRBA 6.192 11/15/42 144A Corp", "tk": "HUTRBA", "px": 93.561, "yld": 6.859215576813374, "oas": 204.75155183942204, "chg1d": -0.36319660293766537}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "bond", "id": "RPLDCI 6.581 05/30/49 144A Corp", "tk": "RPLDCI", "px": 91.658, "yld": 7.515377896830062, "oas": 238.83692865992407, "chg1d": -0.46539023888063574}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "bond", "id": "TXEDCI 7.534 11/30/48 144A Corp", "tk": "TXEDCI", "px": 99.058, "yld": 7.64092531809887, "oas": 252.38698022002333, "chg1d": -0.4512162558849055}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "bond", "id": "RDMICH 7.5 03/30/45 144A Corp", "tk": "RDMICH", "px": 86.107, "yld": 9.056729559552114, "oas": 423.7271602953635, "chg1d": -0.4103907994183221}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "bond", "id": "QTSODY 6.625 09/01/31 144A Corp", "tk": "QTSODY", "px": 96.835, "yld": 7.410359746811558, "oas": 237.90814855080785, "chg1d": -0.15693820278588935}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "bond", "id": "QTSQST 5.7 04/15/36 144A Corp", "tk": "QTSQST", "px": 87.292, "yld": 7.606717623598518, "oas": 263.939120446096, "chg1d": -0.44106427971268664}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "bond", "id": "APLD 9.25 12/15/30 144A Corp", "tk": "APLD", "px": 102.383, "yld": 8.548147174367072, "oas": 342.2725989253002, "chg1d": -0.17657198794123566}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "bond", "id": "PFORGE 6.75 03/15/31 144A Corp", "tk": "PFORGE", "px": 95.115, "yld": 8.091979465177594, "oas": 343.80808857139505, "chg1d": -0.10984118869191498}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "bond", "id": "ELNFOR 7 06/15/31 144A Corp", "tk": "ELNFOR", "px": 92.176, "yld": 9.102130169837107, "oas": 445.9935368960298, "chg1d": 0.13832861917337064}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "bond", "id": "CIFR 7.125 11/15/30 144A Corp", "tk": "CIFR", "px": 99.371, "yld": 7.305352049361314, "oas": 233.96671767371896, "chg1d": -0.21147504420750912}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "bond", "id": "BLKPRL 6.125 02/15/31 144A Corp", "tk": "BLKPRL", "px": 97.764, "yld": 6.728869844189659, "oas": 181.25757824384465, "chg1d": -0.12910341062648098}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "bond", "id": "STNGRY 6 06/15/31 144A Corp", "tk": "STNGRY", "px": 95.251, "yld": 7.220849366163472, "oas": 236.8663300977596, "chg1d": -0.22773020930628018}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "bond", "id": "CORZ 7.75 05/15/31 144A Corp", "tk": "CORZ", "px": 92.917, "yld": 9.709182968616181, "oas": 503.61863858562094, "chg1d": -0.2529833647818192}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "bond", "id": "EDGCOM 7.5 04/30/31 144A Corp", "tk": "EDGCOM", "px": 85.171, "yld": 11.836126319973753, "oas": 769.7380061784543, "chg1d": -0.30184267308107665}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "bond", "id": "TRACTC 5.875 03/01/31 144A Corp", "tk": "TRACTC", "px": 85.985, "yld": 9.917400031873582, "oas": 526.358316057734, "chg1d": -0.9398180939262807}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "bond", "id": "TRACTD 6.5 05/01/31 144A Corp", "tk": "TRACTD", "px": 87.836, "yld": 9.90675930821346, "oas": 519.1791540663197, "chg1d": -1.106370100422919}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "bond", "id": "FLASHC 7.25 12/31/30 144A Corp", "tk": "FLASHC", "px": 98.708, "yld": 7.6122787526120925, "oas": 287.9117197257515, "chg1d": -0.25689570396172184}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "bond", "id": "MERIDI 6.25 04/30/31 144A Corp", "tk": "MERIDI", "px": 89.894, "yld": 9.026130453609417, "oas": 423.7722420265753, "chg1d": -0.2294099314633644}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "bond", "id": "ZENARC 8.875 08/31/31 144A Corp", "tk": "ZENARC", "px": 84.777, "yld": 13.201795091023964, "oas": 840.9776168746889, "chg1d": -0.324774002654108}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "bond", "id": "GALAXY 9.875 08/01/31 144A Corp", "tk": "GALAXY", "px": 90.143, "yld": 12.68325717057524, "oas": 789.0196505419927, "chg1d": -0.47318437839028726}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "bond", "id": "ELKGVP 7.5 06/15/31 144A Corp", "tk": "ELKGVP", "px": 92.915, "yld": 9.415912700654347, "oas": 485.5567404387314, "chg1d": 0.03143650622421614}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "bond", "id": "SECMOS 8.875 05/01/31 144A Corp", "tk": "SECMOS", "px": 96.048, "yld": 9.982958047217556, "oas": 513.4737228861916, "chg1d": -0.4302982283526841}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "bond", "id": "WULF 7.75 10/15/30 144A Corp", "tk": "WULF", "px": 102.148, "yld": 7.118174872397028, "oas": 196.8021311438293, "chg1d": -0.17288052773027449}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "bond", "id": "YNDRDC 6.875 06/30/31 144A Corp", "tk": "YNDRDC", "px": 88.281, "yld": 10.072648546756152, "oas": 556.7173027873939, "chg1d": 0.14402029896689808}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "bond", "id": "CRWV 9.75 10/01/2031 144A Corp", "tk": "CRWV", "px": 79.983, "yld": 15.7292160964924, "oas": 1093.9824606108548, "chg1d": -0.2799871233601546}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "bond", "id": "ORCL 4.95 02/04/31 Corp", "tk": "ORCL", "px": 91.136, "yld": 7.404892150187758, "oas": 261.1256372077651, "chg1d": -0.09908272569025692}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "NVDA 4.25 06/15/28 Corp", "tk": "NVDA 4.25 '28", "px": 98.891, "yld": 4.960899302559298, "chg1d": -0.06342363318583727}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "NVDA 4.35 06/15/29 Corp", "tk": "NVDA 4.35 '29", "px": 97.817, "yld": 5.2452875352782495, "chg1d": -0.14189052613524938}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "NVDA 4.5 06/15/31 Corp", "tk": "NVDA 4.5 '31", "px": 95.571, "yld": 5.596384394318528, "chg1d": -0.31092428209327183}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "NVDA 4.75 06/15/33 Corp", "tk": "NVDA 4.75 '33", "px": 94.324, "yld": 5.7911711705723095, "chg1d": -0.47219862161179377}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "NVDA 4.95 06/15/36 Corp", "tk": "NVDA 4.95 '36", "px": 92.59, "yld": 5.971421808482523, "chg1d": -0.6396321693827016}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "NVDA 5.55 06/15/46 Corp", "tk": "NVDA 5.55 '46", "px": 89.183, "yld": 6.5349262908986105, "chg1d": -0.6456565736686962}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "NVDA 5.625 06/15/56 Corp", "tk": "NVDA 5.625 '56", "px": 86.569, "yld": 6.669734653299101, "chg1d": -0.7517861714405963}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "AVGO 4.6 01/15/2033 Corp", "tk": "AVGO 4.6 2033", "px": 92.248, "yld": 6.115507210851652, "chg1d": -0.6754622982450078}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "AVGO 4.8 10/15/2034 Corp", "tk": "AVGO 4.8 2034", "px": 90.534, "yld": 6.330378190156674, "chg1d": -0.4056852255354868}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "AVGO 5.2 07/15/2035 Corp", "tk": "AVGO 5.2 2035", "px": 91.83, "yld": 6.437511339041981, "chg1d": -0.6291017110168479}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "AVGO 4.95 01/15/2036 Corp", "tk": "AVGO 4.95 2036", "px": 89.699, "yld": 6.448056501408679, "chg1d": -0.4434572819836752}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "AVGO 4.8 02/15/2036 Corp", "tk": "AVGO 4.8 2036", "px": 88.467, "yld": 6.468084737091736, "chg1d": -0.41898317279742336}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "AVGO 5.7 01/15/2056 Corp", "tk": "AVGO 5.7 2056", "px": 86.048, "yld": 6.804975390902664, "chg1d": -0.6696876914786878}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "AMD 5 08/17/2031 Corp", "tk": "AMD 5 2031", "px": 97.801, "yld": 5.525211585215603, "chg1d": -0.17435659690464086}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "AMD 5.5 08/17/2036 Corp", "tk": "AMD 5.5 2036", "px": 96.33, "yld": 5.9991089622782425, "chg1d": -0.47385745841969257}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "SPCX 6.65 07/15/2056 144A Corp", "tk": "SPCX 6.65 2056 144A", "px": 83.18, "yld": 8.161098621768911, "chg1d": -1.2217194086526086}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "BL570250 Corp", "tk": "SPCX bridge TL (guaranteed)", "px": 99.063, "yld": 6.083822957879321, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "BL097034 Corp", "tk": "SPCX revolver 2031", "px": null, "yld": null, "chg1d": null}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "CRWV 1.75 12/01/2031 144A Corp", "tk": "CRWV 1.75 12/2031 (cv)", "px": 75.652, "yld": 7.600011178528186, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "CRWV 1.75 10/01/2032 144A Corp", "tk": "CRWV 1.75 10/2032 (cv)", "px": 69.216, "yld": 8.457137385747112, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "CRWV 2.875 04/01/2033 144A Corp", "tk": "CRWV 2.875 04/2033 (cv, Sep-26)", "px": 77.559, "yld": 7.31024151387886, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "CRWV 9.25 06/01/2030 144A Corp", "tk": "CRWV 9.25 06/2030", "px": 84.095, "yld": 15.135101041391945, "chg1d": -0.44381337368840734}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "CRWV 9 02/01/2031 144A Corp", "tk": "CRWV 9 02/2031", "px": 80.232, "yld": 15.491878349933447, "chg1d": -0.5115167212932583}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "CRWV 9.625 07/15/2032 144A Corp", "tk": "CRWV 9.625 07/2032", "px": 78.883, "yld": 15.274853952687364, "chg1d": 0.5441502635799478}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "BL567281 Corp", "tk": "CRWV GPU DDTL 11/2031", "px": 99.162, "yld": 8.640749861570155, "chg1d": -0.017725396106653524}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "BL577043 Corp", "tk": "CRWV DDTL 09/2031", "px": 98.0, "yld": 8.6263576515952, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "NBIS 1.25 03/15/2031 144A Corp", "tk": "NBIS 1.25 03/2031 (cv)", "px": 108.947, "yld": 3.315293299705765, "chg1d": 0.14109337715960943}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "NBIS 2.625 03/15/2033 144A Corp", "tk": "NBIS 2.625 03/2033 (cv)", "px": 110.901, "yld": 3.5234462273906098, "chg1d": -1.18786898157966}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "NBIS 4.5 02/15/2034 144A Corp", "tk": "NBIS 4.5 02/2034 (cv, Aug-26)", "px": 80.25, "yld": 10.813121546174683, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "CIFR 1.75 05/15/2030 Corp", "tk": "CIFR 1.75 05/2030 (cv)", "px": 193.878, "yld": -16.574512400932175, "chg1d": 0.06332746337123464}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "CIFR 0 10/01/2031 144A Corp", "tk": "CIFR 0 10/2031 (cv)", "px": 88.38, "yld": 2.521042216082847, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "CIFR 0 11/01/2032 144A Corp", "tk": "CIFR 0 11/2032 (cv, NEW 16-Oct)", "px": 86.0, "yld": 2.523699438427718, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "SOFTBK 9.75 04/01/2034 144A Corp", "tk": "SOFTBK 9.75 04/2034 (Sep-26)", "px": 97.69, "yld": 10.197543678435064, "chg1d": -0.2883760751457795}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "US67066GAN43 Corp", "tk": "NVDA 2 06/2031 (comp)", "px": 86.383, "yld": 5.355140937053257, "chg1d": -0.1964227739965465}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "US02079KBM80 Corp", "tk": "GOOGL 4.8 02/2036 (comp)", "px": 93.378, "yld": 5.727059456512102, "chg1d": -0.34351237912445814}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "US02079KBK25 Corp", "tk": "GOOGL 4.1 02/2031 (comp)", "px": 95.485, "yld": 5.285358163754878, "chg1d": -0.29372683477460754}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "US30303MAH51 Corp", "tk": "META 5.25 05/2036 (comp)", "px": 92.857, "yld": 6.253817393967165, "chg1d": -0.534575885385285}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "US68389XBW48 Corp", "tk": "ORCL 3.6 04/2040 (comp)", "px": 63.102, "yld": 8.176500347685305, "chg1d": -0.5405790502093724}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "US68389XDX03 Corp", "tk": "ORCL 4.95 02/2031 (comp)", "px": 91.136, "yld": 7.404892150187758, "chg1d": -0.09908272569025692}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "US594918BS26 Corp", "tk": "MSFT 3.45 08/2036 (comp)", "px": 85.795, "yld": 5.331504601582564, "chg1d": -0.36684221998710725}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "US023135DD51 Corp", "tk": "AMZN 4.25 03/2031 (comp)", "px": 95.642, "yld": 5.378579531542009, "chg1d": -0.20504268740207682}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "USU47015AH24 Corp", "tk": "JANEST 7.294 08/2031 (comp)", "px": 99.831, "yld": 7.3332072363590655, "chg1d": -0.03431618959118199}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "XS3344488864 Corp", "tk": "SOFTBK 8.25 10/2031 (comp)", "px": 96.122, "yld": 9.237461166871269, "chg1d": -0.1961150774367958}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "BABA 2.125 02/09/2031 Corp", "tk": "BABA 2.125 02/2031 (comp)", "px": 87.693, "yld": 5.377310641801515, "chg1d": -0.07503476553828986}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "XS3333139288 Corp", "tk": "CRWV 8.5 07/2032 EUR", "px": 75.748, "yld": 14.941429161504777, "chg1d": -1.0344245516143469}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "NBIS 2 06/05/2029 Corp", "tk": "NBIS 2 06/2029 (cv)", "px": 311.973, "yld": -32.49368663887692, "chg1d": 0.06463064628080621}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "NBIS 3 06/05/2031 Corp", "tk": "NBIS 3 06/2031 (cv)", "px": 314.028, "yld": -17.53912589860071, "chg1d": -0.12387987309866601}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "NBIS 2.75 09/15/2032 Corp", "tk": "NBIS 2.75 09/2032 (cv)", "px": 130.085, "yld": 0.1519320179992271, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "IREN 3.25 06/15/2030 Corp", "tk": "IREN 3.25 06/2030 (cv)", "px": 176.084, "yld": -12.592327237130466, "chg1d": 0.4996330088819917}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "other", "id": "IREN 3.5 12/15/2029 Corp", "tk": "IREN 3.5 12/2029 (cv)", "px": 207.347, "yld": -19.61708808940687, "chg1d": -0.5128214970472509}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "cds", "id": "AVGO B CDS USD SR 5Y D14 Corp", "tk": "AVGO B CDS 5Y", "spread": 167.83000000000004}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "cds", "id": "AVAGO CDS USD SR 5Y D14 Corp", "tk": "AVAGO CDS 5Y", "spread": 102.1256}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "cds", "id": "AMD CDS USD SR 5Y D14 Corp", "tk": "AMD CDS 5Y", "spread": 115.33019999999999}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "cds", "id": "SPCX CDS USD SR 5Y D14 Corp", "tk": "SPCX CDS 5Y", "spread": 248.36}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "cds", "id": "NVDA CDS USD SR 5Y D14 Corp", "tk": "NVDA CDS 5Y", "spread": 118.93}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "cds", "id": "ORCLCP CDS USD SR 5Y D14 Corp", "tk": "ORCL CDS 5Y", "spread": 321.44}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "cds", "id": "CRWV CDS USD SR 1Y D14 Corp", "tk": "CRWV CDS 1Y", "spread": 875.1625466117725}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "cds", "id": "CRWV CDS USD SR 3Y D14 Corp", "tk": "CRWV CDS 3Y", "spread": 1121.9091853012274}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "cds", "id": "CRWV CDS USD SR 5Y D14 Corp", "tk": "CRWV CDS 5Y", "spread": 1186.326451320508}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "cds", "id": "CRWV CDS USD SR 7Y D14 Corp", "tk": "CRWV CDS 7Y", "spread": 1199.788549342751}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "cds", "id": "CRWV CDS USD SR 10Y D14 Corp", "tk": "CRWV CDS 10Y", "spread": 1224.3181573343334}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "cds", "id": "META CDS USD SR 5Y D14 Corp", "tk": "META CDS 5Y", "spread": 120.93}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "cds", "id": "GOOGL CDS USD SR 5Y D14 Corp", "tk": "GOOGL CDS 5Y", "spread": 85.67}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "cds", "id": "MSFT CDS USD SR 5Y D14 Corp", "tk": "MSFT CDS 5Y", "spread": 58.671}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "cds", "id": "AMZN CDS USD SR 5Y D14 Corp", "tk": "AMZN CDS 5Y", "spread": 86.61740000000002}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "equity", "id": "CRWV US Equity", "tk": "CoreWeave", "px": 55.6, "chg1d": -10.06147, "relvol": 1.792}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "equity", "id": "NBIS US Equity", "tk": "Nebius", "px": 159.17, "chg1d": -7.227371, "relvol": 1.365}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "equity", "id": "IREN US Equity", "tk": "IREN", "px": 25.51, "chg1d": -8.369253, "relvol": 1.455}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "equity", "id": "APLD US Equity", "tk": "Applied Digital", "px": 19.09, "chg1d": -9.00858, "relvol": 1.15}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "equity", "id": "CORZ US Equity", "tk": "Core Scientific", "px": 13.2, "chg1d": -7.368421, "relvol": 0.932}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "equity", "id": "CIFR US Equity", "tk": "Cipher Digital", "px": 8.32, "chg1d": -8.871851, "relvol": 1.003}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "equity", "id": "WULF US Equity", "tk": "TeraWulf", "px": 11.32, "chg1d": -11.28527, "relvol": 1.429}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "equity", "id": "GLXY US Equity", "tk": "Galaxy Digital", "px": 15.29, "chg1d": -9.686946, "relvol": 1.312}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "equity", "id": "HUT US Equity", "tk": "Hut 8", "px": 63.97, "chg1d": -10.63146, "relvol": 0.816}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "equity", "id": "ORCL US Equity", "tk": "Oracle", "px": 125.54, "chg1d": -2.780144, "relvol": 1.121}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "equity", "id": "AVGO US Equity", "tk": "Broadcom", "px": 323.24, "chg1d": -4.310243, "relvol": 1.214}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "equity", "id": "NVDA US Equity", "tk": "NVIDIA", "px": 212.21, "chg1d": -4.396991, "relvol": 1.184}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "equity", "id": "AMD US Equity", "tk": "AMD", "px": 507.93, "chg1d": -8.103561, "relvol": 1.292}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "equity", "id": "SPCX US Equity", "tk": "SpaceX", "px": 144.75, "chg1d": -9.139414, "relvol": 1.971}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "equity", "id": "META US Equity", "tk": "Meta", "px": 648.85, "chg1d": -6.977578, "relvol": 1.858}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "equity", "id": "GOOGL US Equity", "tk": "Alphabet", "px": 324.22, "chg1d": -3.148524, "relvol": 1.087}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "equity", "id": "MSFT US Equity", "tk": "Microsoft", "px": 521.08, "chg1d": -2.227226, "relvol": 0.991}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "equity", "id": "AMZN US Equity", "tk": "Amazon", "px": 250.38, "chg1d": -4.569882, "relvol": 1.33}
+{"date": "2026-10-23", "time": "09:34", "src": "bbg-api", "kind": "equity", "id": "9984 JT Equity", "tk": "SoftBank", "px": 4276.0, "chg1d": -0.6736353, "relvol": 1.138}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "HUTBPA 6.129 11/30/42 144A Corp", "tk": "HUTBPA", "px": 91.876, "yld": 6.986324039257554, "oas": 215.64107819696372, "chg1d": -0.7492508194677459}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "HUTRBA 6.192 11/15/42 144A Corp", "tk": "HUTRBA", "px": 93.492, "yld": 6.874803629192372, "oas": 205.40757123946554, "chg1d": -0.5159723972711643}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "RPLDCI 6.581 05/30/49 144A Corp", "tk": "RPLDCI", "px": 90.877, "yld": 7.615213169119941, "oas": 247.32524714302568, "chg1d": -1.3667091775789104}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "TXEDCI 7.534 11/30/48 144A Corp", "tk": "TXEDCI", "px": 98.35, "yld": 7.71926444663002, "oas": 258.68267792164005, "chg1d": -1.1381856943975894}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "RDMICH 7.5 03/30/45 144A Corp", "tk": "RDMICH", "px": 86.079, "yld": 9.089119645679508, "oas": 426.91543185964696, "chg1d": -0.7082343827292268}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "QTSODY 6.625 09/01/31 144A Corp", "tk": "QTSODY", "px": 96.712, "yld": 7.452326051089086, "oas": 242.88373491308465, "chg1d": -0.32673376966572154}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "QTSQST 5.7 04/15/36 144A Corp", "tk": "QTSQST", "px": 87.165, "yld": 7.630921936138263, "oas": 265.1654667820648, "chg1d": -0.6099191788941628}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "APLD 9.25 12/15/30 144A Corp", "tk": "APLD", "px": 102.375, "yld": 8.536068560461755, "oas": 339.84759764785605, "chg1d": -0.13562210669590358}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "PFORGE 6.75 03/15/31 144A Corp", "tk": "PFORGE", "px": 94.172, "yld": 8.38286554349669, "oas": 376.7544143073444, "chg1d": -1.1793303646771605}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "ELNFOR 7 06/15/31 144A Corp", "tk": "ELNFOR", "px": 91.48, "yld": 9.300142911005704, "oas": 466.6410066654478, "chg1d": -0.6192250816196323}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "CIFR 7.125 11/15/30 144A Corp", "tk": "CIFR", "px": 99.263, "yld": 7.335006795583851, "oas": 236.6009137818368, "chg1d": -0.3134719112959705}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "BLKPRL 6.125 02/15/31 144A Corp", "tk": "BLKPRL", "px": 97.579, "yld": 6.7762372632428605, "oas": 185.7339199344449, "chg1d": -0.30505507581326535}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "STNGRY 6 06/15/31 144A Corp", "tk": "STNGRY", "px": 95.036, "yld": 7.275016199429867, "oas": 241.73653847433314, "chg1d": -0.44124626590437527}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "CORZ 7.75 05/15/31 144A Corp", "tk": "CORZ", "px": 92.639, "yld": 9.773878285738991, "oas": 509.620455753813, "chg1d": -0.49281623215814174}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "EDGCOM 7.5 04/30/31 144A Corp", "tk": "EDGCOM", "px": 84.821, "yld": 11.962137924145303, "oas": 783.2506323803522, "chg1d": -0.7575682198270648}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "TRACTC 5.875 03/01/31 144A Corp", "tk": "TRACTC", "px": 85.469, "yld": 10.073243460601368, "oas": 541.3673322335584, "chg1d": -1.5056421112975265}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "TRACTD 6.5 05/01/31 144A Corp", "tk": "TRACTD", "px": 86.769, "yld": 10.20558583916769, "oas": 548.6436852472417, "chg1d": -2.2090360125910857}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "FLASHC 7.25 12/31/30 144A Corp", "tk": "FLASHC", "px": 98.677, "yld": 7.606130751114509, "oas": 286.10509943954844, "chg1d": -0.2346852348074969}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "MERIDI 6.25 04/30/31 144A Corp", "tk": "MERIDI", "px": 89.104, "yld": 9.282632424560608, "oas": 448.57134735422443, "chg1d": -1.1947629275326463}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "ZENARC 8.875 08/31/31 144A Corp", "tk": "ZENARC", "px": 84.299, "yld": 13.339920362435025, "oas": 853.7230897570862, "chg1d": -0.8350676443003213}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "GALAXY 9.875 08/01/31 144A Corp", "tk": "GALAXY", "px": 90.358, "yld": 12.605425022899803, "oas": 780.1046534303342, "chg1d": -0.19125229956544876}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "ELKGVP 7.5 06/15/31 144A Corp", "tk": "ELKGVP", "px": 92.596, "yld": 9.504256520797151, "oas": 494.6911116681157, "chg1d": -0.30295317984565834}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "SECMOS 8.875 05/01/31 144A Corp", "tk": "SECMOS", "px": 95.778, "yld": 10.004112451362783, "oas": 514.8006524087397, "chg1d": -0.5060575868570922}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "WULF 7.75 10/15/30 144A Corp", "tk": "WULF", "px": 102.05, "yld": 7.1394831078597445, "oas": 198.96281686577953, "chg1d": -0.2451991204495494}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "YNDRDC 6.875 06/30/31 144A Corp", "tk": "YNDRDC", "px": 87.949, "yld": 10.169126155474967, "oas": 566.1822018587623, "chg1d": -0.22596757682898147}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "CRWV 9.75 10/01/2031 144A Corp", "tk": "CRWV", "px": 80.18, "yld": 15.61889937072315, "oas": 1081.879532299809, "chg1d": 0.12012628283275234}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "ORCL 4.95 02/04/31 Corp", "tk": "ORCL", "px": 91.168, "yld": 7.4531407004622965, "oas": 264.8686150731322, "chg1d": -0.2789640763459905}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "CRWV 1.75 12/01/2031 144A Corp", "tk": "CRWV", "px": 76.146, "yld": 7.600011178528186, "oas": null, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "CRWV 1.75 10/01/2032 144A Corp", "tk": "CRWV", "px": 68.521, "yld": 8.457137385747112, "oas": null, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "CRWV 2.875 04/01/2033 144A Corp", "tk": "CRWV", "px": 77.871, "yld": 7.31024151387886, "oas": null, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "CRWV 9.25 06/01/2030 144A Corp", "tk": "CRWV", "px": 83.628, "yld": 15.288627287515864, "oas": 1051.8376574082376, "chg1d": -0.8822165547396071}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "CRWV 9 02/01/2031 144A Corp", "tk": "CRWV", "px": 80.147, "yld": 15.5228941286024, "oas": 1071.863638846791, "chg1d": -0.612118771179378}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "CRWV 9.625 07/15/2032 144A Corp", "tk": "CRWV", "px": 78.756, "yld": 15.2970631115821, "oas": 1046.475129776833, "chg1d": 0.4538579262052498}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "XS3333139288 Corp", "tk": "CRWV", "px": 75.309, "yld": 15.076975760952685, "oas": 1162.5779896855402, "chg1d": -1.589688756775191}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "BL482176 Corp", "tk": "CRWV", "px": null, "yld": null, "oas": null, "chg1d": null}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "BL502513 Corp", "tk": "CRWV", "px": 101.75, "yld": 9.491514830913058, "oas": null, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "BL510511 Corp", "tk": "CRWV", "px": 100.625, "yld": 7.225315031330953, "oas": null, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "BL526160 Corp", "tk": "CRWV", "px": 101.25, "yld": 7.819415899883422, "oas": null, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "BL563698 Corp", "tk": "CRWV", "px": null, "yld": null, "oas": null, "chg1d": null}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "BL563786 Corp", "tk": "CRWV", "px": 98.688, "yld": 5.342756520464268, "oas": null, "chg1d": -0.06329113924050633}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "BL567281 Corp", "tk": "CRWV", "px": 99.133, "yld": 8.647945728530742, "oas": null, "chg1d": -0.047479459764622665}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "BL577043 Corp", "tk": "CRWV", "px": 98.125, "yld": 8.594646057333497, "oas": null, "chg1d": 0.12755102040816327}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "NBIS US Equity", "tk": "NBIS", "px": 160.31, "yld": null, "oas": null, "chg1d": 0.499466}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "NBIS 2 06/05/2029 Corp", "tk": "NBIS", "px": 313.401, "yld": -32.99491857053361, "oas": null, "chg1d": 1.6255168847964372}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "NBIS 3 06/05/2031 Corp", "tk": "NBIS", "px": 315.379, "yld": -17.834469108498816, "oas": null, "chg1d": 1.337425556783563}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "NBIS 1 09/15/2030 Corp", "tk": "NBIS", "px": 130.212, "yld": -2.383506754255267, "oas": null, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "NBIS 2 3/4 09/15/32 Corp", "tk": "NBIS", "px": null, "yld": null, "oas": null, "chg1d": null}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "NBIS 1.25 03/15/2031 144A Corp", "tk": "NBIS", "px": 109.027, "yld": 3.1340745525896665, "oas": null, "chg1d": 0.9109025196427714}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "NBIS 2.625 03/15/2033 144A Corp", "tk": "NBIS", "px": 110.673, "yld": 3.448849635393296, "oas": null, "chg1d": -0.753510949386369}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "NBIS 0.5 02/15/2030 144A Corp", "tk": "NBIS", "px": 83.749, "yld": 9.221728769444718, "oas": null, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "NBIS 4.5 02/15/2034 144A Corp", "tk": "NBIS", "px": 81.26, "yld": 10.813121546174683, "oas": null, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "IREN US Equity", "tk": "IREN", "px": 25.425, "yld": null, "oas": null, "chg1d": -0.3332027}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "IREN 3.5 12/15/2029 Corp", "tk": "IREN", "px": 206.372, "yld": -20.12013300357542, "oas": null, "chg1d": 1.1941524530793268}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "IREN 3.25 06/15/2030 Corp", "tk": "IREN", "px": 174.613, "yld": -12.849018909820519, "oas": null, "chg1d": 1.4713318866767955}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "IREN 0 07/01/2031 Corp", "tk": "IREN", "px": 56.5, "yld": 13.117126002890611, "oas": null, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "IREN 0.25 06/01/2032 Corp", "tk": "IREN", "px": 67.5, "yld": 7.968795109864741, "oas": null, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "IREN 1 06/01/2033 Corp", "tk": "IREN", "px": 66.053, "yld": 7.495176470177943, "oas": null, "chg1d": -1.2386851587084762}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "bond", "id": "IREN 1 12/01/2033 Corp", "tk": "IREN", "px": 54.5, "yld": 10.620119190514867, "oas": null, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "NVDA 4.25 06/15/28 Corp", "tk": "NVDA 4.25 '28", "px": 98.861, "yld": 4.9968899041467125, "chg1d": -0.11963176699394307}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "NVDA 4.35 06/15/29 Corp", "tk": "NVDA 4.35 '29", "px": 97.792, "yld": 5.2623702053340775, "chg1d": -0.18333779112619197}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "NVDA 4.5 06/15/31 Corp", "tk": "NVDA 4.5 '31", "px": 95.51, "yld": 5.624400187287305, "chg1d": -0.42544513867882483}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "NVDA 4.75 06/15/33 Corp", "tk": "NVDA 4.75 '33", "px": 94.132, "yld": 5.83599786770306, "chg1d": -0.721060199916508}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "NVDA 4.95 06/15/36 Corp", "tk": "NVDA 4.95 '36", "px": 92.605, "yld": 5.983934942699787, "chg1d": -0.7324354409341193}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "NVDA 5.55 06/15/46 Corp", "tk": "NVDA 5.55 '46", "px": 88.9, "yld": 6.5693685486141415, "chg1d": -1.0332666428186432}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "NVDA 5.625 06/15/56 Corp", "tk": "NVDA 5.625 '56", "px": 86.124, "yld": 6.739007740777931, "chg1d": -1.6568439036520506}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "AVGO 4.6 01/15/2033 Corp", "tk": "AVGO 4.6 2033", "px": 92.212, "yld": 6.122999387033085, "chg1d": -0.7152897449439035}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "AVGO 4.8 10/15/2034 Corp", "tk": "AVGO 4.8 2034", "px": 90.263, "yld": 6.380943634113133, "chg1d": -0.7287329052652763}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "AVGO 5.2 07/15/2035 Corp", "tk": "AVGO 5.2 2035", "px": 91.748, "yld": 6.455009404867544, "chg1d": -0.7471502620950512}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "AVGO 4.95 01/15/2036 Corp", "tk": "AVGO 4.95 2036", "px": 89.397, "yld": 6.497143700662612, "chg1d": -0.7926514505675931}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "AVGO 4.8 02/15/2036 Corp", "tk": "AVGO 4.8 2036", "px": 88.078, "yld": 6.531324694015751, "chg1d": -0.8752135466798526}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "AVGO 5.7 01/15/2056 Corp", "tk": "AVGO 5.7 2056", "px": 85.231, "yld": 6.880165301420659, "chg1d": -1.6357676532095005}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "AMD 5 08/17/2031 Corp", "tk": "AMD 5 2031", "px": 97.533, "yld": 5.602552867654392, "chg1d": -0.4988178720717503}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "AMD 5.5 08/17/2036 Corp", "tk": "AMD 5.5 2036", "px": 96.031, "yld": 6.042296491082086, "chg1d": -0.7935335359742803}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "SPCX 6.65 07/15/2056 144A Corp", "tk": "SPCX 6.65 2056 144A", "px": 83.058, "yld": 8.196027712656585, "chg1d": -1.6159795041751892}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "BL570250 Corp", "tk": "SPCX bridge TL (guaranteed)", "px": 99.063, "yld": 6.083822957879321, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "BL097034 Corp", "tk": "SPCX revolver 2031", "px": null, "yld": null, "chg1d": null}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "CRWV 1.75 12/01/2031 144A Corp", "tk": "CRWV 1.75 12/2031 (cv)", "px": 76.146, "yld": 7.600011178528186, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "CRWV 1.75 10/01/2032 144A Corp", "tk": "CRWV 1.75 10/2032 (cv)", "px": 68.521, "yld": 8.457137385747112, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "CRWV 2.875 04/01/2033 144A Corp", "tk": "CRWV 2.875 04/2033 (cv, Sep-26)", "px": 77.871, "yld": 7.31024151387886, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "CRWV 9.25 06/01/2030 144A Corp", "tk": "CRWV 9.25 06/2030", "px": 83.628, "yld": 15.288627287515864, "chg1d": -0.8822165547396071}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "CRWV 9 02/01/2031 144A Corp", "tk": "CRWV 9 02/2031", "px": 80.147, "yld": 15.5228941286024, "chg1d": -0.612118771179378}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "CRWV 9.625 07/15/2032 144A Corp", "tk": "CRWV 9.625 07/2032", "px": 78.756, "yld": 15.2970631115821, "chg1d": 0.4538579262052498}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "BL567281 Corp", "tk": "CRWV GPU DDTL 11/2031", "px": 99.133, "yld": 8.647945728530742, "chg1d": -0.047479459764622665}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "BL577043 Corp", "tk": "CRWV DDTL 09/2031", "px": 98.125, "yld": 8.594646057333497, "chg1d": 0.12755102040816327}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "NBIS 1.25 03/15/2031 144A Corp", "tk": "NBIS 1.25 03/2031 (cv)", "px": 109.027, "yld": 3.1340745525896665, "chg1d": 0.9109025196427714}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "NBIS 2.625 03/15/2033 144A Corp", "tk": "NBIS 2.625 03/2033 (cv)", "px": 110.673, "yld": 3.448849635393296, "chg1d": -0.753510949386369}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "NBIS 4.5 02/15/2034 144A Corp", "tk": "NBIS 4.5 02/2034 (cv, Aug-26)", "px": 81.26, "yld": 10.813121546174683, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "CIFR 1.75 05/15/2030 Corp", "tk": "CIFR 1.75 05/2030 (cv)", "px": 189.342, "yld": -16.622032465838192, "chg1d": 0.24448426568013182}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "CIFR 0 10/01/2031 144A Corp", "tk": "CIFR 0 10/2031 (cv)", "px": 88.38, "yld": 2.521042216082847, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "CIFR 0 11/01/2032 144A Corp", "tk": "CIFR 0 11/2032 (cv, NEW 16-Oct)", "px": 85.918, "yld": 2.523699438427718, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "SOFTBK 9.75 04/01/2034 144A Corp", "tk": "SOFTBK 9.75 04/2034 (Sep-26)", "px": 97.422, "yld": 10.281574927400444, "chg1d": -0.720128737824673}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "US67066GAN43 Corp", "tk": "NVDA 2 06/2031 (comp)", "px": 86.253, "yld": 5.380625176479887, "chg1d": -0.3063437358107399}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "US02079KBM80 Corp", "tk": "GOOGL 4.8 02/2036 (comp)", "px": 93.271, "yld": 5.755062374151823, "chg1d": -0.5483690019005353}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "US02079KBK25 Corp", "tk": "GOOGL 4.1 02/2031 (comp)", "px": 95.441, "yld": 5.295757049712032, "chg1d": -0.3339812678527881}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "US30303MAH51 Corp", "tk": "META 5.25 05/2036 (comp)", "px": 92.545, "yld": 6.296645664373976, "chg1d": -0.8455352480417776}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "US68389XBW48 Corp", "tk": "ORCL 3.6 04/2040 (comp)", "px": 62.784, "yld": 8.245487482848198, "chg1d": -1.1901029759194317}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "US68389XDX03 Corp", "tk": "ORCL 4.95 02/2031 (comp)", "px": 91.168, "yld": 7.4531407004622965, "chg1d": -0.2789640763459905}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "US594918BS26 Corp", "tk": "MSFT 3.45 08/2036 (comp)", "px": 85.684, "yld": 5.350086715859494, "chg1d": -0.515197956488281}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "US023135DD51 Corp", "tk": "AMZN 4.25 03/2031 (comp)", "px": 95.573, "yld": 5.399744730995, "chg1d": -0.2882242203505084}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "USU47015AH24 Corp", "tk": "JANEST 7.294 08/2031 (comp)", "px": 99.838, "yld": 7.328436297970722, "chg1d": -0.017443478922616957}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "XS3344488864 Corp", "tk": "SOFTBK 8.25 10/2031 (comp)", "px": 96.107, "yld": 9.241116656897605, "chg1d": -0.21064096653750597}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "BABA 2.125 02/09/2031 Corp", "tk": "BABA 2.125 02/2031 (comp)", "px": 87.671, "yld": 5.381018335514066, "chg1d": -0.09070261711234684}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "XS3333139288 Corp", "tk": "CRWV 8.5 07/2032 EUR", "px": 75.309, "yld": 15.076975760952685, "chg1d": -1.589688756775191}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "NBIS 2 06/05/2029 Corp", "tk": "NBIS 2 06/2029 (cv)", "px": 313.401, "yld": -32.99491857053361, "chg1d": 1.6255168847964372}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "NBIS 3 06/05/2031 Corp", "tk": "NBIS 3 06/2031 (cv)", "px": 315.379, "yld": -17.834469108498816, "chg1d": 1.337425556783563}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "NBIS 2.75 09/15/2032 Corp", "tk": "NBIS 2.75 09/2032 (cv)", "px": 129.703, "yld": 0.1519320179992271, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "NBIS 1 09/15/2030 Corp", "tk": "NBIS 1.00 09/2030 (cv)", "px": 130.212, "yld": -2.383506754255267, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "NBIS 0.5 02/15/2030 144A Corp", "tk": "NBIS 0.50 02/2030 (cv, Aug-26)", "px": 83.749, "yld": 9.221728769444718, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "IREN 3.25 06/15/2030 Corp", "tk": "IREN 3.25 06/2030 (cv)", "px": 174.613, "yld": -12.849018909820519, "chg1d": 1.4713318866767955}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "IREN 3.5 12/15/2029 Corp", "tk": "IREN 3.5 12/2029 (cv)", "px": 206.372, "yld": -20.12013300357542, "chg1d": 1.1941524530793268}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "IREN 0 07/01/2031 Corp", "tk": "IREN 0.00 07/2031 (cv)", "px": 56.5, "yld": 13.117126002890611, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "IREN 0.25 06/01/2032 Corp", "tk": "IREN 0.25 06/2032 (cv)", "px": 67.5, "yld": 7.968795109864741, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "IREN 1 06/01/2033 Corp", "tk": "IREN 1.00 06/2033 (cv)", "px": 66.053, "yld": 7.495176470177943, "chg1d": -1.2386851587084762}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "IREN 1 12/01/2033 Corp", "tk": "IREN 1.00 12/2033 (cv, May-26)", "px": 54.5, "yld": 10.620119190514867, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "BL482176 Corp", "tk": "CRWV DDTL 1.0 03/2028", "px": null, "yld": null, "chg1d": null}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "BL502513 Corp", "tk": "CRWV DDTL 2.0 08/2030", "px": 101.75, "yld": 9.491514830913058, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "BL510511 Corp", "tk": "CRWV DDTL 3.0 08/2030", "px": 100.625, "yld": 7.225315031330953, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "BL526160 Corp", "tk": "CRWV DDTL 2.1 09/2030", "px": 101.25, "yld": 7.819415899883422, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "BL563698 Corp", "tk": "CRWV DDTL 4.0 fixed 03/2032", "px": null, "yld": null, "chg1d": null}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "other", "id": "BL563786 Corp", "tk": "CRWV DDTL 4.0 float 03/2032", "px": 98.688, "yld": 5.342756520464268, "chg1d": -0.06329113924050633}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "cds", "id": "AVAGO CDS USD SR 5Y D14 Corp", "tk": "AVAGO CDS 5Y", "spread": 100.0}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "cds", "id": "AMD CDS USD SR 5Y D14 Corp", "tk": "AMD CDS 5Y", "spread": 112.3036}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "cds", "id": "SPCX CDS USD SR 5Y D14 Corp", "tk": "SPCX CDS 5Y", "spread": 248.36}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "cds", "id": "NVDA CDS USD SR 5Y D14 Corp", "tk": "NVDA CDS 5Y", "spread": 118.93}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "cds", "id": "ORCLCP CDS USD SR 5Y D14 Corp", "tk": "ORCL CDS 5Y", "spread": 321.44}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "cds", "id": "CRWV CDS USD SR 5Y D14 Corp", "tk": "CRWV CDS 5Y", "spread": 1186.326451320508}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "cds", "id": "META CDS USD SR 5Y D14 Corp", "tk": "META CDS 5Y", "spread": 120.93}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "cds", "id": "GOOGL CDS USD SR 5Y D14 Corp", "tk": "GOOGL CDS 5Y", "spread": 85.67}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "cds", "id": "MSFT CDS USD SR 5Y D14 Corp", "tk": "MSFT CDS 5Y", "spread": 56.47999}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "cds", "id": "AMZN CDS USD SR 5Y D14 Corp", "tk": "AMZN CDS 5Y", "spread": 85.69142}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "cds", "id": "AVGO B CDS USD SR 5Y D14 Corp", "tk": "AVGO B CDS 5Y", "spread": 167.83000000000004}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "cds", "id": "CRWV CDS USD SR 1Y D14 Corp", "tk": "CRWV CDS 1Y", "spread": 875.1625466117725}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "cds", "id": "CRWV CDS USD SR 2Y D14 Corp", "tk": "CRWV CDS 2Y", "spread": 1061.9807841603786}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "cds", "id": "CRWV CDS USD SR 3Y D14 Corp", "tk": "CRWV CDS 3Y", "spread": 1121.9091853012274}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "cds", "id": "CRWV CDS USD SR 4Y D14 Corp", "tk": "CRWV CDS 4Y", "spread": 1147.5228579093318}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "cds", "id": "CRWV CDS USD SR 6Y D14 Corp", "tk": "CRWV CDS 6Y", "spread": 1184.8822041752176}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "cds", "id": "CRWV CDS USD SR 7Y D14 Corp", "tk": "CRWV CDS 7Y", "spread": 1199.788549342751}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "cds", "id": "CRWV CDS USD SR 10Y D14 Corp", "tk": "CRWV CDS 10Y", "spread": 1224.3181573343334}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "equity", "id": "9984 JT Equity", "tk": "SoftBank", "px": 4276.0, "chg1d": -0.6736353, "relvol": 64336743.333333336}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "equity", "id": "CRWV US Equity", "tk": "CoreWeave", "px": 54.43, "chg1d": -2.203237, "relvol": 45645391.93333333}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "equity", "id": "CIFR US Equity", "tk": "Cipher Digital", "px": 8.115, "chg1d": -2.34375, "relvol": 42526915.8}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "equity", "id": "META US Equity", "tk": "Meta", "px": 645.39, "chg1d": -0.3073129, "relvol": 21837506.133333333}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "equity", "id": "HUT US Equity", "tk": "Hut 8", "px": 62.35, "chg1d": -2.469908, "relvol": 5810703.8}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "equity", "id": "GLXY US Equity", "tk": "Galaxy Digital", "px": 14.87, "chg1d": -2.9431, "relvol": 6008082.5}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "equity", "id": "IREN US Equity", "tk": "IREN", "px": 25.425, "chg1d": -0.3332027, "relvol": 45861865.53333333}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "equity", "id": "GOOGL US Equity", "tk": "Alphabet", "px": 323.76, "chg1d": -0.2128185, "relvol": 25532730.466666665}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "equity", "id": "NBIS US Equity", "tk": "Nebius", "px": 160.31, "chg1d": 0.499466, "relvol": 19204387.0}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "equity", "id": "WULF US Equity", "tk": "TeraWulf", "px": 11.31, "chg1d": -0.1325088, "relvol": 35097180.333333336}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "equity", "id": "CORZ US Equity", "tk": "Core Scientific", "px": 13.165, "chg1d": -0.9469697, "relvol": 13499986.433333334}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "equity", "id": "AMD US Equity", "tk": "AMD", "px": 518.7, "chg1d": 2.206997, "relvol": 21675131.566666666}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "equity", "id": "NVDA US Equity", "tk": "NVIDIA", "px": 212.405, "chg1d": 0.1810471, "relvol": 105961707.86666666}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "equity", "id": "AVGO US Equity", "tk": "Broadcom", "px": 326.135, "chg1d": 0.9528524, "relvol": 23185688.433333334}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "equity", "id": "MSFT US Equity", "tk": "Microsoft", "px": 524.75, "chg1d": 0.7100637, "relvol": 21456397.666666668}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "equity", "id": "ORCL US Equity", "tk": "Oracle", "px": 127.22, "chg1d": 1.370081, "relvol": 32677081.2}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "equity", "id": "AMZN US Equity", "tk": "Amazon", "px": 249.29, "chg1d": -0.5271987, "relvol": 36694070.43333333}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "equity", "id": "SPCX US Equity", "tk": "SpaceX", "px": 147.43, "chg1d": 2.200345, "relvol": 99966130.43333334}
+{"date": "2026-10-23", "time": "18:32", "src": "xlsx", "kind": "equity", "id": "APLD US Equity", "tk": "Applied Digital", "px": 18.55, "chg1d": -2.750131, "relvol": 23316568.466666665}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "HUTBPA 6.129 11/30/42 144A Corp", "tk": "HUTBPA", "px": 91.913, "yld": 6.972110330189217, "oas": 213.18558803452947, "chg1d": -0.6102551631090396}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "HUTRBA 6.192 11/15/42 144A Corp", "tk": "HUTRBA", "px": 93.307, "yld": 6.886883672239576, "oas": 206.5205711409308, "chg1d": -0.6342761961872978}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "RPLDCI 6.581 05/30/49 144A Corp", "tk": "RPLDCI", "px": 90.879, "yld": 7.609104016191002, "oas": 245.94555633372403, "chg1d": -1.3111959495324836}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "TXEDCI 7.534 11/30/48 144A Corp", "tk": "TXEDCI", "px": 98.484, "yld": 7.706553936928473, "oas": 256.63435000403933, "chg1d": -1.027459381844082}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "RDMICH 7.5 03/30/45 144A Corp", "tk": "RDMICH", "px": 85.888, "yld": 9.084151257229186, "oas": 425.6247723593883, "chg1d": -0.662942542396617}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "QTSODY 6.625 09/01/31 144A Corp", "tk": "QTSODY", "px": 96.634, "yld": 7.4614938290621895, "oas": 243.95964574095046, "chg1d": -0.36390361534229937}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "QTSQST 5.7 04/15/36 144A Corp", "tk": "QTSQST", "px": 87.311, "yld": 7.603614016830042, "oas": 261.8642008442443, "chg1d": -0.4192574193793532}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "APLD 9.25 12/15/30 144A Corp", "tk": "APLD", "px": 102.412, "yld": 8.539950303263787, "oas": 340.3658607858491, "chg1d": -0.14868706880750376}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "PFORGE 6.75 03/15/31 144A Corp", "tk": "PFORGE", "px": 94.337, "yld": 8.313978555658716, "oas": 369.01568122539925, "chg1d": -0.9270495505690025}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "ELNFOR 7 06/15/31 144A Corp", "tk": "ELNFOR", "px": 91.63, "yld": 9.256947009459832, "oas": 462.2337940004961, "chg1d": -0.4547147321228749}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "CIFR 7.125 11/15/30 144A Corp", "tk": "CIFR", "px": 99.289, "yld": 7.329334643717184, "oas": 235.97689680265998, "chg1d": -0.29412092548524815}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "BLKPRL 6.125 02/15/31 144A Corp", "tk": "BLKPRL", "px": 97.517, "yld": 6.796923060903712, "oas": 188.17535463680042, "chg1d": -0.38171214127782854}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "STNGRY 6 06/15/31 144A Corp", "tk": "STNGRY", "px": 95.109, "yld": 7.25867182027905, "oas": 240.19760416400095, "chg1d": -0.3766383853560551}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "CORZ 7.75 05/15/31 144A Corp", "tk": "CORZ", "px": 92.751, "yld": 9.757178488653032, "oas": 508.0983264027595, "chg1d": -0.4312396990006893}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "EDGCOM 7.5 04/30/31 144A Corp", "tk": "EDGCOM", "px": 84.916, "yld": 11.918487931457916, "oas": 778.5395516108049, "chg1d": -0.6001736420620698}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "TRACTC 5.875 03/01/31 144A Corp", "tk": "TRACTC", "px": 85.363, "yld": 10.114845707385546, "oas": 546.0062305678358, "chg1d": -1.6563203766230747}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "TRACTD 6.5 05/01/31 144A Corp", "tk": "TRACTD", "px": 86.548, "yld": 10.300754197101766, "oas": 558.7117299582137, "chg1d": -2.556666761992287}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "FLASHC 7.25 12/31/30 144A Corp", "tk": "FLASHC", "px": 98.601, "yld": 7.642900013148886, "oas": 291.4555160479013, "chg1d": -0.364643762465603}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "MERIDI 6.25 04/30/31 144A Corp", "tk": "MERIDI", "px": 89.501, "yld": 9.141772677403962, "oas": 434.71859078472266, "chg1d": -0.6660324135034633}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "ZENARC 8.875 08/31/31 144A Corp", "tk": "ZENARC", "px": 84.499, "yld": 13.289908161824288, "oas": 849.0753395308353, "chg1d": -0.6510999789660412}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "GALAXY 9.875 08/01/31 144A Corp", "tk": "GALAXY", "px": 90.127, "yld": 12.68798784232707, "oas": 788.7773527686405, "chg1d": -0.4903310601374935}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "ELKGVP 7.5 06/15/31 144A Corp", "tk": "ELKGVP", "px": 92.993, "yld": 9.393670866656747, "oas": 482.2677388848143, "chg1d": 0.11605669078666161}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "SECMOS 8.875 05/01/31 144A Corp", "tk": "SECMOS", "px": 96.182, "yld": 9.94472967957489, "oas": 508.62343366540256, "chg1d": -0.2918000031721919}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "WULF 7.75 10/15/30 144A Corp", "tk": "WULF", "px": 102.067, "yld": 7.141513441382293, "oas": 199.09480278562165, "chg1d": -0.2520400684094859}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "YNDRDC 6.875 06/30/31 144A Corp", "tk": "YNDRDC", "px": 88.785, "yld": 9.924571386089745, "oas": 539.8226284003334, "chg1d": 0.7157341495996092}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "CRWV 9.75 10/01/2031 144A Corp", "tk": "CRWV", "px": 81.151, "yld": 15.330048795214182, "oas": 1053.3355786095412, "chg1d": 1.1763897682080173}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "ORCL 4.95 02/04/31 Corp", "tk": "ORCL", "px": 91.066, "yld": 7.425410784362093, "oas": 262.440295300718, "chg1d": -0.17585841002862204}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "CRWV 1.75 12/01/2031 144A Corp", "tk": "CRWV", "px": 74.25, "yld": 7.99993701538906, "oas": null, "chg1d": -1.8529631813122682}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "CRWV 1.75 10/01/2032 144A Corp", "tk": "CRWV", "px": 67.782, "yld": 8.848142642722525, "oas": null, "chg1d": -2.0710619122540046}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "CRWV 2.875 04/01/2033 144A Corp", "tk": "CRWV", "px": 76.795, "yld": 7.486381556257935, "oas": null, "chg1d": -0.9855735447511439}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "CRWV 9.25 06/01/2030 144A Corp", "tk": "CRWV", "px": 84.491, "yld": 14.9721494729541, "oas": 1020.5019304443275, "chg1d": 0.024446494082709398}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "CRWV 9 02/01/2031 144A Corp", "tk": "CRWV", "px": 80.836, "yld": 15.264828181621505, "oas": 1046.421662196974, "chg1d": 0.23772240827890576}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "CRWV 9.625 07/15/2032 144A Corp", "tk": "CRWV", "px": 79.005, "yld": 15.23675193495936, "oas": 1040.5931211816053, "chg1d": 0.6998293444233293}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "XS3333139288 Corp", "tk": "CRWV", "px": 75.355, "yld": 15.066736004487087, "oas": 1162.2080407716217, "chg1d": -1.5483379047908605}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "BL482176 Corp", "tk": "CRWV", "px": null, "yld": null, "oas": null, "chg1d": null}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "BL502513 Corp", "tk": "CRWV", "px": 101.75, "yld": 9.491514830913058, "oas": null, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "BL510511 Corp", "tk": "CRWV", "px": 100.625, "yld": 7.225315031330953, "oas": null, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "BL526160 Corp", "tk": "CRWV", "px": 101.25, "yld": 7.819415899883422, "oas": null, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "BL563698 Corp", "tk": "CRWV", "px": null, "yld": null, "oas": null, "chg1d": null}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "BL563786 Corp", "tk": "CRWV", "px": 98.75, "yld": 5.329496416247628, "oas": null, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "BL567281 Corp", "tk": "CRWV", "px": 99.181, "yld": 8.636116549113995, "oas": null, "chg1d": 0.0015829847489872663}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "BL577043 Corp", "tk": "CRWV", "px": 97.875, "yld": 8.658115806996742, "oas": null, "chg1d": -0.12755102040816327}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "NBIS US Equity", "tk": "NBIS", "px": 158.74, "yld": null, "oas": null, "chg1d": -0.2701514}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "NBIS 2 06/05/2029 Corp", "tk": "NBIS", "px": 309.651, "yld": -32.251213685372946, "oas": null, "chg1d": -0.6801453371634854}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "NBIS 3 06/05/2031 Corp", "tk": "NBIS", "px": 313.118, "yld": -17.480083800219816, "oas": null, "chg1d": -0.4131767474774813}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "NBIS 1 09/15/2030 Corp", "tk": "NBIS", "px": 133.029, "yld": -2.911209948636721, "oas": null, "chg1d": 2.0717552718464196}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "NBIS 2 3/4 09/15/32 Corp", "tk": "NBIS", "px": null, "yld": null, "oas": null, "chg1d": null}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "NBIS 1.25 03/15/2031 144A Corp", "tk": "NBIS", "px": 109.678, "yld": 3.1569244063562856, "oas": null, "chg1d": 0.9109025196427714}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "NBIS 2.625 03/15/2033 144A Corp", "tk": "NBIS", "px": 110.06, "yld": 3.6531401871965725, "oas": null, "chg1d": -1.9373704722073277}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "NBIS 0.5 02/15/2030 144A Corp", "tk": "NBIS", "px": 83.036, "yld": 9.234025052491749, "oas": null, "chg1d": -0.03888361880088244}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "NBIS 4.5 02/15/2034 144A Corp", "tk": "NBIS", "px": 81.262, "yld": 10.601351418863544, "oas": null, "chg1d": 1.2614330218068488}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "IREN US Equity", "tk": "IREN", "px": 24.905, "yld": null, "oas": null, "chg1d": -2.371619}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "IREN 3.5 12/15/2029 Corp", "tk": "IREN", "px": 203.398, "yld": -19.04675936815628, "oas": null, "chg1d": -2.4074973274553417}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "IREN 3.25 06/15/2030 Corp", "tk": "IREN", "px": 172.0, "yld": -11.964535755382224, "oas": null, "chg1d": -1.8315881754662602}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "IREN 0 07/01/2031 Corp", "tk": "IREN", "px": 55.175, "yld": 13.117126002890611, "oas": null, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "IREN 0.25 06/01/2032 Corp", "tk": "IREN", "px": 65.799, "yld": 7.936028214756443, "oas": null, "chg1d": 0.1740139211136892}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "IREN 1 06/01/2033 Corp", "tk": "IREN", "px": 66.583, "yld": 7.517150093499495, "oas": null, "chg1d": -1.2386851587084762}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "bond", "id": "IREN 1 12/01/2033 Corp", "tk": "IREN", "px": 53.638, "yld": 10.396857859423111, "oas": null, "chg1d": 1.4424586288416121}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "NVDA 4.25 06/15/28 Corp", "tk": "NVDA 4.25 '28", "px": 98.793, "yld": 5.024792927978853, "chg1d": -0.1625306393447741}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "NVDA 4.35 06/15/29 Corp", "tk": "NVDA 4.35 '29", "px": 97.798, "yld": 5.253202803441216, "chg1d": -0.1609909775633411}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "NVDA 4.5 06/15/31 Corp", "tk": "NVDA 4.5 '31", "px": 95.514, "yld": 5.610896928539051, "chg1d": -0.37062032565271663}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "NVDA 4.75 06/15/33 Corp", "tk": "NVDA 4.75 '33", "px": 94.075, "yld": 5.8385715683188835, "chg1d": -0.7353788415005459}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "NVDA 4.95 06/15/36 Corp", "tk": "NVDA 4.95 '36", "px": 92.461, "yld": 5.990160638012608, "chg1d": -0.7787404960618136}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "NVDA 5.55 06/15/46 Corp", "tk": "NVDA 5.55 '46", "px": 88.537, "yld": 6.599062735485228, "chg1d": -1.3654640575854866}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "NVDA 5.625 06/15/56 Corp", "tk": "NVDA 5.625 '56", "px": 85.846, "yld": 6.733089932780128, "chg1d": -1.5802711791110515}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "AVGO 4.6 01/15/2033 Corp", "tk": "AVGO 4.6 2033", "px": 92.0, "yld": 6.166584790010563, "chg1d": -0.9430351227689926}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "AVGO 4.8 10/15/2034 Corp", "tk": "AVGO 4.8 2034", "px": 90.147, "yld": 6.3969798826590605, "chg1d": -0.831116776246855}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "AVGO 5.2 07/15/2035 Corp", "tk": "AVGO 5.2 2035", "px": 91.628, "yld": 6.469730582448292, "chg1d": -0.8472680725795757}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "AVGO 4.95 01/15/2036 Corp", "tk": "AVGO 4.95 2036", "px": 89.371, "yld": 6.499252131464734, "chg1d": -0.807701583826754}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "AVGO 4.8 02/15/2036 Corp", "tk": "AVGO 4.8 2036", "px": 88.067, "yld": 6.530462457601794, "chg1d": -0.8686060800624719}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "AVGO 5.7 01/15/2056 Corp", "tk": "AVGO 5.7 2056", "px": 85.408, "yld": 6.862453714271015, "chg1d": -1.4092254229673231}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "AMD 5 08/17/2031 Corp", "tk": "AMD 5 2031", "px": 97.448, "yld": 5.610961597841039, "chg1d": -0.5342362886072318}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "AMD 5.5 08/17/2036 Corp", "tk": "AMD 5.5 2036", "px": 96.017, "yld": 6.042786648772247, "chg1d": -0.7969946873908703}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "SPCX 6.65 07/15/2056 144A Corp", "tk": "SPCX 6.65 2056 144A", "px": 83.094, "yld": 8.170162942977258, "chg1d": -1.323621392980289}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "BL570250 Corp", "tk": "SPCX bridge TL (guaranteed)", "px": 99.063, "yld": 6.083822957879321, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "BL097034 Corp", "tk": "SPCX revolver 2031", "px": null, "yld": null, "chg1d": null}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "CRWV 1.75 12/01/2031 144A Corp", "tk": "CRWV 1.75 12/2031 (cv)", "px": 74.25, "yld": 7.99993701538906, "chg1d": -1.8529631813122682}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "CRWV 1.75 10/01/2032 144A Corp", "tk": "CRWV 1.75 10/2032 (cv)", "px": 67.782, "yld": 8.848142642722525, "chg1d": -2.0710619122540046}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "CRWV 2.875 04/01/2033 144A Corp", "tk": "CRWV 2.875 04/2033 (cv, Sep-26)", "px": 76.795, "yld": 7.486381556257935, "chg1d": -0.9855735447511439}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "CRWV 9.25 06/01/2030 144A Corp", "tk": "CRWV 9.25 06/2030", "px": 84.491, "yld": 14.9721494729541, "chg1d": 0.024446494082709398}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "CRWV 9 02/01/2031 144A Corp", "tk": "CRWV 9 02/2031", "px": 80.836, "yld": 15.264828181621505, "chg1d": 0.23772240827890576}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "CRWV 9.625 07/15/2032 144A Corp", "tk": "CRWV 9.625 07/2032", "px": 79.005, "yld": 15.23675193495936, "chg1d": 0.6998293444233293}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "BL567281 Corp", "tk": "CRWV GPU DDTL 11/2031", "px": 99.181, "yld": 8.636116549113995, "chg1d": 0.0015829847489872663}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "BL577043 Corp", "tk": "CRWV DDTL 09/2031", "px": 97.875, "yld": 8.658115806996742, "chg1d": -0.12755102040816327}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "NBIS 1.25 03/15/2031 144A Corp", "tk": "NBIS 1.25 03/2031 (cv)", "px": 109.678, "yld": 3.1569244063562856, "chg1d": 0.9109025196427714}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "NBIS 2.625 03/15/2033 144A Corp", "tk": "NBIS 2.625 03/2033 (cv)", "px": 110.06, "yld": 3.6531401871965725, "chg1d": -1.9373704722073277}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "NBIS 4.5 02/15/2034 144A Corp", "tk": "NBIS 4.5 02/2034 (cv, Aug-26)", "px": 81.262, "yld": 10.601351418863544, "chg1d": 1.2614330218068488}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "CIFR 1.75 05/15/2030 Corp", "tk": "CIFR 1.75 05/2030 (cv)", "px": 186.316, "yld": -15.526079892798577, "chg1d": -3.8391306950847035}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "CIFR 0 10/01/2031 144A Corp", "tk": "CIFR 0 10/2031 (cv)", "px": 88.38, "yld": 2.521042216082847, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "CIFR 0 11/01/2032 144A Corp", "tk": "CIFR 0 11/2032 (cv, NEW 16-Oct)", "px": 85.151, "yld": 2.6908205787484984, "chg1d": -0.9875581395348831}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "SOFTBK 9.75 04/01/2034 144A Corp", "tk": "SOFTBK 9.75 04/2034 (Sep-26)", "px": 97.482, "yld": 10.238904144347401, "chg1d": -0.5005166742265899}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "US67066GAN43 Corp", "tk": "NVDA 2 06/2031 (comp)", "px": 86.317, "yld": 5.372708223377711, "chg1d": -0.2726418811111304}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "US02079KBM80 Corp", "tk": "GOOGL 4.8 02/2036 (comp)", "px": 93.151, "yld": 5.76011466388883, "chg1d": -0.5852634715508075}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "US02079KBK25 Corp", "tk": "GOOGL 4.1 02/2031 (comp)", "px": 95.437, "yld": 5.2981886685000825, "chg1d": -0.34341051637926767}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "US30303MAH51 Corp", "tk": "META 5.25 05/2036 (comp)", "px": 92.543, "yld": 6.300191328104131, "chg1d": -0.8713503380866372}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "US68389XBW48 Corp", "tk": "ORCL 3.6 04/2040 (comp)", "px": 62.888, "yld": 8.212258709994193, "chg1d": -0.8781158715125033}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "US68389XDX03 Corp", "tk": "ORCL 4.95 02/2031 (comp)", "px": 91.066, "yld": 7.425410784362093, "chg1d": -0.17585841002862204}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "US594918BS26 Corp", "tk": "MSFT 3.45 08/2036 (comp)", "px": 85.682, "yld": 5.347980073054083, "chg1d": -0.4983010800413772}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "US023135DD51 Corp", "tk": "AMZN 4.25 03/2031 (comp)", "px": 95.598, "yld": 5.390424168920427, "chg1d": -0.2511514673944352}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "USU47015AH24 Corp", "tk": "JANEST 7.294 08/2031 (comp)", "px": 99.828, "yld": 7.333709504567937, "chg1d": -0.037380313902509975}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "XS3344488864 Corp", "tk": "SOFTBK 8.25 10/2031 (comp)", "px": 96.107, "yld": 9.241247222274383, "chg1d": -0.21135739709357204}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "BABA 2.125 02/09/2031 Corp", "tk": "BABA 2.125 02/2031 (comp)", "px": 87.708, "yld": 5.37289075522187, "chg1d": -0.057931169020006064}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "XS3333139288 Corp", "tk": "CRWV 8.5 07/2032 EUR", "px": 75.355, "yld": 15.066736004487087, "chg1d": -1.5483379047908605}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "NBIS 2 06/05/2029 Corp", "tk": "NBIS 2 06/2029 (cv)", "px": 309.651, "yld": -32.251213685372946, "chg1d": -0.6801453371634854}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "NBIS 3 06/05/2031 Corp", "tk": "NBIS 3 06/2031 (cv)", "px": 313.118, "yld": -17.480083800219816, "chg1d": -0.4131767474774813}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "NBIS 2.75 09/15/2032 Corp", "tk": "NBIS 2.75 09/2032 (cv)", "px": 132.367, "yld": -0.16115466643777435, "chg1d": 1.7542322197571834}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "NBIS 1 09/15/2030 Corp", "tk": "NBIS 1.00 09/2030 (cv)", "px": 133.029, "yld": -2.911209948636721, "chg1d": 2.0717552718464196}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "NBIS 0.5 02/15/2030 144A Corp", "tk": "NBIS 0.50 02/2030 (cv, Aug-26)", "px": 83.036, "yld": 9.234025052491749, "chg1d": -0.03888361880088244}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "IREN 3.25 06/15/2030 Corp", "tk": "IREN 3.25 06/2030 (cv)", "px": 172.0, "yld": -11.964535755382224, "chg1d": -1.8315881754662602}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "IREN 3.5 12/15/2029 Corp", "tk": "IREN 3.5 12/2029 (cv)", "px": 203.398, "yld": -19.04675936815628, "chg1d": -2.4074973274553417}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "IREN 0 07/01/2031 Corp", "tk": "IREN 0.00 07/2031 (cv)", "px": 55.175, "yld": 13.117126002890611, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "IREN 0.25 06/01/2032 Corp", "tk": "IREN 0.25 06/2032 (cv)", "px": 65.799, "yld": 7.936028214756443, "chg1d": 0.1740139211136892}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "IREN 1 06/01/2033 Corp", "tk": "IREN 1.00 06/2033 (cv)", "px": 66.583, "yld": 7.517150093499495, "chg1d": -1.2386851587084762}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "IREN 1 12/01/2033 Corp", "tk": "IREN 1.00 12/2033 (cv, May-26)", "px": 53.638, "yld": 10.396857859423111, "chg1d": 1.4424586288416121}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "BL482176 Corp", "tk": "CRWV DDTL 1.0 03/2028", "px": null, "yld": null, "chg1d": null}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "BL502513 Corp", "tk": "CRWV DDTL 2.0 08/2030", "px": 101.75, "yld": 9.491514830913058, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "BL510511 Corp", "tk": "CRWV DDTL 3.0 08/2030", "px": 100.625, "yld": 7.225315031330953, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "BL526160 Corp", "tk": "CRWV DDTL 2.1 09/2030", "px": 101.25, "yld": 7.819415899883422, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "BL563698 Corp", "tk": "CRWV DDTL 4.0 fixed 03/2032", "px": null, "yld": null, "chg1d": null}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "other", "id": "BL563786 Corp", "tk": "CRWV DDTL 4.0 float 03/2032", "px": 98.75, "yld": 5.329496416247628, "chg1d": 0.0}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "cds", "id": "AVAGO CDS USD SR 5Y D14 Corp", "tk": "AVAGO CDS 5Y", "spread": 103.9775}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "cds", "id": "AMD CDS USD SR 5Y D14 Corp", "tk": "AMD CDS 5Y", "spread": 115.33019999999999}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "cds", "id": "SPCX CDS USD SR 5Y D14 Corp", "tk": "SPCX CDS 5Y", "spread": 273.16}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "cds", "id": "NVDA CDS USD SR 5Y D14 Corp", "tk": "NVDA CDS 5Y", "spread": 132.15}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "cds", "id": "ORCLCP CDS USD SR 5Y D14 Corp", "tk": "ORCL CDS 5Y", "spread": 320.98}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "cds", "id": "CRWV CDS USD SR 5Y D14 Corp", "tk": "CRWV CDS 5Y", "spread": 1170.4978110290606}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "cds", "id": "META CDS USD SR 5Y D14 Corp", "tk": "META CDS 5Y", "spread": 130.54}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "cds", "id": "GOOGL CDS USD SR 5Y D14 Corp", "tk": "GOOGL CDS 5Y", "spread": 87.77999999999999}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "cds", "id": "MSFT CDS USD SR 5Y D14 Corp", "tk": "MSFT CDS 5Y", "spread": 59.7574}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "cds", "id": "AMZN CDS USD SR 5Y D14 Corp", "tk": "AMZN CDS 5Y", "spread": 88.6337}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "cds", "id": "AVGO B CDS USD SR 5Y D14 Corp", "tk": "AVGO B CDS 5Y", "spread": 177.02000000000004}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "cds", "id": "CRWV CDS USD SR 1Y D14 Corp", "tk": "CRWV CDS 1Y", "spread": 890.7960857964471}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "cds", "id": "CRWV CDS USD SR 2Y D14 Corp", "tk": "CRWV CDS 2Y", "spread": 1058.4118605606297}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "cds", "id": "CRWV CDS USD SR 3Y D14 Corp", "tk": "CRWV CDS 3Y", "spread": 1120.9634722618123}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "cds", "id": "CRWV CDS USD SR 4Y D14 Corp", "tk": "CRWV CDS 4Y", "spread": 1151.1565815912206}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "cds", "id": "CRWV CDS USD SR 6Y D14 Corp", "tk": "CRWV CDS 6Y", "spread": 1162.133850459557}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "cds", "id": "CRWV CDS USD SR 7Y D14 Corp", "tk": "CRWV CDS 7Y", "spread": 1169.729226697561}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "cds", "id": "CRWV CDS USD SR 10Y D14 Corp", "tk": "CRWV CDS 10Y", "spread": 1189.781778441093}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "equity", "id": "9984 JT Equity", "tk": "SoftBank", "px": 4276.0, "chg1d": -0.6736353, "relvol": 1.144}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "equity", "id": "CRWV US Equity", "tk": "CoreWeave", "px": 54.235, "chg1d": -2.455036, "relvol": 1.018}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "equity", "id": "CIFR US Equity", "tk": "Cipher Digital", "px": 7.94, "chg1d": -4.567308, "relvol": 0.715}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "equity", "id": "META US Equity", "tk": "Meta", "px": 642.62, "chg1d": -0.9601603, "relvol": 0.675}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "equity", "id": "HUT US Equity", "tk": "Hut 8", "px": 61.23, "chg1d": -4.283258, "relvol": 0.734}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "equity", "id": "GLXY US Equity", "tk": "Galaxy Digital", "px": 14.68, "chg1d": -3.989536, "relvol": 0.942}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "equity", "id": "IREN US Equity", "tk": "IREN", "px": 24.905, "chg1d": -2.371619, "relvol": 0.842}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "equity", "id": "GOOGL US Equity", "tk": "Alphabet", "px": 320.21, "chg1d": -1.236815, "relvol": 0.686}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "equity", "id": "NBIS US Equity", "tk": "Nebius", "px": 158.74, "chg1d": -0.2701514, "relvol": 0.699}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "equity", "id": "WULF US Equity", "tk": "TeraWulf", "px": 11.32, "chg1d": 0.0, "relvol": 1.032}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "equity", "id": "CORZ US Equity", "tk": "Core Scientific", "px": 13.1, "chg1d": -0.7575758, "relvol": 0.943}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "equity", "id": "AMD US Equity", "tk": "AMD", "px": 516.79, "chg1d": 1.744335, "relvol": 0.697}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "equity", "id": "NVDA US Equity", "tk": "NVIDIA", "px": 210.96, "chg1d": -0.5890392, "relvol": 0.753}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "equity", "id": "AVGO US Equity", "tk": "Broadcom", "px": 321.68, "chg1d": -0.4826135, "relvol": 0.683}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "equity", "id": "MSFT US Equity", "tk": "Microsoft", "px": 524.51, "chg1d": 0.6582483, "relvol": 0.636}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "equity", "id": "ORCL US Equity", "tk": "Oracle", "px": 126.16, "chg1d": 0.4938665, "relvol": 0.587}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "equity", "id": "AMZN US Equity", "tk": "Amazon", "px": 248.0, "chg1d": -0.9505552, "relvol": 0.695}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "equity", "id": "SPCX US Equity", "tk": "SpaceX", "px": 147.49, "chg1d": 1.892919, "relvol": 1.103}
+{"date": "2026-10-23", "time": "18:34", "src": "bbg-api", "kind": "equity", "id": "APLD US Equity", "tk": "Applied Digital", "px": 18.25, "chg1d": -4.40021, "relvol": 0.777}

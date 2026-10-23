@@ -1,7 +1,185 @@
 {
  "_about": "Hand-edited ledger of machine-transcription garbles (Notion AI, Bloomberg ASR, auto-translation) seen in the archive, with the correct reading. Used by E:\\.claude\\scripts\\transcript_qa.py (source-file scan, page-diff scan) and by ingest_notion_meetings.py (writes a 'Transcription QA' block into every archived Notion file). Keys are matched with word boundaries, case-sensitive unless 'ci' is true. 'keep_when' = regex contexts (same line, ~80 chars around the hit) where the token is legitimate and must NOT be flagged. Add an entry the first time a garble is caught; never delete one. Standing rule (Felipe, 2026-09-28): ALWAYS double-check transcript content — acronyms, names, units, numbers — before it travels to a page.",
- "_updated": "2026-10-22",
+ "_updated": "2026-10-23",
  "terms": {
+  "Astrod": {
+   "correct": "Astra (probable: OpenAI GPT-6 Astra)",
+   "domain": "products",
+   "rule": "'had I had Astrod in Neskate in 1994' - most plausibly Astra; UNCONFIRMED, quote as Astra [transcribed \"Astrod\"].",
+   "first_seen": "2026-10-23 (a16z Show, Frontier fund launch w/ Andreessen/Horowitz/Dixon 2026-10-22, podscripts ASR)"
+  },
+  "Neskate": {
+   "correct": "Netscape",
+   "domain": "names",
+   "rule": "ASR of Andreessen's Netscape.",
+   "first_seen": "2026-10-23 (a16z Show, Frontier fund launch w/ Andreessen/Horowitz/Dixon 2026-10-22, podscripts ASR)"
+  },
+  "Nescape": {
+   "correct": "Netscape",
+   "domain": "names",
+   "rule": "ASR of Andreessen's Netscape.",
+   "first_seen": "2026-10-23 (a16z Show, Frontier fund launch w/ Andreessen/Horowitz/Dixon 2026-10-22, podscripts ASR)"
+  },
+  "Andresen": {
+   "correct": "Andreessen (Marc Andreessen, a16z)",
+   "domain": "names",
+   "rule": "one-e ASR spelling of the a16z co-founder.",
+   "first_seen": "2026-10-23 (a16z Show, Frontier fund launch w/ Andreessen/Horowitz/Dixon 2026-10-22, podscripts ASR)"
+  },
+  "Acing Z": {
+   "correct": "a16z",
+   "domain": "names",
+   "rule": "ASR of 'a16z' ('at Acing Z').",
+   "first_seen": "2026-10-23 (a16z Show, Frontier fund launch w/ Andreessen/Horowitz/Dixon 2026-10-22, podscripts ASR)"
+  },
+  "ACC Crypto": {
+   "correct": "a16z crypto",
+   "domain": "names",
+   "rule": "ASR of the a16z crypto fund name.",
+   "first_seen": "2026-10-23 (a16z Show, Frontier fund launch w/ Andreessen/Horowitz/Dixon 2026-10-22, podscripts ASR)"
+  },
+  "Skydeo": {
+   "correct": "Skydio (drone maker, a16z portfolio)",
+   "domain": "names",
+   "rule": "ASR of Skydio.",
+   "first_seen": "2026-10-23 (a16z Show, Frontier fund launch w/ Andreessen/Horowitz/Dixon 2026-10-22, podscripts ASR)"
+  },
+  "Milt book": {
+   "correct": "Moltbook (AI-agent social network)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of Moltbook; also 'Maltbook' / 'Mold book'.",
+   "first_seen": "2026-10-23 (a16z Show, Frontier fund launch w/ Andreessen/Horowitz/Dixon 2026-10-22, podscripts ASR)"
+  },
+  "Maltbook": {
+   "correct": "Moltbook (AI-agent social network)",
+   "domain": "names",
+   "rule": "ASR of Moltbook.",
+   "first_seen": "2026-10-23 (a16z Show, Frontier fund launch w/ Andreessen/Horowitz/Dixon 2026-10-22, podscripts ASR)"
+  },
+  "Mold book": {
+   "correct": "Moltbook (AI-agent social network)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of Moltbook.",
+   "first_seen": "2026-10-23 (a16z Show, Frontier fund launch w/ Andreessen/Horowitz/Dixon 2026-10-22, podscripts ASR)"
+  },
+  "Jet GPD": {
+   "correct": "ChatGPT",
+   "domain": "products",
+   "ci": true,
+   "rule": "ASR of ChatGPT ('introducing my kid to Jet GPD').",
+   "first_seen": "2026-10-23 (a16z Show, Frontier fund launch w/ Andreessen/Horowitz/Dixon 2026-10-22, podscripts ASR)"
+  },
+  "DLTA": {
+   "correct": "delta",
+   "domain": "names",
+   "rule": "ASR spells 'delta' as DLTA ('the biggest DLTA I've ever seen').",
+   "first_seen": "2026-10-23 (a16z Show, Frontier fund launch w/ Andreessen/Horowitz/Dixon 2026-10-22, podscripts ASR)"
+  },
+  "Hitchhakers": {
+   "correct": "Hitchhiker's (Douglas Adams, The Hitchhiker's Guide to the Galaxy)",
+   "domain": "names",
+   "rule": "ASR of the book title.",
+   "first_seen": "2026-10-23 (a16z Show, Frontier fund launch w/ Andreessen/Horowitz/Dixon 2026-10-22, podscripts ASR)"
+  },
+  "Opus 5-5": {
+   "correct": "Opus 5.5 (Anthropic Claude Opus 5.5)",
+   "domain": "products",
+   "rule": "ASR renders the version dot as a hyphen.",
+   "first_seen": "2026-10-23 (a16z Show, Frontier fund launch w/ Andreessen/Horowitz/Dixon 2026-10-22, podscripts ASR)"
+  },
+  "Cloud Design": {
+   "correct": "Claude Design (Anthropic design product)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of Anthropic's design product; keep only when it genuinely means cloud-based design.",
+   "keep_when": [
+    "cloud-based",
+    "cloud infrastructure"
+   ],
+   "first_seen": "2026-10-23 (All-In, Dylan Field episode 2026-10-19, podscripts ASR)"
+  },
+  "Cropic": {
+   "correct": "Anthropic",
+   "domain": "names",
+   "rule": "ASR truncation ('It's a Cropic separately announced').",
+   "first_seen": "2026-10-23 (All-In, Dylan Field episode 2026-10-19, podscripts ASR)"
+  },
+  "Rumba": {
+   "correct": "Roomba (iRobot; blocked Amazon acquisition)",
+   "domain": "names",
+   "keep_when": [
+    "dance",
+    "music"
+   ],
+   "rule": "ASR of the iRobot product name in antitrust context.",
+   "first_seen": "2026-10-23 (All-In, Dylan Field episode 2026-10-19, podscripts ASR)"
+  },
+  "Yonfiel": {
+   "correct": "Yountville (Napa Valley, California)",
+   "domain": "names",
+   "rule": "ASR of the place name.",
+   "first_seen": "2026-10-23 (All-In, Dylan Field episode 2026-10-19, podscripts ASR)"
+  },
+  "sasspocalypse": {
+   "correct": "SaaSpocalypse",
+   "domain": "software",
+   "ci": true,
+   "rule": "ASR spelling; also 'saspocalypse'.",
+   "first_seen": "2026-10-23 (All-In, Dylan Field episode 2026-10-19, podscripts ASR)"
+  },
+  "saspocalypse": {
+   "correct": "SaaSpocalypse",
+   "domain": "software",
+   "ci": true,
+   "rule": "see 'sasspocalypse'.",
+   "first_seen": "2026-10-23 (All-In, Dylan Field episode 2026-10-19, podscripts ASR)"
+  },
+  "Bass is not dead": {
+   "correct": "SaaS is not dead",
+   "domain": "software",
+   "ci": true,
+   "rule": "ASR of 'SaaS' at sentence start.",
+   "first_seen": "2026-10-23 (All-In, Dylan Field episode 2026-10-19, podscripts ASR)"
+  },
+  "over 10 window": {
+   "correct": "Overton window",
+   "domain": "general",
+   "ci": true,
+   "rule": "ASR.",
+   "first_seen": "2026-10-23 (All-In, Dylan Field episode 2026-10-19, podscripts ASR)"
+  },
+  "commentatorial": {
+   "correct": "combinatorial",
+   "domain": "general",
+   "ci": true,
+   "rule": "ASR ('a combinatorial explosion').",
+   "first_seen": "2026-10-23 (All-In, Dylan Field episode 2026-10-19, podscripts ASR)"
+  },
+  "Hinchcliff": {
+   "correct": "Hinchcliffe (Tony Hinchcliffe, comedian)",
+   "domain": "names",
+   "rule": "ASR spelling.",
+   "first_seen": "2026-10-23 (All-In, Dylan Field episode 2026-10-19, podscripts ASR)"
+  },
+  "aux alpha": {
+   "correct": "Ox Alpha (OpenRouter stealth name of Z.ai GLM-5.3-Flash, Aug-2026)",
+   "domain": "products",
+   "ci": true,
+   "rule": "YouTube ASR of 'Ox Alpha'; wiki usage per Redburn 2026-08-27.",
+   "first_seen": "2026-10-14 (SemiAnalysis Weekly ep038, YouTube captions)"
+  },
+  "Kimberly": {
+   "correct": "Kimbo (Kimbo Chen, SemiAnalysis)",
+   "domain": "names",
+   "keep_when": [
+    "Clark",
+    "KMB"
+   ],
+   "rule": "YouTube ASR of 'Kimbo' when Jordan Nanos addresses Kimbo Chen.",
+   "first_seen": "2026-10-14 (SemiAnalysis Weekly ep038, YouTube captions)"
+  },
   "Smolik": {
    "correct": "Shmulik (Mark Shmulik, Bernstein US Internet)",
    "domain": "names",
@@ -843,7 +1021,10 @@
    "domain": "technology",
    "rule": "ASR spelling of Panasonic's MEGTRON high-speed PCB laminate in scale-up/backplane copper-trace context ('printed circuit boards using a technology called Megatron').",
    "keep_when": [
-    "(?i)transformer|nemo|language model|LLM"
+    "(?i)transformer|nemo|language model|LLM",
+    "Megatron-LM",
+    "fork",
+    "NVIDIA"
    ],
    "first_seen": "2026-10-13 (Bernstein Group VC copper vs optical, Brad Smith)"
   },
@@ -1867,7 +2048,8 @@
    "rule": "ASR spells the generation number as the preposition ('high volume manufacturing with HBM for now', 'our HBM for didn't'). Legit when followed by a noun phrase.",
    "keep_when": [
     "transcribed",
-    "HBM for (training|inference|AI|the|a|an|GPU|GPUs|ASIC|ASICs|accelerators?|NVIDIA|Nvidia|AMD|Google|customers?|both|each|every|this|that|those|these|them|us|our|their|its|all|data|which|example|instance|Rubin|Blackwell|MI\\d+)\\b"
+    "HBM for (training|inference|AI|the|a|an|GPU|GPUs|ASIC|ASICs|accelerators?|NVIDIA|Nvidia|AMD|Google|customers?|both|each|every|this|that|those|these|them|us|our|their|its|all|data|which|example|instance|Rubin|Blackwell|MI\\d+)\\b",
+    "HBM for sure"
    ],
    "first_seen": "2026-10-21 (Bloomberg live transcript: Micron 'Technology and Product Leadership' webinar, Scott DeBoer)"
   },
@@ -2414,6 +2596,1509 @@
    "domain": "terms",
    "rule": "ASR rendering of 'D&A' next to capex/opex.",
    "first_seen": "2026-10-22 (UBS META 3Q26 group callback, Stephen Ju — machine transcript in _inbox, run-inbox 23h)"
+  },
+  "Lisa Lee": {
+   "correct": "Lisha Li (a16z partner, host)",
+   "domain": "names",
+   "rule": "podscripts ASR of the a16z partner's name; show notes spell it Lisha Li.",
+   "first_seen": "2026-10-23 (a16z Show, Nathan Lambert open-models episode, podscripts ASR)"
+  },
+  "Trilium": {
+   "correct": "Trillium (Nathan Lambert's nonprofit AI research lab, trilliumlabs.org)",
+   "domain": "names",
+   "rule": "one-l ASR spelling; NOT Google's TPU v6e 'Trillium' unless the context is TPUs.",
+   "keep_when": [
+    "TPU",
+    "v6e"
+   ],
+   "first_seen": "2026-10-23 (a16z Show, Nathan Lambert open-models episode, podscripts ASR)"
+  },
+  "Jipu": {
+   "correct": "Zhipu (Z.ai, GLM models)",
+   "domain": "names",
+   "rule": "ASR spelling of the Chinese lab Zhipu.",
+   "first_seen": "2026-10-23 (a16z Show, Nathan Lambert open-models episode, podscripts ASR)"
+  },
+  "Quinn model": {
+   "correct": "Qwen model (Alibaba)",
+   "domain": "names",
+   "rule": "'a really outdated Quinn model' = an old Qwen checkpoint used as teacher in open post-training.",
+   "first_seen": "2026-10-23 (a16z Show, Nathan Lambert open-models episode, podscripts ASR)"
+  },
+  "Kimmy K-3": {
+   "correct": "Kimi K3 (Moonshot AI)",
+   "domain": "names",
+   "rule": "ASR of Moonshot's model name.",
+   "first_seen": "2026-10-23 (a16z Show, Nathan Lambert open-models episode, podscripts ASR)"
+  },
+  "Timmy": {
+   "correct": "Kimi (Moonshot AI)",
+   "domain": "names",
+   "rule": "'it's not like Timmy is going to do that first' = Kimi; only in AI-lab context.",
+   "keep_when": [
+    "Timmy (?!is going)"
+   ],
+   "first_seen": "2026-10-23 (a16z Show, Nathan Lambert open-models episode, podscripts ASR)"
+  },
+  "JLM": {
+   "correct": "GLM (Zhipu / Z.ai)",
+   "domain": "names",
+   "rule": "ASR of Zhipu's GLM model family.",
+   "first_seen": "2026-10-23 (a16z Show, Nathan Lambert open-models episode, podscripts ASR)"
+  },
+  "Hugging Pace": {
+   "correct": "Hugging Face",
+   "domain": "names",
+   "rule": "ASR.",
+   "first_seen": "2026-10-23 (a16z Show, Nathan Lambert open-models episode, podscripts ASR)"
+  },
+  "a Luther": {
+   "correct": "EleutherAI",
+   "domain": "names",
+   "rule": "'companies like a Luther or Hugging Pace' = EleutherAI.",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Nathan Lambert open-models episode, podscripts ASR)"
+  },
+  "GPT, Seoul": {
+   "correct": "GPT-5.6 Sol",
+   "domain": "names",
+   "rule": "OpenAI model name; cf. 'Soul' garble already seen in SemiAnalysis transcripts.",
+   "first_seen": "2026-10-23 (a16z Show, Nathan Lambert open-models episode, podscripts ASR)"
+  },
+  "Jevin's paradox": {
+   "correct": "Jevons paradox",
+   "domain": "terms",
+   "rule": "ASR.",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Nathan Lambert open-models episode, podscripts ASR)"
+  },
+  "Chattebt": {
+   "correct": "ChatGPT",
+   "domain": "names",
+   "rule": "ASR.",
+   "first_seen": "2026-10-23 (a16z Show, Nathan Lambert open-models episode, podscripts ASR)"
+  },
+  "anthroporpe": {
+   "correct": "Anthropic",
+   "domain": "names",
+   "rule": "ASR.",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Nathan Lambert open-models episode, podscripts ASR)"
+  },
+  "superintendents provides fine-tuning": {
+   "correct": "supervised fine-tuning (SFT)",
+   "domain": "terms",
+   "rule": "ASR of 'supervised fine-tuning'.",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Nathan Lambert open-models episode, podscripts ASR)"
+  },
+  "S of T": {
+   "correct": "SFT (supervised fine-tuning)",
+   "domain": "terms",
+   "rule": "spelled-out acronym garble.",
+   "first_seen": "2026-10-23 (a16z Show, Nathan Lambert open-models episode, podscripts ASR)"
+  },
+  "avow awareness": {
+   "correct": "eval awareness",
+   "domain": "terms",
+   "rule": "ASR of 'eval awareness' (models detecting they are being evaluated).",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Nathan Lambert open-models episode, podscripts ASR)"
+  },
+  "clod proxies": {
+   "correct": "Claude proxies",
+   "domain": "names",
+   "rule": "Chinese resellers/intermediaries proxying Claude API access.",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Nathan Lambert open-models episode, podscripts ASR)"
+  },
+  "cloud code": {
+   "correct": "Claude Code",
+   "domain": "names",
+   "rule": "ASR of Anthropic's coding product; keep only when 'cloud code' genuinely means code on a cloud.",
+   "ci": true,
+   "keep_when": [
+    "infrastructure",
+    "serverless",
+    "deploy"
+   ],
+   "first_seen": "2026-10-23 (a16z Show, Nathan Lambert open-models episode, podscripts ASR)"
+  },
+  "Olmo": {
+   "correct": "OLMo (Ai2's open model family)",
+   "domain": "names",
+   "rule": "casing only; Ai2's fully open LM.",
+   "keep_when": [
+    "OLMo"
+   ],
+   "first_seen": "2026-10-23 (a16z Show, Nathan Lambert open-models episode, podscripts ASR)"
+  },
+  "Vlad Mythos": {
+   "correct": "(unclear) likely Claude Fable / Mythos model names",
+   "domain": "names",
+   "rule": "'Claude Opus, Vlad Mythos, whatever' — a list of Anthropic model names; 'Vlad' probably = Fable; do NOT write 'Vlad' as a model.",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Nathan Lambert open-models episode, podscripts ASR)"
+  },
+  "Corweave": {
+   "correct": "CoreWeave (CRWV)",
+   "domain": "names",
+   "rule": "podscripts ASR of CoreWeave; same episode also 'Coralweeve', 'Corweeve', 'Corweve', 'Corleave', 'Corrieve', 'Corvie', 'CoreWeef', 'Cor Weave'.",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Coralweeve": {
+   "correct": "CoreWeave (CRWV)",
+   "domain": "names",
+   "rule": "see 'Corweave'",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Corweeve": {
+   "correct": "CoreWeave (CRWV)",
+   "domain": "names",
+   "rule": "see 'Corweave'",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Corweve": {
+   "correct": "CoreWeave (CRWV)",
+   "domain": "names",
+   "rule": "see 'Corweave'",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Corleave": {
+   "correct": "CoreWeave (CRWV)",
+   "domain": "names",
+   "rule": "see 'Corweave'",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Corrieve": {
+   "correct": "CoreWeave (CRWV)",
+   "domain": "names",
+   "rule": "see 'Corweave'",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Corvie": {
+   "correct": "CoreWeave (CRWV)",
+   "domain": "names",
+   "rule": "see 'Corweave'",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "CoreWeef": {
+   "correct": "CoreWeave (CRWV)",
+   "domain": "names",
+   "rule": "see 'Corweave'",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Cor Weave": {
+   "correct": "CoreWeave (CRWV)",
+   "domain": "names",
+   "rule": "see 'Corweave'",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Michael in Trader": {
+   "correct": "Michael Intrator (CoreWeave CEO/co-founder)",
+   "domain": "names",
+   "rule": "ASR split of the surname.",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Chumath": {
+   "correct": "Chamath (Palihapitiya, All-In host)",
+   "domain": "names",
+   "rule": "ASR spellings 'Chumath', 'Chimot', 'Chimath', 'Chimov', 'Chama', 'Chmoth', 'Schmoth', 'Chumont'; 'Chumath Pollyhappatia' = Chamath Palihapitiya.",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Chimot": {
+   "correct": "Chamath (Palihapitiya)",
+   "domain": "names",
+   "rule": "see 'Chumath'",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Chimath": {
+   "correct": "Chamath (Palihapitiya)",
+   "domain": "names",
+   "rule": "see 'Chumath'",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Chimov": {
+   "correct": "Chamath (Palihapitiya)",
+   "domain": "names",
+   "rule": "see 'Chumath'",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Chmoth": {
+   "correct": "Chamath (Palihapitiya)",
+   "domain": "names",
+   "rule": "see 'Chumath'",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Schmoth": {
+   "correct": "Chamath (Palihapitiya)",
+   "domain": "names",
+   "rule": "see 'Chumath'",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Pollyhappatia": {
+   "correct": "Palihapitiya (Chamath)",
+   "domain": "names",
+   "rule": "see 'Chumath'",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Irren": {
+   "correct": "IREN (neocloud / ex-bitcoin miner; no wiki page)",
+   "domain": "names",
+   "rule": "ASR of IREN listed with CoreWeave/Nebius; the same episode also renders it 'Iran' ('Corwee of Iran', 'Nebius or Iran') - read 'Iran' as IREN only when listed with neoclouds.",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Invita": {
+   "correct": "NVIDIA",
+   "domain": "names",
+   "rule": "ASR of NVIDIA ('Invita took stray as well').",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Invidia": {
+   "correct": "NVIDIA",
+   "domain": "names",
+   "rule": "ASR of NVIDIA.",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Jevins paradox": {
+   "correct": "Jevons paradox",
+   "domain": "terms",
+   "rule": "ASR spelling.",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Ali Goatsy": {
+   "correct": "Ali Ghodsi (Databricks CEO)",
+   "domain": "names",
+   "rule": "ASR of the surname.",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Mustafa Sullyman": {
+   "correct": "Mustafa Suleyman (Microsoft AI CEO)",
+   "domain": "names",
+   "rule": "ASR of the surname.",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Sciop": {
+   "correct": "Psyop (All-In 'Psyop Corner' segment)",
+   "domain": "terms",
+   "rule": "ASR renders 'psyop' as 'Sciop'/'SIEF'/'Sciop's'.",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Plan 3.5": {
+   "correct": "Qwen 3.5 (Alibaba open-weight model; Coinbase fine-tuned the 9B-parameter version)",
+   "domain": "names",
+   "rule": "ASR: 'Plan 3.5, the $9 billion parameter model' = Qwen 3.5, 9-billion-parameter model - parameters, not dollars.",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Grogpot": {
+   "correct": "Grok bot (xAI/SpaceX agent)",
+   "domain": "names",
+   "rule": "ASR ('set your Grogpot or your muse'); see also 'RockBot'.",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Orgdamor": {
+   "correct": "Oege de Moor (XBOW founder/CEO)",
+   "domain": "names",
+   "rule": "ASR; the company was rendered 'X-B-B-B-W' = XBOW (autonomous pentesting, #1 on HackerOne).",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Hacker 1": {
+   "correct": "HackerOne (bug-bounty platform)",
+   "domain": "names",
+   "rule": "ASR.",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "ADP ports": {
+   "correct": "ADB ports (Android Debug Bridge)",
+   "domain": "terms",
+   "rule": "ASR in the Kimwolf botnet description ('open ADP ports').",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Kim Wolf": {
+   "correct": "Kimwolf (Android TV-box botnet)",
+   "domain": "names",
+   "rule": "ASR split of the botnet name.",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "11 labs": {
+   "correct": "ElevenLabs (voice AI)",
+   "domain": "names",
+   "rule": "ASR renders the company name as a number.",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "credit derivative swap": {
+   "correct": "credit default swap (CDS)",
+   "domain": "terms",
+   "rule": "ASR/speaker slip; the speaker then calls it 'default insurance'.",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "G-Cid bank": {
+   "correct": "G-SIB bank (global systemically important bank)",
+   "domain": "terms",
+   "rule": "ASR.",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Megyn Callie": {
+   "correct": "Megyn Kelly",
+   "domain": "names",
+   "rule": "ASR.",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Ben Harwitz": {
+   "correct": "Ben Horowitz (a16z)",
+   "domain": "names",
+   "rule": "ASR; also 'Pan Horace'.",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Pan Horace": {
+   "correct": "Ben Horowitz (a16z)",
+   "domain": "names",
+   "rule": "ASR.",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Freeberg": {
+   "correct": "Friedberg (David Friedberg, All-In host)",
+   "domain": "names",
+   "rule": "ASR.",
+   "first_seen": "2026-10-23 (All-In 'CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags', 2026-10-16, podscripts ASR)"
+  },
+  "Neotron": {
+   "correct": "Nemotron (NVIDIA open model family)",
+   "domain": "names",
+   "rule": "YouTube ASR drops the 'm' ('many of them taking Neotron').",
+   "first_seen": "2026-10-15 (BG2 Jensen Huang episode, YouTube ASR)"
+  },
+  "Open Shelf": {
+   "correct": "OpenShell (NVIDIA open-source secure agent runtime; pairs with NVIDIA Sentry on BlueField)",
+   "domain": "names",
+   "rule": "ASR hears 'OpenShell' as 'Open Shelf' in the agent-safety context; elsewhere the same episode renders it 'open shell'.",
+   "first_seen": "2026-10-15 (BG2 Jensen Huang episode, YouTube ASR)"
+  },
+  "Casey": {
+   "correct": "CAISI (Center for AI Standards and Innovation, US Department of Commerce)",
+   "domain": "names",
+   "rule": "ASR spells the acronym CAISI as the name 'Casey' ('Frontier model review ... by Casey and the Department of Commerce').",
+   "keep_when": [
+    "Casey [A-Z][a-z]+",
+    "[A-Z][a-z]+ Casey"
+   ],
+   "first_seen": "2026-10-15 (BG2 Jensen Huang episode, YouTube ASR)"
+  },
+  "Alpameio": {
+   "correct": "Alpamayo (NVIDIA autonomous-driving model/stack)",
+   "domain": "names",
+   "rule": "ASR spelling.",
+   "first_seen": "2026-10-15 (BG2 Jensen Huang episode, YouTube ASR)"
+  },
+  "Lamp Power Shell": {
+   "correct": "land, power, shell",
+   "domain": "terms",
+   "rule": "ASR run-together of the data-centre constraint triple; same episode also gives 'land powered shell' and 'land power shown'.",
+   "first_seen": "2026-10-15 (BG2 Jensen Huang episode, YouTube ASR)"
+  },
+  "land power shown": {
+   "correct": "land, power, shell",
+   "domain": "terms",
+   "rule": "see 'Lamp Power Shell'.",
+   "first_seen": "2026-10-15 (BG2 Jensen Huang episode, YouTube ASR)"
+  },
+  "Refshare": {
+   "correct": "revshare (revenue share)",
+   "domain": "terms",
+   "rule": "ASR hears 'rev share' as 'Refshare' (NVIDIA neocloud revenue-share model).",
+   "first_seen": "2026-10-15 (BG2 Jensen Huang episode, YouTube ASR)"
+  },
+  "Davier Stokes": {
+   "correct": "Navier-Stokes",
+   "domain": "names",
+   "rule": "ASR spelling; also 'Navia Stokes'.",
+   "first_seen": "2026-10-15 (BG2 Jensen Huang episode, YouTube ASR)"
+  },
+  "Navia Stokes": {
+   "correct": "Navier-Stokes",
+   "domain": "names",
+   "rule": "ASR spelling.",
+   "first_seen": "2026-10-15 (BG2 Jensen Huang episode, YouTube ASR)"
+  },
+  "Grockbot": {
+   "correct": "Grok Bot (xAI/SpaceX agent)",
+   "domain": "names",
+   "rule": "see 'RockBot'; Musk/SpaceX context = Grok, not Groq.",
+   "first_seen": "2026-10-15 (BG2 Jensen Huang episode, YouTube ASR)"
+  },
+  "she state dinner": {
+   "correct": "Xi state dinner",
+   "domain": "names",
+   "rule": "ASR hears 'Xi' as 'she' (show notes: 'the Xi State Dinner').",
+   "first_seen": "2026-10-15 (BG2 Jensen Huang episode, YouTube ASR)"
+  },
+  "alimter": {
+   "correct": "Altimeter (Altimeter Capital, Brad Gerstner)",
+   "domain": "names",
+   "rule": "ASR spelling ('alimter's forecast').",
+   "ci": true,
+   "first_seen": "2026-10-15 (BG2 Jensen Huang episode, YouTube ASR)"
+  },
+  "Vera Ruben": {
+   "correct": "Vera Rubin (NVIDIA)",
+   "domain": "names",
+   "rule": "ASR spelling ('Vera Ruben Ultra').",
+   "first_seen": "2026-10-15 (BG2 Jensen Huang episode, YouTube ASR)"
+  },
+  "Grace Black": {
+   "correct": "Grace Blackwell (NVIDIA)",
+   "domain": "names",
+   "rule": "ASR truncation ('because Grace Black was awesome').",
+   "first_seen": "2026-10-15 (BG2 Jensen Huang episode, YouTube ASR)"
+  },
+  "MVLink": {
+   "correct": "NVLink (NVIDIA scale-up interconnect)",
+   "domain": "names",
+   "rule": "ASR hears N as M ('sharded across MVLink 72' = NVLink 72).",
+   "first_seen": "2026-10-15 (BG2 Jensen Huang episode, YouTube ASR)"
+  },
+  "chat GBT": {
+   "correct": "ChatGPT",
+   "domain": "names",
+   "rule": "ASR spelling; also 'chat GB BT'. See 'ChatGPD'.",
+   "ci": true,
+   "first_seen": "2026-10-15 (BG2 Jensen Huang episode, YouTube ASR)"
+  },
+  "funible": {
+   "correct": "fungible",
+   "domain": "terms",
+   "rule": "ASR spelling; also 'fungeible', 'funible', 'fungeable'.",
+   "ci": true,
+   "first_seen": "2026-10-15 (BG2 Jensen Huang episode, YouTube ASR)"
+  },
+  "fungeible": {
+   "correct": "fungible",
+   "domain": "terms",
+   "rule": "see 'funible'.",
+   "ci": true,
+   "first_seen": "2026-10-15 (BG2 Jensen Huang episode, YouTube ASR)"
+  },
+  "seammen": {
+   "correct": "Siemens",
+   "domain": "names",
+   "rule": "ASR spelling ('all the seammen's tools').",
+   "ci": true,
+   "first_seen": "2026-10-15 (BG2 Jensen Huang episode, YouTube ASR)"
+  },
+  "Kane's": {
+   "correct": "Keynes (John Maynard Keynes, 1930 'Economic Possibilities for our Grandchildren')",
+   "domain": "names",
+   "rule": "ASR spelling in the 15-hour-work-week reference.",
+   "first_seen": "2026-10-15 (BG2 Jensen Huang episode, YouTube ASR)"
+  },
+  "Klaude": {
+   "correct": "Claude (Anthropic model)",
+   "domain": "products",
+   "rule": "podscripts ASR of 'Claude'.",
+   "first_seen": "2026-10-23 (ILTB EP.496 Cacioppo, podscripts.co)"
+  },
+  "Kod token": {
+   "correct": "Claude token",
+   "domain": "products",
+   "ci": true,
+   "rule": "podscripts ASR of 'Claude token'.",
+   "first_seen": "2026-10-23 (ILTB EP.496 Cacioppo, podscripts.co)"
+  },
+  "Forex": {
+   "correct": "4x (four times)",
+   "domain": "units",
+   "keep_when": [
+    "FX",
+    "currency",
+    "exchange rate",
+    "foreign exchange"
+   ],
+   "rule": "podscripts ASR of '4x' in 'marked up a Claude token 4x'.",
+   "first_seen": "2026-10-23 (ILTB EP.496 Cacioppo, podscripts.co)"
+  },
+  "sassapocalypse": {
+   "correct": "SaaSpocalypse",
+   "domain": "terms",
+   "ci": true,
+   "rule": "podscripts ASR.",
+   "first_seen": "2026-10-23 (ILTB EP.496 Cacioppo, podscripts.co)"
+  },
+  "ISO-2710": {
+   "correct": "ISO 27001",
+   "domain": "terms",
+   "rule": "podscripts ASR of the security standard.",
+   "first_seen": "2026-10-23 (ILTB EP.496 Cacioppo, podscripts.co)"
+  },
+  "Weezel": {
+   "correct": "Wiz (cloud security, Google)",
+   "domain": "names",
+   "rule": "podscripts ASR.",
+   "first_seen": "2026-10-23 (ILTB EP.496 Cacioppo, podscripts.co)"
+  },
+  "WISIS": {
+   "correct": "Wiz's",
+   "domain": "names",
+   "rule": "podscripts ASR.",
+   "first_seen": "2026-10-23 (ILTB EP.496 Cacioppo, podscripts.co)"
+  },
+  "Whiz": {
+   "correct": "Wiz (cloud security, Google)",
+   "domain": "names",
+   "rule": "podscripts ASR; case-sensitive capitalised form only.",
+   "first_seen": "2026-10-23 (ILTB EP.496 Cacioppo, podscripts.co)"
+  },
+  "CrowdSach": {
+   "correct": "CrowdStrike",
+   "domain": "names",
+   "ci": true,
+   "rule": "podscripts ASR.",
+   "first_seen": "2026-10-23 (ILTB EP.496 Cacioppo, podscripts.co)"
+  },
+  "Pallantir": {
+   "correct": "Palantir",
+   "domain": "names",
+   "ci": true,
+   "rule": "podscripts ASR.",
+   "first_seen": "2026-10-23 (ILTB EP.496 Cacioppo, podscripts.co)"
+  },
+  "Saster": {
+   "correct": "SaaStr (conference)",
+   "domain": "names",
+   "rule": "podscripts ASR.",
+   "first_seen": "2026-10-23 (ILTB EP.496 Cacioppo, podscripts.co)"
+  },
+  "Bursall": {
+   "correct": "Vercel",
+   "domain": "names",
+   "rule": "podscripts ASR in WorkOS ad read.",
+   "first_seen": "2026-10-23 (ILTB EP.496 Cacioppo, podscripts.co)"
+  },
+  "Rback": {
+   "correct": "RBAC (role-based access control)",
+   "domain": "acronyms",
+   "rule": "podscripts ASR in WorkOS ad read.",
+   "first_seen": "2026-10-23 (ILTB EP.496 Cacioppo, podscripts.co)"
+  },
+  "error growth": {
+   "correct": "ARR growth",
+   "domain": "acronyms",
+   "ci": true,
+   "rule": "podscripts ASR of 'ARR and ARR growth' ('error and error growth').",
+   "first_seen": "2026-10-23 (ILTB EP.496 Cacioppo, podscripts.co)"
+  },
+  "Navanta": {
+   "correct": "in Vanta",
+   "domain": "names",
+   "rule": "podscripts ASR.",
+   "first_seen": "2026-10-23 (ILTB EP.496 Cacioppo, podscripts.co)"
+  },
+  "Vantel": {
+   "correct": "Vanta",
+   "domain": "names",
+   "rule": "podscripts ASR.",
+   "first_seen": "2026-10-23 (ILTB EP.496 Cacioppo, podscripts.co)"
+  },
+  "Hixfield": {
+   "correct": "Higgsfield (AI video startup)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR spelling; same episode also renders it correctly as Higgsfield.",
+   "first_seen": "2026-10-23 (NVIDIA/Astana Hub Jensen Huang x Zhaslan Madiyev fireside, YouTube ASR)"
+  },
+  "Kazan": {
+   "correct": "Kazakhstan (when the context is Kazakhstan/Astana)",
+   "domain": "names",
+   "keep_when": [
+    "Tatarstan",
+    "Russia",
+    "Volga",
+    "Kazan Federal"
+   ],
+   "rule": "ASR truncation of 'Kazakhstan' in the Astana fireside ('a lot of compute right here in Kazan'); Kazan is also a real Russian city - check context.",
+   "first_seen": "2026-10-23 (NVIDIA/Astana Hub Jensen Huang x Zhaslan Madiyev fireside, YouTube ASR)"
+  },
+  "Open Shell": {
+   "correct": "OpenShell (NVIDIA open-source secure agent runtime)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR splits 'OpenShell' into two words; wiki usage is one word (NVDA.md, ai-cybersecurity).",
+   "first_seen": "2026-10-23 (NVIDIA/Astana Hub Jensen Huang x Zhaslan Madiyev fireside, YouTube ASR)"
+  },
+  "Mews": {
+   "correct": "Muse (Meta's AI agent)",
+   "domain": "names",
+   "rule": "podscripts ASR of 'Muse' in an agent list ('Mews and instinct in town' = Muse, Instinct and Town).",
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Angelos agent-payments episode 2026-10-15, podscripts ASR)"
+  },
+  "Rampel": {
+   "correct": "Rampell (Alex Rampell, a16z General Partner)",
+   "domain": "names",
+   "rule": "one-l ASR spelling of the a16z host's surname.",
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Angelos agent-payments episode 2026-10-15, podscripts ASR)"
+  },
+  "Pay16Z": {
+   "correct": "a16z (Andreessen Horowitz)",
+   "domain": "names",
+   "rule": "podscripts ASR of 'a16z' in the narrator intro.",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Angelos agent-payments episode 2026-10-15, podscripts ASR)"
+  },
+  "A60s": {
+   "correct": "a16z",
+   "domain": "names",
+   "rule": "podscripts ASR of 'a16z podcast' in the outro.",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Angelos agent-payments episode 2026-10-15, podscripts ASR)"
+  },
+  "Adion": {
+   "correct": "Adyen (payment processor)",
+   "domain": "names",
+   "rule": "ASR of Adyen in a processor list (Chase, Stripe, Braintree).",
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Angelos agent-payments episode 2026-10-15, podscripts ASR)"
+  },
+  "Brain Tree": {
+   "correct": "Braintree (PayPal's processor)",
+   "domain": "names",
+   "rule": "ASR splits Braintree into two words.",
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Angelos agent-payments episode 2026-10-15, podscripts ASR)"
+  },
+  "agenetic": {
+   "correct": "agentic",
+   "domain": "terms",
+   "rule": "ASR of 'agentic' ('agenetic commerce', 'agenetic tokens').",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Angelos agent-payments episode 2026-10-15, podscripts ASR)"
+  },
+  "Agenic": {
+   "correct": "agentic",
+   "domain": "terms",
+   "rule": "ASR of 'agentic' ('Agenic commerce').",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Angelos agent-payments episode 2026-10-15, podscripts ASR)"
+  },
+  "agented": {
+   "correct": "agentic",
+   "domain": "terms",
+   "rule": "ASR of 'agentic' ('agented commerce').",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Angelos agent-payments episode 2026-10-15, podscripts ASR)"
+  },
+  "agenda commerce": {
+   "correct": "agentic commerce",
+   "domain": "terms",
+   "rule": "ASR of 'agentic commerce'.",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Angelos agent-payments episode 2026-10-15, podscripts ASR)"
+  },
+  "Agent and Commerce": {
+   "correct": "agentic commerce",
+   "domain": "terms",
+   "rule": "ASR of 'agentic commerce'.",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Angelos agent-payments episode 2026-10-15, podscripts ASR)"
+  },
+  "emergency payment infrastructure": {
+   "correct": "emerging payment infrastructure",
+   "domain": "terms",
+   "rule": "ASR of 'emerging' in the a16z narrator intro.",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Angelos agent-payments episode 2026-10-15, podscripts ASR)"
+  },
+  "GBT Astra": {
+   "correct": "GPT Astra (OpenAI GPT-6 Astra)",
+   "domain": "names",
+   "rule": "ASR of 'GPT Astra'; also 'chat, CheapT, you know, Codex, Astra' = ChatGPT / Codex / Astra.",
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Angelos agent-payments episode 2026-10-15, podscripts ASR)"
+  },
+  "CheapT": {
+   "correct": "ChatGPT (fragment: 'chat, CheapT')",
+   "domain": "names",
+   "rule": "ASR split of ChatGPT.",
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Angelos agent-payments episode 2026-10-15, podscripts ASR)"
+  },
+  "paypels": {
+   "correct": "PayPals",
+   "domain": "names",
+   "rule": "ASR plural of PayPal ('the shoppays, the links, and the paypels').",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Angelos agent-payments episode 2026-10-15, podscripts ASR)"
+  },
+  "V.combe": {
+   "correct": "V.me (Visa's former digital wallet)",
+   "domain": "names",
+   "rule": "ASR of 'V.me' when recalling Visa's 2011-era wallet.",
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Angelos agent-payments episode 2026-10-15, podscripts ASR)"
+  },
+  "Grepper": {
+   "correct": "Grepr (observability-pipeline / AI-reliability startup, CEO Jad Naous)",
+   "domain": "names",
+   "rule": "podscripts ASR of the company name.",
+   "first_seen": "2026-10-16 (a16z Show, Grepr CEO Jad Naous, podscripts.co)"
+  },
+  "Jab Nouse": {
+   "correct": "Jad Naous (Grepr CEO)",
+   "domain": "names",
+   "ci": true,
+   "rule": "podscripts ASR of the guest's name.",
+   "first_seen": "2026-10-16 (a16z Show, Grepr CEO Jad Naous, podscripts.co)"
+  },
+  "Nysera": {
+   "correct": "Nicira (Martin Casado's SDN company, acquired by VMware)",
+   "domain": "names",
+   "ci": true,
+   "rule": "podscripts ASR.",
+   "first_seen": "2026-10-16 (a16z Show, Grepr CEO Jad Naous, podscripts.co)"
+  },
+  "Nick Buchanan": {
+   "correct": "Nick McKeown (Stanford advisor of Casado/Naous) - UNCONFIRMED reading",
+   "domain": "names",
+   "rule": "podscripts ASR; context 'our advisor' at Stanford's Gates building.",
+   "first_seen": "2026-10-16 (a16z Show, Grepr CEO Jad Naous, podscripts.co)"
+  },
+  "Zeldofich": {
+   "correct": "Zeldovich (Nickolai Zeldovich, MIT)",
+   "domain": "names",
+   "ci": true,
+   "rule": "podscripts ASR.",
+   "first_seen": "2026-10-16 (a16z Show, Grepr CEO Jad Naous, podscripts.co)"
+  },
+  "AISRI": {
+   "correct": "AI SRE (AI site-reliability-engineering agent)",
+   "domain": "acronyms",
+   "ci": true,
+   "rule": "podscripts ASR of 'AI SRE'.",
+   "first_seen": "2026-10-16 (a16z Show, Grepr CEO Jad Naous, podscripts.co)"
+  },
+  "plot code": {
+   "correct": "Claude Code",
+   "domain": "products",
+   "ci": true,
+   "rule": "podscripts ASR of 'Claude Code' ('So I use plot code').",
+   "first_seen": "2026-10-16 (a16z Show, Grepr CEO Jad Naous, podscripts.co)"
+  },
+  "Intelligene": {
+   "correct": "IntelliJ (JetBrains IDE)",
+   "domain": "products",
+   "ci": true,
+   "rule": "podscripts ASR ('co-pilot in Intelligene').",
+   "first_seen": "2026-10-16 (a16z Show, Grepr CEO Jad Naous, podscripts.co)"
+  },
+  "the Pli": {
+   "correct": "Imply (Druid analytics company; Naous was CPO) - UNCONFIRMED reading",
+   "domain": "names",
+   "rule": "podscripts ASR; identification from Naous's public bio, not stated in the transcript.",
+   "first_seen": "2026-10-16 (a16z Show, Grepr CEO Jad Naous, podscripts.co)"
+  },
+  "Sundar Ear": {
+   "correct": "Sundar Iyer (Stanford grad-school peer of Casado)",
+   "domain": "names",
+   "ci": true,
+   "rule": "podscripts ASR.",
+   "first_seen": "2026-10-16 (a16z Show, Grepr CEO Jad Naous, podscripts.co)"
+  },
+  "data dog": {
+   "correct": "Datadog (DDOG)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR splits the company name ('90% of our data dog bills').",
+   "first_seen": "2026-10-16 (a16z Show, Grepr CEO Jad Naous, podscripts.co)"
+  },
+  "Alice AI": {
+   "correct": "EliseAI (vertical AI for housing/healthcare)",
+   "domain": "names",
+   "rule": "ASR of EliseAI.",
+   "first_seen": "2026-10-23 (a16z, EliseAI Mario Martone episode 2026-10-18, podscripts ASR)"
+  },
+  "LIS AI": {
+   "correct": "EliseAI",
+   "domain": "names",
+   "rule": "ASR of EliseAI ('your team at LIS AI').",
+   "first_seen": "2026-10-23 (a16z, EliseAI Mario Martone episode 2026-10-18, podscripts ASR)"
+  },
+  "Mina's song": {
+   "correct": "Minna Song (EliseAI CEO/co-founder)",
+   "domain": "names",
+   "rule": "ASR split of the name into a possessive.",
+   "first_seen": "2026-10-23 (a16z, EliseAI Mario Martone episode 2026-10-18, podscripts ASR)"
+  },
+  "phone cards": {
+   "correct": "phone calls",
+   "domain": "units",
+   "rule": "ASR ('one million phone cards a day').",
+   "first_seen": "2026-10-23 (a16z, EliseAI Mario Martone episode 2026-10-18, podscripts ASR)"
+  },
+  "evalts": {
+   "correct": "evals (evaluations)",
+   "domain": "acronyms",
+   "rule": "ASR of 'evals'; 'evolves' also seen in the same episode.",
+   "first_seen": "2026-10-23 (a16z, EliseAI Mario Martone episode 2026-10-18, podscripts ASR)"
+  },
+  "sync theory": {
+   "correct": "string theory",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR.",
+   "first_seen": "2026-10-23 (a16z, EliseAI Mario Martone episode 2026-10-18, podscripts ASR)"
+  },
+  "Karin Sengal": {
+   "correct": "Karan Singhal (Health AI research lead, OpenAI)",
+   "domain": "names",
+   "rule": "podscripts ASR of the guest's name.",
+   "first_seen": "2026-10-23 (The a16z Show, Karan Singhal episode 2026-10-20, podscripts.co)"
+  },
+  "Karin Singhal": {
+   "correct": "Karan Singhal (Health AI research lead, OpenAI)",
+   "domain": "names",
+   "rule": "see 'Karin Sengal'.",
+   "first_seen": "2026-10-23 (The a16z Show, Karan Singhal episode 2026-10-20, podscripts.co)"
+  },
+  "Jay Rugani": {
+   "correct": "Jay Rughani (a16z partner, healthcare/biotech)",
+   "domain": "names",
+   "rule": "podscripts ASR of the a16z host's name.",
+   "first_seen": "2026-10-23 (The a16z Show, Karan Singhal episode 2026-10-20, podscripts.co)"
+  },
+  "Nathan LeBenz": {
+   "correct": "Nathan Labenz (Cognitive Revolution podcast host)",
+   "domain": "names",
+   "rule": "ASR.",
+   "first_seen": "2026-10-23 (The a16z Show, Karan Singhal episode 2026-10-20, podscripts.co)"
+  },
+  "Nathan Levens": {
+   "correct": "Nathan Labenz (Cognitive Revolution podcast host)",
+   "domain": "names",
+   "rule": "ASR.",
+   "first_seen": "2026-10-23 (The a16z Show, Karan Singhal episode 2026-10-20, podscripts.co)"
+  },
+  "Lisa Dole": {
+   "correct": "Lee Sedol (Go player, AlphaGo 'move 37' match)",
+   "domain": "names",
+   "rule": "ASR.",
+   "first_seen": "2026-10-23 (The a16z Show, Karan Singhal episode 2026-10-20, podscripts.co)"
+  },
+  "Panda Health": {
+   "correct": "Penda Health (Kenyan primary-care provider; OpenAI clinician co-pilot study)",
+   "domain": "names",
+   "rule": "ASR; the same transcript also spells it correctly.",
+   "first_seen": "2026-10-23 (The a16z Show, Karan Singhal episode 2026-10-20, podscripts.co)"
+  },
+  "GPD6": {
+   "correct": "GPT-6 (e.g. 'GPD6 Luna' = GPT-6 Luna, launched 2026-09-22)",
+   "domain": "products",
+   "rule": "ASR of GPT-6; see 'ChatGPD', 'GPD models'.",
+   "first_seen": "2026-10-23 (The a16z Show, Karan Singhal episode 2026-10-20, podscripts.co)"
+  },
+  "GP6 Luna": {
+   "correct": "GPT-6 Luna",
+   "domain": "products",
+   "rule": "ASR.",
+   "first_seen": "2026-10-23 (The a16z Show, Karan Singhal episode 2026-10-20, podscripts.co)"
+  },
+  "GPD5": {
+   "correct": "GPT-5 (e.g. 'GPD5 pro' = GPT-5 Pro)",
+   "domain": "products",
+   "rule": "ASR.",
+   "first_seen": "2026-10-23 (The a16z Show, Karan Singhal episode 2026-10-20, podscripts.co)"
+  },
+  "5.6 soul": {
+   "correct": "GPT-5.6 Sol",
+   "domain": "products",
+   "ci": true,
+   "rule": "ASR of the Sol tier name; see 'GPT, Seoul'.",
+   "first_seen": "2026-10-23 (The a16z Show, Karan Singhal episode 2026-10-20, podscripts.co)"
+  },
+  "ChachyPT": {
+   "correct": "ChatGPT",
+   "domain": "products",
+   "rule": "podscripts ASR; many one-off ChatGPT renderings in the same episode (also 'ChashipT', 'ChashyPT', 'ChachyPT', 'chat shagbt', 'chat chagip', 'chatchip D', 'ChatGBTBT', 'CHAPD', 'Chichita', 'Chashbifty', 'chashbc', 'Chachabit', 'Chitabot', 'chatypT').",
+   "first_seen": "2026-10-23 (The a16z Show, Karan Singhal episode 2026-10-20, podscripts.co)"
+  },
+  "ChashipT": {
+   "correct": "ChatGPT",
+   "domain": "products",
+   "rule": "see 'ChachyPT'.",
+   "first_seen": "2026-10-23 (The a16z Show, Karan Singhal episode 2026-10-20, podscripts.co)"
+  },
+  "ChashyPT": {
+   "correct": "ChatGPT",
+   "domain": "products",
+   "rule": "see 'ChachyPT'.",
+   "first_seen": "2026-10-23 (The a16z Show, Karan Singhal episode 2026-10-20, podscripts.co)"
+  },
+  "chat shagbt": {
+   "correct": "ChatGPT (here: ChatGPT Health)",
+   "domain": "products",
+   "ci": true,
+   "rule": "see 'ChachyPT'.",
+   "first_seen": "2026-10-23 (The a16z Show, Karan Singhal episode 2026-10-20, podscripts.co)"
+  },
+  "chat chagip": {
+   "correct": "ChatGPT",
+   "domain": "products",
+   "ci": true,
+   "rule": "see 'ChachyPT'.",
+   "first_seen": "2026-10-23 (The a16z Show, Karan Singhal episode 2026-10-20, podscripts.co)"
+  },
+  "chatchip D": {
+   "correct": "ChatGPT",
+   "domain": "products",
+   "ci": true,
+   "rule": "see 'ChachyPT'.",
+   "first_seen": "2026-10-23 (The a16z Show, Karan Singhal episode 2026-10-20, podscripts.co)"
+  },
+  "ChatGBTBT": {
+   "correct": "ChatGPT",
+   "domain": "products",
+   "rule": "see 'ChachyPT'.",
+   "first_seen": "2026-10-23 (The a16z Show, Karan Singhal episode 2026-10-20, podscripts.co)"
+  },
+  "CHAPD": {
+   "correct": "ChatGPT",
+   "domain": "products",
+   "rule": "see 'ChachyPT'.",
+   "first_seen": "2026-10-23 (The a16z Show, Karan Singhal episode 2026-10-20, podscripts.co)"
+  },
+  "Chichita": {
+   "correct": "ChatGPT (e.g. 'Chichita for Healthcare/Clinicians')",
+   "domain": "products",
+   "rule": "see 'ChachyPT'.",
+   "first_seen": "2026-10-23 (The a16z Show, Karan Singhal episode 2026-10-20, podscripts.co)"
+  },
+  "Chashbifty": {
+   "correct": "ChatGPT",
+   "domain": "products",
+   "rule": "see 'ChachyPT'.",
+   "first_seen": "2026-10-23 (The a16z Show, Karan Singhal episode 2026-10-20, podscripts.co)"
+  },
+  "chashbc": {
+   "correct": "ChatGPT",
+   "domain": "products",
+   "ci": true,
+   "rule": "see 'ChachyPT'.",
+   "first_seen": "2026-10-23 (The a16z Show, Karan Singhal episode 2026-10-20, podscripts.co)"
+  },
+  "Chachabit": {
+   "correct": "ChatGPT",
+   "domain": "products",
+   "rule": "see 'ChachyPT'.",
+   "first_seen": "2026-10-23 (The a16z Show, Karan Singhal episode 2026-10-20, podscripts.co)"
+  },
+  "Chitabot": {
+   "correct": "ChatGPT",
+   "domain": "products",
+   "rule": "see 'ChachyPT'.",
+   "first_seen": "2026-10-23 (The a16z Show, Karan Singhal episode 2026-10-20, podscripts.co)"
+  },
+  "chatypT": {
+   "correct": "ChatGPT",
+   "domain": "products",
+   "ci": true,
+   "rule": "see 'ChachyPT'.",
+   "first_seen": "2026-10-23 (The a16z Show, Karan Singhal episode 2026-10-20, podscripts.co)"
+  },
+  "hip-compliance": {
+   "correct": "HIPAA compliance",
+   "domain": "acronyms",
+   "ci": true,
+   "rule": "ASR of HIPAA.",
+   "first_seen": "2026-10-23 (The a16z Show, Karan Singhal episode 2026-10-20, podscripts.co)"
+  },
+  "primary HR software": {
+   "correct": "primary EHR software (electronic health record)",
+   "domain": "acronyms",
+   "ci": true,
+   "rule": "ASR drops the E of EHR; also 'the HR data' = EHR data in health contexts.",
+   "first_seen": "2026-10-23 (The a16z Show, Karan Singhal episode 2026-10-20, podscripts.co)"
+  },
+  "Open AIS": {
+   "correct": "OpenAI's",
+   "domain": "names",
+   "rule": "ASR.",
+   "first_seen": "2026-10-23 (The a16z Show, Karan Singhal episode 2026-10-20, podscripts.co)"
+  },
+  "opening eyes": {
+   "correct": "OpenAI's",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR; only in OpenAI-speaker context.",
+   "first_seen": "2026-10-23 (The a16z Show, Karan Singhal episode 2026-10-20, podscripts.co)"
+  },
+  "lap desk back": {
+   "correct": "lab test back",
+   "domain": "other",
+   "ci": true,
+   "rule": "ASR ('someone gets a lap desk back, whether A1C is higher').",
+   "first_seen": "2026-10-23 (The a16z Show, Karan Singhal episode 2026-10-20, podscripts.co)"
+  },
+  "Redacto": {
+   "correct": "Reducto (document-parsing startup)",
+   "domain": "names",
+   "rule": "ASR of the company name; also 'redactyl', 'reductal', 'redact will'.",
+   "first_seen": "2026-10-23 (a16z Show, Reducto / Adit Abraham episode 2026-10-21, podscripts ASR)"
+  },
+  "redactyl": {
+   "correct": "Reducto",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of the company name.",
+   "first_seen": "2026-10-23 (a16z Show, Reducto / Adit Abraham episode 2026-10-21, podscripts ASR)"
+  },
+  "reductal": {
+   "correct": "Reducto",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of the company name.",
+   "first_seen": "2026-10-23 (a16z Show, Reducto / Adit Abraham episode 2026-10-21, podscripts ASR)"
+  },
+  "chat chit": {
+   "correct": "ChatGPT",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of ChatGPT.",
+   "first_seen": "2026-10-23 (a16z Show, Reducto / Adit Abraham episode 2026-10-21, podscripts ASR)"
+  },
+  "VOMs": {
+   "correct": "VLMs (vision-language models)",
+   "domain": "acronyms",
+   "rule": "ASR of VLM; also 'VOLM', 'YLMs'.",
+   "first_seen": "2026-10-23 (a16z Show, Reducto / Adit Abraham episode 2026-10-21, podscripts ASR)"
+  },
+  "VOLM": {
+   "correct": "VLM (vision-language model)",
+   "domain": "acronyms",
+   "rule": "ASR of VLM.",
+   "first_seen": "2026-10-23 (a16z Show, Reducto / Adit Abraham episode 2026-10-21, podscripts ASR)"
+  },
+  "YLMs": {
+   "correct": "VLMs (vision-language models)",
+   "domain": "acronyms",
+   "rule": "ASR of VLM.",
+   "first_seen": "2026-10-23 (a16z Show, Reducto / Adit Abraham episode 2026-10-21, podscripts ASR)"
+  },
+  "PIDO Frontier": {
+   "correct": "Pareto frontier",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR of 'Pareto frontier'.",
+   "first_seen": "2026-10-23 (a16z Show, Reducto / Adit Abraham episode 2026-10-21, podscripts ASR)"
+  },
+  "frontier violence": {
+   "correct": "frontier models",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR of 'frontier models'.",
+   "first_seen": "2026-10-23 (a16z Show, Reducto / Adit Abraham episode 2026-10-21, podscripts ASR)"
+  },
+  "Curser": {
+   "correct": "Cursor (AI coding tool, now inside SPCX)",
+   "domain": "names",
+   "rule": "ASR of Cursor; also 'Curse'.",
+   "first_seen": "2026-10-23 (a16z Show, Reducto / Adit Abraham episode 2026-10-21, podscripts ASR)"
+  },
+  "the ERR": {
+   "correct": "ARR (annual recurring revenue)",
+   "domain": "acronyms",
+   "rule": "ASR of ARR ('a million in the ERR'); 'in an error' also = in ARR.",
+   "first_seen": "2026-10-23 (a16z Show, Reducto / Adit Abraham episode 2026-10-21, podscripts ASR)"
+  },
+  "Harbys": {
+   "correct": "Harveys (Harvey, legal-AI company)",
+   "domain": "names",
+   "rule": "ASR of Harvey ('the Harbys of the world').",
+   "first_seen": "2026-10-23 (a16z Show, Reducto / Adit Abraham episode 2026-10-21, podscripts ASR)"
+  },
+  "Rogos": {
+   "correct": "Rogo (finance-AI company)",
+   "domain": "names",
+   "rule": "ASR / plural of Rogo.",
+   "first_seen": "2026-10-23 (a16z Show, Reducto / Adit Abraham episode 2026-10-21, podscripts ASR)"
+  },
+  "Microw One": {
+   "correct": "micro1 (AI data / eval company; ran a long-extraction benchmark)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of micro1; also 'micro 1'.",
+   "first_seen": "2026-10-23 (a16z Show, Reducto / Adit Abraham episode 2026-10-21, podscripts ASR)"
+  },
+  "scrounding": {
+   "correct": "grounding",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR of 'citations and grounding'.",
+   "first_seen": "2026-10-23 (a16z Show, Reducto / Adit Abraham episode 2026-10-21, podscripts ASR)"
+  },
+  "prior off": {
+   "correct": "prior auth (prior authorization, Medicare claims)",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR of 'prior auth'.",
+   "first_seen": "2026-10-23 (a16z Show, Reducto / Adit Abraham episode 2026-10-21, podscripts ASR)"
+  },
+  "Jennifer Lee": {
+   "correct": "Jennifer Li (a16z general partner)",
+   "domain": "names",
+   "rule": "ASR / show-intro spelling of a16z GP Jennifer Li; keep only for a different person actually named Lee.",
+   "first_seen": "2026-10-23 (a16z Show, Reducto / Adit Abraham episode 2026-10-21, podscripts ASR)"
+  },
+  "Jean Dené Gres": {
+   "correct": "Jean-Denis Greze (Town CEO, ex-Plaid CTO)",
+   "domain": "names",
+   "rule": "podscripts ASR of the guest's name in the narrator intro.",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Greze Town episode 2026-10-19, podscripts ASR)"
+  },
+  "Jean-Denie": {
+   "correct": "Jean-Denis Greze (Town CEO)",
+   "domain": "names",
+   "rule": "ASR truncation of the guest's first name.",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Greze Town episode 2026-10-19, podscripts ASR)"
+  },
+  "John Denise": {
+   "correct": "Jean-Denis (Greze)",
+   "domain": "names",
+   "rule": "ASR of 'Jean-Denis' ('that's John Denise company').",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Greze Town episode 2026-10-19, podscripts ASR)"
+  },
+  "Ben Horwitz": {
+   "correct": "Ben Horowitz (a16z co-founder)",
+   "domain": "names",
+   "rule": "one-o ASR spelling of Horowitz.",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Greze Town episode 2026-10-19, podscripts ASR)"
+  },
+  "Steve Bomber": {
+   "correct": "Steve Ballmer (ex-Microsoft CEO)",
+   "domain": "names",
+   "rule": "ASR of Ballmer in the iPhone/BlackBerry anecdote.",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Greze Town episode 2026-10-19, podscripts ASR)"
+  },
+  "Javon's paradox": {
+   "correct": "Jevons paradox",
+   "domain": "terms",
+   "rule": "ASR of Jevons.",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Greze Town episode 2026-10-19, podscripts ASR)"
+  },
+  "Jvon's paradox": {
+   "correct": "Jevons paradox",
+   "domain": "terms",
+   "rule": "ASR of Jevons.",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Greze Town episode 2026-10-19, podscripts ASR)"
+  },
+  "clod": {
+   "correct": "Claude (Anthropic model)",
+   "domain": "names",
+   "rule": "ASR of 'Claude' ('they needed clod'). Rare as the English word.",
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Greze Town episode 2026-10-19, podscripts ASR)"
+  },
+  "open it eye": {
+   "correct": "OpenAI",
+   "domain": "names",
+   "rule": "ASR of OpenAI.",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Greze Town episode 2026-10-19, podscripts ASR)"
+  },
+  "opening eye": {
+   "correct": "OpenAI",
+   "domain": "names",
+   "rule": "ASR of OpenAI.",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Greze Town episode 2026-10-19, podscripts ASR)"
+  },
+  "atthropic": {
+   "correct": "Anthropic",
+   "domain": "names",
+   "rule": "ASR of Anthropic.",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Greze Town episode 2026-10-19, podscripts ASR)"
+  },
+  "ChbT": {
+   "correct": "ChatGPT",
+   "domain": "names",
+   "rule": "ASR of ChatGPT ('chat ChbT').",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Greze Town episode 2026-10-19, podscripts ASR)"
+  },
+  "Opus 4-5": {
+   "correct": "Opus 4.5 (Anthropic Claude model)",
+   "domain": "names",
+   "rule": "ASR renders the version dot as a dash.",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Greze Town episode 2026-10-19, podscripts ASR)"
+  },
+  "C-So": {
+   "correct": "CISO (chief information security officer)",
+   "domain": "terms",
+   "rule": "ASR of CISO ('making the C-So happy').",
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Greze Town episode 2026-10-19, podscripts ASR)"
+  },
+  "FDs": {
+   "correct": "FDEs (forward-deployed engineers)",
+   "domain": "terms",
+   "rule": "ASR drops the E in FDE ('paying open AI for FDs').",
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Greze Town episode 2026-10-19, podscripts ASR)"
+  },
+  "emot": {
+   "correct": "moat",
+   "domain": "terms",
+   "rule": "ASR of 'a moat' ('line of sight to emot').",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Greze Town episode 2026-10-19, podscripts ASR)"
+  },
+  "make market": {
+   "correct": "mid-market",
+   "domain": "terms",
+   "rule": "ASR of 'mid-market' ('the SMB and make market').",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Greze Town episode 2026-10-19, podscripts ASR)"
+  },
+  "Manlo": {
+   "correct": "Menlo (Park)",
+   "domain": "names",
+   "rule": "ASR of Menlo.",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Greze Town episode 2026-10-19, podscripts ASR)"
+  },
+  "MX premium": {
+   "correct": "Amex premium (American Express)",
+   "domain": "names",
+   "rule": "ASR of Amex ('MX premium membership', 'chase and MX benefits').",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Greze Town episode 2026-10-19, podscripts ASR)"
+  },
+  "cheaper cocks": {
+   "correct": "cheaper COGS (inferred)",
+   "domain": "terms",
+   "rule": "ASR likely of COGS ('they have cheaper cocks') when describing labs as suppliers; inferred, not certain.",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Rampell & Greze Town episode 2026-10-19, podscripts ASR)"
+  },
+  "Gravaton": {
+   "correct": "Graviton",
+   "domain": "terms",
+   "rule": "AWS Arm CPU",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Andy Jassy episode 2026-10-23, podscripts ASR)"
+  },
+  "Traneum": {
+   "correct": "Trainium",
+   "domain": "terms",
+   "rule": "AWS AI accelerator",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Andy Jassy episode 2026-10-23, podscripts ASR)"
+  },
+  "Zooks": {
+   "correct": "Zoox",
+   "domain": "terms",
+   "rule": "Amazon robotaxi unit",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Andy Jassy episode 2026-10-23, podscripts ASR)"
+  },
+  "Betarach": {
+   "correct": "Bedrock",
+   "domain": "terms",
+   "rule": "AWS model service",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Andy Jassy episode 2026-10-23, podscripts ASR)"
+  },
+  "Anapurna": {
+   "correct": "Annapurna",
+   "domain": "terms",
+   "rule": "Annapurna Labs (AWS chip team)",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Andy Jassy episode 2026-10-23, podscripts ASR)"
+  },
+  "Antipurno": {
+   "correct": "Annapurna",
+   "domain": "terms",
+   "rule": "Annapurna Labs (AWS chip team)",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Andy Jassy episode 2026-10-23, podscripts ASR)"
+  },
+  "Kappex": {
+   "correct": "capex",
+   "domain": "terms",
+   "rule": "ASR garble of capex",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Andy Jassy episode 2026-10-23, podscripts ASR)"
+  },
+  "multi-gigawak": {
+   "correct": "multi-gigawatt",
+   "domain": "terms",
+   "rule": "ASR garble of multi-gigawatt",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Andy Jassy episode 2026-10-23, podscripts ASR)"
+  },
+  "easy two": {
+   "correct": "EC2",
+   "domain": "terms",
+   "rule": "AWS compute",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Andy Jassy episode 2026-10-23, podscripts ASR)"
+  },
+  "clog code": {
+   "correct": "Claude Code",
+   "domain": "terms",
+   "rule": "ASR garble of Claude Code",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Show, Andy Jassy episode 2026-10-23, podscripts ASR)"
+  },
+  "Nkish": {
+   "correct": "Nikesh (Arora)",
+   "domain": "terms",
+   "rule": "PANW CEO",
+   "ci": true,
+   "first_seen": "2026-10-23 (All-In, Krishna & Arora episode 2026-10-21, podscripts ASR)"
+  },
+  "Nakesh": {
+   "correct": "Nikesh (Arora)",
+   "domain": "terms",
+   "rule": "PANW CEO",
+   "ci": true,
+   "first_seen": "2026-10-23 (All-In, Krishna & Arora episode 2026-10-21, podscripts ASR)"
+  },
+  "Nekisha": {
+   "correct": "Nikesh (Arora)",
+   "domain": "terms",
+   "rule": "PANW CEO",
+   "ci": true,
+   "first_seen": "2026-10-23 (All-In, Krishna & Arora episode 2026-10-21, podscripts ASR)"
+  },
+  "Dukesh": {
+   "correct": "Nikesh (Arora)",
+   "domain": "terms",
+   "rule": "PANW CEO",
+   "ci": true,
+   "first_seen": "2026-10-23 (All-In, Krishna & Arora episode 2026-10-21, podscripts ASR)"
+  },
+  "Harbin Christian": {
+   "correct": "Arvind Krishna",
+   "domain": "terms",
+   "rule": "IBM CEO",
+   "ci": true,
+   "first_seen": "2026-10-23 (All-In, Krishna & Arora episode 2026-10-21, podscripts ASR)"
+  },
+  "Orvin": {
+   "correct": "Arvind (Krishna)",
+   "domain": "terms",
+   "rule": "IBM CEO",
+   "ci": true,
+   "first_seen": "2026-10-23 (All-In, Krishna & Arora episode 2026-10-21, podscripts ASR)"
+  },
+  "Jamad": {
+   "correct": "Chamath",
+   "domain": "terms",
+   "rule": "All-In host",
+   "ci": true,
+   "first_seen": "2026-10-23 (All-In, Krishna & Arora episode 2026-10-21, podscripts ASR)"
+  },
+  "CloudCode": {
+   "correct": "Claude Code",
+   "domain": "terms",
+   "rule": "ASR garble of Claude Code",
+   "ci": true,
+   "first_seen": "2026-10-23 (All-In, Krishna & Arora episode 2026-10-21, podscripts ASR)"
+  },
+  "Claude Coe": {
+   "correct": "Claude Code",
+   "domain": "terms",
+   "rule": "ASR garble of Claude Code",
+   "ci": true,
+   "first_seen": "2026-10-23 (All-In, Krishna & Arora episode 2026-10-21, podscripts ASR)"
+  },
+  "e-vowels": {
+   "correct": "evals",
+   "domain": "terms",
+   "rule": "ASR garble of evals",
+   "ci": true,
+   "first_seen": "2026-10-23 (All-In, Krishna & Arora episode 2026-10-21, podscripts ASR)"
+  },
+  "open rate model": {
+   "correct": "open-weight model",
+   "domain": "terms",
+   "rule": "ASR garble of open-weight model",
+   "ci": true,
+   "first_seen": "2026-10-23 (All-In, Krishna & Arora episode 2026-10-21, podscripts ASR)"
+  },
+  "genetically written code": {
+   "correct": "agentically written code",
+   "domain": "terms",
+   "rule": "ASR garble of agentically written code",
+   "ci": true,
+   "first_seen": "2026-10-23 (All-In, Krishna & Arora episode 2026-10-21, podscripts ASR)"
+  },
+  "ZD out": {
+   "correct": "ZDR (zero data retention)",
+   "domain": "terms",
+   "rule": "ASR garble of ZDR (zero data retention)",
+   "ci": true,
+   "first_seen": "2026-10-23 (All-In, Krishna & Arora episode 2026-10-21, podscripts ASR)"
+  },
+  "bond page": {
+   "correct": "bond pitch",
+   "domain": "terms",
+   "rule": "hybrid bonding",
+   "ci": true,
+   "first_seen": "2026-10-23 (SemiAnalysis Weekly Ep.040 2026-10-23, YouTube captions)"
+  },
+  "D SVEC": {
+   "correct": "HBM de-spec (likely)",
+   "domain": "terms",
+   "rule": "inferred",
+   "ci": true,
+   "first_seen": "2026-10-23 (SemiAnalysis Weekly Ep.040 2026-10-23, YouTube captions)"
+  },
+  "core weaves and the light": {
+   "correct": "CoreWeaves and the like",
+   "domain": "terms",
+   "rule": "not a second neocloud",
+   "ci": true,
+   "first_seen": "2026-10-23 (All-In, CoreWeave Crash episode 2026-10-16, podscripts ASR)"
+  },
+  "Gervette": {
+   "correct": "Gravett (Ryan Gravett, UBS US Communications & Media)",
+   "domain": "people",
+   "rule": "name confirmed from the UBS desk invite",
+   "ci": true,
+   "first_seen": "2026-10-23 (UBS Expert Call 'Keeping up with the AI Infrastructure Build', Notion ASR)"
+  },
+  "Hudlick": {
+   "correct": "Hodulik (John Hodulik, UBS US Communications & Media)",
+   "domain": "people",
+   "rule": "name confirmed from the UBS desk invite",
+   "ci": true,
+   "first_seen": "2026-10-23 (UBS Expert Call 'Keeping up with the AI Infrastructure Build', Notion ASR)"
+  },
+  "Sabi Data Centers": {
+   "correct": "Sabey Data Centers (likely)",
+   "domain": "companies",
+   "rule": "inferred - US data-center developer; not in the invite",
+   "ci": true,
+   "first_seen": "2026-10-23 (UBS Expert Call 'Keeping up with the AI Infrastructure Build', Notion ASR)"
+  },
+  "YMPC": {
+   "correct": "YMTC (Yangtze Memory Technologies)",
+   "domain": "names",
+   "rule": "ASR spelling of the Chinese NAND maker",
+   "first_seen": "2026-10-23 (Barclays Semi Expert Series, Sadler/Coles memory call, Notion ASR)"
+  },
+  "DAX DRAM": {
+   "correct": "3D DRAM",
+   "domain": "technology",
+   "rule": "ASR; speaker restates 'or 3D DRAM' in the same sentence",
+   "ci": true,
+   "first_seen": "2026-10-23 (Barclays Semi Expert Series, Sadler/Coles memory call, Notion ASR)"
+  },
+  "HVM-based iChips": {
+   "correct": "HBM-based custom base-die chips (likely)",
+   "domain": "technology",
+   "rule": "ASR on HBM base-die / custom HBM discussion",
+   "ci": true,
+   "first_seen": "2026-10-23 (Barclays Semi Expert Series, Sadler/Coles memory call, Notion ASR)"
   }
  },
  "summary_traps": [

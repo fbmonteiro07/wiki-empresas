@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\CRWV` (10-K FY2025, four 10-Qs, transcripts) · `E:\briefings\2026`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Snapshot — Capstone official model + BBG · asof 2026-10-21 · USD
+### 📊 Snapshot — Capstone official model + BBG · asof 2026-10-23 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -61,6 +61,8 @@ CoreWeave is the financing-and-operating layer that turns GPUs + power + debt in
 Themes: [ai-datacenter-power](themes/ai-datacenter-power.md) · [custom-asic-tpu](themes/custom-asic-tpu.md).
 
 ## Current state (latest quarter — Q2 FY2026, printed 2026-08-11 AMC)
+
+**2026-10-23 — CDS field basis in the official credit workbook.** The October 16 credit review retained Bloomberg **PX_LAST 482.326bp on October 15** versus roughly **1,000bp desk quotes** as unresolved. The official Daniel Grozdea workbook, adopted October 16, uses **CDS_FLAT_SPREAD** on the same `CRWV CDS USD SR 5Y D14 Corp` ticker; the separate issuer board uses **PX_LAST**. These are different fields: do not splice the two histories or call the difference a credit-market move. Desk-versus-terminal comparisons still require matching quote conventions. Current values/dates are in the [official credit view](_dashboards/credit-live.html); the prior dated values remain below. Cantor / Brett Knoblauch (October 21, pp.1-3; FactSet October 20) separately emphasizes agreement-specific backstop triggers and commencement versus landlord completion risk. [Weekly evidence](_data/credit-monitor/research-sources/2026-10-23-evidence.json).
 
 **2026-10-16 — weekly credit review.** The September 18 pricing vintage of **$3.7bn** and DB's October 14 **$4.2bn** refer to the same 2.875% April-2033 convertible: the [September 22 8-K](https://www.sec.gov/Archives/edgar/data/1769628/000176962826000432/crwv-20260917.htm) confirms **$4.2bn closed including the fully exercised $500m option**. This resolves the amount/closing evidence; it is a historical financing backfill, not October proceeds or a straight-debt coupon comparison. Stable financing ID **CRWV-CONVERT-20260922**. JPM / Samik Chatterjee et al. (October 16) argues the pressure reflects cash-flow timing despite healthy contract economics; its project returns and funding assumptions are forecasts. Bloomberg October 15: **14.352% YTM** on CRWV 9.625% July-2032 (YLD_YTM_MID), and **482.326bp** on CRWV CDS USD SR 5Y D14 Corp (PX_LAST). The roughly 1,000bp desk-CDS vintage retained below is **not reconciled to that contract/convention**. [Email evidence](_data/credit-monitor/research-sources/2026-10-16-outlook.json); [dated issuer data](_data/credit_watch.json).
 
@@ -440,6 +442,12 @@ Hedgeye estimates 2026 CoreWeave revenue ~**$11.68B (+126%)** on ~477k average G
 
 ## Intra-quarter — calls, commentary & reports (since the last print)
 _Q1 FY26 · May 07 → Jul 20, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
+
+**🆕 2026-10-23 — PRIVATE DEVELOPER ON A UBS EXPERT CALL (READ-ACROSS; COREWEAVE NOT NAMED): NEOCLOUD CREDIT WRAPPERS "FALLEN OUT OF FAVOR"; IG PARTIES NOW SIGN THE LEASE AND ASSIGN IT TO THE NEOCLOUD; LANDLORDS REPRICE RECENT LEASES BY ROUGHLY THE MOVE IN DEBT COSTS**
+
+_Source: **John Day (CCO, CleanArc Data Centers) hosted by Ryan Gravett / John Hodulik (UBS US Communications) @ UBS Expert Call 'Keeping up with the AI Infrastructure Build', 2026-10-23 — Capstone notes (Notion transcript)** ([transcript](../_equity_calls/Overall/2026-10-23_UBS_Expert-call-AI-infrastructure-build-DC-demand-higher-rates-CleanArc-John-Day.md)). ⚠️ **EXPERT / PRIVATE-DEVELOPER VOICE, NOT BROKER RESEARCH:** Day is the sales-and-leasing executive of a private hyperscale developer (CleanArc; ex-QTS and Sabey Data Centers [transcribed 'Sabi']) talking his market and his book — no ratings, PTs or estimates; much of the financing colour is peer hearsay ("I'm hearing", "I've heard") with no counts, and he declined to give demand numbers. The UBS hosts' questions and framings (rates, "mad rush to secure capital", Texas, the $/MW quotes, SpaceX) are kept apart from his answers. Notion machine transcript, speakers unlabelled; host names from the UBS invite (transcribed 'Gervette', 'Hudlick'); audience questioners appear by first name only and are not carried. First archived vintage (the host says "welcome back"; no earlier one on disk)._
+
+- **Read-across for a neocloud tenant:** leases signed by *"newer entrants"* 2-4 months ago still need most of their capital raised (host framing). Day says banks are forcing landlords back to tenants when the WACC-to-development-yield spread falls to ~50bp; rent moves are expected to track the debt-cost move (an August LOI absorbing *"75 basis points or whatever"*). Banks also want financing contingencies that let the landlord walk if debt markets *"blow up"*. For neocloud tenants, he says wrappers from chipmakers or hyperscalers are giving way to IG parties signing the head lease and assigning it, keeping the right to *"blow them out of the lease"*. ➤ Capstone read, not Day's: this raises the cost and lowers the control of CRWV's third-party capacity sourcing, in the same direction as the 3-5% neocloud yield-on-cost premium (SemiAnalysis 07-06) already on this page. Full context on [ai-compute-deals](themes/ai-compute-deals.md) and [ai-datacenter-power](themes/ai-datacenter-power.md).
 
 **🆕 2026-10-20 — DC TRANSACTION LAWYER ON A BERNSTEIN WEBINAR: NEOCLOUDS "ARE WEWORK 2.0" (15-YEAR LEASES vs CUSTOMER CONTRACTS "BY THE DAY, THE WEEK, THE MONTH, IN THE BEST CASE, 1 TO 3 YEARS"); FAILURES OF "SEVERAL NEO CLOUDS … PROBABLY NOT THE LARGER PUBLIC ONES" IN 1-3 YEARS; NEW-BUILD NEOCLOUD LEASES ARE "EXTREMELY RARE" WITHOUT A CREDIT WRAPPER**
 
@@ -872,6 +880,10 @@ _Source: CRWV earnings calls (dates above); management commentary, paraphrased._
 - **Outlook:** attempted (`outlook.py --no-body --days 14`); returned no data this session — sell-side stance sourced from briefing roll-ups instead.
 
 ## Changelog
+
+- 2026-10-23 — ingest (Notion, 2026-10-23_UBS_Expert-call-AI-infrastructure-build-DC-demand-higher-rates-CleanArc-John-Day.md): 1 intra-quarter read-across row (wrappers out of favour → IG head lease + assignment; lease repricing tracking debt costs; financing contingencies). CoreWeave not named; nothing superseded.
+
+- **2026-10-23 — weekly credit review:** Re-read Cantor / Brett Knoblauch October 21 research pp.1-3 (FactSet marks October 20). Added the official-workbook CDS field distinction to the current-state credit note; preserved the prior October 15 PX_LAST figure and desk quote as their original dated observations. No rating/PT/model change. [Evidence](_data/credit-monitor/research-sources/2026-10-23-evidence.json).
 
 - 2026-10-22 — run-inbox: 1 Full-log row (Blackstone Q3 2026 earnings call, Jonathan Gray, 2026-10-22: neocloud deliverability, compute prices +50% y/y, legacy H100 value, secured financing against hyperscaler contracts), 1 Sources line. Nothing superseded.
 - 2026-10-21 — run-inbox: Cantor Fitzgerald · Brett Knoblauch "Backstop 101: What Does a Backstop Mean?" (2026-10-21). Added 1 Full-log row (10/20 FactSet marks on four CoreWeave-tenant landlord bonds vs backstopped / hyperscaler-tenant comparators) + 1 Sources entry. Nothing superseded.

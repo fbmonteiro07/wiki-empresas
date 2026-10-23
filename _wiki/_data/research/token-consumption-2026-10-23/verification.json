@@ -1,0 +1,49 @@
+{
+  "finalPath": "E:\\Wiki Felipe empresas\\outputs\\01a168b5-7786-7582-8082-7cd6bd45fd69\\AI_Token_Consumption_and_Minimum_Price.xlsx",
+  "tests": {
+    "baseline": "24 provider-month outputs match independent Python calculations",
+    "recalculation": "Gross/net basis switch, future -10% price change, zero price, below -100% and nonnumeric input guards passed; original inputs restored"
+  },
+  "october": [
+    {
+      "provider": "anthropic",
+      "month": 10,
+      "price_month": 10,
+      "gross_arr_busd": 75.38937036379113,
+      "net_arr_busd": 67.0965396237741,
+      "api_gross_arr_busd": 64.08096480922246,
+      "published_price": 0.802084116739682,
+      "matched_price": 0.4592454180448148,
+      "minimum_reference": 0.4592454180448148,
+      "base_gross_tokens_Q_month": 7.832654205712077,
+      "reference_gross_tokens_Q_month": 13.6799351359078,
+      "api_gross_tokens_Q_month": 6.657756074855266,
+      "gap": 0.778437925508908,
+      "coverage": 0.9822692226268221,
+      "weeks": 2,
+      "start": "2026-09-28",
+      "end": "2026-10-11",
+      "price_status": "Partial through Oct 11"
+    },
+    {
+      "provider": "openai",
+      "month": 10,
+      "price_month": 10,
+      "gross_arr_busd": 56.911688794051834,
+      "net_arr_busd": 55.54172780192894,
+      "api_gross_arr_busd": 15.06957091335181,
+      "published_price": 0.5009029508207629,
+      "matched_price": 0.45952610629590185,
+      "minimum_reference": 0.45952610629590185,
+      "base_gross_tokens_Q_month": 9.468182858708497,
+      "reference_gross_tokens_Q_month": 10.320720994649502,
+      "api_gross_tokens_Q_month": 2.5070676346684384,
+      "gap": 0.09511032627391636,
+      "coverage": 0.9955138085484935,
+      "weeks": 2,
+      "start": "2026-09-28",
+      "end": "2026-10-11",
+      "price_status": "Partial through Oct 11"
+    }
+  ]
+}

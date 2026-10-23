@@ -1,0 +1,49 @@
+{
+  "run_at": "2026-10-23T09:15:53",
+  "subject": "AI Credit & Funding | Weekly summary | 2026-10-23",
+  "status": "partial",
+  "errors": [
+    "Issuer board XAI_12.5_2030: stale observation 2026-03-04.",
+    "Official workbook refresh partial: 1 instrument(s) returned no values — previous values kept; unavailable instruments: BL097034 Corp. Retained values are not fresh quotes.",
+    "Official workbook SPCX revolver 2031: retained earlier value; individual observation date unavailable. Do not treat the overall refresh date as its quote date."
+  ],
+  "market_fetched_at": "2026-10-23T09:15:35",
+  "market_dates": {
+    "ok": true,
+    "issues": [],
+    "earliest": "2026-10-22",
+    "latest": "2026-10-22"
+  },
+  "research_asof": "2026-10-22",
+  "email_requested": true,
+  "body": "\\\\CAPSRV01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\_data\\credit-monitor\\exports\\2026-10-23-email.txt",
+  "attachment": "\\\\CAPSRV01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\_data\\credit-monitor\\exports\\2026-10-23-credit-monitor.html",
+  "input_sha256": {
+    "funding_deals.json": "09538c51dbd36575966f0b23a2178a51ac3dd98c20b279edcd9515c323f96a80",
+    "funding_market.json": "427ec9be71d5468a68221f729dbb6749a36d5b3d8d6da5fe6f8d5e65f37fc1a6",
+    "credit_watch.json": "0ec24e59a60d046b1b1f68d87cf7496338ee3631d90b72442d36bc54f2c85afd",
+    "credit_workbook.json": "bb5c21643a8b965c232b438daf82cd4797d4d7273c05a90b1ee52a111eb3aee5"
+  },
+  "email_delivery": {
+    "status": "sent_confirmed",
+    "recipient": "felipe.monteiro@capstone.com.br",
+    "subject": "AI Credit & Funding | Weekly summary | 2026-10-23",
+    "confirmed_at": "2026-10-23T12:17:45.7331555Z",
+    "receipt_path": "_wiki\\_data\\credit-monitor\\email-receipts\\45e625adf7dd09badca602148caa376a3c7b1ff64c8b217ff49c6eb5180c2a6c.json",
+    "entry_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC0000000001090000C1A4BC1B9694F44D9FADFEFCFB028EAC000598E081000000",
+    "attachment_sha256": "b3aaf4895c16264064184f0ff7f08e18b5a74bcb2383d750f29f6c9cf589db67",
+    "sole_recipient_and_attachment_verified_in_sent_items": true,
+    "verify_command_exit_code": 0
+  },
+  "validation": {
+    "file": "_wiki/_data/credit-monitor/2026-10-23-validation.json",
+    "test_credit_monitor": "13 passed",
+    "live_matches_generated": true,
+    "attachment_self_contained": true,
+    "attachment_bytes": 623067,
+    "body_sha256": "6a4c66b4ba20b08bf4b0163713965aa86938934a1b6ff925d506def561f7ec51",
+    "search_index": "2545 documents; 6 updated; exit 0",
+    "offline_wiki": "111 company pages and 23 themes; exit 0",
+    "verified_at": "2026-10-23T09:18:18"
+  }
+}

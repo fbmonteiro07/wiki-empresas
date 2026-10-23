@@ -5,17 +5,17 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\MU` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\MU.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-21 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-10-23 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $168.6bn | $294.4bn |
-| Gross profit | $140.6bn | $253.8bn |
-| Gross margin | 83.4% | 86.2% |
-| EBITDA | $144.6bn | $275.0bn |
-| EPS | $99.73 | $187.56 |
-| Capex | $35.3bn | $64.4bn |
-| OCF (≈EBITDA) | $144.6bn | $275.0bn |
+| Revenue | $168.6bn | $294.6bn |
+| Gross profit | $140.6bn | $254.3bn |
+| Gross margin | 83.4% | 86.3% |
+| EBITDA | $144.7bn | $265.1bn |
+| EPS | $99.74 | $187.84 |
+| Capex | $35.2bn | $62.7bn |
+| OCF (≈EBITDA) | $144.7bn | $265.1bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
@@ -490,6 +490,13 @@ _Sources: **sell-side analyst call (broker unconfirmed; 'Natalia'/'Gianmarco'), 
 
 ## Debate / thesis
 
+**🆕🔭 2026-10-23 — EX-MICRON CSO (SADLER) ON THE BARCLAYS EXPERT SERIES: "PEDAL SHOULD BE TO THE METAL" ON CAPEX, SCEPTICAL THAT SCAs HOLD THROUGH A DOWNTURN, TROUGH DEFENDED BY WAFER-INPUT CUTS (NOT CAPEX CUTS), MICRON'S TAIWAN CONCENTRATION "VERY, VERY RISKY".**
+_Source: Michael Sadler (ex-Micron CSO, independent consultant) hosted by Simon Coles (Barclays) @ Barclays Semi Expert Series, 2026-10-23 — Capstone notes (Notion transcript) ([source](../_equity_calls/Semis/2026-10-23_Barclays_Memory-outlook-strategic-priorities-ex-Micron-CSO-Michael-Sadler-Simon-Coles.md)). ⚠️ EXPERT VOICE — former executive, retired 2018, no current inside view; judgement, not Micron guidance; no rating/PT. Host (Coles) framing kept separate below._
+- 🔭 **SCAs — the bull's floor, doubted:** suppliers position SCAs (deposits + a new pricing/margin lock) *"as a panacea"*; *"I'm very skeptical that through the cycle these SCAs will deliver the kind of economics that are embedded in the agreements today"* — they give *"a better stick to negotiate"*, and suppliers are *"probably relying more on those SCAs than they should be"*. He has *"not seen any agreements"*. Cuts against the 26-SCA / >35%-of-revenue-through-2030 / price-floor framing in `## Current state` (F4Q26 call).
+- 🔭 **Cycle shape / trough:** most current capex lands as capacity *"in 2028 and beyond… Not much new capacity next year"*. The downside lever is **wafer inputs, not capex** — the three DRAM makers cut inputs in the last downturn before price reached cash cost (*"the first time this really happened"*), and he expects a repeat, earlier, helped by cash balances; *"50% gross margins… is a very acceptable level"*, *"margins below zero are a panic point"*. Construction/cleanroom proceed regardless; equipment commitments come late and can be deferred *"should things really get dire"*. CXMT is the *"wild card"*. (The "70% → below 50% GM in 2029" scenario was an investor question relayed by Coles, not Sadler's forecast.)
+- 🔭 **Demand-side caution:** *"capital spending for AI data centers is insatiable, and I don't necessarily believe that that's the case"*; no diligence could guarantee the *"$1.3 trillion figure in 2028"* — ⚠ that figure is Coles' relay of "what consensus has for the sector" (an investor question) (basis unstated; not reconciled to this page's TrendForce $1.3tn **2027 DRAM** mark).
+- **Geography:** *"the vast majority of its DRAM manufacturing assets are in Taiwan"* and Micron is stepping up Taiwan investment — *"very, very risky… not… the wrong strategy, but they need to be… diversifying"*; he credits the US build-out as the right response. On 4F²: Micron *"don't even have 4x squared on their roadmap"* (his recollection — consistent with the 2026-10-21 DeBoer webinar's rejection of 4F² for 3D DRAM).
+
 **🆕🔭 2026-10-19 — UBS · ARCURI ON A SALES-HOSTED CALL: MICRON IS *"PROBABLY THE BEST"* RISK/REWARD *"OF ANY SINGLE STOCK I COVER"* — *"LIKE 4-TO-1"* — WITH THE FLOOR BUILT ON BOOK VALUE (~$400 BVPS IN TWO YEARS, *"HARD TIME BELIEVING… BELOW 2 TIMES BOOK"* ⇒ *"AN $800 FLOOR"*), SAID WHILE CALLING THE STOCK *"A SLOG"* AND *"A BATTLEGROUND"*.**
 _Source: Tim Arcuri (UBS) @ UBS Semis Update call (host Rob Ruple), 2026-10-19 - Capstone notes (Notion transcript) ([source](../_equity_calls/Semis/2026-10-19_UBS_Semis-update-call-SEMICON-West-OCP-TeraFab-Arcuri-Ruple.md)). ⚠️ Conversational risk/reward in answer to the host's "best risk-reward" question — not a rating or PT change; UBS's published MU marks on this page stand. Same analyst as the 10-01 recap and the 10-16 IR call above._
 - **The frame, verbatim:** *"if we were in the risk-reward business and not in the stock picking business, I think technically… risk-reward… on Micron is probably the best of any single stock I cover, meaning… where can the stock go over time versus where downside is? I think it's like 4-to-1 risk-reward… and that's very, very hard to find. The issue on Micron, of course, is that it's just going to be a slog… I think it's an upward bias, but it's still going to be a battleground as we suss out… the durability of the cycle versus the lack of… near-term upside to the numbers."*
@@ -776,6 +783,8 @@ _Source: MU earnings calls (dates above); management commentary, paraphrased._
 
 ## Changelog
 
+- 2026-10-23 — verification (transcription QA): heading quote corrected to the transcript's "pedal should be to the metal" (was "pedal to the metal"); "consensus for the sector" quote corrected to "what consensus has for the sector" and flagged as an investor question relayed by Coles. Other Sadler quotes, the 50% GM "very acceptable" line and the Coles-relayed 70%→<50% 2029 and $1.3tn 2028 framings checked verbatim.
+- 2026-10-23 — ingest (Notion, 2026-10-23_Barclays_Memory-outlook-strategic-priorities-ex-Micron-CSO-Michael-Sadler-Simon-Coles.md): 1 dated Debate block (4 bullets) — Sadler (ex-CSO, expert voice) on accelerating capex, SCA scepticism, wafer-input supply discipline / 50% GM "acceptable", AI capex not insatiable, Taiwan concentration, Micron without 4F² on roadmap. Nothing superseded.
 - 2026-10-22 — ingest (Notion, 2026-10-22_WellsFargo_TXN-LRCX-EPS-recap-call-Quatrochi-Rocha.md; orchestrator (D) pass): 1 Intra-quarter block (TI, as relayed by Quatrochi: memory shortages causing demand destruction for TI parts — a customer-side read of DRAM tightness). Nothing superseded.
 - 2026-10-22 — print ingest (FY26 10-K, 2026-10-09): 1 compact `## Current state` block (10-K-only items: SCA terms, deposits/LC/RPO, customer concentration, segments, purchase obligations, CHIPS incentives, buyback authorisation mechanics, debt prepayment, new LTA risk factors) + Sources link. **Verified:** RPO ~$134bn / ~¼ in 12 months (UBS read $135bn) and the $33bn → $35.16bn authorisation (effective 2026-12-09) — the "10-K not on disk — verify" caveats in the 10-16 UBS IR bullets are now closed (left in place as dated history). **Superseded / flagged 🔭:** SCA backing "$18bn cash + $4bn LC" (Sadana / Bernstein, Jun–Jul) → filing shows **$12.75bn cash deposits received in FY26 + $7bn LC** at 2026-09-03; customer concentration "one customer 17%" (FY25) → no 10% customer in FY26. No rating/PT/estimate change.
 

@@ -1,0 +1,916 @@
+{
+  "asof": "2026-10-23",
+  "scope": "Morning analyst triage. Selected broker email bodies, company IR release/calendar and two archived PDF pages; not exhaustive earnings/filing coverage.",
+  "engine": {
+    "asof": "2026-10-23",
+    "stats": {
+      "signals": 35,
+      "active": 35,
+      "high": 4,
+      "belief_changes": 0,
+      "focus_names": 28
+    },
+    "book": {
+      "asof": "2026-07-01",
+      "seed": true,
+      "positions": 8
+    },
+    "signals": [
+      {
+        "id": "esti-5a79fad25b6e",
+        "type": "model_check",
+        "priority": "high",
+        "title": "GOOG — 2026 revenue house view is 17% above consensus",
+        "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-10-21",
+        "source_date": "2026-10-21",
+        "evidence_paths": [
+          "_data/house.json",
+          "_data/estimates.json"
+        ]
+      },
+      {
+        "id": "esti-de85d0b82ebe",
+        "type": "model_check",
+        "priority": "high",
+        "title": "GOOG — 2027 revenue house view is 17% above consensus",
+        "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-10-21",
+        "source_date": "2026-10-21",
+        "evidence_paths": [
+          "_data/house.json",
+          "_data/estimates.json"
+        ]
+      },
+      {
+        "id": "esti-e9eca9ba40fc",
+        "type": "model_check",
+        "priority": "high",
+        "title": "AAPL — 2026 EPS house view is 16% above consensus",
+        "source": "Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-10-21",
+        "source_date": "2026-10-21",
+        "evidence_paths": [
+          "_data/house.json",
+          "_data/estimates.json"
+        ]
+      },
+      {
+        "id": "cata-68c774eb3829",
+        "type": "catalyst",
+        "priority": "high",
+        "title": "AAPL — 2026-10-23: SMART-HOME LAUNCH (J490 hub, HomePod mini, Apple TV; Bloomberg via GS / JPM / BofA /…",
+        "source": "AAPL page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-10-23",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "AAPL.md"
+        ]
+      },
+      {
+        "id": "cata-9f2e588078f2",
+        "type": "catalyst",
+        "priority": "medium",
+        "title": "ORCL — 2026-10-28: ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as \"Investor Day in…",
+        "source": "ORCL page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-10-28",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "ORCL.md"
+        ]
+      },
+      {
+        "id": "data-39fff867a72e",
+        "type": "data_gap",
+        "priority": "medium",
+        "title": "NOK — Bloomberg consensus missing",
+        "source": "Wiki remediation worklist 2026-10-22",
+        "source_date": "2026-10-22",
+        "evidence_paths": [
+          "_meta/worklist.json"
+        ]
+      },
+      {
+        "id": "data-5e8a484d384a",
+        "type": "data_gap",
+        "priority": "medium",
+        "title": "NSCALE — Bloomberg consensus missing",
+        "source": "Wiki remediation worklist 2026-10-22",
+        "source_date": "2026-10-22",
+        "evidence_paths": [
+          "_meta/worklist.json"
+        ]
+      },
+      {
+        "id": "cata-4dea9544cec3",
+        "type": "catalyst",
+        "priority": "medium",
+        "title": "NVDA — 2026-11-17: CLOSED 2026-09-10 — THE GS COMMUNACOPIA FIRESIDE HAPPENED. OUTCOME: Jensen reaffirmed the…",
+        "source": "NVDA page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-17",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "NVDA.md"
+        ]
+      },
+      {
+        "id": "esti-d865f3088118",
+        "type": "model_check",
+        "priority": "medium",
+        "title": "CRWV — 2026 EPS house view is 16% below consensus",
+        "source": "Capstone official model — P:\\Felipe Monteiro\\US Equities\\Modelos oficiais\\Template DCF CRWV.xlsx (2026-10-14, Felipe Monteiro), first CRWV model in the official Template DCF <TICKER family (same sheets and conventions as AMD/AVGO/ADVANTEST/TER, plus History and Debt sheets; labels in English). Build and verification pipeline in · Bloomberg consensus 2026-10-21",
+        "source_date": "2026-10-21",
+        "evidence_paths": [
+          "_data/house.json",
+          "_data/estimates.json"
+        ]
+      },
+      {
+        "id": "cata-c76406c38a7d",
+        "type": "catalyst",
+        "priority": "medium",
+        "title": "SPCX — 2026-11-12: OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.…",
+        "source": "SPCX page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-12",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "SPCX.md"
+        ]
+      },
+      {
+        "id": "cata-d6253f9923ca",
+        "type": "catalyst",
+        "priority": "medium",
+        "title": "MEDIATEK — 2026-10-26: 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR \"POTENTIAL…",
+        "source": "MEDIATEK page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-10-26",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "MEDIATEK.md"
+        ]
+      },
+      {
+        "id": "cata-c9f20420ff39",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "MSFT — 2026-11-17: 2026-11-17 to 11-20, SF — MSFT IGNITE.",
+        "source": "MSFT page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-17",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "MSFT.md"
+        ]
+      },
+      {
+        "id": "cata-abf09cd99a69",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "NVDA — 2026-11-23: NVDA investor call (IR) (Rothschild & Co Redburn TMT sales · Rowan Adley, 2026-09-28).…",
+        "source": "NVDA page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-23",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "NVDA.md"
+        ]
+      },
+      {
+        "id": "data-0b70b3a60aa9",
+        "type": "data_gap",
+        "priority": "watch",
+        "title": "NOK — latest earnings transcript absent",
+        "source": "Wiki remediation worklist 2026-10-22",
+        "source_date": "2026-10-22",
+        "evidence_paths": [
+          "_meta/worklist.json"
+        ]
+      },
+      {
+        "id": "data-60236880efa6",
+        "type": "data_gap",
+        "priority": "watch",
+        "title": "NSCALE — latest earnings transcript absent",
+        "source": "Wiki remediation worklist 2026-10-22",
+        "source_date": "2026-10-22",
+        "evidence_paths": [
+          "_meta/worklist.json"
+        ]
+      },
+      {
+        "id": "data-0ba56e09dfd5",
+        "type": "data_gap",
+        "priority": "watch",
+        "title": "POET — latest earnings transcript absent",
+        "source": "Wiki remediation worklist 2026-10-22",
+        "source_date": "2026-10-22",
+        "evidence_paths": [
+          "_meta/worklist.json"
+        ]
+      },
+      {
+        "id": "data-cc500ca9d3ce",
+        "type": "data_gap",
+        "priority": "watch",
+        "title": "SMTC — latest earnings transcript absent",
+        "source": "Wiki remediation worklist 2026-10-22",
+        "source_date": "2026-10-22",
+        "evidence_paths": [
+          "_meta/worklist.json"
+        ]
+      },
+      {
+        "id": "cata-30cf21294c0d",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "FLEX — 2026-11-10: INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail…",
+        "source": "FLEX page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-10",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "FLEX.md"
+        ]
+      },
+      {
+        "id": "cata-67b3a6bd8c80",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "AIXA — 2026-10-29: Q3 FY2026 results, per the Vital Knowledge forward calendar (listed with Adidas, STM,…",
+        "source": "AIXA page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-10-29",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "AIXA.md"
+        ]
+      },
+      {
+        "id": "cata-9c6f028117f0",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "FLEX — 2026-10-27: Celestica (CLS) analyst day: the EMS peer's rack/switching numbers (Bernstein top pick;…",
+        "source": "FLEX page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-10-27",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "FLEX.md"
+        ]
+      },
+      {
+        "id": "cata-5c0d70eeaf70",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "NXPI — 2026-10-27: Q3 FY26 print, per the Vital Knowledge forward calendar (listed with ACGL, BKR, LOGI,…",
+        "source": "NXPI page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-10-27",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "NXPI.md"
+        ]
+      },
+      {
+        "id": "cata-c030b28ed093",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "COHR — 2026-11-12: 2026-11-12 → 11-20 — COHR Asia NDR with Jefferies (Blayne Curtis) (Jefferies trading desk…",
+        "source": "COHR page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-12",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "COHR.md"
+        ]
+      },
+      {
+        "id": "cata-ce699c62b4f0",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "IFX — 2026-11-10: FYQ4 print + FY27 guide (Jefferies · Janardan Menon, 2026-09-30, via sales relays).…",
+        "source": "IFX page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-10",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "IFX.md"
+        ]
+      },
+      {
+        "id": "cata-c333d9a79742",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "INTC — 2026-11-03: Susquehanna \"The AI Arms Race\" session (Christopher Rolland; AMD, INTC, MRVL, NVDA, AVGO,…",
+        "source": "INTC page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-03",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "INTC.md"
+        ]
+      },
+      {
+        "id": "cata-e20427bb0cce",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "KIOXIA — 2026-11-02: 2026-11-02 (Mon) 9am JST — BofA post-results \"doko shuzai\" with KIOXIA on FY3/27 2Q…",
+        "source": "KIOXIA page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-02",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "KIOXIA.md"
+        ]
+      },
+      {
+        "id": "cata-b395c83ce767",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "LITE — 2026-11-05: F1Q27 earnings (date per Deutsche Bank · Conti, 2026-10-07; confirm against the LITE IR…",
+        "source": "LITE page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-05",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "LITE.md"
+        ]
+      },
+      {
+        "id": "cata-172f6636a635",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "QCOM — 2026-11-09: APPLE LICENSING EXTENSION — announced 2026-09-24 ahead of the April 2027 expiry, terms not…",
+        "source": "QCOM page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-09",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "QCOM.md"
+        ]
+      },
+      {
+        "id": "cata-3307849d38b1",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "SMCI — 2026-11-03: RESOLVED (preliminary) 2026-10-20 — F1Q27 vs guide: revenue $18.5–19.5bn vs $14.5–15.5bn,…",
+        "source": "SMCI page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-03",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "SMCI.md"
+        ]
+      },
+      {
+        "id": "cata-396a1e21b245",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "STX — 2026-11-02: Morgan Stanley Global Hardware & Optical lunch (Andy Meng, Howard Kao, Derrick Yang, Meta…",
+        "source": "STX page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-02",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "STX.md"
+        ]
+      },
+      {
+        "id": "cata-01a4718ff5c9",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "CRWD — 2026-12-02: PRE-REGISTERED TEST T2 — F3Q27 print ~2026-12-02: net new ARR ≥ ~$378m (guide-implied…",
+        "source": "CRWD page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-12-02",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "CRWD.md"
+        ]
+      },
+      {
+        "id": "cata-eb7d5753b962",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "NSCALE — 2026-11-16: NVIDIA Sale ($1.0bn convertible notes / non-voting shares) expected to close on or around…",
+        "source": "NSCALE page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-16",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "NSCALE.md"
+        ]
+      },
+      {
+        "id": "cata-44020bbb6eda",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "OKTA — 2026-12-02: PRE-REGISTERED TEST T3 — Q3 FY27 print ~2026-12-02: cRPO growth ≥ 13% (guide +11–12%; Q2…",
+        "source": "OKTA page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-12-02",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "OKTA.md"
+        ]
+      },
+      {
+        "id": "cata-2c7b4a6f3c93",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "PANW — 2026-11-18: PRE-REGISTERED TEST T1 — F1Q27 print ~2026-11-18: ORGANIC NGS ARR growth on the…",
+        "source": "PANW page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-18",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "PANW.md"
+        ]
+      },
+      {
+        "id": "cata-09405b3ca0ba",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "SAMSUNG — 2026-11-21: 2026-08-24 → 2026-11-21 — the 53.3mn-share PSU treasury purchase window is open. A…",
+        "source": "SAMSUNG page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-21",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "SAMSUNG.md"
+        ]
+      },
+      {
+        "id": "cata-45aebd381da9",
+        "type": "catalyst",
+        "priority": "watch",
+        "title": "SKHYNIX — 2026-11-19: 2026-08-20 → 2026-11-19 — the buyback executes on-market (SK Securities). Daily execution…",
+        "source": "SKHYNIX page catalyst ledger; underlying source/date retained in the catalyst text",
+        "source_date": "2026-11-19",
+        "evidence_paths": [
+          "_meta/catalysts.md",
+          "SKHYNIX.md"
+        ]
+      }
+    ],
+    "prior_stats": {
+      "signals": 69,
+      "active": 69,
+      "high": 11,
+      "belief_changes": 12,
+      "focus_names": 50
+    },
+    "added": [],
+    "removed": [
+      {
+        "id": "beli-2f74757be9d9",
+        "title": "AMZN — derived thesis/debate state changed since the prior daily snapshot"
+      },
+      {
+        "id": "beli-a4f237dac128",
+        "title": "AVGO — derived thesis/debate state changed since the prior daily snapshot"
+      },
+      {
+        "id": "beli-0c1b547d4d55",
+        "title": "GOOG — derived thesis/debate state changed since the prior daily snapshot"
+      },
+      {
+        "id": "beli-13957813c524",
+        "title": "META — derived thesis/debate state changed since the prior daily snapshot"
+      },
+      {
+        "id": "post-8cd5d82dc530",
+        "title": "NVDA — catalyst passed without a logged outcome"
+      },
+      {
+        "id": "cata-21c71848b487",
+        "title": "META — 2026-10-22: sell-side timing read (Ken [Gawrelski - surname unconfirmed] (Wells Fargo) @ Wells Fargo…"
+      },
+      {
+        "id": "cata-c10fe311f57a",
+        "title": "TSM — 2026-10-22: Arizona ramp (Fab 2 N3 in 2H27, possibly pulled into late-FY26); A14 volume 2028. 🆕…"
+      },
+      {
+        "id": "beli-569f561fdedf",
+        "title": "ANTHROPIC — derived thesis/debate state changed since the prior daily snapshot"
+      },
+      {
+        "id": "beli-4e6527a782d7",
+        "title": "CRDO — derived thesis/debate state changed since the prior daily snapshot"
+      },
+      {
+        "id": "beli-05aa2d7cf794",
+        "title": "KLAC — derived thesis/debate state changed since the prior daily snapshot"
+      },
+      {
+        "id": "beli-e7607e3b9cba",
+        "title": "LRCX — derived thesis/debate state changed since the prior daily snapshot"
+      },
+      {
+        "id": "beli-81040cc5ae50",
+        "title": "MRVL — derived thesis/debate state changed since the prior daily snapshot"
+      },
+      {
+        "id": "beli-fb613a5c0dbe",
+        "title": "ON — derived thesis/debate state changed since the prior daily snapshot"
+      },
+      {
+        "id": "beli-341e56ff72ba",
+        "title": "OPENAI — derived thesis/debate state changed since the prior daily snapshot"
+      },
+      {
+        "id": "beli-acc4b36f7870",
+        "title": "TXN — derived thesis/debate state changed since the prior daily snapshot"
+      },
+      {
+        "id": "post-96c1505f1cb9",
+        "title": "LRCX — catalyst passed without a logged outcome"
+      },
+      {
+        "id": "post-2705167e95b6",
+        "title": "LRCX — catalyst passed without a logged outcome"
+      },
+      {
+        "id": "cata-793be6ee407e",
+        "title": "AMAT — 2026-10-22: Supply-chain read-through from Lam's 10-21 guide (Joe Quatrochi (Wells Fargo) @ Wells…"
+      },
+      {
+        "id": "cata-5901819357ec",
+        "title": "ASML — 2026-10-22: Capital Markets Day — ✓ 2026-10-22: dated June 10, 2027 in the Q3'26 presentation (ASML…"
+      },
+      {
+        "id": "cata-aeb37d748ef2",
+        "title": "LRCX — 2026-10-22: 10-Q for the September 2026 quarter: not yet filed as of 2026-10-22. Check RPO, customer…"
+      },
+      {
+        "id": "cata-8aefec49497b",
+        "title": "NFLX — 2026-10-22: RESOLVED — Q3 2026 earnings, Tue 2026-10-20 AMC (date from Vital Knowledge calendar,…"
+      },
+      {
+        "id": "cata-aa837f53cdfd",
+        "title": "NOK — 2026-10-22: RESOLVED 2026-10-22 — Q3 results: revenue +7.0% q/q (top of +3–7%), comparable EBIT €605m…"
+      },
+      {
+        "id": "cata-8593d14cea0b",
+        "title": "SPOT — 2026-10-22: RESOLVED 2026-10-22 — Q3 2026 print: Q3 in line (MAU 788M = guide, subs 306M vs 305M, GM…"
+      },
+      {
+        "id": "reco-32216e1d8ae9",
+        "title": "ANET — Bernstein 2027 revenue is +9-14% above consensus, but the note prints three different figures"
+      },
+      {
+        "id": "reco-ea86c1657228",
+        "title": "CIEN — Outperform with a PT 15% below consensus, on a PT basis that mislabels the year"
+      },
+      {
+        "id": "reco-08afbb898b71",
+        "title": "COHR — house Neutral $285 is the Street's second-lowest PT; Bernstein OP $350 sits below the consensus median"
+      },
+      {
+        "id": "reco-5b10ab6f72fe",
+        "title": "CSCO / GLW — Bernstein's two Market-Performs are at or near the Street LOW on PT, with estimates in line"
+      },
+      {
+        "id": "reco-6d19352f5bc7",
+        "title": "Celestica (no wiki page) — Bernstein 2027 EPS is +20% above consensus; PT near the Street high"
+      },
+      {
+        "id": "reco-461b7e89c24a",
+        "title": "LITE / COHR (optics TAM) — Bernstein's transceiver market is 2.3x Goldman's for 2028; no \"2028 pause\""
+      },
+      {
+        "id": "reco-6e15fb3f3a1c",
+        "title": "META — house CY27 capex is $28bn (−14%) below the Street; Barclays gives Muse's cost per user"
+      },
+      {
+        "id": "reco-13cc6859d7e2",
+        "title": "MU / SKHYNIX (memory price path) — Fubon's DRAM contract price falls 16% from the 2Q27 peak while Micron says supply stays constrained through CY28"
+      },
+      {
+        "id": "reco-f54e84974b26",
+        "title": "MU — FY27 consensus is post-print on the quarter but not on the year; capex consensus sits below the implied floor"
+      },
+      {
+        "id": "reco-aefa03f61c43",
+        "title": "NVDA — Fubon's 2027 GPU shipments are 53% above the house's chip count"
+      },
+      {
+        "id": "reco-2dac6aa267b7",
+        "title": "TSM — JPM capex US$86 / 100bn for 2027/28 is +14% / +16% above consensus; house 2026 line stale"
+      }
+    ]
+  },
+  "mail_triage": {
+    "count": 182,
+    "pages": 2,
+    "has_more": false,
+    "fully_read_selected_indices": [
+      39,
+      118,
+      121,
+      125,
+      147,
+      157
+    ],
+    "no_exhaustive_mail_read_claim": true
+  },
+  "mail_sources": [
+    {
+      "index": 39,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWe9D2LAAA=",
+      "subject": "NOKIA",
+      "body": {
+        "contentType": "html",
+        "content": "**NOKIA******\n\n** **\n\n**Would you like a quick chat with Janardan on our new thoughts into Q4\nnumbers + FY27 guidance trajectory?******\n\n\n\n**_Fri Oct 23_**\n\n|  \n---|---  \n  \n11:30 (UK)\n\n14:00 (UK)\n\n15:00 (UK)\n\n16:30 (UK)\n\n\n\n…..or would you prefer next week ?\n\n\n\nWilliam\n\n\n\n| |    \n---  \n  \n\n\n|  \n---  \n| [![](cid:image001.png@01DD62DC.B3202B60)](https://jefferies.email.streetcontxt.net/platform/al?a=14263615&ad=5046203638&h=daP_SNT&sig=T9vrQGgGuaAeYbtvCUKMjlvvfAj&v=2&url=https://www.jefferies.com)  | **Equity Research  \n****October 23, 2026******  \n---|---  \n  \n  \n  \n---  \n| **EUROPE | Comm. Equipment**  \n---  \n|  Nokia | BUY  \n---  \nNOKIA FH | €7.43 | PT: €13.80 | % to PT: +86%  \n| | [![](cid:image002.png@01DD62DC.B3202B60)](https://jefferies.email.streetcontxt.net/platform/al?a=14263615&ad=5046203638&h=-aRIGvJ&sig=XFPiUiMl2WME1a7piOB6v0eEXdG&v=2&url=https://urldefense.com/v3/__https:/javatar.bluematrix.com/links2/html/0fc511bf-aa57-491c-b801-dbd248a9112b__;!!PePb2utDNNs!oVIX4ZIWAFPZT9TPnrjg7IVxKZ48zZ8BzVLB2UhH7laPsvpQ0WemTjjamLGgmX0kdEuHH-caxDNb4t7-9smIKA$)|   \n---|---  \n|  \n---  \n| [An Accelerating Business at an Attractive\nMultiple](https://jefferies.email.streetcontxt.net/platform/al?a=14263615&ad=5046203638&h=-aRIGvJ&sig=XFPiUiMl2WME1a7piOB6v0eEXdG&v=2&url=https://urldefense.com/v3/__https:/javatar.bluematrix.com/links2/html/0fc511bf-\naa57-491c-b801-dbd248a9112b__;!!PePb2utDNNs!oVIX4ZIWAFPZT9TPnrjg7IVxKZ48zZ8BzVLB2UhH7laPsvpQ0WemTjjamLGgmX0kdEuHH-\ncaxDNb4t7-9smIKA$)  \n---  \n| | Nokia guidance of 25-30% growth for its 2027 Optical+IP revenues reflects the on-going ramp of the new San Jose fab, an elevated backlog and continuing order strength. We expect upside to this guidance in coming quarters, as InP capacity steadily increases and Optical order momentum continues. We also expect the strong revenue growth and operating leverage to drive over 30% EPS growth. The stock looks attractively priced at 14x our forecast FY27 EPS. Buy.  \n---  \n| | **FY (Dec)**| **CHANGE TO JEFe**| **JEF vs CONS**  \n---|---|---  \n| **2026**| **2027**| **2026**| **2027**  \nREV| NM | NM | +1% | +2%   \nEPS| NA | +6% | +1% | +20%   \n  \n\n\n|  \n---  \n2026 (€) | **Q1**| **Q2**| **Q3**| **Q4**| **FY**  \nEPS| -| -| -| -| 0.38  \nPREV| | | | |   \n| | **Optical and IP growth outlook likely to see upside:** Nokia has twice increased its guidance this year for Optical+IP growth, and we expect its initial 25-30% guidance for growth in 2027 to be similarly conservative. The upside in 2026 came mainly in IP Networks, following a switch design win at Google. The upside in 2027 is expected to come mainly from Optical Networks, on the back of the large starting backlog, strong order momentum and rising InP capacity at the San Jose fab. We forecast IP+Optical revenues to grow 31% next year, with Optical revenues growing 34%.**Operating leverage to drive up margins** : We model Network Infrastructure (NI) operating costs to grow 8% in 2027, slightly lower than the estimated 10% growth in 2026. With revenues growing much faster (JEFe 21.8%), we forecast the NI operating margin to rise from an estimated 11.5% in 2026 to 16.4% in 2027. The resulting 70% growth in NI operating income is modelled to drive a 42% increase in overall operating income. We expect strong NI revenue growth in 2028 to again drive earnings growth in that year. We raise our 2027 and 2028 EPS forecasts by 6% and 8% to €0.53 and €0.66 respectively. Our forecasts represent EPS growth of 31% CAGR over the next two years.**Fundamentals are likely to be more resilient, even if AI investment slows:** There are rising concerns on the strength of future AI data centre investments, due to constraints like financing and availability of power supply. However, Nokia's Scale Across growth in Optical is partly based on connecting existing data centres, rather than just new constructions. In a scenario of lower investments in new data centre builds, the need to increase compute capacity by Scaling Across existing data centres is likely to increase. Nokia is also gaining share in a number of product segments, which reduces its risk from an AI investment slowdown.**Valuations are attractive:** On our forecasts Nokia is trading at 14x and 11.3x FY27 and FY28 EPS. This is in-line with Ericsson's PERs of 14.3x and 13.1x for 2027 and 2028, respectively. It is also broadly in-line with Nokia's trading range prior to its AI-related revenue acceleration from Q4-25. Our FY27 and FY28 EPS forecasts are over 20% above consensus and we expect market estimates to move up. We see limited scope for further de-rating, and believe the stock is attractively priced. We expect the market to once again re-rate the stock above its historical valuation range, given its accelerating revenue and earnings growth rates.  \n---  \n[![](cid:image002.png@01DD62DC.B3202B60)](https://jefferies.email.streetcontxt.net/platform/al?a=14263615&ad=5046203638&h=-aRIGvJ&sig=XFPiUiMl2WME1a7piOB6v0eEXdG&v=2&url=https://urldefense.com/v3/__https:/javatar.bluematrix.com/links2/html/0fc511bf-\naa57-491c-b801-dbd248a9112b__;!!PePb2utDNNs!oVIX4ZIWAFPZT9TPnrjg7IVxKZ48zZ8BzVLB2UhH7laPsvpQ0WemTjjamLGgmX0kdEuHH-\ncaxDNb4t7-9smIKA$)  \n| | ![](cid:image003.jpg@01DD62DC.B3202B60)| Janardan Menon *  | Equity Analyst[44 (0) 20 7029 8413](tel:44%20\\(0\\)%2020%207029%208413)  \n[jmenon@jefferies.com](mailto:jmenon@jefferies.com)  \n---|---  \n| ![](cid:image004.jpg@01DD62DC.B3202B60)| Om Bakhda *  | Equity Analyst[+44 (0)20 7029 8671](tel:+44%20\\(0\\)20%207029%208671)  \n[obakhda@jefferies.com](mailto:obakhda@jefferies.com)  \n---|---  \n| ![](cid:image005.jpg@01DD62DC.B3202B60)| Isaac Dale *  | Equity Associate[+44 (0)20 7548 4034](tel:+44%20\\(0\\)20%207548%204034)  \n[idale@jefferies.com](mailto:idale@jefferies.com)  \n---|---  \n|  * Jefferies International Limited  \n---  \n[Unsubscribe](mailto:Research_Support@Jefferies.com?subject=Please%20unsubscribe%20me%20from%3A%20Janardan%20Menon%20%7C%20NOKIA%20FH&body=Greetings%2C%0ACould%20you%20please%20confirm%20whether%20you%20wish%20to%20unsubscribe%20from%20ALL%20of%20your%20current%20subscriptions%2C%20or%20please%20confirm%20which%20topics%20you%20would%20like%20to%20unsubscribe%20from%20the%20below%20list%3A%0AAnalyst%3A%20Janardan%20Menon%0ASector%3A%20Comm.%20Equipment%0ACompany%3A%20NOKIA%20FH%0A%0ATo%20better%20assist%20with%20your%20request%2C%20please%20attach%20a%20copy%20of%20the%20email%20you%20received.%0A%0ARegards%2C%0AJefferies%20Equity%20Research%20Team)  \n  \n\n\n[www.jefferies.com](https://jefferies.email.streetcontxt.net/platform/al?a=14263615&ad=5046203638&h=daP_SNT&sig=T9vrQGgGuaAeYbtvCUKMjlvvfAj&v=2&url=https://www.jefferies.com)  \n---  \n  \n\n\n\n\n**William Beavington**\n\n**Global TMT****+ ****Washington Policy****+ ****Sustainability**\n\n**Clean Tech****+****Building & Construction**\n\nSpecialist Sales\n\nJefferies International Limited\n\n**> > Link to upcoming:** [Conferences &\nEvents](https://jefferies.email.streetcontxt.net/platform/al?a=14263615&ad=5046203638&h=Cgj_jvf&sig=1KSfhHaErB7OnWzVZPaCggmkhv8&v=2&url=https://www.jefferies.com/about/conferences-\nevents/)\n\n\n\nJefferies archives and monitors outgoing and incoming e-mail together with\nvoice communications, where required. For information about how we handle\npersonal data see our privacy notice. The contents of this email, including\nany attachments, are confidential to the ordinary user of the email address to\nwhich it was addressed. If you are not the addressee of this email you may not\ncopy, forward, disclose or otherwise use it or any part of it in any form\nwhatsoever. This email may be produced at the request of regulators or in\nconnection with civil litigation. Jefferies accepts no liability for any\nerrors or omissions arising as a result of transmission. Use by other than\nintended recipients is prohibited. In the United Kingdom, Jefferies operates\nas Jefferies International Limited; registered in England: no. 1978621;\nregistered office: 100 Bishopsgate, London EC2N 4JL. Jefferies International\nLimited is authorized and regulated by the Financial Conduct Authority  \n  \n[Unsubscribe from this\nauthor](https://jefferies.streetcontext.com/unsubscribe/request/mwpmskFN7oze8dDVsR0b0BbY)\n![](https://jefferies.email.streetcontxt.net/platform/i/W1VVjTbkNX8BVCO29DHIYlxpwKpqIW95dKnMi1mJ4wFPm6yInpDQF1YoGg3RqWBBhcP1T1eRYEh7IZ3dfnbXEIwldIN7LHOhtYMqfNzmWhrhaPFxbATGq4dCyNth7LFN)\n![](https://jefferies.email.streetcontxt.net/r/i/W1VVjTbkNX8BVCO29DHIYlxpwKpqIW95dKnMi1mJ4wFPm6yInpDQF1YoGg3RqWBBhcP1T1eRYEh7IZ3dfnbXEIwldIN7LHOhtYMqfNzmWhrhaPFxbATGq4dCyNth7LFN)\n[](https://jefferies.email.streetcontxt.net/platform/hl?a=14263615&ad=5046203638&sig=LiVa3auCkB9IH0jsFDw0NRcmLRy)\n\n"
+      },
+      "bodyPreview": "NOKIA\r\n\r\nWould you like a quick chat with Janardan on our new thoughts into Q4 numbers + FY27 guidance trajectory?\r\n\r\nFri Oct 23\r\n11:30 (UK)\r\n14:00 (UK)\r\n15:00 (UK)\r\n16:30 (UK)\r\n\r\n…..or would you prefer next week ?\r\n\r\nWilliam\r\n\r\n\r\n\r\n\r\nEquity Research\r\nOct",
+      "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWe9D2LAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "sender": {
+        "emailAddress": {
+          "address": "wbeavington@jefferies.com",
+          "name": "William Beavington"
+        }
+      },
+      "toRecipients": [
+        {
+          "emailAddress": {
+            "address": "felipe.monteiro@capstone.com.br",
+            "name": "Felipe Monteiro"
+          }
+        }
+      ],
+      "ccRecipients": [],
+      "bccRecipients": [],
+      "receivedDateTime": "2026-10-23T09:57:46Z",
+      "isRead": false,
+      "categories": [],
+      "has_attachments": false,
+      "display_url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWe9D2LAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "display_title": "NOKIA"
+    },
+    {
+      "index": 118,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAQqMvDhAADBpLwblpT0TZ_t-vz7Ao6sAAWe9GNhAAA=",
+      "subject": "WDC US: Western Digital Corporation: Estimate Change - Demand strong, visibility improving, capex concerns unfounded; Reiterate Buy - BUY - United States",
+      "body": {
+        "contentType": "html",
+        "content": "![BofA Logo](cid:bofasetitle13031832)| ![BofA Logo](cid:bofaselogo13031832)  \n---|---  \n|  \n---  \nWestern Digital Corporation  \n---  \n[Demand strong, visibility improving, capex concerns unfounded; Reiterate\nBuy](https://rsch.baml.com/r?q=yLtrx2A!DiFCYNeD00HeWw__&e=felipe.monteiro%40capstone.com.br&h=XPoEUA)  \n---  \n| | Reiterate Rating: BUY  \n---  \nPO:800.00 USD   |   Price:354.19 USD  \n| Equity   |   23 October 2026  \n---  \n---  \n---  \n---  \nKey takeaways  \n---  \n  \n  * Capex now materializes in supply adds in two years, more heads and media needed to just keep up with demand\n  * Pricing, demand, capacity shipments, gross margins are all improving. FCF growing materially, dividend raised, more buybacks\n  * PO remains at $800 with minor changes to estimates\n\n  \n---  \n| [FULL REPORT](https://rsch.baml.com/r?q=yLtrx2A!DiFCYNeD00HeWw__&e=felipe.monteiro%40capstone.com.br&h=XPoEUA)|     | [![](cid:bofaserpt13031832)](https://rsch.baml.com/r?q=yLtrx2A!DiFCYNeD00HeWw__&e=felipe.monteiro%40capstone.com.br&h=XPoEUA)  \n---|---|---  \n  \n* * *  \n  \n---  \n  \nLate cycle capacity add concerns misplaced\n\nWDC delivered another strong beat/raise. Mgmt. reiterated prior capex\ncommentary (modestly higher than 4.0-6.0% in F27/F28 in order to invest in\nheads and media which manifest in EB growth in two years without adding unit\nsupply). We estimate demand is growing closer to 40% y/y and without investing\nin heads and media, WDC would cap out in capacity at a much lower level.\nDespite higher capex, FCF remains strong, as does focus on shareholder returns\n(raised dividend 17% to $0.175/sh/qtr, and buybacks continue). Majority of\ncapex goes into head wafer investments (more steps in HAMR heads so needs to\nadd capacity to maintain throughput, and future drives will have more number\nof platters/heads). Rest of capex for investing in glass substrate capacity\nand dual actuators. Reiterate Buy on secular growth of the HDD market,\nfavorable supply/demand balance, strong EB growth driven by mix & further GM\nupside.\n\nVisibility now extends into 2031; HAMR ramp on track\n\nFor its top seven customers, WD now has demand visibility into 2031. Total\n$/TB increased 28% y/y, further accelerating from high teens% y/y in F4Q26 and\nHSD% y/y in F3Q26. EB shipments grew +7% q/q (+22% y/y) to 248 EB and we model\nEB growth to accelerate through the rest of the qtrs of F27 as 40TB ePMR ramps\n(to 30% of nearline shipments by end of F2Q and then to 50% by end of F3Q),\nand as first gen HAMR finishes qualification and begins volume shipments in\nC1H27. Then, 2nd gen HAMR qualification starts in C2H27 (5TB per platter, with\n11 platters per drive).\n\nToshiba capacity adds not a threat; Cost downs lower n-t\n\nMgmt. does not see any capacity/unit adds by Toshiba as materially changing\nindustry supply/demand balance and industry share. Toshiba is dependent on 3rd\nparties for heads and media so component capacity can be a constraint. WD's\ncost downs will be less than 10% y/y in the near-term given multiple product\ntransitions.\n\nAdjusting estimates, PO remains at $800\n\nOur F27E revenue/EPS moves to $20.54bn/$23.80 (from $19.62bn/$22.37). Our PO\nremains at $800 on 16x C28E EPS of $48.75 (prior $800 on 16x C28E EPS of\n$49.67).\n\n\n\n  \n\n| ![](cid:aid14359)| Wamsi Mohan  [![Send\nemail](cid:email13031832)](mailto:wamsi.mohan@bofa.com)  \nResearch Analyst  \nBofAS  \n+1 646 855 3854  \n  \n---|---  \n---  \nThis report is intended for Felipe Monteiro  \nClick\n[here](https://rsch.baml.com/r?q=yLtrx2A!DiFCYNeD00HeWw__&e=felipe.monteiro%40capstone.com.br&h=XPoEUA&subscribe=true)\nto subscribe to similar content from BofA Global Research.  \n---  \n| Read the research report for complete information including important\ndisclosures and analyst certification(s).  \n---  \nThe research report and the link to such report are for the use of BofA\nSecurities customers only or Merrill Global Wealth Management customers only\nand all copying, redistribution, retransmission, publication, and any other\ndissemination or use of the contents thereof are prohibited. There may be more\nrecent information available. Please visit one of the electronic venues that\ncarry BofA Global Research reports or contact your BofA Securities\nrepresentative or Wealth Management representative for further information.\n\"BofA Securities\" is the marketing name for the global banking and global\nmarkets businesses of Bank of America Corporation.  \nIn addition, this message may contain information that is privileged,\nconfidential and/or proprietary and subject to important terms and conditions\navailable at our [Electronic Communications Disclaimers\npage](http://www.bankofamerica.com/emaildisclaimer). If you are not the\nintended recipient, please delete this message. You may be contacted by a\ndifferent BofA Securities entity acting for and on behalf of your service\nprovider where permitted by applicable law. This does not change your service\nprovider. Please use the email disclaimer link above for further information.  \nFor more information about how Bank of America protects your privacy,\nincluding specific rights that may apply, please visit our [Institutional\nprivacy page](https://business.bofa.com/en-us/content/global-privacy-\nnotices.html) (which includes global privacy notices) and our [Consumer\nprivacy page](https://www.bankofamerica.com/security-center/consumer-privacy-\nnotice) (which includes US State specific privacy notices such as the\n[California Consumer Privacy Act notice](http://www.bankofamerica.com/ccpa-\nnotice)).  \nPublication: 2449069- 13031832 .pdf  \n| Recipient: Felipe Monteiro  \n---  \n[https://rsch.baml.com/r?q=yLtrx2A!DiFCYNeD00HeWw__&e=felipe.monteiro%40capstone.com.br&h=XPoEUA\n](https://rsch.baml.com/r?q=yLtrx2A!DiFCYNeD00HeWw__&e=felipe.monteiro%40capstone.com.br&h=XPoEUA)  \n![](https://rsch-bems-\ntr.bofa.com/q/UbQVObDl5plEg9ak4U8SFQ~~/AAAAAQA~/RgRsvXPOPlcQa2V5c3BhY2VfZGVmYXVsdEIKAALQ7tpqYy8JHlIfZmVsaXBlLm1vbnRlaXJvQGNhcHN0b25lLmNvbS5iclgEAAAAAEEIALVpgUoAxUgJUQQAAAAAR317InRlbXBsYXRlIjoiZGVmYXVsdF90ZW1wbGF0ZSIsImF1dGhvciBlbWFpbCI6ImFkbWluQGNvbGRzcGFyay5jb20iLCJuYW1lIjoiMTMwMzE4MzItSE5BMCIsImNsaWVudF9pZCI6IjEtMjQ0OTA2OS1MMS1BLUhOQTAifQ~~)\n\n"
+      },
+      "bodyPreview": "Western Digital Corporation\r\nDemand strong, visibility improving, capex concerns unfounded; Reiterate Buy\r\nReiterate Rating: BUY\r\nPO:800.00 USD   |   Price:354.19 USD\r\nEquity   |   23 October 2026\r\nKey takeaways\r\n\r\n  *\r\nCapex now materializes in supply ad",
+      "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAQqMvDhAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWe9GNhAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "sender": {
+        "emailAddress": {
+          "address": "feedback@globalresearch.bofa.com",
+          "name": "BofA-Wamsi Mohan "
+        }
+      },
+      "toRecipients": [
+        {
+          "emailAddress": {
+            "address": "felipe.monteiro@capstone.com.br",
+            "name": "Felipe Monteiro"
+          }
+        }
+      ],
+      "ccRecipients": [],
+      "bccRecipients": [],
+      "receivedDateTime": "2026-10-23T05:21:30Z",
+      "isRead": false,
+      "categories": [],
+      "has_attachments": false,
+      "display_url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAQqMvDhAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWe9GNhAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "display_title": "WDC US: Western Digital Corporation: Estimate Change - Demand strong, visibility improving, capex concerns unfounded; Reiterate Buy - BUY - United States"
+    },
+    {
+      "index": 121,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWe9D1NAAA=",
+      "subject": "UBS: Western Digital Corp \"Another Beat And Raise, But The Narrative Here is...\"",
+      "body": {
+        "contentType": "html",
+        "content": "Another strong beat/raise, but the narrative here is shifting and we think the\nmultiple will continue to compress.  \n| [![UBS](https://www.ubs.com/content/dam/contenthub/ib/global-research/assets/logos/ubs-logo.png) ](https://neo.ubs.com/r/7/?id=h7f009bf7,dc35302,4bf87a59)|  | Global Research   \n23 October 2026  \n---|---|---  \n| Western Digital Corp| ●| (WDC.O) Neutral|  \n---|---|---|---  \n| [Another Beat And Raise, But The Narrative Here is Shifting;\nNeutral](https://neo.ubs.com/r/7/?id=h7f009bf7,dc35302,4bf87a5a&e=ZGlkPUFDNy1FLTIzMDkwNDU3OCZvZmZfaWQ9QUM3LUUtMTU5MTA2MDA4MCZtYT1ZNDY3ODUzNDk0OTc4NUE0NSZjYW1wX2lkPUVNOlVOS1c6MjAyNi0xMDoyMzpD&s=Tb_HzhAG6tIy7SXhcQ9rHcFJFz4hQfYMPGG4KNT3mYE)  \n---  \n| Another strong beat/raise, but the narrative here is shifting and we think\nthe multiple will continue to compress.  \n  \n| | [Read Report   > ](https://neo.ubs.com/r/7/?id=h7f009bf7,dc35302,4bf87a5b&e=ZGlkPUFDNy1FLTIzMDkwNDU3OCZvZmZfaWQ9QUM3LUUtMTU5MTA2MDA4MSZtYT1ZNDY3ODUzNDk0OTc4NUE0NSZjYW1wX2lkPUVNOlVOS1c6MjAyNi0xMDoyMzpD&s=oR1a-srm-LAFut3FADiKUTL4sGzs45dzxwcKtFMzWVw)|   \n---|---  \n| **HDD Unit Price $/TB Y/Y Growth**  \n---  \n[![HDD Unit Price $/TB Y/Y\nGrowth](https://www.ubs.com/mas/rapi/ae654500ebbc721b269178f2bcf566df.png)\n](https://neo.ubs.com/r/7/?id=h7f009bf7,dc35302,4bf87a5c&e=ZGlkPUFDNy1FLTIzMDkwNDU3OCZvZmZfaWQ9QUM3LUUtMTU5MTA2MDA4MiZtYT1ZNDY3ODUzNDk0OTc4NUE0NSZjYW1wX2lkPUVNOlVOS1c6MjAyNi0xMDoyMzpD&s=QywjNnR0AzGRkGhwdGk9hK7t6YpmPVcs4aXQj8_9040)  \nSource: UBS estimates, Company reports; Note: C3Q26 values for STX are\nestimates.  \n| Summary Thoughts WDC once again posted solid results with guidance even a\ntouch better than our high-on-Street estimates as the company effectively\nknows what it will ship each Q when it guides. Demand still significantly\nexceeds supply and we have a lot of confidence in WDC's technology roadmap and\nexecution, but the narrative is starting to shift here in a way that we think\nwill continue to drive the multiple lower. Specifically, capex is moving\nsubstantially higher and while the message on supply was somewhat muddled,\nthis seems likely to accelerate materially as well (closing the gap with STX\nwhich is already growing supply above LT demand growth). This also comes amid\na more aggressive tack from Toshiba - which has a vastly inferior roadmap, but\nwe think is implicitly supported by hyperscale customers being willing to\nsacrifice TCO for more supply (a development that we had been highlighting as\na possibility since May of this year\n[here](https://neo.ubs.com/r/7/?id=h7f009bf7,dc35302,4bf87a5d&e=ZGlkPUFDNy1FLTIzMDkwNDU3OCZvZmZfaWQ9QUM3LUUtMTU5MTA2MDA4MyZtYT1ZNDY3ODUzNDk0OTc4NUE0NSZjYW1wX2lkPUVNOlVOS1c6MjAyNi0xMDoyMzpD&s=EXynr7kunVNfQWtHPaMV-\nPcQkvwA3zj-4sgfrOhd0A0 \"neo.ubs.com\")). In the near/medium-term, there is\nample demand to soak up this supply but the market is more than ever trying to\nrisk-adjust the shape of demand on the other side of this cycle. We would\nargue the risks here are much greater than memory because HDDs are sheer\ncapacity pools and memory is much harder to add supply and actually drives\ninference token costs, which are therefore worthy of customer pre-payments.\nSuch is not the case for HDDs. Ultimately, it is true that the multiple here\nhas already compressed quite a bit, but we see no reason why HDD stocks should\ncommand a premium to memory stocks like MU (in fact, maybe ultimately a\ndiscount) so even though we walk numbers up once again (C2027 to ~$42 and\nC2028 to ~$62), our PT actually comes down from $470 to $435 using the exact\nsame 7x multiple applied to C2028 EPS (for MU we use 7x C2029 but discount\nback 1yr). Analysis/Key Highlights\n\n  * Results: WDC reported Sept Q revenue of $4.38B, ~3% above UBSe and above the top of the guidance range. Bit shipments of 248EB were up ~7% Q/Q (~1% above UBSe), while ASP/TB of $17.67 was up ~9% Q/Q (~2% ahead of UBSe). Gross margin was 210bps above the top of the range and +10bps/+260bps above UBSe/Street, and OpM beat by a higher amount as opex was a little lighter. In all, EPS of $4.64 beat UBSe/Street by 6%/13%.\n  * Guide: Management guided Dec Q revenue of $5.1B ± $100MM (1% above UBSe at the midpoint but well north of Street), GM of 60-61%, and OpM of ~53% resulting in EPS guidance of $5.80 ± $0.20, ~2% below UBSe at the midpoint. Of note, WDC has traditionally reported at the top of the range (Figure 3). The company was not specific as to the components of the guidance, but it did suggest that Y/Y increases in ASP/TB will increase in FQ2 and the guidance implies ASP/TB growing in a roughly similar range Q/Q to the +9% from FQ1. \n  * Pricing/Costdowns: EB shipments were in-line with expectations with pricing up ~28% Y/Y. WDC continues to highlight pricing moving higher on a Y/Y basis (its pricing trajectory has been steeper than STX's) but costdowns slowed to ~5% Y/Y and are expected to remain <10% due to some component cost inflation. WDC currently leads STX in avg capacity per drive but is ramping HAMR with its first 2 customers in C1H:27 and qualifying two additional customers. For C2H:27, it will qualify 2nd generation HAMR (5TB/platter on its 11 disk platform). In terms of mix, 40TB ePMR is ramping ahead of prior transitions and is expected to be ~30% of nearline EBs by FQ2 (Dec) and ~50% by FQ3 (Mar). \n  * Gross Margin: Incremental gross margin for Sept Q was above 80% Y/Y reflecting mix shift to higher capacity drives, execution and a favorable pricing environment. Coupled with 10% Y/Y costdowns over time, this could push margins even higher. We model gross margins exiting CY26E at 63%, exiting CY27E at 74%, and peaking in mid-CY28E at 77% before modeling our projected downcycle. The company expects HAMR to be gross margin accretive over time but initially gross margin neutral.\n  * EB Growth/Capex: EB shipments increased 22% in Sept Y/Y, and WDC spoke more about the emergence of neoclouds as a new group of customers though it did not specify their relative size. As part of a substantial increase in capex (management suggested \"a few\" points above the high-end of the 4-6% LT model (e.g. ~8%) for the next 2yrs), and is suggesting an acceleration in EB supply that sounds like, in response to our question on the earnings call, it could ultimately approach the mid 30%s Y/Y growth that STX is currently putting up. Unit capacity is not growing and STX is spending money for heads, media and factory automation with part of this being due to HAMR carrying longer cycle times. Ergo, unit capacity is not growing, but this will still drive more EB supply. \n  * Customer Contracts: LTA discussions have extended to as far out as CY31, with outer year discussions centered around EB volumes rather than pricing. LTAs are structured such that base volumes are fixed at a certain price and upside volume is priced separately. Management has conviction that LTAs recontracting in the near term could see upside to pricing given the demand backdrop.\n  * Capital Allocation: With FCF of $1.38B, in-line with UBSe and despite elevated capex, WDC ended the quarter in a net cash position of $0.5B. The company dedicated $1.0B to buybacks and increased the quarterly cash divided by 17%, while reiterating guidance of returning all FCF to shareholders through dividends and buybacks. WDC settled more than half of the $1.1B convert debt balance during the quarter. \n\nRead Across Demand remains strong and WDC's pricing theoretically opens more\nheadroom for STX. Overall, the demand commentary was also supportive for the\nbroad storage and memory complex. Valuation: PT $435 (from $470). We trim our\nPT from $470 to $435, based on CY28E non-GAAP EPS of $61.67 (from $53.05)\napplied to a target multiple of ~7x (from ~9x).  \n---  \n| [![Analyst\nPhoto](https://www.ubs.com/content/dam/assets/global/static/analyst-\nimage/t/timothy-arcuri-43512807-c.gif)\n](mailto:timothy.arcuri@ubs.com?subject=UBS Research follow-up:\nAnother%20Beat%20And%20Raise%2C%20But%20The%20Narrative%20Here%20is%20Shifting%3B%20Neutral)|\n[Timothy Arcuri, Analyst](mailto:timothy.arcuri@ubs.com?subject=UBS Research\nfollow-up:\nAnother%20Beat%20And%20Raise%2C%20But%20The%20Narrative%20Here%20is%20Shifting%3B%20Neutral)  \n[timothy.arcuri@ubs.com](mailto:timothy.arcuri@ubs.com?subject=UBS Research\nfollow-up:\nAnother%20Beat%20And%20Raise%2C%20But%20The%20Narrative%20Here%20is%20Shifting%3B%20Neutral)  \n+1-415-352 5676  \n---|---  \n| [![Analyst\nPhoto](https://www.ubs.com/content/dam/assets/global/static/analyst-\nimage/g/gianmarco-vella-43831759-c.gif)\n](mailto:gianmarco.vella@ubs.com?subject=UBS Research follow-up:\nAnother%20Beat%20And%20Raise%2C%20But%20The%20Narrative%20Here%20is%20Shifting%3B%20Neutral)|\n[Gianmarco Vella, Associate\nAnalyst](mailto:gianmarco.vella@ubs.com?subject=UBS Research follow-up:\nAnother%20Beat%20And%20Raise%2C%20But%20The%20Narrative%20Here%20is%20Shifting%3B%20Neutral)  \n[gianmarco.vella@ubs.com](mailto:gianmarco.vella@ubs.com?subject=UBS Research\nfollow-up:\nAnother%20Beat%20And%20Raise%2C%20But%20The%20Narrative%20Here%20is%20Shifting%3B%20Neutral)  \n+1-415-352 4555  \n---|---  \n| [![Analyst\nPhoto](https://www.ubs.com/content/dam/assets/global/static/analyst-\nimage/a/aaryan-wadhwa-43775455-c.gif)\n](mailto:aaryan.wadhwa@ubs.com?subject=UBS Research follow-up:\nAnother%20Beat%20And%20Raise%2C%20But%20The%20Narrative%20Here%20is%20Shifting%3B%20Neutral)|\n[Aaryan Wadhwa, Associate Analyst](mailto:aaryan.wadhwa@ubs.com?subject=UBS\nResearch follow-up:\nAnother%20Beat%20And%20Raise%2C%20But%20The%20Narrative%20Here%20is%20Shifting%3B%20Neutral)  \n[aaryan.wadhwa@ubs.com](mailto:aaryan.wadhwa@ubs.com?subject=UBS Research\nfollow-up:\nAnother%20Beat%20And%20Raise%2C%20But%20The%20Narrative%20Here%20is%20Shifting%3B%20Neutral)  \n+1-212-821 6481  \n---|---  \n| UBS does and seeks to do business with companies covered in its research\nreports. As a result, investors should be aware that the firm may have a\nconflict of interest that could affect the objectivity of such reports.\nInvestors should consider research reports as only a single factor in making\ntheir investment decision. Important information including analyst\ncertification and required disclosures regarding specific companies,\nderivatives or other instruments discussed in the email, is included in the\nrelevant latest research report, attached and/or hyperlinked to this email.\nThis email is to be read in conjunction with such information. Such reports\nare provided to our clients through UBS Neo, the UBS Client Portal and\nUBS.com.You should also refer to the public disclosures website at\n[http://www.ubs.com/disclosures](https://neo.ubs.com/r/7/?id=h7f009bf7,dc35302,4bf87a5e)\nfor required disclosures regarding specific companies.  \n  \nThe message is subject to the Global Research Disclaimer available at\n[http://www.ubs.com/disclosures](https://neo.ubs.com/r/7/?id=h7f009bf7,dc35302,4bf87a5f).  \n---  \n| This email is intended for\n[felipe.monteiro@capstone.com.br](mailto:felipe.monteiro@capstone.com.br)  \nPlease log in with this email address if prompted (or contact your UBS sales\nrepresentative to update it). Not you? Please log in with your email address\nregistered with UBS Research.  \n---  \nTo manage your subscriptions, [click\nhere](https://neo.ubs.com/r/7/?id=h7f009bf7,dc35302,4bf87a60&e=ZGlkPUFDNy1FLTIzMDkwNDU3OCZvZmZfaWQ9QUM3LUUtMTU5MTA2MDA4NiZtYT1ZNDY3ODUzNDk0OTc4NUE0NSZjYW1wX2lkPUVNOlVOS1c6MjAyNi0xMDoyMzpD&s=4JZrW1jREki1pWR3-ab-09QS8KM6tkfLIOQ-L0_wyds)\nor contact your UBS Sales or Research representative.  \n---  \n![](https://neo.ubs.com/r/7/?id=h7f009bf7,dc35302,1)\n\n"
+      },
+      "bodyPreview": "Another strong beat/raise, but the narrative here is shifting and we think the multiple will continue to compress.\r\n                Global Research\r\n23 October 2026\r\nWestern Digital Corp    ●       (WDC.O) Neutral\r\nAnother Beat And Raise, But The Narrativ",
+      "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWe9D1NAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "sender": {
+        "emailAddress": {
+          "address": "timothy.arcuri@ubs.com",
+          "name": "timothy.arcuri@ubs.com"
+        }
+      },
+      "toRecipients": [
+        {
+          "emailAddress": {
+            "address": "felipe.monteiro@capstone.com.br",
+            "name": "Felipe Monteiro"
+          }
+        }
+      ],
+      "ccRecipients": [],
+      "bccRecipients": [],
+      "receivedDateTime": "2026-10-23T04:39:29Z",
+      "isRead": false,
+      "categories": [],
+      "has_attachments": false,
+      "display_url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWe9D1NAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "display_title": "UBS: Western Digital Corp \"Another Beat And Raise, But The Narrative Here is...\""
+    },
+    {
+      "index": 125,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWe9D1JAAA=",
+      "subject": "UBS: CoreWeave Inc \"Credit Risks and Playing AI Defense\" (Buy) Keirstead",
+      "body": {
+        "contentType": "html",
+        "content": "The widening spreads and weak share price are not CRWV-specific, they reflect\nbroader concerns about the AI infra market and overall AI trade.  \n| [![UBS](https://www.ubs.com/content/dam/contenthub/ib/global-research/assets/logos/ubs-logo.png) ](https://neo.ubs.com/r/7/?id=h7f007781,dc31fd8,4bf87a1d)|  | Global Research   \n23 October 2026  \n---|---|---  \n| CoreWeave Inc| ●| (CRWV.O) Buy|  \n---|---|---|---  \n| [Credit Risks and Playing AI\nDefense](https://neo.ubs.com/r/7/?id=h7f007781,dc31fd8,4bf87a1e&e=ZGlkPUFDNy1FLTIzMDg5MTQ4MCZvZmZfaWQ9QUM3LUUtMTU5MTA2MDAyMCZtYT1ZNDY3ODUzNDk0OTc4NUE0NSZjYW1wX2lkPUVNOlVOS1c6MjAyNi0xMDoyMzpD&s=aXzo7VsiDv6smUxYiNQISdbAIGfGh6T1NZ3C-gvfrB0)  \n---  \n| The widening spreads and weak share price are not CRWV-specific, they\nreflect broader concerns about the AI infra market and overall AI trade.  \n  \n| | [Read Report   > ](https://neo.ubs.com/r/7/?id=h7f007781,dc31fd8,4bf87a1f&e=ZGlkPUFDNy1FLTIzMDg5MTQ4MCZvZmZfaWQ9QUM3LUUtMTU5MTA2MDAyMSZtYT1ZNDY3ODUzNDk0OTc4NUE0NSZjYW1wX2lkPUVNOlVOS1c6MjAyNi0xMDoyMzpD&s=mTh3We60eMU6nFUYgTUbVrFSMsI91N2jdeQev0gADuI)|   \n---|---  \n| Summary CoreWeave shares are -37% so far in October as investor confidence\nin the broader “neo-cloud” AI infra stocks (Oracle included) has weakened\nconsiderably. The shares of Microsoft and Amazon are actually UP over this\nperiod, likely evidence of investors now adopting a far more defensive posture\nin terms of AI infra exposure, a pivot that we generally agree with. In this\nnote we re-examine the CoreWeave credit story. Restoring confidence may be a\nmulti-quarter fix but we remain Buy-rated. Our View of CoreWeave The recent\nshare price weakness and widening of CDS/credit spreads have investors in\nsearch of an explanation, a source of incremental fundamental deterioration.\nApart from rising rates (which absolutely do impact future funding costs), we\ndon’t see any fresh 'crack' in the story to warrant the sell-off, in fact the\ndemand, GPU pricing and 'up-the-stack' moves have been encouraging. Pinning\nthe sell-off on CoreWeave-specific factors is akin to arguing that a share\nprice decline must be a function of deteriorating fundamentals (sometimes it\nis, often it isn’t). In our view, this is a reflection of a broader confidence\nerosion in AI spending and stocks, expressed most acutely via the AI players\nthat are most capital-intensive, highly levered, FCF negative and rate-\nsensitive. As such, this could take time to reverse. In this report we lay out\nvarious CoreWeave funding scenarios (debt-heavy to debt-light) and note that\nthe broader UBS team is hosting an investor call on Monday at 11:00am ET to\naddress the AI debt financing market. Time to Play AI Defense We’re obviously\nseeing a material recent pivot (deterioration) in AI stock sentiment, rooted\nin weaker investor confidence in the durability of enterprise AI spend/demand\nand the portion of spend ultimately captured by the LLM providers. In our\njudgement, this sentiment shift is unlikely to reverse near-term and we too\nare now being more defensive in our stock selection. This is one key reason\nwhy we remain comfortable with and Buy-rated on the stocks of Microsoft and\nPalantir – both are relatively model-agnostic (especially Palantir), chip-\nagnostic, FCF positive with no/little need to access external funding sources\nand with relatively diversified businesses (especially Microsoft).Valuation:\nAt just 2.2x revs and 3.8x adjusted EBITDA on 2027 estimates, at the very low\nend of the range for the AI infra sub-sector, with heightened investor credit\nconcerns but no real deterioration in the business, we remain Buy-rated. A\nrestoration of confidence may take time though, and we’re trimming our price\ntarget of $120 to $105, based on 2.8x our unchanged CY28 sales estimates,\nstill at the low end of the de-rated peer group.  \n---  \n| [![Analyst\nPhoto](https://www.ubs.com/content/dam/assets/global/static/analyst-\nimage/k/karl-keirstead-43627641-c.gif)\n](mailto:karl.keirstead@ubs.com?subject=UBS Research follow-up:\nCredit%20Risks%20and%20Playing%20AI%20Defense)| [Karl Keirstead,\nAnalyst](mailto:karl.keirstead@ubs.com?subject=UBS Research follow-up:\nCredit%20Risks%20and%20Playing%20AI%20Defense)  \n[karl.keirstead@ubs.com](mailto:karl.keirstead@ubs.com?subject=UBS Research\nfollow-up: Credit%20Risks%20and%20Playing%20AI%20Defense)  \n+1-310-734 2455  \n---|---  \n| [![Analyst\nPhoto](https://www.ubs.com/content/dam/assets/global/static/analyst-\nimage/c/chris-giuditta-49042134-c.gif)\n](mailto:chris.giuditta@ubs.com?subject=UBS Research follow-up:\nCredit%20Risks%20and%20Playing%20AI%20Defense)| [Chris Giuditta, Associate\nAnalyst](mailto:chris.giuditta@ubs.com?subject=UBS Research follow-up:\nCredit%20Risks%20and%20Playing%20AI%20Defense)  \n[chris.giuditta@ubs.com](mailto:chris.giuditta@ubs.com?subject=UBS Research\nfollow-up: Credit%20Risks%20and%20Playing%20AI%20Defense)  \n+1-212-713 3186  \n---|---  \n| [Benjamin Schiff, Associate\nAnalyst](mailto:benjamin.schiff@ubs.com?subject=UBS Research follow-up:\nCredit%20Risks%20and%20Playing%20AI%20Defense)  \n[benjamin.schiff@ubs.com](mailto:benjamin.schiff@ubs.com?subject=UBS Research\nfollow-up: Credit%20Risks%20and%20Playing%20AI%20Defense)  \n+1-212-713 5106  \n---  \n| UBS does and seeks to do business with companies covered in its research\nreports. As a result, investors should be aware that the firm may have a\nconflict of interest that could affect the objectivity of such reports.\nInvestors should consider research reports as only a single factor in making\ntheir investment decision. Important information including analyst\ncertification and required disclosures regarding specific companies,\nderivatives or other instruments discussed in the email, is included in the\nrelevant latest research report, attached and/or hyperlinked to this email.\nThis email is to be read in conjunction with such information. Such reports\nare provided to our clients through UBS Neo, the UBS Client Portal and\nUBS.com.You should also refer to the public disclosures website at\n[http://www.ubs.com/disclosures](https://neo.ubs.com/r/7/?id=h7f007781,dc31fd8,4bf87a20)\nfor required disclosures regarding specific companies.  \n  \nThe message is subject to the Global Research Disclaimer available at\n[http://www.ubs.com/disclosures](https://neo.ubs.com/r/7/?id=h7f007781,dc31fd8,4bf87a21).  \n---  \n| This email is intended for\n[felipe.monteiro@capstone.com.br](mailto:felipe.monteiro@capstone.com.br)  \nPlease log in with this email address if prompted (or contact your UBS sales\nrepresentative to update it). Not you? Please log in with your email address\nregistered with UBS Research.  \n---  \nTo manage your subscriptions, [click\nhere](https://neo.ubs.com/r/7/?id=h7f007781,dc31fd8,4bf87a22&e=ZGlkPUFDNy1FLTIzMDg5MTQ4MCZvZmZfaWQ9QUM3LUUtMTU5MTA2MDAyNCZtYT1ZNDY3ODUzNDk0OTc4NUE0NSZjYW1wX2lkPUVNOlVOS1c6MjAyNi0xMDoyMzpD&s=_ZcS7ca7vDZ6UzMqZ1emJz41YUZwdsXJeJPKPlnkq30)\nor contact your UBS Sales or Research representative.  \n---  \n![](https://neo.ubs.com/r/7/?id=h7f007781,dc31fd8,1)\n\n"
+      },
+      "bodyPreview": "The widening spreads and weak share price are not CRWV-specific, they reflect broader concerns about the AI infra market and overall AI trade.\r\n                Global Research\r\n23 October 2026\r\nCoreWeave Inc   ●       (CRWV.O) Buy\r\nCredit Risks and Playin",
+      "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWe9D1JAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "sender": {
+        "emailAddress": {
+          "address": "karl.keirstead@ubs.com",
+          "name": "karl.keirstead@ubs.com"
+        }
+      },
+      "toRecipients": [
+        {
+          "emailAddress": {
+            "address": "felipe.monteiro@capstone.com.br",
+            "name": "Felipe Monteiro"
+          }
+        }
+      ],
+      "ccRecipients": [],
+      "bccRecipients": [],
+      "receivedDateTime": "2026-10-23T04:30:53Z",
+      "isRead": false,
+      "categories": [],
+      "has_attachments": false,
+      "display_url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWe9D1JAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "display_title": "UBS: CoreWeave Inc \"Credit Risks and Playing AI Defense\" (Buy) Keirstead"
+    },
+    {
+      "index": 147,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWe9D0zAAA=",
+      "subject": "JPM | Hardware & Networking | WDC: F1Q27 Review: Pricing Momentum and EB Recovery Support Positive Earnings Revisions; Capex Concerns Overblown",
+      "body": {
+        "contentType": "html",
+        "content": "| | ![](cid:ea32cc75-743e-4d25-b57b-67a348fd1768@jpmorgan.com) | North America Equity Research  \n---|---  \n  \n# Western Digital\n\n## F1Q27 Review: Pricing Momentum and EB Recovery Support Positive Earnings\nRevision; Capex Concerns Overblown\n\n  \n---  \n  \nBy [Joseph Cardoso\nAC](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=ClBHs3Z&sig=ZCtajgv9raDUmLZD3NyElnjkmL5&v=2&url=https://markets.jpmorgan.com/research/analyst/N694339),\n[Manmohanpreet\nSingh](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=K0nu8sZ&sig=MQ0elZ9UIUbf7OCoGpfVHOmwDD3&v=2&url=https://markets.jpmorgan.com/research/analyst/O756946),\n[Marc\nVitenzon](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=dr-\nlNzd&sig=9ZE1k86C4bCQ3ZtCUBHhll3ZCWB&v=2&url=https://markets.jpmorgan.com/research/analyst/E964623)\n\n[Click here for the full document and\ndisclaimers](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=F3ttvzr&sig=CoDFZkxLEasYVMMRL3FM81MmjWY&v=2&isig=a3SImp3bp5odyzDygpiBNWM9CvG&url=https://markets.jpmorgan.com/research/email/scx/-a2n4fs0/GPS-5501360-0/212ce7d1-9046-4957-b5ca-6388c9b184ca)\n\n| Overweight  \n---  \nWDC, WDC US  \nPrice (22 Oct 26):$354.19  \n**▲** Price Target (Dec-27):$650.00  \nPrior (Dec-27):$600.00  \n  \nWDC delivered meaningful upside across revenue, margins, and earnings in\nF1Q27, driven by a substantially stronger pricing environment, with ASP/TB\ngrowth accelerating to +28% y/y (vs. +18% in F4Q26 and +3% a year ago), while\nEB growth (+22%) and cost/TB reductions (-4%), tracked more in line.\nImportantly, the F2Q27 outlook points to a continuation of favorable pricing\ntrends, supported by contractual price escalators, LTA renewals, favorable\npricing on uncontracted volumes, and continued adoption of higher-capacity\ndrives, alongside an anticipated acceleration in EB shipments, as F1Q27 was\ncharacterized as a “floor,” while management also reiterated a return to the\n25%+ EB growth trajectory by F3Q27, supported by the transition to 40TB ePMR\ndrives (30%/50% of nearline EB shipments in F2Q/F3Q27), followed by the\nintroduction of HAMR in 1H CY27. Against a strong demand backdrop, with\nexisting hyperscalers and an expanding cohort of neoclouds and others\ncollectively signaling 25%+ EB growth through the next decade, capex is\nexpected to track above the 4%-6% of revenue range over the next two years.\nWhile the higher investment requirements are likely to raise concerns, WDC\nsought to alleviate those anxieties by emphasizing that spending is primarily\ndirected toward head and media manufacturing to offset longer production\ncycles associated with HAMR and support higher platter count per drive, rather\nthan expand underlying unit manufacturing capacity, enabling higher EB output\nwhile limiting incremental fixed assembly cost. While near-term cost/TB\nreductions remain pressured by product transitions and input-cost inflation,\nmanagement underscored confidence in a return to -10% reductions through\nhigher areal density and value-engineering initiatives. To that end, we\nbelieve the print reinforces a constructive supply-demand backdrop for WDC and\nthe broader HDD industry, with continued pricing strength and accelerating EB\nshipments supporting further margin expansion and earnings leverage. We raise\nour FY27/FY28 revenue and EPS estimates to $21.5 bn/$25.65 and $30 bn/$ 41.10,\nrespectively, reflecting strong EB shipment growth and ASP/TB assumptions,\npartially offset by more modest near-term cost reductions, and increase our\nDec-27 price target to $650 (vs. $600 prior) based on the raised outlook.\n\n  * F1Q27 (Sep-end) Results: Revenue and earnings track ahead of consensus and guidance driven by better-than-expected pricing trends. Revenues tracked to $4.38 bn (vs. JPMe of $4.17 bn, consensus of $4.15 bn and guidance in the range of $4.00-$4.20 bn), up +55% y/y, driven by strong demand across data centers (+22% y/y in Nearline EB shipments) as well as favorable pricing, with ASP/TB growth accelerating further to +28% y/y (vs. +18% y/y in F4Q26). The favorable pricing environment drove gross margins to 58.1% (vs. JPMe of 56.5% and consensus of 55.9%), which in combination with strong operating leverage, led to operating margins of 49.1% (vs. JPMe of 47.0% and consensus of 46.5%) and EPS of $4.64 (vs. JPMe of $4.17 and consensus of $4.10). \n  * F2Q27E (Dec-end) Guide: Pricing momentum and EB recovery supports better than consensus revenues, margins and earnings. Revenue is guided in the range of $5.0-$5.2 bn, implying +69% y/y growth at the midpoint (vs. JPMe of $4.5 bn and consensus of $4.6 bn). Gross margins are guided to 60%-61% (vs. JPMe of 58.5% and consensus of 58%), which implies a continuation of robust 75%+ incremental margins on a y/y basis. Operating expenses are guided to the range of $400-$410 mn (vs. JPMe of $395 mn and consensus of $405 mn), driving an implied operating margin guide of 52.6% at the midpoint (vs. JPMe of 49.7% and consensus of 49.0%), and EPS guidance of $5.60-$6.00 (vs. JPMe of $4.80 and consensus of $4.82).\n\n\n\n#\n\n# Investment Thesis, Valuation and Risks\n\n### Western Digital (Overweight; Price Target: $650.00)\n\n### Investment Thesis\n\nWe rate Western Digital shares Overweight driven primarily by the opportunity\nfor significant upside to consensus estimates, with the HDD industry\npositioned to benefit from both strong demand stemming from hyperscaler capex\nplans as well as pricing tailwinds. WDC is a powerhouse in storage, with its\nportfolio comprising next-generation HDD solutions that are addressing the\ngrowing data storage requirements at data center/cloud/AI infrastructure\ncustomers. Near- and medium-term fundamentals continue to improve as the\nindustry is being disciplined in adding new capacity and focusing on\nprofitable growth.\n\n### Valuation\n\nWe are increasing our December 2027 price target to $650 (vs. $600 prior),\nbased on valuing our 2028E EPS estimate at a mid-teens P/E multiple, which is\nlargely in-line with the target multiple for the key peer Seagate- and is\nahead of the historical multiple given robust HDD storage demand across data\ncenters.\n\nWDC P/E-Based Price Target\n\n$ in Millions, except per share amounts\n\n![](cid:8db16d5d-a10d-4e27-950e-588f81979146@jpmorgan.com)\n\nSource: Company reports and J.P. Morgan estimates.\n\n### Risks to Rating and Price Target\n\nDownside risks to our rating and price target include a slowdown in Cloud\ncapex spending on AI infrastructure, which could present risk to demand growth\nforecasts for the HDD industry despite the current robust pipeline of\ninvestment announcements. Additionally, technology disruptions – including\nfaster-than-expected migration to flash-based storage driven by narrowing cost\ndifferentials between HDDs and NAND, as well as greater progress on NAND\ndensity – could present headwinds to our expectations for WDC shares.\n\n[Click here for the full document and\ndisclaimers](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=F3ttvzr&sig=CoDFZkxLEasYVMMRL3FM81MmjWY&v=2&isig=a3SImp3bp5odyzDygpiBNWM9CvG&url=https://markets.jpmorgan.com/research/email/scx/-a2n4fs0/GPS-5501360-0/212ce7d1-9046-4957-b5ca-6388c9b184ca)  \n  \n---  \n  \nIT Hardware/ Telecom & Networking Equipment\n\n[Joseph Cardoso\nAC](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=ClBHs3Z&sig=ZCtajgv9raDUmLZD3NyElnjkmL5&v=2&url=https://markets.jpmorgan.com/research/analyst/N694339)\n\n(1-212) 622-9036\n\n[joseph.cardoso@jpmchase.com](mailto:joseph.cardoso@jpmchase.com)\n\nJ.P. Morgan Securities LLC\n\n  \n\n[Manmohanpreet\nSingh](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=K0nu8sZ&sig=MQ0elZ9UIUbf7OCoGpfVHOmwDD3&v=2&url=https://markets.jpmorgan.com/research/analyst/O756946)\n\n(1-212) 622-4527\n\n[manmohanpreet.singh@jpmchase.com](mailto:manmohanpreet.singh@jpmchase.com)\n\nJ.P. Morgan Securities LLC\n\n  \n\n[Marc\nVitenzon](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=dr-\nlNzd&sig=9ZE1k86C4bCQ3ZtCUBHhll3ZCWB&v=2&url=https://markets.jpmorgan.com/research/analyst/E964623)\n\n(1-212) 622-3342\n\n[marc.vitenzon@jpmchase.com](mailto:marc.vitenzon@jpmchase.com)\n\nJ.P. Morgan Securities LLC\n\n  \n  \n  \n---  \n  \nVisit **_[J.P. Morgan\nMarkets](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=fwujW2O&sig=FXh3exkWOsRj0ACLiHTZtoYsllB&v=2&url=https://markets.jpmorgan.com)_**\nfor more market-leading research and financial solutions across the full trade\nand investment lifecycle.\n\nGo to [**_My\nResearch_**](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=QCww4Tz&sig=GfgdrbhdC9dCWxXMlPjdqkeH9BM&v=2&url=https://markets.jpmorgan.com/%23research.my_research)\nwhere the award-winning J.P. Morgan research that you receive in your inbox is\nintelligently structured into your personalized view.\n\n_You received this e-mail because the content matches one of your saved\npreferences.  \nYou can modify your preferences or subscription\n**_[here](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=Ez9iRyD&sig=S43LXXpcxYto2HE6P7ahoEAzYp8&v=2&url=https://www.jpmm.com/%23research.my_subscriptions)_**._\n\nIf you no longer wish to receive these e-mails then [click here to\nunsubscribe](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=RaqZcFh&sig=OQmnA0ofPXCscvQ6qo8Bdjk6COf&v=2&url=https://markets.jpmorgan.com/research/subscriptions/email/212ce7d1-9046-4957-b5ca-6388c9b184ca)|\n**[www.jpmorganmarkets.com](www.jpmorganmarkets.com)**  \n---|---  \n  \nAnalyst Certification: The Research Analyst(s) denoted by an “AC” on the cover\nof this report certifies (or, where multiple Research Analysts are primarily\nresponsible for this report, the Research Analyst denoted by an “AC” on the\ncover or within the document individually certifies, with respect to each\nsecurity or issuer that the Research Analyst covers in this research) that:\n(1) all of the views expressed in this report accurately reflect the Research\nAnalyst’s personal views about any and all of the subject securities or\nissuers; and (2) no part of any of the Research Analyst's compensation was,\nis, or will be directly or indirectly related to the specific recommendations\nor views expressed by the Research Analyst(s) in this report. For all Korea-\nbased Research Analysts listed on the front cover, if applicable, they also\ncertify, as per KOFIA requirements, that the Research Analyst’s analysis was\nmade in good faith and that the views reflect the Research Analyst’s own\nopinion, without undue influence or intervention.\n\nAll authors named within this report are Research Analysts who produce\nindependent research unless otherwise specified. In Europe, Sector Specialists\n(Sales and Trading) may be shown on this report as contacts but are not\nauthors of the report or part of the Research Department.\n\nImportant Disclosures\n\n  * Market Maker: J.P. Morgan Securities LLC makes a market in the securities of Western Digital or related entities.\n  * Market Maker/ Liquidity Provider: J.P. Morgan is a market maker and/or liquidity provider in the financial instruments of/related to Western Digital or related entities.\n  * Client: J.P. Morgan currently has, or had within the past 12 months, the following entity(ies) as clients: Western Digital or related entities.\n  * Client/Investment Banking: J.P. Morgan currently has, or had within the past 12 months, the following entity(ies) as investment banking clients: Western Digital or related entities.\n  * Client/Non-Investment Banking, Securities-Related: J.P. Morgan currently has, or had within the past 12 months, the following entity(ies) as clients, and the services provided were non-investment-banking, securities-related: Western Digital or related entities.\n  * Client/Non-Securities-Related: J.P. Morgan currently has, or had within the past 12 months, the following entity(ies) as clients, and the services provided were non-securities-related: Western Digital or related entities.\n  * Investment Banking Compensation Received: J.P. Morgan has received in the past 12 months compensation for investment banking services from Western Digital or related entities.\n  * Potential Investment Banking Compensation: J.P. Morgan expects to receive, or intends to seek, compensation for investment banking services in the next three months from Western Digital or related entities.\n  * Non-Investment Banking Compensation Received: J.P. Morgan has received compensation in the past 12 months for products or services other than investment banking from Western Digital or related entities.\n  * Debt Position: J.P. Morgan may hold a position in the debt securities of Western Digital or related entities, if any.\n\nCompany-Specific Disclosures: J.P. Morgan does and seeks to do business with\ncompanies covered in its research reports. As a result, investors should be\naware that the firm may have a conflict of interest that could affect the\nobjectivity of this report. Investors should consider this report as only a\nsingle factor in making their investment decision. Important disclosures,\nincluding price charts and credit opinion history tables (if applicable), are\navailable for compendium reports and all J.P. Morgan–covered companies, and\ncertain non-covered companies, by visiting\n[https://www.jpmm.com/research/disclosures](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=H1B3Un-&sig=FjxK83Xe80GHsy2Nop1uGnneLkn&v=2&url=https://www.jpmm.com/research/disclosures),\ncalling 1-800-477-0406, or e-mailing\n[research.disclosure.inquiries@jpmorgan.com](mailto:research.disclosure.inquiries@jpmorgan.com)\nwith your request.  \n  \n![](cid:2f7eebd5-6b0a-43cf-b970-1ba9ca64c348@jpmorgan.com) |   \nDate | Rating | Price ($) | Price Target ($)  \n---|---|---|---  \n30-Oct-23 | NR | 38.97 | \\--   \n01-May-25 | OW | 43.86 | 57  \n31-Jul-25 | OW | 71.43 | 94  \n31-Oct-25 | OW | 138.13 | 175  \n30-Jan-26 | OW | 278.41 | 320  \n21-Apr-26 | OW | 374.11 | 400  \n01-May-26 | OW | 434.52 | 530  \n11-Jun-26 | OW | 490.09 | 650  \n16-Jul-26 | OW | 513.84 | 715  \n19-Oct-26 | OW | 332.00 | 600  \n  \nThe chart(s) show J.P. Morgan's continuing coverage of the stocks; the current\nanalysts may or may not have covered it over the entire period. J.P. Morgan\nratings or designations: OW = Overweight, N= Neutral, UW = Underweight, NR =\nNot Rated\n\nExplanation of Equity Research Ratings, Designations and Analyst(s) Coverage\nUniverse:  \n​J.P. Morgan uses the following rating system: Overweight (over the duration\nof the price target indicated in this report, we expect this stock will\noutperform the average total return of the stocks in the Research Analyst’s,\nor the Research Analyst’s team’s, coverage universe); Neutral (over the\nduration of the price target indicated in this report, we expect this stock\nwill perform in line with the average total return of the stocks in the\nResearch Analyst’s, or the Research Analyst’s team’s, coverage universe); and\nUnderweight (over the duration of the price target indicated in this report,\nwe expect this stock will underperform the average total return of the stocks\nin the Research Analyst’s, or the Research Analyst’s team’s, coverage\nuniverse. NR is Not Rated. In this case, J.P. Morgan has removed the rating\nand, if applicable, the price target, for this stock because of either a lack\nof a sufficient fundamental basis or for legal, regulatory or policy reasons.\nThe previous rating and, if applicable, the price target, no longer should be\nrelied upon. An NR designation is not a recommendation or a rating. Some\nstocks under coverage have a rating but no price target; in these cases, we\nexpect the stock will outperform/perform in line/underperform the average\ntotal return of the stocks in the Research Analyst’s, or the Research\nAnalyst’s team’s, coverage universe of the relevant duration of the region. In\nour Asia (ex-Australia and ex-India) and U.K. small- and mid-cap Equity\nResearch, each stock’s expected total return is compared to the expected total\nreturn of a benchmark country market index, not to those Research Analysts’\ncoverage universe. If it does not appear in the Important Disclosures section\nof this report, the certifying Research Analyst’s coverage universe can be\nfound on J.P. Morgan’s Research website,\n[https://www.jpmorganmarkets.com](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=3VHkch_&sig=CHUf2TGZYu2qC5cuLytBvC76s8p&v=2&url=https://www.jpmorganmarkets.com).\n\nCoverage Universe: Cardoso, Joseph : Amphenol (APH), Arista (ANET), Axon\n(AXON), CDW (CDW), Calix (CALX), Celestica (CLS), Ceva (CEVA), Ciena (CIEN),\nCisco (CSCO), Coherent Corp (COHR), Corning (GLW), Credo (CRDO), Dell\nTechnologies (DELL), Everpure (P), F5 Inc (FFIV), Fabrinet (FN), Flex Ltd\n(FLEX), Garmin Ltd. (GRMN), HP Inc (HPQ), Hewlett Packard Enterprise (HPE),\nIngram Micro (INGM), Insight Enterprises (NSIT), Jabil Inc (JBL), Keysight\nTechnologies (KEYS), Lumentum (LITE), Mobileye (MBLY), Motorola Solutions Inc\n(MSI), NetApp, Inc. (NTAP), Nutanix (NTNX), Qualcomm (QCOM), Seagate (STX),\nSuper Micro (SMCI), TD SYNNEX (SNX), Teradyne (TER), Vistance Networks (VISN),\nWestern Digital (WDC), Wolfspeed Inc (WOLF), Xerox Holdings Corp (XRX)\n\nJ.P. Morgan Equity Research Ratings Distribution, as of October 03, 2026  \n  \n| Overweight  \n(buy) | Neutral   \n(hold) | Underweight   \n(sell)  \n---|---|---|---  \nJ.P. Morgan Global Equity Research Coverage*| 53%| 35%| 12%  \n    IB clients**| 83%| 81%| 72%  \nJPMS Equity Research Coverage*| 51%| 37%| 12%  \n    IB clients**| 95%| 93%| 88%  \n  \n*Please note that the percentages may not add to 100% because of rounding.   \n**Percentage of subject companies within each of the \"buy,\" \"hold\" and \"sell\"\ncategories for which J.P. Morgan has provided investment banking services\nwithin the previous 12 months.  \nFor purposes of FINRA ratings distribution rules only, our Overweight rating\nfalls into a buy rating category; our Neutral rating falls into a hold rating\ncategory; and our Underweight rating falls into a sell rating category. Please\nnote that stocks with an NR designation are not included in the table above.\nThis information is current as of the end of the most recent calendar quarter.  \n​\n\nEquity Valuation and Risks: For valuation methodology and risks associated\nwith covered companies or price targets for covered companies, please see the\nmost recent company-specific research report at\n[http://www.jpmorganmarkets.com](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=5QqHoAx&sig=QOe46KFb5Clwz4FbQlmnuJZ4ySw&v=2&url=http://www.jpmorganmarkets.com),\ncontact the primary analyst or your J.P. Morgan representative, or email\n[research.disclosure.inquiries@jpmorgan.com](mailto:research.disclosure.inquiries@jpmorgan.com).\nFor material information about the proprietary models used, please see the\nSummary of Financials in company-specific research reports and the Company\nTearsheets, which are available to download on the company pages of our client\nwebsite,\n[http://www.jpmorganmarkets.com](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=5QqHoAx&sig=QOe46KFb5Clwz4FbQlmnuJZ4ySw&v=2&url=http://www.jpmorganmarkets.com).\nThis report also sets out within it the material underlying assumptions used.\n\nHistory of Investment Recommendations:  \n​A history of J.P. Morgan investment recommendations disseminated during the\npreceding 12 months can be accessed on the Research & Commentary page of\n[http://www.jpmorganmarkets.com](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=5QqHoAx&sig=QOe46KFb5Clwz4FbQlmnuJZ4ySw&v=2&url=http://www.jpmorganmarkets.com)\nwhere you can also search by analyst name, sector or financial instrument.\n\nAnalysts' Compensation:The research analysts responsible for the preparation\nof this report receive compensation based upon various factors, including the\nquality and accuracy of research, client feedback, competitive factors, and\noverall firm revenues.\n\nOther Disclosures\n\nJ.P. Morgan is a marketing name for investment banking businesses of JPMorgan\nChase & Co. and its subsidiaries and affiliates worldwide.\n\nUK MIFID FICC research unbundling exemption: UK clients should refer to [UK\nMIFID Research Unbundling\nexemption](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=-rUZin4&sig=325Slj05aMoXbvW4Lbw04evectq&v=2&url=https://jpmm.com/research/disclosures?disclosure%3DunbundlingPolicyEMEA)\nfor details of J.P. Morgan’s implementation of the FICC research exemption and\nguidance on relevant FICC research categorisation.\n\nAll research material made available to clients are simultaneously available\non our client website, J.P. Morgan Markets, unless specifically permitted by\nrelevant laws. Not all research content is redistributed, e-mailed or made\navailable to third-party aggregators. For all research material available on a\nparticular stock, please contact your sales representative.  \n​\n\nAny long form nomenclature for references to China; Hong Kong; Taiwan; and\nMacau within this research material are Mainland China; Hong Kong SAR (China);\nTaiwan (China); and Macau SAR (China).\n\nJ.P. Morgan Research may, from time to time, write on issuers or securities\ntargeted by economic or financial sanctions imposed or administered by the\ngovernmental authorities of the U.S., EU, UK or other relevant jurisdictions\n(Sanctioned Securities). Nothing in this report is intended to be read or\nconstrued as encouraging, facilitating, promoting or otherwise approving\ninvestment or dealing in such Sanctioned Securities. Clients should be aware\nof their own legal and compliance obligations when making investment\ndecisions.\n\nDigital assets, which may also be referred to as virtual or crypto assets or\ncrypto currencies (e.g. bitcoin), discussed in this research report are\nsubject to a rapidly changing regulatory landscape. The application of\nrelevant laws in respect of such assets may be unsettled, and the legality of\nany digital asset investment may be unclear. Prior to making any investment\ndecision regarding any digital asset, investors should seek their own legal\nadvice and be aware of any legal considerations regarding the purchase,\nholding or selling of such an investment. For relevant regulatory advisories\non digital assets, including bitcoin and ethereum, please see\n[https://www.jpmorgan.com/disclosures/cryptoasset-\ndisclosure](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=dedgWg4&sig=6sKsK5rPLbOiBjhT7yxovdzv8cD&v=2&url=https://www.jpmorgan.com/disclosures/cryptoasset-\ndisclosure).\n\nThe author(s) of this research report may not be licensed to carry on\nregulated activities in your jurisdiction and, if not licensed, do not hold\nthemselves out as being able to do so.\n\nExchange-Traded Funds (ETFs): J.P. Morgan Securities LLC (“JPMS”) acts as\nauthorized participant for substantially all U.S.-listed ETFs. To the extent\nthat any ETFs are mentioned in this report, JPMS may earn commissions and\ntransaction-based compensation in connection with the distribution of those\nETF shares and may earn fees for performing other trade-related services, such\nas securities lending to short sellers of the ETF shares. JPMS may also\nperform services for the ETFs themselves, including acting as a broker or\ndealer to the ETFs. In addition, affiliates of JPMS may perform services for\nthe ETFs, including trust, custodial, administration, lending, index\ncalculation and/or maintenance and other services.\n\nOptions and Futures related research: If the information contained herein\nregards options- or futures-related research, such information is available\nonly to persons who have received the proper options or futures risk\ndisclosure documents. Please contact your J.P. Morgan Representative or visit\n[https://www.theocc.com/components/docs/riskstoc.pdf\n](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=QkhHsVt&sig=YuKATLVUXkM7VtcXip1WGWBNgk0&v=2&url=https://www.theocc.com/components/docs/riskstoc.pdf)for\na copy of the Option Clearing Corporation's Characteristics and Risks of\nStandardized Options or\n[https://www.finra.org/sites/default/files/2020-08/Security_Futures_Risk_Disclosure_Statement_2020.pdf](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=yuHxy0j&sig=81DuIcWOIdLe23boblP1fC2QPAi&v=2&url=https://www.finra.org/sites/default/files/2020-08/Security_Futures_Risk_Disclosure_Statement_2020.pdf)\nfor a copy of the Security Futures Risk Disclosure Statement.\n\nChanges to Interbank Offered Rates (IBORs) and other benchmark rates: Certain\ninterest rate benchmarks are, or may in the future become, subject to ongoing\ninternational, national and other regulatory guidance, reform and proposals\nfor reform. For more information, please consult:\n[https://www.jpmorgan.com/global/disclosures/interbank_offered_rates](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=tE378aY&sig=69bPBvyio8MYnCk7GdfpyrHLh0N&v=2&url=https://www.jpmorgan.com/global/disclosures/interbank_offered_rates)\n\nPrivate Bank Clients: Where you are receiving research as a client of the\nprivate banking businesses offered by JPMorgan Chase & Co. and its\nsubsidiaries (“J.P. Morgan Private Bank”), research is provided to you by J.P.\nMorgan Private Bank and not by any other division of J.P. Morgan, including,\nbut not limited to, the J.P. Morgan Corporate and Investment Bank and its\nGlobal Research division.\n\nLegal entity responsible for the production and distribution of research: The\nlegal entity identified below the name of the Reg AC Research Analyst who\nauthored this material is the legal entity responsible for the production of\nthis research. Where multiple Reg AC Research Analysts authored this material\nwith different legal entities identified below their names, these legal\nentities are jointly responsible for the production of this research. Where\nmore than one legal entity is listed under an analyst’s name, the first legal\nentity is responsible for the production unless stated otherwise. Research\nAnalysts from various J.P. Morgan affiliates may have contributed to the\nproduction of this material but may not be licensed to carry out regulated\nactivities in your jurisdiction (and do not hold themselves out as being able\nto do so). Unless otherwise stated below in the legal entity disclosures, this\nmaterial has been distributed by the legal entity responsible for production,\nor where more than one legal entity is listed under the analyst’s name, the\nfirst legal entity will be responsible for distribution. If you have any\nqueries, please contact the relevant Research Analyst in your jurisdiction or\nthe entity in your jurisdiction that has distributed this research material.\n\nLegal Entities Disclosures and Country-/Region-Specific Disclosures:  \nArgentina: JPMorgan Chase Bank N.A Sucursal Buenos Aires is regulated by Banco\nCentral de la República Argentina (“BCRA”- Central Bank of Argentina) and\nComisión Nacional de Valores (“CNV”- Argentinian Securities Commission - ALYC\ny AN Integral N°51).\n\nAustralia: J.P. Morgan Securities Australia Limited (“JPMSAL”) (ABN 61 003 245\n234/AFS Licence No: 238066) is regulated by the Australian Securities and\nInvestments Commission and is a Market Participant of ASX Limited, a Clearing\nand Settlement Participant of ASX Clear Pty Limited and a Clearing Participant\nof ASX Clear (Futures) Pty Limited. This material is issued and distributed in\nAustralia by or on behalf of JPMSAL only to \"wholesale clients\" (as defined in\nsection 761G of the Corporations Act 2001). A list of all financial products\ncovered can be found by visiting\n[https://www.jpmm.com/research/disclosures](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=H1B3Un-&sig=FjxK83Xe80GHsy2Nop1uGnneLkn&v=2&url=https://www.jpmm.com/research/disclosures).\nJ.P. Morgan seeks to cover companies of relevance to the domestic and\ninternational investor base across all Global Industry Classification Standard\n(GICS) sectors, as well as across a range of market capitalisation sizes. If\napplicable, in the course of conducting public side due diligence on the\nsubject company(ies), the Research Analyst team may at times perform such\ndiligence through corporate engagements such as site visits, discussions with\ncompany representatives, management presentations, etc. Research issued by\nJPMSAL has been prepared in accordance with J.P. Morgan Australia’s Research\nIndependence Policy which can be found at the following link: [J.P. Morgan\nAustralia - Research Independence\nPolicy](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=ncP8HUR&sig=U7N9sgmBbhrZMLFmz3qw7tzB15Z&v=2&url=https://www.jpmm.com/research/disclosures?disclosure%3DindependencePolicyAustralia).\n\nBrazil: Banco J.P. Morgan S.A. is regulated by the Comissao de Valores\nMobiliarios (CVM) and by the Central Bank of Brazil. Ombudsman J.P. Morgan:\n0800-7700847 / 0800-7700810 (For Hearing Impaired) /\n[ouvidoria.jp.morgan@jpmchase.com](mailto:ouvidoria.jp.morgan@jpmchase.com).\n\nCanada: J.P. Morgan Securities Canada Inc. is a registered investment dealer,\nregulated by the Canadian Investment Regulatory Organization and the Ontario\nSecurities Commission and is the participating member on Canadian exchanges.\nThis material is distributed in Canada by or on behalf of J.P.Morgan\nSecurities Canada Inc.\n\nChile: Inversiones J.P. Morgan Limitada is an unregulated entity incorporated\nin Chile.\n\nChina: J.P. Morgan Securities (China) Company Limited has been approved by\nCSRC to conduct the securities investment consultancy business.\n\nColombia: Banco J.P. Morgan Colombia S.A. is supervised by the\nSuperintendencia Financiera de Colombia (SFC). Any reference in this material\nto products or services offered abroad by entities other than the Bank in\nColombia is included exclusively for descriptive purposes. Such references do\nnot constitute, and should not be construed as, promotional activity or the\nprovision of financial products or services within Colombian territory, as\ndefined under applicable Colombian regulation.\n\nDubai International Financial Centre (DIFC): JPMorgan Chase Bank, N.A., Dubai\nBranch is regulated by the Dubai Financial Services Authority (DFSA) and its\nregistered address is Dubai International Financial Centre - The Gate, West\nWing, Level 3 and 9 PO Box 506551, Dubai, UAE. This material has been\ndistributed by JP Morgan Chase Bank, N.A., Dubai Branch to persons regarded as\nprofessional clients or market counterparties as defined under the DFSA rules.\n\nEuropean Economic Area (EEA): Unless specified to the contrary, research is\ndistributed in the EEA by J.P. Morgan SE (“JPM SE”), which is authorised as a\ncredit institution by the Federal Financial Supervisory Authority\n(Bundesanstalt für Finanzdienstleistungsaufsicht, BaFin) and jointly\nsupervised by the BaFin, the German Central Bank (Deutsche Bundesbank) and the\nEuropean Central Bank (ECB). JPM SE is a company headquartered in Frankfurt\nwith registered address at TaunusTurm, Taunustor 1, Frankfurt am Main, 60310,\nGermany. The material has been distributed in the EEA to persons regarded as\nprofessional investors (or equivalent) pursuant to Art. 4 para. 1 no. 10 and\nAnnex II of MiFID II and its respective implementation in their home\njurisdictions (“EEA professional investors”). This material must not be acted\non or relied on by persons who are not EEA professional investors. Any\ninvestment or investment activity to which this material relates is only\navailable to EEA relevant persons and will be engaged in only with EEA\nrelevant persons.\n\nHong Kong: J.P. Morgan Securities (Asia Pacific) Limited (CE number AAJ321) is\nregulated by the Hong Kong Monetary Authority and the Securities and Futures\nCommission in Hong Kong, and J.P. Morgan Broking (Hong Kong) Limited (CE\nnumber AAB027) is regulated by the Securities and Futures Commission in Hong\nKong. JP Morgan Chase Bank, N.A., Hong Kong Branch (CE Number AAL996) is\nregulated by the Hong Kong Monetary Authority and the Securities and Futures\nCommission, is organized under the laws of the United States with limited\nliability. Where the distribution of this material is a regulated activity in\nHong Kong, the material is distributed in Hong Kong by or through J.P. Morgan\nSecurities (Asia Pacific) Limited and/or J.P. Morgan Broking (Hong Kong)\nLimited.\n\nIndia: J.P. Morgan India Private Limited (Corporate Identity Number -\nU67120MH1992FTC068724), having its registered office at J.P. Morgan Tower,\nOff. C.S.T. Road, Kalina, Santacruz - East, Mumbai – 400098, is registered\nwith the Securities and Exchange Board of India (SEBI) as a ‘Research Analyst’\nhaving registration number INH000001873. J.P. Morgan India Private Limited is\nalso registered with SEBI as a member of the National Stock Exchange of India\nLimited and the Bombay Stock Exchange Limited (SEBI Registration Number –\nINZ000239730) and as a Merchant Banker (SEBI Registration Number -\nMB/INM000002970). Telephone: 91-22-6157 3000, Facsimile: 91-22-6157 3990 and\nWebsite:\n[http://www.jpmipl.com](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=STJ3Ykm&sig=Ewq5USqdalWljEhhKQGBrtGPkE5&v=2&url=http://www.jpmipl.com).\nJPMorgan Chase Bank, N.A. - Mumbai Branch is licensed by the Reserve Bank of\nIndia (RBI) (Licence No. 53/ Licence No. BY.4/94; SEBI - IN/CUS/014/ CDSL :\nIN-DP-CDSL-444-2008/ IN-DP-NSDL-285-2008/ INBI00000984/ INE231311239) as a\nScheduled Commercial Bank in India, which is its primary license allowing it\nto carry on Banking business in India and other activities, which a Bank\nbranch in India are permitted to undertake. For non-local research material,\nthis material is not distributed in India by J.P. Morgan India Private\nLimited. Compliance Officer: Ashutosh Sharma;\n[ashutosh.j.sharma@jpmchase.com](mailto:ashutosh.j.sharma@jpmchase.com);\n+912261575002. Grievance Officer: Ramprasadh K,\n[jpmipl.research.feedback@jpmorgan.com](mailto:jpmipl.research.feedback@jpmorgan.com);\n+912261573000. Registration granted by SEBI and certification from NISM in no\nway guarantee performance of the intermediary or provide any assurance of\nreturns to investors. Please visit [Terms and Conditions and Most Important\nTerms and Conditions\n(MITC)](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=KVW59Fs&sig=D3GFU0eFBoBWkGjsRYPmSgz7FIa&v=2&url=https://indiaipo.jpmorgan.com/content/dam/jpm/india-\nprivate-limited/documents/disclosure-of-terms-and-conditions-and-mitc.pdf).\nThe annual Compliance audit report is available at\n[http://www.jpmipl.com/#research](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=OI8T2Qk&sig=J0lGTANCvY0fyZ0sA6q7o78vN7d&v=2&url=http://www.jpmipl.com/%23research).\n\nIndonesia: PT J.P. Morgan Sekuritas Indonesia is a member of the Indonesia\nStock Exchange and is registered and supervised by the Otoritas Jasa Keuangan\n(OJK).\n\nKorea: J.P. Morgan Securities (Far East) Limited, Seoul Branch, is a member of\nthe Korea Exchange (KRX). JPMorgan Chase Bank, N.A., Seoul Branch, is licensed\nas a branch office of foreign bank (JPMorgan Chase Bank, N.A.) in Korea. Both\nentities are regulated by the Financial Services Commission (FSC) and the\nFinancial Supervisory Service (FSS). For non-macro research material, the\nmaterial is distributed in Korea by or through J.P. Morgan Securities (Far\nEast) Limited, Seoul Branch.\n\nJapan: JPMorgan Securities Japan Co., Ltd. and JPMorgan Chase Bank, N.A.,\nTokyo Branch are regulated by the Financial Services Agency in Japan.\n\nMalaysia: This material is issued and distributed in Malaysia by JPMorgan\nSecurities (Malaysia) Sdn Bhd (18146-X), which is a Participating Organization\nof Bursa Malaysia Berhad and holds a Capital Markets Services License issued\nby the Securities Commission in Malaysia.\n\nMexico: J.P. Morgan Casa de Bolsa, S.A. de C.V., J.P. Morgan Grupo Financiero\nis member of the Mexican Stock Exchange (“Bolsa Mexicana de Valores”) and the\nInstitutional Stock Exchange (“Bolsa Institucional de Valores”), and it is\nauthorized to act as a broker dealer by the National Banking and Securities\nExchange Commission (“Comisión Nacional Bancaria y de Valores”).\n\nNew Zealand: This material is issued and distributed by JPMSAL in New Zealand\nonly to \"wholesale clients\" (as defined in the Financial Markets Conduct Act\n2013). JPMSAL is registered as a Financial Service Provider under the\nFinancial Service providers (Registration and Dispute Resolution) Act of 2008.\n\nNigeria: J.P. Morgan Chase Representative Office (Nigeria) Limited is\nregulated by the Central Bank of Nigeria.\n\nPhilippines: J.P. Morgan Securities Philippines Inc. is a Trading Participant\nof the Philippine Stock Exchange and a member of the Securities Clearing\nCorporation of the Philippines and the Securities Investor Protection Fund. It\nis regulated by the Securities and Exchange Commission.\n\nSingapore: This material is issued and distributed in Singapore by or through\nJ.P. Morgan Securities Singapore Private Limited (JPMSS) [MDDI (P) 070/08/2026\nand Co. Reg. No.: 199405335R], which is a member of the Singapore Exchange\nSecurities Trading Limited, and/or JPMorgan Chase Bank, N.A., Singapore branch\n(JPMCB Singapore), both of which are regulated by the Monetary Authority of\nSingapore. This material is issued and distributed in Singapore only to\naccredited investors, expert investors and institutional investors, as defined\nin Section 4A of the Securities and Futures Act, Cap. 289 (SFA). This material\nis not intended to be issued or distributed to any retail investors or any\nother investors that do not fall into the classes of “accredited investors,”\n“expert investors” or “institutional investors,” as defined under Section 4A\nof the SFA. Recipients of this material in Singapore are to contact JPMSS or\nJPMCB Singapore in respect of any matters arising from, or in connection with,\nthe material.\n\nSouth Africa: J.P. Morgan Equities South Africa Proprietary Limited and\nJPMorgan Chase Bank, N.A., Johannesburg Branch are members of the Johannesburg\nSecurities Exchange and are regulated by the Financial Services Conduct\nAuthority (FSCA).\n\nTaiwan: J.P. Morgan Securities (Taiwan) Limited is a participant of the Taiwan\nStock Exchange (company-type) and regulated by the Taiwan Securities and\nFutures Bureau. Material relating to equity securities is issued and\ndistributed in Taiwan by J.P. Morgan Securities (Taiwan) Limited, subject to\nthe license scope and the applicable laws and the regulations in Taiwan. To\nthe extent that J.P. Morgan Securities (Taiwan) Limited produces research\nmaterials on securities not listed on the Taiwan Stock Exchange or Taipei\nExchange (“Non-Taiwan Listed Securities”), these materials shall not\nconstitute securities recommendations for the purpose of applicable Taiwan\nregulations, and, for the avoidance of doubt, J.P. Morgan Securities (Taiwan)\nLimited does not act as broker for Non-Taiwan Listed Securities. According to\nParagraph 2, Article 7-1 of Operational Regulations Governing Securities Firms\nRecommending Trades in Securities to Customers (as amended or supplemented)\nand/or other applicable laws or regulations, please note that the recipient of\nthis material is not permitted to engage in any activities in connection with\nthe material that may give rise to conflicts of interests, unless otherwise\ndisclosed in the “Important Disclosures” in this material.\n\nThailand: This material is issued and distributed in Thailand by JPMorgan\nSecurities (Thailand) Ltd., which is a member of the Stock Exchange of\nThailand and is regulated by the Ministry of Finance and the Securities and\nExchange Commission. The registered address is 548 One City Center Building,\n50th Floor, Ploenchit Road, Lumphini, Pathum Wan, Bangkok 10330.\n\nUK: Research is produced in the UK by J.P. Morgan Securities plc (“JPMS plc”)\nwhich is a member of the London Stock Exchange and is authorised by the\nPrudential Regulation Authority and regulated by the Financial Conduct\nAuthority and the Prudential Regulation Authority or J.P. Morgan Markets\nLimited (“JPMML Ltd”) which is authorised and regulated by the Financial\nConduct Authority. Unless specified to the contrary, this material is\ndistributed in the UK by JPMS plc and is directed in the UK only to: (a)\npersons having professional experience in matters relating to investments\nfalling within article 19(5) of the Financial Services and Markets Act 2000\n(Financial Promotion) (Order) 2005 (“the FPO”); (b) persons outlined in\narticle 49 of the FPO (high net worth companies, unincorporated associations\nor partnerships, the trustees of high value trusts, etc.); or (c) any persons\nto whom this communication may otherwise lawfully be made; all such persons\nbeing referred to as \"UK relevant persons\". This material must not be acted on\nor relied on by persons who are not UK relevant persons. Any investment or\ninvestment activity to which this material relates is only available to UK\nrelevant persons and will be engaged in only with UK relevant persons. A\ndescription of J.P. Morgan EMEA’s policy for prevention and avoidance of\nconflicts of interest related to the production of Research can be found at\nthe following link: [J.P. Morgan EMEA - Research Independence\nPolicy](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=Cd2Th7u&sig=L95qi1BSoLf4rgKT4gagESuSesM&v=2&url=https://www.jpmm.com/research/disclosures?disclosure%3DindependencePolicyEMEA).\n\nU.S.: J.P. Morgan Securities LLC (“JPMS”) is a member of the NYSE, FINRA,\nSIPC, and the NFA. JPMorgan Chase Bank, N.A. is a member of the FDIC. Material\npublished by non-U.S. affiliates is distributed in the U.S. by JPMS who\naccepts responsibility for its content.\n\nGeneral: Additional information is available upon request. The information in\nthis material has been obtained from sources believed to be reliable. While\nall reasonable care has been taken to ensure that the facts stated in this\nmaterial are accurate and that the forecasts, opinions and expectations\ncontained herein are fair and reasonable, JPMorgan Chase & Co. or its\naffiliates and/or subsidiaries (collectively J.P. Morgan) make no\nrepresentations or warranties whatsoever to the completeness or accuracy of\nthe material provided, except with respect to any disclosures relative to J.P.\nMorgan and the Research Analyst's involvement with the issuer that is the\nsubject of the material. Accordingly, no reliance should be placed on the\naccuracy, fairness or completeness of the information contained in this\nmaterial. There may be certain discrepancies with data and/or limited content\nin this material as a result of calculations, adjustments, translations to\ndifferent languages, and/or local regulatory restrictions, as applicable.\nThese discrepancies should not impact the overall investment analysis, views\nand/or recommendations of the subject company(ies) that may be discussed in\nthe material. Artificial intelligence tools may have been used in the\npreparation of this material, including assisting in data analysis, pattern\nrecognition, and content drafting for research material. J.P. Morgan accepts\nno liability whatsoever for any loss arising from any use of this material or\nits contents, and neither J.P. Morgan nor any of its respective directors,\nofficers or employees, shall be in any way responsible for the contents\nhereof, apart from the liabilities and responsibilities that may be imposed on\nthem by the relevant regulatory authority in the jurisdiction in question, or\nthe regulatory regime thereunder. Opinions, forecasts or projections contained\nin this material represent J.P. Morgan's current opinions or judgment as of\nthe date of the material only and are therefore subject to change without\nnotice. Periodic updates may be provided on companies/industries based on\ncompany-specific developments or announcements, market conditions or any other\npublicly available information. There can be no assurance that future results\nor events will be consistent with any such opinions, forecasts or projections,\nwhich represent only one possible outcome. Furthermore, such opinions,\nforecasts or projections are subject to certain risks, uncertainties and\nassumptions that have not been verified, and future actual results or events\ncould differ materially. The value of, or income from, any investments\nreferred to in this material may fluctuate and/or be affected by changes in\nexchange rates. All pricing is indicative as of the close of market for the\nsecurities discussed, unless otherwise stated. Past performance is not\nindicative of future results. Accordingly, investors may receive back less\nthan originally invested. This material is not intended as an offer or\nsolicitation for the purchase or sale of any financial instrument. The\nopinions and recommendations herein do not take into account individual client\ncircumstances, objectives, or needs and are not intended as recommendations of\nparticular securities, financial instruments or strategies to particular\nclients. This material may include views on structured securities, options,\nfutures and other derivatives. These are complex instruments, may involve a\nhigh degree of risk and may be appropriate investments only for sophisticated\ninvestors who are capable of understanding and assuming the risks involved.\nThe recipients of this material must make their own independent decisions\nregarding any securities or financial instruments mentioned herein and should\nseek advice from such independent financial, legal, tax or other adviser as\nthey deem necessary. J.P. Morgan may trade as a principal on the basis of the\nResearch Analysts’ views and research, and it may also engage in transactions\nfor its own account or for its clients’ accounts in a manner inconsistent with\nthe views taken in this material, and J.P. Morgan is under no obligation to\nensure that such other communication is brought to the attention of any\nrecipient of this material. Others within J.P. Morgan, including Strategists,\nSales staff and other Research Analysts, may take views that are inconsistent\nwith those taken in this material. Employees of J.P. Morgan not involved in\nthe preparation of this material may have investments in the securities (or\nderivatives of such securities) mentioned in this material and may trade them\nin ways different from those discussed in this material. This material is not\nan advertisement for or marketing of any issuer, its products or services, or\nits securities in any jurisdiction.\n\nConfidentiality and Security Notice: This transmission may contain information\nthat is privileged, confidential, legally privileged, and/or exempt from\ndisclosure under applicable law. If you are not the intended recipient, you\nare hereby notified that any disclosure, copying, distribution, or use of the\ninformation contained herein (including any reliance thereon) is STRICTLY\nPROHIBITED. Although this transmission and any attachments are believed to be\nfree of any virus or other defect that might affect any computer system into\nwhich it is received and opened, it is the responsibility of the recipient to\nensure that it is virus free and no responsibility is accepted by JPMorgan\nChase & Co., its subsidiaries and affiliates, as applicable, for any loss or\ndamage arising in any way from its use. If you received this transmission in\nerror, please immediately contact the sender and destroy the material in its\nentirety, whether in electronic or hard copy format. This message is subject\nto electronic monitoring:\n[https://www.jpmorgan.com/disclosures/email](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=7gRIR5I&sig=8MtB3f9vWxWHOLnNW9SQ9fsuZnW&v=2&url=https://www.jpmorgan.com/disclosures/email)\n\nMSCI: Certain information herein (“Information”) is reproduced by permission\nof MSCI Inc., its affiliates and information providers (“MSCI”) ©2026. No\nreproduction or dissemination of the Information is permitted without an\nappropriate license. MSCI MAKES NO EXPRESS OR IMPLIED WARRANTIES (INCLUDING\nMERCHANTABILITY OR FITNESS) AS TO THE INFORMATION AND DISCLAIMS ALL LIABILITY\nTO THE EXTENT PERMITTED BY LAW. No Information constitutes investment advice,\nexcept for any applicable Information from MSCI ESG Research. Subject also to\n[msci.com/disclaimer](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=fpWCsEq&sig=QkZtonyJ6rC1HCv4H7zQpiadEbG&v=2&url=https://www.msci.com/disclaimer)\n\nAny mentions of third-party trademarks, brand names, products, and services\nare for referential purposes only and any mention thereof is not meant to\nimply any sponsorship, endorsement, or affiliation.\n\nSustainalytics: Certain information, data, analyses and opinions contained\nherein are reproduced by permission of Sustainalytics and: (1) includes the\nproprietary information of Sustainalytics; (2) may not be copied or\nredistributed except as specifically authorized; (3) do not constitute\ninvestment advice nor an endorsement of any product or project; (4) are\nprovided solely for informational purposes; and (5) are not warranted to be\ncomplete, accurate or timely. Sustainalytics is not responsible for any\ntrading decisions, damages or other losses related to it or its use. The use\nof the data is subject to conditions available at\n[https://www.sustainalytics.com/legal-\ndisclaimers](https://jpmorgan.email.streetcontxt.net/platform/al?a=14261818&ad=5044482008&h=sskE-\nfL&sig=EHArTFPS6UVjhucEQbtO1jSGH4V&v=2&url=https://www.sustainalytics.com/legal-\ndisclaimers). ©2026 Sustainalytics. All Rights Reserved.\n\n\"Other Disclosures\" last revised October 17, 2026.\n\nCopyright 2026 JPMorgan Chase & Co. All rights reserved. This material or any\nportion hereof may not be reprinted, sold or redistributed without the written\nconsent of J.P. Morgan. Without prior written consent from J.P. Morgan, it is\nprohibited to (A) use or share any material, commentary, information or other\ndata received from J.P. Morgan or an authorized third-party (\"J.P. Morgan\nData\") in any artificial intelligence (\"AI\") systems or models, or (B) use\nautomated means, including robots, crawlers, web-scrapers or other automated\ntools or scripts, to access, collect, extract or harvest any J.P. Morgan Data,\nincluding scraping of user data, content, metadata, pricing information or\nother information. #$J&098$#*P  \n  \n![](https://jpmorgan.email.streetcontxt.net/platform/i/038Sggfr3iaSoi8KANVEv0zeQAiFFhpWX65DYJtsqs9x9djlhCRnhjvhifH8TkZLJgU9o5aooFFX3swUP3K4l66AYMhZQ4O2U0OYcGaoaDV2ucCUfXRrovWEDkN35SLA)\n![](https://jpmorgan.email.streetcontxt.net/r/i/038Sggfr3iaSoi8KANVEv0zeQAiFFhpWX65DYJtsqs9x9djlhCRnhjvhifH8TkZLJgU9o5aooFFX3swUP3K4l66AYMhZQ4O2U0OYcGaoaDV2ucCUfXRrovWEDkN35SLA)\n[](https://jpmorgan.email.streetcontxt.net/platform/hl?a=14261818&ad=5044482008&sig=KsFHX5S3jydjxgQQ5pUnEoBd9MZ)\n\n"
+      },
+      "bodyPreview": "North America Equity Research\r\nWestern Digital\r\nF1Q27 Review: Pricing Momentum and EB Recovery Support Positive Earnings Revision; Capex Concerns Overblown\r\n\r\nBy Joseph Cardoso AC, Manmohanpreet Singh, Marc Vitenzon\r\n\r\nClick here for the full document and",
+      "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWe9D0zAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "sender": {
+        "emailAddress": {
+          "address": "joseph.cardoso@jpmresearchmail.com",
+          "name": "Joseph Cardoso"
+        }
+      },
+      "toRecipients": [
+        {
+          "emailAddress": {
+            "address": "felipe.monteiro@capstone.com.br",
+            "name": "Felipe Monteiro"
+          }
+        }
+      ],
+      "ccRecipients": [],
+      "bccRecipients": [],
+      "receivedDateTime": "2026-10-23T03:42:00Z",
+      "isRead": false,
+      "categories": [],
+      "has_attachments": false,
+      "display_url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWe9D0zAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "display_title": "JPM | Hardware & Networking | WDC: F1Q27 Review: Pricing Momentum and EB Recovery Support Positive Earnings Revisions; Capex Concerns Overblown"
+    },
+    {
+      "index": 157,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWe9D0sAAA=",
+      "subject": "IDEA: Western Digital: F1Q27 Earnings – Fighting Misconceptions After A Strong Quarter",
+      "body": {
+        "contentType": "html",
+        "content": "| | | | ![Morgan Stanley](cid:image_13856bd4-cd8e-11f1-98a3-da11e278520f_1_1)  \n---  \n![Research](cid:image_13856bd4-cd8e-11f1-98a3-da11e278520f_1_2)  \n---  \n| | | ![](cid:image_13856bd4-cd8e-11f1-98a3-da11e278520f_1_3)  \n---  \nWestern Digital (WDC.O)  \nF1Q27 Earnings – Fighting Misconceptions After A Strong Quarter  \n| | [Read Full Report](https://ny.matrix.ms.com/eqr/article/webapp/13856bd4-cd8e-11f1-98a3-da11e278520f?t=1792720738:4417:50140:527593380b83&m=1&ch=CDF Research ISG Autoblast#e=ZmVsaXBlLm1vbnRlaXJvQGNhcHN0b25lLmNvbS5icg==)  \n---  \n(PDF: 19 Pages)  \n---  \n| North America  \n---  \nStock Rating   Overweight  \nPrice Target   $668.00  \nErik W Woodring, Dylan Liu, Maya C Neuman, Rauf Ural  \nOctober 23, 2026  \n---  \n| WHAT'S CHANGED?  \n---  \nWestern Digital (WDC.O)  \nPrice Target  \n| From:   $643.00| To: **$668.00**  \n---|---  \n| AlphaSignals Earnings Reaction  \n---  \n| | | **Strengthens our thesis**  \n---|---  \n|  Impact to our thesis  \n| ![](cid:image_13856bd4-cd8e-11f1-98a3-da11e278520f_1_4)| **Modest upside**  \n---|---  \n|  Financial results versus consensus  \n| ![](cid:image_13856bd4-cd8e-11f1-98a3-da11e278520f_1_4)| **Meaningful\nrevision higher**  \n---|---  \n|  Direction of next 12-month consensus EPS  \nSource: Company data, Morgan Stanley Research  \n| | WD just posted a strong, pricing-driven beat/raise, is accelerating rev growth to 70% Y/Y with ~80% incremental margins, has visibility into 2031 from its top 7 customers, and is returning 100% of FCF to shareholders. Capex comments were misinterpreted and we add clarity why below. Remain OW.   \n---  \n| | Key takeaways  \n---  \n  \n  * Sept Q upside came from stronger EB growth and Price/EB growth, and both metrics should accelerate further throughout FY27. \n  * Dec Q EPS guide of $5.80 was 13% above our $5.25 forecast, which was 10% above Street ($4.84). Taking the T4Q avg EPS beat means Dec Q EPS likely goes $6.50+. \n  * Mgmt called out stronger demand, longer customer visibility, a broader customer base, and no change to industry fundamentals, countering recent headlines. \n  * Capex comments were misinterpreted. Yes, capex is ramping, but to support head/platter/substrate growth, not unit growth – mgmt previously communicated this. \n  * FY27/FY28 EPS moves 4-9% higher, even with conservative pricing forecasts. On unchanged 14x P/E, PT moves to $668. Remain OW. \n\n  \n  \nClear confirmation of our Overweight thesis. The market continues to be fickle\n(see our capex read below), but our conviction in the HDD bull case, as well\nas WD's path to over $45 of EPS by FY28 has strengthened (FY28 bull case EPS\nis $60+). What drives that conviction? A number of points that came up on\ntonight's call: (1) HDD demand is stronger today than 3-6 months ago, and WD's\ncustomer base is broadening out to neoclouds, frontier labs, and physical AI\ncompanies, (2) WD expects Y/Y exabyte (EB) growth to accelerate through FY27\nand FY28 and still fall short of customer demand, (3) WD's top 7 customers are\nall now providing visibility out to 2030-2031 – 3 months ago WD talked about\ncustomers starting to negotiate LTAs into CY29-CY31, (4) Price per EB growth\naccelerated from +18% Y/Y in the June quarter to +28% Y/Y in the September\nquarter, and December quarter guidance implies another period of price\nacceleration with mgmt noting \"_growth can accelerate for the next 3-4\nquarters_ \", (5) 58% gross margins continue expanded by 350bps Q/Q, with 80%\nincremental margins showing WD is nowhere close to peak, and (6) mgmt noted\nthey don't see any change to long-term fundamentals (supply, pricing, etc.)\nfor the industry and that the gap between supply and demand is not perishable,\nwith some customers reporting only 1 week of HDD inventory on hand today.\n\nAll told, things are only strengthening for WD. In fact, despite being 9%\nahead of Street EPS in the December quarter, WDC just guided 10%+ above our\nestimates, and on average, has outperformed the midpoint of their EPS guidance\nby 14% over the last 4 quarters – meaning when all is said and done December\nquarter EPS could easily surpass $6+ vs. Consensus at $4.84. With shares in\nthe after-market now trading at 12.7x our new FY27 EPS (of $25.97) and 6.9x\nour new FY28 EPS (of $47.73) WD is hovering around our \"close your eyes and\nbuy\" levels, and we remain OW-rated with a new $668 PT, or 102% upside, based\non 14x our new FY28 EPS. FWIW, we think tonight's report is also a clear\npositive read-through to STX earnings next week, where we have gained\nconviction in a pricing-driven beat/raise.\n\n_What we learned from WDC's F1Q27 (September quarter) earnings call and\ncallback:_\n\n(+) Price per bit growth should continue to accelerate through at least the\nnext 3-4 quarters. $/TB growth accelerated from the high-teens Y/Y in the June\nquarter to +28% Y/Y in the September quarter (or $17.7/TB), and December\nquarter guidance implies another step-up to >30% Y/Y growth. More importantly,\nmgmt sees “further room” for Y/Y growth to accelerate over the next 3-4\nquarters – consistent with our checks – driven by (1) existing LTAs include\nperiodic price increases, while expiring agreements are being renewed into a\nbetter pricing environment, (2) exabytes outside LTAs are seeing particularly\nstrong pricing as we've noted, and (3) WDC continues to sell the value of TCO\nsavings as customers transition to higher-capacity drives. Notably, HAMR\nshould not disrupt this trajectory either, with mgmt explicitly noting that\nHAMR will not be discounted vs. ePMR and will continue to be priced on a\npremium $/TB basis. For reference, after growing 8% Q/Q in the September\nquarter, we forecast nearline $/TB growth averaging just 6% Q/Q over the next\n3 quarters, which we believe is very conservative. And yet we are still 25%\nabove Street EPS in FY27. If we were to assume Q/Q nearline $/TB growth very\nmodestly accelerates each of the next 3 quarters (to +9% Q/Q, then +10% Q/Q,\nand then +11% Q/Q) – which would be more directionally consistent with our\nchecks – our FY27/FY28 EPS would be 9-16% higher than today, implying a\nvaluation closer to 6x P/E.\n\n(=) The market misinterpreted mgmt's comments on capex – here's what you need\nto know. Since spinning SNDK, WD has been consistent – they need to invest in\nhead/media/substrate capacity (plus automation tools) to support mix shift to\nhigher capacity 10-14 platter drives. Even as recently as September, when\nreferencing capex as a % of revenue, WD said \"_...the next couple of years, we\nmight be actually slightly above that [4-6%] range, but when you look at it\nover a 5 year period, it should be in or about that 4-6%_ \". So tonight's\ncapex comments – which drove the stock down 6.5% after-hours despite the\nacross the board beat/raise – were consistent with exactly what the company\nhas already told the market. And for anyone confused on platter growth vs.\nunit growth, consider this fact – over the last 12 months, WD platter count\nshipped has grown low-teens% Y/Y with minimal unit growth given mix shift to\nhigher capacity drives. And that growth doesn't even include mixing into the\n11-14 platter 40-55TB ePMR and HAMR drives that are launching now and over the\nnext few years, which require even more platters/media/substrate due to a more\ncomplex cycle process (hence the investments). Said differently, how else will\nWD accelerate EB growth with minimal unit growth? Selling a greater mix of\nhigher capacity drives, which combine the areal density benefits of ePMR and\nHAMR (i.e. more bits per platter) with increased platter (and head) count. If\nanyone has any questions on this concept, please call us.\n\n(=) Cost/TB declines not as robust in the short-term, but pricing upside\nsupports continued gross margin expansion. Over the last 4 quarters, WD has\naveraged Y/Y cost per TB declines of 9% Y/Y, so we were surprised to see just\n4.5% Y/Y cost/TB declines in the September quarter. But 2 factors worked\nagainst WD – higher component costs (DRAM/NAND) and negative mix shift, with\nnon-nearline EBs growing 14% Q/Q vs. nearline EBs growing 7% Q/Q. However,\ngross margins were able to expand 370bps Q/Q because pricing was much stronger\nthan expected. Both of these trends are expected to persist in the December\nquarter, and into C1H27 – slower cost/TB declines between product transitions\nbut faster price/TB growth – which means gross margins should still expand\n3-4pts Q/Q, on average. Once WD's newest ePMR drives reach 50%+ of nearline\nEB's shipped and WD reduces reliance on certain commodities, we should see\ncost per TB declines reaccelerate towards 10% Y/Y, which we conservatively\nassume happens in the December '27 quarter.\n\n(+) Up to 40TB ePMR tech is ramping in-line with expects, while the HAMR ramp\nis now ahead of plan. WDC's latest 40TB ePMR platform is ramping in line with\nexpectations and customer adoption is progressing faster than prior product\ntransitions, which means these drives will represent ~30% of nearline EB\nshipments in the December quarter and 50% of NL EB's in March. Meanwhile, WD's\nHAMR progress is ahead of plan, with 2 hyperscalers finishing quals on\n4TB/disk HAMR in C1Q27 and volume shipments commencing in C1H27, while 2\nadditional customers will begin qualifications in C1H27. WDs second-gen\n5TB/disk HAMR qualifications will now start in C2H27, ahead of schedule.\nTogether, these product transitions give us increasing confidence that\nSeptember's +22% Y/Y EB growth represents a trough, with growth accelerating\nover the next 6-8 quarters and supporting WDC's ability to deliver 25%+ long-\nterm Y/Y EB growth. [Read\nmore...](https://ny.matrix.ms.com/eqr/article/webapp/13856bd4-cd8e-11f1-98a3-da11e278520f?t=1792720738:4417:50140:527593380b83&m=1&ch=CDF\nResearch ISG Autoblast#e=ZmVsaXBlLm1vbnRlaXJvQGNhcHN0b25lLmNvbS5icg==)  \n  \n---  \nAuthors  \n---  \n![Picture of Analyst](cid:image_13856bd4-cd8e-11f1-98a3-da11e278520f_1_6)|\nMorgan Stanley & Co. LLCErik W Woodring+1 212 296-8083       [EMAIL\n](mailto:Erik.Woodring@morganstanley.com?subject=Re:IDEA%3A%20Western%20Digital%3A%20F1Q27%20Earnings%20%E2%80%93%20Fighting%20Misconceptions%20After%20A%20Strong%20Quarter)  \n---|---  \n![Picture of Analyst](cid:image_13856bd4-cd8e-11f1-98a3-da11e278520f_1_7)|\nMorgan Stanley & Co. LLCDylan Liu+1 212 761-4519       [EMAIL\n](mailto:Dylan.Liu@morganstanley.com?subject=Re:IDEA%3A%20Western%20Digital%3A%20F1Q27%20Earnings%20%E2%80%93%20Fighting%20Misconceptions%20After%20A%20Strong%20Quarter)  \n---|---  \n![Picture of Analyst](cid:image_13856bd4-cd8e-11f1-98a3-da11e278520f_1_8)|\nMorgan Stanley & Co. LLCMaya C Neuman+1 212 761-1946       [EMAIL\n](mailto:Maya.Neuman@morganstanley.com?subject=Re:IDEA%3A%20Western%20Digital%3A%20F1Q27%20Earnings%20%E2%80%93%20Fighting%20Misconceptions%20After%20A%20Strong%20Quarter)  \n---|---  \n![Picture of Analyst](cid:image_13856bd4-cd8e-11f1-98a3-da11e278520f_1_9)|\nMorgan Stanley & Co. LLCRauf Ural+1 212 761-5958       [EMAIL\n](mailto:Rauf.Ural@morganstanley.com?subject=Re:IDEA%3A%20Western%20Digital%3A%20F1Q27%20Earnings%20%E2%80%93%20Fighting%20Misconceptions%20After%20A%20Strong%20Quarter)  \n---|---  \n| [![Research](cid:image_13856bd4-cd8e-11f1-98a3-da11e278520f_1_10)\n](https://ny.matrix.ms.com/eqr/research/portal/home/global)  \n---  \n[Remove me from this\ndistribution](mailto:Erik.Woodring@morganstanley.com?subject=Please remove me\nfrom this distribution :\nIDEA%3A%20Western%20Digital%3A%20F1Q27%20Earnings%20%E2%80%93%20Fighting%20Misconceptions%20After%20A%20Strong%20Quarter)  \nFor important information including analyst certification and disclosures\nregarding specific companies, derivatives, or other instruments discussed in\nthis e-mail, please refer to the latest research report, if attached and/or\nhyperlinked to this email, or by logging on to Morgan Stanley's Matrix portal\nat <http://www.morganstanley.com/matrix>. You may also refer to the Morgan\nStanley Research Disclosure Website at\n<http://www.morganstanley.com/eqr/disclosures/webapp/generalresearch>.Morgan\nStanley will make certain research products and announcements available only\non Morgan Stanley's Matrix platform. For access to Matrix, please contact your\nsales representative or go to Matrix at\n<http://www.morganstanley.com/matrix>.Morgan Stanley is not acting as a\nmunicipal advisor and the opinions or views contained herein are not intended\nto be, and do not constitute, advice within the meaning of Section 975 of the\nDodd-Frank Wall Street Reform and Consumer Protection Act. If you have\nreceived this communication in error, please destroy all electronic and paper\ncopies and notify the sender immediately. Mistransmission is not intended to\nwaive confidentiality or privilege. Morgan Stanley reserves the right, to the\nextent permitted under applicable law, to monitor electronic communications.\nThis message is subject to terms available at the following link:\n<http://www.morganstanley.com/disclaimers>. If you cannot access these links,\nplease notify us by reply message and we will send the contents to you. By\nmessaging with Morgan Stanley you consent to the foregoing.  \n© 2026 Morgan Stanley. All rights reserved  \n  \n![](https://linkback.morganstanley.com/web/sendlink/webapp/f/glcr6i4g-3see-g001-9813-4de1821aa240?store=0&d=UwBCbGFzdG1haWwAYm1fdHJhY2tpbmdfaW1n&user=ib_4_pq9mfavktxlt_M2UwNTg0N2NfZmVsaXBlLm1vbnRlaXJvQGNhcHN0b25lLmNvbS5icg==&__gda__=1887328762_7a68f030893ddb34d0435fb2441de5d9)\n\n"
+      },
+      "bodyPreview": "Western Digital (WDC.O)\r\nF1Q27 Earnings – Fighting Misconceptions After A Strong Quarter\r\nRead Full Report\r\n(PDF: 19 Pages)\r\nNorth America\r\n\r\nStock Rating   Overweight\r\nPrice Target   $668.00\r\n\r\nErik W Woodring, Dylan Liu, Maya C Neuman, Rauf Ural\r\n\r\nOcto",
+      "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWe9D0sAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "sender": {
+        "emailAddress": {
+          "address": "Erik.Woodring@morganstanley.com",
+          "name": " Erik W Woodring"
+        }
+      },
+      "toRecipients": [
+        {
+          "emailAddress": {
+            "address": "felipe.monteiro@capstone.com.br",
+            "name": "Felipe Monteiro"
+          }
+        }
+      ],
+      "ccRecipients": [],
+      "bccRecipients": [],
+      "receivedDateTime": "2026-10-23T02:02:52Z",
+      "isRead": false,
+      "categories": [],
+      "has_attachments": false,
+      "display_url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWe9D0sAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "display_title": "IDEA: Western Digital: F1Q27 Earnings – Fighting Misconceptions After A Strong Quarter"
+    }
+  ],
+  "primary_web": "WD Reports Fiscal First Quarter 2027 Financial Results | Western Digital Corporation (https://investor.wdc.com/news-releases/news-release-details/wd-reports-fiscal-first-quarter-2027-financial-results)\nciteturn108view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"https://investor.wdc.com/news-releases/news-release-details/wd-reports-fiscal-first-quarter-2027-financial-results\",\"lineno\":15}); Total lines: 342\nL0:   * Financial Information\nL1:     * 【0†Earnings Documents】\nL2:     * 【1†Annual Reports & Proxy】\nL3:     * 【2†SEC Filings】\nL4: \nL5:   * Investor Events\nL6:     * 【3†Conference Calls】\nL7:     * 【4†Innovation Day 2026】\nL8:     * 【5†2025 Investor Day】\nL9: \nL10:   * Stock Information\nL11:     * 【6†Quote and Chart】\nL12:     * 【7†Dividend History】\nL13:     * 【8†Historic Stock Lookup】\nL14: \nL15: 【9†Image】\nL16: \nL17: # Release Details\nL18: ##\nL19: \nL20: WD Reports Fiscal First Quarter 2027 Financial Results\nL21: \nL22: October 22, 2026\nL23: \nL24: 【10†PDF Version】\nL25: \nL26: Q1FY27 Highlights:\nL27: \nL28:   * Revenue of $4.38 billion, up 55% year-over-year\nL29:   * GAAP gross margin of 57.8%; non-GAAP gross margin of 58.1%\nL30:   * GAAP diluted EPS of $4.63; non-GAAP diluted EPS of $4.64\nL31:   * Cash flow from operations of $1.60 billion; free cash flow of $1.38 billion\nL32:   * Q2FY27 revenue expected to be up 66% to 72% year-over-year\nL33: SAN JOSE, Calif.--(BUSINESS WIRE)--Oct. 22, 2026-- Western Digital Corporation (Nasdaq: WDC) today reported fiscal first quarter 2027 financial results for the period ended October 2, 2026.\nL34: “Fiscal 2027 is off to a strong start, with results exceeding expectations, driven by robust customer demand and disciplined execution. In our fiscal first quarter, revenue grew 55% year over year, non-GAAP gross and operating margins expanded to 58.1% and 49.1%, respectively, resulting in a 161% year-over-year increase in non-GAAP EPS.\nL35: Reflecting our confidence in the business and our commitment to return capital to shareholders, we are raising our quarterly cash dividend by 17% to $0.175 per share,” said Irving Tan, CEO of WD. “We are executing well through our technology transitions to meet the growing demand for storage.\nL36: As we deepen our customer relationships, broaden the customer base to new areas of the market, and extend our visibility into future demand, we are building an increasingly durable foundation for long-term value creation.”\nL37: Q1FY27 Financial Highlights\nL38: ($ in millions, except per share amounts)  |    |    |    |    |    |\nL39:    |    | GAAP\nL40:    |    |    |    |    |    |\nL41:    |    | Q1FY27  | Q4FY26  | Q1FY26  | Q/Q  | Y/Y\nL42: Revenue  |    | $4,381  | $3,747  | $2,818  | +17%  | +55%\nL43: Gross Margin  |    | 57.8%  | 54.1%  | 43.5%  | +370 bps  | +1430 bps\nL44: Operating Income  |    | $2,046  | $1,563  | $792  | +31%  | +158%\nL45: Operating Margin  |    | 46.7%  | 41.7%  | 28.1%  | +500 bps  | +1860 bps\nL46: Diluted Net Income Attributable to Common Shareholders  |    | $1,779  | $3,195  | $1,154  | -44%  | +54%\nL47: Diluted Net Income Per Common Share  |    | $4.63  | $8.21  | $3.07  | -44%  | +51%\nL48:    |    |    |    |    |    |\nL49:    |    | Non-GAAP\nL50:    |    |    |    |    |    |\nL51:    |    | Q1FY27  | Q4FY26  | Q1FY26  | Q/Q  | Y/Y\nL52: Revenue  |    | $4,381  | $3,747  | $2,818  | +17%  | +55%\nL53: Gross Margin  |    | 58.1%  | 54.4%  | 43.9%  | +370 bps  | +1420 bps\nL54: Operating Income  |    | $2,153  | $1,655  | $856  | +30%  | +152%\nL55: Operating Margin  |    | 49.1%  | 44.2%  | 30.4%  | +490 bps  | +1870 bps\nL56: Diluted Net Income Attributable to Common Shareholders  |    | $1,779  | $1,382  | $655  | +29%  | +172%\nL57: Diluted Net Income Per Common Share  |    | $4.64  | $3.56  | $1.78  | +30%  | +161%\nL58: Business Outlook for Fiscal Second Quarter of 2027\nL59: \nL60: “Our first quarter results demonstrate the continued momentum in our business, with robust exabyte growth and improved pricing driving another quarter of strong financial performance,” said Kris Sennesael, CFO of WD. “Looking ahead, for our fiscal second quarter of 2027, at the midpoint of the ranges, we expect revenue of $5.1 billion, non-GAAP gross margin of 60.5%, and non-GAAP EPS of $5.80.”\n--------------------------------------------------------------------------------\nInvestor Relations Events | MediaTek (https://www.mediatek.com/investor-relations/ir-events)\nciteturn108view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"https://www.mediatek.com/investor-relations/ir-events\",\"lineno\":21}); Total lines: 1387\nL0: [Input: Search...] [Input] [Input]\nL1: \nL2:   * 【0†English】\nL3:   * 【1†中文 - 繁體】\nL4:   * 【2†简体中文】\nL5: \nL6: English\nL7: \nL8:   * 【3†Upcoming events】\nL9:   * 【4†Expired Events】\nL10: \nL11: Date Event add to calendar\nL12: \nL13: Dec 10, 2026\nL14: \nL15: 05:00 PM - 06:00 PM (GMT +8)\nL16: \nL17: Monthly Sales - November 2026\nL18: \nL19: 【5†Image: Events】\nL20: \nL21:   *   *   *   * Nov 10, 2026\nL22: \nL23: 05:00 PM - 06:00 PM (GMT +8)\nL24: \nL25: Monthly Sales - October 2026\nL26: \nL27: 【5†Image: Events】\nL28: \nL29:   *   *   *   * Oct 30, 2026\nL30: \nL31: 03:00 PM - 04:00 PM (GMT +8)\nL32: \nL33: 3Q26 Results – Investors Conference / Language: English\nL34: 【6†Teleconference†ottlive-ott2b2.cdn.hinet.net】 【5†Image: Events】\nL35: \nL36:   *   *   *   * Date Event Event Link\nL37: \nL38: Oct 8, 2026\nL39: \nL40: 05:00 PM - 06:00 PM (GMT +8)\nL41: \nL42: Monthly Sales - September 2026\nL43: \nL44: Sep 10, 2026\nL45: \nL46: 05:00 PM - 06:00 PM (GMT +8)\nL47: \nL48: Monthly Sales - August 2026\nL49: \nL50: Aug 10, 2026\nL51: \nL52: 05:00 PM - 06:00 PM (GMT +8)\nL53: \nL54: Monthly Sales - July 2026\nL55: \nL56: Jul 31, 2026\nL57: \nL58: 03:00 PM - 04:00 PM (GMT +8)\nL59: \nL60: 2Q26 Results – Investors Conference / Language: English\nL61: \nL62: Jul 31, 2026\nL63: \nL64: 12:00 AM - 12:00 AM (GMT +8)\nL65: \nL66: Cash Dividend Payable Date\nL67: \nL68: Jul 10, 2026\nL69: 05:00 PM - 06:00 PM (GMT +8)\nL70: \nL71: Monthly Sales - June 2026\nL72: \nL73: Jul 7, 2026\nL74: \nL75: 12:00 AM - 12:00 AM (GMT +8)\nL76: \nL77: Ex-Dividend Date\nL78: \nL79: Jun 10, 2026\nL80: \nL81: 05:00 PM - 06:00 PM (GMT +8)\nL82: \nL83: Monthly Sales - May 2026\nL84: \nL85: May 29, 2026\nL86: \nL87: 09:00 AM - 12:00 PM (GMT +8)\nL88: \nL89: Annual General Shareholders’ Meeting\nL90: \nL91: May 8, 2026\nL92: \nL93: 05:00 PM - 06:00 PM (GMT +8)\nL94: \nL95: Monthly Sales - April 2026\nL96: \nL97: Apr 30, 2026\nL98: \nL99: 03:00 PM - 04:00 PM (GMT +8)\nL100: \nL101: 1Q26 Results – Investors Conference / Language: English\nL102: \nL103: Apr 10, 2026\nL104: \nL105: 05:00 PM - 06:00 PM (GMT +8)\nL106: Monthly Sales - March 2026\nL107: \nL108: Mar 31, 2026\nL109: \nL110: 12:00 AM - 12:00 AM (GMT +8)\nL111: \nL112: Shareholders’ Meeting Registration Deadline\nL113: \nL114: Mar 10, 2026\nL115: \nL116: 05:00 PM - 06:00 PM (GMT +8)\nL117: \nL118: Monthly Sales - February 2026\nL119: \nL120: Feb 10, 2026\nL121: \nL122: 05:00 PM - 06:00 PM (GMT +8)\nL123: \nL124: Monthly Sales - January 2026\nL125: \nL126: Feb 4, 2026\nL127: \nL128: 03:00 PM - 04:00 PM (GMT +8)\nL129: \nL130: 4Q25 Results – Investors Conference / Language: English\nL131: \nL132: Jan 30, 2026\nL133: \nL134: 12:00 AM - 12:00 AM (GMT +8)\nL135: \nL136: Cash Dividend Payable Date\nL137: \nL138: Jan 9, 2026\nL139: \nL140: 05:00 PM - 06:00 PM (GMT +8)\nL141: \nL142: Monthly Sales - December 2025\nL143: Jan 6, 2026\nL144: \nL145: 12:00 AM - 12:00 AM (GMT +8)\nL146: \nL147: Ex-Dividend Date\nL148: \nL149: Dec 10, 2025\nL150: \nL151: 05:00 PM - 06:00 PM (GMT +8)\nL152: \nL153: Monthly Sales - November 2025\nL154: \nL155: Nov 10, 2025\nL156: \nL157: 05:00 PM - 06:00 PM (GMT +8)\nL158: \nL159: Monthly Sales - October 2025\nL160: \nL161: Oct 31, 2025\nL162: \nL163: 03:00 PM - 04:00 PM (GMT +8)\nL164: \nL165: 3Q25 Results – Investors Conference / Language: English\nL166: \nL167: Oct 9, 2025\nL168: \nL169: 05:00 PM - 06:00 PM (GMT +8)\nL170: \nL171: Monthly Sales - September 2025\nL172: \nL173: Sep 10, 2025\nL174: \nL175: 05:00 PM - 06:00 PM (GMT +8)\nL176: \nL177: Monthly Sales - August 2025\nL178: \nL179: Aug 8, 2025\nL180: \nL181: 05:00 PM - 06:00 PM (GMT +8)\nL182: Monthly Sales - July 2025\nL183: \nL184: Jul 31, 2025\nL185: \nL186: 12:00 AM - 12:00 AM (GMT +8)\nL187: \nL188: Cash Dividend Payable Date\nL189: \nL190: Jul 30, 2025\nL191: \nL192: 03:00 PM - 04:00 PM (GMT +8)\nL193: \nL194: 2Q25 Results – Investors Conference / Language: English\nL195: \nL196: 【7†Teleconference†webpage-ott2b.cdn.hinet.net】\nL197: \nL198: Jul 10, 2025\nL199: \nL200: 05:00 PM - 06:00 PM (GMT +8)\nL201: \nL202: Monthly Sales - June 2025\nL203: \nL204: Jul 3, 2025\nL205: \nL206: 12:00 AM - 12:00 AM (GMT +8)\nL207: \nL208: Ex-Dividend Date\nL209: \nL210: Jun 10, 2025\nL211: \nL212: 05:00 PM - 06:00 PM (GMT +8)\nL213: \nL214: Monthly Sales - May 2025\nL215: \nL216: May 29, 2025\nL217: \nL218: 09:00 AM - 12:00 PM (GMT +8)\nL219: Annual General Shareholders’ Meeting\nL220: \nL221: May 9, 2025\nL222: \nL223: 05:00 PM - 06:00 PM (GMT +8)\nL224: \nL225: Monthly Sales - April 2025\nL226: \nL227: Apr 30, 2025\nL228: \nL229: 03:00 PM - 04:00 PM (GMT +8)\nL230: \nL231: 1Q25 Results – Investors Conference / Language: English\nL232: \nL233: 【8†Teleconference†webpage-ott2b.cdn.hinet.net】\nL234: \nL235: Apr 10, 2025\nL236: \nL237: 05:00 PM - 06:00 PM (GMT +8)\nL238: \nL239: Monthly Sales - March 2025\nL240: \nL241: Mar 10, 2025\nL242: \nL243: 05:00 PM - 06:00 PM (GMT +8)\nL244: \nL245: Monthly Sales - February 2025\nL246: \nL247: Feb 10, 2025\nL248: \nL249: 05:00 PM - 06:00 PM (GMT +8)\nL250: \nL251: Monthly Sales - January 2025\nL252: \nL253: Feb 7, 2025\nL254: 03:00 PM - 04:00 PM (GMT +8)\nL255: \nL256: 4Q24 Results - Investors Conference / Language: English\nL257: \nL258: 【8†Teleconference†webpage-ott2b.cdn.hinet.net】\nL259: \nL260: Jan 24, 2025\nL261: \nL262: 12:00 AM - 12:00 AM (GMT +8)\nL263: \nL264: Cash Dividend Payable Date\nL265: \nL266: Jan 10, 2025\nL267: \nL268: 05:00 PM - 06:00 PM (GMT +8)\nL269: \n",
+  "primary_findings": [
+    {
+      "key": "wdc",
+      "source": "Western Digital / Kris Sennesael Q1 FY27 release",
+      "date": "2026-10-22",
+      "url": "https://investor.wdc.com/news-releases/news-release-details/wd-reports-fiscal-first-quarter-2027-financial-results",
+      "facts": [
+        "Q1 revenue $4.381bn; non-GAAP EPS $4.64.",
+        "Q2 revenue $5.1bn +/-100m; non-GAAP GM60-61%; EPS5.80 +/-0.20."
+      ]
+    },
+    {
+      "key": "mediatek_calendar",
+      "source": "MediaTek IR events calendar",
+      "retrieved": "2026-10-23",
+      "url": "https://www.mediatek.com/investor-relations/ir-events",
+      "facts": [
+        "3Q26 English investor conference October30,2026 15:00-16:00 GMT+8; NOT October26 in catalyst feed."
+      ]
+    },
+    {
+      "key": "stx",
+      "source": "Seagate official release",
+      "date": "2026-10-14",
+      "url": "https://www.seagate.com/stories/articles/seagate-technology-to-report-fiscal-first-quarter-2027-financial-results-on-october-27-2026-pr/",
+      "review": "Official search excerpt confirms October27 after US close; direct open redirect loop."
+    }
+  ],
+  "local_sources": [
+    "_wiki/_meta/reconciliation-2026-10-22-inbox.md",
+    "_equity_calls/Internet/2026-10-22_WellsFargo_META-3Q26-EPS-recap-call-Ken-Gawrelski-UNCONFIRMED.md",
+    "META/transcripts/META_Q3-2026-earnings_2026-10-21.md",
+    "_wiki/_meta/analyst-evidence/2026-10-22-morning-source-checks.json",
+    "_wiki/_data/analyst/history/morning-brief-2026-10-22.json",
+    "_wiki/NOK.md",
+    "_wiki/WDC.md",
+    "_wiki/CRWV.md",
+    "_wiki/MEDIATEK.md",
+    "_wiki/META.md"
+  ],
+  "pdf_review": {
+    "source": "Jefferies Asia TMT Specialist Sales / Conor O'Mara, Rankie Wong, Meghan Liu",
+    "date": "2026-09-22",
+    "path": "_inbox/_done/20260922__Jefferies_AsiaTMT_SpecSales__Q326 Techknowledge Tech Trip Takeaways.pdf",
+    "review": "Visually inspected complete archived rendered PDF pages31 and34 (printed30 and33). No new PDF created.",
+    "findings": [
+      "PDFp31 relays Fubon/Sherman: MediaTek and Broadcom both supply v9; Broadcom pushed out, not cancelled.",
+      "PDFp34 relays MediaTek management's sole-source100% v9 claim, while acknowledging Broadcom alternatives called v9; contradictory codenames/perimeters remain unresolved."
+    ],
+    "renders": [
+      "relatórios bons/_assets/20260922__Jefferies_AsiaTMT_SpecSales__Q326_Techknowledge_Tech_Trip_Takeaways/p031.jpg",
+      "relatórios bons/_assets/20260922__Jefferies_AsiaTMT_SpecSales__Q326_Techknowledge_Tech_Trip_Takeaways/p034.jpg"
+    ]
+  },
+  "quality_overrides": [
+    "BookJuly1seed8positionsunknownweights; priorityprovisional.",
+    "BBGOct21 not comprehensively refreshed postprints.",
+    "META WFS Oct21 model values from Oct22 reconciliation, workbook not reread today. GAAP versus adjustedEPS requires basis bridge.",
+    "WFC Oct22 financing need60-80bn refers12months, NOT1Q27; UBS Ju~75bn1Q27 different object. Neither company-announced offering.",
+    "UBS WDC Oct23 email intro says same7x, valuationfooter says7xfrom9x. Preserve conflict; do not calculate valuation bridge as established.",
+    "MS WDC Oct23 email 13% versus5.25 arithmetic not repeated; actual5.80 and prior5.25 retained.",
+    "CRWV lessnegativehouseEPS is notbelowconsensus: house-3.27 vsBBG-3.91, sourcehouseOct14/BBGOct21.",
+    "MediaTekcalendarcorrectedtoOct30 inbrief; companypageunchanged.",
+    "NoaddedengineIDs versuslaterOct22snapshot;34removed not34resolved.",
+    "NVDA no-readoutledgerstatement correctedwithpriorarchivedMS/primaryevidence; no newdeal."
+  ],
+  "recommendation_ids": [
+    "supp-20261023-wdc",
+    "supp-20261023-meta",
+    "supp-20261023-nok",
+    "supp-20261023-crwv",
+    "supp-20261023-mediatek",
+    "cata-d6253f9923ca",
+    "data-39fff867a72e",
+    "esti-d865f3088118"
+  ],
+  "idea_evidence": {
+    "wdc": {
+      "mail_indices": [
+        118,
+        121,
+        147,
+        157
+      ],
+      "prior_expectations": "_wiki/_data/analyst/history/morning-brief-2026-10-22.json"
+    },
+    "meta": {
+      "local": "_wiki/_meta/reconciliation-2026-10-22-inbox.md"
+    },
+    "nok": {
+      "mail_indices": [
+        39
+      ],
+      "company": "NOK/NOK_6-K_2026-10-22_0001104659-26-117972.html"
+    },
+    "crwv": {
+      "mail_indices": [
+        125
+      ]
+    },
+    "mediatek": {
+      "primary": "MediaTek IR calendar retrieved2026-10-23",
+      "pdf_pages": [
+        31,
+        34
+      ]
+    }
+  },
+  "edits": [
+    "Derivedsignalrebuild",
+    "WDCnarrowoutcomelog",
+    "NVDAevidencecoveragecorrection",
+    "Today'sevidence/historyJSON"
+  ],
+  "company_pages_edited": false,
+  "house_models_edited": false,
+  "compute_deals": "No new or revised deal terms surfaced in scoped work; existing GTC IDs acknowledged without new commitments.",
+  "delivery": {
+    "duplicate_check": "No exact-subject SentItems copy found before send"
+  }
+}

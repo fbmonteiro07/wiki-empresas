@@ -3,17 +3,17 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AVGO` (filings + transcripts) · `_equity_calls` · `_briefings\by-ticker\AVGO.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Snapshot — Capstone official model + BBG · asof 2026-10-21 · USD
+### 📊 Snapshot — Capstone official model + BBG · asof 2026-10-23 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $123.7bn | $195.1bn |
-| Gross profit | $91.3bn | $139.1bn |
-| Gross margin | 73.8% | 71.3% |
-| EBITDA | $83.5bn | $129.9bn |
+| Revenue | $123.7bn | $195.6bn |
+| Gross profit | $91.3bn | $139.7bn |
+| Gross margin | 73.8% | 71.4% |
+| EBITDA | $83.6bn | $130.7bn |
 | EPS | **$12.89** | **$21.07** |
 | Capex | $2.1bn | $2.8bn |
-| OCF (≈EBITDA) | $83.5bn | $129.9bn |
+| OCF (≈EBITDA) | $83.6bn | $130.7bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 _**Bold** = Capstone official model; plain = BBG consensus._
@@ -1018,6 +1018,8 @@ _Source: AVGO earnings calls (dates above); management commentary, paraphrased._
 - **Briefings:** [AVGO roll-up](../_briefings/by-ticker/AVGO.md) — 51 datapoints / 24 days.
 
 ## Changelog
+
+- **2026-10-23 — weekly credit review:** Jefferies / Blayne Curtis October 22 financing-dependency remarks cross-checked in the transcript and incorporated as analyst interpretation in the credit review. No closing or changed terms established for ANTH-AVGO-CHIP-FIN-20261005 or OAI-AVGO-CHIP-FIN-20261007; original terms unchanged. [Evidence](_data/credit-monitor/research-sources/2026-10-23-evidence.json).
 
 - 2026-10-22 — ingest (Notion, 2026-10-22_Jefferies_Semis-update-call-AI-trade-LRCX-TXN-KLAC-CRDO-Curtis.md): 1 Debate 🔭 bullet + 1 Intra-quarter block (2 bullets). Curtis spoken: guide 'very conservative … could do nearly double what they've guided to' (vs the 09-18 '$230bn very conservative → ~$400bn' build — both carried, neither published), growth 'dependent upon a financing vehicle that's not financed … closer to like a half trillion dollars', NVDA/AVGO 'market dependent' vs INTC/AMD/MRVL hiding spots, 'pitch on 28th' UNRESOLVED; $2.4-3tn/yr financing backdrop. Nothing superseded; house table untouched.
 - 2026-10-19 — verification (transcription QA): Arcuri 10-19 block — 'COT [as transcribed — unresolved]' changed to COT = customer-owned tooling model (the wiki's own term; the passage 'people look at what Google's trying to do and they're looking at COT… is that really customer diversification?' fits that reading) and the quote restored to 'this COT debate is not going away'.

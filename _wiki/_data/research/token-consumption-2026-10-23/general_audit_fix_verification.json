@@ -1,0 +1,21 @@
+{
+  "source": "E:\\Wiki Felipe empresas\\outputs\\01a168b5-7786-7582-8082-7cd6bd45fd69\\AI_Token_Consumption_Price_and_Mix.xlsx",
+  "output": "E:\\Wiki Felipe empresas\\outputs\\01a168b5-7786-7582-8082-7cd6bd45fd69\\AI_Token_Consumption_Price_and_Mix_Audited.xlsx",
+  "tests": [
+    "24 monthly default prices/full-ARR/API volumes remain consistent with independent raw-source calculations",
+    "Both ARR modes reject invalid shares and negative transformed API; 0/100% and Anthropic exact11% boundary tested",
+    "Negative/nonnumeric ARR and gross below net rejected",
+    "Explicit zero forecast overrides, carry-forward and unbalanced-mix rejection verified for both companies",
+    "Existing zero/negative/nonnumeric price guards preserved"
+  ],
+  "scan": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}",
+  "default_price_change": false,
+  "default_api_volume_difference": "less than 1e-9 relative; ratio rounding at 12 decimals",
+  "limitations": [
+    "Unreconciled token universes",
+    "Unverified billing basis",
+    "Residual not measured cache",
+    "Minimum is scenario selection",
+    "Original OpenAI20% take denominator unspecified"
+  ]
+}

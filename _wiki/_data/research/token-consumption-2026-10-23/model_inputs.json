@@ -1,0 +1,2580 @@
+{
+  "asof": "2026-10-23",
+  "source": {
+    "source": "P:\\Felipe Monteiro\\US Equities\\Modelos oficiais\\AI Model.xlsx",
+    "sha256": "3d9eda23569aed4b4dfb8858b07faceb1daa8425c06821ad35247e6dc11b93b5",
+    "file_modified": "2026-10-23T09:50:24.310614"
+  },
+  "arr": {
+    "anthropic": {
+      "gross": [
+        11988.850629600003,
+        16784.390881440002,
+        26855.025410304006,
+        37597.03557442561,
+        45116.44268931073,
+        55042.06008095909,
+        63298.36909310295,
+        67096.27123868914,
+        71122.04751301049,
+        75389.37036379112,
+        79912.73258561859,
+        84707.49654075572
+      ],
+      "net": [
+        10670.077060344003,
+        14938.107884481602,
+        23900.972615170565,
+        33461.36166123879,
+        40153.633993486554,
+        48987.43347205359,
+        56335.54849286163,
+        59715.68140243333,
+        63298.62228657934,
+        67096.53962377411,
+        71122.33200120054,
+        75389.67192127259
+      ],
+      "cells": {
+        "gross": [
+          "P98",
+          "Q98",
+          "R98",
+          "S98",
+          "T98",
+          "U98",
+          "V98",
+          "W98",
+          "X98",
+          "Y98",
+          "Z98",
+          "AA98"
+        ],
+        "net": [
+          "P84",
+          "Q84",
+          "R84",
+          "S84",
+          "T84",
+          "U84",
+          "V84",
+          "W84",
+          "X84",
+          "Y84",
+          "Z84",
+          "AA84"
+        ]
+      },
+      "api_share": 0.85
+    },
+    "openai": {
+      "gross": [
+        22636.349368527346,
+        23768.166836953715,
+        24956.5751788014,
+        26204.40393774147,
+        27514.624134628542,
+        28890.355341359973,
+        34668.42640963197,
+        41602.111691558355,
+        49922.534029870025,
+        56911.688794051835,
+        64879.3252252191,
+        73962.43075674979
+      ],
+      "net": [
+        22091.454000000005,
+        23196.026700000006,
+        24355.828035000006,
+        25573.619436750007,
+        26852.300408587507,
+        28194.915429016884,
+        33833.89851482026,
+        40600.67821778431,
+        48720.81386134117,
+        55541.727801928944,
+        63317.569694199,
+        72182.02945138687
+      ],
+      "cells": {
+        "gross": [
+          "P95",
+          "Q95",
+          "R95",
+          "S95",
+          "T95",
+          "U95",
+          "V95",
+          "W95",
+          "X95",
+          "Y95",
+          "Z95",
+          "AA95"
+        ],
+        "net": [
+          "P81",
+          "Q81",
+          "R81",
+          "S81",
+          "T81",
+          "U81",
+          "V81",
+          "W81",
+          "X81",
+          "Y81",
+          "Z81",
+          "AA81"
+        ]
+      },
+      "api_share": 0.2466543707477739
+    }
+  },
+  "weekly": [
+    {
+      "date": "2026-01-04",
+      "provider": "anthropic",
+      "month": 1,
+      "N": 1210006562319,
+      "C": 1833277.269945028,
+      "T": 1236469482016,
+      "S": 1834558.7899450283,
+      "missing": 22533754,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-01-04",
+      "provider": "openai",
+      "month": 1,
+      "N": 2656460350128,
+      "C": 1560703.820537559,
+      "T": 2705019601929,
+      "S": 1562822.7597866096,
+      "missing": 10625436897,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-01-11",
+      "provider": "anthropic",
+      "month": 1,
+      "N": 2157472608148,
+      "C": 3121542.618260777,
+      "T": 2285426326945,
+      "S": 3123481.3782607764,
+      "missing": 41645365,
+      "zero_token_cost": 0.12
+    },
+    {
+      "date": "2026-01-11",
+      "provider": "openai",
+      "month": 1,
+      "N": 3522272234112,
+      "C": 2337389.969071952,
+      "T": 3588993804131,
+      "S": 2340709.173477752,
+      "missing": 10168972859,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-01-18",
+      "provider": "anthropic",
+      "month": 1,
+      "N": 2423650743807,
+      "C": 3373736.326459721,
+      "T": 2584810272453,
+      "S": 3376075.5264597205,
+      "missing": 48561744,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-01-18",
+      "provider": "openai",
+      "month": 1,
+      "N": 3859598315768,
+      "C": 2717271.145815297,
+      "T": 3939208072732,
+      "S": 2721013.3841613727,
+      "missing": 11417673349,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-01-25",
+      "provider": "anthropic",
+      "month": 1,
+      "N": 2726029887309,
+      "C": 3956894.726729983,
+      "T": 2919258106047,
+      "S": 3959445.2467299826,
+      "missing": 2931811462,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-01-25",
+      "provider": "openai",
+      "month": 1,
+      "N": 4111035584920,
+      "C": 2850924.996483789,
+      "T": 4186786899865,
+      "S": 2854665.4881554637,
+      "missing": 11010532960,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-02-01",
+      "provider": "anthropic",
+      "month": 2,
+      "N": 3183437886952,
+      "C": 4541316.551711099,
+      "T": 3463476622107,
+      "S": 4544229.511711098,
+      "missing": 13880010596,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-02-01",
+      "provider": "openai",
+      "month": 2,
+      "N": 4387988571671,
+      "C": 3265755.653284014,
+      "T": 4455290023340,
+      "S": 3269089.0876081637,
+      "missing": 10377008728,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-02-08",
+      "provider": "anthropic",
+      "month": 2,
+      "N": 3388120820819,
+      "C": 4918267.007895067,
+      "T": 3746859955487,
+      "S": 4922264.2078950675,
+      "missing": 8407616497,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-02-08",
+      "provider": "openai",
+      "month": 2,
+      "N": 4819209840496,
+      "C": 3576089.421497488,
+      "T": 4887287436024,
+      "S": 3580073.3800749145,
+      "missing": 11197103125,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-02-15",
+      "provider": "anthropic",
+      "month": 2,
+      "N": 3804647238172,
+      "C": 5854553.137071801,
+      "T": 4287681182901,
+      "S": 5858583.977071802,
+      "missing": 6235653918,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-02-15",
+      "provider": "openai",
+      "month": 2,
+      "N": 4814989909230,
+      "C": 3904167.067448507,
+      "T": 4883530881079,
+      "S": 3906561.341840758,
+      "missing": 11439684554,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-02-22",
+      "provider": "anthropic",
+      "month": 2,
+      "N": 4421775891973,
+      "C": 6926461.611864137,
+      "T": 5022334522430,
+      "S": 6930304.891864139,
+      "missing": 972891259,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-02-22",
+      "provider": "openai",
+      "month": 2,
+      "N": 4220121044674,
+      "C": 3234937.411085762,
+      "T": 4280931315221,
+      "S": 3237337.098504435,
+      "missing": 10309325442,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-03-01",
+      "provider": "anthropic",
+      "month": 3,
+      "N": 5114370139681,
+      "C": 8594121.368086485,
+      "T": 5958764899808,
+      "S": 8598538.368086485,
+      "missing": 3055391654,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-03-01",
+      "provider": "openai",
+      "month": 3,
+      "N": 5333868641404,
+      "C": 3990198.848765114,
+      "T": 5397463068827,
+      "S": 3992603.2987533878,
+      "missing": 12268355222,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-03-08",
+      "provider": "anthropic",
+      "month": 3,
+      "N": 5605621074250,
+      "C": 9330014.882189134,
+      "T": 6623930898925,
+      "S": 9334262.162189132,
+      "missing": 450987442,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-03-08",
+      "provider": "openai",
+      "month": 3,
+      "N": 6103196801799,
+      "C": 4073218.309850361,
+      "T": 6188589490124,
+      "S": 4075069.346483311,
+      "missing": 12681923796,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-03-15",
+      "provider": "anthropic",
+      "month": 3,
+      "N": 6244858728804,
+      "C": 9880906.374732103,
+      "T": 7473734108071,
+      "S": 9884440.894732108,
+      "missing": 41236926,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-03-15",
+      "provider": "openai",
+      "month": 3,
+      "N": 5548789316302,
+      "C": 4301389.447919583,
+      "T": 5621369130228,
+      "S": 4303369.056394333,
+      "missing": 12718751043,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-03-22",
+      "provider": "anthropic",
+      "month": 3,
+      "N": 5827598962734,
+      "C": 8749754.131404486,
+      "T": 7356199825090,
+      "S": 8751826.531404484,
+      "missing": 9178085,
+      "zero_token_cost": 1.2000000000000002
+    },
+    {
+      "date": "2026-03-22",
+      "provider": "openai",
+      "month": 3,
+      "N": 5563150825215,
+      "C": 4148024.744283056,
+      "T": 5630774047215,
+      "S": 4150122.6033411548,
+      "missing": 13368459560,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-03-29",
+      "provider": "anthropic",
+      "month": 3,
+      "N": 5905634030282,
+      "C": 8406722.03400129,
+      "T": 7868031967453,
+      "S": 8408594.714001289,
+      "missing": 52662091,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-03-29",
+      "provider": "openai",
+      "month": 3,
+      "N": 5901641043538,
+      "C": 4265997.13444815,
+      "T": 6079480509477,
+      "S": 4269556.335518306,
+      "missing": 13777849915,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-04-05",
+      "provider": "anthropic",
+      "month": 4,
+      "N": 6004620940878,
+      "C": 8540518.081305318,
+      "T": 8163908956919,
+      "S": 8542179.281305319,
+      "missing": 170284910,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-04-05",
+      "provider": "openai",
+      "month": 4,
+      "N": 5844120947955,
+      "C": 4225911.244277067,
+      "T": 6072161057590,
+      "S": 4229858.595781216,
+      "missing": 13616304173,
+      "zero_token_cost": 0.28
+    },
+    {
+      "date": "2026-04-12",
+      "provider": "anthropic",
+      "month": 4,
+      "N": 6273869813066,
+      "C": 8700547.49751802,
+      "T": 8953192589362,
+      "S": 8701923.817518022,
+      "missing": 19516356746,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-04-12",
+      "provider": "openai",
+      "month": 4,
+      "N": 5993159966170,
+      "C": 4324953.549391875,
+      "T": 6261412718215,
+      "S": 4327042.08154955,
+      "missing": 20085671540,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-04-19",
+      "provider": "anthropic",
+      "month": 4,
+      "N": 7113504348249,
+      "C": 9298677.77803985,
+      "T": 10259026493516,
+      "S": 9299814.578039851,
+      "missing": 12739506791,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-04-19",
+      "provider": "openai",
+      "month": 4,
+      "N": 6692418489060,
+      "C": 4585081.836488848,
+      "T": 6970615112738,
+      "S": 4586959.224116497,
+      "missing": 19431417267,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-04-26",
+      "provider": "anthropic",
+      "month": 4,
+      "N": 8447607122376,
+      "C": 10064685.19980192,
+      "T": 12041539404302,
+      "S": 10065737.039801922,
+      "missing": 12574820,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-04-26",
+      "provider": "openai",
+      "month": 4,
+      "N": 7213907773069,
+      "C": 5165077.654128083,
+      "T": 7490721623483,
+      "S": 5167325.093306485,
+      "missing": 23119769673,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-05-03",
+      "provider": "anthropic",
+      "month": 5,
+      "N": 8751874598762,
+      "C": 10564235.73688463,
+      "T": 12830232800798,
+      "S": 10566788.900930675,
+      "missing": 0,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-05-03",
+      "provider": "openai",
+      "month": 5,
+      "N": 6991207889409,
+      "C": 5392051.128179977,
+      "T": 7432457184469,
+      "S": 5393332.373653424,
+      "missing": 24098608693,
+      "zero_token_cost": 5
+    },
+    {
+      "date": "2026-05-10",
+      "provider": "anthropic",
+      "month": 5,
+      "N": 9173623053925,
+      "C": 10948117.43435875,
+      "T": 13637002619305,
+      "S": 10954378.650064772,
+      "missing": 8068201,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-05-10",
+      "provider": "openai",
+      "month": 5,
+      "N": 7007172034157,
+      "C": 5388283.266164829,
+      "T": 7510990934381,
+      "S": 5390530.085422059,
+      "missing": 26931792771,
+      "zero_token_cost": 0.08
+    },
+    {
+      "date": "2026-05-17",
+      "provider": "anthropic",
+      "month": 5,
+      "N": 9661136336718,
+      "C": 11901532.54438668,
+      "T": 14713335080751,
+      "S": 11908367.971172405,
+      "missing": 1685403876,
+      "zero_token_cost": 1333.267005
+    },
+    {
+      "date": "2026-05-17",
+      "provider": "openai",
+      "month": 5,
+      "N": 7333382855428,
+      "C": 6345555.235706873,
+      "T": 7868167157441,
+      "S": 6348110.258505585,
+      "missing": 34563049165,
+      "zero_token_cost": 0.12
+    },
+    {
+      "date": "2026-05-24",
+      "provider": "anthropic",
+      "month": 5,
+      "N": 10104359314609,
+      "C": 11754235.75878663,
+      "T": 15295642083692,
+      "S": 11760603.858465776,
+      "missing": 20358688497,
+      "zero_token_cost": 1534.57814025
+    },
+    {
+      "date": "2026-05-24",
+      "provider": "openai",
+      "month": 5,
+      "N": 7734388006885,
+      "C": 6294644.87651047,
+      "T": 8366871257220,
+      "S": 6298057.475120084,
+      "missing": 49181673840,
+      "zero_token_cost": 7.0854965
+    },
+    {
+      "date": "2026-05-31",
+      "provider": "anthropic",
+      "month": 5,
+      "N": 9508032687128,
+      "C": 11277053.41567383,
+      "T": 14444154163367,
+      "S": 11282394.682940079,
+      "missing": 5213537043,
+      "zero_token_cost": 1004.4789677499999
+    },
+    {
+      "date": "2026-05-31",
+      "provider": "openai",
+      "month": 5,
+      "N": 7695738768626,
+      "C": 6195607.65027548,
+      "T": 8387577194155,
+      "S": 6197435.207015494,
+      "missing": 69799154851,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-06-07",
+      "provider": "anthropic",
+      "month": 6,
+      "N": 10984671138692,
+      "C": 13198374.20417544,
+      "T": 17136596774902,
+      "S": 13203702.580000984,
+      "missing": 65636017154,
+      "zero_token_cost": 604.1807632499999
+    },
+    {
+      "date": "2026-06-07",
+      "provider": "openai",
+      "month": 6,
+      "N": 8711785035480,
+      "C": 7021624.73483783,
+      "T": 9512625569299,
+      "S": 7023026.084794925,
+      "missing": 87506514237,
+      "zero_token_cost": 0.08673825
+    },
+    {
+      "date": "2026-06-14",
+      "provider": "anthropic",
+      "month": 6,
+      "N": 10809764154200,
+      "C": 13670086.30365603,
+      "T": 17113536357645,
+      "S": 13676208.039173028,
+      "missing": 10547352825,
+      "zero_token_cost": 856.6993777499999
+    },
+    {
+      "date": "2026-06-14",
+      "provider": "openai",
+      "month": 6,
+      "N": 8832847390687,
+      "C": 7020396.479875013,
+      "T": 9495747117988,
+      "S": 7021747.389212598,
+      "missing": 111221785442,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-06-21",
+      "provider": "anthropic",
+      "month": 6,
+      "N": 11318236623091,
+      "C": 12345594.33987717,
+      "T": 17165804798303,
+      "S": 12351276.85857572,
+      "missing": 16839887934,
+      "zero_token_cost": 779.5611379999999
+    },
+    {
+      "date": "2026-06-21",
+      "provider": "openai",
+      "month": 6,
+      "N": 8495735039405,
+      "C": 6987442.585573358,
+      "T": 9169780210928,
+      "S": 6988993.915182957,
+      "missing": 103129693204,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-06-28",
+      "provider": "anthropic",
+      "month": 6,
+      "N": 14873037192064,
+      "C": 13479164.86256616,
+      "T": 20960962283703,
+      "S": 13485041.903302116,
+      "missing": 50473961,
+      "zero_token_cost": 981.7862940499999
+    },
+    {
+      "date": "2026-06-28",
+      "provider": "openai",
+      "month": 6,
+      "N": 8279364816149,
+      "C": 7679626.981921094,
+      "T": 9118204274812,
+      "S": 7680968.373202596,
+      "missing": 165338604996,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-07-05",
+      "provider": "anthropic",
+      "month": 7,
+      "N": 11079122784903,
+      "C": 13165321.9408097,
+      "T": 17592277650302,
+      "S": 13172326.606546456,
+      "missing": 4409919787,
+      "zero_token_cost": 610.9284696999999
+    },
+    {
+      "date": "2026-07-05",
+      "provider": "openai",
+      "month": 7,
+      "N": 7888402831791,
+      "C": 6572133.855692262,
+      "T": 8631008794417,
+      "S": 6573239.2490002625,
+      "missing": 40819035384,
+      "zero_token_cost": 2.1310925
+    },
+    {
+      "date": "2026-07-12",
+      "provider": "anthropic",
+      "month": 7,
+      "N": 13092217411456,
+      "C": 16740435.17244553,
+      "T": 21781439155772,
+      "S": 16747876.30751569,
+      "missing": 1821935791,
+      "zero_token_cost": 796.0780578000001
+    },
+    {
+      "date": "2026-07-12",
+      "provider": "openai",
+      "month": 7,
+      "N": 11140208337550,
+      "C": 10000648.7370731,
+      "T": 12255939356263,
+      "S": 10001822.2185541,
+      "missing": 52851002453,
+      "zero_token_cost": 0.00796875
+    },
+    {
+      "date": "2026-07-19",
+      "provider": "anthropic",
+      "month": 7,
+      "N": 11878135863876,
+      "C": 16086517.3178706,
+      "T": 20851802581479,
+      "S": 16092496.721984297,
+      "missing": 25488040801,
+      "zero_token_cost": 485.50942105
+    },
+    {
+      "date": "2026-07-19",
+      "provider": "openai",
+      "month": 7,
+      "N": 12141282679925,
+      "C": 11343091.83724009,
+      "T": 13663191827799,
+      "S": 11344229.782583587,
+      "missing": 71072776405,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-07-26",
+      "provider": "anthropic",
+      "month": 7,
+      "N": 13030616785645,
+      "C": 18288085.8534293,
+      "T": 22260517516387,
+      "S": 18299230.918103,
+      "missing": 12272870739,
+      "zero_token_cost": 837.9008362499999
+    },
+    {
+      "date": "2026-07-26",
+      "provider": "openai",
+      "month": 7,
+      "N": 13153359485408,
+      "C": 12286813.75397203,
+      "T": 14867335580532,
+      "S": 12290120.645514024,
+      "missing": 97607712838,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-08-02",
+      "provider": "anthropic",
+      "month": 8,
+      "N": 15671588705215,
+      "C": 20374337.36883325,
+      "T": 26345694811839,
+      "S": 20385209.934505705,
+      "missing": 40863121,
+      "zero_token_cost": 473.60689935
+    },
+    {
+      "date": "2026-08-02",
+      "provider": "openai",
+      "month": 8,
+      "N": 14310497424785,
+      "C": 12120257.26204996,
+      "T": 16563818089133,
+      "S": 12127214.322263462,
+      "missing": 129084000328,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-08-09",
+      "provider": "anthropic",
+      "month": 8,
+      "N": 16183478110795,
+      "C": 19440215.16784464,
+      "T": 27374767166627,
+      "S": 19444187.87067639,
+      "missing": 0,
+      "zero_token_cost": 194.43110825000002
+    },
+    {
+      "date": "2026-08-09",
+      "provider": "openai",
+      "month": 8,
+      "N": 14813105557053,
+      "C": 11343692.56170138,
+      "T": 16849782451114,
+      "S": 11351690.814302383,
+      "missing": 140612330135,
+      "zero_token_cost": 0.06932425
+    },
+    {
+      "date": "2026-08-16",
+      "provider": "anthropic",
+      "month": 8,
+      "N": 16172167561754,
+      "C": 18719261.47989157,
+      "T": 27800490298331,
+      "S": 18724265.3211385,
+      "missing": 28798828,
+      "zero_token_cost": 172.74772349999998
+    },
+    {
+      "date": "2026-08-16",
+      "provider": "openai",
+      "month": 8,
+      "N": 15185513567407,
+      "C": 10774520.09137259,
+      "T": 17097475234030,
+      "S": 10783069.639516838,
+      "missing": 138801254371,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-08-23",
+      "provider": "anthropic",
+      "month": 8,
+      "N": 16466404605334,
+      "C": 18016522.88742458,
+      "T": 28719091594214,
+      "S": 18022910.55640778,
+      "missing": 134210367394,
+      "zero_token_cost": 136.47653150000002
+    },
+    {
+      "date": "2026-08-23",
+      "provider": "openai",
+      "month": 8,
+      "N": 15425909652648,
+      "C": 10564227.16789008,
+      "T": 17561545182672,
+      "S": 10566908.322683226,
+      "missing": 304874488799,
+      "zero_token_cost": 0
+    },
+    {
+      "date": "2026-08-30",
+      "provider": "anthropic",
+      "month": 8,
+      "N": 16013301397205,
+      "C": 17196423.9531166,
+      "T": 28660652626649,
+      "S": 17203744.817302372,
+      "missing": 164556617034,
+      "zero_token_cost": 156.19636725
+    },
+    {
+      "date": "2026-08-30",
+      "provider": "openai",
+      "month": 8,
+      "N": 17061849805736,
+      "C": 10069362.57125073,
+      "T": 19673603873319,
+      "S": 10071372.479578488,
+      "missing": 461668810133,
+      "zero_token_cost": 8.53258025
+    },
+    {
+      "date": "2026-09-06",
+      "provider": "anthropic",
+      "month": 9,
+      "N": 15922820721361,
+      "C": 17072445.7004101,
+      "T": 29618472056660,
+      "S": 17078942.722738072,
+      "missing": 35818574460,
+      "zero_token_cost": 415.0390105000001
+    },
+    {
+      "date": "2026-09-06",
+      "provider": "openai",
+      "month": 9,
+      "N": 17013076225279,
+      "C": 10630869.58540619,
+      "T": 19848899362826,
+      "S": 10633017.625867436,
+      "missing": 396619440757,
+      "zero_token_cost": 2.72279975
+    },
+    {
+      "date": "2026-09-13",
+      "provider": "anthropic",
+      "month": 9,
+      "N": 14783711100301,
+      "C": 14710754.18722577,
+      "T": 27467607500849,
+      "S": 14716240.934583213,
+      "missing": 56105753829,
+      "zero_token_cost": 91.66531875000001
+    },
+    {
+      "date": "2026-09-13",
+      "provider": "openai",
+      "month": 9,
+      "N": 15881435367888,
+      "C": 11602144.60372212,
+      "T": 18481625558590,
+      "S": 11603331.665462624,
+      "missing": 83159215147,
+      "zero_token_cost": 36.739465
+    },
+    {
+      "date": "2026-09-20",
+      "provider": "anthropic",
+      "month": 9,
+      "N": 16519029393219,
+      "C": 15769552.8986878,
+      "T": 30909545052953,
+      "S": 15774573.12185951,
+      "missing": 365291982416,
+      "zero_token_cost": 382.9670095
+    },
+    {
+      "date": "2026-09-20",
+      "provider": "openai",
+      "month": 9,
+      "N": 20070575985283,
+      "C": 15289060.95883472,
+      "T": 23275333271125,
+      "S": 15290297.511769304,
+      "missing": 127402861743,
+      "zero_token_cost": 7.57784283
+    },
+    {
+      "date": "2026-09-27",
+      "provider": "anthropic",
+      "month": 9,
+      "N": 18237880087443,
+      "C": 15716248.30158531,
+      "T": 33441295165362,
+      "S": 15723591.314879235,
+      "missing": 215892648701,
+      "zero_token_cost": 769.5227160000001
+    },
+    {
+      "date": "2026-09-27",
+      "provider": "openai",
+      "month": 9,
+      "N": 20777888246516,
+      "C": 13644119.72694267,
+      "T": 23740033513333,
+      "S": 13646279.44235264,
+      "missing": 248108958183,
+      "zero_token_cost": 62.749187809999995
+    },
+    {
+      "date": "2026-10-04",
+      "provider": "anthropic",
+      "month": 10,
+      "N": 19488779315783,
+      "C": 15578972.47313207,
+      "T": 36655471670379,
+      "S": 15583203.583931921,
+      "missing": 794441265451,
+      "zero_token_cost": 317.92668675
+    },
+    {
+      "date": "2026-10-04",
+      "provider": "openai",
+      "month": 10,
+      "N": 23694051821657,
+      "C": 12433190.66954503,
+      "T": 26227296085979,
+      "S": 12435420.897331335,
+      "missing": 144918308753,
+      "zero_token_cost": 39.18190217
+    },
+    {
+      "date": "2026-10-11",
+      "provider": "anthropic",
+      "month": 10,
+      "N": 25146006422083,
+      "C": 20221880.22128914,
+      "T": 42724724082806,
+      "S": 20225929.59437014,
+      "missing": 613031313288,
+      "zero_token_cost": 199.40127425
+    },
+    {
+      "date": "2026-10-11",
+      "provider": "openai",
+      "month": 10,
+      "N": 25570512740004,
+      "C": 12243575.09029095,
+      "T": 27722837284884,
+      "S": 12245081.911705695,
+      "missing": 97112318383,
+      "zero_token_cost": 188.29676974999998
+    }
+  ],
+  "families": {
+    "anthropic": [
+      "Opus",
+      "Sonnet",
+      "Haiku",
+      "Fable",
+      "Mythos",
+      "Other"
+    ],
+    "openai": [
+      "Luna/mini/nano",
+      "Sol",
+      "Terra",
+      "Astra",
+      "Other text/legacy",
+      "Embedding/moderation",
+      "Media/audio"
+    ]
+  },
+  "family_rows": [
+    {
+      "provider": "anthropic",
+      "month": 1,
+      "family": "Opus",
+      "total_tokens": 3859979990791,
+      "matched_tokens": 3859979797554,
+      "matched_cost": 4642300.069871083
+    },
+    {
+      "provider": "anthropic",
+      "month": 1,
+      "family": "Sonnet",
+      "total_tokens": 4076237012732,
+      "matched_tokens": 4076237012732,
+      "matched_cost": 6984332.1003190335
+    },
+    {
+      "provider": "anthropic",
+      "month": 1,
+      "family": "Haiku",
+      "total_tokens": 1086879048323,
+      "matched_tokens": 1086702824850,
+      "matched_cost": 666928.6512053914
+    },
+    {
+      "provider": "anthropic",
+      "month": 1,
+      "family": "Fable",
+      "total_tokens": 0,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "anthropic",
+      "month": 1,
+      "family": "Mythos",
+      "total_tokens": 0,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "anthropic",
+      "month": 1,
+      "family": "Other",
+      "total_tokens": 2868135615,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "anthropic",
+      "month": 2,
+      "family": "Opus",
+      "total_tokens": 8457123975335,
+      "matched_tokens": 8457123975335,
+      "matched_cost": 11620584.312604496
+    },
+    {
+      "provider": "anthropic",
+      "month": 2,
+      "family": "Sonnet",
+      "total_tokens": 6123849386142,
+      "matched_tokens": 6123849386142,
+      "matched_cost": 9526535.472249689
+    },
+    {
+      "provider": "anthropic",
+      "month": 2,
+      "family": "Haiku",
+      "total_tokens": 1910211734691,
+      "matched_tokens": 1909882749178,
+      "matched_cost": 1108262.8036879217
+    },
+    {
+      "provider": "anthropic",
+      "month": 2,
+      "family": "Fable",
+      "total_tokens": 0,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "anthropic",
+      "month": 2,
+      "family": "Mythos",
+      "total_tokens": 0,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "anthropic",
+      "month": 2,
+      "family": "Other",
+      "total_tokens": 29167186757,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "anthropic",
+      "month": 3,
+      "family": "Opus",
+      "total_tokens": 19383904486040,
+      "matched_tokens": 19383885941706,
+      "matched_cost": 27233069.030584436
+    },
+    {
+      "provider": "anthropic",
+      "month": 3,
+      "family": "Sonnet",
+      "total_tokens": 12248954937643,
+      "matched_tokens": 12248911641801,
+      "matched_cost": 15970904.653283078
+    },
+    {
+      "provider": "anthropic",
+      "month": 3,
+      "family": "Haiku",
+      "total_tokens": 3644254659642,
+      "matched_tokens": 3644254659642,
+      "matched_cost": 1773687.786545985
+    },
+    {
+      "provider": "anthropic",
+      "month": 3,
+      "family": "Fable",
+      "total_tokens": 0,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "anthropic",
+      "month": 3,
+      "family": "Mythos",
+      "total_tokens": 0,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "anthropic",
+      "month": 3,
+      "family": "Other",
+      "total_tokens": 3547616022,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "anthropic",
+      "month": 4,
+      "family": "Opus",
+      "total_tokens": 24479081434506,
+      "matched_tokens": 24479049154430,
+      "matched_cost": 23675519.042850606
+    },
+    {
+      "provider": "anthropic",
+      "month": 4,
+      "family": "Sonnet",
+      "total_tokens": 11707866886277,
+      "matched_tokens": 11707846073291,
+      "matched_cost": 11594764.863995844
+    },
+    {
+      "provider": "anthropic",
+      "month": 4,
+      "family": "Haiku",
+      "total_tokens": 3198333493111,
+      "matched_tokens": 3198333493111,
+      "matched_cost": 1339370.8098186739
+    },
+    {
+      "provider": "anthropic",
+      "month": 4,
+      "family": "Fable",
+      "total_tokens": 0,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "anthropic",
+      "month": 4,
+      "family": "Mythos",
+      "total_tokens": 0,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "anthropic",
+      "month": 4,
+      "family": "Other",
+      "total_tokens": 32385630205,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "anthropic",
+      "month": 5,
+      "family": "Opus",
+      "total_tokens": 49245142576636,
+      "matched_tokens": 49245105810485,
+      "matched_cost": 39679039.493283235
+    },
+    {
+      "provider": "anthropic",
+      "month": 5,
+      "family": "Sonnet",
+      "total_tokens": 17563802316457,
+      "matched_tokens": 17563802316457,
+      "matched_cost": 14952262.388472924
+    },
+    {
+      "provider": "anthropic",
+      "month": 5,
+      "family": "Haiku",
+      "total_tokens": 4084192923354,
+      "matched_tokens": 4084192923354,
+      "matched_cost": 1837359.8577045444
+    },
+    {
+      "provider": "anthropic",
+      "month": 5,
+      "family": "Fable",
+      "total_tokens": 0,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "anthropic",
+      "month": 5,
+      "family": "Mythos",
+      "total_tokens": 0,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "anthropic",
+      "month": 5,
+      "family": "Other",
+      "total_tokens": 27228931466,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "anthropic",
+      "month": 6,
+      "family": "Opus",
+      "total_tokens": 44377786238452,
+      "matched_tokens": 44377646854014,
+      "matched_cost": 36757727.212806195
+    },
+    {
+      "provider": "anthropic",
+      "month": 6,
+      "family": "Sonnet",
+      "total_tokens": 15409499162367,
+      "matched_tokens": 15409499162367,
+      "matched_cost": 11821687.431846244
+    },
+    {
+      "provider": "anthropic",
+      "month": 6,
+      "family": "Haiku",
+      "total_tokens": 11177428688219,
+      "matched_tokens": 11177428688219,
+      "matched_cost": 2721976.8399297316
+    },
+    {
+      "provider": "anthropic",
+      "month": 6,
+      "family": "Fable",
+      "total_tokens": 1319251778079,
+      "matched_tokens": 1319251778079,
+      "matched_cost": 1411615.668896624
+    },
+    {
+      "provider": "anthropic",
+      "month": 6,
+      "family": "Mythos",
+      "total_tokens": 0,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "anthropic",
+      "month": 6,
+      "family": "Other",
+      "total_tokens": 92934347436,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "anthropic",
+      "month": 7,
+      "family": "Opus",
+      "total_tokens": 44232570803613,
+      "matched_tokens": 44232418320083,
+      "matched_cost": 40484091.18836069
+    },
+    {
+      "provider": "anthropic",
+      "month": 7,
+      "family": "Sonnet",
+      "total_tokens": 26272524907158,
+      "matched_tokens": 26272509946739,
+      "matched_cost": 13646513.151726363
+    },
+    {
+      "provider": "anthropic",
+      "month": 7,
+      "family": "Haiku",
+      "total_tokens": 3428447066897,
+      "matched_tokens": 3428447066897,
+      "matched_cost": 1515775.3218100842
+    },
+    {
+      "provider": "anthropic",
+      "month": 7,
+      "family": "Fable",
+      "total_tokens": 8440237360606,
+      "matched_tokens": 8440237360606,
+      "matched_cost": 8423812.105530443
+    },
+    {
+      "provider": "anthropic",
+      "month": 7,
+      "family": "Mythos",
+      "total_tokens": 35341147026,
+      "matched_tokens": 35341147026,
+      "matched_cost": 239007.964906
+    },
+    {
+      "provider": "anthropic",
+      "month": 7,
+      "family": "Other",
+      "total_tokens": 76915618640,
+      "matched_tokens": 33090295471,
+      "matched_cost": 0.40503105
+    },
+    {
+      "provider": "anthropic",
+      "month": 8,
+      "family": "Opus",
+      "total_tokens": 77467986336742,
+      "matched_tokens": 77467854206848,
+      "matched_cost": 60960402.7529804
+    },
+    {
+      "provider": "anthropic",
+      "month": 8,
+      "family": "Sonnet",
+      "total_tokens": 44392129406228,
+      "matched_tokens": 44392129406228,
+      "matched_cost": 18238920.790719263
+    },
+    {
+      "provider": "anthropic",
+      "month": 8,
+      "family": "Haiku",
+      "total_tokens": 3720632634367,
+      "matched_tokens": 3720632634367,
+      "matched_cost": 1722132.0416684747
+    },
+    {
+      "provider": "anthropic",
+      "month": 8,
+      "family": "Fable",
+      "total_tokens": 12933490107729,
+      "matched_tokens": 12933490107729,
+      "matched_cost": 12189940.964909753
+    },
+    {
+      "provider": "anthropic",
+      "month": 8,
+      "family": "Mythos",
+      "total_tokens": 87753496111,
+      "matched_tokens": 87753496111,
+      "matched_cost": 667788.491123
+    },
+    {
+      "provider": "anthropic",
+      "month": 8,
+      "family": "Other",
+      "total_tokens": 298704516483,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "anthropic",
+      "month": 9,
+      "family": "Opus",
+      "total_tokens": 63023886426352,
+      "matched_tokens": 63023691018823,
+      "matched_cost": 38905342.40452321
+    },
+    {
+      "provider": "anthropic",
+      "month": 9,
+      "family": "Sonnet",
+      "total_tokens": 39404321571933,
+      "matched_tokens": 39404321571933,
+      "matched_cost": 11412667.122291729
+    },
+    {
+      "provider": "anthropic",
+      "month": 9,
+      "family": "Haiku",
+      "total_tokens": 2898766242301,
+      "matched_tokens": 2898766242301,
+      "matched_cost": 1052513.3556835174
+    },
+    {
+      "provider": "anthropic",
+      "month": 9,
+      "family": "Fable",
+      "total_tokens": 15417235684168,
+      "matched_tokens": 15417235684168,
+      "matched_cost": 11895009.899662476
+    },
+    {
+      "provider": "anthropic",
+      "month": 9,
+      "family": "Mythos",
+      "total_tokens": 19796299193,
+      "matched_tokens": 19796299193,
+      "matched_cost": 26156.11784436
+    },
+    {
+      "provider": "anthropic",
+      "month": 9,
+      "family": "Other",
+      "total_tokens": 672913551877,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "anthropic",
+      "month": 10,
+      "family": "Opus",
+      "total_tokens": 53800228823961,
+      "matched_tokens": 53800202107442,
+      "matched_cost": 25852332.61090533
+    },
+    {
+      "provider": "anthropic",
+      "month": 10,
+      "family": "Sonnet",
+      "total_tokens": 17037960629144,
+      "matched_tokens": 17037960629144,
+      "matched_cost": 5413329.019392818
+    },
+    {
+      "provider": "anthropic",
+      "month": 10,
+      "family": "Haiku",
+      "total_tokens": 1474215073500,
+      "matched_tokens": 1474215073500,
+      "matched_cost": 502268.62466579996
+    },
+    {
+      "provider": "anthropic",
+      "month": 10,
+      "family": "Fable",
+      "total_tokens": 5635446307866,
+      "matched_tokens": 5635446307866,
+      "matched_cost": 4003753.6698874193
+    },
+    {
+      "provider": "anthropic",
+      "month": 10,
+      "family": "Mythos",
+      "total_tokens": 24899056494,
+      "matched_tokens": 24899056494,
+      "matched_cost": 36931.9254897
+    },
+    {
+      "provider": "anthropic",
+      "month": 10,
+      "family": "Other",
+      "total_tokens": 1407445862220,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "openai",
+      "month": 1,
+      "family": "Luna/mini/nano",
+      "total_tokens": 9344408974232,
+      "matched_tokens": 9344408972352,
+      "matched_cost": 2423284.391188835
+    },
+    {
+      "provider": "openai",
+      "month": 1,
+      "family": "Sol",
+      "total_tokens": 0,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "openai",
+      "month": 1,
+      "family": "Terra",
+      "total_tokens": 0,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "openai",
+      "month": 1,
+      "family": "Astra",
+      "total_tokens": 0,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "openai",
+      "month": 1,
+      "family": "Other text/legacy",
+      "total_tokens": 4349441116390,
+      "matched_tokens": 4348911216754,
+      "matched_cost": 6855438.550289059
+    },
+    {
+      "provider": "openai",
+      "month": 1,
+      "family": "Embedding/moderation",
+      "total_tokens": 699424894511,
+      "matched_tokens": 657436912496,
+      "matched_cost": 54552.740099950795
+    },
+    {
+      "provider": "openai",
+      "month": 1,
+      "family": "Media/audio",
+      "total_tokens": 26733393524,
+      "matched_tokens": 26028660990,
+      "matched_cost": 145935.12400335423
+    },
+    {
+      "provider": "openai",
+      "month": 2,
+      "family": "Luna/mini/nano",
+      "total_tokens": 10946459063241,
+      "matched_tokens": 10946459063241,
+      "matched_cost": 2819389.9994975706
+    },
+    {
+      "provider": "openai",
+      "month": 2,
+      "family": "Sol",
+      "total_tokens": 0,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "openai",
+      "month": 2,
+      "family": "Terra",
+      "total_tokens": 0,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "openai",
+      "month": 2,
+      "family": "Astra",
+      "total_tokens": 0,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "openai",
+      "month": 2,
+      "family": "Other text/legacy",
+      "total_tokens": 6716617653393,
+      "matched_tokens": 6715667984564,
+      "matched_cost": 10824696.703727417
+    },
+    {
+      "provider": "openai",
+      "month": 2,
+      "family": "Embedding/moderation",
+      "total_tokens": 788292174469,
+      "matched_tokens": 745918721449,
+      "matched_cost": 56754.3254199281
+    },
+    {
+      "provider": "openai",
+      "month": 2,
+      "family": "Media/audio",
+      "total_tokens": 55670764561,
+      "matched_tokens": 55670764561,
+      "matched_cost": 292219.87938335055
+    },
+    {
+      "provider": "openai",
+      "month": 3,
+      "family": "Luna/mini/nano",
+      "total_tokens": 16120251451470,
+      "matched_tokens": 16120251451470,
+      "matched_cost": 4104828.4972449997
+    },
+    {
+      "provider": "openai",
+      "month": 3,
+      "family": "Sol",
+      "total_tokens": 0,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "openai",
+      "month": 3,
+      "family": "Terra",
+      "total_tokens": 0,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "openai",
+      "month": 3,
+      "family": "Astra",
+      "total_tokens": 0,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "openai",
+      "month": 3,
+      "family": "Other text/legacy",
+      "total_tokens": 11755701068700,
+      "matched_tokens": 11754289694398,
+      "matched_cost": 16378112.260648025
+    },
+    {
+      "provider": "openai",
+      "month": 3,
+      "family": "Embedding/moderation",
+      "total_tokens": 992659521949,
+      "matched_tokens": 929255556715,
+      "matched_cost": 82133.2770853019
+    },
+    {
+      "provider": "openai",
+      "month": 3,
+      "family": "Media/audio",
+      "total_tokens": 49064203752,
+      "matched_tokens": 49064203752,
+      "matched_cost": 225646.60551216293
+    },
+    {
+      "provider": "openai",
+      "month": 4,
+      "family": "Luna/mini/nano",
+      "total_tokens": 14179114453836,
+      "matched_tokens": 14179114453836,
+      "matched_cost": 4186854.5578134186
+    },
+    {
+      "provider": "openai",
+      "month": 4,
+      "family": "Sol",
+      "total_tokens": 0,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "openai",
+      "month": 4,
+      "family": "Terra",
+      "total_tokens": 0,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "openai",
+      "month": 4,
+      "family": "Astra",
+      "total_tokens": 0,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "openai",
+      "month": 4,
+      "family": "Other text/legacy",
+      "total_tokens": 11539061002960,
+      "matched_tokens": 11533905566981,
+      "matched_cost": 13537479.626018552
+    },
+    {
+      "provider": "openai",
+      "month": 4,
+      "family": "Embedding/moderation",
+      "total_tokens": 993742954329,
+      "matched_tokens": 922645227655,
+      "matched_cost": 62765.276876412405
+    },
+    {
+      "provider": "openai",
+      "month": 4,
+      "family": "Media/audio",
+      "total_tokens": 82992100901,
+      "matched_tokens": 82992100901,
+      "matched_cost": 524085.25404536305
+    },
+    {
+      "provider": "openai",
+      "month": 5,
+      "family": "Luna/mini/nano",
+      "total_tokens": 18154095944054,
+      "matched_tokens": 18154095944054,
+      "matched_cost": 5500719.056862531
+    },
+    {
+      "provider": "openai",
+      "month": 5,
+      "family": "Sol",
+      "total_tokens": 253208538,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "openai",
+      "month": 5,
+      "family": "Terra",
+      "total_tokens": 0,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "openai",
+      "month": 5,
+      "family": "Astra",
+      "total_tokens": 0,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "openai",
+      "month": 5,
+      "family": "Other text/legacy",
+      "total_tokens": 19752660377118,
+      "matched_tokens": 19651383066949,
+      "matched_cost": 23400771.878724396
+    },
+    {
+      "provider": "openai",
+      "month": 5,
+      "family": "Embedding/moderation",
+      "total_tokens": 1578214114877,
+      "matched_tokens": 1475170354264,
+      "matched_cost": 100229.2358358953
+    },
+    {
+      "provider": "openai",
+      "month": 5,
+      "family": "Media/audio",
+      "total_tokens": 80840083079,
+      "matched_tokens": 80840083079,
+      "matched_cost": 625732.9427973294
+    },
+    {
+      "provider": "openai",
+      "month": 6,
+      "family": "Luna/mini/nano",
+      "total_tokens": 15464096964094,
+      "matched_tokens": 15464096964094,
+      "matched_cost": 4242871.841488016
+    },
+    {
+      "provider": "openai",
+      "month": 6,
+      "family": "Sol",
+      "total_tokens": 3999825352,
+      "matched_tokens": 3999825352,
+      "matched_cost": 2463.44
+    },
+    {
+      "provider": "openai",
+      "month": 6,
+      "family": "Terra",
+      "total_tokens": 1006155,
+      "matched_tokens": 1006155,
+      "matched_cost": 0.43
+    },
+    {
+      "provider": "openai",
+      "month": 6,
+      "family": "Astra",
+      "total_tokens": 0,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "openai",
+      "month": 6,
+      "family": "Other text/legacy",
+      "total_tokens": 20018812196096,
+      "matched_tokens": 19637845184890,
+      "matched_cost": 23757950.637473498
+    },
+    {
+      "provider": "openai",
+      "month": 6,
+      "family": "Embedding/moderation",
+      "total_tokens": 1743875636395,
+      "matched_tokens": 1657646049722,
+      "matched_cost": 97696.28715371169
+    },
+    {
+      "provider": "openai",
+      "month": 6,
+      "family": "Media/audio",
+      "total_tokens": 65571544935,
+      "matched_tokens": 65571544935,
+      "matched_cost": 613753.0395396018
+    },
+    {
+      "provider": "openai",
+      "month": 7,
+      "family": "Luna/mini/nano",
+      "total_tokens": 15683623234945,
+      "matched_tokens": 15683623234945,
+      "matched_cost": 4753076.961492865
+    },
+    {
+      "provider": "openai",
+      "month": 7,
+      "family": "Sol",
+      "total_tokens": 12843109672527,
+      "matched_tokens": 12843109672527,
+      "matched_cost": 11710889.036863944
+    },
+    {
+      "provider": "openai",
+      "month": 7,
+      "family": "Terra",
+      "total_tokens": 1717380160023,
+      "matched_tokens": 1717380160023,
+      "matched_cost": 1325507.6665453594
+    },
+    {
+      "provider": "openai",
+      "month": 7,
+      "family": "Astra",
+      "total_tokens": 0,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "openai",
+      "month": 7,
+      "family": "Other text/legacy",
+      "total_tokens": 17507348335020,
+      "matched_tokens": 17327382947361,
+      "matched_cost": 21596549.93674904
+    },
+    {
+      "provider": "openai",
+      "month": 7,
+      "family": "Embedding/moderation",
+      "total_tokens": 1580687541009,
+      "matched_tokens": 1498322838353,
+      "matched_cost": 96124.51181173089
+    },
+    {
+      "provider": "openai",
+      "month": 7,
+      "family": "Media/audio",
+      "total_tokens": 85326615487,
+      "matched_tokens": 85306178722,
+      "matched_cost": 727261.643127785
+    },
+    {
+      "provider": "openai",
+      "month": 8,
+      "family": "Luna/mini/nano",
+      "total_tokens": 32342614841645,
+      "matched_tokens": 32342614841645,
+      "matched_cost": 6341561.829403441
+    },
+    {
+      "provider": "openai",
+      "month": 8,
+      "family": "Sol",
+      "total_tokens": 32739629710250,
+      "matched_tokens": 32449728928966,
+      "matched_cost": 25876361.410561193
+    },
+    {
+      "provider": "openai",
+      "month": 8,
+      "family": "Terra",
+      "total_tokens": 6732352624184,
+      "matched_tokens": 6732352624184,
+      "matched_cost": 4612385.521813239
+    },
+    {
+      "provider": "openai",
+      "month": 8,
+      "family": "Astra",
+      "total_tokens": 0,
+      "matched_tokens": 0,
+      "matched_cost": 0
+    },
+    {
+      "provider": "openai",
+      "month": 8,
+      "family": "Other text/legacy",
+      "total_tokens": 13767861730464,
+      "matched_tokens": 12987688359804,
+      "matched_cost": 16874180.32466204
+    },
+    {
+      "provider": "openai",
+      "month": 8,
+      "family": "Embedding/moderation",
+      "total_tokens": 2033666948266,
+      "matched_tokens": 1928735688480,
+      "matched_cost": 124222.8899999956
+    },
+    {
+      "provider": "openai",
+      "month": 8,
+      "family": "Media/audio",
+      "total_tokens": 130098975459,
+      "matched_tokens": 130063503423,
+      "matched_cost": 1071534.9999999993
+    },
+    {
+      "provider": "openai",
+      "month": 9,
+      "family": "Luna/mini/nano",
+      "total_tokens": 35949792152136,
+      "matched_tokens": 35949792152136,
+      "matched_cost": 5722238.559890701
+    },
+    {
+      "provider": "openai",
+      "month": 9,
+      "family": "Sol",
+      "total_tokens": 22701059033015,
+      "matched_tokens": 22701059033015,
+      "matched_cost": 15667662.770055901
+    },
+    {
+      "provider": "openai",
+      "month": 9,
+      "family": "Terra",
+      "total_tokens": 5727130994068,
+      "matched_tokens": 5727130994068,
+      "matched_cost": 3416687.5204592636
+    },
+    {
+      "provider": "openai",
+      "month": 9,
+      "family": "Astra",
+      "total_tokens": 10810487184607,
+      "matched_tokens": 10810487184607,
+      "matched_cost": 15063942.92280335
+    },
+    {
+      "provider": "openai",
+      "month": 9,
+      "family": "Other text/legacy",
+      "total_tokens": 8472774332169,
+      "matched_tokens": 7713538550957,
+      "matched_cost": 10111157.442947384
+    },
+    {
+      "provider": "openai",
+      "month": 9,
+      "family": "Embedding/moderation",
+      "total_tokens": 1544214486084,
+      "matched_tokens": 1448159791466,
+      "matched_cost": 86709.6399999997
+    },
+    {
+      "provider": "openai",
+      "month": 9,
+      "family": "Media/audio",
+      "total_tokens": 140433523795,
+      "matched_tokens": 140433523795,
+      "matched_cost": 1104417.6000000017
+    },
+    {
+      "provider": "openai",
+      "month": 10,
+      "family": "Luna/mini/nano",
+      "total_tokens": 26895748387041,
+      "matched_tokens": 26895748387041,
+      "matched_cost": 2984078.78366372
+    },
+    {
+      "provider": "openai",
+      "month": 10,
+      "family": "Sol",
+      "total_tokens": 15458837590450,
+      "matched_tokens": 15458837590450,
+      "matched_cost": 7436938.346469619
+    },
+    {
+      "provider": "openai",
+      "month": 10,
+      "family": "Terra",
+      "total_tokens": 1778157428800,
+      "matched_tokens": 1778157428800,
+      "matched_cost": 1082443.5631501419
+    },
+    {
+      "provider": "openai",
+      "month": 10,
+      "family": "Astra",
+      "total_tokens": 4957594047526,
+      "matched_tokens": 4957594047526,
+      "matched_cost": 7519572.49974335
+    },
+    {
+      "provider": "openai",
+      "month": 10,
+      "family": "Other text/legacy",
+      "total_tokens": 3865368064294,
+      "matched_tokens": 3689718871095,
+      "matched_cost": 4845761.687338273
+    },
+    {
+      "provider": "openai",
+      "month": 10,
+      "family": "Embedding/moderation",
+      "total_tokens": 912299971528,
+      "matched_tokens": 845918537591,
+      "matched_cost": 51833.429999999185
+    },
+    {
+      "provider": "openai",
+      "month": 10,
+      "family": "Media/audio",
+      "total_tokens": 82127881224,
+      "matched_tokens": 82127881224,
+      "matched_cost": 759647.0199999998
+    }
+  ],
+  "monthly_expected": [
+    {
+      "provider": "anthropic",
+      "month": 1,
+      "price_month": 1,
+      "gross_arr_busd": 11.988850629600003,
+      "net_arr_busd": 10.670077060344003,
+      "api_gross_arr_busd": 10.190523035160004,
+      "published_price": 1.4424351811635772,
+      "matched_price": 1.3624814714655509,
+      "minimum_reference": 1.3624814714655509,
+      "base_gross_tokens_Q_month": 0.6926279245311212,
+      "reference_gross_tokens_Q_month": 0.7332730071737059,
+      "api_gross_tokens_Q_month": 0.588733735851453,
+      "gap": 0.05973873893776571,
+      "coverage": 0.999662689518619,
+      "weeks": 4,
+      "start": "2025-12-29",
+      "end": "2026-01-25",
+      "price_status": "Full weekly sample"
+    },
+    {
+      "provider": "anthropic",
+      "month": 2,
+      "price_month": 2,
+      "gross_arr_busd": 16.78439088144,
+      "net_arr_busd": 14.938107884481601,
+      "api_gross_arr_busd": 14.266732249223999,
+      "published_price": 1.5029480744162238,
+      "matched_price": 1.3495589579586809,
+      "minimum_reference": 1.3495589579586809,
+      "base_gross_tokens_Q_month": 0.9306371017929437,
+      "reference_gross_tokens_Q_month": 1.0364121047632093,
+      "api_gross_tokens_Q_month": 0.791041536524002,
+      "gap": 0.11639225293518551,
+      "coverage": 0.9982145554910178,
+      "weeks": 4,
+      "start": "2026-01-26",
+      "end": "2026-02-22",
+      "price_status": "Full weekly sample"
+    },
+    {
+      "provider": "anthropic",
+      "month": 3,
+      "price_month": 3,
+      "gross_arr_busd": 26.855025410304005,
+      "net_arr_busd": 23.900972615170566,
+      "api_gross_arr_busd": 22.826771598758405,
+      "published_price": 1.5667080930483381,
+      "matched_price": 1.2749835547596924,
+      "minimum_reference": 1.2749835547596924,
+      "base_gross_tokens_Q_month": 1.4284210275812708,
+      "reference_gross_tokens_Q_month": 1.7552530586277255,
+      "api_gross_tokens_Q_month": 1.2141578734440803,
+      "gap": 0.2293734664553384,
+      "coverage": 0.9998976930696833,
+      "weeks": 5,
+      "start": "2026-02-23",
+      "end": "2026-03-29",
+      "price_status": "Full weekly sample"
+    },
+    {
+      "provider": "anthropic",
+      "month": 4,
+      "price_month": 4,
+      "gross_arr_busd": 37.59703557442561,
+      "net_arr_busd": 33.46136166123879,
+      "api_gross_arr_busd": 31.95748023826177,
+      "published_price": 1.3148330303498723,
+      "matched_price": 0.9295275387673754,
+      "minimum_reference": 0.9295275387673754,
+      "base_gross_tokens_Q_month": 2.3828776928695636,
+      "reference_gross_tokens_Q_month": 3.370622350816537,
+      "api_gross_tokens_Q_month": 2.0254460389391293,
+      "gap": 0.41588472156086076,
+      "coverage": 0.9991770511709501,
+      "weeks": 4,
+      "start": "2026-03-30",
+      "end": "2026-04-26",
+      "price_status": "Full weekly sample"
+    },
+    {
+      "provider": "anthropic",
+      "month": 5,
+      "price_month": 5,
+      "gross_arr_busd": 45.11644268931073,
+      "net_arr_busd": 40.15363399348655,
+      "api_gross_arr_busd": 38.34897628591412,
+      "published_price": 1.1958970276353538,
+      "matched_price": 0.796532538468,
+      "minimum_reference": 0.796532538468,
+      "base_gross_tokens_Q_month": 3.1438355230940074,
+      "reference_gross_tokens_Q_month": 4.720087850615288,
+      "api_gross_tokens_Q_month": 2.672260194629906,
+      "gap": 0.5025811498996371,
+      "coverage": 0.9996155448869305,
+      "weeks": 5,
+      "start": "2026-04-27",
+      "end": "2026-05-31",
+      "price_status": "Full weekly sample"
+    },
+    {
+      "provider": "anthropic",
+      "month": 6,
+      "price_month": 6,
+      "gross_arr_busd": 55.04206008095909,
+      "net_arr_busd": 48.98743347205359,
+      "api_gross_arr_busd": 46.78575106881522,
+      "published_price": 1.098102345255087,
+      "matched_price": 0.7292503692525206,
+      "minimum_reference": 0.7292503692525206,
+      "base_gross_tokens_Q_month": 4.177059050916069,
+      "reference_gross_tokens_Q_month": 6.289799132746987,
+      "api_gross_tokens_Q_month": 3.550500193278659,
+      "gap": 0.5083011496524015,
+      "coverage": 0.9987140409219227,
+      "weeks": 4,
+      "start": "2026-06-01",
+      "end": "2026-06-28",
+      "price_status": "Full weekly sample"
+    },
+    {
+      "provider": "anthropic",
+      "month": 7,
+      "price_month": 7,
+      "gross_arr_busd": 63.29836909310295,
+      "net_arr_busd": 56.335548492861626,
+      "api_gross_arr_busd": 53.8036137291375,
+      "published_price": 1.3097033146698929,
+      "matched_price": 0.7800534400946703,
+      "minimum_reference": 0.7800534400946703,
+      "base_gross_tokens_Q_month": 4.02752595340375,
+      "reference_gross_tokens_Q_month": 6.762182973581573,
+      "api_gross_tokens_Q_month": 3.4233970603931874,
+      "gap": 0.6806414193828128,
+      "coverage": 0.9994666640710448,
+      "weeks": 4,
+      "start": "2026-06-29",
+      "end": "2026-07-26",
+      "price_status": "Full weekly sample"
+    },
+    {
+      "provider": "anthropic",
+      "month": 8,
+      "price_month": 8,
+      "gross_arr_busd": 67.09627123868914,
+      "net_arr_busd": 59.715681402433326,
+      "api_gross_arr_busd": 57.031830552885765,
+      "published_price": 1.1644556408958615,
+      "matched_price": 0.6766084173908207,
+      "minimum_reference": 0.6766084173908207,
+      "base_gross_tokens_Q_month": 4.801690798848961,
+      "reference_gross_tokens_Q_month": 8.263798960880743,
+      "api_gross_tokens_Q_month": 4.081437179021617,
+      "gap": 0.725325740135117,
+      "coverage": 0.9978485590503714,
+      "weeks": 5,
+      "start": "2026-07-27",
+      "end": "2026-08-30",
+      "price_status": "Full weekly sample"
+    },
+    {
+      "provider": "anthropic",
+      "month": 9,
+      "price_month": 9,
+      "gross_arr_busd": 71.12204751301049,
+      "net_arr_busd": 63.29862228657934,
+      "api_gross_arr_busd": 60.45374038605891,
+      "published_price": 0.9664783859394036,
+      "matched_price": 0.5240948300001865,
+      "minimum_reference": 0.5240948300001865,
+      "base_gross_tokens_Q_month": 6.132405420520677,
+      "reference_gross_tokens_Q_month": 11.308711617606999,
+      "api_gross_tokens_Q_month": 5.212544607442576,
+      "gap": 0.8550341589132575,
+      "coverage": 0.9944571308243936,
+      "weeks": 4,
+      "start": "2026-08-31",
+      "end": "2026-09-27",
+      "price_status": "Full weekly sample"
+    },
+    {
+      "provider": "anthropic",
+      "month": 10,
+      "price_month": 10,
+      "gross_arr_busd": 75.38937036379113,
+      "net_arr_busd": 67.0965396237741,
+      "api_gross_arr_busd": 64.08096480922246,
+      "published_price": 0.802084116739682,
+      "matched_price": 0.4592454180448148,
+      "minimum_reference": 0.4592454180448148,
+      "base_gross_tokens_Q_month": 7.832654205712077,
+      "reference_gross_tokens_Q_month": 13.6799351359078,
+      "api_gross_tokens_Q_month": 6.657756074855266,
+      "gap": 0.778437925508908,
+      "coverage": 0.9822692226268221,
+      "weeks": 2,
+      "start": "2026-09-28",
+      "end": "2026-10-11",
+      "price_status": "Partial through Oct 11"
+    },
+    {
+      "provider": "anthropic",
+      "month": 11,
+      "price_month": 10,
+      "gross_arr_busd": 79.9127325856186,
+      "net_arr_busd": 71.12233200120055,
+      "api_gross_arr_busd": 67.92582269777581,
+      "published_price": 0.802084116739682,
+      "matched_price": 0.4592454180448148,
+      "minimum_reference": 0.4592454180448148,
+      "base_gross_tokens_Q_month": 8.302613458054802,
+      "reference_gross_tokens_Q_month": 14.500731244062269,
+      "api_gross_tokens_Q_month": 7.057221439346582,
+      "gap": 0.778437925508908,
+      "coverage": 0.9822692226268221,
+      "weeks": 2,
+      "start": "2026-09-28",
+      "end": "2026-10-11",
+      "price_status": "ESTIMATE: October held flat"
+    },
+    {
+      "provider": "anthropic",
+      "month": 12,
+      "price_month": 10,
+      "gross_arr_busd": 84.70749654075571,
+      "net_arr_busd": 75.3896719212726,
+      "api_gross_arr_busd": 72.00137205964235,
+      "published_price": 0.802084116739682,
+      "matched_price": 0.4592454180448148,
+      "minimum_reference": 0.4592454180448148,
+      "base_gross_tokens_Q_month": 8.80077026553809,
+      "reference_gross_tokens_Q_month": 15.370775118706003,
+      "api_gross_tokens_Q_month": 7.480654725707376,
+      "gap": 0.778437925508908,
+      "coverage": 0.9822692226268221,
+      "weeks": 2,
+      "start": "2026-09-28",
+      "end": "2026-10-11",
+      "price_status": "ESTIMATE: October held flat"
+    },
+    {
+      "provider": "openai",
+      "month": 1,
+      "price_month": 1,
+      "gross_arr_busd": 22.636349368527345,
+      "net_arr_busd": 22.091454000000006,
+      "api_gross_arr_busd": 5.993849053800734,
+      "published_price": 0.6690257081115364,
+      "matched_price": 0.659341452402097,
+      "minimum_reference": 0.659341452402097,
+      "base_gross_tokens_Q_month": 2.8195664598628465,
+      "reference_gross_tokens_Q_month": 2.8609796039744326,
+      "api_gross_tokens_Q_month": 0.7465892791473855,
+      "gap": 0.019127491963494503,
+      "coverage": 0.9970025942475197,
+      "weeks": 4,
+      "start": "2025-12-29",
+      "end": "2026-01-25",
+      "price_status": "Full weekly sample"
+    },
+    {
+      "provider": "openai",
+      "month": 2,
+      "price_month": 2,
+      "gross_arr_busd": 23.768166836953714,
+      "net_arr_busd": 23.196026700000004,
+      "api_gross_arr_busd": 6.293541506490772,
+      "published_price": 0.766402393071956,
+      "matched_price": 0.7578680534008937,
+      "minimum_reference": 0.7578680534008937,
+      "base_gross_tokens_Q_month": 2.58438724572221,
+      "reference_gross_tokens_Q_month": 2.613489987944394,
+      "api_gross_tokens_Q_month": 0.6843164856327943,
+      "gap": 0.014511884667704145,
+      "coverage": 0.9976591003934149,
+      "weeks": 4,
+      "start": "2026-01-26",
+      "end": "2026-02-22",
+      "price_status": "Full weekly sample"
+    },
+    {
+      "provider": "openai",
+      "month": 3,
+      "price_month": 3,
+      "gross_arr_busd": 24.956575178801398,
+      "net_arr_busd": 24.355828035000005,
+      "api_gross_arr_busd": 6.608218581815311,
+      "published_price": 0.7303464401623876,
+      "matched_price": 0.7205774397202198,
+      "minimum_reference": 0.7205774397202198,
+      "base_gross_tokens_Q_month": 2.8475727187374797,
+      "reference_gross_tokens_Q_month": 2.8861777840851435,
+      "api_gross_tokens_Q_month": 0.7540050194473482,
+      "gap": 0.016415430683010657,
+      "coverage": 0.9977586255899363,
+      "weeks": 5,
+      "start": "2026-02-23",
+      "end": "2026-03-29",
+      "price_status": "Full weekly sample"
+    },
+    {
+      "provider": "openai",
+      "month": 4,
+      "price_month": 4,
+      "gross_arr_busd": 26.20440393774147,
+      "net_arr_busd": 25.573619436750008,
+      "api_gross_arr_busd": 6.938629510906075,
+      "published_price": 0.7108958802466038,
+      "matched_price": 0.6853332663882322,
+      "minimum_reference": 0.6853332663882322,
+      "base_gross_tokens_Q_month": 3.071758310637017,
+      "reference_gross_tokens_Q_month": 3.186333474885028,
+      "api_gross_tokens_Q_month": 0.813366826247833,
+      "gap": 0.04083745252070692,
+      "coverage": 0.9971541923001095,
+      "weeks": 4,
+      "start": "2026-03-30",
+      "end": "2026-04-26",
+      "price_status": "Full weekly sample"
+    },
+    {
+      "provider": "openai",
+      "month": 5,
+      "price_month": 5,
+      "gross_arr_busd": 27.51462413462854,
+      "net_arr_busd": 26.852300408587507,
+      "api_gross_arr_busd": 7.285560986451376,
+      "published_price": 0.805620780534887,
+      "matched_price": 0.7527015244964292,
+      "minimum_reference": 0.7527015244964292,
+      "base_gross_tokens_Q_month": 2.8461099812122908,
+      "reference_gross_tokens_Q_month": 3.046207918984035,
+      "api_gross_tokens_Q_month": 0.753617703109869,
+      "gap": 0.07627938082462804,
+      "coverage": 0.994829551892549,
+      "weeks": 5,
+      "start": "2026-04-27",
+      "end": "2026-05-31",
+      "price_status": "Full weekly sample"
+    },
+    {
+      "provider": "openai",
+      "month": 6,
+      "price_month": 6,
+      "gross_arr_busd": 28.890355341359975,
+      "net_arr_busd": 28.194915429016884,
+      "api_gross_arr_busd": 7.6498390357739545,
+      "published_price": 0.8365184945658221,
+      "matched_price": 0.7796739113036228,
+      "minimum_reference": 0.7796739113036228,
+      "base_gross_tokens_Q_month": 2.878035127041127,
+      "reference_gross_tokens_Q_month": 3.0878673466893147,
+      "api_gross_tokens_Q_month": 0.7620711203108195,
+      "gap": 0.08673217106915998,
+      "coverage": 0.9874733986562935,
+      "weeks": 4,
+      "start": "2026-06-01",
+      "end": "2026-06-28",
+      "price_status": "Full weekly sample"
+    },
+    {
+      "provider": "openai",
+      "month": 7,
+      "price_month": 7,
+      "gross_arr_busd": 34.66842640963197,
+      "net_arr_busd": 33.83389851482026,
+      "api_gross_arr_busd": 9.179806842928741,
+      "published_price": 0.907033783833891,
+      "matched_price": 0.8180105274978109,
+      "minimum_reference": 0.8180105274978109,
+      "base_gross_tokens_Q_month": 3.1851465575234617,
+      "reference_gross_tokens_Q_month": 3.531782827995119,
+      "api_gross_tokens_Q_month": 0.8433907503907152,
+      "gap": 0.11493340044043654,
+      "coverage": 0.9946911386283438,
+      "weeks": 4,
+      "start": "2026-06-29",
+      "end": "2026-07-26",
+      "price_status": "Full weekly sample"
+    },
+    {
+      "provider": "openai",
+      "month": 8,
+      "price_month": 8,
+      "gross_arr_busd": 41.602111691558356,
+      "net_arr_busd": 40.60067821778431,
+      "api_gross_arr_busd": 11.015768211514484,
+      "published_price": 0.714509007486369,
+      "matched_price": 0.6341630606596111,
+      "minimum_reference": 0.6341630606596111,
+      "base_gross_tokens_Q_month": 4.852062891634484,
+      "reference_gross_tokens_Q_month": 5.46680003303446,
+      "api_gross_tokens_Q_month": 1.284771325028238,
+      "gap": 0.1425754456672339,
+      "coverage": 0.9866086445765736,
+      "weeks": 5,
+      "start": "2026-07-27",
+      "end": "2026-08-30",
+      "price_status": "Full weekly sample"
+    },
+    {
+      "provider": "openai",
+      "month": 9,
+      "price_month": 9,
+      "gross_arr_busd": 49.92253402987002,
+      "net_arr_busd": 48.72081386134117,
+      "api_gross_arr_busd": 13.218921853817378,
+      "published_price": 0.6938449974727378,
+      "matched_price": 0.6056628277129608,
+      "minimum_reference": 0.6056628277129608,
+      "base_gross_tokens_Q_month": 5.995879748804122,
+      "reference_gross_tokens_Q_month": 6.868856695176721,
+      "api_gross_tokens_Q_month": 1.5876410800161902,
+      "gap": 0.1573426587563853,
+      "coverage": 0.9899785395789458,
+      "weeks": 4,
+      "start": "2026-08-31",
+      "end": "2026-09-27",
+      "price_status": "Full weekly sample"
+    },
+    {
+      "provider": "openai",
+      "month": 10,
+      "price_month": 10,
+      "gross_arr_busd": 56.911688794051834,
+      "net_arr_busd": 55.54172780192894,
+      "api_gross_arr_busd": 15.06957091335181,
+      "published_price": 0.5009029508207629,
+      "matched_price": 0.45952610629590185,
+      "minimum_reference": 0.45952610629590185,
+      "base_gross_tokens_Q_month": 9.468182858708497,
+      "reference_gross_tokens_Q_month": 10.320720994649502,
+      "api_gross_tokens_Q_month": 2.5070676346684384,
+      "gap": 0.09511032627391636,
+      "coverage": 0.9955138085484935,
+      "weeks": 2,
+      "start": "2026-09-28",
+      "end": "2026-10-11",
+      "price_status": "Partial through Oct 11"
+    },
+    {
+      "provider": "openai",
+      "month": 11,
+      "price_month": 10,
+      "gross_arr_busd": 64.8793252252191,
+      "net_arr_busd": 63.317569694199,
+      "api_gross_arr_busd": 17.179310841221074,
+      "published_price": 0.5009029508207629,
+      "matched_price": 0.45952610629590185,
+      "minimum_reference": 0.45952610629590185,
+      "base_gross_tokens_Q_month": 10.79372845892769,
+      "reference_gross_tokens_Q_month": 11.765621933900434,
+      "api_gross_tokens_Q_month": 2.858057103522021,
+      "gap": 0.09511032627391636,
+      "coverage": 0.9955138085484935,
+      "weeks": 2,
+      "start": "2026-09-28",
+      "end": "2026-10-11",
+      "price_status": "ESTIMATE: October held flat"
+    },
+    {
+      "provider": "openai",
+      "month": 12,
+      "price_month": 10,
+      "gross_arr_busd": 73.96243075674978,
+      "net_arr_busd": 72.18202945138687,
+      "api_gross_arr_busd": 19.58441435899202,
+      "published_price": 0.5009029508207629,
+      "matched_price": 0.45952610629590185,
+      "minimum_reference": 0.45952610629590185,
+      "base_gross_tokens_Q_month": 12.304850443177568,
+      "reference_gross_tokens_Q_month": 13.412809004646496,
+      "api_gross_tokens_Q_month": 3.2581850980151033,
+      "gap": 0.09511032627391636,
+      "coverage": 0.9955138085484935,
+      "weeks": 2,
+      "start": "2026-09-28",
+      "end": "2026-10-11",
+      "price_status": "ESTIMATE: October held flat"
+    }
+  ],
+  "method": "Monthly token-weighted means over nonoverlapping weeks ending in month; not exact calendar-month billing. October through Oct11; November/December carry October price/mix. Full-ARR and API-only equivalents are conditional scenarios, not measured company consumption."
+}

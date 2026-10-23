@@ -5,7 +5,7 @@
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\NBIS` (20-F filings + transcripts) · `E:\briefings\2026`. Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-21 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-10-23 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -14,7 +14,7 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\NBIS` (20-F filings + 
 | Gross margin | 72.1% | 73.6% |
 | EBITDA | $1.3bn | $6.8bn |
 | EPS | $-3.25 | $-3.86 |
-| Capex | $23.2bn | $32.4bn |
+| Capex | $23.4bn | $32.8bn |
 | OCF (≈EBITDA) | $1.3bn | $6.8bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
@@ -267,6 +267,12 @@ Beat-and-raise, with the EBITDA inflection now the story. **Group revenue $399m 
 
 ## Intra-quarter — calls, commentary & reports (since the last print)
 _Q1 2026 · May 11 → Jul 14, 2026 · sell-side / expert calls / reports between earnings. Timeline visual: [timeline.html](timeline.html)._
+
+**🆕 2026-10-23 — PRIVATE DEVELOPER ON A UBS EXPERT CALL (READ-ACROSS; NEBIUS NOT NAMED): BUILD COST $10-15M/MW AND "NOTHING IS GETTING CHEAPER"; CONSTRUCTION DEBT IS NOW THE BINDING CONSTRAINT; NEOCLOUD CREDIT WRAPPERS "FALLEN OUT OF FAVOR"**
+
+_Source: **John Day (CCO, CleanArc Data Centers) hosted by Ryan Gravett / John Hodulik (UBS US Communications) @ UBS Expert Call 'Keeping up with the AI Infrastructure Build', 2026-10-23 — Capstone notes (Notion transcript)** ([transcript](../_equity_calls/Overall/2026-10-23_UBS_Expert-call-AI-infrastructure-build-DC-demand-higher-rates-CleanArc-John-Day.md)). ⚠️ **EXPERT / PRIVATE-DEVELOPER VOICE, NOT BROKER RESEARCH:** Day is the sales-and-leasing executive of a private hyperscale developer (CleanArc; ex-QTS and Sabey Data Centers [transcribed 'Sabi']) talking his market and his book — no ratings, PTs or estimates; much of the financing colour is peer hearsay ("I'm hearing", "I've heard") with no counts, and he declined to give demand numbers. The UBS hosts' questions and framings (rates, "mad rush to secure capital", Texas, the $/MW quotes, SpaceX) are kept apart from his answers. Notion machine transcript, speakers unlabelled; host names from the UBS invite (transcribed 'Gervette', 'Hudlick'); audience questioners appear by first name only and are not carried. First archived vintage (the host says "welcome back"; no earlier one on disk)._
+
+- **Read-across for a self-building neocloud:** Day calls the $10-15M per MW all-in facility build cost *"reasonable"* and says sub-$10M/MW is no longer achievable (*"Maybe Elon"*); frontier-lab designs without backup generators come in cheaper. The host asked for the "all-in fully loaded cost per megawatt for developments"; neither side said whether IT is included. Capstone reads it as a facility-MW development-cost basis excluding GPUs (inference, not stated on the call), NOT the ~$50bn/GW all-in on this page's 5 GW programme and NOT the $10→13M/MW rental marks. Debt is *"a major constraint right now"*: lenders cap single-name exposure, and borrowers are moving to 144A, HY and private credit. Neocloud lease wrappers are giving way to IG head leases plus assignment. ➤ Capstone read, not Day's: this fits the 10-22 secured, SOFR-based 364-day Citi facility as the funding route, and it makes cost of capital, not demand, the gating variable on the ~80% of the programme still unfinanced. Full context on [ai-datacenter-power](themes/ai-datacenter-power.md).
 
 **🆕 2026-10-20 — DC TRANSACTION LAWYER ON A BERNSTEIN WEBINAR (READ-ACROSS; NEBIUS NOT NAMED): NEOCLOUDS AS "WEWORK 2.0", 1-3-YEAR FAILURE WINDOW "PROBABLY NOT THE LARGER PUBLIC ONES", AND NEW-BUILD NEOCLOUD LEASES ARE "EXTREMELY RARE" WITHOUT A CREDIT WRAPPER**
 
@@ -613,6 +619,11 @@ The [March 16, 2026 company announcement](https://nebius.com/newsroom/nebius-sig
 **Model treatment, 2026-10-21:** the [updated one-sheet workbook](../outputs/01a160ad-b033-7161-8c87-94780627b7bc/Meta_Cloud_2025-2030_Updated_2026-10-21.xlsx) keeps the earlier capacity paths but labels 2028 dedicated delivery as delay stress against the filed 1H2027 plan. 2025 displayed costs are ND; original broker zeros are preserved in raw inputs. YE2030 is a retention scenario: late-2025 service under a five-year term creates possible late-2030 expiry, with exact date, renewal and MW split unresolved. No precise capacity haircut or renewal cost is fabricated. Focused skeptic **PARTIAL**.
 
 ## Changelog
+
+- 2026-10-23 — verification (transcription QA): the "$10-15M/MW … excluding GPUs" basis relabelled as Capstone inference — the transcript has the host's "all-in fully loaded cost per megawatt for developments" and no IT/GPU exclusion.
+- 2026-10-23 — ingest (Notion, 2026-10-23_UBS_Expert-call-AI-infrastructure-build-DC-demand-higher-rates-CleanArc-John-Day.md): 1 intra-quarter read-across row ($10-15M/MW all-in facility build, a different basis from the programme $/GW and rental $/MW; debt as the binding constraint; wrappers → IG head lease + assignment). Nebius not named; nothing superseded.
+
+- **2026-10-23 — weekly credit review:** Rechecked the October 22 company/6-K facility release and linked existing NBIS-CITI-FIN-20261022 into the credit ledger. Preserved $3.5bn / 364-day / Term SOFR +2.75% to maximum +3.50% terms and the draw-undisclosed status already recorded October 22. No new commitment, MW or rating/PT change. [Evidence](_data/credit-monitor/research-sources/2026-10-23-evidence.json).
 
 - 2026-10-22 — print ingest (6-K 2026-10-22, financing only): added 1 dated `## Current state` bullet ($3.5bn Citi senior secured 364-day facility, SOFR+2.75% → max 3.50%, DC development + GPU procurement, Nave quotes incl. ">$40 billion" IG customer commitments as the base for future asset-backed financing) and Sources links. Nothing superseded; no rating/PT/estimate change. Reported as a compute-deal financing milestone for `themes/ai-compute-deals.md` (not edited here).
 

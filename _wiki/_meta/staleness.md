@@ -1,18 +1,18 @@
 # Wiki staleness report
 
-_Generated 2026-10-22 · 111 pages checked._
+_Generated 2026-10-23 · 111 pages checked._
 
 ## 🔴 BBG estimates missing/errored (2)
 NOK, NSCALE
 
 ## 🟠 Transcripts stale (>100d since latest) (7)
-- AIXA: latest 2026-04-30 (175d ago)
-- CRDO: latest 2026-06-01 (143d ago)
-- HPE: latest 2026-06-01 (143d ago)
-- PANW: latest 2026-06-02 (142d ago)
-- AGX: latest 2026-06-04 (140d ago)
-- CIEN: latest 2026-06-04 (140d ago)
-- ORCL: latest 2026-06-10 (134d ago)
+- AIXA: latest 2026-04-30 (176d ago)
+- CRDO: latest 2026-06-01 (144d ago)
+- HPE: latest 2026-06-01 (144d ago)
+- PANW: latest 2026-06-02 (143d ago)
+- AGX: latest 2026-06-04 (141d ago)
+- CIEN: latest 2026-06-04 (141d ago)
+- ORCL: latest 2026-06-10 (135d ago)
 
 ## 🟡 No transcripts on disk (4)
 NOK, NSCALE, POET, SMTC
@@ -21,6 +21,6 @@ NOK, NSCALE, POET, SMTC
 _none_
 
 ## 🟣 Modelos oficiais drift vs canonical P: folder (3)
-- missing on E:: Modelo Meta pós 3Q26.xlsm
+- missing on E:: Hyperscaler_Forecasts_2027_2028_Capstone.xlsx
 - newer on P: (E: copy stale): AI Model.xlsx
-- newer on P: (E: copy stale): Modelo Meta pré 3Q26.xlsm
+- newer on P: (E: copy stale): Modelo Meta pós 3Q26.xlsm

@@ -1,0 +1,485 @@
+{
+  "audit_date": "2026-10-23",
+  "verdict": "PARTIAL",
+  "price_reference_verdict": "PASS",
+  "reference_rows_checked": 37,
+  "reference_urls_checked": 19,
+  "reference_json_sha256": "64581e92718d4fce3b28230ca8dd1f9dd615354a4edf47aaf6eed09ce0051ac7",
+  "checks": [
+    {
+      "section": "history",
+      "row_in_section": 1,
+      "event_date": "2025-11-24",
+      "provider": "Anthropic",
+      "model_scope": "Claude Opus 4.5",
+      "status": "PASS",
+      "source_key": "a45",
+      "url": "https://www.anthropic.com/news/claude-opus-4-5",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "history",
+      "row_in_section": 2,
+      "event_date": "2026-02-17",
+      "provider": "Anthropic",
+      "model_scope": "Claude Sonnet 4.6",
+      "status": "PASS",
+      "source_key": "s46",
+      "url": "https://www.anthropic.com/news/claude-sonnet-4-6",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "history",
+      "row_in_section": 3,
+      "event_date": "2026-05-27",
+      "provider": "Anthropic",
+      "model_scope": "Claude Opus 4.8",
+      "status": "PASS",
+      "source_key": "apdf1",
+      "url": "https://www-cdn.anthropic.com/files/4zrzovbb/website/3684c2faafb97418665782cea0001f439f74b1d2.pdf#page=1",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "history",
+      "row_in_section": 4,
+      "event_date": "2026-05-27",
+      "provider": "Anthropic",
+      "model_scope": "Claude Sonnet 4.6",
+      "status": "PASS",
+      "source_key": "apdf2",
+      "url": "https://www-cdn.anthropic.com/files/4zrzovbb/website/3684c2faafb97418665782cea0001f439f74b1d2.pdf#page=2",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "history",
+      "row_in_section": 5,
+      "event_date": "2026-05-27",
+      "provider": "Anthropic",
+      "model_scope": "Claude Haiku 4.5",
+      "status": "PASS",
+      "source_key": "apdf2",
+      "url": "https://www-cdn.anthropic.com/files/4zrzovbb/website/3684c2faafb97418665782cea0001f439f74b1d2.pdf#page=2",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "history",
+      "row_in_section": 6,
+      "event_date": "2026-06-09",
+      "provider": "Anthropic",
+      "model_scope": "Fable 5 / Mythos 5",
+      "status": "PASS",
+      "source_key": "f5",
+      "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "history",
+      "row_in_section": 7,
+      "event_date": "2026-06-30",
+      "provider": "Anthropic",
+      "model_scope": "Claude Sonnet 5",
+      "status": "PASS",
+      "source_key": "s5",
+      "url": "https://www.anthropic.com/news/claude-sonnet-5",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "history",
+      "row_in_section": 8,
+      "event_date": "2026-08-10",
+      "provider": "Anthropic",
+      "model_scope": "Claude Sonnet 5",
+      "status": "PASS",
+      "source_key": "s5",
+      "url": "https://www.anthropic.com/news/claude-sonnet-5",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "history",
+      "row_in_section": 9,
+      "event_date": "2026-08-21",
+      "provider": "OpenAI",
+      "model_scope": "GPT-5.6 Sol",
+      "status": "PASS",
+      "source_key": "oc",
+      "url": "https://developers.openai.com/api/docs/changelog",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "history",
+      "row_in_section": 10,
+      "event_date": "2026-09-22",
+      "provider": "Anthropic",
+      "model_scope": "Claude Opus 5.5",
+      "status": "PASS",
+      "source_key": "a55",
+      "url": "https://www.anthropic.com/claude-opus-5-5",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "history",
+      "row_in_section": 11,
+      "event_date": "2026-09-22",
+      "provider": "OpenAI",
+      "model_scope": "GPT-6 Sol",
+      "status": "PASS",
+      "source_key": "oc",
+      "url": "https://developers.openai.com/api/docs/changelog",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "history",
+      "row_in_section": 12,
+      "event_date": "2026-09-22",
+      "provider": "OpenAI",
+      "model_scope": "GPT-6 Luna",
+      "status": "PASS",
+      "source_key": "oc",
+      "url": "https://developers.openai.com/api/docs/changelog",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "history",
+      "row_in_section": 13,
+      "event_date": "2026-09-29",
+      "provider": "OpenAI",
+      "model_scope": "GPT-6.1 Sol",
+      "status": "PASS",
+      "source_key": "oc",
+      "url": "https://developers.openai.com/api/docs/changelog",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "history",
+      "row_in_section": 14,
+      "event_date": "2026-10-07",
+      "provider": "Anthropic",
+      "model_scope": "Claude Sonnet 5.5",
+      "status": "PASS",
+      "source_key": "ac",
+      "url": "https://platform.claude.com/docs/en/release-notes/overview",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "history",
+      "row_in_section": 15,
+      "event_date": "2026-10-07",
+      "provider": "Anthropic",
+      "model_scope": "Claude Haiku 5.5",
+      "status": "PASS",
+      "source_key": "h55",
+      "url": "https://www.anthropic.com/claude-haiku-5-5",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "history",
+      "row_in_section": 16,
+      "event_date": "2026-10-07",
+      "provider": "Anthropic",
+      "model_scope": "Claude Haiku 5.5",
+      "status": "PASS",
+      "source_key": "h55",
+      "url": "https://www.anthropic.com/claude-haiku-5-5",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "current",
+      "row_in_section": 1,
+      "event_date": "2026-10-23",
+      "provider": "OpenAI",
+      "model_scope": "GPT-5.2",
+      "status": "PASS",
+      "source_key": "o52",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.2",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "current",
+      "row_in_section": 2,
+      "event_date": "2026-10-23",
+      "provider": "OpenAI",
+      "model_scope": "GPT-5.4",
+      "status": "PASS",
+      "source_key": "o54",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.4",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "current",
+      "row_in_section": 3,
+      "event_date": "2026-10-23",
+      "provider": "OpenAI",
+      "model_scope": "GPT-5.5",
+      "status": "PASS",
+      "source_key": "o55",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.5",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "current",
+      "row_in_section": 4,
+      "event_date": "2026-10-23",
+      "provider": "OpenAI",
+      "model_scope": "GPT-5.6 Sol",
+      "status": "PASS",
+      "source_key": "op",
+      "url": "https://developers.openai.com/api/docs/pricing",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "current",
+      "row_in_section": 5,
+      "event_date": "2026-10-23",
+      "provider": "OpenAI",
+      "model_scope": "GPT-6 Astra",
+      "status": "PASS",
+      "source_key": "op",
+      "url": "https://developers.openai.com/api/docs/pricing",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "current",
+      "row_in_section": 6,
+      "event_date": "2026-10-23",
+      "provider": "OpenAI",
+      "model_scope": "GPT-6.1 Sol",
+      "status": "PASS",
+      "source_key": "op",
+      "url": "https://developers.openai.com/api/docs/pricing",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "current",
+      "row_in_section": 7,
+      "event_date": "2026-10-23",
+      "provider": "OpenAI",
+      "model_scope": "GPT-6 Luna",
+      "status": "PASS",
+      "source_key": "op",
+      "url": "https://developers.openai.com/api/docs/pricing",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "current",
+      "row_in_section": 8,
+      "event_date": "2026-10-23",
+      "provider": "OpenAI",
+      "model_scope": "GPT-6.1 Sol",
+      "status": "PASS",
+      "source_key": "op",
+      "url": "https://developers.openai.com/api/docs/pricing",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "current",
+      "row_in_section": 9,
+      "event_date": "2026-10-23",
+      "provider": "OpenAI",
+      "model_scope": "GPT-6.1 Sol",
+      "status": "PASS",
+      "source_key": "op",
+      "url": "https://developers.openai.com/api/docs/pricing",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "current",
+      "row_in_section": 10,
+      "event_date": "2026-10-23",
+      "provider": "Anthropic",
+      "model_scope": "Claude Fable 5.1",
+      "status": "PASS",
+      "source_key": "ap",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "current",
+      "row_in_section": 11,
+      "event_date": "2026-10-23",
+      "provider": "Anthropic",
+      "model_scope": "Claude Opus 5.5",
+      "status": "PASS",
+      "source_key": "ap",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "current",
+      "row_in_section": 12,
+      "event_date": "2026-10-23",
+      "provider": "Anthropic",
+      "model_scope": "Claude Sonnet 5.5",
+      "status": "PASS",
+      "source_key": "ap",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "current",
+      "row_in_section": 13,
+      "event_date": "2026-10-23",
+      "provider": "Anthropic",
+      "model_scope": "Claude Opus 5.5",
+      "status": "PASS",
+      "source_key": "ap",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "current",
+      "row_in_section": 14,
+      "event_date": "2026-10-23",
+      "provider": "Anthropic",
+      "model_scope": "Claude Sonnet 5.5",
+      "status": "PASS",
+      "source_key": "ap",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "current",
+      "row_in_section": 15,
+      "event_date": "2026-10-23",
+      "provider": "Anthropic",
+      "model_scope": "Claude Haiku 5.5",
+      "status": "PASS",
+      "source_key": "ap",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "modifiers",
+      "row_in_section": 1,
+      "event_date": "2026-03-13",
+      "provider": "Anthropic",
+      "model_scope": "Opus 4.6 / Sonnet 4.6",
+      "status": "PASS",
+      "source_key": "ac",
+      "url": "https://platform.claude.com/docs/en/release-notes/overview",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "modifiers",
+      "row_in_section": 2,
+      "event_date": "2026-07-30",
+      "provider": "OpenAI",
+      "model_scope": "GPT-5.6 Terra / Luna",
+      "status": "PASS",
+      "source_key": "oc",
+      "url": "https://developers.openai.com/api/docs/changelog",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "modifiers",
+      "row_in_section": 3,
+      "event_date": "2026-07-30",
+      "provider": "OpenAI",
+      "model_scope": "GPT-5.6 Sol",
+      "status": "PASS",
+      "source_key": "oc",
+      "url": "https://developers.openai.com/api/docs/changelog",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "modifiers",
+      "row_in_section": 4,
+      "event_date": "2026-10-20",
+      "provider": "OpenAI",
+      "model_scope": "Prompt cache writes",
+      "status": "PASS",
+      "source_key": "oc",
+      "url": "https://developers.openai.com/api/docs/changelog",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "modifiers",
+      "row_in_section": 5,
+      "event_date": "2026-10-23",
+      "provider": "OpenAI",
+      "model_scope": "Eligible Batch requests",
+      "status": "PASS",
+      "source_key": "ob",
+      "url": "https://developers.openai.com/api/docs/guides/batch",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    },
+    {
+      "section": "modifiers",
+      "row_in_section": 6,
+      "event_date": "2026-10-23",
+      "provider": "Anthropic",
+      "model_scope": "Claude 4.7+ tokenizer",
+      "status": "PASS",
+      "source_key": "ap",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "verification": "Independently opened official source and checked quoted rates, dated event, context/tier and note; current rows certify current cards only."
+    }
+  ],
+  "ramp_live_verification": {
+    "method": "PowerShell Invoke-WebRequest using normal certificate validation; compare parsed objects against raw archived JSON",
+    "tokenPrices": {
+      "http": 200,
+      "rows": 3894,
+      "equal_saved": true
+    },
+    "tokenVolumes": {
+      "http": 200,
+      "rows": 19156,
+      "equal_saved": true
+    }
+  },
+  "independent_october_recomputation": {
+    "anthropic": {
+      "count": 44634785737866,
+      "reported_cost": 35800852.69442121,
+      "price_usd_per_million": 0.8020841167396822,
+      "residual_share": 0.9505982649622678,
+      "latest_week_model_count_excess_pct": 69.90659815184618
+    },
+    "openai": {
+      "count": 49264564561661,
+      "reported_cost": 24676765.75983598,
+      "price_usd_per_million": 0.500902950820763,
+      "residual_share": 0.7290761380206545,
+      "latest_week_model_count_excess_pct": 8.417213087451225
+    }
+  },
+  "findings": [
+    {
+      "severity": "HIGH",
+      "id": "COST_BASIS",
+      "claim": "Reported Ramp cost is not verified billed or recognized revenue; applicability of documented credit-plan estimates to public Index is unconfirmed.",
+      "urls": [
+        "https://support.ramp.com/ai-token-spend-management",
+        "https://agents.ramp.com/docs/reference/agent-tools"
+      ]
+    },
+    {
+      "severity": "HIGH",
+      "id": "COMMON_UNIVERSE",
+      "claim": "Cross-feed token denominators do not reconcile, and sample representativeness is unvalidated.",
+      "url": "https://ramp.com/data/ai-index"
+    },
+    {
+      "severity": "MEDIUM",
+      "id": "CACHE_RESIDUAL",
+      "claim": "Count/cost subtraction cannot measure cache reads, cache writes or cache-hit rates."
+    },
+    {
+      "severity": "MEDIUM",
+      "id": "MINIMUM_LABEL",
+      "claim": "Minimum of two unresolved ratios is a scenario reference, not economic lower bound."
+    },
+    {
+      "severity": "LOW",
+      "id": "PERIOD_SCOPE",
+      "claim": "Two weekly samples spanning September 28\u2013October 11 are neither full October nor October 23 spot rates."
+    }
+  ],
+  "memo": "audit_price_sources.md",
+  "scope_exclusions": [
+    "House ARR forecast accuracy",
+    "Full live spreadsheet recalculation",
+    "Single-name filing/email/transcript coverage",
+    "Company-wide realized ASP or consumption validation"
+  ]
+}

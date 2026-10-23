@@ -231,17 +231,17 @@ _(UBS Index Analytics · **Jason Irukulapati**, "The Daily Catch — S&P 1500/IC
 _Wiki · generated 2026-06-29 · sources: IPO prospectus (424B4 2026-06-12 / S-1 2026-05-20, archived in `../SPCX/`) + FinTwit. **Newly public — IPO'd June 2026 (Nasdaq: SPCX).** Master index: [../INDEX.md](../INDEX.md). Themes: [ai-datacenter-power](themes/ai-datacenter-power.md) · [custom-asic-tpu](themes/custom-asic-tpu.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-21 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-10-23 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $46.3bn | $175.6bn |
-| Gross profit | — | $110.1bn |
+| Revenue | $46.7bn | $173.2bn |
+| Gross profit | — | $108.6bn |
 | Gross margin | — | 62.7% |
-| EBITDA | $21.3bn | $109.4bn |
-| EPS | $-0.99 | $2.82 |
-| Capex | $62.3bn | $254.2bn |
-| OCF (≈EBITDA) | $21.3bn | $109.4bn |
+| EBITDA | $21.0bn | $108.3bn |
+| EPS | $-0.97 | $3.79 |
+| Capex | $63.0bn | $254.2bn |
+| OCF (≈EBITDA) | $21.0bn | $108.3bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
@@ -282,6 +282,8 @@ Space Exploration Technologies Corp. (SpaceX, **Nasdaq: SPCX**, Texas-incorporat
 - **Use of proceeds:** fund growth — **expansion of AI compute infrastructure**, launch infrastructure/vehicles, and scale/capacity (424B4).
 
 ## AI compute — the neocloud / datacenter story (the reason this name is here)
+**🆕 2026-10-23 — a private data-centre developer on the SpaceX/xAI build model.** John Day (CCO, CleanArc Data Centers) hosted by Ryan Gravett / John Hodulik (UBS US Communications) @ UBS Expert Call 'Keeping up with the AI Infrastructure Build', 2026-10-23 — Capstone notes (Notion transcript). [source](../_equity_calls/Overall/2026-10-23_UBS_Expert-call-AI-infrastructure-build-DC-demand-higher-rates-CleanArc-John-Day.md). The **host** framed SpaceX's plan as going "from 3 to 13" (GW) by end-2027; that is the host's framing, not Day's. The host also said that everything SpaceX has done so far has been on a **self-perform/self-build** basis (host's statement, same turn as the "3 to 13" framing). Asked whether SpaceX leases third-party capacity, Day said "not to my knowledge", and that if it does, "I don't think it's at scale". On build cost (the host quoted "$10, $12, $15 million per megawatt" and asked for the "all-in fully loaded cost per megawatt for developments"; neither side said whether IT equipment is included), Day said he does not know anybody who can still build below $10M/MW, "Maybe Elon." He credits Musk's team with a blueprint few developers could copy, helped by frontier workloads that do not need cloud-grade five-nines availability.
+
 **🆕🔴🔴 2026-08-28 (ingest; source ~late Aug) — THE ORBITAL-COMPUTE COST BRIDGE, AND IT REDUCES TO ONE VARIABLE: *STARSHIP REUSABILITY*. THE CLAIM IS THAT ~$15BN OF A ~$50BN/GW DATA CENTRE IS POWER/COOLING/LABOUR YOU SIMPLY DO NOT NEED IN SPACE — AND THAT $15BN IS THE INFLATIONARY PART ON EARTH**
 
 _(Source: **a16z podcast — "The Positive-Sum Future of AI with Gavin Baker"**. Guest **Gavin Baker** (Atreides Management — already a tracked source on this wiki), host **David** (a16z, per the sign-off and the "across the a16z portfolio" question). Source date not stated; the conversation references July/August acceleration, [[ANTHROPIC]]'s pre-IPO quiet period and Starbase Louisiana ⇒ **~late Aug 2026**; ingested 2026-08-28. ⚠️ Machine transcript, garbled on nouns — "Grockbot"=Grokbot, "Fable 5.1", "Astra", "Kimmy"=Kimi, "Neatron"=Nemotron, "Dorcash"=Dwarkesh, "Satcha"=Satya, "Daario"=Dario, "Eric Fishery"≈Erik Fisher, "Cheryl Samberg"=Sheryl Sandberg, "Lowden County"=Loudoun County.)_
@@ -986,6 +988,11 @@ _**Q4 FY26 window · opened 2026-10-20** (Q3 2026 print, reported 2026-10-20 AMC
 **🆕 Sinal update 2026-10-22 (print ingest — 8-K Ex. 99.1 + Quartr transcript + post-print desks):** ⚠ nuança on **Compute ladder**: the end-October check now has two transcript readings (~2.2GW Bloomberg draft vs ~2GW Quartr), and the desks put the buy-side at 10GW incremental base / ~12GW bull for 2027 against management's ~13GW total. ⚠ nuança on **Compute pricing / payback**: the MS desk says SI margins *"missed"* investors' incremental-margin assumption, although the $/W statement itself is unchallenged. ✗ contesta on **Capex & funding** (headline only): *"SpaceX Bonds Weaken, Credit Risk Gauge Worsens on Debt Fears"* (BBG via JPM desk, 10-22); 9/30 net cash ≈ $51bn (computed) vs Q4 capex $35-40bn. ✓ confirma on **Starship / Mobile**: CCI's call (10-21) says SpaceX will lease towers directly. (SpaceX 8-K Ex. 99.1, 2026-10-20; Quartr transcript; MS / Bernstein / BofA / JPM desks, 2026-10-20 → 10-22)
 
 ## Changelog
+
+- 2026-10-23 — verification (transcription QA): SpaceX "self-perform/self-build" statement re-attributed to the UBS host (same turn as the "3 to 13" framing; Day only said "not to my knowledge"/"not at scale" on third-party leasing); removed "excluding IT" from the $/MW basis (not in the transcript: host asked for "all-in fully loaded cost per megawatt for developments"); moved this ingest's changelog line out of the page-header HTML comment into this list.
+- 2026-10-23 — ingest (Notion, 2026-10-23_UBS_Expert-call-AI-infrastructure-build-DC-demand-higher-rates-CleanArc-John-Day.md; orchestrator (D) pass): AI-compute section — CleanArc CCO on SpaceX third-party leasing (none at scale to his knowledge; self-perform is the host's statement) and the sub-$10M/MW 'Maybe Elon' remark. The 3→13 GW is host framing.
+
+- **2026-10-23 — weekly credit review:** Checked Bret Johnsen funding Q&A in October 20 Quartr transcript (46:07-47:03). General discussion of debt pools and vendor/customer financing does not confirm the specific ~$40bn chip-financing proposal SPCX-NVDA-FIN-20261006. No new funded amount or revision to existing earnings outcome. [Evidence](_data/credit-monitor/research-sources/2026-10-23-evidence.json).
 
 ### Intra-quarter archive — Q3 2026 window (closed 2026-10-20 at the print)
 

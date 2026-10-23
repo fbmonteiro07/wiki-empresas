@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AAPL` (filings + transcripts) · `_equity_calls` · `_briefings\by-ticker\AAPL.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Snapshot — Capstone official model + BBG · asof 2026-10-21 · USD
+### 📊 Snapshot — Capstone official model + BBG · asof 2026-10-23 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -12,7 +12,7 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AAPL` (filings + trans
 | Gross margin | 47.6% | 47.9% |
 | EBITDA | $168.8bn | $188.7bn |
 | EPS | **$10.12** | **$11.11** |
-| Capex | $13.7bn | $13.7bn |
+| Capex | $13.6bn | $13.8bn |
 | OCF (≈EBITDA) | $168.8bn | $188.7bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
