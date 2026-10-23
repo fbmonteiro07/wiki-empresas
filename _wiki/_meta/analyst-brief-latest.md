@@ -1,6 +1,6 @@
 # Daily Analyst Brief
 
-_Generated 2026-10-22 · 69 active signals · latest reconciliation: reconciliation-2026-10-21-inbox.md._
+_Generated 2026-10-22 · 69 active signals · latest reconciliation: reconciliation-2026-10-22-inbox.md._
 
 > ⚠️ **Portfolio priority is provisional.** _data/book.json is still a seed with unknown weights. Book badges identify seeded names but do not represent real exposure.
 
@@ -67,7 +67,7 @@ _NARRATIVE SHIFT · HIGH IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 _NARRATIVE SHIFT · HIGH IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
 - **Tickers:** META · seeded book: META
-- **Why now:** ingest (Notion, 2026-10-22WellsFargoMETA-3Q26-EPS-recap-call-Ken-Gawrelski-UNCONFIRMED.md): 1 Current-state block (9 bullets: his 2027 capex $250bn / OpEx $210-215bn bridge, "low 20s" ad growth → 22-23% base, $60-80bn funding-need estimate and sequencing, Class C / 14C reading with the four 14C quotes verified against the filed PRE 14C, relayed company colour with two unreconciled figures flagged — "7 gigawatts" added in 2027 absent from the company record, "$1bn GMV / 50% travel" is Instinct's — and the house…
+- **Why now:** run-inbox: UBS · Stephen Ju META group callback (2026-10-22, machine transcript) + WFC post-print model METAWFSDistribution102126.xlsx. Added 2 Full-log rows, 1 Sinal update, 1 sub-bullet under the 10-22 Current-state "COMPANY COLOUR AS RELAYED" bullet (the "7 gigawatts" traced to WFC's model), 2 Sources lines. SUPERSEDED (model-vs-model, WFC 10-05 → 10-21): 2027E diluted EPS $31.18 → $32.62; 2026E $29.44 → $29.32; 2028E $40.02 → $39.83; 2027E revenue $309,253mn → $314,930mn; 2027E capex incl. lease principal…
 - **Belief update:** The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.
 - **Action:** Re-grade the META thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.
 - **Falsifier:** The fingerprint moved only because of formatting or a derived snapshot insertion.

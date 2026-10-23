@@ -2396,6 +2396,24 @@
     "transcribed"
    ],
    "first_seen": "2026-10-22 (Notion: StoneX Google ML-leader group call, Vinija Jain)"
+  },
+  "AK": {
+   "correct": "8-K (SEC filing)",
+   "domain": "terms",
+   "rule": "ASR rendering of '8-K' ('they filed an AK yesterday'); a capitalised AK next to filing/SEC language is the 8-K.",
+   "first_seen": "2026-10-22 (UBS META 3Q26 group callback, Stephen Ju — machine transcript in _inbox, run-inbox 23h)"
+  },
+  "Jet AI": {
+   "correct": "GenAI (generative AI)",
+   "domain": "terms",
+   "rule": "ASR rendering of 'GenAI' ('the five AI, you know, Jet AI revenue directions').",
+   "first_seen": "2026-10-22 (UBS META 3Q26 group callback, Stephen Ju — machine transcript in _inbox, run-inbox 23h)"
+  },
+  "DNA expenses": {
+   "correct": "D&A (depreciation and amortisation) expenses",
+   "domain": "terms",
+   "rule": "ASR rendering of 'D&A' next to capex/opex.",
+   "first_seen": "2026-10-22 (UBS META 3Q26 group callback, Stephen Ju — machine transcript in _inbox, run-inbox 23h)"
   }
  },
  "summary_traps": [

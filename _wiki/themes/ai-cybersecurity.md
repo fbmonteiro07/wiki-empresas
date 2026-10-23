@@ -7,6 +7,11 @@ _Wiki · generated 2026-09-10 · cross-company theme · sources: Morgan Stanley 
 ---
 
 
+## 🆕 2026-10-22 (/run-inbox) — **JEFFERIES' CY27 CONSENSUS SCREEN ACROSS 18 CYBER NAMES: "CONS ESTIMATES LOOK ACHIEVABLE" — MEDIAN NEW BUSINESS +17% IN CY26 → +10% IN CY27, AN ACCELERATION EMBEDDED FOR ONLY 25% OF THE COVERAGE; BEST SET-UPS [[PANW]] / [[NET]] / [[CRWD]] / QLYS, WORST RPD / SAIL / S**
+
+- Jefferies · Joseph Gallo / Brent Thill et al., *"Sneak Peek Into Cyber CY27 Top Line Estimates"*, 2026-10-22 (57pp). Consensus-implied new-business growth CY26 → CY27: PANW 40% → 7% (−32pt), NET 37% → 11%, CRWD 32% → 14%, QLYS 16% → 0% … [[OKTA]] 10% → 10%, SAIL 6% → 19%, RPD −25% → +36% (*"toughest setup in coverage"*). New business = Next-Gen ARR for PANW, Jefferies-estimated ARR for NET/TENB, cRPO bookings for OKTA, ARR or billings elsewhere — mixed bases, so the ranking is about each name's own deceleration, not cross-name levels.
+- The stated upside lever is agentic and timed to CY27: *"an agentic tailwind that we expect to better materialize in CY27"*. Single-name detail on [[CRWD]], [[PANW]], [[OKTA]], [[NET]] (2026-10-22 entries). No PTs in the note; the roster prints closing prices. [Source](../../relat%C3%B3rios%20bons/Sneak_Peek_Into_Cyber_CY27_Top_Line_Estimates.html)
+
 ## 🆕 2026-10-13 (/run-inbox) — **THE LAB-AS-VENDOR LEG ADDS AN M&A DATAPOINT: [[OPENAI]] IS IN EARLY TALKS TO BUY TRAIL OF BITS (OPEN-SOURCE VULNERABILITY FINDING AND FIXING), AFTER HIRING AN EX-WIZ EXECUTIVE AS CRO**
 
 _Source: **The Information · Valida Pau / Amir Efrati**, "OpenAI in Early Talks to Buy Security Startup Trail of Bits", **2026-10-13** ([article](../../relat%C3%B3rios%20bons/OpenAI_in_Early_Talks_to_Buy_Security_Startup_Trail_of_Bits_The_Information.html)). ⚠️ Press exclusive sourced to "people familiar with the matter". No company confirmation, no price, and the talks *"could fall apart"*._
