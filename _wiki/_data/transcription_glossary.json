@@ -1,6 +1,6 @@
 {
  "_about": "Hand-edited ledger of machine-transcription garbles (Notion AI, Bloomberg ASR, auto-translation) seen in the archive, with the correct reading. Used by E:\\.claude\\scripts\\transcript_qa.py (source-file scan, page-diff scan) and by ingest_notion_meetings.py (writes a 'Transcription QA' block into every archived Notion file). Keys are matched with word boundaries, case-sensitive unless 'ci' is true. 'keep_when' = regex contexts (same line, ~80 chars around the hit) where the token is legitimate and must NOT be flagged. Add an entry the first time a garble is caught; never delete one. Standing rule (Felipe, 2026-09-28): ALWAYS double-check transcript content — acronyms, names, units, numbers — before it travels to a page.",
- "_updated": "2026-10-23",
+ "_updated": "2026-10-24",
  "terms": {
   "Astrod": {
    "correct": "Astra (probable: OpenAI GPT-6 Astra)",
@@ -4187,6 +4187,64 @@
     "长鑫"
    ],
    "first_seen": "2026-10-23 (run-inbox podcasts / JPM China NAND call)"
+  },
+  "Kyocera": {
+   "correct": "Kioxia",
+   "domain": "companies",
+   "rule": "ASR swaps Kioxia for Kyocera in a list of memory winners ('Micron, Hynix, Samsung, Kyocera')",
+   "keep_when": [
+    "ceramic",
+    "capacitor",
+    "Kyocera Corp",
+    "printer"
+   ],
+   "first_seen": "2026-10-24 (notion-ingest / BofA Hardware Expert Call, Jon Tasker)"
+  },
+  "KB Cash": {
+   "correct": "KV cache",
+   "domain": "technical",
+   "rule": "ASR hears 'KV cache' as 'KB Cash'",
+   "keep_when": [],
+   "first_seen": "2026-10-24 (notion-ingest / BofA Hardware Expert Call, Jon Tasker)"
+  },
+  "KD-Cache": {
+   "correct": "KV cache",
+   "domain": "technical",
+   "rule": "ASR hears 'KV cache' as 'KD-Cache'",
+   "keep_when": [],
+   "first_seen": "2026-10-24 (notion-ingest / BofA Hardware Expert Call, Jon Tasker)"
+  },
+  "FPA": {
+   "correct": "FP8",
+   "domain": "technical",
+   "rule": "in a quantization passage 'FPA gives you a 2x reduction' = FP8",
+   "keep_when": [
+    "FPGA",
+    "Federal",
+    "Financial Planning"
+   ],
+   "first_seen": "2026-10-24 (notion-ingest / BofA Hardware Expert Call, Jon Tasker)"
+  },
+  "SKLM": {
+   "correct": "SGLang",
+   "domain": "technical",
+   "rule": "inference-serving framework named next to vLLM ('VLM or SKLM') = SGLang",
+   "keep_when": [],
+   "first_seen": "2026-10-24 (notion-ingest / BofA Hardware Expert Call, Jon Tasker)"
+  },
+  "Crado": {
+   "correct": "Credo (CRDO)",
+   "domain": "companies",
+   "rule": "ASR garble in a connectivity-winners list ('Astera, Broadcom, Crado, Marvell')",
+   "keep_when": [],
+   "first_seen": "2026-10-24 (notion-ingest / BofA Hardware Expert Call, Jon Tasker)"
+  },
+  "InConnect": {
+   "correct": "interconnect",
+   "domain": "technical",
+   "rule": "'connectivity, InConnect, and things like CXL' = interconnect (not InfiniBand)",
+   "keep_when": [],
+   "first_seen": "2026-10-24 (notion-ingest / BofA Hardware Expert Call, Jon Tasker)"
   }
  },
  "summary_traps": [

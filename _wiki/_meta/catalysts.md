@@ -46,13 +46,13 @@ _Generated 2026-10-24 · parsed from every page's 'Catalysts / what to watch'. D
 | 2029-12-08 | MU | 🆕 **2026-10-16 — the buyback now has a formula and a window, from Micron IR.** From **2026-12-09 through 2029-12-08** Micron may repurchase up to **trailing-12-month FCF − CHIPS proceeds received in t |
 | 2031-12-31 | NSCALE | 2031-12-31 — Monarch expansion to ~8 GW gross planned. |
 
-## ⏰ Passed — need a post-mortem (0)
+## ⏰ Passed — need a post-mortem (1)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| _none_ | | |
+| 2026-10-23 | ALAB | 🆕🔭 **2026-10-23 — expert ranking of hyperscaler CXL adoption puts Astera's Azure leg in production and AWS last:** Azure *"clearly"* leads, with M-series VMs *"available now"* and *"absolutely working |
 
 ## ✅ Resolved (302)
 

@@ -7,27 +7,13 @@
     "positions": 8
   },
   "stats": {
-    "signals": 39,
-    "active": 39,
-    "high": 4,
-    "belief_changes": 3,
-    "focus_names": 31
+    "signals": 42,
+    "active": 42,
+    "high": 3,
+    "belief_changes": 7,
+    "focus_names": 36
   },
   "focus": [
-    {
-      "ticker": "AAPL",
-      "focus_score": 81,
-      "in_book": true,
-      "signal_count": 2,
-      "high_count": 2,
-      "sector": "Consumer / Internet / Other",
-      "thesis": "Strong franchise + memory-dislocation advantage; bear = AI catch-up + price elasticity.",
-      "next_catalyst": "",
-      "why": [
-        "AAPL — catalyst passed without a logged outcome",
-        "AAPL — 2026 EPS house view is 16% above consensus"
-      ]
-    },
     {
       "ticker": "GOOG",
       "focus_score": 79,
@@ -43,6 +29,32 @@
       ]
     },
     {
+      "ticker": "AAPL",
+      "focus_score": 74,
+      "in_book": true,
+      "signal_count": 1,
+      "high_count": 1,
+      "sector": "Consumer / Internet / Other",
+      "thesis": "Strong franchise + memory-dislocation advantage; bear = AI catch-up + price elasticity.",
+      "next_catalyst": "",
+      "why": [
+        "AAPL — 2026 EPS house view is 16% above consensus"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "focus_score": 62,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "AI — Semis & Compute",
+      "thesis": "AI-infra long with a server-CPU leg; risk concentrated in MI450 execution.",
+      "next_catalyst": "",
+      "why": [
+        "AMD — derived thesis/debate state changed since the prior daily snapshot"
+      ]
+    },
+    {
       "ticker": "ANTHROPIC",
       "focus_score": 62,
       "in_book": false,
@@ -53,6 +65,45 @@
       "next_catalyst": "",
       "why": [
         "ANTHROPIC — derived thesis/debate state changed since the prior daily snapshot"
+      ]
+    },
+    {
+      "ticker": "CRDO",
+      "focus_score": 62,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Optical / Networking",
+      "thesis": "AI-connectivity pure-play — active-copper (AEC) + SerDes/optical DSP; ~68% GM, hyperscaler-concentrated.",
+      "next_catalyst": "",
+      "why": [
+        "CRDO — derived thesis/debate state changed since the prior daily snapshot"
+      ]
+    },
+    {
+      "ticker": "HPE",
+      "focus_score": 62,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Systems & neoclouds",
+      "thesis": "Multi-segment beat + Juniper synergies; durability debate (GS bull $79 vs MS/Bernstein EW).",
+      "next_catalyst": "",
+      "why": [
+        "HPE — derived thesis/debate state changed since the prior daily snapshot"
+      ]
+    },
+    {
+      "ticker": "MRVL",
+      "focus_score": 62,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "AI — Semis & Compute",
+      "thesis": "#2 merchant custom-ASIC (Trainium/Maia) + optical DSP; debate = hyperscaler concentration + 1.6T share.",
+      "next_catalyst": "",
+      "why": [
+        "MRVL — derived thesis/debate state changed since the prior daily snapshot"
       ]
     },
     {
@@ -96,17 +147,16 @@
       ]
     },
     {
-      "ticker": "CRWV",
-      "focus_score": 60,
+      "ticker": "ALAB",
+      "focus_score": 58,
       "in_book": false,
-      "signal_count": 2,
+      "signal_count": 1,
       "high_count": 0,
-      "sector": "Systems & neoclouds",
-      "thesis": "Highest-visibility GPU neocloud ($104B backlog, 1.5 GW active, 8 GW 2030 target) but $35.6B principal at 9-11% + customer concentration; house DCF $59 @10% hing",
+      "sector": "Optical / Networking",
+      "thesis": "Scale-up connectivity (PCIe/CXL retimers + Scorpio fabric); >$1k content/accelerator; concentration + rich multiple.",
       "next_catalyst": "",
       "why": [
-        "CRWV — catalyst passed without a logged outcome",
-        "CRWV — 2026 EPS house view is 17% below consensus"
+        "ALAB — catalyst passed without a logged outcome"
       ]
     },
     {
@@ -149,6 +199,19 @@
       "why": [
         "NOK — Bloomberg consensus missing",
         "NOK — latest earnings transcript absent"
+      ]
+    },
+    {
+      "ticker": "CRWV",
+      "focus_score": 53,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Systems & neoclouds",
+      "thesis": "Highest-visibility GPU neocloud ($104B backlog, 1.5 GW active, 8 GW 2030 target) but $35.6B principal at 9-11% + customer concentration; house DCF $59 @10% hing",
+      "next_catalyst": "",
+      "why": [
+        "CRWV — 2026 EPS house view is 17% below consensus"
       ]
     },
     {
@@ -428,40 +491,6 @@
   ],
   "signals": [
     {
-      "id": "post-2b418bd3c0a6",
-      "asof": "2026-10-24",
-      "source_date": "2026-10-23",
-      "event_date": "2026-10-23",
-      "type": "postmortem",
-      "priority": "high",
-      "score": 74,
-      "title": "AAPL — catalyst passed without a logged outcome",
-      "tickers": [
-        "AAPL"
-      ],
-      "in_book": [
-        "AAPL"
-      ],
-      "impact": "high",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "🆕 2026-10-13 — SMART-HOME LAUNCH (J490 hub, HomePod mini, Apple TV; Bloomberg via GS / JPM / BofA / Redburn desks, 2026-09-29→10-01); 2026-10-16 Duo pre-orders, 2026-10-23 on sale (DigiTimes v",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for AAPL in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "🆕 2026-10-13 — SMART-HOME LAUNCH (J490 hub, HomePod mini, Apple TV; Bloomberg via GS / JPM / BofA / Redburn desks, 2026-09-29→10-01); 2026-10-16 Duo pre-orders, 2026-10-23 on sale (DigiTimes v",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
       "id": "esti-d75e5d0173ba",
       "asof": "2026-10-24",
       "source_date": "2026-10-23",
@@ -694,6 +723,86 @@
       "hidden": false
     },
     {
+      "id": "beli-d9f4f31694f0",
+      "asof": "2026-10-24",
+      "source_date": "2026-10-24",
+      "type": "narrative_shift",
+      "priority": "medium",
+      "score": 62,
+      "title": "AMD — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "AMD"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "verification (transcription QA): all quotes, figures, names and acronyms re-checked against the Transcript section of the source; attribution string matches the file header; glossary terms corrected; no correction needed.",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the AMD thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "NVDA",
+          "relation": "competitor",
+          "detail": "AI accelerators",
+          "from": "AMD",
+          "in_book": true
+        },
+        {
+          "ticker": "META",
+          "relation": "customer",
+          "detail": "MI GPUs",
+          "from": "AMD",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "MI GPUs",
+          "from": "AMD",
+          "in_book": true
+        },
+        {
+          "ticker": "TSM",
+          "relation": "supplier",
+          "detail": "foundry",
+          "from": "AMD",
+          "in_book": true
+        },
+        {
+          "ticker": "INTC",
+          "relation": "competitor",
+          "detail": "server CPU",
+          "from": "AMD",
+          "in_book": false
+        },
+        {
+          "ticker": "ARM",
+          "relation": "supplier",
+          "detail": "IP",
+          "from": "AMD",
+          "in_book": false
+        },
+        {
+          "ticker": "CDNS",
+          "relation": "supplier",
+          "detail": "EDA",
+          "from": "AMD",
+          "in_book": false
+        }
+      ],
+      "source": "AMD page Changelog 2026-10-24",
+      "evidence_paths": [
+        "AMD.md"
+      ],
+      "evidence_anchor": "verification (transcription QA): all quotes, figures, names and acronyms re-checked against the Transcript section of the source; attribution string matches the file header; glossary terms corrected; no correction needed.",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
       "id": "beli-fc02b5700e90",
       "asof": "2026-10-24",
       "source_date": "2026-10-23",
@@ -754,6 +863,183 @@
         "ANTHROPIC.md"
       ],
       "evidence_anchor": "verification (transcription QA): Arora's \"60 to 80% real / 20% hallucinations\" was logged as a live-audience show-of-hands poll — the transcript has him GUESSING what a show of hands would say (\"I would guess in this room, if a show of hands…\"); corrected in the Debate bullet and the 10-21 Full-log row. The Muse \"next three months\" line is now speaker UNCONFIRMED (by context Arora; the question went to both guests).",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "beli-f5b00f741b54",
+      "asof": "2026-10-24",
+      "source_date": "2026-10-24",
+      "type": "narrative_shift",
+      "priority": "medium",
+      "score": 62,
+      "title": "CRDO — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "CRDO"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "verification (transcription QA): all quotes, figures, names and acronyms re-checked against the Transcript section of the source; attribution string matches the file header; glossary terms corrected; no correction needed.",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the CRDO thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "AEC/connectivity",
+          "from": "CRDO",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "connectivity",
+          "from": "CRDO",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "AEC/SerDes",
+          "from": "CRDO",
+          "in_book": true
+        },
+        {
+          "ticker": "TSM",
+          "relation": "supplier",
+          "detail": "foundry",
+          "from": "CRDO",
+          "in_book": true
+        }
+      ],
+      "source": "CRDO page Changelog 2026-10-24",
+      "evidence_paths": [
+        "CRDO.md"
+      ],
+      "evidence_anchor": "verification (transcription QA): all quotes, figures, names and acronyms re-checked against the Transcript section of the source; attribution string matches the file header; glossary terms corrected; no correction needed.",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "beli-6c791ac3c6ea",
+      "asof": "2026-10-24",
+      "source_date": "2026-10-24",
+      "type": "narrative_shift",
+      "priority": "medium",
+      "score": 62,
+      "title": "HPE — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "HPE"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "verification (transcription QA): all quotes, figures, names and acronyms re-checked against the Transcript section of the source; attribution string matches the file header; glossary terms corrected; no correction needed.",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the HPE thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "AI servers",
+          "from": "HPE",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "HPE",
+          "in_book": true
+        },
+        {
+          "ticker": "DELL",
+          "relation": "competitor",
+          "detail": "AI servers",
+          "from": "HPE",
+          "in_book": false
+        }
+      ],
+      "source": "HPE page Changelog 2026-10-24",
+      "evidence_paths": [
+        "HPE.md"
+      ],
+      "evidence_anchor": "verification (transcription QA): all quotes, figures, names and acronyms re-checked against the Transcript section of the source; attribution string matches the file header; glossary terms corrected; no correction needed.",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "beli-a3cb46062c27",
+      "asof": "2026-10-24",
+      "source_date": "2026-10-24",
+      "type": "narrative_shift",
+      "priority": "medium",
+      "score": 62,
+      "title": "MRVL — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "MRVL"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "verification (transcription QA): all quotes, figures, names and acronyms re-checked against the Transcript section of the source; attribution string matches the file header; glossary terms corrected; no correction needed.",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the MRVL thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "competitor",
+          "detail": "custom ASIC",
+          "from": "MRVL",
+          "in_book": true
+        },
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "custom ASIC (Trainium)",
+          "from": "MRVL",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "customer",
+          "detail": "optical DSP",
+          "from": "MRVL",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "custom ASIC (Maia)",
+          "from": "MRVL",
+          "in_book": true
+        },
+        {
+          "ticker": "TSM",
+          "relation": "supplier",
+          "detail": "foundry",
+          "from": "MRVL",
+          "in_book": true
+        }
+      ],
+      "source": "MRVL page Changelog 2026-10-24",
+      "evidence_paths": [
+        "MRVL.md"
+      ],
+      "evidence_anchor": "verification (transcription QA): all quotes, figures, names and acronyms re-checked against the Transcript section of the source; attribution string matches the file header; glossary terms corrected; no correction needed.",
       "origin": "belief_diff",
       "feedback": "",
       "feedback_note": "",
@@ -870,24 +1156,24 @@
       "hidden": false
     },
     {
-      "id": "post-b8469dd69a37",
+      "id": "post-9de0bd705324",
       "asof": "2026-10-24",
       "source_date": "2026-10-23",
       "event_date": "2026-10-23",
       "type": "postmortem",
       "priority": "medium",
       "score": 58,
-      "title": "CRWV — catalyst passed without a logged outcome",
+      "title": "ALAB — catalyst passed without a logged outcome",
       "tickers": [
-        "CRWV"
+        "ALAB"
       ],
       "in_book": [],
       "impact": "medium",
       "urgency": "overdue",
       "confidence": "high",
-      "why_now": "🆕 2026-10-23 — the financing-answer calendar (UBS · Keirstead; MS · Wood, both 2026-10-23): (1) UBS investor call on the AI debt-financing market, Mon 10-26, 11:00 ET (UBS-hosted, sector-wide)",
+      "why_now": "🆕🔭 2026-10-23 — expert ranking of hyperscaler CXL adoption puts Astera's Azure leg in production and AWS last: Azure \"clearly\" leads, with M-series VMs \"available now\" and \"absolutely working",
       "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for CRWV in outcomes.md.",
+      "action": "Write a source-attributed bull won|bear won|neutral outcome for ALAB in outcomes.md.",
       "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
       "readthrough": [],
       "source": "Catalyst outcome ledger",
@@ -895,7 +1181,7 @@
         "_meta/catalysts.md",
         "_meta/outcomes.md"
       ],
-      "evidence_anchor": "🆕 2026-10-23 — the financing-answer calendar (UBS · Keirstead; MS · Wood, both 2026-10-23): (1) UBS investor call on the AI debt-financing market, Mon 10-26, 11:00 ET (UBS-hosted, sector-wide)",
+      "evidence_anchor": "🆕🔭 2026-10-23 — expert ranking of hyperscaler CXL adoption puts Astera's Azure leg in production and AWS last: Azure \"clearly\" leads, with M-series VMs \"available now\" and \"absolutely working",
       "origin": "outcome_loop",
       "feedback": "",
       "feedback_note": "",

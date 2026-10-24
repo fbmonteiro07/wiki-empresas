@@ -1,6 +1,6 @@
 # Daily Analyst Brief
 
-_Generated 2026-10-24 · 39 active signals · latest reconciliation: reconciliation-2026-10-23-inbox.md._
+_Generated 2026-10-24 · 42 active signals · latest reconciliation: reconciliation-2026-10-23-inbox.md._
 
 > ⚠️ **Portfolio priority is provisional.** _data/book.json is still a seed with unknown weights. Book badges identify seeded names but do not represent real exposure.
 
@@ -8,18 +8,18 @@ _Generated 2026-10-24 · 39 active signals · latest reconciliation: reconciliat
 
 | Rank | Ticker | Book | Signals | Why focus now |
 |---:|---|---|---:|---|
-| 1 | **AAPL** | seed | 2 | AAPL — catalyst passed without a logged outcome; AAPL — 2026 EPS house view is 16% above consensus |
-| 2 | **GOOG** | seed | 2 | GOOG — 2026 revenue house view is 18% above consensus; GOOG — 2027 revenue house view is 16% above consensus |
-| 3 | **ANTHROPIC** | — | 1 | ANTHROPIC — derived thesis/debate state changed since the prior daily snapshot |
-| 4 | **OPENAI** | — | 1 | OPENAI — derived thesis/debate state changed since the prior daily snapshot |
-| 5 | **PLTR** | — | 1 | PLTR — derived thesis/debate state changed since the prior daily snapshot |
-| 6 | **NVDA** | seed | 2 | NVDA — 2026-11-17: CLOSED 2026-09-10 — THE GS COMMUNACOPIA FIRESIDE HAPPENED. OUTCOME: Jensen reaffirmed the…; NVDA — 2026-11-23: NVDA investor call (IR) (Rothschild & Co Redburn TMT sales · Rowan Adley, 2026-09-28).… |
-| 7 | **CRWV** | — | 2 | CRWV — catalyst passed without a logged outcome; CRWV — 2026 EPS house view is 17% below consensus |
-| 8 | **NSCALE** | — | 3 | NSCALE — Bloomberg consensus missing; NSCALE — latest earnings transcript absent |
-| 9 | **ORCL** | — | 1 | ORCL — 2026-10-28: ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as "Investor Day in… |
-| 10 | **NOK** | — | 2 | NOK — Bloomberg consensus missing; NOK — latest earnings transcript absent |
-| 11 | **MSFT** | seed | 1 | MSFT — 2026-11-17: 2026-11-17 to 11-20, SF — MSFT IGNITE. |
-| 12 | **SPCX** | — | 1 | SPCX — 2026-11-12: OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.… |
+| 1 | **GOOG** | seed | 2 | GOOG — 2026 revenue house view is 18% above consensus; GOOG — 2027 revenue house view is 16% above consensus |
+| 2 | **AAPL** | seed | 1 | AAPL — 2026 EPS house view is 16% above consensus |
+| 3 | **AMD** | — | 1 | AMD — derived thesis/debate state changed since the prior daily snapshot |
+| 4 | **ANTHROPIC** | — | 1 | ANTHROPIC — derived thesis/debate state changed since the prior daily snapshot |
+| 5 | **CRDO** | — | 1 | CRDO — derived thesis/debate state changed since the prior daily snapshot |
+| 6 | **HPE** | — | 1 | HPE — derived thesis/debate state changed since the prior daily snapshot |
+| 7 | **MRVL** | — | 1 | MRVL — derived thesis/debate state changed since the prior daily snapshot |
+| 8 | **OPENAI** | — | 1 | OPENAI — derived thesis/debate state changed since the prior daily snapshot |
+| 9 | **PLTR** | — | 1 | PLTR — derived thesis/debate state changed since the prior daily snapshot |
+| 10 | **NVDA** | seed | 2 | NVDA — 2026-11-17: CLOSED 2026-09-10 — THE GS COMMUNACOPIA FIRESIDE HAPPENED. OUTCOME: Jensen reaffirmed the…; NVDA — 2026-11-23: NVDA investor call (IR) (Rothschild & Co Redburn TMT sales · Rowan Adley, 2026-09-28).… |
+| 11 | **ALAB** | — | 1 | ALAB — catalyst passed without a logged outcome |
+| 12 | **NSCALE** | — | 3 | NSCALE — Bloomberg consensus missing; NSCALE — latest earnings transcript absent |
 
 ## Highest-priority ideas
 
@@ -62,7 +62,20 @@ _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 - **Attribution:** Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-10-23.
 - **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-d11f3446a5ba
 
-### 4. 🟡 ANTHROPIC — derived thesis/debate state changed since the prior daily snapshot
+### 4. 🟡 AMD — derived thesis/debate state changed since the prior daily snapshot
+
+_NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
+
+- **Tickers:** AMD
+- **Why now:** verification (transcription QA): all quotes, figures, names and acronyms re-checked against the Transcript section of the source; attribution string matches the file header; glossary terms corrected; no correction needed.
+- **Belief update:** The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.
+- **Action:** Re-grade the AMD thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.
+- **Falsifier:** The fingerprint moved only because of formatting or a derived snapshot insertion.
+- **Read-through:** NVDA (competitor: AI accelerators); META (customer: MI GPUs); MSFT (customer: MI GPUs); TSM (supplier: foundry); INTC (competitor: server CPU); ARM (supplier: IP); CDNS (supplier: EDA)
+- **Attribution:** AMD page Changelog 2026-10-24.
+- **Evidence:** [AMD.md](../AMD.md) · signal beli-d9f4f31694f0
+
+### 5. 🟡 ANTHROPIC — derived thesis/debate state changed since the prior daily snapshot
 
 _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
@@ -75,7 +88,46 @@ _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 - **Attribution:** ANTHROPIC page Changelog 2026-10-23.
 - **Evidence:** [ANTHROPIC.md](../ANTHROPIC.md) · signal beli-fc02b5700e90
 
-### 5. 🟡 OPENAI — derived thesis/debate state changed since the prior daily snapshot
+### 6. 🟡 CRDO — derived thesis/debate state changed since the prior daily snapshot
+
+_NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
+
+- **Tickers:** CRDO
+- **Why now:** verification (transcription QA): all quotes, figures, names and acronyms re-checked against the Transcript section of the source; attribution string matches the file header; glossary terms corrected; no correction needed.
+- **Belief update:** The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.
+- **Action:** Re-grade the CRDO thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.
+- **Falsifier:** The fingerprint moved only because of formatting or a derived snapshot insertion.
+- **Read-through:** AMZN (customer: AEC/connectivity); MSFT (customer: connectivity); NVDA (customer: AEC/SerDes); TSM (supplier: foundry)
+- **Attribution:** CRDO page Changelog 2026-10-24.
+- **Evidence:** [CRDO.md](../CRDO.md) · signal beli-f5b00f741b54
+
+### 7. 🟡 HPE — derived thesis/debate state changed since the prior daily snapshot
+
+_NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
+
+- **Tickers:** HPE
+- **Why now:** verification (transcription QA): all quotes, figures, names and acronyms re-checked against the Transcript section of the source; attribution string matches the file header; glossary terms corrected; no correction needed.
+- **Belief update:** The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.
+- **Action:** Re-grade the HPE thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.
+- **Falsifier:** The fingerprint moved only because of formatting or a derived snapshot insertion.
+- **Read-through:** AMZN (customer: AI servers); NVDA (supplier: GPUs); DELL (competitor: AI servers)
+- **Attribution:** HPE page Changelog 2026-10-24.
+- **Evidence:** [HPE.md](../HPE.md) · signal beli-6c791ac3c6ea
+
+### 8. 🟡 MRVL — derived thesis/debate state changed since the prior daily snapshot
+
+_NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
+
+- **Tickers:** MRVL
+- **Why now:** verification (transcription QA): all quotes, figures, names and acronyms re-checked against the Transcript section of the source; attribution string matches the file header; glossary terms corrected; no correction needed.
+- **Belief update:** The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.
+- **Action:** Re-grade the MRVL thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.
+- **Falsifier:** The fingerprint moved only because of formatting or a derived snapshot insertion.
+- **Read-through:** AVGO (competitor: custom ASIC); AMZN (customer: custom ASIC (Trainium)); GOOG (customer: optical DSP); MSFT (customer: custom ASIC (Maia)); TSM (supplier: foundry)
+- **Attribution:** MRVL page Changelog 2026-10-24.
+- **Evidence:** [MRVL.md](../MRVL.md) · signal beli-a3cb46062c27
+
+### 9. 🟡 OPENAI — derived thesis/debate state changed since the prior daily snapshot
 
 _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
@@ -88,7 +140,7 @@ _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 - **Attribution:** OPENAI page Changelog 2026-10-23.
 - **Evidence:** [OPENAI.md](../OPENAI.md) · signal beli-ac014a2bfee0
 
-### 6. 🟡 PLTR — derived thesis/debate state changed since the prior daily snapshot
+### 10. 🟡 PLTR — derived thesis/debate state changed since the prior daily snapshot
 
 _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
@@ -101,7 +153,7 @@ _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 - **Attribution:** PLTR page Changelog 2026-10-23.
 - **Evidence:** [PLTR.md](../PLTR.md) · signal beli-9e9c9ae4c84b
 
-### 7. 🟡 CRWV — 2026 EPS house view is 17% below consensus
+### 11. 🟡 CRWV — 2026 EPS house view is 17% below consensus
 
 _MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
@@ -124,8 +176,7 @@ _MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
 ## Research hygiene
 
-- **AAPL — catalyst passed without a logged outcome** — Write a source-attributed bull won|bear won|neutral outcome for AAPL in outcomes.md. _Source: Catalyst outcome ledger._ (post-2b418bd3c0a6)
-- **CRWV — catalyst passed without a logged outcome** — Write a source-attributed bull won|bear won|neutral outcome for CRWV in outcomes.md. _Source: Catalyst outcome ledger._ (post-b8469dd69a37)
+- **ALAB — catalyst passed without a logged outcome** — Write a source-attributed bull won|bear won|neutral outcome for ALAB in outcomes.md. _Source: Catalyst outcome ledger._ (post-9de0bd705324)
 - **NOK — Bloomberg consensus missing** — Run the merge-safe Bloomberg estimate fetch for NOK, then rebuild the snapshot and Analyst Inbox. _Source: Wiki remediation worklist 2026-10-24._ (data-934f82488aed)
 - **NSCALE — Bloomberg consensus missing** — Run the merge-safe Bloomberg estimate fetch for NSCALE, then rebuild the snapshot and Analyst Inbox. _Source: Wiki remediation worklist 2026-10-24._ (data-e45fd58c0982)
 - **NOK — latest earnings transcript absent** — Fetch the latest NOK earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-10-24._ (data-b3958b26edd1)

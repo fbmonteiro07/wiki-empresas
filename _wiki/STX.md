@@ -163,6 +163,9 @@ Seagate is the vertically integrated manufacturer in the HDD chain: it builds it
 ## Intra-quarter — calls, commentary & reports (since the last print)
 _Q4 FY26 print (2026-07-28 AMC) → intra-quarter · Jul 28 → present. Prior window (Q3 FY26, Apr 28 → Jul 28) archived in [## Changelog](#changelog). Timeline visual: [timeline.html](timeline.html)._
 
+**🆕 2026-10-23 — EXPERT (BofA HARDWARE EXPERT CALL): AGENT KV CACHE IS ARCHIVED, NOT DELETED — HBM/DRAM WHILE ACTIVE → HARD DRIVE FOR DAYS/WEEKS → TAPE; THE 'ALL-NAND DATA CENTER' HAS 'KIND OF VANISHED AS A CONCEPT' ON NAND SUPPLY.** _Source: Jon Tasker (independent consultant, ex-AWS/Arm) @ BofA Hardware Expert Call (host Wamsi Mohan), 2026-10-23 — Capstone notes (Notion transcript) (file `_equity_calls/Semis/2026-10-23_BofA_Inference-economics-KV-cache-memory-tiering-expert-Jon-Tasker.md`). ⚠️ Expert voice, NOT BofA research — no rating/PT; capture opens ~33 min into the call; Notion AI summary not cited._
+- *"Once you have a situation where the agent becomes inactive, you can then archive that KV cache away onto a hard drive, something cheaper, for maybe a period of days, maybe weeks and then after that, it can be archived off to tape"*; *"we generally rarely do complete deletion"*. On flash displacing disk: a few years ago there was talk of *"the all-NAND data center ... no need for hard disks"*, but *"Supply now is so constrained that that has kind of vanished as a concept"*. 🔭 Qualitative support for nearline-HDD demand from inference/agentic retention; no EB or unit sizing given.
+
 **🆕🔴🔴 2026-09-21 (/wiki-ingest 21h) — MORGAN STANLEY RESTATES **STX AS ITS BROADER HARDWARE TOP PICK** IN A NOTE WHOSE CENTRAL FINDING IS THAT *"BEAT AND RAISE IS NOW TABLE STAKES"* — AND UBS PUTS **ENTERPRISE SSD FULFILMENT AT ONLY ~30% OF UNCONSTRAINED DEMAND**, WHICH IS THE STORAGE-ALLOCATION REGIME THIS PAGE'S LTA THESIS IS BUILT FOR.**
 
 - 🔴🔴 THE TOP-PICK RESTATEMENT, IN CONTEXT: Erik Woodring's enterprise-hardware note has **traditional server revenue +87% y/y, storage accelerating to +34% y/y from +23% in C1Q, and PCs +14% y/y — all near 10+ year highs ex-COVID** — *"yet the group has **DE-RATED ~1x P/E on average post-earnings despite ~12% UPWARD REVISIONS** to next-fiscal-year EPS, showing that **'beat and raise' is now table stakes.**"* Preferred OWs are **SNX and P, then [[HPE]]**; *"**[[STX]] remains the broader hardware Top Pick.**"* (Morgan Stanley · **Erik W Woodring**, relayed by MS TMT sales · Tom Wigg, **2026-09-21** — ⚠️ **the relay is sales commentary, not research; no STX estimate or PT is carried in the relayed extract.**)
@@ -254,6 +257,9 @@ _**🆕 Síntese — addendum 2026-08-25 (two sources; the 08-17 language drift 
 _Source: STX earnings calls (dates above); management commentary, paraphrased._
 
 ## Changelog
+
+- 2026-10-24 — ingest (Notion, 2026-10-23_BofA_Inference-economics-KV-cache-memory-tiering-expert-Jon-Tasker.md): intra-quarter block — expert (Jon Tasker): inactive-agent KV cache → HDD (days/weeks) → tape; all-NAND DC 'vanished' on NAND supply. Orchestrator (D) pass.
+- 2026-10-24 — verification (transcription QA): all quotes, figures, names and acronyms re-checked against the `## Transcript` section of the source; attribution string matches the file header; glossary terms corrected; no correction needed.
 
 - 2026-10-19 — ingest (Notion, 2026-10-19_UBS_Semis-update-call-SEMICON-West-OCP-TeraFab-Arcuri-Ruple.md): Debate — Arcuri stays cautious on HDD; Seagate–TDK deal the only thesis-changer (Toshiba third-player thesis). Orchestrator (D) pass.
 
