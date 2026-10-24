@@ -46,19 +46,20 @@ _Generated 2026-10-24 · parsed from every page's 'Catalysts / what to watch'. D
 | 2029-12-08 | MU | 🆕 **2026-10-16 — the buyback now has a formula and a window, from Micron IR.** From **2026-12-09 through 2029-12-08** Micron may repurchase up to **trailing-12-month FCF − CHIPS proceeds received in t |
 | 2031-12-31 | NSCALE | 2031-12-31 — Monarch expansion to ~8 GW gross planned. |
 
-## ⏰ Passed — need a post-mortem (2)
+## ⏰ Passed — need a post-mortem (0)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-10-23 | CRWV | 🆕 **2026-10-23 — the financing-answer calendar (UBS · Keirstead; MS · Wood, both 2026-10-23):** (1) **UBS investor call on the AI debt-financing market, Mon 10-26, 11:00 ET** (UBS-hosted, sector-wide) |
-| 2026-10-23 | AAPL | **🆕 2026-10-13 — SMART-HOME LAUNCH** (J490 hub, HomePod mini, Apple TV; Bloomberg via GS / JPM / BofA / Redburn desks, 2026-09-29→10-01); **2026-10-16 Duo pre-orders, 2026-10-23 on sale** (DigiTimes v |
+| _none_ | | |
 
-## ✅ Resolved (300)
+## ✅ Resolved (302)
 
 | Date | Ticker | Verdict |
 |---|---|---|
+| 2026-10-23 | CRWV | neutral — NOT AN EVENT (parser date = source date): the bullet is a forward 'financing-answer calendar' written from UBS · Keirstead and MS · Wood (both 10-23) — UBS AI debt-financing call Mon 10-26, the hyperscaler prints / ORCL investor day 10-28, CRWV 3Q26 call early Nov. The same-day news was the two PT cuts on financing visibility (UBS Buy $120 -> $105; MS EW $99 -> $70; 2027 debt need ~$21-22bn UBS base vs $24-37bn MS), already on the page. Nothing resolved; the funding-plan test lands at the 3Q call (prior year 2025-11-10, likely just outside the 11-07 horizon). (wiki-catalyst 2026-10-24) |
+| 2026-10-23 | AAPL | bull won — iPhone Duo on sale 10-23 (pre-orders 10-16); the demand side of the launch debate resolved bullish on desk evidence: BofA · Mohan (10-19) lead times to Jan 2027 (82 days; launch-day inventory sold out globally), UBS · Vogt Evidence Lab (10-20) ~99-day US wait times keeping 8-10M units/12m with upside, DIGITIMES (relayed by UBS/Jefferies desks 10-21/22 and Redburn 10-23) 12-month shipment target raised 9.7M -> 14M, MS desk (10-23) builds raised despite mixed reviews; AAPL +1.2% on the SOX -6.7% day 10-22 (Jefferies desk). The page's CONFIRM test (multi-week ship dates across geos) is met. Caveats kept open: Jefferies · Lee (Sell, 10-20) reads the >90-day lead time as supply-capped (~2M/month, 6-7M CY26) and China 18 Pro lead times at zero; base iPhone units and Dec-Q GM remain the bear points. NOT YET ON THE PAGE (briefings only) -> /run-inbox. Next: F4Q print Mon 2026-11-02 (MS/UBS/Redburn calendars; Redburn: no Duo sales in the quarter). (wiki-catalyst 2026-10-24) |
 | 2026-10-22 | TSM | neutral — NOT AN EVENT (parser date = page-update date): the Arizona-ramp bullet was annotated 10-22 with C.C. Wei's Q3-call statement (2026-10-15) that Fab 2 construction is complete, tools are moving in and volume production is 3Q27, "slightly ahead of our previous schedule"; the page's "possibly pulled into late-FY26" read was NOT borne out (old value to Changelog). Schedule mildly favourable, nothing was scheduled to resolve; next checkable: tool-in/qualification milestones and the 4Q print (~mid-Jan 2027). (wiki-catalyst 2026-10-23) |
 | 2026-10-22 | SPOT | bull won (preliminary — release + desks; call transcript pending) — Q3 in line (subs 306M); Q4 guide GM 33.8% / operating income €820M cleared the 33.3-33.7% GM bogeys and JPM's 33.4% / €770M; MAU guide 818M slightly light; stock +4% vs ~9% implied move (UBS desk, 2026-10-22). Source: Spotify 6-K ex-99.1, 2026-10-22. |
 | 2026-10-22 | NOK | neutral — PRELIMINARY mixed print, not a final stock-return verdict: Nokia's October 22 release, pp.1-2, shows comparable operating margin 11.7% and a new 2027 Optical/IP growth outlook of 25-30%, but Mobile Infrastructure revenue was partly pulled forward from Q4 and FY26 FCF conversion falls to 35-55%, with an additional EUR400m working-capital investment. Growth bull strengthened; cash-conversion bear remains. Today's webcast is still ahead at 3pm EEST; the full catalyst is not finished. Source: Nokia / Justin Hotard, release visually checked; `_wiki/_meta/analyst-evidence/nokia-results-2026-q3.pdf`. |
