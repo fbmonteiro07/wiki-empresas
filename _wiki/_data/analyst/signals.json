@@ -1,19 +1,33 @@
 {
-  "asof": "2026-10-23",
-  "latest_reconciliation": "reconciliation-2026-10-22-inbox.md",
+  "asof": "2026-10-24",
+  "latest_reconciliation": "reconciliation-2026-10-23-inbox.md",
   "book": {
     "asof": "2026-07-01",
     "seed": true,
     "positions": 8
   },
   "stats": {
-    "signals": 41,
-    "active": 41,
+    "signals": 39,
+    "active": 39,
     "high": 4,
-    "belief_changes": 6,
+    "belief_changes": 3,
     "focus_names": 31
   },
   "focus": [
+    {
+      "ticker": "AAPL",
+      "focus_score": 81,
+      "in_book": true,
+      "signal_count": 2,
+      "high_count": 2,
+      "sector": "Consumer / Internet / Other",
+      "thesis": "Strong franchise + memory-dislocation advantage; bear = AI catch-up + price elasticity.",
+      "next_catalyst": "",
+      "why": [
+        "AAPL — catalyst passed without a logged outcome",
+        "AAPL — 2026 EPS house view is 16% above consensus"
+      ]
+    },
     {
       "ticker": "GOOG",
       "focus_score": 79,
@@ -29,98 +43,42 @@
       ]
     },
     {
-      "ticker": "AAPL",
-      "focus_score": 76,
-      "in_book": true,
-      "signal_count": 2,
-      "high_count": 2,
-      "sector": "Consumer / Internet / Other",
-      "thesis": "Strong franchise + memory-dislocation advantage; bear = AI catch-up + price elasticity.",
-      "next_catalyst": "2026-10-23",
-      "why": [
-        "AAPL — 2026 EPS house view is 16% above consensus",
-        "AAPL — 2026-10-23: SMART-HOME LAUNCH (J490 hub, HomePod mini, Apple TV; Bloomberg via GS / JPM / BofA /…"
-      ]
-    },
-    {
-      "ticker": "KIOXIA",
-      "focus_score": 64,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "Memory & storage",
-      "thesis": "Cleanest listed NAND/SSD-cycle proxy; no DRAM/HBM offset on the downturn. ¥, no SEC, IPO'd 2024.",
-      "next_catalyst": "2026-11-02",
-      "why": [
-        "KIOXIA — derived thesis/debate state changed since the prior daily snapshot",
-        "KIOXIA — 2026-11-02: 2026-11-02 (Mon) 9am JST — BofA post-results \"doko shuzai\" with KIOXIA on FY3/27 2Q…"
-      ]
-    },
-    {
-      "ticker": "SAMSUNG",
-      "focus_score": 64,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "Memory & storage",
-      "thesis": "Cheapest way to own the memory super-cycle; HBM4 catch-up vs SK Hynix + foundry optionality. ₩, no SEC.",
-      "next_catalyst": "2026-11-21",
-      "why": [
-        "SAMSUNG — derived thesis/debate state changed since the prior daily snapshot",
-        "SAMSUNG — 2026-11-21: 2026-08-24 → 2026-11-21 — the 53.3mn-share PSU treasury purchase window is open. A…"
-      ]
-    },
-    {
-      "ticker": "SKHYNIX",
-      "focus_score": 64,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "Memory & storage",
-      "thesis": "#1 HBM, NVDA's primary supplier, sold out through 2026; bear = HBM4 commoditization. ₩, no SEC.",
-      "next_catalyst": "2026-11-19",
-      "why": [
-        "SKHYNIX — derived thesis/debate state changed since the prior daily snapshot",
-        "SKHYNIX — 2026-11-19: 2026-08-20 → 2026-11-19 — the buyback executes on-market (SK Securities). Daily execution…"
-      ]
-    },
-    {
-      "ticker": "MP",
+      "ticker": "ANTHROPIC",
       "focus_score": 62,
       "in_book": false,
       "signal_count": 1,
       "high_count": 0,
-      "sector": "Consumer / Internet / Other",
-      "thesis": "Only scaled ex-China rare-earth/magnet play; de-China \"follow the gigawatt\" bull vs trade-deal/execution risk (BofA Buy). Thin coverage.",
+      "sector": "AI labs (private)",
+      "thesis": "Private frontier lab (Claude); enterprise/coding leadership + Amazon/Google compute; $65B+ ARR (conflict-flagged vs >$70B, bases unknown pre-S1). IPO window lat",
       "next_catalyst": "",
       "why": [
-        "MP — derived thesis/debate state changed since the prior daily snapshot"
+        "ANTHROPIC — derived thesis/debate state changed since the prior daily snapshot"
       ]
     },
     {
-      "ticker": "MU",
+      "ticker": "OPENAI",
       "focus_score": 62,
       "in_book": false,
       "signal_count": 1,
       "high_count": 0,
-      "sector": "AI — Semis & Compute",
-      "thesis": "Pure-play on AI memory intensity (HBM sold-out CY26); debate = peak earnings vs run-rate.",
-      "next_catalyst": "2026-12-09",
-      "why": [
-        "MU — derived thesis/debate state changed since the prior daily snapshot"
-      ]
-    },
-    {
-      "ticker": "SNDK",
-      "focus_score": 62,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Memory & storage",
-      "thesis": "Post-spin pure-play NAND on AI storage; price-driven blowout + $42B LTA backlog vs blowoff-top risk.",
+      "sector": "AI labs (private)",
+      "thesis": "Private frontier lab (ChatGPT/GPT); scale + distribution vs cash burn + sub-50% share; Microsoft-anchored. No public financials.",
       "next_catalyst": "",
       "why": [
-        "SNDK — derived thesis/debate state changed since the prior daily snapshot"
+        "OPENAI — derived thesis/debate state changed since the prior daily snapshot"
+      ]
+    },
+    {
+      "ticker": "PLTR",
+      "focus_score": 62,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Software / security / internet",
+      "thesis": "Ontology/\"action engine\" moat (claimed 5-yr); momentum strong but valuation split (UBS Buy $200 vs DB Hold $200).",
+      "next_catalyst": "",
+      "why": [
+        "PLTR — derived thesis/debate state changed since the prior daily snapshot"
       ]
     },
     {
@@ -135,6 +93,20 @@
       "why": [
         "NVDA — 2026-11-17: CLOSED 2026-09-10 — THE GS COMMUNACOPIA FIRESIDE HAPPENED. OUTCOME: Jensen reaffirmed the…",
         "NVDA — 2026-11-23: NVDA investor call (IR) (Rothschild & Co Redburn TMT sales · Rowan Adley, 2026-09-28).…"
+      ]
+    },
+    {
+      "ticker": "CRWV",
+      "focus_score": 60,
+      "in_book": false,
+      "signal_count": 2,
+      "high_count": 0,
+      "sector": "Systems & neoclouds",
+      "thesis": "Highest-visibility GPU neocloud ($104B backlog, 1.5 GW active, 8 GW 2030 target) but $35.6B principal at 9-11% + customer concentration; house DCF $59 @10% hing",
+      "next_catalyst": "",
+      "why": [
+        "CRWV — catalyst passed without a logged outcome",
+        "CRWV — 2026 EPS house view is 17% below consensus"
       ]
     },
     {
@@ -177,19 +149,6 @@
       "why": [
         "NOK — Bloomberg consensus missing",
         "NOK — latest earnings transcript absent"
-      ]
-    },
-    {
-      "ticker": "CRWV",
-      "focus_score": 53,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Systems & neoclouds",
-      "thesis": "Highest-visibility GPU neocloud ($104B backlog, 1.5 GW active, 8 GW 2030 target) but $35.6B principal at 9-11% + customer concentration; house DCF $59 @10% hing",
-      "next_catalyst": "",
-      "why": [
-        "CRWV — 2026 EPS house view is 17% below consensus"
       ]
     },
     {
@@ -337,6 +296,19 @@
       ]
     },
     {
+      "ticker": "KIOXIA",
+      "focus_score": 32,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Memory & storage",
+      "thesis": "Cleanest listed NAND/SSD-cycle proxy; no DRAM/HBM offset on the downturn. ¥, no SEC, IPO'd 2024.",
+      "next_catalyst": "2026-11-02",
+      "why": [
+        "KIOXIA — 2026-11-02: 2026-11-02 (Mon) 9am JST — BofA post-results \"doko shuzai\" with KIOXIA on FY3/27 2Q…"
+      ]
+    },
+    {
       "ticker": "LITE",
       "focus_score": 32,
       "in_book": false,
@@ -426,12 +398,72 @@
       "why": [
         "PANW — 2026-11-18: PRE-REGISTERED TEST T1 — F1Q27 print ~2026-11-18: ORGANIC NGS ARR growth on the…"
       ]
+    },
+    {
+      "ticker": "SAMSUNG",
+      "focus_score": 25,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Memory & storage",
+      "thesis": "Cheapest way to own the memory super-cycle; HBM4 catch-up vs SK Hynix + foundry optionality. ₩, no SEC.",
+      "next_catalyst": "2026-11-21",
+      "why": [
+        "SAMSUNG — 2026-11-21: 2026-08-24 → 2026-11-21 — the 53.3mn-share PSU treasury purchase window is open. A…"
+      ]
+    },
+    {
+      "ticker": "SKHYNIX",
+      "focus_score": 25,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Memory & storage",
+      "thesis": "#1 HBM, NVDA's primary supplier, sold out through 2026; bear = HBM4 commoditization. ₩, no SEC.",
+      "next_catalyst": "2026-11-19",
+      "why": [
+        "SKHYNIX — 2026-11-19: 2026-08-20 → 2026-11-19 — the buyback executes on-market (SK Securities). Daily execution…"
+      ]
     }
   ],
   "signals": [
     {
+      "id": "post-2b418bd3c0a6",
+      "asof": "2026-10-24",
+      "source_date": "2026-10-23",
+      "event_date": "2026-10-23",
+      "type": "postmortem",
+      "priority": "high",
+      "score": 74,
+      "title": "AAPL — catalyst passed without a logged outcome",
+      "tickers": [
+        "AAPL"
+      ],
+      "in_book": [
+        "AAPL"
+      ],
+      "impact": "high",
+      "urgency": "overdue",
+      "confidence": "high",
+      "why_now": "🆕 2026-10-13 — SMART-HOME LAUNCH (J490 hub, HomePod mini, Apple TV; Bloomberg via GS / JPM / BofA / Redburn desks, 2026-09-29→10-01); 2026-10-16 Duo pre-orders, 2026-10-23 on sale (DigiTimes v",
+      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
+      "action": "Write a source-attributed bull won|bear won|neutral outcome for AAPL in outcomes.md.",
+      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
+      "readthrough": [],
+      "source": "Catalyst outcome ledger",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "_meta/outcomes.md"
+      ],
+      "evidence_anchor": "🆕 2026-10-13 — SMART-HOME LAUNCH (J490 hub, HomePod mini, Apple TV; Bloomberg via GS / JPM / BofA / Redburn desks, 2026-09-29→10-01); 2026-10-16 Duo pre-orders, 2026-10-23 on sale (DigiTimes v",
+      "origin": "outcome_loop",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
       "id": "esti-d75e5d0173ba",
-      "asof": "2026-10-23",
+      "asof": "2026-10-24",
       "source_date": "2026-10-23",
       "type": "model_check",
       "priority": "high",
@@ -520,7 +552,7 @@
     },
     {
       "id": "esti-e39ccae30816",
-      "asof": "2026-10-23",
+      "asof": "2026-10-24",
       "source_date": "2026-10-23",
       "type": "model_check",
       "priority": "high",
@@ -573,57 +605,8 @@
       "hidden": false
     },
     {
-      "id": "cata-68c774eb3829",
-      "asof": "2026-10-23",
-      "source_date": "2026-10-23",
-      "event_date": "2026-10-23",
-      "type": "catalyst",
-      "priority": "high",
-      "score": 69,
-      "title": "AAPL — 2026-10-23: SMART-HOME LAUNCH (J490 hub, HomePod mini, Apple TV; Bloomberg via GS / JPM / BofA /…",
-      "tickers": [
-        "AAPL"
-      ],
-      "in_book": [
-        "AAPL"
-      ],
-      "impact": "high",
-      "urgency": "immediate",
-      "confidence": "medium",
-      "why_now": "🆕 2026-10-13 — SMART-HOME LAUNCH (J490 hub, HomePod mini, Apple TV; Bloomberg via GS / JPM / BofA / Redburn desks, 2026-09-29→10-01); 2026-10-16 Duo pre-orders, 2026-10-23 on sale (DigiTimes v",
-      "belief_update": "A dated event can resolve or reframe an open debate.",
-      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
-      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
-      "readthrough": [
-        {
-          "ticker": "TSM",
-          "relation": "supplier",
-          "detail": "foundry",
-          "from": "AAPL",
-          "in_book": true
-        },
-        {
-          "ticker": "ARM",
-          "relation": "supplier",
-          "detail": "IP",
-          "from": "AAPL",
-          "in_book": false
-        }
-      ],
-      "source": "AAPL page catalyst ledger; underlying source/date retained in the catalyst text",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "AAPL.md"
-      ],
-      "evidence_anchor": "🆕 2026-10-13 — SMART-HOME LAUNCH (J490 hub, HomePod mini, Apple TV; Bloomberg via GS / JPM / BofA / Redburn desks, 2026-09-29→10-01); 2026-10-16 Duo pre-orders, 2026-10-23 on sale (DigiTimes v",
-      "origin": "catalyst_calendar",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
       "id": "esti-d11f3446a5ba",
-      "asof": "2026-10-23",
+      "asof": "2026-10-24",
       "source_date": "2026-10-23",
       "type": "model_check",
       "priority": "high",
@@ -711,411 +694,216 @@
       "hidden": false
     },
     {
-      "id": "beli-57f07ca78415",
-      "asof": "2026-10-23",
+      "id": "beli-fc02b5700e90",
+      "asof": "2026-10-24",
       "source_date": "2026-10-23",
       "type": "narrative_shift",
       "priority": "medium",
       "score": 62,
-      "title": "KIOXIA — derived thesis/debate state changed since the prior daily snapshot",
+      "title": "ANTHROPIC — derived thesis/debate state changed since the prior daily snapshot",
       "tickers": [
-        "KIOXIA"
+        "ANTHROPIC"
       ],
       "in_book": [],
       "impact": "medium",
       "urgency": "immediate",
       "confidence": "high",
-      "why_now": "ingest (Notion, 2026-10-23BarclaysMemory-outlook-strategic-priorities-ex-Micron-CSO-Michael-Sadler-Simon-Coles.md): 1 Debate bullet — Sadler (expert voice): NAND supply discipline weaker than DRAM (5 suppliers + YMTC), too many NAND players, China NAND \"ship has sailed\". Nothing superseded.",
+      "why_now": "verification (transcription QA): Arora's \"60 to 80% real / 20% hallucinations\" was logged as a live-audience show-of-hands poll — the transcript has him GUESSING what a show of hands would say (\"I would guess in this room, if a show of hands…\"); corrected in the Debate bullet and the 10-21 Full-log row. The Muse \"next three months\" line is now speaker UNCONFIRMED (by context Arora; the question went to both guests).",
       "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
-      "action": "Re-grade the KIOXIA thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "action": "Re-grade the ANTHROPIC thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
       "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
       "readthrough": [
         {
           "ticker": "AMZN",
-          "relation": "customer",
-          "detail": "NAND",
-          "from": "KIOXIA",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "customer",
-          "detail": "NAND",
-          "from": "KIOXIA",
-          "in_book": true
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "customer",
-          "detail": "NAND (Super IO)",
-          "from": "KIOXIA",
-          "in_book": true
-        },
-        {
-          "ticker": "SNDK",
-          "relation": "competitor",
-          "detail": "NAND",
-          "from": "KIOXIA",
-          "in_book": false
-        }
-      ],
-      "source": "KIOXIA page Changelog 2026-10-23",
-      "evidence_paths": [
-        "KIOXIA.md"
-      ],
-      "evidence_anchor": "ingest (Notion, 2026-10-23BarclaysMemory-outlook-strategic-priorities-ex-Micron-CSO-Michael-Sadler-Simon-Coles.md): 1 Debate bullet — Sadler (expert voice): NAND supply discipline weaker than DRAM (5 suppliers + YMTC), too many NAND players, China NAND \"ship has sailed\". Nothing superseded.",
-      "origin": "belief_diff",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "beli-f2e221bd3727",
-      "asof": "2026-10-23",
-      "source_date": "2026-10-23",
-      "type": "narrative_shift",
-      "priority": "medium",
-      "score": 62,
-      "title": "MP — derived thesis/debate state changed since the prior daily snapshot",
-      "tickers": [
-        "MP"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "high",
-      "why_now": "ingest (Notion, 2026-10-23BarclaysMemory-outlook-strategic-priorities-ex-Micron-CSO-Michael-Sadler-Simon-Coles.md; orchestrator (D) pass): Debate bullet — ex-Micron CSO on critical-mineral refining/processing as the chokepoint and memory makers investing via a consortium.",
-      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
-      "action": "Re-grade the MP thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
-      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
-      "readthrough": [
-        {
-          "ticker": "NVDA",
-          "relation": "customer",
-          "detail": "rare-earth magnets",
-          "from": "MP",
-          "in_book": true
-        }
-      ],
-      "source": "MP page Changelog 2026-10-23",
-      "evidence_paths": [
-        "MP.md"
-      ],
-      "evidence_anchor": "ingest (Notion, 2026-10-23BarclaysMemory-outlook-strategic-priorities-ex-Micron-CSO-Michael-Sadler-Simon-Coles.md; orchestrator (D) pass): Debate bullet — ex-Micron CSO on critical-mineral refining/processing as the chokepoint and memory makers investing via a consortium.",
-      "origin": "belief_diff",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "beli-bfa932952fdb",
-      "asof": "2026-10-23",
-      "source_date": "2026-10-23",
-      "type": "narrative_shift",
-      "priority": "medium",
-      "score": 62,
-      "title": "MU — derived thesis/debate state changed since the prior daily snapshot",
-      "tickers": [
-        "MU"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "high",
-      "why_now": "verification (transcription QA): heading quote corrected to the transcript's \"pedal should be to the metal\" (was \"pedal to the metal\"); \"consensus for the sector\" quote corrected to \"what consensus has for the sector\" and flagged as an investor question relayed by Coles. Other Sadler quotes, the 50% GM \"very acceptable\" line and the Coles-relayed 70%→<50% 2029 and $1.3tn 2028 framings checked verbatim.",
-      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
-      "action": "Re-grade the MU thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
-      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
-      "readthrough": [
-        {
-          "ticker": "AVGO",
-          "relation": "customer",
-          "detail": "HBM",
-          "from": "MU",
-          "in_book": true
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "customer",
-          "detail": "HBM/LPDDR",
-          "from": "MU",
-          "in_book": true
-        },
-        {
-          "ticker": "SKHYNIX",
-          "relation": "competitor",
-          "detail": "HBM",
-          "from": "MU",
-          "in_book": false
-        },
-        {
-          "ticker": "AMAT",
           "relation": "supplier",
-          "detail": "WFE",
-          "from": "MU",
-          "in_book": false
-        },
-        {
-          "ticker": "AMD",
-          "relation": "customer",
-          "detail": "HBM",
-          "from": "MU",
-          "in_book": false
-        },
-        {
-          "ticker": "ASML",
-          "relation": "supplier",
-          "detail": "litho",
-          "from": "MU",
-          "in_book": false
-        },
-        {
-          "ticker": "KLAC",
-          "relation": "supplier",
-          "detail": "process control",
-          "from": "MU",
-          "in_book": false
-        }
-      ],
-      "source": "MU page Changelog 2026-10-23",
-      "evidence_paths": [
-        "MU.md"
-      ],
-      "evidence_anchor": "verification (transcription QA): heading quote corrected to the transcript's \"pedal should be to the metal\" (was \"pedal to the metal\"); \"consensus for the sector\" quote corrected to \"what consensus has for the sector\" and flagged as an investor question relayed by Coles. Other Sadler quotes, the 50% GM \"very acceptable\" line and the Coles-relayed 70%→<50% 2029 and $1.3tn 2028 framings checked verbatim.",
-      "origin": "belief_diff",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "beli-41c60c749c59",
-      "asof": "2026-10-23",
-      "source_date": "2026-10-23",
-      "type": "narrative_shift",
-      "priority": "medium",
-      "score": 62,
-      "title": "SAMSUNG — derived thesis/debate state changed since the prior daily snapshot",
-      "tickers": [
-        "SAMSUNG"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "high",
-      "why_now": "ingest (Notion, 2026-10-23BarclaysMemory-outlook-strategic-priorities-ex-Micron-CSO-Michael-Sadler-Simon-Coles.md): 1 Debate bullet — Sadler (expert voice): in-house base-die logic \"not a game changer\", control matters, economics in DRAM stacks; Korean China-fab exposure. Nothing superseded.",
-      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
-      "action": "Re-grade the SAMSUNG thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
-      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
-      "readthrough": [
-        {
-          "ticker": "TSM",
-          "relation": "competitor",
-          "detail": "foundry",
-          "from": "SAMSUNG",
-          "in_book": true
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "customer",
-          "detail": "HBM/foundry",
-          "from": "SAMSUNG",
-          "in_book": true
-        },
-        {
-          "ticker": "SKHYNIX",
-          "relation": "competitor",
-          "detail": "HBM/DRAM",
-          "from": "SAMSUNG",
-          "in_book": false
-        },
-        {
-          "ticker": "ADVANTEST",
-          "relation": "supplier",
-          "detail": "ATE test",
-          "from": "SAMSUNG",
-          "in_book": false
-        },
-        {
-          "ticker": "AMAT",
-          "relation": "supplier",
-          "detail": "WFE",
-          "from": "SAMSUNG",
-          "in_book": false
-        },
-        {
-          "ticker": "AMD",
-          "relation": "customer",
-          "detail": "HBM",
-          "from": "SAMSUNG",
-          "in_book": false
-        },
-        {
-          "ticker": "ASML",
-          "relation": "supplier",
-          "detail": "litho",
-          "from": "SAMSUNG",
-          "in_book": false
-        }
-      ],
-      "source": "SAMSUNG page Changelog 2026-10-23",
-      "evidence_paths": [
-        "SAMSUNG.md"
-      ],
-      "evidence_anchor": "ingest (Notion, 2026-10-23BarclaysMemory-outlook-strategic-priorities-ex-Micron-CSO-Michael-Sadler-Simon-Coles.md): 1 Debate bullet — Sadler (expert voice): in-house base-die logic \"not a game changer\", control matters, economics in DRAM stacks; Korean China-fab exposure. Nothing superseded.",
-      "origin": "belief_diff",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "beli-c12e3711734b",
-      "asof": "2026-10-23",
-      "source_date": "2026-10-23",
-      "type": "narrative_shift",
-      "priority": "medium",
-      "score": 62,
-      "title": "SKHYNIX — derived thesis/debate state changed since the prior daily snapshot",
-      "tickers": [
-        "SKHYNIX"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "high",
-      "why_now": "ingest (Notion, 2026-10-23BarclaysMemory-outlook-strategic-priorities-ex-Micron-CSO-Michael-Sadler-Simon-Coles.md): 1 Debate bullet — Sadler (expert voice) on the HBM moat (stacking/yield lead today, converging over time; node; base-die control), Korean China-fab exposure, capacity 2028+. Nothing superseded.",
-      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
-      "action": "Re-grade the SKHYNIX thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
-      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
-      "readthrough": [
-        {
-          "ticker": "AVGO",
-          "relation": "customer",
-          "detail": "HBM",
-          "from": "SKHYNIX",
-          "in_book": true
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "customer",
-          "detail": "HBM",
-          "from": "SKHYNIX",
-          "in_book": true
-        },
-        {
-          "ticker": "MU",
-          "relation": "competitor",
-          "detail": "HBM",
-          "from": "SKHYNIX",
-          "in_book": false
-        },
-        {
-          "ticker": "SAMSUNG",
-          "relation": "competitor",
-          "detail": "HBM/DRAM",
-          "from": "SKHYNIX",
-          "in_book": false
-        },
-        {
-          "ticker": "AMAT",
-          "relation": "supplier",
-          "detail": "WFE",
-          "from": "SKHYNIX",
-          "in_book": false
-        },
-        {
-          "ticker": "AMD",
-          "relation": "customer",
-          "detail": "HBM",
-          "from": "SKHYNIX",
-          "in_book": false
-        },
-        {
-          "ticker": "ASML",
-          "relation": "supplier",
-          "detail": "litho",
-          "from": "SKHYNIX",
-          "in_book": false
-        }
-      ],
-      "source": "SKHYNIX page Changelog 2026-10-23",
-      "evidence_paths": [
-        "SKHYNIX.md"
-      ],
-      "evidence_anchor": "ingest (Notion, 2026-10-23BarclaysMemory-outlook-strategic-priorities-ex-Micron-CSO-Michael-Sadler-Simon-Coles.md): 1 Debate bullet — Sadler (expert voice) on the HBM moat (stacking/yield lead today, converging over time; node; base-die control), Korean China-fab exposure, capacity 2028+. Nothing superseded.",
-      "origin": "belief_diff",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "beli-42cacd1f3ccd",
-      "asof": "2026-10-23",
-      "source_date": "2026-10-23",
-      "type": "narrative_shift",
-      "priority": "medium",
-      "score": 62,
-      "title": "SNDK — derived thesis/debate state changed since the prior daily snapshot",
-      "tickers": [
-        "SNDK"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "high",
-      "why_now": "ingest (Notion, 2026-10-23BarclaysMemory-outlook-strategic-priorities-ex-Micron-CSO-Michael-Sadler-Simon-Coles.md): 1 Debate bullet — Sadler (expert voice): NAND supply discipline weaker than DRAM, too many players, China NAND \"ship has sailed\", OEM fixed-$ content behaviour. Nothing superseded.",
-      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
-      "action": "Re-grade the SNDK thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
-      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
-      "readthrough": [
-        {
-          "ticker": "AMZN",
-          "relation": "customer",
-          "detail": "NAND/SSD",
-          "from": "SNDK",
+          "detail": "AWS Trainium compute",
+          "from": "ANTHROPIC",
           "in_book": true
         },
         {
           "ticker": "GOOG",
-          "relation": "customer",
-          "detail": "NAND/SSD",
-          "from": "SNDK",
+          "relation": "supplier",
+          "detail": "TPU compute",
+          "from": "ANTHROPIC",
           "in_book": true
         },
         {
-          "ticker": "META",
-          "relation": "customer",
-          "detail": "NAND/SSD",
-          "from": "SNDK",
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "ANTHROPIC",
           "in_book": true
         },
         {
-          "ticker": "MSFT",
-          "relation": "customer",
-          "detail": "NAND/SSD",
-          "from": "SNDK",
-          "in_book": true
-        },
-        {
-          "ticker": "KIOXIA",
+          "ticker": "OPENAI",
           "relation": "competitor",
-          "detail": "NAND",
-          "from": "SNDK",
+          "detail": "frontier models",
+          "from": "ANTHROPIC",
+          "in_book": false
+        },
+        {
+          "ticker": "NSCALE",
+          "relation": "supplier",
+          "detail": "neocloud compute ($44.6bn, Monarch 460 MW)",
+          "from": "ANTHROPIC",
           "in_book": false
         }
       ],
-      "source": "SNDK page Changelog 2026-10-23",
+      "source": "ANTHROPIC page Changelog 2026-10-23",
       "evidence_paths": [
-        "SNDK.md"
+        "ANTHROPIC.md"
       ],
-      "evidence_anchor": "ingest (Notion, 2026-10-23BarclaysMemory-outlook-strategic-priorities-ex-Micron-CSO-Michael-Sadler-Simon-Coles.md): 1 Debate bullet — Sadler (expert voice): NAND supply discipline weaker than DRAM, too many players, China NAND \"ship has sailed\", OEM fixed-$ content behaviour. Nothing superseded.",
+      "evidence_anchor": "verification (transcription QA): Arora's \"60 to 80% real / 20% hallucinations\" was logged as a live-audience show-of-hands poll — the transcript has him GUESSING what a show of hands would say (\"I would guess in this room, if a show of hands…\"); corrected in the Debate bullet and the 10-21 Full-log row. The Muse \"next three months\" line is now speaker UNCONFIRMED (by context Arora; the question went to both guests).",
       "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "beli-ac014a2bfee0",
+      "asof": "2026-10-24",
+      "source_date": "2026-10-23",
+      "type": "narrative_shift",
+      "priority": "medium",
+      "score": 62,
+      "title": "OPENAI — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "OPENAI"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "verification (transcription QA): Lambert's \"reduce in price 2X every eight months for the next three years\" was logged as a price trend (\"inference prices falling\") — in the transcript he poses it as a hypothetical (\"what does it mean for… to reduce in price 2X…\"); reworded in the Debate bullet and the 10-14 Full-log row. The Muse \"next three months\" line (All-In 10-21) is now speaker UNCONFIRMED, by context Arora.",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the OPENAI thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "MSFT",
+          "relation": "supplier",
+          "detail": "Azure compute",
+          "from": "OPENAI",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "OPENAI",
+          "in_book": true
+        },
+        {
+          "ticker": "ANTHROPIC",
+          "relation": "competitor",
+          "detail": "frontier models",
+          "from": "OPENAI",
+          "in_book": false
+        },
+        {
+          "ticker": "AMD",
+          "relation": "supplier",
+          "detail": "MI GPUs",
+          "from": "OPENAI",
+          "in_book": false
+        },
+        {
+          "ticker": "CRWV",
+          "relation": "supplier",
+          "detail": "neocloud compute",
+          "from": "OPENAI",
+          "in_book": false
+        },
+        {
+          "ticker": "NBIS",
+          "relation": "supplier",
+          "detail": "neocloud compute",
+          "from": "OPENAI",
+          "in_book": false
+        },
+        {
+          "ticker": "ORCL",
+          "relation": "supplier",
+          "detail": "OCI compute",
+          "from": "OPENAI",
+          "in_book": false
+        }
+      ],
+      "source": "OPENAI page Changelog 2026-10-23",
+      "evidence_paths": [
+        "OPENAI.md"
+      ],
+      "evidence_anchor": "verification (transcription QA): Lambert's \"reduce in price 2X every eight months for the next three years\" was logged as a price trend (\"inference prices falling\") — in the transcript he poses it as a hypothetical (\"what does it mean for… to reduce in price 2X…\"); reworded in the Debate bullet and the 10-14 Full-log row. The Muse \"next three months\" line (All-In 10-21) is now speaker UNCONFIRMED, by context Arora.",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "beli-9e9c9ae4c84b",
+      "asof": "2026-10-24",
+      "source_date": "2026-10-23",
+      "type": "narrative_shift",
+      "priority": "medium",
+      "score": 62,
+      "title": "PLTR — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "PLTR"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "terminology correction (transcription QA): Cacioppo quote normalised to Palantir [transcribed \"Pallantir\"] and FDEs [transcribed \"FTEs\"] (was garble [correct]).",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the PLTR thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [],
+      "source": "PLTR page Changelog 2026-10-23",
+      "evidence_paths": [
+        "PLTR.md"
+      ],
+      "evidence_anchor": "terminology correction (transcription QA): Cacioppo quote normalised to Palantir [transcribed \"Pallantir\"] and FDEs [transcribed \"FTEs\"] (was garble [correct]).",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "post-b8469dd69a37",
+      "asof": "2026-10-24",
+      "source_date": "2026-10-23",
+      "event_date": "2026-10-23",
+      "type": "postmortem",
+      "priority": "medium",
+      "score": 58,
+      "title": "CRWV — catalyst passed without a logged outcome",
+      "tickers": [
+        "CRWV"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "overdue",
+      "confidence": "high",
+      "why_now": "🆕 2026-10-23 — the financing-answer calendar (UBS · Keirstead; MS · Wood, both 2026-10-23): (1) UBS investor call on the AI debt-financing market, Mon 10-26, 11:00 ET (UBS-hosted, sector-wide)",
+      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
+      "action": "Write a source-attributed bull won|bear won|neutral outcome for CRWV in outcomes.md.",
+      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
+      "readthrough": [],
+      "source": "Catalyst outcome ledger",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "_meta/outcomes.md"
+      ],
+      "evidence_anchor": "🆕 2026-10-23 — the financing-answer calendar (UBS · Keirstead; MS · Wood, both 2026-10-23): (1) UBS investor call on the AI debt-financing market, Mon 10-26, 11:00 ET (UBS-hosted, sector-wide)",
+      "origin": "outcome_loop",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
     },
     {
       "id": "cata-9f2e588078f2",
-      "asof": "2026-10-23",
+      "asof": "2026-10-24",
       "source_date": "2026-10-28",
       "event_date": "2026-10-28",
       "type": "catalyst",
@@ -1182,9 +970,9 @@
       "hidden": false
     },
     {
-      "id": "data-f44d54ed25c7",
-      "asof": "2026-10-23",
-      "source_date": "2026-10-23",
+      "id": "data-934f82488aed",
+      "asof": "2026-10-24",
+      "source_date": "2026-10-24",
       "type": "data_gap",
       "priority": "medium",
       "score": 54,
@@ -1201,7 +989,7 @@
       "action": "Run the merge-safe Bloomberg estimate fetch for NOK, then rebuild the snapshot and Analyst Inbox.",
       "falsifier": "A valid, current estimate record already exists under a different Bloomberg identifier.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-10-23",
+      "source": "Wiki remediation worklist 2026-10-24",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -1212,9 +1000,9 @@
       "hidden": false
     },
     {
-      "id": "data-c84785f37ba4",
-      "asof": "2026-10-23",
-      "source_date": "2026-10-23",
+      "id": "data-e45fd58c0982",
+      "asof": "2026-10-24",
+      "source_date": "2026-10-24",
       "type": "data_gap",
       "priority": "medium",
       "score": 54,
@@ -1231,7 +1019,7 @@
       "action": "Run the merge-safe Bloomberg estimate fetch for NSCALE, then rebuild the snapshot and Analyst Inbox.",
       "falsifier": "A valid, current estimate record already exists under a different Bloomberg identifier.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-10-23",
+      "source": "Wiki remediation worklist 2026-10-24",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -1243,7 +1031,7 @@
     },
     {
       "id": "cata-4dea9544cec3",
-      "asof": "2026-10-23",
+      "asof": "2026-10-24",
       "source_date": "2026-11-17",
       "event_date": "2026-11-17",
       "type": "catalyst",
@@ -1327,7 +1115,7 @@
     },
     {
       "id": "esti-a756bde9736d",
-      "asof": "2026-10-23",
+      "asof": "2026-10-24",
       "source_date": "2026-10-23",
       "type": "model_check",
       "priority": "medium",
@@ -1400,7 +1188,7 @@
     },
     {
       "id": "cata-c76406c38a7d",
-      "asof": "2026-10-23",
+      "asof": "2026-10-24",
       "source_date": "2026-11-12",
       "event_date": "2026-11-12",
       "type": "catalyst",
@@ -1432,7 +1220,7 @@
     },
     {
       "id": "cata-d6253f9923ca",
-      "asof": "2026-10-23",
+      "asof": "2026-10-24",
       "source_date": "2026-10-26",
       "event_date": "2026-10-26",
       "type": "catalyst",
@@ -1479,7 +1267,7 @@
     },
     {
       "id": "cata-c9f20420ff39",
-      "asof": "2026-10-23",
+      "asof": "2026-10-24",
       "source_date": "2026-11-17",
       "event_date": "2026-11-17",
       "type": "catalyst",
@@ -1563,7 +1351,7 @@
     },
     {
       "id": "cata-abf09cd99a69",
-      "asof": "2026-10-23",
+      "asof": "2026-10-24",
       "source_date": "2026-11-23",
       "event_date": "2026-11-23",
       "type": "catalyst",
@@ -1646,9 +1434,9 @@
       "hidden": false
     },
     {
-      "id": "data-ee395b5e6fed",
-      "asof": "2026-10-23",
-      "source_date": "2026-10-23",
+      "id": "data-b3958b26edd1",
+      "asof": "2026-10-24",
+      "source_date": "2026-10-24",
       "type": "data_gap",
       "priority": "watch",
       "score": 43,
@@ -1665,7 +1453,7 @@
       "action": "Fetch the latest NOK earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
       "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-10-23",
+      "source": "Wiki remediation worklist 2026-10-24",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -1676,9 +1464,9 @@
       "hidden": false
     },
     {
-      "id": "data-49c537ad27d7",
-      "asof": "2026-10-23",
-      "source_date": "2026-10-23",
+      "id": "data-7613d10714af",
+      "asof": "2026-10-24",
+      "source_date": "2026-10-24",
       "type": "data_gap",
       "priority": "watch",
       "score": 43,
@@ -1695,7 +1483,7 @@
       "action": "Fetch the latest NSCALE earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
       "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-10-23",
+      "source": "Wiki remediation worklist 2026-10-24",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -1706,9 +1494,9 @@
       "hidden": false
     },
     {
-      "id": "data-5fe247c083c3",
-      "asof": "2026-10-23",
-      "source_date": "2026-10-23",
+      "id": "data-59d2c1488a8b",
+      "asof": "2026-10-24",
+      "source_date": "2026-10-24",
       "type": "data_gap",
       "priority": "watch",
       "score": 43,
@@ -1725,7 +1513,7 @@
       "action": "Fetch the latest POET earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
       "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-10-23",
+      "source": "Wiki remediation worklist 2026-10-24",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -1736,9 +1524,9 @@
       "hidden": false
     },
     {
-      "id": "data-9f6219062c01",
-      "asof": "2026-10-23",
-      "source_date": "2026-10-23",
+      "id": "data-52bd1e8bee66",
+      "asof": "2026-10-24",
+      "source_date": "2026-10-24",
       "type": "data_gap",
       "priority": "watch",
       "score": 43,
@@ -1755,7 +1543,7 @@
       "action": "Fetch the latest SMTC earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
       "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-10-23",
+      "source": "Wiki remediation worklist 2026-10-24",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -1767,7 +1555,7 @@
     },
     {
       "id": "cata-30cf21294c0d",
-      "asof": "2026-10-23",
+      "asof": "2026-10-24",
       "source_date": "2026-11-10",
       "event_date": "2026-11-10",
       "type": "catalyst",
@@ -1807,7 +1595,7 @@
     },
     {
       "id": "cata-67b3a6bd8c80",
-      "asof": "2026-10-23",
+      "asof": "2026-10-24",
       "source_date": "2026-10-29",
       "event_date": "2026-10-29",
       "type": "catalyst",
@@ -1861,7 +1649,7 @@
     },
     {
       "id": "cata-9c6f028117f0",
-      "asof": "2026-10-23",
+      "asof": "2026-10-24",
       "source_date": "2026-10-27",
       "event_date": "2026-10-27",
       "type": "catalyst",
@@ -1901,7 +1689,7 @@
     },
     {
       "id": "cata-5c0d70eeaf70",
-      "asof": "2026-10-23",
+      "asof": "2026-10-24",
       "source_date": "2026-10-27",
       "event_date": "2026-10-27",
       "type": "catalyst",
@@ -1933,7 +1721,7 @@
     },
     {
       "id": "cata-c030b28ed093",
-      "asof": "2026-10-23",
+      "asof": "2026-10-24",
       "source_date": "2026-11-12",
       "event_date": "2026-11-12",
       "type": "catalyst",
@@ -2015,7 +1803,7 @@
     },
     {
       "id": "cata-ce699c62b4f0",
-      "asof": "2026-10-23",
+      "asof": "2026-10-24",
       "source_date": "2026-11-10",
       "event_date": "2026-11-10",
       "type": "catalyst",
@@ -2055,7 +1843,7 @@
     },
     {
       "id": "cata-c333d9a79742",
-      "asof": "2026-10-23",
+      "asof": "2026-10-24",
       "source_date": "2026-11-03",
       "event_date": "2026-11-03",
       "type": "catalyst",
@@ -2137,7 +1925,7 @@
     },
     {
       "id": "cata-e20427bb0cce",
-      "asof": "2026-10-23",
+      "asof": "2026-10-24",
       "source_date": "2026-11-02",
       "event_date": "2026-11-02",
       "type": "catalyst",
@@ -2198,7 +1986,7 @@
     },
     {
       "id": "cata-b395c83ce767",
-      "asof": "2026-10-23",
+      "asof": "2026-10-24",
       "source_date": "2026-11-05",
       "event_date": "2026-11-05",
       "type": "catalyst",
@@ -2273,7 +2061,7 @@
     },
     {
       "id": "cata-172f6636a635",
-      "asof": "2026-10-23",
+      "asof": "2026-10-24",
       "source_date": "2026-11-09",
       "event_date": "2026-11-09",
       "type": "catalyst",
@@ -2334,7 +2122,7 @@
     },
     {
       "id": "cata-3307849d38b1",
-      "asof": "2026-10-23",
+      "asof": "2026-10-24",
       "source_date": "2026-11-03",
       "event_date": "2026-11-03",
       "type": "catalyst",
@@ -2395,7 +2183,7 @@
     },
     {
       "id": "cata-396a1e21b245",
-      "asof": "2026-10-23",
+      "asof": "2026-10-24",
       "source_date": "2026-11-02",
       "event_date": "2026-11-02",
       "type": "catalyst",
@@ -2463,7 +2251,7 @@
     },
     {
       "id": "cata-01a4718ff5c9",
-      "asof": "2026-10-23",
+      "asof": "2026-10-24",
       "source_date": "2026-12-02",
       "event_date": "2026-12-02",
       "type": "catalyst",
@@ -2503,7 +2291,7 @@
     },
     {
       "id": "cata-eb7d5753b962",
-      "asof": "2026-10-23",
+      "asof": "2026-10-24",
       "source_date": "2026-11-16",
       "event_date": "2026-11-16",
       "type": "catalyst",
@@ -2578,7 +2366,7 @@
     },
     {
       "id": "cata-44020bbb6eda",
-      "asof": "2026-10-23",
+      "asof": "2026-10-24",
       "source_date": "2026-12-02",
       "event_date": "2026-12-02",
       "type": "catalyst",
@@ -2632,7 +2420,7 @@
     },
     {
       "id": "cata-2c7b4a6f3c93",
-      "asof": "2026-10-23",
+      "asof": "2026-10-24",
       "source_date": "2026-11-18",
       "event_date": "2026-11-18",
       "type": "catalyst",
@@ -2672,7 +2460,7 @@
     },
     {
       "id": "cata-09405b3ca0ba",
-      "asof": "2026-10-23",
+      "asof": "2026-10-24",
       "source_date": "2026-11-21",
       "event_date": "2026-11-21",
       "type": "catalyst",
@@ -2754,7 +2542,7 @@
     },
     {
       "id": "cata-45aebd381da9",
-      "asof": "2026-10-23",
+      "asof": "2026-10-24",
       "source_date": "2026-11-19",
       "event_date": "2026-11-19",
       "type": "catalyst",

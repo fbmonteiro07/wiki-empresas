@@ -2,6 +2,10 @@
 
 # Theme — Optical / CPO (Co-Packaged Optics & AI Interconnect)
 
+## 🆕 2026-10-23 (/run-inbox — [[NVDA]] CEO on BG2) — **JENSEN NAMES SILICON PHOTONICS AS SUPPLY-CONSTRAINED ALONGSIDE SUBSTRATES — "IT'S GOING TO BE HARD TO CLOSE THAT GAP FOR A FEW YEARS" — AND PUTS PHOTONICS IN THE SET OF PROCESSES ONLY TSMC CAN SCALE FOR HIM**
+
+- *"silicon photonics is… supply constrained and so so everything is supply constrained… every single week that goes by we increase but… the order books keeps going up… it's going to be hard to close that gap for a few years"* [01:16:34]; TSMC is the partner across *"process technologies from silicon photonics to logic to memory to… packaging"* [01:21:38]; NVDA calls itself *"the largest and fastest growing networking company"* [00:53:11]. ✓ Confirms, from the demand side, the light-source / CPO-laser tightness already on this page (Stifel on [[LITE]] vs NVIDIA Dec-Q CPO laser demand, 09-26; ECOC coverage-ratio items, 09-22/23). **No unit, port, attach-rate or timing number** — does not move the CPO-vs-NPO timing debate (Jefferies/Curtis 10-16/10-22, BofA 10-19). (Jensen Huang on BG2 Pod, 2026-10-15 — podcast, not broker research; CEO on own company; [transcript](../../_podcasts/bg2/2026-10-15%20-%20Jensen%20Huang%20Does%20AI%20Revenue%20Justify%20Capex%2C%20%2727%20AI%20Bottlenecks%2C%20Singularity%2C%20Open%20vs%20Closed%20%26%20more.md).) Nothing superseded.
+
 
 
 ## 🆕 2026-10-19 (notion-ingest) — **BofA (VIVEK ARYA) OCP DEBRIEF: NETWORKING IS "PROBABLY GOING TO BE THE FASTEST GROWER FROM NOW UNTIL 2030", FASTER THAN COMPUTE OR MEMORY; LIGHTCOUNTING (KOZLOV, RELAYED) PUTS CPO/NPO AT HALF OF 1.6T PORTS AND 75% OF 3.2T PORTS WITHIN FIVE YEARS; "ONLY THE SUPPLIERS WERE TALKING ABOUT CPO, WHEREAS THE CUSTOMERS WERE ONLY COMFORTABLE GETTING TO NPO"; CREDO's ALC AND "ZERO FLAPS"; THE DSP-REPLACEMENT QUESTION FOR MRVL ANSWERED WITH "A PHASED APPROACH" AND CELESTIAL.**
@@ -1970,6 +1974,7 @@ Also in prose: **Cisco/Acacia** (1.6T PAM4 receiver, Silicon One CPO for scale-o
 _Source: member-company earnings calls; see each company page for quarter-by-quarter detail._
 
 ## Sources
+- 🆕 **2026-10-23 (/run-inbox):** [BG2 Pod — Jensen Huang (2026-10-15), transcript](../../_podcasts/bg2/2026-10-15%20-%20Jensen%20Huang%20Does%20AI%20Revenue%20Justify%20Capex%2C%20%2727%20AI%20Bottlenecks%2C%20Singularity%2C%20Open%20vs%20Closed%20%26%20more.md) — podcast, NVDA CEO: silicon photonics supply-constrained "for a few years".
 - 🆕 **BofA — 2026-10-19 (Capstone call notes, Notion transcript):** [Vivek Arya — "SEMICON West & OCP Takeaways" client call with slides, 10:00 ET](../../_equity_calls/Semis/2026-10-19_BofA_SEMICON-West-OCP-takeaways-call-Vivek-Arya.md) — partial capture (first ~8 min missed, cut in the Q&A); sell-side analyst voice, BofA ratings unchanged; Dakshin / Michael (BofA team) first names only, UNCONFIRMED.
 - 🆕🔴 **[2026-10-16 · /run-inbox · BROKER PRIMARY]** [Jefferies · Blayne Curtis, Crawford Clarke, Andrew Buller, Kevin Garrigan — "OCP Takeaways - Optical Innovation Accelerating" (2026-10-16)](../../relat%C3%B3rios%20bons/OCP_Takeaways_-_Optical_Innovation_Accelerating.html) — 80M 1.6T C27; micro-VCSEL vs InP/ELSFP; NPO through C27-C28, CPO C29; USFP/XPO; company takeaways (NVDA, AMD, CRDO, ALAB, MTSI, LSCC, RMBS, NVTS).
 - 🆕🔴 **[2026-10-12 · /run-inbox · BROKER PRIMARY]** [Bernstein · Daniel Zhu — "LITE & COHR: Illuminating the Optical Debate - Top investor questions and feedback from our initiation" (2026-10-12)](../../relat%C3%B3rios%20bons/BERN_261122.html) — buy-side CPO/NPO debate, VCSEL/microLED risk, Hon Hai CPO-switch check, OCS ~$6bn sizing.
@@ -2052,6 +2057,7 @@ _Source: member-company earnings calls; see each company page for quarter-by-qua
 
 ## Changelog
 
+- 2026-10-23 — run-inbox: BG2 Jensen Huang (2026-10-15) → one dated top block (silicon photonics named supply-constrained "for a few years"; TSMC as the photonics-to-packaging partner; no numbers) + one Sources line. Nothing superseded.
 - 2026-10-22 — ingest (Notion, 2026-10-22_Jefferies_Semis-update-call-AI-trade-LRCX-TXN-KLAC-CRDO-Curtis.md): 1 dated top block (4 bullets). Curtis spoken: 'CPO is going to be pushed out and NPO [transcribed "MPO"] even could be pushed out of 27' (vs his 10-16 note's NPO C27-C28 / CPO C29 — both carried); VCSEL-based ALCs [as transcribed] 'a lot more tolerant to dust, which is a big problem with CPO'; micro-VCSELs at OCP, breakfast with 'AMS' [UNRESOLVED] pitching 'Feynman in 28 for optical scale-up', Credo partner + scale-up demo; optical 'a cycle on a cycle … inconsistent that optical hangs in while everybody questions the base'; MACOM 'more analog into those transceivers'. No unit numbers restated; nothing superseded.
 - 2026-10-19 — ingest (Notion, 2026-10-19_BofA_SEMICON-West-OCP-takeaways-call-Vivek-Arya.md): 1 dated top block (4 bullets) + 1 Sources link. Arya's networking-fastest-grower-to-2030 call, LightCounting 1.6T/3.2T CPO-NPO port shares (relayed), supplier-CPO vs customer-NPO split, Shainer ~10% scale-up power in pluggables/DSPs, Credo ALC + zero flaps, Astera Orion, UALink no cloud implementation, NVL576 config, MRVL DSP-replacement Q&A. Nothing superseded.
 

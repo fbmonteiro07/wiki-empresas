@@ -1,16 +1,16 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-10-23 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-10-24 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
 ## 📅 Upcoming (39)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-10-23 | AAPL | **🆕 2026-10-13 — SMART-HOME LAUNCH** (J490 hub, HomePod mini, Apple TV; Bloomberg via GS / JPM / BofA / Redburn desks, 2026-09-29→10-01); **2026-10-16 Duo pre-orders, 2026-10-23 on sale** (DigiTimes v |
 | 2026-10-26 | MEDIATEK | **🆕🔴 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR "POTENTIAL UPWARD REVISIONS TO GOOGLE TPU-RELATED GUIDANCE."** Between them: **Google system-level validation of v9 in H |
 | 2026-10-27 | FLEX | **🆕 2026-10-27 — Celestica (CLS) analyst day:** the EMS peer's rack/switching numbers (Bernstein top pick; BofA expects a late-October guidance raise) are the read-through for this page's EMS comp set |
 | 2026-10-27 | NXPI | 🆕 **2026-10-27 (Tue, after the US close) — Q3 FY26 print**, per the Vital Knowledge forward calendar (listed with ACGL, BKR, LOGI, PYPL, WM the same evening) (Vital Knowledge, "Vital Dawn", 2026-10-02 |
 | 2026-10-28 | ORCL | **🆕🔴🔴 2026-10-28 — ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as "Investor Day in October").** First opportunity for **new CFO Hilary Maxson** to set long-term financial targ |
+| 2026-10-28 | ORCL | 🆕🔴🔴 **2026-10-28 INVESTOR DAY — WHAT JPM AND GS EXPECT (both pre-event, OW / Buy).** ⚠️ **Date check:** GS's cover says *"Oracle Investor Day on 10/29"* but its body says *"Investor Day on October 28t |
 | 2026-10-29 | AIXA | 🆕 **2026-10-29 (Thu, before the EU open) — Q3 FY2026 results**, per the Vital Knowledge forward calendar (listed with Adidas, STM, Shell, VW et al. on the same morning) (Vital Knowledge, "Vital Dawn", |
 | 2026-11-02 | KIOXIA | 🆕 **2026-11-02 (Mon) 9am JST — BofA post-results "doko shuzai" with KIOXIA on FY3/27 2Q results** (BofA · Mikio Hirakawa, via BofA one-liners, 2026-10-01) — dates the Sep-quarter print to before 11-02 |
 | 2026-11-02 | STX | 🆕 **2026-10-08 (12pm ET, NYC) — Morgan Stanley Global Hardware & Optical lunch (Andy Meng, Howard Kao, Derrick Yang, Meta Marshall, Erik Woodring) covering STX/[[WDC]] among others; 2026-11-02/03 — MS |
@@ -46,13 +46,14 @@ _Generated 2026-10-23 · parsed from every page's 'Catalysts / what to watch'. D
 | 2029-12-08 | MU | 🆕 **2026-10-16 — the buyback now has a formula and a window, from Micron IR.** From **2026-12-09 through 2029-12-08** Micron may repurchase up to **trailing-12-month FCF − CHIPS proceeds received in t |
 | 2031-12-31 | NSCALE | 2031-12-31 — Monarch expansion to ~8 GW gross planned. |
 
-## ⏰ Passed — need a post-mortem (0)
+## ⏰ Passed — need a post-mortem (2)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| _none_ | | |
+| 2026-10-23 | CRWV | 🆕 **2026-10-23 — the financing-answer calendar (UBS · Keirstead; MS · Wood, both 2026-10-23):** (1) **UBS investor call on the AI debt-financing market, Mon 10-26, 11:00 ET** (UBS-hosted, sector-wide) |
+| 2026-10-23 | AAPL | **🆕 2026-10-13 — SMART-HOME LAUNCH** (J490 hub, HomePod mini, Apple TV; Bloomberg via GS / JPM / BofA / Redburn desks, 2026-09-29→10-01); **2026-10-16 Duo pre-orders, 2026-10-23 on sale** (DigiTimes v |
 
 ## ✅ Resolved (300)
 

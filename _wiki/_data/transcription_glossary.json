@@ -4099,6 +4099,94 @@
    "rule": "ASR on HBM base-die / custom HBM discussion",
    "ci": true,
    "first_seen": "2026-10-23 (Barclays Semi Expert Series, Sadler/Coles memory call, Notion ASR)"
+  },
+  "onrem": {
+   "correct": "on-prem",
+   "domain": "technology",
+   "rule": "YouTube ASR, BG2 Jensen [00:54:33]",
+   "ci": true,
+   "first_seen": "2026-10-23 (BG2 Jensen Huang 10-15, run-inbox)"
+  },
+  "EBS": {
+   "correct": "Nebius (UNCONFIRMED) when listed next to CoreWeave as a neocloud",
+   "domain": "companies",
+   "rule": "YouTube ASR, BG2 [01:15:48]; legit as AWS Elastic Block Store",
+   "keep_when": [
+    "Elastic",
+    "AWS",
+    "Amazon",
+    "[Bb]lock"
+   ],
+   "first_seen": "2026-10-23 (BG2 Jensen Huang 10-15, run-inbox)"
+  },
+  "land powered shell": {
+   "correct": "land, power, shell",
+   "domain": "technology",
+   "rule": "YouTube ASR, BG2 [00:51:31] (variant of land power shown)",
+   "ci": true,
+   "first_seen": "2026-10-23 (BG2, run-inbox)"
+  },
+  "gawatt": {
+   "correct": "gigawatt",
+   "domain": "units",
+   "rule": "YouTube ASR, BG2 (several)",
+   "ci": true,
+   "first_seen": "2026-10-23 (BG2, run-inbox)"
+  },
+  "infant service bedrock": {
+   "correct": "inference service Bedrock",
+   "domain": "products",
+   "rule": "podcast ASR, Jassy on a16z",
+   "ci": true,
+   "first_seen": "2026-10-23 (a16z Jassy, run-inbox)"
+  },
+  "S&B": {
+   "correct": "SMB",
+   "domain": "terms",
+   "rule": "podcast ASR, Angelos on a16z 10-15",
+   "keep_when": [
+    "Standard",
+    "Poor"
+   ],
+   "first_seen": "2026-10-23 (a16z VGS 10-15, run-inbox)"
+  },
+  "YMDC": {
+   "correct": "YMTC",
+   "domain": "companies",
+   "rule": "auto-translation, JPM China NAND expert call",
+   "first_seen": "2026-10-23 (run-inbox podcasts / JPM China NAND call)"
+  },
+  "X-stacking": {
+   "correct": "Xtacking (YMTC)",
+   "domain": "technology",
+   "rule": "auto-translation, JPM China NAND expert call",
+   "ci": true,
+   "first_seen": "2026-10-23 (run-inbox podcasts / JPM China NAND call)"
+  },
+  "TuJing": {
+   "correct": "Piotech (拓荆)",
+   "domain": "companies",
+   "rule": "auto-translation, JPM China NAND expert call (also rendered TuJing (Innotron))",
+   "ci": true,
+   "first_seen": "2026-10-23 (run-inbox podcasts / JPM China NAND call)"
+  },
+  "CF Square": {
+   "correct": "4F² (CXMT cell architecture)",
+   "domain": "technology",
+   "rule": "auto-translation, JPM China NAND expert call",
+   "ci": true,
+   "first_seen": "2026-10-23 (run-inbox podcasts / JPM China NAND call)"
+  },
+  "Changxin Memory Technologies": {
+   "correct": "YMTC (Yangtze Memory, 长存) when the passage is about YMTC NAND — Changxin is CXMT (长鑫, DRAM)",
+   "domain": "companies",
+   "rule": "DANGEROUS auto-translation swap in the JPM China NAND call: silently routes YMTC numbers to CXMT",
+   "keep_when": [
+    "CXMT",
+    "DRAM",
+    "长鑫"
+   ],
+   "first_seen": "2026-10-23 (run-inbox podcasts / JPM China NAND call)"
   }
  },
  "summary_traps": [
