@@ -4245,6 +4245,108 @@
    "rule": "'connectivity, InConnect, and things like CXL' = interconnect (not InfiniBand)",
    "keep_when": [],
    "first_seen": "2026-10-24 (notion-ingest / BofA Hardware Expert Call, Jon Tasker)"
+  },
+  "Infidia": {
+   "correct": "NVIDIA",
+   "domain": "companies",
+   "rule": "ASR for NVIDIA ('Jensen from Infidia').",
+   "first_seen": "2026-10-24 (All-In 'AI Cyber Panic, Ken Griffin's Bubble Warning…' 2026-10-23, podscripts ASR)"
+  },
+  "Swaping": {
+   "correct": "Anthropic (inferred)",
+   "domain": "companies",
+   "rule": "'both open AI and and Swaping and most likely Google' - frontier labs list; read as Anthropic, UNCONFIRMED.",
+   "first_seen": "2026-10-24 (All-In 'AI Cyber Panic, Ken Griffin's Bubble Warning…' 2026-10-23, podscripts ASR)"
+  },
+  "Aura Kerasian": {
+   "correct": "Ara Kharazian (Ramp chief/lead economist)",
+   "domain": "people",
+   "rule": "ASR; also 'Bramps chief economist' = Ramp's.",
+   "first_seen": "2026-10-24 (All-In 'AI Cyber Panic, Ken Griffin's Bubble Warning…' 2026-10-23, podscripts ASR)"
+  },
+  "Bramps": {
+   "correct": "Ramp's",
+   "domain": "companies",
+   "rule": "'Bramps chief economist' = Ramp's chief economist (Ara Kharazian).",
+   "first_seen": "2026-10-24 (All-In 'AI Cyber Panic, Ken Griffin's Bubble Warning…' 2026-10-23, podscripts ASR)"
+  },
+  "Pawato": {
+   "correct": "Palo Alto (Networks)",
+   "domain": "companies",
+   "rule": "'when I came to Pawato' = Palo Alto Networks.",
+   "first_seen": "2026-10-24 (All-In 'AI Cyber Panic, Ken Griffin's Bubble Warning…' 2026-10-23, podscripts ASR)"
+  },
+  "hyper-skinneders": {
+   "correct": "hyperscalers",
+   "domain": "industry",
+   "rule": "ASR.",
+   "first_seen": "2026-10-24 (All-In 'AI Cyber Panic, Ken Griffin's Bubble Warning…' 2026-10-23, podscripts ASR)"
+  },
+  "Plad": {
+   "correct": "Plaid",
+   "domain": "companies",
+   "rule": "Bank-data API intermediary.",
+   "first_seen": "2026-10-24 (All-In 'AI Cyber Panic, Ken Griffin's Bubble Warning…' 2026-10-23, podscripts ASR)"
+  },
+  "chain of toss": {
+   "correct": "chain of thought",
+   "domain": "ai",
+   "rule": "ASR; also 'chain of talk'.",
+   "first_seen": "2026-10-24 (All-In 'AI Cyber Panic, Ken Griffin's Bubble Warning…' 2026-10-23, podscripts ASR)"
+  },
+  "SISOs": {
+   "correct": "CISOs",
+   "domain": "roles",
+   "rule": "ASR.",
+   "first_seen": "2026-10-24 (All-In 'AI Cyber Panic, Ken Griffin's Bubble Warning…' 2026-10-23, podscripts ASR)"
+  },
+  "Alex Carp": {
+   "correct": "Alex Karp (Palantir CEO)",
+   "domain": "people",
+   "rule": "ASR.",
+   "first_seen": "2026-10-24 (All-In 'AI Cyber Panic, Ken Griffin's Bubble Warning…' 2026-10-23, podscripts ASR)"
+  },
+  "G-Sid": {
+   "correct": "G-SIB (global systemically important bank)",
+   "domain": "finance",
+   "rule": "'one big G-Sid bank'.",
+   "first_seen": "2026-10-24 (All-In 'AI Cyber Panic, Ken Griffin's Bubble Warning…' 2026-10-23, podscripts ASR)"
+  },
+  "obliteration AI": {
+   "correct": "abliteration.ai (uncensored/abliterated-model provider incubated by Calacanis)",
+   "domain": "companies",
+   "rule": "Show notes link abliteration.ai; 'obliterated models' = abliterated models.",
+   "first_seen": "2026-10-24 (All-In 'AI Cyber Panic, Ken Griffin's Bubble Warning…' 2026-10-23, podscripts ASR)"
+  },
+  "CBEs": {
+   "correct": "CVEs",
+   "domain": "security",
+   "rule": "'helped you find these CBEs' = CVEs (Common Vulnerabilities and Exposures).",
+   "first_seen": "2026-10-24 (All-In 'AI Cyber Panic, Ken Griffin's Bubble Warning…' 2026-10-23, podscripts ASR)"
+  },
+  "Mittals": {
+   "correct": "Mythos (Anthropic Claude Mythos)",
+   "domain": "products",
+   "rule": "'Oh my God, I got Mittals' = Mythos.",
+   "first_seen": "2026-10-24 (All-In 'AI Cyber Panic, Ken Griffin's Bubble Warning…' 2026-10-23, podscripts ASR)"
+  },
+  "Chamaath": {
+   "correct": "Chamath (Palihapitiya)",
+   "domain": "people",
+   "rule": "ASR; also 'Tramath', 'Chimoth', 'Shamath'.",
+   "first_seen": "2026-10-24 (All-In 'AI Cyber Panic, Ken Griffin's Bubble Warning…' 2026-10-23, podscripts ASR)"
+  },
+  "Assemblyville": {
+   "correct": "Assembly Bill (California AB 1228)",
+   "domain": "policy",
+   "rule": "'Assemblyville 1228' = AB 1228 (fast-food minimum wage).",
+   "first_seen": "2026-10-24 (All-In 'AI Cyber Panic, Ken Griffin's Bubble Warning…' 2026-10-23, podscripts ASR)"
+  },
+  "LOMs": {
+   "correct": "LLMs",
+   "domain": "ai",
+   "rule": "'applications that are built on LOMs' = LLMs.",
+   "first_seen": "2026-10-24 (a16z Show 'What It Takes to Win as a Founder | Ben Horowitz' 2026-10-24, podscripts ASR)"
   }
  },
  "summary_traps": [
