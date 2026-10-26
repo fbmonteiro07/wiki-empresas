@@ -2,6 +2,11 @@
 
 # Theme — Optical / CPO (Co-Packaged Optics & AI Interconnect)
 
+## 🆕🔭 2026-10-25 (/run-inbox — CASPA panel) — **PATEL: "EVEN IF… ONE MAJOR COMPANY WANTED TO DO CPO IN 2028… THEY COULD NOT SATISFY THEIR VOLUMES" — LASERS AND FIBER ATTACH; OPTICS RANKED THE #3 BOTTLENECK AFTER SUBSTRATES AND MEMORY, AHEAD OF POWER**
+_Source: Stacy Rasgon (Bernstein) and Dylan Patel (SemiAnalysis) at the CASPA 2026 CEO Summit, "Semiconductor Industry Outlook Panel \| CASPA 2026 CEO Summit", moderated by Austin Lyons (Chipstrat), 2026-10-24 — conference panel, not broker research and not a published Bernstein note; Patel sells research to the same buyers; YouTube machine transcript without speaker labels, speakers inferred from content ([transcript](../../_podcasts/adhoc/2026-10-24%20-%20Semiconductor%20Industry%20Outlook%20Panel%20CASPA%202026%20CEO%20Summit.md))._
+- **Supply cap on CPO (Patel [00:12:56]):** *"there's a lot of bottlenecks around… the desire to ramp optics to a really really large degree right with co-packaged [transcribed "co-ackage"] optics or near package optics… even if everyone wanted to do CPO in 2028 or even one major company wanted to do CPO in 2028 they could not satisfy their volumes… in terms of lasers in terms of fiber attach in terms of all these different components."* 🔭 A supply-side ceiling on 2028 CPO volumes, relevant to the [[COHR]]/[[LITE]] laser-timing debate. ✓ Consistent with Jensen on BG2 naming silicon photonics supply-constrained *"for a few years"* (10-23 block). Opinion from an independent research CEO; no unit numbers.
+- Patel [00:24:38] lists optics among the cost inflation NVDA absorbed at flat margin; component vendors *"are going to be able to jack price up like crazy"* [00:31:26].
+
 ## 🆕🔭 2026-10-23 (notion-ingest) — **AN EX-AWS/ARM INFERENCE CONSULTANT, ON A MEMORY-TIERING CALL, PUTS OPTICS AND SCALE-UP SWITCHES AS THE *UNDERESTIMATED* LONG-TERM WINNERS OF AGENTIC AI — AND CPO AS "THE ULTIMATE SOLUTION" THAT "ALWAYS SEEMS TO BE 3 YEARS AWAY"**
 
 _Source: Jon Tasker (independent consultant, ex-AWS/Arm) @ BofA Hardware Expert Call (host Wamsi Mohan), 2026-10-23 — Capstone notes (Notion transcript) — [source](../../_equity_calls/Semis/2026-10-23_BofA_Inference-economics-KV-cache-memory-tiering-expert-Jon-Tasker.md). ⚠ expert voice, NOT BofA research — no rating/PT; the guest is an inference/memory architect, not an optics specialist._
@@ -2063,6 +2068,8 @@ _Source: member-company earnings calls; see each company page for quarter-by-qua
 
 ## Changelog
 
+- 2026-10-25 — verification (transcription QA): garble marker added to the CPO quote ("co-ackage").
+- 2026-10-25 — run-inbox: CASPA panel (Patel, 2026-10-24) → 1 dated top block (CPO cannot be supplied in volume for even one major customer in 2028 — lasers, fiber attach).
 - 2026-10-24 — ingest (Notion, 2026-10-23_BofA_Inference-economics-KV-cache-memory-tiering-expert-Jon-Tasker.md): 1 dated top block (2 bullets) — expert (not BofA research): optics/scale-up switches underestimated agentic winners; CPO 'always seems to be 3 years away' but 'the ultimate solution'; named Astera/Broadcom/Credo/Marvell; memory = 2-yr winner. No new date; consistent with C29/turn-of-decade consensus. Nothing superseded.
 - 2026-10-24 — verification (transcription QA): all quotes, figures, names and acronyms re-checked against the `## Transcript` section of the source; attribution string matches the file header; glossary terms corrected; no correction needed.
 - 2026-10-23 — run-inbox: BG2 Jensen Huang (2026-10-15) → one dated top block (silicon photonics named supply-constrained "for a few years"; TSMC as the photonics-to-packaging partner; no numbers) + one Sources line. Nothing superseded.

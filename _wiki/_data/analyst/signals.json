@@ -1,17 +1,17 @@
 {
-  "asof": "2026-10-24",
-  "latest_reconciliation": "reconciliation-2026-10-24-inbox.md",
+  "asof": "2026-10-25",
+  "latest_reconciliation": "reconciliation-2026-10-25-inbox.md",
   "book": {
     "asof": "2026-07-01",
     "seed": true,
     "positions": 8
   },
   "stats": {
-    "signals": 42,
-    "active": 42,
+    "signals": 35,
+    "active": 35,
     "high": 3,
-    "belief_changes": 7,
-    "focus_names": 36
+    "belief_changes": 0,
+    "focus_names": 29
   },
   "focus": [
     {
@@ -42,97 +42,6 @@
       ]
     },
     {
-      "ticker": "AMD",
-      "focus_score": 62,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "AI — Semis & Compute",
-      "thesis": "AI-infra long with a server-CPU leg; risk concentrated in MI450 execution.",
-      "next_catalyst": "",
-      "why": [
-        "AMD — derived thesis/debate state changed since the prior daily snapshot"
-      ]
-    },
-    {
-      "ticker": "ANTHROPIC",
-      "focus_score": 62,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "AI labs (private)",
-      "thesis": "Private frontier lab (Claude); enterprise/coding leadership + Amazon/Google compute; $65B+ ARR (conflict-flagged vs >$70B, bases unknown pre-S1). IPO window lat",
-      "next_catalyst": "",
-      "why": [
-        "ANTHROPIC — derived thesis/debate state changed since the prior daily snapshot"
-      ]
-    },
-    {
-      "ticker": "CRDO",
-      "focus_score": 62,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Optical / Networking",
-      "thesis": "AI-connectivity pure-play — active-copper (AEC) + SerDes/optical DSP; ~68% GM, hyperscaler-concentrated.",
-      "next_catalyst": "",
-      "why": [
-        "CRDO — derived thesis/debate state changed since the prior daily snapshot"
-      ]
-    },
-    {
-      "ticker": "HPE",
-      "focus_score": 62,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Systems & neoclouds",
-      "thesis": "Multi-segment beat + Juniper synergies; durability debate (GS bull $79 vs MS/Bernstein EW).",
-      "next_catalyst": "",
-      "why": [
-        "HPE — derived thesis/debate state changed since the prior daily snapshot"
-      ]
-    },
-    {
-      "ticker": "MRVL",
-      "focus_score": 62,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "AI — Semis & Compute",
-      "thesis": "#2 merchant custom-ASIC (Trainium/Maia) + optical DSP; debate = hyperscaler concentration + 1.6T share.",
-      "next_catalyst": "",
-      "why": [
-        "MRVL — derived thesis/debate state changed since the prior daily snapshot"
-      ]
-    },
-    {
-      "ticker": "OPENAI",
-      "focus_score": 62,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "AI labs (private)",
-      "thesis": "Private frontier lab (ChatGPT/GPT); scale + distribution vs cash burn + sub-50% share; Microsoft-anchored. No public financials.",
-      "next_catalyst": "",
-      "why": [
-        "OPENAI — derived thesis/debate state changed since the prior daily snapshot"
-      ]
-    },
-    {
-      "ticker": "PLTR",
-      "focus_score": 62,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Software / security / internet",
-      "thesis": "Ontology/\"action engine\" moat (claimed 5-yr); momentum strong but valuation split (UBS Buy $200 vs DB Hold $200).",
-      "next_catalyst": "",
-      "why": [
-        "PLTR — derived thesis/debate state changed since the prior daily snapshot"
-      ]
-    },
-    {
       "ticker": "NVDA",
       "focus_score": 61,
       "in_book": true,
@@ -147,16 +56,16 @@
       ]
     },
     {
-      "ticker": "ALAB",
+      "ticker": "MEDIATEK",
       "focus_score": 58,
       "in_book": false,
       "signal_count": 1,
       "high_count": 0,
-      "sector": "Optical / Networking",
-      "thesis": "Scale-up connectivity (PCIe/CXL retimers + Scorpio fabric); >$1k content/accelerator; concentration + rich multiple.",
-      "next_catalyst": "",
+      "sector": "AI — Semis & Compute",
+      "thesis": "World's largest mobile-SoC vendor pivoting into a data-center custom-ASIC house (Google TPU v8t/v9/v10 roadmap); JPM sees DC ~30% of rev 2027 → ~60% 2028; GS PT",
+      "next_catalyst": "2026-10-26",
       "why": [
-        "ALAB — catalyst passed without a logged outcome"
+        "MEDIATEK — 2026-10-26: 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR \"POTENTIAL…"
       ]
     },
     {
@@ -241,19 +150,6 @@
       ]
     },
     {
-      "ticker": "MEDIATEK",
-      "focus_score": 49,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "AI — Semis & Compute",
-      "thesis": "World's largest mobile-SoC vendor pivoting into a data-center custom-ASIC house (Google TPU v8t/v9/v10 roadmap); JPM sees DC ~30% of rev 2027 → ~60% 2028; GS PT",
-      "next_catalyst": "2026-10-26",
-      "why": [
-        "MEDIATEK — 2026-10-26: 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR \"POTENTIAL…"
-      ]
-    },
-    {
       "ticker": "FLEX",
       "focus_score": 43,
       "in_book": false,
@@ -317,6 +213,19 @@
       "next_catalyst": "2026-10-27",
       "why": [
         "NXPI — 2026-10-27: Q3 FY26 print, per the Vital Knowledge forward calendar (listed with ACGL, BKR, LOGI,…"
+      ]
+    },
+    {
+      "ticker": "MU",
+      "focus_score": 34,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "AI — Semis & Compute",
+      "thesis": "Pure-play on AI memory intensity (HBM sold-out CY26); debate = peak earnings vs run-rate.",
+      "next_catalyst": "2026-12-09",
+      "why": [
+        "MU — 2026-12-09: F4Q26 PRINT — REPORTED 2026-09-30 (✅ resolved: beat on revenue / GM / EPS, FQ1 revenue…"
       ]
     },
     {
@@ -492,7 +401,7 @@
   "signals": [
     {
       "id": "esti-d75e5d0173ba",
-      "asof": "2026-10-24",
+      "asof": "2026-10-25",
       "source_date": "2026-10-23",
       "type": "model_check",
       "priority": "high",
@@ -581,7 +490,7 @@
     },
     {
       "id": "esti-e39ccae30816",
-      "asof": "2026-10-24",
+      "asof": "2026-10-25",
       "source_date": "2026-10-23",
       "type": "model_check",
       "priority": "high",
@@ -635,7 +544,7 @@
     },
     {
       "id": "esti-d11f3446a5ba",
-      "asof": "2026-10-24",
+      "asof": "2026-10-25",
       "source_date": "2026-10-23",
       "type": "model_check",
       "priority": "high",
@@ -723,473 +632,55 @@
       "hidden": false
     },
     {
-      "id": "beli-d9f4f31694f0",
-      "asof": "2026-10-24",
-      "source_date": "2026-10-24",
-      "type": "narrative_shift",
+      "id": "cata-d6253f9923ca",
+      "asof": "2026-10-25",
+      "source_date": "2026-10-26",
+      "event_date": "2026-10-26",
+      "type": "catalyst",
       "priority": "medium",
-      "score": 62,
-      "title": "AMD — derived thesis/debate state changed since the prior daily snapshot",
+      "score": 58,
+      "title": "MEDIATEK — 2026-10-26: 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR \"POTENTIAL…",
       "tickers": [
-        "AMD"
+        "MEDIATEK"
       ],
       "in_book": [],
       "impact": "medium",
       "urgency": "immediate",
-      "confidence": "high",
-      "why_now": "verification (transcription QA): all quotes, figures, names and acronyms re-checked against the Transcript section of the source; attribution string matches the file header; glossary terms corrected; no correction needed.",
-      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
-      "action": "Re-grade the AMD thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
-      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "confidence": "medium",
+      "why_now": "🆕🔴 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR \"POTENTIAL UPWARD REVISIONS TO GOOGLE TPU-RELATED GUIDANCE.\" Between them: Google system-level validation of v9 in H",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
       "readthrough": [
-        {
-          "ticker": "NVDA",
-          "relation": "competitor",
-          "detail": "AI accelerators",
-          "from": "AMD",
-          "in_book": true
-        },
-        {
-          "ticker": "META",
-          "relation": "customer",
-          "detail": "MI GPUs",
-          "from": "AMD",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "customer",
-          "detail": "MI GPUs",
-          "from": "AMD",
-          "in_book": true
-        },
         {
           "ticker": "TSM",
           "relation": "supplier",
           "detail": "foundry",
-          "from": "AMD",
+          "from": "MEDIATEK",
           "in_book": true
-        },
-        {
-          "ticker": "INTC",
-          "relation": "competitor",
-          "detail": "server CPU",
-          "from": "AMD",
-          "in_book": false
         },
         {
           "ticker": "ARM",
           "relation": "supplier",
           "detail": "IP",
-          "from": "AMD",
-          "in_book": false
-        },
-        {
-          "ticker": "CDNS",
-          "relation": "supplier",
-          "detail": "EDA",
-          "from": "AMD",
+          "from": "MEDIATEK",
           "in_book": false
         }
       ],
-      "source": "AMD page Changelog 2026-10-24",
-      "evidence_paths": [
-        "AMD.md"
-      ],
-      "evidence_anchor": "verification (transcription QA): all quotes, figures, names and acronyms re-checked against the Transcript section of the source; attribution string matches the file header; glossary terms corrected; no correction needed.",
-      "origin": "belief_diff",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "beli-fc02b5700e90",
-      "asof": "2026-10-24",
-      "source_date": "2026-10-23",
-      "type": "narrative_shift",
-      "priority": "medium",
-      "score": 62,
-      "title": "ANTHROPIC — derived thesis/debate state changed since the prior daily snapshot",
-      "tickers": [
-        "ANTHROPIC"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "high",
-      "why_now": "verification (transcription QA): Arora's \"60 to 80% real / 20% hallucinations\" was logged as a live-audience show-of-hands poll — the transcript has him GUESSING what a show of hands would say (\"I would guess in this room, if a show of hands…\"); corrected in the Debate bullet and the 10-21 Full-log row. The Muse \"next three months\" line is now speaker UNCONFIRMED (by context Arora; the question went to both guests).",
-      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
-      "action": "Re-grade the ANTHROPIC thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
-      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
-      "readthrough": [
-        {
-          "ticker": "AMZN",
-          "relation": "supplier",
-          "detail": "AWS Trainium compute",
-          "from": "ANTHROPIC",
-          "in_book": true
-        },
-        {
-          "ticker": "GOOG",
-          "relation": "supplier",
-          "detail": "TPU compute",
-          "from": "ANTHROPIC",
-          "in_book": true
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "supplier",
-          "detail": "GPUs",
-          "from": "ANTHROPIC",
-          "in_book": true
-        },
-        {
-          "ticker": "OPENAI",
-          "relation": "competitor",
-          "detail": "frontier models",
-          "from": "ANTHROPIC",
-          "in_book": false
-        },
-        {
-          "ticker": "NSCALE",
-          "relation": "supplier",
-          "detail": "neocloud compute ($44.6bn, Monarch 460 MW)",
-          "from": "ANTHROPIC",
-          "in_book": false
-        }
-      ],
-      "source": "ANTHROPIC page Changelog 2026-10-23",
-      "evidence_paths": [
-        "ANTHROPIC.md"
-      ],
-      "evidence_anchor": "verification (transcription QA): Arora's \"60 to 80% real / 20% hallucinations\" was logged as a live-audience show-of-hands poll — the transcript has him GUESSING what a show of hands would say (\"I would guess in this room, if a show of hands…\"); corrected in the Debate bullet and the 10-21 Full-log row. The Muse \"next three months\" line is now speaker UNCONFIRMED (by context Arora; the question went to both guests).",
-      "origin": "belief_diff",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "beli-f5b00f741b54",
-      "asof": "2026-10-24",
-      "source_date": "2026-10-24",
-      "type": "narrative_shift",
-      "priority": "medium",
-      "score": 62,
-      "title": "CRDO — derived thesis/debate state changed since the prior daily snapshot",
-      "tickers": [
-        "CRDO"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "high",
-      "why_now": "verification (transcription QA): all quotes, figures, names and acronyms re-checked against the Transcript section of the source; attribution string matches the file header; glossary terms corrected; no correction needed.",
-      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
-      "action": "Re-grade the CRDO thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
-      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
-      "readthrough": [
-        {
-          "ticker": "AMZN",
-          "relation": "customer",
-          "detail": "AEC/connectivity",
-          "from": "CRDO",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "customer",
-          "detail": "connectivity",
-          "from": "CRDO",
-          "in_book": true
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "customer",
-          "detail": "AEC/SerDes",
-          "from": "CRDO",
-          "in_book": true
-        },
-        {
-          "ticker": "TSM",
-          "relation": "supplier",
-          "detail": "foundry",
-          "from": "CRDO",
-          "in_book": true
-        }
-      ],
-      "source": "CRDO page Changelog 2026-10-24",
-      "evidence_paths": [
-        "CRDO.md"
-      ],
-      "evidence_anchor": "verification (transcription QA): all quotes, figures, names and acronyms re-checked against the Transcript section of the source; attribution string matches the file header; glossary terms corrected; no correction needed.",
-      "origin": "belief_diff",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "beli-6c791ac3c6ea",
-      "asof": "2026-10-24",
-      "source_date": "2026-10-24",
-      "type": "narrative_shift",
-      "priority": "medium",
-      "score": 62,
-      "title": "HPE — derived thesis/debate state changed since the prior daily snapshot",
-      "tickers": [
-        "HPE"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "high",
-      "why_now": "verification (transcription QA): all quotes, figures, names and acronyms re-checked against the Transcript section of the source; attribution string matches the file header; glossary terms corrected; no correction needed.",
-      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
-      "action": "Re-grade the HPE thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
-      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
-      "readthrough": [
-        {
-          "ticker": "AMZN",
-          "relation": "customer",
-          "detail": "AI servers",
-          "from": "HPE",
-          "in_book": true
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "supplier",
-          "detail": "GPUs",
-          "from": "HPE",
-          "in_book": true
-        },
-        {
-          "ticker": "DELL",
-          "relation": "competitor",
-          "detail": "AI servers",
-          "from": "HPE",
-          "in_book": false
-        }
-      ],
-      "source": "HPE page Changelog 2026-10-24",
-      "evidence_paths": [
-        "HPE.md"
-      ],
-      "evidence_anchor": "verification (transcription QA): all quotes, figures, names and acronyms re-checked against the Transcript section of the source; attribution string matches the file header; glossary terms corrected; no correction needed.",
-      "origin": "belief_diff",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "beli-a3cb46062c27",
-      "asof": "2026-10-24",
-      "source_date": "2026-10-24",
-      "type": "narrative_shift",
-      "priority": "medium",
-      "score": 62,
-      "title": "MRVL — derived thesis/debate state changed since the prior daily snapshot",
-      "tickers": [
-        "MRVL"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "high",
-      "why_now": "verification (transcription QA): all quotes, figures, names and acronyms re-checked against the Transcript section of the source; attribution string matches the file header; glossary terms corrected; no correction needed.",
-      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
-      "action": "Re-grade the MRVL thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
-      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
-      "readthrough": [
-        {
-          "ticker": "AVGO",
-          "relation": "competitor",
-          "detail": "custom ASIC",
-          "from": "MRVL",
-          "in_book": true
-        },
-        {
-          "ticker": "AMZN",
-          "relation": "customer",
-          "detail": "custom ASIC (Trainium)",
-          "from": "MRVL",
-          "in_book": true
-        },
-        {
-          "ticker": "GOOG",
-          "relation": "customer",
-          "detail": "optical DSP",
-          "from": "MRVL",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "customer",
-          "detail": "custom ASIC (Maia)",
-          "from": "MRVL",
-          "in_book": true
-        },
-        {
-          "ticker": "TSM",
-          "relation": "supplier",
-          "detail": "foundry",
-          "from": "MRVL",
-          "in_book": true
-        }
-      ],
-      "source": "MRVL page Changelog 2026-10-24",
-      "evidence_paths": [
-        "MRVL.md"
-      ],
-      "evidence_anchor": "verification (transcription QA): all quotes, figures, names and acronyms re-checked against the Transcript section of the source; attribution string matches the file header; glossary terms corrected; no correction needed.",
-      "origin": "belief_diff",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "beli-ac014a2bfee0",
-      "asof": "2026-10-24",
-      "source_date": "2026-10-23",
-      "type": "narrative_shift",
-      "priority": "medium",
-      "score": 62,
-      "title": "OPENAI — derived thesis/debate state changed since the prior daily snapshot",
-      "tickers": [
-        "OPENAI"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "high",
-      "why_now": "verification (transcription QA): Lambert's \"reduce in price 2X every eight months for the next three years\" was logged as a price trend (\"inference prices falling\") — in the transcript he poses it as a hypothetical (\"what does it mean for… to reduce in price 2X…\"); reworded in the Debate bullet and the 10-14 Full-log row. The Muse \"next three months\" line (All-In 10-21) is now speaker UNCONFIRMED, by context Arora.",
-      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
-      "action": "Re-grade the OPENAI thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
-      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
-      "readthrough": [
-        {
-          "ticker": "MSFT",
-          "relation": "supplier",
-          "detail": "Azure compute",
-          "from": "OPENAI",
-          "in_book": true
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "supplier",
-          "detail": "GPUs",
-          "from": "OPENAI",
-          "in_book": true
-        },
-        {
-          "ticker": "ANTHROPIC",
-          "relation": "competitor",
-          "detail": "frontier models",
-          "from": "OPENAI",
-          "in_book": false
-        },
-        {
-          "ticker": "AMD",
-          "relation": "supplier",
-          "detail": "MI GPUs",
-          "from": "OPENAI",
-          "in_book": false
-        },
-        {
-          "ticker": "CRWV",
-          "relation": "supplier",
-          "detail": "neocloud compute",
-          "from": "OPENAI",
-          "in_book": false
-        },
-        {
-          "ticker": "NBIS",
-          "relation": "supplier",
-          "detail": "neocloud compute",
-          "from": "OPENAI",
-          "in_book": false
-        },
-        {
-          "ticker": "ORCL",
-          "relation": "supplier",
-          "detail": "OCI compute",
-          "from": "OPENAI",
-          "in_book": false
-        }
-      ],
-      "source": "OPENAI page Changelog 2026-10-23",
-      "evidence_paths": [
-        "OPENAI.md"
-      ],
-      "evidence_anchor": "verification (transcription QA): Lambert's \"reduce in price 2X every eight months for the next three years\" was logged as a price trend (\"inference prices falling\") — in the transcript he poses it as a hypothetical (\"what does it mean for… to reduce in price 2X…\"); reworded in the Debate bullet and the 10-14 Full-log row. The Muse \"next three months\" line (All-In 10-21) is now speaker UNCONFIRMED, by context Arora.",
-      "origin": "belief_diff",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "beli-9e9c9ae4c84b",
-      "asof": "2026-10-24",
-      "source_date": "2026-10-23",
-      "type": "narrative_shift",
-      "priority": "medium",
-      "score": 62,
-      "title": "PLTR — derived thesis/debate state changed since the prior daily snapshot",
-      "tickers": [
-        "PLTR"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "high",
-      "why_now": "terminology correction (transcription QA): Cacioppo quote normalised to Palantir [transcribed \"Pallantir\"] and FDEs [transcribed \"FTEs\"] (was garble [correct]).",
-      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
-      "action": "Re-grade the PLTR thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
-      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
-      "readthrough": [],
-      "source": "PLTR page Changelog 2026-10-23",
-      "evidence_paths": [
-        "PLTR.md"
-      ],
-      "evidence_anchor": "terminology correction (transcription QA): Cacioppo quote normalised to Palantir [transcribed \"Pallantir\"] and FDEs [transcribed \"FTEs\"] (was garble [correct]).",
-      "origin": "belief_diff",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "post-9de0bd705324",
-      "asof": "2026-10-24",
-      "source_date": "2026-10-23",
-      "event_date": "2026-10-23",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "ALAB — catalyst passed without a logged outcome",
-      "tickers": [
-        "ALAB"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "🆕🔭 2026-10-23 — expert ranking of hyperscaler CXL adoption puts Astera's Azure leg in production and AWS last: Azure \"clearly\" leads, with M-series VMs \"available now\" and \"absolutely working",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for ALAB in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
+      "source": "MEDIATEK page catalyst ledger; underlying source/date retained in the catalyst text",
       "evidence_paths": [
         "_meta/catalysts.md",
-        "_meta/outcomes.md"
+        "MEDIATEK.md"
       ],
-      "evidence_anchor": "🆕🔭 2026-10-23 — expert ranking of hyperscaler CXL adoption puts Astera's Azure leg in production and AWS last: Azure \"clearly\" leads, with M-series VMs \"available now\" and \"absolutely working",
-      "origin": "outcome_loop",
+      "evidence_anchor": "🆕🔴 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR \"POTENTIAL UPWARD REVISIONS TO GOOGLE TPU-RELATED GUIDANCE.\" Between them: Google system-level validation of v9 in H",
+      "origin": "catalyst_calendar",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
     },
     {
       "id": "cata-9f2e588078f2",
-      "asof": "2026-10-24",
+      "asof": "2026-10-25",
       "source_date": "2026-10-28",
       "event_date": "2026-10-28",
       "type": "catalyst",
@@ -1256,9 +747,9 @@
       "hidden": false
     },
     {
-      "id": "data-934f82488aed",
-      "asof": "2026-10-24",
-      "source_date": "2026-10-24",
+      "id": "data-2ae4d11638b2",
+      "asof": "2026-10-25",
+      "source_date": "2026-10-25",
       "type": "data_gap",
       "priority": "medium",
       "score": 54,
@@ -1275,7 +766,7 @@
       "action": "Run the merge-safe Bloomberg estimate fetch for NOK, then rebuild the snapshot and Analyst Inbox.",
       "falsifier": "A valid, current estimate record already exists under a different Bloomberg identifier.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-10-24",
+      "source": "Wiki remediation worklist 2026-10-25",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -1286,9 +777,9 @@
       "hidden": false
     },
     {
-      "id": "data-e45fd58c0982",
-      "asof": "2026-10-24",
-      "source_date": "2026-10-24",
+      "id": "data-2e3740209c7b",
+      "asof": "2026-10-25",
+      "source_date": "2026-10-25",
       "type": "data_gap",
       "priority": "medium",
       "score": 54,
@@ -1305,7 +796,7 @@
       "action": "Run the merge-safe Bloomberg estimate fetch for NSCALE, then rebuild the snapshot and Analyst Inbox.",
       "falsifier": "A valid, current estimate record already exists under a different Bloomberg identifier.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-10-24",
+      "source": "Wiki remediation worklist 2026-10-25",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -1317,7 +808,7 @@
     },
     {
       "id": "cata-4dea9544cec3",
-      "asof": "2026-10-24",
+      "asof": "2026-10-25",
       "source_date": "2026-11-17",
       "event_date": "2026-11-17",
       "type": "catalyst",
@@ -1401,7 +892,7 @@
     },
     {
       "id": "esti-a756bde9736d",
-      "asof": "2026-10-24",
+      "asof": "2026-10-25",
       "source_date": "2026-10-23",
       "type": "model_check",
       "priority": "medium",
@@ -1474,7 +965,7 @@
     },
     {
       "id": "cata-c76406c38a7d",
-      "asof": "2026-10-24",
+      "asof": "2026-10-25",
       "source_date": "2026-11-12",
       "event_date": "2026-11-12",
       "type": "catalyst",
@@ -1505,55 +996,8 @@
       "hidden": false
     },
     {
-      "id": "cata-d6253f9923ca",
-      "asof": "2026-10-24",
-      "source_date": "2026-10-26",
-      "event_date": "2026-10-26",
-      "type": "catalyst",
-      "priority": "medium",
-      "score": 49,
-      "title": "MEDIATEK — 2026-10-26: 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR \"POTENTIAL…",
-      "tickers": [
-        "MEDIATEK"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "this week",
-      "confidence": "medium",
-      "why_now": "🆕🔴 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR \"POTENTIAL UPWARD REVISIONS TO GOOGLE TPU-RELATED GUIDANCE.\" Between them: Google system-level validation of v9 in H",
-      "belief_update": "A dated event can resolve or reframe an open debate.",
-      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
-      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
-      "readthrough": [
-        {
-          "ticker": "TSM",
-          "relation": "supplier",
-          "detail": "foundry",
-          "from": "MEDIATEK",
-          "in_book": true
-        },
-        {
-          "ticker": "ARM",
-          "relation": "supplier",
-          "detail": "IP",
-          "from": "MEDIATEK",
-          "in_book": false
-        }
-      ],
-      "source": "MEDIATEK page catalyst ledger; underlying source/date retained in the catalyst text",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "MEDIATEK.md"
-      ],
-      "evidence_anchor": "🆕🔴 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR \"POTENTIAL UPWARD REVISIONS TO GOOGLE TPU-RELATED GUIDANCE.\" Between them: Google system-level validation of v9 in H",
-      "origin": "catalyst_calendar",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
       "id": "cata-c9f20420ff39",
-      "asof": "2026-10-24",
+      "asof": "2026-10-25",
       "source_date": "2026-11-17",
       "event_date": "2026-11-17",
       "type": "catalyst",
@@ -1637,7 +1081,7 @@
     },
     {
       "id": "cata-abf09cd99a69",
-      "asof": "2026-10-24",
+      "asof": "2026-10-25",
       "source_date": "2026-11-23",
       "event_date": "2026-11-23",
       "type": "catalyst",
@@ -1720,9 +1164,9 @@
       "hidden": false
     },
     {
-      "id": "data-b3958b26edd1",
-      "asof": "2026-10-24",
-      "source_date": "2026-10-24",
+      "id": "data-a60ed88da0bb",
+      "asof": "2026-10-25",
+      "source_date": "2026-10-25",
       "type": "data_gap",
       "priority": "watch",
       "score": 43,
@@ -1739,7 +1183,7 @@
       "action": "Fetch the latest NOK earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
       "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-10-24",
+      "source": "Wiki remediation worklist 2026-10-25",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -1750,9 +1194,9 @@
       "hidden": false
     },
     {
-      "id": "data-7613d10714af",
-      "asof": "2026-10-24",
-      "source_date": "2026-10-24",
+      "id": "data-5ef0ab23c458",
+      "asof": "2026-10-25",
+      "source_date": "2026-10-25",
       "type": "data_gap",
       "priority": "watch",
       "score": 43,
@@ -1769,7 +1213,7 @@
       "action": "Fetch the latest NSCALE earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
       "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-10-24",
+      "source": "Wiki remediation worklist 2026-10-25",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -1780,9 +1224,9 @@
       "hidden": false
     },
     {
-      "id": "data-59d2c1488a8b",
-      "asof": "2026-10-24",
-      "source_date": "2026-10-24",
+      "id": "data-4d5ea05af239",
+      "asof": "2026-10-25",
+      "source_date": "2026-10-25",
       "type": "data_gap",
       "priority": "watch",
       "score": 43,
@@ -1799,7 +1243,7 @@
       "action": "Fetch the latest POET earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
       "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-10-24",
+      "source": "Wiki remediation worklist 2026-10-25",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -1810,9 +1254,9 @@
       "hidden": false
     },
     {
-      "id": "data-52bd1e8bee66",
-      "asof": "2026-10-24",
-      "source_date": "2026-10-24",
+      "id": "data-94f02cbf992a",
+      "asof": "2026-10-25",
+      "source_date": "2026-10-25",
       "type": "data_gap",
       "priority": "watch",
       "score": 43,
@@ -1829,7 +1273,7 @@
       "action": "Fetch the latest SMTC earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
       "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-10-24",
+      "source": "Wiki remediation worklist 2026-10-25",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -1841,7 +1285,7 @@
     },
     {
       "id": "cata-30cf21294c0d",
-      "asof": "2026-10-24",
+      "asof": "2026-10-25",
       "source_date": "2026-11-10",
       "event_date": "2026-11-10",
       "type": "catalyst",
@@ -1881,7 +1325,7 @@
     },
     {
       "id": "cata-67b3a6bd8c80",
-      "asof": "2026-10-24",
+      "asof": "2026-10-25",
       "source_date": "2026-10-29",
       "event_date": "2026-10-29",
       "type": "catalyst",
@@ -1935,7 +1379,7 @@
     },
     {
       "id": "cata-9c6f028117f0",
-      "asof": "2026-10-24",
+      "asof": "2026-10-25",
       "source_date": "2026-10-27",
       "event_date": "2026-10-27",
       "type": "catalyst",
@@ -1975,7 +1419,7 @@
     },
     {
       "id": "cata-5c0d70eeaf70",
-      "asof": "2026-10-24",
+      "asof": "2026-10-25",
       "source_date": "2026-10-27",
       "event_date": "2026-10-27",
       "type": "catalyst",
@@ -2006,8 +1450,90 @@
       "hidden": false
     },
     {
+      "id": "cata-3bf0cdb9597e",
+      "asof": "2026-10-25",
+      "source_date": "2026-12-09",
+      "event_date": "2026-12-09",
+      "type": "catalyst",
+      "priority": "watch",
+      "score": 34,
+      "title": "MU — 2026-12-09: F4Q26 PRINT — REPORTED 2026-09-30 (✅ resolved: beat on revenue / GM / EPS, FQ1 revenue…",
+      "tickers": [
+        "MU"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "calendar",
+      "confidence": "medium",
+      "why_now": "🆕🔴 F4Q26 PRINT — REPORTED 2026-09-30 (✅ resolved: beat on revenue / GM / EPS, FQ1 revenue guide $61.5bn above every bogey, FQ1 GM guide ~86.25% below every buy-side bar; scored post-mortem in In",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "customer",
+          "detail": "HBM",
+          "from": "MU",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "HBM/LPDDR",
+          "from": "MU",
+          "in_book": true
+        },
+        {
+          "ticker": "SKHYNIX",
+          "relation": "competitor",
+          "detail": "HBM",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "AMAT",
+          "relation": "supplier",
+          "detail": "WFE",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "AMD",
+          "relation": "customer",
+          "detail": "HBM",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "ASML",
+          "relation": "supplier",
+          "detail": "litho",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "KLAC",
+          "relation": "supplier",
+          "detail": "process control",
+          "from": "MU",
+          "in_book": false
+        }
+      ],
+      "source": "MU page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "MU.md"
+      ],
+      "evidence_anchor": "🆕🔴 F4Q26 PRINT — REPORTED 2026-09-30 (✅ resolved: beat on revenue / GM / EPS, FQ1 revenue guide $61.5bn above every bogey, FQ1 GM guide ~86.25% below every buy-side bar; scored post-mortem in In",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
       "id": "cata-c030b28ed093",
-      "asof": "2026-10-24",
+      "asof": "2026-10-25",
       "source_date": "2026-11-12",
       "event_date": "2026-11-12",
       "type": "catalyst",
@@ -2089,7 +1615,7 @@
     },
     {
       "id": "cata-ce699c62b4f0",
-      "asof": "2026-10-24",
+      "asof": "2026-10-25",
       "source_date": "2026-11-10",
       "event_date": "2026-11-10",
       "type": "catalyst",
@@ -2129,7 +1655,7 @@
     },
     {
       "id": "cata-c333d9a79742",
-      "asof": "2026-10-24",
+      "asof": "2026-10-25",
       "source_date": "2026-11-03",
       "event_date": "2026-11-03",
       "type": "catalyst",
@@ -2211,7 +1737,7 @@
     },
     {
       "id": "cata-e20427bb0cce",
-      "asof": "2026-10-24",
+      "asof": "2026-10-25",
       "source_date": "2026-11-02",
       "event_date": "2026-11-02",
       "type": "catalyst",
@@ -2272,7 +1798,7 @@
     },
     {
       "id": "cata-b395c83ce767",
-      "asof": "2026-10-24",
+      "asof": "2026-10-25",
       "source_date": "2026-11-05",
       "event_date": "2026-11-05",
       "type": "catalyst",
@@ -2347,7 +1873,7 @@
     },
     {
       "id": "cata-172f6636a635",
-      "asof": "2026-10-24",
+      "asof": "2026-10-25",
       "source_date": "2026-11-09",
       "event_date": "2026-11-09",
       "type": "catalyst",
@@ -2408,7 +1934,7 @@
     },
     {
       "id": "cata-3307849d38b1",
-      "asof": "2026-10-24",
+      "asof": "2026-10-25",
       "source_date": "2026-11-03",
       "event_date": "2026-11-03",
       "type": "catalyst",
@@ -2469,7 +1995,7 @@
     },
     {
       "id": "cata-396a1e21b245",
-      "asof": "2026-10-24",
+      "asof": "2026-10-25",
       "source_date": "2026-11-02",
       "event_date": "2026-11-02",
       "type": "catalyst",
@@ -2537,7 +2063,7 @@
     },
     {
       "id": "cata-01a4718ff5c9",
-      "asof": "2026-10-24",
+      "asof": "2026-10-25",
       "source_date": "2026-12-02",
       "event_date": "2026-12-02",
       "type": "catalyst",
@@ -2577,7 +2103,7 @@
     },
     {
       "id": "cata-eb7d5753b962",
-      "asof": "2026-10-24",
+      "asof": "2026-10-25",
       "source_date": "2026-11-16",
       "event_date": "2026-11-16",
       "type": "catalyst",
@@ -2652,7 +2178,7 @@
     },
     {
       "id": "cata-44020bbb6eda",
-      "asof": "2026-10-24",
+      "asof": "2026-10-25",
       "source_date": "2026-12-02",
       "event_date": "2026-12-02",
       "type": "catalyst",
@@ -2706,7 +2232,7 @@
     },
     {
       "id": "cata-2c7b4a6f3c93",
-      "asof": "2026-10-24",
+      "asof": "2026-10-25",
       "source_date": "2026-11-18",
       "event_date": "2026-11-18",
       "type": "catalyst",
@@ -2746,7 +2272,7 @@
     },
     {
       "id": "cata-09405b3ca0ba",
-      "asof": "2026-10-24",
+      "asof": "2026-10-25",
       "source_date": "2026-11-21",
       "event_date": "2026-11-21",
       "type": "catalyst",
@@ -2828,7 +2354,7 @@
     },
     {
       "id": "cata-45aebd381da9",
-      "asof": "2026-10-24",
+      "asof": "2026-10-25",
       "source_date": "2026-11-19",
       "event_date": "2026-11-19",
       "type": "catalyst",

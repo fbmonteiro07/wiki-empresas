@@ -1,4 +1,4 @@
-== SENTIMENT MONITOR · 2026-10-24 ==
+== SENTIMENT MONITOR · 2026-10-25 ==
 
 **Market mood.** CNN Fear & Greed is at **21 (extreme fear)** — down from 22 a week ago and 33 a month ago (fear).
 
@@ -12,4 +12,4 @@ Last extreme crossing: down to ≤20 on 2026-10-22 (F&G 19); its five-session wi
 
 **Universe breadth (week ending 2026-10-23, 106 names).** EPS revisions up for 89% and down for 10%; rating drift positive for 41%; 20% of names up over 4 weeks. Sell-side: 18 names with net upgrades vs 2 with net downgrades, PT raises in 6 vs cuts in 5.
 
-**What history says (Bloomberg track, 2024-01-05 → 2026-10-23).** Names that *turned hot* returned **-0.0%** universe-relative over 15 days (positive 44%, n=1123); *turned cold* +0.1% (positive 46%, n=949). Attention says where the crowd is, not where the stock goes next.
+**What history says (Bloomberg track, 2024-01-05 → 2026-10-23).** Names that *turned hot* returned **-0.1%** universe-relative over 15 days (positive 44%, n=1130); *turned cold* +0.1% (positive 46%, n=959). Attention says where the crowd is, not where the stock goes next.

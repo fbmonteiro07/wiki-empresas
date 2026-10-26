@@ -1,6 +1,6 @@
 {
  "_about": "Hand-edited ledger of machine-transcription garbles (Notion AI, Bloomberg ASR, auto-translation) seen in the archive, with the correct reading. Used by E:\\.claude\\scripts\\transcript_qa.py (source-file scan, page-diff scan) and by ingest_notion_meetings.py (writes a 'Transcription QA' block into every archived Notion file). Keys are matched with word boundaries, case-sensitive unless 'ci' is true. 'keep_when' = regex contexts (same line, ~80 chars around the hit) where the token is legitimate and must NOT be flagged. Add an entry the first time a garble is caught; never delete one. Standing rule (Felipe, 2026-09-28): ALWAYS double-check transcript content — acronyms, names, units, numbers — before it travels to a page.",
- "_updated": "2026-10-24",
+ "_updated": "2026-10-25",
  "terms": {
   "Astrod": {
    "correct": "Astra (probable: OpenAI GPT-6 Astra)",
@@ -4347,6 +4347,124 @@
    "domain": "ai",
    "rule": "'applications that are built on LOMs' = LLMs.",
    "first_seen": "2026-10-24 (a16z Show 'What It Takes to Win as a Founder | Ben Horowitz' 2026-10-24, podscripts ASR)"
+  },
+  "Fermis": {
+   "correct": "Firmus",
+   "domain": "names",
+   "rule": "NVIDIA revenue-share neocloud partner (with Sharon AI); 'Sharon AI and Fermis' = Sharon AI and Firmus. Not Fermi America.",
+   "first_seen": "2026-10-25 (CASPA 2026 CEO Summit semis panel w/ Rasgon/Patel/Lyons 2026-10-24, YouTube ASR)"
+  },
+  "Cereubus": {
+   "correct": "Cerebras",
+   "domain": "names",
+   "rule": "AI-accelerator startup.",
+   "first_seen": "2026-10-25 (CASPA 2026 CEO Summit semis panel w/ Rasgon/Patel/Lyons 2026-10-24, YouTube ASR)"
+  },
+  "Chief Strat": {
+   "correct": "Chipstrat",
+   "domain": "names",
+   "rule": "Austin Lyons' newsletter.",
+   "first_seen": "2026-10-25 (CASPA 2026 CEO Summit semis panel w/ Rasgon/Patel/Lyons 2026-10-24, YouTube ASR)"
+  },
+  "Rascin": {
+   "correct": "Rasgon",
+   "domain": "names",
+   "rule": "Stacy Rasgon, Bernstein.",
+   "first_seen": "2026-10-25 (CASPA 2026 CEO Summit semis panel w/ Rasgon/Patel/Lyons 2026-10-24, YouTube ASR)"
+  },
+  "co-ass": {
+   "correct": "CoWoS",
+   "domain": "acronyms",
+   "rule": "TSMC advanced packaging.",
+   "first_seen": "2026-10-25 (CASPA 2026 CEO Summit semis panel w/ Rasgon/Patel/Lyons 2026-10-24, YouTube ASR)"
+  },
+  "Fineman": {
+   "correct": "Feynman",
+   "domain": "products",
+   "rule": "NVIDIA post-Rubin architecture.",
+   "first_seen": "2026-10-25 (CASPA 2026 CEO Summit semis panel w/ Rasgon/Patel/Lyons 2026-10-24, YouTube ASR)"
+  },
+  "Marll": {
+   "correct": "Marvell",
+   "domain": "names",
+   "rule": "MRVL.",
+   "first_seen": "2026-10-25 (CASPA 2026 CEO Summit semis panel w/ Rasgon/Patel/Lyons 2026-10-24, YouTube ASR)"
+  },
+  "Core Reeves": {
+   "correct": "CoreWeave",
+   "domain": "names",
+   "rule": "CRWV.",
+   "first_seen": "2026-10-25 (CASPA 2026 CEO Summit semis panel w/ Rasgon/Patel/Lyons 2026-10-24, YouTube ASR)"
+  },
+  "Volulta": {
+   "correct": "UNIDENTIFIED neocloud/DC issuer",
+   "domain": "names",
+   "rule": "Issuer of a ~12%-coupon Anthropic-cluster bond sold at 95 (Patel, CASPA). Identity UNCONFIRMED — do not guess; quote as [transcribed \"Volulta\"].",
+   "first_seen": "2026-10-25 (CASPA 2026 CEO Summit semis panel w/ Rasgon/Patel/Lyons 2026-10-24, YouTube ASR)"
+  },
+  "replet": {
+   "correct": "Replit",
+   "domain": "names",
+   "rule": "AI coding startup.",
+   "first_seen": "2026-10-25 (a16z Show, Box CEO Aaron Levie 2026-10-25, podscripts ASR)"
+  },
+  "Hawk": {
+   "correct": "Hock (Tan, Broadcom CEO)",
+   "domain": "names",
+   "rule": "'Jensen and Hawk… Hawk said 100' = Hock Tan on Broadcom's guide.",
+   "keep_when": "the bird / the 'hawk vs dove' monetary-policy sense",
+   "first_seen": "2026-10-25 (/run-inbox — CASPA 2026 CEO Summit panel 2026-10-24, YouTube ASR)"
+  },
+  "Sharon Infirm": {
+   "correct": "Sharon AI and Firmus",
+   "domain": "names",
+   "rule": "Two NVIDIA-backstopped neoclouds run together by ASR ('a 50% like Sharon Infirm had').",
+   "first_seen": "2026-10-25 (/run-inbox — CASPA 2026 CEO Summit panel 2026-10-24, YouTube ASR)"
+  },
+  "eyabs": {
+   "correct": "AI labs",
+   "domain": "terms",
+   "rule": "'the eyabs' = the AI labs.",
+   "first_seen": "2026-10-25 (/run-inbox — CASPA 2026 CEO Summit panel 2026-10-24, YouTube ASR)"
+  },
+  "Reuben": {
+   "correct": "Rubin (NVIDIA)",
+   "domain": "products",
+   "rule": "NVIDIA GPU generation after Blackwell.",
+   "keep_when": "a person named Reuben",
+   "first_seen": "2026-10-25 (/run-inbox — CASPA 2026 CEO Summit panel 2026-10-24, YouTube ASR)"
+  },
+  "Ruben": {
+   "correct": "Rubin (NVIDIA)",
+   "domain": "products",
+   "rule": "NVIDIA GPU generation after Blackwell ('40 for Ruben').",
+   "keep_when": "a person named Ruben",
+   "first_seen": "2026-10-25 (/run-inbox — CASPA 2026 CEO Summit panel 2026-10-24, YouTube ASR)"
+  },
+  "co-as": {
+   "correct": "CoWoS",
+   "domain": "terms",
+   "rule": "TSMC advanced packaging ('co-as wafers').",
+   "first_seen": "2026-10-25 (/run-inbox — CASPA 2026 CEO Summit panel 2026-10-24, YouTube ASR)"
+  },
+  "WV": {
+   "correct": "WFE",
+   "domain": "terms",
+   "rule": "'outlook for WV for wafer fabrication equipment' = WFE.",
+   "keep_when": "West Virginia",
+   "first_seen": "2026-10-25 (/run-inbox — CASPA 2026 CEO Summit panel 2026-10-24, YouTube ASR)"
+  },
+  "get up co-pilot": {
+   "correct": "GitHub Copilot",
+   "domain": "products",
+   "rule": "Microsoft/GitHub coding assistant.",
+   "first_seen": "2026-10-25 (/run-inbox — a16z Show, Box CEO Aaron Levie 2026-10-25, podscripts ASR)"
+  },
+  "Indriason": {
+   "correct": "Andreessen (Horowitz)",
+   "domain": "names",
+   "rule": "a16z.",
+   "first_seen": "2026-10-25 (/run-inbox — a16z Show, Box CEO Aaron Levie 2026-10-25, podscripts ASR)"
   }
  },
  "summary_traps": [
