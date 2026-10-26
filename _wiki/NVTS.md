@@ -5,7 +5,7 @@
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\NVTS` (10-K/10-Q filings + transcripts) · briefings `E:\briefings\2026`. Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-23 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-10-26 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -13,7 +13,7 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\NVTS` (10-K/10-Q filin
 | Gross profit | $18m | $29m |
 | Gross margin | 39.3% | 41.1% |
 | EBITDA | $-42m | $-34m |
-| EPS | $-0.18 | $-0.16 |
+| EPS | $-0.17 | $-0.16 |
 | Capex | $2m | $2m |
 | OCF (≈EBITDA) | $-42m | $-34m |
 

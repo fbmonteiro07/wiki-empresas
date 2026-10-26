@@ -3,17 +3,17 @@
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\ALAB` (filings + transcripts) · `E:\briefings\2026\*` · Master index: [00_INDEX.md](00_INDEX.md). Themes: [custom-asic-tpu](themes/custom-asic-tpu.md) · [optical-cpo](themes/optical-cpo.md). Note: IPO'd Mar-2024 — short filing history (~9 filings)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-23 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-10-26 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $1.9bn | $3.1bn |
 | Gross profit | $1.3bn | $2.2bn |
 | Gross margin | 72.3% | 70.9% |
-| EBITDA | $721m | $1.2bn |
-| EPS | $3.85 | $6.53 |
+| EBITDA | $755m | $1.2bn |
+| EPS | $3.84 | $6.53 |
 | Capex | $64m | $97m |
-| OCF (≈EBITDA) | $721m | $1.2bn |
+| OCF (≈EBITDA) | $755m | $1.2bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

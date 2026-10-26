@@ -17,7 +17,7 @@ Sources with NEW quantitative datapoints (31 files processed; qualitative podcas
 
 **House baselines:** CRWV — Capstone credit/equity model figures as logged on the CRWV page; NVDA — `house.json` (2027E revenue $661.0bn, EPS $15.44). No house model for ORCL, PANW, CRWD, OKTA, NET, MSFT, AMZN, or the memory names on these metrics.
 
-## DIVERGES (alpha candidates)
+## Where the new data DIVERGES
 
 | Ticker | Metric | New datapoint | Baseline (prior wiki / house / BBG) | Gap | Note |
 |---|---|---|---|--:|---|
@@ -63,5 +63,7 @@ Sources with NEW quantitative datapoints (31 files processed; qualitative podcas
 - **ANTHROPIC** Q3 set — pull the Bloomberg 2026-10-14 story as the primary before any of it reaches the body.
 - **PANW** — identify the house above $475 (Refinitiv high $525).
 - **OKTA** — the MS $200 → $245 raise note is not ingested; pull it.
-- **CRWV** — MS CY28 EPS $2.37 vs its quoted Refinitiv consensus $0.80 vs BBG $1.16: confirm whether MS is the 2028 Street high (the two consensus panels differ by ~45%).
+- **CRWV** — MS CY28 EPS $2.37 vs its quoted Refinitiv consensus $0.80 vs BBG $1.16: confirm whether MS is the 2028 Street high (the two consensus panels differ by ~45%). **BBG update 2026-10-26:** 3FY (CY28) EPS median **$1.14** (was $1.16), so MS $2.37 is ~2.1x the BBG median; the wrapper returns no `eps_hi` for CRWV 3FY, so the street-high question stays open.
 - **ORCL** investor day **10-28** (GS cover's "10/29" is a typo per its own body) resolves the capex-peak fork (JPM vs GS/BBG).
+
+_BBG column resolved 2026-10-26 — estimates.json asof 2026-10-26._

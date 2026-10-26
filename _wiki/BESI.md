@@ -6,17 +6,17 @@
 _Wiki · generated 2026-06-20 · **Dutch issuer — no SEC 10-K/10-Q/20-F**; sources: transcripts + Besi IR + BBG (EUR). Euronext Amsterdam: BESI (ADR: BESIY). Local sources: `E:\Wiki Felipe\BESI\transcripts` · `E:\briefings\2026\*-company-specific.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-23 · EUR
+### 📊 Consensus snapshot — BBG · asof 2026-10-26 · EUR
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | €1.0bn | €1.3bn |
-| Gross profit | €654m | €867m |
-| Gross margin | 64.5% | 65.5% |
-| EBITDA | €467m | €646m |
-| EPS | €4.48 | €6.46 |
+| Gross profit | €651m | €865m |
+| Gross margin | 64.4% | 65.4% |
+| EBITDA | €463m | €640m |
+| EPS | €4.45 | €6.44 |
 | Capex | €15m | €17m |
-| OCF (≈EBITDA) | €467m | €646m |
+| OCF (≈EBITDA) | €463m | €640m |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
