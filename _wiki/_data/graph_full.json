@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-25",
+ "generated": "2026-10-26",
  "counts": {
-  "nodes": 187,
-  "edges": 2209
+  "nodes": 188,
+  "edges": 2222
  },
  "nodes": [
   {
@@ -163,7 +163,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-10-24"
+   "last_chg": "2026-10-26"
   },
   {
    "id": "AMZN",
@@ -178,7 +178,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-10-24"
+   "last_chg": "2026-10-26"
   },
   {
    "id": "ANET",
@@ -200,7 +200,7 @@
    "type": "ticker",
    "label": "ANTHROPIC",
    "sector": "AI labs (private)",
-   "thesis": "Private frontier lab (Claude); enterprise/coding leadership + Amazon/Google compute; $65B+ ARR (conflict-flagged vs >$70B, bases unknown pre-S1). IPO window lat",
+   "thesis": "Pre-IPO frontier lab (S-1 2026-10-26, Nasdaq: ANT): 2Q26 rev $11.6bn, first op. profit; 85% serving GM (1H26); 48% sold via AWS/GCP/Azure, which are also its co",
    "in_book": false,
    "docs": {
     "briefing": 1,
@@ -208,7 +208,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-10-25"
+   "last_chg": "2026-10-26"
   },
   {
    "id": "AOSL",
@@ -266,7 +266,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-10-19"
+   "last_chg": "2026-10-26"
   },
   {
    "id": "ASML",
@@ -296,7 +296,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-10-25"
+   "last_chg": "2026-10-26"
   },
   {
    "id": "AXTI",
@@ -658,7 +658,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-10-24"
+   "last_chg": "2026-10-26"
   },
   {
    "id": "HPE",
@@ -703,7 +703,7 @@
     "wiki": 1
    },
    "next_catalyst": "2026-11-03",
-   "last_chg": "2026-10-19"
+   "last_chg": "2026-10-26"
   },
   {
    "id": "KIOXIA",
@@ -880,7 +880,7 @@
     "wiki": 1
    },
    "next_catalyst": "2026-12-09",
-   "last_chg": "2026-10-24"
+   "last_chg": "2026-10-26"
   },
   {
    "id": "NBIS",
@@ -980,7 +980,7 @@
     "wiki": 1
    },
    "next_catalyst": "2026-11-17",
-   "last_chg": "2026-10-25"
+   "last_chg": "2026-10-26"
   },
   {
    "id": "NVT",
@@ -1343,7 +1343,7 @@
     "wiki": 1
    },
    "next_catalyst": "2026-11-12",
-   "last_chg": "2026-10-23"
+   "last_chg": "2026-10-26"
   },
   {
    "id": "SPOT",
@@ -1853,6 +1853,14 @@
    "title": "Server-CPU TAM / unidades — o leg agentic",
    "status": "",
    "canonical": "TRES construcoes independentes convergem em CY26 (~$50-55bn) e divergem no timing do 1:1 agentic: (1) unidades bottom-up — JPM proprietario 26M (2025) -> 68M (2028), agentic 155% CAGR; house build (Bottom_Up_Capex v2, unidades x ASP c/ hikes Sherman) ~$55bn CY26 / ~$96bn CY27 (CPU-silicio total); (2) capex-ratio top-down — Bernstein/Rasgon 06-16: $37bn 2025 -> $137bn 2030 BASE, $223bn BULL (premis"
+  },
+  {
+   "id": "assum:server-dram-per-cpu",
+   "type": "assumption",
+   "label": "server-dram-per-cpu",
+   "title": "Server DRAM per CPU (TB) and DRAM for server CPUs (EB)",
+   "status": "live-debate",
+   "canonical": "UBS (Arcuri/Cho, 2026-10-26) is the only source on disk that sizes DRAM per CPU by class and ties it to supply: stated (Fig 5) traditional ~0.25-0.5TB today -> ~1.0TB C2030E, AI head-node ~1-1.5TB -> ~1.5-2TB, AI standalone ~1.5-2TB -> ~2-3TB; but its C2030E base (Fig 8) runs 0.5 / 1.5 / 2.0TB = 30MM x 0.5 + 22MM x 1.5 + 14.5MM x 2.0 = 77EB, which equals its DRAM-for-CPUs supply line (69EB server "
   },
   {
    "id": "assum:enterprise-ai-spend-per-employee",
@@ -5998,6 +6006,84 @@
    "label": ""
   },
   {
+   "u": "assum:server-cpu-tam",
+   "v": "AMD",
+   "type": "cites",
+   "label": ""
+  },
+  {
+   "u": "assum:server-cpu-tam",
+   "v": "ARM",
+   "type": "cites",
+   "label": ""
+  },
+  {
+   "u": "assum:server-cpu-tam",
+   "v": "INTC",
+   "type": "cites",
+   "label": ""
+  },
+  {
+   "u": "assum:server-cpu-tam",
+   "v": "MU",
+   "type": "cites",
+   "label": ""
+  },
+  {
+   "u": "assum:server-cpu-tam",
+   "v": "NVDA",
+   "type": "cites",
+   "label": ""
+  },
+  {
+   "u": "assum:server-cpu-tam",
+   "v": "theme:hbm-memory",
+   "type": "cites",
+   "label": ""
+  },
+  {
+   "u": "assum:server-dram-per-cpu",
+   "v": "AMD",
+   "type": "cites",
+   "label": ""
+  },
+  {
+   "u": "assum:server-dram-per-cpu",
+   "v": "ARM",
+   "type": "cites",
+   "label": ""
+  },
+  {
+   "u": "assum:server-dram-per-cpu",
+   "v": "INTC",
+   "type": "cites",
+   "label": ""
+  },
+  {
+   "u": "assum:server-dram-per-cpu",
+   "v": "MU",
+   "type": "cites",
+   "label": ""
+  },
+  {
+   "u": "assum:server-dram-per-cpu",
+   "v": "NVDA",
+   "type": "cites",
+   "label": ""
+  },
+  {
+   "u": "assum:server-dram-per-cpu",
+   "v": "theme:cxl-memory-fabric",
+   "type": "cites",
+   "label": ""
+  },
+  {
+   "u": "assum:server-dram-per-cpu",
+   "v": "theme:hbm-memory",
+   "type": "cites",
+   "label": ""
+  },
+  {
    "u": "assum:enterprise-ai-spend-per-employee",
    "v": "SPCX",
    "type": "cites",
@@ -7080,14 +7166,14 @@
    "v": "AMD",
    "type": "covers",
    "label": "",
-   "w": 339
+   "w": 347
   },
   {
    "u": "broker:UBS",
    "v": "AMD",
    "type": "covers",
    "label": "",
-   "w": 347
+   "w": 407
   },
   {
    "u": "broker:JPM",
@@ -7185,7 +7271,7 @@
    "v": "AMD",
    "type": "covers",
    "label": "",
-   "w": 47
+   "w": 48
   },
   {
    "u": "broker:KeyBanc",
@@ -7234,7 +7320,7 @@
    "v": "AMZN",
    "type": "covers",
    "label": "",
-   "w": 243
+   "w": 245
   },
   {
    "u": "broker:UBS",
@@ -7248,7 +7334,7 @@
    "v": "AMZN",
    "type": "covers",
    "label": "",
-   "w": 258
+   "w": 260
   },
   {
    "u": "broker:MS",
@@ -7514,7 +7600,7 @@
    "v": "ANTHROPIC",
    "type": "covers",
    "label": "",
-   "w": 214
+   "w": 216
   },
   {
    "u": "broker:MS",
@@ -7633,7 +7719,7 @@
    "v": "ANTHROPIC",
    "type": "covers",
    "label": "",
-   "w": 254
+   "w": 260
   },
   {
    "u": "broker:Stratechery",
@@ -7654,7 +7740,7 @@
    "v": "ANTHROPIC",
    "type": "covers",
    "label": "",
-   "w": 350
+   "w": 351
   },
   {
    "u": "broker:FinTwit",
@@ -7836,21 +7922,21 @@
    "v": "ARM",
    "type": "covers",
    "label": "",
-   "w": 120
+   "w": 127
   },
   {
    "u": "broker:UBS",
    "v": "ARM",
    "type": "covers",
    "label": "",
-   "w": 217
+   "w": 272
   },
   {
    "u": "broker:JPM",
    "v": "ARM",
    "type": "covers",
    "label": "",
-   "w": 43
+   "w": 44
   },
   {
    "u": "broker:MS",
@@ -7941,7 +8027,7 @@
    "v": "ARM",
    "type": "covers",
    "label": "",
-   "w": 42
+   "w": 43
   },
   {
    "u": "broker:TrendForce",
@@ -8130,7 +8216,7 @@
    "v": "AVGO",
    "type": "covers",
    "label": "",
-   "w": 687
+   "w": 688
   },
   {
    "u": "broker:MS",
@@ -10447,7 +10533,7 @@
    "v": "GOOG",
    "type": "covers",
    "label": "",
-   "w": 252
+   "w": 254
   },
   {
    "u": "broker:UBS",
@@ -10461,7 +10547,7 @@
    "v": "GOOG",
    "type": "covers",
    "label": "",
-   "w": 361
+   "w": 363
   },
   {
    "u": "broker:MS",
@@ -10825,7 +10911,7 @@
    "v": "INTC",
    "type": "covers",
    "label": "",
-   "w": 500
+   "w": 551
   },
   {
    "u": "broker:JPM",
@@ -12295,7 +12381,7 @@
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 815
+   "w": 850
   },
   {
    "u": "broker:JPM",
@@ -12351,7 +12437,7 @@
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 163
+   "w": 165
   },
   {
    "u": "broker:Redburn",
@@ -12904,21 +12990,21 @@
    "v": "NVDA",
    "type": "covers",
    "label": "",
-   "w": 470
+   "w": 474
   },
   {
    "u": "broker:UBS",
    "v": "NVDA",
    "type": "covers",
    "label": "",
-   "w": 647
+   "w": 659
   },
   {
    "u": "broker:JPM",
    "v": "NVDA",
    "type": "covers",
    "label": "",
-   "w": 420
+   "w": 424
   },
   {
    "u": "broker:MS",
@@ -13065,7 +13151,7 @@
    "v": "NVDA",
    "type": "covers",
    "label": "",
-   "w": 385
+   "w": 387
   },
   {
    "u": "independent:DAMNANG",
@@ -15228,7 +15314,7 @@
    "v": "SPCX",
    "type": "covers",
    "label": "",
-   "w": 158
+   "w": 159
   },
   {
    "u": "broker:MS",

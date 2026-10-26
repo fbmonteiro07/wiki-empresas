@@ -955,7 +955,7 @@
     "server-cpu-tam": {
       "title": "Server-CPU TAM / unidades — o leg agentic",
       "definition": "TAM de CPU-silicio de servidor (merchant + captive + Grace/Vera) e unidades — SEMPRE declarar basis ($ TAM vs unidades; mercado total vs hyperscaler-only).",
-      "canonical": "TRES construcoes independentes convergem em CY26 (~$50-55bn) e divergem no timing do 1:1 agentic: (1) unidades bottom-up — JPM proprietario 26M (2025) -> 68M (2028), agentic 155% CAGR; house build (Bottom_Up_Capex v2, unidades x ASP c/ hikes Sherman) ~$55bn CY26 / ~$96bn CY27 (CPU-silicio total); (2) capex-ratio top-down — Bernstein/Rasgon 06-16: $37bn 2025 -> $137bn 2030 BASE, $223bn BULL (premissas: $3.5T AI-DC capex + pareamento 1:1 CPU:GPU em inferencia); (3) UBS bottoms-up: ~$175bn em 2030. House 2030 ~$180-200bn = entre base e bull do Rasgon. TSMC 2Q26 (C.C. Wei): 'agentic AI = resurgence of CPUs... x86, ARM ou RISC-V, quase todos clientes TSMC'. ATUALIZAÇÃO 07-23: AMD adota $220bn 2030 + share >50% — o bull do Bernstein virou guidance de empresa; house build ~0.8x do path AMD no terminal (gap = 1:1 pleno).",
+      "canonical": "TRES construcoes independentes convergem em CY26 (~$50-55bn) e divergem no timing do 1:1 agentic: (1) unidades bottom-up — JPM proprietario 26M (2025) -> 68M (2028), agentic 155% CAGR; house build (Bottom_Up_Capex v2, unidades x ASP c/ hikes Sherman) ~$55bn CY26 / ~$96bn CY27 (CPU-silicio total); (2) capex-ratio top-down — Bernstein/Rasgon 06-16: $37bn 2025 -> $137bn 2030 BASE, $223bn BULL (premissas: $3.5T AI-DC capex + pareamento 1:1 CPU:GPU em inferencia); (3) UBS bottoms-up: ~$208bn em 2030 (Arcuri/Cho 26-Oct-26, raised from ~$175bn — old value kept in the variants as SUPERSEDED): 30MM traditional + ~37MM AI CPUs (22MM head-node + ~14.5MM standalone, 0.83 CPU:GPU on ~44MM accelerators), explicitly GATED BY MEMORY (base sized so CPU DRAM = 77EB supply); 'unconstrained' ~150MM CPUs / $548bn. House 2030 ~$180-200bn = entre base e bull do Rasgon. TSMC 2Q26 (C.C. Wei): 'agentic AI = resurgence of CPUs... x86, ARM ou RISC-V, quase todos clientes TSMC'. ATUALIZAÇÃO 07-23: AMD adota $220bn 2030 + share >50% — o bull do Bernstein virou guidance de empresa; house build ~0.8x do path AMD no terminal (gap = 1:1 pleno).",
       "scope_note": "Basis traps: TAM $ total-mercado (Bernstein/UBS) vs hyperscaler-only (house ex-enterprise); unidades (JPM) precisam de ASP p/ virar $ (hikes Sherman +15-20% x2 em 2026); Vera/Grace CONTAM no TAM mas moram dentro da receita Compute da NVDA (nao somar 2x em contas de capex); ARM $22bn ate CY30 = ARM-as-CPU-maker (Bernstein), != royalties.",
       "variants": [
         {
@@ -971,10 +971,30 @@
           "scope": "$ TAM, mercado total"
         },
         {
-          "value": "~$175bn server-CPU market 2030 (bottoms-up)",
+          "value": "C2030 bottom-up $208bn (traditional 30MM x $1,606 = $48bn + AI $160bn: 22MM head-node @ $4,480 + ~14.5MM standalone @ $4,223); top-down $288bn; unconstrained ~147-150MM CPUs / $548bn; split AMD $62bn / INTC $44bn / ARM-based $102bn (NVDA $53bn, ARM AGI $15bn, other $35bn); units AMD 34% / INTC 28% / ARM 38%. Gated by DRAM: 77EB for CPUs vs ~238-282EB unconstrained",
+          "source": "UBS (Timothy Arcuri / Seth Cho), '$210B Server CPU TAM By C2030; Gated By Memory Supply' — figures in _data/figures/20261026_UBS_210B_Server_CPU_TAM_Gated_By_Memory_Supply.md, workbook models/UBS_CPU_DRAM_2026-10-26.xlsx",
+          "date": "2026-10-26",
+          "scope": "$ TAM + units 2030, total market; memory-constrained base",
+          "cited_in": [
+            "AMD.md",
+            "ARM.md",
+            "INTC.md",
+            "MU.md",
+            "NVDA.md",
+            "themes/hbm-memory.md"
+          ]
+        },
+        {
+          "value": ">$200bn CPU TAM ahead; agentic AI ~30% of 2030E CPU units; memory tailwinds; ARM AGI CPU merchant from 2027E (>$2bn orders secured)",
+          "source": "Mizuho (Vijay Rakesh), 'Agentic AI Driving ~30% of 2030E CPU Units, >$200B CPU TAM Ahead, Memory Tailwinds' (via ARM.md)",
+          "date": "2026-10-05",
+          "scope": "$ TAM, total market"
+        },
+        {
+          "value": "~$175bn server-CPU market 2030 (bottoms-up) [SUPERSEDED 2026-10-26 by UBS ~$208bn]",
           "source": "UBS (via ARM.md)",
           "date": "2026-06",
-          "scope": "$ TAM 2030"
+          "scope": "superseded"
         },
         {
           "value": "~$55bn CY26 / ~$96bn CY27 / ~$137bn CY28 (CPU-silicio total incl Vera+enterprise; motor por familia: JPM units x ASP)",
@@ -1007,6 +1027,77 @@
         "ARM.md",
         "INTC.md",
         "themes/hbm-memory.md"
+      ]
+    },
+    "server-dram-per-cpu": {
+      "title": "Server DRAM per CPU (TB) and DRAM for server CPUs (EB)",
+      "definition": "Conventional (ex-HBM) DRAM attached per server CPU shipped, by CPU class, and the resulting annual EB of DRAM for CPUs. ALWAYS state the class (traditional / AI head-node / AI standalone), the year, and whether it is per CPU or per SERVER system — houses mix the two.",
+      "canonical": "UBS (Arcuri/Cho, 2026-10-26) is the only source on disk that sizes DRAM per CPU by class and ties it to supply: stated (Fig 5) traditional ~0.25-0.5TB today -> ~1.0TB C2030E, AI head-node ~1-1.5TB -> ~1.5-2TB, AI standalone ~1.5-2TB -> ~2-3TB; but its C2030E base (Fig 8) runs 0.5 / 1.5 / 2.0TB = 30MM x 0.5 + 22MM x 1.5 + 14.5MM x 2.0 = 77EB, which equals its DRAM-for-CPUs supply line (69EB server + 7EB CXL-reused DDR4). Exchange rate in that frame: +1EB ~ +0.5MM standalone AI CPUs ~ +$2.1bn CPU TAM. Today's blended intensity is ~0.4-0.6TB per CPU shipped depending on the CPU count used (23MM UBS TAM base vs ~30MM in UBS's own Mercury chart and Bernstein). Spec anchors: NVDA Grace ~0.5TB LPDDR, Vera 1.5TB SOCAMM cut to 768GB for supply reasons (JPM 2026-08-24).",
+      "scope_note": "Traps: (a) per CPU vs per SERVER — Bernstein/UBS-memory-team publish GB per server SYSTEM (858GB / 753GB in 2025), roughly 1.6 CPUs per server; (b) the CPU count basis — UBS's TAM table uses 23MM CPUs for C2025 while its own Mercury chart sums to ~29.9MM and Bernstein's DIMM-socket count is 30.6MM, so TB/CPU moves ~30% with the denominator: compare EB, not TB/CPU, across houses; (c) ex-HBM only — do not add to HBM bit tables; (d) the UBS memory-team model's 'M Gb' uses 8/1024 per MB, so EB = M Gb x 128/1e6, not /8000; (e) end-demand (Bernstein, UBS memory team) vs supply-allocated (UBS CPU note Fig 7) are different concepts.",
+      "patterns": [
+        "DRAM per CPU",
+        "TB per CPU",
+        "memory per CPU",
+        "per head node",
+        "SOCAMM"
+      ],
+      "variants": [
+        {
+          "value": "C2030E base 0.5TB traditional / 1.5TB head-node / 2.0TB standalone (Fig 8, = 15 + 33 + 29 = 77EB); stated Fig 5 ranges ~1.0 / ~1.5-2 / ~2-3TB; unconstrained 282EB printed (~238EB on 147MM CPUs; ~306EB at Fig 5 midpoints)",
+          "source": "UBS (Timothy Arcuri / Seth Cho), '$210B Server CPU TAM By C2030; Gated By Memory Supply'",
+          "date": "2026-10-26",
+          "scope": "per CPU by class + EB for CPUs, C2025/27/30",
+          "cited_in": [
+            "MU.md",
+            "AMD.md",
+            "INTC.md",
+            "ARM.md",
+            "NVDA.md",
+            "themes/hbm-memory.md",
+            "themes/cxl-memory-fabric.md"
+          ]
+        },
+        {
+          "value": "Server (non-HBM) DRAM 8.0 / 9.4 / 12.1 / 17.9 / 23.2 / 28.0 EB (2023-28); 626 / 720 / 858 / 1,114 / 1,303 / 1,499 GB per server system",
+          "source": "Bernstein S&D model ('Updated on Jun, 2026'; P:\\Felipe Monteiro\\Memória\\Bernstein SxD.xlsx, rows 140/142)",
+          "date": "2026-06",
+          "scope": "end-demand, per SERVER system"
+        },
+        {
+          "value": "Server DRAM 15.1EB (2025) / 23.0EB (2026E) / 40.0EB (2027E); 753 / 963 / 1,435 GB per server; 20.1 / 23.9 / 27.8MM servers",
+          "source": "UBS memory team (Gaudois/Arcuri) client DRAM model, 'DRAM Demand' rows 24/117/188 (P:\\Felipe Monteiro\\Memória\\UBS Global DRAM NAND model_260703_Client.xlsx)",
+          "date": "2026-07-03",
+          "scope": "end-demand, per SERVER system — 16 weeks older than the UBS CPU note"
+        },
+        {
+          "value": "~9.0 / 9.5 / 10.3 / 11.7 / 12.6 DIMMs per server CPU (2025-29); 30.6MM DIMM-socket server CPUs in 2025 -> ~44GB per DIMM implied with Bernstein's S&D EB",
+          "source": "Bernstein China Semis 'Global Memory Interface Chips' model (P:\\Felipe Monteiro\\Memória\\Bernstein on CPU.xlsx, file dated 2026-07-13)",
+          "date": "2026-07",
+          "scope": "DIMMs per CPU, unit basis"
+        },
+        {
+          "value": "Vera SOCAMM per CPU cut 50% to 768GB from 1.5TB, 'driven almost exclusively by supply tightness'",
+          "source": "JPM (Harlan Sur) / JPM memory (Jay Kwon) (via NVDA.md)",
+          "date": "2026-08-24",
+          "scope": "NVDA head-node spec"
+        },
+        {
+          "value": "Grace ~500GB -> Vera 1.5TB LPDDR5X SOCAMM; CPU-only rack 256 Veras ~400TB (~1.56TB/CPU)",
+          "source": "Mizuho (DELL note) (via NVDA.md)",
+          "date": "2026-06-03",
+          "scope": "NVDA spec, pre-cut"
+        }
+      ],
+      "status": "live-debate",
+      "debate": "How much DRAM the agentic CPU actually carries in 2030. UBS's own base sits at or below the LOW end of its stated ranges for every class; at its Fig 5 midpoints the same 77EB supports ~$161bn of CPUs instead of ~$208bn, while a Vera-style head-node de-spec to 768GB would lift it to ~$242bn. The supply-side de-spec (Vera 1.5TB -> 768GB) is already happening, which argues units over content. Separately unresolved: the 2027E server-DRAM level (Bernstein 23EB vs UBS memory team 40EB). Workbook with scenarios: models/UBS_CPU_DRAM_2026-10-26.xlsx.",
+      "cited_in": [
+        "MU.md",
+        "AMD.md",
+        "INTC.md",
+        "ARM.md",
+        "NVDA.md",
+        "themes/hbm-memory.md",
+        "themes/cxl-memory-fabric.md"
       ]
     },
     "enterprise-ai-spend-per-employee": {
