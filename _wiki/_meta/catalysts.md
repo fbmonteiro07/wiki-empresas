@@ -2,11 +2,14 @@
 
 _Generated 2026-10-26 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (39)
+## 📅 Upcoming (42)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
 | 2026-10-26 | MEDIATEK | **🆕🔴 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR "POTENTIAL UPWARD REVISIONS TO GOOGLE TPU-RELATED GUIDANCE."** Between them: **Google system-level validation of v9 in H |
+| 2026-10-26 | META | 🆕 **2026-10-26 — direction, still no number:** *"we expect that investment to grow in 2027"*, after repeating 2026 at $135-145bn (Meta management (speakers unnamed - UNCONFIRMED) @ Meta investor prese |
+| 2026-10-26 | ORCL | 🆕 **2026-10-26 — financing plan expected (Karl Keirstead (UBS) @ UBS 'AI's Credit Stress Test' cross-asset call, 2026-10-26 — Capstone notes (Notion transcript); [transcript](../_equity_calls/Overall/ |
+| 2026-10-26 | ORCL | 🆕 **2026-10-26 — pushback relayed (Keirstead, same UBS call):** *"the big Oracle OpenAI data center build in New Mexico, and you probably saw Oracle tweeted just last week that, uh, calm down everybod |
 | 2026-10-27 | FLEX | **🆕 2026-10-27 — Celestica (CLS) analyst day:** the EMS peer's rack/switching numbers (Bernstein top pick; BofA expects a late-October guidance raise) are the read-through for this page's EMS comp set |
 | 2026-10-27 | NXPI | 🆕 **2026-10-27 (Tue, after the US close) — Q3 FY26 print**, per the Vital Knowledge forward calendar (listed with ACGL, BKR, LOGI, PYPL, WM the same evening) (Vital Knowledge, "Vital Dawn", 2026-10-02 |
 | 2026-10-28 | ORCL | **🆕🔴🔴 2026-10-28 — ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as "Investor Day in October").** First opportunity for **new CFO Hilary Maxson** to set long-term financial targ |

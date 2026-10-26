@@ -1,5 +1,5 @@
 {
-  "asof": "2026-10-25",
+  "asof": "2026-10-26",
   "note": "Derived belief ledger; company pages remain the source of truth.",
   "companies": {
     "AAOI": {
@@ -218,8 +218,8 @@
         "Q3 FY2026 print (mid-Aug 2026): does the \"30%\" CY guide move to +40%? Shipment trajectory into CalQ3/Q4 is the swing (Arcuri/UBS, 2026-05-15). GM read on the ASML beat: Citi notes AMAT is the most vocal of the US Big Three on \"value-based pricing\" (offsetting higher input costs…",
         "China / export-control policy and license cadence; MATCH Act would be \"modestly positive for the films guys\" (Arcuri/UBS, 2026-04-06). Watch whether China WFE holds at UBS's ~$44B vs. the consensus/management digestion call."
       ],
-      "last_change": "2026-10-22",
-      "latest_change_excerpt": "ingest (Notion, 2026-10-22WellsFargoTXN-LRCX-EPS-recap-call-Quatrochi-Rocha.md): Debate bear sub-bullet (shared) + Catalysts sub-bullet on the FQ4 print — AMAT–Lam \"overlapping supply chains\" make AMAT's print the test of whether Lam's component constraint is sector-wide; offsets (AMAT navigated the pandemic best, more buying power, possibly \"a broader supply chain than Lam\"). Analyst read; nothing superseded.",
+      "last_change": "2026-10-26",
+      "latest_change_excerpt": "ingest (Notion, 2026-10-26UBSSemiBytes-call-SMH-prices-20GW-cut-CPU-TAM-memory-bound-Arcuri-Ruple.md): 1 Debate bullet — Arcuri: \"Lam or Applied\" top equipment buys at 13-14x on a $300bn-2028 buy-side WFE; gap vs NVDA \"a couple turns\". No rating/PT superseded.",
       "next_catalyst": "",
       "in_book": false,
       "book_side": "",
@@ -232,7 +232,7 @@
       "ticker": "AMD",
       "sector": "AI — Semis & Compute",
       "thesis": "AI-infra long with a server-CPU leg; risk concentrated in MI450 execution.",
-      "debate_excerpt": "🔭 2026-10-23 (notion-ingest · BofA expert call, ⚠ expert voice, NOT BofA research — no rating/PT) — An ex-AWS/Arm consultant: \"people tend to discount AMD too much\". AMD \"is still a good company and has solid GPUs\" and \"led\" in \"pushing more HBM onto the package\"; \"the better switches and better scale-up gives AMD much more of a fighting chance against Nvidia. I don't think they're ever going to equal them in terms of sheer power, but their task is not to equal Nvidia as a GPU supplier, in my view, it's to be a good competitor\" — the lever being HPE's scale-up switch for Helios racks (his word: \"Superdome\"; see HPE). In the same call his illustrative sizing (70B model at 16-bit ≈ 140 GB weights + KV/prefix/overhead) overflows the HBM of \"almost every chip out there\" (his aside \"AMDs are still not scratching there\" is garbled; read as AMD parts not escaping the overflow either), so tiering applies to both vendors. Qualitative, no share or $ figure. Source: Jon Tasker (independent consultant, ex-AWS/Arm) @ BofA Hardware Expert Call (host Wamsi Mohan), 2026-10-23 — Capstone notes (Notion transcript) — source 🔭 2026-10-19 (notion-ingest · UBS Arcuri call) — Server revenue well above…",
+      "debate_excerpt": "🔭 2026-10-23 (notion-ingest · BofA expert call, ⚠ expert voice, NOT BofA research — no rating/PT) — An ex-AWS/Arm consultant: \"people tend to discount AMD too much\". AMD \"is still a good company and has solid GPUs\" and \"led\" in \"pushing more HBM onto the package\"; \"the better switches and better scale-up gives AMD much more of a fighting chance against Nvidia. I don't think they're ever going to equal them in terms of sheer power, but their task is not to equal Nvidia as a GPU supplier, in my view, it's to be a good competitor\" — the lever being HPE's scale-up switch for Helios racks (his word: \"Superdome\"; see HPE). In the same call his illustrative sizing (70B model at 16-bit ≈ 140 GB weights + KV/prefix/overhead) overflows the HBM of \"almost every chip out there\" (his aside \"AMDs are still not scratching there\" is garbled; read as AMD parts not escaping the overflow either), so tiering applies to both vendors. Qualitative, no share or $ figure. Source: Jon Tasker (independent consultant, ex-AWS/Arm) @ BofA Hardware Expert Call (host Wamsi Mohan), 2026-10-23 — Capstone notes (Notion transcript) — source 🔭 2026-10-26 (notion-ingest · UBS Arcuri SemiBytes call — preview into the…",
       "risks_excerpt": "Intense competition vs Intel (improving x86 supply / Diamond Rapids, Coral Rapids pulled to mid-2027) and Nvidia (Vera Rubin), plus merchant/custom Arm and ASIC scale-up (10-K FY25). Foundry concentration on TSMC for leading-edge HPC/AI wafers + advanced packaging (CoWoS-L) — supply tightness in HBM/wafers a gating risk to the ramp; AMD raised 2027 CoWoS bookings to ~120K wafers but realization is Helios-execution dependent (Jefferies / Q425 Techknowledge, 2025-12-17). 🆕 Hybrid bonding is a SECOND packaging chokepoint behind CoWoS-L, and its observed productivity is 5% of nameplate (Redburn · Nabeel Aziz \"Bondernomics\", 2026-09-23). AMD's bonder fleet is installed at TSMC inside SoIC;…",
       "catalysts_excerpt": "✅ CLOSED 2026-09-30 — HPE NETWORKING INVESTOR DAY (BofA had flagged a possible Helios financial update, 09-28). Outcome: $1.2B Vultr full-rack Helios order, $200M of switch-tray orders to date, standalone Helios tray sales to other rack builders (HPE, via MS · Woodring 10-01 and BofA/Barclays desks). No AMD-side Helios revenue figure appears in the sources. 🆕 Lisa Su reportedly revisits South Korea in October on HBM4 and NPU ties (DIGITIMES headline, unverified). 🆕 CONFERENCE WEEK — 2026-09-08 to 09-10 (GS Communacopia, SF · Citi TMT, NYC · BofA Media/Entertainment/Communications, NYC). BofA's desk sets the expectation bluntly: “I will go out on a limb and predict that 85%-100% of the AI…",
       "open_questions": [
@@ -243,15 +243,15 @@
         "⚠ SUPERSEDED on the LPDDR half (2026-07-24) — the second memory tier has been cut from the shipping MI455X. The Aug-2025 statement above (custom HBM4 base die + off-package LPDDR as a second tier) is now only half true. Inspecting the shipping compute-tray design, SemiAnalysis…",
         "Sharpened (MS · Joseph Moore, 2026-07-24) — the warrants are better understood as GPU cost of goods than as dilution. MS's post-event framing: \"We have to consider the very large warrant issuance as a marketing expense, given that the company is up issuing stock to customers,…"
       ],
-      "last_change": "2026-10-24",
-      "latest_change_excerpt": "verification (transcription QA): all quotes, figures, names and acronyms re-checked against the Transcript section of the source; attribution string matches the file header; glossary terms corrected; no correction needed.",
+      "last_change": "2026-10-26",
+      "latest_change_excerpt": "run-inbox: UBS Arcuri server-CPU TAM note (2026-10-26) second pass + Anthropic S-1 (filed 2026-10-26) read-through. Added: 1 dated block at the top of Current state (S-1 terms of the AMD Hardware Supply Agreement, pp.164/172/F-66, vs the 07-22 2GW/1H27 announcement; MW and $ bases kept apart; deal ID ANTH-AMD-20260722); 3 bullets appended inside the other pass's 10-26 UBS Intra-quarter block, no second block (UBS $208B printed / ~$210B headline vs BofA $210bn+ basis comparison; UBS vs BBG deltas and the $3-4K vs…",
       "next_catalyst": "",
       "in_book": false,
       "book_side": "",
       "book_weight": null,
       "page": "AMD.md",
       "thesis_hash": "4dd9177a2708",
-      "debate_hash": "64c12da1ee89"
+      "debate_hash": "81533df30ef0"
     },
     "AMZN": {
       "ticker": "AMZN",
@@ -268,8 +268,8 @@
         "BACKFILL / BEAR — AWS's cluster-TCO penalty, quantified (SemiAnalysis \"How Much Do GPU Clusters Really Cost?\", Nanos/Shan/Cheang/Nishball/Patel, 2026-04-20 — ingested 2026-07-24; pre-dates the Apr-29 Q1'26 print, so it sits outside the intra-quarter window below and is logged…",
         "Cost-optimization-over-peak-perf philosophy — Graviton5's PCIe regression as a deliberate TCO choice (SemiAnalysis \"CPUs are Back,\" 2026-02-09): a distinctive AWS positioning point worth flagging explicitly — Graviton5's PCIe lanes actually regressed from 96 (Graviton4) to 64…"
       ],
-      "last_change": "2026-10-24",
-      "latest_change_excerpt": "verification (transcription QA): all quotes, figures, names and acronyms re-checked against the Transcript section of the source; attribution string matches the file header; glossary terms corrected; no correction needed.",
+      "last_change": "2026-10-26",
+      "latest_change_excerpt": "run-inbox: Anthropic S-1 read-through (Anthropic, PBC Form S-1, filed 2026-10-26, acc. 0001628280-26-067168; company filing). Changes: 1 Intra-quarter block (AWS ≥$110.0bn floor, Amazon 2026 NPA, legacy notes, stake/cap, marketplace economics, competitor language), 1 Full-log row, Sinal update + Síntese addendum, At-a-glance buyer cell, annotation on the 10-01 relay bullet, Sources. Superseded (thesis-drift): At-a-glance \"Anthropic largest, $100B / 5GW deal\" (April 2026 announcement vintage) → \"≥$110.0bn minimum…",
       "next_catalyst": "",
       "in_book": true,
       "book_side": "long",
@@ -302,23 +302,24 @@
     "ANTHROPIC": {
       "ticker": "ANTHROPIC",
       "sector": "AI labs (private)",
-      "thesis": "Private frontier lab (Claude); enterprise/coding leadership + Amazon/Google compute; $65B+ ARR (conflict-flagged vs >$70B, bases unknown pre-S1). IPO window lat",
-      "debate_excerpt": "🆕🔴 2026-10-23 (/run-inbox) — THE \"INVESTOR-DAY\" NUMBER SET IS NOW ON AIR, SECONDHAND, AND THIS PAGE STILL DOES NOT ADOPT IT; BUT THE FIRST TWO DECELERATION VOICES ARE ON THE RECORD. Calacanis on All-In, \"CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags, Bill Gates Doomer\", 2026-10-16 — podcast, not broker research (Horowitz says a16z is long both labs, \"a lot more stock\" in OpenAI) — reads \"Q3 revenue, $16.8 billion\", net revenue retention \"900%\", \"free cash flow positive, adjusted gross margin, 85%, adjusted operating margin, 11%. No word on how the adjustments were calculated\", as leaks from an NDA'd investor day; the show notes link a Bloomberg 2026-10-14 story (\"anthropic-revenue-jumps-to-16-8-billion-in-quarter-before-ipo\"). ⚠️ Said on the podcast, citing Bloomberg; primary not pulled — unverified. No page figure is overwritten (the $65B+ ARR mark, SemiAnalysis 08-21, and the $965B Series H mark stand). Sacks, same show: \"I don't know if you can completely trust what's floating around X here.\" The bear voices: Calacanis — ARR estimates \"range from 70 billion, which basically be flat since July, which is a bad sign, to over 100 billion\"; Horowitz — \"growth is slowed…",
+      "thesis": "Pre-IPO frontier lab (S-1 2026-10-26, Nasdaq: ANT): 2Q26 rev $11.6bn, first op. profit; 85% serving GM (1H26); 48% sold via AWS/GCP/Azure, which are also its co",
+      "debate_excerpt": "2026-10-26 — the S-1 establishes the Q2 operating inflection, while leaving the forward cash burden unresolved (Capstone analytical reading of Anthropic's supplied S-1). Q2 adjusted operating margin 19.3% derived coexists with management's warning that short-term compute and new long-term capacity can compress margins. H1's 85.4% reconstructed gross margin excludes research compute and channel selling expenses; subtracting functional selling costs leaves 62.0% before R&D and G&A, an analytical subtotal, not a reported margin. A sensitivity calibrated to Q2's 32.6% adjusted non-compute cost/revenue gives 7.4% adjusted OM at 60% compute/revenue; using Q1's observed 41.5% cost ratio instead gives −1.5%. Future ratios are explicit assumptions, not forecasts. Independent numerical audit: historical arithmetic passes; forward estimate PARTIAL/AMBER. Analysis · audit. Prior broker and podcast vintages below remain dated evidence, not overwritten current financials. 🆕🔴 2026-10-26 (S-1 second pass) — PRICE PER TOKEN FROM THE S-1: THE REALIZED PRICE FELL ~50–65% Y/Y WHILE THE ALLOCATED SERVING COST PER TOKEN FELL ~90%, SO ANTHROPIC KEPT MOST OF THE EFFICIENCY GAIN. (Capstone reading. The…",
       "risks_excerpt": "",
       "catalysts_excerpt": "",
       "open_questions": [
+        "2026-10-26 — the S-1 establishes the Q2 operating inflection, while leaving the forward cash burden unresolved (Capstone analytical reading of Anthropic's supplied S-1). Q2 adjusted operating margin 19.3% derived coexists with management's warning that short-term compute and…",
         "🆕 2026-10-23 (/run-inbox) — the app layer and the channel-conflict debate, six podcast voices (all podcast, not broker research; each is talking a book): ① Figma, first first-party voice on the relationship (Dylan Field, CEO, on All-In, \"Dylan Field Is AI Replacing Designers…\",…",
         "Bear — the open-model catch-up rate is now MEASURED, and it is HALVING every era (SemiAnalysis, \"Are Open Models Catching Up?\", 2026-08-21). The commoditization bear stops being a vibe and becomes a rate: open models have taken half as long to catch the first closed model of…"
       ],
-      "last_change": "2026-10-25",
-      "latest_change_excerpt": "run-inbox: CASPA 2026 CEO Summit panel (Patel, 2026-10-24) → 1 Intra-quarter block (~$70-80bn/GW inference monetisation from unnamed \"disclosures\", NOT adopted; in-house chip programme at half OpenAI's timeline; Lambda 10% NVIDIA revshare). Nothing superseded.",
+      "last_change": "2026-10-26",
+      "latest_change_excerpt": "supplied S-1 numerical research update. Prior header was \"Private company — no public financials (no ticker, no SEC filing, no BBG consensus)\"; updated to pre-IPO with supplied October 26 S-1 and proposed ANT, without claiming completed listing or a verified SEC accession URL. Primary historical financials and conditional forward sensitivities added with source/definition tags; September financial/IPO blanks remain missing. Preserved prior $65B+ / $70B run-rate and $965B Series H source vintages; neither replaced…",
       "next_catalyst": "",
       "in_book": false,
       "book_side": "",
       "book_weight": null,
       "page": "ANTHROPIC.md",
-      "thesis_hash": "bb7b654001d9",
-      "debate_hash": "38433fed873e"
+      "thesis_hash": "3c36364f6e4f",
+      "debate_hash": "7e3076a407cb"
     },
     "AOSL": {
       "ticker": "AOSL",
@@ -399,8 +400,8 @@
         "🆕 SOFTBANK'S OCTOBER $10bn OPENAI TRANCHE AND THE COLLATERAL BEHIND IT (SoftBank Group IR @ Communacopia week, 2026-09-08). The final tranche of a $30bn commitment funds in October, off a bridge facility repaid partly with margin loans whose bulk is secured on the ARM stake…",
         "Phoenix launch, 2026 — Arm's first full chip design (Meta lead customer; Cloudflare prospective; OpenAI/Stargate custom CPU also in design per SemiAnalysis); watch for Meta deployment confirmation and any second named customer (SemiAnalysis, 2026-02-09)."
       ],
-      "last_change": "2026-10-19",
-      "latest_change_excerpt": "ingest (Notion, 2026-10-19BofASEMICON-West-OCP-takeaways-call-Vivek-Arya.md): Debate — Arya on Arm's 'AGI rack' at OCP ('more real product than before'). Orchestrator (D) pass.",
+      "last_change": "2026-10-26",
+      "latest_change_excerpt": "run-inbox: UBS Arcuri server-CPU TAM note (2026-10-26), second pass. Added 4 bullets inside the other pass's 10-26 UBS Intra-quarter block, no second block (UBS $208B printed / ~$210B headline vs BofA $210bn+ basis comparison; C2030E vs FYE31 basis of the $15B AGI line; UBS vs BBG deltas; PT-history check), 1 Full-log row (competicao / mixed), 1 Sinal update (✓ Data center / AGI CPU, ⚠ Royalty / monetization; Síntese line), 1 Sources alias. SUPERSEDED (drift rule, old value kept in the body with a tag): UBS 2030…",
       "next_catalyst": "",
       "in_book": false,
       "book_side": "",
@@ -449,8 +450,8 @@
         "Bull (JPM investor meeting reaffirms AI compute + networking runway; JPM · Harlan Sur, 2026-07-08): reiterate Overweight after hosting Hock Tan / CFO Amie Thuener / IR Ji Yoo (AVGO $370.78 on 07-07). Key rebuttals to the bear threads: inference demand pulling custom-XPU…",
         "Bull (UBS rebuts the MediaTek share-cede on execution risk, not share math; UBS · Timothy Arcuri, 2026-07-27): UBS argues investors have become too negative on the Google situation — Google's choice of a chiplet design for v8t de-risks AVGO's ramp versus MediaTek, which is…"
       ],
-      "last_change": "2026-10-25",
-      "latest_change_excerpt": "run-inbox: CASPA 2026 CEO Summit panel (2026-10-24) → 1 Intra-quarter block (Patel: Anthropic chip lease \"rent to own\"; lowest multiples on insourcing risk). Nothing superseded.",
+      "last_change": "2026-10-26",
+      "latest_change_excerpt": "run-inbox: Anthropic S-1 read-through (Anthropic, PBC Form S-1, filed 2026-10-26, acc. 0001628280-26-067168; company filing). Changes: 1 Intra-quarter block (Broadcom named lessor of ~$161.2bn TPU equipment leases / $125.2bn 2026 lease; restricted cash, SPV guarantees, Q2'26 partial assignment; $42.0bn Infrastructure Partner 2026 NPA terms; what the S-1 does not attribute to Broadcom), 1 Full-log row, Sinal update + Síntese addendum, Debate open-items line, annotation on the 09-29 relay row, Sources. Superseded…",
       "next_catalyst": "",
       "in_book": true,
       "book_side": "long",
@@ -759,8 +760,8 @@
         "🆕🔴 WATCH THE AICP PAUSE — the competitors' subsidy, not CRWV's (SemiAnalysis \"Nvidia's Backstop Universe – Heads I Win, Tails Who Loses?\", 2026-09-11; independent research, CRWV not a covered name). NVDA has \"reportedly paused AICP\" about two weeks before the note, and…",
         "🆕 FY26 active-power guide of 1.7 GW with capacity adds back-half weighted (TMTB, 2026-08-11) — 1.5 GW at Q2 leaves only ~200MW to add, so the FY number now looks conservative rather than stretch; watch whether it is raised."
       ],
-      "last_change": "2026-10-23",
-      "latest_change_excerpt": "weekly credit review: Re-read Cantor / Brett Knoblauch October 21 research pp.1-3 (FactSet marks October 20). Added the official-workbook CDS field distinction to the current-state credit note; preserved the prior October 15 PXLAST figure and desk quote as their original dated observations. No rating/PT/model change. Evidence.",
+      "last_change": "2026-10-26",
+      "latest_change_excerpt": "ingest (Notion, 2026-10-26UBSSemiBytes-call-SMH-prices-20GW-cut-CPU-TAM-memory-bound-Arcuri-Ruple.md): 1 Current-state paragraph after the S1 block: Arcuri fielded 10-15 credit-investor calls on GPU useful life and NVIDIA/Broadcom financing vehicles (Broadcom 'one-time' as he understands it; NVIDIA 'have to continue to support the Neos', 'almost the same company'); SPV paper coming to market per investors. The S1 block was left untouched. Nothing superseded.",
       "next_catalyst": "",
       "in_book": false,
       "book_side": "",
@@ -1031,8 +1032,8 @@
         "Ad-agency read-through (Jefferies expert call · Horizon Media digital-media executive (Capstone call notes), 2026-09-28): at the largest privately-held US media agency, digital budgets pace ~+10% y/y (planning ~+10% for 2027; interest rates the risk to watch); the split is…",
         "🆕 GEMINI 4 — ARGON IS ANNOUNCED, THE BROAD RELEASE IS NOT. Phase 1 (09-30): trusted cyber defenders via the Fairwind Program and the US government's voluntary pre-release process; Redburn: \"then to paid API customers and Google AI Ultra subscribers (not yet public)\"; GS desk…"
       ],
-      "last_change": "2026-10-24",
-      "latest_change_excerpt": "verification (transcription QA): all quotes, figures, names and acronyms re-checked against the Transcript section of the source; attribution string matches the file header; glossary terms corrected; no correction needed.",
+      "last_change": "2026-10-26",
+      "latest_change_excerpt": "run-inbox: Anthropic S-1 read-through (Anthropic, PBC Form S-1, filed 2026-10-26, acc. 0001628280-26-067168; company filing). Changes: 1 Intra-quarter block (Google ≥~$114.5bn floor, $125-150bn 2028-31 TPU estimate, Broadcom as lessor of the TPU equipment leases, Google 2026 NPA / 14.99% cap / $10bn IPO option, stake, \"primary competitor\"), 1 Full-log row, Sinal update + Síntese addendum, annotation on the 09-29 relay row, Sources. Superseded (thesis-drift): Anthropic minimum spend with Google \"$111.1 billion\"…",
       "next_catalyst": "",
       "in_book": true,
       "book_side": "long",
@@ -1100,11 +1101,11 @@
         "🆕 ⚠️ SUPERSEDED CONCLUSION — Fubon reverses itself three weeks later: \"Intel's supply is a must by 2028\" (Fubon Research · Sherman Shang / Daniel Yang, \"Our advanced packaging, CoWoS forecast adjustments; other updates\", 2026-07-28). The bullet above is Fubon's 07-08 view and…",
         "🆕 The EMIB-T book, finally sized — and the yield spread on this page finally reconciled (UBS · Sunny Lin / Randy Abrams / Nicolas Gaudois / Timothy Arcuri / Shingo Hirata / Jerry Su / Diana Chang, \"Can Intel challenge TSMC's advanced packaging leadership? — Intel's EMIB-T vs…",
         "🆕 UBS · Arcuri (10-19 sales call): \"the key debate now on Intel\" is TSMC wafer allocation — he thinks the EMIB-T traction has \"chafed\" TSMC, and the consequence is 2027 capex \"up a lot… more than people think\" (Tim Arcuri (UBS) @ UBS Semis Update call (host Rob Ruple),…",
-        "🆕⚠️ FOUNDRY BREAK-EVEN — WATCH THE RE-FRAMING, NOT JUST THE DATE. Still exit-2027, but management now says it \"could slip into 2028\" and pre-framed that slip as a positive, demand-driven signal rather than an execution miss (2026-08-10). Log the outcome against the framing when…",
-        "✅ Q2 FY26 print — RESOLVED 2026-07-23 (bull won): big beat & raise, stock +8-9%. Rev $16.1B / GM 41.8% / EPS $0.42 all well above Street; Q3 guide $15.8-16.8B / GM ~42% / EPS $0.38 above cons; 2026 capex raised to $18-20B; multi-year CPU/XPU LTAs signed; 14A HVM pulled in to…"
+        "🆕 UBS · Arcuri (10-26 SemiBytes call, into this week's Q3 print) — the GM guide is \"sandbagged\", capex has upside to his $30bn, and FCF-neutral 2027 looks \"challenging\" (Tim Arcuri (UBS) @ UBS SemiBytes semis update call (host Rob Ruple), 2026-10-26 - Capstone notes (Notion…",
+        "🆕⚠️ FOUNDRY BREAK-EVEN — WATCH THE RE-FRAMING, NOT JUST THE DATE. Still exit-2027, but management now says it \"could slip into 2028\" and pre-framed that slip as a positive, demand-driven signal rather than an execution miss (2026-08-10). Log the outcome against the framing when…"
       ],
-      "last_change": "2026-10-19",
-      "latest_change_excerpt": "ingest (Notion, 2026-10-19UBSSemis-update-call-SEMICON-West-OCP-TeraFab-Arcuri-Ruple.md): 1 Debate bear sub-bullet — Arcuri spoken: TSMC 'quite upset' at INTC's EMIB-T engagement → 2027 TSMC wafer-allocation risk → capex 'up a lot, more than people think' (more 18AP reliance; 'take the over' on the capex disclosure, expected on the next call, not this one); Q3 set-up (GM + revenue beat, Dec GM guide sandbagged, servers constrained); valuation 'hard to see $7-8 EPS in 2030… modestly attractive'; Crescent Island…",
+      "last_change": "2026-10-26",
+      "latest_change_excerpt": "run-inbox: UBS Arcuri server-CPU TAM note (2026-10-26), second pass. Added 3 bullets inside the other pass's 10-26 UBS Intra-quarter block, no second block (Fig 39 foundry comps + Capstone median sensitivity ~$95; Fig 33 capex/FCF/external-foundry path; UBS PT history from p.31), 1 Full-log row (valuation / mixed), 1 Sinal update (✓ server CPU demand, ✓ Capex funding / FCF, ⚠ Foundry / external; Síntese line), 1 Sources alias. PT-trail correction from UBS's own disclosure table (p.31): $83 (2026-04-24) → $121…",
       "next_catalyst": "2026-11-03",
       "in_book": false,
       "book_side": "",
@@ -1197,14 +1198,14 @@
       "catalysts_excerpt": "🆕 After the F1Q27 print (2026-10-21): F2Q27 / December-quarter print, late January 2027 (the \"January call\"; date TBC). Grade it against the guide of rev $8.60bn ± $0.4bn, GM 52.5%, OPM 40.5%, EPS $2.33 ± $0.15. Management promised a \"sharper pencil\" on CY27 WFE (currently \"$200bn\"). Watch whether the supply-chain-deferred revenue lands in the March quarter as Bettinger said, and whether China falls \"meaningfully\" as guided. Supply constraints: component tightness (JPM · Sur attributes it to gas delivery subsystems; management did not name it) and the logic clean-room shortage. Archer: \"I think we'll be caught up very shortly.\" Tax-rate reset: 16.5% non-GAAP \"for the December quarter and…",
       "open_questions": [
         "Where the sell-side stands: PTs in repo: GS (Schneider) Buy, PT raised to $380 (from $290) — 35x (up from 32x on higher peer multiples) normalized EPS $10.75 (from $9.00 on better visibility); CY26 non-GAAP EPS est 3% above Street on the potential for WFE upside into 2027, the…",
+        "🆕 UBS · Arcuri, 10-26 SemiBytes call (recurring series — 10-19 bullet above) (Tim Arcuri (UBS) @ UBS SemiBytes semis update call (host Rob Ruple), 2026-10-26 - Capstone notes (Notion transcript); source): Lam \"probably the top thing I would buy\" in equipment (\"Lam or Applied\");…",
         "F2Q27 / December-quarter print, late January 2027 (the \"January call\"; date TBC). Grade it against the guide of rev $8.60bn ± $0.4bn, GM 52.5%, OPM 40.5%, EPS $2.33 ± $0.15. Management promised a \"sharper pencil\" on CY27 WFE (currently \"$200bn\"). Watch whether the…",
         "✅ RESOLVED 2026-07-29 — FQ4 FY26 print — Wed July 29, 2026 (AMC), 5pm ET call (DB · Weathers, 2026-07-23): June-quarter guide $6.6B / EPS $1.65 / GM 50.5%; watch GM trajectory (Bettinger: GM \"going to level out... for the rest of the year\") and any further CY26 WFE upgrade past…",
         "China trajectory: management guided June-quarter China down off 34%; watch the magnitude and any affiliate-rule / BIS news — the trio's most China-levered name. The Street is split: UBS sees China WFE flat-to-up ($44B+ in 2026), MS sees China restrictions as a 2026e headwind.",
-        "NAND conversion ramp — the ~$40B layer-conversion wave with majority of spend pulled into CY27; the structural new leg vs. the 2025 NAND-light base. First greenfield timing (CY27/28) a watch item. The AI-NAND inflection (MS: incremental ~$29bn TAM by 2029, NAND shortage from…",
-        "✅ RESOLVED 2026-10-21 (F1Q27 print) — bear won on the tape. Sep-Q rev $8.22bn beat Lam's own $8.10bn midpoint, against MS's $7.4bn SepQ estimate from 07-09. But the Dec-Q guide was $8.6bn vs buy-side ~$9bn+ and the CY27 WFE prelim was \"$200bn\". Stock -5% AH (MS desk) / -7-8%…"
+        "NAND conversion ramp — the ~$40B layer-conversion wave with majority of spend pulled into CY27; the structural new leg vs. the 2025 NAND-light base. First greenfield timing (CY27/28) a watch item. The AI-NAND inflection (MS: incremental ~$29bn TAM by 2029, NAND shortage from…"
       ],
-      "last_change": "2026-10-25",
-      "latest_change_excerpt": "verification (transcription QA): Rasgon never names Lam on the panel (\"we had a company report this week\") — headline and body now say unnamed company, read as Lam from the 10-21 F1Q27 call.",
+      "last_change": "2026-10-26",
+      "latest_change_excerpt": "ingest (Notion, 2026-10-26UBSSemiBytes-call-SMH-prices-20GW-cut-CPU-TAM-memory-bound-Arcuri-Ruple.md): 1 Debate bullet — Arcuri: Lam top equipment buy (\"Lam or Applied\"); 13-14x on a $300bn-2028 buy-side WFE (10-19: 13.5x); equipment vs NVDA P/E gap \"only a couple turns\"; −10% on a 5-day MFC supply disruption \"a little severe\" (MFC unconfirmed). No rating/PT superseded.",
       "next_catalyst": "",
       "in_book": false,
       "book_side": "",
@@ -1223,8 +1224,8 @@
       "open_questions": [
         "Bear: Stock already re-rated hard (+35.1% y/y revenue, shares ran into the print). MS (Moore) reit EW, $94 — frames the DC disclosure as in-line and the price hikes as \"defensive, not offensive,\" and flags MCHP's DC sub-segment as \"not dissimilar to peers in size/growth but…"
       ],
-      "last_change": "2026-10-16",
-      "latest_change_excerpt": "run-inbox: added Jefferies · Curtis et al. \"OCP Takeaways - Optical Innovation Accelerating\" (2026-10-16) datapoints (1 Current-state bullet under the Jefferies 08-27 \"what next\" item, 1 FQ1 FY27 Full-log row, 1 Sources link). Nothing superseded.",
+      "last_change": "2026-10-26",
+      "latest_change_excerpt": "ingest (Notion, 2026-10-26UBSSemiBytes-call-SMH-prices-20GW-cut-CPU-TAM-memory-bound-Arcuri-Ruple.md): 1 Debate bullet — Arcuri preview: MCHP \"should be quite good\" but he prefers TXN on margins. No rating/PT superseded.",
       "next_catalyst": "",
       "in_book": false,
       "book_side": "",
@@ -1296,9 +1297,9 @@
         "🔴 THE SAME RISK-REWARD PAGE, REFRESHED SIX WEEKS LATER AND ON THE DAY MUSE SHIPPED — THE PT DID NOT MOVE, THE JUSTIFICATION FOR IT DID (Morgan Stanley · Brian Nowak CFA with Gregory Gao / Nikhil Javeri / Julian Herrera / Kavya A Narayanan, \"Muse Has Arrived; What Matters…",
         "🆕 2026-09-28 — THE ENTERPRISE PLATFORM SPLITS THE CAMPS. Bull: UBS · Keirstead calls it \"a TAM-expanding positive for Meta\" with an AI-infra \"neo-cloud\" leg vs CRWV and likely M&A for distribution; JPM desk: \"So META is a hyperscaler now too?\" Skeptic: Bernstein · Weed/Moerdler…"
       ],
-      "last_change": "2026-10-24",
-      "latest_change_excerpt": "verification (transcription QA): all quotes, figures, names and acronyms re-checked against the Transcript section of the source; attribution string matches the file header; glossary terms corrected; no correction needed.",
-      "next_catalyst": "2027-01-19",
+      "last_change": "2026-10-26",
+      "latest_change_excerpt": "ingest (Notion, METAinvestor-presentation-video-roadshow-Muse-MSL-compute-capex-20272026-10-26.md): added a dated Current-state block (capex \"grow in 2027\", direction only; funding menu incl. \"Equity provides another complementary source of capital\"; conditional compute-provider line; Muse ARPO-parity + search-monetization framing; Business Agent 2M businesses / 30M weekly conversations; 4 superclusters of 1 GW or more, one site to 5 GW, \"almost double\" 2026 capacity, 30 GW clean-energy backing; MTIA Artemis…",
+      "next_catalyst": "2026-10-26",
       "in_book": true,
       "book_side": "long",
       "book_weight": null,
@@ -1378,7 +1379,7 @@
       "ticker": "MU",
       "sector": "AI — Semis & Compute",
       "thesis": "Pure-play on AI memory intensity (HBM sold-out CY26); debate = peak earnings vs run-rate.",
-      "debate_excerpt": "🆕🔭 2026-10-23 — EX-MICRON CSO (SADLER) ON THE BARCLAYS EXPERT SERIES: \"PEDAL SHOULD BE TO THE METAL\" ON CAPEX, SCEPTICAL THAT SCAs HOLD THROUGH A DOWNTURN, TROUGH DEFENDED BY WAFER-INPUT CUTS (NOT CAPEX CUTS), MICRON'S TAIWAN CONCENTRATION \"VERY, VERY RISKY\". Source: Michael Sadler (ex-Micron CSO, independent consultant) hosted by Simon Coles (Barclays) @ Barclays Semi Expert Series, 2026-10-23 — Capstone notes (Notion transcript) (source). ⚠️ EXPERT VOICE — former executive, retired 2018, no current inside view; judgement, not Micron guidance; no rating/PT. Host (Coles) framing kept separate below. 🔭 SCAs — the bull's floor, doubted: suppliers position SCAs (deposits + a new pricing/margin lock) \"as a panacea\"; \"I'm very skeptical that through the cycle these SCAs will deliver the kind of economics that are embedded in the agreements today\" — they give \"a better stick to negotiate\", and suppliers are \"probably relying more on those SCAs than they should be\". He has \"not seen any agreements\". Cuts against the 26-SCA / 35%-of-revenue-through-2030 / price-floor framing in Current state (F4Q26 call). 🔭 Cycle shape / trough: most current capex lands as capacity \"in 2028 and beyond……",
+      "debate_excerpt": "🆕🔭 2026-10-26 — UBS · ARCURI, ONE WEEK LATER ON THE SAME SALES-HOSTED SERIES: MICRON IS STILL THE BEST RISK/REWARD \"IF… YOU DIDN'T GIVE ME ANY TIME HORIZON\" — BUT THE SPOKEN DOWNSIDE HAS SLIPPED TO \"$750, MAYBE $700\" (FROM AN \"$800… FLOOR\" ON 10-19), AND THE CPU-TAM NOTE IS PITCHED AS A MICRON NOTE: \"THE TAM WILL BE AS LARGE AS MEMORY SUPPLY ALLOWS IT TO BE\". Source: Tim Arcuri (UBS) @ UBS SemiBytes semis update call (host Rob Ruple), 2026-10-26 - Capstone notes (Notion transcript) (source). ⚠️ SELL-SIDE ANALYST VOICE on a sales-hosted call, Notion machine transcript — the published UBS mark is unchanged (Buy, PT $1,625 set 2026-05-26; see the 10-26 note block in Intra-quarter); downside / upside / book figures are spoken working numbers, not estimates. Recurring series: prior vintage = the 10-19 block directly below. Risk/reward marks, both vintages carried: \"Micron probably has downside to $750, you know, maybe $700 and it has upside to eventually $2,000. Now, like, that's not my price target. My price target's $1,625, but eventually I think it's going there\"; \"Micron at sub-$900 is incredibly attractive\" (BBG px $903.70, consensus PT $1,629 — data/estimates.json 2026-10-26). ➤…",
       "risks_excerpt": "ASP volatility / cyclicality — 10-K flags \"significant volatility in average selling prices\" and cash-flow/operating-result volatility that can pressure the credit rating (FY25 10-K). Commodity normalization — capacity from Micron/SK/Samsung new fabs landing ~CY27-28 could break the price structure (ex-VP, 2026-06-10). Cost-structure disadvantage vs Samsung (geographically dispersed footprint); roughly at SK Hynix (ex-VP, 2026-06-10). HBM4 base-die execution — MU redesigning the base die for speed parity and dependent on TSMC/IP partners for advanced logic; Samsung's in-house foundry is an edge (Jefferies/Inspectrum 2025-12-17; SemiAnalysis 2025-08-12). HBM4 pin-speed / qualification risk…",
       "catalysts_excerpt": "🆕 2026-10-21 — roadmap dates from the CTO (technology webinar). 1-delta DRAM volume ramp 2H CY27 (Boise, US-manufactured plus other sites) and G11 NAND ramp 2H CY27 (400 layers; \"more specifics on that next year closer to the launch dates\", so the G11 spec disclosure is a CY27 event); a 1TB RDIMM follows the sampled 512GB; HBM4E base dies go on an undisclosed foundry node, so watch for the foundry/node disclosure; 3D DRAM timing is \"Micron business decisions\", undated (Micron · Scott DeBoer, \"Technology and Product Leadership\" webinar, 2026-10-21 — Bloomberg live transcript). 🆕 2026-10-16 — the buyback now has a formula and a window, from Micron IR. From 2026-12-09 through 2029-12-08…",
       "open_questions": [
@@ -1389,15 +1390,15 @@
         "Bernstein \"Memory LTA effectiveness\" — the skeptic's quantitative bound on the same LTA debate (Bernstein · Mark Newman, 2026-07-09). A separate, same-day Bernstein cut (distinct from the constructive \"part 2 — Case studies from Microchip\" note above; both Newman, 2026-07-09)…",
         "Price up, content down — the 2027 HBM-pricing call and the offsetting de-spec, from the buyer's own BOM (SemiAnalysis \"Can AMD break the CUDA Moat? AMD Advancing AI 2026\", 2026-07-24). The bull leg first: SemiAnalysis explicitly expects \"a significant increase in HBM pricing in…"
       ],
-      "last_change": "2026-10-24",
-      "latest_change_excerpt": "verification (transcription QA): all quotes, figures, names and acronyms re-checked against the Transcript section of the source; attribution string matches the file header; glossary terms corrected; no correction needed.",
+      "last_change": "2026-10-26",
+      "latest_change_excerpt": "verification (transcription QA): the spoken downside was printed as a quote \"$700-750\" (Debate block + this ingest line) — the transcript says \"$750, you know, maybe $700\"; now an unquoted range with the verbatim words; 10-19 \"$800 FLOOR\" quote marked with the elision (\"an $800, you know, floor price\" on 10-19). All other figures matched the transcript.",
       "next_catalyst": "2026-12-09",
       "in_book": false,
       "book_side": "",
       "book_weight": null,
       "page": "MU.md",
       "thesis_hash": "2651f2638274",
-      "debate_hash": "e5fcf5771308"
+      "debate_hash": "de2762eff821"
     },
     "NBIS": {
       "ticker": "NBIS",
@@ -1414,8 +1415,8 @@
         "Q2 2026 print — by cadence ~early Aug 2026 (Q2'25 was 2025-08-07). Watch ARR trajectory toward the $7–9bn exit and the EBITDA margin path to ~40%.",
         "\"Meta Compute\" ramp (NEW, Citi Tech Research call summary, 2026-07-01) — watch whether Meta's newly launched external-cloud/surplus-compute business (competing with AWS/Azure/GCP and neoclouds) changes Meta's demand behavior as a Nebius anchor customer, or emerges as a direct…"
       ],
-      "last_change": "2026-10-23",
-      "latest_change_excerpt": "weekly credit review: Rechecked the October 22 company/6-K facility release and linked existing NBIS-CITI-FIN-20261022 into the credit ledger. Preserved $3.5bn / 364-day / Term SOFR +2.75% to maximum +3.50% terms and the draw-undisclosed status already recorded October 22. No new commitment, MW or rating/PT change. Evidence.",
+      "last_change": "2026-10-26",
+      "latest_change_excerpt": "ingest (Notion, 2026-10-26UBSAIs-Credit-Stress-Test-who-finances-next-wave-Keirstead-Mish-Parker-Richardson-Sady-Gravett.md): 1 intra-quarter read-across block with 2 bullets. Keirstead: \"Nebius is saying the same\" on sold-out capacity; GPU hourly pricing moving up; the Citi $3.5bn facility cited as an alternative funding source, with no new terms vs the 10-22 6-K. Nothing superseded.",
       "next_catalyst": "",
       "in_book": false,
       "book_side": "",
@@ -1540,7 +1541,7 @@
       "ticker": "NVDA",
       "sector": "AI — Semis & Compute",
       "thesis": "Full-stack AI-factory platform at +85% rev; debate is demand sustainability vs ASIC erosion.",
-      "debate_excerpt": "2026-10-20 — SPCX payment timing: primary evidence establishes financing structures, not a customer-specific DSO. NVIDIA's 2026-08-26 10-Q, Note 7 explicitly allows 90 days to one year for certain investment-grade customers' large data-center builds; ordinary terms remain shortly after delivery. It does not name SpaceX. Colette Kress's 60-day DSO on the same day's call is portfolio-wide. Apollo's 2026-01-07 primary confirms Valor's acquisition/lease of GB200 infrastructure to xAI and NVIDIA's anchor-LP investment: cash collection can be separate from continuing financing exposure. SPCX's April 24 Valor III agreement is five years / $6.587bn undiscounted lease payments (June 12 prospectus), not NVIDIA settlement tenor. Today's SPCX Q3 release shows $19.593bn cash capex / $13.259bn consolidated AP but no NVIDIA-specific payable or aging. No defensible SPCX-to-NVIDIA payment-day estimate established. SPCX analysis, stable financing IDs and history. 🔭 2026-10-19 (notion-ingest · UBS Arcuri call) — \"Nvidia back here at $215 … I think that's very attractive\" (conversational risk/reward on a sales-hosted call, not a PT); supply chain — \"some month or two slippage in Vera Rubin…",
+      "debate_excerpt": "2026-10-20 — SPCX payment timing: primary evidence establishes financing structures, not a customer-specific DSO. NVIDIA's 2026-08-26 10-Q, Note 7 explicitly allows 90 days to one year for certain investment-grade customers' large data-center builds; ordinary terms remain shortly after delivery. It does not name SpaceX. Colette Kress's 60-day DSO on the same day's call is portfolio-wide. Apollo's 2026-01-07 primary confirms Valor's acquisition/lease of GB200 infrastructure to xAI and NVIDIA's anchor-LP investment: cash collection can be separate from continuing financing exposure. SPCX's April 24 Valor III agreement is five years / $6.587bn undiscounted lease payments (June 12 prospectus), not NVIDIA settlement tenor. Today's SPCX Q3 release shows $19.593bn cash capex / $13.259bn consolidated AP but no NVIDIA-specific payable or aging. No defensible SPCX-to-NVIDIA payment-day estimate established. SPCX analysis, stable financing IDs and history. 🔭 2026-10-26 (notion-ingest · UBS Arcuri SemiBytes call — recurring series, prior vintage = the 10-19 bullet below) — Still on his list at the same price: \"I would put Nvidia at, you know, $215 on that list. I think Nvidia is going to…",
       "risks_excerpt": "Demand sustainability / AI-capex ROI — hyperscaler + neocloud FCF and financing dependence (Crisafulli, Chanos). 🆕🔴 IN-RACK POWER IS NOW A NAMED CEILING WITH A NUMBER ON IT (new, 2026-09-22) — \"Vendors note Rubin at 227kW TDP already approaching the limits of in-rack power with designs supporting 4 × 110kW power shelves with hyperscalers often maintaining 1.5x-2x power redundancy\" (UBS · Gaudois/Abrams/Lin et al. \"Global I/O: 3Q26 APAC Tech Tour\", 2026-09-22). ➤ This is a fifth documented constraint on the Rubin Ultra / Feynman generation alongside the four this page already carries (rack thermals · PCB midplane · HBM stack height · VRM supply), and the first with a published TDP. The…",
       "catalysts_excerpt": "🆕 2026-10-20 to 10-22: NVIDIA GTC Berlin (JPM US Market Intelligence calendar, 09-29/09-30); BofA lists \"multiple GTC tradeshow events\" with the enhanced buyback as the near-term NVDA catalysts (Arya via BofA sales · Fenske, 09-30). The 09-30 NYC and 10-01 Boston Jensen/Kress NDRs (MS) are the live read of the new IR deck. 🆕🔴 FEYNMAN PACKAGING — THE OBSERVABLE IS NOW A CAPACITY ORDER, AND THERE ARE THREE INDEPENDENT SOURCES ON THE SAME WINDOW. Redburn states the current baseline outright — Rubin is \"dual chiplet, microbump bonded\", i.e. NOT hybrid-bonded — and says BESI moved Nvidia Feynman HB adoption from its high-case to its MID-CASE at the June 2026 investor day, with the architecture…",
       "open_questions": [
@@ -1551,15 +1552,15 @@
         "🗄️ The CPU-attach ratio, sourced to Intel's CFO rather than to NVDA (DAMNANG (Substack) — \"The CPU Bottleneck Trade: Who Actually Gets Paid in the Agentic AI Era?\", 2026-04-25; ⚠️ independent author, NOT a broker — quoting Intel CFO David Zinsner): training-era GPU:CPU was…",
         "Corpus corroboration with the mechanism: \"Rubin Ultra will carry 192GB of HBM4 8-hi — not only a big downgrade from the originally previewed 1TB Rubin Ultra, but even below the standard Rubin's 288GB. Why cut to 1/5? (1) the original 4-die Rubin Ultra plan was cancelled, so HBM…"
       ],
-      "last_change": "2026-10-25",
-      "latest_change_excerpt": "verification (transcription QA): NVDA-vs-SOX headline restated (13 days = count at his note ~9 months ago; \"cheaper today\" than that point, not \"all but 13 days\"); unit-share answer now carries Patel's \"units are always difficult\" qualifier (CoWoS wafers/HBM/dollars) [00:35:46]; Hopper-to-Blackwell quote \"increase\" - \"increased\" to match the transcript.",
+      "last_change": "2026-10-26",
+      "latest_change_excerpt": "run-inbox: Anthropic S-1 read-through (Anthropic, PBC Form S-1, filed 2026-10-26, acc. 0001628280-26-067168; company filing). Changes: 1 Intra-quarter block (NVIDIA \"strategic partnership\"; Microsoft / SpaceXAI / Nscale / Lambda NVIDIA-GPU contracts with bases and exit terms; TPU-vs-GPU stickiness; AMD tranche; no NVIDIA equity or revenue share disclosed; TSMC/HBM risk), 1 Full-log row, Sinal update + Síntese addendum, Sources. Superseded (thesis-drift, in the 10-26 block, dated rows left as recorded): SpaceX/xAI…",
       "next_catalyst": "2026-11-17",
       "in_book": true,
       "book_side": "long",
       "book_weight": null,
       "page": "NVDA.md",
       "thesis_hash": "5ac27460cdaf",
-      "debate_hash": "97d464f65fa0"
+      "debate_hash": "f5f387b7e49e"
     },
     "NVT": {
       "ticker": "NVT",
@@ -1707,9 +1708,9 @@
         "🆕 LIGHTHOUSE first load — CY2H27 (ORCL's June guide) vs mid-2028 (infrastructure-analytics firm; Morgan Stanley Credit, 09-30); watch the Wisconsin PSC's new docket on the ATC transmission approval and any ORCL comment at the 10-28 meeting.",
         "🆕 PROJECT JUPITER (2.45GW, New Mexico; developer STACK / Blue Owl) — FORCE-MAJEURE NOTICE SENT 2026-09-24 to defer payment if the project slips (Bloomberg via MS TMT desk, 2026-09-24); company says it \"remains on our planned schedule\" (ORCL tweet; DB · Zelnick management check,…"
       ],
-      "last_change": "2026-10-23",
-      "latest_change_excerpt": "run-inbox: JPM · Chatterjee \"Oracle: Investor Day Preview…\" (2026-10-20) + GS · Borges/Hager \"Data center model refresh ahead of investor day\" (2026-10-22) → 2 Datacenter bullets (GS site table + Jupiter/Lighthouse risks), 1 Capex/financing block, 1 Catalysts bullet (10-28 investor day expectations; GS cover's \"10/29\" logged as a date conflict, 10-28 kept), 2 Q2 FY27 Full-log rows, 1 Sinal update, 1 Sources line. SUPERSEDED: GS PT $240 → $206 (Buy unchanged; multiple 15x → 13x 2030E adj. NI); GS EPS FY28E $10.27…",
-      "next_catalyst": "2026-10-28",
+      "last_change": "2026-10-26",
+      "latest_change_excerpt": "ingest (Notion, 2026-10-26UBSAIs-Credit-Stress-Test-who-finances-next-wave-Keirstead-Mish-Parker-Richardson-Sady-Gravett.md): 2 Catalyst sub-bullets. (1) Under the 10-28 analyst meeting: Keirstead says the CFO told him last month that a financing plan comes at the investor day. (2) Under Project Jupiter: Keirstead relays an Oracle tweet (\"there is a workaround\"); the tweet is not on disk and is UNVERIFIED. Nothing superseded.",
+      "next_catalyst": "2026-10-26",
       "in_book": false,
       "book_side": "",
       "book_weight": null,
@@ -1847,8 +1848,8 @@
         "🆕 APPLE LICENSING EXTENSION — announced 2026-09-24 ahead of the April 2027 expiry, terms not disclosed (Bernstein desk · Seidman, 2026-09-24). Watch for duration/rate in the FQ4 print or 10-K. Bernstein QCOM HQ visit with CEO, CFO and Head of Data Center — 2026-11-09, San Diego…",
         "🆕🔴 HIGH BANDWIDTH COMPUTE (HBC) — the disclosure to chase. Announced but essentially unmodelled: a specialised compute die beneath a 3D-stacked LPDDR6X array, claimed at 133 TB/s vs HBM's 21-22 TB/s (6x) and a 6x improvement in tokens/sec/watt (DB · Robert Sanders relaying Dr…"
       ],
-      "last_change": "2026-10-19",
-      "latest_change_excerpt": "attribution correction: the 2026-06-23 \"Asia Trip Takeaways\" source (Capstone notes, Fernanda Watkins, of an investor call hosted by Conor O'Mara — Jefferies Asia TMT specialist sales, desk voice, no rating/PT — and Sherman; primary inbox/done/77420a6c-…ASIA (1).pdf, 42pp, screen banner p.37 \"Conor O'Mara - Jefferies\") was credited to \"Redburn\" (in forms such as 'Redburn · Conor O'Mara', 'Redburn \"Conor O'Mara Asia Trip Takeaways\"', 'Redburn/O'Mara') on 4 line(s) of this page; relabelled to \"Jefferies desk ·…",
+      "last_change": "2026-10-26",
+      "latest_change_excerpt": "ingest (Notion, 2026-10-26UBSSemiBytes-call-SMH-prices-20GW-cut-CPU-TAM-memory-bound-Arcuri-Ruple.md): 1 Debate bullet — Arcuri preview: QCOM \"skews to the downside\" on a cautious Android-smartphone view, \"not extremely out of consensus\". No rating/PT superseded.",
       "next_catalyst": "2026-11-09",
       "in_book": false,
       "book_side": "",
@@ -2129,8 +2130,8 @@
         "🆕 STARSHIP FLIGHT 15 — ~LATE OCT / EARLY NOV (MS · Jonas, 2026-09-29): Booster 22 / Ship 42; the next stock catalyst is whether it includes a SHIP catch (\"the stock's most significant catalyst since the IPO\"); MS does not expect a V3 booster catch; BofA expects a possible…",
         "🆕⚠️⚠️ CURSOR'S AGENT WAS USED IN A LIVE INTRUSION CAMPAIGN — a product-liability and enterprise-trust exposure on the same asset, independent of the OpenAI cutoff. \"Russian-speaking hackers used SpaceX-owned Cursor's AI agent to help breach at least 7 companies. The group…"
       ],
-      "last_change": "2026-10-23",
-      "latest_change_excerpt": "weekly credit review: Checked Bret Johnsen funding Q&A in October 20 Quartr transcript (46:07-47:03). General discussion of debt pools and vendor/customer financing does not confirm the specific ~$40bn chip-financing proposal SPCX-NVDA-FIN-20261006. No new funded amount or revision to existing earnings outcome. Evidence.",
+      "last_change": "2026-10-26",
+      "latest_change_excerpt": "run-inbox: SpaceX 8-K Item 8.01 (filed 2026-10-26, event 10-24) → new top block, Debate bullet, Full-log row and Sinal update. Status superseded: the ~$40bn chip financing (SPCX-NVDA-FIN-20261006) was carried as \"press-reported talks, not a closed financing\" with a reported $10bn bank loans / $30bn IG debt structure (Reuters 2026-10-06/07, as of the 2026-10-20 Debate block). It is now a binding commitment letter for an Apollo-managed master finance lease of GPU pods, ~$40bn aggregate principal, not yet closed or…",
       "next_catalyst": "2026-11-12",
       "in_book": false,
       "book_side": "",
@@ -2352,8 +2353,8 @@
         "🆕🔭 JPM's post-print CALL — where Hariharan's view moved vs his 10-01 preview (Gokul Hariharan (J.P. Morgan) @ JPM TSMC 3Q26 post-earnings call (video replay, live date unconfirmed, recorded 2026-10-19) - Capstone notes (Notion transcript); ⚠️ opening recap only, Q&A not…",
         "🆕🔴 SEMICON TAIWAN 2026 IS RUNNING NOW (opened 2026-08-31) — largest on record, with the focus \"expanding to encompass the data center ecosystem led by cloud service providers\" and GOOG's AI Chief Technologist making his Asia keynote debut. TSMC presented at both the IC Forum…"
       ],
-      "last_change": "2026-10-23",
-      "latest_change_excerpt": "run-inbox: BG2 Pod, Jensen Huang (2026-10-15) → one Q3 FY26 window Full-log row (\"100% of our business to TSMC\", five-year planning, substrates + silicon photonics constrained \"for a few years\") and one Sources line. Nothing superseded.",
+      "last_change": "2026-10-26",
+      "latest_change_excerpt": "ingest (Notion, 2026-10-26UBSSemiBytes-call-SMH-prices-20GW-cut-CPU-TAM-memory-bound-Arcuri-Ruple.md): TSM page: 1 Intra-quarter bullet (Arcuri: TSMC may curtail Intel wafers over Terafab; AMD gets every wafer it asks for). Sell-side view; nothing superseded.",
       "next_catalyst": "",
       "in_book": true,
       "book_side": "long",
@@ -2377,8 +2378,8 @@
         "🆕🔴 THE SEPT-QUARTER PRINT IS NOW A DATED TEST OF A SUPPLY-SIDE ARGUMENT, NOT JUST A DEMAND ONE. Rothschild & Co's TMT desk argues that mature-node analog/PMIC shortages — STMicro MCU lead times beyond a year, industrial-control MCU and PMIC scarcity as foundries prioritise…",
         "🆕⚠️ WATCH WHETHER BofA'S DEFENSIVE-ANALOG EXPRESSION ROTATES TOWARD TXN. On 2026-09-15 Vivek Arya named ADI and ON — not TXN — among the five names expected to show the best resilience in a range-bound tape (with NVDA, AMD, MRVL), while the same analyst's BUY / PO $370 on TXN…"
       ],
-      "last_change": "2026-10-22",
-      "latest_change_excerpt": "print ingest (Q3'26 8-K/ex-99 + Quartr call transcript + callbacks; the 10-Q is not yet filed). Added: Current-state Q3 FY26 block; Debate print scorecard (GS Sell, crowded long, capex→FCF); 4 new Catalysts (Q4 print/January '27 pricing, February capex call, CY26 capex landing, SLAB close) with the Q3 print, 2H26-pricing and Sept-quarter supply-side tests resolved; 2 Risks (SLAB leverage, capex re-acceleration); Sources links; Mgmt-commentary table rolled forward to Q3'26.",
+      "last_change": "2026-10-26",
+      "latest_change_excerpt": "ingest (Notion, 2026-10-26UBSSemiBytes-call-SMH-prices-20GW-cut-CPU-TAM-memory-bound-Arcuri-Ruple.md): 1 Intra-quarter bullet (Arcuri prefers TI over MCHP on margins). Nothing superseded.",
       "next_catalyst": "",
       "in_book": false,
       "book_side": "",

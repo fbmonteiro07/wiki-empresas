@@ -7,13 +7,13 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\TSM` (20-F + transcrip
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | NT$5543.9bn | NT$7719.5bn |
-| Gross profit | NT$3659.0bn | NT$5148.9bn |
+| Revenue | NT$5560.2bn | NT$7771.1bn |
+| Gross profit | NT$3669.7bn | NT$5183.3bn |
 | Gross margin | **66.0%** | 66.7% |
-| EBITDA | NT$4028.2bn | NT$5794.2bn |
+| EBITDA | NT$4044.3bn | NT$5886.1bn |
 | EPS | **NT$102.50** | **NT$143.50** |
-| Capex | NT$2024.5bn | NT$2563.4bn |
-| OCF (≈EBITDA) | NT$4028.2bn | NT$5794.2bn |
+| Capex | NT$2020.3bn | NT$2570.8bn |
+| OCF (≈EBITDA) | NT$4044.3bn | NT$5886.1bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 _**Bold** = Capstone official model; plain = BBG consensus._
@@ -514,6 +514,7 @@ The 68.8% starting point applies Fubon's FY27 GM to the house revenue base and i
 - Cyclical consumer/smartphone exposure amid memory-driven component inflation (C.C. Wei, Q1 FY26); smartphone units near-flat (+1–2%) vs AI ~100% growth (StoneX, 2025-08-20).
 
 ## Intra-quarter — calls, commentary & reports (since the last print)
+- 🆕 **2026-10-26 — UBS (Arcuri): TSMC may curtail Intel wafer allocations next year over Terafab.** *"TSMC seems like they're quite upset about, you know, Intel partnering with Terafab ... does that cause TSMC to curtail some of their wafer allocations? Possibly"*; AMD is *"getting every wafer that they ask for at TSMC next year"*. Sell-side read, not a TSMC statement; on 10-19 the same analyst named EMIB-T as the irritant — carry both. Tim Arcuri (UBS) @ UBS SemiBytes semis update call (host Rob Ruple), 2026-10-26 - Capstone notes (Notion transcript) — [archive](../_equity_calls/Semis/2026-10-26_UBS_SemiBytes-call-SMH-prices-20GW-cut-CPU-TAM-memory-bound-Arcuri-Ruple.md)
 _Q1 FY26 · Apr 16 → **Jul 16 2026 — window CLOSED by the 2Q26 print (see Current state (Q2 FY26) above)** · sell-side / expert calls / reports between earnings; the next /wiki-ingest run opens a fresh Q3 FY26 window. Timeline visual: [timeline.html](timeline.html)._
 
 **🆕🔴🔴 2026-09-21 (/wiki-ingest 21h) — 3Q REVENUE IS TRACKING **~4% AHEAD OF CONSENSUS** ON TAIWANESE PRESS MATH, AND THE COMPANY'S OWN VP OF ADVANCED PACKAGING PUTS **CoWoS CAPACITY GROWTH ABOVE AN 80% CAGR THROUGH 2027.** TSMC IS ALSO BUILDING A **"MINI-LOOP"** TO VALIDATE PACKAGING TOOLS BEFORE THEY ENTER PRODUCTION — AND HAS INSPECTED **AUO** PLANTS FOR CONVERSION.**
@@ -1096,6 +1097,7 @@ _Source: TSMC earnings calls (dates above); management commentary, paraphrased. 
 
 ## Changelog
 
+- 2026-10-26 — ingest (Notion, 2026-10-26_UBS_SemiBytes-call-SMH-prices-20GW-cut-CPU-TAM-memory-bound-Arcuri-Ruple.md): TSM page: 1 Intra-quarter bullet (Arcuri: TSMC may curtail Intel wafers over Terafab; AMD gets every wafer it asks for). Sell-side view; nothing superseded.
 - 2026-10-23 — run-inbox: BG2 Pod, Jensen Huang (2026-10-15) → one Q3 FY26 window Full-log row ("100% of our business to TSMC", five-year planning, substrates + silicon photonics constrained "for a few years") and one Sources line. Nothing superseded.
 - 2026-10-22 — print ingest (Q3'26 6-K + call transcript; no callbacks for TSM — the BofA/JPM feedback calls are already on the page): **Current state retitled from "Q2 FY26 — reported 2026-07-16" to "Q3 FY26 — reported 2026-10-15"**. The Q2 print block is kept below under "### Prior quarter — Q2 FY26 print", and the Aug-Sep flow under "### Pre-print intra-quarter flow". **New Q3 print block at the head:** headline P&L from the 6-K (rev NT$1,494.24bn / US$46.72bn, GM 66.4%, OPM 58.7%, EPS NT$29.43); node and platform mix; a grading table vs TSMC's own 3Q guide and the preview bars; the 4Q26 guide (US$52.3-54.3bn, GM 65-67%, OPM 56.5-58.5%, NT$31.8); capital/capacity; six call-quote clusters; balance sheet and cash flow; and a reconciliation of the second-hand relays. **Superseded (old → new):** FY26 revenue guide "slightly above 40%" (2026-07-16) → "around 44%" (2026-10-15). Overseas GM dilution "2% to 3% in the early stages, widen to 3% to 4% in the latter stages" (07-16) → "closer to 2%" now [rest of the sentence garbled in the Quartr transcript], widening to 3-4% "in the next few years" / "the second part of the five-year period". Arizona Fab 2 N3 "2H27, possibly pulled into late-FY26" (Catalysts) → VP 3Q27 "slightly ahead of our previous schedule". N3 additions "three (Taiwan, Arizona, Japan)" (07-16) → four (a second new Tainan fab, VP 1H28). The FY26 capex guide US$60-64bn is unchanged. **Relays flagged as wrong or unsupported by the primaries (left in place, marked inline):** (a) BofA · Haas Liu 10-15: overseas dilution 3-4% "starting from next year". The company did not date it to 2027, and the Debate bullet "2% → 3-4% from 2027" carries the same BofA dating. (b) BofA 10-15: FY26 capex "$60 to $65 billion". The company said US$60-64bn. (c) BofA 10-15: N2/N3 +~10% from January 2027 is a channel check, not confirmed on the call. (d) JPM · Hariharan 10-19: Terafab "co-investment and dedicated capacity" is not in the call. (e) JPM 10-19: CoWoS as a GM dilution driver is not in the company's 4Q bridge. (f) BofA 10-15 "didn't even beat its own guidance" and MS "3Q GM miss" (six-house table) are only partly right: GM 66.4% was inside the guide and above the midpoint, and OPM beat the top. 🔭 Vivek Arya's "AI CAGR lower in % in January" vs C.C. Wei's "probably will be higher". **Catalysts:** 3Q26 print marked RESOLVED (neutral); a NEXT bullet added for the January 2027 print/2027 guide; the Arizona line updated. **Management-commentary table rolled forward:** Q3'26 added. The Q2'25 column rolled off; its text, preserved here verbatim: HPC/AI "AI/HPC "robust"; FY25 raised to ~30%; sovereign AI added" · Capex "Maintained USD 38-42bn" · N2/A16 "N2 on track 2H25; tape-outs > N3/N5; A14 in 2028" · CoWoS ""Narrowing the gap"; building back-end capacity" · Pricing/GM "GM 58.6%; FX -180bp; reaffirm 53%+ "and higher"" · Overseas "6 AZ fabs; speeding Fab2 (N3) several qtrs". **Sources:** 6-K cover/Ex-99.1/Ex-99.2, the 10-08 and 10-22 6-Ks, the call transcript and the preview linked. Transcript garbles noted, not carried: "decreased by 1-28 days" / "5-82 days" (= by 1 to 28 / by 5 to 82); "increased TWD 488 billion-TWD 3.6 trillion" (= to NT$3.6tn).
 

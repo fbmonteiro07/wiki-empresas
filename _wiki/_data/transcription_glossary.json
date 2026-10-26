@@ -1,6 +1,6 @@
 {
  "_about": "Hand-edited ledger of machine-transcription garbles (Notion AI, Bloomberg ASR, auto-translation) seen in the archive, with the correct reading. Used by E:\\.claude\\scripts\\transcript_qa.py (source-file scan, page-diff scan) and by ingest_notion_meetings.py (writes a 'Transcription QA' block into every archived Notion file). Keys are matched with word boundaries, case-sensitive unless 'ci' is true. 'keep_when' = regex contexts (same line, ~80 chars around the hit) where the token is legitimate and must NOT be flagged. Add an entry the first time a garble is caught; never delete one. Standing rule (Felipe, 2026-09-28): ALWAYS double-check transcript content — acronyms, names, units, numbers — before it travels to a page.",
- "_updated": "2026-10-25",
+ "_updated": "2026-10-26",
  "terms": {
   "Astrod": {
    "correct": "Astra (probable: OpenAI GPT-6 Astra)",
@@ -4465,6 +4465,162 @@
    "domain": "names",
    "rule": "a16z.",
    "first_seen": "2026-10-25 (/run-inbox — a16z Show, Box CEO Aaron Levie 2026-10-25, podscripts ASR)"
+  },
+  "Integra": {
+   "correct": "Entegris (ENTG)",
+   "domain": "names",
+   "rule": "Host intro: \"Analyst Day preview for Integra\" = Entegris (UBS ENTG A-Day preview, same day). Keep for Integra LifeSciences only in medtech context.",
+   "first_seen": "2026-10-26 (Notion, UBS SemiBytes call Arcuri/Ruple + UBS AI Credit Stress Test call)",
+   "keep_when": [
+    "LifeSciences",
+    "IART"
+   ]
+  },
+  "TerraWolf": {
+   "correct": "TeraWulf (WULF)",
+   "domain": "names",
+   "rule": "HY project-bond issuer named by UBS HY trader; ASR of TeraWulf.",
+   "first_seen": "2026-10-26 (Notion, UBS SemiBytes call Arcuri/Ruple + UBS AI Credit Stress Test call)"
+  },
+  "Cypher": {
+   "correct": "Cipher (probable: Cipher Mining / CIFR project bonds) - UNCONFIRMED",
+   "domain": "names",
+   "rule": "Listed with Stingray and TerraWolf as HY data-center project-bond names; quote as Cipher [transcribed \"Cypher\"], probable reading only.",
+   "first_seen": "2026-10-26 (Notion, UBS SemiBytes call Arcuri/Ruple + UBS AI Credit Stress Test call)"
+  },
+  "core Weave": {
+   "correct": "CoreWeave",
+   "domain": "names",
+   "rule": "ASR split of CoreWeave.",
+   "first_seen": "2026-10-26 (Notion, UBS SemiBytes call Arcuri/Ruple + UBS AI Credit Stress Test call)",
+   "ci": true
+  },
+  "AT&A": {
+   "correct": "18A (Intel process node)",
+   "domain": "products",
+   "rule": "\"Intel 3 and, you know, AT&A startup costs\" = 18A startup costs. The Notion summary rendered it \"IFS startup costs\" - not in the transcript.",
+   "first_seen": "2026-10-26 (Notion, UBS SemiBytes call Arcuri/Ruple + UBS AI Credit Stress Test call)"
+  },
+  "Grevette": {
+   "correct": "Gravett (Ryan Gravett, UBS Communications Infrastructure analyst)",
+   "domain": "names",
+   "rule": "Confirmed from the UBS invite presenter list.",
+   "first_seen": "2026-10-26 (Notion, UBS SemiBytes call Arcuri/Ruple + UBS AI Credit Stress Test call)"
+  },
+  "Carl": {
+   "correct": "Karl (Karl Keirstead, UBS Head of AI & US Software Research)",
+   "domain": "names",
+   "rule": "In the UBS AI Credit Stress Test call (2026-10-26) every \"Carl\" is Karl Keirstead (invite presenter list). Elsewhere check context.",
+   "first_seen": "2026-10-26 (Notion, UBS SemiBytes call Arcuri/Ruple + UBS AI Credit Stress Test call)"
+  },
+  "matthew.misch": {
+   "correct": "Matthew Mish (UBS Head of Credit Strategy)",
+   "domain": "names",
+   "rule": "Host spelled his e-mail; ASR added a c. Presenter list: Matthew Mish.",
+   "first_seen": "2026-10-26 (Notion, UBS SemiBytes call Arcuri/Ruple + UBS AI Credit Stress Test call)"
+  },
+  "robert.ruppel": {
+   "correct": "Robert Ruple (UBS sector sales)",
+   "domain": "names",
+   "rule": "Host e-mail garble; sender of the UBS TECH mails is robert.ruple@ubs.com.",
+   "first_seen": "2026-10-26 (Notion, UBS SemiBytes call Arcuri/Ruple + UBS AI Credit Stress Test call)"
+  },
+  "TrackD": {
+   "correct": "Tract D (probable: Tract Capital TRACTD project bond, Storey County NV, NVIDIA tenant) - UNCONFIRMED",
+   "domain": "names",
+   "rule": "UBS HY trader named 'Meridian and TrackD' as large deals sold by hedge funds; later in the same call Richardson says 'Track C and Track D. They have NVIDIA as a tenant' and an 'Envy Energy' (NV Energy) headline - matches Tract Capital TRACTC/TRACTD (Jefferies FI desk 2026-09-14 on NVDA.md). Quote as Tract D [transcribed \"TrackD\"], probable reading. (Resolved 2026-10-26 from the corpus; was UNRESOLVED.)",
+   "first_seen": "2026-10-26 (Notion, UBS SemiBytes call Arcuri/Ruple + UBS AI Credit Stress Test call)"
+  },
+  "NTIA": {
+   "correct": "MTIA (Meta Training and Inference Accelerator)",
+   "domain": "products",
+   "rule": "Meta custom accelerator; \"NTIA Artemis\" = MTIA (2nd gen, Artemis). Keep NTIA only for the US agency (Commerce Dept) in a telecom/spectrum/policy context.",
+   "first_seen": "2026-10-26 (Notion, Meta investor presentation video \"Meta roadshow\")",
+   "keep_when": [
+    "spectrum",
+    "Commerce",
+    "broadband",
+    "agency",
+    "BEAD"
+   ]
+  },
+  "Track C": {
+   "correct": "Tract C (probable: Tract Capital TRACTC project bond, Storey County NV, NVIDIA tenant) - UNCONFIRMED",
+   "domain": "names",
+   "rule": "UBS AI Credit Stress Test call 2026-10-26 (Richardson): 'Track C and Track D ... NVIDIA as a tenant'. Quote as Tract C [transcribed \"Track C\"]. Legit 'track' uses are not capitalised + letter.",
+   "first_seen": "2026-10-26 (Notion, UBS AI Credit Stress Test call)"
+  },
+  "Track D": {
+   "correct": "Tract D (probable: Tract Capital TRACTD project bond, Storey County NV, NVIDIA tenant) - UNCONFIRMED",
+   "domain": "names",
+   "rule": "Same call as 'Track C'; see TrackD. Quote as Tract D [transcribed \"Track D\"].",
+   "first_seen": "2026-10-26 (Notion, UBS AI Credit Stress Test call)"
+  },
+  "Nebeus": {
+   "correct": "Nebius (NBIS)",
+   "domain": "names",
+   "rule": "ASR of Nebius ('Nebeus. One of Corweave's rivals did a $3.5 billion raise with Citi'), UBS AI Credit Stress Test call 2026-10-26.",
+   "first_seen": "2026-10-26 (Notion, UBS AI Credit Stress Test call)"
+  },
+  "Envy Energy": {
+   "correct": "NV Energy (probable - Nevada utility, Berkshire Hathaway Energy) - UNCONFIRMED",
+   "domain": "names",
+   "rule": "\"Envy Energy litigation headline\" on a data-center project bond (UBS credit call 2026-10-26); quote as NV Energy [transcribed \"Envy Energy\"], probable reading.",
+   "first_seen": "2026-10-26 (Notion, UBS AI Credit Stress Test call)"
+  },
+  "Stephen Zhu": {
+   "correct": "Stephen Ju (UBS US Internet analyst)",
+   "domain": "names",
+   "rule": "Keith Parker on the UBS AI Credit Stress Test call 2026-10-26: 'Stephen Zhu out with a note and he's been above consensus on Amazon AWS margins'. UBS's AMZN/internet analyst is Stephen Ju (AMZN.md). Quote as Stephen Ju [transcribed \"Stephen Zhu\"].",
+   "first_seen": "2026-10-26 (Notion, UBS AI Credit Stress Test call)"
+  },
+  "Tim O'Keary": {
+   "correct": "Tim Arcuri (probable - UBS US semiconductors analyst covering NVIDIA) - UNCONFIRMED",
+   "domain": "names",
+   "rule": "Keirstead on the UBS AI Credit Stress Test call 2026-10-26: 'a good question for Tim O'Keary, obviously, who covers Nvidia'. UBS NVDA coverage is Tim Arcuri; probable ASR garble.",
+   "first_seen": "2026-10-26 (Notion, UBS AI Credit Stress Test call)"
+  },
+  "Century": {
+   "correct": "Sentry",
+   "domain": "names",
+   "rule": "ASR of Sentry (error-log tool) in a developer workflow context; only when logs/bug reports are discussed.",
+   "first_seen": "2026-10-26 (a16z Show, OpenAI computer use w/ Ari Weinstein & James Sun, podscripts ASR)"
+  },
+  "WebExP": {
+   "correct": "WebMCP",
+   "domain": "products",
+   "rule": "ASR of WebMCP (agent-web standard); same speaker says WebMCP elsewhere.",
+   "first_seen": "2026-10-26 (a16z Show, OpenAI computer use w/ Ari Weinstein & James Sun, podscripts ASR)"
+  },
+  "Seraphini": {
+   "correct": "Serafini (Fabrizio Serafini, a16z)",
+   "domain": "names",
+   "rule": "ASR of a16z partner Fabrizio Serafini (show notes spelling).",
+   "first_seen": "2026-10-26 (a16z Show, OpenAI computer use w/ Ari Weinstein & James Sun, podscripts ASR)"
+  },
+  "Fabrizzi": {
+   "correct": "Fabrizio (Serafini, a16z)",
+   "domain": "names",
+   "rule": "ASR of Fabrizio Serafini.",
+   "first_seen": "2026-10-26 (a16z Show, OpenAI computer use w/ Ari Weinstein & James Sun, podscripts ASR)"
+  },
+  "chat Shikiki": {
+   "correct": "ChatGPT",
+   "domain": "products",
+   "rule": "ASR of ChatGPT.",
+   "first_seen": "2026-10-26 (a16z Show, OpenAI computer use w/ Ari Weinstein & James Sun, podscripts ASR)"
+  },
+  "Axtra": {
+   "correct": "Astra (OpenAI GPT-6 Astra)",
+   "domain": "products",
+   "rule": "ASR of Astra.",
+   "first_seen": "2026-10-26 (a16z Show, OpenAI computer use w/ Ari Weinstein & James Sun, podscripts ASR)"
+  },
+  "Ashtra": {
+   "correct": "Astra (OpenAI GPT-6 Astra)",
+   "domain": "products",
+   "rule": "ASR of Astra.",
+   "first_seen": "2026-10-26 (a16z Show, OpenAI computer use w/ Ari Weinstein & James Sun, podscripts ASR)"
   }
  },
  "summary_traps": [
@@ -4475,7 +4631,8 @@
   "2026-10-16: the Notion summary (a) retitled Micron's post-F4Q26 IR call 'Post-3Q FY26' (wrong fiscal quarter) and hung the reported '$33B free cash flow' on 'Fiscal Q1 27' (the transcript says 'the last quarter we reported' = F4Q26; FQ1'27 is only 'significantly stronger'); (b) wrote CXMT's 2025 capacity add as '$45K' - it is 45K wafers per month, not dollars; (c) fused an audience question ('$60 to $64 billion ... brokers see 2028 capex higher than $105') with the expert's conditional '$100 billion' arithmetic into one 'CapEx trajectory' bullet (BTGP TSMC expert).",
   "2026-10-19: the Notion summary of the JPM TSMC replay wrote 'Amkor (EMA technology)' / 'V9 locked in with Amkor' - the transcript says only 'use EMA when TSMC go off in 27 and 28' and never names Amkor (fabricated entity). Lesson for the lane itself: grep transcripts case-insensitively before declaring a summary figure absent - 'Backlog where we look at Google and Amazon both at $500 billion' IS in the JPM Internet transcript (capitalised).",
   "2026-10-19: the JPM Internet Zoom host introduced 'eBay, slide 36' while the content (Depop dilution, 2-year GMS stack, Vinted) is Etsy — a HOST slip the Notion summary copied; ticker confusion is a trap even when the transcript is right.",
-  "2026-10-22: (a) the Notion summary of the Wells Fargo TXN/LRCX recap wrote 'Lam's CEO Doug' - Doug Bettinger is Lam's CFO (CEO Tim Archer); it also presented a QUESTIONER's premise ('AI is contributing about 10% to their growth') as TI's statement; (b) the ASML callback summary turned the analyst's estimates into 'guidance' ('Gross margin guidance of 57%+', 'ASP guidance') and wrote 'likely 7-9 units' for High-NA 2028 where the transcript says 'high single digit'; (c) the META recap summary stated the analyst's guesses ('credit spreads tighten', 'raise within next week') as conclusions and dropped the unit on '$31-32 to $32-33' (2027 EPS, buy-side); (d) the StoneX Jain summary credited the HOST's '$50 billion per gigawatt' data-center cost to the discussion and extrapolated 'labs hire aggressively for AI-native chip design' from one job-postings remark; (e) the Jefferies Curtis summary credited the HOST's flow colour ('long-only selling and hedge fund shorting ~12 weeks', 'WFE $300B in 2028') to Blayne and wrote 'AEC/VCSEL-based' where the transcript says 'ALCs' (unresolved)."
+  "2026-10-22: (a) the Notion summary of the Wells Fargo TXN/LRCX recap wrote 'Lam's CEO Doug' - Doug Bettinger is Lam's CFO (CEO Tim Archer); it also presented a QUESTIONER's premise ('AI is contributing about 10% to their growth') as TI's statement; (b) the ASML callback summary turned the analyst's estimates into 'guidance' ('Gross margin guidance of 57%+', 'ASP guidance') and wrote 'likely 7-9 units' for High-NA 2028 where the transcript says 'high single digit'; (c) the META recap summary stated the analyst's guesses ('credit spreads tighten', 'raise within next week') as conclusions and dropped the unit on '$31-32 to $32-33' (2027 EPS, buy-side); (d) the StoneX Jain summary credited the HOST's '$50 billion per gigawatt' data-center cost to the discussion and extrapolated 'labs hire aggressively for AI-native chip design' from one job-postings remark; (e) the Jefferies Curtis summary credited the HOST's flow colour ('long-only selling and hedge fund shorting ~12 weeks', 'WFE $300B in 2028') to Blayne and wrote 'AEC/VCSEL-based' where the transcript says 'ALCs' (unresolved).",
+  "2026-10-26 UBS SemiBytes (Arcuri): the summary printed SMH \"closed Friday at $5.27\" - the transcript says \"5, uh, 5.27\" and the arithmetic (21x x $25.23 = ~$530) makes it ~$527; it also wrote \"IFS startup costs\" where the transcript says \"AT&A\" (= 18A)."
  ],
  "Fenyman": {
   "correct": "Feynman (NVIDIA 2028 GPU generation)",

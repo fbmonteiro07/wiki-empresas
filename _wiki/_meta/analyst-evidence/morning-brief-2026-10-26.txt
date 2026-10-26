@@ -1,0 +1,65 @@
+Morning Analyst Inbox — 2026-10-26
+
+Bottom line: focus on ORCL’s funding path, AMZN’s elevated AWS expectations, GOOG’s revenue-definition problem, NVDA’s powered-demand conversion and MU’s contract protection. These are research priorities, not automatic trade instructions.
+
+Book prioritization is provisional: book.json remains an eight-position July 1 seed with unknown weights. On-disk Bloomberg estimates are dated October 23, not refreshed today.
+
+Evidence key: E = _wiki/_meta/analyst-evidence/2026-10-26-morning-source-checks.json; R = _wiki/_meta/reconciliation-2026-10-23-inbox.md. “supp-” IDs identify this morning’s supplemental research signals, not engine-generated alerts. All local paths are relative to the Wiki Felipe empresas repository.
+
+FIVE PRIORITIES
+
+1. ORCL — Make October 28 about funded execution, not just demand.
+Broker estimates: JPM / Samik Chatterjee, October 20, has May-FY28/FY29 capex of approximately $120bn/$133bn (chart reads). GS / Gabriela Borges, October 22, has $112.2bn/$95.4bn; Bloomberg’s October 23 evening fiscal-year check has $103.8bn/$95.4bn. The disagreement is whether investment peaks, not merely its next-quarter level. Barclays / Raimo Lenschow and Sheldon McMeans, October 26, also highlight FY28 funding.
+Inference/action: prepare a funding bridge separating cash capex, leases, customer prepayments and new financing; demand a dated route from contracted capacity to revenue and cash. An enlarged demand forecast alone does not settle this.
+Falsifier: binding funding and a credible cash-generation bridge covering the higher-capex path would weaken the financing-risk case.
+Signals: cata-9f2e588078f2; supp-20261026-orcl. Evidence: R; E, idea_evidence.orcl. Barclays evidence is an email excerpt, not a full-report review.
+
+2. AMZN — A Street beat may still miss the real expectations bar.
+Broker estimates: BofA / Justin Post, report dated October 25, forecasts Q3 AWS growth of 40% versus Street 38%, but says investor expectations may be 42%+. He models AWS margin at 39%; his Q4 operating-profit guide expectation is $29–34bn against Street $32.9bn, with retail fuel costs a possible offset.
+Inference/action: prepare separate consensus and investor-expectation scorecards for October 29. Require evidence that utilization, Trainium and Bedrock economics offset depreciation; do not score a 40% growth print as an unequivocal positive surprise.
+Falsifier: stronger AWS growth accompanied by worsening margins or weak retail guidance would defeat the uncomplicated beat-and-raise thesis.
+Signal: supp-20261026-amzn. Evidence: E, idea_evidence.amzn.
+
+3. GOOG — Quarantine the apparent house revenue edge until definitions match.
+Recorded inputs: Capstone’s June 5 model extraction has 2026/2027 revenue of $505bn/$641bn; Bloomberg’s October 23 calendar-year series has $427.9bn/$553.5bn. But the wiki’s JPM / Doug Anmuth et al. October 15 entry explicitly distinguishes JPM gross revenue from its Bloomberg ex-TAC comparison.
+Inference: the engine’s advertised 18%/16% house upside is not yet an investable same-basis disagreement. The field definition and house workbook still require direct confirmation; the entire discrepancy has NOT been conclusively reconciled.
+Action: normalize gross versus ex-TAC, then split TPU hardware from recurring Cloud services and bridge gross profit/FCF ahead of October 28.
+Falsifier: a verified same-period, same-definition comparison retaining a material gap would restore the fundamental disagreement.
+Signals: esti-d75e5d0173ba; esti-d11f3446a5ba. Evidence: _wiki/GOOG.md, October 15 entry; _wiki/_data/house.json; _wiki/_data/estimates.json; E, idea_evidence.goog.
+
+4. NVDA — Demand indicators are resilient, but orders are not powered usage.
+Observed broker samples: JPM / Joseph Cardoso, Manmohanpreet Singh and Marc Vitenzon, October 26, report OpenRouter spending growth accelerating to 40% m/m from 28%, while token-volume growth slows to 25% from 71%. Mix and repricing matter. Their non-hyperscaler rental indices show H100/B200 rates rising 6.5%/4.7% m/m, versus A100 falling 3.5%.
+Broker model: MS / Stephen Byrd, Joseph Moore et al., October 26, estimates a 2026–28 power shortfall of 70GW before mitigation and 38GW after mitigation/APAC spillover. The upward revision partly reflects added rack loads and revised load-factor treatment—not solely fresh demand.
+Inference/action: test deployment dates and realized utilization against chip deliveries. OpenRouter is a one-week monthly sample excluding direct-provider traffic; rental indices are not customer-level realized economics. Keep grid power, IT load and utilized power separate.
+Falsifier: sustained newer-GPU rental deterioration and customer deployment deferrals would undermine the resilient-demand interpretation.
+Signal: supp-20261026-nvda. Evidence: E, idea_evidence.nvda; _wiki/_meta/assumptions.md.
+
+5. MU — Contract protection is real; immunity from the cycle is not established.
+Filed evidence: Micron’s October 9 10-K describes enforceable take-or-pay volumes, deposits and letters of credit, but also periodic pricing negotiations, price bands and enforcement risks.
+Management relayed by BofA / Vivek Arya, October 25: approximately 35% of sales are expected under strategic customer agreements, targeting approximately 50% by CY30. Counterview: former Micron CSO Michael Sadler, Barclays / Simon Coles call, October 23, doubts full through-cycle economics will survive renegotiation; he explicitly has not seen the agreements.
+Inference/action: distinguish protected volumes, pricing floors, unsecured exposure and product mix before lifting trough earnings. Neither management optimism nor a former executive’s skepticism proves the outcome.
+Falsifier: material contract reopening, unenforceable floors or delivery deferrals would weaken the downside-protection thesis.
+Signal: supp-20261026-mu. Evidence: E, idea_evidence.mu; MU/MU_10-K_2026-10-09_0000723125-26-000023.html; _equity_calls/Semis/2026-10-23_Barclays_Memory-outlook-strategic-priorities-ex-Micron-CSO-Michael-Sadler-Simon-Coles.md.
+
+MODEL AND NARRATIVE ADJUDICATION
+
+Do not revise models mechanically from these alerts. GOOG needs a revenue-basis bridge; ORCL needs fiscal-year capex/funding scenarios; NVDA needs power-definition normalization; MU needs protected-versus-unprotected earnings sensitivities.
+
+One additional engine error persists: CRWV house FY26 EPS −$3.27 (Capstone, October 14) is less negative than Bloomberg −$3.94 (October 23), not economically “below” consensus. Signal esti-a756bde9736d; evidence _wiki/_data/house.json and _wiki/_data/estimates.json.
+
+Sentiment is bruised, but “capitulation” is unproven. JPM specialist sales / Joshua Meyers, October 25, contrasts investors’ forced-selling complaints with John Schlegel’s observation of only moderate hedge-fund selling on JPM’s book. His STX survey score is +5, the maximum-long category—not washed-out sentiment. This is a broker sample, not market-wide positioning or a proven change from a comparable prior survey. Action: test expectations before buying the earnings dip; reset that concern if a comparable survey shows a genuine positioning unwind. Signal supp-20261026-stx; evidence E, idea_evidence.stx.
+
+CATALYSTS AND PREPARATION
+
+• October 27: STX after-close results, call 5pm ET. Prepare pricing, exabyte-supply and cash-conversion questions; compare with WDC without importing its margins. Signal supp-20261026-stx; E; [Seagate announcement, October 14](https://www.seagate.com/gb/en/stories/articles/seagate-technology-to-report-fiscal-first-quarter-2027-financial-results-on-october-27-2026-pr/).
+• October 28: ORCL financial analyst meeting—use the funding bridge above. Signal cata-9f2e588078f2; R; [Oracle event calendar, checked October 26](https://investor.oracle.com/Financial-Analyst-Meeting-2026/default.aspx). GOOG earnings are also October 28 per JPM / Anmuth’s October 26 preview; complete the revenue-basis check first (GOOG signals above; E).
+• October 29: AMZN results, call 5pm ET—freeze both AWS expectations bars before the print. Signal supp-20261026-amzn; E; [Amazon announcement, October 15](https://press.aboutamazon.com/2026/10/amazon-com-to-webcast-third-quarter-2026-financial-results-conference-call).
+• October 30: MediaTek’s English call is at 15:00 GMT+8, not October 26 as the engine still says. Retain Friday’s program-specific sourcing questions; this is a repeated calendar correction, not a new award. Signal cata-d6253f9923ca; E, calendar_checks; [MediaTek IR, checked October 26](https://www.mediatek.com/investor-relations/ir-events).
+
+WHAT CHANGED VERSUS PRIOR HISTORY
+
+Fresh versus Friday’s published brief: BofA’s October 25 AMZN/MU meetings and preview, JPM’s October 26 demand samples, and MS’s October 26 revised power model sharpen today’s debates. Barclays’ ORCL preview reinforces the funding focus. GOOG’s basis issue is a newly surfaced research-quality problem based on older evidence—not new company news.
+
+Today’s rebuild: 35 active signals, 3 high, 29 focus names and zero belief-change flags; IDs are unchanged versus Sunday’s saved history. Friday’s published morning had 35/4/28; its later saved snapshot had 41/4/31 and six belief flags. Relative to that later snapshot, seven IDs appear and thirteen disappear, largely data-gap ID churn and expired belief flags. Disappearance is not resolution.
+
+Company pages and house models were left unchanged. Evidence: E; _wiki/_data/analyst/history/signals-2026-10-23.json; signals-2026-10-25.json; morning-brief-2026-10-23.json in the same directory.
