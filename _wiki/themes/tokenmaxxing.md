@@ -5,6 +5,27 @@
 _Wiki · generated 2026-06-19 · updated 2026-06-29 (gap-audit additions, tagged "audit add") · cross-company theme · sources: equity calls (`../../equity_calls_transcripts`), briefing roll-ups (`../_briefings/by-ticker`), morning briefings (`E:\briefings\2026`), research library (`E:\research_library`). Company pages: [../00_INDEX.md](../00_INDEX.md) · themes index: [00_THEMES.md](00_THEMES.md)._
 
 
+## 🆕🔴 2026-10-26 (Anthropic S-1, second pass) — **THE FIRST AUDITED COST LEG UNDER THE PRICE-PER-TOKEN DEBATE: ANTHROPIC'S REALIZED PRICE PER TOKEN FELL ~50–65% Y/Y WHILE ITS ALLOCATED SERVING COST PER TOKEN FELL ~90%. SERVING GROSS MARGIN WENT 12% (1H25) → 85% (1H26). THE LAB KEPT THE EFFICIENCY GAIN RATHER THAN PASSING IT THROUGH, AND VOLUME STILL GREW ~31–44x.**
+_Source: Anthropic, PBC, S-1, filed 2026-10-26 (accession 0001628280-26-067168): Note 8 functional costs (F-40), quarterly P&L (p.158), pricing language (pp.194, 196), risk factor (p.61). Realized-price calibration from the Ramp TSM sample ([panel](../_data/ramp-ai-index/panel.json), pulled 2026-10-14). Capstone arithmetic, hostile double-check PARTIAL with fixes folded in: [model and audit](../_meta/research/2026-10-26-anthropic-s1-price-per-token/README.md). Company synthesis on [[ANTHROPIC]]._
+- **HARD (S-1 only, no token count needed):**
+  - Revenue ÷ functional cost of revenue: **0.51x (FY24) → 1.14x (1H25) → 1.65x (FY25) → 6.84x (1H26)**. That is **$0.15 of serving cost per $1 of token revenue in 1H26, against $0.88 a year earlier.**
+  - Revenue per $ of *total* compute: **0.57x (2Q25) → 2.08x (2Q26)**. Total compute was still **55% of 1H26 revenue**, because at most ~27% of compute dollars sit in cost of revenue; the rest is training, research, internal use and free tier.
+- **PARTIAL (Ramp-calibrated, carried as a range because Ramp's two series diverge ~1.5x in 2026):**
+  - **Price:** realized all-token price **$2.41–2.48/Mtok (2Q25) → $0.80–1.19 (2Q26)**.
+  - **Volume:** implied paid tokens **~3.3–4.8 quadrillion/month in 2Q26**.
+  - **Cost:** allocated serving cost **~$2.10–2.15 → $0.14–0.19/Mtok (1H25 → 1H26)**.
+  - **2Q y/y: revenue 14.7x = price 0.33–0.48x × volume ~31–44x.**
+- **What this does to the theme's open questions:**
+  - **(a) "Is the price war margin-destructive?"** Not at Anthropic in 1H26. Cost per token fell faster than price, and management says the Fable 5.1 (−25%) and Opus 5.5 (−40% per task) cuts were made *"while preserving our margins"*.
+  - **(b) "Do price cuts create demand?"** The S-1's own case: after Opus 4.5 launched at a lower price (Nov-25), q/q revenue growth went **48% → 132%**. Capability changed at the same time, so this is not a clean elasticity.
+  - **(c) "Is the falling $/token a list-price war or a mix shift?"** Mostly mix in the Ramp sample. Anthropic's *output* price rose $14.06 → $16.00/M (Jun-25 → Jun-26) as usage moved into Opus, while the blend fell on cache reads and agentic traffic. This is consistent with the 2026-10-14 Ramp block below.
+  - **(d) Where pass-through could still bite.** The S-1 warns agentic offerings are *"structurally more compute-intensive"*. If pricing doesn't follow, *"our compute efficiency could deteriorate as agentic usage grows"*.
+- ⚠️ **Limits:**
+  - **Ramp is ~1% of Anthropic revenue,** API and direct-billed, and probably misses CSP-marketplace (48% of revenue) and committed-price contracts.
+  - **The cost leg is management's allocation** of a single fungible compute pool.
+  - **SemiAnalysis's ~5Q/month June token estimate is the same order of magnitude but not independent.**
+  - **Never chain these per-token figures with list-price ladders or per-task prices on this page.**
+
 ## 🆕 2026-10-25 (/run-inbox — a16z / Aaron Levie) — **BOX'S CEO: AGENT LEVERAGE AT TOP FOUNDERS WENT FROM "10 OR 20 PERCENT" A YEAR AGO TO "THREE TO FIVE TO 10x"; HE WOULD UNDERWRITE "A COUPLE HUNDRED BILLION DOLLARS" OF AI-CODING MARKET CAP OUTSIDE THE INCUMBENTS; AN AGENT AT "$5 OR $10 AN HOUR" vs LEGAL REVIEW AT "$1,000"-"$2,000"**
 _Source: Aaron Levie (Box CEO) on The a16z Show, "The New Startup Playbook \| Box CEO Aaron Levie", 2026-10-25 — podcast, not broker research; Box is not a covered name; a16z interviewers (names UNCONFIRMED) invest in many of the startups discussed; machine transcript without speaker labels ([transcript](../../_podcasts/a16z/2026-10-25%20-%20The%20New%20Startup%20Playbook%20Box%20CEO%20Aaron%20Levie.md))._
 - **Leverage (Levie [00:16:32]–[00:17:16]):** a year ago founders on GitHub Copilot [transcribed "get up co-pilot"] or Cursor reported *"10 or 20 percent productivity gains"*; now it is *"possibly a three to five to 10x form of leverage because of this ability to have background agents"* — but existing codebases and teams are *"not wired up for kicking off lots of background agents"*, a window for startups. ✓ Operator colour for the agentic-coding token driver; no token or $ figures.
@@ -1628,6 +1649,7 @@ _Source: member-company earnings calls; see each company page for quarter-by-qua
 
 ## Changelog
 
+- 2026-10-26 — Anthropic S-1 second pass → 1 dated top block covering the S-1 serving-cost ratio, the Ramp-calibrated price-per-token range (audited PARTIAL) and the price-vs-mix read. Nothing superseded. The 2026-10-14 Ramp block is unchanged, and the new block is consistent with it.
 - 2026-10-25 — verification (transcription QA): removed an incorrect "(the transcript cuts the second figure)" note (the agent figure "$1,000" is complete at [00:23:45]); Amodei relay timestamp [00:27:53] -> [00:27:06] and "undergrad->PhD" -> "undergrad->grad-student ('PhD level')" per the transcript.
 - 2026-10-25 — run-inbox: The a16z Show / Aaron Levie (2026-10-25) → 1 dated top block (leverage 10-20% → 3-10x; "a couple hundred billion" AI-coding market cap ex-incumbents; agent vs labor pricing; Amodei relay second-hand).
 - 2026-10-24 — verification (transcription QA): headline quote "VC BACKED" → "VC BACK[ED]" (transcript says "VC back"); Horowitz scaling timestamp [00:14:05] → [00:14:03]; removed "Mildly DIVERGES from the 'no wall' framing" (no such framing exists on this page or elsewhere in the wiki).
