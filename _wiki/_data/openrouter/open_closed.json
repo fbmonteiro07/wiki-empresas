@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-25T23:21:31",
+ "generated": "2026-10-26T08:05:08",
  "source": "https://openrouter.ai/rankings",
- "chart_file": "_data/openrouter/raw/2026-10-19/model_chart.json",
- "chart_asof": "2026-10-19 10:26 UTC",
+ "chart_file": "_data/openrouter/raw/2026-10-26/model_chart.json",
+ "chart_asof": "2026-10-26 11:04 UTC",
  "method": {
   "totals": "OpenRouter calendar-week chart feed (top-9 models + Others); complete weeks only",
   "split_full": "trailing-7-day rank_week snapshots (every model); Monday snapshot d covers chart week d-7; offset_days flags Tuesday captures",
@@ -10,23 +10,6 @@
   "classification": "open-weight = Hugging Face link on the OpenRouter listing (hugging_face_id / hf_slug); proprietary = listed without one; unattributed = stealth previews (stealth/*, openrouter/*-alpha) and routers; unlisted models fall back to or_build.LAB author capture + gpt-oss/gemma/llama/phi/mistral overrides"
  },
  "weeks": [
-  {
-   "x": "2025-10-20",
-   "total": 4886312194357.0,
-   "top9": {
-    "open": 110948549313.0,
-    "closed": 2820291274519.0,
-    "unattributed": 1955072370525.0,
-    "stealth": 0.0,
-    "others": 1955072370525.0
-   },
-   "share": {
-    "open": 0.02270598866792218,
-    "closed": 0.5771819651179959,
-    "unattributed": 0.4001120462140819
-   },
-   "basis": "top9"
-  },
   {
    "x": "2025-10-27",
    "total": 5511159006188.0,
@@ -983,13 +966,13 @@
   },
   {
    "x": "2026-10-12",
-   "total": 164043982326533.0,
+   "total": 164043985914931.0,
    "top9": {
     "open": 84185170443476.0,
     "closed": 12390544204394.0,
-    "unattributed": 67468267678663.0,
+    "unattributed": 67468271267061.0,
     "stealth": 0.0,
-    "others": 67468267678663.0
+    "others": 67468271267061.0
    },
    "full": {
     "open": 0.7201532978069848,
@@ -1005,33 +988,58 @@
     "unattributed": 2.9276843528869576e-09
    },
    "basis": "full"
+  },
+  {
+   "x": "2026-10-19",
+   "total": 188039304051712.0,
+   "top9": {
+    "open": 99362877155407.0,
+    "closed": 16623224877884.0,
+    "unattributed": 72053202018421.0,
+    "stealth": 0.0,
+    "others": 72053202018421.0
+   },
+   "full": {
+    "open": 0.7260454305175142,
+    "closed": 0.27395456785285305,
+    "unattributed": 1.6296327065522878e-09
+   },
+   "full_tokens": 188039304051712.0,
+   "snapshot": "2026-10-26",
+   "offset_days": 0,
+   "share": {
+    "open": 0.7260454305175142,
+    "closed": 0.27395456785285305,
+    "unattributed": 1.6296327065522878e-09
+   },
+   "basis": "full"
   }
  ],
  "latest_full": {
-  "x": "2026-10-12",
-  "snapshot": "2026-10-19",
+  "x": "2026-10-19",
+  "snapshot": "2026-10-26",
   "offset_days": 0,
-  "total": 164043982326533.0,
-  "open": 0.7201532978069848,
-  "closed": 0.2798466992653309,
-  "unattributed": 2.9276843528869576e-09
+  "total": 188039304051712.0,
+  "open": 0.7260454305175142,
+  "closed": 0.27395456785285305,
+  "unattributed": 1.6296327065522878e-09
  },
  "first_week": {
-  "x": "2025-10-20",
-  "total": 4886312194357.0,
-  "open": 0.02270598866792218,
-  "closed": 0.5771819651179959,
-  "unattributed": 0.4001120462140819,
+  "x": "2025-10-27",
+  "total": 5511159006188.0,
+  "open": 0.04389145995014835,
+  "closed": 0.5822455648438132,
+  "unattributed": 0.3738629752060385,
   "basis": "top9"
  },
  "last_week": {
-  "x": "2026-10-12",
-  "total": 164043982326533.0,
+  "x": "2026-10-19",
+  "total": 188039304051712.0,
   "basis": "full"
  },
  "traffic_multiple": {
-  "vs_week": "2025-10-20",
-  "x": 33.5721451682888
+  "vs_week": "2025-10-27",
+  "x": 34.11973848705491
  },
  "named_model_class": {
   "anthropic/claude-4-sonnet-20250522": "closed",
@@ -1044,12 +1052,12 @@
   "anthropic/claude-opus-5-20260723": "closed",
   "anthropic/claude-opus-5.5-20260921": "closed",
   "arcee-ai/trinity-large-preview:free": "open",
-  "deepseek/deepseek-chat-v3-0324": "open",
   "deepseek/deepseek-v3.2-20251201": "open",
   "deepseek/deepseek-v4-flash-20260423": "open",
   "deepseek/deepseek-v4-flash-20260731": "open",
   "deepseek/deepseek-v4-pro-20260423": "open",
   "deepseek/deepseek-v4.1-flash-20260910": "open",
+  "deepseek/deepseek-v4.1-flash-20261017": "open",
   "google/gemini-2.0-flash-001": "closed",
   "google/gemini-2.5-flash": "closed",
   "google/gemini-2.5-flash-lite": "closed",
@@ -1065,6 +1073,7 @@
   "minimax/minimax-m2:free": "open",
   "minimax/minimax-m3-20260531": "open",
   "minimax/minimax-m3-20260531:free": "open",
+  "minimax/minimax-m3.1-flash-20261019:free": "open",
   "moonshotai/kimi-k2.5-0127": "open",
   "moonshotai/kimi-k2.6-20260420": "open",
   "nvidia/nemotron-3-super-120b-a12b-20230311:free": "open",
@@ -1105,5 +1114,5 @@
   "z-ai/glm-5.3-flash-20260826": "open"
  },
  "n_weeks": 52,
- "n_full_weeks": 14
+ "n_full_weeks": 15
 }
