@@ -8,6 +8,8 @@ Sources reconciled (quantitative only):
 **BBG: LIVE** (`bdp`, pulled 2026-10-26 ~11:30 BRT). ARM 1FY/2FY are March fiscal years; UBS's ARM model is calendar (C2026E), so ARM is compared against the calendarized `estimates.json` row.
 **House:** `house.json` has no AMD/INTC/ARM/MU/SPCX model. AMZN is not in it either, while GOOG/NVDA/AVGO are but the S-1 adds no EPS/revenue datapoint to reconcile against them. The house baseline is therefore n/a this run.
 
+**`[23:00 pass]` (scheduled /run-inbox):** rows tagged `[23:00 pass]` reconcile Wells Fargo · Gawrelski et al. "Meta Platforms, Inc.: Equity Offering Expected to Fill Financing Gap" (2026-10-26); Wells Fargo · Poland/Turrin/Beaulac "Patch Notes … Initial Off-Cycle Checks" (2026-10-25); GS Expert Network webinar with 650 Group's Alan Weckel (2026-10-23); the BofA/Blackstone/Citi/MS + Broadcom $63bn SPV press release and infographic (2026-10-26). **BBG baseline = on-disk `estimates.json` asof 2026-10-26** (same-day wiki-consensus refresh), not a fresh pull. House: `house.json` META (official model); no house model for OKTA/PANW/CRWD/CIEN. The a16z/OpenAI podcast is qualitative (nothing to reconcile); the DAMNANG "AI ads" PDF was a duplicate of the 10-16 post already ingested.
+
 ## DIVERGES (the alpha)
 
 | Ticker / theme | Metric | New datapoint | Baseline (prior wiki · BBG live) | Gap | Note |
@@ -24,6 +26,12 @@ Sources reconciled (quantitative only):
 | ANTHROPIC × NVDA | NVIDIA equity | **None disclosed**: only Amazon, Google, Microsoft are named equity investors (p.74) | BofA **$10bn** NVIDIA investment (08-07) | Not confirmed | The Lambda "10% NVIDIA revenue share" (Patel, 10-25) is also not in the filing. |
 | ANTHROPIC × AMD | AMD supply | **>$20.0bn** expected spend over the term if the CY2027 tranche is fully procured; **no MW**; AMD **up to $5.0bn** equity, conditional | Page: up to **2GW / 2,000MW from 1H27**, "$5B equity", desk math **~$15-20B/yr** | Different basis | The >$20bn is Anthropic spend over the term, not an annual rate or AMD revenue. Calendar 2027, not 1H27. |
 | AMZN / channel | CSP marketplace take-rate test | H1'26 marketplace sales **~$7.8bn** (48% × $16.286bn, derived); channel-partner fees **+$2.7bn y/y** (p.150) | Relay **~16%** FY25 fee rate ($351M, not in the public S-1) | Up to ~35% if all fees went to CSPs | 🔭 **A test, not a take-rate**: "channel partners" is not CSP-only. |
+| `[23:00 pass]` META | FY27 capex | **WFC ~$250bn** (reiterated, Flash 2026-10-26) | BBG CY2027 capex mean **$225.0bn** (hi $288.3bn) · house **$200.0bn** | **+11%** vs BBG · **+25%** vs house | WFC calls it "in line with buyside cons"; it reads the $95bn raise as a possible sign of "higher CapEx for longer". The house sits below the Street. |
+| `[23:00 pass]` META | Funding need vs house FCF | **$95bn equity plan** ($100.3bn incl. overallotment; $35bn underwritten now, $60bn Class C ATM from 1Q27) | House FCF 2026E **−$37.4bn** + 2027E **−$56.4bn** = **−$93.8bn** (`raw_rows`, sign kept) · WFC 10-22 need $60-80bn ($40-50bn equity) · market expected $40-50bn | Raise ≈ the house's cumulative 2026-27 FCF deficit; ~2x the expected size | The house 2028E deficit (−$87.8bn) is not covered; WFC says future offerings remain "still possible". |
+| `[23:00 pass]` META | WFC PT | **OW $995** (was $1,000, 10-05; changed 10-22) | BBG mean PT **$846.35** (n=79, hi $1,050), px $630.56 | **+17.6%** | Near the top of the range. |
+| `[23:00 pass]` PANW | WFC PT | **OW $525** (NC, 2026-10-25) | BBG mean PT **$405.98**; BBG high **$525** | **+29%**; WFC is the Street high | Partner checks: panel net +63% above plan, the series high. |
+| `[23:00 pass]` CRWD | WFC PT | **OW $300** (NC) | BBG mean PT **$252.51** (hi $425), px $261.83 | **+19%** | Guardian 15-20% upsell per two partners. |
+| `[23:00 pass]` CIEN / optical | AI DCI market 2030 | **650 Group: ~$0.5bn (2025) → $37bn (2030), +144% CAGR** (GS Expert Network, 2026-10-23) | JPM: scale-across an incremental **~$10B+ TAM** on ~$10B DCI (2025-12-05/15, CIEN page) · Redburn scale-across base **~$0.5bn** (optical-cpo) | **~3.7x** JPM's incremental TAM; the 2025 base matches Redburn | Different vintages and an expert forecast. Do not chain with Ciena's DCI + scale-across $7bn 2026 base (different scope). |
 
 ## CONFIRMS (no action)
 
@@ -37,8 +45,17 @@ Sources reconciled (quantitative only):
 | NVDA | Nscale | Up to **~$44.6bn** into 2033 | Page $45bn / 6 years; Nscale's own S-1 $44.6bn | ✓ |
 | SPCX | Chip financing | 8-K: binding commitment letter, Apollo-managed lessor, **~$40bn** principal GPU finance lease; close before YE26; schedules 1H27 | Press ~$40bn talks (FT/WSJ/Reuters 10-06/07). BBG PT $247.67, px $147.41 | ✓ Size confirmed. Structure changed (lease vs loans/bonds). Status upgraded (commitment, not closed). No estimate change. |
 | ANTHROPIC | Concentration | Top five ~**25%** of 9M'26 revenue; no customer >10% | Codex review: ~21% (Q3-only, derived) | ✓ Different periods, consistent. |
+| `[23:00 pass]` AVGO / ANTHROPIC | Chip-lease financing size | **$63bn** announced; RVS peak **$43bn**, 72.5% of lease amounts owed, to zero over 5 years | FT 10-05: **$60bn** = ~$42bn senior + ~$18bn junior | ✓ +5% on size; peak RVS ≈ FT senior (+2%). DERIVED second lien ≈ $20bn vs FT ~$18bn. No BBG field. |
+| `[23:00 pass]` META | FY27 OpEx | **WFC $210-215bn** (reiterated) | BBG CY2027 rev − EBIT = $313.0bn − $102.4bn = **$210.6bn** (implied total costs) · house total expenses **$202.5bn** | ✓ at the bottom of WFC's range on the BBG-implied basis, so "above rising Street ests" is not borne out by the mean; +4-6% vs house. |
+| `[23:00 pass]` META | Dilution arithmetic | WFC **5.8%** FD (147.8mm new shares); Class A $22.5bn / 35.0mm = **$643**/share | BBG mktcap $1,611.9bn / px $630.56 = ~2,556mm shares → 147.8 / 2,556 = **5.8%**; WFC px $642.62 | ✓ internally consistent. |
+| `[23:00 pass]` OKTA | WFC PT / FY27 revenue | OW **$230** (NC); FY27E revenue **$3.22B** | BBG mean PT **$214.57** (+7%); BBG 1FY revenue **$3.223B** | ✓ revenue at consensus; PT modestly above. Panel +13% vs +17% prior is the caution. |
+| `[23:00 pass]` PANW / CRWD | WFC FY27 revenue | PANW **$14.16B**; CRWD **$6.00B** (both NC) | BBG 1FY **$14.155B** / **$6.006B** | ✓ at consensus — the checks did not move numbers. |
+| `[23:00 pass]` CIEN / CSCO | Non-AI DCI 2025 | 650 Group **$9bn** (→ $21bn 2030, +19%) | JPM ~$10B existing DCI market | ✓ |
 
 ## Follow-ups
 - **INTC** is the one name where the new note moves away from the Street (PT −17% vs consensus, C2028E EPS −7%). The INTC 3Q print is the 2026-11-03 catalyst on the page.
 - **Pull the S-1 exhibits that matter** (ex-4.3 Amazon NPA, ex-10.11 Broadcom 2026 lease) into a deal-level read if the GW reconciliation is needed. The CSP cloud contracts themselves are not filed.
 - **SPCX:** log the Apollo lease close/pricing under SPCX-NVDA-FIN-20261006 when filed. The Q3 10-Q (acc. 0001628280-26-066880, filed 10-22) is on EDGAR but not archived in `SPCX/`.
+- `[23:00 pass]` **META:** the company's own equity-plan announcement / prospectus supplement is not on disk — pull it (8-K / 424B) to confirm the WFC-relayed terms, the cornerstone allocations and the preferred's conversion terms.
+- `[23:00 pass]` **AVGO:** the press release points to *"additional information … on the Investors section of Broadcom's website"* — the RVS accounting (contingent liability vs guarantee) and the closing date are open.
+- `[23:00 pass]` **P: drop folder:** the three source PDFs this pass used (`9af3483c…`, `ddeed08f…`, GS Expert Network) were COPIED from P: because the originals are locked; when the lock clears the next sweep will re-import them — dedup by md5 against `_done` before ingesting.
