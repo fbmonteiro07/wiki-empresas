@@ -1,5 +1,5 @@
 {
-  "_note": "Hand-edit. Podcast lane config read by E:\\.claude\\scripts\\podcasts_fetch.py. Transcript sources are tried in order: podscripts.co slugs, then YouTube captions (search by title, ANDROID innertube client). 'youtube' is the channel handle used to prefer the official upload. Added 2026-10-20 (Felipe: All-In, SemiAnalysis, BG2, a16z, Invest Like the Best).",
+  "_note": "Hand-edit. Podcast lane config read by E:\\.claude\\scripts\\podcasts_fetch.py. Transcript sources are tried in order: podscripts.co slugs, then YouTube captions (search by title, ANDROID innertube client). 'youtube' is the channel handle used to prefer the official upload. 'youtube_feed': true also discovers episodes from the channel's videos.xml (added 2026-10-28: the anchor.fm RSS for SemiAnalysis/BG2 is CDN-cached up to 7 days and missed SemiAnalysis Ep. 041); 'yt_title_regex' keeps only matching titles, 'yt_min_minutes' (default 20) drops clips/shorts. Added 2026-10-20 (Felipe: All-In, SemiAnalysis, BG2, a16z, Invest Like the Best).",
   "shows": [
     {
       "id": "allin",
@@ -15,6 +15,9 @@
       "rss": "https://anchor.fm/s/10fbee758/podcast/rss",
       "podscripts": [],
       "youtube": "@SemiAnalysis",
+      "youtube_channel_id": "UCf_KhBXw5TIV0A7butjgFhg",
+      "youtube_feed": true,
+      "yt_title_regex": "^Ep\\.\\s*\\d+",
       "hosts": "Jordan Nanos, Doug O'Laughlin (SemiAnalysis)"
     },
     {
@@ -23,6 +26,9 @@
       "rss": "https://anchor.fm/s/f06c2370/podcast/rss",
       "podscripts": [],
       "youtube": "@Bg2Pod",
+      "youtube_channel_id": "UC-yRDvpR99LUc5l7i7jLzew",
+      "youtube_feed": true,
+      "yt_min_minutes": 20,
       "hosts": "Brad Gerstner (Altimeter), Bill Gurley"
     },
     {
