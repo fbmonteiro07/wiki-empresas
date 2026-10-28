@@ -1,0 +1,63 @@
+Morning Analyst Inbox — 2026-10-27
+
+Bottom line: prioritize CLS, META, AVGO, CDNS and ORCL. The actionable distinction is between stronger demand, stronger earnings and actually funded cash generation. Yesterday’s financing uncertainty is becoming more concrete, but announcement is not cash receipt.
+
+Book prioritization remains provisional: the July 1 portfolio file is an eight-position seed with unknown weights. Bloomberg’s on-disk snapshot is now October 26; it is not a fresh October 27 pull.
+
+Evidence key: E = _wiki/_meta/analyst-evidence/2026-10-27-morning-source-checks.json; R = _wiki/_meta/reconciliation-2026-10-26-inbox.md. “supp-” IDs are supplemental research signals, not generated engine alerts. Paths are relative to the repository.
+
+FIVE PRIORITIES
+
+1. CLS — Strong growth, weaker cash conversion: interrogate the gap today.
+Company evidence, October 26: Q3 revenue $5.83bn and adjusted EPS $3.30 beat prior guidance. Initial FY27 outlook is $40bn revenue, $21.50 adjusted EPS and 9% adjusted operating margin. Yet FY26 free-cash-flow guidance falls from $600m to $460m. JPM / Joseph Cardoso et al., October 26, flags the absence of FY27 FCF guidance and working-capital demands. [Celestica results](https://corporate.celestica.com/node/17881)
+Inference/action: use today’s call to bridge inventory, receivables, customer advances and capex into cash. The release describes FY28 customer forecasts, not firm backlog; do not capitalize them as secured revenue.
+Falsifier: growing revenue and EPS without working-capital normalization or adequate funding would undermine the quality-of-growth thesis.
+Signal: supp-20261027-cls. Evidence: E, idea_evidence.cls. No CLS company page exists; FLEX is a peer read-through, not a substitute model.
+
+2. META — The funding plan is real; “$95bn cash raised” is not.
+Company evidence, October 26: Meta launched approximately $35bn of underwritten offerings and plans a $60bn Class C ATM. Crucially, the $22.5bn common-stock component uses forward sales: no initial proceeds to Meta. The ATM is not yet contracted; supplier purchase indications are nonbinding. [Meta offering announcement](https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx)
+Broker interpretation: BofA / Justin Post and Nitin Bansal, October 26, sees the financing size as a warning of higher capex and estimates roughly 6% EPS dilution under its assumed issuance scenario—not a settled company outcome.
+Inference/action: model cash receipts by settlement date separately from dilution, preferred dividends and future capex. Raising equity reduces reliance on debt but does not establish investment returns.
+Falsifier: funded proceeds, disciplined capex and monetization sufficient to stabilize cash generation would weaken the continuing-financing-risk thesis.
+Signal: supp-20261027-meta. Evidence: E, idea_evidence.meta; R; _wiki/themes/ai-compute-deals.md, META-CLASSC-FIN-20261021.
+
+3. AVGO — Financing progress supports execution, but risk remains with the supplier.
+Company/bank evidence, October 26: the $63bn Anthropic financing SPV has committed financing and expected deliveries starting CY27; Broadcom supplies residual-value support equivalent to the first-lien financing. This supports an existing compute agreement, not another $63bn of new demand. Closing and drawdown were not established by the release. [Broadcom announcement](https://investors.broadcom.com/news-releases/news-release-details/bank-america-blackstone-citi-and-morgan-stanley-announce)
+Broker estimate: UBS / Timothy Arcuri et al., October 26, puts aggregate exposure across vehicles at approximately $70–75bn. That is not immediate cash outflow, a company-confirmed aggregate liability, or an amount to add to the financing headline.
+Inference/action: reconcile each vehicle’s support, amortization, collateral recovery and possible cash-call timing before lifting confidence in backlog conversion.
+Falsifier: delayed financing/deliveries or impaired collateral values requiring substantial support payments would defeat the straightforward de-risking thesis.
+Signal: supp-20261027-avgo. Evidence: E, idea_evidence.avgo; _wiki/themes/ai-compute-deals.md, ANTH-AVGO-CHIP-FIN-20261005.
+
+4. CDNS — Evidence against AI displacement; not yet proof of a new growth acceleration.
+Company evidence, October 26: recurring revenue grew 18% y/y; backlog reached $8.2bn; FY26 non-GAAP EPS guidance rose to $8.40 at midpoint. JPM / Harlan Sur et al., October 27 email, raises PT $405→$420 and models CY27 EPS $9.85. [Cadence results](https://investor.cadence.com/news/news-details/2026/Cadence-Reports-Third-Quarter-2026-Financial-Results/default.aspx)
+Counterpoint: on July 27, CFO John Wall described Q2 recurring growth around 24%, including roughly four points from Hexagon, with normalized growth high-teens to 20%. Do not compare reported and acquisition-adjusted rates indiscriminately.
+Inference/action: test paid agent adoption and underlying EDA consumption on an acquisition-normalized basis. Strong total revenue and customer engagements do not by themselves establish incremental recurring monetization.
+Falsifier: agent adoption rises while normalized recurring growth and paid engine consumption stagnate.
+Signal: supp-20261027-cdns. Evidence: E, idea_evidence.cdns; _wiki/CDNS.md; CDNS/transcripts/CDNS_Q2-2026-earnings_2026-07-27.md.
+
+5. ORCL — Tomorrow’s financing answer must also address contract mismatch.
+Broker evidence: MS credit / Lindsay Tyler and Benjamin Guerrero, October 26, expects investment-grade commitment and approximately $40bn FY27 funding reiterations, while remaining cautious on leverage, contract mismatch, execution and counterparties. These are expectations, not a financing announcement.
+Standing model fork: JPM / Samik Chatterjee, October 20, has approximately $133bn May-FY29 capex (chart read), versus GS / Gabriela Borges, October 22, at $95.4bn.
+Inference/action: freeze a scorecard covering committed versus available funding, customer payments versus supplier obligations, lease-adjusted leverage and consolidated FCF timing. A menu of options is not a completed funding bridge.
+Falsifier: binding funding plus matched contractual cash flows and credible delivery milestones would weaken the cautious credit case.
+Signals: cata-9f2e588078f2; supp-20261027-orcl. Evidence: E, idea_evidence.orcl; _wiki/_meta/reconciliation-2026-10-23-inbox.md.
+
+MODEL AND NARRATIVE CHECKS
+
+• META FY27 capex remains disputed: house $200bn (October 12), Bloomberg $225bn (October 26), BofA / Post $210bn and Wells Fargo / Gawrelski approximately $250bn (both October 26). None is numerical company FY27 guidance. Reconcile financing and spending together. Signal supp-20261027-meta; R and E.
+• GOOG’s gross/ex-TAC issue remains unresolved despite the newer snapshot; the engine’s apparent house revenue edge is still quarantined. Signals esti-dd4426e16a80 / esti-15ef070a2d09; _wiki/GOOG.md, October 15 JPM entry; _wiki/_data/house.json and estimates.json.
+• The narrative is shifting from “can financing be arranged?” toward “when does cash arrive, who bears downside, and what earns a return?” META and AVGO offer tangible progress without resolving those questions. CLS demonstrates why earnings upgrades alone do not settle cash quality; CDNS offers resilience rather than proven acceleration.
+
+IMMINENT PREPARATION
+
+Today: CLS earnings call at 8am ET (JPM / Cardoso, October 26)—prioritize the cash bridge; the analyst day is also today. STX reports after close, call 5pm ET: test pricing, supply discipline and cash conversion against WDC’s recent read-through, without assuming identical margins. Signals supp-20261027-cls / supp-20261027-stx; E, calendar_checks; [Seagate announcement, October 14](https://www.seagate.com/gb/en/stories/articles/seagate-technology-to-report-fiscal-first-quarter-2027-financial-results-on-october-27-2026-pr/).
+
+Tomorrow: ORCL investor day, confirmed by [Oracle’s calendar](https://investor.oracle.com/Financial-Analyst-Meeting-2026/default.aspx); use the funding scorecard above. GOOG’s October 28 results still require the revenue-basis check first (JPM / Anmuth, October 26; yesterday’s source archive). Retain AMZN’s October 29 preparation from BofA / Justin Post’s October 25 preview (signal supp-20261026-amzn; _wiki/_meta/analyst-evidence/2026-10-26-morning-source-checks.json).
+
+WHAT MATERIALLY CHANGED
+
+Since yesterday’s published morning: CLS and CDNS reported; Meta moved from an expected raise to a company-announced financing plan; Broadcom’s new SPV financing was announced. Today’s primary-source check adds Meta’s cash-timing distinction. ORCL remains pre-event, not resolved.
+
+Today’s engine has 34 active signals, 3 high and 28 focus names, versus yesterday morning’s 35/3/29. Against yesterday’s later saved 41/5/32 snapshot, there are no new IDs and seven removals: four belief flags and three source-date/calendar entries. Zero current belief-change flags does not mean zero new information. MediaTek’s removed October 26 entry does not mean its October 30 call has happened.
+
+I preserved prior deal terms, added Meta’s clarification under its existing ID and recorded narrow CLS/CDNS outcomes. Company pages and house models were not edited. Evidence: E; _wiki/_meta/outcomes.md; _wiki/_data/analyst/history/signals-2026-10-26.json; morning-brief-2026-10-26.json.

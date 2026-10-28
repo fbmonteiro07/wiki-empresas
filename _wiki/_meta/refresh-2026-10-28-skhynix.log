@@ -1,0 +1,270 @@
+=== refresh_features 2026-10-27 ===
+
+--- build_index.py  ---
+[WARN] 1 page(s) not in index_meta.json â€” emitted under 'Unclassified': SMTC
+00_INDEX.md -> 111 pages Â· 16 sections Â· 2 labs
+
+--- extract_house.py  ---
+house.json written: 11 pages with a house table (11 with parsed metrics) -> E:\Wiki Felipe empresas\_wiki\_data\house.json
+  AAPL   2024:eps=6.82,rev=391.0 Â· 2025:eps=8.35,rev=416.0 Â· 2026:eps=10.12,rev=480.0 Â· 2027:eps=11.11,rev=539.0 Â· 2028:eps=12.55,rev=585.0
+  ADVANTEST 2026:eps=884.0,fcf=528.2,gm=68.0,opm=49.3,rev=1629.0 Â· 2027:eps=917.7,fcf=584.1,gm=66.5,opm=48.1,rev=1873.5 Â· 2028:eps=1107.8,fcf=674.8,gm=65.5,opm=47.6,rev=2268.0
+  AVGO   2024:eps=5.36 Â· 2025:eps=7.18 Â· 2026:eps=12.89 Â· 2027:eps=21.07 Â· 2028:eps=35.96
+  COHR   2026:eps=7.3,gm=40.0,rev=8.7 Â· 2027:eps=11.3,gm=41.0,rev=12.6 Â· 2028:eps=14.34,gm=42.0,rev=15.7
+  CRWV   2026:eps=-3.27,fcf=-26.4,rev=12.8 Â· 2027:eps=-1.83,fcf=-29.6,rev=26.7 Â· 2028:eps=0.54,fcf=-28.3,rev=44.69 Â· 2029:eps=4.1,fcf=-21.9,rev=65.28 Â· 2030:eps=6.89,fcf=-19.7,rev=87.42
+  GOOG   2025:eps=8.41,fcf=33.0,opm=32.0,rev=403.0 Â· 2026:eps=11.8,fcf=-3.0,opm=36.0,rev=505.0 Â· 2027:eps=16.2,fcf=-55.0,opm=37.0,rev=641.0
+  LITE   2024:eps=0.94,opm=4.0,rev=1.4 Â· 2025:eps=4.13,opm=18.0,rev=2.1 Â· 2026:eps=12.81,opm=32.0,rev=4.2 Â· 2027:eps=30.02,opm=43.0,rev=8.1
+  META   2025:eps=28.4,fcf=20.5,rev=200.6 Â· 2026:eps=31.96,fcf=-37.4,rev=256.8 Â· 2027:eps=35.63,fcf=-56.4,rev=308.1 Â· 2028:eps=39.34,fcf=-87.8,rev=369.7
+  NVDA   2025:eps=4.9,gm=71.0,opm=89.0,rev=216.0 Â· 2026:eps=9.26,gm=75.0,opm=92.0,rev=407.0 Â· 2027:eps=15.44,gm=74.0,opm=94.0,rev=661.0
+  TER    2026:eps=9.13,fcf=0.9,gm=59.5,opm=32.2,rev=5.12 Â· 2027:eps=11.93,fcf=1.46,gm=59.5,opm=34.8,rev=6.22 Â· 2028:eps=15.98,fcf=2.0,gm=60.2,opm=38.0,rev=7.69
+  TSM    2024:eps=45.3,gm=56.0,rev=90.0 Â· 2025:eps=66.3,gm=60.0,rev=122.0 Â· 2026:eps=102.5,gm=66.0,rev=165.0 Â· 2027:eps=143.5
+
+--- remediate.py  ---
+worklist: 2 BBG-missing, 4 no-transcript, 15 private -> E:\Wiki Felipe empresas\_wiki\_meta\worklist.md
+
+--- build_readthrough.py  ---
+read-through: 88 nodes, 196 supply + 39 compete edges
+  -> E:\Wiki Felipe empresas\_wiki\_meta\readthrough.md
+  -> E:\Wiki Felipe empresas\_wiki\_dashboards\readthrough.html
+
+--- build_diff.py  ---
+diff (7d): 275 page changes (104 rating/PT), 0 ingest runs
+  -> E:\Wiki Felipe empresas\_wiki\_meta\diff-latest.md
+  -> E:\Wiki Felipe empresas\_wiki\_dashboards\diff.html
+
+--- build_catalysts.py  ---
+catalysts: 38 upcoming, 0 need post-mortem, 307 resolved
+  -> E:\Wiki Felipe empresas\_wiki\_meta\catalysts.md
+  -> E:\Wiki Felipe empresas\_wiki\_dashboards\catalysts.html
+  -> E:\Wiki Felipe empresas\_wiki\_meta\outcomes.md (ledger)
+
+--- build_coverage.py  ---
+coverage: 17/96 pages flagged
+  -> E:\Wiki Felipe empresas\_wiki\_meta\coverage.md
+  -> E:\Wiki Felipe empresas\_wiki\_dashboards\coverage.html
+
+Top 12 under-read:
+   5.0  TEL        dens=227.1  tx=5(latest 2026-07-22 UNREAD)  calls=0/0 decks=0/0  | latest transcript 2026-07-22 unread; latest 10-Q 2026-07-24 unread (no same-qtr transcript either)
+   5.0  VECO       dens=262.2  tx=5(latest 2026-08-05 UNREAD)  calls=0/0 decks=0/0  | latest transcript 2026-08-05 unread; latest 10-Q 2026-08-05 unread (no same-qtr transcript either)
+   5.0  CEG        dens=298.9  tx=10(latest 2026-08-06 UNREAD)  calls=0/0 decks=0/2  | latest transcript 2026-08-06 unread; latest 10-Q 2026-08-06 unread (no same-qtr transcript either)
+   5.0  NVT        dens=370.9  tx=5(latest 2026-07-31 UNREAD)  calls=0/0 decks=0/0  | latest transcript 2026-07-31 unread; latest 10-Q 2026-07-31 unread (no same-qtr transcript either)
+   5.0  WMB        dens=398.5  tx=8(latest 2026-08-04 UNREAD)  calls=1/1 decks=1/3  | latest transcript 2026-08-04 unread; latest 10-Q 2026-08-03 unread (no same-qtr transcript either)
+   5.0  APH        dens=509.0  tx=5(latest 2026-07-29 UNREAD)  calls=4/0 decks=0/0  | latest transcript 2026-07-29 unread; latest 10-Q 2026-07-31 unread (no same-qtr transcript either)
+   5.0  TLN        dens=590.2  tx=4(latest 2026-08-05 UNREAD)  calls=0/0 decks=1/3  | latest transcript 2026-08-05 unread; latest 10-Q 2026-08-05 unread (no same-qtr transcript either)
+   5.0  AOSL       dens=None  tx=1(latest 2026-08-12 UNREAD)  calls=0/0 decks=0/0  | latest transcript 2026-08-12 unread; latest 10-Q 2026-05-06 unread (no same-qtr transcript either)
+   5.0  ETN        dens=None  tx=1(latest 2026-07-31 UNREAD)  calls=0/0 decks=0/0  | latest transcript 2026-07-31 unread; latest 10-Q 2026-07-31 unread (no same-qtr transcript either)
+   5.0  FSLY       dens=None  tx=1(latest 2026-08-05 UNREAD)  calls=0/0 decks=0/0  | latest transcript 2026-08-05 unread; latest 10-Q 2026-08-05 unread (no same-qtr transcript either)
+   5.0  MP         dens=None  tx=1(latest 2026-08-06 UNREAD)  calls=1/0 decks=0/0  | latest transcript 2026-08-06 unread; latest 10-Q 2026-08-07 unread (no same-qtr transcript either)
+   5.0  POWI       dens=None  tx=1(latest 2026-08-05 UNREAD)  calls=0/0 decks=0/0  | latest transcript 2026-08-05 unread; latest 10-Q 2026-08-06 unread (no same-qtr transcript either)
+
+--- build_assumptions.py  ---
+assumptions: 23 metrics, 137 variants, 451 unreconciled sightings
+  -> E:\Wiki Felipe empresas\_wiki\_meta\assumptions.md
+  -> E:\Wiki Felipe empresas\_wiki\_dashboards\assumptions.html
+
+--- build_mgmt_comms.py  ---
+mgmt-communication: 8 names, 66 theme rows
+  -> \\CAPSRV01\Users$\felipe.monteiro\Wiki Felipe empresas\_wiki\_dashboards\mgmt-communication.html
+
+--- gpu_pricing.py  ---
+SDH100RT 779 observations; latest ['2026-10-27', 2.89]
+SDA100RT 780 observations; latest ['2026-10-27', 1.56]
+SDB200RT 448 observations; latest ['2026-10-27', 6.47]
+SAH100SC 1104 observations; latest ['2026-10-27', 3.35]
+sa-public-h100 1113 observations; latest ['2026-10-28', 3.34]
+sa-public-a100 1234 observations; latest ['2026-10-28', 1.74]
+sa-public-b200 506 observations; latest ['2026-10-28', 6.71]
+RETAINED LAST GOOD DATA: Bloomberg: timed out
+[WARN] gpu_pricing.py exited 1
+
+--- build_gpu_pricing.py  ---
+Wrote \\CAPSRV01\Users$\felipe.monteiro\Wiki Felipe empresas\_wiki\_dashboards\gpu-pricing.html
+
+--- build_openrouter_dash.py  ---
+wrote \\CAPSRV01\Users$\felipe.monteiro\Wiki Felipe empresas\_wiki\_dashboards\openrouter.html (full 797 KB) + artifact fragment (797 KB)
+
+--- build_search_index.py  ---
+search index: 2627 docs (6 added/updated, 2621 unchanged, 0 removed) Â· 155 MB -> E:\Wiki Felipe empresas\_wiki\_data\search.db
+
+--- build_graph.py --no-html ---
+  -> E:\Wiki Felipe empresas\_wiki\_data\graph_full.json (graph.html skipped: --no-html; the page was retired 2026-10-12)
+
+--- build_analyst.py  ---
+analyst: 36 active signals (3 high) Â· 28 focus names Â· 1 belief changes
+  -> E:\Wiki Felipe empresas\_wiki\_data\analyst\beliefs.json
+  -> E:\Wiki Felipe empresas\_wiki\_data\analyst\signals.json
+  -> E:\Wiki Felipe empresas\_wiki\_meta\analyst-brief-latest.md
+  -> E:\Wiki Felipe empresas\_wiki\_dashboards\analyst-inbox.html
+
+--- build_sentiment.py --no-bbg ---
+tweets: scanned 158,077 Â· matched 20,861 Â· tickers with mentions 105
+bbg: skipped (--no-bbg), using cache
+bbglong: skipped (--no-bbg), using cache
+etf: skipped (--no-bbg), using cache
+mail_merge: 2,364 in delta, 0 new (raw stays at 63,818)
+  bodies: 5 e-mails to (re)parse, 5 bodies on disk for them
+sellside(body): 63,818 e-mails Â· 12,049 matched with body Â· noise dropped 11,749 Â· 12,050 mapped to 103 tickers (4,969 via body only) Â· parsed 4 new Â· top firms [('JPMorgan', 2038), ('Morgan Stanley', 1834), ('BofA', 1476), ('Jefferies', 1464), ('UBS', 1261)]
+panel: 26 weeks Ã— 106 tickers
+  att       1w   IC +0.006 t 0.25 hit 57% q5-q1 +0.20% (23w)  2026:+0.006
+  att       15d  IC +0.008 t 0.38 hit 55% q5-q1 +0.51% (22w)  2026:+0.008
+  att       4w   IC +0.018 t 0.8 hit 55% q5-q1 +1.29% (20w)  2026:+0.018
+  news      1w   IC -0.043 t -2.18 hit 26% q5-q1 -1.11% (23w)  2026:-0.043
+  news      15d  IC -0.041 t -1.6 hit 36% q5-q1 -1.28% (22w)  2026:-0.041
+  news      4w   IC -0.031 t -1.37 hit 40% q5-q1 -0.76% (20w)  2026:-0.031
+  tone      1w   IC -0.004 t -0.18 hit 43% q5-q1 +0.27% (23w)  2026:-0.004
+  tone      15d  IC -0.016 t -0.61 hit 36% q5-q1 -0.52% (22w)  2026:-0.016
+  tone      4w   IC -0.008 t -0.28 hit 48% q5-q1 -0.25% (21w)  2026:-0.008
+  tone_chg  1w   IC +0.008 t 0.39 hit 61% q5-q1 -0.26% (23w)  2026:+0.008
+  tone_chg  15d  IC -0.002 t -0.1 hit 50% q5-q1 -0.29% (22w)  2026:-0.002
+  tone_chg  4w   IC -0.017 t -0.76 hit 40% q5-q1 -1.92% (20w)  2026:-0.017
+  eps_rev   1w   IC -0.045 t -1.0 hit 36% q5-q1 -0.84% (25w)  2026:-0.045
+  eps_rev   15d  IC -0.077 t -1.66 hit 29% q5-q1 -1.56% (24w)  2026:-0.077
+  eps_rev   4w   IC -0.078 t -1.69 hit 36% q5-q1 -1.44% (22w)  2026:-0.078
+  rating    1w   IC -0.023 t -0.94 hit 40% q5-q1 -0.42% (25w)  2026:-0.023
+  rating    15d  IC -0.014 t -0.54 hit 50% q5-q1 -0.68% (24w)  2026:-0.014
+  rating    4w   IC -0.017 t -0.74 hit 41% q5-q1 -0.93% (22w)  2026:-0.017
+  si        1w   IC -0.056 t -1.31 hit 44% q5-q1 -0.75% (25w)  2026:-0.056
+  si        15d  IC -0.067 t -1.44 hit 42% q5-q1 -1.58% (24w)  2026:-0.067
+  si        4w   IC -0.073 t -1.54 hit 45% q5-q1 -3.34% (22w)  2026:-0.073
+  ss_att    1w   IC -0.029 t -1.41 hit 36% q5-q1 -0.39% (25w)  2026:-0.029
+  ss_att    15d  IC -0.048 t -2.29 hit 33% q5-q1 -0.78% (24w)  2026:-0.048
+  ss_att    4w   IC -0.013 t -0.65 hit 45% q5-q1 -0.40% (22w)  2026:-0.013
+  ss_tone   1w   IC -0.004 t -0.18 hit 54% q5-q1 -0.08% (24w)  2026:-0.004
+  ss_tone   15d  IC -0.015 t -0.65 hit 48% q5-q1 -0.53% (23w)  2026:-0.015
+  ss_tone   4w   IC +0.014 t 0.71 hit 55% q5-q1 +0.90% (22w)  2026:+0.014
+  ss_act    1w   IC +0.016 t 0.94 hit 58% q5-q1 +1.56% (24w)  2026:+0.016
+  ss_act    15d  IC -0.004 t -0.22 hit 52% q5-q1 +1.90% (23w)  2026:-0.004
+  ss_act    4w   IC +0.030 t 1.41 hit 59% q5-q1 +4.97% (22w)  2026:+0.030
+  ss_pt     1w   IC +0.003 t 0.17 hit 46% q5-q1 +1.35% (24w)  2026:+0.003
+  ss_pt     15d  IC -0.013 t -0.66 hit 43% q5-q1 +1.96% (23w)  2026:-0.013
+  ss_pt     4w   IC +0.011 t 0.51 hit 59% q5-q1 +4.39% (22w)  2026:+0.011
+  ss_est    1w   IC -0.018 t -0.99 hit 42% q5-q1 +0.88% (24w)  2026:-0.018
+  ss_est    15d  IC -0.012 t -0.76 hit 43% q5-q1 +1.73% (23w)  2026:-0.012
+  ss_est    4w   IC -0.006 t -0.34 hit 45% q5-q1 +3.86% (22w)  2026:-0.006
+  HOT       1w   IC -0.017 t -0.75 hit 43% q5-q1 -0.34% (23w)  2026:-0.017
+  HOT       15d  IC -0.011 t -0.55 hit 50% q5-q1 -0.05% (22w)  2026:-0.011
+  HOT       4w   IC -0.006 t -0.29 hit 50% q5-q1 +0.31% (20w)  2026:-0.006
+  BULL      1w   IC -0.016 t -0.64 hit 52% q5-q1 -0.36% (25w)  2026:-0.016
+  BULL      15d  IC -0.043 t -1.56 hit 46% q5-q1 -1.13% (24w)  2026:-0.043
+  BULL      4w   IC -0.038 t -1.51 hit 41% q5-q1 -1.32% (22w)  2026:-0.038
+long: 147 weeks Ã— 106 tickers (2024-01-05 â†’ 2026-10-23)
+  att       1w   IC -0.003 t -0.36 hit 47% q5-q1 +0.18% (144w)  2024:-0.026  2025:+0.010  2026:+0.008
+  att       15d  IC -0.006 t -0.59 hit 48% q5-q1 +0.15% (143w)  2024:-0.020  2025:-0.001  2026:+0.006
+  att       4w   IC -0.010 t -1.02 hit 40% q5-q1 +0.07% (141w)  2024:-0.007  2025:-0.020  2026:-0.001
+  news      1w   IC -0.010 t -1.11 hit 47% q5-q1 -0.04% (144w)  2024:-0.037  2025:+0.013  2026:-0.007
+  news      15d  IC -0.004 t -0.4 hit 48% q5-q1 +0.19% (143w)  2024:-0.027  2025:+0.012  2026:+0.004
+  news      4w   IC +0.006 t 0.61 hit 52% q5-q1 +0.44% (141w)  2024:-0.000  2025:+0.005  2026:+0.016
+  tone      1w   IC +0.009 t 0.81 hit 53% q5-q1 +0.34% (146w)  2024:+0.003  2025:+0.023  2026:-0.002
+  tone      15d  IC +0.012 t 1.16 hit 56% q5-q1 +0.44% (145w)  2024:+0.019  2025:+0.016  2026:-0.004
+  tone      4w   IC +0.017 t 1.73 hit 55% q5-q1 +1.23% (143w)  2024:+0.020  2025:+0.022  2026:+0.007
+  tone_chg  1w   IC -0.005 t -0.59 hit 44% q5-q1 +0.26% (144w)  2024:-0.010  2025:+0.005  2026:-0.012
+  tone_chg  15d  IC -0.005 t -0.59 hit 51% q5-q1 +0.33% (143w)  2024:-0.004  2025:-0.001  2026:-0.011
+  tone_chg  4w   IC -0.012 t -1.52 hit 44% q5-q1 +0.33% (141w)  2024:-0.029  2025:-0.002  2026:-0.006
+  news_tone 1w   IC +0.011 t 0.96 hit 58% q5-q1 +0.31% (146w)  2024:+0.007  2025:+0.024  2026:-0.002
+  news_tone 15d  IC +0.009 t 0.86 hit 58% q5-q1 +0.57% (145w)  2024:+0.006  2025:+0.023  2026:-0.004
+  news_tone 4w   IC +0.028 t 2.76 hit 57% q5-q1 +1.57% (143w)  2024:+0.034  2025:+0.026  2026:+0.022
+  eps_rev   1w   IC +0.032 t 2.18 hit 58% q5-q1 +0.65% (146w)  2024:+0.037  2025:+0.039  2026:+0.017
+  eps_rev   15d  IC +0.036 t 2.41 hit 61% q5-q1 +1.26% (145w)  2024:+0.052  2025:+0.042  2026:+0.008
+  eps_rev   4w   IC +0.038 t 2.63 hit 64% q5-q1 +3.08% (143w)  2024:+0.064  2025:+0.042  2026:-0.003
+  rating    1w   IC +0.009 t 1.01 hit 52% q5-q1 +0.17% (146w)  2024:+0.028  2025:-0.000  2026:-0.002
+  rating    15d  IC +0.009 t 1.01 hit 54% q5-q1 +0.22% (145w)  2024:+0.031  2025:-0.006  2026:+0.002
+  rating    4w   IC +0.018 t 2.05 hit 56% q5-q1 +0.91% (143w)  2024:+0.041  2025:+0.011  2026:-0.003
+  si        1w   IC +0.004 t 0.23 hit 52% q5-q1 +0.70% (146w)  2024:-0.025  2025:+0.028  2026:+0.009
+  si        15d  IC +0.013 t 0.77 hit 61% q5-q1 +1.51% (145w)  2024:-0.023  2025:+0.048  2026:+0.015
+  si        4w   IC +0.018 t 1.05 hit 55% q5-q1 +3.65% (143w)  2024:-0.042  2025:+0.066  2026:+0.035
+  HOT       1w   IC -0.006 t -0.69 hit 51% q5-q1 +0.06% (144w)  2024:-0.033  2025:+0.014  2026:-0.000
+  HOT       15d  IC -0.005 t -0.5 hit 50% q5-q1 +0.02% (143w)  2024:-0.026  2025:+0.008  2026:+0.004
+  HOT       4w   IC -0.003 t -0.25 hit 48% q5-q1 +0.24% (141w)  2024:-0.005  2025:-0.006  2026:+0.004
+  BULL      1w   IC +0.011 t 1.0 hit 54% q5-q1 +0.26% (146w)  2024:+0.019  2025:+0.015  2026:-0.003
+  BULL      15d  IC +0.019 t 1.68 hit 56% q5-q1 +0.62% (145w)  2024:+0.035  2025:+0.019  2026:-0.001
+  BULL      4w   IC +0.031 t 2.83 hit 65% q5-q1 +1.88% (143w)  2024:+0.052  2025:+0.030  2026:+0.005
+leadlag: 147 weeks Ã— 106 tickers (2024-01-05 â†’ 2026-10-23)
+  signal           k-4     k-3     k-2     k-1     k+0     k+1     k+2     k+3     k+4   partial+1  verdict
+  att           -0.030  -0.010  +0.015  +0.076  +0.106  -0.003  -0.006  -0.014  -0.011   -0.006 (t -0.7)  coincident
+  news          -0.021  +0.004  +0.031  +0.061  +0.064  -0.010  +0.002  +0.000  +0.007   -0.012 (t -1.3)  lagging (follows price)
+  tone          +0.066  +0.056  +0.085  +0.126  +0.260  +0.009  +0.012  +0.015  +0.023   +0.002 (t +0.2)  coincident
+  tone_chg      -0.092  -0.093  -0.061  -0.019  +0.181  -0.005  -0.007  -0.016  -0.010   -0.003 (t -0.4)  coincident
+  news_tone     +0.048  +0.039  +0.054  +0.085  +0.350  +0.011  +0.010  +0.027  +0.025   +0.005 (t +0.5)  coincident
+  eps_rev       +0.094  +0.106  +0.093  +0.079  +0.062  +0.032  +0.025  +0.023  +0.025   +0.028 (t +2.0)  lagging (follows price) + leading residual ex-momentum
+  rating        -0.013  +0.044  +0.063  +0.061  +0.065  +0.009  +0.000  +0.005  +0.006   +0.008 (t +0.8)  lagging (follows price)
+  si            +0.007  +0.013  +0.014  +0.009  +0.006  +0.004  +0.006  +0.006  +0.009   +0.000 (t +0.0)  weak / no structure
+  HOT           -0.028  -0.001  +0.028  +0.076  +0.094  -0.006  -0.004  -0.008  -0.002   -0.008 (t -0.9)  lagging (follows price)
+  BULL          +0.021  +0.049  +0.069  +0.100  +0.282  +0.011  +0.021  +0.024  +0.025   +0.006 (t +0.6)  coincident
+  reverse (this week's return â†’ next week's signal): {'tone': 0.126, 'att': 0.076, 'news': 0.061, 'eps_rev': 0.079, 'rating': 0.061}
+picks: long track 10 signals Ã— 147 weeks; own 13 signals Ã— 26 weeks
+ Bloomberg track:
+  att       weeks 144 Â· top5 next-wk -0.24% Â· bottom5 -0.29% Â· spread +0.04% Â· spread>0 in 52% of weeks
+  news      weeks 144 Â· top5 next-wk -0.14% Â· bottom5 +0.58% Â· spread -0.71% Â· spread>0 in 42% of weeks
+  tone      weeks 146 Â· top5 next-wk +0.01% Â· bottom5 -0.66% Â· spread +0.67% Â· spread>0 in 54% of weeks
+  tone_chg  weeks 144 Â· top5 next-wk -0.35% Â· bottom5 -0.03% Â· spread -0.31% Â· spread>0 in 49% of weeks
+  news_tone weeks 146 Â· top5 next-wk -0.39% Â· bottom5 -0.15% Â· spread -0.24% Â· spread>0 in 49% of weeks
+  eps_rev   weeks 146 Â· top5 next-wk +0.89% Â· bottom5 +0.11% Â· spread +0.78% Â· spread>0 in 54% of weeks
+  rating    weeks 146 Â· top5 next-wk +0.09% Â· bottom5 +0.24% Â· spread -0.15% Â· spread>0 in 48% of weeks
+  si        weeks 146 Â· top5 next-wk +0.64% Â· bottom5 -0.08% Â· spread +0.72% Â· spread>0 in 54% of weeks
+  HOT       weeks 144 Â· top5 next-wk -0.40% Â· bottom5 +0.07% Â· spread -0.47% Â· spread>0 in 44% of weeks
+  BULL      weeks 146 Â· top5 next-wk +0.17% Â· bottom5 -0.02% Â· spread +0.19% Â· spread>0 in 55% of weeks
+ Own corpus:
+  att       weeks  23 Â· top5 next-wk -0.25% Â· bottom5 +1.28% Â· spread -1.53% Â· spread>0 in 30% of weeks
+  news      weeks  23 Â· top5 next-wk -0.78% Â· bottom5 +0.68% Â· spread -1.45% Â· spread>0 in 39% of weeks
+  tone      weeks  24 Â· top5 next-wk -0.07% Â· bottom5 +1.65% Â· spread -1.72% Â· spread>0 in 29% of weeks
+  tone_chg  weeks  23 Â· top5 next-wk +0.08% Â· bottom5 +0.09% Â· spread -0.01% Â· spread>0 in 35% of weeks
+  eps_rev   weeks  25 Â· top5 next-wk +0.10% Â· bottom5 +0.26% Â· spread -0.16% Â· spread>0 in 40% of weeks
+  rating    weeks  25 Â· top5 next-wk +0.25% Â· bottom5 -0.28% Â· spread +0.54% Â· spread>0 in 56% of weeks
+  si        weeks  25 Â· top5 next-wk -1.58% Â· bottom5 +0.33% Â· spread -1.91% Â· spread>0 in 44% of weeks
+  ss_att    weeks  25 Â· top5 next-wk +0.71% Â· bottom5 +0.01% Â· spread +0.71% Â· spread>0 in 64% of weeks
+  ss_tone   weeks  25 Â· top5 next-wk +0.03% Â· bottom5 +2.11% Â· spread -2.08% Â· spread>0 in 32% of weeks
+  ss_act    weeks  25 Â· top5 next-wk +0.35% Â· bottom5 +1.30% Â· spread -0.95% Â· spread>0 in 48% of weeks
+  ss_pt     weeks  25 Â· top5 next-wk +0.57% Â· bottom5 +1.98% Â· spread -1.41% Â· spread>0 in 36% of weeks
+  HOT       weeks  23 Â· top5 next-wk +0.48% Â· bottom5 +1.12% Â· spread -0.63% Â· spread>0 in 43% of weeks
+  BULL      weeks  25 Â· top5 next-wk +0.70% Â· bottom5 +0.98% Â· spread -0.28% Â· spread>0 in 52% of weeks
+events_pull: skipped (--no-bbg), using cache
+events: 1129 earnings events with 15d outcomes (2024-01-18 â†’ 2026-09-30)
+  bbg_att          | react IC +0.013 n=1125 q5-q1 -0.06% | tot15 IC +0.022 n=1126 q5-q1 +2.06% | drift IC +0.026 n=1124 q5-q1 +2.04%
+  bbg_tone         | react IC +0.059 n=1068 q5-q1 +3.16% | tot15 IC +0.062 n=1068 q5-q1 +3.84% | drift IC +0.025 n=1067 q5-q1 +0.24%
+  bbg_pos_neg      | react IC +0.055 n=1127 q5-q1 +2.42% | tot15 IC +0.051 n=1128 q5-q1 +2.64% | drift IC +0.015 n=1126 q5-q1 -0.01%
+  news_att         | react IC +0.023 n=1126 q5-q1 -0.16% | tot15 IC +0.021 n=1127 q5-q1 -1.12% | drift IC +0.007 n=1125 q5-q1 -0.39%
+  news_tone        | react IC +0.068 n=1081 q5-q1 +1.82% | tot15 IC +0.032 n=1081 q5-q1 +0.96% | drift IC -0.022 n=1080 q5-q1 -1.12%
+  own_att          | react IC +0.102 n= 135 q5-q1 +4.19% | tot15 IC +0.108 n= 135 q5-q1 +3.09% | drift IC -0.008 n= 135 q5-q1 -1.32%
+  own_tone         | react IC +0.103 n=  94 q5-q1 +3.54% | tot15 IC -0.068 n=  94 q5-q1 +0.00% | drift IC -0.165 n=  94 q5-q1 -4.32%
+  ss_att           | react IC -0.037 n= 266 q5-q1 -1.29% | tot15 IC -0.054 n= 266 q5-q1 -1.53% | drift IC -0.016 n= 266 q5-q1 +0.06%
+  ss_tone          | react IC -0.019 n= 184 q5-q1 -0.46% | tot15 IC +0.053 n= 184 q5-q1 +2.05% | drift IC +0.072 n= 184 q5-q1 +2.40%
+  ss_net           | react IC -0.078 n= 266 q5-q1 -0.95% | tot15 IC -0.069 n= 266 q5-q1 +0.53% | drift IC +0.001 n= 266 q5-q1 +1.95%
+  ss_pt            | react IC -0.014 n=  56 q5-q1 +0.48% | tot15 IC +0.181 n=  56 q5-q1 +5.22% | drift IC +0.089 n=  56 q5-q1 +4.74%
+  ss_est           | react IC -0.021 n= 266 q5-q1 +1.14% | tot15 IC -0.026 n= 266 q5-q1 +2.44% | drift IC +0.024 n= 266 q5-q1 +1.33%
+  eps_rev          | react IC -0.019 n=1069 q5-q1 +0.91% | tot15 IC +0.023 n=1070 q5-q1 +3.14% | drift IC +0.064 n=1068 q5-q1 +2.03%
+  runup            | react IC +0.067 n=1121 q5-q1 +2.16% | tot15 IC +0.088 n=1122 q5-q1 +4.26% | drift IC +0.038 n=1120 q5-q1 +1.91%
+  si               | react IC -0.012 n= 990 q5-q1 +1.06% | tot15 IC +0.041 n= 990 q5-q1 +4.41% | drift IC +0.049 n= 990 q5-q1 +2.89%
+  surprise         | react IC +0.212 n=1043 q5-q1 +8.14% | tot15 IC +0.144 n=1043 q5-q1 +7.49% | drift IC -0.024 n=1042 q5-q1 -0.94%
+  post_tone_shift  | react IC +0.430 n=1060 q5-q1 +13.27% | tot15 IC +0.317 n=1060 q5-q1 +12.65% | drift IC -0.008 n=1060 q5-q1 -0.58%
+  own_post_shift   | react IC -0.032 n=  84 q5-q1 -2.32% | tot15 IC +0.134 n=  84 q5-q1 +1.43% | drift IC +0.183 n=  84 q5-q1 +3.35%
+  ss_post_net      | react IC -0.015 n= 266 q5-q1 +0.91% | tot15 IC +0.037 n= 266 q5-q1 +6.84% | drift IC +0.115 n= 266 q5-q1 +5.65%
+  ss_post_pt       | react IC +0.364 n= 136 q5-q1 +10.51% | tot15 IC +0.229 n= 136 q5-q1 +9.42% | drift IC -0.101 n= 136 q5-q1 -1.50%
+  cold|beat    n=263 react +2.05% tot15 +1.42% drift -0.79%
+  cold|inline  n= 42 react -3.71% tot15 -4.00% drift -0.30%
+  cold|miss    n= 42 react -3.03% tot15 -3.14% drift -0.64%
+  hot|beat     n=264 react +1.68% tot15 +0.83% drift -0.84%
+  hot|inline   n= 53 react -3.03% tot15 -4.62% drift -1.44%
+  hot|miss     n= 31 react -2.52% tot15 -1.03% drift +1.97%
+  mid|beat     n=268 react +1.98% tot15 +0.51% drift -1.38%
+  mid|inline   n= 38 react -0.87% tot15 -3.39% drift -2.34%
+  mid|miss     n= 41 react -1.65% tot15 +0.22% drift +1.94%
+wrote \\CAPSRV01\Users$\felipe.monteiro\Wiki Felipe empresas\_wiki\_dashboards\sentiment.html (redirect to sentiment-monitor.html)
+
+--- build_sentiment_monitor.py  ---
+  cnn_extremes: 2021-02-01 â†’ 2026-10-26 Â· F&G 34 (band 30) Â· SPY crossâ‰¤30 n=40 Â· crossâ‰¥70 n=20
+  desk_ledger: 961 observations (15 daily reviews + seed) Â· 95 names
+  studies done in 11s
+xval own-vs-BBG attention IC +0.37, tone +0.17 over 24 weeks
+  -> \\CAPSRV01\Users$\felipe.monteiro\Wiki Felipe empresas\_wiki\_dashboards\sentiment-monitor.html (7.8 MB)
+  cnn live: 33.6 (fear) Â· BBG X through 2026-10-26 Â· own X through 2026-10-27 (0 d) Â· mail 2026-10-27 (0 d) Â· prices 2026-10-26 Â· desk review 2026-10-27
+  movers: BBG 8â†‘/8â†“ Â· own 5â†‘/8â†“
+
+--- build_technicals.py  ---
+[technicals] CEREBRAS: short history (116)
+[technicals] SPCX: short history (96)
+[technicals] 108 names + 3 benchmarks, asof 2026-10-27 -> \\CAPSRV01\Users$\felipe.monteiro\Wiki Felipe empresas\_wiki\_dashboards\technicals.html (4.2 MB) | breadth {'n': 108, 'a50': 34.0, 'a200': 44.0, 'up': 58.0, 'os': 1, 'ob': 0, 'sup': 37, 'brk': 30, 'div': 7}
+
+--- build_dashboards_hub.py  ---
+hub -> \\CAPSRV01\Users$\felipe.monteiro\Wiki Felipe empresas\_wiki\_dashboards\index.html  (85 cards: home 4, themes 20 unique [Memória 9, Optics 3, Semicap 8, Sentimento 1, AI Setorial 3], daily 9, weekly 5, ondemand 29, explainer 2, archive 16; Capstone hub 16)
+STALE: gateway-weekly.html (stale · 28 days)
+[WARN] unregistered (shown in the Unregistered section): ai-labs/index.html
+done.

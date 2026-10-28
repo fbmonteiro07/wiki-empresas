@@ -1,0 +1,31 @@
+[
+  {
+    "server": "localhost:8194",
+    "serverId": "bbcomm-DS-CAP-33-5555402",
+    "encryptionStatus": "Clear",
+    "compressionStatus": "Uncompressed"
+  },
+  {
+    "initialEndpoints": [
+      {
+        "address": "localhost:8194"
+      }
+    ]
+  },
+  {
+    "serviceName": "//blp/refdata"
+  },
+  {
+    "securityData": [
+      {
+        "security": "GOOGL US Equity",
+        "eidData": [],
+        "fieldExceptions": [],
+        "sequenceNumber": 0,
+        "fieldData": {
+          "BEST_EPS_EXCLUDES_STOCK_COMP": "Y"
+        }
+      }
+    ]
+  }
+]

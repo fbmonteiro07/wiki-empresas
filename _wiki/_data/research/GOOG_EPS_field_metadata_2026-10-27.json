@@ -1,0 +1,538 @@
+{
+  "shares": [
+    {
+      "mnemonic": "BEST_FFOPS",
+      "description": "BEst FFO Per Share",
+      "datatype": "Double",
+      "documentation": "BEst (Bloomberg Estimates) FFOPS reflects the consensus estimate for Funds From Operations Per Share (FFOPS). The consensus estimate is the mean of sell-side analyst estimates.\n\nNote:\nAvailable for Broker estimates and Consensus: Standard, 28 Days, Post Event, and Custom. Definition may differ based on certain industry or region specifications. The period can be shifted forward or backward by providing an offset to BEst Fiscal Period Override (BE997, BEST_FPERIOD_OVERRIDE) (3FQ, -2FY, etc.).",
+      "categoryName": [
+        "Earnings Estimates/BEst (Bloomberg Estimates)/Income Statement/FFOPS"
+      ],
+      "property": [],
+      "overrides": [
+        "BE994",
+        "BE046",
+        "BE997",
+        "BE999",
+        "BE998",
+        "BE995",
+        "DS215"
+      ],
+      "ftype": "Real"
+    },
+    {
+      "mnemonic": "BEST_DPS_BRK_GRID",
+      "description": "BEst Dividend Per Share Broker Estimates",
+      "datatype": "String",
+      "documentation": "Matrix of the latest broker estimates for the dividend per share (DPS) for the security.  The DPS may be presented on a Net or Gross basis, depending on the country's specific treatment of dividends.  The field returns the Broker, Analyst, Date of the Estimate, Current Period Estimate, Current Period Change, Next Period Estimate, Next Period Change.  The criteria each estimate is based on may vary by analyst.  This field may be overridden by the following fields:\n   BEst Consolidated Override (BE999, BEST_CONSOLIDATED_OVERRIDE),\n   BEst Fiscal Period Override (BE997, BEST_FPERIOD_OVERRIDE), and\n   Equity Fundamental Currency (DS215, EQY_FUND_CRNCY).",
+      "categoryName": [
+        "Earnings Estimates/BEst (Bloomberg Estimates)/Income Statement/DPS"
+      ],
+      "property": [],
+      "overrides": [
+        "BE997",
+        "DS215",
+        "BE999",
+        "DX616"
+      ],
+      "ftype": "BulkFormat"
+    },
+    {
+      "mnemonic": "BEST_BPS_BRK_GRID",
+      "description": "BEst Book Value Per Share Broker Estimates",
+      "datatype": "String",
+      "documentation": "Matrix of the latest broker estimates for the book value per share (BPS) for the security.  BPS is calculated as:\n\n(Share Capital + Additional Paid in Capital + Retained Earnings) / Balance Sheet Shares Outstanding.\n\nThe field returns the Broker, Analyst, Date of the Estimate, Current Period Estimate, Current Period Change, Next Period Estimate, Next Period Change.  The criteria each estimate is based on may vary by analyst.  This field may be overridden by the following fields:\n   BEst Consolidated Override (BE999, BEST_CONSOLIDATED_OVERRIDE),\n   BEst Fiscal Period Override (BE997, BEST_FPERIOD_OVERRIDE), and\n   Equity Fundamental Currency (DS215, EQY_FUND_CRNCY).",
+      "categoryName": [
+        "Earnings Estimates/BEst (Bloomberg Estimates)/Balance Sheet/BPS"
+      ],
+      "property": [],
+      "overrides": [
+        "BE997",
+        "BE999",
+        "DX616",
+        "DS215"
+      ],
+      "ftype": "BulkFormat"
+    },
+    {
+      "mnemonic": "BEST_CPS_BRK_GRID",
+      "description": "BEst Cashflow Per Share Broker Estimates",
+      "datatype": "String",
+      "documentation": "Matrix of the latest broker estimates for the cash flow per share (CPS) for the security.  The CPS estimate is calculated as:\n\n(Net Income + Depreciation and Amortization + Other Non-Cash Adjustments + Change in No-Cash Working Capital)/ Basic Weighted Average Number of Shares Outstanding for the period.\n\nThe field returns the Broker, Analyst, Date of the Estimate, Current Period Estimate, Current Period Change, Next Period Estimate, Next Period Change.  The criteria each estimate is based on may vary by analyst.  This field may be overridden by the following fields:\n   BEst Consolidated Override (BE999, BEST_CONSOLIDATED_OVERRIDE),\n   BEst Fiscal Period Override (BE997, BEST_FPERIOD_OVERRIDE), and\n   Equity Fundamental Currency (DS215, EQY_FUND_CRNCY).",
+      "categoryName": [
+        "Earnings Estimates/BEst (Bloomberg Estimates)/Cash Flow/CPS"
+      ],
+      "property": [],
+      "overrides": [
+        "DS215",
+        "DX616",
+        "BE997",
+        "BE999"
+      ],
+      "ftype": "BulkFormat"
+    },
+    {
+      "mnemonic": "BEST_FFOPS_BRK_GRID",
+      "description": "BEst Funds from Ops Per Share Broker Estimates",
+      "datatype": "String",
+      "documentation": "Matrix of the latest broker estimates for the funds from operations per share (FFOPS) for the security.  The FFOPS is calculated as:\n\n(Net Income - Preferred Dividends + Depreciation on Real Estate Income Producing Assets + Gains(Losses) from Property Sales + Non-Recurring Gains(Charges), excluding impairment of real estate assets + Debt Restructuring) / Basic Weighted Average Number of Shares Outstanding.\n\nThe field returns the Broker, Analyst, Date of the Estimate, Current Period Estimate, Current Period Change, Next Period Estimate, Next Period Change.  The criteria each estimate is based on may vary by analyst.  This field may be overridden by the following fields:\n   BEst Consolidated Override (BE999, BEST_CONSOLIDATED_OVERRIDE),\n   BEst Fiscal Period Override (BE997, BEST_FPERIOD_OVERRIDE), and\n   Equity Fundamental Currency (DS215, EQY_FUND_CRNCY).",
+      "categoryName": [
+        "Earnings Estimates/BEst (Bloomberg Estimates)/Income Statement/FFOPS"
+      ],
+      "property": [],
+      "overrides": [
+        "BE997",
+        "BE999",
+        "DX616",
+        "DS215"
+      ],
+      "ftype": "BulkFormat"
+    },
+    {
+      "mnemonic": "BEST_AFFOPS_BROKER_GRID",
+      "description": "BEst AFFO Per Share Broker Estimates",
+      "datatype": "String",
+      "documentation": "Matrix of the latest broker estimates for Funds From Operations Per Share (FFOPS) less capital expenditures and other adjustments. The field returns the Broker, Analyst, Date of the Estimate, Current Period Estimate, Current Period Change, Next Period Estimate, and Next Period Change. The criteria each estimate is based on may vary by analyst. This field may be overridden by the following fields:\n\nBEst Consolidated Override (BE999, BEST_CONSOLIDATED_OVERRIDE),\nBEst Fiscal Period Override (BE997, BEST_FPERIOD_OVERRIDE), and\nEquity Fundamental Currency (DS215, EQY_FUND_CRNCY).",
+      "categoryName": [
+        "Earnings Estimates/BEst (Bloomberg Estimates)/Income Statement/FFOPS"
+      ],
+      "property": [],
+      "overrides": [
+        "BE999",
+        "BE997",
+        "DX616",
+        "DS215"
+      ],
+      "ftype": "BulkFormat"
+    }
+  ],
+  "compensation": [
+    {
+      "mnemonic": "BEST_EPS_EXCLUDES_STOCK_COMP",
+      "description": "BEst EPS Excludes Stock Based Compensation",
+      "datatype": "Bool",
+      "documentation": "Indicates the company excludes stock compensation expense from their comparable Adjusted Earnings Per Share.\n\nIf the return is 'Y', Estimate Comparable EPS Excluding Stock Based Compensation (IS907, IS_COMP_EPS_EXCL_STOCK_COMP) is used to compare Bloomberg's Adjusted EPS consensus estimate (BE008, BEST_EPS) and Adjusted Guidance EPS forecast (BE206, CEST_EPS) data.\n\nIf the return is 'N', Estimate Comparable Including Stock Based Compensation (IS900, IS_COMP_EPS_ADJUSTED) is used to compare to Bloomberg's Adjusted EPS consensus estimate (BE008) and Adjusted Guidance EPS forecast (BE206) data.",
+      "categoryName": [
+        "Earnings Estimates/BEst (Bloomberg Estimates)/Income Statement/EPS"
+      ],
+      "property": [],
+      "overrides": [
+        "BE999",
+        "BE997",
+        "BE998"
+      ],
+      "ftype": "Boolean"
+    }
+  ],
+  "amortization": [
+    {
+      "mnemonic": "BEST_AMORTIZATION",
+      "description": "BEst Amortization",
+      "datatype": "Double",
+      "documentation": "BEst (Bloomberg Estimates) estimate of a company's amortization expense from intangible assets.",
+      "categoryName": [
+        "Earnings Estimates/BEst (Bloomberg Estimates)/Income Statement/Amortization"
+      ],
+      "property": [],
+      "overrides": [
+        "BE997",
+        "BE994",
+        "BE998",
+        "BE999",
+        "BE995",
+        "DS215"
+      ],
+      "ftype": "Real"
+    }
+  ],
+  "GAAP net": [
+    {
+      "mnemonic": "BEST_NET_GAAP",
+      "description": "BEst Net GAAP",
+      "datatype": "Double",
+      "documentation": "The BEst GAAP Net Income estimate is defined as the 'bottom line' or 'reported' profit. It always includes non-recurring (or one-time) items. However, it may include or exclude extraordinary items. Available for Broker  estimates and Consensus: Standard, Re-Set  Consensus, and 4 Week.",
+      "categoryName": [
+        "Earnings Estimates/BEst (Bloomberg Estimates)/GAAP/Net Income"
+      ],
+      "property": [],
+      "overrides": [
+        "BE994",
+        "DS215",
+        "BE998",
+        "BE997",
+        "BE999",
+        "BE046",
+        "BE995"
+      ],
+      "ftype": "Real"
+    },
+    {
+      "mnemonic": "BEST_NET_GAAP_NUMEST",
+      "description": "BEst Net GAAP # Ests",
+      "datatype": "Double",
+      "documentation": "The number of GAAP Net Income estimates for the specified estimate period. Available for Consensus only: Standard, Re-Set and 4 week\n",
+      "categoryName": [
+        "Earnings Estimates/BEst (Bloomberg Estimates)/GAAP/Net Income"
+      ],
+      "property": [],
+      "overrides": [
+        "BE998",
+        "BE997",
+        "BE999",
+        "BE046"
+      ],
+      "ftype": "Real"
+    },
+    {
+      "mnemonic": "BEST_NET_INC_GAAP_BRK_GRID",
+      "description": "BEst Net Income GAAP Broker Estimates",
+      "datatype": "String",
+      "documentation": "Matrix of the latest broker estimates for the net income GAAP (generally accepted accounting principles) for the security.  Net income is defined as the profit after all expenses have been deducted.  The field returns the Broker, Analyst, Date of the Estimate, Current Period Estimate, Current Period Change, Next Period Estimate, Next Period Change.  The criteria each estimate is based on may vary by analyst.  This field may be overridden by the following fields:\n   BEst Consolidated Override (BE999, BEST_CONSOLIDATED_OVERRIDE),\n   BEst Fiscal Period Override (BE997, BEST_FPERIOD_OVERRIDE), and\n   Equity Fundamental Currency (DS215, EQY_FUND_CRNCY).",
+      "categoryName": [
+        "Earnings Estimates/BEst (Bloomberg Estimates)/GAAP/Net Income"
+      ],
+      "property": [],
+      "overrides": [
+        "DS215",
+        "BE997",
+        "DX616",
+        "BE999"
+      ],
+      "ftype": "BulkFormat"
+    },
+    {
+      "mnemonic": "BEST_NET_GAAP_MEDIAN",
+      "description": "BEst Net GAAP Median",
+      "datatype": "Double",
+      "documentation": "The median estimated GAAP Net Income for the specified estimate period Available for Consensus only: Standard, Re-Set and 4 week\n",
+      "categoryName": [
+        "Earnings Estimates/BEst (Bloomberg Estimates)/GAAP/Net Income"
+      ],
+      "property": [],
+      "overrides": [
+        "BE997",
+        "BE046",
+        "DS215",
+        "BE998",
+        "BE999"
+      ],
+      "ftype": "Real"
+    },
+    {
+      "mnemonic": "BEST_NET_GAAP_HI",
+      "description": "BEst Net GAAP High",
+      "datatype": "Double",
+      "documentation": "The analysts' high GAAP Net Income estimate for the specified estimate period. Available for Consensus only: Standard, Re-Set and 4 week\n",
+      "categoryName": [
+        "Earnings Estimates/BEst (Bloomberg Estimates)/GAAP/Net Income"
+      ],
+      "property": [],
+      "overrides": [
+        "BE999",
+        "BE046",
+        "BE998",
+        "DS215",
+        "BE997"
+      ],
+      "ftype": "Real"
+    },
+    {
+      "mnemonic": "BEST_NET_GAAP_LO",
+      "description": "BEst Net GAAP Low",
+      "datatype": "Double",
+      "documentation": "The analysts' low GAAP Net Income estimate for the specified estimate period. Available for Consensus only: Standard, Re-Set and 4 week\n",
+      "categoryName": [
+        "Earnings Estimates/BEst (Bloomberg Estimates)/GAAP/Net Income"
+      ],
+      "property": [],
+      "overrides": [
+        "BE999",
+        "DS215",
+        "BE998",
+        "BE997",
+        "BE046"
+      ],
+      "ftype": "Real"
+    },
+    {
+      "mnemonic": "BEST_NET_GAAP_STDDEV",
+      "description": "BEst Net GAAP Std Dev",
+      "datatype": "Double",
+      "documentation": "A statistical measure of the dispersion of the contributed GAAP Net Income estimates around their mean value expressed in the same units as the data. The standard deviation of a consensus expresses the level of agreement amongst the contributed data. A consensus with a high standard deviation would represent more dissent while a lower standard deviation would represent concurrence. Available for Consensus only: Standard, Re-Set and 4 week\n",
+      "categoryName": [
+        "Earnings Estimates/BEst (Bloomberg Estimates)/GAAP/Net Income"
+      ],
+      "property": [],
+      "overrides": [
+        "BE046",
+        "BE997",
+        "BE999",
+        "BE998",
+        "DS215"
+      ],
+      "ftype": "Real"
+    },
+    {
+      "mnemonic": "BEST_NET_GAAP_4WK_CHG",
+      "description": "BEst Net GAAP 4 wk Chg",
+      "datatype": "Double",
+      "documentation": "The change in the specified period  GAAP Net Income estimate within the four weeks prior to today's date. Not a percent change.  Available for Consensus only: Standard, Re-Set and 4 week\n",
+      "categoryName": [
+        "Earnings Estimates/BEst (Bloomberg Estimates)/GAAP/Net Income"
+      ],
+      "property": [],
+      "overrides": [
+        "BE997",
+        "DS215",
+        "BE046",
+        "BE999",
+        "BE998"
+      ],
+      "ftype": "Real"
+    },
+    {
+      "mnemonic": "BEST_NET_INC_GAAP_3MO_PCT_CHG",
+      "description": "Best Net Income GAAP 3 Month % Change",
+      "datatype": "Double",
+      "documentation": "Percent change in the specified period GAAP net income estimate over the last three months. Available for Standard, Re-Set and 4 Week consensus only.\n",
+      "categoryName": [
+        "Earnings Estimates/BEst (Bloomberg Estimates)/GAAP/Net Income"
+      ],
+      "property": [],
+      "overrides": [
+        "BE046",
+        "BE997",
+        "BE999",
+        "BE998",
+        "DS215"
+      ],
+      "ftype": "Real"
+    },
+    {
+      "mnemonic": "BEST_NET_INC_GAAP_1WK_PCT_CHG",
+      "description": "BEst Net Income GAAP 1 Week % Change",
+      "datatype": "Double",
+      "documentation": "Percent change in the specified period GAAP net income estimate within the week prior to today's date. Available for Standard, Re-Set and 4 Week consensus only.\n",
+      "categoryName": [
+        "Earnings Estimates/BEst (Bloomberg Estimates)/GAAP/Net Income"
+      ],
+      "property": [],
+      "overrides": [
+        "BE997",
+        "BE999",
+        "BE046",
+        "BE998",
+        "DS215"
+      ],
+      "ftype": "Real"
+    },
+    {
+      "mnemonic": "BEST_NET_INC_GAAP_4WK_PCT_CHG",
+      "description": "BEst Net Income GAAP 4 Week % Change",
+      "datatype": "Double",
+      "documentation": "Percent change in the specified period GAAP net income estimate within the four weeks prior to today's date. Available for Standard, Re-Set and 4 Week consensus only.\n",
+      "categoryName": [
+        "Earnings Estimates/BEst (Bloomberg Estimates)/GAAP/Net Income"
+      ],
+      "property": [],
+      "overrides": [
+        "BE997",
+        "BE999",
+        "BE998",
+        "DS215",
+        "BE046"
+      ],
+      "ftype": "Real"
+    },
+    {
+      "mnemonic": "BEST_NET_GAAP_1WK_CHG",
+      "description": "BEst Net GAAP 1 wk Chg",
+      "datatype": "Double",
+      "documentation": "The change in the specified period GAAP Net Income estimate within the week prior to today's date. Not a percent change.  Available for Consensus only: Standard, Re-Set and 4 week\n",
+      "categoryName": [
+        "Earnings Estimates/BEst (Bloomberg Estimates)/GAAP/Net Income"
+      ],
+      "property": [],
+      "overrides": [
+        "BE997",
+        "DS215",
+        "BE046",
+        "BE998",
+        "BE999"
+      ],
+      "ftype": "Real"
+    },
+    {
+      "mnemonic": "BEST_NET_GAAP_3MO_CHG",
+      "description": "BEst Net GAAP 3 mo Chg",
+      "datatype": "Double",
+      "documentation": "The change in the specified period  GAAP net income estimate over the last 4 weeks. Not a percent change.  Available for Consensus only: Standard, Re-Set and 4 week\n",
+      "categoryName": [
+        "Earnings Estimates/BEst (Bloomberg Estimates)/GAAP/Net Income"
+      ],
+      "property": [],
+      "overrides": [
+        "BE998",
+        "DS215",
+        "BE997",
+        "BE999",
+        "BE046"
+      ],
+      "ftype": "Real"
+    },
+    {
+      "mnemonic": "BEST_NET_GAAP_YOY_GTH",
+      "description": "BEst Net GAAP YoY Gwth",
+      "datatype": "Double",
+      "documentation": "The percent change in the GAAP Net Income for the specified period versus the same period a year earlier. The comparable GAAP Net Income is used for historical periods. If no comparable value is available, the value will not be calculated. This field uses estimated values when both periods are in the future. Available for Broker estimates and Consensus: Standard, Re-Set Consensus, and 4 Week.",
+      "categoryName": [
+        "Earnings Estimates/BEst (Bloomberg Estimates)/GAAP/Net Income"
+      ],
+      "property": [],
+      "overrides": [
+        "BE046",
+        "BE999",
+        "BE998",
+        "BE997"
+      ],
+      "ftype": "Real"
+    },
+    {
+      "mnemonic": "BEST_NET_GAAP_CHG",
+      "description": "BEst Net GAAP Change",
+      "datatype": "Double",
+      "documentation": "The change in the specified period GAAP Net Income estimate over the prior GAAP Net Income estimate. Not a percent change.  Only available for broker estimates.  Available for Broker Estimates, Standard Consensus, Re-Set Consensus, and 4 Week Consensus.\n",
+      "categoryName": [
+        "Earnings Estimates/BEst (Bloomberg Estimates)/GAAP/Net Income"
+      ],
+      "property": [],
+      "overrides": [
+        "DS215",
+        "BE046",
+        "BE997",
+        "BE999",
+        "BE998"
+      ],
+      "ftype": "Real"
+    },
+    {
+      "mnemonic": "BEST_NET_GAAP_CHG_PCT",
+      "description": "BEst Net GAAP % Chg",
+      "datatype": "Double",
+      "documentation": "The percentage change in the specified period GAAP Net Income estimate over the prior GAAP Net Income estimate.  Available for Broker Estimates, Standard Consensus, Re-Set Consensus, and 4 Week Consensus.\n",
+      "categoryName": [
+        "Earnings Estimates/BEst (Bloomberg Estimates)/GAAP/Net Income"
+      ],
+      "property": [],
+      "overrides": [
+        "BE046",
+        "BE998",
+        "BE997",
+        "BE999"
+      ],
+      "ftype": "Real"
+    },
+    {
+      "mnemonic": "BEST_NET_GAAP_4WK_UP",
+      "description": "BEst Net GAAP 4 wk Up",
+      "datatype": "Double",
+      "documentation": "The number of analysts increasing their GAAP Net Income estimates within the 4 weeks prior to the latest consensus date. Available for Consensus only: Standard, Re-Set and 4 week\n",
+      "categoryName": [
+        "Earnings Estimates/BEst (Bloomberg Estimates)/GAAP/Net Income"
+      ],
+      "property": [],
+      "overrides": [
+        "BE997",
+        "BE046",
+        "BE998",
+        "BE999"
+      ],
+      "ftype": "Real"
+    },
+    {
+      "mnemonic": "BEST_NET_GAAP_4WK_DN",
+      "description": "BEst Net GAAP 4 wk Down",
+      "datatype": "Double",
+      "documentation": "The number of analysts decreasing their GAAP Net Income estimates within the 4 weeks prior to the latest consensus date. Available for Consensus only: Standard, Re-Set and 4 week\n",
+      "categoryName": [
+        "Earnings Estimates/BEst (Bloomberg Estimates)/GAAP/Net Income"
+      ],
+      "property": [],
+      "overrides": [
+        "BE046",
+        "BE997",
+        "BE998",
+        "BE999"
+      ],
+      "ftype": "Real"
+    },
+    {
+      "mnemonic": "BEST_NET_GAAP_QOQ_GTH",
+      "description": "BEst Net GAAP QoQ Gwth",
+      "datatype": "Double",
+      "documentation": "The percent change in the GAAP Net Income estimate for the specified period from the same period a quarter earlier. Available for Broker estimates and Consensus: Standard, Re-Set Consensus, and 4 Week\n",
+      "categoryName": [
+        "Earnings Estimates/BEst (Bloomberg Estimates)/GAAP/Net Income"
+      ],
+      "property": [],
+      "overrides": [
+        "BE997",
+        "BE998",
+        "BE046",
+        "BE999"
+      ],
+      "ftype": "Real"
+    },
+    {
+      "mnemonic": "BEST_NET_GAAP_DEV",
+      "description": "BEst Net GAAP % Deviation",
+      "datatype": "Double",
+      "documentation": "A statistical measure of dispersion of the contributed GAAP Net Income estimates around their mean value for the specified period.  Only available for broker estimates.\n",
+      "categoryName": [
+        "Earnings Estimates/BEst (Bloomberg Estimates)/GAAP/Net Income"
+      ],
+      "property": [],
+      "overrides": [
+        "BE997",
+        "BE998",
+        "BE046",
+        "BE999"
+      ],
+      "ftype": "Real"
+    },
+    {
+      "mnemonic": "BEST_NET_GAAP_ACT_CHG",
+      "description": "BEst Net Inc GAAP Actual Change",
+      "datatype": "Double",
+      "documentation": "Actual change, excluding reiteration in the specified period GAAP net income estimate over the prior GAAP net income estimate. Not a percent change. Only available for broker estimates.\n",
+      "categoryName": [
+        "Earnings Estimates/BEst (Bloomberg Estimates)/GAAP/Net Income"
+      ],
+      "property": [],
+      "overrides": [
+        "BE998",
+        "DS215",
+        "BE999",
+        "BE997"
+      ],
+      "ftype": "Real"
+    },
+    {
+      "mnemonic": "BEST_NET_GAAP_ACT_PCT_CHG",
+      "description": "BEst Net Inc GAAP Actual % Change",
+      "datatype": "Double",
+      "documentation": "Actual percentage change, excluding reiteration in the specified period GAAP net income estimate over the prior GAAP net income estimate.  Only available for broker estimates.\n",
+      "categoryName": [
+        "Earnings Estimates/BEst (Bloomberg Estimates)/GAAP/Net Income"
+      ],
+      "property": [],
+      "overrides": [
+        "BE997",
+        "BE999",
+        "BE998",
+        "DS215"
+      ],
+      "ftype": "Real"
+    }
+  ]
+}

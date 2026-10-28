@@ -1,6 +1,6 @@
 {
  "_about": "Hand-edited ledger of machine-transcription garbles (Notion AI, Bloomberg ASR, auto-translation) seen in the archive, with the correct reading. Used by E:\\.claude\\scripts\\transcript_qa.py (source-file scan, page-diff scan) and by ingest_notion_meetings.py (writes a 'Transcription QA' block into every archived Notion file). Keys are matched with word boundaries, case-sensitive unless 'ci' is true. 'keep_when' = regex contexts (same line, ~80 chars around the hit) where the token is legitimate and must NOT be flagged. Add an entry the first time a garble is caught; never delete one. Standing rule (Felipe, 2026-09-28): ALWAYS double-check transcript content — acronyms, names, units, numbers — before it travels to a page.",
- "_updated": "2026-10-26",
+ "_updated": "2026-10-27",
  "terms": {
   "Astrod": {
    "correct": "Astra (probable: OpenAI GPT-6 Astra)",
@@ -4621,6 +4621,30 @@
    "domain": "products",
    "rule": "ASR of Astra.",
    "first_seen": "2026-10-26 (a16z Show, OpenAI computer use w/ Ari Weinstein & James Sun, podscripts ASR)"
+  },
+  "Van Thompson": {
+   "correct": "Ben Thompson (Stratechery; aggregation theory)",
+   "domain": "names",
+   "rule": "ASR of 'Ben Thompson aggregation economics'.",
+   "first_seen": "2026-10-27 (ILTB EP.497 Cliff Sosin, podscripts ASR)"
+  },
+  "Joe Lamont": {
+   "correct": "Joe Liemandt (Alpha School founder)",
+   "domain": "names",
+   "rule": "ASR of Liemandt.",
+   "first_seen": "2026-10-27 (a16z Show, Reinventing School for the AI Era, podscripts ASR)"
+  },
+  "Gagan Biani": {
+   "correct": "Gagan Biyani (Horowitz and Andreessen Academy)",
+   "domain": "names",
+   "rule": "ASR of Biyani.",
+   "first_seen": "2026-10-27 (a16z Show, Reinventing School for the AI Era, podscripts ASR)"
+  },
+  "Yagi League": {
+   "correct": "Ivy League",
+   "domain": "names",
+   "rule": "ASR of 'the Ivy League'.",
+   "first_seen": "2026-10-27 (a16z Show, Reinventing School for the AI Era, podscripts ASR)"
   }
  },
  "summary_traps": [

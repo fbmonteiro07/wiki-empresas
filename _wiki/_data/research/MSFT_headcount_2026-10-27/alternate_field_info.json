@@ -1,0 +1,170 @@
+[
+  {
+    "fieldData": [
+      {
+        "id": "DS436",
+        "fieldInfo": {
+          "mnemonic": "EQY_EMPLOYEE_NUM",
+          "description": "Number of Employees",
+          "datatype": "Int32",
+          "documentation": "The number of employees of the company as of the period end date.  This field is based on the number of full time equivalents.  If unavailable, then the number of full time employees is used, excluding part time employees.  If the period end number is not disclosed, the average number of employees may be used.  This field cannot be overridden historically.  In order to access historical number of employees, please use Number of Employees (RR121, NUM_OF_EMPLOYEES).",
+          "categoryName": [],
+          "property": [],
+          "overrides": [
+            "DS276"
+          ],
+          "ftype": "String"
+        }
+      },
+      {
+        "id": "R2971",
+        "fieldInfo": {
+          "mnemonic": "ARDR_NUM_OF_EMPLOYEES_PERIOD_END",
+          "description": "ARD Ref Number of Employees at Period End Date",
+          "datatype": "Double",
+          "documentation": "This is the ARD Ref Number of Employees at Period End Date figure as reported by the company. The account title may be standardized and slightly different from the original account title in the company's financial statement. This figure is disclosed in the notes to the company's financial statements.",
+          "categoryName": [],
+          "property": [],
+          "overrides": [
+            "DS276",
+            "DX243",
+            "DY771",
+            "DT086",
+            "DT092",
+            "DT095",
+            "DS323",
+            "DS324",
+            "DT097",
+            "DX242",
+            "DT082",
+            "DT083",
+            "DT093",
+            "DY013",
+            "DY891",
+            "DT582",
+            "DT085",
+            "DY892",
+            "DT084",
+            "DT096",
+            "DT581",
+            "DT081",
+            "DT089"
+          ],
+          "ftype": "Real"
+        }
+      },
+      {
+        "id": "S6203",
+        "fieldInfo": {
+          "mnemonic": "ARDR_FULL_TIME_EMPLOYEES",
+          "description": "ARDR Full Time Employees",
+          "datatype": "Int32",
+          "documentation": "Number of employees within a company on a full time basis (normally 30-40 hours per week), paid a salary and is eligible for benefits.  The account title may be standardized and slightly different from the original account title in the company's report.  This figure is disclosed in the notes to the company's financial statements.",
+          "categoryName": [],
+          "property": [],
+          "overrides": [
+            "DY892",
+            "DT083",
+            "DT085",
+            "DT581",
+            "DT081",
+            "DT089",
+            "DS324",
+            "DT084",
+            "DT086",
+            "DT096",
+            "DX242",
+            "DS323",
+            "DY013",
+            "DT092",
+            "DT095",
+            "DT097",
+            "DS276",
+            "DY891",
+            "DT093",
+            "DX243",
+            "DT582",
+            "DY771",
+            "DT082"
+          ],
+          "ftype": "String"
+        }
+      },
+      {
+        "id": "R1961",
+        "fieldInfo": {
+          "mnemonic": "ARDR_NUMBER_EMPLOYEES",
+          "description": "ARD Ref Number of Employees",
+          "datatype": "Double",
+          "documentation": "This is the Number Of Employees figure as reported by the company.  The account title may be standardized and slightly different from the original account title in the company's financial statement. This figure is disclosed in the notes to the company's financial statements.\n",
+          "categoryName": [],
+          "property": [],
+          "overrides": [
+            "DY891",
+            "DT084",
+            "DT086",
+            "DT096",
+            "DT081",
+            "DX242",
+            "DX243",
+            "DY013",
+            "DY892",
+            "DT092",
+            "DT095",
+            "DT093",
+            "DT582",
+            "DT097",
+            "DS324",
+            "DS276",
+            "DT082",
+            "DT083",
+            "DS323",
+            "DS215",
+            "DT085",
+            "DY771",
+            "DT581",
+            "DT089"
+          ],
+          "ftype": "Real"
+        }
+      },
+      {
+        "id": "S6204",
+        "fieldInfo": {
+          "mnemonic": "ARDR_FULL_TIME_EQUIV_EMPLOYEES",
+          "description": "ARDR Full Time Equivalent Employees",
+          "datatype": "Int32",
+          "documentation": "Number of full time employees when considering total hours worked divided by the maximum number of compensable hours in a full-time schedule as defined by law.  The account title may be standardized and slightly different from the original account title in the company's report.  This figure is disclosed in the notes to the company's financial statements.",
+          "categoryName": [],
+          "property": [],
+          "overrides": [
+            "DX243",
+            "DT582",
+            "DS324",
+            "DY771",
+            "DT082",
+            "DX242",
+            "DY892",
+            "DT083",
+            "DT085",
+            "DY013",
+            "DT581",
+            "DT081",
+            "DT089",
+            "DY891",
+            "DT084",
+            "DT086",
+            "DT096",
+            "DS323",
+            "DT092",
+            "DT095",
+            "DT097",
+            "DS276",
+            "DT093"
+          ],
+          "ftype": "String"
+        }
+      }
+    ]
+  }
+]

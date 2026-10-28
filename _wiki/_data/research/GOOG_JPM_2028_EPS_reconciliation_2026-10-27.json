@@ -1,0 +1,46 @@
+{
+  "source": "JPMorgan / Douglas Anmuth, estimates dated 2026-10-15, Bloomberg broker grids retrieved 2026-10-27",
+  "period": "2028-12",
+  "inputs": {
+    "gaap_net_income_usdm": {
+      "value": 221507.0,
+      "tag": "HARD (sourced analyst forecast, not reported actual)"
+    },
+    "adjusted_net_income_usdm": {
+      "value": 279878.0,
+      "tag": "HARD (sourced analyst forecast, not reported actual)"
+    },
+    "gaap_eps": {
+      "value": 17.29,
+      "tag": "HARD (sourced analyst forecast, not reported actual)"
+    },
+    "adjusted_eps": {
+      "value": 21.85,
+      "tag": "HARD (sourced analyst forecast, not reported actual)"
+    }
+  },
+  "derived": {
+    "implied_shares_from_gaap_m": 12811.278195488723,
+    "implied_shares_from_adjusted_m": 12809.061784897025,
+    "net_adjustments_usdm": 58371.0,
+    "eps_gap": 4.560000000000002,
+    "common_rounded_denominator_m": 12810.0,
+    "eps_at_common_denominator": {
+      "gaap": 17.291725214676035,
+      "adjusted": 21.84839968774395
+    },
+    "denominator_discrepancy_percent": 0.01730345773107711
+  },
+  "assumptions": [
+    "For implied shares, use each series' own same-date net income and EPS. EPS is reported to cents; no claim to exact modeled share count.",
+    "An approximate common 12.81bn denominator reconciles both quoted EPS figures to their published cents.",
+    "The aggregate net-income adjustment is observable; its detailed components are not identified by the broker grids. No assignment of the entire difference to SBC."
+  ],
+  "checks": {
+    "EPS independent source": "October 15 JPM US Internet preview, p4 (both EPS) and p17 (GAAP), agrees with Bloomberg broker grid.",
+    "same_period_date": "All four metrics refer to 12/2028, JPM / Anmuth, 10/15/26.",
+    "SBC convention": "Bloomberg BEST_EPS_EXCLUDES_STOCK_COMP=Y, retrieved as native string on 2026-10-27.",
+    "shares_anchor": "Company 10-Q: 12.230bn outstanding at July15, 12.309bn weighted-average diluted in 2Q26. These are historical scale checks, not confirmation of 2028 shares."
+  },
+  "limitations": "Internal reconciliation only; no direct JPM 2028 shares line or itemized GAAP-to-adjusted bridge located."
+}

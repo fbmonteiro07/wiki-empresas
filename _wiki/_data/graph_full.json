@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-26",
+ "generated": "2026-10-27",
  "counts": {
   "nodes": 188,
-  "edges": 2222
+  "edges": 2223
  },
  "nodes": [
   {
@@ -208,7 +208,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-10-26"
+   "last_chg": "2026-10-27"
   },
   {
    "id": "AOSL",
@@ -718,7 +718,7 @@
     "wiki": 1
    },
    "next_catalyst": "2026-11-02",
-   "last_chg": "2026-10-24"
+   "last_chg": "2026-10-27"
   },
   {
    "id": "KLAC",
@@ -805,7 +805,7 @@
     "transcript": 5,
     "wiki": 1
    },
-   "next_catalyst": "2026-10-26",
+   "next_catalyst": "",
    "last_chg": "2026-10-19"
   },
   {
@@ -820,7 +820,7 @@
     "transcript": 15,
     "wiki": 1
    },
-   "next_catalyst": "2026-10-26",
+   "next_catalyst": "2027-01-19",
    "last_chg": "2026-10-26"
   },
   {
@@ -865,7 +865,7 @@
     "wiki": 1
    },
    "next_catalyst": "2026-11-17",
-   "last_chg": "2026-10-20"
+   "last_chg": "2026-10-27"
   },
   {
    "id": "MU",
@@ -880,7 +880,7 @@
     "wiki": 1
    },
    "next_catalyst": "2026-12-09",
-   "last_chg": "2026-10-26"
+   "last_chg": "2026-10-27"
   },
   {
    "id": "NBIS",
@@ -1082,7 +1082,7 @@
     "transcript": 5,
     "wiki": 1
    },
-   "next_catalyst": "2026-10-26",
+   "next_catalyst": "2026-10-28",
    "last_chg": "2026-10-26"
   },
   {
@@ -1199,7 +1199,7 @@
     "wiki": 1
    },
    "next_catalyst": "2026-11-21",
-   "last_chg": "2026-10-23"
+   "last_chg": "2026-10-27"
   },
   {
    "id": "SANM",
@@ -1235,14 +1235,14 @@
    "type": "ticker",
    "label": "SKHYNIX",
    "sector": "Memory & storage",
-   "thesis": "#1 HBM, NVDA's primary supplier, sold out through 2026; bear = HBM4 commoditization. ₩, no SEC.",
+   "thesis": "HBM leader; 3Q26 operating beat and ~KRW100tn FY26 returns; Q4 HBM4 crossover remains a test (SK hynix, 2026-10-28).",
    "in_book": false,
    "docs": {
     "transcript": 5,
     "wiki": 1
    },
-   "next_catalyst": "2026-11-19",
-   "last_chg": "2026-10-23"
+   "next_catalyst": "2026-10-28",
+   "last_chg": "2026-10-28"
   },
   {
    "id": "SMCI",
@@ -1300,7 +1300,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-10-24"
+   "last_chg": "2026-10-27"
   },
   {
    "id": "SNOW",
@@ -1373,7 +1373,7 @@
     "wiki": 1
    },
    "next_catalyst": "2026-11-02",
-   "last_chg": "2026-10-24"
+   "last_chg": "2026-10-27"
   },
   {
    "id": "TEL",
@@ -1590,7 +1590,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-10-19"
+   "last_chg": "2026-10-27"
   },
   {
    "id": "WMB",
@@ -5911,6 +5911,12 @@
   },
   {
    "u": "assum:hbm-cycle",
+   "v": "theme:ai-compute-deals",
+   "type": "cites",
+   "label": ""
+  },
+  {
+   "u": "assum:hbm-cycle",
    "v": "theme:ai-tam-bofa",
    "type": "cites",
    "label": ""
@@ -7313,7 +7319,7 @@
    "v": "AMD",
    "type": "covers",
    "label": "",
-   "w": 12
+   "w": 14
   },
   {
    "u": "broker:BofA",
@@ -7642,7 +7648,7 @@
    "v": "ANTHROPIC",
    "type": "covers",
    "label": "",
-   "w": 60
+   "w": 62
   },
   {
    "u": "broker:Bernstein",
@@ -7719,7 +7725,7 @@
    "v": "ANTHROPIC",
    "type": "covers",
    "label": "",
-   "w": 260
+   "w": 263
   },
   {
    "u": "broker:Stratechery",
@@ -11121,7 +11127,7 @@
    "v": "KIOXIA",
    "type": "covers",
    "label": "",
-   "w": 89
+   "w": 97
   },
   {
    "u": "broker:Redburn",
@@ -12374,7 +12380,7 @@
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 420
+   "w": 430
   },
   {
    "u": "broker:UBS",
@@ -12416,7 +12422,7 @@
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 112
+   "w": 120
   },
   {
    "u": "broker:DB",
@@ -12437,7 +12443,7 @@
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 165
+   "w": 169
   },
   {
    "u": "broker:Redburn",
@@ -12507,7 +12513,7 @@
    "v": "MU",
    "type": "covers",
    "label": "",
-   "w": 149
+   "w": 157
   },
   {
    "u": "broker:SemiAnalysis",
@@ -13158,7 +13164,7 @@
    "v": "NVDA",
    "type": "covers",
    "label": "",
-   "w": 59
+   "w": 61
   },
   {
    "u": "broker:BofA",
@@ -14327,7 +14333,7 @@
    "v": "SAMSUNG",
    "type": "covers",
    "label": "",
-   "w": 292
+   "w": 302
   },
   {
    "u": "broker:UBS",
@@ -14369,7 +14375,7 @@
    "v": "SAMSUNG",
    "type": "covers",
    "label": "",
-   "w": 165
+   "w": 178
   },
   {
    "u": "broker:DB",
@@ -14390,7 +14396,7 @@
    "v": "SAMSUNG",
    "type": "covers",
    "label": "",
-   "w": 132
+   "w": 135
   },
   {
    "u": "broker:Redburn",
@@ -14439,7 +14445,7 @@
    "v": "SAMSUNG",
    "type": "covers",
    "label": "",
-   "w": 129
+   "w": 137
   },
   {
    "u": "broker:SemiAnalysis",
@@ -14586,21 +14592,21 @@
    "v": "SKHYNIX",
    "type": "covers",
    "label": "",
-   "w": 275
+   "w": 282
   },
   {
    "u": "broker:UBS",
    "v": "SKHYNIX",
    "type": "covers",
    "label": "",
-   "w": 356
+   "w": 359
   },
   {
    "u": "broker:JPM",
    "v": "SKHYNIX",
    "type": "covers",
    "label": "",
-   "w": 386
+   "w": 409
   },
   {
    "u": "broker:MS",
@@ -14614,7 +14620,7 @@
    "v": "SKHYNIX",
    "type": "covers",
    "label": "",
-   "w": 272
+   "w": 282
   },
   {
    "u": "broker:Citi",
@@ -14628,7 +14634,7 @@
    "v": "SKHYNIX",
    "type": "covers",
    "label": "",
-   "w": 102
+   "w": 114
   },
   {
    "u": "broker:DB",
@@ -14649,7 +14655,7 @@
    "v": "SKHYNIX",
    "type": "covers",
    "label": "",
-   "w": 115
+   "w": 125
   },
   {
    "u": "broker:Redburn",
@@ -14712,7 +14718,7 @@
    "v": "SKHYNIX",
    "type": "covers",
    "label": "",
-   "w": 132
+   "w": 142
   },
   {
    "u": "broker:SemiAnalysis",
@@ -14740,7 +14746,7 @@
    "v": "SKHYNIX",
    "type": "covers",
    "label": "",
-   "w": 70
+   "w": 71
   },
   {
    "u": "broker:BofA",
@@ -15027,7 +15033,7 @@
    "v": "SNDK",
    "type": "covers",
    "label": "",
-   "w": 144
+   "w": 145
   },
   {
    "u": "broker:DB",
@@ -15048,7 +15054,7 @@
    "v": "SNDK",
    "type": "covers",
    "label": "",
-   "w": 172
+   "w": 182
   },
   {
    "u": "broker:Redburn",
@@ -15594,7 +15600,7 @@
    "v": "STX",
    "type": "covers",
    "label": "",
-   "w": 58
+   "w": 62
   },
   {
    "u": "broker:Redburn",
@@ -16826,7 +16832,7 @@
    "v": "WDC",
    "type": "covers",
    "label": "",
-   "w": 53
+   "w": 59
   },
   {
    "u": "broker:SIG",

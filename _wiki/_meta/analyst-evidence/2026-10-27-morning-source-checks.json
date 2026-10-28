@@ -1,0 +1,363 @@
+{
+  "asof": "2026-10-27",
+  "cutoff_utc": "2026-10-27T10:34:36Z",
+  "scope": "Targeted morning triage, not exhaustive single-name audit. Rebuilt signal layer; read current brief/signals and October 26 reconciliation. Read relevant Debate/Changelog portions for META, AVGO, ORCL, CDNS and FLEX (no CLS wiki page). Corpus FTS for AVGO and CDNS; targeted July 27 CDNS CFO recurring-revenue passage. Selected broker email bodies and official company releases reviewed. No linked broker PDF or Broadcom infographic visual review.",
+  "email_screening": {
+    "filter": "receivedDateTime gt 2026-10-26T10:27:44Z and receivedDateTime le 2026-10-27T10:34:36Z",
+    "records": 691,
+    "unique_ids": 691,
+    "pages": 7,
+    "final_has_more": false,
+    "screening": "Subjects screened; substantive selected messages below. Does not claim all messages or attachments were read."
+  },
+  "engine": {
+    "asof": "2026-10-27",
+    "stats": {
+      "signals": 34,
+      "active": 34,
+      "high": 3,
+      "belief_changes": 0,
+      "focus_names": 28
+    },
+    "book": {
+      "asof": "2026-07-01",
+      "seed": true,
+      "positions": 8
+    }
+  },
+  "prior_history": {
+    "published_morning": {
+      "asof": "2026-10-26",
+      "active": 35,
+      "high": 3,
+      "focus_names": 29
+    },
+    "later_saved": {
+      "signals": 41,
+      "active": 41,
+      "high": 5,
+      "belief_changes": 4,
+      "focus_names": 32
+    },
+    "added": [],
+    "removed": [
+      {
+        "id": "beli-17c459188c71",
+        "title": "NVDA — derived thesis/debate state changed since the prior daily snapshot"
+      },
+      {
+        "id": "cata-bac1d748aae4",
+        "title": "META — 2026-10-26: direction, still no number: \"we expect that investment to grow in 2027\", after repeating…"
+      },
+      {
+        "id": "beli-a062500d9fd3",
+        "title": "AMD — derived thesis/debate state changed since the prior daily snapshot"
+      },
+      {
+        "id": "beli-474211876183",
+        "title": "ANTHROPIC — derived thesis/debate state changed since the prior daily snapshot"
+      },
+      {
+        "id": "beli-de12731c850d",
+        "title": "MU — derived thesis/debate state changed since the prior daily snapshot"
+      },
+      {
+        "id": "cata-d6253f9923ca",
+        "title": "MEDIATEK — 2026-10-26: 2026-10-26 AND ~JAN/FEB 2027 EARNINGS CALLS — UBS FLAGS BOTH AS VENUES FOR \"POTENTIAL…"
+      },
+      {
+        "id": "cata-5402ad3358f9",
+        "title": "ORCL — 2026-10-26: financing plan expected (Karl Keirstead (UBS) @ UBS 'AI's Credit Stress Test' cross-asset…"
+      }
+    ]
+  },
+  "data_quality": [
+    "Portfolio remains July 1 seed; no position sizing inferred.",
+    "Bloomberg disk snapshot dated October 26, not a fresh October 27 pull.",
+    "GOOG gross/ex-TAC model comparison remains unverified. Numeric gap not used as alpha.",
+    "CRWV negative-EPS below-consensus language remains economically inverted; not a priority recommendation today.",
+    "Meta underwritten common offering uses forward sales; no initial proceeds. Planned ATM and nonbinding supplier interests are not funded cash.",
+    "Broadcom residual-value support is contingent exposure. UBS aggregate exposure estimate not adopted as confirmed company liability. No financing and compute totals summed.",
+    "CDNS Q2 recurring rate approximately 24% includes approximately four points Hexagon; normalized high teens to 20%. Q3 18% not declared comparable organic deceleration or new acceleration without bridge.",
+    "No CLS standalone wiki page; FLEX only peer context.",
+    "Company calendar outcomes and model opinion are distinct; no stock-market verdict inferred from financing announcements."
+  ],
+  "idea_evidence": {
+    "cls": {
+      "signals": [
+        "supp-20261027-cls"
+      ],
+      "mail_indices": [
+        138,
+        186
+      ],
+      "sources": [
+        {
+          "source": "Celestica / CEO Rob Mionis results release",
+          "source_date": "2026-10-26",
+          "url": "https://corporate.celestica.com/node/17881"
+        }
+      ],
+      "read_scope": "Company release financial results, guidance and calendar; JPM main commentary; Barclays email excerpt only.",
+      "related_page": "_wiki/FLEX.md"
+    },
+    "meta": {
+      "signals": [
+        "supp-20261027-meta"
+      ],
+      "deal_id": "META-CLASSC-FIN-20261021",
+      "mail_indices": [
+        310
+      ],
+      "sources": [
+        {
+          "source": "Meta offering launch",
+          "source_date": "2026-10-26",
+          "checked": "2026-10-27",
+          "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx"
+        },
+        {
+          "source": "Wells Fargo / Ken Gawrelski et al.",
+          "source_date": "2026-10-26",
+          "path": "_wiki/_meta/reconciliation-2026-10-26-inbox.md"
+        },
+        {
+          "source": "Capstone official model",
+          "source_date": "2026-10-12",
+          "path": "_wiki/_data/house.json"
+        },
+        {
+          "source": "Bloomberg consensus",
+          "source_date": "2026-10-26",
+          "path": "_wiki/_data/estimates.json"
+        }
+      ],
+      "page": "_wiki/META.md",
+      "timeline": "_wiki/themes/ai-compute-deals.md",
+      "new_clarification": "Timing/status independently verified from primary announcement; no pricing/closing verification."
+    },
+    "avgo": {
+      "signals": [
+        "supp-20261027-avgo"
+      ],
+      "deal_id": "ANTH-AVGO-CHIP-FIN-20261005",
+      "mail_indices": [
+        143
+      ],
+      "sources": [
+        {
+          "source": "Bank of America, Blackstone, Citi, Morgan Stanley and Broadcom",
+          "source_date": "2026-10-26",
+          "url": "https://investors.broadcom.com/news-releases/news-release-details/bank-america-blackstone-citi-and-morgan-stanley-announce",
+          "path": "relatórios bons/Bank_of_America_Blackstone_Citi_and_Morgan_Stanley_Announce_Landmark_63_Billion_Financing_Structure_to_Enable_AI_Compute.html"
+        }
+      ],
+      "page": "_wiki/AVGO.md",
+      "timeline": "_wiki/themes/ai-compute-deals.md",
+      "status": "Same financing announcement already recorded October 26; not an additional commitment or newly confirmed closing."
+    },
+    "cdns": {
+      "signals": [
+        "supp-20261027-cdns"
+      ],
+      "mail_indices": [
+        111
+      ],
+      "sources": [
+        {
+          "source": "Cadence October 26 results",
+          "source_date": "2026-10-26",
+          "url": "https://investor.cadence.com/news/news-details/2026/Cadence-Reports-Third-Quarter-2026-Financial-Results/default.aspx"
+        },
+        {
+          "source": "Cadence CFO John Wall Q2 earnings call",
+          "source_date": "2026-07-27",
+          "path": "CDNS/transcripts/CDNS_Q2-2026-earnings_2026-07-27.md",
+          "scope": "Recurring revenue Q&A only"
+        }
+      ],
+      "page": "_wiki/CDNS.md",
+      "broker_date_note": "JPM dated by October 27 received email; no separate full report cover reviewed."
+    },
+    "orcl": {
+      "signals": [
+        "cata-9f2e588078f2",
+        "supp-20261027-orcl"
+      ],
+      "mail_indices": [
+        318
+      ],
+      "sources": [
+        {
+          "source": "MS credit / Lindsay Tyler and Benjamin Guerrero",
+          "source_date": "2026-10-26",
+          "scope": "Email preview, not full report"
+        },
+        {
+          "source": "JPM / Samik Chatterjee",
+          "source_date": "2026-10-20",
+          "path": "_wiki/_meta/reconciliation-2026-10-23-inbox.md"
+        },
+        {
+          "source": "GS / Gabriela Borges",
+          "source_date": "2026-10-22",
+          "path": "_wiki/_meta/reconciliation-2026-10-23-inbox.md"
+        }
+      ],
+      "page": "_wiki/ORCL.md"
+    },
+    "stx": {
+      "signals": [
+        "supp-20261027-stx"
+      ],
+      "source": "Seagate official date announcement",
+      "source_date": "2026-10-14",
+      "checked": "2026-10-27",
+      "url": "https://www.seagate.com/gb/en/stories/articles/seagate-technology-to-report-fiscal-first-quarter-2027-financial-results-on-october-27-2026-pr/",
+      "action": "Freeze pricing, supply and cash questions; not a fresh earnings result."
+    },
+    "goog": {
+      "signals": [
+        "esti-dd4426e16a80",
+        "esti-15ef070a2d09"
+      ],
+      "sources": [
+        "_wiki/GOOG.md (October 15 JPM gross/ex-TAC annotation)",
+        "_wiki/_data/house.json",
+        "_wiki/_data/estimates.json"
+      ],
+      "prior_review": "_wiki/_meta/analyst-evidence/2026-10-26-morning-source-checks.json"
+    }
+  },
+  "calendar_checks": [
+    {
+      "company": "CLS",
+      "event": "Earnings call and analyst day",
+      "date": "2026-10-27",
+      "time": "08:00 ET earnings call",
+      "sources": [
+        "https://corporate.celestica.com/node/17881",
+        "JPM / Cardoso October 26 email, archive index 186"
+      ]
+    },
+    {
+      "company": "STX",
+      "event": "Results after close, call",
+      "date": "2026-10-27",
+      "time": "17:00 ET",
+      "source_date": "2026-10-14",
+      "url": "https://www.seagate.com/gb/en/stories/articles/seagate-technology-to-report-fiscal-first-quarter-2027-financial-results-on-october-27-2026-pr/"
+    },
+    {
+      "company": "ORCL",
+      "event": "Investor day",
+      "date": "2026-10-28",
+      "url": "https://investor.oracle.com/Financial-Analyst-Meeting-2026/default.aspx",
+      "checked": "2026-10-27"
+    },
+    {
+      "company": "GOOG",
+      "event": "Results",
+      "date": "2026-10-28",
+      "source": "JPM / Doug Anmuth October 26 email, yesterday's archived source checks"
+    },
+    {
+      "company": "AMZN",
+      "event": "Results",
+      "date": "2026-10-29",
+      "source": "October 15 company release checked in October 26 morning source archive"
+    },
+    {
+      "company": "MEDIATEK",
+      "event": "English results call",
+      "date": "2026-10-30",
+      "source": "Company IR calendar checked October 26, yesterday's source archive"
+    }
+  ],
+  "selected_mail_bodies": [
+    {
+      "archive_index": 111,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWgU6bFAAA=",
+      "subject": "JPM Semis | Cadence Design Systems: Strong Results/Guide on Record Backlog and Agentic AI Proof Points Reinforcing Increased EDA Usage Thesis; Reit OW, PT Raised to $420",
+      "receivedDateTime": "2026-10-27T04:57:31Z",
+      "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWgU6bFAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "body_reviewed": "| |  | North America Equity Research  \n---|---  \n  \n# Cadence Design Systems\n\n## Strong Results/Guide on Record Backlog and Agentic AI Proof Points\nReinforcing Increased EDA Usage Thesis; Reit OW, PT Raised to $420\n\n  \n---  \n  \nBy Harlan Sur\nAC,\nAkanksh\nChauhan,\nMayur\nRamdhani,\nApoorva\nKumar\n\nClick here for the full document and\ndisclaimers\n\n| Overweight  \n---  \nCDNS, CDNS US  \nPrice (26 Oct 26):$322.17  \n**▲** Price Target (Dec-27):$420.00  \nPrior (Dec-27):$405.00  \n  \nCadence’s (CDNS) 3Q26 beat and raise on the FY26 guide point to continued\nstrong chip design activity and monetization of its AI agentic portfolio of\nproducts. 3Q revenue (+22% y/y) and EPS both came in above the high end of\nguidance, with backlog exiting the quarter at a record $8.2B (fifth\nconsecutive quarter of backlog growth). Growth was up double-digit % across\nall product groups, with core EDA up 20% y/y, IP up 24%, SD&A up 30%, and\nhardware product sales driving another record quarter. Growth drivers included\nAI/HPC chip/ASIC design activity, advanced-node and chiplet/advanced packaging\nadoption, and expanded commitments from several large semiconductor and\nsystems customers. At the midpoint, the updated FY26 outlook now implies ~21%\ny/y revenue growth and ~$8.40 in EPS (vs. ~19% and ~$8.10 prior). YTD bookings\ngrowth of 26% and recurring revenue trending 18% y/y (versus 10-11% last\nyear), suggest that AI/agent portfolio licensing add-on activity and deeper\ncustomer engagements are driving growth. On the product side, the key\nannouncement from the print was Maestro, a family of AI models built\nspecifically for semiconductor and system design work that delivers up to 30%\nhigher quality and up to 5x greater token efficiency vs. general-purpose\nclosed foundation models. Customer traction is accelerating, as CDNS now has\n100+ active engagements across all its AI agents, up from 45+ for ChipStack\nand ViraStack combined last quarter. We believe these proof points support\nmanagement’s framing that agentic AI drives more, not less, usage of its core\nEDA engines. CDNS also increased capital returns, doubling its quarterly\nbuyback to $400M and adding $2.5B to its repurchase authorization. While\nHexagon D&E will still be a drag on FY26 incremental margins, management\nexpects integration work to make it margin-accretive in 2027. Net-net, we\nbelieve the clean beat-and-raise, record backlog, and evidence of agentic AI\nmoving into production should drive further upward estimate revisions and add\nto confidence in CDNS’s medium-term growth outlook. As such, we reiterate our\nOW rating and raise our CY26 and CY27 estimates and our Dec-27 PT to $420\n(from $405), based on 43x our CY27 EPS estimate of $9.85, in line with\ncomparable tech/design software/IP peers.\n\n  * 3Q26 results came in above the high end of guidance on broad-based, double-digit growth across all product groups, with backlog reaching a record high… CDNS exited 3Q with a record backlog of $8.2B (vs. $8.1B in 2Q) and reported 3Q revenues of $1.63B (+22% y/y, +3% q/q), above the high end of its $1.595-$1.625B guide and our $1.61B estimate. Strength was broad-based across all lines of business. Core EDA grew 20% y/y on 16 new digital full-flow wins and rising verification usage at hyperscaler and memory customers; hardware delivered another record quarter on sustained AI/HPC demand for Palladium and Protium; IP grew 24% y/y on custom silicon, advanced-node, and chiplet demand; and SD&A grew 30% y/y, supported by Millennium adoption and Allegro competitive displacement. EPS of $2.11 (+9% y/y) also came in above guidance and our $2.04 estimate. Operating margin of 44.1% also beat guidance and was roughly in line with our ~44.0% estimate, though down from 47.6% a year ago, partly reflecting the lower-margin Hexagon D&E contribution. \n  * 4Q guide well ahead of our prior estimates, and FY26 guidance is raised to 21% y/y growth… For 4Q26, CDNS guided revenue to $1.71B at the midpoint (+19% y/y, +5% q/q) and EPS to $2.22, both well above our prior estimates of $1.63B and $2.00. For FY26, the revenue guide moved up to a $6.40B midpoint (from $6.30B prior), which implies ~21% y/y growth. CDNS also raised its EPS guide to a midpoint of $8.40 (from $8.10 prior), and guided OPM to 44.7% at the midpoint, with operating cash flow unchanged at ~$2B. Although Hexagon D&E is contributing little operating profit this year, management noted that incremental operating margins excluding it remain within CDNS’s typical 54-55% range and expects progress on its integration to make it margin-accretive in 2027. On capital returns, CDNS expects to repurchase ~$400M of shares again in 4Q and to use >50% of FY26 free cash flow for buybacks. \n  * Raising CY26/CY27 estimates and increasing our PT to $420… Given the strong results and guidance, we are increasing our CY26 and CY27 estimates and raising our Dec-27 price target to $420. Our PT assumes CDNS trades at 40-45x (43x) our CY27 EPS estimate of ~$9.85, in line with comparable peers in the tech/design software IP space. \n\n\n\nClick here for the full document and\ndisclaimers  \n  \n---  \n  \nSemiconductors & Semiconductor Capital Equipment / IT Hardware\n\nHarlan Sur\nAC\n\n(1-415) 315-6700\n\nharlan.sur@jpmorgan.com\n\nJ.P. Morgan Securities LLC\n\n  \n\nAkanksh\nChauhan\n\n(1-212) 622-0045\n\nakanksh.chauhan@jpmorgan.com\n\nJ.P. Morgan Securities LLC\n\n  \n\nMayur\nRamdhani\n\n(1-212) 622-1664\n\nmayur.ramdhani@jpmorgan.com\n\nJ.P. Morgan Securities LLC\n\n  \n\nApoorva\nKumar\n\n(1-212) 270-0668\n\napoorva.kumar@jpmorgan.com\n\nJ.P. Morgan Securities LLC\n\n  \n  \n  \n---  \n  \nVisit **_J.P. Morgan\nMarkets_**\nfor more market-leading research and financial solutions across the full trade\nand investment lifecycle.\n\nGo to **_My\nResearch_**\nwhere the award-winning J.P. Morgan research that you receive in your inbox is\nintelligently structured into your personalized view.\n\n_You received this e-mail because the content matches one of your saved\npreferences.  \nYou can modify your preferences or subscription\n**_here_**._\n\nIf you no longer wish to receive these e-mails then click here to\nunsubscribe|\n**www.jpmorganmarkets.com**  \n---|---  \n  \nHistory of Investment Recommendations:  \n​A history of J.P. Morgan investment recommendations disseminated during the\npreceding 12 months can be accessed on the Research & Commentary page of\nhttp://www.jpmorganmarkets.com\nwhere you can also search by analyst name, sector or financial instrument.\n\nJ.P. Morgan Research may, from time to time, write on issuers"
+    },
+    {
+      "archive_index": 138,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWgU6arAAA=",
+      "subject": "Celestica Inc.: First Take: Q3 Beat; FY27 Guidance Raised with Promising FY28 Outlook",
+      "receivedDateTime": "2026-10-27T01:41:45Z",
+      "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWgU6arAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "body_reviewed": "| | | |   \n---  \n| | | Hello, Felipe  \n---  \n| | | |   \n---  \n| Equity Research  |  IT Hardware and Communications Equipment  \n---  \nCelestica Inc.  \nFirst Take: Q3 Beat; FY27 Guidance Raised with Promising FY28\nOutlook  \nCLS Q3 results delivered a top line and EPS beat, with higher OM and lower GM\nthan our estimates. FY27 outlook raised with 90% top line growth and OM and\nEPS guidance higher than our expectations. Meaningfully higher customer demand\nforecasts for FY28 than FY27 revenue outlook.  \n| 26 October 2026  |  3 MIN READ   \n---  \n| | | |   \n---|---|---  \n| Read the\nReport|  \n| |   \n| | | |   \n---  \nCLS delivered solid results for 3Q26, with a beat on both revenues, OM, and\nEPS.| •| Revenue of $5.8Bn increased 83% y/y and non​-​GAAP EPS of $3.30 was\nup 109% y/y, which were both higher than the guidance the company gave last Q.\nOperating Margin came in at 8.5% in Q3 (vs. prior Q3 guidance of 8.4%).\nRevenues beat our estimates ($5.5Bn) by ~7% and non​-​GAAP EPS beat our\nestimates of $2.99 by ~11%, respectively.  \n---|---  \n•| Gross margins came in at 11.2%, slightly lower than our estimates of 11.6%\n(missed by 41bps), but operating margins beat by 13bps at 8.5% and also higher\nthan the company's prior Q3 OM guidance of 8.4%.  \n•| Both CCS and ATS revenues beat our expectations. CCS revenues were $4.9Bn\nin the quarter (vs. our estimates of $4.6Bn), with again Enterprise seeing\nsignificant y/y growth of 242%. ...  \n---|---  \n| | | |   \n---|---|---  \n| Continue\nReading|  \n| |   \n|  \n---  \n| | | |   \n---|---|---|---  \n| Celestica Inc ( CLS ) | | | |   \n---|---|---  \n|\n[Overweight|  \n| |   \n| | |   \n| | |   \n| IT Hardware and Communications Equipment| | | |   \n---|---|---  \n|\nNeutral|  \n| |   \n| Price Target| USD\n406.00|  \n| Price (26-Oct-26)| USD\n246.65  \n|  \n| Potential Upside/Downside|\n+64.6%  \n|  \n| | | ](https://barclaysresearch.email.streetcontxt.net/platform/al?a=14283035&ad=5060414354&h=hJTeGh5&sig=2MFhjnimHboh3APjSpGYGjFoQiZ&v=2&url=https://live.barcap.com/go/research/equitycompany/CLS)  \n---  \nSource: Bloomberg, Barclays Research  \n| | | |   \n---|---|---  \n| | | |   \n---|---|---  \n| IT Hardware and Communications Equipment|  \n| |   \n| | | | | Tim Long  \n+1 212 526 4043  \nBCI, US  \n---|---|---  \n| | | | Mary Lenox  \n+1 212 526 6277  \nBCI, US  \n---|---|---  \n| |   \n| | | | | Clarisse Yu  \n+1 212 526 7025  \nBCI, US  \n---|---|---  \n| |   \n| |   \n| | | |   \n---|---|---  \n| Scan code to view the report|  \n| |  \n| |   \n| | | |   \n---|---|---  \n| Barclays Capital Inc. and/or one of its affiliates does and seeks to do\nbusiness with companies covered in its research reports. As a result,\ninvestors should be aware that the firm may have a conflict of interest that\ncould affect the objectivity of this report. Investors should consider this\nreport as only a single factor in making their investment decision.For analyst\ncertifications and important disclosures including, where applicable, foreign\naffiliate disclosures, and the date and time when the production of each\nrecommendation was completed and first disseminated, please refer to the full\ndocument(s) attached or included by hyperlink in this email.Completed:\n27-Oct-26, 01:36 GMT   Released: 27-Oct-26, 01:41 GMT|  \n| |   \n| | | | |   \n---|---|---  \n| Unsubscribe from this email   |   Manage your subscriptions   |     \nView this email in\nbrowser|  \n| |   \n  \n| |   \n---|---|---  \n| This e-mail is intended only for the person to whom it was originally sent, and may contain information that is confidential, proprietary, privileged or otherwise protected from disclosure. If you are not an intended recipient of this message, please delete it and any attachments, and notify the sender that you have received it in error. Unless specifically stated in the message or otherwise indicated, you may not duplicate, redistribute or forward this message or any portion thereof, including any attachments, by any means to any other person, including any retail investor or customer. Barclays uses your contact information to deliver information to you and reserves the right, as permitted by applicable law, to monitor electronic communications. Barclays uses cookies and other tracking technologies to collect information about recipients of electronic communications (such as internet protocol addresses). Barclays uses the information collected to monitor the effectiveness, and extent and frequency of usage of our products, and to further improve our products and our relationships with our clients. This message is not a recommendation, advice, offer or solicitation, to buy/sell any product or service, and is not an official confirmation of any transaction. Any opinions presented are solely those of the author and do not necessarily represent those of Barclays. This message is subject to terms available at: https://www.barclays.com/emaildisclaimer. By messaging with Barclays you consent to the foregoing. Barclays Bank PLC, a company registered in England (number 1026167) with its registered office at 1 Churchill Place, London, E14 5HP. This email may relate to or be sent from other members of the Barclays group.View how we use personal information: Privacy Policy | Cookies Policy|   \n| |   \n\n\n\n\n\n"
+    },
+    {
+      "archive_index": 143,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWgU6aoAAA=",
+      "subject": "UBS: First Read: Broadcom Inc. \"AVGO Announces Another AI Financing Vehicle\" (Buy)",
+      "receivedDateTime": "2026-10-27T01:28:44Z",
+      "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWgU6aoAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "body_reviewed": "AVGO announced another AI financing vehicle, adding to the already existing\nagreement with Apollo/Blackstone, and bringing its total exposure to ~$70-75B.  \n|  |  | Global Research   \n26 October 2026  \n---|---|---  \n| Broadcom Inc.| ●| (AVGO.O) Buy|  \n---|---|---|---  \n| AVGO Announces Another AI Financing\nVehicle  \n---  \n| AVGO announced another AI financing vehicle, adding to the already existing\nagreement with Apollo/Blackstone, and bringing its total exposure to ~$70-75B.  \n  \n| | Read Report   > |   \n---|---  \n| Post close, AVGO and several banks announced\nanother financing\nvehicle for Anthropic – this one is a $63B structure for shipments in C2027,\nfor which AVGO is providing residual value support (RVS) of ~72.5% of this\namount, and its exposure declining over time as lease payments are made. This\nis in addition to the previously announced $35B structure with Apollo and\nBlackstone covering >1GW in C2026 shipments, for which AVGO is providing RVS\nfor 80% of the deal value. RVS is not a cash outlay, but it does bring total\nexposure to ~$70-75B. AVGO is neither the lender nor the borrower, and only\ncollects a fee (likely a few 100bps) for providing the RVS. Valuation: PT $470\n(unchanged) Our PT of $470 is based on ~17x EV/FCF applied to CY27E Software\nFCF contribution of$31.2B and ~30x EV/FCF applied to CY27E Semis FCF\ncontribution of $60.4B.  \n---  \n| \n| Timothy Arcuri,\nAnalyst  \ntimothy.arcuri@ubs.com  \n+1-415-352 5676  \n---|---  \n| Seth Cho, Associate Analyst  \nseth.cho@ubs.com  \n  \n---  \n| \n| Gianmarco Vella,\nAssociate Analyst  \ngianmarco.vella@ubs.com  \n+1-415-352 4555  \n---|---  \n| Stacy Che, Associate Analyst  \nstacy.che@ubs.com  \n+1-212-713 1857  \n---  \n| UBS does and seeks to do business with companies covered in its research\nreports. As a result, investors should be aware that the firm may have a\nconflict of interest that could affect the objectivity of such reports.\nInvestors should consider research reports as only a single factor in making\ntheir investment decision. Important information including analyst\ncertification and required disclosures regarding specific companies,\nderivatives or other instruments discussed in the email, is included in the\nrelevant latest research report, attached and/or hyperlinked to this email.\nThis email is to be read in conjunction with such information. Such reports\nare provided to our clients through UBS Neo, the UBS Client Portal and\nUBS.com.You should also refer to the public disclosures website at\nhttp://www.ubs.com/disclosures\nfor required disclosures regarding specific companies.  \n  \nThe message is subject to the Global Research Disclaimer available at\nhttp://www.ubs.com/disclosures.  \n---  \n| This email is intended for\nfelipe.monteiro@capstone.com.br  \nPlease log in with this email address if prompted (or contact your UBS sales\nrepresentative to update it). Not you? Please log in with your email address\nregistered with UBS Research.  \n---  \nTo manage your subscriptions, click\nhere\nor contact your UBS Sales or Research representative.  \n---  \n\n\n"
+    },
+    {
+      "archive_index": 186,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWgU6aEAAA=",
+      "subject": "JPM | Hardware & Networking | CLS: 3Q26 Quick Take: 2027 Outlook Raises the Bar, but FCF Questions Linger",
+      "receivedDateTime": "2026-10-26T22:48:16Z",
+      "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWgU6aEAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "body_reviewed": "| |  | North America Equity Research  \n---|---  \n  \n# Celestica\n\n## 3Q26 Quick Take: 2027 Outlook Raises the Bar, but FCF Questions Linger\n\n  \n---  \n  \nBy Joseph Cardoso\nAC,\nManmohanpreet\nSingh,\nMarc\nVitenzon\n\nClick here for the full document and\ndisclaimers\n\n| Overweight  \n---  \nCLS, CLS US  \nPrice (26 Oct 26):$246.65  \n  \nCelestica’s 3Q26 results and updated 2027 outlook continue to point to a\nrobust demand environment and further room to expand operating margins, which\nwe expect to be well received by investors. That said, the lingering question\nheading into the earnings call and analyst day is likely to be working capital\nrequirements and FCF into 2027 and beyond.\n\nFor 3Q26, revenue of $5.8 bn came in above JPMe, consensus, and the high end\nof the guidance range, driven by particularly strong Compute & Storage demand.\nMeanwhile, the 4Q26 guide was more mixed as revenue tracked below JPMe and was\nlargely in line with consensus, operating margins were modestly better than\nboth JPMe and consensus, and earnings came in softer than both heading into\nthe print. Separately, management lowered FCF guidance to $460 mn in 2026 (vs.\nJPMe of $466 mn and prior guidance of $600mn), citing “targeted working\ncapital investments to support the accelerating growth in 2027.”\n\nLooking ahead to 2027, revenue is guided to $40 bn, or +90% y/y, well ahead of\nboth JPMe and consensus as management reinforced the strength of demand by\nnoting that its 2028 forecast is “meaningfully higher” than the 2027 outlook.\nOperating margin guidance for 2027 also came in ahead of JPMe and consensus,\ntogether supporting solid EPS upside relative to consensus. Notably, the press\nrelease did not include FCF guidance for 2027, following a reduction to FCF\nguidance for 2026, which is likely to be an area of focus heading into the\nearnings call and analyst day.\n\nCelestica is hosting an earnings call tomorrow at 8:00 AM ET, which can be\naccessed via\nwebcast.\n\nFigure 1: 3Q26 Results vs. JPMe and Consensus\n\n$ in Millions\n\n\n\nSource: Company reports, Bloomberg Finance L.P. and J.P. Morgan estimates.\n\nFigure 2: 4Q26 Guide vs. JPMe and Consensus\n\n$ in Millions\n\n\n\nSource: Company reports, Bloomberg Finance L.P. and J.P. Morgan estimates.\n\nFigure 3: 2026 Guide vs. JPMe and Consensus\n\n$ in Millions\n\n\n\nSource: Company reports, Bloomberg Finance L.P. and J.P. Morgan estimates.\n\nFigure 4: 2027 Guide vs. JPMe and Consensus\n\n$ in Millions\n\n\n\nSource: Company reports, Bloomberg Finance L.P. and J.P. Morgan estimates.\n\n#\n\nClick here for the full document and\ndisclaimers  \n  \n---  \n  \nIT Hardware/ Telecom & Networking Equipment\n\nJoseph Cardoso\nAC\n\n(1-212) 622-9036\n\njoseph.cardoso@jpmchase.com\n\nJ.P. Morgan Securities LLC\n\n  \n\nManmohanpreet\nSingh\n\n(1-212) 622-4527\n\nmanmohanpreet.singh@jpmchase.com\n\nJ.P. Morgan Securities LLC\n\n  \n\nMarc\nVitenzon\n\n(1-212) 622-3342\n\nmarc.vitenzon@jpmchase.com\n\nJ.P. Morgan Securities LLC\n\n  \n  \n  \n---  \n  \nVisit **_J.P. Morgan\nMarkets_**\nfor more market-leading research and financial solutions across the full trade\nand investment lifecycle.\n\nGo to **_My\nResearch_**\nwhere the award-winning J.P. Morgan research that you receive in your inbox is\nintelligently structured into your personalized view.\n\n_You received this e-mail because the content matches one of your saved\npreferences.  \nYou can modify your preferences or subscription\n**_here_**._\n\nIf you no longer wish to receive these e-mails then click here to\nunsubscribe|\n**www.jpmorganmarkets.com**  \n---|---  \n  \nAnalyst Certification: The Research Analyst(s) denoted by an “AC” on the cover\nof this report certifies (or, where multiple Research Analysts are primarily\nresponsible for this report, the Research Analyst denoted by an “AC” on the\ncover or within the document individually certifies, with respect to each\nsecurity or issuer that the Research Analyst covers in this research) that:\n(1) all of the views expressed in this report accurately reflect the Research\nAnalyst’s personal views about any and all of the subject securities or\nissuers; and (2) no part of any of the Research Analyst's compensation was,\nis, or will be directly or indirectly related to the specific recommendations\nor views expressed by"
+    },
+    {
+      "archive_index": 310,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAQqMvDhAADBpLwblpT0TZ_t-vz7Ao6sAAWgVKjgAAA=",
+      "subject": "META US: Meta Platforms Inc - Anticipation becomes a reality, Meta announces equity raise - BUY - United States",
+      "receivedDateTime": "2026-10-26T17:53:31Z",
+      "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAQqMvDhAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWgVKjgAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "body_reviewed": "|   \n---|---  \n|  \n---  \nMeta Platforms Inc  \n---  \nAnticipation becomes a reality, Meta announces equity\nraise  \n---  \n| | Reiterate Rating: BUY  \n---  \nPO:845.00 USD   |   Price:638.06 USD  \n| Equity   |   26 October 2026  \n---  \n---  \n---  \n---  \nKey takeaways  \n---  \n  \n  * Meta plans to raise approx. $35bn through Class A stock and convertible preferred, plus up to $60bn through a Class C ATM.\n  * The magnitude of financing suggests upside risk Street capex estimates; we also est. up to 6% dilutive to EPS.\n  * We think a raise was expected, and stock performance from here will depend on traction for AI initiatives; Maintain Buy.\n\n  \n---  \n| FULL REPORT|     |   \n---|---|---  \n  \n* * *  \n  \n---  \n  \nMeta plans to raise up to $100bn in capital\n\nMeta announced plans that could raise up to $95-$100bn, including $22.5bn\nClass A common stock, ~$12.5bn mandatory convertible preferred and an up to\n$60bn Class C ATM program expected to begin no earlier than 1Q'27\\. The Class\nA and preferred offerings also include 15% greenshoe options, potentially\nincreasing the initial raise by $5bn. Bloomberg reported the preferred could\ncarry a 6.5% dividend and 17.5%-22.5% conversion premium. Meta also noted that\nNVIDIA, AMD and Broadcom have indicated interest in purchasing up to $5bn of\nClass A offering. Meta intends to use the proceeds for general corporate\npurposes, including continued investment in AI infrastructure. Our Take: For\nuse of equity vs debt, our high-level analysis suggests that a ~$100bn debt\nraise at 7% interest could be 6.8% dilutive to 2027 EPS, while raising similar\namount in equity at average price of ~$640, or ~157mn shares, would only be\n6.5% dilutive. Assuming $95bn is raised at a stock price at around $640 (and\nincluding the convertible stock as equity), we estimate Meta would issue\nroughly 150mn shares, which would be ~6% dilutive to EPS, or up to ~$2\nnegative impact to our 2027 EPS estimates of $34.00.\n\nFinancing signals ongoing infrastructure investment cycle\n\nIn the press release, Meta highlighted that it is building four 1GW+\nsuperclusters and expects to nearly double infrastructure capacity y/y in 2026\n(we estimated that Meta started the year with 3-3.5GW). The company also\nreiterated its growing AI opportunities across consumer and enterprise, with\nearly product adoption and multiple emerging monetization opportunities\nsupporting demand for incremental compute capacity. Our Take: We estimate\n$210bn in capex and $32bn in negative FCF in 2027 (we think some on buyside\nare around $240bn in capex, and others are even higher). The financing\npotentially being raised at $95bn suggests higher capex than BofA/Street\nestimates in 2027.\n\nHigher capital intensity increases focus on returns\n\nAn equity raise was expected, in our view, and announcement clears up some\nuncertainty on magnitude and timing. Key investor concerns are likely to\ninclude: 1) higher and potentially more persistent capex, with the financing\nraising questions around the magnitude of investment beyond 2027 (Street\ncurrently estimates 2027/2028 capex of ~$216bn/$235bn), 2) dilution overhang\nfrom the planned up to $60bn Class C ATM program, and 3) the risk that AI\ninfrastructure investment scales faster than monetization, pressuring FCF and\nmargins near term. We think the key debate will increasingly center on whether\nincremental AI monetization can scale fast enough to support a structurally\nhigher investment base, with Muse adoption, Business Agent monetization and\nenterprise AI likely key proof points. We also think Meta will continue to\npush the ad business to support the stock price. Given a big AI opportunity\nahead, we maintain our Buy rating.\n\n\n\n\n\n  \n\n| | Justin Post    \nResearch Analyst  \nBofAS  \n+1 415 676 3547  \n  \n---|---  \n| Nitin Bansal, CFA    \nResearch Analyst  \nBofAS  \n+1 415 676 3551  \n  \n---|---  \n---  \nThis report is intended for Felipe Monteiro  \nClick\nhere\nto subscribe to similar content from BofA Global Research.  \n---  \n| Read the research report for complete information including important\ndisclosures and analyst certification(s).  \n---  \nThe research report and the link to such report are for the use of BofA\nSecurities customers only or Merrill Global Wealth Management customers only\nand all copying, redistribution, retransmission, publication, and any other\ndissemination or use of the contents thereof are prohibited. There may be more\nrecent information available. Please visit one of the electronic venues that\ncarry BofA Global Research reports or contact your BofA Securities\nrepresentative or Wealth Management representative for further information.\n\"BofA Securities\" is the marketing name for the global banking and global\nmarkets businesses of Bank of America Corporation.  \nIn addition, this message may contain information that is privileged,\nconfidential and/or proprietary and subject to important terms and conditions\navailable at our Electronic Communications Disclaimers\npage. If you are not the\nintended recipient, please delete this message. You may be contacted by a\ndifferent BofA Securities entity acting for and on behalf of your service\nprovider where permitted by applicable law. This does not change your service\nprovider. Please use the email disclaimer link above for further information.  \nFor more information about how Bank of America protects your privacy,\nincluding specific rights that may apply, please visit our Institutional\nprivacy page (which includes global privacy notices) and our Consumer\nprivacy page (which includes US State specific privacy notices such as the\nCalifornia Consumer Privacy Act notice).  \nPublication: 2450199- 13034080 .pdf  \n| Recipient: Felipe Monteiro  \n---  \nhttps://rsch.baml.com/r?q=KsYv5l1BiZpCYNeD00HeWw__&e=felipe.monteiro%40capstone.com.br&h=Ik5r4Q\n  \n\n\n"
+    },
+    {
+      "archive_index": 318,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWgU6YeAAA=",
+      "subject": "TMT Credit Research: ORCL Credit: What Happens in Vegas Won't Stay in Vegas",
+      "receivedDateTime": "2026-10-26T17:37:12Z",
+      "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWgU6YeAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "body_reviewed": "| | | |   \n---  \n  \n---  \n| | |   \n---  \nTMT Credit Research  \nORCL Credit: What Happens in Vegas Won't Stay in Vegas  \n| | Read Full Report  \n---  \n(PDF: 9 Pages)  \n---  \n| North America  \n---  \nLindsay A Tyler, Benjamin Guerrero  \nOctober 26, 2026  \n---  \n| | | ORCL will host its Investor Day this Wednesday, October 28, at AI World in Las Vegas. We preview our expectations and key items to watch from the credit lens.   \n---  \n| | Key takeaways  \n---  \n  \n  * Historical rally-then-reverse patterns suggest potential near-term relief with event, though same-day FOMC and hyperscaler earnings may complicate reaction. \n  * We maintain a medium-term cautious view; ORCL's credit story is not just about securing financing, but also leverage, contract mismatch, execution, counterparty risks. \n  * We expect IG and ~$40bn FY27 funding reiterations, alongside limited LT clarity & a list of financing options to try to appeal to both debt & equity investors. \n  * We look for updates on RPO growth and quality, ambitious FY30 targets, and the timing of a consolidated FCF inflection. \n  * Key buildout watch items include contract economics, prepayments and financing support, new leases, and delivery delay risks. \n\n  \n  \nRead more next: Investor Day Preview From Credit Lens  \n  \nOther recent related content:  \n\\- ORCL Credit: Higher Rates, Higher Stakes (16 Oct\n2026)  \n\\- ORCL Credit: Chips Ahoy! A New Funding Vessel for Navigating the Next AI\nFinance Wave (8 Oct\n2026)\n(chip lease SPV news)  \n\\- ORCL Credit: Lighthouse in the Fog (30 Sep\n2026)\n(WI site delay)  \n\\- TMT Credit, Clean Tech Energy, Corporate/Securitized Credit Strategy:\nProject Jupiter Drifts Off Orbit – The Gravity of Force Majeure (25 Sep\n2026)\n(ORCL NM site delay)  \n\\- ORCL Credit: Off Balance Sheet, On the Rise – FY1Q27 10-Q Highlights (11\nSep\n2026)  \n\\- ORCL Credit: New Bookings, Old Bills – FY1Q27 Quick Takes (11 Sep\n2026)\nRead\nmore...  \n  \n---  \nAuthors  \n---  \n|\nMorgan Stanley & Co. LLCLindsay A Tyler+1 212 761-2734       EMAIL\n  \n---|---  \n|\nMorgan Stanley & Co. LLCBenjamin Guerrero+1 212 761-3623       EMAIL\n  \n---|---  \n| \n  \n---  \nSubscription details  \nYou received this email because of alerts set for your saved search(es):\nOracle Corporation  \n  \nUnsubscribe or suspend your email\nalerts.  \nMorgan Stanley & Co. LLC  \nFor important information including analyst certification and disclosures\nregarding specific companies, derivatives, or other instruments discussed in\nthis e-mail, please refer to the latest research report, if attached and/or\nhyperlinked to this email, or by logging on to Morgan Stanley's Matrix portal\nat <http://www.morganstanley.com/matrix>. You may also refer to the Morgan\nStanley Research Disclosure Website at\n<http://www.morganstanley.com/eqr/disclosures/webapp/generalresearch>.Morgan\nStanley will make certain research products and announcements available only\non Morgan Stanley's Matrix platform. For access to Matrix, please contact your\nsales representative or go to Matrix at\n<http://www.morganstanley.com/matrix>.Morgan Stanley is not acting as a\nmunicipal advisor and the opinions or views contained herein are not intended\nto be, and do not constitute, advice within the meaning of Section 975 of the\nDodd-Frank Wall Street Reform and Consumer Protection Act. If you have\nreceived this communication in error, please destroy all electronic and paper\ncopies and notify the sender immediately. Mistransmission is not intended to\nwaive confidentiality or privilege. Morgan Stanley reserves the right, to the\nextent permitted under applicable law, to monitor electronic communications.\nThis message is subject to terms available at the following link:\n<http://www.morganstanley.com/disclaimers>. If you cannot access these links,\nplease notify us by reply message and we will send the contents to you. By\nmessaging with Morgan Stanley you consent to the foregoing.  \n© 2026 Morgan Stanley. All rights reserved  \n  \n\n\n"
+    }
+  ],
+  "changes": {
+    "company_pages_edited": false,
+    "house_models_edited": false,
+    "theme": "Appended Meta primary-source cash-timing clarification under existing deal ID and Changelog; preserved broker vintage.",
+    "outcomes": "Added CLS/CDNS narrow neutral outcomes and Meta status follow-up, not a second contradictory verdict."
+  },
+  "verification_hashes_before": [
+    {
+      "Path": "\\\\capsrv01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\META.md",
+      "Hash": "AD1CC3B40C905661E882FCB8A85B79122EA2C28E87A169F49E0D36262700117B"
+    },
+    {
+      "Path": "\\\\capsrv01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\AVGO.md",
+      "Hash": "E64648BC297E34593F8BB65B99590C1E9EF33DC91B09011128783AD95590829D"
+    },
+    {
+      "Path": "\\\\capsrv01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\ORCL.md",
+      "Hash": "567F7E8B9E7603533713787E6BF020A8B979133E2AD83E6369FF3841C0E5A33F"
+    },
+    {
+      "Path": "\\\\capsrv01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\CDNS.md",
+      "Hash": "2085BD2EE12B57EFAE6E7BD0E0AB9783C0CBE90253E92454940FB8F7D5DDE603"
+    },
+    {
+      "Path": "\\\\capsrv01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\FLEX.md",
+      "Hash": "CC16785E81507617C27DD08EAFFDD43A3D54032AE93DCC6E7F3F0AA6C320CB7F"
+    },
+    {
+      "Path": "\\\\capsrv01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\NVDA.md",
+      "Hash": "7C90CF2F4FC75C774D7DEB8B0DBB8A52B3C7E4A4C4815E01D9F6ED2C43CEF2F3"
+    },
+    {
+      "Path": "\\\\capsrv01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\_data\\house.json",
+      "Hash": "271A52129D79B58E3D009BA3C17A17575EF55CC5276A65CDA0BD073367036D69"
+    }
+  ]
+}

@@ -1,0 +1,762 @@
+{
+  "source": "Broker forecasts distributed through Bloomberg, pulled from local Desktop API",
+  "retrieved_at": "2026-10-27T19:38:24.120967-03:00",
+  "period": "Year ending December 2028",
+  "security": "GOOGL US Equity",
+  "override": "28Y",
+  "units": "USD per share",
+  "consensus": [
+    {
+      "ticker": "GOOG US Equity",
+      "field": "BEST_EPS",
+      "value": 19.851
+    },
+    {
+      "ticker": "GOOGL US Equity",
+      "field": "BEST_EPS",
+      "value": 19.851
+    },
+    {
+      "ticker": "GOOGL US Equity",
+      "field": "BEST_EPS_GAAP",
+      "value": 18.4065909091
+    }
+  ],
+  "sources": {
+    "adjusted": {
+      "field": "BEST_EPS_BRK_GRID",
+      "raw_file": "\\\\CAPSRV01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\_data\\research\\GOOGL_2028_BEST_EPS_BRK_GRID_2026-10-27.json",
+      "period_header": {
+        "Broker": "Broker",
+        "Analyst": "Analyst",
+        "Date of Estimate": "Date",
+        "Current Value": "12/2028",
+        "Current Change": "Change",
+        "Next Value": "12/2029",
+        "Next Change": "Change"
+      }
+    },
+    "gaap": {
+      "field": "BEST_EPS_GAAP_BRK_GRID",
+      "raw_file": "\\\\CAPSRV01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\_data\\research\\GOOGL_2028_BEST_EPS_GAAP_BRK_GRID_2026-10-27.json",
+      "period_header": {
+        "Broker": "Broker",
+        "Analyst": "Analyst",
+        "Date": "Date",
+        "Current Value": "12/2028",
+        "Current Change": "Change",
+        "Next Value": "12/2029",
+        "Next Change": "Change"
+      }
+    }
+  },
+  "brokers": [
+    {
+      "broker": "Bernstein",
+      "adjusted": {
+        "analyst": "Mark Shmulik",
+        "estimate_date": "10/26/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      },
+      "gaap": {
+        "analyst": "Mark Shmulik",
+        "estimate_date": "10/26/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      }
+    },
+    {
+      "broker": "Melius Research LLC",
+      "adjusted": {
+        "analyst": "Benjamin Reitzes",
+        "estimate_date": "10/26/26",
+        "eps_usd": 19.3,
+        "raw_value": "19.300"
+      },
+      "gaap": {
+        "analyst": "Benjamin Reitzes",
+        "estimate_date": "10/12/26",
+        "eps_usd": 19.3,
+        "raw_value": "19.300"
+      }
+    },
+    {
+      "broker": "KGI Securities Co Ltd",
+      "adjusted": {
+        "analyst": "Andrew Cheng",
+        "estimate_date": "10/22/26",
+        "eps_usd": 18.34,
+        "raw_value": "18.340"
+      },
+      "gaap": {
+        "analyst": "Andrew Cheng",
+        "estimate_date": "10/22/26",
+        "eps_usd": 18.34,
+        "raw_value": "18.340"
+      }
+    },
+    {
+      "broker": "UBS",
+      "adjusted": {
+        "analyst": "Stephen Ju",
+        "estimate_date": "10/21/26",
+        "eps_usd": 13.75,
+        "raw_value": "13.750"
+      },
+      "gaap": {
+        "analyst": "Stephen Ju",
+        "estimate_date": "10/21/26",
+        "eps_usd": 13.75,
+        "raw_value": "13.750"
+      }
+    },
+    {
+      "broker": "Rosenblatt Securities Inc.",
+      "adjusted": {
+        "analyst": "Scott Devitt",
+        "estimate_date": "10/21/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      },
+      "gaap": {
+        "analyst": "Scott Devitt",
+        "estimate_date": "10/21/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      }
+    },
+    {
+      "broker": "DZ Bank AG Research",
+      "adjusted": {
+        "analyst": "Ingo Wermann",
+        "estimate_date": "10/21/26",
+        "eps_usd": 18.54,
+        "raw_value": "18.540"
+      },
+      "gaap": {
+        "analyst": "Ingo Wermann",
+        "estimate_date": "10/21/26",
+        "eps_usd": 18.54,
+        "raw_value": "18.540"
+      }
+    },
+    {
+      "broker": "KeyBanc Capital Markets",
+      "adjusted": {
+        "analyst": "Justin Patterson",
+        "estimate_date": "10/19/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      },
+      "gaap": {
+        "analyst": "Justin Patterson",
+        "estimate_date": "10/19/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      }
+    },
+    {
+      "broker": "Deutsche Bank",
+      "adjusted": {
+        "analyst": "Benjamin Black",
+        "estimate_date": "10/16/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      },
+      "gaap": {
+        "analyst": "Benjamin Black",
+        "estimate_date": "10/16/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      }
+    },
+    {
+      "broker": "Wedbush",
+      "adjusted": {
+        "analyst": "Ygal Arounian",
+        "estimate_date": "10/16/26",
+        "eps_usd": 21.57,
+        "raw_value": "21.570"
+      },
+      "gaap": {
+        "analyst": "Ygal Arounian",
+        "estimate_date": "10/16/26",
+        "eps_usd": 18.09,
+        "raw_value": "18.090"
+      }
+    },
+    {
+      "broker": "JP Morgan",
+      "adjusted": {
+        "analyst": "Douglas Anmuth",
+        "estimate_date": "10/15/26",
+        "eps_usd": 21.85,
+        "raw_value": "21.850"
+      },
+      "gaap": {
+        "analyst": "Douglas Anmuth",
+        "estimate_date": "10/15/26",
+        "eps_usd": 17.29,
+        "raw_value": "17.290"
+      }
+    },
+    {
+      "broker": "Citi",
+      "adjusted": {
+        "analyst": "Ron Josey",
+        "estimate_date": "10/14/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      }
+    },
+    {
+      "broker": "BNP Paribas",
+      "adjusted": {
+        "analyst": "Nick Jones",
+        "estimate_date": "10/13/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      },
+      "gaap": {
+        "analyst": "Nick Jones",
+        "estimate_date": "10/12/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      }
+    },
+    {
+      "broker": "HSBC",
+      "adjusted": {
+        "analyst": "Paul Rossington",
+        "estimate_date": "10/12/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      },
+      "gaap": {
+        "analyst": "Paul Rossington",
+        "estimate_date": "10/12/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      }
+    },
+    {
+      "broker": "Cantor Fitzgerald",
+      "adjusted": {
+        "analyst": "Deepak Mathivanan",
+        "estimate_date": "10/10/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      },
+      "gaap": {
+        "analyst": "Deepak Mathivanan",
+        "estimate_date": "10/10/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      }
+    },
+    {
+      "broker": "TD Cowen",
+      "adjusted": {
+        "analyst": "John Blackledge",
+        "estimate_date": "10/07/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      },
+      "gaap": {
+        "analyst": "John Blackledge",
+        "estimate_date": "10/08/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      }
+    },
+    {
+      "broker": "Wells Fargo",
+      "adjusted": {
+        "analyst": "Ken Gawrelski",
+        "estimate_date": "10/06/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      },
+      "gaap": {
+        "analyst": "Ken Gawrelski",
+        "estimate_date": "10/05/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      }
+    },
+    {
+      "broker": "Guggenheim",
+      "adjusted": {
+        "analyst": "Michael Morris",
+        "estimate_date": "10/05/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      },
+      "gaap": {
+        "analyst": "Michael Morris",
+        "estimate_date": "10/06/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      }
+    },
+    {
+      "broker": "Arete Research",
+      "adjusted": {
+        "analyst": "Richard Kramer",
+        "estimate_date": "09/30/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      },
+      "gaap": {
+        "analyst": "Richard Kramer",
+        "estimate_date": "09/30/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      }
+    },
+    {
+      "broker": "MoffettNathanson LLC",
+      "adjusted": {
+        "analyst": "Michael Nathanson",
+        "estimate_date": "09/16/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      },
+      "gaap": {
+        "analyst": "Michael Nathanson",
+        "estimate_date": "07/23/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      }
+    },
+    {
+      "broker": "Oppenheimer",
+      "adjusted": {
+        "analyst": "Jason Helfstein",
+        "estimate_date": "09/10/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      },
+      "gaap": {
+        "analyst": "Jason Helfstein",
+        "estimate_date": "09/10/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      }
+    },
+    {
+      "broker": "Piper Sandler & Co",
+      "adjusted": {
+        "analyst": "Tom Champion",
+        "estimate_date": "08/31/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      },
+      "gaap": {
+        "analyst": "Tom Champion",
+        "estimate_date": "09/28/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      }
+    },
+    {
+      "broker": "New Street Research LLP",
+      "adjusted": {
+        "analyst": "Daniel Salmon",
+        "estimate_date": "08/21/26",
+        "eps_usd": 16.61,
+        "raw_value": "16.610"
+      },
+      "gaap": {
+        "analyst": "Daniel Salmon",
+        "estimate_date": "08/21/26",
+        "eps_usd": 16.61,
+        "raw_value": "16.610"
+      }
+    },
+    {
+      "broker": "China Merchants Securities Co.",
+      "adjusted": {
+        "analyst": "Richard Ko",
+        "estimate_date": "07/31/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      }
+    },
+    {
+      "broker": "Daiwa Securities",
+      "adjusted": {
+        "analyst": "Satoshi Tanaka",
+        "estimate_date": "07/28/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      },
+      "gaap": {
+        "analyst": "Satoshi Tanaka",
+        "estimate_date": "07/28/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      }
+    },
+    {
+      "broker": "GF Securities Co. Ltd.",
+      "adjusted": {
+        "analyst": "Shi Kuang",
+        "estimate_date": "07/27/26",
+        "eps_usd": 18.32,
+        "raw_value": "18.320"
+      },
+      "gaap": {
+        "analyst": "Shi Kuang",
+        "estimate_date": "07/27/26",
+        "eps_usd": 18.32,
+        "raw_value": "18.320"
+      }
+    },
+    {
+      "broker": "Guosen Securities Co., Ltd",
+      "adjusted": {
+        "analyst": "Lunke Zhang",
+        "estimate_date": "07/26/26",
+        "eps_usd": 20.6,
+        "raw_value": "20.600"
+      }
+    },
+    {
+      "broker": "Huatai Research",
+      "adjusted": {
+        "analyst": "Purdy Ho",
+        "estimate_date": "07/26/26",
+        "eps_usd": 21.63,
+        "raw_value": "21.630"
+      },
+      "gaap": {
+        "analyst": "Purdy Ho",
+        "estimate_date": "07/26/26",
+        "eps_usd": 21.63,
+        "raw_value": "21.630"
+      }
+    },
+    {
+      "broker": "Morningstar",
+      "adjusted": {
+        "analyst": "Malik Khan",
+        "estimate_date": "07/23/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      },
+      "gaap": {
+        "analyst": "Malik Khan",
+        "estimate_date": "10/01/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      }
+    },
+    {
+      "broker": "Raymond James",
+      "adjusted": {
+        "analyst": "Josh Beck",
+        "estimate_date": "07/23/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      },
+      "gaap": {
+        "analyst": "Josh Beck",
+        "estimate_date": "07/23/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      }
+    },
+    {
+      "broker": "Cmb International Capital Corp",
+      "adjusted": {
+        "analyst": "Wentao Lu",
+        "estimate_date": "07/23/26",
+        "eps_usd": 17.6,
+        "raw_value": "17.600"
+      },
+      "gaap": {
+        "analyst": "Saiyi He",
+        "estimate_date": "07/23/26",
+        "eps_usd": 17.56,
+        "raw_value": "17.560"
+      }
+    },
+    {
+      "broker": "NH Investment & Securities Co",
+      "adjusted": {
+        "analyst": "Minsung Ko",
+        "estimate_date": "07/23/26",
+        "eps_usd": 17.3,
+        "raw_value": "17.300"
+      }
+    },
+    {
+      "broker": "Barclays",
+      "adjusted": {
+        "analyst": "Ross Sandler",
+        "estimate_date": "07/23/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      },
+      "gaap": {
+        "analyst": "Ross Sandler",
+        "estimate_date": "07/23/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      }
+    },
+    {
+      "broker": "Caitong Securities Co Ltd",
+      "adjusted": {
+        "analyst": "Hao Yanhui",
+        "estimate_date": "06/10/26",
+        "eps_usd": 18.33,
+        "raw_value": "18.330"
+      }
+    },
+    {
+      "broker": "Truist Securities",
+      "adjusted": {
+        "analyst": "Youssef Squali",
+        "estimate_date": "05/29/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      },
+      "gaap": {
+        "analyst": "Youssef Squali",
+        "estimate_date": "10/21/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      }
+    },
+    {
+      "broker": "Mirae Asset Securities",
+      "adjusted": {
+        "analyst": "Young-Bae Kwon",
+        "estimate_date": "05/15/26",
+        "eps_usd": 17.9,
+        "raw_value": "17.900"
+      }
+    },
+    {
+      "broker": "Sealand Securities",
+      "adjusted": {
+        "analyst": "Mengzhu Chen",
+        "estimate_date": "04/25/26",
+        "eps_usd": 19.32,
+        "raw_value": "19.320"
+      },
+      "gaap": {
+        "analyst": "Mengzhu Chen",
+        "estimate_date": "07/26/26",
+        "eps_usd": 20.18,
+        "raw_value": "20.180"
+      }
+    },
+    {
+      "broker": "Soochow Securities (HK) Ltd.",
+      "adjusted": {
+        "analyst": "Sang Zi",
+        "estimate_date": "04/23/26",
+        "eps_usd": 17.0,
+        "raw_value": "17.000"
+      },
+      "gaap": {
+        "analyst": "Sang Zi",
+        "estimate_date": "04/14/26",
+        "eps_usd": 16.54,
+        "raw_value": "16.540"
+      }
+    },
+    {
+      "broker": "Guotai Haitong Securities",
+      "adjusted": {
+        "analyst": "Heping Qin",
+        "estimate_date": "03/18/26",
+        "eps_usd": 15.86,
+        "raw_value": "15.860"
+      },
+      "gaap": {
+        "analyst": "Heping Qin",
+        "estimate_date": "09/11/26",
+        "eps_usd": 19.5,
+        "raw_value": "19.500"
+      }
+    },
+    {
+      "broker": "Shinhan Investment Corporation",
+      "adjusted": {
+        "analyst": "WonSeok Choi",
+        "estimate_date": "02/27/26",
+        "eps_usd": 15.4,
+        "raw_value": "15.400"
+      }
+    },
+    {
+      "broker": "Rothschild & Co Redburn",
+      "adjusted": {
+        "analyst": "James Cordwell",
+        "estimate_date": "07/24/25",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      },
+      "gaap": {
+        "analyst": "Dominic Ball",
+        "estimate_date": "08/10/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      }
+    },
+    {
+      "broker": "RBC Capital Markets",
+      "adjusted": {
+        "analyst": "Brad Erickson",
+        "estimate_date": "07/21/25",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      },
+      "gaap": {
+        "analyst": "Brad Erickson",
+        "estimate_date": "10/19/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      }
+    },
+    {
+      "broker": "BMO Capital Markets",
+      "adjusted": {
+        "analyst": "Brian Pitz",
+        "estimate_date": "02/05/25",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      },
+      "gaap": {
+        "analyst": "Brian Pitz",
+        "estimate_date": "10/19/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      }
+    },
+    {
+      "broker": "Pivotal Research Group",
+      "adjusted": {
+        "analyst": "Jeffrey Wlodarczak",
+        "estimate_date": "10/29/24",
+        "eps_usd": 13.48,
+        "raw_value": "13.480"
+      },
+      "gaap": {
+        "analyst": "Jeffrey Wlodarczak",
+        "estimate_date": "07/23/26",
+        "eps_usd": 16.47,
+        "raw_value": "16.470"
+      }
+    },
+    {
+      "broker": "Citizens",
+      "gaap": {
+        "analyst": "Andrew Boone",
+        "estimate_date": "10/21/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      }
+    },
+    {
+      "broker": "Mizuho Securities",
+      "gaap": {
+        "analyst": "Lloyd Walmsley",
+        "estimate_date": "10/21/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      }
+    },
+    {
+      "broker": "Goldman Sachs",
+      "gaap": {
+        "analyst": "Eric Sheridan",
+        "estimate_date": "10/14/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      }
+    },
+    {
+      "broker": "Canaccord Genuity",
+      "gaap": {
+        "analyst": "Maria Ripps",
+        "estimate_date": "10/12/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      }
+    },
+    {
+      "broker": "Evercore ISI",
+      "gaap": {
+        "analyst": "Mark Mahaney",
+        "estimate_date": "09/16/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      }
+    },
+    {
+      "broker": "Morgan Stanley",
+      "gaap": {
+        "analyst": "Brian Nowak",
+        "estimate_date": "09/11/26",
+        "eps_usd": 18.49,
+        "raw_value": "18.490"
+      }
+    },
+    {
+      "broker": "China Renaissance Research",
+      "gaap": {
+        "analyst": "Ella Ji",
+        "estimate_date": "07/24/26",
+        "eps_usd": 17.61,
+        "raw_value": "17.610"
+      }
+    },
+    {
+      "broker": "Freedom Broker",
+      "gaap": {
+        "analyst": "Saken Ismailov",
+        "estimate_date": "07/23/26",
+        "eps_usd": 16.08,
+        "raw_value": "16.080"
+      }
+    },
+    {
+      "broker": "Needham",
+      "gaap": {
+        "analyst": "Laura Martin",
+        "estimate_date": "07/22/26",
+        "eps_usd": null,
+        "raw_value": "PERM DENIED"
+      }
+    },
+    {
+      "broker": "Itau BBA Securities",
+      "gaap": {
+        "analyst": "Stephano Gabriel",
+        "estimate_date": "04/07/26",
+        "eps_usd": 15.99,
+        "raw_value": "15.990"
+      }
+    },
+    {
+      "broker": "First Shanghai Securities",
+      "gaap": {
+        "analyst": "Simon Luo",
+        "estimate_date": "03/25/26",
+        "eps_usd": 17.4,
+        "raw_value": "17.400"
+      }
+    }
+  ],
+  "notes": [
+    "BEST_EPS is the adjusted/BEst EPS series; BEST_EPS_GAAP is the separate GAAP series.",
+    "Individual estimate dates differ. Values with PERM DENIED are not accessible under the current Bloomberg entitlements and are preserved as null, never zero.",
+    "The available broker rows are not the complete contributing consensus panel. No subset average has been substituted for Bloomberg consensus."
+  ]
+}

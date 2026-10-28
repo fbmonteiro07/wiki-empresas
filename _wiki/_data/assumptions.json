@@ -1,5 +1,5 @@
 {
-  "asof": "2026-10-22",
+  "asof": "2026-10-28",
   "note": "Canonical-assumptions ledger — one entry per cross-page industry number that multiple pages/themes cite. Purpose: every page should reference ONE canonical framing per metric; when a new source disagrees, add a variant here (never silently replace). build_assumptions.py renders _meta/assumptions.md + _dashboards/assumptions.html and scans pages for citations of each metric not yet reconciled into the ledger. Edit variants by hand; keep scope labels precise (units vs dollars, IT-load vs facility GW).",
   "metrics": {
     "asic-vs-gpu-share": {
@@ -705,6 +705,29 @@
             "MU.md",
             "SKHYNIX.md"
           ]
+        },
+        {
+          "value": "SK hynix: 14 customers with LTAs, secured volumes >50% of total 2027–28 production capacity; typical term five years; market-responsive pricing within agreed ranges. HBM4 to exceed HBM3E in Q4 volume and revenue; shortage through 2030 is management outlook.",
+          "source": "SK hynix preliminary 3Q26 release (company primary)",
+          "date": "2026-10-28",
+          "scope": "Company-specific total-capacity coverage and forward outlook; not industry HBM share or a signed 2029 book",
+          "cited_in": [
+            "SKHYNIX.md",
+            "themes/hbm-memory.md",
+            "themes/ai-compute-deals.md"
+          ],
+          "url": "https://news.skhynix.com/en/q3-2026-business-results/"
+        },
+        {
+          "value": "Management reportedly puts HBM demand above twice its supply capacity; sold-out-through-2029 language combines secured volumes and demand discussions. Lower-stack specifications are framed as enabling more accelerator output.",
+          "source": "Jefferies / Conor O'Mara — 3Q26 call notes (sales-desk relay, not verbatim transcript)",
+          "date": "2026-10-28",
+          "scope": "Company HBM demand versus its supply; no industry absolute bit-demand estimate; 2029 not fully contracted",
+          "cited_in": [
+            "SKHYNIX.md",
+            "themes/hbm-memory.md"
+          ],
+          "url": "../relatórios bons/20261028_Jefferies_Conor-OMara_SKHYNIX_3Q26-call-notes.html"
         }
       ],
       "status": "live-debate",

@@ -1,0 +1,56 @@
+{
+  "recorded_date": "2026-10-27",
+  "ticker": "GOOGL / GOOG",
+  "period": "FY2028",
+  "analyst": "JPMorgan / Doug Anmuth",
+  "estimate_date": "2026-10-15",
+  "sources": {
+    "latest_report_url": "https://markets.jpmorgan.com/research/email/scx/-fdepgm7/GPS-5485695-0/27651ab7-7fd2-4fc2-93c7-1355828cbe5f",
+    "latest_report_local": "JPM_Internet_20261015_GPS5485695.html",
+    "earlier_detailed_reconciliation": "JPM_Alphabet_20261001_landing.html",
+    "gaap_earnings": "GOOGL_JPM_2028_BEST_NET_INC_GAAP_BRK_GRID_2026-10-27.json",
+    "adjusted_earnings": "GOOGL_JPM_2028_net_income_grids_2026-10-27.json",
+    "historical_shares": "GOOG/GOOG_10-Q_2026-07-23_0001652044-26-000071.html"
+  },
+  "published_inputs": {
+    "gaap_earnings_usdm": 221507,
+    "adjusted_earnings_usdm": 279878,
+    "gaap_eps": 17.29,
+    "adjusted_eps": 21.85,
+    "jpm_shares_outstanding_us_millions": 12811
+  },
+  "arithmetic_reconciliation": {
+    "net_adjustments_usdm": 58371,
+    "quoted_eps_difference": 4.56,
+    "gaap_eps_recalculated": 17.290375458590272,
+    "adjusted_eps_recalculated": 21.84669424713137
+  },
+  "definitions": "Earlier Oct1 detailed model labels denominator diluted shares outstanding; Oct15 summary calls it Shares outstanding. Both latest EPS values reconcile using the latest 12,811m shares.",
+  "adjustment_categories_confirmed_in_oct1_detailed_model": [
+    "Stock compensation expense",
+    "One-time items",
+    "Tax Effect"
+  ],
+  "earlier_oct1_vintage_only": {
+    "sbc_usdm": 41990.2,
+    "one_time_items_usdm": 13050.7,
+    "tax_effect_usdm": -9357.0,
+    "gaap_eps": 16.66,
+    "adjusted_eps": 20.22,
+    "diluted_shares_m": 12802.8
+  },
+  "limitations": "Oct15 summary and revision exhibit do not disclose the updated item-by-item EPS adjustment bridge. Do not assign the entire $58,371m net difference to SBC, or substitute Oct1 adjustment amounts for Oct15.",
+  "historical_shares": {
+    "company_point_in_time_date": "2026-07-15",
+    "class_a_m": 5868,
+    "class_b_m": 835,
+    "class_c_m": 5527,
+    "all_common_classes_m": 12230,
+    "q2_2026_weighted_average_diluted_m": 12309
+  },
+  "checks": {
+    "gaap_eps_rounds_to_published": true,
+    "adjusted_eps_rounds_to_published": true,
+    "current_common_classes_sum": true
+  }
+}

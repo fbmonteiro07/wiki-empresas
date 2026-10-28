@@ -1,0 +1,155 @@
+{
+  "security": "MSFT US Equity",
+  "retrieved_on": "2026-10-27",
+  "bloomberg_fields": [
+    "NUM_OF_EMPLOYEES",
+    "BS_NUMBER_EMPLOYEES"
+  ],
+  "method": "Fiscal-quarter overrides; missing values stay null; no interpolation or carry-forward.",
+  "bloomberg_current_headcount_as_of": "2026-06-30",
+  "rows": [
+    {
+      "fiscal_period": "2024Q4",
+      "label": "F4Q24",
+      "period_end": "2024-06-30",
+      "date_label": "Jun 2024",
+      "bloomberg_headcount": 228000,
+      "chart_headcount": 228000,
+      "source": "Bloomberg / Microsoft annual report",
+      "retrieved_on": "2026-10-27",
+      "overrides": {
+        "EQY_FUND_YEAR": "2024",
+        "FUND_PER": "Q4"
+      }
+    },
+    {
+      "fiscal_period": "2025Q1",
+      "label": "F1Q25",
+      "period_end": "2024-09-30",
+      "date_label": "Sep 2024",
+      "bloomberg_headcount": null,
+      "chart_headcount": null,
+      "source": "Unavailable",
+      "retrieved_on": "2026-10-27",
+      "overrides": {
+        "EQY_FUND_YEAR": "2025",
+        "FUND_PER": "Q1"
+      }
+    },
+    {
+      "fiscal_period": "2025Q2",
+      "label": "F2Q25",
+      "period_end": "2024-12-31",
+      "date_label": "Dec 2024",
+      "bloomberg_headcount": null,
+      "chart_headcount": null,
+      "source": "Unavailable",
+      "retrieved_on": "2026-10-27",
+      "overrides": {
+        "EQY_FUND_YEAR": "2025",
+        "FUND_PER": "Q2"
+      }
+    },
+    {
+      "fiscal_period": "2025Q3",
+      "label": "F3Q25",
+      "period_end": "2025-03-31",
+      "date_label": "Mar 2025",
+      "bloomberg_headcount": null,
+      "chart_headcount": null,
+      "source": "Unavailable",
+      "retrieved_on": "2026-10-27",
+      "overrides": {
+        "EQY_FUND_YEAR": "2025",
+        "FUND_PER": "Q3"
+      }
+    },
+    {
+      "fiscal_period": "2025Q4",
+      "label": "F4Q25",
+      "period_end": "2025-06-30",
+      "date_label": "Jun 2025",
+      "bloomberg_headcount": 228000,
+      "chart_headcount": 228000,
+      "source": "Bloomberg / Microsoft annual report",
+      "retrieved_on": "2026-10-27",
+      "overrides": {
+        "EQY_FUND_YEAR": "2025",
+        "FUND_PER": "Q4"
+      }
+    },
+    {
+      "fiscal_period": "2026Q1",
+      "label": "F1Q26",
+      "period_end": "2025-09-30",
+      "date_label": "Sep 2025",
+      "bloomberg_headcount": null,
+      "chart_headcount": null,
+      "source": "Unavailable",
+      "retrieved_on": "2026-10-27",
+      "overrides": {
+        "EQY_FUND_YEAR": "2026",
+        "FUND_PER": "Q1"
+      }
+    },
+    {
+      "fiscal_period": "2026Q2",
+      "label": "F2Q26",
+      "period_end": "2025-12-31",
+      "date_label": "Dec 2025",
+      "bloomberg_headcount": null,
+      "chart_headcount": null,
+      "source": "Unavailable",
+      "retrieved_on": "2026-10-27",
+      "overrides": {
+        "EQY_FUND_YEAR": "2026",
+        "FUND_PER": "Q2"
+      }
+    },
+    {
+      "fiscal_period": "2026Q3",
+      "label": "F3Q26",
+      "period_end": "2026-03-31",
+      "date_label": "Mar 2026",
+      "bloomberg_headcount": null,
+      "chart_headcount": null,
+      "source": "Unavailable",
+      "retrieved_on": "2026-10-27",
+      "overrides": {
+        "EQY_FUND_YEAR": "2026",
+        "FUND_PER": "Q3"
+      }
+    },
+    {
+      "fiscal_period": "2026Q4",
+      "label": "F4Q26",
+      "period_end": "2026-06-30",
+      "date_label": "Jun 2026",
+      "bloomberg_headcount": 223000,
+      "chart_headcount": 223000,
+      "source": "Bloomberg / Microsoft annual report",
+      "retrieved_on": "2026-10-27",
+      "overrides": {
+        "EQY_FUND_YEAR": "2026",
+        "FUND_PER": "Q4"
+      }
+    },
+    {
+      "fiscal_period": "2027Q1",
+      "label": "F1Q27",
+      "period_end": "2026-09-30",
+      "date_label": "Sep 2026",
+      "bloomberg_headcount": null,
+      "chart_headcount": 223000,
+      "source": "Microsoft Facts About Microsoft",
+      "retrieved_on": "2026-10-27",
+      "overrides": {
+        "EQY_FUND_YEAR": "2027",
+        "FUND_PER": "Q1"
+      },
+      "source_url": "https://news.microsoft.com/facts-about-microsoft/",
+      "source_as_of": "2026-09-30",
+      "basis": "Worldwide employees; full-time definition not explicitly restated"
+    }
+  ]
+}

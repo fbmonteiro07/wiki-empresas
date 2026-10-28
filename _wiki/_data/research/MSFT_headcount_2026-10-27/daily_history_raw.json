@@ -1,0 +1,55 @@
+[
+  {
+    "securityData": {
+      "security": "MSFT US Equity",
+      "eidData": [],
+      "sequenceNumber": 0,
+      "fieldExceptions": [
+        {
+          "fieldId": "CUR_EMPLOYEES",
+          "errorInfo": {
+            "source": "54057:rsfhdsvc4",
+            "code": 1,
+            "category": "BAD_FLD",
+            "message": "Not valid historical field",
+            "subcategory": "NOT_APPLICABLE_TO_HIST_DATA"
+          }
+        },
+        {
+          "fieldId": "CUR_NUM_EMPLOYEES_AS_PER_DT",
+          "errorInfo": {
+            "source": "54057:rsfhdsvc4",
+            "code": 1,
+            "category": "BAD_FLD",
+            "message": "Not valid historical field",
+            "subcategory": "NOT_APPLICABLE_TO_HIST_DATA"
+          }
+        },
+        {
+          "fieldId": "EQY_EMPLOYEE_NUM",
+          "errorInfo": {
+            "source": "54057:rsfhdsvc4",
+            "code": 1,
+            "category": "BAD_FLD",
+            "message": "Not valid historical field",
+            "subcategory": "NOT_APPLICABLE_TO_HIST_DATA"
+          }
+        }
+      ],
+      "fieldData": [
+        {
+          "date": "2024-06-30",
+          "NUM_OF_EMPLOYEES": 228000.0
+        },
+        {
+          "date": "2025-06-30",
+          "NUM_OF_EMPLOYEES": 228000.0
+        },
+        {
+          "date": "2026-06-30",
+          "NUM_OF_EMPLOYEES": 223000.0
+        }
+      ]
+    }
+  }
+]

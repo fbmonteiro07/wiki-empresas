@@ -1,0 +1,199 @@
+[
+  {
+    "fieldData": [
+      {
+        "id": "DS239",
+        "fieldInfo": {
+          "mnemonic": "CUR_EMPLOYEES",
+          "description": "Current Number of Employees",
+          "datatype": "Int32",
+          "documentation": "Provides the current number of employees. Field includes the number of full time equivalents. If unavailable, then number of full time employees is used, excluding part time employees. \n\n Note: this field differs from Number of Employees (DS436, EQY_EMPLOYEE_NUM), because it can include interim information.  If interim information is not available, it will default to the latest annual period.",
+          "categoryName": [],
+          "property": [],
+          "overrides": [
+            "DS276"
+          ],
+          "ftype": "String"
+        }
+      },
+      {
+        "id": "DS244",
+        "fieldInfo": {
+          "mnemonic": "CUR_NUM_EMPLOYEES_AS_PER_DT",
+          "description": "Current # of Employees Date",
+          "datatype": "Datetime",
+          "documentation": "The update date of current number of employees.",
+          "categoryName": [],
+          "property": [],
+          "overrides": [],
+          "ftype": "Date"
+        }
+      },
+      {
+        "id": "A2971",
+        "fieldInfo": {
+          "mnemonic": "ARD_NUM_OF_EMPLOYEES_PERIOD_END",
+          "description": "ARD Number of Employees at Period End Date",
+          "datatype": "Int32",
+          "documentation": "Number of employees of the company as of the period end as reported by the company. This field is based on the number of full-time equivalents. If unavailable, then the number of full-time employees is used, excluding part-time employees. The account title may be standardized and slightly different from the original account title in the company's financial statement.",
+          "categoryName": [],
+          "property": [],
+          "overrides": [
+            "DS324",
+            "DT086",
+            "DT096",
+            "DT089",
+            "DY771",
+            "DX242",
+            "DT095",
+            "DY891",
+            "DT581",
+            "DS276",
+            "DX243",
+            "DT084",
+            "DT097",
+            "DY892",
+            "DT082",
+            "DT083",
+            "DT093",
+            "DS323",
+            "DY013",
+            "DT582",
+            "DT085",
+            "DT092",
+            "DT081"
+          ],
+          "ftype": "String"
+        }
+      },
+      {
+        "id": "BM383",
+        "fieldInfo": {
+          "mnemonic": "BS_NUMBER_EMPLOYEES",
+          "description": "Number of Employees - BS",
+          "datatype": "Int32",
+          "documentation": "Number of people employed by the company, based on the number of full time equivalents. If unavailable, then the number of full time employees at period end date or average full time employees for the period is used, excluding part time employees. Unit: Actual.",
+          "categoryName": [],
+          "property": [],
+          "overrides": [
+            "DY891",
+            "DT084",
+            "DT086",
+            "DT092",
+            "DT096",
+            "DY013",
+            "DT581",
+            "DT081",
+            "DT089",
+            "DT095",
+            "DS324",
+            "DT082",
+            "DX242",
+            "DT097",
+            "DS323",
+            "DY771",
+            "DT083",
+            "DT093",
+            "DS276",
+            "DY892",
+            "DT582",
+            "DT085",
+            "DX243",
+            "DT067"
+          ],
+          "ftype": "String"
+        }
+      },
+      {
+        "id": "DS276",
+        "fieldInfo": {
+          "mnemonic": "EQY_CONSOLIDATED",
+          "description": "Equity Parent / Consolidated Indicator",
+          "datatype": "String",
+          "documentation": "Applies to and provides a meaningful result for companies in the following markets: Brazil, Colombia, India, Japan, Romania, Russia, Serbia, South Korea, Taiwan and Turkey. For tickers in these markets the field is populated with 'Y' when the fundamental data presented is for the consolidated company and 'N' when data is for the parent company. The value is 'Y' when Consolidated Fundamentals Available (DX936, EQY_CONSOL_FUND_AVAIL) is set to 'Y'. For all other markets this field returns 'N' and the data presented is consolidated. Returns are based on the user's personal defaults which can be changed using the FPDF function.",
+          "categoryName": [],
+          "property": [],
+          "overrides": [],
+          "ftype": "Character"
+        }
+      },
+      {
+        "id": "DX242",
+        "fieldInfo": {
+          "mnemonic": "EQY_FUND_DT",
+          "description": "Equity Fundamental Date",
+          "datatype": "Datetime",
+          "documentation": "Override field for specifying a single historical fundamental period. When used by itself the date entered will cause any fundamental field to display the annual data for the fiscal year the date falls in. When used in conjunction with Equity Fundamental Relative Period (DX243, EQY_FUND_RELATIVE_PERIOD) the date entered will serve as the base date from which you are offsetting. (Use YYYYMMDD date format)",
+          "categoryName": [],
+          "property": [],
+          "overrides": [],
+          "ftype": "Date"
+        }
+      },
+      {
+        "id": "DY013",
+        "fieldInfo": {
+          "mnemonic": "FILING_STATUS",
+          "description": "Company Filing Status",
+          "datatype": "String",
+          "documentation": "The filing status override allows the specification of the filing status of the fundamental data being requested.  The choices are \n  ER - Earnings Record\n  MR - Most Recent \n  OR - Original \n  PR - Preliminary  \n  RS - Restated\nWhen this override is not specified, the data returned will be from the most recent filing.",
+          "categoryName": [],
+          "property": [],
+          "overrides": [],
+          "ftype": "Character"
+        }
+      },
+      {
+        "id": "DY892",
+        "fieldInfo": {
+          "mnemonic": "FUNDAMENTAL_PUBLIC_DATE",
+          "description": "Fundamental Public Date",
+          "datatype": "Datetime",
+          "documentation": "Displays the most recent date the Point-in-Time (PIT)fundamental data was publically available for a requested override period.  This field also represents an override to retrieving Point-in-Time data. The override date value must be in the format of YYYYMMDD (Year, Month, Day).",
+          "categoryName": [],
+          "property": [],
+          "overrides": [
+            "DS276",
+            "DS324",
+            "DS323",
+            "DY013",
+            "DY891"
+          ],
+          "ftype": "Date"
+        }
+      },
+      {
+        "id": "DY771",
+        "fieldInfo": {
+          "mnemonic": "ACCOUNTING_STANDARD_OVERRIDE",
+          "description": "Accounting Standard",
+          "datatype": "String",
+          "documentation": "Accounting standard in which the fundamental data will be viewed. This override only works for companies that support more than one method, as indicated by Multiple Accounting Standard Indicator (DY757, MULTIPLE_ACCOUNTING_STANDARD_IND).",
+          "categoryName": [],
+          "property": [],
+          "overrides": [],
+          "ftype": "Character"
+        }
+      },
+      {
+        "id": "DY891",
+        "fieldInfo": {
+          "mnemonic": "FUNDAMENTAL_DATABASE_DATE",
+          "description": "Fundamental Database Date",
+          "datatype": "Datetime",
+          "documentation": "Displays the date the Point-in-Time (PIT) fundamental data was first entered in to the Bloomberg fundamental data database for a requested override period. This field also represents an override to retrieving Point-in-Time data. The override date value must be in the format of YYYYMMDD (Year, Month, Day).",
+          "categoryName": [],
+          "property": [],
+          "overrides": [
+            "DS276",
+            "DS324",
+            "DS323",
+            "DY013",
+            "DY892"
+          ],
+          "ftype": "Date"
+        }
+      }
+    ]
+  }
+]

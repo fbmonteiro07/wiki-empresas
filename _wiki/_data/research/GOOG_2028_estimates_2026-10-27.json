@@ -1,0 +1,137 @@
+{
+  "source": "Bloomberg consensus via local Desktop API",
+  "retrieved_at": "2026-10-27T19:29:01.051046-03:00",
+  "security": "GOOG US Equity",
+  "request": {
+    "BEST_FPERIOD_OVERRIDE": "3FY",
+    "fields": [
+      "BEST_SALES",
+      "BEST_EBIT",
+      "BEST_EBITDA",
+      "BEST_NET_INCOME",
+      "BEST_EPS",
+      "BEST_GROSS_MARGIN",
+      "BEST_CAPEX",
+      "BEST_SALES_HI",
+      "BEST_EBIT_HI",
+      "BEST_EBITDA_HI",
+      "BEST_EPS_HI",
+      "BEST_CAPEX_LO",
+      "BEST_FPERIOD_YEAR_END",
+      "EQY_FUND_CRNCY"
+    ]
+  },
+  "units": "USD millions except EPS in USD/share and gross margin in percent; raw capex has negative cash-flow sign",
+  "raw": [
+    {
+      "ticker": "GOOG US Equity",
+      "field": "BEST_SALES",
+      "value": 684566.3333333334
+    },
+    {
+      "ticker": "GOOG US Equity",
+      "field": "BEST_EBIT",
+      "value": 275454.8333333333
+    },
+    {
+      "ticker": "GOOG US Equity",
+      "field": "BEST_EBITDA",
+      "value": 394502.0571428571
+    },
+    {
+      "ticker": "GOOG US Equity",
+      "field": "BEST_NET_INCOME",
+      "value": 233605.189
+    },
+    {
+      "ticker": "GOOG US Equity",
+      "field": "BEST_EPS",
+      "value": 19.851
+    },
+    {
+      "ticker": "GOOG US Equity",
+      "field": "BEST_GROSS_MARGIN",
+      "value": 65.9398351879
+    },
+    {
+      "ticker": "GOOG US Equity",
+      "field": "BEST_CAPEX",
+      "value": -353658.6756756757
+    },
+    {
+      "ticker": "GOOG US Equity",
+      "field": "BEST_SALES_HI",
+      "value": 878748.0
+    },
+    {
+      "ticker": "GOOG US Equity",
+      "field": "BEST_EBIT_HI",
+      "value": 330635.0
+    },
+    {
+      "ticker": "GOOG US Equity",
+      "field": "BEST_EBITDA_HI",
+      "value": 449877.0
+    },
+    {
+      "ticker": "GOOG US Equity",
+      "field": "BEST_CAPEX_LO",
+      "value": -508000.0
+    },
+    {
+      "ticker": "GOOG US Equity",
+      "field": "EQY_FUND_CRNCY",
+      "value": "USD"
+    }
+  ],
+  "period_crosschecks": {
+    "3CY": [
+      {
+        "ticker": "GOOG US Equity",
+        "field": "BEST_SALES",
+        "value": 684566.3333333334
+      },
+      {
+        "ticker": "GOOG US Equity",
+        "field": "BEST_EPS",
+        "value": 19.851
+      },
+      {
+        "ticker": "GOOG US Equity",
+        "field": "BEST_ESTIMATE_FCF",
+        "value": 6235.2468328486
+      }
+    ],
+    "28Y": [
+      {
+        "ticker": "GOOG US Equity",
+        "field": "BEST_SALES",
+        "value": 684566.3333333334
+      },
+      {
+        "ticker": "GOOG US Equity",
+        "field": "BEST_EPS",
+        "value": 19.851
+      },
+      {
+        "ticker": "GOOG US Equity",
+        "field": "BEST_ESTIMATE_FCF",
+        "value": 6235.2468328486
+      }
+    ]
+  },
+  "additional_annual_fields": [
+    {
+      "ticker": "GOOG US Equity",
+      "field": "BEST_ESTIMATE_FCF",
+      "value": 6235.2468328486
+    }
+  ],
+  "period": "FY2028E (calendar year-end December)",
+  "notes": [
+    "Annual consensus, not a quarterly sum.",
+    "Capex displayed as positive spending; raw Bloomberg BEST_CAPEX is negative.",
+    "Revenue is the Bloomberg BEST_SALES series; gross versus net-of-TAC presentation is not independently established by this pull.",
+    "Unsupported absolute override 2028 was not used; it returned a next-quarter sales value."
+  ]
+}

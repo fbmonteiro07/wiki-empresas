@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\MSFT` (filings + transcripts) · `_equity_calls` · `_briefings\by-ticker\MSFT.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-26 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-10-27 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -27,6 +27,31 @@ Mega-cap software + hyperscale cloud. **🆕🔴 SEGMENT STRUCTURE CHANGED EFFEC
 | **Sells (top 3)** | 1) Azure cloud (incl. Azure AI) · 2) M365/Office + Copilot · 3) Windows/Gaming/Search (**FY27 segment: "Devices and Consumer"**; labelled "More Personal Computing" through FY26 — Microsoft "FY27 Segments and Investor Metrics", company primary, 2026-09) |
 | **Main buyer(s)** | Enterprises + OpenAI as Azure's anchor AI customer (~45% of $625B+ commercial RPO is OpenAI-related); also consumers & OEMs |
 | **Key suppliers** | Nvidia GPUs (rented/own fleet) + first-party silicon (Maia/Cobalt); neocloud capacity (Oracle/CoreWeave); memory/components |
+
+## Headcount by quarter
+
+_Updated 2026-10-27. Microsoft fiscal year ends in June; calendar quarter and period-end dates are shown explicitly. Annual-report totals are approximate worldwide full-time employees. Growth rates below are management's reported rates, not rates calculated from rounded annual totals. **ND** = not disclosed in the earnings call / 10-Q reviewed for that quarter; no interpolation or carry-forward of annual figures._
+
+| Fiscal quarter / calendar quarter | Period end | Reported headcount | Reported YoY | Reported QoQ / basis note | Source and date |
+|---|---|--:|---|---|---|
+| F4Q24 / CY2Q24 | 2024-06-30 | ~228,000 | +3% | Full-time employees; annual-report total | Microsoft [FY24 10-K](../MSFT/MSFT_10-K_2024-07-30_0000950170-24-087843.html), filed 2024-07-30; Amy Hood, [F4Q24 call](../MSFT/transcripts/MSFT_Q4-FY24-earnings_2024-07-30.md), 2024-07-30 |
+| F1Q25 / CY3Q24 | 2024-09-30 | ND | +8%; +2% excluding Activision | Acquisition affects YoY comparability; absolute total ND | Microsoft / Amy Hood, [F1Q25 call](../MSFT/transcripts/MSFT_Q1-FY25-earnings_2024-10-30.md), 2024-10-30 |
+| F2Q25 / CY4Q24 | 2024-12-31 | ND | +2% | Relatively unchanged QoQ | Microsoft / Amy Hood, [F2Q25 call](../MSFT/transcripts/MSFT_Q2-FY25-earnings_2025-01-29.md), 2025-01-29 |
+| F3Q25 / CY1Q25 | 2025-03-31 | ND | +2% | Down slightly QoQ; percentage ND | Microsoft / Amy Hood, [F3Q25 call](../MSFT/transcripts/MSFT_Q3-FY25-earnings_2025-04-30.md), 2025-04-30 |
+| F4Q25 / CY2Q25 | 2025-06-30 | ~228,000 | Relatively unchanged | Full-time employees; annual-report total | Microsoft [FY25 10-K](../MSFT/MSFT_10-K_2025-07-30_0000950170-25-100235.html), filed 2025-07-30; Amy Hood, [F4Q25 call](../MSFT/transcripts/MSFT_Q4-FY25-earnings_2025-07-30.md), 2025-07-30 |
+| F1Q26 / CY3Q25 | 2025-09-30 | ND | ND | No total-company headcount disclosure found in the call or 10-Q | Microsoft [F1Q26 call](../MSFT/transcripts/MSFT_Q1-FY26-earnings_2025-10-29.md) and [10-Q](../MSFT/MSFT_10-Q_2025-10-29_0001193125-25-256321.html), 2025-10-29 |
+| F2Q26 / CY4Q25 | 2025-12-31 | ND | ND | No total-company headcount disclosure found in the call or 10-Q | Microsoft [F2Q26 call](../MSFT/transcripts/MSFT_Q2-FY26-earnings_2026-01-28.md) and [10-Q](../MSFT/MSFT_10-Q_2026-01-28_0001193125-26-027207.html), 2026-01-28 |
+| F3Q26 / CY1Q26 | 2026-03-31 | ND | Declined; percentage ND | Management also guided FY27 headcount to decline YoY; that outlook is not a reported count | Microsoft / Amy Hood, [F3Q26 call](../MSFT/transcripts/MSFT_Q3-FY26-earnings_2026-04-29.md) and [10-Q](../MSFT/MSFT_10-Q_2026-04-29_0001193125-26-191507.html), 2026-04-29 |
+| F4Q26 / CY2Q26 | 2026-06-30 | ~223,000 | −2% | Full-time employees; −2% is YoY, not QoQ | Microsoft [FY26 10-K](../MSFT/MSFT_10-K_2026-07-29_0001193125-26-323660.html), filed 2026-07-29; Amy Hood, [official F4Q26 call](https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4), 2026-07-29 |
+| F1Q27 / CY3Q26 | 2026-09-30 | 223,000 | ND | Company fact sheet labels this “Worldwide” employment headcount; not an earnings-call disclosure, and it does not explicitly restate the 10-K's full-time definition | Microsoft, [Facts About Microsoft](https://news.microsoft.com/facts-about-microsoft/), employment table as of 2026-09-30; retrieved 2026-10-27 (publication date not stated) |
+
+**Disclosure limit:** Microsoft does not provide a continuous absolute quarterly series in the reviewed filings and calls. The table therefore retains reported growth or direction where no employee total is available. The September 2026 fact-sheet observation is shown on its stated date and source basis; it is not a June figure carried forward by Capstone.
+
+**Bloomberg check — 2026-10-27:** The local Desktop API returns **228,000 for F4Q24, 228,000 for F4Q25 and 223,000 for F4Q26**, with `NUM_OF_EMPLOYEES` and `BS_NUMBER_EMPLOYEES` agreeing under explicit `EQY_FUND_YEAR` + `FUND_PER=Q1/Q2/Q3/Q4` overrides. **All six previously missing quarterly totals remain blank in Bloomberg**, as does F1Q27. Unfilled historical data independently returns only the three June observations. `CUR_EMPLOYEES=223,000` is dated **2026-06-30**; `EQY_EMPLOYEE_NUM` explicitly does not support historical overrides and returns the current value even for older requested quarters, so it is unsuitable for filling the gaps. The September 2026 observation above remains sourced separately to Microsoft. Sources: [Bloomberg quarterly responses, retrieved 2026-10-27](_data/research/MSFT_headcount_2026-10-27/bloomberg_quarterly_raw.json), [historical responses](_data/research/MSFT_headcount_2026-10-27/daily_history_raw.json), [field definitions](_data/research/MSFT_headcount_2026-10-27/field_info.json) and [nonhistorical-field documentation](_data/research/MSFT_headcount_2026-10-27/alternate_field_info.json).
+
+![Microsoft headcount by fiscal quarter; Bloomberg annual observations and separately sourced September 2026 fact-sheet total, with six missing quarters left blank.](_data/research/MSFT_headcount_2026-10-27/MSFT_headcount_quarterly.png)
+
+[Chart data and source basis](_data/research/MSFT_headcount_2026-10-27/headcount_series.json) · [Vector chart](_data/research/MSFT_headcount_2026-10-27/MSFT_headcount_quarterly.svg).
 
 ## Current state (latest quarter)
 
@@ -738,6 +763,8 @@ _Source: MSFT earnings calls (dates above); management commentary, paraphrased._
 - **2026-06-23 — Stratechery (Ben Thompson), "Memory Chips and China, Microsoft and Chinese Models":** Microsoft is very incentivized to use Chinese models — under usage-based pricing (E7 = Anthropic+OpenAI at $99/employee/mo), an open-source model lets MSFT offer more bundled usage without ceding margin to the frontier labs; MSFT confirmed to Axios it is exploring a fine-tuned DeepSeek V4 (or another open-source model) for Copilot Cowork, available "in the coming weeks." Thompson's call: Cowork best-with-Claude, Copilot best-with-GPT, DeepSeek the cheap default; American software cos as the biggest beneficiaries of cheaper Chinese models. (Newsletter, not a bank.)
 
 ## Changelog
+- 2026-10-27 — Bloomberg headcount follow-up: checked NUM_OF_EMPLOYEES and BS_NUMBER_EMPLOYEES with explicit fiscal-quarter overrides, unfilled historical data and alternative employee fields through the local Desktop API. Both historical fields confirm only the June 2024 / 2025 / 2026 totals already on this page; all six ND quarters remain unavailable. Bloomberg current headcount is still dated 2026-06-30; the September 2026 company fact-sheet observation remains a separate source. Added a chart with gaps, field documentation and raw responses. Nothing superseded; no missing value filled or estimated.
+- 2026-10-27 — user-requested headcount history: added a quarterly disclosure table from F4Q24 / CY2Q24 through F1Q27 / CY3Q26, with fiscal/calendar labels, period ends, reported totals, reported YoY/QoQ commentary, and source dates. Annual totals: ~228,000 (June 2024 and June 2025) and ~223,000 (June 2026), per Microsoft 10-Ks filed 2024-07-30, 2025-07-30 and 2026-07-29. Added the company fact sheet's separately dated 223,000 worldwide total as of 2026-09-30 (retrieved 2026-10-27; full-time definition not explicitly restated). Missing quarterly totals remain ND; no interpolation, annual carry-forward or estimates. F4Q26's reported −2% is YoY. Nothing superseded; no rating, PT or thesis changed.
 - 2026-10-20 — verification (transcription QA): attribution string aligned to the file header (' - Capstone notes'; 'not Bernstein research'; hosts 'Madison'/'Mark' UNCONFIRMED); the 2026-10-20 ingest changelog line was misplaced inside ## Snapshot and is moved here. Europe-termination quote re-checked in the transcript.
 - 2026-10-20 — ingest (Notion, 2026-10-20_Bernstein_Decoding-data-center-contracts-AI-era-Jeff-Moerdler-Haynes-Boone.md): intra-quarter block — Moerdler's press relay of MSFT/META European lease terminations ('a year or two ago', basis unknown).
 - 2026-10-19 — ingest (Notion, 2026-10-19_UBS_Semis-update-call-SEMICON-West-OCP-TeraFab-Arcuri-Ruple.md · 2026-10-19_BofA_SEMICON-West-OCP-takeaways-call-Vivek-Arya.md): Debate — Maia program size (Arcuri 1m+ units, ~550k/GW, ~$4k ASP) vs BofA few-hundred-k → ~1m (year ambiguous); Nscale London pull-back = power availability (Arya). Orchestrator (D) pass.

@@ -1,0 +1,64 @@
+{
+  "question": "Pro forma total common shares after full $40bn ATM, holding all other changes fixed",
+  "date": "2026-10-27",
+  "source": "Alphabet 10-Q filed July23 2026, Note11 and statement of stockholders equity",
+  "source_path": "E:\\Wiki Felipe empresas\\GOOG\\GOOG_10-Q_2026-07-23_0001652044-26-000071.html",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm",
+  "inputs": {
+    "common_shares_m": {
+      "value": 12230,
+      "tag": "HARD",
+      "date": "2026-06-30"
+    },
+    "ATM_capacity_usdm": {
+      "value": 40000,
+      "tag": "HARD",
+      "status": "authorized, unused as of June30"
+    },
+    "assumed_ATM_sale_price_usd": {
+      "value": 350,
+      "tag": "ESTIMATE",
+      "anchor": "June4 public offering prices: Class A $355.1982 and Class C $351.8018; historical anchor only, not a current quote or forecast"
+    },
+    "full_execution": {
+      "value": true,
+      "tag": "ESTIMATE",
+      "description": "Conditional scenario; no assertion of actual execution"
+    },
+    "other_net_share_changes_m": {
+      "value": 0,
+      "tag": "ESTIMATE",
+      "description": "Hold constant for isolating ATM effect; excludes future employee awards, buybacks and preferred conversion"
+    }
+  },
+  "arithmetic": {
+    "new_common_shares_m": 114.28571428571429,
+    "total_common_shares_m": 12344.285714285714
+  },
+  "sensitivity": [
+    {
+      "sale_price": 300,
+      "new_common_shares_m": 133.33333333333334,
+      "total_common_shares_m": 12363.333333333334
+    },
+    {
+      "sale_price": 350,
+      "new_common_shares_m": 114.28571428571429,
+      "total_common_shares_m": 12344.285714285714
+    },
+    {
+      "sale_price": 400,
+      "new_common_shares_m": 100.0,
+      "total_common_shares_m": 12330.0
+    }
+  ],
+  "checks": {
+    "no_double_count_June_raise": true,
+    "no_preferred_added_as_common": true,
+    "stock_flow_units_match": true,
+    "positive_shares_with_positive_price": true,
+    "June_common_roll_forward_reconciles": true,
+    "dollar_limit_not_net_cash_target": true,
+    "external_validation": "Only historical offering-price anchor; future execution price not independently validated. Roll-forward is a source consistency check, not forecast validation."
+  }
+}

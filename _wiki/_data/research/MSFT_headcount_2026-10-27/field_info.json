@@ -1,0 +1,112 @@
+[
+  {
+    "fieldData": [
+      {
+        "id": "DS323",
+        "fieldInfo": {
+          "mnemonic": "FUND_PER",
+          "description": "Fundamental Period",
+          "datatype": "String",
+          "documentation": "Period in which the fundamental data will be viewed. The default period is last fiscal year end. This field will only work to override fields for which fundamental data is available. Please refer to Primary Periodicity (DZ373, PRIMARY_PERIODICITY) for a company's primary report periods.\n\nWhen used with product and geographic bulk data fields, this field sets the starting period from which to obtain the bulk data.\n\n  Y or A - returns the last fiscal year end annual data\n  Q - returns the last quarter end\n  Q1 - returns the Q1 of the year specified in DS324\n  Q2 - returns the Q2 of the year specified in DS324\n  Q3 - returns the Q3 of the year specified in DS324\n  Q4 - returns the Q4 of the year specified in DS324\n  S -  returns the last semi-annual period\n  S1 - returns the 1st semi-annual period of the year specified in DS324\n  S2 - returns the 2nd semi-annual period of the year specified in DS324\n  C- returns the last cumulative quarter end\n  C1 - returns the C1 of the year specified in DS324\n  C2 - returns the C2 of the year specified in DS324\n  C3 - returns the C3 of the year specified in DS324\n  C4 - returns the C4 of the year specified in DS324\n\nFor bulk data fields:\n  -M sets the most recent month as the starting period for the bulk data\n  - - Any number from 1 to 12 sets a specific month of the calendar year specified in DS324 as the starting period for the bulk data. For example, 1 indicates January and sets the starting month as January, 2 indicates February and sets the starting month as February, and so on.  When DS324 is left blank, the number will set the latest available corresponding month as the starting period.\n\nCustom User Data Fields:\nThe following period types, as well as Equity Fundamental Year (DS324, EQY_FUND_YEAR), are supported for use wiith custom user data fields: \n  Q1 - returns the Q1 of the year specified in DS324\n  Q2 - returns the Q2 of the year specified in DS324\n  Q3 - returns the Q3 of the year specified in DS324\n  Q4 - returns the Q4 of the year specified in DS324\n  S1 - returns the 1st semi-annual period of the year specified in DS324\n  S2 - returns the 2nd semi-annual period of the year specified in DS324\n  A  - returns the most recent yearly value\n\nEquity Index: \nPeriod in which the fundamental data will be viewed. The default period is Annual. \nThis field will only work to override fields for which fundamental data is available. \n\n  Q - returns the most recent Quarterly values\n  S - returns the most recent Semiannual values\nM - returns the most recent Monthly values (available only for select fields on Bloomberg Industries indices)",
+          "categoryName": [],
+          "property": [],
+          "overrides": [],
+          "ftype": "Character"
+        }
+      },
+      {
+        "id": "DT084",
+        "fieldInfo": {
+          "mnemonic": "FA_PERIOD_REFERENCE",
+          "description": "FA Period Reference Override",
+          "datatype": "String",
+          "documentation": "Override which specifies a period reference for the fundamental data being requested.  When used by itself the date defaults to today's date. \nThe valid input formats of the overrides are:\n\nYYYY   - returns the data specified for the year\nYYYYA  - returns the Annual value for the specified year\nYYYYQ1 - returns the Q1 of the specified year \nYYYYQ2 - returns the Q2 of the specified year \nYYYYQ3 - returns the Q3 of the specified year  \nYYYYQ4 - returns the Q4 of the specified year \nYYYYS1 - returns the S1 of the specified year\nYYYYS2 - returns the S2 of the specified year \nYYYYMMDD - returns the data specified for the date\nmm/dd/yyyy - returns the data specified for the date \n",
+          "categoryName": [],
+          "property": [],
+          "overrides": [],
+          "ftype": "Character"
+        }
+      },
+      {
+        "id": "DX243",
+        "fieldInfo": {
+          "mnemonic": "EQY_FUND_RELATIVE_PERIOD",
+          "description": "Equity Fundamental Relative Period",
+          "datatype": "String",
+          "documentation": "Override field for specifying a single historical fundamental period.  The input should be a combination of a negative number and a periodicity such as CQ, CY, FQ, FY, etc.  Some examples of valid inputs are -3FQ, -1CQ, -4FY, etc. -0 is the most recent period available, -1 the one before that, etc.  This field can be used by itself to go back from today or can be used in conjunction with Equity Fundamental Date (DX242, EQY_FUND_DT) to go back from a specific date. \n\nThe complete set of codes are:\nAQ: Actual Quarterly\nAS: Actual Semi-Annual\nAY: Actual Yearly\nCQ: Calendar Quarterly\nCS: Calendar Semi-Annual\nCY: Calendar Yearly\nFQ: Fiscal Quarterly\nFS: Fiscal Semi-Annual\nFY: Fiscal Yearly\nFC: Cumulative Quarter",
+          "categoryName": [],
+          "property": [],
+          "overrides": [],
+          "ftype": "Character"
+        }
+      },
+      {
+        "id": "DS324",
+        "fieldInfo": {
+          "mnemonic": "EQY_FUND_YEAR",
+          "description": "Equity Fundamental Year",
+          "datatype": "String",
+          "documentation": "Fiscal year for which fundamental data will be viewed. It is entered using all four digits of the year. This field will only work to override fields for which fundamental data is available.\n",
+          "categoryName": [],
+          "property": [],
+          "overrides": [],
+          "ftype": "Character"
+        }
+      },
+      {
+        "id": "DT083",
+        "fieldInfo": {
+          "mnemonic": "FA_PERIOD_TYPE",
+          "description": "FA Period Type Override",
+          "datatype": "String",
+          "documentation": "Override field to specify the period type in which the fundamental data will be viewed. This field is used to document a column returned in the Data License Bulk Datasets.",
+          "categoryName": [],
+          "property": [],
+          "overrides": [],
+          "ftype": "Character"
+        }
+      },
+      {
+        "id": "RR121",
+        "fieldInfo": {
+          "mnemonic": "NUM_OF_EMPLOYEES",
+          "description": "Number of Employees",
+          "datatype": "Int32",
+          "documentation": "Number of people employed by the company, based on the number of full time equivalents. If unavailable, then the number of full time employees is used, excluding part time employees.",
+          "categoryName": [],
+          "property": [],
+          "overrides": [
+            "DY892",
+            "DS323",
+            "DY013",
+            "DS324",
+            "DX243",
+            "DY771",
+            "DY891",
+            "DS276",
+            "DX242"
+          ],
+          "ftype": "String"
+        }
+      },
+      {
+        "id": "EQY_FUND_OVERRIDE",
+        "fieldError": {
+          "source": "apiflds@apigsp-ob-903",
+          "code": -103,
+          "category": "BAD_FLD",
+          "message": "Unknown Field Id/Mnemonic"
+        }
+      },
+      {
+        "id": "FA_PERIOD_END_DATE",
+        "fieldError": {
+          "source": "apiflds@apigsp-ob-903",
+          "code": -103,
+          "category": "BAD_FLD",
+          "message": "Unknown Field Id/Mnemonic"
+        }
+      }
+    ]
+  }
+]

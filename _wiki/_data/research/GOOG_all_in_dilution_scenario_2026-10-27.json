@@ -1,0 +1,214 @@
+{
+  "recorded_date": "2026-10-27",
+  "horizon": "End-May 2029 (35 months from June30 2026; preferred conversion May15)",
+  "purpose": "Conditional total common-share dilution scenario, not EPS weighted-average diluted shares or company guidance",
+  "sources": {
+    "Q2_local": "E:\\Wiki Felipe empresas\\GOOG\\GOOG_10-Q_2026-07-23_0001652044-26-000071.html",
+    "Q1_local": "E:\\Wiki Felipe empresas\\GOOG\\GOOG_10-Q_2026-04-30_0001652044-26-000048.html",
+    "2025_local": "E:\\Wiki Felipe empresas\\GOOG\\GOOG_10-K_2026-02-05_0001652044-26-000018.html",
+    "Q2_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm",
+    "terms_url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526259830/d36818d8k.htm",
+    "ATM_SBC_explanation_url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526257724/d83560dex991.htm",
+    "capped_call_A": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526259830/d36818dex101.htm",
+    "capped_call_B": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526259830/d36818dex102.htm",
+    "JPM_2028_local": "JPM_Internet_20261015_GPS5485695.html"
+  },
+  "hard_inputs": {
+    "baseline_common_shares_m": 12230.0,
+    "Dec2025_common_shares_m": 12088.0,
+    "Q1_2026_ordinary_stock_issued_m": 28,
+    "FY2025_ordinary_stock_issued_m": 117,
+    "H1_2026_total_common_issued_m": 142,
+    "June2026_financing_common_shares_m_rounded": 86,
+    "H1_2026_RSU_PSU_vested_m": 86,
+    "FY2025_RSU_vested_m": 181,
+    "June2026_unvested_awards_m": 294,
+    "ATM_capacity_usdm": 40000,
+    "depositary_shares_each_series_m": 192.5,
+    "depositary_per_preferred": 20,
+    "preferred_each_series_m_derived": 9.625,
+    "preferred_rates": {
+      "A": {
+        "min": 2.252,
+        "max": 2.816
+      },
+      "B": {
+        "min": 2.274,
+        "max": 2.842
+      }
+    },
+    "initial_capped_call_strike_definition": "Threshold Appreciation Price; 1000/min_conversion_rate",
+    "H1_2026_repurchases_m": 0,
+    "JPM_2026_diluted_shares_m": 12376,
+    "JPM_2028_diluted_shares_m": 12811
+  },
+  "assumptions_ESTIMATE": {
+    "net_employee_annual_shares_m": 112,
+    "calibration": "Q1 2026 ordinary stock issued 28m times4; includes realized tax withholding/forfeitures rather than adding gross awards. Flat forward proxy, not guidance. H1 financing-stripped residual 142-86=56m supports this recent run rate.",
+    "month_count": 35,
+    "ATM_price": 350,
+    "conversion_price_A_and_C": 350,
+    "price_anchor": "Actual June public offering prices355.1982/351.8018, rounded scenario350. Not a current quote.",
+    "ATM_execution": "Full original40bn capacity once",
+    "future_buybacks_m": 0,
+    "preferred_dividends": "Cash, consistent with first declared dividend; stock-settled dividends would add shares",
+    "other_future_capital_raises": "None, consistent with Q2 earnings call no further equity plans except ATM; changes remain possible",
+    "capped_call_offset_at350_m": 0,
+    "capped_call_basis": "350 below initial threshold strike for both classes; no modeled future anti-dilution adjustments or fundamental change.",
+    "conversion_price_path": "Constant illustrative $350 during settlement; capped calls have zero payoff because each relevant settlement price is below initial strikes, not merely average price below strike.",
+    "capped_call_initial_strikes": {
+      "A": 444.0497,
+      "B": 439.7537
+    }
+  },
+  "base_case": {
+    "price": 350,
+    "employee_multiplier": 1,
+    "employee_net_issuance_m": 326.6666666666667,
+    "atm_issuance_m": 114.28571428571429,
+    "preferred_conversion_m": 54.45825,
+    "repurchased_shares_m": 0,
+    "total_common_shares_m": 12725.41063095238,
+    "increment_from_Jun2026_m": 495.4106309523795,
+    "share_count_growth_pct": 4.050781937468351,
+    "ownership_dilution_pct": 3.8930816876539764,
+    "share_growth_since_Dec2025_pct": 5.273085960889978,
+    "ownership_dilution_since_Dec2025_pct": 5.008959234698384
+  },
+  "price_sensitivity_fixed_employee": [
+    {
+      "price": 300,
+      "employee_multiplier": 1,
+      "employee_net_issuance_m": 326.6666666666667,
+      "atm_issuance_m": 133.33333333333334,
+      "preferred_conversion_m": 54.45825,
+      "repurchased_shares_m": 0,
+      "total_common_shares_m": 12744.45825,
+      "increment_from_Jun2026_m": 514.4582499999997,
+      "share_count_growth_pct": 4.206526982829106,
+      "ownership_dilution_pct": 4.036721215670347,
+      "share_growth_since_Dec2025_pct": 5.430660572468571,
+      "ownership_dilution_since_Dec2025_pct": 5.150930993869429
+    },
+    {
+      "price": 350,
+      "employee_multiplier": 1,
+      "employee_net_issuance_m": 326.6666666666667,
+      "atm_issuance_m": 114.28571428571429,
+      "preferred_conversion_m": 54.45825,
+      "repurchased_shares_m": 0,
+      "total_common_shares_m": 12725.41063095238,
+      "increment_from_Jun2026_m": 495.4106309523795,
+      "share_count_growth_pct": 4.050781937468351,
+      "ownership_dilution_pct": 3.8930816876539764,
+      "share_growth_since_Dec2025_pct": 5.273085960889978,
+      "ownership_dilution_since_Dec2025_pct": 5.008959234698384
+    },
+    {
+      "price": 400,
+      "employee_multiplier": 1,
+      "employee_net_issuance_m": 326.6666666666667,
+      "atm_issuance_m": 100.0,
+      "preferred_conversion_m": 48.125,
+      "repurchased_shares_m": 0,
+      "total_common_shares_m": 12704.791666666666,
+      "increment_from_Jun2026_m": 474.79166666666606,
+      "share_count_growth_pct": 3.8821886072499368,
+      "ownership_dilution_pct": 3.737107062624001,
+      "share_growth_since_Dec2025_pct": 5.102512133245085,
+      "ownership_dilution_since_Dec2025_pct": 4.85479559877342
+    }
+  ],
+  "employee_sensitivity_fixed_price": [
+    {
+      "price": 350,
+      "employee_multiplier": 0.75,
+      "employee_net_issuance_m": 245.0,
+      "atm_issuance_m": 114.28571428571429,
+      "preferred_conversion_m": 54.45825,
+      "repurchased_shares_m": 0,
+      "total_common_shares_m": 12643.743964285713,
+      "increment_from_Jun2026_m": 413.74396428571345,
+      "share_count_growth_pct": 3.3830250554841568,
+      "ownership_dilution_pct": 3.27232159599562,
+      "share_growth_since_Dec2025_pct": 4.597484813746799,
+      "ownership_dilution_since_Dec2025_pct": 4.395406660048651
+    },
+    {
+      "price": 350,
+      "employee_multiplier": 1,
+      "employee_net_issuance_m": 326.6666666666667,
+      "atm_issuance_m": 114.28571428571429,
+      "preferred_conversion_m": 54.45825,
+      "repurchased_shares_m": 0,
+      "total_common_shares_m": 12725.41063095238,
+      "increment_from_Jun2026_m": 495.4106309523795,
+      "share_count_growth_pct": 4.050781937468351,
+      "ownership_dilution_pct": 3.8930816876539764,
+      "share_growth_since_Dec2025_pct": 5.273085960889978,
+      "ownership_dilution_since_Dec2025_pct": 5.008959234698384
+    },
+    {
+      "price": 350,
+      "employee_multiplier": 1.25,
+      "employee_net_issuance_m": 408.33333333333337,
+      "atm_issuance_m": 114.28571428571429,
+      "preferred_conversion_m": 54.45825,
+      "repurchased_shares_m": 0,
+      "total_common_shares_m": 12807.077297619047,
+      "increment_from_Jun2026_m": 577.0772976190474,
+      "share_count_growth_pct": 4.718538819452545,
+      "ownership_dilution_pct": 4.505924999190336,
+      "share_growth_since_Dec2025_pct": 5.948687108033157,
+      "ownership_dilution_since_Dec2025_pct": 5.614686949322389
+    }
+  ],
+  "buyback_sensitivity_fixed_price": {
+    "price": 350,
+    "employee_multiplier": 1,
+    "employee_net_issuance_m": 326.6666666666667,
+    "atm_issuance_m": 114.28571428571429,
+    "preferred_conversion_m": 54.45825,
+    "repurchased_shares_m": 28.571428571428573,
+    "total_common_shares_m": 12696.83920238095,
+    "increment_from_Jun2026_m": 466.83920238095016,
+    "share_count_growth_pct": 3.8171643694272284,
+    "ownership_dilution_pct": 3.6768143231538097,
+    "share_growth_since_Dec2025_pct": 5.0367240435220895,
+    "ownership_dilution_since_Dec2025_pct": 4.795202905828555
+  },
+  "preferred_range_before_hedges_m": {
+    "min": 43.56275,
+    "max": 54.45825
+  },
+  "guardrails": {
+    "independent_2025_ordinary_issuance_gap_pct": -4.273504273504269,
+    "independent_2025_ordinary_issuance_gap_under25pct": true,
+    "independent_gross_vesting_runrate_172_vs181_gap_pct": -4.972375690607733,
+    "tax_net_ordinary_issuance_no_ATM_double_count": true,
+    "do_not_add294_unvested_on_top_of_vesting_runrate": true,
+    "do_not_add142_dilutive_EPS_awards_or16_preferred_weighted_average": true,
+    "June_raise_already_in_baseline": true,
+    "all_totals_are_point_in_time_common_shares": true,
+    "JPM_diluted_EPS_denominator_not_added_to_common_bridge": true,
+    "future_employee_dilution_not_independently_validated": true,
+    "status": "Internal arithmetic and historical flow checks; forecast assumptions remain unconfirmed"
+  },
+  "JPM_reference_only": {
+    "basis": "Annual report row labeled Shares outstanding; use as separate published EPS denominator reference, not as a reconciled component bridge or proven point-in-time common count.",
+    "2026_to_2028_growth_pct": 3.5148674854557305,
+    "limitation": "No component-level share bridge in report. Cannot state that exact original ATM/pref amounts are all included; do not add them again blindly."
+  },
+  "skeptic_verdict": {
+    "status": "PASS for conditional scenario",
+    "scope": "Source-and-arithmetic check; no certification of future net employee issuance, buybacks or execution prices",
+    "findings_adopted": [
+      "112m/year is flat ordinary net issuance proxy, not company employee forecast",
+      "ATM financing does not duplicate net-of-tax employee issuance",
+      "Outstanding unvested awards not added on top of forecast vesting",
+      "Constant conversion settlement price assumption explicit for capped calls",
+      "Cash preferred dividends assumed; stock dividends would add shares",
+      "No claim maximum possible dilution or reconciliation of JPM forecast components"
+    ]
+  }
+}
