@@ -1,13 +1,11 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-10-27 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-10-28 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (38)
+## 📅 Upcoming (36)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-10-27 | FLEX | **🆕 2026-10-27 — Celestica (CLS) analyst day:** the EMS peer's rack/switching numbers (Bernstein top pick; BofA expects a late-October guidance raise) are the read-through for this page's EMS comp set |
-| 2026-10-27 | NXPI | 🆕 **2026-10-27 (Tue, after the US close) — Q3 FY26 print**, per the Vital Knowledge forward calendar (listed with ACGL, BKR, LOGI, PYPL, WM the same evening) (Vital Knowledge, "Vital Dawn", 2026-10-02 |
 | 2026-10-28 | ORCL | **🆕🔴🔴 2026-10-28 — ORACLE FINANCIAL ANALYST MEETING (now DATED; previously carried only as "Investor Day in October").** First opportunity for **new CFO Hilary Maxson** to set long-term financial targ |
 | 2026-10-28 | ORCL | 🆕🔴🔴 **2026-10-28 INVESTOR DAY — WHAT JPM AND GS EXPECT (both pre-event, OW / Buy).** ⚠️ **Date check:** GS's cover says *"Oracle Investor Day on 10/29"* but its body says *"Investor Day on October 28t |
 | 2026-10-28 | SKHYNIX | **2026-10-28 — RESOLVED: October shareholder-return announcement.** Approximately KRW 100tn FY26 program; August KRW 40tn purchases completed last week, cancellation still pending; Q3 dividend KRW 20, |
@@ -45,18 +43,19 @@ _Generated 2026-10-27 · parsed from every page's 'Catalysts / what to watch'. D
 | 2029-12-08 | MU | 🆕 **2026-10-16 — the buyback now has a formula and a window, from Micron IR.** From **2026-12-09 through 2029-12-08** Micron may repurchase up to **trailing-12-month FCF − CHIPS proceeds received in t |
 | 2031-12-31 | NSCALE | 2031-12-31 — Monarch expansion to ~8 GW gross planned. |
 
-## ⏰ Passed — need a post-mortem (0)
+## ⏰ Passed — need a post-mortem (1)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| _none_ | | |
+| 2026-10-27 | NXPI | 🆕 **2026-10-27 (Tue, after the US close) — Q3 FY26 print**, per the Vital Knowledge forward calendar (listed with ACGL, BKR, LOGI, PYPL, WM the same evening) (Vital Knowledge, "Vital Dawn", 2026-10-02 |
 
-## ✅ Resolved (307)
+## ✅ Resolved (308)
 
 | Date | Ticker | Verdict |
 |---|---|---|
+| 2026-10-27 | FLEX | bull won (read-through; preliminary) — the Celestica print + analyst day (10-26 AMC / 10-27) delivered the EMS rack/switching guide raise the bullet was watching: first FY27 outlook $40bn revenue / ~9% OPM / $21.50 EPS vs a surveyed buy-side $39-40bn / 8.6-8.7%, 2028 customer forecasts "meaningfully higher", CLS +10-13% T+1 matching its implied move (TMTB/desk relays in the 10-27 morning briefing; UBS · Vogt: Dec guide driven by Meta/Amazon switch demand). Caveat that keeps it preliminary: FY26 FCF guide cut to $460m from $600m and no FY27 FCF framework (see CLS 2026-10-26 neutral). Analyst-day afternoon detail and FLEX's own FQ2 print (10-28 BMO) are not in the corpus yet — re-score if FLEX's guide contradicts the read-through. |
 | 2026-10-26 | ORCL | neutral — NOT AN EVENT (two bullets; parser date = source date): both are Karl Keirstead (UBS) @ UBS 'AI's Credit Stress Test' cross-asset call, 2026-10-26 (Capstone Notion notes). (1) The CFO told him last month that a financing plan comes "at the Investor Day on Wednesday in Vegas" — which also settles the 10-28 vs 10-29 date conflict in favour of WED 10-28. (2) A relayed Oracle tweet on the New Mexico (Project Jupiter) build ("there is a workaround"), tweet not on disk, UNVERIFIED; he is "more worried about the capital bottleneck" than the regulatory one. Both resolve at the 10-28 Financial Analyst Meeting. (wiki-catalyst 2026-10-27) |
 | 2026-10-26 | ORCL | neutral — NOT AN EVENT (two bullets; parser date = source date): both are Karl Keirstead (UBS) @ UBS 'AI's Credit Stress Test' cross-asset call, 2026-10-26 (Capstone Notion notes). (1) The CFO told him last month that a financing plan comes "at the Investor Day on Wednesday in Vegas" — which also settles the 10-28 vs 10-29 date conflict in favour of WED 10-28. (2) A relayed Oracle tweet on the New Mexico (Project Jupiter) build ("there is a workaround"), tweet not on disk, UNVERIFIED; he is "more worried about the capital bottleneck" than the regulatory one. Both resolve at the 10-28 Financial Analyst Meeting. (wiki-catalyst 2026-10-27) |
 | 2026-10-26 | META | bear won (preliminary — on the financing/credibility test; tape not in corpus) — two 10-26 items close the election-week financing watch early. (1) The flagged bullet: Meta's investor video ('Meta roadshow', speakers unnamed, Capstone Notion notes) repeats 2026 capex $135-145bn and says only "we expect that investment to grow in 2027" — a direction, no number (still due at the 4Q call). (2) Same day, a $95bn equity plan as relayed by Wells Fargo · Gawrelski et al. (Flash, 2026-10-26; the company announcement/prospectus is NOT on disk): $35bn underwritten ($22.5bn Class A + $12.5bn mandatory convertible preferred) + $60bn Class C ATM from 1Q27, 5.8% FD dilution (6.1% with overallotment), ~2x the $40-50bn the market expected and five days after Li's "no specific financing plans" (10-21); NVDA/AMD/AVGO indicated up to $5bn as cornerstones. The page's own Sinal row moved to ✗ contesta on Capital / Class C. Counter-read kept: WFC (OW, PT $1,000 → $995) says it removes credit-market dependence. NO post-announcement tape or second broker in the corpus as of 2026-10-27 06:45 — re-score if the tape shows the de-risking read dominating. Already on META.md (run-inbox 10-26); route the company announcement/prospectus to /run-inbox. (wiki-catalyst 2026-10-27) |
