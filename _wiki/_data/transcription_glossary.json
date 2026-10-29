@@ -1,6 +1,6 @@
 {
  "_about": "Hand-edited ledger of machine-transcription garbles (Notion AI, Bloomberg ASR, auto-translation) seen in the archive, with the correct reading. Used by E:\\.claude\\scripts\\transcript_qa.py (source-file scan, page-diff scan) and by ingest_notion_meetings.py (writes a 'Transcription QA' block into every archived Notion file). Keys are matched with word boundaries, case-sensitive unless 'ci' is true. 'keep_when' = regex contexts (same line, ~80 chars around the hit) where the token is legitimate and must NOT be flagged. Add an entry the first time a garble is caught; never delete one. Standing rule (Felipe, 2026-09-28): ALWAYS double-check transcript content — acronyms, names, units, numbers — before it travels to a page.",
- "_updated": "2026-10-27",
+ "_updated": "2026-10-28",
  "terms": {
   "Astrod": {
    "correct": "Astra (probable: OpenAI GPT-6 Astra)",
@@ -4645,6 +4645,946 @@
    "domain": "names",
    "rule": "ASR of 'the Ivy League'.",
    "first_seen": "2026-10-27 (a16z Show, Reinventing School for the AI Era, podscripts ASR)"
+  },
+  "MPA": {
+   "correct": "NPA (note purchase agreement) when the sentence is about Anthropic's Google/Amazon/Broadcom funding notes",
+   "domain": "finance",
+   "rule": "'the seventy billion dollars MPA' in the Anthropic S-1 funding segment = NPA. Leave MPA alone where it legitimately means a master purchase agreement.",
+   "first_seen": "2026-10-28 (SemiAnalysis Ep. 041 Anthropic S-1, YouTube captions)",
+   "keep_when": [
+    "[Mm]aster [Pp]urchase"
+   ]
+  },
+  "Anti-gravity": {
+   "correct": "Antigravity (Google's agentic coding IDE)",
+   "domain": "products",
+   "rule": "ASR/page hyphenation of Antigravity; Google product name is one word.",
+   "first_seen": "2026-10-28 (Sources Podcast, Sundar Pichai, 2026-10-21, YouTube ASR)"
+  },
+  "Kory": {
+   "correct": "Koray (Koray Kavukcuoglu, Google DeepMind)",
+   "domain": "names",
+   "rule": "In a Google/DeepMind context 'Kory'/'Corey' = Koray Kavukcuoglu; surname never spoken.",
+   "first_seen": "2026-10-28 (Sources Podcast, Sundar Pichai, 2026-10-21, YouTube ASR)"
+  },
+  "agent decoding": {
+   "correct": "agentic coding",
+   "domain": "terms",
+   "rule": "ASR of 'agentic coding'.",
+   "first_seen": "2026-10-28 (Sources Podcast, Sundar Pichai, 2026-10-21, YouTube ASR)"
+  },
+  "Sun Catcher": {
+   "correct": "Suncatcher (Google Project Suncatcher, space-based TPU data centers)",
+   "domain": "products",
+   "ci": true,
+   "rule": "ASR splits the project name.",
+   "first_seen": "2026-10-28 (Sources Podcast, Sundar Pichai, 2026-10-21, YouTube ASR)"
+  },
+  "Argonis": {
+   "correct": "Argon is (Gemini 4 Argon)",
+   "domain": "products",
+   "rule": "ASR fuses 'Argon is'.",
+   "first_seen": "2026-10-28 (Sources Podcast, Sundar Pichai, 2026-10-21, YouTube ASR)"
+  },
+  "hyper scalar": {
+   "correct": "hyperscaler",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR of 'hyperscaler'.",
+   "first_seen": "2026-10-28 (Sources Podcast, Sundar Pichai, 2026-10-21, YouTube ASR)"
+  },
+  "Neo clouds": {
+   "correct": "neoclouds",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR splits 'neoclouds'.",
+   "first_seen": "2026-10-28 (Sources Podcast, Sundar Pichai, 2026-10-21, YouTube ASR)"
+  },
+  "fair and program": {
+   "correct": "Fairwind Program (Google external model-testing program, as on GOOG.md)",
+   "domain": "products",
+   "ci": true,
+   "rule": "'tested it externally, through our fair and program, with the US government' = Fairwind Program.",
+   "first_seen": "2026-10-28 (Sources Podcast, Sundar Pichai, 2026-10-21, YouTube ASR)"
+  },
+  "Anemotron": {
+   "correct": "Nemotron (NVIDIA open models)",
+   "domain": "products",
+   "rule": "ASR of Nemotron.",
+   "first_seen": "2026-10-28 (No Priors, George Kurtz, 2026-10-22, YouTube ASR)"
+  },
+  "Neumotron": {
+   "correct": "Nemotron (NVIDIA open models)",
+   "domain": "products",
+   "rule": "ASR of Nemotron.",
+   "first_seen": "2026-10-28 (No Priors, George Kurtz, 2026-10-22, YouTube ASR)"
+  },
+  "NemoTron": {
+   "correct": "Nemotron (NVIDIA open models)",
+   "domain": "products",
+   "rule": "ASR casing of Nemotron.",
+   "first_seen": "2026-10-28 (No Priors, George Kurtz, 2026-10-22, YouTube ASR)"
+  },
+  "spark DGXs": {
+   "correct": "DGX Sparks (NVIDIA desktop AI systems)",
+   "domain": "products",
+   "ci": true,
+   "rule": "ASR word order of 'DGX Sparks'.",
+   "first_seen": "2026-10-28 (No Priors, George Kurtz, 2026-10-22, YouTube ASR)"
+  },
+  "FalCon": {
+   "correct": "Fal.Con (CrowdStrike's annual conference)",
+   "domain": "names",
+   "rule": "Case-sensitive: 'FalCon' = Fal.Con; the Falcon platform is spelled 'Falcon'.",
+   "first_seen": "2026-10-28 (No Priors, George Kurtz, 2026-10-22, YouTube ASR)"
+  },
+  "Chinese opens": {
+   "correct": "Chinese open-source / open-weight models",
+   "domain": "terms",
+   "rule": "ASR drops 'source' / 'models'.",
+   "first_seen": "2026-10-28 (No Priors, George Kurtz, 2026-10-22, YouTube ASR)"
+  },
+  "bladed": {
+   "correct": "ablated (open-weight model with refusals removed)",
+   "domain": "terms",
+   "rule": "Only in the context of open-weight models with safety refusals stripped out ('a bladed model').",
+   "first_seen": "2026-10-28 (No Priors, George Kurtz, 2026-10-22, YouTube ASR)",
+   "keep_when": [
+    "[Bb]laded server",
+    "[Rr]otor",
+    "[Tt]urbine"
+   ]
+  },
+  "co-was": {
+   "correct": "CoWoS (TSMC advanced packaging)",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR of CoWoS in the supply-chain bottleneck list (wafers → CoWoS → HBM …).",
+   "first_seen": "2026-10-28 (Yahoo Finance, Jensen Huang full interview, 2026-10-21, YouTube ASR)"
+  },
+  "OpenShells": {
+   "correct": "OpenShell's / OpenShell (NVIDIA secure agent runtime)",
+   "domain": "products",
+   "rule": "ASR plural of OpenShell; at [00:25:45] may be 'OpenShell and Sentry' — UNCONFIRMED.",
+   "first_seen": "2026-10-28 (Yahoo Finance, Jensen Huang full interview, 2026-10-21, YouTube ASR)"
+  },
+  "Daru Amodei": {
+   "correct": "Dario Amodei (Anthropic CEO)",
+   "domain": "names",
+   "rule": "ASR of Dario.",
+   "first_seen": "2026-10-28 (Yahoo Finance, Jensen Huang full interview, 2026-10-21, YouTube ASR)"
+  },
+  "Chancellor Merkel": {
+   "correct": "Chancellor Merz (probable — Friedrich Merz is the sitting German chancellor; could also be a speaker slip)",
+   "domain": "names",
+   "rule": "2026 context (Jensen at GTC Berlin): quote as Merz [transcribed \"Merkel\"], UNCONFIRMED.",
+   "first_seen": "2026-10-28 (Yahoo Finance, Jensen Huang full interview, 2026-10-21, YouTube ASR)"
+  },
+  "inside a risk": {
+   "correct": "insider risk",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR of 'insider risk' (security).",
+   "first_seen": "2026-10-28 (Semafor Future Proof, Satya Nadella, 2026-10-21, YouTube ASR)"
+  },
+  "code work": {
+   "correct": "Cowork (Copilot Cowork, Microsoft)",
+   "domain": "products",
+   "ci": true,
+   "rule": "Only when a Microsoft Copilot product is meant; 'code work' is otherwise ordinary English.",
+   "first_seen": "2026-10-28 (Semafor Future Proof, Satya Nadella, 2026-10-21, YouTube ASR)"
+  },
+  "XAI": {
+   "correct": "xAI (Musk's AI lab)",
+   "domain": "companies",
+   "rule": "Case-sensitive caption casing; 'XAI' as explainable AI is rare in this corpus.",
+   "first_seen": "2026-10-28 (Semafor Future Proof, Satya Nadella, 2026-10-21, YouTube ASR)",
+   "keep_when": [
+    "[Ee]xplainab"
+   ]
+  },
+  "Beats": {
+   "correct": "Bits (Datadog Bits AI assistant / agents)",
+   "domain": "products",
+   "rule": "Only in a Datadog context ('Beats AI assistant for security' = Bits AI).",
+   "first_seen": "2026-10-28 (KBI Media From The Field at DASH 2026, Pomel & Lê-Quôc, YouTube ASR)",
+   "keep_when": [
+    "[Bb]eats by",
+    "[Hh]eadphone",
+    "[Aa]pple"
+   ]
+  },
+  "Michael Foner": {
+   "correct": "my co-founder (Pomel's founding story)",
+   "domain": "names",
+   "rule": "ASR of 'my co-founder'; not a person.",
+   "first_seen": "2026-10-28 (KBI Media From The Field at DASH 2026, Pomel & Lê-Quôc, YouTube ASR)"
+  },
+  "Lequoc": {
+   "correct": "Lê-Quôc (Alexis Lê-Quôc, Datadog CTO and co-founder)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR drops the diacritics and hyphen.",
+   "first_seen": "2026-10-28 (KBI Media From The Field at DASH 2026, Pomel & Lê-Quôc, YouTube ASR)"
+  },
+  "Alexei": {
+   "correct": "Alexis (Alexis Lê-Quôc, Datadog CTO)",
+   "domain": "names",
+   "rule": "Only in a Datadog context.",
+   "first_seen": "2026-10-28 (KBI Media From The Field at DASH 2026, Pomel & Lê-Quôc, YouTube ASR)"
+  },
+  "SRI": {
+   "correct": "SRE (site reliability engineering)",
+   "domain": "terms",
+   "rule": "In an observability/on-call context 'SRI' = SRE.",
+   "first_seen": "2026-10-28 (KBI Media From The Field at DASH 2026, Pomel & Lê-Quôc, YouTube ASR)",
+   "keep_when": [
+    "SRI International",
+    "[Ss]tanford"
+   ]
+  },
+  "Sulaiman": {
+   "correct": "Suleyman (Mustafa Suleyman, Microsoft AI CEO)",
+   "domain": "names",
+   "rule": "ASR spelling.",
+   "first_seen": "2026-10-28 (Deep Business, Suleyman retelling, 2026-10-24, YouTube ASR)"
+  },
+  "Suleiman": {
+   "correct": "Suleyman (Mustafa Suleyman, Microsoft AI CEO)",
+   "domain": "names",
+   "rule": "ASR spelling (incl. \"Suleiman's\") when Microsoft AI is the context.",
+   "first_seen": "2026-10-28 (Deep Business, Suleyman retelling, 2026-10-24, YouTube ASR)"
+  },
+  "Dierdra": {
+   "correct": "Deirdre (Deirdre Silberstein, Deep Business co-host)",
+   "domain": "names",
+   "rule": "ASR spelling.",
+   "first_seen": "2026-10-28 (Deep Business, Suleyman retelling, 2026-10-24, YouTube ASR)"
+  },
+  "Neus": {
+   "correct": "Nous (Nous Research, open-model lab)",
+   "domain": "companies",
+   "rule": "ASR of Nous.",
+   "first_seen": "2026-10-28 (USV, Matthew Prince & Dillon Rollnick, 2026-10-22, YouTube ASR)"
+  },
+  "NewsCon": {
+   "correct": "NousCon (Nous Research conference)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of NousCon.",
+   "first_seen": "2026-10-28 (USV, Matthew Prince & Dillon Rollnick, 2026-10-22, YouTube ASR)"
+  },
+  "Air Mass": {
+   "correct": "Hermes (Nous Research model family)",
+   "domain": "products",
+   "ci": true,
+   "rule": "ASR of Hermes in a Nous Research context.",
+   "first_seen": "2026-10-28 (USV, Matthew Prince & Dillon Rollnick, 2026-10-22, YouTube ASR)"
+  },
+  "mountain manufacturers": {
+   "correct": "model manufacturers",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR of 'model'.",
+   "first_seen": "2026-10-28 (USV, Matthew Prince & Dillon Rollnick, 2026-10-22, YouTube ASR)"
+  },
+  "Deep Seek": {
+   "correct": "DeepSeek",
+   "domain": "companies",
+   "rule": "ASR splits DeepSeek.",
+   "first_seen": "2026-10-28 (USV, Matthew Prince & Dillon Rollnick, 2026-10-22, YouTube ASR); also Jensen Yahoo Finance 2026-10-21"
+  },
+  "Kimmy": {
+   "correct": "Kimi (Moonshot AI model)",
+   "domain": "products",
+   "rule": "Only in an AI-model context.",
+   "first_seen": "2026-10-28 (USV, Matthew Prince & Dillon Rollnick, 2026-10-22, YouTube ASR)"
+  },
+  "Base 44": {
+   "correct": "Base44 (vibe-coding app)",
+   "domain": "companies",
+   "rule": "ASR splits Base44.",
+   "first_seen": "2026-10-28 (USV, Matthew Prince & Dillon Rollnick, 2026-10-22, YouTube ASR)"
+  },
+  "Dylan Rollnick": {
+   "correct": "Dillon Rollnick (Nous Research CEO, spelling per the USV show notes)",
+   "domain": "names",
+   "rule": "ASR of the first name.",
+   "first_seen": "2026-10-28 (USV, Matthew Prince & Dillon Rollnick, 2026-10-22, YouTube ASR)"
+  },
+  "Nikish": {
+   "correct": "Nikesh (Nikesh Arora, Palo Alto Networks CEO)",
+   "domain": "names",
+   "rule": "ASR spelling of Nikesh.",
+   "first_seen": "2026-10-28 (umichTECH, Nikesh Arora U-M Distinguished Lecture, 2026-10-22, YouTube ASR)"
+  },
+  "Nicash": {
+   "correct": "Nikesh (Nikesh Arora, Palo Alto Networks CEO)",
+   "domain": "names",
+   "rule": "ASR spelling of Nikesh.",
+   "first_seen": "2026-10-28 (umichTECH, Nikesh Arora U-M Distinguished Lecture, 2026-10-22, YouTube ASR)"
+  },
+  "Nesh": {
+   "correct": "Nikesh (Nikesh Arora, Palo Alto Networks CEO)",
+   "domain": "names",
+   "rule": "ASR truncation of Nikesh when PANW is the context.",
+   "first_seen": "2026-10-28 (umichTECH, Nikesh Arora U-M Distinguished Lecture, 2026-10-22, YouTube ASR)"
+  },
+  "Pensy": {
+   "correct": "Pendse (Ravi Pendse, U-M CIO, moderator)",
+   "domain": "names",
+   "rule": "ASR spelling of Pendse (also 'Pense', 'Pensay', 'Pensip').",
+   "first_seen": "2026-10-28 (umichTECH, Nikesh Arora U-M Distinguished Lecture, 2026-10-22, YouTube ASR)"
+  },
+  "Pensay": {
+   "correct": "Pendse (Ravi Pendse, U-M CIO, moderator)",
+   "domain": "names",
+   "rule": "ASR spelling of Pendse.",
+   "first_seen": "2026-10-28 (umichTECH, Nikesh Arora U-M Distinguished Lecture, 2026-10-22, YouTube ASR)"
+  },
+  "Pensip": {
+   "correct": "Pendse (Ravi Pendse, U-M CIO, moderator)",
+   "domain": "names",
+   "rule": "ASR spelling of Pendse.",
+   "first_seen": "2026-10-28 (umichTECH, Nikesh Arora U-M Distinguished Lecture, 2026-10-22, YouTube ASR)"
+  },
+  "Palato": {
+   "correct": "Palo Alto (Palo Alto Networks)",
+   "domain": "companies",
+   "rule": "ASR of Palo Alto.",
+   "first_seen": "2026-10-28 (umichTECH, Nikesh Arora U-M Distinguished Lecture, 2026-10-22, YouTube ASR)"
+  },
+  "Palto": {
+   "correct": "Palo Alto (Palo Alto Networks)",
+   "domain": "companies",
+   "rule": "ASR of Palo Alto.",
+   "first_seen": "2026-10-28 (umichTECH, Nikesh Arora U-M Distinguished Lecture, 2026-10-22, YouTube ASR)"
+  },
+  "Palo Alter": {
+   "correct": "Palo Alto (Palo Alto Networks)",
+   "domain": "companies",
+   "ci": true,
+   "rule": "ASR of Palo Alto.",
+   "first_seen": "2026-10-28 (umichTECH, Nikesh Arora U-M Distinguished Lecture, 2026-10-22, YouTube ASR)"
+  },
+  "Josh Kurts": {
+   "correct": "George Kurtz (CrowdStrike CEO)",
+   "domain": "names",
+   "rule": "ASR of George Kurtz (also 'Josh Goods').",
+   "first_seen": "2026-10-28 (umichTECH, Nikesh Arora U-M Distinguished Lecture, 2026-10-22, YouTube ASR)"
+  },
+  "Josh Goods": {
+   "correct": "George Kurtz (CrowdStrike CEO)",
+   "domain": "names",
+   "rule": "ASR of George Kurtz in a cyber-CEO context.",
+   "first_seen": "2026-10-28 (umichTECH, Nikesh Arora U-M Distinguished Lecture, 2026-10-22, YouTube ASR)"
+  },
+  "Fordet": {
+   "correct": "Fortinet",
+   "domain": "companies",
+   "rule": "ASR of Fortinet.",
+   "first_seen": "2026-10-28 (umichTECH, Nikesh Arora U-M Distinguished Lecture, 2026-10-22, YouTube ASR)"
+  },
+  "claw code": {
+   "correct": "Claude Code (Anthropic)",
+   "domain": "products",
+   "ci": true,
+   "rule": "ASR of Claude Code.",
+   "first_seen": "2026-10-28 (umichTECH, Nikesh Arora U-M Distinguished Lecture, 2026-10-22, YouTube ASR)"
+  },
+  "codeex": {
+   "correct": "Codex (OpenAI)",
+   "domain": "products",
+   "ci": true,
+   "rule": "ASR of Codex.",
+   "first_seen": "2026-10-28 (umichTECH, Nikesh Arora U-M Distinguished Lecture, 2026-10-22, YouTube ASR)"
+  },
+  "Chad GPD": {
+   "correct": "ChatGPT",
+   "domain": "products",
+   "ci": true,
+   "rule": "ASR of ChatGPT (also 'Chad GBD', 'Chajb').",
+   "first_seen": "2026-10-28 (umichTECH, Nikesh Arora U-M Distinguished Lecture, 2026-10-22, YouTube ASR)"
+  },
+  "Chad GBD": {
+   "correct": "ChatGPT",
+   "domain": "products",
+   "ci": true,
+   "rule": "ASR of ChatGPT.",
+   "first_seen": "2026-10-28 (umichTECH, Nikesh Arora U-M Distinguished Lecture, 2026-10-22, YouTube ASR)"
+  },
+  "Chajb": {
+   "correct": "ChatGPT",
+   "domain": "products",
+   "rule": "ASR of ChatGPT.",
+   "first_seen": "2026-10-28 (umichTECH, Nikesh Arora U-M Distinguished Lecture, 2026-10-22, YouTube ASR)"
+  },
+  "Sam Alman": {
+   "correct": "Sam Altman (OpenAI CEO)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of Altman.",
+   "first_seen": "2026-10-28 (umichTECH, Nikesh Arora U-M Distinguished Lecture, 2026-10-22, YouTube ASR)"
+  },
+  "cyber arc": {
+   "correct": "CyberArk (identity security, acquired by PANW)",
+   "domain": "companies",
+   "ci": true,
+   "rule": "ASR splits CyberArk.",
+   "first_seen": "2026-10-28 (umichTECH, Nikesh Arora U-M Distinguished Lecture, 2026-10-22, YouTube ASR)"
+  },
+  "core and nebius": {
+   "correct": "CoreWeave and Nebius",
+   "domain": "companies",
+   "ci": true,
+   "rule": "ASR drops 'Weave'.",
+   "first_seen": "2026-10-28 (umichTECH, Nikesh Arora U-M Distinguished Lecture, 2026-10-22, YouTube ASR)"
+  },
+  "reats": {
+   "correct": "REITs",
+   "domain": "finance",
+   "ci": true,
+   "rule": "'data centers are reats. They should trade on IRR' = REITs.",
+   "first_seen": "2026-10-28 (umichTECH, Nikesh Arora U-M Distinguished Lecture, 2026-10-22, YouTube ASR)"
+  },
+  "IRRa": {
+   "correct": "IRR",
+   "domain": "finance",
+   "rule": "ASR appends a vowel to IRR.",
+   "first_seen": "2026-10-28 (umichTECH, Nikesh Arora U-M Distinguished Lecture, 2026-10-22, YouTube ASR)"
+  },
+  "infant stacks": {
+   "correct": "inference stacks",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR of 'inference'.",
+   "first_seen": "2026-10-28 (umichTECH, Nikesh Arora U-M Distinguished Lecture, 2026-10-22, YouTube ASR)"
+  },
+  "the C of IBM": {
+   "correct": "the CEO of IBM",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR drops 'EO'.",
+   "first_seen": "2026-10-28 (umichTECH, Nikesh Arora U-M Distinguished Lecture, 2026-10-22, YouTube ASR)"
+  },
+  "Mustaper Sullean": {
+   "correct": "Mustafa Suleyman (Microsoft AI CEO)",
+   "domain": "names",
+   "rule": "ASR of the guest's name in the intro.",
+   "first_seen": "2026-10-28 (The Rest Is Politics: Leading, Mustafa Suleyman, 2026-09-28, YouTube ASR)"
+  },
+  "Deis Habis": {
+   "correct": "Demis Hassabis (Google DeepMind CEO)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of Demis Hassabis (also 'Dennis Habis').",
+   "first_seen": "2026-10-28 (The Rest Is Politics: Leading, Mustafa Suleyman, 2026-09-28, YouTube ASR)"
+  },
+  "Dennis Habis": {
+   "correct": "Demis Hassabis (Google DeepMind CEO)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of Demis Hassabis.",
+   "first_seen": "2026-10-28 (The Rest Is Politics: Leading, Mustafa Suleyman, 2026-09-28, YouTube ASR)"
+  },
+  "Dario Mode": {
+   "correct": "Dario Amodei (Anthropic CEO)",
+   "domain": "names",
+   "rule": "ASR of Amodei.",
+   "first_seen": "2026-10-28 (The Rest Is Politics: Leading, Mustafa Suleyman, 2026-09-28, YouTube ASR)"
+  },
+  "Daryl Mod": {
+   "correct": "Dario Amodei (Anthropic CEO)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of Dario Amodei.",
+   "first_seen": "2026-10-28 (The Rest Is Politics: Leading, Mustafa Suleyman, 2026-09-28, YouTube ASR)"
+  },
+  "Amanda Ascll": {
+   "correct": "Amanda Askell (Anthropic)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of Askell.",
+   "first_seen": "2026-10-28 (The Rest Is Politics: Leading, Mustafa Suleyman, 2026-09-28, YouTube ASR)"
+  },
+  "McKascal": {
+   "correct": "MacAskill (Will MacAskill)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of MacAskill.",
+   "first_seen": "2026-10-28 (The Rest Is Politics: Leading, Mustafa Suleyman, 2026-09-28, YouTube ASR)"
+  },
+  "Jeffrey Henson": {
+   "correct": "Geoffrey Hinton",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of Geoffrey Hinton.",
+   "first_seen": "2026-10-28 (The Rest Is Politics: Leading, Mustafa Suleyman, 2026-09-28, YouTube ASR)"
+  },
+  "Mark Andre": {
+   "correct": "Marc Andreessen (a16z)",
+   "domain": "names",
+   "rule": "ASR of Andreessen when named with David Sacks.",
+   "first_seen": "2026-10-28 (The Rest Is Politics: Leading, Mustafa Suleyman, 2026-09-28, YouTube ASR)"
+  },
+  "David Saxs": {
+   "correct": "David Sacks",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of Sacks.",
+   "first_seen": "2026-10-28 (The Rest Is Politics: Leading, Mustafa Suleyman, 2026-09-28, YouTube ASR)"
+  },
+  "Jensen Hang": {
+   "correct": "Jensen Huang (NVIDIA CEO)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of Huang.",
+   "first_seen": "2026-10-28 (The Rest Is Politics: Leading, Mustafa Suleyman, 2026-09-28, YouTube ASR)"
+  },
+  "Satska": {
+   "correct": "Sutskever (Ilya Sutskever)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of Sutskever ('Ilia, Satska').",
+   "first_seen": "2026-10-28 (The Rest Is Politics: Leading, Mustafa Suleyman, 2026-09-28, YouTube ASR)"
+  },
+  "Cinping": {
+   "correct": "Xi Jinping",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of Xi Jinping ('Cinping sitting down with Trump').",
+   "first_seen": "2026-10-28 (The Rest Is Politics: Leading, Mustafa Suleyman, 2026-09-28, YouTube ASR)"
+  },
+  "CyberJim": {
+   "correct": "CyberGym (cyber-capability evaluation benchmark)",
+   "domain": "products",
+   "ci": true,
+   "rule": "ASR of CyberGym.",
+   "first_seen": "2026-10-28 (The Rest Is Politics: Leading, Mustafa Suleyman, 2026-09-28, YouTube ASR)"
+  },
+  "Opus 55": {
+   "correct": "Opus 5.5 (Anthropic)",
+   "domain": "products",
+   "rule": "ASR drops the decimal point.",
+   "first_seen": "2026-10-28 (The Rest Is Politics: Leading, Mustafa Suleyman, 2026-09-28, YouTube ASR)"
+  },
+  "neural ease": {
+   "correct": "neuralese (non-English latent chain-of-thought)",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR of 'neuralese'.",
+   "first_seen": "2026-10-28 (The Rest Is Politics: Leading, Mustafa Suleyman, 2026-09-28, YouTube ASR)"
+  },
+  "goodart's": {
+   "correct": "Goodhart's (Goodhart's law)",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR of Goodhart.",
+   "first_seen": "2026-10-28 (The Rest Is Politics: Leading, Mustafa Suleyman, 2026-09-28, YouTube ASR)"
+  },
+  "defense philanthropic": {
+   "correct": "defence of Anthropic",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR of 'defence of Anthropic' (laughter context).",
+   "first_seen": "2026-10-28 (The Rest Is Politics: Leading, Mustafa Suleyman, 2026-09-28, YouTube ASR)"
+  },
+  "Dumprey's house": {
+   "correct": "Dumfries House (the King's summit venue)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of Dumfries House.",
+   "first_seen": "2026-10-28 (The Rest Is Politics: Leading, Mustafa Suleyman, 2026-09-28, YouTube ASR)"
+  },
+  "pigeon English": {
+   "correct": "pidgin English",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR of 'pidgin'.",
+   "first_seen": "2026-10-28 (The Rest Is Politics: Leading, Mustafa Suleyman, 2026-09-28, YouTube ASR)"
+  },
+  "New Release": {
+   "correct": "neuralese (non-English latent chain-of-thought)",
+   "domain": "terms",
+   "rule": "'COT better be in English and not in New Release' = neuralese.",
+   "first_seen": "2026-10-28 (20VC, Satya Nadella \"Open vs Closed Models\", 2026-10-26, YouTube ASR)"
+  },
+  "Legoras": {
+   "correct": "Legora (legal-AI startup)",
+   "domain": "names",
+   "rule": "'your Harveys or your Legoras' = Legora.",
+   "first_seen": "2026-10-28 (20VC, Satya Nadella \"Open vs Closed Models\", 2026-10-26, YouTube ASR)"
+  },
+  "Closed trade models": {
+   "correct": "closed-weight models",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR of 'closed-weight models'.",
+   "first_seen": "2026-10-28 (20VC, Satya Nadella \"Open vs Closed Models\", 2026-10-26, YouTube ASR)"
+  },
+  "MIA": {
+   "correct": "MAI (Microsoft AI models)",
+   "domain": "products",
+   "rule": "Host slip/ASR 'MIA' for Microsoft's MAI models; flag only in Microsoft context.",
+   "first_seen": "2026-10-28 (20VC, Satya Nadella \"Open vs Closed Models\", 2026-10-26, YouTube ASR)"
+  },
+  "SEMA": {
+   "correct": "Seema (Oracle Health executive interviewing Ellison; by context Seema Verma, surname not said - UNCONFIRMED)",
+   "domain": "names",
+   "keep_when": [
+    "SEMA Show",
+    "Specialty Equipment"
+   ],
+   "rule": "ASR all-caps rendering of the first name Seema.",
+   "first_seen": "2026-10-28 (Oracle AI World keynote, Larry Ellison, YouTube ASR)"
+  },
+  "Netswuite": {
+   "correct": "NetSuite",
+   "domain": "products",
+   "ci": true,
+   "rule": "ASR of Oracle NetSuite.",
+   "first_seen": "2026-10-28 (Oracle AI World keynote, Larry Ellison, YouTube ASR)"
+  },
+  "Seammens": {
+   "correct": "Siemens",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR spelling ('three Tesla Seammen's MRI', 'se Seammens').",
+   "first_seen": "2026-10-28 (Oracle AI World keynote, Larry Ellison, YouTube ASR)"
+  },
+  "seaman CT": {
+   "correct": "Siemens CT",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of a Siemens CT scanner.",
+   "first_seen": "2026-10-28 (Oracle AI World keynote, Larry Ellison, YouTube ASR)"
+  },
+  "smart on fire": {
+   "correct": "SMART on FHIR (healthcare interoperability standard)",
+   "domain": "products",
+   "ci": true,
+   "rule": "ASR of SMART on FHIR.",
+   "first_seen": "2026-10-28 (Oracle AI World keynote, Larry Ellison, YouTube ASR)"
+  },
+  "fire standards": {
+   "correct": "FHIR standards",
+   "domain": "products",
+   "ci": true,
+   "rule": "ASR of HL7 FHIR in EHR-interoperability context.",
+   "first_seen": "2026-10-28 (Oracle AI World keynote, Larry Ellison, YouTube ASR)"
+  },
+  "all script": {
+   "correct": "Allscripts (EHR vendor)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of Allscripts; next to Epic/Cerner.",
+   "first_seen": "2026-10-28 (Oracle AI World keynote, Larry Ellison, YouTube ASR)"
+  },
+  "all scripts": {
+   "correct": "Allscripts (EHR vendor)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of Allscripts; next to Epic/Cerner.",
+   "first_seen": "2026-10-28 (Oracle AI World keynote, Larry Ellison, YouTube ASR)"
+  },
+  "Cedar Cyani": {
+   "correct": "Cedars-Sinai",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of the LA hospital.",
+   "first_seen": "2026-10-28 (Oracle AI World keynote, Larry Ellison, YouTube ASR)"
+  },
+  "Usbekiststan": {
+   "correct": "Uzbekistan",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR spelling.",
+   "first_seen": "2026-10-28 (Oracle AI World keynote, Larry Ellison, YouTube ASR)"
+  },
+  "metroperal": {
+   "correct": "metoprolol",
+   "domain": "other",
+   "ci": true,
+   "rule": "ASR of the beta-blocker in a dosage example.",
+   "first_seen": "2026-10-28 (Oracle AI World keynote, Larry Ellison, YouTube ASR)"
+  },
+  "Lasic": {
+   "correct": "LASIK",
+   "domain": "other",
+   "rule": "ASR of LASIK eye surgery.",
+   "first_seen": "2026-10-28 (Oracle AI World keynote, Larry Ellison, YouTube ASR)"
+  },
+  "Dr. Mo": {
+   "correct": "Mohs (Dr. Frederic Mohs, Mohs surgery)",
+   "domain": "names",
+   "rule": "ASR of Mohs micrographic surgery.",
+   "first_seen": "2026-10-28 (Oracle AI World keynote, Larry Ellison, YouTube ASR)"
+  },
+  "Open AAI": {
+   "correct": "OpenAI",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of OpenAI.",
+   "first_seen": "2026-10-28 (Oracle AI World keynote, Larry Ellison, YouTube ASR)"
+  },
+  "Cargo Espresso": {
+   "correct": "Cargo Expreso (Central American courier; UNCONFIRMED)",
+   "domain": "names",
+   "ci": true,
+   "rule": "Probable ASR of Cargo Expreso; carry as UNCONFIRMED.",
+   "first_seen": "2026-10-28 (Oracle AI World keynote, Larry Ellison, YouTube ASR)"
+  },
+  "Heathro": {
+   "correct": "Heathrow",
+   "domain": "names",
+   "rule": "ASR of Heathrow airport.",
+   "first_seen": "2026-10-28 (Oracle AI World keynote, Larry Ellison, YouTube ASR)"
+  },
+  "Ethro": {
+   "correct": "Heathrow",
+   "domain": "names",
+   "rule": "ASR of Heathrow airport.",
+   "first_seen": "2026-10-28 (Oracle AI World keynote, Larry Ellison, YouTube ASR)"
+  },
+  "encology": {
+   "correct": "oncology",
+   "domain": "other",
+   "ci": true,
+   "rule": "ASR spelling.",
+   "first_seen": "2026-10-28 (Oracle AI World keynote, Larry Ellison, YouTube ASR)"
+  },
+  "fusion claw": {
+   "correct": "UNRESOLVED (Oracle Fusion agent product announced at AI World 2026; name unclear) - do not carry",
+   "domain": "products",
+   "ci": true,
+   "rule": "flag only; verify vs Oracle press releases.",
+   "first_seen": "2026-10-28 (Oracle AI World keynote, Larry Ellison, YouTube ASR)"
+  },
+  "SAS apocalypse": {
+   "correct": "SaaS apocalypse",
+   "domain": "other",
+   "ci": true,
+   "rule": "ASR of SaaS in the SaaSpocalypse debate.",
+   "first_seen": "2026-10-28 (Oracle AI World keynote, Larry Ellison, YouTube ASR)"
+  },
+  "cloud skill": {
+   "correct": "Claude skill (Anthropic Agent Skills)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of 'Claude skill' in the agentic-attack context ('use something as simple as a cloud skill').",
+   "keep_when": [
+    "cloud infrastructure",
+    "cloud security"
+   ],
+   "first_seen": "2026-10-28 (The Compound LFTC, George Kurtz, 2026-10-26, YouTube ASR)"
+  },
+  "obliterated": {
+   "correct": "abliterated (open-weight model with refusal/guardrails removed)",
+   "domain": "terms",
+   "ci": true,
+   "rule": "Only when describing models with guardrails removed ('open weight models that are obliterated'); keep in ordinary English use.",
+   "keep_when": [
+    "(?i)(destroy|wiped|completely obliterated (the|their))"
+   ],
+   "first_seen": "2026-10-28 (The Compound LFTC, George Kurtz, 2026-10-26, YouTube ASR)"
+  },
+  "next gen SIM": {
+   "correct": "Next-Gen SIEM (CrowdStrike Falcon Next-Gen SIEM)",
+   "domain": "products",
+   "ci": true,
+   "rule": "ASR renders SIEM as 'SIM'.",
+   "first_seen": "2026-10-28 (The Compound LFTC, George Kurtz, 2026-10-26, YouTube ASR)"
+  },
+  "Safe Mine": {
+   "correct": "SafeMind (CrowdStrike cyber model family + harness)",
+   "domain": "products",
+   "ci": true,
+   "rule": "ASR of SafeMind; the same episode also renders it 'SafeMind' correctly.",
+   "first_seen": "2026-10-28 (The Compound LFTC, George Kurtz, 2026-10-26, YouTube ASR)"
+  },
+  "data mode": {
+   "correct": "data moat",
+   "domain": "terms",
+   "ci": true,
+   "rule": "'the data mode we built' = data moat; keep for genuine modes (e.g. 'data mode' in a settings sense).",
+   "keep_when": [
+    "(?i)(settings|toggle|switch to)"
+   ],
+   "first_seen": "2026-10-28 (The Compound LFTC, George Kurtz, 2026-10-26, YouTube ASR)"
+  },
+  "Amade": {
+   "correct": "Amodei",
+   "domain": "names",
+   "rule": "ASR of Amodei ('Dario and Daniela Amade').",
+   "first_seen": "2026-10-28 (The Builders/Kaleidoscope, Dario & Daniela Amodei w/ Walter Isaacson, taped 2026-07-06, posted 2026-10-27, YouTube ASR)"
+  },
+  "Daario": {
+   "correct": "Dario (Amodei, Anthropic CEO)",
+   "domain": "names",
+   "rule": "ASR of Dario.",
+   "first_seen": "2026-10-28 (The Builders/Kaleidoscope, Dario & Daniela Amodei w/ Walter Isaacson, taped 2026-07-06, posted 2026-10-27, YouTube ASR)"
+  },
+  "Dianiela": {
+   "correct": "Daniela (Amodei, Anthropic President)",
+   "domain": "names",
+   "rule": "ASR of Daniela.",
+   "first_seen": "2026-10-28 (The Builders/Kaleidoscope, Dario & Daniela Amodei w/ Walter Isaacson, taped 2026-07-06, posted 2026-10-27, YouTube ASR)"
+  },
+  "Daniellea": {
+   "correct": "Daniela (Amodei, Anthropic President)",
+   "domain": "names",
+   "rule": "ASR of Daniela.",
+   "first_seen": "2026-10-28 (The Builders/Kaleidoscope, Dario & Daniela Amodei w/ Walter Isaacson, taped 2026-07-06, posted 2026-10-27, YouTube ASR)"
+  },
+  "Enthropic": {
+   "correct": "Anthropic",
+   "domain": "names",
+   "rule": "ASR of Anthropic.",
+   "first_seen": "2026-10-28 (The Builders/Kaleidoscope, Dario & Daniela Amodei w/ Walter Isaacson, taped 2026-07-06, posted 2026-10-27, YouTube ASR)"
+  },
+  "Isacson": {
+   "correct": "Isaacson (Walter Isaacson)",
+   "domain": "names",
+   "rule": "ASR of Isaacson.",
+   "first_seen": "2026-10-28 (The Builders/Kaleidoscope, Dario & Daniela Amodei w/ Walter Isaacson, taped 2026-07-06, posted 2026-10-27, YouTube ASR)"
+  },
+  "GPD2": {
+   "correct": "GPT-2",
+   "domain": "products",
+   "rule": "ASR of GPT-2.",
+   "first_seen": "2026-10-28 (The Builders/Kaleidoscope, Dario & Daniela Amodei w/ Walter Isaacson, taped 2026-07-06, posted 2026-10-27, YouTube ASR)"
+  },
+  "GBT2": {
+   "correct": "GPT-2",
+   "domain": "products",
+   "rule": "ASR of GPT-2.",
+   "first_seen": "2026-10-28 (The Builders/Kaleidoscope, Dario & Daniela Amodei w/ Walter Isaacson, taped 2026-07-06, posted 2026-10-27, YouTube ASR)"
+  },
+  "GBD": {
+   "correct": "GPT (context: GPT-2)",
+   "domain": "products",
+   "rule": "ASR of GPT ('GBD's capabilities').",
+   "first_seen": "2026-10-28 (The Builders/Kaleidoscope, Dario & Daniela Amodei w/ Walter Isaacson, taped 2026-07-06, posted 2026-10-27, YouTube ASR)"
+  },
+  "sick fancy": {
+   "correct": "sycophancy",
+   "domain": "terms",
+   "rule": "ASR of sycophancy (also 'stick of fancy', 'syphy').",
+   "first_seen": "2026-10-28 (The Builders/Kaleidoscope, Dario & Daniela Amodei w/ Walter Isaacson, taped 2026-07-06, posted 2026-10-27, YouTube ASR)",
+   "ci": true
+  },
+  "stick of fancy": {
+   "correct": "sycophancy",
+   "domain": "terms",
+   "rule": "ASR of sycophancy.",
+   "first_seen": "2026-10-28 (The Builders/Kaleidoscope, Dario & Daniela Amodei w/ Walter Isaacson, taped 2026-07-06, posted 2026-10-27, YouTube ASR)",
+   "ci": true
+  },
+  "syphy": {
+   "correct": "sycophancy",
+   "domain": "terms",
+   "rule": "ASR of sycophancy.",
+   "first_seen": "2026-10-28 (The Builders/Kaleidoscope, Dario & Daniela Amodei w/ Walter Isaacson, taped 2026-07-06, posted 2026-10-27, YouTube ASR)"
+  },
+  "DV Hughes": {
+   "correct": "DVQs (Dario Vision Quest, Anthropic biweekly all-hands)",
+   "domain": "terms",
+   "rule": "ASR of DVQs.",
+   "first_seen": "2026-10-28 (The Builders/Kaleidoscope, Dario & Daniela Amodei w/ Walter Isaacson, taped 2026-07-06, posted 2026-10-27, YouTube ASR)"
+  },
+  "far it out": {
+   "correct": "ferret out",
+   "domain": "terms",
+   "rule": "ASR of 'ferret out'.",
+   "first_seen": "2026-10-28 (The Builders/Kaleidoscope, Dario & Daniela Amodei w/ Walter Isaacson, taped 2026-07-06, posted 2026-10-27, YouTube ASR)",
+   "ci": true
+  },
+  "Chris Ola": {
+   "correct": "Chris Olah (Anthropic co-founder, interpretability)",
+   "domain": "names",
+   "rule": "ASR of Olah.",
+   "first_seen": "2026-10-28 (The Builders/Kaleidoscope, Dario & Daniela Amodei w/ Walter Isaacson, taped 2026-07-06, posted 2026-10-27, YouTube ASR)"
+  },
+  "neural link": {
+   "correct": "Neuralink",
+   "domain": "names",
+   "rule": "ASR of Neuralink.",
+   "first_seen": "2026-10-28 (The Builders/Kaleidoscope, Dario & Daniela Amodei w/ Walter Isaacson, taped 2026-07-06, posted 2026-10-27, YouTube ASR)",
+   "ci": true
+  },
+  "Casparov": {
+   "correct": "Kasparov",
+   "domain": "names",
+   "rule": "ASR of Garry Kasparov.",
+   "first_seen": "2026-10-28 (The Builders/Kaleidoscope, Dario & Daniela Amodei w/ Walter Isaacson, taped 2026-07-06, posted 2026-10-27, YouTube ASR)"
+  },
+  "aborant": {
+   "correct": "abhorrent",
+   "domain": "terms",
+   "rule": "ASR of abhorrent.",
+   "first_seen": "2026-10-28 (The Builders/Kaleidoscope, Dario & Daniela Amodei w/ Walter Isaacson, taped 2026-07-06, posted 2026-10-27, YouTube ASR)"
+  },
+  "seinal": {
+   "correct": "seminal",
+   "domain": "terms",
+   "rule": "ASR of seminal.",
+   "first_seen": "2026-10-28 (The Builders/Kaleidoscope, Dario & Daniela Amodei w/ Walter Isaacson, taped 2026-07-06, posted 2026-10-27, YouTube ASR)"
+  },
+  "Sameek": {
+   "correct": "Samik (Samik Chatterjee, J.P. Morgan)",
+   "domain": "names",
+   "rule": "analyst name on the NOW Q3 FY26 call; also seen as 'Samet'/'Samek'.",
+   "first_seen": "2026-10-28 (print-night batch, MarketBeat/Quartr earnings-call transcripts) — NOW Q3 FY26 call 2026-10-28"
+  },
+  "Govindaraju": {
+   "correct": "Govindaraj (Varun Govindaraj, Bernstein)",
+   "domain": "names",
+   "rule": "analyst surname on the VRT Q3 FY26 call.",
+   "first_seen": "2026-10-28 (print-night batch, MarketBeat/Quartr earnings-call transcripts) — VRT Q3 FY26 call 2026-10-28"
+  },
+  "Kaohsiang": {
+   "correct": "Kaohsiung",
+   "domain": "names",
+   "rule": "Taiwan city; VRT Q2 FY26 call.",
+   "first_seen": "2026-10-28 (print-night batch, MarketBeat/Quartr earnings-call transcripts) — VRT Q2 FY26 call 2026-07-29"
+  },
+  "AIPA": {
+   "correct": "IEEPA (International Emergency Economic Powers Act tariffs)",
+   "domain": "terms",
+   "rule": "'AIPA tariffs' = IEEPA tariffs (APH Q2 FY26 call).",
+   "first_seen": "2026-10-28 (print-night batch, MarketBeat/Quartr earnings-call transcripts) — APH Q2 FY26 call 2026-07-29"
+  },
+  "Vezza": {
+   "correct": "Veza (identity-security company acquired by ServiceNow)",
+   "domain": "names",
+   "rule": "NOW Q2 FY26 call.",
+   "first_seen": "2026-10-28 (print-night batch, MarketBeat/Quartr earnings-call transcripts) — NOW Q2 FY26 call 2026-07-22"
+  },
+  "Despecking": {
+   "correct": "HBM de-spec",
+   "domain": "terms",
+   "rule": "TER Q3 FY26 call: 'despecking' = de-spec (lower-spec HBM test); see also 'D SVEC'.",
+   "ci": true,
+   "first_seen": "2026-10-28 (print-night batch, MarketBeat/Quartr earnings-call transcripts) — TER Q3 FY26 call 2026-10-28"
+  },
+  "margin and backlog": {
+   "correct": "margin in backlog",
+   "domain": "terms",
+   "rule": "GEV call phrasing: 'margin and backlog' (about pricing embedded in backlog) = margin IN backlog. Legitimate English when two separate metrics are meant ('the margin and backlog marks').",
+   "ci": true,
+   "first_seen": "2026-10-28 (print-night batch, MarketBeat/Quartr earnings-call transcripts) — GEV Q3 FY26 call 2026-10-28",
+   "keep_when": [
+    "margin and backlog marks",
+    "margin and backlog (targets|beats?|numbers|bars?)",
+    "margin and backlog growth"
+   ]
+  },
+  "consumption build": {
+   "correct": "consumption-billed",
+   "domain": "terms",
+   "rule": "NOW Q3 FY26 call: 'consumption build' (Flow / Now Assist pricing) = consumption-billed.",
+   "ci": true,
+   "first_seen": "2026-10-28 (print-night batch, MarketBeat/Quartr earnings-call transcripts) — NOW Q3 FY26 call 2026-10-28"
   }
  },
  "summary_traps": [
@@ -4713,6 +5653,77 @@
   "correct": "100K (racks) — stray character in typed notes",
   "domain": "units",
   "rule": "Typed-note slip on the Google-TPU-rack slide ('135K cv 100KJ for Nvidia').",
-  "first_seen": "2026-09-22 (Jefferies Asia TMT desk deck 'Q326 Techknowledge Tech Trip Takeaways', typed desk notes; ingested 2026-10-13)"
+  "first_seen": "2026-09-22 (Jefferies Asia TMT desk deck 'Q326 Techknowledge Tech Trip Takeaways', typed desk notes; ingested 2026-10-13)",
+  "Crockpot": {
+   "correct": "Grok (xAI)",
+   "domain": "names",
+   "rule": "'Crockpot, $77, the Luca plan' - Cuban's paid Grok plan; Musk/xAI context = Grok, not Groq.",
+   "keep_when": [
+    "[Cc]rock-?[Pp]ot (recipe|cooker|slow)"
+   ],
+   "first_seen": "2026-10-28 (a16z Show, Mark Cuban episode 2026-10-28, YouTube ASR)"
+  },
+  "CVS Sigma": {
+   "correct": "CVS, Cigna",
+   "domain": "names",
+   "rule": "US health-insurer list ('CVS Sigma are not far behind') - Sigma = Cigna here, not Figma.",
+   "first_seen": "2026-10-28 (a16z Show, Mark Cuban episode 2026-10-28, YouTube ASR)"
+  },
+  "BUAS": {
+   "correct": "BUCAHs (Blues/UnitedHealth/Cigna/Aetna/Humana - large US health carriers)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of the insurer acronym BUCAH; expansion inferred from context.",
+   "first_seen": "2026-10-28 (a16z Show, Mark Cuban episode 2026-10-28, YouTube ASR)"
+  },
+  "seauite": {
+   "correct": "C-suite",
+   "domain": "names",
+   "rule": "ASR run-together.",
+   "first_seen": "2026-10-28 (a16z Show, Mark Cuban episode 2026-10-28, YouTube ASR)"
+  },
+  "cordians": {
+   "correct": "quarterly",
+   "domain": "names",
+   "rule": "'cordians conference calls' = quarterly conference calls.",
+   "first_seen": "2026-10-28 (a16z Show, Mark Cuban episode 2026-10-28, YouTube ASR)"
+  },
+  "Eloquis": {
+   "correct": "Eliquis (apixaban)",
+   "domain": "names",
+   "rule": "Drug-name ASR.",
+   "first_seen": "2026-10-28 (a16z Show, Mark Cuban episode 2026-10-28, YouTube ASR)"
+  },
+  "Zerelto": {
+   "correct": "Xarelto (rivaroxaban)",
+   "domain": "names",
+   "rule": "Drug-name ASR.",
+   "first_seen": "2026-10-28 (a16z Show, Mark Cuban episode 2026-10-28, YouTube ASR)"
+  },
+  "James Terico": {
+   "correct": "James Talarico",
+   "domain": "names",
+   "rule": "Texas politician, named alongside Ken Paxton.",
+   "first_seen": "2026-10-28 (a16z Show, Mark Cuban episode 2026-10-28, YouTube ASR)"
+  },
+  "Fster": {
+   "correct": "Napster",
+   "domain": "names",
+   "rule": "'kind of like Fster ... whoa, what was that' = Napster.",
+   "first_seen": "2026-10-28 (a16z Show, Mark Cuban episode 2026-10-28, YouTube ASR)"
+  },
+  "Oxmanski": {
+   "correct": "Oshmyansky (Dr. Alex Oshmyansky, Cost Plus Drugs co-founder)",
+   "domain": "names",
+   "rule": "Name ASR.",
+   "first_seen": "2026-10-28 (a16z Show, Mark Cuban episode 2026-10-28, YouTube ASR)"
+  },
+  "costblooddrugs": {
+   "correct": "costplusdrugs",
+   "domain": "names",
+   "ci": true,
+   "rule": "URL ASR of costplusdrugs.com.",
+   "first_seen": "2026-10-28 (a16z Show, Mark Cuban episode 2026-10-28, YouTube ASR)"
+  }
  }
 }
