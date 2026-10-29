@@ -1,0 +1,631 @@
+{
+ "date": "2026-10-29",
+ "status": "complete",
+ "generated_at": "2026-10-29T10:08:30-03:00",
+ "mail_window": {
+  "channel": "outlook-com",
+  "from_utc": "2026-10-28T11:02:39Z",
+  "to_utc": "2026-10-29T13:08:30Z",
+  "newest_received_utc": "2026-10-29T13:02:04Z",
+  "screened": 1148,
+  "read": 44
+ },
+ "headline": "The hyperscaler night split the tape: GOOGL becomes the funding short on a Search miss, MSFT stays the crowded long, crowded SaaS (NOW) unwinds, and a reported MRVL-LITE deal divides the optics trade.",
+ "market_read": "Desks moved from 'is the AI relief rally real?' (JPM See, 29 Oct: HF de-grossing large enough to favour a semis bounce) to a sharp single-name split. GOOGL fell ~10% on Search ~+12% vs a ~14% bar. UBS (Dwyer, 28 Oct) calls the feedback the worst since early 2025, and Bernstein and Jefferies (29/28 Oct) put it back in the short/funding-short bucket. MSFT (Azure +48% cc, 49-50% guide) stays the crowded megacap long that Barclays still sees adding buyers; the after-hours fade came on its funding comment (UBS, Jefferies). For the AI supply chain the read is 'no incremental capex help' (Jefferies Beavington, 29 Oct) against BofA research (Arya) lifting CY26/27 AI capex growth, while JPM's desk (Tyler, 29 Oct) sees the AI theme being sold for a defensive / ex-AI rotation. ORCL's investor day is the credit-positive surprise (GS, MS).",
+ "up": [
+  {
+   "ticker": "MSFT",
+   "signal": "excessive popularity",
+   "why": "Barclays (Rand, 28 Oct) says positioning already leaned long but still had incremental buyers and expects MSFT to be a preferred TMT long. Jefferies (Wong, 28 Oct) and UBS (Dwyer, 29 Oct) both call it the most crowded Mag7 long. MSFT is not in the Bloomberg X rising/falling list (data through 28 Oct, pre-print) and has no HOT/BULL analog in monitor.json, so the crowding call rests on desk evidence alone. Over 1-5 days the beat supports it as the place to hide inside megacaps. Over 2-4 weeks, crowding plus funding-language risk makes it vulnerable to any capex or OpenAI-concentration wobble (Jefferies notes investors asking how much of Azure is OAI-driven).",
+   "conviction": "medium",
+   "confirm": "Desks report new long-only buying, not just HF adds; Azure guide holds through AMZN's print; no debt/equity-raise headline.",
+   "weaken": "A debt or equity raise announcement, or desks start calling it a source of funds as megacap rotation broadens.",
+   "evidence": [
+    "obs-2026-10-29-06",
+    "obs-2026-10-29-07",
+    "obs-2026-10-29-08"
+   ]
+  },
+  {
+   "ticker": "ORCL",
+   "signal": "neglected, improving",
+   "why": "Bernstein's crowding work had ORCL near the least-crowded end on 28 Oct (prior ledger). The investor day (FCF positive in 2H FY28, ~$30bn FY29 FCF, raises capped at $20bn) drew positive feedback and an 11% intraday move (MS Wigg, 28 Oct); GS (Arruda, 29 Oct) calls it the key event for levered AI credit, and Bernstein (Seidman, 29 Oct) sees the bear case quieting. ORCL is not in the Bloomberg X mover lists and has no analog in monitor.json. Over 1-5 days, follow-through depends on credit spreads (GS: 'still need to see spreads respond'). Over 2-4 weeks, an under-owned name with a funding endpoint can keep re-rating.",
+   "conviction": "medium",
+   "confirm": "ORCL CDS and bonds tighten in the credit workbook; desks report shorts covering or long-only re-entry.",
+   "weaken": "Spreads don't move, or new financing or BYOH counterparty headlines revive the funding debate.",
+   "evidence": [
+    "obs-2026-10-29-20",
+    "obs-2026-10-29-21",
+    "obs-2026-10-29-22"
+   ]
+  },
+  {
+   "ticker": "META",
+   "signal": "rising attention",
+   "why": "GOOGL's Search/YouTube miss makes META's ad beat look better: META rose after hours (UBS Dwyer, 28 Oct), and Jefferies (Wong, 28 Oct) asks whether it is now an even more attractive long. META is not in the Bloomberg X mover lists and has no analog in monitor.json. Over 1-5 days, expect relative-pair flows (long META / short GOOGL). Over 2-4 weeks, it hinges on the Muse/agent narrative that the desks blame for GOOGL's Search worries.",
+   "conviction": "low",
+   "confirm": "Desks report pair trades or long-only adds; Muse engagement data keep improving.",
+   "weaken": "Pressure from the $98bn AI-funding share sale returns, or AMZN ad strength dilutes the share-gain story.",
+   "evidence": [
+    "obs-2026-10-29-23"
+   ]
+  },
+  {
+   "ticker": "COHR",
+   "signal": "emerging narrative",
+   "why": "If MRVL buys LITE, COHR becomes the last large independent laser/optics supplier, and JPM (Meyers, 29 Oct) says it 'should be in the spotlight'. This is a single-desk idea, not positioning data. Bernstein (Seidman, 29 Oct) hears the deal as unlikely, and COHR is not in the Bloomberg X movers or analogs. Over 1-5 days it trades on deal headlines. Over 2-4 weeks it needs confirmation of the deal or customer dual-sourcing commentary.",
+   "conviction": "low",
+   "confirm": "MRVL/LITE confirm terms; hyperscalers or desks cite single-source risk; COHR attention rises on Bloomberg X.",
+   "weaken": "The deal is denied or collapses, or LITE trades as stand-alone again.",
+   "evidence": [
+    "obs-2026-10-29-16",
+    "obs-2026-10-29-13",
+    "obs-2026-10-29-14"
+   ]
+  },
+  {
+   "ticker": "AIXA",
+   "signal": "emerging narrative",
+   "why": "Jefferies (Beavington, 29 Oct) says the first GaN power-electronics orders are 'hugely incremental': AIXA is no longer only opto, and steady order momentum implies well above the 800m consensus. This is a single desk voice, and AIXA has no Bloomberg X or analog data in monitor.json. Over 1-5 days it is a results-driven move. Over 2-4 weeks it depends on GaN order cadence (ties to the 800V DC-power theme).",
+   "conviction": "low",
+   "confirm": "Further GaN/power orders; other desks or research pick up the GaN-for-800V angle.",
+   "weaken": "Orders revert to opto-only, or the 4Q order guide disappoints.",
+   "evidence": [
+    "obs-2026-10-29-26"
+   ]
+  }
+ ],
+ "down": [
+  {
+   "ticker": "GOOG",
+   "signal": "weakening sentiment",
+   "why": "Several desks agree. UBS (Dwyer, 28 Oct) says feedback is the worst since early 2025. Bernstein (Seidman, 29 Oct) calls it a funding short into year-end. Jefferies (Wong, 28 Oct) says it was less shorted than in mid-September, so there is room for shorts to build. MS (Wigg, 28 Oct) says the secular AI bear case is back. monitor.json (through 28 Oct, pre-print) had GOOG at HOT 53.1 / BULL 43.5, both in the 40-<60 band; own-history 5-session analogs show a median of +1.4% (70% up, n=40) for HOT and -0.2% (46% up, n=46) for BULL. Those were pre-gap, so they are no guide to the post-miss path. Over 1-5 days, dip buyers have little to lean on: no capex raise, a 4Q comp/FX headwind guide and Cloud-margin headwinds from third-party capacity. Over 2-4 weeks, watch whether the TPU (OAI/OCI) story re-emerges as the long case.",
+   "conviction": "high",
+   "confirm": "Estimate cuts land (UBS: 'bias to estimates feels lower'), desks report short-interest rising, and the Search-share narrative spreads to AMZN/META prints.",
+   "weaken": "TPU external-sales disclosure or Gemini 4 Carbon traction pulls in long-only value buyers, or the gap fills quickly on short covering.",
+   "evidence": [
+    "obs-2026-10-29-01",
+    "obs-2026-10-29-02",
+    "obs-2026-10-29-03",
+    "obs-2026-10-29-04",
+    "obs-2026-10-29-05"
+   ]
+  },
+  {
+   "ticker": "NOW",
+   "signal": "easing crowding",
+   "why": "NOW was the favourite large-cap app long into the print (Barclays, 28 Oct, prior ledger). After the cRPO miss and an 18.5% cc 4Q guide, Barclays (Rand, 28 Oct) and UBS (Ruple, 28 Oct) both say the crowding explains the ~13-20% drop, and SaaS peers fell with it (MS: CRM/WDAY -5%, HUBS/TEAM -6%). This is crowding unwinding, not a new bear thesis: Bernstein (29 Oct) rates it '+ -'. NOW has no Bloomberg X or analog data in monitor.json. Over 1-5 days, expect continued liquidation. Over 2-4 weeks, a cleaner base could form once holders exit, because the AI ACV target was raised to $1.7bn.",
+   "conviction": "high",
+   "confirm": "Desks report long-only exits and the SaaS crowding basket keeps lagging.",
+   "weaken": "The cRPO accounting noise (the VA renewal flagged by Bernstein pre-print) is explained away on callbacks and buyers step in.",
+   "evidence": [
+    "obs-2026-10-29-10",
+    "obs-2026-10-29-11"
+   ]
+  },
+  {
+   "ticker": "MRVL",
+   "signal": "weakening sentiment",
+   "why": "The reported MRVL-LITE deal hit MRVL about 11% pre-market (GS, 29 Oct). JPM (Meyers, 29 Oct) hears holders call it expensive, with dilution and China/antitrust risk. BofA research (Arya) relayed the same overhangs (customer conflict, size). The prior ledger had MRVL still 'rather crowded' (UBS, 27 Oct), so an expensive deal hits a long base. Desks diverge on whether the deal happens: JPM calls the news credible, Bernstein hears it as unlikely. MRVL has no Bloomberg X or analog data. Over 1-5 days it is headline-driven. Over 2-4 weeks it depends on terms and financing mix.",
+   "conviction": "medium",
+   "confirm": "The deal is confirmed with heavy stock consideration; desks report long-only exits.",
+   "weaken": "The deal is denied, or terms show accretion and laser-supply security is reframed as an AVGO-style moat.",
+   "evidence": [
+    "obs-2026-10-29-12",
+    "obs-2026-10-29-14",
+    "obs-2026-10-29-15"
+   ]
+  },
+  {
+   "ticker": "SAMSUNG",
+   "signal": "weakening sentiment",
+   "why": "Samsung turned negative on an OP miss and no added 2026 shareholder return that some investors had hoped for, after Hynix raised the bar (Jefferies O'Mara, 29 Oct; GS: Samsung -4%). Fundamentals stayed firm on the call: HBM share in line with DRAM share, best HBM4 base-die yield, and demand above supply into 2027 (management, via Jefferies). This is a capital-return disappointment, not a demand break. Samsung has no Bloomberg X or analog data in monitor.json. Over 1-5 days it lags Hynix. Over 2-4 weeks the late-January return announcement is the catalyst.",
+   "conviction": "medium",
+   "confirm": "Foreign selling continues; Korea desks report rotation into Hynix.",
+   "weaken": "Return framework headlines come earlier than January, or HBM4 share gains are confirmed by NVDA supply-chain checks.",
+   "evidence": [
+    "obs-2026-10-29-17",
+    "obs-2026-10-29-18"
+   ]
+  }
+ ],
+ "themes": [
+  {
+   "title": "Hyperscaler capex: 'no incremental help' vs 'capex raised'",
+   "text": "Jefferies (Beavington, 29 Oct) says MSFT's CY26 capex trim to $170bn (third-party delays) and GOOGL's unchanged $195-205bn add nothing to near-term semis capex expectations, because the rate of increase matters. BofA research (Arya, relayed by Franco, 29 Oct) instead lifts CY26/27 AI capex growth to 99%/54% (from 98%/37%) and cites record GPU-hour prices implying under one-year paybacks. The desks frame it as a timing issue (third-party capacity shifting into 2H), not reduced appetite (GS Arruda, Bernstein Seidman).",
+   "evidence": [
+    "obs-2026-10-29-09",
+    "obs-2026-10-29-15"
+   ]
+  },
+  {
+   "title": "Optics consolidation: is MRVL-LITE real, and who benefits?",
+   "text": "JPM (Meyers) calls the Bloomberg report credible and frames it as MRVL buying scarce laser capacity, sold out into 2029. Bernstein (Seidman) hears it as widely viewed as unlikely. Both sides of the deal are unhappy: MRVL holders say expensive, LITE holders say it caps upside. COHR is flagged as the last independent laser player. Gaetano Research (independent Substack, 29 Oct, 'Marvell's Optical Ambition') arrived but was not read in this run.",
+   "evidence": [
+    "obs-2026-10-29-12",
+    "obs-2026-10-29-13",
+    "obs-2026-10-29-14",
+    "obs-2026-10-29-16"
+   ]
+  },
+  {
+   "title": "AI-theme rotation vs semis-bounce case",
+   "text": "JPM's market-intelligence desk (Tyler, 29 Oct) sees the AI theme being sold with a defensive bias, while discretionary and financials bid as the ex-AI 'broadening' trade, and Jefferies quant (Peramunetilleke, via Beavington) markets 'Diversifying away from A.I.' (AI earnings growth slowing to ~30% in 2027). JPM APAC (See, 29 Oct) argues HF de-grossing was large enough that semis can keep bouncing on 2027 capex upside and ROI clarity. The disagreement is open, and GS (Arruda) expects dips to get bought while credit stabilises.",
+   "evidence": [
+    "obs-2026-10-29-09"
+   ]
+  },
+  {
+   "title": "ORCL as the credit linchpin",
+   "text": "GS (Arruda) calls ORCL's funding cap and FCF path more consequential for the levered AI-infrastructure complex than either hyperscaler print, but says spreads still need to confirm. MS (Wigg) notes semis rose on ORCL's lower FY29 capex because BYOH shifts capex to others rather than removing it.",
+   "evidence": [
+    "obs-2026-10-29-20",
+    "obs-2026-10-29-21",
+    "obs-2026-10-29-22"
+   ]
+  }
+ ],
+ "observations": [
+  {
+   "id": "obs-2026-10-29-01",
+   "date": "2026-10-28T21:28:07Z",
+   "ticker": "GOOG",
+   "firm": "UBS",
+   "author": "Christina Dwyer",
+   "role": "Specialist sales",
+   "kind": "Investor feedback",
+   "tone": "Negative",
+   "position": "Fading conviction",
+   "summary": "UBS sector sales says post-call GOOGL investor feedback is the most negative since early 2025: Search at ~+12% was below anyone's bar and GCP ~100% felt soft against the backlog.",
+   "excerpt": "Call just about over and feedback is pretty bad. Honestly, it hasn’t felt this negative since early 2025.",
+   "subject": "UBS TMI: GOOGL 3Q Feedback",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A26ED7CA0000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-29-02",
+   "date": "2026-10-28T22:58:32Z",
+   "ticker": "GOOG",
+   "firm": "Jefferies",
+   "author": "Rankie Wong",
+   "role": "Specialist sales",
+   "kind": "Positioning / flows",
+   "tone": "Negative",
+   "position": "Shorts building",
+   "summary": "Jefferies' Asia TMT specialist says GOOGL had been a consensus short but was less well-shorted than in mid-September; Cloud +103% missed buyside ~115% and the name likely stays firmly in the short bucket.",
+   "excerpt": "GOOGL has been a consensus short in the past few months, though overall it didn’t feel as well-shorted vs mid-Sep levels during all the Muse hype.",
+   "subject": "(JEF TMT) GOOGL -10%; 3Q first look",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A26ED7EB0000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-29-03",
+   "date": "2026-10-29T12:49:16Z",
+   "ticker": "GOOG",
+   "firm": "Bernstein",
+   "author": "Tyler Seidman",
+   "role": "Specialist sales",
+   "kind": "Desk opinion",
+   "tone": "Negative",
+   "position": "Shorts building",
+   "summary": "Bernstein's tech specialist expects GOOGL to be a funding short into year-end because Search decelerated ~500bp q/q, the sharpest since the COVID years, despite Gemini topping benchmarks.",
+   "excerpt": "The stock will be a funding short into year-end, despite the model leapfrogging to the top of the benchmarks, primarily related to Search.",
+   "subject": "Bernstein Tech: Feedback + earnings: GOOGL (-), MSFT (+), ORCL investor day (= +), EQIX (+), NOW (+ -), KLAC (+), FTNT (- -), EBAY (+), DASH + CART thoughts, TMUS (=), Apple tracker",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A2FF1C510000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-29-04",
+   "date": "2026-10-28T21:06:07Z",
+   "ticker": "GOOG",
+   "firm": "Morgan Stanley",
+   "author": "Thomas Wigg",
+   "role": "Specialist sales",
+   "kind": "Desk opinion",
+   "tone": "Negative",
+   "position": "Not stated",
+   "summary": "MS sales says the Search miss (+12% vs ~14% expected) revives the secular AI-disruption bear case; the +103% Cloud print was already in buyside numbers.",
+   "excerpt": "The Search miss brings back the secular bear case vs AI.",
+   "subject": "MS TMT:  GOOGL -10% Search miss reignites AI concerns; MSFT +3% Azure + M365 beat; NOW -15% cRPO miss takes down SaaS; ORCL +11% intraday on FCF + $20B limit; FTNT -25% takes down Security; EBAY +5% GMV beat; EQIX +3% record bkgs; TMUS KLAC CVNA TENB",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A26ED7B60000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-29-05",
+   "date": "2026-10-29T12:11:08Z",
+   "ticker": "GOOG",
+   "firm": "BofA",
+   "author": "Claudio Franco",
+   "role": "Research relay",
+   "kind": "Research relay",
+   "tone": "Mixed",
+   "position": "Not stated",
+   "summary": "BofA sales relays research (Post) trimming 2027E EPS 1% after the Search/YouTube miss: Search weakness fuels agentic-competition worries, offset by Cloud, TPU distribution and a top LLM.",
+   "excerpt": "Search weakness will fuel competitive & agentic concern, Google has strong traffic, LLM & history of execution in transitions.",
+   "subject": "...Bofa one liners...MSFT, Oracle, Alphabet, US Semis, Hynix, Tesla...",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A2FF1C200000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-29-06",
+   "date": "2026-10-28T22:34:04Z",
+   "ticker": "MSFT",
+   "firm": "Barclays",
+   "author": "Jeffrey Rand",
+   "role": "Specialist sales",
+   "kind": "Positioning / flows",
+   "tone": "Positive",
+   "position": "Interest rising",
+   "summary": "Barclays desk says MSFT positioning already leaned long but still had incremental buyers; after Azure +48% cc and a 49-50% guide it expects MSFT to be a preferred long across TMT.",
+   "excerpt": "Positioning leaning long, but still incremental buyers",
+   "subject": "Barclays TMT Desk Commentary: Initial thoughts post conference call on MSFT (+)",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A26ED7E20000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-29-07",
+   "date": "2026-10-28T23:50:00Z",
+   "ticker": "MSFT",
+   "firm": "Jefferies",
+   "author": "Rankie Wong",
+   "role": "Specialist sales",
+   "kind": "Positioning / flows",
+   "tone": "Positive",
+   "position": "Crowded long",
+   "summary": "Jefferies specialist calls MSFT the most crowded Mag7 long into the print yet still the megacap to own; the after-hours fade came on the CFO's openness to external funding.",
+   "excerpt": "Stock was likely the most crowded long among Mag7 into the print – already breaking to new highs today, but still get the sense that this remains the name to own within megacaps.",
+   "subject": "(JEF TMT) MSFT +3%; Sep-Q first look",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A26ED7F80000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-29-08",
+   "date": "2026-10-29T11:52:41Z",
+   "ticker": "MSFT",
+   "firm": "UBS",
+   "author": "Christina Dwyer",
+   "role": "Specialist sales",
+   "kind": "Investor feedback",
+   "tone": "Mixed",
+   "position": "Crowded long",
+   "summary": "UBS sales says MSFT keeps its status as one of the most crowded Mag7 longs, but the external-funding comment (after META's raise) made investors uneasy; Keirstead sees equity-raise odds as very low.",
+   "excerpt": "The one wrinkle was the external funding commentary on the call, especially after Meta’s recent raise, which made people a little uneasy.",
+   "subject": "UBS TMI: 10/29/2026: EPS Feedback (GOOGL, MSFT, TMUS, EBAY, ETSY, DASH, EQIX), DASH/CART, Earnings Set-ups on Deck (AMZN, RBLX & PINS), FCC/SPCX, Key Events, Headlines, Access & more",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A2FF1C0E0000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-29-09",
+   "date": "2026-10-29T08:49:49Z",
+   "ticker": "MSFT",
+   "firm": "Jefferies",
+   "author": "William Beavington",
+   "role": "Specialist sales",
+   "kind": "Desk opinion",
+   "tone": "Mixed",
+   "position": "Not stated",
+   "summary": "Jefferies semis specialist says MSFT capex ($45.2bn, CY26 cut to $170bn on third-party delays) and GOOGL's unchanged $195-205bn add no near-term upside for semis capex expectations.",
+   "excerpt": "For semis, AI cloud demand clearly remains strong, but Microsoft's capex shortfall and the lack of a Google raise mean this print adds no upside to near-term spending expectations.",
+   "subject": "Global SEMIS Daily - Thursday - |1| No incremental help from US Capex |2| US M&A - Marvell + Lumentum |3| Aixtron - Pretty good ? |4| Research Of The Day - What’s important today ? |4| Diversifying away from A.I",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A2FF1BAC0000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-29-10",
+   "date": "2026-10-28T20:32:55Z",
+   "ticker": "NOW",
+   "firm": "Barclays",
+   "author": "Jeffrey Rand",
+   "role": "Specialist sales",
+   "kind": "Positioning / flows",
+   "tone": "Negative",
+   "position": "Crowded long",
+   "summary": "Barclays desk says NOW was probably the most crowded large-cap SaaS name, so the cRPO miss and weaker guide justify the ~13% after-hours drop.",
+   "excerpt": "These results look light for a name that was probably most crowded name in the large cap SaaS space.",
+   "subject": "Barclays TMT Desk Commentary: Initial thoughts on FTNT / NOW / KLAC / TMUS",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A26ED7A00000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-29-11",
+   "date": "2026-10-28T20:57:41Z",
+   "ticker": "NOW",
+   "firm": "UBS",
+   "author": "Robert Ruple",
+   "role": "Specialist sales",
+   "kind": "Desk opinion",
+   "tone": "Negative",
+   "position": "Crowded long",
+   "summary": "UBS tech sales says NOW's 18.5% cc cRPO guide was below the bogey, research checks didn't signal an inflection, and the name was a bit crowded ahead of the print.",
+   "excerpt": "arguably NOW was a bit crowded ahead of the print",
+   "subject": "UBS TECH / Earnings Reads: MSFT, GOOG, NOW, KLAC, FTNT, TENB, PI, GEN, FORM, & PLXS",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A26ED7AE0000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-29-12",
+   "date": "2026-10-29T12:50:09Z",
+   "ticker": "MRVL",
+   "firm": "JPMorgan",
+   "author": "Joshua Meyers",
+   "role": "Specialist sales",
+   "kind": "Investor feedback",
+   "tone": "Negative",
+   "position": "Not stated",
+   "summary": "JPM semis specialist says investors find the reported MRVL-LITE deal credible but MRVL holders call it expensive, with dilution and China/antitrust approval the key worries.",
+   "excerpt": "neither MRVL (“expensive deal”) nor LITE (“this caps my laser upside”) shareholders sound immediately jazzed.",
+   "subject": "JPM: Chips for Breakfast -  MRVL/LITE M&A First Thoughts; INTC & SNDK Buyside Bars; Cloud Capex Update; APH; FLEX; KLAC",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A2FF1C530000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-29-13",
+   "date": "2026-10-29T12:50:09Z",
+   "ticker": "LITE",
+   "firm": "JPMorgan",
+   "author": "Joshua Meyers",
+   "role": "Specialist sales",
+   "kind": "Investor feedback",
+   "tone": "Mixed",
+   "position": "Not stated",
+   "summary": "Same JPM note: LITE holders worry a MRVL takeout caps their laser upside, although LITE is sold out into 2029 and laser capacity is the strategic prize.",
+   "excerpt": "LITE is sold out into 2029 (and any LITE bull will have lots to say about lasers being a key bottleneck), and MRVL is a key LITE customer.",
+   "subject": "JPM: Chips for Breakfast -  MRVL/LITE M&A First Thoughts; INTC & SNDK Buyside Bars; Cloud Capex Update; APH; FLEX; KLAC",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A2FF1C530000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-29-14",
+   "date": "2026-10-29T12:49:16Z",
+   "ticker": "MRVL",
+   "firm": "Bernstein",
+   "author": "Tyler Seidman",
+   "role": "Specialist sales",
+   "kind": "Investor feedback",
+   "tone": "Mixed",
+   "position": "Not stated",
+   "summary": "Bernstein's tech specialist hears the reported MRVL-LITE deal as widely viewed as unlikely in this morning's conversations, which diverges from JPM's 'credible' read.",
+   "excerpt": "Feedback on the Marvell + LITE deal is widely viewed as unlikely in my conversations this AM.",
+   "subject": "Bernstein Tech: Feedback + earnings: GOOGL (-), MSFT (+), ORCL investor day (= +), EQIX (+), NOW (+ -), KLAC (+), FTNT (- -), EBAY (+), DASH + CART thoughts, TMUS (=), Apple tracker",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A2FF1C510000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-29-15",
+   "date": "2026-10-29T12:11:08Z",
+   "ticker": "MRVL",
+   "firm": "BofA",
+   "author": "Claudio Franco",
+   "role": "Research relay",
+   "kind": "Research relay",
+   "tone": "Mixed",
+   "position": "Not stated",
+   "summary": "BofA sales relays research (Arya): a MRVL-LITE deal could secure scarce lasers for optics/CPO, but customer conflicts and deal size are near-term overhangs.",
+   "excerpt": "MRVL/LITE potential deal could secure scarce lasers for optics/CPO. Customer competitive conflicts, size are N-T overhangs",
+   "subject": "...Bofa one liners...MSFT, Oracle, Alphabet, US Semis, Hynix, Tesla...",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A2FF1C200000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-29-16",
+   "date": "2026-10-29T12:50:09Z",
+   "ticker": "COHR",
+   "firm": "JPMorgan",
+   "author": "Joshua Meyers",
+   "role": "Specialist sales",
+   "kind": "Desk opinion",
+   "tone": "Positive",
+   "position": "Interest rising",
+   "summary": "JPM semis specialist argues COHR, as the last large independent laser/optics player, should come into the spotlight, since the deal validates its integrated portfolio.",
+   "excerpt": "if COHR is the last big, independent player, it should be in the spotlight?",
+   "subject": "JPM: Chips for Breakfast -  MRVL/LITE M&A First Thoughts; INTC & SNDK Buyside Bars; Cloud Capex Update; APH; FLEX; KLAC",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A2FF1C530000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-29-17",
+   "date": "2026-10-29T08:35:41Z",
+   "ticker": "SAMSUNG",
+   "firm": "Jefferies",
+   "author": "Conor O’Mara",
+   "role": "Specialist sales",
+   "kind": "Investor feedback",
+   "tone": "Negative",
+   "position": "Fading conviction",
+   "summary": "Jefferies' Asia specialist says Samsung turned negative intraday on an OP miss and no added 2026 shareholder return, which some investors had hoped for.",
+   "excerpt": "Samsung was originally up but went negative when headlines hit with an OP miss and no increase in shareholder returns for this year, which some investors had hoped for.",
+   "subject": "While You Were Sleeping. Samsung & Google send all of Asian tech down. After market Ibiden beat & raise and increased capex for CPUs a positive read for ABF & Intel.",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A2FF1BA90000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-29-18",
+   "date": "2026-10-29T02:18:38Z",
+   "ticker": "SAMSUNG",
+   "firm": "Jefferies",
+   "author": "Conor O’Mara",
+   "role": "Specialist sales",
+   "kind": "Management claim",
+   "tone": "Positive",
+   "position": "Not stated",
+   "summary": "Jefferies relays Samsung management saying its HBM share is now in line with its DRAM share, with industry-leading HBM4 base-die yield, and that memory demand far exceeds supply into 2027.",
+   "excerpt": "DS memory demand far exceeds supply due to strong AI investment",
+   "subject": "Notes from Samsung conference call. Says its HBM market share is already in line with DRAM this quarter with industry leading HBM 4 base die yield. Foundry 2nm customers up 2x.",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A2F93CA30000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-29-19",
+   "date": "2026-10-29T12:11:08Z",
+   "ticker": "SKHYNIX",
+   "firm": "BofA",
+   "author": "Claudio Franco",
+   "role": "Research relay",
+   "kind": "Research relay",
+   "tone": "Positive",
+   "position": "Not stated",
+   "summary": "BofA sales relays research (Woo): Hynix's call confirmed stronger DRAM pricing, 12-hi HBM4 mass production and robust 4Q/2027 bit growth, pointing to tight memory supply despite higher capex.",
+   "excerpt": "Positive implications of Hynix's results / guidance for global memory - tight supply despite significant capex increase",
+   "subject": "...Bofa one liners...MSFT, Oracle, Alphabet, US Semis, Hynix, Tesla...",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A2FF1C200000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-29-20",
+   "date": "2026-10-28T21:06:07Z",
+   "ticker": "ORCL",
+   "firm": "Morgan Stanley",
+   "author": "Thomas Wigg",
+   "role": "Specialist sales",
+   "kind": "Investor feedback",
+   "tone": "Positive",
+   "position": "Not stated",
+   "summary": "MS sales reports positive feedback on ORCL's Analyst Day (FCF-positive in 2H FY28, ~$30bn FY29 FCF, capital raises capped at $20bn) as the stock rose 11% intraday; semis also rose because BYOH keeps aggregate capex rising.",
+   "excerpt": "ORCL +11% positive feedback on Analyst Day metrics this afternoon targeting FCF positive in F2H28 (earlier than expected)",
+   "subject": "MS TMT:  GOOGL -10% Search miss reignites AI concerns; MSFT +3% Azure + M365 beat; NOW -15% cRPO miss takes down SaaS; ORCL +11% intraday on FCF + $20B limit; FTNT -25% takes down Security; EBAY +5% GMV beat; EQIX +3% record bkgs; TMUS KLAC CVNA TENB",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A26ED7B60000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-29-21",
+   "date": "2026-10-29T12:21:57Z",
+   "ticker": "ORCL",
+   "firm": "Goldman Sachs",
+   "author": "Thales Arruda",
+   "role": "Desk",
+   "kind": "Desk opinion",
+   "tone": "Positive",
+   "position": "Not stated",
+   "summary": "GS desk calls ORCL's funding plan arguably the most important development for levered AI credit, but says spreads still need to respond.",
+   "excerpt": "Arguably the most important development for credit.",
+   "subject": "GS - What Matters Today: Tech Rotation. FCF Inflection. Labor/AI, Alphabet - Search Business Slows, Compute Continue to Require Investments, Microsoft - 1QFY: At the center of 2027 enterprise deployments, AI Health Care - Broadening well beyond Drug Di...",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A2FF1C2A0000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-29-22",
+   "date": "2026-10-29T12:49:16Z",
+   "ticker": "ORCL",
+   "firm": "Bernstein",
+   "author": "Tyler Seidman",
+   "role": "Specialist sales",
+   "kind": "Desk opinion",
+   "tone": "Positive",
+   "position": "Not stated",
+   "summary": "Bernstein's tech specialist says ORCL's investor-day funding clarity should help quiet the bear case and could support a re-rate toward its low-20s 5-year average P/E.",
+   "excerpt": "ORCL investor day shed light on +ve funding objectives and clarity on longer-term revenue and EPS potential, which should help quiet the bear case",
+   "subject": "Bernstein Tech: Feedback + earnings: GOOGL (-), MSFT (+), ORCL investor day (= +), EQIX (+), NOW (+ -), KLAC (+), FTNT (- -), EBAY (+), DASH + CART thoughts, TMUS (=), Apple tracker",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A2FF1C510000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-29-23",
+   "date": "2026-10-28T21:28:07Z",
+   "ticker": "META",
+   "firm": "UBS",
+   "author": "Christina Dwyer",
+   "role": "Specialist sales",
+   "kind": "Investor feedback",
+   "tone": "Positive",
+   "position": "Interest rising",
+   "summary": "UBS sales notes META rose after hours on GOOGL's miss because its own ad beat now looks more impressive; Jefferies (same night) asks whether this makes META an even more attractive long.",
+   "excerpt": "META is up in the post-market, as the magnitude of its ad beat last week looks even more impressive.",
+   "subject": "UBS TMI: GOOGL 3Q Feedback",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A26ED7CA0000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-29-24",
+   "date": "2026-10-29T12:50:09Z",
+   "ticker": "INTC",
+   "firm": "JPMorgan",
+   "author": "Joshua Meyers",
+   "role": "Specialist sales",
+   "kind": "Positioning / flows",
+   "tone": "Positive",
+   "position": "Crowded long",
+   "summary": "JPM's redacted buyside survey puts INTC sentiment at +4 on a -5 to +5 scale (near max long/OW) ahead of tonight's print, which makes the bar high.",
+   "excerpt": "INTC (10/29 4pm, call 5pm) Sentiment Score (-5 = max short/UW, 5 = max long/OW): +4",
+   "subject": "JPM: Chips for Breakfast -  MRVL/LITE M&A First Thoughts; INTC & SNDK Buyside Bars; Cloud Capex Update; APH; FLEX; KLAC",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A2FF1C530000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-29-25",
+   "date": "2026-10-29T12:50:09Z",
+   "ticker": "SNDK",
+   "firm": "JPMorgan",
+   "author": "Joshua Meyers",
+   "role": "Specialist sales",
+   "kind": "Positioning / flows",
+   "tone": "Positive",
+   "position": "Not stated",
+   "summary": "The same JPM buyside survey has SNDK at a more modest +2 into tonight's print.",
+   "excerpt": "SNDK (10/29 4:05pm est., call 4:30pm) Sentiment Score (-5 = max short/UW, 5 = max long/OW): +2",
+   "subject": "JPM: Chips for Breakfast -  MRVL/LITE M&A First Thoughts; INTC & SNDK Buyside Bars; Cloud Capex Update; APH; FLEX; KLAC",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A2FF1C530000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-29-26",
+   "date": "2026-10-29T08:49:49Z",
+   "ticker": "AIXA",
+   "firm": "Jefferies",
+   "author": "William Beavington",
+   "role": "Specialist sales",
+   "kind": "Desk opinion",
+   "tone": "Positive",
+   "position": "Interest rising",
+   "summary": "Jefferies semis specialist says AIXTRON's first power-electronics (GaN) orders are hugely incremental, since revenue drivers can now be opto and GaN, and the steady order guide implies well above the 800m consensus.",
+   "excerpt": "The power electronics orders starting to kick in are hugely incremental to the thesis.",
+   "subject": "Global SEMIS Daily - Thursday - |1| No incremental help from US Capex |2| US M&A - Marvell + Lumentum |3| Aixtron - Pretty good ? |4| Research Of The Day - What’s important today ? |4| Diversifying away from A.I",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A2FF1BAC0000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-29-27",
+   "date": "2026-10-29T12:49:16Z",
+   "ticker": "KLAC",
+   "firm": "Bernstein",
+   "author": "Tyler Seidman",
+   "role": "Specialist sales",
+   "kind": "Desk opinion",
+   "tone": "Positive",
+   "position": "Not stated",
+   "summary": "Bernstein's tech specialist flags KLAC's beat and raise plus +$200bn WFE commentary for next year as a positive.",
+   "excerpt": "KLAC EPS was strong with a beat + raise and +$200B of WFE commentary for next year.",
+   "subject": "Bernstein Tech: Feedback + earnings: GOOGL (-), MSFT (+), ORCL investor day (= +), EQIX (+), NOW (+ -), KLAC (+), FTNT (- -), EBAY (+), DASH + CART thoughts, TMUS (=), Apple tracker",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A2FF1C510000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-29-28",
+   "date": "2026-10-29T12:49:16Z",
+   "ticker": "CRWD",
+   "firm": "Bernstein",
+   "author": "Tyler Seidman",
+   "role": "Research relay",
+   "kind": "Research relay",
+   "tone": "Mixed",
+   "position": "Not stated",
+   "summary": "Security peers fell ~6% on FTNT's billings slowdown (MS sales, 28 Oct), but Bernstein relays research (Peter) expecting minimal read-across to DDOG/CRWD.",
+   "excerpt": "While FTNT earnings disappointed, Peter thinks the readx to DDOG/CRWD should prove minimal.",
+   "subject": "Bernstein Tech: Feedback + earnings: GOOGL (-), MSFT (+), ORCL investor day (= +), EQIX (+), NOW (+ -), KLAC (+), FTNT (- -), EBAY (+), DASH + CART thoughts, TMUS (=), Apple tracker",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A2FF1C510000",
+   "forwarded_by": null
+  }
+ ],
+ "coverage_gaps": [
+  "No DAMNANG or SemiAnalysis e-mail arrived in the window, so there was no independent-author check on the memory or optics reads.",
+  "The Gaetano Research Substack on MRVL's optical ambition (29 Oct 05:24Z) and TMT Breakout's GOOGL/MSFT first takes were screened but not read.",
+  "Bloomberg X attention and the HOT/BULL analogs in monitor.json run through 28 Oct, before the GOOGL/MSFT/NOW prints. The step-3 rebuild refreshes them, so the 'why' fields cite pre-print levels.",
+  "MSFT, ORCL, META, NOW, MRVL, COHR, SAMSUNG and AIXA have no HOT/BULL analog rows in monitor.json, so for them the read rests on desk evidence only.",
+  "AMZN, INTC and SNDK report after today's close; only the JPM buyside sentiment scores (+4 INTC, +2 SNDK) were logged."
+ ],
+ "source_notes": [
+  "Channel outlook-com via desk_mail_collect.ps1; inbox lag 0 h; 1,148 messages screened, 389 bodies pulled, ~44 read in full or in part (registered desk senders first). Messages before about 13:02Z on 28 Oct were covered by the 28 Oct review and were not re-logged.",
+  "Desk and specialist-sales voices carry no ratings or PTs. Ratings and PTs quoted in BofA one-liners belong to BofA Research and are logged as 'Research relay', not desk opinion.",
+  "Desk tickers differ slightly on GOOGL's Search growth (+11.8% UBS vs +12% MS/Jefferies) and YouTube growth (+9% to +11%). Each figure is attributed as given, not reconciled.",
+  "Weighting is editorial: multi-desk agreement (GOOGL, NOW) weighs more than single-desk ideas (COHR, AIXA), and pre-market moves are logged as tape, not conviction."
+ ]
+}

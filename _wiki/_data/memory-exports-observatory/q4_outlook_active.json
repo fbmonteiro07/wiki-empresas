@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-28",
+  "as_of": "2026-10-29",
   "quarter": "2026Q4",
   "owner": "Capstone research",
   "classification": "ESTIMATE / qualitative house judgment",
@@ -40,11 +40,11 @@
     },
     {
       "signal": "Spot · partial October mean",
-      "date": "Through 28 Oct 2026; 17 observations per series; versus September mean",
-      "dram": "DDR5 16Gb +2.9%; DDR4 8Gb −2.9%. Selective strength.",
-      "nand": "TLC 256Gb +7.9%; 512Gb −5.9%; 1Tb −4.6%. No broad confirmation.",
+      "date": "Through 29 Oct 2026; 18 observations per series; versus September mean",
+      "dram": "DDR5 16Gb +3.1%; DDR4 8Gb -3.0%. Selective strength persists.",
+      "nand": "TLC 256Gb +7.9%; 512Gb -6.0%; 1Tb -4.7%. No broad confirmation.",
       "weight": "Useful short-horizon cross-check. Incomplete month and narrow specifications; not a sector contract forecast.",
-      "source": "InSpectrum via Bloomberg; tracker calculation, 28 Oct 2026",
+      "source": "InSpectrum via Bloomberg; tracker calculation, 29 Oct 2026",
       "refs": [
         "spot"
       ]
@@ -72,15 +72,15 @@
       ]
     },
     {
-      "signal": "Samsung latest verified actual ASP",
-      "date": "Calendar Q2 2026; company script 30 Jul; checked 28 Oct",
-      "dram": "Mid-40% QoQ increase.",
-      "nand": "High-60% QoQ increase.",
-      "weight": "Historical backdrop, not Q3 or Q4 realization. Q3 call scheduled 29 Oct, 10:00 KST.",
-      "source": "Samsung official Q2 script p8 and IR events calendar",
+      "signal": "Samsung Q3 released; numerical ASP pending primary verification",
+      "date": "29 Oct 2026 results / call notes",
+      "dram": "Jefferies / Conor O’Mara relays Q3 ASP +20% QoQ; secondary call notes.",
+      "nand": "Same notes relay high-teens% QoQ; secondary evidence.",
+      "weight": "Official presentation confirms Q3 price increases across applications and continued Q4 AI/server demand, but does not quantify ASP. Q2 remains the latest primary-verified numeric fit target; no Q4 ASP guide inferred.",
+      "source": "Samsung Q3 presentation p7; Jefferies call notes 29 Oct",
       "refs": [
-        "samsung-script",
-        "samsung-calendar"
+        "samsung-q3",
+        "jef-samsung29"
       ]
     },
     {
@@ -147,19 +147,39 @@
       "refs": [
         "jpm-oct28"
       ]
+    },
+    {
+      "name": "J.P. Morgan · Samsung post-results",
+      "byline": "Jay Kwon / Sangsik Lee · 29 Oct 2026",
+      "dram": "Continued shortages despite above-seasonal Q4 bit growth.",
+      "nand": "Faster bit supply; no numerical Q4 NAND ASP forecast in reviewed email.",
+      "assessment": "Supply acceleration is a caution, not proof of oversupply. Q4 bit growth is volume, not price; 2027 HBM ASP estimates use a different horizon and product.",
+      "refs": [
+        "jpm-samsung29"
+      ]
+    },
+    {
+      "name": "Morgan Stanley · Samsung post-results",
+      "byline": "Shawn Kim / Ryan Kim / Cindy Huang / Kathy Zhu · 29 Oct 2026",
+      "dram": "Memory price hikes moderating into late cycle.",
+      "nand": "AI / QLC SSD demand supports further growth; no numerical Q4 NAND ASP forecast in reviewed email.",
+      "assessment": "Reinforces restraint on magnitude. Samsung result corroborates the existing up call, but is Q3 evidence; no confidence upgrade.",
+      "refs": [
+        "ms-samsung29"
+      ]
     }
   ],
   "watch": [
     {
       "product": "DRAM",
-      "status": "Next: Samsung Q3 call 29 Oct 10:00 KST; October BOK and contract observations",
-      "strengthen": "October BOK DRAM stays positive and actual contract increases broaden across server DDR5, PC and mobile. Persistent DDR5 spot strength adds corroboration. Samsung pricing commentary corroborating conventional strength across products would reinforce the view; HBM mix alone would not.",
+      "status": "Samsung Q3 released 29 Oct; await numeric primary ASP script and October BOK / contracts",
+      "strengthen": "October BOK DRAM stays positive and actual contract increases broaden across server DDR5, PC and mobile. Persistent DDR5 spot strength adds corroboration. Samsung confirms Q3 price breadth; require Q4 realized pricing corroboration, beyond HBM mix, before upgrading.",
       "weaken": "Persistent DDR5 spot weakness together with declining BOK DRAM and flat or falling contract realizations would move the view toward neutral. Evidence of a lower Q4 contract average would overturn the up call.",
       "alone": "A weak DDR4 spot print or a customs USD/kg decline alone is insufficient."
     },
     {
       "product": "NAND",
-      "status": "Next: Samsung 29 Oct / Kioxia 30 Oct; watch weak 512Gb / 1Tb spot and BOK flash",
+      "status": "Kioxia 30 Oct pending; Samsung Q3 supports backlog, but BOK / spot breadth still matters",
       "strengthen": "BOK flash returns to growth, 512Gb / 1Tb spot joins the 256Gb recovery, and enterprise SSD contract increases are confirmed. Broader participation would raise confidence. Kioxia like-for-like ASP / forward pricing commentary on 30 Oct matters more than revenue or blended mix alone.",
       "weaken": "Continued weakness in 512Gb / 1Tb spot together with another BOK flash decline and weak contract realizations would reduce confidence. A lower Q4 sector contract average would overturn the up call.",
       "alone": "Strong broad semiconductor export value or a rise in 256Gb spot alone does not confirm the sector range."
@@ -176,6 +196,10 @@
     {
       "date": "2026-10-28T20:35:52-03:00",
       "change": "28 Oct evening company / sell-side review: Hynix Q3 ASP confirmed; Samsung and Kioxia latest verified actuals remain calendar Q2. Added Barclays, Morgan Stanley and JPM post-results commentary. DRAM Up / Moderate-high and NAND Up selectively / Moderate unchanged; no new numeric Q4 company ASP guide established. Prior judgment archived."
+    },
+    {
+      "date": "2026-10-29T09:14:37-03:00",
+      "change": "Samsung 29 Oct official presentation confirms Q3 price increases across applications and Q4 AI/server demand. Jefferies call notes relay Q3 DRAM +20% / NAND high teens; official numeric script unavailable (404), so these remain secondary evidence outside regression targets. JPM flags faster supply but continued shortage; MS repeats moderating price hikes. Direction and confidence unchanged. Refreshed quantitative signals checked separately. October29 spot retains the same split: DDR5 up, DDR4 and larger-density NAND down. All seven BOK series still end September; no October DRAM/flash observation. No new candidate alert."
     }
   ],
   "sources": [
@@ -187,7 +211,7 @@
     },
     {
       "id": "spot",
-      "label": "InSpectrum / Bloomberg · through 28 Oct 2026",
+      "label": "InSpectrum / Bloomberg · through 29 Oct 2026",
       "url": "#sources",
       "detail": "Daily fixed-specification observations; partial October mean versus complete September mean. See coverage and embedded source data."
     },
@@ -262,6 +286,30 @@
       "label": "Kioxia official IR news · checked 28 Oct 2026",
       "url": "https://www.kioxia-holdings.com/en-jp/ir/news.html",
       "detail": "Latest released period ends June30; FY26 Q2 scheduled30 Oct18:45 JST."
+    },
+    {
+      "id": "samsung-q3",
+      "label": "Samsung Q3 official presentation · 29 Oct 2026, p7",
+      "url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_3Q_conference_eng.pdf",
+      "detail": "Q3 price increases across applications; Q4 outlook focused on AI/server DRAM and SSD. No numeric ASP disclosure on this page."
+    },
+    {
+      "id": "jef-samsung29",
+      "label": "Jefferies / Conor O’Mara · Samsung call notes, 29 Oct 2026",
+      "url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWi%2BTyjAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "detail": "Secondary sales notes relay Q3 DRAM ASP +20% and NAND high teens. Numerical primary script not available; excluded from regression targets."
+    },
+    {
+      "id": "jpm-samsung29",
+      "label": "J.P. Morgan · Samsung post-results · Jay Kwon / Sangsik Lee · 29 Oct 2026",
+      "url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWi%2FxvnAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "detail": "Available email body reviewed; linked full broker report not reviewed. Supply acceleration is a caution, not proof of oversupply. Q4 bit growth is volume, not price; 2027 HBM ASP estimates use a different horizon and product."
+    },
+    {
+      "id": "ms-samsung29",
+      "label": "Morgan Stanley · Samsung post-results · Shawn Kim / Ryan Kim / Cindy Huang / Kathy Zhu · 29 Oct 2026",
+      "url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWi%2FxtjAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "detail": "Available email body reviewed; linked full broker report not reviewed. Reinforces restraint on magnitude. Samsung result corroborates the existing up call, but is Q3 evidence; no confidence upgrade."
     }
   ],
   "historical_stats": [
@@ -1475,6 +1523,366 @@
   "observations": {
     "reads": [
       {
+        "key": "ISTPDR1G Index",
+        "label": "DDR4 8Gb contrato",
+        "product": "DRAM",
+        "kind": "contract",
+        "latest_month": "2026-09",
+        "level": 23.1,
+        "mom_pct": 9.582542694497164,
+        "qoq_carry_pct": 25.1351351351351,
+        "stale": false,
+        "first_month": "2019-12"
+      },
+      {
+        "key": "ISTPDR72 Index",
+        "label": "DDR4 8Gb PC contrato (serie antiga)",
+        "product": "DRAM",
+        "kind": "contract",
+        "latest_month": "2026-04",
+        "level": 17.1,
+        "mom_pct": 14.000000000000012,
+        "qoq_carry_pct": null,
+        "stale": true,
+        "first_month": "2013-12"
+      },
+      {
+        "key": "ISTPDR71 Index",
+        "label": "DDR4 servidor 32GB RDIMM contrato",
+        "product": "DRAM",
+        "kind": "contract",
+        "latest_month": "2026-09",
+        "level": 976.51,
+        "mom_pct": 2.7559137974576986,
+        "qoq_carry_pct": 21.938034188034194,
+        "stale": false,
+        "first_month": "2013-11"
+      },
+      {
+        "key": "ISTPMR38 Index",
+        "label": "LPDDR4 32Gb contrato",
+        "product": "DRAM",
+        "kind": "contract",
+        "latest_month": "2026-09",
+        "level": 54.6379,
+        "mom_pct": 0.44322460144714526,
+        "qoq_carry_pct": 13.494097222222232,
+        "stale": false,
+        "first_month": "2017-01"
+      },
+      {
+        "key": "ISTPDR15 Index",
+        "label": "DDR5 8Gb contrato",
+        "product": "DRAM",
+        "kind": "contract",
+        "latest_month": "2026-09",
+        "level": 14.86,
+        "mom_pct": 0.8825526137135054,
+        "qoq_carry_pct": 22.188281033046376,
+        "stale": false,
+        "first_month": "2023-05"
+      },
+      {
+        "key": "ISTPDR16 Index",
+        "label": "DDR5 16Gb contrato",
+        "product": "DRAM",
+        "kind": "contract",
+        "latest_month": "2026-09",
+        "level": 29.73,
+        "mom_pct": 0.9507640067911716,
+        "qoq_carry_pct": 22.2361111111111,
+        "stale": false,
+        "first_month": "2025-10"
+      },
+      {
+        "key": "ISTPDR82 Index",
+        "label": "DDR5 servidor 64GB RDIMM contrato",
+        "product": "DRAM",
+        "kind": "contract",
+        "latest_month": "2026-09",
+        "level": 1640.0,
+        "mom_pct": 2.7568922305764465,
+        "qoq_carry_pct": 25.11749347258485,
+        "stale": false,
+        "first_month": "2023-05"
+      },
+      {
+        "key": "ISTPMR48 Index",
+        "label": "LPDDR5 16Gb contrato",
+        "product": "DRAM",
+        "kind": "contract",
+        "latest_month": "2026-09",
+        "level": 27.12,
+        "mom_pct": 0.8178438661710086,
+        "qoq_carry_pct": 12.388888888888896,
+        "stale": false,
+        "first_month": "2025-10"
+      },
+      {
+        "key": "ISPPDR37 Index",
+        "label": "DDR4 8Gb 3200 spot",
+        "product": "DRAM",
+        "kind": "spot",
+        "latest_month": "2026-09",
+        "level": 33.6655,
+        "mom_pct": -2.6456379465477187,
+        "qoq_carry_pct": 22.544413188598543,
+        "stale": false,
+        "first_month": "2017-06"
+      },
+      {
+        "key": "ISPPDR47 Index",
+        "label": "DDR5 16Gb 4800/5600 spot",
+        "product": "DRAM",
+        "kind": "spot",
+        "latest_month": "2026-09",
+        "level": 49.301,
+        "mom_pct": -0.7666871142123166,
+        "qoq_carry_pct": 33.54525283128463,
+        "stale": false,
+        "first_month": "2023-10"
+      },
+      {
+        "key": "ISTPND27 Index",
+        "label": "TLC contrato 256 (unidade BBG ambigua)",
+        "product": "NAND",
+        "kind": "contract",
+        "latest_month": "2026-09",
+        "level": 12.72,
+        "mom_pct": 0.23640661938535423,
+        "qoq_carry_pct": 3.084415584415567,
+        "stale": false,
+        "first_month": "2016-01"
+      },
+      {
+        "key": "ISTPND28 Index",
+        "label": "TLC contrato 512 (unidade BBG ambigua)",
+        "product": "NAND",
+        "kind": "contract",
+        "latest_month": "2026-09",
+        "level": 25.07,
+        "mom_pct": 0.27999999999999137,
+        "qoq_carry_pct": 1.7208672086720829,
+        "stale": false,
+        "first_month": "2018-01"
+      },
+      {
+        "key": "ISTPND35 Index",
+        "label": "TLC 1Tb contrato",
+        "product": "NAND",
+        "kind": "contract",
+        "latest_month": "2026-09",
+        "level": 35.1,
+        "mom_pct": 0.28571428571428914,
+        "qoq_carry_pct": 4.681274900398403,
+        "stale": false,
+        "first_month": "2025-10"
+      },
+      {
+        "key": "ISTPND30 Index",
+        "label": "TLC SSD 512GB contrato",
+        "product": "NAND",
+        "kind": "contract",
+        "latest_month": "2026-09",
+        "level": 181.66,
+        "mom_pct": 0.281534639801273,
+        "qoq_carry_pct": 20.47573697149565,
+        "stale": false,
+        "first_month": "2019-11"
+      },
+      {
+        "key": "ISTPND29 Index",
+        "label": "TLC eMMC 128GB contrato",
+        "product": "NAND",
+        "kind": "contract",
+        "latest_month": "2026-09",
+        "level": 41.51,
+        "mom_pct": 0.45982575024201555,
+        "qoq_carry_pct": 16.376077990251204,
+        "stale": false,
+        "first_month": "2019-11"
+      },
+      {
+        "key": "ISPPN256 Index",
+        "label": "TLC 256Gb spot",
+        "product": "NAND",
+        "kind": "spot",
+        "latest_month": "2026-09",
+        "level": 14.178,
+        "mom_pct": 18.253236952895378,
+        "qoq_carry_pct": 13.034571250699777,
+        "stale": false,
+        "first_month": "2018-08"
+      },
+      {
+        "key": "ISPPN512 Index",
+        "label": "TLC 512Gb spot",
+        "product": "NAND",
+        "kind": "spot",
+        "latest_month": "2026-09",
+        "level": 20.7955,
+        "mom_pct": 0.7766418978169654,
+        "qoq_carry_pct": -5.27225695489002,
+        "stale": false,
+        "first_month": "2018-08"
+      },
+      {
+        "key": "ISPPND1T Index",
+        "label": "TLC 1Tb spot",
+        "product": "NAND",
+        "kind": "spot",
+        "latest_month": "2026-09",
+        "level": 31.0415,
+        "mom_pct": 5.895496929724819,
+        "qoq_carry_pct": 6.041806352699375,
+        "stale": false,
+        "first_month": "2023-10"
+      },
+      {
+        "key": "ISPPDR27 Index",
+        "label": "Legacy DDR3 2Gb spot",
+        "product": "DRAM",
+        "kind": "spot",
+        "latest_month": "2019-10",
+        "level": 1.1014285714285714,
+        "mom_pct": -3.55266449837377,
+        "qoq_carry_pct": null,
+        "stale": true,
+        "first_month": "2010-12"
+      },
+      {
+        "key": "ISPPDR29 Index",
+        "label": "Legacy DDR3 4Gb spot",
+        "product": "DRAM",
+        "kind": "spot",
+        "latest_month": "2026-09",
+        "level": 11.8715,
+        "mom_pct": -2.605302255769526,
+        "qoq_carry_pct": 48.156006798134996,
+        "stale": false,
+        "first_month": "2013-03"
+      },
+      {
+        "key": "ISPPND14 Index",
+        "label": "Legacy MLC 64Gb spot",
+        "product": "NAND",
+        "kind": "spot",
+        "latest_month": "2019-12",
+        "level": 2.54,
+        "mom_pct": -0.14975664545113787,
+        "qoq_carry_pct": null,
+        "stale": true,
+        "first_month": "2010-01"
+      },
+      {
+        "key": "ISPPND15 Index",
+        "label": "Legacy MLC 128Gb spot",
+        "product": "NAND",
+        "kind": "spot",
+        "latest_month": "2019-09",
+        "level": 3.71,
+        "mom_pct": 0.0,
+        "qoq_carry_pct": null,
+        "stale": true,
+        "first_month": "2010-01"
+      },
+      {
+        "key": "ISPPND30 Index",
+        "label": "Legacy TLC 128Gb spot",
+        "product": "NAND",
+        "kind": "spot",
+        "latest_month": "2023-09",
+        "level": 1.11,
+        "mom_pct": 0.0,
+        "qoq_carry_pct": null,
+        "stale": true,
+        "first_month": "2016-06"
+      },
+      {
+        "key": "ISTPND12 Index",
+        "label": "Legacy MLC 64Gb contract",
+        "product": "NAND",
+        "kind": "contract",
+        "latest_month": "2025-09",
+        "level": 1.42,
+        "mom_pct": 0.0,
+        "qoq_carry_pct": null,
+        "stale": true,
+        "first_month": "2010-06"
+      },
+      {
+        "key": "ISTPND13 Index",
+        "label": "Legacy MLC 128Gb contract",
+        "product": "NAND",
+        "kind": "contract",
+        "latest_month": "2025-09",
+        "level": 2.47,
+        "mom_pct": 0.0,
+        "qoq_carry_pct": null,
+        "stale": true,
+        "first_month": "2010-01"
+      },
+      {
+        "key": "ISTPND14 Index",
+        "label": "Legacy TLC 128Gb contract",
+        "product": "NAND",
+        "kind": "contract",
+        "latest_month": "2022-01",
+        "level": 1.4,
+        "mom_pct": -0.7092198581560294,
+        "qoq_carry_pct": null,
+        "stale": true,
+        "first_month": "2010-06"
+      },
+      {
+        "key": "CONTRACT_D4",
+        "label": "Contratos DDR4: chip + servidor + móvel",
+        "product": "DRAM",
+        "kind": "basket",
+        "latest_month": "2026-09",
+        "level": 656.3321923256301,
+        "mom_pct": 4.189258830557185,
+        "qoq_carry_pct": 20.066530266781047,
+        "stale": false,
+        "first_month": "2019-12"
+      },
+      {
+        "key": "CONTRACT_D5",
+        "label": "Contratos DDR5: chip + servidor",
+        "product": "DRAM",
+        "kind": "basket",
+        "latest_month": "2026-09",
+        "level": 1022.2295549500924,
+        "mom_pct": 1.815409378309818,
+        "qoq_carry_pct": 23.64366018870221,
+        "stale": false,
+        "first_month": "2023-05"
+      },
+      {
+        "key": "CONTRACT_NAND",
+        "label": "Contratos NAND: TLC + SSD + eMMC",
+        "product": "NAND",
+        "kind": "basket",
+        "latest_month": "2026-09",
+        "level": 426.98933876117604,
+        "mom_pct": 0.3144050199038073,
+        "qoq_carry_pct": 10.128146753025758,
+        "stale": false,
+        "first_month": "2019-11"
+      },
+      {
+        "key": "SPOT_NAND",
+        "label": "Spot NAND TLC 256/512",
+        "product": "NAND",
+        "kind": "basket",
+        "latest_month": "2026-09",
+        "level": 340.4530508131295,
+        "mom_pct": 9.165764384534224,
+        "qoq_carry_pct": 3.323178386901793,
+        "stale": false,
+        "first_month": "2018-08"
+      },
+      {
         "key": "BOK_DRAM",
         "label": "BOK_DRAM índice USD",
         "product": "DRAM",
@@ -1540,73 +1948,73 @@
         "key": "ISPPDR37 Index",
         "label": "DDR4 8Gb 3200 spot",
         "month": "2026-10",
-        "through": "2026-10-28",
-        "observations": 17,
-        "mean_value": 32.68,
+        "through": "2026-10-29",
+        "observations": 18,
+        "mean_value": 32.65222222222222,
         "last_value": 32.18,
-        "mean_vs_previous_month_pct": -2.92732916487205,
+        "mean_vs_previous_month_pct": -3.0098402749930364,
         "last_vs_previous_month_end_pct": -1.5299877600979173
       },
       {
         "key": "ISPPDR47 Index",
         "label": "DDR5 16Gb 4800/5600 spot",
         "month": "2026-10",
-        "through": "2026-10-28",
-        "observations": 17,
-        "mean_value": 50.71529411764706,
-        "last_value": 52.28,
-        "mean_vs_previous_month_pct": 2.868692557244401,
-        "last_vs_previous_month_end_pct": 5.445744251714402
+        "through": "2026-10-29",
+        "observations": 18,
+        "mean_value": 50.81888888888889,
+        "last_value": 52.58,
+        "mean_vs_previous_month_pct": 3.0788196768602782,
+        "last_vs_previous_month_end_pct": 6.05082694634933
       },
       {
         "key": "ISPPN256 Index",
         "label": "TLC 256Gb spot",
         "month": "2026-10",
-        "through": "2026-10-28",
-        "observations": 17,
-        "mean_value": 15.291764705882354,
+        "through": "2026-10-29",
+        "observations": 18,
+        "mean_value": 15.302222222222223,
         "last_value": 15.48,
-        "mean_vs_previous_month_pct": 7.85558404487483,
+        "mean_vs_previous_month_pct": 7.929342800269579,
         "last_vs_previous_month_end_pct": 2.652519893899208
       },
       {
         "key": "ISPPN512 Index",
         "label": "TLC 512Gb spot",
         "month": "2026-10",
-        "through": "2026-10-28",
-        "observations": 17,
-        "mean_value": 19.574117647058824,
+        "through": "2026-10-29",
+        "observations": 18,
+        "mean_value": 19.54,
         "last_value": 18.96,
-        "mean_vs_previous_month_pct": -5.873301209113402,
+        "mean_vs_previous_month_pct": -6.0373638527566165,
         "last_vs_previous_month_end_pct": -6.462752836704489
       },
       {
         "key": "ISPPND1T Index",
         "label": "TLC 1Tb spot",
         "month": "2026-10",
-        "through": "2026-10-28",
-        "observations": 17,
-        "mean_value": 29.607058823529414,
+        "through": "2026-10-29",
+        "observations": 18,
+        "mean_value": 29.56888888888889,
         "last_value": 28.92,
-        "mean_vs_previous_month_pct": -4.62104336604412,
+        "mean_vs_previous_month_pct": -4.744007574089881,
         "last_vs_previous_month_end_pct": -3.8883349950149526
       },
       {
         "key": "ISPPDR29 Index",
         "label": "Legacy DDR3 4Gb spot",
         "month": "2026-10",
-        "through": "2026-10-28",
-        "observations": 17,
-        "mean_value": 12.201176470588235,
-        "last_value": 12.27,
-        "mean_vs_previous_month_pct": 2.7770414066313087,
-        "last_vs_previous_month_end_pct": 0.5737704918032716
+        "through": "2026-10-29",
+        "observations": 18,
+        "mean_value": 12.21111111111111,
+        "last_value": 12.38,
+        "mean_vs_previous_month_pct": 2.8607262023426783,
+        "last_vs_previous_month_end_pct": 1.4754098360655776
       }
     ],
     "source_dates": {
-      "KCS": "2026-10-28T14:53:42-03:00",
-      "BOK": "2026-10-28T14:53:38-03:00",
-      "InSpectrum": "2026-10-28T14:55:49-03:00"
+      "KCS": "2026-10-29T09:05:32-03:00",
+      "BOK": "2026-10-29T09:08:35-03:00",
+      "InSpectrum": "2026-10-29T09:12:41-03:00"
     }
   },
   "input_hashes": {
@@ -1618,7 +2026,7 @@
     "data/street_calls.json": "e6f37fbfa8c216a68ef92b7ab824bfa58035b3f449ea3ce7eba24e98e66b5802",
     "analyze_dashboard.py": "e644508e4b2f69f933c71c0d25ac3585536394b2b338b51e4d45505710b3444e"
   },
-  "reviewed_evidence": "eb48fb62f77dbf2eff86fc9982c2f618a8b5bd5477133cd3771efecb451cff0b",
-  "review_note": "28 Oct evening company / sell-side review: Hynix Q3 ASP confirmed; Samsung and Kioxia latest verified actuals remain calendar Q2. Added Barclays, Morgan Stanley and JPM post-results commentary. DRAM Up / Moderate-high and NAND Up selectively / Moderate unchanged; no new numeric Q4 company ASP guide established. Prior judgment archived.",
-  "reviewed_at": "2026-10-28T20:35:52-03:00"
+  "reviewed_evidence": "f48cbd4911b616c6cf3b0894f79f94beea4c09dbefa34749978fba959d957c10",
+  "review_note": "Samsung 29 Oct official presentation confirms Q3 price increases across applications and Q4 AI/server demand. Jefferies call notes relay Q3 DRAM +20% / NAND high teens; official numeric script unavailable (404), so these remain secondary evidence outside regression targets. JPM flags faster supply but continued shortage; MS repeats moderating price hikes. Direction and confidence unchanged. Refreshed quantitative signals checked separately. October29 spot retains the same split: DDR5 up, DDR4 and larger-density NAND down. All seven BOK series still end September; no October DRAM/flash observation. No new candidate alert.",
+  "reviewed_at": "2026-10-29T09:14:37-03:00"
 }

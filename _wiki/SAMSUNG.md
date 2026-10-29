@@ -9,13 +9,13 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\SAMSUNG\transcripts` (
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | ₩707989.2bn | ₩992129.3bn |
-| Gross profit | ₩489220.5bn | ₩744097.0bn |
-| Gross margin | 69.1% | 75.0% |
-| EBITDA | ₩421342.8bn | ₩637673.0bn |
-| EPS | ₩45676.36 | ₩75421.59 |
-| Capex | ₩82231.1bn | ₩98576.8bn |
-| OCF (≈EBITDA) | ₩421342.8bn | ₩637673.0bn |
+| Revenue | ₩710276.7bn | ₩1000386.1bn |
+| Gross profit | ₩490090.9bn | ₩753290.8bn |
+| Gross margin | 69.0% | 75.3% |
+| EBITDA | ₩424400.5bn | ₩654904.5bn |
+| EPS | ₩46089.59 | ₩75588.40 |
+| Capex | ₩83109.6bn | ₩99831.5bn |
+| OCF (≈EBITDA) | ₩424400.5bn | ₩654904.5bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

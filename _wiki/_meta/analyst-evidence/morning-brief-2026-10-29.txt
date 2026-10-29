@@ -1,0 +1,61 @@
+Morning Analyst Inbox — 2026-10-29
+
+Bottom line: Oracle’s funding framework improved, but its financing obligations did not disappear. Microsoft delivered the cleaner cloud result; Google’s Cloud strength did not settle the Search/cash-flow debate. Focus today: ORCL, GOOG, MSFT, AMZN and the LITE/MRVL event pair.
+
+Book prioritization remains provisional: the July 1 portfolio is still a seed with unknown weights. Bloomberg’s October 28 on-disk snapshot predates the overnight results; it is not post-print consensus.
+
+Evidence key: E = _wiki/_meta/analyst-evidence/2026-10-29-morning-source-checks.json. “supp-” IDs below are supplemental research signals, not engine-generated alerts. Paths are repository-relative.
+
+FIVE PRIORITIES
+
+1. ORCL — Underwrite economic cash flow, not just the capital-markets cap.
+Company evidence, October 28 Investor Day: additional capital-market funding through FY30 is capped at $20bn, split $10bn equity/$10bn gross debt, excluding refinancing and on top of the $20bn ATM already completed. Oracle targets positive FCF in 2H FY28 and $30bn+ in FY29, using vendor financing, customer hardware and prepayments. These are targets, not completed funding. [Oracle release](https://investor.oracle.com/investor-news/news-details/2026/Oracle-Investor-Day-2026-Accelerating-Value-Creation/default.aspx)
+Broker conflict: UBS / Karl Keirstead and Radi Sultan, October 28, welcomes the funding relief even while raising FY28 capex. MS credit / Lindsay Tyler and Benjamin Guerrero, October 29, remains cautious: vendor principal might sit outside reported FCF, but that accounting treatment is explicitly unconfirmed; future lease liabilities have no disclosed ceiling.
+Inference/action: the financing bear case weakened, not vanished. Reconcile FCF after vendor-principal payments, leases and customer concessions, then match obligations to contracted receipts and site delivery. “No more capital-market issuance” is not “no more debt-like financing.”
+Falsifier of the residual bear case: binding funding and matched payment schedules demonstrate sustainable cash generation after all financing obligations.
+Signal: supp-20261029-orcl. Evidence: E.orcl; ORCL/ORCL_8-K_ex991_pressrelease_2026-10-28_0001193125-26-435853.html.
+
+2. GOOG — Search monetization is now the critical test.
+Company evidence, October 28 release/call: Cloud grew 103%, Search 12%; capex was $51.4bn and FCF negative $9.1bn. The cash result included TPU inventory investment and a $5.2bn EC fine: do not annualize it mechanically. Management expects third-party bridge capacity to pressure Cloud margins as usage rises in Q4.
+New revision: JPM / Doug Anmuth, Dae K Lee and Margaret Hoffman, October 29, keeps Overweight but cuts PT $425→$375 and 2027/2028 GAAP EPS 5%/2%. It now models Search growth of 9% reported in Q4 and 2027. JPM’s approximately $3bn Q3 TPU sales and approximately 80% ex-TPU Cloud growth are estimates, not company-disclosed segment figures.
+Inference/action: separate query growth from monetization and Cloud consumption from TPU hardware. Build the Search revenue-per-query and bridge-capacity margin sensitivities before treating the Cloud beat as an EPS upgrade.
+Falsifier of the cautious view: AI Mode monetization improves sufficiently to restore Search growth while Cloud profitability absorbs the bridge-capacity ramp.
+Signal: supp-20261029-goog. Evidence: E.goog; GOOG/transcripts/GOOG_Q3-2026-earnings_2026-10-28.md.
+
+3. MSFT — Better Azure delivery, with a concentration question.
+Company evidence, October 28 release/call: Azure grew 48% both reported and constant currency; CFO Amy Hood guided 49–50% constant currency next quarter. Capex of $45.2bn was held back by third-party capacity delayed into 2H FY27—not a cancellation.
+The October 28 10-Q discloses $10bn quarterly revenue from commercial arrangements with OpenAI, including revenue-sharing payments. It is not all Azure infrastructure rental.
+Broker revision: UBS / Karl Keirstead, Taylor McGinnis and Jack Fyda, October 29, raises its FY27 exit-quarter Azure growth forecast 43%→47% and PT $675→$700. Its low-equity-raise assessment after the callback is broker judgment, not a company commitment.
+Inference/action: prioritize Microsoft for a positive estimate review, but isolate OpenAI-linked revenue from broader enterprise consumption. Obtain the delayed-capacity schedule; do not assign an unnamed supplier delay to a particular neocloud.
+Falsifier: the growth guide fails despite capacity catch-up, or concentration rises without corresponding cash/margin improvement.
+Signal: supp-20261029-msft. Evidence: E.msft; MSFT/MSFT_10-Q_2026-10-28_0001193125-26-436133.html; MSFT/transcripts/MSFT_Q1-FY27-earnings_2026-10-28.md.
+
+4. AMZN — Tonight must pass a joint growth-and-returns test.
+BofA / Justin Post, October 25: AWS growth model 40% versus quoted Street 38%, with investor expectations potentially 42%+; AWS operating-margin forecast 39%. Its anticipated Q4 operating-income guidance of $29–34bn versus Street $32.9bn is a broker forecast, not issued company guidance.
+Inference/action: freeze AWS growth, margin, capex and retail-profit expectations together. Ask how capacity utilization, Trainium and depreciation affect returns; a growth beat purchased with weaker economics would not settle the thesis.
+Falsifier: AWS acceleration requires margin sacrifice, or investment and retail costs overwhelm cash/profit upside.
+Catalyst: today, October 29, call at 5pm ET, confirmed by Amazon’s October 15 announcement. [Amazon calendar](https://press.aboutamazon.com/2026/10/amazon-com-to-webcast-third-quarter-2026-financial-results-conference-call)
+Signal: supp-20261029-amzn. Evidence: E.amzn; _wiki/AMZN.md.
+
+5. LITE / MRVL — Separate takeover optionality from standalone fundamentals.
+Reported evidence, not a signed transaction: Reuters / Milana Vinn and Prathik Jayaprakash, October 28, updated October 29, reports advanced acquisition talks and a possible announcement as soon as next week, citing an unnamed source. No agreed consideration or financing terms were disclosed. [Reuters report](https://uk.marketscreener.com/news/marvell-in-advanced-talks-to-buy-lumentum-bloomberg-news-reports-ce785cd3db8af523)
+Inference/action: maintain two cases—Lumentum standalone earnings and a contingent transaction. For Marvell, test financing/dilution and whether owning an optical supplier creates customer conflicts. Do not calculate an arbitrage spread without actual terms.
+Falsifier of the strategic upside: talks fail, financing overwhelms synergies, or customer neutrality deteriorates.
+Catalyst: Lumentum reports November 5 after close, per its October 5 announcement. Prepare standalone optical demand and margin questions irrespective of deal news. [Lumentum calendar](https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Announces-Reporting-Date-for-Fiscal-First-Quarter-2027-Financial-Results/default.aspx)
+Signals: supp-20261029-lite-mrvl; cata-b395c83ce767. Evidence: E.lite_mrvl; _wiki/LITE.md; _wiki/MRVL.md.
+
+MODEL ADJUDICATION
+
+• GOOG: keep the engine’s apparent 18%/15% house revenue premium for 2026/2027 quarantined until gross versus ex-TAC definitions are bridged. Sources: Capstone June 5 model; Bloomberg October 28. Signals esti-222d42165d9b / esti-c18ac1ae4464; _wiki/_data/house.json and estimates.json.
+• CRWV: Capstone’s October 14 EPS forecasts of −$3.27/−$1.83 are less negative than Bloomberg’s October 28 −$3.94/−$2.18. The engine’s “below” wording remains directionally wrong. Signals esti-336d3bfa1b70 / esti-acb543aa5536; same JSON paths.
+• Keep ORCL financing classification, MSFT OpenAI revenue scope and GOOG TPU estimates separate from confirmed operating results. These definition checks come before forecast changes; signals/evidence above.
+
+WHAT MATERIALLY CHANGED
+
+Against yesterday’s frozen BofA / Claudio Franco October 28 poll: Microsoft’s 48% constant-currency Azure growth cleared 46%; Google Cloud’s 103% cleared 101.1%, but Search’s 12% missed 15%. Those are poll comparisons, not universal consensus beats/misses. Evidence: E.scorecard and the October 28 morning source-check file.
+
+Narrative inference: AI demand remains strong, but company-specific cash funding and monetization increasingly decide the investment case. Oracle supplied a funding framework; Microsoft improved delivery; Google exposed the Search/Cloud funding tension; LITE/MRVL gained an unconfirmed corporate catalyst.
+
+The October 29 engine has 34 active signals, 3 high and 28 focus names—unchanged versus yesterday’s published morning. Versus yesterday’s later saved 63-signal snapshot, it has zero added IDs and 29 removals: 16 belief flags, 11 catalysts and 2 postmortems. That mechanical reduction is not evidence of a quiet news day. Evidence: E.engine_delta; _wiki/_data/analyst/signals.json.
+
+Company pages and house models were not edited. Existing October 28 outcomes and compute-deal entries already capture the resolved events; no duplicate commitments were added. Coverage was targeted primary-source and broker-email review, not an exhaustive reading of every report or transcript.

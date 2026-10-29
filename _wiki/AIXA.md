@@ -9,13 +9,13 @@ _Wiki · generated 2026-06-19 · **German issuer (Prime Standard, Frankfurt; tic
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | €582m | €821m |
-| Gross profit | €249m | €370m |
-| Gross margin | 42.8% | 45.1% |
-| EBITDA | €136m | €199m |
-| EPS | €0.75 | €1.36 |
+| Revenue | €580m | €833m |
+| Gross profit | €248m | €377m |
+| Gross margin | 42.7% | 45.2% |
+| EBITDA | €133m | €205m |
+| EPS | €0.73 | €1.44 |
 | Capex | €34m | €34m |
-| OCF (≈EBITDA) | €136m | €199m |
+| OCF (≈EBITDA) | €133m | €205m |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

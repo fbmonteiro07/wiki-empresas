@@ -1,6 +1,6 @@
 {
  "_about": "Hand-edited ledger of machine-transcription garbles (Notion AI, Bloomberg ASR, auto-translation) seen in the archive, with the correct reading. Used by E:\\.claude\\scripts\\transcript_qa.py (source-file scan, page-diff scan) and by ingest_notion_meetings.py (writes a 'Transcription QA' block into every archived Notion file). Keys are matched with word boundaries, case-sensitive unless 'ci' is true. 'keep_when' = regex contexts (same line, ~80 chars around the hit) where the token is legitimate and must NOT be flagged. Add an entry the first time a garble is caught; never delete one. Standing rule (Felipe, 2026-09-28): ALWAYS double-check transcript content — acronyms, names, units, numbers — before it travels to a page.",
- "_updated": "2026-10-28",
+ "_updated": "2026-10-29",
  "terms": {
   "Astrod": {
    "correct": "Astra (probable: OpenAI GPT-6 Astra)",
@@ -5653,6 +5653,49 @@
    "ci": true,
    "rule": "ASR of 'long-term partner'.",
    "first_seen": "2026-10-28 (CASPA 2026 CEO Summit semis panel 2026-10-24, YouTube ASR)"
+  },
+  "AI over you": {
+   "correct": "AI Overviews",
+   "domain": "products",
+   "rule": "ASR of Google AI Overviews (\"inside AI over you, AI mode\").",
+   "first_seen": "2026-10-29 (Notion, Barclays/Wells Fargo/UBS GOOG-MSFT-NOW recap calls)"
+  },
+  "AIO reviews": {
+   "correct": "AI Overviews (AIO)",
+   "domain": "products",
+   "rule": "ASR of AI Overviews; also \"AI reviews\" in the same Wells Fargo call.",
+   "first_seen": "2026-10-29 (Notion, Barclays/Wells Fargo/UBS GOOG-MSFT-NOW recap calls)"
+  },
+  "AI reviews": {
+   "correct": "AI Overviews",
+   "domain": "products",
+   "rule": "ASR of AI Overviews (\"if they knew they were going to accelerate AI reviews\").",
+   "keep_when": "genuinely about reviews written by AI",
+   "first_seen": "2026-10-29 (Notion, Barclays/Wells Fargo/UBS GOOG-MSFT-NOW recap calls)"
+  },
+  "deep-up": {
+   "correct": "Depop",
+   "domain": "names",
+   "rule": "ASR of eBay-owned resale app Depop (\"the deep-up extra spending\").",
+   "first_seen": "2026-10-29 (Notion, Barclays/Wells Fargo/UBS GOOG-MSFT-NOW recap calls)"
+  },
+  "Carte": {
+   "correct": "Instacart (Maplebear, CART)",
+   "domain": "names",
+   "rule": "Analyst says \"Cart\" for the CART ticker (Instacart); Notion summary renders it \"Carte\".",
+   "first_seen": "2026-10-29 (Notion, Barclays/Wells Fargo/UBS GOOG-MSFT-NOW recap calls)"
+  },
+  "IDEO": {
+   "correct": "idio[syncratic]",
+   "domain": "terms",
+   "rule": "\"This is more IDEO Microsoft\" = idiosyncratic to Microsoft.",
+   "first_seen": "2026-10-29 (Notion, Barclays/Wells Fargo/UBS GOOG-MSFT-NOW recap calls)"
+  },
+  "rev-rex": {
+   "correct": "rev-recs (recognises revenue)",
+   "domain": "terms",
+   "rule": "ASR of rev-rec.",
+   "first_seen": "2026-10-29 (Notion, Barclays/Wells Fargo/UBS GOOG-MSFT-NOW recap calls)"
   }
  },
  "summary_traps": [

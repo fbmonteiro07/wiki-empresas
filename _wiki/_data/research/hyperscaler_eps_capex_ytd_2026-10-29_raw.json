@@ -1,0 +1,1547 @@
+{
+  "source": "Bloomberg BEst via local Desktop API",
+  "asof": "2026-10-29",
+  "baseline_target": "2025-12-31",
+  "queries": [
+    {
+      "year": 2027,
+      "kind": "current",
+      "overrides": {
+        "BEST_FPERIOD_OVERRIDE": "27Y"
+      },
+      "rows": [
+        {
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS",
+          "value": 19.961
+        },
+        {
+          "ticker": "MSFT US Equity",
+          "field": "BEST_CAPEX",
+          "value": -190988.3170731707
+        },
+        {
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 56.0
+        },
+        {
+          "ticker": "MSFT US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 41.0
+        },
+        {
+          "ticker": "META US Equity",
+          "field": "BEST_EPS",
+          "value": 38.141
+        },
+        {
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX",
+          "value": -221884.6857142857
+        },
+        {
+          "ticker": "META US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 25.0
+        },
+        {
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 35.0
+        },
+        {
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS",
+          "value": 15.942
+        },
+        {
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX",
+          "value": -322670.4489795918
+        },
+        {
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 49.0
+        },
+        {
+          "ticker": "AMZN US Equity",
+          "field": "BEST_EPS",
+          "value": 12.165
+        },
+        {
+          "ticker": "AMZN US Equity",
+          "field": "BEST_CAPEX",
+          "value": -286495.7714285714
+        },
+        {
+          "ticker": "AMZN US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 15.0
+        },
+        {
+          "ticker": "AMZN US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 35.0
+        }
+      ]
+    },
+    {
+      "year": 2027,
+      "kind": "historical_snapshot",
+      "error": "blpapi responseError: BAD_ARGS / Invalid override field: BEST_AS_OF_DT [nid:21941] "
+    },
+    {
+      "year": 2027,
+      "kind": "history",
+      "overrides": {
+        "BEST_FPERIOD_OVERRIDE": "27Y"
+      },
+      "rows": [
+        {
+          "date": "2025-12-01",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS",
+          "value": 18.759
+        },
+        {
+          "date": "2025-12-01",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 60.0
+        },
+        {
+          "date": "2025-12-03",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS",
+          "value": 18.759
+        },
+        {
+          "date": "2025-12-03",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 60.0
+        },
+        {
+          "date": "2025-12-04",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS",
+          "value": 18.758
+        },
+        {
+          "date": "2025-12-04",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_CAPEX",
+          "value": -113236.195
+        },
+        {
+          "date": "2025-12-04",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 60.0
+        },
+        {
+          "date": "2025-12-04",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 41.0
+        },
+        {
+          "date": "2025-12-08",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS",
+          "value": 18.758
+        },
+        {
+          "date": "2025-12-08",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 60.0
+        },
+        {
+          "date": "2025-12-09",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS",
+          "value": 18.766
+        },
+        {
+          "date": "2025-12-09",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 60.0
+        },
+        {
+          "date": "2025-12-10",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS",
+          "value": 18.767
+        },
+        {
+          "date": "2025-12-10",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 61.0
+        },
+        {
+          "date": "2025-12-11",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS",
+          "value": 18.768
+        },
+        {
+          "date": "2025-12-11",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_CAPEX",
+          "value": -114482.512
+        },
+        {
+          "date": "2025-12-11",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 61.0
+        },
+        {
+          "date": "2025-12-11",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 41.0
+        },
+        {
+          "date": "2025-12-12",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS",
+          "value": 18.768
+        },
+        {
+          "date": "2025-12-12",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 61.0
+        },
+        {
+          "date": "2025-12-15",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS",
+          "value": 18.768
+        },
+        {
+          "date": "2025-12-15",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_CAPEX",
+          "value": -114482.512
+        },
+        {
+          "date": "2025-12-15",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 61.0
+        },
+        {
+          "date": "2025-12-15",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 41.0
+        },
+        {
+          "date": "2025-12-16",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS",
+          "value": 18.754
+        },
+        {
+          "date": "2025-12-16",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 61.0
+        },
+        {
+          "date": "2025-12-17",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS",
+          "value": 18.756
+        },
+        {
+          "date": "2025-12-17",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_CAPEX",
+          "value": -115568.22
+        },
+        {
+          "date": "2025-12-17",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 61.0
+        },
+        {
+          "date": "2025-12-17",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 41.0
+        },
+        {
+          "date": "2025-12-18",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS",
+          "value": 18.757
+        },
+        {
+          "date": "2025-12-18",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_CAPEX",
+          "value": -115568.22
+        },
+        {
+          "date": "2025-12-18",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 61.0
+        },
+        {
+          "date": "2025-12-18",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 41.0
+        },
+        {
+          "date": "2025-12-22",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS",
+          "value": 18.757
+        },
+        {
+          "date": "2025-12-22",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 61.0
+        },
+        {
+          "date": "2025-12-31",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS",
+          "value": 18.757
+        },
+        {
+          "date": "2025-12-31",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_CAPEX",
+          "value": -115567.293
+        },
+        {
+          "date": "2025-12-31",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 61.0
+        },
+        {
+          "date": "2025-12-31",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 41.0
+        },
+        {
+          "date": "2025-12-01",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX",
+          "value": -121094.079
+        },
+        {
+          "date": "2025-12-01",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 38.0
+        },
+        {
+          "date": "2025-12-03",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX",
+          "value": -121094.079
+        },
+        {
+          "date": "2025-12-03",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 38.0
+        },
+        {
+          "date": "2025-12-04",
+          "ticker": "META US Equity",
+          "field": "BEST_EPS",
+          "value": 38.026
+        },
+        {
+          "date": "2025-12-04",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX",
+          "value": -121301.59
+        },
+        {
+          "date": "2025-12-04",
+          "ticker": "META US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 20.0
+        },
+        {
+          "date": "2025-12-04",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 39.0
+        },
+        {
+          "date": "2025-12-12",
+          "ticker": "META US Equity",
+          "field": "BEST_EPS",
+          "value": 38.026
+        },
+        {
+          "date": "2025-12-12",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX",
+          "value": -121301.59
+        },
+        {
+          "date": "2025-12-12",
+          "ticker": "META US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 20.0
+        },
+        {
+          "date": "2025-12-12",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 39.0
+        },
+        {
+          "date": "2025-12-15",
+          "ticker": "META US Equity",
+          "field": "BEST_EPS",
+          "value": 38.105
+        },
+        {
+          "date": "2025-12-15",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX",
+          "value": -121301.59
+        },
+        {
+          "date": "2025-12-15",
+          "ticker": "META US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 21.0
+        },
+        {
+          "date": "2025-12-15",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 39.0
+        },
+        {
+          "date": "2025-12-16",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX",
+          "value": -121301.59
+        },
+        {
+          "date": "2025-12-16",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 39.0
+        },
+        {
+          "date": "2025-12-17",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX",
+          "value": -121144.475
+        },
+        {
+          "date": "2025-12-17",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 40.0
+        },
+        {
+          "date": "2025-12-19",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX",
+          "value": -121144.475
+        },
+        {
+          "date": "2025-12-19",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 40.0
+        },
+        {
+          "date": "2025-12-30",
+          "ticker": "META US Equity",
+          "field": "BEST_EPS",
+          "value": 38.093
+        },
+        {
+          "date": "2025-12-30",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX",
+          "value": -121144.475
+        },
+        {
+          "date": "2025-12-30",
+          "ticker": "META US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 21.0
+        },
+        {
+          "date": "2025-12-30",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 40.0
+        },
+        {
+          "date": "2025-12-31",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX",
+          "value": -121144.475
+        },
+        {
+          "date": "2025-12-31",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 40.0
+        },
+        {
+          "date": "2025-12-01",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS",
+          "value": 13.766
+        },
+        {
+          "date": "2025-12-01",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX",
+          "value": -127501.4
+        },
+        {
+          "date": "2025-12-01",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 29.0
+        },
+        {
+          "date": "2025-12-01",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 40.0
+        },
+        {
+          "date": "2025-12-02",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS",
+          "value": 13.832
+        },
+        {
+          "date": "2025-12-02",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX",
+          "value": -127734.225
+        },
+        {
+          "date": "2025-12-02",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 30.0
+        },
+        {
+          "date": "2025-12-02",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 40.0
+        },
+        {
+          "date": "2025-12-03",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX",
+          "value": -127734.225
+        },
+        {
+          "date": "2025-12-03",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 40.0
+        },
+        {
+          "date": "2025-12-05",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS",
+          "value": 13.791
+        },
+        {
+          "date": "2025-12-05",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX",
+          "value": -127864.5
+        },
+        {
+          "date": "2025-12-05",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 31.0
+        },
+        {
+          "date": "2025-12-05",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 40.0
+        },
+        {
+          "date": "2025-12-08",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS",
+          "value": 13.791
+        },
+        {
+          "date": "2025-12-08",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX",
+          "value": -127798.103
+        },
+        {
+          "date": "2025-12-08",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 31.0
+        },
+        {
+          "date": "2025-12-08",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 39.0
+        },
+        {
+          "date": "2025-12-10",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX",
+          "value": -127953.59
+        },
+        {
+          "date": "2025-12-10",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 39.0
+        },
+        {
+          "date": "2025-12-11",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS",
+          "value": 13.789
+        },
+        {
+          "date": "2025-12-11",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX",
+          "value": -127953.564
+        },
+        {
+          "date": "2025-12-11",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 31.0
+        },
+        {
+          "date": "2025-12-11",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 39.0
+        },
+        {
+          "date": "2025-12-12",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS",
+          "value": 13.881
+        },
+        {
+          "date": "2025-12-12",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX",
+          "value": -128046.846
+        },
+        {
+          "date": "2025-12-12",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 31.0
+        },
+        {
+          "date": "2025-12-12",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 39.0
+        },
+        {
+          "date": "2025-12-15",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX",
+          "value": -127560.816
+        },
+        {
+          "date": "2025-12-15",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 38.0
+        },
+        {
+          "date": "2025-12-16",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS",
+          "value": 13.936
+        },
+        {
+          "date": "2025-12-16",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX",
+          "value": -127445.359
+        },
+        {
+          "date": "2025-12-16",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 32.0
+        },
+        {
+          "date": "2025-12-16",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 39.0
+        },
+        {
+          "date": "2025-12-17",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX",
+          "value": -128108.775
+        },
+        {
+          "date": "2025-12-17",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 40.0
+        },
+        {
+          "date": "2025-12-18",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS",
+          "value": 13.985
+        },
+        {
+          "date": "2025-12-18",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX",
+          "value": -128108.775
+        },
+        {
+          "date": "2025-12-18",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 31.0
+        },
+        {
+          "date": "2025-12-18",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 40.0
+        },
+        {
+          "date": "2025-12-19",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS",
+          "value": 13.995
+        },
+        {
+          "date": "2025-12-19",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 31.0
+        },
+        {
+          "date": "2025-12-30",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX",
+          "value": -128336.821
+        },
+        {
+          "date": "2025-12-30",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 39.0
+        },
+        {
+          "date": "2025-12-31",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS",
+          "value": 13.961
+        },
+        {
+          "date": "2025-12-31",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX",
+          "value": -130157.462
+        },
+        {
+          "date": "2025-12-31",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 32.0
+        },
+        {
+          "date": "2025-12-31",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 39.0
+        },
+        {
+          "date": "2026-01-02",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS",
+          "value": 14.002
+        },
+        {
+          "date": "2026-01-02",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX",
+          "value": -130108.667
+        },
+        {
+          "date": "2026-01-02",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 33.0
+        },
+        {
+          "date": "2026-01-02",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 39.0
+        },
+        {
+          "date": "2025-12-01",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_EPS",
+          "value": 11.578
+        },
+        {
+          "date": "2025-12-01",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_CAPEX",
+          "value": -164803.045
+        },
+        {
+          "date": "2025-12-01",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 12.0
+        },
+        {
+          "date": "2025-12-01",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 22.0
+        },
+        {
+          "date": "2025-12-03",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_EPS",
+          "value": 11.578
+        },
+        {
+          "date": "2025-12-03",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 12.0
+        },
+        {
+          "date": "2025-12-04",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_CAPEX",
+          "value": -164803.045
+        },
+        {
+          "date": "2025-12-04",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 22.0
+        },
+        {
+          "date": "2025-12-10",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_CAPEX",
+          "value": -164823.091
+        },
+        {
+          "date": "2025-12-10",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 22.0
+        },
+        {
+          "date": "2025-12-12",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_EPS",
+          "value": 11.578
+        },
+        {
+          "date": "2025-12-12",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 12.0
+        },
+        {
+          "date": "2025-12-15",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_CAPEX",
+          "value": -161499.652
+        },
+        {
+          "date": "2025-12-15",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 23.0
+        },
+        {
+          "date": "2025-12-17",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_EPS",
+          "value": 11.583
+        },
+        {
+          "date": "2025-12-17",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_CAPEX",
+          "value": -160954.458
+        },
+        {
+          "date": "2025-12-17",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 12.0
+        },
+        {
+          "date": "2025-12-17",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 24.0
+        },
+        {
+          "date": "2025-12-19",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_EPS",
+          "value": 11.583
+        },
+        {
+          "date": "2025-12-19",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_CAPEX",
+          "value": -161419.0
+        },
+        {
+          "date": "2025-12-19",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 12.0
+        },
+        {
+          "date": "2025-12-19",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 24.0
+        }
+      ]
+    },
+    {
+      "year": 2028,
+      "kind": "current",
+      "overrides": {
+        "BEST_FPERIOD_OVERRIDE": "28Y"
+      },
+      "rows": [
+        {
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS",
+          "value": 23.849
+        },
+        {
+          "ticker": "MSFT US Equity",
+          "field": "BEST_CAPEX",
+          "value": -221223.4318181818
+        },
+        {
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 59.0
+        },
+        {
+          "ticker": "MSFT US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 44.0
+        },
+        {
+          "ticker": "META US Equity",
+          "field": "BEST_EPS",
+          "value": 45.699
+        },
+        {
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX",
+          "value": -240131.59375
+        },
+        {
+          "ticker": "META US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 20.0
+        },
+        {
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 32.0
+        },
+        {
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS",
+          "value": 19.818
+        },
+        {
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX",
+          "value": -361167.6666666667
+        },
+        {
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 39.0
+        },
+        {
+          "ticker": "AMZN US Equity",
+          "field": "BEST_EPS",
+          "value": 15.175
+        },
+        {
+          "ticker": "AMZN US Equity",
+          "field": "BEST_CAPEX",
+          "value": -317875.5
+        },
+        {
+          "ticker": "AMZN US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 12.0
+        },
+        {
+          "ticker": "AMZN US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 26.0
+        }
+      ]
+    },
+    {
+      "year": 2028,
+      "kind": "historical_snapshot",
+      "error": "blpapi responseError: BAD_ARGS / Invalid override field: BEST_AS_OF_DT [nid:23927] "
+    },
+    {
+      "year": 2028,
+      "kind": "history",
+      "overrides": {
+        "BEST_FPERIOD_OVERRIDE": "28Y"
+      },
+      "rows": [
+        {
+          "date": "2025-12-01",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS",
+          "value": 22.165
+        },
+        {
+          "date": "2025-12-01",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 33.0
+        },
+        {
+          "date": "2025-12-11",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS",
+          "value": 22.166
+        },
+        {
+          "date": "2025-12-11",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_CAPEX",
+          "value": -123237.375
+        },
+        {
+          "date": "2025-12-11",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 33.0
+        },
+        {
+          "date": "2025-12-11",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 24.0
+        },
+        {
+          "date": "2025-12-12",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS",
+          "value": 22.166
+        },
+        {
+          "date": "2025-12-12",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 33.0
+        },
+        {
+          "date": "2025-12-15",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS",
+          "value": 22.166
+        },
+        {
+          "date": "2025-12-15",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_CAPEX",
+          "value": -123237.375
+        },
+        {
+          "date": "2025-12-15",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 33.0
+        },
+        {
+          "date": "2025-12-15",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 24.0
+        },
+        {
+          "date": "2025-12-17",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS",
+          "value": 22.178
+        },
+        {
+          "date": "2025-12-17",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_CAPEX",
+          "value": -124572.458
+        },
+        {
+          "date": "2025-12-17",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 33.0
+        },
+        {
+          "date": "2025-12-17",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 24.0
+        },
+        {
+          "date": "2025-12-18",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS",
+          "value": 22.18
+        },
+        {
+          "date": "2025-12-18",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_CAPEX",
+          "value": -124572.458
+        },
+        {
+          "date": "2025-12-18",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 33.0
+        },
+        {
+          "date": "2025-12-18",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 24.0
+        },
+        {
+          "date": "2025-12-31",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS",
+          "value": 22.18
+        },
+        {
+          "date": "2025-12-31",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_CAPEX",
+          "value": -124572.667
+        },
+        {
+          "date": "2025-12-31",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 33.0
+        },
+        {
+          "date": "2025-12-31",
+          "ticker": "MSFT US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 24.0
+        },
+        {
+          "date": "2025-12-03",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX",
+          "value": -121353.0
+        },
+        {
+          "date": "2025-12-03",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 24.0
+        },
+        {
+          "date": "2025-12-04",
+          "ticker": "META US Equity",
+          "field": "BEST_EPS",
+          "value": 43.971
+        },
+        {
+          "date": "2025-12-04",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX",
+          "value": -122231.32
+        },
+        {
+          "date": "2025-12-04",
+          "ticker": "META US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 9.0
+        },
+        {
+          "date": "2025-12-04",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 25.0
+        },
+        {
+          "date": "2025-12-16",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX",
+          "value": -122231.32
+        },
+        {
+          "date": "2025-12-16",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 25.0
+        },
+        {
+          "date": "2025-12-17",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX",
+          "value": -121998.615
+        },
+        {
+          "date": "2025-12-17",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 26.0
+        },
+        {
+          "date": "2025-12-19",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX",
+          "value": -121998.615
+        },
+        {
+          "date": "2025-12-19",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 26.0
+        },
+        {
+          "date": "2025-12-30",
+          "ticker": "META US Equity",
+          "field": "BEST_EPS",
+          "value": 43.95
+        },
+        {
+          "date": "2025-12-30",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX",
+          "value": -121998.615
+        },
+        {
+          "date": "2025-12-30",
+          "ticker": "META US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 9.0
+        },
+        {
+          "date": "2025-12-30",
+          "ticker": "META US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 26.0
+        },
+        {
+          "date": "2025-12-01",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX",
+          "value": -126581.667
+        },
+        {
+          "date": "2025-12-01",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 21.0
+        },
+        {
+          "date": "2025-12-02",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS",
+          "value": 16.42
+        },
+        {
+          "date": "2025-12-02",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX",
+          "value": -126927.143
+        },
+        {
+          "date": "2025-12-02",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 5.0
+        },
+        {
+          "date": "2025-12-02",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 21.0
+        },
+        {
+          "date": "2025-12-03",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX",
+          "value": -126927.143
+        },
+        {
+          "date": "2025-12-03",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 21.0
+        },
+        {
+          "date": "2025-12-05",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS",
+          "value": 16.085
+        },
+        {
+          "date": "2025-12-05",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX",
+          "value": -127131.19
+        },
+        {
+          "date": "2025-12-05",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 6.0
+        },
+        {
+          "date": "2025-12-05",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 21.0
+        },
+        {
+          "date": "2025-12-08",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS",
+          "value": 15.947
+        },
+        {
+          "date": "2025-12-08",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX",
+          "value": -126609.6
+        },
+        {
+          "date": "2025-12-08",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 7.0
+        },
+        {
+          "date": "2025-12-08",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 20.0
+        },
+        {
+          "date": "2025-12-10",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX",
+          "value": -127496.15
+        },
+        {
+          "date": "2025-12-10",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 20.0
+        },
+        {
+          "date": "2025-12-11",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS",
+          "value": 15.937
+        },
+        {
+          "date": "2025-12-11",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX",
+          "value": -127496.1
+        },
+        {
+          "date": "2025-12-11",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 7.0
+        },
+        {
+          "date": "2025-12-11",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 20.0
+        },
+        {
+          "date": "2025-12-12",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX",
+          "value": -127496.15
+        },
+        {
+          "date": "2025-12-12",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 20.0
+        },
+        {
+          "date": "2025-12-15",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX",
+          "value": -126107.368
+        },
+        {
+          "date": "2025-12-15",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 19.0
+        },
+        {
+          "date": "2025-12-17",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX",
+          "value": -127167.3
+        },
+        {
+          "date": "2025-12-17",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 20.0
+        },
+        {
+          "date": "2025-12-30",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX",
+          "value": -129141.158
+        },
+        {
+          "date": "2025-12-30",
+          "ticker": "GOOG US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 19.0
+        },
+        {
+          "date": "2025-12-04",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_CAPEX",
+          "value": -155735.333
+        },
+        {
+          "date": "2025-12-04",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 12.0
+        },
+        {
+          "date": "2025-12-10",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_CAPEX",
+          "value": -155795.0
+        },
+        {
+          "date": "2025-12-10",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 12.0
+        },
+        {
+          "date": "2025-12-15",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_CAPEX",
+          "value": -155795.0
+        },
+        {
+          "date": "2025-12-15",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 12.0
+        },
+        {
+          "date": "2025-12-17",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_EPS",
+          "value": 13.228
+        },
+        {
+          "date": "2025-12-17",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_CAPEX",
+          "value": -156044.308
+        },
+        {
+          "date": "2025-12-17",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_EPS_NUMEST",
+          "value": 6.0
+        },
+        {
+          "date": "2025-12-17",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 13.0
+        },
+        {
+          "date": "2025-12-19",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_CAPEX",
+          "value": -156936.231
+        },
+        {
+          "date": "2025-12-19",
+          "ticker": "AMZN US Equity",
+          "field": "BEST_CAPEX_NUMEST",
+          "value": 13.0
+        }
+      ]
+    }
+  ]
+}

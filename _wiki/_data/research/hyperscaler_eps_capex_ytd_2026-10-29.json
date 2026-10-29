@@ -1,0 +1,203 @@
+{
+  "source": "Bloomberg BEst consensus via local Desktop API",
+  "asof": "2026-10-29",
+  "baseline": "Latest available observation on or before 2025-12-31",
+  "basis": "Fixed fiscal years 2027 and 2028 via BEST_FPERIOD_OVERRIDE=27Y and 28Y. MSFT June year-end; META, GOOG, AMZN December year-end. Same Bloomberg fields and listing at both endpoints. No MSFT calendarization or chain-link adjustment.",
+  "fields": {
+    "eps": "BEST_EPS (USD/share)",
+    "capex": "BEST_CAPEX, sign reversed and divided by 1000 for positive USD billions"
+  },
+  "revision_formula": "(current / baseline - 1) * 100",
+  "rows": [
+    {
+      "ticker": "MSFT",
+      "year": 2027,
+      "period_end": "2027-06-30",
+      "eps": {
+        "baseline": 18.757,
+        "baseline_observation_date": "2025-12-31",
+        "current": 19.961,
+        "absolute_revision": 1.203999999999997,
+        "revision_pct": 6.418936930212715,
+        "current_contributors": 56.0,
+        "baseline_contributors": 61.0
+      },
+      "capex": {
+        "baseline": 115.567293,
+        "baseline_observation_date": "2025-12-31",
+        "current": 190.98831707317072,
+        "absolute_revision": 75.42102407317071,
+        "revision_pct": 65.26156502875835,
+        "current_contributors": 41.0,
+        "baseline_contributors": 41.0
+      }
+    },
+    {
+      "ticker": "MSFT",
+      "year": 2028,
+      "period_end": "2028-06-30",
+      "eps": {
+        "baseline": 22.18,
+        "baseline_observation_date": "2025-12-31",
+        "current": 23.849,
+        "absolute_revision": 1.6690000000000005,
+        "revision_pct": 7.52479711451759,
+        "current_contributors": 59.0,
+        "baseline_contributors": 33.0
+      },
+      "capex": {
+        "baseline": 124.57266700000001,
+        "baseline_observation_date": "2025-12-31",
+        "current": 221.2234318181818,
+        "absolute_revision": 96.6507648181818,
+        "revision_pct": 77.58585181304805,
+        "current_contributors": 44.0,
+        "baseline_contributors": 24.0
+      }
+    },
+    {
+      "ticker": "META",
+      "year": 2027,
+      "period_end": "2027-12-31",
+      "eps": {
+        "baseline": 38.093,
+        "baseline_observation_date": "2025-12-30",
+        "current": 38.141,
+        "absolute_revision": 0.047999999999994714,
+        "revision_pct": 0.12600740293491342,
+        "current_contributors": 25.0,
+        "baseline_contributors": 21.0
+      },
+      "capex": {
+        "baseline": 121.14447500000001,
+        "baseline_observation_date": "2025-12-31",
+        "current": 221.8846857142857,
+        "absolute_revision": 100.74021071428568,
+        "revision_pct": 83.15708224769283,
+        "current_contributors": 35.0,
+        "baseline_contributors": 40.0
+      }
+    },
+    {
+      "ticker": "META",
+      "year": 2028,
+      "period_end": "2028-12-31",
+      "eps": {
+        "baseline": 43.95,
+        "baseline_observation_date": "2025-12-30",
+        "current": 45.699,
+        "absolute_revision": 1.7489999999999952,
+        "revision_pct": 3.9795221843003326,
+        "current_contributors": 20.0,
+        "baseline_contributors": 9.0
+      },
+      "capex": {
+        "baseline": 121.998615,
+        "baseline_observation_date": "2025-12-30",
+        "current": 240.13159375,
+        "absolute_revision": 118.13297875,
+        "revision_pct": 96.83140972543009,
+        "current_contributors": 32.0,
+        "baseline_contributors": 26.0
+      }
+    },
+    {
+      "ticker": "GOOG",
+      "year": 2027,
+      "period_end": "2027-12-31",
+      "eps": {
+        "baseline": 13.961,
+        "baseline_observation_date": "2025-12-31",
+        "current": 15.942,
+        "absolute_revision": 1.9809999999999999,
+        "revision_pct": 14.189527970775728,
+        "current_contributors": null,
+        "baseline_contributors": 32.0
+      },
+      "capex": {
+        "baseline": 130.157462,
+        "baseline_observation_date": "2025-12-31",
+        "current": 322.6704489795918,
+        "absolute_revision": 192.5129869795918,
+        "revision_pct": 147.90776035537002,
+        "current_contributors": 49.0,
+        "baseline_contributors": 39.0
+      }
+    },
+    {
+      "ticker": "GOOG",
+      "year": 2028,
+      "period_end": "2028-12-31",
+      "eps": {
+        "baseline": 15.937,
+        "baseline_observation_date": "2025-12-11",
+        "current": 19.818,
+        "absolute_revision": 3.881000000000002,
+        "revision_pct": 24.352136537616875,
+        "current_contributors": null,
+        "baseline_contributors": 7.0
+      },
+      "capex": {
+        "baseline": 129.141158,
+        "baseline_observation_date": "2025-12-30",
+        "current": 361.1676666666667,
+        "absolute_revision": 232.02650866666673,
+        "revision_pct": 179.66890823966958,
+        "current_contributors": 39.0,
+        "baseline_contributors": 19.0
+      }
+    },
+    {
+      "ticker": "AMZN",
+      "year": 2027,
+      "period_end": "2027-12-31",
+      "eps": {
+        "baseline": 11.583,
+        "baseline_observation_date": "2025-12-19",
+        "current": 12.165,
+        "absolute_revision": 0.581999999999999,
+        "revision_pct": 5.024605024605022,
+        "current_contributors": 15.0,
+        "baseline_contributors": 12.0
+      },
+      "capex": {
+        "baseline": 161.419,
+        "baseline_observation_date": "2025-12-19",
+        "current": 286.4957714285714,
+        "absolute_revision": 125.07677142857139,
+        "revision_pct": 77.48578013032628,
+        "current_contributors": 35.0,
+        "baseline_contributors": 24.0
+      }
+    },
+    {
+      "ticker": "AMZN",
+      "year": 2028,
+      "period_end": "2028-12-31",
+      "eps": {
+        "baseline": 13.228,
+        "baseline_observation_date": "2025-12-17",
+        "current": 15.175,
+        "absolute_revision": 1.947000000000001,
+        "revision_pct": 14.718778348956763,
+        "current_contributors": 12.0,
+        "baseline_contributors": 6.0
+      },
+      "capex": {
+        "baseline": 156.936231,
+        "baseline_observation_date": "2025-12-19",
+        "current": 317.8755,
+        "absolute_revision": 160.939269,
+        "revision_pct": 102.55074177230625,
+        "current_contributors": 26.0,
+        "baseline_contributors": 13.0
+      }
+    }
+  ],
+  "validation": [
+    "All 16 baseline/current pairs populated and positive after capex sign conversion.",
+    "All revisions recalculated from unrounded source values and reverse-reconciled.",
+    "Fixed 27Y/28Y current MSFT levels match 1FY/2FY annual lines in 2026-10-29 estimates.json; other companies match 2FY/3FY, except small intraday GOOG movements.",
+    "Baseline data is sparse: latest observations range from 2025-12-11 to 2025-12-31; exact dates and contributor counts preserved per cell."
+  ]
+}
