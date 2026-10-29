@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\MRVL` (filings + transcripts) · `_equity_calls` · `_briefings\by-ticker\MRVL.md` (none on disk). Master index: [00_INDEX.md](00_INDEX.md). Themes: [custom-asic-tpu](themes/custom-asic-tpu.md) · [optical-cpo](themes/optical-cpo.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-28 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-10-29 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -12,7 +12,7 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\MRVL` (filings + trans
 | Gross margin | 58.4% | 57.9% |
 | EBITDA | $4.7bn | $8.3bn |
 | EPS | $4.21 | $7.36 |
-| Capex | $489m | $687m |
+| Capex | $491m | $701m |
 | OCF (≈EBITDA) | $4.7bn | $8.3bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
