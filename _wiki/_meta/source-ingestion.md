@@ -53,7 +53,7 @@ For the `P:` route, a successfully staged original is moved to `P:\US Equities\R
 
 ### 2. Applies duplicate and lock guards
 
-The `P:` sweep compares candidates with prior archives by normalized filename and, where possible, content hash. Exact duplicates are skipped. A same-named file with different content is treated as a possible revision and pulled for review.
+The `P:` sweep compares candidates with prior archives by normalized filename and, where possible, content hash. Exact duplicates are skipped, and since 2026-10-28 their `P:` original is moved into `done\` as soon as it is no longer locked. A file that was hand-staged by copy on an earlier night therefore clears off the `P:` root by itself. A same-named file with different content is treated as a possible revision and pulled for review.
 
 If a file is locked, the routing plan shows **STRANDED ON P:** and the command exits with code `3`. The plan for all other sources is usable, but the stranded file is **not** in the wiki. Close the locking application and rerun, or copy that file directly into `_inbox`.
 

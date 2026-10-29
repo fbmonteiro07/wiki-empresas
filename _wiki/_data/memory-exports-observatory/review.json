@@ -1,0 +1,36 @@
+{
+  "status": "PASS: source and calculation audit, 28 October 2026 vintage. Predictive validation remains PARTIAL.",
+  "operational": false,
+  "reviewed_at": "2026-10-28T15:13:06-03:00",
+  "summary": "Independent review verified all 106 new targets against 53 original documents and preserved 104 prior records. Reproduced 156 models, 3,183 quarterly predictions, 1,196 monthly predictions and 340 resampling ranges without numerical mismatches. All three findings were corrected and the rebuilt page was checked. 57 automated tests pass. This is exploratory latest-vintage research, not a calibrated forecast probability.",
+  "report": "audit/2026-10-28/long_history/skeptic/REVIEW.md",
+  "scope": "Exploratory latest-vintage historical research; no forecast probability or operational forecast approval",
+  "audited_hashes": {
+    "MEMORY_DASHBOARD_PROTOCOL.md": "d9c3117a58b04fca725b2cde23f9fd79fd0e71387bd0611f16a9b803e44bc030",
+    "analyze_dashboard.py": "e644508e4b2f69f933c71c0d25ac3585536394b2b338b51e4d45505710b3444e",
+    "analyze_pricing.py": "22ce2e3c519eac16c47185166ed55a7739e159e23bd16550fa8c82027652fb7b",
+    "dashboard_ui/app.js": "6d97d1f48053abae344b89b6b54d8187a4cf62cc1ed90202d42773532f06c6b4",
+    "data/company_asp.json": "d34e27d9210f7180f37d27fe5d55afdde7556e8d89b6e6a44cde68ef086402cf",
+    "data/memory_dashboard.json": "be32101c6f5c25ed47a978b2ab9f7452fbfa3dd1182d918855889a3f25a9e1d8"
+  },
+  "release_checks": {
+    "automated_tests": 57,
+    "javascript_syntax": "PASS",
+    "current_spot_filter": "PASS: October 2026 only",
+    "derived_label": "PASS: rendered",
+    "controls": "PASS: NAND/pre-2020; DDR5 empty-history; BOK first-two-month; flat band; legacy monthly pair",
+    "original_refit": "SHA256 unchanged"
+  },
+  "input_hashes": {
+    "data/exports.json": "6b102e668c1062316bf427e88644b78649e1b2e74fdaf829a30ba7ca671b302f",
+    "data/exports_extended.json": "cbfb4e20183dae282842acc85af48c163883595b724d1dd6e323c54017c12349",
+    "data/bok_export_price_index.json": "f35cad60a669406a6c56de66ed1a105bfb91e5cabbad06daf819726e2e5447b4",
+    "data/market_prices.json": "c4fcdeef4ecf234987357d6d8ffc6f77bbc56a0769a00ce8d18550a4cf9639b1",
+    "data/company_asp.json": "d34e27d9210f7180f37d27fe5d55afdde7556e8d89b6e6a44cde68ef086402cf",
+    "analyze.py": "10acfdc984a4a41fda53f352c3888ec04e8f72f51b2f8ad2acedfe87c5601c3e",
+    "analyze_ext.py": "7f619afc0de0d5e30508eb8f310d20d5a18ddbf3a773a3e9172e5968ab698c13",
+    "analyze_pricing.py": "22ce2e3c519eac16c47185166ed55a7739e159e23bd16550fa8c82027652fb7b",
+    "analyze_dashboard.py": "e644508e4b2f69f933c71c0d25ac3585536394b2b338b51e4d45505710b3444e",
+    "MEMORY_DASHBOARD_PROTOCOL.md": "d9c3117a58b04fca725b2cde23f9fd79fd0e71387bd0611f16a9b803e44bc030"
+  }
+}

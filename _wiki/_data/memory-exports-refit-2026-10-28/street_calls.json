@@ -1,0 +1,156 @@
+{
+  "as_of": "2026-10-28",
+  "quarter": "2026Q4",
+  "note": "Company actuals enter company_asp.json. Broker forecasts remain comparators, never regression targets. Prior ledger preserved in street_calls_history_2026-09-15.json.",
+  "canonical": {
+    "id": "dram-pricing-2026",
+    "text": "Latest tracker evidence (2026-10-26 JPM / Cardoso relaying TrendForce): Q4 conventional DRAM +10-15%, NAND +15-20% QoQ. The wiki canonical June-30 vintage (+3-8% Q4 DRAM) is historical; its prior tracker rendering is archived. Jefferies expert on Oct-22 is stronger on Q4 DRAM (nearly 20%). Bases are kept separate, never averaged.",
+    "wiki_ref": "_wiki/_meta/assumptions.md"
+  },
+  "rows": [
+    {
+      "product": "DRAM",
+      "quarter": "2026Q4",
+      "scope": "market, conventional contract pricing",
+      "source": "TrendForce via J.P. Morgan / Joseph Cardoso, Manmohanpreet Singh, Marc Vitenzon",
+      "date": "2026-10-26",
+      "event_date": "2026-10-26",
+      "call": "TrendForce conventional DRAM contract-price forecast +10-15% QoQ; JPM summary rounds to +13%.",
+      "low_pct": 10,
+      "high_pct": 15,
+      "basis": "sector contract-price growth; not company blended ASP or the fixed InSpectrum basket",
+      "grounding": "HARD",
+      "evidence_type": "broker_relay_of_forecast",
+      "source_url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWgU6T%2BAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "local_source": "E:\\korea-memory-monitor\\audit\\2026-10-28\\refit\\source_0.json",
+      "wiki_ref": "_wiki/_data/memory-exports-refit-2026-10-28/source_0.json"
+    },
+    {
+      "product": "NAND",
+      "quarter": "2026Q4",
+      "scope": "market, conventional contract pricing",
+      "source": "TrendForce via J.P. Morgan / Joseph Cardoso, Manmohanpreet Singh, Marc Vitenzon",
+      "date": "2026-10-26",
+      "event_date": "2026-10-26",
+      "call": "TrendForce NAND contract-price forecast +15-20% QoQ; JPM summary rounds to +18%. Enterprise SSD price growth expected to accelerate.",
+      "low_pct": 15,
+      "high_pct": 20,
+      "basis": "sector contract-price growth; not company blended ASP or the fixed InSpectrum basket",
+      "grounding": "HARD",
+      "evidence_type": "broker_relay_of_forecast",
+      "source_url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWgU6T%2BAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "local_source": "E:\\korea-memory-monitor\\audit\\2026-10-28\\refit\\source_0.json",
+      "wiki_ref": "_wiki/_data/memory-exports-refit-2026-10-28/source_0.json"
+    },
+    {
+      "product": "DRAM",
+      "quarter": "2026Q4",
+      "scope": "market contract pricing; expert view",
+      "source": "Harald Lee (former Samsung/WDC/Intel), Jefferies expert call; Conor O'Mara notes",
+      "date": "2026-10-28",
+      "event_date": "2026-10-22",
+      "call": "Q3 over 20%; Q4 nearly 20%; DRAM +20-30% for full-year 2027. Expert scenario, not company guidance.",
+      "low_pct": 18,
+      "high_pct": 20,
+      "grounding": "PARTIAL",
+      "numeric_treatment": "analyst normalization of nearly 20; not a source-stated interval",
+      "basis": "DRAM contract pricing; do not blend with TrendForce range or infer HBM ASP",
+      "source_url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWgVs9TAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "local_source": "E:\\korea-memory-monitor\\audit\\2026-10-28\\refit\\source_1.json",
+      "wiki_ref": "_wiki/_data/memory-exports-refit-2026-10-28/source_1.json"
+    }
+  ],
+  "prior_quarter_sector_reads": [
+    {
+      "product": "DRAM",
+      "quarter": "2026Q3",
+      "scope": "market, conventional contract pricing",
+      "source": "TrendForce via J.P. Morgan / Joseph Cardoso, Manmohanpreet Singh, Marc Vitenzon",
+      "date": "2026-10-26",
+      "event_date": "2026-10-26",
+      "call": "TrendForce sector contract-price change +16% QoQ for Q3; not Hynix blended ASP.",
+      "low_pct": 16,
+      "high_pct": 16,
+      "basis": "sector contract-price growth; not company blended ASP or the fixed InSpectrum basket",
+      "grounding": "HARD",
+      "evidence_type": "broker_relay_of_sector_estimate",
+      "source_url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWgU6T%2BAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "local_source": "E:\\korea-memory-monitor\\audit\\2026-10-28\\refit\\source_0.json",
+      "wiki_ref": "_wiki/_data/memory-exports-refit-2026-10-28/source_0.json"
+    },
+    {
+      "product": "NAND",
+      "quarter": "2026Q3",
+      "scope": "market, conventional contract pricing",
+      "source": "TrendForce via J.P. Morgan / Joseph Cardoso, Manmohanpreet Singh, Marc Vitenzon",
+      "date": "2026-10-26",
+      "event_date": "2026-10-26",
+      "call": "TrendForce sector contract-price change +21% QoQ for Q3; not Hynix blended ASP.",
+      "low_pct": 21,
+      "high_pct": 21,
+      "basis": "sector contract-price growth; not company blended ASP or the fixed InSpectrum basket",
+      "grounding": "HARD",
+      "evidence_type": "broker_relay_of_sector_estimate",
+      "source_url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWgU6T%2BAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "local_source": "E:\\korea-memory-monitor\\audit\\2026-10-28\\refit\\source_0.json",
+      "wiki_ref": "_wiki/_data/memory-exports-refit-2026-10-28/source_0.json"
+    }
+  ],
+  "longer_term_outlook": [
+    {
+      "product": "NAND",
+      "quarter": "2027",
+      "scope": "market; expert view",
+      "source": "Harald Lee, Jefferies expert call; Conor O'Mara notes",
+      "date": "2026-10-28",
+      "event_date": "2026-10-22",
+      "call": "NAND pricing more muted; possible balance/saturation in 2H27. No numerical NAND growth forecast in the reviewed notes.",
+      "low_pct": null,
+      "high_pct": null,
+      "grounding": "HARD",
+      "basis": "qualitative outlook, not a model target",
+      "source_url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWgVs9TAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "local_source": "E:\\korea-memory-monitor\\audit\\2026-10-28\\refit\\source_1.json",
+      "wiki_ref": "_wiki/_data/memory-exports-refit-2026-10-28/source_1.json"
+    }
+  ],
+  "qualitative_updates": [
+    {
+      "source": "Barclays",
+      "analysts": "Simon Coles, Bernd Klanten, Thomas Wu · 28 Oct 2026",
+      "date": "2026-10-28",
+      "dram": "Pricing tailwinds for at least another couple of quarters; conventional DRAM strength.",
+      "nand": "No numerical Q4 NAND ASP forecast in reviewed email.",
+      "assessment": "Supports direction, not a new realized Q4 observation or calibrated magnitude.",
+      "source_url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWibteOAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "local_source": "E:\\korea-memory-monitor\\audit\\2026-10-28\\company-street-review\\reviewed-emails.json",
+      "evidence_type": "broker_commentary",
+      "numeric_q4_asp_forecast": null
+    },
+    {
+      "source": "Morgan Stanley",
+      "analysts": "Shawn Kim, Ryan Kim, Cindy Huang, Kathy Zhu · 28 Oct 2026",
+      "date": "2026-10-28",
+      "dram": "Better pricing/mix, but memory price hikes moderating.",
+      "nand": "No numerical Q4 NAND ASP forecast in reviewed email.",
+      "assessment": "Counterweight to extrapolating Q3: slowing increases are compatible with rising prices. Q4 bit growth is volume, not ASP.",
+      "source_url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWibtcrAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "local_source": "E:\\korea-memory-monitor\\audit\\2026-10-28\\company-street-review\\reviewed-emails.json",
+      "evidence_type": "broker_commentary",
+      "numeric_q4_asp_forecast": null
+    },
+    {
+      "source": "J.P. Morgan",
+      "analysts": "Jay Kwon / Sangsik Lee · 28 Oct 2026 post-results update",
+      "date": "2026-10-28",
+      "dram": "HBM mix / pricing and supply visibility support the cycle.",
+      "nand": "No numerical Q4 NAND ASP forecast in reviewed email.",
+      "assessment": "Forecast upgrades mainly concern 2027-28 HBM and margins; do not translate into a higher Q4 conventional price forecast.",
+      "source_url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWibtaKAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "local_source": "E:\\korea-memory-monitor\\audit\\2026-10-28\\company-street-review\\reviewed-emails.json",
+      "evidence_type": "broker_commentary",
+      "numeric_q4_asp_forecast": null
+    }
+  ],
+  "last_reviewed_at": "2026-10-28T20:35:49-03:00"
+}

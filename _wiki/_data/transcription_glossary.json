@@ -4583,7 +4583,7 @@
   "Century": {
    "correct": "Sentry",
    "domain": "names",
-   "rule": "ASR of Sentry (error-log tool) in a developer workflow context; only when logs/bug reports are discussed.",
+   "rule": "ASR of Sentry (error-log tool) in a developer workflow context; only when logs/bug reports are discussed. ALSO (2026-10-28): lowercase 'century' = NVIDIA's Sentry agent-safety/monitoring system in an NVIDIA agent-security context (Jensen, Yahoo Finance at GTC Berlin, 2026-10-21 [00:19:13]). Not added as a lowercase key (common word) — check by hand.",
    "first_seen": "2026-10-26 (a16z Show, OpenAI computer use w/ Ari Weinstein & James Sun, podscripts ASR)"
   },
   "WebExP": {
@@ -5585,6 +5585,72 @@
    "rule": "NOW Q3 FY26 call: 'consumption build' (Flow / Now Assist pricing) = consumption-billed.",
    "ci": true,
    "first_seen": "2026-10-28 (print-night batch, MarketBeat/Quartr earnings-call transcripts) — NOW Q3 FY26 call 2026-10-28"
+  },
+  "in video": {
+   "correct": "NVIDIA",
+   "domain": "companies",
+   "ci": true,
+   "rule": "ASR splits the company name ('modern-day version… in video'). Write NVIDIA.",
+   "first_seen": "2026-10-28 (All-In w/ Arvind Krishna & Nikesh Arora 2026-10-21, podscripts ASR)"
+  },
+  "GROC": {
+   "correct": "Grok (xAI) — check context vs Groq",
+   "domain": "names",
+   "rule": "All-capitals ASR variant; disambiguate like 'Grock' (Musk/X = Grok; Jonathan Ross/NVIDIA = Groq).",
+   "first_seen": "2026-10-28 (All-In 'AI Cyber Panic…' 2026-10-23, podscripts ASR)"
+  },
+  "Shamath": {
+   "correct": "Chamath (Palihapitiya, All-In host)",
+   "domain": "names",
+   "rule": "ASR of Chamath.",
+   "first_seen": "2026-10-28 (All-In 'AI Cyber Panic…' 2026-10-23, podscripts ASR)"
+  },
+  "Tramath": {
+   "correct": "Chamath (Palihapitiya, All-In host)",
+   "domain": "names",
+   "rule": "ASR of Chamath.",
+   "first_seen": "2026-10-28 (All-In 'AI Cyber Panic…' 2026-10-23, podscripts ASR)"
+  },
+  "Safe Mind": {
+   "correct": "SafeMind (CrowdStrike cyber model family + harness)",
+   "domain": "products",
+   "rule": "Spaced variant of SafeMind (see 'Safe Mine').",
+   "first_seen": "2026-10-28 (No Priors, George Kurtz, 2026-10-22, YouTube ASR)"
+  },
+  "fugghazi": {
+   "correct": "fugazi",
+   "domain": "terms",
+   "ci": true,
+   "rule": "Arora's slang ('fake'). Quote as fugazi.",
+   "first_seen": "2026-10-28 (Nikesh Arora U-M lecture, held 2026-10-22, posted 2026-10-26, YouTube ASR)"
+  },
+  "fagghazi": {
+   "correct": "fugazi",
+   "domain": "terms",
+   "ci": true,
+   "rule": "Arora's slang ('fake'). Quote as fugazi.",
+   "first_seen": "2026-10-28 (Nikesh Arora U-M lecture, held 2026-10-22, posted 2026-10-26, YouTube ASR)"
+  },
+  "token maxing": {
+   "correct": "tokenmaxxing",
+   "domain": "terms",
+   "ci": true,
+   "rule": "Wiki term is 'tokenmaxxing' (theme page). Write tokenmaxxing, quote the garble.",
+   "first_seen": "2026-10-28 (No Priors, George Kurtz, 2026-10-22, YouTube ASR)"
+  },
+  "Claude Co-work": {
+   "correct": "Claude Cowork",
+   "domain": "products",
+   "ci": true,
+   "rule": "Hyphenated variant of Anthropic's Cowork product.",
+   "first_seen": "2026-10-28 (a16z Show, Mark Cuban, 2026-10-28, podscripts ASR)"
+  },
+  "long part-time partner": {
+   "correct": "long-term partner",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR of 'long-term partner'.",
+   "first_seen": "2026-10-28 (CASPA 2026 CEO Summit semis panel 2026-10-24, YouTube ASR)"
   }
  },
  "summary_traps": [

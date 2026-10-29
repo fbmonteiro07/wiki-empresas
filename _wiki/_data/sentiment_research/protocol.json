@@ -1,0 +1,70 @@
+{
+  "version": "1.0",
+  "registered_on": "2026-10-28",
+  "status": "Retrospective research; 2026 has already been examined. No untouched holdout or live track record.",
+  "primary_test": "Technical + fixed-fiscal earnings + Bloomberg social versus Technical + fixed-fiscal earnings, same eligible stocks and dates, 20 US-session non-overlapping holds, 2026, 10 bps per one-way traded notional.",
+  "universe": "Current wiki watchlist, US Equity listings with Bloomberg CRNCY USD; not historical index membership. Financial-reporting currency does not determine eligibility. Survivorship and selection bias remain.",
+  "features": "All source observations dated before the signal session; trade at next session close. Technical windows use only past bars. Fixed annual target = signal calendar year + 1 for both estimate observations.",
+  "portfolio": "Equal-weight top quintile, long-only; same-date eligible equal-weight basket and QQQ total return benchmarks. Bottom quintile spread is a gross diagnostic, not an implementable short strategy.",
+  "weights": "Equal weights inside and across pillars, specified before running the new tests; no optimization.",
+  "consensus_availability": "Last observed estimate can be carried at most 35 calendar days, never backward-filled. Original observation dates are retained. A stricter 10-day bound is reported as sensitivity. No filled value means no qualifying signal.",
+  "data_corrections": "Initial diagnostic run caught reporting currency being confused with trading currency for SMIC. Corrected using Bloomberg CRNCY and US listing IDs before delivery. Sparse holiday-period estimate observations motivated an explicit bounded carry-forward rule, with strict-age sensitivity retained. Neither correction selects a rule by its profitability.",
+  "cost_scenarios_bps_one_way": [
+    0,
+    10,
+    25,
+    50
+  ],
+  "cost_grounding": "ESTIMATE / scenario, not calibrated execution costs. Includes initial purchases, drift-aware rebalances and final liquidation; no market-impact model.",
+  "secondary_tests": "5-session holds; 2024, 2025 and 2026 separately; RSI, momentum, earnings, social and attention alone; paired additions of parsed sell-side and curated X on their shorter matched samples.",
+  "uncertainty": "Paired moving-block bootstrap of holding-period excess returns, keeping the entire cross-section together; intervals are exploratory and not multiple-testing adjusted.",
+  "adoption_rule": "An alpha case requires positive incremental net return, a positive lower bound of the paired primary interval, consistent year signs and no failed numerical guardrails. Even a statistical pass remains provisional because data-vintage and watchlist biases are unresolved.",
+  "source_tags": {
+    "prices_and_vendor_observations": "HARD: exact retrieved provider observations, not an assurance of original publication vintages",
+    "fixed_fiscal_estimates": "PARTIAL for point-in-time authenticity; HARD as retrieved Bloomberg fixed-period history",
+    "parsed_text": "PARTIAL: retrospective mechanical classifications, selective source coverage",
+    "weights_costs_windows": "ESTIMATE: explicit research design and sensitivity scenarios, not observed facts"
+  },
+  "relative_context_test": {
+    "specified_on": "2026-10-28; design specified before new relative-context outcomes were computed",
+    "primary": "TES composite; 52-week strictly prior weekly score history; current wiki default peer groups; 2026 5- and 20-session company outcomes reported separately. All results retrospective.",
+    "bands": "Low P<30; middle 30<=P<70; high P>=70. Midrank percentile=100*(strictly lower + half ties)/valid N. No threshold or weight optimization.",
+    "availability": "Own history needs at least8 prior valid weekly readings within364 calendar days. Peers exclude own name and missing scores; minimum1, flag below3. Peer membership is current, not historically reconstructed.",
+    "schedule": "Reuse fixed non-overlapping company-study schedules. Inputs before signal; next-session close entry; exit exactly5 or20 QQQ sessions later. US USD listings only for outcomes. At historical replay include only exits at or before selected information cutoff.",
+    "statistics": "Per company and axis: mean, median, positive fraction and matched eligible unconditional mean; high-minus-low difference in percentage points. Alternative stock-minus-QQQ basis. Whole scheduled event rows resampled with fixed4/2-period circular blocks for5/20 sessions,1000 draws. Suppress company interval below20 usable events or5 in either extreme. Exploratory95% intervals, unadjusted for multiple comparisons. Valid bootstrap-draw count is disclosed; suppress if fewer than90% retain both extremes. Fixed sensitivity doubles block lengths to8/4 periods. Full master schedules retain ticker-missing and date-cluster-missing placeholders.",
+    "secondary": "2024,2025,pooled history; other indicators; YTD/13w/26w historical windows; user-selected peers; joint3x3 buckets. Across-stock mean same-date high-minus-low spread with at least5 names in each extreme and date-block intervals; also minimum3 valid peers sensitivity. No cross-stock claim is substituted for the selected company result. Date-cluster intervals require at least20 dates, clarified by independent design review before running the new tests.",
+    "grounding": "Bloomberg raw returns HARD; original vintages and parsed text PARTIAL. Bands, minimum counts, lookbacks and block lengths ESTIMATE research-design choices, not calibrated predictive constants.",
+    "interpretation": "No net trading strategy, causal claim or untouched out-of-sample validation. Gross conditional association can reflect market regimes, stock composition and factor exposures; high hit rates alone are not predictive evidence.",
+    "reference": "Bailey et al., The Probability of Backtest Overfitting,2015: https://www.davidhbailey.com/dhbpapers/backtest-prob.pdf"
+  },
+  "individual_indicator_ranking": {
+    "specified_on": "2026-10-28, before separate raw-indicator ranking outcomes",
+    "features": "RSI14; symmetric fixed-FY EPS revision28d (no sales); Bloomberg post-weighted X tone over observed days in the prior7 calendar days; Bloomberg observed post counts over that window (not attention growth). Weekday-only vendor observations do not certify full-X/weekend coverage. No missing weekends imputed as zero.",
+    "matching": "Four raw series compared on the same eligible return dates per company/axis/horizon. Strictly prior historical reference snapshots and same-event peer reference names must have all four raw values. Own reference needs8 readings; peer reference needs1, flag below3. Missing scheduled rows remain placeholders.",
+    "primary": "2026 completed outcomes; gross stock return; own364-day history and current default wiki competitors or named-sector fallback;5/20-session nonoverlapping next-close holds, Low P<30, High P>=70.",
+    "ranking": "Rank absolute high-minus-low mean-return spread separately by company/axis/horizon. Direction is chosen retrospectively and explicitly labelled high-better or low-better. Sparse estimates can rank but are not robust; no automatic trading interpretation.",
+    "uncertainty": "2000 deterministic circular-block draws, block4/2 for5/20sessions, doubled8/4 sensitivity. Minimum20 usable events and5 per extreme; suppress inference if<90% draws retainboth extremes. Approximate two-sided centered-bootstrap p=(1+count(abs(resampled_spread-observed_spread)>=abs(observed_spread)))/(valid_draws+1). Take maximum short/long p, then Holm acrossfixed16 hypotheses percompany(4indicators*2axes*2horizons), retaining unavailable hypotheses as p=1.",
+    "robustness": "Both block lengths independently require>=90% valid draws; failure sets family p=1. Show95% intervals, valid draws, tail counts and approximate Holm16 p. Monte Carlo Wilson95% bounds on each tail proportion (plus-one transformation) propagated through max(short,long) then Holm; flag MC borderline if interval spans.05; passing screen requires upper bound<=.05. Leave-one-out across EVERY eligible high/low event with fixed bands; require all signs stable and remaining n>=20, each extreme>=5. Supported year requires n>=10 and>=3 each extreme;>=2 supported years including selected/latest, all matching selected sign. Never use future years relative to selected period. Earlier-year direction needs>=20 observations and5 per extreme, selected/latest year>=10/3. All six gates must pass; chronological check remains retrospective. No cross-company or manual-selection/period multiplicity correction: badges are explicitly within-company screening only, never global significance.",
+    "grounding": "Raw Bloomberg observations HARD as retrieved; historical vintages PARTIAL. Windows,bands,minimumcounts,bootstrap choices and robustness gates ESTIMATE design rules. No calibrated predictive constant or causal claim.",
+    "reference": "R stats p.adjust documentation, Holm(1979): https://stat.ethz.ch/R-manual/R-devel/library/stats/html/p.adjust.html",
+    "design_review": "Independent skeptic design review incorporated before computing new outcomes: extreme-event leave-one-out, explicit weekday-only X coverage, local family16, separate validity gates and Monte Carlo precision bounds. Common reference dates AND peer names require all four raw fields.",
+    "history_extension": {
+      "requested_on": "2026-10-28",
+      "default_period": "All available completed outcomes since2024-01-01 through current information cutoff. User-requested sample extension after2026 results; not a new untouched holdout.",
+      "unchanged": "No changes to four raw features,52-week reference window,default peers,thresholds,fixed annual nonoverlapping schedules,bootstrap seeds/draws/blocks,Holm16,Monte Carlo gate,leave-one-out or year/direction checks. The longer evaluation period is distinct from the rolling reference window.",
+      "pooling": "Each eligible hold gets equal weight; yearly gates remain separately visible. Annual schedule resets and year-end exclusions are retained. History can start later bycompany due to listing/source/reference availability.",
+      "comparison": "Prior2026-only results remain accessible through period selector. All-company overview and local-screen scan use pooled2024–latest."
+    }
+  },
+  "pair_chronological_test": {
+    "specified_on": "2026-10-28 before pair outcomes;2026 already examined in earlier experiments, not untouched holdout.",
+    "features": "Same four raw Bloomberg indicators and common complete4field eligibility/reference masks. Own52-week andcurrentdefaultpeers separate. Same fixednonoverlapping5/20 schedules and fullmissing placeholders.",
+    "candidates": "Six unorderedpairs,4high/loworientations each; equal-weight orientedpercentile mean>=.70 buysstock,elsecash. High=P;low=1-P. A blend threshold does not require BOTH rawinputs individuallyextreme. Singles8rules(high/low eachfield) useorientedP>=.70. No threshold/weight tuning.",
+    "selection": "Only completed2024/25events;train>=20eligible,>=4active/4cashoverall,and>=2active/2cash inEACHyear. Selecteachpairorientation bymean netreturn perscheduledeligiblehold; selectprimarypairacross6 withsameobjective. Bestsingle selectedindependentlyamong8bytrainonly. Stableenumeration breaks ties. Do not use2026 availability/outcomes toadmit orrank candidates.",
+    "execution": "Inputs before signal;nextsessionclose;exitexact5/20sessionslater. Cash0riskfreeassumption. Fixedcapital perperiod long/cash research;mean returnpereligiblehold,notcompoundedportfolio. ESTIMATE10bpentry/exit;active net=(1+r)*(1-.001)/(1+.001)-1;cashzero,missing staysnull. Descriptive0/10/25bpper-side sensitivities. Exposureandgrossalways-active benchmarkshown.",
+    "comparisons": "Frozenprimarypair vs frozenbesttrainingsingle AND eachsameorientationcomponent onidentical2026dates. Otherpair2026resultsdescriptive,tableordered2024/25trainingonly. No re-selection on2026.",
+    "inference": "Pairedmean netreturnincrement;2000circularblockdraws4/2anddouble8/4;>=90%valid. Minimum20eligible and>=5active/5cash forpairandeachcomparator. Positive95%lowerboundsbothlengths;conservativecenteredtwo-sidedapproxp;Holm12percompany=2axes*2horizons*3comparators,unavailablep1;WilsonMCupperHolm<=.05 pluspointp<=.05. Everyleaveoneout incrementmeanpositive. Pairpassesonlyall3comparisons pass.20-session2026samples currently<=10 thereforeinconclusive.",
+    "limitations": "Currentpeers/watchlist,uncertifiedvintages,trainingselectionbias and previouslyexamined2026. Localfamily12notglobal96companycorrection; no calibratedforecast. Highernetreturncanreflectdifferentmarketexposure;displayexposuresandalways-activebenchmark.",
+    "grounding": "Retrievedprices/rawfeaturesHARD;vintagesPARTIAL;thresholds,weights,minimumcounts,blocks,costs,cashrateESTIMATEfixedresearchdesign;no fittedeconomicconstant."
+  }
+}

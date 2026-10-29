@@ -1,0 +1,212 @@
+{
+  "checked_at": "2026-10-28T20:16:03-03:00",
+  "status": "ok",
+  "issues": [],
+  "rows": [
+    {
+      "id": "kcs_detail",
+      "label": "KCS monthly detail",
+      "mode": "Automatic collector",
+      "status": "ok",
+      "latest": "2026-09",
+      "checked_at": "2026-10-28T20:16:03-03:00",
+      "data_retrieved_at": "2026-10-28T20:16:08-03:00",
+      "notes": [
+        "Trailing 24 months fetched again, including revisions",
+        "Latest totals reconcile across headline, extended and destinations within portal rounding"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "kcs_extended",
+      "label": "KCS memory / SSD breakdown",
+      "mode": "Automatic collector",
+      "status": "ok",
+      "latest": "2026-09",
+      "checked_at": "2026-10-28T20:16:03-03:00",
+      "data_retrieved_at": "2026-10-28T20:16:15-03:00",
+      "notes": [
+        "Trailing 24 months fetched again, including revisions",
+        "Latest totals reconcile across headline, extended and destinations within portal rounding"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "kcs_country",
+      "label": "KCS destination breakdown",
+      "mode": "Automatic collector",
+      "status": "ok",
+      "latest": "2026-09",
+      "checked_at": "2026-10-28T20:16:03-03:00",
+      "data_retrieved_at": "2026-10-28T20:16:27-03:00",
+      "notes": [
+        "Trailing 24 months fetched again, including revisions",
+        "Latest totals reconcile across headline, extended and destinations within portal rounding"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "kcs_tentative",
+      "label": "KCS preliminary trade",
+      "mode": "Automatic collector",
+      "status": "ok",
+      "latest": "2026-10 / 01~20",
+      "checked_at": "2026-10-28T20:16:03-03:00",
+      "data_retrieved_at": "2026-10-28T20:17:49-03:00",
+      "notes": [
+        "Cumulative preliminary trade; separate from final monthly detail"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "motie_release",
+      "label": "MOTIE official release / benchmarks",
+      "mode": "Automatic collector",
+      "status": "ok",
+      "latest": "2026-09",
+      "checked_at": "2026-10-28T20:16:03-03:00",
+      "data_retrieved_at": "2026-10-28T20:18:01-03:00",
+      "notes": [
+        "Latest release re-read; official PDF retained with hash"
+      ],
+      "detail": {
+        "source": "https://www.korea.kr/common/download.do?fileId=198563931&tblKey=GMN attached PDF; sha256=e7f7ba494d7b43cd14eb054cd2e6ee66d4391e64863a1f47baf7ef6021df5003",
+        "benchmark_conflicts": []
+      }
+    },
+    {
+      "id": "bok_index",
+      "label": "BOK USD export-price indices",
+      "mode": "Automatic collector",
+      "status": "ok",
+      "latest": "2026-09",
+      "checked_at": "2026-10-28T20:16:03-03:00",
+      "data_retrieved_at": "2026-10-28T20:18:24-03:00",
+      "notes": [
+        "All seven items checked individually; October 2026 DRAM / flash received: 0 of 2"
+      ],
+      "detail": {
+        "DRAM": {
+          "latest": "2026-09",
+          "count": 201
+        },
+        "플래시메모리": {
+          "latest": "2026-09",
+          "count": 201
+        },
+        "시스템반도체": {
+          "latest": "2026-09",
+          "count": 201
+        },
+        "컴퓨터기억장치": {
+          "latest": "2026-09",
+          "count": 201
+        },
+        "집적회로": {
+          "latest": "2026-09",
+          "count": 201
+        },
+        "반도체": {
+          "latest": "2026-09",
+          "count": 201
+        },
+        "총지수": {
+          "latest": "2026-09",
+          "count": 201
+        }
+      }
+    },
+    {
+      "id": "market_prices",
+      "label": "InSpectrum via Bloomberg",
+      "mode": "Automatic collector",
+      "status": "ok",
+      "latest": "2026-10-28",
+      "checked_at": "2026-10-28T20:16:03-03:00",
+      "data_retrieved_at": "2026-10-28T20:22:22-03:00",
+      "notes": [
+        "26 separate specifications; dates and source/currency verified",
+        "Legacy / historical series remain labelled with their own last date; no stale price is rolled forward"
+      ],
+      "detail": {
+        "ISTPDR1G Index": "2026-09-30",
+        "ISTPDR72 Index": "2026-04-30",
+        "ISTPDR71 Index": "2026-09-30",
+        "ISTPMR38 Index": "2026-09-30",
+        "ISTPDR15 Index": "2026-09-30",
+        "ISTPDR16 Index": "2026-09-30",
+        "ISTPDR82 Index": "2026-09-30",
+        "ISTPMR48 Index": "2026-09-30",
+        "ISPPDR37 Index": "2026-10-28",
+        "ISPPDR47 Index": "2026-10-28",
+        "ISTPND27 Index": "2026-09-30",
+        "ISTPND28 Index": "2026-09-30",
+        "ISTPND35 Index": "2026-09-30",
+        "ISTPND30 Index": "2026-09-30",
+        "ISTPND29 Index": "2026-09-30",
+        "ISPPN256 Index": "2026-10-28",
+        "ISPPN512 Index": "2026-10-28",
+        "ISPPND1T Index": "2026-10-28",
+        "ISPPDR27 Index": "2019-11-06",
+        "ISPPDR29 Index": "2026-10-28",
+        "ISPPND14 Index": "2019-12-31",
+        "ISPPND15 Index": "2019-09-30",
+        "ISPPND30 Index": "2023-09-28",
+        "ISTPND12 Index": "2025-09-30",
+        "ISTPND13 Index": "2025-09-30",
+        "ISTPND14 Index": "2022-01-31"
+      }
+    },
+    {
+      "id": "japan_mof",
+      "label": "Japan MOF / e-Stat",
+      "mode": "Automatic collector",
+      "status": "waiting_publication",
+      "latest": "2026-08",
+      "checked_at": "2026-10-28T20:16:03-03:00",
+      "data_retrieved_at": "2026-10-28T20:22:22-03:00",
+      "notes": [
+        "servlet: not yet published; 1988年01月 ～ 2026年08月"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "company_asp",
+      "label": "Company ASP disclosures",
+      "mode": "Scheduled research review",
+      "status": "review_managed",
+      "latest": "2026-10-28",
+      "checked_at": "2026-10-28T20:35:49-03:00",
+      "notes": [
+        "Curated source ledger; reviewed by the Codex heartbeat. Numeric refresh does not ingest new disclosures or broker forecasts."
+      ],
+      "detail": {}
+    },
+    {
+      "id": "kioxia_asp",
+      "label": "Kioxia disclosures",
+      "mode": "Scheduled research review",
+      "status": "review_managed",
+      "latest": "2026-09-15",
+      "checked_at": "2026-10-28T20:35:49-03:00",
+      "notes": [
+        "Curated source ledger; reviewed by the Codex heartbeat. Numeric refresh does not ingest new disclosures or broker forecasts."
+      ],
+      "detail": {}
+    },
+    {
+      "id": "street_calls",
+      "label": "Sell-side forecasts",
+      "mode": "Scheduled research review",
+      "status": "review_managed",
+      "latest": "2026-10-28",
+      "checked_at": "2026-10-28T20:35:49-03:00",
+      "notes": [
+        "Curated source ledger; reviewed by the Codex heartbeat. Numeric refresh does not ingest new disclosures or broker forecasts."
+      ],
+      "detail": {}
+    }
+  ],
+  "trade_reconciliation_errors": [],
+  "note": "OK means the collector passed its checks; an unpublished month is shown separately. Research ledgers are not automatic numeric feeds."
+}

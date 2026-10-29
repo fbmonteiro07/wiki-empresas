@@ -1,0 +1,168 @@
+{
+  "as_of": "2026-09-15",
+  "quarter": "2026Q3",
+  "note": "Hand-maintained ledger of attributed Street/industry calls for the current quarter, transcribed from the wiki pages cited in wiki_ref. Bases differ (contract vs blended ASP, conventional vs server DRAM, ex-LTA vs with LTA) and are recorded, never averaged. Update each month; move resolved quarters to street_calls_history.json.",
+  "canonical": {
+    "id": "dram-pricing-2026",
+    "text": "Conventional DRAM contract pricing 3Q26: TrendForce revised (2026-06-30) +15-20% Q3 / +3-8% Q4, vs experts +20-25% Q3 (Redburn / Sherman / Edison) and market chatter +30-40%. Direction agreed; magnitude is the debate.",
+    "wiki_ref": "_wiki/_meta/assumptions.md"
+  },
+  "rows": [
+    {
+      "product": "DRAM",
+      "quarter": "2026Q3",
+      "scope": "market, conventional DRAM contract",
+      "source": "TrendForce (revised)",
+      "date": "2026-06-30",
+      "call": "+15-20% QoQ 3Q26; +3-8% 4Q26",
+      "low_pct": 15,
+      "high_pct": 20,
+      "basis": "contract price, conventional DRAM",
+      "wiki_ref": "_wiki/_meta/assumptions.md dram-pricing-2026"
+    },
+    {
+      "product": "DRAM",
+      "quarter": "2026Q3",
+      "scope": "market",
+      "source": "Experts via Redburn / Sherman / Edison",
+      "date": "2026-06-23",
+      "call": "+20-25% QoQ 3Q26 (market chatter +30-40%)",
+      "low_pct": 20,
+      "high_pct": 25,
+      "basis": "expert view, contract",
+      "wiki_ref": "_wiki/_meta/assumptions.md dram-pricing-2026"
+    },
+    {
+      "product": "DRAM",
+      "quarter": "2026Q3",
+      "scope": "market",
+      "source": "Morgan Stanley · Shawn Kim, NAND Industry Outlook",
+      "date": "2026-07-02",
+      "call": ">20-30% DRAM price hikes in 3Q26; YoY plateau in 4Q26",
+      "low_pct": 20,
+      "high_pct": 30,
+      "basis": "market pricing",
+      "wiki_ref": "_wiki/SAMSUNG.md, _wiki/SKHYNIX.md"
+    },
+    {
+      "product": "DRAM",
+      "quarter": "2026Q3",
+      "scope": "market (Micron catalyst watch)",
+      "source": "Citi · Atif Malik",
+      "date": "2026-07-06",
+      "call": "DRAM ASP QoQ track +44% / +20% / +13% for 2Q / 3Q / 4Q26E",
+      "low_pct": 20,
+      "high_pct": 20,
+      "basis": "blended ASP",
+      "wiki_ref": "_wiki/MU.md"
+    },
+    {
+      "product": "DRAM",
+      "quarter": "2026Q3",
+      "scope": "market",
+      "source": "SIG · Mehdi Hosseini w/ Bastien Faucon-Morin, Intra-Quarter Pricing Update",
+      "date": "2026-08-24",
+      "call": "3Q26 DRAM contract +50% QoQ on average, range 30-70%; 4Q26 blended >= +20%",
+      "low_pct": 30,
+      "high_pct": 70,
+      "basis": "contract price",
+      "wiki_ref": "_wiki/themes/hbm-memory.md"
+    },
+    {
+      "product": "DRAM",
+      "quarter": "2026Q3",
+      "scope": "SK hynix",
+      "source": "BofA · Simon Woo",
+      "date": "2026-08-26",
+      "call": "DRAM ASP +25% QoQ 3Q26; +9% 4Q26",
+      "low_pct": 25,
+      "high_pct": 25,
+      "basis": "blended ASP (company model)",
+      "wiki_ref": "_wiki/SKHYNIX.md"
+    },
+    {
+      "product": "DRAM",
+      "quarter": "2026Q3",
+      "scope": "market, DDR5 / DDR4 contract",
+      "source": "TrendForce August-ending, via Wells Fargo · Aaron Rakers",
+      "date": "2026-08-31",
+      "call": "~+3% m/m in August; tracking ~+20% QoQ (DDR5) and ~+24% (DDR4) implied for C3Q26 QTD on $/Gb",
+      "low_pct": 20,
+      "high_pct": 24,
+      "basis": "contract $/Gb",
+      "wiki_ref": "_wiki/themes/hbm-memory.md"
+    },
+    {
+      "product": "DRAM",
+      "quarter": "2026Q3",
+      "scope": "market, server DRAM contract",
+      "source": "TrendForce via JPM",
+      "date": "2026-09-07",
+      "call": "server DRAM contract prices projected +13-18% QoQ in 3Q26",
+      "low_pct": 13,
+      "high_pct": 18,
+      "basis": "server DRAM contract",
+      "wiki_ref": "_wiki/SAMSUNG.md, _wiki/SKHYNIX.md, _wiki/MU.md"
+    },
+    {
+      "product": "DRAM",
+      "quarter": "2026Q3",
+      "scope": "market (Korean memory makers)",
+      "source": "Unnamed Korean broker, tech-tour note relayed by @jukan05 / @sssjeffpu",
+      "date": "2026-09-07",
+      "call": "blended DRAM price high-teens % QoQ in 3Q26; ~+10% in 4Q26",
+      "low_pct": 17,
+      "high_pct": 19,
+      "basis": "blended ASP; relay, house not named",
+      "wiki_ref": "_wiki/SAMSUNG.md, _wiki/SKHYNIX.md"
+    },
+    {
+      "product": "NAND",
+      "quarter": "2026Q3",
+      "scope": "market",
+      "source": "SIG · Mehdi Hosseini w/ Bastien Faucon-Morin, Intra-Quarter Pricing Update",
+      "date": "2026-08-24",
+      "call": "3Q26 NAND contract +60% QoQ (vs ~35% in SIG's published estimates); contract eSSD ~+70%; 4Q26 >= +25%",
+      "low_pct": 60,
+      "high_pct": 60,
+      "basis": "contract price",
+      "wiki_ref": "_wiki/themes/hbm-memory.md"
+    },
+    {
+      "product": "NAND",
+      "quarter": "2026Q3",
+      "scope": "Kioxia (company guidance, relayed)",
+      "source": "Kioxia via SIG · Hosseini",
+      "date": "2026-08-24",
+      "call": "maintains ~20% QoQ blended NAND ASP growth for CY3Q26",
+      "low_pct": 20,
+      "high_pct": 20,
+      "basis": "blended ASP",
+      "wiki_ref": "_wiki/themes/hbm-memory.md"
+    },
+    {
+      "product": "NAND",
+      "quarter": "2026Q3",
+      "scope": "market",
+      "source": "UBS memory team (note logged on the theme page 2026-08-10)",
+      "date": "2026-08-10",
+      "call": "ex-LTA NAND contract negotiations +20% to >30% QoQ for 3Q26E; UBS forecast ex-LTA +23% (was +30%), with LTAs closer to +20%; 4Q +12% / +8%",
+      "low_pct": 20,
+      "high_pct": 23,
+      "basis": "contract, ex-LTA vs with-LTA",
+      "wiki_ref": "_wiki/themes/hbm-memory.md"
+    },
+    {
+      "product": "NAND",
+      "quarter": "2026Q3",
+      "scope": "market (Korean memory makers)",
+      "source": "Unnamed Korean broker, tech-tour note relayed by @jukan05 / @sssjeffpu",
+      "date": "2026-09-07",
+      "call": "high-teen % QoQ NAND pricing in 3Q26, softening to low single digit in 4Q26 on weaker mobile demand and elevated inventories",
+      "low_pct": 17,
+      "high_pct": 19,
+      "basis": "blended pricing; relay, house not named",
+      "wiki_ref": "_wiki/SAMSUNG.md, _wiki/SKHYNIX.md"
+    }
+  ]
+}

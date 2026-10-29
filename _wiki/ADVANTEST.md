@@ -10,10 +10,10 @@ _Wiki · generated 2026-06-20 · **Japanese issuer — NO SEC filings**; sources
 | Revenue | **¥1629.0bn** | **¥1873.5bn** |
 | Gross profit | ¥1107.7bn | ¥1245.9bn |
 | Gross margin | **68.0%** | **66.5%** |
-| EBITDA | ¥763.6bn | ¥1059.5bn |
+| EBITDA | ¥774.9bn | ¥1065.6bn |
 | EPS | **¥884.00** | **¥917.70** |
 | Capex | ¥23.6bn | — |
-| OCF (≈EBITDA) | ¥763.6bn | ¥1059.5bn |
+| OCF (≈EBITDA) | ¥774.9bn | ¥1065.6bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 _**Bold** = Capstone official model; plain = BBG consensus._

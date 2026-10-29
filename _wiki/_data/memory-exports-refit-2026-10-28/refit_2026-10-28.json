@@ -1,0 +1,1537 @@
+{
+  "event_date": "2026-10-28",
+  "quarter": "2026Q3",
+  "price_vintage": "2026-10-26T08:22:39-03:00",
+  "pre_result_build": "2026-10-26T08:23:15-03:00",
+  "refit_build": "2026-10-28T10:53:43-03:00",
+  "rows": [
+    {
+      "product": "DRAM",
+      "key": "KCS_DRAM",
+      "label": "KCS_DRAM USD/kg",
+      "benchmark_q3_pct": 11.20643565382029,
+      "q3_pre_result_pct": 8.538096483286196,
+      "q3_actual_mid_pct": 28.0,
+      "q3_actual_band_pct": [
+        27,
+        29
+      ],
+      "q3_error_pp": -19.461903516713804,
+      "q3_refitted_in_sample_pct": 9.299028283030793,
+      "old_fit": {
+        "n": 23,
+        "alpha": 0.02727849517987433,
+        "beta": 0.5145315716544643,
+        "correlation_log_growth": 0.8095317567499343,
+        "in_sample_r_squared": 0.6553416651866347,
+        "x_min": -0.35054423099872056,
+        "x_max": 0.6998966719282633
+      },
+      "new_fit": {
+        "n": 24,
+        "alpha": 0.0338590712302916,
+        "beta": 0.5183510509354927,
+        "correlation_log_growth": 0.7923301049689904,
+        "in_sample_r_squared": 0.6277869952401713,
+        "x_min": -0.35054423099872056,
+        "x_max": 0.6998966719282633
+      },
+      "mae_before_pp": 8.97095998775517,
+      "mae_after_pp": 9.845205281835057,
+      "test_n_before": 11,
+      "test_n_after": 12,
+      "metrics": {
+        "n": 12,
+        "quarters": [
+          "2023Q2",
+          "2023Q3",
+          "2023Q4",
+          "2024Q3",
+          "2024Q4",
+          "2025Q1",
+          "2025Q2",
+          "2025Q3",
+          "2025Q4",
+          "2026Q1",
+          "2026Q2",
+          "2026Q3"
+        ],
+        "ols": {
+          "mae_pp": 9.845205281835057,
+          "bias_pp": -9.097640135514911,
+          "direction": 0.8181818181818182,
+          "direction_n": 11
+        },
+        "direct": {
+          "mae_pp": 16.330940232158692,
+          "bias_pp": 2.129196635444308,
+          "direction": 0.6363636363636364,
+          "direction_n": 11
+        },
+        "zero": {
+          "mae_pp": 18.0,
+          "bias_pp": -18.0,
+          "direction": 0,
+          "direction_n": 11
+        },
+        "persistence": {
+          "mae_pp": 12.75,
+          "bias_pp": -4.083333333333333,
+          "direction": 0.8181818181818182,
+          "direction_n": 11
+        }
+      },
+      "new_target_band_sensitivity_pct": [
+        9.262721757578817,
+        9.335064188259992
+      ],
+      "all_target_normalization_envelope_pct": [
+        8.424368257621234,
+        10.170835085732707
+      ],
+      "window_sensitivity": {
+        "windows": {
+          "full": {
+            "n": 24,
+            "prediction_pct": 9.299028283030793,
+            "beta": 0.5183510509354927,
+            "alpha": 0.0338590712302916,
+            "correlation": 0.7923301049689904,
+            "inside_range": true
+          },
+          "through_2023Q4": {
+            "n": 14,
+            "prediction_pct": 4.7995043260521415,
+            "beta": 0.3768468952302011,
+            "alpha": 0.006850906752994558,
+            "correlation": 0.5811830114938867,
+            "inside_range": true
+          },
+          "ex_2025Q4_onward": {
+            "n": 20,
+            "prediction_pct": 6.380227371706739,
+            "beta": 0.3735863517799766,
+            "alpha": 0.02216791988457807,
+            "correlation": 0.5952371994409691,
+            "inside_range": true
+          },
+          "since_2024Q1": {
+            "n": 10,
+            "prediction_pct": 13.509249999973443,
+            "beta": 0.5135754601683359,
+            "alpha": 0.07216315187918944,
+            "correlation": 0.8958036642149979,
+            "inside_range": true
+          }
+        },
+        "range_pct": [
+          4.7995043260521415,
+          13.509249999973443
+        ],
+        "note": "Same input, different training windows; the spread is structural uncertainty, not a confidence interval."
+      },
+      "checks": {
+        "q3_pre_result_within_disclosure_band": false,
+        "q3_outside_old_training_range": false,
+        "positive_beta": true,
+        "beats_direct_same_quarters": true,
+        "beats_persistence_same_quarters": true,
+        "at_least_6_test_quarters": true,
+        "downturn_coverage_complete": false
+      },
+      "actual_source": "https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/21435786328187801.pdf",
+      "actual_source_date": "2026-10-28",
+      "grounding": "PARTIAL: company qualitative band; ESTIMATE: OLS translation",
+      "operational_forecast_pct": null
+    },
+    {
+      "product": "DRAM",
+      "key": "BOK_DRAM",
+      "label": "BOK_DRAM índice USD",
+      "benchmark_q3_pct": 14.767474958320337,
+      "q3_pre_result_pct": 15.586374170913004,
+      "q3_actual_mid_pct": 28.0,
+      "q3_actual_band_pct": [
+        27,
+        29
+      ],
+      "q3_error_pp": -12.413625829086996,
+      "q3_refitted_in_sample_pct": 16.25135084684425,
+      "old_fit": {
+        "n": 23,
+        "alpha": 0.03083028999442264,
+        "beta": 0.8277864762097946,
+        "correlation_log_growth": 0.8618345096480842,
+        "in_sample_r_squared": 0.7427587220203536,
+        "x_min": -0.18422938935184704,
+        "x_max": 0.43835143127025117
+      },
+      "new_fit": {
+        "n": 24,
+        "alpha": 0.034328094604651006,
+        "beta": 0.8440403943647761,
+        "correlation_log_growth": 0.8599997221185791,
+        "in_sample_r_squared": 0.7395995220440333,
+        "x_min": -0.18422938935184704,
+        "x_max": 0.43835143127025117
+      },
+      "mae_before_pp": 10.596281708148018,
+      "mae_after_pp": 10.747727051559599,
+      "test_n_before": 11,
+      "test_n_after": 12,
+      "metrics": {
+        "n": 12,
+        "quarters": [
+          "2023Q2",
+          "2023Q3",
+          "2023Q4",
+          "2024Q3",
+          "2024Q4",
+          "2025Q1",
+          "2025Q2",
+          "2025Q3",
+          "2025Q4",
+          "2026Q1",
+          "2026Q2",
+          "2026Q3"
+        ],
+        "ols": {
+          "mae_pp": 10.747727051559599,
+          "bias_pp": -4.664522260307604,
+          "direction": 0.7272727272727273,
+          "direction_n": 11
+        },
+        "direct": {
+          "mae_pp": 10.559808980844368,
+          "bias_pp": -5.366130090687087,
+          "direction": 0.7272727272727273,
+          "direction_n": 11
+        },
+        "zero": {
+          "mae_pp": 18.0,
+          "bias_pp": -18.0,
+          "direction": 0,
+          "direction_n": 11
+        },
+        "persistence": {
+          "mae_pp": 12.75,
+          "bias_pp": -4.083333333333333,
+          "direction": 0.8181818181818182,
+          "direction_n": 11
+        }
+      },
+      "new_target_band_sensitivity_pct": [
+        16.20008882614656,
+        16.302236288339188
+      ],
+      "all_target_normalization_envelope_pct": [
+        15.395466280649933,
+        17.10528153568261
+      ],
+      "window_sensitivity": {
+        "windows": {
+          "full": {
+            "n": 24,
+            "prediction_pct": 16.25135084684425,
+            "beta": 0.8440403943647761,
+            "alpha": 0.034328094604651006,
+            "correlation": 0.8599997221185791,
+            "inside_range": true
+          },
+          "through_2023Q4": {
+            "n": 14,
+            "prediction_pct": 16.381514351103615,
+            "beta": 0.8868071326381978,
+            "alpha": 0.029556538916202493,
+            "correlation": 0.736501246671548,
+            "inside_range": true
+          },
+          "ex_2025Q4_onward": {
+            "n": 20,
+            "prediction_pct": 15.77718131462996,
+            "beta": 0.8326696318898396,
+            "alpha": 0.03180710857093159,
+            "correlation": 0.7289633973426877,
+            "inside_range": true
+          },
+          "since_2024Q1": {
+            "n": 10,
+            "prediction_pct": 17.312579575687565,
+            "beta": 0.765142920959055,
+            "alpha": 0.054282598031412346,
+            "correlation": 0.8682967766386245,
+            "inside_range": true
+          }
+        },
+        "range_pct": [
+          15.77718131462996,
+          17.312579575687565
+        ],
+        "note": "Same input, different training windows; the spread is structural uncertainty, not a confidence interval."
+      },
+      "checks": {
+        "q3_pre_result_within_disclosure_band": false,
+        "q3_outside_old_training_range": false,
+        "positive_beta": true,
+        "beats_direct_same_quarters": false,
+        "beats_persistence_same_quarters": true,
+        "at_least_6_test_quarters": true,
+        "downturn_coverage_complete": false
+      },
+      "actual_source": "https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/21435786328187801.pdf",
+      "actual_source_date": "2026-10-28",
+      "grounding": "PARTIAL: company qualitative band; ESTIMATE: OLS translation",
+      "operational_forecast_pct": null
+    },
+    {
+      "product": "DRAM",
+      "key": "CONTRACT_D4",
+      "label": "Contratos DDR4: chip + servidor + móvel",
+      "benchmark_q3_pct": 20.066530266781047,
+      "q3_pre_result_pct": 12.834249448111507,
+      "q3_actual_mid_pct": 28.0,
+      "q3_actual_band_pct": [
+        27,
+        29
+      ],
+      "q3_error_pp": -15.165750551888493,
+      "q3_refitted_in_sample_pct": 13.534430038256694,
+      "old_fit": {
+        "n": 23,
+        "alpha": 0.028971218080544245,
+        "beta": 0.5018625083360846,
+        "correlation_log_growth": 0.8441474224504196,
+        "in_sample_r_squared": 0.7125848708296872,
+        "x_min": -0.2516826756915536,
+        "x_max": 0.9437294499895219
+      },
+      "new_fit": {
+        "n": 24,
+        "alpha": 0.0335315868208392,
+        "beta": 0.5107529547599052,
+        "correlation_log_growth": 0.837583515439992,
+        "in_sample_r_squared": 0.7015461453368153,
+        "x_min": -0.2516826756915536,
+        "x_max": 0.9437294499895219
+      },
+      "mae_before_pp": 11.139940456551532,
+      "mae_after_pp": 11.475424631162946,
+      "test_n_before": 11,
+      "test_n_after": 12,
+      "metrics": {
+        "n": 12,
+        "quarters": [
+          "2023Q2",
+          "2023Q3",
+          "2023Q4",
+          "2024Q3",
+          "2024Q4",
+          "2025Q1",
+          "2025Q2",
+          "2025Q3",
+          "2025Q4",
+          "2026Q1",
+          "2026Q2",
+          "2026Q3"
+        ],
+        "ols": {
+          "mae_pp": 11.475424631162946,
+          "bias_pp": -5.489871820459416,
+          "direction": 0.7272727272727273,
+          "direction_n": 11
+        },
+        "direct": {
+          "mae_pp": 21.93670754187289,
+          "bias_pp": 6.360982072459574,
+          "direction": 0.7272727272727273,
+          "direction_n": 11
+        },
+        "zero": {
+          "mae_pp": 18.0,
+          "bias_pp": -18.0,
+          "direction": 0,
+          "direction_n": 11
+        },
+        "persistence": {
+          "mae_pp": 12.75,
+          "bias_pp": -4.083333333333333,
+          "direction": 0.8181818181818182,
+          "direction_n": 11
+        }
+      },
+      "new_target_band_sensitivity_pct": [
+        13.490757292879191,
+        13.577779524630968
+      ],
+      "all_target_normalization_envelope_pct": [
+        12.658028974850435,
+        14.408175411079203
+      ],
+      "window_sensitivity": {
+        "windows": {
+          "full": {
+            "n": 24,
+            "prediction_pct": 13.534430038256694,
+            "beta": 0.5107529547599052,
+            "alpha": 0.0335315868208392,
+            "correlation": 0.837583515439992,
+            "inside_range": true
+          },
+          "through_2023Q4": {
+            "n": 14,
+            "prediction_pct": 17.97354263418722,
+            "beta": 0.7413499910452003,
+            "alpha": 0.029715209333658125,
+            "correlation": 0.7445963098457581,
+            "inside_range": false
+          },
+          "ex_2025Q4_onward": {
+            "n": 20,
+            "prediction_pct": 12.95749069346212,
+            "beta": 0.5136560859783036,
+            "alpha": 0.02790609441966531,
+            "correlation": 0.6387975838064083,
+            "inside_range": true
+          },
+          "since_2024Q1": {
+            "n": 10,
+            "prediction_pct": 15.890581583370539,
+            "beta": 0.41075098976829777,
+            "alpha": 0.07235987284229417,
+            "correlation": 0.8603510654968606,
+            "inside_range": true
+          }
+        },
+        "range_pct": [
+          12.95749069346212,
+          17.97354263418722
+        ],
+        "note": "Same input, different training windows; the spread is structural uncertainty, not a confidence interval."
+      },
+      "checks": {
+        "q3_pre_result_within_disclosure_band": false,
+        "q3_outside_old_training_range": false,
+        "positive_beta": true,
+        "beats_direct_same_quarters": true,
+        "beats_persistence_same_quarters": true,
+        "at_least_6_test_quarters": true,
+        "downturn_coverage_complete": false
+      },
+      "actual_source": "https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/21435786328187801.pdf",
+      "actual_source_date": "2026-10-28",
+      "grounding": "PARTIAL: company qualitative band; ESTIMATE: OLS translation",
+      "operational_forecast_pct": null
+    },
+    {
+      "product": "DRAM",
+      "key": "CONTRACT_D5",
+      "label": "Contratos DDR5: chip + servidor",
+      "benchmark_q3_pct": 23.64366018870221,
+      "q3_pre_result_pct": 18.9659642192362,
+      "q3_actual_mid_pct": 28.0,
+      "q3_actual_band_pct": [
+        27,
+        29
+      ],
+      "q3_error_pp": -9.034035780763801,
+      "q3_refitted_in_sample_pct": 19.768183204086245,
+      "old_fit": {
+        "n": 10,
+        "alpha": 0.058828392752723,
+        "beta": 0.5410966688288855,
+        "correlation_log_growth": 0.9682307090516886,
+        "in_sample_r_squared": 0.9374707059507357,
+        "x_min": -0.08201287444757994,
+        "x_max": 0.800471711708765
+      },
+      "new_fit": {
+        "n": 11,
+        "alpha": 0.064953014641328,
+        "beta": 0.5439049369961174,
+        "correlation_log_growth": 0.956730117771921,
+        "in_sample_r_squared": 0.9153325182518738,
+        "x_min": -0.08201287444757994,
+        "x_max": 0.800471711708765
+      },
+      "mae_before_pp": null,
+      "mae_after_pp": 9.034035780763801,
+      "test_n_before": 0,
+      "test_n_after": 1,
+      "metrics": {
+        "n": 1,
+        "quarters": [
+          "2026Q3"
+        ],
+        "ols": {
+          "mae_pp": 9.034035780763801,
+          "bias_pp": -9.034035780763801,
+          "direction": 1,
+          "direction_n": 1
+        },
+        "direct": {
+          "mae_pp": 4.35633981129779,
+          "bias_pp": -4.35633981129779,
+          "direction": 1,
+          "direction_n": 1
+        },
+        "zero": {
+          "mae_pp": 28.0,
+          "bias_pp": -28.0,
+          "direction": 0,
+          "direction_n": 1
+        },
+        "persistence": {
+          "mae_pp": 2.0,
+          "bias_pp": 2.0,
+          "direction": 1,
+          "direction_n": 1
+        }
+      },
+      "new_target_band_sensitivity_pct": [
+        19.68196109671321,
+        19.85379570888627
+      ],
+      "all_target_normalization_envelope_pct": [
+        18.854574508547568,
+        20.68105705869537
+      ],
+      "window_sensitivity": {
+        "windows": {
+          "full": {
+            "n": 11,
+            "prediction_pct": 19.768183204086245,
+            "beta": 0.5439049369961174,
+            "alpha": 0.064953014641328,
+            "correlation": 0.956730117771921,
+            "inside_range": true
+          },
+          "through_2023Q4": {
+            "n": 1,
+            "prediction_pct": null,
+            "beta": null,
+            "correlation": null,
+            "inside_range": null
+          },
+          "ex_2025Q4_onward": {
+            "n": 7,
+            "prediction_pct": null,
+            "beta": null,
+            "correlation": null,
+            "inside_range": null
+          },
+          "since_2024Q1": {
+            "n": 10,
+            "prediction_pct": 18.89695525889153,
+            "beta": 0.5633824614703659,
+            "alpha": 0.05351835876585034,
+            "correlation": 0.9732825926115599,
+            "inside_range": true
+          }
+        },
+        "range_pct": [
+          18.89695525889153,
+          19.768183204086245
+        ],
+        "note": "Same input, different training windows; the spread is structural uncertainty, not a confidence interval."
+      },
+      "checks": {
+        "q3_pre_result_within_disclosure_band": false,
+        "q3_outside_old_training_range": false,
+        "positive_beta": true,
+        "beats_direct_same_quarters": false,
+        "beats_persistence_same_quarters": false,
+        "at_least_6_test_quarters": false,
+        "downturn_coverage_complete": false
+      },
+      "actual_source": "https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/21435786328187801.pdf",
+      "actual_source_date": "2026-10-28",
+      "grounding": "PARTIAL: company qualitative band; ESTIMATE: OLS translation",
+      "operational_forecast_pct": null
+    },
+    {
+      "product": "NAND",
+      "key": "KCS_FLASH",
+      "label": "KCS_FLASH USD/kg",
+      "benchmark_q3_pct": 45.43990333962604,
+      "q3_pre_result_pct": 24.017996797481125,
+      "q3_actual_mid_pct": 25.0,
+      "q3_actual_band_pct": [
+        24,
+        26
+      ],
+      "q3_error_pp": -0.9820032025188752,
+      "q3_refitted_in_sample_pct": 24.13149340245909,
+      "old_fit": {
+        "n": 19,
+        "alpha": 0.008108146617934443,
+        "beta": 0.552996130953335,
+        "correlation_log_growth": 0.6880476862793425,
+        "in_sample_r_squared": 0.4734096185943566,
+        "x_min": -0.4589545185169021,
+        "x_max": 0.6217539363988174
+      },
+      "new_fit": {
+        "n": 20,
+        "alpha": 0.00832891851024175,
+        "beta": 0.5548487346824917,
+        "correlation_log_growth": 0.7021514306971808,
+        "in_sample_r_squared": 0.49301663163009785,
+        "x_min": -0.4589545185169021,
+        "x_max": 0.6217539363988174
+      },
+      "mae_before_pp": 22.797244107887256,
+      "mae_after_pp": 20.373328451735212,
+      "test_n_before": 8,
+      "test_n_after": 9,
+      "metrics": {
+        "n": 9,
+        "quarters": [
+          "2024Q3",
+          "2024Q4",
+          "2025Q1",
+          "2025Q2",
+          "2025Q3",
+          "2025Q4",
+          "2026Q1",
+          "2026Q2",
+          "2026Q3"
+        ],
+        "ols": {
+          "mae_pp": 20.373328451735212,
+          "bias_pp": -13.346781331451465,
+          "direction": 0.6666666666666666,
+          "direction_n": 9
+        },
+        "direct": {
+          "mae_pp": 24.10228707786172,
+          "bias_pp": 6.42627049439312,
+          "direction": 0.7777777777777778,
+          "direction_n": 9
+        },
+        "zero": {
+          "mae_pp": 27.38888888888889,
+          "bias_pp": -20.055555555555557,
+          "direction": 0,
+          "direction_n": 9
+        },
+        "persistence": {
+          "mae_pp": 20.166666666666668,
+          "bias_pp": -0.9444444444444444,
+          "direction": 0.7777777777777778,
+          "direction_n": 9
+        }
+      },
+      "new_target_band_sensitivity_pct": [
+        24.015909385455565,
+        24.24626286249476
+      ],
+      "all_target_normalization_envelope_pct": [
+        22.842937322776233,
+        25.42272611402688
+      ],
+      "window_sensitivity": {
+        "windows": {
+          "full": {
+            "n": 20,
+            "prediction_pct": 24.13149340245909,
+            "beta": 0.5548487346824917,
+            "alpha": 0.00832891851024175,
+            "correlation": 0.7021514306971808,
+            "inside_range": true
+          },
+          "through_2023Q4": {
+            "n": 10,
+            "prediction_pct": 15.757788696831959,
+            "beta": 0.5044739229796129,
+            "alpha": -0.04264249549089701,
+            "correlation": 0.59504166792714,
+            "inside_range": false
+          },
+          "ex_2025Q4_onward": {
+            "n": 16,
+            "prediction_pct": 6.705678414443514,
+            "beta": 0.22416930458038267,
+            "alpha": -0.019068013548105826,
+            "correlation": 0.37363793979249155,
+            "inside_range": true
+          },
+          "since_2024Q1": {
+            "n": 10,
+            "prediction_pct": 28.74981671880508,
+            "beta": 0.4800302967366399,
+            "alpha": 0.0728850467522056,
+            "correlation": 0.6717465217932709,
+            "inside_range": true
+          }
+        },
+        "range_pct": [
+          6.705678414443514,
+          28.74981671880508
+        ],
+        "note": "Same input, different training windows; the spread is structural uncertainty, not a confidence interval."
+      },
+      "checks": {
+        "q3_pre_result_within_disclosure_band": true,
+        "q3_outside_old_training_range": false,
+        "positive_beta": true,
+        "beats_direct_same_quarters": true,
+        "beats_persistence_same_quarters": false,
+        "at_least_6_test_quarters": true,
+        "downturn_coverage_complete": false
+      },
+      "actual_source": "https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/21435786328187801.pdf",
+      "actual_source_date": "2026-10-28",
+      "grounding": "PARTIAL: company qualitative band; ESTIMATE: OLS translation",
+      "operational_forecast_pct": null
+    },
+    {
+      "product": "NAND",
+      "key": "KCS_NAND_TORN",
+      "label": "KCS Flash + SSD Tornqvist",
+      "benchmark_q3_pct": 28.84300507239599,
+      "q3_pre_result_pct": 19.639306256980756,
+      "q3_actual_mid_pct": 25.0,
+      "q3_actual_band_pct": [
+        24,
+        26
+      ],
+      "q3_error_pp": -5.360693743019244,
+      "q3_refitted_in_sample_pct": 20.030762431024325,
+      "old_fit": {
+        "n": 19,
+        "alpha": -0.011953895147987434,
+        "beta": 0.754722502344149,
+        "correlation_log_growth": 0.9008548765327079,
+        "in_sample_r_squared": 0.8115395085727604,
+        "x_min": -0.27732367335830355,
+        "x_max": 0.5775964983493693
+      },
+      "new_fit": {
+        "n": 20,
+        "alpha": -0.010383919673346065,
+        "beta": 0.761417408091545,
+        "correlation_log_growth": 0.9034388957282788,
+        "in_sample_r_squared": 0.8162018383147319,
+        "x_min": -0.27732367335830355,
+        "x_max": 0.5775964983493693
+      },
+      "mae_before_pp": 12.695472178673667,
+      "mae_after_pp": 11.880496796934287,
+      "test_n_before": 8,
+      "test_n_after": 9,
+      "metrics": {
+        "n": 9,
+        "quarters": [
+          "2024Q3",
+          "2024Q4",
+          "2025Q1",
+          "2025Q2",
+          "2025Q3",
+          "2025Q4",
+          "2026Q1",
+          "2026Q2",
+          "2026Q3"
+        ],
+        "ols": {
+          "mae_pp": 11.880496796934287,
+          "bias_pp": -7.133350209315533,
+          "direction": 0.7777777777777778,
+          "direction_n": 9
+        },
+        "direct": {
+          "mae_pp": 12.129255811926674,
+          "bias_pp": 5.807559870523796,
+          "direction": 0.7777777777777778,
+          "direction_n": 9
+        },
+        "zero": {
+          "mae_pp": 27.38888888888889,
+          "bias_pp": -20.055555555555557,
+          "direction": 0,
+          "direction_n": 9
+        },
+        "persistence": {
+          "mae_pp": 20.166666666666668,
+          "bias_pp": -0.9444444444444444,
+          "direction": 0.7777777777777778,
+          "direction_n": 9
+        }
+      },
+      "new_target_band_sensitivity_pct": [
+        19.958933233030436,
+        20.10206177595858
+      ],
+      "all_target_normalization_envelope_pct": [
+        19.016603994449895,
+        21.042573183795078
+      ],
+      "window_sensitivity": {
+        "windows": {
+          "full": {
+            "n": 20,
+            "prediction_pct": 20.030762431024325,
+            "beta": 0.761417408091545,
+            "alpha": -0.010383919673346065,
+            "correlation": 0.9034388957282788,
+            "inside_range": true
+          },
+          "through_2023Q4": {
+            "n": 10,
+            "prediction_pct": 10.337805995508177,
+            "beta": 0.5189374574542408,
+            "alpha": -0.03313500848258693,
+            "correlation": 0.8450525495048365,
+            "inside_range": false
+          },
+          "ex_2025Q4_onward": {
+            "n": 16,
+            "prediction_pct": 11.802351559048857,
+            "beta": 0.5190602303468703,
+            "alpha": -0.019980151625070934,
+            "correlation": 0.7145331677660212,
+            "inside_range": false
+          },
+          "since_2024Q1": {
+            "n": 10,
+            "prediction_pct": 22.74360651856181,
+            "beta": 0.7590280835100114,
+            "alpha": 0.012571210032602614,
+            "correlation": 0.8968133362201958,
+            "inside_range": true
+          }
+        },
+        "range_pct": [
+          10.337805995508177,
+          22.74360651856181
+        ],
+        "note": "Same input, different training windows; the spread is structural uncertainty, not a confidence interval."
+      },
+      "checks": {
+        "q3_pre_result_within_disclosure_band": false,
+        "q3_outside_old_training_range": false,
+        "positive_beta": true,
+        "beats_direct_same_quarters": true,
+        "beats_persistence_same_quarters": true,
+        "at_least_6_test_quarters": true,
+        "downturn_coverage_complete": false
+      },
+      "actual_source": "https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/21435786328187801.pdf",
+      "actual_source_date": "2026-10-28",
+      "grounding": "PARTIAL: company qualitative band; ESTIMATE: OLS translation",
+      "operational_forecast_pct": null
+    },
+    {
+      "product": "NAND",
+      "key": "BOK_FLASH",
+      "label": "BOK_FLASH índice USD",
+      "benchmark_q3_pct": 18.970976253298133,
+      "q3_pre_result_pct": 20.48969619691562,
+      "q3_actual_mid_pct": 25.0,
+      "q3_actual_band_pct": [
+        24,
+        26
+      ],
+      "q3_error_pp": -4.51030380308438,
+      "q3_refitted_in_sample_pct": 20.848695166404635,
+      "old_fit": {
+        "n": 19,
+        "alpha": 0.03009092395204438,
+        "beta": 0.8997967195848785,
+        "correlation_log_growth": 0.8434324429072095,
+        "in_sample_r_squared": 0.7113782857484233,
+        "x_min": -0.2722501798158423,
+        "x_max": 0.40231756043892536
+      },
+      "new_fit": {
+        "n": 20,
+        "alpha": 0.031675941925501244,
+        "beta": 0.9077988864572148,
+        "correlation_log_growth": 0.8488244827768626,
+        "in_sample_r_squared": 0.7205030025614083,
+        "x_min": -0.2722501798158423,
+        "x_max": 0.40231756043892536
+      },
+      "mae_before_pp": 17.433084791655897,
+      "mae_after_pp": 15.997220237370172,
+      "test_n_before": 8,
+      "test_n_after": 9,
+      "metrics": {
+        "n": 9,
+        "quarters": [
+          "2024Q3",
+          "2024Q4",
+          "2025Q1",
+          "2025Q2",
+          "2025Q3",
+          "2025Q4",
+          "2026Q1",
+          "2026Q2",
+          "2026Q3"
+        ],
+        "ols": {
+          "mae_pp": 15.997220237370172,
+          "bias_pp": -10.025011203048896,
+          "direction": 0.8888888888888888,
+          "direction_n": 9
+        },
+        "direct": {
+          "mae_pp": 16.064922571331746,
+          "bias_pp": -6.6046721898016765,
+          "direction": 0.8888888888888888,
+          "direction_n": 9
+        },
+        "zero": {
+          "mae_pp": 27.38888888888889,
+          "bias_pp": -20.055555555555557,
+          "direction": 0,
+          "direction_n": 9
+        },
+        "persistence": {
+          "mae_pp": 20.166666666666668,
+          "bias_pp": -0.9444444444444444,
+          "direction": 0.7777777777777778,
+          "direction_n": 9
+        }
+      },
+      "new_target_band_sensitivity_pct": [
+        20.770139147650525,
+        20.926675722403665
+      ],
+      "all_target_normalization_envelope_pct": [
+        19.7365000018077,
+        21.959102877677118
+      ],
+      "window_sensitivity": {
+        "windows": {
+          "full": {
+            "n": 20,
+            "prediction_pct": 20.848695166404635,
+            "beta": 0.9077988864572148,
+            "alpha": 0.031675941925501244,
+            "correlation": 0.8488244827768626,
+            "inside_range": true
+          },
+          "through_2023Q4": {
+            "n": 10,
+            "prediction_pct": 17.032340975102272,
+            "beta": 0.8734234968436414,
+            "alpha": 0.005558274788569406,
+            "correlation": 0.8749073420795874,
+            "inside_range": false
+          },
+          "ex_2025Q4_onward": {
+            "n": 16,
+            "prediction_pct": 11.563590901173889,
+            "beta": 0.6065034464614181,
+            "alpha": 0.0040692264622466424,
+            "correlation": 0.7140460509084221,
+            "inside_range": false
+          },
+          "since_2024Q1": {
+            "n": 10,
+            "prediction_pct": 23.247301572918634,
+            "beta": 0.8329216395116756,
+            "alpha": 0.06433643088814639,
+            "correlation": 0.8042129746523412,
+            "inside_range": true
+          }
+        },
+        "range_pct": [
+          11.563590901173889,
+          23.247301572918634
+        ],
+        "note": "Same input, different training windows; the spread is structural uncertainty, not a confidence interval."
+      },
+      "checks": {
+        "q3_pre_result_within_disclosure_band": false,
+        "q3_outside_old_training_range": false,
+        "positive_beta": true,
+        "beats_direct_same_quarters": true,
+        "beats_persistence_same_quarters": true,
+        "at_least_6_test_quarters": true,
+        "downturn_coverage_complete": false
+      },
+      "actual_source": "https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/21435786328187801.pdf",
+      "actual_source_date": "2026-10-28",
+      "grounding": "PARTIAL: company qualitative band; ESTIMATE: OLS translation",
+      "operational_forecast_pct": null
+    },
+    {
+      "product": "NAND",
+      "key": "CONTRACT_NAND",
+      "label": "Contratos NAND: TLC + SSD + eMMC",
+      "benchmark_q3_pct": 10.128146753025758,
+      "q3_pre_result_pct": 8.171316498770997,
+      "q3_actual_mid_pct": 25.0,
+      "q3_actual_band_pct": [
+        24,
+        26
+      ],
+      "q3_error_pp": -16.828683501229,
+      "q3_refitted_in_sample_pct": 8.97206034520619,
+      "old_fit": {
+        "n": 19,
+        "alpha": 0.0057316789917627176,
+        "beta": 0.7547527086438754,
+        "correlation_log_growth": 0.9464525388708851,
+        "in_sample_r_squared": 0.8957724083351443,
+        "x_min": -0.21251989482715594,
+        "x_max": 0.7370502311823823
+      },
+      "new_fit": {
+        "n": 20,
+        "alpha": 0.012691096967071852,
+        "beta": 0.7590633834215583,
+        "correlation_log_growth": 0.93439614976854,
+        "in_sample_r_squared": 0.8730961647022719,
+        "x_min": -0.21251989482715594,
+        "x_max": 0.7370502311823823
+      },
+      "mae_before_pp": 9.641637376585026,
+      "mae_after_pp": 10.440198057101023,
+      "test_n_before": 8,
+      "test_n_after": 9,
+      "metrics": {
+        "n": 9,
+        "quarters": [
+          "2024Q3",
+          "2024Q4",
+          "2025Q1",
+          "2025Q2",
+          "2025Q3",
+          "2025Q4",
+          "2026Q1",
+          "2026Q2",
+          "2026Q3"
+        ],
+        "ols": {
+          "mae_pp": 10.440198057101023,
+          "bias_pp": -4.0046294761838315,
+          "direction": 0.8888888888888888,
+          "direction_n": 9
+        },
+        "direct": {
+          "mae_pp": 14.162672769138835,
+          "bias_pp": 4.216768507548379,
+          "direction": 0.8888888888888888,
+          "direction_n": 9
+        },
+        "zero": {
+          "mae_pp": 27.38888888888889,
+          "bias_pp": -20.055555555555557,
+          "direction": 0,
+          "direction_n": 9
+        },
+        "persistence": {
+          "mae_pp": 20.166666666666668,
+          "bias_pp": -0.9444444444444444,
+          "direction": 0.7777777777777778,
+          "direction_n": 9
+        }
+      },
+      "new_target_band_sensitivity_pct": [
+        8.927425156036822,
+        9.016357943830894
+      ],
+      "all_target_normalization_envelope_pct": [
+        8.06123025051131,
+        9.880041755198581
+      ],
+      "window_sensitivity": {
+        "windows": {
+          "full": {
+            "n": 20,
+            "prediction_pct": 8.97206034520619,
+            "beta": 0.7590633834215583,
+            "alpha": 0.012691096967071852,
+            "correlation": 0.93439614976854,
+            "inside_range": true
+          },
+          "through_2023Q4": {
+            "n": 10,
+            "prediction_pct": 7.980597107900822,
+            "beta": 0.7507923149471714,
+            "alpha": 0.0043490762451692325,
+            "correlation": 0.8773284061285715,
+            "inside_range": false
+          },
+          "ex_2025Q4_onward": {
+            "n": 16,
+            "prediction_pct": 7.547321953708637,
+            "beta": 0.714908006071677,
+            "alpha": 0.003790396356505441,
+            "correlation": 0.7919779799331078,
+            "inside_range": true
+          },
+          "since_2024Q1": {
+            "n": 10,
+            "prediction_pct": 10.030445949396956,
+            "beta": 0.7371828830217387,
+            "alpha": 0.02446759328551945,
+            "correlation": 0.9192338283286637,
+            "inside_range": true
+          }
+        },
+        "range_pct": [
+          7.547321953708637,
+          10.030445949396956
+        ],
+        "note": "Same input, different training windows; the spread is structural uncertainty, not a confidence interval."
+      },
+      "checks": {
+        "q3_pre_result_within_disclosure_band": false,
+        "q3_outside_old_training_range": false,
+        "positive_beta": true,
+        "beats_direct_same_quarters": true,
+        "beats_persistence_same_quarters": true,
+        "at_least_6_test_quarters": true,
+        "downturn_coverage_complete": false
+      },
+      "actual_source": "https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/21435786328187801.pdf",
+      "actual_source_date": "2026-10-28",
+      "grounding": "PARTIAL: company qualitative band; ESTIMATE: OLS translation",
+      "operational_forecast_pct": null
+    }
+  ],
+  "comparisons": [
+    {
+      "company": "SK hynix",
+      "product": "DRAM",
+      "horizon": 3,
+      "quarters": [
+        "2023Q2",
+        "2023Q3",
+        "2023Q4",
+        "2024Q3",
+        "2024Q4",
+        "2025Q1",
+        "2025Q2",
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2",
+        "2026Q3"
+      ],
+      "models": [
+        {
+          "key": "KCS_DRAM",
+          "label": "KCS_DRAM USD/kg",
+          "metrics": {
+            "n": 12,
+            "quarters": [
+              "2023Q2",
+              "2023Q3",
+              "2023Q4",
+              "2024Q3",
+              "2024Q4",
+              "2025Q1",
+              "2025Q2",
+              "2025Q3",
+              "2025Q4",
+              "2026Q1",
+              "2026Q2",
+              "2026Q3"
+            ],
+            "ols": {
+              "mae_pp": 9.845205281835057,
+              "bias_pp": -9.097640135514911,
+              "direction": 0.8181818181818182,
+              "direction_n": 11
+            },
+            "direct": {
+              "mae_pp": 16.330940232158692,
+              "bias_pp": 2.129196635444308,
+              "direction": 0.6363636363636364,
+              "direction_n": 11
+            },
+            "zero": {
+              "mae_pp": 18.0,
+              "bias_pp": -18.0,
+              "direction": 0,
+              "direction_n": 11
+            },
+            "persistence": {
+              "mae_pp": 12.75,
+              "bias_pp": -4.083333333333333,
+              "direction": 0.8181818181818182,
+              "direction_n": 11
+            }
+          }
+        },
+        {
+          "key": "BOK_DRAM",
+          "label": "BOK_DRAM índice USD",
+          "metrics": {
+            "n": 12,
+            "quarters": [
+              "2023Q2",
+              "2023Q3",
+              "2023Q4",
+              "2024Q3",
+              "2024Q4",
+              "2025Q1",
+              "2025Q2",
+              "2025Q3",
+              "2025Q4",
+              "2026Q1",
+              "2026Q2",
+              "2026Q3"
+            ],
+            "ols": {
+              "mae_pp": 10.747727051559599,
+              "bias_pp": -4.664522260307604,
+              "direction": 0.7272727272727273,
+              "direction_n": 11
+            },
+            "direct": {
+              "mae_pp": 10.559808980844368,
+              "bias_pp": -5.366130090687087,
+              "direction": 0.7272727272727273,
+              "direction_n": 11
+            },
+            "zero": {
+              "mae_pp": 18.0,
+              "bias_pp": -18.0,
+              "direction": 0,
+              "direction_n": 11
+            },
+            "persistence": {
+              "mae_pp": 12.75,
+              "bias_pp": -4.083333333333333,
+              "direction": 0.8181818181818182,
+              "direction_n": 11
+            }
+          }
+        },
+        {
+          "key": "CONTRACT_D4",
+          "label": "Contratos DDR4: chip + servidor + móvel",
+          "metrics": {
+            "n": 12,
+            "quarters": [
+              "2023Q2",
+              "2023Q3",
+              "2023Q4",
+              "2024Q3",
+              "2024Q4",
+              "2025Q1",
+              "2025Q2",
+              "2025Q3",
+              "2025Q4",
+              "2026Q1",
+              "2026Q2",
+              "2026Q3"
+            ],
+            "ols": {
+              "mae_pp": 11.475424631162946,
+              "bias_pp": -5.489871820459416,
+              "direction": 0.7272727272727273,
+              "direction_n": 11
+            },
+            "direct": {
+              "mae_pp": 21.93670754187289,
+              "bias_pp": 6.360982072459574,
+              "direction": 0.7272727272727273,
+              "direction_n": 11
+            },
+            "zero": {
+              "mae_pp": 18.0,
+              "bias_pp": -18.0,
+              "direction": 0,
+              "direction_n": 11
+            },
+            "persistence": {
+              "mae_pp": 12.75,
+              "bias_pp": -4.083333333333333,
+              "direction": 0.8181818181818182,
+              "direction_n": 11
+            }
+          }
+        },
+        {
+          "key": "ISPPDR37 Index",
+          "label": "DDR4 8Gb 3200 spot",
+          "metrics": {
+            "n": 12,
+            "quarters": [
+              "2023Q2",
+              "2023Q3",
+              "2023Q4",
+              "2024Q3",
+              "2024Q4",
+              "2025Q1",
+              "2025Q2",
+              "2025Q3",
+              "2025Q4",
+              "2026Q1",
+              "2026Q2",
+              "2026Q3"
+            ],
+            "ols": {
+              "mae_pp": 16.40269871025078,
+              "bias_pp": -10.327840030831446,
+              "direction": 0.7272727272727273,
+              "direction_n": 11
+            },
+            "direct": {
+              "mae_pp": 40.14745718677798,
+              "bias_pp": 18.930806194766173,
+              "direction": 0.6363636363636364,
+              "direction_n": 11
+            },
+            "zero": {
+              "mae_pp": 18.0,
+              "bias_pp": -18.0,
+              "direction": 0,
+              "direction_n": 11
+            },
+            "persistence": {
+              "mae_pp": 12.75,
+              "bias_pp": -4.083333333333333,
+              "direction": 0.8181818181818182,
+              "direction_n": 11
+            }
+          }
+        }
+      ]
+    },
+    {
+      "company": "SK hynix",
+      "product": "NAND",
+      "horizon": 3,
+      "quarters": [
+        "2024Q3",
+        "2024Q4",
+        "2025Q1",
+        "2025Q2",
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2",
+        "2026Q3"
+      ],
+      "models": [
+        {
+          "key": "KCS_FLASH",
+          "label": "KCS_FLASH USD/kg",
+          "metrics": {
+            "n": 9,
+            "quarters": [
+              "2024Q3",
+              "2024Q4",
+              "2025Q1",
+              "2025Q2",
+              "2025Q3",
+              "2025Q4",
+              "2026Q1",
+              "2026Q2",
+              "2026Q3"
+            ],
+            "ols": {
+              "mae_pp": 20.373328451735212,
+              "bias_pp": -13.346781331451465,
+              "direction": 0.6666666666666666,
+              "direction_n": 9
+            },
+            "direct": {
+              "mae_pp": 24.10228707786172,
+              "bias_pp": 6.42627049439312,
+              "direction": 0.7777777777777778,
+              "direction_n": 9
+            },
+            "zero": {
+              "mae_pp": 27.38888888888889,
+              "bias_pp": -20.055555555555557,
+              "direction": 0,
+              "direction_n": 9
+            },
+            "persistence": {
+              "mae_pp": 20.166666666666668,
+              "bias_pp": -0.9444444444444444,
+              "direction": 0.7777777777777778,
+              "direction_n": 9
+            }
+          }
+        },
+        {
+          "key": "KCS_NAND_TORN",
+          "label": "KCS Flash + SSD Tornqvist",
+          "metrics": {
+            "n": 9,
+            "quarters": [
+              "2024Q3",
+              "2024Q4",
+              "2025Q1",
+              "2025Q2",
+              "2025Q3",
+              "2025Q4",
+              "2026Q1",
+              "2026Q2",
+              "2026Q3"
+            ],
+            "ols": {
+              "mae_pp": 11.880496796934287,
+              "bias_pp": -7.133350209315533,
+              "direction": 0.7777777777777778,
+              "direction_n": 9
+            },
+            "direct": {
+              "mae_pp": 12.129255811926674,
+              "bias_pp": 5.807559870523796,
+              "direction": 0.7777777777777778,
+              "direction_n": 9
+            },
+            "zero": {
+              "mae_pp": 27.38888888888889,
+              "bias_pp": -20.055555555555557,
+              "direction": 0,
+              "direction_n": 9
+            },
+            "persistence": {
+              "mae_pp": 20.166666666666668,
+              "bias_pp": -0.9444444444444444,
+              "direction": 0.7777777777777778,
+              "direction_n": 9
+            }
+          }
+        },
+        {
+          "key": "BOK_FLASH",
+          "label": "BOK_FLASH índice USD",
+          "metrics": {
+            "n": 9,
+            "quarters": [
+              "2024Q3",
+              "2024Q4",
+              "2025Q1",
+              "2025Q2",
+              "2025Q3",
+              "2025Q4",
+              "2026Q1",
+              "2026Q2",
+              "2026Q3"
+            ],
+            "ols": {
+              "mae_pp": 15.997220237370172,
+              "bias_pp": -10.025011203048896,
+              "direction": 0.8888888888888888,
+              "direction_n": 9
+            },
+            "direct": {
+              "mae_pp": 16.064922571331746,
+              "bias_pp": -6.6046721898016765,
+              "direction": 0.8888888888888888,
+              "direction_n": 9
+            },
+            "zero": {
+              "mae_pp": 27.38888888888889,
+              "bias_pp": -20.055555555555557,
+              "direction": 0,
+              "direction_n": 9
+            },
+            "persistence": {
+              "mae_pp": 20.166666666666668,
+              "bias_pp": -0.9444444444444444,
+              "direction": 0.7777777777777778,
+              "direction_n": 9
+            }
+          }
+        },
+        {
+          "key": "CONTRACT_NAND",
+          "label": "Contratos NAND: TLC + SSD + eMMC",
+          "metrics": {
+            "n": 9,
+            "quarters": [
+              "2024Q3",
+              "2024Q4",
+              "2025Q1",
+              "2025Q2",
+              "2025Q3",
+              "2025Q4",
+              "2026Q1",
+              "2026Q2",
+              "2026Q3"
+            ],
+            "ols": {
+              "mae_pp": 10.440198057101023,
+              "bias_pp": -4.0046294761838315,
+              "direction": 0.8888888888888888,
+              "direction_n": 9
+            },
+            "direct": {
+              "mae_pp": 14.162672769138835,
+              "bias_pp": 4.216768507548379,
+              "direction": 0.8888888888888888,
+              "direction_n": 9
+            },
+            "zero": {
+              "mae_pp": 27.38888888888889,
+              "bias_pp": -20.055555555555557,
+              "direction": 0,
+              "direction_n": 9
+            },
+            "persistence": {
+              "mae_pp": 20.166666666666668,
+              "bias_pp": -0.9444444444444444,
+              "direction": 0.7777777777777778,
+              "direction_n": 9
+            }
+          }
+        },
+        {
+          "key": "SPOT_NAND",
+          "label": "Spot NAND TLC 256/512",
+          "metrics": {
+            "n": 9,
+            "quarters": [
+              "2024Q3",
+              "2024Q4",
+              "2025Q1",
+              "2025Q2",
+              "2025Q3",
+              "2025Q4",
+              "2026Q1",
+              "2026Q2",
+              "2026Q3"
+            ],
+            "ols": {
+              "mae_pp": 20.17421986765449,
+              "bias_pp": -9.444226784203138,
+              "direction": 0.7777777777777778,
+              "direction_n": 9
+            },
+            "direct": {
+              "mae_pp": 32.23866391095729,
+              "bias_pp": 10.428184486051437,
+              "direction": 0.7777777777777778,
+              "direction_n": 9
+            },
+            "zero": {
+              "mae_pp": 27.38888888888889,
+              "bias_pp": -20.055555555555557,
+              "direction": 0,
+              "direction_n": 9
+            },
+            "persistence": {
+              "mae_pp": 20.166666666666668,
+              "bias_pp": -0.9444444444444444,
+              "direction": 0.7777777777777778,
+              "direction_n": 9
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "equation": "ASP_QoQ_pct = 100 * (exp(alpha + beta * log(1 + benchmark_QoQ_pct/100)) - 1)",
+  "input_tags": {
+    "company_wording": "HARD: SK hynix deck 2026-10-28 p.4",
+    "company_numeric_targets": "PARTIAL: DRAM 27-29 midpoint 28; NAND 24-26 midpoint 25; pre-existing normalization",
+    "benchmark_levels": "HARD: source observations; derived baskets are equal-weight benchmark conventions, not company mix",
+    "coefficients_and_company_translation": "ESTIMATE: OLS calibrated to observed historical ASP bands",
+    "street_ranges": "HARD as reported forecast ranges; not realized company ASP"
+  },
+  "q4_status": "No complete October KCS/BOK/contract month in the current input vintage. No Q4 company ASP forecast published. Partial October spot stays separate.",
+  "validation": "Q3 holdout is frozen pre-result evidence. Including Q3 in the refit is calibration, not independent validation. Missing Hynix 2022Q4 (and open-ended NAND 2022Q3) still blocks operational use."
+}

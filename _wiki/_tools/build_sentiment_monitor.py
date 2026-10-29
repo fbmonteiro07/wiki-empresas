@@ -518,7 +518,7 @@ def main() -> int:
 
     # ---- the hot/cold × bull/bear sections (ranking, map, backtests …) ----
     import build_sentiment
-    from _sentiment_dash import render_parts, JS as SX_JS
+    from _sentiment_dash import render_parts, JS as SX_JS, RANKING_CSS
     parts = render_parts(*build_sentiment.dash_inputs())
 
     # =========================================================================== HTML
@@ -906,7 +906,7 @@ def main() -> int:
                 + base64.b64encode(FONT.read_bytes()).decode() + ') format("woff2")}')
     page = ("<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>Sentiment</title>"
             "<script>try{var t=localStorage.getItem('wiki-dash-theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t;}catch(e){}</script>"
-            f"<style>{font}{OR_CSS}{PAGE_CSS}</style></head><body>{shell}{body}"
+            f"<style>{font}{OR_CSS}{PAGE_CSS}{RANKING_CSS}</style></head><body>{shell}{body}"
             "<p class='hub-credit note'>Built by <code>_tools/build_sentiment_monitor.py</code> (+ <code>sentiment_studies.py</code>, <code>_sentiment_dash.py</code>) from <code>_data/sentiment/</code>; "
             "CNN pulled live with a cache fallback; the desk read comes from the 10:00 sentiment-radar task. Numbers in <code>monitor.json</code>.</p>"
             f"</main></div></div><script>window.__SENT__ = {parts['payload']};window.__MON__ = {mon_json};</script>"

@@ -37,6 +37,74 @@ details summary{cursor:pointer;font-weight:600}dl{display:grid;grid-template-col
 .pos{color:var(--blue)}.neg{color:var(--red)}.hzbar{display:flex;gap:10px;align-items:center;margin:0 0 10px;font-size:13px}
 """
 
+RANKING_CSS = r"""
+.ranking .rank-head{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:12px}
+.ranking .rank-heading{display:flex;gap:14px;align-items:center;flex-wrap:wrap}.ranking .rank-heading h2{margin:0}
+.ranking .rank-heading label{display:flex;gap:8px;align-items:center;font-size:12px;color:var(--ink2)}
+.ranking .rank-tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.ranking .rank-tools input{width:190px;min-width:0;font-size:12px}
+.ranking .rank-views{display:inline-flex;border:1px solid var(--line);border-radius:6px;padding:3px;gap:3px}
+.ranking .rank-views button{font:inherit;font-size:12px;border:0;border-radius:4px;padding:5px 10px;background:transparent;color:var(--ink2);cursor:pointer}
+.ranking .rank-views button[aria-pressed=true]{background:var(--chip);color:var(--ink);font-weight:700}
+.ranking button:focus-visible,.ranking input:focus-visible,.ranking select:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.ranking .rank-hint{font-size:12px;color:var(--ink2);margin:0 0 12px}.ranking .rank-hint b{color:var(--ink);font-weight:600}
+.ranking #tbl{font-variant-numeric:tabular-nums}.ranking #tbl th{z-index:2}
+.ranking #tbl th button{display:block;width:100%;font:inherit;color:inherit;text-align:inherit;padding:0;border:0;background:none;cursor:pointer}
+.ranking #tbl th[aria-sort]:not([aria-sort=none]){color:var(--ink)}
+.ranking #tbl td:first-child,.ranking #tbl th:first-child{position:sticky;left:0;background:var(--surf);z-index:1}.ranking #tbl th:first-child{z-index:3}
+.ranking #tbl tr:hover td:first-child{background:var(--chip)}
+.ranking #tbl .rank-company{display:block;max-width:210px;overflow:hidden;text-overflow:ellipsis;margin:2px 0 0;color:var(--ink3);font-size:10px;font-weight:400}
+.ranking #tbl.rank-summary td{padding:9px 12px}.ranking #tbl.rank-summary th{padding:9px 12px}
+.ranking #tbl.rank-summary .barwrap{width:66px;margin-right:5px}.ranking .rank-sub{display:block;color:var(--ink3);font-size:10px;font-weight:400;margin-top:3px}
+.ranking .rank-score{display:inline-block;min-width:40px}.ranking .rank-empty{text-align:center!important;padding:28px!important;color:var(--ink2)}
+.ranking #tbl .tag{width:auto;height:auto;overflow:visible;margin:0;vertical-align:baseline;line-height:1.6}
+.ranking .rank-foot{display:flex;gap:8px 24px;justify-content:space-between;flex-wrap:wrap;margin-top:10px;font-size:11px;color:var(--ink2);line-height:1.6}
+.ranking .rank-foot #tblnote{margin:0;font-size:11px}.ranking .rank-method{margin-top:10px;color:var(--ink2);font-size:12px;line-height:1.7}
+.ranking .rank-method summary{font-size:11px;font-weight:500}.ranking .rank-method p{margin:6px 0 0;max-width:1050px}
+.ranking .rank-pending{color:var(--ink3);font-size:11px}.ranking #tbl.rank-returns td{padding:8px 10px}.ranking #tbl.rank-returns .barwrap{display:none}
+.forward-study .forward-head{display:flex;gap:12px;justify-content:space-between;align-items:center;flex-wrap:wrap;margin-bottom:8px}.forward-study .forward-head h2{margin:0}
+.forward-study .forward-controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:12px}.forward-study label{display:flex;gap:7px;align-items:center;color:var(--ink2)}
+.forward-study .forward-context{font-size:12px;line-height:1.7;color:var(--ink2);margin:8px 0 16px}.forward-study .forward-context a{color:inherit}
+.forward-study .forward-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:30px}.forward-study .forward-grid h3{margin:0 0 10px}
+.forward-study .forward-axis{display:flex;justify-content:space-between;margin-left:118px;margin-right:66px;font-size:10px;color:var(--ink3)}
+.forward-study .forward-row{display:grid;grid-template-columns:108px minmax(0,1fr) 65px;gap:10px;align-items:center;margin:14px 0 3px;font-size:12px}
+.forward-study .forward-bar{height:18px;position:relative}.forward-study .forward-bar:before{content:'';position:absolute;left:50%;height:100%;border-left:1px solid var(--ink3)}
+.forward-study .forward-bar i{position:absolute;top:3px;height:12px;border-radius:2px;background:var(--blue)}.forward-study .forward-bar i.negative{background:var(--red)}
+.forward-study .forward-value{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}.forward-study .forward-sample{font-size:10px;color:var(--ink3);margin-left:118px}
+.forward-study .forward-stat{display:flex;gap:12px;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--grid);font-size:12px;color:var(--ink2)}
+.forward-study .forward-stat strong{font-size:17px;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.forward-study .forward-read{font-size:12px;line-height:1.7;margin:12px 0 0;color:var(--ink2)}.forward-study .forward-read b{color:var(--ink)}
+.forward-study .forward-method{margin-top:18px;padding-top:12px;border-top:1px solid var(--grid);font-size:11px;line-height:1.7;color:var(--ink2)}
+.forward-study .forward-method summary{font-size:11px}.forward-study .forward-method p{margin:6px 0}.forward-study .forward-years{margin-top:10px;overflow:auto}
+.forward-study .forward-years th{position:static;cursor:default}.forward-study .forward-years table{font-size:11px}
+@media(max-width:1000px){.forward-study .forward-grid{grid-template-columns:1fr;gap:24px}}@media(max-width:540px){.forward-study .forward-controls{align-items:stretch}.forward-study label{flex-wrap:wrap}.forward-study select{max-width:100%}}
+@media(max-width:760px){.ranking .rank-tools{width:100%;justify-content:space-between}.ranking .rank-tools input{flex:1;max-width:230px}.ranking #tbl.rank-summary td,.ranking #tbl.rank-summary th{padding:7px 8px}.ranking #tbl.rank-summary .barwrap{display:none}.ranking #tbl .rank-company{max-width:135px}}
+"""
+CSS += RANKING_CSS
+
+RANKING_HTML = """<section class="ranking" aria-labelledby="rank-title">
+<div class="rank-head"><div class="rank-heading"><h2 id="rank-title">Weekly ranking</h2><label for="wk">Week ending <select id="wk"></select></label></div>
+<div class="rank-tools"><input id="rank-search" type="search" placeholder="Find ticker or company…" aria-label="Find ticker or company">
+<div class="rank-views" role="group" aria-label="Ranking view"><button type="button" data-rank-view="summary" aria-pressed="true" aria-controls="tbl">Summary</button><button type="button" data-rank-view="returns" aria-pressed="false" aria-controls="tbl">Forward returns</button><button type="button" data-rank-view="all" aria-pressed="false" aria-controls="tbl">All metrics</button></div></div></div>
+<p class="rank-hint"><b>Attention</b> shows what is getting noticed. <b>Sentiment</b> shows how bullish the signals are. Click a column to sort.</p>
+<div class="scroll"><table id="tbl" aria-label="Weekly sentiment ranking" aria-describedby="tblnote"></table></div>
+<div class="rank-foot"><div class="note" id="tblnote" role="status"></div><span>Sources: curated X + wires · Bloomberg · broker mail</span></div>
+<details class="rank-method"><summary>How to read the scores &amp; sources</summary>
+<p>Attention (HOT) combines curated and wire mention growth against each name's trailing four weeks. The percentage beneath it is <b>curated mentions</b> versus that baseline. Sentiment (BULL) combines tweet tone, tone change, Bloomberg EPS revisions and rating drift, plus available sell-side tone and price-target changes. Scores are standardized across names within the week and clipped at ±3; they are not probabilities. Orange = higher attention, gray = lower; blue = positive sentiment score, red = negative. Quadrants use the selected week's HOT/BULL median cuts.</p>
+<p>Own-corpus tone is <b>lexicon-based, not LLM-scored</b>. Bloomberg supplies EPS, ratings, short interest and local-currency prices. Sell-side metrics come from the mechanical broker-mail parse. All metrics retains mention counts, tone, sell-side inputs and forward returns; forward returns stay blank until the window has elapsed. The backtest uses universe-relative returns. Missing values appear as –.</p></details></section>"""
+
+FORWARD_HTML = """<section class="forward-study" aria-labelledby="forward-title">
+<div class="forward-head"><h2 id="forward-title">Sentiment → forward returns</h2><div class="forward-controls">
+<label>History <select id="forward-track" aria-label="Return study history"><option value="own">Same signals as ranking</option><option value="long">Bloomberg · longer history</option></select></label>
+<label>Horizon <select id="forward-horizon" aria-label="Return study horizon"><option value="1w">1 week</option><option value="15d" selected>15 days</option><option value="4w">4 weeks</option></select></label></div></div>
+<p id="forward-context" class="forward-context"></p>
+<div id="forward-results" aria-live="polite"><div class="forward-grid"><div><h3>What followed each sentiment state?</h3><div id="forward-bars"></div></div>
+<div><h3>Did higher sentiment mean better returns?</h3><div id="forward-stats"></div><p id="forward-read" class="forward-read"></p></div></div></div>
+<details class="forward-method"><summary>Method, interpretation and stability by year</summary>
+<p>Bars show the historical mean <b>stock return minus the same week's equal-weight coverage-universe return</b>, in percentage points. The outperformance rate counts outcomes above that benchmark; it is not the probability of a positive stock return. Each stock-week is one observation. Hot/cold and bull/bear split at that week's median, so “bull” means relatively more bullish.</p>
+<p>Rank correlation (IC) is the average weekly Spearman correlation between BULL and subsequent relative returns. The top-minus-bottom spread compares the most bullish fifth with the least bullish fifth, equal-weighted within each week and then across weeks. All horizons are <b>calendar days</b>: Friday's close to the last available close on or before day +7, +15 or +28. These are price returns, before costs.</p>
+<p>This is a retrospective association, not a fitted forecast or a point-in-time trading simulation. Forward windows overlap, stocks share market shocks, and the current coverage universe may introduce survivorship bias. Weekly signal snapshots may include data unavailable at that close. These statistics do not establish causality or incremental value beyond momentum. The full-sample study stays fixed when you change the ranking's week or search.</p>
+<div id="forward-years" class="forward-years"></div></details></section>"""
+
 JS = r"""
 const D = window.__SENT__;
 const W = D.weeks, P = D.panel, N = D.names, HZ = D.horizons, L = D.long;
@@ -45,12 +113,13 @@ const pct = (x,d=1)=> x==null?'–':((x*100).toFixed(d)+'%');
 const sgn = (x,d=2)=> x==null?'–':((x>0?'+':'')+(+x).toFixed(d));
 const cls = x => x==null?'':(x>0?'pos':x<0?'neg':'');
 const quadOf = (r,mh,mb) => (r.HOT==null||r.BULL==null)?'':((r.HOT>=mh?'hot':'cold')+'-'+(r.BULL>=mb?'bull':'bear'));
-const quad = r => quadOf(r, D.medHOT, D.medBULL);
+let ownCuts=[D.medHOT,D.medBULL];
+const quad = r => quadOf(r, ...ownCuts);
 const tip = document.getElementById('tip');
 function showTip(e,html){tip.innerHTML=html;tip.style.display='block';const x=Math.min(e.clientX+14,innerWidth-360),y=e.clientY+14;tip.style.left=x+'px';tip.style.top=y+'px';}
 function hideTip(){tip.style.display='none';}
-function zbar(v,posColor,negColor){ if(v==null) return '<span class="barwrap"><i></i></span>';
-  const w=Math.min(Math.abs(v),3)/3*48; const left = v>=0?48:48-w;
+function zbar(v,posColor,negColor,width=96){ if(v==null) return '<span class="barwrap"><i></i></span>';
+  const half=width/2, w=Math.min(Math.abs(v),3)/3*half; const left = v>=0?half:half-w;
   return `<span class="barwrap"><i></i><b style="left:${left}px;width:${w}px;background:${v>=0?posColor:negColor}"></b></span>`; }
 const hz = ()=>document.getElementById('hz').value;
 // ---------- weekly picks: what we would have seen
@@ -157,21 +226,69 @@ function renderEvents(){
 }
 
 // ---------- ranking table (own corpus)
-let sortKey='HOT', sortDir=-1;
+let sortKey='HOT', sortDir=-1, rankView='summary';
+const rankCols=[['t','Ticker'],['HOT','Attention · HOT z'],['att','Attention Δ'],['m_cur','Curated /wk'],['m_wire','Wire /wk'],['BULL','Sentiment · BULL z'],['tone','Tone'],['bull','#bull'],['bear','#bear'],['eps_rev','EPS rev · 4w'],['rating','Rating Δ4w'],['si','SI % float'],['ss_n','SS notes /wk'],['ss_att','SS flow Δ'],['ss_tone','SS tone'],['ss_act','SS net rtg'],['ss_pt','SS avg PT Δ'],['ret_m4w','Return · past 4w'],['ret_1w','Fwd 1w'],['ret_15d','Fwd 15d'],['ret_4w','Fwd 4w'],['q','Quadrant']];
+const rankSummary=['t','HOT','BULL','eps_rev','ret_m4w','q'];
+const rankReturns=['t','HOT','BULL','ret_1w','ret_15d','ret_4w','q'];
+const rankEsc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const rankGrowth=v=>v==null?'–':(v>0?'+':'')+(Math.exp(v)*100-100).toFixed(0)+'%';
+function rankCell(r,k){
+  if(k==='t') return `<span class="tk">${rankEsc(r.t)}</span><span class="rank-company" title="${rankEsc(N[r.t])}">${rankEsc(N[r.t])}</span>`;
+  if(k==='HOT'||k==='BULL') return `${zbar(r[k],k==='HOT'?'var(--orange)':'var(--blue)',k==='HOT'?'var(--ink3)':'var(--red)',rankView==='summary'?66:96)}<span class="rank-score">${sgn(r[k])}</span>`+(k==='HOT'&&rankView==='summary'?`<span class="rank-sub">${rankGrowth(r.att)} curated vs 4w</span>`:'');
+  if(k==='q'){const q=quad(r), c=q==='hot-bull'?'hb':q==='cold-bear'?'cb':q==='hot-bear'?'hr':''; return q?`<span class="tag ${c}">${q.replace('-',' · ')}</span>`:'–';}
+  if(k==='att'||k==='ss_att') return rankGrowth(r[k]);
+  if(k==='eps_rev'||k==='ss_pt') return r[k]==null?'–':sgn(r[k]*100,1)+'%';
+  if(k.startsWith('ret_')){
+    if(rankView==='returns'&&r[k]==null&&D.asof){
+      const end=new Date(document.getElementById('wk').value+'T00:00:00Z'); end.setUTCDate(end.getUTCDate()+HZ[k.slice(4)]);
+      if(end.toISOString().slice(0,10)>=D.asof) return '<span class="rank-pending">Pending</span>';
+    }
+    return pct(r[k]);
+  }
+  if(['m_cur','m_wire','bull','bear','ss_n'].includes(k)) return fmt(r[k],0);
+  if(k==='si') return fmt(r[k],1);
+  return sgn(r[k],k==='ss_act'?1:2);
+}
 function renderTable(){
-  const wk = document.getElementById('wk').value; const row = P[wk];
-  const rows = Object.keys(row).map(t=>({t,...row[t]})).filter(r=>r.HOT!=null||r.BULL!=null);
+  const wk=document.getElementById('wk').value, row=P[wk]||{}, query=document.getElementById('rank-search').value.trim().toLowerCase();
+  ownCuts=['HOT','BULL'].map(k=>{const values=Object.values(row).map(r=>r[k]).filter(v=>v!=null).sort((a,b)=>a-b); return values.length?values[Math.floor(values.length/2)]:0;});
+  const eligible=Object.keys(row).map(t=>({t,...row[t]})).filter(r=>r.HOT!=null||r.BULL!=null);
+  const rows=eligible.filter(r=>(r.t+' '+(N[r.t]||'')).toLowerCase().includes(query));
+  const cols=rankCols.filter(([k])=>rankView==='all'||(rankView==='returns'?rankReturns:rankSummary).includes(k));
+  if(!cols.some(([k])=>k===sortKey)){sortKey='HOT';sortDir=-1;}
   rows.sort((a,b)=>{const x=a[sortKey],y=b[sortKey]; if(x==null&&y==null)return 0; if(x==null)return 1; if(y==null)return -1; return (x<y?-1:x>y?1:0)*sortDir;});
-  const cols=[['t','Ticker'],['HOT','HOT z'],['att','Attention Δ'],['m_cur','Curated /wk'],['m_wire','Wire /wk'],['BULL','BULL z'],['tone','Tone'],['bull','#bull'],['bear','#bear'],['eps_rev','EPS rev 4w'],['rating','Rating Δ4w'],['si','SI % float'],['ss_n','SS notes /wk'],['ss_att','SS flow Δ'],['ss_tone','SS tone'],['ss_act','SS net rtg'],['ss_pt','SS avg PT Δ'],['ret_m4w','Ret −4w'],['ret_1w','Fwd 1w'],['ret_15d','Fwd 15d'],['ret_4w','Fwd 4w'],['q','Quadrant']];
-  let h='<thead><tr>'+cols.map(c=>`<th class="${c[0]=='t'||c[0]=='q'?'l':''}" data-k="${c[0]}">${c[1]}${sortKey==c[0]?(sortDir<0?' ▼':' ▲'):''}</th>`).join('')+'</tr></thead><tbody>';
-  for(const r of rows){ const q=quad(r); const c=q=='hot-bull'?'hb':q=='cold-bear'?'cb':q=='hot-bear'?'hr':'';
-    h+=`<tr><td class="l"><span class="tk">${r.t}</span><span class="nm">${(N[r.t]||'').slice(0,26)}</span></td>
-    <td>${zbar(r.HOT,'var(--orange)','var(--ink3)')} ${sgn(r.HOT)}</td><td>${r.att==null?'–':(r.att>0?'+':'')+(Math.exp(r.att)*100-100).toFixed(0)+'%'}</td><td>${fmt(r.m_cur,0)}</td><td>${fmt(r.m_wire,0)}</td>
-    <td>${zbar(r.BULL,'var(--blue)','var(--red)')} ${sgn(r.BULL)}</td><td>${sgn(r.tone)}</td><td>${r.bull}</td><td>${r.bear}</td><td>${r.eps_rev==null?'–':sgn(r.eps_rev*100,1)+'%'}</td><td>${sgn(r.rating)}</td><td>${fmt(r.si,1)}</td><td>${fmt(r.ss_n,0)}</td><td>${r.ss_att==null?'–':(r.ss_att>0?'+':'')+(Math.exp(r.ss_att)*100-100).toFixed(0)+'%'}</td><td>${sgn(r.ss_tone)}</td><td>${sgn(r.ss_act,1)}</td><td>${r.ss_pt==null?'–':sgn(r.ss_pt*100,1)+'%'}</td>
-    <td class="${cls(r.ret_m4w)}">${pct(r.ret_m4w)}</td><td class="${cls(r.ret_1w)}">${pct(r.ret_1w)}</td><td class="${cls(r.ret_15d)}">${pct(r.ret_15d)}</td><td class="${cls(r.ret_4w)}">${pct(r.ret_4w)}</td><td class="l"><span class="tag ${c}">${q}</span></td></tr>`; }
-  const T=document.getElementById('tbl'); T.innerHTML=h+'</tbody>';
-  T.querySelectorAll('th').forEach(th=>th.onclick=()=>{const k=th.dataset.k; if(k=='q')return; if(sortKey==k)sortDir*=-1; else {sortKey=k;sortDir=-1;} renderTable();});
-  document.getElementById('tblnote').textContent = `${rows.length} names · week ending ${wk} · forward returns here are raw local-currency returns (blank until the window has elapsed); the backtest uses universe-relative returns.`;
+  let h='<thead><tr>'+cols.map(([k,label])=>`<th scope="col" class="${k==='t'||k==='q'?'l':''}"${k==='q'?'':` aria-sort="${sortKey===k?(sortDir<0?'descending':'ascending'):'none'}"`}>${k==='q'?label:`<button type="button" data-k="${k}">${label}${sortKey===k?(sortDir<0?' ↓':' ↑'):''}</button>`}</th>`).join('')+'</tr></thead><tbody>';
+  for(const r of rows) h+='<tr>'+cols.map(([k])=>`<td class="${k==='t'||k==='q'?'l':k.startsWith('ret_')?cls(r[k]):''}">${rankCell(r,k)}</td>`).join('')+'</tr>';
+  if(!rows.length) h+=`<tr><td class="rank-empty" colspan="${cols.length}">No matching names. Try another ticker or company.</td></tr>`;
+  const T=document.getElementById('tbl'); T.className='rank-'+rankView; T.innerHTML=h+'</tbody>';
+  T.querySelectorAll('button[data-k]').forEach(btn=>btn.onclick=()=>{const k=btn.dataset.k; if(sortKey===k)sortDir*=-1; else {sortKey=k;sortDir=k==='t'?1:-1;} renderTable(); T.querySelector(`button[data-k="${k}"]`).focus({preventScroll:true});});
+  const viewNote=rankView==='summary'?'6 key metrics':rankView==='returns'?`Realized price returns · local currency · calendar days · data ${D.asof||'date unavailable'}. Pending = window incomplete; – = missing data.`:'22 metrics · forward returns are raw local-currency returns';
+  document.getElementById('tblnote').textContent=`${rows.length}${query?' of '+eligible.length:''} names · week ending ${wk} · ${viewNote}`;
+}
+
+// ---------- historical relationship, using the existing backtest aggregates
+function renderForwardStudy(){
+  const box=document.getElementById('forward-results'); if(!box)return;
+  const isLong=document.getElementById('forward-track').value==='long', src=isLong?L:D;
+  const h=document.getElementById('forward-horizon').value, days=HZ[h], horizon=h==='1w'?'1 week':h==='4w'?'4 weeks':'15 days';
+  const context=document.getElementById('forward-context'), bars=document.getElementById('forward-bars'), stats=document.getElementById('forward-stats'), read=document.getElementById('forward-read'), years=document.getElementById('forward-years');
+  if(!src){context.textContent='This history is unavailable in the current snapshot.'; bars.textContent='No outcomes'; stats.textContent=''; read.textContent=''; years.textContent='';return;}
+  const b=src.backtest?.[`BULL|rel_ret_${h}`]||{}, qs=['hot-bull','hot-bear','cold-bull','cold-bear'];
+  const outcomes=qs.map(q=>({q,...(src.quadrants?.[`${q}|rel_ret_${h}`]||{})}));
+  const pp=x=>x==null?'–':sgn(x*100,2)+' pp', ic=x=>sgn(x,3);
+  const last=src.weeks?.[src.weeks.length-1]||'–', first=src.weeks?.[0]||'–';
+  const historyLabel=isLong?'Bloomberg social/news composite · a separate signal series':'Own corpus + sell-side · same HOT/BULL signals as the ranking';
+  const file=isLong?'panel_long.json':'panel_weekly.json';
+  context.innerHTML=`${historyLabel}. <b>Next ${horizon}, relative to the coverage universe.</b><br>Signal history ${first} → ${last} · <a href="../_data/sentiment/${file}">source snapshot ${rankEsc(src.asof||'date unavailable')}</a> · completed outcomes only · full-sample historical association.`;
+  const scale=Math.max(0.005,...outcomes.map(o=>Math.abs(o.mean??0)))*1.2;
+  bars.innerHTML=`<div class="forward-axis"><span>${pp(-scale)}</span><span>0</span><span>${pp(scale)}</span></div>`+outcomes.map(o=>{
+    const valid=o.n>0&&o.mean!=null, width=valid?Math.abs(o.mean)/scale*50:0, left=valid&&o.mean<0?50-width:50;
+    return `<div class="forward-row"><span>${o.q.replace('-',' · ')}</span><div class="forward-bar" aria-hidden="true">${valid?`<i class="${o.mean<0?'negative':''}" style="left:${left}%;width:${width}%"></i>`:''}</div><span class="forward-value ${cls(o.mean)}">${valid?pp(o.mean):'–'}</span></div><div class="forward-sample">${valid?`${o.n.toLocaleString('en-US')} stock-weeks · ${pct(o.hit,0)} outperformed${o.n<20?' · thin sample':''}`:'No completed outcomes'}</div>`;
+  }).join('');
+  stats.innerHTML=`<div class="forward-stat"><span>BULL rank correlation (IC)</span><strong>${ic(b.mean_ic)}</strong></div><div class="forward-stat"><span>Most bullish fifth − least bullish fifth</span><strong>${pp(b.q5_q1)}</strong></div><div class="forward-stat"><span>Weeks with a positive correlation</span><strong>${pct(b.hit,0)}</strong></div><div class="forward-stat"><span>Weekly cross-sections</span><strong>${b.weeks||'–'}</strong></div>`;
+  read.innerHTML=b.mean_ic==null?'No completed return sample for this horizon.':'IC ranges from −1 to +1; values near zero indicate little rank relationship. Positive values mean higher sentiment tended to precede better relative returns. <b>Historical averages are context, not a forecast for an individual stock.</b>';
+  const byYear=Object.entries(b.by_year||{}).sort();
+  years.innerHTML=byYear.length?`<table aria-label="BULL relationship by year"><thead><tr><th class="l">Year · next ${days} calendar days</th><th>IC</th><th>Top − bottom (pp)</th><th>Weeks</th></tr></thead><tbody>`+byYear.map(([y,v])=>`<tr><td class="l">${y}</td><td>${ic(v.mean_ic)}</td><td>${pp(v.q5_q1)}</td><td>${v.weeks}</td></tr>`).join('')+'</tbody></table><p>Years use signal dates; return windows may cross year-end. These are stability comparisons, not held-out tests.</p>':'No year-level breakdown available.';
 }
 
 // ---------- scatter HOT × BULL
@@ -280,6 +397,9 @@ function init(){
   const wk=document.getElementById('wk'); W.slice().reverse().forEach(w=>{const o=document.createElement('option');o.value=w;o.textContent=w;wk.appendChild(o);});
   const tk=document.getElementById('tk'); D.tickers.slice().sort().forEach(t=>{const o=document.createElement('option');o.value=t;o.textContent=t+' — '+(N[t]||'').slice(0,28);tk.appendChild(o);}); tk.value='NVDA';
   wk.onchange=()=>{renderTable();renderScatter();}; tk.onchange=renderTicker; document.getElementById('hz').onchange=renderBacktest;
+  document.getElementById('rank-search').oninput=renderTable;
+  document.querySelectorAll('[data-rank-view]').forEach(btn=>btn.onclick=()=>{rankView=btn.dataset.rankView; document.querySelectorAll('[data-rank-view]').forEach(b=>b.setAttribute('aria-pressed',String(b===btn))); renderTable(); document.getElementById('tbl').parentElement.scrollLeft=0;});
+  ['forward-track','forward-horizon'].forEach(id=>{const el=document.getElementById(id); if(el)el.onchange=renderForwardStudy;}); renderForwardStudy();
   renderTable();renderScatter();renderBacktest();renderTicker();renderEvents();renderLeadLag();
   if(D.picks){ ['pk_track','pk_sig','pk_n','pk_h','pk_win'].forEach(id=>document.getElementById(id).onchange=renderPicks); renderPicks(); }
   window.addEventListener('resize',()=>{renderScatter();renderBacktest();renderTicker(); if(D.picks) renderPicks();});
@@ -304,7 +424,7 @@ def render_parts(panel, daily, bbg, long=None, events=None, ss=None, leadlag=Non
         lw = long["weeks"]; llast = lw[-1]; lrow = long["panel"][llast]
         lhs = sorted(r["HOT"] for r in lrow.values() if r.get("HOT") is not None); lbs = sorted(r["BULL"] for r in lrow.values() if r.get("BULL") is not None)
         years = sorted({w[:4] for w in lw})
-        long_payload = {"backtest": long["backtest"], "quadrants": long["quadrants"], "latest": lrow, "weeks": lw, "years": years,
+        long_payload = {"asof": long.get("asof"), "backtest": long["backtest"], "quadrants": long["quadrants"], "latest": lrow, "weeks": lw, "years": years,
                         "medHOT": lhs[len(lhs) // 2] if lhs else 0, "medBULL": lbs[len(lbs) // 2] if lbs else 0}
         la15, lb15 = _bt(long["backtest"], "att", "15d"), _bt(long["backtest"], "BULL", "15d")
         lt15 = _bt(long["backtest"], "tone", "15d")
@@ -393,7 +513,7 @@ def render_parts(panel, daily, bbg, long=None, events=None, ss=None, leadlag=Non
 <h3>Every signal on this track at the chosen N — mean next-period relative return of the picks</h3>
 <div class="scroll" style="max-height:none"><table id="pk_tbl"></table></div>
 </section>"""
-    payload = {"weeks": weeks, "panel": panel["panel"], "names": panel["names"], "tickers": panel["tickers"], "backtest": bt, "quadrants": q, "horizons": H,
+    payload = {"asof": panel.get("asof"), "weeks": weeks, "panel": panel["panel"], "names": panel["names"], "tickers": panel["tickers"], "backtest": bt, "quadrants": q, "horizons": H,
                "top_handles": panel["top_handles"], "examples": examples, "medHOT": med_hot, "medBULL": med_bull, "long": long_payload, "events": ev_payload,
                "leadlag": leadlag, "picks": picks,
                "ss": ({"since": ss.get("since"), "emails": ss.get("emails"), "matched": ss.get("matched"), "firms": ss.get("firms", [])[:12]} if ss else None)}
@@ -415,9 +535,7 @@ def render_parts(panel, daily, bbg, long=None, events=None, ss=None, leadlag=Non
 Most bullish: {' · '.join(f"<b>{t}</b> {r_['BULL']:+.1f}" for t, r_ in top('BULL', True))} &nbsp;|&nbsp; Most bearish: {' · '.join(f"<b>{t}</b> {r_['BULL']:+.1f}" for t, r_ in top('BULL', False))}</div>
 </header>""",
         "warn": f"""<div class="warn">⚠ Read the own-corpus backtest as a <b>first look</b>: 14–17 weekly cross-sections, overlapping forward windows (t-stats overstate independence), one regime (the May–Aug 2026 AI up-leg), lexicon tone (not LLM-scored), and attention measured on the ~440 accounts the twitter-briefing routine follows. The Bloomberg track below is the longer, all-of-X check.</div>""",
-        "ranking": f"""<section><h2>Ranking — week ending <select id="wk"></select></h2>
-<div class="legend"><span><i style="background:var(--orange)"></i>HOT z (attention above own trailing 4w)</span><span><i style="background:var(--ink3)"></i>cold</span><span><i style="background:var(--blue)"></i>BULL z</span><span><i style="background:var(--red)"></i>BEAR</span><span>Click a header to sort. z-scores are cross-sectional within the week, clipped ±3.</span></div>
-<div class="scroll"><table id="tbl"></table></div><div class="note" id="tblnote"></div></section>""",
+        "ranking": RANKING_HTML + FORWARD_HTML,
         "map": f"""<section><h2>Map — where every name sits this week</h2>
 <div class="legend"><span><i style="background:var(--orange)"></i>hot-bull</span><span><i style="background:var(--blue)"></i>cold-bear</span><span><i style="background:var(--ink3)"></i>mixed quadrants</span><span>Hover a dot for the components. Quadrant cuts are the week's medians.</span></div>
 <svg id="sc" height="440"></svg></section>""",

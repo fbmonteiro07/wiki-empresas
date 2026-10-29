@@ -1,0 +1,156 @@
+{
+  "version": 1,
+  "updated_at": "2026-10-28T20:36:15-03:00",
+  "last_online_check": "2026-10-28T20:16:03-03:00",
+  "last_run_offline": true,
+  "source_failures": [],
+  "source_dates": {
+    "KCS": "2026-10-28T20:16:08-03:00",
+    "BOK": "2026-10-28T20:18:24-03:00",
+    "InSpectrum": "2026-10-28T20:22:22-03:00"
+  },
+  "source_errors": {},
+  "signals": {
+    "CONTRACT_D4": {
+      "period": "2026-09",
+      "value": 4.189258830557185,
+      "level": 656.3321923256301,
+      "basis": "MoM, complete month",
+      "product": "DRAM",
+      "stale": false
+    },
+    "CONTRACT_D5": {
+      "period": "2026-09",
+      "value": 1.815409378309818,
+      "level": 1022.2295549500924,
+      "basis": "MoM, complete month",
+      "product": "DRAM",
+      "stale": false
+    },
+    "CONTRACT_NAND": {
+      "period": "2026-09",
+      "value": 0.3144050199038073,
+      "level": 426.98933876117604,
+      "basis": "MoM, complete month",
+      "product": "NAND",
+      "stale": false
+    },
+    "BOK_DRAM": {
+      "period": "2026-09",
+      "value": 2.2597871061286634,
+      "level": 289.16,
+      "basis": "MoM, complete month",
+      "product": "DRAM",
+      "stale": false
+    },
+    "BOK_FLASH": {
+      "period": "2026-09",
+      "value": -0.691104554823585,
+      "level": 245.72,
+      "basis": "MoM, complete month",
+      "product": "NAND",
+      "stale": false
+    },
+    "KCS_DRAM": {
+      "period": "2026-09",
+      "value": -18.85021556066453,
+      "level": 71836.02373836418,
+      "basis": "MoM, complete month",
+      "product": "DRAM",
+      "stale": false
+    },
+    "KCS_FLASH": {
+      "period": "2026-09",
+      "value": -22.013229120531484,
+      "level": 78653.22676845998,
+      "basis": "MoM, complete month",
+      "product": "NAND",
+      "stale": false
+    },
+    "KCS_NAND_TORN": {
+      "period": "2026-09",
+      "value": -3.7554779989799947,
+      "level": 2255.8827261984825,
+      "basis": "MoM, complete month",
+      "product": "NAND",
+      "stale": false
+    },
+    "ISPPDR37 Index": {
+      "period": "2026-10",
+      "through": "2026-10-28",
+      "value": -2.92732916487205,
+      "level": 32.68,
+      "basis": "Partial monthly mean versus prior complete month",
+      "product": "DRAM",
+      "stale": false
+    },
+    "ISPPDR47 Index": {
+      "period": "2026-10",
+      "through": "2026-10-28",
+      "value": 2.868692557244401,
+      "level": 50.71529411764706,
+      "basis": "Partial monthly mean versus prior complete month",
+      "product": "DRAM",
+      "stale": false
+    },
+    "ISPPN256 Index": {
+      "period": "2026-10",
+      "through": "2026-10-28",
+      "value": 7.85558404487483,
+      "level": 15.291764705882354,
+      "basis": "Partial monthly mean versus prior complete month",
+      "product": "NAND",
+      "stale": false
+    },
+    "ISPPN512 Index": {
+      "period": "2026-10",
+      "through": "2026-10-28",
+      "value": -5.873301209113402,
+      "level": 19.574117647058824,
+      "basis": "Partial monthly mean versus prior complete month",
+      "product": "NAND",
+      "stale": false
+    },
+    "ISPPND1T Index": {
+      "period": "2026-10",
+      "through": "2026-10-28",
+      "value": -4.62104336604412,
+      "level": 29.607058823529414,
+      "basis": "Partial monthly mean versus prior complete month",
+      "product": "NAND",
+      "stale": false
+    }
+  },
+  "october_bok": {
+    "BOK_DRAM": null,
+    "BOK_FLASH": null
+  },
+  "events": [
+    {
+      "id": "7e4a85eac0d1d42f6a84",
+      "kind": "source_failure",
+      "label": "Source refresh needs attention",
+      "evidence": {
+        "failed_steps": [
+          "motie_release"
+        ]
+      },
+      "status": "reviewed",
+      "detected_at": "2026-10-28T16:35:02-03:00",
+      "reviewed_at": "2026-10-28T16:35:49-03:00",
+      "review_note": "Initial refresh: auxiliary MOTIE HTTP 404; September retained. BOK and InSpectrum succeeded. Reported during setup; repeat only if monitoring deteriorates or a new failure occurs.",
+      "notified": true
+    }
+  ],
+  "schedule": {
+    "id": "mem-ria-coreana-exporta-es-e-asp",
+    "status": "ACTIVE",
+    "display": "Weekdays · 09:00 & 16:00 · São Paulo",
+    "timezone": "America/Sao_Paulo",
+    "rrule": "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR;BYHOUR=9,16;BYMINUTE=0;BYSECOND=0",
+    "thread_id": "01a182bf-98c2-7c62-8e15-05589f9172be",
+    "dependencies": "Workstation and Codex running; Bloomberg authenticated for spot data"
+  },
+  "outlook_as_of": "2026-10-28",
+  "outlook_review_required": false
+}

@@ -1,0 +1,33 @@
+{
+  "as_of": "2026-10-28 morning America/Sao_Paulo, before Q3 results",
+  "inputs_bn": {
+    "historical_reported_commitment_PARTIAL": 200,
+    "Q1_Cloud_RPO_HARD": 462.3,
+    "Q1_Alphabet_RPO_HARD": 467.6,
+    "Q2_Cloud_RPO_HARD": 513.9,
+    "Q2_Alphabet_RPO_HARD": 519.5,
+    "S1_Google_minimum_HARD": 114.5,
+    "JEF_frontier_deals_source_HARD_broker_estimate": 200,
+    "JEF_total_source_HARD_broker_construction": 520
+  },
+  "derived_percent": {
+    "historical_200_over_Q1_cloud": 43.26195111399524,
+    "historical_200_over_Q2_cloud_not_updated_numerator": 38.91807744697412,
+    "historical_200_over_Q2_total": 38.498556304138596,
+    "JEF_reproduction": 38.46153846153847,
+    "S1_floor_over_Q2_cloud_scale_only_not_RPO_floor": 22.280599338392683
+  },
+  "sensitivity": {
+    "each_10bn_change_in_unverified_RPO_numerator_percentage_points_at_fixed_Q2_cloud": 1.945903872348706
+  },
+  "calibration": "Direct ratios; no unknown conversion coefficient. No consumption, contract amendment, allocation or netting plug inserted.",
+  "guardrails": {
+    "arithmetic": "PASS",
+    "units": "USD bn / USD bn, stock scale comparison only",
+    "customer_scope": "PARTIAL: Google gives no Anthropic RPO split",
+    "timing": "FAIL for current point estimate: Oct S1 amendments through Aug vs June RPO; old May press numerator not rolled forward",
+    "additional_TPU": "125-150bn multiple TPU providers including Google, conditional, excluded from commitment table",
+    "double_count": "No sums of 200,114.5,88,125-150,161.2,128.1 or financing proceeds used as RPO",
+    "independence": "MS/GS/JEF desk and BofA May report all relay Information; JEF chart not independent contract verification"
+  }
+}

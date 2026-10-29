@@ -1,0 +1,296 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-28",
+  "reviewer": "Independent double-check agent /root/sentiment_skeptic",
+  "fingerprint": "fc86371b6c3f87c47c869294fe67897c3e3f685957d84b09a61dcf1f5f98ab5f",
+  "status": "PARTIAL",
+  "summary": "Approved for descriptive retrospective research including frozen train2024–2025/pair validation2026. Independent reconstruction completed379,486 checks with zero discrepancies:all384 training choices,24,930 ledger rows,759 paired contrasts and638 direct2,000-draw block bootstrap runs. All15,734 raw TRI returns and exact windows rechecked.253 cases qualified in training;38 outperformed all benchmarks in observed2026;93 had full validation support;0 passed every incremental gate. Data vintages,current membership,previously examined2026 and approximate local inference prevent a validated forecasting claim.",
+  "scope": "Existing portfolio,individual-indicator and pooled studies plus24 pair orientations/8 singles,train-only deterministic selection,frozen2026 rules,exact10bp-per-side accounting,shared missing-aware ledgers,paired increments vs selected single and both components,Holm12/Monte Carlo/leave-one-out gates,exposure benchmarks,source hashes,CSV reproducibility and historical-replay hiding.",
+  "validation": {
+    "automated_tests": "34 Python tests;all four Node suites:comparison,relative,rawranking,pair. Pair suite covers384 trainorders,253 ledgers/componentincrements,20d suppression,freeze manifest,exports and replay. JSsyntax passed.",
+    "matched_primary_holds": {
+      "2024": 12,
+      "2025": 12,
+      "2026": 10
+    },
+    "missing_outcome_exclusions": 0,
+    "price_cross_checks": 1070,
+    "price_discrepancies": 0,
+    "independent_first_2026_tes_holdings": [
+      "WDC",
+      "MU",
+      "SNDK",
+      "LRCX",
+      "RDDT",
+      "CRM",
+      "GEV",
+      "CIEN",
+      "TSM",
+      "COHR",
+      "TER",
+      "ON",
+      "SHOP"
+    ],
+    "independent_2026_net_returns": {
+      "tes": 0.774948414,
+      "te": 0.866606364
+    },
+    "corrections": [
+      "US eligibility uses trading currency and listing identifiers, not reporting currency.",
+      "Exact self-financing transaction costs.",
+      "Both fixed-fiscal estimate observation dates retained.",
+      "Missing realized outcomes fail the research guardrail.",
+      "Review bound to model, template, fetcher and source hashes.",
+      "Historical replay filters evidence before truncation and selects the correct annual trade ledger.",
+      "Incremental return units are percentage points.",
+      "Input lag and freshness sensitivities explicitly labeled as 10 bps scenarios."
+    ],
+    "company_display_matches": 1642,
+    "company_missing_outcomes": 0,
+    "company_js_checks": [
+      "Future outcomes excluded at replay cutoff",
+      "Null selected scores excluded",
+      "Missing outcomes counted",
+      "30/70 boundaries classified exactly",
+      "Relative outcomes subtract QQQ"
+    ],
+    "nvda_2026_20d_tes_buckets": {
+      "low_n": 0,
+      "middle_n": 10,
+      "high_n": 0,
+      "middle_mean_gross": 0.0187697235,
+      "middle_positive": 6
+    },
+    "comparison_peer_groups_verified": 107,
+    "comparison_nvda_2026_10_27": {
+      "score": 48.34452,
+      "history_n": 49,
+      "history_median": 50.90025,
+      "history_percentile": 34.693877551,
+      "peer_tickers": [
+        "AMD",
+        "AVGO"
+      ],
+      "peer_scores": [
+        53.63287,
+        56.79297
+      ],
+      "peer_median": 55.21292,
+      "peer_percentile": 0,
+      "peer_n": 2
+    },
+    "comparison_checks": [
+      "Current and future snapshots excluded from own history",
+      "Ties receive half weight; nulls excluded per metric",
+      "History minimum 8 readings; small peer groups labelled",
+      "Peer deduplication, self-exclusion, unknown names and empty custom baskets",
+      "Every current competitor edge and named-sector fallback independently verified",
+      "Browser: historical replay, window changes, indicator changes, peer add/remove/reset and empty basket"
+    ],
+    "relative_backtest": {
+      "master_slots": 16512,
+      "observed_returns_and_score_matches": 15734,
+      "retained_unavailable_rows": 778,
+      "independent_company_summaries": 16,
+      "independent_date_cluster_cases": 18,
+      "raw_return_tolerance": 5e-08,
+      "nvda_2026_high_minus_low": {
+        "5": {
+          "own": -0.0030711,
+          "peer": -0.033194
+        },
+        "20": {
+          "own": -0.0784925,
+          "peer": -0.0953017
+        }
+      },
+      "browser_checks": [
+        "5/20 cards and joint matrix",
+        "All-years and QQQ-relative basis",
+        "Early replay excludes all future exits",
+        "13-week history recomputes own percentiles",
+        "Adding MU recomputes NVDA peer outcomes; reset restores defaults",
+        "AMD earnings indicator changes company results"
+      ]
+    },
+    "individual_rankings": {
+      "period": "2024-latest",
+      "companies": 96,
+      "classifications": 1536,
+      "independently_reconstructed_rows": 1536,
+      "raw_event_fields": 56308,
+      "weekly_reference_fields": 57940,
+      "tri_returns": 15734,
+      "independent_full_row_bootstrap_calculations": 108,
+      "bootstrap_case_companies": [
+        "NVDA",
+        "BKNG",
+        "CRM",
+        "MDB"
+      ],
+      "maximum_samples": {
+        "5": 138,
+        "20": 34
+      },
+      "gate_pass_counts": {
+        "sample": 1063,
+        "intervals": 66,
+        "outlier": 638,
+        "years": 155,
+        "prior_direction": 286,
+        "multiple_tests": 0
+      },
+      "status_counts": {
+        "Weak / unstable": 1005,
+        "Sparse": 473,
+        "Some consistency": 52,
+        "MC borderline": 6,
+        "Within-company screen passes": 0
+      },
+      "source_refresh": "All current input hashes matched actual refreshed payload. Initial pooled fixture vs refreshed artifact had zero changes to samples, classifications or gates; only rounding-level spread differences.",
+      "browser_checks": [
+        "Full-history default",
+        "NVDA own131/32 and peer138/34",
+        "Prior2026 remains40/10",
+        "Full-history96company overview",
+        "Robustness scan and near-five-gate examples"
+      ],
+      "export_checks": [
+        "All16 rankings",
+        "1377 rows including header in NVDA pooled observation ledger",
+        "Basis/window/peers/period/cutoff/source-days metadata"
+      ]
+    },
+    "pair_test": {
+      "cases": 384,
+      "qualified_training_cases": 253,
+      "insufficient_validation_cases": 160,
+      "no_qualified_pair_cases": 131,
+      "fully_supported_validation_cases": 93,
+      "observed_beats_all": 38,
+      "passes": 0,
+      "independent_checks": 379486,
+      "training_choices_reconstructed": 384,
+      "ledger_rows": 24930,
+      "contrasts": 759,
+      "independent_bootstrap_runs": 638,
+      "draws_per_run": 2000,
+      "raw_tri_windows": 15734,
+      "source_hash_drift": 0,
+      "selection_hash": "d28ee7143bb04dbc2e2624fdb3e579e1811d243ff2564b7f1df940016bd81171",
+      "future_poison_test": "Changing2026 features/returns leaves all frozen selection identities unchanged.",
+      "browser_checks": [
+        "Own andpeer rules",
+        "Company switching preserves pair tab",
+        "Expanded component comparisons",
+        "Historical replay hides all frozen2026 outcomes",
+        "Train-order runner-ups remain descriptive"
+      ],
+      "exports": [
+        "Summary includescutoff,cost,reference,peers,selectionhash",
+        "Fullledger includespositions,dates,rawpercentiles,netreturns,componentpositions",
+        "Frozenrulemanifest matches selection hash"
+      ]
+    }
+  },
+  "limitations": [
+    "Original publication availability and consensus constituent vintages are not certified.",
+    "Current watchlist projected backward creates survivorship and selection bias.",
+    "All years are retrospective; no genuine out-of-sample result.",
+    "Exploratory confidence intervals are unadjusted for multiple testing.",
+    "Sector and factor exposures are not neutralized.",
+    "Sell-side and curated X archives are selective and retrospectively classified.",
+    "Peer groups use current wiki classifications; historical membership and equal fiscal time-to-maturity are not established.",
+    "Relative-context confidence intervals are exploratory and unadjusted for multiple comparisons.",
+    "Twenty-session annual samples are too short for reported intervals; five-session peer results can depend on block length.",
+    "Conditional returns are gross associations, without a net trading strategy or risk-factor-neutral attribution.",
+    "Raw-indicator Holm16 is within-company only; no cross-company/manual-selection/period correction.",
+    "Centered-bootstrap p-values are approximate; propagated Wilson ranges diagnose simulation precision rather than simultaneous statistical confidence.",
+    "X observations cover vendor-observed weekdays; counts do not certify complete weekend or all-X coverage.",
+    "Rank is absolute historical high-minus-low effect, with direction selected retrospectively; volatility and stock visibility can affect ranking.",
+    "No default2026 classification passing all gates is not proof that every effect is zero.",
+    "Pooling2024-latest was user-requested after observing2026 results; it increases sample size but creates no untouched validation period. Annual schedule resets/year-end exclusions and52-week rolling reference remain unchanged.",
+    "Pairselection uses only2024–2025 computations, but2026 was previously examined and does not constitute an untouched holdout.",
+    "Pair netreturn selection may favor market exposure;cash earns zero and10bp-per-side costs are scenarios. Always-active reference and activity are disclosed.",
+    "The fixed12 family covers chosen pair vs three benchmarks across axes/horizons within each company, not global96company discoveries; duplicate comparators are not independent evidence.",
+    "All-cash resamples remain valid zero increments. Unavailable statistics are not recoded as zero. Twenty-session2026 samples remain at most10holds."
+  ],
+  "prior_review": {
+    "reviewed_at": "2026-10-28",
+    "fingerprint": "5e778c3f29f2c6127290491af1c9803b5f479c24b87848a91b774d3017daf588",
+    "status": "PARTIAL",
+    "summary": "Approved for retrospective research only. Independent reconstruction matched the first 2026 portfolio and exact-cost compounded returns; 1,070 price comparisons matched. Corrected X addition is negative in 2024–2026. Original data vintages, historical universe selection and selective text classification remain uncertified. Sell-side addition is positive at 20 sessions but negative at 5; prospective validation is required."
+  },
+  "prior_company_review": {
+    "reviewed_at": "2026-10-28",
+    "fingerprint": "d6412e32b5a758d2f869f903ef53702a6feca0f4a3d88f06466d28431ea1a512",
+    "status": "PARTIAL",
+    "summary": "Approved for descriptive company research. All single-stock windows have correct timing and non-overlap; 1,642 event records match displayed scores. Independent raw-data reconstruction reproduced all ten NVDA 2026 composite scores and its outcome buckets. Future outcomes and null scores are excluded from replay. Existing portfolio results are unchanged. Historical vintages, watchlist selection and small samples still prevent predictive claims.",
+    "scope": "Existing portfolio model plus single-company descriptive studies, exact display-rank consistency, source hashes, future-outcome handling, presentation and responsive UI. Not an exhaustive audit of every company email or filing."
+  },
+  "prior_comparison_review": {
+    "reviewed_at": "2026-10-28",
+    "fingerprint": "0c7fe05c0334999982e9d8c75709ebe508c94861d61bd59ef123dad11b127804",
+    "status": "PARTIAL",
+    "summary": "Approved for descriptive company research, including own-history and selected-peer comparisons. Independent reconstruction matched NVDA score and raw-input percentiles, all 107 peer groups, strict historical windows and missing-value handling. Previous portfolio and single-company outcome checks remain valid. Historical vintages, current peer membership, fiscal horizons and small samples limit interpretation; predictive value remains unestablished.",
+    "scope": "Existing portfolio model, single-company studies, own-history and peer comparison calculations, peer provenance, replay timing, missing values, source hashes and responsive presentation. Not an exhaustive audit of every company email or filing."
+  },
+  "prior_relative_backtest_review": {
+    "reviewed_at": "2026-10-28",
+    "fingerprint": "de98c8352fce433cf4900c6f32ccc2344d6b0ed0a04b7bcf474a5f78fab142be",
+    "status": "PARTIAL",
+    "summary": "Approved for descriptive retrospective research. Independent reconstruction matched all 15,734 observed company returns from raw Bloomberg total-return indices, exact event-date scores, 16 NVDA relative-context summaries and 18 TES date-cluster tests, including both bootstrap block lengths. Full schedules retain 778 unavailable company rows. Replay excludes future outcomes. Sample size, current membership, vintages, multiple comparisons and resampling sensitivity prevent predictive validation.",
+    "scope": "Prior portfolio and company comparisons plus own-history/peer percentile forward-return tests at 5/20 sessions, matched baselines, fixed schedules, missing placeholders, date-cluster and company bootstrap intervals, double-block sensitivity, source hashes and UI. No claim of exhaustive email/filing coverage or validated prediction."
+  },
+  "prior_2026_indicator_review": {
+    "reviewed_at": "2026-10-28",
+    "fingerprint": "820c5c2ab0522f5eb52c991bf85e93a636307308f48fd12b3a0895559cf7faec",
+    "status": "PARTIAL",
+    "summary": "Approved for descriptive retrospective research. Independent reconstruction matched56,308 raw event fields and57,940 weekly reference fields from Bloomberg caches (maximum difference5e-8; counts exact),64 full ranking rows including both2,000-draw block tests and every robustness gate, and all1,536 classifications across96 companies. No default2026 row passes all six within-company gates; this does not prove all effects are zero. Prior portfolio and relative-context checks remain valid. Original vintages, current membership, approximate inference and retrospective selection prevent predictive validation.",
+    "scope": "Prior portfolio/company/relative comparisons plus separate raw RSI14, fixed-FY EPS revision28d, observed X tone and count rankings on common dates/references, 5/20-session outcomes, local Holm16 and Monte Carlo checks, extreme-event leave-one-out, year consistency, replay, exports and UI. No global significance or company-fundamental coverage claim.",
+    "rankings": {
+      "companies": 96,
+      "classifications": 1536,
+      "raw_event_fields_independently_rebuilt": 56308,
+      "weekly_reference_fields_independently_rebuilt": 57940,
+      "max_raw_difference": 5e-08,
+      "independent_full_ranking_rows": 64,
+      "independent_company_sample": [
+        "NVDA",
+        "LRCX",
+        "MRVL",
+        "TSEM"
+      ],
+      "bootstrap_draws_per_length": 2000,
+      "status_counts": {
+        "Weak / unstable": 429,
+        "Sparse": 1059,
+        "Some consistency": 40,
+        "MC borderline": 8,
+        "Within-company screen passes": 0
+      },
+      "browser_checks": [
+        "Default2026 own-history rankings",
+        "Peers and all-years history",
+        "Stock-minus-QQQ displays percentage points",
+        "Company switching stays in ranking view",
+        "All96 searchable overview",
+        "Historical replay suppresses future outcomes and overview",
+        "Unavailable high-low pair labels",
+        "Current title and badges"
+      ],
+      "export_checks": [
+        "Ranking16rows and401-row observation file including header for NVDA2026",
+        "Selected basis,window,peer basket,period,cutoff preserved",
+        "Observed X source days included in event ledger"
+      ]
+    }
+  },
+  "prior_pooled_indicator_review": {
+    "reviewed_at": "2026-10-28",
+    "fingerprint": "ef51bb50b011d1f6a52a3da57601ab614fc0cb349ac7f28a040ef3ffac0c61e6",
+    "status": "PARTIAL",
+    "summary": "Approved for descriptive retrospective research using pooled2024-latest outcomes. Independent audit of refreshed caches reproduced56,308 raw event fields,57,940 weekly fields and15,734 TRI returns; all1,536 pooled ranking rows across96 companies and108 complete-row bootstrap calculations matched. No test passes all six unchanged within-company gates; maximum sample138 five-session/34 twenty-session holds. Source refresh changed no ranking classification. Zero passes does not establish zero effects. Vintages,current membership,retrospective selection and approximate local inference still prevent predictive validation.",
+    "scope": "Same raw-indicator design and thresholds as prior2026 run; user-requested extension to all available completed2024-latest outcomes. Includes all96 company rankings, both axes and horizons, sample/reference matching, local Holm16/Monte Carlo checks, leave-one-out, year and prior-direction gates, scan summary, annual selector, exports and refreshed-cache reconciliation."
+  }
+}

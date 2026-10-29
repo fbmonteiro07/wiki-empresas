@@ -1,0 +1,67 @@
+Morning Analyst Inbox — 2026-10-28
+
+Bottom line: focus on SK hynix, CLS, STX, ORCL and the GOOG/MSFT earnings pair. Demand remains strong; the useful distinctions are cash conversion, contract quality and the expectations already embedded in valuations.
+
+Book prioritization is provisional: the July 1 portfolio file remains an eight-name seed with unknown weights. Bloomberg data are the October 27 on-disk snapshot, not a live October 28 pull.
+
+Evidence key: E = _wiki/_meta/analyst-evidence/2026-10-28-morning-source-checks.json. “supp-” IDs are supplemental research signals, not engine alerts. Paths below are repository-relative.
+
+FIVE PRIORITIES
+
+1. SKHYNIX — Stronger cash-return case; do not turn price bands into unlimited pricing power.
+Evidence: SK hynix’s October 28 release reports KRW83.33tn operating profit and announces approximately KRW100tn of FY26 shareholder returns. Signed LTAs cover more than half of 2027–28 capacity, with prices moving within agreed ranges. This supersedes the floor-only/no-ceiling rumor. The company targets HBM4 overtaking HBM3E in volume and revenue in Q4; that is guidance, not delivery. [Company release](https://news.skhynix.com/en/q3-2026-business-results/)
+Inference/action: prioritize the contractual downside protection and HBM4 ramp over another industry-TAM upgrade. Obtain the price-band mechanics, customer/SKU qualifications and capex phasing. The return program is not a KRW100tn Kioxia special dividend, and repurchases are not synonymous with cancellations.
+Falsifier: HBM4 crossover slips, or pricing protection fails to sustain cash generation as investment rises.
+Signals: supp-20261028-skhynix; cata-efa95e3ca884 is already resolved, not an upcoming event.
+Evidence: E.skhynix; _wiki/_meta/reconciliation-2026-10-28-skhynix.md; _wiki/_data/figures/20261028_SKHYNIX_3Q26_official-release.md.
+
+2. CLS — Yesterday’s missing cash framework now has an answer—and a financing test.
+Broker evidence: JPM / Joseph Cardoso, Manmohanpreet Singh and Marc Vitenzon, October 28, relays management’s expected net cash outflow in 2027 and return to positive FCF in 2028. JPM estimates approximately negative $3bn in 2027; that magnitude is JPM’s estimate, not company guidance. Redburn / Mike Harrison and Ayana de Zoysa, October 28, raises FY27 EPS forecasts 20% and PT $450→$477, calling cash conversion reassuring.
+Inference/action: challenge the reassurance. Build a quarterly bridge from inventory, receivables, customer advances and capex to liquidity; distinguish committed facilities from hoped-for working-capital release. More growth can deepen the funding trough before improving earnings.
+Falsifier: the 2028 cash inflection slips or financing requirements exceed available liquidity.
+Signal: supp-20261028-cls. Evidence: E.cls. The analyst-day statements are broker relays; the full primary call/deck was not reviewed. No CLS company page exists.
+
+3. STX — Cash generation is real; multiple expansion is a separate thesis.
+Company evidence, October 27: revenue $4.233bn, non-GAAP EPS $7.68 and FCF $1.5bn; December-quarter non-GAAP EPS guidance $9.20 ± $0.20. [Seagate results](https://investors.seagate.com/news/news-details/2026/Seagate-Technology-Reports-Fiscal-First-Quarter-2027-Financial-Results/default.aspx)
+Broker disagreement, October 28: JPM / Cardoso et al. raises FY27/FY28 EPS estimates on pricing and expects shipment acceleration. UBS / Timothy Arcuri and Aaryan Wadhwa still sees Street estimates as too low but cuts its CY28 EPS $111.63→$107.41 and PT $780→$750, retaining a 7x multiple and a cyclical caution.
+Inference/action: test whether the weaker shipment quarter is transition timing, while stress-testing a supply response and lower exit multiple. An earnings upgrade alone does not refute UBS’s valuation case.
+Falsifier: the expected shipment step-up fails, or industry capacity growth erodes pricing despite strong reported demand.
+Signal: supp-20261028-stx. Evidence: E.stx; _wiki/STX.md.
+
+4. ORCL — Today’s investor day must reconcile funding with delivery.
+Broker evidence: BofA sales / Claudio Franco, relaying Tal Liani’s preview, October 28, carries FY27/FY28 capex around $92bn/$106bn and FCF negative $33bn/$38bn. These are forecasts, not new company guidance. MS credit / Lindsay Tyler and Benjamin Guerrero, October 26, expects funding and investment-grade reassurances but remains cautious about contractual mismatch.
+Inference/action: require a dated funding bridge, customer-payment versus supplier-payment schedule, lease-adjusted leverage, and site-delivery milestones. Higher long-term revenue targets without those bridges would not settle the bear case.
+Falsifier: binding funding, matched cash obligations and credible capacity milestones remove the anticipated financing/execution shortfall.
+Signals: cata-9f2e588078f2; supp-20261028-orcl.
+Evidence: E.orcl; _wiki/_meta/analyst-evidence/2026-10-27-morning-source-checks.json; _wiki/_meta/reconciliation-2026-10-23-inbox.md.
+
+5. GOOG / MSFT — Freeze the buy-side hurdles before tonight’s prints.
+Sales evidence, not consensus fact: BofA / Claudio Franco’s October 28 poll puts GOOG Cloud growth at 101.1% versus its quoted Street 91%, and MSFT Azure constant-currency growth at 46% versus 44%. The same note says investors are braced for a Search miss, yet its Search poll is 15% versus Street 14.6%: “low expectations” is not uniform across investors or segments.
+New reported catalyst: The Information / Ryan Barwick, October 27, says OpenAI plans to buy Google TPUs. Only the publisher’s email excerpt was accessible; financial terms and delivery details are undisclosed.
+Inference/action: separate organic cloud consumption from TPU hardware sales, and reconcile Azure’s new reporting definition before scoring growth. Ask whether incremental growth improves cash returns. Do not add OpenAI TPU revenue without confirmed scope and timing.
+Falsifier: normalized cloud growth misses these hurdles while investment rises, or the reported TPU purchase fails to become a confirmed commercial commitment.
+Signal: supp-20261028-cloud. Evidence: E.cloud; _wiki/GOOG.md; _wiki/MSFT.md; _wiki/themes/ai-compute-deals.md, OAI-GOOG-TPU-20261027.
+
+MODEL ADJUDICATION
+
+• GOOG: the engine still labels house revenue 18%/16% above consensus for 2026/2027. Keep those comparisons quarantined pending a gross-versus-ex-TAC field bridge; a newer snapshot does not fix a definition mismatch. Sources: Capstone model dated June 5; Bloomberg October 27. Signals esti-880bbec74d84 / esti-d5b9131fbdc7; _wiki/_data/house.json, estimates.json and _wiki/GOOG.md.
+• CRWV: house EPS of −$3.27/−$1.83 is less negative than Bloomberg’s −$3.94/−$2.18 for 2026/2027. The engine’s “below consensus” language is directionally wrong; do not treat it as a bearish earnings gap. Sources: Capstone model October 14; Bloomberg October 27. Signals esti-d70a1d511b1d / esti-dc182f662d3b; same JSON paths.
+• CLS: keep management’s cash direction separate from JPM’s −$3bn magnitude. STX: keep JPM fiscal-year upgrades separate from UBS’s calendar-2028 cut. Both require reconciled periods and drivers, not averaged forecasts. Signals/evidence above.
+
+NARRATIVE AND CATALYSTS
+
+My read: the divide is increasingly between earnings strength and the cash/valuation attached to it. SK hynix adds contractual visibility and returns; CLS asks investors to finance an investment year; STX shows why strong earnings need not produce a higher multiple. The reported OpenAI TPU interest strengthens a diversification narrative, not yet booked demand.
+
+Today: ORCL investor day; GOOG and MSFT results after close. Prepare the funding and normalized-growth scorecards above. [Oracle calendar](https://investor.oracle.com/Financial-Analyst-Meeting-2026/default.aspx); [Microsoft IR](https://www.microsoft.com/en-us/investor/default); GOOG date: BofA / Franco, October 28.
+
+Two actionable callbacks today: MS / Erik Woodring on STX at 9am ET; JPM / Joseph Cardoso on CLS/GLW at 11:45am ET (invitations dated October 27). Ask about shipment timing/supply response and the quarterly liquidity trough, respectively. Evidence: E.calendar; signals supp-20261028-stx / supp-20261028-cls.
+
+Tomorrow: AMZN reports October 29. BofA / Franco’s October 28 poll has AWS growth 40.2% versus quoted Street 38.3%; prepare AWS growth and capex/FCF together, not headline EPS alone. Signal supp-20261028-amzn; E.calendar.
+
+WHAT CHANGED VERSUS YESTERDAY
+
+SK hynix reported and clarified LTAs/returns; CLS supplied the previously missing cash-flow direction; STX reported strong cash generation but divergent broker revisions; the OpenAI–Google TPU purchase report is new. Oracle is still pre-event.
+
+Today’s rebuilt engine is unchanged versus yesterday’s published morning at 34 active signals / 3 high / 28 focus names. Against yesterday’s later saved snapshot of 36 / 3 / 28, it adds the NXPI overdue-outcome flag and removes the SKHYNIX belief-change flag plus FLEX and NXPI catalyst entries. Zero current belief flags does not mean no material news.
+
+Company pages and house models were not edited. The compute-deal timeline records the TPU item as an unconfirmed reported plan, without additive dollars or MW; narrow CLS/STX outcomes are logged. Research coverage was targeted, not an exhaustive review of every report or transcript.
