@@ -9,13 +9,13 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\MU` (filings + transcr
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $168.6bn | $294.6bn |
-| Gross profit | $140.6bn | $254.3bn |
+| Revenue | $169.0bn | $296.0bn |
+| Gross profit | $140.9bn | $255.4bn |
 | Gross margin | 83.4% | 86.3% |
-| EBITDA | $144.7bn | $265.1bn |
-| EPS | $99.74 | $187.84 |
-| Capex | $35.2bn | $62.7bn |
-| OCF (≈EBITDA) | $144.7bn | $265.1bn |
+| EBITDA | $144.9bn | $265.2bn |
+| EPS | $99.72 | $187.93 |
+| Capex | $35.3bn | $65.1bn |
+| OCF (≈EBITDA) | $144.9bn | $265.2bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
@@ -490,6 +490,11 @@ _Sources: **sell-side analyst call (broker unconfirmed; 'Natalia'/'Gianmarco'), 
 
 ## Debate / thesis
 
+**🆕 2026-10-30 — UBS · ARCURI ON THE INTEL RECAP CALL, THIRD WEEK RUNNING: *"IF YOU WANNA BUY SOMETHING FOR SERVER, BUY MICRON"*, AND THE PC SNAPBACK IS CAPPED BY DRAM.**
+_Source: Tim Arcuri (UBS), moderated by Rob Ruple (UBS sales) @ UBS Semis Earnings Recap Call (ALGM/ENTG/INTC), 2026-10-30 — Capstone notes (Notion transcript) ([source](../_equity_calls/Semis/2026-10-30_UBS_INTC-ENTG-3Q26-recap-call-Arcuri-Ruple.md)). ⚠️ Analyst view on a sales-hosted INTC call, machine transcript; no MU mark set (UBS Buy, PT $1,625 unchanged). Recurring series: 10-26 block directly below._
+- **Server is memory-bound:** server-CPU TAM ~+30% next year, *"all constrained by memory… the server TAM will be as large as memory will allow it to be out into 2030. That's why if you wanna buy something for server, buy Micron."* This repeats the 10-26 framing below (*"as large as memory supply allows"*) with no new number.
+- **PC is DRAM-constrained too:** *"people might try to bake in this huge snapback in PC, but like the whole industry's constrained by DRAM"*. He expects only *"some recovery into the back half of the year"* (INTC read-through in [[INTC]]).
+
 **🆕🔭 2026-10-26 — UBS · ARCURI, ONE WEEK LATER ON THE SAME SALES-HOSTED SERIES: MICRON IS STILL THE BEST RISK/REWARD "IF… YOU DIDN'T GIVE ME ANY TIME HORIZON" — BUT THE SPOKEN DOWNSIDE HAS SLIPPED TO *"$750, MAYBE $700"* (FROM AN *"$800… FLOOR"* ON 10-19), AND THE CPU-TAM NOTE IS PITCHED AS A MICRON NOTE: *"THE TAM WILL BE AS LARGE AS MEMORY SUPPLY ALLOWS IT TO BE"*.**
 _Source: Tim Arcuri (UBS) @ UBS SemiBytes semis update call (host Rob Ruple), 2026-10-26 - Capstone notes (Notion transcript) ([source](../_equity_calls/Semis/2026-10-26_UBS_SemiBytes-call-SMH-prices-20GW-cut-CPU-TAM-memory-bound-Arcuri-Ruple.md)). ⚠️ SELL-SIDE ANALYST VOICE on a sales-hosted call, Notion machine transcript — the published UBS mark is unchanged (Buy, PT $1,625 set 2026-05-26; see the 10-26 note block in `## Intra-quarter`); downside / upside / book figures are spoken working numbers, not estimates. Recurring series: prior vintage = the 10-19 block directly below._
 - **Risk/reward marks, both vintages carried:** *"Micron probably has downside to $750, you know, maybe $700 and it has upside to eventually $2,000. Now, like, that's not my price target. My price target's $1,625, but eventually I think it's going there"*; *"Micron at sub-$900 is incredibly attractive"* (BBG px $903.70, consensus PT $1,629 — `_data/estimates.json` 2026-10-26). ➤ **10-19 → 10-26:** *"an $800… floor"* (2x of ~$400 BVPS) → downside $700-750 (spoken *"$750, you know, maybe $700"*); the *"eventually $2,000"* is new and explicitly not a PT. Near term still *"going to be a battleground… as people suss out duration"*.
@@ -815,6 +820,7 @@ _Source: MU earnings calls (dates above); management commentary, paraphrased._
 
 ## Changelog
 
+- 2026-10-30 — ingest (Notion, 2026-10-30_UBS_INTC-ENTG-3Q26-recap-call-Arcuri-Ruple.md): 1 short Debate block (2 bullets): Arcuri's "server TAM as large as memory allows into 2030 → buy Micron" and "the whole [PC] industry's constrained by DRAM", both analyst views. No mark or number superseded (UBS Buy / PT $1,625 unchanged).
 - 2026-10-28 — verification (transcription QA): CASPA 10-24 row, the *"screw Apple over in the … upside of the cycle"* line [00:22:29] was given to Patel → speaker UNCONFIRMED (the turn has unlabelled interjections and follows Rasgon's pricing remarks). All other quotes and timestamps match the transcript.
 - 2026-10-27 — run-inbox: GS/TrendForce memory expert session (GS · Lee/Takayama, 10-27; industry pricing, attributed as GS relaying TrendForce) and BofA CXMT initiation (Shen/Woo/Shin, 10-28; read-through) → 2 Full-log rows + 1 Sinal update. Bernstein HBF deep dive (Newman et al., 10-27) checked: Outperform, PT US$1,300 and adjusted EPS US$73.78 / 173.33 unchanged vs the 09-29 marks. Nothing superseded.
 - 2026-10-26 — ingest (Notion, 2026-10-26_UBS_SemiBytes-call-SMH-prices-20GW-cut-CPU-TAM-memory-bound-Arcuri-Ruple.md): 1 Debate block (5 bullets) — Arcuri spoken: MU PT $1,625 (published, unchanged); spoken downside revised from the 10-19 "$800… floor" to $700-750 (spoken "$750, you know, maybe $700") (10-19 block retained, both marks carried); "eventually $2,000… not my price target"; BVPS >$360-370 exiting 2028, "probably more like $400", ~2-2.5x book at sub-$900; 50-55% GM "in an 80% down pricing scenario"; CPU-TAM spoken layer ($175bn → $210bn; unconstrained "like $500 billion"; "3 to 4 times" flagged as the EB ratio, not dollars; "TAM will be as large as memory supply allows"); NAND KV-cache [transcribed "NAND KB Cash"] relief "would have to be huge". No rating/PT/estimate superseded.

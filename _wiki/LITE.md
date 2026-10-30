@@ -474,6 +474,7 @@ _Source: Capstone official model (`Modelo consolidado incl. LITE .xlsx` — cons
 
 ## Debate / thesis
 
+- 🔭 **2026-10-30 (notion-ingest · JPM Sur AMA) — ⚠️ SPECULATION, NOT A DEAL: market talk of a [[MRVL]] acquisition of Lumentum, as read by Marvell's analyst.** (Harlan Sur (J.P. Morgan) @ JPM 'Ask Me Anything about INTC/KLAC/SNDK/NXPI' webinar, 2026-10-30 — Capstone notes (Notion transcript); [source](../_equity_calls/Semis/2026-10-30_JPMorgan_Harlan-Sur-AMA-INTC-KLAC-SNDK-NXPI-AMD-MRVL-post-3Q26.md); Lumentum transcribed "Momentum".) No announcement, filing or press source is on disk; Sur calls it *"the speculation that's out there"*. Sur frames it as *"1 plus 1 is equal to 2… more of a vertical integration strategy"* (vs Marvell's Cavium/Inphi *"1 plus 1 is equal to 4"*), possibly customer-driven: *"a stronger base of US optical transceiver manufacturing"* for cloud customers like Google, with Lumentum *"a supplier on the transceiver side and the OCS side"*. Funding guess *"15-20% cash and the rest is going to be equity"*. ➤ Logged as a watch item only; Sur covers Marvell, not Lumentum, and set no rating/PT.
 - 🔭 **2026-10-19 (notion-ingest · BofA Arya OCP call)** — BofA stance restated on the call: "we have not been as positive on some of the optical names, Lumentum [transcribed "Momentum"] and Coherent [transcribed "Cohrent"], but we have kind of consistently been positive [on Credo]"; OCP: "Everyone and their brother and sister and cousin had a CPO or NPO approach … only the suppliers were talking about CPO, whereas the customers were only comfortable getting to NPO" (~20 suppliers). Published ratings unchanged. — _Vivek Arya (BofA) @ BofA SEMICON West & OCP Takeaways call, 2026-10-19 - Capstone notes (Notion transcript)_ · [2026-10-19_BofA_SEMICON-West-OCP-takeaways-call-Vivek-Arya.md](../_equity_calls/Semis/2026-10-19_BofA_SEMICON-West-OCP-takeaways-call-Vivek-Arya.md)
 
 
@@ -966,6 +967,7 @@ _Source: LITE earnings calls (dates above); management commentary, paraphrased._
 
 ## Changelog
 
+- 2026-10-30 — ingest (Notion, 2026-10-30_JPMorgan_Harlan-Sur-AMA-INTC-KLAC-SNDK-NXPI-AMD-MRVL-post-3Q26.md): 1 Debate 🔭 bullet — speculated Marvell acquisition of Lumentum as framed by JPM's Sur ('1+1=2' vertical integration, US transceiver/OCS supply assurance for Google, funding guess 15-20% cash). Speculation only; no source for the rumour on disk. Nothing superseded.
 - 2026-10-19 — ingest (Notion, 2026-10-19_BofA_SEMICON-West-OCP-takeaways-call-Vivek-Arya.md): Debate — BofA 'not as positive' on LITE/COHR vs Credo; CPO supplier-push vs customer NPO comfort at OCP. Orchestrator (D) pass.
 
 - 2026-10-16 — run-inbox: added Jefferies · Curtis et al. "OCP Takeaways - Optical Innovation Accelerating" (2026-10-16) datapoints (1 Debate block, 1 intra-quarter log row, 1 Sources link). The 80M 1.6T C27 units match the 09-24 model (80M+), so this is a reiteration. Nothing superseded.

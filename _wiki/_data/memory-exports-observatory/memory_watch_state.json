@@ -1,15 +1,19 @@
 {
   "version": 1,
-  "updated_at": "2026-10-30T09:05:13-03:00",
-  "last_online_check": "2026-10-30T08:55:43-03:00",
+  "updated_at": "2026-10-30T16:10:43-03:00",
+  "last_online_check": "2026-10-30T16:01:50-03:00",
   "last_run_offline": true,
-  "source_failures": [],
+  "source_failures": [
+    "market_prices"
+  ],
   "source_dates": {
-    "KCS": "2026-10-30T08:55:48-03:00",
-    "BOK": "2026-10-30T08:58:11-03:00",
+    "KCS": "2026-10-30T16:01:56-03:00",
+    "BOK": "2026-10-30T16:04:17-03:00",
     "InSpectrum": "2026-10-30T09:02:08-03:00"
   },
-  "source_errors": {},
+  "source_errors": {
+    "market_prices": "blpapi: could not start session (Terminal not running / logged out?)"
+  },
   "signals": {
     "CONTRACT_D4": {
       "period": "2026-09",
@@ -139,6 +143,21 @@
       "detected_at": "2026-10-28T16:35:02-03:00",
       "reviewed_at": "2026-10-28T16:35:49-03:00",
       "review_note": "Initial refresh: auxiliary MOTIE HTTP 404; September retained. BOK and InSpectrum succeeded. Reported during setup; repeat only if monitoring deteriorates or a new failure occurs.",
+      "notified": true
+    },
+    {
+      "id": "4611df139a6823a805e8",
+      "kind": "source_failure",
+      "label": "Source refresh needs attention",
+      "evidence": {
+        "failed_steps": [
+          "market_prices"
+        ]
+      },
+      "status": "reviewed",
+      "detected_at": "2026-10-30T16:09:53-03:00",
+      "reviewed_at": "2026-10-30T16:10:25-03:00",
+      "review_note": "Unresolved Bloomberg session failure; prior30Oct spot and September contracts preserved. User notified to restore local Terminal/API access. Reviewed, not resolved; source failure remains active.",
       "notified": true
     }
   ],

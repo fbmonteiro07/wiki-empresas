@@ -1,6 +1,6 @@
 # Daily Analyst Brief
 
-_Generated 2026-10-30 · 44 active signals · latest reconciliation: reconciliation-2026-10-29-inbox.md._
+_Generated 2026-10-30 · 50 active signals · latest reconciliation: reconciliation-2026-10-29-inbox.md._
 
 > ⚠️ **Portfolio priority is provisional.** _data/book.json is still a seed with unknown weights. Book badges identify seeded names but do not represent real exposure.
 
@@ -8,18 +8,18 @@ _Generated 2026-10-30 · 44 active signals · latest reconciliation: reconciliat
 
 | Rank | Ticker | Book | Signals | Why focus now |
 |---:|---|---|---:|---|
-| 1 | **AMZN** | seed | 2 | AMZN — derived thesis/debate state changed since the prior daily snapshot; AMZN — 2026-10-30: FY27 capex number — still not given by management, but the Street has now marked it, and… |
-| 2 | **META** | seed | 2 | META — derived thesis/debate state changed since the prior daily snapshot; META — 2026-10-30: (a) resolved by the filings: Meta priced on Monday 10-26 and the preferred closed 10-29,… |
-| 3 | **GOOG** | seed | 3 | GOOG — 2026 revenue house view is 18% above consensus; GOOG — 2026-10-30: filing-level watch items for the FY26 10-K: (1) the TPU repurchase-obligation maximum… |
+| 1 | **GOOG** | seed | 4 | GOOG — derived thesis/debate state changed since the prior daily snapshot; GOOG — 2026 revenue house view is 18% above consensus |
+| 2 | **AMZN** | seed | 2 | AMZN — derived thesis/debate state changed since the prior daily snapshot; AMZN — 2026-10-30: FY27 capex number — still not given by management, but the Street has now marked it, and… |
+| 3 | **META** | seed | 2 | META — derived thesis/debate state changed since the prior daily snapshot; META — 2026-10-30: (a) resolved by the filings: Meta priced on Monday 10-26 and the preferred closed 10-29,… |
 | 4 | **AAPL** | seed | 1 | AAPL — 2026 EPS house view is 16% above consensus |
 | 5 | **NVDA** | seed | 2 | NVDA — 2026-11-17: CLOSED 2026-09-10 — THE GS COMMUNACOPIA FIRESIDE HAPPENED. OUTCOME: Jensen reaffirmed the…; NVDA — 2026-11-23: NVDA investor call (IR) (Rothschild & Co Redburn TMT sales · Rowan Adley, 2026-09-28).… |
-| 6 | **SNDK** | — | 2 | SNDK — derived thesis/debate state changed since the prior daily snapshot; SNDK — 2026-11-09: 2026-11-09 / 11-19 / 11-20 — 8-for-1 forward split: record date, issue of seven additional… |
-| 7 | **PWR** | — | 1 | PWR — derived thesis/debate state changed since the prior daily snapshot |
-| 8 | **RDDT** | — | 1 | RDDT — derived thesis/debate state changed since the prior daily snapshot |
-| 9 | **NSCALE** | — | 3 | NSCALE — Bloomberg consensus missing; NSCALE — latest earnings transcript absent |
-| 10 | **MSFT** | seed | 1 | MSFT — 2026-11-17: 2026-11-17 to 11-20, SF — MSFT IGNITE. |
-| 11 | **NOK** | — | 2 | NOK — Bloomberg consensus missing; NOK — latest earnings transcript absent |
-| 12 | **CRWV** | — | 2 | CRWV — 2026 EPS house view is 17% below consensus; CRWV — 2027 EPS house view is 16% below consensus |
+| 6 | **SNDK** | — | 3 | SNDK — derived thesis/debate state changed since the prior daily snapshot; SNDK — 2026-10-30: a dated coverage target, per Sur relaying the callback (not company-disclosed): 75% of… |
+| 7 | **LITE** | — | 2 | LITE — derived thesis/debate state changed since the prior daily snapshot; LITE — 2026-11-05: F1Q27 earnings (date per Deutsche Bank · Conti, 2026-10-07; confirm against the LITE IR… |
+| 8 | **MU** | — | 2 | MU — derived thesis/debate state changed since the prior daily snapshot; MU — 2026-12-09: F4Q26 PRINT — REPORTED 2026-09-30 (✅ resolved: beat on revenue / GM / EPS, FQ1 revenue… |
+| 9 | **AMAT** | — | 1 | AMAT — derived thesis/debate state changed since the prior daily snapshot |
+| 10 | **MRVL** | — | 1 | MRVL — derived thesis/debate state changed since the prior daily snapshot |
+| 11 | **PWR** | — | 1 | PWR — derived thesis/debate state changed since the prior daily snapshot |
+| 12 | **RDDT** | — | 1 | RDDT — derived thesis/debate state changed since the prior daily snapshot |
 
 ## Highest-priority ideas
 
@@ -36,7 +36,20 @@ _NARRATIVE SHIFT · HIGH IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 - **Attribution:** AMZN page Changelog 2026-10-30.
 - **Evidence:** [AMZN.md](../AMZN.md) · signal beli-df8767d799a4
 
-### 2. 🔴 META — derived thesis/debate state changed since the prior daily snapshot
+### 2. 🔴 GOOG — derived thesis/debate state changed since the prior daily snapshot
+
+_NARRATIVE SHIFT · HIGH IMPACT · IMMEDIATE · HIGH CONFIDENCE_
+
+- **Tickers:** GOOG · seeded book: GOOG
+- **Why now:** verification (transcription QA): Nowak Intra-quarter block — garble rewritten in glossary form, ex-FX [transcribed "XFX"]. Search 10%/8%/8-11, SpaceX $900M+/month, $0.20/qtr, 2Q roll-off, capex $375/$400, 19x/16x and the ranking all match the transcript; the $2.7bn-pre-tax and P/E cross-checks stay labelled as Capstone arithmetic.
+- **Belief update:** The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.
+- **Action:** Re-grade the GOOG thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.
+- **Falsifier:** The fingerprint moved only because of formatting or a derived snapshot insertion.
+- **Read-through:** AVGO (supplier: custom ASIC (TPU)); NVDA (supplier: GPUs); SNOW (competitor: warehouse vs BigQuery); ANTHROPIC (customer: TPU compute); BE (supplier: on-site fuel cells); CIEN (supplier: DCI/optical); COHR (supplier: optical)
+- **Attribution:** GOOG page Changelog 2026-10-30.
+- **Evidence:** [GOOG.md](../GOOG.md) · signal beli-395cd13975f7
+
+### 3. 🔴 META — derived thesis/debate state changed since the prior daily snapshot
 
 _NARRATIVE SHIFT · HIGH IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
@@ -49,33 +62,85 @@ _NARRATIVE SHIFT · HIGH IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 - **Attribution:** META page Changelog 2026-10-30.
 - **Evidence:** [META.md](../META.md) · signal beli-5063523d5233
 
-### 3. 🔴 GOOG — 2026 revenue house view is 18% above consensus
+### 4. 🔴 GOOG — 2026 revenue house view is 18% above consensus
 
 _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
 - **Tickers:** GOOG · seeded book: GOOG
-- **Why now:** Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $429.1bn as of 2026-10-29, a derived +17.7% gap. Revenue comparisons require a basis check.
+- **Why now:** Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $428.4bn as of 2026-10-30, a derived +17.9% gap. Revenue comparisons require a basis check.
 - **Belief update:** The house/Street disagreement requires an explicit driver bridge.
 - **Action:** Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
 - **Falsifier:** A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.
 - **Read-through:** AVGO (supplier: custom ASIC (TPU)); NVDA (supplier: GPUs); SNOW (competitor: warehouse vs BigQuery); ANTHROPIC (customer: TPU compute); BE (supplier: on-site fuel cells); CIEN (supplier: DCI/optical); COHR (supplier: optical)
-- **Attribution:** Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-10-29.
-- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-f910281fe2aa
+- **Attribution:** Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-10-30.
+- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-eddcb2168507
 
-### 4. 🔴 AAPL — 2026 EPS house view is 16% above consensus
+### 5. 🔴 AAPL — 2026 EPS house view is 16% above consensus
 
 _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
 - **Tickers:** AAPL · seeded book: AAPL
-- **Why now:** Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.76 as of 2026-10-29, a derived +15.5% gap.
+- **Why now:** Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.76 as of 2026-10-30, a derived +15.5% gap.
 - **Belief update:** The house/Street disagreement requires an explicit driver bridge.
 - **Action:** Open the AAPL model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
 - **Falsifier:** A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.
 - **Read-through:** TSM (supplier: foundry); ARM (supplier: IP)
-- **Attribution:** Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-10-29.
-- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-ad66a4ac7201
+- **Attribution:** Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-10-30.
+- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-063e4da9ce59
 
-### 5. 🟡 PWR — derived thesis/debate state changed since the prior daily snapshot
+### 6. 🟡 AMAT — derived thesis/debate state changed since the prior daily snapshot
+
+_NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
+
+- **Tickers:** AMAT
+- **Why now:** ingest (Notion, 2026-10-30JPMorganHarlan-Sur-AMA-INTC-KLAC-SNDK-NXPI-AMD-MRVL-post-3Q26.md): 1 Debate 🔭 bullet + 1 Sources entry. Sur: Applied is 2 in process control, "7 times smaller" than KLA, with leadership in eBeam review / some eBeam inspection (competing with ASML and Japanese vendors). The answer is cut mid-way, so there is no overhang verdict. No rating/PT/ranking restated; nothing superseded.
+- **Belief update:** The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.
+- **Action:** Re-grade the AMAT thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.
+- **Falsifier:** The fingerprint moved only because of formatting or a derived snapshot insertion.
+- **Read-through:** TSM (customer: WFE); LRCX (competitor: WFE overlap); INTC (customer: WFE); MU (customer: WFE); SAMSUNG (customer: WFE); SKHYNIX (customer: WFE); SMIC (customer: WFE)
+- **Attribution:** AMAT page Changelog 2026-10-30.
+- **Evidence:** [AMAT.md](../AMAT.md) · signal beli-97eb0ffe001b
+
+### 7. 🟡 LITE — derived thesis/debate state changed since the prior daily snapshot
+
+_NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
+
+- **Tickers:** LITE
+- **Why now:** ingest (Notion, 2026-10-30JPMorganHarlan-Sur-AMA-INTC-KLAC-SNDK-NXPI-AMD-MRVL-post-3Q26.md): 1 Debate 🔭 bullet — speculated Marvell acquisition of Lumentum as framed by JPM's Sur ('1+1=2' vertical integration, US transceiver/OCS supply assurance for Google, funding guess 15-20% cash). Speculation only; no source for the rumour on disk. Nothing superseded.
+- **Belief update:** The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.
+- **Action:** Re-grade the LITE thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.
+- **Falsifier:** The fingerprint moved only because of formatting or a derived snapshot insertion.
+- **Read-through:** AMZN (customer: optical); MSFT (customer: optical); NVDA (customer: optical); COHR (competitor: optical/InP); AIXA (supplier: MOCVD tools); ANET (customer: optical)
+- **Attribution:** LITE page Changelog 2026-10-30.
+- **Evidence:** [LITE.md](../LITE.md) · signal beli-a90017eafcdc
+
+### 8. 🟡 MRVL — derived thesis/debate state changed since the prior daily snapshot
+
+_NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
+
+- **Tickers:** MRVL
+- **Why now:** ingest (Notion, 2026-10-30JPMorganHarlan-Sur-AMA-INTC-KLAC-SNDK-NXPI-AMD-MRVL-post-3Q26.md): 1 Debate 🔭 bullet — Sur (JPM) on the SPECULATED Marvell acquisition of Lumentum: not in Investor Day LT targets, margin outlook still reachable, '1+1=2' vertical integration vs Cavium/Inphi '1+1=4', US-transceiver supply assurance for Google, funding guess 15-20% cash / rest equity. Speculation only; no source for the rumour on disk. Nothing superseded.
+- **Belief update:** The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.
+- **Action:** Re-grade the MRVL thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.
+- **Falsifier:** The fingerprint moved only because of formatting or a derived snapshot insertion.
+- **Read-through:** AVGO (competitor: custom ASIC); AMZN (customer: custom ASIC (Trainium)); GOOG (customer: optical DSP); MSFT (customer: custom ASIC (Maia)); TSM (supplier: foundry)
+- **Attribution:** MRVL page Changelog 2026-10-30.
+- **Evidence:** [MRVL.md](../MRVL.md) · signal beli-64ef36463f44
+
+### 9. 🟡 MU — derived thesis/debate state changed since the prior daily snapshot
+
+_NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
+
+- **Tickers:** MU
+- **Why now:** ingest (Notion, 2026-10-30UBSINTC-ENTG-3Q26-recap-call-Arcuri-Ruple.md): 1 short Debate block (2 bullets): Arcuri's "server TAM as large as memory allows into 2030 → buy Micron" and "the whole [PC] industry's constrained by DRAM", both analyst views. No mark or number superseded (UBS Buy / PT $1,625 unchanged).
+- **Belief update:** The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.
+- **Action:** Re-grade the MU thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.
+- **Falsifier:** The fingerprint moved only because of formatting or a derived snapshot insertion.
+- **Read-through:** AVGO (customer: HBM); NVDA (customer: HBM/LPDDR); SKHYNIX (competitor: HBM); AMAT (supplier: WFE); AMD (customer: HBM); ASML (supplier: litho); KLAC (supplier: process control)
+- **Attribution:** MU page Changelog 2026-10-30.
+- **Evidence:** [MU.md](../MU.md) · signal beli-934cc7e55580
+
+### 10. 🟡 PWR — derived thesis/debate state changed since the prior daily snapshot
 
 _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
@@ -88,7 +153,7 @@ _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 - **Attribution:** PWR page Changelog 2026-10-30.
 - **Evidence:** [PWR.md](../PWR.md) · signal beli-503abc6c7d91
 
-### 6. 🟡 RDDT — derived thesis/debate state changed since the prior daily snapshot
+### 11. 🟡 RDDT — derived thesis/debate state changed since the prior daily snapshot
 
 _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
@@ -101,7 +166,7 @@ _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 - **Attribution:** RDDT page Changelog 2026-10-30.
 - **Evidence:** [RDDT.md](../RDDT.md) · signal beli-988490696ba3
 
-### 7. 🟡 SNDK — derived thesis/debate state changed since the prior daily snapshot
+### 12. 🟡 SNDK — derived thesis/debate state changed since the prior daily snapshot
 
 _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
@@ -114,44 +179,18 @@ _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 - **Attribution:** SNDK page Changelog 2026-10-30.
 - **Evidence:** [SNDK.md](../SNDK.md) · signal beli-876427753bbe
 
-### 8. 🟡 CRWV — 2026 EPS house view is 17% below consensus
-
-_MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
-
-- **Tickers:** CRWV
-- **Why now:** Capstone carries 2026 EPS at $-3.27 versus Bloomberg consensus at $-3.94 as of 2026-10-29, a derived -17.0% gap.
-- **Belief update:** The house/Street disagreement requires an explicit driver bridge.
-- **Action:** Open the CRWV model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
-- **Falsifier:** A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.
-- **Read-through:** MSFT (customer: neocloud compute); NVDA (supplier: GPUs); NSCALE (competitor: GPU neocloud); AMD (supplier: MI GPUs); OPENAI (customer: neocloud compute)
-- **Attribution:** Capstone official model — P:\Felipe Monteiro\US Equities\Modelos oficiais\Template DCF CRWV.xlsx (2026-10-14, Felipe Monteiro), first CRWV model in the official Template DCF <TICKER family (same sheets and conventions as AMD/AVGO/ADVANTEST/TER, plus History and Debt sheets; labels in English). Build and verification pipeline in · Bloomberg consensus 2026-10-29.
-- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-e07e934b7fd5
-
-### 9. 🟡 CRWV — 2027 EPS house view is 16% below consensus
-
-_MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
-
-- **Tickers:** CRWV
-- **Why now:** Capstone carries 2027 EPS at $-1.83 versus Bloomberg consensus at $-2.18 as of 2026-10-29, a derived -16.1% gap.
-- **Belief update:** The house/Street disagreement requires an explicit driver bridge.
-- **Action:** Open the CRWV model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
-- **Falsifier:** A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.
-- **Read-through:** MSFT (customer: neocloud compute); NVDA (supplier: GPUs); NSCALE (competitor: GPU neocloud); AMD (supplier: MI GPUs); OPENAI (customer: neocloud compute)
-- **Attribution:** Capstone official model — P:\Felipe Monteiro\US Equities\Modelos oficiais\Template DCF CRWV.xlsx (2026-10-14, Felipe Monteiro), first CRWV model in the official Template DCF <TICKER family (same sheets and conventions as AMD/AVGO/ADVANTEST/TER, plus History and Debt sheets; labels in English). Build and verification pipeline in · Bloomberg consensus 2026-10-29.
-- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-dcfc87aaa8dd
-
 ## Catalysts requiring preparation
 
 - **AMZN — 2026-10-30: FY27 capex number — still not given by management, but the Street has now marked it, and…** — FY27 capex number — still not given by management, but the Street has now marked it, and the marks disagree by ~$40bn. Management gave FY26 (~$220B) and "heavy capex over next few years" but no 20 _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-6dde8d247c97)
 - **GOOG — 2026-10-30: filing-level watch items for the FY26 10-K: (1) the TPU repurchase-obligation maximum…** — 🆕 2026-10-30 (10-Q fold) — filing-level watch items for the FY26 10-K: (1) the TPU repurchase-obligation maximum ($6.6B at 09-30) against TPU revenue as the ramp scales, and whether any put is _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-99b2f1190ae9)
 - **META — 2026-10-30: (a) resolved by the filings: Meta priced on Monday 10-26 and the preferred closed 10-29,…** — ✅ 2026-10-30 — (a) resolved by the filings: Meta priced on Monday 10-26 and the preferred closed 10-29, before the election week. Size: $37.5bn underwritten ($25.0bn Class A forward + $12.5bn mand _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-989fe8befe1e)
 - **KLAC — 2026-10-30: "2027 memory ~60%" — Bren, as machine-transcribed: "In 2027, we'd expect overall memory to…** — 🆕 "2027 memory ~60%" — Bren, as machine-transcribed: "In 2027, we'd expect overall memory to be about 60% of the business." Confirm the denominator (KLA semi-PC systems vs WFE) from the sharehol _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-ee9bdeb27115)
+- **SNDK — 2026-10-30: a dated coverage target, per Sur relaying the callback (not company-disclosed): 75% of…** — 🆕🔭 2026-10-30 — a dated coverage target, per Sur relaying the callback (not company-disclosed): 75% of FY28, FY29 and FY30 bits under LTAs/NBMs, to be locked in "over the next 2 to 3 quarters" _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-c6b87413ae33)
 - **GEV — 2026-11-02: GS-hosted GEV IR meeting, New York — 2026-11-02 (per the GS Industrials daily, logged…** — 🆕 GS-hosted GEV IR meeting, New York — 2026-11-02 (per the GS Industrials daily, logged pre-print): first post-print management access. _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-6f5f9db16485)
 - **INTC — 2026-11-03: Susquehanna "The AI Arms Race" session (Christopher Rolland; AMD, INTC, MRVL, NVDA, AVGO,…** — 🆕 2026-10-01: Susquehanna "The AI Arms Race" session (Christopher Rolland; AMD, INTC, MRVL, NVDA, AVGO, ARM, QCOM) and 2026-11-03: Intel dinner NDR with CFO and IR, London (Susquehanna index 09-30 _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-c333d9a79742)
 - **KIOXIA — 2026-11-02: 2026-11-02 (Mon) 9am JST — BofA post-results "doko shuzai" with KIOXIA on FY3/27 2Q…** — 🆕 2026-11-02 (Mon) 9am JST — BofA post-results "doko shuzai" with KIOXIA on FY3/27 2Q results (BofA · Mikio Hirakawa, via BofA one-liners, 2026-10-01) — dates the Sep-quarter print to before 11-02 _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-e20427bb0cce)
 - **LITE — 2026-11-05: F1Q27 earnings (date per Deutsche Bank · Conti, 2026-10-07; confirm against the LITE IR…** — 🆕 2026-11-05 — F1Q27 earnings (date per Deutsche Bank · Conti, 2026-10-07; confirm against the LITE IR release). DB's bogeys: OCS $100m for the first time (path to $1bn in 2027), CPO toward _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-b395c83ce767)
 - **SMCI — 2026-11-03: RESOLVED (preliminary) 2026-10-20 — F1Q27 vs guide: revenue $18.5–19.5bn vs $14.5–15.5bn,…** — ✅ RESOLVED (preliminary) 2026-10-20 — F1Q27 vs guide: revenue $18.5–19.5bn vs $14.5–15.5bn, GM 12.0–12.5% vs 10.4–10.8% (SMCI 8-K, 2026-10-20). Bull on delivery vs guide; GM sits well belo _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-3307849d38b1)
-- **STX — 2026-11-02: Morgan Stanley Global Hardware & Optical lunch (Andy Meng, Howard Kao, Derrick Yang, Meta…** — 🆕 2026-10-08 (12pm ET, NYC) — Morgan Stanley Global Hardware & Optical lunch (Andy Meng, Howard Kao, Derrick Yang, Meta Marshall, Erik Woodring) covering STX/WDC among others; 2026-11-02/03 — MS _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-396a1e21b245)
 
 ## Research hygiene
 

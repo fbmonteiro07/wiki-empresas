@@ -9,7 +9,7 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\RDDT` (10-K FY25 + 10-
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $3.2bn | $4.4bn |
+| Revenue | $3.2bn | $4.3bn |
 | Gross profit | $3.0bn | $4.0bn |
 | Gross margin | 91.4% | 91.6% |
 | EBITDA | $1.4bn | $2.0bn |

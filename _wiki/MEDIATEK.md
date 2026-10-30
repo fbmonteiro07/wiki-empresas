@@ -11,13 +11,13 @@ _Wiki · generated 2026-06-20 · **Taiwan issuer — no SEC filings**; sources: 
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | NT$667.1bn | NT$1171.8bn |
-| Gross profit | NT$304.9bn | NT$519.1bn |
+| Revenue | NT$667.2bn | NT$1173.5bn |
+| Gross profit | NT$304.9bn | NT$519.8bn |
 | Gross margin | 45.7% | 44.3% |
-| EBITDA | NT$133.0bn | NT$289.7bn |
-| EPS | NT$67.83 | NT$145.02 |
-| Capex | NT$18.7bn | NT$24.7bn |
-| OCF (≈EBITDA) | NT$133.0bn | NT$289.7bn |
+| EBITDA | NT$133.2bn | NT$291.5bn |
+| EPS | NT$67.85 | NT$146.12 |
+| Capex | NT$19.6bn | NT$27.0bn |
+| OCF (≈EBITDA) | NT$133.2bn | NT$291.5bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
@@ -406,6 +406,8 @@ See cross-company theme: [custom-asic-tpu](themes/custom-asic-tpu.md).
 
 ## Intra-quarter — calls, commentary & reports (since the last print)
 
+**🆕 2026-10-30 — UBS/ARCURI (INTC 3Q26 RECAP CALL): "PRETTY SKEPTICAL" THAT EMIB-T YIELDS ARE GOOD ENOUGH FOR THE MEDIATEK NUMBERS; INTEL IS SHORT ON SUBSTRATE.** Arcuri relays Intel management: Intel is *"really short on substrate"*, hurting Xeon and EMIB [transcribed "EMIT"], and it *"could in theory sacrifice Xeon substrate to ramp"* EMIB; his own view: *"I'm pretty skeptical on that EMIB-T yields are gonna be good enough to do these MediaTek numbers, but that's a whole different conversation."* No yield figure given — sits against the 09-21 UBS SemiBytes (silicon-bridge yields >50% in 1H:27) as the same house's analyst voicing doubt, not a revised number. _Source: Tim Arcuri (UBS), moderated by Rob Ruple (UBS sales) @ UBS Semis Earnings Recap Call (ALGM/ENTG/INTC), 2026-10-30 — Capstone notes (Notion transcript)._
+
 **🆕 2026-10-15 — BofA/HAAS LIU (TSMC 3Q26 FEEDBACK CALL): TPU v9 STILL EMIB-T-FIRST, BUT A TSMC CoWoS BACKUP IS LIVE AND GATED BY SUBSTRATE YIELD AT ~END-1Q27; "MEANINGFUL DOWNSIDE RISK" TO 2028 v9 SHIPMENTS IF THE WINDOW IS MISSED. MEDIATEK CONFIRMS N2/N3 PRICE +~10% FROM JANUARY 2027 (AS HAAS LIU RELAYS IT).** _Source: Haas Liu (BofA Taiwan) @ BofA Group Call - TSMC 3Q26 Results Feedback, 2026-10-15 - Capstone notes (Notion transcript) (file `_equity_calls/Semis/2026-10-15_BofA_TSMC-3Q26-results-feedback-call-Liu-Arya-Scemama.md`). ⚠️ Sell-side analyst relaying supply-chain and MediaTek-management commentary — BofA's account, not company guidance; no rating/PT set on the call; machine transcript (Notion AI)._
 - **Packaging path:** Google/MediaTek's first priority for TPU v9 (ramping 2H/late 2027, meaningful in 2028) is *"still work with Intel on"* EMIB-T [transcribed "MMT"; later "EMFT"], on both substrate and packaging yield. At BofA's Asia conference *"a few weeks ago"* (transcribed "APEC conference"), *"the first time that MediaTek management shared their concern on the substrate production yield across the Japanese and also the Taiwanese substrate makers"*. If substrate yield *"by the end of first quarter next year"* (~end-1Q27) is unsatisfactory, a backup on TSMC CoWoS (*"could support up to 14 times"* reticle [transcribed "radical"] package size by 2028) — *"MediaTek is trying to convince Google"*, while Google still backs Intel to diversify away from TSMC. Decision *"at least through the next 3 to 6 months"*; miss the window and CoWoS capacity may not be available → *"a meaningful Downside risk for the TPU V9 shipment for MediaTek in 2028."* (Haas Liu, BofA, 2026-10-15)
 - 🔭 **Disagreement, carried both ways:** MediaTek management via **MS (09-30)** — EMIB-T substrate "tracking MediaTek's plan", **no CoWoS support needed for v9**; JPM/Gokul (10-01) — v9 all EMIB, ~3-3.5m units supportable vs ~4-4.5m demand. BofA (10-15) now has MediaTek itself flagging substrate yield and pushing a CoWoS backup. Same gate as BofA's own 07-13 preview (Debate, CoWoS-L backup) — the news is the dated test (~end-1Q27) and the explicit 2028 downside-risk framing. Neither adopted; resolution is the 1Q27 substrate-yield read.
@@ -660,6 +662,7 @@ _Source: MEDIATEK earnings calls (dates above); management commentary, paraphras
 ## Changelog
 
 - 2026-10-19 — attribution correction: the 2026-06-23 "Asia Trip Takeaways" source (Capstone notes, Fernanda Watkins, of an investor call hosted by **Conor O'Mara — Jefferies Asia TMT specialist sales, desk voice, no rating/PT** — and Sherman; primary `_inbox/_done/77420a6c-…ASIA (1).pdf`, 42pp, screen banner p.37 "Conor O'Mara - Jefferies") was credited to **"Redburn"** (in forms such as 'Redburn · Conor O'Mara', 'Redburn "Conor O'Mara Asia Trip Takeaways"', 'Redburn/O'Mara') on 3 line(s) of this page; relabelled to "Jefferies desk · O'Mara" (Sherman named where he is the speaker), each claim re-read in the primary. Old label preserved here; no number, rating or PT changed. Entries already in this Changelog keep the old label as recorded.
+- 2026-10-30 — ingest (Notion, 2026-10-30_UBS_INTC-ENTG-3Q26-recap-call-Arcuri-Ruple.md): Intra-quarter bullet — Arcuri (UBS) skeptical EMIB-T yields suffice for MediaTek's volumes; Intel short on substrate, Xeon-vs-EMIB substrate trade-off relayed.
 - 2026-10-15 — ingest (Notion, 2026-10-15_BofA_TSMC-3Q26-results-feedback-call-Liu-Arya-Scemama.md): Intra-quarter block — Haas Liu (BofA): TPU v9 EMIB-T-first with a TSMC CoWoS backup gated by a ~end-1Q27 substrate-yield test, 3-6 month decision window, "meaningful downside risk" to 2028 v9 shipments; MediaTek mgmt flagged substrate yield for the first time at BofA's Asia conference; N2/N3 price +~10% from Jan-2027 confirmed by MediaTek (relayed). 🔭 vs MS 09-30 ("no CoWoS support needed for v9") and JPM 10-01 (all EMIB) — both marks kept; nothing superseded.
 - 2026-10-15 — verification (transcription QA): attribution string aligned to the file header (was "BofA Group Call 'TSMC Results Feedback'"); headline now marks the MediaTek N2/N3 +~10% confirmation as Haas Liu's relay. No number changed.
 - 2026-10-13 — ingest (Notion, 2026-10-13_Bernstein_Copper-vs-Optical-former-NVIDIA-LinkX-expert-Brad-Smith.md): Intra-quarter block — Brad Smith (ex-NVIDIA LinkX, Bernstein Group VC) lists MediaTek as joining the CPO-switch field (unconfirmed remark); nothing superseded.

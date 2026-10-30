@@ -105,6 +105,7 @@ _Source: SpaceX 8-K, Item 2.02 + Exhibit 99.1 earnings release, 2026-10-20 ([Ex.
 - **TESLA COMBINATION, THE FILED WORDING:** any deal needs approval from SpaceX's special committee, board **"and our controlling shareholder"**. Musk is excluded from the committee, but his approval as controlling shareholder is still required. Cross-file [[TSLA]]. (SPCX 10-Q, filed 2026-10-22, MD&A)
 - ⚠️ **LEGAL: THREE ITEMS THAT TOUCH THE BUILD.** (1) **Memphis construction dispute:** SpaceXAI / CTC / MZX Tech sued Darana Hybrid and Cuttell Motorsports (dba the International Hot Rod Association) for breach of a master services agreement for the Memphis-area SI computing facilities, claiming **>$500m**. The defendants counterclaim and have recorded **construction liens of ~$569m** for alleged unpaid work. This bears on the 09-01 data-centre leadership change after civil-engineering problems. (2) **NAACP / Colossus II turbines:** on 10-19 the Fifth Circuit denied the U.S. appeal and stay as premature, and the district court admitted the U.S. as intervenor but would not let it dismiss the case. **The 10-Q describes the case as live and mentions no settlement or turbine-removal agreement.** That is a nuance to the 08-04 22V "de-risked" read on this page. MDEQ stormwater notices of violation to MZX Tech carry penalties of up to $25k/day, ~$6.1m preliminary across three sites. (3) **Grok image-generation suits:** the N.D. Cal. transfer was denied on 09-28 and an Arkansas MDL motion was filed on 10-02; separately, the **Virginia AG sent a notice of violation on 10-19**. Litigation accrual $350m (YE25 $399m). (SPCX 10-Q, filed 2026-10-22, Note 16, Part II Item 1)
 - **What the 10-Q is silent on:** the Google 9/30 GPU-delivery condition (no termination disclosed; the ~10-31 grace end stays open) and any Q3 buyback ($0 in Q3; $2.013bn 9M, plus $2.413bn repurchased under the xAI merger). Item 1A reports no material change to the risk factors. Shares outstanding at 10-15: 8,246.5m Class A + 5,334.5m Class B. (SPCX 10-Q, filed 2026-10-22)
+- 🔭 **Duration of the Google compute contract — an analyst estimate, not a SpaceX disclosure:** Brian Nowak (Morgan Stanley) models it at *"$900 million plus per month"*, **4Q26 the first full quarter**, rolling off in **2Q27** *"because that's the first time in which Google can pull back, but it's going to come down to capacity"*; each extra quarter ≈ $0.20 of GOOG EPS. Barclays' 10-29 relay of 3-4 quarters is on [[GOOG]] / `themes/ai-compute-deals.md` (GOOG-SPCX-202606). _Brian Nowak (Morgan Stanley) @ MS GOOGL + AMZN 3Q26 group callback, 2026-10-30 — Capstone notes (Notion transcript)._
 
 ### 🆕 2026-10-20/22 — POST-PRINT DESK AND CALLBACK TAKEAWAYS (desk commentary, not research; no ratings or PTs are inferred from it)
 - **MS TMT · Skyler Risom (sales, 2026-10-20 evening):** SPCX +7% AH. Revenue ~$2bn above cons ($14.6bn vs $12.8bn), SI $7.6bn vs $6.4bn cons; 4Q capex $35-40bn *"vs cons $20B"*; 1Q27 revenue guide *"$33-37B (cons at $23B)"*; subs 13.6M *"vs expects 14-14.5M"*, offset by a +7% ARPU beat. 🔭 ***"AI margins missed, but investors likely overestimated incremental margins on the contracts, as first few months of operation might have been a touch lower. AI headline rev matters more."*** This cuts against this page's "the beat is in monetisation" read. SI adj. EBITDA margin was 65.5% (computed), and the desk does not quantify the bar it was measured against. Muted AH reaction attributed to the lock-up (*"1.3B shares released Thurs"*). MS group callback with William Tackett + Sean Diffley, 10-21 9:30 ET: **no notes on disk**.
@@ -263,13 +264,13 @@ _Wiki · generated 2026-06-29 · sources: IPO prospectus (424B4 2026-06-12 / S-1
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $47.0bn | $181.6bn |
-| Gross profit | — | $113.7bn |
-| Gross margin | — | 62.6% |
-| EBITDA | $21.1bn | $113.9bn |
+| Revenue | $47.0bn | $180.0bn |
+| Gross profit | — | $112.5bn |
+| Gross margin | — | 62.5% |
+| EBITDA | $21.0bn | $114.6bn |
 | EPS | $-0.97 | $3.93 |
 | Capex | $63.2bn | $271.3bn |
-| OCF (≈EBITDA) | $21.1bn | $113.9bn |
+| OCF (≈EBITDA) | $21.0bn | $114.6bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
@@ -1040,6 +1041,7 @@ _**Q4 FY26 window · opened 2026-10-20** (Q3 2026 print, reported 2026-10-20 AMC
 
 ## Changelog
 
+- 2026-10-30 — ingest (Notion, 2026-10-30_MorganStanley_AMZN-GOOGL-3Q26-group-callback-Nowak.md): one bullet under the 10-Q block — MS/Nowak's estimate of the Google compute contract (~$900M+/month, 4Q26 first full quarter, roll-off modelled 2Q27). Analyst estimate, not a SpaceX disclosure.
 
 - **2026-10-30 — weekly credit review:** Rechecked October 26 8-K Item 8.01 (signed October 24) and updated SPCX-NVDA-FIN-20261006 from press talks to a binding Apollo-managed GPU-lease commitment. Preserved the old NVIDIA-chip / bank-loan-and-bond description as its original press vintage; the filing does not name NVIDIA. Closing, fixed rate and 1H27 tranche deliveries remain pending; no funded amount added. [Weekly evidence](_data/credit-monitor/research-sources/2026-10-30-evidence.json).
 - 2026-10-29 — ingest (Notion, 2026-10-29_Barclays_GOOG-3Q26-group-callback-air-pocket-SpaceX-TPU-training-Ross-Sandler.md): 1 Full-log row (Q4 window). Barclays' Sandler relays the Google–SpaceX contract from the buyer's side: $900m/month from October, 250 MW of GB300 (basis unstated), 3Q ramp slipped to end-3Q/4Q, 90-day cancel term (✓ 10-Q), Capstone ≈$43M/MW/yr vs Arete ~$55m/MW and the ~$25M/MW/yr canonical. Also his 3-4-quarter duration guess and the open Google 9/30 delivery condition (no termination relayed). Nothing superseded.

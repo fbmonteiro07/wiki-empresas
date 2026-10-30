@@ -22,7 +22,7 @@
       "confidence": "Moderate",
       "focus": "Contracts; strongest case in enterprise SSD",
       "why": "The industry contract outlook remains positive, with enterprise SSD the clearest area of strength. The independent price signals are mixed.",
-      "limit": "September BOK flash declined and October TLC 512Gb / 1Tb spot weakened. Broad acceleration is not confirmed.",
+      "limit": "September BOK flash and larger-density October spot remain weak. Kioxia call notes show more moderate mobile/PC pricing and incomplete December negotiations. Broad acceleration is not confirmed.",
       "magnitude_confidence": "Low for broad +15–20% realization or company blended ASP"
     }
   ],
@@ -40,7 +40,7 @@
     },
     {
       "signal": "Spot · partial October mean",
-      "date": "Through 30 Oct 2026; 19 observations per series; versus September mean",
+      "date": "Through 30 Oct 2026; 19 observations; morning download retained after afternoon Bloomberg failure",
       "dram": "DDR5 16Gb +3.3%; DDR4 8Gb -3.1%. Selective strength persists.",
       "nand": "TLC 256Gb +8.0%; 512Gb -6.2%; 1Tb -4.9%. No broad confirmation.",
       "weight": "Useful short-horizon cross-check. Incomplete month and narrow specifications; not a sector contract forecast.",
@@ -87,12 +87,24 @@
       "signal": "Kioxia Q3 released; numeric ASP verification pending",
       "date": "30 Oct 2026; calendar Q3 = FY26 Q2",
       "dram": "Not applicable.",
-      "nand": "Official filing confirms significant Q3 ASP increases; AI/data-center demand stronger than smartphone/PC demand.",
-      "weight": "Q4 revenue guided broadly flat, partly due to FX. Revenue is not an ASP guide. Latest verified numerical ASP remains calendar Q2 +70% like-for-like/blended; currency not explicit in that transcript passage.",
-      "source": "Kioxia 30 Oct filing pp2-3 and p7; 31 Jul transcript",
+      "nand": "Jefferies / Rankie Wong: Q3 blended ASP mid-20s and like-for-like low-30s QoQ. MS / Amir Amerian: Q4 ASP still rising, enterprise stronger than mobile/PC; about half of bits priced.",
+      "weight": "Secondary call notes; MS flags translation uncertainty. Q3 numerical ASP and currency still await primary verification; excluded from fit. Q4 revenue broadly flat partly due to FX and shipment timing is not a sector ASP guide.",
+      "source": "Kioxia official 30 Oct filing; Jefferies / Rankie Wong and MS / Amir Amerian 30 Oct call notes",
       "refs": [
         "kioxia-q3",
-        "kioxia-call"
+        "ms-kioxia30pm",
+        "jef-kioxia30pm"
+      ]
+    },
+    {
+      "signal": "Sandisk · independent company cross-check",
+      "date": "29 Oct 2026; fiscal Q1 ended 2 Oct",
+      "dram": "Not applicable.",
+      "nand": "Data-center revenue +61% QoQ; consumer -29% as market adjusts to higher pricing.",
+      "weight": "Corroborates end-market divergence. Revenue growth and guidance blend volume, pricing and mix; no numerical sector ASP inferred.",
+      "source": "Sandisk official FY27 Q1 presentation pp7-10 and16",
+      "refs": [
+        "sndk-oct29"
       ]
     }
   ],
@@ -187,6 +199,26 @@
       "refs": [
         "jef-oct30"
       ]
+    },
+    {
+      "name": "Morgan Stanley · Kioxia call notes",
+      "byline": "Amir Amerian · 30 Oct 2026; sales commentary",
+      "dram": "No new DRAM forecast.",
+      "nand": "December ASP still rises; data-center/enterprise strongest, mobile/PC more moderate; roughly half of bits priced.",
+      "assessment": "Secondary translation-based notes with explicit uncertainty. Timing and FX matter; weak revenue guidance does not establish falling NAND contracts.",
+      "refs": [
+        "ms-kioxia30pm"
+      ]
+    },
+    {
+      "name": "Jefferies · Kioxia / Sandisk read-through",
+      "byline": "Rankie Wong relaying Blayne Curtis · 30 Oct 2026; sales commentary",
+      "dram": "No new DRAM forecast.",
+      "nand": "Moderating pricing and weaker Edge/Consumer raise supply-balance concerns; Kioxia Q3 mid-20s blended / low-30s like-for-like ASP.",
+      "assessment": "Supports retaining selective enterprise strength and low confidence in broad +15-20% realization. Company bases are not directly comparable to sector contracts.",
+      "refs": [
+        "jef-kioxia30pm"
+      ]
     }
   ],
   "watch": [
@@ -224,6 +256,10 @@
     {
       "date": "2026-10-30T09:04:30-03:00",
       "change": "Kioxia 30 Oct primary filing confirms significant Q3 ASP increases and AI/data-center demand, with weaker smartphone/PC demand. Q4 revenue guidance is broadly flat, partly reflecting FX; this is not an ASP guide. Numeric Q3 ASP remains unverified. BofA/Simon Woo 30 Oct remains constructive, while Jefferies/Edison Lee expert recap expects pricing increases to normalize and NAND balance earlier than DRAM in 2027. DRAM Up / Moderate-high and NAND Up selectively / Moderate remain unchanged; neither broad Q4 NAND acceleration nor a precise company ASP forecast is established. October30 spot preserves the same split across 19 observations: DDR5/256Gb up, DDR4/512Gb/1Tb down. BOK DRAM and flash still end September; contracts and Korean customs unchanged. No new alert trigger."
+    },
+    {
+      "date": "2026-10-30T16:10:25-03:00",
+      "change": "30 Oct afternoon: MS/Amir Amerian call notes say Kioxia December-quarter ASP still rises, led by data-center/enterprise, with mobile/PC more moderate and only about half of bits priced; notes explicitly flag translation uncertainty. Jefferies/Rankie Wong relays September-quarter mid-20s blended / low-30s like-for-like ASP increases and a weak December revenue guide. These remain secondary observations with currency unverified, outside fit targets. Sandisk official 29 Oct deck confirms data-center strength alongside consumer weakness, but revenue guidance is not an ASP guide. Direction/confidence unchanged: DRAM Up / Moderate-high; NAND Up selectively / Moderate. Magnitude remains uncertain; no evidence yet of a lower Q4 sector contract average. Operational alert: afternoon Bloomberg session failed; morning30Oct spot and September contracts retained. Other feeds continue; October BOK DRAM/flash still unavailable. This is a monitoring gap, not evidence of changed prices."
     }
   ],
   "sources": [
@@ -352,6 +388,24 @@
       "label": "Jefferies · Edison Lee / expert Harold Lee · Expert recap 30 Oct 2026; relayed by William Beavington",
       "url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWjo%2BQOAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
       "detail": "Available email body reviewed; linked full report and replay not reviewed. Consistent with the existing selective view. Recap is not a fresh independent price observation or Q4 numerical forecast."
+    },
+    {
+      "id": "ms-kioxia30pm",
+      "label": "Morgan Stanley / Amir Amerian · 30 Oct 2026",
+      "url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWjo%2BSuAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "detail": "Available email body reviewed. Secondary call interpretation; linked full report not reviewed. Kioxia FY26 Q3 maps to calendar Q4, FY26 Q4 to calendar Q1 2027."
+    },
+    {
+      "id": "jef-kioxia30pm",
+      "label": "Jefferies / Rankie Wong · 30 Oct 2026",
+      "url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWjo%2BTYAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "detail": "Available email body reviewed. Secondary call interpretation; linked full report not reviewed. Kioxia FY26 Q3 maps to calendar Q4, FY26 Q4 to calendar Q1 2027."
+    },
+    {
+      "id": "sndk-oct29",
+      "label": "Sandisk official FY27 Q1 presentation · 29 Oct 2026",
+      "url": "https://investor.sandisk.com/static-files/4ca97b6e-7da4-4d52-b4ac-0e80f462716f",
+      "detail": "pp6-10 and16: higher pricing contributed to prior-quarter revenue growth; data-center revenue +61% QoQ, consumer -29%; December revenue guidance $12.2-12.6bn is not an ASP forecast."
     }
   ],
   "historical_stats": [
@@ -2069,6 +2123,6 @@
     "analyze_dashboard.py": "e644508e4b2f69f933c71c0d25ac3585536394b2b338b51e4d45505710b3444e"
   },
   "reviewed_evidence": "075658b57682c0660677803b47bbcc642cd41588030d9db2e48333a64146a334",
-  "review_note": "Kioxia 30 Oct primary filing confirms significant Q3 ASP increases and AI/data-center demand, with weaker smartphone/PC demand. Q4 revenue guidance is broadly flat, partly reflecting FX; this is not an ASP guide. Numeric Q3 ASP remains unverified. BofA/Simon Woo 30 Oct remains constructive, while Jefferies/Edison Lee expert recap expects pricing increases to normalize and NAND balance earlier than DRAM in 2027. DRAM Up / Moderate-high and NAND Up selectively / Moderate remain unchanged; neither broad Q4 NAND acceleration nor a precise company ASP forecast is established. October30 spot preserves the same split across 19 observations: DDR5/256Gb up, DDR4/512Gb/1Tb down. BOK DRAM and flash still end September; contracts and Korean customs unchanged. No new alert trigger.",
-  "reviewed_at": "2026-10-30T09:04:30-03:00"
+  "review_note": "30 Oct afternoon: MS/Amir Amerian call notes say Kioxia December-quarter ASP still rises, led by data-center/enterprise, with mobile/PC more moderate and only about half of bits priced; notes explicitly flag translation uncertainty. Jefferies/Rankie Wong relays September-quarter mid-20s blended / low-30s like-for-like ASP increases and a weak December revenue guide. These remain secondary observations with currency unverified, outside fit targets. Sandisk official 29 Oct deck confirms data-center strength alongside consumer weakness, but revenue guidance is not an ASP guide. Direction/confidence unchanged: DRAM Up / Moderate-high; NAND Up selectively / Moderate. Magnitude remains uncertain; no evidence yet of a lower Q4 sector contract average. Operational alert: afternoon Bloomberg session failed; morning30Oct spot and September contracts retained. Other feeds continue; October BOK DRAM/flash still unavailable. This is a monitoring gap, not evidence of changed prices.",
+  "reviewed_at": "2026-10-30T16:10:25-03:00"
 }

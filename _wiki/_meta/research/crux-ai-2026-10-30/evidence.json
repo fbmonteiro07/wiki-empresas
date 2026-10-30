@@ -1,0 +1,42 @@
+{
+  "asof": "2026-10-30",
+  "scope": "Public website, press reports, Alphabet Q3 filing, targeted Outlook search previews. No private credit documents or company contact.",
+  "sources": [
+    {
+      "source": "Crux AI corporate website",
+      "date": "undated; observed 2026-10-30",
+      "url": "https://crux.ai/",
+      "evidence": "Company-stated plan: 2GW/yr capacity ramp beginning 2H 2027. Capacity electrical basis undefined; not delivered capacity. No purchase or financial statements found on reviewed homepage."
+    },
+    {
+      "source": "9fin: Bill Weisbrod, William Hoffman, Sunny Oh",
+      "date": "2026-09-15",
+      "url": "https://www.9fin.com/insights/blackstone-google-ai-joint-venture",
+      "evidence": "Reported roughly $23bn financing for chip portfolio, likely bridge financing. Previously Project Braid. No drawdown schedule in accessible text."
+    },
+    {
+      "source": "Reuters: Harshita Mary Varghese, Arasu Kannagi Basil",
+      "date": "2026-09-16",
+      "url": "https://www.investing.com/news/stock-market-news/banks-provide-22-billion-chip-loan-to-blackstone-alphabet-cloud-venture-bloomberg-news-reports-4904543",
+      "evidence": "Own source confirms $22bn loan from 10 banks; names Goldman Sachs, SMBC, Barclays, BNP Paribas, Scotiabank. Relays Bloomberg for TPU/customer-contract collateral and syndication. No quarterly drawdowns or hardware deliveries established."
+    },
+    {
+      "source": "Investing.com: Louis Juricic, relay of Bloomberg",
+      "date": "2026-09-16",
+      "url": "https://www.investing.com/news/stock-market-news/banks-provide-22-billion-loan-for-blackstone-and-alphabet-ai-venture--bloomberg-93CH-4904384",
+      "evidence": "Separate $1bn revolving credit line. Same reported Crux financing, not additive to 9fin ~$23bn."
+    }
+  ],
+  "unresolved": [
+    "Legal borrower/SPV identity and public credit agreement",
+    "Closing and funded draw amounts at September 30",
+    "TPU purchase/delivery/acceptance amounts",
+    "Interest rate, maturity and loan-to-value",
+    "Reconciliation to $16.8bn Google remaining backlog; do not subtract it from financing to infer sales"
+  ],
+  "distinctions": [
+    "Crux financing separate from Broadcom/Anthropic Big Sky and North Star despite shared sponsors",
+    "TPU collateral, not GPU collateral",
+    "Company capacity roadmap is a rate, not installed stock; not comparable mechanically to May initial 500MW target"
+  ]
+}

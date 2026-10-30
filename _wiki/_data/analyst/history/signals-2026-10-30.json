@@ -7,13 +7,28 @@
     "positions": 8
   },
   "stats": {
-    "signals": 44,
-    "active": 44,
-    "high": 7,
-    "belief_changes": 5,
-    "focus_names": 33
+    "signals": 50,
+    "active": 50,
+    "high": 8,
+    "belief_changes": 10,
+    "focus_names": 35
   },
   "focus": [
+    {
+      "ticker": "GOOG",
+      "focus_score": 91,
+      "in_book": true,
+      "signal_count": 4,
+      "high_count": 3,
+      "sector": "AI — Hyperscalers & Software",
+      "thesis": "Full-stack compounder (Search +17%, Cloud +82%); debate is valuation and capital intensity, not demand.",
+      "next_catalyst": "2026-10-30",
+      "why": [
+        "GOOG — derived thesis/debate state changed since the prior daily snapshot",
+        "GOOG — 2026 revenue house view is 18% above consensus",
+        "GOOG — 2026-10-30: filing-level watch items for the FY26 10-K: (1) the TPU repurchase-obligation maximum…"
+      ]
+    },
     {
       "ticker": "AMZN",
       "focus_score": 87,
@@ -40,21 +55,6 @@
       "why": [
         "META — derived thesis/debate state changed since the prior daily snapshot",
         "META — 2026-10-30: (a) resolved by the filings: Meta priced on Monday 10-26 and the preferred closed 10-29,…"
-      ]
-    },
-    {
-      "ticker": "GOOG",
-      "focus_score": 80,
-      "in_book": true,
-      "signal_count": 3,
-      "high_count": 2,
-      "sector": "AI — Hyperscalers & Software",
-      "thesis": "Full-stack compounder (Search +17%, Cloud +82%); debate is valuation and capital intensity, not demand.",
-      "next_catalyst": "2026-10-30",
-      "why": [
-        "GOOG — 2026 revenue house view is 18% above consensus",
-        "GOOG — 2026-10-30: filing-level watch items for the FY26 10-K: (1) the TPU repurchase-obligation maximum…",
-        "GOOG — 2026-11-18: post-print watch items from the callbacks: (1) 4Q Cloud margin, where Sandler expects the…"
       ]
     },
     {
@@ -86,16 +86,71 @@
     },
     {
       "ticker": "SNDK",
+      "focus_score": 66,
+      "in_book": false,
+      "signal_count": 3,
+      "high_count": 0,
+      "sector": "Memory & storage",
+      "thesis": "Post-spin pure-play NAND on AI storage; price-driven blowout + $42B LTA backlog vs blowoff-top risk.",
+      "next_catalyst": "2026-10-30",
+      "why": [
+        "SNDK — derived thesis/debate state changed since the prior daily snapshot",
+        "SNDK — 2026-10-30: a dated coverage target, per Sur relaying the callback (not company-disclosed): 75% of…",
+        "SNDK — 2026-11-09: 2026-11-09 / 11-19 / 11-20 — 8-for-1 forward split: record date, issue of seven additional…"
+      ]
+    },
+    {
+      "ticker": "LITE",
       "focus_score": 64,
       "in_book": false,
       "signal_count": 2,
       "high_count": 0,
-      "sector": "Memory & storage",
-      "thesis": "Post-spin pure-play NAND on AI storage; price-driven blowout + $42B LTA backlog vs blowoff-top risk.",
-      "next_catalyst": "2026-11-09",
+      "sector": "Optical / Networking",
+      "thesis": "US photonics pure-play (rev +90%); demand isn't the question, supply/execution is.",
+      "next_catalyst": "2026-11-05",
       "why": [
-        "SNDK — derived thesis/debate state changed since the prior daily snapshot",
-        "SNDK — 2026-11-09: 2026-11-09 / 11-19 / 11-20 — 8-for-1 forward split: record date, issue of seven additional…"
+        "LITE — derived thesis/debate state changed since the prior daily snapshot",
+        "LITE — 2026-11-05: F1Q27 earnings (date per Deutsche Bank · Conti, 2026-10-07; confirm against the LITE IR…"
+      ]
+    },
+    {
+      "ticker": "MU",
+      "focus_score": 64,
+      "in_book": false,
+      "signal_count": 2,
+      "high_count": 0,
+      "sector": "AI — Semis & Compute",
+      "thesis": "Pure-play on AI memory intensity (HBM sold-out CY26); debate = peak earnings vs run-rate.",
+      "next_catalyst": "2026-12-09",
+      "why": [
+        "MU — derived thesis/debate state changed since the prior daily snapshot",
+        "MU — 2026-12-09: F4Q26 PRINT — REPORTED 2026-09-30 (✅ resolved: beat on revenue / GM / EPS, FQ1 revenue…"
+      ]
+    },
+    {
+      "ticker": "AMAT",
+      "focus_score": 62,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Semiconductor equipment (semicap)",
+      "thesis": "Broadest-line front-end WFE; share-gainer into a $200B/$250B '27-'28 WFE cycle; bear = memory beta + crowded positioning.",
+      "next_catalyst": "",
+      "why": [
+        "AMAT — derived thesis/debate state changed since the prior daily snapshot"
+      ]
+    },
+    {
+      "ticker": "MRVL",
+      "focus_score": 62,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "AI — Semis & Compute",
+      "thesis": "#2 merchant custom-ASIC (Trainium/Maia) + optical DSP; debate = hyperscaler concentration + 1.6T share.",
+      "next_catalyst": "",
+      "why": [
+        "MRVL — derived thesis/debate state changed since the prior daily snapshot"
       ]
     },
     {
@@ -299,19 +354,6 @@
       ]
     },
     {
-      "ticker": "LITE",
-      "focus_score": 40,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Optical / Networking",
-      "thesis": "US photonics pure-play (rev +90%); demand isn't the question, supply/execution is.",
-      "next_catalyst": "2026-11-05",
-      "why": [
-        "LITE — 2026-11-05: F1Q27 earnings (date per Deutsche Bank · Conti, 2026-10-07; confirm against the LITE IR…"
-      ]
-    },
-    {
       "ticker": "SMCI",
       "focus_score": 40,
       "in_book": false,
@@ -322,19 +364,6 @@
       "next_catalyst": "2026-11-03",
       "why": [
         "SMCI — 2026-11-03: RESOLVED (preliminary) 2026-10-20 — F1Q27 vs guide: revenue $18.5–19.5bn vs $14.5–15.5bn,…"
-      ]
-    },
-    {
-      "ticker": "MU",
-      "focus_score": 34,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "AI — Semis & Compute",
-      "thesis": "Pure-play on AI memory intensity (HBM sold-out CY26); debate = peak earnings vs run-rate.",
-      "next_catalyst": "2026-12-09",
-      "why": [
-        "MU — 2026-12-09: F4Q26 PRINT — REPORTED 2026-09-30 (✅ resolved: beat on revenue / GM / EPS, FQ1 revenue…"
       ]
     },
     {
@@ -539,6 +568,88 @@
       "hidden": false
     },
     {
+      "id": "beli-395cd13975f7",
+      "asof": "2026-10-30",
+      "source_date": "2026-10-30",
+      "type": "narrative_shift",
+      "priority": "high",
+      "score": 80,
+      "title": "GOOG — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "GOOG"
+      ],
+      "in_book": [
+        "GOOG"
+      ],
+      "impact": "high",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "verification (transcription QA): Nowak Intra-quarter block — garble rewritten in glossary form, ex-FX [transcribed \"XFX\"]. Search 10%/8%/8-11, SpaceX $900M+/month, $0.20/qtr, 2Q roll-off, capex $375/$400, 19x/16x and the ranking all match the transcript; the $2.7bn-pre-tax and P/E cross-checks stay labelled as Capstone arithmetic.",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the GOOG thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "supplier",
+          "detail": "custom ASIC (TPU)",
+          "from": "GOOG",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "GOOG",
+          "in_book": true
+        },
+        {
+          "ticker": "SNOW",
+          "relation": "competitor",
+          "detail": "warehouse vs BigQuery",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "ANTHROPIC",
+          "relation": "customer",
+          "detail": "TPU compute",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "BE",
+          "relation": "supplier",
+          "detail": "on-site fuel cells",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "CIEN",
+          "relation": "supplier",
+          "detail": "DCI/optical",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "COHR",
+          "relation": "supplier",
+          "detail": "optical",
+          "from": "GOOG",
+          "in_book": false
+        }
+      ],
+      "source": "GOOG page Changelog 2026-10-30",
+      "evidence_paths": [
+        "GOOG.md"
+      ],
+      "evidence_anchor": "verification (transcription QA): Nowak Intra-quarter block — garble rewritten in glossary form, ex-FX [transcribed \"XFX\"]. Search 10%/8%/8-11, SpaceX $900M+/month, $0.20/qtr, 2Q roll-off, capex $375/$400, 19x/16x and the ranking all match the transcript; the $2.7bn-pre-tax and P/E cross-checks stay labelled as Capstone arithmetic.",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
       "id": "beli-5063523d5233",
       "asof": "2026-10-30",
       "source_date": "2026-10-30",
@@ -621,9 +732,9 @@
       "hidden": false
     },
     {
-      "id": "esti-f910281fe2aa",
+      "id": "esti-eddcb2168507",
       "asof": "2026-10-30",
-      "source_date": "2026-10-29",
+      "source_date": "2026-10-30",
       "type": "model_check",
       "priority": "high",
       "score": 71,
@@ -637,7 +748,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $429.1bn as of 2026-10-29, a derived +17.7% gap. Revenue comparisons require a basis check.",
+      "why_now": "Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $428.4bn as of 2026-10-30, a derived +17.9% gap. Revenue comparisons require a basis check.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -692,7 +803,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-10-29",
+      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-10-30",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -701,8 +812,8 @@
       "origin": "house_vs_consensus",
       "values": {
         "house": 505.0,
-        "consensus": 429.11149,
-        "delta_pct": 17.69,
+        "consensus": 428.37021999999996,
+        "delta_pct": 17.89,
         "unit": "$bn"
       },
       "feedback": "",
@@ -710,9 +821,9 @@
       "hidden": false
     },
     {
-      "id": "esti-ad66a4ac7201",
+      "id": "esti-063e4da9ce59",
       "asof": "2026-10-30",
-      "source_date": "2026-10-29",
+      "source_date": "2026-10-30",
       "type": "model_check",
       "priority": "high",
       "score": 69,
@@ -726,7 +837,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.76 as of 2026-10-29, a derived +15.5% gap.",
+      "why_now": "Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.76 as of 2026-10-30, a derived +15.5% gap.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the AAPL model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -746,7 +857,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-10-29",
+      "source": "Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-10-30",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -1011,6 +1122,305 @@
       ],
       "evidence_anchor": "✅ 2026-10-30 — (a) resolved by the filings: Meta priced on Monday 10-26 and the preferred closed 10-29, before the election week. Size: $37.5bn underwritten ($25.0bn Class A forward + $12.5bn mand",
       "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "beli-97eb0ffe001b",
+      "asof": "2026-10-30",
+      "source_date": "2026-10-30",
+      "type": "narrative_shift",
+      "priority": "medium",
+      "score": 62,
+      "title": "AMAT — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "AMAT"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "ingest (Notion, 2026-10-30JPMorganHarlan-Sur-AMA-INTC-KLAC-SNDK-NXPI-AMD-MRVL-post-3Q26.md): 1 Debate 🔭 bullet + 1 Sources entry. Sur: Applied is 2 in process control, \"7 times smaller\" than KLA, with leadership in eBeam review / some eBeam inspection (competing with ASML and Japanese vendors). The answer is cut mid-way, so there is no overhang verdict. No rating/PT/ranking restated; nothing superseded.",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the AMAT thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "TSM",
+          "relation": "customer",
+          "detail": "WFE",
+          "from": "AMAT",
+          "in_book": true
+        },
+        {
+          "ticker": "LRCX",
+          "relation": "competitor",
+          "detail": "WFE overlap",
+          "from": "AMAT",
+          "in_book": false
+        },
+        {
+          "ticker": "INTC",
+          "relation": "customer",
+          "detail": "WFE",
+          "from": "AMAT",
+          "in_book": false
+        },
+        {
+          "ticker": "MU",
+          "relation": "customer",
+          "detail": "WFE",
+          "from": "AMAT",
+          "in_book": false
+        },
+        {
+          "ticker": "SAMSUNG",
+          "relation": "customer",
+          "detail": "WFE",
+          "from": "AMAT",
+          "in_book": false
+        },
+        {
+          "ticker": "SKHYNIX",
+          "relation": "customer",
+          "detail": "WFE",
+          "from": "AMAT",
+          "in_book": false
+        },
+        {
+          "ticker": "SMIC",
+          "relation": "customer",
+          "detail": "WFE",
+          "from": "AMAT",
+          "in_book": false
+        }
+      ],
+      "source": "AMAT page Changelog 2026-10-30",
+      "evidence_paths": [
+        "AMAT.md"
+      ],
+      "evidence_anchor": "ingest (Notion, 2026-10-30JPMorganHarlan-Sur-AMA-INTC-KLAC-SNDK-NXPI-AMD-MRVL-post-3Q26.md): 1 Debate 🔭 bullet + 1 Sources entry. Sur: Applied is 2 in process control, \"7 times smaller\" than KLA, with leadership in eBeam review / some eBeam inspection (competing with ASML and Japanese vendors). The answer is cut mid-way, so there is no overhang verdict. No rating/PT/ranking restated; nothing superseded.",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "beli-a90017eafcdc",
+      "asof": "2026-10-30",
+      "source_date": "2026-10-30",
+      "type": "narrative_shift",
+      "priority": "medium",
+      "score": 62,
+      "title": "LITE — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "LITE"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "ingest (Notion, 2026-10-30JPMorganHarlan-Sur-AMA-INTC-KLAC-SNDK-NXPI-AMD-MRVL-post-3Q26.md): 1 Debate 🔭 bullet — speculated Marvell acquisition of Lumentum as framed by JPM's Sur ('1+1=2' vertical integration, US transceiver/OCS supply assurance for Google, funding guess 15-20% cash). Speculation only; no source for the rumour on disk. Nothing superseded.",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the LITE thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": true
+        },
+        {
+          "ticker": "COHR",
+          "relation": "competitor",
+          "detail": "optical/InP",
+          "from": "LITE",
+          "in_book": false
+        },
+        {
+          "ticker": "AIXA",
+          "relation": "supplier",
+          "detail": "MOCVD tools",
+          "from": "LITE",
+          "in_book": false
+        },
+        {
+          "ticker": "ANET",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": false
+        }
+      ],
+      "source": "LITE page Changelog 2026-10-30",
+      "evidence_paths": [
+        "LITE.md"
+      ],
+      "evidence_anchor": "ingest (Notion, 2026-10-30JPMorganHarlan-Sur-AMA-INTC-KLAC-SNDK-NXPI-AMD-MRVL-post-3Q26.md): 1 Debate 🔭 bullet — speculated Marvell acquisition of Lumentum as framed by JPM's Sur ('1+1=2' vertical integration, US transceiver/OCS supply assurance for Google, funding guess 15-20% cash). Speculation only; no source for the rumour on disk. Nothing superseded.",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "beli-64ef36463f44",
+      "asof": "2026-10-30",
+      "source_date": "2026-10-30",
+      "type": "narrative_shift",
+      "priority": "medium",
+      "score": 62,
+      "title": "MRVL — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "MRVL"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "ingest (Notion, 2026-10-30JPMorganHarlan-Sur-AMA-INTC-KLAC-SNDK-NXPI-AMD-MRVL-post-3Q26.md): 1 Debate 🔭 bullet — Sur (JPM) on the SPECULATED Marvell acquisition of Lumentum: not in Investor Day LT targets, margin outlook still reachable, '1+1=2' vertical integration vs Cavium/Inphi '1+1=4', US-transceiver supply assurance for Google, funding guess 15-20% cash / rest equity. Speculation only; no source for the rumour on disk. Nothing superseded.",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the MRVL thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "competitor",
+          "detail": "custom ASIC",
+          "from": "MRVL",
+          "in_book": true
+        },
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "custom ASIC (Trainium)",
+          "from": "MRVL",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "customer",
+          "detail": "optical DSP",
+          "from": "MRVL",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "custom ASIC (Maia)",
+          "from": "MRVL",
+          "in_book": true
+        },
+        {
+          "ticker": "TSM",
+          "relation": "supplier",
+          "detail": "foundry",
+          "from": "MRVL",
+          "in_book": true
+        }
+      ],
+      "source": "MRVL page Changelog 2026-10-30",
+      "evidence_paths": [
+        "MRVL.md"
+      ],
+      "evidence_anchor": "ingest (Notion, 2026-10-30JPMorganHarlan-Sur-AMA-INTC-KLAC-SNDK-NXPI-AMD-MRVL-post-3Q26.md): 1 Debate 🔭 bullet — Sur (JPM) on the SPECULATED Marvell acquisition of Lumentum: not in Investor Day LT targets, margin outlook still reachable, '1+1=2' vertical integration vs Cavium/Inphi '1+1=4', US-transceiver supply assurance for Google, funding guess 15-20% cash / rest equity. Speculation only; no source for the rumour on disk. Nothing superseded.",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "beli-934cc7e55580",
+      "asof": "2026-10-30",
+      "source_date": "2026-10-30",
+      "type": "narrative_shift",
+      "priority": "medium",
+      "score": 62,
+      "title": "MU — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "MU"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "ingest (Notion, 2026-10-30UBSINTC-ENTG-3Q26-recap-call-Arcuri-Ruple.md): 1 short Debate block (2 bullets): Arcuri's \"server TAM as large as memory allows into 2030 → buy Micron\" and \"the whole [PC] industry's constrained by DRAM\", both analyst views. No mark or number superseded (UBS Buy / PT $1,625 unchanged).",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the MU thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "customer",
+          "detail": "HBM",
+          "from": "MU",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "HBM/LPDDR",
+          "from": "MU",
+          "in_book": true
+        },
+        {
+          "ticker": "SKHYNIX",
+          "relation": "competitor",
+          "detail": "HBM",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "AMAT",
+          "relation": "supplier",
+          "detail": "WFE",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "AMD",
+          "relation": "customer",
+          "detail": "HBM",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "ASML",
+          "relation": "supplier",
+          "detail": "litho",
+          "from": "MU",
+          "in_book": false
+        },
+        {
+          "ticker": "KLAC",
+          "relation": "supplier",
+          "detail": "process control",
+          "from": "MU",
+          "in_book": false
+        }
+      ],
+      "source": "MU page Changelog 2026-10-30",
+      "evidence_paths": [
+        "MU.md"
+      ],
+      "evidence_anchor": "ingest (Notion, 2026-10-30UBSINTC-ENTG-3Q26-recap-call-Arcuri-Ruple.md): 1 short Debate block (2 bullets): Arcuri's \"server TAM as large as memory allows into 2030 → buy Micron\" and \"the whole [PC] industry's constrained by DRAM\", both analyst views. No mark or number superseded (UBS Buy / PT $1,625 unchanged).",
+      "origin": "belief_diff",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
@@ -1294,9 +1704,9 @@
       "hidden": false
     },
     {
-      "id": "esti-e07e934b7fd5",
+      "id": "esti-d72458de5d86",
       "asof": "2026-10-30",
-      "source_date": "2026-10-29",
+      "source_date": "2026-10-30",
       "type": "model_check",
       "priority": "medium",
       "score": 53,
@@ -1308,7 +1718,7 @@
       "impact": "medium",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2026 EPS at $-3.27 versus Bloomberg consensus at $-3.94 as of 2026-10-29, a derived -17.0% gap.",
+      "why_now": "Capstone carries 2026 EPS at $-3.27 versus Bloomberg consensus at $-3.94 as of 2026-10-30, a derived -17.0% gap.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the CRWV model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -1349,7 +1759,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model — P:\\Felipe Monteiro\\US Equities\\Modelos oficiais\\Template DCF CRWV.xlsx (2026-10-14, Felipe Monteiro), first CRWV model in the official Template DCF <TICKER family (same sheets and conventions as AMD/AVGO/ADVANTEST/TER, plus History and Debt sheets; labels in English). Build and verification pipeline in · Bloomberg consensus 2026-10-29",
+      "source": "Capstone official model — P:\\Felipe Monteiro\\US Equities\\Modelos oficiais\\Template DCF CRWV.xlsx (2026-10-14, Felipe Monteiro), first CRWV model in the official Template DCF <TICKER family (same sheets and conventions as AMD/AVGO/ADVANTEST/TER, plus History and Debt sheets; labels in English). Build and verification pipeline in · Bloomberg consensus 2026-10-30",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -1367,9 +1777,9 @@
       "hidden": false
     },
     {
-      "id": "esti-dcfc87aaa8dd",
+      "id": "esti-c3c870bf4236",
       "asof": "2026-10-30",
-      "source_date": "2026-10-29",
+      "source_date": "2026-10-30",
       "type": "model_check",
       "priority": "medium",
       "score": 52,
@@ -1381,7 +1791,7 @@
       "impact": "medium",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2027 EPS at $-1.83 versus Bloomberg consensus at $-2.18 as of 2026-10-29, a derived -16.1% gap.",
+      "why_now": "Capstone carries 2027 EPS at $-1.83 versus Bloomberg consensus at $-2.18 as of 2026-10-30, a derived -16.1% gap.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the CRWV model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -1422,7 +1832,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model — P:\\Felipe Monteiro\\US Equities\\Modelos oficiais\\Template DCF CRWV.xlsx (2026-10-14, Felipe Monteiro), first CRWV model in the official Template DCF <TICKER family (same sheets and conventions as AMD/AVGO/ADVANTEST/TER, plus History and Debt sheets; labels in English). Build and verification pipeline in · Bloomberg consensus 2026-10-29",
+      "source": "Capstone official model — P:\\Felipe Monteiro\\US Equities\\Modelos oficiais\\Template DCF CRWV.xlsx (2026-10-14, Felipe Monteiro), first CRWV model in the official Template DCF <TICKER family (same sheets and conventions as AMD/AVGO/ADVANTEST/TER, plus History and Debt sheets; labels in English). Build and verification pipeline in · Bloomberg consensus 2026-10-30",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -1702,6 +2112,74 @@
         "KLAC.md"
       ],
       "evidence_anchor": "🆕 \"2027 memory ~60%\" — Bren, as machine-transcribed: \"In 2027, we'd expect overall memory to be about 60% of the business.\" Confirm the denominator (KLA semi-PC systems vs WFE) from the sharehol",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "cata-c6b87413ae33",
+      "asof": "2026-10-30",
+      "source_date": "2026-10-30",
+      "event_date": "2026-10-30",
+      "type": "catalyst",
+      "priority": "medium",
+      "score": 49,
+      "title": "SNDK — 2026-10-30: a dated coverage target, per Sur relaying the callback (not company-disclosed): 75% of…",
+      "tickers": [
+        "SNDK"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "🆕🔭 2026-10-30 — a dated coverage target, per Sur relaying the callback (not company-disclosed): 75% of FY28, FY29 and FY30 bits under LTAs/NBMs, to be locked in \"over the next 2 to 3 quarters\"",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "NAND/SSD",
+          "from": "SNDK",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "customer",
+          "detail": "NAND/SSD",
+          "from": "SNDK",
+          "in_book": true
+        },
+        {
+          "ticker": "META",
+          "relation": "customer",
+          "detail": "NAND/SSD",
+          "from": "SNDK",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "NAND/SSD",
+          "from": "SNDK",
+          "in_book": true
+        },
+        {
+          "ticker": "KIOXIA",
+          "relation": "competitor",
+          "detail": "NAND",
+          "from": "SNDK",
+          "in_book": false
+        }
+      ],
+      "source": "SNDK page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "SNDK.md"
+      ],
+      "evidence_anchor": "🆕🔭 2026-10-30 — a dated coverage target, per Sur relaying the callback (not company-disclosed): 75% of FY28, FY29 and FY30 bits under LTAs/NBMs, to be locked in \"over the next 2 to 3 quarters\"",
       "origin": "catalyst_calendar",
       "feedback": "",
       "feedback_note": "",

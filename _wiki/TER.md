@@ -10,10 +10,10 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\TER` (filings + transc
 | Revenue | **$5.1bn** | **$6.2bn** |
 | Gross profit | $3.0bn | $3.7bn |
 | Gross margin | **59.5%** | **59.5%** |
-| EBITDA | $1.7bn | $2.4bn |
+| EBITDA | $1.7bn | $2.5bn |
 | EPS | **$9.13** | **$11.93** |
-| Capex | $297m | $361m |
-| OCF (≈EBITDA) | $1.7bn | $2.4bn |
+| Capex | $300m | $352m |
+| OCF (≈EBITDA) | $1.7bn | $2.5bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 _**Bold** = Capstone official model; plain = BBG consensus._

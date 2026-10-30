@@ -1,7 +1,67 @@
 {
  "_about": "Hand-edited ledger of machine-transcription garbles (Notion AI, Bloomberg ASR, auto-translation) seen in the archive, with the correct reading. Used by E:\\.claude\\scripts\\transcript_qa.py (source-file scan, page-diff scan) and by ingest_notion_meetings.py (writes a 'Transcription QA' block into every archived Notion file). Keys are matched with word boundaries, case-sensitive unless 'ci' is true. 'keep_when' = regex contexts (same line, ~80 chars around the hit) where the token is legitimate and must NOT be flagged. Add an entry the first time a garble is caught; never delete one. Standing rule (Felipe, 2026-09-28): ALWAYS double-check transcript content — acronyms, names, units, numbers — before it travels to a page.",
- "_updated": "2026-10-29",
+ "_updated": "2026-10-30",
  "terms": {
+  "LayerScale": {
+   "correct": "Layerscape (NXP processor family)",
+   "domain": "products",
+   "rule": "Notion ASR of NXP's Layerscape.",
+   "first_seen": "2026-10-30 (Notion: JPM Sur AMA post-3Q26)"
+  },
+  "InfiniiFi": {
+   "correct": "Inphi (acquired by Marvell)",
+   "domain": "names",
+   "rule": "Notion ASR of Inphi in Sur's Marvell M&A history (Cavium, Inphi).",
+   "first_seen": "2026-10-30 (Notion: JPM Sur AMA post-3Q26)"
+  },
+  "Liqboo": {
+   "correct": "Lip-Bu Tan (Intel CEO)",
+   "domain": "names",
+   "rule": "Notion ASR of 'Lip-Bu' ('The bloom is off the rose ... with Liqboo') on the UBS Arcuri INTC recap.",
+   "first_seen": "2026-10-30 (Notion: JPM Sur AMA / UBS Arcuri INTC recap / MS Nowak AMZN+GOOGL callback)"
+  },
+  "Libbu": {
+   "correct": "Lip-Bu Tan (Intel CEO)",
+   "domain": "names",
+   "rule": "Notion ASR of 'Lip-Bu' ('Libbu bought $12 million of Intel stock') on the JPM Sur AMA.",
+   "first_seen": "2026-10-30 (Notion: JPM Sur AMA / UBS Arcuri INTC recap / MS Nowak AMZN+GOOGL callback)"
+  },
+  "Pantelake": {
+   "correct": "Panther Lake (Intel 18A client CPU)",
+   "domain": "products",
+   "rule": "Notion ASR of Panther Lake on the UBS Arcuri INTC recap.",
+   "first_seen": "2026-10-30 (Notion: JPM Sur AMA / UBS Arcuri INTC recap / MS Nowak AMZN+GOOGL callback)"
+  },
+  "Keoksiya": {
+   "correct": "Kioxia",
+   "domain": "memory",
+   "rule": "Notion ASR of Kioxia ('the Keoksiya guide') on the JPM Sur AMA.",
+   "first_seen": "2026-10-30 (Notion: JPM Sur AMA / UBS Arcuri INTC recap / MS Nowak AMZN+GOOGL callback)"
+  },
+  "Lasertech": {
+   "correct": "Lasertec (Japanese actinic EUV mask-inspection vendor)",
+   "domain": "semicap",
+   "rule": "ASR/summary spelling of Lasertec, KLA's actinic mask-inspection competitor.",
+   "first_seen": "2026-10-30 (Notion: JPM Sur AMA / UBS Arcuri INTC recap / MS Nowak AMZN+GOOGL callback)"
+  },
+  "EMIT": {
+   "correct": "EMIB (Intel embedded multi-die interconnect bridge packaging)",
+   "domain": "packaging",
+   "rule": "Notion ASR of EMIB in the substrate-shortage sentence ('hurting Xeon ... and EMIT').",
+   "first_seen": "2026-10-30 (Notion: JPM Sur AMA / UBS Arcuri INTC recap / MS Nowak AMZN+GOOGL callback)"
+  },
+  "PDE": {
+   "correct": "P/E",
+   "domain": "finance",
+   "rule": "Notion ASR of P/E ('trading more off of PDE').",
+   "first_seen": "2026-10-30 (Notion: JPM Sur AMA / UBS Arcuri INTC recap / MS Nowak AMZN+GOOGL callback)"
+  },
+  "XFX": {
+   "correct": "ex-FX",
+   "domain": "finance",
+   "rule": "Notion ASR of ex-FX ('search missed even on an XFX basis').",
+   "first_seen": "2026-10-30 (Notion: JPM Sur AMA / UBS Arcuri INTC recap / MS Nowak AMZN+GOOGL callback)"
+  },
   "Astrod": {
    "correct": "Astra (probable: OpenAI GPT-6 Astra)",
    "domain": "products",
