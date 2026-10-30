@@ -1,8 +1,8 @@
 # Source-coverage audit
 
-_Generated 2026-10-29 · 96 public-company pages · flags inputs that exist on disk but the page never read. Rebuild: `py _wiki/_tools/build_coverage.py`._
+_Generated 2026-10-30 · 96 public-company pages · flags inputs that exist on disk but the page never read. Rebuild: `py _wiki/_tools/build_coverage.py`._
 
-**16 pages flagged** (severity > 0), worst first.
+**15 pages flagged** (severity > 0), worst first.
 
 | Sev | Ticker | Words | Cites | Density | Latest tx | tx read? | Calls used | Decks | What's unread |
 |--:|---|--:|--:|--:|---|:--:|---|---|---|
@@ -21,6 +21,5 @@ _Generated 2026-10-29 · 96 public-company pages · flags inputs that exist on d
 | 3.0 | BESI | 29943 | 54 | 3129.3 | 2026-07-23 | ✗ | 0/0 | 0/0 | latest transcript 2026-07-23 unread |
 | 2.0 | AGX | 4022 | 15 | 146.6 | 2026-06-04 | ✓ | 0/0 | 1/1 | latest 10-Q 2026-09-02 unread (no same-qtr transcript either) |
 | 2.0 | CSCO | 32203 | 71 | 471.9 | 2026-08-12 | ✓ | 4/2 | 2/17 | latest 10-Q 2026-05-19 unread (no same-qtr transcript either) |
-| 2.0 | GLW | 40316 | 76 | 1110.9 | 2026-10-27 | ✓ | 3/3 | 1/3 | latest 10-Q 2026-07-29 unread (no same-qtr transcript either) |
 
 _Density = (words + 25·citations) / (filings+transcripts+calls+briefings+decks). Low density + high material = thin synthesis. 'Calls used' = `_equity_calls` links / available (a low ratio is fine if the page links a representative subset)._
