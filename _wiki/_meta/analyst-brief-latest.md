@@ -1,6 +1,6 @@
 # Daily Analyst Brief
 
-_Generated 2026-10-29 · 40 active signals · latest reconciliation: reconciliation-2026-10-28-inbox.md._
+_Generated 2026-10-29 · 41 active signals · latest reconciliation: reconciliation-2026-10-29-inbox.md._
 
 > ⚠️ **Portfolio priority is provisional.** _data/book.json is still a seed with unknown weights. Book badges identify seeded names but do not represent real exposure.
 
@@ -10,16 +10,16 @@ _Generated 2026-10-29 · 40 active signals · latest reconciliation: reconciliat
 |---:|---|---|---:|---|
 | 1 | **GOOG** | seed | 2 | GOOG — 2026 revenue house view is 18% above consensus; GOOG — 2026-11-18: post-print watch items from the callbacks: (1) 4Q Cloud margin, where Sandler expects the… |
 | 2 | **AAPL** | seed | 1 | AAPL — 2026 EPS house view is 16% above consensus |
-| 3 | **NVDA** | seed | 2 | NVDA — 2026-11-17: CLOSED 2026-09-10 — THE GS COMMUNACOPIA FIRESIDE HAPPENED. OUTCOME: Jensen reaffirmed the…; NVDA — 2026-11-23: NVDA investor call (IR) (Rothschild & Co Redburn TMT sales · Rowan Adley, 2026-09-28).… |
-| 4 | **TXN** | — | 2 | TXN — derived thesis/debate state changed since the prior daily snapshot; TXN — catalyst passed without a logged outcome |
-| 5 | **WDC** | — | 2 | WDC — derived thesis/debate state changed since the prior daily snapshot; WDC — 2026-10-29: The WDC-vs-STX relative trade is now the live question on this page (Barclays desk ·… |
-| 6 | **NSCALE** | — | 3 | NSCALE — Bloomberg consensus missing; NSCALE — latest earnings transcript absent |
-| 7 | **MSFT** | seed | 1 | MSFT — 2026-11-17: 2026-11-17 to 11-20, SF — MSFT IGNITE. |
-| 8 | **NOK** | — | 2 | NOK — Bloomberg consensus missing; NOK — latest earnings transcript absent |
-| 9 | **CRWV** | — | 2 | CRWV — 2026 EPS house view is 17% below consensus; CRWV — 2027 EPS house view is 16% below consensus |
-| 10 | **SPCX** | — | 2 | SPCX — 2026-11-12: OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.…; SPCX — 2026-10-29: ~~Q3 2026 earnings (2026-10-20 AMC)~~ — ✅ RESOLVED 2026-10-20: revenue $14.575bn vs BBG… |
-| 11 | **NOW** | — | 2 | NOW — 2026-10-29: the UBS bar for this print (Karl Keirstead (UBS) @ UBS recap call - MSFT (+NOW/FTNT),…; NOW — 2026-12-09: Post-print conferences: BMO Technology & Innovation Leaders 2026-11-12 and RBC Global TIMT… |
-| 12 | **AIXA** | — | 1 | AIXA — 2026-10-29: Q3 FY2026 results, per the Vital Knowledge forward calendar (listed with Adidas, STM,… |
+| 3 | **AMZN** | seed | 1 | AMZN — 2026-10-29: RESOLVED 2026-10-29 (press release, AMC; call transcript not yet on disk) — mixed. Revenue… |
+| 4 | **NVDA** | seed | 2 | NVDA — 2026-11-17: CLOSED 2026-09-10 — THE GS COMMUNACOPIA FIRESIDE HAPPENED. OUTCOME: Jensen reaffirmed the…; NVDA — 2026-11-23: NVDA investor call (IR) (Rothschild & Co Redburn TMT sales · Rowan Adley, 2026-09-28).… |
+| 5 | **TXN** | — | 2 | TXN — derived thesis/debate state changed since the prior daily snapshot; TXN — catalyst passed without a logged outcome |
+| 6 | **WDC** | — | 2 | WDC — derived thesis/debate state changed since the prior daily snapshot; WDC — 2026-10-29: The WDC-vs-STX relative trade is now the live question on this page (Barclays desk ·… |
+| 7 | **NSCALE** | — | 3 | NSCALE — Bloomberg consensus missing; NSCALE — latest earnings transcript absent |
+| 8 | **MSFT** | seed | 1 | MSFT — 2026-11-17: 2026-11-17 to 11-20, SF — MSFT IGNITE. |
+| 9 | **NOK** | — | 2 | NOK — Bloomberg consensus missing; NOK — latest earnings transcript absent |
+| 10 | **CRWV** | — | 2 | CRWV — 2026 EPS house view is 17% below consensus; CRWV — 2027 EPS house view is 16% below consensus |
+| 11 | **SPCX** | — | 2 | SPCX — 2026-11-12: OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.…; SPCX — 2026-10-29: ~~Q3 2026 earnings (2026-10-20 AMC)~~ — ✅ RESOLVED 2026-10-20: revenue $14.575bn vs BBG… |
+| 12 | **NOW** | — | 2 | NOW — 2026-10-29: the UBS bar for this print (Karl Keirstead (UBS) @ UBS recap call - MSFT (+NOW/FTNT),…; NOW — 2026-12-09: Post-print conferences: BMO Technology & Innovation Leaders 2026-11-12 and RBC Global TIMT… |
 
 ## Highest-priority ideas
 
@@ -103,6 +103,7 @@ _MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
 ## Catalysts requiring preparation
 
+- **AMZN — 2026-10-29: RESOLVED 2026-10-29 (press release, AMC; call transcript not yet on disk) — mixed. Revenue…** — ✅ RESOLVED 2026-10-29 (press release, AMC; call transcript not yet on disk) — mixed. Revenue $201.9B at the top of the $197-202B guide (in line with consensus $202.0B); OI $28.1B / 13.9% beat _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-fe764572d972)
 - **AIXA — 2026-10-29: Q3 FY2026 results, per the Vital Knowledge forward calendar (listed with Adidas, STM,…** — 🆕 2026-10-29 (Thu, before the EU open) — Q3 FY2026 results, per the Vital Knowledge forward calendar (listed with Adidas, STM, Shell, VW et al. on the same morning) (Vital Knowledge, "Vital Dawn", _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-67b3a6bd8c80)
 - **NOW — 2026-10-29: the UBS bar for this print (Karl Keirstead (UBS) @ UBS recap call - MSFT (+NOW/FTNT),…** — 🆕 2026-10-29 — the UBS bar for this print (Karl Keirstead (UBS) @ UBS recap call - MSFT (+NOW/FTNT), 2026-10-29 - Capstone notes (Notion transcript)): UBS 2027 growth at 17-18% vs the Street a _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-b106e2aa610d)
 - **SPCX — 2026-10-29: ~~Q3 2026 earnings (2026-10-20 AMC)~~ — ✅ RESOLVED 2026-10-20: revenue $14.575bn vs BBG…** — ~~Q3 2026 earnings (2026-10-20 AMC)~~ — ✅ RESOLVED 2026-10-20: revenue $14.575bn vs BBG $12.87bn; adj. EBITDA $8.809bn vs $6.59bn; SI $7.560bn; nameplate 1.7GW (in line); subs 13.6M (miss); guid _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-e94c022d7052)
@@ -112,7 +113,6 @@ _MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 - **KIOXIA — 2026-11-02: 2026-11-02 (Mon) 9am JST — BofA post-results "doko shuzai" with KIOXIA on FY3/27 2Q…** — 🆕 2026-11-02 (Mon) 9am JST — BofA post-results "doko shuzai" with KIOXIA on FY3/27 2Q results (BofA · Mikio Hirakawa, via BofA one-liners, 2026-10-01) — dates the Sep-quarter print to before 11-02 _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-e20427bb0cce)
 - **LITE — 2026-11-05: F1Q27 earnings (date per Deutsche Bank · Conti, 2026-10-07; confirm against the LITE IR…** — 🆕 2026-11-05 — F1Q27 earnings (date per Deutsche Bank · Conti, 2026-10-07; confirm against the LITE IR release). DB's bogeys: OCS $100m for the first time (path to $1bn in 2027), CPO toward _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-b395c83ce767)
 - **SMCI — 2026-11-03: RESOLVED (preliminary) 2026-10-20 — F1Q27 vs guide: revenue $18.5–19.5bn vs $14.5–15.5bn,…** — ✅ RESOLVED (preliminary) 2026-10-20 — F1Q27 vs guide: revenue $18.5–19.5bn vs $14.5–15.5bn, GM 12.0–12.5% vs 10.4–10.8% (SMCI 8-K, 2026-10-20). Bull on delivery vs guide; GM sits well belo _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-3307849d38b1)
-- **STX — 2026-11-02: Morgan Stanley Global Hardware & Optical lunch (Andy Meng, Howard Kao, Derrick Yang, Meta…** — 🆕 2026-10-08 (12pm ET, NYC) — Morgan Stanley Global Hardware & Optical lunch (Andy Meng, Howard Kao, Derrick Yang, Meta Marshall, Erik Woodring) covering STX/WDC among others; 2026-11-02/03 — MS _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-396a1e21b245)
 
 ## Research hygiene
 

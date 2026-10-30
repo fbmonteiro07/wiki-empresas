@@ -1,17 +1,17 @@
 {
   "asof": "2026-10-29",
-  "latest_reconciliation": "reconciliation-2026-10-28-inbox.md",
+  "latest_reconciliation": "reconciliation-2026-10-29-inbox.md",
   "book": {
     "asof": "2026-07-01",
     "seed": true,
     "positions": 8
   },
   "stats": {
-    "signals": 40,
-    "active": 40,
-    "high": 2,
+    "signals": 41,
+    "active": 41,
+    "high": 3,
     "belief_changes": 2,
-    "focus_names": 30
+    "focus_names": 31
   },
   "focus": [
     {
@@ -39,6 +39,19 @@
       "next_catalyst": "",
       "why": [
         "AAPL — 2026 EPS house view is 16% above consensus"
+      ]
+    },
+    {
+      "ticker": "AMZN",
+      "focus_score": 74,
+      "in_book": true,
+      "signal_count": 1,
+      "high_count": 1,
+      "sector": "AI — Hyperscalers & Software",
+      "thesis": "AWS re-acceleration (+28%) + in-house silicon (Trainium); debate = $200B capex/ROIC.",
+      "next_catalyst": "2026-10-29",
+      "why": [
+        "AMZN — 2026-10-29: RESOLVED 2026-10-29 (press release, AMC; call transcript not yet on disk) — mixed. Revenue…"
       ]
     },
     {
@@ -555,6 +568,90 @@
         "delta_pct": 15.53,
         "unit": ""
       },
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "cata-fe764572d972",
+      "asof": "2026-10-29",
+      "source_date": "2026-10-29",
+      "event_date": "2026-10-29",
+      "type": "catalyst",
+      "priority": "high",
+      "score": 69,
+      "title": "AMZN — 2026-10-29: RESOLVED 2026-10-29 (press release, AMC; call transcript not yet on disk) — mixed. Revenue…",
+      "tickers": [
+        "AMZN"
+      ],
+      "in_book": [
+        "AMZN"
+      ],
+      "impact": "high",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "✅ RESOLVED 2026-10-29 (press release, AMC; call transcript not yet on disk) — mixed. Revenue $201.9B at the top of the $197-202B guide (in line with consensus $202.0B); OI $28.1B / 13.9% beat",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "supplier",
+          "detail": "networking",
+          "from": "AMZN",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "AMZN",
+          "in_book": true
+        },
+        {
+          "ticker": "MDB",
+          "relation": "competitor",
+          "detail": "Atlas vs DynamoDB",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "SNOW",
+          "relation": "competitor",
+          "detail": "warehouse vs Redshift",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "AAOI",
+          "relation": "supplier",
+          "detail": "optical transceivers",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "AGX",
+          "relation": "supplier",
+          "detail": "EPC gas power",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "ALAB",
+          "relation": "supplier",
+          "detail": "PCIe/CXL",
+          "from": "AMZN",
+          "in_book": false
+        }
+      ],
+      "source": "AMZN page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "AMZN.md"
+      ],
+      "evidence_anchor": "✅ RESOLVED 2026-10-29 (press release, AMC; call transcript not yet on disk) — mixed. Revenue $201.9B at the top of the $197-202B guide (in line with consensus $202.0B); OI $28.1B / 13.9% beat",
+      "origin": "catalyst_calendar",
       "feedback": "",
       "feedback_note": "",
       "hidden": false

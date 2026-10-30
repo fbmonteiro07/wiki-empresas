@@ -2,11 +2,13 @@
 
 _Generated 2026-10-29 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (46)
+## 📅 Upcoming (48)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
 | 2026-10-29 | AIXA | 🆕 **2026-10-29 (Thu, before the EU open) — Q3 FY2026 results**, per the Vital Knowledge forward calendar (listed with Adidas, STM, Shell, VW et al. on the same morning) (Vital Knowledge, "Vital Dawn", |
+| 2026-10-29 | AMZN | ✅ **RESOLVED 2026-10-29 (press release, AMC; call transcript not yet on disk) — mixed.** Revenue $201.9B at the top of the $197-202B guide (in line with consensus $202.0B); OI **$28.1B / 13.9%** beat  |
+| 2026-10-29 | AMZN | 🆕 **Q4 FY26 print (date not yet announced; the Q4'25 print was 2026-02-05) — the bar set on 2026-10-29:** net sales **$240-247B**, OI **$28.5-33.5B**, advertising **"high teens"** y/y, FY26 cash capex |
 | 2026-10-29 | NOW | 🆕 **2026-10-29 — the UBS bar for this print (Karl Keirstead (UBS) @ UBS recap call - MSFT (+NOW/FTNT), 2026-10-29 - Capstone notes (Notion transcript)):** UBS 2027 growth at **17-18%** vs the Street a |
 | 2026-10-29 | SPCX | ~~**Q3 2026 earnings (2026-10-20 AMC)**~~ — **✅ RESOLVED 2026-10-20: revenue $14.575bn vs BBG $12.87bn; adj. EBITDA $8.809bn vs $6.59bn; SI $7.560bn; nameplate 1.7GW (in line); subs 13.6M (miss); guid |
 | 2026-10-29 | WDC | **🆕 The WDC-vs-[[STX]] relative trade is now the live question on this page (Barclays desk · Jeffrey Rand, 2026-08-05).** STX guided C3Q EPS ~25% above the Street; WDC ~4%. Two independent reasons alr |

@@ -5696,6 +5696,55 @@
    "domain": "terms",
    "rule": "ASR of rev-rec.",
    "first_seen": "2026-10-29 (Notion, Barclays/Wells Fargo/UBS GOOG-MSFT-NOW recap calls)"
+  },
+  "Jacob Cox": {
+   "correct": "Jacob Coxon (ex-OpenAI/Anthropic pretraining researcher who resigned)",
+   "domain": "names",
+   "ci": true,
+   "rule": "'Jacob Cox and' / 'Jacob Cox' = Jacob Coxon; quote as Jacob Coxon [transcribed \"Jacob Cox\"].",
+   "first_seen": "2026-10-29 (The Builders w/ Walter Isaacson, Mustafa Suleyman, taped 2026-10-12, YouTube ASR)"
+  },
+  "Amanda ask all": {
+   "correct": "Amanda Askell (Anthropic)",
+   "domain": "names",
+   "ci": true,
+   "rule": "'Daniel and Amanda ask all' = Daniela [Amodei] and Amanda Askell.",
+   "first_seen": "2026-10-29 (The Builders w/ Walter Isaacson, Mustafa Suleyman, taped 2026-10-12, YouTube ASR)"
+  },
+  "Emma the microphone of AI": {
+   "correct": "humanist AI (code of conduct) - probable, UNCONFIRMED",
+   "domain": "products",
+   "ci": true,
+   "rule": "'The Emma the microphone of AI code of conduct' most plausibly = the humanist AI code of conduct (Microsoft AI / MAI); quote with [transcribed ...] and UNCONFIRMED.",
+   "first_seen": "2026-10-29 (The Builders w/ Walter Isaacson, Mustafa Suleyman, taped 2026-10-12, YouTube ASR)"
+  },
+  "computer flops": {
+   "correct": "compute flops",
+   "domain": "units",
+   "rule": "Caption of Altman's 'how we allocate dollars or compute flops'; quote as compute flops [transcribed \"computer flops\"].",
+   "first_seen": "2026-10-29 (Cheeky Pint, Sam Altman, YouTube uploaded captions)"
+  },
+  "myanthropic": {
+   "correct": "my Anthropic",
+   "domain": "names",
+   "ci": true,
+   "rule": "Caption run-together of \"my Anthropic\"; quote as Anthropic [transcribed \"myanthropic\"].",
+   "first_seen": "2026-10-28 (a16z Show, Mark Cuban episode, YouTube ASR [00:17:35])"
+  },
+  "getworked": {
+   "correct": "networked",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR of \"networked\".",
+   "first_seen": "2026-10-29 (A Bit Personal with Jodi Shelton, Jeetu Patel episode, YouTube ASR)"
+  },
+  "Shu Patel": {
+   "correct": "Jeetu Patel",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of Cisco President/CPO Jeetu Patel's name.",
+   "keep_when": "never",
+   "first_seen": "2026-10-29 (A Bit Personal with Jodi Shelton, Jeetu Patel episode, YouTube ASR)"
   }
  },
  "summary_traps": [
