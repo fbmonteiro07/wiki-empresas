@@ -159,6 +159,18 @@ from it. Module: `_wiki/_tools/credit_workbook.py`.
 
 ### Terminal view (added 2026-10-16, Felipe: "deixe esse dashboard bem visual estilo bbg e me mande por email")
 
+2026-10-30 CDS import correction: the October 23 workbook changed its CDS columns to Last, update time,
+previous close, daily change and dated closes. The previous positional importer misread these as snapshot
+and MS 24-Aug marks. `credit_workbook.py` now maps column headings, rejects unknown layouts, distinguishes
+cached CBIN PX_MID from CDS_FLAT_SPREAD, and clears comparisons without their actual historical base.
+The current JSON was reconciled to the source headings without changing the xlsx or fresh flat-spread quotes.
+Prior JSON/code/draft exports are archived under `research-history/2026-10-30T092216-cds-mapping-pre-edit`;
+the source headings, workbook hash and repair are recorded in `research-sources/2026-10-30-cds-mapping.json`.
+Five-year summaries now filter the actual tenor and preserve AVAGO versus AVGO B contract names. The curve
+is ordered by tenor. Missing instruments are counted once, even when they appear in multiple workbook sections.
+The Friday brief and dashboard explicitly mark the absent historical CDS comparisons as unavailable.
+`test_credit_monitor.py` includes regressions for column shifts, quote bases, missing baselines and tenor filtering.
+
 `_wiki/_tools/build_credit_live.py` renders `_dashboards/credit-live.html` from `credit_workbook.json`: a Bloomberg-terminal-style
 page (black surface, amber chrome, monospace, inline SVG) with the yield ladder vs the 10% line, Δ yield since 15-Sep,
 OAS pickup dumbbells, principal vs par, the CRWV CDS term structure, 5Y CDS now vs the MS desk marks, equity heat tiles and

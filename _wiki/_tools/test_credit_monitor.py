@@ -10,6 +10,7 @@ import unittest
 from unittest.mock import patch
 
 import fetch_funding
+import credit_workbook
 from funding_common import change, market_health, observations
 from refresh_credit_monitor import summary
 
@@ -17,6 +18,44 @@ TODAY = dt.date(2026, 9, 29)
 
 
 class CreditMonitorTests(unittest.TestCase):
+    def test_daily_cds_columns_are_not_historical_desk_marks(self):
+        headers = ['Name', 'Bloomberg ticker', 'Last', 'Last update (time, else curve date)',
+                   'Prev close (bp)', 'Chg day / day', 'T-2 close (bp)', '31-Dec-25 close (bp)',
+                   'Prev-day move (T-1 − T-2, bp)', 'Live quote status', 'Column C source']
+        source = ['CRWV CDS 5Y', 'CRWV CDS USD SR 5Y D14 Corp', 1186.3, '23/10/2026',
+                  1188.9, -2.6, 1120.7, 798.2, 68.2, 'Live', 'Flat spread (EOD close)']
+        row = credit_workbook.parse_cds_table(headers, [source], [None]*4+[46317])[0]
+        self.assertEqual(row['spread_bp'], 1186.3)
+        self.assertEqual(row['cached_quote']['previous_close_date'], '2026-10-22')
+        self.assertEqual(row['cached_quote']['daily_change_bp'], -2.6)
+        for key in ('spread_snapshot_bp', 'd_snapshot_bp', 'ms_desk_0824_bp', 'd_vs_ms_bp'):
+            self.assertIsNone(row[key])
+        source[-1] = 'CBIN live mid'
+        row = credit_workbook.parse_cds_table(headers, [source])[0]
+        self.assertIsNone(row['spread_bp'])
+        self.assertEqual(row['cached_quote']['value_bp'], 1186.3)
+
+    def test_cds_columns_resolve_by_heading_and_missing_baselines_clear_deltas(self):
+        headers = ['MS desk 24-Aug bp', 'Name', 'Last', 'Bloomberg ticker', 'Snapshot bp']
+        row = credit_workbook.parse_cds_table(headers, [[100, 'AMD CDS 5Y', 120, 'AMD CDS USD SR 5Y D14 Corp', 115]])[0]
+        self.assertEqual(row['d_vs_ms_bp'], 20)
+        self.assertEqual(row['d_snapshot_bp'], 5)
+        row['ms_desk_0824_bp'] = None
+        credit_workbook.derive_cds(row)
+        self.assertIsNone(row['d_vs_ms_bp'])
+        with self.assertRaises(ValueError):
+            credit_workbook.parse_cds_table(['Name', 'Bloomberg ticker', 'Mystery'], [])
+
+    def test_five_year_brief_excludes_other_tenors_and_keeps_contract_names(self):
+        wb = {'totals': {}, 'values_source': 'fixture', 'values_asof': '2026-10-30', 'bonds': [], 'other': [], 'equities': [],
+              'cds': [{'name': n, 'bbg': n, 'spread_bp': 100, 'ms_desk_0824_bp': 90, 'd_vs_ms_bp': 10}
+                      for n in ('CRWV CDS 1Y', 'CRWV CDS 5Y', 'CRWV CDS 10Y', 'AVAGO CDS 5Y', 'AVGO B CDS 5Y')]}
+        line = next(x for x in credit_workbook.brief_lines(wb) if x.startswith('- 5Y CDS ('))
+        self.assertNotIn('1Y', line)
+        self.assertNotIn('10Y', line)
+        self.assertIn('AVAGO CDS 5Y', line)
+        self.assertIn('AVGO B CDS 5Y', line)
+
     def series(self, **extra):
         return {'ticker': 'TEST Index', 'label': 'Test OAS', 'unit': '%',
                 'points': [['2026-09-18', 2.0], ['2026-09-21', 2.1], ['2026-09-28', 2.5]], **extra}

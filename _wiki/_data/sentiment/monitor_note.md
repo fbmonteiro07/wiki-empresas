@@ -1,6 +1,6 @@
-== SENTIMENT MONITOR · 2026-10-29 ==
+== SENTIMENT MONITOR · 2026-10-30 ==
 
-**Market mood.** CNN Fear & Greed is at **35 (fear)** — up from 20 a week ago and 31 a month ago (fear).
+**Market mood.** CNN Fear & Greed is at **32 (fear)** — up from 17 a week ago and 30 a month ago (fear).
 
 Since 2021, readings in the 30 band (±5) were followed by SPY **+0.35%** over five sessions (up 64% of the time, n=216 overlapping readings; QQQ +0.54% / 62%).
 
@@ -10,6 +10,6 @@ Last extreme crossing: down to ≤30 on 2026-10-22 (F&G 20); SPY +0.71% over the
 
 **Cooling off.** **NFLX** (-2.8σ, 134 posts/day vs 180) · stock -7.5% over the week; **CRWV** (-2.6σ, 109 posts/day vs 144) · stock +9.2% over the week; **TXN** (-2.3σ, 30 posts/day vs 20) · stock +12.0% over the week; **LRCX** (-2.2σ, 85 posts/day vs 47) · stock +10.5% over the week; **NBIS** (-2.1σ, 12 posts/day vs 109) · stock +8.1% over the week.
 
-**Universe breadth (week ending 2026-10-23, 106 names).** EPS revisions up for 87% and down for 11%; rating drift positive for 41%; 20% of names up over 4 weeks. Sell-side: 18 names with net upgrades vs 2 with net downgrades, PT raises in 6 vs cuts in 5.
+**Universe breadth (week ending 2026-10-30, 106 names).** EPS revisions up for 88% and down for 10%; rating drift positive for 35%; 21% of names up over 4 weeks. Sell-side: 12 names with net upgrades vs 4 with net downgrades, PT raises in 9 vs cuts in 8.
 
-**What history says (Bloomberg track, 2024-01-05 → 2026-10-23).** Names that *turned hot* returned **-0.1%** universe-relative over 15 days (positive 44%, n=1130); *turned cold* +0.1% (positive 46%, n=959). Attention says where the crowd is, not where the stock goes next.
+**What history says (Bloomberg track, 2024-01-05 → 2026-10-30).** Names that *turned hot* returned **-0.1%** universe-relative over 15 days (positive 44%, n=1130); *turned cold* +0.1% (positive 46%, n=959). Attention says where the crowd is, not where the stock goes next.

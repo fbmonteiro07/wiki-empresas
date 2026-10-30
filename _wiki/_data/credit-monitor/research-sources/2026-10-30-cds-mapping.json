@@ -1,0 +1,350 @@
+{
+  "review": {
+    "reviewed_at": "2026-10-30T09:23:58",
+    "source_sha256": "f8a56a35c0aa9fb031a606aaa2afcb7007c92d4c65abf477cf7f37299a4e75f4",
+    "headers": [
+      "Name",
+      "Bloomberg ticker",
+      "Last",
+      "Last update (time, else curve date)",
+      "Prev close (bp)",
+      "Chg day / day",
+      "T-2 close (bp)",
+      "31-Dec-25 close (bp)",
+      "Prev-day move (T-1 − T-2, bp)",
+      "Live quote status",
+      "Column C source"
+    ],
+    "cache_dates": {
+      "previous_close_date": "2026-10-22"
+    },
+    "action": "Removed positional misinterpretation of daily closes as snapshot/MS marks; retained current CDS_FLAT_SPREAD observations and archived previous JSON and code.",
+    "archive": "research-history/2026-10-30T092216-cds-mapping-pre-edit"
+  },
+  "parsed_cached_rows": [
+    {
+      "name": "AVAGO CDS 5Y",
+      "bbg": "AVAGO CDS USD SR 5Y D14 Corp",
+      "spread_bp": 100.0,
+      "spread_snapshot_bp": null,
+      "ms_desk_0824_bp": null,
+      "cds_layout": "daily-closes-v2",
+      "cached_quote": {
+        "value_bp": 100.0,
+        "basis": "Flat spread (EOD close)",
+        "last_update": "23/10/2026",
+        "previous_close_bp": 100.0,
+        "previous_close_date": "2026-10-22",
+        "daily_change_bp": 0.0
+      },
+      "d_snapshot_bp": null,
+      "d_vs_ms_bp": null
+    },
+    {
+      "name": "AMD CDS 5Y",
+      "bbg": "AMD CDS USD SR 5Y D14 Corp",
+      "spread_bp": null,
+      "spread_snapshot_bp": null,
+      "ms_desk_0824_bp": null,
+      "cds_layout": "daily-closes-v2",
+      "cached_quote": {
+        "value_bp": 112.3036,
+        "basis": "CBIN live mid",
+        "last_update": "07:41:20",
+        "previous_close_bp": 109.5673,
+        "previous_close_date": "2026-10-22",
+        "daily_change_bp": 2.7363
+      },
+      "d_snapshot_bp": null,
+      "d_vs_ms_bp": null
+    },
+    {
+      "name": "SPCX CDS 5Y",
+      "bbg": "SPCX CDS USD SR 5Y D14 Corp",
+      "spread_bp": 248.36,
+      "spread_snapshot_bp": null,
+      "ms_desk_0824_bp": null,
+      "cds_layout": "daily-closes-v2",
+      "cached_quote": {
+        "value_bp": 248.36,
+        "basis": "Flat spread (EOD close)",
+        "last_update": "23/10/2026",
+        "previous_close_bp": 248.36,
+        "previous_close_date": "2026-10-22",
+        "daily_change_bp": 0.0
+      },
+      "d_snapshot_bp": null,
+      "d_vs_ms_bp": null
+    },
+    {
+      "name": "NVDA CDS 5Y",
+      "bbg": "NVDA CDS USD SR 5Y D14 Corp",
+      "spread_bp": 118.93,
+      "spread_snapshot_bp": null,
+      "ms_desk_0824_bp": null,
+      "cds_layout": "daily-closes-v2",
+      "cached_quote": {
+        "value_bp": 118.93,
+        "basis": "Flat spread (EOD close)",
+        "last_update": "23/10/2026",
+        "previous_close_bp": 118.93,
+        "previous_close_date": "2026-10-22",
+        "daily_change_bp": 0.0
+      },
+      "d_snapshot_bp": null,
+      "d_vs_ms_bp": null
+    },
+    {
+      "name": "ORCL CDS 5Y",
+      "bbg": "ORCLCP CDS USD SR 5Y D14 Corp",
+      "spread_bp": 321.44,
+      "spread_snapshot_bp": null,
+      "ms_desk_0824_bp": null,
+      "cds_layout": "daily-closes-v2",
+      "cached_quote": {
+        "value_bp": 321.44,
+        "basis": "Flat spread (EOD close)",
+        "last_update": "23/10/2026",
+        "previous_close_bp": 321.44,
+        "previous_close_date": "2026-10-22",
+        "daily_change_bp": 0.0
+      },
+      "d_snapshot_bp": null,
+      "d_vs_ms_bp": null
+    },
+    {
+      "name": "CRWV CDS 5Y",
+      "bbg": "CRWV CDS USD SR 5Y D14 Corp",
+      "spread_bp": 1186.326451320508,
+      "spread_snapshot_bp": null,
+      "ms_desk_0824_bp": null,
+      "cds_layout": "daily-closes-v2",
+      "cached_quote": {
+        "value_bp": 1186.326451320508,
+        "basis": "Flat spread (EOD close)",
+        "last_update": "23/10/2026",
+        "previous_close_bp": 1188.8698339844454,
+        "previous_close_date": "2026-10-22",
+        "daily_change_bp": -2.5433826639373365
+      },
+      "d_snapshot_bp": null,
+      "d_vs_ms_bp": null
+    },
+    {
+      "name": "META CDS 5Y",
+      "bbg": "META CDS USD SR 5Y D14 Corp",
+      "spread_bp": 120.93,
+      "spread_snapshot_bp": null,
+      "ms_desk_0824_bp": null,
+      "cds_layout": "daily-closes-v2",
+      "cached_quote": {
+        "value_bp": 120.93,
+        "basis": "Flat spread (EOD close)",
+        "last_update": "23/10/2026",
+        "previous_close_bp": 120.93,
+        "previous_close_date": "2026-10-22",
+        "daily_change_bp": 0.0
+      },
+      "d_snapshot_bp": null,
+      "d_vs_ms_bp": null
+    },
+    {
+      "name": "GOOGL CDS 5Y",
+      "bbg": "GOOGL CDS USD SR 5Y D14 Corp",
+      "spread_bp": 85.67,
+      "spread_snapshot_bp": null,
+      "ms_desk_0824_bp": null,
+      "cds_layout": "daily-closes-v2",
+      "cached_quote": {
+        "value_bp": 85.67,
+        "basis": "Flat spread (EOD close)",
+        "last_update": "23/10/2026",
+        "previous_close_bp": 85.67,
+        "previous_close_date": "2026-10-22",
+        "daily_change_bp": 0.0
+      },
+      "d_snapshot_bp": null,
+      "d_vs_ms_bp": null
+    },
+    {
+      "name": "MSFT CDS 5Y",
+      "bbg": "MSFT CDS USD SR 5Y D14 Corp",
+      "spread_bp": null,
+      "spread_snapshot_bp": null,
+      "ms_desk_0824_bp": null,
+      "cds_layout": "daily-closes-v2",
+      "cached_quote": {
+        "value_bp": 56.47999,
+        "basis": "CBIN live mid",
+        "last_update": "12:30:13",
+        "previous_close_bp": 57.16029999999999,
+        "previous_close_date": "2026-10-22",
+        "daily_change_bp": -0.6803099999999915
+      },
+      "d_snapshot_bp": null,
+      "d_vs_ms_bp": null
+    },
+    {
+      "name": "AMZN CDS 5Y",
+      "bbg": "AMZN CDS USD SR 5Y D14 Corp",
+      "spread_bp": null,
+      "spread_snapshot_bp": null,
+      "ms_desk_0824_bp": null,
+      "cds_layout": "daily-closes-v2",
+      "cached_quote": {
+        "value_bp": 85.69142,
+        "basis": "CBIN live mid",
+        "last_update": "12:30:13",
+        "previous_close_bp": 83.56440000000002,
+        "previous_close_date": "2026-10-22",
+        "daily_change_bp": 2.1270199999999733
+      },
+      "d_snapshot_bp": null,
+      "d_vs_ms_bp": null
+    },
+    {
+      "name": "AVGO B CDS 5Y",
+      "bbg": "AVGO B CDS USD SR 5Y D14 Corp",
+      "spread_bp": 167.83000000000004,
+      "spread_snapshot_bp": null,
+      "ms_desk_0824_bp": null,
+      "cds_layout": "daily-closes-v2",
+      "cached_quote": {
+        "value_bp": 167.83000000000004,
+        "basis": "Flat spread (EOD close)",
+        "last_update": "23/10/2026",
+        "previous_close_bp": 167.83000000000004,
+        "previous_close_date": "2026-10-22",
+        "daily_change_bp": 0.0
+      },
+      "d_snapshot_bp": null,
+      "d_vs_ms_bp": null
+    },
+    {
+      "name": "CRWV CDS 1Y",
+      "bbg": "CRWV CDS USD SR 1Y D14 Corp",
+      "spread_bp": 875.1625466117725,
+      "spread_snapshot_bp": null,
+      "ms_desk_0824_bp": null,
+      "cds_layout": "daily-closes-v2",
+      "cached_quote": {
+        "value_bp": 875.1625466117725,
+        "basis": "Flat spread (EOD close)",
+        "last_update": "23/10/2026",
+        "previous_close_bp": 874.571843858505,
+        "previous_close_date": "2026-10-22",
+        "daily_change_bp": 0.5907027532675784
+      },
+      "d_snapshot_bp": null,
+      "d_vs_ms_bp": null
+    },
+    {
+      "name": "CRWV CDS 2Y",
+      "bbg": "CRWV CDS USD SR 2Y D14 Corp",
+      "spread_bp": 1061.9807841603786,
+      "spread_snapshot_bp": null,
+      "ms_desk_0824_bp": null,
+      "cds_layout": "daily-closes-v2",
+      "cached_quote": {
+        "value_bp": 1061.9807841603786,
+        "basis": "Flat spread (EOD close)",
+        "last_update": "23/10/2026",
+        "previous_close_bp": 1062.1797074794888,
+        "previous_close_date": "2026-10-22",
+        "daily_change_bp": -0.19892331911023575
+      },
+      "d_snapshot_bp": null,
+      "d_vs_ms_bp": null
+    },
+    {
+      "name": "CRWV CDS 3Y",
+      "bbg": "CRWV CDS USD SR 3Y D14 Corp",
+      "spread_bp": 1121.9091853012274,
+      "spread_snapshot_bp": null,
+      "ms_desk_0824_bp": null,
+      "cds_layout": "daily-closes-v2",
+      "cached_quote": {
+        "value_bp": 1121.9091853012274,
+        "basis": "Flat spread (EOD close)",
+        "last_update": "23/10/2026",
+        "previous_close_bp": 1122.920442386452,
+        "previous_close_date": "2026-10-22",
+        "daily_change_bp": -1.0112570852245426
+      },
+      "d_snapshot_bp": null,
+      "d_vs_ms_bp": null
+    },
+    {
+      "name": "CRWV CDS 4Y",
+      "bbg": "CRWV CDS USD SR 4Y D14 Corp",
+      "spread_bp": 1147.5228579093318,
+      "spread_snapshot_bp": null,
+      "ms_desk_0824_bp": null,
+      "cds_layout": "daily-closes-v2",
+      "cached_quote": {
+        "value_bp": 1147.5228579093318,
+        "basis": "Flat spread (EOD close)",
+        "last_update": "23/10/2026",
+        "previous_close_bp": 1149.2765174075867,
+        "previous_close_date": "2026-10-22",
+        "daily_change_bp": -1.7536594982548195
+      },
+      "d_snapshot_bp": null,
+      "d_vs_ms_bp": null
+    },
+    {
+      "name": "CRWV CDS 6Y",
+      "bbg": "CRWV CDS USD SR 6Y D14 Corp",
+      "spread_bp": 1184.8822041752176,
+      "spread_snapshot_bp": null,
+      "ms_desk_0824_bp": null,
+      "cds_layout": "daily-closes-v2",
+      "cached_quote": {
+        "value_bp": 1184.8822041752176,
+        "basis": "Flat spread (EOD close)",
+        "last_update": "23/10/2026",
+        "previous_close_bp": 1188.0327640427463,
+        "previous_close_date": "2026-10-22",
+        "daily_change_bp": -3.1505598675287274
+      },
+      "d_snapshot_bp": null,
+      "d_vs_ms_bp": null
+    },
+    {
+      "name": "CRWV CDS 7Y",
+      "bbg": "CRWV CDS USD SR 7Y D14 Corp",
+      "spread_bp": 1199.788549342751,
+      "spread_snapshot_bp": null,
+      "ms_desk_0824_bp": null,
+      "cds_layout": "daily-closes-v2",
+      "cached_quote": {
+        "value_bp": 1199.788549342751,
+        "basis": "Flat spread (EOD close)",
+        "last_update": "23/10/2026",
+        "previous_close_bp": 1203.5918910663374,
+        "previous_close_date": "2026-10-22",
+        "daily_change_bp": -3.8033417235865272
+      },
+      "d_snapshot_bp": null,
+      "d_vs_ms_bp": null
+    },
+    {
+      "name": "CRWV CDS 10Y",
+      "bbg": "CRWV CDS USD SR 10Y D14 Corp",
+      "spread_bp": 1224.3181573343334,
+      "spread_snapshot_bp": null,
+      "ms_desk_0824_bp": null,
+      "cds_layout": "daily-closes-v2",
+      "cached_quote": {
+        "value_bp": 1224.3181573343334,
+        "basis": "Flat spread (EOD close)",
+        "last_update": "23/10/2026",
+        "previous_close_bp": 1229.7366564047281,
+        "previous_close_date": "2026-10-22",
+        "daily_change_bp": -5.418499070394773
+      },
+      "d_snapshot_bp": null,
+      "d_vs_ms_bp": null
+    }
+  ]
+}

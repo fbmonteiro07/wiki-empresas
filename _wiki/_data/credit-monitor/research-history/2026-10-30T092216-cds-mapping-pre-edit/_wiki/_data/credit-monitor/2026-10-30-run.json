@@ -1,0 +1,32 @@
+{
+  "run_at": "2026-10-30T09:15:57",
+  "subject": "AI Credit & Funding | Weekly summary | 2026-10-30",
+  "status": "partial",
+  "errors": [
+    "Issuer board XAI_12.5_2030: stale observation 2026-03-04.",
+    "Official workbook refresh partial: 6 instrument(s) returned no values \u2014 previous values kept; unavailable instruments: BL482176 Corp, BL563698 Corp, NBIS 2 3/4 09/15/32 Corp, BL097034 Corp, BL482176 Corp, BL563698 Corp. Retained values are not fresh quotes.",
+    "Official workbook CRWV DDTL 1.0 03/2028: retained earlier value; individual observation date unavailable. Do not treat the overall refresh date as its quote date.",
+    "Official workbook CRWV DDTL 4.0 fixed 03/2032: retained earlier value; individual observation date unavailable. Do not treat the overall refresh date as its quote date.",
+    "Official workbook NBIS 2.75% cv Sep-2032: retained earlier value; individual observation date unavailable. Do not treat the overall refresh date as its quote date.",
+    "Official workbook SPCX revolver 2031: retained earlier value; individual observation date unavailable. Do not treat the overall refresh date as its quote date.",
+    "Official workbook CRWV DDTL 1.0 03/2028: retained earlier value; individual observation date unavailable. Do not treat the overall refresh date as its quote date.",
+    "Official workbook CRWV DDTL 4.0 fixed 03/2032: retained earlier value; individual observation date unavailable. Do not treat the overall refresh date as its quote date."
+  ],
+  "market_fetched_at": "2026-10-30T09:15:29",
+  "market_dates": {
+    "ok": true,
+    "issues": [],
+    "earliest": "2026-10-29",
+    "latest": "2026-10-29"
+  },
+  "research_asof": "2026-10-29",
+  "email_requested": false,
+  "body": "\\\\CAPSRV01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\_data\\credit-monitor\\exports\\2026-10-30-email.txt",
+  "attachment": "\\\\CAPSRV01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\_data\\credit-monitor\\exports\\2026-10-30-credit-monitor.html",
+  "input_sha256": {
+    "funding_deals.json": "d98b489c266cb03a65e6a050e840118e31c34d9ba3eb68232bbb3e02296a5a25",
+    "funding_market.json": "2d5b06cbba90125c5f2b3a6ed291c96d158055d71667f751253690aafb7da0b1",
+    "credit_watch.json": "5db3342467586754573ab7da0fbcaa4e5bc0c2318876b39640689cb494c0ab1d",
+    "credit_workbook.json": "91e215dd823f0bb98a1c411532778c1d4bf035f0ac9bc3c70cf4c4aab7b034a3"
+  }
+}

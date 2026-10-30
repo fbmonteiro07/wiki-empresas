@@ -5,17 +5,17 @@
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\SMCI` (filings + transcripts) · `_equity_calls` · `E:\briefings\2026`. Master index: [00_INDEX.md](00_INDEX.md) · themes: [ai-datacenter-power](themes/ai-datacenter-power.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-29 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-10-30 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $55.7bn | $77.2bn |
-| Gross profit | $6.0bn | $7.8bn |
-| Gross margin | 10.7% | 10.1% |
-| EBITDA | $4.6bn | $6.4bn |
-| EPS | $4.49 | $5.20 |
+| Gross profit | $6.0bn | $7.9bn |
+| Gross margin | 10.8% | 10.2% |
+| EBITDA | $4.7bn | $6.4bn |
+| EPS | $4.50 | $5.23 |
 | Capex | $260m | $261m |
-| OCF (≈EBITDA) | $4.6bn | $6.4bn |
+| OCF (≈EBITDA) | $4.7bn | $6.4bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

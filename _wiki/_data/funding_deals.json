@@ -1,5 +1,5 @@
 {
-  "asof": "2026-10-22",
+  "asof": "2026-10-29",
   "note": "HAND-EDIT research ledger for the AI credit and funding monitor. Preserve every source and date. Official AI credit base is Daniel Grozdea's AI_Credit_Live.xlsx, ingested/refreshed through credit_workbook.json (user instruction 2026-10-16). The four broad indices use funding_market.json; the separate issuer history uses credit_watch.json. CDS_FLAT_SPREAD and PX_LAST are different fields and must not be chained. Historical broker snapshots keep original dates. The legacy bonds[] slot being empty does not imply disconnected issuer coverage.",
   "meeting_thesis": "If AI credit trades poorly, it is hard for the equity to perform - it signals funding deceleration and a brake on capex. Hyperscalers can self-fund; neoclouds and sovereigns depend on the credit market. (internal weekly 2026-08-24; monitor owner: PM)",
   "market_series": [
@@ -356,27 +356,28 @@
       "size": "undisclosed",
       "pricing": "undisclosed",
       "counterparty": "Apollo / Goldman discussions reported by WSJ via Vital Knowledge",
-      "note": "MS October 16 still describes the chip-financing press reports as unconfirmed. It expects shorter asset-backed financing may diversify funding but likely costs more than traditional BBB debt. A stronger partner backstop is an upside scenario, not an announced guarantee. No closing, funded amount or delivered capacity established.",
-      "source": "Morgan Stanley / Lindsay A. Tyler and David M. Hamburger, 2026-10-16, ORCL Credit: Higher Rates, Higher Stakes; original WSJ October 7 report via Vital Knowledge and MS October 8 retained in history",
+      "note": "Oracle October 28 Investor Day names vendor financing, customer-provided hardware and prepayments as cash levers but gives no executed Apollo/Goldman chip-lease terms or size. Its cap on additional FY27-FY30 capital-markets raises is $20bn ($10bn equity / $10bn gross debt), excluding refinancing and after the completed $20bn ATM. This is management funding guidance, not new committed credit or evidence the proposed lease closed.",
+      "source": "Oracle Investor Day / Hilary Maxson, company 8-K EX-99.1, 2026-10-28 — https://www.sec.gov/Archives/edgar/data/1341439/000119312526435853/d75538dex991.htm ; original WSJ October 7 / MS October 8 and October 16 proposal vintages retained in history",
       "evidence_status": "press-reported talks; not committed",
-      "source_date": "2026-10-16",
+      "source_date": "2026-10-28",
       "recorded_at": "2026-10-09",
-      "reviewed_at": "2026-10-16"
+      "reviewed_at": "2026-10-30"
     },
     {
       "deal_id": "SPCX-NVDA-FIN-20261006",
       "date": "2026-10-06",
-      "issuer": "SPCX / NVDA",
-      "category": "Financing talks",
-      "instrument": "Proposed financing for NVIDIA chip purchases",
-      "size": "~$40bn reported talks",
-      "pricing": "undisclosed",
-      "counterparty": "SpaceX borrower / NVIDIA chip supplier; final lender and security terms unverified",
-      "note": "Financing proposal only; no executed debt or supplier guarantee established. Separate from the Anthropic-SpaceX compute contract ANTH-SPCX-20260506. No incremental funded capacity recorded.",
-      "source": "Vital Knowledge / Adam Crisafulli, 2026-10-07, relaying WSJ 2026-10-07 (SpaceX first reported by FT 2026-10-06)",
-      "evidence_status": "press-reported talks; not committed",
-      "source_date": "2026-10-07",
-      "recorded_at": "2026-10-09"
+      "issuer": "SpaceX / Apollo-managed lessor",
+      "category": "Equipment finance lease",
+      "instrument": "Binding commitment letter for GPU master finance lease",
+      "size": "~$40bn aggregate principal payments under contemplated lease schedules",
+      "pricing": "Fixed rate to be set before master-lease entry; quarterly advance payments; approximately 5 to 5.25 years per tranche",
+      "counterparty": "SpaceX / entity managed by Apollo Global Management; chip supplier not named in filing",
+      "note": "Signed October 24, filed October 26. Upgrades the original press-reported proposal under the same ID. Entry into the master lease remains subject to closing conditions, expected before year-end 2026; schedules are expected to commence on GPU delivery in 1H27. No closing, price, drawn cash or MW confirmed. The filing does not name NVIDIA or affirm the earlier reported bank-loan/bond split.",
+      "source": "SpaceX / CFO Bret Johnsen, 8-K Item 8.01, filed 2026-10-26 (event 2026-10-24) — http://ds-cap-33:8080/SPCX/SPCX_8-K_2026-10-26_0001104659-26-118614.html",
+      "evidence_status": "filed binding commitment letter; definitive lease closing and tranche commencement pending",
+      "source_date": "2026-10-26",
+      "recorded_at": "2026-10-09",
+      "reviewed_at": "2026-10-30"
     },
     {
       "deal_id": "APLD-COMPUTECO3-20260616",
@@ -413,15 +414,16 @@
       "date": "2026-10-05",
       "issuer": "Anthropic / AVGO",
       "category": "Lab / SPV",
-      "instrument": "2027 chip-lease financing, senior syndication launched",
-      "size": "$60bn reported package",
-      "pricing": "undisclosed; ~$42bn supported senior / ~$18bn unguaranteed junior",
-      "counterparty": "BofA / Citi / MS reported committed bookrunners; AVGO supports senior; Blackstone ~$9bn junior commitment per FT",
-      "note": "Added to this ledger from the existing timeline ID, recorded there October 12. FT October 5 reports senior syndication started; junior launch follows later. Bank commitments are press-reported, not proof of funded draws or closing. Keep separate from the prior $35bn platform and the proposed $50bn OpenAI structure. Do not add the optional up-to-$42bn Anthropic convertible to the package; no MW disclosed.",
-      "source": "Financial Times / Michelle Chan, 2026-10-05, 3-page archived article — http://ds-cap-33:8080/relat%C3%B3rios%20bons/Wall_Street_banks_launch_record_60bn_chip_deal_for_Broadcom_and_Anthropic.html",
-      "source_date": "2026-10-05",
+      "instrument": "North Star committed compute financing: debt and equity",
+      "size": "$63bn announced debt-and-equity capital structure",
+      "pricing": "Final tranche pricing/allocation unverified; prior $42bn senior / $18bn junior were historical syndication terms",
+      "counterparty": "Northstar Compute LLC; BofA / Citi / Morgan Stanley first lien; Blackstone committed second lien; Broadcom residual-value support",
+      "note": "October 26 announcement revises the original $60bn proposal under the same ID. Broadcom October 27 filing establishes ~$43bn maximum contingent residual-value exposure at deployment, based on 72.5% of outstanding lease amounts less asset recoveries; this is not a blanket debt guarantee or loan principal. No complete funding or delivery established; deliveries expected from CY2027. Anthropic S-1 separately discloses up to $42bn conditional convertible notes for lease rent, with no notes issued as of the prospectus; do not add this capacity as new SPV money or compute purchases.",
+      "source": "Milbank / North Star financing counsel, 2026-10-26; Broadcom 8-K filed 2026-10-27; Anthropic S-1 filed 2026-10-26 — https://www.milbank.com/en/news/milbank-advises-north-star-on-landmark-dollar63b-financing-structure-to-enable-ai-compute-capacity-in-partnership-with-broadcom.html ; https://investors.broadcom.com/static-files/0ee4f6b7-4a23-4de0-8f3e-48f147ae30d3 ; https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+      "source_date": "2026-10-27",
       "recorded_at": "2026-10-16",
-      "evidence_status": "press-reported committed banks / syndication; no closing verified"
+      "evidence_status": "announced committed financing plus filed contingent support; funded/delivered amounts not established",
+      "reviewed_at": "2026-10-30"
     },
     {
       "deal_id": "NBIS-CITI-FIN-20261022",
@@ -443,15 +445,16 @@
       "date": "2026-10-21",
       "issuer": "META",
       "category": "Equity financing framework",
-      "instrument": "New non-voting Class C common stock framework",
-      "size": "No offering amount announced",
-      "pricing": "not applicable; no priced offering",
-      "counterparty": "Potential future public/private equity investors; none committed in this disclosure",
-      "note": "PRE 14C provides a Class C framework with charter effectiveness January 19, 2027. Susan Li's October 21 official call says no specific financing plans are being announced. This is financing flexibility, not equity proceeds. The filing's long-range funding scenarios and voting-control sensitivity are not issuance commitments. Existing timeline ID; no compute MW or new contract TCV.",
-      "source": "Meta / PRE 14C filed 2026-10-21 and Susan Li, official Q3 call 2026-10-21 — https://www.sec.gov/Archives/edgar/data/1326801/000162828026066710/meta-20261021.htm ; https://s21.q4cdn.com/399680738/files/content_files/META-Q3-2026-Earnings-Call-Transcript.pdf",
-      "source_date": "2026-10-21",
+      "instrument": "6.50% mandatory convertible preferred; Class A common forwards; planned Class C ATM",
+      "size": "$12.5bn base preferred offering closed; $25bn common forward offering; ~$60bn ATM planned",
+      "pricing": "Preferred: $50 per depositary share, 6.50% dividend; common public price $625, initial adjusted forward price $622.91875",
+      "counterparty": "Morgan Stanley / Goldman Sachs underwriters and forward counterparties",
+      "note": "October 29 8-K confirms preferred closing that day. Common forwards bring no initial proceeds to Meta; settlement is by November 19, 2027, subject to adjustments. The October 26 ~$60bn ATM remains a plan, with no agreement then entered. Common launch was $22.5bn, increased to $25bn in the filed final prospectus. Option exercise and supplier indications are not assumed funded. Class C effectiveness remains January 19, 2027. Same financing ID; these components are not all cash raised now.",
+      "source": "Meta, 424B5 prospectuses filed 2026-10-28 and 8-K filed 2026-10-29; launch 2026-10-26 — https://www.sec.gov/Archives/edgar/data/1326801/000119312526438017/d183592d8k.htm ; https://www.sec.gov/Archives/edgar/data/1326801/000119312526436410/d94886d424b5.htm ; https://www.sec.gov/Archives/edgar/data/1326801/000119312526436405/d133631d424b5.htm ; https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/",
+      "source_date": "2026-10-29",
       "recorded_at": "2026-10-23",
-      "evidence_status": "filed capital-structure framework; no issuance/funding"
+      "evidence_status": "filed preferred closing; forward settlement deferred; ATM planned",
+      "reviewed_at": "2026-10-30"
     }
   ],
   "scoreboard": [
@@ -470,8 +473,8 @@
     {
       "signpost": "Counterparty tiering",
       "status": "serious",
-      "read": "Cantor explains that a lease backstop has specific triggers, coverage and commencement conditions; construction/completion risk remains distinct. Its October 20 FactSet bond marks are dated comparisons, not fresh prices. The official workbook now supplies CDS_FLAT_SPREAD, whereas the issuer history uses PX_LAST. Last week's numerical disagreement cannot be interpreted as a spread change across those fields.",
-      "source": "Cantor Fitzgerald / Brett Knoblauch, Backstop 101, 2026-10-21, pp.1-3; FactSet marks 2026-10-20; Daniel Grozdea (Capstone) official workbook/Bloomberg field definitions, adopted 2026-10-16, reviewed 2026-10-23"
+      "read": "Broadcom filed the conditional North Star residual-value support, which is limited by lease amounts and asset recoveries. UBS / Keirstead October 26 relays an unnamed source expecting another CoreWeave DDTL; this is not an announced borrowing. Continue to separate sponsor support, completion risk, contractual cash cost and secondary-market yield; CDS_FLAT_SPREAD and PX_LAST are different quote fields.",
+      "source": "Broadcom 8-K 2026-10-27; UBS / Karl Keirstead, AI Credit Stress Test call, 2026-10-26, machine transcript; field basis per official workbook"
     },
     {
       "signpost": "Buy-side pushback",
@@ -500,8 +503,8 @@
     {
       "signpost": "Duration channel",
       "status": "serious",
-      "read": "MS remains cautious on Oracle credit: higher rates raise the cost of its externally funded GPU business; asset-backed chip financing remains unconfirmed. Its Moody's Baa3 downgrade expectation is a forecast, not a completed rating action. Watch October 28 Analyst Day for funding and partner-support evidence.",
-      "source": "Morgan Stanley / Lindsay A. Tyler and David M. Hamburger, 2026-10-16, ORCL Credit: Higher Rates, Higher Stakes"
+      "read": "Oracle now targets positive FCF in 2H FY28 and limits additional FY27-FY30 capital-markets raises to $20bn, ex-refinancing, after the completed ATM. Vendor financing and lease liabilities enter its leverage definition. Targets do not establish execution or a rating action; individual chip-lease terms remain undisclosed.",
+      "source": "Oracle Investor Day / Hilary Maxson, 8-K EX-99.1, 2026-10-28"
     },
     {
       "signpost": "Sovereign AI issuance",
@@ -512,14 +515,14 @@
     {
       "signpost": "Proposed chip financing versus funded execution",
       "status": "warning",
-      "read": "Nebius has entered the new $3.5bn Citi facility but disclosed no draw. Meta's Class C filing enables future financing, without an offering. Jefferies / Curtis October 22 flags Broadcom's dependence on financing but provides no closing confirmation. SpaceX's October 20 funding discussion refers generally to debt pools and partner options; it does not confirm the press-reported $40bn NVIDIA-chip financing. Prior Oracle/OpenAI/Anthropic proposals retain their evidence levels.",
-      "source": "Nebius company 2026-10-22; Meta PRE 14C / Susan Li call 2026-10-21; Jefferies / Blayne Curtis call 2026-10-22; SpaceX / Bret Johnsen Q3 call 2026-10-20 (Quartr transcription)"
+      "read": "North Star is now announced committed financing; SpaceX has a filed binding lease commitment; Meta preferred issuance closed. None establishes that all announced capacity has funded. Keep the Anthropic rent-note facility, contingent Broadcom support and prospective Meta ATM separate. Nebius draws and the OpenAI/Oracle chip-finance closings remain unverified.",
+      "source": "Milbank 2026-10-26; Broadcom 8-K 2026-10-27; SpaceX 8-K 2026-10-26; Meta 8-K 2026-10-29; Anthropic S-1 2026-10-26"
     },
     {
       "signpost": "Hyperscaler financing flexibility",
       "status": "warning",
-      "read": "Meta's filed Class C framework and long-range capital-needs discussion qualify the historical blanket self-funding thesis. No equity deal size, price or proceeds announced; Susan Li explicitly describes funding flexibility. Credit demand and share dilution remain scenario questions.",
-      "source": "Meta PRE 14C and official Q3 call / Susan Li, 2026-10-21"
+      "read": "Meta moved beyond the October 21 enabling framework: the base preferred offering closed October 29, common proceeds await forward settlement, and the Class C ATM remains prospective. Funding access improved, while cash timing and dilution still differ by instrument.",
+      "source": "Meta 424B5 filings 2026-10-28 and 8-K 2026-10-29; original October 21 and October 26 vintages archived"
     }
   ],
   "watch": [
@@ -532,24 +535,24 @@
       "event": "SPCX: ~30% of shares tradable + full index weight on the late-Sept rebalance - peak supply meets peak passive demand (MS · Jonas; 22V) — Unresolved in this bounded credit review; no outcome inferred from elapsed date."
     },
     {
-      "date": "2026-10",
-      "event": "Anthropic IPO: the late-Sep/early-Oct window is an old WSJ August 11 expectation, not a confirmed listing. Obtain current issuer filing before moving or resolving the date; financing-stack transparency remains a next check."
+      "date": "ongoing",
+      "event": "Anthropic IPO: October 26 public S-1 replaces the stale August timing expectation. Await priced amendments, net proceeds and closing; monitor conditional rent-note draws and current consolidated commitments schedule. No new listing date assumed."
     },
     {
       "date": "ongoing",
       "event": "New-issue concessions + capex second derivative - GS's own two named signposts for when appetite turns"
     },
     {
-      "date": "ongoing",
-      "event": "Reported chip financings (WSJ October 7 via Vital Knowledge; MS October 8): require signed debt/lease documents, pricing, vendor backstop and closing evidence before upgrading proposed status."
+      "date": "2026-12-31",
+      "event": "SpaceX / Apollo: company expects master finance lease closing before year-end; verify conditions, fixed rate and actual closing, then GPU-delivery commencement in 1H27. October 26 filing confirms only the binding commitment letter (SPCX-NVDA-FIN-20261006)."
     },
     {
       "date": "ongoing",
       "event": "Oracle Lighthouse: PSC September 2026 refiling and MS September 30 timing-risk note do not establish approval or confirmed delay; check new docket and company milestone against CY2H27 initial / 2028 full-campus source forecasts."
     },
     {
-      "date": "2026-10-28",
-      "event": "Oracle Analyst Day: funding cost, chip-financing terms, lease obligations and partner support. Date and credit watch per MS / Tyler and Hamburger, 2026-10-16; no new guarantee assumed."
+      "date": "ongoing",
+      "event": "Oracle: test October 28 capital-markets cap, vendor-financing terms, lease-adjusted leverage and FCF timetable against subsequent filings and rating actions; no executed chip lease or Jupiter/Lighthouse permit approval established."
     },
     {
       "date": "ongoing",
@@ -557,7 +560,7 @@
     },
     {
       "date": "ongoing",
-      "event": "Anthropic/AVGO ANTH-AVGO-CHIP-FIN-20261005: obtain closing/draw documentation and junior pricing after FT / Chan 2026-10-05 senior syndication launch. Keep $42bn senior and $18bn junior distinct; no new MW inferred."
+      "event": "North Star ANTH-AVGO-CHIP-FIN-20261005: verify $63bn financing funding/closing, final debt/equity split and pricing, then 2027 deliveries. Keep ~$43bn contingent support and the separate up-to-$42bn rent-note facility distinct. Company/counsel October 26; Broadcom filing October 27; Anthropic S-1 October 26."
     },
     {
       "date": "ongoing",
@@ -574,6 +577,18 @@
     {
       "date": "ongoing",
       "event": "Official credit workbook: refresh missing instruments and preserve individual quote dates. Monitor stale SPCX revolver BL097034 Corp and xAI March 4 issuer-history endpoint; global fetch success does not validate either quote."
+    },
+    {
+      "date": "2027-11-19",
+      "event": "Meta common forwards: latest contractual settlement date, subject to terms. Check actual settlements and proceeds; October 29 8-K says no initial common-offering proceeds. Preferred offering closed separately; verify any over-allotment exercise and actual Class C ATM launch."
+    },
+    {
+      "date": "ongoing",
+      "event": "CoreWeave: obtain executed DDTL/pricing and customer-prepayment evidence; UBS / Keirstead October 26 unnamed-source expectations are not commitments. OpenAI / AVGO chip-financing and latest OpenAI equity round also require primary closing confirmation."
+    },
+    {
+      "date": "ongoing",
+      "event": "Read full JPM / Spear-Degen October 30 Weekly IG TMT Review and MS / Tyler-Guerrero October 29 ORCL Credit report; this review screened only Outlook metadata/previews. Old issuance aggregates remain dated and are not refreshed from headlines."
     }
   ],
   "history": [
@@ -985,6 +1000,224 @@
         }
       ],
       "previous_note": "HAND-EDIT research ledger for the AI credit and funding monitor. Preserve every source and date. Four index series are refreshed into funding_market.json; issuer bonds/CDS are maintained separately in credit_watch_config.json and credit_watch.json. The legacy bonds[] slot is empty, but this no longer means that the issuer board is disconnected. Historical broker snapshots retain their own dates."
+    },
+    {
+      "recorded_at": "2026-10-30T09:12:31",
+      "reason": "Friday financing review: reconcile Meta closing/priced forward, North Star committed structure, SpaceX binding commitment and Oracle guidance; preserve proposal vintages and cash/execution distinctions.",
+      "archive": "_wiki/_data/credit-monitor/research-history/2026-10-30T091001-pre-edit.json",
+      "sha256": "09538c51dbd36575966f0b23a2178a51ac3dd98c20b279edcd9515c323f96a80",
+      "previous_asof": "2026-10-22",
+      "previous_weekly_review": {
+        "reviewed_at": "2026-10-23T09:12:01",
+        "window_start": "2026-10-16",
+        "window_end": "2026-10-23",
+        "summary": "Review window October 16-23; newest substantive research evidence is dated October 22.\nNew financing: Nebius (company / Ophir Nave, October 22) entered a $3.5bn Citi senior secured facility, 364-day maturity, initially Term SOFR +2.75% rising to at most +3.50%, subject to adjustments. Draws are undisclosed. The existing timeline ID is now linked into the credit ledger; no incremental MW or duplicate commitment is counted.\nMeta (PRE 14C and Susan Li official call, October 21) established a non-voting Class C framework with charter effectiveness January 19, 2027. Li announced no specific financing plan. This broadens funding options and qualifies the old blanket hyperscaler self-funding assumption; it is not a priced offering or cash inflow. Long-range funding scenarios are not commitments.\nUnderwriting: Cantor / Brett Knoblauch (October 21, research pp.1-3; FactSet marks October 20) distinguishes lease backstop triggers and commencement from landlord completion risk. Jefferies / Blayne Curtis (October 22 call) flags Broadcom's funding dependence; this is an analyst assessment, not evidence that a particular package closed. SpaceX / Bret Johnsen (October 20 Q3 call, Quartr transcript) discusses debt-capital pools and vendor/customer options without confirming the reported $40bn chip-financing proposal.\nMarket basis: the official Daniel Grozdea workbook uses CDS_FLAT_SPREAD; the separate issuer history uses PX_LAST on the D14 tickers. Do not chain these as a spread move. Current workbook composite snapshots and completed-session index histories retain separate dates. October 1 MS issuance totals, August broker snapshots and October 5 Anthropic syndication evidence retain their original dates; no later closing was established here.\nNext checks: Oracle October 28 Analyst Day; Nebius drawings/takeout; Meta actual offering documents; signed chip-financing closings and Jupiter/Lighthouse permits. Past AVGO/SPCX watches and the old Anthropic IPO expectation remain unresolved.\nCoverage: graph, relevant company Debate/Changelog sections, compute timeline and full-corpus searches; original Nebius release, selected Meta filing/call sections, SpaceX funding Q&A, Jefferies financing remarks and Cantor pp.1-3 reviewed. Outlook search previews were screened as leads; full new email bodies, linked broker PDFs and Cantor disclosure pages 4-6 were not reviewed. Oct23 UBS/CoreWeave and OpenAI fundraising emails are follow-up leads, not newly verified deal evidence. No exhaustive mailbox or filing audit claimed. Sovereign-AI debt and individual unavailable/stale quotes remain gaps.",
+        "sources": [
+          "Nebius / company release and COO Ophir Nave, 2026-10-22; 6-K ex-99.1 — https://nebius.com/newsroom/nebius-secures-3-5-billion-financing-facility-with-citi",
+          "Meta / PRE 14C filed 2026-10-21 and Susan Li, official Q3 call 2026-10-21 — https://www.sec.gov/Archives/edgar/data/1326801/000162828026066710/meta-20261021.htm ; https://s21.q4cdn.com/399680738/files/content_files/META-Q3-2026-Earnings-Call-Transcript.pdf",
+          "Cantor Fitzgerald / Brett Knoblauch, Backstop 101, 2026-10-21, pp.1-3; FactSet marks 2026-10-20 — http://ds-cap-33:8080/relat%C3%B3rios%20bons/0e86f9f0-156a-4b80-95c9-9f7d6dd25907.html",
+          "Jefferies / Blayne Curtis, spoken analyst view, 2026-10-22; machine transcript — http://ds-cap-33:8080/_equity_calls/Semis/2026-10-22_Jefferies_Semis-update-call-AI-trade-LRCX-TXN-KLAC-CRDO-Curtis.md",
+          "SpaceX / Bret Johnsen, Q3 funding Q&A 2026-10-20, Quartr transcription — http://ds-cap-33:8080/SPCX/transcripts/SPCX_Q3-2026-earnings_2026-10-20.md",
+          "Official AI_Credit_Live.xlsx / Daniel Grozdea, Capstone; Bloomberg CDS_FLAT_SPREAD / YLD_YTM_MID / OAS_SPREAD_MID; refresh dates in generated workbook section — http://ds-cap-33:8080/wiki/_dashboards/credit-live.html"
+        ]
+      },
+      "previous_scoreboard": [
+        {
+          "signpost": "Index-level credit (the meeting's equity-read trigger)",
+          "status": "good",
+          "read": "Historical August 24 snapshot only: HY OAS ~268bp / IG OAS ~80bp - benign vs history; the aggregate market is NOT flashing. The stress is relative, not systemic. Use the separately dated Bloomberg gauges for the latest reading.",
+          "source": "BBG LF98OAS/LUACOAS, 2026-08-24"
+        },
+        {
+          "signpost": "AI-vs-market differentiation",
+          "status": "warning",
+          "read": "Hyperscaler buckets +26/29bp YTD vs broad IG +1bp; 'the credit market is differentiating within tech, not repricing tech'",
+          "source": "MS US Credit 2026-08-14"
+        },
+        {
+          "signpost": "Counterparty tiering",
+          "status": "serious",
+          "read": "Cantor explains that a lease backstop has specific triggers, coverage and commencement conditions; construction/completion risk remains distinct. Its October 20 FactSet bond marks are dated comparisons, not fresh prices. The official workbook now supplies CDS_FLAT_SPREAD, whereas the issuer history uses PX_LAST. Last week's numerical disagreement cannot be interpreted as a spread change across those fields.",
+          "source": "Cantor Fitzgerald / Brett Knoblauch, Backstop 101, 2026-10-21, pp.1-3; FactSet marks 2026-10-20; Daniel Grozdea (Capstone) official workbook/Bloomberg field definitions, adopted 2026-10-16, reviewed 2026-10-23"
+        },
+        {
+          "signpost": "Buy-side pushback",
+          "status": "serious",
+          "read": "Insurance 30Y orders halved; new-issue concessions 2-3bp -> ~20bp; the AI basket spread roughly doubled from 74bp",
+          "source": "GS credit desk 2026-08-03 (on-record 08-19 block)"
+        },
+        {
+          "signpost": "Supply absorption",
+          "status": "warning",
+          "read": "JPM October 16 reports $446bn YTD TMT supply, unchanged on its weekly basis, with issuers largely in blackout. This TMT universe is distinct from MS October 1's ~$466bn AI credit across channels through September 30; the latter remains the dated issuance headline. Quiet issuance does not itself prove that debt markets are closed.",
+          "source": "J.P. Morgan / Erica R. Spear and Quinn Degen, 2026-10-16, Weekly Investment Grade TMT Review; Morgan Stanley / Lima et al., 2026-10-01, observed through 2026-09-30"
+        },
+        {
+          "signpost": "2027 funding pinch",
+          "status": "warning",
+          "read": "Debt-financed share of capex 27% -> 33% -> 35% PEAK 2027 (GS) + $300bn project finance 2027 (MS) + >$200bn funding gap 2027 (Barclays) - three houses converge on the date",
+          "source": "GS 08-03; MS 08-20; Barclays 08-13"
+        },
+        {
+          "signpost": "Vendor-backstop dependency",
+          "status": "warning",
+          "read": "NVIDIA August 26 filing confirms the conditional $105bn SB Energy guarantee tied to ~4.25 GW IT, separate from the $3.5bn existing program. Disclosure watch resolved; no cash funding or delivery implied. Older $230bn broker aggregate and $500bn MOU are not filed funded-debt totals.",
+          "source": "NVIDIA 10-Q 2026-08-26; historical backfill reviewed 2026-10-09"
+        },
+        {
+          "signpost": "Duration channel",
+          "status": "serious",
+          "read": "MS remains cautious on Oracle credit: higher rates raise the cost of its externally funded GPU business; asset-backed chip financing remains unconfirmed. Its Moody's Baa3 downgrade expectation is a forecast, not a completed rating action. Watch October 28 Analyst Day for funding and partner-support evidence.",
+          "source": "Morgan Stanley / Lindsay A. Tyler and David M. Hamburger, 2026-10-16, ORCL Credit: Higher Rates, Higher Stakes"
+        },
+        {
+          "signpost": "Sovereign AI issuance",
+          "status": "gap",
+          "read": "Called out in the meeting as part of the monitor's scope; the corpus carries no dedicated sovereign-AI-bond tracking yet - genuine gap, needs an ingest source",
+          "source": "internal weekly 2026-08-24"
+        },
+        {
+          "signpost": "Proposed chip financing versus funded execution",
+          "status": "warning",
+          "read": "Nebius has entered the new $3.5bn Citi facility but disclosed no draw. Meta's Class C filing enables future financing, without an offering. Jefferies / Curtis October 22 flags Broadcom's dependence on financing but provides no closing confirmation. SpaceX's October 20 funding discussion refers generally to debt pools and partner options; it does not confirm the press-reported $40bn NVIDIA-chip financing. Prior Oracle/OpenAI/Anthropic proposals retain their evidence levels.",
+          "source": "Nebius company 2026-10-22; Meta PRE 14C / Susan Li call 2026-10-21; Jefferies / Blayne Curtis call 2026-10-22; SpaceX / Bret Johnsen Q3 call 2026-10-20 (Quartr transcription)"
+        },
+        {
+          "signpost": "Hyperscaler financing flexibility",
+          "status": "warning",
+          "read": "Meta's filed Class C framework and long-range capital-needs discussion qualify the historical blanket self-funding thesis. No equity deal size, price or proceeds announced; Susan Li explicitly describes funding flexibility. Credit demand and share dilution remain scenario questions.",
+          "source": "Meta PRE 14C and official Q3 call / Susan Li, 2026-10-21"
+        }
+      ],
+      "previous_watch": [
+        {
+          "date": "2026-09-02",
+          "event": "AVGO print - MS single-name credit watch (with ORCL) into September; XPV/Anthropic SPV exposure — Unresolved in this bounded credit review; no outcome inferred from elapsed date."
+        },
+        {
+          "date": "2026-09-25",
+          "event": "SPCX: ~30% of shares tradable + full index weight on the late-Sept rebalance - peak supply meets peak passive demand (MS · Jonas; 22V) — Unresolved in this bounded credit review; no outcome inferred from elapsed date."
+        },
+        {
+          "date": "2026-10",
+          "event": "Anthropic IPO: the late-Sep/early-Oct window is an old WSJ August 11 expectation, not a confirmed listing. Obtain current issuer filing before moving or resolving the date; financing-stack transparency remains a next check."
+        },
+        {
+          "date": "ongoing",
+          "event": "New-issue concessions + capex second derivative - GS's own two named signposts for when appetite turns"
+        },
+        {
+          "date": "ongoing",
+          "event": "Reported chip financings (WSJ October 7 via Vital Knowledge; MS October 8): require signed debt/lease documents, pricing, vendor backstop and closing evidence before upgrading proposed status."
+        },
+        {
+          "date": "ongoing",
+          "event": "Oracle Lighthouse: PSC September 2026 refiling and MS September 30 timing-risk note do not establish approval or confirmed delay; check new docket and company milestone against CY2H27 initial / 2028 full-campus source forecasts."
+        },
+        {
+          "date": "2026-10-28",
+          "event": "Oracle Analyst Day: funding cost, chip-financing terms, lease obligations and partner support. Date and credit watch per MS / Tyler and Hamburger, 2026-10-16; no new guarantee assumed."
+        },
+        {
+          "date": "ongoing",
+          "event": "CoreWeave CDS: use official-workbook CDS_FLAT_SPREAD for the spread view; issuer-board PX_LAST is a different field on the same D14 ticker. Do not chain them or treat a field switch as market widening. Verify remaining desk contract/quote comparability before measuring desk-versus-Bloomberg changes. Field basis reviewed 2026-10-23."
+        },
+        {
+          "date": "ongoing",
+          "event": "Anthropic/AVGO ANTH-AVGO-CHIP-FIN-20261005: obtain closing/draw documentation and junior pricing after FT / Chan 2026-10-05 senior syndication launch. Keep $42bn senior and $18bn junior distinct; no new MW inferred."
+        },
+        {
+          "date": "ongoing",
+          "event": "Oracle Jupiter: UBS / Vogt 2026-10-16 relays a request for expedited gas-pipeline approval. Obtain the specific FERC filing and decision; the request is not approval, commissioning or proof that the full campus timetable changed."
+        },
+        {
+          "date": "ongoing",
+          "event": "Nebius NBIS-CITI-FIN-20261022: check draws, security/covenant documentation, step-up schedule and takeout financing of the 364-day facility. Source: company / Nave, 2026-10-22. >$40bn IG customer contracts are a prospective financing base, not additional debt."
+        },
+        {
+          "date": "2027-01-19",
+          "event": "Meta Class C charter effective date per PRE 14C filed 2026-10-21. Verify effectiveness and any separate offering, prospectus or proceeds; the date alone establishes no capital raise."
+        },
+        {
+          "date": "ongoing",
+          "event": "Official credit workbook: refresh missing instruments and preserve individual quote dates. Monitor stale SPCX revolver BL097034 Corp and xAI March 4 issuer-history endpoint; global fetch success does not validate either quote."
+        }
+      ],
+      "changed_deals": [
+        {
+          "deal_id": "ORCL-CHIP-LEASE-20261007",
+          "previous": {
+            "deal_id": "ORCL-CHIP-LEASE-20261007",
+            "date": "2026-10-07",
+            "issuer": "ORCL",
+            "category": "Financing talks",
+            "instrument": "Proposed third-party chip purchase and leaseback",
+            "size": "undisclosed",
+            "pricing": "undisclosed",
+            "counterparty": "Apollo / Goldman discussions reported by WSJ via Vital Knowledge",
+            "note": "MS October 16 still describes the chip-financing press reports as unconfirmed. It expects shorter asset-backed financing may diversify funding but likely costs more than traditional BBB debt. A stronger partner backstop is an upside scenario, not an announced guarantee. No closing, funded amount or delivered capacity established.",
+            "source": "Morgan Stanley / Lindsay A. Tyler and David M. Hamburger, 2026-10-16, ORCL Credit: Higher Rates, Higher Stakes; original WSJ October 7 report via Vital Knowledge and MS October 8 retained in history",
+            "evidence_status": "press-reported talks; not committed",
+            "source_date": "2026-10-16",
+            "recorded_at": "2026-10-09",
+            "reviewed_at": "2026-10-16"
+          }
+        },
+        {
+          "deal_id": "SPCX-NVDA-FIN-20261006",
+          "previous": {
+            "deal_id": "SPCX-NVDA-FIN-20261006",
+            "date": "2026-10-06",
+            "issuer": "SPCX / NVDA",
+            "category": "Financing talks",
+            "instrument": "Proposed financing for NVIDIA chip purchases",
+            "size": "~$40bn reported talks",
+            "pricing": "undisclosed",
+            "counterparty": "SpaceX borrower / NVIDIA chip supplier; final lender and security terms unverified",
+            "note": "Financing proposal only; no executed debt or supplier guarantee established. Separate from the Anthropic-SpaceX compute contract ANTH-SPCX-20260506. No incremental funded capacity recorded.",
+            "source": "Vital Knowledge / Adam Crisafulli, 2026-10-07, relaying WSJ 2026-10-07 (SpaceX first reported by FT 2026-10-06)",
+            "evidence_status": "press-reported talks; not committed",
+            "source_date": "2026-10-07",
+            "recorded_at": "2026-10-09"
+          }
+        },
+        {
+          "deal_id": "ANTH-AVGO-CHIP-FIN-20261005",
+          "previous": {
+            "deal_id": "ANTH-AVGO-CHIP-FIN-20261005",
+            "date": "2026-10-05",
+            "issuer": "Anthropic / AVGO",
+            "category": "Lab / SPV",
+            "instrument": "2027 chip-lease financing, senior syndication launched",
+            "size": "$60bn reported package",
+            "pricing": "undisclosed; ~$42bn supported senior / ~$18bn unguaranteed junior",
+            "counterparty": "BofA / Citi / MS reported committed bookrunners; AVGO supports senior; Blackstone ~$9bn junior commitment per FT",
+            "note": "Added to this ledger from the existing timeline ID, recorded there October 12. FT October 5 reports senior syndication started; junior launch follows later. Bank commitments are press-reported, not proof of funded draws or closing. Keep separate from the prior $35bn platform and the proposed $50bn OpenAI structure. Do not add the optional up-to-$42bn Anthropic convertible to the package; no MW disclosed.",
+            "source": "Financial Times / Michelle Chan, 2026-10-05, 3-page archived article — http://ds-cap-33:8080/relat%C3%B3rios%20bons/Wall_Street_banks_launch_record_60bn_chip_deal_for_Broadcom_and_Anthropic.html",
+            "source_date": "2026-10-05",
+            "recorded_at": "2026-10-16",
+            "evidence_status": "press-reported committed banks / syndication; no closing verified"
+          }
+        },
+        {
+          "deal_id": "META-CLASSC-FIN-20261021",
+          "previous": {
+            "deal_id": "META-CLASSC-FIN-20261021",
+            "date": "2026-10-21",
+            "issuer": "META",
+            "category": "Equity financing framework",
+            "instrument": "New non-voting Class C common stock framework",
+            "size": "No offering amount announced",
+            "pricing": "not applicable; no priced offering",
+            "counterparty": "Potential future public/private equity investors; none committed in this disclosure",
+            "note": "PRE 14C provides a Class C framework with charter effectiveness January 19, 2027. Susan Li's October 21 official call says no specific financing plans are being announced. This is financing flexibility, not equity proceeds. The filing's long-range funding scenarios and voting-control sensitivity are not issuance commitments. Existing timeline ID; no compute MW or new contract TCV.",
+            "source": "Meta / PRE 14C filed 2026-10-21 and Susan Li, official Q3 call 2026-10-21 — https://www.sec.gov/Archives/edgar/data/1326801/000162828026066710/meta-20261021.htm ; https://s21.q4cdn.com/399680738/files/content_files/META-Q3-2026-Earnings-Call-Transcript.pdf",
+            "source_date": "2026-10-21",
+            "recorded_at": "2026-10-23",
+            "evidence_status": "filed capital-structure framework; no issuance/funding"
+          }
+        }
+      ]
     }
   ],
   "watch_history": [
@@ -1001,20 +1234,34 @@
       "reviewed_at": "2026-10-09",
       "status": "disclosure component resolved; other thesis tests unchanged",
       "resolution": "Oracle September 11 10-Q confirms $20bn ATM fully utilized, $19.9bn net, and $11.4bn financing-component customer prepayments included within $23.1bn operating cash flow. Does not resolve all future funding needs. Existing earnings outcome unchanged."
+    },
+    {
+      "date": "2026-10",
+      "event": "Anthropic IPO: the late-Sep/early-Oct window is an old WSJ August 11 expectation, not a confirmed listing. Obtain current issuer filing before moving or resolving the date; financing-stack transparency remains a next check.",
+      "reviewed_at": "2026-10-30",
+      "status": "public-filing disclosure resolved; IPO pricing/closing unresolved",
+      "resolution": "Anthropic S-1 filed October 26; existing October 26 partial-disclosure outcome retained. Blank offer price/proceeds do not establish a completed listing."
+    },
+    {
+      "date": "2026-10-28",
+      "event": "Oracle Analyst Day: funding cost, chip-financing terms, lease obligations and partner support. Date and credit watch per MS / Tyler and Hamburger, 2026-10-16; no new guarantee assumed.",
+      "reviewed_at": "2026-10-30",
+      "status": "event and guidance disclosure resolved; execution tests remain",
+      "resolution": "October 28 company release read. Existing ORCL 2026-10-28 outcome retained; no duplicate outcome. Follow actual funding, vendor obligations, FCF and ratings."
     }
   ],
   "weekly_review": {
-    "reviewed_at": "2026-10-23T09:12:01",
-    "window_start": "2026-10-16",
-    "window_end": "2026-10-23",
-    "summary": "Review window October 16-23; newest substantive research evidence is dated October 22.\nNew financing: Nebius (company / Ophir Nave, October 22) entered a $3.5bn Citi senior secured facility, 364-day maturity, initially Term SOFR +2.75% rising to at most +3.50%, subject to adjustments. Draws are undisclosed. The existing timeline ID is now linked into the credit ledger; no incremental MW or duplicate commitment is counted.\nMeta (PRE 14C and Susan Li official call, October 21) established a non-voting Class C framework with charter effectiveness January 19, 2027. Li announced no specific financing plan. This broadens funding options and qualifies the old blanket hyperscaler self-funding assumption; it is not a priced offering or cash inflow. Long-range funding scenarios are not commitments.\nUnderwriting: Cantor / Brett Knoblauch (October 21, research pp.1-3; FactSet marks October 20) distinguishes lease backstop triggers and commencement from landlord completion risk. Jefferies / Blayne Curtis (October 22 call) flags Broadcom's funding dependence; this is an analyst assessment, not evidence that a particular package closed. SpaceX / Bret Johnsen (October 20 Q3 call, Quartr transcript) discusses debt-capital pools and vendor/customer options without confirming the reported $40bn chip-financing proposal.\nMarket basis: the official Daniel Grozdea workbook uses CDS_FLAT_SPREAD; the separate issuer history uses PX_LAST on the D14 tickers. Do not chain these as a spread move. Current workbook composite snapshots and completed-session index histories retain separate dates. October 1 MS issuance totals, August broker snapshots and October 5 Anthropic syndication evidence retain their original dates; no later closing was established here.\nNext checks: Oracle October 28 Analyst Day; Nebius drawings/takeout; Meta actual offering documents; signed chip-financing closings and Jupiter/Lighthouse permits. Past AVGO/SPCX watches and the old Anthropic IPO expectation remain unresolved.\nCoverage: graph, relevant company Debate/Changelog sections, compute timeline and full-corpus searches; original Nebius release, selected Meta filing/call sections, SpaceX funding Q&A, Jefferies financing remarks and Cantor pp.1-3 reviewed. Outlook search previews were screened as leads; full new email bodies, linked broker PDFs and Cantor disclosure pages 4-6 were not reviewed. Oct23 UBS/CoreWeave and OpenAI fundraising emails are follow-up leads, not newly verified deal evidence. No exhaustive mailbox or filing audit claimed. Sovereign-AI debt and individual unavailable/stale quotes remain gaps.",
+    "reviewed_at": "2026-10-30T09:12:31",
+    "window_start": "2026-10-23",
+    "window_end": "2026-10-30",
+    "summary": "Review window October 23-30; latest substantive primary evidence is October 29.\nMeta: the preferred offering closed; common-forward settlement and a prospective Class C ATM have different cash dates. North Star: announced committed financing and filed Broadcom residual-value support upgrade the old syndication proposal. SpaceX: a binding Apollo lease commitment upgrades talks, while closing, pricing and deliveries remain future conditions. These revise existing stable IDs, without adding duplicate commitments.\nOracle's October 28 Investor Day replaces the earlier funding outlook with a $20bn additional capital-markets cap, excluding refinancing, and a positive-FCF target in 2H FY28. This resolves the disclosure watch, not the funding/execution thesis. Jupiter/Lighthouse approvals remain unverified.\nAnthropic's October 26 S-1 supplies financing disclosure; it is not a completed IPO. Its up-to-$42bn rent-note capacity is conditional and undrawn as of the prospectus, separate from SPV capital. UBS / Keirstead's October 26 CoreWeave DDTL discussion relays an unnamed source's expectations, not executed debt. No new Nebius draw or OpenAI chip-financing close established.\nCoverage: graph and relevant company Debate/Changelog sections; compute-deal history; full-corpus searches; Oracle release, SpaceX financing 8-K, Meta offering/closing sections, selected Anthropic liquidity provisions, Broadcom 8-K and Milbank announcement. Outlook previews identify JPM October 30 and MS October 29 credit reports as follow-up leads; their full bodies/PDFs were not reviewed. No exhaustive filing or mailbox audit claimed. Old MS/JPM issuance totals and broker quotes retain their original dates. Sovereign-AI coverage, final tranches, actual draws, permits and unavailable quotes remain gaps. Official workbook CDS_FLAT_SPREAD and issuer PX_LAST histories remain separate.",
     "sources": [
-      "Nebius / company release and COO Ophir Nave, 2026-10-22; 6-K ex-99.1 — https://nebius.com/newsroom/nebius-secures-3-5-billion-financing-facility-with-citi",
-      "Meta / PRE 14C filed 2026-10-21 and Susan Li, official Q3 call 2026-10-21 — https://www.sec.gov/Archives/edgar/data/1326801/000162828026066710/meta-20261021.htm ; https://s21.q4cdn.com/399680738/files/content_files/META-Q3-2026-Earnings-Call-Transcript.pdf",
-      "Cantor Fitzgerald / Brett Knoblauch, Backstop 101, 2026-10-21, pp.1-3; FactSet marks 2026-10-20 — http://ds-cap-33:8080/relat%C3%B3rios%20bons/0e86f9f0-156a-4b80-95c9-9f7d6dd25907.html",
-      "Jefferies / Blayne Curtis, spoken analyst view, 2026-10-22; machine transcript — http://ds-cap-33:8080/_equity_calls/Semis/2026-10-22_Jefferies_Semis-update-call-AI-trade-LRCX-TXN-KLAC-CRDO-Curtis.md",
-      "SpaceX / Bret Johnsen, Q3 funding Q&A 2026-10-20, Quartr transcription — http://ds-cap-33:8080/SPCX/transcripts/SPCX_Q3-2026-earnings_2026-10-20.md",
-      "Official AI_Credit_Live.xlsx / Daniel Grozdea, Capstone; Bloomberg CDS_FLAT_SPREAD / YLD_YTM_MID / OAS_SPREAD_MID; refresh dates in generated workbook section — http://ds-cap-33:8080/wiki/_dashboards/credit-live.html"
+      "Meta / 8-K filed 2026-10-29; offering prospectuses filed 2026-10-28 — https://www.sec.gov/Archives/edgar/data/1326801/000119312526438017/d183592d8k.htm ; https://www.sec.gov/Archives/edgar/data/1326801/000119312526436410/d94886d424b5.htm ; https://www.sec.gov/Archives/edgar/data/1326801/000119312526436405/d133631d424b5.htm",
+      "Oracle / Investor Day release, 2026-10-28 — https://www.sec.gov/Archives/edgar/data/1341439/000119312526435853/d75538dex991.htm",
+      "SpaceX / Bret Johnsen, 8-K Item 8.01, 2026-10-26 — http://ds-cap-33:8080/SPCX/SPCX_8-K_2026-10-26_0001104659-26-118614.html",
+      "Milbank / North Star, 2026-10-26; Broadcom 8-K, 2026-10-27 — https://www.milbank.com/en/news/milbank-advises-north-star-on-landmark-dollar63b-financing-structure-to-enable-ai-compute-capacity-in-partnership-with-broadcom.html ; https://investors.broadcom.com/static-files/0ee4f6b7-4a23-4de0-8f3e-48f147ae30d3",
+      "Anthropic / S-1, 2026-10-26, selected liquidity/Infrastructure Partner NPA provisions — https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+      "UBS / Karl Keirstead et al., 2026-10-26, selected spoken financing remarks — http://ds-cap-33:8080/_equity_calls/Overall/2026-10-26_UBS_AIs-Credit-Stress-Test-who-finances-next-wave-Keirstead-Mish-Parker-Richardson-Sady-Gravett.md"
     ]
   }
 }

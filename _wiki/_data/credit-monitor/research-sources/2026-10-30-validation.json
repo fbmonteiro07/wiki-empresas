@@ -1,0 +1,30 @@
+{
+  "validated_at": "2026-10-30T09:26:35",
+  "tests": "test_credit_monitor.py: 16 passed",
+  "live_matches_generated": true,
+  "self_contained_assets": true,
+  "attachment_bytes": 651975,
+  "attachment_sha256": "adf35f7750adc3075a404e2fb87d62a979d16ba87db98ea685929cad934462c6",
+  "body_sha256": "362db64e13cc7de83ecde03493965fc257d2314c70e23fb2c6a731bcf7b097d7",
+  "official_xlsx_unchanged_sha256": "f8a56a35c0aa9fb031a606aaa2afcb7007c92d4c65abf477cf7f37299a4e75f4",
+  "input_sha256": {
+    "funding_deals.json": "d98b489c266cb03a65e6a050e840118e31c34d9ba3eb68232bbb3e02296a5a25",
+    "funding_market.json": "16ad394bb6640f2ba222509807116cf999ba06c35447aadd1712af1156bbeb0d",
+    "credit_watch.json": "5db3342467586754573ab7da0fbcaa4e5bc0c2318876b39640689cb494c0ab1d",
+    "credit_workbook.json": "f8c4a9ee6a03ffe91dbfe1c7e8cacff3fc0091d3380802a3495595788bec013e"
+  },
+  "cds_schema_repaired": true,
+  "five_year_tenor_filter_tested": true,
+  "data_status": "partial: four missing workbook instruments, stale xAI history, historical CDS comparisons unavailable",
+  "research_archive": "research-history/2026-10-30T091001-pre-edit.json",
+  "repair_archive": "research-history/2026-10-30T092216-cds-mapping-pre-edit",
+  "receipt_exists_before_submission": false,
+  "read_only_outlook_search_previews": "research-sources/2026-10-30-outlook-search.json",
+  "delivery": {
+    "status": "sent_confirmed",
+    "verified_at": "2026-10-30T12:27:21.7946106Z",
+    "receipt_path": "\\\\CAPSRV01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\_data\\credit-monitor\\email-receipts\\975cd509f86c0c2e2f20ccb619edaf7d1f889b0eb150e624dfe91ac3b30ef216.json",
+    "sent_entry_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC0000000001090000C1A4BC1B9694F44D9FADFEFCFB028EAC000598E0813F0000",
+    "exports_frozen": true
+  }
+}

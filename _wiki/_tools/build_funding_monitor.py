@@ -638,7 +638,7 @@ def workbook_section():
 
     crows = "".join(f'<tr><td><b>{E(c["name"])}</b><br><span class="src">{E(c["bbg"])}</span></td><td class="num">{_n(c.get("spread_bp"), 0)}</td>'
                     f'<td class="num">{_sgn(c.get("d_snapshot_bp"))}</td><td class="num">{_n(c.get("ms_desk_0824_bp"), 0)}</td><td class="num">{_sgn(c.get("d_vs_ms_bp"))}</td></tr>' for c in wb["cds"])
-    cds_tbl = f"<table><thead><tr><th>CDS</th><th>Flat spread bp</th><th>Δ vs snapshot</th><th>MS desk 24-Aug bp</th><th>Δ vs MS</th></tr></thead><tbody>{crows}</tbody></table>"
+    cds_tbl = f"<p class='src'>{E(wb.get('notes', {}).get('cds', ''))}</p><table><thead><tr><th>CDS</th><th>Flat spread bp</th><th>Δ vs snapshot</th><th>MS desk 24-Aug bp</th><th>Δ vs MS</th></tr></thead><tbody>{crows}</tbody></table>"
     erows = "".join(f'<tr><td><b>{E(e["name"])}</b><br><span class="src">{E(e["bbg"])}</span></td><td class="num">{_n(e.get("px"))}</td>'
                     f'<td class="num">{_sgn(e.get("chg_pct_1d"), 2, "%")}</td><td class="num{" wb-amber" if (e.get("relvol") or 0) >= 1.5 else ""}">{_n(e.get("relvol"), 2, "x")}</td>'
                     f'<td><span class="src">{E(e.get("why") or "")}</span></td></tr>' for e in wb["equities"])

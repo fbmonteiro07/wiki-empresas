@@ -54,7 +54,7 @@ def workbook_issues(workbook, today):
     issues = []
     refresh = workbook.get('refresh', {})
     if refresh.get('status') != 'ok':
-        missing = ', '.join(refresh.get('missing', []))
+        missing = ', '.join(dict.fromkeys(refresh.get('missing', [])))
         issues.append('Official workbook refresh ' + str(refresh.get('status', 'unknown')) + ': '
                       + str(refresh.get('detail') or 'refresh not confirmed')
                       + ('; unavailable instruments: ' + missing if missing else '')
@@ -65,9 +65,12 @@ def workbook_issues(workbook, today):
         aged = True
     if aged:
         issues.append('Official workbook values are stale or undated: ' + str(workbook.get('values_asof') or 'unknown') + '.')
+    seen = set()
     for group in ('bonds', 'other', 'cds', 'equities'):
         for row in workbook.get(group, []):
-            if row.get('stale'):
+            key = row.get('bbg') or row.get('name') or row.get('ticker')
+            if row.get('stale') and key not in seen:
+                seen.add(key)
                 issues.append(f'Official workbook {row.get("name") or row.get("ticker") or row.get("bbg")}: retained earlier value; '
                               'individual observation date unavailable. Do not treat the overall refresh date as its quote date.')
     return issues

@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "updated_at": "2026-10-29T16:05:54-03:00",
-  "last_online_check": "2026-10-29T15:58:01-03:00",
-  "last_run_offline": false,
+  "updated_at": "2026-10-30T09:05:13-03:00",
+  "last_online_check": "2026-10-30T08:55:43-03:00",
+  "last_run_offline": true,
   "source_failures": [],
   "source_dates": {
-    "KCS": "2026-10-29T15:58:08-03:00",
-    "BOK": "2026-10-29T16:01:07-03:00",
-    "InSpectrum": "2026-10-29T16:04:57-03:00"
+    "KCS": "2026-10-30T08:55:48-03:00",
+    "BOK": "2026-10-30T08:58:11-03:00",
+    "InSpectrum": "2026-10-30T09:02:08-03:00"
   },
   "source_errors": {},
   "signals": {
@@ -77,45 +77,45 @@
     },
     "ISPPDR37 Index": {
       "period": "2026-10",
-      "through": "2026-10-29",
-      "value": -3.0098402749930364,
-      "level": 32.65222222222222,
+      "through": "2026-10-30",
+      "value": -3.1180601099517036,
+      "level": 32.61578947368421,
       "basis": "Partial monthly mean versus prior complete month",
       "product": "DRAM",
       "stale": false
     },
     "ISPPDR47 Index": {
       "period": "2026-10",
-      "through": "2026-10-29",
-      "value": 3.0788196768602782,
-      "level": 50.81888888888889,
+      "through": "2026-10-30",
+      "value": 3.298854832665943,
+      "level": 50.927368421052634,
       "basis": "Partial monthly mean versus prior complete month",
       "product": "DRAM",
       "stale": false
     },
     "ISPPN256 Index": {
       "period": "2026-10",
-      "through": "2026-10-29",
-      "value": 7.929342800269579,
-      "level": 15.302222222222223,
+      "through": "2026-10-30",
+      "value": 7.995337476149111,
+      "level": 15.311578947368421,
       "basis": "Partial monthly mean versus prior complete month",
       "product": "NAND",
       "stale": false
     },
     "ISPPN512 Index": {
       "period": "2026-10",
-      "through": "2026-10-29",
-      "value": -6.0373638527566165,
-      "level": 19.54,
+      "through": "2026-10-30",
+      "value": -6.184156744437375,
+      "level": 19.509473684210526,
       "basis": "Partial monthly mean versus prior complete month",
       "product": "NAND",
       "stale": false
     },
     "ISPPND1T Index": {
       "period": "2026-10",
-      "through": "2026-10-29",
-      "value": -4.744007574089881,
-      "level": 29.56888888888889,
+      "through": "2026-10-30",
+      "value": -4.854028181288705,
+      "level": 29.534736842105264,
       "basis": "Partial monthly mean versus prior complete month",
       "product": "NAND",
       "stale": false
@@ -151,6 +151,6 @@
     "thread_id": "01a182bf-98c2-7c62-8e15-05589f9172be",
     "dependencies": "Workstation and Codex running; Bloomberg authenticated for spot data"
   },
-  "outlook_as_of": "2026-10-29",
+  "outlook_as_of": "2026-10-30",
   "outlook_review_required": false
 }

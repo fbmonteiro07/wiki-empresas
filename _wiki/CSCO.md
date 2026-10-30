@@ -5,15 +5,15 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\CSCO` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\CSCO.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-29 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-10-30 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $68.3bn | $75.5bn |
-| Gross profit | $44.8bn | $48.7bn |
-| Gross margin | 65.5% | 64.5% |
+| Revenue | $68.4bn | $75.6bn |
+| Gross profit | $44.8bn | $48.9bn |
+| Gross margin | 65.5% | 64.6% |
 | EBITDA | $25.6bn | $28.0bn |
-| EPS | $4.76 | $5.26 |
+| EPS | $4.76 | $5.30 |
 | Capex | $1.3bn | $1.4bn |
 | OCF (≈EBITDA) | $25.6bn | $28.0bn |
 

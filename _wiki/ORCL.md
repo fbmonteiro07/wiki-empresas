@@ -3,17 +3,17 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\ORCL` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\ORCL.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-29 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-10-30 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $76.4bn | $108.3bn |
-| Gross profit | $48.8bn | $60.1bn |
-| Gross margin | 63.8% | 55.5% |
-| EBITDA | $43.3bn | $62.4bn |
-| EPS | $7.31 | $9.19 |
-| Capex | $65.0bn | $95.2bn |
-| OCF (≈EBITDA) | $43.3bn | $62.4bn |
+| Revenue | $76.4bn | $108.2bn |
+| Gross profit | $48.8bn | $60.2bn |
+| Gross margin | 63.8% | 55.6% |
+| EBITDA | $43.3bn | $62.3bn |
+| EPS | $7.31 | $9.21 |
+| Capex | $65.1bn | $95.0bn |
+| OCF (≈EBITDA) | $43.3bn | $62.3bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
@@ -716,6 +716,8 @@ _🆕 **Q1 FY27 guidance marks (Oracle FQ1 FY27 earnings call — BBG LIVE trans
 
 ## Changelog
 
+
+- **2026-10-30 — weekly credit review:** Rechecked the October 28 company Investor Day release against the credit ledger. The $20bn additional FY27-FY30 capital-markets cap excludes refinancing and follows the completed ATM; it is guidance, not committed funding. Vendor-financing / hardware / prepayment mechanisms do not confirm the specific October 7 chip-lease proposal. Moved the October 28 dashboard watch to execution follow-up; reused the existing October 28 outcome. [Weekly evidence](_data/credit-monitor/research-sources/2026-10-30-evidence.json).
 - 2026-10-29 — ingest (Notion, 2026-10-29_Barclays_GOOG-3Q26-group-callback-air-pocket-SpaceX-TPU-training-Ross-Sandler.md): 1 Full-log row (Q2 FY27 window, after the 10-28 Ellison row). Barclays' Sandler reads Oracle's FY29 capex step-down as OpenAI first-party build ('in Ohio'), which is his interpretation and not in the 8-K, and extends it to all hyperscalers from mid-'28. His 'April 28th through April 29th' FY29 is kept verbatim and flagged: ORCL's FY starts June 1. Nothing superseded.
 - 2026-10-28 — /run-inbox: Ellison AI World keynote (2026-10-28, transcript) → 1 Full-log row (Q2 FY27 window, placed after the 10-28 Investor Day row), 1 Sinal update, 1 Sources line. All-In "CoreWeave Crash" (10-16, backfill) not patched: Oracle only mentioned in passing ("took some strays"). Nothing superseded.
 - 2026-10-28 — verification (transcription QA): Ellison 10-28 row — SMART on FHIR / "no data migration" timestamp [00:24:05] → [00:23:21]–[00:24:05] (the "smart on fire" sentence is at [00:23:21]); dropped the "(end date garbled, UNCONFIRMED)" caveat, since the transcript clearly says modules are available "starting in November… through January" [00:36:32]. Other quotes re-checked and match.

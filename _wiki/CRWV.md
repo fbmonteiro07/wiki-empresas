@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\CRWV` (10-K FY2025, four 10-Qs, transcripts) · `E:\briefings\2026`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Snapshot — Capstone official model + BBG · asof 2026-10-29 · USD
+### 📊 Snapshot — Capstone official model + BBG · asof 2026-10-30 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -946,6 +946,8 @@ _Source: CRWV earnings calls (dates above); management commentary, paraphrased._
 
 ## Changelog
 
+
+- **2026-10-30 — weekly credit review:** Checked selected spoken UBS / Keirstead October 26 financing remarks. The possible next DDTL and higher prepays are an unnamed source / analyst expectation, not a new debt commitment or funded draw. Prior reported numbers and models retained; the credit monitor continues to distinguish CDS_FLAT_SPREAD from issuer-board PX_LAST. [Weekly evidence](_data/credit-monitor/research-sources/2026-10-30-evidence.json).
 - 2026-10-28 — verification (transcription QA): 10-24 CASPA row, Patel GW build-cost quote ("roughly $40 billion… north of 60") timestamp [00:23:33] → [00:22:29] (the quote sits in the [00:22:29] segment of the transcript).
 - 2026-10-28 — /run-inbox: 3 podcast/panel transcripts (Huang on Yahoo Finance 10-21; CASPA panel 10-24, backfill; Arora at U-M 10-26) → 3 Full-log rows, 1 Sinal update, 3 Sources lines. Not patched (passing or sector-only mentions): SemiAnalysis Ep. 041 (10-27; the "liquidity run on all the neocloud debt" claim names no company and is unquantified) and All-In "AI Cyber Panic" (10-23, backfill; CRWV appears only in the host's tape, "down 10%"). Nothing superseded.
 - 2026-10-26 — ingest (Notion, 2026-10-26_UBS_SemiBytes-call-SMH-prices-20GW-cut-CPU-TAM-memory-bound-Arcuri-Ruple.md): 1 Current-state paragraph after the S1 block: Arcuri fielded 10-15 credit-investor calls on GPU useful life and NVIDIA/Broadcom financing vehicles (Broadcom 'one-time' as he understands it; NVIDIA 'have to continue to support the Neos', 'almost the same company'); SPV paper coming to market per investors. The S1 block was left untouched. Nothing superseded.

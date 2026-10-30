@@ -52,7 +52,7 @@ SNAPSHOTS = WB_DIR / "snapshots"
 BRIEFINGS = ROOT / "_briefings"
 
 SOURCE_LABEL = ("AI_Credit_Live.xlsx — Daniel Grozdea (Capstone), live Bloomberg workbook; layout per Barclays IG/HY Data Center "
-                "Comp Sheets (16-Sep-2026); MS Credit Trading desk CDS marks 24-Aug-2026")
+                "Comp Sheets (16-Sep-2026); CDS comparison dates follow the imported column headings")
 
 BOND_FIELDS = ["PX_LAST", "CHG_PCT_1D", "YLD_YTM_MID", "OAS_SPREAD_MID", "PX_CLOSE_1D", "TRACE_LAST_TRADE_SIZE", "PRICE_LAST_TIME"]
 CDS_FIELDS = ["CDS_FLAT_SPREAD"]
@@ -203,13 +203,63 @@ def parse_other(wb):
 
 
 def parse_cds(wb):
+    ws = wb["CDS"]
+    headers = next(ws.iter_rows(min_row=4, max_row=4, values_only=True))
+    dates = next(ws.iter_rows(min_row=3, max_row=3, values_only=True))
+    return parse_cds_table(headers, (r for _, r in _rows(ws)), dates)
+
+
+def parse_cds_table(headers, data_rows, dates=()):
+    """Read labeled columns; daily closes must never become old desk marks."""
+    heads = [str(h or "").strip().lower() for h in headers]
+    def col(*labels):
+        return next((i for i, h in enumerate(heads) if h in labels), None)
+    name, ticker = col("name"), col("bloomberg ticker")
+    current = col("last", "live (bp)", "live flat spread (bp)", "flat spread (bp)")
+    previous = col("prev close (bp)")
+    snapshot = next((i for i, h in enumerate(heads) if "snapshot" in h and not h.startswith(("δ", "Δ", "chg", "change"))), None)
+    desk = next((i for i, h in enumerate(heads) if "ms" in h and "24" in h and not h.startswith(("δ", "Δ", "chg", "change"))), None)
+    if name is None or ticker is None or current is None or (previous is None and snapshot is None and desk is None):
+        raise ValueError("Unrecognized CDS column headings; refusing a positional import")
+    def value(row, index):
+        return row[index] if index is not None and index < len(row) else None
+    def cached_date(index):
+        v = value(dates, index)
+        if isinstance(v, (int, float)):
+            return (dt.date(1899, 12, 30) + dt.timedelta(days=int(v))).isoformat()
+        return _date(v)
     rows = []
-    for i, r in _rows(wb["CDS"]):
-        if not r[1]:
+    for r in data_rows:
+        if not value(r, ticker):
             continue
-        rows.append({"name": _txt(r[0]), "bbg": _txt(r[1]), "spread_bp": _num(r[2]), "spread_snapshot_bp": _num(r[3]),
-                     "d_snapshot_bp": _num(r[4]), "ms_desk_0824_bp": _num(r[5]), "d_vs_ms_bp": _num(r[6])})
+        row = {"name": _txt(value(r, name)), "bbg": _txt(value(r, ticker)),
+               "spread_bp": _num(value(r, current)),
+               "spread_snapshot_bp": _num(value(r, snapshot)),
+               "ms_desk_0824_bp": _num(value(r, desk)),
+               "cds_layout": "daily-closes-v2" if previous is not None else "dated-baselines-v1"}
+        if previous is not None:
+            basis = _txt(value(r, col("column c source")))
+            row["cached_quote"] = {"value_bp": row["spread_bp"], "basis": basis,
+                "last_update": _txt(value(r, col("last update (time, else curve date)"))),
+                "previous_close_bp": _num(value(r, previous)), "previous_close_date": cached_date(previous),
+                "daily_change_bp": _num(value(r, col("chg day / day")))}
+            # Column C can be CBIN PX_MID, which is not CDS_FLAT_SPREAD.
+            if basis != "Flat spread (EOD close)":
+                row["spread_bp"] = None
+        derive_cds(row)
+        rows.append(row)
     return rows
+
+
+def derive_cds(row):
+    for base, delta in (("spread_snapshot_bp", "d_snapshot_bp"), ("ms_desk_0824_bp", "d_vs_ms_bp")):
+        a, b = row.get("spread_bp"), row.get(base)
+        row[delta] = _r(a - b, 2) if a is not None and b is not None else None
+
+
+def cds_tenor(row):
+    match = re.search(r"\b(\d+)Y\b", row.get("bbg") or row.get("name") or "")
+    return int(match.group(1)) if match else None
 
 
 def parse_equities(wb):
@@ -556,17 +606,14 @@ def do_refresh(when=None):
         _derive_other(o)
     for c in wb["cds"]:
         take(c, c["bbg"], {"spread_bp": "CDS_FLAT_SPREAD"})
-        if c.get("spread_bp") is not None:
-            if c.get("spread_snapshot_bp") is not None:
-                c["d_snapshot_bp"] = _r(c["spread_bp"] - c["spread_snapshot_bp"], 2)
-            if c.get("ms_desk_0824_bp") is not None:
-                c["d_vs_ms_bp"] = _r(c["spread_bp"] - c["ms_desk_0824_bp"], 2)
+        derive_cds(c)
     for e in wb["equities"]:
         take(e, e["bbg"], {"px": "PX_LAST", "chg_pct_1d": "CHG_PCT_1D", "volume": "VOLUME", "vol_avg_30d": "VOLUME_AVG_30D", "time": "LAST_TRADE_TIME"})
         if e.get("volume") and e.get("vol_avg_30d"):
             e["relvol"] = _r(e["volume"] / e["vol_avg_30d"])
     wb["totals"] = {**_totals(wb["bonds"]), "sheet": wb["totals"].get("sheet", {})}
     if status["missing"]:
+        status["missing"] = list(dict.fromkeys(status["missing"]))
         status["status"] = "partial"
         status["detail"] = f"{len(status['missing'])} instrument(s) returned no values — previous values kept"
     return _finish(wb, status, when, changed=True)
@@ -575,7 +622,7 @@ def do_refresh(when=None):
 def _finish(wb, status, when, changed):
     wb["refresh"] = status
     if changed:
-        wb["values_source"] = "Bloomberg Desktop API bdp (local terminal), same fields as the workbook formulas — live composite snapshot"
+        wb["values_source"] = "Bloomberg Desktop API bdp (local terminal): workbook bond/equity fields and CDS_FLAT_SPREAD (not CBIN PX_MID) — composite snapshot"
         wb["values_source_key"] = "bbg-api"
         wb["values_asof"] = when[:10]
         wb["refreshed_at"] = when
@@ -620,12 +667,17 @@ def brief_lines(wb=None):
     comps = [b for b in wb["bonds"] if b["section"] == "Parent"]
     if comps:
         L.append("- Tenant / parent comps: " + "; ".join(f"{b['name'].split(' Sr')[0]} px {_f(b['px'])} / {_f(b['yld'])}% / OAS {_f(b['oas_bp'], 0)}bp" for b in comps) + ".")
-    crwv = [c for c in wb["cds"] if c["name"].startswith("CRWV")]
+    crwv = sorted((c for c in wb["cds"] if c["name"].startswith("CRWV")), key=lambda c: cds_tenor(c) or 999)
     if crwv:
         L.append("- CRWV CDS curve (CDS_FLAT_SPREAD, bp): " + " · ".join(f"{c['name'].split()[-1]} {_f(c['spread_bp'], 0)}" for c in crwv) + ".")
-    hyp = [c for c in wb["cds"] if c.get("ms_desk_0824_bp") is not None]
+    hyp = [c for c in wb["cds"] if cds_tenor(c) == 5]
     if hyp:
-        L.append("- 5Y CDS vs MS desk 24-Aug: " + "; ".join(f"{c['name'].split()[0]} {_f(c['spread_bp'], 0)} ({c['d_vs_ms_bp']:+.0f})" for c in hyp) + ".")
+        L.append("- 5Y CDS (CDS_FLAT_SPREAD, bp): " + "; ".join(f"{c['name']} {_f(c['spread_bp'], 0)}" for c in hyp) + ".")
+        paired = [c for c in hyp if c.get("d_vs_ms_bp") is not None]
+        if paired:
+            L.append("- 5Y CDS change vs MS desk 24-Aug-2026 (bp): " + "; ".join(f"{c['name']} {c['d_vs_ms_bp']:+.0f}" for c in paired) + ".")
+        else:
+            L.append("- CDS comparison gap: the current workbook has daily-close columns, not the earlier snapshot / MS 24-Aug marks. Those comparisons are unavailable. Cached daily closes retain their original dates and are not current quotes.")
     cv = [o for o in wb["other"] if o["name"].startswith("CRWV") and o["kind"] == "bond"]
     if cv:
         L.append("- CoreWeave straight bonds: " + "; ".join(f"{o['name']} px {_f(o['px'])} / {_f(o['yld'])}%" for o in cv) + ".")

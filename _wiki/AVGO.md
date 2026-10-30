@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AVGO` (filings + transcripts) · `_equity_calls` · `_briefings\by-ticker\AVGO.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Snapshot — Capstone official model + BBG · asof 2026-10-29 · USD
+### 📊 Snapshot — Capstone official model + BBG · asof 2026-10-30 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -1049,6 +1049,8 @@ _Source: AVGO earnings calls (dates above); management commentary, paraphrased._
 
 ## Changelog
 
+
+- **2026-10-30 — weekly credit review:** Reconciled the credit ledger to existing ANTH-AVGO-CHIP-FIN-20261005 history: Milbank October 26 confirms $63bn debt and equity; Broadcom October 27 files contingent residual-value support, not an unconditional guarantee. Retained the $60bn / $42bn-senior / $18bn-junior launch vintage and the later allocation corrections. The separate up-to-$42bn rent-note facility is not incremental SPV capital. No rating, PT or model change. [Weekly evidence](_data/credit-monitor/research-sources/2026-10-30-evidence.json).
 - 2026-10-28 — verification (transcription QA): 10-27 SemiAnalysis Ep. 041 row, "Doug O'Laughlin, Joey Brookhart, host Jordan Nanos" → "hosts Jordan Nanos / Doug O'Laughlin, with Joey Brookhart" (transcript front-matter lists both as hosts). Quotes, $42bn and [00:17:26] confirmed.
 - 2026-10-28 — run-inbox (podcasts): 1 Intra-quarter row + 1 Sinal update from SemiAnalysis Weekly Ep. 041 (2026-10-27): Jeremie Eliahou Ontiveros reads the S-1's $42bn Broadcom convert as buying "a whole lot more TPUs"; logged with the basis caveat that the S-1 limits it to lease rent. Nothing superseded.
 - **2026-10-28 — Tranche comparison / North Star primary confirmation:** added consolidated-table cross-reference and Broadcom's 10-27 8-K. Prior **$43bn expected peak RVS from the 10-26 infographic** is retained as the historical source; the filing confirms **~$43bn maximum potential undiscounted liability** and **72.5%-less-recovery** mechanics. Added Bloomberg / Barbuscia 10-27 proposed **up-to-$21bn** amortizing bond refinancing, expected ~5 years / Q1-2027, without increasing commitments or inferring issuance/funding. Reconfirmed S-1 convertible **60/63/57-month** maturity buckets; no company estimate, rating or PT changed.

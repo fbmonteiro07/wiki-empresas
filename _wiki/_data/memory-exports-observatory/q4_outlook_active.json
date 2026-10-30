@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-29",
+  "as_of": "2026-10-30",
   "quarter": "2026Q4",
   "owner": "Capstone research",
   "classification": "ESTIMATE / qualitative house judgment",
@@ -40,11 +40,11 @@
     },
     {
       "signal": "Spot · partial October mean",
-      "date": "Through 29 Oct 2026; 18 observations per series; versus September mean",
-      "dram": "DDR5 16Gb +3.1%; DDR4 8Gb -3.0%. Selective strength persists.",
-      "nand": "TLC 256Gb +7.9%; 512Gb -6.0%; 1Tb -4.7%. No broad confirmation.",
+      "date": "Through 30 Oct 2026; 19 observations per series; versus September mean",
+      "dram": "DDR5 16Gb +3.3%; DDR4 8Gb -3.1%. Selective strength persists.",
+      "nand": "TLC 256Gb +8.0%; 512Gb -6.2%; 1Tb -4.9%. No broad confirmation.",
       "weight": "Useful short-horizon cross-check. Incomplete month and narrow specifications; not a sector contract forecast.",
-      "source": "InSpectrum via Bloomberg; tracker calculation, 29 Oct 2026",
+      "source": "InSpectrum via Bloomberg; tracker calculation, 30 Oct 2026",
       "refs": [
         "spot"
       ]
@@ -84,15 +84,15 @@
       ]
     },
     {
-      "signal": "Kioxia latest verified actual ASP",
-      "date": "Calendar Q2 2026 = FY26 Q1; call 31 Jul; checked 28 Oct",
+      "signal": "Kioxia Q3 released; numeric ASP verification pending",
+      "date": "30 Oct 2026; calendar Q3 = FY26 Q2",
       "dram": "Not applicable.",
-      "nand": "+70% QoQ, both like-for-like and blended, per management transcript.",
-      "weight": "Historical backdrop, not Q4. Transcript passage does not explicitly identify ASP currency: no USD comparison inferred. FY26 Q2 results scheduled 30 Oct, 18:45 JST.",
-      "source": "Kioxia management call 31 Jul and official IR news",
+      "nand": "Official filing confirms significant Q3 ASP increases; AI/data-center demand stronger than smartphone/PC demand.",
+      "weight": "Q4 revenue guided broadly flat, partly due to FX. Revenue is not an ASP guide. Latest verified numerical ASP remains calendar Q2 +70% like-for-like/blended; currency not explicit in that transcript passage.",
+      "source": "Kioxia 30 Oct filing pp2-3 and p7; 31 Jul transcript",
       "refs": [
-        "kioxia-call",
-        "kioxia-calendar"
+        "kioxia-q3",
+        "kioxia-call"
       ]
     }
   ],
@@ -167,6 +167,26 @@
       "refs": [
         "ms-samsung29"
       ]
+    },
+    {
+      "name": "BofA · Simon Woo",
+      "byline": "30 Oct 2026",
+      "dram": "Constructive memory outlook; sees stronger Hynix DRAM momentum than Samsung.",
+      "nand": "Enterprise/AI NAND mix supports growth.",
+      "assessment": "Company mix and 2027-28 forecast revisions are not realized Q4 sector prices.",
+      "refs": [
+        "bofa-oct30"
+      ]
+    },
+    {
+      "name": "Jefferies · Edison Lee / expert Harold Lee",
+      "byline": "Expert recap 30 Oct 2026; relayed by William Beavington",
+      "dram": "Tightness persists, but price increases normalize; +20-30% through 2027 is a different horizon.",
+      "nand": "Potential supply-demand balance 2Q27-2H27; enterprise SSD stronger than consumer NAND.",
+      "assessment": "Consistent with the existing selective view. Recap is not a fresh independent price observation or Q4 numerical forecast.",
+      "refs": [
+        "jef-oct30"
+      ]
     }
   ],
   "watch": [
@@ -179,8 +199,8 @@
     },
     {
       "product": "NAND",
-      "status": "Kioxia 30 Oct pending; Samsung Q3 supports backlog, but BOK / spot breadth still matters",
-      "strengthen": "BOK flash returns to growth, 512Gb / 1Tb spot joins the 256Gb recovery, and enterprise SSD contract increases are confirmed. Broader participation would raise confidence. Kioxia like-for-like ASP / forward pricing commentary on 30 Oct matters more than revenue or blended mix alone.",
+      "status": "Kioxia Q3 filing released 30 Oct; await numeric ASP / forward pricing details, October BOK and contract breadth",
+      "strengthen": "BOK flash returns to growth, 512Gb / 1Tb spot joins the 256Gb recovery, and enterprise SSD contract increases are confirmed. Broader participation would raise confidence. Kioxia like-for-like ASP and forward pricing detail matter more than flat revenue guidance or blended mix alone.",
       "weaken": "Continued weakness in 512Gb / 1Tb spot together with another BOK flash decline and weak contract realizations would reduce confidence. A lower Q4 sector contract average would overturn the up call.",
       "alone": "Strong broad semiconductor export value or a rise in 256Gb spot alone does not confirm the sector range."
     }
@@ -200,6 +220,10 @@
     {
       "date": "2026-10-29T09:14:37-03:00",
       "change": "Samsung 29 Oct official presentation confirms Q3 price increases across applications and Q4 AI/server demand. Jefferies call notes relay Q3 DRAM +20% / NAND high teens; official numeric script unavailable (404), so these remain secondary evidence outside regression targets. JPM flags faster supply but continued shortage; MS repeats moderating price hikes. Direction and confidence unchanged. Refreshed quantitative signals checked separately. October29 spot retains the same split: DDR5 up, DDR4 and larger-density NAND down. All seven BOK series still end September; no October DRAM/flash observation. No new candidate alert."
+    },
+    {
+      "date": "2026-10-30T09:04:30-03:00",
+      "change": "Kioxia 30 Oct primary filing confirms significant Q3 ASP increases and AI/data-center demand, with weaker smartphone/PC demand. Q4 revenue guidance is broadly flat, partly reflecting FX; this is not an ASP guide. Numeric Q3 ASP remains unverified. BofA/Simon Woo 30 Oct remains constructive, while Jefferies/Edison Lee expert recap expects pricing increases to normalize and NAND balance earlier than DRAM in 2027. DRAM Up / Moderate-high and NAND Up selectively / Moderate remain unchanged; neither broad Q4 NAND acceleration nor a precise company ASP forecast is established. October30 spot preserves the same split across 19 observations: DDR5/256Gb up, DDR4/512Gb/1Tb down. BOK DRAM and flash still end September; contracts and Korean customs unchanged. No new alert trigger."
     }
   ],
   "sources": [
@@ -211,7 +235,7 @@
     },
     {
       "id": "spot",
-      "label": "InSpectrum / Bloomberg · through 29 Oct 2026",
+      "label": "InSpectrum / Bloomberg · through 30 Oct 2026",
       "url": "#sources",
       "detail": "Daily fixed-specification observations; partial October mean versus complete September mean. See coverage and embedded source data."
     },
@@ -283,9 +307,9 @@
     },
     {
       "id": "kioxia-calendar",
-      "label": "Kioxia official IR news · checked 28 Oct 2026",
+      "label": "Kioxia official IR news · checked 30 Oct 2026",
       "url": "https://www.kioxia-holdings.com/en-jp/ir/news.html",
-      "detail": "Latest released period ends June30; FY26 Q2 scheduled30 Oct18:45 JST."
+      "detail": "FY26 Q2 filing released 30 Oct. Numeric ASP presentation / transcript verification pending."
     },
     {
       "id": "samsung-q3",
@@ -310,6 +334,24 @@
       "label": "Morgan Stanley · Samsung post-results · Shawn Kim / Ryan Kim / Cindy Huang / Kathy Zhu · 29 Oct 2026",
       "url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWi%2FxtjAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
       "detail": "Available email body reviewed; linked full broker report not reviewed. Reinforces restraint on magnitude. Samsung result corroborates the existing up call, but is Q3 evidence; no confidence upgrade."
+    },
+    {
+      "id": "kioxia-q3",
+      "label": "Kioxia official FY26 Q2 results · 30 Oct 2026",
+      "url": "https://ssl4.eir-parts.net/doc/285A/tdnet/2902678/00.pdf",
+      "detail": "Printed pp2-3: demand split and significant Q3 ASP increases. Printed p7: Q4 revenue JPY2,500bn, +0.8% QoQ, with FX headwind. No numerical ASP growth in reviewed filing. Presentation dynamic feed inaccessible; numeric ASP verification pending."
+    },
+    {
+      "id": "bofa-oct30",
+      "label": "BofA · Simon Woo · 30 Oct 2026",
+      "url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWjo%2BPlAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "detail": "Available email body reviewed; linked full report and replay not reviewed. Company mix and 2027-28 forecast revisions are not realized Q4 sector prices."
+    },
+    {
+      "id": "jef-oct30",
+      "label": "Jefferies · Edison Lee / expert Harold Lee · Expert recap 30 Oct 2026; relayed by William Beavington",
+      "url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWjo%2BQOAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "detail": "Available email body reviewed; linked full report and replay not reviewed. Consistent with the existing selective view. Recap is not a fresh independent price observation or Q4 numerical forecast."
     }
   ],
   "historical_stats": [
@@ -1948,73 +1990,73 @@
         "key": "ISPPDR37 Index",
         "label": "DDR4 8Gb 3200 spot",
         "month": "2026-10",
-        "through": "2026-10-29",
-        "observations": 18,
-        "mean_value": 32.65222222222222,
-        "last_value": 32.18,
-        "mean_vs_previous_month_pct": -3.0098402749930364,
-        "last_vs_previous_month_end_pct": -1.5299877600979173
+        "through": "2026-10-30",
+        "observations": 19,
+        "mean_value": 32.61578947368421,
+        "last_value": 31.96,
+        "mean_vs_previous_month_pct": -3.1180601099517036,
+        "last_vs_previous_month_end_pct": -2.2031823745410017
       },
       {
         "key": "ISPPDR47 Index",
         "label": "DDR5 16Gb 4800/5600 spot",
         "month": "2026-10",
-        "through": "2026-10-29",
-        "observations": 18,
-        "mean_value": 50.81888888888889,
-        "last_value": 52.58,
-        "mean_vs_previous_month_pct": 3.0788196768602782,
-        "last_vs_previous_month_end_pct": 6.05082694634933
+        "through": "2026-10-30",
+        "observations": 19,
+        "mean_value": 50.927368421052634,
+        "last_value": 52.88,
+        "mean_vs_previous_month_pct": 3.298854832665943,
+        "last_vs_previous_month_end_pct": 6.655909640984281
       },
       {
         "key": "ISPPN256 Index",
         "label": "TLC 256Gb spot",
         "month": "2026-10",
-        "through": "2026-10-29",
-        "observations": 18,
-        "mean_value": 15.302222222222223,
+        "through": "2026-10-30",
+        "observations": 19,
+        "mean_value": 15.311578947368421,
         "last_value": 15.48,
-        "mean_vs_previous_month_pct": 7.929342800269579,
+        "mean_vs_previous_month_pct": 7.995337476149111,
         "last_vs_previous_month_end_pct": 2.652519893899208
       },
       {
         "key": "ISPPN512 Index",
         "label": "TLC 512Gb spot",
         "month": "2026-10",
-        "through": "2026-10-29",
-        "observations": 18,
-        "mean_value": 19.54,
+        "through": "2026-10-30",
+        "observations": 19,
+        "mean_value": 19.509473684210526,
         "last_value": 18.96,
-        "mean_vs_previous_month_pct": -6.0373638527566165,
+        "mean_vs_previous_month_pct": -6.184156744437375,
         "last_vs_previous_month_end_pct": -6.462752836704489
       },
       {
         "key": "ISPPND1T Index",
         "label": "TLC 1Tb spot",
         "month": "2026-10",
-        "through": "2026-10-29",
-        "observations": 18,
-        "mean_value": 29.56888888888889,
+        "through": "2026-10-30",
+        "observations": 19,
+        "mean_value": 29.534736842105264,
         "last_value": 28.92,
-        "mean_vs_previous_month_pct": -4.744007574089881,
+        "mean_vs_previous_month_pct": -4.854028181288705,
         "last_vs_previous_month_end_pct": -3.8883349950149526
       },
       {
         "key": "ISPPDR29 Index",
         "label": "Legacy DDR3 4Gb spot",
         "month": "2026-10",
-        "through": "2026-10-29",
-        "observations": 18,
-        "mean_value": 12.21111111111111,
-        "last_value": 12.38,
-        "mean_vs_previous_month_pct": 2.8607262023426783,
-        "last_vs_previous_month_end_pct": 1.4754098360655776
+        "through": "2026-10-30",
+        "observations": 19,
+        "mean_value": 12.224210526315789,
+        "last_value": 12.46,
+        "mean_vs_previous_month_pct": 2.971069589485653,
+        "last_vs_previous_month_end_pct": 2.1311475409836245
       }
     ],
     "source_dates": {
-      "KCS": "2026-10-29T09:05:32-03:00",
-      "BOK": "2026-10-29T09:08:35-03:00",
-      "InSpectrum": "2026-10-29T09:12:41-03:00"
+      "KCS": "2026-10-30T08:55:48-03:00",
+      "BOK": "2026-10-30T08:58:11-03:00",
+      "InSpectrum": "2026-10-30T09:02:08-03:00"
     }
   },
   "input_hashes": {
@@ -2026,7 +2068,7 @@
     "data/street_calls.json": "e6f37fbfa8c216a68ef92b7ab824bfa58035b3f449ea3ce7eba24e98e66b5802",
     "analyze_dashboard.py": "e644508e4b2f69f933c71c0d25ac3585536394b2b338b51e4d45505710b3444e"
   },
-  "reviewed_evidence": "f48cbd4911b616c6cf3b0894f79f94beea4c09dbefa34749978fba959d957c10",
-  "review_note": "Samsung 29 Oct official presentation confirms Q3 price increases across applications and Q4 AI/server demand. Jefferies call notes relay Q3 DRAM +20% / NAND high teens; official numeric script unavailable (404), so these remain secondary evidence outside regression targets. JPM flags faster supply but continued shortage; MS repeats moderating price hikes. Direction and confidence unchanged. Refreshed quantitative signals checked separately. October29 spot retains the same split: DDR5 up, DDR4 and larger-density NAND down. All seven BOK series still end September; no October DRAM/flash observation. No new candidate alert.",
-  "reviewed_at": "2026-10-29T09:14:37-03:00"
+  "reviewed_evidence": "075658b57682c0660677803b47bbcc642cd41588030d9db2e48333a64146a334",
+  "review_note": "Kioxia 30 Oct primary filing confirms significant Q3 ASP increases and AI/data-center demand, with weaker smartphone/PC demand. Q4 revenue guidance is broadly flat, partly reflecting FX; this is not an ASP guide. Numeric Q3 ASP remains unverified. BofA/Simon Woo 30 Oct remains constructive, while Jefferies/Edison Lee expert recap expects pricing increases to normalize and NAND balance earlier than DRAM in 2027. DRAM Up / Moderate-high and NAND Up selectively / Moderate remain unchanged; neither broad Q4 NAND acceleration nor a precise company ASP forecast is established. October30 spot preserves the same split across 19 observations: DDR5/256Gb up, DDR4/512Gb/1Tb down. BOK DRAM and flash still end September; contracts and Korean customs unchanged. No new alert trigger.",
+  "reviewed_at": "2026-10-30T09:04:30-03:00"
 }

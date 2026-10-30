@@ -3,17 +3,17 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\MSFT` (filings + transcripts) · `_equity_calls` · `_briefings\by-ticker\MSFT.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-29 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-10-30 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $356.1bn | $432.2bn |
-| Gross profit | $237.9bn | $283.1bn |
+| Revenue | $356.3bn | $432.2bn |
+| Gross profit | $238.0bn | $283.1bn |
 | Gross margin | 66.8% | 65.5% |
-| EBITDA | $214.7bn | $261.9bn |
-| EPS | $17.88 | $21.61 |
-| Capex | $154.3bn | $215.0bn |
-| OCF (≈EBITDA) | $214.7bn | $261.9bn |
+| EBITDA | $214.3bn | $264.3bn |
+| EPS | $17.87 | $21.65 |
+| Capex | $154.0bn | $217.8bn |
+| OCF (≈EBITDA) | $214.3bn | $264.3bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

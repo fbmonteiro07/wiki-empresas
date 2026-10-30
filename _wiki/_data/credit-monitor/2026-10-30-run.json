@@ -1,0 +1,47 @@
+{
+  "run_at": "2026-10-30T09:25:52",
+  "subject": "AI Credit & Funding | Weekly summary | 2026-10-30",
+  "status": "partial",
+  "errors": [
+    "Issuer board XAI_12.5_2030: stale observation 2026-03-04.",
+    "Official workbook refresh partial: 4 instrument(s) returned no values \u2014 previous values kept; unavailable instruments: BL482176 Corp, BL563698 Corp, NBIS 2 3/4 09/15/32 Corp, BL097034 Corp. Retained values are not fresh quotes.",
+    "Official workbook CRWV DDTL 1.0 03/2028: retained earlier value; individual observation date unavailable. Do not treat the overall refresh date as its quote date.",
+    "Official workbook CRWV DDTL 4.0 fixed 03/2032: retained earlier value; individual observation date unavailable. Do not treat the overall refresh date as its quote date.",
+    "Official workbook NBIS 2.75% cv Sep-2032: retained earlier value; individual observation date unavailable. Do not treat the overall refresh date as its quote date.",
+    "Official workbook SPCX revolver 2031: retained earlier value; individual observation date unavailable. Do not treat the overall refresh date as its quote date."
+  ],
+  "market_fetched_at": "2026-10-30T09:25:26",
+  "market_dates": {
+    "ok": true,
+    "issues": [],
+    "earliest": "2026-10-29",
+    "latest": "2026-10-29"
+  },
+  "research_asof": "2026-10-29",
+  "email_requested": true,
+  "body": "\\\\CAPSRV01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\_data\\credit-monitor\\exports\\2026-10-30-email.txt",
+  "attachment": "\\\\CAPSRV01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\_data\\credit-monitor\\exports\\2026-10-30-credit-monitor.html",
+  "input_sha256": {
+    "funding_deals.json": "d98b489c266cb03a65e6a050e840118e31c34d9ba3eb68232bbb3e02296a5a25",
+    "funding_market.json": "16ad394bb6640f2ba222509807116cf999ba06c35447aadd1712af1156bbeb0d",
+    "credit_watch.json": "5db3342467586754573ab7da0fbcaa4e5bc0c2318876b39640689cb494c0ab1d",
+    "credit_workbook.json": "f8c4a9ee6a03ffe91dbfe1c7e8cacff3fc0091d3380802a3495595788bec013e"
+  },
+  "email_delivery": {
+    "status": "sent_confirmed",
+    "subject": "AI Credit & Funding | Weekly summary | 2026-10-30",
+    "recipient": "felipe.monteiro@capstone.com.br",
+    "attachment": "\\\\capsrv01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\_data\\credit-monitor\\exports\\2026-10-30-credit-monitor.html",
+    "attachment_sha256": "ADF35F7750ADC3075A404E2FB87D62A979D16BA87DB98EA685929CAD934462C6",
+    "recorded_at": "2026-10-30T12:27:21.7946106Z",
+    "entry_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC0000000001090000C1A4BC1B9694F44D9FADFEFCFB028EAC000598E0813F0000",
+    "receipt_path": "\\\\CAPSRV01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\_data\\credit-monitor\\email-receipts\\975cd509f86c0c2e2f20ccb619edaf7d1f889b0eb150e624dfe91ac3b30ef216.json",
+    "verify_command_exit_code": 0
+  },
+  "validation_path": "\\\\CAPSRV01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\_data\\credit-monitor\\research-sources\\2026-10-30-validation.json",
+  "cds_mapping_correction": {
+    "source": "research-sources/2026-10-30-cds-mapping.json",
+    "prior_values": "research-history/2026-10-30T092216-cds-mapping-pre-edit",
+    "tests_passed": 16
+  }
+}

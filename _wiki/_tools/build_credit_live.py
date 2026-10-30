@@ -210,7 +210,9 @@ def build(wb):
     par = dbars([(b["ticker"], b["par_mn"], b) for b in sorted(proj, key=lambda b: (b["par_mn"] or 0)) if b.get("par_mn") is not None],
                 fmt=lambda v: f"{v:+,.0f}", sub=lambda b: f"{b['ticker']}: px {n(b['px'], 3)} on ${n(b['amt_mn'], 0)}mn → {n(b['par_pct'] * 100, 1)}% of face")
     cds_curve = curve(crwv_pts)
-    cds_bars = paired_bars([(c["name"].split()[0], c["spread_bp"], c.get("ms_desk_0824_bp")) for c in five])
+    cds_bars = paired_bars([(c["name"].replace(" CDS 5Y", ""), c["spread_bp"], c.get("ms_desk_0824_bp")) for c in five])
+    has_ms = any(c.get("ms_desk_0824_bp") is not None for c in five)
+    cds_title = "5Y CDS — now vs MS desk marks 24-Aug" if has_ms else "5Y CDS — current flat spreads"
 
     # equity heat tiles
     tiles = []
@@ -294,6 +296,8 @@ document.querySelectorAll('[data-tip]').forEach(el=>{el.addEventListener('mousem
     leg_div = f'<div class="legend"><span><i class="sw" style="background:{RED}"></i>wider / lower value</span><span><i class="sw" style="background:{BLUE}"></i>tighter / higher value</span></div>'
     leg_pk = f'<div class="legend"><span><i class="sw" style="background:{HY};border-radius:50%"></i>project bond OAS</span><span><i class="sw" style="background:{IG};border-radius:50%"></i>tenant / parent comp OAS</span><span>label = pickup (bond − comp), bp</span></div>'
     leg_cds = f'<div class="legend"><span><i class="sw" style="background:{HY}"></i>now (CDS_FLAT_SPREAD)</span><span><i class="sw" style="background:{IG}"></i>MS Credit Trading desk, 24-Aug-2026</span></div>'
+    if not has_ms:
+        leg_cds = f'<div class="legend"><span><i class="sw" style="background:{HY}"></i>CDS_FLAT_SPREAD</span><span>MS 24-Aug marks absent from the current workbook; comparisons unavailable.</span></div>'
     page = f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI Credit Live</title><meta name="description" content="Data-center project bonds, comps, CDS and the equity tape from the official AI_Credit_Live workbook, terminal view."><style>{css}</style></head><body>
@@ -307,11 +311,11 @@ document.querySelectorAll('[data-tip]').forEach(el=>{el.addEventListener('mousem
 <section class="panel"><div class="ph"><h2>OAS pickup vs tenant comparable, bp</h2><span class="n">negative = project bond tighter than the tenant's own bond</span></div>{leg_pk}{pk}</section>
 <section class="panel"><div class="ph"><h2>Principal vs par, $mn per issue</h2><span class="n">(px − 100)/100 × amount outstanding</span></div>{leg_div}{par}</section>
 <section class="panel"><div class="ph"><h2>CoreWeave CDS term structure, bp</h2><span class="n">CDS_FLAT_SPREAD · 1Y–10Y</span></div>{cds_curve}</section>
-<section class="panel"><div class="ph"><h2>5Y CDS — now vs MS desk marks 24-Aug</h2><span class="n">hyperscalers · vendors · ORCL · SPCX</span></div>{leg_cds}{cds_bars}</section>
+<section class="panel"><div class="ph"><h2>{cds_title}</h2><span class="n">hyperscalers · vendors · ORCL · SPCX</span></div>{leg_cds}{cds_bars}</section>
 <section class="panel wide"><div class="ph"><h2>Equity tape — issuers &amp; tenants, 1d %</h2><span class="n">tile intensity = size of the move · ▲ = volume ≥ 1.5× 30-day average</span></div><div class="eqgrid">{''.join(tiles)}</div></section>
 <section class="panel wide"><div class="ph"><h2>Monitor — project bonds &amp; comps</h2><span class="n">YTM red ≥ 10% · amber ≥ 8% · Δ15-Sep red ≥ +25bp · pickup blue = negative</span></div><div class="tscroll">{monitor}</div></section>
 <section class="panel wide"><div class="ph"><h2>Other instruments — vendor &amp; hyperscaler notes, neocloud converts / HY / loans, comparator bonds</h2><span class="n">{len(wb["other"])} instruments · snapshot ref {E(wb.get("snapshot_ref") or "—")}</span></div><div class="tscroll">{other}</div></section>
-<section class="panel"><div class="ph"><h2>CDS table</h2><span class="n">flat spreads, bp</span></div><div class="tscroll">{cds_tbl}</div></section>
+<section class="panel"><div class="ph"><h2>CDS table</h2><span class="n">flat spreads, bp</span></div><p class="src">{E(wb.get('notes', {}).get('cds', ''))}</p><div class="tscroll">{cds_tbl}</div></section>
 <section class="panel"><div class="ph"><h2>Reading this page</h2></div><p class="mut" style="font-size:11.5px;line-height:1.6">Price in points of par · yield = Bloomberg YLD_YTM_MID · spread = OAS_SPREAD_MID · CDS = CDS_FLAT_SPREAD (not the issuer board's PX_LAST series on the credit monitor) · Barclays 15-Sep and 3-Aug levels are YTW, so changes since then are approximate · converts and loans are measured against par for comparability only · composite quotes refresh about every 15 s and are not trades · equity relative volume = today / 30-day average. Values are re-pulled through the local Bloomberg terminal by the credit-alerts lane (09:30 / 18:30 São Paulo) and the Friday brief; the workbook itself is live when opened in Excel with the Bloomberg add-in. Every line of the deal dossiers (SEC filings, indentures, releases) is in the credit monitor's workbook section.</p></section>
 </main>
 <footer>Capstone · internal research · built {dt.datetime.now().isoformat(timespec="minutes")} from <code>_data/credit_workbook.json</code> (source: {E(wb.get("source", ""))}) · page: <code>_tools/build_credit_live.py</code></footer>
