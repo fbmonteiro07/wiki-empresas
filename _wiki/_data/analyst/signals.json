@@ -1,17 +1,17 @@
 {
   "asof": "2026-10-30",
-  "latest_reconciliation": "reconciliation-2026-10-29-inbox.md",
+  "latest_reconciliation": "reconciliation-2026-10-30-inbox.md",
   "book": {
     "asof": "2026-07-01",
     "seed": true,
     "positions": 8
   },
   "stats": {
-    "signals": 50,
-    "active": 50,
+    "signals": 51,
+    "active": 51,
     "high": 8,
     "belief_changes": 10,
-    "focus_names": 35
+    "focus_names": 36
   },
   "focus": [
     {
@@ -246,6 +246,19 @@
       "next_catalyst": "2026-11-12",
       "why": [
         "SPCX — 2026-11-12: OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.…"
+      ]
+    },
+    {
+      "ticker": "BKNG",
+      "focus_score": 49,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Consumer / Internet / Other",
+      "thesis": "World's #1 OTA; binary debate on agentic LLMs (TAM expander vs disintermediation).",
+      "next_catalyst": "2026-11-03",
+      "why": [
+        "BKNG — 2026-11-03: THE 3Q26 PRINT, AND THE BARS ARE NOW EXPLICIT. ① 3Q room nights: guide +3-5%; consensus…"
       ]
     },
     {
@@ -584,7 +597,7 @@
       "impact": "high",
       "urgency": "immediate",
       "confidence": "high",
-      "why_now": "verification (transcription QA): Nowak Intra-quarter block — garble rewritten in glossary form, ex-FX [transcribed \"XFX\"]. Search 10%/8%/8-11, SpaceX $900M+/month, $0.20/qtr, 2Q roll-off, capex $375/$400, 19x/16x and the ranking all match the transcript; the $2.7bn-pre-tax and P/E cross-checks stay labelled as Capstone arithmetic.",
+      "why_now": "verifier correction: the All-In Sinal insert had split the earlier 10-Q-fold Sinal line in two, moving its Cloud-RPO/Crux, TPU-repurchase, Capex and Síntese clauses under the All-In heading; restored them to the 10-Q line verbatim. Also unquoted \"compute rental vs model builders\" (a paraphrase, not a transcript quote). All other host numbers (Cloud $30.7B, OI 3.5→11, Search 56→63, Services OI 33.5→39, 21x, BBG snapshot −11.7%/−$445bn and −13.2%/−$510bn) re-checked and tie.",
       "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
       "action": "Re-grade the GOOG thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
       "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
@@ -643,7 +656,7 @@
       "evidence_paths": [
         "GOOG.md"
       ],
-      "evidence_anchor": "verification (transcription QA): Nowak Intra-quarter block — garble rewritten in glossary form, ex-FX [transcribed \"XFX\"]. Search 10%/8%/8-11, SpaceX $900M+/month, $0.20/qtr, 2Q roll-off, capex $375/$400, 19x/16x and the ranking all match the transcript; the $2.7bn-pre-tax and P/E cross-checks stay labelled as Capstone arithmetic.",
+      "evidence_anchor": "verifier correction: the All-In Sinal insert had split the earlier 10-Q-fold Sinal line in two, moving its Cloud-RPO/Crux, TPU-repurchase, Capex and Síntese clauses under the All-In heading; restored them to the 10-Q line verbatim. Also unquoted \"compute rental vs model builders\" (a paraphrase, not a transcript quote). All other host numbers (Cloud $30.7B, OI 3.5→11, Search 56→63, Services OI 33.5→39, 21x, BBG snapshot −11.7%/−$445bn and −13.2%/−$510bn) re-checked and tie.",
       "origin": "belief_diff",
       "feedback": "",
       "feedback_note": "",
@@ -2044,6 +2057,38 @@
         "SPCX.md"
       ],
       "evidence_anchor": "🆕🔴🔴 2026-11-12 — OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset. OpenAI's own post: \"We're ending our partnership with Cursor following its acquisit",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "cata-3309c26d3f2a",
+      "asof": "2026-10-30",
+      "source_date": "2026-11-03",
+      "event_date": "2026-11-03",
+      "type": "catalyst",
+      "priority": "medium",
+      "score": 49,
+      "title": "BKNG — 2026-11-03: THE 3Q26 PRINT, AND THE BARS ARE NOW EXPLICIT. ① 3Q room nights: guide +3-5%; consensus…",
+      "tickers": [
+        "BKNG"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "this week",
+      "confidence": "medium",
+      "why_now": "🆕🔴 2026-11-03 (TUESDAY, AFTER THE CLOSE; CALL 4:30PM ET) — THE 3Q26 PRINT, AND THE BARS ARE NOW EXPLICIT. ① 3Q room nights: guide +3-5%; consensus ~339m (+5%) (Bloomberg via Bernstein",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [],
+      "source": "BKNG page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "BKNG.md"
+      ],
+      "evidence_anchor": "🆕🔴 2026-11-03 (TUESDAY, AFTER THE CLOSE; CALL 4:30PM ET) — THE 3Q26 PRINT, AND THE BARS ARE NOW EXPLICIT. ① 3Q room nights: guide +3-5%; consensus ~339m (+5%) (Bloomberg via Bernstein",
       "origin": "catalyst_calendar",
       "feedback": "",
       "feedback_note": "",

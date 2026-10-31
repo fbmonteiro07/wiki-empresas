@@ -1,4 +1,4 @@
-== SENTIMENT MONITOR · 2026-10-30 ==
+== SENTIMENT MONITOR · 2026-10-31 ==
 
 **Market mood.** CNN Fear & Greed is at **26 (fear)** — up from 17 a week ago and 30 a month ago (fear).
 

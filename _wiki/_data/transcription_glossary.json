@@ -2,6 +2,106 @@
  "_about": "Hand-edited ledger of machine-transcription garbles (Notion AI, Bloomberg ASR, auto-translation) seen in the archive, with the correct reading. Used by E:\\.claude\\scripts\\transcript_qa.py (source-file scan, page-diff scan) and by ingest_notion_meetings.py (writes a 'Transcription QA' block into every archived Notion file). Keys are matched with word boundaries, case-sensitive unless 'ci' is true. 'keep_when' = regex contexts (same line, ~80 chars around the hit) where the token is legitimate and must NOT be flagged. Add an entry the first time a garble is caught; never delete one. Standing rule (Felipe, 2026-09-28): ALWAYS double-check transcript content — acronyms, names, units, numbers — before it travels to a page.",
  "_updated": "2026-10-30",
  "terms": {
+  "Hixle AI": {
+   "correct": "Higgsfield (AI video startup)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR of Higgsfield in the minister's intro ('our first AI unicorn, the Hixle AI'); co-founder Alex Mashrabov confirms the company.",
+   "first_seen": "2026-10-29 (Astana Hub re-upload of the 2026-10-23 Jensen Huang x Zhaslan Madiyev fireside, YouTube ASR)"
+  },
+  "Hexel": {
+   "correct": "Higgsfield (AI video startup)",
+   "domain": "names",
+   "ci": true,
+   "keep_when": [
+    "Hexel Corp",
+    "hexel(?:s)? (?:in|per) "
+   ],
+   "rule": "YouTube ASR of Higgsfield ('Nvidia has invested into Hexel AI'); the same episode renders it 'Higgsfield' elsewhere.",
+   "first_seen": "2026-10-29 (Astana Hub re-upload of the 2026-10-23 Jensen Huang x Zhaslan Madiyev fireside, YouTube ASR)"
+  },
+  "1 gigabyte planned": {
+   "correct": "1 gigawatt planned (data-center campus; basis unstated)",
+   "domain": "units",
+   "ci": true,
+   "rule": "ASR hears 'gigawatt' as 'gigabyte' in a data-center capacity context ('the DC Valley has 1 gigabyte planned'). Only flag in power/campus context.",
+   "first_seen": "2026-10-29 (Astana Hub re-upload of the 2026-10-23 Jensen Huang x Zhaslan Madiyev fireside, YouTube ASR)"
+  },
+  "Kazak ALEM": {
+   "correct": "KazLLM (Kazakh national LLM) — reading inferred",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of 'KazLLM' ('The creation of a Kazak ALEM Kazakh Alem is sensible'); the same episode says 'Kaz LLM' earlier. Not to be confused with alem.ai (the venue).",
+   "first_seen": "2026-10-29 (Astana Hub re-upload of the 2026-10-23 Jensen Huang x Zhaslan Madiyev fireside, YouTube ASR)"
+  },
+  "LMAI": {
+   "correct": "alem.ai (International Center for AI, Astana)",
+   "domain": "names",
+   "rule": "ASR of the venue name ('the youth that we have here at LMAI'); show notes spell it alem.ai.",
+   "first_seen": "2026-10-29 (Astana Hub re-upload of the 2026-10-23 Jensen Huang x Zhaslan Madiyev fireside, YouTube ASR)"
+  },
+  "open mono technology": {
+   "correct": "open model technology",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR of 'open model' ('take open-source technology, open mono technology, apply it to your language').",
+   "first_seen": "2026-10-29 (Astana Hub re-upload of the 2026-10-23 Jensen Huang x Zhaslan Madiyev fireside, YouTube ASR)"
+  },
+  "Khan Festival": {
+   "correct": "Cannes Festival (reading inferred)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of 'Cannes' in 'the home of the Khan Festival of AI films'.",
+   "first_seen": "2026-10-29 (Astana Hub re-upload of the 2026-10-23 Jensen Huang x Zhaslan Madiyev fireside, YouTube ASR)"
+  },
+  "GoGo": {
+   "correct": "CoCo (Snowflake Cortex Code, agentic coding harness)",
+   "domain": "products",
+   "rule": "'products like GoGo and GoWork' = Snowflake's CoCo and CoWork.",
+   "first_seen": "2026-10-30 (Unicorn Bakery, Sridhar Ramaswamy / Snowflake CEO episode 2026-10-29, YouTube ASR)"
+  },
+  "GoWork": {
+   "correct": "CoWork (Snowflake Intelligence business-user agent surface)",
+   "domain": "products",
+   "rule": "Paired with 'GoGo' = CoCo; Snowflake's CoWork.",
+   "first_seen": "2026-10-30 (Unicorn Bakery, Sridhar Ramaswamy / Snowflake CEO episode 2026-10-29, YouTube ASR)"
+  },
+  "Cocoa": {
+   "correct": "CoCo (Snowflake Cortex Code)",
+   "domain": "products",
+   "rule": "'Cocoa, which is our coding agent' / 'our data coding agent that ships with Snowflake' = CoCo.",
+   "keep_when": [
+    "cocoa (bean|price|butter|futures|powder|crop)"
+   ],
+   "first_seen": "2026-10-30 (Unicorn Bakery, Sridhar Ramaswamy / Snowflake CEO episode 2026-10-29, YouTube ASR)"
+  },
+  "Cloud Code": {
+   "correct": "Claude Code (Anthropic coding agent)",
+   "domain": "products",
+   "rule": "'harness products like Cloud Code or Codex' = Claude Code. Not Google's 'Cloud Code' IDE plugin.",
+   "keep_when": [
+    "Google Cloud Code"
+   ],
+   "first_seen": "2026-10-30 (Unicorn Bakery, Sridhar Ramaswamy / Snowflake CEO episode 2026-10-29, YouTube ASR)"
+  },
+  "Niva": {
+   "correct": "Neeva (Ramaswamy's search start-up, acquired by Snowflake 2023)",
+   "domain": "names",
+   "rule": "'You sold Niva to Snowflake' = Neeva.",
+   "first_seen": "2026-10-30 (Unicorn Bakery, Sridhar Ramaswamy / Snowflake CEO episode 2026-10-29, YouTube ASR)"
+  },
+  "Minua": {
+   "correct": "Minoa (podcast sponsor, value-selling software)",
+   "domain": "names",
+   "rule": "Sponsor read; also rendered 'Minu'. Not market-relevant.",
+   "first_seen": "2026-10-30 (Unicorn Bakery, Sridhar Ramaswamy / Snowflake CEO episode 2026-10-29, YouTube ASR)"
+  },
+  "or hang run rate": {
+   "correct": "overhang run rate",
+   "domain": "names",
+   "rule": "Planning concept: next-year cost already locked in by this year's hiring at the year-end run rate.",
+   "first_seen": "2026-10-30 (Unicorn Bakery, Sridhar Ramaswamy / Snowflake CEO episode 2026-10-29, YouTube ASR)"
+  },
   "LayerScale": {
    "correct": "Layerscape (NXP processor family)",
    "domain": "products",
@@ -1500,6 +1600,8 @@
    "domain": "memory",
    "rule": "ASR of 'bits'; keep the word in auction / bid-ask / order-book contexts.",
    "keep_when": [
+    "fixed[- ]price bids?",
+    "FDE|frontier engineering|outcome",
     "auction",
     "bid-ask",
     "bid/ask",
@@ -5805,6 +5907,133 @@
    "rule": "ASR of Cisco President/CPO Jeetu Patel's name.",
    "keep_when": "never",
    "first_seen": "2026-10-29 (A Bit Personal with Jodi Shelton, Jeetu Patel episode, YouTube ASR)"
+  },
+  "Ant N": {
+   "correct": "ANT (Anthropic's proposed Nasdaq symbol)",
+   "domain": "terms",
+   "rule": "YouTube ASR of 'the ticker will be ANT' (S-1: Nasdaq Global Select, symbol 'ANT').",
+   "first_seen": "2026-10-30 (All-In 'Anthropic S-1 Shocker, Greatest Business Ever? Google's $500B Wipeout', 2026-10-30, YouTube ASR)"
+  },
+  "Krishna Raalo": {
+   "correct": "Krishna Rao (Anthropic CFO)",
+   "domain": "names",
+   "rule": "YouTube ASR of Krishna Rao.",
+   "first_seen": "2026-10-30 (All-In 'Anthropic S-1 Shocker, Greatest Business Ever? Google's $500B Wipeout', 2026-10-30, YouTube ASR)"
+  },
+  "Victory auction": {
+   "correct": "Vickrey (second-price) auction",
+   "domain": "terms",
+   "rule": "ASR of 'Vickrey auction' in the Google ad-auction discussion; also bare 'Victory' near 'auction'.",
+   "ci": true,
+   "first_seen": "2026-10-30 (All-In 'Anthropic S-1 Shocker, Greatest Business Ever? Google's $500B Wipeout', 2026-10-30, YouTube ASR)"
+  },
+  "Jebans": {
+   "correct": "Jevons (paradox)",
+   "domain": "terms",
+   "rule": "ASR of Jevons paradox; also 'Jevans'.",
+   "ci": true,
+   "first_seen": "2026-10-30 (All-In 'Anthropic S-1 Shocker, Greatest Business Ever? Google's $500B Wipeout', 2026-10-30, YouTube ASR)"
+  },
+  "Jevans": {
+   "correct": "Jevons (paradox)",
+   "domain": "terms",
+   "rule": "see 'Jebans'",
+   "ci": true,
+   "first_seen": "2026-10-30 (All-In 'Anthropic S-1 Shocker, Greatest Business Ever? Google's $500B Wipeout', 2026-10-30, YouTube ASR)"
+  },
+  "Whimo": {
+   "correct": "Waymo",
+   "domain": "names",
+   "rule": "ASR of Waymo; plural 'Whimos'.",
+   "ci": true,
+   "first_seen": "2026-10-30 (All-In 'Anthropic S-1 Shocker, Greatest Business Ever? Google's $500B Wipeout', 2026-10-30, YouTube ASR)"
+  },
+  "Whimos": {
+   "correct": "Waymo(s)",
+   "domain": "names",
+   "rule": "see 'Whimo'",
+   "ci": true,
+   "first_seen": "2026-10-30 (All-In 'Anthropic S-1 Shocker, Greatest Business Ever? Google's $500B Wipeout', 2026-10-30, YouTube ASR)"
+  },
+  "Poly Market": {
+   "correct": "Polymarket",
+   "domain": "names",
+   "rule": "ASR splits Polymarket into two words.",
+   "ci": true,
+   "first_seen": "2026-10-30 (All-In 'Anthropic S-1 Shocker, Greatest Business Ever? Google's $500B Wipeout', 2026-10-30, YouTube ASR)"
+  },
+  "Demos at Google": {
+   "correct": "Demis (Hassabis) at Google",
+   "domain": "names",
+   "rule": "ASR of Demis in 'How do you keep Demis at Google?'.",
+   "first_seen": "2026-10-30 (All-In 'Anthropic S-1 Shocker, Greatest Business Ever? Google's $500B Wipeout', 2026-10-30, YouTube ASR)"
+  },
+  "Fed GDP now": {
+   "correct": "Atlanta Fed GDPNow",
+   "domain": "terms",
+   "rule": "ASR of the GDPNow nowcast.",
+   "ci": true,
+   "first_seen": "2026-10-30 (All-In 'Anthropic S-1 Shocker, Greatest Business Ever? Google's $500B Wipeout', 2026-10-30, YouTube ASR)"
+  },
+  "Dustin Mosuit": {
+   "correct": "Dustin Moskovitz",
+   "domain": "names",
+   "rule": "ASR of Moskovitz.",
+   "first_seen": "2026-10-30 (All-In 'Anthropic S-1 Shocker, Greatest Business Ever? Google's $500B Wipeout', 2026-10-30, YouTube ASR)"
+  },
+  "Saxs": {
+   "correct": "Sacks (David Sacks, All-In host)",
+   "domain": "names",
+   "rule": "ASR of Sacks; also 'Sachs' in All-In transcripts (do NOT flag Goldman Sachs).",
+   "first_seen": "2026-10-30 (All-In 'Anthropic S-1 Shocker, Greatest Business Ever? Google's $500B Wipeout', 2026-10-30, YouTube ASR)"
+  },
+  "Chimat": {
+   "correct": "Chamath (Palihapitiya, All-In host)",
+   "domain": "names",
+   "rule": "ASR 'Chimat Poly Hapia' = Chamath Palihapitiya.",
+   "first_seen": "2026-10-30 (All-In 'Anthropic S-1 Shocker, Greatest Business Ever? Google's $500B Wipeout', 2026-10-30, YouTube ASR)"
+  },
+  "Poly Hapia": {
+   "correct": "Palihapitiya (Chamath)",
+   "domain": "names",
+   "rule": "see 'Chimat'",
+   "first_seen": "2026-10-30 (All-In 'Anthropic S-1 Shocker, Greatest Business Ever? Google's $500B Wipeout', 2026-10-30, YouTube ASR)"
+  },
+  "Chimoth": {
+   "correct": "Chamath (Palihapitiya, All-In host)",
+   "domain": "names",
+   "rule": "ASR of Chamath; also 'Shimoth', 'Chimamath', 'Chimoff'.",
+   "first_seen": "2026-10-30 (All-In 'Anthropic S-1 Shocker, Greatest Business Ever? Google's $500B Wipeout', 2026-10-30, YouTube ASR)"
+  },
+  "Shimoth": {
+   "correct": "Chamath (Palihapitiya, All-In host)",
+   "domain": "names",
+   "rule": "see 'Chimoth'",
+   "first_seen": "2026-10-30 (All-In 'Anthropic S-1 Shocker, Greatest Business Ever? Google's $500B Wipeout', 2026-10-30, YouTube ASR)"
+  },
+  "Chimamath": {
+   "correct": "Chamath (Palihapitiya, All-In host)",
+   "domain": "names",
+   "rule": "see 'Chimoth'",
+   "first_seen": "2026-10-30 (All-In 'Anthropic S-1 Shocker, Greatest Business Ever? Google's $500B Wipeout', 2026-10-30, YouTube ASR)"
+  },
+  "Chimoff": {
+   "correct": "Chamath (Palihapitiya, All-In host)",
+   "domain": "names",
+   "rule": "see 'Chimoth'",
+   "first_seen": "2026-10-30 (All-In 'Anthropic S-1 Shocker, Greatest Business Ever? Google's $500B Wipeout', 2026-10-30, YouTube ASR)"
+  },
+  "Freedberg": {
+   "correct": "Friedberg (David Friedberg, All-In host)",
+   "domain": "names",
+   "rule": "ASR of Friedberg; see 'Freeberg'.",
+   "first_seen": "2026-10-30 (All-In 'Anthropic S-1 Shocker, Greatest Business Ever? Google's $500B Wipeout', 2026-10-30, YouTube ASR)"
+  },
+  "OpenAAI": {
+   "correct": "OpenAI",
+   "domain": "names",
+   "rule": "ASR; see 'Open AAI'.",
+   "first_seen": "2026-10-30 (All-In 'Anthropic S-1 Shocker, Greatest Business Ever? Google's $500B Wipeout', 2026-10-30, YouTube ASR)"
   }
  },
  "summary_traps": [

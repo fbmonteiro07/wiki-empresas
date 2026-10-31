@@ -2,7 +2,7 @@
 
 _Generated 2026-10-30 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (51)
+## 📅 Upcoming (52)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
@@ -15,6 +15,7 @@ _Generated 2026-10-30 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-11-02 | GEV | 🆕 **GS-hosted GEV IR meeting, New York — 2026-11-02** (per the GS Industrials daily, logged pre-print): first post-print management access. |
 | 2026-11-02 | KIOXIA | 🆕 **2026-11-02 (Mon) 9am JST — BofA post-results "doko shuzai" with KIOXIA on FY3/27 2Q results** (BofA · Mikio Hirakawa, via BofA one-liners, 2026-10-01) — dates the Sep-quarter print to before 11-02 |
 | 2026-11-02 | STX | 🆕 **2026-10-08 (12pm ET, NYC) — Morgan Stanley Global Hardware & Optical lunch (Andy Meng, Howard Kao, Derrick Yang, Meta Marshall, Erik Woodring) covering STX/[[WDC]] among others; 2026-11-02/03 — MS |
+| 2026-11-03 | BKNG | **🆕🔴 2026-11-03 (TUESDAY, AFTER THE CLOSE; CALL 4:30PM ET) — THE 3Q26 PRINT, AND THE BARS ARE NOW EXPLICIT.** ① **3Q room nights:** guide **+3-5%**; consensus **~339m (+5%)** (Bloomberg via Bernstein  |
 | 2026-11-03 | INTC | 🆕 **2026-10-01: Susquehanna "The AI Arms Race" session (Christopher Rolland; AMD, INTC, MRVL, NVDA, AVGO, ARM, QCOM) and 2026-11-03: Intel dinner NDR with CFO and IR, London** (Susquehanna index 09-30 |
 | 2026-11-03 | SMCI | **✅ RESOLVED (preliminary) 2026-10-20 — F1Q27 vs guide:** revenue **$18.5–19.5bn vs $14.5–15.5bn**, GM **12.0–12.5% vs 10.4–10.8%** (SMCI 8-K, 2026-10-20). Bull on delivery vs guide; GM sits well belo |
 | 2026-11-05 | LITE | **🆕 2026-11-05 — F1Q27 earnings (date per Deutsche Bank · Conti, 2026-10-07; confirm against the LITE IR release).** DB's bogeys: **OCS > $100m for the first time** (path to $1bn in 2027), CPO toward  |
