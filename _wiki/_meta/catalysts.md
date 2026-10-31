@@ -1,17 +1,11 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-10-30 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-10-31 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (52)
+## 📅 Upcoming (46)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-10-30 | AMZN | **FY27 capex number — still not given by management, but the Street has now marked it, and the marks disagree by ~$40bn.** Management gave FY26 (~$220B) and "heavy capex over next few years" but no 20 |
-| 2026-10-30 | GOOG | 🆕 **2026-10-30 (10-Q fold) — filing-level watch items for the FY26 10-K:** (1) the **TPU repurchase-obligation maximum ($6.6B at 09-30)** against TPU revenue as the ramp scales, and whether any put is |
-| 2026-10-30 | KLAC | 🆕 **"2027 memory ~60%"** — Bren, as machine-transcribed: *"In 2027, we'd expect overall memory to be about 60% of the business."* Confirm the denominator (KLA semi-PC systems vs WFE) from the sharehol |
-| 2026-10-30 | KLAC | 🆕 **First actinic (EUV) mask-inspection platform ship: "as early as first half of next year" = 1H CY27** (per Sur, relaying a KLA post-earnings callback — Harlan Sur (J.P. Morgan) @ JPM 'Ask Me Anythi |
-| 2026-10-30 | META | ✅ **2026-10-30 — (a) resolved by the filings:** Meta priced on Monday 10-26 and the preferred closed 10-29, before the election week. Size: $37.5bn underwritten ($25.0bn Class A forward + $12.5bn mand |
-| 2026-10-30 | SNDK | 🆕🔭 **2026-10-30 — a dated coverage target, per Sur relaying the callback (not company-disclosed):** >75% of FY28, FY29 and FY30 bits under LTAs/NBMs, to be locked in *"over the next 2 to 3 quarters"*  |
 | 2026-11-02 | GEV | 🆕 **GS-hosted GEV IR meeting, New York — 2026-11-02** (per the GS Industrials daily, logged pre-print): first post-print management access. |
 | 2026-11-02 | KIOXIA | 🆕 **2026-11-02 (Mon) 9am JST — BofA post-results "doko shuzai" with KIOXIA on FY3/27 2Q results** (BofA · Mikio Hirakawa, via BofA one-liners, 2026-10-01) — dates the Sep-quarter print to before 11-02 |
 | 2026-11-02 | STX | 🆕 **2026-10-08 (12pm ET, NYC) — Morgan Stanley Global Hardware & Optical lunch (Andy Meng, Howard Kao, Derrick Yang, Meta Marshall, Erik Woodring) covering STX/[[WDC]] among others; 2026-11-02/03 — MS |
@@ -67,10 +61,16 @@ _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_me
 |---|---|---|
 | _none_ | | |
 
-## ✅ Resolved (367)
+## ✅ Resolved (373)
 
 | Date | Ticker | Verdict |
 |---|---|---|
+| 2026-10-30 | SNDK | neutral — NOT A NEW EVENT: the parser dated a forward target off its source date. JPM's Sur, relaying the callback (not company-disclosed), says >75% of FY28-FY30 bits go under LTAs/NBMs "over the next 2 to 3 quarters" (JPM AMA, 2026-10-30). The test is FY28 coverage >75% at the FQ3-FQ4 FY27 prints (~Apr-Aug 2027); UNRESOLVED until then. |
+| 2026-10-30 | META | neutral — NOT A NEW EVENT: the 10-30 bullet re-records the financing already scored under META 2026-10-29 ($37.5bn underwritten = $25.0bn Class A forward + $12.5bn mandatory convertible; priced 10-26, preferred closed 10-29, before election week; Meta 424B5s 10-26 + 8-K 10-29). Below Wells Fargo's $40-50bn equity estimate. The $60bn Class C ATM is still unfiled, and the 2027-01-19 Class C effective date is the next dated item. |
+| 2026-10-30 | KLAC | neutral — NOT A NEW EVENT (two parser-dated forward bullets): (1) first actinic EUV mask-inspection ship "as early as" 1H CY27, per Sur relaying a KLA callback (JPM AMA, 2026-10-30), not a company disclosure, open until 1H27; (2) Bren's "2027 memory ~60%" (FQ1 FY27 call, 2026-10-28) is UNRESOLVED. The 10-Q has no memory/foundry split, so the denominator (KLA systems vs WFE) is still unconfirmed; do not use the number yet. |
+| 2026-10-30 | KLAC | neutral — NOT A NEW EVENT (two parser-dated forward bullets): (1) first actinic EUV mask-inspection ship "as early as" 1H CY27, per Sur relaying a KLA callback (JPM AMA, 2026-10-30), not a company disclosure, open until 1H27; (2) Bren's "2027 memory ~60%" (FQ1 FY27 call, 2026-10-28) is UNRESOLVED. The 10-Q has no memory/foundry split, so the denominator (KLA systems vs WFE) is still unconfirmed; do not use the number yet. |
+| 2026-10-30 | GOOG | neutral — NOT A NEW EVENT: the 10-Q-fold watch list (TPU repurchase-obligation max $6.6B, $16.8B Crux backlog / $10.0B backstop, $27.7B DC backstops, paid clicks, ad-tech judgment, Waymo $5.0B loan; GOOG 10-Q, 2026-10-29) all resolves at the FY26 10-K (~Feb 2027). |
+| 2026-10-30 | AMZN | neutral — Partial only: there is still no FY27 capex figure, but the direction is now on record. Jassy: "expect to spend meaningfully more in 2027" (call, 2026-10-29). The 10-Q adds two floors: $63.9B of P&E purchase commitments due in 2027 and a ~$80B secured supplier loan facility (Q1'27-Q3'28) that may keep part of the spend off the cash-capex line. The JPM $365B vs MS $325B FY27 spread stays open until the Q4 call (~early Feb 2027). |
 | 2026-10-29 | WDC | bull won — Two parser-dated watch bullets, both stamped 10-29 by the late-ingest annotations (the print itself is scored under WDC 2026-10-22): (1) the F4Q26 call (2026-08-05, on disk since 08-28, read in 10-29) framed the 55-56% GM guide as price + mix — price/TB high-teens y/y in June, +28% in September (CFO Sennesael), no incremental unit capacity (CEO Tan), HAMR 44TB in 1H CY27 — the price-led bull read; (2) the WDC-vs-STX revision gap, print 1 of 2: the December EPS guide $5.80 is ~20% above pre-print BBG $4.82 (estimates.json asof 10-21) and 13% above MS's $5.25 (MS, 10-23); exabytes +8% q/q vs STX ~+1%. Most of the August gap (STX guide ~25% above Street vs WDC ~4%; Barclays desk · Rand, 08-05) is closed. Print 2 of 2 (January) still open. |
 | 2026-10-29 | WDC | bull won — Two parser-dated watch bullets, both stamped 10-29 by the late-ingest annotations (the print itself is scored under WDC 2026-10-22): (1) the F4Q26 call (2026-08-05, on disk since 08-28, read in 10-29) framed the 55-56% GM guide as price + mix — price/TB high-teens y/y in June, +28% in September (CFO Sennesael), no incremental unit capacity (CEO Tan), HAMR 44TB in 1H CY27 — the price-led bull read; (2) the WDC-vs-STX revision gap, print 1 of 2: the December EPS guide $5.80 is ~20% above pre-print BBG $4.82 (estimates.json asof 10-21) and 13% above MS's $5.25 (MS, 10-23); exabytes +8% q/q vs STX ~+1%. Most of the August gap (STX guide ~25% above Street vs WDC ~4%; Barclays desk · Rand, 08-05) is closed. Print 2 of 2 (January) still open. |
 | 2026-10-29 | STX | neutral — Q1 FY27 10-Q (verified): the +$604M q/q revenue step was "primarily" favorable pricing actions; no RPO/LTA dollars disclosed (POs < 1 year); net leverage 0.18x (derived) confirms the "0.2x" claim; OCF includes a $272M accrual build, primarily income taxes. |
