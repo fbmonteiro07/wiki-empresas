@@ -1,12 +1,12 @@
 """Financials source ingestion: stdlib only; never writes wiki research pages."""
-import argparse, concurrent.futures, datetime as dt, hashlib, html, json, re, ssl, threading, time, urllib.parse, urllib.request
+import argparse, concurrent.futures, datetime as dt, hashlib, html, json, os, re, ssl, threading, time, urllib.parse, urllib.request
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[2]
 DATA=ROOT/'_wiki'/'_data'/'financials'
-ASOF='2026-10-31'
+ASOF=os.environ.get('FIN_ASOF','2026-10-31')  # 2026-11-02 additions (MSCI/EFX/TRU) run with FIN_ASOF=2026-11-02
 CUTOFF='2021-10-31'
-CO={'JPM':('JPMorgan Chase & Co.','NYSE'),'SPGI':('S&P Global Inc.','NYSE'),'MCO':("Moody's Corporation",'NYSE'),'BX':('Blackstone Inc.','NYSE'),'KKR':('KKR & Co. Inc.','NYSE'),'GS':('The Goldman Sachs Group, Inc.','NYSE'),'V':('Visa Inc.','NYSE'),'MA':('Mastercard Incorporated','NYSE'),'APO':('Apollo Global Management, Inc.','NYSE'),'HOOD':('Robinhood Markets, Inc.','NASDAQ'),'COIN':('Coinbase Global, Inc.','NASDAQ')}
+CO={'JPM':('JPMorgan Chase & Co.','NYSE'),'SPGI':('S&P Global Inc.','NYSE'),'MCO':("Moody's Corporation",'NYSE'),'BX':('Blackstone Inc.','NYSE'),'KKR':('KKR & Co. Inc.','NYSE'),'GS':('The Goldman Sachs Group, Inc.','NYSE'),'V':('Visa Inc.','NYSE'),'MA':('Mastercard Incorporated','NYSE'),'APO':('Apollo Global Management, Inc.','NYSE'),'HOOD':('Robinhood Markets, Inc.','NASDAQ'),'COIN':('Coinbase Global, Inc.','NASDAQ'),'MSCI':('MSCI Inc.','NYSE'),'EFX':('Equifax Inc.','NYSE'),'TRU':('TransUnion','NYSE')}
 LOCK=threading.Lock()
 LAST=0.0
 TLS=ssl.create_default_context()
@@ -132,7 +132,10 @@ def main():
     if a.mode=='sec':
         mapping=json.loads(fetch('https://www.sec.gov/files/company_tickers.json'))
         by={x['ticker']:x for x in mapping.values()}
-        write_json(DATA/'company_resolution.json',{t:by[t] for t in a.tickers})
+        res=DATA/'company_resolution.json'
+        merged=json.loads(res.read_text(encoding='utf-8-sig')) if res.exists() else {}
+        merged.update({t:by[t] for t in a.tickers})
+        write_json(res,merged)
         for t in a.tickers:
             try: sec_company(t,by[t])
             except Exception as exc: print('COMPANY_FAILED',t,str(exc),flush=True)

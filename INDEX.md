@@ -1,10 +1,10 @@
 # SEC filings + IR materials — master index
 
-_92 companies · 1340 SEC filings · 530 transcript documents · 149 presentations · 354 equity-call links · 959 legacy briefing datapoints. Financials added 2026-10-31; existing-company counts retained._
+_95 companies · 1401 SEC filings · 554 transcript documents · 149 presentations · 354 equity-call links · 959 legacy briefing datapoints. Financials added 2026-10-31 (MSCI, EFX, TRU on 2026-11-02); existing-company counts retained._
 
 Layout: `<TICKER>/*.html` = 10-K/10-Q/20-F · `<TICKER>/transcripts/*.md` = earnings-call transcripts · `<TICKER>/apresentações/*.pdf` = investor/analyst-day decks · `_equity_calls/<theme>/*.md` = thematic sell-side/expert/mgmt calls (auto-attributed per ticker) · `_briefings/by-ticker/<TICKER>.md` = per-ticker roll-up of the daily email briefings · `_wiki/<TICKER>.md` = synthesized per-company research page (see [_wiki/00_INDEX.md](_wiki/00_INDEX.md)). Regenerate: `py E:/.claude/scripts/index_sec_filings.py` (filings/calls/wiki links) + `py E:/.claude/scripts/build_briefings_rollup.py` (briefing roll-ups).
 
-**Financials added 2026-10-31:** [overview](_wiki/themes/financials.md) · [coverage ledger](_wiki/_meta/financials-coverage.md). Transcript totals count source documents, including duplicate company/public versions; the ledger separately counts unique quarters. Financials cached commentary is listed in each source inventory and is not counted as legacy briefing datapoints.
+**Financials added 2026-10-31 (MSCI, EFX, TRU on 2026-11-02):** [overview](_wiki/themes/financials.md) · [coverage ledger](_wiki/_meta/financials-coverage.md). Transcript totals count source documents, including duplicate company/public versions; the ledger separately counts unique quarters. Financials cached commentary is listed in each source inventory and is not counted as legacy briefing datapoints.
 
 ## Summary
 
@@ -41,6 +41,7 @@ Layout: `<TICKER>/*.html` = 10-K/10-Q/20-F · `<TICKER>/transcripts/*.md` = earn
 | CSCO | 20 | 8 | 17 | 2 | 25 |
 | DELL | 16 | 4 | 0 | 6 | 31 |
 | DISCO | 0 | 4 | 0 | 0 | 0 |
+| EFX | 20 | 8 | 0 | 0 | 0 |
 | FLEX | 16 | 4 | 0 | 1 | 0 |
 | GEV | 9 | 9 | 3 | 3 | 5 |
 | GLW | 20 | 8 | 3 | 3 | 4 |
@@ -62,6 +63,7 @@ Layout: `<TICKER>/*.html` = 10-K/10-Q/20-F · `<TICKER>/transcripts/*.md` = earn
 | MEDIATEK | 0 | 4 | 0 | 13 | 0 |
 | META | 20 | 8 | 0 | 6 | 35 |
 | MRVL | 16 | 4 | 0 | 11 | 33 |
+| MSCI | 20 | 8 | 0 | 0 | 0 |
 | MSFT | 20 | 8 | 0 | 16 | 39 |
 | MU | 20 | 6 | 2 | 11 | 14 |
 | NBIS | 5 | 4 | 0 | 1 | 3 |
@@ -92,6 +94,7 @@ Layout: `<TICKER>/*.html` = 10-K/10-Q/20-F · `<TICKER>/transcripts/*.md` = earn
 | TLN | 8 | 3 | 3 | 0 | 0 |
 | TM | 17 | 5 | 16 | 0 | 0 |
 | TOKYOELEC | 0 | 2 | 0 | 1 | 0 |
+| TRU | 21 | 8 | 0 | 0 | 0 |
 | TSM | 5 | 8 | 21 | 16 | 2 |
 | TXN | 16 | 4 | 0 | 2 | 10 |
 | UBER | 20 | 8 | 2 | 3 | 36 |
@@ -102,7 +105,7 @@ Layout: `<TICKER>/*.html` = 10-K/10-Q/20-F · `<TICKER>/transcripts/*.md` = earn
 | WDC | 16 | 4 | 0 | 1 | 2 |
 | WMB | 20 | 7 | 3 | 1 | 0 |
 | WOLF | 16 | 4 | 0 | 0 | 0 |
-| **TOTAL** | **1340** | **530** | **149** | **354** | **959** |
+| **TOTAL** | **1401** | **554** | **149** | **354** | **959** |
 
 ## Notes / fidelity caveats
 
@@ -834,4 +837,25 @@ Layout: `<TICKER>/*.html` = 10-K/10-Q/20-F · `<TICKER>/transcripts/*.md` = earn
 - **Wiki:** [COIN synthesis](_wiki/COIN.md).
 - **Archive:** 21 SEC filings and 9 transcript documents; [complete dated inventory](COIN/research/SOURCES.html) / [Markdown](COIN/SOURCES.md).
 - **Earnings and commentary:** separate company releases/supplements, cached sell-side research and source-quality labels in the inventory.
+
+
+## Financials — source inventories added 2026-11-02
+
+### MSCI
+
+- **Wiki:** [MSCI synthesis](_wiki/MSCI.md).
+- **Archive:** 20 SEC filings and 8 transcript documents; [complete dated inventory](MSCI/research/SOURCES.html) / [Markdown](MSCI/SOURCES.md).
+- **Earnings and commentary:** separate company releases/supplements, cached sell-side excerpts and source-quality labels in the inventory.
+
+### EFX
+
+- **Wiki:** [EFX synthesis](_wiki/EFX.md).
+- **Archive:** 20 SEC filings and 8 transcript documents; [complete dated inventory](EFX/research/SOURCES.html) / [Markdown](EFX/SOURCES.md).
+- **Earnings and commentary:** separate company releases/supplements, cached sell-side excerpts and source-quality labels in the inventory.
+
+### TRU
+
+- **Wiki:** [TRU synthesis](_wiki/TRU.md).
+- **Archive:** 21 SEC filings and 8 transcript documents; [complete dated inventory](TRU/research/SOURCES.html) / [Markdown](TRU/SOURCES.md).
+- **Earnings and commentary:** separate company releases/supplements, cached sell-side excerpts and source-quality labels in the inventory.
 

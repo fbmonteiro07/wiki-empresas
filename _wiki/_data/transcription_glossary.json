@@ -1,6 +1,6 @@
 {
  "_about": "Hand-edited ledger of machine-transcription garbles (Notion AI, Bloomberg ASR, auto-translation) seen in the archive, with the correct reading. Used by E:\\.claude\\scripts\\transcript_qa.py (source-file scan, page-diff scan) and by ingest_notion_meetings.py (writes a 'Transcription QA' block into every archived Notion file). Keys are matched with word boundaries, case-sensitive unless 'ci' is true. 'keep_when' = regex contexts (same line, ~80 chars around the hit) where the token is legitimate and must NOT be flagged. Add an entry the first time a garble is caught; never delete one. Standing rule (Felipe, 2026-09-28): ALWAYS double-check transcript content — acronyms, names, units, numbers — before it travels to a page.",
- "_updated": "2026-10-30",
+ "_updated": "2026-11-02",
  "terms": {
   "Hixle AI": {
    "correct": "Higgsfield (AI video startup)",
@@ -6034,6 +6034,20 @@
    "domain": "names",
    "rule": "ASR; see 'Open AAI'.",
    "first_seen": "2026-10-30 (All-In 'Anthropic S-1 Shocker, Greatest Business Ever? Google's $500B Wipeout', 2026-10-30, YouTube ASR)"
+  },
+  "twin indicator": {
+   "correct": "TWN Indicator (Equifax The Work Number product)",
+   "domain": "names",
+   "ci": true,
+   "rule": "MarketBeat/Quartr transcription of Equifax's TWN Indicator (The Work Number mortgage credit solution) as 'TWIN Indicator'.",
+   "first_seen": "2026-11-02 (EFX calls of 2025-07-22, 2025-10-21 and 2026-02-04, MarketBeat/Quartr transcripts render it 'TWIN Indicator'; flagged while writing _wiki/EFX.md)"
+  },
+  "126 million shares": {
+   "correct": "$126m of shares repurchased (a dollar amount, not a share count)",
+   "domain": "units",
+   "ci": true,
+   "rule": "TransUnion Q3 2026 call: the transcript renders the quarter's buyback as '126 million shares'; the company repurchased about $126m of stock.",
+   "first_seen": "2026-11-02 (TRU Q3 2026 call, 2026-10-27, third-party transcript; flagged while writing _wiki/TRU.md)"
   }
  },
  "summary_traps": [

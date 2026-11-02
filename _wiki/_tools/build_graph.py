@@ -161,7 +161,8 @@ def main():
     # broker coverage edges (>= MIN_MENTIONS attributions on the ticker page)
     for tk, txt in page_texts.items():
         coverage_text = txt
-        if tk in {"JPM", "GS", "SPGI", "MCO", "BX", "KKR", "APO", "V", "MA", "HOOD", "COIN"}:
+        if tk in {"JPM", "GS", "SPGI", "MCO", "BX", "KKR", "APO", "V", "MA", "HOOD", "COIN",
+                  "MSCI", "EFX", "TRU"}:
             # Issuer/peer mentions are not broker attribution. These pages have a dedicated section.
             section = re.search(r"^## Intra-quarter.*?(?=^## |\Z)", txt, re.M | re.S)
             coverage_text = section.group(0) if section else ""

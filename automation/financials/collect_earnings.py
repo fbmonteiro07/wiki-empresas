@@ -1,8 +1,8 @@
 """Archive recent company earnings 8-K exhibits with source URLs."""
-import json,re,urllib.parse,datetime as dt,hashlib
+import json,re,sys,urllib.parse,datetime as dt,hashlib
 from collect_sources import ROOT,DATA,CO,fetch,write_json,ASOF
 from prepare_research import Reader
-for tk in CO:
+for tk in (sys.argv[1:] or CO):
     sub=DATA/'submissions'/f'{tk}.json'
     if not sub.exists():
         print('NOT_READY',tk,flush=True); continue

@@ -6,7 +6,7 @@
 >
 > 🔎 **Full-corpus search** (reports + calls + briefings + transcripts + Stratechery + DAMNANG, not just wiki pages): `py "_wiki/_tools/search.py" <query>` (index: `py "_wiki/_tools/build_search_index.py"`).
 
-_Generated 2026-10-31 by `_tools/build_index.py` from [`_data/index_meta.json`](_data/index_meta.json) (hand-edit the json, not this file) · **120 companies + 2 private AI labs (122 pages)** · one page per ticker synthesizing all co-located sources in `E:\Wiki Felipe`: filings (10-K/10-Q/20-F) + earnings transcripts + investor-day decks + thematic equity calls (`_equity_calls`) + per-ticker roll-up of the email briefings (`_briefings/by-ticker`) + BBG consensus & street-high estimates (`_data/estimates.json`)._
+_Generated 2026-11-02 by `_tools/build_index.py` from [`_data/index_meta.json`](_data/index_meta.json) (hand-edit the json, not this file) · **123 companies + 2 private AI labs (125 pages)** · one page per ticker synthesizing all co-located sources in `E:\Wiki Felipe`: filings (10-K/10-Q/20-F) + earnings transcripts + investor-day decks + thematic equity calls (`_equity_calls`) + per-ticker roll-up of the email briefings (`_briefings/by-ticker`) + BBG consensus & street-high estimates (`_data/estimates.json`)._
 
 Each page follows the [_TEMPLATE](_TEMPLATE.md): Snapshot · Current state (latest quarter) · Debate (bull/bear + where the sell-side stands, attributed + dated) · Catalysts · Risks · Consensus estimates (BBG) · Sources (links). Archive master index: [../INDEX.md](../INDEX.md). Thematic pages: [themes/00_THEMES.md](themes/00_THEMES.md).
 
@@ -188,6 +188,7 @@ Each page follows the [_TEMPLATE](_TEMPLATE.md): Snapshot · Current state (late
 | JPM | [JPM](JPM.md) | Diversified banking scale; debate is sustainable NII and capital-markets earnings versus expenses, credit and capital requirements. |
 | SPGI | [SPGI](SPGI.md) | Ratings, indices and financial data; issuance and AI monetization versus portfolio changes and workflow substitution. |
 | MCO | [MCO](MCO.md) | Ratings franchise plus analytics subscriptions; issuance mix and recurring growth versus credit-cycle sensitivity. |
+| MSCI | [MSCI](MSCI.md) | Index toll on ETF/passive AUM plus analytics and private-assets subscriptions; subscription acceleration and AUM-fee beta versus flat margins and debt-funded buybacks. |
 | BX | [BX](BX.md) | Alternative asset-management scale; fee activation and realizations versus private-wealth liquidity and valuation risk. |
 | KKR | [KKR](KKR.md) | Asset management, insurance and strategic holdings; fee-base growth versus earnings comparability and balance-sheet exposure. |
 | GS | [GS](GS.md) | Capital-markets and wealth franchise; advisory recovery and durable fees versus trading cyclicality and expenses. |
@@ -196,6 +197,8 @@ Each page follows the [_TEMPLATE](_TEMPLATE.md): Snapshot · Current state (late
 | APO | [APO](APO.md) | Origination, asset management and Athene; capital formation and spread earnings versus credit, liquidity and funding risk. |
 | HOOD | [HOOD](HOOD.md) | Retail financial platform; wallet share and new products versus trading dependence, incentives and credit costs. |
 | COIN | [COIN](COIN.md) | Crypto infrastructure and distribution; diversified usage and stablecoins versus transaction cyclicality and investment marks. |
+| EFX | [EFX](EFX.md) | Credit bureau plus proprietary Work Number income data; Workforce/government growth and AI cost-out versus mortgage cyclicality and FHFA/FICO changes to mortgage credit reports. |
+| TRU | [TRU](TRU.md) | Credit-bureau data plus fraud/marketing and international growth; ex-FICO organic growth and margin versus mortgage-score and tri-merge policy risk. |
 
 ## Unclassified (auto-flagged)
 | Ticker | Page | One-line thesis |

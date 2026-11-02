@@ -34,7 +34,7 @@ def check(root):
  th=Links();th.feed(chunks.get('TH-financials',''));hrefs={x.get('href') for x in th.links}
  checks['theme_relative_links_rebased']={'_dashboards/financials-sources.html','_meta/financials-coverage.md'}<=hrefs
  cat=(root/'_wiki/_dashboards/financials-sources.html').read_text(encoding='utf-8');checks['catalog_all_inventory_entries']=cat.count('<tr><td>')==len(source)
- checks['catalog_all_11_filters']=all(f'href="#{tk}"' in cat for tk in tickers)
+ checks['catalog_all_issuer_filters']=all(f'href="#{tk}"' in cat for tk in tickers)
  checks['review_metadata_consistent']=all(x.get('analytical_review')==x['review_status'] for x in source)
  for k,v in checks.items():
   if not v:issues.append('Failed rendered check '+k)

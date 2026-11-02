@@ -40,6 +40,7 @@ ALIASES = {
     "jpmorgan chase": "JPM", "j.p. morgan chase": "JPM", "s&p global": "SPGI",
     "moody's": "MCO", "moodys": "MCO", "blackstone": "BX", "goldman sachs": "GS",
     "visa": "V", "mastercard": "MA", "apollo": "APO", "robinhood": "HOOD", "coinbase": "COIN",
+    "equifax": "EFX", "transunion": "TRU", "trans union": "TRU",
 }
 
 
