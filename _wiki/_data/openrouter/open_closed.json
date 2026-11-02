@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-30T23:53:32",
+ "generated": "2026-11-02T08:05:08",
  "source": "https://openrouter.ai/rankings",
- "chart_file": "_data/openrouter/raw/2026-10-26/model_chart.json",
- "chart_asof": "2026-10-26 11:04 UTC",
+ "chart_file": "_data/openrouter/raw/2026-11-02/model_chart.json",
+ "chart_asof": "2026-11-02 10:37 UTC",
  "method": {
   "totals": "OpenRouter calendar-week chart feed (top-9 models + Others); complete weeks only",
   "split_full": "trailing-7-day rank_week snapshots (every model); Monday snapshot d covers chart week d-7; offset_days flags Tuesday captures",
@@ -10,23 +10,6 @@
   "classification": "open-weight = Hugging Face link on the OpenRouter listing (hugging_face_id / hf_slug); proprietary = listed without one; unattributed = stealth previews (stealth/*, openrouter/*-alpha) and routers; unlisted models fall back to or_build.LAB author capture + gpt-oss/gemma/llama/phi/mistral overrides"
  },
  "weeks": [
-  {
-   "x": "2025-10-27",
-   "total": 5511159006188.0,
-   "top9": {
-    "open": 241892814799.0,
-    "closed": 3208847888502.0,
-    "unattributed": 2060418302887.0,
-    "stealth": 0.0,
-    "others": 2060418302887.0
-   },
-   "share": {
-    "open": 0.04389145995014835,
-    "closed": 0.5822455648438132,
-    "unattributed": 0.3738629752060385
-   },
-   "basis": "top9"
-  },
   {
    "x": "2025-11-03",
    "total": 5828207285497.0,
@@ -950,16 +933,16 @@
     "others": 66173540545806.0
    },
    "full": {
-    "open": 0.7038174662100076,
-    "closed": 0.27176002087841306,
+    "open": 0.7044188906204816,
+    "closed": 0.2711585964679391,
     "unattributed": 0.024422512911579333
    },
    "full_tokens": 171842498417318.0,
    "snapshot": "2026-10-12",
    "offset_days": 0,
    "share": {
-    "open": 0.7038174662100076,
-    "closed": 0.27176002087841306,
+    "open": 0.7044188906204816,
+    "closed": 0.2711585964679391,
     "unattributed": 0.024422512911579333
    },
    "basis": "full"
@@ -975,16 +958,16 @@
     "others": 67468271267061.0
    },
    "full": {
-    "open": 0.7201532978069848,
-    "closed": 0.2798466992653309,
+    "open": 0.7213806542538123,
+    "closed": 0.27861934281850337,
     "unattributed": 2.9276843528869576e-09
    },
    "full_tokens": 164043982243650.0,
    "snapshot": "2026-10-19",
    "offset_days": 0,
    "share": {
-    "open": 0.7201532978069848,
-    "closed": 0.2798466992653309,
+    "open": 0.7213806542538123,
+    "closed": 0.27861934281850337,
     "unattributed": 2.9276843528869576e-09
    },
    "basis": "full"
@@ -1000,46 +983,71 @@
     "others": 72053202018421.0
    },
    "full": {
-    "open": 0.7260454305175142,
-    "closed": 0.27395456785285305,
+    "open": 0.7271674378536027,
+    "closed": 0.2728325605167645,
     "unattributed": 1.6296327065522878e-09
    },
    "full_tokens": 188039304051712.0,
    "snapshot": "2026-10-26",
    "offset_days": 0,
    "share": {
-    "open": 0.7260454305175142,
-    "closed": 0.27395456785285305,
+    "open": 0.7271674378536027,
+    "closed": 0.2728325605167645,
     "unattributed": 1.6296327065522878e-09
+   },
+   "basis": "full"
+  },
+  {
+   "x": "2026-10-26",
+   "total": 193593270018919.0,
+   "top9": {
+    "open": 99513326825971.0,
+    "closed": 20676873382836.0,
+    "unattributed": 73403069810112.0,
+    "stealth": 0.0,
+    "others": 73403069810112.0
+   },
+   "full": {
+    "open": 0.706658528305559,
+    "closed": 0.29334100713204175,
+    "unattributed": 4.645623992570142e-07
+   },
+   "full_tokens": 193593270018919.0,
+   "snapshot": "2026-11-02",
+   "offset_days": 0,
+   "share": {
+    "open": 0.706658528305559,
+    "closed": 0.29334100713204175,
+    "unattributed": 4.645623992570142e-07
    },
    "basis": "full"
   }
  ],
  "latest_full": {
-  "x": "2026-10-19",
-  "snapshot": "2026-10-26",
+  "x": "2026-10-26",
+  "snapshot": "2026-11-02",
   "offset_days": 0,
-  "total": 188039304051712.0,
-  "open": 0.7260454305175142,
-  "closed": 0.27395456785285305,
-  "unattributed": 1.6296327065522878e-09
+  "total": 193593270018919.0,
+  "open": 0.706658528305559,
+  "closed": 0.29334100713204175,
+  "unattributed": 4.645623992570142e-07
  },
  "first_week": {
-  "x": "2025-10-27",
-  "total": 5511159006188.0,
-  "open": 0.04389145995014835,
-  "closed": 0.5822455648438132,
-  "unattributed": 0.3738629752060385,
+  "x": "2025-11-03",
+  "total": 5828207285497.0,
+  "open": 0.05791050566610355,
+  "closed": 0.5532001428549156,
+  "unattributed": 0.3888893514789809,
   "basis": "top9"
  },
  "last_week": {
-  "x": "2026-10-19",
-  "total": 188039304051712.0,
+  "x": "2026-10-26",
+  "total": 193593270018919.0,
   "basis": "full"
  },
  "traffic_multiple": {
-  "vs_week": "2025-10-27",
-  "x": 34.11973848705491
+  "vs_week": "2025-11-03",
+  "x": 33.21660684592661
  },
  "named_model_class": {
   "anthropic/claude-4-sonnet-20250522": "closed",
@@ -1073,6 +1081,7 @@
   "minimax/minimax-m2:free": "open",
   "minimax/minimax-m3-20260531": "open",
   "minimax/minimax-m3-20260531:free": "open",
+  "minimax/minimax-m3.1-flash-20261019": "open",
   "minimax/minimax-m3.1-flash-20261019:free": "open",
   "moonshotai/kimi-k2.5-0127": "open",
   "moonshotai/kimi-k2.6-20260420": "open",
@@ -1114,5 +1123,5 @@
   "z-ai/glm-5.3-flash-20260826": "open"
  },
  "n_weeks": 52,
- "n_full_weeks": 15
+ "n_full_weeks": 16
 }
