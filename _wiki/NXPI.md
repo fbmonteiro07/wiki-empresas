@@ -5,7 +5,7 @@
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\NXPI` (10-K/10-Q + transcripts) · `_equity_calls` · `E:\briefings\2026`. Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-30 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-02 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -14,7 +14,7 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\NXPI` (10-K/10-Q + tra
 | Gross margin | 58.2% | 59.7% |
 | EBITDA | $5.8bn | $6.6bn |
 | EPS | $15.02 | $18.25 |
-| Capex | $451m | $779m |
+| Capex | $451m | $784m |
 | OCF (≈EBITDA) | $5.8bn | $6.6bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

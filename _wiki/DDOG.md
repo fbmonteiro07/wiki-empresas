@@ -5,15 +5,15 @@
 _Wiki · generated 2026-09-04 · sources: `E:\Wiki Felipe empresas\DDOG\transcripts` (7 earnings calls, Q4 2024 2025-02-13 → Q2 2026 2026-08-06) · 16 archived sell-side notes in `relatórios bons/` (Barclays, J.P. Morgan, Goldman Sachs, Rothschild & Co Redburn; 2026-05-01 → 2026-08-11, folded in 2026-09-04) · [themes/ai-data-infra-observability.md](themes/ai-data-infra-observability.md) (corpus sell-side / buy-side material). SEC filings (2× 10-K, 6× 10-Q, 2024-11 → 2026-08) in `DDOG/` and 3 company decks in `DDOG/apresentações/` (added 2026-09-04 — see § Primary-source datapoints); **no `_briefings/by-ticker/DDOG.md` roll-up.** Datadog reports on a calendar fiscal year. Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-30 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-02 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $4.4bn | $5.5bn |
 | Gross profit | $3.5bn | $4.4bn |
-| Gross margin | 80.5% | 80.4% |
+| Gross margin | 80.5% | 80.3% |
 | EBITDA | $1.1bn | $1.4bn |
-| EPS | $2.46 | $3.05 |
+| EPS | $2.45 | $3.05 |
 | Capex | $86m | $98m |
 | OCF (≈EBITDA) | $1.1bn | $1.4bn |
 

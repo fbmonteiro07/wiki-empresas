@@ -3,15 +3,15 @@
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\FLEX` (filings + transcripts) · `_briefings`. Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-30 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-02 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $31.7bn | $43.4bn |
+| Revenue | $31.7bn | $43.5bn |
 | Gross profit | $3.1bn | $4.9bn |
 | Gross margin | 9.9% | 11.2% |
 | EBITDA | $2.7bn | $4.4bn |
-| EPS | $4.07 | $6.94 |
+| EPS | $4.08 | $7.01 |
 | Capex | $1.4bn | $1.4bn |
 | OCF (≈EBITDA) | $2.7bn | $4.4bn |
 

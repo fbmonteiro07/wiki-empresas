@@ -3,16 +3,16 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\GEV` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\GEV.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-30 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-02 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $45.9bn | $53.6bn |
+| Revenue | $45.9bn | $53.5bn |
 | Gross profit | $11.3bn | $15.0bn |
 | Gross margin | 24.6% | 28.0% |
 | EBITDA | $6.4bn | $9.8bn |
-| EPS | $15.52 | $25.33 |
-| Capex | $1.4bn | $1.6bn |
+| EPS | $15.50 | $25.26 |
+| Capex | $1.3bn | $1.7bn |
 | OCF (≈EBITDA) | $6.4bn | $9.8bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

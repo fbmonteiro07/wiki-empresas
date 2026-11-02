@@ -5,17 +5,17 @@
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\QCOM` (10-K FY25, 10-Q Q2 FY26, transcripts) · `_briefings` roll-up. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-30 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-02 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $40.9bn | $47.1bn |
-| Gross profit | $22.2bn | $24.8bn |
+| Revenue | $40.9bn | $47.0bn |
+| Gross profit | $22.2bn | $24.7bn |
 | Gross margin | 54.3% | 52.6% |
-| EBITDA | $13.3bn | $14.8bn |
-| EPS | $9.23 | $10.78 |
+| EBITDA | $13.2bn | $14.7bn |
+| EPS | $9.23 | $10.76 |
 | Capex | $1.7bn | $2.0bn |
-| OCF (≈EBITDA) | $13.3bn | $14.8bn |
+| OCF (≈EBITDA) | $13.2bn | $14.7bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
