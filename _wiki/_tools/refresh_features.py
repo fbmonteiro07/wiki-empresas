@@ -25,6 +25,7 @@ STEPS = [
     ("build_diff.py", []),
     ("build_catalysts.py", []),
     ("build_coverage.py", []),
+    ("build_financials_sources.py", []),  # publisher links + local archive provenance
     ("build_assumptions.py", []),
     ("build_mgmt_comms.py", []),    # reads each page's commentary-evolution table
     ("gpu_pricing.py", []),        # Bloomberg + public SemiAnalysis; retain cache on source failure

@@ -160,8 +160,17 @@ def main():
 
     # broker coverage edges (>= MIN_MENTIONS attributions on the ticker page)
     for tk, txt in page_texts.items():
+        coverage_text = txt
+        if tk in {"JPM", "GS", "SPGI", "MCO", "BX", "KKR", "APO", "V", "MA", "HOOD", "COIN"}:
+            # Issuer/peer mentions are not broker attribution. These pages have a dedicated section.
+            section = re.search(r"^## Intra-quarter.*?(?=^## |\Z)", txt, re.M | re.S)
+            coverage_text = section.group(0) if section else ""
+            coverage_text = re.sub(r"\]\([^)]*\)", "]", coverage_text)
         for bid, rx in BROKER_RX.items():
-            n = len(rx.findall(txt))
+            # JPM and GS are now covered issuers as well as research shops.
+            if bid == tk and bid in {"JPM", "GS"}:
+                continue
+            n = len(rx.findall(coverage_text))
             if n >= MIN_MENTIONS:
                 add_node(f"broker:{bid}", "broker", bid)
                 edges.append({"u": f"broker:{bid}", "v": tk, "type": "covers", "label": "", "w": n})

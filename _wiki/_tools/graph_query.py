@@ -37,6 +37,9 @@ ALIASES = {
     "uber": "UBER", "booking": "BKNG", "toyota": "TM", "infineon": "IFX",
     "onsemi": "ON", "wolfspeed": "WOLF", "navitas": "NVTS", "mediatek": "MEDIATEK",
     "spacex": "SPCX", "coreweave": "CRWV", "nebius": "NBIS", "supermicro": "SMCI",
+    "jpmorgan chase": "JPM", "j.p. morgan chase": "JPM", "s&p global": "SPGI",
+    "moody's": "MCO", "moodys": "MCO", "blackstone": "BX", "goldman sachs": "GS",
+    "visa": "V", "mastercard": "MA", "apollo": "APO", "robinhood": "HOOD", "coinbase": "COIN",
 }
 
 
@@ -142,7 +145,7 @@ def topic_card(nid, id2n, adj, lines):
 def scan(text, id2n):
     """Free text -> (tickers, topic node ids)."""
     tickers, topics = [], []
-    words = set(re.findall(r"[A-Za-z][\w.]{1,14}", text))
+    words = set(re.findall(r"[A-Za-z][\w.]{0,14}", text))
     upper = {w.upper() for w in words}
     for tk in upper:
         if tk in id2n and id2n[tk]["type"] == "ticker" and tk not in tickers:

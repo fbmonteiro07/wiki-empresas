@@ -1,0 +1,15 @@
+from pathlib import Path
+p=Path('_wiki/_tools/build_financials_sources.py');s=p.read_text(encoding='utf-8-sig')
+s=s.replace('Research cut-off: 2026-10-31', 'Filings/results cut-off: 2026-10-31; live email review: 2026-11-01')
+s=s.replace('Original publisher links open the available public source.', 'Publisher links open company/SEC sources; Outlook links open the original email and require mailbox access.')
+s=s.replace('Cached email bodies and licensed reports remain', 'Email bodies and licensed reports remain')
+s=s.replace("url=x.get('source_url','');link=f'", "url=x.get('source_url','');access_label='Original email (Outlook)' if x['kind']=='Outlook research email' else 'Original publisher source';link=f'")
+s=s.replace('>Original publisher source ↗</a>', '>{access_label} ↗</a>')
+s=s.replace('recorded 2026-10-31.', 'recorded 2026-11-01.')
+s=s.replace('deduplicated in quarterly-call counts.', 'deduplicated in quarterly-call and email-identity counts.')
+p.write_text(s,encoding='utf-8')
+p=Path('automation/financials/check_rendered.py');s=p.read_text(encoding='utf-8-sig').replace('catalog_all_689_entries','catalog_all_inventory_entries');p.write_text(s,encoding='utf-8')
+p=Path('automation/financials/validate.py');s=p.read_text(encoding='utf-8-sig').replace("'as_of':'2026-10-31'","'as_of':'2026-11-01'");p.write_text(s,encoding='utf-8')
+for path in ['automation/financials/build_inventory.py','_wiki/_tools/build_financials_sources.py']:
+ compile(Path(path).read_text(encoding='utf-8-sig'),path,'exec')
+print('Inventory and catalog scripts parse successfully.')

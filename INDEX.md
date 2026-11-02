@@ -1,8 +1,10 @@
 # SEC filings + IR materials — master index
 
-_81 companies · 1117 SEC filings · 421 transcripts · 149 presentations · 380 equity-call links · 1034 briefing datapoints._
+_92 companies · 1340 SEC filings · 530 transcript documents · 149 presentations · 354 equity-call links · 959 legacy briefing datapoints. Financials added 2026-10-31; existing-company counts retained._
 
 Layout: `<TICKER>/*.html` = 10-K/10-Q/20-F · `<TICKER>/transcripts/*.md` = earnings-call transcripts · `<TICKER>/apresentações/*.pdf` = investor/analyst-day decks · `_equity_calls/<theme>/*.md` = thematic sell-side/expert/mgmt calls (auto-attributed per ticker) · `_briefings/by-ticker/<TICKER>.md` = per-ticker roll-up of the daily email briefings · `_wiki/<TICKER>.md` = synthesized per-company research page (see [_wiki/00_INDEX.md](_wiki/00_INDEX.md)). Regenerate: `py E:/.claude/scripts/index_sec_filings.py` (filings/calls/wiki links) + `py E:/.claude/scripts/build_briefings_rollup.py` (briefing roll-ups).
+
+**Financials added 2026-10-31:** [overview](_wiki/themes/financials.md) · [coverage ledger](_wiki/_meta/financials-coverage.md). Transcript totals count source documents, including duplicate company/public versions; the ledger separately counts unique quarters. Financials cached commentary is listed in each source inventory and is not counted as legacy briefing datapoints.
 
 ## Summary
 
@@ -20,15 +22,18 @@ Layout: `<TICKER>/*.html` = 10-K/10-Q/20-F · `<TICKER>/transcripts/*.md` = earn
 | AMZN | 20 | 8 | 0 | 20 | 32 |
 | ANET | 20 | 9 | 3 | 2 | 17 |
 | APH | 16 | 4 | 0 | 0 | 6 |
+| APO | 20 | 23 | 0 | 0 | 0 |
 | ARM | 3 | 4 | 0 | 8 | 9 |
 | ASML | 5 | 8 | 24 | 10 | 12 |
 | AVGO | 20 | 7 | 2 | 23 | 53 |
 | BESI | 0 | 4 | 0 | 0 | 6 |
 | BKNG | 20 | 8 | 0 | 0 | 0 |
+| BX | 20 | 8 | 0 | 0 | 0 |
 | CDNS | 16 | 0 | 0 | 0 | 1 |
 | CEG | 18 | 9 | 2 | 0 | 0 |
 | CIEN | 20 | 4 | 1 | 2 | 6 |
 | COHR | 21 | 8 | 2 | 5 | 30 |
+| COIN | 21 | 9 | 0 | 0 | 0 |
 | CRDO | 17 | 4 | 0 | 2 | 19 |
 | CRM | 16 | 4 | 0 | 1 | 7 |
 | CRWD | 16 | 4 | 0 | 1 | 26 |
@@ -40,14 +45,20 @@ Layout: `<TICKER>/*.html` = 10-K/10-Q/20-F · `<TICKER>/transcripts/*.md` = earn
 | GEV | 9 | 9 | 3 | 3 | 5 |
 | GLW | 20 | 8 | 3 | 3 | 4 |
 | GOOG | 20 | 8 | 0 | 31 | 36 |
+| GS | 21 | 8 | 0 | 0 | 0 |
+| HOOD | 21 | 8 | 0 | 0 | 0 |
 | HPE | 16 | 4 | 0 | 3 | 8 |
 | IFX | 0 | 4 | 0 | 1 | 7 |
 | INTC | 16 | 4 | 0 | 21 | 8 |
+| JPM | 20 | 11 | 0 | 0 | 0 |
 | KIOXIA | 0 | 2 | 0 | 2 | 1 |
+| KKR | 20 | 9 | 0 | 0 | 0 |
 | KLAC | 16 | 4 | 0 | 4 | 12 |
 | LITE | 20 | 8 | 3 | 4 | 44 |
 | LRCX | 16 | 4 | 0 | 0 | 2 |
+| MA | 20 | 9 | 0 | 0 | 0 |
 | MCHP | 16 | 4 | 0 | 2 | 11 |
+| MCO | 20 | 8 | 0 | 0 | 0 |
 | MEDIATEK | 0 | 4 | 0 | 13 | 0 |
 | META | 20 | 8 | 0 | 6 | 35 |
 | MRVL | 16 | 4 | 0 | 11 | 33 |
@@ -73,6 +84,7 @@ Layout: `<TICKER>/*.html` = 10-K/10-Q/20-F · `<TICKER>/transcripts/*.md` = earn
 | SMIC | 0 | 4 | 0 | 0 | 1 |
 | SNDK | 7 | 4 | 0 | 2 | 25 |
 | SNPS | 16 | 0 | 0 | 0 | 10 |
+| SPGI | 20 | 8 | 0 | 0 | 0 |
 | SPOT | 5 | 8 | 1 | 0 | 23 |
 | STX | 16 | 4 | 0 | 2 | 1 |
 | TEL | 16 | 4 | 0 | 0 | 0 |
@@ -83,15 +95,18 @@ Layout: `<TICKER>/*.html` = 10-K/10-Q/20-F · `<TICKER>/transcripts/*.md` = earn
 | TSM | 5 | 8 | 21 | 16 | 2 |
 | TXN | 16 | 4 | 0 | 2 | 10 |
 | UBER | 20 | 8 | 2 | 3 | 36 |
+| V | 20 | 8 | 0 | 0 | 0 |
 | VECO | 16 | 4 | 0 | 0 | 1 |
 | VRT | 16 | 4 | 0 | 1 | 0 |
 | VST | 20 | 7 | 0 | 0 | 1 |
 | WDC | 16 | 4 | 0 | 1 | 2 |
 | WMB | 20 | 7 | 3 | 1 | 0 |
 | WOLF | 16 | 4 | 0 | 0 | 0 |
-| **TOTAL** | **1117** | **421** | **149** | **380** | **1034** |
+| **TOTAL** | **1340** | **530** | **149** | **354** | **959** |
 
 ## Notes / fidelity caveats
+
+- **2026-10-31 count reconciliation:** the prior header showed 380 equity-call links and 1,034 briefing datapoints, while its existing table rows summed to 354 and 959. The header now follows those unchanged legacy rows; this is an inventory-total correction, not source removal.
 
 - **Transcript fidelity varies by source:** IR-CDN FactSet/S&P PDFs = full verbatim (UBER, MSFT, GOOG, NFLX, BKNG, CSCO, AMZN, AAPL, ASML, GEV, COHR). Third-party-only where WebFetch refused verbatim = **paraphrased / [GAP] markers** (NOW, parts of LITE/GLW/ORCL/CEG). Prepared-remarks-only (no public Q&A) = **SPOT**, parts of **ASML/BKNG**.
 - **Partial coverage** (Cloudflare-walled IR + paywalled third parties): CEG, WMB, VST, ORCL, PWR, TLN.
@@ -751,3 +766,72 @@ Layout: `<TICKER>/*.html` = 10-K/10-Q/20-F · `<TICKER>/transcripts/*.md` = earn
 - **Apresentações (0):** —
 - **Equity calls (0):** —
 - **Briefings (email):** —
+
+## Financials — source inventories added 2026-10-31
+
+### JPM
+
+- **Wiki:** [JPM synthesis](_wiki/JPM.md).
+- **Archive:** 20 SEC filings and 11 transcript documents; [complete dated inventory](JPM/research/SOURCES.html) / [Markdown](JPM/SOURCES.md).
+- **Earnings and commentary:** separate company releases/supplements, cached sell-side research and source-quality labels in the inventory.
+
+### SPGI
+
+- **Wiki:** [SPGI synthesis](_wiki/SPGI.md).
+- **Archive:** 20 SEC filings and 8 transcript documents; [complete dated inventory](SPGI/research/SOURCES.html) / [Markdown](SPGI/SOURCES.md).
+- **Earnings and commentary:** separate company releases/supplements, cached sell-side research and source-quality labels in the inventory.
+
+### MCO
+
+- **Wiki:** [MCO synthesis](_wiki/MCO.md).
+- **Archive:** 20 SEC filings and 8 transcript documents; [complete dated inventory](MCO/research/SOURCES.html) / [Markdown](MCO/SOURCES.md).
+- **Earnings and commentary:** separate company releases/supplements, cached sell-side research and source-quality labels in the inventory.
+
+### BX
+
+- **Wiki:** [BX synthesis](_wiki/BX.md).
+- **Archive:** 20 SEC filings and 8 transcript documents; [complete dated inventory](BX/research/SOURCES.html) / [Markdown](BX/SOURCES.md).
+- **Earnings and commentary:** separate company releases/supplements, cached sell-side research and source-quality labels in the inventory.
+
+### KKR
+
+- **Wiki:** [KKR synthesis](_wiki/KKR.md).
+- **Archive:** 20 SEC filings and 9 transcript documents; [complete dated inventory](KKR/research/SOURCES.html) / [Markdown](KKR/SOURCES.md).
+- **Earnings and commentary:** separate company releases/supplements, cached sell-side research and source-quality labels in the inventory.
+
+### GS
+
+- **Wiki:** [GS synthesis](_wiki/GS.md).
+- **Archive:** 21 SEC filings and 8 transcript documents; [complete dated inventory](GS/research/SOURCES.html) / [Markdown](GS/SOURCES.md).
+- **Earnings and commentary:** separate company releases/supplements, cached sell-side research and source-quality labels in the inventory.
+
+### V
+
+- **Wiki:** [V synthesis](_wiki/V.md).
+- **Archive:** 20 SEC filings and 8 transcript documents; [complete dated inventory](V/research/SOURCES.html) / [Markdown](V/SOURCES.md).
+- **Earnings and commentary:** separate company releases/supplements, cached sell-side research and source-quality labels in the inventory.
+
+### MA
+
+- **Wiki:** [MA synthesis](_wiki/MA.md).
+- **Archive:** 20 SEC filings and 9 transcript documents; [complete dated inventory](MA/research/SOURCES.html) / [Markdown](MA/SOURCES.md).
+- **Earnings and commentary:** separate company releases/supplements, cached sell-side research and source-quality labels in the inventory.
+
+### APO
+
+- **Wiki:** [APO synthesis](_wiki/APO.md).
+- **Archive:** 20 SEC filings and 23 transcript documents; [complete dated inventory](APO/research/SOURCES.html) / [Markdown](APO/SOURCES.md).
+- **Earnings and commentary:** separate company releases/supplements, cached sell-side research and source-quality labels in the inventory.
+
+### HOOD
+
+- **Wiki:** [HOOD synthesis](_wiki/HOOD.md).
+- **Archive:** 21 SEC filings and 8 transcript documents; [complete dated inventory](HOOD/research/SOURCES.html) / [Markdown](HOOD/SOURCES.md).
+- **Earnings and commentary:** separate company releases/supplements, cached sell-side research and source-quality labels in the inventory.
+
+### COIN
+
+- **Wiki:** [COIN synthesis](_wiki/COIN.md).
+- **Archive:** 21 SEC filings and 9 transcript documents; [complete dated inventory](COIN/research/SOURCES.html) / [Markdown](COIN/SOURCES.md).
+- **Earnings and commentary:** separate company releases/supplements, cached sell-side research and source-quality labels in the inventory.
+

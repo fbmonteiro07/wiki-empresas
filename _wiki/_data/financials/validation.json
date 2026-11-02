@@ -1,0 +1,22 @@
+{
+  "as_of": "2026-11-01",
+  "checks": {
+    "search_counts": true,
+    "theme_exposes_all_11": true,
+    "all_financials_sector": true,
+    "no_self_broker_edges": true,
+    "local_links": true,
+    "main_hub_and_builder_unchanged": true,
+    "archive_file_and_hash_checks": true,
+    "last_eight_call_periods_complete": true,
+    "all_issuer_catalog_links_and_public_source_targets": true,
+    "dated_source_calls_match_archive": true,
+    "theme_relative_links_rebased": true,
+    "catalog_all_inventory_entries": true,
+    "catalog_all_11_filters": true,
+    "review_metadata_consistent": true
+  },
+  "issues": [],
+  "search_regression": "Passed isolated fixture: optional filing retention, manifest inclusion, discovery exclusion, deleted-file cleanup",
+  "review_log_note": "One incomplete trailing fragment retained in original passage log and recorded in review_log_parse_issues.json; it does not establish a document review."
+}

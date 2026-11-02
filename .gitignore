@@ -63,3 +63,10 @@ _wiki/_data/research/*/emails_review.txt
 # Broker client workbooks pulled for a single study — licensed source material, same
 # rule as `relatórios bons\` (archive stays off GitHub; P: mirror keeps them).
 _wiki/_data/retrieved/
+# Financials ingest (2026-10-31): raw inputs stay untracked (this repo is PUBLIC; the P: mirror
+# keeps them). EDGAR submissions JSON (46 MB, re-fetchable), scraped IR / third-party
+# transcript pages, and raw Outlook messages carrying full licensed report bodies.
+# The manifests, coverage ledger and audit JSONs (metadata only) ARE tracked.
+_wiki/_data/financials/submissions/
+_wiki/_data/financials/discovery/
+_wiki/_data/financials/email_review_*/[0-9][0-9].json

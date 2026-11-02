@@ -8,7 +8,7 @@ This indexes ALL of it into one FTS5 database so "everything anyone said about
 CPO connector attach rates" returns primary-source hits.
 
 Incremental: unchanged files (same mtime+size) are skipped, so daily re-runs
-after an ingest are fast. SEC filings are opt-in (--filings) — they are big,
+after an ingest are fast. SEC filings are opt-in (--filings), except the explicit Financials source manifests — they are big,
 boilerplate-heavy, and triple the index size.
 
     py "E:/Wiki Felipe empresas/_wiki/_tools/build_search_index.py"            # build/update
@@ -17,7 +17,7 @@ boilerplate-heavy, and triple the index size.
 
 Query it with search.py. DB: _wiki/_data/search.db (gitignored).
 """
-import sys, re, sqlite3, html as ihtml
+import sys, re, sqlite3, json, html as ihtml
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from _wlib import WIKI, DATA
@@ -78,6 +78,18 @@ def corpus():
         yield p, "report", ""
     for p in (WIKI / "_data" / "figures").glob("*.md"):
         yield p, "figure", ""
+    # Explicit research-universe filings stay searchable on normal nightly refreshes.
+    # The manifests carry issuer/form/date/provenance; do not infer filings from arbitrary HTML.
+    manifest_filings = set()
+    for manifest in (DATA / "financials").glob("*_filings.json"):
+        obj = json.loads(manifest.read_text(encoding="utf-8-sig"))
+        for row in obj.get("records", []):
+            if row.get("status") != "archived":
+                continue
+            p = ROOT / row["path"]
+            if p.is_file() and p.resolve().is_relative_to(ROOT.resolve()):
+                manifest_filings.add(p)
+                yield p, "filing", row["ticker"]
     for d in ROOT.iterdir():
         if not d.is_dir() or d.name in NOT_TICKERS or d.name.startswith("."):
             continue
@@ -85,9 +97,17 @@ def corpus():
         if tdir.is_dir():
             for p in tdir.glob("*.md"):
                 yield p, "transcript", d.name
+        # Direct children only: _discovery contains invitations and false-positive leads.
+        for dirname, pattern, kind in (("commentary", "*.md", "briefing"),
+                                       ("earnings", "*.txt", "earnings"),
+                                       ("research", "*.md", "report")):
+            for p in (d / dirname).glob(pattern):
+                if p.name != "SOURCES.md":
+                    yield p, kind, d.name
         if FILINGS:
             for p in d.glob("*.html"):
-                yield p, "filing", d.name
+                if p not in manifest_filings:
+                    yield p, "filing", d.name
 
 
 def main():
@@ -117,7 +137,7 @@ def main():
             txt = p.read_text(encoding="utf-8", errors="replace")
         except OSError:
             continue
-        if p.suffix.lower() == ".html":
+        if p.suffix.lower() in {".html", ".htm"}:
             txt = strip_html(txt)
         title = p.stem.replace("_", " ")
         con.execute("DELETE FROM docs WHERE path=?", (rel,))
@@ -127,7 +147,13 @@ def main():
                     (rel, st.st_mtime, st.st_size))
         added += 1
     # purge deleted files
-    gone = [r[0] for r in con.execute("SELECT path FROM meta").fetchall() if r[0] not in seen]
+    # A default refresh must not silently discard filings added with --filings.
+    retained_filings = set()
+    if not FILINGS:
+        retained_filings = {r[0] for r in con.execute("SELECT path FROM docs WHERE kind='filing'")
+                            if (ROOT / r[0]).is_file()}
+    gone = [r[0] for r in con.execute("SELECT path FROM meta").fetchall()
+            if r[0] not in seen and r[0] not in retained_filings]
     for rel in gone:
         con.execute("DELETE FROM docs WHERE path=?", (rel,))
         con.execute("DELETE FROM meta WHERE path=?", (rel,))

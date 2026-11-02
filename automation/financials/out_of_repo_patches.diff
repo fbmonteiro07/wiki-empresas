@@ -1,0 +1,153 @@
+# Out-of-repo script edits made for the Financials coverage (E:/.claude/scripts has no git).
+# build_wiki_html.py: diff vs the pre-financials copy (wiki links + source links + balance-sheet guard, 2026-10-31..11-02).
+--- a/build_wiki_html.py
++++ b/build_wiki_html.py
+@@ -14,6 +14,8 @@
+ import datetime
+ import html
+ import json
++import posixpath
++from urllib.parse import urlsplit, urlunsplit, unquote
+ import re
+ import sys
+ 
+@@ -185,11 +187,18 @@
+     head = "<tr><th>Metric</th>" + "".join(f"<th>{lbl}</th>" for lbl, _ in cols) + "</tr>"
+     a = c.get("actual") or {}
+     act = ""
+-    if a.get("ocf") is not None or a.get("capex") is not None:
++    # Bank / insurance balance sheets: OCF swings with trading assets and policyholder flows,
++    # and EV carries deposits/insurance debt -- neither FCF nor EV multiples mean anything.
++    bsheet = t in BALANCE_SHEET_FIN
++    if bsheet:
++        act = ('<p class="byline">Balance-sheet financial: OCF/FCF and EV multiples are not '
++               'meaningful here (trading assets, deposits, insurance liabilities) — read P/E and the '
++               'company-defined measures on the page.</p>')
++    elif a.get("ocf") is not None or a.get("capex") is not None:
+         act = (f'<p class="byline">Last reported FY (actual): OCF {mny(a.get("ocf"))} · '
+                f'Capex {mny(a.get("capex"))} · FCF {mny(a.get("fcf"))}.</p>')
+     # valuation multiples — fwd P/E from px+EPS (always); EV multiples when mktcap/EV present
+-    px = c.get("px"); ev = c.get("ev")
++    px = c.get("px"); ev = None if bsheet else c.get("ev")
+     cy26 = P.get("CY2026") or {}; cy27 = P.get("CY2027") or {}
+ 
+     def mult(num, den):
+@@ -205,7 +214,7 @@
+         vbits.append(f"EV/EBITDA CY26 <b>{mult(ev, cy26.get('ebitda'))}</b> · EV/Sales CY26 <b>{mult(ev, cy26.get('rev'))}</b>")
+     pxs = (f"{cur}{px:,.2f}" if px and px < 1000 else f"{cur}{px:,.0f}") if px else "—"
+     val = (f'<p class="byline">Valuation (last px {pxs}): {" · ".join(vbits)}.'
+-           + ("" if ev else " <span class=\"hi\">EV multiples pending BBG.</span>") + "</p>") if vbits else ""
++           + ("" if ev or bsheet else " <span class=\"hi\">EV multiples pending BBG.</span>") + "</p>") if vbits else ""
+     note = (f'<p class="byline">BBG consensus, as of {est.get("asof","")} · figures in {cur}{unit} '
+             f'(EPS in {cur}, margin %). <span class="hi">Green = street-high</span> (capex high = max spend). '
+             f'CY = calendar-year (BBG actuals for reported quarters + consensus for the rest; fiscal quarters '
+@@ -238,6 +247,46 @@
+ 
+ 
+ ROOT = WIKI.parent
++
++# Public provenance for Financials; keep local copies usable in offline file mode.
++_source_inventory = WIKI / "_data" / "financials" / "source_inventory.json"
++FINANCIALS_SOURCES = {}
++# Banks and insurance-consolidating alt managers: render_financials drops OCF/FCF and EV multiples.
++BALANCE_SHEET_FIN = {"JPM", "GS", "KKR", "APO"}
++if _source_inventory.is_file():
++    for _record in json.loads(_source_inventory.read_text(encoding="utf-8-sig")).get("records", []):
++        for _key in ("path", "text_path", "original_path"):
++            if _record.get(_key):
++                FINANCIALS_SOURCES[_record[_key].replace("\\", "/")] = _record
++
++
++def financials_source_links(body):
++    def link(match):
++        href = html.unescape(match.group(1))
++        url = urlsplit(href)
++        if url.scheme or url.netloc or href.startswith(("/", "#")):
++            return match.group(0)
++        path = posixpath.normpath(posixpath.join("_wiki", unquote(url.path)))
++        source = FINANCIALS_SOURCES.get(path)
++        if not source:
++            return match.group(0)
++        public = source.get("source_url")
++        if not public or urlsplit(public).scheme not in ("http", "https"):
++            public = "_dashboards/financials-sources.html#" + source["ticker"]
++        return match.group(0) + ' data-public-url="' + html.escape(public, quote=True) + '"'
++    return re.sub(r'<a href="([^"]+)"', link, body)
++
++
++def rebase_theme_links(body):
++    def link(match):
++        href = html.unescape(match.group(1))
++        url = urlsplit(href)
++        if url.scheme or url.netloc or href.startswith(("/", "#", "?")):
++            return match.group(0)
++        path = posixpath.normpath(posixpath.join("themes", url.path))
++        rebased = urlunsplit((url.scheme, url.netloc, path, url.query, url.fragment))
++        return '<a href="' + html.escape(rebased, quote=True) + '"'
++    return re.sub(r'<a href="([^"]+)"', link, body)
+ INTRA_RE = re.compile(r"intra-quarter|in the inbox", re.I)
+ TRANS_RE = re.compile(r"management commentary", re.I)
+ 
+@@ -249,7 +298,8 @@
+     files = []
+     for f in d.glob("*.md"):
+         m = re.search(r"(20\d\d-\d\d-\d\d)", f.name)
+-        files.append((m.group(1) if m else "", f))
++        source = FINANCIALS_SOURCES.get(f.relative_to(ROOT).as_posix(), {})
++        files.append((source.get("date") or (m.group(1) if m else ""), f))
+     if not files:
+         return ""
+     rows = []
+@@ -545,7 +595,7 @@
+     for t in pages:
+         pages[t]["html"] = rewrite(pages[t]["html"])
+     for s in themes:
+-        themes[s]["html"] = rewrite(themes[s]["html"])
++        themes[s]["html"] = rebase_theme_links(rewrite(themes[s]["html"]))
+ 
+     # theme back-links: company -> themes that reference it (parse rewritten theme HTML for show('TICKER'))
+     comp2themes = {}
+@@ -637,6 +687,8 @@
+     for slug, th in themes.items():
+         page_divs.append(f'<div class="page" id="p-TH-{slug}" style="display:none">{th["html"]}</div>')
+ 
++    page_divs = [financials_source_links(body) for body in page_divs]
++
+     tpl = r"""<!DOCTYPE html>
+ <html lang="en"><head><meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+@@ -811,6 +863,7 @@
+   document.querySelectorAll('.page').forEach(function(p){p.style.display='none'});
+   var el=document.getElementById('p-'+t);
+   if(el){el.style.display='block';
++    if(location.hash !== '#'+t){history.replaceState(null,'','#'+encodeURIComponent(t));}
+     // reset this page's tabs to the first (Overview) on navigation
+     var tabs=el.querySelectorAll('.tab'),panes=el.querySelectorAll('.cpane');
+     tabs.forEach(function(b,i){b.classList.toggle('on',i===0)});
+@@ -874,6 +927,18 @@
+   });
+   rows.forEach(function(r){tb.appendChild(r);});
+ }
++// The LAN server intentionally excludes raw archives; use original publisher sources there.
++if(location.protocol==='http:' || location.protocol==='https:'){
++  document.querySelectorAll('a[data-public-url]').forEach(function(a){a.href=a.dataset.publicUrl;});
++}
++// Direct page links preserve the existing layout and let source inventories return to an issuer.
++function openLinkedPage(){
++  var t;
++  try{t=decodeURIComponent(location.hash.slice(1));}catch(e){return;}
++  if(t && document.getElementById('p-'+t)){show(t);}
++}
++window.addEventListener('hashchange',openLinkedPage);
++openLinkedPage();
+ </script></body></html>"""
+     out = (tpl.replace("__SIDEBAR__", sidebar)
+               .replace("__SUBTITLE__", f"{len(pages)} companies · {len(themes)} themes")
+# fetch_estimates.py: batch 16 (2026-11-02)
+78:           # batch 16 - 2026-11-02: Financials coverage initiated 2026-10-31 (themes/financials.md).
+79-           # The build's terminal connection timed out, so the 11 pages went live with no
+80-           # consensus on file. Banks/alts/networks have no gross margin, EBITDA or capex
+81-           # consensus on the wrapper -- those lines come back empty, by design.
+82-           "JPM","GS","SPGI","MCO","BX","KKR","APO","V","MA","HOOD","COIN"]
+83-# non-US primary listings — override the default "<T> US Equity"
+84-BBG_TKR = {"IFX": "IFX GR Equity", "AIXA": "AIXA GR Equity",

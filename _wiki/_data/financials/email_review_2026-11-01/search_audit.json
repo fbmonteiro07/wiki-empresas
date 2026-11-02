@@ -1,0 +1,440 @@
+{
+  "recorded": "2026-11-01",
+  "scope": "Targeted live Outlook searches for 2026 year to date; selected research messages read. Not an exhaustive mailbox or linked-PDF review.",
+  "queries": [
+    {
+      "key": "JPM",
+      "query": "subject:\"JPMorgan Chase\" received>=2026-01-01 received<=2026-11-01",
+      "returned": 5,
+      "has_more": false,
+      "next_from_index": null
+    },
+    {
+      "key": "SPGI",
+      "query": "subject:\"S&P Global\" received>=2026-01-01 received<=2026-11-01",
+      "returned": 25,
+      "has_more": true,
+      "next_from_index": 25
+    },
+    {
+      "key": "MCO",
+      "query": "subject:Moody received>=2026-01-01 received<=2026-11-01",
+      "returned": 25,
+      "has_more": true,
+      "next_from_index": 25
+    },
+    {
+      "key": "BX",
+      "query": "subject:Blackstone received>=2026-01-01 received<=2026-11-01",
+      "returned": 25,
+      "has_more": true,
+      "next_from_index": 25
+    },
+    {
+      "key": "KKR",
+      "query": "subject:KKR received>=2026-01-01 received<=2026-11-01",
+      "returned": 25,
+      "has_more": true,
+      "next_from_index": 25
+    },
+    {
+      "key": "GS",
+      "query": "subject:\"Goldman Sachs Group\" received>=2026-01-01 received<=2026-11-01",
+      "returned": 3,
+      "has_more": false,
+      "next_from_index": null
+    },
+    {
+      "key": "V",
+      "query": "subject:Visa received>=2026-01-01 received<=2026-11-01",
+      "returned": 25,
+      "has_more": true,
+      "next_from_index": 25
+    },
+    {
+      "key": "MA",
+      "query": "subject:Mastercard received>=2026-01-01 received<=2026-11-01",
+      "returned": 25,
+      "has_more": true,
+      "next_from_index": 25
+    },
+    {
+      "key": "APO",
+      "query": "subject:Apollo received>=2026-01-01 received<=2026-11-01",
+      "returned": 18,
+      "has_more": false,
+      "next_from_index": null
+    },
+    {
+      "key": "HOOD",
+      "query": "subject:Robinhood received>=2026-01-01 received<=2026-11-01",
+      "returned": 25,
+      "has_more": true,
+      "next_from_index": 25
+    },
+    {
+      "key": "COIN",
+      "query": "subject:Coinbase received>=2026-01-01 received<=2026-11-01",
+      "returned": 21,
+      "has_more": false,
+      "next_from_index": null
+    },
+    {
+      "key": "SPGI_ticker",
+      "query": "subject:SPGI received>=2026-01-01 received<=2026-11-01",
+      "returned": 18,
+      "has_more": false,
+      "next_from_index": null
+    },
+    {
+      "key": "MCO_ticker",
+      "query": "subject:MCO received>=2026-01-01 received<=2026-11-01",
+      "returned": 16,
+      "has_more": false,
+      "next_from_index": null
+    },
+    {
+      "key": "BX_ticker",
+      "query": "subject:BX received>=2026-01-01 received<=2026-11-01",
+      "returned": 25,
+      "has_more": true,
+      "next_from_index": 25
+    },
+    {
+      "key": "APO_ticker",
+      "query": "subject:APO received>=2026-01-01 received<=2026-11-01",
+      "returned": 25,
+      "has_more": true,
+      "next_from_index": 25
+    },
+    {
+      "key": "HOOD_ticker",
+      "query": "subject:HOOD received>=2026-01-01 received<=2026-11-01",
+      "returned": 25,
+      "has_more": true,
+      "next_from_index": 25
+    },
+    {
+      "key": "COIN_ticker",
+      "query": "subject:COIN received>=2026-01-01 received<=2026-11-01",
+      "returned": 25,
+      "has_more": true,
+      "next_from_index": 25
+    },
+    {
+      "key": "JPM_ticker",
+      "query": "subject:JPM from:jason.goldberg@barclays.com received>=2026-01-01 received<=2026-11-01",
+      "returned": 3,
+      "has_more": false,
+      "next_from_index": null
+    },
+    {
+      "key": "MCO_redburn",
+      "query": "MCO from:anil.sharma@spec-sales.gms.rothschildandco.com received>=2026-01-01 received<=2026-11-01",
+      "returned": 0,
+      "has_more": false,
+      "next_from_index": null
+    }
+  ],
+  "selected": [
+    {
+      "archive_index": 0,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWY3uDaAAA=",
+      "subject": "JPMorgan Chase & Co.: 3Q26 EPS REVIEW: A rare EPS miss but 2027 NII trending much higher, costs close",
+      "received": "2026-10-14T03:09:13Z",
+      "tickers": [
+        "JPM"
+      ]
+    },
+    {
+      "archive_index": 1,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWTre2_AAA=",
+      "subject": "JPMorgan Chase & Co.: 3Q26 EPS PREVIEW: Markets activity tracking above peers in 3Q26",
+      "received": "2026-10-06T04:14:22Z",
+      "tickers": [
+        "JPM"
+      ]
+    },
+    {
+      "archive_index": 2,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWY3uDIAAA=",
+      "subject": "Goldman Sachs Group Inc.: 3Q26 EPS REVIEW: From top decile to top quartile capital markets backdrop",
+      "received": "2026-10-14T00:46:02Z",
+      "tickers": [
+        "GS"
+      ]
+    },
+    {
+      "archive_index": 3,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWTre29AAA=",
+      "subject": "Goldman Sachs Group Inc.: 3Q26 EPS PREVIEW: Expenses, provision, investments and softer FICC to weigh",
+      "received": "2026-10-06T04:13:45Z",
+      "tickers": [
+        "GS"
+      ]
+    },
+    {
+      "archive_index": 4,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWgU6dJAAA=",
+      "subject": "**JEF AM FIG PICKS & PANZ 10/27/26 --- PYPL, TRU, SPGI, IVZ First Looks..........Insurance Earnings: HIG, BRO, PFG.........Fannon Part 2 - The Rise of AGENTIC TRADING.......",
+      "received": "2026-10-27T11:56:09Z",
+      "tickers": [
+        "SPGI"
+      ]
+    },
+    {
+      "archive_index": 5,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAV6-YxcAAA=",
+      "subject": "**JEF AM FIG PICKS & PANZ 9/2/26 --- SPGI Bull vs Bear.......AFRM T+3.......LifeCos - Suneet 1-Liners",
+      "received": "2026-09-02T12:29:41Z",
+      "tickers": [
+        "SPGI"
+      ]
+    },
+    {
+      "archive_index": 6,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAVIDljrAAA=",
+      "subject": "R&Co US Riser: 155g Info Services Report - SPGI, MSCI (Both Buy), LSEG, MCO, MORN, VRSK (All Neutral), FDS (Sell), CRO Sector Report, Ametek, Union Pacific, Certara, Wise (All Buy), Clorox (Neutral), Alternative Asset Managers, Charts, IDEAS",
+      "received": "2026-06-18T12:56:35Z",
+      "tickers": [
+        "SPGI",
+        "MCO"
+      ]
+    },
+    {
+      "archive_index": 7,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWc_d2zAAA=",
+      "subject": "**JEF AM FIG PICKS & PANZ 10/21/26 --- META Preview = Buy COF?!?...........First Look CB, MCO, NTRS, CME, SF........EWBC Follow-Up",
+      "received": "2026-10-21T11:54:39Z",
+      "tickers": [
+        "MCO"
+      ]
+    },
+    {
+      "archive_index": 8,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAVgnAUOAAA=",
+      "subject": "**JEF AM FIG PICKS & PANZ 7/22/26 --- First Look MCO, NTRS, CME, SF............Focus Names = SCHW, COF, CB, EWBC...........Also = IBKR/MSCI/EFX Follow-Ups",
+      "received": "2026-07-22T12:12:54Z",
+      "tickers": [
+        "MCO"
+      ]
+    },
+    {
+      "archive_index": 9,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWe9D3QAAA=",
+      "subject": "**JEF AM FIG PICKS & PANZ 10/23/26 --- BX Bull/Bear, SLM Follow-Up, AXP, FLG, FCNCA, KNSL",
+      "received": "2026-10-23T11:53:02Z",
+      "tickers": [
+        "BX"
+      ]
+    },
+    {
+      "archive_index": 10,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWehL5KAAA=",
+      "subject": "**JEF AM FIG PICKS & PANZ 10/22/26 --- BX, HBAN, NDAQ",
+      "received": "2026-10-22T12:05:15Z",
+      "tickers": [
+        "BX"
+      ]
+    },
+    {
+      "archive_index": 11,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWbowjjAAA=",
+      "subject": "**JEF AM FIG PICKS & PANZ 10/19/26 --- Into BX, COF, SYF, Other Earnings 1-Liners........Perps - Fannon Part 4, Latest Vol Trends.......Insurance Brokers - Andersen BWIN Proxy Takeaways",
+      "received": "2026-10-19T12:22:22Z",
+      "tickers": [
+        "BX"
+      ]
+    },
+    {
+      "archive_index": 12,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWOYV-JAAA=",
+      "subject": "R&Co US Riser: AgChem Deep-Dive, Mercado Libre, Nubank (both Buy), Travel Technology new notes; KKR, Fermi (both Buy), Circle, Snowflake (both Sell), Economics, US Gambling, Charts, IDEAS",
+      "received": "2026-09-28T12:29:19Z",
+      "tickers": [
+        "KKR"
+      ]
+    },
+    {
+      "archive_index": 13,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAV6_b9WAAA=",
+      "subject": "GS Financials & REITs Sector Specialist: Afternoon update/inbounds .. Feedback KKR/AON + AFRM",
+      "received": "2026-08-31T18:02:16Z",
+      "tickers": [
+        "KKR"
+      ]
+    },
+    {
+      "archive_index": 14,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAV6_b7kAAA=",
+      "subject": "**JEF AM FIG PICKS & PANZ 8/31/26 --- #Stuff - AON/KKR, Debasement, 9th Circuit, BX Subs, H8...........ICE - Fannon CFO NDR Recap Post MKTX Deal Announcement",
+      "received": "2026-08-31T12:30:44Z",
+      "tickers": [
+        "KKR"
+      ]
+    },
+    {
+      "archive_index": 15,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWTre5rAAA=",
+      "subject": "R&Co US Riser: 215pg US Defense Launch; Solventum (Sell), Walmart (Buy), & FICO (Neutral) new reports; Apollo, Meta, Nvidia (all Buy), Pinterest, Snowflake (both Sell), US Gambling, Charts, IDEAS",
+      "received": "2026-10-06T12:51:10Z",
+      "tickers": [
+        "APO"
+      ]
+    },
+    {
+      "archive_index": 16,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAVqCGrkAAA=",
+      "subject": "R&Co US Riser: Ingram Micro (Buy) Executing Well, Ametek, Apollo, Bruker, CCEP, Certara, KMB, Merck, TKO, Waters, Zebra Technologies (all Buy), Caterpillar, Clorox, IDEXX, McDonalds, Pfizer, Rockwell, Spotify (all Neutral), Charts, IDEAS",
+      "received": "2026-08-04T12:49:01Z",
+      "tickers": [
+        "APO"
+      ]
+    },
+    {
+      "archive_index": 17,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAU3-KV_AAA=",
+      "subject": "Financials Daily US AM... Apollo (Buy) Is It Time?",
+      "received": "2026-05-21T12:45:07Z",
+      "tickers": [
+        "APO"
+      ]
+    },
+    {
+      "archive_index": 18,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWibtXnAAA=",
+      "subject": "Visa (Buy): The New Normal",
+      "received": "2026-10-28T06:42:01Z",
+      "tickers": [
+        "V"
+      ]
+    },
+    {
+      "archive_index": 19,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWgVs97AAA=",
+      "subject": "Visa Inc.: F4Q26 Earnings Recap",
+      "received": "2026-10-28T04:24:46Z",
+      "tickers": [
+        "V"
+      ]
+    },
+    {
+      "archive_index": 20,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWgVs94AAA=",
+      "subject": "IDEA: Visa Inc. (V.N): Resilient Core Trends, Emerging Growth Vectors, & VAS Durability",
+      "received": "2026-10-28T04:17:47Z",
+      "tickers": [
+        "V"
+      ]
+    },
+    {
+      "archive_index": 21,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWgVs9VAAA=",
+      "subject": "Visa Inc. (V): F4Q26 Key Takeaways: Relatively inline 4Q with F2027 outlook sustaining strong performance",
+      "received": "2026-10-28T02:04:33Z",
+      "tickers": [
+        "V"
+      ]
+    },
+    {
+      "archive_index": 22,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWjo_PQAAA=",
+      "subject": "IDEA: MasterCard Inc (MA.N): Resilient Core + More Ways to Win",
+      "received": "2026-10-30T04:14:08Z",
+      "tickers": [
+        "MA"
+      ]
+    },
+    {
+      "archive_index": 23,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWi-x1kAAA=",
+      "subject": "Mastercard Inc.: 3Q26 Earnings Recap",
+      "received": "2026-10-29T21:37:47Z",
+      "tickers": [
+        "MA"
+      ]
+    },
+    {
+      "archive_index": 24,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWi-x08AAA=",
+      "subject": "Mastercard Inc. (MA): 3Q26 Key Takeaways: Solid quarter with bull case remaining intact",
+      "received": "2026-10-29T20:31:58Z",
+      "tickers": [
+        "MA"
+      ]
+    },
+    {
+      "archive_index": 25,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWi-xzOAAA=",
+      "subject": "Mastercard (Buy): Europe is fine",
+      "received": "2026-10-29T16:25:42Z",
+      "tickers": [
+        "MA"
+      ]
+    },
+    {
+      "archive_index": 26,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWgVs9iAAA=",
+      "subject": "Robinhood Markets Inc. (HOOD): Modest core beat, and constructive platform growth, although slightly weaker transaction revenue outlook",
+      "received": "2026-10-28T03:15:01Z",
+      "tickers": [
+        "HOOD"
+      ]
+    },
+    {
+      "archive_index": 27,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWgU6XPAAA=",
+      "subject": "Prediction Markets: *New deep dive* sizes the opportunity for Kalshi, Polymarket, Robinhood (Sell), IBKR (Buy) + more",
+      "received": "2026-10-26T14:41:17Z",
+      "tickers": [
+        "HOOD"
+      ]
+    },
+    {
+      "archive_index": 28,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAV-gpVuAAA=",
+      "subject": "Robinhood Markets Inc. (HOOD): Sensitizing growth potential and value in HOOD's scaling Rothera prediction markets exchange",
+      "received": "2026-09-08T01:24:24Z",
+      "tickers": [
+        "HOOD"
+      ]
+    },
+    {
+      "archive_index": 29,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWibtYQAAA=",
+      "subject": "BERNSTEIN * HOOD Q3: Record volumes & pricing trade-offs; prediction markets and new products to drive next leg of growth",
+      "received": "2026-10-28T08:45:09Z",
+      "tickers": [
+        "HOOD"
+      ]
+    },
+    {
+      "archive_index": 30,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWjo_PCAAA=",
+      "subject": "Coinbase Global Inc. (COIN): Robust expense discipline and growth in newer products, offset by weaker near-term revenue outlook",
+      "received": "2026-10-30T04:03:05Z",
+      "tickers": [
+        "COIN"
+      ]
+    },
+    {
+      "archive_index": 31,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWBvc51AAA=",
+      "subject": "Coinbase Global Inc. (COIN): COIN: Communacopia + Technology 2026 — Key Takeaways",
+      "received": "2026-09-09T20:39:54Z",
+      "tickers": [
+        "COIN"
+      ]
+    },
+    {
+      "archive_index": 32,
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWjo_PhAAA=",
+      "subject": "BERNSTEIN * COIN Q3: Prediction markets, derivatives emerging as new growth drivers",
+      "received": "2026-10-30T05:56:32Z",
+      "tickers": [
+        "COIN"
+      ]
+    }
+  ],
+  "fetched_unique_messages": 33
+}
