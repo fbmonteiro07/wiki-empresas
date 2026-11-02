@@ -41,6 +41,8 @@ ALIASES = {
     "moody's": "MCO", "moodys": "MCO", "blackstone": "BX", "goldman sachs": "GS",
     "visa": "V", "mastercard": "MA", "apollo": "APO", "robinhood": "HOOD", "coinbase": "COIN",
     "equifax": "EFX", "transunion": "TRU", "trans union": "TRU",
+    "cme group": "CME", "intercontinental exchange": "ICE", "cboe": "CBOE", "nasdaq inc": "NDAQ",
+    "blue owl": "OWL", "blackrock": "BLK",
 }
 
 

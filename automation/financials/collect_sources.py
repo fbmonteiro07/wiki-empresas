@@ -4,9 +4,9 @@ from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[2]
 DATA=ROOT/'_wiki'/'_data'/'financials'
-ASOF=os.environ.get('FIN_ASOF','2026-10-31')  # 2026-11-02 additions (MSCI/EFX/TRU) run with FIN_ASOF=2026-11-02
+ASOF=os.environ.get('FIN_ASOF','2026-10-31')  # 2026-11-02 additions (MSCI/EFX/TRU; CME/ICE/CBOE/NDAQ/OWL/BLK) run with FIN_ASOF=2026-11-02
 CUTOFF='2021-10-31'
-CO={'JPM':('JPMorgan Chase & Co.','NYSE'),'SPGI':('S&P Global Inc.','NYSE'),'MCO':("Moody's Corporation",'NYSE'),'BX':('Blackstone Inc.','NYSE'),'KKR':('KKR & Co. Inc.','NYSE'),'GS':('The Goldman Sachs Group, Inc.','NYSE'),'V':('Visa Inc.','NYSE'),'MA':('Mastercard Incorporated','NYSE'),'APO':('Apollo Global Management, Inc.','NYSE'),'HOOD':('Robinhood Markets, Inc.','NASDAQ'),'COIN':('Coinbase Global, Inc.','NASDAQ'),'MSCI':('MSCI Inc.','NYSE'),'EFX':('Equifax Inc.','NYSE'),'TRU':('TransUnion','NYSE')}
+CO={'JPM':('JPMorgan Chase & Co.','NYSE'),'SPGI':('S&P Global Inc.','NYSE'),'MCO':("Moody's Corporation",'NYSE'),'BX':('Blackstone Inc.','NYSE'),'KKR':('KKR & Co. Inc.','NYSE'),'GS':('The Goldman Sachs Group, Inc.','NYSE'),'V':('Visa Inc.','NYSE'),'MA':('Mastercard Incorporated','NYSE'),'APO':('Apollo Global Management, Inc.','NYSE'),'HOOD':('Robinhood Markets, Inc.','NASDAQ'),'COIN':('Coinbase Global, Inc.','NASDAQ'),'MSCI':('MSCI Inc.','NYSE'),'EFX':('Equifax Inc.','NYSE'),'TRU':('TransUnion','NYSE'),'CME':('CME Group Inc.','NASDAQ'),'ICE':('Intercontinental Exchange, Inc.','NYSE'),'CBOE':('Cboe Global Markets, Inc.','BATS'),'NDAQ':('Nasdaq, Inc.','NASDAQ'),'OWL':('Blue Owl Capital Inc.','NYSE'),'BLK':('BlackRock, Inc.','NYSE')}
 LOCK=threading.Lock()
 LAST=0.0
 TLS=ssl.create_default_context()

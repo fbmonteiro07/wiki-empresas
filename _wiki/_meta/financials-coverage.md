@@ -1,8 +1,8 @@
 # Financials — source coverage and remaining gaps
 
-_Recorded 2026-11-01; MSCI, EFX and TRU added 2026-11-02. Derived from local ingestion manifests and file/hash checks; not a claim that all archived pages were read._
+_Recorded 2026-11-01; MSCI, EFX and TRU added 2026-11-02, then CME, ICE, CBOE, NDAQ, OWL and BLK the same day. Derived from local ingestion manifests and file/hash checks; not a claim that all archived pages were read._
 
-**Archive totals:** 284 SEC filings; 133 transcript documents covering 125 distinct issuer-quarter calls; 71 earnings exhibits; 378 company-commentary entries from 293 distinct emails. Cached/live versions and cross-company copies can appear as separate documents; identities are deduplicated for the email count.
+**Archive totals:** 411 SEC filings; 181 transcript documents covering 173 distinct issuer-quarter calls; 107 earnings exhibits; 450 company-commentary entries from 332 distinct emails. Cached/live versions and cross-company copies can appear as separate documents; identities are deduplicated for the email count.
 
 [Financials overview](../themes/financials.md) · [Machine-readable coverage](../_data/financials/coverage.json) · [Complete source/provenance ledger](../_data/financials/source_inventory.json)
 
@@ -22,13 +22,19 @@ _Recorded 2026-11-01; MSCI, EFX and TRU added 2026-11-02. Derived from local ing
 | [MSCI](../MSCI.md) | 20 | 8 / 8 | 4 | 10 | 2026-09-30 / 2026-10-20 | [Sources](../_dashboards/financials-sources.html#MSCI) |
 | [EFX](../EFX.md) | 20 | 8 / 8 | 4 | 20 | 2026-09-30 / 2026-10-20 | [Sources](../_dashboards/financials-sources.html#EFX) |
 | [TRU](../TRU.md) | 21 | 8 / 8 | 8 | 14 | 2026-09-30 / 2026-10-27 | [Sources](../_dashboards/financials-sources.html#TRU) |
+| [CME](../CME.md) | 21 | 8 / 8 | 4 | 19 | 2026-09-30 / 2026-10-23 | [Sources](../_dashboards/financials-sources.html#CME) |
+| [ICE](../ICE.md) | 24 | 8 / 8 | 4 | 14 | 2026-09-30 / 2026-10-29 | [Sources](../_dashboards/financials-sources.html#ICE) |
+| [CBOE](../CBOE.md) | 20 | 8 / 8 | 4 | 10 | 2026-09-30 / 2026-10-30 | [Sources](../_dashboards/financials-sources.html#CBOE) |
+| [NDAQ](../NDAQ.md) | 21 | 8 / 8 | 8 | 14 | 2026-09-30 / 2026-10-22 | [Sources](../_dashboards/financials-sources.html#NDAQ) |
+| [OWL](../OWL.md) | 21 | 8 / 8 | 8 | 10 | 2026-09-30 / 2026-10-30 | [Sources](../_dashboards/financials-sources.html#OWL) |
+| [BLK](../BLK.md) | 20 | 8 / 8 | 8 | 5 | 2026-06-30 / 2026-08-06 | [Sources](../_dashboards/financials-sources.html#BLK) |
 
 ## What the counts mean
 
-- SEC: original 10-K, 10-Q and amendments filed within 2021-10-31–2026-10-31 (through 2026-11-02 for MSCI, EFX and TRU), including two separately identified Apollo predecessor filings. Source dates, fiscal periods, accessions, original URLs and hashes are preserved.
+- SEC: original 10-K, 10-Q and amendments filed within 2021-10-31–2026-10-31 (through 2026-11-02 for the nine names added that day), including two separately identified Apollo predecessor filings and twelve BlackRock filings from its pre-reorganization registrant. Source dates, fiscal periods, accessions, original URLs and hashes are preserved.
 - Calls: at least the latest eight reported quarters per issuer; duplicate company/third-party copies and Coinbase prepared remarks are counted as documents but not extra quarters. Apollo has company-hosted history back to Q1 2022.
 - Earnings: SEC-filed 2026 releases and supplements; multiple exhibits can belong to one result.
-- Commentary: subject-screened cached candidates plus 33 selected live Outlook messages reviewed on 2026-11-01 (36 company-specific copies). The old collection truncated long bodies. The live collection preserves the connector-returned body, but neither guarantees the linked report was obtained. False matches and invitations are preserved under _discovery and excluded. This was a targeted 2026 year-to-date search; pagination remains available for broader historical review. MSCI, EFX and TRU (added 2026-11-02) rest on cached excerpts: the Outlook desktop body export stalled that day, so their live reads are cited on the pages as Outlook links rather than archived.
+- Commentary: subject-screened cached candidates plus 33 selected live Outlook messages reviewed on 2026-11-01 (36 company-specific copies). The old collection truncated long bodies. The live collection preserves the connector-returned body, but neither guarantees the linked report was obtained. False matches and invitations are preserved under _discovery and excluded. This was a targeted 2026 year-to-date search; pagination remains available for broader historical review. The nine names added 2026-11-02 (MSCI, EFX, TRU, CME, ICE, CBOE, NDAQ, OWL, BLK) rest on cached excerpts: the Outlook desktop body export stalled that day, so their live reads are cited on the pages as Outlook links rather than archived.
 - Reviewed: the synthesis uses the latest result, selected guidance/Q&A, historical management context, relevant filing disclosures and identified sell-side commentary. Cited/selected-passage status is recorded separately from mere availability. [Passage-emission log](../_data/financials/review_passages.jsonl) is a navigation aid, not proof of full-document review.
 
 ## Live email review audit
@@ -37,9 +43,9 @@ _Recorded 2026-11-01; MSCI, EFX and TRU added 2026-11-02. Derived from local ing
 
 ## Open items
 
-- Bloomberg consensus: resolved 2026-11-02. All 14 issuers were pulled from the local terminal into `estimates.json`. The CY lines take reported quarters from back-period BEst values from Bloomberg, which can differ from reported results (GS CY26 EPS $59.53 vs FY26 consensus $71.75), so cite the FY lines. Matched-basis valuation models and house targets are still open. (Was, 2026-11-01: none of these issuers was in the estimates cache because the terminal connection timed out.)
+- Bloomberg consensus: resolved 2026-11-02. All 20 issuers were pulled from the local terminal into `estimates.json`. The CY lines take reported quarters from back-period BEst values from Bloomberg, which can differ from reported results (GS CY26 EPS $59.53 vs FY26 consensus $71.75), so cite the FY lines. Matched-basis valuation models and house targets are still open. (Was, 2026-11-01: none of these issuers was in the estimates cache because the terminal connection timed out.)
 - Q3 releases for APO (November 3) and KKR (November 9) were future events at the cut-off.
-- JPM, GS and BX have Q3 earnings releases but only Q2 10-Qs filed by this cut-off. Visa has FY2026 results but the latest filed 10-K is FY2025.
+- JPM, GS, BX and BLK have Q3 earnings releases but only Q2 10-Qs filed by this cut-off. Visa has FY2026 results but the latest filed 10-K is FY2025.
 - Third-party transcript errors, inherited PDF extraction artifacts and cached-email truncation remain possible. Load-bearing current numbers were checked against the company release; original documents remain available.
 - Two unsuccessful discovery URLs are retained in the manifests: an old BX MarketBeat link and a guessed Coinbase Q&A PDF. Recent-quarter coverage is complete using the other archived sources.
 - Full historical reading, matched-basis valuation models and exhaustive retrieval of every past conference appearance are not claimed.

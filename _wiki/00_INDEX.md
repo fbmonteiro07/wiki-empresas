@@ -6,7 +6,7 @@
 >
 > 🔎 **Full-corpus search** (reports + calls + briefings + transcripts + Stratechery + DAMNANG, not just wiki pages): `py "_wiki/_tools/search.py" <query>` (index: `py "_wiki/_tools/build_search_index.py"`).
 
-_Generated 2026-11-02 by `_tools/build_index.py` from [`_data/index_meta.json`](_data/index_meta.json) (hand-edit the json, not this file) · **123 companies + 2 private AI labs (125 pages)** · one page per ticker synthesizing all co-located sources in `E:\Wiki Felipe`: filings (10-K/10-Q/20-F) + earnings transcripts + investor-day decks + thematic equity calls (`_equity_calls`) + per-ticker roll-up of the email briefings (`_briefings/by-ticker`) + BBG consensus & street-high estimates (`_data/estimates.json`)._
+_Generated 2026-11-02 by `_tools/build_index.py` from [`_data/index_meta.json`](_data/index_meta.json) (hand-edit the json, not this file) · **129 companies + 2 private AI labs (131 pages)** · one page per ticker synthesizing all co-located sources in `E:\Wiki Felipe`: filings (10-K/10-Q/20-F) + earnings transcripts + investor-day decks + thematic equity calls (`_equity_calls`) + per-ticker roll-up of the email briefings (`_briefings/by-ticker`) + BBG consensus & street-high estimates (`_data/estimates.json`)._
 
 Each page follows the [_TEMPLATE](_TEMPLATE.md): Snapshot · Current state (latest quarter) · Debate (bull/bear + where the sell-side stands, attributed + dated) · Catalysts · Risks · Consensus estimates (BBG) · Sources (links). Archive master index: [../INDEX.md](../INDEX.md). Thematic pages: [themes/00_THEMES.md](themes/00_THEMES.md).
 
@@ -195,10 +195,16 @@ Each page follows the [_TEMPLATE](_TEMPLATE.md): Snapshot · Current state (late
 | V | [V](V.md) | Global payment network; value-added services and new flows versus client incentives and alternative payment rails. |
 | MA | [MA](MA.md) | Payment network and services; cross-border activity and service attachment versus incentives and regulatory pressure. |
 | APO | [APO](APO.md) | Origination, asset management and Athene; capital formation and spread earnings versus credit, liquidity and funding risk. |
+| BLK | [BLK](BLK.md) | iShares/index scale plus private markets (GIP/HPS) and Aladdin/Preqin; above-target organic base-fee growth versus market beta, private-credit liquidity and AI-financing concentration. |
+| OWL | [OWL](OWL.md) | Permanent-capital alternatives manager; real-assets/data-center and institutional growth versus wealth-BDC liquidity, private-credit quality and project-financing risk. |
 | HOOD | [HOOD](HOOD.md) | Retail financial platform; wallet share and new products versus trading dependence, incentives and credit costs. |
 | COIN | [COIN](COIN.md) | Crypto infrastructure and distribution; diversified usage and stablecoins versus transaction cyclicality and investment marks. |
 | EFX | [EFX](EFX.md) | Credit bureau plus proprietary Work Number income data; Workforce/government growth and AI cost-out versus mortgage cyclicality and FHFA/FICO changes to mortgage credit reports. |
 | TRU | [TRU](TRU.md) | Credit-bureau data plus fraud/marketing and international growth; ex-FICO organic growth and margin versus mortgage-score and tri-merge policy risk. |
+| CME | [CME](CME.md) | Futures-and-clearing toll on US rates, equity-index, energy and commodity risk; volatility-driven volume, pricing and market data versus perpetuals/retail-venue disruption and RPC mix. |
+| ICE | [ICE](ICE.md) | Benchmark energy/rates futures plus fixed-income data and mortgage systems of record; recurring data growth and volatility leverage versus MarketAxess leverage and mortgage drag. |
+| CBOE | [CBOE](CBOE.md) | Exclusive SPX/VIX index-options franchise (S&P licence to 2051) monetising retail 0DTE growth; repricing versus the 2027 royalty step-up and perps/prediction-market competition. |
+| NDAQ | [NDAQ](NDAQ.md) | Index licensing, bank software and listings on a market-infrastructure base; Verafin acceleration and Nasdaq-100 beta versus rising costs and market-structure change. |
 
 ## Unclassified (auto-flagged)
 | Ticker | Page | One-line thesis |

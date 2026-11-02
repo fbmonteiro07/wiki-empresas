@@ -1,10 +1,10 @@
 # SEC filings + IR materials — master index
 
-_95 companies · 1401 SEC filings · 554 transcript documents · 149 presentations · 354 equity-call links · 959 legacy briefing datapoints. Financials added 2026-10-31 (MSCI, EFX, TRU on 2026-11-02); existing-company counts retained._
+_101 companies · 1528 SEC filings · 602 transcript documents · 149 presentations · 354 equity-call links · 959 legacy briefing datapoints. Financials added 2026-10-31 (MSCI, EFX, TRU, CME, ICE, CBOE, NDAQ, OWL, BLK on 2026-11-02); existing-company counts retained._
 
 Layout: `<TICKER>/*.html` = 10-K/10-Q/20-F · `<TICKER>/transcripts/*.md` = earnings-call transcripts · `<TICKER>/apresentações/*.pdf` = investor/analyst-day decks · `_equity_calls/<theme>/*.md` = thematic sell-side/expert/mgmt calls (auto-attributed per ticker) · `_briefings/by-ticker/<TICKER>.md` = per-ticker roll-up of the daily email briefings · `_wiki/<TICKER>.md` = synthesized per-company research page (see [_wiki/00_INDEX.md](_wiki/00_INDEX.md)). Regenerate: `py E:/.claude/scripts/index_sec_filings.py` (filings/calls/wiki links) + `py E:/.claude/scripts/build_briefings_rollup.py` (briefing roll-ups).
 
-**Financials added 2026-10-31 (MSCI, EFX, TRU on 2026-11-02):** [overview](_wiki/themes/financials.md) · [coverage ledger](_wiki/_meta/financials-coverage.md). Transcript totals count source documents, including duplicate company/public versions; the ledger separately counts unique quarters. Financials cached commentary is listed in each source inventory and is not counted as legacy briefing datapoints.
+**Financials added 2026-10-31 (MSCI, EFX, TRU, CME, ICE, CBOE, NDAQ, OWL, BLK on 2026-11-02):** [overview](_wiki/themes/financials.md) · [coverage ledger](_wiki/_meta/financials-coverage.md). Transcript totals count source documents, including duplicate company/public versions; the ledger separately counts unique quarters. Financials cached commentary is listed in each source inventory and is not counted as legacy briefing datapoints.
 
 ## Summary
 
@@ -28,10 +28,13 @@ Layout: `<TICKER>/*.html` = 10-K/10-Q/20-F · `<TICKER>/transcripts/*.md` = earn
 | AVGO | 20 | 7 | 2 | 23 | 53 |
 | BESI | 0 | 4 | 0 | 0 | 6 |
 | BKNG | 20 | 8 | 0 | 0 | 0 |
+| BLK | 20 | 8 | 0 | 0 | 0 |
 | BX | 20 | 8 | 0 | 0 | 0 |
+| CBOE | 20 | 8 | 0 | 0 | 0 |
 | CDNS | 16 | 0 | 0 | 0 | 1 |
 | CEG | 18 | 9 | 2 | 0 | 0 |
 | CIEN | 20 | 4 | 1 | 2 | 6 |
+| CME | 21 | 8 | 0 | 0 | 0 |
 | COHR | 21 | 8 | 2 | 5 | 30 |
 | COIN | 21 | 9 | 0 | 0 | 0 |
 | CRDO | 17 | 4 | 0 | 2 | 19 |
@@ -49,6 +52,7 @@ Layout: `<TICKER>/*.html` = 10-K/10-Q/20-F · `<TICKER>/transcripts/*.md` = earn
 | GS | 21 | 8 | 0 | 0 | 0 |
 | HOOD | 21 | 8 | 0 | 0 | 0 |
 | HPE | 16 | 4 | 0 | 3 | 8 |
+| ICE | 24 | 8 | 0 | 0 | 0 |
 | IFX | 0 | 4 | 0 | 1 | 7 |
 | INTC | 16 | 4 | 0 | 21 | 8 |
 | JPM | 20 | 11 | 0 | 0 | 0 |
@@ -67,6 +71,7 @@ Layout: `<TICKER>/*.html` = 10-K/10-Q/20-F · `<TICKER>/transcripts/*.md` = earn
 | MSFT | 20 | 8 | 0 | 16 | 39 |
 | MU | 20 | 6 | 2 | 11 | 14 |
 | NBIS | 5 | 4 | 0 | 1 | 3 |
+| NDAQ | 21 | 8 | 0 | 0 | 0 |
 | NFLX | 20 | 8 | 0 | 1 | 2 |
 | NOW | 20 | 9 | 6 | 0 | 1 |
 | NVDA | 20 | 5 | 4 | 39 | 79 |
@@ -75,6 +80,7 @@ Layout: `<TICKER>/*.html` = 10-K/10-Q/20-F · `<TICKER>/transcripts/*.md` = earn
 | NXPI | 16 | 4 | 0 | 2 | 2 |
 | ON | 16 | 4 | 0 | 0 | 8 |
 | ORCL | 20 | 5 | 4 | 1 | 6 |
+| OWL | 21 | 8 | 0 | 0 | 0 |
 | PANW | 16 | 4 | 0 | 0 | 24 |
 | PWR | 20 | 8 | 2 | 0 | 1 |
 | QCOM | 16 | 4 | 0 | 2 | 2 |
@@ -105,7 +111,7 @@ Layout: `<TICKER>/*.html` = 10-K/10-Q/20-F · `<TICKER>/transcripts/*.md` = earn
 | WDC | 16 | 4 | 0 | 1 | 2 |
 | WMB | 20 | 7 | 3 | 1 | 0 |
 | WOLF | 16 | 4 | 0 | 0 | 0 |
-| **TOTAL** | **1401** | **554** | **149** | **354** | **959** |
+| **TOTAL** | **1528** | **602** | **149** | **354** | **959** |
 
 ## Notes / fidelity caveats
 
@@ -857,5 +863,44 @@ Layout: `<TICKER>/*.html` = 10-K/10-Q/20-F · `<TICKER>/transcripts/*.md` = earn
 
 - **Wiki:** [TRU synthesis](_wiki/TRU.md).
 - **Archive:** 21 SEC filings and 8 transcript documents; [complete dated inventory](TRU/research/SOURCES.html) / [Markdown](TRU/SOURCES.md).
+- **Earnings and commentary:** separate company releases/supplements, cached sell-side excerpts and source-quality labels in the inventory.
+
+
+## Financials — source inventories added 2026-11-02 (exchanges and asset managers)
+
+### CME
+
+- **Wiki:** [CME synthesis](_wiki/CME.md).
+- **Archive:** 21 SEC filings and 8 transcript documents; [complete dated inventory](CME/research/SOURCES.html) / [Markdown](CME/SOURCES.md).
+- **Earnings and commentary:** separate company releases/supplements, cached sell-side excerpts and source-quality labels in the inventory.
+
+### ICE
+
+- **Wiki:** [ICE synthesis](_wiki/ICE.md).
+- **Archive:** 24 SEC filings and 8 transcript documents; [complete dated inventory](ICE/research/SOURCES.html) / [Markdown](ICE/SOURCES.md).
+- **Earnings and commentary:** separate company releases/supplements, cached sell-side excerpts and source-quality labels in the inventory.
+
+### CBOE
+
+- **Wiki:** [CBOE synthesis](_wiki/CBOE.md).
+- **Archive:** 20 SEC filings and 8 transcript documents; [complete dated inventory](CBOE/research/SOURCES.html) / [Markdown](CBOE/SOURCES.md).
+- **Earnings and commentary:** separate company releases/supplements, cached sell-side excerpts and source-quality labels in the inventory.
+
+### NDAQ
+
+- **Wiki:** [NDAQ synthesis](_wiki/NDAQ.md).
+- **Archive:** 21 SEC filings and 8 transcript documents; [complete dated inventory](NDAQ/research/SOURCES.html) / [Markdown](NDAQ/SOURCES.md).
+- **Earnings and commentary:** separate company releases/supplements, cached sell-side excerpts and source-quality labels in the inventory.
+
+### OWL
+
+- **Wiki:** [OWL synthesis](_wiki/OWL.md).
+- **Archive:** 21 SEC filings and 8 transcript documents; [complete dated inventory](OWL/research/SOURCES.html) / [Markdown](OWL/SOURCES.md).
+- **Earnings and commentary:** separate company releases/supplements, cached sell-side excerpts and source-quality labels in the inventory.
+
+### BLK
+
+- **Wiki:** [BLK synthesis](_wiki/BLK.md).
+- **Archive:** 20 SEC filings and 8 transcript documents; [complete dated inventory](BLK/research/SOURCES.html) / [Markdown](BLK/SOURCES.md).
 - **Earnings and commentary:** separate company releases/supplements, cached sell-side excerpts and source-quality labels in the inventory.
 

@@ -6048,6 +6048,83 @@
    "ci": true,
    "rule": "TransUnion Q3 2026 call: the transcript renders the quarter's buyback as '126 million shares'; the company repurchased about $126m of stock.",
    "first_seen": "2026-11-02 (TRU Q3 2026 call, 2026-10-27, third-party transcript; flagged while writing _wiki/TRU.md)"
+  },
+  "Steve Egerton": {
+   "correct": "Steve Eagerton (ICE investor relations, named in the ICE earnings release)",
+   "domain": "people",
+   "ci": true,
+   "rule": "MarketBeat/Quartr transcription of ICE's IR contact Steve Eagerton as 'Steve Egerton'.",
+   "first_seen": "2026-11-02 (ICE Q4-2025, Q2-2026 and Q3-2026 calls, MarketBeat/Quartr transcripts; flagged while writing _wiki/ICE.md)"
+  },
+  "â‚¬STR": {
+   "correct": "€STR (euro short-term rate)",
+   "domain": "terms",
+   "ci": false,
+   "rule": "UTF-8 mojibake of the euro sign in MarketBeat transcripts: an encoding error, not a mis-hearing.",
+   "first_seen": "2026-11-02 (ICE Q2-2026 and Q3-2026 calls, MarketBeat/Quartr transcripts; flagged while writing _wiki/ICE.md)"
+  },
+  "LLCX": {
+   "correct": "OWLCX (Blue Owl's alternative credit interval fund)",
+   "domain": "products",
+   "ci": false,
+   "rule": "MarketBeat/Quartr transcription of the OWLCX interval fund as 'LLCX' on the Blue Owl calls.",
+   "first_seen": "2026-11-02 (OWL Q4-2025 call, 2026-02-05, MarketBeat/Quartr transcript; flagged while writing _wiki/OWL.md)"
+  },
+  "All of credit": {
+   "correct": "alternative credit (Blue Owl strategy return list; deck slide 14)",
+   "domain": "terms",
+   "ci": false,
+   "rule": "Blue Owl Q3 2026 call: 'All of credit, 2.9%' is the alternative credit gross return per the earnings deck.",
+   "first_seen": "2026-11-02 (OWL Q3-2026 call, 2026-10-29, MarketBeat/Quartr transcript; flagged while writing _wiki/OWL.md)"
+  },
+  "ask class": {
+   "correct": "asset class",
+   "domain": "terms",
+   "ci": true,
+   "rule": "MarketBeat/Quartr transcription of 'asset class' as 'ask class'.",
+   "first_seen": "2026-11-02 (OWL Q1-2026 call, 2026-04-30, MarketBeat/Quartr transcript; flagged while writing _wiki/OWL.md)"
+  },
+  "DV growth": {
+   "correct": "ADV growth (average daily volume)",
+   "domain": "terms",
+   "ci": false,
+   "rule": "Cboe Q3 2026 call (Donohue on the S&P license royalty): 'our DV growth' is ADV growth. Do not confuse with DV01.",
+   "first_seen": "2026-11-02 (CBOE Q3-2026 call, 2026-10-30, MarketBeat/Quartr transcript; flagged while writing _wiki/CBOE.md)"
+  },
+  "in for one quarter this month": {
+   "correct": "in for one month this quarter (Cboe Australia, consolidated until its sale)",
+   "domain": "other",
+   "ci": true,
+   "rule": "Cboe Q3 2026 call (CFO): the transcript swaps month and quarter when describing Cboe Australia's contribution.",
+   "first_seen": "2026-11-02 (CBOE Q3-2026 call, 2026-10-30, MarketBeat/Quartr transcript; flagged while writing _wiki/CBOE.md)"
+  },
+  "2,128.1 million contracts": {
+   "correct": "28.1 million contracts of ADV (CME Q4 2025, per the release)",
+   "domain": "numbers",
+   "ci": true,
+   "rule": "CME Q4 2025 call: the transcript renders record Q4 ADV of 28.1m contracts as '2,128.1 million contracts'.",
+   "first_seen": "2026-11-02 (CME Q4-2025 call, 2026-02-04, MarketBeat/Quartr transcript; flagged while writing _wiki/CME.md)"
+  },
+  "$1.0277 per share": {
+   "correct": "$1.0bn adjusted net income and $2.77 adjusted diluted EPS (CME Q4 2025, per the release)",
+   "domain": "numbers",
+   "ci": true,
+   "rule": "CME Q4 2025 call: two figures run together into '$1.0277 per share'.",
+   "first_seen": "2026-11-02 (CME Q4-2025 call, 2026-02-04, MarketBeat/Quartr transcript; flagged while writing _wiki/CME.md)"
+  },
+  "Financial Client Management Technology": {
+   "correct": "Financial Crime Management Technology (Nasdaq FinTech line; Verafin)",
+   "domain": "products",
+   "ci": true,
+   "rule": "MarketBeat/Quartr transcription of Nasdaq's Financial Crime Management Technology as 'Financial Client Management Technology'.",
+   "first_seen": "2026-11-02 (NDAQ Q3-2025 and Q4-2025 calls, MarketBeat/Quartr transcripts; flagged while writing _wiki/NDAQ.md)"
+  },
+  "cross-sales": {
+   "correct": "cross-sells (Nasdaq cross-sell metric)",
+   "domain": "terms",
+   "ci": true,
+   "rule": "Nasdaq calls: the transcript renders the company's cross-sell metric as 'cross-sales'.",
+   "first_seen": "2026-11-02 (NDAQ Q2-2026 and Q3-2026 calls, MarketBeat/Quartr transcripts; flagged while writing _wiki/NDAQ.md)"
   }
  },
  "summary_traps": [
