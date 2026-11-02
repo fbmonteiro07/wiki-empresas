@@ -1,6 +1,6 @@
 {
  "_about": "Hand-edited ledger of machine-transcription garbles (Notion AI, Bloomberg ASR, auto-translation) seen in the archive, with the correct reading. Used by E:\\.claude\\scripts\\transcript_qa.py (source-file scan, page-diff scan) and by ingest_notion_meetings.py (writes a 'Transcription QA' block into every archived Notion file). Keys are matched with word boundaries, case-sensitive unless 'ci' is true. 'keep_when' = regex contexts (same line, ~80 chars around the hit) where the token is legitimate and must NOT be flagged. Add an entry the first time a garble is caught; never delete one. Standing rule (Felipe, 2026-09-28): ALWAYS double-check transcript content — acronyms, names, units, numbers — before it travels to a page.",
- "_updated": "2026-11-02",
+ "_updated": "2026-10-31",
  "terms": {
   "Hixle AI": {
    "correct": "Higgsfield (AI video startup)",
@@ -6035,6 +6035,20 @@
    "rule": "ASR; see 'Open AAI'.",
    "first_seen": "2026-10-30 (All-In 'Anthropic S-1 Shocker, Greatest Business Ever? Google's $500B Wipeout', 2026-10-30, YouTube ASR)"
   },
+  "Tradium": {
+   "correct": "Trainium (AWS AI accelerator)",
+   "domain": "semis",
+   "ci": true,
+   "rule": "Bloomberg live-ASR of Trainium in the AMZN 2Q26 call; the Quartr transcript of the same speakers renders Trainium.",
+   "first_seen": "2026-10-31 (AMZN Q2-2026 call, Bloomberg live ASR, 2026-07-30; caught building the 5-slide company decks)"
+  },
+  "deep EUV": {
+   "correct": "deep UV (DUV) lithography",
+   "domain": "semis",
+   "ci": true,
+   "rule": "ASR of 'deep UV' in the ASML Communacopia session; EUV is extreme UV, DUV is deep UV - there is no 'deep EUV'.",
+   "first_seen": "2026-10-31 (ASML investor-group meeting, Communacopia week, 2026-09-09; caught building the 5-slide company decks)"
+  },
   "twin indicator": {
    "correct": "TWN Indicator (Equifax The Work Number product)",
    "domain": "names",
@@ -6125,6 +6139,44 @@
    "ci": true,
    "rule": "Nasdaq calls: the transcript renders the company's cross-sell metric as 'cross-sales'.",
    "first_seen": "2026-11-02 (NDAQ Q2-2026 and Q3-2026 calls, MarketBeat/Quartr transcripts; flagged while writing _wiki/NDAQ.md)"
+  },
+  "Ironwood": {
+   "correct": "IREN (neocloud; Microsoft 3P capacity supplier, IREN-MSFT-202511) - in neocloud/data-center-builder context",
+   "domain": "names",
+   "keep_when": [
+    "TPU",
+    "Google",
+    "v7",
+    "Trillium",
+    "chip",
+    "searched this theme for"
+   ],
+   "rule": "Notion ASR of IREN in a DC-REIT/neocloud discussion ('Ironwood ... was not actually planned to deliver 100 megawatts', 'acting as their own general contractor'); the same call renders it 'Irene'. The Notion AI summary then expanded it to 'Iron Mountain' (not in the transcript). Ironwood is ALSO Google's TPU v7 - keep it in TPU/Google context. The speaker's attribution of Microsoft's 3P delay to IREN is speculation, not confirmed.",
+   "first_seen": "2026-11-02 (Jefferies 'Hyperscaler + AI Deep Dive - A Look at the Numbers' webinar, Notion AI transcript)"
+  },
+  "Irene": {
+   "correct": "IREN (neocloud)",
+   "domain": "names",
+   "rule": "'We'll blame JP for that and Irene' - IREN, in the Microsoft 3P capacity-delay context; same call renders it 'Ironwood'.",
+   "first_seen": "2026-11-02 (Jefferies 'Hyperscaler + AI Deep Dive - A Look at the Numbers' webinar, Notion AI transcript)",
+   "keep_when": [
+    "Solaiman",
+    "Irene [A-Z][a-z]+"
+   ]
+  },
+  "bphil": {
+   "correct": "bthill (Brent Thill's e-mail handle, bthill@jefferies.com)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of the host's e-mail ('email bphil@jeffries.com').",
+   "first_seen": "2026-11-02 (Jefferies 'Hyperscaler + AI Deep Dive - A Look at the Numbers' webinar, Notion AI transcript)"
+  },
+  "jeffries.com": {
+   "correct": "jefferies.com",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR misspelling of the Jefferies domain.",
+   "first_seen": "2026-11-02 (Jefferies 'Hyperscaler + AI Deep Dive - A Look at the Numbers' webinar, Notion AI transcript)"
   }
  },
  "summary_traps": [

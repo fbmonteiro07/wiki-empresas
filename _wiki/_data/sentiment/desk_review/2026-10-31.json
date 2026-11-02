@@ -1,0 +1,563 @@
+{
+ "date": "2026-10-31",
+ "status": "complete",
+ "generated_at": "2026-10-31T10:07:25-03:00",
+ "mail_window": {
+  "channel": "outlook-com",
+  "from_utc": "2026-10-30T11:02:44Z",
+  "to_utc": "2026-10-31T13:07:25Z",
+  "newest_received_utc": "2026-10-31T12:53:12Z",
+  "screened": 630,
+  "read": 31
+ },
+ "headline": "Friday's tech de-gross turned systematic: desks keep defending AMZN and the hyperscalers on fundamentals, but crowded semis longs (INTC, AMD) and memory (Kioxia, SNDK) are where conviction is fading.",
+ "market_read": "Thursday's single-name earnings damage became a mechanical sell-off on Friday. UBS (Ruple/Cheon, 30 Oct) estimates $165-220bn of risk-control selling, the first meaningful one since Nov 2025, with $110-150bn still due Monday. Jefferies (Favuzza, 30 Oct) calls it its 3rd-largest tech sell week in 5 years and its 5th straight week as a net seller, with SOXX below its 200-day for the first time since May 2025. BofA (Villani, 30 Oct) sees hedge funds net sellers for 11 straight days and long-only funds on track for their biggest monthly selling of 2026. The fundamental read is unchanged: MS (Wigg, Risom), BofA (Fenske) and Bernstein (Patafio), all 30 Oct, call AMZN an expectations miss and GOOGL the only structural issue, while Jefferies (Wong, 30 Oct) now hears profit-taking and new shorts in AMD and research TP cuts pile onto INTC.",
+ "up": [
+  {
+   "ticker": "AMZN",
+   "signal": "emerging narrative",
+   "conviction": "medium",
+   "why": "Four more desks defended AMZN after Friday's open: MS (Wigg, 30 Oct) calls it an 'expectations miss', BofA (Fenske, 30 Oct) says third-party data pushed the AWS bogey 'irresponsibly high', MS (Risom, 30 Oct) says the backlog and a rare forward guide offset it, and Bernstein (Patafio, 30 Oct) hears buyside EPS of ~$13.50/$17 for 2027/28 and recommends buying weakness. This repeats yesterday's read with more desks behind it. In monitor.json AMZN is in the HOT 60-80 band (64.2), where its own history is weak (5-session median -1.1%, 10-session -2.9%, n=7), and in the BULL 40-60 band (43.3; 10-session median +2.3%, n=47). Its curated-X attention z is 2.0. For 1-5 days, Monday's expected risk-control selling and crowding (Risom notes investors had piled into hyperscalers) can keep it under pressure even if the desk view holds. Over 2-4 weeks, re:Invent and Street estimate revisions are the catalyst desks name.",
+   "confirm": "AMZN outperforms NDX through Monday's systematic selling; Street 2027 EPS moves toward the ~$13.50 buyside figure; re:Invent custom-ASIC/Trainium announcements.",
+   "weaken": "Equity-raise fears resurface (JPM Heavey flagged them on 30 Oct); further retail/ads softness; AMZN trades with the de-gross rather than as a hide.",
+   "evidence": [
+    "obs-2026-10-31-09",
+    "obs-2026-10-31-10",
+    "obs-2026-10-31-11",
+    "obs-2026-10-31-12"
+   ]
+  },
+  {
+   "ticker": "MEDIATEK",
+   "signal": "emerging narrative",
+   "conviction": "medium",
+   "why": "Two separate sources agree on the content: Jefferies sales (O'Mara, 30 Oct) relays MediaTek tracking to the ~$16bn high end of its 2027 AI ASIC target, the V8 TPU at $2.5bn this year and a second ASIC customer for 2028, and BofA Research (Liu, 30 Oct; Buy, PO NT$6,200) says the 4Q TPUv8t ramp now tracks $2.5bn vs a $2bn guide before. monitor.json has no Bloomberg X or analog row for MEDIATEK, so this rests on the source evidence alone. For 1-5 days, Taiwan semis sold off with the AI unwind, so the ASIC story may not show in price. Over 2-4 weeks, the question is whether substrate supply lets the TPU ramp beat the guide.",
+   "confirm": "Further CSP/AI-lab ASIC customer evidence; substrate allocation updates from Ibiden/Unimicron; MEDIATEK outperforming Taiwan semis.",
+   "weaken": "Substrate or EMIB-T yield setbacks; a TPU share shift back to AVGO; a wider AI capex de-rating that overrides company-specific news.",
+   "evidence": [
+    "obs-2026-10-31-18",
+    "obs-2026-10-31-19"
+   ]
+  },
+  {
+   "ticker": "META",
+   "signal": "rising attention",
+   "conviction": "low",
+   "why": "MS's Friday Five (Risom, 30 Oct) builds a Muse bull case (10M+ users in 1.5 months) and relays Nowak that META trades in the high teens on 2027/28 P/E vs his 23x base. MS (Wigg, 30 Oct) counts META's raise among those that made the financing picture more constructive. This continues yesterday's 'place to hide' read from JPM. In monitor.json META sits in the HOT 40-60 band (44.4; 10-session median +2.1%, n=38) and BULL 40-60 (44.4; 10-session +1.3%, n=46). These are moderate bands, not crowding. Over 1-5 days a broad systematic unwind usually hits megacaps too. Over 2-4 weeks, Muse monetization data is what desks are watching.",
+   "confirm": "META holds near the $625 offering price through Monday's selling; more Muse engagement or commerce data.",
+   "weaken": "A rotation out of all megacaps in the de-gross; more equity or debt issuance.",
+   "evidence": [
+    "obs-2026-10-31-15",
+    "obs-2026-10-31-14"
+   ]
+  },
+  {
+   "ticker": "ON",
+   "signal": "neglected, improving",
+   "conviction": "low",
+   "why": "Jefferies Research (Curtis, 30 Oct) says ON enters Monday's print at 13.1x C28E vs a 16.4x analog/SMID median, with DC more than doubling in C26 and ~150bp of sequential GM expansion modelled, and thinks buyside guide expectations sit low single digits above Street. The divergence stays visible: JPM's buyside survey (Meyers, 30 Oct, logged yesterday) scored ON -1. ON has no Bloomberg X or analog row in monitor.json. This is a 1-5 day print setup, not a sustained narrative yet.",
+   "confirm": "A guide above Street with DC growth near +20% q/q and clear 800V commentary despite the Kyber push-out.",
+   "weaken": "Auto or industrial softness offsets DC; 800V timing slips further; the semis de-gross overrides the print.",
+   "evidence": [
+    "obs-2026-10-31-22"
+   ]
+  }
+ ],
+ "down": [
+  {
+   "ticker": "INTC",
+   "signal": "weakening sentiment",
+   "conviction": "high",
+   "why": "Yesterday's read was crowding easing (a crowded long breaking). Today it is research capitulation: Jefferies (Curtis via Wong, 30 Oct) cuts the TP to $85 from $120 and 2027E EPS by 14%, saying INTC keeps losing share through 2027, and Bernstein (Rasgon via Patafio, 30 Oct) cuts to $75 from $110 and would not buy the dip. Jefferies also notes the market is selling INTC-levered suppliers first (Ibiden -15%). In monitor.json INTC is in the HOT 60-80 band (69.0) and the low BULL 20-40 band (20.9). Its own HOT-band history shows a 10-session median of +8.1% (n=9), so a reflex bounce is possible, but sell-side estimate cuts tend to cap rallies over 2-4 weeks.",
+   "confirm": "More estimate cuts; PC OEMs (DELL/HPQ) confirm weak demand; INTC fails to bounce when the tape stabilises.",
+   "weaken": "Clear substrate/supply improvement or a foundry customer announcement; a short-covering bounce with buyers coming back.",
+   "evidence": [
+    "obs-2026-10-31-01",
+    "obs-2026-10-31-02",
+    "obs-2026-10-31-24"
+   ]
+  },
+  {
+   "ticker": "AMD",
+   "signal": "easing crowding",
+   "conviction": "medium",
+   "why": "Jefferies sales (Wong, 30 Oct) hears profit-taking and even shorts being added after the run, calling AMD one of the most crowded longs in semis. Jefferies Research (Curtis, 30 Oct) puts the buyside 2027 DC bar at $80-90bn vs Street ~$70bn and sees AMD walking it only to ~$75bn. The views diverge: JPM's buyside survey (Meyers, 30 Oct, logged yesterday) had AMD at +3 and Meyers saw no incremental INTC read-through. In monitor.json AMD is in HOT 40-60 (45.0; 5-session median -1.0%, n=34) and BULL 40-60 (51.5). Over 1-5 days the 3 Nov print decides it, and a high buyside bar makes it vulnerable to a 'good but not enough' reaction.",
+   "confirm": "AMD guides DC 2027 short of the $80-90bn buyside bar; more desks report de-grossing in AMD.",
+   "weaken": "AMD lifts 2027 DC toward $80bn+ with clear MI450/Venice supply; shorts cover after the print.",
+   "evidence": [
+    "obs-2026-10-31-03",
+    "obs-2026-10-31-04"
+   ]
+  },
+  {
+   "ticker": "KIOXIA",
+   "signal": "weakening sentiment",
+   "conviction": "medium",
+   "why": "Kioxia guided Dec-Q revenue +1% q/q vs ~+16% consensus (Jefferies Wong, 30 Oct), and the CFO said growth is easing and the NAND price trajectory next FY is uncertain. MS sales (Amerian, 30 Oct, logged yesterday) put part of it down to only 50% of bits being priced. GS's desk (Kamshad, 30 Oct) calls it a further negative memory datapoint. monitor.json has no X or analog row for KIOXIA. Over 1-5 days it drags NAND peers. Over 2-4 weeks the question is whether the guide reflects caution or real price fatigue.",
+   "confirm": "NAND contract prices flatten; peers echo the caution; 4Q volumes do not catch up as promised.",
+   "weaken": "Pricing on the remaining 50% of bits settles high; buyback and 100% excess-cash return support the stock.",
+   "evidence": [
+    "obs-2026-10-31-05",
+    "obs-2026-10-31-08"
+   ]
+  },
+  {
+   "ticker": "SNDK",
+   "signal": "easing crowding",
+   "conviction": "medium",
+   "why": "SNDK beat and guided above the Street, yet it fell further (~-7% to -9%, GS Kamshad and Jefferies Wong, 30 Oct), dragged by Kioxia's guide, with MU lower in sympathy. Desks still disagree: Bernstein (Patafio, 30 Oct) relays mostly positive feedback and a $3,000 PT, while Jefferies relays Blayne's view that the NAND supply/demand debate will not go away. In monitor.json SNDK is in HOT 60-80 (63.4; 10-session median -5.7%, n=10) and BULL 40-60 (58.8; 10-session median +9.8%, n=16). The two histories point in opposite directions, which matches the split desk read. This is the long lean coming off, not a broken thesis.",
+   "confirm": "SNDK keeps lagging SOX on up days; more desks cite NAND supply catching up.",
+   "weaken": "NBM pricing disclosures or long-term agreements support the bull case; Kioxia's caution proves conservative.",
+   "evidence": [
+    "obs-2026-10-31-06",
+    "obs-2026-10-31-07",
+    "obs-2026-10-31-08"
+   ]
+  },
+  {
+   "ticker": "GOOG",
+   "signal": "weakening sentiment",
+   "conviction": "medium",
+   "why": "MS's Friday Five (Risom, 30 Oct) says investor feedback sees GOOGL as 'the only real structural issue' among the hyperscalers: query volume is strong but search monetization is weak. MS (Wigg, 30 Oct) calls the -12.6% T+1 move GOOGL's largest on record. In monitor.json GOOG is among the Bloomberg X tone-down names (Δtone -0.108, attention z 1.21) and in the curated-X risers (z 1.39). The debate has moved from capex to the core business. Over 2-4 weeks, AI Mode ad monetization data is what would change it.",
+   "confirm": "More third-party data showing AI Mode cannibalising paid clicks; GOOG lags megacap peers through the de-gross.",
+   "weaken": "Evidence of faster AI Mode ads monetization (JPM Schilsky calls that the bull case); Cloud/TPU news.",
+   "evidence": [
+    "obs-2026-10-31-13"
+   ]
+  }
+ ],
+ "themes": [
+  {
+   "title": "The de-gross turned systematic",
+   "text": "The selling is no longer only discretionary. UBS (Ruple, relaying macro specialist Rebecca Cheon, 30 Oct) estimates $70-120bn of systematic selling on Friday (risk-control, leveraged ETFs, CTAs) and up to $110-150bn more from risk-control funds on Monday, partly offset by ~$46bn of month-end pension buying. Its retail clients bought tech ETFs while selling single tech stocks, partly for tax-loss harvesting. Jefferies (Favuzza, 30 Oct) sees 'virtually zero upticks' in QQQ and its 3rd-largest tech sell week in 5 years. BofA (Villani, 30 Oct) says hedge funds have net sold for 11 days and semis had their 2nd-largest sell day of the month. Vanda (Nordvig, 30 Oct, forwarded by Rodrigo Nascimento) notes credit barely moved (CDX IG +1bp), so it is not yet a Fed-panic risk-off. These are flow statistics without tickers, so they carry no observation ids.",
+   "evidence": []
+  },
+  {
+   "title": "Defensive capex vs better financing: the macro and TMT desks disagree",
+   "text": "22V (DeBusschere, 30 Oct) says the macro community's narrative has swung back to hyperscalers spending defensively to protect core profits, and that this does not point to a strong 4Q for AI names. Vanda (Nordvig, 30 Oct) argues capital markets are now putting a bound on capex expectations. The TMT desks push the other way: MS (Wigg, 30 Oct) says this week's META, SPCX, AVGO and MSFT raises make financing look more constructive than the recent neocloud worries, and UBS Research (Abrams, 30 Oct) says the outlook is still better for suppliers but sentiment may cap the trade. The macro/TMT gap is the main divergence today.",
+   "evidence": [
+    "obs-2026-10-31-14"
+   ]
+  },
+  {
+   "title": "MediaTek's TPU ramp vs the Broadcom read",
+   "text": "Jefferies sales (O'Mara, 30 Oct) reads MediaTek's ~$16bn 2027 ASIC target (~20% of the AI ASIC market, per the company) and its second customer as negative for AVGO, which still says it does not see MediaTek in the supply chain with a chip. BofA Research (Liu, 30 Oct) confirms the 4Q TPUv8t ramp tracking $2.5bn. Substrates are the shared constraint: INTC (via Jefferies Wong) and MediaTek both name them, and Ibiden's new capacity does not contribute until FY30. These are management claims and one desk's interpretation, not a change in AVGO's own guidance.",
+   "evidence": [
+    "obs-2026-10-31-18",
+    "obs-2026-10-31-19",
+    "obs-2026-10-31-20"
+   ]
+  },
+  {
+   "title": "Memory: Kioxia's caution vs the Hynix bull case",
+   "text": "Kioxia's weak Dec-Q guide and CFO caution on next-FY NAND pricing (Jefferies Wong, 30 Oct) hit SNDK and MU in sympathy (GS Kamshad, 30 Oct). Research stays constructive elsewhere: BofA Research (Woo, 31 Oct) prefers SK Hynix's strategy and lifts global DRAM forecasts 5%, and Bernstein relays mostly positive SNDK feedback. No DAMNANG or SemiAnalysis piece arrived to provide an independent check.",
+   "evidence": [
+    "obs-2026-10-31-05",
+    "obs-2026-10-31-06",
+    "obs-2026-10-31-07",
+    "obs-2026-10-31-08",
+    "obs-2026-10-31-21"
+   ]
+  }
+ ],
+ "observations": [
+  {
+   "id": "obs-2026-10-31-01",
+   "date": "2026-10-30T13:04:30Z",
+   "ticker": "INTC",
+   "firm": "Jefferies",
+   "author": "Rankie Wong",
+   "role": "Specialist sales",
+   "kind": "Research relay",
+   "tone": "Negative",
+   "position": "Fading conviction",
+   "summary": "Jefferies sales relays Blayne Curtis cutting INTC's TP to $85 from $120 and 2027E EPS by 14%, arguing INTC keeps losing share through 2027, while the market sells INTC-levered suppliers first.",
+   "excerpt": "Blayne cuts his TP from $120->$85 and lowers his 2026E/27E EPS by -3%/-14%",
+   "subject": "(JEF TMT) Reading the Tech Leaves (Oct 30) - AMZN, SNDK, Kioxia, INTC, AMD, Tokyo Electron, Mediatek, RDDT, GUC",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A3A3E4D80000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-31-02",
+   "date": "2026-10-30T13:21:45Z",
+   "ticker": "INTC",
+   "firm": "Bernstein",
+   "author": "David Patafio",
+   "role": "Specialist sales",
+   "kind": "Research relay",
+   "tone": "Negative",
+   "position": "Crowded long",
+   "summary": "Bernstein sales relays Stacy Rasgon cutting INTC's PT to $75 from $110 (Market-Perform) and not buying the dip; the stock was a crowded long into the print and is seen in the penalty box until the 4Q print.",
+   "excerpt": "It was a crowded long into the print and combined with a “terrible” 4Q guide explains the sharp selloff",
+   "subject": "Bernstein AM Note (10/30): AMZN (defend), PINS (-), RDDT (-), INTC (-), SYK (defend), SNDK (+), AAPL (-), NVT (+), PWR (+), ILMN (-), HWM (+), UMG.NA Take Private? (-), MTX.GR (Top Pick)",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A3A3E4E70000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-31-03",
+   "date": "2026-10-30T13:04:30Z",
+   "ticker": "AMD",
+   "firm": "Jefferies",
+   "author": "Rankie Wong",
+   "role": "Specialist sales",
+   "kind": "Investor feedback",
+   "tone": "Negative",
+   "position": "Fading conviction",
+   "summary": "Jefferies sales hears profit-taking and even shorts being added in AMD after its run, calling it one of the most crowded longs in semis, with the INTC miss raising questions about the CPU trade.",
+   "excerpt": "recently also hearing about more profit-taking and even flipping short in AMD after the recent monster run",
+   "subject": "(JEF TMT) Reading the Tech Leaves (Oct 30) - AMZN, SNDK, Kioxia, INTC, AMD, Tokyo Electron, Mediatek, RDDT, GUC",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A3A3E4D80000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-31-04",
+   "date": "2026-10-31T00:02:45Z",
+   "ticker": "AMD",
+   "firm": "Jefferies",
+   "author": "Blayne Curtis",
+   "role": "Research",
+   "kind": "Research relay",
+   "tone": "Mixed",
+   "position": "Not stated",
+   "summary": "Jefferies Research expects an AMD beat but sees the buyside's $80-90bn 2027 data-center bar well above the Street's ~$70bn, saying a lot of good news is already priced in.",
+   "excerpt": "Street DC revenue estimates sit just above $70B versus buyside expectations of $80–90B, and we see scope for AMD to move expectations toward $75B rather than fully close that gap.",
+   "subject": "Blayne’s Bytes: Earnings (P)reviews, Meta Leans on AMD/NVDA CPU, SPCX Financing",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A3A3E5D80000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-31-05",
+   "date": "2026-10-30T13:04:30Z",
+   "ticker": "KIOXIA",
+   "firm": "Jefferies",
+   "author": "Rankie Wong",
+   "role": "Specialist sales",
+   "kind": "Management claim",
+   "tone": "Negative",
+   "position": "Not stated",
+   "summary": "Kioxia guided Dec-Q revenue only +1% q/q vs ~+16% consensus, and post-call CFO comments that growth is easing and the NAND price trajectory next FY is uncertain did not reassure.",
+   "excerpt": "key -ve was the Dec-Q guide with revs only up +1% q-q, which is well below consensus at +16% (and SNDK guided for 11-15%)",
+   "subject": "(JEF TMT) Reading the Tech Leaves (Oct 30) - AMZN, SNDK, Kioxia, INTC, AMD, Tokyo Electron, Mediatek, RDDT, GUC",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A3A3E4D80000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-31-06",
+   "date": "2026-10-30T13:04:30Z",
+   "ticker": "SNDK",
+   "firm": "Jefferies",
+   "author": "Rankie Wong",
+   "role": "Specialist sales",
+   "kind": "Desk opinion",
+   "tone": "Negative",
+   "position": "Not stated",
+   "summary": "Jefferies sales says SNDK extended losses to about -9% on Kioxia's weak guide, and relays Blayne's view that the NAND supply/demand debate will not go away even as he raises estimates.",
+   "excerpt": "stock down further this morning to -9% now, likely dragged by Kioxia’s (285A JP) weak guide",
+   "subject": "(JEF TMT) Reading the Tech Leaves (Oct 30) - AMZN, SNDK, Kioxia, INTC, AMD, Tokyo Electron, Mediatek, RDDT, GUC",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A3A3E4D80000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-31-07",
+   "date": "2026-10-30T13:21:45Z",
+   "ticker": "SNDK",
+   "firm": "Bernstein",
+   "author": "David Patafio",
+   "role": "Specialist sales",
+   "kind": "Research relay",
+   "tone": "Positive",
+   "position": "Not stated",
+   "summary": "Bernstein sales relays Mark Newman raising SNDK estimates (Outperform, $3,000 PT) and says investor feedback was mostly positive, with pricing more than offsetting component-cost questions.",
+   "excerpt": "Feedback was mostly positive despite some component cost questions, with pricing more than offsetting the pressure.",
+   "subject": "Bernstein AM Note (10/30): AMZN (defend), PINS (-), RDDT (-), INTC (-), SYK (defend), SNDK (+), AAPL (-), NVT (+), PWR (+), ILMN (-), HWM (+), UMG.NA Take Private? (-), MTX.GR (Top Pick)",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A3A3E4E70000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-31-08",
+   "date": "2026-10-30T12:15:05Z",
+   "ticker": "MU",
+   "firm": "Goldman Sachs",
+   "author": "Leyla Kamshad",
+   "role": "Specialist sales",
+   "kind": "Desk opinion",
+   "tone": "Negative",
+   "position": "Not stated",
+   "summary": "GS's TMT desk lists SNDK -7% despite a beat with MU lower in sympathy, and calls Kioxia's guide a further negative memory datapoint.",
+   "excerpt": "SNDK -7% despite beat (MU lower in sympathy)",
+   "subject": "GS TMT TODAY 10.30.26",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A3A3E49E0000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-31-09",
+   "date": "2026-10-30T13:21:45Z",
+   "ticker": "AMZN",
+   "firm": "Bernstein",
+   "author": "David Patafio",
+   "role": "Specialist sales",
+   "kind": "Investor feedback",
+   "tone": "Positive",
+   "position": "Not stated",
+   "summary": "Bernstein sales says Mark Shmulik recommends buying AMZN weakness, with buyside EPS expectations now around $13.50 for 2027 and $17 for 2028 and re:Invent the next catalyst.",
+   "excerpt": "buyside EPS expectations are now around $13.50/$17 for 2027/28",
+   "subject": "Bernstein AM Note (10/30): AMZN (defend), PINS (-), RDDT (-), INTC (-), SYK (defend), SNDK (+), AAPL (-), NVT (+), PWR (+), ILMN (-), HWM (+), UMG.NA Take Private? (-), MTX.GR (Top Pick)",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A3A3E4E70000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-31-10",
+   "date": "2026-10-30T13:35:52Z",
+   "ticker": "AMZN",
+   "firm": "Morgan Stanley",
+   "author": "Thomas Wigg",
+   "role": "Specialist sales",
+   "kind": "Desk opinion",
+   "tone": "Positive",
+   "position": "Not stated",
+   "summary": "MS's TMT desk calls AMZN an expectations miss rather than anything structural, given 40%+ AWS visibility for 2027-28, and relays Nowak keeping it a Top Pick.",
+   "excerpt": "AMZN I would characterize as an ‘expectations miss’ vs anything structurally concerning",
+   "subject": "MS TMT 10.30:  AMZN expectations miss; INTC PC + supply issues; Binance hack *NOT* AI swarm; OAI CEO sees rev per GW $70B to $20B; SPOT AI remix 1Q27 at $4-5/mo; SNDK KIOXIA MTK RDDT RBLX TWLO PINS DASH COHR SPCX",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A3A3E4F20000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-31-11",
+   "date": "2026-10-30T15:08:22Z",
+   "ticker": "AMZN",
+   "firm": "BofA",
+   "author": "Brian Fenske",
+   "role": "Specialist sales",
+   "kind": "Desk opinion",
+   "tone": "Positive",
+   "position": "Not stated",
+   "summary": "BofA's TMT specialist argues third-party data pushed the AWS bogey irresponsibly high and that the 2027/28 guide shows an acceleration story with Street numbers going up.",
+   "excerpt": "Yipit/3rd party data (and I guess some of my competitors) walked up the bogey, and that bogey was irresponsibly high.",
+   "subject": "BofA TMT: 10/30 - AMZN, INTC, NXPI Call, Summer Fridays, SNDK, RDDT, RBLX",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A3A3E5220000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-31-12",
+   "date": "2026-10-30T23:39:45Z",
+   "ticker": "AMZN",
+   "firm": "Morgan Stanley",
+   "author": "Skyler Risom",
+   "role": "Specialist sales",
+   "kind": "Investor feedback",
+   "tone": "Positive",
+   "position": "Crowded long",
+   "summary": "MS's Friday Five frames AMZN as an expectations miss on an elevated buyside AWS bogey, offset by backlog and a rare forward AWS guide, in a week when investors had crowded into hyperscalers.",
+   "excerpt": "AMZN a square expects miss on an elevated buyside bogey for AWS, offset by a strong Cloud backlog and rare forward guide for AWS.",
+   "subject": "FRIDAY FIVE 10.30",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A3A3E5D50000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-31-13",
+   "date": "2026-10-30T23:39:45Z",
+   "ticker": "GOOG",
+   "firm": "Morgan Stanley",
+   "author": "Skyler Risom",
+   "role": "Specialist sales",
+   "kind": "Investor feedback",
+   "tone": "Negative",
+   "position": "Not stated",
+   "summary": "MS's Friday Five says investor feedback sees GOOGL as the only real structural issue among the hyperscalers: strong query growth but weak search monetization.",
+   "excerpt": "Investor feedback indicates that GOOGL the only real structural issue in the group.",
+   "subject": "FRIDAY FIVE 10.30",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A3A3E5D50000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-31-14",
+   "date": "2026-10-30T13:35:52Z",
+   "ticker": "MSFT",
+   "firm": "Morgan Stanley",
+   "author": "Thomas Wigg",
+   "role": "Specialist sales",
+   "kind": "Desk opinion",
+   "tone": "Positive",
+   "position": "Not stated",
+   "summary": "MS's TMT desk contrasts MSFT's clean Azure beat-and-raise with GOOGL, and says this week's META, SPCX, AVGO and MSFT raises paint a more constructive AI-financing picture.",
+   "excerpt": "On the AI financing side, META, SPCX, AVGO & MSFT raises this week paint a much more constructive picture on financing than recent weeks’ concern around neoclouds.",
+   "subject": "MS TMT 10.30:  AMZN expectations miss; INTC PC + supply issues; Binance hack *NOT* AI swarm; OAI CEO sees rev per GW $70B to $20B; SPOT AI remix 1Q27 at $4-5/mo; SNDK KIOXIA MTK RDDT RBLX TWLO PINS DASH COHR SPCX",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A3A3E4F20000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-31-15",
+   "date": "2026-10-30T23:39:45Z",
+   "ticker": "META",
+   "firm": "Morgan Stanley",
+   "author": "Skyler Risom",
+   "role": "Specialist sales",
+   "kind": "Desk opinion",
+   "tone": "Positive",
+   "position": "Not stated",
+   "summary": "MS's Friday Five builds a Muse bull case for META (10M+ users in 1.5 months) and relays Nowak that it trades in the high teens on 2027/28 P/E vs his 23x base case.",
+   "excerpt": "META Muse has over 10M users after just 1.5 months in US and Canada",
+   "subject": "FRIDAY FIVE 10.30",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A3A3E5D50000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-31-16",
+   "date": "2026-10-30T15:08:22Z",
+   "ticker": "AAPL",
+   "firm": "BofA",
+   "author": "Brian Fenske",
+   "role": "Specialist sales",
+   "kind": "Research relay",
+   "tone": "Negative",
+   "position": "Not stated",
+   "summary": "BofA sales relays BofA removing AAPL from the US 1 List and Wamsi Mohan cutting FY27/28 EPS by 4%/5%, cautious on the near-term setup into the 2 Nov print.",
+   "excerpt": "BofA removes AAPL from US 1 List today.",
+   "subject": "BofA TMT: 10/30 - AMZN, INTC, NXPI Call, Summer Fridays, SNDK, RDDT, RBLX",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A3A3E5220000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-31-17",
+   "date": "2026-10-30T19:06:12Z",
+   "ticker": "AAPL",
+   "firm": "Jefferies",
+   "author": "Joseph Favuzza",
+   "role": "Specialist sales",
+   "kind": "Positioning / flows",
+   "tone": "Positive",
+   "position": "Interest rising",
+   "summary": "Jefferies' tech desk points to AAPL as the stock that best shows the defensive tape, with its forward P/E decoupling upward from the Nasdaq's over the last year.",
+   "excerpt": "If there’ 1 stock that speaks to some of the defensive nature of the tape we are in right now, it’s AAPL.",
+   "subject": "Jefferies Tech: A Few Charts To Close the Week",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A3A3E5870000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-31-18",
+   "date": "2026-10-30T08:11:00Z",
+   "ticker": "MEDIATEK",
+   "firm": "Jefferies",
+   "author": "Conor O’Mara",
+   "role": "Specialist sales",
+   "kind": "Management claim",
+   "tone": "Positive",
+   "position": "Not stated",
+   "summary": "Jefferies sales notes from MediaTek's call: 2027 AI ASIC revenue tracking to the ~$16bn high end of target, V8 TPU on track for $2.5bn this year, and a second ASIC customer confirmed for 2028.",
+   "excerpt": "MediaTek expects to achieve the high end of its 2027 revenue target at ~$16bn, equivalent to ~20% of the AI ASIC market, and expects strong growth again in 2028.",
+   "subject": "Notes from Mediatek conference call. $2.5bn of ASIC sales this year 2027 at upper range of guidance. From Q4 ASICs will begin to drive up operating margins to over 20^ for full year in 2027",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A3A3E4050000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-31-19",
+   "date": "2026-10-30T14:03:32Z",
+   "ticker": "MEDIATEK",
+   "firm": "BofA",
+   "author": "Haas Liu",
+   "role": "Research",
+   "kind": "Research relay",
+   "tone": "Positive",
+   "position": "Not stated",
+   "summary": "BofA Research (Buy, PO NT$6,200) says the TPUv8t ramp now tracks to $2.5bn in 4Q vs a $2bn guide before, with $16bn+ in 2027 and upside if more capacity is secured.",
+   "excerpt": "Mediatek sees TPUv8t ramping to US$16bn+ revenue in '27, lifting OpM to 20%+, with upside if it could secure more capacity",
+   "subject": "2454 TT: MediaTek: TPU wins on track for steep ramp through ’28 joined by further CSP/AI lab potential - BUY - Taiwan",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00042A32F0E10000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A3A414F70000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-31-20",
+   "date": "2026-10-30T08:11:00Z",
+   "ticker": "AVGO",
+   "firm": "Jefferies",
+   "author": "Conor O’Mara",
+   "role": "Specialist sales",
+   "kind": "Desk opinion",
+   "tone": "Negative",
+   "position": "Not stated",
+   "summary": "Jefferies sales reads MediaTek's raised ASIC outlook as negative for Broadcom, which still says it does not see MediaTek in the supply chain with a chip.",
+   "excerpt": "This is a negative read for Broadcom who are still talking about not even seeing Mediatek in the supply chain with a chip.",
+   "subject": "Notes from Mediatek conference call. $2.5bn of ASIC sales this year 2027 at upper range of guidance. From Q4 ASICs will begin to drive up operating margins to over 20^ for full year in 2027",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A3A3E4050000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-31-21",
+   "date": "2026-10-30T20:17:12Z",
+   "ticker": "SKHYNIX",
+   "firm": "BofA",
+   "author": "Simon Woo",
+   "role": "Research",
+   "kind": "Research relay",
+   "tone": "Positive",
+   "position": "Not stated",
+   "summary": "BofA Research prefers SK Hynix's memory strategy over Samsung's (more aggressive bit growth, 1c migration, 8-hi HBM4e readiness) and lifts global DRAM forecasts by 5%.",
+   "excerpt": "Hynix's strategies seem better than Samsung's given more aggressive target bit growth, 1c node migration, and 8hi HBM de-spec",
+   "subject": "Global Memory Tech: Weekly theme: Hynix vs Samsung, CXMT position, global forecasts, Hanmi Semi TCB - Global",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00042A32F0E10000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A3A415070000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-31-22",
+   "date": "2026-10-31T00:02:45Z",
+   "ticker": "ON",
+   "firm": "Jefferies",
+   "author": "Blayne Curtis",
+   "role": "Research",
+   "kind": "Research relay",
+   "tone": "Positive",
+   "position": "Not stated",
+   "summary": "Jefferies Research says ON trades at 13.1x C28E vs a 16.4x analog/SMID median despite a compelling DC and margin setup, and thinks buyside guide expectations sit LSD above Street into Monday's print.",
+   "excerpt": "ON enters Monday’s print at 13.1x Consensus C28E EPS and our forecasts versus the Analog/SMID median of 16.4x",
+   "subject": "Blayne’s Bytes: Earnings (P)reviews, Meta Leans on AMD/NVDA CPU, SPCX Financing",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A3A3E5D80000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-31-23",
+   "date": "2026-10-30T12:21:04Z",
+   "ticker": "MRVL",
+   "firm": "FundaAI",
+   "author": "FundaAI",
+   "role": "Independent author",
+   "kind": "Research relay",
+   "tone": "Mixed",
+   "position": "Not stated",
+   "summary": "FundaAI argues a MRVL-LITE deal would secure scarce AI laser supply and deepen MRVL's optical stack, at the cost of heavy share dilution (~27x LITE FY26 revenue, mostly in stock).",
+   "excerpt": "Owning LITE would secure scarce AI laser supply and deepen MRVL's optical stack despite dilution risk",
+   "subject": "Research|MRVL and LITE: Owning the Laser Bottleneck and the Optical Side of Interconnects",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A3A3E4A40000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-10-31-24",
+   "date": "2026-10-30T12:15:05Z",
+   "ticker": "DELL",
+   "firm": "Goldman Sachs",
+   "author": "Leyla Kamshad",
+   "role": "Specialist sales",
+   "kind": "Desk opinion",
+   "tone": "Negative",
+   "position": "Not stated",
+   "summary": "GS's TMT desk lists DELL and HPQ lower in sympathy with INTC's PC-led miss.",
+   "excerpt": "INTC -25% on PC led miss (DELL/HPQ lower in sympathy)",
+   "subject": "GS TMT TODAY 10.30.26",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A3A3E49E0000",
+   "forwarded_by": null
+  }
+ ],
+ "coverage_gaps": [
+  "No DAMNANG or SemiAnalysis e-mail arrived in the window, so there is no independent-author check on the memory, ASIC or optics reads.",
+  "Messages received before ~13:02Z on 30 Oct (JPM Meyers/Schilsky/Tyler, Bernstein Seidman, UBS Ruple/Dwyer, Barclays Rand, BofA Franco, MS Amerian, TMTB, Jefferies O'Mara WYWS/Beavington) were logged in the 30 Oct review and are not re-logged; only new claims from that window were added (e.g. Jefferies O'Mara's MediaTek notes, GS desk, Bernstein AM Note).",
+  "Bloomberg X attention and the analogs in monitor.json run through 30 Oct, and the step-3 rebuild refreshes them. MEDIATEK, KIOXIA and ON have no analog rows, so for them the read rests on source evidence.",
+  "Screened but not read in full: Vik's Newsletter on MRVL-LITE, Citrini threads, GS 'The Breaks of the Game' (AI spend peak), Kevin Xu, Clouded Judgement on the Anthropic S-1, JPM MSFT/DDOG research, MS Greater China semis presentation. Weekend mail (31 Oct) is mostly internal or automated.",
+  "Macro flow statistics (UBS risk-control, Jefferies net selling, BofA HF/LO flows, Vanda) carry no company ticker. They appear in market_read and themes only."
+ ],
+ "source_notes": [
+  "Channel outlook-com via desk_mail_collect.ps1; inbox lag 0.1 h; 630 messages screened, 241 bodies pulled, 31 read in full or in part (registered desk senders first). Newest received 2026-10-31T12:53:12Z. No new desk sender needed adding to desk_senders.json.",
+  "Desk and specialist-sales voices carry no ratings or PTs. INTC TP cuts (Jefferies Curtis $85, Bernstein Rasgon $75), the SNDK $3,000 PT (Newman), the AAPL US 1 List removal and the MediaTek PO are research relayed in sales notes, logged as 'Research relay'. Jefferies' Blayne's Bytes and BofA's MediaTek/memory notes are research, logged with role 'Research'.",
+  "FundaAI is an independent Substack author, not a broker. Vanda and 22V are independent research shops; the Vanda client chat arrived forwarded by Rodrigo Nascimento.",
+  "Desks give different figures for the same moves (SNDK -7% vs -9%, INTC -25% vs -28% by timestamp). Each figure is attributed as given. The ~20% AI ASIC market share is MediaTek's own framing, relayed by Jefferies, not a wiki canonical number.",
+  "Weighting is editorial: agreement across desks (AMZN defended by MS, BofA and Bernstein; INTC TP cuts at two firms) weighs more than single-desk ideas (ON, the AAPL defensive chart). Divergent views (AMD: Jefferies profit-taking vs JPM survey +3; AAPL: BofA US 1 removal vs Jefferies defensive) are kept visible."
+ ]
+}

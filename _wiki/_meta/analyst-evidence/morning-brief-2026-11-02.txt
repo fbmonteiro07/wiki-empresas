@@ -1,0 +1,60 @@
+Morning Analyst Inbox — 2026-11-02
+
+Bottom line: focus on AAPL, AMD, LITE/MRVL, BKNG and CRWD. The opportunity is selective: separate operating execution from funding pressure, and earnings revisions from changes in valuation assumptions.
+
+Book prioritization is PROVISIONAL: book.json remains the July 1 eight-name seed with unknown weights. Bloomberg estimates are the October 30 on-disk snapshot, not a live Monday refresh.
+
+Evidence key: E = _wiki/_meta/analyst-evidence/2026-11-02-morning-source-checks.json. “supp-” IDs are supplemental research signals recorded there. All paths are repository-relative.
+
+FIVE PRIORITIES
+
+1. AAPL — A fundamental short thesis is colliding with defensive positioning.
+Evidence: Bernstein sales / Tyler Seidman, November 1, says his short conviction has weakened as investors rotate into AI-defensive names, despite likely downward earnings revisions. He relays Mark Newman’s December-quarter models: company gross margin 46.2% and EPS $2.87. These are forecasts, not tonight’s September-quarter results. JPM sales / Joshua Meyers, November 2, reports survey sentiment of -2 on a -5 to +5 scale; it is unchanged from his October 30 note.
+Inference/action: do not treat a weak guide as an automatic short catalyst. Freeze December/March units, launch timing, memory costs and sustainable margin separately; distinguish estimate downside from an already bearish audience.
+Falsifier of the earnings-risk thesis: pricing, mix and procurement protection preserve forward margins and launch-adjusted demand.
+Signals: supp-20261102-aapl; esti-063e4da9ce59. Evidence: E.aapl; _wiki/AAPL.md; _wiki/_data/house.json and estimates.json.
+
+2. AMD — Test whether Intel’s disappointment creates a genuine company-specific opportunity.
+Evidence: MS / Joseph Moore et al., November 2, retains Equal-weight but raises PT $465→$510. FY27 client revenue growth falls from +3% to -7.3%, yet FY27 non-GAAP EPS rises $15.54→$15.64 as server strength offsets PCs; GPU estimates are unchanged. The target also rolls to 2028 and uses a higher multiple—not a proportionate earnings upgrade. JPM / Harlan Sur’s October 30 callback says AMD contacts report no comparable PC overshipment and sufficient server supply.
+Inference/action: a constructive relative setup, not proof that all Intel weakness transfers to AMD. Ask for server shipment capacity and Helios deployment milestones. MS explicitly distinguishes revenue recognized at the ODM from final customer acceptance.
+Falsifier: substrate constraints or rack-scale deployment delays prevent CPU/GPU strength from offsetting PC weakness.
+Signal: supp-20261102-amd. Evidence: E.amd; _wiki/AMD.md; _equity_calls/Semis/2026-10-30_JPMorgan_Harlan-Sur-AMA-INTC-KLAC-SNDK-NXPI-AMD-MRVL-post-3Q26.md.
+
+3. LITE/MRVL — Underwrite standalone optics before underwriting a transaction.
+Evidence: Redburn / Mike Harrison, November 2, remains Neutral on MRVL and questions reported all-stock/limited-premium terms, citing potential EPS dilution. JPM / Sur, October 30, instead speculated about 15–20% cash and the remainder equity. Neither is an agreed financing structure. The company pages retrieved today did not establish an acquisition announcement; Lumentum’s news index was incompletely rendered.
+Inference/action: keep transaction probability, consideration and standalone execution in separate cases. For LITE earnings, prioritize OCS shipment conversion, laser yields and customer qualification; demand a quantified synergy case before assigning value to vertical integration.
+Falsifier: definitive terms establish attractive economics, or standalone demand/conversion materially exceeds the operating case.
+Signals: supp-20261102-optics; cata-b395c83ce767. Evidence: E.optics; _wiki/LITE.md; _wiki/MRVL.md; the October 30 Sur callback above.
+
+4. BKNG — The fourth-quarter guide matters more than a routine third-quarter beat.
+Evidence: BofA / Justin Post and Nafeesa Gupta, October 25, expects Q4 room-night guidance of +3–5% versus its quoted Street +6%; it cut 2027 EPS $12.33→$12.23 and PT $234→$232, retaining Buy. Bernstein sales / Seidman, November 1, reports worsening BKNG/EXPE sentiment on agent disruption.
+Inference/action: prepare a contrarian test, not an unconditional long. A guide near the quoted Street hurdle plus stable direct/app engagement would challenge the pessimism; a small Q3 beat would not. Ask whether Vayo investment adds costs or measurable conversion, and separate FX/travel disruption from structural share loss.
+Falsifier: weaker Q4 demand combines with deteriorating direct engagement and incremental agent spending without conversion benefits.
+Signals: supp-20261102-bkng; cata-3309c26d3f2a. Evidence: E.bkng; _wiki/BKNG.md; relatórios bons/_assets/transferir_0e35dd9b/p001.jpg.
+
+5. CRWD — Fresh upgrade; require monetization evidence beyond a larger security market.
+Evidence: Deutsche Bank / Brad Zelnick, Nasr Islam and Bhavin Shah, November 2, upgrades Hold→Buy with a $300 target. Its fieldwork supports consolidation and endpoint momentum; reaching the company’s FY30 $10bn ARR target early is DB’s expectation, not new company guidance.
+Inference/action: investigate an AI-security long candidate with a different demand mechanism from capacity construction. Reconcile paid Guardian/SafeMind adoption, net-new ARR, Flex commitments and cash conversion; avoid treating adoption or a long-term DCF as an immediate earnings revision.
+Falsifier: AI-security activity fails to become incremental ARR, or bundling/concessions erode unit economics.
+Signals: supp-20261102-crwd; cata-01a4718ff5c9. Evidence: E.crwd; _wiki/CRWD.md.
+
+MODEL CONFLICTS AND NARRATIVE
+
+• Funding versus demand: BofA / Justin Post’s November 1 cloud review raises 2027 big-four capex to $908bn (+2% versus its prior estimate). BofA / Vivek Arya, November 2, separately cites $335bn of 2027 FCF burn for EIGHT hyperscalers/neoclouds and argues constrained supply could prolong the cycle. Different universes: do not combine them into a funding gap. Scarcity helps suppliers only if customers can fund and deploy their purchases. Next action: reconcile cash capex, leases, prepayments and financing by company. Falsifier of the constructive scarcity thesis: paying demand weakens alongside funding availability. Signal supp-20261102-funding; E.funding; _wiki/themes/ai-compute-deals.md.
+• Anthropic: the November 1 Capstone $100bn net-raise sensitivity is hypothetical, not funded cash. It replaces FUNDA’s assumed $60bn IPO; the study adds $40bn once. Do not add $100bn again or claim contractual obligations are fully financed. Signal beli-76bdbe984b0e; E.anthropic; _wiki/_meta/research/2026-11-01-anthropic-funding/study.html.
+• Engine controls: AAPL’s $10.12 house EPS is from June 16 versus Bloomberg October 30 $8.76—check fiscal/calendar basis before calling it upside. GOOG’s June 5 house revenue versus October 30 consensus still needs a gross/ex-TAC check. CRWV’s house losses of $3.27/$1.83 are SMALLER than consensus losses of $3.94/$2.18 for 2026/27; the engine’s “below” label is misleading. Signals esti-063e4da9ce59, esti-eddcb2168507, esti-d72458de5d86, esti-c3c870bf4236; E.model_controls; _wiki/_data/house.json and estimates.json.
+
+CATALYST PREPARATION
+
+Today: AAPL after close, call 5pm ET, per JPM / Meyers, November 2; Apple’s retrieved IR page did not expose its calendar. Tomorrow: AMD call 5pm ET and ANET 4:30pm ET, company announcements October 6; BKNG also reports November 3, company calendar October 6. Freeze the above scorecards. For ANET, test orders versus backlog conversion and revenue recognition. [AMD calendar](https://www.globenewswire.com/news-release/2026/10/06/3376019/0/en/amd-to-report-fiscal-third-quarter-2026-financial-results.html) · [Arista calendar](https://www.arista.com/company/news/press-release/24817-pr-20261006) · [Booking calendar](https://ir.bookingholdings.com/news/)
+
+COHR reports November 4 and LITE November 5, company notices October 14/October 5. Compare supply execution before extrapolating sector demand. JPM / Meyers, October 30, lists a LITE CEO callback November 6 at 12:30pm ET—prepare questions, subject to access. [Coherent calendar](https://ir.coherent.com/news-events/financial-releases) · [Lumentum calendar](https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Announces-Reporting-Date-for-Fiscal-First-Quarter-2027-Financial-Results/default.aspx)
+Signals supp-20261102-calendar, supp-20261102-amd, supp-20261102-optics, cata-3309c26d3f2a; E.calendar.
+
+WHAT CHANGED SINCE FRIDAY
+
+The published October 30 brief emphasized AMZN/INTC/SNDK/AAPL/AIXA. Today adds AMD’s offsetting segment revisions, CRWD’s upgrade, BKNG’s imminent guide test and sharper disagreement on MRVL/LITE economics. Apple’s fundamental concern persists, but the desk’s willingness to short it has weakened. JPM’s displayed sentiment scores are repeated—not evidence of a new weekend shift.
+
+The November 2 engine has 51 active signals / 2 high / 41 focus names, versus Friday’s published 33 / 2 / 27. Against Sunday’s later snapshot, 2 IDs entered and 11 narrative flags retired; active signals fell from 60 to 51. These are snapshot mechanics, not eleven resolved theses. Evidence: E.engine_delta; _wiki/_data/analyst/history/signals-2026-11-01.json and signals-2026-11-02.json.
+
+Review was targeted: the fixed mailbox window was inventoried, selected broker bodies and local evidence were read, and calendars were checked. Company pages and house models were not edited. No new financing, compute commitment or delivery is inferred.

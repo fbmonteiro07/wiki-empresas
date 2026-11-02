@@ -1,5 +1,5 @@
 {
-  "asof": "2026-10-30",
+  "asof": "2026-11-02",
   "latest_reconciliation": "reconciliation-2026-10-30-inbox.md",
   "book": {
     "asof": "2026-07-01",
@@ -7,67 +7,25 @@
     "positions": 8
   },
   "stats": {
-    "signals": 51,
-    "active": 51,
-    "high": 8,
-    "belief_changes": 10,
-    "focus_names": 36
+    "signals": 47,
+    "active": 47,
+    "high": 1,
+    "belief_changes": 3,
+    "focus_names": 38
   },
   "focus": [
     {
       "ticker": "GOOG",
-      "focus_score": 91,
+      "focus_score": 78,
       "in_book": true,
-      "signal_count": 4,
-      "high_count": 3,
+      "signal_count": 2,
+      "high_count": 1,
       "sector": "AI — Hyperscalers & Software",
       "thesis": "Full-stack compounder (Search +17%, Cloud +82%); debate is valuation and capital intensity, not demand.",
-      "next_catalyst": "2026-10-30",
+      "next_catalyst": "2026-11-18",
       "why": [
-        "GOOG — derived thesis/debate state changed since the prior daily snapshot",
         "GOOG — 2026 revenue house view is 18% above consensus",
-        "GOOG — 2026-10-30: filing-level watch items for the FY26 10-K: (1) the TPU repurchase-obligation maximum…"
-      ]
-    },
-    {
-      "ticker": "AMZN",
-      "focus_score": 87,
-      "in_book": true,
-      "signal_count": 2,
-      "high_count": 2,
-      "sector": "AI — Hyperscalers & Software",
-      "thesis": "AWS re-acceleration (+28%) + in-house silicon (Trainium); debate = $200B capex/ROIC.",
-      "next_catalyst": "2026-10-30",
-      "why": [
-        "AMZN — derived thesis/debate state changed since the prior daily snapshot",
-        "AMZN — 2026-10-30: FY27 capex number — still not given by management, but the Street has now marked it, and…"
-      ]
-    },
-    {
-      "ticker": "META",
-      "focus_score": 87,
-      "in_book": true,
-      "signal_count": 2,
-      "high_count": 2,
-      "sector": "AI — Hyperscalers & Software",
-      "thesis": "Fastest grower in Mag7 ex-GPU; bear = capital intensity and negative incremental ROIC.",
-      "next_catalyst": "2026-10-30",
-      "why": [
-        "META — derived thesis/debate state changed since the prior daily snapshot",
-        "META — 2026-10-30: (a) resolved by the filings: Meta priced on Monday 10-26 and the preferred closed 10-29,…"
-      ]
-    },
-    {
-      "ticker": "AAPL",
-      "focus_score": 74,
-      "in_book": true,
-      "signal_count": 1,
-      "high_count": 1,
-      "sector": "Consumer / Internet / Other",
-      "thesis": "Strong franchise + memory-dislocation advantage; bear = AI catch-up + price elasticity.",
-      "next_catalyst": "",
-      "why": [
-        "AAPL — 2026 EPS house view is 16% above consensus"
+        "GOOG — 2026-11-18: post-print watch items from the callbacks: (1) 4Q Cloud margin, where Sandler expects the…"
       ]
     },
     {
@@ -85,21 +43,6 @@
       ]
     },
     {
-      "ticker": "SNDK",
-      "focus_score": 66,
-      "in_book": false,
-      "signal_count": 3,
-      "high_count": 0,
-      "sector": "Memory & storage",
-      "thesis": "Post-spin pure-play NAND on AI storage; price-driven blowout + $42B LTA backlog vs blowoff-top risk.",
-      "next_catalyst": "2026-10-30",
-      "why": [
-        "SNDK — derived thesis/debate state changed since the prior daily snapshot",
-        "SNDK — 2026-10-30: a dated coverage target, per Sur relaying the callback (not company-disclosed): 75% of…",
-        "SNDK — 2026-11-09: 2026-11-09 / 11-19 / 11-20 — 8-for-1 forward split: record date, issue of seven additional…"
-      ]
-    },
-    {
       "ticker": "LITE",
       "focus_score": 64,
       "in_book": false,
@@ -107,37 +50,23 @@
       "high_count": 0,
       "sector": "Optical / Networking",
       "thesis": "US photonics pure-play (rev +90%); demand isn't the question, supply/execution is.",
-      "next_catalyst": "2026-11-05",
+      "next_catalyst": "2026-11-02",
       "why": [
         "LITE — derived thesis/debate state changed since the prior daily snapshot",
-        "LITE — 2026-11-05: F1Q27 earnings (date per Deutsche Bank · Conti, 2026-10-07; confirm against the LITE IR…"
+        "LITE — 2026-11-02: Resolved early on 2026-11-02 (original calendar date 2026-11-05) - F1Q27 earnings. Company…"
       ]
     },
     {
-      "ticker": "MU",
-      "focus_score": 64,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "AI — Semis & Compute",
-      "thesis": "Pure-play on AI memory intensity (HBM sold-out CY26); debate = peak earnings vs run-rate.",
-      "next_catalyst": "2026-12-09",
-      "why": [
-        "MU — derived thesis/debate state changed since the prior daily snapshot",
-        "MU — 2026-12-09: F4Q26 PRINT — REPORTED 2026-09-30 (✅ resolved: beat on revenue / GM / EPS, FQ1 revenue…"
-      ]
-    },
-    {
-      "ticker": "AMAT",
+      "ticker": "ANTHROPIC",
       "focus_score": 62,
       "in_book": false,
       "signal_count": 1,
       "high_count": 0,
-      "sector": "Semiconductor equipment (semicap)",
-      "thesis": "Broadest-line front-end WFE; share-gainer into a $200B/$250B '27-'28 WFE cycle; bear = memory beta + crowded positioning.",
+      "sector": "AI labs (private)",
+      "thesis": "Pre-IPO frontier lab (S-1 2026-10-26, Nasdaq: ANT): 2Q26 rev $11.6bn, first op. profit; 85% serving GM (1H26); 48% sold via AWS/GCP/Azure, which are also its co",
       "next_catalyst": "",
       "why": [
-        "AMAT — derived thesis/debate state changed since the prior daily snapshot"
+        "ANTHROPIC — derived thesis/debate state changed since the prior daily snapshot"
       ]
     },
     {
@@ -154,29 +83,16 @@
       ]
     },
     {
-      "ticker": "PWR",
-      "focus_score": 62,
+      "ticker": "BKNG",
+      "focus_score": 58,
       "in_book": false,
       "signal_count": 1,
       "high_count": 0,
-      "sector": "Power & Energy",
-      "thesis": "Labor pick-and-shovel on the grid/data-center super-cycle (backlog $48.5B).",
-      "next_catalyst": "",
+      "sector": "Consumer / Internet / Other",
+      "thesis": "World's #1 OTA; binary debate on agentic LLMs (TAM expander vs disintermediation).",
+      "next_catalyst": "2026-11-03",
       "why": [
-        "PWR — derived thesis/debate state changed since the prior daily snapshot"
-      ]
-    },
-    {
-      "ticker": "RDDT",
-      "focus_score": 62,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Software / security / internet",
-      "thesis": "Dual engine: ads + AI data-licensing; binary on Google AI-Overviews referral-traffic cannibalization.",
-      "next_catalyst": "",
-      "why": [
-        "RDDT — derived thesis/debate state changed since the prior daily snapshot"
+        "BKNG — 2026-11-03: THE 3Q26 PRINT, AND THE BARS ARE NOW EXPLICIT. ① 3Q room nights: guide +3-5%; consensus…"
       ]
     },
     {
@@ -236,6 +152,20 @@
       ]
     },
     {
+      "ticker": "STX",
+      "focus_score": 51,
+      "in_book": false,
+      "signal_count": 2,
+      "high_count": 0,
+      "sector": "Memory & storage",
+      "thesis": "HAMR/Mozaic front-runner in a supply-constrained nearline cycle; pricing escalators into CY27/28.",
+      "next_catalyst": "2026-11-02",
+      "why": [
+        "STX — 2026-11-02: Morgan Stanley Global Hardware & Optical lunch (Andy Meng, Howard Kao, Derrick Yang, Meta…",
+        "STX — 2026-11-17: final approval hearing, securities class-action settlement ($175M; ~$70M insurers; $105M…"
+      ]
+    },
+    {
       "ticker": "SPCX",
       "focus_score": 50,
       "in_book": false,
@@ -249,29 +179,68 @@
       ]
     },
     {
-      "ticker": "BKNG",
+      "ticker": "APO",
       "focus_score": 49,
       "in_book": false,
       "signal_count": 1,
       "high_count": 0,
-      "sector": "Consumer / Internet / Other",
-      "thesis": "World's #1 OTA; binary debate on agentic LLMs (TAM expander vs disintermediation).",
+      "sector": "Financials",
+      "thesis": "Origination, asset management and Athene; capital formation and spread earnings versus credit, liquidity and funding risk.",
       "next_catalyst": "2026-11-03",
       "why": [
-        "BKNG — 2026-11-03: THE 3Q26 PRINT, AND THE BARS ARE NOW EXPLICIT. ① 3Q room nights: guide +3-5%; consensus…"
+        "APO — 2026-11-03: Q3 results, announced 2026-09-29. Test FRE growth, Athene inflows, reported versus…"
       ]
     },
     {
-      "ticker": "KLAC",
+      "ticker": "GEV",
       "focus_score": 49,
       "in_book": false,
       "signal_count": 1,
       "high_count": 0,
-      "sector": "Semiconductor equipment (semicap)",
-      "thesis": "Process-control near-monopoly (~7x peers); only semicap to guide CY27 WFE > CY26; back-half-of-cycle revision story.",
-      "next_catalyst": "2026-10-30",
+      "sector": "Power & Energy",
+      "thesis": "Cleanest AI-power earnings-revisions story (orders +71%); bear = order peak + Wind.",
+      "next_catalyst": "2026-11-02",
       "why": [
-        "KLAC — 2026-10-30: \"2027 memory ~60%\" — Bren, as machine-transcribed: \"In 2027, we'd expect overall memory to…"
+        "GEV — 2026-11-02: GS-hosted GEV IR meeting, New York — 2026-11-02 (per the GS Industrials daily, logged…"
+      ]
+    },
+    {
+      "ticker": "INTC",
+      "focus_score": 49,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "AI — Semis & Compute",
+      "thesis": "Binary IDM turnaround; 18A yielding, but the equity is a call option on the first big external foundry customer.",
+      "next_catalyst": "2026-11-03",
+      "why": [
+        "INTC — 2026-11-03: Susquehanna \"The AI Arms Race\" session (Christopher Rolland; AMD, INTC, MRVL, NVDA, AVGO,…"
+      ]
+    },
+    {
+      "ticker": "KIOXIA",
+      "focus_score": 49,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Memory & storage",
+      "thesis": "Cleanest listed NAND/SSD-cycle proxy; no DRAM/HBM offset on the downturn. ¥, no SEC, IPO'd 2024.",
+      "next_catalyst": "2026-11-02",
+      "why": [
+        "KIOXIA — 2026-11-02: 2026-11-02 (Mon) 9am JST — BofA post-results \"doko shuzai\" with KIOXIA on FY3/27 2Q…"
+      ]
+    },
+    {
+      "ticker": "SMCI",
+      "focus_score": 49,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Systems & neoclouds",
+      "thesis": "Fastest NVIDIA rack integrator + DLC leader; thin assembly margin + governance overhang (Hold).",
+      "next_catalyst": "2026-11-03",
+      "why": [
+        "SMCI — 2026-11-03: RESOLVED (preliminary) 2026-10-20 — F1Q27 vs guide: revenue $18.5–19.5bn vs $14.5–15.5bn,…"
       ]
     },
     {
@@ -301,17 +270,17 @@
       ]
     },
     {
-      "ticker": "STX",
+      "ticker": "CME",
       "focus_score": 42,
       "in_book": false,
       "signal_count": 2,
       "high_count": 0,
-      "sector": "Memory & storage",
-      "thesis": "HAMR/Mozaic front-runner in a supply-constrained nearline cycle; pricing escalators into CY27/28.",
-      "next_catalyst": "2026-11-02",
+      "sector": "Financials",
+      "thesis": "Futures-and-clearing toll on US rates, equity-index, energy and commodity risk; volatility-driven volume, pricing and market data versus perpetuals/retail-venue",
+      "next_catalyst": "2026-11-09",
       "why": [
-        "STX — 2026-11-02: Morgan Stanley Global Hardware & Optical lunch (Andy Meng, Howard Kao, Derrick Yang, Meta…",
-        "STX — 2026-11-17: final approval hearing, securities class-action settlement ($175M; ~$70M insurers; $105M…"
+        "CME — 2026-11-09: Compute futures: the CFTC comment period on CME's Silicon Data H100-rental-index contract…",
+        "CME — 2026-12-07: CME Securities Clearing launch on 2026-12-07, ahead of the SEC Treasury clearing mandate…"
       ]
     },
     {
@@ -328,55 +297,81 @@
       ]
     },
     {
-      "ticker": "GEV",
+      "ticker": "EFX",
       "focus_score": 40,
       "in_book": false,
       "signal_count": 1,
       "high_count": 0,
-      "sector": "Power & Energy",
-      "thesis": "Cleanest AI-power earnings-revisions story (orders +71%); bear = order peak + Wind.",
-      "next_catalyst": "2026-11-02",
+      "sector": "Financials",
+      "thesis": "Credit bureau plus proprietary Work Number income data; Workforce/government growth and AI cost-out versus mortgage cyclicality and FHFA/FICO changes to mortgag",
+      "next_catalyst": "2026-11-04",
       "why": [
-        "GEV — 2026-11-02: GS-hosted GEV IR meeting, New York — 2026-11-02 (per the GS Industrials daily, logged…"
+        "EFX — 2026-11-04: FICO quarterly results: 2027 mortgage-score pricing, the direct-license model and the…"
       ]
     },
     {
-      "ticker": "INTC",
+      "ticker": "KKR",
       "focus_score": 40,
       "in_book": false,
       "signal_count": 1,
       "high_count": 0,
-      "sector": "AI — Semis & Compute",
-      "thesis": "Binary IDM turnaround; 18A yielding, but the equity is a call option on the first big external foundry customer.",
-      "next_catalyst": "2026-11-03",
+      "sector": "Financials",
+      "thesis": "Asset management, insurance and strategic holdings; fee-base growth versus earnings comparability and balance-sheet exposure.",
+      "next_catalyst": "2026-11-09",
       "why": [
-        "INTC — 2026-11-03: Susquehanna \"The AI Arms Race\" session (Christopher Rolland; AMD, INTC, MRVL, NVDA, AVGO,…"
+        "KKR — 2026-11-09: Q3 results and call, announced by KKR on 2026-09-29. Test fee activation, insurance…"
       ]
     },
     {
-      "ticker": "KIOXIA",
+      "ticker": "QCOM",
+      "focus_score": 40,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Analog & processors",
+      "thesis": "High-FCF handset franchise eroding (Apple modem); re-rating hinges on auto/IoT/PC diversification.",
+      "next_catalyst": "2026-11-09",
+      "why": [
+        "QCOM — 2026-11-09: APPLE LICENSING EXTENSION — announced 2026-09-24 ahead of the April 2027 expiry, terms not…"
+      ]
+    },
+    {
+      "ticker": "SNDK",
       "focus_score": 40,
       "in_book": false,
       "signal_count": 1,
       "high_count": 0,
       "sector": "Memory & storage",
-      "thesis": "Cleanest listed NAND/SSD-cycle proxy; no DRAM/HBM offset on the downturn. ¥, no SEC, IPO'd 2024.",
-      "next_catalyst": "2026-11-02",
+      "thesis": "Post-spin pure-play NAND on AI storage; price-driven blowout + $42B LTA backlog vs blowoff-top risk.",
+      "next_catalyst": "2026-11-09",
       "why": [
-        "KIOXIA — 2026-11-02: 2026-11-02 (Mon) 9am JST — BofA post-results \"doko shuzai\" with KIOXIA on FY3/27 2Q…"
+        "SNDK — 2026-11-09: 2026-11-09 / 11-19 / 11-20 — 8-for-1 forward split: record date, issue of seven additional…"
       ]
     },
     {
-      "ticker": "SMCI",
+      "ticker": "TRU",
       "focus_score": 40,
       "in_book": false,
       "signal_count": 1,
       "high_count": 0,
-      "sector": "Systems & neoclouds",
-      "thesis": "Fastest NVIDIA rack integrator + DLC leader; thin assembly margin + governance overhang (Hold).",
-      "next_catalyst": "2026-11-03",
+      "sector": "Financials",
+      "thesis": "Credit-bureau data plus fraud/marketing and international growth; ex-FICO organic growth and margin versus mortgage-score and tri-merge policy risk.",
+      "next_catalyst": "2026-11-04",
       "why": [
-        "SMCI — 2026-11-03: RESOLVED (preliminary) 2026-10-20 — F1Q27 vs guide: revenue $18.5–19.5bn vs $14.5–15.5bn,…"
+        "TRU — 2026-11-04: FICO fiscal Q4 results and 2027 pricing outlook (date per the [UBS desk relay of McVeigh,…"
+      ]
+    },
+    {
+      "ticker": "MU",
+      "focus_score": 34,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "AI — Semis & Compute",
+      "thesis": "Pure-play on AI memory intensity (HBM sold-out CY26); debate = peak earnings vs run-rate.",
+      "next_catalyst": "2026-12-09",
+      "why": [
+        "MU — 2026-12-09: F4Q26 PRINT — REPORTED 2026-09-30 (✅ resolved: beat on revenue / GM / EPS, FQ1 revenue…"
       ]
     },
     {
@@ -406,6 +401,19 @@
       ]
     },
     {
+      "ticker": "OWL",
+      "focus_score": 32,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Financials",
+      "thesis": "Permanent-capital alternatives manager; real-assets/data-center and institutional growth versus wealth-BDC liquidity, private-credit quality and project-financi",
+      "next_catalyst": "2026-11-23",
+      "why": [
+        "OWL — 2026-11-23: Q3 dividend of $0.23 per Class A share: record date 2026-11-10, payable 2026-11-23 (Q3…"
+      ]
+    },
+    {
       "ticker": "PANW",
       "focus_score": 32,
       "in_book": false,
@@ -419,16 +427,16 @@
       ]
     },
     {
-      "ticker": "QCOM",
+      "ticker": "SAMSUNG",
       "focus_score": 32,
       "in_book": false,
       "signal_count": 1,
       "high_count": 0,
-      "sector": "Analog & processors",
-      "thesis": "High-FCF handset franchise eroding (Apple modem); re-rating hinges on auto/IoT/PC diversification.",
-      "next_catalyst": "2026-11-09",
+      "sector": "Memory & storage",
+      "thesis": "Cheapest way to own the memory super-cycle; HBM4 catch-up vs SK Hynix + foundry optionality. ₩, no SEC.",
+      "next_catalyst": "2026-11-21",
       "why": [
-        "QCOM — 2026-11-09: APPLE LICENSING EXTENSION — announced 2026-09-24 ahead of the April 2027 expiry, terms not…"
+        "SAMSUNG — 2026-11-21: 2026-08-24 → 2026-11-21 — the 53.3mn-share PSU treasury purchase window is open. A…"
       ]
     },
     {
@@ -458,6 +466,19 @@
       ]
     },
     {
+      "ticker": "NDAQ",
+      "focus_score": 25,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Financials",
+      "thesis": "Index licensing, bank software and listings on a market-infrastructure base; Verafin acceleration and Nasdaq-100 beta versus rising costs and market-structure c",
+      "next_catalyst": "2026-12-06",
+      "why": [
+        "NDAQ — 2026-12-06: 23/5 trading on The Nasdaq Stock Market goes live 2026-12-06 (Q3 release, 2026-10-22).…"
+      ]
+    },
+    {
       "ticker": "NOW",
       "focus_score": 25,
       "in_book": false,
@@ -484,270 +505,24 @@
       ]
     },
     {
-      "ticker": "SAMSUNG",
+      "ticker": "WDC",
       "focus_score": 25,
       "in_book": false,
       "signal_count": 1,
       "high_count": 0,
       "sector": "Memory & storage",
-      "thesis": "Cheapest way to own the memory super-cycle; HBM4 catch-up vs SK Hynix + foundry optionality. ₩, no SEC.",
-      "next_catalyst": "2026-11-21",
+      "thesis": "Pure-HDD post-SanDisk-spin; nearline exabyte growth + HAMR; the \"1B\" to Seagate's \"1A\".",
+      "next_catalyst": "2026-12-17",
       "why": [
-        "SAMSUNG — 2026-11-21: 2026-08-24 → 2026-11-21 — the 53.3mn-share PSU treasury purchase window is open. A…"
+        "WDC — 2026-12-17: Balance-sheet dates (10-Q): the remaining $141M of 2028 converts is called for redemption…"
       ]
     }
   ],
   "signals": [
     {
-      "id": "beli-df8767d799a4",
-      "asof": "2026-10-30",
-      "source_date": "2026-10-30",
-      "type": "narrative_shift",
-      "priority": "high",
-      "score": 80,
-      "title": "AMZN — derived thesis/debate state changed since the prior daily snapshot",
-      "tickers": [
-        "AMZN"
-      ],
-      "in_book": [
-        "AMZN"
-      ],
-      "impact": "high",
-      "urgency": "immediate",
-      "confidence": "high",
-      "why_now": "verification (transcription QA, print-night batch) — ~110 items checked against the primaries (Q3 call transcript 2026-10-29, 8-K EX-99.1 release 2026-10-29, Q3 10-Q filed 2026-10-30, Q2/Q1'26 and Q3'25 10-Qs for comparisons; BBG/broker marks against prior page content): every number, quote and speaker in the call/10-Q sub-blocks, the 10-30 Debate/Risks/Catalysts bullets, the 7 Signal cells, the Q3'26 management column and this Changelog entry. All high-priority figures confirmed (RPO $578B / 6.1 yrs vs $496B /…",
-      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
-      "action": "Re-grade the AMZN thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
-      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
-      "readthrough": [
-        {
-          "ticker": "AVGO",
-          "relation": "supplier",
-          "detail": "networking",
-          "from": "AMZN",
-          "in_book": true
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "supplier",
-          "detail": "GPUs",
-          "from": "AMZN",
-          "in_book": true
-        },
-        {
-          "ticker": "MDB",
-          "relation": "competitor",
-          "detail": "Atlas vs DynamoDB",
-          "from": "AMZN",
-          "in_book": false
-        },
-        {
-          "ticker": "SNOW",
-          "relation": "competitor",
-          "detail": "warehouse vs Redshift",
-          "from": "AMZN",
-          "in_book": false
-        },
-        {
-          "ticker": "AAOI",
-          "relation": "supplier",
-          "detail": "optical transceivers",
-          "from": "AMZN",
-          "in_book": false
-        },
-        {
-          "ticker": "AGX",
-          "relation": "supplier",
-          "detail": "EPC gas power",
-          "from": "AMZN",
-          "in_book": false
-        },
-        {
-          "ticker": "ALAB",
-          "relation": "supplier",
-          "detail": "PCIe/CXL",
-          "from": "AMZN",
-          "in_book": false
-        }
-      ],
-      "source": "AMZN page Changelog 2026-10-30",
-      "evidence_paths": [
-        "AMZN.md"
-      ],
-      "evidence_anchor": "verification (transcription QA, print-night batch) — ~110 items checked against the primaries (Q3 call transcript 2026-10-29, 8-K EX-99.1 release 2026-10-29, Q3 10-Q filed 2026-10-30, Q2/Q1'26 and Q3'25 10-Qs for comparisons; BBG/broker marks against prior page content): every number, quote and speaker in the call/10-Q sub-blocks, the 10-30 Debate/Risks/Catalysts bullets, the 7 Signal cells, the Q3'26 management column and this Changelog entry. All high-priority figures confirmed (RPO $578B / 6.1 yrs vs $496B /…",
-      "origin": "belief_diff",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "beli-395cd13975f7",
-      "asof": "2026-10-30",
-      "source_date": "2026-10-30",
-      "type": "narrative_shift",
-      "priority": "high",
-      "score": 80,
-      "title": "GOOG — derived thesis/debate state changed since the prior daily snapshot",
-      "tickers": [
-        "GOOG"
-      ],
-      "in_book": [
-        "GOOG"
-      ],
-      "impact": "high",
-      "urgency": "immediate",
-      "confidence": "high",
-      "why_now": "verifier correction: the All-In Sinal insert had split the earlier 10-Q-fold Sinal line in two, moving its Cloud-RPO/Crux, TPU-repurchase, Capex and Síntese clauses under the All-In heading; restored them to the 10-Q line verbatim. Also unquoted \"compute rental vs model builders\" (a paraphrase, not a transcript quote). All other host numbers (Cloud $30.7B, OI 3.5→11, Search 56→63, Services OI 33.5→39, 21x, BBG snapshot −11.7%/−$445bn and −13.2%/−$510bn) re-checked and tie.",
-      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
-      "action": "Re-grade the GOOG thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
-      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
-      "readthrough": [
-        {
-          "ticker": "AVGO",
-          "relation": "supplier",
-          "detail": "custom ASIC (TPU)",
-          "from": "GOOG",
-          "in_book": true
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "supplier",
-          "detail": "GPUs",
-          "from": "GOOG",
-          "in_book": true
-        },
-        {
-          "ticker": "SNOW",
-          "relation": "competitor",
-          "detail": "warehouse vs BigQuery",
-          "from": "GOOG",
-          "in_book": false
-        },
-        {
-          "ticker": "ANTHROPIC",
-          "relation": "customer",
-          "detail": "TPU compute",
-          "from": "GOOG",
-          "in_book": false
-        },
-        {
-          "ticker": "BE",
-          "relation": "supplier",
-          "detail": "on-site fuel cells",
-          "from": "GOOG",
-          "in_book": false
-        },
-        {
-          "ticker": "CIEN",
-          "relation": "supplier",
-          "detail": "DCI/optical",
-          "from": "GOOG",
-          "in_book": false
-        },
-        {
-          "ticker": "COHR",
-          "relation": "supplier",
-          "detail": "optical",
-          "from": "GOOG",
-          "in_book": false
-        }
-      ],
-      "source": "GOOG page Changelog 2026-10-30",
-      "evidence_paths": [
-        "GOOG.md"
-      ],
-      "evidence_anchor": "verifier correction: the All-In Sinal insert had split the earlier 10-Q-fold Sinal line in two, moving its Cloud-RPO/Crux, TPU-repurchase, Capex and Síntese clauses under the All-In heading; restored them to the 10-Q line verbatim. Also unquoted \"compute rental vs model builders\" (a paraphrase, not a transcript quote). All other host numbers (Cloud $30.7B, OI 3.5→11, Search 56→63, Services OI 33.5→39, 21x, BBG snapshot −11.7%/−$445bn and −13.2%/−$510bn) re-checked and tie.",
-      "origin": "belief_diff",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "beli-5063523d5233",
-      "asof": "2026-10-30",
-      "source_date": "2026-10-30",
-      "type": "narrative_shift",
-      "priority": "high",
-      "score": 80,
-      "title": "META — derived thesis/debate state changed since the prior daily snapshot",
-      "tickers": [
-        "META"
-      ],
-      "in_book": [
-        "META"
-      ],
-      "impact": "high",
-      "urgency": "immediate",
-      "confidence": "high",
-      "why_now": "weekly credit review: Primary 424B5 filings (October 28) and 8-K (October 29) replace the prior no-offering/pricing-unverified status. The $12.5bn base preferred offering closed October 29 at a 6.50% dividend; common forwards were priced at $625 for $25bn gross, versus $22.5bn at launch, with no initial company cash. Settlement by November 19, 2027 is conditional; the ~$60bn Class C ATM remains planned. October 21 no-specific-plan and October 26 launch / WFC $95bn vintages remain dated history, not current…",
-      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
-      "action": "Re-grade the META thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
-      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
-      "readthrough": [
-        {
-          "ticker": "AVGO",
-          "relation": "supplier",
-          "detail": "custom ASIC",
-          "from": "META",
-          "in_book": true
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "supplier",
-          "detail": "GPUs",
-          "from": "META",
-          "in_book": true
-        },
-        {
-          "ticker": "AMD",
-          "relation": "supplier",
-          "detail": "MI GPUs",
-          "from": "META",
-          "in_book": false
-        },
-        {
-          "ticker": "GLW",
-          "relation": "supplier",
-          "detail": "optical fiber (LTA)",
-          "from": "META",
-          "in_book": false
-        },
-        {
-          "ticker": "SNDK",
-          "relation": "supplier",
-          "detail": "NAND/SSD",
-          "from": "META",
-          "in_book": false
-        },
-        {
-          "ticker": "STX",
-          "relation": "supplier",
-          "detail": "nearline HDD",
-          "from": "META",
-          "in_book": false
-        },
-        {
-          "ticker": "WDC",
-          "relation": "supplier",
-          "detail": "nearline HDD",
-          "from": "META",
-          "in_book": false
-        }
-      ],
-      "source": "META page Changelog 2026-10-30",
-      "evidence_paths": [
-        "META.md"
-      ],
-      "evidence_anchor": "weekly credit review: Primary 424B5 filings (October 28) and 8-K (October 29) replace the prior no-offering/pricing-unverified status. The $12.5bn base preferred offering closed October 29 at a 6.50% dividend; common forwards were priced at $625 for $25bn gross, versus $22.5bn at launch, with no initial company cash. Settlement by November 19, 2027 is conditional; the ~$60bn Class C ATM remains planned. October 21 no-specific-plan and October 26 launch / WFC $95bn vintages remain dated history, not current…",
-      "origin": "belief_diff",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "esti-eddcb2168507",
-      "asof": "2026-10-30",
-      "source_date": "2026-10-30",
+      "id": "esti-0747de7f7bce",
+      "asof": "2026-11-02",
+      "source_date": "2026-11-02",
       "type": "model_check",
       "priority": "high",
       "score": 71,
@@ -761,7 +536,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $428.4bn as of 2026-10-30, a derived +17.9% gap. Revenue comparisons require a basis check.",
+      "why_now": "Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $428.4bn as of 2026-11-02, a derived +17.9% gap. Revenue comparisons require a basis check.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -816,7 +591,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-10-30",
+      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-11-02",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -825,8 +600,8 @@
       "origin": "house_vs_consensus",
       "values": {
         "house": 505.0,
-        "consensus": 428.37021999999996,
-        "delta_pct": 17.89,
+        "consensus": 428.40759,
+        "delta_pct": 17.88,
         "unit": "$bn"
       },
       "feedback": "",
@@ -834,395 +609,75 @@
       "hidden": false
     },
     {
-      "id": "esti-063e4da9ce59",
-      "asof": "2026-10-30",
-      "source_date": "2026-10-30",
-      "type": "model_check",
-      "priority": "high",
-      "score": 69,
-      "title": "AAPL — 2026 EPS house view is 16% above consensus",
-      "tickers": [
-        "AAPL"
-      ],
-      "in_book": [
-        "AAPL"
-      ],
-      "impact": "high",
-      "urgency": "standing",
-      "confidence": "provisional",
-      "why_now": "Capstone carries 2026 EPS at $10.12 versus Bloomberg consensus at $8.76 as of 2026-10-30, a derived +15.5% gap.",
-      "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
-      "action": "Open the AAPL model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
-      "readthrough": [
-        {
-          "ticker": "TSM",
-          "relation": "supplier",
-          "detail": "foundry",
-          "from": "AAPL",
-          "in_book": true
-        },
-        {
-          "ticker": "ARM",
-          "relation": "supplier",
-          "detail": "IP",
-          "from": "AAPL",
-          "in_book": false
-        }
-      ],
-      "source": "Capstone official model (Modelo Apple Felipe 2Q26 - WIP.xlsm, 2026-06-16). · Bloomberg consensus 2026-10-30",
-      "evidence_paths": [
-        "_data/house.json",
-        "_data/estimates.json"
-      ],
-      "evidence_anchor": "AAPL 2026 EPS",
-      "origin": "house_vs_consensus",
-      "values": {
-        "house": 10.12,
-        "consensus": 8.76,
-        "delta_pct": 15.53,
-        "unit": ""
-      },
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "cata-6dde8d247c97",
-      "asof": "2026-10-30",
-      "source_date": "2026-10-30",
-      "event_date": "2026-10-30",
-      "type": "catalyst",
-      "priority": "high",
-      "score": 69,
-      "title": "AMZN — 2026-10-30: FY27 capex number — still not given by management, but the Street has now marked it, and…",
-      "tickers": [
-        "AMZN"
-      ],
-      "in_book": [
-        "AMZN"
-      ],
-      "impact": "high",
-      "urgency": "immediate",
-      "confidence": "medium",
-      "why_now": "FY27 capex number — still not given by management, but the Street has now marked it, and the marks disagree by ~$40bn. Management gave FY26 (~$220B) and \"heavy capex over next few years\" but no 20",
-      "belief_update": "A dated event can resolve or reframe an open debate.",
-      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
-      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
-      "readthrough": [
-        {
-          "ticker": "AVGO",
-          "relation": "supplier",
-          "detail": "networking",
-          "from": "AMZN",
-          "in_book": true
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "supplier",
-          "detail": "GPUs",
-          "from": "AMZN",
-          "in_book": true
-        },
-        {
-          "ticker": "MDB",
-          "relation": "competitor",
-          "detail": "Atlas vs DynamoDB",
-          "from": "AMZN",
-          "in_book": false
-        },
-        {
-          "ticker": "SNOW",
-          "relation": "competitor",
-          "detail": "warehouse vs Redshift",
-          "from": "AMZN",
-          "in_book": false
-        },
-        {
-          "ticker": "AAOI",
-          "relation": "supplier",
-          "detail": "optical transceivers",
-          "from": "AMZN",
-          "in_book": false
-        },
-        {
-          "ticker": "AGX",
-          "relation": "supplier",
-          "detail": "EPC gas power",
-          "from": "AMZN",
-          "in_book": false
-        },
-        {
-          "ticker": "ALAB",
-          "relation": "supplier",
-          "detail": "PCIe/CXL",
-          "from": "AMZN",
-          "in_book": false
-        }
-      ],
-      "source": "AMZN page catalyst ledger; underlying source/date retained in the catalyst text",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "AMZN.md"
-      ],
-      "evidence_anchor": "FY27 capex number — still not given by management, but the Street has now marked it, and the marks disagree by ~$40bn. Management gave FY26 (~$220B) and \"heavy capex over next few years\" but no 20",
-      "origin": "catalyst_calendar",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "cata-99b2f1190ae9",
-      "asof": "2026-10-30",
-      "source_date": "2026-10-30",
-      "event_date": "2026-10-30",
-      "type": "catalyst",
-      "priority": "high",
-      "score": 69,
-      "title": "GOOG — 2026-10-30: filing-level watch items for the FY26 10-K: (1) the TPU repurchase-obligation maximum…",
-      "tickers": [
-        "GOOG"
-      ],
-      "in_book": [
-        "GOOG"
-      ],
-      "impact": "high",
-      "urgency": "immediate",
-      "confidence": "medium",
-      "why_now": "🆕 2026-10-30 (10-Q fold) — filing-level watch items for the FY26 10-K: (1) the TPU repurchase-obligation maximum ($6.6B at 09-30) against TPU revenue as the ramp scales, and whether any put is",
-      "belief_update": "A dated event can resolve or reframe an open debate.",
-      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
-      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
-      "readthrough": [
-        {
-          "ticker": "AVGO",
-          "relation": "supplier",
-          "detail": "custom ASIC (TPU)",
-          "from": "GOOG",
-          "in_book": true
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "supplier",
-          "detail": "GPUs",
-          "from": "GOOG",
-          "in_book": true
-        },
-        {
-          "ticker": "SNOW",
-          "relation": "competitor",
-          "detail": "warehouse vs BigQuery",
-          "from": "GOOG",
-          "in_book": false
-        },
-        {
-          "ticker": "ANTHROPIC",
-          "relation": "customer",
-          "detail": "TPU compute",
-          "from": "GOOG",
-          "in_book": false
-        },
-        {
-          "ticker": "BE",
-          "relation": "supplier",
-          "detail": "on-site fuel cells",
-          "from": "GOOG",
-          "in_book": false
-        },
-        {
-          "ticker": "CIEN",
-          "relation": "supplier",
-          "detail": "DCI/optical",
-          "from": "GOOG",
-          "in_book": false
-        },
-        {
-          "ticker": "COHR",
-          "relation": "supplier",
-          "detail": "optical",
-          "from": "GOOG",
-          "in_book": false
-        }
-      ],
-      "source": "GOOG page catalyst ledger; underlying source/date retained in the catalyst text",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "GOOG.md"
-      ],
-      "evidence_anchor": "🆕 2026-10-30 (10-Q fold) — filing-level watch items for the FY26 10-K: (1) the TPU repurchase-obligation maximum ($6.6B at 09-30) against TPU revenue as the ramp scales, and whether any put is",
-      "origin": "catalyst_calendar",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "cata-989fe8befe1e",
-      "asof": "2026-10-30",
-      "source_date": "2026-10-30",
-      "event_date": "2026-10-30",
-      "type": "catalyst",
-      "priority": "high",
-      "score": 69,
-      "title": "META — 2026-10-30: (a) resolved by the filings: Meta priced on Monday 10-26 and the preferred closed 10-29,…",
-      "tickers": [
-        "META"
-      ],
-      "in_book": [
-        "META"
-      ],
-      "impact": "high",
-      "urgency": "immediate",
-      "confidence": "medium",
-      "why_now": "✅ 2026-10-30 — (a) resolved by the filings: Meta priced on Monday 10-26 and the preferred closed 10-29, before the election week. Size: $37.5bn underwritten ($25.0bn Class A forward + $12.5bn mand",
-      "belief_update": "A dated event can resolve or reframe an open debate.",
-      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
-      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
-      "readthrough": [
-        {
-          "ticker": "AVGO",
-          "relation": "supplier",
-          "detail": "custom ASIC",
-          "from": "META",
-          "in_book": true
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "supplier",
-          "detail": "GPUs",
-          "from": "META",
-          "in_book": true
-        },
-        {
-          "ticker": "AMD",
-          "relation": "supplier",
-          "detail": "MI GPUs",
-          "from": "META",
-          "in_book": false
-        },
-        {
-          "ticker": "GLW",
-          "relation": "supplier",
-          "detail": "optical fiber (LTA)",
-          "from": "META",
-          "in_book": false
-        },
-        {
-          "ticker": "SNDK",
-          "relation": "supplier",
-          "detail": "NAND/SSD",
-          "from": "META",
-          "in_book": false
-        },
-        {
-          "ticker": "STX",
-          "relation": "supplier",
-          "detail": "nearline HDD",
-          "from": "META",
-          "in_book": false
-        },
-        {
-          "ticker": "WDC",
-          "relation": "supplier",
-          "detail": "nearline HDD",
-          "from": "META",
-          "in_book": false
-        }
-      ],
-      "source": "META page catalyst ledger; underlying source/date retained in the catalyst text",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "META.md"
-      ],
-      "evidence_anchor": "✅ 2026-10-30 — (a) resolved by the filings: Meta priced on Monday 10-26 and the preferred closed 10-29, before the election week. Size: $37.5bn underwritten ($25.0bn Class A forward + $12.5bn mand",
-      "origin": "catalyst_calendar",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "beli-97eb0ffe001b",
-      "asof": "2026-10-30",
-      "source_date": "2026-10-30",
+      "id": "beli-76bdbe984b0e",
+      "asof": "2026-11-02",
+      "source_date": "2026-11-01",
       "type": "narrative_shift",
       "priority": "medium",
       "score": 62,
-      "title": "AMAT — derived thesis/debate state changed since the prior daily snapshot",
+      "title": "ANTHROPIC — derived thesis/debate state changed since the prior daily snapshot",
       "tickers": [
-        "AMAT"
+        "ANTHROPIC"
       ],
       "in_book": [],
       "impact": "medium",
       "urgency": "immediate",
       "confidence": "high",
-      "why_now": "ingest (Notion, 2026-10-30JPMorganHarlan-Sur-AMA-INTC-KLAC-SNDK-NXPI-AMD-MRVL-post-3Q26.md): 1 Debate 🔭 bullet + 1 Sources entry. Sur: Applied is 2 in process control, \"7 times smaller\" than KLA, with leadership in eBeam review / some eBeam inspection (competing with ASML and Japanese vendors). The answer is cut mid-way, so there is no overhang verdict. No rating/PT/ranking restated; nothing superseded.",
+      "why_now": "Funding sensitivity requested by Felipe: added a dated $100bn incremental-net-raise scenario and reproducible source/audit files. Preserved all prior commitment values and histories. Rebased FUNDA's $60bn assumed IPO by +$40bn; distinguished June commitment stock, cash after lease principal, and approximate stress endpoints. No current total, completed raise, cancellation or catalyst resolution inferred. Existing SpaceX ID re-reviewed; scope and replacement-cost limitations added to compute timeline.",
       "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
-      "action": "Re-grade the AMAT thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "action": "Re-grade the ANTHROPIC thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
       "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
       "readthrough": [
         {
-          "ticker": "TSM",
-          "relation": "customer",
-          "detail": "WFE",
-          "from": "AMAT",
+          "ticker": "AMZN",
+          "relation": "supplier",
+          "detail": "AWS Trainium compute",
+          "from": "ANTHROPIC",
           "in_book": true
         },
         {
-          "ticker": "LRCX",
+          "ticker": "GOOG",
+          "relation": "supplier",
+          "detail": "TPU compute",
+          "from": "ANTHROPIC",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "ANTHROPIC",
+          "in_book": true
+        },
+        {
+          "ticker": "OPENAI",
           "relation": "competitor",
-          "detail": "WFE overlap",
-          "from": "AMAT",
+          "detail": "frontier models",
+          "from": "ANTHROPIC",
           "in_book": false
         },
         {
-          "ticker": "INTC",
-          "relation": "customer",
-          "detail": "WFE",
-          "from": "AMAT",
-          "in_book": false
-        },
-        {
-          "ticker": "MU",
-          "relation": "customer",
-          "detail": "WFE",
-          "from": "AMAT",
-          "in_book": false
-        },
-        {
-          "ticker": "SAMSUNG",
-          "relation": "customer",
-          "detail": "WFE",
-          "from": "AMAT",
-          "in_book": false
-        },
-        {
-          "ticker": "SKHYNIX",
-          "relation": "customer",
-          "detail": "WFE",
-          "from": "AMAT",
-          "in_book": false
-        },
-        {
-          "ticker": "SMIC",
-          "relation": "customer",
-          "detail": "WFE",
-          "from": "AMAT",
+          "ticker": "NSCALE",
+          "relation": "supplier",
+          "detail": "neocloud compute ($44.6bn, Monarch 460 MW)",
+          "from": "ANTHROPIC",
           "in_book": false
         }
       ],
-      "source": "AMAT page Changelog 2026-10-30",
+      "source": "ANTHROPIC page Changelog 2026-11-01",
       "evidence_paths": [
-        "AMAT.md"
+        "ANTHROPIC.md"
       ],
-      "evidence_anchor": "ingest (Notion, 2026-10-30JPMorganHarlan-Sur-AMA-INTC-KLAC-SNDK-NXPI-AMD-MRVL-post-3Q26.md): 1 Debate 🔭 bullet + 1 Sources entry. Sur: Applied is 2 in process control, \"7 times smaller\" than KLA, with leadership in eBeam review / some eBeam inspection (competing with ASML and Japanese vendors). The answer is cut mid-way, so there is no overhang verdict. No rating/PT/ranking restated; nothing superseded.",
+      "evidence_anchor": "Funding sensitivity requested by Felipe: added a dated $100bn incremental-net-raise scenario and reproducible source/audit files. Preserved all prior commitment values and histories. Rebased FUNDA's $60bn assumed IPO by +$40bn; distinguished June commitment stock, cash after lease principal, and approximate stress endpoints. No current total, completed raise, cancellation or catalyst resolution inferred. Existing SpaceX ID re-reviewed; scope and replacement-cost limitations added to compute timeline.",
       "origin": "belief_diff",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
     },
     {
-      "id": "beli-a90017eafcdc",
-      "asof": "2026-10-30",
-      "source_date": "2026-10-30",
+      "id": "beli-60c830ae8712",
+      "asof": "2026-11-02",
+      "source_date": "2026-11-02",
       "type": "narrative_shift",
       "priority": "medium",
       "score": 62,
@@ -1234,7 +689,7 @@
       "impact": "medium",
       "urgency": "immediate",
       "confidence": "high",
-      "why_now": "ingest (Notion, 2026-10-30JPMorganHarlan-Sur-AMA-INTC-KLAC-SNDK-NXPI-AMD-MRVL-post-3Q26.md): 1 Debate 🔭 bullet — speculated Marvell acquisition of Lumentum as framed by JPM's Sur ('1+1=2' vertical integration, US transceiver/OCS supply assurance for Google, funding guess 15-20% cash). Speculation only; no source for the rumour on disk. Nothing superseded.",
+      "why_now": "Primary-source transaction research: definitive all-stock agreement replaces October 30 speculation; valuation reference date, pending close and conditional synergy/accretion targets explicit. Added Q1 results, Q2 guide and separate second NPO/CPO purchase commitment. No house model/rating/PT change. Superseded Debate entry, preserved verbatim:",
       "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
       "action": "Re-grade the LITE thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
       "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
@@ -1282,20 +737,20 @@
           "in_book": false
         }
       ],
-      "source": "LITE page Changelog 2026-10-30",
+      "source": "LITE page Changelog 2026-11-02",
       "evidence_paths": [
         "LITE.md"
       ],
-      "evidence_anchor": "ingest (Notion, 2026-10-30JPMorganHarlan-Sur-AMA-INTC-KLAC-SNDK-NXPI-AMD-MRVL-post-3Q26.md): 1 Debate 🔭 bullet — speculated Marvell acquisition of Lumentum as framed by JPM's Sur ('1+1=2' vertical integration, US transceiver/OCS supply assurance for Google, funding guess 15-20% cash). Speculation only; no source for the rumour on disk. Nothing superseded.",
+      "evidence_anchor": "Primary-source transaction research: definitive all-stock agreement replaces October 30 speculation; valuation reference date, pending close and conditional synergy/accretion targets explicit. Added Q1 results, Q2 guide and separate second NPO/CPO purchase commitment. No house model/rating/PT change. Superseded Debate entry, preserved verbatim:",
       "origin": "belief_diff",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
     },
     {
-      "id": "beli-64ef36463f44",
-      "asof": "2026-10-30",
-      "source_date": "2026-10-30",
+      "id": "beli-238ea20dc911",
+      "asof": "2026-11-02",
+      "source_date": "2026-11-02",
       "type": "narrative_shift",
       "priority": "medium",
       "score": 62,
@@ -1307,7 +762,7 @@
       "impact": "medium",
       "urgency": "immediate",
       "confidence": "high",
-      "why_now": "ingest (Notion, 2026-10-30JPMorganHarlan-Sur-AMA-INTC-KLAC-SNDK-NXPI-AMD-MRVL-post-3Q26.md): 1 Debate 🔭 bullet — Sur (JPM) on the SPECULATED Marvell acquisition of Lumentum: not in Investor Day LT targets, margin outlook still reachable, '1+1=2' vertical integration vs Cavium/Inphi '1+1=4', US-transceiver supply assurance for Google, funding guess 15-20% cash / rest equity. Speculation only; no source for the rumour on disk. Nothing superseded.",
+      "why_now": "Primary-source transaction research: definitive all-stock agreement replaces October 30 speculation; valuation reference date, pending close and conditional synergy/accretion targets explicit. No house model/rating/PT change. Superseded Debate entry, preserved verbatim:",
       "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
       "action": "Re-grade the MRVL thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
       "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
@@ -1348,225 +803,11 @@
           "in_book": true
         }
       ],
-      "source": "MRVL page Changelog 2026-10-30",
+      "source": "MRVL page Changelog 2026-11-02",
       "evidence_paths": [
         "MRVL.md"
       ],
-      "evidence_anchor": "ingest (Notion, 2026-10-30JPMorganHarlan-Sur-AMA-INTC-KLAC-SNDK-NXPI-AMD-MRVL-post-3Q26.md): 1 Debate 🔭 bullet — Sur (JPM) on the SPECULATED Marvell acquisition of Lumentum: not in Investor Day LT targets, margin outlook still reachable, '1+1=2' vertical integration vs Cavium/Inphi '1+1=4', US-transceiver supply assurance for Google, funding guess 15-20% cash / rest equity. Speculation only; no source for the rumour on disk. Nothing superseded.",
-      "origin": "belief_diff",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "beli-934cc7e55580",
-      "asof": "2026-10-30",
-      "source_date": "2026-10-30",
-      "type": "narrative_shift",
-      "priority": "medium",
-      "score": 62,
-      "title": "MU — derived thesis/debate state changed since the prior daily snapshot",
-      "tickers": [
-        "MU"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "high",
-      "why_now": "ingest (Notion, 2026-10-30UBSINTC-ENTG-3Q26-recap-call-Arcuri-Ruple.md): 1 short Debate block (2 bullets): Arcuri's \"server TAM as large as memory allows into 2030 → buy Micron\" and \"the whole [PC] industry's constrained by DRAM\", both analyst views. No mark or number superseded (UBS Buy / PT $1,625 unchanged).",
-      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
-      "action": "Re-grade the MU thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
-      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
-      "readthrough": [
-        {
-          "ticker": "AVGO",
-          "relation": "customer",
-          "detail": "HBM",
-          "from": "MU",
-          "in_book": true
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "customer",
-          "detail": "HBM/LPDDR",
-          "from": "MU",
-          "in_book": true
-        },
-        {
-          "ticker": "SKHYNIX",
-          "relation": "competitor",
-          "detail": "HBM",
-          "from": "MU",
-          "in_book": false
-        },
-        {
-          "ticker": "AMAT",
-          "relation": "supplier",
-          "detail": "WFE",
-          "from": "MU",
-          "in_book": false
-        },
-        {
-          "ticker": "AMD",
-          "relation": "customer",
-          "detail": "HBM",
-          "from": "MU",
-          "in_book": false
-        },
-        {
-          "ticker": "ASML",
-          "relation": "supplier",
-          "detail": "litho",
-          "from": "MU",
-          "in_book": false
-        },
-        {
-          "ticker": "KLAC",
-          "relation": "supplier",
-          "detail": "process control",
-          "from": "MU",
-          "in_book": false
-        }
-      ],
-      "source": "MU page Changelog 2026-10-30",
-      "evidence_paths": [
-        "MU.md"
-      ],
-      "evidence_anchor": "ingest (Notion, 2026-10-30UBSINTC-ENTG-3Q26-recap-call-Arcuri-Ruple.md): 1 short Debate block (2 bullets): Arcuri's \"server TAM as large as memory allows into 2030 → buy Micron\" and \"the whole [PC] industry's constrained by DRAM\", both analyst views. No mark or number superseded (UBS Buy / PT $1,625 unchanged).",
-      "origin": "belief_diff",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "beli-503abc6c7d91",
-      "asof": "2026-10-30",
-      "source_date": "2026-10-30",
-      "type": "narrative_shift",
-      "priority": "medium",
-      "score": 62,
-      "title": "PWR — derived thesis/debate state changed since the prior daily snapshot",
-      "tickers": [
-        "PWR"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "high",
-      "why_now": "verification (transcription QA, print-night batch) — ~120 items (≈80 figures, ≈40 quotes/speaker attributions) checked against the primaries (Q3 call transcript, EX-99.1, Q3 10-Q, Q2 call transcript + Q2 10-Q, Q4 FY25 transcript; BBG pre-print from estimates.json at commit 5b5064ed, committed 2026-10-28 12:27 BRT, i.e. before the 10-29 BMO release, labels/values confirmed; 466cd5de had rolled PWR lrq to 2026-09-30); archived intra-quarter window confirmed a verbatim move (0 of 66 lines differ from HEAD). Fixed:…",
-      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
-      "action": "Re-grade the PWR thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
-      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
-      "readthrough": [
-        {
-          "ticker": "AMZN",
-          "relation": "customer",
-          "detail": "grid construction",
-          "from": "PWR",
-          "in_book": true
-        }
-      ],
-      "source": "PWR page Changelog 2026-10-30",
-      "evidence_paths": [
-        "PWR.md"
-      ],
-      "evidence_anchor": "verification (transcription QA, print-night batch) — ~120 items (≈80 figures, ≈40 quotes/speaker attributions) checked against the primaries (Q3 call transcript, EX-99.1, Q3 10-Q, Q2 call transcript + Q2 10-Q, Q4 FY25 transcript; BBG pre-print from estimates.json at commit 5b5064ed, committed 2026-10-28 12:27 BRT, i.e. before the 10-29 BMO release, labels/values confirmed; 466cd5de had rolled PWR lrq to 2026-09-30); archived intra-quarter window confirmed a verbatim move (0 of 66 lines differ from HEAD). Fixed:…",
-      "origin": "belief_diff",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "beli-988490696ba3",
-      "asof": "2026-10-30",
-      "source_date": "2026-10-30",
-      "type": "narrative_shift",
-      "priority": "medium",
-      "score": 62,
-      "title": "RDDT — derived thesis/debate state changed since the prior daily snapshot",
-      "tickers": [
-        "RDDT"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "high",
-      "why_now": "verification (transcription QA, print-night batch) — ~120 items checked against the primaries (Q3 call transcript 2026-10-29, 8-K EX-99.1 release + EX-99.2 letter 2026-10-29, Q3 10-Q filed 2026-10-30; Q2 release 2026-07-30 and Q2 10-Q 2026-07-31 for the recap and comparisons; BBG marks against git show 466cd5de:wiki/data/estimates.json — commit 2026-10-29 12:30 BRT, before the AMC release; broker marks against the archived rows): every number, quote and speaker in the Q3 block, the Q2 primaries recap, the Debate…",
-      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
-      "action": "Re-grade the RDDT thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
-      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
-      "readthrough": [],
-      "source": "RDDT page Changelog 2026-10-30",
-      "evidence_paths": [
-        "RDDT.md"
-      ],
-      "evidence_anchor": "verification (transcription QA, print-night batch) — ~120 items checked against the primaries (Q3 call transcript 2026-10-29, 8-K EX-99.1 release + EX-99.2 letter 2026-10-29, Q3 10-Q filed 2026-10-30; Q2 release 2026-07-30 and Q2 10-Q 2026-07-31 for the recap and comparisons; BBG marks against git show 466cd5de:wiki/data/estimates.json — commit 2026-10-29 12:30 BRT, before the AMC release; broker marks against the archived rows): every number, quote and speaker in the Q3 block, the Q2 primaries recap, the Debate…",
-      "origin": "belief_diff",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "beli-876427753bbe",
-      "asof": "2026-10-30",
-      "source_date": "2026-10-30",
-      "type": "narrative_shift",
-      "priority": "medium",
-      "score": 62,
-      "title": "SNDK — derived thesis/debate state changed since the prior daily snapshot",
-      "tickers": [
-        "SNDK"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "high",
-      "why_now": "verification (transcription QA, print-night batch) — ~130 items (≈75 figures, ≈55 quotes/speaker attributions) checked against the primaries (Q1 FY27 call transcript, EX-99.1, 8-K Item 8.01, Q4 FY26 Bloomberg transcript, meta/analyst-evidence/2026-10-30-morning-source-checks.json key sndk; BBG pre-print from estimates.json at commit 466cd5de, committed 2026-10-29 12:30 BRT = 11:30 ET, before the after-close release (call 4:30 p.m. ET per the PR), label Q3-26E / lrq 2026-07-03 confirmed, values identical to…",
-      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
-      "action": "Re-grade the SNDK thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
-      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
-      "readthrough": [
-        {
-          "ticker": "AMZN",
-          "relation": "customer",
-          "detail": "NAND/SSD",
-          "from": "SNDK",
-          "in_book": true
-        },
-        {
-          "ticker": "GOOG",
-          "relation": "customer",
-          "detail": "NAND/SSD",
-          "from": "SNDK",
-          "in_book": true
-        },
-        {
-          "ticker": "META",
-          "relation": "customer",
-          "detail": "NAND/SSD",
-          "from": "SNDK",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "customer",
-          "detail": "NAND/SSD",
-          "from": "SNDK",
-          "in_book": true
-        },
-        {
-          "ticker": "KIOXIA",
-          "relation": "competitor",
-          "detail": "NAND",
-          "from": "SNDK",
-          "in_book": false
-        }
-      ],
-      "source": "SNDK page Changelog 2026-10-30",
-      "evidence_paths": [
-        "SNDK.md"
-      ],
-      "evidence_anchor": "verification (transcription QA, print-night batch) — ~130 items (≈75 figures, ≈55 quotes/speaker attributions) checked against the primaries (Q1 FY27 call transcript, EX-99.1, 8-K Item 8.01, Q4 FY26 Bloomberg transcript, meta/analyst-evidence/2026-10-30-morning-source-checks.json key sndk; BBG pre-print from estimates.json at commit 466cd5de, committed 2026-10-29 12:30 BRT = 11:30 ET, before the after-close release (call 4:30 p.m. ET per the PR), label Q3-26E / lrq 2026-07-03 confirmed, values identical to…",
+      "evidence_anchor": "Primary-source transaction research: definitive all-stock agreement replaces October 30 speculation; valuation reference date, pending close and conditional synergy/accretion targets explicit. No house model/rating/PT change. Superseded Debate entry, preserved verbatim:",
       "origin": "belief_diff",
       "feedback": "",
       "feedback_note": "",
@@ -1574,7 +815,7 @@
     },
     {
       "id": "cata-4dea9544cec3",
-      "asof": "2026-10-30",
+      "asof": "2026-11-02",
       "source_date": "2026-11-17",
       "event_date": "2026-11-17",
       "type": "catalyst",
@@ -1657,9 +898,41 @@
       "hidden": false
     },
     {
-      "id": "data-d92479b0273e",
-      "asof": "2026-10-30",
-      "source_date": "2026-10-30",
+      "id": "cata-3309c26d3f2a",
+      "asof": "2026-11-02",
+      "source_date": "2026-11-03",
+      "event_date": "2026-11-03",
+      "type": "catalyst",
+      "priority": "medium",
+      "score": 58,
+      "title": "BKNG — 2026-11-03: THE 3Q26 PRINT, AND THE BARS ARE NOW EXPLICIT. ① 3Q room nights: guide +3-5%; consensus…",
+      "tickers": [
+        "BKNG"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "🆕🔴 2026-11-03 (TUESDAY, AFTER THE CLOSE; CALL 4:30PM ET) — THE 3Q26 PRINT, AND THE BARS ARE NOW EXPLICIT. ① 3Q room nights: guide +3-5%; consensus ~339m (+5%) (Bloomberg via Bernstein",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [],
+      "source": "BKNG page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "BKNG.md"
+      ],
+      "evidence_anchor": "🆕🔴 2026-11-03 (TUESDAY, AFTER THE CLOSE; CALL 4:30PM ET) — THE 3Q26 PRINT, AND THE BARS ARE NOW EXPLICIT. ① 3Q room nights: guide +3-5%; consensus ~339m (+5%) (Bloomberg via Bernstein",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "data-8b4d39a536e1",
+      "asof": "2026-11-02",
+      "source_date": "2026-11-02",
       "type": "data_gap",
       "priority": "medium",
       "score": 54,
@@ -1676,7 +949,7 @@
       "action": "Run the merge-safe Bloomberg estimate fetch for NOK, then rebuild the snapshot and Analyst Inbox.",
       "falsifier": "A valid, current estimate record already exists under a different Bloomberg identifier.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-10-30",
+      "source": "Wiki remediation worklist 2026-11-02",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -1687,9 +960,9 @@
       "hidden": false
     },
     {
-      "id": "data-28807d1bb41b",
-      "asof": "2026-10-30",
-      "source_date": "2026-10-30",
+      "id": "data-09baad3cec57",
+      "asof": "2026-11-02",
+      "source_date": "2026-11-02",
       "type": "data_gap",
       "priority": "medium",
       "score": 54,
@@ -1706,7 +979,7 @@
       "action": "Run the merge-safe Bloomberg estimate fetch for NSCALE, then rebuild the snapshot and Analyst Inbox.",
       "falsifier": "A valid, current estimate record already exists under a different Bloomberg identifier.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-10-30",
+      "source": "Wiki remediation worklist 2026-11-02",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -1717,9 +990,9 @@
       "hidden": false
     },
     {
-      "id": "esti-d72458de5d86",
-      "asof": "2026-10-30",
-      "source_date": "2026-10-30",
+      "id": "esti-48a450105933",
+      "asof": "2026-11-02",
+      "source_date": "2026-11-02",
       "type": "model_check",
       "priority": "medium",
       "score": 53,
@@ -1731,7 +1004,7 @@
       "impact": "medium",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2026 EPS at $-3.27 versus Bloomberg consensus at $-3.94 as of 2026-10-30, a derived -17.0% gap.",
+      "why_now": "Capstone carries 2026 EPS at $-3.27 versus Bloomberg consensus at $-3.94 as of 2026-11-02, a derived -17.0% gap.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the CRWV model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -1772,7 +1045,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model — P:\\Felipe Monteiro\\US Equities\\Modelos oficiais\\Template DCF CRWV.xlsx (2026-10-14, Felipe Monteiro), first CRWV model in the official Template DCF <TICKER family (same sheets and conventions as AMD/AVGO/ADVANTEST/TER, plus History and Debt sheets; labels in English). Build and verification pipeline in · Bloomberg consensus 2026-10-30",
+      "source": "Capstone official model — P:\\Felipe Monteiro\\US Equities\\Modelos oficiais\\Template DCF CRWV.xlsx (2026-10-14, Felipe Monteiro), first CRWV model in the official Template DCF <TICKER family (same sheets and conventions as AMD/AVGO/ADVANTEST/TER, plus History and Debt sheets; labels in English). Build and verification pipeline in · Bloomberg consensus 2026-11-02",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -1790,9 +1063,9 @@
       "hidden": false
     },
     {
-      "id": "esti-c3c870bf4236",
-      "asof": "2026-10-30",
-      "source_date": "2026-10-30",
+      "id": "esti-de752961c4ed",
+      "asof": "2026-11-02",
+      "source_date": "2026-11-02",
       "type": "model_check",
       "priority": "medium",
       "score": 52,
@@ -1804,7 +1077,7 @@
       "impact": "medium",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2027 EPS at $-1.83 versus Bloomberg consensus at $-2.18 as of 2026-10-30, a derived -16.1% gap.",
+      "why_now": "Capstone carries 2027 EPS at $-1.83 versus Bloomberg consensus at $-2.18 as of 2026-11-02, a derived -16.1% gap.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the CRWV model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -1845,7 +1118,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model — P:\\Felipe Monteiro\\US Equities\\Modelos oficiais\\Template DCF CRWV.xlsx (2026-10-14, Felipe Monteiro), first CRWV model in the official Template DCF <TICKER family (same sheets and conventions as AMD/AVGO/ADVANTEST/TER, plus History and Debt sheets; labels in English). Build and verification pipeline in · Bloomberg consensus 2026-10-30",
+      "source": "Capstone official model — P:\\Felipe Monteiro\\US Equities\\Modelos oficiais\\Template DCF CRWV.xlsx (2026-10-14, Felipe Monteiro), first CRWV model in the official Template DCF <TICKER family (same sheets and conventions as AMD/AVGO/ADVANTEST/TER, plus History and Debt sheets; labels in English). Build and verification pipeline in · Bloomberg consensus 2026-11-02",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -1864,7 +1137,7 @@
     },
     {
       "id": "cata-cc6e54e27c15",
-      "asof": "2026-10-30",
+      "asof": "2026-11-02",
       "source_date": "2026-11-18",
       "event_date": "2026-11-18",
       "type": "catalyst",
@@ -1948,7 +1221,7 @@
     },
     {
       "id": "cata-c9f20420ff39",
-      "asof": "2026-10-30",
+      "asof": "2026-11-02",
       "source_date": "2026-11-17",
       "event_date": "2026-11-17",
       "type": "catalyst",
@@ -2031,213 +1304,13 @@
       "hidden": false
     },
     {
-      "id": "cata-c76406c38a7d",
-      "asof": "2026-10-30",
-      "source_date": "2026-11-12",
-      "event_date": "2026-11-12",
-      "type": "catalyst",
-      "priority": "medium",
-      "score": 50,
-      "title": "SPCX — 2026-11-12: OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.…",
-      "tickers": [
-        "SPCX"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "upcoming",
-      "confidence": "medium",
-      "why_now": "🆕🔴🔴 2026-11-12 — OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset. OpenAI's own post: \"We're ending our partnership with Cursor following its acquisit",
-      "belief_update": "A dated event can resolve or reframe an open debate.",
-      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
-      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
-      "readthrough": [],
-      "source": "SPCX page catalyst ledger; underlying source/date retained in the catalyst text",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "SPCX.md"
-      ],
-      "evidence_anchor": "🆕🔴🔴 2026-11-12 — OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset. OpenAI's own post: \"We're ending our partnership with Cursor following its acquisit",
-      "origin": "catalyst_calendar",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "cata-3309c26d3f2a",
-      "asof": "2026-10-30",
-      "source_date": "2026-11-03",
-      "event_date": "2026-11-03",
-      "type": "catalyst",
-      "priority": "medium",
-      "score": 49,
-      "title": "BKNG — 2026-11-03: THE 3Q26 PRINT, AND THE BARS ARE NOW EXPLICIT. ① 3Q room nights: guide +3-5%; consensus…",
-      "tickers": [
-        "BKNG"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "this week",
-      "confidence": "medium",
-      "why_now": "🆕🔴 2026-11-03 (TUESDAY, AFTER THE CLOSE; CALL 4:30PM ET) — THE 3Q26 PRINT, AND THE BARS ARE NOW EXPLICIT. ① 3Q room nights: guide +3-5%; consensus ~339m (+5%) (Bloomberg via Bernstein",
-      "belief_update": "A dated event can resolve or reframe an open debate.",
-      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
-      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
-      "readthrough": [],
-      "source": "BKNG page catalyst ledger; underlying source/date retained in the catalyst text",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "BKNG.md"
-      ],
-      "evidence_anchor": "🆕🔴 2026-11-03 (TUESDAY, AFTER THE CLOSE; CALL 4:30PM ET) — THE 3Q26 PRINT, AND THE BARS ARE NOW EXPLICIT. ① 3Q room nights: guide +3-5%; consensus ~339m (+5%) (Bloomberg via Bernstein",
-      "origin": "catalyst_calendar",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "cata-ee9bdeb27115",
-      "asof": "2026-10-30",
-      "source_date": "2026-10-30",
-      "event_date": "2026-10-30",
-      "type": "catalyst",
-      "priority": "medium",
-      "score": 49,
-      "title": "KLAC — 2026-10-30: \"2027 memory ~60%\" — Bren, as machine-transcribed: \"In 2027, we'd expect overall memory to…",
-      "tickers": [
-        "KLAC"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "medium",
-      "why_now": "🆕 \"2027 memory ~60%\" — Bren, as machine-transcribed: \"In 2027, we'd expect overall memory to be about 60% of the business.\" Confirm the denominator (KLA semi-PC systems vs WFE) from the sharehol",
-      "belief_update": "A dated event can resolve or reframe an open debate.",
-      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
-      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
-      "readthrough": [
-        {
-          "ticker": "TSM",
-          "relation": "customer",
-          "detail": "process control",
-          "from": "KLAC",
-          "in_book": true
-        },
-        {
-          "ticker": "INTC",
-          "relation": "customer",
-          "detail": "process control",
-          "from": "KLAC",
-          "in_book": false
-        },
-        {
-          "ticker": "MU",
-          "relation": "customer",
-          "detail": "process control",
-          "from": "KLAC",
-          "in_book": false
-        },
-        {
-          "ticker": "SAMSUNG",
-          "relation": "customer",
-          "detail": "process control",
-          "from": "KLAC",
-          "in_book": false
-        },
-        {
-          "ticker": "SMIC",
-          "relation": "customer",
-          "detail": "process control",
-          "from": "KLAC",
-          "in_book": false
-        }
-      ],
-      "source": "KLAC page catalyst ledger; underlying source/date retained in the catalyst text",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "KLAC.md"
-      ],
-      "evidence_anchor": "🆕 \"2027 memory ~60%\" — Bren, as machine-transcribed: \"In 2027, we'd expect overall memory to be about 60% of the business.\" Confirm the denominator (KLA semi-PC systems vs WFE) from the sharehol",
-      "origin": "catalyst_calendar",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "cata-c6b87413ae33",
-      "asof": "2026-10-30",
-      "source_date": "2026-10-30",
-      "event_date": "2026-10-30",
-      "type": "catalyst",
-      "priority": "medium",
-      "score": 49,
-      "title": "SNDK — 2026-10-30: a dated coverage target, per Sur relaying the callback (not company-disclosed): 75% of…",
-      "tickers": [
-        "SNDK"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "medium",
-      "why_now": "🆕🔭 2026-10-30 — a dated coverage target, per Sur relaying the callback (not company-disclosed): 75% of FY28, FY29 and FY30 bits under LTAs/NBMs, to be locked in \"over the next 2 to 3 quarters\"",
-      "belief_update": "A dated event can resolve or reframe an open debate.",
-      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
-      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
-      "readthrough": [
-        {
-          "ticker": "AMZN",
-          "relation": "customer",
-          "detail": "NAND/SSD",
-          "from": "SNDK",
-          "in_book": true
-        },
-        {
-          "ticker": "GOOG",
-          "relation": "customer",
-          "detail": "NAND/SSD",
-          "from": "SNDK",
-          "in_book": true
-        },
-        {
-          "ticker": "META",
-          "relation": "customer",
-          "detail": "NAND/SSD",
-          "from": "SNDK",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "customer",
-          "detail": "NAND/SSD",
-          "from": "SNDK",
-          "in_book": true
-        },
-        {
-          "ticker": "KIOXIA",
-          "relation": "competitor",
-          "detail": "NAND",
-          "from": "SNDK",
-          "in_book": false
-        }
-      ],
-      "source": "SNDK page catalyst ledger; underlying source/date retained in the catalyst text",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "SNDK.md"
-      ],
-      "evidence_anchor": "🆕🔭 2026-10-30 — a dated coverage target, per Sur relaying the callback (not company-disclosed): 75% of FY28, FY29 and FY30 bits under LTAs/NBMs, to be locked in \"over the next 2 to 3 quarters\"",
-      "origin": "catalyst_calendar",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
       "id": "cata-abf09cd99a69",
-      "asof": "2026-10-30",
+      "asof": "2026-11-02",
       "source_date": "2026-11-23",
       "event_date": "2026-11-23",
       "type": "catalyst",
-      "priority": "watch",
-      "score": 45,
+      "priority": "medium",
+      "score": 52,
       "title": "NVDA — 2026-11-23: NVDA investor call (IR) (Rothschild & Co Redburn TMT sales · Rowan Adley, 2026-09-28).…",
       "tickers": [
         "NVDA"
@@ -2245,8 +1318,8 @@
       "in_book": [
         "NVDA"
       ],
-      "impact": "watch",
-      "urgency": "calendar",
+      "impact": "medium",
+      "urgency": "upcoming",
       "confidence": "medium",
       "why_now": "🆕 2026-10-08: NVDA investor call (IR) (Rothschild & Co Redburn TMT sales · Rowan Adley, 2026-09-28). Also, NYC/Boston NDRs where the $40bn/GW Vera Rubin slides are being shown (BofA TMT sales · Br",
       "belief_update": "A dated event can resolve or reframe an open debate.",
@@ -2315,160 +1388,86 @@
       "hidden": false
     },
     {
-      "id": "data-b3b8d3821a10",
-      "asof": "2026-10-30",
-      "source_date": "2026-10-30",
-      "type": "data_gap",
-      "priority": "watch",
-      "score": 43,
-      "title": "NOK — latest earnings transcript absent",
-      "tickers": [
-        "NOK"
-      ],
-      "in_book": [],
-      "impact": "watch",
-      "urgency": "standing",
-      "confidence": "high",
-      "why_now": "The wiki cannot verify management wording or build a reliable commentary-evolution view without the transcript.",
-      "belief_update": "Narrative and management-credibility conclusions remain provisional.",
-      "action": "Fetch the latest NOK earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
-      "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
-      "readthrough": [],
-      "source": "Wiki remediation worklist 2026-10-30",
-      "evidence_paths": [
-        "_meta/worklist.json"
-      ],
-      "evidence_anchor": "NOK — latest earnings transcript absent",
-      "origin": "worklist",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "data-5680c3c28085",
-      "asof": "2026-10-30",
-      "source_date": "2026-10-30",
-      "type": "data_gap",
-      "priority": "watch",
-      "score": 43,
-      "title": "NSCALE — latest earnings transcript absent",
-      "tickers": [
-        "NSCALE"
-      ],
-      "in_book": [],
-      "impact": "watch",
-      "urgency": "standing",
-      "confidence": "high",
-      "why_now": "The wiki cannot verify management wording or build a reliable commentary-evolution view without the transcript.",
-      "belief_update": "Narrative and management-credibility conclusions remain provisional.",
-      "action": "Fetch the latest NSCALE earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
-      "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
-      "readthrough": [],
-      "source": "Wiki remediation worklist 2026-10-30",
-      "evidence_paths": [
-        "_meta/worklist.json"
-      ],
-      "evidence_anchor": "NSCALE — latest earnings transcript absent",
-      "origin": "worklist",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "data-72ccf72785d2",
-      "asof": "2026-10-30",
-      "source_date": "2026-10-30",
-      "type": "data_gap",
-      "priority": "watch",
-      "score": 43,
-      "title": "POET — latest earnings transcript absent",
-      "tickers": [
-        "POET"
-      ],
-      "in_book": [],
-      "impact": "watch",
-      "urgency": "standing",
-      "confidence": "high",
-      "why_now": "The wiki cannot verify management wording or build a reliable commentary-evolution view without the transcript.",
-      "belief_update": "Narrative and management-credibility conclusions remain provisional.",
-      "action": "Fetch the latest POET earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
-      "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
-      "readthrough": [],
-      "source": "Wiki remediation worklist 2026-10-30",
-      "evidence_paths": [
-        "_meta/worklist.json"
-      ],
-      "evidence_anchor": "POET — latest earnings transcript absent",
-      "origin": "worklist",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "data-e985949b59ae",
-      "asof": "2026-10-30",
-      "source_date": "2026-10-30",
-      "type": "data_gap",
-      "priority": "watch",
-      "score": 43,
-      "title": "SMTC — latest earnings transcript absent",
-      "tickers": [
-        "SMTC"
-      ],
-      "in_book": [],
-      "impact": "watch",
-      "urgency": "standing",
-      "confidence": "high",
-      "why_now": "The wiki cannot verify management wording or build a reliable commentary-evolution view without the transcript.",
-      "belief_update": "Narrative and management-credibility conclusions remain provisional.",
-      "action": "Fetch the latest SMTC earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
-      "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
-      "readthrough": [],
-      "source": "Wiki remediation worklist 2026-10-30",
-      "evidence_paths": [
-        "_meta/worklist.json"
-      ],
-      "evidence_anchor": "SMTC — latest earnings transcript absent",
-      "origin": "worklist",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "cata-30cf21294c0d",
-      "asof": "2026-10-30",
-      "source_date": "2026-11-10",
-      "event_date": "2026-11-10",
+      "id": "cata-c76406c38a7d",
+      "asof": "2026-11-02",
+      "source_date": "2026-11-12",
+      "event_date": "2026-11-12",
       "type": "catalyst",
-      "priority": "watch",
-      "score": 41,
-      "title": "FLEX — 2026-11-10: INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail…",
+      "priority": "medium",
+      "score": 50,
+      "title": "SPCX — 2026-11-12: OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.…",
       "tickers": [
-        "FLEX"
+        "SPCX"
       ],
       "in_book": [],
-      "impact": "watch",
+      "impact": "medium",
       "urgency": "upcoming",
       "confidence": "medium",
-      "why_now": "🆕🔴 INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail lands. Flex said \"more strategy details will be shared at an Innovation Day event on November 10, 2026",
+      "why_now": "🆕🔴🔴 2026-11-12 — OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset. OpenAI's own post: \"We're ending our partnership with Cursor following its acquisit",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [],
+      "source": "SPCX page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "SPCX.md"
+      ],
+      "evidence_anchor": "🆕🔴🔴 2026-11-12 — OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset. OpenAI's own post: \"We're ending our partnership with Cursor following its acquisit",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "cata-8907cd1eff97",
+      "asof": "2026-11-02",
+      "source_date": "2026-11-03",
+      "event_date": "2026-11-03",
+      "type": "catalyst",
+      "priority": "medium",
+      "score": 49,
+      "title": "APO — 2026-11-03: Q3 results, announced 2026-09-29. Test FRE growth, Athene inflows, reported versus…",
+      "tickers": [
+        "APO"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "2026-11-03 — Q3 results, announced 2026-09-29. Test FRE growth, Athene inflows, reported versus normalized spreads and future fee recognition. [Company announcement](https://www.apollo.com/insight",
       "belief_update": "A dated event can resolve or reframe an open debate.",
       "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
       "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
       "readthrough": [
         {
-          "ticker": "NVDA",
-          "relation": "customer",
-          "detail": "power/EMS + cooling",
-          "from": "FLEX",
-          "in_book": true
+          "ticker": "BX",
+          "relation": "competitor",
+          "detail": "Alternative asset management; company calls Oct 22 / Aug 4 2026",
+          "from": "APO",
+          "in_book": false
+        },
+        {
+          "ticker": "KKR",
+          "relation": "competitor",
+          "detail": "Asset management and insurance; company calls Jul 30 / Aug 4 2026",
+          "from": "APO",
+          "in_book": false
+        },
+        {
+          "ticker": "OWL",
+          "relation": "competitor",
+          "detail": "Private credit and AI chip financing; Q3 company call Oct 29 2026",
+          "from": "APO",
+          "in_book": false
         }
       ],
-      "source": "FLEX page catalyst ledger; underlying source/date retained in the catalyst text",
+      "source": "APO page catalyst ledger; underlying source/date retained in the catalyst text",
       "evidence_paths": [
         "_meta/catalysts.md",
-        "FLEX.md"
+        "APO.md"
       ],
-      "evidence_anchor": "🆕🔴 INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail lands. Flex said \"more strategy details will be shared at an Innovation Day event on November 10, 2026",
+      "evidence_anchor": "2026-11-03 — Q3 results, announced 2026-09-29. Test FRE growth, Athene inflows, reported versus normalized spreads and future fee recognition. [Company announcement](https://www.apollo.com/insight",
       "origin": "catalyst_calendar",
       "feedback": "",
       "feedback_note": "",
@@ -2476,19 +1475,19 @@
     },
     {
       "id": "cata-6f5f9db16485",
-      "asof": "2026-10-30",
+      "asof": "2026-11-02",
       "source_date": "2026-11-02",
       "event_date": "2026-11-02",
       "type": "catalyst",
-      "priority": "watch",
-      "score": 40,
+      "priority": "medium",
+      "score": 49,
       "title": "GEV — 2026-11-02: GS-hosted GEV IR meeting, New York — 2026-11-02 (per the GS Industrials daily, logged…",
       "tickers": [
         "GEV"
       ],
       "in_book": [],
-      "impact": "watch",
-      "urgency": "this week",
+      "impact": "medium",
+      "urgency": "immediate",
       "confidence": "medium",
       "why_now": "🆕 GS-hosted GEV IR meeting, New York — 2026-11-02 (per the GS Industrials daily, logged pre-print): first post-print management access.",
       "belief_update": "A dated event can resolve or reframe an open debate.",
@@ -2516,19 +1515,19 @@
     },
     {
       "id": "cata-c333d9a79742",
-      "asof": "2026-10-30",
+      "asof": "2026-11-02",
       "source_date": "2026-11-03",
       "event_date": "2026-11-03",
       "type": "catalyst",
-      "priority": "watch",
-      "score": 40,
+      "priority": "medium",
+      "score": 49,
       "title": "INTC — 2026-11-03: Susquehanna \"The AI Arms Race\" session (Christopher Rolland; AMD, INTC, MRVL, NVDA, AVGO,…",
       "tickers": [
         "INTC"
       ],
       "in_book": [],
-      "impact": "watch",
-      "urgency": "this week",
+      "impact": "medium",
+      "urgency": "immediate",
       "confidence": "medium",
       "why_now": "🆕 2026-10-01: Susquehanna \"The AI Arms Race\" session (Christopher Rolland; AMD, INTC, MRVL, NVDA, AVGO, ARM, QCOM) and 2026-11-03: Intel dinner NDR with CFO and IR, London (Susquehanna index 09-30",
       "belief_update": "A dated event can resolve or reframe an open debate.",
@@ -2598,19 +1597,19 @@
     },
     {
       "id": "cata-e20427bb0cce",
-      "asof": "2026-10-30",
+      "asof": "2026-11-02",
       "source_date": "2026-11-02",
       "event_date": "2026-11-02",
       "type": "catalyst",
-      "priority": "watch",
-      "score": 40,
+      "priority": "medium",
+      "score": 49,
       "title": "KIOXIA — 2026-11-02: 2026-11-02 (Mon) 9am JST — BofA post-results \"doko shuzai\" with KIOXIA on FY3/27 2Q…",
       "tickers": [
         "KIOXIA"
       ],
       "in_book": [],
-      "impact": "watch",
-      "urgency": "this week",
+      "impact": "medium",
+      "urgency": "immediate",
       "confidence": "medium",
       "why_now": "🆕 2026-11-02 (Mon) 9am JST — BofA post-results \"doko shuzai\" with KIOXIA on FY3/27 2Q results (BofA · Mikio Hirakawa, via BofA one-liners, 2026-10-01) — dates the Sep-quarter print to before 11-02",
       "belief_update": "A dated event can resolve or reframe an open debate.",
@@ -2658,22 +1657,22 @@
       "hidden": false
     },
     {
-      "id": "cata-b395c83ce767",
-      "asof": "2026-10-30",
-      "source_date": "2026-11-05",
-      "event_date": "2026-11-05",
+      "id": "cata-d9317abb6a52",
+      "asof": "2026-11-02",
+      "source_date": "2026-11-02",
+      "event_date": "2026-11-02",
       "type": "catalyst",
-      "priority": "watch",
-      "score": 40,
-      "title": "LITE — 2026-11-05: F1Q27 earnings (date per Deutsche Bank · Conti, 2026-10-07; confirm against the LITE IR…",
+      "priority": "medium",
+      "score": 49,
+      "title": "LITE — 2026-11-02: Resolved early on 2026-11-02 (original calendar date 2026-11-05) - F1Q27 earnings. Company…",
       "tickers": [
         "LITE"
       ],
       "in_book": [],
-      "impact": "watch",
-      "urgency": "this week",
+      "impact": "medium",
+      "urgency": "immediate",
       "confidence": "medium",
-      "why_now": "🆕 2026-11-05 — F1Q27 earnings (date per Deutsche Bank · Conti, 2026-10-07; confirm against the LITE IR release). DB's bogeys: OCS $100m for the first time (path to $1bn in 2027), CPO toward",
+      "why_now": "Resolved early on 2026-11-02 (original calendar date 2026-11-05) - F1Q27 earnings. Company release: revenue $1,262.6m, adjusted EPS $4.57; Q2 revenue $1,575-1,625m, adjusted EPS $5.90-6.20. Prior",
       "belief_update": "A dated event can resolve or reframe an open debate.",
       "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
       "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
@@ -2726,7 +1725,7 @@
         "_meta/catalysts.md",
         "LITE.md"
       ],
-      "evidence_anchor": "🆕 2026-11-05 — F1Q27 earnings (date per Deutsche Bank · Conti, 2026-10-07; confirm against the LITE IR release). DB's bogeys: OCS $100m for the first time (path to $1bn in 2027), CPO toward",
+      "evidence_anchor": "Resolved early on 2026-11-02 (original calendar date 2026-11-05) - F1Q27 earnings. Company release: revenue $1,262.6m, adjusted EPS $4.57; Q2 revenue $1,575-1,625m, adjusted EPS $5.90-6.20. Prior",
       "origin": "catalyst_calendar",
       "feedback": "",
       "feedback_note": "",
@@ -2734,19 +1733,19 @@
     },
     {
       "id": "cata-3307849d38b1",
-      "asof": "2026-10-30",
+      "asof": "2026-11-02",
       "source_date": "2026-11-03",
       "event_date": "2026-11-03",
       "type": "catalyst",
-      "priority": "watch",
-      "score": 40,
+      "priority": "medium",
+      "score": 49,
       "title": "SMCI — 2026-11-03: RESOLVED (preliminary) 2026-10-20 — F1Q27 vs guide: revenue $18.5–19.5bn vs $14.5–15.5bn,…",
       "tickers": [
         "SMCI"
       ],
       "in_book": [],
-      "impact": "watch",
-      "urgency": "this week",
+      "impact": "medium",
+      "urgency": "immediate",
       "confidence": "medium",
       "why_now": "✅ RESOLVED (preliminary) 2026-10-20 — F1Q27 vs guide: revenue $18.5–19.5bn vs $14.5–15.5bn, GM 12.0–12.5% vs 10.4–10.8% (SMCI 8-K, 2026-10-20). Bull on delivery vs guide; GM sits well belo",
       "belief_update": "A dated event can resolve or reframe an open debate.",
@@ -2795,19 +1794,19 @@
     },
     {
       "id": "cata-396a1e21b245",
-      "asof": "2026-10-30",
+      "asof": "2026-11-02",
       "source_date": "2026-11-02",
       "event_date": "2026-11-02",
       "type": "catalyst",
-      "priority": "watch",
-      "score": 40,
+      "priority": "medium",
+      "score": 49,
       "title": "STX — 2026-11-02: Morgan Stanley Global Hardware & Optical lunch (Andy Meng, Howard Kao, Derrick Yang, Meta…",
       "tickers": [
         "STX"
       ],
       "in_book": [],
-      "impact": "watch",
-      "urgency": "this week",
+      "impact": "medium",
+      "urgency": "immediate",
       "confidence": "medium",
       "why_now": "🆕 2026-10-08 (12pm ET, NYC) — Morgan Stanley Global Hardware & Optical lunch (Andy Meng, Howard Kao, Derrick Yang, Meta Marshall, Erik Woodring) covering STX/WDC among others; 2026-11-02/03 — MS",
       "belief_update": "A dated event can resolve or reframe an open debate.",
@@ -2862,8 +1861,478 @@
       "hidden": false
     },
     {
+      "id": "data-9bf3edb67514",
+      "asof": "2026-11-02",
+      "source_date": "2026-11-02",
+      "type": "data_gap",
+      "priority": "watch",
+      "score": 43,
+      "title": "NOK — latest earnings transcript absent",
+      "tickers": [
+        "NOK"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "standing",
+      "confidence": "high",
+      "why_now": "The wiki cannot verify management wording or build a reliable commentary-evolution view without the transcript.",
+      "belief_update": "Narrative and management-credibility conclusions remain provisional.",
+      "action": "Fetch the latest NOK earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
+      "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
+      "readthrough": [],
+      "source": "Wiki remediation worklist 2026-11-02",
+      "evidence_paths": [
+        "_meta/worklist.json"
+      ],
+      "evidence_anchor": "NOK — latest earnings transcript absent",
+      "origin": "worklist",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "data-8ac2ce9edf8e",
+      "asof": "2026-11-02",
+      "source_date": "2026-11-02",
+      "type": "data_gap",
+      "priority": "watch",
+      "score": 43,
+      "title": "NSCALE — latest earnings transcript absent",
+      "tickers": [
+        "NSCALE"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "standing",
+      "confidence": "high",
+      "why_now": "The wiki cannot verify management wording or build a reliable commentary-evolution view without the transcript.",
+      "belief_update": "Narrative and management-credibility conclusions remain provisional.",
+      "action": "Fetch the latest NSCALE earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
+      "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
+      "readthrough": [],
+      "source": "Wiki remediation worklist 2026-11-02",
+      "evidence_paths": [
+        "_meta/worklist.json"
+      ],
+      "evidence_anchor": "NSCALE — latest earnings transcript absent",
+      "origin": "worklist",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "data-1ede5f5d79a4",
+      "asof": "2026-11-02",
+      "source_date": "2026-11-02",
+      "type": "data_gap",
+      "priority": "watch",
+      "score": 43,
+      "title": "POET — latest earnings transcript absent",
+      "tickers": [
+        "POET"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "standing",
+      "confidence": "high",
+      "why_now": "The wiki cannot verify management wording or build a reliable commentary-evolution view without the transcript.",
+      "belief_update": "Narrative and management-credibility conclusions remain provisional.",
+      "action": "Fetch the latest POET earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
+      "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
+      "readthrough": [],
+      "source": "Wiki remediation worklist 2026-11-02",
+      "evidence_paths": [
+        "_meta/worklist.json"
+      ],
+      "evidence_anchor": "POET — latest earnings transcript absent",
+      "origin": "worklist",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "data-bf3dda79d938",
+      "asof": "2026-11-02",
+      "source_date": "2026-11-02",
+      "type": "data_gap",
+      "priority": "watch",
+      "score": 43,
+      "title": "SMTC — latest earnings transcript absent",
+      "tickers": [
+        "SMTC"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "standing",
+      "confidence": "high",
+      "why_now": "The wiki cannot verify management wording or build a reliable commentary-evolution view without the transcript.",
+      "belief_update": "Narrative and management-credibility conclusions remain provisional.",
+      "action": "Fetch the latest SMTC earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
+      "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
+      "readthrough": [],
+      "source": "Wiki remediation worklist 2026-11-02",
+      "evidence_paths": [
+        "_meta/worklist.json"
+      ],
+      "evidence_anchor": "SMTC — latest earnings transcript absent",
+      "origin": "worklist",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "cata-30cf21294c0d",
+      "asof": "2026-11-02",
+      "source_date": "2026-11-10",
+      "event_date": "2026-11-10",
+      "type": "catalyst",
+      "priority": "watch",
+      "score": 41,
+      "title": "FLEX — 2026-11-10: INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail…",
+      "tickers": [
+        "FLEX"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "upcoming",
+      "confidence": "medium",
+      "why_now": "🆕🔴 INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail lands. Flex said \"more strategy details will be shared at an Innovation Day event on November 10, 2026",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "power/EMS + cooling",
+          "from": "FLEX",
+          "in_book": true
+        }
+      ],
+      "source": "FLEX page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "FLEX.md"
+      ],
+      "evidence_anchor": "🆕🔴 INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail lands. Flex said \"more strategy details will be shared at an Innovation Day event on November 10, 2026",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "cata-371c25e13de4",
+      "asof": "2026-11-02",
+      "source_date": "2026-11-09",
+      "event_date": "2026-11-09",
+      "type": "catalyst",
+      "priority": "watch",
+      "score": 40,
+      "title": "CME — 2026-11-09: Compute futures: the CFTC comment period on CME's Silicon Data H100-rental-index contract…",
+      "tickers": [
+        "CME"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "this week",
+      "confidence": "medium",
+      "why_now": "Compute futures: the CFTC comment period on CME's Silicon Data H100-rental-index contract ends 2026-11-09 (Duffy said he \"believe[s]\" so; filed under a full 40.3 review), then the agency decides ([Duf",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "CBOE",
+          "relation": "competitor",
+          "detail": "Equity-index derivatives, retail and event contracts; Q3 company calls Oct 21/30 2026",
+          "from": "CME",
+          "in_book": false
+        },
+        {
+          "ticker": "ICE",
+          "relation": "competitor",
+          "detail": "Futures exchanges and clearing (energy, rates); Q3 company calls Oct 21/29 2026",
+          "from": "CME",
+          "in_book": false
+        },
+        {
+          "ticker": "NDAQ",
+          "relation": "supplier",
+          "detail": "Nasdaq-100 futures licence",
+          "from": "CME",
+          "in_book": false
+        }
+      ],
+      "source": "CME page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "CME.md"
+      ],
+      "evidence_anchor": "Compute futures: the CFTC comment period on CME's Silicon Data H100-rental-index contract ends 2026-11-09 (Duffy said he \"believe[s]\" so; filed under a full 40.3 review), then the agency decides ([Duf",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "cata-0bf143339be4",
+      "asof": "2026-11-02",
+      "source_date": "2026-11-04",
+      "event_date": "2026-11-04",
+      "type": "catalyst",
+      "priority": "watch",
+      "score": 40,
+      "title": "EFX — 2026-11-04: FICO quarterly results: 2027 mortgage-score pricing, the direct-license model and the…",
+      "tickers": [
+        "EFX"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "this week",
+      "confidence": "medium",
+      "why_now": "2026-11-04 — FICO quarterly results: 2027 mortgage-score pricing, the direct-license model and the \"Preferred Program\" ($10 wholesale mortgage score, flat year on year per UBS) set the pass-through an",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "TRU",
+          "relation": "competitor",
+          "detail": "US credit bureaus; Q3 company calls Oct 20/27 2026",
+          "from": "EFX",
+          "in_book": false
+        }
+      ],
+      "source": "EFX page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "EFX.md"
+      ],
+      "evidence_anchor": "2026-11-04 — FICO quarterly results: 2027 mortgage-score pricing, the direct-license model and the \"Preferred Program\" ($10 wholesale mortgage score, flat year on year per UBS) set the pass-through an",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "cata-988851afc62a",
+      "asof": "2026-11-02",
+      "source_date": "2026-11-09",
+      "event_date": "2026-11-09",
+      "type": "catalyst",
+      "priority": "watch",
+      "score": 40,
+      "title": "KKR — 2026-11-09: Q3 results and call, announced by KKR on 2026-09-29. Test fee activation, insurance…",
+      "tickers": [
+        "KKR"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "this week",
+      "confidence": "medium",
+      "why_now": "2026-11-09 — Q3 results and call, announced by KKR on 2026-09-29. Test fee activation, insurance earnings, K-Series flows and realization progress. [Company announcement](https://media.kkr.com/new",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "APO",
+          "relation": "competitor",
+          "detail": "Asset management and insurance; company calls Jul 30 / Aug 4 2026",
+          "from": "KKR",
+          "in_book": false
+        },
+        {
+          "ticker": "BX",
+          "relation": "competitor",
+          "detail": "Alternative asset management; company calls Oct 22 / Jul 30 2026",
+          "from": "KKR",
+          "in_book": false
+        }
+      ],
+      "source": "KKR page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "KKR.md"
+      ],
+      "evidence_anchor": "2026-11-09 — Q3 results and call, announced by KKR on 2026-09-29. Test fee activation, insurance earnings, K-Series flows and realization progress. [Company announcement](https://media.kkr.com/new",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "cata-172f6636a635",
+      "asof": "2026-11-02",
+      "source_date": "2026-11-09",
+      "event_date": "2026-11-09",
+      "type": "catalyst",
+      "priority": "watch",
+      "score": 40,
+      "title": "QCOM — 2026-11-09: APPLE LICENSING EXTENSION — announced 2026-09-24 ahead of the April 2027 expiry, terms not…",
+      "tickers": [
+        "QCOM"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "this week",
+      "confidence": "medium",
+      "why_now": "🆕 APPLE LICENSING EXTENSION — announced 2026-09-24 ahead of the April 2027 expiry, terms not disclosed (Bernstein desk · Seidman, 2026-09-24). Watch for duration/rate in the FQ4 print or 10-K. B",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "TSM",
+          "relation": "supplier",
+          "detail": "foundry",
+          "from": "QCOM",
+          "in_book": true
+        },
+        {
+          "ticker": "ARM",
+          "relation": "supplier",
+          "detail": "CPU IP",
+          "from": "QCOM",
+          "in_book": false
+        },
+        {
+          "ticker": "CDNS",
+          "relation": "supplier",
+          "detail": "EDA",
+          "from": "QCOM",
+          "in_book": false
+        },
+        {
+          "ticker": "SNPS",
+          "relation": "supplier",
+          "detail": "EDA/IP",
+          "from": "QCOM",
+          "in_book": false
+        }
+      ],
+      "source": "QCOM page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "QCOM.md"
+      ],
+      "evidence_anchor": "🆕 APPLE LICENSING EXTENSION — announced 2026-09-24 ahead of the April 2027 expiry, terms not disclosed (Bernstein desk · Seidman, 2026-09-24). Watch for duration/rate in the FQ4 print or 10-K. B",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "cata-c04ffb1de278",
+      "asof": "2026-11-02",
+      "source_date": "2026-11-09",
+      "event_date": "2026-11-09",
+      "type": "catalyst",
+      "priority": "watch",
+      "score": 40,
+      "title": "SNDK — 2026-11-09: 2026-11-09 / 11-19 / 11-20 — 8-for-1 forward split: record date, issue of seven additional…",
+      "tickers": [
+        "SNDK"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "this week",
+      "confidence": "medium",
+      "why_now": "🆕 2026-11-09 / 11-19 / 11-20 — 8-for-1 forward split: record date, issue of seven additional shares after the close, then split-adjusted trading (8-K Item 8.01, 2026-10-29). ➤ From 11-20, BBG cons",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "NAND/SSD",
+          "from": "SNDK",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "customer",
+          "detail": "NAND/SSD",
+          "from": "SNDK",
+          "in_book": true
+        },
+        {
+          "ticker": "META",
+          "relation": "customer",
+          "detail": "NAND/SSD",
+          "from": "SNDK",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "NAND/SSD",
+          "from": "SNDK",
+          "in_book": true
+        },
+        {
+          "ticker": "KIOXIA",
+          "relation": "competitor",
+          "detail": "NAND",
+          "from": "SNDK",
+          "in_book": false
+        }
+      ],
+      "source": "SNDK page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "SNDK.md"
+      ],
+      "evidence_anchor": "🆕 2026-11-09 / 11-19 / 11-20 — 8-for-1 forward split: record date, issue of seven additional shares after the close, then split-adjusted trading (8-K Item 8.01, 2026-10-29). ➤ From 11-20, BBG cons",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "cata-7811189cb403",
+      "asof": "2026-11-02",
+      "source_date": "2026-11-04",
+      "event_date": "2026-11-04",
+      "type": "catalyst",
+      "priority": "watch",
+      "score": 40,
+      "title": "TRU — 2026-11-04: FICO fiscal Q4 results and 2027 pricing outlook (date per the [UBS desk relay of McVeigh,…",
+      "tickers": [
+        "TRU"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "this week",
+      "confidence": "medium",
+      "why_now": "2026-11-04 — FICO fiscal Q4 results and 2027 pricing outlook (date per the [UBS desk relay of McVeigh, 2026-10-27 — Outlook](https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hM",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "EFX",
+          "relation": "competitor",
+          "detail": "US credit bureaus; Q3 company calls Oct 20/27 2026",
+          "from": "TRU",
+          "in_book": false
+        }
+      ],
+      "source": "TRU page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "TRU.md"
+      ],
+      "evidence_anchor": "2026-11-04 — FICO fiscal Q4 results and 2027 pricing outlook (date per the [UBS desk relay of McVeigh, 2026-10-27 — Outlook](https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hM",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
       "id": "cata-3bf0cdb9597e",
-      "asof": "2026-10-30",
+      "asof": "2026-11-02",
       "source_date": "2026-12-09",
       "event_date": "2026-12-09",
       "type": "catalyst",
@@ -2945,7 +2414,7 @@
     },
     {
       "id": "cata-c030b28ed093",
-      "asof": "2026-10-30",
+      "asof": "2026-11-02",
       "source_date": "2026-11-12",
       "event_date": "2026-11-12",
       "type": "catalyst",
@@ -3027,7 +2496,7 @@
     },
     {
       "id": "cata-ce699c62b4f0",
-      "asof": "2026-10-30",
+      "asof": "2026-11-02",
       "source_date": "2026-11-10",
       "event_date": "2026-11-10",
       "type": "catalyst",
@@ -3067,7 +2536,7 @@
     },
     {
       "id": "cata-eb7d5753b962",
-      "asof": "2026-10-30",
+      "asof": "2026-11-02",
       "source_date": "2026-11-16",
       "event_date": "2026-11-16",
       "type": "catalyst",
@@ -3141,8 +2610,55 @@
       "hidden": false
     },
     {
+      "id": "cata-24ddbb80b88e",
+      "asof": "2026-11-02",
+      "source_date": "2026-11-23",
+      "event_date": "2026-11-23",
+      "type": "catalyst",
+      "priority": "watch",
+      "score": 32,
+      "title": "OWL — 2026-11-23: Q3 dividend of $0.23 per Class A share: record date 2026-11-10, payable 2026-11-23 (Q3…",
+      "tickers": [
+        "OWL"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "upcoming",
+      "confidence": "medium",
+      "why_now": "Q3 dividend of $0.23 per Class A share: record date 2026-11-10, payable 2026-11-23 (Q3 release, 2026-10-29).",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "APO",
+          "relation": "competitor",
+          "detail": "Private credit and AI chip financing; Q3 company call Oct 29 2026",
+          "from": "OWL",
+          "in_book": false
+        },
+        {
+          "ticker": "BX",
+          "relation": "competitor",
+          "detail": "Alternative managers: non-traded BDCs, net lease, data centers; Q3 company calls Oct 29/22 2026",
+          "from": "OWL",
+          "in_book": false
+        }
+      ],
+      "source": "OWL page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "OWL.md"
+      ],
+      "evidence_anchor": "Q3 dividend of $0.23 per Class A share: record date 2026-11-10, payable 2026-11-23 (Q3 release, 2026-10-29).",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
       "id": "cata-2c7b4a6f3c93",
-      "asof": "2026-10-30",
+      "asof": "2026-11-02",
       "source_date": "2026-11-18",
       "event_date": "2026-11-18",
       "type": "catalyst",
@@ -3181,129 +2697,82 @@
       "hidden": false
     },
     {
-      "id": "cata-172f6636a635",
-      "asof": "2026-10-30",
-      "source_date": "2026-11-09",
-      "event_date": "2026-11-09",
+      "id": "cata-09405b3ca0ba",
+      "asof": "2026-11-02",
+      "source_date": "2026-11-21",
+      "event_date": "2026-11-21",
       "type": "catalyst",
       "priority": "watch",
       "score": 32,
-      "title": "QCOM — 2026-11-09: APPLE LICENSING EXTENSION — announced 2026-09-24 ahead of the April 2027 expiry, terms not…",
+      "title": "SAMSUNG — 2026-11-21: 2026-08-24 → 2026-11-21 — the 53.3mn-share PSU treasury purchase window is open. A…",
       "tickers": [
-        "QCOM"
+        "SAMSUNG"
       ],
       "in_book": [],
       "impact": "watch",
       "urgency": "upcoming",
       "confidence": "medium",
-      "why_now": "🆕 APPLE LICENSING EXTENSION — announced 2026-09-24 ahead of the April 2027 expiry, terms not disclosed (Bernstein desk · Seidman, 2026-09-24). Watch for duration/rate in the FQ4 print or 10-K. B",
+      "why_now": "🆕 2026-08-24 → 2026-11-21 — the 53.3mn-share PSU treasury purchase window is open. A mechanical, non-discretionary bid in the market for three months; note it is excluded from the FCF payout b",
       "belief_update": "A dated event can resolve or reframe an open debate.",
       "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
       "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
       "readthrough": [
         {
           "ticker": "TSM",
-          "relation": "supplier",
-          "detail": "foundry",
-          "from": "QCOM",
-          "in_book": true
-        },
-        {
-          "ticker": "ARM",
-          "relation": "supplier",
-          "detail": "CPU IP",
-          "from": "QCOM",
-          "in_book": false
-        },
-        {
-          "ticker": "CDNS",
-          "relation": "supplier",
-          "detail": "EDA",
-          "from": "QCOM",
-          "in_book": false
-        },
-        {
-          "ticker": "SNPS",
-          "relation": "supplier",
-          "detail": "EDA/IP",
-          "from": "QCOM",
-          "in_book": false
-        }
-      ],
-      "source": "QCOM page catalyst ledger; underlying source/date retained in the catalyst text",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "QCOM.md"
-      ],
-      "evidence_anchor": "🆕 APPLE LICENSING EXTENSION — announced 2026-09-24 ahead of the April 2027 expiry, terms not disclosed (Bernstein desk · Seidman, 2026-09-24). Watch for duration/rate in the FQ4 print or 10-K. B",
-      "origin": "catalyst_calendar",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "cata-c04ffb1de278",
-      "asof": "2026-10-30",
-      "source_date": "2026-11-09",
-      "event_date": "2026-11-09",
-      "type": "catalyst",
-      "priority": "watch",
-      "score": 32,
-      "title": "SNDK — 2026-11-09: 2026-11-09 / 11-19 / 11-20 — 8-for-1 forward split: record date, issue of seven additional…",
-      "tickers": [
-        "SNDK"
-      ],
-      "in_book": [],
-      "impact": "watch",
-      "urgency": "upcoming",
-      "confidence": "medium",
-      "why_now": "🆕 2026-11-09 / 11-19 / 11-20 — 8-for-1 forward split: record date, issue of seven additional shares after the close, then split-adjusted trading (8-K Item 8.01, 2026-10-29). ➤ From 11-20, BBG cons",
-      "belief_update": "A dated event can resolve or reframe an open debate.",
-      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
-      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
-      "readthrough": [
-        {
-          "ticker": "AMZN",
-          "relation": "customer",
-          "detail": "NAND/SSD",
-          "from": "SNDK",
-          "in_book": true
-        },
-        {
-          "ticker": "GOOG",
-          "relation": "customer",
-          "detail": "NAND/SSD",
-          "from": "SNDK",
-          "in_book": true
-        },
-        {
-          "ticker": "META",
-          "relation": "customer",
-          "detail": "NAND/SSD",
-          "from": "SNDK",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "customer",
-          "detail": "NAND/SSD",
-          "from": "SNDK",
-          "in_book": true
-        },
-        {
-          "ticker": "KIOXIA",
           "relation": "competitor",
-          "detail": "NAND",
-          "from": "SNDK",
+          "detail": "foundry",
+          "from": "SAMSUNG",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "HBM/foundry",
+          "from": "SAMSUNG",
+          "in_book": true
+        },
+        {
+          "ticker": "SKHYNIX",
+          "relation": "competitor",
+          "detail": "HBM/DRAM",
+          "from": "SAMSUNG",
+          "in_book": false
+        },
+        {
+          "ticker": "ADVANTEST",
+          "relation": "supplier",
+          "detail": "ATE test",
+          "from": "SAMSUNG",
+          "in_book": false
+        },
+        {
+          "ticker": "AMAT",
+          "relation": "supplier",
+          "detail": "WFE",
+          "from": "SAMSUNG",
+          "in_book": false
+        },
+        {
+          "ticker": "AMD",
+          "relation": "customer",
+          "detail": "HBM",
+          "from": "SAMSUNG",
+          "in_book": false
+        },
+        {
+          "ticker": "ASML",
+          "relation": "supplier",
+          "detail": "litho",
+          "from": "SAMSUNG",
           "in_book": false
         }
       ],
-      "source": "SNDK page catalyst ledger; underlying source/date retained in the catalyst text",
+      "source": "SAMSUNG page catalyst ledger; underlying source/date retained in the catalyst text",
       "evidence_paths": [
         "_meta/catalysts.md",
-        "SNDK.md"
+        "SAMSUNG.md"
       ],
-      "evidence_anchor": "🆕 2026-11-09 / 11-19 / 11-20 — 8-for-1 forward split: record date, issue of seven additional shares after the close, then split-adjusted trading (8-K Item 8.01, 2026-10-29). ➤ From 11-20, BBG cons",
+      "evidence_anchor": "🆕 2026-08-24 → 2026-11-21 — the 53.3mn-share PSU treasury purchase window is open. A mechanical, non-discretionary bid in the market for three months; note it is excluded from the FCF payout b",
       "origin": "catalyst_calendar",
       "feedback": "",
       "feedback_note": "",
@@ -3311,7 +2780,7 @@
     },
     {
       "id": "cata-30156bc5bf33",
-      "asof": "2026-10-30",
+      "asof": "2026-11-02",
       "source_date": "2026-11-17",
       "event_date": "2026-11-17",
       "type": "catalyst",
@@ -3378,8 +2847,62 @@
       "hidden": false
     },
     {
+      "id": "cata-2b12c0b4f748",
+      "asof": "2026-11-02",
+      "source_date": "2026-12-07",
+      "event_date": "2026-12-07",
+      "type": "catalyst",
+      "priority": "watch",
+      "score": 25,
+      "title": "CME — 2026-12-07: CME Securities Clearing launch on 2026-12-07, ahead of the SEC Treasury clearing mandate…",
+      "tickers": [
+        "CME"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "calendar",
+      "confidence": "medium",
+      "why_now": "CME Securities Clearing launch on 2026-12-07, ahead of the SEC Treasury clearing mandate (Duffy, Q3 call, 2026-10-21). Tests: clearing-member s",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "CBOE",
+          "relation": "competitor",
+          "detail": "Equity-index derivatives, retail and event contracts; Q3 company calls Oct 21/30 2026",
+          "from": "CME",
+          "in_book": false
+        },
+        {
+          "ticker": "ICE",
+          "relation": "competitor",
+          "detail": "Futures exchanges and clearing (energy, rates); Q3 company calls Oct 21/29 2026",
+          "from": "CME",
+          "in_book": false
+        },
+        {
+          "ticker": "NDAQ",
+          "relation": "supplier",
+          "detail": "Nasdaq-100 futures licence",
+          "from": "CME",
+          "in_book": false
+        }
+      ],
+      "source": "CME page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "CME.md"
+      ],
+      "evidence_anchor": "CME Securities Clearing launch on 2026-12-07, ahead of the SEC Treasury clearing mandate (Duffy, Q3 call, 2026-10-21). Tests: clearing-member s",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
       "id": "cata-01a4718ff5c9",
-      "asof": "2026-10-30",
+      "asof": "2026-11-02",
       "source_date": "2026-12-02",
       "event_date": "2026-12-02",
       "type": "catalyst",
@@ -3419,7 +2942,7 @@
     },
     {
       "id": "cata-15610c481120",
-      "asof": "2026-10-30",
+      "asof": "2026-11-02",
       "source_date": "2026-12-01",
       "event_date": "2026-12-01",
       "type": "catalyst",
@@ -3472,8 +2995,69 @@
       "hidden": false
     },
     {
+      "id": "cata-f6a6ff099d51",
+      "asof": "2026-11-02",
+      "source_date": "2026-12-06",
+      "event_date": "2026-12-06",
+      "type": "catalyst",
+      "priority": "watch",
+      "score": 25,
+      "title": "NDAQ — 2026-12-06: 23/5 trading on The Nasdaq Stock Market goes live 2026-12-06 (Q3 release, 2026-10-22).…",
+      "tickers": [
+        "NDAQ"
+      ],
+      "in_book": [],
+      "impact": "watch",
+      "urgency": "calendar",
+      "confidence": "medium",
+      "why_now": "23/5 trading on The Nasdaq Stock Market goes live 2026-12-06 (Q3 release, 2026-10-22). Tests: volume and share outside regular hours, r",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "CBOE",
+          "relation": "competitor",
+          "detail": "U.S. options and cash equities; Q3 company calls Oct 30/22 2026",
+          "from": "NDAQ",
+          "in_book": false
+        },
+        {
+          "ticker": "ICE",
+          "relation": "competitor",
+          "detail": "U.S. listings, cash equities and market data; Q3 company calls Oct 29/22 2026",
+          "from": "NDAQ",
+          "in_book": false
+        },
+        {
+          "ticker": "MSCI",
+          "relation": "competitor",
+          "detail": "Index licensing; Q3 company calls Oct 22/20 2026",
+          "from": "NDAQ",
+          "in_book": false
+        },
+        {
+          "ticker": "CME",
+          "relation": "customer",
+          "detail": "Nasdaq-100 futures licence",
+          "from": "NDAQ",
+          "in_book": false
+        }
+      ],
+      "source": "NDAQ page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "NDAQ.md"
+      ],
+      "evidence_anchor": "23/5 trading on The Nasdaq Stock Market goes live 2026-12-06 (Q3 release, 2026-10-22). Tests: volume and share outside regular hours, r",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
       "id": "cata-d8982d59e764",
-      "asof": "2026-10-30",
+      "asof": "2026-11-02",
       "source_date": "2026-12-09",
       "event_date": "2026-12-09",
       "type": "catalyst",
@@ -3505,7 +3089,7 @@
     },
     {
       "id": "cata-44020bbb6eda",
-      "asof": "2026-10-30",
+      "asof": "2026-11-02",
       "source_date": "2026-12-02",
       "event_date": "2026-12-02",
       "type": "catalyst",
@@ -3558,82 +3142,68 @@
       "hidden": false
     },
     {
-      "id": "cata-09405b3ca0ba",
-      "asof": "2026-10-30",
-      "source_date": "2026-11-21",
-      "event_date": "2026-11-21",
+      "id": "cata-80aa37628032",
+      "asof": "2026-11-02",
+      "source_date": "2026-12-17",
+      "event_date": "2026-12-17",
       "type": "catalyst",
       "priority": "watch",
       "score": 25,
-      "title": "SAMSUNG — 2026-11-21: 2026-08-24 → 2026-11-21 — the 53.3mn-share PSU treasury purchase window is open. A…",
+      "title": "WDC — 2026-12-17: Balance-sheet dates (10-Q): the remaining $141M of 2028 converts is called for redemption…",
       "tickers": [
-        "SAMSUNG"
+        "WDC"
       ],
       "in_book": [],
       "impact": "watch",
       "urgency": "calendar",
       "confidence": "medium",
-      "why_now": "🆕 2026-08-24 → 2026-11-21 — the 53.3mn-share PSU treasury purchase window is open. A mechanical, non-discretionary bid in the market for three months; note it is excluded from the FCF payout b",
+      "why_now": "🆕 Balance-sheet dates (10-Q): the remaining $141M of 2028 converts is called for redemption on 2026-11-16; the $650M revolver matures January 2027; the $0.175 dividend is payable 2026-12",
       "belief_update": "A dated event can resolve or reframe an open debate.",
       "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
       "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
       "readthrough": [
         {
-          "ticker": "TSM",
-          "relation": "competitor",
-          "detail": "foundry",
-          "from": "SAMSUNG",
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "nearline HDD",
+          "from": "WDC",
           "in_book": true
         },
         {
-          "ticker": "NVDA",
+          "ticker": "GOOG",
           "relation": "customer",
-          "detail": "HBM/foundry",
-          "from": "SAMSUNG",
+          "detail": "nearline HDD",
+          "from": "WDC",
           "in_book": true
         },
         {
-          "ticker": "SKHYNIX",
-          "relation": "competitor",
-          "detail": "HBM/DRAM",
-          "from": "SAMSUNG",
-          "in_book": false
-        },
-        {
-          "ticker": "ADVANTEST",
-          "relation": "supplier",
-          "detail": "ATE test",
-          "from": "SAMSUNG",
-          "in_book": false
-        },
-        {
-          "ticker": "AMAT",
-          "relation": "supplier",
-          "detail": "WFE",
-          "from": "SAMSUNG",
-          "in_book": false
-        },
-        {
-          "ticker": "AMD",
+          "ticker": "META",
           "relation": "customer",
-          "detail": "HBM",
-          "from": "SAMSUNG",
-          "in_book": false
+          "detail": "nearline HDD",
+          "from": "WDC",
+          "in_book": true
         },
         {
-          "ticker": "ASML",
-          "relation": "supplier",
-          "detail": "litho",
-          "from": "SAMSUNG",
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "nearline HDD",
+          "from": "WDC",
+          "in_book": true
+        },
+        {
+          "ticker": "STX",
+          "relation": "competitor",
+          "detail": "nearline HDD",
+          "from": "WDC",
           "in_book": false
         }
       ],
-      "source": "SAMSUNG page catalyst ledger; underlying source/date retained in the catalyst text",
+      "source": "WDC page catalyst ledger; underlying source/date retained in the catalyst text",
       "evidence_paths": [
         "_meta/catalysts.md",
-        "SAMSUNG.md"
+        "WDC.md"
       ],
-      "evidence_anchor": "🆕 2026-08-24 → 2026-11-21 — the 53.3mn-share PSU treasury purchase window is open. A mechanical, non-discretionary bid in the market for three months; note it is excluded from the FCF payout b",
+      "evidence_anchor": "🆕 Balance-sheet dates (10-Q): the remaining $141M of 2028 converts is called for redemption on 2026-11-16; the $650M revolver matures January 2027; the $0.175 dividend is payable 2026-12",
       "origin": "catalyst_calendar",
       "feedback": "",
       "feedback_note": "",

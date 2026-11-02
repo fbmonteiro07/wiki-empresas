@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\VST` (filings + transcripts) · `_briefings\by-ticker\VST.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-30 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-02 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -11,7 +11,7 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\VST` (filings + transc
 | Gross profit | $11.8bn | — |
 | Gross margin | 53.9% | — |
 | EBITDA | $7.1bn | $8.1bn |
-| EPS | $8.29 | $10.66 |
+| EPS | $8.32 | $10.46 |
 | Capex | $2.4bn | $2.6bn |
 | OCF (≈EBITDA) | $7.1bn | $8.1bn |
 
@@ -53,7 +53,7 @@ _Sell-side coverage in the disk sources is **thin** — one morning-briefing dat
 - **Next nuclear/gas contract announcement** — ~3.2GW Beaver Valley + Comanche Peak uncontracted; mgmt says appetite "as high as ever" (Q4 FY25). Beaver Valley colocation a watch item. Jefferies notes the IPP announcement timeline has slipped to late-2025/early-2026 (3Q25 DC Leasing) — execution on this cadence is the key proof point vs the regulated-utility share gains.
 - **PJM regulatory cadence** — colocation tariff compliance filings, the reliability backstop auction (potentially Sept → 🆕 **FERC suspended it 09-30 until 2027-02-28; PJM refile due ~10/29; MS expects results ~Apr 2027, after the 2029/30 BRA opens 12/9/26** — MS Arcaro, 2026-10-01), connect-and-manage rulemaking, price-collar extension (Q4/Q1 calls). Affordability politics (NJ/GA Nov-2025 elections, PJM capacity-price backlash) raising the bar on large-load tariffs (Jefferies 3Q25 DC Leasing).
 - **ERCOT batch 0 / load-interconnection process** — VST thinks total ERCOT growth is ~30-40GW by 2030 (~10-15GW data centers), well below the 300-400GW queue noise (Q1 FY26).
-- **Helix Digital Infrastructure ($10B w/ KKR/NVDA/KIA)** — emerging theme per MS (briefing, 2026-06-12); watch for formal disclosure.
+- **Helix — formal launch confirmed (historical backfill 2026-10-31).** [KKR/Helix, 2026-06-11](../KKR/research/2026-06-11_Helix_launch.md) names Vistra as a founding investor and preferred power partner. Follow project contracts and deliveries; formation does not establish a Vistra PPA or incremental delivered MW. [Timeline: KKR-HELIX-FIN-20260611](themes/ai-compute-deals.md).
 - Continued buyback acceleration if shares stay weak; possible 3rd IG ratings upgrade "as early as later this year" (Q4 FY25).
 
 ## Risks
@@ -163,6 +163,8 @@ _Source: VST earnings calls (dates above); management commentary, paraphrased._
 - 🆕 [Bernstein · Sunaina Ocalan / Raphael Lee — "Americas Power & Energy Transition: How much power will the US need" (2026-10-06)](../relat%C3%B3rios%20bons/Bernstein_NEE_Americas_Power_Energy_Transition_How_much_power_will.html) — VST Outperform $181 reiterated; US power demand 4% CAGR, DC 719 TWh 2030E.
 
 ## Changelog
+
+- **2026-10-31 — Helix primary-source backfill.** Superseded catalyst text: **Helix Digital Infrastructure ($10B w/ KKR/NVDA/KIA)** — emerging theme per MS (briefing, 2026-06-12); watch for formal disclosure. Primary June 11 launch now verified; September 28/29 Samsung commitment corroborated by company releases in the deal timeline. Existing MS valuation opinions remain dated broker estimates; no PT or power forecast changed.
 
 - **2026-10-12 (/run-inbox)** — 1 log row + 1 Sources link: Bernstein (Ocalan / Lee, "How much power will the US need", 2026-10-06) — Outperform, PT $181 reiterated (same as the 09-30 and 10-01 marks). Nothing superseded.
 - **2026-10-01 (/wiki-ingest 21h run of 09-30, completed 10-01)** — 4 log rows (Bernstein Ocalan, MS Arcaro, Jefferies desk Snyder, 22V Peterson), 1 Sinal paragraph, Catalysts line updated; superseded: PJM reliability backstop auction "potentially Sept" (PJM had proposed a Sept 30–Oct 21 window with results by Dec 2) → FERC suspended to 2027-02-28, MS now ~Apr 2027; first Bernstein rating/PT on the page (OP, $181) so no old PT to move.

@@ -13,7 +13,7 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\ASML` (20-F + transcri
 | Gross profit | €24.1bn | €33.3bn |
 | Gross margin | 54.8% | 57.0% |
 | EBITDA | €18.9bn | €27.5bn |
-| EPS | €38.87 | €58.15 |
+| EPS | €38.91 | €58.15 |
 | Capex | €1.9bn | €2.3bn |
 | OCF (≈EBITDA) | €18.9bn | €27.5bn |
 

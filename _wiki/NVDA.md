@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\NVDA` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\NVDA.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Snapshot — Capstone official model + BBG · asof 2026-10-30 · USD
+### 📊 Snapshot — Capstone official model + BBG · asof 2026-11-02 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -859,6 +859,8 @@ _Source: Capstone official model (`Modelo Felipe NVDA.xlsx`, 2026-06-17). Model 
 **House read:** the model sells **~9 → 16 → 25 GW/yr** of DC compute (cumulative install base ~9 → 19 → **35 GW** by 2027E) at **~$21–25bn of NVDA revenue per GW** — the Rubin ramp (1.1k → 6.4k k-units) drives the 2027 step even as Blackwell rolls off. Cross-checks vs JPM's $25–35bn NVDA capture/GW (AI Capex 2.0) and the ~$24–25k rev/GW the house uses elsewhere.
 
 ## Debate / thesis
+
+**2026-10-31 — Helix primary-source backfill:** Helix's original announcement names NVIDIA as a founding investor and strategic partner. NVIDIA's individual capital contribution and project delivery are undisclosed; do not add the platform total to NVIDIA capex or the separate financing-MOU headline. [Company source, 2026-06-11](../KKR/research/2026-06-11_Helix_launch.md) · [KKR and financing history](themes/ai-compute-deals.md), stable ID **KKR-HELIX-FIN-20260611**.
 
 **2026-10-20 — SPCX payment timing: primary evidence establishes financing structures, not a customer-specific DSO.** NVIDIA's [2026-08-26 10-Q, Note 7](../NVDA/NVDA_10-Q_2026-08-26_0001045810-26-000075.html) explicitly allows **90 days to one year** for certain investment-grade customers' large data-center builds; ordinary terms remain shortly after delivery. It does not name SpaceX. Colette Kress's **60-day DSO** on the same day's call is portfolio-wide. [Apollo's 2026-01-07 primary](https://www.apollo.com/wealth/insights-news/pressreleases/2026/01/apollo-backs-5-4-billion-valor-and-xai-data-center-compute-infrastructure-transaction-with-3-5-billion-capital-solution-3214463) confirms Valor's acquisition/lease of GB200 infrastructure to xAI and NVIDIA's anchor-LP investment: cash collection can be separate from continuing financing exposure. SPCX's April 24 Valor III agreement is **five years / $6.587bn undiscounted lease payments** (June 12 prospectus), not NVIDIA settlement tenor. Today's SPCX Q3 release shows **$19.593bn cash capex / $13.259bn consolidated AP** but no NVIDIA-specific payable or aging. **No defensible SPCX-to-NVIDIA payment-day estimate established.** [SPCX analysis](SPCX.md), [stable financing IDs and history](themes/ai-compute-deals.md).
 
@@ -2224,6 +2226,8 @@ _Source: NVDA earnings calls (dates above); management commentary, paraphrased._
 - **Briefings:** [roll-up](../_briefings/by-ticker/NVDA.md) — 76 datapoints / 38 days.
 
 ## Changelog
+
+- **2026-10-31 — Helix historical backfill:** added the primary-source cross-reference and stable financing ID; existing broker/press history retained, no rating/PT or capacity forecast changed.
 
 - 2026-10-30 — verifier correction: Sinal update — Friedberg's "$1 of COGS → $4 of revenue, 75% margin" was in quote marks but is a paraphrase; it now quotes the transcript (*"that turns into $4 of revenue for Nvidia, 75% margin"*). Astana re-upload quotes, timestamps and names (Higgsfield garbles, Mashrabov / Bolat, 600 staff, age 25, 1 GW DC Valley, 40 GW national generation, $50tn = Madiyev) re-checked against the transcript and tie.
 - 2026-10-30 — run-inbox: All-In #295 (2026-10-30) → 1 Full-log row (Friedberg $1 COGS → $4 revenue / 75% GM ✓; "$18" chain logged as illustrative, not adopted) + 1 Sinal update. Nothing superseded.

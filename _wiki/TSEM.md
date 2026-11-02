@@ -8,10 +8,10 @@ _Wiki · generated 2026-06-25 · synthesis-only (no local filings archive) · so
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $2.0bn | $2.8bn |
-| Gross profit | $631m | $1.1bn |
-| Gross margin | 31.8% | 39.7% |
+| Gross profit | $634m | $1.1bn |
+| Gross margin | 31.9% | 39.7% |
 | EBITDA | $746m | $1.3bn |
-| EPS | $3.80 | $7.30 |
+| EPS | $3.81 | $7.30 |
 | Capex | $739m | $956m |
 | OCF (≈EBITDA) | $746m | $1.3bn |
 

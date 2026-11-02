@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-30",
+  "as_of": "2026-11-02",
   "quarter": "2026Q4",
   "owner": "Capstone research",
   "classification": "ESTIMATE / qualitative house judgment",
@@ -39,12 +39,12 @@
       ]
     },
     {
-      "signal": "Spot · partial October mean",
-      "date": "Through 30 Oct 2026; 19 observations; morning download retained after afternoon Bloomberg failure",
+      "signal": "Spot / completed October mean",
+      "date": "October2026; 19 observations through30Oct; refreshed2Nov",
       "dram": "DDR5 16Gb +3.3%; DDR4 8Gb -3.1%. Selective strength persists.",
       "nand": "TLC 256Gb +8.0%; 512Gb -6.2%; 1Tb -4.9%. No broad confirmation.",
-      "weight": "Useful short-horizon cross-check. Incomplete month and narrow specifications; not a sector contract forecast.",
-      "source": "InSpectrum via Bloomberg; tracker calculation, 30 Oct 2026",
+      "weight": "Completed October sample, narrow specifications. November2 core prices unchanged versusOctober30; no new breadth confirmation.",
+      "source": "InSpectrum via Bloomberg; tracker calculation2Nov2026",
       "refs": [
         "spot"
       ]
@@ -87,13 +87,14 @@
       "signal": "Kioxia Q3 released; numeric ASP verification pending",
       "date": "30 Oct 2026; calendar Q3 = FY26 Q2",
       "dram": "Not applicable.",
-      "nand": "Jefferies / Rankie Wong: Q3 blended ASP mid-20s and like-for-like low-30s QoQ. MS / Amir Amerian: Q4 ASP still rising, enterprise stronger than mobile/PC; about half of bits priced.",
-      "weight": "Secondary call notes; MS flags translation uncertainty. Q3 numerical ASP and currency still await primary verification; excluded from fit. Q4 revenue broadly flat partly due to FX and shipment timing is not a sector ASP guide.",
+      "nand": "Q3 mid-20s blended / low-30s like-for-like ASP per JEF30Oct. JPM1Nov relays Q4 company ASP low-to-mid single-digit growth.",
+      "weight": "Secondary numeric evidence, currency unverified; outside fit. Calendar Q4 volume flat with eSSD shipment timing into calendar Q1 2027. Product mix and FX prevent sector-contract extrapolation.",
       "source": "Kioxia official 30 Oct filing; Jefferies / Rankie Wong and MS / Amir Amerian 30 Oct call notes",
       "refs": [
         "kioxia-q3",
         "ms-kioxia30pm",
-        "jef-kioxia30pm"
+        "jef-kioxia30pm",
+        "jpm-kioxia-nov1"
       ]
     },
     {
@@ -105,6 +106,39 @@
       "source": "Sandisk official FY27 Q1 presentation pp7-10 and16",
       "refs": [
         "sndk-oct29"
+      ]
+    },
+    {
+      "signal": "MOTIR / fixed-price benchmarks",
+      "date": "October2026; released1Nov; verified2Nov",
+      "dram": "DDR5 16Gb: USD48.0 in September to USD50.0 in October.",
+      "nand": "NAND128Gb: USD30.6 in both September and October.",
+      "weight": "Narrow specifications support DRAM upward direction and selective NAND caution. Neither a sector basket nor a company ASP; no confidence change without broader corroboration.",
+      "source": "MOTIR official release1Nov2026 p1",
+      "refs": [
+        "motir-oct-fixed"
+      ]
+    },
+    {
+      "signal": "MOTIR · October broad export values",
+      "date": "October2026; English release2Nov2026",
+      "dram": "Semiconductors USD56.44bn, +259.4% YoY; includes non-memory.",
+      "nand": "Computers USD5.85bn, +496.6% YoY; ministry cites server SSD demand.",
+      "weight": "Supports demand context only. Neither category isolates DRAM/NAND ASP; no confidence upgrade from aggregate value.",
+      "source": "MOTIR official English release2Nov2026",
+      "refs": [
+        "motir-oct26"
+      ]
+    },
+    {
+      "signal": "Spot / November first observation",
+      "date": "2Nov2026; one observation",
+      "dram": "DDR4 USD31.96; DDR5 USD52.88. Both unchanged versus30Oct.",
+      "nand": "TLC256Gb USD15.48;512Gb USD18.96;1Tb USD28.92. All unchanged versus30Oct.",
+      "weight": "One observation is insufficient to establish November direction. Different comparisons to October average are denominator changes, not a new daily price move.",
+      "source": "InSpectrum via Bloomberg,2Nov2026",
+      "refs": [
+        "spot"
       ]
     }
   ],
@@ -219,6 +253,46 @@
       "refs": [
         "jef-kioxia30pm"
       ]
+    },
+    {
+      "name": "J.P. Morgan · Kioxia post-results",
+      "byline": "Mio Shikanai / Jay Kwon / Sangsik Lee · email 1 Nov 2026",
+      "dram": "No new DRAM price forecast.",
+      "nand": "December-quarter company ASP low-to-mid single-digit increase; flat bits, FX headwind; eSSD shipments shift into Jan-Mar.",
+      "assessment": "Broker relay of company outlook, currency not independently verified. Positive direction with slower increases; not a +15-20% sector-contract confirmation.",
+      "refs": [
+        "jpm-kioxia-nov1"
+      ]
+    },
+    {
+      "name": "BofA · global memory update",
+      "byline": "Simon Woo et al · report31 Oct; Matt Shin relay2 Nov2026",
+      "dram": "Faster Hynix bit supply with shortages still supporting prices.",
+      "nand": "Global forecast revision chiefly reflects volumes; no new Q4 sector-price number.",
+      "assessment": "Volume and 2027 forecast upgrades do not independently raise Q4 pricing confidence. Same report and relay counted once.",
+      "refs": [
+        "bofa-oct31"
+      ]
+    },
+    {
+      "name": "Goldman Sachs / October pricing tracker reference",
+      "byline": "Chris Hussey / Sarah Herr, midday research2Nov2026; underlying analyst not verified",
+      "dram": "Referenced Q4 forecast: PC above GS expectations, server/mobile in line.",
+      "nand": "Referenced Q4 forecast below GS expectations; no numerical range or sign verified.",
+      "assessment": "Title referenced by GS midday note only; full tracker pending. Relative forecast disappointment does not establish negative sequential prices.",
+      "refs": [
+        "gs-nov2-pm"
+      ]
+    },
+    {
+      "name": "TrendForce / Weekly Radar008",
+      "byline": "TrendForce Insights,2Nov2026",
+      "dram": "Lead time eases to19 weeks but remains Very Tight, especially32GB/64GB RDIMMs.",
+      "nand": "No new numerical NAND price forecast in reviewed email text.",
+      "assessment": "Lead times are a supply cross-check, not transacted price. No confidence change from one weekly observation.",
+      "refs": [
+        "tf-radar-nov2"
+      ]
     }
   ],
   "watch": [
@@ -260,6 +334,14 @@
     {
       "date": "2026-10-30T16:10:25-03:00",
       "change": "30 Oct afternoon: MS/Amir Amerian call notes say Kioxia December-quarter ASP still rises, led by data-center/enterprise, with mobile/PC more moderate and only about half of bits priced; notes explicitly flag translation uncertainty. Jefferies/Rankie Wong relays September-quarter mid-20s blended / low-30s like-for-like ASP increases and a weak December revenue guide. These remain secondary observations with currency unverified, outside fit targets. Sandisk official 29 Oct deck confirms data-center strength alongside consumer weakness, but revenue guidance is not an ASP guide. Direction/confidence unchanged: DRAM Up / Moderate-high; NAND Up selectively / Moderate. Magnitude remains uncertain; no evidence yet of a lower Q4 sector contract average. Operational alert: afternoon Bloomberg session failed; morning30Oct spot and September contracts retained. Other feeds continue; October BOK DRAM/flash still unavailable. This is a monitoring gap, not evidence of changed prices."
+    },
+    {
+      "date": "2026-11-02T09:11:29-03:00",
+      "change": "2 Nov review: JPM/Shikanai, Kwon and Lee (email1Nov) relays low-to-mid single-digit Kioxia December-quarter ASP growth, flat bits and delayed enterprise SSD shipments into calendar Q1 2027. This refines the existing slowdown caveat; it remains company blended guidance relayed by a broker, not sector realized pricing. BofA/Woo et al31Oct, relayed2Nov, raises global forecasts mainly on volumes, not a new Q4 price forecast. Jefferies2Nov repeats the previously reviewed expert call. MOTIR October export-value strength corroborates demand but does not isolate DRAM/NAND prices. DRAM Up / Moderate-high and NAND Up selectively / Moderate unchanged; magnitude remains uncertain. MOTIR 1 Nov official release p1 reports October fixed prices: DDR5 16Gb USD50.0 versus September48.0; NAND128Gb USD30.6 unchanged. Narrow-spec corroboration for DRAM, no broad NAND acceleration; different vendor/spec bases from InSpectrum and company ASP. October BOK remains pending; the existing Bloomberg outage still limits fresh spot/contract checks. KCS preliminary full-month October category totals differ from MOTIR (semiconductors USD56,702,143,000; computers USD6,003,411,000, retrieved2Nov). Keep the releases and category bases separate; neither is a fixed-price observation. BofA/Robert Cheng2Nov relays Transsion expecting memory prices stable to slightly up with conservative inventory; a mobile-demand counterweight, not a sector-price observation."
+    },
+    {
+      "date": "2026-11-02T16:04:46-03:00",
+      "change": "2 Nov review: JPM/Shikanai, Kwon and Lee (email1Nov) relays low-to-mid single-digit Kioxia December-quarter ASP growth, flat bits and delayed enterprise SSD shipments into calendar Q1 2027. This refines the existing slowdown caveat; it remains company blended guidance relayed by a broker, not sector realized pricing. BofA/Woo et al31Oct, relayed2Nov, raises global forecasts mainly on volumes, not a new Q4 price forecast. Jefferies2Nov repeats the previously reviewed expert call. MOTIR October export-value strength corroborates demand but does not isolate DRAM/NAND prices. DRAM Up / Moderate-high and NAND Up selectively / Moderate unchanged; magnitude remains uncertain. MOTIR 1 Nov official release p1 reports October fixed prices: DDR5 16Gb USD50.0 versus September48.0; NAND128Gb USD30.6 unchanged. Narrow-spec corroboration for DRAM, no broad NAND acceleration; different vendor/spec bases from InSpectrum and company ASP. October BOK remains pending; the morning Bloomberg outage was subsequently resolved in the PM run. KCS preliminary full-month October category totals differ from MOTIR (semiconductors USD56,702,143,000; computers USD6,003,411,000, retrieved2Nov). Keep the releases and category bases separate; neither is a fixed-price observation. BofA/Robert Cheng2Nov relays Transsion expecting memory prices stable to slightly up with conservative inventory; a mobile-demand counterweight, not a sector-price observation. 2 Nov PM: GS / Chris Hussey and Sarah Herr midday note references a new October pricing tracker: Q4 PC DRAM above GS forecast, server/mobile in line, NAND below GS forecast. Only the referenced title is available; lower than forecast does not mean falling prices. Full tracker and Kioxia read-across remain pending. TrendForce Weekly Radar2Nov says DRAM lead time eases to19 weeks but remains Very Tight, especially32GB/64GB RDIMMs. GS / James Schneider et al2Nov reports September NAND unit shipments better than seasonal: volume evidence, not Q4 ASP. These support existing product divergence without a verified change in pricing direction or confidence. DRAM Up / Moderate-high; NAND Up selectively / Moderate unchanged. Keep morning MOTIR fixed-price evidence and frozen refit intact. Bloomberg recovered2Nov PM: all eight numeric legs completed. November2 spot has one observation, with all five core prices unchanged versus October30; changes versus October average reflect month rollover, not fresh price acceleration. October spot mean is now a completed-month reading. BOK and InSpectrum contract baskets remain September; MOTIR October benchmarks remain a separate basis."
     }
   ],
   "sources": [
@@ -406,6 +488,54 @@
       "label": "Sandisk official FY27 Q1 presentation · 29 Oct 2026",
       "url": "https://investor.sandisk.com/static-files/4ca97b6e-7da4-4d52-b4ac-0e80f462716f",
       "detail": "pp6-10 and16: higher pricing contributed to prior-quarter revenue growth; data-center revenue +61% QoQ, consumer -29%; December revenue guidance $12.2-12.6bn is not an ASP forecast."
+    },
+    {
+      "id": "motir-oct-fixed",
+      "label": "MOTIR / official Korean October export release, 1 Nov 2026, p1",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787411",
+      "detail": "PDF first page visually verified 2 Nov. Fixed-price footnote in USD, September to October: DDR5 16Gb48.0 to50.0; NAND128Gb30.6 to30.6. Do not splice into InSpectrum levels."
+    },
+    {
+      "id": "bofa-transsion-nov2",
+      "label": "BofA / Robert Cheng · report2Nov2026, received1Nov",
+      "url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAQqMvDhAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWlLGDVAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "detail": "Mobile OEM cost/demand view; no sector-price realization or numerical Q4 forecast. Available email reviewed, linked full report not reviewed."
+    },
+    {
+      "id": "jpm-kioxia-nov1",
+      "label": "JPM / Shikanai, Kwon, Lee · received1 Nov2026",
+      "url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWlK6xEAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "detail": "Available email text reviewed; linked full report not reviewed. Broker forecast/relay, not independently verified company price actual."
+    },
+    {
+      "id": "bofa-oct31",
+      "label": "BofA / Woo, Shen, Arya, Hirakawa, Shin · report31Oct2026",
+      "url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAQqMvDhAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWjpBUHAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "detail": "Available email text reviewed; linked full report not reviewed. Broker forecast/relay, not independently verified company price actual."
+    },
+    {
+      "id": "motir-oct26",
+      "label": "MOTIR · October2026 exports; English release2Nov2026",
+      "url": "https://english.motir.go.kr/eng/article/EATCLdfa319ada?pageIndex=1",
+      "detail": "Official English list: semiconductor exports USD56.44bn, +259.4% YoY; computers USD5.85bn, +496.6%. Broad values combine price, volume and mix; not DRAM/NAND fixed-spec prices."
+    },
+    {
+      "id": "gs-nov2-pm",
+      "label": "Goldman Sachs / Chris Hussey and Sarah Herr,2Nov2026 midday",
+      "url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWlK63SAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "detail": "Available email text reviewed. Linked full reports and embedded chart not reviewed; preserve source scope."
+    },
+    {
+      "id": "gs-sia-nov2",
+      "label": "Goldman Sachs / James Schneider et al,2Nov2026 SIA review",
+      "url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWlK63AAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "detail": "Available email text reviewed. Linked full reports and embedded chart not reviewed; preserve source scope."
+    },
+    {
+      "id": "tf-radar-nov2",
+      "label": "TrendForce Insights / Weekly Radar008,2Nov2026",
+      "url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWlK6zuAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "detail": "Available email text reviewed. Linked full reports and embedded chart not reviewed; preserve source scope."
     }
   ],
   "historical_stats": [
@@ -1719,9 +1849,9 @@
         "label": "DDR4 8Gb 3200 spot",
         "product": "DRAM",
         "kind": "spot",
-        "latest_month": "2026-09",
-        "level": 33.6655,
-        "mom_pct": -2.6456379465477187,
+        "latest_month": "2026-10",
+        "level": 32.61578947368421,
+        "mom_pct": -3.1180601099517036,
         "qoq_carry_pct": 22.544413188598543,
         "stale": false,
         "first_month": "2017-06"
@@ -1731,9 +1861,9 @@
         "label": "DDR5 16Gb 4800/5600 spot",
         "product": "DRAM",
         "kind": "spot",
-        "latest_month": "2026-09",
-        "level": 49.301,
-        "mom_pct": -0.7666871142123166,
+        "latest_month": "2026-10",
+        "level": 50.927368421052634,
+        "mom_pct": 3.298854832665943,
         "qoq_carry_pct": 33.54525283128463,
         "stale": false,
         "first_month": "2023-10"
@@ -1803,9 +1933,9 @@
         "label": "TLC 256Gb spot",
         "product": "NAND",
         "kind": "spot",
-        "latest_month": "2026-09",
-        "level": 14.178,
-        "mom_pct": 18.253236952895378,
+        "latest_month": "2026-10",
+        "level": 15.311578947368421,
+        "mom_pct": 7.995337476149111,
         "qoq_carry_pct": 13.034571250699777,
         "stale": false,
         "first_month": "2018-08"
@@ -1815,9 +1945,9 @@
         "label": "TLC 512Gb spot",
         "product": "NAND",
         "kind": "spot",
-        "latest_month": "2026-09",
-        "level": 20.7955,
-        "mom_pct": 0.7766418978169654,
+        "latest_month": "2026-10",
+        "level": 19.509473684210526,
+        "mom_pct": -6.184156744437375,
         "qoq_carry_pct": -5.27225695489002,
         "stale": false,
         "first_month": "2018-08"
@@ -1827,9 +1957,9 @@
         "label": "TLC 1Tb spot",
         "product": "NAND",
         "kind": "spot",
-        "latest_month": "2026-09",
-        "level": 31.0415,
-        "mom_pct": 5.895496929724819,
+        "latest_month": "2026-10",
+        "level": 29.534736842105264,
+        "mom_pct": -4.854028181288705,
         "qoq_carry_pct": 6.041806352699375,
         "stale": false,
         "first_month": "2023-10"
@@ -1851,9 +1981,9 @@
         "label": "Legacy DDR3 4Gb spot",
         "product": "DRAM",
         "kind": "spot",
-        "latest_month": "2026-09",
-        "level": 11.8715,
-        "mom_pct": -2.605302255769526,
+        "latest_month": "2026-10",
+        "level": 12.224210526315789,
+        "mom_pct": 2.971069589485653,
         "qoq_carry_pct": 48.156006798134996,
         "stale": false,
         "first_month": "2013-03"
@@ -1971,9 +2101,9 @@
         "label": "Spot NAND TLC 256/512",
         "product": "NAND",
         "kind": "basket",
-        "latest_month": "2026-09",
-        "level": 340.4530508131295,
-        "mom_pct": 9.165764384534224,
+        "latest_month": "2026-10",
+        "level": 342.6871553901952,
+        "mom_pct": 0.6562151732022459,
         "qoq_carry_pct": 3.323178386901793,
         "stale": false,
         "first_month": "2018-08"
@@ -2043,74 +2173,74 @@
       {
         "key": "ISPPDR37 Index",
         "label": "DDR4 8Gb 3200 spot",
-        "month": "2026-10",
-        "through": "2026-10-30",
-        "observations": 19,
-        "mean_value": 32.61578947368421,
+        "month": "2026-11",
+        "through": "2026-11-02",
+        "observations": 1,
+        "mean_value": 31.96,
         "last_value": 31.96,
-        "mean_vs_previous_month_pct": -3.1180601099517036,
-        "last_vs_previous_month_end_pct": -2.2031823745410017
+        "mean_vs_previous_month_pct": -2.010650314668383,
+        "last_vs_previous_month_end_pct": 0.0
       },
       {
         "key": "ISPPDR47 Index",
         "label": "DDR5 16Gb 4800/5600 spot",
-        "month": "2026-10",
-        "through": "2026-10-30",
-        "observations": 19,
-        "mean_value": 50.927368421052634,
+        "month": "2026-11",
+        "through": "2026-11-02",
+        "observations": 1,
+        "mean_value": 52.88,
         "last_value": 52.88,
-        "mean_vs_previous_month_pct": 3.298854832665943,
-        "last_vs_previous_month_end_pct": 6.655909640984281
+        "mean_vs_previous_month_pct": 3.8341497695376203,
+        "last_vs_previous_month_end_pct": 0.0
       },
       {
         "key": "ISPPN256 Index",
         "label": "TLC 256Gb spot",
-        "month": "2026-10",
-        "through": "2026-10-30",
-        "observations": 19,
-        "mean_value": 15.311578947368421,
+        "month": "2026-11",
+        "through": "2026-11-02",
+        "observations": 1,
+        "mean_value": 15.48,
         "last_value": 15.48,
-        "mean_vs_previous_month_pct": 7.995337476149111,
-        "last_vs_previous_month_end_pct": 2.652519893899208
+        "mean_vs_previous_month_pct": 1.0999587515468257,
+        "last_vs_previous_month_end_pct": 0.0
       },
       {
         "key": "ISPPN512 Index",
         "label": "TLC 512Gb spot",
-        "month": "2026-10",
-        "through": "2026-10-30",
-        "observations": 19,
-        "mean_value": 19.509473684210526,
+        "month": "2026-11",
+        "through": "2026-11-02",
+        "observations": 1,
+        "mean_value": 18.96,
         "last_value": 18.96,
-        "mean_vs_previous_month_pct": -6.184156744437375,
-        "last_vs_previous_month_end_pct": -6.462752836704489
+        "mean_vs_previous_month_pct": -2.816445451602456,
+        "last_vs_previous_month_end_pct": 0.0
       },
       {
         "key": "ISPPND1T Index",
         "label": "TLC 1Tb spot",
-        "month": "2026-10",
-        "through": "2026-10-30",
-        "observations": 19,
-        "mean_value": 29.534736842105264,
+        "month": "2026-11",
+        "through": "2026-11-02",
+        "observations": 1,
+        "mean_value": 28.92,
         "last_value": 28.92,
-        "mean_vs_previous_month_pct": -4.854028181288705,
-        "last_vs_previous_month_end_pct": -3.8883349950149526
+        "mean_vs_previous_month_pct": -2.081402808468169,
+        "last_vs_previous_month_end_pct": 0.0
       },
       {
         "key": "ISPPDR29 Index",
         "label": "Legacy DDR3 4Gb spot",
-        "month": "2026-10",
-        "through": "2026-10-30",
-        "observations": 19,
-        "mean_value": 12.224210526315789,
-        "last_value": 12.46,
-        "mean_vs_previous_month_pct": 2.971069589485653,
-        "last_vs_previous_month_end_pct": 2.1311475409836245
+        "month": "2026-11",
+        "through": "2026-11-02",
+        "observations": 1,
+        "mean_value": 12.38,
+        "last_value": 12.38,
+        "mean_vs_previous_month_pct": 1.2744338241625908,
+        "last_vs_previous_month_end_pct": -0.6420545746388395
       }
     ],
     "source_dates": {
-      "KCS": "2026-10-30T08:55:48-03:00",
-      "BOK": "2026-10-30T08:58:11-03:00",
-      "InSpectrum": "2026-10-30T09:02:08-03:00"
+      "KCS": "2026-11-02T15:56:09-03:00",
+      "BOK": "2026-11-02T15:59:15-03:00",
+      "InSpectrum": "2026-11-02T16:03:10-03:00"
     }
   },
   "input_hashes": {
@@ -2122,7 +2252,7 @@
     "data/street_calls.json": "e6f37fbfa8c216a68ef92b7ab824bfa58035b3f449ea3ce7eba24e98e66b5802",
     "analyze_dashboard.py": "e644508e4b2f69f933c71c0d25ac3585536394b2b338b51e4d45505710b3444e"
   },
-  "reviewed_evidence": "075658b57682c0660677803b47bbcc642cd41588030d9db2e48333a64146a334",
-  "review_note": "30 Oct afternoon: MS/Amir Amerian call notes say Kioxia December-quarter ASP still rises, led by data-center/enterprise, with mobile/PC more moderate and only about half of bits priced; notes explicitly flag translation uncertainty. Jefferies/Rankie Wong relays September-quarter mid-20s blended / low-30s like-for-like ASP increases and a weak December revenue guide. These remain secondary observations with currency unverified, outside fit targets. Sandisk official 29 Oct deck confirms data-center strength alongside consumer weakness, but revenue guidance is not an ASP guide. Direction/confidence unchanged: DRAM Up / Moderate-high; NAND Up selectively / Moderate. Magnitude remains uncertain; no evidence yet of a lower Q4 sector contract average. Operational alert: afternoon Bloomberg session failed; morning30Oct spot and September contracts retained. Other feeds continue; October BOK DRAM/flash still unavailable. This is a monitoring gap, not evidence of changed prices.",
-  "reviewed_at": "2026-10-30T16:10:25-03:00"
+  "reviewed_evidence": "32c9c6a7155a7855a2aeea127046f8795c9930244e78583e70311ae8f328b29d",
+  "review_note": "2 Nov review: JPM/Shikanai, Kwon and Lee (email1Nov) relays low-to-mid single-digit Kioxia December-quarter ASP growth, flat bits and delayed enterprise SSD shipments into calendar Q1 2027. This refines the existing slowdown caveat; it remains company blended guidance relayed by a broker, not sector realized pricing. BofA/Woo et al31Oct, relayed2Nov, raises global forecasts mainly on volumes, not a new Q4 price forecast. Jefferies2Nov repeats the previously reviewed expert call. MOTIR October export-value strength corroborates demand but does not isolate DRAM/NAND prices. DRAM Up / Moderate-high and NAND Up selectively / Moderate unchanged; magnitude remains uncertain. MOTIR 1 Nov official release p1 reports October fixed prices: DDR5 16Gb USD50.0 versus September48.0; NAND128Gb USD30.6 unchanged. Narrow-spec corroboration for DRAM, no broad NAND acceleration; different vendor/spec bases from InSpectrum and company ASP. October BOK remains pending; the morning Bloomberg outage was subsequently resolved in the PM run. KCS preliminary full-month October category totals differ from MOTIR (semiconductors USD56,702,143,000; computers USD6,003,411,000, retrieved2Nov). Keep the releases and category bases separate; neither is a fixed-price observation. BofA/Robert Cheng2Nov relays Transsion expecting memory prices stable to slightly up with conservative inventory; a mobile-demand counterweight, not a sector-price observation. 2 Nov PM: GS / Chris Hussey and Sarah Herr midday note references a new October pricing tracker: Q4 PC DRAM above GS forecast, server/mobile in line, NAND below GS forecast. Only the referenced title is available; lower than forecast does not mean falling prices. Full tracker and Kioxia read-across remain pending. TrendForce Weekly Radar2Nov says DRAM lead time eases to19 weeks but remains Very Tight, especially32GB/64GB RDIMMs. GS / James Schneider et al2Nov reports September NAND unit shipments better than seasonal: volume evidence, not Q4 ASP. These support existing product divergence without a verified change in pricing direction or confidence. DRAM Up / Moderate-high; NAND Up selectively / Moderate unchanged. Keep morning MOTIR fixed-price evidence and frozen refit intact. Bloomberg recovered2Nov PM: all eight numeric legs completed. November2 spot has one observation, with all five core prices unchanged versus October30; changes versus October average reflect month rollover, not fresh price acceleration. October spot mean is now a completed-month reading. BOK and InSpectrum contract baskets remain September; MOTIR October benchmarks remain a separate basis.",
+  "reviewed_at": "2026-11-02T16:04:46-03:00"
 }

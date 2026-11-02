@@ -15,7 +15,7 @@ _Wiki · generated 2026-06-20 · **Taiwan issuer — no SEC filings**; sources: 
 | Gross profit | NT$307.4bn | NT$524.6bn |
 | Gross margin | 45.8% | 44.3% |
 | EBITDA | NT$134.9bn | NT$299.6bn |
-| EPS | NT$69.32 | NT$153.82 |
+| EPS | NT$69.32 | NT$153.75 |
 | Capex | NT$19.6bn | NT$27.0bn |
 | OCF (≈EBITDA) | NT$134.9bn | NT$299.6bn |
 

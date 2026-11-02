@@ -1,0 +1,81 @@
+{
+  "as_of": "2026-11-02",
+  "basis": "Identifiable awards from 2026 proxy and latest Hurlston Form 4 dated Aug27; not final closing inventory or merger-specific golden-parachute disclosure",
+  "inputs": {
+    "reported_shares_and_time_only_rights": {
+      "value": 186951,
+      "tag": "HARD",
+      "source": "SEC Form4 0001573338-26-000017, transaction Aug27 2026"
+    },
+    "pending_performance_units_target": {
+      "value": 206189,
+      "components": [
+        161287,
+        11520,
+        33382
+      ],
+      "tag": "HARD as June27 2026; carryforward to estimate is an assumption",
+      "source": "2026 DEF14A p57"
+    },
+    "performance_multiplier": {
+      "target": 1,
+      "maximum": 2,
+      "tag": "HARD contractual opportunity; ESTIMATE achievement at closing",
+      "source": "2025 DEF14A p61, 2026 DEF14A pp49-50"
+    },
+    "deal_reference_per_lite_share": {
+      "value": 1132,
+      "tag": "HARD rounded announcement reference, not live cash offer",
+      "source": "Joint announcement Nov2 2026, based on Oct28 unaffected MRVL price"
+    },
+    "exchange_ratio": {
+      "value": 4.5,
+      "tag": "HARD",
+      "source": "Joint announcement Nov2 2026"
+    },
+    "cash_benefits_proxy_benchmark": {
+      "value": 4200542,
+      "components": {
+        "salary": 1800000,
+        "aip": 2340000,
+        "cobra": 60542
+      },
+      "tag": "HARD proxy benchmark; ESTIMATE carryforward to closing",
+      "source": "2026 DEF14A p65"
+    }
+  },
+  "reconciliations": {
+    "proxy_equity_units": 341647,
+    "proxy_equity_value_disclosed": 279118765,
+    "proxy_equity_calculated": 279118766.06,
+    "proxy_equity_rounding_difference": 1.06,
+    "august_reported_stock_flow": 186951,
+    "august_flow_matches_latest_form4": true,
+    "double_count_avoided": "66,764 earned EPS units already in latest186,951, and31,713 owned common also included; neither added again",
+    "unknowns": [
+      "Merger-specific executive arrangements not located in filings checked",
+      "2027 and later PSUs not fully observable from latest Form4",
+      "Future grants, vesting, withholding and trades before H1CY28 expected close",
+      "Actual remaining PSU performance and qualifying termination",
+      "Severance base salary, bonus and280G cutbacks at closing"
+    ]
+  },
+  "cases": {
+    "target_remaining_psus": {
+      "lite_equivalent_units": 393140,
+      "mrvl_equivalent_units": 1769130.0,
+      "equity_at_1132": 445034480,
+      "total_at_1132": 449235022,
+      "value_change_per_10_usd_mrvl": 17691300.0,
+      "total_if_mrvl_200": 358026542.0
+    },
+    "maximum_remaining_psus": {
+      "lite_equivalent_units": 599329,
+      "mrvl_equivalent_units": 2696980.5,
+      "equity_at_1132": 678440428,
+      "total_at_1132": 682640970,
+      "value_change_per_10_usd_mrvl": 26969805.0,
+      "total_if_mrvl_200": 543596642.0
+    }
+  }
+}

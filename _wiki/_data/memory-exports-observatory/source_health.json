@@ -1,9 +1,7 @@
 {
-  "checked_at": "2026-10-30T16:01:50-03:00",
-  "status": "attention",
-  "issues": [
-    "market_prices"
-  ],
+  "checked_at": "2026-11-02T15:56:03-03:00",
+  "status": "ok",
+  "issues": [],
   "rows": [
     {
       "id": "kcs_detail",
@@ -11,8 +9,8 @@
       "mode": "Automatic collector",
       "status": "ok",
       "latest": "2026-09",
-      "checked_at": "2026-10-30T16:01:50-03:00",
-      "data_retrieved_at": "2026-10-30T16:01:56-03:00",
+      "checked_at": "2026-11-02T15:56:03-03:00",
+      "data_retrieved_at": "2026-11-02T15:56:09-03:00",
       "notes": [
         "Trailing 24 months fetched again, including revisions",
         "Latest totals reconcile across headline, extended and destinations within portal rounding"
@@ -25,8 +23,8 @@
       "mode": "Automatic collector",
       "status": "ok",
       "latest": "2026-09",
-      "checked_at": "2026-10-30T16:01:50-03:00",
-      "data_retrieved_at": "2026-10-30T16:02:03-03:00",
+      "checked_at": "2026-11-02T15:56:03-03:00",
+      "data_retrieved_at": "2026-11-02T15:56:17-03:00",
       "notes": [
         "Trailing 24 months fetched again, including revisions",
         "Latest totals reconcile across headline, extended and destinations within portal rounding"
@@ -39,8 +37,8 @@
       "mode": "Automatic collector",
       "status": "ok",
       "latest": "2026-09",
-      "checked_at": "2026-10-30T16:01:50-03:00",
-      "data_retrieved_at": "2026-10-30T16:02:15-03:00",
+      "checked_at": "2026-11-02T15:56:03-03:00",
+      "data_retrieved_at": "2026-11-02T15:56:29-03:00",
       "notes": [
         "Trailing 24 months fetched again, including revisions",
         "Latest totals reconcile across headline, extended and destinations within portal rounding"
@@ -52,9 +50,9 @@
       "label": "KCS preliminary trade",
       "mode": "Automatic collector",
       "status": "ok",
-      "latest": "2026-10 / 01~20",
-      "checked_at": "2026-10-30T16:01:50-03:00",
-      "data_retrieved_at": "2026-10-30T16:03:42-03:00",
+      "latest": "2026-10 / 01~31",
+      "checked_at": "2026-11-02T15:56:03-03:00",
+      "data_retrieved_at": "2026-11-02T15:58:30-03:00",
       "notes": [
         "Cumulative preliminary trade; separate from final monthly detail"
       ],
@@ -65,14 +63,14 @@
       "label": "MOTIE official release / benchmarks",
       "mode": "Automatic collector",
       "status": "ok",
-      "latest": "2026-09",
-      "checked_at": "2026-10-30T16:01:50-03:00",
-      "data_retrieved_at": "2026-10-30T16:03:54-03:00",
+      "latest": "2026-10",
+      "checked_at": "2026-11-02T15:56:03-03:00",
+      "data_retrieved_at": "2026-11-02T15:58:44-03:00",
       "notes": [
         "Latest release re-read; official PDF retained with hash"
       ],
       "detail": {
-        "source": "https://www.korea.kr/common/download.do?fileId=198563931&tblKey=GMN attached PDF; sha256=e7f7ba494d7b43cd14eb054cd2e6ee66d4391e64863a1f47baf7ef6021df5003",
+        "source": "https://www.korea.kr/common/download.do?fileId=198581810&tblKey=GMN attached PDF; sha256=e78ea4dcb939da6a8dc7e01cb6b00e92374c8d29601b50486612ea3d5fe53a0f",
         "benchmark_conflicts": []
       }
     },
@@ -82,8 +80,8 @@
       "mode": "Automatic collector",
       "status": "ok",
       "latest": "2026-09",
-      "checked_at": "2026-10-30T16:01:50-03:00",
-      "data_retrieved_at": "2026-10-30T16:04:17-03:00",
+      "checked_at": "2026-11-02T15:56:03-03:00",
+      "data_retrieved_at": "2026-11-02T15:59:15-03:00",
       "notes": [
         "All seven items checked individually; October 2026 DRAM / flash received: 0 of 2"
       ],
@@ -122,14 +120,42 @@
       "id": "market_prices",
       "label": "InSpectrum via Bloomberg",
       "mode": "Automatic collector",
-      "status": "failed",
-      "latest": "2026-10-30",
-      "checked_at": "2026-10-30T16:01:50-03:00",
-      "data_retrieved_at": "2026-10-30T09:02:08-03:00",
+      "status": "ok",
+      "latest": "2026-11-02",
+      "checked_at": "2026-11-02T15:56:03-03:00",
+      "data_retrieved_at": "2026-11-02T16:03:10-03:00",
       "notes": [
-        "blpapi: could not start session (Terminal not running / logged out?)"
+        "26 separate specifications; dates and source/currency verified",
+        "Legacy / historical series remain labelled with their own last date; no stale price is rolled forward"
       ],
-      "detail": {}
+      "detail": {
+        "ISTPDR1G Index": "2026-09-30",
+        "ISTPDR72 Index": "2026-04-30",
+        "ISTPDR71 Index": "2026-09-30",
+        "ISTPMR38 Index": "2026-09-30",
+        "ISTPDR15 Index": "2026-09-30",
+        "ISTPDR16 Index": "2026-09-30",
+        "ISTPDR82 Index": "2026-09-30",
+        "ISTPMR48 Index": "2026-09-30",
+        "ISPPDR37 Index": "2026-11-02",
+        "ISPPDR47 Index": "2026-11-02",
+        "ISTPND27 Index": "2026-09-30",
+        "ISTPND28 Index": "2026-09-30",
+        "ISTPND35 Index": "2026-09-30",
+        "ISTPND30 Index": "2026-09-30",
+        "ISTPND29 Index": "2026-09-30",
+        "ISPPN256 Index": "2026-11-02",
+        "ISPPN512 Index": "2026-11-02",
+        "ISPPND1T Index": "2026-11-02",
+        "ISPPDR27 Index": "2019-11-06",
+        "ISPPDR29 Index": "2026-11-02",
+        "ISPPND14 Index": "2019-12-31",
+        "ISPPND15 Index": "2019-09-30",
+        "ISPPND30 Index": "2023-09-28",
+        "ISTPND12 Index": "2025-09-30",
+        "ISTPND13 Index": "2025-09-30",
+        "ISTPND14 Index": "2022-01-31"
+      }
     },
     {
       "id": "japan_mof",
@@ -137,8 +163,8 @@
       "mode": "Automatic collector",
       "status": "waiting_publication",
       "latest": "2026-09",
-      "checked_at": "2026-10-30T16:01:50-03:00",
-      "data_retrieved_at": "2026-10-30T16:09:02-03:00",
+      "checked_at": "2026-11-02T15:56:03-03:00",
+      "data_retrieved_at": "2026-11-02T16:03:11-03:00",
       "notes": [
         "servlet: not yet published; 1988年01月 ～ 2026年09月"
       ],

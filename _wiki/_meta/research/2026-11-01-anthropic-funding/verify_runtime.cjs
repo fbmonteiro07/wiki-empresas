@@ -1,0 +1,15 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert');
+const h=fs.readFileSync('_wiki/_meta/research/2026-11-01-anthropic-funding/study.html','utf8');
+const ids=[...h.matchAll(/id="([^"]+)"/g)].map(x=>x[1]);
+assert.strictEqual(ids.length,new Set(ids).size);
+const els=Object.fromEntries(ids.map(id=>[id,{value:id==='raise'?'100':id==='overrun'?'0':'',addEventListener(){},textContent:'',innerHTML:'',className:''}]));
+const c={document:{getElementById:id=>{assert(els[id],id);return els[id]}},window:{}};vm.createContext(c);
+vm.runInContext(h.match(/<script>([\s\S]*?)<\/script>/)[1],c);
+const near=(a,b)=>assert(Math.abs(a-b)<1e-8,`${a} != ${b}`);
+near(c.window.fundingResults.trough,190.1);near(c.window.fundingResults.downside,56);near(c.window.fundingResults.stall,-136);
+assert(els.chart.innerHTML.includes('polyline'));assert(els.cashRow.innerHTML.includes('328.3'));
+els.overrun.value='10';vm.runInContext('render()',c);near(c.window.fundingResults.downside,16);near(c.window.fundingResults.cash[2],170.1);
+els.overrun.value='15';vm.runInContext('render()',c);near(c.window.fundingResults.downside,-4);
+els.overrun.value='0';els.raise.value='0';vm.runInContext('render()',c);near(c.window.fundingResults.trough,90.1);
+els.raise.value='60';vm.runInContext('render()',c);near(c.window.fundingResults.cash[4],288.3);
+console.log('PASS: unique IDs, script execution, chart, default values, funding delta, cash-outflow sensitivity.');

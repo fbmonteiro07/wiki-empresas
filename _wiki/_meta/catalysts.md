@@ -1,18 +1,23 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-10-31 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-11-02 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (46)
+## 📅 Upcoming (59)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
 | 2026-11-02 | GEV | 🆕 **GS-hosted GEV IR meeting, New York — 2026-11-02** (per the GS Industrials daily, logged pre-print): first post-print management access. |
 | 2026-11-02 | KIOXIA | 🆕 **2026-11-02 (Mon) 9am JST — BofA post-results "doko shuzai" with KIOXIA on FY3/27 2Q results** (BofA · Mikio Hirakawa, via BofA one-liners, 2026-10-01) — dates the Sep-quarter print to before 11-02 |
+| 2026-11-02 | LITE | **Resolved early on 2026-11-02 (original calendar date 2026-11-05) - F1Q27 earnings.** Company release: revenue $1,262.6m, adjusted EPS $4.57; Q2 revenue $1,575-1,625m, adjusted EPS $5.90-6.20. Prior  |
 | 2026-11-02 | STX | 🆕 **2026-10-08 (12pm ET, NYC) — Morgan Stanley Global Hardware & Optical lunch (Andy Meng, Howard Kao, Derrick Yang, Meta Marshall, Erik Woodring) covering STX/[[WDC]] among others; 2026-11-02/03 — MS |
+| 2026-11-03 | APO | **2026-11-03 — Q3 results**, announced 2026-09-29. Test FRE growth, Athene inflows, reported versus normalized spreads and future fee recognition. [Company announcement](https://www.apollo.com/insight |
 | 2026-11-03 | BKNG | **🆕🔴 2026-11-03 (TUESDAY, AFTER THE CLOSE; CALL 4:30PM ET) — THE 3Q26 PRINT, AND THE BARS ARE NOW EXPLICIT.** ① **3Q room nights:** guide **+3-5%**; consensus **~339m (+5%)** (Bloomberg via Bernstein  |
 | 2026-11-03 | INTC | 🆕 **2026-10-01: Susquehanna "The AI Arms Race" session (Christopher Rolland; AMD, INTC, MRVL, NVDA, AVGO, ARM, QCOM) and 2026-11-03: Intel dinner NDR with CFO and IR, London** (Susquehanna index 09-30 |
 | 2026-11-03 | SMCI | **✅ RESOLVED (preliminary) 2026-10-20 — F1Q27 vs guide:** revenue **$18.5–19.5bn vs $14.5–15.5bn**, GM **12.0–12.5% vs 10.4–10.8%** (SMCI 8-K, 2026-10-20). Bull on delivery vs guide; GM sits well belo |
-| 2026-11-05 | LITE | **🆕 2026-11-05 — F1Q27 earnings (date per Deutsche Bank · Conti, 2026-10-07; confirm against the LITE IR release).** DB's bogeys: **OCS > $100m for the first time** (path to $1bn in 2027), CPO toward  |
+| 2026-11-04 | EFX | 2026-11-04 — FICO quarterly results: 2027 mortgage-score pricing, the direct-license model and the "Preferred Program" ($10 wholesale mortgage score, flat year on year per UBS) set the pass-through an |
+| 2026-11-04 | TRU | 2026-11-04 — FICO fiscal Q4 results and 2027 pricing outlook (date per the [UBS desk relay of McVeigh, 2026-10-27 — Outlook](https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hM |
+| 2026-11-09 | CME | Compute futures: the CFTC comment period on CME's Silicon Data H100-rental-index contract ends 2026-11-09 (Duffy said he "believe[s]" so; filed under a full 40.3 review), then the agency decides ([Duf |
+| 2026-11-09 | KKR | **2026-11-09 — Q3 results and call**, announced by KKR on 2026-09-29. Test fee activation, insurance earnings, K-Series flows and realization progress. [Company announcement](https://media.kkr.com/new |
 | 2026-11-09 | QCOM | **🆕 APPLE LICENSING EXTENSION — announced 2026-09-24 ahead of the April 2027 expiry, terms not disclosed** (Bernstein desk · Seidman, 2026-09-24). Watch for duration/rate in the FQ4 print or 10-K. **B |
 | 2026-11-09 | QCOM | 🆕 **2026-11-09: Bernstein QCOM HQ visit** (Bernstein TMT sales · Tyler Seidman, event notice, 2026-09-28). |
 | 2026-11-09 | QCOM | 🆕 **2026-11-09: Bernstein Qualcomm HQ visit with CEO, CFO and Head of Data Center** (Bernstein · Tyler Seidman events list, 09-29/09-30); 2026-10-01 Susquehanna "The AI Arms Race" session lists QCOM a |
@@ -31,19 +36,27 @@ _Generated 2026-10-31 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-11-18 | PANW | **🧪 PRE-REGISTERED TEST T1 — F1Q27 print ~2026-11-18:** ORGANIC NGS ARR growth on the re-segmented basis **≥ 28% y/y** (the last disclosed organic rate, Q2 FY26) **AND non-GAAP OM ≥ 30%** = bull; orga |
 | 2026-11-21 | SAMSUNG | **🆕 2026-08-24 → 2026-11-21 — the 53.3mn-share PSU treasury purchase window is open.** A mechanical, non-discretionary bid in the market for three months; note it is **excluded** from the FCF payout b |
 | 2026-11-23 | NVDA | 🆕 **2026-10-08: NVDA investor call (IR)** (Rothschild & Co Redburn TMT sales · Rowan Adley, 2026-09-28). Also, NYC/Boston NDRs where the $40bn/GW Vera Rubin slides are being shown (BofA TMT sales · Br |
+| 2026-11-23 | OWL | Q3 dividend of $0.23 per Class A share: record date 2026-11-10, payable 2026-11-23 ([Q3 release, 2026-10-29](../OWL/earnings/2026-10-29_a93026-ex991xearningspress.htm)). |
 | 2026-12-01 | GLW | **🆕 POST-Q3 FY26 FORWARD CALENDAR (from the 2026-10-27 release + call):** the **UBS Global Technology and AI Conference, Scottsdale, 2026-12-01**, plus management visits to investor offices in select  |
 | 2026-12-02 | CRWD | **🧪 PRE-REGISTERED TEST T2 — F3Q27 print ~2026-12-02:** net new ARR **≥ ~$378m** (guide-implied $343–347m from the $6.184–6.188bn Q3 ARR guide × the ~10% blended H1 beat, UBS / Boyd) = bull; at or bel |
 | 2026-12-02 | OKTA | **🧪 PRE-REGISTERED TEST T3 — Q3 FY27 print ~2026-12-02:** cRPO growth **≥ 13%** (guide +11–12%; Q2 printed +14.1%) **AND dollar-based NRR ≥ 107%** = bull; cRPO ≤ 12% and/or NRR back to 106% = bear. ⚠️ |
+| 2026-12-06 | NDAQ | **23/5 trading on The Nasdaq Stock Market goes live 2026-12-06** ([Q3 release, 2026-10-22](../NDAQ/earnings/2026-10-22_earningsrelease3q26ex-991.htm)). Tests: volume and share outside regular hours, r |
+| 2026-12-07 | CME | CME Securities Clearing launch on 2026-12-07, ahead of the SEC Treasury clearing mandate ([Duffy, Q3 call, 2026-10-21](../CME/transcripts/CME_Q3-2026-earnings_2026-10-21.md)). Tests: clearing-member s |
 | 2026-12-09 | MU | **🆕🔴 F4Q26 PRINT — REPORTED 2026-09-30 (✅ resolved: beat on revenue / GM / EPS, FQ1 revenue guide $61.5bn above every bogey, FQ1 GM guide ~86.25% below every buy-side bar; scored post-mortem in `## In |
 | 2026-12-09 | NOW | 🆕 **Post-print conferences:** BMO Technology & Innovation Leaders 2026-11-12 and RBC Global TIMT 2026-11-17 (SVP/GM Josh Kahn); **Wells Fargo TMT Summit 2026-12-08** and **Barclays Global Technology 2 |
 | 2026-12-17 | WDC | 🆕 **Balance-sheet dates (10-Q):** the remaining $141M of 2028 converts is called for redemption on **2026-11-16**; the $650M revolver matures **January 2027**; the $0.175 dividend is payable **2026-12 |
+| 2026-12-18 | NDAQ | **Quarterly dividend of $0.31 payable 2026-12-18** (record date 2026-12-04, [dividend release, 2026-10-22](../NDAQ/earnings/2026-10-22_ndaq102226ex-992.htm)); the variable-notional ASR of $315–385m co |
 | 2026-12-18 | TER | 🆕 **Q4 CY26 print (late Jan / early Feb 2027)** — guide $1,250-1,350M / non-GAAP EPS $1.95-2.25 / GM 57.5-58.5%; the test is the 2027 shape management pre-committed to on the Q3 call — *"each quarter  |
 | 2026-12-27 | LRCX | ✅ **RESOLVED 2026-10-29 — 10-Q for the September 2026 quarter (filed 2026-10-22, folded 10-29; details in the 📄 sub-block under Current state).** The open items were RPO, customer concentration, China |
+| 2026-12-31 | CME | SEC clearing requirement for cash US Treasury transactions takes effect 2026-12-31 (repo transactions follow by 2027-06-30; [FY2025 10-K](../CME/CME_10-K_2026-02-26_0001156375-26-000009.html)). |
+| 2026-12-31 | TRU | 2026-12-31 — Todd Cello's last day as CFO (he then serves as an advisor through March 1). The $1.5bn swap at 1.39% matures the same day; more than half of its replacement is already executed at about  |
 | 2027-01-01 | BKNG | **🆕 B2B STAND-ALONE LAUNCH ON 2027-01-01 with dedicated management (BKNG exec (likely CFO Steenbergen ⚠) @ Communacopia-week investor group mtg, 2026-09-09 — Capstone Notion transcript).** Watch for t |
 | 2027-01-10 | CDNS | **🆕 2026-11-09 — BIS 50%-affiliates rule suspension lapses unless formally extended.** The September US-China extension of trade arrangements to 2027-01-10 *"is expected to extend the suspension; howe |
+| 2027-01-12 | CBOE | Repayment of the $650m 3.650% senior notes maturing 2027-01-12 with cash on hand ([Q3 10-Q](../CBOE/CBOE_10-Q_2026-10-30_0001628280-26-068447.html); [Griebenow, Q3 call](../CBOE/transcripts/CBOE_Q3-20 |
 | 2027-01-13 | APH | 🆕 **Capital-return dates:** the $0.15 quarterly dividend is payable 2027-01-13 (record 2026-12-22); the remaining $2B buyback is to be completed by 2026-12-31; the new 3-year $4B plan starts 2027-01-0 |
 | 2027-01-19 | META | **🆕🔴 2027-01-19 — CLASS C COMMON STOCK TAKES EFFECT** (the Restated Charter's effective date). The one-for-one Class C dividend follows, with **record and payment dates still to be set** by the Board; |
 | 2027-01-28 | NOK | **2027-01-28 — Q4/FY2026 results:** Q4 net sales +20–24% q/q; FY comparable EBIT above €2.35bn; FCF inside 35–55% conversion; first formal 2027 outlook against the +25–30% Optical+IP framing; NI gross |
+| 2027-02-04 | ICE | Q4 2026 results, call and FY2027 guidance, 2027-02-04, 8:30 a.m. ET ([company Q3 release, 2026-10-29](../ICE/earnings/2026-10-29_tm2628301d1_ex99-1.htm)). Tests: the 2027 Mortgage guide and recurring  |
 | 2027-07-01 | NSCALE | 2027-07-01 — Figure AI initial Vera Rubin GPUs targeted "2H27" (approximate). |
 | 2027-09-28 | NSCALE | 2027-09-28 — Microsoft Kvandal North **Tranche 2 delivery date** (SOW example) — a filed, checkable milestone. |
 | 2027-12-31 | NSCALE | 2027-12-31 — SIN02 Portugal: >66,000 VR NVL72 for Microsoft "starting late 2027". |
@@ -431,10 +444,10 @@ _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_me
 | 2026-06-24 | LRCX | bull won — MU F3Q26 read-through resolved bullish: DRAM 27% of systems +45% y/y, HBM4/HBM4E ramp intact; UBS/Arcuri upgraded LRCX to OW on memory-capex leverage (2026-06-29). |
 | 2026-06-24 | KLAC | bull won — same MU F3Q26 read-through: massive beat-and-raise (rev $41.5B run, 84.9% GM) confirms DRAM/HBM as the engine of incremental WFE dollars; monitoring bullet, date was the MU print. |
 | 2026-06-23 | GOOG | neutral — DJIA inclusion effective (replaced Verizon); passive-flow/franchise-recognition milestone, no fundamental change (Barron's, 2026-06-29). |
+| 2026-06-11 | VST | neutral — Historical backfill recorded 2026-10-31: Helix formally launched, resolving the page's watch for formal disclosure. No PPA, delivered capacity or valuation outcome established. [Helix/KKR company announcement](../../KKR/research/2026-06-11_Helix_launch.md); KKR-HELIX-FIN-20260611. |
 | 2026-06-08 | MRVL | neutral — Jensen "next $1 trillion company" comment drove +33% single-day; later gave back -14.1% in AI-capex selloff; S&P 500 add effective 2026-06-22 (Barron's). |
 | 2026-06-02 | CRM | neutral — BofA SF Global Tech Conference attended; agentic-monetization framing unchanged — Agentforce ARR $1bn+ but core-pricing/seat-reset debate unresolved (Q1 print 2026-05-27 context). |
 | 2026-05-28 | MU | neutral — monitoring bullet (EUV/tool availability as 2028 supply governor), not a dated event; structural watch stands — JPM: ASML ~90 tools end-CY27 insufficient vs Samsung/Hynix ~20-25 each. |
 | 2026-05-20 | NVDA | bull won — Q1 FY27 beat: $82B rev +85% y/y, DC $75B +92%, GM mid-70s held; guided Q2 $91B ±2%; stock -3% on hyperscaler-vs-ACIE growth-mix optics, fundamentals cleared the bar. |
 | 2026-05-18 | LITE | neutral — NDX-100 inclusion effective (replaced CSGP); flow event only — the thesis remains EML supply/demand imbalance >30% + OCS backlog >$400M into 2027. |
 | 2026-05-11 | CEG | neutral — timing note, not an event (Q2 FY26 call lands ~Aug-2026); Calpine lockup 2026-06-30 passed with $5B buyback flexibility in place. |
-| 2026-05-04 | NOW | neutral — Financial Analyst Day delivered $30bn FY30 sub-rev guide (~17.5% CAGR, $32bn upside case, Rule of 60, 20-30% pricing uplift); UBS read-through measured — real inflection ~2028, debate open. |

@@ -9,11 +9,11 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\SMCI` (filings + trans
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $55.7bn | $77.2bn |
-| Gross profit | $6.0bn | $7.9bn |
-| Gross margin | 10.8% | 10.2% |
+| Revenue | $55.3bn | $76.6bn |
+| Gross profit | $5.9bn | $7.6bn |
+| Gross margin | 10.6% | 9.9% |
 | EBITDA | $4.7bn | $6.4bn |
-| EPS | $4.57 | $5.23 |
+| EPS | $4.37 | $4.90 |
 | Capex | $260m | $261m |
 | OCF (≈EBITDA) | $4.7bn | $6.4bn |
 

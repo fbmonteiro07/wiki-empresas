@@ -1,81 +1,113 @@
 {
- "asof": "2026-10-30",
+ "asof": "2026-11-02",
  "note": "House (Capstone) model figures scraped from each page's 'Capstone estimates (house model)' table. rev/fcf in the page's stated unit (usually $bn); eps absolute; gm/opm in %.",
  "companies": {
   "AAPL": {
    "years": {
     "2024": {
      "rev": 391.0,
-     "eps": 6.82
+     "gm": 46.2,
+     "opm": 31.6
     },
     "2025": {
-     "rev": 416.0,
-     "eps": 8.35
+     "rev": 416.2,
+     "gm": 46.9,
+     "opm": 32.0
     },
     "2026": {
-     "rev": 480.0,
-     "eps": 10.12
+     "rev": 479.7,
+     "gm": 48.5,
+     "opm": 32.8,
+     "eps": 8.89
     },
     "2027": {
-     "rev": 539.0,
-     "eps": 11.11
+     "rev": 507.0,
+     "gm": 47.4,
+     "opm": 31.5,
+     "eps": 9.23
     },
     "2028": {
-     "rev": 585.0,
-     "eps": 12.55
+     "rev": 535.8,
+     "gm": 47.7,
+     "opm": 31.8,
+     "eps": 9.99
     }
    },
    "raw_header": [
     "",
-    "2024",
-    "2025E",
-    "2026E",
-    "2027E",
-    "2028E"
+    "FY2024",
+    "FY2025",
+    "FY2026E",
+    "FY2027E",
+    "FY2028E"
    ],
    "raw_rows": [
     [
      "Revenue ($bn)",
-     "391",
-     "416",
-     "480",
-     "539",
-     "585"
+     "391.0",
+     "416.2",
+     "479.7",
+     "507.0",
+     "535.8"
     ],
     [
-     "EPS — adj ($)",
-     "6.82",
-     "8.35",
-     "10.12",
-     "11.11",
-     "12.55"
+     "Gross margin (%)",
+     "46.2",
+     "46.9",
+     "48.5",
+     "47.4",
+     "47.7"
+    ],
+    [
+     "Operating margin (%)",
+     "31.6",
+     "32.0",
+     "32.8",
+     "31.5",
+     "31.8"
+    ],
+    [
+     "Model-stated EPS ($, year-end shares)",
+     "6.23",
+     "7.62",
+     "9.25",
+     "9.65",
+     "10.56"
+    ],
+    [
+     "EPS — on Street share count† ($)",
+     "—",
+     "—",
+     "8.89",
+     "9.23",
+     "9.99"
     ],
     [
      "iPhone units (M)",
      "—",
-     "240",
-     "267",
-     "280",
-     "286"
+     "239.7",
+     "267.6",
+     "248.9",
+     "248.9"
     ],
     [
      "iPhone ASP ($)",
      "—",
      "874",
-     "946",
-     "1,021",
-     "—"
+     "940",
+     "1,053",
+     "1,105"
     ],
     [
      "Services ($bn)",
-     "96",
-     "109",
-     "126",
-     "145",
-     "164"
+     "96.2",
+     "109.2",
+     "123.1",
+     "135.4",
+     "146.2"
     ]
    ],
-   "source": "Capstone official model (`Modelo Apple Felipe 2Q26 - WIP.xlsm`, 2026-06-16)."
+   "source": "Capstone official model (`Modelo Apple Felipe 2Q26 - WIP.xlsm`, version saved 2026-08-06 in P:\\Felipe Monteiro\\Apple — post-FQ3 print; fiscal years ending September)."
   },
   "ADVANTEST": {
    "years": {

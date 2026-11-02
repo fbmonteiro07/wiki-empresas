@@ -1,5 +1,5 @@
 {
- "run_at": "2026-10-30T16:01:50-03:00",
+ "run_at": "2026-11-02T15:56:03-03:00",
  "offline": false,
  "steps": {
   "kcs_detail": {
@@ -10,45 +10,45 @@
     "action": "fetched and validated; trailing 24 months rechecked",
     "revisions": 0
    },
-   "seconds": 7.9
+   "seconds": 8.9
   },
   "kcs_extended": {
    "status": "ok",
    "detail": {
     "latest_month": "2026-09",
     "rows": 1993,
-    "retrieved_at": "2026-10-30T16:02:03-03:00"
+    "retrieved_at": "2026-11-02T15:56:17-03:00"
    },
-   "seconds": 11.9
+   "seconds": 12.2
   },
   "kcs_country": {
    "status": "ok",
    "detail": {
     "latest_month": "2026-09",
     "rows": 10979,
-    "retrieved_at": "2026-10-30T16:02:15-03:00"
+    "retrieved_at": "2026-11-02T15:56:29-03:00"
    },
-   "seconds": 87.1
+   "seconds": 120.3
   },
   "kcs_tentative": {
    "status": "ok",
    "detail": {
     "latest": [
      "2026-10",
-     "01~20"
+     "01~31"
     ]
    },
-   "seconds": 16.6
+   "seconds": 19.4
   },
   "motie_release": {
    "status": "ok",
    "detail": {
-    "latest_release_month": "2026-09",
-    "latest_checked_month": "2026-09",
+    "latest_release_month": "2026-10",
+    "latest_checked_month": "2026-10",
     "benchmark_rows_added": 0,
     "benchmark_conflicts": []
    },
-   "seconds": 22.5
+   "seconds": 30.2
   },
   "bok_index": {
    "status": "ok",
@@ -94,18 +94,22 @@
     },
     "missing_items": []
    },
-   "seconds": 222.8
+   "seconds": 226.2
   },
   "market_prices": {
-   "status": "failed",
-   "error": "blpapi: could not start session (Terminal not running / logged out?)",
-   "seconds": 62.3
+   "status": "ok",
+   "detail": {
+    "series": 26,
+    "asof": "2026-11-02",
+    "raw_folder": "E:\\korea-memory-monitor\\raw\\bbg\\20261102T160305"
+   },
+   "seconds": 9.4
   },
   "japan_mof": {
    "status": "ok",
    "detail": {
     "latest_month": "2026-09",
-    "retrieved_at": "2026-10-30T16:09:02-03:00",
+    "retrieved_at": "2026-11-02T16:03:11-03:00",
     "servlet_note": "servlet: not yet published; 1988年01月 ～ 2026年09月",
     "supplement_status": "not_published",
     "files": {
@@ -119,59 +123,55 @@
      "2026": "2026-10-29"
     }
    },
-   "seconds": 34.0
+   "seconds": 32.8
   },
   "models_and_report": {
    "status": "ok",
    "detail": {
     "latest_export_month": "2026-09"
    },
-   "seconds": 15.6
+   "seconds": 19.2
   },
   "source_health": {
    "status": "ok",
    "detail": {
-    "status": "attention",
-    "issues": [
-     "market_prices"
-    ],
+    "status": "ok",
+    "issues": [],
     "automatic_sources": 8,
     "research_ledgers": 3
    },
    "seconds": 0.4
   }
  },
- "failures": [
-  "market_prices"
- ],
+ "failures": [],
  "latest_observations": {
   "kcs_detail": {
    "latest": "2026-09",
-   "retrieved": "2026-10-30"
+   "retrieved": "2026-11-02"
   },
   "kcs_extended": {
    "latest": "2026-09",
-   "retrieved": "2026-10-30"
+   "retrieved": "2026-11-02"
   },
   "kcs_country": {
    "latest": "2026-09",
-   "retrieved": "2026-10-30"
+   "retrieved": "2026-11-02"
   },
   "kcs_tentative": {
-   "latest": "2026-10 01~20",
-   "retrieved": "2026-10-30"
+   "latest": "2026-10 01~31",
+   "retrieved": "2026-11-02"
   },
   "motie_release": {
-   "latest": "2026-09",
-   "retrieved": "2026-10-30"
+   "latest": "2026-10",
+   "retrieved": "2026-11-02"
   },
   "bok_index": {
    "latest": "2026-09",
-   "retrieved": "2026-10-30"
+   "retrieved": "2026-11-02"
   },
   "japan_mof": {
    "latest": "2026-09",
-   "retrieved": "2026-10-30"
+   "retrieved": "2026-11-02"
   },
   "kioxia_asp": {
    "latest": "2026Q2",
@@ -182,11 +182,22 @@
    "retrieved": "2026-10-28"
   },
   "market_prices": {
-   "latest": "2026-10-30",
-   "retrieved": "2026-10-30"
+   "latest": "2026-11-02",
+   "retrieved": "2026-11-02"
   }
  },
- "status": "partial",
- "changes_since_last_run": {},
- "previous_run_at": "2026-10-30T09:04:31-03:00"
+ "status": "ok",
+ "changes_since_last_run": {
+  "market_prices": {
+   "before": {
+    "latest": "2026-10-30",
+    "retrieved": "2026-10-30"
+   },
+   "after": {
+    "latest": "2026-11-02",
+    "retrieved": "2026-11-02"
+   }
+  }
+ },
+ "previous_run_at": "2026-11-02T09:11:29-03:00"
 }

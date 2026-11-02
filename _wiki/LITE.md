@@ -3,16 +3,16 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\LITE` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\LITE.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Snapshot — Capstone official model + BBG · asof 2026-10-30 · USD
+### 📊 Snapshot — Capstone official model + BBG · asof 2026-11-02 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | **$4.2bn** | **$8.1bn** |
 | Gross profit | $2.1bn | $4.3bn |
-| Gross margin | 49.7% | 52.8% |
+| Gross margin | 49.9% | 53.1% |
 | EBITDA | $1.9bn | $3.9bn |
 | EPS | **$12.81** | **$30.02** |
-| Capex | $433m | $679m |
+| Capex | $468m | $717m |
 | OCF (≈EBITDA) | $1.9bn | $3.9bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
@@ -474,7 +474,7 @@ _Source: Capstone official model (`Modelo consolidado incl. LITE .xlsx` — cons
 
 ## Debate / thesis
 
-- 🔭 **2026-10-30 (notion-ingest · JPM Sur AMA) — ⚠️ SPECULATION, NOT A DEAL: market talk of a [[MRVL]] acquisition of Lumentum, as read by Marvell's analyst.** (Harlan Sur (J.P. Morgan) @ JPM 'Ask Me Anything about INTC/KLAC/SNDK/NXPI' webinar, 2026-10-30 — Capstone notes (Notion transcript); [source](../_equity_calls/Semis/2026-10-30_JPMorgan_Harlan-Sur-AMA-INTC-KLAC-SNDK-NXPI-AMD-MRVL-post-3Q26.md); Lumentum transcribed "Momentum".) No announcement, filing or press source is on disk; Sur calls it *"the speculation that's out there"*. Sur frames it as *"1 plus 1 is equal to 2… more of a vertical integration strategy"* (vs Marvell's Cavium/Inphi *"1 plus 1 is equal to 4"*), possibly customer-driven: *"a stronger base of US optical transceiver manufacturing"* for cloud customers like Google, with Lumentum *"a supplier on the transceiver side and the OCS side"*. Funding guess *"15-20% cash and the rest is going to be equity"*. ➤ Logged as a watch item only; Sur covers Marvell, not Lumentum, and set no rating/PT.
+- **2026-11-02 - Definitive MRVL/LITE agreement announced; not closed.** Marvell / Matt Murphy and Lumentum / Michael Hurlston ([joint release](https://investor.marvell.com/news-events/press-releases/detail/1040); [slides](_meta/analyst-evidence/2026-11-02-mrvl-lite/transaction-presentation.pdf), pp.20-21): **all stock, fixed 4.500 MRVL shares per LITE share; approximately 67% MRVL / 33% LITE fully diluted ownership; expected closing H1 CY2028**, subject to stockholder/regulatory approval. **$115bn LITE enterprise value, approximately $1,132 per share and 23.9% premium** reference **October 28 unaffected prices**, not a fixed dollar payment. Management targets **>$1bn annual run-rate cost synergies, primarily COGS**, and **Marvell adjusted EPS accretion in year one after closing**; no detailed realization ramp or closing-year EPS bridge. Rationale: integrated electrical/optical co-design, lasers, InP manufacturing, transceivers and OCS for scale-up/scale-in. The October 30 rumor status and Sur's speculative 15-20% cash mix are superseded and preserved in Changelog. No house model/rating/PT changed; corporate M&A is not compute TCV. Separately, Hurlston's [Q1 FY27 release](https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Announces-First-Quarter-of-Fiscal-Year-2027-Financial-Results/default.aspx), November 2, reports **$1,262.6m revenue, $4.57 adjusted EPS, 53.2% adjusted GM and 42.3% adjusted OPM**; Q2 guidance **$1,575-1,625m revenue, $5.90-6.20 adjusted EPS, 45-46% adjusted OPM**. His **second major NPO/CPO win, >$5bn purchase commitments**, was secured during the quarter ended September 26; customer, tenor and funding/deliveries are undisclosed. See **LITE-NPO2-FY27Q1** in [the deal timeline](themes/ai-compute-deals.md).
 - 🔭 **2026-10-19 (notion-ingest · BofA Arya OCP call)** — BofA stance restated on the call: "we have not been as positive on some of the optical names, Lumentum [transcribed "Momentum"] and Coherent [transcribed "Cohrent"], but we have kind of consistently been positive [on Credo]"; OCP: "Everyone and their brother and sister and cousin had a CPO or NPO approach … only the suppliers were talking about CPO, whereas the customers were only comfortable getting to NPO" (~20 suppliers). Published ratings unchanged. — _Vivek Arya (BofA) @ BofA SEMICON West & OCP Takeaways call, 2026-10-19 - Capstone notes (Notion transcript)_ · [2026-10-19_BofA_SEMICON-West-OCP-takeaways-call-Vivek-Arya.md](../_equity_calls/Semis/2026-10-19_BofA_SEMICON-West-OCP-takeaways-call-Vivek-Arya.md)
 
 
@@ -542,7 +542,7 @@ _Source: Capstone official model (`Modelo consolidado incl. LITE .xlsx` — cons
 
 ## Catalysts / what to watch
 
-- **🆕 2026-11-05 — F1Q27 earnings (date per Deutsche Bank · Conti, 2026-10-07; confirm against the LITE IR release).** DB's bogeys: **OCS > $100m for the first time** (path to $1bn in 2027), CPO toward *"mid double-digit millions by end of 2026"*, GM toward 55% vs stabilising near the current ~50% ([note](../relat%C3%B3rios%20bons/20261008_Deutsche_Bank_COHR_US_Hardware-_Optical_preview-_Laser_mix_shifts-_differen.html)).
+- **Resolved early on 2026-11-02 (original calendar date 2026-11-05) - F1Q27 earnings.** Company release: revenue $1,262.6m, adjusted EPS $4.57; Q2 revenue $1,575-1,625m, adjusted EPS $5.90-6.20. Prior DB/Conti event date and product bogeys are archived in Changelog; OCS/CPO product-level bogeys are not adjudicated from an aggregate results release.
 - **🆕 2026-10-15 — OCP San Jose: Oracle Cloud Infrastructure (Kannan Raj) + Lumentum (Michael DeMerchant), "Zero-Touch OCS Fabrics for AI Scale-Out Infrastructure at Hyperscale"** — first non-Google hyperscaler OCS session with LITE logged here; a session listing, not an order (MS · Marshall, "OCP Preview", 2026-10-09).
 - **🆕 2026-10-08 (NYC, 12 PM ET) — MS Lunch "Global Hardware & Optical"** with Andy Meng, Howard Kao, Derrick Yang, Meta Marshall and Erik Woodring; MS desk lists STX, WDC, COHR, LITE, Innolight and Hon Hai (MS TMT sales · Tom Wigg, 2026-09-29; event notice, no content yet).
 - **🆕 2H-CY27 / CY28 — THE IN-BOX NPO LIGHT-SOURCE DECISION (CW at 70-150mW vs VCSEL), AND WHICH WAY THE REMAINING IN-BOX ENGAGEMENTS GO.** JPM: VCSELs *"being explored in that back half of calendar 27 slash calendar 28 time period… potentially being the laser source for NPO [transcribed "MPO"]… it's more of whether that actually lands in terms of a design win"*; one of Lumentum's two in-box engagements is already *"moving to the faceplate"* on heat (Joseph Cardoso (J.P. Morgan, Hardware & Networking) @ JPM 'Takeaways from ECOC, All Stars & Other Investor Events' call, 2026-09-28 — Capstone notes (Notion transcript)). ➤ **Every in-box engagement that migrates to the faceplate lands in LITE's 400mW tier at the ~1.4-1.5x price; every one that stays in-box at 70mW or goes VCSEL is contestable. Score the first non-NVIDIA NPO LTA on its laser power.**
@@ -966,6 +966,15 @@ _Source: LITE earnings calls (dates above); management commentary, paraphrased._
 - **Briefings:** [LITE roll-up](../_briefings/by-ticker/LITE.md) — 41 datapoints / 28 days.
 
 ## Changelog
+
+- **2026-11-02 - Earnings-calendar resolution:** Q1 FY27 results released early alongside the transaction. Prior catalyst entry preserved:
+
+- **🆕 2026-11-05 — F1Q27 earnings (date per Deutsche Bank · Conti, 2026-10-07; confirm against the LITE IR release).** DB's bogeys: **OCS > $100m for the first time** (path to $1bn in 2027), CPO toward *"mid double-digit millions by end of 2026"*, GM toward 55% vs stabilising near the current ~50% ([note](../relat%C3%B3rios%20bons/20261008_Deutsche_Bank_COHR_US_Hardware-_Optical_preview-_Laser_mix_shifts-_differen.html)).
+
+- **2026-11-02 - Primary-source transaction research:** definitive all-stock agreement replaces October 30 speculation; valuation reference date, pending close and conditional synergy/accretion targets explicit. Added Q1 results, Q2 guide and separate second NPO/CPO purchase commitment. No house model/rating/PT change. **Superseded Debate entry, preserved verbatim:**
+
+- 🔭 **2026-10-30 (notion-ingest · JPM Sur AMA) — ⚠️ SPECULATION, NOT A DEAL: market talk of a [[MRVL]] acquisition of Lumentum, as read by Marvell's analyst.** (Harlan Sur (J.P. Morgan) @ JPM 'Ask Me Anything about INTC/KLAC/SNDK/NXPI' webinar, 2026-10-30 — Capstone notes (Notion transcript); [source](../_equity_calls/Semis/2026-10-30_JPMorgan_Harlan-Sur-AMA-INTC-KLAC-SNDK-NXPI-AMD-MRVL-post-3Q26.md); Lumentum transcribed "Momentum".) No announcement, filing or press source is on disk; Sur calls it *"the speculation that's out there"*. Sur frames it as *"1 plus 1 is equal to 2… more of a vertical integration strategy"* (vs Marvell's Cavium/Inphi *"1 plus 1 is equal to 4"*), possibly customer-driven: *"a stronger base of US optical transceiver manufacturing"* for cloud customers like Google, with Lumentum *"a supplier on the transceiver side and the OCS side"*. Funding guess *"15-20% cash and the rest is going to be equity"*. ➤ Logged as a watch item only; Sur covers Marvell, not Lumentum, and set no rating/PT.
+
 
 - 2026-10-30 — ingest (Notion, 2026-10-30_JPMorgan_Harlan-Sur-AMA-INTC-KLAC-SNDK-NXPI-AMD-MRVL-post-3Q26.md): 1 Debate 🔭 bullet — speculated Marvell acquisition of Lumentum as framed by JPM's Sur ('1+1=2' vertical integration, US transceiver/OCS supply assurance for Google, funding guess 15-20% cash). Speculation only; no source for the rumour on disk. Nothing superseded.
 - 2026-10-19 — ingest (Notion, 2026-10-19_BofA_SEMICON-West-OCP-takeaways-call-Vivek-Arya.md): Debate — BofA 'not as positive' on LITE/COHR vs Credo; CPO supplier-push vs customer NPO comfort at OCP. Orchestrator (D) pass.

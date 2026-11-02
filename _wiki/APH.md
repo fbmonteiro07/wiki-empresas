@@ -9,13 +9,13 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\APH` (filings + transc
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $35.3bn | $44.7bn |
-| Gross profit | $13.7bn | $17.7bn |
-| Gross margin | 38.9% | 39.5% |
-| EBITDA | $11.4bn | $14.8bn |
-| EPS | $2.61 | $3.57 |
-| Capex | $1.4bn | $1.6bn |
-| OCF (≈EBITDA) | $11.4bn | $14.8bn |
+| Revenue | $35.4bn | $45.3bn |
+| Gross profit | $13.8bn | $17.9bn |
+| Gross margin | 38.9% | 39.6% |
+| EBITDA | $11.4bn | $15.0bn |
+| EPS | $2.62 | $3.59 |
+| Capex | $1.4bn | $1.7bn |
+| OCF (≈EBITDA) | $11.4bn | $15.0bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

@@ -1,0 +1,115 @@
+{
+  "price_oct30": {
+    "mrvl": 196.4,
+    "lite": 840.7,
+    "exchange_value": 883.8000000000001,
+    "premium_pct": 5.126680147496132,
+    "mrvl_parity": 186.82222222222222,
+    "note": "Historical marks; not current quotes or a live merger-arbitrage spread"
+  },
+  "ownership": {
+    "new_shares_pct_existing_announced": 49.253731343283576,
+    "note": "Issuance differs from EPS dilution"
+  },
+  "calibration": {
+    "mrvl_shares_m": 927.0964673913044,
+    "lite_shares_m": 104.54930555555555,
+    "new_mrvl_shares_proxy_m": 470.47187499999995,
+    "combined_shares_proxy_m": 1397.5683423913042,
+    "tag": "PARTIAL: NI/EPS quotients of consensus forecasts; not exact deal share counts"
+  },
+  "cy2027_preclose_diagnostic": {
+    "mrvl_eps": 7.36,
+    "lite_eps": 28.8,
+    "base_pf_eps": 7.036829399822266,
+    "base_dilution_pct": -4.390904893719217,
+    "lite_eps_breakeven_no_synergies": 33.120000000000005,
+    "lite_eps_uplift_needed_pct": 15.000000000000014,
+    "aftertax_gap_m": 451.65300000000036,
+    "pretax_savings_breakeven_m": 540.9017964071861,
+    "scenarios": [
+      {
+        "pretax_savings_m": 0,
+        "aftertax_savings_m": 0.0,
+        "pf_eps": 7.036829399822266,
+        "accretion_pct": -4.390904893719217
+      },
+      {
+        "pretax_savings_m": 500,
+        "aftertax_savings_m": 417.5,
+        "pf_eps": 7.335562554642902,
+        "accretion_pct": -0.3320305075692698
+      },
+      {
+        "pretax_savings_m": 1000,
+        "aftertax_savings_m": 835.0,
+        "pf_eps": 7.634295709463537,
+        "accretion_pct": 3.7268438785806657
+      }
+    ],
+    "tax_sensitivity": [
+      {
+        "tax": 0.1,
+        "pretax_breakeven_m": 501.83666666666704
+      },
+      {
+        "tax": 0.165,
+        "pretax_breakeven_m": 540.9017964071861
+      },
+      {
+        "tax": 0.25,
+        "pretax_breakeven_m": 602.2040000000005
+      }
+    ],
+    "eps_per_100m_pretax_savings": 0.059746630964127044,
+    "announced_ownership_shortcut_eps": 7.043200000000001,
+    "note": "Common CY2027 BEFORE closing. Not a forecast of year one after H1 CY2028 close. Excludes integration costs, purchase accounting, intercompany elimination, revised earnings, revenue synergies; all-stock financing."
+  },
+  "margin_diagnostic": {
+    "annualized_rev_m": 17700,
+    "calculated_gm": 0.5655932203389831,
+    "calculated_opm": 0.38440677966101694,
+    "company_pf_gm": 0.57,
+    "company_pf_opm": 0.39,
+    "cogs_savings_to_restore_mrvl_gm_m": 254.99999999999966,
+    "one_bn_savings_percent_sales": 5.649717514124294,
+    "note": "Rounded slide figures; no assumption all synergies go to COGS"
+  },
+  "new_lite_guide_vs_oct30_consensus": {
+    "eps_midpoint": 6.050000000000001,
+    "old_eps": 5.071,
+    "eps_upside_pct": 19.305856832971813,
+    "rev_midpoint": 1600.0,
+    "old_rev": 1484.851851851852,
+    "rev_upside_pct": 7.754857698735362,
+    "note": "December 2026 quarter only. Do not extrapolate quarterly surprise to annual EPS"
+  },
+  "guardrails": {
+    "share_stock": {
+      "status": "PARTIAL",
+      "lite_proxy_vs_company_actual_pct": 3.5141639163916327,
+      "note": "Recent reported shares provide a scale check only: timing and construction differ from CY27 NI/EPS forecast proxies; exact deal issuance is not validated"
+    },
+    "ownership": {
+      "status": "PARTIAL",
+      "lite_ownership_proxy": 0.33663604185180723,
+      "announced": 0.33,
+      "difference_pp": 0.6636041851807217,
+      "note": "Approximate deal fully diluted ownership vs forecast weighted-average shares"
+    },
+    "basis": {
+      "status": "PASS",
+      "note": "Annual NI / share stock = annual EPS; annual cost-savings flows. EV not confused with basic equity value"
+    },
+    "timing": {
+      "status": "PARTIAL",
+      "note": "CY27 diagnostic cannot verify year-one-post-close guidance. No 2028/29 closing-year bridge or synergy ramp"
+    },
+    "rounding": {
+      "status": "PARTIAL",
+      "gm_difference_pp": -0.44067796610168797,
+      "opm_difference_pp": -0.5593220338983074,
+      "note": "Rounded slide inputs; quote company PF57/39 separately"
+    }
+  }
+}

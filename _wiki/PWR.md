@@ -7,7 +7,7 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\PWR` (filings + transc
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $38.4bn | $48.7bn |
+| Revenue | $38.5bn | $48.9bn |
 | Gross profit | $6.0bn | $7.8bn |
 | Gross margin | 15.6% | 16.0% |
 | EBITDA | $3.9bn | $5.2bn |

@@ -1,0 +1,113 @@
+{
+  "asof": "2026-11-02",
+  "consensus_asof": "2026-10-30",
+  "sources": {
+    "terms": "Marvell/Lumentum joint release 2026-11-02, marvell-announcement.html",
+    "consensus": "BBG estimates.json snapshot 2026-10-30, CY2027 and next fiscal quarter",
+    "actual": "Lumentum Q1 FY27 release 2026-11-02, lumentum-q1fy27.html",
+    "slides": "Transaction presentation 2026-11-02, pages 20-21"
+  },
+  "terms": {
+    "exchange_ratio": 4.5,
+    "mrvl_ownership": 0.67,
+    "lite_ownership": 0.33,
+    "announced_lite_ev_m": 115000,
+    "announced_lite_per_share": 1132,
+    "premium": 0.239,
+    "reference_date": "2026-10-28",
+    "close": "H1 CY2028",
+    "tag": "HARD announced terms, not closed"
+  },
+  "consensus": {
+    "MRVL": {
+      "px": 196.4,
+      "label": "CY2027",
+      "nq": 4,
+      "n_actual": 0,
+      "rev": 19729.46,
+      "ebit": 7935.27,
+      "ebitda": 8299.69,
+      "ni": 6823.43,
+      "eps": 7.36,
+      "capex": 700.56,
+      "rev_hi": 22484.0,
+      "ebit_hi": 9226.0,
+      "ebitda_hi": 9249.0,
+      "eps_hi": 8.77,
+      "capex_hi": 1086.0,
+      "gm": 57.9
+    },
+    "LITE": {
+      "px": 840.7,
+      "label": "CY2027",
+      "nq": 4,
+      "n_actual": 0,
+      "rev": 8153.03,
+      "ebit": 3548.9,
+      "ebitda": 3880.23,
+      "ni": 3011.02,
+      "eps": 28.8,
+      "capex": 678.74,
+      "rev_hi": 10691.0,
+      "ebit_hi": 5103.0,
+      "ebitda_hi": 5414.0,
+      "eps_hi": 41.52,
+      "capex_hi": 1808.0,
+      "gm": 52.8
+    }
+  },
+  "consensus_tag": "HARD quoted source vintage; forecasts, not realized results",
+  "lite_next_q": {
+    "label": "Q4-26E",
+    "rev": 1484.851851851852,
+    "rev_hi": 1610.0,
+    "ebit": 608.7777777777778,
+    "ebit_hi": 661.0,
+    "ebitda": 666.6428571428572,
+    "ebitda_hi": 743.0,
+    "ni": 517.615,
+    "eps": 5.071,
+    "eps_hi": 5.7,
+    "gm": 51.56841064029747,
+    "capex": 133.38888888888889,
+    "capex_hi": 250.0
+  },
+  "lite_actual": {
+    "rev": 1262.6,
+    "eps": 4.57,
+    "ni": 461.1,
+    "shares": 101.0,
+    "tax": 0.165,
+    "q2_rev_range": [
+      1575,
+      1625
+    ],
+    "q2_eps_range": [
+      5.9,
+      6.2
+    ],
+    "tag": "HARD company release, Q1 actual and Q2 guidance"
+  },
+  "synergies": {
+    "announced_annual_run_rate_lower_bound": 1000,
+    "tag": "HARD management target, primarily COGS; timing unspecified"
+  },
+  "scenario_savings": [
+    0,
+    500,
+    1000
+  ],
+  "scenario_tag": "ESTIMATE conditional annual realized savings, not a year-one ramp forecast",
+  "synergy_tax_tag": "PARTIAL: use sourced LITE FY27 non-GAAP 16.5% tax as proxy; not combined-company guidance",
+  "deck": {
+    "mrev": 12600,
+    "lrev": 5100,
+    "mgm": 0.58,
+    "lgm": 0.53,
+    "mopm": 0.37,
+    "lopm": 0.42,
+    "pf_gm": 0.57,
+    "pf_opm": 0.39,
+    "tag": "HARD rounded annualized-quarter slide inputs, NOT calendar-year forecasts"
+  }
+}

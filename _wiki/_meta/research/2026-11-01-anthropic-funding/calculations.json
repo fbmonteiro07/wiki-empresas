@@ -1,0 +1,108 @@
+{
+  "static_liquidity": {
+    "June": 131.651,
+    "plus_raise_before_H2_cash_changes": 231.651,
+    "less_reserve": 226.651,
+    "H2_cash_bridge": "UNKNOWN; static comparison only, not a December actual"
+  },
+  "stock_coverage": {
+    "June_subtotal": 587.0,
+    "including_commenced_leases": 589.124,
+    "raise_pct": 17.035775127768314,
+    "cash_plus_raise_pct": 39.46354344122658,
+    "less_reserve_pct": 38.61175468483816
+  },
+  "funda_rebased": {
+    "delta": 40,
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "revenue": [
+      52.8,
+      118.3,
+      197.9,
+      304.4,
+      438.4
+    ],
+    "cash": [
+      232.2,
+      209.5,
+      190.1,
+      225.1,
+      328.3
+    ],
+    "fcf_after_lease_principal": [
+      4.0,
+      -22.7,
+      -19.4,
+      35.0,
+      103.1
+    ],
+    "trough_year_end": 190.1,
+    "trough_year": 2028,
+    "trough_headroom": 185.1,
+    "peak_2027_28_burn": 42.099999999999994,
+    "raise_over_burn": 2.3752969121140146,
+    "downside_end2030_approx": 56,
+    "stall_end2030_approx": -136,
+    "stall_funding_to_reserve": 141
+  },
+  "sensitivities": {
+    "extra_burn_10": [
+      232.2,
+      199.5,
+      170.1,
+      195.1,
+      288.3
+    ],
+    "extra_burn_25": [
+      232.2,
+      184.5,
+      140.1,
+      150.1,
+      228.3
+    ],
+    "downside_end2030_extra10": 16,
+    "downside_end2030_extra15": -4,
+    "downside_annual_extra_burn_to_reserve": 12.75
+  },
+  "guardrails": {
+    "Q2_noncompute_ratio": 0.3255733448723496,
+    "Q1_noncompute_ratio": 0.41450010568590145,
+    "independent_period_drift_pct": 27.31389476875574,
+    "constant_stability": "RED: Q1 differs >25%; forward ratio is not externally validated",
+    "cash_rollforward_rounding_residuals": [
+      0.0,
+      -0.0,
+      0.0,
+      0.1
+    ],
+    "maturities": "AMBER: updated contractual annual payment table blank",
+    "growth": "AMBER: funda-hardcoded ARR, not guide or independently validated forecast",
+    "cash_basis": "GREEN: finance-lease principal included; noncash lease additions not cash",
+    "liquidity": "GREEN: restricted cash and conditional facilities excluded",
+    "customer_identity": "AMBER: filings do not identify Customer B"
+  },
+  "spacex": {
+    "annualized": 37.2,
+    "quarter": 9.3,
+    "three_month_notice_cost_approx": 9.3,
+    "raise_years_at_full_rate": 2.6881720430107525,
+    "customer_b_q3": 5.028375,
+    "full_delivery_quarter_vs_Q3_pct": 63.80789022298457,
+    "2027_gross_savings_if_stop_Jul1_or_Apr1": [
+      18.6,
+      27.900000000000002
+    ],
+    "one_full_year_compute_spend_savings_replacement0_50_100pct_before_lost_contribution_and_transition_cost": [
+      37.2,
+      18.6,
+      0.0
+    ],
+    "limitations": "Exit dates are scenarios, not legal earliest dates. Notice cost is service payment, not penalty. Exact tranches and expiry dates unknown. No remaining-contract balance fabricated; no 2030 contractual savings. Savings exclude lost customer contribution and transition costs."
+  }
+}

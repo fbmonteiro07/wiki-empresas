@@ -5,17 +5,17 @@
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\SAMSUNG\transcripts` (public English earnings transcripts) · Samsung IR · `_briefings` roll-up · BBG (KRW, auto-injected). Master index: [../00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-10-30 · KRW
+### 📊 Consensus snapshot — BBG · asof 2026-11-02 · KRW
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | ₩714311.2bn | ₩1007525.0bn |
-| Gross profit | ₩492874.7bn | ₩758666.3bn |
+| Revenue | ₩712207.3bn | ₩1007525.0bn |
+| Gross profit | ₩491423.0bn | ₩758666.3bn |
 | Gross margin | 69.0% | 75.3% |
-| EBITDA | ₩428059.4bn | ₩658118.3bn |
-| EPS | ₩46195.97 | ₩76128.66 |
-| Capex | ₩84386.8bn | ₩103827.7bn |
-| OCF (≈EBITDA) | ₩428059.4bn | ₩658118.3bn |
+| EBITDA | ₩428129.4bn | ₩658118.3bn |
+| EPS | ₩46227.61 | ₩76128.66 |
+| Capex | ₩79217.4bn | ₩98216.6bn |
+| OCF (≈EBITDA) | ₩428129.4bn | ₩658118.3bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
@@ -477,6 +477,8 @@ On product, **Samsung HBM4 yield is reported to be nearing 80%** as the producti
 - **P4 second-floor cleanroom named as a source of incremental industry DRAM bits (Morgan Stanley webcast · Sean, 2026-07-28).** Asked whether the mega-capex announcements matter, Sean's answer pivoted to what actually shows up in bits: TrendForce now has **industry DRAM bit growth tracking ~31% this year (up from a 25% type of growth) and ~24% next year**, and he attributes part of that to **"Samsung P4 second floor clean room"** plus [SK Hynix](SKHYNIX.md) running **HBM3E rather than HBM4** (less total HBM, therefore more commodity DRAM produced). Read against this page's standing supply framing this is a **nuance, not a reversal** — the StoneX/TrendForce cleanroom-constraint thesis (Samsung ~740K wpm exiting 2026, only ~45K added in 2027, P5L phase-1 not ready until mid-2028) is about *2027-28*; the P4 second-floor cleanroom is *this year's and next year's* incremental bits, and it is one of the concrete reasons the industry bit number moved up 6pts. On the NAND side the same dynamic runs through YMTC (third line, **50,000 wafers** next year), taking NAND bit growth from high-teens to **20-25% next year**. (Morgan Stanley webcast "2Q26 memory, Intel implications and ARM preview" · Sean, 2026-07-28) [Source](../relat%C3%B3rios%20bons/2026_07_28_2q26_ms_memory_intel_implications_and_arm_preview.html)
 
 ## Debate / thesis
+
+**2026-10-31 — Helix primary-source backfill:** The company confirms a $1bn Samsung-group Helix commitment, including $500m from Samsung Electronics, on 2026-09-29. This corroborates the existing September press relay; it does not establish funded amounts, orders or delivered capacity. [Company source, 2026-09-29](../KKR/research/2026-09-29_Samsung_Helix.md) · [KKR and financing history](themes/ai-compute-deals.md), stable ID **KKR-HELIX-FIN-20260611**.
 - 🆕🔭 **2026-10-23 — "in-house base die" discounted by an ex-Micron CSO (Michael Sadler (ex-Micron CSO, independent consultant) hosted by Simon Coles (Barclays) @ Barclays Semi Expert Series, 2026-10-23 — Capstone notes (Notion transcript); ⚠️ expert voice, retired 2018, not company view; [source](../_equity_calls/Semis/2026-10-23_Barclays_Memory-outlook-strategic-priorities-ex-Micron-CSO-Michael-Sadler-Simon-Coles.md)).** Asked (generically) whether the one maker that can fab its own base die has a big HBM advantage over those using a Taiwan foundry: *"the control piece is what's important… sacrificing the margin on the base die… because you have to engage with… TSMC… I really think it's a minimal factor. So having the logic processing capability is not a game changer"* — the base die's own profit is *"de minimis"*; the economics are in the DRAM stacks. Cuts against the bull leg that treats captive logic/foundry as an HBM differentiator. The host's premise (NVIDIA's NVHBM, possibly with Samsung making it at TSMC) is Coles' framing, not Sadler's. He also flags the Korean makers' mainland-China fab exposure as an underestimated risk.
 - **Bull:** Three engines firing from 2H26 — memory + foundry + robotics (Jefferies/Jeff Kim, 2026-05-11: Q2-26 OP **KRW 100tn** vs his KRW 84tn; "cheapest it will be" at 4.7x '27 P/E). The DRAM shortage has "no way out in coming years"; foundry optionality is incremental upside as hyperscalers diversify from TSMC (@techfund1, briefing 2026-06-18). Memory complex tape-positive: Bernstein has long held Samsung as its **top pick in memory** on improving HBM position + a never-stretched valuation (never sustainably above 1.5x P/B), arguing the "lost-leadership" perception drove an abnormal P/B discount vs SK Hynix/Micron since mid-2023 (Bernstein Semis deck, May-2025). MS likewise carries Samsung **OW / Top Pick** across both NAND (AI-NAND upcycle) and AI semis (MS AI NAND overview; MS Asia AI Factories). Korea tape repeatedly rips on the name (Samsung +8.9% 2026-05-21; +4.8% overnight 2026-06-17 on Apple memory pass-through).
   - **SemiAnalysis turns bullish specifically on Samsung's commodity-DRAM exposure (2026-02-06):** the mechanism is the inverse of the usual HBM-purity framing — Samsung has the **greatest exposure to commodity DRAM among the three** memory makers, and SemiAnalysis "turned bullish" on Samsung in its November note precisely because **commodity DRAM margins are now on par with, or exceeding, HBM margins** since late 4Q25, "particularly the case for Samsung, which has lower margin in producing HBM" than SK hynix/Micron. Reinforcing detail: Samsung's **1c DRAM node delivers ~70% higher bit output per wafer** than 1a, and it **priced HBM3E below both SK hynix and Micron in 2025**, leaving room for a **10-15% HBM3E price increase in 2026** as 12-hi shipments/performance improve. On HBM4, Samsung's **1c front-end is competitive on power efficiency** (sometimes beating SK hynix), even though SK hynix keeps the signal-integrity/jitter edge (SemiAnalysis "Memory Mania: How a Once-in-Four-Decades Shortage Is Fueling a Memory Boom", 2026-02-06).
@@ -1061,6 +1063,8 @@ _Source: SAMSUNG earnings calls (dates above); management commentary, paraphrase
   - **Jefferies · Conor O'Mara (Asia TMT specialist sales) — 2026-09-15** ⚠️⚠️ **SALES-DESK COMMENTARY, NOT RESEARCH.** Source of the **preferred +2.0% vs ordinary −0.9%** session move and the asset-manager campaign to buy back and cancel the preferred (discount below 25%, smallest since last December).
 
 ## Changelog
+
+- **2026-10-31 — Helix historical backfill:** added the primary-source cross-reference and stable financing ID; existing broker/press history retained, no rating/PT or capacity forecast changed.
 
 - 2026-10-27 — thesis drift (GS preferred target): ₩360,000 (GS, last seen on this page 09-18) → **₩380,000** (GS · Giuni Lee / Daiki Takayama, 2026-10-27; the TP-history table dates the move to 08-Oct-26); GS target preferred discount 27% → 24%. GS common ₩500,000 unchanged (10-12 mark), also dated 08-Oct-26 in the same table.
 - 2026-10-27 — run-inbox: GS/TrendForce memory expert session (10-27) and BofA CXMT initiation (10-28) → 2 Full-log rows + 1 Sinal update. Bernstein HBF deep dive (Newman et al., 10-27) checked: Outperform, TP KRW 440,000 and EPS 2026E / 27E KRW 45,072 / 74,602 unchanged vs the 09-29 marks; no Samsung-specific HBF point beyond Z-NAND as an alternative low-latency NAND, so no row.

@@ -1,0 +1,165 @@
+{
+  "asof": "2026-11-01",
+  "source_filing": "Anthropic S-1 filed 2026-10-26; historical balances June 30",
+  "source_model": "FUNDA model 2026-10-26; public post 2026-10-27; archived PDF pp.14-15,25-26",
+  "cash": {
+    "value": 112.389,
+    "tag": "HARD",
+    "source": "S-1 F-6"
+  },
+  "short_term_investments": {
+    "value": 19.262,
+    "tag": "HARD",
+    "source": "S-1 F-6"
+  },
+  "restricted_cash_excluded": {
+    "value": 2.529,
+    "tag": "HARD",
+    "source": "S-1 F-6"
+  },
+  "raise": {
+    "value": 100,
+    "tag": "ESTIMATE",
+    "source": "User assumption: additional NET proceeds by Dec-2026"
+  },
+  "reserve": {
+    "value": 5,
+    "tag": "ESTIMATE",
+    "source": "Conservative cash reserve anchored to $5bn liquidity covenant; not a legal covenant calculation"
+  },
+  "purchase_commitments": {
+    "value": 265.6,
+    "tag": "HARD",
+    "source": "S-1 F-59; June stock"
+  },
+  "uncommenced_leases": {
+    "value": 321.4,
+    "tag": "HARD",
+    "source": "S-1 F-37; undiscounted, some conditional"
+  },
+  "commenced_leases": {
+    "value": 2.124,
+    "tag": "HARD",
+    "source": "S-1 F-37: 1.601 operating + 0.523 finance"
+  },
+  "q2_revenue": {
+    "value": 11.555,
+    "tag": "HARD",
+    "source": "S-1 p.158"
+  },
+  "q2_opex": {
+    "value": 10.581,
+    "tag": "HARD",
+    "source": "S-1 p.158"
+  },
+  "q2_compute": {
+    "value": 5.558,
+    "tag": "HARD",
+    "source": "S-1 p.158"
+  },
+  "q2_sbc": {
+    "value": 1.261,
+    "tag": "HARD",
+    "source": "S-1 pp.160-161"
+  },
+  "q1_revenue": {
+    "value": 4.731,
+    "tag": "HARD",
+    "source": "S-1 p.158"
+  },
+  "q1_opex": {
+    "value": 6.398,
+    "tag": "HARD",
+    "source": "S-1 p.158"
+  },
+  "q1_compute": {
+    "value": 3.387,
+    "tag": "HARD",
+    "source": "S-1 p.158"
+  },
+  "q1_sbc": {
+    "value": 0.924,
+    "tag": "HARD",
+    "source": "S-1 pp.160-161"
+  },
+  "q1_noncash_charity": {
+    "value": 0.126,
+    "tag": "HARD",
+    "source": "S-1 p.161"
+  },
+  "funda_ipo": {
+    "value": 60,
+    "tag": "ESTIMATE",
+    "source": "FUNDA pp.12,14-15; funda assumption"
+  },
+  "years": [
+    2026,
+    2027,
+    2028,
+    2029,
+    2030
+  ],
+  "funda_revenue": {
+    "value": [
+      52.8,
+      118.3,
+      197.9,
+      304.4,
+      438.4
+    ],
+    "tag": "ESTIMATE",
+    "source": "FUNDA p.14; annual revenue, not exit ARR"
+  },
+  "funda_fcf": {
+    "value": [
+      4.0,
+      -22.7,
+      -19.4,
+      35.0,
+      103.1
+    ],
+    "tag": "ESTIMATE",
+    "source": "FUNDA p.14, FCF AFTER finance-lease principal"
+  },
+  "funda_cash": {
+    "value": [
+      192.2,
+      169.5,
+      150.1,
+      185.1,
+      288.3
+    ],
+    "tag": "ESTIMATE",
+    "source": "FUNDA p.14; includes IPO60; excludes revolver and notes; cash + STI"
+  },
+  "downside_cash_2030": {
+    "value": 16,
+    "tag": "PARTIAL",
+    "source": "FUNDA p.15 chart, approximate forecast endpoint; Dec27 run-rate ~109, then +30/+25/+20%"
+  },
+  "stall_cash_2030": {
+    "value": -176,
+    "tag": "PARTIAL",
+    "source": "FUNDA p.15 chart, approximate forecast endpoint; run-rate ~83 flat, not zero revenue"
+  },
+  "spacex_month": {
+    "value": 3.1,
+    "tag": "HARD",
+    "source": "S-1 p.172, approximate fees at full capacity expected Dec26"
+  },
+  "spacex_ceiling": {
+    "value": 120.5,
+    "tag": "HARD",
+    "source": "S-1 p.172, UP TO, terms into 2029; cancellable"
+  },
+  "spcx_q3": {
+    "value": 14.575,
+    "tag": "HARD",
+    "source": "SpaceX 10-Q filed 2026-10-22"
+  },
+  "spcx_b_share": {
+    "value": 0.345,
+    "tag": "HARD",
+    "source": "SpaceX 10-Q concentration table; B unnamed"
+  }
+}

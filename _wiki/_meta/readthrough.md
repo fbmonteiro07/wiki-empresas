@@ -1,6 +1,6 @@
 # Read-through map — supply chain & substitutes
 
-_Generated 2026-10-30 · curated high-confidence edges from `_data/graph.json` (196 supply links, 39 compete links). A datapoint on a **supplier** reads through to its **customers** (and vice-versa). Edit the JSON to extend; rebuild: `py _wiki/_tools/build_readthrough.py`._
+_Generated 2026-11-02 · curated high-confidence edges from `_data/graph.json` (199 supply links, 56 compete links). A datapoint on a **supplier** reads through to its **customers** (and vice-versa). Edit the JSON to extend; rebuild: `py _wiki/_tools/build_readthrough.py`._
 
 | Ticker | ⬆ Suppliers (upstream) | ⬇ Customers (downstream) | ⚔ Competes |
 |---|---|---|---|
@@ -19,15 +19,21 @@ _Generated 2026-10-30 · curated high-confidence edges from `_data/graph.json` (
 | **ANTHROPIC** | AMZN (AWS Trainium compute), GOOG (TPU compute), NSCALE (neocloud compute ($44.6bn, Monarch 460 MW)), NVDA (GPUs) | — | OPENAI (frontier models) |
 | **AOSL** | — | NVDA (power MOSFET (800V)) | — |
 | **APH** | — | NVDA (interconnect/busbar) | — |
+| **APO** | — | — | BX (Alternative asset management; company calls Oct 22 / Aug 4 2026), KKR (Asset management and insurance; company calls Jul 30 / Aug 4 2026), OWL (Private credit and AI chip financing; Q3 company call Oct 29 2026) |
 | **ARM** | CDNS (EDA), SNPS (EDA) | AAPL (IP), AMD (IP), AVGO (IP), MEDIATEK (IP), NVDA (CPU IP), QCOM (CPU IP) | — |
 | **ASML** | — | INTC (litho), MU (litho), SAMSUNG (litho), SKHYNIX (litho), SMIC (DUV), TSM (EUV/DUV litho) | — |
 | **AVGO** | ARM (IP), CDNS (EDA), MU (HBM), SKHYNIX (HBM), SNPS (EDA/IP), TSM (foundry) | AMZN (networking), GOOG (custom ASIC (TPU)), META (custom ASIC), MSFT (custom ASIC), ORCL (networking) | MRVL (custom ASIC), NVDA (merchant vs custom ASIC) |
 | **BE** | — | GOOG (on-site fuel cells), NBIS (fuel cells) | — |
 | **BESI** | — | INTC (advanced packaging), TSM (hybrid bonding) | — |
+| **BLK** | MSCI (index licences for iShares (19.8% of MSCI Index revenue, 9M26, per MSCI)) | — | BX (Private markets: infrastructure and private-credit fundraising; Q3 company calls Oct 14/22 2026) |
+| **BX** | — | — | APO (Alternative asset management; company calls Oct 22 / Aug 4 2026), BLK (Private markets: infrastructure and private-credit fundraising; Q3 company calls Oct 14/22 2026), KKR (Alternative asset management; company calls Oct 22 / Jul 30 2026), OWL (Alternative managers: non-traded BDCs, net lease, data centers; Q3 company calls Oct 29/22 2026) |
+| **CBOE** | SPGI (SPX/VIX index licence (S&P DJI, extended to 2051)) | — | CME (Equity-index derivatives, retail and event contracts; Q3 company calls Oct 21/30 2026), NDAQ (U.S. options and cash equities; Q3 company calls Oct 30/22 2026) |
 | **CDNS** | — | AMD (EDA), ARM (EDA), AVGO (EDA), INTC (EDA), NVDA (EDA), QCOM (EDA), TSM (EDA) | SNPS (EDA) |
 | **CEG** | — | AMZN (nuclear PPA), MSFT (nuclear PPA) | VST (merchant power) |
 | **CIEN** | — | AMZN (DCI/optical), GOOG (DCI/optical), MSFT (DCI/optical) | — |
+| **CME** | NDAQ (Nasdaq-100 futures licence) | — | CBOE (Equity-index derivatives, retail and event contracts; Q3 company calls Oct 21/30 2026), ICE (Futures exchanges and clearing (energy, rates); Q3 company calls Oct 21/29 2026) |
 | **COHR** | AIXA (MOCVD tools) | AMZN (optical), ANET (optical), GOOG (optical), MSFT (optical), NVDA (optical/InP) | LITE (optical/InP) |
+| **COIN** | — | — | HOOD (Retail crypto distribution; company calls Oct 27/29 2026) |
 | **CRDO** | TSM (foundry) | AMZN (AEC/connectivity), MSFT (connectivity), NVDA (AEC/SerDes) | — |
 | **CRWD** | — | — | OKTA (agentic identity) |
 | **CRWV** | AMD (MI GPUs), NVDA (GPUs) | MSFT (neocloud compute), OPENAI (neocloud compute) | NSCALE (GPU neocloud) |
@@ -36,6 +42,7 @@ _Generated 2026-10-30 · curated high-confidence edges from `_data/graph.json` (
 | **DELL** | NVDA (GPUs) | AMZN (AI servers), MSFT (AI servers), NSCALE (AI servers + DFS lease financing ($2.54bn initial-term rent)) | HPE (AI servers), SMCI (AI servers) |
 | **DISCO** | — | SAMSUNG (dicing/grinding), TSM (dicing/grinding) | — |
 | **DT** | AMZN (cloud hosting (consumption runs on hyperscaler infra)), GOOG (cloud hosting (consumption runs on hyperscaler infra)), MSFT (cloud hosting (consumption runs on hyperscaler infra)) | — | CSCO (observability vs Splunk), DDOG (observability), ESTC (observability/logs) |
+| **EFX** | — | — | TRU (US credit bureaus; Q3 company calls Oct 20/27 2026) |
 | **ESTC** | AMZN (cloud hosting (consumption runs on hyperscaler infra)), GOOG (cloud hosting (consumption runs on hyperscaler infra)), MSFT (cloud hosting (consumption runs on hyperscaler infra)) | — | CSCO (SIEM/logs vs Splunk), DDOG (observability/logs), DT (observability/logs) |
 | **ETN** | — | AMZN (electrical/switchgear), MSFT (electrical) | — |
 | **FLEX** | — | NVDA (power/EMS + cooling) | — |
@@ -43,21 +50,30 @@ _Generated 2026-10-30 · curated high-confidence edges from `_data/graph.json` (
 | **GEV** | — | AMZN (grid/power equip) | — |
 | **GLW** | — | AMZN (optical fiber), META (optical fiber (LTA)), NVDA (optical fiber) | — |
 | **GOOG** | AVGO (custom ASIC (TPU)), BE (on-site fuel cells), CIEN (DCI/optical), COHR (optical), MRVL (optical DSP), NVDA (GPUs), SNDK (NAND/SSD), STX (nearline HDD), WDC (nearline HDD) | ANTHROPIC (TPU compute), DDOG (cloud hosting (consumption runs on hyperscaler infra)), DT (cloud hosting (consumption runs on hyperscaler infra)), ESTC (cloud hosting (consumption runs on hyperscaler infra)), MDB (cloud hosting (consumption runs on hyperscaler infra)), SNOW (cloud hosting (consumption runs on hyperscaler infra)) | SNOW (warehouse vs BigQuery) |
+| **GS** | — | — | JPM (Investment banking and markets; company calls Oct 13 2026) |
+| **HOOD** | — | — | COIN (Retail crypto distribution; company calls Oct 27/29 2026) |
 | **HPE** | NVDA (GPUs) | AMZN (AI servers) | DELL (AI servers) |
+| **ICE** | — | — | CME (Futures exchanges and clearing (energy, rates); Q3 company calls Oct 21/29 2026), NDAQ (U.S. listings, cash equities and market data; Q3 company calls Oct 29/22 2026) |
 | **IFX** | — | NVDA (power semis (800V)) | — |
 | **INTC** | AMAT (WFE), ASML (litho), BESI (advanced packaging), CDNS (EDA), KLAC (process control), LRCX (WFE), SNPS (EDA/IP) | — | AMD (server CPU), TSM (foundry) |
+| **JPM** | — | — | GS (Investment banking and markets; company calls Oct 13 2026) |
 | **KIOXIA** | — | AMZN (NAND), MSFT (NAND), NVDA (NAND (Super IO)) | SNDK (NAND) |
+| **KKR** | — | — | APO (Asset management and insurance; company calls Jul 30 / Aug 4 2026), BX (Alternative asset management; company calls Oct 22 / Jul 30 2026) |
 | **KLAC** | — | INTC (process control), MU (process control), SAMSUNG (process control), SMIC (process control), TSM (process control) | — |
 | **LITE** | AIXA (MOCVD tools) | AMZN (optical), ANET (optical), MSFT (optical), NVDA (optical) | COHR (optical/InP) |
 | **LRCX** | — | INTC (WFE), MU (NAND/HBM WFE), SAMSUNG (etch/dep), SKHYNIX (WFE), TSM (etch/dep) | AMAT (WFE overlap) |
+| **MA** | — | — | V (Payment networks; FY/Q3 company calls Oct 27/29 2026) |
+| **MCO** | — | — | SPGI (Ratings and financial information; company calls Oct 27/21 2026) |
 | **MDB** | AMZN (cloud hosting (consumption runs on hyperscaler infra)), GOOG (cloud hosting (consumption runs on hyperscaler infra)), MSFT (cloud hosting (consumption runs on hyperscaler infra)) | — | AMZN (Atlas vs DynamoDB), MSFT (Atlas vs Cosmos DB), ORCL (operational database) |
 | **MEDIATEK** | ARM (IP), TSM (foundry) | — | — |
 | **META** | AMD (MI GPUs), AVGO (custom ASIC), GLW (optical fiber (LTA)), NVDA (GPUs), SNDK (NAND/SSD), STX (nearline HDD), WDC (nearline HDD) | — | — |
 | **MP** | — | NVDA (rare-earth magnets) | — |
 | **MRVL** | TSM (foundry) | AMZN (custom ASIC (Trainium)), GOOG (optical DSP), MSFT (custom ASIC (Maia)) | AVGO (custom ASIC) |
+| **MSCI** | — | BLK (index licences for iShares (19.8% of MSCI Index revenue, 9M26, per MSCI)) | NDAQ (Index licensing; Q3 company calls Oct 22/20 2026), SPGI (Index and financial-data providers; Q3 company calls Oct 20/27 2026) |
 | **MSFT** | AAOI (optical transceivers), ALAB (scale-up fabric), AMD (MI GPUs), AVGO (custom ASIC), CEG (nuclear PPA), CIEN (DCI/optical), COHR (optical), CRDO (connectivity), CRWV (neocloud compute), DELL (AI servers), ETN (electrical), KIOXIA (NAND), LITE (optical), MRVL (custom ASIC (Maia)), NSCALE (neocloud compute ($43.8bn SOWs to 2033)), NVDA (GPUs), SMCI (rack integration), SNDK (NAND/SSD), STX (nearline HDD), WDC (nearline HDD) | DDOG (cloud hosting (consumption runs on hyperscaler infra)), DT (cloud hosting (consumption runs on hyperscaler infra)), ESTC (cloud hosting (consumption runs on hyperscaler infra)), MDB (cloud hosting (consumption runs on hyperscaler infra)), OPENAI (Azure compute), SNOW (cloud hosting (consumption runs on hyperscaler infra)) | MDB (Atlas vs Cosmos DB), OKTA (IAM (Entra bundling)), SNOW (warehouse vs Fabric) |
 | **MU** | AMAT (WFE), ASML (litho), KLAC (process control), LRCX (NAND/HBM WFE), TOKYOELEC (WFE) | AMD (HBM), AVGO (HBM), NVDA (HBM/LPDDR) | SKHYNIX (HBM) |
 | **NBIS** | BE (fuel cells), NVDA (GPUs) | OPENAI (neocloud compute) | NSCALE (GPU neocloud) |
+| **NDAQ** | — | CME (Nasdaq-100 futures licence) | CBOE (U.S. options and cash equities; Q3 company calls Oct 30/22 2026), ICE (U.S. listings, cash equities and market data; Q3 company calls Oct 29/22 2026), MSCI (Index licensing; Q3 company calls Oct 22/20 2026) |
 | **NET** | — | — | AKAM (edge/CDN), FSLY (edge/CDN) |
 | **NSCALE** | DELL (AI servers + DFS lease financing ($2.54bn initial-term rent)), NVDA (GPUs (VR NVL72 / GB300) + >5% holder, lease guarantee) | ANTHROPIC (neocloud compute ($44.6bn, Monarch 460 MW)), MSFT (neocloud compute ($43.8bn SOWs to 2033)) | CRWV (GPU neocloud), NBIS (GPU neocloud) |
 | **NVDA** | ADI (power (Empower)), ALAB (retimers/fabric), AOSL (power MOSFET (800V)), APH (interconnect/busbar), ARM (CPU IP), CDNS (EDA), COHR (optical/InP), CRDO (AEC/SerDes), FLEX (power/EMS + cooling), GLW (optical fiber), IFX (power semis (800V)), KIOXIA (NAND (Super IO)), LITE (optical), MP (rare-earth magnets), MU (HBM/LPDDR), NVT (power+cooling (CDU)), NVTS (GaN/SiC (800V)), ON (SiC power), POET (optical engine/CPO), POWI (power-conversion ICs (800V)), SAMSUNG (HBM/foundry), SKHYNIX (HBM), SNPS (EDA/IP), TEL (connectors), TSM (foundry N3/N2 + CoWoS), TXN (power), VRT (power+cooling (800VDC)), WOLF (SiC (800V)) | AMZN (GPUs), ANTHROPIC (GPUs), CRWV (GPUs), DELL (GPUs), GOOG (GPUs), HPE (GPUs), META (GPUs), MSFT (GPUs), NBIS (GPUs), NSCALE (GPUs (VR NVL72 / GB300) + >5% holder, lease guarantee), OPENAI (GPUs), ORCL (GPUs), SMCI (GPUs), TSLA (GPUs) | AMD (AI accelerators), AVGO (merchant vs custom ASIC) |
@@ -67,6 +83,7 @@ _Generated 2026-10-30 · curated high-confidence edges from `_data/graph.json` (
 | **ON** | — | NVDA (SiC power) | — |
 | **OPENAI** | AMD (MI GPUs), CRWV (neocloud compute), MSFT (Azure compute), NBIS (neocloud compute), NVDA (GPUs), ORCL (OCI compute) | — | ANTHROPIC (frontier models) |
 | **ORCL** | AMD (MI GPUs), AVGO (networking), NVDA (GPUs) | OPENAI (OCI compute) | MDB (operational database) |
+| **OWL** | — | — | APO (Private credit and AI chip financing; Q3 company call Oct 29 2026), BX (Alternative managers: non-traded BDCs, net lease, data centers; Q3 company calls Oct 29/22 2026) |
 | **PANW** | — | — | OKTA (identity (CyberArk vs Okta)) |
 | **POET** | — | NVDA (optical engine/CPO) | — |
 | **POWI** | — | NVDA (power-conversion ICs (800V)) | — |
@@ -80,13 +97,16 @@ _Generated 2026-10-30 · curated high-confidence edges from `_data/graph.json` (
 | **SNDK** | — | AMZN (NAND/SSD), GOOG (NAND/SSD), META (NAND/SSD), MSFT (NAND/SSD) | KIOXIA (NAND) |
 | **SNOW** | AMZN (cloud hosting (consumption runs on hyperscaler infra)), GOOG (cloud hosting (consumption runs on hyperscaler infra)), MSFT (cloud hosting (consumption runs on hyperscaler infra)) | — | AMZN (warehouse vs Redshift), GOOG (warehouse vs BigQuery), MSFT (warehouse vs Fabric) |
 | **SNPS** | — | AMD (EDA/IP), ARM (EDA), AVGO (EDA/IP), INTC (EDA/IP), NVDA (EDA/IP), QCOM (EDA/IP), TSM (EDA/IP) | CDNS (EDA) |
+| **SPGI** | — | CBOE (SPX/VIX index licence (S&P DJI, extended to 2051)) | MCO (Ratings and financial information; company calls Oct 27/21 2026), MSCI (Index and financial-data providers; Q3 company calls Oct 20/27 2026) |
 | **STX** | — | AMZN (nearline HDD), GOOG (nearline HDD), META (nearline HDD), MSFT (nearline HDD) | WDC (nearline HDD) |
 | **TEL** | — | NVDA (connectors) | — |
 | **TLN** | — | AMZN (nuclear PPA) | VST (merchant power) |
 | **TOKYOELEC** | — | MU (WFE), SAMSUNG (WFE), SKHYNIX (WFE), TSM (WFE) | — |
+| **TRU** | — | — | EFX (US credit bureaus; Q3 company calls Oct 20/27 2026) |
 | **TSLA** | NVDA (GPUs) | — | — |
 | **TSM** | ADVANTEST (ATE test), AMAT (WFE), ASML (EUV/DUV litho), BESI (hybrid bonding), CDNS (EDA), DISCO (dicing/grinding), KLAC (process control), LRCX (etch/dep), SNPS (EDA/IP), TOKYOELEC (WFE) | AAPL (foundry), ALAB (foundry), AMD (foundry), AVGO (foundry), CRDO (foundry), MEDIATEK (foundry), MRVL (foundry), NVDA (foundry N3/N2 + CoWoS), QCOM (foundry) | INTC (foundry), SAMSUNG (foundry), SMIC (foundry) |
 | **TXN** | — | NVDA (power) | — |
+| **V** | — | — | MA (Payment networks; FY/Q3 company calls Oct 27/29 2026) |
 | **VRT** | — | NVDA (power+cooling (800VDC)) | — |
 | **VST** | — | AMZN (merchant power) | CEG (merchant power), TLN (merchant power) |
 | **WDC** | — | AMZN (nearline HDD), GOOG (nearline HDD), META (nearline HDD), MSFT (nearline HDD) | STX (nearline HDD) |

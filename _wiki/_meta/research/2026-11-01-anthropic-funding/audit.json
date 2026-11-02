@@ -1,0 +1,106 @@
+{
+  "audit_date": "2026-11-01",
+  "scope": "Bounded funding-model audit, not a full-company coverage audit",
+  "verdict": "PARTIAL",
+  "arithmetic_and_transcription": "PASS",
+  "reviewed": [
+    "calculate.py",
+    "inputs.json",
+    "calculations.json",
+    "study.html",
+    "Anthropic filing-readable.txt",
+    "SpaceX spcx-readable.txt",
+    "FUNDA p001,p002,p008,p009,p010,p012,p013,p014,p015,p025,p026 (visually)"
+  ],
+  "primary_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+  "primary_opened_and_filing_date_verified": "2026-10-26",
+  "evidence": [
+    {
+      "source": "S-1 F-6; filing-readable.txt:14488-14493",
+      "check": "June cash112.389+STI19.262=131.651; restricted2.529 excluded. June figures unaudited."
+    },
+    {
+      "source": "S-1 F-37; lines15722-15734",
+      "check": "Commenced undiscounted payments1.601+0.523; uncommenced321.4, some conditional."
+    },
+    {
+      "source": "S-1 F-59; lines16791-16797",
+      "check": "Purchase commitments265.6; significant variable arrangements excluded."
+    },
+    {
+      "source": "S-1 lines17153-17160",
+      "check": "Later new/amended245 and short-term21 are not a reconciled additive roll-forward."
+    },
+    {
+      "source": "S-1 p172; lines8008-8015",
+      "check": "SpaceX up to120.5;3.1/month at full delivery expectedDec26; initial periods endJan/Mar27 then90-day notice."
+    },
+    {
+      "source": "S-1 pp158/161; lines7402-7409,7517-7519",
+      "check": "Q1/Q2 cost-ratio hard inputs all match."
+    },
+    {
+      "source": "SpaceX 10-Q; spcx-readable.txt:226,539-545",
+      "check": "Q3 revenue14.575; CustomerB34.5%, unnamed."
+    },
+    {
+      "source": "FUNDA p014,p015,p025,p026",
+      "check": "Base cash/FCF/revenue and approximate stress endpoints transcribed correctly. Cash principal distinct from noncash ROU additions."
+    }
+  ],
+  "arithmetic": {
+    "liquidity131_651": 131.651,
+    "static_plus_raise": 231.651,
+    "june_subtotal": 587,
+    "including_commenced": 589.124,
+    "new_raise_pct": 17.0357751278,
+    "cash_plus_raise_pct": 39.4635434412,
+    "funding_rebase": 40,
+    "cash2026_2030": [
+      232.2,
+      209.5,
+      190.1,
+      225.1,
+      328.3
+    ],
+    "year_end_trough2028": 190.1,
+    "burn2027_2028": 42.1,
+    "approx_downside2030": 56,
+    "approx_stall2030": -136,
+    "approx_stall_funding_to_reserve": 141,
+    "spacex_annualized": 37.2,
+    "spacex_three_months": 9.3
+  },
+  "guardrails": [
+    "PASS: add40 once because original model already assumes60 financing.",
+    "PASS: restricted cash and conditional facilities excluded.",
+    "PASS: finance-lease principal included once; noncash ROU additions excluded from cash spending.",
+    "PARTIAL: updated contractual maturity table blank; current total and payment calendar not established.",
+    "PARTIAL: year-end trough is not minimum quarterly/intrayear liquidity.",
+    "PARTIAL: revenue path unvalidated; FUNDA p026 says ARR largely hard-coded.",
+    "RED: Q1 adjusted noncompute/revenue41.45% vs Q2 32.56%; relative drift27.31%. No stable forward ratio established.",
+    "PASS internally only: cash roll-forward residual0.1bn in2030 matches rounding; does not validate forecast economics."
+  ],
+  "required_fixes": [
+    {
+      "finding": "FUNDA780-810 compilation is sourced (p010/p011), but different from p026 and not a reconciled payable balance.",
+      "action": "Remove ratio using this denominator. Parent agreed; original snapshot still contained it."
+    },
+    {
+      "finding": "Replacement-cost table/JSON calls vendor fees less replacement spend a net cash saving.",
+      "action": "Rename as compute-spend saving before lost contribution and transition costs. April/July exits remain conditional scenarios."
+    },
+    {
+      "finding": "FUNDA is independent research according to repository provenance.",
+      "action": "Use FUNDA forecast/model or independent research instead of broker."
+    }
+  ],
+  "exclusions": [
+    "No Outlook sweep",
+    "No two-year filing/transcript coverage claim",
+    "No Bloomberg pull; no live public-equity data claims in bounded study",
+    "Underlying FUNDA workbook not independently rerun",
+    "No company/theme edits"
+  ],
+  "bottom_line": "Arithmetic passes. Current contractual funding coverage and forecast cash sufficiency remain unproven. Deliver as a conditional scenario with maturity, growth, intrayear liquidity and cancellation economics limitations prominent."
+}
