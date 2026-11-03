@@ -1,30 +1,31 @@
 {
   "asof": "2026-11-02",
-  "latest_reconciliation": "reconciliation-2026-10-30-inbox.md",
+  "latest_reconciliation": "reconciliation-2026-11-02-inbox.md",
   "book": {
     "asof": "2026-07-01",
     "seed": true,
     "positions": 8
   },
   "stats": {
-    "signals": 47,
-    "active": 47,
-    "high": 1,
+    "signals": 49,
+    "active": 49,
+    "high": 2,
     "belief_changes": 3,
     "focus_names": 38
   },
   "focus": [
     {
       "ticker": "GOOG",
-      "focus_score": 78,
+      "focus_score": 80,
       "in_book": true,
-      "signal_count": 2,
-      "high_count": 1,
+      "signal_count": 3,
+      "high_count": 2,
       "sector": "AI — Hyperscalers & Software",
       "thesis": "Full-stack compounder (Search +17%, Cloud +82%); debate is valuation and capital intensity, not demand.",
-      "next_catalyst": "2026-11-18",
+      "next_catalyst": "2026-11-02",
       "why": [
         "GOOG — 2026 revenue house view is 18% above consensus",
+        "GOOG — 2026-11-02: Search and permitting watch items: (1) Wells' two exit signals for the AI Overviews drag —…",
         "GOOG — 2026-11-18: post-print watch items from the callbacks: (1) 4Q Cloud margin, where Sandler expects the…"
       ]
     },
@@ -84,15 +85,16 @@
     },
     {
       "ticker": "BKNG",
-      "focus_score": 58,
+      "focus_score": 60,
       "in_book": false,
-      "signal_count": 1,
+      "signal_count": 2,
       "high_count": 0,
       "sector": "Consumer / Internet / Other",
       "thesis": "World's #1 OTA; binary debate on agentic LLMs (TAM expander vs disintermediation).",
-      "next_catalyst": "2026-11-03",
+      "next_catalyst": "2026-11-02",
       "why": [
-        "BKNG — 2026-11-03: THE 3Q26 PRINT, AND THE BARS ARE NOW EXPLICIT. ① 3Q room nights: guide +3-5%; consensus…"
+        "BKNG — 2026-11-03: THE 3Q26 PRINT, AND THE BARS ARE NOW EXPLICIT. ① 3Q room nights: guide +3-5%; consensus…",
+        "BKNG — 2026-11-02: Update 2026-11-02 (Capstone internal, \"Preview Travel 3Q26\" + \"Travel FUPs\", 2026-11-02):…"
       ]
     },
     {
@@ -609,9 +611,93 @@
       "hidden": false
     },
     {
-      "id": "beli-76bdbe984b0e",
+      "id": "cata-e69bbfbcfd1a",
       "asof": "2026-11-02",
-      "source_date": "2026-11-01",
+      "source_date": "2026-11-02",
+      "event_date": "2026-11-02",
+      "type": "catalyst",
+      "priority": "high",
+      "score": 69,
+      "title": "GOOG — 2026-11-02: Search and permitting watch items: (1) Wells' two exit signals for the AI Overviews drag —…",
+      "tickers": [
+        "GOOG"
+      ],
+      "in_book": [
+        "GOOG"
+      ],
+      "impact": "high",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "🆕 2026-11-02 (/run-inbox) — Search and permitting watch items: (1) Wells' two exit signals for the AI Overviews drag — the sessions-vs-paid-clicks gap narrowing, and CPCs rising to reflect more qu",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "supplier",
+          "detail": "custom ASIC (TPU)",
+          "from": "GOOG",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "GOOG",
+          "in_book": true
+        },
+        {
+          "ticker": "SNOW",
+          "relation": "competitor",
+          "detail": "warehouse vs BigQuery",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "ANTHROPIC",
+          "relation": "customer",
+          "detail": "TPU compute",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "BE",
+          "relation": "supplier",
+          "detail": "on-site fuel cells",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "CIEN",
+          "relation": "supplier",
+          "detail": "DCI/optical",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "COHR",
+          "relation": "supplier",
+          "detail": "optical",
+          "from": "GOOG",
+          "in_book": false
+        }
+      ],
+      "source": "GOOG page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "GOOG.md"
+      ],
+      "evidence_anchor": "🆕 2026-11-02 (/run-inbox) — Search and permitting watch items: (1) Wells' two exit signals for the AI Overviews drag — the sessions-vs-paid-clicks gap narrowing, and CPCs rising to reflect more qu",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "beli-c19d4aad986c",
+      "asof": "2026-11-02",
+      "source_date": "2026-11-02",
       "type": "narrative_shift",
       "priority": "medium",
       "score": 62,
@@ -623,7 +709,7 @@
       "impact": "medium",
       "urgency": "immediate",
       "confidence": "high",
-      "why_now": "Funding sensitivity requested by Felipe: added a dated $100bn incremental-net-raise scenario and reproducible source/audit files. Preserved all prior commitment values and histories. Rebased FUNDA's $60bn assumed IPO by +$40bn; distinguished June commitment stock, cash after lease principal, and approximate stress endpoints. No current total, completed raise, cancellation or catalyst resolution inferred. Existing SpaceX ID re-reviewed; scope and replacement-cost limitations added to compute timeline.",
+      "why_now": "run-inbox: 2 Intra-quarter rows (10-30 a16z / Eve, passing: benchmark collaboration \"working very closely with\", Claude in Eve's stack, Rampell's \"Claude can clone them all\"; 11-01 SemiAnalysis, new: AWS campus for Anthropic next to the Susquehanna nuclear plant in Pennsylvania, campus MW not stated, PA 2028 additions 2.4 GW with ~44% AWS and ~1.8 GW not yet under construction), 1 Sinal update, 2 Sources; nothing superseded.",
       "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
       "action": "Re-grade the ANTHROPIC thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
       "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
@@ -664,11 +750,11 @@
           "in_book": false
         }
       ],
-      "source": "ANTHROPIC page Changelog 2026-11-01",
+      "source": "ANTHROPIC page Changelog 2026-11-02",
       "evidence_paths": [
         "ANTHROPIC.md"
       ],
-      "evidence_anchor": "Funding sensitivity requested by Felipe: added a dated $100bn incremental-net-raise scenario and reproducible source/audit files. Preserved all prior commitment values and histories. Rebased FUNDA's $60bn assumed IPO by +$40bn; distinguished June commitment stock, cash after lease principal, and approximate stress endpoints. No current total, completed raise, cancellation or catalyst resolution inferred. Existing SpaceX ID re-reviewed; scope and replacement-cost limitations added to compute timeline.",
+      "evidence_anchor": "run-inbox: 2 Intra-quarter rows (10-30 a16z / Eve, passing: benchmark collaboration \"working very closely with\", Claude in Eve's stack, Rampell's \"Claude can clone them all\"; 11-01 SemiAnalysis, new: AWS campus for Anthropic next to the Susquehanna nuclear plant in Pennsylvania, campus MW not stated, PA 2028 additions 2.4 GW with ~44% AWS and ~1.8 GW not yet under construction), 1 Sinal update, 2 Sources; nothing superseded.",
       "origin": "belief_diff",
       "feedback": "",
       "feedback_note": "",
@@ -689,7 +775,7 @@
       "impact": "medium",
       "urgency": "immediate",
       "confidence": "high",
-      "why_now": "Primary-source transaction research: definitive all-stock agreement replaces October 30 speculation; valuation reference date, pending close and conditional synergy/accretion targets explicit. Added Q1 results, Q2 guide and separate second NPO/CPO purchase commitment. No house model/rating/PT change. Superseded Debate entry, preserved verbatim:",
+      "why_now": "run-inbox: Bernstein · Zhu webinar invite (11-02) → 1 intra-quarter row (title-level \"the deal is real\" / \"earnings beat\"; no numbers), 1 Sources line; 10-28 Bernstein Quick Take noted as not on disk; nothing superseded.",
       "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
       "action": "Re-grade the LITE thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
       "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
@@ -741,7 +827,7 @@
       "evidence_paths": [
         "LITE.md"
       ],
-      "evidence_anchor": "Primary-source transaction research: definitive all-stock agreement replaces October 30 speculation; valuation reference date, pending close and conditional synergy/accretion targets explicit. Added Q1 results, Q2 guide and separate second NPO/CPO purchase commitment. No house model/rating/PT change. Superseded Debate entry, preserved verbatim:",
+      "evidence_anchor": "run-inbox: Bernstein · Zhu webinar invite (11-02) → 1 intra-quarter row (title-level \"the deal is real\" / \"earnings beat\"; no numbers), 1 Sources line; 10-28 Bernstein Quick Take noted as not on disk; nothing superseded.",
       "origin": "belief_diff",
       "feedback": "",
       "feedback_note": "",
@@ -762,7 +848,7 @@
       "impact": "medium",
       "urgency": "immediate",
       "confidence": "high",
-      "why_now": "Primary-source transaction research: definitive all-stock agreement replaces October 30 speculation; valuation reference date, pending close and conditional synergy/accretion targets explicit. No house model/rating/PT change. Superseded Debate entry, preserved verbatim:",
+      "why_now": "run-inbox: Bernstein · Zhu LITE/MRVL webinar invite (11-02) → 1 Sources line only (title-level, no numbers); nothing superseded.",
       "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
       "action": "Re-grade the MRVL thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
       "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
@@ -807,7 +893,7 @@
       "evidence_paths": [
         "MRVL.md"
       ],
-      "evidence_anchor": "Primary-source transaction research: definitive all-stock agreement replaces October 30 speculation; valuation reference date, pending close and conditional synergy/accretion targets explicit. No house model/rating/PT change. Superseded Debate entry, preserved verbatim:",
+      "evidence_anchor": "run-inbox: Bernstein · Zhu LITE/MRVL webinar invite (11-02) → 1 Sources line only (title-level, no numbers); nothing superseded.",
       "origin": "belief_diff",
       "feedback": "",
       "feedback_note": "",
@@ -1468,6 +1554,38 @@
         "APO.md"
       ],
       "evidence_anchor": "2026-11-03 — Q3 results, announced 2026-09-29. Test FRE growth, Athene inflows, reported versus normalized spreads and future fee recognition. [Company announcement](https://www.apollo.com/insight",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "cata-a8e9696906ee",
+      "asof": "2026-11-02",
+      "source_date": "2026-11-02",
+      "event_date": "2026-11-02",
+      "type": "catalyst",
+      "priority": "medium",
+      "score": 49,
+      "title": "BKNG — 2026-11-02: Update 2026-11-02 (Capstone internal, \"Preview Travel 3Q26\" + \"Travel FUPs\", 2026-11-02):…",
+      "tickers": [
+        "BKNG"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "🆕 Update 2026-11-02 (Capstone internal, \"Preview Travel 3Q26\" + \"Travel FUPs\", 2026-11-02): house 3Q room nights ~6% / 6.5% vs a 5-6% bogey (the 10-30 house bar was buy-side +4-5%); expect",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [],
+      "source": "BKNG page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "BKNG.md"
+      ],
+      "evidence_anchor": "🆕 Update 2026-11-02 (Capstone internal, \"Preview Travel 3Q26\" + \"Travel FUPs\", 2026-11-02): house 3Q room nights ~6% / 6.5% vs a 5-6% bogey (the 10-30 house bar was buy-side +4-5%); expect",
       "origin": "catalyst_calendar",
       "feedback": "",
       "feedback_note": "",

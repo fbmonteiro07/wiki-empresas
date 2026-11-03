@@ -1,6 +1,6 @@
 {
  "_about": "Hand-edited ledger of machine-transcription garbles (Notion AI, Bloomberg ASR, auto-translation) seen in the archive, with the correct reading. Used by E:\\.claude\\scripts\\transcript_qa.py (source-file scan, page-diff scan) and by ingest_notion_meetings.py (writes a 'Transcription QA' block into every archived Notion file). Keys are matched with word boundaries, case-sensitive unless 'ci' is true. 'keep_when' = regex contexts (same line, ~80 chars around the hit) where the token is legitimate and must NOT be flagged. Add an entry the first time a garble is caught; never delete one. Standing rule (Felipe, 2026-09-28): ALWAYS double-check transcript content — acronyms, names, units, numbers — before it travels to a page.",
- "_updated": "2026-10-31",
+ "_updated": "2026-11-02",
  "terms": {
   "Hixle AI": {
    "correct": "Higgsfield (AI video startup)",
@@ -1717,6 +1717,7 @@
    "rule": "Microsoft's in-house accelerator is Maia; 'Maya' in a semis call about Microsoft/Marvell volumes = Maia.",
    "keep_when": [
     "Maya Angelou",
+    "Maya Barkin",
     "Riviera Maya",
     "Autodesk Maya",
     "Maya civilization",
@@ -6177,6 +6178,128 @@
    "ci": true,
    "rule": "ASR misspelling of the Jefferies domain.",
    "first_seen": "2026-11-02 (Jefferies 'Hyperscaler + AI Deep Dive - A Look at the Numbers' webinar, Notion AI transcript)"
+  },
+  "hourly salary": {
+   "correct": "gross annual salary (auto-translated Italian RAL)",
+   "domain": "units",
+   "ci": true,
+   "rule": "Auto-translated Italian captions: Luca Ferrari on Italian labour cost (\"an hourly salary of 60,000 euros and you have to pay another 20-25,000 in contributions\") - the figure is a gross annual salary, not hourly.",
+   "first_seen": "2026-11-02 (a16z 2026-11-01 Bending Spoons episode; YouTube captions matched a 2023 Italian-language interview)"
+  },
+  "Adipek": {
+   "correct": "ADIPEC (Abu Dhabi International Petroleum Exhibition & Conference)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR of ADIPEC ('the 42nd edition of Adipek'); same episode also 'ADIPC', 'Adipac'.",
+   "first_seen": "2026-11-02 (DRM News upload of the ADIPEC 2026 opening-ceremony Sam Altman session, YouTube ASR)"
+  },
+  "ADIPC": {
+   "correct": "ADIPEC",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR of ADIPEC ('the opening ceremony of ADIPC'). See 'Adipek'.",
+   "first_seen": "2026-11-02 (DRM News upload of the ADIPEC 2026 opening-ceremony Sam Altman session, YouTube ASR)"
+  },
+  "Adipac": {
+   "correct": "ADIPEC",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR of ADIPEC ('a very fruitful and productive Adipac'). See 'Adipek'.",
+   "first_seen": "2026-11-02 (DRM News upload of the ADIPEC 2026 opening-ceremony Sam Altman session, YouTube ASR)"
+  },
+  "Adno": {
+   "correct": "ADNOC (Abu Dhabi National Oil Company)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR drops the final C ('the partnership with Adno', 'problems that Adno faces'). Word-boundary match only; ADNOC itself is correct.",
+   "first_seen": "2026-11-02 (DRM News upload of the ADIPEC 2026 opening-ceremony Sam Altman session, YouTube ASR)"
+  },
+  "ADN knock": {
+   "correct": "ADNOC",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR of ADNOC ('the ADN knock agreement with G42').",
+   "first_seen": "2026-11-02 (DRM News upload of the ADIPEC 2026 opening-ceremony Sam Altman session, YouTube ASR)"
+  },
+  "chatbt": {
+   "correct": "ChatGPT",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR spelling ('ChatGPT weekly active users'). See 'chat GBT', 'CHBT'.",
+   "first_seen": "2026-11-02 (DRM News upload of the ADIPEC 2026 opening-ceremony Sam Altman session, YouTube ASR)"
+  },
+  "Mina Alarabi": {
+   "correct": "Mina Al-Oraibi (editor-in-chief, The National)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR of the moderator's name ('the editor-in-chief of the National, Mina Alarabi').",
+   "first_seen": "2026-11-02 (DRM News upload of the ADIPEC 2026 opening-ceremony Sam Altman session, YouTube ASR)"
+  },
+  "Chad GPT": {
+   "correct": "ChatGPT",
+   "domain": "products",
+   "ci": true,
+   "rule": "ASR of ChatGPT ('Codex, you know, Chad GPT').",
+   "first_seen": "2026-11-02 (a16z Show, Eve / Jay Madheswaran & Alex Rampell plaintiff-law episode 2026-10-30, YouTube ASR)"
+  },
+  "including Cloud": {
+   "correct": "including Claude (Anthropic)",
+   "domain": "products",
+   "rule": "'all the tools they have access to, including Cloud and whatnot' = Claude; only the phrase is flagged.",
+   "first_seen": "2026-11-02 (a16z Show, Eve / Jay Madheswaran & Alex Rampell plaintiff-law episode 2026-10-30, YouTube ASR)"
+  },
+  "Eva's doing": {
+   "correct": "Eve's doing (Eve, plaintiff-law AI startup)",
+   "domain": "names",
+   "rule": "ASR of the company name Eve.",
+   "first_seen": "2026-11-02 (a16z Show, Eve / Jay Madheswaran & Alex Rampell plaintiff-law episode 2026-10-30, YouTube ASR)"
+  },
+  "Morgan Morgan": {
+   "correct": "Morgan & Morgan (US plaintiff/trial law firm)",
+   "domain": "names",
+   "rule": "ASR drops the ampersand.",
+   "first_seen": "2026-11-02 (a16z Show, Eve / Jay Madheswaran & Alex Rampell plaintiff-law episode 2026-10-30, YouTube ASR)"
+  },
+  "lost leader": {
+   "correct": "loss leader",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR of 'loss leader' (corporate-law pricing).",
+   "first_seen": "2026-11-02 (a16z Show, Eve / Jay Madheswaran & Alex Rampell plaintiff-law episode 2026-10-30, YouTube ASR)"
+  },
+  "tackle MySpace": {
+   "correct": "tackle my space (i.e. my market segment)",
+   "domain": "terms",
+   "rule": "'the labs ... maybe they're going to go tackle MySpace next' = 'my space'; not the social network.",
+   "first_seen": "2026-11-02 (a16z Show, Eve / Jay Madheswaran & Alex Rampell plaintiff-law episode 2026-10-30, YouTube ASR)"
+  },
+  "Grockpot": {
+   "correct": "Grok Bot (xAI/SpaceX agent)",
+   "domain": "names",
+   "ci": true,
+   "rule": "Captions of 'Grok Bot' in a personal-agent list ('Muse or Instinct or Grockpot'); see 'Grockbot'/'Grogpot'/'RockBot'.",
+   "first_seen": "2026-11-02 (UC Irvine CDT session with Jeetu Patel, Cisco, YouTube uploaded captions)"
+  },
+  "one liter": {
+   "correct": "one leader",
+   "domain": "terms",
+   "ci": true,
+   "rule": "Captions hear 'leader' as 'liter' ('move everything under one liter'); only in an org/management context, never a volume unit.",
+   "first_seen": "2026-11-02 (UC Irvine CDT session with Jeetu Patel, Cisco, YouTube uploaded captions)"
+  },
+  "groed": {
+   "correct": "grokked (understood)",
+   "domain": "terms",
+   "ci": true,
+   "rule": "Captions of 'grokked' ('we have not fully groed the level of capacity').",
+   "first_seen": "2026-11-02 (UC Irvine CDT session with Jeetu Patel, Cisco, YouTube uploaded captions)"
+  },
+  "TBTE": {
+   "correct": "TB (terabyte)",
+   "domain": "units",
+   "ci": false,
+   "rule": "Captions of 'two TB' as 'two TBTE' (Dropbox 2 TB plan).",
+   "first_seen": "2026-11-02 (UC Irvine CDT session with Jeetu Patel, Cisco, YouTube uploaded captions)"
   }
  },
  "summary_traps": [

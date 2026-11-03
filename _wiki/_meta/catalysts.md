@@ -2,11 +2,13 @@
 
 _Generated 2026-11-02 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (59)
+## 📅 Upcoming (61)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
+| 2026-11-02 | BKNG | 🆕 **Update 2026-11-02 (Capstone internal, "Preview Travel 3Q26" + "Travel FUPs", 2026-11-02):** house 3Q room nights **~6% / 6.5%** vs a **5-6% bogey** (the 10-30 house bar was buy-side +4-5%); expect |
 | 2026-11-02 | GEV | 🆕 **GS-hosted GEV IR meeting, New York — 2026-11-02** (per the GS Industrials daily, logged pre-print): first post-print management access. |
+| 2026-11-02 | GOOG | 🆕 **2026-11-02 (/run-inbox) — Search and permitting watch items:** (1) Wells' two exit signals for the AI Overviews drag — the sessions-vs-paid-clicks gap narrowing, and CPCs rising to reflect more qu |
 | 2026-11-02 | KIOXIA | 🆕 **2026-11-02 (Mon) 9am JST — BofA post-results "doko shuzai" with KIOXIA on FY3/27 2Q results** (BofA · Mikio Hirakawa, via BofA one-liners, 2026-10-01) — dates the Sep-quarter print to before 11-02 |
 | 2026-11-02 | LITE | **Resolved early on 2026-11-02 (original calendar date 2026-11-05) - F1Q27 earnings.** Company release: revenue $1,262.6m, adjusted EPS $4.57; Q2 revenue $1,575-1,625m, adjusted EPS $5.90-6.20. Prior  |
 | 2026-11-02 | STX | 🆕 **2026-10-08 (12pm ET, NYC) — Morgan Stanley Global Hardware & Optical lunch (Andy Meng, Howard Kao, Derrick Yang, Meta Marshall, Erik Woodring) covering STX/[[WDC]] among others; 2026-11-02/03 — MS |
