@@ -1,17 +1,11 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-11-02 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-11-03 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (61)
+## 📅 Upcoming (55)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-11-02 | BKNG | 🆕 **Update 2026-11-02 (Capstone internal, "Preview Travel 3Q26" + "Travel FUPs", 2026-11-02):** house 3Q room nights **~6% / 6.5%** vs a **5-6% bogey** (the 10-30 house bar was buy-side +4-5%); expect |
-| 2026-11-02 | GEV | 🆕 **GS-hosted GEV IR meeting, New York — 2026-11-02** (per the GS Industrials daily, logged pre-print): first post-print management access. |
-| 2026-11-02 | GOOG | 🆕 **2026-11-02 (/run-inbox) — Search and permitting watch items:** (1) Wells' two exit signals for the AI Overviews drag — the sessions-vs-paid-clicks gap narrowing, and CPCs rising to reflect more qu |
-| 2026-11-02 | KIOXIA | 🆕 **2026-11-02 (Mon) 9am JST — BofA post-results "doko shuzai" with KIOXIA on FY3/27 2Q results** (BofA · Mikio Hirakawa, via BofA one-liners, 2026-10-01) — dates the Sep-quarter print to before 11-02 |
-| 2026-11-02 | LITE | **Resolved early on 2026-11-02 (original calendar date 2026-11-05) - F1Q27 earnings.** Company release: revenue $1,262.6m, adjusted EPS $4.57; Q2 revenue $1,575-1,625m, adjusted EPS $5.90-6.20. Prior  |
-| 2026-11-02 | STX | 🆕 **2026-10-08 (12pm ET, NYC) — Morgan Stanley Global Hardware & Optical lunch (Andy Meng, Howard Kao, Derrick Yang, Meta Marshall, Erik Woodring) covering STX/[[WDC]] among others; 2026-11-02/03 — MS |
 | 2026-11-03 | APO | **2026-11-03 — Q3 results**, announced 2026-09-29. Test FRE growth, Athene inflows, reported versus normalized spreads and future fee recognition. [Company announcement](https://www.apollo.com/insight |
 | 2026-11-03 | BKNG | **🆕🔴 2026-11-03 (TUESDAY, AFTER THE CLOSE; CALL 4:30PM ET) — THE 3Q26 PRINT, AND THE BARS ARE NOW EXPLICIT.** ① **3Q room nights:** guide **+3-5%**; consensus **~339m (+5%)** (Bloomberg via Bernstein  |
 | 2026-11-03 | INTC | 🆕 **2026-10-01: Susquehanna "The AI Arms Race" session (Christopher Rolland; AMD, INTC, MRVL, NVDA, AVGO, ARM, QCOM) and 2026-11-03: Intel dinner NDR with CFO and IR, London** (Susquehanna index 09-30 |
@@ -68,18 +62,23 @@ _Generated 2026-11-02 · parsed from every page's 'Catalysts / what to watch'. D
 | 2029-12-08 | MU | 🆕 **2026-10-16 — the buyback now has a formula and a window, from Micron IR.** From **2026-12-09 through 2029-12-08** Micron may repurchase up to **trailing-12-month FCF − CHIPS proceeds received in t |
 | 2031-12-31 | NSCALE | 2031-12-31 — Monarch expansion to ~8 GW gross planned. |
 
-## ⏰ Passed — need a post-mortem (0)
+## ⏰ Passed — need a post-mortem (3)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| _none_ | | |
+| 2026-11-02 | STX | 🆕 **2026-10-08 (12pm ET, NYC) — Morgan Stanley Global Hardware & Optical lunch (Andy Meng, Howard Kao, Derrick Yang, Meta Marshall, Erik Woodring) covering STX/[[WDC]] among others; 2026-11-02/03 — MS |
+| 2026-11-02 | KIOXIA | 🆕 **2026-11-02 (Mon) 9am JST — BofA post-results "doko shuzai" with KIOXIA on FY3/27 2Q results** (BofA · Mikio Hirakawa, via BofA one-liners, 2026-10-01) — dates the Sep-quarter print to before 11-02 |
+| 2026-11-02 | GEV | 🆕 **GS-hosted GEV IR meeting, New York — 2026-11-02** (per the GS Industrials daily, logged pre-print): first post-print management access. |
 
-## ✅ Resolved (373)
+## ✅ Resolved (376)
 
 | Date | Ticker | Verdict |
 |---|---|---|
+| 2026-11-02 | LITE | neutral — NOT A NEW EVENT for the print: this row is the F1Q27 release already scored bull won under LITE 2026-11-05 (released early 11-02: adj. EPS $4.57 vs BBG $4.214; Q2 guide $5.90-6.20). The same-day news is the definitive MRVL/LITE all-stock agreement (4.500 MRVL per LITE; ~$1,132/sh, 23.9% premium to 10-28 unaffected; close H1 CY2028; >$1bn cost synergies; joint release 11-02). It confirms Sur's 10-30 speculation and is on both the LITE and MRVL pages. New open item: stockholder/regulatory approval. |
+| 2026-11-02 | GOOG | neutral — NOT A NEW EVENT: the 11-02 /run-inbox watch list (Wells/Gawrelski's two AI-Overviews exit signals, sessions-vs-paid-clicks gap and CPCs, with Search +9% 4Q26 / +4% 1Q27; Wells, 2026-11-01; plus the permitting items) is forward-looking. It resolves at the 4Q26 print (~early Feb 2027). |
+| 2026-11-02 | BKNG | neutral — NOT A NEW EVENT: the Capstone internal house-bar update ('Preview Travel 3Q26' + 'Travel FUPs', 2026-11-02: 3Q room nights ~6-6.5% vs a 5-6% bogey; expected 4Q guide +3-5%, with ≥5% the flip) is a sub-bullet of the 3Q26 print. That print is on 2026-11-03 AMC and is scored separately. |
 | 2026-10-30 | SNDK | neutral — NOT A NEW EVENT: the parser dated a forward target off its source date. JPM's Sur, relaying the callback (not company-disclosed), says >75% of FY28-FY30 bits go under LTAs/NBMs "over the next 2 to 3 quarters" (JPM AMA, 2026-10-30). The test is FY28 coverage >75% at the FQ3-FQ4 FY27 prints (~Apr-Aug 2027); UNRESOLVED until then. |
 | 2026-10-30 | META | neutral — NOT A NEW EVENT: the 10-30 bullet re-records the financing already scored under META 2026-10-29 ($37.5bn underwritten = $25.0bn Class A forward + $12.5bn mandatory convertible; priced 10-26, preferred closed 10-29, before election week; Meta 424B5s 10-26 + 8-K 10-29). Below Wells Fargo's $40-50bn equity estimate. The $60bn Class C ATM is still unfiled, and the 2027-01-19 Class C effective date is the next dated item. |
 | 2026-10-30 | KLAC | neutral — NOT A NEW EVENT (two parser-dated forward bullets): (1) first actinic EUV mask-inspection ship "as early as" 1H CY27, per Sur relaying a KLA callback (JPM AMA, 2026-10-30), not a company disclosure, open until 1H27; (2) Bren's "2027 memory ~60%" (FQ1 FY27 call, 2026-10-28) is UNRESOLVED. The 10-Q has no memory/foundry split, so the denominator (KLA systems vs WFE) is still unconfirmed; do not use the number yet. |
