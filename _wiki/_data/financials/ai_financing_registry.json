@@ -1,0 +1,1574 @@
+{
+ "built": "2026-11-02T22:34:52",
+ "reviewed_through": "2026-11-02",
+ "note": "Prices, yields and spreads are deliberately excluded; the dashboard reads them live from _wiki/_data/credit_workbook.json via linked_bonds. 'registry_key' is unique per row; BX-GOOG-AVGO-2026 appears twice (Crux and Big Sky legs). Amounts are never summed across rows or bases.",
+ "deals": [
+  {
+   "deal_id": "AIP-ALIGNED-2026",
+   "registry_key": "AIP-ALIGNED-2026",
+   "no_timeline_id": false,
+   "managers": [
+    "BLK"
+   ],
+   "role": "acquirer / equity sponsor: BlackRock's AI Infrastructure Partnership (AIP) with GIP and MGX; GIP V also committed to the deal (Q1 2026 call)",
+   "title": "AIP / GIP / MGX acquisition of Aligned Data Centers",
+   "counterparty": "Aligned Data Centers (target). AIP partners named by BlackRock: MGX, Microsoft, KIA, Temasek; NVIDIA, xAI, Cisco, GE Vernova, NextEra as technology/energy advisors (BLK Q3 2025 call)",
+   "tenant_or_offtaker": "undisclosed",
+   "asset": "DC platform (acquisition)",
+   "amount_text": "\"approximately $40 billion enterprise value\" (Fink, BLK Q3 call, 2026-10-14). Acquisition EV, not a compute contract or TCV; not summed with any offtake.",
+   "amount_usd_bn": 40,
+   "amount_basis": "EV",
+   "capacity_text": "MW undisclosed",
+   "capacity_mw": null,
+   "capacity_basis": "undisclosed",
+   "evidence": "company-announced",
+   "execution": "closed",
+   "first_event_date": null,
+   "latest_update_date": "2026-10-14",
+   "status_note": "Closed in Q3 2026 as AIP's 'first deployment' (BlackRock release and call). The original announcement date is not archived (earliest archived mention 2026-04-14). Equity split between AIP, GIP V and MGX, debt, MW and fee terms are undisclosed; BlackRock's Q3 10-Q was not filed at the cut-off.",
+   "history": [
+    {
+     "date": "2026-04-14",
+     "event": "Fink lists Aligned among 'recently announced deals' that leave GIP V majority committed",
+     "source": "BLK Q1 2026 call, 2026-04-14"
+    },
+    {
+     "date": "2026-07-15",
+     "event": "Close expected 'in the coming weeks'; AIP, GIP and MGX in 'the largest data center infrastructure transaction ever announced'",
+     "source": "BLK Q2 2026 call, 2026-07-15"
+    },
+    {
+     "date": "2026-10-14",
+     "event": "Closing confirmed as AIP's first deployment at ~$40bn EV; Fink says BlackRock is 'looking at two more platforms'",
+     "source": "BLK Q3 2026 release and call, 2026-10-14"
+    },
+    {
+     "date": "2026-11-02",
+     "event": "Recorded as a new timeline ID (closing; MW undisclosed)",
+     "source": "Capstone compute-deal timeline, recorded 2026-11-02"
+    }
+   ],
+   "sources": [
+    {
+     "label": "BLK Q3 call 2026-10-14",
+     "date": "2026-10-14",
+     "ref": "BLK/transcripts/BLK_Q3-2026-earnings_2026-10-14.md"
+    },
+    {
+     "label": "BLK Q3 release 2026-10-14",
+     "date": "2026-10-14",
+     "ref": "BLK/earnings/2026-10-14_blk-ex99_1.htm"
+    },
+    {
+     "label": "BLK Q2 call 2026-07-15",
+     "date": "2026-07-15",
+     "ref": "BLK/transcripts/BLK_Q2-2026-earnings_2026-07-15.md"
+    },
+    {
+     "label": "BLK Q1 call 2026-04-14",
+     "date": "2026-04-14",
+     "ref": "BLK/transcripts/BLK_Q1-2026-earnings_2026-04-14.md"
+    }
+   ],
+   "timeline_anchor": "2026-11-02 recorded — BlackRock and Blue Owl primaries (Financials extension): one new ID (AIP-ALIGNED-2026), a participant statement on SPCX-NVDA-FIN-20261006, footprint context",
+   "linked_bonds": []
+  },
+  {
+   "deal_id": "NOID-META-TEXAS-BLK",
+   "registry_key": "NOID-META-TEXAS-BLK",
+   "no_timeline_id": true,
+   "managers": [
+    "BLK"
+   ],
+   "role": "JV partner / equity sponsor: BlackRock-managed funds (GIP equity, HPS private financing) hold 80% of the Texas Venture; Meta 20%",
+   "title": "El Paso, TX campus: Meta / BlackRock (GIP, HPS) Texas Venture",
+   "counterparty": "Meta Platforms (20% member; construction manager, property manager, RVG provider). Notes issuer Sopaipilla Investor LLC; bookrunners JPMorgan and Morgan Stanley (press)",
+   "tenant_or_offtaker": "Meta (sole tenant; lease commences 2028; four-year initial term, up to 20 years with renewals)",
+   "asset": "DC campus (JV + project bond)",
+   "amount_text": "\"approximately ... $14 billion for the Texas Venture, in total estimated development costs\" (Meta 10-Q, filed 2026-10-22); Fink: \"planned $14 billion data center in Texas\" (2026-10-14). Other bases, not summed: BlackRock ~$4.9bn cash at close (press via TNW; Jefferies desk 2026-07-28); notes ~$12.3-12.6bn (debt); Meta RVG up to ~$13bn (Q2 10-Q).",
+   "amount_usd_bn": 14,
+   "amount_basis": "total development cost",
+   "capacity_text": "\"about 1 GW\" (press; Jefferies desk 2026-07-28; basis unstated); seed critical IT 960 MW (credit workbook, Barclays seed, unverified)",
+   "capacity_mw": 960,
+   "capacity_basis": "critical IT MW (credit-workbook seed, unverified)",
+   "evidence": "filed",
+   "execution": "closed",
+   "first_event_date": "2026-07-23",
+   "latest_update_date": "2026-10-26",
+   "status_note": "Venture formed in July 2026 and closed per Meta's 3Q 10-Q (Meta holds 20% 'following the closing'); campus under construction, rent from Dec 2028 per press. No new terms since; BlackRock's Q3 call and Meta's 10-26 video are re-statements, not confirmation events.",
+   "history": [
+    {
+     "date": "2026-07-23",
+     "event": "Sopaipilla notes launched at $12.3bn; S&P preliminary A+, Fitch expected AA- (press)",
+     "source": "Global Data Center Hub, 2026-07-24 (credit-workbook dossier TXEDCI)"
+    },
+    {
+     "date": "2026-07-28",
+     "event": "Meta and BlackRock announce the 80/20 El Paso JV (~$14bn); BlackRock ~$4.9bn cash, Meta ~$2.3bn of assets, ~$12.5bn venture debt",
+     "source": "TNW relaying company announcement, 2026-07-28 (dossier TXEDCI); Jefferies FIG sales desk, 2026-07-28 (live Outlook read, per BLK page)"
+    },
+    {
+     "date": "2026-07-30",
+     "event": "Meta Q2 10-Q: exclusivity agreement for a 20% venture; RVG maximum ~$13bn; closing expected Q3",
+     "source": "Meta 10-Q, filed 2026-07-30"
+    },
+    {
+     "date": "2026-07-30",
+     "event": "TXEDCI first issued (Bloomberg ISSUE_DT); final size unresolved ($12.3bn marketed, ~$12.5bn sold, $12,639.5mm seed)",
+     "source": "AI_Credit_Live workbook (Grozdea), dossier as of 2026-10-16"
+    },
+    {
+     "date": "2026-10-14",
+     "event": "Fink re-states the Meta Texas financing (GIP equity, HPS private financing); no new terms",
+     "source": "BLK Q3 call, 2026-10-14"
+    },
+    {
+     "date": "2026-10-22",
+     "event": "Meta 3Q 10-Q: Texas Venture formed July 2026; Meta contributed $2.26bn of assets, received $1.04bn; ~$14bn total estimated development cost; lease from 2028",
+     "source": "Meta 10-Q, filed 2026-10-22"
+    },
+    {
+     "date": "2026-10-26",
+     "event": "Meta investor video names the 'joint ventures with BlackRock in Texas'; no amount, MW or new venture",
+     "source": "Meta investor video, 2026-10-26 (Notion transcript)"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Meta 10-Q 2026-10-22",
+     "date": "2026-10-22",
+     "ref": "META/META_10-Q_2026-10-22_0001628280-26-066773.html"
+    },
+    {
+     "label": "Meta 10-Q 2026-07-30",
+     "date": "2026-07-30",
+     "ref": "META/META_10-Q_2026-07-30_0001628280-26-050705.html"
+    },
+    {
+     "label": "BLK Q3 call 2026-10-14",
+     "date": "2026-10-14",
+     "ref": "BLK/transcripts/BLK_Q3-2026-earnings_2026-10-14.md"
+    },
+    {
+     "label": "AI credit workbook dossier TXEDCI (as of 2026-10-16)",
+     "date": "2026-10-16",
+     "ref": "_briefings/2026/2026-10-16-ai-credit-live-workbook-dossiers.md"
+    },
+    {
+     "label": "Meta investor video 2026-10-26",
+     "date": "2026-10-26",
+     "ref": "META/transcripts/META_investor-presentation-video-roadshow-Muse-MSL-compute-capex-2027_2026-10-26.md"
+    }
+   ],
+   "timeline_anchor": "Recorded 2026-10-22 — Meta 3Q26 10-Q: aggregate commitments step up; Texas Venture terms filed",
+   "linked_bonds": [
+    "TXEDCI"
+   ]
+  },
+  {
+   "deal_id": "NOID-META-HYPERION-OWL",
+   "registry_key": "NOID-META-HYPERION-OWL",
+   "no_timeline_id": true,
+   "managers": [
+    "OWL"
+   ],
+   "role": "JV partner / equity sponsor: Blue Owl-managed funds hold 80% of the Louisiana Venture (Meta 20%); Beignet Investor LLC is the Blue Owl fund-sponsored notes issuer",
+   "title": "Hyperion (Richland Parish, LA): Meta / Blue Owl Louisiana Venture",
+   "counterparty": "Meta Platforms (20% member; developer/construction manager; RVG provider). Morgan Stanley exclusive adviser to Meta and sole bookrunner (dossier)",
+   "tenant_or_offtaker": "Meta (sole tenant; leases commence 2029; four-year initial term, up to 20 years with renewals)",
+   "asset": "DC campus (JV + project bond)",
+   "amount_text": "\"approximately $27 billion\" total estimated development costs for the Louisiana Venture (Meta 10-Q, filed 2026-10-22). Other bases, not summed: Lipschultz \"$30 billion of capital investment with Meta in Louisiana\" (OWL Q3 2025 call); Beignet notes ~$27.3bn (debt); Blue Owl investor $7.0bn cash at formation (Meta Q3 2025 10-Q, per dossier).",
+   "amount_usd_bn": 27,
+   "amount_basis": "total development cost",
+   "capacity_text": "seed critical IT 2,064 MW (credit workbook; IFR 2.1 GW); Meta announced a scale-up to 5 GW on 2026-07-13 (reported), perimeter vs the notes unknown",
+   "capacity_mw": 2064,
+   "capacity_basis": "critical IT MW (credit-workbook seed, unverified)",
+   "evidence": "filed",
+   "execution": "closed",
+   "first_event_date": "2025-10-16",
+   "latest_update_date": "2026-10-26",
+   "status_note": "JV signed Oct 2025 and notes issued; campus under construction, leases from 2029. Meta's maximum RVG across both ventures is $41.493bn at 2026-09-30 (vs $28.091bn at 2025-12-31, Louisiana only); the 5 GW expansion is outside the filed $27bn scope unless shown otherwise.",
+   "history": [
+    {
+     "date": "2025-10-16",
+     "event": "Beignet Investor prices ~$27.3bn single-tranche 144A notes; S&P A+ (press)",
+     "source": "IFR, 2025-12 (credit-workbook dossier RPLDCI)"
+    },
+    {
+     "date": "2025-10-21",
+     "event": "JV signed: Meta 20% / Blue Owl investor 80%; Meta contributes ~$4.3bn of assets, receives $2.6bn; investor $7.0bn cash",
+     "source": "Meta 10-Q Q3 2025, filed 2025-10-30 (dossier RPLDCI)"
+    },
+    {
+     "date": "2025-10-27",
+     "event": "Joint announcement of the ~$27bn JV; release relay says ~$3bn distribution vs $2.6bn in the 10-Q",
+     "source": "Hubbis relaying joint release, 2025-10-27 (dossier RPLDCI)"
+    },
+    {
+     "date": "2025-10-30",
+     "event": "Lipschultz: '$30 billion of capital investment with Meta in Louisiana'",
+     "source": "OWL Q3 2025 call, 2025-10-30"
+    },
+    {
+     "date": "2026-01-29",
+     "event": "Meta 10-K: maximum exposure to loss $45.95bn; RVG payments not probable",
+     "source": "Meta 10-K FY2025, 2026-01-29 (dossier RPLDCI)"
+    },
+    {
+     "date": "2026-07-13",
+     "event": "Meta announces Hyperion scale-up to 5 GW and >$50bn (reported; perimeter vs notes unknown)",
+     "source": "Global Data Center Hub, 2026-07 (dossier RPLDCI)"
+    },
+    {
+     "date": "2026-10-08",
+     "event": "Air Street lists a Meta $41bn RVG as 'Hyperion' in a ~$175bn RVG tally (see open question: 10-Q figure covers both ventures)",
+     "source": "Air Street Capital / Benaich, State of AI 2026, 2026-10-08"
+    },
+    {
+     "date": "2026-10-22",
+     "event": "Meta 3Q 10-Q: ~$27bn Louisiana development cost, lease from 2029; max RVG both ventures $41.493bn; total max exposure $68.404bn",
+     "source": "Meta 10-Q, filed 2026-10-22"
+    },
+    {
+     "date": "2026-10-26",
+     "event": "Meta investor video names the 'Blue Owl in Louisiana' JV; no new terms",
+     "source": "Meta investor video, 2026-10-26 (Notion transcript)"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Meta 10-Q 2026-10-22",
+     "date": "2026-10-22",
+     "ref": "META/META_10-Q_2026-10-22_0001628280-26-066773.html"
+    },
+    {
+     "label": "Meta 10-Q 2025-10-30",
+     "date": "2025-10-30",
+     "ref": "META/META_10-Q_2025-10-30_0001628280-25-047240.html"
+    },
+    {
+     "label": "OWL Q3 2025 call 2025-10-30",
+     "date": "2025-10-30",
+     "ref": "OWL/transcripts/OWL_Q3-2025-earnings_2025-10-30.md"
+    },
+    {
+     "label": "AI credit workbook dossier RPLDCI (as of 2026-10-16)",
+     "date": "2026-10-16",
+     "ref": "_briefings/2026/2026-10-16-ai-credit-live-workbook-dossiers.md"
+    },
+    {
+     "label": "Air Street State of AI 2026",
+     "date": "2026-10-08",
+     "ref": "relatórios bons/State-of-AI-Report-2026.html"
+    }
+   ],
+   "timeline_anchor": "Recorded 2026-10-22 — Meta 3Q26 10-Q: aggregate commitments step up; Texas Venture terms filed",
+   "linked_bonds": [
+    "RPLDCI"
+   ]
+  },
+  {
+   "deal_id": "ORCL-JUPITER-EXEC",
+   "registry_key": "ORCL-JUPITER-EXEC",
+   "no_timeline_id": false,
+   "managers": [
+    "OWL"
+   ],
+   "role": "developer / capital provider via STACK Infrastructure (a Blue Owl unit); Blue Owl states '>$20bn of capital investment with Oracle in New Mexico'. A Blue Owl equity leg is reported only by a low-quality source",
+   "title": "Project Jupiter (Dona Ana County, NM): Oracle/OpenAI campus built by STACK",
+   "counterparty": "Oracle (tenant/guarantor of power-delivery risk per FT); STACK Infrastructure (developer); bank lenders (~$18bn loan per WSJ)",
+   "tenant_or_offtaker": "Oracle (capacity for OpenAI)",
+   "asset": "DC campus",
+   "amount_text": "\"over $20 billion of capital investment with Oracle in New Mexico\" (Lipschultz, OWL Q3 2025 call, 2025-10-30); WSJ: lender sold debt below 90c of the \"$18bn bank loan\" (2026-09-25, per ORCL page). Different bases; no single deal amount.",
+   "amount_usd_bn": null,
+   "amount_basis": "undisclosed",
+   "capacity_text": "2.45GW (ORCL page); 2.2 GW (GS 2026-10-22); 1.5 GW (Barclays Stargate map); core 1.2 GW (UBS channel check); '>1 GW of IT capacity under construction' (SemiAnalysis 2026-10-20). Bases unstated or different.",
+   "capacity_mw": null,
+   "capacity_basis": "conflicting / undisclosed",
+   "evidence": "company-announced",
+   "execution": "announced",
+   "first_event_date": "2025-10-30",
+   "latest_update_date": "2026-10-22",
+   "status_note": "Site-execution ID, not a compute or financing ID. Under construction; Oracle's reported force-majeure notice (2026-09-24) seeks payment deferral if the 2028 opening slips, and Oracle says the project is on schedule. Blue Owl's equity/debt split is undisclosed; first archived Blue Owl mention is 2025-10-30 (announced in the prior two months).",
+   "history": [
+    {
+     "date": "2025-10-30",
+     "event": "Lipschultz cites '>$20bn of capital investment with Oracle in New Mexico' among >$50bn announced in two months",
+     "source": "OWL Q3 2025 call, 2025-10-30"
+    },
+    {
+     "date": "2026-09-21",
+     "event": "@zerohedge describes an SPV funded by bonds, loans and Blue Owl equity; loans quoted at 89-91c (unverified source)",
+     "source": "@zerohedge via ORCL page, 2026-09-21"
+    },
+    {
+     "date": "2026-09-24",
+     "event": "Reported force-majeure notice to defer payment if delivery misses 2028; Oracle says project on schedule",
+     "source": "Bloomberg via MS Research / Tyler, 2026-09-25 (timeline S10)"
+    },
+    {
+     "date": "2026-09-25",
+     "event": "FT: power-delivery risk sits with Oracle; WSJ: at least one lender sold debt below 90c of the $18bn loan; Reuters: STACK building the campus for OpenAI",
+     "source": "FT/WSJ via ORCL page, 2026-09-25; BofA EMEA Software daily / Boulan (Reuters relay), 2026-09-25"
+    },
+    {
+     "date": "2026-10-16",
+     "event": "Oracle seeks expedited gas-pipeline approval (relay)",
+     "source": "UBS / Vogt et al., 2026-10-16"
+    },
+    {
+     "date": "2026-10-20",
+     "event": "Aterio and SemiAnalysis restate the force majeure; SemiAnalysis models a 'much slower' ramp",
+     "source": "Aterio @ GS call, 2026-10-20; SemiAnalysis Weekly Ep. 039, 2026-10-20 (podcast)"
+    },
+    {
+     "date": "2026-10-22",
+     "event": "GS: power plan moved to Bloom fuel cells; NM Supreme Court stayed permit proceedings; site modelled at 2.2 GW from 1HCY27",
+     "source": "Goldman Sachs / Borges, Hager, 2026-10-22"
+    }
+   ],
+   "sources": [
+    {
+     "label": "OWL Q3 2025 call 2025-10-30",
+     "date": "2025-10-30",
+     "ref": "OWL/transcripts/OWL_Q3-2025-earnings_2025-10-30.md"
+    },
+    {
+     "label": "GS ORCL data-center model refresh 2026-10-22",
+     "date": "2026-10-22",
+     "ref": "relatórios bons/Goldman_Sachs_ORCL_Oracle_Corp_ORCL_Data_center_model_refresh_ahead_of.html"
+    },
+    {
+     "label": "ORCL wiki page (Jupiter blocks 2026-09-21/25)",
+     "date": "2026-09-25",
+     "ref": "_wiki/ORCL.md"
+    },
+    {
+     "label": "OWL wiki page (STACK / Jupiter link)",
+     "date": "2026-11-02",
+     "ref": "_wiki/OWL.md"
+    }
+   ],
+   "timeline_anchor": "Recorded 2026-10-23 — AWS CEO repeats the OpenAI Trainium commitment; GS site-risk recap on two Oracle IDs; CoreWeave financing context",
+   "linked_bonds": []
+  },
+  {
+   "deal_id": "NOID-ORCL-ABILENE-OWL",
+   "registry_key": "NOID-ORCL-ABILENE-OWL",
+   "no_timeline_id": true,
+   "managers": [
+    "OWL"
+   ],
+   "role": "owner / financing anchor: Blue Owl 'anchored the financing' and is 'the owner'; Crusoe developer (Blue Owl also part of Crusoe's own financing)",
+   "title": "Abilene, TX (Stargate 1): Oracle-leased campus, Crusoe / Blue Owl",
+   "counterparty": "Crusoe (developer); Lancium (site energy infrastructure, a Blackstone portfolio company, per BX Q3 call)",
+   "tenant_or_offtaker": "Oracle (capacity for OpenAI)",
+   "asset": "DC campus",
+   "amount_text": "\"approximately $15 billion of project value through phase II\" (Lipschultz, OWL Q3 2025 call, 2025-10-30)",
+   "amount_usd_bn": 15,
+   "amount_basis": "project value (basis unstated)",
+   "capacity_text": "1.2-1.6 GW (Barclays Stargate map, on ORCL page); Oracle: six of eight buildings, 618MW, 75% of capacity delivered (FQ1 FY27 call, 2026-09-10). Bases differ.",
+   "capacity_mw": null,
+   "capacity_basis": "conflicting / undisclosed",
+   "evidence": "company-announced",
+   "execution": "delivered",
+   "first_event_date": null,
+   "latest_update_date": "2026-09-10",
+   "status_note": "Partially delivered: Oracle reports six of eight buildings handed to the customer (2026-09-10). No timeline ID ('No Stargate site-level IDs exist'); Blue Owl's debt/equity split and lease terms are not on disk. 'Previously announced' before 2025-10-30; original date not archived.",
+   "history": [
+    {
+     "date": "2025-10-30",
+     "event": "Lipschultz: Blue Owl anchored ~$15bn of project value through phase II; Crusoe developer, Blue Owl owner, Oracle tenant",
+     "source": "OWL Q3 2025 call, 2025-10-30"
+    },
+    {
+     "date": "2026-09-10",
+     "event": "Oracle: six of eight Abilene buildings (618MW, 75% of capacity) delivered to the customer",
+     "source": "Oracle FQ1 FY27 call, 2026-09-10 (per ORCL page)"
+    },
+    {
+     "date": "2026-10-22",
+     "event": "Schwarzman: portfolio company Lancium provides energy infrastructure to OpenAI's flagship Texas site",
+     "source": "BX Q3 call, 2026-10-22"
+    }
+   ],
+   "sources": [
+    {
+     "label": "OWL Q3 2025 call 2025-10-30",
+     "date": "2025-10-30",
+     "ref": "OWL/transcripts/OWL_Q3-2025-earnings_2025-10-30.md"
+    },
+    {
+     "label": "ORCL wiki page (Abilene, Stargate site map)",
+     "date": "2026-09-10",
+     "ref": "_wiki/ORCL.md"
+    },
+    {
+     "label": "BX Q3 call 2026-10-22",
+     "date": "2026-10-22",
+     "ref": "BX/transcripts/BX_Q3-2026-earnings_2026-10-22.md"
+    }
+   ],
+   "timeline_anchor": "Recorded 2026-10-23 — AWS CEO repeats the OpenAI Trainium commitment; GS site-risk recap on two Oracle IDs; CoreWeave financing context",
+   "linked_bonds": []
+  },
+  {
+   "deal_id": "NOID-AMZN-STACK-12BN",
+   "registry_key": "NOID-AMZN-STACK-12BN",
+   "no_timeline_id": true,
+   "managers": [
+    "OWL"
+   ],
+   "role": "equity investor (Blue Owl digital infrastructure funds) and developer (STACK Infrastructure, a Blue Owl unit)",
+   "title": "Amazon $12bn data-center campus: Blue Owl funds / STACK (watch item)",
+   "counterparty": "Amazon (announcer)",
+   "tenant_or_offtaker": "Amazon (lease terms unstated)",
+   "asset": "DC campus",
+   "amount_text": "\"a $12 billion data center campus\" announced by Amazon (Lipschultz, OWL Q1 2026 call, 2026-04-30)",
+   "amount_usd_bn": 12,
+   "amount_basis": "project value (basis unstated)",
+   "capacity_text": "undisclosed",
+   "capacity_mw": null,
+   "capacity_basis": "undisclosed",
+   "evidence": "company-announced",
+   "execution": "announced",
+   "first_event_date": null,
+   "latest_update_date": "2026-04-30",
+   "status_note": "Watch item: Amazon's own announcement is not archived; site, MW, lease and financing terms are unstated. The same call dates the announcement both 'a couple of months ago' and 'a couple weeks ago'.",
+   "history": [
+    {
+     "date": "2026-04-30",
+     "event": "Blue Owl cites an Amazon $12bn campus with its funds' investment and STACK development; its 'fourth' >$10bn project in ~18 months",
+     "source": "OWL Q1 2026 call, 2026-04-30"
+    },
+    {
+     "date": "2026-11-02",
+     "event": "Recorded as context (no ID) in the timeline",
+     "source": "Capstone compute-deal timeline, recorded 2026-11-02"
+    }
+   ],
+   "sources": [
+    {
+     "label": "OWL Q1 call 2026-04-30",
+     "date": "2026-04-30",
+     "ref": "OWL/transcripts/OWL_Q1-2026-earnings_2026-04-30.md"
+    }
+   ],
+   "timeline_anchor": "2026-11-02 recorded — BlackRock and Blue Owl primaries (Financials extension): one new ID (AIP-ALIGNED-2026), a participant statement on SPCX-NVDA-FIN-20261006, footprint context",
+   "linked_bonds": []
+  },
+  {
+   "deal_id": "NOID-CRWV-LANCASTER-OWL",
+   "registry_key": "NOID-CRWV-LANCASTER-OWL",
+   "no_timeline_id": true,
+   "managers": [
+    "OWL"
+   ],
+   "role": "co-developer / financing sponsor (Blue Owl funds); reportedly could not syndicate the debt",
+   "title": "Lancaster, PA CoreWeave data center co-developed by Blue Owl",
+   "counterparty": "CoreWeave",
+   "tenant_or_offtaker": "CoreWeave (self-build site per UBS)",
+   "asset": "DC campus",
+   "amount_text": "\"a $4 billion data center it is co-developing in Pennsylvania\" (Business Insider via JPM desk, 2026-02-20); Blue Owl spokesman: \"fully funded, on time, and on budget\" (Jefferies desk, 2026-02-20)",
+   "amount_usd_bn": 4,
+   "amount_basis": "project value (basis unstated)",
+   "capacity_text": "Lancaster, PA (capacity of 300 MW): UBS, 2026-09-22, on CRWV page; site capacity, basis unstated",
+   "capacity_mw": 300,
+   "capacity_basis": "site capacity (basis unstated)",
+   "evidence": "press-reported",
+   "execution": "unknown",
+   "first_event_date": "2026-02-20",
+   "latest_update_date": "2026-02-23",
+   "status_note": "Press-reported financing difficulty; Blue Owl says the project is fully funded. No timeline ID; debt raise, tenant lease terms and delivery dates not on disk.",
+   "history": [
+    {
+     "date": "2026-02-20",
+     "event": "Report that Blue Owl could not arrange financing for a $4bn CoreWeave data center in Pennsylvania; spokesman says fully funded",
+     "source": "JPM Tech Sketch / Schilsky (Business Insider), 2026-02-20; Jefferies FIG sales / Panzer (cites Bloomberg), 2026-02-20"
+    },
+    {
+     "date": "2026-09-22",
+     "event": "UBS lists Lancaster, PA at 300 MW among CoreWeave self-build sites",
+     "source": "UBS / Keirstead, Giuditta, 2026-09-22 (per CRWV page)"
+    }
+   ],
+   "sources": [
+    {
+     "label": "JPM Tech Sketch 2026-02-20",
+     "date": "2026-02-20",
+     "ref": "OWL/commentary/2026-02-20_JPM-TECH-SKETCH-APP-Working-on-OpenAI-Ads-BKNG-Gets-Expedia-d-OWL-CRWV-Financing-Problems-GOOGL-Gemi_04504be9.md"
+    },
+    {
+     "label": "Jefferies FIG sales 2026-02-20",
+     "date": "2026-02-20",
+     "ref": "OWL/commentary/2026-02-20_JEF-AM-FIG-PICKS-PANZ-2-20-26-----OWL-KLAR-Follow-Ups-CSGP---Surinder-Upgrades-To-BUY-TRU-Follow-Up_66dc9730.md"
+    },
+    {
+     "label": "CRWV wiki page (UBS site list)",
+     "date": "2026-09-22",
+     "ref": "_wiki/CRWV.md"
+    }
+   ],
+   "timeline_anchor": null,
+   "linked_bonds": []
+  },
+  {
+   "deal_id": "NOID-IREN-OWL-CHIPFIN-3Q26",
+   "registry_key": "NOID-IREN-OWL-CHIPFIN-3Q26",
+   "no_timeline_id": true,
+   "managers": [
+    "OWL"
+   ],
+   "role": "lender (chip financing), self-stated by Blue Owl",
+   "title": "IREN chip financing (Blue Owl, 3Q26)",
+   "counterparty": "IREN",
+   "tenant_or_offtaker": "undisclosed (do not map to IREN-MSFT-202511)",
+   "asset": "chips/GPU financing",
+   "amount_text": "no amount: \"We did it this quarter... say with an IREN\" (Lipschultz, OWL Q3 call, 2026-10-29)",
+   "amount_usd_bn": null,
+   "amount_basis": "undisclosed",
+   "capacity_text": "undisclosed",
+   "capacity_mw": null,
+   "capacity_basis": "undisclosed",
+   "evidence": "company-announced",
+   "execution": "unknown",
+   "first_event_date": "2026-10-29",
+   "latest_update_date": "2026-10-29",
+   "status_note": "Participant statement only; the timeline keeps it as a watch note with no ID until a counterparty filing gives terms. IREN reports this week.",
+   "history": [
+    {
+     "date": "2026-10-29",
+     "event": "Lipschultz says Blue Owl did a chip financing this quarter with IREN; no terms",
+     "source": "OWL Q3 call, 2026-10-29"
+    }
+   ],
+   "sources": [
+    {
+     "label": "OWL Q3 call 2026-10-29",
+     "date": "2026-10-29",
+     "ref": "OWL/transcripts/OWL_Q3-2026-earnings_2026-10-29.md"
+    }
+   ],
+   "timeline_anchor": "2026-11-02 recorded — BlackRock and Blue Owl primaries (Financials extension): one new ID (AIP-ALIGNED-2026), a participant statement on SPCX-NVDA-FIN-20261006, footprint context",
+   "linked_bonds": []
+  },
+  {
+   "deal_id": "BX-GOOG-AVGO-2026",
+   "registry_key": "BX-GOOG-AVGO-2026/crux",
+   "leg": "Crux AI (Blackstone-Google JV)",
+   "no_timeline_id": false,
+   "managers": [
+    "BX"
+   ],
+   "role": "JV partner / equity sponsor: Blackstone committed up to $5.0bn of capital contributions; BXPE names Crux as its new Google JV",
+   "title": "Crux AI: Blackstone / Google TPU compute-as-a-service JV",
+   "counterparty": "Google (minority JV partner; up to $10.0bn of backstops; multi-year commercial agreement). Lenders: $22bn loan from ten banks incl. Goldman Sachs, SMBC, Barclays, BNP Paribas, Scotiabank (Reuters)",
+   "tenant_or_offtaker": "Crux customers (unnamed); Crux is itself Google's customer ($16.8bn of Google backlog)",
+   "asset": "chips/TPU compute platform (compute-as-a-service JV)",
+   "amount_text": "Blackstone \"committed to provide future capital contributions of up to $5.0 billion\" (GOOG 10-Q, filed 2026-10-29). Other bases, not summed: Google backstops up to $10.0bn; $16.8bn Google backlog from Crux; reported $22bn bank loan + $1bn revolver (Reuters/Bloomberg 2026-09-16; 9fin ~$23bn 09-15).",
+   "amount_usd_bn": 5.0,
+   "amount_basis": "commitment ceiling",
+   "capacity_text": "Blackstone initial 500 MW in 2027 target (2026-05-18 vintage); Crux website: 2GW/yr capacity ramp beginning 2H 2027 (observed 2026-10-30). Electrical basis undefined.",
+   "capacity_mw": null,
+   "capacity_basis": "undisclosed (targets only)",
+   "evidence": "filed",
+   "execution": "binding",
+   "first_event_date": "2026-05",
+   "latest_update_date": "2026-10-30",
+   "status_note": "Agreement signed May 2026 and launched per Google (10-28); commitment and backstops filed in Alphabet's 10-Q. No draws, hardware receipts or delivered capacity disclosed. Shares the umbrella ID with the separate Big Sky financing (see BX-GOOG-AVGO-2026/big-sky).",
+   "history": [
+    {
+     "date": "2026-05",
+     "event": "Agreement to form a US JV: Blackstone up to $5.0bn capital; Google up to $10.0bn of data-center/energy backstops, subject to conditions",
+     "source": "GOOG 10-Q, filed 2026-10-29"
+    },
+    {
+     "date": "2026-05-18",
+     "event": "Blackstone initial target of 500 MW in 2027 (earlier vintage, per timeline)",
+     "source": "Blackstone, 2026-05-18 (as preserved in the timeline 2026-10-30 entry)"
+    },
+    {
+     "date": "2026-09-15",
+     "event": "9fin reports roughly $23bn of chip-portfolio financing (likely bridge)",
+     "source": "9fin / Weisbrod, Hoffman, Oh, 2026-09-15"
+    },
+    {
+     "date": "2026-09-16",
+     "event": "$22bn loan from ten banks; separate $1bn revolver; collateral Google TPUs and customer contracts (overlapping vintages)",
+     "source": "Reuters / Varghese, Basil, 2026-09-16; Investing.com / Juricic relaying Bloomberg, 2026-09-16"
+    },
+    {
+     "date": "2026-09-22",
+     "event": "Blackstone states up to $5bn with Google for a TPU-powered AI cloud, plus an Anthropic enterprise-adoption JV (UBS relay of investor event)",
+     "source": "UBS / Keirstead, Giuditta, 2026-09-22 (S4)"
+    },
+    {
+     "date": "2026-10-22",
+     "event": "Schwarzman restates the Crux launch with Google and 'Ode' with Anthropic",
+     "source": "BX Q3 call, 2026-10-22"
+    },
+    {
+     "date": "2026-10-28",
+     "event": "Google confirms: 'we have launched, along with Blackstone, an agreement for Crux AI'",
+     "source": "Kurian, GOOG Q3 call, 2026-10-28"
+    },
+    {
+     "date": "2026-10-29",
+     "event": "First filed dollar terms: $16.8bn of Google backlog from Crux; Google minority stake, equity method",
+     "source": "GOOG 10-Q, filed 2026-10-29"
+    },
+    {
+     "date": "2026-10-30",
+     "event": "BXPE Q3 letter names Crux (no stake or cost); Crux website states 2GW/yr ramp from 2H 2027",
+     "source": "BXPE Q3 2026 investor letter, accessed 2026-10-30; crux.ai, observed 2026-10-30"
+    }
+   ],
+   "sources": [
+    {
+     "label": "GOOG 10-Q 2026-10-29",
+     "date": "2026-10-29",
+     "ref": "GOOG/GOOG_10-Q_2026-10-29_0001652044-26-000084.html"
+    },
+    {
+     "label": "GOOG Q3 call 2026-10-28",
+     "date": "2026-10-28",
+     "ref": "GOOG/transcripts/GOOG_Q3-2026-earnings_2026-10-28.md"
+    },
+    {
+     "label": "Crux evidence record 2026-10-30",
+     "date": "2026-10-30",
+     "ref": "_wiki/_meta/research/crux-ai-2026-10-30/evidence.json"
+    },
+    {
+     "label": "Reuters, $22bn Crux loan 2026-09-16",
+     "date": "2026-09-16",
+     "ref": "https://www.investing.com/news/stock-market-news/banks-provide-22-billion-chip-loan-to-blackstone-alphabet-cloud-venture-bloomberg-news-reports-4904543"
+    },
+    {
+     "label": "BXPE Q3 2026 investor letter",
+     "date": "2026-10-30",
+     "ref": "https://www.bxpe.com/wp-content/uploads/sites/26/blackstone-secure/Q3-2026-Investor-Letter.pdf"
+    },
+    {
+     "label": "UBS S4 2026-09-22",
+     "date": "2026-09-22",
+     "ref": "relatórios bons/ued51857.html"
+    },
+    {
+     "label": "BX Q3 call 2026-10-22",
+     "date": "2026-10-22",
+     "ref": "BX/transcripts/BX_Q3-2026-earnings_2026-10-22.md"
+    }
+   ],
+   "timeline_anchor": "2026-10-30 — Crux buyer-side financing and operating roadmap",
+   "linked_bonds": []
+  },
+  {
+   "deal_id": "BX-GOOG-AVGO-2026",
+   "registry_key": "BX-GOOG-AVGO-2026/big-sky",
+   "leg": "Big Sky ($35bn Broadcom AI XPV financing)",
+   "no_timeline_id": false,
+   "managers": [
+    "APO",
+    "BX"
+   ],
+   "role": "APO: lead arranger/lender ('led a $35 billion financing') plus first-loss equity via Apollo/Atlas SP (~$0.8bn); BX: co-lender (Blackstone-stated '$35bn financing platform with Broadcom')",
+   "title": "Big Sky: $35bn Broadcom AI XPV chip financing (Anthropic lessee)",
+   "counterparty": "Broadcom (AI XPV platform; residual value support on A1/A2, ~$29bn maximum exposure). A1 arrangers Wells Fargo/BNP/Citi/UBS; A2 placement agents Goldman/BofA/Morgan Stanley",
+   "tenant_or_offtaker": "Anthropic (leases racks from the SPV, ~5-year leases)",
+   "asset": "chips/accelerator lease (XPV/TPU racks)",
+   "amount_text": "\"we led a $35 billion financing in support of their new AI XPV platform\" (Apollo Q2 call, 2026-08-04). Reported tranches: A1 $6bn (T+100bp), A2 $24bn (5.75%), B $4.5bn (8.5%), Apollo/Atlas SP equity ~$0.8bn; rounded headline, not forced to the tranche sum.",
+   "amount_usd_bn": 35,
+   "amount_basis": "facility size",
+   "capacity_text": "\"an initial 1 GW of compute\" (Blackstone via UBS, 2026-09-22); Wells Fargo: 'first >1GW for $35B' (2026-10-06)",
+   "capacity_mw": 1000,
+   "capacity_basis": "undisclosed (compute GW, Blackstone-stated via UBS relay; not in Apollo/Broadcom primaries)",
+   "evidence": "filed",
+   "execution": "closed",
+   "first_event_date": "2026-06-02",
+   "latest_update_date": "2026-10-27",
+   "status_note": "Financing finalized June 2026 and drawn over multiple quarters (weighted Q4 2026 to Q3 2027, per Apollo); funded balance undisclosed. Broadcom's RVS is filed (10-Q 2026-09-10). Distinct from North Star (ANTH-AVGO-CHIP-FIN-20261005), Crux and Anthropic's separate $42bn rent-note facility.",
+   "history": [
+    {
+     "date": "2026-06-02",
+     "event": "Price talk: ~$36bn package, $25bn A2 at 5.50-5.75% (pre-finalization vintage)",
+     "source": "PitchBook via Yahoo, 2026-06-02"
+    },
+    {
+     "date": "2026-06-05",
+     "event": "Apollo and Blackstone finalize $35bn financing; A1/A2/B tranche terms reported",
+     "source": "Bloomberg via Investing.com / Mugo, 2026-06-05"
+    },
+    {
+     "date": "2026-06-09",
+     "event": "Apollo announces it leads a $35bn capital solution for Broadcom AI; committed capital on a multi-year draw schedule",
+     "source": "Apollo press release, 2026-06-09"
+    },
+    {
+     "date": "2026-06-16",
+     "event": "Equity component ~$0.8bn (Apollo/Atlas SP), first-loss",
+     "source": "JPM AI Capex 2.0, 2026-06-16 (per AVGO page)"
+    },
+    {
+     "date": "2026-08-04",
+     "event": "Fees and origination recognized as drawn, weighted to Q4 2026 and Q1-Q3 2027; excluded from Q2 origination",
+     "source": "Apollo Q2 2026 call (company corrected transcript), 2026-08-04"
+    },
+    {
+     "date": "2026-09-10",
+     "event": "Broadcom 10-Q: ~$29bn maximum undiscounted RVS exposure; five-year underlying leases; 85% shortfall formula",
+     "source": "Broadcom 10-Q, filed 2026-09-10"
+    },
+    {
+     "date": "2026-09-22",
+     "event": "Blackstone describes a $35bn financing platform with Broadcom for an initial 1 GW of compute",
+     "source": "UBS relay of Blackstone investor event, 2026-09-22 (S4)"
+    },
+    {
+     "date": "2026-10-06",
+     "event": "Per-GW chain modelled: TPUs $21.0bn/GW, systems $24.2bn/GW, SPV $35.0bn/GW (broker model)",
+     "source": "Wells Fargo / Gawrelski, 2026-10-06"
+    },
+    {
+     "date": "2026-10-19",
+     "event": "Desk view: Blackstone fees recognized when earned vs Apollo ACS fees as lines are drawn (interpretation)",
+     "source": "Jefferies FIG sales / Panzer, 2026-10-19"
+    },
+    {
+     "date": "2026-10-26",
+     "event": "Anthropic S-1: ~$161.2bn total rent over five-year equipment leases incl. a $125.2bn 2026 lease (related; no allocation to this leg)",
+     "source": "Anthropic S-1, filed 2026-10-26"
+    },
+    {
+     "date": "2026-10-27",
+     "event": "Bloomberg relay names the $35bn Apollo/Blackstone XPV financing 'Big Sky'",
+     "source": "The Edge relaying Bloomberg, 2026-10-27"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Apollo Q2 call 2026-08-04",
+     "date": "2026-08-04",
+     "ref": "APO/transcripts/APO_IR_APO-2Q26-Transcript.md"
+    },
+    {
+     "label": "Apollo release 2026-06-09",
+     "date": "2026-06-09",
+     "ref": "https://ir.apollo.com/news-events/press-releases/detail/629/apollo-leads-35-billion-capital-solution-for-broadcom-ai"
+    },
+    {
+     "label": "Bloomberg via Investing.com 2026-06-05",
+     "date": "2026-06-05",
+     "ref": "https://www.investing.com/news/company-news/apollo-blackstone-finalize-35-billion-ai-chip-financing-for-anthropic-4729436"
+    },
+    {
+     "label": "Broadcom 10-Q 2026-09-10",
+     "date": "2026-09-10",
+     "ref": "AVGO/AVGO_10-Q_2026-09-10_0001730168-26-000080.html"
+    },
+    {
+     "label": "Wells Fargo GOOGL TPU economics 2026-10-06",
+     "date": "2026-10-06",
+     "ref": "relatórios bons/4e86d534-b140-4ed9-978a-4eb53aff0924.html"
+    },
+    {
+     "label": "Jefferies / Panzer email 2026-10-19",
+     "date": "2026-10-19",
+     "ref": "BX/commentary/2026-10-19_OUTLOOK_d948f3c229c8.md"
+    },
+    {
+     "label": "The Edge (Bloomberg) 2026-10-27",
+     "date": "2026-10-27",
+     "ref": "https://theedgemalaysia.com/node/823334"
+    }
+   ],
+   "timeline_anchor": "Recorded 2026-10-28 — Earlier Big Sky tranche backfill (BX-GOOG-AVGO-2026)",
+   "linked_bonds": []
+  },
+  {
+   "deal_id": "ANTH-AVGO-CHIP-FIN-20261005",
+   "registry_key": "ANTH-AVGO-CHIP-FIN-20261005",
+   "no_timeline_id": false,
+   "managers": [
+    "BX"
+   ],
+   "role": "junior lender: 'sole provider of the committed portion of the second lien' (release); ~$9bn of a planned ~$18bn junior per FT 2026-10-05",
+   "title": "North Star: $63bn Broadcom XPU financing for Anthropic (2027 chip orders)",
+   "counterparty": "Northstar Compute LLC (new SPV); first lien arranged by Bank of America, Citi, Morgan Stanley; Broadcom residual value support equal to the first lien",
+   "tenant_or_offtaker": "Anthropic (lessee)",
+   "asset": "chips/accelerator lease (Broadcom XPU accelerators and networking)",
+   "amount_text": "\"a $63 billion transaction\" (BofA/Blackstone/Citi/Morgan Stanley release, 2026-10-26); Milbank: 'debt and equity'; Reuters ~$43.5bn first lien. Earlier vintage: FT $60bn = ~$42bn senior + ~$18bn junior (Blackstone ~$9bn).",
+   "amount_usd_bn": 63,
+   "amount_basis": "facility size",
+   "capacity_text": "GW undisclosed; deliveries expected from calendar 2027",
+   "capacity_mw": null,
+   "capacity_basis": "undisclosed",
+   "evidence": "filed",
+   "execution": "binding",
+   "first_event_date": "2026-08-24",
+   "latest_update_date": "2026-10-27",
+   "status_note": "Committed financing announced 2026-10-26; Broadcom's 8-K (2026-10-27) files ~$43bn maximum potential RVS. Not closed or funded; final tranche sizes, second-lien vs equity split and pricing unverified. A proposed up-to-$21bn IG bond refinancing (Q1 2027) is unissued.",
+   "history": [
+    {
+     "date": "2026-08-24",
+     "event": "Pre-launch press marks: Bloomberg '>$60bn incl. $30bn junior'; UBS '~$100bn' (same structure, superseded by FT split)",
+     "source": "Bloomberg / UBS, 2026-08-24 (per AVGO page)"
+    },
+    {
+     "date": "2026-10-05",
+     "event": "Senior tranche begins bank syndication: $60bn = ~$42bn Broadcom-supported senior + ~$18bn junior; Blackstone ~$9bn of junior",
+     "source": "FT / Michelle Chan, 2026-10-05"
+    },
+    {
+     "date": "2026-10-10",
+     "event": "Initial terms: two $21bn senior pieces (SOFR+150bp / +187.5bp, 2033-09-30) and a $1.5bn term loan",
+     "source": "IFR, 2026-10-10 (via TSN Media / Silicon Sideline relays)"
+    },
+    {
+     "date": "2026-10-16",
+     "event": "Anthropic offers Blackstone a 10% coupon / >10% yield on its $9bn junior anchor (offer, not final pricing)",
+     "source": "FT via Investing.com / Mugo, 2026-10-16"
+    },
+    {
+     "date": "2026-10-26",
+     "event": "Announced $63bn via a new SPV; Blackstone sole provider of the committed second lien; Broadcom RVS; deliveries from CY2027",
+     "source": "BofA/Blackstone/Citi/Morgan Stanley release, 2026-10-26; Milbank, 2026-10-26; Reuters, 2026-10-26"
+    },
+    {
+     "date": "2026-10-27",
+     "event": "Broadcom 8-K: ~$43bn maximum potential undiscounted RVS at deployment; 72.5% shortfall formula",
+     "source": "Broadcom 8-K, 2026-10-27"
+    },
+    {
+     "date": "2026-10-27",
+     "event": "Banks explore up to ~$21bn IG North Star bonds in Q1 2027 to refinance part of the bank debt (proposed)",
+     "source": "Bloomberg / Barbuscia, 2026-10-27"
+    }
+   ],
+   "sources": [
+    {
+     "label": "BofA/Blackstone/Citi/MS release 2026-10-26 (image archive)",
+     "date": "2026-10-26",
+     "ref": "relatórios bons/Bank_of_America_Blackstone_Citi_and_Morgan_Stanley_Announce_Landmark_63_Billion_Financing_Structure_to_Enable_AI_Compute.html"
+    },
+    {
+     "label": "Broadcom 8-K 2026-10-27",
+     "date": "2026-10-27",
+     "ref": "https://investors.broadcom.com/static-files/0ee4f6b7-4a23-4de0-8f3e-48f147ae30d3"
+    },
+    {
+     "label": "Milbank 2026-10-26",
+     "date": "2026-10-26",
+     "ref": "_wiki/_data/research/AVGO_Anthropic_tranches_2026-10-28/milbank_2026-10-26.html"
+    },
+    {
+     "label": "Reuters 2026-10-26",
+     "date": "2026-10-26",
+     "ref": "https://www.investing.com/news/stock-market-news/wall-street-banks-blackstone-line-up-63-billion-to-finance-broadcom-chips-for-anthropic-4973662"
+    },
+    {
+     "label": "FT 2026-10-05 (image archive)",
+     "date": "2026-10-05",
+     "ref": "relatórios bons/Wall_Street_banks_launch_record_60bn_chip_deal_for_Broadcom_and_Anthropic.html"
+    },
+    {
+     "label": "FT via Investing.com 2026-10-16",
+     "date": "2026-10-16",
+     "ref": "https://ca.investing.com/news/company-news/anthropic-offers-blackstone-over-10-yield-in-60b-ai-chip-financing--ft-reports-4886170"
+    },
+    {
+     "label": "Bloomberg via Yahoo 2026-10-27",
+     "date": "2026-10-27",
+     "ref": "https://uk.finance.yahoo.com/news/banks-eye-21-billion-bonds-200929570.html"
+    }
+   ],
+   "timeline_anchor": "Added 2026-10-12 — Anthropic / Broadcom 2027 chip-lease financing (FT)",
+   "linked_bonds": []
+  },
+  {
+   "deal_id": "NOID-QTS-MSFT-FAYETTEVILLE-DC12",
+   "registry_key": "NOID-QTS-MSFT-FAYETTEVILLE-DC12",
+   "no_timeline_id": true,
+   "managers": [
+    "BX"
+   ],
+   "role": "platform owner / sponsor: QTS (QualityTech, LP) is a Blackstone portfolio company; notes issued by QTS Fayetteville I DC1-2 LLC and its TRS entity",
+   "title": "QTS Fayetteville DC1-2 (Microsoft): $4.6bn 5.70% 2036 project bond",
+   "counterparty": "QTS project SPVs; initial purchasers incl. J.P. Morgan, SMBC Nikko, Goldman Sachs, Wells Fargo",
+   "tenant_or_offtaker": "Microsoft (lease not public; seed 20-year term, 15-year renewal, triple net, unverified)",
+   "asset": "DC campus (non-recourse single-asset project bond refinancing construction facilities)",
+   "amount_text": "\"$4.6bn\" 5.700% Senior Secured Notes due 2036 (issuer counsel says over $4.5bn); closed 2026-04-15 (credit-workbook dossier QTSQST)",
+   "amount_usd_bn": 4.6,
+   "amount_basis": "debt",
+   "capacity_text": "seed 340 MW critical IT (credit workbook, unverified; Epoch ~321 MW for Buildings 1-2)",
+   "capacity_mw": 340,
+   "capacity_basis": "critical IT MW (credit-workbook seed, unverified)",
+   "evidence": "company-announced",
+   "execution": "closed",
+   "first_event_date": "2026-04-06",
+   "latest_update_date": "2026-09-16",
+   "status_note": "Closed 144A deal with no SEC filings; buildings largely live (Epoch estimates; Jefferies desk marks construction 'completed'). Microsoft tenancy is press-reported; QTS does not disclose customers.",
+   "history": [
+    {
+     "date": "2026-04-06",
+     "event": "QTS launches a 10-year green IG bond, ~$4.6bn",
+     "source": "Bloomberg, 2026-04-06 (dossier QTSQST)"
+    },
+    {
+     "date": "2026-04-15",
+     "event": "Closing of 5.700% Senior Secured Notes due 2036; Moody's first-time Baa2 (reported)",
+     "source": "Issuer counsel; Moody's via DCD (dossier QTSQST)"
+    },
+    {
+     "date": "2026-09-14",
+     "event": "Desk comp: Microsoft tenant; construction completed; Debt/NOI 14.5x at stabilization",
+     "source": "Jefferies FI trading desk / Haber, 2026-09-14"
+    }
+   ],
+   "sources": [
+    {
+     "label": "AI credit workbook dossier QTSQST (as of 2026-10-16)",
+     "date": "2026-10-16",
+     "ref": "_briefings/2026/2026-10-16-ai-credit-live-workbook-dossiers.md"
+    },
+    {
+     "label": "Jefferies FI desk survival guide 2026-09-14",
+     "date": "2026-09-14",
+     "ref": "relatórios bons/A_Survival_Guide_to_Datacenter_Credit.html"
+    }
+   ],
+   "timeline_anchor": "Datacenter project-bond comp read-through recorded 2026-10-16 (Jefferies FI trading desk, 2026-09-14)",
+   "linked_bonds": [
+    "QTSQST"
+   ]
+  },
+  {
+   "deal_id": "NOID-QTS-MSFT-ODYSSEY",
+   "registry_key": "NOID-QTS-MSFT-ODYSSEY",
+   "no_timeline_id": true,
+   "managers": [
+    "BX"
+   ],
+   "role": "platform owner / sponsor: QTS (Blackstone portfolio company); notes issued by QualityTech special-purpose subsidiaries",
+   "title": "QTS 'Project Odyssey' (Microsoft, Fayetteville, GA): $3.9bn 6.625% 2031 5NC2 project bond",
+   "counterparty": "QTS project SPVs (QTS Central Issuer LLC per Bloomberg)",
+   "tenant_or_offtaker": "Microsoft (press; seed 15-year lease, 15-year renewal, commencement Nov 2027-Feb 2028, unverified)",
+   "asset": "DC campus (construction-stage project bond)",
+   "amount_text": "\"$3.9bn aggregate principal\" Senior Secured Notes due 2031, closed 2026-08-27 (issuer counsel); marketed as a $5.4bn package ($4.9bn bond + $500mn TL) for five facilities, cut to three (Barclays 2026-09-16)",
+   "amount_usd_bn": 3.9,
+   "amount_basis": "debt",
+   "capacity_text": "seed 204 MW critical IT (credit workbook, unverified)",
+   "capacity_mw": 204,
+   "capacity_basis": "critical IT MW (credit-workbook seed, unverified)",
+   "evidence": "company-announced",
+   "execution": "closed",
+   "first_event_date": "2026-08",
+   "latest_update_date": "2026-09-16",
+   "status_note": "Closed 144A deal, launched IG (Baa3/BBB- reported) after being marketed to HY; buildings financed not named officially; under construction with leases from late 2027 (seed).",
+   "history": [
+    {
+     "date": "2026-08",
+     "event": "Marketed to HY as $5.4bn ($4.9bn bond + $500mn TL) for five facilities; cut to three and launched IG",
+     "source": "Barclays Data Center Credit Digest, 2026-09-16; Goldman testing per press (dossier QTSODY)"
+    },
+    {
+     "date": "2026-08-17",
+     "event": "Bond may grow to $3.9bn after >$8bn of orders",
+     "source": "Bloomberg, 2026-08-17 (dossier QTSODY)"
+    },
+    {
+     "date": "2026-08-27",
+     "event": "Closing of $3.9bn Senior Secured Notes due 2031",
+     "source": "Issuer counsel (dossier QTSODY)"
+    },
+    {
+     "date": "2026-09-14",
+     "event": "Desk comp: construction LTC 106%, Debt/NOI 11.2x at stabilization",
+     "source": "Jefferies FI trading desk / Haber, 2026-09-14"
+    }
+   ],
+   "sources": [
+    {
+     "label": "AI credit workbook dossier QTSODY (as of 2026-10-16)",
+     "date": "2026-10-16",
+     "ref": "_briefings/2026/2026-10-16-ai-credit-live-workbook-dossiers.md"
+    },
+    {
+     "label": "Barclays Data Center Credit Digest 2026-09-16",
+     "date": "2026-09-16",
+     "ref": "relatórios bons/Barclays_IG_HY_Technology_Data_Center_Credit_Digest_September_2026.html"
+    },
+    {
+     "label": "Jefferies FI desk survival guide 2026-09-14",
+     "date": "2026-09-14",
+     "ref": "relatórios bons/A_Survival_Guide_to_Datacenter_Credit.html"
+    }
+   ],
+   "timeline_anchor": "Data-centre bond index and new-issue read-through recorded 2026-10-17 (Barclays Credit Digest, 2026-09-16)",
+   "linked_bonds": [
+    "QTSODY"
+   ]
+  },
+  {
+   "deal_id": "SPCX-NVDA-FIN-20261006",
+   "registry_key": "SPCX-NVDA-FIN-20261006",
+   "no_timeline_id": false,
+   "managers": [
+    "APO",
+    "OWL"
+   ],
+   "role": "APO: lessor manager (an entity managed by Apollo acquires and leases the GPU pods); OWL: self-described participant ('We are a part of that'), share undisclosed",
+   "title": "SpaceX ~$40bn GPU master finance lease (Apollo-managed lessor)",
+   "counterparty": "SpaceX (lessee); GPU vendor not named in the 8-K (NVIDIA per press)",
+   "tenant_or_offtaker": "SpaceX (own GPUs at data centers it selects)",
+   "asset": "chips/GPU lease",
+   "amount_text": "\"aggregate principal payments under the lease schedules ... approximately $40 billion\" (SpaceX 8-K, filed 2026-10-26). Earlier press vintage: ~$40bn talks; Reuters $10bn bank loans / $30bn IG debt.",
+   "amount_usd_bn": 40,
+   "amount_basis": "binding commitment",
+   "capacity_text": "MW undisclosed; GPU pods delivered in tranches",
+   "capacity_mw": null,
+   "capacity_basis": "undisclosed",
+   "evidence": "filed",
+   "execution": "binding",
+   "first_event_date": "2026-10-06",
+   "latest_update_date": "2026-10-29",
+   "status_note": "Binding commitment letter signed 2026-10-24; closing expected before YE26, fixed rate set at pricing, schedules (~5 to 5.25 years) start 1H27 on GPU delivery. Not priced, not drawn. Blue Owl's role is self-stated and unsized; whether the reported loan/bond legs survive is undisclosed.",
+   "history": [
+    {
+     "date": "2026-10-06",
+     "event": "FT reports ~$40bn financing talks to buy NVIDIA chips; WSJ follows 10-07",
+     "source": "FT 2026-10-06 / WSJ 2026-10-07 via Vital Knowledge / Crisafulli, 2026-10-07"
+    },
+    {
+     "date": "2026-10-07",
+     "event": "Reuters cites two sources: $10bn bank loans / $30bn IG debt; Apollo leadership attributed to FT",
+     "source": "Reuters, 2026-10-06/07"
+    },
+    {
+     "date": "2026-10-20",
+     "event": "Not referenced on SpaceX's Q3 call; CFO cites IG debt pools and vendor/customer partnering",
+     "source": "SpaceX Q3 call, 2026-10-20 (Bloomberg INITIAL DRAFT)"
+    },
+    {
+     "date": "2026-10-24",
+     "event": "Binding commitment letter for a master finance lease with an Apollo-managed lessor; ~$40bn aggregate principal; quarterly rent 1/20 of financed cost plus fixed rate",
+     "source": "SpaceX 8-K Item 8.01, filed 2026-10-26"
+    },
+    {
+     "date": "2026-10-29",
+     "event": "Lipschultz: 'the SpaceX chip financing. We are a part of that'; Blue Owl did it 'originally with xAI and rolled into SpaceX'",
+     "source": "OWL Q3 call, 2026-10-29"
+    }
+   ],
+   "sources": [
+    {
+     "label": "SpaceX 8-K 2026-10-26",
+     "date": "2026-10-26",
+     "ref": "SPCX/SPCX_8-K_2026-10-26_0001104659-26-118614.html"
+    },
+    {
+     "label": "Vital Knowledge relay archive 2026-10-09",
+     "date": "2026-10-07",
+     "ref": "_wiki/_data/credit-monitor/research-sources/2026-10-09-outlook.json"
+    },
+    {
+     "label": "Reuters 2026-10-06/07",
+     "date": "2026-10-07",
+     "ref": "https://www.investing.com/news/stock-market-news/spacex-seeks-40-billion-to-buy-nvidia-chips-ft-reports-4935381"
+    },
+    {
+     "label": "OWL Q3 call 2026-10-29",
+     "date": "2026-10-29",
+     "ref": "OWL/transcripts/OWL_Q3-2026-earnings_2026-10-29.md"
+    }
+   ],
+   "timeline_anchor": "Added 2026-10-09 — financing proposals and historical project-debt backfill",
+   "linked_bonds": []
+  },
+  {
+   "deal_id": "XAI-VALOR-APO-FIN-20260107",
+   "registry_key": "XAI-VALOR-APO-FIN-20260107",
+   "no_timeline_id": false,
+   "managers": [
+    "APO"
+   ],
+   "role": "lead lender: Apollo-managed funds and affiliates led the capital solution",
+   "title": "Valor Compute Infrastructure: xAI GB200 GPU lease financing",
+   "counterparty": "Valor Compute Infrastructure L.P. (fund managed by Valor Equity Partners); NVIDIA anchor LP in VCI",
+   "tenant_or_offtaker": "a subsidiary of xAI Corp (GPU lease supporting xAI's second data center)",
+   "asset": "chips/GPU lease (triple net)",
+   "amount_text": "\"a $3.5 billion capital solution\" supporting VCI's \"$5.4 billion acquisition and lease\" (Apollo release, 2026-01-07). Financing vs asset value: not two commitments, not summed.",
+   "amount_usd_bn": 3.5,
+   "amount_basis": "facility size",
+   "capacity_text": "undisclosed (NVIDIA GB200 GPUs)",
+   "capacity_mw": null,
+   "capacity_basis": "undisclosed",
+   "evidence": "company-announced",
+   "execution": "announced",
+   "first_event_date": "2026-01-07",
+   "latest_update_date": "2026-02-09",
+   "status_note": "Company-announced; Apollo's Q4 call dates the transaction to December 2025. No GPU delivery acceptance or settlement dates on disk. Mapping to SpaceX's numbered Valor tranches and to the aggregate Valor debt is not established.",
+   "history": [
+    {
+     "date": "2025-12",
+     "event": "Transaction month per Apollo: 'In December, we led a $3.5 billion capital solution'",
+     "source": "Apollo Q4 2025 call (company corrected transcript), 2026-02-09"
+    },
+    {
+     "date": "2026-01-07",
+     "event": "Apollo announces the $3.5bn solution for VCI's $5.4bn GB200 acquisition/lease to an xAI subsidiary",
+     "source": "Apollo press release, 2026-01-07"
+    },
+    {
+     "date": "2026-10-20",
+     "event": "Backfilled in the timeline; barred from summation with Valor III or aggregate Valor debt",
+     "source": "Capstone compute-deal timeline, recorded 2026-10-20"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Apollo release 2026-01-07 (archive)",
+     "date": "2026-01-07",
+     "ref": "_wiki/_meta/research/spcx-payment-terms-2026-10-20/Apollo_Valor_xAI_2026-01-07.html"
+    },
+    {
+     "label": "Apollo Q4 2025 call 2026-02-09",
+     "date": "2026-02-09",
+     "ref": "APO/transcripts/APO_IR_CORRECTED-TRANSCRIPT_-Apollo-Global-Management-Inc.-APO-US-Q4-2025-Earnings-Call-9-February-2026-8_30-AM-ET.md"
+    }
+   ],
+   "timeline_anchor": "Recorded 2026-10-20 — SpaceX equipment-financing historical backfill and payment-term review",
+   "linked_bonds": []
+  },
+  {
+   "deal_id": "NOID-APO-AI-LEASE-FIN-1H26",
+   "registry_key": "NOID-APO-AI-LEASE-FIN-1H26",
+   "no_timeline_id": true,
+   "managers": [
+    "APO"
+   ],
+   "role": "lead lender",
+   "title": "Two Apollo-led AI data-center infrastructure financings (Feb and Apr 2026), client unnamed",
+   "counterparty": "unnamed client (acquirer and lessor of data-center infrastructure)",
+   "tenant_or_offtaker": "\"a large investment-grade counterparty\" (unnamed)",
+   "asset": "data-center infrastructure acquisition/lease",
+   "amount_text": "\"two AI-related financings totaling more than $8 billion\" (Zelter, Apollo Q1 2026 call, 2026-05-06); the total is Apollo's own figure",
+   "amount_usd_bn": 8,
+   "amount_basis": "facility size",
+   "capacity_text": "undisclosed",
+   "capacity_mw": null,
+   "capacity_basis": "undisclosed",
+   "evidence": "company-announced",
+   "execution": "announced",
+   "first_event_date": "2026-02",
+   "latest_update_date": "2026-05-06",
+   "status_note": "Apollo-described, counterparties unnamed; no timeline ID. Do not map to any SpaceX/Valor or Meta row without a named counterparty.",
+   "history": [
+    {
+     "date": "2026-05-06",
+     "event": "Apollo says it led two AI-related financings (Feb and Apr) totaling >$8bn for a client's data-center infrastructure acquisition and lease to an IG counterparty",
+     "source": "Apollo Q1 2026 call (company corrected transcript), 2026-05-06"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Apollo Q1 2026 call 2026-05-06",
+     "date": "2026-05-06",
+     "ref": "APO/transcripts/APO_IR_APO-Q1-2026-Earnings-Call-Transcript.md"
+    }
+   ],
+   "timeline_anchor": null,
+   "linked_bonds": []
+  },
+  {
+   "deal_id": "KKR-HELIX-FIN-20260611",
+   "registry_key": "KKR-HELIX-FIN-20260611",
+   "no_timeline_id": false,
+   "managers": [
+    "KKR"
+   ],
+   "role": "platform owner / sponsor: KKR formed Helix (founding investor; earns management and performance fees)",
+   "title": "Helix Digital Infrastructure: KKR AI-infrastructure capital platform",
+   "counterparty": "Founding investors KIA, NVIDIA (strategic partner), Vistra (preferred power partner); Samsung group (+$1bn, Sept 2026)",
+   "tenant_or_offtaker": "hyperscalers (unnamed)",
+   "asset": "capital platform (data centers, power, connectivity)",
+   "amount_text": "\"more than $10 billion in total long-duration capital commitments\" at launch (Helix/KKR release, 2026-06-11); Samsung commits $1 billion (2026-09-28; $500m from Samsung Electronics). Counted once, not summed.",
+   "amount_usd_bn": 10,
+   "amount_basis": "equity",
+   "capacity_text": "undisclosed",
+   "capacity_mw": null,
+   "capacity_basis": "undisclosed",
+   "evidence": "company-announced",
+   "execution": "binding",
+   "first_event_date": "2026-06-11",
+   "latest_update_date": "2026-09-29",
+   "status_note": "Capital committed; no verified draws, projects or MW. KKR calls Helix 'a company, not a fund', with no size target; individual founding allocations undisclosed.",
+   "history": [
+    {
+     "date": "2026-06-11",
+     "event": "Launch with >$10bn of long-duration capital commitments from KKR, KIA, NVIDIA and Vistra; CEO Adam Selipsky",
+     "source": "Helix/KKR release, 2026-06-11"
+    },
+    {
+     "date": "2026-07-30",
+     "event": "Perpetual open-ended vehicle earning management and performance fees; no size target, opportunity 'in the tens of billions'; incremental to the ECP partnership",
+     "source": "KKR Q2 2026 call (Lewin, Nuttall, Larson), 2026-07-30"
+    },
+    {
+     "date": "2026-09-28",
+     "event": "Samsung commits $1bn through Helix's long-duration capital fund",
+     "source": "Helix/KKR release, 2026-09-28"
+    },
+    {
+     "date": "2026-09-29",
+     "event": "Samsung: $500m from Samsung Electronics, five affiliates the remainder (same commitment)",
+     "source": "Samsung Global Newsroom, 2026-09-29"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Helix/KKR launch 2026-06-11",
+     "date": "2026-06-11",
+     "ref": "KKR/research/2026-06-11_Helix_launch.md"
+    },
+    {
+     "label": "KKR Q2 call 2026-07-30",
+     "date": "2026-07-30",
+     "ref": "KKR/transcripts/KKR_Q2-2026-earnings_2026-07-30.md"
+    },
+    {
+     "label": "Helix/KKR Samsung 2026-09-28",
+     "date": "2026-09-28",
+     "ref": "KKR/research/2026-09-28_Helix_Samsung_commitment.md"
+    },
+    {
+     "label": "Samsung Newsroom 2026-09-29",
+     "date": "2026-09-29",
+     "ref": "KKR/research/2026-09-29_Samsung_Helix.md"
+    }
+   ],
+   "timeline_anchor": "Added 2026-10-31 — Helix capital platform (historical backfill)",
+   "linked_bonds": []
+  },
+  {
+   "deal_id": "NOID-NVDA-ASSETMGR-500BN-PLATFORM",
+   "registry_key": "NOID-NVDA-ASSETMGR-500BN-PLATFORM",
+   "no_timeline_id": true,
+   "managers": [
+    "APO",
+    "BLK",
+    "BX",
+    "KKR"
+   ],
+   "role": "named financing-platform partners (with Brookfield and Goldman Sachs) under NVIDIA's non-binding MoU",
+   "title": "NVIDIA >$500bn AI-compute financing platforms with six capital providers",
+   "counterparty": "NVIDIA (may provide residual value support up to 25% of an opportunity, case by case); also Brookfield, Goldman Sachs",
+   "tenant_or_offtaker": "frontier AI labs (unnamed)",
+   "asset": "capital platform (GPU / AI-infrastructure financing)",
+   "amount_text": "\"financing platforms that will raise over $500 billion of third-party capital\" (Kress, NVDA Q2 FY27 call, 2026-08-26). A mobilisation target under a non-binding MoU, not committed capital.",
+   "amount_usd_bn": 500,
+   "amount_basis": "target (non-binding MoU)",
+   "capacity_text": "undisclosed",
+   "capacity_mw": null,
+   "capacity_basis": "undisclosed",
+   "evidence": "company-announced",
+   "execution": "proposed",
+   "first_event_date": "2026-08-10",
+   "latest_update_date": "2026-10-22",
+   "status_note": "Non-binding framework; no platform, deal, draw or RVS amount disclosed per manager. Not a timeline ID; keep out of any committed-capital total.",
+   "history": [
+    {
+     "date": "2026-08-10",
+     "event": "NVIDIA announces a non-binding MoU with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR",
+     "source": "Barclays FICC / Keches et al., 2026-08-20 (per ORCL page)"
+    },
+    {
+     "date": "2026-08-26",
+     "event": "NVIDIA CFO: partnerships to establish financing platforms raising over $500bn of third-party capital",
+     "source": "NVDA Q2 FY27 call, 2026-08-26"
+    },
+    {
+     "date": "2026-09-08",
+     "event": "NVIDIA IR: residual-value support up to 25%, case by case, tied to the $500bn announcement",
+     "source": "NVIDIA IR session for BTG clients, 2026-09-08 (per NVDA page)"
+    },
+    {
+     "date": "2026-10-22",
+     "event": "Schwarzman: NVIDIA named Blackstone among 'the small group of managers' for $500bn of GPU financing",
+     "source": "BX Q3 call, 2026-10-22"
+    }
+   ],
+   "sources": [
+    {
+     "label": "NVDA Q2 FY27 call 2026-08-26",
+     "date": "2026-08-26",
+     "ref": "NVDA/transcripts/NVDA_Q2-FY27-earnings_2026-08-26.md"
+    },
+    {
+     "label": "Barclays AI infrastructure financing Aug-2026 update",
+     "date": "2026-08-20",
+     "ref": "relatórios bons/Barclays_AI_Infrastructure_Financing_Tracking_Issuance_Across_Asset_Classes_August_2026_Update.html"
+    },
+    {
+     "label": "NVIDIA IR / BTG session 2026-09-08",
+     "date": "2026-09-08",
+     "ref": "relatórios bons/2026_09_08_nvidia_btg_sf.html"
+    },
+    {
+     "label": "BX Q3 call 2026-10-22",
+     "date": "2026-10-22",
+     "ref": "BX/transcripts/BX_Q3-2026-earnings_2026-10-22.md"
+    }
+   ],
+   "timeline_anchor": "🆕 2026-10-22 (/run-inbox) — **CONTEXT, NO DEAL ID: BLACKSTONE'S Q3 CALL — AI INFRA ≈ 7% OF $1.4TN, \"THE VAST MAJORITY\" DATA CENTRES ON 15-20-YEAR LEASES WITH 96% IG TENANTS; CHIP FINANCING \"AT SCALE\" (JUNIOR WITH A MODEL COMPANY, SENIOR WRAPPED BY A HYPERSCALER OR CHIP COMPANY); A BLACKSTONE NEOCLOUD \"JUST GETTING OFF THE GROUND\"; \"COMPUTE PRICES ARE ACTUALLY UP 50% YEAR-ON-YEAR\"**",
+   "linked_bonds": []
+  }
+ ],
+ "manager_context": [
+  {
+   "manager": "OWL",
+   "date": "2026-10-29",
+   "statement": "\"over 130 data centers\" operational or under construction, \"almost 14 GW of leased and owned capacity\", \"a 21-GW pipeline\"; GW basis not stated; down from 15.3 GW a quarter earlier with no reconciliation. Do not add to any MW total.",
+   "source": "OWL Q3 2026 call, 2026-10-29 (Kirshenbaum per transcript label)",
+   "kind": "footprint"
+  },
+  {
+   "manager": "OWL",
+   "date": "2026-07-30",
+   "statement": "\"more than 140 data centers\" owned or under construction, \"15.3 gigawatts of leased and owned capacity\"; GW basis not stated.",
+   "source": "OWL Q2 2026 call, 2026-07-30 (Kirshenbaum per transcript label)",
+   "kind": "footprint"
+  },
+  {
+   "manager": "OWL",
+   "date": "2026-10-29",
+   "statement": "Lipschultz: a single GW, digital-infrastructure part only, \"not the chip part\", is \"probably $15 billion\"; scope excludes chips, GW basis unstated; debt markets 'softening a bit on leverage'.",
+   "source": "OWL Q3 2026 call, 2026-10-29",
+   "kind": "cost-per-GW"
+  },
+  {
+   "manager": "OWL",
+   "date": "2026-04-30",
+   "statement": "Digital infrastructure strategy is \"approximately 6% of AUM\" (Lipschultz); Q3 deck shows digital infrastructure AUM $20.4bn within Real Assets $94.9bn.",
+   "source": "OWL Q1 2026 call, 2026-04-30; OWL Q3 deck, 2026-10-29 (per OWL page)",
+   "kind": "exposure share"
+  },
+  {
+   "manager": "OWL",
+   "date": "2026-10-29",
+   "statement": "Kirshenbaum: \"We are not making a bet on AI\"; buildings for IG tenants on long-term leases, \"Microsoft, Amazon, Meta credit risk\".",
+   "source": "OWL Q3 2026 call, 2026-10-29",
+   "kind": "exposure share"
+  },
+  {
+   "manager": "OWL",
+   "date": "2026-10-29",
+   "statement": "BODI IV (next digital-infrastructure vintage): rolling first closes through end-1Q27, an 18-24 month raise likely through mid-2028; \"$10 billion continues to be the overall fundraise goal\".",
+   "source": "OWL Q3 2026 call, 2026-10-29 (Kirshenbaum)",
+   "kind": "pipeline"
+  },
+  {
+   "manager": "OWL",
+   "date": "2026-04-30",
+   "statement": "Amazon $12bn campus (Blue Owl funds + STACK) is Blue Owl's \"fourth data center project above $10 billion\" in under 18 months (registered as NOID-AMZN-STACK-12BN).",
+   "source": "OWL Q1 2026 call, 2026-04-30 (Lipschultz)",
+   "kind": "pipeline"
+  },
+  {
+   "manager": "OWL",
+   "date": "2026-10-29",
+   "statement": "Analyst cites a Bloomberg report of a $20-25bn Asia-Pacific data-center sale being considered; Lipschultz declined to discuss. Press report only, not registered.",
+   "source": "OWL Q3 2026 call, 2026-10-29 (Kotowski Q&A)",
+   "kind": "pipeline"
+  },
+  {
+   "manager": "OWL",
+   "date": "2026-10-29",
+   "statement": "OCIC \"redemption requests declined for the second quarter in a row\"; over 90% of its 90,000 shareholders fully invested. Tenders are capped at 5% per quarter.",
+   "source": "OWL Q3 2026 call, 2026-10-29 (Kirshenbaum); OWL page",
+   "kind": "funding/redemptions"
+  },
+  {
+   "manager": "OWL",
+   "date": "2026-10-29",
+   "statement": "ODIT (digital-infrastructure non-traded REIT) \"is $4.6 billion\" after about a year.",
+   "source": "OWL Q3 2026 call, 2026-10-29 (Kirshenbaum)",
+   "kind": "funding/redemptions"
+  },
+  {
+   "manager": "BX",
+   "date": "2026-10-22",
+   "statement": "AI infrastructure is \"about 7%\" of ~$1.4tn of assets; \"the vast majority\" is data centers with 15-20-year lease terms at initiation and 96% investment-grade counterparties (average market cap $2.5tn).",
+   "source": "BX Q3 2026 call, 2026-10-22 (Gray)",
+   "kind": "exposure share"
+  },
+  {
+   "manager": "BX",
+   "date": "2026-10-22",
+   "statement": "Chip financings \"at scale\": junior, potentially with model companies, or senior wrapped by hyperscalers or chip companies; senior IG pieces placed with insurers and pension funds; dedicated chip-financing SMAs possible.",
+   "source": "BX Q3 2026 call, 2026-10-22 (Gray)",
+   "kind": "pipeline"
+  },
+  {
+   "manager": "BX",
+   "date": "2026-10-22",
+   "statement": "\"We're creating a neo cloud, but that business is just getting off the ground\"; \"Compute prices are actually up 50% year-on-year\".",
+   "source": "BX Q3 2026 call, 2026-10-22 (Gray)",
+   "kind": "pipeline"
+  },
+  {
+   "manager": "BX",
+   "date": "2026-10-22",
+   "statement": "Portfolio company Lancium provides energy infrastructure to OpenAI's flagship Texas data center and announced an NVIDIA strategic investment in August.",
+   "source": "BX Q3 2026 call, 2026-10-22 (Schwarzman)",
+   "kind": "pipeline"
+  },
+  {
+   "manager": "BX",
+   "date": "2026-10-22",
+   "statement": "Data centers and logistics are 54% of the global real-estate portfolio; Blackstone expects a threefold increase in data-center leasing this year across its platform.",
+   "source": "BX Q3 2026 call, 2026-10-22 (Gray)",
+   "kind": "footprint"
+  },
+  {
+   "manager": "BX",
+   "date": "2026-09-22",
+   "statement": "Blackstone values its data-center platform at $185bn (investor-event statement relayed by UBS; not a filed figure).",
+   "source": "UBS / Keirstead, Giuditta, 2026-09-22 (S4), recorded 2026-09-24",
+   "kind": "footprint"
+  },
+  {
+   "manager": "BX",
+   "date": "2026-10-22",
+   "statement": "BCRED repurchase requests were 10% of NAV vs the 5% quarterly limit [transcribed 'purchase requests'], ~50% fulfilled, net outflows $1.4bn (company); Jefferies desk cites $1.8bn (source conflict kept). BXPE record $2.9bn quarterly sales.",
+   "source": "BX Q3 2026 call, 2026-10-22 (Gray); Jefferies FIG sales / Panzer, 2026-10-23",
+   "kind": "funding/redemptions"
+  },
+  {
+   "manager": "BLK",
+   "date": "2026-10-14",
+   "statement": "Fink: a 1 GW US data center is \"about a $50 billion enterprise cost\"; 40% GPUs and chips, 60% power, grid, core and shell. GW basis unstated; scope includes chips, unlike Blue Owl's ~$15bn ex-chips.",
+   "source": "BLK Q3 2026 call, 2026-10-14",
+   "kind": "cost-per-GW"
+  },
+  {
+   "manager": "BLK",
+   "date": "2026-10-14",
+   "statement": "After Aligned, BlackRock is \"looking at two more platforms throughout the world\" and is \"in the market with a very large transaction now\" (no terms).",
+   "source": "BLK Q3 2026 call, 2026-10-14 (Fink)",
+   "kind": "pipeline"
+  },
+  {
+   "manager": "BLK",
+   "date": "2026-10-14",
+   "statement": "GPU financing is \"a large opportunity\" for HPS and build-out for GIP; conversations with every major hyperscaler in the past week.",
+   "source": "BLK Q3 2026 call, 2026-10-14 (Fink)",
+   "kind": "pipeline"
+  },
+  {
+   "manager": "BLK",
+   "date": "2026-01-15",
+   "statement": "AI Infrastructure Partnership has raised \"over $12.5 billion\" [transcribed 'GAIIP']; initial target $30bn of equity, potential $100bn including debt (first set in the Q1 2025 call).",
+   "source": "BLK Q4 2025 call, 2026-01-15 (Fink); BLK Q1 2025 call, 2025-04-11",
+   "kind": "funding/redemptions"
+  },
+  {
+   "manager": "BLK",
+   "date": "2026-10-14",
+   "statement": "Small: \"We still have redemptions in the queue\" in private-markets evergreen funds (~$20bn per BLK page); expects a more constructive Q4 and 1H27.",
+   "source": "BLK Q3 2026 call, 2026-10-14 (Small)",
+   "kind": "funding/redemptions"
+  },
+  {
+   "manager": "KKR",
+   "date": "2026-07-30",
+   "statement": "KKR has \"committed and invested over $75 billion across digital infrastructure and power\"; existing infrastructure funds' diversification limits motivated Helix.",
+   "source": "KKR Q2 2026 call, 2026-07-30 (Lewin); Helix/KKR release, 2026-09-28",
+   "kind": "footprint"
+  },
+  {
+   "manager": "KKR",
+   "date": "2026-07-30",
+   "statement": "Helix has no size target; opportunity \"in the tens of billions\"; described as incremental to the earlier KKR-ECP partnership (the $50bn ECP figure appears only in an analyst question).",
+   "source": "KKR Q2 2026 call, 2026-07-30 (Nuttall, Larson)",
+   "kind": "pipeline"
+  },
+  {
+   "manager": "APO",
+   "date": "2026-08-04",
+   "statement": "Rowan: AI infrastructure build-out expects \"more than $8 trillion of capital\" through the cycle; Big Sky fees recognized as the $35bn is drawn.",
+   "source": "Apollo Q2 2026 call (company corrected transcript), 2026-08-04",
+   "kind": "pipeline"
+  },
+  {
+   "manager": "APO",
+   "date": "2026-11-03",
+   "statement": "Q3 2026 results scheduled 2026-11-03 (not yet reported at the cut-off); test Big Sky draws and AI origination.",
+   "source": "Apollo announcement, 2026-09-29 (per APO page)",
+   "kind": "pipeline"
+  }
+ ],
+ "rejected_ids": [
+  {
+   "deal_id": "META-CLASSC-FIN-20261021",
+   "reason": "Meta's own equity financing (Class C, preferred, forward sale, ATM); no manager named as underwriter, buyer or counterparty. Managers appear only in a procedure search string."
+  },
+  {
+   "deal_id": "META-RESALE-2027",
+   "reason": "Wells Fargo model of Meta reselling compute; no manager role."
+  },
+  {
+   "deal_id": "ORCL-CHIP-LEASE-20261007",
+   "reason": "Apollo (with Goldman) named only as a reported party to talks (WSJ via Vital Knowledge, 2026-10-07); MS still calls it unconfirmed (2026-10-16). No role, terms or commitment: a watch item."
+  },
+  {
+   "deal_id": "OAI-SBENERGY-202608",
+   "reason": "OpenAI / SB Energy lease with NVIDIA guarantee; no manager role. Appears beside Hyperion only in the Air Street RVG tally."
+  },
+  {
+   "deal_id": "OAI-AVGO-CHIP-FIN-20261007",
+   "reason": "~$50bn OpenAI/Broadcom financing talks with lenders unverified; no manager named; link to BX-GOOG-AVGO-2026 unresolved."
+  },
+  {
+   "deal_id": "SPCX-VALOR-III-20260424",
+   "reason": "Lessor is CTC/Valor III (Valor Equity Partners, not one of the five); Apollo's role is established only for the January VCI deal. Blue Owl's 'chips a couple of times in the SpaceX complex' is unmapped."
+  },
+  {
+   "deal_id": "IREN-MSFT-202511",
+   "reason": "Microsoft-IREN compute contract; Blue Owl's 3Q26 IREN chip financing is a separate unsized item (NOID-IREN-OWL-CHIPFIN-3Q26) and is not mapped to it."
+  },
+  {
+   "deal_id": "GOOG-ORCL-TPU-20261028",
+   "reason": "Google-Oracle TPU partnership; Crux appears only in the same Kurian sentence. No manager role."
+  },
+  {
+   "deal_id": "ORCL-LIGHTHOUSE-EXEC",
+   "reason": "Vantage-developed Wisconsin site; no manager role recorded in the timeline."
+  }
+ ],
+ "open_questions": [
+  "OWL footprint: 15.3 GW / 'more than 140 data centers owned or under construction' (Q2 call, 2026-07-30) vs 'almost 14 GW' / 'over 130 data centers operational or under construction' (Q3 call, 2026-10-29). No reconciliation and no GW basis (facility vs IT load); the two definitions also differ ('owned' vs 'operational'). Both quotes carry the Kirshenbaum label in the MarketBeat/Quartr transcripts; the timeline does not name a speaker.",
+  "Cost per GW: Fink ~$50bn per 1 GW including chips (40% chips, BLK 2026-10-14) vs Lipschultz ~$15bn per GW excluding chips (OWL 2026-10-29). Even ex-chips, Fink's 60% implies ~$30bn/GW (Capstone arithmetic), about 2x Lipschultz. Neither states a GW basis; neither replaces the canonical $/GW in _meta/assumptions.md.",
+  "Meta RVG attribution: Air Street (2026-10-08) lists 'Meta $41bn (Hyperion)'. Meta's 3Q 10-Q (filed 2026-10-22) shows $41.493bn maximum RVG across BOTH ventures (Louisiana + Texas) vs $28.091bn at 2025-12-31 (Louisiana only). The $41bn should not be attributed to the Blue Owl/Hyperion JV alone.",
+  "Hyperion amount bases: Lipschultz '$30 billion of capital investment' (2025-10-30) vs Meta 10-Q 'approximately $27 billion' development cost vs ~$28.8bn capital base (Global Data Center Hub, workbook facility cost) vs ~$27.3bn notes. Distribution to Meta: $2.6bn (10-Q) vs ~$3bn (release relay). Whether the 5 GW expansion sits inside the notes' perimeter is unknown.",
+  "Texas Venture: the TXEDCI dossier (as of 2026-10-16) says no filing confirms closing; Meta's 3Q 10-Q (filed 2026-10-22) now says Meta holds 20% 'following the closing' ($2.26bn contributed, $1.04bn distribution). The dossier can be updated. Final notes size is unresolved ($12.3bn marketed, ~$12.5bn sold, $12,639.5mm seed), and HPS's role (JV equity vs lender in the 144A notes) is unclear: BLK says GIP equity plus HPS private financing, while the bond had JPM/MS bookrunners.",
+  "TXEDCI naming and dates: the workbook bond name and the Jefferies table say 'Sopapilla Investor LLC', while the dossier (N-PORT) says 'Sopaipilla Investor, LLC'. First issued is 2026-07-30 in the workbook vs 7/27/26 in Barclays (META page). RPLDCI is 2025-10-21 in the workbook vs pricing on 10/16/25 (Barclays).",
+  "Workbook MW basis: RPLDCI 2,064, TXEDCI 960, QTSQST 340 and QTSODY 204 are seed 'critical IT' MW (Barclays-derived, unverified). They are not comparable with Meta's '1 GW' press figure or Blue Owl's GW footprint. QTSODY's workbook location is 'Atlanta, GA'; the dossier places it at Fayetteville, GA (Atlanta metro).",
+  "BX-GOOG-AVGO-2026 is an umbrella for two separate structures: the Crux JV with Google (BX equity up to $5.0bn) and Big Sky ($35bn Broadcom XPV financing led by Apollo with Blackstone). The timeline has no original-announcement row for this ID, only history entries. The registry splits it into two legs under the same deal_id (registry_key /crux and /big-sky).",
+  "Big Sky: the $35bn headline is rounded and is not forced to the reported tranche sum (A1 $6bn + A2 $24bn + B $4.5bn + ~$0.8bn equity); PitchBook had a ~$36bn package. 'An initial 1 GW' is Blackstone-stated via UBS only, not in Apollo or Broadcom primaries. Blackstone's exact share of Big Sky is undisclosed.",
+  "North Star: Blackstone's share is '~$9bn of the ~$18bn junior' (FT 10-05) vs 'sole provider of the committed portion of the second lien' (release 10-26, verified on the archived page image), with no size. Milbank says 'debt and equity', so the ~$19.5bn residual after Reuters' ~$43.5bn first lien cannot be labelled second lien. Headline vintages: $60bn (FT) / $61.5bn (IFR incl. a $1.5bn TL) / $63bn (release). The FT archive is image-only and its $9bn figure was not re-read.",
+  "Crux: $22bn ten-bank loan (Reuters 09-16) vs ~$23bn (9fin 09-15) plus a $1bn revolver are overlapping vintages. Capacity targets are unreconciled: Blackstone initial 500 MW in 2027 (05-18) vs Crux website 2GW/yr from 2H 2027.",
+  "SPCX-NVDA-FIN-20261006: Blue Owl's participation is self-stated and unsized. Lipschultz also says Blue Owl did it 'originally with xAI and rolled into SpaceX' and has 'done chips a couple of times in the SpaceX complex'. Which earlier financings these are (VCI/xAI, Valor III, others) is unmapped. NVIDIA is not named in the 8-K, and whether the reported $10bn loan / $30bn IG legs still exist is undisclosed.",
+  "XAI-VALOR-APO-FIN-20260107: Apollo's Q4 2025 call (2026-02-09) dates the $3.5bn solution to 'December' (2025); the timeline event date is the 2026-01-07 release. The timeline does not yet carry the Q4-call statement.",
+  "Apollo Q1 2026 call (2026-05-06, Zelter): 'two AI-related financings totaling more than $8 billion' in February and April for a client's data-center acquisition and lease to 'a large investment-grade counterparty'. The client and tenant are unnamed and there is no timeline ID; possible overlap with the April Valor III agreement or other rows is unestablished.",
+  "Amazon/STACK $12bn: the same OWL Q1 call says Amazon announced it 'a couple of months ago' and 'a couple weeks ago', and calls it 'another Amazon project', implying an earlier Amazon project. Amazon's own release is not archived.",
+  "Lancaster, PA: JPM's desk cites Business Insider and Jefferies' desk cites Bloomberg for the 'unable to arrange financing' report. The $4bn project is mapped to CoreWeave's 300 MW Lancaster site (UBS) by name only.",
+  "ORCL-JUPITER-EXEC capacity is unreconciled: 2.45GW (ORCL page), 2.2 GW (GS), 1.5 GW (Barclays), core 1.2 GW (UBS), '>1 GW IT under construction' (SemiAnalysis). Blue Owl's equity leg comes only from @zerohedge (unverified). Blue Owl's '>$20bn capital investment' is its own framing; the timeline rows for this ID do not name Blue Owl or STACK (the link comes from the ORCL/OWL pages).",
+  "Aligned (AIP-ALIGNED-2026): the announcement date is not archived (earliest archived mention 2026-04-14). GIP V is also invested ('majority committed through... Aligned'), so the AIP vs GIP V vs MGX split is undisclosed. BlackRock's Q3 10-Q was not filed at the cut-off.",
+  "NVIDIA $500bn platform: Barclays (via ORCL page) calls it a non-binding MoU dated August 10; NVIDIA's CFO calls them 'partnerships'. No timeline ID, no per-manager allocation and no executed platform; keep out of committed totals. Brookfield and Goldman Sachs are outside the five managers.",
+  "BCRED: company net outflows $1.4bn vs Jefferies desk $1.8bn (BX page conflict, preserved). The transcript reads 'purchase requests were 10% of NAV', an ASR rendering of repurchase requests.",
+  "Leads not registered (outside the reviewed scope or unverified): (a) CRWV page X-corpus item, a Blue Owl-backed developer's $1.1bn bonds for CoreWeave's Digital Drive campus (76MW, Richmond VA); (b) the KKR-ECP $50bn partnership, which appears only in analyst questions; (c) Blue Owl's reported $20-25bn Asia-Pacific DC sale.",
+  "Timeline structure: the generic history table holding the 2026-09-24/25 rows (BX-GOOG-AVGO-2026 2Q relay, ORCL-JUPITER-EXEC) sits under the SpaceX-specific heading 'Recorded 2026-10-20 — SpaceX equipment-financing historical backfill...'. Registry anchors therefore point to the most specific dedicated section instead.",
+  "Pending catalysts that will change this registry: Apollo Q3 results (2026-11-03), KKR Q3 (2026-11-09), IREN's print this week (Blue Owl chip financing), SpaceX finance-lease close and pricing (before YE26), the BlackRock Q3 10-Q (Aligned/AIP accounting), and the BODI IV first close (through end-1Q27)."
+ ]
+}

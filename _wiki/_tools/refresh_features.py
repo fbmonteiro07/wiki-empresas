@@ -26,6 +26,9 @@ STEPS = [
     ("build_catalysts.py", []),
     ("build_coverage.py", []),
     ("build_financials_sources.py", []),  # publisher links + local archive provenance
+    ("fetch_exchange_volumes.py", []),  # public OCC / Cboe / CME / ICE monthly releases (cached; a failed fetch keeps the last JSON)
+    ("build_fin_exchanges.py", []),     # Financials theme: exchange volumes dashboard
+    ("build_fin_ai_financing.py", []),  # Financials theme: AI financing dashboard (register + credit workbook)
     ("build_assumptions.py", []),
     ("build_mgmt_comms.py", []),    # reads each page's commentary-evolution table
     ("gpu_pricing.py", []),        # Bloomberg + public SemiAnalysis; retain cache on source failure

@@ -28,7 +28,7 @@
   "themes": {
     "_doc": "Thematic groups across cadences. members = wiki hrefs or hub:<clone path>. A member leaves its cadence section (keeping its cadence badge, date and stale rule) and is listed under its theme. Temático renders as section 01, right after Home base.",
     "title": "Temático",
-    "kicker": "memória · optics · semicap · sentimento · AI setorial",
+    "kicker": "memória · optics · semicap · sentimento · AI setorial · financials",
     "blurb": "One subject gathered across refresh rhythms. A card here keeps its cadence badge and stale rule; it just lives with its theme instead of in the daily / weekly / explainer lists.",
     "groups": [
       {"id": "memoria", "title": "Memória",
@@ -45,7 +45,10 @@
        "members": ["sentiment-monitor.html", "sentiment-research.html"]},
       {"id": "ai-setorial", "title": "AI Setorial",
        "blurb": "The AI sector read from outside the company filings: Ramp's enterprise alt-data (adoption vs Census, vendor penetration, model mix, spend per employee, share of business spend, the token sample with the price-vs-volume split) and the AI credit & funding monitor (hyperscaler / neocloud / lab issuance, spreads, CDS and the daily alerts lane).",
-       "members": ["ramp-ai-index.html", "credit-monitor.html", "credit-live.html"]}
+       "members": ["ramp-ai-index.html", "credit-monitor.html", "credit-live.html"]},
+      {"id": "financials", "title": "Financials",
+       "blurb": "The 20-name Financials coverage, one dashboard per debate on the theme page: Exchange volumes (CME / ICE / Cboe / Nasdaq monthly ADV, OCC options share, revenue per contract, growth vs VIX/OVX, consensus) and AI infrastructure financing (Blackstone / KKR / Apollo / BlackRock / Blue Owl deals keyed to the compute-deal timeline, their project-bond marks from the official AI-credit workbook, what each manager says), plus the source catalog behind every page.",
+       "members": ["fin-exchanges.html", "fin-ai-financing.html", "financials-sources.html"]}
     ]
   },
   "home": {
@@ -197,6 +200,10 @@
      "desc": "How memory cost is embedded in each datacenter product, rolled up to the hyperscaler capex bill and reconciled both ways — bottom-up (bits × price per component) vs supplier revenue (BBG) vs sell-side."},
     {"href": "financials-sources.html", "title": "Financials — source catalog", "cadence": "ondemand", "routine": "build_financials_sources.py in the 18:15 chain (re-renders the archive manifests in _data/financials)", "topic": "Financials",
      "desc": "Provenance for the 20 Financials names (JPM, GS, SPGI, MCO, MSCI, BX, KKR, APO, OWL, BLK, V, MA, HOOD, COIN, EFX, TRU, CME, ICE, CBOE, NDAQ): every archived 10-K/10-Q, call transcript, earnings exhibit and email commentary, with publisher links and review scope. Archived does not mean fully read."},
+    {"href": "fin-exchanges.html", "title": "Exchange volumes — CME · ICE · Cboe · Nasdaq", "cadence": "daily", "routine": "18:15 chain: fetch_exchange_volumes.py (public OCC / Cboe / PR Newswire / ICE releases, cached) → build_fin_exchanges.py; new month lands in the first week of the next", "topic": "Financials",
+     "desc": "Is 2026's exchange volume structural or a volatility spike? Monthly ADV y/y for CME, ICE, Cboe index options and all US listed options (OCC) against VIX/OVX, with growth-vs-volatility scatters; CME asset classes, collateral and BrokerTec; ICE product lines (y/y only; omitted months left blank); Cboe SPX/VIX/XSP, share and revenue per contract; OCC options share by exchange group (the monthly read on Nasdaq); quarter-to-date tracker and BBG consensus."},
+    {"href": "fin-ai-financing.html", "title": "AI infrastructure financing — BX · KKR · APO · BLK · OWL", "cadence": "daily", "routine": "build_fin_ai_financing.py in the 18:15 chain (hand-curated register _data/financials/ai_financing_registry.json + official credit workbook); flags timeline entries the register has not absorbed", "topic": "Financials",
+     "desc": "The asset managers' AI deals keyed to the compute-deal timeline IDs: deal map by execution stage, a register with every amount and MW on its stated basis (EV, facility, development cost, commitment ceiling — never summed), the managers' project bonds (Meta JVs, QTS) marked from Daniel's AI_Credit_Live workbook against the rest of the data-center bond universe, what each manager says on footprint, cost per GW, pipeline and wealth-channel redemptions, BBG consensus, and the 23 open questions."},
 
     {"href": "ocs-cpo-lab.html", "title": "The Light Path — OCS · CPO · scale-up/out — versão Claude", "cadence": "explainer", "routine": "hand-built (versão Claude)", "topic": "Semis & optics",
      "desc": "Interactive 3D explainer: how an optical circuit switch re-routes light with MEMS mirrors (vs an electrical switch), how optics move from pluggable to NPO to CPO (power, pJ/bit, DSP, laser, service), where copper, pluggables, NPO, CPO and OCS sit in scale-up vs scale-out (NVL72 → NVL576 walkthrough), and a 'Who sits where' map of every company the wiki places in each layer — every number attributed."},
