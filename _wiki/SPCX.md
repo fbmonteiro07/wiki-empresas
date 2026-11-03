@@ -260,7 +260,7 @@ _(UBS Index Analytics · **Jason Irukulapati**, "The Daily Catch — S&P 1500/IC
 _Wiki · generated 2026-06-29 · sources: IPO prospectus (424B4 2026-06-12 / S-1 2026-05-20, archived in `../SPCX/`) + FinTwit. **Newly public — IPO'd June 2026 (Nasdaq: SPCX).** Master index: [../INDEX.md](../INDEX.md). Themes: [ai-datacenter-power](themes/ai-datacenter-power.md) · [custom-asic-tpu](themes/custom-asic-tpu.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-11-02 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-03 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -268,7 +268,7 @@ _Wiki · generated 2026-06-29 · sources: IPO prospectus (424B4 2026-06-12 / S-1
 | Gross profit | — | $112.5bn |
 | Gross margin | — | 62.5% |
 | EBITDA | $21.0bn | $114.6bn |
-| EPS | $-0.97 | $3.93 |
+| EPS | $-0.98 | $3.85 |
 | Capex | $63.2bn | $270.9bn |
 | OCF (≈EBITDA) | $21.0bn | $114.6bn |
 
