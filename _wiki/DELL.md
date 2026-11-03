@@ -6,17 +6,17 @@
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\DELL` (filings + transcripts) · `_equity_calls` · `E:\briefings\2026`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-11-02 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-03 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $183.1bn | $235.2bn |
+| Revenue | $183.1bn | $235.3bn |
 | Gross profit | $33.7bn | $43.3bn |
 | Gross margin | 18.4% | 18.4% |
-| EBITDA | $21.2bn | $27.7bn |
-| EPS | $21.84 | $30.91 |
+| EBITDA | $21.2bn | $27.6bn |
+| EPS | $21.86 | $30.90 |
 | Capex | $4.1bn | $4.9bn |
-| OCF (≈EBITDA) | $21.2bn | $27.7bn |
+| OCF (≈EBITDA) | $21.2bn | $27.6bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
@@ -63,7 +63,7 @@ Dell is the systems integrator between silicon and the AI buyer: it takes NVIDIA
 
 ## Current state (latest quarter)
 
-- 🆕 **2026-11-03 — financing backfill (deals register):** Dell launched a **~$4bn investment-grade bond in four tranches (3–10y)** on 2026-09-09 — longest-tenor initial price talk up to ~T+140; proceeds mainly to refinance the 4.9% notes due October 2026 and for general corporate purposes; Barclays / BofA / Citi / GS / HSBC / JPM / TD / Wells on the book (Bloomberg, 2026-09-09, via the UBER page relay '[[DELL]] sought ~$4bn of investment-grade paper' and web-search relays — ⚠️ final tranche sizes and coupons not retrieved; verify against the 424B5). Same session as Amazon's debut sterling and Uber's debut euro deals. Register: [debt-equity-deals-2026h2](themes/debt-equity-deals-2026h2.md) (`DEQ-DELL-20260909-1`).
+- 🆕 **2026-11-03 — financing backfill (deals register):** Dell launched a **~$4bn investment-grade bond** on 2026-09-09 (longest-tenor initial price talk up to ~T+140 — Bloomberg via the UBER page relay) and completed it at **$5.0bn in four tranches: $1.25bn 5.100% 2029 · $1.25bn 5.400% 2031 · $1.5bn 5.600% 2033 · $1.0bn 5.900% 2037** (prices to public 99.953 / 99.836 / 99.475 / 99.694; Barclays / BofA / Citi / GS / HSBC / JPM / TD / Wells on the book), proceeds to repay the 4.900% First Lien Notes due 2026 and for general corporate purposes (Dell 8-K, SEC acc. 0001193125-26-387958, and 424B2 prospectus supplement; Simpson Thacher completion announcement 2026-09-21 — web-retrieved 2026-11-03). Same session as Amazon's debut sterling and Uber's debut euro deals. Register: [debt-equity-deals-2026h2](themes/debt-equity-deals-2026h2.md) (`DEQ-DELL-20260909-1`).
 
 
 
@@ -468,7 +468,7 @@ _Source: DELL earnings calls (dates above); management commentary, paraphrased._
 - **Outlook:** not reachable in this environment (no MAPI session); email to be added separately.
 
 ## Changelog
-- 2026-11-03 — deals-register lane: 1 Current-state bullet (the ~$4bn September-2026 IG refinancing bond — Bloomberg relays; final terms flagged as not retrieved) + link to the new register theme. Nothing superseded.
+- 2026-11-03 — deals-register lane: 1 Current-state bullet (the September-2026 IG refinancing bond) + link to the new register theme. Same-day correction: first written at the ~$4bn launch size with terms 'not retrieved'; now the completed **$5.0bn**, four tranches 5.10%–5.90% due 2029–2037, from the 8-K / 424B2. Nothing else superseded.
 
 - 2026-10-12 — Mizuho DELL PT $500 (Vijay Rakesh, "AI Server Call…", 2026-08-16, px $490.81) → [unlogged intermediate Outperform $600 at 17x F28E EPS, per the 10-05 note's "Previous" column; date not in the corpus] → $650 (2026-10-05, Outperform, ~18x F28E EPS, bull $850 / bear $500, px $552.29) [run-inbox 2026-10-12]. ⚠️ Discrepancy: Mizuho's printed prior ($600) disagrees with the page's prior ($500); the page's $500 is logged here as the superseded value. Body: superseded marker on the Current-state Mizuho bullet and a dated clause on the street-split bullet (Mizuho $650 vs MS EW $511). 1 top-of-section block, 1 Full-log row, 1 Sinal update, 1 Sources link.
 - **2026-10-01 (/wiki-ingest 21h run of 09-30, completed 10-01)** — 3 log rows (BofA lightning-round CPU-server read; ISI via TMTB; Barclays desk HPE-vs-DELL colour). **Superseded: nothing.** No Sinal change. Rows sit after the last row of the first log table because the window carries no later rows there.
