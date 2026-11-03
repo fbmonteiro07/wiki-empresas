@@ -36,6 +36,8 @@ _Definitions: [FY2025 10-K/A, filed 2026-02-20](../HOOD/HOOD_10-K-A_2026-02-20_0
 
 ## Current state (latest quarter)
 
+- 🆕 **2026-11-03 — financing backfill (deals register):** Robinhood issued **$2.2bn of 0.00% convertible senior notes due 2029-10-01** on 2026-06-25 (144A; includes the $200m initial-purchasers' option exercised in full on 06-23; no regular interest, no accretion; GS lead left with a 60–65% indicative conversion premium and net share settlement) (Robinhood 10-Q 2026-07-30, Note 11; GS ECM · Coelho indicative term sheet 2026-06-22 — bookrunner, not research). Register: [debt-equity-deals-2026h2](themes/debt-equity-deals-2026h2.md) (`DEQ-HOOD-20260625-1`).
+
 **Q3 2026, released 2026-10-27.** Year-over-year growth and operating metrics below come from the company release.
 
 | Metric | Q3 2026 |
@@ -120,6 +122,8 @@ Trading and crypto activity, order-routing economics, leverage and customer cred
 [Complete local inventory and review scope](_dashboards/financials-sources.html#HOOD): SEC filings and amendment, recent calls, earnings releases, full local Morgan Stanley report and cached commentary. The company release governs exact subscriber counts where third-party transcript wording is inconsistent.
 
 ## Changelog
+
+- 2026-11-03 — deals-register lane: 1 Current-state bullet (the $2.2bn 0% 2029 converts issued 2026-06-25 — 10-Q 2026-07-30; GS ECM term sheet 2026-06-22) + link to the new register theme. Nothing superseded.
 
 - **2026-11-01 — Live Outlook review.** Added the explicit Redburn Sell versus Goldman/Bernstein positive debate; labeled regulatory sensitivities as broker scenarios and flagged internally inconsistent source volume figures. Prior thesis, targets and historical guidance vintages were retained.
 - **2026-10-31 — Coverage initiated.** Q3 2026 release/call dated 2026-10-27 and 10-Q filed 2026-10-28.

@@ -31,6 +31,8 @@ The accelerated-computing platform that sits at the center of the AI buildout �
 
 ## Current state (latest quarter)
 
+- 🆕 **2026-11-03 — financing backfill (deals register):** NVIDIA priced its first bond deal since 2021 on 2026-06-15 — **$25.0bn of senior unsecured notes in seven tranches** ($3.5bn 4.25% 2028 · $3.5bn 4.35% 2029 · $4.0bn 4.50% 2031 · $3.5bn 4.75% 2033 · $4.0bn 4.95% 2036 · $3.0bn 5.55% 2046 · $3.5bn 5.625% 2056; Aa1/AA; settled 06-18; net ~$24.9bn, general corporate purposes and refinancing) (Bloomberg ISSUE_DT/CPN/AMT_ISSUED via the official AI credit workbook, 2026-11-03; NVIDIA 10-Q 2026-08-26). The 4.95% 2036 is the workbook's comparator for the NVIDIA-tenant project bonds (OAS 106bp vs Beacon Point/HUTBPA 235bp on 2026-11-03). Full six-month register: [debt-equity-deals-2026h2](themes/debt-equity-deals-2026h2.md) (`DEQ-NVDA-20260615-1`).
+
 **🆕🔴🔴 2026-10-02 (/wiki-ingest 21h) — MORGAN STANLEY REINSTATES NVDA AS ITS TOP PICK IN SEMIS AFTER HOSTING HUANG / KRESS / HARI IN NYC AND BOSTON (OW, PT $300 UNCHANGED) — AND THE NOTE PUTS A NUMBER ON THREE THINGS THE 09-27 IR DECK ONLY DREW: FEYNMAN REVENUE/GW, THE CUSTOMER MATH BEHIND THE +70% GUIDE, AND THE GM FLOOR.** (Morgan Stanley · **Joseph Moore**, Mason Wayne, Ella Tulchinsky, Nicole Kozhukhov, Shane Brett, Cate Folan — *"NVIDIA Corp.: Reinstating Top Pick as NDR supports our positive views"*, 2026-10-02, 16pp; research PRIMARY.) ➤ **Thesis-drift: the 09-04 removal was mechanical (6-month auto-drop) and this is the reinstatement — *"We named the stock our Top Pick in March (which was at least three months too early)… Morgan Stanley process is that the designation is removed after 6 months; we are reinstating it now."* OW and $300 are NOT changed. Logged in `## Changelog
 
 - **2026-10-11 — Nokia historical funding confirmation:** added November 13, 2025 completion of the already-mentioned October 2025 $1bn equity investment, sourced to Nokia's January 29, 2026 release. Original amount and terms preserved under **NVDA-NOK-EQUITY-20251028**; no new investment, compute capacity or AI-RAN delivery inferred. Existing July 15, 2026 product relay unchanged. Linked new NOK page; no NVDA rating/PT/forecast superseded.
@@ -2226,6 +2228,8 @@ _Source: NVDA earnings calls (dates above); management commentary, paraphrased._
 - **Briefings:** [roll-up](../_briefings/by-ticker/NVDA.md) — 76 datapoints / 38 days.
 
 ## Changelog
+
+- 2026-11-03 — deals-register lane: 1 Current-state bullet (the $25.0bn seven-tranche June-2026 notes — Bloomberg via the official credit workbook; NVIDIA 10-Q 2026-08-26) + link to the new register theme. Nothing superseded.
 
 - **2026-10-31 — Helix historical backfill:** added the primary-source cross-reference and stable financing ID; existing broker/press history retained, no rating/PT or capacity forecast changed.
 
