@@ -1,6 +1,6 @@
 {
  "_about": "Hand-edited ledger of machine-transcription garbles (Notion AI, Bloomberg ASR, auto-translation) seen in the archive, with the correct reading. Used by E:\\.claude\\scripts\\transcript_qa.py (source-file scan, page-diff scan) and by ingest_notion_meetings.py (writes a 'Transcription QA' block into every archived Notion file). Keys are matched with word boundaries, case-sensitive unless 'ci' is true. 'keep_when' = regex contexts (same line, ~80 chars around the hit) where the token is legitimate and must NOT be flagged. Add an entry the first time a garble is caught; never delete one. Standing rule (Felipe, 2026-09-28): ALWAYS double-check transcript content — acronyms, names, units, numbers — before it travels to a page.",
- "_updated": "2026-11-02",
+ "_updated": "2026-11-05",
  "terms": {
   "Hixle AI": {
    "correct": "Higgsfield (AI video startup)",
@@ -6300,6 +6300,104 @@
    "ci": false,
    "rule": "Captions of 'two TB' as 'two TBTE' (Dropbox 2 TB plan).",
    "first_seen": "2026-11-02 (UC Irvine CDT session with Jeetu Patel, Cisco, YouTube uploaded captions)"
+  },
+  "Ibadan": {
+   "correct": "Ibiden (substrates)",
+   "domain": "names",
+   "rule": "ASR of the Japanese substrate maker in 'Intel gets almost all their substrates from Ibadan'; see also 'Ibden', 'Ibude'.",
+   "ci": false,
+   "first_seen": "2026-11-05 (Notion: UBS Arcuri AMD 3Q26 recap call 2026-11-04)"
+  },
+  "crowded lawn": {
+   "correct": "crowded long",
+   "domain": "markets",
+   "rule": "ASR in a positioning comment ('it's a crowded lawn').",
+   "ci": true,
+   "first_seen": "2026-11-05 (Notion: UBS Arcuri AMD 3Q26 recap call 2026-11-04)"
+  },
+  "Innolite": {
+   "correct": "Innolight (Zhongji Innolight, optical modules)",
+   "domain": "names",
+   "rule": "ASR of the Chinese transceiver maker, listed as a Lumentum laser customer.",
+   "ci": false,
+   "first_seen": "2026-11-05 (Notion: Jefferies MRVL/LITE CEO fireside 2026-11-03)"
+  },
+  "EOPTO": {
+   "correct": "Eoptolink (optical modules)",
+   "domain": "names",
+   "rule": "ASR truncation of Eoptolink in a list of Lumentum laser customers.",
+   "ci": false,
+   "first_seen": "2026-11-05 (Notion: Jefferies MRVL/LITE CEO fireside 2026-11-03)"
+  },
+  "Cloudlight": {
+   "correct": "Cloud Light (Lumentum's transceiver unit, acquired 2023)",
+   "domain": "names",
+   "rule": "One-word ASR spelling of Cloud Light.",
+   "ci": false,
+   "first_seen": "2026-11-05 (Notion: Jefferies MRVL/LITE CEO fireside 2026-11-03)"
+  },
+  "Hinohosa": {
+   "correct": "Hinojosa (Texas governor race vs Abbott)",
+   "domain": "names",
+   "rule": "ASR of the Democratic Texas gubernatorial candidate's surname in the ERCOT / data-center moratorium comment.",
+   "ci": false,
+   "first_seen": "2026-11-05 (Notion: GS 'Markets Post US Midterms' webinar 2026-11-04)"
+  },
+  "Rent futures": {
+   "correct": "Brent futures",
+   "domain": "markets",
+   "rule": "Dropped initial B in 'you can see Rent futures down like a couple of percent'.",
+   "ci": false,
+   "first_seen": "2026-11-05 (Notion: GS 'Markets Post US Midterms' webinar 2026-11-04)"
+  },
+  "up $70": {
+   "correct": "up 70%",
+   "domain": "units",
+   "rule": "Percent heard as dollars: 'she's been saying up $70 for server CPU' = Lisa Su's prior +70% server-CPU growth framing.",
+   "ci": true,
+   "first_seen": "2026-11-05 (Notion: UBS Arcuri AMD 3Q26 recap call 2026-11-04)"
+  },
+  "MI5 series": {
+   "correct": "MI500 series (AMD)",
+   "domain": "semis",
+   "rule": "ASR drops the zeros; also 'MI6 series' = MI600.",
+   "ci": true,
+   "first_seen": "2026-11-05 (Notion: UBS Arcuri AMD 3Q26 recap call 2026-11-04)"
+  },
+  "MI6 series": {
+   "correct": "MI600 series (AMD)",
+   "domain": "semis",
+   "rule": "ASR drops the zeros.",
+   "ci": true,
+   "first_seen": "2026-11-05 (Notion: UBS Arcuri AMD 3Q26 recap call 2026-11-04)"
+  },
+  "MicroVixel": {
+   "correct": "micro-VCSEL",
+   "domain": "semis",
+   "rule": "ASR of micro-VCSEL (scale-up AOCs); also 'MicroVoxel'.",
+   "ci": true,
+   "first_seen": "2026-11-05 (Notion: Jefferies MRVL/LITE CEO fireside 2026-11-03)"
+  },
+  "MicroVoxel": {
+   "correct": "micro-VCSEL",
+   "domain": "semis",
+   "rule": "ASR of micro-VCSEL.",
+   "ci": true,
+   "first_seen": "2026-11-05 (Notion: Jefferies MRVL/LITE CEO fireside 2026-11-03)"
+  },
+  "Enphi": {
+   "correct": "Inphi (Marvell acquisition, 2021)",
+   "domain": "names",
+   "rule": "ASR; also 'InFly'.",
+   "ci": false,
+   "first_seen": "2026-11-05 (Notion: Jefferies MRVL/LITE CEO fireside 2026-11-03)"
+  },
+  "InFly": {
+   "correct": "Inphi",
+   "domain": "names",
+   "rule": "ASR of Inphi.",
+   "ci": false,
+   "first_seen": "2026-11-05 (Notion: Jefferies MRVL/LITE CEO fireside 2026-11-03)"
   }
  },
  "summary_traps": [

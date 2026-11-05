@@ -3,7 +3,7 @@
 _Wiki · created 2026-11-02 · research cutoff 2026-11-02 · Outlook review 2026-11-02 · [Financials](themes/financials.md) · [Company index](00_INDEX.md). Source archive: [OWL](_dashboards/financials-sources.html#OWL)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-11-03 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-05 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -135,6 +135,8 @@ Track tender and redemption requests in continuously offered products (the 10-Q 
 [Complete local inventory and review scope](_dashboards/financials-sources.html#OWL): SEC filings, releases/decks, eight quarterly calls (Q4 2024–Q3 2026, MarketBeat/Quartr third-party transcription) and ten cached commentary excerpts, plus the three live Outlook reads named above. Archived is not the same as fully read: only targeted passages were read from the Q3 10-Q (business environment, channel mix, debt, commitments, TRA) and the Q1 10-Q (business environment); the 10-K was keyword-searched, not read in full. Transcript garbles corrected on this page: OWLCX [transcribed "LLCX"] (Q4 2025 call), alternative credit 2.9% [transcribed "All of credit, 2.9%"] (Q3 2026 call, checked against deck slide 14), asset class [transcribed "ask class"] (Q1 2026 call).
 
 ## Changelog
+
+- **2026-11-03 — primary-source financing backfill:** Blue Owl's [2026-08-28 release](https://ir.blueowl.com/Investors/news/news-details/2026/BLUE-OWL-MANAGED-FUNDS-LEAD-2-4-BILLION-AI-FACTORY-FINANCING-FOR-IREN/default.aspx) supplies terms absent from the October 29 call: $2.4bn IREN Mackenzie equipment financing, split equally between a senior secured term loan and senior secured notes; funding in tranches alongside delivery. Pricing and drawn balance undisclosed. Prior call wording retained; recorded separately as IREN-MACKENZIE-FIN-20260828 in the compute timeline, not assumed to finance Microsoft's offtake.
 
 - **2026-11-02 — Coverage initiated.** Latest evidence: Q3 2026 release, deck and call dated 2026-10-29 and 10-Q filed 2026-10-30. Three Outlook messages read live (Jefferies FIG sales 2026-10-29; Jefferies Tech desk 2026-02-22; BofA EMEA Software daily 2026-09-25). Data-center deals linked to the existing compute-deal IDs without duplication. No Capstone rating, price target or consensus inserted.
 - **2026-10-29 — FY2026 outlook reaffirmed and margin framing raised.** Management again said it can beat $1.02 FRE / $0.89 DE per share (Visible Alpha consensus cited at the 2026-04-30 call, reaffirmed 2026-07-30). It now treats margin expansion above the ~58.5% FRE margin outlook as the "new base case" and expects 2027 management-fee growth above 2026. Source: [Q3 call](../OWL/transcripts/OWL_Q3-2026-earnings_2026-10-29.md).

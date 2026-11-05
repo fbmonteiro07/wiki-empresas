@@ -1,5 +1,5 @@
 {
- "built": "2026-11-02T23:29:02",
+ "built": "2026-11-05T20:21:40",
  "since": "2023-01",
  "note": "Monthly exchange statistics from public company releases and OCC. OCC counts cleared US listed-options contracts (equity + index), so exchange-group shares are of OCC volume. Cboe RPC is the company's rolling three-month average, reported with a one-month lag. ICE monthly releases give y/y % only. Industry ADV = OCC monthly total / Cboe US trading days (Capstone arithmetic).",
  "occ": {
@@ -3740,6 +3740,122 @@
     },
     "url": "https://marketdata.theocc.com/exchange-volume?reportView=market&reportType=M&reportDate=20251231&instrumentType=options&format=txt"
    },
+   "2026-11": {
+    "total": 220763009,
+    "groups": {
+     "Cboe": {
+      "contracts": 66139508,
+      "share": 29.96
+     },
+     "Nasdaq": {
+      "contracts": 57411612,
+      "share": 26.01
+     },
+     "ICE (NYSE)": {
+      "contracts": 40857264,
+      "share": 18.51
+     },
+     "MIAX": {
+      "contracts": 36300968,
+      "share": 16.44
+     },
+     "MEMX": {
+      "contracts": 7594947,
+      "share": 3.44
+     },
+     "BOX": {
+      "contracts": 10070625,
+      "share": 4.56
+     },
+     "Other": {
+      "contracts": 2388085,
+      "share": 1.08
+     }
+    },
+    "by_exchange": {
+     "AMEX": [
+      18881955,
+      8.55
+     ],
+     "ARCA": [
+      21975309,
+      9.95
+     ],
+     "BATS": [
+      5428569,
+      2.46
+     ],
+     "BOX": [
+      10070625,
+      4.56
+     ],
+     "C2": [
+      5006551,
+      2.27
+     ],
+     "CBOE": [
+      43433625,
+      19.67
+     ],
+     "EDGX": [
+      12270763,
+      5.56
+     ],
+     "EMLD": [
+      5276432,
+      2.39
+     ],
+     "GEM": [
+      7562599,
+      3.43
+     ],
+     "IEX": [
+      1522156,
+      0.69
+     ],
+     "ISE": [
+      13563631,
+      6.14
+     ],
+     "MCRY": [
+      5559016,
+      2.52
+     ],
+     "MEMX": [
+      7594947,
+      3.44
+     ],
+     "MIAX": [
+      19321445,
+      8.75
+     ],
+     "MPRL": [
+      4634511,
+      2.1
+     ],
+     "MXTO": [
+      865929,
+      0.39
+     ],
+     "NOBO": [
+      2461000,
+      1.11
+     ],
+     "NSDQ": [
+      9600151,
+      4.35
+     ],
+     "PHLX": [
+      18665215,
+      8.45
+     ],
+     "SPHR": [
+      7068580,
+      3.2
+     ]
+    },
+    "url": "https://marketdata.theocc.com/exchange-volume?reportView=market&reportType=M&reportDate=20261105&instrumentType=options&format=txt"
+   },
    "2026-10": {
     "total": 1619684735,
     "groups": {
@@ -3854,7 +3970,7 @@
       3.24
      ]
     },
-    "url": "https://marketdata.theocc.com/exchange-volume?reportView=market&reportType=M&reportDate=20261102&instrumentType=options&format=txt"
+    "url": "https://marketdata.theocc.com/exchange-volume?reportView=market&reportType=M&reportDate=20261105&instrumentType=options&format=txt"
    },
    "2026-09": {
     "total": 1486062415,
@@ -3970,7 +4086,7 @@
       3.26
      ]
     },
-    "url": "https://marketdata.theocc.com/exchange-volume?reportView=market&reportType=M&reportDate=20261102&instrumentType=options&format=txt"
+    "url": "https://marketdata.theocc.com/exchange-volume?reportView=market&reportType=M&reportDate=20261105&instrumentType=options&format=txt"
    },
    "2026-08": {
     "total": 1440594617,
@@ -4086,7 +4202,7 @@
       3.46
      ]
     },
-    "url": "https://marketdata.theocc.com/exchange-volume?reportView=market&reportType=M&reportDate=20261102&instrumentType=options&format=txt"
+    "url": "https://marketdata.theocc.com/exchange-volume?reportView=market&reportType=M&reportDate=20261105&instrumentType=options&format=txt"
    },
    "2026-07": {
     "total": 1550557103,
@@ -4202,7 +4318,7 @@
       3.32
      ]
     },
-    "url": "https://marketdata.theocc.com/exchange-volume?reportView=market&reportType=M&reportDate=20261102&instrumentType=options&format=txt"
+    "url": "https://marketdata.theocc.com/exchange-volume?reportView=market&reportType=M&reportDate=20261105&instrumentType=options&format=txt"
    },
    "2026-06": {
     "total": 1603491559,
@@ -4318,7 +4434,7 @@
       3.43
      ]
     },
-    "url": "https://marketdata.theocc.com/exchange-volume?reportView=market&reportType=M&reportDate=20261102&instrumentType=options&format=txt"
+    "url": "https://marketdata.theocc.com/exchange-volume?reportView=market&reportType=M&reportDate=20261105&instrumentType=options&format=txt"
    },
    "2026-05": {
     "total": 1466374712,
@@ -4434,7 +4550,7 @@
       3.43
      ]
     },
-    "url": "https://marketdata.theocc.com/exchange-volume?reportView=market&reportType=M&reportDate=20261102&instrumentType=options&format=txt"
+    "url": "https://marketdata.theocc.com/exchange-volume?reportView=market&reportType=M&reportDate=20261105&instrumentType=options&format=txt"
    },
    "2026-04": {
     "total": 1446072023,
@@ -4550,7 +4666,7 @@
       3.52
      ]
     },
-    "url": "https://marketdata.theocc.com/exchange-volume?reportView=market&reportType=M&reportDate=20261102&instrumentType=options&format=txt"
+    "url": "https://marketdata.theocc.com/exchange-volume?reportView=market&reportType=M&reportDate=20261105&instrumentType=options&format=txt"
    },
    "2026-03": {
     "total": 1512661272,
@@ -4666,7 +4782,7 @@
       2.81
      ]
     },
-    "url": "https://marketdata.theocc.com/exchange-volume?reportView=market&reportType=M&reportDate=20261102&instrumentType=options&format=txt"
+    "url": "https://marketdata.theocc.com/exchange-volume?reportView=market&reportType=M&reportDate=20261105&instrumentType=options&format=txt"
    },
    "2026-02": {
     "total": 1317513049,
@@ -4782,7 +4898,7 @@
       2.7
      ]
     },
-    "url": "https://marketdata.theocc.com/exchange-volume?reportView=market&reportType=M&reportDate=20261102&instrumentType=options&format=txt"
+    "url": "https://marketdata.theocc.com/exchange-volume?reportView=market&reportType=M&reportDate=20261105&instrumentType=options&format=txt"
    },
    "2026-01": {
     "total": 1372350600,
@@ -4898,14 +5014,14 @@
       2.71
      ]
     },
-    "url": "https://marketdata.theocc.com/exchange-volume?reportView=market&reportType=M&reportDate=20261102&instrumentType=options&format=txt"
+    "url": "https://marketdata.theocc.com/exchange-volume?reportView=market&reportType=M&reportDate=20261105&instrumentType=options&format=txt"
    }
   },
   "urls": {
    "2023": "https://marketdata.theocc.com/exchange-volume?reportView=market&reportType=M&reportDate=20231231&instrumentType=options&format=txt",
    "2024": "https://marketdata.theocc.com/exchange-volume?reportView=market&reportType=M&reportDate=20241231&instrumentType=options&format=txt",
    "2025": "https://marketdata.theocc.com/exchange-volume?reportView=market&reportType=M&reportDate=20251231&instrumentType=options&format=txt",
-   "2026": "https://marketdata.theocc.com/exchange-volume?reportView=market&reportType=M&reportDate=20261102&instrumentType=options&format=txt"
+   "2026": "https://marketdata.theocc.com/exchange-volume?reportView=market&reportType=M&reportDate=20261105&instrumentType=options&format=txt"
   },
   "groups": {
    "Cboe": [
@@ -5581,7 +5697,7 @@
    "2026-01": {
     "days_us": 20.0,
     "adv_multilist_k": 14092.53455,
-    "adv_index_k": 5476.823000000001,
+    "adv_index_k": 5476.823,
     "adv_options_k": 19569.357549999997,
     "adv_futures_k": 230.21539999999996,
     "adv_us_eq_on_bn_sh": 1.8717538002,
@@ -5603,12 +5719,12 @@
     "adv_vix_opt_k": 852.6843,
     "adv_xsp_k": 150.2965,
     "adv_vix_fut_k": 223.43255,
-    "url": "https://cdn.cboe.com/resources/investor_relations/revenue_per_contract/September-2026-Monthly-Volume-Statistics-Xlsx-.xlsx"
+    "url": "https://cdn.cboe.com/resources/investor_relations/revenue_per_contract/October-2026-Monthly-Volume-Statistics-Xlsx-.xlsx"
    },
    "2026-02": {
     "days_us": 19.0,
     "adv_multilist_k": 13476.305210526314,
-    "adv_index_k": 5973.235000000001,
+    "adv_index_k": 5973.235,
     "adv_options_k": 19449.54021052632,
     "adv_futures_k": 276.4827894736842,
     "adv_us_eq_on_bn_sh": 1.9605621434210527,
@@ -5621,7 +5737,7 @@
     "share_us_eq_on": 0.09805492515231158,
     "share_eu_eq": 0.25979172266087797,
     "rpc_multilist": 0.07867737357038825,
-    "rpc_index": 0.9447586147952843,
+    "rpc_index": 0.944758614795284,
     "rpc_options": 0.33561182525959443,
     "rpc_futures": 1.6816944574958643,
     "capture_us_eq_on_per100": 0.017110381526995247,
@@ -5630,7 +5746,7 @@
     "adv_vix_opt_k": 950.5462105263158,
     "adv_xsp_k": 186.2721052631579,
     "adv_vix_fut_k": 258.7871052631579,
-    "url": "https://cdn.cboe.com/resources/investor_relations/revenue_per_contract/September-2026-Monthly-Volume-Statistics-Xlsx-.xlsx"
+    "url": "https://cdn.cboe.com/resources/investor_relations/revenue_per_contract/October-2026-Monthly-Volume-Statistics-Xlsx-.xlsx"
    },
    "2026-03": {
     "days_us": 22.0,
@@ -5648,7 +5764,7 @@
     "share_us_eq_on": 0.10011060049522087,
     "share_eu_eq": 0.25075242097421496,
     "rpc_multilist": 0.0800524326071136,
-    "rpc_index": 0.939931280462621,
+    "rpc_index": 0.9399312804626209,
     "rpc_options": 0.342863212804858,
     "rpc_futures": 1.6486403424367833,
     "capture_us_eq_on_per100": 0.016505903189531615,
@@ -5657,12 +5773,12 @@
     "adv_vix_opt_k": 1160.2576363636365,
     "adv_xsp_k": 222.40322727272726,
     "adv_vix_fut_k": 318.03763636363635,
-    "url": "https://cdn.cboe.com/resources/investor_relations/revenue_per_contract/September-2026-Monthly-Volume-Statistics-Xlsx-.xlsx"
+    "url": "https://cdn.cboe.com/resources/investor_relations/revenue_per_contract/October-2026-Monthly-Volume-Statistics-Xlsx-.xlsx"
    },
    "2026-04": {
     "days_us": 21.0,
     "adv_multilist_k": 14373.567809523809,
-    "adv_index_k": 6257.392142857144,
+    "adv_index_k": 6257.392142857143,
     "adv_options_k": 20630.95995238095,
     "adv_futures_k": 222.3492857142857,
     "adv_us_eq_on_bn_sh": 1.6771784980476192,
@@ -5675,7 +5791,7 @@
     "share_us_eq_on": 0.0942354405946455,
     "share_eu_eq": 0.2570397560724978,
     "rpc_multilist": 0.07832415358664206,
-    "rpc_index": 0.9382487222138952,
+    "rpc_index": 0.9382487222138951,
     "rpc_options": 0.34730974191312225,
     "rpc_futures": 1.634148047606276,
     "capture_us_eq_on_per100": 0.017734436308065257,
@@ -5684,7 +5800,7 @@
     "adv_vix_opt_k": 944.0060476190475,
     "adv_xsp_k": 188.44147619047618,
     "adv_vix_fut_k": 213.42023809523812,
-    "url": "https://cdn.cboe.com/resources/investor_relations/revenue_per_contract/September-2026-Monthly-Volume-Statistics-Xlsx-.xlsx"
+    "url": "https://cdn.cboe.com/resources/investor_relations/revenue_per_contract/October-2026-Monthly-Volume-Statistics-Xlsx-.xlsx"
    },
    "2026-05": {
     "days_us": 20.0,
@@ -5702,7 +5818,7 @@
     "share_us_eq_on": 0.0941391923921774,
     "share_eu_eq": 0.24453225320696162,
     "rpc_multilist": 0.07186347580319925,
-    "rpc_index": 0.9417948382909822,
+    "rpc_index": 0.9417948382909823,
     "rpc_options": 0.33407473693146544,
     "rpc_futures": 1.6458719597665137,
     "capture_us_eq_on_per100": 0.018224107583651204,
@@ -5711,12 +5827,12 @@
     "adv_vix_opt_k": 732.2174,
     "adv_xsp_k": 167.11329999999998,
     "adv_vix_fut_k": 194.65995,
-    "url": "https://cdn.cboe.com/resources/investor_relations/revenue_per_contract/September-2026-Monthly-Volume-Statistics-Xlsx-.xlsx"
+    "url": "https://cdn.cboe.com/resources/investor_relations/revenue_per_contract/October-2026-Monthly-Volume-Statistics-Xlsx-.xlsx"
    },
    "2026-06": {
     "days_us": 21.0,
     "adv_multilist_k": 16629.93338095238,
-    "adv_index_k": 6347.367051904762,
+    "adv_index_k": 6347.367047619047,
     "adv_options_k": 22977.300432857137,
     "adv_futures_k": 241.98923809523808,
     "adv_us_eq_on_bn_sh": 2.185340726047619,
@@ -5729,7 +5845,7 @@
     "share_us_eq_on": 0.09355471563521132,
     "share_eu_eq": 0.2315402718013496,
     "rpc_multilist": 0.06439251002150567,
-    "rpc_index": 0.952795171392088,
+    "rpc_index": 0.9527951713920882,
     "rpc_options": 0.31667508461614496,
     "rpc_futures": 1.664292591461991,
     "capture_us_eq_on_per100": 0.018580622309741314,
@@ -5738,12 +5854,12 @@
     "adv_vix_opt_k": 726.3493809523809,
     "adv_xsp_k": 228.65319047619047,
     "adv_vix_fut_k": 232.31104761904763,
-    "url": "https://cdn.cboe.com/resources/investor_relations/revenue_per_contract/September-2026-Monthly-Volume-Statistics-Xlsx-.xlsx"
+    "url": "https://cdn.cboe.com/resources/investor_relations/revenue_per_contract/October-2026-Monthly-Volume-Statistics-Xlsx-.xlsx"
    },
    "2026-07": {
     "days_us": 22.0,
     "adv_multilist_k": 15686.9725,
-    "adv_index_k": 5990.025318181817,
+    "adv_index_k": 5990.025318181818,
     "adv_options_k": 21676.997818181815,
     "adv_futures_k": 206.9779545454545,
     "adv_us_eq_on_bn_sh": 1.5690317247272727,
@@ -5765,7 +5881,7 @@
     "adv_vix_opt_k": 769.654,
     "adv_xsp_k": 238.31381818181816,
     "adv_vix_fut_k": 200.67863636363634,
-    "url": "https://cdn.cboe.com/resources/investor_relations/revenue_per_contract/September-2026-Monthly-Volume-Statistics-Xlsx-.xlsx"
+    "url": "https://cdn.cboe.com/resources/investor_relations/revenue_per_contract/October-2026-Monthly-Volume-Statistics-Xlsx-.xlsx"
    },
    "2026-08": {
     "days_us": 21.0,
@@ -5783,7 +5899,7 @@
     "share_us_eq_on": 0.0905079699687843,
     "share_eu_eq": 0.2256037382543582,
     "rpc_multilist": 0.053870123220499125,
-    "rpc_index": 0.9550475611912115,
+    "rpc_index": 0.9550475611912114,
     "rpc_options": 0.30376360053839174,
     "rpc_futures": 1.699505503360846,
     "capture_us_eq_on_per100": 0.020199034866741208,
@@ -5792,12 +5908,12 @@
     "adv_vix_opt_k": 780.5955238095238,
     "adv_xsp_k": 241.29871428571428,
     "adv_vix_fut_k": 156.7822380952381,
-    "url": "https://cdn.cboe.com/resources/investor_relations/revenue_per_contract/September-2026-Monthly-Volume-Statistics-Xlsx-.xlsx"
+    "url": "https://cdn.cboe.com/resources/investor_relations/revenue_per_contract/October-2026-Monthly-Volume-Statistics-Xlsx-.xlsx"
    },
    "2026-09": {
     "days_us": 21.0,
     "adv_multilist_k": 15382.322714285712,
-    "adv_index_k": 6421.800714285716,
+    "adv_index_k": 6421.800714285715,
     "adv_options_k": 21804.123428571424,
     "adv_futures_k": 191.06280952380956,
     "adv_us_eq_on_bn_sh": 1.4532210506190477,
@@ -5809,17 +5925,44 @@
     "share_options": 0.30812070030046484,
     "share_us_eq_on": 0.08562842208646837,
     "share_eu_eq": 0.21806473824308195,
+    "rpc_multilist": 0.05227882793013071,
+    "rpc_index": 0.9515064313940882,
+    "rpc_options": 0.3071570911941462,
+    "rpc_futures": 1.7117016010035628,
+    "capture_us_eq_on_per100": 0.022393881088390476,
+    "capture_fx_per_mn": 2.912416307163857,
     "adv_spx_k": 5208.344904761905,
     "adv_vix_opt_k": 826.6642380952381,
     "adv_xsp_k": 273.76385714285715,
     "adv_vix_fut_k": 181.9037619047619,
-    "url": "https://cdn.cboe.com/resources/investor_relations/revenue_per_contract/September-2026-Monthly-Volume-Statistics-Xlsx-.xlsx"
+    "url": "https://cdn.cboe.com/resources/investor_relations/revenue_per_contract/October-2026-Monthly-Volume-Statistics-Xlsx-.xlsx"
+   },
+   "2026-10": {
+    "days_us": 22.0,
+    "adv_multilist_k": 14252.667636363636,
+    "adv_index_k": 6889.066772727272,
+    "adv_options_k": 21141.73440909091,
+    "adv_futures_k": 237.451,
+    "adv_us_eq_on_bn_sh": 1.5276487482272727,
+    "adv_us_eq_off_mn_sh": 260.45195617999997,
+    "adnv_eu_eq_bn_eur": 13.448629341783,
+    "adnv_fx_bn_usd": 60.388446537,
+    "share_multilist": 0.21391251840404252,
+    "share_index": 0.9850606860213874,
+    "share_options": 0.28716585823722046,
+    "share_us_eq_on": 0.08093156198237081,
+    "share_eu_eq": 0.23599286607411468,
+    "adv_spx_k": 5490.637363636363,
+    "adv_vix_opt_k": 989.624,
+    "adv_xsp_k": 302.7059545454545,
+    "adv_vix_fut_k": 231.10895454545457,
+    "url": "https://cdn.cboe.com/resources/investor_relations/revenue_per_contract/October-2026-Monthly-Volume-Statistics-Xlsx-.xlsx"
    }
   },
   "files": {
    "2024": "https://cdn.cboe.com/resources/investor_relations/revenue_per_contract/December-2024-Monthly-Volume-Statistics-Xlsx-.xlsx",
    "2025": "https://cdn.cboe.com/resources/investor_relations/revenue_per_contract/December-2025-Monthly-Volume-Statistics-Xlsx-.xlsx",
-   "2026": "https://cdn.cboe.com/resources/investor_relations/revenue_per_contract/September-2026-Monthly-Volume-Statistics-Xlsx-.xlsx"
+   "2026": "https://cdn.cboe.com/resources/investor_relations/revenue_per_contract/October-2026-Monthly-Volume-Statistics-Xlsx-.xlsx"
   }
  },
  "cme": {
@@ -7729,6 +7872,59 @@
     "title": "CME Group Reports Record Average Daily Volume for September and Q3, Driven by Growth Across Asset Classes CME Group, the world's leading derivatives marketplace",
     "date": "2026-10-02",
     "url": "https://www.prnewswire.com/news-releases/cme-group-reports-record-average-daily-volume-for-september-and-q3-driven-by-growth-across-asset-classes-302897134.html"
+   },
+   "2026-10": {
+    "adv_m": 30.0,
+    "yoy": 15.0,
+    "assets": {
+     "Interest Rate": {
+      "adv_m": 14.8,
+      "yoy": 28.0
+     },
+     "Equity Index": {
+      "adv_m": 8.8,
+      "yoy": 15.0
+     },
+     "Energy": {
+      "adv_m": 2.7,
+      "yoy": 1.0
+     },
+     "Agricultural": {
+      "adv_m": 2.1,
+      "yoy": 7.0
+     },
+     "Foreign Exchange": {
+      "adv_m": 0.985,
+      "yoy": 25.8,
+      "yoy_calc": true
+     },
+     "Metals": {
+      "adv_m": 0.805,
+      "yoy": -52.6,
+      "yoy_calc": true
+     },
+     "Cryptocurrency": {
+      "adv_m": 0.145,
+      "yoy": -61.7,
+      "yoy_calc": true
+     },
+     "International": {
+      "adv_m": 9.0,
+      "yoy": 9.0
+     }
+    },
+    "brokertec_adnv_bn": 1127.0,
+    "brokertec_yoy": 18.0,
+    "ebs_adnv_bn": 62.3,
+    "ebs_yoy": 9.0,
+    "collateral": {
+     "period_end": "September 2026",
+     "cash_bn": 147.0,
+     "noncash_bn": 166.9
+    },
+    "title": "CME Group Reports Record October ADV of 30 Million Contracts, up 15% Year Over Year CME Group, the world's leading derivatives marketplace, today reported its a",
+    "date": "2026-11-03",
+    "url": "https://www.prnewswire.com/news-releases/cme-group-reports-record-october-adv-of-30-million-contracts-up-15-year-over-year-302927436.html"
    }
   },
   "listing": "https://www.prnewswire.com/news/cme-group/"
@@ -11521,6 +11717,85 @@
     "total_adv_disclosed": true,
     "url": "https://s2.q4cdn.com/154085107/files/doc_news/Intercontinental-Exchange-Reports-September-and-Third-Quarter-2026-Statistics-2026.pdf",
     "date": "2026-10-05"
+   },
+   "2026-10": {
+    "total": {
+     "adv_yoy": 14.0,
+     "record": false,
+     "oi_yoy": 10.0
+    },
+    "lines": {
+     "Energy": {
+      "oi_yoy": 3.0
+     },
+     "Brent": {
+      "oi_yoy": 3.0
+     },
+     "Natural Gas": {
+      "adv_yoy": 18.0,
+      "oi_yoy": 8.0
+     },
+     "North American Gas": {
+      "adv_yoy": 11.0,
+      "oi_yoy": 8.0
+     },
+     "TTF Gas": {
+      "adv_yoy": 40.0,
+      "oi_yoy": 13.0
+     },
+     "Asia Gas": {
+      "adv_yoy": 6.0,
+      "oi_yoy": 25.0
+     },
+     "Agriculture & Metals": {
+      "adv_yoy": 39.0,
+      "oi_yoy": 38.0
+     },
+     "Sugar": {
+      "adv_yoy": 59.0,
+      "oi_yoy": 41.0
+     },
+     "Cocoa": {
+      "adv_yoy": 20.0,
+      "oi_yoy": 50.0
+     },
+     "Cotton": {
+      "adv_yoy": 13.0,
+      "oi_yoy": 55.0
+     },
+     "Financials": {
+      "adv_yoy": 39.0,
+      "oi_yoy": 18.0
+     },
+     "Interest Rates": {
+      "adv_yoy": 40.0,
+      "oi_yoy": 21.0
+     },
+     "Euribor": {
+      "adv_yoy": 38.0,
+      "oi_yoy": 7.0
+     },
+     "SONIA": {
+      "adv_yoy": 14.0,
+      "oi_yoy": 39.0
+     },
+     "Gilts": {
+      "adv_yoy": 26.0
+     },
+     "Equity Indices": {
+      "adv_yoy": 28.0
+     },
+     "MSCI": {
+      "adv_yoy": 41.0
+     },
+     "NYSE Equity Options": {
+      "adv_yoy": 19.0
+     }
+    },
+    "records": [],
+    "total_adv_disclosed": true,
+    "url": "https://s2.q4cdn.com/154085107/files/doc_news/Intercontinental-Exchange-Reports-October-2026-Statistics-2026.pdf",
+    "date": "2026-11-04"
    }
   }
  },
@@ -11711,7 +11986,8 @@
     "ovx_avg": 52.34
    },
    "2026-11": {
-    "ovx_avg": 62.69
+    "vix_avg": 19.53,
+    "ovx_avg": 60.87
    }
   },
   "urls": {

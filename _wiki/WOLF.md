@@ -5,17 +5,17 @@
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\WOLF` (10-K/10-Q filings + transcripts) · briefings `E:\briefings\2026`. Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-11-03 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-05 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $604m | $720m |
-| Gross profit | $-100m | $-68m |
-| Gross margin | -16.6% | -9.4% |
-| EBITDA | — | — |
-| EPS | $-9.41 | $-6.77 |
-| Capex | $110m | $32m |
-| OCF (≈EBITDA) | — | — |
+| Revenue | $615m | $759m |
+| Gross profit | $-102m | $-37m |
+| Gross margin | -16.6% | -4.9% |
+| EBITDA | — | $-143m |
+| EPS | $-9.11 | $-5.48 |
+| Capex | $112m | $42m |
+| OCF (≈EBITDA) | — | $-143m |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

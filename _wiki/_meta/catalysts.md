@@ -56,22 +56,22 @@ _Generated 2026-11-05 · parsed from every page's 'Catalysts / what to watch'. D
 | 2029-12-08 | MU | 🆕 **2026-10-16 — the buyback now has a formula and a window, from Micron IR.** From **2026-12-09 through 2029-12-08** Micron may repurchase up to **trailing-12-month FCF − CHIPS proceeds received in t |
 | 2031-12-31 | NSCALE | 2031-12-31 — Monarch expansion to ~8 GW gross planned. |
 
-## ⏰ Passed — need a post-mortem (5)
+## ⏰ Passed — need a post-mortem (3)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-11-04 | TRU | 2026-11-04 — FICO fiscal Q4 results and 2027 pricing outlook (date per the [UBS desk relay of McVeigh, 2026-10-27 — Outlook](https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hM |
-| 2026-11-04 | EFX | 2026-11-04 — FICO quarterly results: 2027 mortgage-score pricing, the direct-license model and the "Preferred Program" ($10 wholesale mortgage score, flat year on year per UBS) set the pass-through an |
 | 2026-11-03 | SMCI | **✅ RESOLVED (preliminary) 2026-10-20 — F1Q27 vs guide:** revenue **$18.5–19.5bn vs $14.5–15.5bn**, GM **12.0–12.5% vs 10.4–10.8%** (SMCI 8-K, 2026-10-20). Bull on delivery vs guide; GM sits well belo |
 | 2026-11-03 | INTC | 🆕 **2026-10-01: Susquehanna "The AI Arms Race" session (Christopher Rolland; AMD, INTC, MRVL, NVDA, AVGO, ARM, QCOM) and 2026-11-03: Intel dinner NDR with CFO and IR, London** (Susquehanna index 09-30 |
 | 2026-11-03 | APO | **2026-11-03 — Q3 results**, announced 2026-09-29. Test FRE growth, Athene inflows, reported versus normalized spreads and future fee recognition. [Company announcement](https://www.apollo.com/insight |
 
-## ✅ Resolved (380)
+## ✅ Resolved (382)
 
 | Date | Ticker | Verdict |
 |---|---|---|
+| 2026-11-04 | TRU | neutral — Same FICO read-through, not a separate earnings print: FY2027 guidance withheld because mortgage pricing transition/agreements and market remain uncertain (FICO company release November 4). TRU royalty pass-through versus bureau data economics remain separate; policy outcome unresolved. [FICO release](https://investors.fico.com/news-releases/news-release-details/fico-announces-earnings-812-share-fourth-quarter-fiscal-2026) · [source record](analyst-evidence/2026-11-05-morning-source-checks.json). |
+| 2026-11-04 | EFX | neutral — FICO read-through event occurred, but pricing uncertainty did not resolve: FICO's November 4 company release explicitly withholds FY2027 guidance while bespoke mortgage agreements remain unfinished. Do not translate FICO royalty pass-through revenue into bureau profit or infer a new bi-merge rule. Formal 2027 contracts and EFX margin economics remain open. [FICO release](https://investors.fico.com/news-releases/news-release-details/fico-announces-earnings-812-share-fourth-quarter-fiscal-2026) · [source record](analyst-evidence/2026-11-05-morning-source-checks.json). |
 | 2026-11-03 | BKNG | bear won — Forward-guide test only: company November 3 release guides Q4 room-night growth +1-3%, below BofA / Post and Gupta's October 25 +3-5% expectation preserved in the November 3 brief. Q3 room nights +7% beat Capstone's November 2 ~6-6.5% view; do not erase the reported-quarter beat. Macro normalization and AI distribution economics remain unresolved. [Company release mirror](https://www.marketscreener.com/news/booking-reports-third-quarter-2026-financial-results-ce785fdedc81f720) · [source record](analyst-evidence/2026-11-04-morning-source-checks.json). |
 | 2026-11-02 | STX | neutral — UNRESOLVED (D+3, wiki-catalyst 2026-11-05): the MS-hosted STX CFO NDR in Boston/NYC (11-02/03; MS TMT desk · Wigg, 2026-09-29) has no readout in the corpus (no desk relay, no Notion note, no intra-quarter row after 10-30). The pricing-floor ('revenue/TB positive y/y through FY27') and LTA questions stay open; next dated item is the 11-17 class-action settlement hearing. |
 | 2026-11-02 | LITE | neutral — NOT A NEW EVENT for the print: this row is the F1Q27 release already scored bull won under LITE 2026-11-05 (released early 11-02: adj. EPS $4.57 vs BBG $4.214; Q2 guide $5.90-6.20). The same-day news is the definitive MRVL/LITE all-stock agreement (4.500 MRVL per LITE; ~$1,132/sh, 23.9% premium to 10-28 unaffected; close H1 CY2028; >$1bn cost synergies; joint release 11-02). It confirms Sur's 10-30 speculation and is on both the LITE and MRVL pages. New open item: stockholder/regulatory approval. |

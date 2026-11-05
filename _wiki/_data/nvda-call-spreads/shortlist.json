@@ -1,0 +1,107 @@
+{
+  "source": "Bloomberg Desktop API",
+  "asof": "2026-11-05",
+  "basis": "Indicative long ask minus short bid; fees excluded; LAST_UPDATE is not verified bid/ask timestamp; no fill guarantee",
+  "underlying": 184.0601,
+  "spreads": [
+    {
+      "exp": "2027-03-19",
+      "long": 220.0,
+      "short": 230.0,
+      "debit": 2.5,
+      "mid": 2.275,
+      "ratio": 3.0,
+      "breakeven": 222.5,
+      "upside": 24.96,
+      "long_quote": [
+        8.8,
+        9.0
+      ],
+      "short_quote": [
+        6.5,
+        6.75
+      ],
+      "oi": [
+        25211,
+        53847
+      ],
+      "volume": [
+        2505.0,
+        41717.0
+      ],
+      "timestamps": [
+        "2026-11-05 16:42:57",
+        "2026-11-05 16:44:16"
+      ],
+      "max_loss_usd_per_spread": 250.0,
+      "max_profit_usd_per_spread": 750.0,
+      "maximum_debit_for_3_to_1_before_fees": 2.5
+    },
+    {
+      "exp": "2027-01-15",
+      "long": 210.0,
+      "short": 220.0,
+      "debit": 2.5,
+      "mid": 2.325,
+      "ratio": 3.0,
+      "breakeven": 212.5,
+      "upside": 19.53,
+      "long_quote": [
+        6.8,
+        6.95
+      ],
+      "short_quote": [
+        4.45,
+        4.65
+      ],
+      "oi": [
+        47167,
+        50032
+      ],
+      "volume": [
+        12034.0,
+        15572.0
+      ],
+      "timestamps": [
+        "2026-11-05 16:45:55",
+        "2026-11-05 16:45:19"
+      ],
+      "max_loss_usd_per_spread": 250.0,
+      "max_profit_usd_per_spread": 750.0,
+      "maximum_debit_for_3_to_1_before_fees": 2.5
+    },
+    {
+      "exp": "2026-11-20",
+      "long": 200.0,
+      "short": 210.0,
+      "debit": 2.44,
+      "mid": 2.335,
+      "ratio": 3.098,
+      "breakeven": 202.44,
+      "upside": 14.09,
+      "long_quote": [
+        4.6,
+        4.75
+      ],
+      "short_quote": [
+        2.31,
+        2.37
+      ],
+      "oi": [
+        31018,
+        92282
+      ],
+      "volume": [
+        88598.0,
+        10521.0
+      ],
+      "timestamps": [
+        "2026-11-05 16:46:06",
+        "2026-11-05 16:45:41"
+      ],
+      "max_loss_usd_per_spread": 244.0,
+      "max_profit_usd_per_spread": 756.0,
+      "maximum_debit_for_3_to_1_before_fees": 2.5
+    }
+  ]
+}

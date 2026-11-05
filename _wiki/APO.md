@@ -3,17 +3,17 @@
 _Wiki · created 2026-10-31 · research cutoff 2026-10-31 · email review 2026-11-01 · [Financials](themes/financials.md) · [Company index](00_INDEX.md). Source archive: [APO](_dashboards/financials-sources.html#APO)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-11-03 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-05 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $23.1bn | $27.1bn |
+| Revenue | — | $27.3bn |
 | Gross profit | — | — |
 | Gross margin | — | — |
-| EBITDA | $7.7bn | — |
-| EPS | $8.63 | $10.64 |
+| EBITDA | $7.8bn | — |
+| EPS | $8.62 | $10.56 |
 | Capex | — | — |
-| OCF (≈EBITDA) | $7.7bn | — |
+| OCF (≈EBITDA) | $7.8bn | — |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

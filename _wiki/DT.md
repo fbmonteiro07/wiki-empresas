@@ -5,17 +5,17 @@
 _Wiki · generated 2026-09-04 · sources: `E:\Wiki Felipe empresas\DT\transcripts` (6 earnings-call transcripts, Q4 FY25 2025-05-14 → Q1 FY27 2026-08-05) · 11 archived sell-side notes in `relatórios bons/` (Barclays · Lenschow ×6, J.P. Morgan · Murphy ×4, J.P. Morgan · Chatterjee ×1; 2026-04-21 → 2026-08-13, folded in 2026-09-04) · [themes/ai-data-infra-observability.md](themes/ai-data-infra-observability.md) (corpus sell-side material) · morning briefings 2026-05-13 and 2026-06-16. SEC filings (2× 10-K, 6× 10-Q, 2024-11 → 2026-08) in `DT/` and 4 company decks in `DT/apresentações/` (added 2026-09-04 — see § Primary-source datapoints); **no `_briefings/by-ticker/DT.md` roll-up**. Fiscal year ends March 31 (Q1 FY27 = quarter ended 2026-06-30). Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-11-03 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-05 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $2.2bn | $2.6bn |
 | Gross profit | $1.9bn | $2.2bn |
-| Gross margin | 83.4% | 83.5% |
-| EBITDA | $656m | $804m |
-| EPS | $1.82 | $2.19 |
-| Capex | $33m | $36m |
-| OCF (≈EBITDA) | $656m | $804m |
+| Gross margin | 83.2% | 83.1% |
+| EBITDA | $638m | $766m |
+| EPS | $1.77 | $2.03 |
+| Capex | $33m | $38m |
+| OCF (≈EBITDA) | $638m | $766m |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

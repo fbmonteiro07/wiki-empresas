@@ -6,7 +6,7 @@
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\DELL` (filings + transcripts) · `_equity_calls` · `E:\briefings\2026`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-11-03 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-05 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -14,7 +14,7 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\DELL` (filings + trans
 | Gross profit | $33.7bn | $43.3bn |
 | Gross margin | 18.4% | 18.4% |
 | EBITDA | $21.2bn | $27.6bn |
-| EPS | $21.86 | $30.90 |
+| EPS | $21.85 | $30.90 |
 | Capex | $4.1bn | $4.9bn |
 | OCF (≈EBITDA) | $21.2bn | $27.6bn |
 

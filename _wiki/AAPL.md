@@ -3,17 +3,17 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AAPL` (filings + transcripts) · `_equity_calls` · `_briefings\by-ticker\AAPL.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Snapshot — Capstone official model + BBG · asof 2026-11-03 · USD
+### 📊 Snapshot — Capstone official model + BBG · asof 2026-11-05 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | **$479.7bn** | **$507.0bn** |
 | Gross profit | $232.7bn | $240.3bn |
 | Gross margin | **48.5%** | **47.4%** |
-| EBITDA | $167.9bn | $182.8bn |
+| EBITDA | $167.9bn | $182.6bn |
 | EPS | **$8.89** | **$9.23** |
 | Capex | $13.6bn | $12.8bn |
-| OCF (≈EBITDA) | $167.9bn | $182.8bn |
+| OCF (≈EBITDA) | $167.9bn | $182.6bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 _**Bold** = Capstone official model; plain = BBG consensus._
@@ -326,6 +326,84 @@ _Source: Capstone official model (`Modelo Apple Felipe 2Q26 - WIP.xlsm`, version
 - **🆕 PERSONAL-AGENT READ-THROUGHS, TWO SOURCES IN ONE WEEK, NEITHER WITH AN APPLE NUMBER:** (1) at Jefferies' AI Summit, Bill MacCartney (SignalFire CTO-in-residence; formerly VP of AI at Cohere and *"Director at Apple"*) is *"bullish on personal AI"*, expects most consumers to use **2-3 primary personal agents** in a market decided by *"trust and access to personal data"*, and *"views GOOGL as best positioned given its ownership of user context across its massive distribution interface (7 apps with 2B users) and AAPL similarly advantaged on trust"*, while *"META's long-standing trust issues could limit its ability to become the primary personal agent"* (Jefferies · Brent Thill et al. "AI Summit Recap: Still Early with Demand Outstripping Supply", 2026-09-24, pp.7/23; Jefferies' own mark in the disclosure roster is **AAPL Underperform, $337.02** (share price, not a PT), p.41 — consistent with the Edison Lee Underperform already on this page, no action); (2) Morgan Stanley's Muse playbook, on what comes after Meta's first-mover advantage: *"we are also focused on private labs' entrance into the agentic space as well as what's next from GOOGL (expecting a better agent around Gemini 4 in 4Q) and AAPL (powered by GOOGL)"* (Morgan Stanley · Simeon Gutman / Brian Nowak et al. "Muse: Rewriting the Retail/Consumer Playbook", 2026-09-28, p.2) — MS frames Apple's agent as Gemini-powered, the same external dependency the `AI / Siri` row logs as the binding constraint. ➜ Neither source moves a number; both put Apple's agent positioning on trust and distribution, and on Google's model rather than Apple's own.
 - 🆕 **2026-09-28 — ⚠️ OPEN: LEAD TIMES vs RESALE PRICES.** Bull camp (MS Woodring OW $360; JPM Chatterjee tracker Wk3): iPhone 18 Pro/Pro Max lead times 3-4 weeks, flat Y/Y, China extending (18 Pro 26 days, +4.5 days Y/Y), and premium builds +18% Y/Y. Bear camp (Jefferies · Edison Lee, via trading desk): resale prices for 18P/PM are weak vs 17P/PM, and he reads the weekend lead-time rebound as tighter Duo-ramp supply, not demand. MS itself notes that lead times correlate poorly with revenue. The metric that settles it is build plans, which MS says are unlikely to change before mid-to-late October.
 - 🆕 **2026-09-22 (ingested 2026-10-13) — THE NON-MEMORY BOM IS INFLATING TOO, FROM THE SUPPLIERS' MOUTHS** (⚠️ Jefferies Asia TMT desk deck "Q326 Techknowledge Tech Trip Takeaways", 2026-09-22 — desk voice, not Jefferies Research, no rating/PT; supplier-management comments as recorded). Management's 07-30 offset to memory inflation was *"lower costs on certain non-memory components"*; the supply chain says the opposite on two lines — Zhen Ding: Apple accepted a PCB price increase this year *"as PCBs are in a shortage"* after refusing one last year, with PCB content per device up (p.92); TDK: small-battery ASP up sharply (+40% overall, as written) with metal-case content spreading from Air/Pro to more models (p.93) — and Fubon's Sherman has TSMC's 2027 wafer hike at *"at least 10% including Apple… That's why Apple isn't very happy in the short term"* (p.68). Against it, LG Innotek's camera-module ASP is stable (p.93). ➤ Adds to the cost-side bear (Bernstein's BOM grid above counts memory and processor; PCB and battery are additional lines) without a number large enough to move the GM debate on its own — the pass-through question is still the iPhone 18 pricing decision in "What would change our mind".
+
+### iPhone memory-spend proxy — 2026-11-03
+
+**Scope extension, 2026-11-03:** the Mac + iPad extension below brings the **three-product benchmark subtotal to $88.17bn/year**, retaining this original **$62.64bn iPhone-only case**. Neither figure is actual Apple procurement spending. The all-house volume alternative is $89.77bn/year; the difference is solely the iPhone-unit basis.
+
+**Directional scenario; independent double-check verdict: PARTIAL.** At September 2026 generic mobile-memory benchmark prices, **261m iPhones/year × $240 of memory per phone = $62.640bn/year**, comprising **$35.8875bn DRAM + $26.7525bn NAND**. This is an **iPhone-only annualized replacement-cost scenario**, not Apple's reported FY2026 expense, cash procurement, total-company memory spend, or an official Capstone model revision. Mac, iPad, other devices and infrastructure are excluded. Apple's contract prices, purchase timing and shipment-weighted capacities remain unvalidated. Do not use manufacturing purchase-obligation balances to validate this annual flow.
+
+| Input | Value | Evidence / classification |
+|---|---:|---|
+| Annual iPhone units | 261m | **HARD as a quoted forecast, not reported units:** UBS / David Vogt FY26 estimate, 2026-09-29; reiterated October 19/28 in the [2026-11-02 preview](../AAPL/AAPL_FQ4FY26_Preview_2026-11-02.html). This intentionally uses the UBS volume basis; it does not replace the house forecast. |
+| Average DRAM | 10GB/phone | **ESTIMATE:** TechInsights (2026-09-10) says average iPhone DRAM exceeds 9GB; the exact 10GB point and 9–11GB sensitivity band are modeling assumptions. |
+| Average NAND | 320GB/phone | **ESTIMATE:** assumed shipment-weighted storage; no observed Apple mix calibration. The 256–384GB band is a scenario, not a confidence interval. |
+| September DRAM package | ~$165 / 96Gb = 12GB | **ANCHOR; PARTIAL for Apple:** TechInsights mobile LPDDR5 benchmark, 2026-09-10. |
+| September NAND package | ~$82 / 256GB | **ANCHOR; PARTIAL for Apple:** TechInsights TLC UFS mobile-storage benchmark, 2026-09-10. UFS pricing is not Apple's NVMe NAND procurement cost. |
+
+**Arithmetic / calibration:** derive unit prices from sourced package costs: DRAM $165 ÷ 12GB = **$13.75/GB**; NAND $82 ÷ 256GB = **$0.3203125/GB**. Per-phone cost = 10 × $13.75 + 320 × $0.3203125 = **$137.50 + $102.50 = $240**. Annual cost = 261m × $240 = **$62.640bn**. Applying unit rates across capacities assumes linear scaling; packaging, controllers, density economics, supplier mix and Apple agreements may change effective prices. No arbitrary Apple discount is applied.
+
+| Price-only evolution; constant 261m units, 10GB DRAM and 320GB NAND | DRAM / 12GB | NAND / 256GB | Cost / modeled phone | Annualized DRAM | Annualized NAND | Annualized total |
+|---|---:|---:|---:|---:|---:|---:|
+| June 2026 benchmark | ~$140 | ~$68 | $201.67 | $30.450bn | $22.185bn | **$52.635bn** |
+| September 2026 benchmark | ~$165 | ~$82 | $240.00 | $35.8875bn | $26.7525bn | **$62.640bn** |
+| Change, calculated | +$25 | +$14 | +$38.33 | +$5.4375bn | +$4.5675bn | **+$10.005bn / +19.01%** |
+
+Source for both benchmark dates: [TechInsights, "Apple iPhone 18 Memory Costs", 2026-09-10](https://www.techinsights.com/zh-cn/node/61914). Outputs are scenario calculations from approximate market-price anchors; precision is retained for reproducibility, not confidence. These are not quarter-average realized Apple prices and do not reconstruct FY2026 spend.
+
+**Earlier-year pricing context:** [Mirae Asset / Young-gun Kim, 2026-05-21](https://securities.miraeasset.com/newir/view/pc/en/investor/researchReportsView.jsp?messageId=2339980) cited Q1 increases of **58% for 16GB LPDDR5X and 97% for 512GB UFS**, and forecast Q2 increases of **81% and 80%**, respectively. Different packages and forecast vintages: do not backcast these into an observed Apple Q1 dollar price. **Latest check as of 2026-11-03:** [TrendForce, 2026-10-30 mobile DRAM update](https://www.trendforce.com/research/download/RP261030GV) says Q4 contract prices are flat to slightly higher; [2026-10-22 UFS update](https://www.trendforce.com.tw/research/download/RP261022RT) describes slowing, single-digit increases. Absolute Q4 tables are paywalled; September is the latest dollar benchmark verified for this exercise, not a November quote.
+
+| Content sensitivity at September benchmarks | Annualized cost |
+|---|---:|
+| 9GB DRAM + 256GB NAND | $53.70075bn |
+| 10GB DRAM + 320GB NAND | $62.640bn |
+| 11GB DRAM + 384GB NAND | $71.57925bn |
+
+**Sensitivities, calculated:** +1GB average DRAM adds **$3.58875bn/year**; +64GB average NAND adds **$5.3505bn/year**; +$1/GB DRAM adds **$2.610bn/year**; a hypothetical uniform 10% lower effective price reduces the base **$6.264bn**. The content band excludes unit-volume and procurement-price uncertainty; a 10% price reduction is not an inferred Apple discount.
+
+**Guardrails / adjudication:** arithmetic and byte/bit conversion checked; annual units matched to annualized cost, with commitments and inventory stocks excluded from flow validation. No independent Apple-spend or shipment-weighted-content anchor exists in the evidence used. Bernstein / Mark Newman (2026-03-03; existing BOM discussion above) forecast $114 for 12GB DRAM versus TechInsights' June ~$140: the **22.8% difference** is cross-source context with mismatched vintages, not successful external validation. The independent skeptic required the corrected June total **$52.635bn**, rejection of a synthetic Q1 backcast, and **PARTIAL** status. Interpretation: roughly **$60bn/year of iPhone memory exposure at benchmark prices**, with a **$54–72bn content-only scenario band**; actual Apple annual spending is unresolved. Existing broker BOM estimates and house forecasts are retained, not superseded.
+
+#### Mac + iPad extension — 2026-11-03
+
+**PARTIAL / directional scenario:** add **$15.23bn Mac + $10.30bn iPad = $25.53bn/year** to the original iPhone case, producing **$88.17bn/year** for iPhone + Mac + iPad at September benchmarks. This extends coverage; it does not supersede the iPhone-only $62.64bn result or revise official house forecasts. It is not a full-company spend estimate. Apple Watch, AirPods, Apple TV, HomePod, Vision devices, accessories and server/cloud infrastructure remain unmodeled, not assumed zero; no arbitrary residual is added.
+
+**Volume source (HARD as quoted house forecasts, not reported shipments):** read-only cached cells in [Capstone's Apple model](<P:/Felipe Monteiro/Apple/Modelo Apple Felipe 2Q26 - WIP.xlsm>), version saved 2026-08-06, inspected 2026-11-03, sheet **Projeções**. Fiscal header **P2 = 2026**; **P50 = 26,449.04196 thousand Macs** and **P43 = 53,644.271875 thousand iPads**, equivalent to **26.449m / 53.644m annual units**. Revenue/ASP identities (P48/P52 and P41/P45) confirm the unit scale internally; they are not independent demand validation. The workbook was not edited or recalculated.
+
+| Product | Annual units, millions | Average DRAM, GB | Average NAND, GB | September cost/device | Annual DRAM, $bn | Annual NAND, $bn | Annual total, $bn |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| iPhone, retained UBS FY26 basis | 261.000 | 10 | 320 | $240 | 35.888 | 26.753 | **62.640** |
+| Mac, house FY26 forecast | 26.449 | 24 | 768 | $576 | 8.728 | 6.506 | **15.235** |
+| iPad, house FY26 forecast | 53.644 | 8 | 256 | $192 | 5.901 | 4.399 | **10.300** |
+| **Three-product subtotal** | — | — | — | — | **50.517** | **37.658** | **88.174** |
+
+All average GB inputs are **ESTIMATE**, not disclosed shipment-weighted configurations. The Mac 24GB/768GB and iPad 8GB/256GB points are explicit modeling choices. Independent product-spec plausibility anchors: [Apple, M5 MacBook Air, 2026-03-03](https://www.apple.com/newsroom/2026/03/apple-introduces-the-new-macbook-air-with-m5/) confirms 512GB base storage, configurable up to 4TB; [Apple, M4 iPad Air, 2026-03-02](https://www.apple.com/newsroom/2026/03/apple-introduces-the-new-ipad-air-powered-by-m4/) confirms 12GB unified memory. These demonstrate real configurations, not the modeled fleet averages; iPad includes entry-level, mini, older Air and Pro models, not only the latest Air.
+
+**Price transfer is an ESTIMATE:** use the same September TechInsights anchors above, **$13.75/GB DRAM and $0.3203125/GB NAND**, to isolate the incremental product scope. These are generic mobile LPDDR5 / TLC UFS rates, not verified Mac unified-memory package or Apple SSD prices. Memory generation, packaging, density, SSD controller architecture, contracts and supplier mix can change effective costs materially. This extension is less directly anchored than the already-PARTIAL iPhone proxy. Do not label its prices as Apple procurement ASPs.
+
+**Worked arithmetic:** Mac = 26.44904196m × [(24 × $13.75) + (768 × $0.3203125)] = 26.44904196m × ($330 + $246) = **$15.234648bn/year**. iPad = 53.644271875m × [(8 × $13.75) + (256 × $0.3203125)] = 53.644271875m × ($110 + $82) = **$10.299700bn/year**. Add original iPhone $62.640bn = **$88.174348bn/year**. Calculated 2026-11-03 from the labeled inputs; retained digits support reproducibility, not precision.
+
+**Analyst-basis bridge:** the table deliberately preserves UBS's 261m FY26 iPhone forecast to reconcile with the original exercise, while adding house Mac/iPad volumes for the same fiscal year. The house model's **Projeções!P21 = 267,628.14414 thousand FY26 iPhones** would add **$1.590755bn** at $240/device, giving an **all-house-volume three-product scenario of $89.765103bn/year**. This is a distinct volume case, not a change in prices or the official house financial forecast.
+
+| Price-only evolution, constant volume and content | June benchmarks, $bn/year | September benchmarks, $bn/year |
+|---|---:|---:|
+| iPhone, retained case | 52.635 | 62.640 |
+| Mac | 12.801 | 15.235 |
+| iPad | 8.655 | 10.300 |
+| **Three-product subtotal** | **74.091** | **88.174** |
+
+June uses the same ~$140/12GB DRAM and ~$68/256GB TLC UFS TechInsights anchors as the original exercise; September uses ~$165/~$82. Calculated price-only increase: **$14.083bn/year**. This is a constant-volume annualization, not a reported historical expense series. Q4 dollar pricing remains unverified; see the dated October TrendForce context above.
+
+| Content-only scenario; annual units and September benchmark prices fixed | Low | Base | High |
+|---|---:|---:|---:|
+| Mac DRAM / NAND, GB (ESTIMATE) | 16 / 512 | 24 / 768 | 32 / 1,024 |
+| Mac annual cost, $bn | 10.156 | 15.235 | 20.313 |
+| iPad DRAM / NAND, GB (ESTIMATE) | 6 / 128 | 8 / 256 | 12 / 512 |
+| iPad annual cost, $bn | 6.625 | 10.300 | 17.649 |
+| **Subtotal with iPhone held at $62.640bn**, $bn | **79.421** | **88.174** | **100.602** |
+
+Scenario bounds are not confidence intervals and exclude procurement-price and volume uncertainty. At fixed prices/volumes, +8GB average Mac DRAM adds **$2.909bn/year**, +256GB Mac NAND **$2.169bn**; +4GB average iPad DRAM adds **$2.950bn**, +128GB iPad NAND **$2.199bn**. All are calculated sensitivities, not sourced forecasts.
+
+**Guardrails / skeptic, 2026-11-03:** independent double-check verified workbook cells, fiscal header, arithmetic and cited Apple specifications; verdict **PARTIAL**. Unit identities pass internally; configurations pass a limited physical-plausibility check. No independent observed Apple spend, actual product-specific procurement prices, or shipment-weighted GB mix validates the dollar level. Manufacturing commitments and inventory balances remain excluded from annual-flow validation. Output should be used as a transparent benchmark-price exposure scenario, not an audited total Apple memory bill.
 
 ## Catalysts / what to watch
 
@@ -707,6 +785,10 @@ _Source: AAPL earnings calls (dates above); management commentary, paraphrased._
   - **Capstone model:** `P:\Felipe Monteiro\US Equities\Modelos oficiais\Modelo Apple Felipe 2Q26 - WIP.xlsm` (house estimates).
 
 ## Changelog
+
+- 2026-11-03 — **User-requested Mac + iPad extension of the memory proxy.** Added house FY26 volumes from Projeções!P50/P43 (26.449m Macs / 53.644m iPads), explicitly estimated 24GB/768GB and 8GB/256GB content, and transfer of the existing generic mobile-memory benchmarks. **Prior scope preserved:** iPhone-only $62.640bn/year remains unchanged. New three-product scope: **$88.174bn/year**, or **$89.765bn** with house iPhone volume instead of UBS; neither is actual total-company spend. Added June/September comparison, sensitivity and sources; independent skeptic **PARTIAL**. No official forecast, rating, PT or broker BOM superseded; no compute deal or catalyst outcome inferred.
+
+- 2026-11-03 — Added the user-requested **iPhone memory-spend proxy** under Debate / thesis: UBS 261m annual-unit basis, explicitly estimated 10GB DRAM / 320GB NAND, TechInsights June/September benchmark anchors, full arithmetic, $52.635bn → $62.640bn annualized price-only comparison, content sensitivities and dated Mirae / TrendForce context. Independent skeptic verdict **PARTIAL**: no Apple-specific procurement-price or content-mix validation. This is an iPhone-only replacement-cost scenario, not FY2026 realized spending or total Apple spending. **No prior number, rating, PT, broker BOM or house forecast superseded.** No compute-deal announcement or catalyst resolution is inferred.
 
 - 2026-11-02 — **house model refreshed to the 08-06 version** (FQ4 FY26 preview build). The page, `_data/house.json` and the hub "Modelos Capstone" card were reading the **06-16** copy in `Modelos oficiais`; the newer version saved **2026-08-06** in `P:\Felipe Monteiro\Apple\` (post-FQ3 print) is now the house. **Superseded (06-16 model):** revenue $391 / $416 / $480 / $539 / $585bn (2024-28E); "EPS — adj" $6.82 / $8.35 / $10.12 / $11.11 / $12.55; iPhone units — / 240 / 267 / 280 / 286M; ASP — / $874 / $946 / $1,021; Services $96 / $109 / $126 / $145 / $164bn; Debate bullet "revenue $416B / $480B / $539B / $585B… adj EPS $8.35… GM ~47%, op margin ~32%". **New (08-06 model):** revenue $391.0 / $416.2 / $479.7 / $507.0 / $535.8bn; GM 46.2 / 46.9 / 48.5 / 47.4 / 47.7%; iPhone units 239.7 / 267.6 / 248.9 / 248.9M (FY25-28E); ASP $874 / $940 / $1,053 / $1,105; Services $96.2 / $109.2 / $123.1 / $135.4 / $146.2bn. **EPS basis change:** the old "EPS — adj" row (NI ÷ year-end shares, FY26E $10.12) could not reconcile with FY26 9M actual EPS of $6.87; the table now carries the model-stated EPS (year-end shares) and a † row on the Street's share count ($8.89 / $9.23 / $9.99 FY26-28E), which is what house.json now scrapes. ⚠️ Still open: the `Modelos oficiais` copy remains the 06-16 file (not overwritten — Felipe's model folder), so `build_modelos.py` / the hub card will keep showing June numbers until that copy is replaced; the snapshot block overlays these FISCAL-year house values onto BBG CY2026E / CY2027E columns (basis mismatch, one quarter offset).
 

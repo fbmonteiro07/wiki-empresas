@@ -3,17 +3,17 @@
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\ALAB` (filings + transcripts) · `E:\briefings\2026\*` · Master index: [00_INDEX.md](00_INDEX.md). Themes: [custom-asic-tpu](themes/custom-asic-tpu.md) · [optical-cpo](themes/optical-cpo.md). Note: IPO'd Mar-2024 — short filing history (~9 filings)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-11-03 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-05 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $1.9bn | $3.1bn |
-| Gross profit | $1.3bn | $2.2bn |
-| Gross margin | 72.3% | 70.9% |
-| EBITDA | $755m | $1.2bn |
-| EPS | $3.85 | $6.53 |
-| Capex | $64m | $97m |
-| OCF (≈EBITDA) | $755m | $1.2bn |
+| Revenue | $1.9bn | $3.4bn |
+| Gross profit | $1.4bn | $2.4bn |
+| Gross margin | 72.5% | 71.1% |
+| EBITDA | $780m | $1.3bn |
+| EPS | $4.07 | $7.06 |
+| Capex | $76m | $146m |
+| OCF (≈EBITDA) | $780m | $1.3bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
@@ -97,6 +97,8 @@ Astera is a fabless designer sitting between the foundry/packaging supply base a
 - **MS reiterates Overweight — leading pure-play, but valuation high; attention shifts Scorpio → ecosystem breadth (MS "Bringing More Light to Scale-Up Networks — Updated Scale-Up Primer", Meta Marshall / Joseph Moore, 2026-07-13):** MS 4x's its scale-up TAM to **~$70bn by 2030** and keeps **ALAB Overweight as a leading pure-play beneficiary** (excited for the ramp of **Scorpio, UALink and optics**), though **valuation is high at this point**. MS expects **Scorpio to drive a strong 2H26 ramp**, but investor attention is **already moving toward UALink adoption + customer diversification beyond the initial hyperscaler programs**; it remains "impressed by ALAB's ability to expand content per accelerator from roughly **$50-100 at IPO to more than $1,000**," with **Scorpio X now shipping** the next leg of content growth. On copper-to-optics: **not imminent** — copper retains meaningful intra-rack runway while ALAB builds its optical roadmap (small acquisitions + organic); optics is **longer-term optionality, not an immediate risk to the core thesis**. (MS "Updated Scale-Up Primer", 2026-07-13)
 
 ## Debate / thesis
+- 🔭 **2026-11-04 (notion-ingest · UBS Arcuri AMD recap call, one client question)** — Asked why the market was *"punishing it so much this morning"*, Arcuri: *"Not particularly. I mean, look, I think it was a— it's a crowded long [transcribed "crowded lawn"]. I mean, I think it's as simple as that."* Positioning, not fundamentals; no numbers, no rating/PT on the call. — _Tim Arcuri (UBS) @ UBS Semis Earnings Recap Call - AMD 3Q26 (mod. Robert Ruple, UBS sales), 2026-11-04 - Capstone notes (Notion transcript)_ · [source](../_equity_calls/Semis/2026-11-04_UBS_AMD-3Q26-recap-call-server-CPU-warrant-dilution-Arcuri-Ruple.md)
+
 **🆕 2026-10-19 (notion-ingest) — BofA (ARYA) MET ASTERA'S CEO AND PRESIDENT AT OCP: ORION IS AN ENTERPRISE "AI IN A RACK" ON A HIGH-RADIX PCIe SWITCH, PITCHED FOR LOWER-END (RTX-CLASS) GPUs; THE UALINK CONSORTIUM MET BUT "NO SPECIFIC CLOUD IMPLEMENTATION" WAS HEARD; BofA STAYS NEUTRAL ON ALAB — "MAYBE WRONGLY SO".**
 _Source: Vivek Arya (BofA) @ BofA SEMICON West & OCP Takeaways call, 2026-10-19 - Capstone notes (Notion transcript) — [source](../_equity_calls/Semis/2026-10-19_BofA_SEMICON-West-OCP-takeaways-call-Vivek-Arya.md); ⚠ partial capture (the Notion recording opens mid-way through the AMD section, first ~8 min missed, and is cut mid-sentence in the Q&A); unlabeled Notion machine transcript, speakers inferred; SELL-SIDE ANALYST VOICE — BofA ratings are the published ones, no rating/PT change on the call; company/keynote statements are colour relayed by the analyst, not guidance._
 - **Orion, as relayed (company colour):** *"you can take just like AMD Helion [the CPU rack] enterprise AI in a box so you can bring your CPUs, bring your GPUs … these are lower-end GPUs. You know, there's like NVIDIA RTX series, not NVIDIA NVL series. So you can bring those GPUs and you can connect them to a high Radix PCIe switch, which Astera makes. So you save on the cost of NICs"* — the same ODM/enterprise "AI in a box" demand Arya saw behind AMD's rack (hyperscalers prefer disaggregated parts). Complements the Jefferies 10-16 spec already here (up to 80 GPUs/rack, 12 Scorpio X). — Vivek Arya (BofA) @ BofA SEMICON West & OCP Takeaways call, 2026-10-19 - Capstone notes (Notion transcript).
@@ -296,6 +298,7 @@ _Source: ALAB earnings calls (dates above); management commentary, paraphrased._
 
 ## Changelog
 
+- 2026-11-05 — ingest (Notion, 2026-11-04_UBS_AMD-3Q26-recap-call-server-CPU-warrant-dilution-Arcuri-Ruple.md): 1 Debate line — Arcuri reads the 11-04 sell-off as a "crowded long" [transcribed "crowded lawn"], nothing fundamental. Nothing superseded.
 - 2026-10-24 — ingest (Notion, 2026-10-23_BofA_Inference-economics-KV-cache-memory-tiering-expert-Jon-Tasker.md): 1 Catalysts bullet (Tasker expert: Azure CXL leader working with Astera on controllers + RAM trays; Meta #2, Google #3, AWS still in the lab; <1% deployment, basis undefined; Astera named a longer-term agentic winner). Nothing superseded.
 - 2026-10-24 — verification (transcription QA): all quotes, figures, names and acronyms re-checked against the `## Transcript` section of the source; attribution string matches the file header; glossary terms corrected; no correction needed.
 

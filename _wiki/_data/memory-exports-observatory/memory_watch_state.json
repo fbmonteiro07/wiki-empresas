@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "updated_at": "2026-11-02T16:05:11-03:00",
-  "last_online_check": "2026-11-02T15:56:03-03:00",
+  "updated_at": "2026-11-05T16:14:06-03:00",
+  "last_online_check": "2026-11-05T16:01:09-03:00",
   "last_run_offline": true,
   "source_failures": [],
   "source_dates": {
-    "KCS": "2026-11-02T15:56:09-03:00",
-    "BOK": "2026-11-02T15:59:15-03:00",
-    "InSpectrum": "2026-11-02T16:03:10-03:00"
+    "KCS": "2026-11-05T16:01:26-03:00",
+    "BOK": "2026-11-05T16:05:28-03:00",
+    "InSpectrum": "2026-11-05T16:09:31-03:00"
   },
   "source_errors": {},
   "signals": {
@@ -77,16 +77,16 @@
     },
     "ISPPDR37 Index": {
       "period": "2026-11",
-      "through": "2026-11-02",
-      "value": -2.010650314668383,
-      "level": 31.96,
+      "through": "2026-11-05",
+      "value": -2.470550266257854,
+      "level": 31.810000000000002,
       "basis": "Partial monthly mean versus prior complete month",
       "product": "DRAM",
       "stale": false
     },
     "ISPPDR47 Index": {
       "period": "2026-11",
-      "through": "2026-11-02",
+      "through": "2026-11-05",
       "value": 3.8341497695376203,
       "level": 52.88,
       "basis": "Partial monthly mean versus prior complete month",
@@ -95,7 +95,7 @@
     },
     "ISPPN256 Index": {
       "period": "2026-11",
-      "through": "2026-11-02",
+      "through": "2026-11-05",
       "value": 1.0999587515468257,
       "level": 15.48,
       "basis": "Partial monthly mean versus prior complete month",
@@ -104,18 +104,18 @@
     },
     "ISPPN512 Index": {
       "period": "2026-11",
-      "through": "2026-11-02",
-      "value": -2.816445451602456,
-      "level": 18.96,
+      "through": "2026-11-05",
+      "value": -4.37978849681665,
+      "level": 18.655,
       "basis": "Partial monthly mean versus prior complete month",
       "product": "NAND",
       "stale": false
     },
     "ISPPND1T Index": {
       "period": "2026-11",
-      "through": "2026-11-02",
-      "value": -2.081402808468169,
-      "level": 28.92,
+      "through": "2026-11-05",
+      "value": -3.89282913963932,
+      "level": 28.385,
       "basis": "Partial monthly mean versus prior complete month",
       "product": "NAND",
       "stale": false
@@ -315,6 +315,23 @@
       "reviewed_at": "2026-11-02T16:04:46-03:00",
       "review_note": "November rollover: one observation; all five core spot prices unchanged versus October30. Broader contract/BOK confirmation still pending. Q4 direction and confidence unchanged. Bloomberg recovered; all eight numeric legs successful.",
       "notified": false
+    },
+    {
+      "id": "0b8f2a334a5fc76f8e91",
+      "kind": "source_failure",
+      "label": "Source refresh needs attention",
+      "evidence": {
+        "failed_steps": [
+          "bok_index"
+        ]
+      },
+      "status": "reviewed",
+      "detected_at": "2026-11-05T09:09:14-03:00",
+      "reviewed_at": "2026-11-05T09:19:44-03:00",
+      "review_note": "Unresolved BOK outage: SSL timeout on first run; retry stalled without completing a series and was stopped. Last successful BOK check4Nov; September observations preserved. Alert delivered5Nov; not resolved.",
+      "notified": true,
+      "resolved_at": "2026-11-05T16:13:00-03:00",
+      "resolution_note": "Full BOK collector succeeded5NovPM; October observations absent. Original failure and notification preserved."
     }
   ],
   "schedule": {
@@ -326,6 +343,6 @@
     "thread_id": "01a182bf-98c2-7c62-8e15-05589f9172be",
     "dependencies": "Workstation and Codex running; Bloomberg authenticated for spot data"
   },
-  "outlook_as_of": "2026-11-02",
+  "outlook_as_of": "2026-11-05",
   "outlook_review_required": false
 }

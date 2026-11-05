@@ -260,7 +260,7 @@ _(UBS Index Analytics · **Jason Irukulapati**, "The Daily Catch — S&P 1500/IC
 _Wiki · generated 2026-06-29 · sources: IPO prospectus (424B4 2026-06-12 / S-1 2026-05-20, archived in `../SPCX/`) + FinTwit. **Newly public — IPO'd June 2026 (Nasdaq: SPCX).** Master index: [../INDEX.md](../INDEX.md). Themes: [ai-datacenter-power](themes/ai-datacenter-power.md) · [custom-asic-tpu](themes/custom-asic-tpu.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-11-03 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-05 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -268,7 +268,7 @@ _Wiki · generated 2026-06-29 · sources: IPO prospectus (424B4 2026-06-12 / S-1
 | Gross profit | — | $112.5bn |
 | Gross margin | — | 62.5% |
 | EBITDA | $21.0bn | $114.6bn |
-| EPS | $-0.98 | $3.85 |
+| EPS | $-0.98 | $4.07 |
 | Capex | $63.2bn | $270.9bn |
 | OCF (≈EBITDA) | $21.0bn | $114.6bn |
 
@@ -1049,6 +1049,8 @@ _**Q4 FY26 window · opened 2026-10-20** (Q3 2026 print, reported 2026-10-20 AMC
 **🆕 Sinal update 2026-11-02 (notion-ingest — Jefferies hyperscaler webinar):** ✗ contesta on **Compute ladder**. Jefferies' software host calls 10 incremental GW in 2027 a "zero 0% chance" without M&A, and the DC-REIT analyst agrees (opinion, no build-up). ✓ confirma on **Capex & funding**: the Q4 guide is again read as ~2x the Street ($40bn vs $20bn as spoken). No new SpaceX disclosure.
 
 ## Changelog
+
+- **2026-11-03 — financing workbook historical backfill:** [xAI company announcement, 2026-01-06](https://x.ai/news/series-e) confirms a completed $20bn Series E. Included once as predecessor financing in the 2026 capital-raising ledger; not a post-acquisition SpaceX parent issuance and not evidence of incremental contracted MW. No existing forecasts or deal terms changed.
 
 - 2026-11-02 — ingest (Notion, 2026-11-02_Jefferies_Hyperscaler-AI-deep-dive-capex-miss-backlog-ORCL-AI-World-DC-constraints-Thill.md): 1 Full-log row + 1 Sinal update: Jefferies software host reads the Q4 capex guide as "$40bn vs Street $20bn" and +10GW × his own $50bn/GW = $500bn (build-cost assumption, GW basis not stated; not the $30-50/W compute price); "zero 0% chance" of 10GW in '27 without M&A (opinion). No SpaceX disclosure; nothing superseded.
 

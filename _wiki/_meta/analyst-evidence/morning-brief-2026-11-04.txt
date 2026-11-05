@@ -1,0 +1,84 @@
+Morning Analyst Inbox — 2026-11-04
+
+Cutoff: 07:30 São Paulo / 10:30 UTC. Book prioritization is provisional: portfolio weights are still a seed. These are research priorities, not trade instructions.
+
+Focus today: AMD and ANET for estimate upgrades; BKNG for forward-demand risk; COHR before tonight’s print; CRWV for financing-adjusted equity value.
+
+Evidence key: E = _wiki/_meta/analyst-evidence/2026-11-04-morning-source-checks.json. Each E subsection preserves dated broker bodies, source links and limitations. “supp-” IDs identify this brief’s supplemental signals, not automated engine alerts.
+
+FIVE PRIORITY IDEAS
+
+1. AMD — Estimates up does not necessarily mean multiple up.
+
+Hard evidence: AMD’s November 3 release guides Q4 revenue to $17bn ±3% and non-GAAP gross margin to 55%. That clears the newer $16.5–16.9bn desk hurdle in Capstone’s November 2 preview, but only matches the older UBS $17bn bar. [AMD release](https://ir.amd.com/news-events/press-releases/detail/1303/amd-reports-third-quarter-2026-financial-results)
+
+Broker evidence: UBS / Timothy Arcuri and Seth Cho, November 4, raises CY2028 EPS from $26.94 to $29.83 but cuts its target from $730 to $700 as the multiple falls from 27x to 23x. JPM / Harlan Sur and Apoorva Kumar, November 4, remains Neutral; its quoted Street Q4 gross margin is 55.5%. UBS/JPM relay management’s >80% CY2027 revenue-growth outlook; this is call guidance relayed by brokers, not an independently reviewed transcript.
+
+Inference/action: prioritize the server-CPU/GPU/Client revenue and margin bridge. Do not transplant CPU margins into the GPU ramp or mistake higher EPS for a higher valuation.
+Falsifier: Helios/server delivery slippage or mix/input costs undermine the guided margin and operating leverage.
+Signal supp-20261104-amd. Evidence: E.amd; AMD/AMD_3Q26_Preview_2026-11-02.html; _wiki/AMD.md.
+
+2. ANET — The initial guide clears the stronger hurdle; now test conversion.
+
+Hard evidence: Arista’s November 3 release guides Q4 revenue to $3.9–4.0bn. JPM / Joseph Cardoso, Marc Vitenzon and Manmohanpreet Singh, November 4, relays management’s initial CY2027 growth guide of 38–40%, approximately $7bn AI-fabric revenue and 62–64% gross margin. That exceeds JPM’s November 2 favorable threshold of at least 35%. [Arista release](https://www.arista.com/en/company/news/press-release/25025-pr-20261103)
+
+Counterevidence: JPM also reports a sequential decline in deferred revenue, which management attributes to healthy conversion. Scale-up trials in 2027 and production in 2028 are not interchangeable revenue dates.
+
+Inference/action: obtain the deferred-revenue bridge—opening balance, releases and new additions—and customer acceptance/supply milestones before upgrading the whole growth curve. Reconcile the call’s $220bn-plus 2030 TAM with JPM’s November 2 $340bn-plus expectation; scope differences must be checked before declaring a market contraction.
+Falsifier: releases are not replenished by orders, or component costs break the gross-margin framework.
+Signal supp-20261104-anet. Evidence: E.anet; _wiki/ANET.md.
+
+3. BKNG — Q3 beat, forward-guide miss; AI engagement does not prove a moat.
+
+Hard evidence: Booking’s November 3 release reports room nights +7%, but guides Q4 to only +1–3%, below BofA / Justin Post and Nafeesa Gupta’s October 25 +3–5% expectation carried yesterday. Adjusted revenue was $9.793bn versus GAAP $8.893bn, reflecting the $900m FTC revenue reduction. Do not compare those bases indiscriminately. [Company release, unaltered mirror](https://www.marketscreener.com/news/booking-reports-third-quarter-2026-financial-results-ce785fdedc81f720)
+
+Broker evidence: BofA / Post and Gupta, November 4, keeps Buy, cuts FY2027 EPS from $12.23 to $12.16 and its target from $232 to $219. JPM / Doug Anmuth and Dae K Lee, November 4, says AI referrals remain well below 1% of room nights despite approximately 2x conversion among AI users.
+
+Inference/action: separate macro disruption from distribution-share loss. AI-user conversion is a selected cohort, not proof of incremental bookings or lower acquisition cost.
+Falsifier of caution: forward nights recover alongside demonstrably incremental, profitable AI bookings.
+Signal supp-20261104-bkng; prior catalyst cata-3309c26d3f2a. Evidence: E.bkng; _wiki/BKNG.md.
+
+4. COHR — Tonight’s optics test is profitable capacity conversion, not demand alone.
+
+Broker evidence: JPM / Cardoso, Singh and Vitenzon, November 2, prefers COHR’s setup and forecasts September-quarter revenue/EPS of $2.390bn/$2.08 versus quoted consensus $2.311bn/$2.01. Its December forecast is $2.567bn/$2.30 versus $2.552bn/$2.24. Yet it cuts its target from $465 to $385 on valuation and flags lower-margin transceiver mix.
+
+Inference/action: freeze those dated benchmarks before tonight. Ask how InP capacity, 1.6T pricing and OCS/NPO qualifications translate into gross profit. The MRVL/LITE combination creates a customer-neutrality question, not automatic COHR share gains.
+Falsifier: extra capacity fails to improve profitable output, or qualifications slip despite strong demand.
+Signal supp-20261104-cohr. Evidence: E.cohr; _wiki/COHR.md. These are November 2 broker estimates, not refreshed November 4 consensus.
+
+5. CRWV — Backlog confidence and equity returns are separate theses.
+
+Broker evidence: Deutsche Bank / Brad Zelnick, Bhavin Shah, Daniel Knauff and Yash Kejriwal, November 4, retains Buy but cuts its target from $150 to $125 for higher near-term financing costs. It cites backlog above $125bn and expects funding concerns to be addressed over several quarters—not already resolved.
+
+Inference/action: prioritize parent-level liquidity after project debt, leases and capex. Distinguish signed commitments, funded facilities, cash drawn and delivered capacity; backlog alone cannot establish equity value.
+Falsifier of financing caution: binding funding terms and a cash bridge cover deployment without unmodeled dilution or liquidity shortfalls.
+Signal supp-20261104-crwv. Evidence: E.crwv; _wiki/CRWV.md; _wiki/themes/ai-compute-deals.md.
+
+MODEL CONTROLS AND NARRATIVE
+
+• GOOG: the June 5 house $505bn revenue versus November 3 Bloomberg $429bn alert remains gross/net contamination identified in the November 2 reconciliation—not investable upside. Signal esti-c416a36a4c2a.
+
+• CRWV: October 14 house EPS −$3.27/−$1.83 is higher, not lower, than November 3 Bloomberg −$3.94/−$2.18 for 2026/27. Signals esti-b3566a24992f and esti-686a80f5e0d9.
+
+• LITE: June 16 house EPS $12.81 versus November 3 Bloomberg $15.18 needs vintage and fiscal/calendar alignment before calling it a bearish disagreement. Signal esti-4d5fb07c42b5.
+
+Action for all three: adjudicate definitions and dates before revising models. Evidence: E.model_controls; _wiki/_data/house.json; _wiki/_data/estimates.json; _wiki/_meta/reconciliation-2026-11-02-inbox.md.
+
+The emerging distinction is stronger AI operating forecasts versus lower valuation multiples or higher financing costs—not a uniform “AI demand weakening” narrative. That is inference from the dated UBS AMD, JPM COHR and DB CRWV notes above, not a measured market-wide sentiment change.
+
+CATALYSTS AND PREPARATION
+
+• Today, COHR: 4:30pm ET call, per the October 14 company notice. Use the capacity/mix scorecard above. [Company calendar](https://ir.coherent.com/news-releases/news-release-details/coherent-corp-announces-timing-fy2027-first-quarter-earnings)
+• Today, FICO: November 4 on UBS / McVeigh’s October 27 desk calendar. For EFX/TRU, separate royalty pass-through revenue from profit and test direct-license/VantageScore economics. Signals cata-0bf143339be4 and cata-7811189cb403; _wiki/EFX.md; _wiki/TRU.md.
+• Today, ORCL: expected settlement of the offerings priced November 2; no closing confirmation found in this review. Do not upgrade “priced” to “funded.” [Oracle announcement](https://www.prnewswire.com/news-releases/oracle-announces-pricing-of-20-billion-of-common-stock-and-senior-notes-302927244.html)
+• November 10, CRWV: 5pm ET call, per its October 27 notice; prepare the financing bridge. [Company calendar](https://investors.coreweave.com/news/news-details/2026/CoreWeave-Announces-Date-of-Third-Quarter-2026-Financial-Results-and-Conference-Call/default.aspx)
+
+Calendar signal supp-20261104-calendar plus the company signals above. Evidence: E.calendar, E.cohr, E.crwv; _wiki/themes/ai-compute-deals.md.
+
+WHAT CHANGED VERSUS YESTERDAY
+
+AMD met the older revenue bar and cleared the lowered one; ANET exceeded the stronger initial-growth threshold; BKNG’s forward guide missed the expected range. Those operating tests are now logged. CRWV’s financing-cost concern now has a fresh DB target cut. COHR moves from tomorrow’s preparation to tonight’s test.
+
+Final engine: 45 active / 1 high / 36 focus names, matching yesterday’s published totals but not its contents. The initial run was 42 / 1 / 33; refreshing catalysts added three missing-outcome alerts for APO, INTC and SMCI. Against the later November 3 snapshot of 46 / 1 / 37, four dated alerts retired and three post-mortem alerts appeared. Zero automated “belief changes” does not mean zero new evidence. Evidence: E.engine_delta; _wiki/_data/analyst/history/.
+
+Scope: 804 mailbox entries inventoried through the fixed cutoff; selected broker bodies and primary/local evidence reviewed, not an exhaustive report audit. Company pages and house models were not edited.

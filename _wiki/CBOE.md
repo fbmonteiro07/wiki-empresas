@@ -3,7 +3,7 @@
 _Wiki · created 2026-11-02 · research cutoff 2026-11-02 · Outlook review 2026-11-02 · [Financials](themes/financials.md) · [Company index](00_INDEX.md). Source archive: [CBOE](_dashboards/financials-sources.html#CBOE)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-11-03 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-05 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -11,7 +11,7 @@ _Wiki · created 2026-11-02 · research cutoff 2026-11-02 · Outlook review 2026
 | Gross profit | — | — |
 | Gross margin | — | — |
 | EBITDA | $2.1bn | $2.3bn |
-| EPS | $13.85 | $15.50 |
+| EPS | $13.86 | $15.49 |
 | Capex | $86m | $99m |
 | OCF (≈EBITDA) | $2.1bn | $2.3bn |
 

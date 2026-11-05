@@ -3,12 +3,12 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\GLW` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\GLW.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-11-03 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-05 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $19.2bn | $23.8bn |
-| Gross profit | $7.5bn | $9.6bn |
+| Gross profit | $7.5bn | $9.5bn |
 | Gross margin | 39.2% | 40.2% |
 | EBITDA | $5.6bn | $7.3bn |
 | EPS | $3.32 | $4.51 |
