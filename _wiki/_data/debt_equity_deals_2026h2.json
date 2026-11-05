@@ -1,12 +1,18 @@
 {
  "meta": {
   "name": "Debt and equity deals register — wiki companies, 2026-05-03 to 2026-11-05",
-  "built": "2026-11-05T09:00",
+  "built": "2026-11-05T09:37",
   "window": {
    "start": "2026-05-03",
    "end": "2026-11-05"
   },
-  "note": "One record per deal/instrument. Bases are explicit per record (size_basis): face, gross, net, facility, commitment, reported. Announced/committed/reported items carry in_totals=false and are NEVER summed with priced/closed deals. Non-USD deals carry size_usd_bn only where a source gives the USD equivalent (Barclays at-issue or 10-Q carrying value, stated). Project bonds are keyed by the TENANT ticker (issuer named in 'issuer'); roster=false rows are adjacent issuers kept for the pricing map. Credit marks quoted in notes are the official AI_Credit_Live workbook bases: price pts, YTM %, OAS bp (Bloomberg, 2026-11-03 09:34). Boundary rows (window_flag) are listed; only 'boundary-in' rows count in totals.",
+  "note": "One record per deal/instrument. Bases are explicit per record (size_basis): face, gross, net, facility, commitment, reported. Announced/committed/reported items carry in_totals=false and are NEVER summed with priced/closed deals. Non-USD deals carry size_usd_bn only where a source gives the USD equivalent (Barclays at-issue or 10-Q carrying value, stated). Project bonds are keyed by the TENANT ticker (issuer named in 'issuer'); roster=false rows are adjacent issuers kept for the pricing map. Credit marks quoted in notes are the official AI_Credit_Live workbook bases: price pts, YTM %, OAS bp (Bloomberg, 2026-11-03 09:34). Boundary rows (window_flag) are listed; only 'boundary-in' rows count in totals. Yet-to-close layer (2026-11-05): ytc_tier tags every announced/signed/committed/planned/reported/tentative-IPO row (1 signed or committed, not closed · 2 programme, option or undrawn capacity · 3 reported or in talks · 4 tentative IPO); ytc_usd_bn is the amount shown in the yet-to-close bar with its ytc_basis, never added to the priced/closed total. cash_pending flags deals already in the priced total whose cash has not yet arrived.",
+  "ytc_tiers": [
+   "1 · signed or committed, not closed",
+   "2 · programme, option or undrawn capacity",
+   "3 · reported or in talks",
+   "4 · tentative IPO"
+  ],
   "status_vocabulary": [
    "announced",
    "priced",
@@ -47,7 +53,7 @@
    "Bloomberg Desktop API bdp (localhost): ANNOUNCE_DT/ISSUE_DT/CPN/AMT_ISSUED/ISSUE_PX/ratings",
    "WebSearch extended (gap fill, labelled per record)"
   ],
-  "count": 132
+  "count": 144
  },
  "deals": [
   {
@@ -79,7 +85,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Meta's only bond deal of 2026 through 20-Aug (Barclays: $25.0bn USD, $0 foreign). Comparator bond in the official workbook."
+   "notes": "Meta's only bond deal of 2026 through 20-Aug (Barclays: $25.0bn USD, $0 foreign). Comparator bond in the official workbook.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-META-20261029-1",
@@ -113,7 +123,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Part of the $95bn equity plan relayed by Wells Fargo (Gawrelski, 2026-10-26): $22.5bn→$25bn common + $12.5bn preferred underwritten, + ~$60bn Class C ATM from 1Q27. NVDA/AMD/AVGO indicated cornerstone interest up to $5bn aggregate (WFC relay). Over-allotment exercise not confirmed on disk."
+   "notes": "Part of the $95bn equity plan relayed by Wells Fargo (Gawrelski, 2026-10-26): $22.5bn→$25bn common + $12.5bn preferred underwritten, + ~$60bn Class C ATM from 1Q27. NVDA/AMD/AVGO indicated cornerstone interest up to $5bn aggregate (WFC relay). Over-allotment exercise not confirmed on disk.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-META-20261027-1",
@@ -147,7 +161,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Cash arrives only on settlement — do not count as funded. Separate from the preferred."
+   "notes": "Cash arrives only on settlement — do not count as funded. Separate from the preferred.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": "forward: physical settlement at Meta's discretion by 2027-11-19; no proceeds at closing"
   },
   {
    "deal_id": "DEQ-META-20261026-1",
@@ -178,7 +196,11 @@
    "in_totals": false,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Plan only — kept out of totals."
+   "notes": "Plan only — kept out of totals.",
+   "ytc_tier": "2 · programme, option or undrawn capacity",
+   "ytc_usd_bn": 60.0,
+   "ytc_basis": "planned ATM from 1Q27",
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-META-20260730-1",
@@ -209,7 +231,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Official workbook mark 2026-11-03: px 99.09 / YTM 7.64% / OAS 255bp. BlackRock cash at close ~$4.9bn (press via TNW)."
+   "notes": "Official workbook mark 2026-11-03: px 99.09 / YTM 7.64% / OAS 255bp. BlackRock cash at close ~$4.9bn (press via TNW).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-GOOG-20260602-1",
@@ -243,7 +269,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "First Alphabet equity raise since the 2004 IPO (Barclays · Sandler/O'Malley, 2026-08-13). Q2 net equity proceeds $49.6bn imply over-allotments were exercised (Capstone read)."
+   "notes": "First Alphabet equity raise since the 2004 IPO (Barclays · Sandler/O'Malley, 2026-08-13). Q2 net equity proceeds $49.6bn imply over-allotments were exercised (Capstone read).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-GOOG-20260602-2",
@@ -274,7 +304,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Dividend printed at the tight end of the 6.25–6.75% talk."
+   "notes": "Dividend printed at the tight end of the 6.25–6.75% talk.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-GOOG-20260602-3",
@@ -305,7 +339,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Class C leg per desk relays; press release names only the Class A share count."
+   "notes": "Class C leg per desk relays; press release names only the Class A share count.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-GOOG-20260930-1",
@@ -336,7 +374,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Programme total counted once; only the $12.4bn sold is 'funded'."
+   "notes": "Programme total counted once; only the $12.4bn sold is 'funded'.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-GOOG-20260505-1",
@@ -367,7 +409,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Tranche terms confirmed from the 8-K on 2026-11-03 (follow-up)."
+   "notes": "Tranche terms confirmed from the 8-K on 2026-11-03 (follow-up).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-GOOG-20260514-1",
@@ -398,7 +444,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Only Alphabet and Amazon used non-dollar markets in 2026 through August (MS Credit)."
+   "notes": "Only Alphabet and Amazon used non-dollar markets in 2026 through August (MS Credit).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-GOOG-20260806-1",
@@ -429,7 +479,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Barclays dates the deal 8/6 and separately refers to 'the 8/10 deal' — read as priced 08-06, settled ~08-10 (Capstone read)."
+   "notes": "Barclays dates the deal 8/6 and separately refers to 'the 8/10 deal' — read as priced 08-06, settled ~08-10 (Capstone read).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-GOOG-20260817-1",
@@ -460,7 +514,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Sixth currency of 2026 for Alphabet (USD, GBP, CHF, EUR, CAD, JPY, AUD)."
+   "notes": "Sixth currency of 2026 for Alphabet (USD, GBP, CHF, EUR, CAD, JPY, AUD).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-GOOG-20260916-1",
@@ -491,7 +549,11 @@
    "in_totals": false,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Press-reported loan; kept out of priced/closed totals. Capacity targets unreconciled (BX 500 MW in 2027 vs Crux 2 GW/yr from 2H27)."
+   "notes": "Press-reported loan; kept out of priced/closed totals. Capacity targets unreconciled (BX 500 MW in 2027 vs Crux 2 GW/yr from 2H27).",
+   "ytc_tier": "3 · reported or in talks",
+   "ytc_usd_bn": 22.0,
+   "ytc_basis": "reported bank loan to Crux",
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-AMZN-20260512-1",
@@ -524,7 +586,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": null
+   "notes": null,
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-AMZN-20260608-1",
@@ -555,7 +621,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": null
+   "notes": null,
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-AMZN-20260930-1",
@@ -588,7 +658,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Month-level dates only (filing gives June entry / September draw)."
+   "notes": "Month-level dates only (filing gives June entry / September draw).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-AMZN-20260707-1",
@@ -619,7 +693,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Amazon's 2026 IG total through 08-20: $92.4bn ($62.0bn USD + $30.4bn foreign) — Barclays; the $37bn March USD deal (with the 50-year 6.05% 2076 tranche) is pre-window."
+   "notes": "Amazon's 2026 IG total through 08-20: $92.4bn ($62.0bn USD + $30.4bn foreign) — Barclays; the $37bn March USD deal (with the 50-year 6.05% 2076 tranche) is pre-window.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-AMZN-20260909-1",
@@ -650,7 +728,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Same session as Uber's debut euro deal and Dell's ~$4bn IG deal — 'are US buyers having indigestion?' (@zerohedge relay, not adopted)."
+   "notes": "Same session as Uber's debut euro deal and Dell's ~$4bn IG deal — 'are US buyers having indigestion?' (@zerohedge relay, not adopted).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-AMZN-20261030-1",
@@ -681,7 +763,11 @@
    "in_totals": false,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Kept out of totals: an undrawn facility whose draws start in 2027."
+   "notes": "Kept out of totals: an undrawn facility whose draws start in 2027.",
+   "ytc_tier": "2 · programme, option or undrawn capacity",
+   "ytc_usd_bn": 80.0,
+   "ytc_basis": "undrawn vendor facility; draws 1Q27–3Q28",
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-AMZN-20261002-1",
@@ -712,7 +798,11 @@
    "in_totals": false,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Press report; no filing."
+   "notes": "Press report; no filing.",
+   "ytc_tier": "3 · reported or in talks",
+   "ytc_usd_bn": 8.0,
+   "ytc_basis": "reported SPV asset value",
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-AMZN-20260615-1",
@@ -743,7 +833,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Official workbook mark 2026-11-03: px 95.18 / 7.24% / OAS 248bp."
+   "notes": "Official workbook mark 2026-11-03: px 95.18 / 7.24% / OAS 248bp.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-MSFT-20260827-1",
@@ -774,7 +868,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Microsoft issued $0 of its own bonds in 2026 through 08-20 (Barclays). Official workbook mark 2026-11-03: px 96.64 / 7.46% / OAS 255bp."
+   "notes": "Microsoft issued $0 of its own bonds in 2026 through 08-20 (Barclays). Official workbook mark 2026-11-03: px 96.64 / 7.46% / OAS 255bp.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-ORCL-20260831-1",
@@ -805,7 +903,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "In-window share of the $19.9bn is not disclosed; counted at completion date."
+   "notes": "In-window share of the $19.9bn is not disclosed; counted at completion date.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-ORCL-20261102-1",
@@ -817,7 +919,7 @@
    "instrument": "Common stock offering — 86,206,897 shares at $116.00 (−11.2% to prior close)",
    "date_announced": "2026-11-02",
    "date_priced": "2026-11-02",
-   "date_closed": "2026-11-04 (expected)",
+   "date_closed": "2026-11-04",
    "event_date": "2026-11-02",
    "size_local": 10.0,
    "currency": "USD",
@@ -826,8 +928,8 @@
    "tenor": null,
    "pricing": "$116.00 per share",
    "use_of_proceeds": "General corporate purposes incl. capex, debt repayment, investments, dividends/buybacks",
-   "status": "priced (final prospectus filed 11-04; closing not confirmed by 11-05)",
-   "source": "Oracle pricing release, PR Newswire 2026-11-02 ('Oracle Announces Pricing of $20 Billion of Common Stock and Senior Notes') — retrieved via indexed web text (Capstone morning evidence 2026-11-03; RTTNews/Seeking Alpha relays); Morgan Stanley TMT Credit · Tyler/Guerrero 2026-11-02",
+   "status": "closed (2026-11-04)",
+   "source": "Oracle pricing release, PR Newswire 2026-11-02 ('Oracle Announces Pricing of $20 Billion of Common Stock and Senior Notes') — retrieved via indexed web text (Capstone morning evidence 2026-11-03; RTTNews/Seeking Alpha relays); Morgan Stanley TMT Credit · Tyler/Guerrero 2026-11-02; Oracle 8-K filed 2026-11-04, Item 8.01 (SEC acc. 0001193125-26-447507: common stock offering 'closed on November 4, 2026'; notes 'consummated' 2026-11-04)",
    "source_links": [],
    "compute_deal_id": "ORCL-CAPITAL-FIN-20261028",
    "workbook_ticker": null,
@@ -836,7 +938,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Executes the $10bn equity leg of the Investor Day cap (FY27–FY30: $10bn equity + $10bn gross debt, ex-refinancing; Maxson 2026-10-28, 8-K EX-99.1)."
+   "notes": "Executes the $10bn equity leg of the Investor Day cap (FY27–FY30: $10bn equity + $10bn gross debt, ex-refinancing; Maxson 2026-10-28, 8-K EX-99.1).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-ORCL-20261102-2",
@@ -848,7 +954,7 @@
    "instrument": "Senior notes, five tranches: $2.0bn 7.000% 2029 · $1.75bn 7.450% 2031 · $2.25bn 7.850% 2033 · $2.5bn 8.000% 2037 · $1.5bn 8.650% 2046 (preliminary 424B2 also carried a 2029 FRN, dropped at pricing)",
    "date_announced": "2026-11-02",
    "date_priced": "2026-11-02",
-   "date_closed": "2026-11-04 (expected)",
+   "date_closed": "2026-11-04",
    "event_date": "2026-11-02",
    "size_local": 10.0,
    "currency": "USD",
@@ -857,8 +963,8 @@
    "tenor": "3y–20y",
    "pricing": "Coupons 7.00%–8.65% vs 4.95% on the Feb-2026 2031s (T+115) — a ~250bp coupon step-up in nine months on the 5-year point; BofA global coordinator",
    "use_of_proceeds": "General corporate purposes incl. capex, repayment of debt",
-   "status": "priced (final prospectus filed 11-04; closing not confirmed by 11-05)",
-   "source": "Oracle pricing release, PR Newswire 2026-11-02 (tranche coupons/sizes; via web search relays — 456X/RTT/Seeking Alpha); Oracle preliminary 424B2 (SEC acc. 0001193125-26-442722, read 2026-11-03: six series incl. FRN, bookrunners); MS TMT Credit · Tyler/Guerrero 2026-11-02",
+   "status": "closed (2026-11-04)",
+   "source": "Oracle pricing release, PR Newswire 2026-11-02 (tranche coupons/sizes; via web search relays — 456X/RTT/Seeking Alpha); Oracle preliminary 424B2 (SEC acc. 0001193125-26-442722, read 2026-11-03: six series incl. FRN, bookrunners); MS TMT Credit · Tyler/Guerrero 2026-11-02; Oracle 8-K filed 2026-11-04, Item 8.01 (SEC acc. 0001193125-26-447507: common stock offering 'closed on November 4, 2026'; notes 'consummated' 2026-11-04)",
    "source_links": [],
    "compute_deal_id": "ORCL-CAPITAL-FIN-20261028",
    "workbook_ticker": null,
@@ -867,7 +973,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Official workbook comparator ORCL 4.95% 2031: px 91.39 / 7.34% / OAS 263bp on 2026-11-03."
+   "notes": "Official workbook comparator ORCL 4.95% 2031: px 91.39 / 7.34% / OAS 263bp on 2026-11-03.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-ORCL-20261028-1",
@@ -898,7 +1008,11 @@
    "in_totals": false,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Watch item; no executed lease on disk."
+   "notes": "Watch item; no executed lease on disk.",
+   "ytc_tier": "3 · reported or in talks",
+   "ytc_usd_bn": null,
+   "ytc_basis": "undisclosed (Apollo / Goldman talks)",
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-ORCL-20260630-1",
@@ -929,7 +1043,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Official workbook mark 2026-11-03: px 90.28 / 9.50% / OAS 503bp (alerted at 10.08% on 2026-10-19)."
+   "notes": "Official workbook mark 2026-11-03: px 90.28 / 9.50% / OAS 503bp (alerted at 10.08% on 2026-10-19).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-NVDA-20260615-1",
@@ -960,7 +1078,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "In the official workbook 'other' group; the 4.95% 2036 is the HUTBPA comparator (OAS 106bp)."
+   "notes": "In the official workbook 'other' group; the 4.95% 2036 is the HUTBPA comparator (OAS 106bp).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-NVDA-20260609-1",
@@ -991,7 +1113,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Official workbook mark 2026-11-03: px 90.86 / 7.09% / OAS 235bp vs NVDA 4.95% 2036 at 106bp."
+   "notes": "Official workbook mark 2026-11-03: px 90.86 / 7.09% / OAS 235bp vs NVDA 4.95% 2036 at 106bp.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-NVDA-20260501-1",
@@ -1022,7 +1148,11 @@
    "in_totals": false,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Listed for completeness; excluded from totals. Workbook mark 2026-11-03: px 88.77 / 9.64% / OAS 500bp."
+   "notes": "Listed for completeness; excluded from totals. Workbook mark 2026-11-03: px 88.77 / 9.64% / OAS 500bp.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-AMD-20260814-1",
@@ -1053,7 +1183,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Two of the four tranches sit in the official workbook."
+   "notes": "Two of the four tranches sit in the official workbook.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-ANTHROPIC-20260528-1",
@@ -1087,7 +1221,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Same filing: 57.9m Series G-2 non-voting preferred sold in Q2 2026 at $259.1364 for $15.0bn (Amazon's 19.3m shares/~$5.0bn under the 2026-04-20 facility agreement; remainder not attributed in sections read) — not summed into the Series H figure."
+   "notes": "Same filing: 57.9m Series G-2 non-voting preferred sold in Q2 2026 at $259.1364 for $15.0bn (Amazon's 19.3m shares/~$5.0bn under the 2026-04-20 facility agreement; remainder not attributed in sections read) — not summed into the Series H figure.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-ANTHROPIC-20260904-1",
@@ -1120,7 +1258,11 @@
    "in_totals": false,
    "facility": true,
    "added": "2026-11-03 register",
-   "notes": "Resolves the 2026-09-03 headline-only item on the ANTHROPIC page. Drawn amount not stated in the sections read."
+   "notes": "Resolves the 2026-09-03 headline-only item on the ANTHROPIC page. Drawn amount not stated in the sections read.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-ANTHROPIC-20260609-1",
@@ -1151,7 +1293,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Distinct from North Star (below). Counted once at the $35bn headline, not at the tranche sum."
+   "notes": "Distinct from North Star (below). Counted once at the $35bn headline, not at the tranche sum.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": "drawn on schedule, weighted to 4Q26–3Q27 (Apollo CFO Martin Kelly, Q2 call 2026-08-04); drawn amount not disclosed"
   },
   {
    "deal_id": "DEQ-ANTHROPIC-20261026-1",
@@ -1182,7 +1328,11 @@
    "in_totals": false,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Kept out of priced/closed totals (announced/committed basis). The separate up-to-$42bn Broadcom convertible rent-note facility (agreement 2026-03-31, 9% PIK, no notes issued as of the S-1) is a pre-window agreement and is not a row."
+   "notes": "Kept out of priced/closed totals (announced/committed basis). The separate up-to-$42bn Broadcom convertible rent-note facility (agreement 2026-03-31, 9% PIK, no notes issued as of the S-1) is a pre-window agreement and is not a row.",
+   "ytc_tier": "1 · signed or committed, not closed",
+   "ytc_usd_bn": 63.0,
+   "ytc_basis": "announced debt + equity package (BofA/Citi/MS/Blackstone)",
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-ANTHROPIC-20261102-1",
@@ -1204,7 +1354,7 @@
    "pricing": null,
    "use_of_proceeds": null,
    "status": "filed (not priced)",
-   "source": "Anthropic S-1 (SEC acc. 0001628280-26-067168) and S-1/A (acc. 0001628280-26-068676); FT 2026-09-18 ('largest ever' expectation); Jefferies · Favuzza 2026-09-07 ('chatter': marketing mid-October, listing before the midterms — not met)",
+   "source": "Anthropic S-1 (SEC acc. 0001628280-26-067168) and S-1/A (acc. 0001628280-26-068676); FT 2026-09-18 ('largest ever' expectation); Jefferies · Favuzza 2026-09-07 ('chatter': marketing mid-October, listing before the midterms — not met); Bloomberg 2026-08-21 (IPO size to 'match' SpaceX's $75bn, via The Standard); All-In #295 2026-10-30 (Calacanis: Goldman/Morgan Stanley lead, 'targeting November 16th', '$100 billion'; Polymarket 78% on at least $95bn; Chamath $80–120bn at $1.3–1.7tn) via ANTHROPIC page — podcast, not broker research",
    "source_links": [
     "ANTHROPIC/ANTHROPIC_S-1A_2026-11-02_0001628280-26-068676.html"
    ],
@@ -1215,7 +1365,11 @@
    "in_totals": false,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Google holds an option to buy $10bn of Class N in a private placement at the IPO price (reduces its NPA by the same amount) — S-1 pp.166-169."
+   "notes": "Google holds an option to buy $10bn of Class N in a private placement at the IPO price (reduces its NPA by the same amount) — S-1 pp.166-169. Size marks are press/podcast, not a filed range.",
+   "ytc_tier": "4 · tentative IPO",
+   "ytc_usd_bn": 100.0,
+   "ytc_basis": "most-cited reported raise (~$100bn; range $75bn–$120bn)",
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-OPENAI-20261002-1",
@@ -1246,7 +1400,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Round-level commitment is NOT re-counted; only the in-window cash is listed."
+   "notes": "Round-level commitment is NOT re-counted; only the in-window cash is listed.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-OPENAI-20261031-1",
@@ -1277,7 +1435,11 @@
    "in_totals": false,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "A bridge in place of an IPO now expected in 2027 (The Information 09-30). Valuation marks: $852bn (Mar) → $1.2tn talks (Bernstein 09-17) → $1.4tn → $1.25tn."
+   "notes": "A bridge in place of an IPO now expected in 2027 (The Information 09-30). Valuation marks: $852bn (Mar) → $1.2tn talks (Bernstein 09-17) → $1.4tn → $1.25tn.",
+   "ytc_tier": "3 · reported or in talks",
+   "ytc_usd_bn": 20.0,
+   "ytc_basis": "latest reported target (~$11bn of commitments reported)",
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-OPENAI-20261007-1",
@@ -1308,7 +1470,11 @@
    "in_totals": false,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "No commitment, closing or delivery on disk; relationship to the Blackstone/Broadcom platform unresolved."
+   "notes": "No commitment, closing or delivery on disk; relationship to the Blackstone/Broadcom platform unresolved.",
+   "ytc_tier": "3 · reported or in talks",
+   "ytc_usd_bn": 50.0,
+   "ytc_basis": "reported discussions",
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-OPENAI-20260826-1",
@@ -1339,7 +1505,11 @@
    "in_totals": false,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Credit support, not a capital raise — listed for the 'who funds what' map only."
+   "notes": "Credit support, not a capital raise — listed for the 'who funds what' map only.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-SPCX-20260611-1",
@@ -1373,7 +1543,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Largest IPO on record. Shares peaked above $225 and traded ~20% below the IPO price by late July (MS · Jonas; @DougKass)."
+   "notes": "Largest IPO on record. Shares peaked above $225 and traded ~20% below the IPO price by late July (MS · Jonas; @DougKass).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-SPCX-20260626-1",
@@ -1404,7 +1578,11 @@
    "in_totals": false,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Origination date not on disk; excluded from totals (refinanced within the window)."
+   "notes": "Origination date not on disk; excluded from totals (refinanced within the window).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-SPCX-20260623-1",
@@ -1437,7 +1615,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Barclays counts SPCX $25bn all-USD YTD (08-20). Official workbook mark 2026-11-03 on the 2056: px 82.43 / 8.24%."
+   "notes": "Barclays counts SPCX $25bn all-USD YTD (08-20). Official workbook mark 2026-11-03 on the 2056: px 82.43 / 8.24%.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-SPCX-20261024-1",
@@ -1470,7 +1652,11 @@
    "in_totals": false,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Chip supplier not named in the filing (NVIDIA per press)."
+   "notes": "Chip supplier not named in the filing (NVIDIA per press).",
+   "ytc_tier": "1 · signed or committed, not closed",
+   "ytc_usd_bn": 40.0,
+   "ytc_basis": "binding letter; Apollo-managed lessor; close expected before YE26",
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-CRWV-20260515-1",
@@ -1501,7 +1687,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Official workbook mark 2026-11-03: px 100.10 / 8.38%."
+   "notes": "Official workbook mark 2026-11-03: px 100.10 / 8.38%.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-CRWV-20260618-1",
@@ -1532,7 +1722,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Official workbook marks 2026-11-03: 9.625% 2032 px 79.87 / 14.99% / OAS 1,025bp; EUR 8.5% 2032 px 76.62 / 14.68% / OAS 1,130bp."
+   "notes": "Official workbook marks 2026-11-03: 9.625% 2032 px 79.87 / 14.99% / OAS 1,025bp; EUR 8.5% 2032 px 76.62 / 14.68% / OAS 1,130bp.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-CRWV-20260730-1",
@@ -1563,7 +1757,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Official workbook mark 2026-11-03: px 98.81 / 8.39%. A $2bn revolver ($1.2bn drawn in August — MS 10-23) is an existing facility, not a new deal."
+   "notes": "Official workbook mark 2026-11-03: px 98.81 / 8.39%. A $2bn revolver ($1.2bn drawn in August — MS 10-23) is an existing facility, not a new deal.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-CRWV-20260922-1",
@@ -1594,7 +1792,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Official workbook mark 2026-11-03: px 72.87 / 8.44%."
+   "notes": "Official workbook mark 2026-11-03: px 72.87 / 8.44%.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-CRWV-20260917-1",
@@ -1625,7 +1827,11 @@
    "in_totals": false,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Score at the 3Q print whether it is used and at what price."
+   "notes": "Score at the 3Q print whether it is used and at what price.",
+   "ytc_tier": "2 · programme, option or undrawn capacity",
+   "ytc_usd_bn": 2.9,
+   "ytc_basis": "unused ATM",
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-CRWV-20260506-1",
@@ -1656,7 +1862,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Official workbook mark 2026-11-03: px 92.87 / 9.73% / OAS 515bp."
+   "notes": "Official workbook mark 2026-11-03: px 92.87 / 9.73% / OAS 515bp.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-CRWV-20260609-1",
@@ -1687,7 +1897,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Official workbook mark 2026-11-03: px 94.00 / 9.12% / OAS 460bp."
+   "notes": "Official workbook mark 2026-11-03: px 94.00 / 9.12% / OAS 460bp.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-CRWV-20260616-1",
@@ -1718,7 +1932,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Official workbook mark 2026-11-03: px 92.50 / 9.02% / OAS 446bp."
+   "notes": "Official workbook mark 2026-11-03: px 92.50 / 9.02% / OAS 446bp.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-CRWV-20260728-1",
@@ -1749,7 +1967,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Official workbook mark 2026-11-03: px 91.67 / 12.23% / OAS 752bp — CoreWeave-offtake paper sold off with the parent on 14–16 Oct."
+   "notes": "Official workbook mark 2026-11-03: px 91.67 / 12.23% / OAS 752bp — CoreWeave-offtake paper sold off with the parent on 14–16 Oct.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-NBIS-20260630-1",
@@ -1780,7 +2002,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "'A flexible funding tool… an option in our arsenal rather than a commitment' (management)."
+   "notes": "'A flexible funding tool… an option in our arsenal rather than a commitment' (management).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-NBIS-20260710-1",
@@ -1813,7 +2039,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Nebius's first secured (asset-backed) debt — the ABF unlock the CFO flagged in May."
+   "notes": "Nebius's first secured (asset-backed) debt — the ABF unlock the CFO flagged in May.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-NBIS-20260824-1",
@@ -1844,7 +2074,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Official workbook marks 2026-11-03: 2030s px 78.50 / 11.11%; 2034s px 77.15 / 11.50% (on original principal)."
+   "notes": "Official workbook marks 2026-11-03: 2030s px 78.50 / 11.11%; 2034s px 77.15 / 11.50% (on original principal).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-NBIS-20261022-1",
@@ -1877,7 +2111,11 @@
    "in_totals": false,
    "facility": true,
    "added": "2026-11-03 register",
-   "notes": "Next step per Nave: asset-backed financing on >$40bn of IG customer contracts (a contract base, not a deal)."
+   "notes": "Next step per Nave: asset-backed financing on >$40bn of IG customer contracts (a contract base, not a deal).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-NSCALE-20260827-1",
@@ -1910,7 +2148,11 @@
    "in_totals": false,
    "facility": true,
    "added": "2026-11-03 register",
-   "notes": "NVIDIA guarantees up to $860.34m of the Ward County lease for $60m of warrants (Ionic Digital S-1 via ENC 2026-09-11)."
+   "notes": "NVIDIA guarantees up to $860.34m of the Ward County lease for $60m of warrants (Ionic Digital S-1 via ENC 2026-09-11).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-NSCALE-20260915-1",
@@ -1941,7 +2183,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Pre-IPO instrument; NVIDIA already a Series B holder ($400m)."
+   "notes": "Pre-IPO instrument; NVIDIA already a Series B holder ($400m).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": "$1.0bn NVIDIA piece closing ~2026-11-16"
   },
   {
    "deal_id": "DEQ-NSCALE-20260930-1",
@@ -1963,7 +2209,7 @@
    "pricing": null,
    "use_of_proceeds": null,
    "status": "filed (not priced as of 2026-11-03)",
-   "source": "Nscale S-1 filed 2026-09-18; FT 2026-09-18 (people familiar, 'up to $35bn'); WSJ via TMT Breakout Morning Wrap 2026-09-30 (slip risk; SB Energy IPO delayed, Oura postponed in the same relay)",
+   "source": "Nscale S-1 filed 2026-09-18; FT 2026-09-18 (people familiar, 'up to $35bn'); WSJ via TMT Breakout Morning Wrap 2026-09-30 (slip risk; SB Energy IPO delayed, Oura postponed in the same relay); Mobile World Live 2026-09-07 (IPO 'could raise a further $3 billion', press relay)",
    "source_links": [],
    "compute_deal_id": null,
    "workbook_ticker": null,
@@ -1972,7 +2218,11 @@
    "in_totals": false,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Anthropic services agreements (up to $44.6bn, 2026-08-25) carry 'best efforts' financing — no binding commitments as of the S-1."
+   "notes": "Anthropic services agreements (up to $44.6bn, 2026-08-25) carry 'best efforts' financing — no binding commitments as of the S-1.",
+   "ytc_tier": "4 · tentative IPO",
+   "ytc_usd_bn": 3.0,
+   "ytc_basis": "reported raise up to ~$3bn",
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-CEREBRAS-20260513-1",
@@ -2003,7 +2253,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "BBG consensus exists since 2026-09-10 (13 analysts)."
+   "notes": "BBG consensus exists since 2026-09-10 (13 analysts).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-SKHYNIX-20260709-1",
@@ -2036,7 +2290,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Largest non-US equity raise in the window. Management later said float could be expanded 'without issuing new shares' (treasury shares) — SKHYNIX page."
+   "notes": "Largest non-US equity raise in the window. Management later said float could be expanded 'without issuing new shares' (treasury shares) — SKHYNIX page.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-INTC-20260812-1",
@@ -2069,7 +2327,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Intel's $6.5bn five-tranche notes (4.65% 2031 … 6.20% 2066) priced 2026-04-27 / settled 04-30 — pre-window, not listed."
+   "notes": "Intel's $6.5bn five-tranche notes (4.65% 2031 … 6.20% 2066) priced 2026-04-27 / settled 04-30 — pre-window, not listed.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-MEDIATEK-20260831-1",
@@ -2100,7 +2362,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Strategic-investor convertible: NVIDIA ~90% of the issue."
+   "notes": "Strategic-investor convertible: NVIDIA ~90% of the issue.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-SMCI-20260610-1",
@@ -2131,7 +2397,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Dates: prospectus supplement dated 2026-06-10; 8-K received 2026-06-12."
+   "notes": "Dates: prospectus supplement dated 2026-06-10; 8-K received 2026-06-12.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-SMCI-20260610-2",
@@ -2162,7 +2432,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Management: no further capital needed for the $65–72bn FY27 guide; >$80bn 'could require incremental financing' (GS). Wolfe (08-14) assumes further raises in the Dec/Mar quarters."
+   "notes": "Management: no further capital needed for the $65–72bn FY27 guide; >$80bn 'could require incremental financing' (GS). Wolfe (08-14) assumes further raises in the Dec/Mar quarters.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-HOOD-20260625-1",
@@ -2196,7 +2470,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Not AI-capex related; listed for completeness of the roster."
+   "notes": "Not AI-capex related; listed for completeness of the roster.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-SNOW-20260928-1",
@@ -2227,7 +2505,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Refinancing, not AI-capex funding (Redburn: net-debt impact immaterial)."
+   "notes": "Refinancing, not AI-capex funding (Redburn: net-debt impact immaterial).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-ICE-20260820-1",
@@ -2260,7 +2542,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Acquisition financing (not AI)."
+   "notes": "Acquisition financing (not AI).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-ICE-20260820-2",
@@ -2291,7 +2577,11 @@
    "in_totals": false,
    "facility": true,
    "added": "2026-11-03 register",
-   "notes": "Acquisition financing (not AI)."
+   "notes": "Acquisition financing (not AI).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-TXN-20261026-1",
@@ -2324,7 +2614,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "M&A financing (not AI capex)."
+   "notes": "M&A financing (not AI capex).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-TSLA-20260929-1",
@@ -2355,7 +2649,11 @@
    "in_totals": false,
    "facility": true,
    "added": "2026-11-03 register",
-   "notes": "Undrawn commitments — kept in the facilities tally, not in funded totals."
+   "notes": "Undrawn commitments — kept in the facilities tally, not in funded totals.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-NFLX-20260731-1",
@@ -2386,7 +2684,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Month-level date (filing)."
+   "notes": "Month-level date (filing).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-UBER-20260909-1",
@@ -2417,7 +2719,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Not an AI-capex issuer — logged as the crowding-out datapoint (same day as Amazon's sterling debut and Dell's IG deal)."
+   "notes": "Not an AI-capex issuer — logged as the crowding-out datapoint (same day as Amazon's sterling debut and Dell's IG deal).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-DELL-20260909-1",
@@ -2448,7 +2754,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Refinancing deal; launched at ~$4bn and completed at $5.0bn — the ~$4bn in the 09-09 relay is the launch size."
+   "notes": "Refinancing deal; launched at ~$4bn and completed at $5.0bn — the ~$4bn in the 09-09 relay is the launch size.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-OWL-20260831-1",
@@ -2479,7 +2789,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Manager-level funding; the AI exposure is via the funds (Hyperion, Crux, SpaceX lease participation)."
+   "notes": "Manager-level funding; the AI exposure is via the funds (Hyperion, Crux, SpaceX lease participation).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-FLEX-20261014-1",
@@ -2510,7 +2824,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Detail expected at the Innovation Day 2026-11-10 (Austin)."
+   "notes": "Detail expected at the Innovation Day 2026-11-10 (Austin).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-GLW-20260911-1",
@@ -2541,7 +2859,11 @@
    "in_totals": false,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Against Wolfe's 08-14 'no working-capital problem' read."
+   "notes": "Against Wolfe's 08-14 'no working-capital problem' read.",
+   "ytc_tier": "2 · programme, option or undrawn capacity",
+   "ytc_usd_bn": 2.0,
+   "ytc_basis": "unused ATM",
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-AAOI-20260821-1",
@@ -2572,7 +2894,11 @@
    "in_totals": false,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Dilution is the thesis risk the bears name; management pre-announced 'leaning on equity' at Rosenblatt."
+   "notes": "Dilution is the thesis risk the bears name; management pre-announced 'leaning on equity' at Rosenblatt.",
+   "ytc_tier": "2 · programme, option or undrawn capacity",
+   "ytc_usd_bn": 0.6,
+   "ytc_basis": "ATM authorisation (usage not disclosed)",
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-POET-20260512-1",
@@ -2605,7 +2931,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Micro-cap; listed for roster completeness."
+   "notes": "Micro-cap; listed for roster completeness.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-KKR-20260928-1",
@@ -2636,7 +2966,11 @@
    "in_totals": false,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Capital platform, not a financing of a named asset — out of totals."
+   "notes": "Capital platform, not a financing of a named asset — out of totals.",
+   "ytc_tier": "2 · programme, option or undrawn capacity",
+   "ytc_usd_bn": 11.0,
+   "ytc_basis": "platform equity commitments, undeployed",
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-SOFTBANK-20260929-1",
@@ -2667,7 +3001,11 @@
    "in_totals": false,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Adjacent issuer; not summed with roster totals."
+   "notes": "Adjacent issuer; not summed with roster totals.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-SOFTBANK-20260507-1",
@@ -2698,7 +3036,11 @@
    "in_totals": false,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Workbook mark 2026-11-03: px 95.75 / 10.07% / OAS 532bp (alerted ≥10% on 10-20, 10-26, 11-02)."
+   "notes": "Workbook mark 2026-11-03: px 95.75 / 10.07% / OAS 532bp (alerted ≥10% on 10-20, 10-26, 11-02).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-IREN-20260514-1",
@@ -2729,7 +3071,11 @@
    "in_totals": false,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Workbook mark 2026-11-03: px 46.87 / 12.55%. Also: IREN DDTL at S+213/225 with Microsoft offtake (MS/Barclays trackers, Aug-2026) and a Blue Owl chip financing 'this quarter' (Lipschultz, OWL Q3 call 2026-10-29, no terms)."
+   "notes": "Workbook mark 2026-11-03: px 46.87 / 12.55%. Also: IREN DDTL at S+213/225 with Microsoft offtake (MS/Barclays trackers, Aug-2026) and a Blue Owl chip financing 'this quarter' (Lipschultz, OWL Q3 call 2026-10-29, no terms).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-CIFR-20261016-1",
@@ -2760,7 +3106,11 @@
    "in_totals": false,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Parent funding for the ~$0.5bn Barber Lake cost increase (dossier)."
+   "notes": "Parent funding for the ~$0.5bn Barber Lake cost increase (dossier).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-JANESTREET-20260818-1",
@@ -2791,7 +3141,11 @@
    "in_totals": false,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "The window's cleanest 'pulled by permitting' case: 99.5 at pricing → ~91.5 by 30-Sep (fund marks) → 84.60 / 13.27% / OAS 857bp on 2026-11-03 (official workbook). Jane Street itself issued $5.86bn 7.294% 2031 notes on 2026-08-13 (Ba1/BB, Reg S) — the comparator."
+   "notes": "The window's cleanest 'pulled by permitting' case: 99.5 at pricing → ~91.5 by 30-Sep (fund marks) → 84.60 / 13.27% / OAS 857bp on 2026-11-03 (official workbook). Jane Street itself issued $5.86bn 7.294% 2031 notes on 2026-08-13 (Ba1/BB, Reg S) — the comparator.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-MSFT-20261029-1",
@@ -2822,7 +3176,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-05 sweep",
-   "notes": "Microsoft's first bond deal of 2026 and the tightest hyperscaler print of the window; missed by the 2026-11-03 corpus sweep (no wiki ingest yet)."
+   "notes": "Microsoft's first bond deal of 2026 and the tightest hyperscaler print of the window; missed by the 2026-11-03 corpus sweep (no wiki ingest yet).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-META-20261103-1",
@@ -2853,7 +3211,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-05 sweep",
-   "notes": "The $20–30bn credit leg Wells Fargo expected after the equity (Gawrelski, 2026-10-22) — $15bn USD + EUR 9.0bn, ~$25bn combined. Same-week 5y spread vs Microsoft: +65bp."
+   "notes": "The $20–30bn credit leg Wells Fargo expected after the equity (Gawrelski, 2026-10-22) — $15bn USD + EUR 9.0bn, ~$25bn combined. Same-week 5y spread vs Microsoft: +65bp.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-META-20261104-1",
@@ -2884,7 +3246,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-05 sweep",
-   "notes": "Closes Barclays' 08-20 observation that Meta had not used non-dollar markets."
+   "notes": "Closes Barclays' 08-20 observation that Meta had not used non-dollar markets.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": "settles 2026-11-12 (T+5)"
   },
   {
    "deal_id": "DEQ-GOOG-20261102-1",
@@ -2915,7 +3281,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-05 sweep",
-   "notes": null
+   "notes": null,
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-NOW-20260512-1",
@@ -2946,7 +3316,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-05 sweep",
-   "notes": "ServiceNow's 10-Q shows $5.5bn of senior notes + $2.1bn CP at 3Q26 (NOW page) — this is the deal behind the notes balance."
+   "notes": "ServiceNow's 10-Q shows $5.5bn of senior notes + $2.1bn CP at 3Q26 (NOW page) — this is the deal behind the notes balance.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-DELL-20260611-1",
@@ -2977,7 +3351,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-05 sweep",
-   "notes": "Dell's first of two 2026 deals; the September $5.0bn is the second."
+   "notes": "Dell's first of two 2026 deals; the September $5.0bn is the second.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-BKNG-20260506-1",
@@ -3008,7 +3386,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-05 sweep",
-   "notes": null
+   "notes": null,
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-MA-20260604-1",
@@ -3039,7 +3421,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-05 sweep",
-   "notes": null
+   "notes": null,
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-ADI-20260915-1",
@@ -3070,7 +3456,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-05 sweep",
-   "notes": null
+   "notes": null,
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-PWR-20260803-1",
@@ -3101,7 +3491,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-05 sweep",
-   "notes": null
+   "notes": null,
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-WMB-20260908-1",
@@ -3132,7 +3526,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-05 sweep",
-   "notes": null
+   "notes": null,
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-APH-20260505-1",
@@ -3163,7 +3561,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-05 sweep",
-   "notes": null
+   "notes": null,
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-EFX-20260722-1",
@@ -3194,7 +3596,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-05 sweep",
-   "notes": null
+   "notes": null,
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-NVT-20260915-1",
@@ -3225,7 +3631,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-05 sweep",
-   "notes": null
+   "notes": null,
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-BX-20261027-1",
@@ -3256,7 +3666,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-05 sweep",
-   "notes": "Manager-level funding; Blackstone's AI exposure sits in its funds (QTS, Crux, North Star second lien)."
+   "notes": "Manager-level funding; Blackstone's AI exposure sits in its funds (QTS, Crux, North Star second lien).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-VST-20260910-1",
@@ -3287,7 +3701,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-05 sweep",
-   "notes": "Junior subordinated hybrid, bucketed with HY. Same window: revolver raised from $3.44bn (06-24), receivables securitization upsized from $1.1bn (07-10), commodity-linked revolver extended (09-30)."
+   "notes": "Junior subordinated hybrid, bucketed with HY. Same window: revolver raised from $3.44bn (06-24), receivables securitization upsized from $1.1bn (07-10), commodity-linked revolver extended (09-30).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-AEIS-20260518-1",
@@ -3318,7 +3736,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-05 sweep",
-   "notes": "Pricing date approximate (launch-to-close); closing date from the 8-K."
+   "notes": "Pricing date approximate (launch-to-close); closing date from the 8-K.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-ON-20260511-1",
@@ -3349,7 +3771,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-05 sweep",
-   "notes": "Pricing date approximate (launch-to-close); closing date from the 8-K."
+   "notes": "Pricing date approximate (launch-to-close); closing date from the 8-K.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-AKAM-20260522-1",
@@ -3380,7 +3806,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-05 sweep",
-   "notes": "Pricing date approximate (launch-to-close); closing date from the 8-K."
+   "notes": "Pricing date approximate (launch-to-close); closing date from the 8-K.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-CIEN-20260611-1",
@@ -3411,7 +3841,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-05 sweep",
-   "notes": "Pricing date approximate (launch-to-close); closing date from the 8-K."
+   "notes": "Pricing date approximate (launch-to-close); closing date from the 8-K.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-NET-20260813-1",
@@ -3442,7 +3876,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-05 sweep",
-   "notes": "Pricing date approximate (launch-to-close); closing date from the 8-K."
+   "notes": "Pricing date approximate (launch-to-close); closing date from the 8-K.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-DT-20260820-1",
@@ -3473,7 +3911,11 @@
    "in_totals": true,
    "facility": false,
    "added": "2026-11-05 sweep",
-   "notes": "Pricing date approximate (launch-to-close); closing date from the 8-K."
+   "notes": "Pricing date approximate (launch-to-close); closing date from the 8-K.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-AKAM-20260518-1",
@@ -3504,7 +3946,11 @@
    "in_totals": false,
    "facility": true,
    "added": "2026-11-05 sweep",
-   "notes": "Akamai later signed the $11.6bn Anthropic agreement (09-18/24) with warrants to Anthropic — a customer warrant, not a capital raise."
+   "notes": "Akamai later signed the $11.6bn Anthropic agreement (09-18/24) with warrants to Anthropic — a customer warrant, not a capital raise.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-GLW-20260506-1",
@@ -3535,7 +3981,11 @@
    "in_totals": false,
    "facility": false,
    "added": "2026-11-05 sweep",
-   "notes": "Strategic supplier equity from NVIDIA; added to the provider map."
+   "notes": "Strategic supplier equity from NVIDIA; added to the provider map.",
+   "ytc_tier": "1 · signed or committed, not closed",
+   "ytc_usd_bn": 0.5,
+   "ytc_basis": "signed (closing not verified)",
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-AAOI-20260514-1",
@@ -3566,7 +4016,11 @@
    "in_totals": false,
    "facility": false,
    "added": "2026-11-05 sweep",
-   "notes": null
+   "notes": null,
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-AAOI-20261030-1",
@@ -3597,7 +4051,11 @@
    "in_totals": false,
    "facility": true,
    "added": "2026-11-05 sweep",
-   "notes": null
+   "notes": null,
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-NVTS-20260511-1",
@@ -3628,7 +4086,11 @@
    "in_totals": false,
    "facility": false,
    "added": "2026-11-05 sweep",
-   "notes": null
+   "notes": null,
+   "ytc_tier": "2 · programme, option or undrawn capacity",
+   "ytc_usd_bn": 0.125,
+   "ytc_basis": "ATM authorisation (usage not disclosed)",
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-SMCI-20260611-1",
@@ -3659,7 +4121,11 @@
    "in_totals": false,
    "facility": false,
    "added": "2026-11-05 sweep",
-   "notes": null
+   "notes": null,
+   "ytc_tier": "2 · programme, option or undrawn capacity",
+   "ytc_usd_bn": 1.25,
+   "ytc_basis": "ATM authorisation (usage not disclosed)",
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-AXTI-20261027-1",
@@ -3690,7 +4156,11 @@
    "in_totals": false,
    "facility": false,
    "added": "2026-11-05 sweep",
-   "notes": null
+   "notes": null,
+   "ytc_tier": "1 · signed or committed, not closed",
+   "ytc_usd_bn": 0.285,
+   "ytc_basis": "minimum subscription (up to ~$0.545bn)",
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-DELL-20260610-1",
@@ -3721,7 +4191,11 @@
    "in_totals": false,
    "facility": true,
    "added": "2026-11-05 sweep",
-   "notes": null
+   "notes": null,
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-ICE-20260820-3",
@@ -3752,7 +4226,11 @@
    "in_totals": false,
    "facility": true,
    "added": "2026-11-05 sweep",
-   "notes": null
+   "notes": null,
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-WMB-20260519-1",
@@ -3783,7 +4261,11 @@
    "in_totals": false,
    "facility": true,
    "added": "2026-11-05 sweep",
-   "notes": null
+   "notes": null,
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-ADI-20260702-1",
@@ -3814,7 +4296,11 @@
    "in_totals": false,
    "facility": true,
    "added": "2026-11-05 sweep",
-   "notes": null
+   "notes": null,
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-KKR-20260730-1",
@@ -3845,7 +4331,11 @@
    "in_totals": false,
    "facility": true,
    "added": "2026-11-05 sweep",
-   "notes": null
+   "notes": null,
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-MRVL-20261022-1",
@@ -3876,7 +4366,11 @@
    "in_totals": false,
    "facility": true,
    "added": "2026-11-05 sweep",
-   "notes": null
+   "notes": null,
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-NDAQ-20260630-1",
@@ -3907,7 +4401,11 @@
    "in_totals": false,
    "facility": true,
    "added": "2026-11-05 sweep",
-   "notes": null
+   "notes": null,
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-SNDK-20260909-1",
@@ -3938,7 +4436,11 @@
    "in_totals": false,
    "facility": true,
    "added": "2026-11-05 sweep",
-   "notes": null
+   "notes": null,
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-FLEX-20260529-1",
@@ -3969,7 +4471,11 @@
    "in_totals": false,
    "facility": true,
    "added": "2026-11-05 sweep",
-   "notes": null
+   "notes": null,
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-TLN-20260615-1",
@@ -4000,7 +4506,11 @@
    "in_totals": false,
    "facility": true,
    "added": "2026-11-05 sweep",
-   "notes": null
+   "notes": null,
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-TER-20260807-1",
@@ -4031,7 +4541,11 @@
    "in_totals": false,
    "facility": true,
    "added": "2026-11-05 sweep",
-   "notes": null
+   "notes": null,
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-NVT-20260917-1",
@@ -4062,7 +4576,11 @@
    "in_totals": false,
    "facility": true,
    "added": "2026-11-05 sweep",
-   "notes": null
+   "notes": null,
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-DT-20260924-1",
@@ -4093,7 +4611,11 @@
    "in_totals": false,
    "facility": true,
    "added": "2026-11-05 sweep",
-   "notes": null
+   "notes": null,
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-NXPI-20260901-1",
@@ -4124,7 +4646,11 @@
    "in_totals": false,
    "facility": true,
    "added": "2026-11-05 sweep",
-   "notes": null
+   "notes": null,
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-AMD-20260514-1",
@@ -4155,7 +4681,11 @@
    "in_totals": false,
    "facility": true,
    "added": "2026-11-05 sweep",
-   "notes": "Revolver size not stated in the sections read."
+   "notes": "Revolver size not stated in the sections read.",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
   },
   {
    "deal_id": "DEQ-UBER-20260806-1",
@@ -4186,7 +4716,431 @@
    "in_totals": false,
    "facility": true,
    "added": "2026-11-05 sweep",
-   "notes": null
+   "notes": null,
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
+  },
+  {
+   "deal_id": "DEQ-BX-20260513-1",
+   "ticker": "BX",
+   "issuer": "Blackstone Digital Infrastructure Trust (NYSE: BXDC) — blind-pool data-centre REIT, externally managed by a Blackstone affiliate",
+   "tenant_or_beneficiary": null,
+   "sector": "Financials — alternative managers (AI-infrastructure sponsor)",
+   "instrument_bucket": "IPO",
+   "instrument": "IPO — 87.5m common shares at $20.00 (NYSE 'BXDC'); buys stabilised, newly built data centres leased to investment-grade hyperscalers; underwriters' 30-day option to lift proceeds to up to $2.0bn",
+   "date_announced": "2026-04-20",
+   "date_priced": "2026-05-13",
+   "date_closed": "2026-05-15 (scheduled)",
+   "event_date": "2026-05-13",
+   "size_local": 1.75,
+   "currency": "USD",
+   "size_usd_bn": 1.75,
+   "size_basis": "gross, base deal (option to ~$2.0bn; exercise not confirmed in a filing read here)",
+   "tenor": null,
+   "pricing": "$20.00 per share",
+   "use_of_proceeds": "Acquire stabilised AI data centres (blind pool at IPO)",
+   "status": "closed",
+   "source": "Blackstone Digital Infrastructure Trust pricing release 2026-05-13 ('Announces Pricing of up to $2 Billion Initial Public Offering', blackstone.com; relays Seeking Alpha / Barchart 2026-05-13) — web search 2026-11-05; Blackstone Q2 2026 call 2026-07-23 (Steve Schwarzman: 'The $2 billion offering represented the largest blind pool REIT IPO in history')",
+   "source_links": [],
+   "compute_deal_id": null,
+   "workbook_ticker": null,
+   "window_flag": "in",
+   "roster": true,
+   "in_totals": true,
+   "facility": false,
+   "added": "2026-11-05 yet-to-close pass",
+   "notes": "Bloomberg had flagged the plan as a public data-centre acquisition company aiming at 'tens of billions' of funding (Feb-2026, press). Counted at the $1.75bn base; Schwarzman's '$2 billion' suggests the option was exercised (Capstone read, not verified).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
+  },
+  {
+   "deal_id": "DEQ-FLEX-20261002-1",
+   "ticker": "FLEX",
+   "issuer": "Axiom Solutions International, Inc. (Flex's cloud & power spin; Flex guarantees the redemption)",
+   "tenant_or_beneficiary": null,
+   "sector": "AI — Data-center power & cooling",
+   "instrument_bucket": "preferred",
+   "instrument": "Series A convertible preferred private placement — 200,000 shares at $10,000 = $2.0bn, led by General Catalyst (GC Venture XIII (ASI), L.P.) with other investors; redeemable at 115% cash / 125% Flex shares if the Axiom spin (1Q27) is not done by 2027-12-31",
+   "date_announced": "2026-10-05",
+   "date_priced": null,
+   "date_closed": null,
+   "event_date": "2026-10-02",
+   "size_local": 2.0,
+   "currency": "USD",
+   "size_usd_bn": 2.0,
+   "size_basis": "aggregate purchase price (agreement)",
+   "tenor": null,
+   "pricing": null,
+   "use_of_proceeds": "Repay ~$2bn of the EPC Power acquisition debt",
+   "status": "signed (agreement 2026-10-02; closing not disclosed by 2026-11-05)",
+   "source": "Flex 8-K filed 2026-10-05, Items 1.01/3.02/8.01 (SEC acc. 0001193125-26-413173, read 2026-11-05); Flex Q2 FY27 call 2026-10-28 (Kevin Krumm, CFO) via FLEX page",
+   "source_links": [],
+   "compute_deal_id": null,
+   "workbook_ticker": null,
+   "window_flag": "in",
+   "roster": true,
+   "in_totals": false,
+   "facility": false,
+   "added": "2026-11-05 yet-to-close pass",
+   "notes": "Split out of the Flex acquisition-debt row on 2026-11-05. The 10-13 Flex 8-K (Item 3.02) is Amazon's warrant amendment, not this closing.",
+   "ytc_tier": "1 · signed or committed, not closed",
+   "ytc_usd_bn": 2.0,
+   "ytc_basis": "signed purchase agreement",
+   "cash_pending": null
+  },
+  {
+   "deal_id": "DEQ-BX-20261029-1",
+   "ticker": "BX",
+   "issuer": "Blackstone (equity partner in Crux AI, the Google TPU compute-as-a-service JV)",
+   "tenant_or_beneficiary": "GOOG (Crux JV; Google backstops up to $10.0bn)",
+   "sector": "Financials — alternative managers (AI-infrastructure sponsor)",
+   "instrument_bucket": "capital platform",
+   "instrument": "Equity commitment of up to $5.0bn to Crux AI; Google backstops up to $10.0bn; $16.8bn backlog disclosed",
+   "date_announced": "2026-10-29",
+   "date_priced": null,
+   "date_closed": null,
+   "event_date": "2026-10-29",
+   "size_local": 5.0,
+   "currency": "USD",
+   "size_usd_bn": 5.0,
+   "size_basis": "commitment ceiling (funded share not disclosed)",
+   "tenor": null,
+   "pricing": null,
+   "use_of_proceeds": null,
+   "status": "committed",
+   "source": "Alphabet 10-Q filed 2026-10-29 (Crux: Blackstone up to $5.0bn; Google backstops up to $10.0bn; $16.8bn backlog) via GOOG page",
+   "source_links": [],
+   "compute_deal_id": null,
+   "workbook_ticker": null,
+   "window_flag": "in",
+   "roster": true,
+   "in_totals": false,
+   "facility": false,
+   "added": "2026-11-05 yet-to-close pass",
+   "notes": "The ~$22bn bank loan to Crux is the separate GOOG row (reported). Kept out of totals.",
+   "ytc_tier": "1 · signed or committed, not closed",
+   "ytc_usd_bn": 5.0,
+   "ytc_basis": "commitment ceiling",
+   "cash_pending": null
+  },
+  {
+   "deal_id": "DEQ-META-20261026-2",
+   "ticker": "META",
+   "issuer": "Meta Platforms, Inc.",
+   "tenant_or_beneficiary": null,
+   "sector": "AI — Hyperscalers & Software",
+   "instrument_bucket": "equity follow-on",
+   "instrument": "Underwriters' 30-day options on the October package — 6,000,000 more Class A shares into additional forwards (~$3.75bn at the $625 offer price) + 37,500,000 more Series A depositary shares (~$1.875bn at $50)",
+   "date_announced": "2026-10-26",
+   "date_priced": null,
+   "date_closed": null,
+   "event_date": "2026-10-26",
+   "size_local": 5.625,
+   "currency": "USD",
+   "size_usd_bn": 5.625,
+   "size_basis": "option ceilings at the offer prices (6.0m × $625 + 37.5m × $50)",
+   "tenor": null,
+   "pricing": null,
+   "use_of_proceeds": null,
+   "status": "option (exercise not disclosed by 2026-11-05)",
+   "source": "Meta 424B5s filed 2026-10-26 (Class A forward and Series A preferred) and 8-K filed 2026-10-29 (no exercise disclosed), via META page; Wells Fargo · Gawrelski 2026-10-26 ('$3.4bn common + $1.9bn preferred' overallotment on its pre-deal share math)",
+   "source_links": [],
+   "compute_deal_id": null,
+   "workbook_ticker": null,
+   "window_flag": "in",
+   "roster": true,
+   "in_totals": false,
+   "facility": false,
+   "added": "2026-11-05 yet-to-close pass",
+   "notes": "Options run ~30 days from 2026-10-26. If exercised, the common piece goes into forwards, so no cash before forward settlement.",
+   "ytc_tier": "2 · programme, option or undrawn capacity",
+   "ytc_usd_bn": 5.625,
+   "ytc_basis": "option ceilings",
+   "cash_pending": null
+  },
+  {
+   "deal_id": "DEQ-GOOG-20260930-2",
+   "ticker": "GOOG",
+   "issuer": "Alphabet Inc.",
+   "tenant_or_beneficiary": null,
+   "sector": "AI — Hyperscalers & Software",
+   "instrument_bucket": "equity follow-on",
+   "instrument": "Unused balance of the $40bn at-the-market programme (Class A + Class C) — $12.4bn net sold in 3Q26, $27.6bn left at 2026-09-30",
+   "date_announced": "2026-06-02",
+   "date_priced": null,
+   "date_closed": null,
+   "event_date": "2026-09-30",
+   "size_local": 27.6,
+   "currency": "USD",
+   "size_usd_bn": 27.6,
+   "size_basis": "programme balance at 2026-09-30 (4Q26 sales not yet disclosed)",
+   "tenor": null,
+   "pricing": null,
+   "use_of_proceeds": null,
+   "status": "programme (unused balance)",
+   "source": "Alphabet 10-Q filed 2026-10-29 and 3Q26 call 2026-10-28 ($12.4bn net via the ATM; $27.6bn left) via GOOG page",
+   "source_links": [],
+   "compute_deal_id": null,
+   "workbook_ticker": null,
+   "window_flag": "in",
+   "roster": true,
+   "in_totals": false,
+   "facility": false,
+   "added": "2026-11-05 yet-to-close pass",
+   "notes": "The sold $12.4bn is the funded GOOG ATM row; this row is only the balance.",
+   "ytc_tier": "2 · programme, option or undrawn capacity",
+   "ytc_usd_bn": 27.6,
+   "ytc_basis": "ATM balance at 9/30",
+   "cash_pending": null
+  },
+  {
+   "deal_id": "DEQ-LAMBDA-20261006-1",
+   "ticker": "LAMBDA",
+   "issuer": "Lambda, Inc. (GPU cloud; not in roster)",
+   "tenant_or_beneficiary": null,
+   "sector": "— (not in roster; neocloud)",
+   "instrument_bucket": "venture round",
+   "instrument": "Final pre-IPO round of up to $4.0bn at a $14.5bn pre-money valuation, Blackstone and Coatue reported as leads (earlier: up to $3bn at ≥$12bn, Bloomberg Aug-2026)",
+   "date_announced": "2026-10-06",
+   "date_priced": null,
+   "date_closed": null,
+   "event_date": "2026-10-06",
+   "size_local": 4.0,
+   "currency": "USD",
+   "size_usd_bn": 4.0,
+   "size_basis": "reported round size (not closed)",
+   "tenor": null,
+   "pricing": null,
+   "use_of_proceeds": null,
+   "status": "reported-talks",
+   "source": "TechCrunch 2026-10-06 ('AI computing startup Lambda to raise $4B ahead of planned IPO', relaying the WSJ) — web search 2026-11-05; Bloomberg Aug-2026 via press relays ($3bn at ≥$12bn)",
+   "source_links": [],
+   "compute_deal_id": null,
+   "workbook_ticker": null,
+   "window_flag": "in",
+   "roster": false,
+   "in_totals": false,
+   "facility": false,
+   "added": "2026-11-05 yet-to-close pass",
+   "notes": "Blackstone-led, so a BX pipeline item. Anthropic is Lambda's anchor tenant (ANTH-LAMBDA-20260831, unconfirmed by Lambda).",
+   "ytc_tier": "3 · reported or in talks",
+   "ytc_usd_bn": 4.0,
+   "ytc_basis": "reported round (Blackstone / Coatue)",
+   "cash_pending": null
+  },
+  {
+   "deal_id": "DEQ-CRUSOE-20260903-1",
+   "ticker": "CRUSOE",
+   "issuer": "Crusoe Energy Systems (not in roster)",
+   "tenant_or_beneficiary": null,
+   "sector": "— (not in roster; AI data-centre developer)",
+   "instrument_bucket": "venture round",
+   "instrument": "Series F of more than $3bn at ~$30bn valuation, co-led by Atreides Management and Valor Equity Partners, Mubadala Capital participating",
+   "date_announced": "2026-09-03",
+   "date_priced": null,
+   "date_closed": "2026-09-03",
+   "event_date": "2026-09-03",
+   "size_local": 3.0,
+   "currency": "USD",
+   "size_usd_bn": 3.0,
+   "size_basis": "'more than $3 billion' (reported)",
+   "tenor": null,
+   "pricing": null,
+   "use_of_proceeds": null,
+   "status": "closed (reported)",
+   "source": "Bloomberg 2026-09-03 ('Crusoe Raises Over $3 Billion in Round at $30 Billion Valuation', people familiar) — web search 2026-11-05",
+   "source_links": [],
+   "compute_deal_id": null,
+   "workbook_ticker": null,
+   "window_flag": "in",
+   "roster": false,
+   "in_totals": false,
+   "facility": false,
+   "added": "2026-11-05 yet-to-close pass",
+   "notes": "Adjacent name — listed for the IPO pipeline, not summed (roster rule).",
+   "ytc_tier": null,
+   "ytc_usd_bn": null,
+   "ytc_basis": null,
+   "cash_pending": null
+  },
+  {
+   "deal_id": "DEQ-SBENERGY-20260901-1",
+   "ticker": "SBENERGY",
+   "issuer": "SB Energy, Inc. (SoftBank; not in roster)",
+   "tenant_or_beneficiary": null,
+   "sector": "— (not in roster; AI data-centre developer)",
+   "instrument_bucket": "IPO",
+   "instrument": "IPO registration — S-1 filed 2026-09-01 (Nasdaq 'SBE'); reported target $5–7bn at ~$50bn valuation; launch delayed on valuation pushback; OpenAI invests $3bn in SB Energy, $1.5bn of it conditional on the IPO",
+   "date_announced": "2026-09-01",
+   "date_priced": null,
+   "date_closed": null,
+   "event_date": "2026-09-01",
+   "size_local": null,
+   "currency": "USD",
+   "size_usd_bn": null,
+   "size_basis": "reported target $5–7bn (not priced)",
+   "tenor": null,
+   "pricing": null,
+   "use_of_proceeds": null,
+   "status": "filed (delayed; not priced as of 2026-11-05)",
+   "source": "SB Energy S-1 (SEC, CIK 2133037) via the 2026-10-16 workbook dossiers; IFR Sep-2026 ('SB Energy targets billions from IPO'; roadshow planned for the week of 09-21, then held) — web search 2026-11-05; WSJ via TMT Breakout Morning Wrap 2026-09-30 (delayed); FT 2026-09-18 (~$50bn, no facility online) via NSCALE page; OPENAI page / ENC 2026-09-11 ($3bn incl. $1.5bn conditional on the IPO)",
+   "source_links": [],
+   "compute_deal_id": null,
+   "workbook_ticker": null,
+   "window_flag": "in",
+   "roster": false,
+   "in_totals": false,
+   "facility": false,
+   "added": "2026-11-05 yet-to-close pass",
+   "notes": "SoftBank-adjacent. The NVIDIA guarantee of the Ohio leases (up to $105bn) is the separate OPENAI guarantee row and is not a financing.",
+   "ytc_tier": "4 · tentative IPO",
+   "ytc_usd_bn": 5.0,
+   "ytc_basis": "low end of reported $5–7bn",
+   "cash_pending": null
+  },
+  {
+   "deal_id": "DEQ-FIRMUS-20261009-1",
+   "ticker": "FIRMUS",
+   "issuer": "Firmus Technologies (Australia; not in roster)",
+   "tenant_or_beneficiary": null,
+   "sector": "— (not in roster; neocloud / AI data centres)",
+   "instrument_bucket": "IPO",
+   "instrument": "ASX IPO of ~A$5.5bn withdrawn 2026-10-09 after the bookbuild (A$11/share implied ~A$43.7bn equity value); now seeking private capital — NVIDIA in talks to invest more; a later Nasdaq listing floated (unconfirmed)",
+   "date_announced": "2026-09-21",
+   "date_priced": null,
+   "date_closed": null,
+   "event_date": "2026-10-09",
+   "size_local": 5.5,
+   "currency": "AUD",
+   "size_usd_bn": null,
+   "size_basis": "withdrawn A$5.5bn offer (no live deal size)",
+   "tenor": null,
+   "pricing": null,
+   "use_of_proceeds": null,
+   "status": "withdrawn (IPO); private raise in talks",
+   "source": "Rothschild & Co Redburn, 'Read-X – Australian IPO withdrawn by Firmus' 2026-10-09 (A$5.5bn); UBS TECH 2026-10-09 (Reuters: 'scraps $5 billion Australia IPO'); UBS TECH 2026-10-21 (The Information: NVIDIA in talks to invest after the failed IPO); Forbes Australia Oct-2026 (A$11/share, ~A$43.7bn) — web search 2026-11-05",
+   "source_links": [],
+   "compute_deal_id": null,
+   "workbook_ticker": null,
+   "window_flag": "in",
+   "roster": false,
+   "in_totals": false,
+   "facility": false,
+   "added": "2026-11-05 yet-to-close pass",
+   "notes": "Backers include NVIDIA, Blackstone, Coatue and Jane Street (August round at >$10.5bn valuation, press). AICP obligations $21.1bn (ENC 2026-09-11).",
+   "ytc_tier": "4 · tentative IPO",
+   "ytc_usd_bn": null,
+   "ytc_basis": "withdrawn; no live size",
+   "cash_pending": null
+  },
+  {
+   "deal_id": "DEQ-OPENAI-20260930-1",
+   "ticker": "OPENAI",
+   "issuer": "OpenAI",
+   "tenant_or_beneficiary": null,
+   "sector": "AI — Private labs",
+   "instrument_bucket": "IPO",
+   "instrument": "IPO deferred to 2027 — a private bridge round in its place (see the OpenAI round row); no filing",
+   "date_announced": "2026-09-18",
+   "date_priced": null,
+   "date_closed": null,
+   "event_date": "2026-09-30",
+   "size_local": null,
+   "currency": "USD",
+   "size_usd_bn": null,
+   "size_basis": "no reported size for a 2027 IPO (2025 marks of ≥$60bn superseded)",
+   "tenor": null,
+   "pricing": null,
+   "use_of_proceeds": null,
+   "status": "planned (2027)",
+   "source": "FT 2026-09-18 (autumn IPO deferred to 2027); The Information 2026-09-30 (bridge in place of an IPO) via OPENAI page; Bloomberg 2026-09-29 ($30bn at ~$1.4tn as a pre-IPO bridge)",
+   "source_links": [],
+   "compute_deal_id": null,
+   "workbook_ticker": null,
+   "window_flag": "in",
+   "roster": true,
+   "in_totals": false,
+   "facility": false,
+   "added": "2026-11-05 yet-to-close pass",
+   "notes": null,
+   "ytc_tier": "4 · tentative IPO",
+   "ytc_usd_bn": null,
+   "ytc_basis": "no reported size",
+   "cash_pending": null
+  },
+  {
+   "deal_id": "DEQ-LAMBDA-20261006-2",
+   "ticker": "LAMBDA",
+   "issuer": "Lambda, Inc. (not in roster)",
+   "tenant_or_beneficiary": null,
+   "sector": "— (not in roster; neocloud)",
+   "instrument_bucket": "IPO",
+   "instrument": "IPO planned for 2027 after the final private round; the earlier 2026 listing was delayed",
+   "date_announced": "2026-07-30",
+   "date_priced": null,
+   "date_closed": null,
+   "event_date": "2026-10-06",
+   "size_local": null,
+   "currency": "USD",
+   "size_usd_bn": null,
+   "size_basis": "no reported IPO size",
+   "tenor": null,
+   "pricing": null,
+   "use_of_proceeds": null,
+   "status": "planned (2027)",
+   "source": "The Information · Valida Pau 2026-07-30 ('Lambda delayed its listing', via CRWV/NBIS pages); TechCrunch 2026-10-06 relaying the WSJ (2027 IPO)",
+   "source_links": [],
+   "compute_deal_id": null,
+   "workbook_ticker": null,
+   "window_flag": "in",
+   "roster": false,
+   "in_totals": false,
+   "facility": false,
+   "added": "2026-11-05 yet-to-close pass",
+   "notes": null,
+   "ytc_tier": "4 · tentative IPO",
+   "ytc_usd_bn": null,
+   "ytc_basis": "no reported size",
+   "cash_pending": null
+  },
+  {
+   "deal_id": "DEQ-CRUSOE-20260730-1",
+   "ticker": "CRUSOE",
+   "issuer": "Crusoe Energy Systems (not in roster)",
+   "tenant_or_beneficiary": null,
+   "sector": "— (not in roster; AI data-centre developer)",
+   "instrument_bucket": "IPO",
+   "instrument": "Potential IPO — talking to bankers (Goldman Sachs, Morgan Stanley, JPMorgan, BofA named in press); no filing",
+   "date_announced": "2026-07-30",
+   "date_priced": null,
+   "date_closed": null,
+   "event_date": "2026-07-30",
+   "size_local": null,
+   "currency": "USD",
+   "size_usd_bn": null,
+   "size_basis": "no reported IPO size",
+   "tenor": null,
+   "pricing": null,
+   "use_of_proceeds": null,
+   "status": "exploratory",
+   "source": "The Information · Valida Pau 2026-07-30 ('Crusoe talking to bankers', via CRWV/NBIS pages); bank names from press relays Aug-2026 (web search 2026-11-05)",
+   "source_links": [],
+   "compute_deal_id": null,
+   "workbook_ticker": null,
+   "window_flag": "in",
+   "roster": false,
+   "in_totals": false,
+   "facility": false,
+   "added": "2026-11-05 yet-to-close pass",
+   "notes": null,
+   "ytc_tier": "4 · tentative IPO",
+   "ytc_usd_bn": null,
+   "ytc_basis": "no reported size",
+   "cash_pending": null
   }
  ]
 }
