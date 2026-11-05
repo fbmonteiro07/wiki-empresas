@@ -1,17 +1,11 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-11-03 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-11-05 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (55)
+## 📅 Upcoming (49)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-11-03 | APO | **2026-11-03 — Q3 results**, announced 2026-09-29. Test FRE growth, Athene inflows, reported versus normalized spreads and future fee recognition. [Company announcement](https://www.apollo.com/insight |
-| 2026-11-03 | BKNG | **🆕🔴 2026-11-03 (TUESDAY, AFTER THE CLOSE; CALL 4:30PM ET) — THE 3Q26 PRINT, AND THE BARS ARE NOW EXPLICIT.** ① **3Q room nights:** guide **+3-5%**; consensus **~339m (+5%)** (Bloomberg via Bernstein  |
-| 2026-11-03 | INTC | 🆕 **2026-10-01: Susquehanna "The AI Arms Race" session (Christopher Rolland; AMD, INTC, MRVL, NVDA, AVGO, ARM, QCOM) and 2026-11-03: Intel dinner NDR with CFO and IR, London** (Susquehanna index 09-30 |
-| 2026-11-03 | SMCI | **✅ RESOLVED (preliminary) 2026-10-20 — F1Q27 vs guide:** revenue **$18.5–19.5bn vs $14.5–15.5bn**, GM **12.0–12.5% vs 10.4–10.8%** (SMCI 8-K, 2026-10-20). Bull on delivery vs guide; GM sits well belo |
-| 2026-11-04 | EFX | 2026-11-04 — FICO quarterly results: 2027 mortgage-score pricing, the direct-license model and the "Preferred Program" ($10 wholesale mortgage score, flat year on year per UBS) set the pass-through an |
-| 2026-11-04 | TRU | 2026-11-04 — FICO fiscal Q4 results and 2027 pricing outlook (date per the [UBS desk relay of McVeigh, 2026-10-27 — Outlook](https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hM |
 | 2026-11-09 | CME | Compute futures: the CFTC comment period on CME's Silicon Data H100-rental-index contract ends 2026-11-09 (Duffy said he "believe[s]" so; filed under a full 40.3 review), then the agency decides ([Duf |
 | 2026-11-09 | KKR | **2026-11-09 — Q3 results and call**, announced by KKR on 2026-09-29. Test fee activation, insurance earnings, K-Series flows and realization progress. [Company announcement](https://media.kkr.com/new |
 | 2026-11-09 | QCOM | **🆕 APPLE LICENSING EXTENSION — announced 2026-09-24 ahead of the April 2027 expiry, terms not disclosed** (Bernstein desk · Seidman, 2026-09-24). Watch for duration/rate in the FQ4 print or 10-K. **B |
@@ -62,22 +56,28 @@ _Generated 2026-11-03 · parsed from every page's 'Catalysts / what to watch'. D
 | 2029-12-08 | MU | 🆕 **2026-10-16 — the buyback now has a formula and a window, from Micron IR.** From **2026-12-09 through 2029-12-08** Micron may repurchase up to **trailing-12-month FCF − CHIPS proceeds received in t |
 | 2031-12-31 | NSCALE | 2031-12-31 — Monarch expansion to ~8 GW gross planned. |
 
-## ⏰ Passed — need a post-mortem (3)
+## ⏰ Passed — need a post-mortem (5)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-11-02 | STX | 🆕 **2026-10-08 (12pm ET, NYC) — Morgan Stanley Global Hardware & Optical lunch (Andy Meng, Howard Kao, Derrick Yang, Meta Marshall, Erik Woodring) covering STX/[[WDC]] among others; 2026-11-02/03 — MS |
-| 2026-11-02 | KIOXIA | 🆕 **2026-11-02 (Mon) 9am JST — BofA post-results "doko shuzai" with KIOXIA on FY3/27 2Q results** (BofA · Mikio Hirakawa, via BofA one-liners, 2026-10-01) — dates the Sep-quarter print to before 11-02 |
-| 2026-11-02 | GEV | 🆕 **GS-hosted GEV IR meeting, New York — 2026-11-02** (per the GS Industrials daily, logged pre-print): first post-print management access. |
+| 2026-11-04 | TRU | 2026-11-04 — FICO fiscal Q4 results and 2027 pricing outlook (date per the [UBS desk relay of McVeigh, 2026-10-27 — Outlook](https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hM |
+| 2026-11-04 | EFX | 2026-11-04 — FICO quarterly results: 2027 mortgage-score pricing, the direct-license model and the "Preferred Program" ($10 wholesale mortgage score, flat year on year per UBS) set the pass-through an |
+| 2026-11-03 | SMCI | **✅ RESOLVED (preliminary) 2026-10-20 — F1Q27 vs guide:** revenue **$18.5–19.5bn vs $14.5–15.5bn**, GM **12.0–12.5% vs 10.4–10.8%** (SMCI 8-K, 2026-10-20). Bull on delivery vs guide; GM sits well belo |
+| 2026-11-03 | INTC | 🆕 **2026-10-01: Susquehanna "The AI Arms Race" session (Christopher Rolland; AMD, INTC, MRVL, NVDA, AVGO, ARM, QCOM) and 2026-11-03: Intel dinner NDR with CFO and IR, London** (Susquehanna index 09-30 |
+| 2026-11-03 | APO | **2026-11-03 — Q3 results**, announced 2026-09-29. Test FRE growth, Athene inflows, reported versus normalized spreads and future fee recognition. [Company announcement](https://www.apollo.com/insight |
 
-## ✅ Resolved (376)
+## ✅ Resolved (380)
 
 | Date | Ticker | Verdict |
 |---|---|---|
+| 2026-11-03 | BKNG | bear won — Forward-guide test only: company November 3 release guides Q4 room-night growth +1-3%, below BofA / Post and Gupta's October 25 +3-5% expectation preserved in the November 3 brief. Q3 room nights +7% beat Capstone's November 2 ~6-6.5% view; do not erase the reported-quarter beat. Macro normalization and AI distribution economics remain unresolved. [Company release mirror](https://www.marketscreener.com/news/booking-reports-third-quarter-2026-financial-results-ce785fdedc81f720) · [source record](analyst-evidence/2026-11-04-morning-source-checks.json). |
+| 2026-11-02 | STX | neutral — UNRESOLVED (D+3, wiki-catalyst 2026-11-05): the MS-hosted STX CFO NDR in Boston/NYC (11-02/03; MS TMT desk · Wigg, 2026-09-29) has no readout in the corpus (no desk relay, no Notion note, no intra-quarter row after 10-30). The pricing-floor ('revenue/TB positive y/y through FY27') and LTA questions stay open; next dated item is the 11-17 class-action settlement hearing. |
 | 2026-11-02 | LITE | neutral — NOT A NEW EVENT for the print: this row is the F1Q27 release already scored bull won under LITE 2026-11-05 (released early 11-02: adj. EPS $4.57 vs BBG $4.214; Q2 guide $5.90-6.20). The same-day news is the definitive MRVL/LITE all-stock agreement (4.500 MRVL per LITE; ~$1,132/sh, 23.9% premium to 10-28 unaffected; close H1 CY2028; >$1bn cost synergies; joint release 11-02). It confirms Sur's 10-30 speculation and is on both the LITE and MRVL pages. New open item: stockholder/regulatory approval. |
+| 2026-11-02 | KIOXIA | neutral — UNRESOLVED (D+3, wiki-catalyst 2026-11-05): the BofA post-results 'doko shuzai' (BofA · Hirakawa, via BofA one-liners, 2026-10-01) is a follow-up to the FY3/27 2Q print, which is already scored under KIOXIA 2026-10-30. No BofA tour note or relay of the meeting is in the corpus. The dividend-policy and LTA-credibility (50% LTA coverage in 2028) debates stay open. |
 | 2026-11-02 | GOOG | neutral — NOT A NEW EVENT: the 11-02 /run-inbox watch list (Wells/Gawrelski's two AI-Overviews exit signals, sessions-vs-paid-clicks gap and CPCs, with Search +9% 4Q26 / +4% 1Q27; Wells, 2026-11-01; plus the permitting items) is forward-looking. It resolves at the 4Q26 print (~early Feb 2027). |
+| 2026-11-02 | GEV | neutral — UNRESOLVED (D+3, wiki-catalyst 2026-11-05): GS-hosted GEV IR meeting, New York (per the GS Industrials daily) — the first post-print management access after the 10-28 Q3 FY26 print. No GS readout or desk relay has reached the corpus; nothing to score against the Q3 print block. |
 | 2026-11-02 | BKNG | neutral — NOT A NEW EVENT: the Capstone internal house-bar update ('Preview Travel 3Q26' + 'Travel FUPs', 2026-11-02: 3Q room nights ~6-6.5% vs a 5-6% bogey; expected 4Q guide +3-5%, with ≥5% the flip) is a sub-bullet of the 3Q26 print. That print is on 2026-11-03 AMC and is scored separately. |
 | 2026-10-30 | SNDK | neutral — NOT A NEW EVENT: the parser dated a forward target off its source date. JPM's Sur, relaying the callback (not company-disclosed), says >75% of FY28-FY30 bits go under LTAs/NBMs "over the next 2 to 3 quarters" (JPM AMA, 2026-10-30). The test is FY28 coverage >75% at the FQ3-FQ4 FY27 prints (~Apr-Aug 2027); UNRESOLVED until then. |
 | 2026-10-30 | META | neutral — NOT A NEW EVENT: the 10-30 bullet re-records the financing already scored under META 2026-10-29 ($37.5bn underwritten = $25.0bn Class A forward + $12.5bn mandatory convertible; priced 10-26, preferred closed 10-29, before election week; Meta 424B5s 10-26 + 8-K 10-29). Below Wells Fargo's $40-50bn equity estimate. The $60bn Class C ATM is still unfiled, and the 2027-01-19 Class C effective date is the next dated item. |
