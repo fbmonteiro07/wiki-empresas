@@ -3,16 +3,16 @@
 _Wiki · generated 2026-06-19 · **20-F filer (UK foreign private issuer)** — files annual 20-F, no 10-K/10-Q · sources: `E:\Wiki Felipe\ARM` (20-Fs FY24–FY26 + transcripts + equity calls) · `_briefings\2026` roll-up · theme [custom-asic-tpu](themes/custom-asic-tpu.md). Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-11-05 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-06 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $5.6bn | $7.7bn |
-| Gross profit | $5.5bn | $7.2bn |
-| Gross margin | 98.0% | 93.1% |
+| Revenue | $5.7bn | $7.7bn |
+| Gross profit | $5.5bn | $7.1bn |
+| Gross margin | 98.0% | 92.8% |
 | EBITDA | $2.7bn | $3.7bn |
-| EPS | $2.02 | $2.80 |
-| Capex | $451m | $517m |
+| EPS | $2.02 | $2.79 |
+| Capex | $443m | $481m |
 | OCF (≈EBITDA) | $2.7bn | $3.7bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

@@ -5,17 +5,17 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AAOI` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\AAOI.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-11-05 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-06 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $1.0bn | $2.6bn |
-| Gross profit | $318m | $887m |
-| Gross margin | 30.5% | 33.9% |
-| EBITDA | $101m | $601m |
-| EPS | $0.68 | $4.60 |
-| Capex | $378m | $438m |
-| OCF (≈EBITDA) | $101m | $601m |
+| Revenue | $1.0bn | $2.4bn |
+| Gross profit | $307m | $778m |
+| Gross margin | 30.1% | 32.6% |
+| EBITDA | $97m | $564m |
+| EPS | $0.62 | $3.88 |
+| Capex | $378m | $470m |
+| OCF (≈EBITDA) | $97m | $564m |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

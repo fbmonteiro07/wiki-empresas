@@ -6,12 +6,12 @@ _This report checks each new quantitative datapoint from tonight's sources again
 - **No house model exists for BKNG, SNOW, MSFT, META or ANTHROPIC.** GOOG/NVDA/AMZN house models carry nothing comparable to tonight's datapoints.
 - **Private names** (ANTHROPIC, OPENAI, SPCX pre-IPO marks) are checked against prior wiki marks only.
 
-## DIVERGES (the alpha)
+## Where the new data DIVERGES
 
 | Name | New datapoint (source) | vs prior wiki | vs house | vs BBG (snapshot 10-30) | Read |
 |---|---|---|---|---|---|
-| **BKNG** | BofA 4Q bookings / rev / EPS **$45.0bn / $6.7bn / $2.25**; 4Q nights 297m (+5%); expected 4Q guide nights +3-5% vs Street +6% (BofA · Post, 2026-10-25) | Same direction as JPM 10-15 (FY guide implies 4Q GB ~+2%) | none | 4Q cons rev **$6,791m**, EPS **$2.301** → BofA **−1.3% rev, −2.2% EPS** | Two houses now pre-position a 4Q cut. The 11-03 print is a **4Q-guide event**: a guide at Street (+6% nights) would be the surprise. |
-| **BKNG** | Bernstein **Market-Perform, PT $188** unchanged; 2027E EPS $12.05 → **$11.97** (Bernstein · Clarke, 2026-10-19) | PT unchanged; EPS trimmed | none | cons PT **$233.6** (hi $301 / lo $170, n=41) → Bernstein **−19.5%** vs median; px $148.13 → PT **+27%** upside even at MP | The only non-Buy mark on the board. It still implies upside from a 52-week-low price, so the stock trades below even the bear-ish house. |
+| **BKNG** | BofA 4Q bookings / rev / EPS **$45.0bn / $6.7bn / $2.25**; 4Q nights 297m (+5%); expected 4Q guide nights +3-5% vs Street +6% (BofA · Post, 2026-10-25) | Same direction as JPM 10-15 (FY guide implies 4Q GB ~+2%) | none | Pre-print (10-30): 4Q cons rev **$6,791m**, EPS **$2.301** → BofA **−1.3% rev, −2.2% EPS**. **Post-print (asof 2026-11-06): 1FQ Q4-26E cons rev $6,518m (hi $6,916m), EPS $2.148 (hi $2.38)** → the Street cut **−4.0% rev / −6.6% EPS** after the 11-03 guide; BofA's pre-print mark now sits **+2.8% rev / +4.7% EPS ABOVE** the median (below the street-high) | Two houses now pre-position a 4Q cut. The 11-03 print is a **4Q-guide event**: a guide at Street (+6% nights) would be the surprise. **Resolved 2026-11-06:** the 4Q cut was right on direction but too shallow. The guide (+1-3% nights, flat EBITDA) took consensus *through* BofA, so the divergence flipped sign. It stays in DIVERGES until BofA publishes post-print. |
+| **BKNG** | Bernstein **Market-Perform, PT $188** unchanged; 2027E EPS $12.05 → **$11.97** (Bernstein · Clarke, 2026-10-19) | PT unchanged; EPS trimmed | none | cons PT **$233.6** (hi $301 / lo $170, n=41) → Bernstein **−19.5%** vs median; px $148.13 → PT **+27%** upside even at MP. **Post-print (asof 2026-11-06):** cons PT **$216.3** (hi $267 / lo $150, n=41; 32 Buy / 9 Hold) → Bernstein **−13.1%** vs median; px $163.19 → PT **+15%**. 2027E EPS $11.97 vs 2FY cons **$12.21** → **−2.0%** | The only non-Buy mark on the board. It still implies upside from a 52-week-low price, so the stock trades below even the bear-ish house. **Resolved 2026-11-06:** still DIVERGES, but the gap to the median narrowed from −19.5% to −13.1% because the Street cut targets toward Bernstein after the guide. |
 | **BKNG** | Bernstein's app-engagement signal: web traffic +6.9% but app MAU **+1.1%** (Sep −2%, Oct −4%); Priceline weakest (Bernstein, 2026-10-19) | 🆕 first app-vs-web split on the page | — | — | Direct/app share is the agentic-disintermediation falsifier (MS 10-12 framework); a falling app MAU cuts against the "~2/3 direct" defence. |
 | **BKNG** | Booking invests **$100m in its own agent, Vayo**; has not partnered with Muse, while Expedia has (Bernstein, 2026-10-19) | 🆕 not on the page before | — | — | A strategic fork vs EXPE. BofA flags 2027 agentic investment as an earnings-expectations risk. The $100m is unsourced beyond Bernstein's summary. |
 | **AMZN** | Capstone house: FY26 ads **≈$81.8bn (+19%)**; underlying rate ~22% → ~18%; 2027 should converge to ~15-17% (Capstone internal ads study, 2026-10-30) | vs pre-print JPM **$84.5bn** / Bernstein **$84.8bn** (as cited by the study) | house ≈ **−$3bn** vs Street on FY26 ads | BBG has no ads line (n/a) | House below the Street on ads. Watch for Street FY26/27 ad-line cuts. The −5pp of 2027 ad growth ≈ −$0.27 EPS sensitivity is the house's. |
@@ -25,9 +25,9 @@ _This report checks each new quantitative datapoint from tonight's sources again
 
 | Name | Datapoint | Baseline | Result |
 |---|---|---|---|
-| BKNG | BofA Buy, **PO $234 → $232** (19x 2027E EPS $12.23) | cons PT $233.6 | at consensus; −$2 is a 2027E EPS trim, not a view change (old PO → Changelog) |
+| BKNG | BofA Buy, **PO $234 → $232** (19x 2027E EPS $12.23) | cons PT $233.6 (10-30); post-print **$216.3** (asof 2026-11-06) | at consensus; −$2 is a 2027E EPS trim, not a view change (old PO → Changelog). _2026-11-06: the pre-print PO is now +7.2% vs the post-print median. That is not like-for-like (BofA has not yet published post-print), so the row stays here; re-score when BofA updates._ |
 | BKNG | 3Q: BofA nights 342.5m / GB $52.98bn / rev $9.613bn / EBITDA $4.528bn / EPS $4.52; Bernstein rev $9.634bn / EBITDA $4.555bn | BBG Q3 cons rev **$9,544m**, EBITDA **$4,490m**, EPS **$4.493** | both houses +0.7-1% on revenue, +0.6-1.5% on EBITDA: the "usual small beat" |
-| BKNG | BofA 2026E EPS **$10.39** | BBG CY26 EPS **$10.29** | +1%: in line (CY sum, pre-print caveat) |
+| BKNG | BofA 2026E EPS **$10.39** | BBG CY26 EPS **$10.29** (10-30); post-print 1FY EPS **$10.45** (asof 2026-11-06) | +1%: in line (CY sum, pre-print caveat). _2026-11-06: −0.6% vs post-print 1FY; still in line._ |
 | SNOW | CEO: "this year, roughly, we will make 6 billion dollars", ~9,000 people (Ramaswamy, Unicorn Bakery, 2026-10-29 — podcast) | FY27 product-rev guide $6.07B (Q2 FY27); BBG CY26 total rev **$6,193m** | ties to the product guide; not a new guide |
 | GOOG | Cloud $30.7B, Cloud OI $3.6B → $11.1B, Search +12% to $63.35B, Services OI ~$39B (All-In hosts) | Q3 FY26 release on the page | all tie |
 | MSFT | Revenue $198bn → $332bn with ~+2,000 staff (UNCONFIRMED speaker) | 10-Ks: FY22 $198.27bn → FY26 $331.84bn; employees ~221k → ~223k | ties on an FY22→FY26 basis |
@@ -40,4 +40,6 @@ _This report checks each new quantitative datapoint from tonight's sources again
 | ai-compute-deals | Kazakhstan DC Valley "1 gigawatt planned" (Jensen, Astana re-upload) | page: no Kazakhstan–NVIDIA deal ID; June Bloomberg "up to $10B" accords | planned figure, basis unstated: **no new ID** |
 
 ## PENDING
-- **BBG live**: the Terminal is not logged in. The 10-30 snapshot covers every name above. Post-print (11-03) BKNG consensus will need a refresh.
+- **BBG live**: the Terminal is not logged in. The 10-30 snapshot covers every name above. Post-print (11-03) BKNG consensus will need a refresh. **Done 2026-11-06:** all four BKNG rows were re-placed on the post-print snapshot. The BofA 4Q row and the Bernstein PT row stay in DIVERGES (BofA's sign flipped), and the BofA PO and 2026E EPS rows stay in CONFIRMS.
+
+_BBG column resolved 2026-11-06 — estimates.json asof 2026-11-06._

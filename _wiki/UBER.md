@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\UBER` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\UBER.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-11-05 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-06 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -11,7 +11,7 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\UBER` (filings + trans
 | Gross profit | $25.0bn | $30.4bn |
 | Gross margin | 43.1% | 45.0% |
 | EBITDA | $11.3bn | $14.0bn |
-| EPS | $3.35 | $4.41 |
+| EPS | $3.35 | $4.40 |
 | Capex | $401m | $555m |
 | OCF (≈EBITDA) | $11.3bn | $14.0bn |
 
